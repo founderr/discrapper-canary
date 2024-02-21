@@ -15,8 +15,8 @@ var s = a("414456"),
   c = a("170213"),
   u = a("782340"),
   E = a("938966"),
-  A = a("221389"),
-  _ = a("469533");
+  _ = a("221389"),
+  A = a("469533");
 
 function S(e) {
   let {
@@ -27,26 +27,26 @@ function S(e) {
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(i.ModalHeader, {
       direction: o.default.Direction.VERTICAL,
-      className: A.header,
+      className: _.header,
       separator: !1,
       children: [(0, l.jsx)("div", {
         className: E.iconContainer,
         children: (0, l.jsx)("img", {
-          src: _,
+          src: A,
           alt: "",
           className: E.icon
         })
       }), (0, l.jsx)(i.Heading, {
-        className: A.title,
+        className: _.title,
         variant: "heading-xl/semibold",
         children: u.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_HEADER
       }), (0, l.jsx)(i.Heading, {
-        className: A.subtitle,
+        className: _.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
         children: u.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_SUBHEADER
       }), null != s && (0, l.jsx)(i.ModalCloseButton, {
-        className: A.closeButton,
+        className: _.closeButton,
         onClick: s
       })]
     }), (0, l.jsxs)(i.ModalContent, {

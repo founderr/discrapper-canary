@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useVoiceActivityNotificationSettingsExperiment: function() {
-    return r
+    return s
   },
   hasVoiceChannelActivityNotifsEnabled: function() {
-    return s
+    return r
   }
 });
 var a = n("862205"),
@@ -46,7 +46,7 @@ let l = (0, a.createExperiment)({
     }]
   });
 
-function r(e) {
+function s(e) {
   var t;
   let {
     voiceChannelActivityNotifsEnabled: n
@@ -67,7 +67,7 @@ function r(e) {
   return (null == e ? void 0 : e.type) === i.ChannelTypes.GUILD_VOICE && n && a
 }
 
-function s(e) {
+function r(e) {
   var t;
   let {
     voiceChannelActivityNotifsEnabled: n

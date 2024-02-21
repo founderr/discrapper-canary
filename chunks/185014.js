@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return J
   }
 }), n("424973"), n("222007");
-var d, i, r = n("446674"),
-  l = n("407846"),
+var d, i, l = n("446674"),
+  r = n("407846"),
   u = n("913144"),
   s = n("692038"),
   a = n("432173"),
@@ -39,12 +39,12 @@ let T = {
   M = {},
   p = {},
   v = {},
-  y = {},
-  h = {};
+  h = {},
+  y = {};
 
 function R(e) {
-  let t = h[e];
-  return null == t && (t = new l.default(N, L), h[e] = t), t
+  let t = y[e];
+  return null == t && (t = new r.default(N, L), y[e] = t), t
 }
 
 function L(e) {
@@ -69,7 +69,7 @@ let O = {},
 
 function P(e, t, n) {
   var d, i;
-  return null === (i = y[e]) || void 0 === i ? void 0 : null === (d = i[t]) || void 0 === d ? void 0 : d[n]
+  return null === (i = h[e]) || void 0 === i ? void 0 : null === (d = i[t]) || void 0 === d ? void 0 : d[n]
 }
 
 function w(e, t) {
@@ -88,8 +88,8 @@ function V(e, t, n) {
   if (null == d) return !1;
   let i = P(d, e, t);
   if (null == i) return !1;
-  let r = n(i);
-  return y[d][e][t] = r, !0
+  let l = n(i);
+  return h[d][e][t] = l, !0
 }
 
 function k(e, t) {
@@ -98,7 +98,7 @@ function k(e, t) {
 
 function B(e, t) {
   var n, d;
-  (null === (n = y[e]) || void 0 === n ? void 0 : n[t.channel_id]) == null && (y[e] = null !== (d = y[e]) && void 0 !== d ? d : {}, y[e][t.channel_id] = {}), y[e][t.channel_id][t.id] = t, null == v[t.channel_id] && (v[t.channel_id] = {}), v[t.channel_id][t.id] = e
+  (null === (n = h[e]) || void 0 === n ? void 0 : n[t.channel_id]) == null && (h[e] = null !== (d = h[e]) && void 0 !== d ? d : {}, h[e][t.channel_id] = {}), h[e][t.channel_id][t.id] = t, null == v[t.channel_id] && (v[t.channel_id] = {}), v[t.channel_id][t.id] = e
 }
 
 function Y(e, t) {
@@ -110,15 +110,15 @@ function Y(e, t) {
 
 function x(e, t) {
   var n, d, i;
-  let r = w(e, t);
-  return null != r && (null === (d = y[r]) || void 0 === d || null === (n = d[e]) || void 0 === n || delete n[t], null === (i = v[e]) || void 0 === i || delete i[t], ! function(e, t) {
+  let l = w(e, t);
+  return null != l && (null === (d = h[l]) || void 0 === d || null === (n = d[e]) || void 0 === n || delete n[t], null === (i = v[e]) || void 0 === i || delete i[t], ! function(e, t) {
     let n = Y(e, t);
     if (null == n) return;
     let d = (0, f.default)(n),
       i = R(e),
-      r = Array.from((0, _.getAllMessagesFromFeedItem)(n));
-    !(r.filter(t => P(e, t.channel_id, t.id)).length > 0) && i.delete(d)
-  }(r, t), !0)
+      l = Array.from((0, _.getAllMessagesFromFeedItem)(n));
+    !(l.filter(t => P(e, t.channel_id, t.id)).length > 0) && i.delete(d)
+  }(l, t), !0)
 }
 
 function K(e) {
@@ -127,15 +127,15 @@ function K(e) {
     channelId: n,
     messageId: d,
     userId: i,
-    emoji: r
+    emoji: l
   } = e;
   if (!(0, a.shouldApplyReaction)(e)) return !1;
-  let l = E.default.getId() === i;
+  let r = E.default.getId() === i;
   return V(n, d, n => {
     let {
       reactionType: d
     } = e;
-    return "MESSAGE_REACTION_ADD" === t ? n.addReaction(r, l, e.colors, d) : n.removeReaction(r, l, d)
+    return "MESSAGE_REACTION_ADD" === t ? n.addReaction(l, r, e.colors, d) : n.removeReaction(l, r, d)
   })
 }
 
@@ -150,9 +150,9 @@ function X(e) {
   var t;
   let n = e.guild_id;
   if (null == n) return !1;
-  delete v[e.id], null === (t = y[n]) || void 0 === t || delete t[e.id]
+  delete v[e.id], null === (t = h[n]) || void 0 === t || delete t[e.id]
 }
-class j extends r.default.Store {
+class j extends l.default.Store {
   getLastFetchedMillis(e) {
     return G[e]
   }
@@ -226,7 +226,7 @@ var J = new j(u.default, {
     A[t] = {
       loading: 0,
       error: null
-    }, delete h[t], delete p[t], delete D[t], O[t] = new Set, U[t] = new Set, C[t] = new Set, y[t] = {}
+    }, delete y[t], delete p[t], delete D[t], O[t] = new Set, U[t] = new Set, C[t] = new Set, h[t] = {}
   },
   GUILD_FEED_FETCH_PAGE_START: function(e) {
     let {
@@ -238,31 +238,31 @@ var J = new j(u.default, {
     }
   },
   GUILD_FEED_FETCH_SUCCESS: function(e) {
-    var t, n, d, i, r;
+    var t, n, d, i, l;
     let {
-      guildId: l,
+      guildId: r,
       data: u
     } = e;
-    if (G[l] = Date.now(), A[l] = {
+    if (G[r] = Date.now(), A[r] = {
         loading: 2,
         error: null
-      }, l in p && p[l].load_id !== u.load_id) return;
-    let s = null !== (i = null === (n = p[l]) || void 0 === n ? void 0 : null === (t = n.results) || void 0 === t ? void 0 : t.items) && void 0 !== i ? i : [];
-    p[l] = {
+      }, r in p && p[r].load_id !== u.load_id) return;
+    let s = null !== (i = null === (n = p[r]) || void 0 === n ? void 0 : null === (t = n.results) || void 0 === t ? void 0 : t.items) && void 0 !== i ? i : [];
+    p[r] = {
       load_id: u.load_id,
       results: {
         items: s.concat(u.results.items)
       }
     };
-    let a = R(l),
+    let a = R(r),
       E = a.values().length,
       o = E;
     for (let e of u.results.items) {
       let t = (0, c.createGuildFeedItemFromServer)(e, o);
-      if (null != t) o += 1, null == a.get(t.id) && (t.featured && C[l].add(t.id), k(l, t), a.set(t.id, t))
+      if (null != t) o += 1, null == a.get(t.id) && (t.featured && C[r].add(t.id), k(r, t), a.set(t.id, t))
     }
-    let _ = null !== (r = null === (d = D[l]) || void 0 === d ? void 0 : d.offset) && void 0 !== r ? r : 0;
-    D[l] = {
+    let _ = null !== (l = null === (d = D[r]) || void 0 === d ? void 0 : d.offset) && void 0 !== l ? l : 0;
+    D[r] = {
       offset: _ + S,
       hasMoreItems: E !== a.values().length
     }
@@ -325,23 +325,23 @@ var J = new j(u.default, {
     var t, n, d;
     let {
       featureableItem: i,
-      options: r
+      options: l
     } = e, {
-      guildId: l
+      guildId: r
     } = i, u = (0, f.getGuildFeedItemIdFromFeatureableItem)(i);
-    if (!(l in C) && (C[l] = new Set), C[l].add(u), !r.hoist) return;
-    let s = R(l),
+    if (!(r in C) && (C[r] = new Set), C[r].add(u), !l.hoist) return;
+    let s = R(r),
       a = null !== (d = s.get(u)) && void 0 !== d ? d : (0, I.createFakeGuildFeedItem)(i);
-    null != a && (null != a.message && (null === (n = y[l]) || void 0 === n ? void 0 : null === (t = n[a.message.channel_id]) || void 0 === t ? void 0 : t[a.message.id]) == null && B(l, a.message), s.delete(a.id), a.featured = !0, a.seen = !1, s.set(a.id, a))
+    null != a && (null != a.message && (null === (n = h[r]) || void 0 === n ? void 0 : null === (t = n[a.message.channel_id]) || void 0 === t ? void 0 : t[a.message.id]) == null && B(r, a.message), s.delete(a.id), a.featured = !0, a.seen = !1, s.set(a.id, a))
   },
   GUILD_FEED_UNFEATURE_ITEM: function(e) {
     var t, n, d, i;
     let {
-      featureableItem: r
+      featureableItem: l
     } = e, {
-      guildId: l
-    } = r, u = (0, f.getGuildFeedItemIdFromFeatureableItem)(r);
-    t = l, n = u, null === (d = C[t]) || void 0 === d || d.delete(n), null === (i = H[t]) || void 0 === i || delete i[n]
+      guildId: r
+    } = l, u = (0, f.getGuildFeedItemIdFromFeatureableItem)(l);
+    t = r, n = u, null === (d = C[t]) || void 0 === d || d.delete(n), null === (i = H[t]) || void 0 === i || delete i[n]
   },
   CHANNEL_SELECT: function() {
     for (let e of o.default.keys(O)) null == U[e] && (U[e] = new Set), U[e] = new Set([...Array.from(U[e]), ...Array.from(O[e])]), delete O[e]
@@ -354,8 +354,8 @@ var J = new j(u.default, {
       guild: n
     } = e;
     if (null == G[n.id]) return !1;
-    for (let e in delete G[n.id], delete p[n.id], null !== (t = y[n.id]) && void 0 !== t ? t : {}) delete v[e];
-    delete y[n.id], delete h[n.id]
+    for (let e in delete G[n.id], delete p[n.id], null !== (t = h[n.id]) && void 0 !== t ? t : {}) delete v[e];
+    delete h[n.id], delete y[n.id]
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -365,7 +365,7 @@ var J = new j(u.default, {
       if (null == e ? void 0 : e.hasFlag(F.ChannelFlags.GUILD_FEED_REMOVED)) return X(e)
   },
   LOGOUT: function() {
-    G = {}, p = {}, v = {}, y = {}, h = {}, O = {}, U = {}, C = {}, H = {}
+    G = {}, p = {}, v = {}, h = {}, y = {}, O = {}, U = {}, C = {}, H = {}
   },
   MESSAGE_UPDATE: function(e) {
     let {

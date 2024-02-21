@@ -24,10 +24,10 @@ var l = a("37983"),
       scrollerRef: g,
       showFeedback: I,
       setOnDismissedFeedback: _
-    } = e, [x, v, S] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.getItem(t, a), u.default.getIsItemHiding(t, a), u.default.getIsItemHidden(t, a)]), C = n.useRef(null);
+    } = e, [x, v, C] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.getItem(t, a), u.default.getIsItemHiding(t, a), u.default.getIsItemHidden(t, a)]), S = n.useRef(null);
     if (n.useEffect(() => {
         var e;
-        let l = C.current;
+        let l = S.current;
         if (null == l || null == E) {
           (0, r.markGuildFeedItemAsUnseen)(t, a, Date.now());
           return
@@ -51,7 +51,7 @@ var l = a("37983"),
         return d.observe(l), () => {
           d.disconnect()
         }
-      }, [a, t, g, E, v, S]), null == x || S) return null;
+      }, [a, t, g, E, v, C]), null == x || C) return null;
     if (v) return (0, l.jsx)(c.default, {
       guildId: t,
       feedItem: x
@@ -59,7 +59,7 @@ var l = a("37983"),
     switch (x.type) {
       case s.GuildFeedItemTypes.FORUM_POST:
         return (0, l.jsx)(h.default, {
-          ref: C,
+          ref: S,
           guildId: t,
           postItem: x,
           showFeedback: I,
@@ -67,7 +67,7 @@ var l = a("37983"),
         });
       case s.GuildFeedItemTypes.MESSAGE:
         return (0, l.jsx)(m.default, {
-          ref: C,
+          ref: S,
           guildId: t,
           messageItem: x,
           showFeedback: I,
@@ -75,7 +75,7 @@ var l = a("37983"),
         });
       case s.GuildFeedItemTypes.MESSAGE_BUNDLE:
         return (0, l.jsx)(f.default, {
-          ref: C,
+          ref: S,
           guildId: t,
           messageBundleItem: x,
           showFeedback: I,
@@ -83,7 +83,7 @@ var l = a("37983"),
         });
       case s.GuildFeedItemTypes.CONVERSATION:
         return (0, l.jsx)(o.default, {
-          ref: C,
+          ref: S,
           guildId: t,
           conversationItem: x,
           showFeedback: I,

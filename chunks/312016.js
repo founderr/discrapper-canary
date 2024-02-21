@@ -33,8 +33,8 @@ let f = /^\/([a-zA-Z0-9-]+)$/,
   R = /^\/application-directory\/([0-9-]+)\/?$/,
   C = /^\/activities\/([0-9-]+)\/?$/,
   L = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-  O = /^\/channels\/([0-9]+)\/shop$/,
-  h = /^\/clyde-profiles\/([0-9-]+)\/?$/,
+  h = /^\/channels\/([0-9]+)\/shop$/,
+  O = /^\/clyde-profiles\/([0-9-]+)\/?$/,
   P = /^\/quests\/([0-9-]+)\/?$/,
   g = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
   m = b(window.GLOBAL_ENV.INVITE_HOST),
@@ -149,7 +149,7 @@ function H(e) {
       let e = c[1];
       a(S.CodedLinkType.APP_DIRECTORY_PROFILE, e)
     }
-    let I = null == u ? void 0 : u.match(h);
+    let I = null == u ? void 0 : u.match(O);
     if (null != I) {
       let e = I[1];
       a(S.CodedLinkType.CLYDE_PROFILE, e)
@@ -168,7 +168,7 @@ function H(e) {
     }
     let g = null == u ? void 0 : u.match(L);
     null != g && a(S.CodedLinkType.GUILD_PRODUCT, "".concat(g[1], "-").concat(g[2]));
-    let m = null == u ? void 0 : u.match(O);
+    let m = null == u ? void 0 : u.match(h);
     null != m && a(S.CodedLinkType.SERVER_SHOP, m[1]);
     let y = k(e);
     null != y && a(S.CodedLinkType.QUESTS_EMBED, y)

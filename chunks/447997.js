@@ -6,12 +6,12 @@ n.r(t), n.d(t, {
 }), n("222007");
 var s = n("37983"),
   a = n("884691"),
-  i = n("907002"),
-  r = n("230606");
-let l = () => {
+  r = n("907002"),
+  l = n("230606");
+let i = () => {
   let e = a.useRef(null),
     [t, n] = a.useState(0),
-    s = a.useMemo(() => new r.default(e => {
+    s = a.useMemo(() => new l.default(e => {
       let [t] = e;
       return n(t.contentRect.height)
     }), []);
@@ -26,11 +26,11 @@ function o(e) {
     show: t,
     children: n,
     top: a = 0,
-    bottom: r = 0
+    bottom: l = 0
   } = e, {
     ref: o,
     height: u
-  } = l(), d = (0, i.useSpring)({
+  } = i(), d = (0, r.useSpring)({
     from: {
       height: 0,
       paddingBottom: "0px",
@@ -38,14 +38,14 @@ function o(e) {
     },
     to: {
       height: t ? u : 0,
-      paddingBottom: t ? "".concat(r, "px") : "0px",
+      paddingBottom: t ? "".concat(l, "px") : "0px",
       marginTop: t ? "".concat(a, "px") : "0px"
     },
     config: {
       tension: 170,
       friction: 26
     }
-  }), c = (0, i.useSpring)({
+  }), c = (0, r.useSpring)({
     from: {
       opacity: 0
     },
@@ -57,14 +57,14 @@ function o(e) {
       easing: t ? e => e ** 4 : e => e * (2 - e)
     }
   });
-  return (0, s.jsx)(i.animated.div, {
+  return (0, s.jsx)(r.animated.div, {
     style: {
       overflow: "hidden",
       height: d.height,
       paddingBottom: d.paddingBottom,
       marginTop: d.marginTop
     },
-    children: (0, s.jsx)(i.animated.div, {
+    children: (0, s.jsx)(r.animated.div, {
       style: {
         opacity: c.opacity
       },

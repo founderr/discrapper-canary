@@ -22,14 +22,14 @@ var l = a("37983"),
   _ = a("845579"),
   x = a("42203"),
   v = a("923959"),
-  S = a("377253"),
-  C = a("957255"),
+  C = a("377253"),
+  S = a("957255"),
   N = a("471671"),
   p = a("315102"),
   T = a("347895"),
   A = a("768945"),
-  j = a("99384"),
-  M = a("49111"),
+  M = a("99384"),
+  j = a("49111"),
   D = a("782340"),
   F = a("385454"),
   L = a("919163"),
@@ -50,18 +50,18 @@ function b(e) {
     I = (0, m.isAnimatedImageUrl)(n.src),
     v = _.GifAutoPlay.useSetting(),
     {
-      src: S,
-      width: C,
+      src: C,
+      width: S,
       height: p,
       alt: T
     } = n;
-  return p > C ? a = 72 : t = 72, (0, l.jsxs)("div", {
+  return p > S ? a = 72 : t = 72, (0, l.jsxs)("div", {
     className: F.media,
     children: [(0, E.renderImageComponent)({
-      src: S,
+      src: C,
       maxHeight: t,
       maxWidth: a,
-      width: C,
+      width: S,
       height: p,
       alt: null != T && u && null != f ? f : T,
       autoPlay: v,
@@ -80,7 +80,7 @@ function b(e) {
 function G(e) {
   let {
     resource: t
-  } = e, a = (0, d.useStateFromStores)([x.default], () => x.default.getChannel(t.channelId)), s = (0, d.useStateFromStores)([S.default], () => S.default.getMessages(t.channelId)), c = (0, d.useStateFromStores)([C.default], () => C.default.can(M.Permissions.VIEW_CHANNEL, a)), m = s.first(), h = (0, A.default)(m), E = (0, o.useForumPostMediaProperties)(m, !1), g = (null == E ? void 0 : E.length) > 0 ? E[0] : null, _ = null != a && null == s.first() && !s.loadingMore && !s.ready && !s.hasFetched && c;
+  } = e, a = (0, d.useStateFromStores)([x.default], () => x.default.getChannel(t.channelId)), s = (0, d.useStateFromStores)([C.default], () => C.default.getMessages(t.channelId)), c = (0, d.useStateFromStores)([S.default], () => S.default.can(j.Permissions.VIEW_CHANNEL, a)), m = s.first(), h = (0, A.default)(m), E = (0, o.useForumPostMediaProperties)(m, !1), g = (null == E ? void 0 : E.length) > 0 ? E[0] : null, _ = null != a && null == s.first() && !s.loadingMore && !s.ready && !s.hasFetched && c;
   n.useEffect(() => {
     _ && u.default.fetchMessages({
       channelId: t.channelId,
@@ -149,7 +149,7 @@ function O(e) {
   let {
     guild: t,
     isNewMember: a
-  } = e, n = (0, j.default)(t.id);
+  } = e, n = (0, M.default)(t.id);
   if (0 === n.length) return a ? null : (0, l.jsxs)("div", {
     className: F.emptyContainer,
     children: [(0, l.jsx)(r.Heading, {
@@ -164,7 +164,7 @@ function O(e) {
       className: F.emptyStateButton,
       onClick: () => {
         let e = v.default.getDefaultChannel(t.id);
-        null != e && (0, g.transitionTo)(M.Routes.CHANNEL(t.id, e.id))
+        null != e && (0, g.transitionTo)(j.Routes.CHANNEL(t.id, e.id))
       },
       fullWidth: !0,
       children: D.default.Messages.MEMBER_ACTION_COMPLETE_EMPTY_STATE_CTA

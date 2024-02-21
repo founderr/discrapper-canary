@@ -19,8 +19,8 @@ n.r(t), n.d(t, {
     return g
   }
 });
-var s = n("249654"),
-  i = n("845579"),
+var s = n("845579"),
+  i = n("299039"),
   r = n("913796"),
   a = n("360191"),
   o = n("581091"),
@@ -32,20 +32,20 @@ let u = function(e) {
       getFormatter: t ? o.getAbbreviatedFormatter : o.getFullFormatter
     })
   },
-  l = (e, t) => e.acked || t !== i.NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET && s.default.compare(t, e.id) >= 0;
+  l = (e, t) => e.acked || t !== s.NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET && i.default.compare(t, e.id) >= 0;
 
 function f(e, t) {
   var n;
-  let i = s.default.fromTimestamp(new Date(t).getTime());
+  let s = i.default.fromTimestamp(new Date(t).getTime());
   return {
     acked: !1,
     forceUnacked: !0,
     other_user: e,
     kind: "notification-center-item",
-    local_id: "incoming_friend_requests_".concat(e.id, "_").concat(i),
+    local_id: "incoming_friend_requests_".concat(e.id, "_").concat(s),
     deeplink: "https://discord.com/users/".concat(e.id),
     type: a.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
-    id: i,
+    id: s,
     body: d.default.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST.format({
       username: "**".concat(null !== (n = e.globalName) && void 0 !== n ? n : e.username, "**")
     })
@@ -53,7 +53,7 @@ function f(e, t) {
 }
 
 function _(e) {
-  let t = s.default.fromTimestamp(new Date().getTime());
+  let t = i.default.fromTimestamp(new Date().getTime());
   return {
     acked: !1,
     enableBadge: !0,

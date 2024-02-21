@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("458960"),
-  o = n("862337"),
-  u = n("659500"),
+  u = n("862337"),
+  o = n("659500"),
   d = n("49111"),
   c = n("782340"),
   f = n("244959");
@@ -22,10 +22,10 @@ class C extends a.PureComponent {
   componentDidMount() {
     this.setState({
       shown: !0
-    }), u.ComponentDispatch.subscribe(d.ComponentActions.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus)
+    }), o.ComponentDispatch.subscribe(d.ComponentActions.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus)
   }
   componentWillUnmount() {
-    this.focusTimeout.stop(), u.ComponentDispatch.unsubscribe(d.ComponentActions.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus)
+    this.focusTimeout.stop(), o.ComponentDispatch.unsubscribe(d.ComponentActions.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus)
   }
   componentDidUpdate() {
     let {
@@ -110,7 +110,7 @@ class C extends a.PureComponent {
     super(...e), this.state = {
       shown: !1,
       translateY: new r.default.Value(0)
-    }, this.rootRef = a.createRef(), this.focusTimeout = new o.Timeout, this.handleResultFocus = e => {
+    }, this.rootRef = a.createRef(), this.focusTimeout = new u.Timeout, this.handleResultFocus = e => {
       let {
         node: t
       } = e;

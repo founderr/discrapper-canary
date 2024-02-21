@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return O
   }
 }), n("222007"), n("424973");
 var a = n("913144"),
@@ -84,4 +84,4 @@ class R extends s.default {
     T() && N("poggermode_achievement_unlock")
   }
 }
-var v = new R
+var O = new R

@@ -22,8 +22,8 @@ var l = a("37983"),
   _ = a("713810"),
   x = a("60036"),
   v = a("339274"),
-  S = a("605143"),
-  C = a("782340"),
+  C = a("605143"),
+  S = a("782340"),
   N = a("641401");
 
 function p(e) {
@@ -31,14 +31,14 @@ function p(e) {
     guildId: t,
     feedItem: a,
     onSendFeedback: n
-  } = e, s = (0, x.default)(a), g = s.channel_id, v = (0, d.useStateFromStores)([c.default], () => c.default.getChannel(g)), S = (0, u.default)(v), p = (0, o.getChannelIconComponent)(v), T = (0, d.useStateFromStores)([h.default], () => h.default.getUser(s.author.id)), A = (0, d.useStateFromStores)([c.default, f.default, m.default], () => I.default.getName(t, g, T)), j = e => {
+  } = e, s = (0, x.default)(a), g = s.channel_id, v = (0, d.useStateFromStores)([c.default], () => c.default.getChannel(g)), C = (0, u.default)(v), p = (0, o.getChannelIconComponent)(v), T = (0, d.useStateFromStores)([h.default], () => h.default.getUser(s.author.id)), A = (0, d.useStateFromStores)([c.default, f.default, m.default], () => I.default.getName(t, g, T)), M = e => {
     (0, _.setFeedItemPreference)(t, e), n()
   };
   return (0, l.jsxs)("div", {
     className: N.options,
     children: [(0, l.jsx)(r.Clickable, {
       className: N.option,
-      onClick: () => j({
+      onClick: () => M({
         channel_id: g,
         message_id: s.id,
         entity_type: i.GuildFeedPreferenceEntityTypes.MESSAGE
@@ -46,19 +46,19 @@ function p(e) {
       children: (0, l.jsx)(r.Text, {
         variant: "text-md/normal",
         color: "interactive-active",
-        children: C.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_FEEDBACK_NO_LIKE
+        children: S.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_FEEDBACK_NO_LIKE
       })
     }), (0, l.jsx)(r.Clickable, {
       className: N.option,
-      onClick: () => j({
+      onClick: () => M({
         channel_id: g,
         entity_type: i.GuildFeedPreferenceEntityTypes.CHANNEL
       }),
       children: (0, l.jsx)(r.Text, {
         variant: "text-md/normal",
         color: "interactive-active",
-        children: C.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_FEEDBACK_SHOW_LESS_CHANNEL.format({
-          channelName: S,
+        children: S.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_FEEDBACK_SHOW_LESS_CHANNEL.format({
+          channelName: C,
           channelNameHook: (e, t) => (0, l.jsxs)("span", {
             children: [null != p && (0, l.jsx)(p, {
               className: N.mentionIcon,
@@ -72,7 +72,7 @@ function p(e) {
       className: N.option,
       onClick: () => {
         var e;
-        return j({
+        return M({
           user_id: null == s ? void 0 : null === (e = s.author) || void 0 === e ? void 0 : e.id,
           entity_type: i.GuildFeedPreferenceEntityTypes.USER
         })
@@ -80,7 +80,7 @@ function p(e) {
       children: (0, l.jsx)(r.Text, {
         variant: "text-md/normal",
         color: "interactive-active",
-        children: C.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_FEEDBACK_SHOW_LESS_USER.format({
+        children: S.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_FEEDBACK_SHOW_LESS_USER.format({
           username: A,
           usernameHook: (e, t) => (0, l.jsxs)("span", {
             children: [(0, l.jsx)(E.default, {
@@ -101,9 +101,9 @@ function T(e) {
     feedItem: a
   } = e, [i, d] = n.useState(!1), u = (0, s.useListItem)(a.id);
   return (0, l.jsxs)(v.default, {
-    ariaLabel: C.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_ITEM,
+    ariaLabel: S.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_ITEM,
     listItemProps: u,
-    children: [(0, l.jsxs)(S.default, {
+    children: [(0, l.jsxs)(C.default, {
       hideBorder: i,
       children: [(0, l.jsx)(g.default, {
         className: N.icon,
@@ -116,25 +116,25 @@ function T(e) {
           className: N.title,
           variant: "text-md/medium",
           color: "interactive-active",
-          children: C.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_ITEM_FEEDBACK_RECEIVED_TITLE
+          children: S.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_ITEM_FEEDBACK_RECEIVED_TITLE
         }), (0, l.jsx)(r.Text, {
           className: N.title,
           variant: "text-xs/medium",
           color: "interactive-normal",
-          children: C.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_ITEM_FEEDBACK_RECEIVED_SUBTITLE
+          children: S.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_ITEM_FEEDBACK_RECEIVED_SUBTITLE
         })]
       }) : (0, l.jsx)(r.Text, {
         className: N.title,
         variant: "text-md/medium",
         color: "interactive-active",
-        children: C.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_ITEM
+        children: S.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_ITEM
       }), (0, l.jsx)(r.Button, {
         size: r.Button.Sizes.SMALL,
         color: r.Button.Colors.PRIMARY,
         onClick: () => {
           (0, _.unhideItemFromGuildFeed)(a, t)
         },
-        children: C.default.Messages.UNDO
+        children: S.default.Messages.UNDO
       })]
     }), !i && (0, l.jsx)(p, {
       guildId: t,

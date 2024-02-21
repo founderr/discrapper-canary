@@ -5,12 +5,12 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("943314"),
-  l = n("531869"),
-  a = n("49111");
+  a = n("531869"),
+  l = n("49111");
 
 function s(e) {
-  let t = l.default.getCurrentConfig({
-      guildId: null != e ? e : a.EMPTY_STRING_GUILD_ID,
+  let t = a.default.getCurrentConfig({
+      guildId: null != e ? e : l.EMPTY_STRING_GUILD_ID,
       location: "3fde52_1"
     }),
     n = i.default.getCurrentConfig({

@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("227231"),
   N = n("555226"),
   R = n("315130"),
-  v = n("228399"),
-  O = n("45198"),
+  O = n("228399"),
+  v = n("45198"),
   L = n("275986"),
   M = n("686098"),
   P = n("166604"),
@@ -210,7 +210,7 @@ let V = s.forwardRef(function(e, t) {
         ref: t,
         children: [(0, a.jsxs)("div", {
           className: y.utils,
-          children: [(0, a.jsx)(O.default, {
+          children: [(0, a.jsx)(v.default, {
             color: "always-white"
           }), (0, a.jsx)(L.QuestsEntryContextMenuPopout, {
             onOpen: h,
@@ -229,7 +229,7 @@ let V = s.forwardRef(function(e, t) {
           })]
         }), (0, a.jsxs)("div", {
           className: y.details,
-          children: [(0, a.jsx)(v.default, {
+          children: [(0, a.jsx)(O.default, {
             className: y.rewardTile,
             quest: p
           }), (0, a.jsx)(c.Heading, {
@@ -296,8 +296,8 @@ var Y = function() {
     C = s.useRef(-1),
     I = s.useRef(!1),
     [m, N] = s.useState(!1),
-    [R, v] = s.useState(!1),
-    [O, L] = s.useState(!1),
+    [R, O] = s.useState(!1),
+    [v, L] = s.useState(!1),
     [M, D] = s.useState(!0),
     [x, U] = s.useState(240),
     G = s.useRef(!1),
@@ -328,7 +328,7 @@ var Y = function() {
         expansionFactor: 0
       },
       to: {
-        expansionFactor: O ? 1 : 0
+        expansionFactor: v ? 1 : 0
       },
       config: {
         tension: 300,
@@ -357,7 +357,7 @@ var Y = function() {
       N(!1), L(!1), I.current = !1
     }, []),
     ee = s.useCallback(() => {
-      window.clearTimeout(C.current), G.current = !0, v(!1), Z()
+      window.clearTimeout(C.current), G.current = !0, O(!1), Z()
     }, [Z]),
     et = s.useCallback(() => {
       if (!Y) !m && (C.current = window.setTimeout(() => {
@@ -376,7 +376,7 @@ var Y = function() {
   return (s.useEffect(() => {
     if (G.current) return;
     let e = window.setTimeout(() => {
-      v(h.default.isFocused())
+      O(h.default.isFocused())
     }, 500);
     return () => {
       window.clearTimeout(e)
@@ -387,7 +387,7 @@ var Y = function() {
     className: y.wrapper,
     style: {
       color: o.config.colors.secondary,
-      height: Y && O ? x : void 0
+      height: Y && v ? x : void 0
     },
     children: [(0, a.jsxs)(u.animated.div, {
       onMouseLeave: ea,
@@ -395,7 +395,7 @@ var Y = function() {
       onFocus: ee,
       onBlur: et,
       className: i(y.contentWrapper, {
-        [y.contentWrapperExpanded]: O,
+        [y.contentWrapperExpanded]: v,
         [y.contentWrapperAccepted]: k
       }),
       style: {
@@ -407,7 +407,7 @@ var Y = function() {
       },
       children: [(0, a.jsx)(H, {
         expansionFactor: Q,
-        isExpanded: O,
+        isExpanded: v,
         isExpansionAnimationComplete: M,
         quest: o
       }), (0, a.jsx)(V, {
@@ -415,13 +415,13 @@ var Y = function() {
         onCtxMenuClose: J,
         onCtxMenuSelect: $,
         expansionFactor: Q,
-        isExpanded: O,
+        isExpanded: v,
         isExpansionAnimationComplete: M,
         quest: o,
         useReducedMotion: r,
         ref: j
       })]
-    }), null != q && !k && (!O || O && !M) && (0, a.jsx)("div", {
+    }), null != q && !k && (!v || v && !M) && (0, a.jsx)("div", {
       className: y.lottieAnimationBackgroundWrapper,
       children: (0, a.jsx)(_.default, {
         importData: () => w(o.id, q),

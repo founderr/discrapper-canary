@@ -22,14 +22,14 @@ var l = a("37983"),
   _ = a("419830"),
   x = a("713810"),
   v = a("185014"),
-  S = a("465519"),
-  C = a("120027"),
+  C = a("465519"),
+  S = a("120027"),
   N = a("699473"),
   p = a("42203"),
   T = a("697218"),
   A = a("730106"),
-  j = a("215361"),
-  M = a("345318"),
+  M = a("215361"),
+  j = a("345318"),
   D = a("782340"),
   F = a("286669"),
   L = a("782983"),
@@ -43,18 +43,18 @@ let b = async () => {
   let {
     featuredItem: t,
     className: a
-  } = e, s = c.default.colors.TEXT_POSITIVE, d = j.default, u = (0, o.useStateFromStores)([T.default], () => T.default.getUser(t.details.actorUserId), [t]), f = n.useMemo(() => null == u ? {} : {
+  } = e, s = c.default.colors.TEXT_POSITIVE, d = M.default, u = (0, o.useStateFromStores)([T.default], () => T.default.getUser(t.details.actorUserId), [t]), f = n.useMemo(() => null == u ? {} : {
     [t.guildId]: [u.id]
   }, [t.guildId, u]);
-  switch ((0, g.useSubscribeGuildMembers)(f), s = (0, S.getFeaturedExpirationTextColor)(t.details.expiresAt)) {
+  switch ((0, g.useSubscribeGuildMembers)(f), s = (0, C.getFeaturedExpirationTextColor)(t.details.expiresAt)) {
     case c.default.colors.TEXT_DANGER:
       d = A.default;
       break;
     case c.default.colors.TEXT_WARNING:
-      d = M.default;
+      d = j.default;
       break;
     case c.default.colors.TEXT_POSITIVE:
-      d = j.default
+      d = M.default
   }
   return (0, l.jsxs)("div", {
     className: i(a, F.header),
@@ -73,7 +73,7 @@ let b = async () => {
           fromNow: r(t.details.expiresAt).fromNow()
         })
       })]
-    }), (0, l.jsx)(C.default, {
+    }), (0, l.jsx)(S.default, {
       height: 4,
       width: 4,
       "aria-hidden": "true",

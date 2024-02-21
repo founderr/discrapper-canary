@@ -37,7 +37,7 @@ function R() {
   } = (0, i.useStateFromStoresObject)([I.default, C.default], () => ({
     action: I.default.getAction(),
     theme: C.default.theme
-  })), R = p.default.getVerificationTypes(e), [v, O] = s.useState(0), L = (0, f.default)(R);
+  })), R = p.default.getVerificationTypes(e), [O, v] = s.useState(0), L = (0, f.default)(R);
   (0, h.default)({
     type: l.ImpressionTypes.MODAL,
     name: l.ImpressionNames.USER_ACTION_REQUIRED,
@@ -93,7 +93,7 @@ function R() {
     })
   }, [R, L]), (0, a.jsx)(S.default, {
     types: R,
-    captchaKey: v,
+    captchaKey: O,
     onCaptchaVerify: e => {
       r.default.post({
         url: T.Endpoints.CAPTCHA,
@@ -102,7 +102,7 @@ function R() {
         },
         oldFormErrors: !0
       }).then(d.popLayer, () => {
-        O(e => e + 1)
+        v(e => e + 1)
       })
     },
     theme: t,

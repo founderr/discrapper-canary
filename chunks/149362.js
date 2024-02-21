@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var l = n("446674"),
@@ -10,7 +10,7 @@ var l = n("446674"),
   i = n("379881"),
   r = n("49111");
 
-function o(e) {
+function u(e) {
   let t = (0, l.useStateFromStoresObject)([s.default, a.default, i.default], () => {
     if (e !== r.FAVORITES) return s.default.getVoiceStates(e);
     let t = i.default.getFavoriteChannels(),

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return q
+    return J
   }
 }), n("222007"), n("70102");
 var l = n("37983");
@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("446674"),
   r = n("862337"),
-  o = n("77078"),
-  u = n("255397"),
+  u = n("77078"),
+  o = n("255397"),
   d = n("272030"),
   c = n("667771"),
   f = n("650912"),
@@ -21,9 +21,9 @@ var a = n("414456"),
   m = n("481699"),
   E = n("679653"),
   g = n("242740"),
-  S = n("557661"),
-  I = n("261552"),
-  _ = n("233322"),
+  I = n("557661"),
+  _ = n("261552"),
+  S = n("233322"),
   N = n("157186"),
   T = n("848848"),
   A = n("534222"),
@@ -49,8 +49,8 @@ var a = n("414456"),
   Y = n("884155"),
   K = n("49111"),
   W = n("695838"),
-  Z = n("782340"),
-  z = n("65369");
+  z = n("782340"),
+  Z = n("65369");
 class X extends F.default {
   componentWillUnmount() {
     this.activitiesHideTimeout.stop()
@@ -74,9 +74,9 @@ class X extends F.default {
       sortingPosition: t,
       isUserOver: n
     } = this.props;
-    if (n) return z.containerUserOver;
-    if (null != t) return e > t ? z.containerDragAfter : z.containerDragBefore;
-    return z.containerDefault
+    if (n) return Z.containerUserOver;
+    if (null != t) return e > t ? Z.containerDragAfter : Z.containerDragBefore;
+    return Z.containerDefault
   }
   renderSubtitle() {
     var e;
@@ -85,7 +85,7 @@ class X extends F.default {
       connected: n,
       enableHangStatus: a,
       allowChannelTopic: s
-    } = this.props, i = null === (e = (0, S.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
+    } = this.props, i = null === (e = (0, I.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
       hovered: r
     } = this.state;
     return (0, l.jsx)(k.default, {
@@ -121,7 +121,7 @@ class X extends F.default {
       channelInfo: e
     } = this.props;
     return null == e ? null : (0, l.jsx)("div", {
-      className: z.channelInfo,
+      className: Z.channelInfo,
       children: e
     })
   }
@@ -133,7 +133,7 @@ class X extends F.default {
       unread: a,
       resolvedUnreadSetting: i,
       mentionCount: r,
-      locked: u,
+      locked: o,
       sorting: d,
       isUserOver: c,
       connectChannelDropTarget: f,
@@ -141,9 +141,9 @@ class X extends F.default {
       connectUserDropTarget: C,
       connectDragPreview: E,
       canReorderChannel: g,
-      canMoveMembers: S,
-      showTutorial: I,
-      hasActiveEvent: _,
+      canMoveMembers: I,
+      showTutorial: _,
+      hasActiveEvent: S,
       embeddedApps: N,
       isSubscriptionGated: T,
       isFavoriteSuggestion: A,
@@ -153,30 +153,30 @@ class X extends F.default {
       shouldShowGuildVerificationPopout: x
     } = this.state, M = this.getVoiceStatesCount(), O = (0, l.jsxs)("li", {
       className: s(this.getModeClass(), {
-        [z.disabled]: this.isDisabled()
+        [Z.disabled]: this.isDisabled()
       }),
       "data-dnd-name": e.name,
       children: [(0, l.jsx)("div", {
         onMouseEnter: this.handleMouseEnter,
         onMouseLeave: this.handleMouseLeave,
-        children: (0, l.jsx)(o.Popout, {
+        children: (0, l.jsx)(u.Popout, {
           position: "right",
           renderPopout: this.renderPopout,
           spacing: 0,
           onRequestClose: this.closeGuildVerificationPopout,
           shouldShow: v && !d && !c && !x || x,
-          children: () => (0, l.jsx)(o.Tooltip, {
+          children: () => (0, l.jsx)(u.Tooltip, {
             text: this.getTooltipText(),
-            children: o => {
+            children: u => {
               let {
                 onClick: d,
                 onContextMenu: c,
                 ...f
-              } = o;
+              } = u;
               return (0, l.jsxs)(V.default, {
-                className: z.iconVisibility,
+                className: Z.iconVisibility,
                 iconClassName: s({
-                  [z.iconLive]: _
+                  [Z.iconLive]: S
                 }),
                 channel: e,
                 selected: !A && t,
@@ -184,7 +184,7 @@ class X extends F.default {
                 unread: n ? a : void 0,
                 resolvedUnreadSetting: i,
                 mentionCount: r,
-                locked: u,
+                locked: o,
                 subtitle: this.renderSubtitle(),
                 onClick: () => {
                   this.handleClick(), null == d || d()
@@ -215,7 +215,7 @@ class X extends F.default {
         })
       }), this.renderVoiceUsers()]
     });
-    return S && (O = C(O)), g && (O = f(h(O))), I && (O = (0, l.jsx)(R.default, {
+    return I && (O = C(O)), g && (O = f(h(O))), _ && (O = (0, l.jsx)(R.default, {
       tutorialId: "voice-conversations",
       position: "right",
       offsetX: -20,
@@ -279,13 +279,13 @@ class X extends F.default {
       let {
         channel: e
       } = this.props, t = e.getGuildId();
-      null != t && (0, N.shouldShowMembershipVerificationGate)(t) && (0, _.openMemberVerificationModal)(t), this.handleVoiceConnect()
+      null != t && (0, N.shouldShowMembershipVerificationGate)(t) && (0, S.openMemberVerificationModal)(t), this.handleVoiceConnect()
     }, this.handleVoiceStatusClick = e => {
       let {
         connected: t,
         channel: a
       } = this.props;
-      t && (e.stopPropagation(), (0, o.openModalLazy)(async () => {
+      t && (e.stopPropagation(), (0, u.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("843624").then(n.bind(n, "843624"));
@@ -306,9 +306,9 @@ class X extends F.default {
         guild: i
       } = this.props, {
         shouldShowActivities: r,
-        shouldShowGuildVerificationPopout: o
+        shouldShowGuildVerificationPopout: u
       } = this.state;
-      if (r && !n && !a && !o) {
+      if (r && !n && !a && !u) {
         let n = M.ActivityRestrictedGuilds.getSetting().includes(i.id);
         return (0, l.jsx)(H.default, {
           onAction: this.closePopout,
@@ -319,7 +319,7 @@ class X extends F.default {
           shouldShowSettingNudge: n
         })
       }
-      if (o) return (0, l.jsx)(L.default, {
+      if (u) return (0, l.jsx)(L.default, {
         type: L.GuildVerificationPopoutTypes.VOICE,
         guildId: e.guild_id,
         closePopout: this.closeGuildVerificationPopout
@@ -331,8 +331,8 @@ class X extends F.default {
         locked: t,
         forceShowButtons: n
       } = this.props;
-      if (!t) return (0, l.jsx)(o.Tooltip, {
-        text: Z.default.Messages.OPEN_CHAT,
+      if (!t) return (0, l.jsx)(u.Tooltip, {
+        text: z.default.Messages.OPEN_CHAT,
         children: t => {
           let {
             onMouseEnter: a,
@@ -340,12 +340,12 @@ class X extends F.default {
             onFocus: r,
             onBlur: d
           } = t;
-          return (0, l.jsx)(o.Clickable, {
-            className: s(z.iconItem, n ? z.alwaysShown : null),
+          return (0, l.jsx)(u.Clickable, {
+            className: s(Z.iconItem, n ? Z.alwaysShown : null),
             onClick: () => {
-              u.default.updateChatOpen(e.id, !0), (0, x.transitionToChannel)(e.id)
+              o.default.updateChatOpen(e.id, !0), (0, x.transitionToChannel)(e.id)
             },
-            "aria-label": Z.default.Messages.OPEN_CHAT,
+            "aria-label": z.default.Messages.OPEN_CHAT,
             onMouseEnter: a,
             onMouseLeave: i,
             onFocus: r,
@@ -353,7 +353,7 @@ class X extends F.default {
             children: (0, l.jsx)(P.default, {
               width: 16,
               height: 16,
-              className: z.actionIcon
+              className: Z.actionIcon
             })
           })
         }
@@ -362,21 +362,21 @@ class X extends F.default {
       let {
         connected: e
       } = this.props;
-      return this.isFull() && !e ? Z.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
+      return this.isFull() && !e ? z.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
     }
   }
 }
 let Q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(X));
 
-function q(e) {
+function J(e) {
   let {
     guild: t,
     channel: n,
     disableSorting: a,
     isFavoriteCategory: s,
     selected: r,
-    collapsed: o,
-    voiceStates: u
+    collapsed: u,
+    voiceStates: o
   } = e, d = (0, i.useStateFromStoresObject)([j.default], () => ({
     unread: j.default.hasUnread(n.id),
     mentionCount: j.default.getMentionCount(n.id)
@@ -392,9 +392,9 @@ function q(e) {
       unverifiedAccount: !l.canChat
     }
   }), C = (0, i.useStateFromStores)([U.default], () => U.default.hasVideo(n.id)), p = (0, h.default)(n), m = (0, E.default)(n), g = (0, A.useActiveEvent)(n.id), {
-    isSubscriptionGated: S,
-    needSubscriptionToAccess: _
-  } = (0, T.default)(n.id), N = (0, I.default)(), L = (0, i.useStateFromStores)([G.default], () => G.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
+    isSubscriptionGated: I,
+    needSubscriptionToAccess: S
+  } = (0, T.default)(n.id), N = (0, _.default)(), L = (0, i.useStateFromStores)([G.default], () => G.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
     enableHangStatus: R,
     allowChannelTopic: M
   } = v.HangStatusExperiment.useExperiment({
@@ -405,10 +405,10 @@ function q(e) {
   }), y = (0, B.default)({
     channel: n,
     isChannelSelected: r,
-    isChannelCollapsed: o,
-    voiceStates: u,
-    isSubscriptionGated: S,
-    needSubscriptionToAccess: _,
+    isChannelCollapsed: u,
+    voiceStates: o,
+    isSubscriptionGated: I,
+    needSubscriptionToAccess: S,
     enableConnectedUserLimit: !0,
     enableActivities: !0
   }), P = x && null == y;
@@ -418,8 +418,8 @@ function q(e) {
     embeddedActivityType: K.ActivityTypes.PLAYING,
     video: C,
     hasActiveEvent: null != g,
-    isSubscriptionGated: S,
-    needSubscriptionToAccess: _,
+    isSubscriptionGated: I,
+    needSubscriptionToAccess: S,
     ...d,
     ...f,
     ...e,

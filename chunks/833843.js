@@ -80,8 +80,8 @@ var G = e => {
     initialRecurrenceId: S,
     onClose: h
   } = e, [C, g] = r.useState(S), L = (0, l.useStateFromStores)([_.default], () => _.default.getGuildScheduledEvent(t), [t]), G = null == L ? void 0 : L.id, O = null == L ? void 0 : L.guild_id, {
-    guild: x,
-    isMember: M
+    guild: M,
+    isMember: x
   } = (0, T.default)(O, G), b = (0, a.default)(n), w = null == L ? void 0 : L.channel_id, F = (0, l.useStateFromStores)([o.default], () => o.default.getChannel(w), [w]), V = (0, d.useUID)(), [j, H] = r.useState(P.EventDetailSections.EVENT_INFO), B = (0, I.default)(G, C), k = (0, l.useStateFromStores)([_.default], () => _.default.getUserCount(G, C)), [Y, {
     loading: Z,
     error: W
@@ -98,7 +98,7 @@ var G = e => {
       var e, t;
       let n = (null == L ? void 0 : L.recurrence_rule) != null ? 16 : 0;
       X((null !== (t = null == z ? void 0 : null === (e = z.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 0) + n)
-    }, [z, null == L ? void 0 : L.recurrence_rule]), null == L || null == x || !M && !b) return null;
+    }, [z, null == L ? void 0 : L.recurrence_rule]), null == L || null == M || !x && !b) return null;
   let q = e => {
       e !== j && (e === P.EventDetailSections.RSVP_LIST && Y(), H(e))
     },
@@ -133,7 +133,7 @@ var G = e => {
             id: P.EventDetailSections.EVENT_INFO,
             children: (0, i.jsx)(m.default, {
               guildEvent: L,
-              guild: x,
+              guild: M,
               channel: F,
               headerId: V,
               onClose: h,
@@ -161,8 +161,8 @@ var G = e => {
       children: (0, i.jsx)(U, {
         guildEvent: L,
         isHub: b,
-        isMember: M,
-        guild: x,
+        isMember: x,
+        guild: M,
         channel: F,
         onActionTaken: h,
         recurrenceId: J

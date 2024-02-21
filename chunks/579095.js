@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("42203"),
-  u = n("316133"),
+  u = n("42203"),
+  o = n("316133"),
   d = n("449008"),
   c = n("120969"),
   f = n("782340"),
@@ -22,10 +22,10 @@ var l = n("37983"),
       selectedVoiceChannelId: a,
       sortedThreadIds: s,
       withGuildIcon: C
-    } = e, p = (0, r.useStateFromStoresArray)([o.default], () => s.map(e => o.default.getChannel(e)).filter(d.isNotNullish), [s]), m = (0, r.useStateFromStores)([u.default], () => {
+    } = e, p = (0, r.useStateFromStoresArray)([u.default], () => s.map(e => u.default.getChannel(e)).filter(d.isNotNullish), [s]), m = (0, r.useStateFromStores)([o.default], () => {
       let e = p[p.length - 1];
       if (null == e) return 0;
-      let t = u.default.getVoiceStates(e.guild_id)[e.id];
+      let t = o.default.getVoiceStates(e.guild_id)[e.id];
       return null == t || 0 === t.length ? 0 : a !== e.id ? 40 : 32 * t.length + 8
     });
     return (0, l.jsx)("li", {

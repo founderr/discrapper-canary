@@ -17,8 +17,8 @@ var r = n("37983"),
   f = n("878720"),
   _ = n("601745"),
   S = n("650893"),
-  T = n("697218"),
-  I = n("145131"),
+  I = n("697218"),
+  T = n("145131"),
   h = n("583227"),
   N = n("49111"),
   p = n("482931"),
@@ -31,8 +31,8 @@ let C = e => {
     children: i,
     ...s
   } = e;
-  return (0, r.jsxs)(I.default, {
-    direction: I.default.Direction.VERTICAL,
+  return (0, r.jsxs)(T.default, {
+    direction: T.default.Direction.VERTICAL,
     ...s,
     children: [(0, r.jsx)(u.FormTitle, {
       tag: "h2",
@@ -41,7 +41,7 @@ let C = e => {
       variant: "text-md/normal",
       className: R.sectionBody,
       children: n
-    }) : null, (0, r.jsx)(I.default.Child, {
+    }) : null, (0, r.jsx)(T.default.Child, {
       wrap: !0,
       children: i
     })]
@@ -112,7 +112,7 @@ class v extends i.PureComponent {
   renderHeader(e) {
     return (0, r.jsxs)(u.ModalHeader, {
       separator: !1,
-      children: [(0, r.jsxs)(I.default.Child, {
+      children: [(0, r.jsxs)(T.default.Child, {
         grow: 1,
         shrink: 1,
         children: [(0, r.jsx)(u.Heading, {
@@ -124,7 +124,7 @@ class v extends i.PureComponent {
           className: R.subHeader,
           children: e
         })]
-      }), (0, r.jsx)(I.default.Child, {
+      }), (0, r.jsx)(T.default.Child, {
         grow: 0,
         children: (0, r.jsx)(u.ModalCloseButton, {
           onClick: this.handleCloseModal
@@ -245,8 +245,8 @@ class v extends i.PureComponent {
     }
   }
 }
-var m = a.default.connectStores([T.default, S.default], () => {
-  let e = T.default.getCurrentUser();
+var m = a.default.connectStores([I.default, S.default], () => {
+  let e = I.default.getCurrentUser();
   return o(null != e, "MFAEnableSuccess: currentUser cannot be undefined"), {
     currentUser: e,
     backupCodes: S.default.getBackupCodes(),

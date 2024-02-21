@@ -86,7 +86,7 @@ function L(e) {
   }(n.id, t)
 }
 
-function O(e) {
+function h(e) {
   let {
     guild: t
   } = e;
@@ -95,7 +95,7 @@ function O(e) {
     (null == n || n.guild_id === t.id) && delete p[e]
   }
 }
-class h extends a.default.Store {
+class O extends a.default.Store {
   initialize() {
     this.waitFor(E.default, s.default, _.default, c.default, I.default)
   }
@@ -119,8 +119,8 @@ class h extends a.default.Store {
     return A(e, t, r)
   }
 }
-h.displayName = "StageChannelRoleStore";
-var P = new h(o.default, {
+O.displayName = "StageChannelRoleStore";
+var P = new O(o.default, {
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
@@ -156,6 +156,6 @@ var P = new h(o.default, {
       return R(n, r) || e
     }, !1)
   },
-  GUILD_CREATE: O,
-  GUILD_DELETE: O
+  GUILD_CREATE: h,
+  GUILD_DELETE: h
 })

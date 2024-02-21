@@ -13,8 +13,8 @@ n.r(t), n.d(t, {
     return H
   }
 }), n("808653"), n("424973"), n("222007");
-var i, l, a = n("917351"),
-  s = n.n(a),
+var i, a, l = n("917351"),
+  s = n.n(l),
   r = n("210696"),
   u = n.n(r),
   d = n("316693"),
@@ -53,18 +53,18 @@ function O(e, t, n, i) {
         }, count: n, index: i
       };
     default:
-      let l = A.default.getGuild(e),
-        a = null != l ? l.getRole(t) : null;
+      let a = A.default.getGuild(e),
+        l = null != a ? a.getRole(t) : null;
       return {
-        type: "GROUP", key: t, id: t, title: null != a ? a.name : "", count: n, index: i
+        type: "GROUP", key: t, id: t, title: null != l ? l.name : "", count: n, index: i
       }
   }
 }
 
-function R(e, t, n) {
+function I(e, t, n) {
   let i = n === h.default.getId(),
-    l = T.default.isMobileOnline(n),
-    a = i ? p.default.getStatus() : T.default.getStatus(n, e),
+    a = T.default.isMobileOnline(n),
+    l = i ? p.default.getStatus() : T.default.getStatus(n, e),
     s = i ? p.default.getActivities() : T.default.getActivities(n, e),
     r = f.default.getStreamForUser(n, e),
     u = S.default.getUser(n);
@@ -72,27 +72,27 @@ function R(e, t, n) {
     type: "MEMBER",
     ...m.default.getMember(e, n),
     user: u,
-    status: a,
+    status: l,
     activities: s,
     applicationStream: r,
     isOwner: t === n,
-    isMobileOnline: l
+    isMobileOnline: a
   }
 }
 
-function I(e) {
+function R(e) {
   let t = E.default.getChannel(e);
   return null == t ? v : null == t.memberListId ? function(e) {
     return _.default.canEveryone(M.Permissions.VIEW_CHANNEL, e) ? v : u.v3(s(e.permissionOverwrites).reduce((e, t) => {
       let {
         id: n,
         allow: i,
-        deny: l
+        deny: a
       } = t;
-      return d.default.has(i, M.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : d.default.has(l, M.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
+      return d.default.has(i, M.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : d.default.has(a, M.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
     }, []).sort().join(",")).toString()
   }(t) : t.memberListId
-}(l = i || (i = {})).GROUP = "GROUP", l.MEMBER = "MEMBER";
+}(a = i || (i = {})).GROUP = "GROUP", a.MEMBER = "MEMBER";
 class b {
   updateOwnerId() {
     let e = A.default.getGuild(this.guildId);
@@ -105,8 +105,8 @@ class b {
     this.groups = e.map(e => {
       var n;
       let i = t,
-        l = Math.max(0, null !== (n = e.count) && void 0 !== n ? n : 0);
-      return t += l + 1, O(this.guildId, e.id, l, i)
+        a = Math.max(0, null !== (n = e.count) && void 0 !== n ? n : 0);
+      return t += a + 1, O(this.guildId, e.id, a, i)
     }), this.rows.length = t
   }
   sync(e, t) {
@@ -129,7 +129,7 @@ class b {
     } = t;
     if (null != n) this.rows.splice(e, 0, O(this.guildId, n.id, n.count));
     else if (null != i) {
-      let t = R(this.guildId, this.ownerId, i.user.id);
+      let t = I(this.guildId, this.ownerId, i.user.id);
       if (null == t) return;
       this.rows.splice(e, 0, t), this.members[i.user.id] = t
     }
@@ -139,10 +139,10 @@ class b {
     let {
       group: n,
       member: i
-    } = t, l = this.rows[e];
-    if (null != l && "MEMBER" === l.type && delete this.members[l.user.id], null != n) this.rows[e] = O(this.guildId, n.id, n.count);
+    } = t, a = this.rows[e];
+    if (null != a && "MEMBER" === a.type && delete this.members[a.user.id], null != n) this.rows[e] = O(this.guildId, n.id, n.count);
     else if (null != i) {
-      let t = R(this.guildId, this.ownerId, i.user.id);
+      let t = I(this.guildId, this.ownerId, i.user.id);
       if (null == t) return;
       this.rows[e] = t, this.members[i.user.id] = t
     }
@@ -154,7 +154,7 @@ class b {
   }
   rebuildMember(e) {
     let t = this.members[e];
-    null != t && (Object.assign(t, R(this.guildId, this.ownerId, e)), this.version++)
+    null != t && (Object.assign(t, I(this.guildId, this.ownerId, e)), this.version++)
   }
   rebuildMembers() {
     s.forEach(this.members, (e, t) => {
@@ -217,7 +217,7 @@ class F extends o.default.Store {
     this.waitFor(S.default, A.default, E.default, m.default, T.default, p.default, h.default, g.default, f.default), this.syncWith([p.default], U), this.syncWith([f.default], P)
   }
   getProps(e, t) {
-    let n = D.get(e, I(t));
+    let n = D.get(e, R(t));
     return {
       listId: "".concat(n.guildId, ":").concat(n.listId),
       groups: n.groups,
@@ -226,7 +226,7 @@ class F extends o.default.Store {
     }
   }
   getRows(e, t) {
-    let n = D.get(e, I(t));
+    let n = D.get(e, R(t));
     return n.rows
   }
 }

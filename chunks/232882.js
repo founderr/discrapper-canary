@@ -28,14 +28,14 @@ var l = a("37983"),
   _ = a("811305"),
   x = a("185014"),
   v = a("886484"),
-  S = a("2804"),
-  C = a("468670"),
+  C = a("2804"),
+  S = a("468670"),
   N = a("120027"),
   p = a("113312"),
   T = a("339274"),
   A = a("605143"),
-  j = a("759668"),
-  M = a("208695"),
+  M = a("759668"),
+  j = a("208695"),
   D = a("49111"),
   F = a("724210"),
   L = a("782340"),
@@ -114,12 +114,12 @@ var y = n.forwardRef(function(e, t) {
     }
   }, [G, U, w]), V = (0, d.useStateFromStores)([g.default], () => g.default.getChannel(U)), W = (0, c.getChannelIconComponent)(V, void 0, {
     textFocused: !0
-  }), K = (0, c.getChannelIconTooltipText)(V), z = null !== (a = null == y ? void 0 : y.referenceMessages) && void 0 !== a ? a : [], Y = (0, o.default)(V), [Z, X] = n.useState(!1), J = (0, d.useStateFromStores)([I.default], () => null != B && I.default.isBlocked(null == B ? void 0 : B.author.id)), q = (0, s.useListItem)(null !== (_ = null == B ? void 0 : B.id) && void 0 !== _ ? _ : w), Q = (0, S.default)(y), $ = (0, d.useStateFromStores)([E.default], () => E.default.getSidebarState(F.StaticChannelRoute.GUILD_HOME)), ee = (0, v.getSidebarMessageId)($, V), et = null != ee && y.message.id === ee, ea = y.highlighted ? L.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : P ? L.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
+  }), K = (0, c.getChannelIconTooltipText)(V), z = null !== (a = null == y ? void 0 : y.referenceMessages) && void 0 !== a ? a : [], Y = (0, o.default)(V), [Z, X] = n.useState(!1), J = (0, d.useStateFromStores)([I.default], () => null != B && I.default.isBlocked(null == B ? void 0 : B.author.id)), q = (0, s.useListItem)(null !== (_ = null == B ? void 0 : B.id) && void 0 !== _ ? _ : w), Q = (0, C.default)(y), $ = (0, d.useStateFromStores)([E.default], () => E.default.getSidebarState(F.StaticChannelRoute.GUILD_HOME)), ee = (0, v.getSidebarMessageId)($, V), et = null != ee && y.message.id === ee, ea = y.highlighted ? L.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : P ? L.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
     handleItemClick: el,
     handleChannelClick: en,
     handleCardClick: es,
     handleMessageClick: ei
-  } = (0, C.default)({
+  } = (0, S.default)({
     guildId: G,
     channelId: U,
     feedItemId: Q,
@@ -200,14 +200,14 @@ var y = n.forwardRef(function(e, t) {
           })]
         }), (0, l.jsx)("div", {
           className: R.messageHeaderMenuRight,
-          children: (0, l.jsx)(j.default, {
+          children: (0, l.jsx)(M.default, {
             feedItem: y,
             guildId: G,
             onContextMenu: ed
           })
         })]
       }),
-      children: [(0, l.jsx)(M.default, {
+      children: [(0, l.jsx)(j.default, {
         className: R.messageItemBody,
         guildId: G,
         animateAvatar: Z,

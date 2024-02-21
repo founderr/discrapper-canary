@@ -25,8 +25,8 @@ var l = a("37983"),
   _ = a("118503"),
   x = a("818643"),
   v = a("315102"),
-  S = a("49111"),
-  C = a("782340"),
+  C = a("49111"),
+  S = a("782340"),
   N = a("32492"),
   p = a("141555"),
   T = a("520609");
@@ -42,12 +42,12 @@ let A = e => {
   }
 };
 
-function j(e) {
+function M(e) {
   let {
     guild: t
   } = e, a = () => {
-    f.default.open(t.id, S.GuildSettingsSections.ONBOARDING, void 0, S.GuildSettingsSubsections.SERVER_GUIDE)
-  }, n = t.hasFeature(S.GuildFeatures.BANNER);
+    f.default.open(t.id, C.GuildSettingsSections.ONBOARDING, void 0, C.GuildSettingsSubsections.SERVER_GUIDE)
+  }, n = t.hasFeature(C.GuildFeatures.BANNER);
   return n ? (0, l.jsxs)(u.Button, {
     className: N.editButton,
     innerClassName: N.editButtonInner,
@@ -59,7 +59,7 @@ function j(e) {
       height: 16,
       width: 16,
       color: r.default.unsafe_rawColors.WHITE_500.css
-    }), C.default.Messages.EDIT_IMAGE]
+    }), S.default.Messages.EDIT_IMAGE]
   }) : (0, l.jsxs)(I.default, {
     color: u.Button.Colors.GREEN,
     className: N.editButton,
@@ -69,10 +69,10 @@ function j(e) {
       height: 16,
       width: 16,
       className: N.premiumUpsellBadge
-    }), C.default.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA]
+    }), S.default.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA]
   })
 }
-let M = n.memo(function(e) {
+let j = n.memo(function(e) {
   let {
     guild: t,
     titleClassName: n
@@ -91,7 +91,7 @@ let M = n.memo(function(e) {
         style: {
           backgroundImage: "url(".concat(r ? s : "dark" === _ ? p : T, ")")
         }
-      }), f && (0, l.jsx)(j, {
+      }), f && (0, l.jsx)(M, {
         guild: t
       })]
     }), (0, l.jsx)("div", {
@@ -127,10 +127,10 @@ let M = n.memo(function(e) {
                 return a => (0, l.jsx)(e, {
                   ...a,
                   guild: t,
-                  source: S.InstantInviteSources.GUILD_HOME
+                  source: C.InstantInviteSources.GUILD_HOME
                 })
               }),
-              children: C.default.Messages.INSTANT_INVITE
+              children: S.default.Messages.INSTANT_INVITE
             })]
           })
         })]
@@ -138,4 +138,4 @@ let M = n.memo(function(e) {
     })]
   })
 });
-var D = M
+var D = j

@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("380691"),
   N = n("943349"),
   R = n("702173"),
-  v = n("10524"),
-  O = n("478272"),
+  O = n("10524"),
+  v = n("478272"),
   L = n("812204"),
   M = n("685665"),
   P = n("754493"),
@@ -81,8 +81,8 @@ var a = n("37983"),
   eA = n("220075"),
   eN = n("82636"),
   eR = n("394832"),
-  ev = n("394640"),
-  eO = n("343571"),
+  eO = n("394640"),
+  ev = n("343571"),
   eL = n("962541"),
   eM = n("762489"),
   eP = n("599110"),
@@ -166,7 +166,7 @@ function eH() {
   return (0, a.jsx)(eL.default, {
     "aria-label": t,
     tooltipText: t,
-    icon: e ? eO.default : ev.default,
+    icon: e ? ev.default : eO.default,
     onClick: () => (0, z.updateStageMusicMuted)(!e)
   })
 }
@@ -290,7 +290,7 @@ function eY(e) {
       size: c.Button.Sizes.SMALL,
       onClick: () => {
         var n;
-        (0, O.default)({
+        (0, v.default)({
           channel: t,
           guildId: t.guild_id,
           locationObject: _.location,
@@ -305,7 +305,7 @@ function eY(e) {
       }),
       innerClassName: ew.buttonContents,
       wrapperClassName: ew.button,
-      children: [C ? (0, a.jsx)(v.FreeActivityIndicatorDot, {
+      children: [C ? (0, a.jsx)(O.FreeActivityIndicatorDot, {
         top: -1,
         right: -1
       }) : null, (0, a.jsx)(eN.default, {
@@ -653,7 +653,7 @@ var ez = (0, I.default)(function(e) {
     m = (0, d.useStateFromStores)([eE.default], () => S && !eE.default.can(eU.Permissions.VIEW_CHANNEL, o), [S, o]),
     p = X.RtcPanelShowVoiceStates.useSetting(),
     [T, A, N] = (0, d.useStateFromStoresArray)([eS.default, Y.default], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [Y.default.getMutableParticipants(o.id, W.StageChannelParticipantNamedIndex.SPEAKER), Y.default.getParticipantsVersion(o.id), null] : [null, null, null != o ? eS.default.getVoiceStatesForChannel(o) : null], [o]),
-    v = s.useMemo(() => {
+    O = s.useMemo(() => {
       var e, t;
       return null !== (t = null !== (e = null == T ? void 0 : T.map(e => {
         let {
@@ -668,7 +668,7 @@ var ez = (0, I.default)(function(e) {
         }
       })) && void 0 !== e ? e : N) && void 0 !== t ? t : []
     }, [T, A, N]),
-    [O, D] = s.useState(!1);
+    [v, D] = s.useState(!1);
   s.useEffect(() => {
     (S || m) && D(!1)
   }, [S, m, D]);
@@ -692,12 +692,12 @@ var ez = (0, I.default)(function(e) {
         hasVideo: _,
         selfStream: C,
         hasLayers: I,
-        voiceStates: v,
+        voiceStates: O,
         showVoiceStates: p,
         shouldShowVoicePanelIntroduction: h,
         isPrivateChannelWithEnabledActivities: w,
         isBroadcasting: B
-      }), !O && S && null != u ? (0, a.jsxs)("div", {
+      }), !v && S && null != u ? (0, a.jsxs)("div", {
         className: ew.viewAsRolesWarning,
         children: [(0, a.jsx)(c.Text, {
           variant: "text-sm/normal",

@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   NewMemberAction: function() {
-    return j
+    return M
   },
   default: function() {
     return D
@@ -25,14 +25,14 @@ var l = a("37983"),
   _ = a("568734"),
   x = a("347895"),
   v = a("698882"),
-  S = a("675305"),
-  C = a("205454"),
+  C = a("675305"),
+  S = a("205454"),
   N = a("49111"),
   p = a("657944"),
   T = a("782340"),
   A = a("918648");
 
-function j(e) {
+function M(e) {
   let {
     title: t,
     emojiId: a,
@@ -54,10 +54,10 @@ function j(e) {
       height: 32,
       alt: "",
       "aria-hidden": !0
-    }) : (0, l.jsx)(C.default, {
+    }) : (0, l.jsx)(S.default, {
       emojiId: a,
       emojiName: n,
-      size: C.CTAEmojiSize.LARGE,
+      size: S.CTAEmojiSize.LARGE,
       defaultComponent: (0, l.jsx)("div", {
         className: A.channelIconContainer,
         children: (0, l.jsx)(r, {
@@ -88,7 +88,7 @@ function j(e) {
   })
 }
 
-function M(e) {
+function j(e) {
   var t;
   let {
     action: a,
@@ -101,20 +101,20 @@ function M(e) {
   } = a, {
     id: I,
     name: _
-  } = null != E ? E : {}, v = (0, s.useStateFromStores)([u.default], () => u.default.getChannel(c)), S = (0, d.default)(v, !0), C = (0, s.useStateFromStores)([f.default], () => f.default.can(N.Permissions.VIEW_CHANNEL, v)), p = n.useCallback(() => {
+  } = null != E ? E : {}, v = (0, s.useStateFromStores)([u.default], () => u.default.getChannel(c)), C = (0, d.default)(v, !0), S = (0, s.useStateFromStores)([f.default], () => f.default.can(N.Permissions.VIEW_CHANNEL, v)), p = n.useCallback(() => {
     if (null == v) return null;
     (0, x.selectNewMemberActionChannel)(v.guild_id, v.id)
   }, [v]);
-  if (null == v || !C) return null;
+  if (null == v || !S) return null;
   let T = null !== (t = (0, r.getChannelIconComponent)(v)) && void 0 !== t ? t : m.default;
   return (0, l.jsx)(i.Clickable, {
     className: A.clickableAction,
     onClick: p,
-    children: (0, l.jsx)(j, {
+    children: (0, l.jsx)(M, {
       variant: "channel",
       channelId: c,
       title: h,
-      channelName: S,
+      channelName: C,
       emojiId: I,
       emojiName: _,
       icon: g,
@@ -127,7 +127,7 @@ function M(e) {
 function D(e) {
   let {
     guildId: t
-  } = e, a = (0, s.useStateFromStores)([v.default], () => v.default.getNewMemberActions(t), [t]), d = (0, s.useStateFromStores)([S.default], () => S.default.getCompletedActions(t)), r = (0, s.useStateFromStores)([o.default], () => o.default.getSelfMember(t)), u = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(t));
+  } = e, a = (0, s.useStateFromStores)([v.default], () => v.default.getNewMemberActions(t), [t]), d = (0, s.useStateFromStores)([C.default], () => C.default.getCompletedActions(t)), r = (0, s.useStateFromStores)([o.default], () => o.default.getSelfMember(t)), u = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(t));
   n.useEffect(() => {
     var e;
     null == d && (null == r ? void 0 : r.flags) != null && (0, _.hasFlag)(null !== (e = r.flags) && void 0 !== e ? e : 0, p.GuildMemberFlags.STARTED_HOME_ACTIONS) && (0, x.fetchNewMemberActions)(t)
@@ -141,7 +141,7 @@ function D(e) {
       variant: "heading-lg/bold",
       color: "header-primary",
       children: T.default.Messages.GET_STARTED
-    }), a.map(e => (0, l.jsx)(M, {
+    }), a.map(e => (0, l.jsx)(j, {
       action: e,
       completed: (null == d ? void 0 : d[e.channelId]) === !0,
       guildId: t

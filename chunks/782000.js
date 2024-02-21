@@ -9,12 +9,12 @@ n("884691");
 var i = n("446674"),
   l = n("77078"),
   u = n("244480"),
-  r = n("923510"),
-  s = n("957255"),
+  s = n("923510"),
+  r = n("957255"),
   o = n("782340");
 
 function d(e, t) {
-  let n = (0, i.useStateFromStores)([s.default], () => s.default.can(r.MODERATE_STAGE_CHANNEL_PERMISSIONS, e), [e]);
+  let n = (0, i.useStateFromStores)([r.default], () => r.default.can(s.MODERATE_STAGE_CHANNEL_PERMISSIONS, e), [e]);
   return null != t && n ? (0, a.jsx)(l.MenuItem, {
     id: "end-stage",
     label: o.default.Messages.END_STAGE,

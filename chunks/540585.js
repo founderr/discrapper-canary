@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return j
+    return M
   }
 }), a("222007");
 var l = a("37983"),
@@ -22,8 +22,8 @@ var l = a("37983"),
   _ = a("271938"),
   x = a("957255"),
   v = a("18494"),
-  S = a("267675"),
-  C = a("158998"),
+  C = a("267675"),
+  S = a("158998"),
   N = a("154925"),
   p = a("49111"),
   T = a("762382");
@@ -38,11 +38,11 @@ function A(e) {
   if (null == c) return null;
   let N = i.chain(n).map("member").find(["userId", c.ownerId]).value(),
     A = i.chain(n).map("user").find(["id", c.ownerId]).value(),
-    j = null !== (t = null == N ? void 0 : N.nick) && void 0 !== t ? t : C.default.getName(A),
-    M = null != E && null != c && E.state !== p.ApplicationStreamStates.ENDED && E.ownerId === c.ownerId;
+    M = null !== (t = null == N ? void 0 : N.nick) && void 0 !== t ? t : S.default.getName(A),
+    j = null != E && null != c && E.state !== p.ApplicationStreamStates.ENDED && E.ownerId === c.ownerId;
   return (0, l.jsxs)(r.Clickable, {
     onClick: () => {
-      u.default.selectVoiceChannel(a.id), !M && (0, o.watchStreamAndTransitionToStream)(c)
+      u.default.selectVoiceChannel(a.id), !j && (0, o.watchStreamAndTransitionToStream)(c)
     },
     className: T.previewContainer,
     children: [s ? (0, l.jsx)(h.DefaultFallback, {
@@ -59,22 +59,22 @@ function A(e) {
         className: T.previewButton,
         children: (0, m.default)(c, E, g, v)
       })
-    }) : null, null != j ? (0, l.jsxs)("div", {
+    }) : null, null != M ? (0, l.jsxs)("div", {
       className: T.previewName,
-      children: [(0, l.jsx)(S.default, {
+      children: [(0, l.jsx)(C.default, {
         width: 18,
         height: 18,
         className: T.icon
       }), (0, l.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: j
+        children: M
       })]
     }) : null]
   })
 }
 
-function j(e) {
+function M(e) {
   var t;
   let {
     guildId: a,
@@ -99,20 +99,20 @@ function j(e) {
         null === (e = t.current) || void 0 === e || e.disconnect()
       }
     }, [e]), a
-  }(I), S = n.useRef(!1);
+  }(I), C = n.useRef(!1);
   n.useEffect(() => {
-    _ && (S.current = !0)
+    _ && (C.current = !0)
   }, [_]);
   let T = i.map(r, e => {
       var t, a;
-      return null !== (a = null === (t = e.member) || void 0 === t ? void 0 : t.nick) && void 0 !== a ? a : C.default.getName(e.user)
+      return null !== (a = null === (t = e.member) || void 0 === t ? void 0 : t.nick) && void 0 !== a ? a : S.default.getName(e.user)
     }),
-    j = T.join(", ");
+    M = T.join(", ");
   return (0, l.jsx)(N.ActiveChannelBase, {
     ref: I,
     guildId: a,
     channel: s,
-    text: j,
+    text: M,
     usersInSummary: f,
     onChannelClick: () => {
       if (!(0, g.isGuildVocalChannelType)(s.type)) return;
@@ -131,7 +131,7 @@ function j(e) {
     children: o && (0, l.jsx)(A, {
       channel: s,
       voiceStates: r,
-      showPlaceholder: !S.current
+      showPlaceholder: !C.current
     })
   })
 }

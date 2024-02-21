@@ -22,14 +22,14 @@ var l = a("37983"),
   _ = a("69927"),
   x = a("298878"),
   v = a("713810"),
-  S = a("185014"),
-  C = a("290886"),
+  C = a("185014"),
+  S = a("290886"),
   N = a("957687"),
   p = a("90713"),
   T = a("539938"),
   A = a("144491"),
-  j = a("56778"),
-  M = a("208021"),
+  M = a("56778"),
+  j = a("208021"),
   D = a("582713"),
   F = a("861570"),
   L = a("982108"),
@@ -222,7 +222,7 @@ let eh = (0, c.default)(function(e) {
       guild: t,
       width: a,
       height: s
-    } = e, o = t.id, c = (0, r.useStateFromStores)([L.default], () => L.default.getSection(ea.StaticChannelRoute.GUILD_HOME)), E = (0, r.useStateFromStores)([O.default], () => O.default.getCurrentSearchId()), [g, I] = n.useState(!1), [x, v] = n.useState(et.DEFAULT_CHAT_SIDEBAR_WIDTH), C = c === et.ChannelSections.SEARCH, N = c === et.ChannelSections.SIDEBAR_CHAT, p = C || N, T = n.useRef(null), A = (0, h.default)("top-messages", T), {
+    } = e, o = t.id, c = (0, r.useStateFromStores)([L.default], () => L.default.getSection(ea.StaticChannelRoute.GUILD_HOME)), E = (0, r.useStateFromStores)([O.default], () => O.default.getCurrentSearchId()), [g, I] = n.useState(!1), [x, v] = n.useState(et.DEFAULT_CHAT_SIDEBAR_WIDTH), S = c === et.ChannelSections.SEARCH, N = c === et.ChannelSections.SIDEBAR_CHAT, p = S || N, T = n.useRef(null), A = (0, h.default)("top-messages", T), {
       ref: D
     } = (0, f.default)(), [F, R] = n.useState(el.GuildFeedRenderMode.SEGMENTED_READ), b = (0, m.default)(el.COLLAPSED_SIZE_MEDIA_QUERY), G = n.useRef(!1), {
       hasNewHeader: y
@@ -237,8 +237,8 @@ let eh = (0, c.default)(function(e) {
     n.useEffect(() => {
       G.current = !1
     }, [o]), n.useEffect(() => {
-      let e = S.default.getLoadId(o);
-      null == e && M.default.closeChannelSidebar(ea.StaticChannelRoute.GUILD_HOME)
+      let e = C.default.getLoadId(o);
+      null == e && j.default.closeChannelSidebar(ea.StaticChannelRoute.GUILD_HOME)
     }, [o]), (0, Z.default)(o), n.useLayoutEffect(() => {
       var e, t;
       let a = W.default.getSavedScrollPosition(o);
@@ -359,7 +359,7 @@ let eh = (0, c.default)(function(e) {
                 })
               }
             })
-          }), C && null != E && (0, l.jsx)(j.default, {
+          }), S && null != E && (0, l.jsx)(M.default, {
             searchId: E
           })]
         })]
@@ -375,7 +375,7 @@ let eh = (0, c.default)(function(e) {
 var eg = function(e) {
   let {
     guildId: t
-  } = e, a = (0, r.useStateFromStores)([b.default], () => b.default.getGuild(t), [t]), s = (0, Y.default)(), i = (0, r.useStateFromStores)([R.default], () => R.default.hasLoadedExperiments), d = (0, C.useCanSeeOnboardingHome)(t);
+  } = e, a = (0, r.useStateFromStores)([b.default], () => b.default.getGuild(t), [t]), s = (0, Y.default)(), i = (0, r.useStateFromStores)([R.default], () => R.default.hasLoadedExperiments), d = (0, S.useCanSeeOnboardingHome)(t);
   return (n.useLayoutEffect(() => {
     (0, B.ensureGuildHomeSession)(t)
   }, [t]), n.useEffect(() => {

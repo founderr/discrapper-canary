@@ -18,7 +18,7 @@ class s extends l.Component {
       numUpdatesToShow: t,
       updateInterval: n,
       pointsToSmooth: l
-    } = this.props, a = Date.now(), s = 0, i = 0, r = [], o = null != e[0] ? e[0].bytes : 0;
+    } = this.props, a = Date.now(), s = 0, i = 0, r = [], u = null != e[0] ? e[0].bytes : 0;
     for (; s < t + l; s++) {
       let t;
       let l = a - (s + 1) * n;
@@ -26,7 +26,7 @@ class s extends l.Component {
         if ((t = e[i]).timestamp > l) i++;
         else break;
       if (i === e.length) break;
-      null != t && (r.push(o - t.bytes), o = t.bytes)
+      null != t && (r.push(u - t.bytes), u = t.bytes)
     }
     for (; s < t + l; s++) r.push(0);
     return r.reverse(), r

@@ -22,14 +22,14 @@ var l = a("37983"),
   _ = a("704936"),
   x = a("465988"),
   v = a("526954"),
-  S = a("35296"),
-  C = a("344665"),
+  C = a("35296"),
+  S = a("344665"),
   N = a("93556"),
   p = a("118913"),
   T = a("125134"),
   A = a("380493"),
-  j = a("783858"),
-  M = a("181482"),
+  M = a("783858"),
+  j = a("181482"),
   D = a("925107"),
   F = a("347124"),
   L = a("630344"),
@@ -48,9 +48,9 @@ let b = [{
   value: h.GuildFeedbackRating.BAD,
   altDescription: () => E.default.Messages.GUILD_FEED_FEEDBACK_RATING_BAD
 }, {
-  light: j,
+  light: M,
   dark: A,
-  selected: M,
+  selected: j,
   value: h.GuildFeedbackRating.OKAY,
   altDescription: () => E.default.Messages.GUILD_FEED_FEEDBACK_RATING_OKAY
 }, {
@@ -60,9 +60,9 @@ let b = [{
   value: h.GuildFeedbackRating.GOOD,
   altDescription: () => E.default.Messages.GUILD_FEED_FEEDBACK_RATING_GOOD
 }, {
-  light: S,
+  light: C,
   dark: v,
-  selected: C,
+  selected: S,
   value: h.GuildFeedbackRating.EXCELLENT,
   altDescription: () => E.default.Messages.GUILD_FEED_FEEDBACK_RATING_EXCELLENT,
   description: () => E.default.Messages.GUILD_FEED_FEEDBACK_RATING_EXCELLENT
@@ -228,11 +228,11 @@ function k(e) {
     onClosePressed: _,
     showSubmitted: x,
     canSubmit: v,
-    isAnimating: S,
-    useReducedMotion: C
+    isAnimating: C,
+    useReducedMotion: S
   } = (0, c.useGuildFeedFeedback)(e);
-  return x ? (a = !1, t = (0, l.jsx)(H, {})) : null == n || h || S ? (a = !1, t = (0, l.jsx)(O, {
-    disableAnimation: h || C,
+  return x ? (a = !1, t = (0, l.jsx)(H, {})) : null == n || h || C ? (a = !1, t = (0, l.jsx)(O, {
+    disableAnimation: h || S,
     selectedRating: n,
     setSelectedRating: s
   })) : (a = !0, t = (0, l.jsx)(y, {

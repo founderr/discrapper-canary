@@ -11,16 +11,16 @@ var l = n("446674"),
 n("926787");
 var r = n("305961");
 n("599110"), n("444497");
-var o = n("895042"),
-  u = n("49111");
+var u = n("895042"),
+  o = n("49111");
 
 function d() {
   let e = (0, l.useStateFromStores)([r.default], () => r.default.getGuildCount()),
     t = (0, l.useStateFromStores)([a.default, i.default], () => a.default.getGamesSeen(!1).filter(e => i.default.isGameInDatabase(e)).length, []),
-    n = (0, l.useStateFromStores)([s.default], () => s.default.hasConsented(u.Consents.PERSONALIZATION)),
+    n = (0, l.useStateFromStores)([s.default], () => s.default.hasConsented(o.Consents.PERSONALIZATION)),
     {
       showRecs: d
-    } = o.default.useExperiment({
+    } = u.default.useExperiment({
       location: "e7214b_1"
     }, {
       autoTrackExposure: !1

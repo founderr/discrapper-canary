@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   GuildFeedConversationReply: function() {
-    return S
+    return C
   }
 });
 var l = a("37983"),
@@ -35,7 +35,7 @@ function v(e) {
   } = (0, f.default)(t.id, _.DEFAULT_POPOUTS), {
     usernameProfile: E,
     avatarProfile: v
-  } = m, S = n.useMemo(() => e => (0, o.default)(e, t), [t]), C = (0, c.useContextMenuUser)(t.author.id, i.id), N = (0, c.useClickMessageAuthorUsername)(t, i, E, h), p = (0, c.useClickMessageAuthorAvatar)(v, h), T = n.useCallback(() => h({
+  } = m, C = n.useMemo(() => e => (0, o.default)(e, t), [t]), S = (0, c.useContextMenuUser)(t.author.id, i.id), N = (0, c.useClickMessageAuthorUsername)(t, i, E, h), p = (0, c.useClickMessageAuthorAvatar)(v, h), T = n.useCallback(() => h({
     usernameProfile: !1,
     avatarProfile: !1,
     referencedUsernameProfile: !1
@@ -50,15 +50,15 @@ function v(e) {
       animate: s,
       showAvatarPopout: v,
       showUsernamePopout: E,
-      onContextMenu: C,
+      onContextMenu: S,
       onClickUsername: N,
       onClickAvatar: p,
       onPopoutRequestClose: T
     },
     guildId: a,
-    handleRenderPopout: S,
+    handleRenderPopout: C,
     className: x.avatar
-  }), j = (0, g.useUsername)(e, S), M = (0, u.getMessageUsernameId)(t), D = (0, u.getMessageTimestampId)(t), F = "".concat(M, " ").concat(D), L = (0, u.getMessageReplyId)(t);
+  }), M = (0, g.useUsername)(e, C), j = (0, u.getMessageUsernameId)(t), D = (0, u.getMessageTimestampId)(t), F = "".concat(j, " ").concat(D), L = (0, u.getMessageReplyId)(t);
   return (0, l.jsx)(l.Fragment, {
     children: (0, l.jsxs)(d.H, {
       className: x.header,
@@ -68,7 +68,7 @@ function v(e) {
         id: (0, u.getMessageUsernameId)(t),
         className: x.username,
         children: (0, l.jsx)(l.Fragment, {
-          children: j
+          children: M
         })
       }), (0, l.jsx)(I.default, {
         id: (0, u.getMessageTimestampId)(t),
@@ -78,7 +78,7 @@ function v(e) {
     })
   })
 }
-let S = n.forwardRef(function(e, t) {
+let C = n.forwardRef(function(e, t) {
   let {
     message: a,
     className: s,
@@ -89,8 +89,8 @@ let S = n.forwardRef(function(e, t) {
     guildId: g,
     animateAvatar: I
   } = e, _ = n.useRef(null), {
-    content: S,
-    hasSpoilerEmbeds: C
+    content: C,
+    hasSpoilerEmbeds: S
   } = (0, m.default)(a, {
     hideSimpleEmbedContent: !0
   }), N = (0, r.default)(a), p = n.useCallback(e => {
@@ -119,13 +119,13 @@ let S = n.forwardRef(function(e, t) {
               [x.truncatedReply]: c
             }),
             message: a,
-            content: S,
+            content: C,
             contentRef: t
           })]
         }), (0, h.default)({
           className: x.accessories,
           channelMessageProps: e,
-          hasSpoilerEmbeds: C,
+          hasSpoilerEmbeds: S,
           isInteracting: !1
         })]
       })

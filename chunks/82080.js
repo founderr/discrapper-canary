@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("957255"),
   C = n("497880"),
   p = n("851220"),
-  m = n("659500"),
-  E = n("568734"),
+  E = n("659500"),
+  m = n("568734"),
   g = n("718422"),
   S = n("49111"),
   _ = n("5762");
@@ -45,7 +45,7 @@ function A(e) {
     id: o
   } = t, {
     id: u
-  } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, A = null != m && m.hasFeature(S.GuildFeatures.NEWS), I = g && A, {
+  } = n, C = t.getGuildId(), E = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, A = null != E && E.hasFeature(S.GuildFeatures.NEWS), I = g && A, {
     editingMessage: N,
     editingTextValue: v,
     editingRichValue: L
@@ -57,7 +57,7 @@ function A(e) {
     let {
       content: s
     } = a, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === R || l);
-    return u && null != N && (0, E.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, s) : i.default.editMessage(e, n, {
+    return u && null != N && (0, m.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, s) : i.default.editMessage(e, n, {
       content: s
     }), Promise.resolve()
   }, [N, I, R, t]), y = s.useCallback(e => (0, s.createElement)(M, {
@@ -90,8 +90,8 @@ function M(e) {
     onSubmit: d,
     onKeyDown: c
   } = e, [f, h] = s.useState(!0), C = s.useCallback(() => h(!0), []), p = s.useCallback(() => h(!1), []);
-  return s.useEffect(() => (m.ComponentDispatch.subscribe(S.ComponentActions.TEXTAREA_FOCUS, C), m.ComponentDispatch.subscribe(S.ComponentActions.TEXTAREA_BLUR, p), () => {
-    m.ComponentDispatch.unsubscribe(S.ComponentActions.TEXTAREA_FOCUS, C), m.ComponentDispatch.unsubscribe(S.ComponentActions.TEXTAREA_BLUR, p)
+  return s.useEffect(() => (E.ComponentDispatch.subscribe(S.ComponentActions.TEXTAREA_FOCUS, C), E.ComponentDispatch.subscribe(S.ComponentActions.TEXTAREA_BLUR, p), () => {
+    E.ComponentDispatch.unsubscribe(S.ComponentActions.TEXTAREA_FOCUS, C), E.ComponentDispatch.unsubscribe(S.ComponentActions.TEXTAREA_BLUR, p)
   }), [C, p]), (0, a.jsx)(u.default, {
     className: _.channelTextArea,
     textValue: t,

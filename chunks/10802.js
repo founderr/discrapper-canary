@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
     return y
   }
 }), n("222007");
-var l = n("917351"),
-  a = n.n(l),
+var a = n("917351"),
+  l = n.n(a),
   s = n("446674"),
   r = n("913144"),
   u = n("386451"),
@@ -33,10 +33,10 @@ let M = new u.default(e => {
 
 function N(e, t) {
   let n = {};
-  M.forEach(l => {
-    var a;
-    l !== p.default.getGuildId() && l !== m.default.getGuildId() && l !== (null === (a = f.default.getChannel(T.default.getChannelId())) || void 0 === a ? void 0 : a.getGuildId()) && (null == i || i.guildId !== l) && (M.clearWithoutFlushing(l, e), t && (n[l] = M.get(l)))
-  }), !a.isEmpty(n) && r.default.dispatch({
+  M.forEach(a => {
+    var l;
+    a !== p.default.getGuildId() && a !== m.default.getGuildId() && a !== (null === (l = f.default.getChannel(T.default.getChannelId())) || void 0 === l ? void 0 : l.getGuildId()) && (null == i || i.guildId !== a) && (M.clearWithoutFlushing(a, e), t && (n[a] = M.get(a)))
+  }), !l.isEmpty(n) && r.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_FLUSH",
     subscriptions: n
   })
@@ -50,8 +50,8 @@ function C(e, t, n) {
   if (t === c.EVERYONE_CHANNEL_ID) return M.subscribeChannel(e, t, n);
   let i = f.default.getChannel(t);
   if (null == i) return !1;
-  let l = i.getGuildId();
-  return (l !== e && e === S.FAVORITES && M.subscribeToGuild(l), null != i && i.isThread()) ? i.type === S.ChannelTypes.ANNOUNCEMENT_THREAD ? M.subscribeChannel(l, i.parent_id, n) : !!i.isActiveThread() && M.subscribeThreadMemberList(l, t, T.default.getChannelId()) : M.subscribeChannel(l, t, n)
+  let a = i.getGuildId();
+  return (a !== e && e === S.FAVORITES && M.subscribeToGuild(a), null != i && i.isThread()) ? i.type === S.ChannelTypes.ANNOUNCEMENT_THREAD ? M.subscribeChannel(a, i.parent_id, n) : !!i.isActiveThread() && M.subscribeThreadMemberList(a, t, T.default.getChannelId()) : M.subscribeChannel(a, t, n)
 }
 
 function O(e) {
@@ -64,13 +64,13 @@ function O(e) {
   let i = {};
   M.forEach(e => {
     null == g.default.getGuild(e) ? M.clearWithoutFlushing(e, !0) : i[e] = M.get(e)
-  }), !a.isEmpty(i) && r.default.dispatch({
+  }), !l.isEmpty(i) && r.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_FLUSH",
     subscriptions: i
   })
 }
 
-function R(e) {
+function I(e) {
   let {
     guildId: t,
     channelId: n
@@ -78,7 +78,7 @@ function R(e) {
   return !i && v(t, n)
 }
 
-function I() {
+function R() {
   return v(p.default.getGuildId(), T.default.getChannelId())
 }
 
@@ -92,17 +92,17 @@ function b() {
     if (null != i && i.userId === t || A.default.isFriend(t)) return !1;
     let n = E.default.memberOf(t);
     if (0 === n.length) return !1;
-    let [l] = n;
+    let [a] = n;
     i = {
-      guildId: l,
+      guildId: a,
       userId: t
-    }, M.subscribeUser(l, t)
+    }, M.subscribeUser(a, t)
   }
   return !1
 }
 class D extends s.default.Store {
   initialize() {
-    this.waitFor(f.default, g.default, p.default, T.default, m.default, o.default, _.default), this.syncWith([d.default], b), this.syncWith([_.default], I)
+    this.waitFor(f.default, g.default, p.default, T.default, m.default, o.default, _.default), this.syncWith([d.default], b), this.syncWith([_.default], R)
   }
   getSubscribedThreadIds() {
     return M.getSubscribedThreadIds()
@@ -138,13 +138,13 @@ var y = new D(r.default, {
   LOGOUT: function() {
     M.reset()
   },
-  VOICE_CHANNEL_SELECT: R,
-  CHANNEL_SELECT: R,
+  VOICE_CHANNEL_SELECT: I,
+  CHANNEL_SELECT: I,
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    t.id === p.default.getGuildId() && I()
+    t.id === p.default.getGuildId() && R()
   },
   GUILD_DELETE: function(e) {
     let {
@@ -222,5 +222,5 @@ var y = new D(r.default, {
     } = e;
     return M.unsubscribeThreadMemberList(t.guild_id, t.id)
   },
-  THREAD_LIST_SYNC: I
+  THREAD_LIST_SYNC: R
 })

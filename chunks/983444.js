@@ -20,16 +20,16 @@ var a = n("884691"),
   h = n("305961"),
   C = n("778588"),
   p = n("377253"),
-  m = n("957255"),
-  E = n("299039"),
+  E = n("957255"),
+  m = n("299039"),
   g = n("49111");
 
 function S(e, t) {
-  return (0, i.useStateFromStoresObject)([m.default], () => ({
-    canInvite: (0, r.canViewInviteModal)(m.default, t, e),
-    canManageGuild: null != t && m.default.can(g.Permissions.MANAGE_GUILD, t),
-    canMessage: null != e && m.default.can(g.Permissions.SEND_MESSAGES, e),
-    canCreateChannel: null != t && m.default.can(g.Permissions.MANAGE_CHANNELS, t)
+  return (0, i.useStateFromStoresObject)([E.default], () => ({
+    canInvite: (0, r.canViewInviteModal)(E.default, t, e),
+    canManageGuild: null != t && E.default.can(g.Permissions.MANAGE_GUILD, t),
+    canMessage: null != e && E.default.can(g.Permissions.SEND_MESSAGES, e),
+    canCreateChannel: null != t && E.default.can(g.Permissions.MANAGE_CHANNELS, t)
   }), [t, e])
 }
 
@@ -67,7 +67,7 @@ function _(e) {
         n = e[c.GUILD_VOCAL_CHANNELS_KEY];
 
       function a(e) {
-        return null != t && E.default.extractTimestamp(e.channel.id) - E.default.extractTimestamp(t.id) > 500
+        return null != t && m.default.extractTimestamp(e.channel.id) - m.default.extractTimestamp(t.id) > 500
       }
       return e[0, c.GUILD_SELECTABLE_CHANNELS_KEY].some(a) || n.some(a)
     }, [t]))

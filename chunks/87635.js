@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("42203"),
   C = n("26989"),
   p = n("538137"),
-  m = n("593195"),
-  E = n("578706"),
+  E = n("593195"),
+  m = n("578706"),
   g = n("347895"),
   S = n("129092"),
   _ = n("726274"),
@@ -54,7 +54,7 @@ function v(e) {
     emojiName: l
   } = e, i = (0, o.default)([h.default], () => h.default.getChannel(n));
   if (null == i) return null;
-  let r = null !== (t = (0, f.getChannelIconComponent)(i)) && void 0 !== t ? t : m.default;
+  let r = null !== (t = (0, f.getChannelIconComponent)(i)) && void 0 !== t ? t : E.default;
   return (0, a.jsx)(A.default, {
     emojiId: s,
     emojiName: l,
@@ -72,9 +72,9 @@ function L(e) {
     channel: h,
     className: C
   } = e, {
-    channelAction: m,
+    channelAction: E,
     completed: T
-  } = (0, _.useMemberActionsForChannel)(f, h), A = (0, _.useNextMemberAction)(f, null == m ? void 0 : m.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), R = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, x = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = s.useState(!1), [D] = s.useState(new r.default.Value(0)), [j] = s.useState(new r.default.Value(0));
+  } = (0, _.useMemberActionsForChannel)(f, h), A = (0, _.useNextMemberAction)(f, null == E ? void 0 : E.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), R = (null == E ? void 0 : E.actionType) === S.NewMemberActionTypes.VIEW, x = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = s.useState(!1), [D] = s.useState(new r.default.Value(0)), [P] = s.useState(new r.default.Value(0));
   s.useEffect(() => {
     T ? r.default.timing(D, {
       toValue: 0,
@@ -88,28 +88,28 @@ function L(e) {
       delay: 400
     }).start()
   }, [T, D, R, L]), s.useEffect(() => {
-    T && y && r.default.timing(j, {
+    T && y && r.default.timing(P, {
       toValue: 1,
       duration: L ? 0 : 350,
       easing: r.default.Easing.quad,
       delay: 400
     }).start()
-  }, [T, j, y, L]);
-  let P = s.useCallback(() => {
+  }, [T, P, y, L]);
+  let j = s.useCallback(() => {
     null != A && (0, g.selectNewMemberActionChannel)(f, A.channelId)
   }, [f, A]);
-  return null == m || R && !y ? null : (0, a.jsx)("div", {
+  return null == E || R && !y ? null : (0, a.jsx)("div", {
     className: i(I.container, C),
     children: y && null != A ? (0, a.jsx)(r.default.div, {
       style: {
-        marginBottom: j.interpolate({
+        marginBottom: P.interpolate({
           inputRange: [0, 1],
           outputRange: [-60, 0]
         })
       },
       children: (0, a.jsxs)(u.Clickable, {
         className: i(I.banner, I.clickable),
-        onClick: P,
+        onClick: j,
         children: [(0, a.jsx)(v, {
           channelId: A.channelId,
           emojiId: null === (t = A.emoji) || void 0 === t ? void 0 : t.id,
@@ -144,21 +144,21 @@ function L(e) {
         })
       },
       children: [(0, a.jsx)(v, {
-        channelId: m.channelId,
-        emojiId: null === (l = m.emoji) || void 0 === l ? void 0 : l.id,
-        emojiName: null == m ? void 0 : null === (c = m.emoji) || void 0 === c ? void 0 : c.name
+        channelId: E.channelId,
+        emojiId: null === (l = E.emoji) || void 0 === l ? void 0 : l.id,
+        emojiName: null == E ? void 0 : null === (c = E.emoji) || void 0 === c ? void 0 : c.name
       }), (0, a.jsxs)("div", {
         className: I.text,
         children: [(0, a.jsx)(u.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
-          children: m.title
+          children: E.title
         }), (0, a.jsx)(u.Text, {
           variant: "text-xxs/normal",
           color: "text-muted",
           children: M.default.Messages.MEMBER_ACTION_CHAT
         })]
-      }), T ? (0, a.jsx)(E.default, {
+      }), T ? (0, a.jsx)(m.default, {
         className: I.completed,
         backgroundColor: x.hex(),
         width: 20,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 }), n("222007");
 var l = n("37983"),
@@ -10,21 +10,21 @@ var l = n("37983"),
   i = n("782340"),
   r = n("826872");
 
-function o(e) {
+function u(e) {
   let {
     header: t,
     body: n,
-    onSubmit: o,
-    ...u
+    onSubmit: u,
+    ...o
   } = e, [d, c] = a.useState(!1);
   return (0, l.jsxs)(s.ConfirmModal, {
     header: t,
     confirmText: i.default.Messages.LEAVE_GROUP_DM,
     cancelText: i.default.Messages.CANCEL,
     onConfirm: () => {
-      o(null, d)
+      u(null, d)
     },
-    ...u,
+    ...o,
     children: [(0, l.jsx)(s.Text, {
       variant: "text-md/normal",
       children: n

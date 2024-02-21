@@ -145,10 +145,10 @@ n.r(t), n.d(t, {
     return eL
   },
   resetSubscriptionStore: function() {
-    return eO
+    return eh
   },
   startBrowserCheckout: function() {
-    return eh
+    return eO
   }
 }), n("70102");
 var r = n("41092"),
@@ -228,7 +228,7 @@ async function L(e, t) {
     }), e
   }
 }
-async function O(e) {
+async function h(e) {
   let t = await u.default.get({
       url: p.Endpoints.BILLING_STRIPE_PAYMENT_INTENTS(e),
       oldFormErrors: !0
@@ -238,7 +238,7 @@ async function O(e) {
     } = t.body;
   return n
 }
-async function h(e) {
+async function O(e) {
   let t = await u.default.get({
       url: p.Endpoints.BILLING_STRIPE_PAYMENT_INTENTS(e),
       oldFormErrors: !0
@@ -1035,7 +1035,7 @@ async function et(e, t) {
   let {
     clientSecret: r,
     paymentMethodId: i
-  } = await h(e);
+  } = await O(e);
   if (null == n) throw D("Stripe cannot be null on a redirect.");
   if (p.REDIRECTED_PAYMENT_SOURCES.has(t.type)) {
     let e = await eN(t.type);
@@ -1070,7 +1070,7 @@ async function er(e) {
   let t = await f.getStripe();
   if (null == t) throw D("Stripe has not loaded.");
   if (null == e) throw D("payment intent id cannot be null.");
-  let n = await O(e),
+  let n = await h(e),
     {
       paymentIntent: r,
       error: i
@@ -1426,13 +1426,13 @@ function eL() {
   })
 }
 
-function eO() {
+function eh() {
   a.default.dispatch({
     type: "BILLING_SUBSCRIPTION_RESET"
   })
 }
 
-function eh(e) {
+function eO(e) {
   a.default.dispatch({
     type: "USER_PAYMENT_BROWSER_CHECKOUT_STARTED",
     loadId: e

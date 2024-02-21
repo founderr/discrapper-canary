@@ -19,8 +19,8 @@ var i = n("37983"),
   S = n("227439"),
   T = n("697218"),
   I = n("170113"),
-  p = n("780571"),
-  h = n("377502"),
+  h = n("780571"),
+  p = n("377502"),
   A = n("103603"),
   N = n("736393"),
   C = n("170213"),
@@ -108,7 +108,7 @@ let U = (e, t) => {
       l = 1 === n.length;
     return (0, i.jsx)("div", {
       className: R.classificationEvidenceMessageAttachment,
-      children: (0, i.jsx)(h.default, {
+      children: (0, i.jsx)(p.default, {
         attachments: n.map(e => ({
           attachment: e,
           spoiler: !0,
@@ -137,7 +137,7 @@ let U = (e, t) => {
     var t;
     let {
       flaggedContent: n
-    } = e, r = (0, s.useStateFromStores)([T.default], () => T.default.getCurrentUser()), [l, c] = a.useState({}), [d, f] = a.useState(!0), I = n[0], h = U(I, l), A = (0, E.default)(h, {
+    } = e, r = (0, s.useStateFromStores)([T.default], () => T.default.getCurrentUser()), [l, c] = a.useState({}), [d, f] = a.useState(!0), I = n[0], p = U(I, l), A = (0, E.default)(p, {
       hideSimpleEmbedContent: !1,
       allowList: !1,
       allowHeading: !1,
@@ -181,7 +181,7 @@ let U = (e, t) => {
           [e.id]: t
         })))
       })).finally(() => f(!1))
-    }, [I.attachments]), "" === h.content && 0 === h.attachments.length) ? null : (0, i.jsxs)("div", {
+    }, [I.attachments]), "" === p.content && 0 === p.attachments.length) ? null : (0, i.jsxs)("div", {
       className: R.classificationEvidenceContainer,
       children: [(0, i.jsx)(u.Text, {
         variant: "eyebrow",
@@ -189,7 +189,7 @@ let U = (e, t) => {
         children: v.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
       }), d ? (0, i.jsx)(u.Spinner, {}) : (0, i.jsx)("div", {
         className: R.classificationEvidenceCard,
-        children: (0, i.jsx)(p.default, {
+        children: (0, i.jsx)(h.default, {
           compact: !1,
           childrenHeader: (0, S.default)({
             author: {
@@ -197,7 +197,7 @@ let U = (e, t) => {
               colorString: "",
               nick: null !== (t = null == r ? void 0 : r.username) && void 0 !== t ? t : ""
             },
-            message: h,
+            message: p,
             channel: void 0,
             guildId: void 0,
             compact: !1,
@@ -207,10 +207,10 @@ let U = (e, t) => {
             hideTimestamp: !1
           }),
           childrenAccessories: (0, i.jsx)(L, {
-            message: h
+            message: p
           }),
           childrenMessageContent: (0, _.default)({
-            message: h
+            message: p
           }, A.content),
           hasThread: !1,
           hasReply: !1

@@ -22,14 +22,14 @@ var l = a("37983"),
   _ = a("185014"),
   x = a("886484"),
   v = a("60036"),
-  S = a("468670"),
-  C = a("113312"),
+  C = a("468670"),
+  S = a("113312"),
   N = a("339274"),
   p = a("605143"),
   T = a("759668"),
   A = a("449405"),
-  j = a("232882"),
-  M = a("49111"),
+  M = a("232882"),
+  j = a("49111"),
   D = a("724210"),
   F = a("782340"),
   L = a("148631");
@@ -55,11 +55,11 @@ var b = n.forwardRef(function(e, t) {
     handleChannelClick: ea,
     handleCardClick: el,
     handleMessageClick: en
-  } = (0, S.default)({
+  } = (0, C.default)({
     guildId: G,
     channelId: B,
     feedItemId: q,
-    onChannelClick: () => (0, c.default)(M.Routes.CHANNEL(G, B, U.id)),
+    onChannelClick: () => (0, c.default)(j.Routes.CHANNEL(G, B, U.id)),
     onContentClick: e => {
       var t;
       f.default.openChannelAsSidebar({
@@ -144,11 +144,11 @@ var b = n.forwardRef(function(e, t) {
           animateAvatar: Y,
           onMessageClick: en
         })
-      }), (0, l.jsx)(j.ReferenceMessages, {
+      }), (0, l.jsx)(M.ReferenceMessages, {
         referenceMessages: es,
         guildId: G
       })]
-    }), y && (0, l.jsx)(C.default, {
+    }), y && (0, l.jsx)(S.default, {
       guildId: G,
       guildFeedItem: O,
       setOnDismissFeedback: H

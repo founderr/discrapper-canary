@@ -22,14 +22,14 @@ var l = a("37983"),
   _ = a("27618"),
   x = a("449008"),
   v = a("185014"),
-  S = a("886484"),
-  C = a("60036"),
+  C = a("886484"),
+  S = a("60036"),
   N = a("468670"),
   p = a("465519"),
   T = a("344934"),
   A = a("113312"),
-  j = a("339274"),
-  M = a("605143"),
+  M = a("339274"),
+  j = a("605143"),
   D = a("759668"),
   F = a("449405"),
   L = a("49111"),
@@ -62,7 +62,7 @@ function y(e) {
       details: {
         type: E.SidebarOpenDetailsType.HOME,
         initialMessageId: null !== (l = null == n ? void 0 : null === (e = n[0]) || void 0 === e ? void 0 : e.id) && void 0 !== l ? l : a[0][0].id,
-        highlightMessageIds: new Set((0, C.getAllMessageIdsFromFeedItem)(t))
+        highlightMessageIds: new Set((0, S.getAllMessageIdsFromFeedItem)(t))
       }
     })
   }, [t, s, d, a]);
@@ -110,7 +110,7 @@ var H = n.forwardRef(function(e, t) {
     children: P
   } = w, V = B[0], W = B[B.length - 1], K = W.channel_id, z = (0, r.useStateFromStoresArray)([v.default], () => B.map(e => v.default.getCachedMessage(T, K, e.id)).filter(x.isNotNullish), [T, K, B]), Y = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(K)), Z = (0, f.getChannelIconComponent)(Y, void 0, {
     textFocused: !0
-  }), X = (0, f.getChannelIconTooltipText)(Y), J = (0, c.default)(Y), [q, Q] = n.useState(!1), $ = (0, r.useStateFromStores)([_.default], () => null != W && _.default.isBlocked(W.author.id)), ee = (0, d.useListItem)(null !== (s = null === (a = z[z.length - 1]) || void 0 === a ? void 0 : a.id) && void 0 !== s ? s : H.id), et = H.id, ea = (0, r.useStateFromStores)([g.default], () => g.default.getSidebarState(R.StaticChannelRoute.GUILD_HOME)), el = (0, S.getSidebarMessageId)(ea, Y), en = null != el && V.id === el, {
+  }), X = (0, f.getChannelIconTooltipText)(Y), J = (0, c.default)(Y), [q, Q] = n.useState(!1), $ = (0, r.useStateFromStores)([_.default], () => null != W && _.default.isBlocked(W.author.id)), ee = (0, d.useListItem)(null !== (s = null === (a = z[z.length - 1]) || void 0 === a ? void 0 : a.id) && void 0 !== s ? s : H.id), et = H.id, ea = (0, r.useStateFromStores)([g.default], () => g.default.getSidebarState(R.StaticChannelRoute.GUILD_HOME)), el = (0, C.getSidebarMessageId)(ea, Y), en = null != el && V.id === el, {
     handleItemClick: es,
     handleChannelClick: ei,
     handleCardClick: ed,
@@ -130,7 +130,7 @@ var H = n.forwardRef(function(e, t) {
         details: {
           type: E.SidebarOpenDetailsType.HOME,
           initialMessageId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : V.id,
-          highlightMessageIds: new Set((0, C.getAllMessageIdsFromFeedItem)(H))
+          highlightMessageIds: new Set((0, S.getAllMessageIdsFromFeedItem)(H))
         }
       })
     }
@@ -146,7 +146,7 @@ var H = n.forwardRef(function(e, t) {
       })
     })
   };
-  return (0, l.jsxs)(j.default, {
+  return (0, l.jsxs)(M.default, {
     className: k ? G.containerNoPadding : G.container,
     ref: t,
     selected: en,
@@ -161,7 +161,7 @@ var H = n.forwardRef(function(e, t) {
     onMouseEnter: () => Q(!0),
     onMouseLeave: () => Q(!1),
     children: [(0, l.jsxs)(u.HeadingLevel, {
-      component: (0, l.jsxs)(M.default, {
+      component: (0, l.jsxs)(j.default, {
         children: [(0, l.jsx)("div", {
           className: G.messageHeaderMenuLeft,
           children: (0, l.jsxs)(u.Clickable, {

@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
     return L
   }
 }), n("222007");
-var l = n("917351"),
-  a = n.n(l),
+var a = n("917351"),
+  l = n.n(a),
   s = n("335710"),
   r = n("249654"),
   u = n("446674"),
@@ -35,24 +35,24 @@ function O() {
   A = !1, T = !0, p = !1, S = !1, M = null, N = s.ThreadSortOrder.LATEST_ACTIVITY, i = new Set, C = 0, v = []
 }
 
-function R(e, t) {
+function I(e, t) {
   return t === s.ThreadSortOrder.LATEST_ACTIVITY ? h.default.lastMessageId(e.id) : e.id
 }
 
-function I() {
+function R() {
   if (null == M) return !1;
   let e = !p,
     t = f.default.getChannel(v[v.length - 1]),
-    n = null == t ? null : R(t, N);
-  v = a(f.default.getAllThreadsForParent(M)).filter(e => e.isArchivedThread()).filter(t => {
-    var l;
-    if (0 !== i.size && (null === (l = t.appliedTags) || void 0 === l ? void 0 : l.some(e => i.has(e))) !== !0) return !1;
+    n = null == t ? null : I(t, N);
+  v = l(f.default.getAllThreadsForParent(M)).filter(e => e.isArchivedThread()).filter(t => {
+    var a;
+    if (0 !== i.size && (null === (a = t.appliedTags) || void 0 === a ? void 0 : a.some(e => i.has(e))) !== !0) return !1;
     if (e || null == n) return !0;
     {
-      let e = null == t ? null : R(t, N);
+      let e = null == t ? null : I(t, N);
       return null != e && r.default.compare(e, n) >= 0
     }
-  }).sort((e, t) => r.default.compare(R(e, N), R(t, N))).map(e => e.id).reverse().value()
+  }).sort((e, t) => r.default.compare(I(e, N), I(t, N))).map(e => e.id).reverse().value()
 }
 
 function b(e) {
@@ -114,13 +114,13 @@ var L = new y(d.default, {
       hasMoreThreads: e.hasMore,
       filterTagIds: Array.from(e.tagFilter),
       sortOrder: e.sortOrder
-    }), I(), p = e.hasMore, C = e.offset + m, A = !1, T = !1
+    }), R(), p = e.hasMore, C = e.offset + m, A = !1, T = !1
   },
   LOAD_ARCHIVED_THREADS_FAIL: function(e) {
     if (e.channelId !== M || e.sortOrder !== N || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
     A = !1, S = !0, T = !1
   },
   RESORT_THREADS: function(e) {
-    return (null == M || null == e.channelId || M === e.channelId) && I()
+    return (null == M || null == e.channelId || M === e.channelId) && R()
   }
 })

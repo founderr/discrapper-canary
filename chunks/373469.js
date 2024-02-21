@@ -22,12 +22,12 @@ var a = n("446674"),
   R = n("800762"),
   C = n("49111"),
   L = n("706530");
-let O = null,
-  h = {},
+let h = null,
+  O = {},
   P = null;
 
 function g() {
-  r = new Map, i = {}, l = {}, u = {}, h = {}
+  r = new Map, i = {}, l = {}, u = {}, O = {}
 }
 g();
 
@@ -77,7 +77,7 @@ class M extends a.default.Store {
   }
   isSelfStreamHidden(e) {
     var t;
-    return null !== (t = h[e]) && void 0 !== t && t
+    return null !== (t = O[e]) && void 0 !== t && t
   }
   getLastActiveStream() {
     var e;
@@ -208,7 +208,7 @@ var G = new M(o.default, {
     r.delete(t), r.set(t, {
       ...n,
       state: C.ApplicationStreamStates.CONNECTING
-    }), n.ownerId === I.default.getId() && (h[n.channelId] = !1)
+    }), n.ownerId === I.default.getId() && (O[n.channelId] = !1)
   },
   STREAM_START: function(e) {
     let {
@@ -279,7 +279,7 @@ var G = new M(o.default, {
     r.set(t, {
       ...a,
       state: o
-    }), o === C.ApplicationStreamStates.ENDED && O !== t && m(t)
+    }), o === C.ApplicationStreamStates.ENDED && h !== t && m(t)
   },
   STREAM_CLOSE: function(e) {
     let {
@@ -291,8 +291,8 @@ var G = new M(o.default, {
     let {
       channelId: t,
       selfStreamHidden: n
-    } = e, r = (0, E.isStreamKey)(O);
-    r && (null == O ? void 0 : O.includes(I.default.getId())) && !1 === h[t] && !0 === n && (O = null), h[t] = n
+    } = e, r = (0, E.isStreamKey)(h);
+    r && (null == h ? void 0 : h.includes(I.default.getId())) && !1 === O[t] && !0 === n && (h = null), O[t] = n
   },
   SET_STREAM_APP_INTENT: function(e) {
     let {
@@ -327,11 +327,11 @@ var G = new M(o.default, {
       id: t,
       channelId: n
     } = e;
-    if (O = t, Array.from(r.values()).forEach(e => {
-        (0, E.encodeStreamKey)(e) !== O && e.state === C.ApplicationStreamStates.ENDED && m((0, E.encodeStreamKey)(e))
+    if (h = t, Array.from(r.values()).forEach(e => {
+        (0, E.encodeStreamKey)(e) !== h && e.state === C.ApplicationStreamStates.ENDED && m((0, E.encodeStreamKey)(e))
       }), null == t) return;
     let i = (0, E.isStreamKey)(t);
-    i && t.includes(I.default.getId()) && (h[n] = !1)
+    i && t.includes(I.default.getId()) && (O[n] = !1)
   },
   CONNECTION_OPEN: g,
   CONNECTION_CLOSED: g,

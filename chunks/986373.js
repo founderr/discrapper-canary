@@ -21,8 +21,8 @@ var a = n("884691"),
   l = n("446674");
 n("42203");
 var u = n("923959"),
-  r = n("162771"),
-  s = n("697218");
+  s = n("162771"),
+  r = n("697218");
 n("299039");
 var o = n("379881"),
   d = n("498139"),
@@ -33,8 +33,8 @@ function E(e) {
   let {
     favoritesEnabled: t,
     hasStaffPrivileges: n
-  } = (0, d.useFavoritesServerExperiment)("useCanFavoriteChannel"), a = (0, l.useStateFromStores)([o.default], () => o.default.isFavorite(e.id)), i = (0, l.useStateFromStores)([s.default], () => s.default.getCurrentUser()), u = e.isDM() || e.isThread(), r = !u || n && (null == i ? void 0 : i.isStaff()) === !0;
-  return t && !__OVERLAY__ && !a && r
+  } = (0, d.useFavoritesServerExperiment)("useCanFavoriteChannel"), a = (0, l.useStateFromStores)([o.default], () => o.default.isFavorite(e.id)), i = (0, l.useStateFromStores)([r.default], () => r.default.getCurrentUser()), u = e.isDM() || e.isThread(), s = !u || n && (null == i ? void 0 : i.isStaff()) === !0;
+  return t && !__OVERLAY__ && !a && s
 }
 
 function _(e) {
@@ -51,7 +51,7 @@ function S() {
 }
 
 function N() {
-  let e = (0, l.useStateFromStores)([r.default], () => r.default.getGuildId());
+  let e = (0, l.useStateFromStores)([s.default], () => s.default.getGuildId());
   return e === f.FAVORITES
 }
 

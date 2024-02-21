@@ -22,8 +22,8 @@ var l = a("37983"),
   _ = a("305961"),
   x = a("697218"),
   v = a("928201"),
-  S = a("387111"),
-  C = a("158998"),
+  C = a("387111"),
+  S = a("158998"),
   N = a("590456"),
   p = a("345696");
 
@@ -33,7 +33,7 @@ function T(e) {
     guildId: a,
     welcomeMessage: s,
     className: T
-  } = e, A = (0, c.default)(), j = (0, r.default)([_.default], () => _.default.getGuild(a)), M = (0, r.default)([f.default], () => f.default.syncProfileThemeWithUserTheme), D = (0, r.default)([f.default], () => f.default.useReducedMotion), F = (0, r.default)([x.default], () => x.default.getUser(null == s ? void 0 : s.authorIds[0])), L = (0, r.default)([x.default], () => x.default.getCurrentUser()), R = (0, E.default)(null == F ? void 0 : F.id, a), [b] = (0, g.default)(F, R), G = M ? A : null !== (t = (0, m.getProfileTheme)(b)) && void 0 !== t ? t : A, O = (0, u.useToken)(u.tokens.colors.BACKGROUND_SECONDARY, G).hex(), y = n.useMemo(() => {
+  } = e, A = (0, c.default)(), M = (0, r.default)([_.default], () => _.default.getGuild(a)), j = (0, r.default)([f.default], () => f.default.syncProfileThemeWithUserTheme), D = (0, r.default)([f.default], () => f.default.useReducedMotion), F = (0, r.default)([x.default], () => x.default.getUser(null == s ? void 0 : s.authorIds[0])), L = (0, r.default)([x.default], () => x.default.getCurrentUser()), R = (0, E.default)(null == F ? void 0 : F.id, a), [b] = (0, g.default)(F, R), G = j ? A : null !== (t = (0, m.getProfileTheme)(b)) && void 0 !== t ? t : A, O = (0, u.useToken)(u.tokens.colors.BACKGROUND_SECONDARY, G).hex(), y = n.useMemo(() => {
     var e;
     return null !== (e = null == s ? void 0 : s.authorIds) && void 0 !== e ? e : []
   }, [s]);
@@ -44,9 +44,9 @@ function T(e) {
       guildId: a
     })
   }, [F, a]);
-  let H = (0, C.useName)(L);
+  let H = (0, S.useName)(L);
   if (null == F || null == L || null == s) return null;
-  let k = null != j && j.ownerId === F.id;
+  let k = null != M && M.ownerId === F.id;
   return (0, l.jsx)("div", {
     className: i(p.welcomeMessageContainer, T),
     children: (0, l.jsxs)(I.default, {
@@ -79,7 +79,7 @@ function T(e) {
           className: p.adminUsernameContainer,
           children: [(0, l.jsx)(u.Text, {
             variant: "text-sm/semibold",
-            children: S.default.getName(a, null, F)
+            children: C.default.getName(a, null, F)
           }), k ? (0, l.jsx)(v.default, {
             className: p.ownerIcon
           }) : null]

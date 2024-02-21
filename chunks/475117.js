@@ -29,12 +29,12 @@ function _(e) {
   } = e, _ = (0, i.useStateFromStoresArray)([m.default], () => {
     var e;
     return null !== (e = m.default.getChannelMessageData(a.id)) && void 0 !== e ? e : []
-  }), x = s.uniq(s.map(_, "userId")), v = (0, i.useStateFromStoresArray)([o.default], () => x.map(e => o.default.getUser(e))), S = (0, i.useStateFromStores)([u.default], () => {
+  }), x = s.uniq(s.map(_, "userId")), v = (0, i.useStateFromStoresArray)([o.default], () => x.map(e => o.default.getUser(e))), C = (0, i.useStateFromStores)([u.default], () => {
     let e = u.default.getTypingUsers(a.id);
     return Object.keys(e).length > 0
-  }, [a.id]), C = _.length < m.MAX_STORED_MESSAGES ? g.default.Messages.ACTIVE_CHANNELS_FEW_MESSAGES.format({
+  }, [a.id]), S = _.length < m.MAX_STORED_MESSAGES ? g.default.Messages.ACTIVE_CHANNELS_FEW_MESSAGES.format({
     count: _.length
-  }) : g.default.Messages.ACTIVE_CHANNELS_MANY_MESSAGES, N = S ? (0, l.jsx)("div", {
+  }) : g.default.Messages.ACTIVE_CHANNELS_MANY_MESSAGES, N = C ? (0, l.jsx)("div", {
     className: I.typingIndicator,
     children: (0, l.jsx)(d.Dots, {
       className: I.ellipsis,
@@ -46,7 +46,7 @@ function _(e) {
     guildId: t,
     channel: a,
     usersInSummary: v.filter(c.isNotNullish),
-    text: C,
+    text: S,
     activityIndicator: N,
     onChannelClick: () => {
       n(a), (0, r.default)(E.Routes.CHANNEL(a.guild_id, a.id, f.default.fromTimestamp(Date.now())))

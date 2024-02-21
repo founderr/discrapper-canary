@@ -19,8 +19,8 @@ var i = n("37983"),
   S = n("132206"),
   T = n("698609"),
   I = n("57242"),
-  p = n("380676"),
-  h = n("170213"),
+  h = n("380676"),
+  p = n("170213"),
   A = n("49111"),
   N = n("782340"),
   C = n("765516");
@@ -135,7 +135,7 @@ let m = e => {
   P = e => (0, i.jsx)("div", {
     className: C.classificationLetUsKnowContainer,
     children: e.hasBeenAppealed ? (0, i.jsx)(U, {}) : (0, i.jsx)(L, {
-      appealLink: h.SafetyHubLinks.APPEALS_LINK,
+      appealLink: p.SafetyHubLinks.APPEALS_LINK,
       letUsKnowClick: e.onLetUsKnowClick,
       isAppealEligible: e.isAppealEligible
     })
@@ -181,7 +181,7 @@ var y = e => {
   } = (0, T.useSafetyHubClassification)(l), R = (0, S.useSafetyHubAccountStanding)(), U = null != o && null != o.flagged_content && o.flagged_content.length > 0;
   return (a.useEffect(() => {
     d.default.track(A.AnalyticEvents.SAFETY_HUB_ACTION, {
-      action: h.SafetyHubAnalyticsActions.ViewViolationDetail,
+      action: p.SafetyHubAnalyticsActions.ViewViolationDetail,
       account_standing: R.state,
       classification_ids: [Number(l)],
       source: s,
@@ -193,20 +193,20 @@ var y = e => {
     children: [(0, i.jsx)(m, {
       classificationTypeText: o.description,
       guildName: null == o ? void 0 : null === (t = o.guild_metadata) || void 0 === t ? void 0 : t.name
-    }), U && !(0, _.isGuildClassification)(o) && (0, i.jsx)(p.ClassificationEvidence, {
+    }), U && !(0, _.isGuildClassification)(o) && (0, i.jsx)(h.ClassificationEvidence, {
       flaggedContent: null !== (n = o.flagged_content) && void 0 !== n ? n : []
     }), (0, i.jsx)(g, {
       actions: o.actions
     }), (0, i.jsx)(D, {
       classificationTypeText: o.description,
-      tosLink: h.SafetyHubLinks.TOS_LINK,
-      communityGuidelinesLink: h.SafetyHubLinks.COMMUNITY_GUIDELINES,
+      tosLink: p.SafetyHubLinks.TOS_LINK,
+      communityGuidelinesLink: p.SafetyHubLinks.COMMUNITY_GUIDELINES,
       policyExplainerLink: o.explainer_link,
       appealComponent: (0, i.jsx)(P, {
         hasBeenAppealed: null != o.appeal_status,
         onLetUsKnowClick: () => {
           d.default.track(A.AnalyticEvents.SAFETY_HUB_ACTION, {
-            action: h.SafetyHubAnalyticsActions.ClickLetUsKnow,
+            action: p.SafetyHubAnalyticsActions.ClickLetUsKnow,
             account_standing: R.state,
             classification_ids: [Number(l)],
             source: s,

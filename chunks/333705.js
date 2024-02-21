@@ -34,8 +34,8 @@ function T(e) {
   } = e, {
     voiceChannels: N,
     currentActivities: R,
-    partiedMembers: v,
-    applicationStreams: O,
+    partiedMembers: O,
+    applicationStreams: v,
     guildContext: L
   } = t, M = (0, s.useStateFromStores)([f.default], () => f.default.quests), P = [], D = e => {
     var t, n;
@@ -93,7 +93,7 @@ function T(e) {
         D(t);
         break
       }
-    } return O.length > 0 && O.forEach(e => {
+    } return v.length > 0 && v.forEach(e => {
     let {
       stream: t,
       streamUser: n,
@@ -109,7 +109,7 @@ function T(e) {
       }
     }, "application-stream-".concat(t.ownerId)))
   }), R.forEach((e, n) => {
-    var s, l, i, f, _, I, O, P, y;
+    var s, l, i, f, _, I, v, P, y;
     let {
       activity: x,
       game: b,
@@ -151,7 +151,7 @@ function T(e) {
       }, "streaming-".concat(null !== (_ = x.session_id) && void 0 !== _ ? _ : n)))
     } else(0, u.default)(x) ? D((0, a.jsx)(S.default.SpotifySection, {
       activity: x,
-      isSolo: 1 === v.length,
+      isSolo: 1 === O.length,
       partySize: {
         knownSize: U.length,
         unknownSize: 0,
@@ -162,7 +162,7 @@ function T(e) {
     }, "spotify-".concat(null !== (I = x.session_id) && void 0 !== I ? I : n, "-").concat(G.id))) : (null != x.assets || (0, r.default)(x)) && x.type === p.ActivityTypes.LISTENING ? D((0, a.jsx)(S.default.RichPresenceSection, {
       activity: x,
       getAssetImage: C.getAssetImage
-    }, "rich-presence-".concat(null !== (O = x.session_id) && void 0 !== O ? O : n, "-").concat(G.id))) : (0, d.default)(x) && D((0, a.jsx)(S.default.XboxSection, {
+    }, "rich-presence-".concat(null !== (v = x.session_id) && void 0 !== v ? v : n, "-").concat(G.id))) : (0, d.default)(x) && D((0, a.jsx)(S.default.XboxSection, {
       title: b.name
     }, "xbox-".concat(null !== (P = x.session_id) && void 0 !== P ? P : n)));
     if (null != b) {

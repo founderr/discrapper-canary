@@ -68,17 +68,17 @@ function I(e) {
     guildId: t,
     guildFeedItem: a,
     setOnDismissFeedback: r
-  } = e, [o, h] = l.useState(), [E, I] = l.useState(new Set), [_, x] = l.useState(), [v, S] = l.useState(!1), [C, N] = l.useState(!1), [p, T] = l.useState(!1), A = l.useCallback(e => {
-    h(e), T(!0), S(!1), setTimeout(() => {
+  } = e, [o, h] = l.useState(), [E, I] = l.useState(new Set), [_, x] = l.useState(), [v, C] = l.useState(!1), [S, N] = l.useState(!1), [p, T] = l.useState(!1), A = l.useCallback(e => {
+    h(e), T(!0), C(!1), setTimeout(() => {
       T(!1)
     }, f.GUILD_FEED_FEEDBACK_ANIMATION_DURATION + 150)
-  }, [h, S, T]), j = l.useCallback(e => {
+  }, [h, C, T]), M = l.useCallback(e => {
     e === f.GuildFeedFeedbackReason.OTHER && E.has(f.GuildFeedFeedbackReason.OTHER) && x(null);
     let t = new Set(E);
     t.has(e) ? t.delete(e) : t.add(e), I(t)
-  }, [E, x, I]), M = l.useCallback(() => {
-    S(!0), I(new Set)
-  }, [S, I]), D = l.useCallback(e => {
+  }, [E, x, I]), j = l.useCallback(() => {
+    C(!0), I(new Set)
+  }, [C, I]), D = l.useCallback(e => {
     (function(e) {
       let {
         guildId: t,
@@ -113,8 +113,8 @@ function I(e) {
       userFeedback: _
     })
   }, [t, a, o, E, _]), F = l.useCallback(() => {
-    s.default.set(f.GUILD_FEED_FEEDBACK_LAST_SEEN, Date.now()), null == r || r(!0), !C && D(!0)
-  }, [D, r, C]), L = l.useCallback(() => {
+    s.default.set(f.GUILD_FEED_FEEDBACK_LAST_SEEN, Date.now()), null == r || r(!0), !S && D(!0)
+  }, [D, r, S]), L = l.useCallback(() => {
     D(!1), N(!0), s.default.set(f.GUILD_FEED_FEEDBACK_LAST_SEEN, Date.now())
   }, [D]), R = l.useMemo(() => E.size > 0 && (!E.has(f.GuildFeedFeedbackReason.OTHER) || null != _ && "" !== _), [E, _]), b = (0, n.useStateFromStores)([i.default], () => i.default.useReducedMotion), G = l.useRef(!1);
   return l.useEffect(() => () => {
@@ -125,13 +125,13 @@ function I(e) {
     selectedRating: o,
     setSelectedRating: A,
     selectedReasons: E,
-    setSelectedReasons: j,
+    setSelectedReasons: M,
     setUserFeedback: x,
     backPressed: v,
-    onBackPressed: M,
+    onBackPressed: j,
     onSubmitPressed: L,
     onClosePressed: F,
-    showSubmitted: C,
+    showSubmitted: S,
     isAnimating: p,
     canSubmit: R,
     useReducedMotion: b

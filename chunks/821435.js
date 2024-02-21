@@ -22,14 +22,14 @@ var l = a("37983"),
   _ = a("267567"),
   x = a("393414"),
   v = a("716214"),
-  S = a("488464"),
-  C = a("998716"),
+  C = a("488464"),
+  S = a("998716"),
   N = a("42203"),
   p = a("957255"),
   T = a("316133"),
   A = a("943232"),
-  j = a("93393"),
-  M = a("718550"),
+  M = a("93393"),
+  j = a("718550"),
   D = a("811305"),
   F = a("599110"),
   L = a("887446"),
@@ -71,7 +71,7 @@ function k(e) {
       [H.isActive]: d,
       [H.isBrand]: c || f
     }),
-    children: [(0, l.jsx)(j.default, {
+    children: [(0, l.jsx)(M.default, {
       width: 12,
       height: 12
     }), (0, l.jsxs)(u.Text, {
@@ -159,7 +159,7 @@ function w(e) {
           children: n.name
         })]
       }) : (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(M.default, {
+        children: [(0, l.jsx)(j.default, {
           height: 12,
           width: 12,
           className: i(H.channelContainer, H.icon)
@@ -194,8 +194,8 @@ function B(e) {
       user: t
     } = e;
     return t
-  }), [c]), I = (0, r.useStateFromStores)([S.default], () => {
-    if (null != c && c.type === d.ChannelTypes.GUILD_STAGE_VOICE) return S.default.getParticipantCount(null == c ? void 0 : c.id, C.StageChannelParticipantNamedIndex.AUDIENCE)
+  }), [c]), I = (0, r.useStateFromStores)([C.default], () => {
+    if (null != c && c.type === d.ChannelTypes.GUILD_STAGE_VOICE) return C.default.getParticipantCount(null == c ? void 0 : c.id, S.StageChannelParticipantNamedIndex.AUDIENCE)
   }, [c]);
   return (0, l.jsx)(R.ActiveNowBase, {
     listItemId: a ? t.id : void 0,

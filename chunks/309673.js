@@ -22,14 +22,14 @@ var l = a("37983"),
   _ = a("800843"),
   x = a("610730"),
   v = a("982108"),
-  S = a("42203"),
-  C = a("27618"),
+  C = a("42203"),
+  S = a("27618"),
   N = a("185014"),
   p = a("886484"),
   T = a("2804"),
   A = a("468670"),
-  j = a("120027"),
-  M = a("113312"),
+  M = a("120027"),
+  j = a("113312"),
   D = a("339274"),
   F = a("605143"),
   L = a("759668"),
@@ -75,7 +75,7 @@ var P = n.forwardRef(function(e, t) {
     setOnDismissedFeedback: b
   } = e, {
     thread: y
-  } = _, P = (0, u.useStateFromStores)([S.default], () => S.default.getChannel(y.id), [y.id]), {
+  } = _, P = (0, u.useStateFromStores)([C.default], () => C.default.getChannel(y.id), [y.id]), {
     message: V,
     isFeaturedPost: W
   } = (0, u.useStateFromStoresObject)([N.default], () => {
@@ -89,7 +89,7 @@ var P = n.forwardRef(function(e, t) {
       message: e,
       isFeaturedPost: t
     }
-  }, [s, _.message.id, y]), K = (0, f.default)(y), z = (0, u.useStateFromStores)([C.default], () => null != V && C.default.isBlocked(null == V ? void 0 : V.author.id)), Y = (0, d.useListItem)(null !== (a = null == V ? void 0 : V.id) && void 0 !== a ? a : _.message.id), Z = (0, T.default)(_), X = (0, m.getChannelIconTooltipText)(y), J = (0, u.useStateFromStores)([S.default], () => S.default.getChannel(y.parent_id)), q = (0, f.default)(J), Q = (0, m.getChannelIconComponent)(J), [$, ee] = n.useState(!1), et = (0, u.useStateFromStores)([v.default], () => v.default.getSidebarState(O.StaticChannelRoute.GUILD_HOME)), ea = (0, p.getSidebarMessageId)(et, P), el = null != ea && _.message.id === ea, en = _.highlighted ? H.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : W ? H.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
+  }, [s, _.message.id, y]), K = (0, f.default)(y), z = (0, u.useStateFromStores)([S.default], () => null != V && S.default.isBlocked(null == V ? void 0 : V.author.id)), Y = (0, d.useListItem)(null !== (a = null == V ? void 0 : V.id) && void 0 !== a ? a : _.message.id), Z = (0, T.default)(_), X = (0, m.getChannelIconTooltipText)(y), J = (0, u.useStateFromStores)([C.default], () => C.default.getChannel(y.parent_id)), q = (0, f.default)(J), Q = (0, m.getChannelIconComponent)(J), [$, ee] = n.useState(!1), et = (0, u.useStateFromStores)([v.default], () => v.default.getSidebarState(O.StaticChannelRoute.GUILD_HOME)), ea = (0, p.getSidebarMessageId)(et, P), el = null != ea && _.message.id === ea, en = _.highlighted ? H.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : W ? H.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
     handleItemClick: es,
     handleChannelClick: ei,
     handleCardClick: ed,
@@ -155,7 +155,7 @@ var P = n.forwardRef(function(e, t) {
             })]
           }), null != en && (0, l.jsxs)("div", {
             className: k.featuredPostContainer,
-            children: [(0, l.jsx)(j.default, {
+            children: [(0, l.jsx)(M.default, {
               height: 4,
               width: 4,
               "aria-hidden": "true",
@@ -208,7 +208,7 @@ var P = n.forwardRef(function(e, t) {
           channel: y
         })]
       })
-    }), x && (0, l.jsx)(M.default, {
+    }), x && (0, l.jsx)(j.default, {
       guildId: s,
       guildFeedItem: _,
       setOnDismissFeedback: b

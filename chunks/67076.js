@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return C
   }
 });
 var l = a("37983");
@@ -122,7 +122,7 @@ function v(e) {
   })
 }
 
-function S(e) {
+function C(e) {
   let {
     guild: t,
     onClose: a

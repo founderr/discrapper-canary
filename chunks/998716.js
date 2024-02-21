@@ -27,7 +27,7 @@ var r, i, l, u, a, o = n("407846"),
   C = n("922673"),
   L = n("49111");
 
-function O(e) {
+function h(e) {
   var t;
   let {
     speaker: n,
@@ -41,7 +41,7 @@ function O(e) {
   return "".concat(n ? "\x00" : "\x01").concat("STREAM" === o ? "\x00" : "\x01").concat(d).concat(E).concat(_).concat(u).concat((0, s.default)(l, i))
 }
 
-function h(e) {
+function O(e) {
   let {
     user: t,
     voiceState: n
@@ -90,9 +90,9 @@ function g(e) {
         rtsState: (0, R.getAudienceRequestToSpeakState)(u)
       };
     l.push(_);
-    let O = null !== (r = E.default.getStreamForUser(e, this.guildId)) && void 0 !== r ? r : E.default.getActiveStreamForUser(e, this.guildId);
-    if (null != O && O.channelId === this.channelId) {
-      let e = (0, d.encodeStreamKey)(O);
+    let h = null !== (r = E.default.getStreamForUser(e, this.guildId)) && void 0 !== r ? r : E.default.getActiveStreamForUser(e, this.guildId);
+    if (null != h && h.channelId === this.channelId) {
+      let e = (0, d.encodeStreamKey)(h);
       i = {
         ...s,
         id: e,
@@ -138,6 +138,6 @@ function g(e) {
   }
   constructor(e) {
     var t;
-    this.participants = {}, this._participantsIndex = new o.default(g, O), this._requestToSpeakIndex = new o.default(() => [], h), this.channelId = e, this.guildId = null === (t = _.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
+    this.participants = {}, this._participantsIndex = new o.default(g, h), this._requestToSpeakIndex = new o.default(() => [], O), this.channelId = e, this.guildId = null === (t = _.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
   }
 }

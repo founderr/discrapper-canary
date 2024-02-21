@@ -22,14 +22,14 @@ var l = a("37983"),
   _ = a("816454"),
   x = a("601414"),
   v = a("146005"),
-  S = a("887446"),
-  C = a("75360"),
+  C = a("887446"),
+  S = a("75360"),
   N = a("216364"),
   p = a("405700"),
   T = a("806727"),
   A = a("807058"),
-  j = a("815619"),
-  M = a("515631"),
+  M = a("815619"),
+  j = a("515631"),
   D = a("782340"),
   F = a("15452");
 let L = n.memo(function(e) {
@@ -87,7 +87,7 @@ function b(e) {
     renderMode: G,
     scrollerRef: O,
     seenManagerRef: y
-  } = e, H = (0, C.default)(), [k, U, w, B] = (0, s.useStateFromStoresArray)([u.default], () => [M.GuildFeedSectionTypes.READ, M.GuildFeedSectionTypes.UNREAD, M.GuildFeedSectionTypes.HIGHLIGHTED, M.GuildFeedSectionTypes.ALL].map(e => u.default.getFeedItemSection(b.id, e))), P = (0, s.useStateFromStores)([u.default], () => u.default.getLoadId(b.id)), V = (0, s.useStateFromStores)([S.default], () => S.default.getHomeSessionId(b.id)), {
+  } = e, H = (0, S.default)(), [k, U, w, B] = (0, s.useStateFromStoresArray)([u.default], () => [j.GuildFeedSectionTypes.READ, j.GuildFeedSectionTypes.UNREAD, j.GuildFeedSectionTypes.HIGHLIGHTED, j.GuildFeedSectionTypes.ALL].map(e => u.default.getFeedItemSection(b.id, e))), P = (0, s.useStateFromStores)([u.default], () => u.default.getLoadId(b.id)), V = (0, s.useStateFromStores)([C.default], () => C.default.getHomeSessionId(b.id)), {
     loading: W,
     error: K,
     fetchFresh: z,
@@ -106,7 +106,7 @@ function b(e) {
     autoTrackExposure: !1
   }), {
     homeHeaderScroll: J
-  } = (0, j.useHomeHeader)(b);
+  } = (0, M.useHomeHeader)(b);
   n.useEffect(() => (d.default.initialize(), () => {
     d.default.terminate()
   }), []), n.useLayoutEffect(() => {
@@ -138,7 +138,7 @@ function b(e) {
         }
       }, [e]), t
     }(O),
-    Q = n.useMemo(() => G !== M.GuildFeedRenderMode.NEW ? [] : [...B].sort((e, t) => -I.default.compare((0, o.default)(e).id, (0, o.default)(t).id)), [B, G]),
+    Q = n.useMemo(() => G !== j.GuildFeedRenderMode.NEW ? [] : [...B].sort((e, t) => -I.default.compare((0, o.default)(e).id, (0, o.default)(t).id)), [B, G]),
     $ = n.useCallback(async () => {
       var e;
       await (null === (e = y.current) || void 0 === e ? void 0 : e.maybeFlushSeenItems(g.ForceFlushType.IMMEDIATE)), z({
@@ -172,7 +172,7 @@ function b(e) {
     guildId: b.id,
     onReloadClick: $
   });
-  if (G === M.GuildFeedRenderMode.TOP) return (0, l.jsxs)("div", {
+  if (G === j.GuildFeedRenderMode.TOP) return (0, l.jsxs)("div", {
     className: F.container,
     children: [(0, l.jsx)(T.default, {
       guild: b
@@ -192,7 +192,7 @@ function b(e) {
       onReloadClick: $
     })]
   });
-  if (G === M.GuildFeedRenderMode.NEW) return (0, l.jsxs)("div", {
+  if (G === j.GuildFeedRenderMode.NEW) return (0, l.jsxs)("div", {
     className: F.container,
     children: [(0, l.jsx)(T.default, {
       guild: b

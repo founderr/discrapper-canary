@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   createHeader: function() {
-    return o
+    return u
   },
   createBody: function() {
-    return u
+    return o
   },
   shouldShowActivity: function() {
     return d
@@ -19,7 +19,7 @@ let r = {
   [s.STAGE_APPLICATION_ID]: new a.StageChannelNowPlayingDelegate
 };
 
-function o(e) {
+function u(e) {
   var t;
   let n = e.application_id;
   if (null == n) return;
@@ -27,7 +27,7 @@ function o(e) {
   if (null != l && (null === (t = l.shouldShow) || void 0 === t ? void 0 : t.call(l, e)) !== !1) return l.createHeader(e)
 }
 
-function u(e) {
+function o(e) {
   var t;
   let n = e.application_id;
   if (null == n) return;

@@ -8,13 +8,13 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("943314"),
-  l = n("531869"),
-  a = n("49111");
+  a = n("531869"),
+  l = n("49111");
 let s = 3;
 
 function r(e) {
-  let t = l.default.useExperiment({
-      guildId: null != e ? e : a.EMPTY_STRING_GUILD_ID,
+  let t = a.default.useExperiment({
+      guildId: null != e ? e : l.EMPTY_STRING_GUILD_ID,
       location: "9a247a_1"
     }),
     n = i.default.useExperiment({

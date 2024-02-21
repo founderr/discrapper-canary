@@ -22,14 +22,14 @@ var l = a("37983"),
   _ = a("534222"),
   x = a("316133"),
   v = a("461380"),
-  S = a("599110"),
-  C = a("558130"),
+  C = a("599110"),
+  S = a("558130"),
   N = a("887446"),
   p = a("241094"),
   T = a("154925"),
   A = a("128651"),
-  j = a("475117"),
-  M = a("540585"),
+  M = a("475117"),
+  j = a("540585"),
   D = a("821435"),
   F = a("49111"),
   L = a("782340"),
@@ -104,7 +104,7 @@ function k(e) {
   let {
     guildId: t,
     isUsingCollapsedLayout: a
-  } = e, s = (0, o.useStateFromStores)([C.default], () => C.default.getActiveChannelsFetchStatus(t)), r = (0, p.useActiveTextChannels)(t), u = (0, _.useGuildActiveEvent)(t), m = (0, o.useStateFromStores)([x.default], () => x.default.getVoiceStates(t)), h = (0, p.useActiveVoiceChannels)(t, u), T = r.length + h.length + (null != u ? 1 : 0), b = T > 0, G = n.useRef(null), O = (0, _.default)(t), k = O.filter(e => !(0, I.isGuildScheduledEventActive)(e)), [U, w] = n.useState(0 === k.length), [B, P] = n.useState(!0), [V, W] = n.useState(!1), {
+  } = e, s = (0, o.useStateFromStores)([S.default], () => S.default.getActiveChannelsFetchStatus(t)), r = (0, p.useActiveTextChannels)(t), u = (0, _.useGuildActiveEvent)(t), m = (0, o.useStateFromStores)([x.default], () => x.default.getVoiceStates(t)), h = (0, p.useActiveVoiceChannels)(t, u), T = r.length + h.length + (null != u ? 1 : 0), b = T > 0, G = n.useRef(null), O = (0, _.default)(t), k = O.filter(e => !(0, I.isGuildScheduledEventActive)(e)), [U, w] = n.useState(0 === k.length), [B, P] = n.useState(!0), [V, W] = n.useState(!1), {
     ref: K,
     width: z
   } = (0, f.default)(), Y = n.useCallback(() => {
@@ -144,10 +144,10 @@ function k(e) {
     })
   }, [z]);
   n.useEffect(() => {
-    C.default.shouldFetch(t) && (0, E.fetchActiveChannels)(t)
+    S.default.shouldFetch(t) && (0, E.fetchActiveChannels)(t)
   }, [t]), (0, g.default)(t, r, h);
   let J = n.useCallback(e => {
-      S.default.track(F.AnalyticEvents.ACTIVE_CHANNEL_CLICKED, {
+      C.default.track(F.AnalyticEvents.ACTIVE_CHANNEL_CLICKED, {
         guild_id: e.guild_id,
         channel_id: e.id,
         channel_type: e.type,
@@ -156,12 +156,12 @@ function k(e) {
         home_session_id: N.default.getHomeSessionId(e.guild_id)
       })
     }, [r, h]),
-    q = r.map(e => (0, l.jsx)(j.default, {
+    q = r.map(e => (0, l.jsx)(M.default, {
       guildId: t,
       channel: e,
       trackChannelClick: J
     }, e.id)),
-    Q = h.map(e => (0, l.jsx)(M.default, {
+    Q = h.map(e => (0, l.jsx)(j.default, {
       guildId: t,
       channel: e,
       voiceStates: m[e.id],

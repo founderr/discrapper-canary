@@ -9,18 +9,18 @@ n("884691");
 var i = n("446674"),
   l = n("77078"),
   u = n("255397"),
-  r = n("393414"),
-  s = n("957255"),
+  s = n("393414"),
+  r = n("957255"),
   o = n("49111"),
   d = n("782340");
 
 function c(e, t) {
-  let n = (0, i.useStateFromStores)([s.default], () => s.default.can(o.Permissions.CONNECT, e), [e]);
+  let n = (0, i.useStateFromStores)([r.default], () => r.default.can(o.Permissions.CONNECT, e), [e]);
   return n && e.isGuildVocal() ? (0, a.jsx)(l.MenuItem, {
     id: "open-chat",
     label: d.default.Messages.OPEN_CHAT,
     action: () => {
-      u.default.updateChatOpen(e.id, !0), (0, r.transitionToGuild)(t.id, e.id)
+      u.default.updateChatOpen(e.id, !0), (0, s.transitionToGuild)(t.id, e.id)
     }
   }) : null
 }

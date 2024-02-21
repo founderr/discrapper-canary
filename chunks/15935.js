@@ -77,11 +77,11 @@ var h = new f(i.default, {
     if (d(o, a) >= 5) return;
     let h = null !== (t = s[a]) && void 0 !== t ? t : {},
       m = null !== (n = u[a]) && void 0 !== n ? n : {},
-      g = m[f],
-      R = h[f];
-    if ("HOVER" !== o || null == R) {
-      "HOVER" === R && "EXTERNAL" === o && null != g && ("function" == typeof g.destroy && g.destroy(), null === (l = u[a]) || void 0 === l || delete l[f], R = void 0);
-      null == R && (null != s[a] ? s[a][f] = o : s[a] = {
+      R = m[f],
+      g = h[f];
+    if ("HOVER" !== o || null == g) {
+      "HOVER" === g && "EXTERNAL" === o && null != R && ("function" == typeof R.destroy && R.destroy(), null === (l = u[a]) || void 0 === l || delete l[f], g = void 0);
+      null == g && (null != s[a] ? s[a][f] = o : s[a] = {
         [f]: o
       })
     }

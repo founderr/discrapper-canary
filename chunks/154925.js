@@ -89,7 +89,7 @@ let g = 3,
       usersInSummary: m,
       onChannelClick: E,
       channelIconOptions: x
-    } = e, v = (0, u.default)(f.COLLAPSED_SIZE_MEDIA_QUERY), S = (0, o.getChannelIconComponent)(s, null, x);
+    } = e, v = (0, u.default)(f.COLLAPSED_SIZE_MEDIA_QUERY), C = (0, o.getChannelIconComponent)(s, null, x);
     return (0, l.jsx)(_, {
       ref: t,
       textNode: null != i ? (0, l.jsx)(r.Text, {
@@ -106,7 +106,7 @@ let g = 3,
         extraDetail: d
       }),
       onClick: E,
-      icon: null != S && (0, l.jsx)(S, {
+      icon: null != C && (0, l.jsx)(C, {
         width: I,
         height: I
       }),

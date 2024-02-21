@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return I
+    return x
   }
 }), a("222007");
 var l = a("37983"),
@@ -14,25 +14,25 @@ var l = a("37983"),
   c = a("145131"),
   u = a("646356"),
   E = a("736393"),
-  A = a("698609"),
-  _ = a("170213"),
+  _ = a("698609"),
+  A = a("170213"),
   S = a("782340"),
   N = a("836092"),
-  x = a("221389");
+  I = a("221389");
 
-function I(e) {
+function x(e) {
   let {
     isDsaEligible: t = !1,
     className: a,
     onClose: n,
-    onNext: I,
+    onNext: x,
     onBack: f
-  } = e, T = (0, A.useSafetyHubAppealSignal)(), g = (0, o.useStateFromStores)([u.default], () => u.default.getFreeTextAppealReason()), [p, m] = s.useState(""), [C, h] = s.useState(!1);
+  } = e, T = (0, _.useSafetyHubAppealSignal)(), g = (0, o.useStateFromStores)([u.default], () => u.default.getFreeTextAppealReason()), [C, p] = s.useState(""), [m, L] = s.useState(!1);
   s.useEffect(() => {
-    m(null != g ? g : ""), h(T === _.AppealIngestionSignal.SOMETHING_ELSE)
+    p(null != g ? g : ""), L(T === A.AppealIngestionSignal.SOMETHING_ELSE)
   }, [g, T]);
-  let L = e => {
-      h(e === _.AppealIngestionSignal.SOMETHING_ELSE), e !== _.AppealIngestionSignal.SOMETHING_ELSE && (m(""), r.default.dispatch({
+  let h = e => {
+      L(e === A.AppealIngestionSignal.SOMETHING_ELSE), e !== A.AppealIngestionSignal.SOMETHING_ELSE && (p(""), r.default.dispatch({
         type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
         userInput: ""
       })), r.default.dispatch({
@@ -40,26 +40,26 @@ function I(e) {
         signal: e
       })
     },
-    M = _.AppealIngestionSignalOrder.map(e => ({
+    M = A.AppealIngestionSignalOrder.map(e => ({
       value: e,
       name: (0, E.getAppealSignalDisplayText)(e)
     }));
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(d.ModalHeader, {
       direction: c.default.Direction.VERTICAL,
-      className: x.header,
+      className: I.header,
       separator: !1,
       children: [(0, l.jsx)(d.Heading, {
-        className: x.title,
+        className: I.title,
         variant: "heading-xl/semibold",
         children: S.default.Messages.APPEAL_INGESTION_MODAL_HEADER
       }), (0, l.jsx)(d.Text, {
-        className: x.subtitle,
+        className: I.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
         children: S.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SUBHEADER
       }), null != n && (0, l.jsx)(d.ModalCloseButton, {
-        className: x.closeButton,
+        className: I.closeButton,
         onClick: n
       })]
     }), (0, l.jsxs)(d.ModalContent, {
@@ -67,7 +67,7 @@ function I(e) {
       paddingFix: !1,
       children: [(0, l.jsx)(d.RadioGroup, {
         radioPosition: "right",
-        radioItemClassName: x.radioItem,
+        radioItemClassName: I.radioItem,
         size: d.RadioGroup.Sizes.NOT_SET,
         value: T,
         options: M,
@@ -75,15 +75,15 @@ function I(e) {
           let {
             value: t
           } = e;
-          return L(t)
+          return h(t)
         }
-      }), C && (0, l.jsxs)(l.Fragment, {
+      }), m && (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(d.TextArea, {
           rows: 4,
           maxLength: 1024,
           placeholder: S.default.Messages.APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_PLACEHOLDER,
-          value: p,
-          onChange: m,
+          value: C,
+          onChange: p,
           autoFocus: !0
         }), (0, l.jsx)(d.Text, {
           variant: "text-sm/normal",
@@ -100,8 +100,8 @@ function I(e) {
         onClick: () => {
           r.default.dispatch({
             type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
-            userInput: p
-          }), null == I || I()
+            userInput: C
+          }), null == x || x()
         },
         color: d.Button.Colors.BRAND,
         children: S.default.Messages.NEXT
@@ -109,7 +109,7 @@ function I(e) {
         onClick: () => {
           r.default.dispatch({
             type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
-            userInput: p
+            userInput: C
           }), null == f || f()
         },
         color: d.Button.Colors.PRIMARY,

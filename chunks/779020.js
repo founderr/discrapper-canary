@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("943183"),
   N = n("271081"),
   R = n("298557"),
-  v = n("176162"),
-  O = n("590157"),
+  O = n("176162"),
+  v = n("590157"),
   L = n("734592"),
   M = n("156565"),
   P = n("366410"),
@@ -81,8 +81,8 @@ var a = n("37983"),
   eA = n("686551"),
   eN = n("793237"),
   eR = n("120252"),
-  ev = n("481395"),
-  eO = n("401642"),
+  eO = n("481395"),
+  ev = n("401642"),
   eL = n("542789"),
   eM = n("84124"),
   eP = n("392011"),
@@ -161,13 +161,13 @@ let e4 = o.default.connectStores([H.default, ej.default, eb.default], () => ({
       return null
     }
   }),
-  e9 = (0, O.makeAuthenticated)(M.default, null, {
+  e9 = (0, v.makeAuthenticated)(M.default, null, {
     passProps: !1
   }),
-  e7 = (0, O.makeAuthenticated)(function() {
+  e7 = (0, v.makeAuthenticated)(function() {
     return (0, a.jsx)(N.default, {})
   }),
-  e8 = (0, O.makeAuthenticated)(function(e) {
+  e8 = (0, v.makeAuthenticated)(function(e) {
     let {
       match: t
     } = e, {
@@ -179,8 +179,8 @@ let e4 = o.default.connectStores([H.default, ej.default, eb.default], () => ({
       initialSection: l
     })
   }),
-  e3 = (0, O.makeAuthenticated)(function() {
-    return (0, a.jsx)(v.default, {})
+  e3 = (0, v.makeAuthenticated)(function() {
+    return (0, a.jsx)(O.default, {})
   }),
   e6 = [eJ.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(e0.StaticChannelRoutes).map(e => eJ.Routes.CHANNEL(":guildId", e))];
 
@@ -237,7 +237,7 @@ let te = [{
       } = (0, l.parse)(n.search), {
         id: i
       } = t.params;
-      return (0, V.addPostConnectionCallback)(() => (0, eO.openUserProfileModal)({
+      return (0, V.addPostConnectionCallback)(() => (0, ev.openUserProfileModal)({
         userId: i,
         guildId: eJ.ME,
         friendToken: s,
@@ -447,7 +447,7 @@ function ta(e) {
 }
 class ts extends s.PureComponent {
   componentDidMount() {
-    P.default.initialize(), eZ.default.setZoomFactor(C.default.zoom), eI.default.init(), L.default.initialize(), eo.default.initialize(), w.default.initialize(), ex.default.initialize(), k.default.initialize(), ed.default.initialize(), J.default.initialize(), I.default.init(), B.default.init(), F.default.init(), ea.default.initialize(), g.default.initialize(), j.default.initialize(), ec.default.initialize(), T.default.initialize(), ey.default.initialize(), er.default.initialize(), p.default.initialize(), Y.default.init(), Z.default.init(), eK.default.init(), eq.default.init(), m.default.initialize(), ev.default.init(), eW.default.init(), eY.default.init(), eM.default.init(), eg.default.initialize(), eA.default.initialize(), eL.default.initialize(), eP.default.init(), G.default.initialize(), S.default.initialize(), eS.default.initialize(), eT.default.initialize(), el.default.initialize(), es.default.initialize(), ei.default.initialize(), D.default.initialize(), ef.default.initialize(), X.default.init({
+    P.default.initialize(), eZ.default.setZoomFactor(C.default.zoom), eI.default.init(), L.default.initialize(), eo.default.initialize(), w.default.initialize(), ex.default.initialize(), k.default.initialize(), ed.default.initialize(), J.default.initialize(), I.default.init(), B.default.init(), F.default.init(), ea.default.initialize(), g.default.initialize(), j.default.initialize(), ec.default.initialize(), T.default.initialize(), ey.default.initialize(), er.default.initialize(), p.default.initialize(), Y.default.init(), Z.default.init(), eK.default.init(), eq.default.init(), m.default.initialize(), eO.default.init(), eW.default.init(), eY.default.init(), eM.default.init(), eg.default.initialize(), eA.default.initialize(), eL.default.initialize(), eP.default.init(), G.default.initialize(), S.default.initialize(), eS.default.initialize(), eT.default.initialize(), el.default.initialize(), es.default.initialize(), ei.default.initialize(), D.default.initialize(), ef.default.initialize(), X.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {

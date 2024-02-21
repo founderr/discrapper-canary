@@ -149,9 +149,9 @@ function G(e) {
   } = e, R = (0, a.useStateFromStores)([f.default], () => null != f.default.getGuild(n.id), [n.id]), {
     startTime: L,
     endTime: G
-  } = (0, N.default)(t.id, S), O = (0, a.useStateFromStores)([h.default], () => h.default.getUserCount(t.id, S)), x = r.useCallback(e => {
+  } = (0, N.default)(t.id, S), O = (0, a.useStateFromStores)([h.default], () => h.default.getUserCount(t.id, S)), M = r.useCallback(e => {
     e.stopPropagation(), null != t && (0, o.transitionToGuildFromEventInvite)(t)
-  }, [t]), M = (0, v.default)(t);
+  }, [t]), x = (0, v.default)(t);
   r.useEffect(() => {
     I.default.getGuildEventUserCounts(n.id, t.id, null != S ? [S] : []), I.default.getGuildEventsForCurrentUser(n.id)
   }, [n.id, t.id, S]);
@@ -178,7 +178,7 @@ function G(e) {
       className: P.body,
       children: [(0, i.jsx)(y, {
         guild: n,
-        onClick: R ? x : void 0,
+        onClick: R ? M : void 0,
         onClose: d
       }), (0, i.jsx)(m.default, {
         guildScheduledEvent: t,
@@ -187,10 +187,10 @@ function G(e) {
       }), null != O && (0, i.jsx)(U, {
         userCount: O,
         onClick: c
-      }), !E && null != M && (0, i.jsx)(D, {
-        creator: M,
+      }), !E && null != x && (0, i.jsx)(D, {
+        creator: x,
         guildId: n.id
-      }, M.id), null != t.description && (0, i.jsx)("div", {
+      }, x.id), null != t.description && (0, i.jsx)("div", {
         className: P.description,
         children: (0, i.jsx)(p.default, {
           description: t.description,
