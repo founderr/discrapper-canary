@@ -346,7 +346,8 @@ function W(e) {
         onDiscountClaim: () => A(4),
         onContinue: () => A(2),
         isLoading: D && w,
-        churnUserDiscountOffer: B
+        churnUserDiscountOffer: B,
+        analyticsLocations: o
       });
       break;
     case 2:
