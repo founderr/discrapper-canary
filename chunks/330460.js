@@ -33,9 +33,12 @@ function d(e) {
           color: "header-primary",
           children: l.default.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TIPS_HEADER
         })
-      }), (0, n.jsx)(o.default, {
-        tips: d,
-        headerText: l.default.Messages.INAPPROPRIATE_CONVERSATION_TIPS_DESCRIPTION
+      }), (0, n.jsx)("div", {
+        className: u.safetyTips,
+        children: (0, n.jsx)(o.default, {
+          tips: d,
+          headerText: l.default.Messages.INAPPROPRIATE_CONVERSATION_TIPS_DESCRIPTION
+        })
       })]
     }), (0, n.jsxs)(a.ModalFooter, {
       className: u.footer,

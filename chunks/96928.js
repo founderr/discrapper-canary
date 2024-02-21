@@ -1,25 +1,25 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return L
+    return C
   }
 });
 var T = s("37983"),
   l = s("884691"),
   a = s("414456"),
   n = s.n(a),
-  o = s("669491"),
-  r = s("748802"),
-  _ = s("77078"),
-  i = s("545158"),
-  S = s("652126"),
-  u = s("161297"),
-  E = s("514914"),
-  d = s("324252"),
-  O = s("782340"),
+  r = s("669491"),
+  o = s("748802"),
+  i = s("77078"),
+  _ = s("545158"),
+  u = s("652126"),
+  S = s("161297"),
+  d = s("514914"),
+  E = s("324252"),
+  c = s("782340"),
   A = s("744228");
 
-function c(e) {
+function O(e) {
   let {
     children: t
   } = e;
@@ -29,7 +29,7 @@ function c(e) {
   })
 }
 
-function C(e) {
+function I(e) {
   let {
     title: t,
     subTitle: s,
@@ -41,17 +41,17 @@ function C(e) {
     className: A.actionRow,
     children: [(0, T.jsxs)("div", {
       className: A.actionButtonDetails,
-      children: [(0, T.jsx)(_.Text, {
+      children: [(0, T.jsx)(i.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
         children: t
-      }), (0, T.jsx)(_.Text, {
+      }), (0, T.jsx)(i.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
         children: s
       })]
-    }), (0, T.jsx)(_.Button, {
-      size: _.Button.Sizes.SMALL,
+    }), (0, T.jsx)(i.Button, {
+      size: i.Button.Sizes.SMALL,
       color: a,
       onClick: n,
       children: l
@@ -59,66 +59,66 @@ function C(e) {
   })
 }
 
-function I(e) {
+function f(e) {
   let {
     title: t,
     onPress: s
   } = e;
-  return (0, T.jsxs)(_.Clickable, {
+  return (0, T.jsxs)(i.Clickable, {
     className: n(A.actionRow, A.clickableActionRow),
     onClick: s,
-    children: [(0, T.jsx)(_.Text, {
+    children: [(0, T.jsx)(i.Text, {
       variant: "text-md/semibold",
       color: "header-primary",
       children: t
-    }), (0, T.jsx)(r.ChevronSmallRightIcon, {
+    }), (0, T.jsx)(o.ChevronSmallRightIcon, {
       width: 24,
       height: 24,
-      color: o.default.colors.INTERACTIVE_NORMAL
+      color: r.default.colors.INTERACTIVE_NORMAL
     })]
   })
 }
-var L = function(e) {
+var C = function(e) {
   let {
     transitionToSlide: t
-  } = e, a = (0, S.useShouldShowHelplineLink)(), n = l.useMemo(() => {
+  } = e, a = (0, u.useShouldShowHelplineLink)(), n = l.useMemo(() => {
     let e = {
-        title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_TITLE,
-        subTitle: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_SUBTITLE,
-        buttonText: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_BUTTON,
-        buttonColor: _.ButtonColors.PRIMARY,
+        title: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_TITLE,
+        subTitle: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_SUBTITLE,
+        buttonText: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_BUTTON,
+        buttonColor: i.ButtonColors.PRIMARY,
         onPress: () => {
-          (0, i.default)(d.CRISIS_TEXT_LINE_URL)
+          (0, _.default)(E.CRISIS_TEXT_LINE_URL)
         }
       },
       t = {
-        title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE,
-        subTitle: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_SUBTITLE,
-        buttonText: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_BUTTON,
-        buttonColor: _.ButtonColors.PRIMARY,
+        title: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE,
+        subTitle: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_SUBTITLE,
+        buttonText: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_BUTTON,
+        buttonColor: i.ButtonColors.PRIMARY,
         onPress: () => {
-          (0, i.default)(d.NOFILTR_URL)
+          (0, _.default)(E.NOFILTR_URL)
         }
       };
     return [{
-      title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
-      subTitle: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_SUBTITLE,
-      buttonText: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
-      buttonColor: _.ButtonColors.PRIMARY,
+      title: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
+      subTitle: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_SUBTITLE,
+      buttonText: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
+      buttonColor: i.ButtonColors.PRIMARY,
       onPress: () => {}
     }, {
-      title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
-      subTitle: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_SUBTITLE,
-      buttonText: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
-      buttonColor: _.ButtonColors.PRIMARY,
+      title: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
+      subTitle: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_SUBTITLE,
+      buttonText: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
+      buttonColor: i.ButtonColors.PRIMARY,
       onPress: () => {}
     }, a ? e : t, {
-      title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE,
-      subTitle: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE,
-      buttonText: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON,
-      buttonColor: _.ButtonColors.BRAND,
+      title: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE,
+      subTitle: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE,
+      buttonText: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON,
+      buttonColor: i.ButtonColors.BRAND,
       onPress: () => {
-        (0, _.openModalLazy)(async () => {
+        (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await s.el("166260").then(s.bind(s, "166260"));
@@ -126,19 +126,19 @@ var L = function(e) {
             ...t
           })
         }, {
-          onCloseCallback: _.closeAllModals
+          onCloseCallback: i.closeAllModals
         })
       }
     }]
-  }, [a]), o = l.useMemo(() => [{
-    title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE,
-    onPress: () => {}
+  }, [a]), r = l.useMemo(() => [{
+    title: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE,
+    onPress: () => t(S.SafetyToolsSlides.SAFETY_TIPS)
   }, {
-    title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE,
-    onPress: () => t(u.SafetyToolsSlides.ABOUT_SAFETY_ALERTS)
+    title: c.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE,
+    onPress: () => t(S.SafetyToolsSlides.ABOUT_SAFETY_ALERTS)
   }], [t]);
-  return (0, T.jsxs)(E.default, {
-    children: [(0, T.jsx)(c, {
+  return (0, T.jsxs)(d.default, {
+    children: [(0, T.jsx)(O, {
       children: n.map(e => {
         let {
           title: t,
@@ -147,7 +147,7 @@ var L = function(e) {
           buttonColor: a,
           onPress: n
         } = e;
-        return (0, T.jsx)(C, {
+        return (0, T.jsx)(I, {
           title: t,
           subTitle: s,
           buttonText: l,
@@ -155,13 +155,13 @@ var L = function(e) {
           onPress: n
         }, t)
       })
-    }), (0, T.jsx)(c, {
-      children: o.map(e => {
+    }), (0, T.jsx)(O, {
+      children: r.map(e => {
         let {
           title: t,
           onPress: s
         } = e;
-        return (0, T.jsx)(I, {
+        return (0, T.jsx)(f, {
           title: t,
           onPress: s
         }, t)
