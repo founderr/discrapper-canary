@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  l = n("917351"),
-  i = n.n(l),
+  i = n("917351"),
+  l = n.n(i),
   r = n("77078"),
   o = n("716241"),
   u = n("945330"),
@@ -17,13 +17,13 @@ var a = n("37983"),
   E = n("49111"),
   h = n("782340"),
   _ = n("64187");
-let C = i.debounce(o.default.trackWithMetadata, 500),
+let C = l.debounce(o.default.trackWithMetadata, 500),
   I = e => {
     let {
       guild: t,
       title: n,
-      message: l,
-      image: i,
+      message: i,
+      image: l,
       type: c,
       imageMarginX: f,
       imageMarginTop: I,
@@ -78,7 +78,7 @@ let C = i.debounce(o.default.trackWithMetadata, 500),
         },
         children: (0, a.jsx)("img", {
           className: _.image,
-          src: i,
+          src: l,
           alt: ""
         })
       }), (0, a.jsxs)("div", {
@@ -89,7 +89,7 @@ let C = i.debounce(o.default.trackWithMetadata, 500),
           children: n
         }) : null, (0, a.jsx)(r.Text, {
           variant: "text-sm/normal",
-          children: l
+          children: i
         }), N]
       })]
     })

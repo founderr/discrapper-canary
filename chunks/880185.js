@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("913144"),
   s = n("316272"),
-  l = n("271938"),
-  i = n("356702"),
+  i = n("271938"),
+  l = n("356702"),
   r = n("429464"),
   o = n("106413"),
   u = n("880731"),
@@ -25,9 +25,9 @@ class f extends s.default {
       let {
         settings: t
       } = e;
-      t.enabled ? (0, i.unlockAchievement)(o.PoggermodeAchievementId.ENABLE_POGGERMODE) : !1 === t.enabled && (0, i.unlockAchievement)(o.PoggermodeAchievementId.DISABLE_POGGERMODE);
+      t.enabled ? (0, l.unlockAchievement)(o.PoggermodeAchievementId.ENABLE_POGGERMODE) : !1 === t.enabled && (0, l.unlockAchievement)(o.PoggermodeAchievementId.DISABLE_POGGERMODE);
       let n = Object.keys(t).some(e => e.startsWith("confetti"));
-      n && (0, i.unlockAchievement)(o.PoggermodeAchievementId.CUSTOMIZE_CONFETTI)
+      n && (0, l.unlockAchievement)(o.PoggermodeAchievementId.CUSTOMIZE_CONFETTI)
     }, this.handleMessageCreate = e => {
       var t;
       let {
@@ -39,8 +39,8 @@ class f extends s.default {
         }
       } = e;
       if (!u.default.isEnabled()) return !1;
-      let E = l.default.getId();
-      if ((null == f ? void 0 : f.find(e => e.id === E)) != null ? (0, i.unlockAchievement)(o.PoggermodeAchievementId.PING_ME) : (null !== (t = null == f ? void 0 : f.length) && void 0 !== t ? t : 0) > 0 && (null == a ? void 0 : a.id) === E && (0, i.unlockAchievement)(o.PoggermodeAchievementId.PING_SOMEONE), !(0, d.shouldTrackMessage)(null == a ? void 0 : a.id, E, s, c)) return !1;
+      let E = i.default.getId();
+      if ((null == f ? void 0 : f.find(e => e.id === E)) != null ? (0, l.unlockAchievement)(o.PoggermodeAchievementId.PING_ME) : (null !== (t = null == f ? void 0 : f.length) && void 0 !== t ? t : 0) > 0 && (null == a ? void 0 : a.id) === E && (0, l.unlockAchievement)(o.PoggermodeAchievementId.PING_SOMEONE), !(0, d.shouldTrackMessage)(null == a ? void 0 : a.id, E, s, c)) return !1;
       let h = d.default.getMostRecentMessageCombo(n),
         {
           combo: _
@@ -50,7 +50,7 @@ class f extends s.default {
         if (null != r.default.getUnlocked(e)) return;
         let t = (0, o.getPoggermodeAchievementData)(e),
           n = null == t ? void 0 : t.checkUnlock;
-        if (null != n) !1 !== n(_) && (0, i.unlockAchievement)(e)
+        if (null != n) !1 !== n(_) && (0, l.unlockAchievement)(e)
       })
     }
   }

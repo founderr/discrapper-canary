@@ -6,22 +6,22 @@ n.r(t), n.d(t, {
 });
 var a = n("446674"),
   s = n("913144");
-let l = {};
-class i extends a.default.Store {
+let i = {};
+class l extends a.default.Store {
   getSkuIdForChannel(e) {
-    return l[e]
+    return i[e]
   }
 }
-i.displayName = "ChannelSKUStore";
-var r = new i(s.default, {
+l.displayName = "ChannelSKUStore";
+var r = new l(s.default, {
   CONNECTION_OPEN: function() {
-    l = {}
+    i = {}
   },
   STORE_LISTING_FETCH_SUCCESS: function(e) {
     let {
       channelId: t,
       storeListing: n
     } = e;
-    null != t && (l[t] = n.sku.id)
+    null != t && (i[t] = n.sku.id)
   }
 })

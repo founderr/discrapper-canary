@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useNullExperiment: function() {
-    return l
+    return i
   }
 });
 var a = n("862205");
@@ -21,7 +21,7 @@ let s = (0, a.createExperiment)({
   }]
 });
 
-function l() {
+function i() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   return s.useExperiment({
     location: "a9e81b_1"

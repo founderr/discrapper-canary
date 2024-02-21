@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useChannelNoticeRedesignExperiment: function() {
-    return l
+    return i
   }
 });
 var a = n("862205");
@@ -37,7 +37,7 @@ let s = (0, a.createExperiment)({
   }]
 });
 
-function l() {
+function i() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     {
       showRedesignedChannelNotice: t,

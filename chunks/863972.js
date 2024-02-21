@@ -10,20 +10,20 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  l = n("106435"),
-  i = n("50885"),
+  i = n("106435"),
+  l = n("50885"),
   r = n("782340"),
   o = n("468540");
-let u = i.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
+let u = l.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
   d = e => {
     let {
       user: t,
       avatarSize: n = s.AvatarSizes.SIZE_48
     } = e, {
-      avatarSrc: i,
+      avatarSrc: l,
       avatarDecorationSrc: d,
       eventHandlers: c
-    } = (0, l.default)({
+    } = (0, i.default)({
       user: t,
       size: n
     });
@@ -31,7 +31,7 @@ let u = i.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
       ...c,
       children: (0, a.jsx)(u, {
         className: o.avatar,
-        src: i,
+        src: l,
         avatarDecoration: d,
         size: n,
         "aria-label": r.default.Messages.FAMILY_CENTER_AVATAR_ARIA.format({

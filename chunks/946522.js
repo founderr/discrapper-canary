@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var s = n("37983");
 n("884691");
-var l = n("77078"),
-  i = n("913144"),
+var i = n("77078"),
+  l = n("913144"),
   r = n("316272"),
   o = n("19009"),
   u = n("774146"),
@@ -28,36 +28,36 @@ var l = n("77078"),
   A = n("56235"),
   N = n("218971"),
   R = n("49111"),
-  v = n("492397"),
-  O = n("149806");
+  O = n("492397"),
+  v = n("149806");
 
 function L() {
-  null != a && (0, l.closeModal)(a)
+  null != a && (0, i.closeModal)(a)
 }
 class M extends r.default {
   _initialize() {
-    i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("LOGOUT", L)
+    l.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.default.subscribe("LOGOUT", L)
   }
   _terminate() {
-    i.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.unsubscribe("LOGOUT", L)
+    l.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.default.unsubscribe("LOGOUT", L)
   }
   handleConnectionOpen() {
     var e;
-    let t, i = g.default.getType();
-    if (null == i) return;
-    switch (i) {
+    let t, l = g.default.getType();
+    if (null == l) return;
+    switch (l) {
       case A.NewUserTypes.INVITE_UNCLAIMED:
-        f.default.flowStart(O.FlowType.INVITE, O.RegistrationSteps.NUF_STARTED);
+        f.default.flowStart(v.FlowType.INVITE, v.RegistrationSteps.NUF_STARTED);
         break;
       case A.NewUserTypes.ORGANIC_REGISTERED:
-        f.default.flowStart(O.FlowType.ORGANIC, O.RegistrationSteps.NUF_STARTED);
+        f.default.flowStart(v.FlowType.ORGANIC, v.RegistrationSteps.NUF_STARTED);
         break;
       case A.NewUserTypes.MARKETING_UNCLAIMED:
-        f.default.flowStart(O.FlowType.ORGANIC_MARKETING, O.RegistrationSteps.NUF_STARTED)
+        f.default.flowStart(v.FlowType.ORGANIC_MARKETING, v.RegistrationSteps.NUF_STARTED)
     }
     let r = !1,
       L = I.default.getGuildId();
-    if (i === A.NewUserTypes.INVITE_UNCLAIMED) {
+    if (l === A.NewUserTypes.INVITE_UNCLAIMED) {
       let e = C.default.getGuild(L);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
@@ -69,25 +69,25 @@ class M extends r.default {
         let t = e => {
           switch (e) {
             case N.NUFSlides.AGE_GATE:
-              f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.AGE_GATE);
+              f.default.flowStep(v.FlowType.ANY, v.RegistrationSteps.AGE_GATE);
               break;
             case N.NUFSlides.CHOOSE_TEMPLATE:
-              f.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.GUILD_TEMPLATES);
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.GUILD_TEMPLATES);
               break;
             case N.NUFSlides.CUSTOMIZE_GUILD:
-              f.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.GUILD_CREATE);
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.GUILD_CREATE);
               break;
             case N.NUFSlides.CHANNEL_PROMPT:
-              f.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.CHANNEL_PROMPT);
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.CHANNEL_PROMPT);
               break;
             case N.NUFSlides.JOIN_GUILD:
-              f.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.JOIN_GUILD);
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.JOIN_GUILD);
               break;
             case N.NUFSlides.CREATION_INTENT:
-              f.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.CREATION_INTENT);
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.CREATION_INTENT);
               break;
             case N.NUFSlides.COMPLETE:
-              f.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.SUCCESS);
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.SUCCESS);
               break;
             case null:
               break;
@@ -95,7 +95,7 @@ class M extends r.default {
               m.assertNever(e)
           }
         };
-        a = await (0, l.openModalLazy)(async () => {
+        a = await (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("439431").then(n.bind(n, "439431"));
@@ -109,28 +109,28 @@ class M extends r.default {
           modalKey: a
         })
       },
-      predicate: () => M() && !v.CONFERENCE_MODE_ENABLED
+      predicate: () => M() && !O.CONFERENCE_MODE_ENABLED
     }, {
       key: "New User Age Gate",
       open: u.openNewUserAgeGateModal,
-      predicate: () => P && !M() && !v.CONFERENCE_MODE_ENABLED
+      predicate: () => P && !M() && !O.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
       open: e => u.openClaimAccountModal(p.isPlatformEmbedded, e),
       predicate: () => {
         var e;
-        return !r && null != S.default.getCurrentUser() && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !v.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
+        return !r && null != S.default.getCurrentUser() && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
       }
     }, {
       key: "Verification Gate with Claim Account",
       open: e => (0, d.openMemberVerificationModal)(L, null != e ? e : void 0),
       predicate: () => {
         var e;
-        return r && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !v.CONFERENCE_MODE_ENABLED
+        return r && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED
       }
     }, {
       key: "Guild Welcome Modal",
-      open: e => (0, l.openModalLazy)(async () => {
+      open: e => (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("900257").then(n.bind(n, "900257"));
@@ -143,7 +143,7 @@ class M extends r.default {
       }),
       predicate: () => null != L && null != h.default.get(L) && h.default.get(L) !== h.NO_WELCOME_SCREEN
     }], t = () => {
-      T.setNewUserFlowCompleted(), f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.NUF_COMPLETE, !0)
+      T.setNewUserFlowCompleted(), f.default.flowStep(v.FlowType.ANY, v.RegistrationSteps.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {
       let n = t;
       t = () => {

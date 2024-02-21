@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useIsSafetyConsumerEducationReportingEnabled: function() {
-    return l
+    return i
   }
 });
 var a = n("862205");
@@ -23,7 +23,7 @@ let s = (0, a.createExperiment)({
   }]
 });
 
-function l() {
+function i() {
   return s.useExperiment({
     location: "183c74_1"
   }, {

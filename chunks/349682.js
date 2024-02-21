@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  l = n("77078"),
-  i = n("69927"),
+  i = n("77078"),
+  l = n("69927"),
   r = n("794818"),
   o = n("244922"),
   u = n("143217"),
@@ -26,10 +26,10 @@ var a = n("37983"),
         allGuilds: [],
         categoryId: d.DISCORD_HUB_ID
       })
-    }, [t]), (0, i.usePageTitle)({
+    }, [t]), (0, l.usePageTitle)({
       subsection: c.default.Messages.HUB_SCHOOL_HUBS,
       location: c.default.Messages.HUB_DIRECTORY_SEARCH_TITLE
-    }), (0, a.jsx)(l.Scroller, {
+    }), (0, a.jsx)(i.Scroller, {
       className: f.scroller,
       children: (0, a.jsxs)("div", {
         className: f.viewWrapper,
@@ -41,11 +41,11 @@ var a = n("37983"),
             src: E
           }), (0, a.jsxs)("div", {
             className: f.headerContent,
-            children: [(0, a.jsx)(l.Heading, {
+            children: [(0, a.jsx)(i.Heading, {
               className: f.headerText,
               variant: "heading-xl/semibold",
               children: c.default.Messages.HUB_DIRECTORY_SEARCH_TITLE
-            }), (0, a.jsx)(l.Text, {
+            }), (0, a.jsx)(i.Text, {
               className: f.headerDescription,
               variant: "text-md/normal",
               color: "none",
@@ -56,7 +56,7 @@ var a = n("37983"),
           guilds: n
         }), (0, a.jsx)("div", {
           className: f.divider
-        }), (0, a.jsx)(l.Text, {
+        }), (0, a.jsx)(i.Text, {
           className: f.footerDescription,
           variant: "text-md/medium",
           color: "header-secondary",

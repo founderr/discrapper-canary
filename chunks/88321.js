@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("702976"), n("70102");
 var a = n("917351"),
   s = n.n(a),
-  l = n("913144"),
-  i = n("599110"),
+  i = n("913144"),
+  l = n("599110"),
   r = n("550368"),
   o = n("718517"),
   u = n("861309"),
@@ -71,7 +71,7 @@ var _ = {
       if (null == c && f.TransportTypes.IPC === a.transport) throw new u.default({
         errorCode: E.RPCErrors.INVALID_COMMAND
       }, "nonzero pid required");
-      if (null == _) return l.default.dispatch({
+      if (null == _) return i.default.dispatch({
         type: "LOCAL_ACTIVITY_UPDATE",
         socketId: a.id,
         pid: c,
@@ -113,7 +113,7 @@ var _ = {
       return n.then(e => {
         let [t, n] = e;
         if (null != m && (null != t ? m.large_image = t : delete m.large_image, null != n ? m.small_image = n : delete m.small_image), !C()) return;
-        l.default.dispatch({
+        i.default.dispatch({
           type: "LOCAL_ACTIVITY_UPDATE",
           socketId: a.id,
           pid: c,
@@ -126,7 +126,7 @@ var _ = {
           application_id: a.application.id,
           type: _.type
         };
-        return null != s && (o.has_match_secret = !!s.match, o.has_join_secret = !!s.join), null != m && (o.has_images = !!(m.large_image || m.small_image)), null != r && (o.party_max = null != r.size ? r.size[1] : void 0, o.party_id = r.id), i.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, o), _
+        return null != s && (o.has_match_secret = !!s.match, o.has_join_secret = !!s.join), null != m && (o.has_images = !!(m.large_image || m.small_image)), null != r && (o.party_max = null != r.size ? r.size[1] : void 0, o.party_id = r.id), l.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, o), _
       })
     }
   }

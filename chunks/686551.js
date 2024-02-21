@@ -7,27 +7,27 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  l = n("913144"),
-  i = n("316272"),
+  i = n("913144"),
+  l = n("316272"),
   r = n("271938"),
   o = n("42203"),
   u = n("235660"),
   d = n("808422"),
   c = n("49111");
 let f = "STAGE_INVITED_TO_SPEAK_MODAL";
-class E extends i.default {
+class E extends l.default {
   _initialize() {
-    l.default.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
+    i.default.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
   _terminate() {
-    l.default.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
+    i.default.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
   constructor(...e) {
     super(...e), this.handleVoiceStateUpdates = e => {
       var t;
       let {
-        voiceStates: l
-      } = e, i = r.default.getId(), E = null === (t = u.default.getSession()) || void 0 === t ? void 0 : t.sessionId, h = l.find(e => e.userId === i && e.sessionId === E);
+        voiceStates: i
+      } = e, l = r.default.getId(), E = null === (t = u.default.getSession()) || void 0 === t ? void 0 : t.sessionId, h = i.find(e => e.userId === l && e.sessionId === E);
       if (null == h) return;
       let _ = h.channelId;
       if (null == _) {

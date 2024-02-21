@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  l = n("837008"),
-  i = n("167109"),
+  i = n("837008"),
+  l = n("167109"),
   r = n("176687"),
   o = n("847426"),
   u = n("430780"),
@@ -23,7 +23,7 @@ var s = n("77078"),
     var t, n;
     let {
       guild: I
-    } = e, S = (0, l.useGroupListingsForGuild)(I.id)[0];
+    } = e, S = (0, i.useGroupListingsForGuild)(I.id)[0];
     (0, o.default)({
       guildId: I.id,
       groupListingId: null == S ? void 0 : S.id,
@@ -32,9 +32,9 @@ var s = n("77078"),
     });
     let {
       activeSubscription: m
-    } = (0, r.default)(null == S ? void 0 : S.id), p = (0, l.useSubscriptionsSettings)(I.id), T = null == p ? void 0 : p.description, {
+    } = (0, r.default)(null == S ? void 0 : S.id), p = (0, i.useSubscriptionsSettings)(I.id), T = null == p ? void 0 : p.description, {
       editStateIds: g
-    } = i.useEditStateIds(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : null, I.id);
+    } = l.useEditStateIds(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : null, I.id);
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(E.default, {
         title: _.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({

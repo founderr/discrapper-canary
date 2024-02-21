@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("70102");
 var a = n("976255"),
   s = n("95410"),
-  l = n("913144"),
-  i = n("945956"),
+  i = n("913144"),
+  l = n("945956"),
   r = n("599110"),
   o = n("718517"),
   u = n("872507"),
@@ -60,14 +60,14 @@ async function m() {
       initialized: t.initialized
     }
   });
-  let l = {
+  let i = {
       client_heartbeat_initialization_timestamp: t.initialized,
       client_heartbeat_version: 17
     },
-    i = u.default.getMemoryUsageElectronRenderer();
-  null != i && (l.client_heartbeat_renderer_memory = i);
+    l = u.default.getMemoryUsageElectronRenderer();
+  null != l && (i.client_heartbeat_renderer_memory = l);
   let o = u.default.getMemoryUsageElectronRendererUsedHeapSize();
-  null != o && (l.client_heartbeat_renderer_memory_used_heap = o), r.default.track(c.AnalyticEvents.CLIENT_HEARTBEAT, l), s.default.set(f, Date.now().toString())
+  null != o && (i.client_heartbeat_renderer_memory_used_heap = o), r.default.track(c.AnalyticEvents.CLIENT_HEARTBEAT, i), s.default.set(f, Date.now().toString())
 }
 let p = null,
   T = !0;
@@ -85,7 +85,7 @@ function g() {
 function A() {
   d.default.addBreadcrumb({
     message: "Initializing SessionHeartbeatScheduler"
-  }), i.default.addChangeListener(R), l.default.subscribe("WINDOW_FOCUS", v), l.default.subscribe("APP_STATE_UPDATE", O), l.default.subscribe("LOGIN_SUCCESS", N), g()
+  }), l.default.addChangeListener(R), i.default.subscribe("WINDOW_FOCUS", O), i.default.subscribe("APP_STATE_UPDATE", v), i.default.subscribe("LOGIN_SUCCESS", N), g()
 }
 
 function N() {
@@ -93,18 +93,18 @@ function N() {
 }
 
 function R() {
-  let e = i.default.getState();
+  let e = l.default.getState();
   p !== e && (p = e, g())
 }
 
-function v(e) {
+function O(e) {
   let {
     focused: t
   } = e;
   T = t, g()
 }
 
-function O(e) {
+function v(e) {
   let {
     state: t
   } = e;

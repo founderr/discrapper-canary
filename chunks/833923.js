@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("917351"),
-  i = n.n(l),
+  i = n("917351"),
+  l = n.n(i),
   r = n("284679"),
   o = n("435491");
 class u extends s.PureComponent {
@@ -16,8 +16,8 @@ class u extends s.PureComponent {
       maxValue: n,
       data: a,
       animate: s
-    } = this.props, l = null == e || e.data !== t.data && !i.isEqual(e.data, t.data);
-    if (l && (this.dataChangedAt = performance.now(), this.maxValue = null != n ? n : Math.max(...a)), l || null == e || !e.animate && s || e.color !== this.props.color) {
+    } = this.props, i = null == e || e.data !== t.data && !l.isEqual(e.data, t.data);
+    if (i && (this.dataChangedAt = performance.now(), this.maxValue = null != n ? n : Math.max(...a)), i || null == e || !e.animate && s || e.color !== this.props.color) {
       let e = r.hexToRgb(this.props.color);
       this.fillColor = "rgba(".concat(e.r, ", ").concat(e.g, ", ").concat(e.b, ", 0.5)"), window.cancelAnimationFrame(this.animationFrameRequestId), this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation)
     }
@@ -54,18 +54,18 @@ class u extends s.PureComponent {
       if (null == a) return;
       let {
         data: s,
-        updateInterval: l,
-        color: i,
+        updateInterval: i,
+        color: l,
         numUpdatesToShow: o,
         lineWidth: u,
         animate: d,
         gradientStopColor: c
       } = this.props;
       if (s.length < 2) return;
-      let f = Math.max(Math.min((e - this.dataChangedAt) / l, 1), 0),
+      let f = Math.max(Math.min((e - this.dataChangedAt) / i, 1), 0),
         E = a.getContext("2d"),
         h = this.maxValue;
-      E.strokeStyle = i, E.lineWidth = u;
+      E.strokeStyle = l, E.lineWidth = u;
       let _ = a.height - E.lineWidth,
         C = E.createLinearGradient(0, 0, 0, _);
       if (null != c) C.addColorStop(0, c);
@@ -74,7 +74,7 @@ class u extends s.PureComponent {
           r: e,
           g: t,
           b: n
-        } = r.hexToRgb(i);
+        } = r.hexToRgb(l);
         C.addColorStop(0, "rgba(".concat(e, ", ").concat(t, ", ").concat(n, ", 0)"))
       }
       C.addColorStop(1, this.fillColor), E.fillStyle = C;

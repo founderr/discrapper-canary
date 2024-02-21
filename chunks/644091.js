@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("446674"),
-  l = n("77078"),
-  i = n("449918"),
+  i = n("77078"),
+  l = n("449918"),
   r = n("766274"),
   o = n("102985"),
   u = n("697218"),
@@ -42,7 +42,7 @@ function T() {
         o = s.id === (null == e ? void 0 : e.id),
         u = n.tokenStatus === _.MultiAccountTokenStatus.INVALID,
         f = t ? null : "#".concat(s.discriminator);
-      return (0, a.jsx)(l.MenuItem, {
+      return (0, a.jsx)(i.MenuItem, {
         id: s.id,
         focusedClassName: p.focused,
         label: e => {
@@ -51,33 +51,33 @@ function T() {
           } = e;
           return (0, a.jsxs)("div", {
             className: p.userMenuItem,
-            children: [(0, a.jsx)(l.Avatar, {
+            children: [(0, a.jsx)(i.Avatar, {
               src: s.getAvatarURL(void 0, 40),
-              size: l.AvatarSizes.SIZE_24,
+              size: i.AvatarSizes.SIZE_24,
               "aria-label": n.username
             }), (0, a.jsxs)("div", {
               className: p.userMenuUsername,
-              children: [(0, a.jsx)(l.Text, {
+              children: [(0, a.jsx)(i.Text, {
                 className: p.userMenuText,
                 variant: "text-sm/normal",
                 children: E.default.getUserTag(s, {
                   mode: "username",
                   identifiable: t ? "never" : "always"
                 })
-              }), !s.isPomelo() && (0, a.jsx)(l.Text, {
+              }), !s.isPomelo() && (0, a.jsx)(i.Text, {
                 className: p.userMenuDiscriminator,
                 variant: "text-sm/normal",
                 children: f
               })]
             }), o && (0, a.jsx)(d.default, {
-              color: (0, i.getColor)(r ? S.Color.WHITE_500 : S.Color.BRAND_500),
-              backgroundColor: (0, i.getColor)(r ? S.Color.BRAND_500 : S.Color.WHITE_500),
+              color: (0, l.getColor)(r ? S.Color.WHITE_500 : S.Color.BRAND_500),
+              backgroundColor: (0, l.getColor)(r ? S.Color.BRAND_500 : S.Color.WHITE_500),
               width: 18,
               height: 18,
               className: p.activeIcon
             }), u && (0, a.jsx)(c.default, {
-              color: (0, i.getColor)(S.Color.RED_400),
-              backgroundColor: (0, i.getColor)(S.Color.WHITE_500),
+              color: (0, l.getColor)(S.Color.RED_400),
+              backgroundColor: (0, l.getColor)(S.Color.WHITE_500),
               width: 15,
               height: 15,
               className: p.activeIcon
@@ -90,7 +90,7 @@ function T() {
       }, s.id)
     });
   return g.push((0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(l.MenuSeparator, {}), (0, a.jsx)(l.MenuItem, {
+    children: [(0, a.jsx)(i.MenuSeparator, {}), (0, a.jsx)(i.MenuItem, {
       id: "manage-accounts",
       label: m.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
       action: I.default

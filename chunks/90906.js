@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("70102");
 var a = n("446825"),
   s = n("44170"),
-  l = n("917351"),
-  i = n.n(l),
+  i = n("917351"),
+  l = n.n(i),
   r = n("605250"),
   o = n("50885"),
   u = n("856116"),
@@ -58,7 +58,7 @@ function S(e) {
       }, e => {
         throw a(), e
       });
-    return e.write(m(_.PING, i.uniqueId())), s.then(t, n)
+    return e.write(m(_.PING, l.uniqueId())), s.then(t, n)
   })
 }
 
@@ -66,8 +66,8 @@ function m(e, t) {
   var n;
   t = JSON.stringify(t);
   let s = a.Buffer.byteLength(t),
-    l = a.Buffer.alloc(8 + s);
-  return l.writeInt32LE(e, 0), l.writeInt32LE(s, 4), l.write(t, 8, s), (n = l).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength)
+    i = a.Buffer.alloc(8 + s);
+  return i.writeInt32LE(e, 0), i.writeInt32LE(s, 4), i.write(t, 8, s), (n = i).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength)
 }
 
 function p(e) {
@@ -75,25 +75,25 @@ function p(e) {
   if (null == t) return;
   let n = a.Buffer.from(t),
     s = n.readInt32LE(0),
-    l = n.readInt32LE(4);
-  if (!Object.values(_).includes(s) || l < 0) throw Error("protocol error");
-  if (null == (t = e.read(l))) throw Error("data size does not match what was received");
+    i = n.readInt32LE(4);
+  if (!Object.values(_).includes(s) || i < 0) throw Error("protocol error");
+  if (null == (t = e.read(i))) throw Error("data size does not match what was received");
   n = a.Buffer.from(t);
-  let i = JSON.parse(n.toString());
+  let l = JSON.parse(n.toString());
   switch (s) {
     case _.PING:
-      e.emit("ping", i), e.write(m(_.PONG, i));
+      e.emit("ping", l), e.write(m(_.PONG, l));
       break;
     case _.PONG:
-      e.emit("pong", i);
+      e.emit("pong", l);
       break;
     case _.HANDSHAKE:
       if (I(e)) throw Error("already did handshake");
-      C(e, !0), e.emit("handshake", i);
+      C(e, !0), e.emit("handshake", l);
       break;
     case _.FRAME:
       if (!I(e)) throw Error("did not handshake");
-      e.emit("request", i);
+      e.emit("request", l);
       break;
     case _.CLOSE:
       e.end(), e.destroy()

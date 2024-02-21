@@ -15,8 +15,8 @@ n.r(t), n.d(t, {
 });
 var a = n("917351"),
   s = n.n(a),
-  l = n("913144"),
-  i = n("191225"),
+  i = n("913144"),
+  l = n("191225"),
   r = n("697218"),
   o = n("449008"),
   u = n("387111"),
@@ -24,7 +24,7 @@ var a = n("917351"),
   c = n("492249");
 
 function f() {
-  let e = i.default.getCurrentEmbeddedActivity();
+  let e = l.default.getCurrentEmbeddedActivity();
   if (null == e) return {
     participants: []
   };
@@ -63,5 +63,5 @@ function _(e) {
     n = () => {
       e(f())
     };
-  return l.default.subscribe(t, n), () => l.default.unsubscribe(t, n)
+  return i.default.subscribe(t, n), () => i.default.unsubscribe(t, n)
 }

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return R
   }
 });
-var a, s, l = n("37983");
+var a, s, i = n("37983");
 n("884691");
-var i = n("391679"),
+var l = n("391679"),
   r = n("77078"),
   o = n("913144"),
   u = n("850068"),
@@ -30,7 +30,7 @@ function N(e, t) {
     invite_code: null,
     has_auth_token: null,
     is_backgrounded: null,
-    fingerprint: (0, i.extractId)(e),
+    fingerprint: (0, l.extractId)(e),
     link_type: t
   })
 }(a = s || (s = {})).SETTINGS = "settings", a.CHANGELOG = "changelog", a.LIBRARY = "library", a.STORE = "store", a.INVITE = "invite", a.CHANNEL = "channel", a.GUILD_SETTINGS = "guild_settings";
@@ -78,7 +78,7 @@ var R = {
         let {
           default: e
         } = await n.el("843456").then(n.bind(n, "843456"));
-        return t => (0, l.jsx)(e, {
+        return t => (0, i.jsx)(e, {
           ...t,
           guildTemplate: a
         })
@@ -109,7 +109,7 @@ var R = {
               let {
                 default: e
               } = await n.el("669146").then(n.bind(n, "669146"));
-              return n => (0, l.jsx)(e, {
+              return n => (0, i.jsx)(e, {
                 code: t,
                 ...n
               })

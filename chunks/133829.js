@@ -22,13 +22,13 @@ function h(e) {
     senderId: h,
     warningType: C,
     header: p,
-    description: m,
-    onDismiss: E,
+    description: E,
+    onDismiss: m,
     primaryButtonText: g,
     secondaryButtonText: S,
     primaryButtonColor: _,
-    secondaryButtonColor: A,
-    onPrimaryButtonClick: T,
+    secondaryButtonColor: T,
+    onPrimaryButtonClick: A,
     onSecondaryButtonClick: M
   } = e;
   s.useEffect(() => {
@@ -37,14 +37,14 @@ function h(e) {
     })
   }, []);
   let I = s.useCallback(() => {
-    null == E || E(), (0, u.trackCtaEvent)({
+    null == m || m(), (0, u.trackCtaEvent)({
       channelId: t,
       warningId: n,
       senderId: h,
       warningType: C,
       cta: u.CtaEventTypes.DISMISS
     })
-  }, [E, t, n, h, C]);
+  }, [m, t, n, h, C]);
   return (0, a.jsxs)("div", {
     className: c.strangerDangerBanner,
     children: [(0, a.jsxs)("div", {
@@ -61,7 +61,7 @@ function h(e) {
         }), (0, a.jsx)(i.Text, {
           variant: "text-sm/normal",
           color: "text-primary",
-          children: m
+          children: E
         })]
       })]
     }), (0, a.jsxs)("div", {
@@ -70,12 +70,12 @@ function h(e) {
         size: i.Button.Sizes.SMALL,
         color: _,
         "aria-label": g,
-        onClick: T,
+        onClick: A,
         className: c.ctaButton,
         children: g
       }), (0, a.jsx)(i.Button, {
         size: i.Button.Sizes.SMALL,
-        color: A,
+        color: T,
         className: c.ctaButton,
         "aria-label": S,
         onClick: M,

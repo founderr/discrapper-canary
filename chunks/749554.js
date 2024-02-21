@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("627445"),
-  l = n.n(s),
-  i = n("152311"),
+  i = n.n(s),
+  l = n("152311"),
   r = n("429928"),
   o = n("36539"),
   u = n("280174"),
@@ -35,19 +35,19 @@ function C(e) {
         user: t
       } = e;
       return t.id
-    })), s = n.filter(e => !a.has(e.id)), l = d.default.getName(t[0].user), i = null != t[1] ? d.default.getName(t[1].user) : null != s[0] ? d.default.getName(s[0]) : null;
+    })), s = n.filter(e => !a.has(e.id)), i = d.default.getName(t[0].user), l = null != t[1] ? d.default.getName(t[1].user) : null != s[0] ? d.default.getName(s[0]) : null;
     switch (n.length) {
       case 1:
-        return l;
+        return i;
       case 2:
         return _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN_ONLY.format({
-          user1: l,
-          user2: i
+          user1: i,
+          user2: l
         });
       default:
         return _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN.format({
-          user1: l,
-          user2: i,
+          user1: i,
+          user2: l,
           extras: n.length - 2
         })
     }
@@ -64,7 +64,7 @@ function C(e) {
     } = e, S = s.length, m = d.length - S, p = I[0], T = null == p ? void 0 : p.activity, g = null == p ? void 0 : p.startedPlayingTime, A = {
       name: null !== (t = null == T ? void 0 : T.name) && void 0 !== t ? t : ""
     };
-    if ((0, i.default)(T) && null != T) return {
+    if ((0, l.default)(T) && null != T) return {
       subtitle: (0, a.jsx)(u.default, {
         start: g,
         location: u.default.Locations.ACTIVITY_FEED_NEW,
@@ -163,7 +163,7 @@ function C(e) {
         game: n,
         startedPlayingTime: s
       } = e;
-      return l(null != t, "Activity was null somehow"), {
+      return i(null != t, "Activity was null somehow"), {
         subtitle: (0, a.jsx)(u.default, {
           start: s,
           location: u.default.Locations.ACTIVITY_FEED_NEW,

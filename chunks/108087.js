@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("424973");
 var a = n("316718"),
   s = n("465527"),
-  l = n("55620"),
-  i = n("84460"),
+  i = n("55620"),
+  l = n("84460"),
   r = n("524503"),
   o = n("167726"),
   u = n("861309"),
@@ -26,20 +26,20 @@ async function E(e, t) {
     n.forEach(e => {
       e.subscription_plans.forEach(n => {
         var s;
-        let l = null == n ? void 0 : n.price,
-          i = t.find(e => e.id === n.sku_id);
-        if (null == i) return;
+        let i = null == n ? void 0 : n.price,
+          l = t.find(e => e.id === n.sku_id);
+        if (null == l) return;
         let r = {
           id: n.sku_id,
-          name: i.name,
-          type: i.type,
+          name: l.name,
+          type: l.type,
           price: {
-            amount: l,
+            amount: i,
             currency: f.CurrencyCodes.USD
           },
           application_id: e.application_id,
           flags: e.sku_flags,
-          release_date: null !== (s = i.release_date) && void 0 !== s ? s : null
+          release_date: null !== (s = l.release_date) && void 0 !== s ? s : null
         };
         a.push(r)
       })
@@ -55,12 +55,12 @@ async function h(e) {
   if (null == n) throw new u.default({
     errorCode: f.RPCErrors.INVALID_COMMAND
   }, "No application.");
-  if (o.default.inTestModeForApplication(n) || i.default.inDevModeForApplication(n)) {
+  if (o.default.inTestModeForApplication(n) || l.default.inDevModeForApplication(n)) {
     let e = await s.fetchTestSKUsForApplication(n, !1),
       t = await E(n, e);
     return [...e.filter(e => null != e.price), ...t]
   }
-  let a = await l.fetchAllStoreListingsForApplication(n),
+  let a = await i.fetchAllStoreListingsForApplication(n),
     r = a.filter(e => e.sku.type !== f.SKUTypes.SUBSCRIPTION_GROUP).map(e => e.sku).filter(e => null != e.price),
     c = await E(n, a.map(e => e.sku));
   return [...r, ...c]

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("803182"),
   o = n("90915"),
   u = n("759843"),
@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("171984"),
   N = n("551254"),
   R = n("893399"),
-  v = n("353681"),
-  O = n("256430"),
+  O = n("353681"),
+  v = n("256430"),
   L = n("390236"),
   M = n("546102"),
   P = n("380710"),
@@ -60,8 +60,8 @@ var a = n("37983"),
   en = n("449008"),
   ea = n("439932"),
   es = n("315977"),
-  el = n("911120"),
-  ei = n("455555"),
+  ei = n("911120"),
+  el = n("455555"),
   er = n("229644"),
   eo = n("901582"),
   eu = n("758997"),
@@ -119,8 +119,8 @@ let eC = () => (0, a.jsx)("div", {
       return X.default.getChannel(e)
     }), {
       guildId: s,
-      channelId: l,
-      messageId: i
+      channelId: i,
+      messageId: l
     } = t.params, r = (0, f.useStateFromStores)([$.default], () => $.default.getGuild(s)), o = (0, f.useStateFromStores)([J.default], () => null == s ? null : J.default.getSelfMember(s)), u = (0, f.useStateFromStores)([G.default], () => {
       if (null == s) return;
       let e = G.default.getData(s);
@@ -133,7 +133,7 @@ let eC = () => (0, a.jsx)("div", {
           return
       }
     }), d = (0, N.isEligibleForSubscriptionsInGuildShop)(s, "channel_renderer");
-    if (null != s && null != l && (0, ef.isStaticChannelRoute)(l)) switch (l) {
+    if (null != s && null != i && (0, ef.isStaticChannelRoute)(i)) switch (i) {
       case ef.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
         return d ? (0, a.jsx)(eI, {
           guildId: s,
@@ -144,7 +144,7 @@ let eC = () => (0, a.jsx)("div", {
       case ef.StaticChannelRoute.GUILD_SHOP:
         return (0, a.jsx)(eI, {
           guildId: s,
-          productId: i,
+          productId: l,
           initialTab: u
         });
       case ef.StaticChannelRoute.MEMBER_APPLICATIONS:
@@ -174,11 +174,11 @@ let eC = () => (0, a.jsx)("div", {
           guildId: s
         });
       default:
-        (0, en.assertNever)(l)
+        (0, en.assertNever)(i)
     }
     if ((0, P.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(D.default, {
       guildId: s,
-      channelId: l
+      channelId: i
     });
     if ((null == n ? void 0 : n.type) === ec.ChannelTypes.GUILD_STORE) {
       let e = t.params.messageId;
@@ -196,7 +196,7 @@ let eC = () => (0, a.jsx)("div", {
     } = (0, q.default)(), n = (0, f.useStateFromStores)([ee.default], () => null != t ? t : ee.default.getChannelId(e));
     return function() {
       return window.location.pathname.startsWith(ec.Routes.GUILD_DISCOVERY)
-    }() ? (0, a.jsx)(O.default, {}) : null != e ? (0, a.jsx)(x.default, {
+    }() ? (0, a.jsx)(v.default, {}) : null != e ? (0, a.jsx)(x.default, {
       selectedChannelId: n,
       guildId: e
     }, e) : (0, a.jsx)(er.default, {})
@@ -214,13 +214,13 @@ function eR(e) {
     guildId: t
   })
 }
-let ev = e => (0, a.jsx)(eA, {
+let eO = e => (0, a.jsx)(eA, {
     ...e
   }),
-  eO = e => {
+  ev = e => {
     let t = null != e && e.length > 0 && e.startsWith("?"),
       n = t ? e.split("?")[1] : null;
-    return (0, a.jsx)(v.default, {
+    return (0, a.jsx)(O.default, {
       searchRoute: n
     })
   },
@@ -306,17 +306,17 @@ function ek(e) {
     hideSidebar: s
   } = e;
   (0, _.useNullExperiment)(!0);
-  let l = "app view user trigger debugging";
+  let i = "app view user trigger debugging";
   h.UserTriggerAAExperiment.useExperiment({
-    location: l
+    location: i
   }, {
     autoTrackExposure: !1
   }), h.UserTriggerAAExperiment.trackExposure({
-    location: l
+    location: i
   });
   let r = (0, f.useStateFromStores)([p.default], () => p.default.isFullscreenInContext());
   return s ? null : (0, a.jsxs)("div", {
-    className: i(e_.sidebar, (0, ea.getThemeClass)(n), {
+    className: l(e_.sidebar, (0, ea.getThemeClass)(n), {
       [e_.hasNotice]: t,
       [e_.fullWidth]: c.isMobile,
       [e_.hidden]: r
@@ -336,7 +336,7 @@ function ek(e) {
         section: ec.AnalyticsSections.ACCOUNT_PANEL,
         children: (0, a.jsx)(B.default, {})
       })]
-    }), (0, a.jsx)(el.default, {})]
+    }), (0, a.jsx)(ei.default, {})]
   })
 }
 
@@ -344,13 +344,13 @@ function eF() {
   var e;
   let t = (0, f.useStateFromStores)([et.default], () => et.default.hasNotice()),
     n = (0, f.useStateFromStores)([Z.default], () => Z.default.darkSidebar ? ec.ThemeTypes.DARK : void 0),
-    l = function() {
+    i = function() {
       let [e, t] = s.useState(() => window.location.pathname.startsWith(ec.Routes.GUILD_MEMBER_VERIFICATION("")));
       return s.useEffect(() => Q.default.addRouteChangeListener(e => {
         t(e.pathname.startsWith(ec.Routes.GUILD_MEMBER_VERIFICATION("")))
       }), []), e
     }(),
-    i = function() {
+    l = function() {
       let [e, t] = s.useState(() => window.location.pathname.startsWith(ec.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB("")));
       return s.useEffect(() => Q.default.addRouteChangeListener(e => {
         t(e.pathname.startsWith(ec.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB("")))
@@ -380,12 +380,12 @@ function eF() {
         value: (null == _ ? void 0 : _.params.guildId) === ec.ME ? void 0 : null == _ ? void 0 : _.params.guildId,
         children: (0, a.jsxs)("div", {
           className: e_.base,
-          children: [c.isMobile ? null : (0, a.jsx)(ei.default, {}), (0, a.jsxs)("div", {
+          children: [c.isMobile ? null : (0, a.jsx)(el.default, {}), (0, a.jsxs)("div", {
             className: e_.content,
             children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(ek, {
               hasNotice: t,
               sidebarTheme: n,
-              hideSidebar: l || i || d || E || I || !h
+              hideSidebar: i || l || d || E || I || !h
             }), (0, a.jsx)(C.default.Provider, {
               value: S,
               children: (0, a.jsxs)(o.Switch, {
@@ -453,7 +453,7 @@ function eF() {
                   disableTrack: !0
                 }), (0, a.jsx)(m.default, {
                   path: [ec.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), ec.Routes.CHANNEL(ec.ME, ":channelId"), ec.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
-                  render: ev,
+                  render: eO,
                   impressionName: u.ImpressionNames.GUILD_CHANNEL,
                   disableTrack: !0
                 }), (0, a.jsx)(m.default, {
@@ -462,7 +462,7 @@ function eF() {
                     let {
                       location: t
                     } = e;
-                    return eO(t.search)
+                    return ev(t.search)
                   },
                   impressionName: u.ImpressionNames.GUILD_DISCOVERY,
                   disableTrack: !0

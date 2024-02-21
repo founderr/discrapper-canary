@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("77078"),
   o = n("433487"),
   u = n("149279"),
@@ -17,9 +17,9 @@ var a = n("37983"),
   E = function(e) {
     let {
       guild: t
-    } = e, [n, l] = s.useState(!1), E = s.useCallback(() => l(!0), [l]), h = s.useCallback(() => l(!0), [l]);
+    } = e, [n, i] = s.useState(!1), E = s.useCallback(() => i(!0), [i]), h = s.useCallback(() => i(!0), [i]);
     return (0, a.jsx)("div", {
-      className: i(f.actionButtonsContainer, {
+      className: l(f.actionButtonsContainer, {
         [f.forceButtonsShow]: n
       }),
       children: (0, a.jsx)(u.default, {
@@ -38,11 +38,11 @@ var a = n("37983"),
               children: e => {
                 let {
                   onClick: s,
-                  ...l
+                  ...i
                 } = e;
                 return (0, a.jsx)(u.Button, {
                   ...n,
-                  ...l,
+                  ...i,
                   onClick: e => {
                     e.stopPropagation(), null == s || s(), t(e)
                   },

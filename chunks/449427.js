@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("414456"),
-  l = n.n(s),
-  i = n("449918"),
+  i = n.n(s),
+  l = n("449918"),
   r = n("145131"),
   o = n("833923"),
   u = n("318042"),
@@ -23,13 +23,13 @@ var s = n("414456"),
       animate: E,
       gradientStopColor: h,
       getHistoricalTotalBytes: _
-    } = e, C = (0, i.useColorValue)(f).hex, I = null === (t = (0, i.useColorValue)(h)) || void 0 === t ? void 0 : t.hex;
+    } = e, C = (0, l.useColorValue)(f).hex, I = null === (t = (0, l.useColorValue)(h)) || void 0 === t ? void 0 : t.hex;
     return (0, a.jsx)(u.default, {
       getHistoricalTotalBytes: _,
-      children: (e, t, i) => {
+      children: (e, t, l) => {
         var u;
         return (0, a.jsx)("div", {
-          className: l(c.monitor, s),
+          className: i(c.monitor, s),
           children: (0, a.jsxs)(r.default, {
             align: r.default.Align.CENTER,
             children: [(0, a.jsxs)(r.default, {
@@ -55,7 +55,7 @@ var s = n("414456"),
                 updateInterval: t,
                 color: C,
                 gradientStopColor: I,
-                numUpdatesToShow: i,
+                numUpdatesToShow: l,
                 animate: E,
                 pixelWidth: 600,
                 pixelHeight: 48,

@@ -1,5 +1,5 @@
 "use strict";
-let a, s, l, i, r;
+let a, s, i, l, r;
 n.r(t), n.d(t, {
   InteractionModalState: function() {
     return u
@@ -25,19 +25,19 @@ class S extends f.default.Store {
 S.displayName = "InteractionModalStore";
 var m = new S(E.default, {
   LOGOUT: function() {
-    return a = null, s = null, l = null, i = null, r = null, !0
+    return a = null, s = null, i = null, l = null, r = null, !0
   },
   INTERACTION_MODAL_CREATE: function(e) {
     let {
       nonce: t
     } = e;
-    return t === r && (h.default.deleteMessage(i, l, !0), l = null, i = null, r = null), !1
+    return t === r && (h.default.deleteMessage(l, i, !0), i = null, l = null, r = null), !1
   },
   INTERACTION_IFRAME_MODAL_CREATE: function(e) {
     let {
       nonce: t
     } = e;
-    return t === r && (h.default.deleteMessage(i, l, !0), l = null, i = null, r = null), !1
+    return t === r && (h.default.deleteMessage(l, i, !0), i = null, l = null, r = null), !1
   },
   INTERACTION_QUEUE: function(e) {
     let {
@@ -47,7 +47,7 @@ var m = new S(E.default, {
     } = e;
     switch (o.interactionType) {
       case _.InteractionTypes.APPLICATION_COMMAND:
-        return l = t, i = o.channelId, r = n, !1;
+        return i = t, l = o.channelId, r = n, !1;
       case _.InteractionTypes.MODAL_SUBMIT:
         return c(null == a || 1 === s || 2 === s, "cannot submit multiple modals at once"), a = n, s = 0, setTimeout(() => {
           a === n && 0 === s && (0, C.setFailed)(n)

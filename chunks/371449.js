@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var a, s, l = n("37983");
+var a, s, i = n("37983");
 n("884691");
-var i = n("414456"),
-  r = n.n(i),
+var l = n("414456"),
+  r = n.n(l),
   o = n("394846"),
   u = n("77078"),
   d = n("940675");
@@ -18,21 +18,21 @@ function c(e) {
     tooltip: n,
     onClick: a,
     actionType: s = 2,
-    shouldHighlight: i
+    shouldHighlight: l
   } = e;
-  return (0, l.jsx)(u.Tooltip, {
+  return (0, i.jsx)(u.Tooltip, {
     text: n,
-    children: e => (0, l.jsx)(u.Clickable, {
+    children: e => (0, i.jsx)(u.Clickable, {
       ...e,
       "aria-label": n,
       onClick: a,
       className: r(d.actionButton, {
         [d.actionAccept]: 0 === s,
         [d.actionDeny]: 1 === s,
-        [d.highlight]: i,
+        [d.highlight]: l,
         [d.actionButtonMobile]: o.isMobile
       }),
-      children: (0, l.jsx)(t, {
+      children: (0, i.jsx)(t, {
         className: d.icon
       })
     })

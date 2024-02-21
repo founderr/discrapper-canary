@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("917351"),
   o = n("77078"),
   u = n("716241"),
@@ -21,7 +21,7 @@ var C = function(e) {
   let {
     guild: t,
     title: n,
-    message: l,
+    message: i,
     image: r,
     type: C,
     imageStyles: I,
@@ -33,7 +33,7 @@ var C = function(e) {
     onClick: A,
     cta: N,
     ctaColor: R,
-    centerText: v
+    centerText: O
   } = e;
   s.useEffect(() => {
     _(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -41,8 +41,8 @@ var C = function(e) {
       guild_id: t.id
     })
   }, [t.id, C]);
-  let O = null;
-  "function" == typeof N ? O = N() : null != N && (O = (0, a.jsx)(o.Button, {
+  let v = null;
+  "function" == typeof N ? v = N() : null != N && (v = (0, a.jsx)(o.Button, {
     className: h.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
@@ -60,10 +60,10 @@ var C = function(e) {
   "function" == typeof n ? L = n() : null != n && (L = (0, a.jsx)(o.Text, {
     variant: "text-md/medium",
     color: "header-primary",
-    className: i(h.title, {
+    className: l(h.title, {
       [h.noImageTitle]: null == r
     }, {
-      [h.center]: v
+      [h.center]: O
     }),
     children: n
   }));
@@ -97,13 +97,13 @@ var C = function(e) {
     }), (0, a.jsxs)("div", {
       className: h.message,
       children: [L, (0, a.jsx)(o.Text, {
-        className: i({
-          [h.center]: v
+        className: l({
+          [h.center]: O
         }),
         variant: "text-sm/normal",
         color: "text-muted",
-        children: l
-      }), O]
+        children: i
+      }), v]
     })]
   })
 }

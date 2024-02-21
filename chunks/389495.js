@@ -46,12 +46,12 @@ function C(e) {
 }
 async function p() {
   try {
-    for (; !s.isEmpty(f);) await m()
+    for (; !s.isEmpty(f);) await E()
   } finally {
     h = null
   }
 }
-async function m() {
+async function E() {
   let e = Array.from(f).slice(0, 25);
   try {
     let t = await i.default.get({

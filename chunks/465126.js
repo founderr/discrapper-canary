@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return v
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("290381"),
   o = n("77078"),
   u = n("272030"),
@@ -27,7 +27,7 @@ var a = n("37983"),
   A = n("68422"),
   N = n("578817"),
   R = n("855237");
-class v extends s.PureComponent {
+class O extends s.PureComponent {
   getDefaultSplashURL(e, t) {
     if (t) return R;
     switch (e) {
@@ -43,15 +43,15 @@ class v extends s.PureComponent {
       guild: t,
       className: n,
       theme: s,
-      onTagClick: l
+      onTagClick: i
     } = this.props, {
       loaded: u,
       hasBeenSeen: A,
       isVisible: N,
       submitting: R
     } = this.state, {
-      name: v,
-      description: O,
+      name: O,
+      description: v,
       presenceCount: L,
       memberCount: M,
       keywords: P
@@ -93,7 +93,7 @@ class v extends s.PureComponent {
         active: !A,
         threshold: .55,
         children: (0, a.jsxs)("div", {
-          className: i(n, {
+          className: l(n, {
             [g.loaded]: u,
             [g.loading]: !u
           }),
@@ -102,7 +102,7 @@ class v extends s.PureComponent {
             className: g.spinner
           }) : null, (0, a.jsxs)(o.Clickable, {
             onClick: this.handleClickView,
-            className: i(g.card, {
+            className: l(g.card, {
               [g.submitting]: R,
               [g.cardWithTags]: U
             }),
@@ -114,7 +114,7 @@ class v extends s.PureComponent {
                 children: (0, a.jsx)("img", {
                   src: x,
                   alt: "",
-                  className: i(g.splashImage, {
+                  className: l(g.splashImage, {
                     [g.splashImageHeight]: !D
                   }),
                   onLoad: () => this.setState({
@@ -158,16 +158,16 @@ class v extends s.PureComponent {
                 }), (0, a.jsx)(o.Heading, {
                   variant: "heading-md/semibold",
                   className: g.guildName,
-                  children: v
+                  children: O
                 })]
               }), (0, a.jsx)(o.Text, {
                 className: g.description,
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: O
-              }), U && null != P && null != l && (0, a.jsx)(f.DiscoveryTags, {
+                children: v
+              }), U && null != P && null != i && (0, a.jsx)(f.DiscoveryTags, {
                 tags: P,
-                onTagClick: e => l(e, t.id),
+                onTagClick: e => i(e, t.id),
                 guildId: t.id,
                 section: I.AnalyticsContexts.POPULAR
               }), (0, a.jsxs)("div", {
@@ -200,7 +200,7 @@ class v extends s.PureComponent {
           })]
         })
       }) : (0, a.jsx)("div", {
-        className: i(g.card, {
+        className: l(g.card, {
           [g.cardWithTags]: U
         })
       })
@@ -256,7 +256,7 @@ class v extends s.PureComponent {
     }
   }
 }
-v.Placeholder = e => (0, a.jsx)("div", {
-  className: i(e.className, g.cardPlaceholder)
+O.Placeholder = e => (0, a.jsx)("div", {
+  className: l(e.className, g.cardPlaceholder)
 });
-var O = v
+var v = O

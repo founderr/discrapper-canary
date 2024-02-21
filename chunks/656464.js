@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useShowKrunkerStrikeCoachmark: function() {
-    return l
+    return i
   }
 });
 var a = n("862205");
@@ -20,7 +20,7 @@ let s = (0, a.createExperiment)({
       }
     }]
   }),
-  l = () => {
+  i = () => {
     let e = s.useExperiment({
       location: "guild_sidebar"
     }, {

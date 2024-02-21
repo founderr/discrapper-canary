@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("702976"), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("446674"),
-  i = n("823411"),
+  i = n("446674"),
+  l = n("823411"),
   r = n("115718"),
   o = n("575365"),
   u = n("716241"),
@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("834052"),
   N = n("845579"),
   R = n("42203"),
-  v = n("546463"),
-  O = n("26989"),
+  O = n("546463"),
+  v = n("26989"),
   L = n("305961"),
   M = n("42887"),
   P = n("377253"),
@@ -56,15 +56,15 @@ class z extends s.PureComponent {
       isNSFWChannel: n,
       channelParentId: a,
       isTextInVoice: s,
-      canSendMessage: l,
-      hasPendingMemberAction: i
+      canSendMessage: i,
+      hasPendingMemberAction: l
     } = this.props;
     t && null != e && ((0, u.trackWithMetadata)(W.AnalyticEvents.CHANNEL_OPENED, {
       ...(0, u.getChannelOpenedMetadata)(e),
       channel_is_nsfw: n,
       parent_id: a,
-      can_send_message: l,
-      has_pending_member_action: i
+      can_send_message: i,
+      has_pending_member_action: l
     }), s && (0, u.trackWithMetadata)(W.AnalyticEvents.TEXT_IN_VOICE_OPENED, {
       channel_is_nsfw: n
     }))
@@ -73,13 +73,13 @@ class z extends s.PureComponent {
     var t, n, a;
     let {
       voiceChannelId: s,
-      voiceChannelGuildId: l,
+      voiceChannelGuildId: i,
       voiceChannelType: o,
       voiceChannelBitrate: I,
       videoEnabled: S,
       isScreenSharing: m,
       runningGame: g,
-      runningGamePid: O,
+      runningGamePid: v,
       selectedChannelId: M,
       selectedGuildId: D,
       channelParentId: x,
@@ -134,24 +134,24 @@ class z extends s.PureComponent {
         channel_id: s,
         channel_type: o,
         channel_bitrate: I,
-        guild_id: l,
+        guild_id: i,
         game_name: t,
         game_platform: this.props.gamePlatform,
         game_id: this.props.gameId,
         stage_instance_id: null == n ? void 0 : n.id,
         guild_scheduled_event_id: null == a ? void 0 : a.id,
-        ...(0, u.getCustomStatusMetadata)(l, s),
-        ...(0, u.getVoiceStateMetadata)(l, s, S)
+        ...(0, u.getCustomStatusMetadata)(i, s),
+        ...(0, u.getVoiceStateMetadata)(i, s, S)
       })
     }
     if (e.runningGame !== g && null != g && !g.isLauncher) {
-      let e = v.default.getGameByName(g.name),
+      let e = O.default.getGameByName(g.name),
         t = C.default.getOverrideForGame(g),
         n = L.default.getGuildIds(),
         a = N.ActivityRestrictedGuilds.getSetting(),
         s = n.filter(e => !a.includes(e)).slice(0, 200),
-        l = null;
-      l = null != t ? "custom_override" : null != e ? "verified_game" : "launcher";
+        i = null;
+      i = null != t ? "custom_override" : null != e ? "verified_game" : "launcher";
       let o = (0, C.getOverlayGameStatus)(g);
       if (setTimeout(() => {
           var t;
@@ -163,7 +163,7 @@ class z extends s.PureComponent {
             elevated: g.elevated,
             is_launcher: null !== (t = null == g ? void 0 : g.isLauncher) && void 0 !== t && t,
             game_platform: W.ActivityGamePlatforms.DESKTOP,
-            detection_method: l,
+            detection_method: i,
             distributor: g.distributor,
             is_overlay_enabled: F.default.enabled,
             is_overlay_game_enabled: o.enabled,
@@ -175,9 +175,9 @@ class z extends s.PureComponent {
             current_user_status: U.default.getStatus(),
             game_detection_enabled: (0, C.isDetectionEnabled)(g)
           })
-        }, 1e4), null != g.name && null != O && v.default.shouldReport(g.name)) {
+        }, 1e4), null != g.name && null != v && O.default.shouldReport(g.name)) {
         let e = g.name;
-        i.default.identifyGame(O, e).then(e => i.default.reportUnverifiedGame(e)).catch(e => new(0, _.default)("AutoAnalytics").error("Cannot identify game", e))
+        l.default.identifyGame(v, e).then(e => l.default.reportUnverifiedGame(e)).catch(e => new(0, _.default)("AutoAnalytics").error("Cannot identify game", e))
       }
     }
     if ((e.videoEnabled !== S || e.isScreenSharing !== m) && null != s) {
@@ -219,26 +219,26 @@ class z extends s.PureComponent {
         s = L.default.getGuild(null == n ? void 0 : n.getGuildId());
       if (null != t && null != n && null != s && s.publicUpdatesChannelId === t) {
         let e = P.default.getMessages(t),
-          l = e.toArray().reverse(),
-          i = l.find(e => {
+          i = e.toArray().reverse(),
+          l = i.find(e => {
             var t;
             return (0, H.hasFlag)(e.flags, W.MessageFlags.IS_CROSSPOST) && (null === (t = e.messageReference) || void 0 === t ? void 0 : t.guild_id) === "667560445975986187"
           });
         B.default.track(W.AnalyticEvents.ACK_COMMUNITY_MESSAGES, {
-          last_message_id: null == i ? void 0 : i.id,
-          last_message_reference_message_id: null == i ? void 0 : null === (a = i.messageReference) || void 0 === a ? void 0 : a.message_id,
+          last_message_id: null == l ? void 0 : l.id,
+          last_message_reference_message_id: null == l ? void 0 : null === (a = l.messageReference) || void 0 === a ? void 0 : a.message_id,
           messages_loaded: e.hasFetched,
           ...(0, u.collectChannelAnalyticsMetadata)(n),
           ...(0, u.collectGuildAnalyticsMetadata)(s.id)
         })
       }
-      let l = (0, c.collectThreadMetadata)(R.default.getChannel(M), !0);
+      let i = (0, c.collectThreadMetadata)(R.default.getChannel(M), !0);
       (0, u.trackWithMetadata)(W.AnalyticEvents.CHANNEL_OPENED, {
         channel_is_nsfw: z,
         parent_id: x,
         can_send_message: J,
         has_pending_member_action: ee,
-        ...l,
+        ...i,
         ...(0, u.getChannelOpenedMetadata)(M)
       }), X && (0, u.trackWithMetadata)(W.AnalyticEvents.TEXT_IN_VOICE_OPENED, {
         channel_is_nsfw: z
@@ -263,10 +263,10 @@ class z extends s.PureComponent {
 
 function q() {
   var e;
-  let [t, n] = (0, l.useStateFromStoresArray)([x.default], () => [x.default.getVoiceChannelId(), x.default.getChannelId()], []), s = (0, l.useStateFromStores)([R.default], () => R.default.getChannel(n), [n]), i = (0, l.useStateFromStores)([h.default], () => (null == s ? void 0 : s.id) != null && h.default.getChatOpen(s.id), [s]), r = null == s ? void 0 : s.nsfw, u = null !== (e = null == s ? void 0 : s.parent_id) && void 0 !== e ? e : void 0, d = (0, l.useStateFromStores)([R.default], () => R.default.getChannel(t), [t]), c = (0, l.useStateFromStores)([b.default], () => b.default.getGuildId(), []), f = (0, l.useStateFromStores)([L.default], () => L.default.getGuild(c), [c]), E = (0, l.useStateFromStores)([j.default], () => j.default.getCurrentUser(), []), _ = (0, l.useStateFromStores)([O.default], () => {
+  let [t, n] = (0, i.useStateFromStoresArray)([x.default], () => [x.default.getVoiceChannelId(), x.default.getChannelId()], []), s = (0, i.useStateFromStores)([R.default], () => R.default.getChannel(n), [n]), l = (0, i.useStateFromStores)([h.default], () => (null == s ? void 0 : s.id) != null && h.default.getChatOpen(s.id), [s]), r = null == s ? void 0 : s.nsfw, u = null !== (e = null == s ? void 0 : s.parent_id) && void 0 !== e ? e : void 0, d = (0, i.useStateFromStores)([R.default], () => R.default.getChannel(t), [t]), c = (0, i.useStateFromStores)([b.default], () => b.default.getGuildId(), []), f = (0, i.useStateFromStores)([L.default], () => L.default.getGuild(c), [c]), E = (0, i.useStateFromStores)([j.default], () => j.default.getCurrentUser(), []), _ = (0, i.useStateFromStores)([v.default], () => {
     var e, t;
-    return null != E && null != c && null !== (t = null === (e = O.default.getMember(c, E.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t
-  }, [E, c]), p = (0, l.useStateFromStores)([k.default], () => k.default.getState().section, []), T = (0, l.useStateFromStores)([w.default], () => w.default.getHomeLink(), []), A = (0, l.useStateFromStores)([I.default], () => I.default.isConnected(), []), [N, v] = (0, l.useStateFromStoresArray)([M.default], () => [M.default.isVideoEnabled(), M.default.isScreenSharing()], []), P = (0, l.useStateFromStores)([U.default], () => U.default.getPrimaryActivity(), []), y = (0, l.useStateFromStores)([C.default], () => C.default.getCurrentGameForAnalytics(), []), G = (0, S.default)(c), F = (0, l.useStateFromStores)([D.default], () => D.default.can(W.Permissions.SEND_MESSAGES, s)), B = (0, l.useStateFromStores)([g.default], () => g.default.getMessageRequestsCount(), []), H = (0, m.useHasPendingMemberAction)(null == f ? void 0 : f.id, null == s ? void 0 : s.id), V = {
+    return null != E && null != c && null !== (t = null === (e = v.default.getMember(c, E.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t
+  }, [E, c]), p = (0, i.useStateFromStores)([k.default], () => k.default.getState().section, []), T = (0, i.useStateFromStores)([w.default], () => w.default.getHomeLink(), []), A = (0, i.useStateFromStores)([I.default], () => I.default.isConnected(), []), [N, O] = (0, i.useStateFromStoresArray)([M.default], () => [M.default.isVideoEnabled(), M.default.isScreenSharing()], []), P = (0, i.useStateFromStores)([U.default], () => U.default.getPrimaryActivity(), []), y = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentGameForAnalytics(), []), G = (0, S.default)(c), F = (0, i.useStateFromStores)([D.default], () => D.default.can(W.Permissions.SEND_MESSAGES, s)), B = (0, i.useStateFromStores)([g.default], () => g.default.getMessageRequestsCount(), []), H = (0, m.useHasPendingMemberAction)(null == f ? void 0 : f.id, null == s ? void 0 : s.id), V = {
     selectedChannelId: n,
     channelParentId: u,
     isNSFWChannel: r,
@@ -275,7 +275,7 @@ function q() {
     homeLink: T,
     connected: A,
     videoEnabled: N,
-    isScreenSharing: v,
+    isScreenSharing: O,
     voiceChannelId: null == d ? void 0 : d.id,
     voiceChannelGuildId: null == d ? void 0 : d.getGuildId(),
     voiceChannelType: null == d ? void 0 : d.type,
@@ -289,7 +289,7 @@ function q() {
     hasPreviewEnabled: null == f ? void 0 : f.features.has(W.GuildFeatures.PREVIEW_ENABLED),
     isMemberPending: _,
     postableChannelCount: G,
-    isTextInVoice: i,
+    isTextInVoice: l,
     canSendMessage: F,
     numMessageRequests: B,
     hasPendingMemberAction: H

@@ -17,8 +17,8 @@ var a = n("884691"),
   h = n("793237"),
   C = n("162805"),
   p = n("299039"),
-  m = n("556118"),
-  E = n("777484"),
+  E = n("556118"),
+  m = n("777484"),
   g = n("894488"),
   S = n("49111");
 
@@ -44,12 +44,12 @@ function _(e) {
     r = null !== (n = l[i + (Math.abs(s) > 0 ? s : 1)]) && void 0 !== n ? n : l[i - 1];
   return null != r ? r : null
 }
-let A = {
+let T = {
   scrollTop: 0,
   scrollHeight: 0,
   offsetHeight: 0
 };
-class T {
+class A {
   isReady() {
     return this.props.messages.ready
   }
@@ -85,7 +85,7 @@ class T {
           id: n
         }
       } = this.props;
-    return null == t ? null : (0, m.getElementFromMessage)(t, n, e)
+    return null == t ? null : (0, E.getElementFromMessage)(t, n, e)
   }
   isScrolledToBottom() {
     let {
@@ -166,7 +166,7 @@ class T {
     if (!(0, i.isElement)(s) || null == l) return null;
     let {
       offsetHeight: r
-    } = s, o = (0, E.default)(s, l), u = o - t;
+    } = s, o = (0, m.default)(s, l), u = o - t;
     return null != n && (u = Math.max(-r, Math.min(n, u))), {
       id: e,
       offsetFromTop: u,
@@ -289,7 +289,7 @@ class T {
   }
   getScrollerState() {
     var e, t;
-    return null !== (t = null === (e = this.ref.current) || void 0 === e ? void 0 : e.getScrollerState()) && void 0 !== t ? t : A
+    return null !== (t = null === (e = this.ref.current) || void 0 === e ? void 0 : e.getScrollerState()) && void 0 !== t ? t : T
   }
   isHeightChange(e, t) {
     return e !== this.offsetHeightCache || t !== this.scrollHeightCache
@@ -370,7 +370,7 @@ class T {
       s = null === (n = this.ref.current) || void 0 === n ? void 0 : n.getScrollerNode();
     if (null == s) return 0;
     let l = this.getScrollerState(),
-      i = (0, E.default)(e, s);
+      i = (0, m.default)(e, s);
     return "middle" === t ? Math.min(i - .5 * l.offsetHeight + .5 * e.offsetHeight + -8, i - a) : i - a
   }
   restoreScroll() {
@@ -579,7 +579,7 @@ function M(e) {
     handleScrollFromBottom: c
   } = e, {
     windowId: f
-  } = a.useContext(d.default), [h] = a.useState(() => new T({
+  } = a.useContext(d.default), [h] = a.useState(() => new A({
     messages: t,
     channel: n,
     compact: s,

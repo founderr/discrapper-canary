@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return l
   }
 });
 var i = n("37983");
 n("884691");
 var r = n("75196");
 
-function u(e) {
+function l(e) {
   let {
     width: t = 104,
     height: n = 80,
-    ...u
+    ...l
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, r.default)(u),
+    ...(0, r.default)(l),
     width: t,
     height: n,
     viewBox: "0 0 104 80",

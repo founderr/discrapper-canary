@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("759843"),
-  l = n("77078"),
-  i = n("79112"),
+  i = n("77078"),
+  l = n("79112"),
   r = n("945330"),
   o = n("243632"),
   u = n("49111"),
@@ -42,7 +42,7 @@ function h(e) {
       src: C,
       alt: "",
       className: I
-    }), (0, a.jsx)(l.Clickable, {
+    }), (0, a.jsx)(i.Clickable, {
       className: f.buttonClose,
       "aria-label": c.default.Messages.CLOSE,
       onClick: S,
@@ -51,28 +51,28 @@ function h(e) {
         height: 16,
         className: f.closeIcon
       })
-    }), (0, a.jsx)(l.Heading, {
+    }), (0, a.jsx)(i.Heading, {
       className: f.title,
       variant: "heading-md/extrabold",
       children: c.default.Messages.DROPS_QUEST_COMPLETION_TOOLTIP_HEADER
-    }), (0, a.jsx)(l.Text, {
+    }), (0, a.jsx)(i.Text, {
       variant: "text-sm/medium",
       className: f.subTitle,
       children: _
-    }), (0, a.jsx)(l.Button, {
-      look: l.Button.Looks.INVERTED,
+    }), (0, a.jsx)(i.Button, {
+      look: i.Button.Looks.INVERTED,
       fullWidth: !0,
       onClick: () => {
-        i.default.open(u.UserSettingsSections.INVENTORY), t(d.ContentDismissActionType.PRIMARY)
+        l.default.open(u.UserSettingsSections.INVENTORY), t(d.ContentDismissActionType.PRIMARY)
       },
       children: c.default.Messages.REDEEM
-    }), (0, a.jsx)(l.Button, {
+    }), (0, a.jsx)(i.Button, {
       className: f.linkButtonContainer,
       innerClassName: f.linkButton,
       onClick: S,
-      look: l.Button.Looks.LINK,
+      look: i.Button.Looks.LINK,
       fullWidth: !0,
-      color: l.Button.Colors.WHITE,
+      color: i.Button.Colors.WHITE,
       children: c.default.Messages.NOT_NOW
     }), (0, a.jsx)("div", {
       className: f.pointer

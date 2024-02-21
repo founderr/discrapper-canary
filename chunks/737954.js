@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("249654"),
   s = n("913144"),
-  l = n("578287"),
-  i = n("716724"),
+  i = n("578287"),
+  l = n("716724"),
   r = n("613652"),
   o = n("492249"),
   u = n("49111"),
@@ -20,7 +20,7 @@ var a = n("249654"),
         let {
           socket: t
         } = e;
-        return (0, l.validatePostMessageTransport)(t.transport), Promise.resolve({
+        return (0, i.validatePostMessageTransport)(t.transport), Promise.resolve({
           instance_id: a.default.fromTimestamp(Date.now())
         })
       }
@@ -29,7 +29,7 @@ var a = n("249654"),
       scope: {
         [o.RPC_SCOPE_CONFIG.ANY]: [o.RPC_AUTHENTICATED_SCOPE]
       },
-      validation: e => (0, i.default)(e).required().keys({
+      validation: e => (0, l.default)(e).required().keys({
         instance_id: e.string().required().allow(null)
       }),
       handler(e) {
@@ -39,7 +39,7 @@ var a = n("249654"),
             instance_id: n
           }
         } = e;
-        (0, l.validatePostMessageTransport)(t.transport);
+        (0, i.validatePostMessageTransport)(t.transport);
         let a = (0, r.default)();
         return null != t.application.id && (null == a ? void 0 : a.id) != null && s.default.dispatch({
           type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
@@ -56,7 +56,7 @@ var a = n("249654"),
         let {
           socket: t
         } = e;
-        (0, l.validatePostMessageTransport)(t.transport);
+        (0, i.validatePostMessageTransport)(t.transport);
         let n = (0, r.default)();
         return null != t.application.id && (null == n ? void 0 : n.id) != null && s.default.dispatch({
           type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",

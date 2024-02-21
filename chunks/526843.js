@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("759843"),
-  l = n("65597"),
-  i = n("428958"),
+  i = n("65597"),
+  l = n("428958"),
   r = n("592407"),
   o = n("5667"),
   u = n("305961"),
@@ -22,12 +22,12 @@ function _(e) {
   let {
     guildId: t,
     markAsDismissed: n
-  } = e, _ = (0, l.default)([u.default, d.default], () => {
+  } = e, _ = (0, i.default)([u.default, d.default], () => {
     let e = d.default.getCurrentUser(),
       n = u.default.getGuild(t);
     return (null == n ? void 0 : n.isOwner(e)) === !0
   });
-  return (0, i.default)({
+  return (0, l.default)({
     type: s.ImpressionTypes.POPOUT,
     name: s.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
     properties: {

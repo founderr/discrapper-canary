@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
   }
 }), n("70102");
 var s = n("917351"),
-  l = n.n(s),
-  i = n("446674"),
+  i = n.n(s),
+  l = n("446674"),
   r = n("913144"),
   o = n("997722"),
   u = n("422791"),
@@ -18,7 +18,7 @@ var s = n("917351"),
 let h = {};
 
 function _() {
-  l.forEach(h, (e, t) => {
+  i.forEach(h, (e, t) => {
     e.destroy(), delete h[t]
   })
 }
@@ -39,9 +39,9 @@ function I(e) {
 function S() {
   return !0
 }
-class m extends i.default.Store {
+class m extends l.default.Store {
   forEach(e) {
-    l.each(h, e)
+    i.each(h, e)
   }
   getState(e) {
     return C(e, e => e.state, E.RTCConnectionStates.DISCONNECTED)
@@ -92,7 +92,7 @@ var p = new m(r.default, f.default.isSupported() ? {
   RTC_CONNECTION_PING: S,
   RTC_CONNECTION_LOSS_RATE: S,
   RTC_CONNECTION_UPDATE_ID: function(e) {
-    return l.some(h, t => t === e.connection)
+    return i.some(h, t => t === e.connection)
   },
   LOBBY_VOICE_STATE_UPDATE: function(e) {
     if (d.default.getId() !== e.userId || e.sessionId !== a) return !1;
@@ -102,14 +102,14 @@ var p = new m(r.default, f.default.isSupported() ? {
       let n = c.default.getLobby(e);
       if (null == n) throw Error("Creating RTCConnection without lobby.");
       let s = n.application_id,
-        l = new o.default({
+        i = new o.default({
           userId: d.default.getId(),
           sessionId: a,
           guildId: e,
           channelId: t,
           context: s
         });
-      return l.on(u.RTCConnectionEvent.State, (t, n, a) => {
+      return i.on(u.RTCConnectionEvent.State, (t, n, a) => {
         r.default.dispatch({
           type: "RTC_CONNECTION_STATE",
           state: t,
@@ -117,20 +117,20 @@ var p = new m(r.default, f.default.isSupported() ? {
           ...a,
           lobbyId: e
         })
-      }), l.on(u.RTCConnectionEvent.Ping, (t, n) => {
+      }), i.on(u.RTCConnectionEvent.Ping, (t, n) => {
         r.default.dispatch({
           type: "RTC_CONNECTION_PING",
           pings: t,
           quality: n,
           lobbyId: e
         })
-      }), l.on(u.RTCConnectionEvent.OutboundLossRate, t => {
+      }), i.on(u.RTCConnectionEvent.OutboundLossRate, t => {
         r.default.dispatch({
           type: "RTC_CONNECTION_LOSS_RATE",
           lossRate: t,
           lobbyId: e
         })
-      }), l
+      }), i
     }(e.lobbyId, e.channelId), h[e.lobbyId] = t)
   },
   LOBBY_VOICE_SERVER_UPDATE: function(e) {

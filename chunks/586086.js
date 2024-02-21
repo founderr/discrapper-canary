@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("917351"),
-  i = n.n(l),
+  i = n("917351"),
+  l = n.n(i),
   r = n("522632"),
   o = n("446674"),
   u = n("77078"),
@@ -37,9 +37,9 @@ let T = 12,
       categoryId: t,
       categoryName: n,
       onClick: s
-    } = e, l = t === S.DISCOVERY_ALL_CATEGORIES_ID, i = l ? m.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : m.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
+    } = e, i = t === S.DISCOVERY_ALL_CATEGORIES_ID, l = i ? m.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : m.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
       categoryName: n
-    }), r = l ? m.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : m.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
+    }), r = i ? m.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : m.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
       onClick: s
     });
     return (0, a.jsxs)("div", {
@@ -49,7 +49,7 @@ let T = 12,
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
         className: p.emptyHeader,
-        children: i
+        children: l
       }), (0, a.jsx)(u.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
@@ -72,12 +72,12 @@ var R = e => {
   let {
     loadId: t,
     searchResults: n,
-    mostRecentQuery: l,
+    mostRecentQuery: i,
     defaultLanguage: r,
     availableLanguages: c,
     isFetchingSearch: R,
-    scroller: v,
-    loadingGuildId: O,
+    scroller: O,
+    loadingGuildId: v,
     theme: L,
     currentCategoryId: M,
     currentCategoryName: P,
@@ -85,14 +85,14 @@ var R = e => {
     onGuildCardSeen: y,
     placeholder: x,
     onTagClick: b
-  } = e, U = i.uniqueId("GuildDiscovery"), {
+  } = e, U = l.uniqueId("GuildDiscovery"), {
     guilds: G,
     loading: j,
     total: w
   } = n, [k, F] = s.useState(!1), {
     tag: B
   } = g(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
-    d.doAlgoliaSearch(l, {
+    d.doAlgoliaSearch(i, {
       categoryId: n ? S.DISCOVERY_ALL_CATEGORIES_ID : M,
       preferredLocale: r.code,
       offset: e,
@@ -102,7 +102,7 @@ var R = e => {
       }
     }), F(!1)
   }, K = () => {
-    null == v || v.scrollTo({
+    null == O || O.scrollTo({
       to: 0
     })
   };
@@ -112,13 +112,13 @@ var R = e => {
       tag: t
     } = g(), n = null != e ? Math.floor(parseInt(e, 10) / T) + 1 : 1;
     V(!!t), 1 === n && F(!0)
-  }, [l]);
+  }, [i]);
   let z = M === S.DISCOVERY_ALL_CATEGORIES_ID ? m.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
-    query: l
+    query: i
   }) : m.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
-    query: l,
+    query: i,
     category: P
   });
   return (0, a.jsxs)("div", {
@@ -142,7 +142,7 @@ var R = e => {
     }), (0, a.jsx)(C.default, {
       loadId: t,
       searchResults: n,
-      mostRecentQuery: l,
+      mostRecentQuery: i,
       isFetchingSearch: R,
       defaultLanguage: r,
       placeholder: x,
@@ -177,7 +177,7 @@ var R = e => {
               loading: j,
               loadingPlaceholderCount: T,
               onViewGuild: D,
-              loadingGuildId: O,
+              loadingGuildId: v,
               theme: L,
               analyticsContext: h.AnalyticsContexts.SEARCH,
               onGuildCardSeen: y,

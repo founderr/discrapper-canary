@@ -1,41 +1,41 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return l
+    return o
   }
 });
-var n = s("37983");
+var T = s("37983");
 s("884691");
-var a = s("414456"),
-  o = s.n(a),
-  r = s("77078"),
-  i = s("968246");
+var l = s("414456"),
+  a = s.n(l),
+  n = s("77078"),
+  r = s("968246");
 
-function l(e) {
+function o(e) {
   let {
     tips: t,
     className: s,
-    headerText: a
+    headerText: l
   } = e;
-  return (0, n.jsxs)("div", {
-    className: o(i.tipsSection, s),
-    children: [(0, n.jsx)("div", {
-      className: i.tipsHeader,
-      children: (0, n.jsx)(r.Heading, {
+  return (0, T.jsxs)("div", {
+    className: a(r.tipsSection, s),
+    children: [(0, T.jsx)("div", {
+      className: r.tipsHeader,
+      children: (0, T.jsx)(n.Heading, {
         variant: "heading-lg/bold",
-        className: i.headerText,
-        children: a
+        className: r.headerText,
+        children: l
       })
-    }), (0, n.jsx)("ul", {
-      className: i.tipsList,
-      children: t.map((e, t) => (0, n.jsxs)("li", {
-        className: i.tipRow,
-        children: [(0, n.jsx)(r.Heading, {
+    }), (0, T.jsx)("ul", {
+      className: r.tipsList,
+      children: t.map((e, t) => (0, T.jsxs)("li", {
+        className: r.tipRow,
+        children: [(0, T.jsx)(n.Heading, {
           variant: "heading-md/semibold",
           color: "text-brand",
-          className: i.tipNumber,
+          className: r.tipNumber,
           children: t + 1
-        }), (0, n.jsx)(r.Text, {
+        }), (0, T.jsx)(n.Text, {
           variant: "text-sm/medium",
           children: e
         })]

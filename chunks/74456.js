@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useIsRejectAllMessageRequestsEnabled: function() {
-    return l
+    return i
   }
 });
 var a = n("862205");
@@ -21,7 +21,7 @@ let s = (0, a.createExperiment)({
   }]
 });
 
-function l() {
+function i() {
   return s.useExperiment({
     location: "c10bec_1"
   }, {

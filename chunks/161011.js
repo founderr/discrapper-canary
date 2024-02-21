@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  l = n("77078"),
-  i = n("245489"),
+  i = n("77078"),
+  l = n("245489"),
   r = n("229929"),
   o = n("62899"),
   u = n("709410"),
@@ -18,11 +18,11 @@ var a = n("37983"),
 function E() {
   return (0, a.jsxs)("header", {
     className: f.header,
-    children: [(0, a.jsx)(l.FormTitle, {
+    children: [(0, a.jsx)(i.FormTitle, {
       tag: "h2",
       className: f.title,
       children: c.default.Messages.ADD_FRIEND
-    }), (0, a.jsx)(i.default, {})]
+    }), (0, a.jsx)(l.default, {})]
   })
 }
 var h = function() {

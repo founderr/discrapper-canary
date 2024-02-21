@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("394846"),
   o = n("77078"),
   u = n("892313"),
@@ -32,7 +32,7 @@ class S extends s.PureComponent {
         onVerify: s,
         theme: n
       }, t) : (0, a.jsx)(o.Button, {
-        className: i(C.marginBottom20),
+        className: l(C.marginBottom20),
         onClick: () => this.handleClick(e),
         children: u.default.getButtonTitle(e)
       }, e))
@@ -44,7 +44,7 @@ class S extends s.PureComponent {
       align: c.default.Align.CENTER,
       direction: c.default.Direction.VERTICAL,
       children: [(0, a.jsxs)(c.default, {
-        className: i(_.container, {
+        className: l(_.container, {
           [_.isMobile]: r.isMobile
         }),
         direction: c.default.Direction.VERTICAL,
@@ -53,10 +53,10 @@ class S extends s.PureComponent {
         children: [(0, a.jsx)("div", {
           className: _.image
         }), (0, a.jsx)("div", {
-          className: i(_.title, C.marginTop20),
+          className: l(_.title, C.marginTop20),
           children: h.default.Messages.VERIFICATION_TITLE
         }), (0, a.jsx)("div", {
-          className: i(_.body, C.marginTop4, C.marginBottom20),
+          className: l(_.body, C.marginTop4, C.marginBottom20),
           children: h.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
             helpCenterURL: I
           })
@@ -67,21 +67,21 @@ class S extends s.PureComponent {
           children: this.renderFields()
         })]
       }), (0, a.jsx)("div", {
-        className: i(_.footer, C.marginTop20),
+        className: l(_.footer, C.marginTop20),
         children: h.default.Messages.VERIFICATION_FOOTER
       }), (0, a.jsxs)(c.default, {
-        className: i(C.marginTop4, C.marginBottom20),
+        className: l(C.marginTop4, C.marginBottom20),
         grow: 0,
         children: [(0, a.jsx)("div", {
-          className: i(_.footer, _.footerAction),
+          className: l(_.footer, _.footerAction),
           children: h.default.Messages.VERIFICATION_FOOTER_SUPPORT.format({
             supportURL: d.default.getSubmitRequestURL()
           })
         }), (0, a.jsx)("div", {
-          className: i(_.footer, _.footerBullet),
+          className: l(_.footer, _.footerBullet),
           children: "•"
         }), (0, a.jsx)("div", {
-          className: i(_.footer, _.footerAction),
+          className: l(_.footer, _.footerAction),
           children: h.default.Messages.VERIFICATION_FOOTER_LOGOUT.format({
             logoutOnClick: this.props.onLogout
           })

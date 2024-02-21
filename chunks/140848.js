@@ -4,10 +4,10 @@ l.r(t), l.d(t, {
     return o
   }
 });
-var a = l("37983");
+var n = l("37983");
 l("884691");
-var n = l("414456"),
-  s = l.n(n),
+var a = l("414456"),
+  s = l.n(a),
   r = l("77078"),
   i = l("755031");
 let u = e => {
@@ -15,18 +15,18 @@ let u = e => {
     data: t,
     disabled: l
   } = e, {
-    content: n,
+    content: a,
     className: u,
     onClick: o,
     disabled: d
   } = t;
-  return (0, a.jsx)(r.FocusRing, {
-    children: (0, a.jsx)("button", {
+  return (0, n.jsx)(r.FocusRing, {
+    children: (0, n.jsx)("button", {
       type: "button",
       className: s(i.item, u),
       onClick: o,
       disabled: l || d,
-      children: n
+      children: a
     })
   })
 };
@@ -34,12 +34,12 @@ var o = e => {
   let {
     buttons: t,
     disabled: l,
-    className: n
+    className: a
   } = e;
-  return (0, a.jsx)("div", {
+  return (0, n.jsx)("div", {
     role: "group",
-    className: s(i.group, n),
-    children: t.map((e, t) => (0, a.jsx)(u, {
+    className: s(i.group, a),
+    children: t.map((e, t) => (0, n.jsx)(u, {
       data: e,
       disabled: l
     }, t))

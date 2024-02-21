@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("77078"),
-  i = n("452804"),
+  i = n("77078"),
+  l = n("452804"),
   r = n("442939"),
   o = n("145131"),
   u = n("599110"),
@@ -33,54 +33,54 @@ function _(e) {
   }, []);
   let p = () => {
     let e = "temporary";
-    C && (e = "permanent", i.default.updatedUnsyncedSettings({
+    C && (e = "permanent", l.default.updatedUnsyncedSettings({
       disableActivityHardwareAccelerationPrompt: !0
     })), u.default.track(c.AnalyticEvents.MODAL_DISMISSED, {
       type: h,
       dismiss_type: e
     }), _.onClose()
   };
-  return (0, a.jsxs)(l.ModalRoot, {
+  return (0, a.jsxs)(i.ModalRoot, {
     className: E.root,
     "aria-label": f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE,
     ..._,
-    children: [(0, a.jsxs)(l.ModalHeader, {
+    children: [(0, a.jsxs)(i.ModalHeader, {
       separator: !1,
-      children: [(0, a.jsx)(l.Text, {
+      children: [(0, a.jsx)(i.Text, {
         className: E.header,
         variant: "text-lg/normal",
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE
-      }), (0, a.jsx)(l.ModalCloseButton, {
+      }), (0, a.jsx)(i.ModalCloseButton, {
         onClick: p,
         className: E.closeButton
       })]
-    }), (0, a.jsx)(l.ModalContent, {
+    }), (0, a.jsx)(i.ModalContent, {
       className: E.content,
-      children: (0, a.jsx)(l.Text, {
+      children: (0, a.jsx)(i.Text, {
         variant: "text-md/normal",
         className: E.ratingBody,
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_BODY.format({
           applicationName: m
         })
       })
-    }), (0, a.jsxs)(l.ModalFooter, {
+    }), (0, a.jsxs)(i.ModalFooter, {
       className: E.footer,
       direction: o.default.Direction.HORIZONTAL,
-      children: [(0, a.jsx)(l.Checkbox, {
-        type: l.Checkbox.Types.INVERTED,
+      children: [(0, a.jsx)(i.Checkbox, {
+        type: i.Checkbox.Types.INVERTED,
         size: 18,
         value: C,
         onChange: () => I(!C),
-        children: (0, a.jsx)(l.Text, {
+        children: (0, a.jsx)(i.Text, {
           variant: "text-sm/normal",
           children: f.default.Messages.DONT_SHOW_AGAIN
         })
-      }), (0, a.jsx)(l.Button, {
-        color: l.Button.Colors.PRIMARY,
+      }), (0, a.jsx)(i.Button, {
+        color: i.Button.Colors.PRIMARY,
         onClick: p,
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_NO_THANKS
-      }), (0, a.jsx)(l.Button, {
-        color: l.Button.Colors.BRAND,
+      }), (0, a.jsx)(i.Button, {
+        color: i.Button.Colors.BRAND,
         onClick: () => {
           u.default.track(c.AnalyticEvents.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, {
             application_id: n

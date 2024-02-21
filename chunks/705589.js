@@ -30,8 +30,8 @@ let N = s.forwardRef(function(e, t) {
   let {
     className: N,
     expansionFactor: R,
-    isExpanded: v,
-    isExpansionAnimationComplete: O,
+    isExpanded: O,
+    isExpansionAnimationComplete: v,
     onCtxMenuOpen: L,
     onCtxMenuClose: M,
     onCtxMenuSelect: P,
@@ -43,7 +43,7 @@ let N = s.forwardRef(function(e, t) {
     (0, E.enrollInQuest)(D.id)
   }, [D]), w = (0, T.useHandleClaimQuestsReward)(D), k = (null === (n = D.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (i = D.userStatus) || void 0 === i ? void 0 : i.completedAt) != null;
   return (0, a.jsx)(r.animated.div, {
-    "aria-hidden": !v && O,
+    "aria-hidden": !O && v,
     className: l(N, A.contentExpanded),
     style: {
       opacity: R.to({

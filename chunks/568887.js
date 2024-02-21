@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
 var a = n("922932"),
   s = n("128259"),
-  l = n("773336"),
-  i = n("861309"),
+  i = n("773336"),
+  l = n("861309"),
   r = n("578287"),
   o = n("716724"),
   u = n("492249"),
@@ -30,11 +30,11 @@ var a = n("922932"),
         (0, r.validatePostMessageTransport)(t.transport);
         try {
           let e = new URL(n);
-          l.isPlatformEmbedded && a.default.focus(null, !0), (0, s.handleClick)({
+          i.isPlatformEmbedded && a.default.focus(null, !0), (0, s.handleClick)({
             href: e.toString()
           })
         } catch (e) {
-          throw new i.default({
+          throw new l.default({
             errorCode: d.RPCErrors.INVALID_COMMAND
           }, "Invalid URL: ".concat(n))
         }

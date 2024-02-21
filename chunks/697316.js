@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
 var a = n("913144"),
   s = n("862853"),
-  l = {
+  i = {
     init() {
       a.default.subscribe("CONNECTION_OPEN", () => {
         (0, s.reset)()

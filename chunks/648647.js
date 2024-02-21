@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var l = n("37983");
@@ -10,10 +10,10 @@ var a = n("77078"),
   s = n("195812"),
   i = n("966270"),
   r = n("782340");
-let o = "DOWNLOAD_APPS";
+let u = "DOWNLOAD_APPS";
 
-function u() {
-  let e = (0, a.useModalsStore)(e => (0, a.hasModalOpenSelector)(e, o));
+function o() {
+  let e = (0, a.useModalsStore)(e => (0, a.hasModalOpenSelector)(e, u));
   return (0, l.jsx)(i.default, {
     id: "app-download-button",
     onClick: () => {
@@ -26,7 +26,7 @@ function u() {
           ...t
         })
       }, {
-        modalKey: o
+        modalKey: u
       })
     },
     selected: e,

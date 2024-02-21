@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("446674"),
   o = n("77078"),
   u = n("79112"),
@@ -27,9 +27,9 @@ function T(e) {
   var t;
   let {
     quest: n
-  } = e, l = (0, r.useStateFromStores)([d.default], () => d.default.locale), i = s.useMemo(() => new Date(n.config.expiresAt).toLocaleDateString(l, {
+  } = e, i = (0, r.useStateFromStores)([d.default], () => d.default.locale), l = s.useMemo(() => new Date(n.config.expiresAt).toLocaleDateString(i, {
     dateStyle: "short"
-  }), [n.config.expiresAt, l]), u = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+  }), [n.config.expiresAt, i]), u = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, a.jsxs)("div", {
     className: p.heading,
     children: [(0, a.jsx)("img", {
@@ -48,9 +48,9 @@ function T(e) {
         variant: "text-xs/normal",
         color: "header-secondary",
         children: u ? m.default.Messages.QUESTS_CLAIM_BY.format({
-          expirationDate: i
+          expirationDate: l
         }) : m.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
-          expirationDate: i
+          expirationDate: l
         })
       })]
     })]
@@ -59,25 +59,25 @@ function T(e) {
 var g = function(e) {
   var t, n;
   let {
-    onUnmount: l,
+    onUnmount: i,
     quest: d
-  } = e, h = (0, r.useStateFromStores)([E.default], () => E.default.isEnrolling(d.id), [d]), g = s.useRef(l), A = s.useCallback(e => {
+  } = e, h = (0, r.useStateFromStores)([E.default], () => E.default.isEnrolling(d.id), [d]), g = s.useRef(i), A = s.useCallback(e => {
     e.stopPropagation()
   }, []), N = s.useCallback(() => {}, []), R = s.useCallback(() => {
     (0, f.enrollInQuest)(d.id)
-  }, [d]), v = s.useCallback(() => {
+  }, [d]), O = s.useCallback(() => {
     u.default.open(S.UserSettingsSections.INVENTORY)
-  }, []), O = (0, C.useHandleClaimQuestsReward)(d);
+  }, []), v = (0, C.useHandleClaimQuestsReward)(d);
   s.useEffect(() => {
-    g.current = l
-  }, [l]), s.useEffect(() => () => {
+    g.current = i
+  }, [i]), s.useEffect(() => () => {
     var e;
     null === (e = g.current) || void 0 === e || e.call(g)
   }, []);
   let L = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
     M = (null === (n = d.userStatus) || void 0 === n ? void 0 : n.completedAt) != null;
   return (0, a.jsxs)("div", {
-    className: i(p.wrapper, {
+    className: l(p.wrapper, {
       [p.wrapperQuestAccepted]: L
     }),
     onClick: A,
@@ -119,7 +119,7 @@ var g = function(e) {
           color: o.Button.Colors.PRIMARY,
           fullWidth: !0,
           size: o.Button.Sizes.SMALL,
-          onClick: v,
+          onClick: O,
           children: m.default.Messages.QUESTS_LEARN_MORE_V2
         }), (0, a.jsx)(o.Button, {
           className: p.cta,
@@ -134,14 +134,14 @@ var g = function(e) {
         className: p.cta,
         color: o.Button.Colors.BRAND,
         fullWidth: !0,
-        onClick: v,
+        onClick: O,
         size: o.Button.Sizes.SMALL,
         children: m.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
       }), M && (0, a.jsx)(o.Button, {
         className: p.cta,
         color: o.Button.Colors.BRAND,
         fullWidth: !0,
-        onClick: O,
+        onClick: v,
         size: o.Button.Sizes.SMALL,
         children: m.default.Messages.QUESTS_CLAIM_YOUR_REWARD
       })]

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("446674"),
-  l = n("151426"),
-  i = n("77078"),
+  i = n("151426"),
+  l = n("77078"),
   r = n("901582"),
   o = n("812204"),
   u = n("685665"),
@@ -24,16 +24,16 @@ var s = n("446674"),
 function S() {
   let {
     AnalyticsLocationProvider: e
-  } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([f.default], () => f.default.hasConsented(_.Consents.PERSONALIZATION)), n = t ? [] : [l.DismissibleContent.NOW_PLAYING_CONSENT_CARD], S = (0, E.useUID)();
+  } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([f.default], () => f.default.hasConsented(_.Consents.PERSONALIZATION)), n = t ? [] : [i.DismissibleContent.NOW_PLAYING_CONSENT_CARD], S = (0, E.useUID)();
   return (0, a.jsx)(e, {
     children: (0, a.jsx)(r.default, {
       section: _.AnalyticsSections.ACTIVE_NOW_COLUMN,
       children: (0, a.jsx)("aside", {
         className: I.container,
         "aria-labelledby": S,
-        children: (0, a.jsxs)(i.Scroller, {
+        children: (0, a.jsxs)(l.Scroller, {
           className: I.scroller,
-          children: [(0, a.jsx)(i.Heading, {
+          children: [(0, a.jsx)(l.Heading, {
             variant: "heading-lg/semibold",
             className: I.header,
             id: S,
@@ -45,7 +45,7 @@ function S() {
                 visibleContent: t,
                 markAsDismissed: n
               } = e;
-              if (t === l.DismissibleContent.NOW_PLAYING_CONSENT_CARD) return (0, a.jsx)(c.default, {
+              if (t === i.DismissibleContent.NOW_PLAYING_CONSENT_CARD) return (0, a.jsx)(c.default, {
                 className: I.consentCard,
                 markAsDismissed: n
               })

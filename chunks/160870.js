@@ -6,12 +6,12 @@ n.r(t), n.d(t, {
 });
 var a = n("446674"),
   s = n("271938"),
-  l = n("18494"),
-  i = n("325861");
+  i = n("18494"),
+  l = n("325861");
 
 function r(e) {
-  return (0, a.useStateFromStores)([s.default, l.default, i.default], () => {
+  return (0, a.useStateFromStores)([s.default, i.default, l.default], () => {
     let t = s.default.getId();
-    return l.default.getVoiceChannelId() === e ? i.default.getPermissionsForUser(t, e) : null
+    return i.default.getVoiceChannelId() === e ? l.default.getPermissionsForUser(t, e) : null
   }, [e])
 }

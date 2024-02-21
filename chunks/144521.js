@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  l = n("736964"),
-  i = n("390790"),
+  i = n("736964"),
+  l = n("390790"),
   r = n("401642"),
   o = n("36694"),
   u = n("945330"),
@@ -26,7 +26,7 @@ function I(e) {
     status: I,
     isFocused: S
   } = e, m = s.useContext(d.AnalyticsContext), p = e => {
-    null == e || e.stopPropagation(), l.default.addRelationship({
+    null == e || e.stopPropagation(), i.default.addRelationship({
       userId: t.id,
       context: {
         location: "Friends"
@@ -36,7 +36,7 @@ function I(e) {
       fromFriendSuggestion: !0
     })
   }, T = e => {
-    null == e || e.stopPropagation(), i.default.ignore(t.id)
+    null == e || e.stopPropagation(), l.default.ignore(t.id)
   }, g = I === h.StatusTypes.OFFLINE ? h.StatusTypes.UNKNOWN : I;
   return (0, a.jsx)(f.default, {
     isFocused: S,

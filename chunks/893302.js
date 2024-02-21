@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("414456"),
-  l = n.n(s),
-  i = n("77078"),
+  i = n.n(s),
+  l = n("77078"),
   r = n("822690"),
   o = e => {
     let {
@@ -22,19 +22,19 @@ var s = n("414456"),
       children: [(0, a.jsx)("div", {
         className: r.circle,
         children: (0, a.jsx)(t, {
-          className: l(r.icon, n),
+          className: i(r.icon, n),
           width: 20,
           height: 20,
           color: "currentColor"
         })
       }), (0, a.jsxs)("div", {
-        children: [(0, a.jsx)(i.Heading, {
+        children: [(0, a.jsx)(l.Heading, {
           variant: "heading-md/bold",
           className: r.header,
-          children: (0, a.jsx)(i.HeadingLevel, {
+          children: (0, a.jsx)(l.HeadingLevel, {
             children: s
           })
-        }), (0, a.jsx)(i.Text, {
+        }), (0, a.jsx)(l.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
           children: o

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("917351"),
-  i = n.n(l),
+  i = n("917351"),
+  l = n.n(i),
   r = n("446674"),
   o = n("77078"),
   u = n("450911"),
@@ -28,7 +28,7 @@ var a = n("37983"),
   N = n("782340"),
   R = n("393719");
 
-function v(e) {
+function O(e) {
   let {
     user: t,
     onSelect: n
@@ -36,13 +36,13 @@ function v(e) {
     c.default.removeFriend(t.id, {
       location: "Friends"
     })
-  }, l = (0, r.useStateFromStores)([h.default], () => h.default.supports(A.Features.VIDEO));
+  }, i = (0, r.useStateFromStores)([h.default], () => h.default.supports(A.Features.VIDEO));
   return (0, a.jsxs)(o.Menu, {
     navId: "friend-row",
     "aria-label": N.default.Messages.USER_ACTIONS_MENU_LABEL,
     onClose: d.closeContextMenu,
     onSelect: n,
-    children: [l ? (0, a.jsx)(o.MenuItem, {
+    children: [i ? (0, a.jsx)(o.MenuItem, {
       id: "start-video-call",
       label: N.default.Messages.START_VIDEO_CALL,
       action: function() {
@@ -78,7 +78,7 @@ function v(e) {
     })]
   })
 }
-class O extends s.PureComponent {
+class v extends s.PureComponent {
   componentWillLeave(e) {
     null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e)
   }
@@ -91,8 +91,8 @@ class O extends s.PureComponent {
       isFocused: t,
       activities: n,
       applicationStream: s,
-      status: l,
-      isMobile: i
+      status: i,
+      isMobile: l
     } = this.props, {
       isActiveRow: r
     } = this.state;
@@ -107,13 +107,13 @@ class O extends s.PureComponent {
         className: R.listItemContents,
         children: [(0, a.jsx)(T.default, {
           user: e,
-          status: l,
-          isMobile: i,
+          status: i,
+          isMobile: l,
           subText: (0, a.jsx)(p.default, {
             hovered: t,
             activities: n,
             applicationStream: s,
-            status: l,
+            status: i,
             user: e
           }),
           hovered: t,
@@ -143,13 +143,13 @@ class O extends s.PureComponent {
         user: t
       } = this.props;
       e.stopPropagation();
-      let n = i.find(E.default.getMutablePrivateChannels(), e => e.type === g.ChannelTypes.DM && e.getRecipientId() === t.id);
+      let n = l.find(E.default.getMutablePrivateChannels(), e => e.type === g.ChannelTypes.DM && e.getRecipientId() === t.id);
       null != n ? (0, f.transitionTo)(g.Routes.CHANNEL(g.ME, n.id)) : u.default.openPrivateChannel(t.id)
     }, this.handleOpenActionsMenu = e => {
       let {
         user: t
       } = this.props;
-      (0, d.openContextMenu)(e, e => (0, a.jsx)(v, {
+      (0, d.openContextMenu)(e, e => (0, a.jsx)(O, {
         ...e,
         user: t
       }), {
@@ -164,4 +164,4 @@ class O extends s.PureComponent {
     }
   }
 }
-var L = O
+var L = v

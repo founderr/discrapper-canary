@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("424973");
 var a = n("37983"),
   s = n("884691"),
-  l = n("77078"),
-  i = n("913144"),
+  i = n("77078"),
+  l = n("913144"),
   r = n("685665"),
   o = n("141254"),
   u = n("116616"),
@@ -40,12 +40,12 @@ var C = e => {
     currentCategoryId: A,
     loadId: N,
     onTagClick: R,
-    showMoreCards: v = !1
+    showMoreCards: O = !1
   } = e;
   s.useEffect(() => {
-    i.default.wait(() => T())
+    l.default.wait(() => T())
   }, [A]);
-  let O = (0, c.default)(v ? _ : h),
+  let v = (0, c.default)(O ? _ : h),
     {
       analyticsLocations: L
     } = (0, r.default)();
@@ -73,9 +73,9 @@ var C = e => {
   };
   if (P || null == M) {
     let e = [];
-    for (let t = 0; t < O; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
+    for (let t = 0; t < v; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = M.slice(0, O).map(e => (0, a.jsx)(d.default, {
+  } else t = M.slice(0, v).map(e => (0, a.jsx)(d.default, {
     className: E.guildCard,
     guild: e,
     onView: y,
@@ -85,13 +85,13 @@ var C = e => {
   }, e.id));
   return (0, a.jsx)("section", {
     className: E.guildListSection,
-    children: (0, a.jsxs)(l.HeadingLevel, {
-      component: (0, a.jsx)(l.Heading, {
+    children: (0, a.jsxs)(i.HeadingLevel, {
+      component: (0, a.jsx)(i.Heading, {
         className: E.title,
         variant: "heading-lg/semibold",
         children: n
       }),
-      children: [null != C && (0, a.jsx)(l.Text, {
+      children: [null != C && (0, a.jsx)(i.Text, {
         className: E.subtitle,
         variant: "text-sm/normal",
         color: "header-secondary",

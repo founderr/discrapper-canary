@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  l = n("368874"),
-  i = n("104887"),
+  i = n("368874"),
+  l = n("104887"),
   r = n("775032"),
   o = n("25132"),
   u = n("806468"),
@@ -22,9 +22,9 @@ let _ = () => {
     t = (0, r.default)(),
     {
       handleTabChange: n
-    } = (0, i.default)(),
-    l = (0, o.useHasMaxConnections)();
-  return l || t && e.length > 0 ? null : (0, a.jsx)("div", {
+    } = (0, l.default)(),
+    i = (0, o.useHasMaxConnections)();
+  return i || t && e.length > 0 ? null : (0, a.jsx)("div", {
     className: f.button,
     children: t ? (0, a.jsx)(s.Button, {
       fullWidth: !1,
@@ -36,8 +36,8 @@ let _ = () => {
 };
 var C = () => {
   let e = (0, r.default)(),
-    t = (0, l.useAgeSpecificText)(c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_TEEN, c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_PARENT),
-    n = (0, l.useAgeSpecificText)(c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_TEEN.format({
+    t = (0, i.useAgeSpecificText)(c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_TEEN, c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_PARENT),
+    n = (0, i.useAgeSpecificText)(c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_TEEN.format({
       articleLink: "https://support.discord.com/hc/articles/14155060633623"
     }), c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_PARENT.format({
       articleLink: "https://support.discord.com/hc/articles/14155043715735"

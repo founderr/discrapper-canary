@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("759843"),
-  l = n("77078"),
-  i = n("79112"),
+  i = n("77078"),
+  l = n("79112"),
   r = n("945330"),
   o = n("376152"),
   u = n("243632"),
@@ -47,7 +47,7 @@ function _(e) {
       src: S,
       alt: "",
       className: m
-    }), (0, a.jsx)(l.Clickable, {
+    }), (0, a.jsx)(i.Clickable, {
       className: E.buttonClose,
       "aria-label": f.default.Messages.CLOSE,
       onClick: p,
@@ -56,36 +56,36 @@ function _(e) {
         height: 16,
         className: E.closeIcon
       })
-    }), (0, a.jsx)(l.Heading, {
+    }), (0, a.jsx)(i.Heading, {
       className: E.title,
       variant: "heading-md/extrabold",
       children: C
-    }), (0, a.jsx)(l.Text, {
+    }), (0, a.jsx)(i.Text, {
       variant: "text-sm/medium",
       className: E.subTitle,
       children: I
-    }), _.config.autoEnrollment ? (0, a.jsx)(l.Button, {
-      look: l.Button.Looks.INVERTED,
+    }), _.config.autoEnrollment ? (0, a.jsx)(i.Button, {
+      look: i.Button.Looks.INVERTED,
       fullWidth: !0,
       onClick: () => {
-        i.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
+        l.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
       },
       children: f.default.Messages.LEARN_MORE
-    }) : (0, a.jsx)(l.Button, {
+    }) : (0, a.jsx)(i.Button, {
       innerClassName: E.button,
-      look: l.Button.Looks.INVERTED,
+      look: i.Button.Looks.INVERTED,
       fullWidth: !0,
       onClick: () => {
-        (0, o.enrollDropsUser)(_.drop.dropsQuestId), i.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
+        (0, o.enrollDropsUser)(_.drop.dropsQuestId), l.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
       },
       children: f.default.Messages.DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA
-    }), (0, a.jsx)(l.Button, {
+    }), (0, a.jsx)(i.Button, {
       className: E.linkButtonContainer,
       innerClassName: E.linkButton,
       onClick: p,
-      look: l.Button.Looks.LINK,
+      look: i.Button.Looks.LINK,
       fullWidth: !0,
-      color: l.Button.Colors.WHITE,
+      color: i.Button.Colors.WHITE,
       children: f.default.Messages.NOT_NOW
     }), (0, a.jsx)("div", {
       className: E.pointer

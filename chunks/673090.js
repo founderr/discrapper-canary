@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("424973"), n("222007");
 var a = n("812204"),
   s = n("305122"),
-  l = n("235004"),
-  i = n("389480"),
+  i = n("235004"),
+  l = n("389480"),
   r = n("78581"),
   o = n("245463"),
   u = n("697218"),
@@ -23,9 +23,9 @@ var a = n("812204"),
       },
       async handler() {
         await (0, s.maybeFetchSoundboardSounds)();
-        let e = l.default.getSounds(),
+        let e = i.default.getSounds(),
           t = [];
-        return e.forEach(e => e.forEach(e => t.push((0, i.soundboardSoundToAPI)(e)))), t
+        return e.forEach(e => e.forEach(e => t.push((0, l.soundboardSoundToAPI)(e)))), t
       }
     },
     [h.RPCCommands.PLAY_SOUNDBOARD_SOUND]: {
@@ -44,10 +44,10 @@ var a = n("812204"),
           }
         } = e;
         await (0, s.maybeFetchSoundboardSounds)();
-        let i = u.default.getCurrentUser(),
-          c = l.default.getSound(t, n),
+        let l = u.default.getCurrentUser(),
+          c = i.default.getSound(t, n),
           E = (0, f.default)(),
-          _ = null != c && null != i && (0, r.canUseSoundboardSound)(i, c, E);
+          _ = null != c && null != l && (0, r.canUseSoundboardSound)(l, c, E);
         if (null == E) throw new d.default({
           errorCode: h.RPCErrors.INVALID_CHANNEL
         }, "Invalid Channel.");

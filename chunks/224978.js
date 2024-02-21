@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("458960"),
   o = n("974667"),
   u = n("77078"),
@@ -40,7 +40,7 @@ class E extends s.PureComponent {
       hovered: n,
       isContextMenuActive: s
     } = this.state, {
-      children: l,
+      children: i,
       user: d,
       onClick: c,
       isActive: E
@@ -53,7 +53,7 @@ class E extends s.PureComponent {
           right: -8
         },
         children: (0, a.jsx)(r.default.div, {
-          className: i(f.peopleListItem, {
+          className: l(f.peopleListItem, {
             [f.active]: E || s
           }),
           onContextMenu: e => this.handleContextMenu(e, d),
@@ -65,7 +65,7 @@ class E extends s.PureComponent {
             opacity: t
           },
           ...o,
-          children: l(n || E || s)
+          children: i(n || E || s)
         })
       })
     })

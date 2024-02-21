@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useIsSafetyConsumerEducationBlockMuteEnabled: function() {
-    return l
+    return i
   },
   useIsSafetyConsumerEducationBlockMuteBucket: function() {
-    return i
+    return l
   }
 });
 var a = n("862205");
@@ -33,7 +33,7 @@ let s = (0, a.createExperiment)({
   }]
 });
 
-function l() {
+function i() {
   return s.useExperiment({
     location: "b85a21_1"
   }, {
@@ -41,7 +41,7 @@ function l() {
   }).enabled
 }
 
-function i() {
+function l() {
   return s.useExperiment({
     location: "b85a21_2"
   }, {

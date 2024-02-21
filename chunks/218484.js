@@ -9,8 +9,8 @@ var a = n("446674"),
   s = n("913144"),
   i = n("42793"),
   r = n("393414"),
-  o = n("233069"),
-  u = n("813006"),
+  u = n("233069"),
+  o = n("813006"),
   d = n("42203"),
   c = n("305961"),
   f = n("337543"),
@@ -20,12 +20,12 @@ var a = n("446674"),
   m = n("49111"),
   E = n("724210");
 let g = m.AppContext.APP,
-  S = !1,
   I = !1,
-  _ = [];
+  _ = !1,
+  S = [];
 
 function N() {
-  S = !0
+  I = !0
 }
 class T extends a.default.Store {
   initialize() {
@@ -33,13 +33,13 @@ class T extends a.default.Store {
   }
   isOpen() {
     let e = __OVERLAY__ ? m.AppContext.OVERLAY : m.AppContext.APP;
-    return !!(S && _.length > 0 && g === e)
+    return !!(I && S.length > 0 && g === e)
   }
   getProps() {
     return {
-      invite: _.length > 0 ? _[0][0] : null,
+      invite: S.length > 0 ? S[0][0] : null,
       error: null != l && "" !== l ? l : null,
-      submitting: I
+      submitting: _
     }
   }
 }
@@ -48,7 +48,7 @@ var A = new T(s.default, {
   OVERLAY_INITIALIZE: N,
   CONNECTION_OPEN: N,
   CONNECTION_CLOSED: function() {
-    S = !1
+    I = !1
   },
   INVITE_MODAL_OPEN: function(e) {
     let t = e.invite;
@@ -60,7 +60,7 @@ var A = new T(s.default, {
         guild: n
       } = t;
       if (null == e) return !1;
-      if ((0, o.isMultiUserDM)(e.type)) {
+      if ((0, u.isMultiUserDM)(e.type)) {
         if (null != d.default.getChannel(e.id)) return (0, r.transitionToGuild)(m.ME, e.id), p.default.focus(), !1
       } else {
         if (null == n) return !1;
@@ -80,11 +80,11 @@ var A = new T(s.default, {
         }
       }
     }
-    if (_.some(e => {
+    if (S.some(e => {
         let [n] = e;
         return n.code === t.code
       })) return !1;
-    g = e.context, I = !1;
+    g = e.context, _ = !1;
     let l = function(e) {
       let {
         approximate_member_count: t,
@@ -94,7 +94,7 @@ var A = new T(s.default, {
         target_type: s,
         target_user: i,
         target_application: r,
-        stage_instance: o,
+        stage_instance: u,
         type: d,
         channel: c,
         guild: f
@@ -106,30 +106,30 @@ var A = new T(s.default, {
         target_type: s,
         target_user: i,
         target_application: r,
-        stage_instance: o,
+        stage_instance: u,
         type: d
       };
       return null != c && (h.channel = {
         ...c
-      }), null != f && (h.guild = new u.default(f)), null != e.inviter && (h.inviter = {
+      }), null != f && (h.guild = new o.default(f)), null != e.inviter && (h.inviter = {
         ...e.inviter
       }), h
     }(t);
-    _.push([l, e.resolve])
+    S.push([l, e.resolve])
   },
   INVITE_MODAL_CLOSE: function() {
-    if (l = null, I = !1, _.length > 0) {
-      let [, e] = _.shift();
+    if (l = null, _ = !1, S.length > 0) {
+      let [, e] = S.shift();
       null != e && e()
     }
   },
   INVITE_ACCEPT: function() {
-    I = !0
+    _ = !0
   },
   INVITE_MODAL_ERROR: function(e) {
     let {
       message: t
     } = e;
-    l = t, I = !1
+    l = t, _ = !1
   }
 })

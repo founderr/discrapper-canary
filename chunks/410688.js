@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  l = n("77078"),
-  i = n("144491"),
+  i = n("77078"),
+  l = n("144491"),
   r = n("208021"),
   o = n("982108"),
   u = n("803524"),
@@ -22,11 +22,11 @@ function h(e) {
     user: n,
     channel: h
   } = e, _ = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
-    (0, l.showToast)((0, l.createToast)(f.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
+    (0, i.showToast)((0, i.createToast)(f.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), I = s.useCallback(() => {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), S = s.useCallback(() => {
-    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, i.transitionToChannel)(h.id)
+    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, l.transitionToChannel)(h.id)
   }, [h.id, _]), {
     acceptMessageRequest: m,
     rejectMessageRequest: p,
@@ -40,7 +40,7 @@ function h(e) {
     onAcceptSuccess: S,
     onRejectSuccess: I,
     onError: C
-  }), v = T || g || A || N || R;
+  }), O = T || g || A || N || R;
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)(c.default, {
@@ -49,24 +49,24 @@ function h(e) {
       active: t
     }), (0, a.jsxs)("div", {
       className: E.actions,
-      children: [(0, a.jsx)(l.Button, {
+      children: [(0, a.jsx)(i.Button, {
         className: E.button,
-        color: l.ButtonColors.PRIMARY,
-        size: l.Button.Sizes.SMALL,
+        color: i.ButtonColors.PRIMARY,
+        size: i.Button.Sizes.SMALL,
         onClick: e => {
           e.stopPropagation(), p(h.id)
         },
-        disabled: v,
+        disabled: O,
         submitting: g || R,
         children: f.default.Messages.MESSAGE_REQUEST_IGNORE
-      }), (0, a.jsx)(l.Button, {
+      }), (0, a.jsx)(i.Button, {
         className: E.button,
-        color: l.ButtonColors.BRAND,
-        size: l.Button.Sizes.SMALL,
+        color: i.ButtonColors.BRAND,
+        size: i.Button.Sizes.SMALL,
         onClick: e => {
           e.stopPropagation(), m(h.id)
         },
-        disabled: v,
+        disabled: O,
         submitting: T || A || N,
         children: f.default.Messages.MESSAGE_REQUEST_ACCEPT
       })]

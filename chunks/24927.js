@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("458960"),
   o = n("974667"),
   u = n("77078"),
@@ -17,7 +17,7 @@ var a = n("37983"),
   E = function(e) {
     let {
       index: t,
-      children: l,
+      children: i,
       user: E,
       channel: h,
       onClick: _,
@@ -29,7 +29,7 @@ var a = n("37983"),
       T(!0), C && !I && !g && (null == S || S())
     }, R = () => {
       T(!1)
-    }, v = (e, t) => {
+    }, O = (e, t) => {
       null != t && (A(!0), (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -52,11 +52,11 @@ var a = n("37983"),
           right: -8
         },
         children: (0, a.jsx)(r.default.div, {
-          className: i(f.messageRequestItem, m, {
+          className: l(f.messageRequestItem, m, {
             [f.active]: I || g,
             [f.firstItem]: 0 === t
           }),
-          onContextMenu: e => v(e, E),
+          onContextMenu: e => O(e, E),
           onMouseEnter: N,
           onMouseLeave: R,
           onClick: null != _ ? _ : void 0,
@@ -65,7 +65,7 @@ var a = n("37983"),
             opacity: 1
           },
           ...e,
-          children: l(p || I || g)
+          children: i(p || I || g)
         })
       })
     })

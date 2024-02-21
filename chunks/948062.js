@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoverSearchResultPlaceholder: function() {
-    return v
+    return O
   },
   default: function() {
-    return O
+    return v
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("77078"),
   o = n("272030"),
   u = n("685665"),
@@ -30,15 +30,15 @@ var a = n("37983"),
   A = n("198112"),
   N = n("68422"),
   R = n("578817");
-let v = () => (0, a.jsx)("div", {
+let O = () => (0, a.jsx)("div", {
   className: A.placeholder
 });
-var O = e => {
+var v = e => {
   var t;
   let {
-    guild: l,
-    theme: v,
-    onView: O,
+    guild: i,
+    theme: O,
+    onView: v,
     onTagClick: L
   } = e, {
     id: M,
@@ -49,7 +49,7 @@ var O = e => {
     presenceCount: b,
     memberCount: U,
     keywords: G
-  } = l, [j, w] = s.useState(!1), [k, F] = s.useState(!1), {
+  } = i, [j, w] = s.useState(!1), [k, F] = s.useState(!1), {
     analyticsLocations: B
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: M,
@@ -62,7 +62,7 @@ var O = e => {
       case T.ThemeTypes.LIGHT:
         return R
     }
-  }(v), Y = null !== (t = _.default.getGuildIconURL({
+  }(O), Y = null !== (t = _.default.getGuildIconURL({
     id: M,
     icon: D,
     size: 32
@@ -86,7 +86,7 @@ var O = e => {
       }
       F(!0);
       try {
-        null != O && await O(l.id)
+        null != v && await v(i.id)
       } finally {
         F(!1)
       }
@@ -109,7 +109,7 @@ var O = e => {
         type: r.Spinner.Type.PULSING_ELLIPSIS,
         className: A.spinner
       }) : null, (0, a.jsxs)(r.Clickable, {
-        className: i(A.container, {
+        className: l(A.container, {
           [A.hover]: j,
           [A.submitting]: k
         }),
@@ -121,14 +121,14 @@ var O = e => {
             } = await n.el("392533").then(n.bind(n, "392533"));
             return t => (0, a.jsx)(e, {
               ...t,
-              guild: l
+              guild: i
             })
           })
         },
         onMouseEnter: () => w(!0),
         onMouseLeave: () => w(!1),
         children: [(0, a.jsx)("div", {
-          className: i(A.splashContainer, {
+          className: l(A.splashContainer, {
             [A.splashContainerWithTags]: K
           }),
           children: (0, a.jsx)("img", {
@@ -138,7 +138,7 @@ var O = e => {
             width: 240
           })
         }), (0, a.jsxs)("div", {
-          className: i(A.content, {
+          className: l(A.content, {
             [A.contentWithTags]: K
           }),
           children: [(0, a.jsxs)("div", {
@@ -156,7 +156,7 @@ var O = e => {
               className: A.headerName,
               children: [(0, a.jsx)("div", {
                 children: (0, a.jsx)(E.default, {
-                  guild: l,
+                  guild: i,
                   className: A.guildBadge,
                   size: 16
                 })
@@ -171,9 +171,9 @@ var O = e => {
             variant: "text-sm/normal",
             children: x
           }), K && null != G && null != L && (0, a.jsx)(m.DiscoveryTags, {
-            guildId: l.id,
+            guildId: i.id,
             discoveryTagStyle: m.DiscoveryTagStyle.ALT,
-            onTagClick: e => L(e, l.id),
+            onTagClick: e => L(e, i.id),
             tags: G,
             section: C.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
@@ -205,7 +205,7 @@ var O = e => {
         }), z ? (0, a.jsx)("div", {
           className: A.actionButtons,
           children: (0, a.jsx)(p.default, {
-            guild: l
+            guild: i
           })
         }) : null]
       })]

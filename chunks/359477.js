@@ -10,8 +10,8 @@ var a = n("77078"),
   s = n("913144"),
   i = n("316272"),
   r = n("104589"),
-  o = n("116460"),
-  u = n("567593");
+  u = n("116460"),
+  o = n("567593");
 let d = "QUICK_SWITCHER_MODAL_KEY";
 class c extends i.default {
   _initialize() {
@@ -21,7 +21,7 @@ class c extends i.default {
     s.default.unsubscribe("QUICKSWITCHER_SHOW", this.handleShow), s.default.unsubscribe("QUICKSWITCHER_HIDE", this.handleHide)
   }
   handleShow() {
-    o.default.isOpen() && !(0, a.hasModalOpen)(d) && (0, a.openModal)(e => (0, l.jsx)(u.default, {
+    u.default.isOpen() && !(0, a.hasModalOpen)(d) && (0, a.openModal)(e => (0, l.jsx)(o.default, {
       ...e
     }), {
       modalKey: d,

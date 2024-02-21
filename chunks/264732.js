@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return T
   }
 }), n("222007");
 var a = n("37983"),
@@ -17,24 +17,24 @@ var a = n("37983"),
   h = n("27618"),
   C = n("697218"),
   p = n("659500"),
-  m = n("412861"),
-  E = n("160864"),
+  E = n("412861"),
+  m = n("160864"),
   g = n("527382"),
   S = n("49111"),
   _ = n("782340"),
-  A = function(e) {
+  T = function(e) {
     let {
       className: t,
       style: n,
-      channel: A,
-      draftType: T
-    } = e, [M, I] = s.useState(!0), N = (0, l.useStateFromStores)([c.default], () => c.default.hasLayers()), v = (0, l.useStateFromStores)([f.default], () => null != A && f.default.can(S.Permissions.ATTACH_FILES, A), [A]), L = (0, l.useStateFromStores)([i.default], () => i.default.getActiveCommand(A.id)), R = null != L, x = A.getGuildId(), y = T === o.DraftType.FirstThreadMessage, O = (0, l.useStateFromStores)([C.default], () => {
+      channel: T,
+      draftType: A
+    } = e, [M, I] = s.useState(!0), N = (0, l.useStateFromStores)([c.default], () => c.default.hasLayers()), v = (0, l.useStateFromStores)([f.default], () => null != T && f.default.can(S.Permissions.ATTACH_FILES, T), [T]), L = (0, l.useStateFromStores)([i.default], () => i.default.getActiveCommand(T.id)), R = null != L, x = T.getGuildId(), y = A === o.DraftType.FirstThreadMessage, O = (0, l.useStateFromStores)([C.default], () => {
       var e;
       return !0 == !(null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed)
-    }), D = (0, l.useStateFromStores)([u.default], () => u.default.didAgree(x)), j = D && !O, P = s.useMemo(() => !N && (A.isPrivate() && !A.isManaged() || null != x && (!A.isNSFW() || j) && v && d.default.canChatInGuild(x)), [v, j, A, x, N]), b = y ? S.ChannelTypesSets.GUILD_THREADS_ONLY.has(A.type) ? _.default.Messages.UPLOAD_TO_NEW_POST : _.default.Messages.UPLOAD_TO_NEW_THREAD : M ? _.default.Messages.UPLOAD_TO.format({
-      destination: (0, r.computeChannelName)(A, C.default, h.default, !0)
+    }), D = (0, l.useStateFromStores)([u.default], () => u.default.didAgree(x)), P = D && !O, j = s.useMemo(() => !N && (T.isPrivate() && !T.isManaged() || null != x && (!T.isNSFW() || P) && v && d.default.canChatInGuild(x)), [v, P, T, x, N]), b = y ? S.ChannelTypesSets.GUILD_THREADS_ONLY.has(T.type) ? _.default.Messages.UPLOAD_TO_NEW_POST : _.default.Messages.UPLOAD_TO_NEW_THREAD : M ? _.default.Messages.UPLOAD_TO.format({
+      destination: (0, r.computeChannelName)(T, C.default, h.default, !0)
     }) : _.default.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
-    return R || !P ? null : (0, a.jsx)(E.default, {
+    return R || !j ? null : (0, a.jsx)(m.default, {
       className: t,
       style: n,
       title: b,
@@ -42,7 +42,7 @@ var a = n("37983"),
       icons: g.DEFAULT_FILE_UPLOAD_ICONS,
       onDrop: e => {
         if (R) return !1;
-        P && null != A && ((0, m.promptToUpload)(e, A, T, {
+        j && null != T && ((0, E.promptToUpload)(e, T, A, {
           requireConfirm: M,
           showLargeMessageDialog: !1
         }), p.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.TEXTAREA_FOCUS))

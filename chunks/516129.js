@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("105110"),
-  l = n("77078"),
-  i = n("649844"),
+  i = n("77078"),
+  l = n("649844"),
   r = n("393414"),
   o = n("181114"),
   u = n("599110"),
@@ -31,7 +31,7 @@ function C(e) {
     onClose: g
   } = I, A = null != C.button && "" !== C.button.copy ? C.button.copy : E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, N = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, r.transitionTo)(f.Routes.APPLICATION_STORE), g()
-  } : () => (0, i.default)({
+  } : () => (0, l.default)({
     subscriptionTier: c.PremiumSubscriptionSKUs.TIER_2,
     analyticsLocations: S,
     analyticsObject: {
@@ -42,27 +42,27 @@ function C(e) {
     onClose: e => {
       e && g()
     }
-  }), v = "" !== C.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
+  }), O = "" !== C.helpArticleId ? () => (0, a.jsx)(i.Anchor, {
     className: h.termsApplyAnchor,
     href: d.default.getArticleURL(C.helpArticleId),
-    children: (0, a.jsx)(l.Heading, {
+    children: (0, a.jsx)(i.Heading, {
       variant: "heading-md/normal",
       className: h.termsApplyBodyText,
       children: E.default.Messages.BOGO_TERMS_APPLY
     })
-  }) : void 0, O = {
+  }) : void 0, v = {
     type: "video",
     src: p ? C.heroArtVideoLinkLightTheme : C.videoLink
   };
-  return ("" !== C.heroArtImageLinkDarkTheme || "" !== C.heroArtImageLinkLightTheme) && (O = {
+  return ("" !== C.heroArtImageLinkDarkTheme || "" !== C.heroArtImageLinkLightTheme) && (v = {
     type: "image",
     src: p ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
   }), {
     renderModalProps: I,
     header: C.header,
     subHeader: C.subheader,
-    subHeaderExtra: v,
-    heroArt: O,
+    subHeaderExtra: O,
+    heroArt: v,
     featureCards: C.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
@@ -75,8 +75,8 @@ function C(e) {
       return (0, a.jsxs)(o.default, {
         className: h.buttonWide,
         innerClassName: h.innerButton,
-        color: l.Button.Colors.GREEN,
-        size: l.Button.Sizes.SMALL,
+        color: i.Button.Colors.GREEN,
+        size: i.Button.Sizes.SMALL,
         onClick: () => {
           u.default.track(f.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
             change_log_id: T,

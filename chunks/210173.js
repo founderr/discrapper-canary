@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("355262"),
   o = n("77078"),
   u = n("302437"),
@@ -59,11 +59,11 @@ function R(e) {
   })
 }
 
-function v() {
+function O() {
   return (0, a.jsxs)("div", {
-    className: i(g.box, g.linkingBanner, g.linkingBannerParent),
+    className: l(g.box, g.linkingBanner, g.linkingBannerParent),
     children: [(0, a.jsxs)("div", {
-      className: i(g.linkingBannerUpper),
+      className: l(g.linkingBannerUpper),
       children: [(0, a.jsxs)("div", {
         className: g.header,
         children: [(0, a.jsx)(o.Heading, {
@@ -102,10 +102,10 @@ function v() {
   })
 }
 
-function O() {
+function v() {
   let e = (0, h.useHasMaxConnections)();
   return (0, a.jsxs)("div", {
-    className: i(g.box, g.linkingBanner),
+    className: l(g.box, g.linkingBanner),
     children: [(0, a.jsxs)("div", {
       children: [(0, a.jsx)(o.Heading, {
         className: A.marginBottom8,
@@ -133,22 +133,22 @@ function L(e) {
   let {
     sectionType: t,
     sectionTitle: n,
-    requests: l
-  } = e, i = s.useRef(null), c = "".concat(t, "-list"), f = (0, u.default)(c), E = s.useCallback(e => {
+    requests: i
+  } = e, l = s.useRef(null), c = "".concat(t, "-list"), f = (0, u.default)(c), E = s.useCallback(e => {
     let {
       row: n,
       listIndex: s
-    } = e, i = l[n], r = s === l.length;
-    return null == i ? null : (0, a.jsx)(m.default, {
-      userId: i.id,
+    } = e, l = i[n], r = s === i.length;
+    return null == l ? null : (0, a.jsx)(m.default, {
+      userId: l.id,
       isLast: r,
       children: () => t === p.UserLinkStatus.ACTIVE ? (0, a.jsx)(I.UserLinkAcceptedRequestRow, {
-        user: i
+        user: l
       }) : (0, a.jsx)(S.UserLinkPendingRequestRow, {
-        user: i
+        user: l
       })
-    }, i.id)
-  }, [l, t]), h = s.useCallback(() => (0, a.jsx)(d.default, {
+    }, l.id)
+  }, [i, t]), h = s.useCallback(() => (0, a.jsx)(d.default, {
     className: g.sectionTitle,
     children: (0, a.jsx)(o.Text, {
       className: A.marginBottom8,
@@ -174,13 +174,13 @@ function L(e) {
             innerAriaLabel: n,
             ref: e => {
               var n;
-              i.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
+              l.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             sectionHeight: p.FAMILY_CENTER_REQUEST_SECTION_HEIGHT,
             rowHeight: p.FAMILY_CENTER_REQUEST_ROW_HEIGHT,
             renderSection: h,
             renderRow: E,
-            sections: [l.length],
+            sections: [i.length],
             chunkSize: 30,
             fade: !0,
             ...r
@@ -198,11 +198,11 @@ let M = () => {
         count: t.length,
         max: n
       },
-      l = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(s), T.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(s));
+      i = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(s), T.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(s));
     return (0, a.jsx)(a.Fragment, {
       children: t.length > 0 ? (0, a.jsx)(L, {
         sectionType: p.UserLinkStatus.ACTIVE,
-        sectionTitle: l,
+        sectionTitle: i,
         requests: t
       }) : (0, a.jsxs)("div", {
         className: g.section,
@@ -210,7 +210,7 @@ let M = () => {
           className: A.marginBottom8,
           variant: "eyebrow",
           color: "header-secondary",
-          children: l
+          children: i
         }), (0, a.jsx)("div", {
           className: g.box,
           children: (0, a.jsx)(_.default, {
@@ -241,7 +241,7 @@ let M = () => {
   D = () => {
     let e = (0, f.useShouldShowHelplineLink)();
     return e ? (0, a.jsxs)("div", {
-      className: i(g.helpLineInfo, A.marginTop20),
+      className: l(g.helpLineInfo, A.marginTop20),
       children: [(0, a.jsx)(o.Heading, {
         className: g.supportHeader,
         variant: "heading-sm/semibold",
@@ -274,6 +274,6 @@ var x = () => {
   let e = (0, E.default)();
   return (0, a.jsxs)("div", {
     className: g.container,
-    children: [e ? (0, a.jsx)(v, {}) : (0, a.jsx)(O, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {}), (0, a.jsx)(D, {})]
+    children: [e ? (0, a.jsx)(O, {}) : (0, a.jsx)(v, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {}), (0, a.jsx)(D, {})]
   })
 }

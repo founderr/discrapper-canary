@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("669491"),
   o = n("769846"),
   u = n("159885"),
@@ -65,14 +65,14 @@ class h extends s.Component {
       className: c.wrapper,
       ref: this.sizerRef,
       children: (0, a.jsxs)("div", {
-        className: i(c.container, e),
+        className: l(c.container, e),
         style: this.getGradientStyles(),
         children: [(0, a.jsx)("div", {
           className: c.progress,
           style: this.getProgressStyles()
         }), 0 !== n && (0, a.jsx)(d.default, {
           width: n,
-          className: i(c.notches, t)
+          className: l(c.notches, t)
         })]
       })
     })

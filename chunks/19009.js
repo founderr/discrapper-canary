@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   userNeedsAgeGate: function() {
-    return i
+    return l
   }
 });
 var a = n("697218"),
   s = n("299039");
-let l = new Date("06/16/2020");
+let i = new Date("06/16/2020");
 
-function i() {
+function l() {
   let e = a.default.getCurrentUser();
-  return null != e && s.default.extractTimestamp(e.id) > l.getTime() && !e.isClaimed() && null == e.nsfwAllowed
+  return null != e && s.default.extractTimestamp(e.id) > i.getTime() && !e.isClaimed() && null == e.nsfwAllowed
 }

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("446674"),
-  l = n("77078"),
-  i = n("145079"),
+  i = n("77078"),
+  l = n("145079"),
   r = n("206230"),
   o = n("606292"),
   u = n("688318"),
@@ -20,7 +20,7 @@ var s = n("446674"),
   _ = n("214621"),
   C = n("782340"),
   I = n("159036");
-let S = E.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+let S = E.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
 function m(e) {
   var t;
@@ -32,7 +32,7 @@ function m(e) {
     avatarDecorationSrc: A
   } = (0, u.default)({
     user: E,
-    size: (0, o.getDecorationSizeForAvatarSize)(l.AvatarSizes.SIZE_40),
+    size: (0, o.getDecorationSizeForAvatarSize)(i.AvatarSizes.SIZE_40),
     animateOnHover: !0
   });
   return (0, a.jsxs)(a.Fragment, {
@@ -40,20 +40,20 @@ function m(e) {
       className: I.avatar,
       src: (0, d.getChannelIconURL)(n, 40, !p && m),
       avatarDecoration: A,
-      size: l.AvatarSizes.SIZE_40,
+      size: i.AvatarSizes.SIZE_40,
       "aria-label": null !== (t = null == E ? void 0 : E.username) && void 0 !== t ? t : C.default.Messages.UNKNOWN_USER
     }), (0, a.jsxs)("div", {
       className: I.userPreview,
       children: [(0, a.jsxs)("div", {
         className: I.userContainerWithPreview,
-        children: [(0, a.jsx)(i.default, {
+        children: [(0, a.jsx)(l.default, {
           nick: T,
           user: E,
           showAccountIdentifier: !0,
           className: I.tagContainer,
           usernameClass: I.username,
           discriminatorClass: null != f.default.getGlobalName(E) ? I.globalName : I.discriminator
-        }), (0, a.jsx)(l.Text, {
+        }), (0, a.jsx)(i.Text, {
           className: I.timestampWithPreview,
           color: "text-muted",
           variant: "text-xs/normal",

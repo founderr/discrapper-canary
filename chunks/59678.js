@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return s
   },
   STATUS_HEADER_HEIGHT: function() {
-    return l
+    return i
   },
   MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL: function() {
-    return i
+    return l
   }
 });
 let a = 64,
   s = 62,
-  l = 24,
-  i = 5
+  i = 24,
+  l = 5

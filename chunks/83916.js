@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("943722"),
-  l = n("158998"),
-  i = n("210630"),
+  i = n("158998"),
+  l = n("210630"),
   r = function(e) {
     let {
       hovered: t,
@@ -18,15 +18,15 @@ var s = n("943722"),
       user: u
     } = e;
     return n.length > 0 ? (0, a.jsx)(s.default, {
-      className: i.activity,
-      textClassName: i.text,
-      emojiClassName: i.customStatusEmoji,
+      className: l.activity,
+      textClassName: l.text,
+      emojiClassName: l.customStatusEmoji,
       activities: n,
       applicationStream: r,
       animate: t,
       user: u
     }) : (0, a.jsx)("div", {
-      className: i.text,
-      children: (0, l.humanizeStatus)(o)
+      className: l.text,
+      children: (0, i.humanizeStatus)(o)
     })
   }

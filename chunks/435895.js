@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("627445"),
   s = n.n(a),
-  l = n("773364"),
-  i = n("42887"),
+  i = n("773364"),
+  l = n("42887"),
   r = n("812809");
 let o = null;
 try {
@@ -34,8 +34,8 @@ function c(e) {
   } = e;
   return new Promise(async e => {
     let o = await d(n);
-    null == o && e(), i.default.getMediaEngine().eachConnection(n => {
-      n.context === l.MediaEngineContextTypes.DEFAULT && (r(), s(null != o, "audioBuffer cannot be null here"), n.startSamplesLocalPlayback(t, o, a, () => {
+    null == o && e(), l.default.getMediaEngine().eachConnection(n => {
+      n.context === i.MediaEngineContextTypes.DEFAULT && (r(), s(null != o, "audioBuffer cannot be null here"), n.startSamplesLocalPlayback(t, o, a, () => {
         e()
       }))
     })
@@ -47,18 +47,18 @@ function f(e, t) {
     soundKey: n,
     soundURL: a,
     soundVolume: s,
-    reportSoundStartedPlaying: l
-  } = e, i = t.get(n);
-  if (null != i) {
-    i.currentTime = 0;
+    reportSoundStartedPlaying: i
+  } = e, l = t.get(n);
+  if (null != l) {
+    l.currentTime = 0;
     return
   }
   return new Promise(e => {
-    let i = new Audio(a);
-    i.volume = (0, r.default)(s), i.addEventListener("canplaythrough", () => {
-      l(), t.set(n, i), i.play()
-    }), i.addEventListener("ended", () => {
-      t.delete(n), i.src = "", e()
+    let l = new Audio(a);
+    l.volume = (0, r.default)(s), l.addEventListener("canplaythrough", () => {
+      i(), t.set(n, l), l.play()
+    }), l.addEventListener("ended", () => {
+      t.delete(n), l.src = "", e()
     })
   })
 }

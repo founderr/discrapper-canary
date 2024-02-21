@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  l = n("913144"),
-  i = n("636974"),
+  i = n("913144"),
+  l = n("636974"),
   r = n("970728"),
   o = n("539405"),
   u = n("299803"),
@@ -60,14 +60,14 @@ var s = n("77078"),
         if (null == s) throw new f.default({
           errorCode: I.RPCErrors.INVALID_COMMAND
         }, "No application.");
-        let l = d.default.getApplicationActivity(s);
-        if (null == l || null == l.secrets || !(0, E.validateActivityInvite)(n, l.party, l.secrets)) throw new f.default({
+        let i = d.default.getApplicationActivity(s);
+        if (null == i || null == i.secrets || !(0, E.validateActivityInvite)(n, i.party, i.secrets)) throw new f.default({
           errorCode: I.RPCErrors.NO_ELIGIBLE_ACTIVITY
         }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
         let {
           lock: r
-        } = (0, _.unlockOverlay)(a), o = (0, u.default)(l, c.default);
-        return (0, i.openModal)(l, o).then(() => {
+        } = (0, _.unlockOverlay)(a), o = (0, u.default)(i, c.default);
+        return (0, l.openModal)(i, o).then(() => {
           if (r(), o) throw new f.default({
             errorCode: I.RPCErrors.NO_ELIGIBLE_ACTIVITY
           }, "No eligible activity for application. Ensure user does have have privacy enabled.")
@@ -101,17 +101,17 @@ var s = n("77078"),
           }, "Invalid invite id: ".concat(a));
           let {
             context: s,
-            lock: i
+            lock: l
           } = (0, _.unlockOverlay)(n);
           return new Promise(e => {
-            l.default.dispatch({
+            i.default.dispatch({
               type: "INVITE_MODAL_OPEN",
               invite: t,
               code: a,
               context: s,
               resolve: e
             })
-          }).then(i)
+          }).then(l)
         })
       }
     },
@@ -125,9 +125,9 @@ var s = n("77078"),
           args: {
             pid: t
           },
-          socket: l
-        } = e, i = l.application.id;
-        if (null == i) throw new f.default({
+          socket: i
+        } = e, l = i.application.id;
+        if (null == l) throw new f.default({
           errorCode: I.RPCErrors.INVALID_COMMAND
         }, "No application.");
         let {
@@ -140,8 +140,8 @@ var s = n("77078"),
             } = await n.el("301450").then(n.bind(n, "301450"));
             return n => (0, a.jsx)(t, {
               ...n,
-              mediaEngineContext: i,
-              title: l.application.name,
+              mediaEngineContext: l,
+              title: i.application.name,
               onClose: () => {
                 n.onClose(), r(), e()
               }

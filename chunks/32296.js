@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("917351"),
-  i = n.n(l),
+  i = n("917351"),
+  l = n.n(i),
   r = n("446674"),
   o = n("773364"),
   u = n("862337"),
@@ -37,8 +37,8 @@ class m extends s.PureComponent {
       inputVolume: n,
       outputDeviceName: a,
       outputVolume: s,
-      inputMode: l,
-      vadAutoThreshold: i,
+      inputMode: i,
+      vadAutoThreshold: l,
       vadThreshold: r,
       location: o,
       isDeafened: u
@@ -52,8 +52,8 @@ class m extends s.PureComponent {
       input_device_volume: n,
       output_device_name: a,
       output_device_volume: s,
-      input_mode: l,
-      input_sensitivity_is_automatic: i,
+      input_mode: i,
+      input_sensitivity_is_automatic: l,
       input_sensitivity_threshold: Math.round(r),
       location: o
     })
@@ -93,8 +93,8 @@ class m extends s.PureComponent {
       title: t,
       description: n,
       notchBackground: s,
-      buttonTest: l,
-      buttonStop: i,
+      buttonTest: i,
+      buttonStop: l,
       buttonClassName: r,
       buttonColor: o,
       isDeafened: u
@@ -129,7 +129,7 @@ class m extends s.PureComponent {
               size: d.Button.Sizes.SMALL,
               className: r,
               color: o,
-              children: c ? i : l
+              children: c ? l : i
             })
           }
         }), (0, a.jsx)(h.default, {
@@ -173,7 +173,7 @@ class m extends s.PureComponent {
 var p = r.default.connectStores([E.default, f.default], () => {
   let e = f.default.getInputDeviceId(),
     t = f.default.getInputDevices(),
-    n = i.find(t, t => {
+    n = l.find(t, t => {
       let {
         id: n
       } = t;
@@ -181,7 +181,7 @@ var p = r.default.connectStores([E.default, f.default], () => {
     }),
     a = f.default.getOutputDeviceId(),
     s = f.default.getOutputDevices(),
-    l = i.find(s, e => {
+    i = l.find(s, e => {
       let {
         id: t
       } = e;
@@ -197,6 +197,6 @@ var p = r.default.connectStores([E.default, f.default], () => {
     isDeafened: f.default.isSelfDeaf(),
     vadAutoThreshold: r.autoThreshold,
     inputDeviceName: null != n ? n.name : "",
-    outputDeviceName: null != l ? l.name : ""
+    outputDeviceName: null != i ? i.name : ""
   }
 })(m)

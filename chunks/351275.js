@@ -11,8 +11,8 @@ var s = e => {
     id: t,
     startColor: n,
     stopColor: s,
-    color: l,
-    stop: i
+    color: i,
+    stop: l
   } = e;
   return (0, a.jsxs)("linearGradient", {
     id: t,
@@ -20,14 +20,14 @@ var s = e => {
       offset: "0",
       stopColor: n
     }), (0, a.jsx)("stop", {
-      offset: i,
+      offset: l,
       stopColor: s
     }), (0, a.jsx)("stop", {
-      offset: i,
-      stopColor: l
+      offset: l,
+      stopColor: i
     }), (0, a.jsx)("stop", {
       offset: "1",
-      stopColor: l
+      stopColor: i
     })]
   })
 }

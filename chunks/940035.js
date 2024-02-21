@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("913144"),
   s = n("629109"),
-  l = n("539405"),
-  i = n("987317"),
+  i = n("539405"),
+  l = n("987317"),
   r = n("990766"),
   o = n("52289"),
   u = n("316272"),
@@ -27,7 +27,7 @@ var a = n("913144"),
   A = n("360782"),
   N = n("49111"),
   R = n("353927");
-let v = {
+let O = {
   [N.GlobalKeybindActions.TOGGLE_PRIORITY_SPEAKER]: {
     onTrigger() {},
     keyEvents: {}
@@ -38,7 +38,7 @@ let v = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK]: {
     onTrigger(e, t) {
-      S.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (v[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
+      S.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (O[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
     },
     keyEvents: {
       keyup: !0,
@@ -48,7 +48,7 @@ let v = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: {
     onTrigger(e) {
-      S.default.getMode() === N.InputModes.PUSH_TO_TALK && (v[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), R.MediaEngineContextTypes.DEFAULT))
+      S.default.getMode() === N.InputModes.PUSH_TO_TALK && (O[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), R.MediaEngineContextTypes.DEFAULT))
     },
     keyEvents: {
       keyup: !0,
@@ -58,7 +58,7 @@ let v = {
   },
   [N.GlobalKeybindActions.PUSH_TO_MUTE]: {
     onTrigger(e) {
-      if (S.default.getMode() === N.InputModes.VOICE_ACTIVITY) !S.default.isSelfDeaf() && (v[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
+      if (S.default.getMode() === N.InputModes.VOICE_ACTIVITY) !S.default.isSelfDeaf() && (O[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
     },
     keyEvents: {
       keyup: !0,
@@ -97,7 +97,7 @@ let v = {
   [N.GlobalKeybindActions.TOGGLE_OVERLAY]: {
     onTrigger() {
       let e = p.default.enabled;
-      l.default.setEnabled(!e)
+      i.default.setEnabled(!e)
     },
     keyEvents: {
       keyup: !0,
@@ -107,7 +107,7 @@ let v = {
   [N.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK]: {
     onTrigger(e) {
       let t = (0, A.default)();
-      null != t && (e ? l.default.setUILocked(!T.default.isUILocked(t), t) : l.default.setInputLocked(!p.default.isInputLocked(t), t))
+      null != t && (e ? i.default.setUILocked(!T.default.isUILocked(t), t) : i.default.setInputLocked(!p.default.isInputLocked(t), t))
     },
     keyEvents: {
       keyup: !0,
@@ -118,7 +118,7 @@ let v = {
     onTrigger() {
       let e = p.default.getFocusedPID(),
         t = null != e;
-      null != e && t && T.default.isPinned(N.OverlayWidgets.TEXT) && p.default.isReady(e) && p.default.isInputLocked(e) && l.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
+      null != e && t && T.default.isPinned(N.OverlayWidgets.TEXT) && p.default.isReady(e) && p.default.isInputLocked(e) && i.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
     },
     keyEvents: {
       keyup: !0,
@@ -205,7 +205,7 @@ let v = {
           channelId: n
         }
       } = t;
-      null != n && i.default.selectVoiceChannel(n)
+      null != n && l.default.selectVoiceChannel(n)
     },
     keyEvents: {
       keyup: !0,
@@ -216,7 +216,7 @@ let v = {
   },
   [N.GlobalKeybindActions.DISCONNECT_FROM_VOICE_CHANNEL]: {
     onTrigger() {
-      i.default.selectVoiceChannel(null)
+      l.default.selectVoiceChannel(null)
     },
     keyEvents: {
       keyup: !0,
@@ -226,13 +226,13 @@ let v = {
     }
   }
 };
-class O extends u.default {
+class v extends u.default {
   _initialize() {
     a.default.wait(() => a.default.dispatch({
       type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS",
-      keybinds: v
+      keybinds: O
     }))
   }
   _terminate() {}
 }
-var L = new O
+var L = new v

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  l = n("917351"),
-  i = n.n(l),
+  i = n("917351"),
+  l = n.n(i),
   r = n("775560"),
   o = n("907002"),
   u = n("446674"),
@@ -38,30 +38,30 @@ var g = () => {
       return e !== n.id
     })),
     n = (0, u.useStateFromStores)([I.default], () => I.default.hasIncomingCalls()),
-    l = (0, u.useStateFromStores)([h.default], () => h.default.isSoundDisabled("call_ringing")),
+    i = (0, u.useStateFromStores)([h.default], () => h.default.isSoundDisabled("call_ringing")),
     g = f.default.useIsRingtoneEligible(),
     A = f.default.useIsRingtoneDisabled(),
     N = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
     R = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
-    v = s.useRef(!1),
-    O = (0, r.useStableMemo)(() => {
+    O = s.useRef(!1),
+    v = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
       if (g && !A) return (0, S.createSound)(c.default.ringtone, e);
       if (R === m.Soundpacks.CLASSIC) {
-        let t = 500 === i.random(1, 1e3) ? "call_ringing_beat" : "call_ringing";
+        let t = 500 === l.random(1, 1e3) ? "call_ringing_beat" : "call_ringing";
         return (0, S.createSound)(t, e)
       }
       return (0, S.createSoundForPack)("call_ringing", R)
     }, [R, A, g]);
   s.useEffect(() => () => {
-    O.stop()
-  }, [O]), s.useEffect(() => {
-    if (N || l) {
-      v.current && (O.stop(), v.current = !1);
+    v.stop()
+  }, [v]), s.useEffect(() => {
+    if (N || i) {
+      O.current && (v.stop(), O.current = !1);
       return
     }
-    n && !v.current ? (O.loop(), v.current = !0) : !n && v.current && (O.stop(), v.current = !1)
-  }, [l, N, n, O]);
+    n && !O.current ? (v.loop(), O.current = !0) : !n && O.current && (v.stop(), O.current = !1)
+  }, [i, N, n, v]);
   let L = (0, o.useTransition)(t, {
     keys: e => {
       var t;

@@ -2,8 +2,8 @@
 n.r(t), n("222007"), n("424973");
 var a = n("446674"),
   s = n("913144"),
-  l = n("271938"),
-  i = n("42203"),
+  i = n("271938"),
+  l = n("42203"),
   r = n("305961"),
   o = n("299039"),
   u = n("188631");
@@ -15,7 +15,7 @@ function c(e, t) {
 }
 class f extends a.default.PersistedStore {
   initialize(e) {
-    this.waitFor(l.default, r.default), d = {}, null != e && o.default.keys(e).forEach(t => {
+    this.waitFor(i.default, r.default), d = {}, null != e && o.default.keys(e).forEach(t => {
       let n = e[t];
       null != n && "function" == typeof n[Symbol.iterator] && (d[t] = new Set(n))
     })
@@ -65,7 +65,7 @@ f.displayName = "GuildProgressStore", f.persistKey = "GuildProgressStore", new f
       }
     } = e, a = r.default.getGuild(t);
     if (null == a) return !1;
-    a.ownerId === l.default.getId() && null != d[a.id] && (null != a.icon && d[a.id].add(u.Steps.AVATAR), n > 1 && d[a.id].add(u.Steps.INVITE))
+    a.ownerId === i.default.getId() && null != d[a.id] && (null != a.icon && d[a.id].add(u.Steps.AVATAR), n > 1 && d[a.id].add(u.Steps.INVITE))
   },
   CHANNEL_CREATE: function(e) {
     let {
@@ -91,8 +91,8 @@ f.displayName = "GuildProgressStore", f.persistKey = "GuildProgressStore", new f
     let {
       channelId: n,
       message: a
-    } = e, s = i.default.getChannel(n);
-    return (null === (t = a.author) || void 0 === t ? void 0 : t.id) === l.default.getId() && null != s && null != d[s.guild_id] && c(s.guild_id, u.Steps.MESSAGE)
+    } = e, s = l.default.getChannel(n);
+    return (null === (t = a.author) || void 0 === t ? void 0 : t.id) === i.default.getId() && null != s && null != d[s.guild_id] && c(s.guild_id, u.Steps.MESSAGE)
   },
   GUILD_MEMBER_LIST_UPDATE: function(e) {
     let {

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  l = n("716241"),
-  i = n("5667"),
+  i = n("716241"),
+  l = n("5667"),
   r = n("58608"),
   o = n("599110"),
   u = n("701909"),
@@ -34,7 +34,7 @@ function E(e) {
       })
     })]
   });
-  return (0, a.jsx)(i.default, {
+  return (0, a.jsx)(l.default, {
     header: c.default.Messages.MEDIA_CHANNEL_UPSELL_TITLE,
     content: h,
     asset: (0, a.jsx)(r.default, {
@@ -46,7 +46,7 @@ function E(e) {
     buttonCTA: c.default.Messages.MEDIA_CHANNEL_UPSELL_CREATE_NOW_CTA,
     onClick: () => {
       o.default.track(d.AnalyticEvents.MEDIA_CHANNEL_UPSELL_CLICKED, {
-        ...(0, l.collectGuildAnalyticsMetadata)(t)
+        ...(0, i.collectGuildAnalyticsMetadata)(t)
       }), (0, s.openModalLazy)(async () => {
         let {
           default: e

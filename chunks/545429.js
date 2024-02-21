@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("424973");
 var a = n("917351"),
   s = n.n(a),
-  l = n("446674"),
-  i = n("913144"),
+  i = n("446674"),
+  l = n("913144"),
   r = n("736964"),
   o = n("666038"),
   u = n("449004"),
@@ -132,8 +132,8 @@ let g = !0,
   A = !1,
   N = C.FriendsSections.ONLINE,
   R = new T,
-  v = !0,
-  O = !1;
+  O = !0,
+  v = !1;
 
 function L() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -141,21 +141,21 @@ function L() {
 }
 
 function M() {
-  if (g = !0, v ? A = !1 : L(), R = R.reset(), O) return;
+  if (g = !0, O ? A = !1 : L(), R = R.reset(), v) return;
   let e = R.getRelationshipCounts();
   N = 0 === e[C.RelationshipTypes.FRIEND] ? 0 !== e[C.RelationshipTypes.PENDING_INCOMING] ? C.FriendsSections.PENDING : C.FriendsSections.ADD_FRIEND : C.FriendsSections.ONLINE
 }
 
 function P() {
-  R = v ? new T : R.reset()
+  R = O ? new T : R.reset()
 }
 
 function D(e) {
   return function() {
-    return !v && !!R.update(e) && (R = R.clone(), !0)
+    return !O && !!R.update(e) && (R = R.clone(), !0)
   }
 }
-class y extends l.default.Store {
+class y extends i.default.Store {
   initialize() {
     this.waitFor(h.default, E.default, _.default, f.default, c.default, d.default, u.default), this.syncWith([h.default], P), this.syncWith([u.default], P), this.syncWith([_.default], D(I)), this.syncWith([E.default, d.default], D(S)), M()
   }
@@ -169,7 +169,7 @@ class y extends l.default.Store {
   }
 }
 y.displayName = "FriendsStore";
-var x = new y(i.default, {
+var x = new y(l.default, {
   CONNECTION_OPEN: function() {
     M()
   },
@@ -180,7 +180,7 @@ var x = new y(i.default, {
     let {
       channelId: t
     } = e;
-    return v = null != t, P(), !v
+    return O = null != t, P(), !O
   },
   LOAD_RELATIONSHIPS_SUCCESS: function() {
     A = !1
@@ -192,9 +192,9 @@ var x = new y(i.default, {
     let {
       tab: t
     } = e;
-    return v = t !== C.DrawerTabTypes.FRIENDS, P(), !v
+    return O = t !== C.DrawerTabTypes.FRIENDS, P(), !O
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
-    N = e.section, O = !0
+    N = e.section, v = !0
   }
 })

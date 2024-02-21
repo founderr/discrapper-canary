@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("424973");
 var a = n("37983"),
   s = n("884691"),
-  l = n("446674"),
-  i = n("299285"),
+  i = n("446674"),
+  l = n("299285"),
   r = n("963662"),
   o = n("592407"),
   u = n("524503"),
@@ -19,10 +19,10 @@ var a = n("37983"),
 function h(e) {
   let {
     guild: t
-  } = e, n = (0, d.useUnseenEndedApplicationSubscriptionEntitlements)(t), h = () => (0, u.dismissApplicationSubscriptionExpirationNotice)(t.id), _ = s.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), C = (0, l.useStateFromStoresArray)([i.default], () => {
+  } = e, n = (0, d.useUnseenEndedApplicationSubscriptionEntitlements)(t), h = () => (0, u.dismissApplicationSubscriptionExpirationNotice)(t.id), _ = s.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), C = (0, i.useStateFromStoresArray)([l.default], () => {
     let e = [];
     for (let t of _) {
-      let n = i.default.getApplication(t);
+      let n = l.default.getApplication(t);
       null != n && e.push(n)
     }
     return e

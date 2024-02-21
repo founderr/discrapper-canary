@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("627445"),
   o = n.n(r),
   u = n("394846"),
@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("91639"),
   N = n("128887"),
   R = n("217513"),
-  v = n("430312"),
-  O = n("763866"),
+  O = n("430312"),
+  v = n("763866"),
   L = n("10532"),
   M = n("935409"),
   P = n("845579"),
@@ -69,17 +69,17 @@ let z = [{
 }];
 
 function q(e, t, n, s) {
-  let l = (0, a.jsx)(a.Fragment, {
+  let i = (0, a.jsx)(a.Fragment, {
     children: z.map(s => {
       let {
-        duration: l,
-        label: i
+        duration: i,
+        label: l
       } = s;
       return (0, a.jsx)(f.MenuItem, {
-        id: "".concat(e, "-").concat(l),
-        label: i(),
-        action: () => (0, F.default)(e, t, n, l)
-      }, l)
+        id: "".concat(e, "-").concat(i),
+        label: l(),
+        action: () => (0, F.default)(e, t, n, i)
+      }, i)
     })
   });
   return (0, a.jsx)(f.MenuItem, {
@@ -108,7 +108,7 @@ function q(e, t, n, s) {
       })
     },
     action: () => (0, F.default)(e, t, n),
-    children: e !== V.StatusTypes.ONLINE ? l : void 0
+    children: e !== V.StatusTypes.ONLINE ? i : void 0
   })
 }
 
@@ -144,14 +144,14 @@ function Z(e) {
   let {
     user: t,
     customStatus: n,
-    guildId: l,
+    guildId: i,
     isApplicationStreaming: r,
     onClose: o,
     onSelect: E,
     closePopout: D
   } = e, y = (0, _.useAnalyticsContext)(), {
     AnalyticsLocationProvider: b
-  } = (0, p.default)(m.default.ACCOUNT_PROFILE_POPOUT), w = (0, R.default)(t.id, l), [F, z, Z, X] = (0, d.useStateFromStoresArray)([x.default], () => {
+  } = (0, p.default)(m.default.ACCOUNT_PROFILE_POPOUT), w = (0, R.default)(t.id, i), [F, z, Z, X] = (0, d.useStateFromStoresArray)([x.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, V.StatusTypes.UNKNOWN, !1] : [null !== (e = x.default.findActivity(n, e => e.type !== V.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, x.default.findActivity(t.id, e => e.type === V.ActivityTypes.CUSTOM_STATUS), x.default.getStatus(n), x.default.isMobileOnline(n)]
@@ -160,7 +160,7 @@ function Z(e) {
         location: "account popout"
       }).expiringStatus,
       s = P.StatusExpiresAtSetting.useSetting(),
-      l = t => {
+      i = t => {
         let n = null != s && "0" !== s ? W.default.Messages.STATUS_UNTIL.format({
           endTime: new Date(Number(s)).toLocaleString(W.default.getLocale(), {
             month: "numeric",
@@ -180,7 +180,7 @@ function Z(e) {
         }
       };
     return (0, a.jsxs)(a.Fragment, {
-      children: [Q(V.StatusTypes.ONLINE, e, t), (0, a.jsx)(f.MenuSeparator, {}, "menu-separator-statuses"), n ? q(V.StatusTypes.IDLE, e, t, l(V.StatusTypes.IDLE)) : Q(V.StatusTypes.IDLE, e, t, l(V.StatusTypes.IDLE)), n ? q(V.StatusTypes.DND, e, t, l(V.StatusTypes.DND)) : Q(V.StatusTypes.DND, e, t, l(V.StatusTypes.DND)), n ? q(V.StatusTypes.INVISIBLE, e, t, l(V.StatusTypes.INVISIBLE)) : Q(V.StatusTypes.INVISIBLE, e, t, l(V.StatusTypes.INVISIBLE))]
+      children: [Q(V.StatusTypes.ONLINE, e, t), (0, a.jsx)(f.MenuSeparator, {}, "menu-separator-statuses"), n ? q(V.StatusTypes.IDLE, e, t, i(V.StatusTypes.IDLE)) : Q(V.StatusTypes.IDLE, e, t, i(V.StatusTypes.IDLE)), n ? q(V.StatusTypes.DND, e, t, i(V.StatusTypes.DND)) : Q(V.StatusTypes.DND, e, t, i(V.StatusTypes.DND)), n ? q(V.StatusTypes.INVISIBLE, e, t, i(V.StatusTypes.INVISIBLE)) : Q(V.StatusTypes.INVISIBLE, e, t, i(V.StatusTypes.INVISIBLE))]
     })
   }(Z, y), {
     ref: $
@@ -208,14 +208,14 @@ function Z(e) {
     es = N.QuietModeExperiment.useExperiment({
       location: "account popout"
     }).allowQuietMode,
-    el = P.QuietMode.useSetting(),
-    ei = Z === V.StatusTypes.DND;
+    ei = P.QuietMode.useSetting(),
+    el = Z === V.StatusTypes.DND;
   return (0, a.jsx)(b, {
     children: (0, a.jsx)("div", {
       className: K.popoutContainer,
       children: (0, a.jsx)("div", {
         ref: $,
-        children: (0, a.jsxs)(v.default, {
+        children: (0, a.jsxs)(O.default, {
           user: t,
           profileType: Y.UserProfileTypes.POPOUT,
           children: [(0, a.jsx)(M.default, {
@@ -228,8 +228,8 @@ function Z(e) {
             disableUserProfileLink: __OVERLAY__,
             isHovering: ee,
             showPremiumBadgeUpsell: !1
-          }), (0, a.jsxs)(v.default.Inner, {
-            children: [(0, a.jsx)(O.default, {
+          }), (0, a.jsxs)(O.default.Inner, {
+            children: [(0, a.jsx)(v.default, {
               activity: F,
               customStatusActivity: z,
               displayProfile: w,
@@ -283,7 +283,7 @@ function Z(e) {
                     return (0, a.jsx)(f.Status, {
                       status: Z,
                       size: 12,
-                      className: i(t, K.mainStatusIcon),
+                      className: l(t, K.mainStatusIcon),
                       color: n ? "currentColor" : void 0
                     })
                   },
@@ -293,19 +293,19 @@ function Z(e) {
                   "aria-label": "focus mode",
                   focusedClassName: K.menuItemFocused,
                   showIconFirst: !0,
-                  label: el ? W.default.Messages.QUIET_MODE_ENABLED : ei ? W.default.Messages.QUIET_MODE_DND : W.default.Messages.QUIET_MODE_DISABLED,
+                  label: ei ? W.default.Messages.QUIET_MODE_ENABLED : el ? W.default.Messages.QUIET_MODE_DND : W.default.Messages.QUIET_MODE_DISABLED,
                   icon: e => {
                     let {
                       className: t
                     } = e;
-                    return el || ei ? (0, a.jsx)(c.BellSlashIcon, {
+                    return ei || el ? (0, a.jsx)(c.BellSlashIcon, {
                       width: 18,
                       height: 18,
-                      className: i(t, K.quietModeIcon)
+                      className: l(t, K.quietModeIcon)
                     }) : (0, a.jsx)(U.default, {
                       width: 18,
                       height: 18,
-                      className: i(t, K.quietModeIcon)
+                      className: l(t, K.quietModeIcon)
                     })
                   },
                   action: () => {
@@ -338,8 +338,8 @@ function X(e) {
   let {
     userId: t,
     user: n,
-    guildId: l,
-    onClose: i,
+    guildId: i,
+    onClose: l,
     onSelect: r
   } = e, u = (0, d.useStateFromStores)([b.default], () => b.default.getUser(t), [t]), c = (0, d.useStateFromStores)([y.default], () => y.default.getCustomStatusActivity()), [f, h] = s.useState(!1), _ = null != u ? u : n, C = (0, d.useStateFromStores)([D.default], () => null != _ && null != D.default.getAnyStreamForUser(_.id));
   return (s.useEffect(() => {
@@ -348,12 +348,12 @@ function X(e) {
       "string" == typeof t && (await (0, E.getUser)(t), h(!0))
     }
   }, [u, t]), null == _) ? (f && o(null != _, "Unexpected missing user"), null) : (0, a.jsx)(Z, {
-    closePopout: i,
+    closePopout: l,
     user: _,
     customStatus: c,
-    guildId: l,
+    guildId: i,
     isApplicationStreaming: C,
-    onClose: i,
+    onClose: l,
     onSelect: r
   })
 }

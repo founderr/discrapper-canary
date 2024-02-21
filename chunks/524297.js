@@ -10,12 +10,12 @@ function s(e, t) {
   var n;
   let {
     scope: s,
-    handler: l
-  } = t, i = {
+    handler: i
+  } = t, l = {
     scope: s,
-    handler: l
+    handler: i
   }, r = null === (n = a.RPCCommandSchemas[e]) || void 0 === n ? void 0 : n.request, o = null;
-  return null != r && (i.validation = function(e) {
+  return null != r && (l.validation = function(e) {
     return null == o && (o = r(e)), o
-  }), i
+  }), l
 }

@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   LinkExternalMediumIcon: function() {
-    return i
+    return l
   }
 });
 var a = n("37983");
 n("884691");
 var s = n("669491"),
-  l = n("82169");
-let i = e => {
+  i = n("82169");
+let l = e => {
   let {
     width: t = 24,
     height: n = 24,
-    color: i = s.default.colors.INTERACTIVE_NORMAL,
+    color: l = s.default.colors.INTERACTIVE_NORMAL,
     colorClass: r = "",
     ...o
   } = e;
   return (0, a.jsx)("svg", {
-    ...(0, l.default)(o),
+    ...(0, i.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: n,
     fill: "none",
     viewBox: "0 0 24 24",
     children: (0, a.jsx)("path", {
-      fill: "string" == typeof i ? i : i.css,
+      fill: "string" == typeof l ? l : l.css,
       d: "M7 4a1 1 0 0 0 0 2h9.59L4.29 18.3a1 1 0 1 0 1.42 1.4L18 7.42V17a1 1 0 1 0 2 0V5a1 1 0 0 0-1-1H7Z",
       className: r
     })

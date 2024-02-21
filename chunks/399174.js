@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("424973");
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("458960"),
   o = n("446674"),
   u = n("266491"),
@@ -43,13 +43,13 @@ let g = (0, h.makeLazy)({
     webpackId: "725621",
     name: "GuildSettings"
   }),
-  v = {
+  O = {
     [p.Layers.USER_SETTINGS]: () => (0, a.jsx)(g, {}),
     [p.Layers.CHANNEL_SETTINGS]: () => (0, a.jsx)(A, {}),
     [p.Layers.GUILD_SETTINGS]: () => (0, a.jsx)(R, {}),
     [p.Layers.COLLECTIBLES_SHOP]: () => (0, a.jsx)(N, {})
   },
-  O = "SHOWN",
+  v = "SHOWN",
   L = "HIDDEN",
   M = {
     friction: 10,
@@ -73,8 +73,8 @@ class D extends s.PureComponent {
       mode: n
     } = e;
     if (t !== n) {
-      if (t === O && n === L) return this.animateIn();
-      if (t === L && n === O) return this.animateUnder()
+      if (t === v && n === L) return this.animateIn();
+      if (t === L && n === v) return this.animateUnder()
     }
   }
   componentWillEnter(e) {
@@ -147,17 +147,17 @@ class D extends s.PureComponent {
       mode: t,
       children: n,
       baseLayer: s,
-      ...l
+      ...i
     } = this.props, o = e || t === L ? this.getAnimatedStyle() : null, u = (0, a.jsx)(r.default.div, {
       ref: e => this.containerRef.current = null != e ? e.refs.node : void 0,
       "aria-hidden": t === L,
-      className: i(T.layer, {
+      className: l(T.layer, {
         [T.baseLayer]: s,
         [T.animating]: e,
         "stop-animations": t === L
       }),
       style: o,
-      ...l,
+      ...i,
       children: n
     });
     return s ? u : (0, a.jsx)(d.FocusLock, {
@@ -210,30 +210,30 @@ class y extends s.PureComponent {
       hasFullScreenLayer: n
     } = this.props, {
       length: s
-    } = t, l = [];
-    return l.push((0, a.jsx)(D, {
-      mode: 0 !== s || n ? L : O,
+    } = t, i = [];
+    return i.push((0, a.jsx)(D, {
+      mode: 0 !== s || n ? L : v,
       baseLayer: !0,
       children: e
-    }, "layer-base")), t.forEach((e, t) => l.push(this.renderComponent(e, t, s))), l
+    }, "layer-base")), t.forEach((e, t) => i.push(this.renderComponent(e, t, s))), i
   }
   renderComponent(e, t, n) {
     let s;
-    return s = "string" == typeof e ? v[e]() : (0, a.jsx)(e, {}), (0, a.jsxs)(D, {
-      mode: t === n - 1 ? O : L,
+    return s = "string" == typeof e ? O[e]() : (0, a.jsx)(e, {}), (0, a.jsxs)(D, {
+      mode: t === n - 1 ? v : L,
       children: [(0, a.jsx)(P, {}), s]
     }, "layer-".concat(t))
   }
   renderArtisanalHack() {
     return (0, a.jsx)("div", {
-      className: i(T.bg, (0, m.getThemeClass)(this.props.sidebarTheme))
+      className: l(T.bg, (0, m.getThemeClass)(this.props.sidebarTheme))
     })
   }
   render() {
     return (0, a.jsxs)(a.Fragment, {
       children: [this.renderArtisanalHack(), (0, a.jsx)(u.default, {
         component: "div",
-        className: i(T.layers, this.props.className),
+        className: l(T.layers, this.props.className),
         children: this.renderLayers()
       })]
     })

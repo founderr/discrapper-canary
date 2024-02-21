@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("866227"),
-  i = n.n(l),
+  i = n("866227"),
+  l = n.n(i),
   r = n("850068"),
   o = n("812204"),
   u = n("685665"),
@@ -15,18 +15,18 @@ var a = n("37983"),
   c = n("755574"),
   f = n("782340");
 let E = e => {
-  let [t, n] = s.useState(!1), [a, l] = s.useState(null), i = async t => {
-    n(!0), l(null);
+  let [t, n] = s.useState(!1), [a, i] = s.useState(null), l = async t => {
+    n(!0), i(null);
     try {
       await (0, r.deleteRenewalMutation)(t, e)
     } catch (e) {
-      l(e)
+      i(e)
     } finally {
       n(!1)
     }
   };
   return {
-    resetRenewalMutation: i,
+    resetRenewalMutation: l,
     submitting: t,
     error: a
   }
@@ -36,7 +36,7 @@ function h(e) {
   let {
     groupListingId: t,
     subscription: n,
-    className: l
+    className: i
   } = e, {
     analyticsLocations: r
   } = (0, u.default)(o.default.PENDING_PLAN_CHANGE_NOTICE), {
@@ -63,7 +63,7 @@ function h(e) {
     }
   }, [n, I]);
   if (null == n || null == S || null == m) return null;
-  let p = i(n.currentPeriodEnd).format("MMM DD, YYYY");
+  let p = l(n.currentPeriodEnd).format("MMM DD, YYYY");
   return (0, a.jsx)(c.default, {
     message: f.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_DESCRIPTION.format({
       currentListing: S.name,
@@ -74,6 +74,6 @@ function h(e) {
     onClick: () => h(n),
     submitting: _,
     ctaMessage: f.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_CTA,
-    className: l
+    className: i
   })
 }

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("446674"),
   o = n("669491"),
   u = n("77078"),
@@ -80,7 +80,7 @@ function R(e) {
       })
     })
   }) : (0, a.jsxs)("div", {
-    className: i(A.statusItem, A.customStatusContentIcon),
+    className: l(A.statusItem, A.customStatusContentIcon),
     "aria-label": g.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
     children: [(0, a.jsx)("div", {
       className: A.customEmojiPlaceholder
@@ -91,12 +91,12 @@ function R(e) {
   })
 }
 
-function v(e) {
+function O(e) {
   let {
     focused: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: i(A.statusItem, A.statusItemNoPadding, A.customStatusContentIcon, A.switchAccountsItem),
+    className: l(A.statusItem, A.statusItemNoPadding, A.customStatusContentIcon, A.switchAccountsItem),
     "aria-label": g.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
     children: [(0, a.jsx)(S.default, {
       width: 18,
@@ -109,30 +109,30 @@ function v(e) {
     })]
   })
 }
-let O = e => {
+let v = e => {
   let {
     customStatus: t,
-    onClose: l,
-    analyticsContext: i,
+    onClose: i,
+    analyticsContext: l,
     onSelect: r
   } = e, o = (0, h.useMultiAccountMenuItems)();
   s.useEffect(() => {
     m.default.track(T.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != t,
-      location: i.location
+      location: l.location
     })
   }, []);
   let d = e => {
     (0, f.default)(e, void 0, {
-      location: i.location
+      location: l.location
     })
   };
   return (0, a.jsxs)(u.Menu, {
     navId: "status-picker",
     variant: "fixed",
     "aria-label": g.default.Messages.SET_STATUS,
-    onClose: l,
+    onClose: i,
     onSelect: r,
     children: [(0, a.jsx)(u.MenuItem, {
       id: "online",
@@ -201,7 +201,7 @@ let O = e => {
           } = await n.el("711438").then(n.bind(n, "711438"));
           return t => (0, a.jsx)(e, {
             ...t,
-            sourceAnalyticsContext: i
+            sourceAnalyticsContext: l
           })
         })
       }
@@ -212,7 +212,7 @@ let O = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(v, {
+        return (0, a.jsx)(O, {
           focused: t
         })
       },
@@ -223,7 +223,7 @@ let O = e => {
 var L = (0, d.default)(e => {
   let t = (0, r.useStateFromStores)([C.default], () => C.default.getCustomStatusActivity()),
     n = _.StatusSetting.useSetting();
-  return (0, a.jsx)(O, {
+  return (0, a.jsx)(v, {
     ...e,
     customStatus: t,
     status: n

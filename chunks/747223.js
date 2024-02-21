@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("313619"), n("654714"), n("287168"), n("956660"), n("222007"), n("781738");
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("90915"),
   o = n("394846"),
   u = n("446674"),
@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("564875"),
   N = n("956089"),
   R = n("439932"),
-  v = n("161011"),
-  O = n("756183"),
+  O = n("161011"),
+  v = n("756183"),
   L = n("49111"),
   M = n("586391"),
   P = n("782340"),
@@ -45,16 +45,16 @@ function y() {
 var x = function(e) {
   let {
     initialSection: t
-  } = e, n = (0, r.useLocation)(), l = (0, r.useHistory)();
+  } = e, n = (0, r.useLocation)(), i = (0, r.useHistory)();
   s.useEffect(() => {
     let e = "true" === new URLSearchParams(n.search).get("confirm-age");
     e && c.default.dispatch({
       type: "AGE_GATE_MODAL_OPEN",
       source: M.AgeGateSource.DEEP_LINK_PROMPT
     }).then(() => {
-      l.replace(L.Routes.ME)
+      i.replace(L.Routes.ME)
     })
-  }, [l, n]), s.useEffect(() => {
+  }, [i, n]), s.useEffect(() => {
     f.setHomeLink(L.Routes.FRIENDS), (0, m.trackAppUIViewed)("friends")
   }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
@@ -128,7 +128,7 @@ var x = function(e) {
           children: P.default.Messages.BLOCKED
         }), (0, a.jsx)(d.TabBar.Item, {
           "aria-label": P.default.Messages.FRIENDS_SECTION_ADD_FRIEND,
-          className: i(D.item, D.addFriend),
+          className: l(D.item, D.addFriend),
           id: L.FriendsSections.ADD_FRIEND,
           children: (0, a.jsx)("span", {
             children: P.default.Messages.FRIENDS_SECTION_ADD_FRIEND
@@ -141,7 +141,7 @@ var x = function(e) {
         id: x,
         className: D.peopleColumn,
         "aria-labelledby": j,
-        children: x === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(v.default, {}) : (0, a.jsx)(O.default, {
+        children: x === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(O.default, {}) : (0, a.jsx)(v.default, {
           titleId: j,
           sectionFilter: x
         })

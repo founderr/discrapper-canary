@@ -35,7 +35,7 @@ let A = {
     "layers[3].shapes[0].it[1].c.k": [1, .466666668653, .972549021244]
   };
 
-function v(e, t, n) {
+function O(e, t, n) {
   for (let a in t) {
     let s = t[a],
       i = o.get(e, a);
@@ -44,19 +44,19 @@ function v(e, t, n) {
     o.set(e, a, l)
   }
 }
-let O = new Map;
+let v = new Map;
 async function L(e, t) {
-  let a = O.get(e);
+  let a = v.get(e);
   if (null != a) return a;
   let s = (await n.el("723469").then(n.t.bind(n, "723469", 19))).default;
-  return v(s, A, t), O.set(e, s), s
+  return O(s, A, t), v.set(e, s), s
 }
 let M = new Map;
 async function P(e, t) {
   let a = M.get(e);
   if (null != a) return a;
   let s = (await n.el("479580").then(n.t.bind(n, "479580", 19))).default;
-  return v(s, R, t), M.set(e, s), s
+  return O(s, R, t), M.set(e, s), s
 }
 
 function D(e) {
@@ -72,8 +72,8 @@ var y = function() {
     o = (0, d.useStateFromStores)([C.default], () => (0, S.getQuestForTargetedContent)(C.default.quests, I.QuestContent.QUEST_BAR)),
     A = (0, d.useStateFromStores)([f.default], () => f.default.isFocused()),
     R = !r && A,
-    v = s.useRef(-1),
-    O = s.useRef(!1),
+    O = s.useRef(-1),
+    v = s.useRef(!1),
     [M, y] = s.useState(!1),
     [x, b] = s.useState(!1),
     [U, G] = s.useState(!1),
@@ -109,24 +109,24 @@ var y = function() {
       y(!0)
     }, []),
     $ = s.useCallback(() => {
-      y(!1), !O.current && !K && G(!1)
+      y(!1), !v.current && !K && G(!1)
     }, [K]),
     ee = s.useCallback(() => {
-      y(!1), G(!1), O.current = !1
+      y(!1), G(!1), v.current = !1
     }, []),
     et = s.useCallback(() => {
-      window.clearTimeout(v.current), V.current = !0, b(!1), X()
+      window.clearTimeout(O.current), V.current = !0, b(!1), X()
     }, [X]),
     en = s.useCallback(() => {
-      if (!K) !M && (v.current = window.setTimeout(() => {
-        !O.current && G(!1)
+      if (!K) !M && (O.current = window.setTimeout(() => {
+        !v.current && G(!1)
       }, 200))
     }, [M, K]),
     ea = s.useCallback(() => {
-      O.current = !0, et()
+      v.current = !0, et()
     }, [et]),
     es = s.useCallback(() => {
-      O.current = !1, en()
+      v.current = !1, en()
     }, [en]),
     ei = s.useCallback(() => {
       V.current = !0

@@ -17,13 +17,13 @@ var a = n("37983"),
   h = n("506885"),
   C = n("233069"),
   p = n("923959"),
-  m = n("957255"),
-  E = n("697218"),
+  E = n("957255"),
+  m = n("697218"),
   g = n("158998"),
   S = n("19846"),
   _ = n("172554"),
-  A = n("172643"),
-  T = n("710357"),
+  T = n("172643"),
+  A = n("710357"),
   M = n("931922"),
   I = n("582724"),
   N = n("834744"),
@@ -39,7 +39,7 @@ function O(e) {
     channel: n
   } = e, s = t && (0, u.isPrivateGuildChannel)(n), i = (0, l.useStateFromStores)([p.default], () => null != n.guild_id && n === p.default.getDefaultChannel(n.guild_id), [n]), r = (0, d.default)(n.id);
   if (r) return null;
-  if (n.isForumPost()) return (0, a.jsx)(A.default, {
+  if (n.isForumPost()) return (0, a.jsx)(T.default, {
     channel: n
   });
   if (C.THREAD_CHANNEL_TYPES.has(n.type)) return (0, a.jsx)(v.default, {
@@ -63,12 +63,12 @@ function D(e) {
     showingBanner: u
   } = e, d = (0, o.default)(n), {
     type: C
-  } = n, p = (0, l.useStateFromStores)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), A = g.default.useUserTag(p), {
+  } = n, p = (0, l.useStateFromStores)([m.default], () => n.isPrivate() ? m.default.getUser(n.getRecipientId()) : null), T = g.default.useUserTag(p), {
     canManageRoles: M,
     canReadMessageHistory: N
-  } = (0, l.useStateFromStoresObject)([m.default], () => ({
-    canManageRoles: m.default.can(R.Permissions.MANAGE_ROLES, n),
-    canReadMessageHistory: m.default.can(R.Permissions.READ_MESSAGE_HISTORY, n)
+  } = (0, l.useStateFromStoresObject)([E.default], () => ({
+    canManageRoles: E.default.can(R.Permissions.MANAGE_ROLES, n),
+    canReadMessageHistory: E.default.can(R.Permissions.READ_MESSAGE_HISTORY, n)
   })), v = (0, l.useStateFromStores)([f.default], () => C === R.ChannelTypes.DM ? f.default.getMutualGuilds(n.getRecipientId()) : null, [n, C]), {
     systemDMRedesignEnabled: L
   } = c.default.useExperiment({
@@ -82,17 +82,17 @@ function D(e) {
       }))
     }, [v, C, n, p]), n.isSystemDM()) return L ? (0, a.jsx)(I.default, {
     channel: n
-  }) : (0, a.jsx)(T.default, {
+  }) : (0, a.jsx)(A.default, {
     channel: n,
     children: x.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
   });
-  if (C === R.ChannelTypes.DM) return (0, a.jsxs)(T.default, {
+  if (C === R.ChannelTypes.DM) return (0, a.jsxs)(A.default, {
     channel: n,
     user: p,
     children: [null != p && (0, a.jsx)(i.Heading, {
       variant: "heading-xl/medium",
       className: y.marginBottom20,
-      children: A
+      children: T
     }), x.default.Messages.BEGINNING_DM.format({
       username: d
     }), (0, a.jsx)(S.default, {
@@ -110,7 +110,7 @@ function D(e) {
     }), (0, a.jsx)(_.EmptyMessageBody, {
       children: x.default.Messages.BEGINNING_GROUP_DM_MANAGED
     })]
-  }) : (0, a.jsx)(T.default, {
+  }) : (0, a.jsx)(A.default, {
     channel: n,
     children: x.default.Messages.BEGINNING_GROUP_DM.format({
       name: d

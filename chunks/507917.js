@@ -7,17 +7,17 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("151426"),
-  l = n("369964"),
-  i = n("38766"),
+  i = n("369964"),
+  l = n("38766"),
   r = n("397336"),
   o = n("782340"),
   u = n("181456");
 
 function d() {
-  let e = (0, i.default)({
+  let e = (0, l.default)({
     scrollPosition: r.ProfileCustomizationScrollPositions.TRY_IT_OUT
   });
-  return (0, a.jsx)(l.default, {
+  return (0, a.jsx)(i.default, {
     isPremiumFeature: !0,
     shouldUseHorizontalButtons: !0,
     inlineArt: !0,

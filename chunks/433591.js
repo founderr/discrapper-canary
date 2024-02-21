@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return O
   }
 });
 var a = n("37983"),
   s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  i = n("414456"),
+  l = n.n(i),
   r = n("355262"),
   o = n("432710"),
   u = n("77078"),
@@ -28,13 +28,13 @@ var a = n("37983"),
   N = n("782340"),
   R = n("451482");
 
-function v() {
+function O() {
   let e = s.useRef(null),
     t = (0, S.default)(),
     n = (0, m.useSpamMessageRequestCount)(),
-    l = (0, _.useListHasSingleSpamMessageRequest)(),
-    v = (0, d.useIsRejectAllMessageRequestsEnabled)(),
-    O = (0, c.default)("message-requests-spam-list"),
+    i = (0, _.useListHasSingleSpamMessageRequest)(),
+    O = (0, d.useIsRejectAllMessageRequestsEnabled)(),
+    v = (0, c.default)("message-requests-spam-list"),
     {
       channelId: L
     } = (0, I.useMessageRequestSidebarState)(),
@@ -64,20 +64,20 @@ function v() {
       } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
       return (0, a.jsx)(T.default, {
         index: r,
-        className: i({
+        className: l({
           [R.selected]: null != L && L === d,
           [R.siblingSelected]: null != L && L === u
         }),
         channel: o.channel,
         user: o.user,
-        hasSingleMessageRequest: l
+        hasSingleMessageRequest: i
       }, d)
-    }, [t, l, L]),
+    }, [t, i, L]),
     x = s.useCallback(() => (0, a.jsxs)(E.default, {
       className: R.sectionTitle,
       children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: n
-      }), v && n > 0 ? (0, a.jsxs)(a.Fragment, {
+      }), O && n > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.Text, {
           className: R.titleDivider,
           variant: "eyebrow",
@@ -94,21 +94,21 @@ function v() {
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, D, v]);
+    }, "message-requests-spam-title"), [n, D, O]);
   return 0 === t.length ? (0, a.jsx)(p.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
-    navigator: O,
+    navigator: v,
     children: (0, a.jsx)(r.ListNavigatorContainer, {
       children: n => {
         let {
           ref: s,
-          role: l,
-          ...i
+          role: i,
+          ...l
         } = n;
         return (0, a.jsx)(u.List, {
           className: R.list,
-          innerRole: l,
+          innerRole: i,
           innerAriaLabel: N.default.Messages.MESSAGE_REQUESTS,
           ref: t => {
             var n;
@@ -123,7 +123,7 @@ function v() {
           sections: [t.length],
           chunkSize: 30,
           fade: !0,
-          ...i
+          ...l
         }, "message-requests-spam-list")
       }
     })

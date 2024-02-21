@@ -6,15 +6,15 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("913144"),
   s = n("629109"),
-  l = n("990766"),
-  i = n("316272"),
+  i = n("990766"),
+  l = n("316272"),
   r = n("374014"),
   o = n("373469"),
   u = n("271938"),
   d = n("42203"),
   c = n("42887"),
   f = n("808422");
-class E extends i.default {
+class E extends l.default {
   _initialize() {
     a.default.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
@@ -36,7 +36,7 @@ class E extends i.default {
       })
     }, this.handleStopStream = e => {
       let t = o.default.getActiveStreamForUser(e.userId, e.guildId);
-      null != t && (0, l.stopStream)((0, r.encodeStreamKey)(t), !1)
+      null != t && (0, i.stopStream)((0, r.encodeStreamKey)(t), !1)
     }, this.handleStopUserVideo = () => {
       c.default.isVideoEnabled() && s.default.setVideoEnabled(!1)
     }

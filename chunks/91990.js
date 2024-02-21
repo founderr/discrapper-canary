@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("913144"),
   s = n("316272"),
-  l = n("189293");
-class i extends s.default {
+  i = n("189293");
+class l extends s.default {
   _initialize() {
     a.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen)
   }
@@ -16,8 +16,8 @@ class i extends s.default {
   }
   constructor(...e) {
     super(...e), this.handleConnectionOpen = () => {
-      (0, l.fetchUserProfileEffects)()
+      (0, i.fetchUserProfileEffects)()
     }
   }
 }
-var r = new i
+var r = new l

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  l = n("522632"),
-  i = n("77078"),
+  i = n("522632"),
+  l = n("77078"),
   r = n("393414");
 class o extends s.PureComponent {
   componentDidUpdate(e) {
@@ -25,11 +25,11 @@ class o extends s.PureComponent {
       maxVisiblePages: n,
       children: s
     } = this.props, {
-      currentPage: l
-    } = this.state, r = (0, a.jsx)(i.Paginator, {
+      currentPage: i
+    } = this.state, r = (0, a.jsx)(l.Paginator, {
       totalCount: e,
       pageSize: t,
-      currentPage: l,
+      currentPage: i,
       maxVisiblePages: n,
       onPageChange: this.handlePageChange
     });
@@ -51,10 +51,10 @@ class o extends s.PureComponent {
       a = null != n && n.length > 0 && n.startsWith("?"),
       {
         offset: s
-      } = a ? l.parse(n) : {},
-      i = null != s ? Math.floor(parseInt(s, 10) / e.pageSize) + 1 : 1;
+      } = a ? i.parse(n) : {},
+      l = null != s ? Math.floor(parseInt(s, 10) / e.pageSize) + 1 : 1;
     this.state = {
-      currentPage: i
+      currentPage: l
     }
   }
 }

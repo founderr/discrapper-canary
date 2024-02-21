@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  l = n("629109"),
-  i = n("990766"),
+  i = n("629109"),
+  l = n("990766"),
   r = n("161454"),
   o = n("375202"),
   u = n("727284"),
@@ -28,7 +28,7 @@ var s = n("77078"),
       handler() {
         let e = c.default.isVideoEnabled(),
           t = (0, _.default)();
-        null != t && (e ? l.default.setVideoEnabled(!1) : (0, u.default)(() => l.default.setVideoEnabled(!0), I.AppContext.APP))
+        null != t && (e ? i.default.setVideoEnabled(!1) : (0, u.default)(() => i.default.setVideoEnabled(!0), I.AppContext.APP))
       }
     },
     [I.RPCCommands.TOGGLE_SCREENSHARE]: {
@@ -43,12 +43,12 @@ var s = n("77078"),
           args: {
             pid: t
           }
-        } = e, l = d.default.getCurrentUserActiveStream(), u = d.default.getStreamerActiveStreamMetadata(), c = (0, o.default)(r.default, f.default), h = (0, _.default)();
-        null != h && (null != t && null != u && u.pid !== t && (0, E.isWindows)() ? (0, i.startStream)(h.guild_id, h.id, {
+        } = e, i = d.default.getCurrentUserActiveStream(), u = d.default.getStreamerActiveStreamMetadata(), c = (0, o.default)(r.default, f.default), h = (0, _.default)();
+        null != h && (null != t && null != u && u.pid !== t && (0, E.isWindows)() ? (0, l.startStream)(h.guild_id, h.id, {
           pid: t
-        }) : null != l ? (0, i.stopOwnStream)(!1) : null != t && (0, E.isWindows)() ? (0, i.startStream)(h.guild_id, h.id, {
+        }) : null != i ? (0, l.stopOwnStream)(!1) : null != t && (0, E.isWindows)() ? (0, l.startStream)(h.guild_id, h.id, {
           pid: t
-        }) : null != c ? (0, i.startStream)(h.guild_id, h.id, {
+        }) : null != c ? (0, l.startStream)(h.guild_id, h.id, {
           pid: c.pid
         }) : (0, s.openModalLazy)(async () => {
           let {

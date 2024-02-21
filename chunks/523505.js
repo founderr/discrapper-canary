@@ -31,7 +31,7 @@ function f(e) {
     body: f,
     hint: h,
     colorScheme: p,
-    notifType: E
+    notifType: g
   } = function(e, t) {
     if (t.type === r.OverlayNudgeTypes.NEWS) {
       var n, i, a, l, o, d, u, c;
@@ -46,10 +46,10 @@ function f(e) {
     }
     return e
   }(u(), e), {
-    trackView: g,
-    trackClick: m
-  } = (0, o.makeAnalyticsTrackers)(E, {
-    notif_type: E
+    trackView: m,
+    trackClick: E
+  } = (0, o.makeAnalyticsTrackers)(g, {
+    notif_type: g
   });
   return {
     colorScheme: p,
@@ -65,13 +65,13 @@ function f(e) {
       children: d.default.Messages.OVERLAY_CLICK_TO_UNLOCK
     }),
     onNotificationShow: () => {
-      g()
+      m()
     },
     onNotificationClick: (e, n) => {
-      m("unlock"), t === r.OverlayNudgeTypes.NEWS && a.default.updateNotificationStatus(n), l.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
+      E("unlock"), t === r.OverlayNudgeTypes.NEWS && a.default.updateNotificationStatus(n), l.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
     },
     onDismissClick: () => {
-      m("dismiss")
+      E("dismiss")
     }
   }
 }

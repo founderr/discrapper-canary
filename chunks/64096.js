@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return T
+    return A
   }
 }), n("424973");
 var a, s, l = n("871388"),
@@ -18,20 +18,20 @@ var a, s, l = n("871388"),
   h = n("407535"),
   C = n("824326"),
   p = n("616225"),
-  m = n("777987"),
-  E = n("82636"),
+  E = n("777987"),
+  m = n("82636"),
   g = n("12724"),
   S = n("654276"),
   _ = n("49111"),
-  A = n("782340");
+  T = n("782340");
 
-function T(e) {
+function A(e) {
   let {
     canAttachFiles: t,
     canStartThreads: n,
     useSlate: a,
     canUseApplicationCommands: s,
-    hasClips: T,
+    hasClips: A,
     channel: M,
     activities: I,
     newClipsCount: N,
@@ -42,38 +42,38 @@ function T(e) {
   return t && (x.push({
     type: "UPLOAD_A_FILE",
     icon: h.default,
-    display: A.default.Messages.CHAT_ATTACH_UPLOAD_A_FILE
+    display: T.default.Messages.CHAT_ATTACH_UPLOAD_A_FILE
   }), x.push({
     type: "UPLOAD_TEXT_AS_FILE",
     icon: g.default,
-    display: A.default.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
-  })), T && t && R !== _.AppContext.POPOUT && x.push({
+    display: T.default.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
+  })), A && t && R !== _.AppContext.POPOUT && x.push({
     type: "CLIPS",
     icon: c.default,
-    display: A.default.Messages.CLIPS_SHARE_A_CLIP,
+    display: T.default.Messages.CLIPS_SHARE_A_CLIP,
     badgeVal: N,
     badgeColor: r.default.BG_BRAND
   }), n && x.push({
     type: "CREATE_THREAD",
     icon: S.default,
-    display: A.default.Messages.CREATE_THREAD
+    display: T.default.Messages.CREATE_THREAD
   }), v && x.push({
     type: "POLL",
-    icon: m.default,
-    display: A.default.Messages.CREATE_POLL
+    icon: E.default,
+    display: T.default.Messages.CREATE_POLL
   }), a && s && x.push({
     type: "SLASH_COMMAND",
     icon: d.default,
-    display: A.default.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
+    display: T.default.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
   }), L && x.push({
     type: "ACTIVITY",
-    icon: E.default,
-    display: A.default.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL
+    icon: m.default,
+    display: T.default.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL
   }), I.forEach(e => {
     !(0, l.default)(e, _.ActivityFlags.EMBEDDED) && (e.type === _.ActivityTypes.PLAYING && (0, l.default)(e, _.ActivityFlags.JOIN) && x.push({
       type: "INVITE_TO_GAME",
       icon: C.default,
-      display: A.default.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
+      display: T.default.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
         channel: (0, i.computeChannelName)(M, u.default, o.default, !0),
         game: null != e ? e.name : ""
       }),
@@ -81,7 +81,7 @@ function T(e) {
     }), e.type === _.ActivityTypes.LISTENING && (0, l.default)(e, _.ActivityFlags.SYNC) && x.push({
       type: "INVITE_TO_LISTEN",
       icon: p.default,
-      display: A.default.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
+      display: T.default.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
         channel: (0, i.computeChannelName)(M, u.default, o.default, !0),
         name: null != e ? e.name : ""
       }),
@@ -89,7 +89,7 @@ function T(e) {
     }), e.type === _.ActivityTypes.WATCHING && (0, l.default)(e, _.ActivityFlags.SYNC) && x.push({
       type: "INVITE_TO_WATCH",
       icon: f.default,
-      display: A.default.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({
+      display: T.default.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({
         channel: (0, i.computeChannelName)(M, u.default, o.default, !0),
         name: null != e ? e.name : ""
       }),

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("476042"),
-  o = n("907002"),
-  u = n("974667"),
+  u = n("907002"),
+  o = n("974667"),
   d = n("769846"),
   c = n("452804"),
   f = n("677099"),
@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("363887"),
   E = n("472942"),
   g = n("492950"),
-  S = n("610898"),
-  I = n("829562"),
-  _ = n("782340"),
+  I = n("610898"),
+  _ = n("829562"),
+  S = n("782340"),
   N = n("849831"),
   T = n("99725");
 let A = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
@@ -57,8 +57,8 @@ function x(e) {
     D && k(!1)
   }, [D]);
   let [{
-    dragging: Z
-  }, z] = (0, r.useDrag)({
+    dragging: z
+  }, Z] = (0, r.useDrag)({
     type: p.GuildsNodeType.FOLDER,
     item: () => (null == b || b(), {
       type: p.GuildsNodeType.FOLDER,
@@ -74,7 +74,7 @@ function x(e) {
     K(e)
   }, []), Q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && G()
-  }, [G, d]), q = null != B && "" !== B ? B : null != M && "" !== M ? M : _.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
+  }, [G, d]), J = null != B && "" !== B ? B : null != M && "" !== M ? M : S.default.Messages.SERVER_FOLDER_PLACEHOLDER, q = (0, o.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, u.useTransition)(!z && d, {
     from: {
       height: 0
     },
@@ -87,43 +87,43 @@ function x(e) {
     config: {
       duration: A
     }
-  }), en = a.useCallback(e => null == n ? void 0 : n(F, e), [n, F]), el = (0, l.jsxs)(S.ListItem, {
+  }), en = a.useCallback(e => null == n ? void 0 : n(F, e), [n, F]), el = (0, l.jsxs)(I.ListItem, {
     children: [(0, l.jsx)(h.default, {
-      disabled: Z || d,
+      disabled: z || d,
       hovered: H,
       selected: s,
       unread: R,
       className: T.pill
-    }), (0, l.jsx)(I.default, {
-      text: q,
+    }), (0, l.jsx)(_.default, {
+      text: J,
       disabled: D,
       selected: s,
       disableWrapper: !0,
       children: (0, l.jsx)("div", {
-        ref: y ? z : void 0,
+        ref: y ? Z : void 0,
         className: i({
-          [T.wobble]: !Z && Y && !d
+          [T.wobble]: !z && Y && !d
         }),
-        "data-dnd-name": q,
-        children: Z ? (0, l.jsx)(g.default, {}) : (0, l.jsx)(m.default, {
+        "data-dnd-name": J,
+        children: z ? (0, l.jsx)(g.default, {}) : (0, l.jsx)(m.default, {
           folderNode: t,
           expanded: d,
           forceCircular: O,
           sorting: D,
           mediaState: C,
           mentionCount: x,
-          tooltipName: q,
+          tooltipName: J,
           folderGroupId: $,
           onClick: G,
           onContextMenu: U,
           onHoverChange: k,
           onKeyDown: Q,
-          treeItemProps: J,
+          treeItemProps: q,
           folderIconContent: w
         })
       })
     }), y ? (0, l.jsx)(E.default, {
-      name: q,
+      name: J,
       targetNode: t,
       onDragOverChanged: X
     }) : null]
@@ -131,7 +131,7 @@ function x(e) {
   return (0, l.jsxs)("div", {
     ref: en,
     className: N.wrapper,
-    children: [!Z && (0, l.jsx)("span", {
+    children: [!z && (0, l.jsx)("span", {
       className: i(N.expandedFolderBackground, {
         [N.collapsed]: !d,
         [N.hover]: W
@@ -140,7 +140,7 @@ function x(e) {
       let {
         key: a
       } = n;
-      return t && (0, l.jsx)(o.animated.ul, {
+      return t && (0, l.jsx)(u.animated.ul, {
         id: $,
         style: {
           height: e.height.to(e => e * ee)
@@ -150,7 +150,7 @@ function x(e) {
         children: V.map(P)
       }, a)
     }), y && d ? (0, l.jsx)(E.FolderEndDropTarget, {
-      name: q,
+      name: J,
       targetNode: t
     }) : null]
   })

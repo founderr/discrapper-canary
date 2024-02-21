@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("759843"),
-  i = n("65597"),
+  i = n("759843"),
+  l = n("65597"),
   r = n("77078"),
   o = n("327037"),
   u = n("428958"),
@@ -20,7 +20,7 @@ var a = n("37983"),
 function _(e) {
   let {
     transitionState: t
-  } = e, _ = (0, i.default)([d.default], () => d.default.getAction()), [C, I] = s.useState(!1), S = (0, c.useUID)();
+  } = e, _ = (0, l.default)([d.default], () => d.default.getAction()), [C, I] = s.useState(!1), S = (0, c.useUID)();
   async function m() {
     if (I(!0), _ === f.UserRequiredActions.AGREEMENTS) {
       let e = await (0, o.acceptAgreements)();
@@ -29,8 +29,8 @@ function _(e) {
     return null
   }
   return (0, u.default)({
-    type: l.ImpressionTypes.VIEW,
-    name: l.ImpressionNames.USER_AGREEMENTS,
+    type: i.ImpressionTypes.VIEW,
+    name: i.ImpressionNames.USER_AGREEMENTS,
     properties: {
       required_action: _
     }

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("702976");
 var a = n("65597"),
   s = n("42203"),
-  l = n("26989"),
-  i = n("305961"),
+  i = n("26989"),
+  l = n("305961"),
   r = n("568734"),
   o = n("698882"),
   u = n("675305"),
@@ -16,14 +16,14 @@ var a = n("65597"),
   f = n("657944");
 
 function E(e, t) {
-  let n = (0, a.default)([i.default], () => i.default.getGuild(e)),
+  let n = (0, a.default)([l.default], () => l.default.getGuild(e)),
     E = (0, a.default)([s.default], () => s.default.getChannel(t)),
-    h = (0, a.default)([l.default], () => null == e ? null : l.default.getSelfMember(e)),
+    h = (0, a.default)([i.default], () => null == e ? null : i.default.getSelfMember(e)),
     {
       showOnboardingHome: _
     } = (0, d.useOnboardingHomeExperiment)(n, h);
-  return (0, a.default)([u.default, o.default, l.default], () => {
+  return (0, a.default)([u.default, o.default, i.default], () => {
     var e, t;
-    return null != n && null != E && _ && n.hasFeature(c.GuildFeatures.GUILD_SERVER_GUIDE) && !r.hasFlag(null !== (t = null === (e = l.default.getSelfMember(n.id)) || void 0 === e ? void 0 : e.flags) && void 0 !== t ? t : 0, f.GuildMemberFlags.COMPLETED_HOME_ACTIONS) && o.default.hasMemberAction(n.id, E.id) && !u.default.hasCompletedActionForChannel(n.id, E.id)
+    return null != n && null != E && _ && n.hasFeature(c.GuildFeatures.GUILD_SERVER_GUIDE) && !r.hasFlag(null !== (t = null === (e = i.default.getSelfMember(n.id)) || void 0 === e ? void 0 : e.flags) && void 0 !== t ? t : 0, f.GuildMemberFlags.COMPLETED_HOME_ACTIONS) && o.default.hasMemberAction(n.id, E.id) && !u.default.hasCompletedActionForChannel(n.id, E.id)
   })
 }

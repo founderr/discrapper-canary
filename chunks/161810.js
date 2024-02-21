@@ -1,12 +1,12 @@
 "use strict";
-let a, s, l;
+let a, s, i;
 n.r(t), n.d(t, {
   default: function() {
     return L
   }
 }), n("424973"), n("222007");
-var i = n("917351"),
-  r = n.n(i),
+var l = n("917351"),
+  r = n.n(l),
   o = n("446674"),
   u = n("913144"),
   d = n("611183"),
@@ -31,7 +31,7 @@ function A() {
   m = _.FormStates.OPEN, p = {}, T = !1
 }
 let N = r.debounce(() => {
-  T && ((null == I || r.isEqual(I, R(I.id))) && (T = !1), !T && O.emitChange())
+  T && ((null == I || r.isEqual(I, R(I.id))) && (T = !1), !T && v.emitChange())
 }, 500);
 
 function R(e) {
@@ -42,7 +42,7 @@ function R(e) {
     return n === e
   })
 }
-class v extends o.default.Store {
+class O extends o.default.Store {
   initialize() {
     this.waitFor(c.default, f.default, h.default, E.default)
   }
@@ -69,7 +69,7 @@ class v extends o.default.Store {
       submitting: m === _.FormStates.SUBMITTING,
       webhooks: C,
       editedWebhook: I,
-      section: l,
+      section: i,
       sectionId: g,
       hasChanges: this.hasChanges(),
       isFetching: S,
@@ -77,8 +77,8 @@ class v extends o.default.Store {
     }
   }
 }
-v.displayName = "ChannelSettingsIntegrationsStore";
-let O = new v(u.default, __OVERLAY__ ? {} : {
+O.displayName = "ChannelSettingsIntegrationsStore";
+let v = new O(u.default, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_INIT: A,
   INTEGRATION_SETTINGS_SAVE_SUCCESS: A,
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
@@ -86,7 +86,7 @@ let O = new v(u.default, __OVERLAY__ ? {} : {
       section: t
     } = e;
     if (t !== _.ChannelSettingsSections.INTEGRATIONS) return !1;
-    if (l = _.IntegrationSettingsSections.OVERVIEW, null == a) {
+    if (i = _.IntegrationSettingsSections.OVERVIEW, null == a) {
       let e = c.default.getChannel(),
         t = null == e ? void 0 : e.getGuildId();
       null != e && null != t && (d.default.fetchForChannel(t, e.id), S = !0), A()
@@ -97,7 +97,7 @@ let O = new v(u.default, __OVERLAY__ ? {} : {
       section: t,
       sectionId: n
     } = e;
-    l = t, g = n
+    i = t, g = n
   },
   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
     let {
@@ -125,14 +125,14 @@ let O = new v(u.default, __OVERLAY__ ? {} : {
     let {
       guildId: t,
       channelId: n,
-      webhooks: l
+      webhooks: i
     } = e;
-    if (null == a || t !== a.id || null == s || n !== s.id || null == l || m === _.FormStates.SUBMITTING) return !1;
+    if (null == a || t !== a.id || null == s || n !== s.id || null == i || m === _.FormStates.SUBMITTING) return !1;
     S = !1;
     for (let e = C.length - 1; e >= 0; e--) {
       let t = C[e];
       if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
-      let a = l.find(e => {
+      let a = i.find(e => {
         let {
           id: n
         } = e;
@@ -146,7 +146,7 @@ let O = new v(u.default, __OVERLAY__ ? {} : {
         C[e] = n, !T && (null == I ? void 0 : I.id) === n.id && (I = n)
       } else(null == I ? void 0 : I.id) === t.id && (I = null), C.splice(e, 1)
     }
-    for (let e of l) {
+    for (let e of i) {
       let t = C.find(t => {
         let {
           id: n
@@ -166,4 +166,4 @@ let O = new v(u.default, __OVERLAY__ ? {} : {
     m = _.FormStates.OPEN, p = null !== (t = e.errors) && void 0 !== t ? t : {}
   }
 });
-var L = O
+var L = v

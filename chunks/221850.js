@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("524297"),
-  l = n("77078"),
-  i = n("260365"),
+  i = n("77078"),
+  l = n("260365"),
   r = n("636974"),
   o = n("823411"),
   u = n("267363"),
@@ -28,33 +28,33 @@ var s = n("524297"),
   A = n("563680"),
   N = n("861309"),
   R = n("578287"),
-  v = n("716724"),
-  O = n("613652"),
+  O = n("716724"),
+  v = n("613652"),
   L = n("207873"),
   M = n("56245"),
   P = n("492249"),
   D = n("49111");
 async function y(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-    l = I.default.getApplicationActivity(t);
-  if (null == l || null == l.secrets || !(0, R.validateActivityInvite)(a, l.party, l.secrets)) throw new N.default({
+    i = I.default.getApplicationActivity(t);
+  if (null == i || null == i.secrets || !(0, R.validateActivityInvite)(a, i.party, i.secrets)) throw new N.default({
     errorCode: D.RPCErrors.NO_ELIGIBLE_ACTIVITY
   }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
-  let o = (0, E.default)(l, S.default);
+  let o = (0, E.default)(i, S.default);
   if (o) {
     let {
       lock: t
     } = (0, M.unlockOverlay)(e);
-    return (0, r.openModal)(l, o).then(() => {
+    return (0, r.openModal)(i, o).then(() => {
       throw t(), new N.default({
         errorCode: D.RPCErrors.NO_ELIGIBLE_ACTIVITY
       }, "No eligible activity for application. Ensure user does have have privacy enabled.")
     })
   }
-  await i.default.sendActivityInviteUser({
+  await l.default.sendActivityInviteUser({
     userId: n,
     type: a,
-    activity: l,
+    activity: i,
     content: s,
     location: "In-Game Invite"
   })
@@ -95,7 +95,7 @@ var x = {
     scope: {
       [P.RPC_SCOPE_CONFIG.ANY]: [D.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, v.default)(e).required().keys({
+    validation: e => (0, O.default)(e).required().keys({
       user_id: e.string().required(),
       type: e.number().required().valid([D.ActivityActionTypes.JOIN]),
       content: e.string().min(0).max(1024),
@@ -108,20 +108,20 @@ var x = {
           type: n,
           user_id: a,
           content: s,
-          pid: l
+          pid: i
         }
-      } = e, i = t.application.id;
-      if (null == i) throw new N.default({
+      } = e, l = t.application.id;
+      if (null == l) throw new N.default({
         errorCode: D.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      return y(l, i, a, n, s)
+      return y(i, l, a, n, s)
     }
   },
   [D.RPCCommands.ACCEPT_ACTIVITY_INVITE]: {
     scope: {
       [P.RPC_SCOPE_CONFIG.ANY]: [D.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, v.default)(e).required().keys({
+    validation: e => (0, O.default)(e).required().keys({
       type: e.number().required().valid([D.ActivityActionTypes.JOIN]),
       user_id: e.string().required(),
       session_id: e.string().required(),
@@ -135,8 +135,8 @@ var x = {
           type: n,
           user_id: a,
           session_id: s,
-          channel_id: l,
-          message_id: i
+          channel_id: i,
+          message_id: l
         }
       } = e, r = t.application.id;
       if (null == r) throw new N.default({
@@ -147,8 +147,8 @@ var x = {
         userId: a,
         sessionId: s,
         applicationId: r,
-        channelId: l,
-        messageId: i
+        channelId: i,
+        messageId: l
       });
       return u.then(e => {
         if (!e) throw new N.default({
@@ -166,24 +166,24 @@ var x = {
         socket: t
       } = e, {
         channel: s,
-        guild: i
+        guild: l
       } = (0, L.validateOpenInviteDialog)(), r = _.default.getWindow(D.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
       (null == r ? void 0 : r.closed) && (r = null);
       let o = null != r ? D.AppContext.POPOUT : D.AppContext.APP;
-      (0, A.exitFullScreen)({}, null == r ? void 0 : r.document), (0, l.openModalLazy)(async () => {
+      (0, A.exitFullScreen)({}, null == r ? void 0 : r.document), (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("310688").then(n.bind(n, "310688"));
         return n => (0, a.jsx)(e, {
           ...n,
-          guild: i,
+          guild: l,
           channel: s,
           applicationId: t.application.id,
           analyticsLocation: D.AnalyticsLocations.ACTIVITY_RPC,
           source: D.InstantInviteSources.ACTIVITY_INVITE
         })
       }, {
-        contextKey: o === D.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT
+        contextKey: o === D.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
       })
     }
   },
@@ -199,7 +199,7 @@ var x = {
       if (null == a) throw new N.default({
         errorCode: D.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      let s = null === (t = (0, O.default)()) || void 0 === t ? void 0 : t.id;
+      let s = null === (t = (0, v.default)()) || void 0 === t ? void 0 : t.id;
       if (null == s) throw new N.default({
         errorCode: D.RPCErrors.UNKNOWN_ERROR
       }, "Unable to find selected channel");
@@ -211,23 +211,23 @@ var x = {
           if (null == s) throw new N.default({
             errorCode: D.RPCErrors.UNKNOWN_ERROR
           }, "No valid window found");
-          let l = s.document.createElement("input");
-          l.style.display = "none", l.type = "file", l.accept = "image/jpeg, image/jpg, image/png, image/gif";
-          let i = () => {
-            (null == l.files || 0 === l.files.length) && t(), s.document.body.removeEventListener("focus", i, !0), setTimeout(() => {
-              s.document.body.removeChild(l)
+          let i = s.document.createElement("input");
+          i.style.display = "none", i.type = "file", i.accept = "image/jpeg, image/jpg, image/png, image/gif";
+          let l = () => {
+            (null == i.files || 0 === i.files.length) && t(), s.document.body.removeEventListener("focus", l, !0), setTimeout(() => {
+              s.document.body.removeChild(i)
             }, 1e3)
           };
-          l.addEventListener("change", () => {
-            (0, T.isNotNullish)(l.files) && e(l.files[0]), i()
-          }), l.addEventListener("cancel", () => {
-            i()
-          }), s.document.body.addEventListener("focus", i, !0), s.document.body.appendChild(l), l.click()
+          i.addEventListener("change", () => {
+            (0, T.isNotNullish)(i.files) && e(i.files[0]), l()
+          }), i.addEventListener("cancel", () => {
+            l()
+          }), s.document.body.addEventListener("focus", l, !0), s.document.body.appendChild(i), i.click()
         }(async n => {
-          let l = await (0, f.uploadImageAttachment)(a, s, n);
-          (0, T.isNotNullish)(l) && (0, T.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
-            image_url: l.url
-          }): t(l)
+          let i = await (0, f.uploadImageAttachment)(a, s, n);
+          (0, T.isNotNullish)(i) && (0, T.isNotNullish)(i.url) && !(i instanceof d.default) ? e({
+            image_url: i.url
+          }): t(i)
         }, () => t())
       }).catch(e => {
         throw new N.default({
@@ -253,12 +253,12 @@ var x = {
       if (null == s) throw new N.default({
         errorCode: D.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      let l = (0, p.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, D.ApplicationFlags.EMBEDDED);
-      if (!l) throw new N.default({
+      let i = (0, p.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, D.ApplicationFlags.EMBEDDED);
+      if (!i) throw new N.default({
         errorCode: D.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
-      let i = (0, O.default)();
-      if (null == i) throw new N.default({
+      let l = (0, v.default)();
+      if (null == l) throw new N.default({
         errorCode: D.RPCErrors.INVALID_COMMAND
       }, "No channel found");
       if (!g.default.isDiscordCdnUrl(a)) throw new N.default({
@@ -266,7 +266,7 @@ var x = {
       }, "mediaUrl must be a Discord CDN url");
       (0, h.openActivityShareMomentModal)({
         applicationId: s,
-        channelId: i.id,
+        channelId: l.id,
         mediaUrl: a
       })
     }

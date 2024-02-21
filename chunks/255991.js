@@ -19,8 +19,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("449918"),
   r = n("567054"),
-  o = n("104359"),
-  u = n("943232"),
+  u = n("104359"),
+  o = n("943232"),
   d = n("437825"),
   c = n("36694"),
   f = n("945330"),
@@ -30,22 +30,22 @@ var a = n("414456"),
   m = n("987772"),
   E = n("82636"),
   g = n("368121"),
-  S = n("228427"),
-  I = n("956089"),
-  _ = n("471374"),
+  I = n("228427"),
+  _ = n("956089"),
+  S = n("471374"),
   N = n("49111"),
   T = n("853708");
 
 function A(e, t) {
-  return (0, l.jsx)(I.NumberBadge, {
+  return (0, l.jsx)(_.NumberBadge, {
     count: e,
     color: t
   })
 }
 
 function L() {
-  return (0, l.jsx)(I.IconBadge, {
-    icon: o.default,
+  return (0, l.jsx)(_.IconBadge, {
+    icon: u.default,
     disableColor: !0,
     className: T.unavailableBadge
   })
@@ -59,15 +59,15 @@ function v(e) {
       isCurrentUserConnected: s,
       liveStage: i,
       activeEvent: r,
-      activity: o,
+      activity: u,
       gaming: c
     } = e,
-    f = (0, _.isGamingVoiceActivityEnabled)("Guild Icon", !1);
-  if (!r && !i && !o && !a && !l && c && _.default.trackExposure({
+    f = (0, S.isGamingVoiceActivityEnabled)("Guild Icon", !1);
+  if (!r && !i && !u && !a && !l && c && S.default.trackExposure({
       location: "Guild Icon"
-    }), r) t = u.default;
-  else if (i) t = S.default;
-  else if (o) t = E.default;
+    }), r) t = o.default;
+  else if (i) t = I.default;
+  else if (u) t = E.default;
   else if (a) t = p.default;
   else if (l) t = d.default;
   else if (c && f) t = h.default;
@@ -112,7 +112,7 @@ function R(e) {
   } : {
     color: (0, i.getColor)(n)
   };
-  return (0, l.jsx)(I.IconBadge, {
+  return (0, l.jsx)(_.IconBadge, {
     icon: t,
     className: s(T.iconBadge, {
       [T.isCurrentUserConnected]: a

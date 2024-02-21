@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  l = n("759843"),
-  i = n("446674"),
+  i = n("759843"),
+  l = n("446674"),
   r = n("872717"),
   o = n("77078"),
   u = n("437822"),
@@ -34,13 +34,13 @@ function R() {
   let {
     action: e,
     theme: t
-  } = (0, i.useStateFromStoresObject)([I.default, C.default], () => ({
+  } = (0, l.useStateFromStoresObject)([I.default, C.default], () => ({
     action: I.default.getAction(),
     theme: C.default.theme
-  })), R = p.default.getVerificationTypes(e), [v, O] = s.useState(0), L = (0, f.default)(R);
+  })), R = p.default.getVerificationTypes(e), [O, v] = s.useState(0), L = (0, f.default)(R);
   (0, h.default)({
-    type: l.ImpressionTypes.MODAL,
-    name: l.ImpressionNames.USER_ACTION_REQUIRED,
+    type: i.ImpressionTypes.MODAL,
+    name: i.ImpressionNames.USER_ACTION_REQUIRED,
     properties: {
       verification_type: R[0],
       verification_types: R
@@ -93,7 +93,7 @@ function R() {
     })
   }, [R, L]), (0, a.jsx)(S.default, {
     types: R,
-    captchaKey: v,
+    captchaKey: O,
     onCaptchaVerify: e => {
       r.default.post({
         url: T.Endpoints.CAPTCHA,
@@ -102,7 +102,7 @@ function R() {
         },
         oldFormErrors: !0
       }).then(d.popLayer, () => {
-        O(e => e + 1)
+        v(e => e + 1)
       })
     },
     theme: t,

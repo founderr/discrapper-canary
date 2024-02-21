@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  l = n("913144"),
-  i = n("892313"),
+  i = n("913144"),
+  l = n("892313"),
   r = n("61928"),
   o = n("697218"),
   u = n("708169"),
@@ -20,11 +20,11 @@ var s = n("77078"),
 let _ = "AGREEMENTS_MODAL_KEY";
 var C = {
   init() {
-    l.default.subscribe("CONNECTION_OPEN", this.handleRequiredAction), l.default.subscribe("USER_REQUIRED_ACTION_UPDATE", this.handleRequiredAction), l.default.subscribe("CURRENT_USER_UPDATE", this.handleCurrentUserUpdate), l.default.subscribe("LOGOUT", this.handleLogout)
+    i.default.subscribe("CONNECTION_OPEN", this.handleRequiredAction), i.default.subscribe("USER_REQUIRED_ACTION_UPDATE", this.handleRequiredAction), i.default.subscribe("CURRENT_USER_UPDATE", this.handleCurrentUserUpdate), i.default.subscribe("LOGOUT", this.handleLogout)
   },
   handleRequiredAction(e) {
     let t = e.requiredAction;
-    !c.ProcessArgs.isDisallowPopupsSet() && (null == o.default.getCurrentUser() ? ((0, u.closeFullScreenLayer)("verification"), (0, s.hasModalOpen)(_) && (0, s.closeModal)(_)) : t === E.UserRequiredActions.REQUIRE_CAPTCHA || t === E.UserRequiredActions.REQUIRE_VERIFIED_EMAIL || t === E.UserRequiredActions.REQUIRE_VERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_REVERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || i.default.isEmailReverification(t) ? (0, u.openFullScreenLayer)(() => (0, a.jsx)(r.default, {}), {
+    !c.ProcessArgs.isDisallowPopupsSet() && (null == o.default.getCurrentUser() ? ((0, u.closeFullScreenLayer)("verification"), (0, s.hasModalOpen)(_) && (0, s.closeModal)(_)) : t === E.UserRequiredActions.REQUIRE_CAPTCHA || t === E.UserRequiredActions.REQUIRE_VERIFIED_EMAIL || t === E.UserRequiredActions.REQUIRE_VERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_REVERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || l.default.isEmailReverification(t) ? (0, u.openFullScreenLayer)(() => (0, a.jsx)(r.default, {}), {
       layerKey: "verification",
       Layer: d.default
     }) : t === E.UserRequiredActions.AGREEMENTS ? (0, s.openModal)(e => (0, a.jsx)(f.default, {

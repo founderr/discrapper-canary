@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return E
   },
   EmptyMessageIcon: function() {
     return h
@@ -73,7 +73,7 @@ function p(e) {
     children: t
   })
 }
-var m = function(e) {
+var E = function(e) {
   let {
     className: t,
     channelId: n,

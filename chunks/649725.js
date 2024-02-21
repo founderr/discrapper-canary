@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("316887"),
-  l = n("627490"),
-  i = n("447853"),
+  i = n("627490"),
+  l = n("447853"),
   r = n("517425"),
   o = n("709071"),
   u = n("228427"),
@@ -22,9 +22,9 @@ let _ = e => {
       case E.CategoryIcons.Activity:
         return (0, a.jsx)(s.default, {});
       case E.CategoryIcons.Discover:
-        return (0, a.jsx)(l.default, {});
-      case E.CategoryIcons.Education:
         return (0, a.jsx)(i.default, {});
+      case E.CategoryIcons.Education:
+        return (0, a.jsx)(l.default, {});
       case E.CategoryIcons.Music:
         return (0, a.jsx)(r.default, {});
       case E.CategoryIcons.Science:
@@ -45,7 +45,7 @@ let _ = e => {
       categories: t,
       currentCategoryId: n,
       handleCategorySelect: s,
-      shouldDisplaySelectedCategory: l = !0
+      shouldDisplaySelectedCategory: i = !0
     } = e;
     return (0, a.jsx)(a.Fragment, {
       children: t.map(e => (0, a.jsx)(c.default, {
@@ -60,7 +60,7 @@ let _ = e => {
         },
         onClick: () => s(e.categoryId),
         wrapContent: !0,
-        selected: l && e.categoryId === n,
+        selected: i && e.categoryId === n,
         className: h.categoryItem,
         selectedClassName: h.selectedCategoryItem,
         innerClassName: h.itemInner

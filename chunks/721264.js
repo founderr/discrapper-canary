@@ -9,8 +9,8 @@ var l = n("446674"),
   s = n("42203"),
   i = n("316133"),
   r = n("449008"),
-  o = n("334572"),
-  u = n("299039"),
+  u = n("334572"),
+  o = n("299039"),
   d = n("488464"),
   c = n("998716"),
   f = n("49111");
@@ -32,7 +32,7 @@ function h(e) {
 function C(e) {
   let [t] = (0, l.useStateFromStores)([d.default, s.default, a.default], () => {
     let t;
-    t = e === f.FAVORITES ? u.default.keys(a.default.getFavoriteChannels()).map(e => s.default.getChannel(e)).filter(r.isNotNullish).filter(e => e.isGuildStageVoice()) : d.default.getChannels(e);
+    t = e === f.FAVORITES ? o.default.keys(a.default.getFavoriteChannels()).map(e => s.default.getChannel(e)).filter(r.isNotNullish).filter(e => e.isGuildStageVoice()) : d.default.getChannels(e);
     let n = t.reduce((e, t) => {
         let n = d.default.getMutableParticipants(t.id, c.StageChannelParticipantNamedIndex.SPEAKER);
         return e[t.id] = n.filter(e => e.type === c.StageChannelParticipantTypes.VOICE).map(h), e
@@ -44,6 +44,6 @@ function C(e) {
         return e + d.default.getParticipantsVersion(n)
       }, 0);
     return [n, l]
-  }, [e], o.isVersionEqual);
+  }, [e], u.isVersionEqual);
   return t
 }
