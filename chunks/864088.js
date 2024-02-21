@@ -1,7 +1,7 @@
     "use strict";
     t.r(a), t.d(a, {
       default: function() {
-        return l
+        return f
       }
     });
     var s = t("862337"),
@@ -11,18 +11,18 @@
       c = t("101125"),
       r = t("49111");
     let o = new s.Timeout,
-      f = new s.Timeout;
-    var l = {
+      l = new s.Timeout;
+    var f = {
       init() {
         d.default.subscribe("USER_SETTINGS_PROTO_UPDATE", () => {
           let e = i.CustomStatusSetting.getSetting();
-          if (null == e) f.stop();
+          if (null == e) l.stop();
           else if (null != e.expiresAtMs && "0" !== e.expiresAtMs) {
             let a = new Date(Number(e.expiresAtMs)).getTime() - new Date().getTime();
-            a > 0 ? f.start(a, () => {
+            a > 0 ? l.start(a, () => {
               i.CustomStatusSetting.updateSetting(void 0)
-            }, !0) : (i.CustomStatusSetting.updateSetting(void 0), f.stop())
-          } else null != f && f.stop();
+            }, !0) : (i.CustomStatusSetting.updateSetting(void 0), l.stop())
+          } else null != l && l.stop();
           let a = i.StatusExpiresAtSetting.getSetting();
           if (null != a && "0" !== a && c.default.getStatus() !== r.StatusTypes.ONLINE) {
             let e = new Date(Number(a)).getTime() - new Date().getTime();
