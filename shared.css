@@ -367,7 +367,9 @@
 
 .inner_ea0cea {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 32px;
     height: 32px;
     contain: paint
