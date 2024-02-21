@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
   ApplicationDirectoryEntryCarouselItemType: function() {
     return a
   },
-  ApplicationCommandContextType: function() {
+  InteractionContextType: function() {
     return o
   },
   ApplicationCommandOptionType: function() {

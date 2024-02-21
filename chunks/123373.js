@@ -109,7 +109,7 @@ function A(e) {
 }
 
 function E(e, t) {
-  return e instanceof u.ChannelRecordBase && null == e.guild_id ? e.type === _.ChannelTypes.DM && e.getRecipientId() === t ? o.ApplicationCommandContextType.BOT_DM : o.ApplicationCommandContextType.PRIVATE_CHANNEL : o.ApplicationCommandContextType.GUILD
+  return e instanceof u.ChannelRecordBase && null == e.guild_id ? e.type === _.ChannelTypes.DM && e.getRecipientId() === t ? o.InteractionContextType.BOT_DM : o.InteractionContextType.PRIVATE_CHANNEL : o.InteractionContextType.GUILD
 }
 
 function N(e) {
