@@ -478,7 +478,7 @@ class eO {
       if (null == n || !n.isForumPost() || null == n.parent_id) return;
       let s = n.parent_id,
         i = eO.get(s);
-      P.default.hasLoaded(n.guild_id) && Object.keys(P.default.getThreadsForParent(n.guild_id, s)).every(e => eQ.hasOpenedThread(e) || 0 > F.default.compare(e, i.ackMessageId)) && i.ack({})
+      P.default.hasLoaded(n.guild_id) && F.default.keys(P.default.getThreadsForParent(n.guild_id, s)).every(e => eQ.hasOpenedThread(e) || 0 > F.default.compare(e, i.ackMessageId)) && i.ack({})
     }(this.channelId), n ? this.oldestUnreadMessageId = null : (null == this.outgoingAck && (this.outgoingAckTimer = setTimeout(() => {
       this.type === er.ReadStateTypes.CHANNEL ? this._ack(a, o) : this._nonChannelAck(), this.outgoingAck = null, this.outgoingAckTimer = null
     }, d || s ? 0 : 3e3)), this.outgoingAck = t), !0)
