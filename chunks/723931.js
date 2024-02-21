@@ -365,7 +365,7 @@ class ek extends l.Component {
       renderEmbeds: t
     } = this.props;
     return 0 !== e.embeds.length && t ? e.embeds.map(t => {
-      if (ey.has(t.type) || (0, eu.isServerShopArticleEmbed)(t) || (0, eu.isQuestsEmbed)(t)) return null;
+      if (ey.has(t.type) || (0, eu.isServerShopArticleEmbed)(t)) return null;
       let n = {
         renderImageComponent: eg.renderImageComponent,
         renderVideoComponent: eg.renderVideoComponent,
