@@ -1,59 +1,69 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return I
   }
-});
-var a = n("37983");
-n("884691");
-var s = n("414456"),
-  i = n.n(s),
-  l = n("907002"),
-  r = n("77078"),
-  o = n("227231"),
-  u = n("555226"),
-  d = n("315130"),
-  c = n("368347"),
-  f = function(e) {
+}), n("222007");
+var a = n("37983"),
+  s = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
+  r = n("907002"),
+  o = n("446674"),
+  u = n("77078"),
+  d = n("206230"),
+  c = n("471671"),
+  f = n("181114"),
+  E = n("227231"),
+  h = n("555226"),
+  _ = n("315130"),
+  C = n("368347"),
+  I = function(e) {
     var t;
     let {
       className: n,
-      expansionFactor: s,
-      isExpanded: f,
-      isExpansionAnimationComplete: E,
-      quest: h
-    } = e, _ = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
-    return (0, a.jsx)(l.animated.div, {
-      "aria-hidden": f && E,
-      className: i(n, c.contentCollapsed, {
-        [c.contentCollapsedAccepted]: _
+      expansionFactor: l,
+      isExpanded: I,
+      isExpansionAnimationComplete: S,
+      quest: m
+    } = e, p = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), g = (0, o.useStateFromStores)([c.default], () => c.default.isFocused()), [A, N] = s.useState(!1);
+    return s.useEffect(() => {
+      g ? N(!p) : N(!1)
+    }, [g, p]), (0, a.jsx)(r.animated.div, {
+      "aria-hidden": I && S,
+      className: i(n, C.contentCollapsed, {
+        [C.contentCollapsedAccepted]: p
       }),
       style: {
-        opacity: s.to({
+        opacity: l.to({
           range: [0, 1],
           output: [1, 0]
         })
       },
-      children: _ ? (0, a.jsxs)("div", {
-        className: c.questProgressWrapper,
+      children: p ? (0, a.jsxs)("div", {
+        className: C.questProgressWrapper,
         children: [(0, a.jsx)("img", {
-          alt: h.config.messages.rewardName,
-          className: c.questProgressRewardTile,
-          src: (0, o.getRewardAssetUrl)(h.id)
-        }), (0, a.jsx)(d.default, {
-          className: c.questProgressBar,
-          quest: h
+          alt: m.config.messages.rewardName,
+          className: C.questProgressRewardTile,
+          src: (0, E.getRewardAssetUrl)(m.id)
+        }), (0, a.jsx)(_.default, {
+          className: C.questProgressBar,
+          quest: m
         })]
-      }) : (0, a.jsxs)("div", {
-        className: c.brandingWrapper,
-        children: [(0, a.jsx)(u.default, {
-          className: c.partnerBranding,
-          quest: h
-        }), (0, a.jsx)(r.Heading, {
-          color: "always-white",
-          variant: "heading-sm/medium",
-          className: c.questName,
-          children: h.config.messages.questName
+      }) : (0, a.jsxs)(a.Fragment, {
+        children: [!T && A && (0, a.jsx)(f.Shine, {
+          className: C.shine
+        }), (0, a.jsxs)("div", {
+          className: C.brandingWrapper,
+          children: [(0, a.jsx)(h.default, {
+            className: C.partnerBranding,
+            quest: m
+          }), (0, a.jsx)(u.Heading, {
+            color: "always-white",
+            variant: "heading-sm/medium",
+            className: C.questName,
+            children: m.config.messages.questName
+          })]
         })]
       })
     })
