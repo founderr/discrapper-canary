@@ -16,23 +16,23 @@ var i = n("37983"),
   f = n("539938"),
   h = n("557809"),
   p = n("233069"),
-  g = n("950104"),
-  m = n("42203"),
-  E = n("305961"),
+  E = n("950104"),
+  g = n("42203"),
+  m = n("305961"),
   S = n("27618"),
   v = n("18494"),
-  y = n("887657"),
-  O = n("293137"),
-  C = n("945330"),
+  I = n("887657"),
+  y = n("293137"),
+  _ = n("945330"),
   N = n("673220"),
   T = n("960086"),
-  I = n("519794"),
-  _ = n("393900"),
+  O = n("519794"),
+  C = n("393900"),
   A = n("560995"),
   x = n("423741"),
   R = n("782340"),
-  L = n("871151");
-class M extends a.Component {
+  M = n("871151");
+class L extends a.Component {
   componentDidUpdate() {
     this.props.locked && this.state.showOpacitySlider && this.setState({
       showOpacitySlider: !1
@@ -47,9 +47,9 @@ class M extends a.Component {
       isBlocked: s
     } = this.props;
     if (!(0, p.isPrivate)(n.type)) return null;
-    let o = y.default,
+    let o = I.default,
       d = !1;
-    return a ? l ? (e = R.default.Messages.LEAVE_CALL, o = O.default) : e = R.default.Messages.JOIN_CALL : s ? (e = R.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, t = r.Tooltip.Colors.RED, d = !0) : e = R.default.Messages.START_VOICE_CALL, (0, i.jsx)(f.default.Icon, {
+    return a ? l ? (e = R.default.Messages.LEAVE_CALL, o = y.default) : e = R.default.Messages.JOIN_CALL : s ? (e = R.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, t = r.Tooltip.Colors.RED, d = !0) : e = R.default.Messages.START_VOICE_CALL, (0, i.jsx)(f.default.Icon, {
       icon: o,
       tooltip: e,
       onClick: this.handleClickCall,
@@ -73,16 +73,16 @@ class M extends a.Component {
       showOpacitySlider: p
     } = this.state;
     return p && !n ? (0, i.jsxs)(A.default.Bar, {
-      className: L.opacityHeader,
+      className: M.opacityHeader,
       children: [(0, i.jsx)(x.default, {}), (0, i.jsx)(f.default.Icon, {
-        icon: C.default,
+        icon: _.default,
         onClick: this.handleCloseOpacitySettings,
         tooltip: R.default.Messages.CLOSE
       })]
     }) : (0, i.jsx)(A.default.Background, {
       opacityOverride: n || u ? null : 1,
       children: (0, i.jsx)("div", {
-        className: s(e, t, L.headerContainer),
+        className: s(e, t, M.headerContainer),
         onMouseDown: r,
         onContextMenu: d,
         children: (0, i.jsxs)(f.default, {
@@ -91,7 +91,7 @@ class M extends a.Component {
           toolbar: this.renderWidgetButtons(),
           transparent: !0,
           children: [u || n || c ? null : (0, i.jsx)(N.default, {
-            className: s(L.dragIcon, t),
+            className: s(M.dragIcon, t),
             width: 20,
             height: 20
           }), (0, h.renderTitle)({
@@ -147,7 +147,7 @@ class M extends a.Component {
           tooltip: R.default.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY,
           onClick: this.handleOpenOpacitySettings
         }) : null, (0, i.jsx)(f.default.Icon, {
-          icon: n ? _.default : I.default,
+          icon: n ? C.default : O.default,
           tooltip: l,
           selected: n,
           onClick: t
@@ -161,11 +161,11 @@ function D(e) {
   let {
     channel: t,
     ...n
-  } = e, a = (0, o.useStateFromStores)([v.default, m.default], () => {
+  } = e, a = (0, o.useStateFromStores)([v.default, g.default], () => {
     let e = v.default.getVoiceChannelId();
-    return m.default.getChannel(e)
-  }), l = (0, o.useStateFromStores)([E.default], () => E.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([g.default], () => g.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([S.default], () => !!t.isDM() && null != t.getRecipientId() && S.default.isBlocked(t.getRecipientId()));
-  return (0, i.jsx)(M, {
+    return g.default.getChannel(e)
+  }), l = (0, o.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([E.default], () => E.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([S.default], () => !!t.isDM() && null != t.getRecipientId() && S.default.isBlocked(t.getRecipientId()));
+  return (0, i.jsx)(L, {
     channel: t,
     channelName: r,
     guild: l,

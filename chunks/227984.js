@@ -24,9 +24,9 @@ let f = s.memo(function(e) {
       avatarProfile: h,
       setPopout: C,
       author: p,
-      repliedMessage: E,
-      roleIcon: m
-    } = e, g = (0, d.useContextMenuUser)(t.author.id, n.id), S = (0, d.useClickMessageAuthorUsername)(t, n, f, C), _ = (0, d.useClickMessageAuthorAvatar)(h, C), T = s.useCallback(() => C({
+      repliedMessage: m,
+      roleIcon: E
+    } = e, g = (0, d.useContextMenuUser)(t.author.id, n.id), S = (0, d.useClickMessageAuthorUsername)(t, n, f, C), _ = (0, d.useClickMessageAuthorAvatar)(h, C), A = s.useCallback(() => C({
       usernameProfile: !1,
       avatarProfile: !1,
       referencedUsernameProfile: !1
@@ -35,7 +35,7 @@ let f = s.memo(function(e) {
       guildId: n.guild_id,
       message: t,
       channel: n,
-      repliedMessage: E,
+      repliedMessage: m,
       author: p,
       compact: i,
       subscribeToGroupId: r,
@@ -46,8 +46,8 @@ let f = s.memo(function(e) {
       onClickAvatar: _,
       onClickUsername: S,
       onContextMenu: g,
-      onPopoutRequestClose: T,
-      roleIcon: m
+      onPopoutRequestClose: A,
+      roleIcon: E
     })
   }),
   h = s.memo(i.default);
@@ -65,22 +65,22 @@ function C(e) {
     message: c,
     compact: C,
     channel: p,
-    groupId: E
+    groupId: m
   } = t, {
-    usernameProfile: m,
+    usernameProfile: E,
     avatarProfile: g
   } = s;
   if ((0, r.default)(c)) return null;
-  let S = c.id === E;
+  let S = c.id === m;
   return S || C || null != l ? (0, a.jsx)(f, {
     message: c,
     channel: p,
     compact: C,
-    subscribeToGroupId: E,
+    subscribeToGroupId: m,
     isGroupStart: S,
-    groupId: E,
+    groupId: m,
     setPopout: n,
-    usernameProfile: m,
+    usernameProfile: E,
     avatarProfile: g,
     author: i,
     repliedMessage: u,

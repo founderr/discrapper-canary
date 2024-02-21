@@ -4,10 +4,10 @@ l.r(t), l.d(t, {
     return o
   }
 });
-var n = l("37983");
+var a = l("37983");
 l("884691");
-var a = l("414456"),
-  s = l.n(a),
+var n = l("414456"),
+  s = l.n(n),
   r = l("77078"),
   i = l("145131"),
   u = l("142716");
@@ -17,19 +17,19 @@ function o(e) {
     source: t,
     selectedSource: l
   } = e, {
-    id: a,
+    id: n,
     name: o,
     url: d
-  } = t, c = (null == l ? void 0 : l.id) === a;
-  return (0, n.jsx)(n.Fragment, {
-    children: (0, n.jsxs)(i.default, {
+  } = t, c = (null == l ? void 0 : l.id) === n;
+  return (0, a.jsx)(a.Fragment, {
+    children: (0, a.jsxs)(i.default, {
       direction: i.default.Direction.VERTICAL,
       justify: i.default.Justify.CENTER,
       align: i.default.Align.CENTER,
-      children: [(0, n.jsx)(i.default, {
+      children: [(0, a.jsx)(i.default, {
         justify: i.default.Justify.CENTER,
         align: i.default.Align.CENTER,
-        children: (0, n.jsx)("div", {
+        children: (0, a.jsx)("div", {
           style: {
             backgroundImage: "url(".concat(d, ")")
           },
@@ -37,7 +37,7 @@ function o(e) {
             [u.selected]: c
           })
         })
-      }), (0, n.jsx)(r.Text, {
+      }), (0, a.jsx)(r.Text, {
         className: s(u.sourceName, {
           [u.selected]: c
         }),

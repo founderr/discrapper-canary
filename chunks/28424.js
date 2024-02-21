@@ -24,9 +24,9 @@ function d(e) {
     onMouseLeave: C
   } = e, {
     error: p,
-    loaded: E
-  } = (0, o.useMessageRequestPreview)(t), m = t.isDM() ? t.getRecipientId() : null, g = (0, r.useLongestChannelMessageBeforeReply)(t.id, m);
-  if (null == g && (E || p)) return null;
+    loaded: m
+  } = (0, o.useMessageRequestPreview)(t), E = t.isDM() ? t.getRecipientId() : null, g = (0, r.useLongestChannelMessageBeforeReply)(t.id, E);
+  if (null == g && (m || p)) return null;
   let S = () => {
     null == f || f(), l.default.closePrivateChannel(t.id)
   };

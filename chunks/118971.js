@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("619935"),
   N = n("731681"),
   R = n("947783"),
-  O = n("303791"),
-  v = n("453910"),
+  v = n("303791"),
+  O = n("453910"),
   L = n("862853"),
   M = n("10641"),
   P = n("384997"),
@@ -491,7 +491,7 @@ function eT(e) {
   s.useEffect(() => {
     n !== er && ei(!Z)
   }, [n, er, Z]);
-  let [ed, eh] = (0, L.default)(e => [ef.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eE.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), e_ = (0, N.default)(d), eC = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eI = (0, o.useStateFromStores)([$.default], () => $.default.hasLayers()), em = (0, o.useStateFromStores)([Y.default], () => Y.default.shouldShow(eS)), eT = R && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !es.ProcessArgs.isDisallowPopupsSet(), eg = (0, o.useStateFromStores)([X.default], () => X.default.getMemberCount(n)), eA = R && null != eg && eg >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !es.ProcessArgs.isDisallowPopupsSet(), eN = P && null != d && (d.hasFeature(ec.GuildFeatures.COMMUNITY) || null != eg && eg > 50), eR = (0, U.default)(n), eO = (0, v.useLowerMemberCountRequirements)(n), ev = (null == d ? void 0 : d.hasFeature(ec.GuildFeatures.HUB)) === !0, eL = R && (null == d ? void 0 : d.hasFeature(ec.GuildFeatures.DISCOVERABLE)) === !0, eM = (0, A.useBlockedPaymentsConfig)(), eP = (R || (null == d ? void 0 : d.premiumTier) === ec.BoostedGuildTiers.NONE) && !es.ProcessArgs.isDisallowPopupsSet() && !eM, eD = (0, o.useStateFromStores)([j.default, $.default], () => null != d && null != B && R && !$.default.hasLayers() && j.default.shouldShowGuildTemplateDirtyTooltip(n)), ey = (0, o.useStateFromStores)([z.default], () => z.default.getChannel(r)), {
+  let [ed, eh] = (0, L.default)(e => [ef.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eE.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), e_ = (0, N.default)(d), eC = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eI = (0, o.useStateFromStores)([$.default], () => $.default.hasLayers()), em = (0, o.useStateFromStores)([Y.default], () => Y.default.shouldShow(eS)), eT = R && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !es.ProcessArgs.isDisallowPopupsSet(), eg = (0, o.useStateFromStores)([X.default], () => X.default.getMemberCount(n)), eA = R && null != eg && eg >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !es.ProcessArgs.isDisallowPopupsSet(), eN = P && null != d && (d.hasFeature(ec.GuildFeatures.COMMUNITY) || null != eg && eg > 50), eR = (0, U.default)(n), ev = (0, O.useLowerMemberCountRequirements)(n), eO = (null == d ? void 0 : d.hasFeature(ec.GuildFeatures.HUB)) === !0, eL = R && (null == d ? void 0 : d.hasFeature(ec.GuildFeatures.DISCOVERABLE)) === !0, eM = (0, A.useBlockedPaymentsConfig)(), eP = (R || (null == d ? void 0 : d.premiumTier) === ec.BoostedGuildTiers.NONE) && !es.ProcessArgs.isDisallowPopupsSet() && !eM, eD = (0, o.useStateFromStores)([j.default, $.default], () => null != d && null != B && R && !$.default.hasLayers() && j.default.shouldShowGuildTemplateDirtyTooltip(n)), ey = (0, o.useStateFromStores)([z.default], () => z.default.getChannel(r)), {
     isPopoutOpen: ex
   } = (0, y.useGuildHeaderPopoutStore)(), eb = null !== (t = null == d ? void 0 : d.hasFeature(ec.GuildFeatures.COMMUNITY)) && void 0 !== t && t, eU = (0, o.useStateFromStores)([H.default], () => !i.isEmpty(H.default.getThreadsForGuild(n))), {
     enabled: eG
@@ -511,7 +511,7 @@ function eT(e) {
     location: "91c8a9_4"
   }, {
     autoTrackExposure: !0
-  }), eY = el && eV, eW = (0, O.default)(B);
+  }), eY = el && eV, eW = (0, v.default)(B);
   (0, x.default)(d);
   let eK = (0, M.useIsDismissibleContentDismissed)(u.DismissibleContent.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
     ez = (0, F.default)(n),
@@ -538,8 +538,8 @@ function eT(e) {
     showGuildHeaderTutorial: em,
     showGuildTemplateDirtyTooltip: eD,
     showRoleSubscriptionUpsell: eR,
-    showDiscoveryTooltip: eO,
-    showHubPrivacySettingsTooltip: ev,
+    showDiscoveryTooltip: ev,
+    showHubPrivacySettingsTooltip: eO,
     showNewUnreadsBar: eb,
     showActiveThreadsNotice: G && null != eg && eg >= 200 && eU,
     showGuildSoundboardPermissionUpsell: eN,

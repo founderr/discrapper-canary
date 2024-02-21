@@ -17,13 +17,13 @@ var a = n("37983"),
   h = n("619259"),
   C = n("865343"),
   p = n("148337"),
-  E = n("701909"),
-  m = n("124297"),
+  m = n("701909"),
+  E = n("124297"),
   g = n("497880"),
   S = n("587904"),
   _ = n("49111"),
-  T = n("782340"),
-  A = n("328692"),
+  A = n("782340"),
+  T = n("328692"),
   M = n("919163"),
   I = n("356296");
 let N = s.memo(function(e) {
@@ -35,18 +35,18 @@ let N = s.memo(function(e) {
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: i(A.blockedNoticeContainer, {
-        [A.compact]: s
+      className: i(T.blockedNoticeContainer, {
+        [T.compact]: s
       }),
       children: [(0, a.jsx)("div", {
-        className: A.blockedNoticeIcon,
+        className: T.blockedNoticeIcon,
         children: (0, a.jsx)(p.default, {
-          className: A.shieldIcon,
+          className: T.shieldIcon,
           width: 16,
           height: 16
         })
       }), (0, a.jsx)("div", {
-        className: A.blockedNotice,
+        className: T.blockedNotice,
         children: (0, a.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "interactive-normal",
@@ -54,19 +54,19 @@ let N = s.memo(function(e) {
         })
       })]
     }), (0, a.jsx)("div", {
-      className: i(A.ephemeralAccessories, {
-        [A.compact]: s
+      className: i(T.ephemeralAccessories, {
+        [T.compact]: s
       }),
-      children: (0, a.jsx)(m.default, {
+      children: (0, a.jsx)(E.default, {
         message: t,
         onDeleteMessage: l,
         children: (0, a.jsx)(d.Text, {
           variant: "text-xs/normal",
           color: "interactive-normal",
           tag: "span",
-          className: A.learnMore,
-          children: T.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({
-            helpUrl: E.default.getArticleURL(_.HelpdeskArticles.GUILD_AUTOMOD_BLOCKED_MESSAGE)
+          className: T.learnMore,
+          children: A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({
+            helpUrl: m.default.getArticleURL(_.HelpdeskArticles.GUILD_AUTOMOD_BLOCKED_MESSAGE)
           })
         })
       })
@@ -80,33 +80,33 @@ var v = s.memo(function(e) {
     compact: r,
     message: d,
     children: p,
-    content: E,
-    onUpdate: m
+    content: m,
+    onUpdate: E
   } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = s.useRef(!1), L = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), R = s.useCallback(() => {
     (null == L ? void 0 : L.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
   }, [d, L]);
   return s.useLayoutEffect(() => {
-    v.current ? null != m && m() : v.current = !0
-  }, [m, d.content, E, _, p]), (0, a.jsxs)("div", {
+    v.current ? null != E && E() : v.current = !0
+  }, [E, d.content, m, _, p]), (0, a.jsxs)("div", {
     id: (0, C.getMessageContentId)(d),
     className: i(l, M.markup, {
       [I.messageContent]: !0,
       [I.markupRtl]: "rtl" === o(d.content),
-      [A.blockedEdit]: null == L ? void 0 : L.isBlockedEdit,
-      [A.blockedSend]: !(null == L ? void 0 : L.isBlockedEdit)
+      [T.blockedEdit]: null == L ? void 0 : L.isBlockedEdit,
+      [T.blockedSend]: !(null == L ? void 0 : L.isBlockedEdit)
     }),
-    children: [null != p ? p : (0, g.getContent)(d, E), (null == L ? void 0 : L.isBlockedEdit) && null != d.timestamp && (0, a.jsxs)(a.Fragment, {
+    children: [null != p ? p : (0, g.getContent)(d, m), (null == L ? void 0 : L.isBlockedEdit) && null != d.timestamp && (0, a.jsxs)(a.Fragment, {
       children: [" ", (0, a.jsx)(S.default, {
         timestamp: d.timestamp,
         isEdited: !0,
         isInline: !1,
         children: (0, a.jsxs)("span", {
           className: I.edited,
-          children: ["(", T.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_POSTFIX, ")"]
+          children: ["(", A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_POSTFIX, ")"]
         })
       })]
     }), (0, a.jsx)(N, {
-      notice: null !== (n = null == L ? void 0 : L.errorMessage) && void 0 !== n ? n : T.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
+      notice: null !== (n = null == L ? void 0 : L.errorMessage) && void 0 !== n ? n : A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
       message: d,
       compact: r,
       onDismiss: R

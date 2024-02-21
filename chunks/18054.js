@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return p
   },
   default: function() {
-    return E
+    return m
   }
 }), n("702976");
 var a = n("872717"),
@@ -70,13 +70,13 @@ function h(e) {
     defaultReactionEmoji: h,
     rtcRegion: C,
     videoQualityMode: p,
-    autoArchiveDuration: E,
-    locked: m,
+    autoArchiveDuration: m,
+    locked: E,
     invitable: g,
     availableTags: S,
     defaultSortOrder: _,
-    defaultForumLayout: T,
-    iconEmoji: A,
+    defaultForumLayout: A,
+    iconEmoji: T,
     themeColor: M
   } = e;
   s.default.dispatch({
@@ -95,13 +95,13 @@ function h(e) {
     defaultReactionEmoji: h,
     rtcRegion: C,
     videoQualityMode: p,
-    autoArchiveDuration: E,
-    locked: m,
+    autoArchiveDuration: m,
+    locked: E,
     invitable: g,
     availableTags: S,
     defaultSortOrder: _,
-    defaultForumLayout: T,
-    iconEmoji: A,
+    defaultForumLayout: A,
+    iconEmoji: T,
     themeColor: M
   })
 }
@@ -115,13 +115,13 @@ async function C(e, t) {
     userLimit: h,
     nsfw: C,
     flags: p,
-    permissionOverwrites: E,
-    rateLimitPerUser: m,
+    permissionOverwrites: m,
+    rateLimitPerUser: E,
     defaultThreadRateLimitPerUser: g,
     defaultAutoArchiveDuration: S,
     template: _,
-    defaultReactionEmoji: T,
-    rtcRegion: A,
+    defaultReactionEmoji: A,
+    rtcRegion: T,
     videoQualityMode: M,
     autoArchiveDuration: I,
     locked: N,
@@ -145,20 +145,20 @@ async function C(e, t) {
       user_limit: h,
       nsfw: C,
       flags: p,
-      permission_overwrites: E,
-      rate_limit_per_user: m,
+      permission_overwrites: m,
+      rate_limit_per_user: E,
       default_thread_rate_limit_per_user: g,
       default_auto_archive_duration: S,
       template: _,
-      rtc_region: A,
+      rtc_region: T,
       video_quality_mode: M,
       auto_archive_duration: I,
       locked: N,
       invitable: v,
-      default_reaction_emoji: null != T ? {
-        emoji_id: null == T ? void 0 : T.emojiId,
-        emoji_name: null == T ? void 0 : T.emojiName
-      } : null === T ? null : void 0,
+      default_reaction_emoji: null != A ? {
+        emoji_id: null == A ? void 0 : A.emojiId,
+        emoji_name: null == A ? void 0 : A.emojiName
+      } : null === A ? null : void 0,
       available_tags: null == L ? void 0 : L.map(e => ({
         id: e.id,
         name: e.name,
@@ -198,7 +198,7 @@ function p(e) {
     null != e && !(null == t ? void 0 : t.isThread()) && l.default.checkGuildTemplateDirty(e), c()
   })
 }
-var E = {
+var m = {
   init: d,
   open: function(e, t, n) {
     d(e, t, n), (0, o.pushLayer)(u.Layers.CHANNEL_SETTINGS)

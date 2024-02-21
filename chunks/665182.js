@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return m
+    return E
   }
 }), n("222007");
 var a, s, l = n("37983"),
@@ -20,7 +20,7 @@ var a, s, l = n("37983"),
   p = n("758534");
 (s = a || (a = {}))[s.PostSidebar = 0] = "PostSidebar", s[s.ThreadSidebar = 1] = "ThreadSidebar", s[s.CallChatSidebar = 2] = "CallChatSidebar", s[s.MessageRequestSidebar = 3] = "MessageRequestSidebar", s[s.HomeSidebar = 4] = "HomeSidebar";
 
-function E(e) {
+function m(e) {
   let {
     resizableNode: t,
     onResize: n,
@@ -40,14 +40,14 @@ function E(e) {
   })
 }
 
-function m(e) {
+function E(e) {
   let {
     sidebarType: t,
     maxWidth: n,
     onWidthChange: a,
     children: s,
     floatingLayer: r
-  } = e, f = i.useRef(null), m = function(e) {
+  } = e, f = i.useRef(null), E = function(e) {
     switch (e) {
       case 0:
         return "postSidebarWidth";
@@ -60,26 +60,26 @@ function m(e) {
       case 4:
         return "homeSidebarWidth"
     }
-  }(t), [g, S] = i.useState(h.default[m]), _ = i.useCallback(e => {
+  }(t), [g, S] = i.useState(h.default[E]), _ = i.useCallback(e => {
     c.default.updatedUnsyncedSettings({
-      [m]: e
+      [E]: e
     })
-  }, [m]), T = (0, C.shouldChannelChatFloat)({
+  }, [E]), A = (0, C.shouldChannelChatFloat)({
     maxWidth: n
-  }), A = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = T ? A : A + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
+  }), T = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = A ? T : T + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
   i.useEffect(() => {
-    null == a || a(A, T)
-  }, [A, a, T]);
+    null == a || a(T, A)
+  }, [T, a, A]);
   let I = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: o(p.chatTarget, {
-        [p.floating]: T,
-        [p.notFloating]: !T
+        [p.floating]: A,
+        [p.notFloating]: !A
       }),
       style: {
         width: M
       }
-    }), !T && (0, l.jsx)(E, {
+    }), !A && (0, l.jsx)(m, {
       maxWidth: n,
       resizableNode: f,
       onResize: S,
@@ -87,15 +87,15 @@ function m(e) {
     }), (0, l.jsx)("div", {
       ref: f,
       className: o(p.container, {
-        [p.floating]: T
+        [p.floating]: A
       }),
       style: {
-        width: A
+        width: T
       },
       children: s
     })]
   });
-  if (T) {
+  if (A) {
     let e = null != r ? r : i.Fragment;
     return (0, l.jsx)(e, {
       children: (0, l.jsx)("div", {

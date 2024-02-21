@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("77078"),
-  u = n("986373"),
-  o = n("49111"),
+  o = n("986373"),
+  u = n("49111"),
   d = n("782340"),
   c = n("545762"),
   f = n("379333"),
@@ -33,7 +33,7 @@ let p = a.memo(function(e) {
     let {
       favoriteAdded: e,
       clearFavoriteAdded: t
-    } = (0, u.useFavoriteAdded)();
+    } = (0, o.useFavoriteAdded)();
     return a.useEffect(() => {
       if (e) {
         let e = setTimeout(() => {
@@ -57,8 +57,8 @@ let p = a.memo(function(e) {
     tooltipClassName: h.listItemTooltip,
     children: e => (0, l.jsx)("div", {
       ...e,
-      onMouseEnter: o.NOOP,
-      onMouseLeave: o.NOOP,
+      onMouseEnter: u.NOOP,
+      onMouseLeave: u.NOOP,
       children: n
     })
   })

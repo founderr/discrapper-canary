@@ -10,8 +10,8 @@ var a = n("65597"),
   s = n("151426"),
   i = n("77078"),
   r = n("272030"),
-  u = n("369964"),
-  o = n("778588"),
+  o = n("369964"),
+  u = n("778588"),
   d = n("227602"),
   c = n("522049"),
   f = n("962541"),
@@ -21,9 +21,9 @@ var a = n("65597"),
   m = n("803725"),
   E = n("49111"),
   g = n("782340"),
-  I = n("249576");
+  S = n("249576");
 
-function _(e) {
+function I(e) {
   (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
@@ -34,7 +34,7 @@ function _(e) {
   })
 }
 
-function S() {
+function _() {
   (0, m.saveClip)()
 }
 let N = e => {
@@ -52,34 +52,34 @@ let N = e => {
       let {
         closePopout: n
       } = e;
-      return (0, l.jsx)(u.default, {
+      return (0, l.jsx)(o.default, {
         dismissibleContent: s.DismissibleContent.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
         shouldUseHorizontalButtons: !0,
         inlineArt: !0,
-        artClassName: I.clipsEducationArt,
+        artClassName: S.clipsEducationArt,
         position: "top",
         header: (0, l.jsx)("div", {
-          className: I.header,
+          className: S.header,
           children: g.default.Messages.CLIPS_ONBOARDING_CLIP_BUTTON_ACTIVITY_PANEL_COACHMARK_TITLE.format({
             keybind: t,
             keybindHook: () => (0, l.jsx)("span", {
-              className: I.keybindHintKeys,
+              className: S.keybindHintKeys,
               children: (0, l.jsx)(i.KeyCombo, {
-                className: I.keybindShortcut,
+                className: S.keybindShortcut,
                 shortcut: t
               })
             })
           })
         }),
-        headerClassName: I.clipsEducationHeader,
+        headerClassName: S.clipsEducationHeader,
         body: (0, l.jsx)(l.Fragment, {
           children: (0, l.jsx)(i.Text, {
             variant: "text-sm/normal",
             color: "always-white",
-            className: I.bodyText,
+            className: S.bodyText,
             children: g.default.Messages.CLIPS_ONBOARDING_CLIP_BUTTON_ACTIVITY_PANEL_COACHMARK_BODY.format({
               keybindHook: () => (0, l.jsx)("div", {
-                className: I.keyCombo,
+                className: S.keyCombo,
                 children: t
               }),
               keybind: t
@@ -95,7 +95,7 @@ let N = e => {
   })
 };
 var T = () => {
-  let e = (0, a.default)([o.default], () => o.default.hasLayers()),
+  let e = (0, a.default)([u.default], () => u.default.hasLayers()),
     t = (0, C.useEnableClips)(),
     {
       clipsEnabled: n,
@@ -114,8 +114,8 @@ var T = () => {
       tooltipText: null != i ? g.default.Messages.CLIPS_SAVE_CLIP_TOOLTIP.format({
         hotkey: h.toString(null == i ? void 0 : i.shortcut, !0)
       }) : g.default.Messages.CLIPS_EDIT_SAVE_CLIP,
-      onClick: S,
-      onContextMenu: _,
+      onClick: _,
+      onContextMenu: I,
       icon: c.default
     })
   })

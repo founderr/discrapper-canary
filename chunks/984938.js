@@ -20,7 +20,7 @@ var r = t("819855"),
       churnUserDiscountOffer: s,
       onDiscountClaim: t,
       onContinue: f
-    } = e, p = (0, i.default)(), C = (0, r.isThemeDark)(p) ? d : m;
+    } = e, p = (0, i.default)(), _ = (0, r.isThemeDark)(p) ? d : m;
     return null == s ? null : (0, a.jsxs)("div", {
       className: c.churnFooterContainer,
       children: [(0, a.jsx)("div", {
@@ -33,7 +33,7 @@ var r = t("819855"),
           className: c.churnFooterContentBody,
           children: [(0, a.jsx)("img", {
             alt: "",
-            src: C,
+            src: _,
             className: c.churnFooterIcon
           }), (0, a.jsxs)("div", {
             className: c.churnFooterContentBodyInner,

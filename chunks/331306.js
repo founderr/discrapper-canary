@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n.n(a),
   i = n("414456"),
   r = n.n(i),
-  u = n("773364"),
-  o = n("77078"),
+  o = n("773364"),
+  u = n("77078"),
   d = n("673777"),
   c = n("222871"),
   f = n("845579"),
@@ -20,14 +20,14 @@ var l = n("37983"),
   m = n("45029"),
   E = n("599110"),
   g = n("306160"),
-  I = n("701909"),
-  _ = n("687609"),
-  S = n("49111"),
+  S = n("701909"),
+  I = n("687609"),
+  _ = n("49111"),
   N = n("353927"),
   T = n("782340"),
   A = n("217934");
 let L = () => {
-  h.default.getMediaEngine().once(u.MediaEngineEvent.ConnectionStats, e => {
+  h.default.getMediaEngine().once(o.MediaEngineEvent.ConnectionStats, e => {
     let t = Object.values(N.MediaEngineContextTypes).map(t => {
       let n = e.filter(e => {
         let {
@@ -44,12 +44,12 @@ let L = () => {
       }
       return n
     }).filter(e => e.length > 0);
-    (0, g.copy)(JSON.stringify(t, null, 2)), (0, o.showToast)((0, o.createToast)(T.default.Messages.COPIED, o.ToastType.SUCCESS))
+    (0, g.copy)(JSON.stringify(t, null, 2)), (0, u.showToast)((0, u.createToast)(T.default.Messages.COPIED, u.ToastType.SUCCESS))
   })
 };
 var v = function(e) {
   (0, a.useEffect)(() => {
-    E.default.track(S.AnalyticEvents.OPEN_POPOUT, {
+    E.default.track(_.AnalyticEvents.OPEN_POPOUT, {
       type: "RTC Connection"
     })
   }, []);
@@ -65,9 +65,9 @@ var v = function(e) {
         averagePing: n,
         lastPing: a,
         outboundLossRate: i
-      } = e, u = f.DeveloperMode.getSetting();
+      } = e, o = f.DeveloperMode.getSetting();
       return (0, l.jsxs)(s.Fragment, {
-        children: [u && (0, l.jsxs)("div", {
+        children: [o && (0, l.jsxs)("div", {
           children: [(0, l.jsx)("div", {
             className: A.graphContainer,
             children: (0, l.jsx)(c.default, {
@@ -78,7 +78,7 @@ var v = function(e) {
           }), (0, l.jsx)("div", {
             className: A.popoutText,
             children: (0, l.jsx)("strong", {
-              children: _.default.getShortHostname(t)
+              children: I.default.getShortHostname(t)
             })
           })]
         }), (0, l.jsx)("div", {
@@ -110,26 +110,26 @@ var v = function(e) {
     {
       connectionState: i
     } = e,
-    u = f.DeveloperMode.getSetting(),
+    o = f.DeveloperMode.getSetting(),
     g = {
-      [S.RTCConnectionStates.AWAITING_ENDPOINT]: T.default.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
-        url: S.Links.STATUS
+      [_.RTCConnectionStates.AWAITING_ENDPOINT]: T.default.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
+        url: _.Links.STATUS
       }),
-      [S.RTCConnectionStates.CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_CONNECTING,
-      [S.RTCConnectionStates.AUTHENTICATING]: T.default.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
-      [S.RTCConnectionStates.DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
-      [S.RTCConnectionStates.RTC_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
-      [S.RTCConnectionStates.ICE_CHECKING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-        url: I.default.getArticleURL(S.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+      [_.RTCConnectionStates.CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_CONNECTING,
+      [_.RTCConnectionStates.AUTHENTICATING]: T.default.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
+      [_.RTCConnectionStates.DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
+      [_.RTCConnectionStates.RTC_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
+      [_.RTCConnectionStates.ICE_CHECKING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
+        url: S.default.getArticleURL(_.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
       }),
-      [S.RTCConnectionStates.DTLS_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-        url: I.default.getArticleURL(S.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+      [_.RTCConnectionStates.DTLS_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
+        url: S.default.getArticleURL(_.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
       }),
-      [S.RTCConnectionStates.RTC_CONNECTED]: n,
-      [S.RTCConnectionStates.NO_ROUTE]: T.default.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
-        url: I.default.getArticleURL(S.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+      [_.RTCConnectionStates.RTC_CONNECTED]: n,
+      [_.RTCConnectionStates.NO_ROUTE]: T.default.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
+        url: S.default.getArticleURL(_.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
       }),
-      [S.RTCConnectionStates.RTC_DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED
+      [_.RTCConnectionStates.RTC_DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED
     } [i];
   return (0, l.jsx)("div", {
     className: A.container,
@@ -147,11 +147,11 @@ var v = function(e) {
           children: [(0, l.jsx)(m.default, {
             width: 12,
             height: 12,
-            color: o.tokens.colors.TEXT_POSITIVE.css,
+            color: u.tokens.colors.TEXT_POSITIVE.css,
             className: A.icon
           }), T.default.Messages.SECURE_CONNECTION]
-        }), u && h.default.supports(N.Features.DIAGNOSTICS) && !__OVERLAY__ && (0, l.jsxs)(l.Fragment, {
-          children: [(0, l.jsxs)(o.Anchor, {
+        }), o && h.default.supports(N.Features.DIAGNOSTICS) && !__OVERLAY__ && (0, l.jsxs)(l.Fragment, {
+          children: [(0, l.jsxs)(u.Anchor, {
             className: r(A.debugButton, A.textWithIcon),
             onClick: t,
             children: [T.default.Messages.DEBUG, (0, l.jsx)(p.default, {
@@ -159,7 +159,7 @@ var v = function(e) {
               width: 12,
               height: 12
             })]
-          }), (0, l.jsxs)(o.Anchor, {
+          }), (0, l.jsxs)(u.Anchor, {
             className: r(A.copyStatsButton, A.textWithIcon),
             onClick: L,
             title: "Copy to clipboard",
@@ -169,9 +169,9 @@ var v = function(e) {
               height: 12
             })]
           })]
-        }), !u && !__OVERLAY__ && (0, l.jsx)(o.Anchor, {
+        }), !o && !__OVERLAY__ && (0, l.jsx)(u.Anchor, {
           className: A.debugButton,
-          href: I.default.getArticleURL(S.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
+          href: S.default.getArticleURL(_.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
           children: T.default.Messages.LEARN_MORE
         })]
       })]
