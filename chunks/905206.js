@@ -50,6 +50,9 @@ let C = e => (0, s.match)(e).with({
   isExpired: !0,
   isLeader: !0
 }, () => "victor").with({
+  isExpired: !0,
+  didSelfVote: !0
+}, () => "loserSelected").with({
   isExpired: !0
 }, () => "loser").with({
   didSelfVote: !0,
@@ -61,11 +64,6 @@ let C = e => (0, s.match)(e).with({
   isSelected: !0
 }, () => "selected").with({
   isExpired: !1,
-  isLeader: !0,
-  showResults: !0
-}, () => "voted").with({
-  isExpired: !1,
-  isLeader: !1,
   showResults: !0
 }, () => "notVoted").otherwise(() => "normalVote");
 

@@ -16,6 +16,7 @@ function i(e, t) {
     i = {
       styles: {
         loser: n,
+        loserSelected: n,
         normal: n,
         notVoted: n,
         selected: n,
