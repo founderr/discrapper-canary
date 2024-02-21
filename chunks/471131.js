@@ -1,35 +1,36 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return N
   }
 });
-var s = a("37983");
-a("884691");
-var n = a("819855"),
-  l = a("77078"),
-  i = a("841098"),
-  r = a("701909"),
-  o = a("719923"),
-  u = a("153160"),
-  c = a("478968"),
-  d = a("510928"),
-  _ = a("646718"),
-  m = a("49111"),
-  f = a("782340"),
-  I = a("217668"),
-  E = a("940420"),
-  C = a("591726"),
+var s = n("37983");
+n("884691");
+var a = n("819855"),
+  l = n("77078"),
+  i = n("841098"),
+  r = n("701909"),
+  u = n("719923"),
+  o = n("153160"),
+  c = n("478968"),
+  d = n("510928"),
+  _ = n("646718"),
+  f = n("49111"),
+  m = n("782340"),
+  I = n("893643"),
+  E = n("940420"),
+  C = n("591726"),
   N = function(e) {
     let {
       premiumSubscription: t,
-      premiumType: a,
+      premiumType: n,
       onClose: N,
+      onConfirm: M,
       userDiscountOffer: p
-    } = e, M = (0, i.default)(), R = (0, n.isThemeDark)(M) ? E : C, T = (0, c.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, p), L = (0, o.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), P = (0, u.formatPrice)(L.amount, L.currency);
+    } = e, T = (0, i.default)(), R = (0, a.isThemeDark)(T) ? E : C, P = (0, c.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, p), S = (0, u.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), A = (0, o.formatPrice)(S.amount, S.currency);
     return null == p ? null : (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(d.default, {
-        premiumType: a,
+        premiumType: n,
         onClose: N
       }), (0, s.jsx)(l.ModalContent, {
         className: I.body,
@@ -37,7 +38,7 @@ var n = a("819855"),
           className: I.confirmDiscountContent,
           children: [(0, s.jsx)(l.Heading, {
             variant: "heading-xl/bold",
-            children: f.default.Messages.CHURN_DISCOUNT_CONFIRM_HEADER.format({
+            children: m.default.Messages.CHURN_DISCOUNT_CONFIRM_HEADER.format({
               percent: p.discount.amount
             })
           }), (0, s.jsxs)("div", {
@@ -48,10 +49,10 @@ var n = a("819855"),
               className: I.confirmDiscountIcon
             }), (0, s.jsx)(l.Text, {
               variant: "text-sm/medium",
-              children: f.default.Messages.CHURN_DISCOUNT_CONFIRM_DESCRIPTION.format({
+              children: m.default.Messages.CHURN_DISCOUNT_CONFIRM_DESCRIPTION.format({
                 percent: p.discount.amount,
                 numMonths: p.discount.user_usage_limit,
-                price: P
+                price: A
               })
             })]
           }), (0, s.jsx)("div", {
@@ -59,12 +60,12 @@ var n = a("819855"),
             children: (0, s.jsx)(l.Text, {
               variant: "text-xs/semibold",
               className: I.confirmDiscountLegaleseText,
-              children: f.default.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
-                discountedPrice: T,
-                billingPeriod: (0, o.getDiscountIntervalString)(p.discount.user_usage_limit_interval),
+              children: m.default.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
+                discountedPrice: P,
+                billingPeriod: (0, u.getDiscountIntervalString)(p.discount.user_usage_limit_interval),
                 numMonths: p.discount.user_usage_limit,
-                fullPrice: P,
-                helpdeskArticle: r.default.getArticleURL(m.HelpdeskArticles.PAID_TERMS)
+                fullPrice: A,
+                helpdeskArticle: r.default.getArticleURL(f.HelpdeskArticles.PAID_TERMS)
               })
             })
           }), (0, s.jsxs)("div", {
@@ -72,10 +73,11 @@ var n = a("819855"),
             children: [(0, s.jsx)(l.Button, {
               look: l.ButtonLooks.LINK,
               onClick: () => N(),
-              children: f.default.Messages.CHURN_DISCOUNT_NEVERMIND
+              children: m.default.Messages.CHURN_DISCOUNT_NEVERMIND
             }), (0, s.jsx)(l.Button, {
               size: l.ButtonSizes.SMALL,
-              children: f.default.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
+              onClick: () => M(),
+              children: m.default.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
             })]
           })]
         })

@@ -806,7 +806,7 @@ class eN extends a.PureComponent {
       let {
         channel: t
       } = this.props;
-      null != t && (t.isThread() ? e = (0, v.default)(e, !1) : (0, y.isGuildTextChannelType)(t.type) && (e = (0, k.sanitizeGuildTextChannelName)(e)), (0, E.updateChannel)({
+      null != t && (t.isThread() ? e = (0, v.default)(e, !1) : X.ChannelTypesSets.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, k.sanitizeGuildTextChannelName)(e)), (0, E.updateChannel)({
         name: e
       }))
     }, this.handleBlurName = () => {

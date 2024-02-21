@@ -3,6 +3,7 @@ e.exports = {
   body: "body_ca65c1",
   cancelImage: "cancelImage__688be",
   cancellationHeader: "cancellationHeader_bdb51b",
+  confettiCanvas: "confettiCanvas__3aa34",
   errorBlock: "errorBlock_e05293",
   invoiceCancelRow: "invoiceCancelRow_c1bfe7",
   invoiceTable: "invoiceTable__216bc",

@@ -1,207 +1,209 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   Steps: function() {
     return s
   },
   default: function() {
-    return W
+    return V
   }
-}), a("222007"), a("70102");
-var s, n, l = a("37983"),
-  i = a("884691"),
-  r = a("414456"),
-  o = a.n(r),
-  u = a("627445"),
-  c = a.n(u),
-  d = a("446674"),
-  _ = a("819855"),
-  m = a("77078"),
-  f = a("850068"),
-  I = a("841098"),
-  E = a("812204"),
-  C = a("685665"),
-  N = a("619935"),
-  p = a("10514"),
-  M = a("145131"),
-  R = a("599110"),
-  T = a("701909"),
-  L = a("719923"),
-  P = a("153160"),
-  A = a("809071"),
-  g = a("182650"),
-  S = a("883662"),
-  O = a("330189"),
-  h = a("360262"),
-  x = a("177998"),
-  y = a("146163"),
-  D = a("510928"),
-  b = a("661128"),
-  v = a("646718"),
-  U = a("49111"),
-  k = a("782340"),
-  j = a("871556");
-async function B(e) {
+}), n("222007"), n("70102");
+var s, a, l = n("37983"),
+  i = n("884691"),
+  r = n("414456"),
+  u = n.n(r),
+  o = n("516555"),
+  c = n("627445"),
+  d = n.n(c),
+  _ = n("446674"),
+  f = n("819855"),
+  m = n("77078"),
+  I = n("850068"),
+  E = n("841098"),
+  C = n("812204"),
+  N = n("685665"),
+  M = n("619935"),
+  p = n("10514"),
+  T = n("145131"),
+  R = n("599110"),
+  P = n("701909"),
+  S = n("719923"),
+  A = n("153160"),
+  L = n("809071"),
+  g = n("182650"),
+  O = n("883662"),
+  x = n("471131"),
+  h = n("398309"),
+  y = n("360262"),
+  D = n("177998"),
+  v = n("146163"),
+  b = n("510928"),
+  U = n("661128"),
+  j = n("646718"),
+  B = n("49111"),
+  k = n("782340"),
+  F = n("871556");
+async function w(e) {
   let {
     premiumSubscription: t,
-    onClose: a,
+    onClose: n,
     setHasError: s,
-    setIsCancelling: n,
+    setIsCancelling: a,
     analyticsLocations: l,
     analyticsLocation: i
   } = e;
   try {
-    if (n(!0), s(!1), t.status === U.SubscriptionStatusTypes.PAST_DUE) await (0, f.cancelSubscription)(t.id, l, i);
+    if (a(!0), s(!1), t.status === B.SubscriptionStatusTypes.PAST_DUE) await (0, I.cancelSubscription)(t.id, l, i);
     else {
-      var r, o;
-      let e = null !== (o = null === (r = t.renewalMutations) || void 0 === r ? void 0 : r.items) && void 0 !== o ? o : t.items;
-      await (0, f.updateSubscription)(t, {
-        items: (0, L.getItemsWithoutPremiumPlanItem)(e)
+      var r, u;
+      let e = null !== (u = null === (r = t.renewalMutations) || void 0 === r ? void 0 : r.items) && void 0 !== u ? u : t.items;
+      await (0, I.updateSubscription)(t, {
+        items: (0, S.getItemsWithoutPremiumPlanItem)(e)
       }, l, i)
     }
-    a()
+    n()
   } catch {
-    s(!0), n(!1)
+    s(!0), a(!1)
   }
 }
 
 function G(e) {
   var t;
   let {
-    premiumSubscription: a,
+    premiumSubscription: n,
     premiumType: s,
-    setStep: n,
+    setStep: a,
     onClose: r,
-    whatYouLoseExperienceEnabled: o,
-    analyticsLocation: u
-  } = e, c = (0, N.useBlockedPaymentsConfig)(), [d, f] = i.useState(!1), [E, p] = i.useState(!1), R = (0, I.default)(), {
-    analyticsLocations: P
-  } = (0, C.default)(), A = null;
-  A = a.status === U.SubscriptionStatusTypes.PAST_DUE ? k.default.Messages.PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY : s === v.PremiumTypes.TIER_0 ? c ? k.default.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_0_PAYMENT_BLOCKED_RUSSIA.format({
-    date: a.currentPeriodEnd,
-    helpdeskArticle: T.default.getArticleURL(U.HelpdeskArticles.BLOCKED_PAYMENTS)
+    whatYouLoseExperienceEnabled: u,
+    analyticsLocation: o
+  } = e, c = (0, M.useBlockedPaymentsConfig)(), [d, _] = i.useState(!1), [I, C] = i.useState(!1), p = (0, E.default)(), {
+    analyticsLocations: R
+  } = (0, N.default)(), A = null;
+  A = n.status === B.SubscriptionStatusTypes.PAST_DUE ? k.default.Messages.PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY : s === j.PremiumTypes.TIER_0 ? c ? k.default.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_0_PAYMENT_BLOCKED_RUSSIA.format({
+    date: n.currentPeriodEnd,
+    helpdeskArticle: P.default.getArticleURL(B.HelpdeskArticles.BLOCKED_PAYMENTS)
   }) : k.default.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_0.format({
-    date: a.currentPeriodEnd
-  }) : s === v.PremiumTypes.TIER_1 ? c ? k.default.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_1_PAYMENT_BLOCKED_RUSSIA.format({
-    date: a.currentPeriodEnd,
-    helpdeskArticle: T.default.getArticleURL(U.HelpdeskArticles.BLOCKED_PAYMENTS)
+    date: n.currentPeriodEnd
+  }) : s === j.PremiumTypes.TIER_1 ? c ? k.default.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_1_PAYMENT_BLOCKED_RUSSIA.format({
+    date: n.currentPeriodEnd,
+    helpdeskArticle: P.default.getArticleURL(B.HelpdeskArticles.BLOCKED_PAYMENTS)
   }) : k.default.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_1.format({
-    date: a.currentPeriodEnd
+    date: n.currentPeriodEnd
   }) : c ? k.default.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_2_PAYMENT_BLOCKED_RUSSIA.format({
-    date: a.currentPeriodEnd,
-    helpdeskArticle: T.default.getArticleURL(U.HelpdeskArticles.BLOCKED_PAYMENTS)
+    date: n.currentPeriodEnd,
+    helpdeskArticle: P.default.getArticleURL(B.HelpdeskArticles.BLOCKED_PAYMENTS)
   }) : k.default.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_2.format({
-    date: a.currentPeriodEnd
+    date: n.currentPeriodEnd
   });
-  let g = a.items.some(e => {
+  let L = n.items.some(e => {
       let {
         planId: t
       } = e;
-      return !v.PREMIUM_PLANS.has(t)
+      return !j.PREMIUM_PLANS.has(t)
     }),
-    S = g && null == a.renewalMutations || (null === (t = a.renewalMutations) || void 0 === t ? void 0 : t.items.find(e => {
+    g = L && null == n.renewalMutations || (null === (t = n.renewalMutations) || void 0 === t ? void 0 : t.items.find(e => {
       let {
         planId: t
       } = e;
-      return !v.PREMIUM_PLANS.has(t)
+      return !j.PREMIUM_PLANS.has(t)
     })) != null,
-    O = S ? (0, l.jsx)(m.Button, {
-      onClick: () => n(3),
+    O = g ? (0, l.jsx)(m.Button, {
+      onClick: () => a(3),
       children: k.default.Messages.NEXT
     }) : (0, l.jsx)(m.Button, {
       color: m.Button.Colors.RED,
       disabled: d,
       onClick: async () => {
-        await B({
-          setHasError: p,
+        await w({
+          setHasError: C,
           onClose: r,
-          premiumSubscription: a,
-          setIsCancelling: f,
-          analyticsLocations: P,
-          analyticsLocation: u
+          premiumSubscription: n,
+          setIsCancelling: _,
+          analyticsLocations: R,
+          analyticsLocation: o
         })
       },
-      children: o ? k.default.Messages.CONFIRM : k.default.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({
-        planPremiumType: L.default.getDisplayPremiumType(a.planId)
+      children: u ? k.default.Messages.CONFIRM : k.default.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({
+        planPremiumType: S.default.getDisplayPremiumType(n.planId)
       })
     }),
-    h = (0, l.jsx)(m.Button, {
+    x = (0, l.jsx)(m.Button, {
       look: m.Button.Looks.LINK,
-      color: (0, _.isThemeLight)(R) ? m.Button.Colors.PRIMARY : m.Button.Colors.WHITE,
+      color: (0, f.isThemeLight)(p) ? m.Button.Colors.PRIMARY : m.Button.Colors.WHITE,
       onClick: r,
-      children: o ? k.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK : k.default.Messages.CANCEL
+      children: u ? k.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK : k.default.Messages.CANCEL
     });
   return (0, l.jsxs)(l.Fragment, {
-    children: [o ? (0, l.jsx)(D.default, {
+    children: [u ? (0, l.jsx)(b.default, {
       premiumType: s,
-      className: j.cancellationHeader,
+      className: F.cancellationHeader,
       onClose: r
     }) : (0, l.jsxs)(m.ModalHeader, {
       separator: !1,
       children: [(0, l.jsx)(m.FormTitle, {
         tag: m.FormTitleTags.H4,
         children: k.default.Messages.PREMIUM_CANCEL_CONFIRM_TITLE.format({
-          planPremiumType: L.default.getDisplayPremiumType(a.planId)
+          planPremiumType: S.default.getDisplayPremiumType(n.planId)
         })
       }), (0, l.jsx)(m.ModalCloseButton, {
         onClick: r
       })]
     }), (0, l.jsxs)(m.ModalContent, {
-      className: j.body,
-      children: [E ? (0, l.jsx)(m.FormErrorBlock, {
-        className: j.errorBlock,
+      className: F.body,
+      children: [I ? (0, l.jsx)(m.FormErrorBlock, {
+        className: F.errorBlock,
         children: k.default.Messages.BILLING_ERROR_GENERIC
       }) : null, (0, l.jsx)("div", {
-        className: j.cancelImage
+        className: F.cancelImage
       }), (0, l.jsx)("div", {
         children: A
       })]
     }), (0, l.jsxs)(m.ModalFooter, {
-      justify: M.default.Justify.START,
-      children: [O, h]
+      justify: T.default.Justify.START,
+      children: [O, x]
     })]
   })
 }
 
-function w(e) {
-  var t, a;
+function H(e) {
+  var t, n;
   let {
     premiumSubscription: s
   } = e, {
-    analyticsLocations: n
-  } = (0, C.default)(), [i] = (0, A.useSubscriptionInvoicePreview)({
+    analyticsLocations: a
+  } = (0, N.default)(), [i] = (0, L.useSubscriptionInvoicePreview)({
     subscriptionId: s.id,
-    items: (0, L.getItemsWithoutPremiumPlanItem)(null !== (a = null === (t = s.renewalMutations) || void 0 === t ? void 0 : t.items) && void 0 !== a ? a : s.items),
+    items: (0, S.getItemsWithoutPremiumPlanItem)(null !== (n = null === (t = s.renewalMutations) || void 0 === t ? void 0 : t.items) && void 0 !== n ? n : s.items),
     renewal: !0,
-    analyticsLocations: n,
-    analyticsLocation: E.default.CANCEL_INVOICE_PREVIEW
-  }), r = (0, d.useStateFromStores)([p.default], () => p.default.get(s.planId));
+    analyticsLocations: a,
+    analyticsLocation: C.default.CANCEL_INVOICE_PREVIEW
+  }), r = (0, _.useStateFromStores)([p.default], () => p.default.get(s.planId));
   if (null == i || null == r) return (0, l.jsx)(m.Spinner, {
-    className: j.loading
+    className: F.loading
   });
   let {
-    intervalType: o,
-    intervalCount: u
-  } = L.default.getIntervalForInvoice(i);
+    intervalType: u,
+    intervalCount: o
+  } = S.default.getIntervalForInvoice(i);
   return (0, l.jsxs)("div", {
-    className: j.bodyText,
+    className: F.bodyText,
     children: [(0, l.jsx)("div", {
-      className: j.renewalInvoiceDate,
+      className: F.renewalInvoiceDate,
       children: 0 !== i.total ? k.default.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE_WITH_CHARGE.format({
         renewalDate: i.subscriptionPeriodStart,
-        rate: (0, P.formatRate)((0, P.formatPrice)(i.total, i.currency), o, u)
+        rate: (0, A.formatRate)((0, A.formatPrice)(i.total, i.currency), u, o)
       }) : k.default.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE.format({
         renewalDate: i.subscriptionPeriodStart
       })
-    }), (0, l.jsxs)(S.PremiumInvoiceTable, {
-      children: [(0, l.jsx)(S.PremiumInvoiceTableHeader, {
+    }), (0, l.jsxs)(O.PremiumInvoiceTable, {
+      children: [(0, l.jsx)(O.PremiumInvoiceTableHeader, {
         children: k.default.Messages.PREMIUM_SUBSCRIPTION_UPDATES
-      }), (0, l.jsx)(S.PremiumInvoiceTableRow, {
+      }), (0, l.jsx)(O.PremiumInvoiceTableRow, {
         label: k.default.Messages.PREMIUM_SUBSCRIPTION_CANCELLED.format({
-          planName: L.default.getDisplayName(r.id)
+          planName: S.default.getDisplayName(r.id)
         }),
-        value: (0, L.getFormattedRateForPlan)(r),
-        className: j.invoiceCancelRow
-      }), (0, l.jsx)(S.PremiumInvoiceTableDivider, {}), (0, l.jsx)(y.SubscriptionInvoiceFooter, {
+        value: (0, S.getFormattedRateForPlan)(r),
+        className: F.invoiceCancelRow
+      }), (0, l.jsx)(O.PremiumInvoiceTableDivider, {}), (0, l.jsx)(v.SubscriptionInvoiceFooter, {
         premiumSubscription: s,
         renewalInvoice: i,
         isUpdate: !0
@@ -210,38 +212,38 @@ function w(e) {
   })
 }
 
-function F(e) {
+function W(e) {
   let {
     premiumSubscription: t,
-    premiumType: a,
+    premiumType: n,
     onBack: s,
-    onClose: n,
+    onClose: a,
     analyticsLocation: r
-  } = e, [u, c] = i.useState(!1), [d, _] = i.useState(!1), {
+  } = e, [o, c] = i.useState(!1), [d, _] = i.useState(!1), {
     analyticsLocations: f
-  } = (0, C.default)();
+  } = (0, N.default)();
   return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(D.default, {
-      premiumType: a,
-      onClose: n
+    children: [(0, l.jsx)(b.default, {
+      premiumType: n,
+      onClose: a
     }), (0, l.jsxs)(m.ModalContent, {
-      className: o(j.previewStep, j.body),
+      className: u(F.previewStep, F.body),
       children: [d ? (0, l.jsx)(m.FormErrorBlock, {
-        className: j.errorBlock,
+        className: F.errorBlock,
         children: k.default.Messages.BILLING_ERROR_GENERIC
-      }) : null, (0, l.jsx)(w, {
+      }) : null, (0, l.jsx)(H, {
         premiumSubscription: t
       })]
     }), (0, l.jsxs)(m.ModalFooter, {
-      align: M.default.Align.CENTER,
-      justify: M.default.Justify.BETWEEN,
+      align: T.default.Align.CENTER,
+      justify: T.default.Justify.BETWEEN,
       children: [(0, l.jsx)(m.Button, {
         color: m.Button.Colors.RED,
-        disabled: u,
+        disabled: o,
         onClick: async () => {
-          await B({
+          await w({
             setHasError: _,
-            onClose: n,
+            onClose: a,
             premiumSubscription: t,
             setIsCancelling: c,
             analyticsLocations: f,
@@ -249,141 +251,158 @@ function F(e) {
           })
         },
         children: k.default.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({
-          planPremiumType: L.default.getDisplayPremiumType(t.planId)
+          planPremiumType: S.default.getDisplayPremiumType(t.planId)
         })
-      }), (0, l.jsx)(x.default, {
+      }), (0, l.jsx)(D.default, {
         onClick: s
       })]
     })]
   })
 }
 
-function H(e) {
+function Y(e) {
   var t;
   return {
     subscription_id: e.id,
     subscription_type: e.type,
-    subscription_plan_id: null === (t = (0, L.getPremiumPlanItem)(e)) || void 0 === t ? void 0 : t.id,
+    subscription_plan_id: null === (t = (0, S.getPremiumPlanItem)(e)) || void 0 === t ? void 0 : t.id,
     subscription_plan_gateway_plan_id: e.paymentGatewayPlanId
   }
-}(n = s || (s = {}))[n.WHAT_YOU_LOSE = 1] = "WHAT_YOU_LOSE", n[n.CONFIRM = 2] = "CONFIRM", n[n.PREVIEW = 3] = "PREVIEW", n[n.CONFIRM_DISCOUNT = 4] = "CONFIRM_DISCOUNT";
-let Y = {
+}(a = s || (s = {}))[a.WHAT_YOU_LOSE = 1] = "WHAT_YOU_LOSE", a[a.CONFIRM = 2] = "CONFIRM", a[a.PREVIEW = 3] = "PREVIEW", a[a.CONFIRM_DISCOUNT = 4] = "CONFIRM_DISCOUNT", a[a.DISCOUNT_APPLIED = 5] = "DISCOUNT_APPLIED";
+let K = {
   1: "What You're Losing",
   2: "Confirm Cancellation",
   3: "Preview Updated Subscription",
-  4: "Confirm Discount"
+  4: "Confirm Discount",
+  5: "Discount Successfully Applied"
 };
 
-function W(e) {
+function V(e) {
   var t;
-  let a, {
+  let n, {
       premiumSubscription: s,
-      transitionState: n,
+      transitionState: a,
       onClose: r,
-      analyticsLocations: o,
-      analyticsLocation: u
+      analyticsLocations: u,
+      analyticsLocation: c
     } = e,
-    d = null === (t = (0, L.getPremiumPlanItem)(s)) || void 0 === t ? void 0 : t.planId,
-    f = null != d ? L.default.getPremiumType(d) : null;
-  c(null != f, "Should not be cancelling Nitro without premiumType");
-  let N = (0, I.default)();
+    _ = i.useRef(new o.Environment),
+    [I, M] = i.useState(null),
+    p = null === (t = (0, S.getPremiumPlanItem)(s)) || void 0 === t ? void 0 : t.planId,
+    T = null != p ? S.default.getPremiumType(p) : null;
+  d(null != T, "Should not be cancelling Nitro without premiumType");
+  let P = (0, E.default)();
   i.useEffect(() => {
-    R.default.track(U.AnalyticEvents.CANCELLATION_FLOW_STARTED, H(s))
+    R.default.track(B.AnalyticEvents.CANCELLATION_FLOW_STARTED, Y(s))
   }, [s]);
-  let p = f === v.PremiumTypes.TIER_0 || f === v.PremiumTypes.TIER_1 || f === v.PremiumTypes.TIER_2,
-    M = p ? 1 : 2,
+  let A = T === j.PremiumTypes.TIER_0 || T === j.PremiumTypes.TIER_1 || T === j.PremiumTypes.TIER_2,
+    L = A ? 1 : 2,
     {
-      AnalyticsLocationProvider: T
-    } = (0, C.default)(o, E.default.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
-    [P, A, S, x] = function(e, t, a) {
-      let [s, n] = i.useState(e), [l, r] = i.useState(Date.now()), [o] = i.useState(Date.now()), u = i.useCallback(e => {
-        R.default.track(U.AnalyticEvents.CANCELLATION_FLOW_STEP, {
-          from_step: Y[s],
-          to_step: Y[e],
+      AnalyticsLocationProvider: O
+    } = (0, N.default)(u, C.default.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
+    [D, v, b, w] = function(e, t, n) {
+      let [s, a] = i.useState(e), [l, r] = i.useState(Date.now()), [u] = i.useState(Date.now()), o = i.useCallback(e => {
+        R.default.track(B.AnalyticEvents.CANCELLATION_FLOW_STEP, {
+          from_step: K[s],
+          to_step: K[e],
           step_duration_ms: Date.now() - l,
-          flow_duration_ms: Date.now() - o,
-          location_stack: a,
-          ...H(t)
-        }), n(e), r(Date.now())
-      }, [a, o, l, s, t]);
-      return [s, u, l, o]
-    }(M, s, o);
-  (0, b.useUnsupportedExternalSubscriptionModalHandler)(s, r, !1);
-  let y = e => {
-      r(), R.default.track(U.AnalyticEvents.CANCELLATION_FLOW_STEP, {
-        from_step: Y[e],
+          flow_duration_ms: Date.now() - u,
+          location_stack: n,
+          ...Y(t)
+        }), a(e), r(Date.now())
+      }, [n, u, l, s, t]);
+      return [s, o, l, u]
+    }(L, s, u);
+  (0, U.useUnsupportedExternalSubscriptionModalHandler)(s, r, !1);
+  let H = e => {
+      r(), R.default.track(B.AnalyticEvents.CANCELLATION_FLOW_STEP, {
+        from_step: K[e],
         to_step: null,
-        step_duration_ms: Date.now() - S,
-        flow_duration_ms: Date.now() - x,
-        location_stack: o,
-        ...H(s)
+        step_duration_ms: Date.now() - b,
+        flow_duration_ms: Date.now() - w,
+        location_stack: u,
+        ...Y(s)
       })
     },
-    D = (0, g.useShouldFetchChurnOffer)(),
+    V = (0, g.useShouldFetchChurnOffer)(),
     {
-      churnUserDiscountOffer: B,
-      isFetchingChurnDiscountOffer: w
-    } = (0, g.useFetchChurnUserDiscountOffer)(!D || 1 !== P);
-  switch (P) {
+      churnUserDiscountOffer: Z,
+      isFetchingChurnDiscountOffer: z
+    } = (0, g.useFetchChurnUserDiscountOffer)(!V || 1 !== D);
+  switch (D) {
     case 1:
-      a = (0, l.jsx)(h.default, {
-        premiumType: f,
+      n = (0, l.jsx)(y.default, {
+        premiumType: T,
         titleText: k.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
         subtitleText: k.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
         footer: (0, l.jsxs)("div", {
-          className: j.whatYouLoseButtonContainer,
+          className: F.whatYouLoseButtonContainer,
           children: [(0, l.jsx)(m.Button, {
-            onClick: () => A(2),
+            onClick: () => v(2),
             children: k.default.Messages.CONTINUE
           }), (0, l.jsx)(m.Button, {
             look: m.Button.Looks.LINK,
-            color: (0, _.isThemeDark)(N) ? m.Button.Colors.WHITE : m.Button.Colors.PRIMARY,
-            onClick: () => y(P),
+            color: (0, f.isThemeDark)(P) ? m.Button.Colors.WHITE : m.Button.Colors.PRIMARY,
+            onClick: () => H(D),
             children: k.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
           })]
         }),
-        onClose: () => y(P),
-        onDiscountClaim: () => A(4),
-        onContinue: () => A(2),
-        isLoading: D && w,
-        churnUserDiscountOffer: B,
-        analyticsLocations: o
+        onClose: () => H(D),
+        onDiscountClaim: () => v(4),
+        onContinue: () => v(2),
+        isLoading: V && z,
+        churnUserDiscountOffer: Z,
+        analyticsLocations: u
       });
       break;
     case 2:
-      a = (0, l.jsx)(G, {
+      n = (0, l.jsx)(G, {
         premiumSubscription: s,
-        premiumType: f,
-        setStep: A,
-        onClose: () => y(P),
-        whatYouLoseExperienceEnabled: p,
-        analyticsLocation: u
+        premiumType: T,
+        setStep: v,
+        onClose: () => H(D),
+        whatYouLoseExperienceEnabled: A,
+        analyticsLocation: c
       });
       break;
     case 3:
-      a = (0, l.jsx)(F, {
+      n = (0, l.jsx)(W, {
         premiumSubscription: s,
-        premiumType: f,
-        onBack: () => A(2),
-        onClose: () => y(P),
-        analyticsLocation: u
+        premiumType: T,
+        onBack: () => v(2),
+        onClose: () => H(D),
+        analyticsLocation: c
       });
       break;
     case 4:
-      a = (0, l.jsx)(O.default, {
+      n = (0, l.jsx)(x.default, {
         premiumSubscription: s,
-        premiumType: f,
-        onClose: () => y(P),
-        userDiscountOffer: B
+        premiumType: T,
+        onClose: () => H(D),
+        onConfirm: () => v(5),
+        userDiscountOffer: Z
+      });
+      break;
+    case 5:
+      n = (0, l.jsx)(h.PremiumSubscritionDiscountAppliedModal, {
+        premiumSubscription: s,
+        premiumType: T,
+        onClose: () => H(D),
+        confettiCanvas: I,
+        userDiscountOffer: Z
       });
       break;
     default:
-      throw Error("Unexpected step: ".concat(P))
+      throw Error("Unexpected step: ".concat(D))
   }
-  return (0, l.jsx)(T, {
-    children: (0, l.jsx)(m.ModalRoot, {
-      transitionState: n,
-      children: a
-    })
+  return (0, l.jsxs)(O, {
+    children: [(0, l.jsx)(o.ConfettiCanvas, {
+      ref: M,
+      className: F.confettiCanvas,
+      environment: _.current
+    }), (0, l.jsx)(m.ModalRoot, {
+      transitionState: a,
+      children: n
+    })]
   })
 }
