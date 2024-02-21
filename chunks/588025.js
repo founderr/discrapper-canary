@@ -12,4 +12,4 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), (r = s || (s = {}))[r.CROSS_PLATFORM = 0] = "CROSS_PLATFORM", r[r.XBOX = 1] = "XBOX", r[r.PLAYSTATION = 2] = "PLAYSTATION", r[r.SWITCH = 3] = "SWITCH", r[r.PC = 4] = "PC";
 let l = new Set(Object.values(s).filter(e => "number" == typeof e));
-(a = i || (i = {}))[a.GIFT_INVENTORY_SETTINGS_BADGE = 0] = "GIFT_INVENTORY_SETTINGS_BADGE", a[a.QUEST_BAR = 1] = "QUEST_BAR", a[a.QUEST_INVENTORY_CARD = 2] = "QUEST_INVENTORY_CARD", a[a.QUESTS_EMBED = 3] = "QUESTS_EMBED", a[a.ACTIVITY_PANEL = 4] = "ACTIVITY_PANEL"
+(a = i || (i = {}))[a.GIFT_INVENTORY_SETTINGS_BADGE = 0] = "GIFT_INVENTORY_SETTINGS_BADGE", a[a.QUEST_BAR = 1] = "QUEST_BAR", a[a.QUEST_INVENTORY_CARD = 2] = "QUEST_INVENTORY_CARD", a[a.QUESTS_EMBED = 3] = "QUESTS_EMBED", a[a.ACTIVITY_PANEL = 4] = "ACTIVITY_PANEL", a[a.QUEST_LIVE_STREAM = 5] = "QUEST_LIVE_STREAM"

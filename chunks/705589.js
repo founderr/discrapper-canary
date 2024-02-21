@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("907002"),
   o = n("446674"),
   u = n("77078"),
@@ -26,7 +26,7 @@ var a = n("37983"),
   g = n("782340"),
   A = n("841274");
 let N = s.forwardRef(function(e, t) {
-  var n, i;
+  var n, l;
   let {
     className: N,
     expansionFactor: R,
@@ -40,11 +40,11 @@ let N = s.forwardRef(function(e, t) {
   } = e, x = (0, o.useStateFromStores)([h.default], () => h.default.isEnrolling(D.id), [D]), b = (0, o.useStateFromStores)([d.default], () => d.default.locale), U = s.useMemo(() => new Date(D.config.expiresAt).toLocaleDateString(b, {
     dateStyle: "long"
   }), [D.config.expiresAt, b]), G = s.useMemo(() => D.config.videoAssets.includes(_.QuestContent.QUEST_BAR), [D]), j = s.useCallback(() => {
-    (0, E.enrollInQuest)(D.id)
-  }, [D]), w = (0, T.useHandleClaimQuestsReward)(D), k = (null === (n = D.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (i = D.userStatus) || void 0 === i ? void 0 : i.completedAt) != null;
+    (0, E.enrollInQuest)(D.id, _.QuestContent.QUEST_BAR)
+  }, [D]), w = (0, T.useHandleClaimQuestsReward)(D), k = (null === (n = D.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null;
   return (0, a.jsx)(r.animated.div, {
     "aria-hidden": !O && v,
-    className: l(N, A.contentExpanded),
+    className: i(N, A.contentExpanded),
     style: {
       opacity: R.to({
         range: [0, 1],
@@ -95,7 +95,7 @@ let N = s.forwardRef(function(e, t) {
           })
         })]
       }), F ? (0, a.jsx)(u.Button, {
-        className: l(A.cta, A.ctaClaimReward),
+        className: i(A.cta, A.ctaClaimReward),
         color: u.Button.Colors.CUSTOM,
         fullWidth: !0,
         onClick: w,

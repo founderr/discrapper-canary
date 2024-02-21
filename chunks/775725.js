@@ -19,9 +19,9 @@ var l = n("414456"),
   _ = n("199890");
 let T = (e, t, n) => n ? f.default.Messages.QUESTS_SHOW_CODE : e || t ? f.default.Messages.QUESTS_CLAIM_REWARD : f.default.Messages.QUESTS_ACCEPT,
   I = (e, t) => e ? f.default.Messages.QUESTS_COMPLETE_TOOLTIP : t ? f.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : f.default.Messages.QUESTS_ACCEPT_TOOLTIP,
-  m = e => {
-    var t, l, a;
-    return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null || (null === (l = e.userStatus) || void 0 === l ? void 0 : l.completedAt) != null || (null === (a = e.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null ? () => {
+  m = (e, t) => {
+    var l, a, i;
+    return (null === (l = e.userStatus) || void 0 === l ? void 0 : l.enrolledAt) != null || (null === (a = e.userStatus) || void 0 === a ? void 0 : a.completedAt) != null || (null === (i = e.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null ? () => {
       (0, r.openModalLazy)(async () => {
         let {
           default: t
@@ -32,7 +32,7 @@ let T = (e, t, n) => n ? f.default.Messages.QUESTS_SHOW_CODE : e || t ? f.defaul
         })
       })
     } : () => {
-      (0, o.enrollInQuest)(e.id)
+      (0, o.enrollInQuest)(e.id, t)
     }
   };
 var N = e => {
@@ -40,7 +40,7 @@ var N = e => {
   let {
     quest: o,
     location: N
-  } = e, p = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, A = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, C = S && !A, h = S ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN, g = T(p, S, A), M = I(p, S), O = m(o), R = S && !p, L = (0, i.useStateFromStores)([u.default], () => u.default.isEnrolling(o.id));
+  } = e, p = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, A = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, C = S && !A, h = S ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN, g = T(p, S, A), M = I(p, S), O = m(o, N), R = S && !p, L = (0, i.useStateFromStores)([u.default], () => u.default.isEnrolling(o.id));
   return (0, s.jsxs)("div", {
     className: a(_.outerContainer, {
       [_.outerContainerGiftInventory]: N === d.QuestContent.QUEST_INVENTORY_CARD,

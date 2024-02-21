@@ -81,7 +81,7 @@ var N = function(e) {
       }
     })
   }, [N]), M = s.useCallback(() => {
-    (0, E.enrollInQuest)(N.id)
+    (0, E.enrollInQuest)(N.id, _.QuestContent.ACTIVITY_PANEL)
   }, [N]), P = s.useCallback(() => {
     d.default.open(p.UserSettingsSections.INVENTORY)
   }, []), D = (0, S.useHandleClaimQuestsReward)(N);

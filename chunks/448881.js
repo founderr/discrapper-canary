@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return S
   },
   dismissQuestContent: function() {
-    return f
+    return _
   }
 });
 var s = n("872717"),
@@ -81,20 +81,23 @@ async function d(e) {
     })
   }
 }
-async function c(e) {
-  let t = a.default.isEnrolling(e);
-  if (!t) {
+async function c(e, t) {
+  let n = a.default.isEnrolling(e);
+  if (!n) {
     i.default.dispatch({
       type: "QUESTS_ENROLL_BEGIN",
       questId: e
     });
     try {
-      let t = await s.default.post({
-        url: u.Endpoints.QUESTS_ENROLL(e)
+      let n = await s.default.post({
+        url: u.Endpoints.QUESTS_ENROLL(e),
+        body: {
+          location: t
+        }
       });
       i.default.dispatch({
         type: "QUESTS_ENROLL_SUCCESS",
-        enrolledQuestUserStatus: (0, l.questUserStatusFromServer)(t.body)
+        enrolledQuestUserStatus: (0, l.questUserStatusFromServer)(n.body)
       })
     } catch (t) {
       i.default.dispatch({
@@ -157,7 +160,7 @@ async function S(e) {
     }
   }
 }
-async function f(e, t) {
+async function _(e, t) {
   let n = a.default.isDismissingContent(e);
   if (!n) {
     i.default.dispatch({
