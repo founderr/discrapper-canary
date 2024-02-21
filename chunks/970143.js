@@ -1,119 +1,131 @@
 "use strict";
-a.r(s), a.d(s, {
+t.r(s), t.d(s, {
   default: function() {
-    return x
+    return g
   }
 });
-var t = a("37983");
-a("884691");
-var l = a("116788"),
-  i = a("768961"),
-  n = a("224701"),
-  r = a("77078"),
-  o = a("145131"),
-  c = a("701909"),
-  d = a("588025"),
-  u = a("49111"),
-  m = a("782340"),
-  S = a("916183"),
-  h = a("647924");
+var a = t("37983");
+t("884691");
+var l = t("116788"),
+  n = t("768961"),
+  r = t("224701"),
+  c = t("77078"),
+  i = t("145131"),
+  o = t("701909"),
+  d = t("588025"),
+  u = t("49111"),
+  h = t("782340"),
+  f = t("916183"),
+  m = t("647924");
 
-function x(e) {
+function g(e) {
   let {
     transitionState: s,
-    onClose: a,
+    onClose: t,
     questContent: l,
-    questConfig: i
-  } = e, n = l === d.QuestContent.QUEST_BAR ? m.default.Messages.QUESTS_DISCLOSURE_PUBLISHER_TARGETING.format({
-    gamePublisher: i.messages.gamePublisher
-  }) : m.default.Messages.QUESTS_DISCLOSURE_PUBLISHER_PROMOTING.format({
-    gamePublisher: i.messages.gamePublisher,
-    gameTitle: i.messages.gameTitle
+    questConfig: n
+  } = e, r = l === d.QuestContent.QUEST_BAR ? h.default.Messages.QUESTS_DISCLOSURE_PUBLISHER_TARGETING.format({
+    gamePublisher: n.messages.gamePublisher
+  }) : h.default.Messages.QUESTS_DISCLOSURE_PUBLISHER_PROMOTING.format({
+    gamePublisher: n.messages.gamePublisher,
+    gameTitle: n.messages.gameTitle
   });
-  return (0, t.jsxs)(r.ModalRoot, {
+  return (0, a.jsxs)(c.ModalRoot, {
     transitionState: s,
-    size: r.ModalSize.DYNAMIC,
-    className: S.modalRoot,
-    children: [(0, t.jsxs)(r.ModalHeader, {
-      direction: o.default.Direction.VERTICAL,
+    size: c.ModalSize.DYNAMIC,
+    className: f.modalRoot,
+    children: [(0, a.jsxs)(c.ModalHeader, {
+      direction: i.default.Direction.VERTICAL,
       separator: !1,
-      className: S.modalHeader,
-      children: [(0, t.jsxs)("div", {
-        className: S.modalTop,
-        children: [(0, t.jsx)("div", {
-          className: S.iconFrame,
-          children: (0, t.jsx)("img", {
-            className: S.icon,
+      className: f.modalHeader,
+      children: [(0, a.jsxs)("div", {
+        className: f.modalTop,
+        children: [(0, a.jsx)("div", {
+          className: f.iconFrame,
+          children: (0, a.jsx)("img", {
+            className: f.icon,
             alt: "",
-            src: h
+            src: m
           })
-        }), (0, t.jsx)(r.ModalCloseButton, {
-          className: S.closeBtn,
-          onClick: a
+        }), (0, a.jsx)(c.ModalCloseButton, {
+          className: f.closeBtn,
+          onClick: t
         })]
-      }), (0, t.jsx)(r.Heading, {
+      }), (0, a.jsx)(c.Heading, {
         variant: "heading-xl/bold",
-        children: m.default.Messages.QUESTS_DISCLOSURE_LABEL
+        children: h.default.Messages.QUESTS_DISCLOSURE_LABEL
       })]
-    }), (0, t.jsxs)(r.ModalContent, {
-      className: S.modalContent,
-      children: [(0, t.jsx)(r.Text, {
+    }), (0, a.jsxs)(c.ModalContent, {
+      className: f.modalContent,
+      children: [(0, a.jsx)(c.Text, {
         variant: "text-sm/medium",
-        className: S.upperBodyText,
-        children: n
-      }), (0, t.jsx)(E, {
+        className: f.upperBodyText,
+        children: r
+      }), (0, a.jsx)(x, {
         questContent: l
-      }), (0, t.jsx)(r.Text, {
+      }), (0, a.jsx)(c.Text, {
         variant: "text-sm/medium",
-        className: S.lowerBodyText,
-        children: m.default.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({
-          privacySettingsUrl: c.default.getArticleURL(u.HelpdeskArticles.DATA_PRIVACY_CONTROLS)
+        className: f.lowerBodyText,
+        children: h.default.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({
+          privacySettingsUrl: o.default.getArticleURL(u.HelpdeskArticles.DATA_PRIVACY_CONTROLS)
         })
       })]
-    }), (0, t.jsx)(r.ModalFooter, {
-      className: S.footer,
+    }), (0, a.jsx)(c.ModalFooter, {
+      className: f.footer,
       separator: !1,
-      justify: o.default.Justify.CENTER,
-      children: (0, t.jsx)(r.Button, {
-        onClick: a,
-        children: m.default.Messages.CLOSE
+      justify: i.default.Justify.CENTER,
+      children: (0, a.jsx)(c.Button, {
+        onClick: t,
+        children: h.default.Messages.CLOSE
       })
     })]
   })
 }
 
-function E(e) {
+function x(e) {
   let {
     questContent: s
   } = e;
-  if (s === d.QuestContent.QUEST_BAR) return (0, t.jsxs)("ul", {
-    className: S.targetList,
-    children: [(0, t.jsx)(f, {
-      icon: i.GlobeEarthIcon,
-      children: m.default.Messages.QUESTS_DISCLOSURE_LOCATION
-    }), (0, t.jsx)(f, {
-      icon: n.UserIcon,
-      children: m.default.Messages.QUESTS_DISCLOSURE_AGE
-    }), (0, t.jsx)(f, {
-      icon: l.GameControllerIcon,
-      children: m.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
-    })]
-  });
-  return null
+  switch (s) {
+    case d.QuestContent.QUEST_BAR:
+      return (0, a.jsxs)("ul", {
+        className: f.targetList,
+        children: [(0, a.jsx)(S, {
+          icon: n.GlobeEarthIcon,
+          children: h.default.Messages.QUESTS_DISCLOSURE_LOCATION
+        }), (0, a.jsx)(S, {
+          icon: r.UserIcon,
+          children: h.default.Messages.QUESTS_DISCLOSURE_AGE
+        }), (0, a.jsx)(S, {
+          icon: l.GameControllerIcon,
+          children: h.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
+        })]
+      });
+    case d.QuestContent.ACTIVITY_PANEL:
+      return (0, a.jsx)("ul", {
+        className: f.targetList,
+        children: (0, a.jsx)(S, {
+          icon: l.GameControllerIcon,
+          children: h.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
+        })
+      });
+    default:
+      return null
+  }
 }
 
-function f(e) {
+function S(e) {
   let {
     icon: s,
-    children: a
+    children: t
   } = e;
-  return (0, t.jsxs)(r.Text, {
+  return (0, a.jsxs)(c.Text, {
     variant: "text-sm/medium",
     tag: "li",
-    className: S.targetItem,
-    children: [(0, t.jsx)(s, {
+    className: f.targetItem,
+    children: [(0, a.jsx)(s, {
       width: 16,
       height: 16
-    }), a]
+    }), t]
   })
 }
