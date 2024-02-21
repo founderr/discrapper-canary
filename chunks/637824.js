@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("736964"),
-  l = n("401642"),
+  l = n("736964"),
+  i = n("401642"),
   r = n("152224"),
   o = n("599110"),
   u = n("371449"),
@@ -23,13 +23,13 @@ function _(e) {
     key: n,
     isFocused: _
   } = e, C = s.useContext(o.AnalyticsContext), I = e => {
-    e.stopPropagation(), i.default.unblockUser(t.id, {
+    e.stopPropagation(), l.default.unblockUser(t.id, {
       location: "Friends"
     })
   };
   return (0, a.jsx)(d.default, {
     isFocused: _,
-    onClick: () => (0, l.openUserProfileModal)({
+    onClick: () => (0, i.openUserProfileModal)({
       userId: t.id,
       analyticsLocation: C.location
     }),

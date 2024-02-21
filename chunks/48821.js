@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("446674"),
-  i = n("77078"),
-  l = n("363025"),
+  l = n("77078"),
+  i = n("363025"),
   r = n("963662"),
   o = n("592407"),
   u = n("735201"),
@@ -23,7 +23,7 @@ var s = n("446674"),
     return null == h || 0 >= (0, d.appliedGuildBoostsRequiredForPerks)(h, n) ? null : (0, a.jsx)(r.default, {
       guild: t,
       onDismissed: () => {
-        (0, l.hidePremiumGuildGracePeriodNotice)(n)
+        (0, i.hidePremiumGuildGracePeriodNotice)(n)
       },
       onClick: () => {
         o.default.open(n, c.GuildSettingsSections.GUILD_PREMIUM)
@@ -33,6 +33,6 @@ var s = n("446674"),
       type: c.ChannelNoticeTypes.GUILD_BOOSTING_GRACE_PERIOD,
       image: E,
       cta: f.default.Messages.PREMIUM_GUILD_GRACE_PERIOD_NOTICE_BUTTON,
-      ctaColor: i.ButtonColors.PRIMARY
+      ctaColor: l.ButtonColors.PRIMARY
     })
   }

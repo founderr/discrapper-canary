@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("414456"),
-  i = n.n(s),
-  l = n("77078"),
+  l = n.n(s),
+  i = n("77078"),
   r = n("943722"),
   o = n("997289"),
   u = n("845579"),
@@ -24,7 +24,7 @@ function E(e, t) {
   }
 
   function h() {
-    (0, l.openModalLazy)(async () => {
+    (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("711438").then(n.bind(n, "711438"));
@@ -46,13 +46,13 @@ function E(e, t) {
         hideTooltip: !0
       })
     } : void 0;
-    return (0, a.jsx)(l.MenuItem, {
+    return (0, a.jsx)(i.MenuItem, {
       id: "edit-custom-status",
       label: c.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
       icon: n,
       focusedClassName: t,
       showIconFirst: !0,
-      hint: e => (0, a.jsx)(l.Clickable, {
+      hint: e => (0, a.jsx)(i.Clickable, {
         ...e,
         onClick: E,
         tabIndex: -1,
@@ -64,12 +64,12 @@ function E(e, t) {
       action: h
     })
   }
-  return (0, a.jsx)(l.MenuItem, {
+  return (0, a.jsx)(i.MenuItem, {
     id: "set-custom-status",
     focusedClassName: t,
     label: c.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
     icon: e => (0, a.jsx)("div", {
-      className: i(f.customEmojiPlaceholder, e)
+      className: l(f.customEmojiPlaceholder, e)
     }),
     action: h,
     showIconFirst: !0

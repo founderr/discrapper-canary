@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("222007");
 var a, s = n("446674"),
-  i = n("95410"),
-  l = n("862337"),
+  l = n("95410"),
+  i = n("862337"),
   r = n("913144"),
   o = n("260365"),
   u = n("161454"),
@@ -15,7 +15,7 @@ var a, s = n("446674"),
 let C = "ActivityTrackingStore",
   I = 30 * c.default.Millis.MINUTE,
   S = 5 * c.default.Millis.MINUTE,
-  m = null !== (a = i.default.get(C)) && void 0 !== a ? a : {},
+  m = null !== (a = l.default.get(C)) && void 0 !== a ? a : {},
   p = {},
   T = !1;
 
@@ -23,7 +23,7 @@ function g(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   t && A(e, !0);
   let n = p[e.applicationId];
-  null != n && (n.stop(), delete p[e.applicationId]), delete m[e.applicationId], i.default.set(C, m)
+  null != n && (n.stop(), delete p[e.applicationId]), delete m[e.applicationId], l.default.set(C, m)
 }
 
 function A(e) {
@@ -39,7 +39,7 @@ function A(e) {
     closed: t
   }), e.updatedAt = n;
   let s = p[e.applicationId];
-  null == s && (s = p[e.applicationId] = new l.Interval).start(I, () => A(e)), !t && (m[e.applicationId] = e, i.default.set(C, m))
+  null == s && (s = p[e.applicationId] = new i.Interval).start(I, () => A(e)), !t && (m[e.applicationId] = e, l.default.set(C, m))
 }
 
 function N() {
@@ -93,13 +93,13 @@ O.displayName = "ActivityTrackingStore", new O(r.default, {
       token: n
     } = e, a = m[t];
     if (null == a) return !1;
-    a.token = n, i.default.set(C, m)
+    a.token = n, l.default.set(C, m)
   },
   ACTIVITY_UPDATE_FAIL: function(e) {
     let {
       applicationId: t
     } = e, n = m[t];
     if (null == n) return !1;
-    n.token = null, n.updatedAt = null, i.default.set(C, m)
+    n.token = null, n.updatedAt = null, l.default.set(C, m)
   }
 })

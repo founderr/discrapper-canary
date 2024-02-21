@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("917351"),
-  l = n.n(i),
+  l = n("917351"),
+  i = n.n(l),
   r = n("483366"),
   o = n.n(r),
   u = n("446674"),
@@ -34,8 +34,8 @@ let L = 15 * I.default.Millis.MINUTE,
     let {
       party: t,
       onUserContextMenu: n,
-      onChannelContextMenu: i,
-      registerQuestEntrypoint: l,
+      onChannelContextMenu: l,
+      registerQuestEntrypoint: i,
       unregisterQuestEntrypoint: r,
       shouldRenderQuestEntrypoint: u
     } = e, c = (0, a.jsx)(p.default, {
@@ -43,8 +43,8 @@ let L = 15 * I.default.Millis.MINUTE,
       onUserContextMenu: n
     }), f = (0, a.jsx)(m.default, {
       party: t,
-      onChannelContextMenu: i,
-      registerQuestEntrypoint: l,
+      onChannelContextMenu: l,
+      registerQuestEntrypoint: i,
       unregisterQuestEntrypoint: r,
       shouldRenderQuestEntrypoint: u
     }), {
@@ -94,15 +94,15 @@ let L = 15 * I.default.Millis.MINUTE,
       }
     }) : null
   }),
-  P = l.throttle(() => f.fetchUserAffinities(!1), 3e5);
+  P = i.throttle(() => f.fetchUserAffinities(!1), 3e5);
 
 function D() {
   let {
     nowPlayingCards: e,
     loaded: t,
     needsRefresh: n,
-    fetching: i,
-    currentUser: l
+    fetching: l,
+    currentUser: i
   } = (0, u.useStateFromStoresObject)([_.default, E.default, h.default], () => ({
     nowPlayingCards: _.default.nowPlayingCards,
     loaded: _.default.loaded,
@@ -117,9 +117,9 @@ function D() {
   }, []), C = s.useCallback(e => {
     r.current.delete(e)
   }, []);
-  s.useEffect(() => (c.default.wait(() => S.mount()), () => c.default.wait(() => S.unmount())), [null == l ? void 0 : l.id]), s.useEffect(() => {
-    n && !i && P()
-  }, [n, i]);
+  s.useEffect(() => (c.default.wait(() => S.mount()), () => c.default.wait(() => S.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
+    n && !l && P()
+  }, [n, l]);
   let I = null;
   return t ? (I = e.length > 0 ? e.map(e => {
     let {

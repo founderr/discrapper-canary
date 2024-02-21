@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("872717"),
-  i = n("862337"),
-  l = n("77078"),
+  l = n("862337"),
+  i = n("77078"),
   r = n("316718"),
   o = n("84460"),
   u = n("299285"),
@@ -47,13 +47,13 @@ var m = {
           if (!e) throw new _.default({
             errorCode: I.RPCErrors.INVALID_ENTITLEMENT
           }, "User does not have entitlement.")
-        }), (0, i.timeoutPromise)(S).then(() => {
+        }), (0, l.timeoutPromise)(S).then(() => {
           throw new _.default({
             errorCode: I.RPCErrors.INVALID_ENTITLEMENT
           }, "Timed out fetching entitlement.")
         })])
       } catch (e) {
-        throw e.code === I.RPCErrors.INVALID_ENTITLEMENT && (h.default.focus(null, !0), (0, l.openModalLazy)(async () => {
+        throw e.code === I.RPCErrors.INVALID_ENTITLEMENT && (h.default.focus(null, !0), (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("43264").then(n.bind(n, "43264"));
@@ -70,14 +70,14 @@ var m = {
     handler(e) {
       let {
         socket: t
-      } = e, i = t.application.id;
-      if (null == i) throw new _.default({
+      } = e, l = t.application.id;
+      if (null == l) throw new _.default({
         errorCode: I.RPCErrors.INVALID_COMMAND
       }, "No application.");
       return s.default.post({
-        url: I.Endpoints.ENTITLEMENT_TICKET(i),
+        url: I.Endpoints.ENTITLEMENT_TICKET(l),
         body: {
-          test_mode: f.default.inTestModeForApplication(i) || o.default.inDevModeForApplication(i)
+          test_mode: f.default.inTestModeForApplication(l) || o.default.inDevModeForApplication(l)
         },
         retries: 3,
         oldFormErrors: !0
@@ -87,13 +87,13 @@ var m = {
         } = e;
         return t
       }).catch(e => {
-        throw h.default.focus(null, !0), (0, l.openModalLazy)(async () => {
+        throw h.default.focus(null, !0), (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("43264").then(n.bind(n, "43264"));
           return t => (0, a.jsx)(e, {
             ...t,
-            applicationId: i
+            applicationId: l
           })
         }), e
       })

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("987317"),
-  i = n("713726"),
-  l = n("754493"),
+  l = n("713726"),
+  i = n("754493"),
   r = n("374021"),
   o = n("649275"),
   u = n("751661"),
@@ -21,7 +21,7 @@ function h() {
   return (0, a.jsx)(f.default, {
     tooltipText: E.default.Messages.DISCONNECT_SELF,
     onClick: () => {
-      (0, i.stopBroadcast)(), s.default.disconnect()
+      (0, l.stopBroadcast)(), s.default.disconnect()
     },
     icon: c.default
   })
@@ -64,7 +64,7 @@ function C(e) {
 function I(e) {
   let {
     channel: t
-  } = e, n = (0, l.default)();
+  } = e, n = (0, i.default)();
   return t.isGuildStageVoice() ? (0, a.jsx)(_, {
     channel: t
   }) : n && t.isBroadcastChannel() ? (0, a.jsx)(h, {}) : (0, a.jsx)(C, {

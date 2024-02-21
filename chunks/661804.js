@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var a, s = n("37983"),
-  i = n("884691"),
-  l = n("414456"),
-  r = n.n(l),
+  l = n("884691"),
+  i = n("414456"),
+  r = n.n(i),
   o = n("77078"),
   u = n("913144"),
   d = n("939488"),
@@ -22,7 +22,7 @@ var a, s = n("37983"),
   m = n("49111"),
   p = n("492249"),
   T = n("424902");
-a = class extends i.PureComponent {
+a = class extends l.PureComponent {
   componentDidMount() {
     d.setHomeLink(m.Routes.APPLICATION_LIBRARY), (0, h.deepLinkRouteIfLanded)(p.RPCDeepLinks.LIBRARY), u.default.wait(() => (0, c.fetchBranches)()), (0, f.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
   }
@@ -40,7 +40,7 @@ a = class extends i.PureComponent {
         })
       })
     });
-    return (0, s.jsxs)(i.Fragment, {
+    return (0, s.jsxs)(l.Fragment, {
       children: [(0, s.jsx)(C.default, {
         currentRoute: m.Routes.APPLICATION_LIBRARY,
         renderToolbar: this.renderToolbar
@@ -58,7 +58,7 @@ a = class extends i.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), this._scrollerRef = i.createRef(), this._scrollToPadding = 0, this.state = {
+    super(...e), this._scrollerRef = l.createRef(), this._scrollToPadding = 0, this.state = {
       includeUpdatesInScroller: !1
     }, this.handleHeightTallerThanHalfViewportChange = e => {
       this.setState({

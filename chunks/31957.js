@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("446674"),
   s = n("95410"),
-  i = n("913144"),
-  l = n("845579"),
+  l = n("913144"),
+  i = n("845579"),
   r = n("374363"),
   o = n("271938"),
   u = n("42203"),
@@ -59,7 +59,7 @@ function g(e) {
 }();
 
 function A() {
-  p = d.default.getStatus() === c.StatusTypes.DND || l.QuietMode.getSetting()
+  p = d.default.getStatus() === c.StatusTypes.DND || i.QuietMode.getSetting()
 }
 class N extends a.default.Store {
   initialize() {
@@ -79,7 +79,7 @@ class N extends a.default.Store {
   }
 }
 N.displayName = "IncomingCallStore";
-var R = new N(i.default, {
+var R = new N(l.default, {
   CALL_CREATE: g,
   CALL_UPDATE: g,
   CALL_DELETE: function(e) {

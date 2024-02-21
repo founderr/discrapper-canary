@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("77078"),
   u = n("630086"),
@@ -36,7 +36,7 @@ var a = n("37983"),
       sectionFilter: t,
       titleId: n
     } = e, {
-      rows: i,
+      rows: l,
       section: P
     } = (0, r.useStateFromStoresObject)([_.default], () => _.default.getState()), D = (0, r.useStateFromStores)([C.default], () => C.default.isFocused()), y = (0, r.useStateFromStores)([h.default], () => h.default.getRelationshipCount()), x = (0, S.useIsClearIncomingFriendRequestsEnabled)(), [b, U] = s.useState(() => {
       let e = {};
@@ -52,7 +52,7 @@ var a = n("37983"),
         ...b,
         [t]: ""
       })
-    }, [b, t]), w = i.filter(t, b[t]);
+    }, [b, t]), w = l.filter(t, b[t]);
     if (0 === w.length && "" === b[t]) return (0, a.jsxs)("div", {
       className: M.emptyStateContainer,
       children: [t === v.FriendsSections.ONLINE && (0, a.jsx)(E.default, {}), (0, a.jsx)(T.default, {
@@ -69,7 +69,7 @@ var a = n("37983"),
     return (0, a.jsxs)(c.default, {
       section: v.AnalyticsSections.FRIENDS_LIST,
       children: [(0, a.jsx)(I.default, {
-        className: l(M.searchBar, k ? M.searchEmptyState : null),
+        className: i(M.searchBar, k ? M.searchEmptyState : null),
         query: b[t],
         onChange: G,
         onClear: j,

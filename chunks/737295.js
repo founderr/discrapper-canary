@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("77078"),
-  l = n("539938"),
+  l = n("77078"),
+  i = n("539938"),
   r = n("393414"),
   o = n("880013"),
   u = n("599110"),
@@ -21,15 +21,15 @@ var _ = s.memo(function(e) {
     currentRoute: t,
     renderToolbar: n
   } = e, d = s.useContext(u.AnalyticsContext), _ = h || t === c.Routes.APPLICATION_LIBRARY_SETTINGS;
-  return (0, a.jsxs)(l.default, {
+  return (0, a.jsxs)(i.default, {
     className: E.libraryHeader,
     toolbar: null == n ? void 0 : n(),
-    children: [(0, a.jsx)(l.default.Icon, {
+    children: [(0, a.jsx)(i.default.Icon, {
       icon: o.default,
       "aria-hidden": !0
-    }), (0, a.jsx)(l.default.Title, {
+    }), (0, a.jsx)(i.default.Title, {
       children: f.default.Messages.LIBRARY
-    }), (0, a.jsx)(l.default.Divider, {}), (0, a.jsxs)(i.TabBar, {
+    }), (0, a.jsx)(i.default.Divider, {}), (0, a.jsxs)(l.TabBar, {
       type: "top-pill",
       selectedItem: t,
       onItemSelect: function(e) {
@@ -43,10 +43,10 @@ var _ = s.memo(function(e) {
           }
         })
       },
-      children: [(0, a.jsx)(i.TabBar.Item, {
+      children: [(0, a.jsx)(l.TabBar.Item, {
         id: c.Routes.APPLICATION_LIBRARY,
         children: f.default.Messages.APPLICATION_LIBRARY_MY_GAMES
-      }), _ ? (0, a.jsx)(i.TabBar.Item, {
+      }), _ ? (0, a.jsx)(l.TabBar.Item, {
         id: c.Routes.APPLICATION_LIBRARY_SETTINGS,
         children: f.default.Messages.SETTINGS
       }) : null]

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("627445"),
-  l = n.n(i),
+  l = n("627445"),
+  i = n.n(l),
   r = n("77078"),
   o = n("252917"),
   u = n("945183"),
@@ -35,7 +35,7 @@ var a = n("37983"),
         let {
           current: s
         } = e;
-        l(null != s, "Shakeable is shaken when not mounted"), s.shake(n, a)
+        i(null != s, "Shakeable is shaken when not mounted"), s.shake(n, a)
       }, []);
     return s.useEffect(() => (c.default.setLayout(d.default), c.default.enable(), () => c.default.disable()), []), s.useEffect(() => (I.ComponentDispatch.subscribe(T.ComponentActions.SHAKE_APP, t), () => {
       I.ComponentDispatch.unsubscribe(T.ComponentActions.SHAKE_APP, t)

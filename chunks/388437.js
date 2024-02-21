@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("812204"),
-  i = n("685665"),
-  l = n("963662"),
+  l = n("685665"),
+  i = n("963662"),
   r = n("379532"),
   o = n("427459"),
   u = n("49111"),
@@ -23,8 +23,8 @@ function h(e) {
     markAsDismissed: n
   } = e, h = (0, o.getNumberOfAppliedBoostsNeededForTier)(t, u.BoostedGuildTiers.TIER_2), {
     analyticsLocations: _
-  } = (0, i.default)(s.default.GUILD_BANNER_NOTICE);
-  return (0, a.jsx)(l.default, {
+  } = (0, l.default)(s.default.GUILD_BANNER_NOTICE);
+  return (0, a.jsx)(i.default, {
     guild: t,
     onDismissed: () => n(d.ContentDismissActionType.UNKNOWN),
     cta: f.default.Messages.GUILD_BANNER_NOTICE_CTA,

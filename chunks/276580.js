@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("424973");
 var a = n("37983"),
   s = n("884691"),
-  i = n("77078"),
-  l = n("913144"),
+  l = n("77078"),
+  i = n("913144"),
   r = n("685665"),
   o = n("141254"),
   u = n("116616"),
@@ -43,7 +43,7 @@ var C = e => {
     showMoreCards: O = !1
   } = e;
   s.useEffect(() => {
-    l.default.wait(() => T())
+    i.default.wait(() => T())
   }, [A]);
   let v = (0, c.default)(O ? _ : h),
     {
@@ -85,13 +85,13 @@ var C = e => {
   }, e.id));
   return (0, a.jsx)("section", {
     className: E.guildListSection,
-    children: (0, a.jsxs)(i.HeadingLevel, {
-      component: (0, a.jsx)(i.Heading, {
+    children: (0, a.jsxs)(l.HeadingLevel, {
+      component: (0, a.jsx)(l.Heading, {
         className: E.title,
         variant: "heading-lg/semibold",
         children: n
       }),
-      children: [null != C && (0, a.jsx)(i.Text, {
+      children: [null != C && (0, a.jsx)(l.Text, {
         className: E.subtitle,
         variant: "text-sm/normal",
         color: "header-secondary",

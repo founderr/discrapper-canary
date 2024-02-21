@@ -1,12 +1,12 @@
 "use strict";
-let a, s, i;
+let a, s, l;
 n.r(t), n.d(t, {
   default: function() {
     return L
   }
 }), n("424973"), n("222007");
-var l = n("917351"),
-  r = n.n(l),
+var i = n("917351"),
+  r = n.n(i),
   o = n("446674"),
   u = n("913144"),
   d = n("611183"),
@@ -69,7 +69,7 @@ class O extends o.default.Store {
       submitting: m === _.FormStates.SUBMITTING,
       webhooks: C,
       editedWebhook: I,
-      section: i,
+      section: l,
       sectionId: g,
       hasChanges: this.hasChanges(),
       isFetching: S,
@@ -86,7 +86,7 @@ let v = new O(u.default, __OVERLAY__ ? {} : {
       section: t
     } = e;
     if (t !== _.ChannelSettingsSections.INTEGRATIONS) return !1;
-    if (i = _.IntegrationSettingsSections.OVERVIEW, null == a) {
+    if (l = _.IntegrationSettingsSections.OVERVIEW, null == a) {
       let e = c.default.getChannel(),
         t = null == e ? void 0 : e.getGuildId();
       null != e && null != t && (d.default.fetchForChannel(t, e.id), S = !0), A()
@@ -97,7 +97,7 @@ let v = new O(u.default, __OVERLAY__ ? {} : {
       section: t,
       sectionId: n
     } = e;
-    i = t, g = n
+    l = t, g = n
   },
   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
     let {
@@ -125,14 +125,14 @@ let v = new O(u.default, __OVERLAY__ ? {} : {
     let {
       guildId: t,
       channelId: n,
-      webhooks: i
+      webhooks: l
     } = e;
-    if (null == a || t !== a.id || null == s || n !== s.id || null == i || m === _.FormStates.SUBMITTING) return !1;
+    if (null == a || t !== a.id || null == s || n !== s.id || null == l || m === _.FormStates.SUBMITTING) return !1;
     S = !1;
     for (let e = C.length - 1; e >= 0; e--) {
       let t = C[e];
       if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
-      let a = i.find(e => {
+      let a = l.find(e => {
         let {
           id: n
         } = e;
@@ -146,7 +146,7 @@ let v = new O(u.default, __OVERLAY__ ? {} : {
         C[e] = n, !T && (null == I ? void 0 : I.id) === n.id && (I = n)
       } else(null == I ? void 0 : I.id) === t.id && (I = null), C.splice(e, 1)
     }
-    for (let e of i) {
+    for (let e of l) {
       let t = C.find(t => {
         let {
           id: n

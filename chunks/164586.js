@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("917351"),
   o = n("77078"),
   u = n("716241"),
@@ -21,7 +21,7 @@ var C = function(e) {
   let {
     guild: t,
     title: n,
-    message: i,
+    message: l,
     image: r,
     type: C,
     imageStyles: I,
@@ -60,7 +60,7 @@ var C = function(e) {
   "function" == typeof n ? L = n() : null != n && (L = (0, a.jsx)(o.Text, {
     variant: "text-md/medium",
     color: "header-primary",
-    className: l(h.title, {
+    className: i(h.title, {
       [h.noImageTitle]: null == r
     }, {
       [h.center]: O
@@ -97,12 +97,12 @@ var C = function(e) {
     }), (0, a.jsxs)("div", {
       className: h.message,
       children: [L, (0, a.jsx)(o.Text, {
-        className: l({
+        className: i({
           [h.center]: O
         }),
         variant: "text-sm/normal",
         color: "text-muted",
-        children: i
+        children: l
       }), v]
     })]
   })

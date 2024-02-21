@@ -14,8 +14,8 @@ var a = l("398351"),
   i = l("446674"),
   o = l("77078"),
   c = l("49671"),
-  E = l("884351"),
-  f = l("305961"),
+  f = l("884351"),
+  E = l("305961"),
   _ = l("773336"),
   T = l("398604"),
   M = l("466148"),
@@ -37,7 +37,7 @@ function C(e, t, l, a) {
       endTime: L
     } = (0, M.default)(null != e ? e : "", a),
     b = (0, i.useStateFromStores)([T.default], () => T.default.getGuildScheduledEvent(e), [e]),
-    A = (0, i.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
+    A = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]);
   if (p || null == b) return null;
   h = b.entity_type === g.GuildScheduledEventEntityTypes.EXTERNAL ? b.entity_metadata.location : null != l && null != A ? N.default.Messages.CALENDAR_CHANNEL_LOCATION.format({
     channelName: l.name,
@@ -45,7 +45,7 @@ function C(e, t, l, a) {
   }) : N.default.Messages.NOTIFICATION_TITLE_DISCORD;
   let V = d(b.scheduled_start_time),
     j = null != b.scheduled_end_time ? d(b.scheduled_end_time) : V,
-    G = null != b.description && "" !== b.description ? E.default.unparse(b.description, null !== (s = null == l ? void 0 : l.id) && void 0 !== s ? s : m.EMPTY_STRING_CHANNEL_ID, !0) : "",
+    G = null != b.description && "" !== b.description ? f.default.unparse(b.description, null !== (s = null == l ? void 0 : l.id) && void 0 !== s ? s : m.EMPTY_STRING_CHANNEL_ID, !0) : "",
     P = (0, v.recurrenceRuleFromServer)(b.recurrence_rule),
     U = null != P ? (0, I.getRRule)(P) : null,
     F = null !== (C = d(x)) && void 0 !== C ? C : V,

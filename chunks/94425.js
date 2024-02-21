@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("808653");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("917351"),
   o = n.n(r),
   u = n("907002"),
@@ -38,10 +38,10 @@ let A = {
 function O(e, t, n) {
   for (let a in t) {
     let s = t[a],
-      i = o.get(e, a);
-    if (null == i) continue;
-    let l = i.map((e, t) => s[t] === e ? n[t] : e);
-    o.set(e, a, l)
+      l = o.get(e, a);
+    if (null == l) continue;
+    let i = l.map((e, t) => s[t] === e ? n[t] : e);
+    o.set(e, a, i)
   }
 }
 let v = new Map;
@@ -64,7 +64,7 @@ function D(e) {
 }
 var y = function() {
   var e, t, n;
-  let i = (0, _.useIsEligibleForQuests)({
+  let l = (0, _.useIsEligibleForQuests)({
       location: T.QuestsExperimentLocations.ACTIVITY_PANEL,
       autoTrackExposure: !0
     }),
@@ -128,7 +128,7 @@ var y = function() {
     es = s.useCallback(() => {
       v.current = !1, en()
     }, [en]),
-    ei = s.useCallback(() => {
+    el = s.useCallback(() => {
       V.current = !0
     }, []);
   s.useEffect(() => {
@@ -142,11 +142,11 @@ var y = function() {
   }, []), s.useEffect(() => {
     K && X()
   }, [K, X]);
-  let el = i && !q && !z && null != o,
-    er = s.useRef(el);
+  let ei = l && !q && !z && null != o,
+    er = s.useRef(ei);
   s.useLayoutEffect(() => {
-    el !== er.current && F(!1), er.current = el
-  }, [el]);
+    ei !== er.current && F(!1), er.current = ei
+  }, [ei]);
   let {
     expansionFactor: eo
   } = (0, u.useSpring)({
@@ -175,7 +175,7 @@ var y = function() {
       visibilityFactor: 0
     },
     to: {
-      visibilityFactor: el ? 1 : 0
+      visibilityFactor: ei ? 1 : 0
     },
     config: {
       tension: 250,
@@ -190,9 +190,9 @@ var y = function() {
       F(!1)
     }
   });
-  return i && null != o && (el || !k) ? (0, a.jsxs)(u.animated.div, {
-    className: l(g.wrapper, {
-      [g.wrapperVisible]: el && k
+  return l && null != o && (ei || !k) ? (0, a.jsxs)(u.animated.div, {
+    className: i(g.wrapper, {
+      [g.wrapperVisible]: ei && k
     }),
     style: {
       color: o.config.colors.secondary,
@@ -206,7 +206,7 @@ var y = function() {
       onMouseEnter: ea,
       onFocus: et,
       onBlur: en,
-      className: l(g.contentWrapper, {
+      className: i(g.contentWrapper, {
         [g.contentWrapperExpanded]: U,
         [g.contentWrapperAccepted]: W
       }),
@@ -244,17 +244,17 @@ var y = function() {
       children: (0, a.jsx)(E.default, {
         importData: () => L(o.id, Z),
         shouldAnimate: R,
-        className: l(g.lottieAnimation, g.lottieAnimationBackground),
+        className: i(g.lottieAnimation, g.lottieAnimationBackground),
         loop: !0
       })
     }), !W && null != Q && (0, a.jsx)(E.default, {
       importData: () => P(o.id, Q),
       shouldAnimate: x,
-      className: l(g.lottieAnimation, g.lottieAnimationForeground, {
+      className: i(g.lottieAnimation, g.lottieAnimationForeground, {
         [g.lottieAnimationForegroundHidden]: !x
       }),
       loop: !1,
-      onComplete: ei,
+      onComplete: el,
       autoplay: x
     }), (0, a.jsx)("div", {
       className: g.backgroundFallback

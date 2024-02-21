@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("446674"),
-  l = n("669491"),
+  l = n("446674"),
+  i = n("669491"),
   r = n("77078"),
   o = n("987317"),
   u = n("990766"),
@@ -40,7 +40,7 @@ function M(e) {
     children: [(0, a.jsx)(m.default, {
       width: 16,
       height: 16,
-      color: l.default.colors.HEADER_PRIMARY.css
+      color: i.default.colors.HEADER_PRIMARY.css
     }), (0, a.jsx)(p.default, {
       showUserPopout: !0,
       useFallbackUserForPopout: !0,
@@ -56,11 +56,11 @@ function P(e) {
   let {
     broadcast: n
   } = e, {
-    userId: l,
+    userId: i,
     applicationId: m,
     channelId: p,
     streamKey: P
-  } = n, [D, y] = s.useState(!1), x = (0, i.useStateFromStores)([C.default], () => C.default.getUser(l)), [b] = (0, c.default)([m]), U = null !== (t = T.default.getGlobalName(x)) && void 0 !== t ? t : T.default.getUserTag(x), G = (0, N.default)(), j = (0, i.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, l)), w = (0, i.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, A.default)(), F = (0, g.default)(p);
+  } = n, [D, y] = s.useState(!1), x = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([m]), U = null !== (t = T.default.getGlobalName(x)) && void 0 !== t ? t : T.default.getUserTag(x), G = (0, N.default)(), j = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, A.default)(), F = (0, g.default)(p);
   if (s.useEffect(() => {
       D && w === p && y(!1)
     }, [w, D, p]), null == x || null == U) return null;
@@ -77,7 +77,7 @@ function P(e) {
       buttonCTA: s ? v.default.Messages.BROADCAST_FULL : a ? v.default.Messages.VIEW_BROADCAST : v.default.Messages.JOIN_BROADCAST,
       disabled: s
     }
-  }(l, F);
+  }(i, F);
   return (0, a.jsxs)("div", {
     className: L.container,
     children: [(0, a.jsx)(r.Avatar, {
@@ -107,7 +107,7 @@ function P(e) {
             }
             y(!0), (0, u.joinPrivateChannelAndWatchStream)(p, P), d.default.trackWithMetadata(R.AnalyticEvents.BROADCAST_VIEWED, {
               num_active_broadcasts: G.length,
-              broadcast_position: G.findIndex(e => e.userId === l) + 1,
+              broadcast_position: G.findIndex(e => e.userId === i) + 1,
               is_broadcasting: k,
               broadcast_channel_id: p
             })
@@ -127,7 +127,7 @@ function P(e) {
       className: L.stream,
       stream: {
         streamType: O.StreamTypes.CALL,
-        ownerId: l,
+        ownerId: i,
         channelId: p
       }
     }) : (0, a.jsx)(I.default, {

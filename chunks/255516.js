@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
     return D
   }
 }), n("222007"), n("313619"), n("654714"), n("287168"), n("956660"), n("424973"), n("70102");
-var i = n("44170"),
-  l = n("917351"),
-  r = n.n(l),
+var l = n("44170"),
+  i = n("917351"),
+  r = n.n(i),
   o = n("746379"),
   u = n.n(o),
   d = n("913144"),
@@ -53,7 +53,7 @@ function O() {
 function v(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
     s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-    i = null != R(e.headers).origin ? {
+    l = null != R(e.headers).origin ? {
       "Access-Control-Allow-Origin": R(e.headers).origin,
       "Access-Control-Allow-Credentials": "true",
       "Access-Control-Allow-Methods": "POST, GET, PUT, PATCH, DELETE",
@@ -61,7 +61,7 @@ function v(e, t, n) {
     } : {};
   n = n ? JSON.stringify(n) : "", a = 200 === a && 0 === n.length ? 204 : a, t.setHeader("Content-Length", p.byteLength(n).toString()), t.setHeader("Content-Type", "application/json"), t.writeHead(a, {
     ...s,
-    ...i
+    ...l
   }), t.end(n)
 }
 
@@ -105,7 +105,7 @@ class M extends C.default {
     this._sendCallback = e, this._closeCallback = t
   }
 }
-class P extends i.EventEmitter {
+class P extends l.EventEmitter {
   handleRequest(e, t) {
     let [n, a] = R(e.url).split("?"), s = R(e.method);
     if ("/rpc" === n && "OPTIONS" === s) {
@@ -114,10 +114,10 @@ class P extends i.EventEmitter {
       });
       return
     }
-    let i = "POST" === s;
-    if ("/rpc" === n && ("GET" === s || i)) {
+    let l = "POST" === s;
+    if ("/rpc" === n && ("GET" === s || l)) {
       let n = new URLSearchParams(a),
-        s = i ? R(e.headers)["content-type"].split("/")[1] : "json",
+        s = l ? R(e.headers)["content-type"].split("/")[1] : "json",
         r = function() {
           var e;
           let {
@@ -126,8 +126,8 @@ class P extends i.EventEmitter {
           } = u.parse(null !== (e = n.get("callback")) && void 0 !== e ? e : "");
           a === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", g), t.writeHead(301), t.end()
         },
-        o = new M(i ? v.bind(null, e, t) : r, i ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
-      if (i)(0, I.validateSocketClient)(o, R(e.headers).origin, n.get("client_id")).then(() => {
+        o = new M(l ? v.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
+      if (l)(0, I.validateSocketClient)(o, R(e.headers).origin, n.get("client_id")).then(() => {
         let n = "";
         e.on("data", e => n += e), e.on("error", () => L(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(o, n))
       }).catch(e => {
@@ -138,8 +138,8 @@ class P extends i.EventEmitter {
         return o.close(t, n)
       });
       else {
-        var l;
-        o.authorization.scopes = [S.RPC_PRIVATE_LIMITED_SCOPE], this.handleMessage(o, decodeURIComponent(null !== (l = n.get("payload")) && void 0 !== l ? l : ""))
+        var i;
+        o.authorization.scopes = [S.RPC_PRIVATE_LIMITED_SCOPE], this.handleMessage(o, decodeURIComponent(null !== (i = n.get("payload")) && void 0 !== i ? i : ""))
       }
       return
     }
@@ -149,7 +149,7 @@ class P extends i.EventEmitter {
     var t, n;
     let a;
     let s = new URLSearchParams(R(e.upgradeReq).url.split("?")[1]),
-      i = null !== (t = R(e.upgradeReq).headers.origin) && void 0 !== t ? t : "";
+      l = null !== (t = R(e.upgradeReq).headers.origin) && void 0 !== t ? t : "";
     try {
       a = new WebSocket(e, Number(s.get("v")), null !== (n = s.get("encoding")) && void 0 !== n ? n : "json")
     } catch (t) {
@@ -158,7 +158,7 @@ class P extends i.EventEmitter {
     }
     A.info("Socket Opened: ".concat(a.id)), e.on("error", e => A.error("WS Error: ".concat(e.message))), e.on("close", (e, t) => {
       A.info("Socket Closed: ".concat(a.id, ", code ").concat(e, ", message ").concat(t)), r.remove(N, e => e === a), this.emit("disconnect", a)
-    }), (0, I.validateSocketClient)(a, i, s.get("client_id")).then(() => {
+    }), (0, I.validateSocketClient)(a, l, s.get("client_id")).then(() => {
       N.push(a), e.on("message", e => this.handleMessage(a, e)), this.emit("connect", a)
     }).catch(e => {
       let {

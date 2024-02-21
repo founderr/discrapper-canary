@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   UnfeatureItemConfirmationModal: function() {
-    return f
+    return E
   },
   FeatureItemConfirmationModal: function() {
     return I
@@ -23,26 +23,26 @@ var s = n("37983"),
   o = n("699473"),
   c = n("713810"),
   h = n("782340"),
-  E = n("43229");
+  f = n("43229");
 
-function f(e) {
+function E(e) {
   let {
     featureableItem: t,
     header: n,
     body: a,
     ...l
-  } = e, [r, o] = i.useState(null), [E, f] = i.useState(!1);
+  } = e, [r, o] = i.useState(null), [f, E] = i.useState(!1);
   return (0, s.jsxs)(u.ConfirmModal, {
     header: n,
     confirmText: h.default.Messages.GUILD_FEED_UNFEATURE_BUTTON_TEXT,
     confirmButtonColor: u.Button.Colors.RED,
     cancelText: h.default.Messages.CANCEL,
-    loading: E,
+    loading: f,
     onConfirm: async () => {
       try {
-        f(!0), await (0, c.unfeatureGuildFeedItem)(t), f(!1)
+        E(!0), await (0, c.unfeatureGuildFeedItem)(t), E(!1)
       } catch (e) {
-        throw o(new d.default(e)), f(!1), e
+        throw o(new d.default(e)), E(!1), e
       }
     },
     ...l,
@@ -64,7 +64,7 @@ function I(e) {
     header: a,
     children: r,
     options: o,
-    ...f
+    ...E
   } = e, [I, _] = i.useState(null), [m, T] = i.useState(!1);
   return (0, s.jsxs)(u.ConfirmModal, {
     header: a,
@@ -82,9 +82,9 @@ function I(e) {
         T(!1)
       }
     },
-    ...f,
+    ...E,
     children: [null != I && (0, s.jsx)(u.Text, {
-      className: E.featureModalError,
+      className: f.featureModalError,
       color: "text-danger",
       variant: "text-xs/normal",
       children: I.message
@@ -113,13 +113,13 @@ function _(e) {
     expiresSeconds: a,
     options: d,
     children: [(0, s.jsx)(u.Text, {
-      className: E.featureModalText,
+      className: f.featureModalText,
       variant: "text-md/normal",
       children: h.default.Messages.GUILD_FEED_FEATURE_MESSAGE_MODAL_BODY.format({
         timePeriod: l
       })
     }), (0, s.jsx)("div", {
-      className: E.featureModalMessage,
+      className: f.featureModalMessage,
       children: (0, s.jsx)(o.default, {
         channel: i,
         message: t,
@@ -149,7 +149,7 @@ function m(e) {
     expiresSeconds: i,
     options: l,
     children: (0, s.jsx)(u.Text, {
-      className: E.featureModalText,
+      className: f.featureModalText,
       variant: "text-md/normal",
       children: h.default.Messages.GUILD_FEED_FEATURE_FORUM_POST_MODAL_BODY.format({
         threadName: t.name,

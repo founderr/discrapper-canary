@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("446674"),
-  l = n("862337"),
+  l = n("446674"),
+  i = n("862337"),
   r = n("77078"),
   o = n("148813"),
   u = n("530311"),
@@ -87,28 +87,28 @@ class I extends s.PureComponent {
       className: n
     } = this.props, s = null == e ? {
       type: E.CloudSyncStateTypes.DONE
-    } : e, i = this.getIsRecentlySynced(), l = {};
-    (_.has(s.type) || i) && (l.gradientConfig = {
+    } : e, l = this.getIsRecentlySynced(), i = {};
+    (_.has(s.type) || l) && (i.gradientConfig = {
       id: t.id,
       startColor: "rgba(199, 208, 240, 1)",
       stopColor: "rgba(114, 137, 218, 1)",
-      stop: this.getStop(s, i)
+      stop: this.getStop(s, l)
     });
-    let o = i ? d.default : C[s.type];
+    let o = l ? d.default : C[s.type];
     return (0, a.jsx)(r.Tooltip, {
-      text: this.getTooltip(s, i),
+      text: this.getTooltip(s, l),
       children: e => (0, a.jsx)(o, {
         className: n,
-        ...l,
+        ...i,
         ...e
       })
     })
   }
   constructor(...e) {
-    super(...e), this._doneTimer = new l.Timeout
+    super(...e), this._doneTimer = new i.Timeout
   }
 }
-var S = i.default.connectStores([o.default], e => {
+var S = l.default.connectStores([o.default], e => {
   let {
     libraryApplication: t
   } = e;

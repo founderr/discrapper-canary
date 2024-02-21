@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return S
   },
   sendGamingStatsMessage: function() {
-    return f
+    return _
   },
   updateGamingStats: function() {
-    return _
+    return f
   }
 });
 var s = n("872717"),
@@ -41,7 +41,7 @@ function S(e) {
     }
   })
 }
-async function f(e, t, n) {
+async function _(e, t, n) {
   await s.default.post({
     url: c.Endpoints.SEND_GAMING_STATS(t),
     body: {
@@ -53,7 +53,7 @@ async function f(e, t, n) {
     }
   }), T(t)
 }
-async function _(e) {
+async function f(e) {
   let t = await s.default.patch({
     url: c.Endpoints.UPDATE_GAMING_STATS(e.channel_id, e.id)
   });

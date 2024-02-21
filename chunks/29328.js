@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("605250"),
   s = n("271938"),
-  i = n("305961"),
-  l = n("665618"),
+  l = n("305961"),
+  i = n("665618"),
   r = n("605136"),
   o = n("802493");
 let u = new a.default("Guilds");
@@ -24,8 +24,8 @@ var d = new class e {
   handleBackgroundSync(e, t) {
     for (let n of e.guilds) {
       if ("unavailable" === n.data_mode) return;
-      let e = i.default.getGuild(n.id);
-      null != e && this.put(l.fromBackgroundSync(n, e), t)
+      let e = l.default.getGuild(n.id);
+      null != e && this.put(i.fromBackgroundSync(n, e), t)
     }
   }
   handleConnectionOpen(e, t) {
@@ -35,8 +35,8 @@ var d = new class e {
     this.putOne(e.guild, t)
   }
   handleGuildUpdate(e, t) {
-    let n = i.default.getGuild(e.guild.id),
-      a = l.fromServerUpdate(e.guild, n);
+    let n = l.default.getGuild(e.guild.id),
+      a = i.fromServerUpdate(e.guild, n);
     this.put(a, t)
   }
   handleGuildDelete(e, t) {
@@ -44,23 +44,23 @@ var d = new class e {
   }
   handleGuildRoleChange(e, t) {
     let n = r.fromServerRole(e.role),
-      a = i.default.getGuild(e.guildId);
+      a = l.default.getGuild(e.guildId);
     null != a && this.put(a.upsertRole(n), t)
   }
   handleGuildRoleDelete(e, t) {
-    let n = i.default.getGuild(e.guildId);
+    let n = l.default.getGuild(e.guildId);
     null != n && this.put(n.deleteRole(e.roleId), t)
   }
   handleGuildMemberAdd(e, t) {
     if (null != e.joinedAt && e.user.id === s.default.getId()) {
-      let n = i.default.getGuild(e.guildId);
+      let n = l.default.getGuild(e.guildId);
       null != n && this.put(n.updateJoinedAt(e.joinedAt), t)
     }
   }
   resetInMemoryState() {}
   putOne(e, t) {
-    let n = i.default.getGuild(e.id),
-      a = l.fromServer(e, n);
+    let n = l.default.getGuild(e.id),
+      a = i.fromServer(e, n);
     this.put(a, t)
   }
   put(e, t) {

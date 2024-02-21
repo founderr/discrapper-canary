@@ -15,10 +15,10 @@ var a = l("446674"),
   o = l("782340");
 
 function c(e, t, c) {
-  var E;
+  var f;
   let {
-    canManageGuildEvent: f
-  } = (0, s.useManageResourcePermissions)(null != c ? c : t), _ = (0, a.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(e), [e]), T = f(_), M = null != (0, r.useActiveEvent)(null !== (E = null == c ? void 0 : c.id) && void 0 !== E ? E : i.EMPTY_STRING_CHANNEL_ID), v = null != _ && (0, d.isGuildScheduledEventActive)(_);
+    canManageGuildEvent: E
+  } = (0, s.useManageResourcePermissions)(null != c ? c : t), _ = (0, a.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(e), [e]), T = E(_), M = null != (0, r.useActiveEvent)(null !== (f = null == c ? void 0 : c.id) && void 0 !== f ? f : i.EMPTY_STRING_CHANNEL_ID), v = null != _ && (0, d.isGuildScheduledEventActive)(_);
   return T && !v && !M ? (0, n.jsx)(u.MenuItem, {
     id: o.default.Messages.START_EVENT,
     label: o.default.Messages.START_EVENT,

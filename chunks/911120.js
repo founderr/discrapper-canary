@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("95410"),
   u = n("77078"),
@@ -20,7 +20,7 @@ var a = n("37983"),
 let C = "isHideDevBanner";
 var I = () => {
   var e;
-  let [t, n] = (0, s.useState)((null === (e = o.default.get(C, "false")) || void 0 === e ? void 0 : e.toString()) === "true"), i = (0, r.useStateFromStores)([d.default], () => {
+  let [t, n] = (0, s.useState)((null === (e = o.default.get(C, "false")) || void 0 === e ? void 0 : e.toString()) === "true"), l = (0, r.useStateFromStores)([d.default], () => {
     var e;
     return (0, c.probablyHasBuildOverride)() ? null === (e = d.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
   });
@@ -36,19 +36,19 @@ var I = () => {
         className: _.closeIcon
       })
     });
-  if (null != i) return (0, a.jsxs)("div", {
-    className: l(_.devBanner, _.buildOverride),
+  if (null != l) return (0, a.jsxs)("div", {
+    className: i(_.devBanner, _.buildOverride),
     children: [(0, a.jsx)(E.default, {
       className: _.icon
     }), h.default.Messages.BUILD_OVERRIDE, (0, a.jsx)(S, {})]
   });
   let m = window.GLOBAL_ENV.RELEASE_CHANNEL;
   return "staging" === m ? (0, a.jsxs)("div", {
-    className: l(_.devBanner, _.staging),
+    className: i(_.devBanner, _.staging),
     children: [(0, a.jsx)(E.default, {
       className: _.icon
     }), h.default.Messages.DEV_NOTICE_STAGING.format({
-      buildNumber: "267876"
+      buildNumber: "267935"
     }), (0, a.jsx)(S, {})]
   }) : null
 }

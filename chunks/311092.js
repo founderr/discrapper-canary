@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("77078"),
   o = n("731898"),
   u = n("599110"),
@@ -22,11 +22,11 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       text: t,
       onClick: n,
       className: s,
-      hide: i
+      hide: l
     } = e;
     return (0, a.jsx)("li", {
-      className: l(c.tag, s, {
-        [c.hide]: i
+      className: i(c.tag, s, {
+        [c.hide]: l
       }),
       children: (0, a.jsx)(r.Clickable, {
         className: c.tagText,
@@ -41,19 +41,19 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
     let {
       tags: t,
       onTagClick: n,
-      guildId: i,
-      section: l
+      guildId: l,
+      section: i
     } = e;
     return s.useEffect(() => {
       u.default.track(d.AnalyticEvents.OPEN_POPOUT, {
         type: "Discovery Tags Overflow",
-        guild_id: i,
+        guild_id: l,
         location: {
           page: d.AnalyticsPages.GUILD_DISCOVERY,
-          section: l
+          section: i
         }
       })
-    }, [i, l]), (0, a.jsx)(r.Dialog, {
+    }, [l, i]), (0, a.jsx)(r.Dialog, {
       className: c.overflowTagsPopout,
       children: (0, a.jsx)("ul", {
         children: t.map(e => (0, a.jsx)(E, {
@@ -92,7 +92,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
     let {
       tags: t,
       onTagClick: n,
-      className: i,
+      className: l,
       discoveryTagStyle: r = C.DEFAULT,
       hideOverflow: u = !1,
       guildId: d,
@@ -108,14 +108,14 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
         n = S - 40 - 4;
       for (let a = 0; a < T.length; a++) {
         let s = I.current.children[a],
-          i = s.clientWidth;
-        if (t += i + 4, a === T.length - 1 ? t > n + 40 : t > n) break;
+          l = s.clientWidth;
+        if (t += l + 4, a === T.length - 1 ? t > n + 40 : t > n) break;
         e++
       }
       p(t => e <= T.length ? e : t)
     }, [S, I, T]), (0, a.jsxs)("ul", {
       ref: I,
-      className: l(c.tagContainer, i, {
+      className: i(c.tagContainer, l, {
         [c.invisible]: null == m
       }),
       children: [T.map((e, t) => (0, a.jsx)(E, {

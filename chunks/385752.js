@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return E
+    return f
   }
 }), l("222007");
 var n = l("37983");
@@ -15,15 +15,15 @@ var a = l("446674"),
   o = l("466148"),
   c = l("782340");
 
-function E(e) {
+function f(e) {
   let {
     guildEventId: t,
     recurrenceId: l,
-    guild: E,
-    channel: f
+    guild: f,
+    channel: E
   } = e, _ = null != l, {
     canManageGuildEvent: T
-  } = (0, s.useManageResourcePermissions)(null != f ? f : E), [M, v] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.isActive(t), d.default.getGuildScheduledEvent(t)]), I = (0, i.default)(l, null == v ? void 0 : v.id), g = null != v && T(v), m = (null == v ? void 0 : v.recurrence_rule) != null && !_, {
+  } = (0, s.useManageResourcePermissions)(null != E ? E : f), [M, v] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.isActive(t), d.default.getGuildScheduledEvent(t)]), I = (0, i.default)(l, null == v ? void 0 : v.id), g = null != v && T(v), m = (null == v ? void 0 : v.recurrence_rule) != null && !_, {
     startTime: N
   } = (0, o.default)(t, l);
   if (!g || M && !m && !_ || _ && !_ || null == v) return null;
@@ -39,7 +39,7 @@ function E(e) {
       header: c.default.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
       confirmText: m || e ? c.default.Messages.DELETE_ALL_EVENTS : c.default.Messages.DELETE_EVENT,
       cancelText: c.default.Messages.NEVERMIND,
-      onConfirm: () => _ && !e ? r.default.deleteRecurrence(E.id, t, l, I) : r.default.deleteGuildEvent(t, E.id),
+      onConfirm: () => _ && !e ? r.default.deleteRecurrence(f.id, t, l, I) : r.default.deleteGuildEvent(t, f.id),
       children: [(0, n.jsx)(u.Text, {
         variant: "text-md/normal",
         children: c.default.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY

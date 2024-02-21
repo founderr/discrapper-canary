@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("907002"),
   o = n("446674"),
   u = n("77078"),
@@ -56,22 +56,22 @@ let k = {
 function H(e) {
   let {
     header: t
-  } = e, n = O.default.getCameraComponent(), i = (0, o.useStateFromStores)([O.default], () => O.default.getVideoDeviceId()), l = (0, m.default)();
+  } = e, n = O.default.getCameraComponent(), l = (0, o.useStateFromStores)([O.default], () => O.default.getVideoDeviceId()), i = (0, m.default)();
   return s.useEffect(() => {
     let e = v.default.getCurrentUser();
-    if (l && null != e) {
+    if (i && null != e) {
       let t = (0, I.getLastUsedVideoBackgroundOption)(e);
-      (0, S.applyBackgroundOptionPreview)(t, i, {
+      (0, S.applyBackgroundOptionPreview)(t, l, {
         track: !1
       }).catch(b.NOOP)
     }
-  }, [l, i]), (0, a.jsxs)("div", {
+  }, [i, l]), (0, a.jsxs)("div", {
     className: j.previewRoot,
     children: [(0, a.jsx)(u.Spinner, {}), (0, a.jsx)("div", {
       className: j.preview,
       children: (0, a.jsx)(n, {
         disabled: !1,
-        deviceId: i,
+        deviceId: l,
         width: B.width,
         height: B.height
       })
@@ -88,7 +88,7 @@ function V(e) {
     channel: n,
     numVideoDevices: s
   } = e, {
-    cameraUnavailable: i,
+    cameraUnavailable: l,
     enabled: r
   } = (0, p.default)(), o = (0, T.default)(n);
   return (0, a.jsxs)("div", {
@@ -113,7 +113,7 @@ function V(e) {
       animation: u.Popout.Animation.FADE,
       children: (e, t) => {
         let {
-          onClick: l
+          onClick: i
         } = e, {
           isShown: u
         } = t;
@@ -123,9 +123,9 @@ function V(e) {
           color: "green",
           centerButton: !0,
           hasPermission: o,
-          cameraUnavailable: i,
+          cameraUnavailable: l,
           channel: n,
-          onPopoutClick: s > 1 ? l : null,
+          onPopoutClick: s > 1 ? i : null,
           className: j.actionButton,
           popoutOpen: u,
           onCameraUnavailable: g.default,
@@ -138,7 +138,7 @@ function V(e) {
       channel: n,
       color: "green",
       centerButton: !0,
-      className: l(j.actionButton, j.last),
+      className: i(j.actionButton, j.last),
       onClick: () => f.default.selectVoiceChannel(n.id)
     })]
   })
@@ -148,7 +148,7 @@ function Y(e) {
   let {
     animatedStyle: t,
     y: n,
-    x: i,
+    x: l,
     channel: f
   } = e, [C, I] = s.useState(!1), S = (0, h.getChannelIconURL)(f), m = (0, _.default)(f), [p, T] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.supports(U.Features.VIDEO), Object.keys(O.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
@@ -193,7 +193,7 @@ function Y(e) {
     className: j.wrapper,
     selector: ".".concat(j.root),
     initialPosition: {
-      left: i,
+      left: l,
       top: n
     },
     maxX: window.innerWidth,
@@ -202,7 +202,7 @@ function Y(e) {
     dragAnywhere: !0,
     children: (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)(r.animated.div, {
-        className: l(j.root, w.elevationHigh, {
+        className: i(j.root, w.elevationHigh, {
           [j.previewCamera]: C
         }, C ? (0, D.getThemeClass)("dark") : null),
         style: {

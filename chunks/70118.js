@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("424973"), n("222007"), n("881410");
 var a = n("37983"),
   s = n("884691"),
-  i = n("77078"),
-  l = n("401642"),
+  l = n("77078"),
+  i = n("401642"),
   r = n("444097"),
   o = n("49111"),
   u = n("782340");
@@ -18,7 +18,7 @@ function d(e, t, n, s, d) {
       user: t,
       status: n
     }
-    of e) c.push((0, a.jsx)(i.MenuItem, {
+    of e) c.push((0, a.jsx)(l.MenuItem, {
     id: t.id,
     keepItemStyles: !0,
     render: e => (0, a.jsx)(r.default, {
@@ -27,14 +27,14 @@ function d(e, t, n, s, d) {
       status: n,
       guildId: d
     }),
-    action: () => (0, l.openUserProfileModal)({
+    action: () => (0, i.openUserProfileModal)({
       userId: t.id,
       analyticsLocation: {
         section: o.AnalyticsSections.ACTIVITY_FEED_NOW_PLAYING_CONTEXT_MENU
       }
     })
   }));
-  for (let e of t) c.push((0, a.jsx)(i.MenuItem, {
+  for (let e of t) c.push((0, a.jsx)(l.MenuItem, {
     id: e.id,
     keepItemStyles: !0,
     render: t => (0, a.jsx)(r.default, {
@@ -42,7 +42,7 @@ function d(e, t, n, s, d) {
       user: e,
       guildId: d
     }),
-    action: () => (0, l.openUserProfileModal)({
+    action: () => (0, i.openUserProfileModal)({
       userId: e.id,
       analyticsLocation: {
         section: o.AnalyticsSections.ACTIVITY_FEED_NOW_PLAYING_CONTEXT_MENU
@@ -50,7 +50,7 @@ function d(e, t, n, s, d) {
     })
   }));
   let f = n - c.length;
-  return f > 0 && c.push((0, a.jsx)(i.MenuItem, {
+  return f > 0 && c.push((0, a.jsx)(l.MenuItem, {
     id: "unknown-members-".concat(null == s ? void 0 : s.session_id),
     render: e => (0, a.jsx)(r.NowPlayingUnknownMemberMenuItem, {
       ...e,
@@ -65,7 +65,7 @@ function c(e) {
   let {
     priorityMembers: t,
     partiedMembers: n,
-    currentActivities: l,
+    currentActivities: i,
     guildContext: r
   } = e, o = new Set(t.map(e => {
     let {
@@ -73,31 +73,31 @@ function c(e) {
     } = e;
     return t.id
   })), c = n.filter(e => !o.has(e.id)), f = s.useMemo(() => {
-    let e = l.flatMap(e => {
+    let e = i.flatMap(e => {
       let {
         playingMembers: t
       } = e;
       return t
     }).map(e => e.id);
     return n.filter(t => !e.includes(t.id))
-  }, [n, l]);
-  if (l.length <= 1 && 0 === f.length) {
+  }, [n, i]);
+  if (i.length <= 1 && 0 === f.length) {
     var E, h;
-    return (0, a.jsx)(i.MenuGroup, {
+    return (0, a.jsx)(l.MenuGroup, {
       label: n.length > 1 ? u.default.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({
         memberCount: n.length
       }) : void 0,
-      children: d(t, c, n.length, null !== (h = null === (E = l[0]) || void 0 === E ? void 0 : E.activity) && void 0 !== h ? h : void 0, null == r ? void 0 : r.id)
+      children: d(t, c, n.length, null !== (h = null === (E = i[0]) || void 0 === E ? void 0 : E.activity) && void 0 !== h ? h : void 0, null == r ? void 0 : r.id)
     })
   }
-  let _ = l.map((e, n) => {
+  let _ = i.map((e, n) => {
       let {
         playingMembers: s,
-        game: l,
+        game: i,
         activity: u
       } = e, c = new Set(s.map(e => e.id));
-      return (0, a.jsx)(i.MenuGroup, {
-        label: "".concat(l.name, " - ").concat(s.length),
+      return (0, a.jsx)(l.MenuGroup, {
+        label: "".concat(i.name, " - ").concat(s.length),
         children: d(t.filter(e => {
           let {
             user: t
@@ -107,7 +107,7 @@ function c(e) {
       }, n)
     }),
     C = f.map(e => e.id),
-    I = (0, a.jsx)(i.MenuGroup, {
+    I = (0, a.jsx)(l.MenuGroup, {
       label: "".concat(u.default.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, " - ").concat(f.length),
       children: d(t.filter(e => {
         let {

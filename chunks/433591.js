@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("355262"),
   o = n("432710"),
   u = n("77078"),
@@ -32,7 +32,7 @@ function O() {
   let e = s.useRef(null),
     t = (0, S.default)(),
     n = (0, m.useSpamMessageRequestCount)(),
-    i = (0, _.useListHasSingleSpamMessageRequest)(),
+    l = (0, _.useListHasSingleSpamMessageRequest)(),
     O = (0, d.useIsRejectAllMessageRequestsEnabled)(),
     v = (0, c.default)("message-requests-spam-list"),
     {
@@ -64,15 +64,15 @@ function O() {
       } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
       return (0, a.jsx)(T.default, {
         index: r,
-        className: l({
+        className: i({
           [R.selected]: null != L && L === d,
           [R.siblingSelected]: null != L && L === u
         }),
         channel: o.channel,
         user: o.user,
-        hasSingleMessageRequest: i
+        hasSingleMessageRequest: l
       }, d)
-    }, [t, i, L]),
+    }, [t, l, L]),
     x = s.useCallback(() => (0, a.jsxs)(E.default, {
       className: R.sectionTitle,
       children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
@@ -103,12 +103,12 @@ function O() {
       children: n => {
         let {
           ref: s,
-          role: i,
-          ...l
+          role: l,
+          ...i
         } = n;
         return (0, a.jsx)(u.List, {
           className: R.list,
-          innerRole: i,
+          innerRole: l,
           innerAriaLabel: N.default.Messages.MESSAGE_REQUESTS,
           ref: t => {
             var n;
@@ -123,7 +123,7 @@ function O() {
           sections: [t.length],
           chunkSize: 30,
           fade: !0,
-          ...l
+          ...i
         }, "message-requests-spam-list")
       }
     })

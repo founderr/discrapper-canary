@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("424973");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("458960"),
   o = n("446674"),
   u = n("266491"),
@@ -147,17 +147,17 @@ class D extends s.PureComponent {
       mode: t,
       children: n,
       baseLayer: s,
-      ...i
+      ...l
     } = this.props, o = e || t === L ? this.getAnimatedStyle() : null, u = (0, a.jsx)(r.default.div, {
       ref: e => this.containerRef.current = null != e ? e.refs.node : void 0,
       "aria-hidden": t === L,
-      className: l(T.layer, {
+      className: i(T.layer, {
         [T.baseLayer]: s,
         [T.animating]: e,
         "stop-animations": t === L
       }),
       style: o,
-      ...i,
+      ...l,
       children: n
     });
     return s ? u : (0, a.jsx)(d.FocusLock, {
@@ -210,12 +210,12 @@ class y extends s.PureComponent {
       hasFullScreenLayer: n
     } = this.props, {
       length: s
-    } = t, i = [];
-    return i.push((0, a.jsx)(D, {
+    } = t, l = [];
+    return l.push((0, a.jsx)(D, {
       mode: 0 !== s || n ? L : v,
       baseLayer: !0,
       children: e
-    }, "layer-base")), t.forEach((e, t) => i.push(this.renderComponent(e, t, s))), i
+    }, "layer-base")), t.forEach((e, t) => l.push(this.renderComponent(e, t, s))), l
   }
   renderComponent(e, t, n) {
     let s;
@@ -226,14 +226,14 @@ class y extends s.PureComponent {
   }
   renderArtisanalHack() {
     return (0, a.jsx)("div", {
-      className: l(T.bg, (0, m.getThemeClass)(this.props.sidebarTheme))
+      className: i(T.bg, (0, m.getThemeClass)(this.props.sidebarTheme))
     })
   }
   render() {
     return (0, a.jsxs)(a.Fragment, {
       children: [this.renderArtisanalHack(), (0, a.jsx)(u.default, {
         component: "div",
-        className: l(T.layers, this.props.className),
+        className: i(T.layers, this.props.className),
         children: this.renderLayers()
       })]
     })

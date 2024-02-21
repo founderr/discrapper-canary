@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var a, s = n("917351"),
-  i = n.n(s),
-  l = n("446674"),
+  l = n.n(s),
+  i = n("446674"),
   r = n("913144"),
   o = n("191225"),
   u = n("499031"),
@@ -59,7 +59,7 @@ a = class {
       })
     };
     let e = [d.default, c.default, C.default, g.default, _.default, I.default],
-      t = new l.BatchedStoreListener(e.concat(this.stores), () => this.rpcServer.updateSubscriptions());
+      t = new i.BatchedStoreListener(e.concat(this.stores), () => this.rpcServer.updateSubscriptions());
     t.attach("RPCServerManager"), r.default.subscribe("MESSAGE_CREATE", e => this.handleMessage(e)), r.default.subscribe("MESSAGE_UPDATE", e => this.handleMessage(e)), r.default.subscribe("MESSAGE_DELETE", e => this.handleMessage(e)), r.default.subscribe("SPEAKING", e => this.handleSpeaking(e)), r.default.subscribe("OAUTH2_TOKEN_REVOKE", e => this.handleOAuth2TokenRevoke(e)), r.default.subscribe("GUILD_CREATE", e => this.handleGuildCreate(e)), r.default.subscribe("CHANNEL_CREATE", e => this.handleChannelCreate(e)), r.default.subscribe("LOGOUT", () => this.handleLogout()), r.default.subscribe("VOICE_CHANNEL_SELECT", e => this.handleVoiceChannelSelect(e)), r.default.subscribe("RPC_NOTIFICATION_CREATE", e => this.handleNotificationCreate(e)), r.default.subscribe("ACTIVITY_JOIN", e => this.handleActivityJoin(e)), r.default.subscribe("ACTIVITY_LAYOUT_MODE_UPDATE", e => this.handleActivityLayoutModeUpdate(e)), r.default.subscribe("THERMAL_STATE_CHANGE", e => this.handleThermalStateChange(e)), r.default.subscribe("ACTIVITY_SCREEN_ORIENTATION_UPDATE", e => this.handleScreenOrientationUpdate(e)), r.default.subscribe("EMBEDDED_ACTIVITY_INSTANCE_CHANGE", e => this.handleActivityInstanceChange(e)), (0, v.subscribeToActivityInstanceConnectedParticipants)(e => this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), r.default.subscribe("RELATIONSHIP_ADD", e => this.handleRelationshipAdd(e)), r.default.subscribe("RELATIONSHIP_REMOVE", e => this.handleRelationshipRemove(e)), r.default.subscribe("PRESENCE_UPDATES", e => this.handlePresenceUpdate(e)), r.default.subscribe("PRESENCES_REPLACE", () => this.handlePresencesReplace()), r.default.subscribe("LOBBY_UPDATE", e => this.handleLobbyUpdate(e)), r.default.subscribe("LOBBY_DELETE", e => this.handleLobbyDelete(e)), r.default.subscribe("LOBBY_MEMBER_CONNECT", e => this.handleLobbyMemberConnect(e)), r.default.subscribe("LOBBY_MEMBER_UPDATE", e => this.handleLobbyMemberUpdate(e)), r.default.subscribe("LOBBY_MEMBER_DISCONNECT", e => this.handleLobbyMemberDisconnect(e)), r.default.subscribe("LOBBY_MESSAGE", e => this.handleLobbyMessage(e)), r.default.subscribe("ENTITLEMENT_CREATE", e => this.handleEntitlementCreate(e)), r.default.subscribe("ENTITLEMENT_DELETE", e => this.handleEntitlementDelete(e)), r.default.subscribe("USER_ACHIEVEMENT_UPDATE", e => this.handleUserAchievementUpdate(e))
   }
   handleMessage(e) {
@@ -131,14 +131,14 @@ a = class {
       message: n,
       icon: a,
       title: s,
-      body: i
+      body: l
     } = e;
     0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.NOTIFICATION_CREATE, {}, {
       channel_id: t,
       message: (0, O.transformInternalTextMessage)(n),
       icon_url: null != a ? (0, O.getRemoteIconURL)(a) : null,
       title: s,
-      body: i
+      body: l
     })
   }
   handleActivityJoin(e) {
@@ -149,10 +149,10 @@ a = class {
       embedded: s
     } = e;
     if (0 === this.rpcServer.subscriptions.length) return;
-    let i = {
+    let l = {
       secret: n
     };
-    s && (i.intent = a), this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_JOIN, e => e.socket.application.id === t, i), this.rpcServer.dispatchToSubscriptions(M.RPCEvents.GAME_JOIN, e => e.socket.application.id === t, i)
+    s && (l.intent = a), this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_JOIN, e => e.socket.application.id === t, l), this.rpcServer.dispatchToSubscriptions(M.RPCEvents.GAME_JOIN, e => e.socket.application.id === t, l)
   }
   handleActivityLayoutModeUpdate(e) {
     let {
@@ -212,29 +212,29 @@ a = class {
     if (0 === this.rpcServer.subscriptions.length) return;
     let {
       application: s,
-      activity: i
+      activity: l
     } = a;
-    if (null == s || null == i || null == i.party_id) return;
-    let l = T.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
-    if (null == l) return;
+    if (null == s || null == l || null == l.party_id) return;
+    let i = T.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
+    if (null == i) return;
     let r = T.default.getCurrentUser();
-    if (null == r || l.id === r.id) return;
-    let o = i.type === M.ActivityActionTypes.JOIN_REQUEST ? C.default.getApplicationActivity(r.id, s.id) : C.default.getApplicationActivity(l.id, s.id);
-    if (null == o || null == o.party || o.party.id !== i.party_id) return;
+    if (null == r || i.id === r.id) return;
+    let o = l.type === M.ActivityActionTypes.JOIN_REQUEST ? C.default.getApplicationActivity(r.id, s.id) : C.default.getApplicationActivity(i.id, s.id);
+    if (null == o || null == o.party || o.party.id !== l.party_id) return;
     let u = o.application_id;
-    switch (i.type) {
+    switch (l.type) {
       case M.ActivityActionTypes.JOIN:
         this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_INVITE, e => e.socket.application.id === u, {
-          user: (0, L.default)(l),
+          user: (0, L.default)(i),
           activity: o,
-          type: i.type,
+          type: l.type,
           channel_id: n,
           message_id: a.id
         });
         break;
       case M.ActivityActionTypes.JOIN_REQUEST:
         this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_JOIN_REQUEST, e => e.socket.application.id === u, {
-          user: (0, L.default)(l)
+          user: (0, L.default)(i)
         })
     }
   }
@@ -308,7 +308,7 @@ a = class {
     })
   }
   handlePresencesReplace() {
-    0 !== this.rpcServer.subscriptions.length && i.forEach(S.default.getRelationships(), (e, t) => {
+    0 !== this.rpcServer.subscriptions.length && l.forEach(S.default.getRelationships(), (e, t) => {
       this.rpcServer.dispatchToSubscriptions(M.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, O.transformRelationship)(e, t))
     })
   }

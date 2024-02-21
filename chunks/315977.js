@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("90915"),
-  l = n("446674"),
+  l = n("90915"),
+  i = n("446674"),
   r = n("450911"),
   o = n("737960"),
   u = n("970366"),
@@ -27,7 +27,7 @@ class C extends s.Component {
       root: !0,
       children: (0, a.jsx)("div", {
         className: _.applicationStore,
-        children: (0, a.jsx)(i.Route, {
+        children: (0, a.jsx)(l.Route, {
           path: "*",
           render: this.renderApplicationListing
         })
@@ -47,19 +47,19 @@ class C extends s.Component {
       } = e, {
         channel: n,
         skuId: s,
-        width: i
+        width: l
       } = this.props;
       return (0, a.jsx)(f.default, {
         channel: n,
         inputSkuId: s,
         fetchStoreListing: this.fetchStoreListing,
         location: t,
-        pageSize: (0, E.getPageSize)(i)
+        pageSize: (0, E.getPageSize)(l)
       })
     }
   }
 }
-var I = (0, o.default)(l.default.connectStores([d.default], e => {
+var I = (0, o.default)(i.default.connectStores([d.default], e => {
   let {
     channel: t,
     inputSkuId: n

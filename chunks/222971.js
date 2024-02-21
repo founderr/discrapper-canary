@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var n = l("37983");
@@ -15,16 +15,16 @@ var a = l("446674"),
   o = l("842672"),
   c = l("782340");
 
-function E(e) {
+function f(e) {
   let {
     guildEventId: t,
-    guild: E,
-    channel: f,
+    guild: f,
+    channel: E,
     recurrenceId: _,
     isRecurrenceItem: T
   } = e, {
     canManageGuildEvent: M
-  } = (0, s.useManageResourcePermissions)(null != f ? f : E), v = (0, a.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(t)), I = M(v), g = (0, o.default)(), m = (0, r.default)(_, null == v ? void 0 : v.id), N = (0, i.default)(t, _);
+  } = (0, s.useManageResourcePermissions)(null != E ? E : f), v = (0, a.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(t)), I = M(v), g = (0, o.default)(), m = (0, r.default)(_, null == v ? void 0 : v.id), N = (0, i.default)(t, _);
   if (!I || null == v) return null;
   let R = null != v.recurrence_rule && !T,
     S = e => {
@@ -35,7 +35,7 @@ function E(e) {
         return l => (0, n.jsx)(e, {
           ...l,
           guildScheduledEventId: t,
-          guildId: E.id
+          guildId: f.id
         })
       }, g) : null != _ && (0, u.openModalLazy)(async () => {
         let {

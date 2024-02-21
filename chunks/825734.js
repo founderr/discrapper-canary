@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("70102"), n("222007");
 var a = n("308757"),
   s = n("812204"),
-  i = n("929479"),
-  l = n("861309"),
+  l = n("929479"),
+  i = n("861309"),
   r = n("716724"),
   o = n("613652"),
   u = n("383928"),
@@ -37,9 +37,9 @@ function C(e, t) {
   };
   switch (e) {
     case f.AppContext.APP:
-      return i.default.openPremiumPaymentModalInApp(n);
+      return l.default.openPremiumPaymentModalInApp(n);
     case f.AppContext.OVERLAY:
-      return i.default.openPremiumPaymentModalInOverlay(n);
+      return l.default.openPremiumPaymentModalInOverlay(n);
     default:
       throw Error("Unexpected app context: ".concat(e))
   }
@@ -60,15 +60,15 @@ var I = {
         }
       } = e;
       (0, u.validateTransportType)(t.transport);
-      let i = t.application.id;
-      if (null == i) throw new l.default({
+      let l = t.application.id;
+      if (null == l) throw new i.default({
         errorCode: f.RPCErrors.INVALID_COMMAND
       }, "No application.");
       let {
         lock: r,
         context: d
       } = _(t.transport !== c.TransportTypes.POST_MESSAGE ? s : null), E = (0, o.default)();
-      if (null == E) throw new l.default({
+      if (null == E) throw new i.default({
         errorCode: f.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel");
       let I = {
@@ -77,7 +77,7 @@ var I = {
         S = async () => {
           try {
             let e = await (0, a.openIAPPurchaseModal)({
-              applicationId: i,
+              applicationId: l,
               skuId: n,
               openPremiumPaymentModal: () => C(d, I),
               analyticsLocations: h,
@@ -88,11 +88,11 @@ var I = {
           } catch (e) {
             if (r(), null != e) {
               let t = "";
-              throw t = "object" == typeof e && "message" in e && "string" == typeof e.message ? e.message : "string" == typeof e ? e : JSON.stringify(e), new l.default({
+              throw t = "object" == typeof e && "message" in e && "string" == typeof e.message ? e.message : "string" == typeof e ? e : JSON.stringify(e), new i.default({
                 errorCode: f.RPCErrors.PURCHASE_ERROR
               }, t)
             }
-            throw new l.default({
+            throw new i.default({
               errorCode: f.RPCErrors.PURCHASE_CANCELED
             }, "Purchase was canceled by the user.")
           }
@@ -114,22 +114,22 @@ var I = {
       } = e;
       (0, u.validateTransportType)(t.transport);
       let a = t.application.id;
-      if (null == a) throw new l.default({
+      if (null == a) throw new i.default({
         errorCode: f.RPCErrors.INVALID_COMMAND
       }, "No application.");
       let {
         lock: s,
-        context: i
+        context: l
       } = _(t.transport !== c.TransportTypes.POST_MESSAGE ? n : null), r = {
         page: f.AnalyticsPages.IN_APP
       };
-      return C(i, r).then(() => {
+      return C(l, r).then(() => {
         s()
       }, e => {
-        if (s(), null != e) throw new l.default({
+        if (s(), null != e) throw new i.default({
           errorCode: f.RPCErrors.PURCHASE_ERROR
         }, e);
-        throw new l.default({
+        throw new i.default({
           errorCode: f.RPCErrors.PURCHASE_CANCELED
         }, "Purchase was canceled by the user.")
       })

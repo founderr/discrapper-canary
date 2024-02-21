@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("446674"),
-  l = n("77078"),
+  l = n("446674"),
+  i = n("77078"),
   r = n("393414"),
   o = n("305961"),
   u = n("554054"),
@@ -30,10 +30,10 @@ var a = n("37983"),
     let {
       guildId: n,
       inviteCode: N
-    } = e, [R, O] = s.useState(T.WaveStates.INITIAL), v = (0, i.useStateFromStores)([h.default], () => h.default.get(n)), L = (0, i.useStateFromStores)([C.default], () => C.default.getRequest(n)), M = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(n)), {
+    } = e, [R, O] = s.useState(T.WaveStates.INITIAL), v = (0, l.useStateFromStores)([h.default], () => h.default.get(n)), L = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(n)), M = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(n)), {
       hasFetchedRequestToJoinGuilds: P,
       guildPreviewDisabled: D
-    } = (0, i.useStateFromStoresObject)([C.default], () => ({
+    } = (0, l.useStateFromStoresObject)([C.default], () => ({
       hasFetchedRequestToJoinGuilds: C.default.hasFetchedRequestToJoinGuilds,
       guildPreviewDisabled: C.default.getJoinRequestGuild(n)
     }));
@@ -46,14 +46,14 @@ var a = n("37983"),
         O(t => Math.max(t, e))
       }, []),
       x = (e, t) => () => {
-        (0, l.openModal)(n => (0, a.jsx)(l.ConfirmModal, {
+        (0, i.openModal)(n => (0, a.jsx)(i.ConfirmModal, {
           header: g.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
           cancelText: g.default.Messages.NEVERMIND,
           onConfirm: t,
           confirmText: g.default.Messages.YES_TEXT,
-          confirmButtonColor: l.Button.Colors.RED,
+          confirmButtonColor: i.Button.Colors.RED,
           ...n,
-          children: (0, a.jsx)(l.Text, {
+          children: (0, a.jsx)(i.Text, {
             variant: "text-sm/normal",
             color: "header-secondary",
             children: e

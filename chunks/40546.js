@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("745633"),
-  i = n("11056"),
-  l = n("447621"),
+  l = n("11056"),
+  i = n("447621"),
   r = n("782340"),
   o = n("791666"),
   u = e => {
@@ -17,7 +17,7 @@ var s = n("745633"),
       shouldDisplaySelectedCategory: n,
       currentCategoryId: u
     } = e;
-    return (0, a.jsx)(i.default, {
+    return (0, a.jsx)(l.default, {
       avatar: (0, a.jsx)(s.default, {}),
       name: r.default.Messages.HUB_SCHOOL_HUBS,
       focusProps: {
@@ -28,12 +28,12 @@ var s = n("745633"),
         }
       },
       onClick: () => {
-        t(l.DISCORD_HUB_ID)
+        t(i.DISCORD_HUB_ID)
       },
       wrapContent: !0,
-      selected: n && l.DISCORD_HUB_ID === u,
+      selected: n && i.DISCORD_HUB_ID === u,
       className: o.categoryItem,
       selectedClassName: o.selectedCategoryItem,
       innerClassName: o.itemInner
-    }, l.DISCORD_HUB_ID)
+    }, i.DISCORD_HUB_ID)
   }

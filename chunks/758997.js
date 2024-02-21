@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("90915"),
-  l = n("901582"),
+  l = n("90915"),
+  i = n("901582"),
   r = n("73749"),
   o = n("69927"),
   u = n("970366"),
@@ -18,11 +18,11 @@ var a = n("37983"),
   h = n("252212");
 
 function _() {
-  return (0, a.jsxs)(i.Switch, {
+  return (0, a.jsxs)(l.Switch, {
     children: [(0, a.jsx)(r.default, {
       path: f.Routes.APPLICATION_LIBRARY_SETTINGS,
       exact: !0,
-      children: (0, a.jsxs)(l.default, {
+      children: (0, a.jsxs)(i.default, {
         page: f.AnalyticsPages.LIBRARY_SETTINGS,
         root: !0,
         children: [(0, a.jsx)(o.AppPageTitle, {
@@ -31,7 +31,7 @@ function _() {
       })
     }), (0, a.jsx)(r.default, {
       path: f.Routes.APPLICATION_LIBRARY,
-      children: (0, a.jsxs)(l.default, {
+      children: (0, a.jsxs)(i.default, {
         page: f.AnalyticsPages.LIBRARY,
         root: !0,
         children: [(0, a.jsx)(o.AppPageTitle, {

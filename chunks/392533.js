@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("446674"),
-  i = n("77078"),
-  l = n("272030"),
+  l = n("77078"),
+  i = n("272030"),
   r = n("861370"),
   o = n("377114"),
   u = n("305961"),
@@ -40,15 +40,15 @@ function _(e) {
   }, {
     autoTrackExposure: !1
   }), g = () => {
-    (0, l.closeContextMenu)(), null == C || C()
+    (0, i.closeContextMenu)(), null == C || C()
   };
-  return (0, a.jsxs)(i.Menu, {
+  return (0, a.jsxs)(l.Menu, {
     onSelect: _,
     navId: "guild-discovery-context-menu",
     "aria-label": null != I ? I : h.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
-    onClose: l.closeContextMenu,
-    children: [(0, a.jsx)(i.MenuGroup, {
-      children: !p && T ? (0, a.jsx)(i.MenuItem, {
+    onClose: i.closeContextMenu,
+    children: [(0, a.jsx)(l.MenuGroup, {
+      children: !p && T ? (0, a.jsx)(l.MenuItem, {
         id: "report-guild-discovery-listing",
         label: h.default.Messages.REPORT_SERVER_NO_NAME,
         action: () => {
@@ -57,7 +57,7 @@ function _(e) {
         icon: c.default,
         color: "danger"
       }) : null
-    }), (0, a.jsx)(i.MenuGroup, {
+    }), (0, a.jsx)(l.MenuGroup, {
       children: S
     })]
   })
@@ -67,12 +67,12 @@ let C = e => {
     guild: t,
     children: n,
     onRequestOpen: s,
-    onRequestClose: l
+    onRequestClose: i
   } = e;
-  return (0, a.jsx)(i.Popout, {
+  return (0, a.jsx)(l.Popout, {
     onRequestOpen: s,
-    onRequestClose: l,
-    animation: i.Popout.Animation.NONE,
+    onRequestClose: i,
+    animation: l.Popout.Animation.NONE,
     position: "bottom",
     spacing: 4,
     align: "right",

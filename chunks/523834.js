@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("917351"),
   s = n.n(a),
-  i = n("970728"),
-  l = n("987317"),
+  l = n("970728"),
+  i = n("987317"),
   r = n("393414"),
   o = n("233069"),
   u = n("42203"),
@@ -109,13 +109,13 @@ var a = n("917351"),
           args: {
             channel_id: a,
             timeout: s = 0,
-            force: i = !1,
+            force: l = !1,
             navigate: I = !1
           }
         } = e;
-        if (!a) return l.default.selectVoiceChannel(null), null;
+        if (!a) return i.default.selectVoiceChannel(null), null;
         let S = f.default.getVoiceChannelId();
-        if (null != S && S !== a && !1 === i) throw new _.default({
+        if (null != S && S !== a && !1 === l) throw new _.default({
           errorCode: p.RPCErrors.SELECT_VOICE_FORCE_REQUIRED
         }, "User is already joined to a voice channel.");
         return t.storeWait(n, () => u.default.getChannel(a), s).catch(() => {
@@ -140,7 +140,7 @@ var a = n("917351"),
               errorCode: p.RPCErrors.INVALID_PERMISSIONS
             }, "Connect permission required to join channel")
           }
-          return l.default.selectVoiceChannel(t.id), I && (0, r.replaceWith)(p.Routes.CHANNEL(t.guild_id, t.id)), n
+          return i.default.selectVoiceChannel(t.id), I && (0, r.replaceWith)(p.Routes.CHANNEL(t.guild_id, t.id)), n
         })
       }
     },
@@ -187,7 +187,7 @@ var a = n("917351"),
           if (n.guild_id && !c.default.can(p.Permissions.VIEW_CHANNEL, t)) throw new _.default({
             errorCode: p.RPCErrors.INVALID_CHANNEL
           }, "No permission to see channel");
-          return n.guild_id ? (0, r.replaceWith)(p.Routes.CHANNEL(n.guild_id, t.id)) : l.default.selectPrivateChannel(t.id), n
+          return n.guild_id ? (0, r.replaceWith)(p.Routes.CHANNEL(n.guild_id, t.id)) : i.default.selectPrivateChannel(t.id), n
         }) : ((0, r.transitionTo)(p.Routes.ME), null)
       }
     },
@@ -200,7 +200,7 @@ var a = n("917351"),
             ...n
           }
         } = e;
-        return i.default.createInvite(t, n, "RPC").catch(() => {
+        return l.default.createInvite(t, n, "RPC").catch(() => {
           throw new _.default({
             errorCode: p.RPCErrors.INVALID_PERMISSIONS
           }, "Unable to generate an invite for ".concat(t, ". Does this user have permissions?"))

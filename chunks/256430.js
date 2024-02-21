@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("446674"),
-  i = n("77078"),
-  l = n("340626"),
+  l = n("77078"),
+  i = n("340626"),
   r = n("40546"),
   o = n("397039"),
   u = n("926787"),
@@ -44,9 +44,9 @@ var C = () => {
     ...e,
     icon: _(e.categoryId)
   })), C = e => {
-    (0, l.selectCategory)(e, !0), o.default.closeSidebar(), t && (0, l.clearSearch)()
+    (0, i.selectCategory)(e, !0), o.default.closeSidebar(), t && (0, i.clearSearch)()
   };
-  return (0, a.jsxs)(i.Scroller, {
+  return (0, a.jsxs)(l.Scroller, {
     children: [(0, a.jsx)(f.DiscoverySidebarHeader, {
       text: h.default.Messages.DISCOVER
     }), (0, a.jsx)(c.default, {

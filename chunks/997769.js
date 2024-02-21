@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("424973"), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("966900"),
   u = n("838048"),
@@ -86,7 +86,7 @@ let M = {
 function y(e) {
   var t, s;
   let {
-    channel: i,
+    channel: l,
     user: o,
     nick: u,
     mute: d,
@@ -96,7 +96,7 @@ function y(e) {
   } = e, T = (0, r.useStateFromStores)([m.default], () => m.default.isLocalMute(o.id)), g = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
-  }), A = null !== (t = i.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(i.guild_id, 24), y = null != u ? u : R.default.getName(o), {
+  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), y = null != u ? u : R.default.getName(o), {
     icon: x,
     colorize: b,
     getStatus: U
@@ -106,13 +106,13 @@ function y(e) {
       deaf: n,
       serverMute: a,
       mute: s,
-      localMute: i
-    } = e, l = (0, f.useRedesignIconContext)().enabled;
-    if (t) return l ? D.serverDeaf : P.serverDeaf;
-    if (n) return l ? D.deaf : P.deaf;
-    if (a) return l ? D.serverMute : P.serverMute;
-    else if (i) return l ? D.localMute : P.mute;
-    else if (s) return l ? D.mute : P.mute
+      localMute: l
+    } = e, i = (0, f.useRedesignIconContext)().enabled;
+    if (t) return i ? D.serverDeaf : P.serverDeaf;
+    if (n) return i ? D.deaf : P.deaf;
+    if (a) return i ? D.serverMute : P.serverMute;
+    else if (l) return i ? D.localMute : P.mute;
+    else if (s) return i ? D.mute : P.mute
   }({
     serverDeaf: p,
     deaf: c,
@@ -133,7 +133,7 @@ function y(e) {
         ...t,
         user: o,
         guildId: A,
-        channel: i,
+        channel: l,
         showMediaItems: !0
       })
     }) : (0, E.openContextMenuLazy)(e, async () => {
@@ -150,13 +150,13 @@ function y(e) {
   return (0, a.jsx)(f.Popout, {
     preload: () => (0, C.default)(o.id, o.getAvatarURL(A, 80), {
       guildId: A,
-      channelId: i.id
+      channelId: l.id
     }),
     position: "top",
     renderPopout: e => (0, a.jsx)(I.default, {
       userId: o.id,
       guildId: A,
-      channelId: i.id,
+      channelId: l.id,
       ...e
     }),
     children: e => (0, a.jsx)(f.Tooltip, {
@@ -171,14 +171,14 @@ function y(e) {
           shakeLocation: O.ShakeLocation.VOICE_USER,
           isShaking: g,
           children: (0, a.jsx)("div", {
-            className: l(L.avatar, {
+            className: i(L.avatar, {
               [L.speaking]: g
             }),
             style: {
               backgroundImage: "url(".concat(N, ")")
             },
             children: null != x ? (0, a.jsx)(x, {
-              className: l(L.avatarIconOverlay, {
+              className: i(L.avatarIconOverlay, {
                 [L.avatarIconRed]: b
               }),
               color: "currentColor",
@@ -197,7 +197,7 @@ function x(e) {
   let {
     voiceStates: t,
     channel: n,
-    className: i
+    className: l
   } = e, [o, u] = s.useState(!1), d = o ? N.default : A.default, c = (0, a.jsx)(p.default, {
     className: L.expandButton,
     onClick: () => u(!o),
@@ -222,7 +222,7 @@ function x(e) {
     return [n, !1]
   }(t, E), C = _ && o ? t : h;
   return C.length <= 0 ? null : (0, a.jsx)(f.ScrollerThin, {
-    className: l(L.scroller, i),
+    className: i(L.scroller, l),
     fade: !0,
     children: (0, a.jsxs)("div", {
       className: L.voiceUsers,
@@ -232,17 +232,17 @@ function x(e) {
         let {
           user: t,
           nick: s,
-          voiceState: i
+          voiceState: l
         } = e;
         return t.id !== E ? (0, a.jsx)(y, {
           channel: n,
           user: t,
           nick: s,
-          mute: i.isVoiceMuted(),
-          deaf: i.isVoiceDeafened(),
-          video: i.selfVideo,
-          serverMute: i.mute,
-          serverDeaf: i.deaf
+          mute: l.isVoiceMuted(),
+          deaf: l.isVoiceDeafened(),
+          video: l.selfVideo,
+          serverMute: l.mute,
+          serverDeaf: l.deaf
         }, t.id) : null
       }), _ ? c : null]
     })

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("913144"),
-  l = n("152584"),
+  l = n("913144"),
+  i = n("152584"),
   r = n("316272"),
   o = n("929423"),
   u = n("783142"),
@@ -17,26 +17,26 @@ var s = n("77078"),
   f = n("75015");
 class E extends r.default {
   _initialize() {
-    i.default.subscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
+    l.default.subscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
   }
   _terminate() {
-    i.default.unsubscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
+    l.default.unsubscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
   }
   maybeOpenProfilePreviewModal(e) {
     let {
       imageSrc: t,
-      file: i,
+      file: l,
       uploadType: r,
       guildId: E,
       isTryItOutFlow: h
-    } = e, _ = null != E ? o.setPendingAvatar : l.setPendingAvatar, C = null != E ? o.setPendingBanner : u.setPendingBanner, I = d.default.getCurrentUser();
+    } = e, _ = null != E ? o.setPendingAvatar : i.setPendingAvatar, C = null != E ? o.setPendingBanner : u.setPendingBanner, I = d.default.getCurrentUser();
     if (r === f.UploadTypes.AVATAR) {
       if (h) {
         (0, u.setTryItOutAvatar)(t);
         return
       }
       let e = c.default.canUseAnimatedAvatar(I);
-      if (e || "image/gif" !== i.type) {
+      if (e || "image/gif" !== l.type) {
         _(t);
         return
       }(0, s.openModalLazy)(async () => {

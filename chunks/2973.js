@@ -24,7 +24,7 @@ function S(e, t) {
   })
 }
 
-function f(e, t) {
+function _(e, t) {
   let n = new Map(E);
   n.set(e, t), E = n;
   let s = a.get(e),
@@ -40,7 +40,7 @@ function f(e, t) {
   }
 }
 
-function _(e) {
+function f(e) {
   let t = new Set(u);
   t.delete(e), u = t
 }
@@ -113,13 +113,13 @@ var p = new C(i.default, {
     } = e;
     S(t.questId, {
       userStatus: t
-    }), _(t.questId)
+    }), f(t.questId)
   },
   QUESTS_ENROLL_FAILURE: function(e) {
     let {
       questId: t
     } = e;
-    _(t)
+    f(t)
   },
   QUESTS_FETCH_REWARD_CODE_BEGIN: function(e) {
     let {
@@ -132,7 +132,7 @@ var p = new C(i.default, {
       questId: t,
       rewardCode: n
     } = e, s = new Set(d);
-    s.delete(t), d = s, f(t, n)
+    s.delete(t), d = s, _(t, n)
   },
   QUESTS_FETCH_REWARD_CODE_FAILURE: function(e) {
     let {
@@ -151,7 +151,7 @@ var p = new C(i.default, {
       questId: t,
       rewardCode: n
     } = e, s = new Set(o);
-    s.delete(t), o = s, f(t, n)
+    s.delete(t), o = s, _(t, n)
   },
   QUESTS_CLAIM_REWARD_CODE_FAILURE: function(e) {
     let {

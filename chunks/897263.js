@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
 var a = n("315102"),
   s = n("606292"),
-  i = (e, t, n) => (0, a.getAvatarDecorationURL)({
+  l = (e, t, n) => (0, a.getAvatarDecorationURL)({
     avatarDecoration: {
       asset: e
     },

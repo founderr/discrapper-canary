@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("65597"),
-  i = n("225288"),
-  l = n("77078"),
+  l = n("225288"),
+  i = n("77078"),
   r = n("697218"),
   o = n("171710"),
   u = n("462579"),
@@ -30,7 +30,7 @@ var s = n("65597"),
       T = (0, d.useAgeSpecificText)(m.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, m.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
       g = (0, d.useAgeSpecificText)(m.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, m.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
       A = (0, d.useAgeSpecificText)(m.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, m.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
-      N = (0, l.useRedesignIconContext)().enabled;
+      N = (0, i.useRedesignIconContext)().enabled;
     return void 0 === n ? null : (0, a.jsxs)("div", {
       className: p.container,
       children: [(0, a.jsx)("div", {
@@ -48,7 +48,7 @@ var s = n("65597"),
           header: m.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
           description: g
         }), (0, a.jsx)(C.default, {
-          icon: N ? i.QrCodeCameraIcon : I.default,
+          icon: N ? l.QrCodeCameraIcon : I.default,
           header: m.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
           description: A
         })]

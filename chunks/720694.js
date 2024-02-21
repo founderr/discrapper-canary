@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("974667"),
-  l = n("446674"),
+  l = n("974667"),
+  i = n("446674"),
   r = n("77078"),
   o = n("430568"),
   u = n("570687"),
@@ -39,10 +39,10 @@ let N = e => {
       selected: t,
       locationState: n,
       onMouseEnter: s,
-      onButtonClick: l,
+      onButtonClick: i,
       children: r,
       ...o
-    } = e, d = (0, i.useListItem)("shop"), E = c.default.HOME_PAGE_SHOP_TAB, {
+    } = e, d = (0, l.useListItem)("shop"), E = c.default.HOME_PAGE_SHOP_TAB, {
       analyticsLocations: h
     } = (0, f.default)(E);
     return (0, a.jsx)(u.LinkButton, {
@@ -59,7 +59,7 @@ let N = e => {
           openInLayer: !1,
           analyticsSource: E,
           analyticsLocations: h
-        }), null == l || l()
+        }), null == i || i()
       },
       children: r
     })
@@ -68,7 +68,7 @@ let N = e => {
     let {
       displayOptions: t,
       assetId: n
-    } = e, s = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), i = null != n ? (0, E.default)(n, r.AvatarSizes.SIZE_80, !s) : void 0;
+    } = e, s = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), l = null != n ? (0, E.default)(n, r.AvatarSizes.SIZE_80, !s) : void 0;
     return (0, a.jsxs)("div", {
       className: A.shopMarketingTooltipContent,
       children: [(0, a.jsx)("div", {
@@ -76,7 +76,7 @@ let N = e => {
         children: (0, a.jsx)(r.Avatar, {
           className: A.avatar,
           src: t.imageSrc,
-          avatarDecoration: i,
+          avatarDecoration: l,
           size: r.AvatarSizes.SIZE_80,
           "aria-hidden": !0
         })
@@ -97,22 +97,22 @@ let N = e => {
     let {
       selected: t,
       locationState: n,
-      onButtonClick: i,
-      displayOptions: l
+      onButtonClick: l,
+      displayOptions: i
     } = e, [o, u] = s.useState(0), d = () => {
-      u((o + 1) % l.assetIds.length)
+      u((o + 1) % i.assetIds.length)
     };
     return (0, a.jsx)(r.Tooltip, {
       text: (0, a.jsx)(O, {
-        displayOptions: l,
-        assetId: l.assetIds[o]
+        displayOptions: i,
+        assetId: i.assetIds[o]
       }),
       tooltipClassName: A.marketingBadgeTooltip,
       position: "right",
       delay: 100,
       allowOverflow: !0,
       hideOnClick: !1,
-      "aria-label": l.title(),
+      "aria-label": i.title(),
       children: e => (0, a.jsx)(R, {
         selected: t,
         locationState: n,
@@ -121,9 +121,9 @@ let N = e => {
           var t;
           d(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
         },
-        onButtonClick: i,
+        onButtonClick: l,
         children: (0, a.jsx)(N, {
-          color: l.badgeColor
+          color: i.badgeColor
         })
       })
     })
@@ -132,33 +132,33 @@ let N = e => {
     let {
       selected: t,
       locationState: n,
-      onButtonClick: i,
-      displayOptions: l
+      onButtonClick: l,
+      displayOptions: i
     } = e, u = s.useMemo(() => {
       var e;
-      let t = null != l.emojiName ? null === (e = _.default.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
+      let t = null != i.emojiName ? null === (e = _.default.getByName(i.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
       return (0, a.jsxs)(r.Text, {
         variant: "text-sm/medium",
         className: A.marketingBadgeTooltipContent,
         children: [null != t && (0, a.jsx)(o.default, {
           emojiName: t
-        }), l.title()]
+        }), i.title()]
       })
-    }, [l]);
+    }, [i]);
     return (0, a.jsx)(r.Tooltip, {
       text: u,
       tooltipClassName: A.marketingBadgeTooltip,
       position: "right",
       delay: 100,
       hideOnClick: !1,
-      "aria-label": l.title(),
+      "aria-label": i.title(),
       children: e => (0, a.jsx)(R, {
         selected: t,
         locationState: n,
         ...e,
-        onButtonClick: i,
+        onButtonClick: l,
         children: (0, a.jsx)(N, {
-          color: l.badgeColor
+          color: i.badgeColor
         })
       })
     })
@@ -169,21 +169,21 @@ let N = e => {
       locationState: n
     } = e, {
       collectiblesShopTabNewBadgeDisplayOptions: s,
-      dismissCollectiblesShopTabNewBadge: i
+      dismissCollectiblesShopTabNewBadge: l
     } = (0, m.default)();
     if (null != s) switch (s.type) {
       case p.CollectiblesMarketingVariant.TOOLTIP:
         return (0, a.jsx)(L, {
           selected: t,
           locationState: n,
-          onButtonClick: i,
+          onButtonClick: l,
           displayOptions: s
         });
       case p.CollectiblesMarketingVariant.COACHTIP:
         return (0, a.jsx)(v, {
           selected: t,
           locationState: n,
-          onButtonClick: i,
+          onButtonClick: l,
           displayOptions: s
         })
     }

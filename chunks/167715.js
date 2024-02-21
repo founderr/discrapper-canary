@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("414456"),
-  i = n.n(s),
-  l = n("446674"),
+  l = n.n(s),
+  i = n("446674"),
   r = n("77078"),
   o = n("235660"),
   u = n("998564"),
@@ -33,7 +33,7 @@ function C(e) {
   let {
     voiceState: t,
     awaitingRemoteSessionInfo: n
-  } = e, s = null != n ? (0, c.coercePlatformTypeToConsoleType)(n.type) : null, u = (0, l.useStateFromStores)([o.default], () => {
+  } = e, s = null != n ? (0, c.coercePlatformTypeToConsoleType)(n.type) : null, u = (0, i.useStateFromStores)([o.default], () => {
     var e, n;
     return null === (e = o.default.getSessionById(null !== (n = null == t ? void 0 : t.sessionId) && void 0 !== n ? n : "")) || void 0 === e ? void 0 : e.clientInfo.os
   }), d = null != s ? s : u;
@@ -41,7 +41,7 @@ function C(e) {
   let C = null != n,
     I = C ? d === f.GameConsoleTypes.XBOX ? E.default.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.default.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === f.GameConsoleTypes.XBOX ? E.default.Messages.XBOX_REMOTE_CONNECTED.format() : E.default.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
   return (0, a.jsxs)("div", {
-    className: i(h.root, C ? h.connecting : h.connected),
+    className: l(h.root, C ? h.connecting : h.connected),
     children: [(0, a.jsx)(_, {
       platform: d
     }), (0, a.jsx)(r.Text, {

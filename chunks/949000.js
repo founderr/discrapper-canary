@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("913144"),
-  l = n("139321"),
+  l = n("913144"),
+  i = n("139321"),
   r = n("269596"),
   o = n("42203"),
   u = n("42887"),
@@ -25,10 +25,10 @@ var s = n("77078"),
   p = n("353927");
 class T extends f.default {
   _initialize() {
-    super._initialize(), !__OVERLAY__ && i.default.subscribe("OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST", this._handleOverlaySoundboardSoundsFetchRequest)
+    super._initialize(), !__OVERLAY__ && l.default.subscribe("OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST", this._handleOverlaySoundboardSoundsFetchRequest)
   }
   _terminate() {
-    super._terminate(), !__OVERLAY__ && i.default.unsubscribe("OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST", this._handleOverlaySoundboardSoundsFetchRequest)
+    super._terminate(), !__OVERLAY__ && l.default.unsubscribe("OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST", this._handleOverlaySoundboardSoundsFetchRequest)
   }
   constructor(...e) {
     var t;
@@ -42,8 +42,8 @@ class T extends f.default {
       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         a = arguments.length > 2 ? arguments[2] : void 0,
         s = arguments.length > 3 ? arguments[3] : void 0,
-        i = null != s && d.default.getVoiceChannelId() === s;
-      if ((null == s || i) && !u.default.isDeaf() && !h.default.isLocalSoundboardMuted(a)) try {
+        l = null != s && d.default.getVoiceChannelId() === s;
+      if ((null == s || l) && !u.default.isDeaf() && !h.default.isLocalSoundboardMuted(a)) try {
         let s = {
           soundKey: "".concat(a, "-").concat(e),
           soundURL: (0, C.default)(e),
@@ -58,9 +58,9 @@ class T extends f.default {
       (0, E.maybeFetchSoundboardSounds)()
     }, this._handleOpenEducationModal = (e, t) => {
       if (null == e) return;
-      let i = o.default.getChannel(t),
+      let l = o.default.getChannel(t),
         u = c.default.getKeybindForAction(m.GlobalKeybindActions.SOUNDBOARD_HOLD);
-      null != i && (0, _.default)(i) && null != u && r.default.hasHotspot(l.HotspotLocations.SOUNDBOARD_WHEEL_EDUCATION_MODAL) && (0, s.openModalLazy)(async () => {
+      null != l && (0, _.default)(l) && null != u && r.default.hasHotspot(i.HotspotLocations.SOUNDBOARD_WHEEL_EDUCATION_MODAL) && (0, s.openModalLazy)(async () => {
         let {
           default: t
         } = await n.el("170441").then(n.bind(n, "170441"));
@@ -68,7 +68,7 @@ class T extends f.default {
           ...n,
           guildId: e,
           keybind: u,
-          channel: i
+          channel: l
         })
       })
     }

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("15542"),
   o = n("458960"),
   u = n("355262"),
@@ -18,7 +18,7 @@ var a = n("37983"),
     let {
       userId: t,
       children: n,
-      isLast: i,
+      isLast: l,
       className: E
     } = e, [h, _] = s.useState(!1), C = s.useCallback(() => {
       (0, d.openUserProfileModal)({
@@ -43,8 +43,8 @@ var a = n("37983"),
           style: {
             opacity: 1
           },
-          className: l(f.rowItem, E, {
-            [f.last]: i,
+          className: i(f.rowItem, E, {
+            [f.last]: l,
             [f.active]: h
           }),
           onMouseEnter: I,

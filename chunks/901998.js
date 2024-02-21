@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
     return L
   }
 }), n("222007");
-var i = n("917351"),
-  l = n.n(i),
+var l = n("917351"),
+  i = n.n(l),
   r = n("446674"),
   o = n("95410"),
   u = n("913144"),
@@ -95,16 +95,16 @@ var L = new v(u.default, {
       id: t,
       allow: n,
       deny: s
-    } = e, i = null == S ? void 0 : S[t];
-    if (null == i || null == p) return !1;
-    i = {
-      ...i,
+    } = e, l = null == S ? void 0 : S[t];
+    if (null == l || null == p) return !1;
+    l = {
+      ...l,
       allow: n,
       deny: s
     }, S = {
       ...S,
-      [t]: i
-    }, _.add(t), C = E.FormStates.OPEN, I = !l.isEqual(S, m), a = d.default.areChannelsLocked(p, T)
+      [t]: l
+    }, _.add(t), C = E.FormStates.OPEN, I = !i.isEqual(S, m), a = d.default.areChannelsLocked(p, T)
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {
     let {

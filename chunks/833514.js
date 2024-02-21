@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("884691"),
   s = n("446674"),
-  i = n("151426"),
-  l = n("384997"),
+  l = n("151426"),
+  i = n("384997"),
   r = n("697218"),
   o = n("158998"),
   u = n("543557"),
@@ -31,14 +31,14 @@ var a = n("884691"),
         if ((0, o.ageEligibleForPremiumUpsell)(e)) {
           if (t) switch (n) {
             case c.CollectiblesMarketingVariant.TOOLTIP:
-              return [i.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP];
+              return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP];
             case c.CollectiblesMarketingVariant.COACHTIP:
-              return [i.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]
-          } else if (E) return [i.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]
+              return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]
+          } else if (E) return [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]
         }
         return []
       }, [E, t, n, e]),
-      [_, C] = (0, l.useSelectedDismissibleContent)(h, void 0, !0),
+      [_, C] = (0, i.useSelectedDismissibleContent)(h, void 0, !0),
       I = null != _ ? c.CollectiblesDCToDisplayOptions[_] : null;
     return {
       collectiblesShopTabNewBadgeDisplayOptions: I,

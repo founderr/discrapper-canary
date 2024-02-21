@@ -14,8 +14,8 @@ var a = l("77078"),
   i = l("248900"),
   o = l("385752"),
   c = l("222971"),
-  E = l("601131"),
-  f = l("876725"),
+  f = l("601131"),
+  E = l("876725"),
   _ = l("367989"),
   T = l("891603"),
   M = l("510692"),
@@ -47,7 +47,7 @@ function g(e) {
     channel: g,
     recurrenceId: l,
     isRecurrenceItem: R
-  }), h = (0, E.default)(t, m, g), p = (0, M.default)(t, m, g), x = (0, i.default)(t, m.id, l), L = (0, f.default)(t), b = (0, d.default)({
+  }), h = (0, f.default)(t, m, g), p = (0, M.default)(t, m, g), x = (0, i.default)(t, m.id, l), L = (0, E.default)(t), b = (0, d.default)({
     id: t,
     label: I.default.Messages.COPY_ID_EVENT
   }), A = (0, d.default)({

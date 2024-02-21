@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("913144"),
   s = n("629109"),
-  i = n("539405"),
-  l = n("987317"),
+  l = n("539405"),
+  i = n("987317"),
   r = n("990766"),
   o = n("52289"),
   u = n("316272"),
@@ -97,7 +97,7 @@ let O = {
   [N.GlobalKeybindActions.TOGGLE_OVERLAY]: {
     onTrigger() {
       let e = p.default.enabled;
-      i.default.setEnabled(!e)
+      l.default.setEnabled(!e)
     },
     keyEvents: {
       keyup: !0,
@@ -107,7 +107,7 @@ let O = {
   [N.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK]: {
     onTrigger(e) {
       let t = (0, A.default)();
-      null != t && (e ? i.default.setUILocked(!T.default.isUILocked(t), t) : i.default.setInputLocked(!p.default.isInputLocked(t), t))
+      null != t && (e ? l.default.setUILocked(!T.default.isUILocked(t), t) : l.default.setInputLocked(!p.default.isInputLocked(t), t))
     },
     keyEvents: {
       keyup: !0,
@@ -118,7 +118,7 @@ let O = {
     onTrigger() {
       let e = p.default.getFocusedPID(),
         t = null != e;
-      null != e && t && T.default.isPinned(N.OverlayWidgets.TEXT) && p.default.isReady(e) && p.default.isInputLocked(e) && i.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
+      null != e && t && T.default.isPinned(N.OverlayWidgets.TEXT) && p.default.isReady(e) && p.default.isInputLocked(e) && l.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
     },
     keyEvents: {
       keyup: !0,
@@ -205,7 +205,7 @@ let O = {
           channelId: n
         }
       } = t;
-      null != n && l.default.selectVoiceChannel(n)
+      null != n && i.default.selectVoiceChannel(n)
     },
     keyEvents: {
       keyup: !0,
@@ -216,7 +216,7 @@ let O = {
   },
   [N.GlobalKeybindActions.DISCONNECT_FROM_VOICE_CHANNEL]: {
     onTrigger() {
-      l.default.selectVoiceChannel(null)
+      i.default.selectVoiceChannel(null)
     },
     keyEvents: {
       keyup: !0,

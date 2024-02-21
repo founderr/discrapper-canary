@@ -16,15 +16,15 @@ n.r(t), n.d(t, {
     return N
   },
   fetchMemberSupplemental: function() {
-    return D
+    return v
   }
 }), n("424973");
 var s, i, a, l, r, u, d = n("872717"),
   o = n("819855"),
   c = n("841098"),
   h = n("376556"),
-  E = n("572943"),
-  f = n("49111"),
+  f = n("572943"),
+  E = n("49111"),
   I = n("782340");
 let _ = {};
 
@@ -85,7 +85,7 @@ let A = e => {
     }
   },
   N = e => {
-    let t = h.default.get((0, E.useLegacyPlatformType)(e)),
+    let t = h.default.get((0, f.useLegacyPlatformType)(e)),
       n = (0, c.default)();
     return null != t && ["twitch", "youtube"].includes(e) ? "url('".concat((0, o.isThemeDark)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
   };
@@ -99,14 +99,14 @@ function g(e) {
     integrationType: e.integration_type
   }
 }
-async function D(e, t) {
+async function v(e, t) {
   let n = T(e, t),
     s = n.filter(e => _[e] <= 1).map(M);
   if (0 === s.length) return [];
   p(n, 2);
   try {
     let t = await d.default.post({
-      url: f.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
+      url: E.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
       body: {
         user_ids: s
       }

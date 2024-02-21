@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("77078"),
   o = n("272030"),
   u = n("685665"),
@@ -36,7 +36,7 @@ let O = () => (0, a.jsx)("div", {
 var v = e => {
   var t;
   let {
-    guild: i,
+    guild: l,
     theme: O,
     onView: v,
     onTagClick: L
@@ -49,7 +49,7 @@ var v = e => {
     presenceCount: b,
     memberCount: U,
     keywords: G
-  } = i, [j, w] = s.useState(!1), [k, F] = s.useState(!1), {
+  } = l, [j, w] = s.useState(!1), [k, F] = s.useState(!1), {
     analyticsLocations: B
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: M,
@@ -86,7 +86,7 @@ var v = e => {
       }
       F(!0);
       try {
-        null != v && await v(i.id)
+        null != v && await v(l.id)
       } finally {
         F(!1)
       }
@@ -109,7 +109,7 @@ var v = e => {
         type: r.Spinner.Type.PULSING_ELLIPSIS,
         className: A.spinner
       }) : null, (0, a.jsxs)(r.Clickable, {
-        className: l(A.container, {
+        className: i(A.container, {
           [A.hover]: j,
           [A.submitting]: k
         }),
@@ -121,14 +121,14 @@ var v = e => {
             } = await n.el("392533").then(n.bind(n, "392533"));
             return t => (0, a.jsx)(e, {
               ...t,
-              guild: i
+              guild: l
             })
           })
         },
         onMouseEnter: () => w(!0),
         onMouseLeave: () => w(!1),
         children: [(0, a.jsx)("div", {
-          className: l(A.splashContainer, {
+          className: i(A.splashContainer, {
             [A.splashContainerWithTags]: K
           }),
           children: (0, a.jsx)("img", {
@@ -138,7 +138,7 @@ var v = e => {
             width: 240
           })
         }), (0, a.jsxs)("div", {
-          className: l(A.content, {
+          className: i(A.content, {
             [A.contentWithTags]: K
           }),
           children: [(0, a.jsxs)("div", {
@@ -156,7 +156,7 @@ var v = e => {
               className: A.headerName,
               children: [(0, a.jsx)("div", {
                 children: (0, a.jsx)(E.default, {
-                  guild: i,
+                  guild: l,
                   className: A.guildBadge,
                   size: 16
                 })
@@ -171,9 +171,9 @@ var v = e => {
             variant: "text-sm/normal",
             children: x
           }), K && null != G && null != L && (0, a.jsx)(m.DiscoveryTags, {
-            guildId: i.id,
+            guildId: l.id,
             discoveryTagStyle: m.DiscoveryTagStyle.ALT,
-            onTagClick: e => L(e, i.id),
+            onTagClick: e => L(e, l.id),
             tags: G,
             section: C.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
@@ -205,7 +205,7 @@ var v = e => {
         }), z ? (0, a.jsx)("div", {
           className: A.actionButtons,
           children: (0, a.jsx)(p.default, {
-            guild: i
+            guild: l
           })
         }) : null]
       })]

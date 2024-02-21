@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("819855"),
-  i = n("77078"),
-  l = n("841098"),
+  l = n("77078"),
+  i = n("841098"),
   r = n("449918"),
   o = n("451166"),
   u = n("45029"),
@@ -32,10 +32,10 @@ function C(e) {
   let {
     achievementId: n,
     unlocked: f,
-    size: C = i.AvatarSizes.SIZE_40
-  } = e, I = (0, l.default)(), S = (0, c.getPoggermodeAchievementData)(n);
+    size: C = l.AvatarSizes.SIZE_40
+  } = e, I = (0, i.default)(), S = (0, c.getPoggermodeAchievementData)(n);
   if (null == S) return null;
-  let m = (0, i.getAvatarSpecs)(C),
+  let m = (0, l.getAvatarSpecs)(C),
     {
       name: p,
       rarity: T
@@ -89,4 +89,4 @@ function C(e) {
     })]
   })
 }
-C.Sizes = i.AvatarSizes
+C.Sizes = l.AvatarSizes

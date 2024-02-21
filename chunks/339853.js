@@ -9,13 +9,13 @@ n.r(t), n.d(t, {
 });
 var a = n("65597"),
   s = n("697218"),
-  i = n("822825"),
-  l = n("775032");
+  l = n("822825"),
+  i = n("775032");
 let r = () => {
-    let e = (0, l.default)();
-    return (0, a.default)([i.default, s.default], () => {
+    let e = (0, i.default)();
+    return (0, a.default)([l.default, s.default], () => {
       if (!e) return s.default.getCurrentUser();
-      let t = i.default.getSelectedTeenId();
+      let t = l.default.getSelectedTeenId();
       if (null !== t) return s.default.getUser(t)
     })
   },

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("702976");
 var a = n("872717"),
   s = n("84460"),
-  i = n("299285"),
-  l = n("167726"),
+  l = n("299285"),
+  i = n("167726"),
   r = n("599110"),
   o = n("568734"),
   u = n("861309"),
@@ -32,20 +32,20 @@ var a = n("872717"),
           }
         } = e;
         (0, d.validatePostMessageTransport)(n.transport), (0, d.validateApplication)(n.application);
-        let l = n.application.id,
+        let i = n.application.id,
           c = (0, f.default)(),
           E = null == c ? void 0 : c.getGuildId();
         if (null == c) throw new u.default({
           errorCode: h.RPCErrors.INVALID_COMMAND
         }, "Invalid channel");
-        let _ = i.default.getApplication(l),
+        let _ = l.default.getApplication(i),
           C = (0, o.hasFlag)(null !== (t = null == _ ? void 0 : _.flags) && void 0 !== t ? t : 0, h.ApplicationFlags.EMBEDDED_FIRST_PARTY);
         if (!C) throw new u.default({
           errorCode: h.RPCErrors.INVALID_COMMAND
         }, "This application cannot access this API");
         r.default.track(a, {
           ...s,
-          activity_application_id: l,
+          activity_application_id: i,
           activity_guild_id: E
         })
       }
@@ -62,7 +62,7 @@ var a = n("872717"),
         return a.default.post({
           url: h.Endpoints.APPLICATION_TICKET(n),
           body: {
-            test_mode: l.default.inTestModeForApplication(n) || s.default.inDevModeForApplication(n)
+            test_mode: i.default.inTestModeForApplication(n) || s.default.inDevModeForApplication(n)
           },
           retries: 3,
           oldFormErrors: !0

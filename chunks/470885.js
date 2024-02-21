@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("913144"),
-  i = n("600965"),
-  l = n("316272"),
+  l = n("600965"),
+  i = n("316272"),
   r = n("191225"),
   o = n("292687"),
   u = n("373469"),
@@ -26,7 +26,7 @@ function p() {
   var e;
   let t = a;
   if (null == t || !E.default.isOpen(t)) return !1;
-  s.default.wait(() => i.close(t)), null === (e = h.default.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), a = null
+  s.default.wait(() => l.close(t)), null === (e = h.default.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), a = null
 }
 
 function T() {
@@ -40,29 +40,29 @@ function T() {
     let a = o.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
     if (a) return !0;
     let s = u.default.getAllActiveStreams().length > 0,
-      i = null != e && Object.values(I.default.getVideoVoiceStatesForChannel(e)).some(e => {
+      l = null != e && Object.values(I.default.getVideoVoiceStatesForChannel(e)).some(e => {
         let {
           userId: t
         } = e;
         return !f.default.isLocalVideoDisabled(t)
       });
-    if (!(i || s)) return !0;
-    let l = c.default.hasLayers(),
-      r = l && c.default.getLayers().includes(S.Layers.RTC_DEBUG);
+    if (!(l || s)) return !0;
+    let i = c.default.hasLayers(),
+      r = i && c.default.getLayers().includes(S.Layers.RTC_DEBUG);
     if (r) return !1;
-    if (l) return !0;
+    if (i) return !0;
     let d = e === t;
     return !!d || !1
   }() ? p() : (!t && p(), null != e && function(e) {
     var t;
     let n = d.default.getChannel(e);
     if (null == n || E.default.isOpen(e)) return !1;
-    s.default.wait(() => i.open(n.id, S.PictureInPictureComponents.VIDEO, {
+    s.default.wait(() => l.open(n.id, S.PictureInPictureComponents.VIDEO, {
       channel: n
     })), null === (t = h.default.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), a = e
   }(e))
 }
-class g extends l.default {
+class g extends i.default {
   _initialize() {
     _.default.addChangeListener(T), C.default.addChangeListener(T), h.default.addChangeListener(T), I.default.addChangeListener(T), c.default.addChangeListener(T), u.default.addChangeListener(T), o.default.addChangeListener(T), f.default.addChangeListener(T), r.default.addChangeListener(T)
   }

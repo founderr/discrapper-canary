@@ -29,16 +29,16 @@ let d = Object.freeze({
       selectable: o = !1,
       children: c,
       color: h,
-      onClick: E,
-      onContextMenu: f,
+      onClick: f,
+      onContextMenu: E,
       style: I,
       title: _,
       uppercase: m
     } = e;
     return (0, s.jsx)(l.H, {
-      role: null != E ? "button" : void 0,
-      onClick: E,
-      onContextMenu: f,
+      role: null != f ? "button" : void 0,
+      onClick: f,
+      onContextMenu: E,
       id: t,
       className: a(i, {
         [r.base]: !0,

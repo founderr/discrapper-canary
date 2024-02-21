@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("913144"),
-  l = n("316272"),
+  l = n("913144"),
+  i = n("316272"),
   r = n("575365"),
   o = n("299285"),
   u = n("824563"),
@@ -20,7 +20,7 @@ var s = n("77078"),
   _ = n("450484");
 let C = null;
 async function I(e) {
-  var t, i, l, I;
+  var t, l, i, I;
   let S, m, p, {
       userId: T,
       section: g,
@@ -56,9 +56,9 @@ async function I(e) {
     guild_id: A !== h.ME ? A : null,
     channel_id: N,
     other_user_id: T,
-    application_id: null !== (i = null == P ? void 0 : P.application_id) && void 0 !== i ? i : null,
+    application_id: null !== (l = null == P ? void 0 : P.application_id) && void 0 !== l ? l : null,
     application_name: null == P ? void 0 : P.name,
-    sku_id: null !== (l = null == p ? void 0 : p.primarySkuId) && void 0 !== l ? l : null,
+    sku_id: null !== (i = null == p ? void 0 : p.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(T),
     has_images: !!(null !== (I = null == m ? void 0 : m.large_image) && void 0 !== I ? I : null == m ? void 0 : m.small_image),
     party_max: null == S ? void 0 : null === (t = S.size) || void 0 === t ? void 0 : t[1],
@@ -75,12 +75,12 @@ async function I(e) {
 function S() {
   null != C && (0, s.closeModal)(C), C = null
 }
-class m extends l.default {
+class m extends i.default {
   _initialize() {
-    i.default.subscribe("USER_PROFILE_MODAL_OPEN", I), i.default.subscribe("USER_PROFILE_MODAL_CLOSE", S)
+    l.default.subscribe("USER_PROFILE_MODAL_OPEN", I), l.default.subscribe("USER_PROFILE_MODAL_CLOSE", S)
   }
   _terminate() {
-    i.default.unsubscribe("USER_PROFILE_MODAL_OPEN", I), i.default.unsubscribe("USER_PROFILE_MODAL_CLOSE", S)
+    l.default.unsubscribe("USER_PROFILE_MODAL_OPEN", I), l.default.unsubscribe("USER_PROFILE_MODAL_CLOSE", S)
   }
 }
 var p = new m

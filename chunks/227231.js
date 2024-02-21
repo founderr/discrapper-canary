@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return S
   },
   getHeroStaticAssetUrl: function() {
-    return f
+    return _
   },
   getHeroAnimatedAssetUrl: function() {
-    return _
+    return f
   },
   getQuestBarStaticHeroAssetUrl: function() {
     return T
@@ -135,8 +135,8 @@ function E(e) {
   }
 }
 let S = e => "".concat(l).concat(e).concat("/reward.png"),
-  f = e => "".concat(l).concat(e).concat("/hero.png"),
-  _ = e => "".concat(l).concat(e).concat("/hero.webm"),
+  _ = e => "".concat(l).concat(e).concat("/hero.png"),
+  f = e => "".concat(l).concat(e).concat("/hero.webm"),
   T = e => "".concat(l).concat(e).concat("/quests_bar_hero.png"),
   C = e => "".concat(l).concat(e).concat("/quests_bar_hero.webm"),
   p = e => "".concat(l).concat(e).concat("/game_tile.png"),

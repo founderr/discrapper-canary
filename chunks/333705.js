@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("446674"),
-  i = n("987317"),
-  l = n("990766"),
+  l = n("987317"),
+  i = n("990766"),
   r = n("309570"),
   o = n("152311"),
   u = n("429928"),
@@ -46,13 +46,13 @@ function T(e) {
       P.push(e);
       return
     }
-    let i = P[s - 1],
-      l = "".concat(null !== (t = null == e ? void 0 : e.key) && void 0 !== t ? t : ""),
-      r = "".concat(null !== (n = null == i ? void 0 : i.key) && void 0 !== n ? n : ""),
-      o = r.startsWith("game") && l.startsWith("rich-presence");
+    let l = P[s - 1],
+      i = "".concat(null !== (t = null == e ? void 0 : e.key) && void 0 !== t ? t : ""),
+      r = "".concat(null !== (n = null == l ? void 0 : l.key) && void 0 !== n ? n : ""),
+      o = r.startsWith("game") && i.startsWith("rich-presence");
     P.push((0, a.jsx)(S.default.Separator, {
       inset: o
-    }, "sep-".concat(l))), P.push(e)
+    }, "sep-".concat(i))), P.push(e)
   };
   for (let {
       activity: e
@@ -61,10 +61,10 @@ function T(e) {
       let {
         members: t,
         channel: s,
-        guild: i
+        guild: l
       } = e;
       D((0, a.jsx)(S.default.VoiceSection, {
-        guild: i,
+        guild: l,
         channel: s,
         members: t,
         partySize: function(e, t) {
@@ -83,7 +83,7 @@ function T(e) {
         }(t),
         onChannelContextMenu: n,
         onGuildClick: () => {
-          (0, _.transitionToGuild)(i.id)
+          (0, _.transitionToGuild)(l.id)
         }
       }, "voice-".concat(s.id)))
     }), t.currentActivities))
@@ -105,11 +105,11 @@ function T(e) {
       activity: s,
       applicationStream: t,
       onPreviewClick: () => {
-        i.default.selectVoiceChannel(t.channelId), (0, l.watchStreamAndTransitionToStream)(t)
+        l.default.selectVoiceChannel(t.channelId), (0, i.watchStreamAndTransitionToStream)(t)
       }
     }, "application-stream-".concat(t.ownerId)))
   }), R.forEach((e, n) => {
-    var s, i, l, f, _, I, v, P, y;
+    var s, l, i, f, _, I, v, P, y;
     let {
       activity: x,
       game: b,
@@ -126,10 +126,10 @@ function T(e) {
         totalSize: U.length
       },
       members: U
-    }, "game-".concat(null !== (s = x.session_id) && void 0 !== s ? s : n, "-").concat(null !== (i = x.application_id) && void 0 !== i ? i : n)));
+    }, "game-".concat(null !== (s = x.session_id) && void 0 !== s ? s : n, "-").concat(null !== (l = x.application_id) && void 0 !== l ? l : n)));
     else if ((0, o.default)(x)) {
       let e = new Set(U.map(e => e.id)),
-        t = null === (l = N.find(e => null != e)) || void 0 === l ? void 0 : l.channel;
+        t = null === (i = N.find(e => null != e)) || void 0 === i ? void 0 : i.channel;
       null != t && D((0, a.jsx)(S.default.EmbeddedActivitySection, {
         activity: x,
         participants: e,

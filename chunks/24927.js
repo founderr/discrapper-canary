@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("458960"),
   o = n("974667"),
   u = n("77078"),
@@ -17,7 +17,7 @@ var a = n("37983"),
   E = function(e) {
     let {
       index: t,
-      children: i,
+      children: l,
       user: E,
       channel: h,
       onClick: _,
@@ -52,7 +52,7 @@ var a = n("37983"),
           right: -8
         },
         children: (0, a.jsx)(r.default.div, {
-          className: l(f.messageRequestItem, m, {
+          className: i(f.messageRequestItem, m, {
             [f.active]: I || g,
             [f.firstItem]: 0 === t
           }),
@@ -65,7 +65,7 @@ var a = n("37983"),
             opacity: 1
           },
           ...e,
-          children: i(p || I || g)
+          children: l(p || I || g)
         })
       })
     })

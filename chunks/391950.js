@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("446674"),
-  l = n("77078"),
+  l = n("446674"),
+  i = n("77078"),
   r = n("987317"),
   o = n("716241"),
   u = n("239380"),
@@ -20,8 +20,8 @@ var a = n("37983"),
 function _(e) {
   let t = s.useContext(f.AnalyticsContext),
     n = e.voiceChannels[0],
-    _ = (0, i.useStateFromStores)([d.default], () => null != n && d.default.can(E.Permissions.CONNECT, n.channel));
-  return null == n ? null : [(0, a.jsx)(l.MenuItem, {
+    _ = (0, l.useStateFromStores)([d.default], () => null != n && d.default.can(E.Permissions.CONNECT, n.channel));
+  return null == n ? null : [(0, a.jsx)(i.MenuItem, {
     id: "join-voice",
     action: function() {
       (0, u.transitionToGuild)(n.guild.id), r.default.selectVoiceChannel(n.channel.id), o.default.trackWithMetadata(E.AnalyticEvents.ACTIVITY_FEED_VOICE_CHANNEL_VISITED, {
@@ -36,7 +36,7 @@ function _(e) {
     },
     label: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_JOIN_CHANNEL,
     disabled: !_
-  }, "join-voice"), (0, a.jsx)(l.MenuItem, {
+  }, "join-voice"), (0, a.jsx)(i.MenuItem, {
     id: "goto-server",
     action: function() {
       (0, u.transitionToGuild)(n.guild.id), o.default.trackWithMetadata(E.AnalyticEvents.ACTIVITY_FEED_GUILD_VISITED, {
