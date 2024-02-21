@@ -102,6 +102,7 @@ function x(e) {
         })]
       });
     case d.QuestContent.ACTIVITY_PANEL:
+    case d.QuestContent.QUESTS_EMBED:
       return (0, a.jsx)("ul", {
         className: f.targetList,
         children: (0, a.jsx)(S, {

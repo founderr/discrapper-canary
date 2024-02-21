@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return S
   }
 });
 var s = n("37983"),
@@ -19,68 +19,67 @@ var s = n("37983"),
   T = n("588025"),
   I = n("227231"),
   m = n("45198"),
-  N = n("843455"),
-  p = n("782340"),
-  S = n("444092"),
-  A = e => {
+  N = n("782340"),
+  p = n("444092"),
+  S = e => {
     let {
       isFocused: t,
       quest: a,
-      location: A
-    } = e, C = (0, r.useStateFromStores)([c.default], () => c.default.locale), h = (0, r.useStateFromStores)([E.default], () => E.default.getState().theme), g = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), M = l.useMemo(() => a.config.videoAssets.includes(A), [a, A]), O = l.useRef(null), R = new Date(a.config.expiresAt).toLocaleDateString(C, {
+      location: S
+    } = e, A = (0, r.useStateFromStores)([c.default], () => c.default.locale), C = (0, r.useStateFromStores)([E.default], () => E.default.getState().theme), h = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), g = l.useMemo(() => a.config.videoAssets.includes(S), [a, S]), M = l.useRef(null), O = new Date(a.config.expiresAt).toLocaleDateString(A, {
       year: "numeric",
       month: "long",
       day: "numeric"
     });
     return l.useEffect(() => {
-      null != O.current && (t ? O.current.play() : (O.current.pause(), O.current.currentTime = 0))
+      null != M.current && (t ? M.current.play() : (M.current.pause(), M.current.currentTime = 0))
     }, [t]), (0, s.jsxs)("div", {
-      className: i(S.outerContainer, {
-        [S.outerContainerGiftInventory]: A === T.QuestContent.QUEST_INVENTORY_CARD,
-        [S.outerContainerEmbed]: A === T.QuestContent.QUESTS_EMBED
+      className: i(p.outerContainer, {
+        [p.outerContainerGiftInventory]: S === T.QuestContent.QUEST_INVENTORY_CARD,
+        [p.outerContainerEmbed]: S === T.QuestContent.QUESTS_EMBED
       }),
       children: [(0, s.jsx)(_.default, {
         autoPlay: !1,
         loop: !1,
         muted: !0,
         playsInline: !0,
-        className: S.questSplash,
+        className: p.questSplash,
         controls: !1,
         poster: (0, I.getHeroStaticAssetUrl)(a.id),
-        ref: O,
-        children: !g && M && (0, s.jsx)("source", {
+        ref: M,
+        children: !h && g && (0, s.jsx)("source", {
           src: (0, I.getHeroAnimatedAssetUrl)(a.id),
           type: "video/webm"
         })
       }), (0, s.jsxs)("div", {
-        className: S.header,
+        className: p.header,
         children: [(0, s.jsxs)("div", {
-          className: S.headerContent,
+          className: p.headerContent,
           children: [(0, s.jsxs)("div", {
-            className: S.iconLogotypeContainer,
+            className: p.iconLogotypeContainer,
             children: [(0, s.jsx)("img", {
               src: (0, I.getGameTileAssetUrl)(a.id),
               alt: "",
-              className: S.questIcon
+              className: p.questIcon
             }), (0, s.jsx)("img", {
-              src: (0, I.getGameLogotypeAssetUrl)(a.id, h),
+              src: (0, I.getGameLogotypeAssetUrl)(a.id, C),
               alt: "",
-              className: S.questLogotype
+              className: p.questLogotype
             }), (0, s.jsx)(m.default, {})]
           }), (0, s.jsxs)("div", {
-            className: S.questInfo,
+            className: p.questInfo,
             children: [(0, s.jsx)(o.Heading, {
               variant: "heading-xxl/bold",
               children: a.config.messages.questName
             }), (0, s.jsx)(o.Text, {
               variant: "text-xs/normal",
-              children: p.default.Messages.QUESTS_AVAILABLE_THROUGH.format({
-                date: R
+              children: N.default.Messages.QUESTS_AVAILABLE_THROUGH.format({
+                date: O
               })
             })]
           })]
         }), (0, s.jsx)(o.Clickable, {
-          className: S.submenuWrapper,
+          className: p.submenuWrapper,
           onClick: e => {
             (0, u.openContextMenuLazy)(e, async () => {
               let {
@@ -90,8 +89,7 @@ var s = n("37983"),
                 var n;
                 return (0, s.jsx)(e, {
                   ...t,
-                  onClose: N.NOOP,
-                  questContent: T.QuestContent.QUEST_INVENTORY_CARD,
+                  questContent: S,
                   quest: a,
                   shouldShowDisclosure: (null === (n = a.userStatus) || void 0 === n ? void 0 : n.enrolledAt) == null
                 })
@@ -99,7 +97,7 @@ var s = n("37983"),
             })
           },
           children: (0, s.jsx)(f.default, {
-            className: S.submenuIcon
+            className: p.submenuIcon
           })
         })]
       })]

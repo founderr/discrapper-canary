@@ -31,25 +31,28 @@ n.r(t), n.d(t, {
     return p
   },
   getGameLogotypeAssetUrl: function() {
+    return A
+  },
+  getQuestUrl: function() {
     return g
   },
   getQuestForTargetedContent: function() {
-    return A
-  },
-  getPlatformString: function() {
     return h
   },
-  calculatePercentComplete: function() {
+  getPlatformString: function() {
     return I
   },
-  getContextualEntrypointHeading: function() {
+  calculatePercentComplete: function() {
     return m
   },
-  isDismissible: function() {
+  getContextualEntrypointHeading: function() {
     return R
   },
-  isDismissed: function() {
+  isDismissible: function() {
     return N
+  },
+  isDismissed: function() {
+    return U
   }
 }), n("222007");
 var s = n("568734"),
@@ -137,14 +140,15 @@ let S = e => "".concat(l).concat(e).concat("/reward.png"),
   T = e => "".concat(l).concat(e).concat("/quests_bar_hero.png"),
   C = e => "".concat(l).concat(e).concat("/quests_bar_hero.webm"),
   p = e => "".concat(l).concat(e).concat("/game_tile.png"),
-  g = (e, t) => "".concat(l).concat(e, "/").concat(t).concat("/game_logotype.png");
+  A = (e, t) => "".concat(l).concat(e, "/").concat(t).concat("/game_logotype.png"),
+  g = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
-function A(e, t) {
+function h(e, t) {
   for (let [n, s] of e)
     if (!o(s) && s.targetedContent.includes(t)) return s;
   return null
 }
-let h = e => {
+let I = e => {
   switch (e) {
     case i.QuestRewardCodePlatforms.XBOX:
       return a.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -159,7 +163,7 @@ let h = e => {
   }
 };
 
-function I(e) {
+function m(e) {
   if (null == e.userStatus) return 0;
   let {
     streamProgressSeconds: t,
@@ -172,11 +176,11 @@ function I(e) {
   return Math.min(t / 60 / s, 1)
 }
 
-function m(e) {
+function R(e) {
   var t, n;
   if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return a.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
   if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
-    let t = I(e);
+    let t = m(e);
     return t >= .75 ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE : t >= .45 && t <= .55 ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY : t > 0 ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED : a.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
   }
   return a.default.Messages.QUESTS_TITLE.format({
@@ -184,10 +188,10 @@ function m(e) {
   })
 }
 
-function R(e) {
+function N(e) {
   return e in r.DismissibleQuestContentFlags
 }
 
-function N(e, t) {
+function U(e, t) {
   return (0, s.hasFlag)(e.dismissedQuestContent, r.DismissibleQuestContentFlags[t])
 }
