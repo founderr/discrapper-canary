@@ -26,13 +26,14 @@ var l = n("37983"),
 function I(e) {
   let {
     channelId: t,
-    ...n
-  } = e, s = a.useRef(null), I = (0, o.useStateFromStores)([E.default], () => E.default.getFocusedLayout() === S.FocusedActivityLayouts.RESIZABLE), T = a.useCallback(() => {
-    let e = I ? S.FocusedActivityLayouts.NO_CHAT : S.FocusedActivityLayouts.RESIZABLE;
+    className: n,
+    ...s
+  } = e, I = a.useRef(null), T = (0, o.useStateFromStores)([E.default], () => E.default.getFocusedLayout() === S.FocusedActivityLayouts.RESIZABLE), v = a.useCallback(() => {
+    let e = T ? S.FocusedActivityLayouts.NO_CHAT : S.FocusedActivityLayouts.RESIZABLE;
     (0, p.updateFocusedActivityLayout)(e)
-  }, [I]), {
-    unreadCount: v,
-    mentionCount: x
+  }, [T]), {
+    unreadCount: x,
+    mentionCount: N
   } = function(e) {
     let t = (0, o.useStateFromStores)([f.default], () => !(0, r.isEmpty)(f.default.getTypingUsers(e)), [e]),
       {
@@ -47,37 +48,37 @@ function I(e) {
       mentionCount: l,
       isTyping: t
     }
-  }(t), N = a.useCallback(() => {
+  }(t), A = a.useCallback(() => {
     var e;
-    null === (e = s.current) || void 0 === e || e.focus()
+    null === (e = I.current) || void 0 === e || e.focus()
   }, []);
   (0, m.useComponentAction)({
     event: g.ComponentActions.FOCUS_CHAT_BUTTON,
-    handler: N
+    handler: A
   });
-  let A = I ? C.default.Messages.HIDE_CHAT : C.default.Messages.SHOW_CHAT,
-    M = [A];
-  x > 0 && M.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
-    mentionCount: x
-  })), v > 0 && M.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
-  let R = (0, o.useStateFromStores)([E.default], () => E.default.getFocusedLayout()),
-    j = x > 0 ? x : v,
-    L = j > 0;
+  let M = T ? C.default.Messages.HIDE_CHAT : C.default.Messages.SHOW_CHAT,
+    R = [M];
+  N > 0 && R.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+    mentionCount: N
+  })), x > 0 && R.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+  let j = (0, o.useStateFromStores)([E.default], () => E.default.getFocusedLayout()),
+    L = N > 0 ? N : x,
+    y = L > 0;
   return (0, l.jsxs)("div", {
     className: _.wrapper,
     children: [(0, l.jsx)(d.default, {
-      buttonRef: s,
-      onClick: T,
-      label: A,
-      "aria-label": M.join(", "),
+      buttonRef: I,
+      onClick: v,
+      label: M,
+      "aria-label": R.join(", "),
       tooltipPosition: "top",
       iconComponent: h.default,
       themeable: !0,
-      className: i(_.circularButton, R === S.FocusedActivityLayouts.NO_CHAT ? _.upArrow : _.downArrow),
-      ...n
-    }), L ? (0, l.jsx)(u.default, {
-      hasMentions: x > 0,
-      truncatedCount: j > 99 ? "99+" : j,
+      className: i(n, _.circularButton, j === S.FocusedActivityLayouts.NO_CHAT ? _.upArrow : _.downArrow),
+      ...s
+    }), y ? (0, l.jsx)(u.default, {
+      hasMentions: N > 0,
+      truncatedCount: L > 99 ? "99+" : L,
       className: _.badge
     }) : null]
   })

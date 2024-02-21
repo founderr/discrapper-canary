@@ -118,6 +118,7 @@ function O(e) {
         }), (0, l.jsxs)("div", {
           className: L.footerButtons,
           children: [(0, l.jsx)(A.default, {
+            className: L.circularButton,
             channelId: et
           }), (0, l.jsx)("div", {
             className: L.leaveButtonContainer,
