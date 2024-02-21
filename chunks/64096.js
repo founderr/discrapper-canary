@@ -18,8 +18,8 @@ var a, s, l = n("871388"),
   h = n("407535"),
   C = n("824326"),
   p = n("616225"),
-  E = n("777987"),
-  m = n("82636"),
+  m = n("777987"),
+  E = n("82636"),
   g = n("12724"),
   S = n("654276"),
   _ = n("49111"),
@@ -33,8 +33,8 @@ function A(e) {
     canUseApplicationCommands: s,
     hasClips: A,
     channel: M,
-    activities: N,
-    newClipsCount: I,
+    activities: I,
+    newClipsCount: N,
     canPostPolls: v,
     canLaunchActivities: L,
     appContext: R
@@ -51,7 +51,7 @@ function A(e) {
     type: "CLIPS",
     icon: c.default,
     display: T.default.Messages.CLIPS_SHARE_A_CLIP,
-    badgeVal: I,
+    badgeVal: N,
     badgeColor: r.default.BG_BRAND
   }), n && x.push({
     type: "CREATE_THREAD",
@@ -59,7 +59,7 @@ function A(e) {
     display: T.default.Messages.CREATE_THREAD
   }), v && x.push({
     type: "POLL",
-    icon: E.default,
+    icon: m.default,
     display: T.default.Messages.CREATE_POLL
   }), a && s && x.push({
     type: "SLASH_COMMAND",
@@ -67,9 +67,9 @@ function A(e) {
     display: T.default.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
   }), L && x.push({
     type: "ACTIVITY",
-    icon: m.default,
+    icon: E.default,
     display: T.default.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL
-  }), N.forEach(e => {
+  }), I.forEach(e => {
     !(0, l.default)(e, _.ActivityFlags.EMBEDDED) && (e.type === _.ActivityTypes.PLAYING && (0, l.default)(e, _.ActivityFlags.JOIN) && x.push({
       type: "INVITE_TO_GAME",
       icon: C.default,

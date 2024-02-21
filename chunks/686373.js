@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("917351"),
   r = n.n(i),
-  u = n("446674"),
-  o = n("77078"),
+  o = n("446674"),
+  u = n("77078"),
   d = n("191225"),
   c = n("488464"),
   f = n("998716"),
@@ -21,9 +21,9 @@ var a = n("414456"),
   m = n("316133"),
   E = n("272339"),
   g = n("82636"),
-  I = n("368121"),
-  _ = n("228427"),
-  S = n("619911"),
+  S = n("368121"),
+  I = n("228427"),
+  _ = n("619911"),
   N = n("811305"),
   T = n("449008"),
   A = n("299039"),
@@ -48,11 +48,11 @@ function O(e, t) {
 
 function y() {
   var e, t;
-  let n = (0, u.useStateFromStoresArray)([L.default, C.default], () => A.default.keys(L.default.getFavoriteChannels()).map(e => C.default.getChannel(e)).filter(T.isNotNullish)),
+  let n = (0, o.useStateFromStoresArray)([L.default, C.default], () => A.default.keys(L.default.getFavoriteChannels()).map(e => C.default.getChannel(e)).filter(T.isNotNullish)),
     a = n.map(e => e.id),
     s = n.filter(e => e.type === v.ChannelTypes.GUILD_VOICE),
     i = n.filter(e => e.type === v.ChannelTypes.GUILD_STAGE_VOICE).map(e => e.id),
-    x = (0, u.useStateFromStoresArray)([m.default], () => r.flatMap(s, e => {
+    x = (0, o.useStateFromStoresArray)([m.default], () => r.flatMap(s, e => {
       let t = m.default.getVoiceStatesForChannel(e);
       return t.map(e => {
         let {
@@ -61,7 +61,7 @@ function y() {
         return t
       })
     }), [s]),
-    M = (0, u.useStateFromStoresArray)([c.default], () => r.flatMap(i, e => {
+    M = (0, o.useStateFromStoresArray)([c.default], () => r.flatMap(i, e => {
       let t = c.default.getMutableParticipants(e, f.StageChannelParticipantNamedIndex.SPEAKER);
       return t.filter(e => e.type === f.StageChannelParticipantTypes.VOICE).map(e => {
         let {
@@ -70,13 +70,13 @@ function y() {
         return t
       })
     })),
-    y = (0, u.useStateFromStores)([c.default], () => {
+    y = (0, o.useStateFromStores)([c.default], () => {
       let e = 0;
       for (let t of i) e += c.default.getParticipantCount(t, f.StageChannelParticipantNamedIndex.AUDIENCE);
       return e
     }),
-    D = (0, u.useStateFromStoresArray)([h.default], () => h.default.getAllApplicationStreams().filter(e => a.includes(e.channelId)).map(e => e.ownerId), [a]),
-    b = (0, u.useStateFromStoresArray)([d.default], () => {
+    D = (0, o.useStateFromStoresArray)([h.default], () => h.default.getAllApplicationStreams().filter(e => a.includes(e.channelId)).map(e => e.ownerId), [a]),
+    b = (0, o.useStateFromStoresArray)([d.default], () => {
       let e = d.default.getEmbeddedActivitiesByChannel(),
         t = [];
       for (let s of a) {
@@ -85,12 +85,12 @@ function y() {
       }
       return t
     }, [a]),
-    j = (0, u.useStateFromStoresArray)([p.default], () => b.map(e => p.default.getUser(e)), [b]),
-    G = (0, u.useStateFromStoresArray)([p.default], () => D.map(e => p.default.getUser(e)), [D]),
-    U = O(I.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
+    j = (0, o.useStateFromStoresArray)([p.default], () => b.map(e => p.default.getUser(e)), [b]),
+    G = (0, o.useStateFromStoresArray)([p.default], () => D.map(e => p.default.getUser(e)), [D]),
+    U = O(S.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
   let P = (e = M, t = y, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
-      children: [(0, l.jsx)(_.default, {
+      children: [(0, l.jsx)(I.default, {
         className: R.activityIcon
       }), (0, l.jsx)(N.default, {
         guildId: void 0,
@@ -101,7 +101,7 @@ function y() {
         children: [(0, l.jsx)(E.default, {
           width: 16,
           height: 16
-        }), (0, l.jsx)(o.Text, {
+        }), (0, l.jsx)(u.Text, {
           className: R.stageListenerCount,
           color: "text-normal",
           variant: "text-xs/medium",
@@ -109,7 +109,7 @@ function y() {
         })]
       })]
     })),
-    w = O(S.default, G.filter(e => null != e && !b.includes(e.id))),
+    w = O(_.default, G.filter(e => null != e && !b.includes(e.id))),
     F = O(g.default, j);
   return (0, l.jsxs)(l.Fragment, {
     children: [P, U, w, F]
@@ -134,7 +134,7 @@ function b(e) {
     onShow: n,
     children: a
   } = e;
-  return (0, l.jsx)(o.Tooltip, {
+  return (0, l.jsx)(u.Tooltip, {
     hideOnClick: !0,
     spacing: 20,
     position: "right",

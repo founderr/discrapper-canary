@@ -9,8 +9,8 @@ var a = n("446674"),
   s = n("913144"),
   i = n("794818");
 let r = null,
-  u = !1,
-  o = !1;
+  o = !1,
+  u = !1;
 class d extends a.default.Store {
   getRecommendedGuilds() {
     return r
@@ -19,21 +19,21 @@ class d extends a.default.Store {
     return l
   }
   isFetching() {
-    return u
+    return o
   }
   failed() {
-    return o
+    return u
   }
 }
 d.displayName = "GuildRecommendationsStore";
 var c = new d(s.default, {
   GUILD_RECOMMENDATION_FETCH: function() {
-    u = !0
+    o = !0
   },
   GUILD_RECOMMENDATION_FETCH_SUCCESS: function(e) {
-    r = e.recommendedGuilds.map(i.makeDiscoverableGuild), l = e.loadId, u = !1
+    r = e.recommendedGuilds.map(i.makeDiscoverableGuild), l = e.loadId, o = !1
   },
   GUILD_RECOMMENDATION_FETCH_FAILURE: function() {
-    o = !0, u = !1
+    u = !0, o = !1
   }
 })

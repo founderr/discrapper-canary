@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return C
   },
   isQuestsEmbed: function() {
-    return S
+    return I
   },
   getMaxEmbedMediaSize: function() {
-    return I
+    return S
   }
 }), n("222007"), n("702976"), n("424973");
 var s = n("917351"),
@@ -151,11 +151,11 @@ function C(e) {
   return e.type === l.MessageEmbedTypes.ARTICLE && null != e.url && (m.test(e.url) || g.test(e.url))
 }
 
-function S(e) {
+function I(e) {
   return e.type === l.MessageEmbedTypes.ARTICLE && null != e.url && null != (0, d.parseQuestsEmbedCode)(e.url)
 }
 
-function I(e, t, n) {
+function S(e, t, n) {
   var s;
   return null != t && null != n ? {
     maxMediaWidth: t,

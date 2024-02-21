@@ -23,11 +23,11 @@ var a = n("506838"),
   M = n("582415"),
   p = n("600798"),
   A = n("569808"),
-  I = n("9294"),
-  T = n("52393"),
+  T = n("9294"),
+  I = n("52393"),
   C = n("143291"),
-  D = n("379534"),
-  L = n("40566"),
+  L = n("379534"),
+  D = n("40566"),
   O = n("994918"),
   v = n("815297"),
   y = n("168730"),
@@ -51,8 +51,8 @@ var K = n("337543"),
   Y = n("957255"),
   j = n("824563"),
   J = n("660478"),
-  z = n("18494"),
-  X = n("162771"),
+  X = n("18494"),
+  z = n("162771"),
   q = n("401848"),
   Q = n("697218"),
   Z = n("599110"),
@@ -87,7 +87,7 @@ function e_(e) {
     location: l,
     suggested: s = null,
     overrideProperties: i = {}
-  } = e, r = (0, I.parseExtraDataFromInviteKey)(t), d = H.default.getChannel(n);
+  } = e, r = (0, T.parseExtraDataFromInviteKey)(t), d = H.default.getChannel(n);
   if (null != d) {
     let e = null;
     d.isMultiUserDM() ? e = ei.LoggingInviteTypes.GDM_INVITE : !d.isPrivate() && (e = ei.LoggingInviteTypes.SERVER_INVITE);
@@ -517,12 +517,12 @@ let eg = {
       let i = () => eh._sendMessage(e, t, l),
         r = C.LocalMessageBackgroundSendingExperiment.getCurrentConfig({
           location: "8e1e29_1"
-        }).enableBackgroundSending ? D.default.backgroundify(i, void 0) : i,
+        }).enableBackgroundSending ? L.default.backgroundify(i, void 0) : i,
         d = null !== (n = l.nonce) && void 0 !== n ? n : (0, v.createNonce)();
       return (l = {
         ...l,
         nonce: d
-      }, L.default.recordMessageSendAttempt(e, d), W.default.isReady(e)) ? r() : a && e !== er.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ? (ec.info("Waiting for channel ".concat(e, " to be ready before sending.")), new Promise((t, n) => {
+      }, D.default.recordMessageSendAttempt(e, d), W.default.isReady(e)) ? r() : a && e !== er.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ? (ec.info("Waiting for channel ".concat(e, " to be ready before sending.")), new Promise((t, n) => {
         W.default.whenReady(e, () => {
           ec.info("Channel ".concat(e, " is ready for sending now.")), r().then(t, n)
         })
@@ -546,7 +546,7 @@ let eg = {
       }
     },
     sendInvite: (e, t, n, a) => eh._sendMessage(e, {
-      content: (0, T.default)(t),
+      content: (0, I.default)(t),
       tts: !1,
       validNonShortcutEmojis: [],
       invalidEmojis: []
@@ -631,14 +631,14 @@ let eg = {
           location: m,
           suggestedInvite: S,
           stickerIds: M,
-          messageReference: I,
-          allowedMentions: T,
+          messageReference: T,
+          allowedMentions: I,
           poll: C
         } = n,
-        D = null !== (a = n.flags) && void 0 !== a ? a : 0,
+        L = null !== (a = n.flags) && void 0 !== a ? a : 0,
         [N, P] = (0, k.default)(d);
-      if (N && (d = P, D = (0, ee.addFlag)(D, ei.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === d && null == h && null == M && null == C) return Promise.reject(Error("not sending empty message"));
-      let B = null != I ? ei.MessageTypes.REPLY : ei.MessageTypes.DEFAULT,
+      if (N && (d = P, L = (0, ee.addFlag)(L, ei.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === d && null == h && null == M && null == C) return Promise.reject(Error("not sending empty message"));
+      let B = null != T ? ei.MessageTypes.REPLY : ei.MessageTypes.DEFAULT,
         F = null !== (s = n.nonce) && void 0 !== s ? s : (0, v.createNonce)();
       if (!1 !== n.eagerDispatch) {
         let t = (0, v.default)({
@@ -646,9 +646,9 @@ let eg = {
           content: d,
           tts: f,
           type: B,
-          messageReference: I,
-          allowedMentions: T,
-          flags: 0 !== D ? D : void 0,
+          messageReference: T,
+          allowedMentions: I,
+          flags: 0 !== L ? L : void 0,
           nonce: F,
           poll: (0, G.createPollServerDataFromCreateRequest)(C)
         });
@@ -669,9 +669,9 @@ let eg = {
           content: d,
           nonce: F,
           tts: f,
-          message_reference: I,
-          allowed_mentions: T,
-          flags: D
+          message_reference: T,
+          allowed_mentions: I,
+          flags: L
         }
       };
       if (null != h) {
@@ -699,7 +699,7 @@ let eg = {
               queueSize: i
             },
             poll: C
-          }), L.default.recordMessageSendApiResponse(F), r.default.dispatch({
+          }), D.default.recordMessageSendApiResponse(F), r.default.dispatch({
             type: "SLOWMODE_RESET_COOLDOWN",
             slowmodeType: q.SlowmodeType.SendMessage,
             channelId: e
@@ -747,8 +747,8 @@ let eg = {
               else if (t === _.CodedLinkType.APP_DIRECTORY_PROFILE) Z.default.track(ei.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, {
                 application_id: d,
                 device_platform: l.isMobile ? "mobile_web" : "desktop_web",
-                guild_id: X.default.getGuildId(),
-                channel_id: z.default.getChannelId()
+                guild_id: z.default.getGuildId(),
+                channel_id: X.default.getChannelId()
               });
               else if (t === _.CodedLinkType.ACTIVITY_BOOKMARK);
               else if (t === _.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);

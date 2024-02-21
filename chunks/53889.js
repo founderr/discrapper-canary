@@ -20,8 +20,8 @@ var a = n("37983"),
   h = n("715315"),
   C = n("778588"),
   p = n("471671"),
-  E = n("808072"),
-  m = n("807061"),
+  m = n("808072"),
+  E = n("807061"),
   g = n("826431"),
   S = n("612246"),
   _ = n("587335");
@@ -84,7 +84,7 @@ class T extends s.PureComponent {
       autoInvert: t,
       focused: n,
       origin: s
-    } = this.props, l = (0, m.getTutorialPopoutAttributes)(e);
+    } = this.props, l = (0, E.getTutorialPopoutAttributes)(e);
     if (null == l) return null;
     let {
       media: r,
@@ -92,7 +92,7 @@ class T extends s.PureComponent {
       isLongText: u,
       highPriority: d,
       spacing: c,
-      arrowAlignment: h = E.ArrowAlignments.TOP,
+      arrowAlignment: h = m.ArrowAlignments.TOP,
       popoutPosition: C
     } = l, {
       offsetX: p,
@@ -123,7 +123,7 @@ class T extends s.PureComponent {
         [_.highPriority]: d
       }
     }, M = this.getTutorialPopoutText();
-    return (0, a.jsx)(E.default, {
+    return (0, a.jsx)(m.default, {
       position: C,
       renderMedia: r,
       textAlign: o,

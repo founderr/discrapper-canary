@@ -12,8 +12,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("458960"),
-  u = n("446674"),
-  o = n("669491"),
+  o = n("446674"),
+  u = n("669491"),
   d = n("266491"),
   c = n("77078"),
   f = n("299285"),
@@ -23,58 +23,58 @@ var l = n("37983"),
   m = n("280174"),
   E = n("195812"),
   g = n("964889"),
-  I = n("318042"),
-  _ = n("49111"),
-  S = n("782340"),
+  S = n("318042"),
+  I = n("49111"),
+  _ = n("782340"),
   N = n("259893");
 let T = {
-  [_.LocalDispatchApplicationStates.INSTALLING]: {
-    [m.TimeUnits.NONE]: (e, t) => S.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
+  [I.LocalDispatchApplicationStates.INSTALLING]: {
+    [m.TimeUnits.NONE]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
       name: e
     }),
-    [m.TimeUnits.SECONDS]: (e, t) => S.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
+    [m.TimeUnits.SECONDS]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
       name: e,
       timeRemaining: t
     }),
-    [m.TimeUnits.MINUTES]: (e, t) => S.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
+    [m.TimeUnits.MINUTES]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
       name: e,
       timeRemaining: t
     }),
-    [m.TimeUnits.HOURS]: (e, t) => S.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
+    [m.TimeUnits.HOURS]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
       name: e,
       timeRemaining: t
     })
   },
-  [_.LocalDispatchApplicationStates.UPDATING]: {
-    [m.TimeUnits.NONE]: (e, t) => S.default.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({
+  [I.LocalDispatchApplicationStates.UPDATING]: {
+    [m.TimeUnits.NONE]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({
       name: e
     }),
-    [m.TimeUnits.SECONDS]: (e, t) => S.default.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_SECONDS.format({
+    [m.TimeUnits.SECONDS]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_SECONDS.format({
       name: e,
       timeRemaining: t
     }),
-    [m.TimeUnits.MINUTES]: (e, t) => S.default.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_MINUTES.format({
+    [m.TimeUnits.MINUTES]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_MINUTES.format({
       name: e,
       timeRemaining: t
     }),
-    [m.TimeUnits.HOURS]: (e, t) => S.default.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_HOURS.format({
+    [m.TimeUnits.HOURS]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_HOURS.format({
       name: e,
       timeRemaining: t
     })
   },
-  [_.LocalDispatchApplicationStates.REPAIRING]: {
-    [m.TimeUnits.NONE]: (e, t) => S.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
+  [I.LocalDispatchApplicationStates.REPAIRING]: {
+    [m.TimeUnits.NONE]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
       name: e
     }),
-    [m.TimeUnits.SECONDS]: (e, t) => S.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
+    [m.TimeUnits.SECONDS]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
       name: e,
       timeRemaining: t
     }),
-    [m.TimeUnits.MINUTES]: (e, t) => S.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
+    [m.TimeUnits.MINUTES]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
       name: e,
       timeRemaining: t
     }),
-    [m.TimeUnits.HOURS]: (e, t) => S.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
+    [m.TimeUnits.HOURS]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
       name: e,
       timeRemaining: t
     })
@@ -86,9 +86,9 @@ class A extends a.PureComponent {
       state: e,
       isPaused: t
     } = this.props;
-    if (e.type === _.LocalDispatchApplicationStates.UPDATING || e.type === _.LocalDispatchApplicationStates.REPAIRING || e.type === _.LocalDispatchApplicationStates.INSTALLING) {
-      if (t) return S.default.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
-      if (e.stage === _.DispatchApplicationStages.PATCHING || e.stage === _.DispatchApplicationStages.REPAIRING) return (0, l.jsx)(I.default, {
+    if (e.type === I.LocalDispatchApplicationStates.UPDATING || e.type === I.LocalDispatchApplicationStates.REPAIRING || e.type === I.LocalDispatchApplicationStates.INSTALLING) {
+      if (t) return _.default.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
+      if (e.stage === I.DispatchApplicationStages.PATCHING || e.stage === I.DispatchApplicationStages.REPAIRING) return (0, l.jsx)(S.default, {
         getHistoricalTotalBytes: C.default.getHistoricalTotalBytesWritten,
         updateInterval: 5e3,
         children: this.renderProgressBody
@@ -98,7 +98,7 @@ class A extends a.PureComponent {
   }
   render() {
     let e = this.renderText();
-    return null != e ? e : S.default.Messages.LIBRARY
+    return null != e ? e : _.default.Messages.LIBRARY
   }
   constructor(...e) {
     super(...e), this.renderProgressBody = (e, t) => {
@@ -112,14 +112,14 @@ class A extends a.PureComponent {
         type: r
       } = n;
       if (null == s || null == i || null == a) return null;
-      let u = e[e.length - 1] / t * 1e3,
-        o = 0 !== u ? Math.max(1, (i - s) / u) : null,
+      let o = e[e.length - 1] / t * 1e3,
+        u = 0 !== o ? Math.max(1, (i - s) / o) : null,
         d = T[r],
         c = null != d ? Object.keys(d) : [],
         {
           unit: f,
           time: h
-        } = (0, m.getTimeAndUnit)(null != o ? o / 60 : null, c);
+        } = (0, m.getTimeAndUnit)(null != u ? u / 60 : null, c);
       if (null != d && null != f) {
         let e = d[f];
         return null != e ? e(l.name, h) : null
@@ -150,7 +150,7 @@ class L extends a.PureComponent {
       firstState: t,
       isPaused: n
     } = this.props;
-    return null == e || null == t ? S.default.Messages.LIBRARY : (0, l.jsx)(A, {
+    return null == e || null == t ? _.default.Messages.LIBRARY : (0, l.jsx)(A, {
       application: e,
       state: t,
       isPaused: n
@@ -178,7 +178,7 @@ class L extends a.PureComponent {
           ...n,
           children: (0, l.jsx)(c.ProgressCircle, {
             percent: e,
-            colorOverride: t ? o.default.unsafe_rawColors.PRIMARY_500.css : null,
+            colorOverride: t ? u.default.unsafe_rawColors.PRIMARY_500.css : null,
             children: (0, l.jsx)(E.default, {
               className: N.downloadIcon
             })
@@ -194,7 +194,7 @@ class L extends a.PureComponent {
       let {
         onClick: t
       } = this.props;
-      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, h.transitionTo)(_.Routes.APPLICATION_LIBRARY)
+      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, h.transitionTo)(I.Routes.APPLICATION_LIBRARY)
     }
   }
 }
@@ -211,7 +211,7 @@ function v(e, t) {
     return null != s && e.push(s), e
   }, [])
 }
-var x = u.default.connectStores([p.default, C.default, f.default], () => {
+var x = o.default.connectStores([p.default, C.default, f.default], () => {
   let e = p.default.activeItems,
     t = v(e, C.default),
     {

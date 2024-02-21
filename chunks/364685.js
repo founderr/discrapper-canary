@@ -24,10 +24,10 @@ let v = 2,
   y = null,
   T = [],
   C = null,
-  S = !1,
-  I = new Map,
+  I = !1,
+  S = new Map,
   A = (e, t) => {
-    I = new Map(I.set(e, t))
+    S = new Map(S.set(e, t))
   },
   D = g.default.Millis.HOUR,
   N = async () => {
@@ -96,7 +96,7 @@ let v = 2,
       let t = s.findIndex(t => t.id === e.id); - 1 !== t ? s[t] = e : s.push(e), T = s
     }(t || n) && e.stickers.forEach(e => O(e))
   }, V = () => {
-    I.forEach((e, t) => {
+    S.forEach((e, t) => {
       let n = c.default.getGuild(t);
       null != n && e.forEach(e => P(e, n))
     }), T.forEach(e => {
@@ -124,7 +124,7 @@ class k extends i.default.Store {
     return null != C && C + D > Date.now()
   }
   get isFetchingStickerPacks() {
-    return S
+    return I
   }
   getStickerById(e) {
     return !p.has(e) && N(), p.get(e)
@@ -139,28 +139,28 @@ class k extends i.default.Store {
     return T.some(t => t.id === e)
   }
   getRawStickersByGuild() {
-    return I
+    return S
   }
   getAllStickersIterator() {
     return N(), p.values()
   }
   getAllGuildStickers() {
-    return N(), I
+    return N(), S
   }
   getStickersByGuildId(e) {
-    return N(), I.get(e)
+    return N(), S.get(e)
   }
 }
 k.displayName = "StickersStore";
 var M = new k(r.default, {
   BACKGROUND_SYNC: () => {
-    y = null, p = new Map, I = new Map, v = 0
+    y = null, p = new Map, S = new Map, v = 0
   },
   CONNECTION_OPEN: e => {
     let {
       guilds: t
     } = e;
-    y = null, p = new Map, I = new Map, t.forEach(R), v = t.every(e => null != e.stickers) ? 1 : 0
+    y = null, p = new Map, S = new Map, t.forEach(R), v = t.every(e => null != e.stickers) ? 1 : 0
   },
   GUILD_CREATE: function(e) {
     let {
@@ -172,22 +172,22 @@ var M = new k(r.default, {
     var t;
     let {
       guild: n
-    } = e, s = null !== (t = I.get(n.id)) && void 0 !== t ? t : [];
+    } = e, s = null !== (t = S.get(n.id)) && void 0 !== t ? t : [];
     s.forEach(e => {
       null != y && y.delete(e.id), p.delete(e.id)
-    }), I.delete(n.id), I = new Map(I)
+    }), S.delete(n.id), S = new Map(S)
   },
   LOGOUT: () => {
-    v = 0, T = [], p.clear(), E.clear(), y = null, I.clear(), I = new Map(I), S = !1, C = null
+    v = 0, T = [], p.clear(), E.clear(), y = null, S.clear(), S = new Map(S), I = !1, C = null
   },
   STICKER_PACKS_FETCH_START: () => {
-    S = !0
+    I = !0
   },
   STICKER_PACKS_FETCH_SUCCESS: e => {
     let {
       packs: t
     } = e;
-    t.forEach(e => b(e, !0)), C = Date.now(), S = !1
+    t.forEach(e => b(e, !0)), C = Date.now(), I = !1
   },
   STICKER_PACK_FETCH_SUCCESS: e => {
     let {
@@ -208,7 +208,7 @@ var M = new k(r.default, {
     let {
       guildId: s,
       sticker: i
-    } = e, r = null !== (t = I.get(s)) && void 0 !== t ? t : [];
+    } = e, r = null !== (t = S.get(s)) && void 0 !== t ? t : [];
     A(s, [...null !== (n = r.filter(e => e.id !== i.id)) && void 0 !== n ? n : [], i]), O(i)
   },
   STICKER_FETCH_SUCCESS: e => {
@@ -229,7 +229,7 @@ var M = new k(r.default, {
         ...e,
         user: t
       }
-    }, r = null !== (t = I.get(n)) && void 0 !== t ? t : [], a = r.filter(e => null == s.find(t => t.id === e.id));
+    }, r = null !== (t = S.get(n)) && void 0 !== t ? t : [], a = r.filter(e => null == s.find(t => t.id === e.id));
     a.forEach(e => {
       p.delete(e.id), null != y && y.delete(e.id)
     });
@@ -241,7 +241,7 @@ var M = new k(r.default, {
       stickers: t
     } = e;
     for (let [e, n] of t)
-      if (_.default.isMember(e) && !I.has(e)) {
+      if (_.default.isMember(e) && !S.has(e)) {
         let t = c.default.getGuild(e);
         for (let e of n) O(e, !0, t);
         A(e, n)

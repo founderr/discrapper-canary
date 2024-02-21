@@ -24,9 +24,9 @@ var s = n("714617"),
   y = n("49111"),
   T = n("782340");
 let C = [],
-  S = {};
+  I = {};
 
-function I() {
+function S() {
   let e = [],
     t = h.CustomStatusSetting.getSetting();
   null != t && ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, f.default)(t));
@@ -39,7 +39,7 @@ function I() {
   });
   let r = new Set,
     o = new Set;
-  a.forEach(S, t => {
+  a.forEach(I, t => {
     null != t.application_id && (r.add(t.name), o.add(t.application_id), e.push(t))
   }), u.default.getSelfEmbeddedActivities().forEach(t => {
     var n;
@@ -57,9 +57,9 @@ function I() {
   });
   let d = _.default.getVisibleGame(),
     v = null != d && null != d.name && r.has(d.name),
-    I = null != d && d.isLauncher,
+    S = null != d && d.isLauncher,
     A = E.default.getCurrentUserActiveStream();
-  null != d && null != d.name && !(v || I && !(null != A)) && e.push({
+  null != d && null != d.name && !(v || S && !(null != A)) && e.push({
     type: y.ActivityTypes.PLAYING,
     name: d.name,
     application_id: d.id,
@@ -86,7 +86,7 @@ function I() {
 }
 class A extends o.default.Store {
   initialize() {
-    this.waitFor(_.default, u.default, p.default, E.default, m.default, v.default, c.default), this.syncWith([g.default, c.default], () => I())
+    this.waitFor(_.default, u.default, p.default, E.default, m.default, v.default, c.default), this.syncWith([g.default, c.default], () => S())
   }
   getActivities() {
     return C
@@ -104,7 +104,7 @@ class A extends o.default.Store {
     return C.find(e)
   }
   getApplicationActivities() {
-    return S
+    return I
   }
 }
 A.displayName = "LocalActivityStore";
@@ -113,37 +113,37 @@ var D = new A(d.default, {
     let {
       localActivities: t
     } = e;
-    S = {
+    I = {
       ...t
-    }, I()
+    }, S()
   },
   START_SESSION: function() {
-    S = {}, I()
+    I = {}, S()
   },
   LOCAL_ACTIVITY_UPDATE: function(e) {
     let {
       socketId: t,
       activity: n
     } = e;
-    if (i(S[t], n)) return !1;
-    null != n ? S[t] = n : delete S[t], I()
+    if (i(I[t], n)) return !1;
+    null != n ? I[t] = n : delete I[t], S()
   },
   RPC_APP_DISCONNECTED: function(e) {
     let {
       socketId: t
     } = e;
-    delete S[t], I()
+    delete I[t], S()
   },
-  RUNNING_GAMES_CHANGE: I,
-  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: I,
-  SPOTIFY_PLAYER_STATE: I,
-  SPOTIFY_PLAYER_PLAY: I,
-  STREAMING_UPDATE: I,
-  USER_CONNECTIONS_UPDATE: I,
-  STREAM_START: I,
-  STREAM_STOP: I,
-  USER_SETTINGS_PROTO_UPDATE: I,
-  EMBEDDED_ACTIVITY_OPEN: I,
-  EMBEDDED_ACTIVITY_CLOSE: I,
-  UPDATE_HANG_STATUS: I
+  RUNNING_GAMES_CHANGE: S,
+  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: S,
+  SPOTIFY_PLAYER_STATE: S,
+  SPOTIFY_PLAYER_PLAY: S,
+  STREAMING_UPDATE: S,
+  USER_CONNECTIONS_UPDATE: S,
+  STREAM_START: S,
+  STREAM_STOP: S,
+  USER_SETTINGS_PROTO_UPDATE: S,
+  EMBEDDED_ACTIVITY_OPEN: S,
+  EMBEDDED_ACTIVITY_CLOSE: S,
+  UPDATE_HANG_STATUS: S
 })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MESSAGE_SCAN_TIMEOUT: function() {
-    return I
+    return S
   },
   MAX_TIMEOUT_FOR_JITTER: function() {
     return A
@@ -30,8 +30,8 @@ var s = n("345570"),
   y = n("447435"),
   T = n("574933"),
   C = n("49111"),
-  S = n("397336");
-let I = 3e3,
+  I = n("397336");
+let S = 3e3,
   A = 800,
   D = {};
 
@@ -123,7 +123,7 @@ function V(e, t) {
             })
           }
         }(e)
-      }, I)
+      }, S)
     })
   });
   let i = n || new Set(e.map(e => e.channel_id)).size > 1;
@@ -315,7 +315,7 @@ function W(e) {
     settings: t,
     local: n
   } = e;
-  if (!(0, p.isEligibleForExplicitMediaRedaction)() || !n || t.type !== S.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
+  if (!(0, p.isEligibleForExplicitMediaRedaction)() || !n || t.type !== I.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
   let s = m.default.getChannelId();
   return null != s && q(s)
 }

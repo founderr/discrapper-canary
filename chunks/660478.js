@@ -2,7 +2,7 @@
 let s;
 n.r(t), n.d(t, {
   shouldBadgeMessage: function() {
-    return eS
+    return eI
   },
   default: function() {
     return eZ
@@ -25,8 +25,8 @@ var i, r, a = n("627445"),
   y = n("21121"),
   T = n("288518"),
   C = n("415435"),
-  S = n("486503"),
-  I = n("406297"),
+  I = n("486503"),
+  S = n("406297"),
   A = n("136511"),
   D = n("342176"),
   N = n("512395"),
@@ -96,17 +96,17 @@ function eC(e) {
   return isNaN(t) ? 0 : t
 }
 
-function eS(e, t) {
+function eI(e, t) {
   let n = x.default.getChannel(e.channel_id);
-  return !(null == n || Q.default.isBlocked(e.author.id)) && (!!((0, I.default)({
+  return !(null == n || Q.default.isBlocked(e.author.id)) && (!!((0, S.default)({
     message: e,
     userId: t.id,
     suppressEveryone: J.default.isSuppressEveryoneEnabled(n.guild_id),
     suppressRoles: J.default.isSuppressRolesEnabled(n.guild_id)
-  }) || eI(n)) || !1)
+  }) || eS(n)) || !1)
 }
 
-function eI(e) {
+function eS(e) {
   return null != e && e.isPrivate() && !J.default.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id)
 }
 async function eA(e) {
@@ -294,9 +294,9 @@ class eO {
       _unreadCount: y,
       _mentionCount: T,
       flags: C,
-      lastViewed: S
+      lastViewed: I
     } = e;
-    this.channelId = t, this.type = null != n ? n : er.ReadStateTypes.CHANNEL, this._guildId = s, this._isThread = null != i && i, null != r ? (this._isActiveThread = r, this._isJoinedThread = r) : (this._isActiveThread = null != a && a, this._isJoinedThread = null != o && o), this._persisted = !1 !== d, this.loadedMessages = null != u && u, this._lastMessageId = l, this._lastMessageTimestamp = f, this._ackMessageId = _, this._ackMessageTimestamp = c, this.ackPinTimestamp = g, this.isManualAck = null != m && m, this.lastPinTimestamp = h, this._oldestUnreadMessageId = v, this.oldestUnreadMessageIdStale = null != E && E, this.estimated = null != p && p, this._unreadCount = null != y ? y : 0, this._mentionCount = T, this.flags = C, this.lastViewed = S, eO._mentionChannels.delete(this.channelId), this._mentionCount > 0 && this.canHaveMentions() && eO._mentionChannels.add(this.channelId)
+    this.channelId = t, this.type = null != n ? n : er.ReadStateTypes.CHANNEL, this._guildId = s, this._isThread = null != i && i, null != r ? (this._isActiveThread = r, this._isJoinedThread = r) : (this._isActiveThread = null != a && a, this._isJoinedThread = null != o && o), this._persisted = !1 !== d, this.loadedMessages = null != u && u, this._lastMessageId = l, this._lastMessageTimestamp = f, this._ackMessageId = _, this._ackMessageTimestamp = c, this.ackPinTimestamp = g, this.isManualAck = null != m && m, this.lastPinTimestamp = h, this._oldestUnreadMessageId = v, this.oldestUnreadMessageIdStale = null != E && E, this.estimated = null != p && p, this._unreadCount = null != y ? y : 0, this._mentionCount = T, this.flags = C, this.lastViewed = I, eO._mentionChannels.delete(this.channelId), this._mentionCount > 0 && this.canHaveMentions() && eO._mentionChannels.add(this.channelId)
   }
   incrementGuildUnreadsSentinel() {
     null != this._guildId && eO.getGuildSentinels(this._guildId).unreadsSentinel++
@@ -373,7 +373,7 @@ class eO {
           var o;
           this.oldestUnreadMessageId = null !== (o = this._oldestUnreadMessageId) && void 0 !== o ? o : n.id
         } else i = n.id === this._ackMessageId;
-        F.default.extractTimestamp(n.id) > t ? (this.unreadCount++, s && eS(n, e) && this.mentionCount++, a = null != a ? a : n.id) : r = !0
+        F.default.extractTimestamp(n.id) > t ? (this.unreadCount++, s && eI(n, e) && this.mentionCount++, a = null != a ? a : n.id) : r = !0
       }), this.estimated = !o.hasPresent() || !(i || r) && o.length === this.unreadCount, this.oldestUnreadMessageId = null !== (n = this._oldestUnreadMessageId) && void 0 !== n ? n : a
     }
     null != i && (this.mentionCount = i)
@@ -398,10 +398,10 @@ class eO {
     return null != e && ("basicPermissions" in e ? M.default.has(e.basicPermissions, et.BasicPermissions.VIEW_CHANNEL) : !v.default.isChannelGated(this.guildId, this.channelId) || X.default.can(et.Permissions.VIEW_CHANNEL, e))
   }
   canBeUnread() {
-    return !(this._isThread && !this._isJoinedThread || (0, C.isMessageRequestOrSpamRequest)(this.channelId, [T.default, S.default]) || !this._isThread && (0, N.isOptInEnabledForGuild)(this._guildId) && (this._lastMessageTimestamp < eE || !J.default.isChannelOrParentOptedIn(this._guildId, this.channelId) && !this.hasRecentlyVisitedAndRead() && !this.hasMentions())) && this.canTrackUnreads()
+    return !(this._isThread && !this._isJoinedThread || (0, C.isMessageRequestOrSpamRequest)(this.channelId, [T.default, I.default]) || !this._isThread && (0, N.isOptInEnabledForGuild)(this._guildId) && (this._lastMessageTimestamp < eE || !J.default.isChannelOrParentOptedIn(this._guildId, this.channelId) && !this.hasRecentlyVisitedAndRead() && !this.hasMentions())) && this.canTrackUnreads()
   }
   canHaveMentions() {
-    return !(0 === this.mentionCount || this._isThread && !this._isJoinedThread || (0, C.isMessageRequestOrSpamRequest)(this.channelId, [T.default, S.default]) || (0, N.isOptInEnabledForGuild)(this._guildId) && this._lastMessageTimestamp < eE) && this.canTrackUnreads()
+    return !(0 === this.mentionCount || this._isThread && !this._isJoinedThread || (0, C.isMessageRequestOrSpamRequest)(this.channelId, [T.default, I.default]) || (0, N.isOptInEnabledForGuild)(this._guildId) && this._lastMessageTimestamp < eE) && this.canTrackUnreads()
   }
   getGuildChannelUnreadState(e, t, n, s, i) {
     if (t && (this._lastMessageTimestamp < eE || !J.default.isChannelRecordOrParentOptedIn(e) && !this.hasRecentlyVisitedAndRead() && this.mentionCount <= 0)) return {
@@ -843,7 +843,7 @@ function eq(e, t, n, s) {
 }
 class eX extends l.default.Store {
   initialize() {
-    this.waitFor(Y.default, $.default, W.default, K.default, x.default, Z.default, q.default, X.default, h.default, P.default, b.default, B.default, p.default, j.default, v.default, J.default, ee.default, A.default, T.default, R.default, S.default), this.syncWith([B.default], eY)
+    this.waitFor(Y.default, $.default, W.default, K.default, x.default, Z.default, q.default, X.default, h.default, P.default, b.default, B.default, p.default, j.default, v.default, J.default, ee.default, A.default, T.default, R.default, I.default), this.syncWith([B.default], eY)
   }
   getReadStatesByChannel() {
     var e;
@@ -1109,14 +1109,14 @@ let eQ = new eX(g.default, {
     (null == o.oldestUnreadMessageId || o.oldestUnreadMessageIdStale) && (o.oldestUnreadMessageId = r.id), o.unreadCount++;
     let c = null != r.author && Q.default.isBlocked(r.author.id) || r.type === et.MessageTypes.RECIPIENT_REMOVE && (null == u ? void 0 : u.type) === et.ChannelTypes.GROUP_DM;
     !c && function(e, t, n) {
-      if (null != t && (0, I.isRawMessageMentioned)({
+      if (null != t && (0, S.isRawMessageMentioned)({
           rawMessage: e,
           userId: t.id,
           suppressEveryone: J.default.isSuppressEveryoneEnabled(n.guildId),
           suppressRoles: J.default.isSuppressRolesEnabled(n.guildId)
         })) return !0;
       let s = x.default.getChannel(e.channel_id);
-      return !!eI(s) || !!J.default.mentionOnAllMessages && null != s && !s.isVocal() && !J.default.isChannelMuted(s.guild_id, s.id) && J.default.resolvedMessageNotifications(s) === et.UserNotificationSettings.ALL_MESSAGES || !1
+      return !!eS(s) || !!J.default.mentionOnAllMessages && null != s && !s.isVocal() && !J.default.isChannelMuted(s.guild_id, s.id) && J.default.resolvedMessageNotifications(s) === et.UserNotificationSettings.ALL_MESSAGES || !1
     }(r, d, o) && o.mentionCount++
   },
   MESSAGE_DELETE: eG,

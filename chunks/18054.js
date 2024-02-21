@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return p
   },
   default: function() {
-    return E
+    return m
   }
 }), n("702976");
 var a = n("872717"),
@@ -70,8 +70,8 @@ function h(e) {
     defaultReactionEmoji: h,
     rtcRegion: C,
     videoQualityMode: p,
-    autoArchiveDuration: E,
-    locked: m,
+    autoArchiveDuration: m,
+    locked: E,
     invitable: g,
     availableTags: S,
     defaultSortOrder: _,
@@ -95,8 +95,8 @@ function h(e) {
     defaultReactionEmoji: h,
     rtcRegion: C,
     videoQualityMode: p,
-    autoArchiveDuration: E,
-    locked: m,
+    autoArchiveDuration: m,
+    locked: E,
     invitable: g,
     availableTags: S,
     defaultSortOrder: _,
@@ -115,16 +115,16 @@ async function C(e, t) {
     userLimit: h,
     nsfw: C,
     flags: p,
-    permissionOverwrites: E,
-    rateLimitPerUser: m,
+    permissionOverwrites: m,
+    rateLimitPerUser: E,
     defaultThreadRateLimitPerUser: g,
     defaultAutoArchiveDuration: S,
     template: _,
     defaultReactionEmoji: T,
     rtcRegion: A,
     videoQualityMode: M,
-    autoArchiveDuration: N,
-    locked: I,
+    autoArchiveDuration: I,
+    locked: N,
     invitable: v,
     availableTags: L,
     defaultSortOrder: R,
@@ -145,15 +145,15 @@ async function C(e, t) {
       user_limit: h,
       nsfw: C,
       flags: p,
-      permission_overwrites: E,
-      rate_limit_per_user: m,
+      permission_overwrites: m,
+      rate_limit_per_user: E,
       default_thread_rate_limit_per_user: g,
       default_auto_archive_duration: S,
       template: _,
       rtc_region: A,
       video_quality_mode: M,
-      auto_archive_duration: N,
-      locked: I,
+      auto_archive_duration: I,
+      locked: N,
       invitable: v,
       default_reaction_emoji: null != T ? {
         emoji_id: null == T ? void 0 : T.emojiId,
@@ -198,7 +198,7 @@ function p(e) {
     null != e && !(null == t ? void 0 : t.isThread()) && l.default.checkGuildTemplateDirty(e), c()
   })
 }
-var E = {
+var m = {
   init: d,
   open: function(e, t, n) {
     d(e, t, n), (0, o.pushLayer)(u.Layers.CHANNEL_SETTINGS)

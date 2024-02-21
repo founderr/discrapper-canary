@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return D
   },
   default: function() {
-    return P
+    return j
   }
 }), n("222007"), n("424973");
 var a = n("37983"),
@@ -20,16 +20,16 @@ var a = n("37983"),
   h = n("716241"),
   C = n("299285"),
   p = n("983444"),
-  E = n("592407"),
-  m = n("970700"),
+  m = n("592407"),
+  E = n("970700"),
   g = n("271938"),
   S = n("305961"),
   _ = n("697218"),
   T = n("461380"),
   A = n("36694"),
   M = n("659500"),
-  N = n("701909"),
-  I = n("773336"),
+  I = n("701909"),
+  N = n("773336"),
   v = n("299039"),
   L = n("172554"),
   R = n("49111"),
@@ -74,19 +74,19 @@ function D(e) {
   })
 }
 
-function P(e) {
+function j(e) {
   let {
     channel: t
   } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && v.default.extractTimestamp(l.id) < Date.now() - R.WELCOME_OLD_GUILD_AGE_THRESHOLD, T = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
     canInvite: A,
-    canManageGuild: P,
-    canMessage: j
+    canManageGuild: j,
+    canMessage: P
   } = (0, p.usePermissions)(t, l), b = (0, u.useStateFromStores)([_.default], () => {
     var e, t;
     return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
   }), {
-    guildPopulated: H,
-    guildMessaged: F,
+    guildPopulated: F,
+    guildMessaged: H,
     guildPersonalized: U
   } = (0, p.useCompletedStates)(l), {
     handleInvite: k,
@@ -126,7 +126,7 @@ function P(e) {
         h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
           setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
           action: x.AnalyticsActions.PERSONALIZE_SERVER
-        }), null != e && E.default.open(e.id, R.GuildSettingsSections.OVERVIEW, {
+        }), null != e && m.default.open(e.id, R.GuildSettingsSections.OVERVIEW, {
           section: R.AnalyticsSections.CHANNEL_WELCOME_CTA
         })
       }, [e]),
@@ -169,9 +169,9 @@ function P(e) {
       handleDownload: r,
       handleAddApplication: o
     }
-  }(l), W = !(b || H || F || U), {
-    titleAnimatedStyle: Z,
-    opacities: z
+  }(l), W = !(b || F || H || U), {
+    titleAnimatedStyle: z,
+    opacities: Z
   } = function(e) {
     let t = (0, r.useLazyValue)(() => new o.default.Value(0)),
       n = (0, r.useLazyValue)(() => new o.default.Value(0)),
@@ -213,24 +213,24 @@ function P(e) {
   }(W), K = (0, u.useStateFromStores)([C.default], () => C.default.getGuildApplicationIds(null == l ? void 0 : l.id)), Y = K.length > 0;
   if (s.useEffect(() => {
       var e;
-      (0, m.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : R.EMPTY_STRING_GUILD_ID)
+      (0, E.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : R.EMPTY_STRING_GUILD_ID)
     }, [l]), null == l) return null;
-  let X = [];
-  !f && (A && X.push((0, a.jsx)(o.default.div, {
+  let q = [];
+  !f && (A && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[X.length]
+      opacity: Z[q.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("243826"),
       header: y.default.Messages.WELCOME_CTA_INVITE_TITLE,
-      completed: H,
+      completed: F,
       onClick: k
     })
-  }, "invite")), P && X.push((0, a.jsx)(o.default.div, {
+  }, "invite")), j && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[X.length]
+      opacity: Z[q.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("215036"),
@@ -238,21 +238,21 @@ function P(e) {
       completed: U,
       onClick: G
     })
-  }, "customize")), j && X.push((0, a.jsx)(o.default.div, {
+  }, "customize")), P && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[X.length]
+      opacity: Z[q.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("505873"),
       header: y.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
-      completed: F,
+      completed: H,
       onClick: w
     })
-  }, "message")), (0, I.isWeb)() && X.push((0, a.jsx)(o.default.div, {
+  }, "message")), (0, N.isWeb)() && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[X.length]
+      opacity: Z[q.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("238032"),
@@ -260,10 +260,10 @@ function P(e) {
       completed: b,
       onClick: B
     })
-  }, "download")), X.push((0, a.jsx)(o.default.div, {
+  }, "download")), q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[X.length]
+      opacity: Z[q.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("356451"),
@@ -272,9 +272,9 @@ function P(e) {
       onClick: V
     })
   }, "addapp")));
-  let q = T ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
-  f && (q = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-  let J = "".concat(N.default.getArticleURL(R.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
+  let X = T ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
+  f && (X = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
+  let J = "".concat(I.default.getArticleURL(R.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
   return (0, a.jsx)(L.default, {
     channelId: t.id,
     children: (0, a.jsx)("div", {
@@ -282,7 +282,7 @@ function P(e) {
       children: (0, a.jsxs)("div", {
         className: O.inner,
         children: [(0, a.jsxs)(o.default.div, {
-          style: Z,
+          style: z,
           children: [(0, a.jsx)(c.Heading, {
             className: O.titleName,
             variant: "heading-xxl/semibold",
@@ -293,14 +293,14 @@ function P(e) {
             color: "header-secondary",
             className: i({
               [O.subtitle]: !0,
-              [O.noChildren]: 0 === X.length
+              [O.noChildren]: 0 === q.length
             }),
             variant: "text-sm/normal",
-            children: [q, " ", X.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
+            children: [X, " ", q.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
               guideURL: J
             }) : null]
           })]
-        }), X]
+        }), q]
       })
     })
   })

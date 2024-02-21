@@ -33,26 +33,26 @@ function y() {
     if (null == T || !f.default.canEveryone(E.Permissions.VIEW_CHANNEL, T)) return null;
     let C = d.default.getGuild(T.getGuildId());
     if (null == C || !C.hasFeature(E.GuildFeatures.DISCOVERABLE)) return null;
-    let S = (0, g.packStageChannelPartyId)(T, y),
-      I = (null == p ? void 0 : null === (e = p.party) || void 0 === e ? void 0 : e.id) === S ? p : null,
+    let I = (0, g.packStageChannelPartyId)(T, y),
+      S = (null == p ? void 0 : null === (e = p.party) || void 0 === e ? void 0 : e.id) === I ? p : null,
       A = _.default.getMutableParticipants(T.id, c.StageChannelParticipantNamedIndex.SPEAKER),
       D = A.filter(e => e.type === c.StageChannelParticipantTypes.STREAM).length,
       N = A.length - D,
       O = _.default.getParticipantCount(u) - D,
-      P = (null == I ? void 0 : null === (t = I.party) || void 0 === t ? void 0 : t.size) != null ? I.party.size[1] : 0;
+      P = (null == S ? void 0 : null === (t = S.party) || void 0 === t ? void 0 : t.size) != null ? S.party.size[1] : 0;
     return {
       application_id: v.STAGE_APPLICATION_ID,
       name: null !== (i = null !== (s = y.topic) && void 0 !== s ? s : T.topic) && void 0 !== i ? i : T.name,
       type: (0, h.getStageHasMedia)(T.id) ? E.ActivityTypes.WATCHING : E.ActivityTypes.LISTENING,
       timestamps: {
-        start: null !== (r = null == I ? void 0 : null === (n = I.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== r ? r : new Date().getTime()
+        start: null !== (r = null == S ? void 0 : null === (n = S.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== r ? r : new Date().getTime()
       },
       assets: {
         small_image: null !== (a = C.icon) && void 0 !== a ? a : void 0,
         small_text: C.name
       },
       party: {
-        id: S,
+        id: I,
         size: [N, Math.max(O, P)]
       }
     }

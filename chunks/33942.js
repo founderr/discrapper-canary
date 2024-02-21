@@ -38,8 +38,8 @@ var s, i, r, a, o = n("37983"),
   y = n("716241"),
   T = n("148217"),
   C = n("970254"),
-  S = n("616265"),
-  I = n("894887"),
+  I = n("616265"),
+  S = n("894887"),
   A = n("393414"),
   D = n("766274"),
   N = n("271938"),
@@ -123,8 +123,8 @@ function Z(e) {
 
 function J(e) {
   var t, n, s, i, r, a, l, m;
-  let h, T, S, {
-      clientId: I,
+  let h, T, I, {
+      clientId: S,
       scopes: x,
       responseType: X,
       redirectUri: Q,
@@ -153,7 +153,7 @@ function J(e) {
     }),
     ev = eh.userAppsTreatment === C.UserAppsTreatment.ALLOWED;
   !ev && (ec = !1);
-  let [eE, ep] = d.useState(0), [ey, eT] = d.useState(null), [eC, eS] = d.useState(P.default.NONE), [eI, eA] = d.useState(1), [eD, eN] = d.useState(null), [eO] = d.useState(w.OrderedAccountScopes.filter(e => eg.includes(e))), [eP, eb] = d.useState(null != ee ? ee : null), [eV, eR] = d.useState(null != et ? et : null), [ek, eM] = d.useState(!1), ew = d.useMemo(() => {
+  let [eE, ep] = d.useState(0), [ey, eT] = d.useState(null), [eC, eI] = d.useState(P.default.NONE), [eS, eA] = d.useState(1), [eD, eN] = d.useState(null), [eO] = d.useState(w.OrderedAccountScopes.filter(e => eg.includes(e))), [eP, eb] = d.useState(null != ee ? ee : null), [eV, eR] = d.useState(null != et ? et : null), [ek, eM] = d.useState(!1), ew = d.useMemo(() => {
     var e;
     return null == ey ? void 0 : null === (e = ey.guilds) || void 0 === e ? void 0 : e.find(e => e.id === eP)
   }, [null == ey ? void 0 : ey.guilds, eP]), eL = (0, c.useStateFromStores)([p.default], () => p.default.getCurrentEmbeddedActivity()), eU = (0, c.useStateFromStoresObject)([E.default, p.default], () => {
@@ -186,7 +186,7 @@ function J(e) {
       eM(!0);
       let t = await (0, R.authorize)({
         authorize: e,
-        clientId: I,
+        clientId: S,
         scopes: eg,
         responseType: X,
         redirectUri: Q,
@@ -219,7 +219,7 @@ function J(e) {
       let e = t.body;
       (null == e ? void 0 : e.message) != null && "" !== e.message ? eN(Error(e.message)) : eN(e), eA(1), ep(2), eM(!1)
     }
-  }, [eo, ed, I, Z, J, eC, eu, en, Q, X, eg, eP, eV, $, el, null == ey ? void 0 : ey.application, ew, ec]), eH = d.useRef(!1), eB = d.useCallback(async () => {
+  }, [eo, ed, S, Z, J, eC, eu, en, Q, X, eg, eP, eV, $, el, null == ey ? void 0 : ey.application, ew, ec]), eH = d.useRef(!1), eB = d.useCallback(async () => {
     if (0 === eE) {
       if (ep(1), !N.default.isAuthenticated()) {
         (0, R.logoutWithRedirect)(em);
@@ -229,7 +229,7 @@ function J(e) {
         eH.current = !0;
         try {
           let e = null != ea ? ea : await (0, R.fetchAuthorization)({
-            clientId: I,
+            clientId: S,
             scopes: eg,
             responseType: X,
             redirectUri: Q,
@@ -256,8 +256,8 @@ function J(e) {
         }
       }
     }
-  }, [ea, I, Z, J, eE, em, es, Q, X, eg, eF, $, ec, ev]), ex = d.useCallback((e, t) => {
-    eS(n => e ? _.default.remove(n, t) : _.default.add(n, t))
+  }, [ea, S, Z, J, eE, em, es, Q, X, eg, eF, $, ec, ev]), ex = d.useCallback((e, t) => {
+    eI(n => e ? _.default.remove(n, t) : _.default.add(n, t))
   }, []);
   d.useEffect(() => {
     let e = eg.filter(e => !w.ValidScopes.includes(e));
@@ -278,7 +278,7 @@ function J(e) {
   let eK = new D.default(ey.user),
     eW = null === (s = ey.bot) || void 0 === s ? void 0 : s.approximate_guild_count,
     ez = !1;
-  switch (eI) {
+  switch (eS) {
     case 1:
       let eq = null == eD || eD instanceof Error ? {} : eD,
         eX = null === (i = ey.guilds) || void 0 === i ? void 0 : i.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
@@ -303,7 +303,7 @@ function J(e) {
           selectedGuildId: eP,
           onChannelChange: e => eR(e)
         }) : null]
-      }), eg.includes(j.OAuth2Scopes.BOT) && !_.default.equals(en, P.default.NONE) && (S = 2);
+      }), eg.includes(j.OAuth2Scopes.BOT) && !_.default.equals(en, P.default.NONE) && (I = 2);
       let eZ = null != ej && eg.includes(j.OAuth2Scopes.WEBHOOK_INCOMING) && null == eV;
       ez = !ec && (eQ && null == ej && null == eY || eZ);
       break;
@@ -336,8 +336,8 @@ function J(e) {
         color: g.Button.Colors.PRIMARY,
         onClick: () => eF(!1),
         children: W.default.Messages.CANCEL
-      }), null != S ? (0, o.jsx)(g.Button, {
-        onClick: () => eA(S),
+      }), null != I ? (0, o.jsx)(g.Button, {
+        onClick: () => eA(I),
         disabled: ez,
         children: W.default.Messages.CONTINUE
       }) : (0, o.jsx)(g.Button, {
@@ -361,7 +361,7 @@ function J(e) {
     header: e1,
     body: h,
     footer: e$,
-    nextStep: S,
+    nextStep: I,
     appDetails: eJ,
     sendAuthorize: eF
   }
@@ -401,8 +401,8 @@ function $(e, t) {
 }
 
 function ee(e, t) {
-  if ((0, I.isMidjourneyOnboardingFlow)("create-guild-and-oauth2-modal")) {
-    S.default.openCreateGuildModal({
+  if ((0, S.isMidjourneyOnboardingFlow)("create-guild-and-oauth2-modal")) {
+    I.default.openCreateGuildModal({
       onSuccess: n => et({
         ...e,
         guildId: n

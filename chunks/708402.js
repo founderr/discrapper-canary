@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("77078"),
-  u = n("988941"),
-  o = n("65369"),
+  o = n("988941"),
+  u = n("65369"),
   d = n("39776"),
   c = a.forwardRef(function(e, t) {
     let {
@@ -25,7 +25,7 @@ var l = n("37983"),
       ...h,
       innerRef: t,
       tag: "li",
-      className: i(o.containerDefault, d.wrapper, {
+      className: i(u.containerDefault, d.wrapper, {
         [d.modeSelected]: s
       }),
       children: [f ? (0, l.jsx)("div", {
@@ -33,7 +33,7 @@ var l = n("37983"),
       }) : null, (0, l.jsx)("div", {
         className: d.link,
         children: (0, l.jsxs)("div", {
-          className: u.content,
+          className: o.content,
           children: [(0, l.jsx)("div", {
             className: d.iconContainer,
             children: n(d.icon)

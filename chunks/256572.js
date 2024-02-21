@@ -133,11 +133,11 @@ function C(e) {
   return y(t, e => y(e, e => p(e)))
 }
 
-function S(e) {
+function I(e) {
   return E.deleteChannelCache(e.channel.id)
 }
 
-function I(e, t) {
+function S(e, t) {
   if (!E.has(e, t)) return !1;
   E.set(e, t, {
     state: 2
@@ -239,14 +239,14 @@ var O = new N(d.default, {
       id: t,
       channelId: n
     } = e;
-    return I(n, t)
+    return S(n, t)
   },
   MESSAGE_DELETE_BULK: function(e) {
     let {
       ids: t,
       channelId: n
     } = e;
-    return y(t, e => I(n, e))
+    return y(t, e => S(n, e))
   },
   CREATE_PENDING_REPLY: function(e) {
     let {
@@ -257,8 +257,8 @@ var O = new N(d.default, {
       message: t
     })
   },
-  CHANNEL_DELETE: S,
-  THREAD_DELETE: S,
+  CHANNEL_DELETE: I,
+  THREAD_DELETE: I,
   GUILD_DELETE: function() {
     let e = E.retainWhere(e => null != _.default.getChannel(e));
     if (0 === e) return !1

@@ -27,14 +27,14 @@ var s = n("404828"),
   y = n("48703"),
   T = n("377253"),
   C = n("27618"),
-  S = n("18494"),
-  I = n("599110"),
+  I = n("18494"),
+  S = n("599110"),
   A = n("49111"),
   D = n("782340");
 
 function N(e, t) {
   var n;
-  let s = v.default.getChannel(S.default.getChannelId());
+  let s = v.default.getChannel(I.default.getChannelId());
   return !!(null == s || s.type !== A.ChannelTypes.DM || C.default.isFriend(null !== (n = s.getRecipientId()) && void 0 !== n ? n : "")) && e === t
 }
 
@@ -76,9 +76,9 @@ function O(e, t) {
       r = (null == e ? void 0 : e.hasFlag(A.MessageFlags.EPHEMERAL)) === !0;
     M = null != e && !r && (s || i)
   }
-  let B = v.default.getChannel(S.default.getChannelId()),
+  let B = v.default.getChannel(I.default.getChannelId()),
     x = E.default.getGuild(null == B ? void 0 : B.getGuildId());
-  if (null != B && null != x && x.hasFeature(A.GuildFeatures.DISCOVERABLE) && I.default.track(A.AnalyticEvents.URL_CLICKED, {
+  if (null != B && null != x && x.hasFeature(A.GuildFeatures.DISCOVERABLE) && S.default.track(A.AnalyticEvents.URL_CLICKED, {
       url_domain: (0, y.getHostname)(R),
       guild_id: x.id,
       channel_id: B.id

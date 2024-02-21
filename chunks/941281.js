@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return I
   },
   OAuth2Success: function() {
-    return I
+    return S
   },
   OAuth2AuthorizedSuccess: function() {
     return A
@@ -40,7 +40,7 @@ var s = n("37983"),
   T = n("782340"),
   C = n("977396");
 
-function S(e) {
+function I(e) {
   let {
     message: t,
     footer: n,
@@ -73,8 +73,8 @@ function S(e) {
   })
 }
 
-function I(e) {
-  return (0, s.jsx)(S, {
+function S(e) {
+  return (0, s.jsx)(I, {
     ...e,
     headerClassName: C.headerSuccess
   })
@@ -134,7 +134,7 @@ function A(e) {
     })
   }, [null == n ? void 0 : n.id]), (0, s.jsx)("div", {
     className: C.authorizedSuccessWrapper,
-    children: (0, s.jsx)(I, {
+    children: (0, s.jsx)(S, {
       message: o,
       footer: f,
       ...r
@@ -143,7 +143,7 @@ function A(e) {
 }
 
 function D(e) {
-  return (0, s.jsx)(S, {
+  return (0, s.jsx)(I, {
     ...e,
     headerClassName: C.headerFailure
   })

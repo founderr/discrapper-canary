@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("907002"),
   r = n("669491"),
-  u = n("77078"),
-  o = n("476263"),
+  o = n("77078"),
+  u = n("476263"),
   d = n("492950"),
   c = n("849831");
 
@@ -24,8 +24,8 @@ function f(e) {
     onAnimationRest: h
   } = e, C = {}, p = {};
   C.transform = "translate3d(10px, 10px, 0) scale3d(3, 3, 1)", p.transform = "translate3d(0, 0, 0) scale3d(1, 1, 1)";
-  let m = (0, u.useToken)(r.default.unsafe_rawColors.BRAND_500).hex(),
-    E = (0, u.useToken)(r.default.unsafe_rawColors.PRIMARY_630).hex();
+  let m = (0, o.useToken)(r.default.unsafe_rawColors.BRAND_500).hex(),
+    E = (0, o.useToken)(r.default.unsafe_rawColors.PRIMARY_630).hex();
   a && null == t.icon && (C.backgroundColor = m, p.backgroundColor = E);
   let g = (0, i.useTransition)(n, {
     from: C,
@@ -47,9 +47,9 @@ function f(e) {
           children: [(0, l.jsx)(i.animated.div, {
             className: c.folderIconPreview,
             style: e,
-            children: (0, l.jsx)(o.default, {
+            children: (0, l.jsx)(u.default, {
               guild: t,
-              size: o.default.Sizes.SMOL,
+              size: u.default.Sizes.SMOL,
               className: c.guildIcon
             })
           }), (0, l.jsx)(d.default, {

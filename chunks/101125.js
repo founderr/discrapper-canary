@@ -23,8 +23,8 @@ var r = n("714617"),
   y = n("603699"),
   T = n("686470"),
   C = n("52028"),
-  S = n("824563"),
-  I = n("235660"),
+  I = n("824563"),
+  S = n("235660"),
   A = n("49111");
 let D = !1,
   N = A.StatusTypes.ONLINE,
@@ -64,7 +64,7 @@ function U() {
   let t = !1,
     n = R || N === A.StatusTypes.INVISIBLE ? [] : C.default.getActivities().filter(L);
   !a(b, n) && (b = n, t = !0);
-  let s = I.default.getRemoteActivities();
+  let s = S.default.getRemoteActivities();
   if (k !== s && (k = s, t = !0), t) {
     let e = b.find(e => e.type === A.ActivityTypes.CUSTOM_STATUS),
       t = b.filter(e => e.type !== A.ActivityTypes.CUSTOM_STATUS);
@@ -77,11 +77,11 @@ function G() {
 }
 
 function F() {
-  R = !1, O = A.StatusTypes.UNKNOWN, U(), S.default.setCurrentUserOnConnectionOpen(N, M)
+  R = !1, O = A.StatusTypes.UNKNOWN, U(), I.default.setCurrentUserOnConnectionOpen(N, M)
 }
 class H extends u.default.Store {
   initialize() {
-    this.waitFor(y.default, m.default, C.default, I.default, T.default, p.default), this.syncWith([C.default], U)
+    this.waitFor(y.default, m.default, C.default, S.default, T.default, p.default), this.syncWith([C.default], U)
   }
   getLocalPresence() {
     return {
