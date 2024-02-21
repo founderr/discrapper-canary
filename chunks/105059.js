@@ -68,10 +68,7 @@ var o = new class e {
   handleChannelDelete(e, t) {
     null != e.channel.guild_id && this.updateWith(e.channel.guild_id, [e.channel]), this.commit(t)
   }
-  handleClearGuildCache(e) {
-    this.reset(), r.default.guildVersionsTransaction(e).delete()
-  }
-  handleReset() {
+  resetInMemoryState() {
     this.reset()
   }
   reset() {
@@ -112,7 +109,6 @@ var o = new class e {
       CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
       CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
       CHANNEL_UPDATES: (e, t) => this.handleChannelUpdates(e, t),
-      CLEAR_GUILD_CACHE: (e, t) => this.handleClearGuildCache(t),
       CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
       GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
       GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),

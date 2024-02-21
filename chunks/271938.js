@@ -2,7 +2,7 @@
 let i, r;
 n.r(t), n.d(t, {
   default: function() {
-    return ec
+    return ed
   }
 }), n("222007"), n("860677"), n("424973"), n("70102");
 var s = n("627445"),
@@ -14,78 +14,79 @@ var s = n("627445"),
   d = n("95410"),
   f = n("913144"),
   E = n("798609"),
-  p = n("821316"),
-  h = n("605250"),
-  _ = n("393414"),
-  S = n("705873"),
-  m = n("599110"),
-  T = n("831588"),
-  g = n("286235"),
-  I = n("72177"),
-  C = n("455079"),
-  v = n("49111"),
-  A = n("586391");
-let R = n("551042").hasModalOpen,
-  N = new h.default("AuthenticationStore"),
-  O = "fingerprint",
-  D = "email_cache",
-  y = "user_id_cache",
-  P = null,
+  p = n("91131"),
+  h = n("821316"),
+  _ = n("605250"),
+  S = n("393414"),
+  m = n("705873"),
+  T = n("599110"),
+  g = n("831588"),
+  I = n("286235"),
+  C = n("72177"),
+  v = n("455079"),
+  A = n("49111"),
+  R = n("586391");
+let N = n("551042").hasModalOpen,
+  O = new _.default("AuthenticationStore"),
+  D = "fingerprint",
+  y = "email_cache",
+  P = "user_id_cache",
   L = null,
   b = null,
   M = null,
   U = null,
   G = null,
   w = null,
-  k = v.LoginStates.NONE,
-  x = v.RegistrationStates.NONE,
-  F = !1,
-  V = [],
-  B = "",
-  H = !1,
-  Y = null,
-  j = !1,
+  k = null,
+  x = A.LoginStates.NONE,
+  F = A.RegistrationStates.NONE,
+  V = !1,
+  B = [],
+  H = "",
+  Y = !1,
+  j = null,
   W = !1,
-  K = "",
-  z = !1,
+  K = !1,
+  z = "",
   q = !1,
-  X = {},
+  X = !1,
   Q = {},
-  Z = null,
+  Z = {},
   J = null,
   $ = null,
-  ee = null;
+  ee = null,
+  et = null;
 
-function et(e) {
+function en(e) {
   let t = null != o.default.getToken(),
-    n = null != d.default.get(v.TOKEN_KEY);
-  N.verbose(e, {
+    n = null != d.default.get(A.TOKEN_KEY);
+  O.verbose(e, {
     tokenManagerHasToken: t,
     storageHasToken: n
   })
 }
 
-function en() {
+function ei() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  if (U = d.default.get(O), null != J) return J;
-  let t = null != U ? U : o.default.getToken();
-  !(!(0, _.isValidFingerprintRoute)() || !e && null != t || I.default.isHandoffAvailable()) && ei({
+  if (G = d.default.get(D), null != $) return $;
+  let t = null != G ? G : o.default.getToken();
+  !(!(0, S.isValidFingerprintRoute)() || !e && null != t || C.default.isHandoffAvailable()) && er({
     withGuildExperiments: !0
   })
 }
 
-function ei(e) {
+function er(e) {
   let {
     withGuildExperiments: t
-  } = e, n = {}, i = m.default.getSuperPropertiesBase64();
-  null != i && (n["X-Super-Properties"] = i), null != U && (n["X-Fingerprint"] = U), J = c.default.get({
-    url: v.Endpoints.EXPERIMENTS,
+  } = e, n = {}, i = T.default.getSuperPropertiesBase64();
+  null != i && (n["X-Super-Properties"] = i), null != G && (n["X-Fingerprint"] = G), $ = c.default.get({
+    url: A.Endpoints.EXPERIMENTS,
     query: {
       with_guild_experiments: t
     },
     headers: n,
     context: {
-      location: (0, _.getFingerprintLocation)()
+      location: (0, S.getFingerprintLocation)()
     },
     retries: 3,
     oldFormErrors: !0
@@ -103,150 +104,150 @@ function ei(e) {
       fingerprint: t,
       experiments: n,
       guildExperiments: i
-    }), J = null
+    }), $ = null
   }, () => {
-    J = null, f.default.dispatch({
+    $ = null, f.default.dispatch({
       type: "EXPERIMENTS_FETCH_FAILURE"
     })
   })
 }
 
-function er() {
-  G = U, U = null, d.default.remove(O)
+function es() {
+  w = G, G = null, d.default.remove(D)
 }
 
-function es(e, t) {
-  et("setAuthToken called."), o.default.setToken(e, t)
-}
-
-function ea() {
-  et("removeAuthToken called."), o.default.removeToken()
+function ea(e, t) {
+  en("setAuthToken called."), o.default.setToken(e, t)
 }
 
 function eo() {
-  F = !0, el(), f.default.wait(() => {
-    (0, _.transitionTo)(v.Routes.REGISTER)
+  en("removeAuthToken called."), o.default.removeToken()
+}
+
+function el() {
+  V = !0, eu(), f.default.wait(() => {
+    (0, S.transitionTo)(A.Routes.REGISTER)
   })
 }
 
-function el(e) {
-  et("handleLogout called."), ea(), er(), !(null == e ? void 0 : e.isSwitchingAccount) && en(), u.default.PersistedStore.clearAll({
+function eu(e) {
+  en("handleLogout called."), eo(), es(), !(null == e ? void 0 : e.isSwitchingAccount) && ei(), u.default.PersistedStore.clearAll({
     omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
     type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-  }), C.default.clearAll(), p.clear(), g.default.clearUser(), d.default.remove(y), P = null, k = (null == e ? void 0 : e.isSwitchingAccount) ? v.LoginStates.LOGGING_IN : v.LoginStates.NONE, x = v.RegistrationStates.NONE, B = "", K = "", Y = null, H = !1, z = !1, q = !1, X = {}, Q = {}
+  }), v.default.clearAll(), h.clear(), I.default.clearUser(), d.default.remove(P), L = null, x = (null == e ? void 0 : e.isSwitchingAccount) ? A.LoginStates.LOGGING_IN : A.LoginStates.NONE, F = A.RegistrationStates.NONE, H = "", z = "", j = null, Y = !1, q = !1, X = !1, Q = {}, Z = {}
 }
-class eu extends u.default.Store {
+class ec extends u.default.Store {
   initialize() {
-    P = d.default.get(y), L = d.default.get(D), $ = d.default.get("login_cache"), null == o.default.getToken() && en()
+    L = d.default.get(P), b = d.default.get(y), ee = d.default.get("login_cache"), null == o.default.getToken() && ei(), this.addChangeListener(() => (0, p.setClientState)(L))
   }
   getEmail() {
-    return L
-  }
-  getLogin() {
-    return $
-  }
-  didVerifyFail() {
-    return z
-  }
-  getVerifyErrors() {
-    return X
-  }
-  didVerifySucceed() {
-    return q
-  }
-  getLoginStatus() {
-    return k
-  }
-  getRegisterStatus() {
-    return x
-  }
-  getId() {
-    return P
-  }
-  getSessionId() {
     return b
   }
-  getAuthSessionIdHash() {
-    return M
+  getLogin() {
+    return ee
   }
-  getToken() {
-    return (0, T.getToken)()
+  didVerifyFail() {
+    return q
   }
-  isAuthenticated() {
-    return (0, T.isAuthenticated)()
-  }
-  getFingerprint() {
-    return U
-  }
-  getAnalyticsToken() {
-    return w
-  }
-  getErrors() {
+  getVerifyErrors() {
     return Q
   }
-  getMFATicket() {
-    return B
+  didVerifySucceed() {
+    return X
   }
-  getMFASMS() {
+  getLoginStatus() {
+    return x
+  }
+  getRegisterStatus() {
+    return F
+  }
+  getId() {
+    return L
+  }
+  getSessionId() {
+    return M
+  }
+  getAuthSessionIdHash() {
+    return U
+  }
+  getToken() {
+    return (0, g.getToken)()
+  }
+  isAuthenticated() {
+    return (0, g.isAuthenticated)()
+  }
+  getFingerprint() {
+    return G
+  }
+  getAnalyticsToken() {
+    return k
+  }
+  getErrors() {
+    return Z
+  }
+  getMFATicket() {
     return H
   }
-  getMFATotp() {
-    return j
+  getMFASMS() {
+    return Y
   }
-  getMFABackup() {
+  getMFATotp() {
     return W
   }
+  getMFABackup() {
+    return K
+  }
   getMFAWebAuthn() {
-    return Y
+    return j
   }
   getMFAMethods() {
     let e = [];
-    return null != Y && e.push({
+    return null != j && e.push({
       type: "webauthn",
-      challenge: Y
-    }), j && e.push({
-      type: "totp",
-      backup_codes_allowed: W
+      challenge: j
     }), W && e.push({
+      type: "totp",
+      backup_codes_allowed: K
+    }), K && e.push({
       type: "backup"
-    }), H && e.push({
+    }), Y && e.push({
       type: "sms"
     }), e
   }
   hasTOTPEnabled() {
-    return V.includes(E.AuthenticatorType.TOTP)
+    return B.includes(E.AuthenticatorType.TOTP)
   }
   hasSMSEnabled() {
-    return V.includes(E.AuthenticatorType.SMS)
+    return B.includes(E.AuthenticatorType.SMS)
   }
   hasWebAuthnEnabled() {
-    return V.includes(E.AuthenticatorType.WEBAUTHN)
+    return B.includes(E.AuthenticatorType.WEBAUTHN)
   }
   getMaskedPhone() {
-    return K
+    return z
   }
   getCredentials() {
     if (null == i) throw Error("no credentials");
     return i
   }
   getVerifyingUserId() {
-    return Z
+    return J
   }
   getCurrentRegistrationOptions() {
     return r
   }
   allowLogoutRedirect() {
-    return !F
+    return !V
   }
   getWebAuthnChallenge() {
-    return Y
+    return j
   }
   getSuspendedUserToken() {
-    return ee
+    return et
   }
 }
-eu.displayName = "AuthenticationStore";
-var ec = new eu(f.default, {
+ec.displayName = "AuthenticationStore";
+var ed = new ec(f.default, {
   CONNECTION_OPEN: function(e) {
     var t;
     let {
@@ -256,7 +257,7 @@ var ec = new eu(f.default, {
       analyticsToken: s,
       auth: a
     } = e;
-    et("handleConnectionOpen called"), g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, S.default)(n)), b = i, M = r, w = s, P = n.id, L = n.email, void 0 !== a && (V = a.authenticator_types), d.default.set(D, n.email), d.default.set(y, n.id)
+    en("handleConnectionOpen called"), I.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, m.default)(n)), M = i, U = r, k = s, L = n.id, b = n.email, void 0 !== a && (B = a.authenticator_types), d.default.set(y, n.email), d.default.set(P, n.id)
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -266,48 +267,48 @@ var ec = new eu(f.default, {
       analyticsToken: r,
       token: s
     } = e;
-    g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, S.default)(n)), b = i, w = r, es(s), er(), P = n.id, d.default.set(y, n.id)
+    I.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, m.default)(n)), M = i, k = r, ea(s), es(), L = n.id, d.default.set(P, n.id)
   },
   CONNECTION_CLOSED: function(e) {
     let {
       code: t
     } = e;
-    if (et("handleConnectionClosed called with code ".concat(t, ".")), 4004 === t) {
-      if (F || R(A.NEW_USER_AGE_GATE_MODAL_KEY) || R(A.EXISTING_USER_AGE_GATE_MODAL_KEY)) {
-        eo();
+    if (en("handleConnectionClosed called with code ".concat(t, ".")), 4004 === t) {
+      if (V || N(R.NEW_USER_AGE_GATE_MODAL_KEY) || N(R.EXISTING_USER_AGE_GATE_MODAL_KEY)) {
+        el();
         return
       }
-      m.default.track(v.AnalyticEvents.APP_USER_DEAUTHENTICATED, {
-        user_id: d.default.get(y)
-      }), el(), setImmediate(() => (0, _.transitionTo)(v.Routes.DEFAULT_LOGGED_OUT))
+      T.default.track(A.AnalyticEvents.APP_USER_DEAUTHENTICATED, {
+        user_id: d.default.get(P)
+      }), eu(), setImmediate(() => (0, S.transitionTo)(A.Routes.DEFAULT_LOGGED_OUT))
     }
   },
   AUTH_SESSION_CHANGE: function(e) {
     let {
       authSessionIdHash: t
     } = e;
-    null != t && (M = t)
+    null != t && (U = t)
   },
   LOGIN: function(e) {
-    Q = {}, k = v.LoginStates.LOGGING_IN, K = "", r = null, null != e.login && ($ = e.login)
+    Z = {}, x = A.LoginStates.LOGGING_IN, z = "", r = null, null != e.login && (ee = e.login)
   },
   LOGIN_SUCCESS: function(e) {
     let {
       token: t
     } = e;
-    k = v.LoginStates.NONE, es(t), er(), B = "", H = !1, Y = null, K = ""
+    x = A.LoginStates.NONE, ea(t), es(), H = "", Y = !1, j = null, z = ""
   },
   LOGIN_FAILURE: function(e) {
     let {
       error: t
     } = e;
-    B = "", H = !1, Y = null, k = null != (Q = function(e) {
+    H = "", Y = !1, j = null, x = null != (Z = function(e) {
       if (Object.keys(e.fields).length > 0) return e.fields;
       let t = {
         message: e.message
       };
       return null != e.retryAfter && (t.retry_after = e.retryAfter), t
-    }(t)).date_of_birth ? v.LoginStates.LOGIN_AGE_GATE : v.LoginStates.NONE
+    }(t)).date_of_birth ? A.LoginStates.LOGIN_AGE_GATE : A.LoginStates.NONE
   },
   LOGIN_MFA_STEP: function(e) {
     let {
@@ -317,62 +318,62 @@ var ec = new eu(f.default, {
       backup: r,
       totp: s
     } = e;
-    null != t && (B = t, H = n, K = "", Y = null != i ? i : null, W = r, j = s), Q = {}, k = v.LoginStates.MFA_STEP
+    null != t && (H = t, Y = n, z = "", j = null != i ? i : null, K = r, W = s), Z = {}, x = A.LoginStates.MFA_STEP
   },
   LOGIN_MFA: function() {
-    k = v.LoginStates.LOGGING_IN_MFA
+    x = A.LoginStates.LOGGING_IN_MFA
   },
   LOGIN_MFA_FAILURE: function(e) {
     let {
       message: t
     } = e;
-    k = v.LoginStates.MFA_STEP, Q = {
+    x = A.LoginStates.MFA_STEP, Z = {
       code: t
     }
   },
   LOGIN_MFA_SMS: function() {
-    k = v.LoginStates.LOGGING_IN_MFA_SMS
+    x = A.LoginStates.LOGGING_IN_MFA_SMS
   },
   LOGIN_MFA_SMS_REQUEST_SUCCESS: function(e) {
     let {
       phone: t
     } = e;
-    k = v.LoginStates.MFA_SMS_STEP, K = t
+    x = A.LoginStates.MFA_SMS_STEP, z = t
   },
   LOGIN_MFA_SMS_FAILURE: function(e) {
     let {
       message: t
     } = e;
-    k = v.LoginStates.MFA_SMS_STEP, Q = {
+    x = A.LoginStates.MFA_SMS_STEP, Z = {
       code: t
     }
   },
   LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION: function(e) {
-    k = v.LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION, i = e.credentials
+    x = A.LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION, i = e.credentials
   },
   LOGIN_ACCOUNT_DISABLED: function(e) {
-    k = v.LoginStates.ACCOUNT_DISABLED, i = e.credentials
+    x = A.LoginStates.ACCOUNT_DISABLED, i = e.credentials
   },
   LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION: function() {
-    k = v.LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION
+    x = A.LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION
   },
   LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED: function() {
-    k = v.LoginStates.PHONE_IP_AUTHORIZATION
+    x = A.LoginStates.PHONE_IP_AUTHORIZATION
   },
   LOGIN_RESET: function(e) {
     let {
       isMultiAccount: t
     } = e;
-    Q = {}, k = v.LoginStates.NONE, B = "", H = !1, Y = null, r = null, i = null, !t && (ea(), en(!1))
+    Z = {}, x = A.LoginStates.NONE, H = "", Y = !1, j = null, r = null, i = null, !t && (eo(), ei(!1))
   },
   LOGIN_STATUS_RESET: function() {
-    k = v.LoginStates.NONE
+    x = A.LoginStates.NONE
   },
   LOGIN_SUSPENDED_USER: function(e) {
     let {
       suspendedUserToken: t
     } = e;
-    ee = t, setImmediate(() => (0, _.transitionTo)(v.Routes.ACCOUNT_STANDING))
+    et = t, setImmediate(() => (0, S.transitionTo)(A.Routes.ACCOUNT_STANDING))
   },
   SET_LOGIN_CREDENTIALS: function(e) {
     let {
@@ -384,14 +385,14 @@ var ec = new eu(f.default, {
       password: n
     }
   },
-  LOGOUT: el,
+  LOGOUT: eu,
   FINGERPRINT: function(e) {
     let t = e.fingerprint;
-    null == U ? null != t ? (m.default.track(v.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
-      old_fingerprint: null != G ? (0, l.extractId)(G) : null,
+    null == G ? null != t ? (T.default.track(A.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
+      old_fingerprint: null != w ? (0, l.extractId)(w) : null,
       new_fingerprint: (0, l.extractId)(t)
-    }), U = t, G = t, d.default.set(O, U)) : en() : null != t && U !== t && m.default.track(v.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
-      fingerprint: (0, l.extractId)(U),
+    }), G = t, w = t, d.default.set(D, G)) : ei() : null != t && G !== t && T.default.track(A.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+      fingerprint: (0, l.extractId)(G),
       dropped_fingerprint: (0, l.extractId)(t)
     })
   },
@@ -399,74 +400,74 @@ var ec = new eu(f.default, {
     let {
       form: t
     } = e;
-    r = t, x = v.RegistrationStates.REGISTER_AGE_GATE
+    r = t, F = A.RegistrationStates.REGISTER_AGE_GATE
   },
   REGISTER: function(e) {
     let {
       birthday: t
     } = e;
-    Q = {}, null != t && (a(null != r, "Got birthday in multistep registration without existing form"), r = {
+    Z = {}, null != t && (a(null != r, "Got birthday in multistep registration without existing form"), r = {
       ...r,
       birthday: t
-    }), x = v.RegistrationStates.REGISTERING
+    }), F = A.RegistrationStates.REGISTERING
   },
   REGISTER_SUCCESS: function(e) {
     let {
       token: t
     } = e;
-    x = v.RegistrationStates.NONE, r = null, es(t), er()
+    F = A.RegistrationStates.NONE, r = null, ea(t), es()
   },
   REGISTER_FAILURE: function(e) {
     let {
       error: t
     } = e;
-    Q = function(e) {
+    Z = function(e) {
       let t = {};
       if (t.error_code = e.code, null != e.errors) {
         for (let n of Object.keys(e.errors)) t[n] = [e.getFirstFieldErrorMessage(n)];
         return t
       }
       return t.message = e.message, null != e.retryAfter && (t.retry_after = e.retryAfter), t
-    }(t), x = null != t.getFieldErrors("date_of_birth") ? v.RegistrationStates.REGISTER_AGE_GATE : v.RegistrationStates.REGISTER_WITH_ERROR
+    }(t), F = null != t.getFieldErrors("date_of_birth") ? A.RegistrationStates.REGISTER_AGE_GATE : A.RegistrationStates.REGISTER_WITH_ERROR
   },
   VERIFY_FAILURE: function(e) {
     let {
       errors: t
     } = e;
-    z = !0, q = !1, X = null != t ? t : {}
+    q = !0, X = !1, Q = null != t ? t : {}
   },
   VERIFY_SUCCESS: function(e) {
-    q = !0, z = !1, X = {}, Z = e.verifyingUserId
+    X = !0, q = !1, Q = {}, J = e.verifyingUserId
   },
   START_SESSION: function() {
-    if (0 === Object.keys(Q).length) return !1;
-    Q = {}
+    if (0 === Object.keys(Z).length) return !1;
+    Z = {}
   },
   FORGOT_PASSWORD_REQUEST: function() {
-    k = v.LoginStates.FORGOT_PASSWORD, Q = {}
+    x = A.LoginStates.FORGOT_PASSWORD, Z = {}
   },
   FORGOT_PASSWORD_SENT: function() {
-    k = v.LoginStates.NONE, Q = {}
+    x = A.LoginStates.NONE, Z = {}
   },
   UPDATE_TOKEN: function(e) {
     let {
       token: t,
       userId: n
     } = e;
-    et("handleUpdateToken called"), es(t, n), er()
+    en("handleUpdateToken called"), ea(t, n), es()
   },
-  EXPERIMENTS_FETCH: ei,
+  EXPERIMENTS_FETCH: er,
   CURRENT_USER_UPDATE: function(e) {
     let {
       user: t
     } = e;
-    P = t.id, L = t.email, void 0 !== t.authenticator_types && (V = t.authenticator_types), d.default.set(D, t.email), d.default.set(y, t.id)
+    L = t.id, b = t.email, void 0 !== t.authenticator_types && (B = t.authenticator_types), d.default.set(y, t.email), d.default.set(P, t.id)
   },
-  AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: eo,
+  AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: el,
   CLEAR_AUTHENTICATION_ERRORS: function() {
-    Q = {}
+    Z = {}
   },
   CLOSE_SUSPENDED_USER: function() {
-    ee = null, k = v.LoginStates.NONE, el(), setImmediate(() => (0, _.transitionTo)(v.Routes.DEFAULT_LOGGED_OUT))
+    et = null, x = A.LoginStates.NONE, eu(), setImmediate(() => (0, S.transitionTo)(A.Routes.DEFAULT_LOGGED_OUT))
   }
 }, f.DispatchBand.Early)

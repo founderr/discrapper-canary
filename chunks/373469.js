@@ -62,14 +62,14 @@ function D(e) {
 }
 
 function v(e, t) {
-  return e === L.StreamTypes.CALL || p.default.canWithPartialContext(C.Permissions.VIEW_CHANNEL, {
-    channelId: t
-  })
+  let n = S.default.getBasicChannel(t);
+  return e === L.StreamTypes.CALL || null != n && p.default.canBasicChannel(C.BasicPermissions.VIEW_CHANNEL, n)
 }
 
 function U(e) {
-  let t = S.default.getChannel(e.channelId);
-  return !!v(e.streamType, e.channelId) || null != t && (0, _.canWatchStream)(t, R.default, T.default, p.default, s.default)[0]
+  if (v(e.streamType, e.channelId)) return !0;
+  let t = S.default.getBasicChannel(e.channelId);
+  return null != t && (0, _.canWatchStream)(t, R.default, T.default, p.default, s.default)[0]
 }
 class M extends a.default.Store {
   initialize() {

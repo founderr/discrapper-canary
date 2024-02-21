@@ -22,14 +22,9 @@ var c = new class e {
     for (let e of n) s[e.id] = e.value;
     return s
   }
-  handleClear(e) {
-    o.default.userSettingsTransaction(e).delete()
-  }
-  handleReset() {}
+  resetInMemoryState() {}
   constructor() {
     this.actions = {
-      CLEAR_CACHES: (e, t) => this.handleClear(t),
-      CLEAR_GUILD_CACHE: (e, t) => this.handleClear(t),
       CONNECTION_OPEN: () => this.throttledOnChange(),
       USER_SETTINGS_PROTO_UPDATE: () => this.throttledOnChange(),
       USER_SETTINGS_PROTO_ENQUEUE_UPDATE: () => this.throttledOnChange(),

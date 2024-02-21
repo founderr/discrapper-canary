@@ -773,7 +773,10 @@ function X() {
       }), I.ENABLE_CACHE_STORE && (0, a.jsx)(S.Button, {
         onClick: () => {
           E.default.dispatch({
-            type: "CLEAR_CACHES"
+            type: "CLEAR_CACHES",
+            reason: "Requested by user",
+            preventWritingCachesAgainThisSession: !0,
+            resetSocket: !0
           })
         },
         children: "Clear Caches"

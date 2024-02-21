@@ -26,6 +26,7 @@ class c extends i.Store {
     return null
   }
   carefullyOpenDatabase(e) {
+    if (this.preventWritingCachesAgainThisSession) return u.verbose("Not opening database because caches have been manually cleared."), null;
     if (null != e && !this.databases.has(e)) {
       let t = function(e) {
         return null
@@ -45,8 +46,8 @@ class c extends i.Store {
     let t = this.databases.get(e);
     u.log("removing database (user: ".concat(e, ", database: ").concat(t, ")")), null == t || t.close(), this.databases.delete(e), this.emitChange()
   }
-  handleClearCaches() {
-    this.replaceDisableAllDatabases("DatabaseManager (action: CLEAR_CACHES)")
+  handleClearCaches(e) {
+    e.preventWritingCachesAgainThisSession && (this.preventWritingCachesAgainThisSession = !0), this.replaceDisableAllDatabases("DatabaseManager (".concat(e.reason, ")"))
   }
   handleConnectionOpen() {
     let e = o.default.getId(),
@@ -63,6 +64,10 @@ class c extends i.Store {
     }
   }
   async carefullySpeculativelyOpen(e) {
+    if (this.preventWritingCachesAgainThisSession) {
+      u.verbose("Not opening database because caches have been manually cleared.");
+      return
+    }
     if (null != e) {
       let t = await f(e);
       null == t || this.databases.has(e) ? (u.verbose("discarding speculative database (".concat(e, " → ").concat(t, ")")), null == t || t.close()) : (u.verbose("added speculative database (".concat(e, " → ").concat(t, ")")), this.databases.set(e, t), this.emitChange())
@@ -70,11 +75,11 @@ class c extends i.Store {
   }
   constructor() {
     super(s.default, {
-      CLEAR_CACHES: () => this.handleClearCaches(),
+      CLEAR_CACHES: e => this.handleClearCaches(e),
       CONNECTION_CLOSED: () => this.handleAuthenticationStoreChanged(),
       CONNECTION_OPEN: () => this.handleConnectionOpen(),
       LOGOUT: () => this.handleAuthenticationStoreChanged()
-    }, s.DispatchBand.Early), this.databases = new Map, this.activeUserId = null
+    }, s.DispatchBand.Early), this.databases = new Map, this.activeUserId = null, this.preventWritingCachesAgainThisSession = !1
   }
 }
 

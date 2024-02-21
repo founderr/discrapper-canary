@@ -80,7 +80,7 @@ var _ = new class e {
   handleGuildDelete(e, t) {
     !e.guild.unavailable && this.deleteGuild(e.guild.id, t)
   }
-  handleReset() {}
+  resetInMemoryState() {}
   insertStale(e, t, n, l) {
     let i = r.default.messagesTransaction(l),
       u = s.default.lastTimeConnectedChanged();

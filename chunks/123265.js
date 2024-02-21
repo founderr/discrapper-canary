@@ -11,50 +11,66 @@ var s, i, r, a = n("446674"),
   l = n("41642"),
   f = n("342797");
 let _ = new o.default("GatewaySocket"),
-  c = new Set(["READY", "INITIAL_GUILD"]),
-  g = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]);
-(r = s || (s = {}))[r.Loading = 0] = "Loading", r[r.Loaded = 1] = "Loaded", i = class {
+  c = new Set(["INITIAL_GUILD", "READY"]),
+  g = new Set(["READY", "INITIAL_GUILD"]),
+  m = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]);
+(r = s || (s = {}))[r.NotStarted = 0] = "NotStarted", r[r.Loading = 1] = "Loading", r[r.Loaded = 2] = "Loaded", i = class {
   hasStuffToDispatchNow() {
-    return this.queue.length > 0 && 1 === this.queue[0].status
+    return this.queue.length > 0 && 2 === this.queue[0].status
   }
   processFirstQueuedDispatch(e) {
     let t = [];
-    for (; this.queue.length > 0 && e.has(this.queue[0].type) && 1 === this.queue[0].status;) t.push(this.queue.shift());
+    for (; this.queue.length > 0 && e.has(this.queue[0].type) && 2 === this.queue[0].status;) t.push(this.queue.shift());
     this.dispatchMultiple(t)
   }
   unpauseDispatchQueue() {
-    this.paused = !1, this.flush()
+    for (let e of (this.paused = !1, this.queue)) this.maybePreload(e);
+    this.flush()
   }
   receiveDispatch(e, t, n) {
-    var s;
     if (null == this.getDispatchHandler) throw Error("getDispatchHandler needs to be passed in first!");
-    let i = null === (s = this.getDispatchHandler(t)) || void 0 === s ? void 0 : s.preload(e),
-      r = {
-        data: e,
-        type: t,
-        compressionAnalytics: n,
-        status: null == i ? 1 : 0,
-        preloadPromise: i,
-        preloadedData: null
-      };
-    this.queue.push(r), null != i ? i.then(e => {
-      r.preloadedData = e, r.status = 1, this.scheduleFlush(t)
-    }).catch(e => this.socket.resetSocketOnError(e, t)) : this.scheduleFlush(t)
+    let s = {
+      data: e,
+      type: t,
+      compressionAnalytics: n,
+      status: 0,
+      preloadPromise: null,
+      preloadedData: null
+    };
+    this.queue.push(s), !this.maybePreload(s) && this.scheduleFlush(t)
+  }
+  maybePreload(e) {
+    if (this.paused && !c.has(e.type)) return !1;
+    if (0 === e.status) {
+      var t;
+      let n = null === (t = this.getDispatchHandler(e.type)) || void 0 === t ? void 0 : t.preload(e.data);
+      if (e.status = null == n ? 2 : 1, e.preloadPromise = n, null != n) return n.then(t => {
+        e.preloadedData = t, e.status = 2, this.scheduleFlush(e.type)
+      }).catch(t => this.socket.resetSocketOnDispatchError({
+        error: t,
+        action: e.type
+      })), !0
+    }
+    return !1
   }
   scheduleFlush(e) {
-    !this.paused && (c.has(e) ? (null != this.dispatchTimeout && clearTimeout(this.dispatchTimeout), this.flush()) : null == this.dispatchTimeout && (this.dispatchTimeout = setTimeout(this.flush, this.nextDispatchTimeout)))
+    !this.paused && (g.has(e) ? (null != this.dispatchTimeout && clearTimeout(this.dispatchTimeout), this.flush()) : null == this.dispatchTimeout && (this.dispatchTimeout = setTimeout(this.flush, this.nextDispatchTimeout)))
   }
   dispatchMultiple(e) {
+    if (0 === e.length) return;
     let t = "none",
       n = !1;
     try {
       this.socket.connectionState === l.default.RESUMING && a.default.Emitter.pause(150), a.default.Emitter.batched(() => {
         e.forEach(e => {
-          t = e.type, n = n || g.has(e.type), this.dispatchOne(e)
+          t = e.type, n = n || m.has(e.type), this.dispatchOne(e)
         }), u.default.flush()
       }), n && a.default.Emitter.resume()
     } catch (e) {
-      this.socket.resetSocketOnError(e, t)
+      this.socket.resetSocketOnDispatchError({
+        error: e,
+        action: t
+      })
     }
   }
   dispatchOne(e) {
@@ -84,7 +100,7 @@ let _ = new o.default("GatewaySocket"),
       clearTimeout(this.dispatchTimeout), this.dispatchTimeout = null;
       let e = Date.now(),
         t = 0;
-      for (; t < this.queue.length && 1 === this.queue[t].status; t++);
+      for (; t < this.queue.length && 2 === this.queue[t].status; t++);
       if (0 === t) return;
       let n = this.queue.splice(0, t);
       this.dispatchMultiple(n);

@@ -16,9 +16,9 @@ n.r(t), n.d(t, {
     return A
   }
 }), n("424973"), n("222007");
-var r, i, l = n("316693"),
-  u = n("446674"),
-  a = n("76393"),
+var r, i, l = n("446674"),
+  u = n("76393"),
+  a = n("233069"),
   o = n("923959"),
   s = n("305961"),
   d = n("957255"),
@@ -26,7 +26,7 @@ var r, i, l = n("316693"),
   _ = n("404008"),
   c = n("49111"),
   I = n("782340");
-let S = (e, t) => e.isPrivate() || t.can(l.default.combine(c.Permissions.CONNECT, c.Permissions.VIEW_CHANNEL), e);
+let S = (e, t) => (0, a.isPrivate)(e.type) || t.canBasicChannel(c.BasicPermissions.CONNECT | c.BasicPermissions.VIEW_CHANNEL, e);
 
 function T(e, t, n) {
   var r;
@@ -54,16 +54,16 @@ function p(e, t, n, r, i) {
   let l;
   if (null == e) return [!1, 2];
   let u = t.isInChannel(e.id),
-    a = (0, _.isChannelFull)(e, t, n),
-    o = S(e, r),
-    s = null != i.getAwaitingRemoteSessionInfo() || null != i.getRemoteSessionId();
-  s ? l = 0 : o || u ? a && !u && (l = 1) : l = 2;
-  let d = !__OVERLAY__ && !s && (u || o && !a);
-  return [d, l]
+    o = e instanceof a.ChannelRecordBase && (0, _.isChannelFull)(e, t, n),
+    s = S(e, r),
+    d = null != i.getAwaitingRemoteSessionInfo() || null != i.getRemoteSessionId();
+  d ? l = 0 : s || u ? o && !u && (l = 1) : l = 2;
+  let E = !__OVERLAY__ && !d && (u || s && !o);
+  return [E, l]
 }
 
 function N(e) {
-  return (0, u.useStateFromStoresArray)([E.default, s.default, d.default, a.default], () => p(e, E.default, s.default, d.default, a.default))
+  return (0, l.useStateFromStoresArray)([E.default, s.default, d.default, u.default], () => p(e, E.default, s.default, d.default, u.default))
 }
 
 function A(e, t, n) {

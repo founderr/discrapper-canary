@@ -19,7 +19,7 @@ var c = new class e {
       a = performance.now();
     return d.log("asynchronously loaded in ".concat(a - t, "ms (readStates: ").concat(n.length, ")")), n
   }
-  handleReset() {
+  resetInMemoryState() {
     this.readStateVersion = null
   }
   handleConnectionOpen(e) {
@@ -52,13 +52,8 @@ var c = new class e {
     let l = u.default.readStatesTransaction(e);
     l.delete(), n.forEach(e => l.put("".concat(e.type, "-").concat(e.channelId), e))
   }
-  handleClear(e) {
-    this.readStateVersion = null, u.default.readStatesTransaction(e).delete()
-  }
   constructor() {
     this.readStateVersion = null, this.actions = {
-      CLEAR_CACHES: (e, t) => this.handleClear(t),
-      CLEAR_GUILD_CACHE: (e, t) => this.handleClear(t),
       CONNECTION_OPEN: e => this.handleConnectionOpen(e),
       CHANNEL_PINS_ACK: e => this.handleReadStateAction(e),
       MESSAGE_ACK: e => this.handleReadStateAction(e),

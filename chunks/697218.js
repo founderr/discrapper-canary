@@ -110,6 +110,11 @@ function R(e) {
 }
 
 function N(e) {
+  if ("CACHE_LOADED" === e.type)
+    for (let n of e.channels) {
+      var t;
+      null === (t = n.rawRecipients) || void 0 === t || t.forEach(e => C(e, !1))
+    }
   if (null != e.users) {
     for (let t of e.users)
       if (!(t.id in _ && !("incomplete" in t))) _[t.id] = new d.default(t)
@@ -280,7 +285,6 @@ var F = new x(s.default, {
   },
   OVERLAY_INITIALIZE: N,
   CACHE_LOADED: N,
-  CACHE_LOADED_LAZY: N,
   USER_UPDATE: function(e) {
     let {
       user: t

@@ -1,44 +1,51 @@
 "use strict";
 n.r(t), n.d(t, {
   tryLoadAsync: function() {
-    return o
+    return a
   },
   tryLoadOrResetCacheGateway: function() {
-    return l
+    return o
   },
   tryLoadOrResetCacheGatewayAsync: function() {
-    return u
+    return l
   }
 });
 var i = n("913144"),
-  r = n("605250"),
-  s = n("723939");
-let a = new r.default("TryLoad");
-async function o(e) {
+  r = n("605250");
+let s = new r.default("TryLoad");
+async function a(e) {
   try {
     return await e()
   } catch (e) {
-    return a.log("database load failed.", e), null
+    return s.log("database load failed.", e), null
   }
 }
 
-function l(e, t) {
+function o(e, t) {
   try {
     return t()
   } catch (t) {
-    return a.log("".concat(e, ": exception thrown, resetting socket."), t, t.stack), s.default.replaceDisableAllDatabases("tryLoadOrResetCacheGateway (".concat(e, ")")), i.default.dispatch({
-      type: "RESET_CONNECTION",
-      badCache: !0
+    return s.log("".concat(e, ": exception thrown, resetting socket."), t, t.stack), i.default.dispatch({
+      type: "RESET_SOCKET",
+      args: {
+        error: t,
+        action: "tryLoadOrResetCacheGateway (".concat(e, ")"),
+        clearCache: !0
+      }
     }), null
   }
 }
-async function u(e, t) {
+async function l(e, t) {
   try {
     return await t()
   } catch (t) {
-    return a.log("".concat(e, ": exception thrown, resetting socket."), t, t.stack), s.default.replaceDisableAllDatabases("tryLoadOrResetCacheGateway (".concat(e, ")")), i.default.dispatch({
-      type: "RESET_CONNECTION",
-      badCache: !0
+    return s.log("".concat(e, ": exception thrown, resetting socket."), t, t.stack), i.default.dispatch({
+      type: "RESET_SOCKET",
+      args: {
+        error: t,
+        action: "tryLoadOrResetCacheGatewayAsync (".concat(e, ")"),
+        clearCache: !0
+      }
     }), null
   }
 }

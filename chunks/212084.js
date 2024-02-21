@@ -38,18 +38,12 @@ var a = new class e {
   handleOneGuildCreate(e, t) {
     null != e.stickers && this.replace(e.id, e.stickers, t), null != e.stickerUpdates && this.update(e.id, e.stickerUpdates.writes, e.stickerUpdates.deletes, t)
   }
-  handleClearGuildCache(e) {
-    this.clear(e)
-  }
-  handleReset() {}
+  resetInMemoryState() {}
   replace(e, t, n) {
     i.default.stickersTransaction(n).replaceAll(e, t)
   }
   delete(e, t) {
     i.default.stickersTransaction(t).delete(e)
-  }
-  clear(e) {
-    i.default.stickersTransaction(e).delete()
   }
   update(e, t, n, s) {
     let r = i.default.stickersTransaction(s);
@@ -58,7 +52,6 @@ var a = new class e {
   constructor() {
     this.actions = {
       BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
-      CLEAR_GUILD_CACHE: (e, t) => this.handleClearGuildCache(t),
       CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
       GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
       GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),

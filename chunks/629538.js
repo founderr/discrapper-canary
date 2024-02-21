@@ -38,18 +38,12 @@ var a = new class e {
   handleOneGuildCreate(e, t) {
     null != e.emojiUpdates ? this.update(e.id, e.emojiUpdates.writes, e.emojiUpdates.deletes, t) : null != e.emojis && this.replace(e.id, e.emojis, t)
   }
-  handleClearGuildCache(e) {
-    this.clear(e)
-  }
-  handleReset() {}
+  resetInMemoryState() {}
   replace(e, t, n) {
     i.default.emojisTransaction(n).replaceAll(e, t)
   }
   delete(e, t) {
     i.default.emojisTransaction(t).delete(e)
-  }
-  clear(e) {
-    i.default.emojisTransaction(e).delete()
   }
   update(e, t, n, s) {
     let r = i.default.emojisTransaction(s);
@@ -58,7 +52,6 @@ var a = new class e {
   constructor() {
     this.actions = {
       BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
-      CLEAR_GUILD_CACHE: (e, t) => this.handleClearGuildCache(t),
       CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
       GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
       GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),

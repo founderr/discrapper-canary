@@ -15,14 +15,13 @@ var u = new class e {
     let t = performance.now(),
       n = await r.default.userGuildSettings(e).getMany(),
       a = performance.now();
-    return o.log("asynchronously loaded in ".concat(a - t, "ms (readStates: ").concat(n.length, ")")), n
+    return o.log("asynchronously loaded in ".concat(a - t, "ms (userGuildSettings: ").concat(n.length, ")")), n
   }
-  handleReset() {}
+  resetInMemoryState() {}
   handleConnectionOpen(e, t) {
-    this.cleared = !1, !e.userGuildSettings.partial && r.default.userGuildSettingsTransaction(t).delete(), this.write(e.userGuildSettings.entries, e.userGuildSettings.version, t)
+    !e.userGuildSettings.partial && r.default.userGuildSettingsTransaction(t).delete(), this.write(e.userGuildSettings.entries, e.userGuildSettings.version, t)
   }
   handleUserGuildSettingsUpdate(e, t) {
-    if (this.cleared) return;
     let n = s.max(e.userGuildSettings.map(e => {
       var t;
       return null !== (t = e.version) && void 0 !== t ? t : -1
@@ -45,13 +44,8 @@ var u = new class e {
       version: t
     })
   }
-  handleClear(e) {
-    this.cleared = !0, r.default.userGuildSettingsTransaction(e).delete()
-  }
   constructor() {
-    this.cleared = !1, this.actions = {
-      CLEAR_CACHES: (e, t) => this.handleClear(t),
-      CLEAR_GUILD_CACHE: (e, t) => this.handleClear(t),
+    this.actions = {
       CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
       USER_GUILD_SETTINGS_FULL_UPDATE: (e, t) => this.handleUserGuildSettingsUpdate(e, t)
     }

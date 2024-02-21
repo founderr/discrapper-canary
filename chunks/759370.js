@@ -41,9 +41,6 @@ var C = new class e {
       })
     }
   }
-  handleClearGuildCache(e) {
-    f.default.basicChannelsTransaction(e).delete(), f.default.syncedBasicChannelsTransaction(e).delete(), this.handleReset()
-  }
   handleChannelCreate(e, t) {
     null != e.channel.guild_id && this.unsync(e.channel.guild_id, t)
   }
@@ -78,17 +75,18 @@ var C = new class e {
     if (null == this.synced || null == t || !(0, a.isCacheEnabled)()) return;
     let n = u.default.getGuildIds(),
       s = n.filter(e => !this.synced.has(e));
-    for (let n of (h.verbose("scheduling basic_channel optimstic writes (guilds: ".concat(s.length, ")")), s)) {
-      if (t !== f.default.database() || e !== l.default.lastTimeConnectedChanged()) break;
-      h.verbose("optimstically writing basic_channels (guild: ".concat(n, ")"));
-      try {
-        await t.transaction(e => this.syncOne(n, e), "handlePostConnectionOpen")
-      } catch (e) {
-        h.warn("couldn't optimstically write basic_channel:", e);
-        return
+    for (let a of (h.verbose("scheduling basic_channel optimstic writes (guilds: ".concat(s.length, ")")), n))
+      if (!this.synced.has(a)) {
+        if (t !== f.default.database() || e !== l.default.lastTimeConnectedChanged()) break;
+        h.verbose("optimstically writing basic_channels (guild: ".concat(a, ")"));
+        try {
+          await o.ChannelLoader.loadGuildIds([a]), await t.transaction(e => this.syncOne(a, e), "handlePostConnectionOpen")
+        } catch (e) {
+          h.warn("couldn't optimstically write basic_channel:", e);
+          return
+        }
+        await new Promise(e => setTimeout(e, 1e3))
       }
-      await new Promise(e => setTimeout(e, 1e3))
-    }
   }
   handleGuildCreate(e, t) {
     this.handleOneGuildCreate(e.guild, t)
@@ -114,7 +112,7 @@ var C = new class e {
   handleWriteCaches(e, t) {
     this.sync(t)
   }
-  handleReset() {
+  resetInMemoryState() {
     this.synced = null
   }
   onGuildUpdate(e, t, n, a) {
@@ -160,7 +158,6 @@ var C = new class e {
       CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
       CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
       CHANNEL_UPDATES: (e, t) => this.handleChannelUpdates(e, t),
-      CLEAR_GUILD_CACHE: (e, t) => this.handleClearGuildCache(t),
       CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
       GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
       GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),

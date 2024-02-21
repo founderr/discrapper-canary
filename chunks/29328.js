@@ -57,7 +57,7 @@ var d = new class e {
       null != n && this.put(n.updateJoinedAt(e.joinedAt), t)
     }
   }
-  handleReset() {}
+  resetInMemoryState() {}
   putOne(e, t) {
     let n = l.default.getGuild(e.id),
       a = i.fromServer(e, n);
@@ -75,7 +75,6 @@ var d = new class e {
   constructor() {
     this.actions = {
       BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
-      CLEAR_GUILD_CACHE: (e, t) => this.clear(t),
       CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
       GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
       GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
