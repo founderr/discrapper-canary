@@ -87,15 +87,15 @@ let T = async e => {
       channelId: t
     }), null == t) return;
   let l = s.default.getChannel(t),
-    c = E.default.getResourceForChannel(e, t);
-  null != e && !a.default.isFullServerPreview(e) && null != l && null != c && o.default.track(h.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
+    f = E.default.getResourceForChannel(e, t);
+  null != e && !a.default.isFullServerPreview(e) && null != l && null != f && o.default.track(h.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
     guild_id: e,
     channel_id: l.id,
     server_guide_channel_type: "resource",
     channel_action_type: -1
   }), n && (0, d.transitionToChannel)(t), r.default.jumpToMessage({
     channelId: t,
-    messageId: t,
+    messageId: c.default.castChannelIdAsMessageId(t),
     flash: !1,
     jumpType: i.JumpTypes.INSTANT
   })

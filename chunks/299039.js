@@ -11,9 +11,13 @@ var i = n("249654"),
   r = {
     age: i.default.age,
     extractTimestamp: i.default.extractTimestamp,
-    fromTimestamp: i.default.fromTimestamp,
-    atPreviousMillisecond: i.default.atPreviousMillisecond,
     compare: i.default.compare,
+    atPreviousMillisecond: function(e) {
+      return i.default.atPreviousMillisecond(e)
+    },
+    fromTimestamp: function(e) {
+      return i.default.fromTimestamp(e)
+    },
     keys: function(e) {
       return Object.keys(e)
     },
@@ -22,5 +26,11 @@ var i = n("249654"),
     },
     entries: function(e) {
       return Object.entries(e)
+    },
+    castChannelIdAsMessageId: function(e) {
+      return e
+    },
+    castMessageIdAsChannelId: function(e) {
+      return e
     }
   }

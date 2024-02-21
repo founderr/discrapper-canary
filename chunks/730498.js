@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return i
   },
   usePrivateThreadMode: function() {
-    return y
-  },
-  getIsPrivate: function() {
     return D
   },
-  getDefaultThreadName: function() {
+  getIsPrivate: function() {
     return R
   },
-  useCreateThreadCommon: function() {
+  getDefaultThreadName: function() {
     return L
   },
-  createThread: function() {
+  useCreateThreadCommon: function() {
     return P
   },
-  useCreateForumPostCommon: function() {
+  createThread: function() {
     return U
+  },
+  useCreateForumPostCommon: function() {
+    return F
   }
 }), n("781738"), n("424973"), n("222007");
 var i, l, a = n("884691"),
@@ -39,33 +39,34 @@ var i, l, a = n("884691"),
   A = n("401848"),
   E = n("718517"),
   N = n("568734"),
-  g = n("252862"),
-  h = n("300322"),
-  S = n("24337"),
-  O = n("648564"),
-  M = n("49111"),
-  v = n("782340");
+  g = n("299039"),
+  h = n("252862"),
+  S = n("300322"),
+  O = n("24337"),
+  M = n("648564"),
+  v = n("49111"),
+  y = n("782340");
 
-function y(e) {
-  let t = (0, h.useCanStartPublicThread)(e),
-    n = (0, h.useCanStartPrivateThread)(e);
+function D(e) {
+  let t = (0, S.useCanStartPublicThread)(e),
+    n = (0, S.useCanStartPrivateThread)(e);
   return n ? t ? 2 : 3 : 1
 }
 
-function D(e, t) {
+function R(e, t) {
   var n;
   if (3 === t) return !0;
   return null !== (n = e.isPrivate) && void 0 !== n && n
 }
 
-function R(e, t) {
+function L(e, t) {
   var n, i, l, a;
   let o = null == t ? null : T.default.getMessage(e.id, t),
     r = null !== (l = null == o ? void 0 : null === (i = o.embeds) || void 0 === i ? void 0 : null === (n = i[0]) || void 0 === n ? void 0 : n.rawTitle) && void 0 !== l ? l : "";
   if ("" !== r) return r.length > 40 ? r.substring(0, 40) + "..." : r;
   {
     let t = m.default.unparse(null !== (a = null == o ? void 0 : o.content) && void 0 !== a ? a : "", e.id, !0),
-      n = (0, S.default)(t.split("\n")[0], !0);
+      n = (0, O.default)(t.split("\n")[0], !0);
     n = n.replace(/^[ #-]+/, "");
     let i = [];
     for (;;) {
@@ -86,7 +87,7 @@ function R(e, t) {
   }
 }
 
-function L(e) {
+function P(e) {
   let {
     parentChannel: t,
     parentMessageId: n,
@@ -100,37 +101,37 @@ function L(e) {
   return a.useCallback(async (e, a, _) => {
     var T;
     let A = null == n,
-      E = D(i, l),
+      E = R(i, l),
       N = null !== (T = i.name) && void 0 !== T ? T : "";
     if ("" === N && p) {
-      let e = R(t, n);
-      N = "" !== e ? e : v.default.Messages.THREAD
+      let e = L(t, n);
+      N = "" !== e ? e : y.default.Messages.THREAD
     }
-    let h = (0, g.getAutoArchiveDuration)(t),
-      S = I.default.getChannel(n),
-      O = await F(t, () => {
-        let e = null != n ? M.Endpoints.CHANNEL_MESSAGE_THREADS(t.id, n) : M.Endpoints.CHANNEL_THREADS(t.id);
+    let S = (0, h.getAutoArchiveDuration)(t),
+      O = I.default.getChannel(g.default.castMessageIdAsChannelId(n)),
+      M = await b(t, () => {
+        let e = null != n ? v.Endpoints.CHANNEL_MESSAGE_THREADS(t.id, n) : v.Endpoints.CHANNEL_THREADS(t.id);
         return o.default.post({
           url: e,
           body: {
             name: N,
-            type: E ? M.ChannelTypes.PRIVATE_THREAD : t.type === M.ChannelTypes.GUILD_ANNOUNCEMENT ? M.ChannelTypes.ANNOUNCEMENT_THREAD : M.ChannelTypes.PUBLIC_THREAD,
-            auto_archive_duration: h,
+            type: E ? v.ChannelTypes.PRIVATE_THREAD : t.type === v.ChannelTypes.GUILD_ANNOUNCEMENT ? v.ChannelTypes.ANNOUNCEMENT_THREAD : v.ChannelTypes.PUBLIC_THREAD,
+            auto_archive_duration: S,
             location: r
           }
         })
       });
-    O !== S && (u.default.clearDraft(t.id, C.DraftType.ThreadSettings), u.default.clearDraft(t.id, C.DraftType.FirstThreadMessage), null == s || s(O), (A || e.length > 0 || null != a && a.length > 0 || null != _ && _.length > 0) && function(e, t, n, i, l) {
+    M !== O && (u.default.clearDraft(t.id, C.DraftType.ThreadSettings), u.default.clearDraft(t.id, C.DraftType.FirstThreadMessage), null == s || s(M), (A || e.length > 0 || null != a && a.length > 0 || null != _ && _.length > 0) && function(e, t, n, i, l) {
       if (null != l && null != i && i.length > 0) l(e, i, t, n);
       else if (null != n && n.length > 0) d.default.sendStickers(e.id, n, t);
       else d.default.sendMessage(e.id, m.default.parse(e, t))
-    }(O, e, a, _, f)), c.default.clearAll(t.id, C.DraftType.FirstThreadMessage)
+    }(M, e, a, _, f)), c.default.clearAll(t.id, C.DraftType.FirstThreadMessage)
   }, [t, n, i, s, l, r, p, f])
 }
 
-function P(e, t, n, i, l) {
-  return F(e, () => o.default.post({
-    url: M.Endpoints.CHANNEL_THREADS(e.id),
+function U(e, t, n, i, l) {
+  return b(e, () => o.default.post({
+    url: v.Endpoints.CHANNEL_THREADS(e.id),
     body: {
       name: t,
       type: n,
@@ -140,7 +141,7 @@ function P(e, t, n, i, l) {
   }))
 }
 
-function U(e) {
+function F(e) {
   let {
     parentChannel: t,
     name: n,
@@ -151,9 +152,9 @@ function U(e) {
   return a.useCallback(async (e, a, s) => {
     let d = 0,
       [p, m] = (0, _.default)(e);
-    p && (e = m, d = (0, N.addFlag)(d, M.MessageFlags.SUPPRESS_NOTIFICATIONS));
-    let I = (0, g.getAutoArchiveDuration)(t, null),
-      T = M.Endpoints.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
+    p && (e = m, d = (0, N.addFlag)(d, v.MessageFlags.SUPPRESS_NOTIFICATIONS));
+    let I = (0, h.getAutoArchiveDuration)(t, null),
+      T = v.Endpoints.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
       A = {
         name: n,
         auto_archive_duration: I,
@@ -164,7 +165,7 @@ function U(e) {
           flags: 0 !== d ? d : void 0
         }
       },
-      E = await F(t, () => null != s && s.length > 0 ? r(T, A, s) : o.default.post({
+      E = await b(t, () => null != s && s.length > 0 ? r(T, A, s) : o.default.post({
         url: T,
         body: A
       }));
@@ -175,13 +176,13 @@ function U(e) {
     }), null == l || l(E), E
   }, [t, n, l, i, r])
 }(l = i || (i = {}))[l.Disabled = 1] = "Disabled", l[l.Enabled = 2] = "Enabled", l[l.PrivateOnly = 3] = "PrivateOnly";
-async function F(e, t) {
+async function b(e, t) {
   let n;
   let i = e.isForumLikeChannel();
   try {
     n = await t(), null == n.body ? s.default.show({
-      title: v.default.Messages.ERROR,
-      body: v.default.Messages.ERROR_OCCURRED_TRY_AGAIN
+      title: y.default.Messages.ERROR,
+      body: y.default.Messages.ERROR_OCCURRED_TRY_AGAIN
     }) : (r.default.dispatch({
       type: "SLOWMODE_RESET_COOLDOWN",
       slowmodeType: A.SlowmodeType.CreateThread,
@@ -192,15 +193,15 @@ async function F(e, t) {
     }))
   } catch (t) {
     var l, a, o, u, d, c;
-    if ((null === (l = t.body) || void 0 === l ? void 0 : l.code) === M.AbortCodes.TOO_MANY_THREADS) s.default.show({
-      title: i ? v.default.Messages.CANNOT_CREATE_FORUM_POST : v.default.Messages.CANNOT_CREATE_THREAD,
-      body: i ? v.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : v.default.Messages.TOO_MANY_THREADS_MESSAGE
+    if ((null === (l = t.body) || void 0 === l ? void 0 : l.code) === v.AbortCodes.TOO_MANY_THREADS) s.default.show({
+      title: i ? y.default.Messages.CANNOT_CREATE_FORUM_POST : y.default.Messages.CANNOT_CREATE_THREAD,
+      body: i ? y.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : y.default.Messages.TOO_MANY_THREADS_MESSAGE
     });
-    else if ((null === (a = t.body) || void 0 === a ? void 0 : a.code) === M.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS) s.default.show({
-      title: v.default.Messages.CANNOT_CREATE_THREAD,
-      body: v.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
+    else if ((null === (a = t.body) || void 0 === a ? void 0 : a.code) === v.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS) s.default.show({
+      title: y.default.Messages.CANNOT_CREATE_THREAD,
+      body: y.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
     });
-    else if ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === M.AbortCodes.SLOWMODE_RATE_LIMITED) {
+    else if ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === v.AbortCodes.SLOWMODE_RATE_LIMITED) {
       let n = null !== (c = t.body.retry_after) && void 0 !== c ? c : 0;
       n > 0 && r.default.dispatch({
         type: "SLOWMODE_SET_COOLDOWN",
@@ -209,12 +210,12 @@ async function F(e, t) {
         cooldownMs: n * E.default.Millis.SECOND
       })
     } else if (429 === t.status) s.default.show({
-      title: i ? v.default.Messages.CANNOT_CREATE_FORUM_POST : v.default.Messages.CANNOT_CREATE_THREAD,
-      body: v.default.Messages.RATE_LIMITED
+      title: i ? y.default.Messages.CANNOT_CREATE_FORUM_POST : y.default.Messages.CANNOT_CREATE_THREAD,
+      body: y.default.Messages.RATE_LIMITED
     });
-    else if (O.FORUM_POST_CREATION_AUTOMOD_ERRORS.has(null === (u = t.body) || void 0 === u ? void 0 : u.code)) throw t;
+    else if (M.FORUM_POST_CREATION_AUTOMOD_ERRORS.has(null === (u = t.body) || void 0 === u ? void 0 : u.code)) throw t;
     else {
-      if (O.FORUM_POST_CREATION_UPLOAD_ERRORS.has(null === (d = t.body) || void 0 === d ? void 0 : d.code)) return new Promise((e, n) => {
+      if (M.FORUM_POST_CREATION_UPLOAD_ERRORS.has(null === (d = t.body) || void 0 === d ? void 0 : d.code)) return new Promise((e, n) => {
         null == t.body && n(), p.default.addConditionalChangeListener(() => {
           let t = p.default.getAndDeleteMostRecentUserCreatedThreadId();
           if (null != t) {
@@ -226,8 +227,8 @@ async function F(e, t) {
         })
       });
       s.default.show({
-        title: v.default.Messages.ERROR,
-        body: v.default.Messages.ERROR_OCCURRED_TRY_AGAIN
+        title: y.default.Messages.ERROR,
+        body: y.default.Messages.ERROR_OCCURRED_TRY_AGAIN
       })
     }
   }

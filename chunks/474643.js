@@ -177,7 +177,7 @@ var I = new C(d.default, {
     if (null == i) return !1;
     let r = i[1];
     if (null == r) return !1;
-    if (r.parentMessageId !== t.id) return !1;
+    if (r.parentMessageId !== l.default.castChannelIdAsMessageId(t.id)) return !1;
     {
       var a, o;
       let e = s[t.parent_id];

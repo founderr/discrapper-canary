@@ -99,7 +99,7 @@ function p(e, t, n) {
     }), null != s.thumbnail && v(n.video) && function(e, t, n) {
       if (null != t && f.test(t.name) || _.test(n.url)) return !1;
       let s = null != n.proxy_url || /^https:/i.test(n.url);
-      return 1492472454139 > u.default.extractTimestamp(e) && (s = s && null != t && c.test(t.name)), s
+      return null != e && 1492472454139 > u.default.extractTimestamp(e) && (s = s && null != t && c.test(t.name)), s
     }(t, n.provider, n.video) && (s.video = E(n.video))), h.has(s.type)) {
     var r;
     let e = null !== (r = n.fields) && void 0 !== r ? r : [];

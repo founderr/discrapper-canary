@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("446674"),
-  i = n("913144"),
-  a = n("692038"),
+  a = n("913144"),
+  i = n("692038"),
   s = n("42203"),
   r = n("697218"),
   u = n("449008"),
@@ -22,7 +22,7 @@ function c(e) {
 }
 
 function f(e, t) {
-  let n = null == t ? null : (0, a.createMessageRecord)(t);
+  let n = null == t ? null : (0, i.createMessageRecord)(t);
   return d[e] = {
     loaded: !0,
     message: n
@@ -59,13 +59,13 @@ class h extends l.default.Store {
   }
 }
 h.displayName = "ForumPostRecentMessageStore";
-var p = new h(i.default, {
+var p = new h(a.default, {
   CONNECTION_OPEN: function() {
     d = {}
   },
   MESSAGE_CREATE: function(e) {
     if (e.isPushNotification || !c(e.message)) return !1;
-    e.message.channel_id === e.message.id ? f(e.message.channel_id, null) : f(e.message.channel_id, e.message)
+    e.message.channel_id === o.default.castMessageIdAsChannelId(e.message.id) ? f(e.message.channel_id, null) : f(e.message.channel_id, e.message)
   },
   MESSAGE_UPDATE: function(e) {
     if (!c(e.message) || e.message.channel_id === e.message.id) return !1;
@@ -76,7 +76,7 @@ var p = new h(i.default, {
         l = g(e);
       null != n && null != l && (d[e] = {
         ...n,
-        message: (0, a.updateMessageRecord)(l, t)
+        message: (0, i.updateMessageRecord)(l, t)
       })
     }(e.message.channel_id, e.message)
   },

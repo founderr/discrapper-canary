@@ -139,7 +139,7 @@ var y = e => {
           className: "theme-".concat(R),
           ref: w,
           children: (0, l.jsx)(m.ReactionPicker, {
-            messageId: "",
+            messageId: v.EMPTY_STRING_MESSAGE_ID,
             channel: N,
             closePopout: () => {
               L(!1)
