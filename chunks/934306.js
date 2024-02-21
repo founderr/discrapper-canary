@@ -23,9 +23,9 @@ function o() {
 }
 
 function l() {
-  return !(0, r.getNavYouBarExperiment)({
+  return (0, i.isInMainTabsExperiment)() && !(0, r.getNavYouBarExperiment)({
     location: "isSplitMessagesTab"
-  }).showYouBar && (0, i.isInMainTabsExperiment)()
+  }).showYouBar
 }
 
 function u() {
@@ -35,7 +35,5 @@ function u() {
 }
 
 function c(e) {
-  return !!o() && ((0, r.getNavYouBarExperiment)({
-    location: "shouldHandleNewPanelsRoute"
-  }).showYouBar ? null != e : null != e && e !== a.ME)
+  return !!o() && (!l() || null != e && e !== a.ME)
 }
