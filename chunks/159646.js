@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  i = s.n(n),
+var i = s("414456"),
+  n = s.n(i),
   r = s("77078"),
   l = s("79112"),
   o = s("423487"),
@@ -19,38 +19,39 @@ var n = s("414456"),
   I = s("782340"),
   T = s("555875"),
   f = e => {
-    let t, {
-        premiumSubscription: s,
-        className: n,
-        isFullscreen: f = !1
+    let t, s, {
+        premiumSubscription: i,
+        className: f,
+        isFullscreen: S = !1,
+        textColor: R
       } = e,
-      S = (0, c.useIsInPremiumOfferExperience)();
-    if (null == s) return null;
-    let R = null != s ? d.default.getPremiumPlanItem(s) : null,
-      m = d.default.isBoostOnlySubscription(s);
-    if (m ? t = I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != R && (t = d.default.getDisplayPremiumType(R.planId)), null == t) return null;
-    let A = () => l.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
-      N = null != R ? d.default.getSkuIdForPlan(R.planId) : null,
-      p = N === _.PremiumSubscriptionSKUs.TIER_1;
-    return (0, a.jsxs)(r.Card, {
-      className: i(T.container, n, {
-        [T.lightTextLink]: f,
-        [T.centerText]: S
+      m = (0, c.useIsInPremiumOfferExperience)();
+    if (null == i) return null;
+    let A = null != i ? d.default.getPremiumPlanItem(i) : null,
+      p = d.default.isBoostOnlySubscription(i);
+    if (p ? t = I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != A && (t = d.default.getDisplayPremiumType(A.planId)), null == t) return null;
+    let N = () => l.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
+      g = null != A ? d.default.getSkuIdForPlan(A.planId) : null,
+      P = g === _.PremiumSubscriptionSKUs.TIER_1;
+    return s = null != R ? R : m || S ? "always-white" : "text-normal", (0, a.jsxs)(r.Card, {
+      className: n(T.container, f, {
+        [T.lightTextLink]: S,
+        [T.centerText]: m
       }),
       type: r.Card.Types.CUSTOM,
       children: [(0, a.jsx)(o.default, {
-        className: i(T.icon, {
-          [T.lightThemeColorOnly]: S || f
+        className: n(T.icon, {
+          [T.lightThemeColorOnly]: m || S
         })
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/medium",
-        color: S || f ? "always-white" : "text-normal",
-        children: p ? I.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
+        color: s,
+        children: P ? I.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
           helpdeskArticle: u.default.getArticleURL(E.HelpdeskArticles.PREMIUM_DETAILS),
-          onSubscriptionsClick: A
+          onSubscriptionsClick: N
         }) : I.default.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
           subscriptionName: t,
-          onSubscriptionsClick: A
+          onSubscriptionsClick: N
         })
       })]
     })

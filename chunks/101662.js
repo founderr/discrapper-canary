@@ -25,6 +25,7 @@ e.exports = {
   perksCardArt: "perksCardArt__35e0c",
   perksContainer: "perksContainer_e3fd5b",
   perksTitle: "perksTitle__110ba",
+  perksTitleStackedCards: "perksTitleStackedCards__69da1",
   reducedMotion: "reducedMotion__7a424",
   remixingImage: "remixingImage__065a3",
   sizeGizmo: "sizeGizmo__67851",

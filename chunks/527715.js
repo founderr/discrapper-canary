@@ -1,32 +1,40 @@
 "use strict";
 s.r(t), s.d(t, {
-  default: function() {
-    return i
+  useMarketingOptimizationExperiment: function() {
+    return r
   }
 });
-var a = s("862205");
+var a = s("862205"),
+  i = s("706922");
 let n = (0, a.createExperiment)({
-  kind: "user",
-  id: "2024-02_all_marketing_page_optimization_phase_1",
-  label: "Marketing Page Optimizations - Phase 1",
-  defaultConfig: {
-    enabled: !1
-  },
-  treatments: [{
-    id: 1,
-    label: "Enabled",
-    config: {
-      enabled: !0
-    }
-  }]
-});
-var i = function() {
-  let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-    t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return n.useExperiment({
-    location: "experiment_hook"
-  }, {
-    autoTrackExposure: e,
-    disable: t
-  })
-}
+    kind: "user",
+    id: "2024-02_all_marketing_page_optimization_phase_1",
+    label: "Marketing Page Optimizations - Phase 1",
+    defaultConfig: {
+      enabled: !1
+    },
+    treatments: [{
+      id: 1,
+      label: "Enabled",
+      config: {
+        enabled: !0
+      }
+    }]
+  }),
+  r = function() {
+    let {
+      autoTrackExposure: e
+    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+      autoTrackExposure: !1
+    }, t = i.AllPerksExperiment.useExperiment({
+      location: "Marketing Optimization"
+    }, {
+      autoTrackExposure: !1
+    }).enabled;
+    return n.useExperiment({
+      location: "experiment_hook"
+    }, {
+      autoTrackExposure: !t && e,
+      disable: t
+    }).enabled
+  }

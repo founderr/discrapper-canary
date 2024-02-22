@@ -1,91 +1,110 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return f
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  i = s("414456"),
-  r = s.n(i),
+  i = s("884691"),
+  n = s("414456"),
+  r = s.n(n),
   l = s("77078"),
   o = s("411691"),
-  u = s("367226"),
-  d = s("628550"),
-  c = s("598739"),
-  _ = s("558566"),
-  E = s("35505"),
-  I = e => {
-    let {
-      className: t,
-      variant: s = c.PerksDiscoverabilityVariants.PERKS_DISCOVERABILITY,
-      noBackground: i = !1,
-      leftAlignHeaders: I = !1,
-      showAllPerksButton: T
-    } = e, f = n.useRef(null), S = (0, u.useShouldScrollToWhatsNew)(), R = (0, o.default)("perks-discoverability");
-    (0, u.useClearNewBadge)();
-    let m = s === c.PerksDiscoverabilityVariants.WHATS_NEW;
-    n.useEffect(() => {
-      let e = f.current;
-      if (null == e || !S || !m) return;
-      let t = requestAnimationFrame(() => {
-        e.scrollIntoView({
-          behavior: "smooth"
-        })
-      });
-      return () => cancelAnimationFrame(t)
-    }, [f, S, m]);
-    let A = (0, c.usePerksDiscoverabilityStrings)(m),
-      N = (0, d.default)(),
-      p = (0, c.getFilteredPerksDiscoverabilityCards)(N, s, R),
-      g = p.some(e => null != e.pillText);
-    return (0, a.jsxs)("div", {
-      ref: f,
-      className: r(E.section, {
-        [E.centerAlignSection]: !I,
-        [E.leftAlignSection]: I
-      }, t),
-      children: [(() => {
-        let e = (0, a.jsx)(l.Heading, {
-          variant: "heading-xxl/extrabold",
-          color: "header-primary",
-          className: E.heading,
-          children: A.title
-        });
-        return null == T ? e : I ? (0, a.jsxs)("div", {
-          className: E.sectionHeader,
-          children: [e, null != T && (0, a.jsx)("div", {
-            className: E.showAllPerksButton,
-            children: T
-          })]
-        }) : (0, a.jsx)("div", {
-          className: E.container,
-          children: (0, a.jsx)("div", {
-            className: E.sectionHeaderSeeAll,
-            children: e
-          })
-        })
-      })(), (0, a.jsx)(l.Text, {
-        variant: "text-lg/normal",
-        color: "header-primary",
-        className: r(E.subtitle, {
-          [E.subtitle]: null == T || I,
-          [E.subtitleWithButton]: null != T && !I,
-          [E.fullWidth]: m || I,
-          [E.moreSubtitleMargin]: g,
-          [E.leftAlignSubtitle]: I,
-          [E.centerAlignSubtitle]: !I
-        }),
-        children: A.subtitle
-      }), !I && null != T && (0, a.jsx)("div", {
-        className: r(E.showAllPerksButtonCenter),
-        children: T
-      }), (0, a.jsx)("div", {
-        className: E.cardContainer,
-        children: p.map((e, t) => (0, a.jsx)(_.default, {
-          ...e,
-          forceShadow: i
-        }, "".concat(e.name, "_").concat(t)))
-      })]
+  u = s("527715"),
+  d = s("367226"),
+  c = s("628550"),
+  _ = s("598739"),
+  E = s("558566"),
+  I = s("35505");
+let T = e => {
+  let {
+    showAllPerksButton: t,
+    leftAlignHeaders: s,
+    title: i,
+    headerClassname: n
+  } = e, r = (0, a.jsx)(l.Heading, {
+    variant: "heading-xxl/extrabold",
+    color: "header-primary",
+    className: null != n ? n : I.heading,
+    children: i
+  });
+  return null == t ? r : s ? (0, a.jsxs)("div", {
+    className: I.sectionHeader,
+    children: [r, null != t && (0, a.jsx)("div", {
+      className: I.showAllPerksButton,
+      children: t
+    })]
+  }) : (0, a.jsx)("div", {
+    className: I.container,
+    children: (0, a.jsx)("div", {
+      className: I.sectionHeaderSeeAll,
+      children: r
     })
-  }
+  })
+};
+var f = e => {
+  let {
+    className: t,
+    variant: s = _.PerksDiscoverabilityVariants.PERKS_DISCOVERABILITY,
+    noBackground: n = !1,
+    leftAlignHeaders: f = !1,
+    showAllPerksButton: S,
+    headerClassname: R,
+    isFullScreen: m = !0
+  } = e, A = i.useRef(null), p = (0, d.useShouldScrollToWhatsNew)(), N = (0, o.default)("perks-discoverability"), g = (0, u.useMarketingOptimizationExperiment)({
+    autoTrackExposure: !1
+  });
+  (0, d.useClearNewBadge)();
+  let P = s === _.PerksDiscoverabilityVariants.WHATS_NEW;
+  i.useEffect(() => {
+    let e = A.current;
+    if (null == e || !p || !P) return;
+    let t = requestAnimationFrame(() => {
+      e.scrollIntoView({
+        behavior: "smooth"
+      })
+    });
+    return () => cancelAnimationFrame(t)
+  }, [A, p, P]);
+  let C = (0, _.usePerksDiscoverabilityStrings)(P),
+    O = (0, c.default)(),
+    M = (0, _.getFilteredPerksDiscoverabilityCards)(O, s, N, m),
+    h = M.some(e => null != e.pillText);
+  return (0, a.jsxs)("div", {
+    ref: A,
+    className: r(I.section, {
+      [I.centerAlignSection]: !f,
+      [I.leftAlignSection]: f
+    }, t),
+    children: [(0, a.jsx)(T, {
+      showAllPerksButton: S,
+      leftAlignHeaders: f,
+      title: C.title,
+      headerClassname: R
+    }), !g && (0, a.jsx)(l.Text, {
+      variant: "text-lg/normal",
+      color: "header-primary",
+      className: r(I.subtitle, {
+        [I.subtitle]: null == S || f,
+        [I.subtitleWithButton]: null != S && !f,
+        [I.fullWidth]: P || f,
+        [I.moreSubtitleMargin]: h,
+        [I.leftAlignSubtitle]: f,
+        [I.centerAlignSubtitle]: !f
+      }),
+      children: C.subtitle
+    }), !f && null != S && (0, a.jsx)("div", {
+      className: r(I.showAllPerksButtonCenter),
+      children: S
+    }), (0, a.jsx)("div", {
+      className: r({
+        [I.cardContainer]: m,
+        [I.cardContainerNarrowWidth]: !m
+      }),
+      children: M.map((e, t) => (0, a.jsx)(E.default, {
+        ...e,
+        forceShadow: n
+      }, "".concat(e.name, "_").concat(t)))
+    })]
+  })
+}

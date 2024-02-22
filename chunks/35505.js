@@ -1,6 +1,7 @@
 "use strict";
 e.exports = {
   cardContainer: "cardContainer__912d9",
+  cardContainerNarrowWidth: "cardContainerNarrowWidth_f10ffd",
   centerAlignSection: "centerAlignSection_e8acae",
   centerAlignSubtitle: "centerAlignSubtitle_f111db",
   container: "container__5980c",

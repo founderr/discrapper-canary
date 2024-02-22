@@ -1,47 +1,56 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return u
+    return I
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  i = s.n(n),
+var i = s("414456"),
+  n = s.n(i),
   r = s("77078"),
-  l = s("646718"),
-  o = s("497151"),
-  u = e => {
-    let {
-      selectedPremiumType: t,
-      setSelectedPremiumType: s
-    } = e;
-    return (0, a.jsxs)("div", {
-      className: i(o.toggleSwitch, {
-        [o.toggleSwitchStandard]: t === l.PremiumTypes.TIER_2,
-        [o.toggleSwitchBasic]: t === l.PremiumTypes.TIER_0
-      }),
-      children: [(0, a.jsx)(r.Clickable, {
-        className: o.toggleOption,
-        onClick: () => s(l.PremiumTypes.TIER_2),
-        children: (0, a.jsx)(r.Heading, {
-          className: o.sectionHeader,
-          variant: "heading-md/semibold",
-          children: "Nitro"
-        })
-      }), (0, a.jsx)("div", {
-        className: i(o.slider, {
-          [o.sliderStandard]: t === l.PremiumTypes.TIER_2,
-          [o.sliderBasic]: t === l.PremiumTypes.TIER_0
-        })
-      }), (0, a.jsx)(r.Clickable, {
-        className: o.toggleOption,
-        onClick: () => s(l.PremiumTypes.TIER_0),
-        children: (0, a.jsx)(r.Heading, {
-          className: o.sectionHeader,
-          variant: "heading-md/semibold",
-          children: "Basic"
-        })
-      })]
-    })
-  }
+  l = s("599110"),
+  o = s("598739"),
+  u = s("646718"),
+  d = s("49111"),
+  c = s("782340"),
+  _ = s("497151");
+let E = (e, t, s) => {
+  l.default.track(d.AnalyticEvents.NITRO_HOME_NAVIGATION, {
+    current_component: "".concat(o.NitroLandingPages.MARKETING, "-").concat(t),
+    next_component: "".concat(o.NitroLandingPages.MARKETING, "-").concat(e),
+    interaction_component: "Nitro Toggle"
+  }), s(e)
+};
+var I = e => {
+  let {
+    selectedPremiumType: t,
+    setSelectedPremiumType: s
+  } = e, i = [{
+    type: u.PremiumTypes.TIER_2,
+    label: c.default.Messages.PREMIUM
+  }, {
+    type: u.PremiumTypes.TIER_0,
+    label: c.default.Messages.BASIC
+  }];
+  return (0, a.jsxs)("div", {
+    className: n(_.toggleSwitch, {
+      [_.toggleSwitchStandard]: t === u.PremiumTypes.TIER_2,
+      [_.toggleSwitchBasic]: t === u.PremiumTypes.TIER_0
+    }),
+    children: [i.map(e => (0, a.jsx)(r.Clickable, {
+      className: _.toggleOption,
+      onClick: () => E(e.type, t, s),
+      children: (0, a.jsx)(r.Heading, {
+        className: _.sectionHeader,
+        variant: "heading-md/semibold",
+        children: e.label
+      })
+    }, e.type)), (0, a.jsx)("div", {
+      className: n(_.slider, {
+        [_.sliderStandard]: t === u.PremiumTypes.TIER_2,
+        [_.sliderBasic]: t === u.PremiumTypes.TIER_0
+      })
+    })]
+  })
+}
