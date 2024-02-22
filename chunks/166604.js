@@ -12,5 +12,6 @@ var s, i, r = n("588025");
 let a = {
   [r.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE]: 1,
   [r.QuestContent.QUEST_BAR]: 2,
-  [r.QuestContent.ACTIVITY_PANEL]: 4
+  [r.QuestContent.ACTIVITY_PANEL]: 4,
+  [r.QuestContent.QUEST_LIVE_STREAM]: 8
 }

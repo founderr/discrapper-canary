@@ -1,7 +1,7 @@
 "use strict";
 t.r(s), t.d(s, {
   default: function() {
-    return g
+    return S
   }
 });
 var a = t("37983");
@@ -18,7 +18,7 @@ var l = t("116788"),
   f = t("916183"),
   m = t("647924");
 
-function g(e) {
+function S(e) {
   let {
     transitionState: s,
     onClose: t,
@@ -61,7 +61,7 @@ function g(e) {
         variant: "text-sm/medium",
         className: f.upperBodyText,
         children: r
-      }), (0, a.jsx)(x, {
+      }), (0, a.jsx)(g, {
         questContent: l
       }), (0, a.jsx)(c.Text, {
         variant: "text-sm/medium",
@@ -82,7 +82,7 @@ function g(e) {
   })
 }
 
-function x(e) {
+function g(e) {
   let {
     questContent: s
   } = e;
@@ -90,22 +90,23 @@ function x(e) {
     case d.QuestContent.QUEST_BAR:
       return (0, a.jsxs)("ul", {
         className: f.targetList,
-        children: [(0, a.jsx)(S, {
+        children: [(0, a.jsx)(E, {
           icon: n.GlobeEarthIcon,
           children: h.default.Messages.QUESTS_DISCLOSURE_LOCATION
-        }), (0, a.jsx)(S, {
+        }), (0, a.jsx)(E, {
           icon: r.UserIcon,
           children: h.default.Messages.QUESTS_DISCLOSURE_AGE
-        }), (0, a.jsx)(S, {
+        }), (0, a.jsx)(E, {
           icon: l.GameControllerIcon,
           children: h.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
         })]
       });
     case d.QuestContent.ACTIVITY_PANEL:
     case d.QuestContent.QUESTS_EMBED:
+    case d.QuestContent.QUEST_LIVE_STREAM:
       return (0, a.jsx)("ul", {
         className: f.targetList,
-        children: (0, a.jsx)(S, {
+        children: (0, a.jsx)(E, {
           icon: l.GameControllerIcon,
           children: h.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
         })
@@ -115,7 +116,7 @@ function x(e) {
   }
 }
 
-function S(e) {
+function E(e) {
   let {
     icon: s,
     children: t
