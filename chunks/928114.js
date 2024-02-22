@@ -151,21 +151,21 @@ let a = {
   },
   "redesign-button-secondary-background": {
     dark: {
-      color: "white.500",
+      color: "gradient.end",
       opacity: .1
     },
     light: {
-      color: "black.500",
+      color: "gradient.end",
       opacity: .1
     }
   },
   "redesign-button-secondary-pressed-background": {
     dark: {
-      color: "white.500",
+      color: "gradient.end",
       opacity: .2
     },
     light: {
-      color: "black.500",
+      color: "gradient.end",
       opacity: .2
     }
   },
@@ -329,6 +329,16 @@ let a = {
       color: "gradient.mid",
       lightness: .925,
       saturation: "*0.8"
+    }
+  },
+  "you-bar-bg": {
+    dark: {
+      color: "gradient.mid",
+      lightness: .16
+    },
+    light: {
+      color: "gradient.mid",
+      lightness: .98
     }
   }
 }

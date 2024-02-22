@@ -74,6 +74,13 @@ function p(e) {
   _(t)
 }
 class y extends r.default {
+  initialize() {
+    this.waitFor(i.default)
+  }
+  loadCache() {
+    let e = this.readSnapshot(y.LATEST_SNAPSHOT_VERSION);
+    null != e && (a = new Set(e))
+  }
   takeSnapshot() {
     return {
       version: y.LATEST_SNAPSHOT_VERSION,
@@ -99,20 +106,17 @@ class y extends r.default {
     return d
   }
   constructor() {
-    super(), this.loadCache = () => {
-      let e = this.readSnapshot(y.LATEST_SNAPSHOT_VERSION);
-      null != e && (a = new Set(e))
-    }, this.registerActionHandlers({
+    super({
       CONNECTION_OPEN: c,
       CONNECTION_OPEN_SUPPLEMENTAL: c,
-      CACHE_LOADED_LAZY: this.loadCache,
+      CACHE_LOADED_LAZY: () => this.loadCache(),
       OVERLAY_INITIALIZE: E,
       CHANNEL_CREATE: m,
       CHANNEL_UPDATES: h,
       CHANNEL_DELETE: v,
       SET_LOCATION_METADATA: p,
       MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: g
-    }), this.waitFor(i.default)
+    })
   }
 }
 y.displayName = "MessageRequestStore", y.LATEST_SNAPSHOT_VERSION = 1;

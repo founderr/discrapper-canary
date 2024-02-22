@@ -20,6 +20,13 @@ let _ = null,
   h = new u.Lru(15),
   m = !1;
 class S extends i.default {
+  initialize() {
+    this.waitFor(a.default), this.waitFor(s.default), this.waitFor(l.default), this.syncWith([r.default], () => !0), this.syncWith([s.default], M)
+  }
+  loadCache() {
+    let e = this.readSnapshot(S.LATEST_SNAPSHOT_VERSION);
+    null != e && (m = !0, S.mergeSnapshot(e))
+  }
   canEvictOrphans() {
     return m
   }
@@ -87,12 +94,9 @@ class S extends i.default {
     g = e
   }
   constructor() {
-    super(), this.loadCache = () => {
-      let e = this.readSnapshot(S.LATEST_SNAPSHOT_VERSION);
-      null != e && (m = !0, S.mergeSnapshot(e))
-    }, this.registerActionHandlers({
+    super({
       CACHE_LOADED_LAZY_NO_CACHE: v,
-      CACHE_LOADED_LAZY: this.loadCache,
+      CACHE_LOADED_LAZY: () => this.loadCache(),
       CHANNEL_DELETE: I,
       CHANNEL_UPDATES: T,
       CONNECTION_OPEN_SUPPLEMENTAL: p,
@@ -100,7 +104,7 @@ class S extends i.default {
       LOGIN_SUCCESS: O,
       THREAD_DELETE: L,
       THREAD_UPDATE: C
-    }), this.waitFor(a.default), this.waitFor(s.default), this.waitFor(l.default), this.syncWith([r.default], () => !0), this.syncWith([s.default], M)
+    })
   }
 }
 
