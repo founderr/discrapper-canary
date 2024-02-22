@@ -24,8 +24,8 @@ var E = n("917351"),
   C = n("970700"),
   h = n("49111"),
   m = n("447621"),
-  O = n("69741");
-let y = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled"],
+  y = n("69741");
+let O = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled"],
   b = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
   M = !1,
   v = h.FormStates.CLOSED,
@@ -155,7 +155,7 @@ function et(e) {
 
 function en(e) {
   if (null == s || v !== h.FormStates.OPEN || "GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== s.id) return !1;
-  (0, C.fetchGuildIntegrationsApplications)(s.id), (0, C.fetchGuildIntegrationsCommands)(s.id)
+  (0, C.fetchGuildIntegrationsApplications)(s.id)
 }
 class ei extends c.default.Store {
   initialize() {
@@ -183,7 +183,7 @@ class ei extends c.default.Store {
     return null != s ? s.id : null
   }
   showPublicSuccessModal() {
-    return !G.default.get(O.PUBLIC_SUCCESS_MODAL_SEEN_KEY)
+    return !G.default.get(y.PUBLIC_SUCCESS_MODAL_SEEN_KEY)
   }
   getGuild() {
     return s
@@ -241,13 +241,13 @@ var el = new ei(f.default, __OVERLAY__ ? {} : {
   GUILD_SETTINGS_CLOSE: $,
   GUILD_SETTINGS_UPDATE: function(e) {
     if (null == s) return !1;
-    y.forEach(t => {
+    O.forEach(t => {
       null != s && e.hasOwnProperty(t) && (s = s.set(t, e[t]))
     }), ! function() {
       if (null == s) return;
       let e = s.toJS(),
         t = d.toJS(),
-        n = y.some(n => e[n] !== t[n]);
+        n = O.some(n => e[n] !== t[n]);
       !n && (s = d)
     }()
   },
@@ -360,9 +360,9 @@ var el = new ei(f.default, __OVERLAY__ ? {} : {
       if (null == e) return !1;
       let t = d = e,
         n = s.toJS();
-      y.forEach(e => {
+      O.forEach(e => {
         if (!b.has(e)) {
-          if ("rulesChannelId" !== e && "publicUpdatesChannelId" !== e || n[e] !== O.CREATE_NEW_CHANNEL_VALUE) {
+          if ("rulesChannelId" !== e && "publicUpdatesChannelId" !== e || n[e] !== y.CREATE_NEW_CHANNEL_VALUE) {
             if ("features" === e) {
               t.set(e, new Set(n[e]));
               return

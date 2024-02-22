@@ -2,9 +2,6 @@
 n.r(t), n.d(t, {
   fetchGuildIntegrationsApplications: function() {
     return u
-  },
-  fetchGuildIntegrationsCommands: function() {
-    return a
   }
 });
 var i = n("872717"),
@@ -27,23 +24,6 @@ function u(e) {
       type: "GUILD_SETTINGS_LOADED_INTEGRATIONS",
       guildId: e,
       integrations: n
-    })
-  }).catch(() => {})
-}
-
-function a(e) {
-  i.default.get({
-    url: s.Endpoints.GUILD_INTEGRATIONS(e),
-    query: {
-      has_commands: !0
-    },
-    oldFormErrors: !0
-  }).then(t => {
-    let n = t.body.map(e => e.id);
-    l.default.dispatch({
-      type: "GUILD_SETTINGS_LOADED_INTEGRATIONS_WITH_COMMANDS",
-      guildId: e,
-      integrationIds: n
     })
   }).catch(() => {})
 }
