@@ -16986,24 +16986,13 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
     padding-right: 8px
 }
 
-.theme-dark .wumpusTooltip_b5c0ea {
-    background: var(--white-500);
-    color: var(--primary-500)
+.wumpusTooltip_b5c0ea {
+    background: var(--bg-mod-faint)
 }
 
-.theme-dark .wumpusTooltip_b5c0ea:after {
+.wumpusTooltip_b5c0ea:after {
     border-color: transparent;
-    border-right-color: var(--white-500)
-}
-
-.theme-light .wumpusTooltip_b5c0ea {
-    background: hsl(var(--primary-200-hsl)/.6);
-    color: var(--primary-500)
-}
-
-.theme-light .wumpusTooltip_b5c0ea:after {
-    border-color: transparent;
-    border-right-color: hsl(var(--primary-200-hsl)/.6)
+    border-right-color: var(--bg-mod-faint)
 }
 
 .memberSinceContainer__0a28b {
@@ -45504,8 +45493,8 @@ html .progress__4ef76 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
