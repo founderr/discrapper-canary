@@ -50,17 +50,25 @@ function c(e) {
 }
 
 function E(e) {
-  let {
-    enabled: t
-  } = r.CreateGuildPollsExperiment.useExperiment({
-    guildId: e.guild_id,
-    location: "useCanPostPollsInChannel"
-  }), {
-    enabled: n
-  } = r.CreateGDMPollsExperiment.useExperiment({
-    location: "useCanPostPollsInChannel"
-  });
-  return !!d.ChannelTypesSets.POLLS.has(e.type) && (e.isPrivate() ? n : t && s.default.can(d.Permissions.SEND_MESSAGES, e))
+  let t = d.ChannelTypesSets.POLLS.has(e.type),
+    {
+      enabled: n
+    } = r.CreateGuildPollsExperiment.useExperiment({
+      guildId: e.guild_id,
+      location: "useCanPostPollsInChannel"
+    }, {
+      autoTrackExposure: !0,
+      disable: !t || e.isPrivate() || !s.default.can(d.Permissions.SEND_MESSAGES, e)
+    }),
+    {
+      enabled: a
+    } = r.CreateGDMPollsExperiment.useExperiment({
+      location: "useCanPostPollsInChannel"
+    }, {
+      autoTrackExposure: !0,
+      disable: !t || !e.isPrivate()
+    });
+  return n || a
 }
 
 function f(e, t) {
