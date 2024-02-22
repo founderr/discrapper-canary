@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return x
   }
 });
 var a = n("37983"),
@@ -10,24 +10,26 @@ var a = n("37983"),
   i = n("77078"),
   r = n("811475"),
   o = n("550766"),
-  u = n("478272"),
-  d = n("685665"),
-  c = n("716849"),
-  f = n("552917"),
-  h = n("967241"),
-  C = n("956089"),
-  p = n("599110"),
-  E = n("659500"),
-  m = n("254490"),
-  g = n("412861"),
-  S = n("149022"),
-  _ = n("64096"),
-  T = n("49111"),
-  A = n("186859"),
-  M = n("782340"),
-  I = n("245150");
+  u = n("975148"),
+  d = n("478272"),
+  c = n("685665"),
+  f = n("716849"),
+  h = n("552917"),
+  C = n("967241"),
+  p = n("351825"),
+  E = n("956089"),
+  m = n("599110"),
+  g = n("659500"),
+  S = n("254490"),
+  _ = n("412861"),
+  T = n("149022"),
+  A = n("64096"),
+  M = n("49111"),
+  I = n("186859"),
+  N = n("782340"),
+  v = n("245150");
 
-function N(e, t, s, l) {
+function L(e, t, s, l) {
   (0, i.openModalLazy)(async () => {
     let {
       default: i
@@ -43,45 +45,46 @@ function N(e, t, s, l) {
     modalKey: r.activityInviteKey
   })
 }
-let v = /(.*)```(\w+)\n(.*)```(.*)/s;
+let R = /(.*)```(\w+)\n(.*)```(.*)/s;
 
-function L(e) {
+function x(e) {
   let {
     channel: t,
     options: r,
-    onFileUpload: L,
-    onClose: R,
-    onSelect: x,
-    draftType: y,
-    editorTextContent: O,
-    setValue: D,
-    openClips: P
+    onFileUpload: x,
+    onClose: y,
+    onSelect: O,
+    draftType: D,
+    editorTextContent: P,
+    setValue: j,
+    openClips: b
   } = e;
-  (0, c.useMaybeFetchPremiumLikelihood)(f.default);
-  let {
-    analyticsLocations: j
-  } = (0, d.default)();
+  (0, f.useMaybeFetchPremiumLikelihood)(h.default);
+  let H = (0, u.useOmnibuttonFileUploadSubtextEnabled)("ChannelAttachMenu"),
+    {
+      analyticsLocations: F
+    } = (0, c.default)();
   s.useEffect(() => {
-    p.default.track(T.AnalyticEvents.OPEN_POPOUT, {
+    m.default.track(M.AnalyticEvents.OPEN_POPOUT, {
       type: "Send Attachment",
       channel_id: t.id,
       guild_id: t.guild_id
     })
   }, [t.guild_id, t.id]);
 
-  function b() {
-    (0, h.openThreadSidebarForCreating)(t, void 0, "Plus Button")
-  }
-
-  function H() {
-    p.default.track(T.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, S.toRichValue)("/"))
-  }
-
-  function F() {
-    P()
-  }
-
   function U() {
+    (0, C.openThreadSidebarForCreating)(t, void 0, "Plus Button")
+  }
+
+  function k() {
+    m.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), j("/", (0, T.toRichValue)("/"))
+  }
+
+  function w() {
+    b()
+  }
+
+  function G() {
     (0, i.openModalLazy)(async () => {
       let {
         default: e
@@ -91,144 +94,155 @@ function L(e) {
         channel: t
       })
     }, {
-      modalKey: A.POLL_CREATION_MODAL_KEY
+      modalKey: I.POLL_CREATION_MODAL_KEY
     })
   }
 
-  function k() {
-    p.default.track(T.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+  function B() {
+    m.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
       channel_type: t.type,
       channel_id: t.id,
       guild_id: t.guild_id
-    }), (0, u.default)({
+    }), (0, d.default)({
       channel: t,
       guildId: t.guild_id,
       locationObject: {
-        page: t.isPrivate() ? T.AnalyticsPages.DM_CHANNEL : T.AnalyticsPages.GUILD_CHANNEL,
-        section: T.AnalyticsSections.CHANNEL_TEXT_AREA,
-        object: T.AnalyticsObjects.CONTEXT_MENU_ITEM,
-        objectType: T.AnalyticsObjectTypes.ACTIVITY
+        page: t.isPrivate() ? M.AnalyticsPages.DM_CHANNEL : M.AnalyticsPages.GUILD_CHANNEL,
+        section: M.AnalyticsSections.CHANNEL_TEXT_AREA,
+        object: M.AnalyticsObjects.CONTEXT_MENU_ITEM,
+        objectType: M.AnalyticsObjectTypes.ACTIVITY
       },
       openInPopout: !1,
       enableSelectedTextChannelInvite: !0,
-      analyticsLocations: j
+      analyticsLocations: F
     }), (0, o.fetchShelf)({
       guildId: t.guild_id
     })
   }
 
-  function w() {
-    let e = O,
+  function V() {
+    let e = P,
       n = "txt",
       a = "",
-      s = O.match(v);
-    null != s && (a = s[1], n = s[2], e = s[3], a += s[4]), (0, g.promptToUpload)([(0, m.makeFile)(new Blob([e], {
+      s = P.match(R);
+    null != s && (a = s[1], n = s[2], e = s[3], a += s[4]), (0, _.promptToUpload)([(0, S.makeFile)(new Blob([e], {
       type: "text/plain"
-    }), "message.".concat(n))], t, y), E.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.CLEAR_TEXT), "" !== a && E.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.INSERT_TEXT, {
+    }), "message.".concat(n))], t, D), g.ComponentDispatch.dispatchToLastSubscribed(M.ComponentActions.CLEAR_TEXT), "" !== a && g.ComponentDispatch.dispatchToLastSubscribed(M.ComponentActions.INSERT_TEXT, {
       plainText: a
     })
   }
   return (0, a.jsx)(i.Menu, {
-    onSelect: x,
+    onSelect: O,
     navId: "channel-attach",
-    onClose: R,
-    "aria-label": M.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    className: I.menu,
+    onClose: y,
+    "aria-label": N.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    className: v.menu,
     children: r.map(function(e) {
       var n;
       let s = (0, a.jsxs)("div", {
-        className: I.optionLabel,
+        className: v.optionLabel,
         children: [(0, a.jsx)(e.icon, {
-          className: I.optionIcon
+          className: v.optionIcon
         }), (0, a.jsx)("div", {
-          className: I.optionName,
+          className: v.optionName,
           children: e.display
-        }), null != e.badgeVal && e.badgeVal > 0 && (0, a.jsx)(C.NumberBadge, {
-          className: I.badge,
+        }), null != e.badgeVal && e.badgeVal > 0 && (0, a.jsx)(E.NumberBadge, {
+          className: v.badge,
           color: null !== (n = e.badgeColor) && void 0 !== n ? n : l.default.STATUS_DANGER,
           count: e.badgeVal
         })]
       });
       switch (e.type) {
-        case _.AttachmentTypes.UPLOAD_A_FILE:
+        case A.AttachmentTypes.UPLOAD_A_FILE:
+          let r = (0, a.jsx)("span", {
+            className: v.tipSubtext,
+            children: N.default.Messages.UPLOAD_FILE_SUBTEXT.format({
+              icon: (e, t) => (0, a.jsx)(p.default, {
+                className: v.tipIcon,
+                width: 16,
+                height: 16
+              }, t)
+            })
+          });
           return (0, a.jsx)(i.MenuItem, {
             id: "upload-file",
             label: s,
-            action: L
+            subtext: H ? r : null,
+            action: x
           }, "upload-file");
-        case _.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
-          if ("" === O) return null;
+        case A.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
+          if ("" === P) return null;
           return (0, a.jsx)(i.MenuItem, {
             id: "upload-text-as-file",
             label: s,
-            action: w
+            action: V
           }, "upload-text-as-file");
-        case _.AttachmentTypes.CLIPS:
+        case A.AttachmentTypes.CLIPS:
           return (0, a.jsx)(i.MenuItem, {
             id: "clips",
             label: s,
-            action: F
+            action: w
           }, "clips");
-        case _.AttachmentTypes.POLL:
+        case A.AttachmentTypes.POLL:
           return (0, a.jsx)(i.MenuItem, {
             id: "poll",
             label: s,
-            action: U
+            action: G
           }, "poll");
-        case _.AttachmentTypes.INVITE_TO_PLAY_GAME:
+        case A.AttachmentTypes.INVITE_TO_PLAY_GAME:
           return (0, a.jsx)(i.MenuItem, {
             id: "play",
             label: s,
             action: () => {
               var n;
-              return n = e.activity, void(p.default.track(T.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(m.default.track(M.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Join Invite",
                 application_id: n.application_id,
-                location: T.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), N(n, t, T.ActivityActionTypes.JOIN, j))
+                location: M.AnalyticsSections.CHANNEL_TEXT_AREA
+              }), L(n, t, M.ActivityActionTypes.JOIN, F))
             }
           }, "play");
-        case _.AttachmentTypes.INVITE_TO_LISTEN:
+        case A.AttachmentTypes.INVITE_TO_LISTEN:
           return (0, a.jsx)(i.MenuItem, {
             id: "listen",
             label: s,
             action: () => {
               var n;
-              return n = e.activity, void(p.default.track(T.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(m.default.track(M.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
-                location: T.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), N(n, t, T.ActivityActionTypes.LISTEN, j))
+                location: M.AnalyticsSections.CHANNEL_TEXT_AREA
+              }), L(n, t, M.ActivityActionTypes.LISTEN, F))
             }
           }, "listen");
-        case _.AttachmentTypes.INVITE_TO_WATCH:
+        case A.AttachmentTypes.INVITE_TO_WATCH:
           return (0, a.jsx)(i.MenuItem, {
             id: "watch",
             label: s,
             action: () => {
               var n;
-              return n = e.activity, void(p.default.track(T.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(m.default.track(M.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
-                location: T.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), N(n, t, T.ActivityActionTypes.WATCH, j))
+                location: M.AnalyticsSections.CHANNEL_TEXT_AREA
+              }), L(n, t, M.ActivityActionTypes.WATCH, F))
             }
           }, "watch");
-        case _.AttachmentTypes.CREATE_THREAD:
+        case A.AttachmentTypes.CREATE_THREAD:
           return (0, a.jsx)(i.MenuItem, {
             id: "THREAD",
             label: s,
-            action: b
+            action: U
           }, "THREAD");
-        case _.AttachmentTypes.SLASH_COMMAND:
+        case A.AttachmentTypes.SLASH_COMMAND:
           return (0, a.jsx)(i.MenuItem, {
             id: "SLASH_COMMAND",
             label: s,
-            action: H
+            action: k
           }, "SLASH_COMMAND");
-        case _.AttachmentTypes.ACTIVITY:
+        case A.AttachmentTypes.ACTIVITY:
           return (0, a.jsx)(i.MenuItem, {
             id: "activity",
             label: s,
-            action: k
+            action: B
           }, "activity");
         default:
           return null
