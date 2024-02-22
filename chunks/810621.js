@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 });
 var s = n("627445"),
@@ -18,7 +18,7 @@ var s = n("627445"),
   I = n("65300"),
   _ = n("49111");
 
-function p(e) {
+function h(e) {
   let t = function(e) {
       var t;
       let n = null === (t = i.os) || void 0 === t ? void 0 : t.family;

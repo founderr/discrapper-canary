@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var a = n("812952"),
-  r = n("978679"),
+var r = n("812952"),
+  a = n("978679"),
   l = n("659632"),
   s = n("635357"),
   u = n("782340"),
@@ -20,11 +20,11 @@ function c(e) {
     isGift: n,
     giftRecipient: c
   } = (0, s.useGiftContext)();
-  return !n || (0, l.shouldShowCustomGiftExperience)(c) ? null : (0, i.jsx)(a.default, {
+  return !n || (0, l.shouldShowCustomGiftExperience)(c) ? null : (0, i.jsx)(r.default, {
     className: o.paymentNote,
-    iconSize: a.default.Sizes.SMALL,
-    icon: r.default,
-    color: null == t ? a.default.Colors.PRIMARY : a.default.Colors.SECONDARY,
+    iconSize: r.default.Sizes.SMALL,
+    icon: a.default,
+    color: null == t ? r.default.Colors.PRIMARY : r.default.Colors.SECONDARY,
     children: t
   })
 }

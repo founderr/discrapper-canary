@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _
   },
   default: function() {
-    return p
+    return h
   }
 });
 var s = n("37983");
@@ -70,7 +70,7 @@ function _(e) {
   })
 }
 
-function p(e) {
+function h(e) {
   let {
     text: t,
     buttonCta: n,

@@ -1,35 +1,35 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return T
   }
 });
-var u = n("37983");
+var r = n("37983");
 n("884691");
-var r = n("812204"),
+var u = n("812204"),
   a = n("685665"),
   i = n("635357"),
   l = n("642906"),
   s = n("85336"),
-  o = n("385179"),
-  c = n("262683"),
-  d = n("946359"),
+  d = n("385179"),
+  o = n("262683"),
+  c = n("946359"),
   f = n("724269"),
   P = n("99836"),
   S = n("217796"),
   p = n("357957"),
   h = n("671183"),
-  m = n("273093"),
-  x = n("880531"),
-  C = n("843455");
+  x = n("273093"),
+  C = n("880531"),
+  m = n("843455");
 let v = [{
   key: null,
-  renderStep: e => (0, u.jsx)(S.OneTimePaymentPredicateStep, {
+  renderStep: e => (0, r.jsx)(S.OneTimePaymentPredicateStep, {
     ...e
   })
 }, {
   key: s.Step.ADD_PAYMENT_STEPS,
-  renderStep: e => (0, u.jsx)(c.PaymentModalAddPaymentStep, {
+  renderStep: e => (0, r.jsx)(o.PaymentModalAddPaymentStep, {
     ...e,
     onReturn: () => {
       let t = p.default.paymentSources;
@@ -40,47 +40,47 @@ let v = [{
   })
 }, {
   key: s.Step.AWAITING_PURCHASE_TOKEN_AUTH,
-  renderStep: () => (0, u.jsx)(f.default, {})
+  renderStep: () => (0, r.jsx)(f.default, {})
 }, {
   key: s.Step.AWAITING_AUTHENTICATION,
-  renderStep: () => (0, u.jsx)(d.default, {})
+  renderStep: () => (0, r.jsx)(c.default, {})
 }, {
   key: s.Step.REVIEW,
-  renderStep: e => (0, u.jsx)(P.PaymentModalReviewStep, {
+  renderStep: e => (0, r.jsx)(P.PaymentModalReviewStep, {
     ...e
   })
 }, {
   key: s.Step.CONFIRM,
-  renderStep: e => (0, u.jsx)(h.default, {
+  renderStep: e => (0, r.jsx)(h.default, {
     ...e
   })
 }];
 
-function E(e) {
+function T(e) {
   let {
     guildProductContext: t,
     sourceAnalyticsLocations: n,
     applicationId: s,
-    ...c
+    ...o
   } = e, {
-    AnalyticsLocationProvider: d,
+    AnalyticsLocationProvider: c,
     analyticsLocations: f
-  } = (0, a.default)(n, r.default.GUILD_PRODUCT_PAYMENT_MODAL);
-  return (0, u.jsx)(m.GuildProductPurchaseContextProvider, {
+  } = (0, a.default)(n, u.default.GUILD_PRODUCT_PAYMENT_MODAL);
+  return (0, r.jsx)(x.GuildProductPurchaseContextProvider, {
     ...t,
-    children: (0, u.jsx)(d, {
-      children: (0, u.jsx)(l.PaymentContextProvider, {
+    children: (0, r.jsx)(c, {
+      children: (0, r.jsx)(l.PaymentContextProvider, {
         stepConfigs: v,
         applicationId: s,
-        skuIDs: [c.skuId],
+        skuIDs: [o.skuId],
         activeSubscription: null,
-        purchaseType: C.PurchaseTypes.ONE_TIME,
-        children: (0, u.jsx)(i.GiftContextProvider, {
-          children: (0, u.jsx)(o.PaymentModal, {
+        purchaseType: m.PurchaseTypes.ONE_TIME,
+        children: (0, r.jsx)(i.GiftContextProvider, {
+          children: (0, r.jsx)(d.PaymentModal, {
             initialPlanId: null,
             analyticsLocations: f,
-            renderHeader: x.renderGuildProductPurchaseHeader,
-            ...c
+            renderHeader: C.renderGuildProductPurchaseHeader,
+            ...o
           })
         })
       })

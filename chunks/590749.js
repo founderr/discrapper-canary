@@ -1,85 +1,85 @@
 "use strict";
 n.r(t), n.d(t, {
   getApplicationSubscriptionPaymentSteps: function() {
-    return _
+    return I
   }
 });
 var a = n("37983");
 n("884691");
-var s = n("85336"),
-  l = n("262683"),
-  i = n("946359"),
-  r = n("724269"),
+var l = n("85336"),
+  i = n("262683"),
+  r = n("946359"),
+  s = n("724269"),
   u = n("559362"),
   o = n("671672"),
   d = n("101432"),
   c = n("458985"),
-  I = n("782340");
+  f = n("782340");
 
-function _(e) {
+function I(e) {
   let {
     guildId: t,
     eligibleApplicationSubscriptionGuilds: n,
-    application: _,
-    listing: f,
-    showBenefitsFirst: T
-  } = e, S = [{
+    application: I,
+    listing: _,
+    showBenefitsFirst: S
+  } = e, E = [{
     key: null,
     renderStep: e => (0, a.jsx)(d.default, {
-      initialStep: T ? s.Step.BENEFITS : s.Step.REVIEW,
+      initialStep: S ? l.Step.BENEFITS : l.Step.REVIEW,
       guildId: t,
       ...e
     })
   }, {
-    key: s.Step.BENEFITS,
+    key: l.Step.BENEFITS,
     renderStep: e => (0, a.jsx)(u.default, {
-      application: _,
-      listing: f,
+      application: I,
+      listing: _,
       ...e
     }),
     options: {
-      useBreadcrumbLabel: () => I.default.Messages.APPLICATION_SUBSCRIPTION_BILLING_STEP_SUBSCRIPTION_DETAILS
+      useBreadcrumbLabel: () => f.default.Messages.APPLICATION_SUBSCRIPTION_BILLING_STEP_SUBSCRIPTION_DETAILS
     }
   }, {
-    key: s.Step.ADD_PAYMENT_STEPS,
+    key: l.Step.ADD_PAYMENT_STEPS,
     renderStep: e => (0, a.jsx)(a.Fragment, {
-      children: (0, a.jsx)(l.PaymentModalAddPaymentStep, {
+      children: (0, a.jsx)(i.PaymentModalAddPaymentStep, {
         ...e,
-        breadcrumbSteps: [s.Step.ADD_PAYMENT_STEPS, s.Step.REVIEW, s.Step.CONFIRM]
+        breadcrumbSteps: [l.Step.ADD_PAYMENT_STEPS, l.Step.REVIEW, l.Step.CONFIRM]
       })
     }),
     options: {
       renderHeader: !0
     }
   }, {
-    key: s.Step.AWAITING_PURCHASE_TOKEN_AUTH,
+    key: l.Step.AWAITING_PURCHASE_TOKEN_AUTH,
+    renderStep: () => (0, a.jsx)(s.default, {})
+  }, {
+    key: l.Step.AWAITING_AUTHENTICATION,
     renderStep: () => (0, a.jsx)(r.default, {})
   }, {
-    key: s.Step.AWAITING_AUTHENTICATION,
-    renderStep: () => (0, a.jsx)(i.default, {})
-  }, {
-    key: s.Step.REVIEW,
+    key: l.Step.REVIEW,
     renderStep: e => (0, a.jsx)(c.default, {
-      application: _,
-      backButtonEligible: !!T || void 0,
-      prevStep: T ? s.Step.BENEFITS : void 0,
-      listing: f,
+      application: I,
+      backButtonEligible: !!S || void 0,
+      prevStep: S ? l.Step.BENEFITS : void 0,
+      listing: _,
       showGuildPicker: null == t,
       eligibleApplicationSubscriptionGuilds: n,
       ...e
     }),
     options: {
       renderHeader: !0,
-      useBreadcrumbLabel: () => I.default.Messages.BILLING_STEP_REVIEW
+      useBreadcrumbLabel: () => f.default.Messages.BILLING_STEP_REVIEW
     }
   }, {
-    key: s.Step.CONFIRM,
+    key: l.Step.CONFIRM,
     renderStep: e => (0, a.jsx)(o.default, {
-      application: _,
-      listing: f,
-      showBenefits: !T,
+      application: I,
+      listing: _,
+      showBenefits: !S,
       ...e
     })
   }];
-  return S
+  return E
 }

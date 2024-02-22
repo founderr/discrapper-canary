@@ -10,8 +10,8 @@ var i = n("627445"),
   a = n.n(i),
   r = n("77078"),
   l = n("642906"),
-  u = n("367767"),
-  o = n("650484"),
+  o = n("367767"),
+  u = n("650484"),
   d = n("782340"),
   c = n("348550");
 
@@ -30,8 +30,8 @@ function f(e) {
     applicationName: f.name,
     itemName: E.name
   });
-  return (0, s.jsxs)(o.PaymentPortalBody, {
-    children: [(0, s.jsx)(u.default, {}), (0, s.jsxs)("div", {
+  return (0, s.jsxs)(u.PaymentPortalBody, {
+    children: [(0, s.jsx)(o.default, {}), (0, s.jsxs)("div", {
       className: c.confirmation,
       children: [(0, s.jsx)(r.Heading, {
         variant: "heading-xxl/bold",

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG: function() {
-    return u
+    return o
   }
 });
 var s = n("37983");
@@ -10,9 +10,9 @@ var i = n("357957"),
   a = n("635357"),
   r = n("85336"),
   l = n("262683");
-let u = {
+let o = {
   key: r.Step.ADD_PAYMENT_STEPS,
-  renderStep: e => (0, s.jsx)(o, {
+  renderStep: e => (0, s.jsx)(u, {
     ...e
   }),
   options: {
@@ -20,7 +20,7 @@ let u = {
   }
 };
 
-function o(e) {
+function u(e) {
   let {
     isGift: t
   } = (0, a.useGiftContext)();

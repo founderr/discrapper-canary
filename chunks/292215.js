@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return E
   },
   REVIEW_STEP_CONFIG: function() {
-    return m
+    return _
   },
   ONE_TIME_PAYMENT_CONFIRM_STEP_CONFIG: function() {
-    return _
+    return m
   },
   SHARED_STEP_CONFIGS: function() {
     return I
@@ -22,8 +22,8 @@ var i = n("357957"),
   a = n("85336"),
   r = n("262683"),
   l = n("946359"),
-  u = n("724269"),
-  o = n("7127"),
+  o = n("724269"),
+  u = n("7127"),
   d = n("99836"),
   c = n("217796");
 let f = {
@@ -52,21 +52,21 @@ let f = {
   },
   p = {
     key: a.Step.AWAITING_PURCHASE_TOKEN_AUTH,
-    renderStep: () => (0, s.jsx)(u.default, {})
+    renderStep: () => (0, s.jsx)(o.default, {})
   },
   S = {
     key: a.Step.AWAITING_AUTHENTICATION,
     renderStep: () => (0, s.jsx)(l.default, {})
   },
-  m = {
+  _ = {
     key: a.Step.REVIEW,
     renderStep: e => (0, s.jsx)(d.PaymentModalReviewStep, {
       ...e
     })
   },
-  _ = {
+  m = {
     key: a.Step.CONFIRM,
-    renderStep: e => (0, s.jsx)(o.PaymentModalConfirmStep, {
+    renderStep: e => (0, s.jsx)(u.PaymentModalConfirmStep, {
       ...e
     })
   },

@@ -23,15 +23,15 @@ function _(e) {
     breadcrumbSteps: s,
     handleStepChange: _,
     referralTrialOfferId: E,
-    onReturn: p
+    onReturn: I
   } = e, {
-    contextMetadata: I,
-    step: S,
-    paymentSources: N,
+    contextMetadata: p,
+    step: N,
+    paymentSources: S,
     paymentSourceId: P,
     setPaymentSourceId: T,
-    purchaseError: C,
-    setPurchaseError: A,
+    purchaseError: A,
+    setPurchaseError: C,
     purchaseErrorBlockRef: O,
     paymentAuthenticationState: h,
     selectedSkuId: R
@@ -39,28 +39,28 @@ function _(e) {
     isGift: M
   } = (0, c.useGiftContext)(), g = {
     ...(0, i.useSharedPaymentModal)(),
-    paymentSources: N,
+    paymentSources: S,
     paymentSourceId: P,
     setPaymentSourceId: T,
-    purchaseError: C,
-    setPurchaseError: A,
+    purchaseError: A,
+    setPurchaseError: C,
     purchaseErrorBlockRef: O,
     paymentAuthenticationState: h
-  }, x = (0, l.usePremiumTrialOffer)(E), v = !M && null != x && null != R && (0, m.SubscriptionTrials)[x.trial_id].skus.includes(R), y = null != p ? p : () => {
-    let e = Object.values(N).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
+  }, x = (0, l.usePremiumTrialOffer)(E), v = !M && null != x && null != R && (0, m.SubscriptionTrials)[x.trial_id].skus.includes(R), y = null != I ? I : () => {
+    let e = Object.values(S).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
     _(e, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })
   };
-  r(S, "Step should be set here");
-  let L = (0, a.useStableMemo)(() => Date.now(), [S]);
+  r(N, "Step should be set here");
+  let L = (0, a.useStableMemo)(() => Date.now(), [N]);
   return (0, i.AddPaymentFlow)({
     paymentModalArgs: g,
     initialStep: d.Step.PAYMENT_TYPE,
     prependSteps: [d.Step.PROMOTION_INFO],
     appendSteps: [d.Step.REVIEW, d.Step.CONFIRM],
     breadcrumpSteps: s,
-    currentBreadcrumpStep: S,
+    currentBreadcrumpStep: N,
     usePaymentModalStep: !0,
     onReturn: y,
     onComplete: e => {
@@ -78,7 +78,7 @@ function _(e) {
         from_step: n,
         to_step: s,
         step_duration_ms: r - L,
-        flow_duration_ms: r - I.startTime
+        flow_duration_ms: r - p.startTime
       })
     },
     isEligibleForTrial: v

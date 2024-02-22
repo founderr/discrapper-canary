@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   deepLinkRouteIfLanded: function() {
-    return u
+    return o
   },
   deepLinkRouteIfLandedAndNotAuthed: function() {
-    return o
+    return u
   }
 });
-var s = n("43982"),
-  a = n("393414"),
-  l = n("271938"),
-  i = n("773336"),
-  r = n("49111");
-let u = i.isPlatformEmbedded ? r.NOOP : (e, t) => {
-    if (!(0, a.hasNavigated)()) return s.default.request(r.RPCCommands.DEEP_LINK, {
+var a = s("43982"),
+  n = s("393414"),
+  i = s("271938"),
+  r = s("773336"),
+  l = s("49111");
+let o = r.isPlatformEmbedded ? l.NOOP : (e, t) => {
+    if (!(0, n.hasNavigated)()) return a.default.request(l.RPCCommands.DEEP_LINK, {
       type: e,
       params: t
     })
   },
-  o = i.isPlatformEmbedded ? r.NOOP : (e, t) => {
-    if (!l.default.isAuthenticated()) return u(e, {
+  u = r.isPlatformEmbedded ? l.NOOP : (e, t) => {
+    if (!i.default.isAuthenticated()) return o(e, {
       ...t || {},
-      fingerprint: l.default.getFingerprint()
+      fingerprint: i.default.getFingerprint()
     })
   }

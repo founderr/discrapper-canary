@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return m
   }
 }), n("222007");
 var s = n("37983"),
@@ -17,8 +17,8 @@ var s = n("37983"),
   E = n("124969"),
   I = n("599110"),
   _ = n("49111"),
-  p = n("782340"),
-  h = n("180688"),
+  h = n("782340"),
+  p = n("180688"),
   T = n("890957");
 r.default.initialize();
 class N extends a.PureComponent {
@@ -29,16 +29,16 @@ class N extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("768025"),
-        className: i(h.image, T.marginBottom20)
+        className: i(p.image, T.marginBottom20)
       }), (0, s.jsx)(E.Title, {
         className: T.marginBottom8,
-        children: p.default.Messages.VERFICATION_EXPIRED
+        children: h.default.Messages.VERFICATION_EXPIRED
       }), (0, s.jsx)(E.SubTitle, {
         className: T.marginBottom40,
-        children: p.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
+        children: h.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
       }), (0, s.jsx)(E.Button, {
         onClick: this.handleLogin,
-        children: p.default.Messages._LOGIN
+        children: h.default.Messages._LOGIN
       })]
     })
   }
@@ -46,13 +46,13 @@ class N extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("176872"),
-        className: i(h.image, T.marginBottom20)
+        className: i(p.image, T.marginBottom20)
       }), (0, s.jsx)(E.Title, {
         className: T.marginBottom40,
-        children: p.default.Messages.VERIFICATION_VERIFIED
+        children: h.default.Messages.VERIFICATION_VERIFIED
       }), (0, s.jsx)(E.Button, {
         onClick: this.handleOpenApp,
-        children: p.default.Messages.VERIFICATION_OPEN_DISCORD
+        children: h.default.Messages.VERIFICATION_OPEN_DISCORD
       })]
     })
   }
@@ -60,13 +60,13 @@ class N extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("951536"),
-        className: i(h.image, T.marginBottom20)
+        className: i(p.image, T.marginBottom20)
       }), (0, s.jsx)(E.Title, {
         className: T.marginBottom8,
-        children: p.default.Messages.VERIFICATION_VERIFYING
+        children: h.default.Messages.VERIFICATION_VERIFYING
       }), (0, s.jsx)(E.SubTitle, {
         className: T.marginBottom40,
-        children: p.default.Messages.ACTION_MAY_TAKE_A_MOMENT
+        children: h.default.Messages.ACTION_MAY_TAKE_A_MOMENT
       }), (0, s.jsx)(E.Button, {
         submitting: !0,
         color: E.Button.Colors.PRIMARY
@@ -102,7 +102,7 @@ class N extends a.PureComponent {
 N.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var g = r.default.connectStores([f.default], () => ({
+var m = r.default.connectStores([f.default], () => ({
   verifyFailed: f.default.didVerifyFail(),
   verifyErrors: f.default.getVerifyErrors(),
   verifySucceeded: f.default.didVerifySucceed(),

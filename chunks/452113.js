@@ -1,57 +1,57 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return d
+    return r
   }
 });
-var i = n("37983");
-n("884691");
-var a = n("850068"),
-  s = n("524503"),
-  l = n("393414"),
-  o = n("162771"),
-  u = n("642906"),
-  r = n("385179"),
-  c = n("49111");
+var e = i("37983");
+i("884691");
+var a = i("850068"),
+  l = i("524503"),
+  u = i("393414"),
+  o = i("162771"),
+  s = i("642906"),
+  d = i("385179"),
+  c = i("49111");
 
-function d(e) {
+function r(n) {
   let {
     onClose: t,
-    initialPlanId: n,
-    analyticsObject: d,
+    initialPlanId: i,
+    analyticsObject: r,
     analyticsLocation: p,
-    analyticsLocations: h,
-    analyticsSubscriptionType: m,
-    renderHeader: f,
-    planGroup: y,
-    reviewWarningMessage: S,
-    applicationId: v,
-    guildId: x,
-    onComplete: C,
-    forcesTransitionToGuild: F,
-    skuId: g,
-    ...E
-  } = e, {
-    subscriptionMetadataRequest: w
-  } = (0, u.usePaymentContext)();
-  return (0, i.jsx)(r.PaymentModal, {
-    ...E,
-    initialPlanId: n,
-    skuId: g,
-    onClose: e => {
+    analyticsLocations: f,
+    analyticsSubscriptionType: y,
+    renderHeader: h,
+    planGroup: b,
+    reviewWarningMessage: g,
+    applicationId: k,
+    guildId: C,
+    onComplete: I,
+    forcesTransitionToGuild: m,
+    skuId: v,
+    ...w
+  } = n, {
+    subscriptionMetadataRequest: P
+  } = (0, s.usePaymentContext)();
+  return (0, e.jsx)(d.PaymentModal, {
+    ...w,
+    initialPlanId: i,
+    skuId: v,
+    onClose: n => {
       t();
-      let n = null == w ? void 0 : w.guild_id;
-      e && null != n && (a.fetchSubscriptions(), (0, s.fetchEntitlementsForGuild)(n), null == C || C(), null != n && (F || o.default.getGuildId() !== n) && (0, l.transitionTo)(c.Routes.CHANNEL(n)))
+      let i = null == P ? void 0 : P.guild_id;
+      n && null != i && (a.fetchSubscriptions(), (0, l.fetchEntitlementsForGuild)(i), null == I || I(), null != i && (m || o.default.getGuildId() !== i) && (0, u.transitionTo)(c.Routes.CHANNEL(i)))
     },
-    analyticsLocations: h,
-    analyticsObject: d,
+    analyticsLocations: f,
+    analyticsObject: r,
     analyticsLocation: p,
-    analyticsSubscriptionType: m,
-    renderHeader: f,
-    planGroup: y,
-    reviewWarningMessage: S,
-    applicationId: v,
-    guildId: x,
+    analyticsSubscriptionType: y,
+    renderHeader: h,
+    planGroup: b,
+    reviewWarningMessage: g,
+    applicationId: k,
+    guildId: C,
     forceNewPaymentModal: !0
   })
 }

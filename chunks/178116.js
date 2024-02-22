@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return p
   }
 }), n("222007");
 var s = n("37983"),
@@ -18,7 +18,7 @@ var s = n("37983"),
   I = n("782340"),
   _ = n("890957");
 i.default.initialize();
-class p extends a.PureComponent {
+class h extends a.PureComponent {
   componentDidMount() {
     let e = (0, f.default)(this.props.location),
       t = (0, l.parse)(this.props.location.search);
@@ -117,9 +117,9 @@ class p extends a.PureComponent {
     }
   }
 }
-p.defaultProps = {
+h.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var h = i.default.connectStores([d.default], () => ({
+var p = i.default.connectStores([d.default], () => ({
   defaultRoute: d.default.defaultRoute
-}))(p)
+}))(h)

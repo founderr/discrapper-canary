@@ -1,50 +1,50 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var u = n("37983");
+var r = n("37983");
 n("884691");
-var r = n("414456"),
-  a = n.n(r),
+var u = n("414456"),
+  a = n.n(u),
   i = n("77078"),
   l = n("750482"),
   s = n("945330"),
-  o = n("880672");
+  d = n("880672");
 
-function c(e) {
+function o(e) {
   let {
     className: t,
     onClose: n
   } = e;
-  return (0, u.jsx)(i.Clickable, {
-    className: a(o.closeButtonContainer, t),
+  return (0, r.jsx)(i.Clickable, {
+    className: a(d.closeButtonContainer, t),
     onClick: n,
-    children: (0, u.jsx)(s.default, {
+    children: (0, r.jsx)(s.default, {
       width: 16,
       height: 16,
-      className: o.closeButtonIcon
+      className: d.closeButtonIcon
     })
   })
 }
 
-function d(e) {
+function c(e) {
   let {
     guildProductListing: t,
     onClose: n,
-    className: r
+    className: u
   } = e;
-  return (0, u.jsxs)(i.ModalHeader, {
-    className: a(o.header, r),
+  return (0, r.jsxs)(i.ModalHeader, {
+    className: a(d.header, u),
     separator: !1,
-    children: [(0, u.jsx)(l.default, {
-      className: o.headerImage,
+    children: [(0, r.jsx)(l.default, {
+      className: d.headerImage,
       listing: t,
       imageSize: 500,
       alt: ""
-    }), (0, u.jsx)(c, {
-      className: o.closeButton,
+    }), (0, r.jsx)(o, {
+      className: d.closeButton,
       onClose: n
     })]
   })

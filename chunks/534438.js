@@ -17,13 +17,13 @@ var i = n("37983"),
   o = n("476263"),
   c = n("272339"),
   E = n("849467"),
-  f = n("228427"),
-  _ = n("713573"),
-  S = n("258078"),
-  h = n("587974"),
+  _ = n("228427"),
+  f = n("713573"),
+  h = n("258078"),
+  S = n("587974"),
   m = n("782340"),
-  p = n("674877");
-let C = e => {
+  C = n("674877");
+let p = e => {
     var t;
     let {
       speaker: n,
@@ -31,16 +31,16 @@ let C = e => {
       isEmbed: s
     } = e, r = new d.default(n.user);
     return (0, i.jsxs)("div", {
-      className: p.speaker,
+      className: C.speaker,
       children: [(0, i.jsx)(a.Avatar, {
         src: r.getAvatarURL(l, s ? 16 : 24),
         size: s ? a.AvatarSizes.SIZE_16 : a.AvatarSizes.SIZE_24,
         "aria-label": "".concat(n.nick, "-avatar"),
-        className: s ? null : p.avatar
-      }), (0, i.jsx)(S.default, {
-        size: s ? S.default.Sizes.SIZE_12 : S.default.Sizes.SIZE_14,
-        color: S.default.Colors.HEADER_SECONDARY,
-        className: p.username,
+        className: s ? null : C.avatar
+      }), (0, i.jsx)(h.default, {
+        size: s ? h.default.Sizes.SIZE_12 : h.default.Sizes.SIZE_14,
+        color: h.default.Colors.HEADER_SECONDARY,
+        className: C.username,
         children: null !== (t = n.nick) && void 0 !== t ? t : r.username
       })]
     })
@@ -57,15 +57,15 @@ let C = e => {
         description: r
       } = l;
     return (0, i.jsxs)("div", {
-      children: [(0, i.jsx)(_.default, {
+      children: [(0, i.jsx)(f.default, {
         muted: !0,
         uppercase: !0,
-        className: p.alignStart,
+        className: C.alignStart,
         children: m.default.Messages.STAGE_INVITE_GUILD_HEADER
       }), (0, i.jsxs)("div", {
-        className: p.guild,
-        children: [(0, i.jsx)(h.default, {
-          mask: h.default.Masks.SQUIRCLE,
+        className: C.guild,
+        children: [(0, i.jsx)(S.default, {
+          mask: S.default.Masks.SQUIRCLE,
           width: 40,
           height: 40,
           children: (0, i.jsx)(o.default, {
@@ -74,14 +74,14 @@ let C = e => {
             active: !0
           })
         }), (0, i.jsxs)("div", {
-          className: p.guildInfo,
+          className: C.guildInfo,
           children: [(0, i.jsx)(a.Heading, {
             variant: "heading-sm/semibold",
             children: s
           }), (0, i.jsxs)("div", {
-            className: p.speaker,
+            className: C.speaker,
             children: [(0, i.jsx)("div", {
-              className: p.dot
+              className: C.dot
             }), null != n && n > 0 ? (0, i.jsx)(a.Text, {
               variant: "text-sm/normal",
               children: m.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
@@ -92,7 +92,7 @@ let C = e => {
         })]
       }), null != r && "" !== r && (0, i.jsx)(a.Text, {
         color: "header-secondary",
-        className: p.alignStart,
+        className: C.alignStart,
         variant: "text-sm/normal",
         children: r
       })]
@@ -115,36 +115,36 @@ var g = e => {
   } = n, O = null !== (t = n.members) && void 0 !== t ? t : [], N = I ? O.slice(0, 3) : O, D = T - N.length;
   return I && (D += O.length - N.length), (0, i.jsxs)("div", {
     children: [(0, i.jsxs)("div", {
-      className: p.flex,
+      className: C.flex,
       children: [(0, i.jsxs)("div", {
-        className: p.flex,
-        children: [(0, i.jsx)(f.default, {
+        className: C.flex,
+        children: [(0, i.jsx)(_.default, {
           height: 24,
           width: 24,
-          className: p.live
+          className: C.live
         }), (0, i.jsx)(a.Heading, {
           variant: "eyebrow",
-          className: r(p.label, p.live),
+          className: r(C.label, C.live),
           children: m.default.Messages.STAGE_CHANNEL_LIVE_NOW
         })]
       }), (0, i.jsxs)("div", {
-        className: p.background,
+        className: C.background,
         children: [(0, i.jsx)(c.default, {
           height: 16,
           width: 16,
-          className: p.listeners
+          className: C.listeners
         }), (0, i.jsx)(a.Heading, {
-          className: r(p.label, p.listeners),
+          className: r(C.label, C.listeners),
           variant: "heading-sm/semibold",
           children: A
         })]
       })]
     }), I && (0, i.jsxs)("div", {
-      className: r(p.guild, {
-        [p.embed]: I
+      className: r(C.guild, {
+        [C.embed]: I
       }),
-      children: [(0, i.jsx)(h.default, {
-        mask: h.default.Masks.SQUIRCLE,
+      children: [(0, i.jsx)(S.default, {
+        mask: S.default.Masks.SQUIRCLE,
         width: 20,
         height: 20,
         children: (0, i.jsx)(o.default, {
@@ -154,39 +154,39 @@ var g = e => {
         })
       }), (0, i.jsx)(a.Text, {
         color: "header-secondary",
-        className: p.label,
+        className: C.label,
         variant: "text-sm/normal",
         children: v.name
       })]
-    }), (0, i.jsx)(_.default, {
-      size: d || I ? _.default.Sizes.SIZE_16 : _.default.Sizes.SIZE_20,
-      className: r(p.header, {
-        [p.embed]: I
+    }), (0, i.jsx)(f.default, {
+      size: d || I ? f.default.Sizes.SIZE_16 : f.default.Sizes.SIZE_20,
+      className: r(C.header, {
+        [C.embed]: I
       }),
       children: R
     }), (0, i.jsxs)("div", {
-      className: r(p.members, {
-        [p.embed]: I
+      className: r(C.members, {
+        [C.embed]: I
       }),
       children: [N.length > 0 && (0, i.jsxs)("div", {
-        className: p.speakers,
-        children: [N.map(e => (0, i.jsx)(C, {
+        className: C.speakers,
+        children: [N.map(e => (0, i.jsx)(p, {
           speaker: e,
           guildId: v.id,
           isEmbed: I
         }, e.user.id)), D > 0 ? (0, i.jsxs)("div", {
-          className: p.speaker,
+          className: C.speaker,
           children: [(0, i.jsx)("div", {
-            className: r(p.icon, {
-              [p.embed]: I
+            className: r(C.icon, {
+              [C.embed]: I
             }),
             children: (0, i.jsx)(E.default, {
               height: I ? 12 : 14,
-              className: p.listeners
+              className: C.listeners
             })
-          }), (0, i.jsxs)(S.default, {
-            size: I ? S.default.Sizes.SIZE_12 : S.default.Sizes.SIZE_14,
-            color: S.default.Colors.HEADER_SECONDARY,
+          }), (0, i.jsxs)(h.default, {
+            size: I ? h.default.Sizes.SIZE_12 : h.default.Sizes.SIZE_14,
+            color: h.default.Colors.HEADER_SECONDARY,
             children: ["+", m.default.Messages.STAGE_INVITE_SPEAKER_COUNT.format({
               count: D
             })]
@@ -195,7 +195,7 @@ var g = e => {
       }), I && (0, i.jsx)(a.Button, {
         color: a.Button.Colors.GREEN,
         onClick: g,
-        className: p.joinButton,
+        className: C.joinButton,
         children: m.default.Messages.STAGE_CHANNEL_JOIN_BUTTON
       })]
     })]

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return p
   }
 });
 var s = n("37983"),
@@ -18,7 +18,7 @@ var s = n("37983"),
   I = n("782340"),
   _ = n("890957");
 r.default.initialize();
-class p extends a.PureComponent {
+class h extends a.PureComponent {
   componentDidMount() {
     let e = (0, o.default)(this.props.location);
     null != e && u.default.authorizeIPAddress(e), (0, d.trackAppUIViewed)("authorize_ip")
@@ -78,10 +78,10 @@ class p extends a.PureComponent {
     return e ? this.renderFailed() : t ? this.renderSucceeded() : this.renderDefault()
   }
 }
-p.defaultProps = {
+h.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var h = r.default.connectStores([c.default], () => ({
+var p = r.default.connectStores([c.default], () => ({
   verifyFailed: c.default.didVerifyFail(),
   verifySucceeded: c.default.didVerifySucceed()
-}))(p)
+}))(h)

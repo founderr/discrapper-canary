@@ -9,16 +9,16 @@ var s = n("37983"),
   a = n("627445"),
   r = n.n(a),
   l = n("65597"),
-  u = n("206230"),
-  o = n("853987"),
+  o = n("206230"),
+  u = n("853987"),
   d = n("923702"),
   c = n("658756"),
   f = n("408381"),
   E = n("177586"),
   p = n("635357"),
   S = n("642906"),
-  m = n("891865"),
-  _ = n("650484"),
+  _ = n("891865"),
+  m = n("650484"),
   I = n("367767");
 
 function C(e) {
@@ -28,12 +28,12 @@ function C(e) {
     analyticsLocations: i
   } = e, {
     skusById: a,
-    selectedSkuId: u,
+    selectedSkuId: o,
     application: d
-  } = (0, S.usePaymentContext)(), f = (0, l.default)([o.default], () => o.default.getProduct(u));
-  r(null != u, "Expected selectedSkuId"), r(null != d, "Expected application");
-  let E = a[u];
-  return (r(null != E, "Expected sku"), null == f) ? null : (0, s.jsxs)(_.PaymentPortalBody, {
+  } = (0, S.usePaymentContext)(), f = (0, l.default)([u.default], () => u.default.getProduct(o));
+  r(null != o, "Expected selectedSkuId"), r(null != d, "Expected application");
+  let E = a[o];
+  return (r(null != E, "Expected sku"), null == f) ? null : (0, s.jsxs)(m.PaymentPortalBody, {
     children: [(0, s.jsx)(I.default, {}), (0, s.jsx)(c.CollectiblesCollectedModalInner, {
       product: f,
       onClose: t,
@@ -50,22 +50,22 @@ function T(e) {
     selectedGiftStyle: a,
     hasSentMessage: r,
     giftRecipient: c,
-    giftMessageError: _,
+    giftMessageError: m,
     isSendingMessage: I
-  } = (0, p.useGiftContext)(), T = (0, l.default)([u.default], () => u.default.useReducedMotion), x = i.useRef(null), {
+  } = (0, p.useGiftContext)(), T = (0, l.default)([o.default], () => o.default.useReducedMotion), x = i.useRef(null), {
     selectedSkuId: h
-  } = (0, S.usePaymentContext)(), g = (0, l.default)([o.default], () => o.default.getProduct(h)), {
+  } = (0, S.usePaymentContext)(), g = (0, l.default)([u.default], () => u.default.getProduct(h)), {
     confettiColors: P
   } = (0, E.default)(null == g ? void 0 : g.styles);
   return t ? (0, s.jsxs)("div", {
     ref: x,
-    children: [(0, s.jsx)(m.default, {
+    children: [(0, s.jsx)(_.default, {
       giftCode: n,
       onClose: e.handleClose,
       selectedGiftStyle: a,
       hasSentMessage: r,
       giftRecipient: c,
-      giftMessageError: _,
+      giftMessageError: m,
       isSendingMessage: I
     }), !T && (0, s.jsx)(d.default, {
       confettiTarget: x.current,

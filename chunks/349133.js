@@ -10,8 +10,8 @@ var i = n("446674"),
   a = n("77078"),
   r = n("87657"),
   l = n("635357"),
-  u = n("27618"),
-  o = n("697218"),
+  o = n("27618"),
+  u = n("697218"),
   d = n("158998"),
   c = n("21526"),
   f = n("782340"),
@@ -19,16 +19,16 @@ var i = n("446674"),
     let {
       selectedSkuId: t,
       className: n
-    } = e, E = (0, i.useStateFromStoresArray)([u.default], () => u.default.getFriendIDs()), p = (0, i.useStateFromStoresArray)([o.default], () => o.default.filter(e => E.includes(e.id) && !e.bot), [E]), {
+    } = e, E = (0, i.useStateFromStoresArray)([o.default], () => o.default.getFriendIDs()), p = (0, i.useStateFromStoresArray)([u.default], () => u.default.filter(e => E.includes(e.id) && !e.bot), [E]), {
       giftRecipient: S,
-      setGiftRecipient: m,
-      giftRecipientError: _,
+      setGiftRecipient: _,
+      giftRecipientError: m,
       setGiftRecipientError: I,
       setValidatingGiftRecipient: C
     } = (0, l.useGiftContext)();
     if (null == t) return null;
     let T = async e => {
-      C(!0), null != _ && I(), m(e);
+      C(!0), null != m && I(), _(e);
       let n = await (0, c.validateCollectiblesRecipient)(e.id, t);
       !n && I(f.default.Messages.COLLECTIBLES_GIFT_SEND_ERROR_OWNED), C(!1)
     };

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return m
   }
 });
 var s = n("37983"),
@@ -17,8 +17,8 @@ var s = n("37983"),
   E = n("599110"),
   I = n("724853"),
   _ = n("49111"),
-  p = n("579033"),
-  h = n("782340"),
+  h = n("579033"),
+  p = n("782340"),
   T = n("890957");
 
 function N(e, t, n) {
@@ -30,29 +30,29 @@ function N(e, t, n) {
   });
   let s = c.default.getFingerprint(),
     a = null != s ? s : c.default.getId();
-  u.default.openMobileApp(n.state === p.GuildTemplateStates.RESOLVED ? t : void 0, a)
+  u.default.openMobileApp(n.state === h.GuildTemplateStates.RESOLVED ? t : void 0, a)
 }
 
-function g(e) {
+function m(e) {
   let {
     code: t
   } = e, n = (0, l.useStateFromStores)([r.default], () => r.default.getGuildTemplate(t));
   return (a.useEffect(() => {
     (0, d.trackAppUIViewed)("guild_template_mobile")
-  }, []), null == n || n.state === p.GuildTemplateStates.RESOLVING) ? (0, s.jsx)(f.default, {
+  }, []), null == n || n.state === h.GuildTemplateStates.RESOLVING) ? (0, s.jsx)(f.default, {
     children: (0, s.jsx)(i.Spinner, {})
-  }) : n.state === p.GuildTemplateStates.RESOLVED ? (0, s.jsxs)(f.default, {
+  }) : n.state === h.GuildTemplateStates.RESOLVED ? (0, s.jsxs)(f.default, {
     children: [(0, s.jsx)(o.default, {
       guildTemplate: n,
       tall: !0
     }), (0, s.jsx)(f.Button, {
       onClick: e => N(e, t, n),
       className: T.marginTop20,
-      children: h.default.Messages.GUILD_TEMPLATE_OPEN
+      children: p.default.Messages.GUILD_TEMPLATE_OPEN
     })]
   }) : (0, s.jsx)(I.default, {
-    text: h.default.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
-    buttonCta: h.default.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
+    text: p.default.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
+    buttonCta: p.default.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
     onClick: e => N(e, t, n)
   })
 }

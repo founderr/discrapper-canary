@@ -17,12 +17,12 @@ var s = n("37983"),
   E = n("105029"),
   I = n("271938"),
   _ = n("760190"),
-  p = n("124969"),
-  h = n("701909"),
+  h = n("124969"),
+  p = n("701909"),
   T = n("49111"),
   N = n("782340"),
-  g = n("43434"),
-  m = n("890957");
+  m = n("43434"),
+  g = n("890957");
 i.default.initialize();
 let A = e => {
   let {
@@ -66,9 +66,9 @@ let A = e => {
     })
   };
   return (0, s.jsx)("div", {
-    className: g.buttonColumn,
+    className: m.buttonColumn,
     children: (0, s.jsx)(r.Button, {
-      className: m.reportButton,
+      className: g.reportButton,
       fullWidth: !0,
       color: r.Button.Colors.BRAND_NEW,
       hover: r.Button.Colors.BRAND_NEW,
@@ -91,19 +91,19 @@ var S = () => {
       !t && !n && (await u.default.getLocationMetadata(), u.default.getExperiments())
     };
     e()
-  }, [t, n]), l ? (0, s.jsx)(p.default, {
+  }, [t, n]), l ? (0, s.jsx)(h.default, {
     children: (0, s.jsx)(r.Spinner, {})
-  }) : n && (0, s.jsxs)(p.default, {
-    children: [(0, s.jsx)(p.Title, {
-      className: m.marginBottom8,
+  }) : n && (0, s.jsxs)(h.default, {
+    children: [(0, s.jsx)(h.Title, {
+      className: g.marginBottom8,
       children: N.default.Messages.URF_LANDING_PAGE_TITLE
-    }), (0, s.jsx)(p.SubTitle, {
-      className: m.marginBottom8,
+    }), (0, s.jsx)(h.SubTitle, {
+      className: g.marginBottom8,
       children: N.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
-        supportURL: h.default.getArticleURL(T.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
+        supportURL: p.default.getArticleURL(T.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
       })
     }), (0, s.jsxs)("div", {
-      className: g.container,
+      className: m.container,
       children: [(0, s.jsx)(A, {
         title: N.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
         menuType: d.UnauthenticatedReportNames.MESSAGE

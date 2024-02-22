@@ -10,16 +10,16 @@ var i = n("414456"),
   a = n.n(i),
   r = n("265586"),
   l = n("446674"),
-  u = n("77078"),
-  o = n("606292"),
+  o = n("77078"),
+  u = n("606292"),
   d = n("688318"),
   c = n("635357"),
   f = n("184900"),
   E = n("845962"),
   p = n("506885"),
   S = n("697218"),
-  m = n("153160"),
-  _ = n("426188"),
+  _ = n("153160"),
+  m = n("426188"),
   I = n("49111"),
   C = n("782340"),
   T = n("249835"),
@@ -32,7 +32,7 @@ let h = e => {
     } = (0, d.default)({
       user: n,
       avatarDecorationOverride: t,
-      size: (0, o.getDecorationSizeForAvatarSize)(u.AvatarSizes.SIZE_40)
+      size: (0, u.getDecorationSizeForAvatarSize)(o.AvatarSizes.SIZE_40)
     });
     return (0, s.jsx)("img", {
       src: i,
@@ -47,7 +47,7 @@ let h = e => {
     } = e, i = (0, l.useStateFromStores)([E.default], () => E.default.getProfileEffectById(n.id)), {
       accessibilityLabel: a,
       thumbnailPreviewSrc: r,
-      title: u
+      title: o
     } = null !== (t = null == i ? void 0 : i.config) && void 0 !== t ? t : {};
     return (0, s.jsxs)("div", {
       className: T.profileEffectContainer,
@@ -58,7 +58,7 @@ let h = e => {
       }), (0, s.jsx)("img", {
         className: T.profileEffect,
         src: r,
-        alt: u
+        alt: o
       })]
     })
   };
@@ -68,26 +68,26 @@ var P = e => {
     selectedSkuPricePreview: n,
     className: i
   } = e, {
-    product: o
-  } = (0, _.useFetchCollectiblesProduct)(t), {
+    product: u
+  } = (0, m.useFetchCollectiblesProduct)(t), {
     giftRecipient: d,
     giftRecipientError: E
   } = (0, c.useGiftContext)(), x = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentUser());
-  if (null == o || null == n) return null;
-  let [P] = o.items, A = null != d && d.id !== (null == x ? void 0 : x.id);
+  if (null == u || null == n) return null;
+  let [P] = u.items, N = null != d && d.id !== (null == x ? void 0 : x.id);
   return (0, s.jsxs)("div", {
     className: i,
     children: [(0, s.jsxs)("div", {
       className: T.previewTitleContainer,
-      children: [(0, s.jsx)(u.FormTitle, {
+      children: [(0, s.jsx)(o.FormTitle, {
         className: T.previewTitle,
         children: C.default.Messages.COLLECTIBLES_GIFT_LABEL
-      }), A && (0, s.jsx)(u.Popout, {
+      }), N && (0, s.jsx)(o.Popout, {
         preload: () => (0, p.default)(d.id, d.getAvatarURL(null, 80)),
         renderPopout: e => (0, s.jsx)(f.default, {
           ...e,
           user: d,
-          pendingAvatar: d.getAvatarURL(null, (0, u.getAvatarSize)(u.AvatarSizes.SIZE_80)),
+          pendingAvatar: d.getAvatarURL(null, (0, o.getAvatarSize)(o.AvatarSizes.SIZE_80)),
           pendingAvatarDecoration: P.type === r.CollectiblesItemType.AVATAR_DECORATION ? P : null,
           pendingProfileEffectId: P.type === r.CollectiblesItemType.PROFILE_EFFECT ? P.id : null,
           canUsePremiumCustomization: !0,
@@ -97,10 +97,10 @@ var P = e => {
         }),
         align: "center",
         position: "right",
-        children: e => (0, s.jsx)(u.Clickable, {
+        children: e => (0, s.jsx)(o.Clickable, {
           ...e,
           className: T.previewLink,
-          children: (0, s.jsx)(u.Text, {
+          children: (0, s.jsx)(o.Text, {
             variant: "text-xs/medium",
             color: "text-link",
             children: C.default.Messages.COLLECTIBLES_PREVIEW_GIFT_PROFILE
@@ -117,19 +117,19 @@ var P = e => {
         profileEffect: P
       }), (0, s.jsxs)("div", {
         className: T.previewTextContainer,
-        children: [(0, s.jsx)(u.Text, {
+        children: [(0, s.jsx)(o.Text, {
           variant: "text-md/semibold",
-          children: o.name
-        }), (0, s.jsx)(u.Heading, {
+          children: u.name
+        }), (0, s.jsx)(o.Heading, {
           variant: "heading-sm/medium",
           color: "header-secondary",
           children: P.type === r.CollectiblesItemType.AVATAR_DECORATION ? C.default.Messages.USER_SETTINGS_AVATAR_DECORATION : P.type === r.CollectiblesItemType.PROFILE_EFFECT ? C.default.Messages.USER_SETTINGS_PROFILE_EFFECT : null
         })]
-      }), (0, s.jsx)(u.Text, {
+      }), (0, s.jsx)(o.Text, {
         variant: "text-md/semibold",
-        children: (0, m.formatPrice)(n.amount, n.currency)
+        children: (0, _.formatPrice)(n.amount, n.currency)
       })]
-    }), null != E && (0, s.jsx)(u.Text, {
+    }), null != E && (0, s.jsx)(o.Text, {
       className: T.recipientError,
       variant: "text-sm/normal",
       color: "status-danger-background",

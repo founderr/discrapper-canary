@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 }), n("222007");
 var s = n("37983"),
@@ -18,22 +18,22 @@ var s = n("37983"),
   I = n("782340"),
   _ = n("425589");
 
-function p(e) {
+function h(e) {
   let {
     location: t
-  } = e, [p, h] = a.useState(!1), {
+  } = e, [h, p] = a.useState(!1), {
     verifySuccess: T,
     verifyErrors: N,
-    redirectGuildId: g
+    redirectGuildId: m
   } = (0, l.useStateFromStores)([c.default], () => c.default.getState());
   a.useEffect(() => {
     let e = (0, r.default)(t);
     i.default.verify(e), (0, o.trackAppUIViewed)("verify_hub_email")
   }, [t]);
-  let m = () => {
-    (0, f.default)(g), h(!0)
+  let g = () => {
+    (0, f.default)(m), p(!0)
   };
-  return p ? (0, s.jsxs)(d.default, {
+  return h ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Title, {
       className: _.title,
       children: I.default.Messages.APP_OPENED_TITLE
@@ -42,7 +42,7 @@ function p(e) {
       children: I.default.Messages.APP_OPENED_BODY
     }), (0, s.jsx)(d.Button, {
       className: _.spacedButton,
-      onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(g)),
+      onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(m)),
       children: I.default.Messages.CONTINUE_TO_WEBAPP
     })]
   }) : T ? (0, s.jsxs)(d.default, {
@@ -53,7 +53,7 @@ function p(e) {
       className: _.title,
       children: I.default.Messages.VERIFICATION_VERIFIED
     }), (0, s.jsx)(d.Button, {
-      onClick: m,
+      onClick: g,
       children: I.default.Messages.VERIFICATION_OPEN_DISCORD
     })]
   }) : null != N ? (0, s.jsxs)(d.default, {
@@ -67,7 +67,7 @@ function p(e) {
       className: _.subtitle,
       children: I.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
     }), (0, s.jsx)(d.Button, {
-      onClick: m,
+      onClick: g,
       children: I.default.Messages.VERIFICATION_OPEN_DISCORD
     })]
   }) : (0, s.jsxs)(d.default, {

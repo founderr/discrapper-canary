@@ -4,16 +4,16 @@ n.r(t), n.d(t, {
     return E
   },
   getDefaultPomelo: function() {
-    return f
+    return _
   },
   shouldSkipToEditUsername: function() {
     return m
   },
   formatPomeloForEditing: function() {
-    return p
+    return C
   },
   getMemberSince: function() {
-    return C
+    return p
   },
   formatUsernameLiveCheckValidation: function() {
     return I
@@ -42,32 +42,32 @@ function E(e) {
   }, t, 80)
 }
 
-function f(e) {
+function _(e) {
   let t = (0, u.stripDiacritics)(e.username).replace(o.dirtyChars, "").replace(o.coalescePeriods, ".").toLowerCase();
   return "".concat(t).concat(e.discriminator).substring(0, 32)
 }
-let _ = ["@", "#", ":"],
-  S = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
-  h = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
+let f = ["@", "#", ":"],
+  h = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
+  S = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
 
 function m(e) {
   var t, n;
   let i = e.username.toLowerCase();
   if ((t = i, n = o.CONTROL_CHARACTERS_CODE, t.split("").filter(e => !n.includes(e.charCodeAt(0))).join("")).length < 2) return !0;
-  for (let e of _)
+  for (let e of f)
     if (i.includes(e)) return !0;
-  for (let e of h)
-    if (i === e.toLowerCase()) return !0;
   for (let e of S)
+    if (i === e.toLowerCase()) return !0;
+  for (let e of h)
     if (i.includes(e.toLowerCase())) return !0;
   return !1
 }
 
-function p(e) {
+function C(e) {
   return e.toLowerCase().replace(/\s/g, "").replace("@", "")
 }
 
-function C(e) {
+function p(e) {
   let t = a.default.extractTimestamp(e);
   try {
     return l(new Date(t)).format("MMM DD, YYYY")
