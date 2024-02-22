@@ -13,8 +13,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("20606"),
   r = n("915675"),
-  u = n("338338"),
-  o = n("65369");
+  o = n("338338"),
+  u = n("65369");
 
 function d(e) {
   return e
@@ -25,9 +25,9 @@ function c(e) {
     locked: t
   } = e;
   return (0, l.jsx)("div", {
-    className: s(o.iconItem, u.premiumChannelIcon),
+    className: s(u.iconItem, o.premiumChannelIcon),
     children: (0, l.jsx)(r.default, {
-      className: o.actionIcon,
+      className: u.actionIcon,
       color: t ? i.default.CREATOR_REVENUE_LOCKED_CHANNEL_ICON : void 0
     })
   })

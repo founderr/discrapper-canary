@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return K
   },
   default: function() {
-    return z
+    return Z
   }
 }), n("222007");
 var l = n("37983"),
@@ -15,8 +15,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("627445"),
-  u = n.n(r),
-  o = n("90915"),
+  o = n.n(r),
+  u = n("90915"),
   d = n("974667"),
   c = n("394846"),
   f = n("446674"),
@@ -83,7 +83,7 @@ class K extends a.Component {
       iconClassName: a,
       interactiveClassName: s,
       text: r,
-      children: u,
+      children: o,
       locationState: d,
       onClick: f,
       className: C,
@@ -110,7 +110,7 @@ class K extends a.Component {
         className: i(s, B.interactive, B.linkButton, {
           [B.interactiveSelected]: t
         }),
-        children: (0, l.jsxs)(o.Link, {
+        children: (0, l.jsxs)(u.Link, {
           to: {
             pathname: e,
             state: d
@@ -125,7 +125,7 @@ class K extends a.Component {
             }),
             name: r,
             innerClassName: B.avatarWithText
-          }), u]
+          }), o]
         })
       })
     })
@@ -144,8 +144,8 @@ function W(e) {
     isMobile: R,
     "aria-posinset": b,
     "aria-setsize": j
-  } = e, [G, K] = a.useState(!1), W = a.useRef(null), z = a.useRef(null), {
-    avatarSrc: Z,
+  } = e, [G, K] = a.useState(!1), W = a.useRef(null), Z = a.useRef(null), {
+    avatarSrc: z,
     avatarDecorationSrc: X,
     eventHandlers: Q
   } = (0, N.default)({
@@ -191,7 +191,7 @@ function W(e) {
         channelSelected: s
       })
     })
-  }, eu = e => {
+  }, eo = e => {
     e.preventDefault(), e.stopPropagation();
     let n = F.default.Messages.LEAVE_GROUP_DM_TITLE.format({
         name
@@ -209,7 +209,7 @@ function W(e) {
       onSubmit: el,
       ...e
     }))
-  }, eo = () => {
+  }, eu = () => {
     let e = {
       className: B.activity,
       textClassName: B.activityText,
@@ -239,12 +239,12 @@ function W(e) {
       className: B.avatar,
       size: h.AvatarSizes.SIZE_32
     });
-    u(null != r, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
+    o(null != r, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
     let e = null;
     return !r.isSystemUser() && (e = (0, m.default)(c) ? w.StatusTypes.STREAMING : v), (0, l.jsx)(V, {
       ...Q,
       size: h.AvatarSizes.SIZE_32,
-      src: Z,
+      src: z,
       avatarDecoration: X,
       status: e,
       isMobile: R,
@@ -267,9 +267,9 @@ function W(e) {
         focusProps: {
           ...H,
           focusTarget: W,
-          ringTarget: z
+          ringTarget: Z
         },
-        ref: z,
+        ref: Z,
         onMouseEnter: et,
         onMouseLeave: en,
         onMouseDown: ea,
@@ -285,7 +285,7 @@ function W(e) {
           onClick: ei,
           muted: J,
           selected: s,
-          children: [(0, l.jsx)(o.Link, {
+          children: [(0, l.jsx)(u.Link, {
             innerRef: W,
             to: w.Routes.CHANNEL(w.ME, t.id),
             className: B.link,
@@ -299,7 +299,7 @@ function W(e) {
               selected: s,
               highlighted: q,
               muted: null != J && J,
-              subText: eo(),
+              subText: eu(),
               name: (0, l.jsx)(O.default, {
                 children: $
               }),
@@ -311,7 +311,7 @@ function W(e) {
             })
           }), ee ? (0, l.jsx)(Y, {}) : null, !ef && (0, l.jsx)(k, {
             "aria-label": ec ? F.default.Messages.LEAVE_GROUP_DM : F.default.Messages.CLOSE_DM,
-            onClick: ec ? eu : el,
+            onClick: ec ? eo : el,
             onMouseDown: es
           })]
         })
@@ -319,7 +319,7 @@ function W(e) {
     }
   })
 }
-var z = e => {
+var Z = e => {
   let {
     channel: t,
     selected: n,
@@ -329,7 +329,7 @@ var z = e => {
     activities: null != i ? A.default.getActivities(i) : null,
     applicationStream: null != i ? T.default.getAnyStreamForUser(i) : null,
     isMobile: null != i && A.default.isMobileOnline(i)
-  }), [i]), u = (0, f.useStateFromStores)([v.default], () => null != s ? v.default.isTyping(t.id, t.getRecipientId()) : void 0);
+  }), [i]), o = (0, f.useStateFromStores)([v.default], () => null != s ? v.default.isTyping(t.id, t.getRecipientId()) : void 0);
   return t.isMultiUserDM() ? (0, l.jsx)(W, {
     channel: t,
     selected: n,
@@ -338,7 +338,7 @@ var z = e => {
     channel: t,
     selected: n,
     user: s,
-    isTyping: u,
+    isTyping: o,
     ...a,
     ...r
   })

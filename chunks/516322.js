@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  i = s.n(n),
+var i = s("414456"),
+  n = s.n(i),
   r = s("956089"),
   l = s("782340"),
   o = s("505813");
@@ -17,7 +17,7 @@ function u(e) {
     className: t
   } = e;
   return (0, a.jsx)(r.TextBadge, {
-    className: i(o.tag, t),
+    className: n(o.tag, t),
     text: l.default.Messages.EARLY_ACCESS
   })
 }

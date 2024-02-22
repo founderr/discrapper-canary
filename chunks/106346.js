@@ -11,8 +11,8 @@ var l, a, s = n("37983");
 n("884691");
 var i = n("446674"),
   r = n("77078"),
-  u = n("437822"),
-  o = n("774146"),
+  o = n("437822"),
+  u = n("774146"),
   d = n("878720"),
   c = n("88093"),
   f = n("697218"),
@@ -59,7 +59,7 @@ var g = e => {
         className: E.buttonContainer,
         children: [null != v ? (0, s.jsx)(r.Button, {
           onClick: () => {
-            I ? o.openClaimAccountModal() : S ? (0, r.openModalLazy)(async () => {
+            I ? u.openClaimAccountModal() : S ? (0, r.openModalLazy)(async () => {
               let {
                 default: e
               } = await n.el("601745").then(n.bind(n, "601745"));
@@ -69,7 +69,7 @@ var g = e => {
               })
             }, {
               modalKey: p.PHONE_VERIFICATION_MODAL_KEY
-            }) : _ && (u.default.verifyResend(), (0, r.openModal)(e => {
+            }) : _ && (o.default.verifyResend(), (0, r.openModal)(e => {
               var t;
               return (0, s.jsx)(r.ConfirmModal, {
                 header: m.default.Messages.VERIFICATION_EMAIL_TITLE,

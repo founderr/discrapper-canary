@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("627445"),
   r = n.n(i),
-  o = n("446674"),
-  u = n("77078"),
+  u = n("446674"),
+  o = n("77078"),
   d = n("398604"),
   c = n("331759"),
   f = n("305961"),
@@ -31,12 +31,12 @@ function S(e) {
     analyticsLocation: I,
     className: T,
     ...v
-  } = e, x = null == g ? void 0 : g.getGuildId(), N = null == g ? void 0 : g.id, A = (0, o.useStateFromStores)([f.default], () => null != x ? f.default.getGuild(x) : null, [x]), M = (0, o.useStateFromStores)([d.default], () => d.default.getActiveEventByChannel(N), [N]);
+  } = e, x = null == g ? void 0 : g.getGuildId(), N = null == g ? void 0 : g.id, A = (0, u.useStateFromStores)([f.default], () => null != x ? f.default.getGuild(x) : null, [x]), M = (0, u.useStateFromStores)([d.default], () => d.default.getActiveEventByChannel(N), [N]);
   if (t = A, a = g, !(null != t && null != a && h.default.can(m.Permissions.CREATE_INSTANT_INVITE, a))) return null;
   let R = p.default.Messages.INSTANT_INVITE;
   return null != i ? R = p.default.Messages.INVITE_STREAM_HEADER : null != S && (R = p.default.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(u.Button, {
-      size: u.Button.Sizes.SMALL,
+    children: [(0, l.jsx)(o.Button, {
+      size: o.Button.Sizes.SMALL,
       color: E.buttonColor,
       onClick: () => {
         r(null != A, "guild cannot be null"), r(null != g, "channel cannot be null"), ! function(e) {
@@ -46,11 +46,11 @@ function S(e) {
             streamUserId: s,
             applicationId: i,
             appContext: r,
-            exitFullScreen: o,
+            exitFullScreen: u,
             analyticsLocation: d,
             guildScheduledEvent: c
           } = e;
-          null == o || o(), (0, u.openModalLazy)(async () => {
+          null == u || u(), (0, o.openModalLazy)(async () => {
             let {
               default: e
             } = await n.el("310688").then(n.bind(n, "310688"));
@@ -66,7 +66,7 @@ function S(e) {
             })
           }, {
             modalKey: "stream-invite-modal",
-            contextKey: r === m.AppContext.POPOUT ? u.POPOUT_MODAL_CONTEXT : u.DEFAULT_MODAL_CONTEXT
+            contextKey: r === m.AppContext.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT
           })
         }({
           guild: A,

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("984444"),
-  o = n("456799"),
+  o = n("984444"),
+  u = n("456799"),
   d = n("15318"),
   c = n("146782"),
   f = n("77078"),
@@ -85,7 +85,7 @@ class A extends a.PureComponent {
       lastPing: a,
       state: s,
       className: r,
-      children: u
+      children: o
     } = this.props;
     return s === g.RTCConnectionStates.RTC_CONNECTED && (e = (0, l.jsx)(f.Tooltip, {
       text: t !== g.RTCConnectionQuality.UNKNOWN && null != a ? "".concat(a.toFixed(0), " ms") : null,
@@ -102,7 +102,7 @@ class A extends a.PureComponent {
           className: I.labelWrapper,
           children: this.renderStatus()
         })]
-      }), u]
+      }), o]
     })
   }
   constructor(...e) {
@@ -127,8 +127,8 @@ function L(e) {
   {
     let e = {
       [g.RTCConnectionQuality.FINE]: d.ConnectionFineIcon,
-      [g.RTCConnectionQuality.AVERAGE]: u.ConnectionAverageIcon,
-      [g.RTCConnectionQuality.BAD]: o.ConnectionBadIcon,
+      [g.RTCConnectionQuality.AVERAGE]: o.ConnectionAverageIcon,
+      [g.RTCConnectionQuality.BAD]: u.ConnectionBadIcon,
       [g.RTCConnectionQuality.UNKNOWN]: c.ConnectionUnknownIcon
     } [t];
     return (0, l.jsx)(e, {

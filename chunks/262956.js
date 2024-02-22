@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("112821"),
-  o = n("244201"),
-  u = n("274870"),
+  u = n("244201"),
+  o = n("274870"),
   d = n("247013"),
   c = n("660478"),
   f = n("697218"),
@@ -25,7 +25,7 @@ var l = n("37983"),
     } = e, n = (0, s.useStateFromStores)([d.default, f.default], () => {
       let e = f.default.getCurrentUser();
       return null == e || t.isNSFW() && (!e.nsfwAllowed || !d.default.didAgree(t.getGuildId()))
-    }, [t]), [g, C] = a.useState(!1), _ = (0, s.useStateFromStores)([c.default], () => c.default.hasUnreadPins(t.id), [t]), I = (0, o.useWindowDispatch)(), T = (0, u.useIsBroadcastingGDM)(t.id), v = a.useCallback(() => {
+    }, [t]), [g, C] = a.useState(!1), _ = (0, s.useStateFromStores)([c.default], () => c.default.hasUnreadPins(t.id), [t]), I = (0, u.useWindowDispatch)(), T = (0, o.useIsBroadcastingGDM)(t.id), v = a.useCallback(() => {
       !n && C(e => !e)
     }, [n]);
 

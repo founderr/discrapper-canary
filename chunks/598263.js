@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n("65597"),
-  u = n("77078"),
+  u = n("65597"),
+  o = n("77078"),
   d = n("419135"),
   c = n("574933"),
   f = n("692038"),
@@ -35,10 +35,10 @@ function N(e) {
     location: A,
     className: M,
     onNavigate: R
-  } = e, j = a.useRef(null), L = (0, o.default)([p.default], () => p.default.getGuildSidebarState(N), [N]), y = a.useRef(0), [O, P] = a.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), b = (0, C.useServerMessageHistoryForUser)(s, N, {
+  } = e, j = a.useRef(null), L = (0, u.default)([p.default], () => p.default.getGuildSidebarState(N), [N]), y = a.useRef(0), [O, P] = a.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), b = (0, C.useServerMessageHistoryForUser)(s, N, {
     addtionalQuery: O,
     shouldDispatch: !0
-  }), D = (0, o.default)([S.default], () => S.default.getUser(s), [s]), U = (0, o.default)([E.default], () => E.default.getMember(N, s), [N, s]), w = (0, I.useProfileThemedPanelBackground)(s, N);
+  }), D = (0, u.default)([S.default], () => S.default.getUser(s), [s]), U = (0, u.default)([E.default], () => E.default.getMember(N, s), [N, s]), w = (0, I.useProfileThemedPanelBackground)(s, N);
   a.useLayoutEffect(() => {
     let e = null == L ? void 0 : L.details.scrollOffset;
     if (null != e) {
@@ -59,7 +59,7 @@ function N(e) {
       })
     }, [N, s, L, O]),
     k = (0, r.throttle)(F, 300),
-    V = a.useCallback(e => {
+    B = a.useCallback(e => {
       if (null == L) return;
       let t = {
         ...O,
@@ -71,8 +71,8 @@ function N(e) {
         scrollOffset: y.current
       })
     }, [N, s, L, O]),
-    B = null !== (n = null == O ? void 0 : O.offset) && void 0 !== n ? n : 0,
-    H = (0, o.default)([c.default], () => {
+    V = null !== (n = null == O ? void 0 : O.offset) && void 0 !== n ? n : 0,
+    H = (0, u.default)([c.default], () => {
       if (null == b.result) return [];
       let e = b.result.messages,
         t = (0, d.createASTHighlighter)("");
@@ -96,7 +96,7 @@ function N(e) {
         isSearching: !0,
         isIndexing: !1,
         isHistoricalIndexing: !1,
-        offset: B,
+        offset: V,
         totalResults: 0,
         hasError: !1,
         showBlockedResults: !1,
@@ -106,13 +106,13 @@ function N(e) {
         isSearching: !1,
         isIndexing: null !== (t = b.result.doing_deep_historical_index) && void 0 !== t && t,
         isHistoricalIndexing: null !== (n = b.result.doing_deep_historical_index) && void 0 !== n && n,
-        offset: B,
+        offset: V,
         totalResults: null !== (l = b.result.total_results) && void 0 !== l ? l : 0,
         hasError: !1,
         showBlockedResults: !1,
         showNoResultsAlt: !1
       }
-    }, [b.result, B]);
+    }, [b.result, V]);
   return null == D || null == U || null == G ? null : (0, l.jsxs)("div", {
     className: i(v.container, M),
     style: {
@@ -122,7 +122,7 @@ function N(e) {
       guildId: N,
       userId: s,
       onNavigate: R
-    }), (0, l.jsx)(u.AdvancedScroller, {
+    }), (0, l.jsx)(o.AdvancedScroller, {
       className: i(x.innerContainer),
       ref: j,
       onScroll: k,
@@ -133,7 +133,7 @@ function N(e) {
         renderEmbeds: !0,
         blockCount: 0,
         scrollTo: () => {},
-        onChangePage: V
+        onChangePage: B
       })
     })]
   })

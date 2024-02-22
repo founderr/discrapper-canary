@@ -9,15 +9,15 @@ var n = s("819963"),
   l = s("332809"),
   E = s("50308"),
   _ = s("774406"),
-  d = s("20264"),
-  i = s("472977");
+  i = s("20264"),
+  d = s("472977");
 let T = {
   CREATE: l,
   GAMING: _,
   FRIENDS: E,
-  STUDY: i,
+  STUDY: d,
   CLUBS: t,
   CREATORS: n,
-  LOCAL_COMMUNITY: d,
+  LOCAL_COMMUNITY: i,
   SCHOOL_CLUB: t
 }

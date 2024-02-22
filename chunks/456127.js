@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("598165"),
   r = n("386045"),
-  o = n("803725"),
-  u = n("103979"),
+  u = n("803725"),
+  o = n("103979"),
   d = n("981913"),
   c = n("373469"),
   f = n("271938"),
@@ -24,7 +24,7 @@ function S(e) {
     channel: t
   } = e, n = (0, s.useStateFromStores)([h.default], () => h.default.getSelectedParticipant(t.id)), S = (null == n ? void 0 : n.type) === m.ParticipantTypes.STREAM, g = (0, s.useStateFromStores)([c.default], () => S ? c.default.getActiveStreamForStreamKey(n.id) : null), {
     ignoreSenderPreference: C
-  } = u.default.useExperiment({
+  } = o.default.useExperiment({
     location: "ActionBarClipsButton"
   }, {
     autoTrackExposure: !1
@@ -41,7 +41,7 @@ function S(e) {
   return (0, l.jsx)(d.default, {
     className: E.actionBarButton,
     onClick: () => {
-      !v && (T ? (0, o.saveClip)() : (0, o.saveClip)(n.id))
+      !v && (T ? (0, u.saveClip)() : (0, u.saveClip)(n.id))
     },
     disabled: v,
     iconComponent: x,

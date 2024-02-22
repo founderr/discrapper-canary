@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("534222"),
-  u = n("698652"),
-  o = n("393414"),
+  o = n("698652"),
+  u = n("393414"),
   d = n("18494"),
   c = n("943232"),
   f = n("627490"),
@@ -50,7 +50,7 @@ let S = [{
   }),
   key: "JOIN_SERVERS",
   getName: () => I.default.Messages.HUB_SIDEBAR_JOIN_SERVERS,
-  handler: (e, t) => (0, o.transitionToGuild)(e.id, t.id)
+  handler: (e, t) => (0, u.transitionToGuild)(e.id, t.id)
 }, {
   icon: (0, l.jsx)(C.default, {
     className: _.icon
@@ -98,7 +98,7 @@ var N = e => {
     })
   }, [t.id]);
   let {
-    showHubEventsList: o
+    showHubEventsList: u
   } = m.default.useExperiment({
     guildId: t.id,
     location: "543af8_2"
@@ -114,7 +114,7 @@ var N = e => {
   }, C = (0, E.useHubUnreadCount)(n);
   return (0, l.jsx)("div", {
     children: S.map(e => {
-      if (!o && "EVENTS" === e.key) return null;
+      if (!u && "EVENTS" === e.key) return null;
       let t = c && "JOIN_SERVERS" === e.key;
       return (0, l.jsx)(p.default, {
         avatar: e.icon,
@@ -132,7 +132,7 @@ var N = e => {
         selectedClassName: _.selected,
         innerClassName: _.itemInner,
         avatarClassName: _.avatar,
-        children: "JOIN_SERVERS" === e.key && C > 0 ? (0, u.renderMentionBadge)(C) : null
+        children: "JOIN_SERVERS" === e.key && C > 0 ? (0, o.renderMentionBadge)(C) : null
       }, e.key)
     })
   })

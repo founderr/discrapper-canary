@@ -26,8 +26,8 @@ var a, i, n = s("65597"),
   p = s("49111"),
   N = s("397336"),
   g = s("782340"),
-  P = s("574211"),
-  C = s("982784"),
+  C = s("574211"),
+  P = s("982784"),
   O = s("19530"),
   M = s("215541"),
   h = s("571685"),
@@ -40,8 +40,8 @@ var a, i, n = s("65597"),
   j = s("198326"),
   G = s("761708"),
   k = s("174433"),
-  y = s("828015"),
-  B = s("62414"),
+  B = s("828015"),
+  y = s("62414"),
   H = s("613697"),
   K = s("907511"),
   F = s("165870"),
@@ -182,13 +182,13 @@ var X = () => {
       description: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
       descriptionCta: g.default.Messages.TAKE_ME_THERE,
       onCtaClick: et,
-      perkImage: y
+      perkImage: B
     } : {
       name: "entranceSoundsSeeAllVariation",
       title: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
       subtitle: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
       description: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
-      perkImage: y
+      perkImage: B
     },
     profileEffects: Z ? {
       name: "profileEffects",
@@ -326,13 +326,13 @@ var X = () => {
       name: "upcomingDropUntimed",
       title: g.default.Messages.NEW_DROP,
       pillText: g.default.Messages.COMING_SOON,
-      backgroundImage: B
+      backgroundImage: y
     },
     badge: {
       name: "badge",
       title: g.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE,
       subtitle: g.default.Messages.NITRO_HOME_GET_THIS_SUBSCRIBER_BADGE,
-      perkImage: P,
+      perkImage: C,
       description: g.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS
     },
     customAppIcons: {
@@ -359,7 +359,7 @@ var X = () => {
       name: "customSoundsEverywhere",
       title: g.default.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
       subtitle: g.default.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-      perkImage: (0, m.getThemedImage)(t, C, O),
+      perkImage: (0, m.getThemedImage)(t, P, O),
       description: g.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
     },
     specialStickerAccess: {

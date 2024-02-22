@@ -10,13 +10,13 @@ var a = n("907002"),
   s = n("46829"),
   i = n("981913"),
   r = n("782340"),
-  o = n("643708");
-let u = (0, a.animated)(e => {
+  u = n("643708");
+let o = (0, a.animated)(e => {
   let {
     percentComplete: t
   } = e, n = 20;
   return (0, l.jsx)("svg", {
-    className: o.countdown,
+    className: u.countdown,
     width: 40,
     height: 40,
     viewBox: "0 0 ".concat(40, " ").concat(40),
@@ -24,7 +24,7 @@ let u = (0, a.animated)(e => {
       style: {
         strokeDashoffset: Math.round(100 * t)
       },
-      className: o.progress,
+      className: u.progress,
       cx: n,
       cy: n,
       r: n - 6,
@@ -56,8 +56,8 @@ function d(e) {
     seconds: n
   }) : void 0, _ = p ? i.CenterControlButton : i.default;
   return (0, l.jsxs)("div", {
-    className: o.container,
-    children: [S ? (0, l.jsx)(u, {
+    className: u.container,
+    children: [S ? (0, l.jsx)(o, {
       percentComplete: g.percentComplete
     }) : null, (0, l.jsx)(_, {
       ...E,

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("974667"),
-  u = n("446674"),
-  o = n("77078"),
+  o = n("446674"),
+  u = n("77078"),
   d = n("450911"),
   c = n("272030"),
   f = n("755624"),
@@ -59,13 +59,13 @@ var O = a.memo(function(e) {
     isSelectedVoice: R,
     isLast: O,
     withGuildIcon: y
-  } = e, D = (0, u.useStateFromStores)([E.default], () => E.default.getVoiceStatesForChannel(t), [t]), b = (0, u.useStateFromStores)([m.default], () => m.default.hasVideo(t.id)), {
+  } = e, D = (0, o.useStateFromStores)([E.default], () => E.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([m.default], () => m.default.hasVideo(t.id)), {
     unread: j,
     mentionCount: G
-  } = (0, u.useStateFromStoresObject)([p.default], () => ({
+  } = (0, o.useStateFromStoresObject)([p.default], () => ({
     unread: p.default.hasUnread(t.id),
     mentionCount: p.default.getMentionCount(t.id)
-  })), U = (0, u.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), P = a.useCallback(e => {
+  })), U = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), P = a.useCallback(e => {
     (0, h.openThreadSidebarForViewing)(t, !e.shiftKey, A.OpenThreadAnalyticsLocations.CHANNEL_LIST)
   }, [t]), w = a.useCallback(() => {
     d.default.preload(t.guild_id, t.id)
@@ -103,7 +103,7 @@ var O = a.memo(function(e) {
       style: {
         transform: "rotateX(180deg) translateY(-9px)"
       }
-    }), (0, l.jsx)(o.FocusRing, {
+    }), (0, l.jsx)(u.FocusRing, {
       focusTarget: k,
       ringTarget: k,
       offset: {
@@ -122,7 +122,7 @@ var O = a.memo(function(e) {
         onContextMenu: F,
         children: [!j || U || s ? null : (0, l.jsx)("div", {
           className: i(x.unread, x.unreadImportant)
-        }), (0, l.jsx)(o.Clickable, {
+        }), (0, l.jsx)(u.Clickable, {
           ...H,
           innerRef: k,
           className: x.link,

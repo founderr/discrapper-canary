@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("375022"),
   r = n("77078"),
-  u = n("272030"),
-  o = n("685665"),
+  o = n("272030"),
+  u = n("685665"),
   d = n("616265"),
   c = n("141254"),
   f = n("116616"),
@@ -38,7 +38,7 @@ let T = {
 };
 
 function A(e) {
-  (0, u.openContextMenuLazy)(e, async () => {
+  (0, o.openContextMenuLazy)(e, async () => {
     let {
       default: e
     } = await n.el("946661").then(n.bind(n, "946661"));
@@ -52,9 +52,9 @@ function L(e) {
   let {
     disableTooltip: t,
     lastTargetNode: n
-  } = e, u = (0, s.useStateFromStores)([C.default], () => C.default.getGuilds()), L = a.useMemo(() => Object.values(u), [u]), v = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, _.CREATE_GUILD_MODAL_KEY)), {
+  } = e, o = (0, s.useStateFromStores)([C.default], () => C.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, _.CREATE_GUILD_MODAL_KEY)), {
     analyticsLocations: M
-  } = (0, o.default)(), O = (0, r.useRedesignIconContext)().enabled, y = (0, l.jsx)(g.default, {
+  } = (0, u.default)(), O = (0, r.useRedesignIconContext)().enabled, y = (0, l.jsx)(g.default, {
     showPill: !1,
     id: "create-join-button",
     onClick: () => {

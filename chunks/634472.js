@@ -10,20 +10,20 @@ var a = n("414456"),
   s = n.n(a),
   i = n("446674"),
   r = n("629109"),
-  o = n("42887"),
-  u = n("316680"),
+  u = n("42887"),
+  o = n("316680"),
   d = n("829536"),
   c = n("773336"),
   f = n("550410"),
   h = n("4536"),
-  m = i.default.connectStores([o.default], e => {
+  m = i.default.connectStores([u.default], e => {
     let {
       userId: t,
       context: n
     } = e;
     return {
-      currentVolume: o.default.getLocalVolume(t, n),
-      muted: o.default.isLocalMute(t, n)
+      currentVolume: u.default.getLocalVolume(t, n),
+      muted: u.default.isLocalMute(t, n)
     }
   })(function(e) {
     let {
@@ -31,18 +31,18 @@ var a = n("414456"),
       iconClassName: n,
       sliderClassName: a,
       userId: i,
-      currentVolume: o,
+      currentVolume: u,
       muted: m,
       context: p,
       currentWindow: E = window
     } = e;
     return (0, l.jsx)(f.default, {
-      children: (0, l.jsx)(u.default, {
+      children: (0, l.jsx)(o.default, {
         currentWindow: E,
         iconClassName: s(n, h.controlIcon),
         sliderClassName: a,
         className: t,
-        value: (0, d.amplitudeToPerceptual)(o),
+        value: (0, d.amplitudeToPerceptual)(u),
         muted: m,
         maxValue: c.isPlatformEmbedded ? 200 : 100,
         onValueChange: e => {

@@ -24,9 +24,9 @@ var a = n("37983"),
   p = n("677734"),
   N = n("538418"),
   g = n("584866"),
-  I = n("41877"),
-  T = n("71514"),
-  S = n("265104"),
+  S = n("41877"),
+  I = n("71514"),
+  T = n("265104"),
   M = n("345516"),
   j = n("244599"),
   C = n("291028"),
@@ -68,7 +68,7 @@ var U = e => {
     multiSelect: G,
     reportId: P,
     textInput: w
-  } = e, V = D(t, "checkbox"), F = D(t, "text_line_resource"), H = O(t, "external_link"), z = O(t, "free_text"), Y = O(t, "dropdown"), [W, K] = l.useState(!1), [q, Z] = l.useState(""), [X, J] = l.useState(() => ({})), [Q, $] = l.useState(() => ({})), [ee, et] = l.useState((0, i.areRequiredElementsUnfilled)(z, Y, V, w, G)), en = function(e, t) {
+  } = e, F = D(t, "checkbox"), V = D(t, "text_line_resource"), H = O(t, "external_link"), z = O(t, "free_text"), Y = O(t, "dropdown"), [W, K] = l.useState(!1), [q, Z] = l.useState(""), [X, J] = l.useState(() => ({})), [Q, $] = l.useState(() => ({})), [ee, et] = l.useState((0, i.areRequiredElementsUnfilled)(z, Y, F, w, G)), en = function(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
       a = {
         ...Q
@@ -76,18 +76,18 @@ var U = e => {
     a[e] = {
       value: t,
       isValid: n
-    }, $(a), et((0, i.areRequiredElementsUnfilled)(z, Y, V, a, X))
+    }, $(a), et((0, i.areRequiredElementsUnfilled)(z, Y, F, a, X))
   }, ea = l.useMemo(() => e => {
     k({
       nodeRef: t.id,
       destination: e,
       textInput: null != z || null != Y ? Q : void 0,
-      multiSelect: null != V ? {
-        name: V.name,
+      multiSelect: null != F ? {
+        name: F.name,
         state: X
       } : void 0
     })
-  }, [t, k, V, X, Q, z, Y]);
+  }, [t, k, F, X, Q, z, Y]);
   l.useEffect(() => {
     null != G && J(G), null != w && $(w)
   }, [G, w]);
@@ -121,11 +121,11 @@ var U = e => {
       })]
     }), (0, a.jsxs)(r.ModalContent, {
       className: A.body,
-      children: [null != F ? (0, a.jsx)(j.default, {
-        element: F
+      children: [null != V ? (0, a.jsx)(j.default, {
+        element: V
       }) : null, null != D(t, "breadcrumbs") && (0, a.jsx)(o.default, {
         history: U
-      }), null != D(t, "message_preview") && ("message" === n.name || "first_dm" === n.name) && (0, a.jsx)(I.default, {
+      }), null != D(t, "message_preview") && ("message" === n.name || "first_dm" === n.name) && (0, a.jsx)(S.default, {
         message: n.record
       }), null != D(t, "user_preview") && "user" === n.name ? (0, a.jsx)(C.default, {
         user: n.record
@@ -153,7 +153,7 @@ var U = e => {
       }), null != D(t, "leave_guild") && "guild" === n.name && (0, a.jsx)(g.default, {
         guildId: n.record.id,
         reportId: P
-      }), null != D(t, "channel_preview") && "stage_channel" === n.name && (0, a.jsx)(S.default, {
+      }), null != D(t, "channel_preview") && "stage_channel" === n.name && (0, a.jsx)(T.default, {
         stageInstance: n.record
       }), null != D(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, a.jsx)(x.default, {
         event: n.record
@@ -161,13 +161,13 @@ var U = e => {
         entry: n.record
       }), null != D(t, "guild_discovery_preview") && "guild_discovery" === n.name && (0, a.jsx)(R.default, {
         entry: n.record
-      }), null != V && (0, a.jsx)(T.default, {
-        element: V,
+      }), null != F && (0, a.jsx)(I.default, {
+        element: F,
         onChange: (e, t) => {
           let n = {
             ...X
           };
-          e in X ? delete n[e] : n[e] = t, J(n), et((0, i.areRequiredElementsUnfilled)(z, Y, V, Q, n))
+          e in X ? delete n[e] : n[e] = t, J(n), et((0, i.areRequiredElementsUnfilled)(z, Y, F, Q, n))
         },
         state: X
       }), ("user_urf" === n.name || "message_urf" === n.name) && null != Y && Y.length > 0 && (0, a.jsx)(f.default, {

@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("884691"),
-  r = n("77078"),
+var r = n("884691"),
+  i = n("77078"),
   l = n("606292"),
   a = n("688318"),
   s = n("19287");
@@ -27,13 +27,13 @@ function o(e) {
   } = (0, s.useAnimatedAvatarSrc)({
     user: t,
     guildId: n,
-    size: (0, r.getAvatarSize)(o),
+    size: (0, i.getAvatarSize)(o),
     showPending: u,
     animateOnHover: d,
     avatarOverride: m
   }), {
-    avatarPlaceholderSrc: I,
-    avatarDecorationSrc: C,
+    avatarPlaceholderSrc: C,
+    avatarDecorationSrc: I,
     eventHandlers: p
   } = (0, a.default)({
     user: t,
@@ -43,19 +43,19 @@ function o(e) {
     animateOnHover: d,
     avatarDecorationOverride: f,
     showTryItOut: c
-  }), P = i.useCallback(() => {
+  }), S = r.useCallback(() => {
     T.onMouseEnter(), p.onMouseEnter()
-  }, [T, p]), S = i.useCallback(() => {
+  }, [T, p]), P = r.useCallback(() => {
     T.onMouseLeave(), p.onMouseLeave()
   }, [T, p]);
   return {
-    avatarPlaceholderSrc: I,
-    avatarDecorationSrc: C,
+    avatarPlaceholderSrc: C,
+    avatarDecorationSrc: I,
     avatarSrc: _,
     isAnimating: E,
     eventHandlers: {
-      onMouseEnter: P,
-      onMouseLeave: S
+      onMouseEnter: S,
+      onMouseLeave: P
     }
   }
 }

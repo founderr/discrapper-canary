@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  i = s("414456"),
-  r = s.n(i),
+  i = s("884691"),
+  n = s("414456"),
+  r = s.n(n),
   l = s("917351"),
   o = s("65597"),
   u = s("77078"),
@@ -22,8 +22,8 @@ var a = s("37983"),
   R = s("628550"),
   m = s("598739"),
   A = s("881155"),
-  N = s("646718"),
-  p = s("49111"),
+  p = s("646718"),
+  N = s("49111"),
   g = s("994428"),
   C = s("782340"),
   P = s("635650");
@@ -31,16 +31,16 @@ let O = e => {
     let {
       name: t,
       canReveal: s = !0,
-      dismissibleContentType: i,
+      dismissibleContentType: n,
       forceShadow: E,
       cardType: I
-    } = e, T = (0, o.default)([d.default], () => d.default.useReducedMotion), [f, A] = n.useState(!1), [N, h] = n.useState(!1), L = I === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW || I === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW || I === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW, x = (0, R.default)(), [v, D] = (0, c.useGetDismissibleContent)(null != i && s ? [i] : []), {
-      easterEggLevel: U,
-      isEasterEggTriggered: b,
+    } = e, T = (0, o.default)([d.default], () => d.default.useReducedMotion), [f, A] = i.useState(!1), [p, h] = i.useState(!1), L = I === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW || I === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW || I === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW, x = (0, R.default)(), [v, D] = (0, c.useGetDismissibleContent)(null != n && s ? [n] : []), {
+      easterEggLevel: b,
+      isEasterEggTriggered: U,
       onHover: j,
       onUnhover: G
     } = (0, S.default)(5), k = (0, l.debounce)(() => {
-      _.default.track(p.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
+      _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
         card_type: (0, l.snakeCase)(t)
       })
     }, 800);
@@ -48,12 +48,12 @@ let O = e => {
       onMouseEnter: k,
       ...e
     };
-    let B = v !== i || null == i || N;
-    return (n.useEffect(() => {
-      T && f && (h(!0), _.default.track(p.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+    let B = v !== n || null == n || p;
+    return (i.useEffect(() => {
+      T && f && (h(!0), _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
         card_type: t
-      }), null != i && D(g.ContentDismissActionType.TAKE_ACTION))
-    }, [T, f, i, t, D]), s) ? t === R.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
+      }), null != n && D(g.ContentDismissActionType.TAKE_ACTION))
+    }, [T, f, n, t, D]), s) ? t === R.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
       className: r(P.flipCardContainer, {
         [P.forceShadow]: E
       }),
@@ -63,9 +63,9 @@ let O = e => {
       onBlur: G,
       children: (0, a.jsxs)("div", {
         className: r(P.flipCard, {
-          [P.partialFlipCard]: !b,
-          [P.ultraFlipCard]: b,
-          [P.rotateCard]: b && 3 === U,
+          [P.partialFlipCard]: !U,
+          [P.ultraFlipCard]: U,
+          [P.rotateCard]: U && 3 === b,
           [P.reducedMotion]: T
         }),
         children: [(0, a.jsx)("div", {
@@ -100,13 +100,13 @@ let O = e => {
         onClick: () => A(!0),
         className: r(P.flipCard, P.clickable, {
           [P.flipped]: f,
-          [P.partialFlipCard]: !N && !f,
+          [P.partialFlipCard]: !p && !f,
           [P.reducedMotion]: T
         }),
         onTransitionEnd: e => {
-          f && "transform" === e.propertyName && e.target.classList.contains(P.flipCard) && (h(!0), _.default.track(p.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+          f && "transform" === e.propertyName && e.target.classList.contains(P.flipCard) && (h(!0), _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
             card_type: t
-          }), null != i && D(g.ContentDismissActionType.TAKE_ACTION))
+          }), null != n && D(g.ContentDismissActionType.TAKE_ACTION))
         },
         children: [(0, a.jsx)("div", {
           className: P.flipCardHidden,
@@ -143,8 +143,8 @@ let O = e => {
     let {
       title: t,
       titleClassName: s = "",
-      subtitle: n = "",
-      description: i = "",
+      subtitle: i = "",
+      description: n = "",
       descriptionCta: l = "",
       isPremiumGetCta: o,
       perkImage: d,
@@ -152,7 +152,7 @@ let O = e => {
       backgroundImage: _,
       pillText: S,
       onClick: R,
-      onCtaClick: p,
+      onCtaClick: N,
       onMouseEnter: g,
       className: O
     } = e, M = (0, f.usePremiumTrialOffer)(), h = null == M ? void 0 : M.subscription_trial, L = (0, T.usePremiumDiscountOffer)(), x = (0, E.formatTrialCtaIntervalDuration)({
@@ -187,10 +187,10 @@ let O = e => {
         variant: "heading-xl/extrabold",
         className: r(P.cardHeading, s),
         children: t
-      }), 0 !== n.length ? (0, a.jsx)(u.Text, {
+      }), 0 !== i.length ? (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
         className: P.cardSubtitle,
-        children: n
+        children: i
       }) : null, null != d ? (0, a.jsx)("img", {
         src: d,
         alt: "",
@@ -198,23 +198,23 @@ let O = e => {
           [P.cardImage]: !D,
           [P.carouselCardImage]: D
         })
-      }) : null, 0 !== i.length ? (0, a.jsxs)("div", {
+      }) : null, 0 !== n.length ? (0, a.jsxs)("div", {
         className: P.cardDescription,
         children: [(0, a.jsx)(u.Heading, {
           variant: "heading-xl/extrabold",
           className: r(P.cardHeading, s),
           children: t
-        }), 0 !== n.length ? (0, a.jsxs)(u.Text, {
+        }), 0 !== i.length ? (0, a.jsxs)(u.Text, {
           variant: "text-sm/normal",
           className: P.cardDescriptionText,
-          children: [n, (0, a.jsx)("br", {}), " ", (0, a.jsx)("br", {}), i]
+          children: [i, (0, a.jsx)("br", {}), " ", (0, a.jsx)("br", {}), n]
         }) : null, o ? (0, a.jsx)(A.default, {
-          subscriptionTier: N.PremiumSubscriptionSKUs.TIER_2,
+          subscriptionTier: p.PremiumSubscriptionSKUs.TIER_2,
           buttonText: v,
           color: u.Button.Colors.GREEN,
           look: u.Button.Looks.FILLED
-        }) : null, 0 !== l.length && null != p ? (0, a.jsx)(u.Button, {
-          onClick: p,
+        }) : null, 0 !== l.length && null != N ? (0, a.jsx)(u.Button, {
+          onClick: N,
           children: l
         }) : null]
       }) : null, (0, a.jsx)("div", {

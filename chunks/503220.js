@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("77078"),
   i = n("30874"),
   r = n("308798"),
-  o = n("646240"),
-  u = n("37774"),
+  u = n("646240"),
+  o = n("37774"),
   d = n("117399"),
   c = n("400501"),
   f = n("542640"),
@@ -38,7 +38,7 @@ function R(e) {
   function r() {
     i(e => !e)
   }
-  let o = M.default.Messages.MORE;
+  let u = M.default.Messages.MORE;
   return (0, l.jsx)(s.Popout, {
     shouldShow: n,
     animation: s.Popout.Animation.NONE,
@@ -59,9 +59,9 @@ function R(e) {
       return (0, l.jsx)(T.default.Icon, {
         ...e,
         onClick: r,
-        tooltip: n ? null : o,
+        tooltip: n ? null : u,
         icon: I.default,
-        "aria-label": o,
+        "aria-label": u,
         selected: n
       })
     }
@@ -73,7 +73,7 @@ function j(e) {
     channel: t,
     closePopout: n,
     onSelect: a
-  } = e, S = (0, o.default)(t, "Sidebar Overflow"), C = (0, d.default)(t), I = (0, h.default)(t), T = (0, m.default)(t), x = (0, i.default)(t), N = (0, u.default)(t), R = (0, f.default)(t.id), j = (0, c.default)(t), L = (0, r.default)(t), y = (0, E.default)({
+  } = e, S = (0, u.default)(t, "Sidebar Overflow"), C = (0, d.default)(t), I = (0, h.default)(t), T = (0, m.default)(t), x = (0, i.default)(t), N = (0, o.default)(t), R = (0, f.default)(t.id), j = (0, c.default)(t), L = (0, r.default)(t), y = (0, E.default)({
     id: t.id,
     label: M.default.Messages.COPY_ID_THREAD
   }), O = (0, p.default)(t);

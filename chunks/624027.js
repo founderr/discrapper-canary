@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("394846"),
   i = n("446674"),
   r = n("77078"),
-  o = n("120252"),
-  u = n("161778"),
+  u = n("120252"),
+  o = n("161778"),
   d = n("162771"),
   c = n("941886"),
   f = n("664336"),
@@ -23,11 +23,11 @@ function E(e) {
     channelId: E
   } = e;
   a.useEffect(() => {
-    o.default.loadThread(E)
+    u.default.loadThread(E)
   });
   let S = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
     g = S === h.FAVORITES,
-    C = (0, i.useStateFromStores)([u.default], () => u.default.theme);
+    C = (0, i.useStateFromStores)([o.default], () => o.default.theme);
   return t = g ? (0, l.jsx)(c.EmptyStateText, {
     note: m.default.Messages.FAVORITES_EMPTY_BODY,
     children: m.default.Messages.FAVORITES_EMPTY_TITLE

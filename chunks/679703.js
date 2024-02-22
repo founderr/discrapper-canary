@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("669491"),
   i = n("77078"),
   r = n("888237"),
-  o = n("18517"),
-  u = n("109526"),
+  u = n("18517"),
+  o = n("109526"),
   d = n("487984"),
   c = n("817963"),
   f = n("957255"),
@@ -109,12 +109,12 @@ function v(e) {
         variant: "text-sm/normal",
         children: C.default.Messages.STAGE_START_PROMPT_SUBTITLE
       })]
-    }), v ? null : (0, l.jsx)(u.default, {
+    }), v ? null : (0, l.jsx)(o.default, {
       channelId: t.id
     }), s ? (0, l.jsx)(d.default, {
       className: _.eventPrompt,
       channel: t
-    }) : null, m ? (0, l.jsx)(o.default, {
+    }) : null, m ? (0, l.jsx)(u.default, {
       className: _.eventPrompt,
       guildId: r
     }) : null, (s || x.length > 0) && (0, l.jsx)("hr", {

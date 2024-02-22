@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var i = n("872717"),
-  r = n("151426"),
+var r = n("872717"),
+  i = n("151426"),
   l = n("913144"),
   a = n("10641"),
   s = n("872173"),
@@ -15,11 +15,11 @@ var i = n("872717"),
       try {
         let {
           body: e
-        } = await i.default.get({
+        } = await r.default.get({
           url: o.Endpoints.USER_TRIAL_OFFER,
           oldFormErrors: !0
         });
-        null == e && (0, a.isDismissibleContentDismissed)(r.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, s.removeDismissedContent)(r.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING), l.default.dispatch({
+        null == e && (0, a.isDismissibleContentDismissed)(i.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, s.removeDismissedContent)(i.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING), l.default.dispatch({
           type: "BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS",
           userTrialOffer: e
         })
@@ -33,7 +33,7 @@ var i = n("872717"),
       if (null == e.expires_at) try {
         let {
           body: t
-        } = await i.default.post({
+        } = await r.default.post({
           url: o.Endpoints.USER_TRIAL_OFFER_ACKNOWLEDGED(e.id)
         });
         l.default.dispatch({

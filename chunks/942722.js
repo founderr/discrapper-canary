@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("394846"),
   i = n("446674"),
   r = n("77078"),
-  o = n("272030"),
-  u = n("352674"),
+  u = n("272030"),
+  o = n("352674"),
   d = n("252063"),
   c = n("506885"),
   f = n("981601"),
@@ -46,7 +46,7 @@ function P(e) {
     status: h.default.getStatus(t.id),
     activities: h.default.getActivities(t.id)
   } : {}), g = (0, i.useStateFromStores)([p.default], () => null != p.default.getTypingUsers(a.id)[t.id]), C = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()), _ = (0, i.useStateFromStores)([h.default], () => h.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([m.default], () => m.default.getNickname(t.id)), T = e => {
-    (0, o.openContextMenuLazy)(e, async () => {
+    (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("166452").then(n.bind(n, "166452"));
@@ -74,7 +74,7 @@ function P(e) {
       v.ComponentDispatch.dispatchToLastSubscribed(R.ComponentActions.INSERT_TEXT, {
         plainText: e,
         rawText: n
-      }), u.default.startTyping(a.id)
+      }), o.default.startTyping(a.id)
     },
     children: e => (0, l.jsx)(M.default, {
       user: t,
@@ -98,19 +98,19 @@ function b(e) {
   var t;
   let {
     integration: i,
-    channel: u
+    channel: o
   } = e, d = a.useCallback(e => {
-    (0, o.openContextMenuLazy)(e, async () => {
+    (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("348866").then(n.bind(n, "348866"));
       return t => (0, l.jsx)(e, {
         ...t,
-        channel: u,
+        channel: o,
         integration: i
       })
     })
-  }, [i, u]), h = i.application.bot, m = T.default.getApplicationIconURL({
+  }, [i, o]), h = i.application.bot, m = T.default.getApplicationIconURL({
     id: i.application.id,
     icon: i.application.icon,
     bot: null === (t = i.application) || void 0 === t ? void 0 : t.bot,
@@ -121,7 +121,7 @@ function b(e) {
     renderPopout: e => (0, l.jsx)(f.default, {
       ...e,
       userId: h.id,
-      channelId: u.id
+      channelId: o.id
     }),
     position: s.isMobile ? "window_center" : "left",
     spacing: 16,
@@ -159,7 +159,7 @@ function b(e) {
 function D(e) {
   let {
     channel: t
-  } = e, s = E.default.getCurrentUser(), o = null == s ? void 0 : s.isStaff(), u = (0, i.useStateFromStoresArray)([E.default], () => (0, x.getRecipients)(t.recipients, E.default), [t.recipients]), {
+  } = e, s = E.default.getCurrentUser(), u = null == s ? void 0 : s.isStaff(), o = (0, i.useStateFromStoresArray)([E.default], () => (0, x.getRecipients)(t.recipients, E.default), [t.recipients]), {
     installedIntegrations: f,
     applicationsShelf: h,
     fetched: m,
@@ -169,18 +169,18 @@ function D(e) {
     channelId: t.id
   });
   a.useEffect(() => {
-    if (o)
-      for (let e of u)(0, c.default)(e.id, e.getAvatarURL(void 0, 80), {
+    if (u)
+      for (let e of o)(0, c.default)(e.id, e.getAvatarURL(void 0, 80), {
         dispatchWait: !0
       })
-  }, [o, u]), a.useEffect(() => {
+  }, [u, o]), a.useEffect(() => {
     I.default.track(R.AnalyticEvents.MEMBER_LIST_VIEWED, {
       channel_id: t.id,
       channel_type: t.type,
       guild_id: t.guild_id
     })
   }, [t.guild_id, t.id, t.type]);
-  let v = o && u.every(e => e.isStaff());
+  let v = u && o.every(e => e.isStaff());
   return (0, l.jsx)("div", {
     className: y.membersWrap,
     children: (0, l.jsxs)(r.Scroller, {
@@ -188,11 +188,11 @@ function D(e) {
       fade: !0,
       children: [(0, l.jsxs)(_.default, {
         className: y.membersGroup,
-        children: ["".concat(j.default.Messages.MEMBERS, "—").concat(u.length, " "), v ? (0, l.jsx)(S.default, {
+        children: ["".concat(j.default.Messages.MEMBERS, "—").concat(o.length, " "), v ? (0, l.jsx)(S.default, {
           className: y.decorator,
           type: S.default.Types.STAFF_ONLY_DM
         }) : null]
-      }), u.map(e => (0, l.jsx)(P, {
+      }), o.map(e => (0, l.jsx)(P, {
         user: e,
         channel: t
       }, e.id)), p && (f.length > 0 || m && h.length > 0) && (0, l.jsxs)(l.Fragment, {

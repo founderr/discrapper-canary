@@ -53,7 +53,7 @@ let g = e => {
       children: [n, " ", r]
     })
   },
-  P = e => {
+  C = e => {
     let {
       isFullscreen: t
     } = e;
@@ -70,7 +70,7 @@ let g = e => {
     })
   };
 
-function C(e) {
+function P(e) {
   let {
     variant: t = "text-lg/normal"
   } = e, s = (0, R.useCheapestMonthlyPrice)();
@@ -129,7 +129,7 @@ var O = e => {
             textColor: A ? "text-primary" : "always-white",
             smallerText: !t || A
           })
-        }) : !A && (0, a.jsx)(C, {}), L ? (0, a.jsx)("div", {
+        }) : !A && (0, a.jsx)(P, {}), L ? (0, a.jsx)("div", {
           className: N.buttonContainer,
           children: (0, a.jsx)(m.default, {
             className: N.button,
@@ -139,10 +139,10 @@ var O = e => {
           subscriptionTier: i,
           inOfferExperience: h,
           inTrial: M
-        }), D && !A && (0, a.jsx)(C, {
+        }), D && !A && (0, a.jsx)(P, {
           variant: "text-md/normal"
         })]
-      }), !(h || d) && (0, a.jsx)(P, {
+      }), !(h || d) && (0, a.jsx)(C, {
         isFullscreen: t
       })]
     })

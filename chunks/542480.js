@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  i = s("77078"),
+  i = s("884691"),
+  n = s("77078"),
   r = s("895530"),
   l = s("437825"),
   o = s("36694"),
@@ -22,7 +22,7 @@ var a = s("37983"),
   R = s("49111"),
   m = s("782340"),
   A = s("413037");
-let N = [{
+let p = [{
     feature: R.SKUFeatureTypes.SINGLE_PLAYER,
     getText: () => m.default.Messages.APPLICATION_STORE_SINGLE_PLAYER,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_SINGLE_PLAYER_TOOLTIP,
@@ -88,16 +88,16 @@ let N = [{
     getTooltip: () => m.default.Messages.APPLICATION_STORE_SECURE_NETWORKING_TOOLTIP,
     IconComponent: f.default
   }],
-  p = e => {
+  N = e => {
     let {
       IconComponent: t,
       text: s,
-      tooltip: n
+      tooltip: i
     } = e;
     return (0, a.jsxs)("div", {
       className: A.row,
-      children: [(0, a.jsx)(i.Tooltip, {
-        text: n,
+      children: [(0, a.jsx)(n.Tooltip, {
+        text: i,
         children: e => (0, a.jsx)(t, {
           className: A.featureIcon,
           ...e
@@ -110,11 +110,11 @@ let N = [{
       })]
     })
   };
-class g extends n.PureComponent {
+class g extends i.PureComponent {
   render() {
     let {
       sku: e
-    } = this.props, t = N.filter(t => {
+    } = this.props, t = p.filter(t => {
       let {
         feature: s
       } = t;
@@ -123,13 +123,13 @@ class g extends n.PureComponent {
       let {
         feature: t,
         IconComponent: s,
-        getText: n,
-        getTooltip: i
+        getText: i,
+        getTooltip: n
       } = e;
-      return (0, a.jsx)(p, {
+      return (0, a.jsx)(N, {
         IconComponent: s,
-        text: n(),
-        tooltip: i()
+        text: i(),
+        tooltip: n()
       }, t)
     });
     return 0 === t.length ? null : (0, a.jsxs)("div", {

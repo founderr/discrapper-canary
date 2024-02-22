@@ -33,7 +33,7 @@ let c = e => {
     var e;
     p(null !== (e = null == h ? void 0 : h.value) && void 0 !== e ? e : "")
   }, [h]);
-  let I = l.useCallback(e => {
+  let S = l.useCallback(e => {
     let t = null != _ ? new RegExp(_) : null;
     null != t && null == t.exec(e) ? (g(d.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), E({
       value: e,
@@ -56,7 +56,7 @@ let c = e => {
       })
     }), (0, a.jsx)(r.TextArea, {
       maxLength: f,
-      onChange: I,
+      onChange: S,
       value: x,
       error: N,
       rows: m,

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("77078"),
-  u = n("79112"),
+  u = n("77078"),
+  o = n("79112"),
   d = n("191145"),
   c = n("582415"),
   f = n("915639"),
@@ -64,16 +64,16 @@ var l = n("37983"),
     }), [O, P]), w = a.useCallback(() => {
       null != O && (0, E.enrollInQuest)(O.id, g.QuestContent.QUEST_LIVE_STREAM)
     }, [O]), F = a.useCallback(() => {
-      u.default.open(N.UserSettingsSections.INVENTORY)
+      o.default.open(N.UserSettingsSections.INVENTORY)
     }, []), k = (0, v.useHandleClaimQuestsReward)(O);
     if (null == O) return null;
-    let V = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-      B = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null;
+    let B = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+      V = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null;
     return D ? (0, l.jsxs)("div", {
       className: i(R.wrapper, {
-        [R.wrapperAccepted]: V
+        [R.wrapperAccepted]: B
       }),
-      children: [!V && (0, l.jsxs)("div", {
+      children: [!B && (0, l.jsxs)("div", {
         className: R.rewardTileWrapper,
         children: [(0, l.jsx)("img", {
           alt: O.config.messages.rewardName,
@@ -87,7 +87,7 @@ var l = n("37983"),
         className: R.content,
         children: [(0, l.jsxs)("div", {
           className: R.heading,
-          children: [V && y ? (0, l.jsx)("img", {
+          children: [B && y ? (0, l.jsx)("img", {
             alt: O.config.messages.rewardName,
             className: R.rewardTile,
             src: (0, C.getRewardAssetUrl)(O.id)
@@ -99,7 +99,7 @@ var l = n("37983"),
             className: R.details,
             children: [(0, l.jsxs)("div", {
               className: R.headingWithSubmenu,
-              children: [(0, l.jsx)(o.Heading, {
+              children: [(0, l.jsx)(u.Heading, {
                 className: R.questTitle,
                 variant: "heading-md/semibold",
                 color: "header-primary",
@@ -111,7 +111,7 @@ var l = n("37983"),
                 quest: O,
                 preventIdle: !0,
                 shouldShowDisclosure: (null === (s = O.userStatus) || void 0 === s ? void 0 : s.enrolledAt) == null,
-                children: e => (0, l.jsx)(o.Clickable, {
+                children: e => (0, l.jsx)(u.Clickable, {
                   ...e,
                   className: R.submenuWrapper,
                   children: (0, l.jsx)(p.default, {
@@ -119,53 +119,53 @@ var l = n("37983"),
                   })
                 })
               })]
-            }), (0, l.jsx)(o.Text, {
+            }), (0, l.jsx)(u.Text, {
               color: "header-secondary",
               variant: "text-xs/medium",
-              children: B ? M.default.Messages.QUESTS_CLAIM_BY.format({
+              children: V ? M.default.Messages.QUESTS_CLAIM_BY.format({
                 expirationDate: U
               }) : M.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: U
               })
             })]
           })]
-        }), V && !B && !y && (0, l.jsx)(x.default, {
+        }), B && !V && !y && (0, l.jsx)(x.default, {
           quest: O
         }), (0, l.jsxs)("div", {
           className: R.ctas,
-          children: [!V && (0, l.jsxs)(l.Fragment, {
-            children: [(0, l.jsx)(o.Button, {
+          children: [!B && (0, l.jsxs)(l.Fragment, {
+            children: [(0, l.jsx)(u.Button, {
               className: R.cta,
-              color: o.Button.Colors.PRIMARY,
+              color: u.Button.Colors.PRIMARY,
               fullWidth: !0,
-              size: o.Button.Sizes.SMALL,
+              size: u.Button.Sizes.SMALL,
               onClick: F,
               children: M.default.Messages.QUESTS_LEARN_MORE_V2
-            }), (0, l.jsx)(o.Button, {
+            }), (0, l.jsx)(u.Button, {
               className: R.cta,
-              color: o.Button.Colors.GREEN,
+              color: u.Button.Colors.GREEN,
               fullWidth: !0,
               onClick: w,
-              size: o.Button.Sizes.SMALL,
+              size: u.Button.Sizes.SMALL,
               submitting: b,
               children: M.default.Messages.QUESTS_ACCEPT_QUEST
             })]
-          }), V && !B && y && (0, l.jsx)(_.default, {
-            color: o.tokens.colors.BG_BRAND,
+          }), B && !V && y && (0, l.jsx)(_.default, {
+            color: u.tokens.colors.BG_BRAND,
             quest: O
-          }), V && !B && !y && (0, l.jsx)(o.Button, {
+          }), B && !V && !y && (0, l.jsx)(u.Button, {
             className: R.cta,
-            color: o.Button.Colors.BRAND,
+            color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: F,
-            size: o.Button.Sizes.SMALL,
+            size: u.Button.Sizes.SMALL,
             children: M.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
-          }), B && (0, l.jsx)(o.Button, {
+          }), V && (0, l.jsx)(u.Button, {
             className: R.cta,
-            color: o.Button.Colors.BRAND,
+            color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: k,
-            size: o.Button.Sizes.SMALL,
+            size: u.Button.Sizes.SMALL,
             children: M.default.Messages.QUESTS_CLAIM_YOUR_REWARD
           })]
         })]

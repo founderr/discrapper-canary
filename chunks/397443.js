@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("748820"),
   i = n("446674"),
   r = n("913144"),
-  o = n("206230"),
-  u = n("716241"),
+  u = n("206230"),
+  o = n("716241"),
   d = n("170152"),
   c = n("391591"),
   f = n("397485"),
@@ -24,7 +24,7 @@ function E(e) {
     guildId: n,
     userId: E,
     containerDimensions: S
-  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), [C, _] = a.useState([]), I = C.length < 50;
+  } = e, g = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion), [C, _] = a.useState([]), I = C.length < 50;
   a.useEffect(() => {
     function e(e) {
       var l;
@@ -32,23 +32,23 @@ function E(e) {
         channelId: a,
         userId: i,
         emoji: r,
-        animationType: o,
+        animationType: u,
         animationId: h
       } = e;
       if (null != E && E !== i || d.default.getEnabled() && (0, c.default)(null !== (l = null == r ? void 0 : r.name) && void 0 !== l ? l : "")) return;
-      let p = null != r && null != o && null != h;
+      let p = null != r && null != u && null != h;
       if (a === t && !g && I && p) {
         let e = (0, f.getEffectUrl)(r),
           l = null != r.id && !r.animated,
           a = {
             id: (0, s.v4)(),
-            animationType: o,
+            animationType: u,
             animationId: h,
             shouldResize: l,
             url: e,
             userId: i
           };
-        _(e => [...e, a]), u.default.trackWithMetadata(m.AnalyticEvents.VOICE_CHANNEL_EFFECT_VIEWED, {
+        _(e => [...e, a]), o.default.trackWithMetadata(m.AnalyticEvents.VOICE_CHANNEL_EFFECT_VIEWED, {
           channel_id: t,
           guild_id: n
         })

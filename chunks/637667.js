@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("907002"),
-  u = n("394846"),
-  o = n("77078"),
+  o = n("394846"),
+  u = n("77078"),
   d = n("51565"),
   c = n("845579"),
   f = n("794352"),
@@ -28,7 +28,7 @@ function _(e) {
     guild: n,
     controller: a,
     guildBanner: s,
-    animate: o
+    animate: u
   } = e, {
     value: d
   } = a.springs, f = c.GifAutoPlay.getSetting();
@@ -40,19 +40,19 @@ function _(e) {
     },
     children: (0, l.jsx)(r.animated.div, {
       className: i(I.bannerImage, {
-        [I.bannerImgFullWidth]: u.isMobile
+        [I.bannerImgFullWidth]: o.isMobile
       }),
       style: {
         transform: d.to(e => f ? "translateY(".concat((1 - e) * 60, "px) scale(").concat(1 + (1 - e) * .2, ")") : "translateY(".concat((1 - e) * 90, "px)"))
       },
       children: (0, l.jsx)("img", {
         className: i(I.bannerImg, {
-          [I.bannerImgFullWidth]: u.isMobile
+          [I.bannerImgFullWidth]: o.isMobile
         }),
         src: null !== (t = C.default.getGuildBannerURL({
           id: n.id,
           banner: s
-        }, o)) && void 0 !== t ? t : "",
+        }, u)) && void 0 !== t ? t : "",
         alt: "",
         height: 135,
         width: 240,
@@ -69,10 +69,10 @@ function S(e) {
     hasBanner: a,
     hasSubheader: s
   } = e, {
-    value: u
+    value: o
   } = n.springs, d = t.hasFeature(m.GuildFeatures.DISCOVERABLE), c = (0, l.jsx)("div", {
     className: I.communityInfo,
-    children: d && (0, l.jsx)(o.Tooltip, {
+    children: d && (0, l.jsx)(u.Tooltip, {
       text: g.default.Messages.DISCOVERABLE_GUILD_HEADER_PUBLIC_INFO,
       position: "right",
       children: e => (0, l.jsxs)("div", {
@@ -82,7 +82,7 @@ function S(e) {
           width: 12,
           height: 12,
           className: I.communityIcon
-        }), (0, l.jsx)(o.Text, {
+        }), (0, l.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "none",
           children: g.default.Messages.DISCOVERABLE_GUILD_HEADER_PUBLIC
@@ -96,9 +96,9 @@ function S(e) {
   }) : (0, l.jsx)(r.animated.div, {
     className: I.communityInfoContainer,
     style: a ? {
-      opacity: u
+      opacity: o
     } : {
-      height: u.to(e => "".concat(20 * e, "px"))
+      height: o.to(e => "".concat(20 * e, "px"))
     },
     children: c
   })
@@ -163,20 +163,20 @@ var T = a.memo(function(e) {
       onClick: f,
       children: [(0, l.jsxs)("header", {
         className: i(I.header, y, {
-          [I.themedHeaderMobile]: u.isMobile
+          [I.themedHeaderMobile]: o.isMobile
         }),
         children: [(0, l.jsxs)("div", {
           className: i(I.headerContent, I.primaryInfo),
           children: [(0, l.jsx)(p.default, {
             guild: x,
             isBannerVisible: n
-          }), (0, l.jsxs)(o.Text, {
+          }), (0, l.jsxs)(u.Text, {
             color: "none",
             variant: "text-md/semibold",
             lineClamp: 1,
             className: I.name,
             children: [x.id === E.FAVORITES_RAW_GUILD_ID && (0, l.jsx)(N, {}), x.toString()]
-          }), null != f && (0, l.jsx)(o.Clickable, {
+          }), null != f && (0, l.jsx)(u.Clickable, {
             className: I.headerButton,
             "aria-controls": v,
             "aria-expanded": L,

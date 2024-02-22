@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  i = s("414456"),
-  r = s.n(i),
+  i = s("884691"),
+  n = s("414456"),
+  r = s.n(n),
   l = s("907002"),
   o = s("891722"),
   u = s("704426"),
@@ -18,25 +18,25 @@ var a = s("37983"),
     let {
       cards: t,
       className: s,
-      cardType: i
-    } = e, E = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [I, T] = n.useState(0), [f, S] = n.useState(E()), [R, m] = n.useState(!1), A = t.length;
-    n.useEffect(() => {
+      cardType: n
+    } = e, E = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [I, T] = i.useState(0), [f, S] = i.useState(E()), [R, m] = i.useState(!1), A = t.length;
+    i.useEffect(() => {
       let e = () => {
         S(E())
       };
       return window.addEventListener("resize", e), () => {
         window.removeEventListener("resize", e)
       }
-    }, []), n.useEffect(() => {
+    }, []), i.useEffect(() => {
       A > f && I > A - f ? T(A - f) : A <= f && T(0)
     }, [A, f]);
-    let N = n.useCallback(e => ({
+    let p = i.useCallback(e => ({
         x: (e - I) * 100
       }), [I]),
-      [p, g] = (0, l.useSprings)(t.length, N);
-    return n.useEffect(() => {
-      g(N)
-    }, [g, N]), (0, a.jsx)("div", {
+      [N, g] = (0, l.useSprings)(t.length, p);
+    return i.useEffect(() => {
+      g(p)
+    }, [g, p]), (0, a.jsx)("div", {
       className: s,
       children: (0, a.jsxs)("div", {
         className: _.cardContainer,
@@ -54,18 +54,18 @@ var a = s("37983"),
           })
         }), (0, a.jsx)("div", {
           className: _.cardInnerContainer,
-          children: p.map((e, s) => {
+          children: N.map((e, s) => {
             let {
-              x: n
+              x: i
             } = e;
             return (0, a.jsx)(l.animated.div, {
               className: _.card,
               style: {
-                transform: null == n ? void 0 : n.to(e => "translate3d(".concat(e, "%,0,0)"))
+                transform: null == i ? void 0 : i.to(e => "translate3d(".concat(e, "%,0,0)"))
               },
               children: (0, a.jsx)(c.default, {
                 ...t[s],
-                cardType: i
+                cardType: n
               }, "".concat(t[s].name, "_").concat(s, "_perks_card"))
             }, "".concat(t[s].name, "_").concat(s, "_animated_div"))
           })

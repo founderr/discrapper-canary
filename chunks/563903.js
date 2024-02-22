@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("446674"),
   r = n("77078"),
-  u = n("463848"),
-  o = n("429928"),
+  o = n("463848"),
+  u = n("429928"),
   d = n("632710"),
   c = n("769791"),
   f = n("233069"),
@@ -33,12 +33,12 @@ function _(e) {
     text: n.nick,
     position: "bottom",
     children: e => {
-      var u;
+      var o;
       return (0, l.jsx)(r.Avatar, {
         src: null != i ? i : n.user.getAvatarURL(t, 16),
         size: r.AvatarSizes.SIZE_16,
         className: s(a, I.partyAvatar),
-        "aria-label": null !== (u = n.nick) && void 0 !== u ? u : E.default.getName(n.user),
+        "aria-label": null !== (o = n.nick) && void 0 !== o ? o : E.default.getName(n.user),
         ...e
       })
     }
@@ -81,7 +81,7 @@ var N = e => {
     if (p) return C.default.getUser(m[0])
   });
   if (null == E) return null;
-  let _ = p || (0, o.default)(n),
+  let _ = p || (0, u.default)(n),
     N = (0, f.isVoiceChannel)(t.type);
   return (0, l.jsxs)("div", {
     className: I.activity,
@@ -96,8 +96,8 @@ var N = e => {
         onOpenSpotifyTrack: N ? c.openTrack : void 0,
         onOpenSpotifyArtist: N ? c.openArtist : void 0,
         onOpenSpotifyAlbum: N ? c.openAlbum : void 0
-      }) : (0, l.jsx)(u.default, {
-        type: u.UserActivityTypes.VOICE_CHANNEL,
+      }) : (0, l.jsx)(o.default, {
+        type: o.UserActivityTypes.VOICE_CHANNEL,
         activity: n,
         user: E,
         guildId: t.getGuildId(),
@@ -111,7 +111,7 @@ var N = e => {
     }), (0, l.jsx)("div", {
       className: I.activityActionsContainer,
       children: (0, l.jsx)(d.default, {
-        type: u.UserActivityTypes.VOICE_CHANNEL,
+        type: o.UserActivityTypes.VOICE_CHANNEL,
         activity: n,
         user: E,
         guildId: t.getGuildId(),

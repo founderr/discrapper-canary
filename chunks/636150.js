@@ -10,8 +10,8 @@ var a = n("627445"),
   s = n.n(a),
   i = n("446674"),
   r = n("18346"),
-  o = n("261552"),
-  u = n("103979"),
+  u = n("261552"),
+  o = n("103979"),
   d = n("780166"),
   c = n("245463"),
   f = n("42887"),
@@ -34,14 +34,14 @@ function v(e) {
   } = e, v = (0, i.useStateFromStores)([h.default], () => {
     let e = h.default.getCurrentUser();
     return s(null != e, "CenterControlTray: currentUser cannot be undefined"), e
-  }), x = (0, o.default)(), {
+  }), x = (0, u.default)(), {
     isSharedCanvasEnabled: N
   } = d.default.useExperiment({
     guildId: null == t ? void 0 : t.guild_id,
     location: "b7309a_1"
   }), {
     enableViewerClipping: A
-  } = u.default.useExperiment({
+  } = o.default.useExperiment({
     location: "VoiceEffectsActionBar"
   }, {
     autoTrackExposure: !1

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("917351"),
   i = n.n(s),
   r = n("446674"),
-  o = n("913144"),
-  u = n("272030"),
+  u = n("913144"),
+  o = n("272030"),
   d = n("264732"),
   c = n("716241"),
   f = n("701916"),
@@ -39,7 +39,7 @@ function R(e) {
   (function(e) {
     let t = (0, r.useStateFromStores)([I.default], () => null != e && !i.isEmpty(I.default.getVoiceStatesForChannel(e.id)));
     a.useEffect(() => {
-      t && null != e && (o.default.dispatch({
+      t && null != e && (u.default.dispatch({
         type: "SIDEBAR_CLOSE",
         baseChannelId: e.parent_id
       }), (0, S.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
@@ -76,7 +76,7 @@ function R(e) {
         guild: L,
         inSidebar: !0,
         handleContextMenu: function(e) {
-          (0, u.openContextMenuLazy)(e, async () => {
+          (0, o.openContextMenuLazy)(e, async () => {
             let {
               default: e
             } = await n.el("994827").then(n.bind(n, "994827"));

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("974667"),
   i = n("446674"),
   r = n("95410"),
-  u = n("77078"),
-  o = n("524110"),
+  o = n("77078"),
+  u = n("524110"),
   d = n("805199"),
   c = n("951039"),
   f = n("713726"),
@@ -72,23 +72,23 @@ function k(e) {
   }), Y = (0, E.default)(), K = Y.length > 0 && k;
   (0, m.useTrackNewBroadcastDetected)();
   let W = (0, s.useTreeItem)("home"),
-    z = () => {
+    Z = () => {
       v(null), D(0), clearTimeout(L)
     };
   if (null == n) return null;
-  let Z = B.default.Messages.DIRECT_MESSAGES;
-  T && (Z = r.default.get(w.DISCODO_STORAGE_KEY) ? B.default.Messages.DISCODO_ENABLED : B.default.Messages.DISCODO_DISABLED), Y.length > 0 && h.default.trackExposure({
+  let z = B.default.Messages.DIRECT_MESSAGES;
+  T && (z = r.default.get(w.DISCODO_STORAGE_KEY) ? B.default.Messages.DISCODO_ENABLED : B.default.Messages.DISCODO_DISABLED), Y.length > 0 && h.default.trackExposure({
     location: "home_button"
   });
   let X = null;
-  !t && p ? X = (0, l.jsx)(o.default, {
+  !t && p ? X = (0, l.jsx)(u.default, {
     className: V.downloadProgress,
     determineOwnVisibility: !1
   }) : K && (X = (0, l.jsx)(R.default, {
     className: V.broadcastBadge
   }));
   let Q = t || S || I,
-    J = (0, l.jsx)(u.BlobMask, {
+    J = (0, l.jsx)(o.BlobMask, {
       highlight: K,
       selected: Q,
       lowerBadge: f > 0 ? (0, P.renderMentionBadge)(f) : null,
@@ -98,8 +98,8 @@ function k(e) {
         onMouseEnter: () => N(!0),
         onMouseLeave: () => N(!1),
         onClick: () => {
-          if (!__OVERLAY__ && (null != L && clearTimeout(L), v(setTimeout(z, 500)), D(x + 1), 15 === x)) {
-            z();
+          if (!__OVERLAY__ && (null != L && clearTimeout(L), v(setTimeout(Z, 500)), D(x + 1), 15 === x)) {
+            Z();
             let e = !r.default.get(w.DISCODO_STORAGE_KEY);
             r.default.set(w.DISCODO_STORAGE_KEY, e), e ? (0, b.playSound)("discodo") : (0, b.playSound)("user_leave"), A(!0), setTimeout(() => {
               A(!1)
@@ -122,7 +122,7 @@ function k(e) {
         children: (0, l.jsx)(c.default, {})
       })
     }),
-    q = K ? (0, l.jsx)(u.Popout, {
+    q = K ? (0, l.jsx)(o.Popout, {
       position: "right",
       renderPopout: e => {
         let {
@@ -159,9 +159,9 @@ function k(e) {
           hovered: S,
           className: V.pill
         }), null != q ? q : (0, l.jsx)(U.default, {
-          color: u.Tooltip.Colors.PRIMARY,
+          color: o.Tooltip.Colors.PRIMARY,
           hideOnClick: !0,
-          text: Z,
+          text: z,
           selected: t,
           children: J
         })]
@@ -173,7 +173,7 @@ function k(e) {
 function Y() {
   let e = (0, j.useIsHomeSelected)(),
     t = (0, i.useStateFromStores)([x.default, v.default], () => {
-      let e = (0, o.getDispatchApplicationStates)(x.default.activeItems, v.default),
+      let e = (0, u.getDispatchApplicationStates)(x.default.activeItems, v.default),
         {
           total: t,
           progress: n
@@ -185,13 +185,13 @@ function Y() {
     s = (0, i.useStateFromStores)([S.default], () => S.default.getPendingCount()),
     r = Object.keys(F.SubscriptionTrials),
     {
-      unviewedTrialCount: u,
+      unviewedTrialCount: o,
       unviewedDiscountCount: d
     } = (0, i.useStateFromStoresObject)([A.default], () => ({
       unviewedTrialCount: A.default.getUnacknowledgedOffers(r).length,
       unviewedDiscountCount: A.default.getUnacknowledgedDiscountOffers().length
     })),
-    c = u + d,
+    c = o + d,
     h = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
     m = (0, I.useMessageRequestsCount)(),
     E = s + c + m,

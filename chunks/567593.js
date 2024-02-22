@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("394846"),
-  u = n("446674"),
-  o = n("77078"),
+  o = n("446674"),
+  u = n("77078"),
   d = n("272030"),
   c = n("454286"),
   f = n("485328"),
@@ -43,7 +43,7 @@ let D = {
       children: O.default.Messages.QUICKSWITCHER_EMPTY_TEXT
     }), (0, l.jsx)("div", {
       className: y.emptyStateCTA,
-      children: (0, l.jsx)(o.Anchor, {
+      children: (0, l.jsx)(u.Anchor, {
         href: L.default.getArticleURL(M.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL),
         children: O.default.Messages.QUICKSWITCHER_EMPTY_CTA
       })
@@ -64,7 +64,7 @@ class j extends a.Component {
 j.defaultProps = {
   unread: !1
 };
-let G = u.default.connectStores([g.default, p.default], e => {
+let G = o.default.connectStores([g.default, p.default], e => {
     let {
       channel: t
     } = e;
@@ -74,7 +74,7 @@ let G = u.default.connectStores([g.default, p.default], e => {
       category: p.default.getChannel(t.parent_id)
     }
   })(j),
-  U = u.default.connectStores([_.default], e => {
+  U = o.default.connectStores([_.default], e => {
     let {
       channel: t
     } = e;
@@ -83,7 +83,7 @@ let G = u.default.connectStores([g.default, p.default], e => {
       voiceStates: _.default.getVoiceStates(t.guild_id)[t.id]
     }
   })(j),
-  P = u.default.connectStores([m.default], e => {
+  P = o.default.connectStores([m.default], e => {
     let {
       guild: t
     } = e;
@@ -91,7 +91,7 @@ let G = u.default.connectStores([g.default, p.default], e => {
       unread: m.default.hasUnread(t.id)
     }
   })(N.Guild),
-  w = u.default.connectStores([g.default], e => {
+  w = o.default.connectStores([g.default], e => {
     let {
       channel: t
     } = e;
@@ -99,7 +99,7 @@ let G = u.default.connectStores([g.default, p.default], e => {
       mentions: g.default.getMentionCount(t.id)
     }
   })(N.GroupDM),
-  F = u.default.connectStores([p.default, g.default], e => {
+  F = o.default.connectStores([p.default, g.default], e => {
     let {
       user: t
     } = e, n = p.default.getDMFromUserId(t.id);
@@ -109,7 +109,7 @@ let G = u.default.connectStores([g.default, p.default], e => {
   })(N.User);
 
 function B(e, t, n) {
-  return (0, l.jsx)(o.Tooltip, {
+  return (0, l.jsx)(u.Tooltip, {
     text: n,
     children: e => (0, l.jsx)("span", {
       ...e,
@@ -157,7 +157,7 @@ class V extends a.PureComponent {
     } = this.props, {
       query: n
     } = this.state, a = t.length > 0 && "" !== n;
-    return (0, l.jsx)(o.FocusRing, {
+    return (0, l.jsx)(u.FocusRing, {
       children: (0, l.jsx)("input", {
         className: y.input,
         "aria-label": O.default.Messages.QUICK_SWITCHER,
@@ -186,7 +186,7 @@ class V extends a.PureComponent {
     } = this.state, {
       results: t
     } = this.props;
-    return 0 === t.length && e.length > 0 ? (0, l.jsx)(b, {}) : 0 === t.length ? null : (0, l.jsx)(o.ListAuto, {
+    return 0 === t.length && e.length > 0 ? (0, l.jsx)(b, {}) : 0 === t.length ? null : (0, l.jsx)(u.ListAuto, {
       innerId: this._listId,
       innerRole: "listbox",
       "aria-label": O.default.Messages.QUICK_SWITCHER_RESULTS_LABEL,
@@ -235,9 +235,9 @@ class V extends a.PureComponent {
     })
   }
   render() {
-    return (0, l.jsx)(o.ModalRoot, {
+    return (0, l.jsx)(u.ModalRoot, {
       "aria-label": O.default.Messages.QUICK_SWITCHER,
-      size: o.ModalSize.DYNAMIC,
+      size: u.ModalSize.DYNAMIC,
       transitionState: this.props.transitionState,
       className: i(y.container, r.isMobile && y.mobileContainer),
       fullscreenOnMobile: !1,
@@ -525,7 +525,7 @@ class V extends a.PureComponent {
 }
 
 function H(e) {
-  let t = (0, u.useStateFromStoresObject)([x.default], () => x.default.getProps());
+  let t = (0, o.useStateFromStoresObject)([x.default], () => x.default.getProps());
   return (0, l.jsx)(V, {
     ...t,
     ...e

@@ -9,8 +9,8 @@ var a = n("446674"),
   s = n("913144"),
   i = n("42793"),
   r = n("393414"),
-  u = n("233069"),
-  o = n("813006"),
+  o = n("233069"),
+  u = n("813006"),
   d = n("42203"),
   c = n("305961"),
   f = n("337543"),
@@ -60,7 +60,7 @@ var A = new T(s.default, {
         guild: n
       } = t;
       if (null == e) return !1;
-      if ((0, u.isMultiUserDM)(e.type)) {
+      if ((0, o.isMultiUserDM)(e.type)) {
         if (null != d.default.getChannel(e.id)) return (0, r.transitionToGuild)(m.ME, e.id), p.default.focus(), !1
       } else {
         if (null == n) return !1;
@@ -94,7 +94,7 @@ var A = new T(s.default, {
         target_type: s,
         target_user: i,
         target_application: r,
-        stage_instance: u,
+        stage_instance: o,
         type: d,
         channel: c,
         guild: f
@@ -106,12 +106,12 @@ var A = new T(s.default, {
         target_type: s,
         target_user: i,
         target_application: r,
-        stage_instance: u,
+        stage_instance: o,
         type: d
       };
       return null != c && (h.channel = {
         ...c
-      }), null != f && (h.guild = new o.default(f)), null != e.inviter && (h.inviter = {
+      }), null != f && (h.guild = new u.default(f)), null != e.inviter && (h.inviter = {
         ...e.inviter
       }), h
     }(t);

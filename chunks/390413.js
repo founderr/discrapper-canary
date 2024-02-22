@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var l, a, s = n("37983"),
   i = n("884691"),
   r = n("414456"),
-  o = n.n(r),
-  u = n("77078"),
+  u = n.n(r),
+  o = n("77078"),
   d = n("461380"),
   c = n("67602"),
   f = n("274210"),
@@ -35,11 +35,11 @@ var m = e => {
     })
   });
   return (0, s.jsxs)("div", {
-    className: o(f.listWrapper, p),
-    children: [(0, s.jsx)(u.Button, {
+    className: u(f.listWrapper, p),
+    children: [(0, s.jsx)(o.Button, {
       className: f.collapseBtn,
       innerClassName: f.collapseBtnContent,
-      color: u.ButtonColors.CUSTOM,
+      color: o.ButtonColors.CUSTOM,
       onMouseEnter: E,
       onFocus: S,
       onClick: () => C(!g),
@@ -52,19 +52,19 @@ var m = e => {
           opacity: .08
         })]
       }) : (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(u.Text, {
+        children: [(0, s.jsx)(o.Text, {
           variant: "text-sm/medium",
           children: t
         }), _]
       })
     }), (0, s.jsx)("ul", {
-      className: o(f.connectionList, {
+      className: u(f.connectionList, {
         [f.isCollapsed]: g
       }),
       children: r ? Array.from({
         length: m
       }).map((e, t) => (0, s.jsxs)("div", {
-        className: o({
+        className: u({
           [h.mutualFriendItem]: 0 === l,
           [h.mutualGuildsItem]: 1 === l
         }),

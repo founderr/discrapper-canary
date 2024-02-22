@@ -16,12 +16,12 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var i = n("476765"),
-  r = n("782340");
-let l = (0, i.uid)(),
-  a = (0, i.uid)(),
-  s = (0, i.uid)(),
-  o = (0, i.uid)();
+var r = n("476765"),
+  i = n("782340");
+let l = (0, r.uid)(),
+  a = (0, r.uid)(),
+  s = (0, r.uid)(),
+  o = (0, r.uid)();
 
 function u() {
   [{
@@ -32,15 +32,15 @@ function u() {
     text: ","
   }, {
     id: s,
-    text: r.default.Messages.REACTIONS
+    text: i.default.Messages.REACTIONS
   }, {
     id: o,
-    text: r.default.Messages.OPEN_ORIGIANL_IMAGE_BUTTON_A11Y_DESCRIPTION
+    text: i.default.Messages.OPEN_ORIGIANL_IMAGE_BUTTON_A11Y_DESCRIPTION
   }].forEach(e => {
     let {
       id: t,
       text: n
-    } = e, i = document.getElementById(t);
-    null == i && ((i = document.createElement("div")).setAttribute("id", t), i.innerText = n, i.style.display = "none", document.body.appendChild(i))
+    } = e, r = document.getElementById(t);
+    null == r && ((r = document.createElement("div")).setAttribute("id", t), r.innerText = n, r.style.display = "none", document.body.appendChild(r))
   })
 }

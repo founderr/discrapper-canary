@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("383173"),
   r = n("952451"),
-  u = n("336376"),
-  o = n("677099"),
+  o = n("336376"),
+  u = n("677099"),
   d = n("402088"),
   c = n("471671"),
   f = n("357007"),
@@ -31,7 +31,7 @@ function I(e) {
 }
 let _ = (0, h.cachedFunction)((e, t, n) => ["null", ...t, ...e, E, C.ViewHistoryKeys.E3_SERVER_DISCOVERY_BADGE, m]);
 var S = a.forwardRef(function(e, t) {
-  let n = (0, s.useStateFromStoresArray)([o.default, u.default, r.default], () => _(o.default.getGuildFolders(), u.default.getUnreadPrivateChannelIds(), r.default.getStoreChangeSentinel())),
+  let n = (0, s.useStateFromStoresArray)([u.default, o.default, r.default], () => _(u.default.getGuildFolders(), o.default.getUnreadPrivateChannelIds(), r.default.getStoreChangeSentinel())),
     a = (0, s.useStateFromStores)([c.default], () => c.default.isFocused()),
     d = (0, s.useStateFromStores)([i.default], () => i.default.getExpandedFolders());
   return (0, l.jsx)(f.default, {

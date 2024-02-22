@@ -8,8 +8,8 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  i = s("446674"),
+  i = s("884691"),
+  n = s("446674"),
   r = s("77078"),
   l = s("272030"),
   o = s("741130"),
@@ -21,14 +21,14 @@ let c = {
   Colors: o.default.Colors,
   Looks: o.default.Looks
 };
-class _ extends n.PureComponent {
+class _ extends i.PureComponent {
   render() {
     let {
       storeListings: e,
       primaryStoreListing: t,
       skuId: s,
-      onStoreListingSelect: n,
-      currentStoreListingId: i,
+      onStoreListingSelect: i,
+      currentStoreListingId: n,
       ...r
     } = this.props, l = null != t ? 1 : 0;
     return (l += e.length) < 2 ? null : (0, a.jsx)(o.default, {
@@ -45,8 +45,8 @@ class _ extends n.PureComponent {
         storeListings: e,
         onStoreListingSelect: t,
         currentStoreListingId: s,
-        onMenuSelect: n
-      } = this.props, i = e.map(e => e.id !== s ? (0, a.jsx)(r.MenuItem, {
+        onMenuSelect: i
+      } = this.props, n = e.map(e => e.id !== s ? (0, a.jsx)(r.MenuItem, {
         id: "".concat(e.id),
         label: e.id,
         action: () => {
@@ -54,18 +54,18 @@ class _ extends n.PureComponent {
         }
       }) : null);
       return (0, a.jsx)(r.Menu, {
-        onSelect: n,
+        onSelect: i,
         navId: "test-store-listing",
         "aria-label": d.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
         onClose: l.closeContextMenu,
-        children: i
+        children: n
       })
     }, this.handleContextMenu = e => {
       e.stopPropagation(), l.openContextMenu(e, this.renderContextMenu)
     }
   }
 }
-var E = i.default.connectStores([u.default], e => {
+var E = n.default.connectStores([u.default], e => {
   let {
     skuId: t
   } = e;

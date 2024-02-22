@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("974667"),
   i = n("446674"),
   r = n("450911"),
-  u = n("677315"),
-  o = n("827298"),
+  o = n("677315"),
+  u = n("827298"),
   d = n("290886"),
   c = n("393414"),
   f = n("660478"),
@@ -28,13 +28,13 @@ function _(e) {
     selected: n
   } = e, _ = (0, s.useListItem)("home-tab-".concat(t.id)), {
     showBadge: S
-  } = u.GuildHomeBadgeExperiment.useExperiment({
+  } = o.GuildHomeBadgeExperiment.useExperiment({
     location: "487e85_1"
   }, {
     autoTrackExposure: !1
   });
   a.useEffect(() => {
-    u.GuildHomeBadgeExperiment.trackExposure({
+    o.GuildHomeBadgeExperiment.trackExposure({
       location: "487e85_2"
     })
   }, []);
@@ -54,7 +54,7 @@ function _(e) {
       r.default.preload(t.id, E.StaticChannelRoute.GUILD_HOME)
     },
     onClick: function() {
-      (0, o.ackGuildHome)(t.id), (0, c.transitionTo)(m.Routes.CHANNEL(t.id, E.StaticChannelRoute.GUILD_HOME))
+      (0, u.ackGuildHome)(t.id), (0, c.transitionTo)(m.Routes.CHANNEL(t.id, E.StaticChannelRoute.GUILD_HOME))
     }
   })
 }

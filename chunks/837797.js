@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("446674"),
-  n = s("521012"),
-  i = s("719923"),
+  i = s("521012"),
+  n = s("719923"),
   r = s("154889"),
   l = s("917247"),
   o = s("646718");
@@ -23,7 +23,7 @@ function u(e) {
     onNonTier2Subscriber: I,
     onTier2Subscriber: T,
     onCustomCriteria: f
-  } = e, S = (0, l.usePremiumTrialOffer)(), R = (0, r.usePremiumDiscountOffer)(), m = (0, a.useStateFromStores)([n.default], () => n.default.getPremiumTypeSubscription()), A = i.default.getPremiumTypeFromSubscription(m);
+  } = e, S = (0, l.usePremiumTrialOffer)(), R = (0, r.usePremiumDiscountOffer)(), m = (0, a.useStateFromStores)([i.default], () => i.default.getPremiumTypeSubscription()), A = n.default.getPremiumTypeFromSubscription(m);
   if (null != f) {
     let e = f();
     if (null != e) return e

@@ -10,8 +10,8 @@ var a = n("77078"),
   s = n("784981"),
   i = n("607391"),
   r = n("49111"),
-  o = n("782340"),
-  u = n("194868"),
+  u = n("782340"),
+  o = n("194868"),
   d = n("425643");
 
 function c(e) {
@@ -22,11 +22,11 @@ function c(e) {
     inPopout: h
   } = e;
   return (0, l.jsx)(s.default, {
-    className: u.root,
+    className: o.root,
     children: (0, l.jsx)(i.default, {
       artURL: d,
       size: (0, i.getSizeForWidth)(f),
-      header: o.default.Messages.STREAM_SINGLE_PERSON_BODY,
+      header: u.default.Messages.STREAM_SINGLE_PERSON_BODY,
       onCTAClick: () => (0, a.openModalLazy)(async () => {
         let {
           default: e
@@ -40,7 +40,7 @@ function c(e) {
       }, {
         contextKey: h ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT
       }),
-      callToAction: o.default.Messages.INSTANT_INVITE
+      callToAction: u.default.Messages.INSTANT_INVITE
     })
   })
 }

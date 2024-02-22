@@ -19,8 +19,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("449918"),
   r = n("567054"),
-  u = n("104359"),
-  o = n("943232"),
+  o = n("104359"),
+  u = n("943232"),
   d = n("437825"),
   c = n("36694"),
   f = n("945330"),
@@ -45,7 +45,7 @@ function A(e, t) {
 
 function L() {
   return (0, l.jsx)(_.IconBadge, {
-    icon: u.default,
+    icon: o.default,
     disableColor: !0,
     className: T.unavailableBadge
   })
@@ -59,15 +59,15 @@ function v(e) {
       isCurrentUserConnected: s,
       liveStage: i,
       activeEvent: r,
-      activity: u,
+      activity: o,
       gaming: c
     } = e,
     f = (0, S.isGamingVoiceActivityEnabled)("Guild Icon", !1);
-  if (!r && !i && !u && !a && !l && c && S.default.trackExposure({
+  if (!r && !i && !o && !a && !l && c && S.default.trackExposure({
       location: "Guild Icon"
-    }), r) t = o.default;
+    }), r) t = u.default;
   else if (i) t = I.default;
-  else if (u) t = E.default;
+  else if (o) t = E.default;
   else if (a) t = p.default;
   else if (l) t = d.default;
   else if (c && f) t = h.default;

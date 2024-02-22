@@ -15,8 +15,8 @@ function r(e) {
     channel: t,
     centerButton: n = !1,
     ...r
-  } = e, o = n ? s.CenterControlButton : s.default, u = t.isManaged() || !t.isPrivate(), d = u ? i.default.Messages.CONNECT : i.default.Messages.JOIN_CALL;
-  return (0, l.jsx)(o, {
+  } = e, u = n ? s.CenterControlButton : s.default, o = t.isManaged() || !t.isPrivate(), d = o ? i.default.Messages.CONNECT : i.default.Messages.JOIN_CALL;
+  return (0, l.jsx)(u, {
     ...r,
     iconComponent: a.default,
     label: d

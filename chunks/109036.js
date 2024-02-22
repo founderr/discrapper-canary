@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("37983");
+var r = n("37983");
 n("884691");
-var r = n("414456"),
-  l = n.n(r),
+var i = n("414456"),
+  l = n.n(i),
   a = n("527382"),
   s = n("1065"),
   o = function(e) {
@@ -15,21 +15,21 @@ var r = n("414456"),
       icons: t,
       className: n
     } = e;
-    return (0, i.jsxs)("div", {
+    return (0, r.jsxs)("div", {
       className: l(s.icons, n),
-      children: [(0, i.jsx)("div", {
+      children: [(0, r.jsx)("div", {
         className: s.wrapOne,
-        children: (0, i.jsx)("div", {
+        children: (0, r.jsx)("div", {
           className: l(s.icon, s.one, a.FileUploadIconClassNames[t[0]])
         })
-      }), (0, i.jsx)("div", {
+      }), (0, r.jsx)("div", {
         className: s.wrapThree,
-        children: (0, i.jsx)("div", {
+        children: (0, r.jsx)("div", {
           className: l(s.icon, s.three, a.FileUploadIconClassNames[t[2]])
         })
-      }), (0, i.jsx)("div", {
+      }), (0, r.jsx)("div", {
         className: s.wrapTwo,
-        children: (0, i.jsx)("div", {
+        children: (0, r.jsx)("div", {
           className: l(s.icon, s.two, a.FileUploadIconClassNames[t[1]])
         })
       })]

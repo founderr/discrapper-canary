@@ -9,8 +9,8 @@ var l = n("917351"),
   s = n("446674"),
   i = n("913144"),
   r = n("990766"),
-  o = n("374014"),
-  u = n("706530");
+  u = n("374014"),
+  o = n("706530");
 let d = {},
   c = {},
   f = new Set;
@@ -20,8 +20,8 @@ function h() {
 }
 class m extends s.default.Store {
   getPreviewURL(e, t, n) {
-    let l = (0, o.encodeStreamKey)({
-        streamType: null != e ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
+    let l = (0, u.encodeStreamKey)({
+        streamType: null != e ? o.StreamTypes.GUILD : o.StreamTypes.CALL,
         guildId: e,
         channelId: t,
         ownerId: n
@@ -36,12 +36,12 @@ class m extends s.default.Store {
       guildId: t,
       channelId: n,
       ownerId: l
-    } = (0, o.decodeStreamKey)(e);
+    } = (0, u.decodeStreamKey)(e);
     return this.getPreviewURL(t, n, l)
   }
   getIsPreviewLoading(e, t, n) {
-    let l = (0, o.encodeStreamKey)({
-      streamType: null != e ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
+    let l = (0, u.encodeStreamKey)({
+      streamType: null != e ? o.StreamTypes.GUILD : o.StreamTypes.CALL,
       guildId: e,
       channelId: t,
       ownerId: n
@@ -92,8 +92,8 @@ var p = new m(i.default, {
         selfStream: s
       } = t;
       if (s) return e;
-      let i = (0, o.encodeStreamKey)({
-        streamType: null != l ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
+      let i = (0, u.encodeStreamKey)({
+        streamType: null != l ? o.StreamTypes.GUILD : o.StreamTypes.CALL,
         guildId: l,
         channelId: a,
         ownerId: n

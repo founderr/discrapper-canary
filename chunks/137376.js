@@ -16,10 +16,10 @@ function i(e) {
     userCount: i
   } = e, {
     limit: r
-  } = (0, a.default)(t), u = -1, o = !1;
-  return t.userLimit > 0 && (u = t.userLimit), n && r > 0 && (o = u < 0 || r < u, u = u > 0 ? Math.min(u, r) : r), (0, l.jsx)(s.default, {
+  } = (0, a.default)(t), o = -1, u = !1;
+  return t.userLimit > 0 && (o = t.userLimit), n && r > 0 && (u = o < 0 || r < o, o = o > 0 ? Math.min(o, r) : r), (0, l.jsx)(s.default, {
     users: i,
-    total: u,
-    videoLimit: o
+    total: o,
+    videoLimit: u
   })
 }

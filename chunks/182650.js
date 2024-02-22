@@ -7,15 +7,15 @@ n.r(t), n.d(t, {
     return E
   },
   useFetchChurnUserDiscountOffer: function() {
-    return I
+    return C
   },
   useShouldFetchChurnOffer: function() {
-    return C
+    return I
   }
 }), n("222007");
-var i = n("884691"),
-  r = n("866227"),
-  l = n.n(r),
+var r = n("884691"),
+  i = n("866227"),
+  l = n.n(i),
   a = n("446674"),
   s = n("872717"),
   o = n("521012"),
@@ -29,8 +29,8 @@ function _() {
   let e = (0, f.usePremiumTrialOffer)(),
     t = (0, u.useHasActiveTrial)(),
     n = (0, d.usePremiumDiscountOffer)(),
-    i = E();
-  return null != e || t || null != n || i
+    r = E();
+  return null != e || t || null != n || r
 }
 let E = () => {
     var e;
@@ -48,30 +48,30 @@ let E = () => {
       e = null !== (t = n.body.offer) && void 0 !== t ? t : null
     } catch (e) {}
     return e
-  }, I = e => {
-    let [t, n] = i.useState(!1), [r, l] = i.useState(!1), [a, s] = i.useState(null);
+  }, C = e => {
+    let [t, n] = r.useState(!1), [i, l] = r.useState(!1), [a, s] = r.useState(null);
     if (e) return {
       churnUserDiscountOffer: a,
-      isFetchingChurnDiscountOffer: r
+      isFetchingChurnDiscountOffer: i
     };
     let o = () => {
       n(!0), l(!1)
     };
-    return !r && !t && (l(!0), T().then(e => {
+    return !i && !t && (l(!0), T().then(e => {
       s(e), o()
     }).catch(e => {
       o()
     })), {
       churnUserDiscountOffer: a,
-      isFetchingChurnDiscountOffer: r
+      isFetchingChurnDiscountOffer: i
     }
-  }, C = () => {
+  }, I = () => {
     let {
       enabled: e
     } = c.default.useExperiment({
       location: "useShouldFetchChurnOffer"
     }, {
       autoTrackExposure: !1
-    }), t = (0, a.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()), n = E(), i = null !== t && t.hasPremiumNitroMonthly, r = null != t && null != t.trialId;
-    return e && i && !r && !n
+    }), t = (0, a.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()), n = E(), r = null !== t && t.hasPremiumNitroMonthly, i = null != t && null != t.trialId;
+    return e && r && !i && !n
   }

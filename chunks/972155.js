@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("759843"),
   i = n("446674"),
   r = n("151426"),
-  o = n("244201"),
-  u = n("191225"),
+  u = n("244201"),
+  o = n("191225"),
   d = n("117582"),
   c = n("943349"),
   f = n("428958"),
@@ -38,7 +38,7 @@ function N(e) {
     inCall: j,
     totalNumberOfParticipants: L,
     paused: y = !1
-  } = e, O = (0, o.useAppContext)(), P = O === v.AppContext.POPOUT, b = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(M.guild_id), [M.guild_id]), {
+  } = e, O = (0, u.useAppContext)(), P = O === v.AppContext.POPOUT, b = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(M.guild_id), [M.guild_id]), {
     dismissedActivityEntryPointTileChannel: D
   } = (0, I.useChannelCallVideoGridStore)(), U = (0, i.useStateFromStores)([h.default], () => h.default.getUserParticipantCount(M.id), [M]), w = a.useCallback(() => {
     I.useChannelCallVideoGridStore.setState({
@@ -52,9 +52,9 @@ function N(e) {
   }, [M.id, D]);
   let F = (0, i.useStateFromStores)([S.default], () => M.isPrivate() || (0, p.canViewInviteModal)(S.default, b, M), [b, M]),
     k = (null == b ? void 0 : b.afkChannelId) === M.id,
-    V = M.userLimit <= 0 || M.userLimit > 1,
+    B = M.userLimit <= 0 || M.userLimit > 1,
     {
-      vcTileActivityExperimentType: B
+      vcTileActivityExperimentType: V
     } = d.VcTileActivitiesEntryPointExperiment.useExperiment({
       location: "8711e9_1"
     }, {
@@ -63,7 +63,7 @@ function N(e) {
   M.isGuildVoice() && d.VcTileActivitiesEntryPointExperiment.trackExposure({
     location: "8711e9_2"
   });
-  let H = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(M.id).length <= 0),
+  let H = (0, i.useStateFromStores)([o.default], () => o.default.getEmbeddedActivitiesForChannel(M.id).length <= 0),
     G = (0, m.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
     W = (0, c.useEmbeddedActivityLaunchability)(M.id),
     Y = W !== c.EmbeddedActivityLaunchability.CAN_LAUNCH,
@@ -91,7 +91,7 @@ function N(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != b && !k && ((B !== d.VcTileActivityExperimentType.ONE_OR_TWO_USERS || 2 !== U) && (B !== d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS || !(U >= 2)) || !H || Y || G || z ? V && 1 === U && F && ([d.VcTileActivityExperimentType.ONE_OR_TWO_USERS, d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS].includes(B) && H && !Y ? K.push(e => (0, l.jsx)(C.ActivityEntryPointTile, {
+  }, []), null != b && !k && ((V !== d.VcTileActivityExperimentType.ONE_OR_TWO_USERS || 2 !== U) && (V !== d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS || !(U >= 2)) || !H || Y || G || z ? B && 1 === U && F && ([d.VcTileActivityExperimentType.ONE_OR_TWO_USERS, d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS].includes(V) && H && !Y ? K.push(e => (0, l.jsx)(C.ActivityEntryPointTile, {
     channel: M,
     guild: b,
     width: e,

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("917351"),
   i = n.n(s),
   r = n("77078"),
-  u = n("224216"),
-  o = n("782340"),
+  o = n("224216"),
+  u = n("782340"),
   d = n("685971");
 
 function c(e) {
@@ -142,10 +142,10 @@ var m = a.memo(function(e) {
       s = l.y < 0,
       i = p(n, l),
       r = a ? Math.max(l.x, -i.x) : Math.min(l.x, i.x),
-      u = s ? Math.max(l.y, -i.y) : Math.min(l.y, i.y);
+      o = s ? Math.max(l.y, -i.y) : Math.min(l.y, i.y);
     y({
       x: r / 2,
-      y: u / 2
+      y: o / 2
     })
   }, []), F = a.useCallback(e => {
     null != x.current && (e.preventDefault(), e.stopPropagation(), null == S || S(h * R + x.current))
@@ -166,12 +166,12 @@ var m = a.memo(function(e) {
       null != I && U();
       return
     }
-    let o = (0, u.extendLineSegment)(i, r, Math.max(t, n));
+    let u = (0, o.extendLineSegment)(i, r, Math.max(t, n));
     for (let e = 0; e < L.current[R].length; e++) {
       let t = L.current[R][e];
       if (null == t) continue;
       let n = t.getBoundingClientRect();
-      if ((0, u.doesLineSegmentIntersectRectangle)(i, o, n)) {
+      if ((0, o.doesLineSegmentIntersectRectangle)(i, u, n)) {
         G(R, e);
         return
       }
@@ -280,7 +280,7 @@ var m = a.memo(function(e) {
           className: d.chatWheelDeadZoneIcon
         }), N && b.length > 1 ? (0, l.jsx)("div", {
           className: d.paginationHint,
-          children: o.default.Messages.CHAT_WHEEL_PAGINATION_HINT
+          children: u.default.Messages.CHAT_WHEEL_PAGINATION_HINT
         }) : null]
       }), H]
     })

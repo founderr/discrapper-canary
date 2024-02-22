@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("77078"),
-  o = n("429928"),
+  o = n("77078"),
+  u = n("429928"),
   d = n("697218"),
   c = n("339521"),
   f = n("963422"),
@@ -37,7 +37,7 @@ function S(e) {
         icon: e.application.icon
       }),
       n = e.application.name;
-    return (0, l.jsx)(u.Tooltip, {
+    return (0, l.jsx)(o.Tooltip, {
       text: n,
       position: "top",
       children: () => (0, l.jsx)("img", {
@@ -48,20 +48,20 @@ function S(e) {
     })
   }(r) : null;
   let h = null !== (t = c.large_image) && void 0 !== t ? t : c.small_image,
-    C = (0, o.default)(s),
+    C = (0, u.default)(s),
     E = C ? I.spotifyLargeImage : I.applicationLargeImage,
     g = null != h ? (0, l.jsx)("img", {
       alt: null !== (n = c.large_text) && void 0 !== n ? n : "",
       src: (0, p.getAssetImage)(f, h, [128, 128]),
       className: E
     }) : null;
-  return C && null != d ? (g = (0, l.jsx)(u.Clickable, {
+  return C && null != d ? (g = (0, l.jsx)(o.Clickable, {
     className: I.clickable,
     onClick: () => {
       d(s, i.id)
     },
     children: g
-  }), (0, l.jsx)(u.Tooltip, {
+  }), (0, l.jsx)(o.Tooltip, {
     text: null != c.large_text ? c.large_text : null,
     position: "top",
     children: e => {
@@ -82,8 +82,8 @@ function N(e) {
   } = e, s = null == t ? void 0 : t.details, i = null == t ? void 0 : t.name, r = i;
   if (null != n) r = n.application.name;
   else {
-    if (!(null != t && (0, o.default)(t)) || null == t.sync_id || null == s || null == a) return null;
-    i = s, r = (0, l.jsx)(u.Clickable, {
+    if (!(null != t && (0, u.default)(t)) || null == t.sync_id || null == s || null == a) return null;
+    i = s, r = (0, l.jsx)(o.Clickable, {
       className: I.headerLink,
       onClick: () => {
         a(t)
@@ -103,17 +103,17 @@ function T(e) {
     activity: t,
     user: n,
     onOpenSpotifyArtist: a
-  } = e, s = null == t ? void 0 : t.details, r = null == t ? void 0 : t.state, u = s;
-  return (null != t && (0, o.default)(t) && null != r && (u = [(0, l.jsx)(f.default, {
+  } = e, s = null == t ? void 0 : t.details, r = null == t ? void 0 : t.state, o = s;
+  return (null != t && (0, u.default)(t) && null != r && (o = [(0, l.jsx)(f.default, {
     artists: r,
     linkClassName: I.bodyLink,
     canOpen: null != t.sync_id,
     onOpenSpotifyArtist: e => {
       null == a || a(t, n.id, e)
     }
-  }, r)]), null == u || "" === u) ? null : (0, l.jsx)("div", {
+  }, r)]), null == o || "" === o) ? null : (0, l.jsx)("div", {
     className: i(I.ellipsisRow, I.colorHeaderSecondary, I.bodyTextSize),
-    children: u
+    children: o
   })
 }
 
@@ -121,7 +121,7 @@ function A(e) {
   let {
     activity: t
   } = e, n = null == t ? void 0 : t.state;
-  return null == n || "" === n || (0, o.default)(t) ? null : (0, l.jsx)("div", {
+  return null == n || "" === n || (0, u.default)(t) ? null : (0, l.jsx)("div", {
     className: i(I.ellipsisRow, I.colorHeaderSecondary, I.bodyTextSize, I.activity),
     children: n
   })
@@ -131,7 +131,7 @@ function L(e) {
   let {
     activity: t
   } = e;
-  if (null == t || !(0, o.default)(t)) return null;
+  if (null == t || !(0, u.default)(t)) return null;
   let {
     timestamps: n
   } = t;
@@ -160,9 +160,9 @@ function v(e) {
     onOpenSpotifyArtist: h,
     onOpenSpotifyAlbum: p
   } = e, m = [];
-  null != n ? m = Array.from(n.embeddedActivity.userIds) : (0, o.default)(t) && null != c && (m = c.map(e => e.user.id));
+  null != n ? m = Array.from(n.embeddedActivity.userIds) : (0, u.default)(t) && null != c && (m = c.map(e => e.user.id));
   let v = (0, r.useStateFromStoresArray)([d.default], () => m.map(e => d.default.getUser(e)).filter(E.isNotNullish)),
-    x = null != n || (0, o.default)(t),
+    x = null != n || (0, u.default)(t),
     R = a.useMemo(() => {
       let e = new Map;
       return x && null != c && c.forEach(t => {
@@ -202,7 +202,7 @@ function v(e) {
             if (null == e) return null;
             let n = R.get(e.id),
               a = null !== (t = null == n ? void 0 : n.nick) && void 0 !== t ? t : g.default.getName(e);
-            return (0, l.jsx)(u.TooltipContainer, {
+            return (0, l.jsx)(o.TooltipContainer, {
               text: a,
               position: "bottom",
               children: (0, l.jsx)("img", {

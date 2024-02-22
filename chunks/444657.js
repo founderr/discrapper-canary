@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("151426"),
-  o = n("669491"),
-  u = n("77078"),
+  u = n("669491"),
+  o = n("77078"),
   d = n("997289"),
   c = n("865821"),
   f = n("441821"),
@@ -72,7 +72,7 @@ function O(e) {
   } = e, {
     analyticsLocations: s,
     AnalyticsLocationProvider: r
-  } = (0, p.default)(m.default.VC_TILE_ACTIVITY_SHELF_BUTTON), c = (0, d.useAnalyticsContext)(), f = (0, u.useToken)(o.default.colors.INTERACTIVE_NORMAL).hex(), E = () => {
+  } = (0, p.default)(m.default.VC_TILE_ACTIVITY_SHELF_BUTTON), c = (0, d.useAnalyticsContext)(), f = (0, o.useToken)(u.default.colors.INTERACTIVE_NORMAL).hex(), E = () => {
     (0, h.default)({
       channel: t,
       guildId: t.guild_id,
@@ -83,14 +83,14 @@ function O(e) {
   };
   return (0, l.jsx)(r, {
     children: (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(u.Tooltip, {
+      children: [(0, l.jsx)(o.Tooltip, {
         text: R.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
         children: e => {
           let {
             onClick: t,
             ...n
           } = e;
-          return (0, l.jsx)(u.Clickable, {
+          return (0, l.jsx)(o.Clickable, {
             ...n,
             className: j.clickableTile,
             onClick: () => {
@@ -108,7 +108,7 @@ function O(e) {
             })
           })
         }
-      }), (0, l.jsx)(u.Clickable, {
+      }), (0, l.jsx)(o.Clickable, {
         onClick: a,
         className: i((0, x.getThemeClass)(A.ThemeTypes.DARK), j.shelfButtonCloseButton),
         children: (0, l.jsx)(C.default, {
@@ -135,7 +135,7 @@ function P(e) {
       n_participants: 1
     })
   }, []);
-  let o = (0, d.useAnalyticsContext)(),
+  let u = (0, d.useAnalyticsContext)(),
     {
       analyticsLocations: c,
       AnalyticsLocationProvider: f
@@ -147,19 +147,19 @@ function P(e) {
         src: L,
         className: j.art,
         alt: R.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
-      }) : null, (0, l.jsx)(u.Text, {
+      }) : null, (0, l.jsx)(o.Text, {
         className: j.heading,
         variant: "text-md/semibold",
         children: R.default.Messages.EMBEDDED_ACTIVITIES_VC_TILE_ENTRY_POINT_INVITE
       }), (0, l.jsxs)("div", {
         className: j.buttonContainer,
-        children: [(0, l.jsxs)(u.Button, {
-          size: u.Button.Sizes.LARGE,
-          color: u.Button.Colors.PRIMARY,
+        children: [(0, l.jsxs)(o.Button, {
+          size: o.Button.Sizes.LARGE,
+          color: o.Button.Colors.PRIMARY,
           className: j.button,
           innerClassName: j.buttonContents,
           onClick: function() {
-            (0, u.openModalLazy)(async () => {
+            (0, o.openModalLazy)(async () => {
               let {
                 default: e
               } = await n.el("310688").then(n.bind(n, "310688"));
@@ -170,25 +170,25 @@ function P(e) {
                 source: A.InstantInviteSources.ACTIVITY_ENTRY_POINT_TILE
               })
             }, {
-              contextKey: i ? u.POPOUT_MODAL_CONTEXT : u.DEFAULT_MODAL_CONTEXT
+              contextKey: i ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT
             })
           },
           children: [(0, l.jsx)(_.default, {
             width: 16,
             height: 16
-          }), (0, l.jsx)(u.Text, {
+          }), (0, l.jsx)(o.Text, {
             variant: "text-sm/medium",
             children: R.default.Messages.INVITE_FRIENDS
           })]
-        }), (0, l.jsxs)(u.Button, {
-          size: u.Button.Sizes.LARGE,
+        }), (0, l.jsxs)(o.Button, {
+          size: o.Button.Sizes.LARGE,
           className: j.button,
           innerClassName: j.buttonContents,
           onClick: function() {
             (0, h.default)({
               channel: t,
               guildId: t.guild_id,
-              locationObject: o.location,
+              locationObject: u.location,
               openInPopout: i,
               analyticsLocations: c
             })
@@ -196,7 +196,7 @@ function P(e) {
           children: [(0, l.jsx)(I.default, {
             width: 16,
             height: 16
-          }), (0, l.jsx)(u.Text, {
+          }), (0, l.jsx)(o.Text, {
             variant: "text-sm/medium",
             children: R.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_ENTRY_POINT_TILE_CHOOSE_AN_ACTIVITY
           })]
@@ -228,7 +228,7 @@ function D(e) {
     channel: t,
     guild: n,
     handleClose: s,
-    width: o,
+    width: u,
     userParticipantCount: d
   } = e;
   a.useEffect(() => {
@@ -247,17 +247,17 @@ function D(e) {
   return (0, l.jsx)(h, {
     children: (0, l.jsxs)(N.default, {
       className: j.root,
-      children: [o > 480 ? (0, l.jsx)("img", {
+      children: [u > 480 ? (0, l.jsx)("img", {
         className: j.art,
         src: L,
         alt: R.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
-      }) : null, o > 300 ? (0, l.jsx)(u.Text, {
+      }) : null, u > 300 ? (0, l.jsx)(o.Text, {
         className: j.heading,
-        variant: o > 550 ? "text-md/semibold" : "text-sm/semibold",
+        variant: u > 550 ? "text-md/semibold" : "text-sm/semibold",
         children: R.default.Messages.EMBEDDED_ACTIVITIES_VC_TILE_ENTRY_POINT_TITLE
       }) : null, (0, l.jsx)("div", {
         className: i(j.activitiesContainer, {
-          [j.activitiesContainerSmol]: o <= 300
+          [j.activitiesContainerSmol]: u <= 300
         }),
         children: c.map(e => (0, l.jsx)(f.ActivitySuggestion, {
           channel: t,
@@ -265,7 +265,7 @@ function D(e) {
           aspectRatio: f.ActivitySuggestion.AspectRatio.SIXTEEN_BY_NINE,
           animatedDivClass: j.activitySuggestion
         }, e.application.id))
-      }), (0, l.jsxs)(u.Clickable, {
+      }), (0, l.jsxs)(o.Clickable, {
         className: j.checkboxContainer,
         onClick: function() {
           v.default.track(A.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
@@ -274,11 +274,11 @@ function D(e) {
             n_participants: d
           }), (0, E.markDismissibleContentAsDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT)
         },
-        children: [(0, l.jsx)(S.default, {}), (0, l.jsx)(u.Text, {
+        children: [(0, l.jsx)(S.default, {}), (0, l.jsx)(o.Text, {
           variant: "text-sm/medium",
           children: R.default.Messages.DONT_SHOW_AGAIN
         })]
-      }), (0, l.jsx)(u.Clickable, {
+      }), (0, l.jsx)(o.Clickable, {
         className: j.closeButtonContainer,
         onClick: function() {
           v.default.track(A.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {

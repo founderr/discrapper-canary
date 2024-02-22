@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   usePerkCards: function() {
-    return y
+    return B
   }
 });
 var a = s("65597"),
@@ -25,8 +25,8 @@ var a = s("65597"),
   p = s("982784"),
   N = s("19530"),
   g = s("215541"),
-  P = s("663411"),
-  C = s("126304"),
+  C = s("663411"),
+  P = s("126304"),
   O = s("674065"),
   M = s("771116"),
   h = s("309920"),
@@ -39,13 +39,13 @@ var a = s("65597"),
   j = s("443817"),
   G = s("759308");
 let k = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
-  y = e => {
+  B = e => {
     let {
       styles: t
     } = e, s = (0, r.default)(), i = (0, a.default)([l.default], () => {
       let e = l.default.getCurrentUser();
       return o.default.canUsePremiumProfileCustomization(e)
-    }), y = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, B = {
+    }), B = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, y = {
       badge: {
         title: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_DESCRIPTION,
@@ -153,15 +153,15 @@ let k = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
       superReactions: {
         title: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
         description: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-        imageSource: k(s, P, C),
+        imageSource: k(s, C, P),
         imageClassName: t.superReactionsImage
       },
       upload: {
         title: c.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({
-          premiumMaxSize: y
+          premiumMaxSize: B
         }),
         description: c.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({
-          premiumMaxSize: y
+          premiumMaxSize: B
         }),
         imageSource: G,
         imageClassName: t.uploadImage
@@ -173,5 +173,5 @@ let k = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
         imageClassName: t.videoBackgroundImage
       }
     };
-    return B
+    return y
   }

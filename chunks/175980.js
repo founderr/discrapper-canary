@@ -15,8 +15,8 @@ var l = n("102457"),
   s = n("953260"),
   i = n("798232"),
   r = n("278412"),
-  u = n("222301"),
-  o = n("735577"),
+  o = n("222301"),
+  u = n("735577"),
   d = n("714208"),
   c = n("24312"),
   f = n("30269"),
@@ -62,14 +62,14 @@ let T = {
     [_.KeybindActions.SCROLL_DOWN]: c.SCROLL_DOWN,
     [_.KeybindActions.SEARCH_EMOJIS]: f.SEARCH_EMOJIS,
     [_.KeybindActions.TOGGLE_HOTKEYS]: g.TOGGLE_HOTKEYS,
-    [_.KeybindActions.JUMP_TO_FIRST_UNREAD]: u.JUMP_TO_FIRST_UNREAD,
+    [_.KeybindActions.JUMP_TO_FIRST_UNREAD]: o.JUMP_TO_FIRST_UNREAD,
     [_.KeybindActions.RETURN_TO_AUDIO_CHANNEL]: d.RETURN_TO_AUDIO_CHANNEL,
     [_.KeybindActions.CALL_ACCEPT]: l.CALL_ACCEPT,
     [_.KeybindActions.CALL_START]: l.CALL_START,
-    [_.KeybindActions.QUICKSWITCHER_SHOW]: o.QUICKSWITCHER_SHOW
+    [_.KeybindActions.QUICKSWITCHER_SHOW]: u.QUICKSWITCHER_SHOW
   },
   A = {
-    [_.KeybindActions.QUICKSWITCHER_SHOW]: o.QUICKSWITCHER_SHOW
+    [_.KeybindActions.QUICKSWITCHER_SHOW]: u.QUICKSWITCHER_SHOW
   };
 
 function L() {

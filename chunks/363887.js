@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("907002"),
-  u = n("509043"),
-  o = n("446674"),
+  o = n("509043"),
+  u = n("446674"),
   d = n("769846"),
   c = n("77078"),
   f = n("305961"),
@@ -29,7 +29,7 @@ function T(e) {
   let {
     guildId: t,
     animate: n
-  } = e, a = (0, o.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
+  } = e, a = (0, u.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
   return null == a ? (0, l.jsx)("div", {
     className: _.guildIconUnavailable,
     children: "!"
@@ -46,7 +46,7 @@ function A(e) {
   let t, n, {
       folderNode: s,
       hovered: i,
-      expanded: o
+      expanded: u
     } = e,
     {
       color: d,
@@ -55,18 +55,18 @@ function A(e) {
     f = null != d ? d : g.DEFAULT_FOLDER_COLOR,
     h = c.map(e => e.id),
     [p, m] = a.useState(!1),
-    [E, I] = a.useState(o),
-    A = o ? 0 : -N,
+    [E, I] = a.useState(u),
+    A = u ? 0 : -N,
     L = (0, r.useSpring)({
       transform: "translate3d(0, ".concat(A, "px, 0)"),
       config: {
         duration: S
       },
       onStart() {
-        m(!0), I(o)
+        m(!0), I(u)
       },
       onRest() {
-        m(!1), I(o)
+        m(!1), I(u)
       }
     }),
     v = p ? L : void 0;
@@ -75,7 +75,7 @@ function A(e) {
     className: _.expandedFolderIconWrapper,
     children: (0, l.jsx)(C.default, {
       style: {
-        color: (0, u.int2hex)(f)
+        color: (0, o.int2hex)(f)
       }
     })
   })), (p || !E) && (n = (0, l.jsx)(r.animated.div, {
@@ -87,8 +87,8 @@ function A(e) {
     }, e))
   })), (0, l.jsxs)("div", {
     "aria-hidden": !0,
-    style: o ? void 0 : {
-      backgroundColor: (0, u.int2rgba)(f, .4)
+    style: u ? void 0 : {
+      backgroundColor: (0, o.int2rgba)(f, .4)
     },
     className: _.folderIconWrapper,
     children: [t, n]
@@ -101,8 +101,8 @@ function L(e) {
     forceCircular: n,
     expanded: s,
     sorting: r,
-    mediaState: u,
-    mentionCount: o = 0,
+    mediaState: o,
+    mentionCount: u = 0,
     tooltipName: d,
     folderGroupId: f,
     folderIconContent: h,
@@ -118,12 +118,12 @@ function L(e) {
     r || v(!0), null == g || g(!0)
   }, [r, g]), R = a.useCallback(() => {
     r || v(!1), null == g || g(!1)
-  }, [r, g]), M = s || null == u ? null : (0, E.renderMediaBadge)(u), O = !s && o > 0 ? (0, E.renderMentionBadge)(o) : null;
+  }, [r, g]), M = s || null == o ? null : (0, E.renderMediaBadge)(o), O = !s && u > 0 ? (0, E.renderMentionBadge)(u) : null;
   return (0, l.jsx)(c.BlobMask, {
     selected: !n,
     upperBadge: M,
     lowerBadge: O,
-    lowerBadgeWidth: (0, p.getBadgeWidthForValue)(o),
+    lowerBadgeWidth: (0, p.getBadgeWidthForValue)(u),
     children: (0, l.jsx)(c.Clickable, {
       className: i(_.folder, {
         [_.hover]: L
@@ -136,7 +136,7 @@ function L(e) {
       onFocus: N,
       "aria-label": I.default.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({
         folderName: d,
-        mentions: o
+        mentions: u
       }),
       "aria-expanded": s,
       "aria-owns": f,

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n.n(a),
   i = n("414456"),
   r = n.n(i),
-  u = n("773364"),
-  o = n("77078"),
+  o = n("773364"),
+  u = n("77078"),
   d = n("673777"),
   c = n("222871"),
   f = n("845579"),
@@ -27,7 +27,7 @@ var l = n("37983"),
   T = n("782340"),
   A = n("217934");
 let L = () => {
-  h.default.getMediaEngine().once(u.MediaEngineEvent.ConnectionStats, e => {
+  h.default.getMediaEngine().once(o.MediaEngineEvent.ConnectionStats, e => {
     let t = Object.values(N.MediaEngineContextTypes).map(t => {
       let n = e.filter(e => {
         let {
@@ -44,7 +44,7 @@ let L = () => {
       }
       return n
     }).filter(e => e.length > 0);
-    (0, g.copy)(JSON.stringify(t, null, 2)), (0, o.showToast)((0, o.createToast)(T.default.Messages.COPIED, o.ToastType.SUCCESS))
+    (0, g.copy)(JSON.stringify(t, null, 2)), (0, u.showToast)((0, u.createToast)(T.default.Messages.COPIED, u.ToastType.SUCCESS))
   })
 };
 var v = function(e) {
@@ -65,9 +65,9 @@ var v = function(e) {
         averagePing: n,
         lastPing: a,
         outboundLossRate: i
-      } = e, u = f.DeveloperMode.getSetting();
+      } = e, o = f.DeveloperMode.getSetting();
       return (0, l.jsxs)(s.Fragment, {
-        children: [u && (0, l.jsxs)("div", {
+        children: [o && (0, l.jsxs)("div", {
           children: [(0, l.jsx)("div", {
             className: A.graphContainer,
             children: (0, l.jsx)(c.default, {
@@ -110,7 +110,7 @@ var v = function(e) {
     {
       connectionState: i
     } = e,
-    u = f.DeveloperMode.getSetting(),
+    o = f.DeveloperMode.getSetting(),
     g = {
       [S.RTCConnectionStates.AWAITING_ENDPOINT]: T.default.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
         url: S.Links.STATUS
@@ -147,11 +147,11 @@ var v = function(e) {
           children: [(0, l.jsx)(m.default, {
             width: 12,
             height: 12,
-            color: o.tokens.colors.TEXT_POSITIVE.css,
+            color: u.tokens.colors.TEXT_POSITIVE.css,
             className: A.icon
           }), T.default.Messages.SECURE_CONNECTION]
-        }), u && h.default.supports(N.Features.DIAGNOSTICS) && !__OVERLAY__ && (0, l.jsxs)(l.Fragment, {
-          children: [(0, l.jsxs)(o.Anchor, {
+        }), o && h.default.supports(N.Features.DIAGNOSTICS) && !__OVERLAY__ && (0, l.jsxs)(l.Fragment, {
+          children: [(0, l.jsxs)(u.Anchor, {
             className: r(A.debugButton, A.textWithIcon),
             onClick: t,
             children: [T.default.Messages.DEBUG, (0, l.jsx)(p.default, {
@@ -159,7 +159,7 @@ var v = function(e) {
               width: 12,
               height: 12
             })]
-          }), (0, l.jsxs)(o.Anchor, {
+          }), (0, l.jsxs)(u.Anchor, {
             className: r(A.copyStatsButton, A.textWithIcon),
             onClick: L,
             title: "Copy to clipboard",
@@ -169,7 +169,7 @@ var v = function(e) {
               height: 12
             })]
           })]
-        }), !u && !__OVERLAY__ && (0, l.jsx)(o.Anchor, {
+        }), !o && !__OVERLAY__ && (0, l.jsx)(u.Anchor, {
           className: A.debugButton,
           href: I.default.getArticleURL(S.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
           children: T.default.Messages.LEARN_MORE

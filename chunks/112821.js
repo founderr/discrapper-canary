@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("819855"),
   r = n("77078"),
-  o = n("828986"),
-  u = n("519841"),
+  u = n("828986"),
+  o = n("519841"),
   d = n("787336"),
   c = n("508229"),
   f = n("660478"),
@@ -35,23 +35,23 @@ function S(e) {
     }
   }), _ = (0, s.useStateFromStores)([f.default], () => f.default.hasUnreadPins(t.id));
   return a.useEffect(() => {
-    u.AttachmentLinkRefreshExperiment.getCurrentConfig({
+    o.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "pins"
-    }).enabled && g.some(d.messageHasExpiredAttachmentUrl) && o.default.fetchPins(t.id, !0)
+    }).enabled && g.some(d.messageHasExpiredAttachmentUrl) && u.default.fetchPins(t.id, !0)
   }, []), a.useEffect(() => {
-    _ && o.default.ackPins(t.id)
+    _ && u.default.ackPins(t.id)
   }, [_, t.id]), (0, l.jsx)(r.Dialog, {
     "aria-label": p.default.Messages.PINNED_MESSAGES,
     children: (0, l.jsx)(h.default, {
       onFetch: function() {
-        o.default.ackPins(t.id), o.default.fetchPins(t.id)
+        u.default.ackPins(t.id), u.default.fetchPins(t.id)
       },
       channel: t,
       messages: g,
       loading: C,
       analyticsName: "Channel Pins",
       onCloseMessage: function(e, n) {
-        null != e && (n.shiftKey ? o.default.unpinMessage(t, e.id) : m.default.confirmUnpin(t, e))
+        null != e && (n.shiftKey ? u.default.unpinMessage(t, e.id) : m.default.confirmUnpin(t, e))
       },
       onJump: S,
       getProTip: function() {

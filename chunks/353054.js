@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("519705"),
-  o = n("282109"),
-  u = n("660279"),
+  u = n("282109"),
+  o = n("660279"),
   d = n("998650"),
   c = n("664336"),
   f = n("659500"),
@@ -23,7 +23,7 @@ var l = n("37983"),
 function g(e) {
   let {
     channel: t
-  } = e, n = (0, i.useRedesignIconContext)().enabled, [g, C] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.isChannelMuted(t.getGuildId(), t.id), o.default.resolvedMessageNotifications(t)], [t]), [_, I] = a.useState(!1);
+  } = e, n = (0, i.useRedesignIconContext)().enabled, [g, C] = (0, s.useStateFromStoresArray)([u.default], () => [u.default.isChannelMuted(t.getGuildId(), t.id), u.default.resolvedMessageNotifications(t)], [t]), [_, I] = a.useState(!1);
   a.useEffect(() => {
     let e = () => I(!0);
     return f.ComponentDispatch.subscribe(p.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
@@ -57,7 +57,7 @@ function g(e) {
         ...e,
         onClick: T,
         tooltip: a ? null : v,
-        icon: g || C !== p.UserNotificationSettings.ALL_MESSAGES ? d.default : u.default,
+        icon: g || C !== p.UserNotificationSettings.ALL_MESSAGES ? d.default : o.default,
         foreground: g && !n ? S.strikethrough : null,
         "aria-label": v,
         selected: a

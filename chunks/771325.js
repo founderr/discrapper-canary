@@ -13,15 +13,15 @@ n.r(t), n.d(t, {
     return T
   },
   getPreviewDisplayName: function() {
-    return I
+    return C
   },
   isColorDark: function() {
-    return C
+    return I
   }
 });
-var i = n("37983");
+var r = n("37983");
 n("884691");
-var r = n("509043"),
+var i = n("509043"),
   l = n("77078"),
   a = n("336522"),
   s = n("315102"),
@@ -31,21 +31,21 @@ var r = n("509043"),
   d = n("75015"),
   f = n("782340");
 
-function m(e, t, r, a) {
+function m(e, t, i, a) {
   (0, l.openModalLazy)(async () => {
     let {
       default: l
     } = await n.el("420333").then(n.bind(n, "420333"));
-    return n => (0, i.jsx)(l, {
+    return n => (0, r.jsx)(l, {
       filters: a,
       maxFileSizeBytes: c.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
       imageSpecifications: e === d.UploadTypes.BANNER && f.default.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
-      onComplete: (n, i) => (0, u.maybeOpenProfilePreviewModal)({
+      onComplete: (n, r) => (0, u.maybeOpenProfilePreviewModal)({
         imageSrc: n,
-        file: i,
+        file: r,
         uploadType: e,
         guildId: t,
-        isTryItOutFlow: r
+        isTryItOutFlow: i
       }),
       uploadType: e,
       showUpsellHeader: !0,
@@ -64,24 +64,24 @@ function _() {
 }
 
 function E(e, t, n) {
-  let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+  let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
   if (null != e) return e;
   let {
-    size: r = 80,
+    size: i = 80,
     canAnimate: l = !0
-  } = i, a = null === e;
-  return a && null == t ? s.default.getDefaultAvatarURL(n.id, n.discriminator) : a || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, r, l) : n.getAvatarURL(null == t ? void 0 : t.guildId, r, l)
+  } = r, a = null === e;
+  return a && null == t ? s.default.getDefaultAvatarURL(n.id, n.discriminator) : a || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, l) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, l)
 }
 
 function T(e, t) {
   return "" === e ? null : null != e ? e : t
 }
 
-function I(e, t) {
+function C(e, t) {
   return "" === e ? null : null != e ? e : t
 }
 
-function C(e) {
-  let t = null != e ? (0, r.getDarkness)(e) : 1;
+function I(e) {
+  let t = null != e ? (0, i.getDarkness)(e) : 1;
   return t > .25
 }

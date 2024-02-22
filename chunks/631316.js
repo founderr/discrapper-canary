@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var l, a, s = n("37983"),
   i = n("884691"),
   r = n("369470"),
-  u = n.n(r),
-  o = n("974667"),
+  o = n.n(r),
+  u = n("974667"),
   d = n("446674"),
   c = n("233736"),
   f = n("77078"),
@@ -219,7 +219,7 @@ class j extends i.Component {
     } = this.props, {
       preRenderedChildren: n
     } = this.state;
-    return (0, s.jsx)(o.ListNavigatorContainer, {
+    return (0, s.jsx)(u.ListNavigatorContainer, {
       children: l => {
         let {
           ref: a,
@@ -272,13 +272,13 @@ class j extends i.Component {
       if (null == t) return;
       let s = Math.round((t.offsetHeight - 44 * a) / 44),
         r = s > n.length ? n.slice(0, s + 1) : n,
-        u = r.map(e => null != l[e] ? l[e].getRecipientId() : null),
-        o = {
+        o = r.map(e => null != l[e] ? l[e].getRecipientId() : null),
+        u = {
           num_users_visible: r.length,
-          num_users_visible_with_mobile_indicator: u.filter(e => null != e && A.default.isMobileOnline(e)).length
+          num_users_visible_with_mobile_indicator: o.filter(e => null != e && A.default.isMobileOnline(e)).length
         };
       this.hasReportedAnalytics = !0, p.default.trackWithMetadata(O.AnalyticEvents.DM_LIST_VIEWED, {
-        ...o,
+        ...u,
         ...(0, m.getNowPlayingAnalytics)()
       })
     }, this.getSectionHeight = e => {
@@ -286,7 +286,7 @@ class j extends i.Component {
         showDMHeader: t
       } = this.props;
       return 0 === e ? 0 : t ? 40 : 0
-    }, this.handleScroll = u(() => {
+    }, this.handleScroll = o(() => {
       if (null != this._list) {
         let e = this._list.getScrollerNode();
         null != e && h.default.updateChannelListScroll(O.ME, e.scrollTop)
@@ -299,13 +299,13 @@ class j extends i.Component {
       } = this.props, {
         totalRowCount: i,
         preRenderedChildren: r
-      } = this.state, u = n[t], o = l[u];
-      return null == o ? null : (0, s.jsx)(M.default, {
-        channel: o,
-        selected: o.id === a,
+      } = this.state, o = n[t], u = l[o];
+      return null == u ? null : (0, s.jsx)(M.default, {
+        channel: u,
+        selected: u.id === a,
         "aria-posinset": r + t + 1,
         "aria-setsize": i
-      }, o.id)
+      }, u.id)
     }, this.renderChild = e => {
       let {
         nonNullChildren: t,
@@ -360,7 +360,7 @@ var G = e => {
     theme: n,
     children: l,
     showDMHeader: a
-  } = e, r = i.Children.count(l), u = T.default.getMutablePrivateChannels(), c = (0, _.filterOutMessageRequestsAndSpam)(u), f = (0, d.useStateFromStoresArray)([L.default, I.default, S.default], () => {
+  } = e, r = i.Children.count(l), o = T.default.getMutablePrivateChannels(), c = (0, _.filterOutMessageRequestsAndSpam)(o), f = (0, d.useStateFromStoresArray)([L.default, I.default, S.default], () => {
     let e = L.default.getPrivateChannelIds(),
       t = (0, _.filterOutMessageRequestsAndSpamById)(e, [I.default, S.default]);
     return (0, E.filterBroadcastingGDMs)(t)
@@ -396,7 +396,7 @@ var G = e => {
         requestAnimationFrame(() => setTimeout(e, 100))
       }
     })
-  }), []), x = (0, v.useUID)(), R = (0, o.default)({
+  }), []), x = (0, v.useUID)(), R = (0, u.default)({
     id: "private-channels-".concat(x),
     isEnabled: h.keyboardModeEnabled,
     scrollToStart: g,
@@ -404,7 +404,7 @@ var G = e => {
     defaultFocused: (r + (a ? 1 : 0)).toString(),
     setFocus: m
   });
-  return (0, s.jsx)(o.ListNavigatorProvider, {
+  return (0, s.jsx)(u.ListNavigatorProvider, {
     navigator: R,
     children: (0, s.jsx)(j, {
       channels: c,

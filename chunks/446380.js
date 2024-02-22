@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("450911"),
-  o = n("272030"),
+  o = n("450911"),
+  u = n("272030"),
   d = n("667771"),
   c = n("139375"),
   f = n("393414"),
@@ -26,7 +26,7 @@ var l = n("37983"),
 function S(e, t) {
   let n = t.getGuildId();
   if (null == n) throw Error("TextChannel, preloadChannel: Channel does not have a guildId");
-  u.default.preload(n, t.id)
+  o.default.preload(n, t.id)
 }
 class N extends m.default {
   render() {
@@ -37,7 +37,7 @@ class N extends m.default {
       connectChannelDragSource: a,
       connectDragPreview: s,
       canReorderChannel: r
-    } = this.props, u = (0, l.jsx)("li", {
+    } = this.props, o = (0, l.jsx)("li", {
       className: i(this.getClassName(), {
         [_.disabled]: this.isDisabled()
       }),
@@ -57,14 +57,14 @@ class N extends m.default {
         children: [this.renderInviteButton(), this.renderEditButton()]
       })
     });
-    return r ? n(a(u)) : u
+    return r ? n(a(o)) : o
   }
   constructor(...e) {
     super(...e), this.handleContextMenu = e => {
       let {
         channel: t
       } = this.props, a = C.default.getGuild(t.getGuildId());
-      null != a && (0, o.openContextMenuLazy)(e, async () => {
+      null != a && (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("599943").then(n.bind(n, "599943"));

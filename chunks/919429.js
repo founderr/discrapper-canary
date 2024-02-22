@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("446674"),
   r = n("77078"),
-  u = n("450911"),
-  o = n("272030"),
+  o = n("450911"),
+  u = n("272030"),
   d = n("667771"),
   c = n("427953"),
   f = n("575136"),
@@ -57,8 +57,8 @@ class D extends L.default {
       selected: n,
       muted: a,
       unread: i,
-      hasActiveThreads: u,
-      hasMoreActiveThreads: o,
+      hasActiveThreads: o,
+      hasMoreActiveThreads: u,
       mentionCount: d,
       connectChannelDropTarget: c,
       connectChannelDragSource: f,
@@ -78,14 +78,14 @@ class D extends L.default {
         [y.selected]: n
       }),
       "data-dnd-name": e.name,
-      onMouseEnter: o || L ? this.handleMouseEnter : void 0,
-      onMouseLeave: o || L ? this.handleMouseLeave : void 0,
+      onMouseEnter: u || L ? this.handleMouseEnter : void 0,
+      onMouseLeave: u || L ? this.handleMouseLeave : void 0,
       children: (0, l.jsx)(r.Popout, {
         position: "right",
         renderPopout: this.renderPopout,
         spacing: 0,
         onRequestClose: this.handleClosePopout,
-        shouldShow: o && this.state.shouldShowThreadsPopout || L && this.state.shouldShowActivities,
+        shouldShow: u && this.state.shouldShowThreadsPopout || L && this.state.shouldShowActivities,
         children: () => (0, l.jsxs)(x.default, {
           className: y.iconVisibility,
           channel: e,
@@ -94,7 +94,7 @@ class D extends L.default {
           muted: a,
           unread: i,
           mentionCount: d,
-          hasActiveThreads: u,
+          hasActiveThreads: o,
           subtitle: null == v ? void 0 : v.subtitle,
           subtitleColor: null == v ? void 0 : v.color,
           onMouseDown: this.handleMouseDown,
@@ -151,7 +151,7 @@ class D extends L.default {
       let {
         channel: e
       } = this.props, t = e.getGuildId();
-      u.default.preload(null != t ? t : M.ME, e.id)
+      o.default.preload(null != t ? t : M.ME, e.id)
     }, this.renderPopout = e => {
       let {
         channel: t,
@@ -172,7 +172,7 @@ class D extends L.default {
         channel: t
       } = this.props;
       if (t.type === M.ChannelTypes.GROUP_DM) {
-        (0, o.openContextMenuLazy)(e, async () => {
+        (0, u.openContextMenuLazy)(e, async () => {
           let {
             default: e
           } = await n.el("493015").then(n.bind(n, "493015"));
@@ -186,7 +186,7 @@ class D extends L.default {
       }
       if (t.type === M.ChannelTypes.DM) {
         let a = T.default.getUser(t.getRecipientId());
-        null != a && (0, o.openContextMenuLazy)(e, async () => {
+        null != a && (0, u.openContextMenuLazy)(e, async () => {
           let {
             default: e
           } = await n.el("130074").then(n.bind(n, "130074"));
@@ -200,7 +200,7 @@ class D extends L.default {
         return
       }
       let a = I.default.getGuild(t.getGuildId());
-      null != a && (0, o.openContextMenuLazy)(e, async () => {
+      null != a && (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("327241").then(n.bind(n, "327241"));
@@ -222,9 +222,9 @@ function j(e) {
     disableSorting: a,
     isFavoriteCategory: s,
     muted: r,
-    selected: u
+    selected: o
   } = e, {
-    hasActiveThreads: o,
+    hasActiveThreads: u,
     hasMoreActiveThreads: d
   } = (0, E.useHasActiveThreads)(t), h = (0, i.useStateFromStoresObject)([S.default], () => ({
     unread: S.default.hasUnread(t.id),
@@ -245,7 +245,7 @@ function j(e) {
   }, [t]), D = (0, c.useIsActivitiesInTextEnabled)(t.id, "webGuildTextChannel"), j = (0, v.default)({
     channel: t,
     isChannelCollapsed: !1,
-    isChannelSelected: u,
+    isChannelSelected: o,
     isSubscriptionGated: x,
     needSubscriptionToAccess: L,
     isNewChannel: A,
@@ -257,7 +257,7 @@ function j(e) {
     ...h,
     ...I,
     ...e,
-    hasActiveThreads: o,
+    hasActiveThreads: u,
     hasMoreActiveThreads: d,
     isSubscriptionGated: x,
     needSubscriptionToAccess: L,

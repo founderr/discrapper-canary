@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("272030"),
   r = n("851387"),
-  u = n("393027"),
-  o = n("383173"),
+  o = n("393027"),
+  u = n("383173"),
   d = n("952451"),
   c = n("305961"),
   f = n("449008"),
@@ -26,7 +26,7 @@ var l = n("37983"),
       name: g,
       color: I,
       children: _
-    } = t, S = _.map(e => e.id), N = (0, u.default)(e => e.guildId), T = (0, s.useStateFromStores)([o.default], () => o.default.isFolderExpanded(E)), A = function(e) {
+    } = t, S = _.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(E)), A = function(e) {
       let t = e.children.map(e => {
           let t = e.id,
             n = c.default.getGuild(t);

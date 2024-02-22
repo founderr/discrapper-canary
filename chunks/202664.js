@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return P
   }
 });
-var i = n("37983"),
-  r = n("884691"),
+var r = n("37983"),
+  i = n("884691"),
   l = n("414456"),
   a = n.n(l),
   s = n("446674"),
@@ -18,36 +18,36 @@ var i = n("37983"),
   _ = n("843647"),
   E = n("789946"),
   T = n("646718"),
-  I = n("49111"),
-  C = n("527382"),
+  C = n("49111"),
+  I = n("527382"),
   p = n("782340"),
-  P = n("348133");
+  S = n("348133");
 
-function S(e) {
+function P(e) {
   let t, {
       onClose: n,
       fileSize: l,
-      ...S
+      ...P
     } = e,
     R = null != l && T.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < l,
     {
-      isLoading: O,
-      suggestedPremiumType: M
+      isLoading: L,
+      suggestedPremiumType: O
     } = (0, _.default)({
       autoTrackExposure: !R,
       experiment: m.default,
       location: T.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL
     }),
-    L = !R && M === T.PremiumTypes.TIER_0,
+    M = !R && O === T.PremiumTypes.TIER_0,
     g = (0, s.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
-    h = (0, i.jsx)(u.default, {
-      icons: C.DEFAULT_FILE_UPLOAD_ICONS
+    h = (0, r.jsx)(u.default, {
+      icons: I.DEFAULT_FILE_UPLOAD_ICONS
     });
-  t = L ? p.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
+  t = M ? p.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
     premiumPlan: (0, f.getPremiumTypeDisplayName)(T.PremiumTypes.TIER_0),
     premiumMaxSize: p.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED
   }) : p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
-  let x = r.useMemo(() => {
+  let x = i.useMemo(() => {
       let e = f.default.getUserMaxFileSize(g),
         t = (0, d.formatSize)(e / 1024, {
           useKibibytes: !0
@@ -68,18 +68,18 @@ function S(e) {
       }
       return n
     }, [g]),
-    v = (0, i.jsxs)("div", {
-      className: P.body,
-      children: [(0, i.jsx)("span", {
+    v = (0, r.jsxs)("div", {
+      className: S.body,
+      children: [(0, r.jsx)("span", {
         children: x
-      }), (0, i.jsx)(o.Text, {
+      }), (0, r.jsx)(o.Text, {
         variant: "text-md/medium",
         children: t
       })]
     });
-  return (0, i.jsx)(E.default, {
+  return (0, r.jsx)(E.default, {
     artElement: h,
-    artContainerClassName: a(P.artContainer),
+    artContainerClassName: a(S.artContainer),
     enableArtBoxShadow: !1,
     type: T.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
     title: p.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
@@ -89,11 +89,11 @@ function S(e) {
     }),
     glowUp: t,
     analyticsLocation: {
-      section: I.AnalyticsSections.FILE_UPLOAD_POPOUT
+      section: C.AnalyticsSections.FILE_UPLOAD_POPOUT
     },
     onClose: n,
-    subscriptionTier: L ? T.PremiumSubscriptionSKUs.TIER_0 : T.PremiumSubscriptionSKUs.TIER_2,
-    isLoading: O,
-    ...S
+    subscriptionTier: M ? T.PremiumSubscriptionSKUs.TIER_0 : T.PremiumSubscriptionSKUs.TIER_2,
+    isLoading: L,
+    ...P
   })
 }

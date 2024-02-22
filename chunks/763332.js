@@ -21,8 +21,8 @@ var n = s("37983"),
   A = s("324252"),
   C = s("49111"),
   f = s("782340"),
-  S = s("932379"),
-  _ = s("921208");
+  _ = s("932379"),
+  S = s("921208");
 
 function O(e) {
   let {
@@ -32,7 +32,7 @@ function O(e) {
     channelId: P,
     hasReported: h,
     onReport: p
-  } = e, g = (0, u.useStateFromStores)([E.default], () => E.default.isBlocked(O)), [x, m] = a.useState(g), M = (0, T.useShouldShowHelplineLink)(), [j, v] = a.useState(!1), B = (0, I.useLongestChannelMessageBeforeReply)(P, O), L = () => {
+  } = e, g = (0, u.useStateFromStores)([E.default], () => E.default.isBlocked(O)), [x, m] = a.useState(g), M = (0, T.useShouldShowHelplineLink)(), [j, v] = a.useState(!1), L = (0, I.useLongestChannelMessageBeforeReply)(P, O), B = () => {
     m(!0), c.default.addRelationship({
       userId: O,
       context: {
@@ -45,7 +45,7 @@ function O(e) {
       location: "InappropriateConversationModal-web"
     })
   }, y = async () => {
-    null != B && (v(!0), await (0, N.submitReportForInappropriateConversationSafetyAlert)(B, () => {
+    null != L && (v(!0), await (0, N.submitReportForInappropriateConversationSafetyAlert)(L, () => {
       (0, l.showToast)((0, l.createToast)(f.default.Messages.INAPPROPRIATE_CONVERSATION_REPORT_TOAST, l.ToastType.SUCCESS)), p()
     }, () => {
       (0, l.showToast)((0, l.createToast)(f.default.Messages.INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST, l.ToastType.FAILURE))
@@ -53,13 +53,13 @@ function O(e) {
   };
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)("img", {
-      src: _,
+      src: S,
       alt: f.default.Messages.INAPPROPRIATE_CONVERSATION_WUMPUS_LIGHTBULB_ALT,
-      className: S.heroImage
+      className: _.heroImage
     }), (0, n.jsxs)(l.ModalContent, {
-      className: S.body,
+      className: _.body,
       children: [(0, n.jsxs)("div", {
-        className: S.textContainer,
+        className: _.textContainer,
         children: [(0, n.jsx)(l.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
@@ -67,30 +67,30 @@ function O(e) {
         }), (0, n.jsx)(l.Text, {
           variant: "text-md/medium",
           color: "header-secondary",
-          className: S.description,
+          className: _.description,
           children: f.default.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION_DESCRIPTION
         })]
       }), (0, n.jsxs)("div", {
-        className: S.buttonContainer,
+        className: _.buttonContainer,
         children: [(0, n.jsxs)(l.Button, {
           color: l.Button.Colors.BRAND_NEW,
           size: l.Button.Sizes.LARGE,
-          className: S.button,
-          innerClassName: S.buttonInner,
+          className: _.button,
+          innerClassName: _.buttonInner,
           onClick: () => {
-            x ? b() : L()
+            x ? b() : B()
           },
           children: [(0, n.jsx)(r.CircleXIcon, {
             height: 20,
             width: 20,
             color: l.tokens.colors.INTERACTIVE_ACTIVE,
-            className: S.buttonIcon
+            className: _.buttonIcon
           }), x ? f.default.Messages.UNBLOCK : f.default.Messages.BLOCK]
         }), (0, n.jsxs)(l.Button, {
           color: l.Button.Colors.PRIMARY,
           size: l.Button.Sizes.LARGE,
-          className: S.button,
-          innerClassName: S.buttonInner,
+          className: _.button,
+          innerClassName: _.buttonInner,
           onClick: y,
           submitting: j,
           disabled: h,
@@ -98,13 +98,13 @@ function O(e) {
             height: 20,
             width: 20,
             color: l.tokens.colors.INTERACTIVE_ACTIVE,
-            className: S.buttonIcon
+            className: _.buttonIcon
           }), h ? f.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORTED : f.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORT]
         }), (0, n.jsxs)(l.Button, {
           color: l.Button.Colors.PRIMARY,
           size: l.Button.Sizes.LARGE,
-          className: S.button,
-          innerClassName: S.buttonInner,
+          className: _.button,
+          innerClassName: _.buttonInner,
           onClick: () => {
             M ? (0, d.default)(A.CRISIS_TEXT_LINE_URL) : (0, d.default)(A.NOFILTR_URL)
           },
@@ -112,12 +112,12 @@ function O(e) {
             height: 20,
             width: 20,
             color: l.tokens.colors.INTERACTIVE_ACTIVE,
-            className: S.buttonIcon
+            className: _.buttonIcon
           }), M ? f.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL : f.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_NOFILTR]
         })]
       })]
     }), (0, n.jsxs)(l.ModalFooter, {
-      className: S.footer,
+      className: _.footer,
       children: [(0, n.jsx)(l.Button, {
         look: l.Button.Looks.LINK,
         color: l.Button.Colors.TRANSPARENT,

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("907002"),
-  o = n("446674"),
-  u = n("430568"),
+  u = n("446674"),
+  o = n("430568"),
   d = n("206230"),
   c = n("718517"),
   f = n("568088"),
@@ -28,7 +28,7 @@ function g(e) {
   } = e, {
     emoji: c,
     sentAt: g
-  } = n, C = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), [_, I] = a.useState(!0), T = !C, v = (0, r.useTransition)(_, {
+  } = n, C = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), [_, I] = a.useState(!0), T = !C, v = (0, r.useTransition)(_, {
     from: {
       rotate: -120
     },
@@ -64,7 +64,7 @@ function g(e) {
       style: {
         transform: a.to(S)
       },
-      children: (0, l.jsx)(u.default, {
+      children: (0, l.jsx)(o.default, {
         className: i(h.voiceChannelEffectEmoji),
         emojiId: c.id,
         emojiName: c.name,

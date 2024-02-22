@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("446674"),
   r = n("77078"),
-  o = n("308289"),
-  u = n("244201"),
+  u = n("308289"),
+  o = n("244201"),
   d = n("204947"),
   c = n("442939"),
   f = n("207273"),
@@ -43,11 +43,11 @@ var a = n("414456"),
   F = n("434225"),
   k = n("919163");
 
-function V(e) {
+function B(e) {
   let {
     focusedParticipant: t,
     channel: n
-  } = e, a = (0, u.useAppContext)(), s = (0, i.useStateFromStores)([j.default], () => j.default.getLayout(n.id, a));
+  } = e, a = (0, o.useAppContext)(), s = (0, i.useStateFromStores)([j.default], () => j.default.getLayout(n.id, a));
   return (0, l.jsx)(v.default, {
     children: (0, l.jsx)(O.default, {
       className: F.participants,
@@ -60,7 +60,7 @@ function V(e) {
   })
 }
 
-function B(e) {
+function V(e) {
   let {
     user: t,
     channel: n,
@@ -68,7 +68,7 @@ function B(e) {
     color: s
   } = e, i = (0, T.default)(n, t, a);
   return null == t || null == a ? null : (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(o.default, {
+    children: [(0, l.jsx)(u.default, {
       className: F.avatar,
       size: r.AvatarSizes.SIZE_24,
       user: t,
@@ -89,9 +89,9 @@ function H(e) {
       channel: s
     } = e,
     i = (0, L.default)(s, !0),
-    o = (0, p.useActiveEvent)(s.id),
-    u = null != o ? (0, E.getNextRecurrenceIdInEvent)(o) : null,
-    c = null != o;
+    u = (0, p.useActiveEvent)(s.id),
+    o = null != u ? (0, E.getNextRecurrenceIdInEvent)(u) : null,
+    c = null != u;
   if ((null == a ? void 0 : a.type) === b.ParticipantTypes.ACTIVITY) null != n && (t = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(M.default.Divider, {
       className: F.divider
@@ -103,7 +103,7 @@ function H(e) {
       variant: "text-md/normal",
       color: "none",
       children: (0, d.default)(n.name)
-    }), i && (0, l.jsx)(V, {
+    }), i && (0, l.jsx)(B, {
       channel: s,
       focusedParticipant: a
     })]
@@ -114,19 +114,19 @@ function H(e) {
     t = (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(M.default.Divider, {
         className: F.divider
-      }), (0, l.jsx)(B, {
+      }), (0, l.jsx)(V, {
         user: e,
         channel: s,
         stream: n,
         color: i ? "header-primary" : "none"
-      }), i && (0, l.jsx)(V, {
+      }), i && (0, l.jsx)(B, {
         channel: s,
         focusedParticipant: a
       })]
     })
   } else c && (t = (0, l.jsx)(S.default, {
-    guildEvent: o,
-    recurrenceId: u
+    guildEvent: u,
+    recurrenceId: o
   }));
   return (0, l.jsx)("div", {
     className: F.container,
@@ -138,8 +138,8 @@ function G(e) {
   let {
     channel: t,
     guild: a,
-    appContext: o,
-    inCall: u,
+    appContext: u,
+    inCall: o,
     isChatOpen: d,
     exitFullScreen: p
   } = e, {
@@ -150,28 +150,28 @@ function G(e) {
   }), [t.id]), S = (0, h.default)(t), T = (0, m.default)(t), [v] = (0, c.default)((null == E ? void 0 : E.type) === b.ParticipantTypes.ACTIVITY ? [E.id] : []), N = w.default.Messages.VOICE_CHANNEL;
   t.isDM() ? N = w.default.Messages.DM : t.isGroupDM() && (N = w.default.Messages.GROUP_DM);
   let L = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
-    O = t.isGuildVoice() && u && null != L && L.length > 0,
-    V = (0, i.useStateFromStores)([x.default], () => x.default.can(D.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
-    B = O ? (0, l.jsx)(r.Tooltip, {
+    O = t.isGuildVoice() && o && null != L && L.length > 0,
+    B = (0, i.useStateFromStores)([x.default], () => x.default.can(D.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
+    V = O ? (0, l.jsx)(r.Tooltip, {
       text: w.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
       position: "bottom",
-      shouldShow: V,
+      shouldShow: B,
       children: e => (0, l.jsxs)(r.Clickable, {
         ...e,
         className: s(F.channelStatusClickable, {
-          [F.hoverable]: V
+          [F.hoverable]: B
         }),
-        onClick: V ? G : void 0,
+        onClick: B ? G : void 0,
         children: [(0, l.jsx)(r.Text, {
           variant: "text-xs/normal",
           className: s(F.channelStatus, k.markup, {
-            [F.hoverable]: V
+            [F.hoverable]: B
           }),
           children: _.default.parseVoiceChannelStatus(L, !0, {
             channelId: t.id
           })
-        }), V && (0, l.jsx)(A.default, {
+        }), B && (0, l.jsx)(A.default, {
           className: s(F.pencilIcon, F.hoverable),
           width: 14,
           height: 14
@@ -198,12 +198,12 @@ function G(e) {
       onDoubleClick: g.handleDoubleClick,
       transparent: !0,
       className: (0, R.getThemeClass)(U.ThemeTypes.DARK),
-      childrenBottom: B,
+      childrenBottom: V,
       toolbar: (0, l.jsx)(y.default, {
-        inPopout: o === D.AppContext.POPOUT,
+        inPopout: u === D.AppContext.POPOUT,
         channel: t,
-        appContext: o,
-        inCall: u,
+        appContext: u,
+        inCall: o,
         isChatOpen: d,
         exitFullScreen: p
       }),

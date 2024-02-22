@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("77078"),
   i = n("272030"),
   r = n("861370"),
-  o = n("377114"),
-  u = n("907566"),
+  u = n("377114"),
+  o = n("907566"),
   d = n("71102"),
   c = n("187163"),
   f = n("782340");
@@ -86,9 +86,9 @@ function h(e) {
           id: "report-server-listing",
           label: f.default.Messages.REPORT_SERVER_NO_NAME,
           action: function() {
-            null != t && ((0, o.showReportModalForGuildDirectoryEntry)(t), T())
+            null != t && ((0, u.showReportModalForGuildDirectoryEntry)(t), T())
           },
-          icon: u.default,
+          icon: o.default,
           color: "danger"
         })
       })]

@@ -9,9 +9,9 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n.n(r),
-  u = n("866227"),
-  d = n.n(u),
+  u = n.n(r),
+  o = n("866227"),
+  d = n.n(o),
   c = n("394846"),
   f = n("249654"),
   h = n("446674"),
@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("27618"),
   F = n("102985"),
   k = n("697218"),
-  V = n("145131"),
-  B = n("476765"),
+  B = n("145131"),
+  V = n("476765"),
   H = n("570443"),
   G = n("76539"),
   W = n("664336"),
@@ -58,18 +58,18 @@ var l = n("37983"),
   ee = n("366160"),
   et = n("182893"),
   en = n("890957");
-let el = (0, B.uid)(),
-  ea = (0, B.uid)();
+let el = (0, V.uid)(),
+  ea = (0, V.uid)();
 
 function es(e) {
   let {
     className: t,
     children: n
   } = e;
-  return (0, l.jsxs)(V.default, {
-    align: V.default.Align.CENTER,
-    justify: V.default.Justify.CENTER,
-    direction: V.default.Direction.VERTICAL,
+  return (0, l.jsxs)(B.default, {
+    align: B.default.Align.CENTER,
+    justify: B.default.Justify.CENTER,
+    direction: B.default.Direction.VERTICAL,
     className: i(ee.errorState, t),
     children: [(0, l.jsx)("div", {
       className: i(ee.errorStateIcon, en.marginBottom20)
@@ -138,7 +138,7 @@ let ei = e => {
       })]
     })
   };
-class eo extends a.PureComponent {
+class eu extends a.PureComponent {
   componentDidMount() {
     let {
       channel: e
@@ -263,11 +263,11 @@ class eo extends a.PureComponent {
       selectedUsers: r
     } = this.props;
     if (!n || this.isNotFriends()) return null;
-    let o = [];
+    let u = [];
     return r.forEach(e => {
       let t = k.default.getUser(e);
-      null != t && o.push(X.default.getName(t))
-    }), (0, l.jsxs)(V.default, {
+      null != t && u.push(X.default.getName(t))
+    }), (0, l.jsxs)(B.default, {
       className: i(ee.searchBar, en.marginTop20),
       children: [(0, l.jsx)(v.default, {
         ref: this.searchBarRef,
@@ -279,7 +279,7 @@ class eo extends a.PureComponent {
         query: t,
         selectedRow: s,
         sections: [null !== (e = null == a ? void 0 : a.length) && void 0 !== e ? e : 0],
-        tags: o,
+        tags: u,
         onSelect: this.handleSelect,
         onSelectionChange: this.handleSelectionChange,
         onQueryChange: this.handleQueryChange,
@@ -297,8 +297,8 @@ class eo extends a.PureComponent {
     let e = null != this.scrollerRef.current && this.state.separator,
       t = this.isNotFriends() ? $.default.Messages.GROUP_DM_ADD_FRIENDS : $.default.Messages.GROUP_DM_HEADER;
     return (0, l.jsxs)(m.ModalHeader, {
-      direction: V.default.Direction.VERTICAL,
-      align: V.default.Align.STRETCH,
+      direction: B.default.Direction.VERTICAL,
+      align: B.default.Align.STRETCH,
       className: ee.header,
       separator: e,
       children: [c.isMobile ? this.renderMobileCloseButton() : null, (0, l.jsx)(m.Heading, {
@@ -399,12 +399,12 @@ class eo extends a.PureComponent {
         tag: "h5",
         className: en.marginBottom8,
         children: $.default.Messages.GROUP_DM_INVITE_LINK_TITLE
-      }), (0, l.jsxs)(V.default, {
+      }), (0, l.jsxs)(B.default, {
         className: i(et.input, {
           [et.success]: s
         }),
-        justify: V.default.Justify.BETWEEN,
-        align: V.default.Align.CENTER,
+        justify: B.default.Justify.BETWEEN,
+        align: B.default.Align.CENTER,
         children: [r.length > 0 ? (0, l.jsx)(m.TextInput, {
           className: ee.copyInput,
           name: "invite",
@@ -454,8 +454,8 @@ class eo extends a.PureComponent {
     if (null != n) return (0, l.jsxs)(a.Fragment, {
       children: [(0, l.jsx)("div", {
         className: ee.footerSeparator
-      }), (0, l.jsx)(V.default, {
-        direction: V.default.Direction.VERTICAL,
+      }), (0, l.jsx)(B.default, {
+        direction: B.default.Direction.VERTICAL,
         className: ee.footer,
         children: n
       })]
@@ -525,15 +525,15 @@ class eo extends a.PureComponent {
         selectedUsers: s,
         selectedRow: i,
         hideDiscriminator: r
-      } = this.props, o = a[n];
-      if (null == o) return null;
+      } = this.props, u = a[n];
+      if (null == u) return null;
       let {
-        user: u,
+        user: o,
         comparator: d
-      } = o, c = s.has(u.id);
+      } = u, c = s.has(o.id);
       return (0, l.jsx)(q.default, {
         row: n,
-        user: u,
+        user: o,
         hideDiscriminator: r,
         comparator: d,
         checked: c,
@@ -542,7 +542,7 @@ class eo extends a.PureComponent {
         onMouseEnter: this.focusResult,
         "aria-posinset": n + 1,
         "aria-setsize": a.length
-      }, u.id)
+      }, o.id)
     }, this.forceFocus = () => {
       let e = this.searchBarRef.current;
       null == e || e.focus()
@@ -640,8 +640,8 @@ class eo extends a.PureComponent {
     }
   }
 }
-eo.contextType = x.default;
-let eu = h.default.connectStores([b.default, P.default, F.default], e => {
+eu.contextType = x.default;
+let eo = h.default.connectStores([b.default, P.default, F.default], e => {
   let t, {
     channel: n
   } = e;
@@ -651,7 +651,7 @@ let eu = h.default.connectStores([b.default, P.default, F.default], e => {
     hideDiscriminator: F.default.hidePersonalInformation,
     hideInstantInvites: F.default.hideInstantInvites
   }
-})(eo);
+})(eu);
 
 function ed(e) {
   let {
@@ -660,21 +660,21 @@ function ed(e) {
     icon: s,
     tooltip: i,
     tooltipPosition: r = "bottom",
-    popoutPosition: o = "bottom",
-    popoutAlign: u = "right",
+    popoutPosition: u = "bottom",
+    popoutAlign: o = "right",
     subscribeToGlobalHotkey: d = !1
   } = e, [c, f] = a.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), h = (0, A.useIsBroadcastingGDM)(null == t ? void 0 : t.id), p = a.useCallback(() => f(e => !e), []);
   return (a.useEffect(() => (d && K.ComponentDispatch.subscribe(J.ComponentActions.TOGGLE_DM_CREATE, p), () => {
     K.ComponentDispatch.unsubscribe(J.ComponentActions.TOGGLE_DM_CREATE, p)
   }), [d, p]), h) ? null : (0, l.jsx)(m.Popout, {
-    renderPopout: e => (0, l.jsx)(eu, {
+    renderPopout: e => (0, l.jsx)(eo, {
       ...e,
       onClose: e.closePopout,
       channel: t
     }),
-    position: o,
+    position: u,
     shouldShow: c,
-    align: u,
+    align: o,
     onRequestClose: () => f(!1),
     animation: m.Popout.Animation.NONE,
     children: e => (0, l.jsx)(W.default.Icon, {
@@ -691,7 +691,7 @@ function ed(e) {
 
 function ec(e) {
   let t = ef(e);
-  return new Set(o(O.default.getMutablePrivateChannels()).values().filter(e => (0, y.isMultiUserDM)(e.type)).filter(e => ef(e.recipients) === t).map(e => e.id).value())
+  return new Set(u(O.default.getMutablePrivateChannels()).values().filter(e => (0, y.isMultiUserDM)(e.type)).filter(e => ef(e.recipients) === t).map(e => e.id).value())
 }
 
 function ef(e) {

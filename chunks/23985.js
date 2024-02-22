@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return p
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  i = s("414456"),
-  r = s.n(i),
+  i = s("884691"),
+  n = s("414456"),
+  r = s.n(n),
   l = s("446674"),
   o = s("1017"),
   u = s("102985"),
@@ -21,7 +21,7 @@ var a = s("37983"),
   S = s("697092"),
   R = s("782340"),
   m = s("250244");
-class A extends n.Component {
+class A extends i.Component {
   renderReasons(e, t, s) {
     return 0 === e.length && 0 === t.length ? null : (0, a.jsx)("div", {
       className: m.section,
@@ -56,24 +56,24 @@ class A extends n.Component {
       socialReasons: e,
       nonSocialReasons: t,
       storeListing: s,
-      hidePersonalInformation: n,
-      className: i
+      hidePersonalInformation: i,
+      className: n
     } = this.props;
     if (0 === e.length && 0 === t.length && null == s.staffNotes) return null;
     let l = this.getReviewToRender();
     return (0, a.jsxs)("div", {
-      className: r(m.root, i),
+      className: r(m.root, n),
       children: [(0, a.jsx)("div", {
         className: m.header,
         children: R.default.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
-      }), this.renderReasons(e, t, n), null != l ? (0, a.jsx)(S.default, {
+      }), this.renderReasons(e, t, i), null != l ? (0, a.jsx)(S.default, {
         data: l,
         className: m.review
       }) : null]
     })
   }
 }
-var N = l.default.connectStores([_.default, d.default, E.default, o.default, c.default, u.default], e => {
+var p = l.default.connectStores([_.default, d.default, E.default, o.default, c.default, u.default], e => {
   let {
     sku: t
   } = e;

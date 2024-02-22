@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n("446674"),
-  u = n("255397"),
+  u = n("446674"),
+  o = n("255397"),
   d = n("191145"),
   c = n("660478"),
   f = n("18494"),
@@ -23,12 +23,12 @@ var l = n("37983"),
   C = n("782340");
 
 function _(e) {
-  let t = (0, o.useStateFromStores)([h.default], () => !(0, r.isEmpty)(h.default.getTypingUsers(e)), [e]),
-    n = (0, o.useStateFromStores)([f.default], () => f.default.getVoiceChannelId() === e, [e]),
+  let t = (0, u.useStateFromStores)([h.default], () => !(0, r.isEmpty)(h.default.getTypingUsers(e)), [e]),
+    n = (0, u.useStateFromStores)([f.default], () => f.default.getVoiceChannelId() === e, [e]),
     {
       unreadCount: l,
       mentionCount: a
-    } = (0, o.useStateFromStoresObject)([c.default], () => ({
+    } = (0, u.useStateFromStoresObject)([c.default], () => ({
       unreadCount: c.default.getUnreadCount(e),
       mentionCount: c.default.getMentionCount(e)
     }), [e]);
@@ -74,7 +74,7 @@ function T(e) {
       disabled: v
     } = T,
     x = a.useRef(null),
-    N = (0, o.useStateFromStores)([d.default], () => d.default.getChatOpen(n), [n]),
+    N = (0, u.useStateFromStores)([d.default], () => d.default.getChatOpen(n), [n]),
     {
       isShowing: A,
       unreadCount: M,
@@ -100,7 +100,7 @@ function T(e) {
       }
     }(n),
     j = a.useCallback(() => {
-      null == c || c(), !N && h && (null == E || E()), u.default.updateChatOpen(n, !N)
+      null == c || c(), !N && h && (null == E || E()), o.default.updateChatOpen(n, !N)
     }, [n, N, c, h, E]),
     L = a.useCallback(e => {
       let {

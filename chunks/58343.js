@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n("446674"),
-  u = n("95410"),
+  u = n("446674"),
+  o = n("95410"),
   d = n("77078"),
   c = n("913144"),
   f = n("731898"),
@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("998716"),
   F = n("834052"),
   k = n("534471"),
-  V = n("145635"),
-  B = n("277354"),
+  B = n("145635"),
+  V = n("277354"),
   H = n("100082"),
   G = n("598050"),
   W = n("977026"),
@@ -72,8 +72,8 @@ function en(e) {
     popoutOpen: s,
     popoutWindow: i,
     popoutWindowAlwaysOnTop: r,
-    selectedParticipant: u
-  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([y.default], () => y.default.getMostRecentSelectedTextChannelId(d), [d]), f = M.default.getId(), h = (0, o.useStateFromStores)([m.default], () => m.default.isFullscreenInContext(n)), E = !h && (!O.isPlatformEmbedded || O.isPlatformEmbedded && b.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS)), S = null != u && u.type !== X.ParticipantTypes.ACTIVITY && u.user.id !== f, g = a.useMemo(() => {
+    selectedParticipant: o
+  } = e, d = t.getGuildId(), c = (0, u.useStateFromStores)([y.default], () => y.default.getMostRecentSelectedTextChannelId(d), [d]), f = M.default.getId(), h = (0, u.useStateFromStores)([m.default], () => m.default.isFullscreenInContext(n)), E = !h && (!O.isPlatformEmbedded || O.isPlatformEmbedded && b.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS)), S = null != o && o.type !== X.ParticipantTypes.ACTIVITY && o.user.id !== f, g = a.useMemo(() => {
     var e;
     return null !== (e = null == i ? void 0 : i.window) && void 0 !== e ? e : window
   }, [i]), C = (0, z.default)({
@@ -85,8 +85,8 @@ function en(e) {
   }), _ = n === Z.AppContext.POPOUT && O.isPlatformEmbedded && b.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS);
   return (0, l.jsxs)(l.Fragment, {
     children: [S ? (0, l.jsx)(A.default, {
-      context: (0, p.default)(u.type),
-      userId: u.user.id,
+      context: (0, p.default)(o.type),
+      userId: o.user.id,
       currentWindow: g,
       sliderClassName: q.volumeSlider
     }) : null, _ ? (0, l.jsx)(N.default, {
@@ -105,7 +105,7 @@ function en(e) {
 function el(e) {
   let {
     channel: t
-  } = e, n = (0, h.useAppContext)(), a = (0, o.useStateFromStores)([L.default], () => L.default.can(Z.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, o.useStateFromStores)([j.default], () => j.default.getGuild(t.guild_id)), i = (0, o.useStateFromStores)([F.default], () => F.default.getStageInstanceByChannel(t.id)), r = a || (null == i ? void 0 : i.invite_code) != null;
+  } = e, n = (0, h.useAppContext)(), a = (0, u.useStateFromStores)([L.default], () => L.default.can(Z.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, u.useStateFromStores)([j.default], () => j.default.getGuild(t.guild_id)), i = (0, u.useStateFromStores)([F.default], () => F.default.getStageInstanceByChannel(t.id)), r = a || (null == i ? void 0 : i.invite_code) != null;
   return null != s && r ? (0, l.jsx)(I.default, {
     channel: t,
     appContext: n,
@@ -118,24 +118,24 @@ function ea(e) {
   let t, {
       channel: n,
       toggleRequestToSpeakSidebar: s,
-      showRequestToSpeakSidebar: u,
+      showRequestToSpeakSidebar: o,
       popoutWindow: d,
       popoutWindowAlwaysOnTop: c,
       popoutOpen: f,
       chatOpen: p
     } = e,
     S = (0, h.useAppContext)(),
-    g = (0, o.useStateFromStores)([y.default], () => y.default.getVoiceChannelId() === n.id, [n.id]),
-    C = (0, o.useStateFromStores)([L.default], () => L.default.can(Z.Permissions.CONNECT, n)),
+    g = (0, u.useStateFromStores)([y.default], () => y.default.getVoiceChannelId() === n.id, [n.id]),
+    C = (0, u.useStateFromStores)([L.default], () => L.default.can(Z.Permissions.CONNECT, n)),
     _ = (0, U.useStageParticipants)(n.id, w.StageChannelParticipantNamedIndex.SPEAKER),
-    I = (0, o.useStateFromStores)([m.default], () => m.default.getSelectedParticipant(n.id)),
+    I = (0, u.useStateFromStores)([m.default], () => m.default.getSelectedParticipant(n.id)),
     x = f && S !== Z.AppContext.POPOUT,
     [N, A] = a.useState(0),
     {
       isOnStartStageScreen: M
     } = (0, k.default)();
   (0, k.useUpdateIsOnStartStageScreenEffect)(n);
-  let j = (0, o.useStateFromStores)([R.default], () => R.default.getToastsEnabled(n.id)),
+  let j = (0, u.useStateFromStores)([R.default], () => R.default.getToastsEnabled(n.id)),
     O = (0, K.default)(n),
     P = O ? null != I ? "84px" : "124px" : null != I ? "0px" : "48px";
   return t = M ? (0, l.jsx)(Y.default, {
@@ -153,7 +153,7 @@ function ea(e) {
         leading: !0
       })()
     }
-  }) : (0, l.jsx)(B.default, {
+  }) : (0, l.jsx)(V.default, {
     participants: _,
     channel: n,
     hasConnectPermission: C
@@ -181,13 +181,13 @@ function ea(e) {
     renderHeader: () => (0, l.jsx)(H.default, {
       inPopout: S === Z.AppContext.POPOUT,
       toggleRequestToSpeakSidebar: s,
-      showRequestToSpeakSidebar: u,
+      showRequestToSpeakSidebar: o,
       channel: n
     }),
     renderChatToasts: () => !j || p || x ? null : (0, l.jsx)(E.default, {
       children: (0, l.jsx)(T.default, {
         className: i(q.chatToasts, {
-          [q.rtsSidebarOpen]: u
+          [q.rtsSidebarOpen]: o
         }),
         channelId: n.id
       })
@@ -212,19 +212,19 @@ function es(e) {
   }, [s, r]), {
     popoutWindow: p,
     popoutWindowAlwaysOnTop: g
-  } = (0, o.useStateFromStoresObject)([C.default], () => ({
+  } = (0, u.useStateFromStoresObject)([C.default], () => ({
     popoutWindow: C.default.getWindow(Z.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     popoutWindowAlwaysOnTop: C.default.getIsAlwaysOnTop(Z.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
-  })), _ = null != p && !p.closed, I = (0, h.useAppContext)(), T = (0, o.useStateFromStores)([m.default], () => m.default.getChatOpen(t.id), [t.id]), v = (0, o.useStateFromStores)([j.default], () => j.default.getGuild(t.guild_id), [t.guild_id]);
+  })), _ = null != p && !p.closed, I = (0, h.useAppContext)(), T = (0, u.useStateFromStores)([m.default], () => m.default.getChatOpen(t.id), [t.id]), v = (0, u.useStateFromStores)([j.default], () => j.default.getGuild(t.guild_id), [t.guild_id]);
   a.useEffect(() => {
-    null == u.default.get(J) && ((0, d.openModalLazy)(async () => {
+    null == o.default.get(J) && ((0, d.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("108838").then(n.bind(n, "108838"));
       return t => (0, l.jsx)(e, {
         ...t
       })
-    }), u.default.set(J, Date.now()))
+    }), o.default.set(J, Date.now()))
   }, []);
   let {
     width: x = 0,
@@ -248,7 +248,7 @@ function es(e) {
           popoutOpen: _,
           chatOpen: T
         })
-      }), s ? (0, l.jsx)(V.default, {
+      }), s ? (0, l.jsx)(B.default, {
         channel: t,
         toggleRequestToSpeakSidebar: c,
         chatOpen: T

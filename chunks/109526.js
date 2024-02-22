@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("669491"),
   i = n("77078"),
   r = n("817963"),
-  o = n("42203"),
-  u = n("943232"),
+  u = n("42203"),
+  o = n("943232"),
   d = n("374021"),
   c = n("398604"),
   f = n("534222"),
@@ -23,12 +23,12 @@ var a = n("446674"),
 function S(e) {
   let {
     channelId: t
-  } = e, S = (0, a.useStateFromStores)([o.default], () => o.default.getChannel(t), [t]), g = (0, f.useImminentUpcomingGuildEvents)(t), C = null != (0, f.useActiveEvent)(t), {
+  } = e, S = (0, a.useStateFromStores)([u.default], () => u.default.getChannel(t), [t]), g = (0, f.useImminentUpcomingGuildEvents)(t), C = null != (0, f.useActiveEvent)(t), {
     canManageGuildEvent: _
   } = (0, r.useManageResourcePermissions)(S), I = (0, a.useStateFromStoresObject)([c.default], () => g.reduce((e, t) => (e[t.id] = c.default.getUserCount(t.id, (0, h.getNextRecurrenceIdInEvent)(t)), e), {}));
   return g.length < 1 || C ? null : (0, l.jsx)(l.Fragment, {
     children: g.map(e => (0, l.jsx)(m.default, {
-      icon: (0, l.jsx)(u.default, {
+      icon: (0, l.jsx)(o.default, {
         height: 20,
         width: 20
       }),

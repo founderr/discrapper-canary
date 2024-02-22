@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var l, a, s = n("917351"),
   i = n.n(s),
   r = n("446674"),
-  u = n("913144"),
-  o = n("615387"),
+  o = n("913144"),
+  u = n("615387"),
   d = n("488464"),
   c = n("998716"),
   f = n("755624"),
@@ -41,7 +41,7 @@ function v(e) {
   let t = h.default.getChannel(e);
   if (null == t || null == t.getGuildId() || t.isGuildVocal()) return !1;
   let n = t.isThread() ? f.default.isMuted(t.id) : E.default.isChannelMuted(t.getGuildId(), t.id);
-  return !n && (0, o.getHasImportantUnread)(t)
+  return !n && (0, u.getHasImportantUnread)(t)
 }
 
 function x(e) {
@@ -65,8 +65,8 @@ function M(e) {
   } = _.default.getGuildWithoutChangingCommunityRows(e), s = a.getChannels(null !== (t = L[e]) && void 0 !== t ? t : []);
   if (null == s || 0 === s.length) return !1;
   let r = null,
-    u = null,
     o = null,
+    u = null,
     d = null,
     c = !0,
     f = !0,
@@ -85,13 +85,13 @@ function M(e) {
   if (f || c)
     for (let e = E.length - 1; e >= 0; e--) {
       let t = E[e];
-      (v(t.id) || i.some(t.threadIds, v)) && (null == u && (u = t.id), T = !0), (x(t.id) || i.some(t.threadIds, x)) && (null == r && (r = t.id), S += p.default.getMentionCount(t.id) + i.sumBy(t.threadIds, p.default.getMentionCount))
+      (v(t.id) || i.some(t.threadIds, v)) && (null == o && (o = t.id), T = !0), (x(t.id) || i.some(t.threadIds, x)) && (null == r && (r = t.id), S += p.default.getMentionCount(t.id) + i.sumBy(t.threadIds, p.default.getMentionCount))
     }
   if (f || c)
     for (let e = 0; e < I.length; e++) {
       let t = I[e];
       if (!f && !c) break;
-      (v(t.id) || i.some(t.threadIds, v)) && (null == d && (d = t.id), O = !0), (x(t.id) || i.some(t.threadIds, x)) && (null == o && (o = t.id), M += p.default.getMentionCount(t.id) + i.sumBy(t.threadIds, p.default.getMentionCount))
+      (v(t.id) || i.some(t.threadIds, v)) && (null == d && (d = t.id), O = !0), (x(t.id) || i.some(t.threadIds, x)) && (null == u && (u = t.id), M += p.default.getMentionCount(t.id) + i.sumBy(t.threadIds, p.default.getMentionCount))
     }
   let y = null,
     D = null,
@@ -99,7 +99,7 @@ function M(e) {
   c && M > 0 ? y = {
     mode: "mentions",
     mentionCount: M,
-    targetChannelId: o
+    targetChannelId: u
   } : !h && i.some(b, R) ? y = {
     mode: "voice-channels",
     mentionCount: 0,
@@ -115,7 +115,7 @@ function M(e) {
   } : f && T && (D = {
     mode: "unread",
     mentionCount: 0,
-    targetChannelId: u
+    targetChannelId: o
   });
   let j = null != D && (null == y || "mentions" !== y.mode && "mentions" === D.mode),
     G = null != y && ("mentions" === y.mode || !j);
@@ -176,7 +176,7 @@ class U extends r.default.Store {
   }
 }
 U.displayName = "ChannelListUnreadsStore";
-var P = new U(u.default, {
+var P = new U(o.default, {
   UPDATE_CHANNEL_LIST_DIMENSIONS: function(e) {
     let {
       guildId: t,

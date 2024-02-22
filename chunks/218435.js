@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  i = s.n(n),
+var i = s("414456"),
+  n = s.n(i),
   r = s("819855"),
   l = s("77078"),
   o = s("841098"),
@@ -19,7 +19,7 @@ var n = s("414456"),
     let {
       className: t,
       forceWhite: s,
-      giftMessage: n,
+      giftMessage: i,
       subscriptionTier: E,
       ...I
     } = e, T = (0, o.default)(), f = (0, r.isThemeDark)(T) || s, S = f ? l.ButtonColors.WHITE : l.ButtonColors.BRAND, R = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
@@ -29,8 +29,8 @@ var n = s("414456"),
       look: l.ButtonLooks.OUTLINED,
       hover: l.ButtonHovers.BRAND,
       buttonText: R,
-      giftMessage: n,
-      className: i(t, f ? _.buttonWhite : _.buttonBrand),
+      giftMessage: i,
+      className: n(t, f ? _.buttonWhite : _.buttonBrand),
       subscriptionTier: E,
       ...I
     })

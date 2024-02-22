@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return m
   }
 }), n("222007");
-var i = n("884691"),
-  r = n("446674"),
+var r = n("884691"),
+  i = n("446674"),
   l = n("862337"),
   a = n("697218"),
   s = n("340412"),
@@ -22,24 +22,24 @@ function c(e) {
 function d(e, t) {
   var n;
   if (null == e) return !1;
-  let i = new Set(null === (n = e.discount) || void 0 === n ? void 0 : n.plan_ids.map(e => u.SubscriptionPlanInfo[e].skuId));
-  return i.has(t)
+  let r = new Set(null === (n = e.discount) || void 0 === n ? void 0 : n.plan_ids.map(e => u.SubscriptionPlanInfo[e].skuId));
+  return r.has(t)
 }
 
 function f(e) {
-  let t = (0, r.useStateFromStores)([s.default], () => s.default.getUserDiscountOffer(e)),
-    [n, u] = i.useState(c(t)),
-    d = (0, r.useStateFromStores)([a.default], () => (0, o.isPremium)(a.default.getCurrentUser()));
-  return i.useEffect(() => {
+  let t = (0, i.useStateFromStores)([s.default], () => s.default.getUserDiscountOffer(e)),
+    [n, u] = r.useState(c(t)),
+    d = (0, i.useStateFromStores)([a.default], () => (0, o.isPremium)(a.default.getCurrentUser()));
+  return r.useEffect(() => {
     if (null == t || null == t.expires_at) return;
     let e = new l.Timeout,
-      i = () => {
-        let r = null != t.expires_at ? Date.parse(t.expires_at) - Date.now() : 0;
-        null == e || e.start(r, () => {
-          !n && c(t) ? u(!0) : i()
+      r = () => {
+        let i = null != t.expires_at ? Date.parse(t.expires_at) - Date.now() : 0;
+        null == e || e.start(i, () => {
+          !n && c(t) ? u(!0) : r()
         })
       };
-    return i(), () => e.stop()
+    return r(), () => e.stop()
   }, [n, t]), n || d ? null : t
 }
 

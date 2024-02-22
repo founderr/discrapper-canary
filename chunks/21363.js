@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("65597"),
-  o = n("77078"),
-  u = n("178406"),
+  u = n("77078"),
+  o = n("178406"),
   d = n("553275"),
   c = n("412013"),
   f = n("305961"),
@@ -32,15 +32,15 @@ function C(e) {
       var n, a, s, i;
       return null !== (i = null !== (s = null === (n = l[t]) || void 0 === n ? void 0 : n.position) && void 0 !== s ? s : 0 - (null === (a = l[e]) || void 0 === a ? void 0 : a.position)) && void 0 !== i ? i : 0
     })
-  }, [t.roles, t.highestRoleId, n]), C = (0, r.default)([u.default], () => u.default.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]), _ = (0, d.useHighestRole)(C), I = (0, d.useContextMenuModerateRoles)(t), T = (0, r.default)([h.default], () => h.default.can(E.Permissions.MANAGE_ROLES, n), [n]);
-  return null == n ? null : (0, l.jsx)(o.FormItem, {
+  }, [t.roles, t.highestRoleId, n]), C = (0, r.default)([o.default], () => o.default.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]), _ = (0, d.useHighestRole)(C), I = (0, d.useContextMenuModerateRoles)(t), T = (0, r.default)([h.default], () => h.default.can(E.Permissions.MANAGE_ROLES, n), [n]);
+  return null == n ? null : (0, l.jsx)(u.FormItem, {
     title: S.default.Messages.ROLES,
     titleClassName: g.infoTitle,
     children: (0, l.jsx)(p.UserModInfoItemContainer, {
       children: (0, l.jsx)(p.UserModInfoItem, {
         description: (0, l.jsxs)("div", {
           className: g.roleContainer,
-          children: [(0, l.jsx)(o.Tooltip, {
+          children: [(0, l.jsx)(u.Tooltip, {
             "aria-label": S.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
             tooltipContentClassName: g.permissionTooltip,
             allowOverflow: !0,
@@ -50,7 +50,7 @@ function C(e) {
                 onMouseEnter: n,
                 onMouseLeave: a
               } = e;
-              return (0, l.jsx)(o.Clickable, {
+              return (0, l.jsx)(u.Clickable, {
                 onMouseEnter: n,
                 onMouseLeave: a,
                 children: (0, l.jsx)(c.default, {
@@ -64,7 +64,7 @@ function C(e) {
             className: i(g.roleTooltipItem),
             role: n.roles[e],
             guildId: t.guildId
-          }, e)), T && (0, l.jsx)(o.Tooltip, {
+          }, e)), T && (0, l.jsx)(u.Tooltip, {
             "aria-label": S.default.Messages.ADD_ROLE_A11Y_LABEL,
             tooltipContentClassName: g.permissionTooltip,
             allowOverflow: !0,
@@ -74,7 +74,7 @@ function C(e) {
                 onMouseEnter: t,
                 onMouseLeave: n
               } = e;
-              return (0, l.jsx)(o.Clickable, {
+              return (0, l.jsx)(u.Clickable, {
                 className: i(g.addRoleContainer),
                 onClick: I,
                 onMouseEnter: t,

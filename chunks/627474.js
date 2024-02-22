@@ -55,18 +55,18 @@ var f = e => {
     autoTrackExposure: !1
   });
   (0, d.useClearNewBadge)();
-  let P = s === _.PerksDiscoverabilityVariants.WHATS_NEW;
+  let C = s === _.PerksDiscoverabilityVariants.WHATS_NEW;
   i.useEffect(() => {
     let e = A.current;
-    if (null == e || !p || !P) return;
+    if (null == e || !p || !C) return;
     let t = requestAnimationFrame(() => {
       e.scrollIntoView({
         behavior: "smooth"
       })
     });
     return () => cancelAnimationFrame(t)
-  }, [A, p, P]);
-  let C = (0, _.usePerksDiscoverabilityStrings)(P),
+  }, [A, p, C]);
+  let P = (0, _.usePerksDiscoverabilityStrings)(C),
     O = (0, c.default)(),
     M = (0, _.getFilteredPerksDiscoverabilityCards)(O, s, N, m),
     h = M.some(e => null != e.pillText);
@@ -79,7 +79,7 @@ var f = e => {
     children: [(0, a.jsx)(T, {
       showAllPerksButton: S,
       leftAlignHeaders: f,
-      title: C.title,
+      title: P.title,
       headerClassname: R
     }), !g && (0, a.jsx)(l.Text, {
       variant: "text-lg/normal",
@@ -87,12 +87,12 @@ var f = e => {
       className: r(I.subtitle, {
         [I.subtitle]: null == S || f,
         [I.subtitleWithButton]: null != S && !f,
-        [I.fullWidth]: P || f,
+        [I.fullWidth]: C || f,
         [I.moreSubtitleMargin]: h,
         [I.leftAlignSubtitle]: f,
         [I.centerAlignSubtitle]: !f
       }),
-      children: C.subtitle
+      children: P.subtitle
     }), !f && null != S && (0, a.jsx)("div", {
       className: r(I.showAllPerksButtonCenter),
       children: S

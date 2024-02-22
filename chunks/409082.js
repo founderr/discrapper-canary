@@ -27,8 +27,8 @@ var l = n("37983"),
   s = n("77078"),
   i = n("843962"),
   r = n("679653"),
-  u = n("419830"),
-  o = n("222481"),
+  o = n("419830"),
+  u = n("222481"),
   d = n("361572"),
   c = n("305961"),
   f = n("27618"),
@@ -188,9 +188,9 @@ class v extends a.Component {
     var e;
     let {
       channel: t
-    } = this.props, n = (0, u.getChannelIconComponent)(t);
+    } = this.props, n = (0, o.getChannelIconComponent)(t);
     if (null == n) return null;
-    let a = null !== (e = (0, o.default)(t)) && void 0 !== e ? e : "";
+    let a = null !== (e = (0, u.default)(t)) && void 0 !== e ? e : "";
     return (0, l.jsx)("div", {
       className: T.iconContainer,
       role: "img",
@@ -261,7 +261,7 @@ class v extends a.Component {
     var e;
     let {
       channel: t
-    } = this.props, n = null === (e = c.default.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name, l = (0, r.computeChannelName)(t, h.default, f.default), a = (0, o.default)(t);
+    } = this.props, n = null === (e = c.default.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name, l = (0, r.computeChannelName)(t, h.default, f.default), a = (0, u.default)(t);
     return N.default.Messages.QUICK_SWITCHER_RESULTS_CHANNEL_LABEL.format({
       name: l,
       type: a,

@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("77078"),
   r = n("673527"),
-  o = n("821391"),
-  u = n("782340"),
+  u = n("821391"),
+  o = n("782340"),
   d = n("532351");
 
 function c(e) {
@@ -34,12 +34,12 @@ function c(e) {
         className: d.streamUnavailableText,
         color: "always-white",
         variant: n ? "text-sm/semibold" : "text-md/semibold",
-        children: c ? u.default.Messages.CONSOLE_STREAMING : u.default.Messages.CONSOLE_STREAM_UNAVAILABLE
+        children: c ? o.default.Messages.CONSOLE_STREAMING : o.default.Messages.CONSOLE_STREAM_UNAVAILABLE
       }), (0, l.jsx)(i.TooltipContainer, {
-        text: c ? u.default.Messages.CONSOLE_STREAMING_TOOLTIP : u.default.Messages.CONSOLE_STREAM_UNAVAILABLE_TOOLTIP,
+        text: c ? o.default.Messages.CONSOLE_STREAMING_TOOLTIP : o.default.Messages.CONSOLE_STREAM_UNAVAILABLE_TOOLTIP,
         className: d.darkCircle,
         children: (0, l.jsx)("div", {
-          children: (0, l.jsx)(o.default, {
+          children: (0, l.jsx)(u.default, {
             className: d.stopStreamIcon,
             foreground: d.stopStreamForeground
           })

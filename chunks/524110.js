@@ -12,8 +12,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("458960"),
-  u = n("446674"),
-  o = n("669491"),
+  o = n("446674"),
+  u = n("669491"),
   d = n("266491"),
   c = n("77078"),
   f = n("299285"),
@@ -112,14 +112,14 @@ class A extends a.PureComponent {
         type: r
       } = n;
       if (null == s || null == i || null == a) return null;
-      let u = e[e.length - 1] / t * 1e3,
-        o = 0 !== u ? Math.max(1, (i - s) / u) : null,
+      let o = e[e.length - 1] / t * 1e3,
+        u = 0 !== o ? Math.max(1, (i - s) / o) : null,
         d = T[r],
         c = null != d ? Object.keys(d) : [],
         {
           unit: f,
           time: h
-        } = (0, m.getTimeAndUnit)(null != o ? o / 60 : null, c);
+        } = (0, m.getTimeAndUnit)(null != u ? u / 60 : null, c);
       if (null != d && null != f) {
         let e = d[f];
         return null != e ? e(l.name, h) : null
@@ -178,7 +178,7 @@ class L extends a.PureComponent {
           ...n,
           children: (0, l.jsx)(c.ProgressCircle, {
             percent: e,
-            colorOverride: t ? o.default.unsafe_rawColors.PRIMARY_500.css : null,
+            colorOverride: t ? u.default.unsafe_rawColors.PRIMARY_500.css : null,
             children: (0, l.jsx)(E.default, {
               className: N.downloadIcon
             })
@@ -211,7 +211,7 @@ function v(e, t) {
     return null != s && e.push(s), e
   }, [])
 }
-var x = u.default.connectStores([p.default, C.default, f.default], () => {
+var x = o.default.connectStores([p.default, C.default, f.default], () => {
   let e = p.default.activeItems,
     t = v(e, C.default),
     {

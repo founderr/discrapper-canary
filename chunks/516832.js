@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("907002"),
   i = n("446674"),
   r = n("413197"),
-  o = n("84339"),
-  u = n("485328"),
+  u = n("84339"),
+  o = n("485328"),
   d = n("982108"),
   c = n("561744"),
   f = n("994906"),
@@ -38,7 +38,7 @@ function C(e) {
     onClose: I,
     analyticsLocation: T,
     className: v
-  } = e, x = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), N = null !== (t = null == x ? void 0 : x.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, A = (0, o.default)(C);
+  } = e, x = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), N = null !== (t = null == x ? void 0 : x.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, A = (0, u.default)(C);
   let M = null == (n = N) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
     R = (0, c.default)(M),
     {
@@ -59,7 +59,7 @@ function C(e) {
         }
       }
     }), [I, N, L]);
-  a.useEffect(() => (u.default.enable(), u.default.enableTemp(y), () => u.default.disableTemp()), [y]);
+  a.useEffect(() => (o.default.enable(), o.default.enableTemp(y), () => o.default.disableTemp()), [y]);
   let O = (0, s.useTransition)(N, {
     immediate: A !== C,
     value: 0,
@@ -83,7 +83,7 @@ function C(e) {
     children: O((e, t, n) => {
       var a, i, r;
       let {
-        key: o
+        key: u
       } = n;
       return (0, l.jsx)(s.animated.div, {
         style: {
@@ -127,7 +127,7 @@ function C(e) {
               return null
           }
         }(t)
-      }, o)
+      }, u)
     })
   })
 }

@@ -9,8 +9,8 @@ var l = n("884691"),
   s = n("669491"),
   i = n("77078"),
   r = n("462274"),
-  o = n("800762"),
-  u = n("760679"),
+  u = n("800762"),
+  o = n("760679"),
   d = n("242260"),
   c = n("315841"),
   f = n("52477"),
@@ -48,7 +48,7 @@ function S(e, t, n, S) {
           height: S
         } = f.getBoundingClientRect(), g = [];
         n.forEach(e => {
-          let t = null != o.default.getVoiceStateForChannel(i, e.userId);
+          let t = null != u.default.getVoiceStateForChannel(i, e.userId);
           if (!t) {
             g.push(e);
             return
@@ -61,8 +61,8 @@ function S(e, t, n, S) {
               fallbackColor: s,
               outlineColorDark: i,
               outlineColorLight: r,
-              linesDrawnAt: o,
-              streamerId: u,
+              linesDrawnAt: u,
+              streamerId: o,
               deadDrawables: d
             } = e;
             switch (t.type) {
@@ -75,7 +75,7 @@ function S(e, t, n, S) {
                   fallbackColor: s,
                   outlineColorDark: i,
                   outlineColorLight: r,
-                  linesDrawnAt: o,
+                  linesDrawnAt: u,
                   deadDrawables: d
                 });
               case c.DrawableType.EMOJI_HOSE:
@@ -87,7 +87,7 @@ function S(e, t, n, S) {
                   fallbackColor: s,
                   outlineColorDark: i,
                   outlineColorLight: r,
-                  streamerId: u,
+                  streamerId: o,
                   deadDrawables: d
                 })
             }
@@ -103,7 +103,7 @@ function S(e, t, n, S) {
             deadDrawables: g,
             streamerId: s
           })
-        }), g.length > 0 && (0, u.clearDrawables)(g, s)
+        }), g.length > 0 && (0, o.clearDrawables)(g, s)
       }({
         canvasRef: e,
         drawables: n,

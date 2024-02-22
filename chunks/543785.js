@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("907002"),
   i = n("974667"),
   r = n("446674"),
-  u = n("77078"),
-  o = n("272030"),
+  o = n("77078"),
+  u = n("272030"),
   d = n("191145"),
   c = n("843962"),
   f = n("679653"),
@@ -119,7 +119,7 @@ class M extends a.PureComponent {
       selected: n,
       badge: a,
       audio: r,
-      video: o,
+      video: u,
       stream: d,
       isCurrentUserInThisDMCall: c,
       unread: f
@@ -138,12 +138,12 @@ class M extends a.PureComponent {
         }), (0, l.jsx)(T.default, {
           text: null != t ? t : "",
           selected: n,
-          children: (0, l.jsx)(u.BlobMask, {
+          children: (0, l.jsx)(o.BlobMask, {
             selected: n || h,
             lowerBadge: a > 0 ? (0, A.renderMentionBadge)(a) : null,
             upperBadge: (0, A.renderMediaBadge)({
               audio: r,
-              video: o,
+              video: u,
               screenshare: d,
               isCurrentUserConnected: c
             }),
@@ -184,7 +184,7 @@ class M extends a.PureComponent {
       let {
         channel: t
       } = this.props, a = t.type === L.ChannelTypes.DM ? E.default.getUser(t.getRecipientId()) : null;
-      null != a ? (0, o.openContextMenuLazy)(e, async () => {
+      null != a ? (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("130074").then(n.bind(n, "130074"));
@@ -193,7 +193,7 @@ class M extends a.PureComponent {
           channel: t,
           user: a
         })
-      }) : (0, o.openContextMenuLazy)(e, async () => {
+      }) : (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("493015").then(n.bind(n, "493015"));
@@ -217,8 +217,8 @@ var O = a.forwardRef(function(e, t) {
     a = (0, f.default)(e.channel),
     s = (0, r.useStateFromStores)([C.default], () => C.default.getChannelId(), []),
     i = (0, r.useStateFromStores)([d.default], () => null != s ? d.default.getMode(s) : L.ChannelModes.VOICE, [s]),
-    u = (0, r.useStateFromStores)([h.default], () => h.default.getAllApplicationStreamsForChannel(n).length > 0),
-    o = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId(), []),
+    o = (0, r.useStateFromStores)([h.default], () => h.default.getAllApplicationStreamsForChannel(n).length > 0),
+    u = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId(), []),
     c = (0, r.useStateFromStores)([p.default], () => p.default.getMentionCount(n), [n]),
     E = s === n,
     g = !1,
@@ -228,11 +228,11 @@ var O = a.forwardRef(function(e, t) {
     ref: t,
     channelName: a,
     unread: c > 0,
-    selected: o === n,
+    selected: u === n,
     badge: c,
     audio: g,
     video: I,
-    stream: u,
+    stream: o,
     isCurrentUserInThisDMCall: E
   })
 })

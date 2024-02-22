@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("509043"),
-  u = n("437825"),
-  o = n("587974"),
+  o = n("437825"),
+  u = n("587974"),
   d = n("432379");
 let c = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367];
 
@@ -33,8 +33,8 @@ function h(e) {
     c(f(n))
   }, [n]), (0, l.jsxs)("div", {
     className: d.wrapper,
-    children: [(0, l.jsx)(o.default, {
-      mask: o.default.Masks.STATUS_SCREENSHARE,
+    children: [(0, l.jsx)(u.default, {
+      mask: u.default.Masks.STATUS_SCREENSHARE,
       width: 32,
       height: 32,
       children: (0, l.jsx)("div", {
@@ -44,7 +44,7 @@ function h(e) {
         },
         children: null !== (t = n[0]) && void 0 !== t ? t : "?"
       })
-    }), (0, l.jsx)(u.default, {
+    }), (0, l.jsx)(o.default, {
       className: d.badge
     })]
   })

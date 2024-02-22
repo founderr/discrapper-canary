@@ -13,8 +13,8 @@ var l = n("37983"),
       isHovered: t,
       closePopout: n,
       onMouseEnter: r,
-      onMouseLeave: o,
-      onFocus: u,
+      onMouseLeave: u,
+      onFocus: o,
       channel: d
     } = e;
     return a.useEffect(() => {
@@ -22,11 +22,11 @@ var l = n("37983"),
     }, [n, t]), (0, l.jsx)(s.default, {
       children: (0, l.jsx)("div", {
         onMouseEnter: r,
-        onMouseLeave: o,
+        onMouseLeave: u,
         children: (0, l.jsx)(i.default, {
           channel: d,
           closePopout: n,
-          onFocus: u
+          onFocus: o
         })
       })
     })

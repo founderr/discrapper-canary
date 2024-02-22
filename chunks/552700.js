@@ -12,8 +12,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("627445"),
-  o = n.n(r),
-  u = n("446674"),
+  u = n.n(r),
+  o = n("446674"),
   d = n("669491"),
   c = n("77078"),
   f = n("272030"),
@@ -59,8 +59,8 @@ let v = a.memo(function(e) {
       channel: s,
       isPremium: r
     } = e, {
-      user: o,
-      blocked: u,
+      user: u,
+      blocked: o,
       rtsState: d
     } = n, c = d === I.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK, f = d === I.RequestToSpeakStates.REQUESTED_TO_SPEAK || c;
     return (0, l.jsxs)(l.Fragment, {
@@ -71,19 +71,19 @@ let v = a.memo(function(e) {
             [T.invited]: c
           })
         }), (0, l.jsx)("img", {
-          src: null !== (t = o.getAvatarURL(s.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
-          alt: o.username,
-          "aria-label": o.username,
+          src: null !== (t = u.getAvatarURL(s.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
+          alt: u.username,
+          "aria-label": u.username,
           className: i(T.avatar, {
-            [T.faded]: u
+            [T.faded]: o
           })
         })]
       }), (0, l.jsx)(v, {
         guildId: a,
         channelId: s.id,
-        user: o,
+        user: u,
         isPremium: r,
-        isBlocked: u
+        isBlocked: o
       })]
     })
   }),
@@ -97,11 +97,11 @@ var A = a.memo(function(e) {
   } = e, {
     user: r,
     blocked: d
-  } = t, S = s.getGuildId(), g = (0, h.useAppContext)(), C = (0, u.useStateFromStores)([E.default], () => {
+  } = t, S = s.getGuildId(), g = (0, h.useAppContext)(), C = (0, o.useStateFromStores)([E.default], () => {
     var e;
     return null != S && (null === (e = E.default.getMember(S, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
   }, [S, r.id]);
-  o(null != S, "Channel cannot be guildless");
+  u(null != S, "Channel cannot be guildless");
   let _ = a.useCallback(e => {
       (0, f.openContextMenuLazy)(e, async () => {
         let {

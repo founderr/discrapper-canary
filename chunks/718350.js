@@ -13,8 +13,8 @@ var a = n("77078"),
   s = n("349171"),
   i = n("626301"),
   r = n("789946"),
-  o = n("58608"),
-  u = n("599110"),
+  u = n("58608"),
+  o = n("599110"),
   d = n("49111"),
   c = n("782340"),
   f = n("469347"),
@@ -27,7 +27,7 @@ function m(e) {
     ...a
   } = e, m = c.default.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
     onPressMore: function() {
-      (0, s.default)(), t(), u.default.track(d.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+      (0, s.default)(), t(), o.default.track(d.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
         location_section: d.AnalyticsSections.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
         location_object: d.AnalyticsObjects.NAVIGATION_LINK
       }), (0, i.navigateToPremiumMarketingPage)()
@@ -50,7 +50,7 @@ function m(e) {
     },
     onClose: t,
     onSubscribeClick: s.default,
-    artElement: (0, l.jsx)(o.default, {
+    artElement: (0, l.jsx)(u.default, {
       className: f.video,
       src: h,
       loop: !0,

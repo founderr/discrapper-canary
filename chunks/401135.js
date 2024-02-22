@@ -5,11 +5,11 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("446674"),
-  n = s("10514"),
-  i = s("719923"),
+  i = s("10514"),
+  n = s("719923"),
   r = s("646718");
 
 function l() {
-  let e = (0, a.useStateFromStores)([n.default], () => n.default.getForSkuAndInterval(r.PremiumSubscriptionSKUs.TIER_0, r.SubscriptionIntervalTypes.MONTH));
-  return null != e ? (0, i.getFormattedPriceForPlan)(e) : "…"
+  let e = (0, a.useStateFromStores)([i.default], () => i.default.getForSkuAndInterval(r.PremiumSubscriptionSKUs.TIER_0, r.SubscriptionIntervalTypes.MONTH));
+  return null != e ? (0, n.getFormattedPriceForPlan)(e) : "…"
 }

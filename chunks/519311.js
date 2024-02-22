@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return m
   }
 }), s("70102");
-var a, n, i, r, l, o, u, d, c = s("37983"),
+var a, i, n, r, l, o, u, d, c = s("37983"),
   _ = s("884691");
 (l = a || (a = {})).THING = "Thing", l.PERSON = "Person", l.PRODUCT = "Product", l.OFFER = "Offer", l.AGGREGATE_OFFER = "AggregateOffer", l.RATING = "Rating", l.AGGREGATE_RATING = "AggregateRating", l.ORGANIZATION = "Organization", l.ITEM_PAGE = "ItemPage", l.UNIT_PRICE_SPECIFICATION = "UnitPriceSpecification", l.QUANTITATIVE_VALUE = "QuantitativeValue";
 
@@ -49,7 +49,7 @@ function f(e) {
 
 function S(e) {
   return E("QuantitativeValue", e)
-}(o = n || (n = {})).DAMAGED = "http://schema.org/DamagedCondition", o.NEW = "http://schema.org/NewCondition", o.REFURBISHED = "http://schema.org/RefurbishedCondition", o.USED = "http://schema.org/UsedCondition", (u = i || (i = {})).DISCONTINUED = "http://schema.org/Discontinued", u.IN_STOCK = "http://schema.org/InStock", u.IN_STORE_ONLY = "http://schema.org/InStoreOnly", u.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", u.ONLINE_ONLY = "http://schema.org/OnlineOnly", u.OUT_OF_STOCK = "http://schema.org/OutOfStock", u.PREORDER = "http://schema.org/PreOrder", u.PRESALE = "http://schema.org/PreSale", u.SOLD_OUT = "http://schema.org/SoldOut", f.ItemConditions = n, f.ItemAvailability = i, (d = r || (r = {})).YEARLY = "ANN", d.MONTHLY = "MON", S.UnitCodes = r;
+}(o = i || (i = {})).DAMAGED = "http://schema.org/DamagedCondition", o.NEW = "http://schema.org/NewCondition", o.REFURBISHED = "http://schema.org/RefurbishedCondition", o.USED = "http://schema.org/UsedCondition", (u = n || (n = {})).DISCONTINUED = "http://schema.org/Discontinued", u.IN_STOCK = "http://schema.org/InStock", u.IN_STORE_ONLY = "http://schema.org/InStoreOnly", u.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", u.ONLINE_ONLY = "http://schema.org/OnlineOnly", u.OUT_OF_STOCK = "http://schema.org/OutOfStock", u.PREORDER = "http://schema.org/PreOrder", u.PRESALE = "http://schema.org/PreSale", u.SOLD_OUT = "http://schema.org/SoldOut", f.ItemConditions = i, f.ItemAvailability = n, (d = r || (r = {})).YEARLY = "ANN", d.MONTHLY = "MON", S.UnitCodes = r;
 class R extends _.Component {
   render() {
     let {

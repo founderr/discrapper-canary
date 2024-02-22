@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("669491"),
   i = n("77078"),
   r = n("575136"),
-  u = n("680986"),
-  o = n("470926"),
+  o = n("680986"),
+  u = n("470926"),
   d = n("819450"),
   c = n("401690"),
   f = n("305961"),
@@ -50,14 +50,14 @@ function R(e) {
     locked: B,
     video: V || H,
     selected: R
-  }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getNewThreadCount(n.guild_id, n.id)), K = (0, u.useUnreadThreadsCountForParent)(n.guild_id, n.id), W = (0, a.useStateFromStores)([f.default], () => {
+  }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getNewThreadCount(n.guild_id, n.id)), K = (0, o.useUnreadThreadsCountForParent)(n.guild_id, n.id), W = (0, a.useStateFromStores)([f.default], () => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(A.GuildFeatures.COMMUNITY)) && void 0 !== t && t
   });
   if ((0, I.default)(w)) return (0, l.jsx)(T.default, {
     mentionsCount: w
   });
-  if ((0, o.showPremiumChannelIconButton)(b)) return (0, l.jsx)(o.default, {
+  if ((0, u.showPremiumChannelIconButton)(b)) return (0, l.jsx)(u.default, {
     locked: j
   });
   if (G) return (0, l.jsx)(m.TextBadge, {
@@ -77,9 +77,9 @@ function R(e) {
     color: "text-muted",
     children: (0, m.getBadgeCountString)(K)
   });
-  let z = null !== (t = null == O ? void 0 : O.length) && void 0 !== t ? t : 0;
+  let Z = null !== (t = null == O ? void 0 : O.length) && void 0 !== t ? t : 0;
   return null != y && y && k ? (0, l.jsx)(N.default, {
-    userCount: z,
+    userCount: Z,
     video: V || H,
     channel: n
   }) : M && (0, E.hasStream)(O) && W ? (0, l.jsx)(m.TextBadge, {

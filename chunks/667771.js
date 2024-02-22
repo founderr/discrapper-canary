@@ -10,8 +10,8 @@ var a = n("476042"),
   s = n("95410"),
   i = n("77078"),
   r = n("851387"),
-  u = n("57005"),
-  o = n("320954"),
+  o = n("57005"),
+  u = n("320954"),
   d = n("200008"),
   c = n("512395"),
   f = n("870691"),
@@ -41,14 +41,14 @@ function A(e) {
       let n;
       let a = g.default.getGuildId(),
         s = t.getItem(),
-        o = (0, I.getDropData)(T(a, s.id), s.position, e.channel, e.position, s.channelList);
-      if (null == o) return;
+        u = (0, I.getDropData)(T(a, s.id), s.position, e.channel, e.position, s.channelList);
+      if (null == u) return;
       let c = T(a, s.id);
       if (null == c) return;
       let f = C.default.getCategories(a),
         p = m.default.getGuild(a);
       if (null == p) return;
-      let N = (0, I.getDnDUpdates)(c, T(a, o.referenceId), o.parentId, f);
+      let N = (0, I.getDnDUpdates)(c, T(a, u.referenceId), u.parentId, f);
       if (0 !== N.length) {
         if (a === S.FAVORITES) {
           (0, d.updateFavoriteChannels)(N);
@@ -61,7 +61,7 @@ function A(e) {
             if (null == n) return !1;
             let l = h.default.getChannel(n.parent_id);
             return n.type === S.ChannelTypes.GUILD_CATEGORY || null == l ? E.default.can(S.Permissions.MANAGE_CHANNELS, p) : E.default.can(S.Permissions.MANAGE_CHANNELS, l)
-          }), c.parent_id !== o.parentId && N.find(e => {
+          }), c.parent_id !== u.parentId && N.find(e => {
             if (e.id !== c.id) return !1;
             let t = h.default.getChannel(e.parent_id),
               l = null != t && E.default.can(S.Permissions.MANAGE_ROLES, c) && E.default.can(S.Permissions.MANAGE_ROLES, t);
@@ -71,7 +71,7 @@ function A(e) {
             return (null == c.parent_id && !a || s && !a) && (n = e), !0
           }), null != n) {
           let e = h.default.getChannel(n.parent_id);
-          null != e && (0, i.openModal)(t => (0, l.jsx)(u.default, {
+          null != e && (0, i.openModal)(t => (0, l.jsx)(o.default, {
             ...t,
             channel: c,
             category: e,
@@ -96,10 +96,10 @@ function A(e) {
       if (null == s) return !1;
       let i = h.default.getChannel(a.parentId),
         r = h.default.getChannel(l.parent_id),
-        u = E.default.can(S.Permissions.MANAGE_CHANNELS, s),
-        o = null != r ? E.default.can(S.Permissions.MANAGE_CHANNELS, r) : u,
-        d = null != i ? E.default.can(S.Permissions.MANAGE_CHANNELS, i) : u;
-      return o && d
+        o = E.default.can(S.Permissions.MANAGE_CHANNELS, s),
+        u = null != r ? E.default.can(S.Permissions.MANAGE_CHANNELS, r) : o,
+        d = null != i ? E.default.can(S.Permissions.MANAGE_CHANNELS, i) : o;
+      return u && d
     }
   }, (e, t) => {
     let n = t.getItem();
@@ -148,7 +148,7 @@ function A(e) {
           type: a
         },
         position: s
-      } = e, i = g.default.getGuildId(), r = C.default.getCategories(i), u = (0, o.default)(r._categories, r, e => {
+      } = e, i = g.default.getGuildId(), r = C.default.getCategories(i), o = (0, u.default)(r._categories, r, e => {
         let {
           channel: t
         } = e;
@@ -161,7 +161,7 @@ function A(e) {
         position: s,
         parentId: n,
         type: a,
-        channelList: u,
+        channelList: o,
         guildId: l
       }
     }

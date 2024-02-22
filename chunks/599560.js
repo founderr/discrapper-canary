@@ -5,11 +5,11 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("872717"),
-  n = s("913144"),
-  i = s("333805"),
+  i = s("913144"),
+  n = s("333805"),
   r = s("49111");
 async function l(e) {
-  n.default.dispatch({
+  i.default.dispatch({
     type: "APPLICATION_ACTIVITY_STATISTICS_FETCH_START",
     applicationId: e
   });
@@ -19,15 +19,15 @@ async function l(e) {
         oldFormErrors: !0
       }),
       s = t.body;
-    return n.default.dispatch({
+    return i.default.dispatch({
       type: "APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS",
       statistics: s,
       applicationId: e
     }), s
   } catch (t) {
-    throw n.default.dispatch({
+    throw i.default.dispatch({
       type: "APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL",
       applicationId: e
-    }), new i.default(t)
+    }), new n.default(t)
   }
 }

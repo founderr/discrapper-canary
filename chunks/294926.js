@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("577776"),
-  u = n("452804"),
+  u = n("577776"),
+  o = n("452804"),
   d = n("579408"),
   c = n("168973"),
   f = n("981913"),
@@ -45,8 +45,8 @@ function O(e) {
     renderExternalHeader: b
   } = e, D = (0, v.default)(), U = (0, r.useStateFromStoresArray)([I.default], () => null != P ? I.default.getEmbeddedActivitiesForChannel(P) : [], [P]), w = (0, T.useEmbeddedApps)(U), F = (0, T.useEmbeddedAppsWithPresence)(w), k = a.useCallback(() => {
     (0, _.updateActivityPanelMode)(M.ActivityPanelModes.PIP)
-  }, []), V = a.useRef(null), B = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), H = B !== M.FocusedActivityLayouts.NO_CHAT, [G, W] = a.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : O), Y = a.useCallback(e => {
-    u.default.updatedUnsyncedSettings({
+  }, []), B = a.useRef(null), V = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), H = V !== M.FocusedActivityLayouts.NO_CHAT, [G, W] = a.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : O), Y = a.useCallback(e => {
+    o.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
   }, []), z = a.useRef(null), [K, Z] = a.useState({
@@ -77,8 +77,8 @@ function O(e) {
   let en = F.get(null === (n = w[0]) || void 0 === n ? void 0 : null === (t = n.application) || void 0 === t ? void 0 : t.id),
     el = [];
   return null != en && (el = Array.from(en.embeddedActivity.userIds).map(e => p.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, l.jsxs)("div", {
-    className: i(L.wrapper, y[B], (0, C.getThemeClass)(R.ThemeTypes.DARK)),
-    ref: V,
+    className: i(L.wrapper, y[V], (0, C.getThemeClass)(R.ThemeTypes.DARK)),
+    ref: B,
     style: H && null != G ? {
       minHeight: 200,
       maxHeight: O,
@@ -88,7 +88,7 @@ function O(e) {
       className: L.activityPanelContainer,
       children: [H ? null : (0, l.jsx)("div", {
         className: L.header,
-        children: (0, l.jsx)(o.Text, {
+        children: (0, l.jsx)(u.Text, {
           color: "header-primary",
           variant: "text-md/semibold",
           className: L.headerTitle,
@@ -145,7 +145,7 @@ function O(e) {
     }), H ? (0, l.jsx)(d.default, {
       minHeight: 480,
       maxHeight: O,
-      resizableNode: V,
+      resizableNode: B,
       onResize: e => {
         g.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !0

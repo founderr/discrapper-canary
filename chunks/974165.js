@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("151426"),
   i = n("77078"),
   r = n("990766"),
-  u = n("716241"),
-  o = n("713726"),
+  o = n("716241"),
+  u = n("713726"),
   d = n("9759"),
   c = n("705565"),
   f = n("44723"),
@@ -53,7 +53,7 @@ function M() {
   let b = [];
   O && b.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
   let j = () => {
-      u.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
+      o.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
         game_id: null == n ? void 0 : n.id
       })
     },
@@ -65,8 +65,8 @@ function M() {
             pid: null == n ? void 0 : n.pid,
             channelId: e
           })
-        }) : (0, o.startBroadcastForStream)((0, E.encodeStreamKey)(l), null == n ? void 0 : n.pid)
-      } else(0, o.stopBroadcast)()
+        }) : (0, u.startBroadcastForStream)((0, E.encodeStreamKey)(l), null == n ? void 0 : n.pid)
+      } else(0, u.stopBroadcast)()
     },
     U = e => (0, l.jsx)(L.default, {
       tooltipText: O ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,

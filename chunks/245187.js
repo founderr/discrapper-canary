@@ -4,16 +4,16 @@ s.r(t), s.d(t, {
     return A
   },
   BlockedPaymentsContentModal: function() {
-    return N
+    return p
   },
   BlockedPaymentsWarning: function() {
-    return p
+    return N
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  i = s.n(n),
+var i = s("414456"),
+  n = s.n(i),
   r = s("669491"),
   l = s("819855"),
   o = s("77078"),
@@ -31,9 +31,9 @@ var n = s("414456"),
 function m(e) {
   let {
     className: t
-  } = e, s = (0, u.default)(), n = (0, l.isThemeDark)(s) ? S : R;
+  } = e, s = (0, u.default)(), i = (0, l.isThemeDark)(s) ? S : R;
   return (0, a.jsxs)("div", {
-    className: i(f.container, t),
+    className: n(f.container, t),
     children: [(0, a.jsx)(o.Heading, {
       className: f.header,
       variant: "heading-xl/semibold",
@@ -50,7 +50,7 @@ function m(e) {
         })
       })]
     }), (0, a.jsx)("img", {
-      src: n,
+      src: i,
       className: f.splashImage,
       alt: "Blocked Payments"
     })]
@@ -63,7 +63,7 @@ function A() {
   })
 }
 
-function N(e) {
+function p(e) {
   let {
     onClose: t
   } = e;
@@ -83,12 +83,12 @@ function N(e) {
   })
 }
 
-function p(e) {
+function N(e) {
   let {
     className: t
   } = e, s = (0, E.useBlockedPaymentsConfig)();
   return s ? (0, a.jsxs)(o.Card, {
-    className: i(f.blockedPaymentsWarning, t),
+    className: n(f.blockedPaymentsWarning, t),
     type: o.Card.Types.CUSTOM,
     children: [(0, a.jsx)(c.default, {
       className: f.blockedPaymentsWarningIcon,

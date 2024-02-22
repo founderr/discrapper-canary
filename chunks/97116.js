@@ -10,8 +10,8 @@ var a = n("77078"),
   s = n("944371"),
   i = n("837899"),
   r = n("425190"),
-  o = n("153160"),
-  u = n("577357"),
+  u = n("153160"),
+  o = n("577357"),
   d = n("167109"),
   c = n("373622"),
   f = n("944256"),
@@ -37,8 +37,8 @@ let p = e => {
         children: [!n && (0, l.jsx)(s.MonetizationListingDraftBadge, {}), (0, l.jsxs)(a.Text, {
           variant: "text-xs/normal",
           className: m.tierPrice,
-          children: [(0, o.formatPrice)(_.price, _.currency), " ", h.default.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
-            period: (0, u.formatPlanInterval)({
+          children: [(0, u.formatPrice)(_.price, _.currency), " ", h.default.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
+            period: (0, o.formatPlanInterval)({
               interval: _.interval,
               interval_count: _.interval_count
             })

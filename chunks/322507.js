@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  i = s.n(n),
+var i = s("414456"),
+  n = s.n(i),
   r = s("448052"),
   l = s("77078"),
   o = s("782340"),
@@ -19,7 +19,7 @@ var n = s("414456"),
       onBackClick: s
     } = e;
     return (0, a.jsxs)("div", {
-      className: i(u.container, t),
+      className: n(u.container, t),
       "data-testid": "all-perks-hero-header",
       children: [(0, a.jsx)("img", {
         src: d,

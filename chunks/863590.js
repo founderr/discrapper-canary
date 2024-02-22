@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("77078"),
   r = n("614175"),
-  o = n("181114"),
-  u = n("82636"),
+  u = n("181114"),
+  o = n("82636"),
   d = n("981913"),
   c = n("782340"),
   f = n("727433");
@@ -28,7 +28,7 @@ function h(e) {
     }, {
       autoTrackExposure: !1
     });
-  return h ? (0, l.jsxs)(o.default, {
+  return h ? (0, l.jsxs)(u.default, {
     disabled: a.disabled,
     onClick: a.onClick,
     onMouseEnter: a.onMouseEnter,
@@ -39,13 +39,13 @@ function h(e) {
       [f.gameNightActivityIsActive]: n && !a.disabled
     }),
     innerClassName: f.gameNightButtonInner,
-    children: [(0, l.jsx)(u.default, {
+    children: [(0, l.jsx)(o.default, {
       className: f.gameNightRocket
     }), c.default.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT]
   }) : (0, l.jsx)(d.CenterControlButton, {
     isActive: n,
     color: t,
-    iconComponent: u.default,
+    iconComponent: o.default,
     ...a
   })
 }

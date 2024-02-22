@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return N
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  i = s("290381"),
+  i = s("884691"),
+  n = s("290381"),
   r = s("77078"),
   l = s("812204"),
   o = s("685665"),
@@ -22,18 +22,18 @@ var a = s("37983"),
   R = s("228967"),
   m = s("49111"),
   A = s("390553"),
-  N = s("679324"),
-  p = () => {
-    let e = n.useRef(null),
-      [t, s] = n.useState(!1),
+  p = s("679324"),
+  N = () => {
+    let e = i.useRef(null),
+      [t, s] = i.useState(!1),
       {
-        enabled: p
+        enabled: N
       } = (0, c.default)(),
       {
         AnalyticsLocationProvider: g,
         analyticsLocations: C
       } = (0, o.default)(l.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
-      [P, O] = n.useState(!1);
+      [P, O] = i.useState(!1);
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(r.AdvancedScrollerAuto, {
         className: A.mainPageScroller,
@@ -52,11 +52,11 @@ var a = s("37983"),
               className: A.perksDiscoverability,
               noBackground: !0,
               leftAlignHeaders: !0,
-              showAllPerksButton: p ? (0, a.jsx)(R.default, {
+              showAllPerksButton: N ? (0, a.jsx)(R.default, {
                 setIsAllPerksVisible: s,
                 previousComponent: f.NitroLandingPages.HOME
               }) : void 0
-            }), !p && (0, a.jsx)(_.default, {
+            }), !N && (0, a.jsx)(_.default, {
               className: A.perksCards,
               isSubscriberNitroHome: !0
             }), (0, a.jsx)(I.default, {
@@ -68,7 +68,7 @@ var a = s("37983"),
               }
             }), (0, a.jsx)("div", {
               className: A.footerSpacing
-            }), (0, a.jsx)(i.VisibilitySensor, {
+            }), (0, a.jsx)(n.VisibilitySensor, {
               onChange: e => {
                 e && !P && (d.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                   location_stack: C
@@ -78,7 +78,7 @@ var a = s("37983"),
                 className: A.bottomOfPageVisibilitySensor
               })
             }), (0, a.jsx)(u.default, {
-              src: N,
+              src: p,
               className: A.bottomIllustration,
               width: 112,
               height: 85,
@@ -86,7 +86,7 @@ var a = s("37983"),
             })]
           })
         })
-      }), p ? (0, a.jsx)(S.default, {
+      }), N ? (0, a.jsx)(S.default, {
         isAllPerksVisible: t,
         setIsAllPerksVisible: s,
         previousComponent: f.NitroLandingPages.HOME

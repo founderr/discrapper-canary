@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return m
   }
 });
-var i = n("37983"),
-  r = n("884691"),
+var r = n("37983"),
+  i = n("884691"),
   l = n("414456"),
   a = n.n(l),
   s = n("446674"),
@@ -27,20 +27,20 @@ function m() {
       animateOnHover: !0
     }),
     m = e => null != e.globalName ? e.globalName : e.username,
-    _ = r.useMemo(() => e.length >= 2 ? d.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
+    _ = i.useMemo(() => e.length >= 2 ? d.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
       username: m(e[0])
     }) : 1 === e.length ? d.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
       username: m(e[0])
     }) : "", [e]);
-  return 0 === e.length ? null : (0, i.jsxs)("div", {
+  return 0 === e.length ? null : (0, r.jsxs)("div", {
     className: f.container,
-    children: [(0, i.jsx)(o.Avatar, {
+    children: [(0, r.jsx)(o.Avatar, {
       className: f.icon,
       src: n,
       "aria-label": t.username,
       size: o.AvatarSizes.SIZE_24,
       ...l
-    }), (0, i.jsx)(o.Text, {
+    }), (0, r.jsx)(o.Text, {
       className: a(f.text),
       variant: "text-sm/normal",
       color: "always-white",

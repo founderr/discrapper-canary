@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("77078"),
   i = n("244201"),
   r = n("817963"),
-  o = n("124824"),
-  u = n("981913"),
+  u = n("124824"),
+  o = n("981913"),
   d = n("42203"),
   c = n("293137"),
   f = n("381546"),
@@ -45,7 +45,7 @@ function C(e) {
       let {
         closePopout: t
       } = e;
-      return (0, l.jsx)(o.default, {
+      return (0, l.jsx)(u.default, {
         children: (0, l.jsx)(s.Menu, {
           navId: "exit-options",
           onSelect: () => {},
@@ -68,7 +68,7 @@ function C(e) {
       let {
         onClick: t
       } = e;
-      return (0, l.jsx)(u.CenterControlButton, {
+      return (0, l.jsx)(o.CenterControlButton, {
         label: S.default.Messages.DISCONNECT_SELF,
         color: "red",
         iconComponent: c.default,
@@ -77,7 +77,7 @@ function C(e) {
         className: g.buttonSpacing
       })
     }
-  }) : (0, l.jsx)(u.CenterControlButton, {
+  }) : (0, l.jsx)(o.CenterControlButton, {
     className: g.buttonSpacing,
     label: S.default.Messages.DISCONNECT_SELF,
     color: "red",

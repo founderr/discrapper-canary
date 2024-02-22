@@ -9,8 +9,8 @@ var l = n("446674"),
   s = n("513688");
 let i = [],
   r = {},
-  o = {};
-class u extends l.default.Store {
+  u = {};
+class o extends l.default.Store {
   getSearchState(e) {
     var t;
     return null !== (t = r[e]) && void 0 !== t ? t : {
@@ -20,16 +20,16 @@ class u extends l.default.Store {
   }
   getSearchResults(e, t) {
     var n, l, a;
-    return null !== (a = null === (l = o[e]) || void 0 === l ? void 0 : null === (n = l[t]) || void 0 === n ? void 0 : n.results) && void 0 !== a ? a : i
+    return null !== (a = null === (l = u[e]) || void 0 === l ? void 0 : null === (n = l[t]) || void 0 === n ? void 0 : n.results) && void 0 !== a ? a : i
   }
   shouldFetch(e, t) {
     var n, l;
-    let a = null === (l = o[e]) || void 0 === l ? void 0 : null === (n = l[t]) || void 0 === n ? void 0 : n.lastSearchedAt;
+    let a = null === (l = u[e]) || void 0 === l ? void 0 : null === (n = l[t]) || void 0 === n ? void 0 : n.lastSearchedAt;
     return null == a || Date.now() - a > 12e4
   }
 }
-u.displayName = "GuildDirectorySearchStore";
-var d = new u(a.default, {
+o.displayName = "GuildDirectorySearchStore";
+var d = new o(a.default, {
   GUILD_DIRECTORY_SEARCH_START: function(e) {
     let {
       channelId: t,
@@ -54,8 +54,8 @@ var d = new u(a.default, {
     l.forEach(e => {
       let t = (0, s.guildDirectoryEntryFromServer)(e);
       a.push(t)
-    }), o[t] = {
-      ...o[t],
+    }), u[t] = {
+      ...u[t],
       [n]: {
         results: (0, s.orderByTotalMemberCount)(a),
         lastSearchedAt: Date.now()
@@ -97,11 +97,11 @@ var d = new u(a.default, {
       guildId: l
     } = e, a = null === (t = r[n]) || void 0 === t ? void 0 : t.mostRecentQuery;
     if (null == a) return;
-    let s = o[n][a];
+    let s = u[n][a];
     if (null == s) return;
     let i = s.results.filter(e => e.guildId !== l);
-    o[n] = {
-      ...o[n],
+    u[n] = {
+      ...u[n],
       [r[n].mostRecentQuery]: {
         ...s,
         results: i

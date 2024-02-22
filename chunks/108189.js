@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("90915"),
-  u = n("77078"),
-  o = n("159885"),
+  o = n("77078"),
+  u = n("159885"),
   d = n("939692");
 let c = [18, 18, 16, 16, 14, 12, 10];
 var f = e => {
@@ -29,7 +29,7 @@ var f = e => {
     S = (0, r.useHistory)();
   if (null == f && null != h) {
     var N;
-    n = null !== (N = c[(t = (0, o.getAcronym)(h)).length - 1]) && void 0 !== N ? N : c[c.length - 1]
+    n = null !== (N = c[(t = (0, u.getAcronym)(h)).length - 1]) && void 0 !== N ? N : c[c.length - 1]
   }
   let T = a.useCallback(e => {
     if (null == E);
@@ -43,7 +43,7 @@ var f = e => {
     }
     null != g && g(e)
   }, [S, E, g]);
-  return (0, l.jsxs)(u.Clickable, {
+  return (0, l.jsxs)(o.Clickable, {
     ..._,
     onClick: T,
     className: i(p, d.wrapper, {

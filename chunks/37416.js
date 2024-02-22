@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("446674"),
   r = n("862337"),
-  u = n("77078"),
-  o = n("255397"),
+  o = n("77078"),
+  u = n("255397"),
   d = n("272030"),
   c = n("667771"),
   f = n("650912"),
@@ -49,8 +49,8 @@ var a = n("414456"),
   Y = n("884155"),
   K = n("49111"),
   W = n("695838"),
-  z = n("782340"),
-  Z = n("65369");
+  Z = n("782340"),
+  z = n("65369");
 class X extends F.default {
   componentWillUnmount() {
     this.activitiesHideTimeout.stop()
@@ -74,9 +74,9 @@ class X extends F.default {
       sortingPosition: t,
       isUserOver: n
     } = this.props;
-    if (n) return Z.containerUserOver;
-    if (null != t) return e > t ? Z.containerDragAfter : Z.containerDragBefore;
-    return Z.containerDefault
+    if (n) return z.containerUserOver;
+    if (null != t) return e > t ? z.containerDragAfter : z.containerDragBefore;
+    return z.containerDefault
   }
   renderSubtitle() {
     var e;
@@ -121,7 +121,7 @@ class X extends F.default {
       channelInfo: e
     } = this.props;
     return null == e ? null : (0, l.jsx)("div", {
-      className: Z.channelInfo,
+      className: z.channelInfo,
       children: e
     })
   }
@@ -133,7 +133,7 @@ class X extends F.default {
       unread: a,
       resolvedUnreadSetting: i,
       mentionCount: r,
-      locked: o,
+      locked: u,
       sorting: d,
       isUserOver: c,
       connectChannelDropTarget: f,
@@ -153,30 +153,30 @@ class X extends F.default {
       shouldShowGuildVerificationPopout: x
     } = this.state, M = this.getVoiceStatesCount(), O = (0, l.jsxs)("li", {
       className: s(this.getModeClass(), {
-        [Z.disabled]: this.isDisabled()
+        [z.disabled]: this.isDisabled()
       }),
       "data-dnd-name": e.name,
       children: [(0, l.jsx)("div", {
         onMouseEnter: this.handleMouseEnter,
         onMouseLeave: this.handleMouseLeave,
-        children: (0, l.jsx)(u.Popout, {
+        children: (0, l.jsx)(o.Popout, {
           position: "right",
           renderPopout: this.renderPopout,
           spacing: 0,
           onRequestClose: this.closeGuildVerificationPopout,
           shouldShow: v && !d && !c && !x || x,
-          children: () => (0, l.jsx)(u.Tooltip, {
+          children: () => (0, l.jsx)(o.Tooltip, {
             text: this.getTooltipText(),
-            children: u => {
+            children: o => {
               let {
                 onClick: d,
                 onContextMenu: c,
                 ...f
-              } = u;
+              } = o;
               return (0, l.jsxs)(V.default, {
-                className: Z.iconVisibility,
+                className: z.iconVisibility,
                 iconClassName: s({
-                  [Z.iconLive]: S
+                  [z.iconLive]: S
                 }),
                 channel: e,
                 selected: !A && t,
@@ -184,7 +184,7 @@ class X extends F.default {
                 unread: n ? a : void 0,
                 resolvedUnreadSetting: i,
                 mentionCount: r,
-                locked: o,
+                locked: u,
                 subtitle: this.renderSubtitle(),
                 onClick: () => {
                   this.handleClick(), null == d || d()
@@ -285,7 +285,7 @@ class X extends F.default {
         connected: t,
         channel: a
       } = this.props;
-      t && (e.stopPropagation(), (0, u.openModalLazy)(async () => {
+      t && (e.stopPropagation(), (0, o.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("843624").then(n.bind(n, "843624"));
@@ -306,9 +306,9 @@ class X extends F.default {
         guild: i
       } = this.props, {
         shouldShowActivities: r,
-        shouldShowGuildVerificationPopout: u
+        shouldShowGuildVerificationPopout: o
       } = this.state;
-      if (r && !n && !a && !u) {
+      if (r && !n && !a && !o) {
         let n = M.ActivityRestrictedGuilds.getSetting().includes(i.id);
         return (0, l.jsx)(H.default, {
           onAction: this.closePopout,
@@ -319,7 +319,7 @@ class X extends F.default {
           shouldShowSettingNudge: n
         })
       }
-      if (u) return (0, l.jsx)(L.default, {
+      if (o) return (0, l.jsx)(L.default, {
         type: L.GuildVerificationPopoutTypes.VOICE,
         guildId: e.guild_id,
         closePopout: this.closeGuildVerificationPopout
@@ -331,8 +331,8 @@ class X extends F.default {
         locked: t,
         forceShowButtons: n
       } = this.props;
-      if (!t) return (0, l.jsx)(u.Tooltip, {
-        text: z.default.Messages.OPEN_CHAT,
+      if (!t) return (0, l.jsx)(o.Tooltip, {
+        text: Z.default.Messages.OPEN_CHAT,
         children: t => {
           let {
             onMouseEnter: a,
@@ -340,12 +340,12 @@ class X extends F.default {
             onFocus: r,
             onBlur: d
           } = t;
-          return (0, l.jsx)(u.Clickable, {
-            className: s(Z.iconItem, n ? Z.alwaysShown : null),
+          return (0, l.jsx)(o.Clickable, {
+            className: s(z.iconItem, n ? z.alwaysShown : null),
             onClick: () => {
-              o.default.updateChatOpen(e.id, !0), (0, x.transitionToChannel)(e.id)
+              u.default.updateChatOpen(e.id, !0), (0, x.transitionToChannel)(e.id)
             },
-            "aria-label": z.default.Messages.OPEN_CHAT,
+            "aria-label": Z.default.Messages.OPEN_CHAT,
             onMouseEnter: a,
             onMouseLeave: i,
             onFocus: r,
@@ -353,7 +353,7 @@ class X extends F.default {
             children: (0, l.jsx)(P.default, {
               width: 16,
               height: 16,
-              className: Z.actionIcon
+              className: z.actionIcon
             })
           })
         }
@@ -362,7 +362,7 @@ class X extends F.default {
       let {
         connected: e
       } = this.props;
-      return this.isFull() && !e ? z.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
+      return this.isFull() && !e ? Z.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
     }
   }
 }
@@ -375,8 +375,8 @@ function J(e) {
     disableSorting: a,
     isFavoriteCategory: s,
     selected: r,
-    collapsed: u,
-    voiceStates: o
+    collapsed: o,
+    voiceStates: u
   } = e, d = (0, i.useStateFromStoresObject)([j.default], () => ({
     unread: j.default.hasUnread(n.id),
     mentionCount: j.default.getMentionCount(n.id)
@@ -405,8 +405,8 @@ function J(e) {
   }), y = (0, B.default)({
     channel: n,
     isChannelSelected: r,
-    isChannelCollapsed: u,
-    voiceStates: o,
+    isChannelCollapsed: o,
+    voiceStates: u,
     isSubscriptionGated: I,
     needSubscriptionToAccess: S,
     enableConnectedUserLimit: !0,

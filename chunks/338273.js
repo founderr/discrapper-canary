@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("917351"),
   i = n.n(s),
   r = n("446674"),
-  o = n("77078"),
-  u = n("30874"),
+  u = n("77078"),
+  o = n("30874"),
   d = n("458574"),
   c = n("308798"),
   f = n("646240"),
@@ -37,9 +37,9 @@ function A(e) {
     s(e => !e)
   }
   let r = N.default.Messages.MORE;
-  return (0, l.jsx)(o.Popout, {
+  return (0, l.jsx)(u.Popout, {
     shouldShow: n,
-    animation: o.Popout.Animation.NONE,
+    animation: u.Popout.Animation.NONE,
     position: "bottom",
     align: "right",
     autoInvert: !1,
@@ -71,28 +71,28 @@ function M(e) {
     channel: t,
     closePopout: n,
     onSelect: a
-  } = e, s = (0, u.default)(t), T = (0, m.default)(t), v = (0, S.default)(t.id), A = (0, E.default)(t), M = (0, C.default)({
+  } = e, s = (0, o.default)(t), T = (0, m.default)(t), v = (0, S.default)(t.id), A = (0, E.default)(t), M = (0, C.default)({
     id: t.id,
     label: N.default.Messages.COPY_ID_THREAD
   }), R = (0, d.default)(t), j = (0, c.default)(t), L = (0, f.default)(t, "Toolbar Overflow"), y = (0, p.default)(t), O = (0, h.default)(t), P = (0, g.default)(t), b = _.UseThreadSidebar.useSetting(), D = (0, r.useStateFromStores)([I.default], () => !i.isEmpty(I.default.getVoiceStatesForChannel(t.id)));
-  return (0, l.jsxs)(o.Menu, {
+  return (0, l.jsxs)(u.Menu, {
     navId: "thread-context",
     onClose: n,
     "aria-label": N.default.Messages.THREAD_ACTIONS_MENU_LABEL,
     onSelect: a,
-    children: [(0, l.jsxs)(o.MenuGroup, {
+    children: [(0, l.jsxs)(u.MenuGroup, {
       children: [L, O]
-    }), (0, l.jsxs)(o.MenuGroup, {
-      children: [A, y, v, b && !D ? (0, l.jsx)(o.MenuItem, {
+    }), (0, l.jsxs)(u.MenuGroup, {
+      children: [A, y, v, b && !D ? (0, l.jsx)(u.MenuItem, {
         id: "open",
         label: N.default.Messages.OPEN_IN_SPLIT_VIEW,
         action: function() {
           (0, x.openThreadSidebarForViewing)(t)
         }
       }) : null]
-    }), (0, l.jsxs)(o.MenuGroup, {
+    }), (0, l.jsxs)(u.MenuGroup, {
       children: [P, s, T, j]
-    }), (0, l.jsxs)(o.MenuGroup, {
+    }), (0, l.jsxs)(u.MenuGroup, {
       children: [R, M]
     })]
   })

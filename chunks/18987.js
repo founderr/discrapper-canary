@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  i = s.n(n),
+var i = s("414456"),
+  n = s.n(i),
   r = s("49111"),
   l = s("755907");
 let o = {
@@ -48,9 +48,9 @@ var d = e => {
   let {
     agency: t,
     rating: s,
-    className: n
+    className: i
   } = e, r = u[t][s];
   return null == r ? null : (0, a.jsx)("div", {
-    className: i(l.contentRating, r, n)
+    className: n(l.contentRating, r, i)
   })
 }

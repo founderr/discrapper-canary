@@ -11,8 +11,8 @@ var l, a, s = n("37983");
 n("884691");
 var i = n("414456"),
   r = n.n(i),
-  o = n("446674"),
-  u = n("77078"),
+  u = n("446674"),
+  o = n("77078"),
   d = n("997289"),
   c = n("191225"),
   f = n("706508"),
@@ -42,7 +42,7 @@ function y(e) {
     guildId: n,
     channelId: l,
     users: a
-  } = e, i = null != t ? t : u.AvatarSizes.SIZE_32, r = (0, u.getAvatarSize)(i);
+  } = e, i = null != t ? t : o.AvatarSizes.SIZE_32, r = (0, o.getAvatarSize)(i);
   return (0, s.jsx)(N.default, {
     size: r,
     guildId: n,
@@ -51,9 +51,9 @@ function y(e) {
     renderUser: e => {
       if (null == e) return null;
       let t = M.default.getName(n, l, e);
-      return (0, s.jsx)(u.TooltipContainer, {
+      return (0, s.jsx)(o.TooltipContainer, {
         text: t,
-        color: u.TooltipColors.GREY,
+        color: o.TooltipColors.GREY,
         children: (0, s.jsx)("img", {
           src: e.getAvatarURL(n, r),
           alt: t,
@@ -74,7 +74,7 @@ function O(e) {
     width: S
   } = e;
   let C = (l = S) > 400 ? 2 : l > 300 ? 1 : 0;
-  let [_] = (a = S) > 400 ? [u.AvatarSizes.SIZE_56, 56] : a > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, o.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
+  let [_] = (a = S) > 400 ? [o.AvatarSizes.SIZE_56, 56] : a > 300 ? [o.AvatarSizes.SIZE_32, 32] : [o.AvatarSizes.SIZE_24, 24], T = (0, u.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, u.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
     analyticsLocations: L
   } = (0, I.default)(), O = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), b = (0, h.useEmbeddedActivityJoinability)({
     userId: null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -88,7 +88,7 @@ function O(e) {
       guildId: U,
       channelId: E.id,
       users: T
-    }), (0, s.jsx)(u.Text, {
+    }), (0, s.jsx)(o.Text, {
       className: r(j.subheader, {
         [j.small]: 0 === C,
         [j.medium]: 1 === C
@@ -100,7 +100,7 @@ function O(e) {
       }) : R.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
         username: P
       })
-    }), (0, s.jsx)(u.Text, {
+    }), (0, s.jsx)(o.Text, {
       className: r(j.header, {
         [j.small]: 0 === C,
         [j.medium]: 1 === C
@@ -109,7 +109,7 @@ function O(e) {
       children: m.name
     }), (0, s.jsx)("div", {
       className: j.buttons,
-      children: D ? (0, s.jsx)(u.Button, {
+      children: D ? (0, s.jsx)(o.Button, {
         onClick: function(e) {
           e.stopPropagation(), null != N && (0, f.default)({
             applicationId: N.applicationId,
@@ -123,15 +123,15 @@ function O(e) {
         size: function(e) {
           switch (e) {
             case 2:
-              return u.Button.Sizes.LARGE;
+              return o.Button.Sizes.LARGE;
             case 1:
-              return u.Button.Sizes.MEDIUM;
+              return o.Button.Sizes.MEDIUM;
             case 0:
-              return u.Button.Sizes.SMALL
+              return o.Button.Sizes.SMALL
           }
         }(C),
         className: j.button,
-        color: u.Button.Colors.PRIMARY,
+        color: o.Button.Colors.PRIMARY,
         children: R.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
       }) : null
     })]
@@ -148,11 +148,11 @@ function P(e) {
   } = e, {
     AnalyticsLocationProvider: r
   } = (0, I.default)(_.default.ACTIVITY_TILE), {
-    id: o
-  } = t, u = (0, m.default)(), d = (null == u ? void 0 : u.channelId) === i.id && u.applicationId === o, c = (0, p.default)(), [f] = (0, T.default)([o]), {
+    id: u
+  } = t, o = (0, m.default)(), d = (null == o ? void 0 : o.channelId) === i.id && o.applicationId === u, c = (0, p.default)(), [f] = (0, T.default)([u]), {
     url: h
   } = (0, E.default)({
-    applicationId: o,
+    applicationId: u,
     names: L,
     size: 1024
   }), g = !d;
@@ -162,7 +162,7 @@ function P(e) {
       children: (0, s.jsxs)(s.Fragment, {
         children: [!l && d && (0, s.jsx)(S.default, {
           className: j.iframe,
-          embedId: (0, C.default)(i.id, o)
+          embedId: (0, C.default)(i.id, u)
         }), g && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
           className: j.splashImage,
           alt: f.name,

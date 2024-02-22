@@ -9,8 +9,8 @@ var l = n("917351"),
   s = n("446674"),
   i = n("913144"),
   r = n("126939"),
-  u = n("501260"),
-  o = n("152311"),
+  o = n("501260"),
+  u = n("152311"),
   d = n("429928"),
   c = n("36539"),
   f = n("502651"),
@@ -74,14 +74,14 @@ function W(e) {
   }), B[e]
 }
 
-function z(e) {
+function Z(e) {
   !H.has(e) && V.add(e)
 }
 
-function Z(e) {
+function z(e) {
   if ((0, d.default)(e)) return I.SpotifyApplication;
   let t = null != e.application_id ? C.default.getApplication(e.application_id) : null;
-  return null != t ? t : (0, c.default)(e) ? K(e.name) : (0, f.default)(e) && null != e.url ? W(e.url) : (null != e.application_id && z(e.application_id), t)
+  return null != t ? t : (0, c.default)(e) ? K(e.name) : (0, f.default)(e) && null != e.url ? W(e.url) : (null != e.application_id && Z(e.application_id), t)
 }
 
 function X(e) {
@@ -124,12 +124,12 @@ function J(e, t, n) {
           tags: {
             source: "ACTIVITIES"
           }
-        }), null) : e === I.SPOTIFY_APPLICATION_ID ? I.SpotifyApplication : e.startsWith(S.XBOX_APPLICATION_ID_PREFIX) ? K(e.slice(S.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(_.TWITCH_APPLICATION_ID_PREFIX) ? W(e.slice(_.TWITCH_APPLICATION_ID_PREFIX.length)) : (z(e), null)
+        }), null) : e === I.SPOTIFY_APPLICATION_ID ? I.SpotifyApplication : e.startsWith(S.XBOX_APPLICATION_ID_PREFIX) ? K(e.slice(S.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(_.TWITCH_APPLICATION_ID_PREFIX) ? W(e.slice(_.TWITCH_APPLICATION_ID_PREFIX.length)) : (Z(e), null)
       }(c),
       m = null === (l = d.timestamps) || void 0 === l ? void 0 : l.start;
-    if ((0, o.default)(d)) {
+    if ((0, u.default)(d)) {
       let t = (0, r.getIsActivitiesEnabledForCurrentPlatform)(),
-        n = (0, u.default)({
+        n = (0, o.default)({
           activity: d,
           userId: e.id,
           application: f,
@@ -140,11 +140,11 @@ function J(e, t, n) {
           VoiceStateStore: D.default,
           PermissionStore: x.default,
           GuildStore: v.default
-        }) !== u.EmbeddedActivityJoinability.CAN_JOIN;
+        }) !== o.EmbeddedActivityJoinability.CAN_JOIN;
       if (n) continue
     } else if (null == m) continue;
     if (!g.shouldShowActivity(d) || null == f || j.has(f.id)) continue;
-    let A = null != d ? Z(d) : null;
+    let A = null != d ? z(d) : null;
     (null == A || A.id !== f.id) && (d = null);
     let R = [];
     if (null != d && null != d.party && null != d.party.id) {
@@ -155,7 +155,7 @@ function J(e, t, n) {
       }, [])
     } else R = t.filter(e => {
       let t = Y(e.id),
-        n = null != t ? Z(t) : null;
+        n = null != t ? z(t) : null;
       return null != n && n.id === f.id
     });
     (R = a.orderBy(R, [Q], ["desc"])).length !== t.length && (M = !0), j.add(f.id), O.push({

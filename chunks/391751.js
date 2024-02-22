@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("77078"),
   i = n("179137"),
   r = n("561359"),
-  o = n("664336"),
-  u = n("324252"),
+  u = n("664336"),
+  o = n("324252"),
   d = n("782340"),
   c = a.memo(function(e) {
     let {
@@ -33,10 +33,10 @@ var l = n("37983"),
           })
         }
       }, {
-        modalKey: u.SAFETY_TOOLS_MODAL_KEY
+        modalKey: o.SAFETY_TOOLS_MODAL_KEY
       })
     }, [t]);
-    return c ? (0, l.jsx)(o.default.Icon, {
+    return c ? (0, l.jsx)(u.default.Icon, {
       icon: r.default,
       onClick: f,
       tooltip: d.default.Messages.SAFETY_TOOLS_BUTTON_LABEL

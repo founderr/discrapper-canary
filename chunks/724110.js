@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("746379"),
   i = n.n(s),
   r = n("77078"),
-  o = n("716241"),
-  u = n("368639"),
+  u = n("716241"),
+  o = n("368639"),
   d = n("33942"),
   c = n("506885"),
   f = n("401642"),
@@ -37,7 +37,7 @@ function T(e) {
     channelId: t
   });
   a.useEffect(() => {
-    (0, o.trackWithMetadata)(S.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
+    (0, u.trackWithMetadata)(S.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
   }, []);
   let N = e => {
       var t;
@@ -88,7 +88,7 @@ function T(e) {
           className: C.applicationRowContainer,
           children: T ? v.map(e => {
             if (null != x.find(t => t.application.id === e.id)) return null;
-            let n = null != e.description ? (0, u.parseBioReact)(e.description) : null,
+            let n = null != e.description ? (0, o.parseBioReact)(e.description) : null,
               a = h.default.getApplicationIconURL({
                 id: e.id,
                 icon: e.icon,

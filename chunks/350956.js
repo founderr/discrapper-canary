@@ -15,12 +15,12 @@ function _(e) {
     icon: a,
     message: s,
     onClick: _,
-    autoFocus: d
+    autoFocus: i
   } = e;
   return (0, n.jsxs)("button", {
     className: l.container,
     onClick: _,
-    autoFocus: d,
+    autoFocus: i,
     children: [(0, n.jsx)("img", {
       className: l.icon,
       alt: "",

@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  i = s.n(n),
+var i = s("414456"),
+  n = s.n(i),
   r = s("65597"),
   l = s("77078"),
   o = s("521012"),
@@ -25,11 +25,11 @@ var n = s("414456"),
       isFullscreen: t
     } = e, {
       promotion: s
-    } = (0, E.useBogoPromotion)(), n = (0, r.default)([o.default], () => o.default.getPremiumTypeSubscription()), R = (0, c.useIsEligibleForBogoPromotion)();
+    } = (0, E.useBogoPromotion)(), i = (0, r.default)([o.default], () => o.default.getPremiumTypeSubscription()), R = (0, c.useIsEligibleForBogoPromotion)();
     if (!R) return null;
     let m = new Date(s.endDate);
     return (0, a.jsx)("div", {
-      className: i(S.banner, {
+      className: n(S.banner, {
         [S.bannerFullscreen]: t
       }),
       children: (0, a.jsxs)("div", {
@@ -38,7 +38,7 @@ var n = s("414456"),
           children: [(0, a.jsx)(l.Heading, {
             variant: "display-sm",
             color: "always-white",
-            children: null == n ? f.default.Messages.BOGO_BUY_HEADLINE : f.default.Messages.BOGO_UPGRADE_HEADLINE
+            children: null == i ? f.default.Messages.BOGO_BUY_HEADLINE : f.default.Messages.BOGO_UPGRADE_HEADLINE
           }), (0, a.jsx)(l.Text, {
             className: S.countdown,
             variant: "text-sm/medium",
@@ -48,7 +48,7 @@ var n = s("414456"),
           }), (0, a.jsx)(l.Text, {
             variant: "text-sm/medium",
             color: "always-white",
-            children: null == n ? f.default.Messages.BOGO_PERKS_SUBTITLE_NON_SUB_FORMATTED.format({
+            children: null == i ? f.default.Messages.BOGO_PERKS_SUBTITLE_NON_SUB_FORMATTED.format({
               helpCenterLink: u.default.getArticleURL(T.HelpdeskArticles.SUMMER_2023_BOGO)
             }) : f.default.Messages.BOGO_PERKS_SUBTITLE_SUB_FORMATTED.format({
               helpCenterLink: u.default.getArticleURL(T.HelpdeskArticles.SUMMER_2023_BOGO)

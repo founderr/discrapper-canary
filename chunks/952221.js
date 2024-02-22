@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("627445"),
   i = n.n(s),
   r = n("65597"),
-  o = n("550410"),
-  u = n("697218"),
+  u = n("550410"),
+  o = n("697218"),
   d = n("780166"),
   c = n("291499"),
   f = n("154891"),
@@ -22,7 +22,7 @@ function m(e) {
     channelId: n,
     streamerId: s,
     stream: d
-  } = e, m = a.useRef(null), p = (0, r.default)([u.default], () => u.default.getCurrentUser());
+  } = e, m = a.useRef(null), p = (0, r.default)([o.default], () => o.default.getCurrentUser());
   i(null != p, "user cannot be null"), (0, f.default)(m, p, s, n);
   let {
     handleClick: E,
@@ -38,7 +38,7 @@ function m(e) {
     focused: t,
     canvas: m.current
   });
-  return (0, l.jsx)(o.default, {
+  return (0, l.jsx)(u.default, {
     children: (0, l.jsx)("canvas", {
       ref: m,
       onClick: E,

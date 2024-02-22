@@ -28,7 +28,7 @@ var a = n("37983"),
       root_node_id: p,
       success_node_id: N,
       fail_node_id: g
-    } = n, [I, T] = l.useState(p), [S, M] = l.useState(void 0), [j, C] = l.useState(void 0), [b, y] = l.useState([]), [L, A] = l.useState(void 0), D = e => {
+    } = n, [S, I] = l.useState(p), [T, M] = l.useState(void 0), [j, C] = l.useState(void 0), [b, y] = l.useState([]), [L, A] = l.useState(void 0), D = e => {
       var n;
       let {
         destination: a
@@ -43,11 +43,11 @@ var a = n("37983"),
           message_id: e,
           content_type: t.name,
           report_sub_type: r.report_type,
-          current_node: x[I].id,
+          current_node: x[S].id,
           next_node: r.id
         })
       }
-      T(l)
+      I(l)
     }, O = async e => {
       var a;
       let l = v ? await (0, u.submitReport)(n, t, [...b, e]) : await (0, u.submitUnauthenticatedReport)(n, t, [...b, e], h),
@@ -65,11 +65,11 @@ var a = n("37983"),
           message_id: e,
           content_type: t.name,
           report_sub_type: x[r].report_type,
-          current_node: x[I].id,
+          current_node: x[S].id,
           next_node: x[r].id
         })
       }
-      M(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), C(null == l ? void 0 : l.textInput), T(r), y(a), null == E || E("..")
+      M(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), C(null == l ? void 0 : l.textInput), I(r), y(a), null == E || E("..")
     }, k = [], B = [];
     for (let e in x) {
       var G, P;
@@ -91,7 +91,7 @@ var a = n("37983"),
       "aria-labelledby": R,
       children: (0, a.jsx)(r.Slides, {
         width: 440,
-        activeSlide: I,
+        activeSlide: S,
         centered: !1,
         children: w.map(e => (0, a.jsx)(r.Slide, {
           id: e.id,
@@ -104,7 +104,7 @@ var a = n("37983"),
               onModalClose: f.onClose,
               onSelectChild: D,
               onNavigateBack: U,
-              multiSelect: S,
+              multiSelect: T,
               textInput: j,
               successNodeId: N,
               failNodeId: g,

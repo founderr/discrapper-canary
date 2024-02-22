@@ -9,8 +9,8 @@ var l = n("884691"),
   s = n.n(a),
   i = n("298386"),
   r = n("446674"),
-  u = n("862337"),
-  o = n("666020"),
+  o = n("862337"),
+  u = n("666020"),
   d = n("427953"),
   c = n("191225"),
   f = n("534222"),
@@ -70,7 +70,7 @@ function M(e) {
     k = (0, r.useStateFromStores)([m.default], () => m.default.getAllApplicationStreams().some(t => t.guildId === e));
   ! function(e, t) {
     let n = l.useRef(new Set),
-      a = l.useRef(new u.Timeout),
+      a = l.useRef(new o.Timeout),
       {
         shouldSubscribeToGuildMemberUpdates: i
       } = L.default.useExperiment({
@@ -95,19 +95,19 @@ function M(e) {
           let l = new Set(t),
             s = t.filter(e => !n.has(e)),
             i = Array.from(n).filter(e => !l.has(e));
-          (0, o.unsubscribeMembers)(e, i), (0, o.subscribeMembers)(e, s), a()
+          (0, u.unsubscribeMembers)(e, i), (0, u.subscribeMembers)(e, s), a()
         })
       }(e, c, n.current, a.current, () => {
         n.current = new Set(c)
       })
     }, [e, c]), l.useEffect(() => () => {
-      a.current.stop(), (0, o.unsubscribeMembers)(e, Array.from(n.current))
+      a.current.stop(), (0, u.unsubscribeMembers)(e, Array.from(n.current))
     }, [e])
   }(e, M);
   let Y = (0, v.default)(e),
     K = (0, r.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForGuild(e)),
     W = (0, d.useIsActivitiesInTextEnabled)(null === (a = K[0]) || void 0 === a ? void 0 : a.channelId, "GuildMediaState"),
-    z = (0, r.useStateFromStores)([g.default], () => {
+    Z = (0, r.useStateFromStores)([g.default], () => {
       if (W) return K.length > 0;
       for (let e of K) {
         let t = g.default.getChannel(e.channelId);
@@ -115,7 +115,7 @@ function M(e) {
       }
       return !1
     }),
-    Z = (0, r.useStateFromStores)([c.default], () => Array.from(c.default.getSelfEmbeddedActivities().values()).some(t => {
+    z = (0, r.useStateFromStores)([c.default], () => Array.from(c.default.getSelfEmbeddedActivities().values()).some(t => {
       let {
         guildId: n
       } = t;
@@ -127,7 +127,7 @@ function M(e) {
     q = !1,
     $ = !1,
     ee = !1;
-  return P ? (X = !0, Q = (null == D ? void 0 : D.channel_id) === U, J = b, q = P && H, $ = w, ee = Z) : !M && (X = B, Q = null != D, J = y, q = V, $ = k, ee = z), l.useMemo(() => ({
+  return P ? (X = !0, Q = (null == D ? void 0 : D.channel_id) === U, J = b, q = P && H, $ = w, ee = z) : !M && (X = B, Q = null != D, J = y, q = V, $ = k, ee = Z), l.useMemo(() => ({
     audio: X,
     video: q,
     screenshare: $,

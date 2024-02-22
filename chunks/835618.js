@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  i = s.n(n),
+var i = s("414456"),
+  n = s.n(i),
   r = s("77078"),
   l = s("685665"),
   o = s("53253"),
@@ -20,7 +20,7 @@ var n = s("414456"),
     let {
       className: t,
       imageClassName: s,
-      textContainerOverrideStyles: n,
+      textContainerOverrideStyles: i,
       location: I,
       analyticsLocation: T
     } = e, {
@@ -34,10 +34,10 @@ var n = s("414456"),
     }), m = R && S;
     return (0, a.jsx)(f, {
       children: (0, a.jsxs)("div", {
-        className: i(c.container, t),
+        className: n(c.container, t),
         children: [(0, a.jsxs)("div", {
           className: c.textContainer,
-          style: n,
+          style: i,
           children: [(0, a.jsx)(r.Heading, {
             variant: "heading-lg/extrabold",
             className: c.heading,
@@ -56,7 +56,7 @@ var n = s("414456"),
           })]
         }), (0, a.jsx)("img", {
           src: m ? E : _,
-          className: i(c.bannerImage, s),
+          className: n(c.bannerImage, s),
           alt: "gift nitro banner"
         })]
       })

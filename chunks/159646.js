@@ -32,7 +32,7 @@ var i = s("414456"),
     if (p ? t = I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != A && (t = d.default.getDisplayPremiumType(A.planId)), null == t) return null;
     let N = () => l.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
       g = null != A ? d.default.getSkuIdForPlan(A.planId) : null,
-      P = g === _.PremiumSubscriptionSKUs.TIER_1;
+      C = g === _.PremiumSubscriptionSKUs.TIER_1;
     return s = null != R ? R : m || S ? "always-white" : "text-normal", (0, a.jsxs)(r.Card, {
       className: n(T.container, f, {
         [T.lightTextLink]: S,
@@ -46,7 +46,7 @@ var i = s("414456"),
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: s,
-        children: P ? I.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
+        children: C ? I.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
           helpdeskArticle: u.default.getArticleURL(E.HelpdeskArticles.PREMIUM_DETAILS),
           onSubscriptionsClick: N
         }) : I.default.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({

@@ -25,8 +25,8 @@ var a = s("37983"),
   p = s("917247"),
   N = s("478968"),
   g = s("641078"),
-  P = s("400307"),
-  C = s("513516"),
+  C = s("400307"),
+  P = s("513516"),
   O = s("218435"),
   M = s("881155"),
   h = s("646718"),
@@ -40,10 +40,10 @@ let j = e => {
     let {
       isLightTheme: t
     } = e, s = (0, g.getBOGOPillCopy)();
-    return (0, a.jsx)(P.PremiumPillWithSparkles, {
+    return (0, a.jsx)(C.PremiumPillWithSparkles, {
       text: s,
       className: x.bogoPillWithSparkles,
-      colorOptions: t ? P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+      colorOptions: t ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
     })
   },
   G = () => (0, a.jsx)("div", {
@@ -67,7 +67,7 @@ let j = e => {
       alt: n
     })
   },
-  y = e => {
+  B = e => {
     let {
       label: t,
       column1: s,
@@ -90,7 +90,7 @@ let j = e => {
       })]
     })
   },
-  B = e => {
+  y = e => {
     let {
       label: t,
       column1: s,
@@ -167,7 +167,7 @@ var H = e => {
     es = "".concat(et, "/").concat((0, S.getIntervalStringAsNoun)(h.SubscriptionIntervalTypes.MONTH)),
     ea = (0, S.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
     ei = (0, S.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-    en = (0, C.useGetPlanComparisonTableRows)(ea, ei, ee, es),
+    en = (0, P.useGetPlanComparisonTableRows)(ea, ei, ee, es),
     er = (0, g.useIsEligibleForBogoPromotion)();
   if (!W || !w) return null;
   let el = {
@@ -231,10 +231,10 @@ var H = e => {
     withBottomBorder: !1,
     withBottomBorderRadius: !0,
     buttonsRow: null == J
-  }), s = b ? null : null != J || null != q ? (0, a.jsx)(P.PremiumPillWithSparkles, {
+  }), s = b ? null : null != J || null != q ? (0, a.jsx)(C.PremiumPillWithSparkles, {
     text: null != J ? L.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : L.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
     className: x.freeTrialPillWithSparkles,
-    colorOptions: J === h.PremiumSubscriptionSKUs.TIER_0 ? z ? P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : z ? X ? P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+    colorOptions: J === h.PremiumSubscriptionSKUs.TIER_0 ? z ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : z ? X ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
   }) : er ? (0, a.jsx)(j, {
     isLightTheme: z
   }) : (0, a.jsx)(G, {});
@@ -263,11 +263,11 @@ var H = e => {
         }), (0, a.jsxs)("table", {
           className: x.table,
           children: [(0, a.jsx)("thead", {
-            children: (0, a.jsx)(y, {
+            children: (0, a.jsx)(B, {
               ...el
             })
           }), (0, a.jsx)("tbody", {
-            children: en.map((e, t) => (0, i.createElement)(B, {
+            children: en.map((e, t) => (0, i.createElement)(y, {
               ...e,
               key: t
             }))

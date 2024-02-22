@@ -9,13 +9,13 @@ var l = n("446674"),
   s = n("233069"),
   i = n("42203"),
   r = n("305961"),
-  o = n("18494"),
-  u = n("49111");
+  u = n("18494"),
+  o = n("49111");
 
 function d(e, t) {
   let n = (0, l.useStateFromStores)([r.default], () => r.default.getGuild(t)),
     d = (0, l.useStateFromStores)([i.default], () => i.default.getChannel(e)),
-    c = (0, l.useStateFromStores)([o.default], () => o.default.getChannelId(t)),
+    c = (0, l.useStateFromStores)([u.default], () => u.default.getChannelId(t)),
     {
       showOnboardingHome: f
     } = a.default.useExperiment({
@@ -23,5 +23,5 @@ function d(e, t) {
     }, {
       autoTrackExposure: !1
     });
-  return e === c && null != d && null != n && d.getGuildId() === n.id && (0, s.isGuildTextChannelType)(d.type) && n.hasFeature(u.GuildFeatures.WELCOME_SCREEN_ENABLED) && n.hasFeature(u.GuildFeatures.COMMUNITY) && (!f || !n.hasFeature(u.GuildFeatures.GUILD_SERVER_GUIDE))
+  return e === c && null != d && null != n && d.getGuildId() === n.id && (0, s.isGuildTextChannelType)(d.type) && n.hasFeature(o.GuildFeatures.WELCOME_SCREEN_ENABLED) && n.hasFeature(o.GuildFeatures.COMMUNITY) && (!f || !n.hasFeature(o.GuildFeatures.GUILD_SERVER_GUIDE))
 }

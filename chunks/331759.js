@@ -10,8 +10,8 @@ var a = n("627445"),
   s = n.n(a),
   i = n("446674"),
   r = n("77078"),
-  o = n("244201"),
-  u = n("305961"),
+  u = n("244201"),
+  o = n("305961"),
   d = n("957255"),
   c = n("76539"),
   f = n("924506"),
@@ -30,7 +30,7 @@ function E(e) {
     analyticsLocation: I,
     guildScheduledEvent: T,
     ...v
-  } = e, x = (0, o.useAppContext)(), N = null == g ? void 0 : g.getGuildId(), A = (0, i.useStateFromStores)([u.default], () => null != N ? u.default.getGuild(N) : null, [N]);
+  } = e, x = (0, u.useAppContext)(), N = null == g ? void 0 : g.getGuildId(), A = (0, i.useStateFromStores)([o.default], () => null != N ? o.default.getGuild(N) : null, [N]);
   return (t = A, a = g, null != t && null != a && d.default.can(m.Permissions.CREATE_INSTANT_INVITE, a)) ? (0, l.jsx)(h.default, {
     onClick: () => {
       s(null != A, "guild cannot be null"), s(null != g, "channel cannot be null"), ! function(e) {
@@ -39,12 +39,12 @@ function E(e) {
           channel: a,
           streamUserId: s,
           applicationId: i,
-          appContext: o,
-          exitFullScreen: u,
+          appContext: u,
+          exitFullScreen: o,
           analyticsLocation: d,
           guildScheduledEvent: c
         } = e;
-        null == u || u(), (0, r.openModalLazy)(async () => {
+        null == o || o(), (0, r.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("310688").then(n.bind(n, "310688"));
@@ -60,7 +60,7 @@ function E(e) {
           })
         }, {
           modalKey: "stream-invite-modal",
-          contextKey: o === m.AppContext.POPOUT ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
+          contextKey: u === m.AppContext.POPOUT ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
         })
       }({
         guild: A,

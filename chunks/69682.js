@@ -12,8 +12,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("272030"),
-  o = n("327037"),
-  u = n("145079"),
+  u = n("327037"),
+  o = n("145079"),
   d = n("824563"),
   c = n("713135"),
   f = n("401642"),
@@ -27,7 +27,7 @@ function E(e) {
     status: n,
     onSelect: a,
     onContextMenu: r
-  } = e, o = (0, s.useStateFromStores)([d.default], () => d.default.isMobileOnline(t.id));
+  } = e, u = (0, s.useStateFromStores)([d.default], () => d.default.isMobileOnline(t.id));
   return (0, l.jsxs)(i.Clickable, {
     className: p.listRow,
     onClick: () => a(t.id),
@@ -37,9 +37,9 @@ function E(e) {
       "aria-label": t.username,
       size: i.AvatarSizes.SIZE_40,
       status: n,
-      isMobile: o,
+      isMobile: u,
       className: p.listAvatar
-    }), (0, l.jsx)(u.default, {
+    }), (0, l.jsx)(o.default, {
       user: t,
       className: p.listName,
       discriminatorClass: p.listDiscriminator
@@ -49,10 +49,10 @@ function E(e) {
 
 function S(e) {
   let t, {
-      user: u,
+      user: o,
       onClose: d
     } = e,
-    S = (0, s.useStateFromStores)([c.default], () => c.default.getMutualFriends(u.id));
+    S = (0, s.useStateFromStores)([c.default], () => c.default.getMutualFriends(o.id));
 
   function g(e) {
     d(), (0, f.openUserProfileModal)({
@@ -75,8 +75,8 @@ function S(e) {
     })
   }
   return a.useEffect(() => {
-    null == S && (0, o.fetchMutualFriends)(u.id)
-  }, [S, u.id]), t = null == S ? (0, l.jsx)("div", {
+    null == S && (0, u.fetchMutualFriends)(o.id)
+  }, [S, o.id]), t = null == S ? (0, l.jsx)("div", {
     className: p.empty,
     children: (0, l.jsx)(i.Spinner, {})
   }) : 0 === S.length ? (0, l.jsxs)("div", {

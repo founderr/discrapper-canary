@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return N
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("90915"),
-  i = s("446674"),
+var i = s("90915"),
+  n = s("446674"),
   r = s("77078"),
   l = s("901582"),
   o = s("86621"),
@@ -23,14 +23,14 @@ var n = s("90915"),
   R = s("646718"),
   m = s("782340"),
   A = s("571366");
-let N = i.default.connectStores([I.default], () => ({
+let p = n.default.connectStores([I.default], () => ({
   user: I.default.getCurrentUser()
 }))((0, u.default)((0, o.default)(e => {
   let {
     AnalyticsLocationProvider: t
   } = (0, c.default)(d.default.HOME_PAGE_PREMIUM_TAB), {
     isAuthenticated: s,
-    user: i
+    user: n
   } = e;
   return s ? (0, a.jsxs)("div", {
     className: A.homeWrapperNormal,
@@ -47,7 +47,7 @@ let N = i.default.connectStores([I.default], () => ({
         })]
       })
     }), (0, a.jsx)(t, {
-      children: null == i ? (0, a.jsx)(T.default, {
+      children: null == n ? (0, a.jsx)(T.default, {
         align: T.default.Align.CENTER,
         justify: T.default.Justify.CENTER,
         children: (0, a.jsx)(r.Spinner, {
@@ -57,8 +57,8 @@ let N = i.default.connectStores([I.default], () => ({
         entrypoint: R.PremiumMarketingEntrypoints.ApplicationStoreHome
       })
     })]
-  }) : (0, a.jsx)(n.Redirect, {
+  }) : (0, a.jsx)(i.Redirect, {
     to: S.Routes.LOGIN
   })
 })));
-var p = N
+var N = p

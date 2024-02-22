@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("458960"),
-  o = n("446674"),
-  u = n("266491"),
+  u = n("446674"),
+  o = n("266491"),
   d = n("819855"),
   c = n("77078"),
   f = n("841098"),
@@ -156,7 +156,7 @@ function v(e) {
     guildId: g
   } = e, C = (0, f.default)();
   let _ = (t = S, n = a.length, ((0, c.getAvatarSize)(c.AvatarSizes.SIZE_80) + 16) * n > t ? c.AvatarSizes.SIZE_40 : c.AvatarSizes.SIZE_80),
-    I = (0, o.useStateFromStores)([h.default], () => h.default.isFocused()),
+    I = (0, u.useStateFromStores)([h.default], () => h.default.isFocused()),
     v = a.map(e => {
       var t, n;
       if (e.type !== p.ParticipantTypes.USER) return null;
@@ -164,7 +164,7 @@ function v(e) {
         user: a,
         voiceState: i,
         speaking: r,
-        ringing: o
+        ringing: u
       } = e;
       return (0, l.jsx)(T, {
         className: E.participant,
@@ -176,13 +176,13 @@ function v(e) {
           muted: null !== (t = null == i ? void 0 : i.isVoiceMuted()) && void 0 !== t && t,
           deafen: null !== (n = null == i ? void 0 : i.isVoiceDeafened()) && void 0 !== n && n,
           speaking: r,
-          ringing: o,
+          ringing: u,
           onClick: t => null == d ? void 0 : d(e, t),
           onContextMenu: t => null == s ? void 0 : s(e, t)
         }, e.id)
       }, a.id)
     });
-  return (0, l.jsx)(u.default, {
+  return (0, l.jsx)(o.default, {
     component: "div",
     className: i(E.root, r),
     children: v

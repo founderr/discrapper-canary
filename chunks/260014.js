@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n("748820"),
-  u = n("446674"),
+  u = n("748820"),
+  o = n("446674"),
   d = n("913144"),
   c = n("430568"),
   f = n("206230"),
@@ -21,12 +21,12 @@ let m = [h.emoji1, h.emoji2, h.emoji3, h.emoji4],
     let {
       emoji: n,
       onAnimationEnd: s
-    } = e, o = (0, r.sample)(m), u = a.useCallback(() => {
+    } = e, u = (0, r.sample)(m), o = a.useCallback(() => {
       s(n.key)
     }, [n.key, s]);
     return (0, l.jsx)("div", {
-      className: i(h.emoji, o),
-      onAnimationEnd: u,
+      className: i(h.emoji, u),
+      onAnimationEnd: o,
       children: (0, l.jsx)(c.default, {
         emojiId: n.id,
         emojiName: n.name,
@@ -39,7 +39,7 @@ function E(e) {
   let {
     channelId: t,
     callHeight: n
-  } = e, s = (0, u.useStateFromStores)([f.default], () => f.default.useReducedMotion), [i, r] = a.useState([]);
+  } = e, s = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), [i, r] = a.useState([]);
   a.useEffect(() => {
     function e(e) {
       let {
@@ -47,7 +47,7 @@ function E(e) {
         emoji: l
       } = e;
       n === t && !s && null != l && r(e => [...e, {
-        key: (0, o.v4)(),
+        key: (0, u.v4)(),
         ...l
       }])
     }

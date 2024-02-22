@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("394846"),
-  o = n("77078"),
-  u = n("272030"),
+  u = n("77078"),
+  o = n("272030"),
   d = n("754474"),
   c = n("315102"),
   f = n("506885"),
@@ -28,7 +28,7 @@ function E(e) {
     icon: E.application.icon,
     size: 40
   }), g = a.useCallback(e => {
-    (0, u.openContextMenuLazy)(e, async () => {
+    (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("348866").then(n.bind(n, "348866"));
@@ -62,7 +62,7 @@ function E(e) {
   } = E.application;
   return null == _ ? (0, l.jsx)("li", {
     children: C
-  }) : (0, l.jsx)(o.Popout, {
+  }) : (0, l.jsx)(u.Popout, {
     preload: () => (0, f.default)(_.id, S),
     renderPopout: e => (0, l.jsx)(h.default, {
       ...e,

@@ -8,8 +8,8 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  i = s("730290"),
+  i = s("884691"),
+  n = s("730290"),
   r = s("90915"),
   l = s("446674"),
   o = s("971178"),
@@ -25,8 +25,8 @@ var a = s("37983"),
   R = s("393414"),
   m = s("970366"),
   A = s("592433"),
-  N = s("489749"),
-  p = s("75576"),
+  p = s("489749"),
+  N = s("75576"),
   g = s("49111"),
   C = s("782340"),
   P = s("504659");
@@ -36,10 +36,10 @@ let O = (0, f.makeLazy)({
 });
 
 function M(e) {
-  return e < p.PAGE_WIDTH_THRESHOLD ? p.PageSizes.SMALL : p.PageSizes.LARGE
+  return e < N.PAGE_WIDTH_THRESHOLD ? N.PageSizes.SMALL : N.PageSizes.LARGE
 }
 l.default.initialize();
-class h extends n.PureComponent {
+class h extends i.PureComponent {
   componentDidMount() {
     (0, o.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
       e.pathname.startsWith(g.Routes.APPLICATION_STORE) && (0, o.updateLocation)(e)
@@ -81,20 +81,20 @@ class h extends n.PureComponent {
           params: {
             skuId: t,
             applicationId: s,
-            slug: n
+            slug: i
           }
         },
         location: r
       } = e, {
         width: l
-      } = this.props, o = (0, i.parse)(r.search);
+      } = this.props, o = (0, n.parse)(r.search);
       return (0, a.jsx)(d.default, {
         page: g.AnalyticsPages.STORE_LISTING,
         root: !0,
-        children: (0, a.jsx)(N.default, {
+        children: (0, a.jsx)(p.default, {
           skuId: t,
           applicationId: s,
-          slug: n,
+          slug: i,
           location: r,
           storeListingId: o.store_listing_id,
           pageSize: M(l)

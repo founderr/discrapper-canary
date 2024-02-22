@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("748802"),
-  i = s("77078"),
+var i = s("748802"),
+  n = s("77078"),
   r = s("181114"),
   l = s("599110"),
   o = s("598739"),
@@ -20,7 +20,7 @@ var n = s("748802"),
       previousComponent: s
     } = e;
     return (0, a.jsx)(r.default, {
-      color: i.ButtonColors.CUSTOM,
+      color: n.ButtonColors.CUSTOM,
       onlyShineOnHover: !0,
       shineSize: r.ShineSizes.SMALL,
       className: c.seeAllPerksButton,
@@ -33,7 +33,7 @@ var n = s("748802"),
       },
       children: (0, a.jsxs)("div", {
         className: c.seeAllPerksButtonContent,
-        children: [d.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, (0, a.jsx)(n.ChevronSmallRightIcon, {
+        children: [d.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, (0, a.jsx)(i.ChevronSmallRightIcon, {
           color: "currentColor"
         })]
       })

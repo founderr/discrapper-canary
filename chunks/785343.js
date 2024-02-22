@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("549103"),
   r = n("982527"),
-  u = n("162771"),
-  o = n("665382"),
+  o = n("162771"),
+  u = n("665382"),
   d = n("509223"),
   c = n("674644"),
   f = n("512812"),
@@ -20,7 +20,7 @@ var l = n("37983"),
   m = n("545909");
 
 function E() {
-  let [e, t] = a.useState(!1), n = (0, s.useStateFromStores)([u.default], () => u.default.getGuildId()), E = (0, s.useStateFromStores)([r.default], () => r.default.hasFetchedRequestToJoinGuilds), g = (0, f.default)(), I = a.useMemo(() => {
+  let [e, t] = a.useState(!1), n = (0, s.useStateFromStores)([o.default], () => o.default.getGuildId()), E = (0, s.useStateFromStores)([r.default], () => r.default.hasFetchedRequestToJoinGuilds), g = (0, f.default)(), I = a.useMemo(() => {
     let t = (0, c.createFolderNode)({
       folderId: d.SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
       folderName: p.default.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
@@ -44,7 +44,7 @@ function E() {
     onExpandCollapse: () => t(!e),
     folderIconContent: (0, l.jsx)("div", {
       className: m.expandedFolderIconWrapper,
-      children: (0, l.jsx)(o.default, {
+      children: (0, l.jsx)(u.default, {
         width: 24,
         height: 24,
         className: m.pendingIcon

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("449918"),
-  u = n("698882"),
-  o = n("675305"),
+  o = n("698882"),
+  u = n("675305"),
   d = n("393414"),
   c = n("461380"),
   f = n("49111"),
@@ -28,7 +28,7 @@ function m(e, t) {
 let E = a.memo(function(e) {
   let {
     guild: t
-  } = e, n = (0, s.useStateFromStores)([u.default], () => u.default.getNewMemberActions(t.id), [t.id]), E = (0, s.useStateFromStores)([o.default], () => o.default.getCompletedActions(t.id)), g = a.useMemo(() => {
+  } = e, n = (0, s.useStateFromStores)([o.default], () => o.default.getNewMemberActions(t.id), [t.id]), E = (0, s.useStateFromStores)([u.default], () => u.default.getCompletedActions(t.id)), g = a.useMemo(() => {
     if (null == n || null == E) return 0;
     let e = 0;
     return n.forEach(t => {

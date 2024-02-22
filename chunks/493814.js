@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("65597"),
-  u = n("77078"),
-  o = n("719451"),
+  o = n("77078"),
+  u = n("719451"),
   d = n("812204"),
   c = n("685665"),
   f = n("534438"),
@@ -51,7 +51,7 @@ function U() {
       },
       location_stack: t
     })
-  }, [t]), (0, l.jsxs)(u.Clickable, {
+  }, [t]), (0, l.jsxs)(o.Clickable, {
     onClick: () => (0, C.default)({
       analyticsSource: {
         page: y.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL
@@ -104,15 +104,15 @@ function w(e) {
     AnalyticsLocationProvider: a
   } = (0, c.default)(d.default.INVITE_MODAL);
   return (0, l.jsx)(a, {
-    children: (0, l.jsx)(u.ModalRoot, {
-      size: u.ModalSize.DYNAMIC,
+    children: (0, l.jsx)(o.ModalRoot, {
+      size: o.ModalSize.DYNAMIC,
       "aria-labelledby": n,
       transitionState: t,
-      children: (0, l.jsxs)(u.ModalContent, {
+      children: (0, l.jsxs)(o.ModalContent, {
         className: j.errorContent,
         children: [(0, l.jsx)(P, {
           className: j.errorImage
-        }), (0, l.jsx)(u.Heading, {
+        }), (0, l.jsx)(o.Heading, {
           id: n,
           variant: "heading-xl/semibold",
           color: "header-primary",
@@ -180,14 +180,14 @@ function F(e) {
       guildName: t
     });
   return V && (k = b.default.Messages.ACCEPT_INVITE_MODAL_BUTTON), (0, l.jsx)(T, {
-    children: (0, l.jsxs)(u.ModalRoot, {
-      size: u.ModalSize.DYNAMIC,
+    children: (0, l.jsxs)(o.ModalRoot, {
+      size: o.ModalSize.DYNAMIC,
       "aria-labelledby": N,
       transitionState: s,
       className: j.container,
       children: [(0, l.jsx)("div", {
         className: j.contentWrapper,
-        children: (0, l.jsx)(u.Scroller, {
+        children: (0, l.jsx)(o.Scroller, {
           className: j.scroller,
           children: (0, l.jsxs)(E.default, {
             className: j.inviteContent,
@@ -196,7 +196,7 @@ function F(e) {
             children: [(0, l.jsx)("div", {
               id: N,
               className: G.marginBottom20,
-              children: (0, l.jsx)(o.default, {
+              children: (0, l.jsx)(u.default, {
                 invite: C,
                 disableUser: null != L,
                 error: g
@@ -209,7 +209,7 @@ function F(e) {
                 guild: L
               })
             }) : null, (0, l.jsxs)("div", {
-              children: [H ? (0, l.jsx)(U, {}) : null, null == F ? (0, l.jsx)(u.Tooltip, {
+              children: [H ? (0, l.jsx)(U, {}) : null, null == F ? (0, l.jsx)(o.Tooltip, {
                 text: H ? b.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                 position: "bottom",
                 children: e => {

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("750560"),
-  u = n("575136"),
-  o = n("871388"),
+  o = n("575136"),
+  u = n("871388"),
   d = n("152311"),
   c = n("419830"),
   f = n("305961"),
@@ -51,7 +51,7 @@ function L(e) {
     }, [e, t]);
     (0, r.useSubscribeGuildMembers)(n)
   }(f, E);
-  let S = (0, u.default)(f),
+  let S = (0, o.default)(f),
     L = new Map;
   S.forEach(e => {
     L.set(e.application.id, e)
@@ -78,11 +78,11 @@ function L(e) {
         if (null != n && !(0, d.default)(n)) {
           var l, a, s, i;
           let r = "".concat(null !== (a = n.application_id) && void 0 !== a ? a : "", ":").concat(null !== (s = null === (l = n.party) || void 0 === l ? void 0 : l.id) && void 0 !== s ? s : t.user.id),
-            u = null !== (i = e[r]) && void 0 !== i ? i : {
+            o = null !== (i = e[r]) && void 0 !== i ? i : {
               members: [],
               activity: n
             };
-          u.members.push(t), !(0, o.default)(u.activity, N.ActivityFlags.JOIN) && (u.activity = n), e[r] = u
+          o.members.push(t), !(0, u.default)(o.activity, N.ActivityFlags.JOIN) && (o.activity = n), e[r] = o
         }
       }), Object.values(e)
     }, [x], s.statesWillNeverBeEqual),
@@ -143,17 +143,17 @@ function v(e) {
     channel: t,
     isChannelSelected: n,
     voiceStatesCount: a
-  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([p.default], () => p.default.hasVideo(t.id)), u = (0, E.default)({
+  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([p.default], () => p.default.hasVideo(t.id)), o = (0, E.default)({
     channel: t,
     locked: i,
     video: r,
     selected: n
-  }), o = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), d = (0, c.getChannelIconComponent)(t, o);
+  }), u = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), d = (0, c.getChannelIconComponent)(t, u);
   return null == d ? null : (0, l.jsxs)("div", {
     className: A.popoutHeaderContainer,
     children: [(0, l.jsx)(I.default, {
       channel: t
-    }), u ? (0, l.jsx)(_.default, {
+    }), o ? (0, l.jsx)(_.default, {
       userCount: a,
       video: r,
       channel: t

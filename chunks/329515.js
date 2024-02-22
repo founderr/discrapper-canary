@@ -15,14 +15,14 @@ var l = n("37983"),
   s = n("917351"),
   i = n("246846"),
   r = n("271938"),
-  o = n("718517"),
-  u = n("449008"),
+  u = n("718517"),
+  o = n("449008"),
   d = n("679243"),
   c = n("99795"),
   f = n("11417");
 let h = 112,
   m = 16 / 9 * h + 8,
-  p = 10 * o.default.Millis.SECOND;
+  p = 10 * u.default.Millis.SECOND;
 
 function E(e) {
   var t;
@@ -42,7 +42,7 @@ function S(e, t) {
   }, [t]);
   let r = a.useRef({}),
     {
-      visibleParticipants: o,
+      visibleParticipants: u,
       participantTileWidth: d
     } = a.useMemo(() => {
       let n = Date.now(),
@@ -63,15 +63,15 @@ function S(e, t) {
               }(e.lastSpoke)).concat((0, i.default)(e.userNick, e.user))
           }
         })(e, n)),
-        [a, o] = (0, s.partition)(l, c.isStreamParticipant),
-        d = o.findIndex(E),
-        f = null; - 1 !== d && (f = o[d], o.splice(d, 1));
+        [a, u] = (0, s.partition)(l, c.isStreamParticipant),
+        d = u.findIndex(E),
+        f = null; - 1 !== d && (f = u[d], u.splice(d, 1));
       let h = null != f ? e - m - 8 : e,
         S = Math.max(0, Math.min(Math.floor((h - 8) / 132), 12, t.length)),
         g = Math.min((h - 8) / S - 8, m),
         C = Math.max(0, S - a.length),
         _ = a.slice(0, S),
-        I = o.slice(0, C),
+        I = u.slice(0, C),
         T = Array(C);
       if (C > 0) {
         let e = [];
@@ -86,7 +86,7 @@ function S(e, t) {
           T[t] = n
         }
       }
-      let v = T.filter(u.isNotNullish),
+      let v = T.filter(o.isNotNullish),
         x = (0, s.keyBy)((0, s.range)(v.length), e => v[e].id);
       r.current = x;
       let N = [..._, ...v];
@@ -96,7 +96,7 @@ function S(e, t) {
       }
     }, [e, t, n]);
   return {
-    visibleParticipants: o,
+    visibleParticipants: u,
     participantTileWidth: d
   }
 }
@@ -109,8 +109,8 @@ function g(e) {
     onDoubleClick: s,
     onContextMenu: i,
     onClick: r,
-    channel: o,
-    inCall: u,
+    channel: u,
+    inCall: o,
     popoutWindow: c,
     paused: h = !1
   } = e, p = null != c;
@@ -127,14 +127,14 @@ function g(e) {
         children: (0, l.jsx)(d.default, {
           participant: e,
           selected: a === e.id,
-          channel: o,
+          channel: u,
           className: f.tile,
           fit: d.CallTileFit.COVER,
           onClick: r,
           onDoubleClick: s,
           onContextMenu: i,
           width: t ? m : n,
-          inCall: u,
+          inCall: o,
           paused: h,
           inPopout: p
         })

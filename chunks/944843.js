@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("907002"),
-  u = n("446674"),
-  o = n("669491"),
+  o = n("446674"),
+  u = n("669491"),
   d = n("77078"),
   c = n("206230"),
   f = n("149362"),
@@ -33,13 +33,13 @@ function T(e) {
   let {
     guildChannels: n,
     jumpToVoiceChannels: s
-  } = e, r = n.getCategoryFromSection(n.voiceChannelsSectionNumber), u = (0, f.default)(n.id), c = a.useCallback(e => {
+  } = e, r = n.getCategoryFromSection(n.voiceChannelsSectionNumber), o = (0, f.default)(n.id), c = a.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), s()
   }, [s]), h = null !== (t = null == r ? void 0 : r.getChannelRecords()) && void 0 !== t ? t : [], p = (0, g.computeSummarizedVoiceUsers)({
     channels: h,
     selectedChannelId: null,
     selectedVoiceChannelId: null,
-    voiceStates: u
+    voiceStates: o
   });
   return (0, l.jsxs)(d.Clickable, {
     className: i(S.bar),
@@ -48,7 +48,7 @@ function T(e) {
       className: S.voiceChannelsIcon,
       width: 14,
       height: 14,
-      color: o.default.unsafe_rawColors.GREEN_330.css
+      color: u.default.unsafe_rawColors.GREEN_330.css
     }), (0, l.jsx)(d.Text, {
       variant: "text-xs/semibold",
       color: "text-positive",
@@ -72,12 +72,12 @@ function A(e) {
     position: t,
     guildChannels: n,
     guildChannelsVersion: s,
-    jumpToVoiceChannels: o,
+    jumpToVoiceChannels: u,
     jumpToChannel: f
   } = e, {
     bottomBar: C,
     topBar: E
-  } = (0, u.useStateFromStoresObject)([I.default], () => I.default.getUnreadStateForGuildId(n.id)), g = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), A = (0, u.useStateFromStores)([h.default], () => h.default.isFocused()), {
+  } = (0, o.useStateFromStoresObject)([I.default], () => I.default.getUnreadStateForGuildId(n.id)), g = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), A = (0, o.useStateFromStores)([h.default], () => h.default.isFocused()), {
     mode: L,
     mentionCount: v,
     targetChannelId: x
@@ -130,7 +130,7 @@ function A(e) {
           })
         })
       }) : L === I.UnreadBarMode.VOICE_CHANNELS ? (0, l.jsx)(T, {
-        jumpToVoiceChannels: o,
+        jumpToVoiceChannels: u,
         guildChannels: n,
         guildChannelsVersion: s
       }) : void 0

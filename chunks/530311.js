@@ -1,23 +1,23 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return i
+    return n
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("75196");
+var i = s("75196");
 
-function i(e) {
+function n(e) {
   let {
     width: t = 24,
     height: s = 24,
-    color: i = "currentColor",
+    color: n = "currentColor",
     foreground: r,
     ...l
   } = e;
   return (0, a.jsx)("svg", {
-    ...(0, n.default)(l),
+    ...(0, i.default)(l),
     width: t,
     height: s,
     viewBox: "0 0 24 24",
@@ -26,7 +26,7 @@ function i(e) {
       fillRule: "evenodd",
       children: [(0, a.jsx)("path", {
         className: r,
-        fill: i,
+        fill: n,
         d: "M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
       }), (0, a.jsx)("rect", {
         width: "24",

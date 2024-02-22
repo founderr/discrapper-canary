@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   WhatsNewAvatarDecoRollout: function() {
-    return n
+    return i
   },
   useWhatsNewAvatarDecoRollout: function() {
-    return i
+    return n
   },
   WhatsNewProfileFXRollout: function() {
     return r
@@ -14,7 +14,7 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("862205");
-let n = (0, a.createExperiment)({
+let i = (0, a.createExperiment)({
     kind: "user",
     id: "2023-09_whats_new_drop_1_flip",
     label: "What's New Drop 1",
@@ -29,7 +29,7 @@ let n = (0, a.createExperiment)({
       }
     }]
   }),
-  i = () => n.useExperiment({
+  n = () => i.useExperiment({
     location: "experiment_hook"
   }),
   r = (0, a.createExperiment)({

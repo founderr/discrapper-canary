@@ -10,27 +10,27 @@ var a = n("414456"),
   s = n.n(a),
   i = n("77078"),
   r = n("227231"),
-  o = n("782340"),
-  u = n("267678"),
+  u = n("782340"),
+  o = n("267678"),
   d = function(e) {
     let {
       className: t,
       quest: n
     } = e;
     return (0, l.jsxs)("div", {
-      className: s(u.wrapper, t),
+      className: s(o.wrapper, t),
       style: {
         color: n.config.colors.primary
       },
       children: [(0, l.jsx)("img", {
         alt: n.config.messages.rewardName,
-        className: u.rewardTile,
+        className: o.rewardTile,
         src: (0, r.getRewardAssetUrl)(n.id)
       }), (0, l.jsx)(i.Text, {
-        className: u.instructions,
+        className: o.instructions,
         variant: "text-sm/normal",
         color: "text-normal",
-        children: o.default.Messages.QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD.format({
+        children: u.default.Messages.QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD.format({
           gameTitle: n.config.messages.gameTitle,
           questReward: n.config.messages.rewardNameWithArticle,
           streamingDurationRequirement: n.config.streamDurationRequirementMinutes

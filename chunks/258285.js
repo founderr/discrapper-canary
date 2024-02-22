@@ -15,8 +15,8 @@ var l = n("37983"),
   s = n("498139"),
   i = n("676143"),
   r = n("12896"),
-  u = n("808072"),
-  o = n("319839"),
+  o = n("808072"),
+  u = n("319839"),
   d = n("708186"),
   c = n("249181"),
   f = n("49111"),
@@ -24,8 +24,8 @@ var l = n("37983"),
   C = n("216659");
 
 function p(e, t, n) {
-  if (e === o.SECTION_INDEX_COMMUNITY) return c.HEIGHT_BUFFER;
-  if (e === o.SECTION_INDEX_UNCATEGORIZED_CHANNELS) return t.hasFeature(f.GuildFeatures.HUB) ? 0 : c.HEIGHT_BUFFER;
+  if (e === u.SECTION_INDEX_COMMUNITY) return c.HEIGHT_BUFFER;
+  if (e === u.SECTION_INDEX_UNCATEGORIZED_CHANNELS) return t.hasFeature(f.GuildFeatures.HUB) ? 0 : c.HEIGHT_BUFFER;
   if (e === n.voiceChannelsSectionNumber) {
     var l;
     let t = n.getCategoryFromSection(e);
@@ -39,11 +39,11 @@ function p(e, t, n) {
 
 function m(e, t) {
   switch (e) {
-    case o.SECTION_INDEX_COMMUNITY:
+    case u.SECTION_INDEX_COMMUNITY:
       return "hoisted-spacer";
-    case o.SECTION_INDEX_UNCATEGORIZED_CHANNELS:
+    case u.SECTION_INDEX_UNCATEGORIZED_CHANNELS:
       return "uncategorized-spacer";
-    case o.SECTION_INDEX_FAVORITES:
+    case u.SECTION_INDEX_FAVORITES:
       return "favorites";
     case t.recentsSectionNumber:
       return "recents-header";
@@ -74,20 +74,20 @@ var E = a.memo(function(e) {
     null != E && l.includes(E) && (t = (0, i.getFirstRouteFor)(p)), (0, i.clearRecentChannels)(n.id, l, t)
   }, [n.id, E, p, m]);
   switch (t) {
-    case o.SECTION_INDEX_COMMUNITY:
+    case u.SECTION_INDEX_COMMUNITY:
       return (0, l.jsx)("div", {
         style: {
           height: c.HEIGHT_BUFFER
         }
       });
-    case o.SECTION_INDEX_UNCATEGORIZED_CHANNELS:
+    case u.SECTION_INDEX_UNCATEGORIZED_CHANNELS:
       if (n.hasFeature(f.GuildFeatures.HUB)) return null;
       return (0, l.jsx)("div", {
         style: {
           height: c.HEIGHT_BUFFER
         }
       });
-    case o.SECTION_INDEX_FAVORITES:
+    case u.SECTION_INDEX_FAVORITES:
       return (0, l.jsx)(d.NonChannelCategory, {
         name: I ? h.default.Messages.PINNED_CHANNELS : h.default.Messages.FAVORITES
       });
@@ -110,7 +110,7 @@ var E = a.memo(function(e) {
         })]
       })
     }
-    case o.SECTION_INDEX_FIRST_NAMED_CATEGORY: {
+    case u.SECTION_INDEX_FIRST_NAMED_CATEGORY: {
       let e = p.getNamedCategoryFromSection(t);
       if (null == e) return null;
       return (0, l.jsx)(d.default, {
@@ -119,7 +119,7 @@ var E = a.memo(function(e) {
         disableManageChannels: g,
         children: (0, l.jsx)(r.default, {
           inlineSpecs: c.TUTORIAL_INLINE_SPECS,
-          arrowAlignment: u.ArrowAlignments.TOP,
+          arrowAlignment: o.ArrowAlignments.TOP,
           tutorialId: "organize-by-topic",
           position: "right"
         })

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("913144"),
-  o = n("267363"),
-  u = n("27978"),
+  u = n("267363"),
+  o = n("27978"),
   d = n("660478"),
   c = n("599110"),
   f = n("15433"),
@@ -53,7 +53,7 @@ var l = n("37983"),
     a.useEffect(() => () => {
       let e = d.default.lastMessageId(x.id);
       null != e && r.default.wait(() => {
-        (0, o.ack)(x.id, !0, !0, e)
+        (0, u.ack)(x.id, !0, !0, e)
       })
     }, [x.id]);
     let y = a.useMemo(() => null != M ? (0, C.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
@@ -76,7 +76,7 @@ var l = n("37983"),
       w = "" !== O,
       {
         showHubEventsList: F
-      } = u.default.useExperiment({
+      } = o.default.useExperiment({
         guildId: null !== (t = N.id) && void 0 !== t ? t : "",
         location: "6f7fb0_1"
       }, {
@@ -92,7 +92,7 @@ var l = n("37983"),
       })
     }, [x.id, N.id, A]);
     let k = (0, E.useCanCreateOrAddGuildInDirectory)(x),
-      V = k ? () => {
+      B = k ? () => {
         (0, i.openModalLazy)(async () => {
           let {
             default: e
@@ -106,7 +106,7 @@ var l = n("37983"),
           })
         })
       } : void 0,
-      B = e => {
+      V = e => {
         0 !== D.trim().length && e.charCode === T.KeyboardKeys.ENTER && (h.searchDirectoryEntries(x.id, D), c.default.track(T.AnalyticEvents.GUILD_DIRECTORY_SEARCH, {
           directory_channel_id: x.id,
           directory_guild_id: N.id
@@ -119,9 +119,9 @@ var l = n("37983"),
       searchQuery: D,
       setSearchQuery: U,
       mostRecentQuery: O,
-      handleSearchKeyPress: B,
+      handleSearchKeyPress: V,
       handleClearSearch: H,
-      handleCreateOrAddGuild: V,
+      handleCreateOrAddGuild: B,
       searchResults: b,
       searchFetching: P
     }) : null == y && null == A ? (0, l.jsx)("div", {
@@ -133,15 +133,15 @@ var l = n("37983"),
       className: v.pageContainer,
       children: (0, l.jsx)(S.default, {
         guild: N,
-        onAddGuild: V
+        onAddGuild: B
       })
     }) : (0, l.jsx)(g.default, {
       channel: x,
       searchQuery: D,
       setSearchQuery: U,
-      handleSearchKeyPress: B,
+      handleSearchKeyPress: V,
       handleClearSearch: H,
-      handleCreateOrAddGuild: V,
+      handleCreateOrAddGuild: B,
       currentCategoryId: A,
       handleSelectCategory: e => {
         h.selectDirectoryCategory(x.id, e)
