@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   useChannelSafetyWarning: function() {
-    return i
+    return r
   }
 });
 var a = n("884691"),
-  u = n("446674"),
-  r = n("764828"),
-  s = n("13427");
+  s = n("446674"),
+  l = n("764828"),
+  i = n("13427");
 
-function i(e, t, n) {
-  let i = (0, u.useStateFromStores)([r.default], () => r.default.getChannelSafetyWarnings(e), [e]),
-    l = i.filter(e => e.type === t);
+function r(e, t, n) {
+  let r = (0, s.useStateFromStores)([l.default], () => l.default.getChannelSafetyWarnings(e), [e]),
+    o = r.filter(e => e.type === t);
   return a.useEffect(() => {
-    t === r.SafetyWarningTypes.STRANGER_DANGER && l.length > 0 && s.StrangerDangerTeensExperiment.trackExposure({
+    t === l.SafetyWarningTypes.STRANGER_DANGER && o.length > 0 && i.StrangerDangerTeensExperiment.trackExposure({
       location: n
     })
-  }, [t, l.length, n]), l.find(e => null == e.dismiss_timestamp)
+  }, [t, o.length, n]), o.find(e => null == e.dismiss_timestamp)
 }

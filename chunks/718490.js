@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("697218"),
   C = n("98292"),
   p = n("351825"),
-  m = n("956089"),
-  E = n("664336"),
+  E = n("956089"),
+  m = n("664336"),
   g = n("811305"),
   S = n("117362"),
   _ = n("449008"),
@@ -94,7 +94,7 @@ function v(e) {
   return 0 === d.getNicknameGuildPairs().length && 0 === l.length ? (0, a.jsx)("div", {
     className: I.spacer
   }) : (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(E.Divider, {}), (0, a.jsx)(m.TextBadge, {
+    children: [(0, a.jsx)(m.Divider, {}), (0, a.jsx)(E.TextBadge, {
       text: M.default.Messages.AKA,
       disableColor: !0,
       className: I.akaBadge

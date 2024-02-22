@@ -43,15 +43,15 @@ function c(e) {
       let e = i.random(1, a);
       return C += u * c + f * c + (e - 1) * h * c, e
     }),
-    m = p.map((e, t) => t),
-    E = [];
-  for (; E.length < s;) {
+    E = p.map((e, t) => t),
+    m = [];
+  for (; m.length < s;) {
     let e = d();
-    E.push([m.splice(i.random(0, m.length - 1), 1)[0], e]), C += e.height + r.HEIGHT_ATTACHMEMT_PADDING * c
+    m.push([E.splice(i.random(0, E.length - 1), 1)[0], e]), C += e.height + r.HEIGHT_ATTACHMEMT_PADDING * c
   }
   return {
     messages: p,
-    attachmentSpecs: E,
+    attachmentSpecs: m,
     totalHeight: C,
     groupSpacing: u
   }

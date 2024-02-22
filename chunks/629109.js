@@ -8,24 +8,24 @@ var s = n("913144"),
   u = n("504385"),
   a = n("439141"),
   i = n("533222"),
-  d = n("42887"),
-  o = n("599110"),
-  p = n("709681"),
-  c = n("12307"),
+  o = n("42887"),
+  d = n("599110"),
+  c = n("709681"),
+  p = n("12307"),
   r = n("49111"),
   l = n("353927");
 
 function f() {
-  (0, p.playSound)("mention3")
+  (0, c.playSound)("mention3")
 }
 
 function _(e, t, n, s, u) {
   if (t === n) return;
   let a = e[t],
-    d = e[n];
-  o.default.track(r.AnalyticEvents.MEDIA_DEVICE_CHANGED, {
+    o = e[n];
+  d.default.track(r.AnalyticEvents.MEDIA_DEVICE_CHANGED, {
     device_from_name: i.default.getCertifiedDeviceName(t, null != a ? a.name : ""),
-    device_to_name: i.default.getCertifiedDeviceName(n, null != d ? d.name : ""),
+    device_to_name: i.default.getCertifiedDeviceName(n, null != o ? o.name : ""),
     device_type: s,
     device_is_certified: i.default.isCertified(n),
     location: u
@@ -52,7 +52,7 @@ var A = {
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return g() ? Promise.resolve() : (S({
       usedKeybind: n
-    }), d.default.isEnabled()) ? s.default.dispatch({
+    }), o.default.isEnabled()) ? s.default.dispatch({
       type: "AUDIO_TOGGLE_SELF_MUTE",
       context: e,
       syncRemote: t
@@ -131,7 +131,7 @@ var A = {
       context: n,
       mode: e,
       options: {
-        ...d.default.getModeOptions(n),
+        ...o.default.getModeOptions(n),
         ...t
       }
     })
@@ -151,8 +151,8 @@ var A = {
   setInputDevice(e, t) {
     if (!g()) {
       if (null != t) {
-        let n = d.default.getInputDevices(),
-          s = d.default.getInputDeviceId();
+        let n = o.default.getInputDevices(),
+          s = o.default.getInputDeviceId();
         _(n, s, e, "Audio Input", t)
       }
       s.default.dispatch({
@@ -164,8 +164,8 @@ var A = {
   setOutputDevice(e, t) {
     if (!g()) {
       if (null != t) {
-        let n = d.default.getOutputDevices(),
-          s = d.default.getOutputDeviceId();
+        let n = o.default.getOutputDevices(),
+          s = o.default.getOutputDeviceId();
         _(n, s, e, "Audio Output", t)
       }
       s.default.dispatch({
@@ -177,8 +177,8 @@ var A = {
   setVideoDevice(e, t) {
     if (!g()) {
       if (null != t) {
-        let n = d.default.getVideoDevices(),
-          s = d.default.getVideoDeviceId();
+        let n = o.default.getVideoDevices(),
+          s = o.default.getVideoDeviceId();
         _(n, s, e, "Video", t)
       }
       s.default.dispatch({
@@ -293,7 +293,7 @@ var A = {
     })
   },
   setGoLiveSource(e) {
-    (null == e ? void 0 : e.qualityOptions) != null && (0, c.trackStreamSettingsUpdate)(e.qualityOptions.preset, e.qualityOptions.resolution, e.qualityOptions.frameRate), s.default.dispatch({
+    (null == e ? void 0 : e.qualityOptions) != null && (0, p.trackStreamSettingsUpdate)(e.qualityOptions.preset, e.qualityOptions.resolution, e.qualityOptions.frameRate), s.default.dispatch({
       type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE",
       settings: e
     })

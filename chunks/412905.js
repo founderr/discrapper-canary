@@ -15,10 +15,10 @@ n("884691");
 var u = n("77078"),
   a = n("913144"),
   i = n("605250"),
-  d = n("42887"),
-  o = n("227602"),
-  p = n("471671"),
-  c = n("599110"),
+  o = n("42887"),
+  d = n("227602"),
+  c = n("471671"),
+  p = n("599110"),
   r = n("360782"),
   l = n("49111"),
   f = n("180524"),
@@ -38,7 +38,7 @@ function E() {
 }
 
 function g() {
-  return !d.default.isSupported() && ((0, u.openModal)(e => (0, s.jsx)(u.ConfirmModal, {
+  return !o.default.isSupported() && ((0, u.openModal)(e => (0, s.jsx)(u.ConfirmModal, {
     header: _.default.Messages.UNSUPPORTED_BROWSER,
     confirmText: _.default.Messages.DOWNLOAD_APP,
     cancelText: _.default.Messages.CANCEL,
@@ -53,7 +53,7 @@ function g() {
 }
 
 function S(e) {
-  c.default.track(l.AnalyticEvents.PERMISSIONS_ACKED, {
+  p.default.track(l.AnalyticEvents.PERMISSIONS_ACKED, {
     type: "audio",
     action: e
   })
@@ -61,9 +61,9 @@ function S(e) {
 
 function A() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  return g() ? Promise.resolve(!1) : (c.default.track(l.AnalyticEvents.PERMISSIONS_REQUESTED, {
+  return g() ? Promise.resolve(!1) : (p.default.track(l.AnalyticEvents.PERMISSIONS_REQUESTED, {
     type: "audio"
-  }), d.default.getMediaEngine().enable().then(() => {
+  }), o.default.getMediaEngine().enable().then(() => {
     a.default.dispatch({
       type: "MEDIA_ENGINE_SET_AUDIO_ENABLED",
       enabled: !0,
@@ -89,12 +89,12 @@ function A() {
 function D(e) {
   let {
     usedKeybind: t = !1
-  } = e, n = o.default.getKeybindForAction(l.GlobalKeybindActions.TOGGLE_MUTE, !1, !0);
-  c.default.track(l.AnalyticEvents.INPUT_MUTE_TOGGLED, {
-    enabled: !d.default.isSelfMute(),
-    custom_keybind_assigned: null != n && n.id !== o.DEFAULT_MUTE_KEYBIND.id,
+  } = e, n = d.default.getKeybindForAction(l.GlobalKeybindActions.TOGGLE_MUTE, !1, !0);
+  p.default.track(l.AnalyticEvents.INPUT_MUTE_TOGGLED, {
+    enabled: !o.default.isSelfMute(),
+    custom_keybind_assigned: null != n && n.id !== d.DEFAULT_MUTE_KEYBIND.id,
     used_keybind: t,
-    app_in_focus: p.default.isFocused(),
+    app_in_focus: c.default.isFocused(),
     overlay_activated: null != (0, r.default)()
   })
 }

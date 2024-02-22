@@ -8,9 +8,9 @@ var a = n("37983"),
   l = n("884691"),
   i = n("77078"),
   u = n("390236"),
-  d = n("292508"),
-  s = n("383294"),
-  r = n("913452"),
+  s = n("292508"),
+  r = n("383294"),
+  d = n("913452"),
   o = n("533466"),
   c = n("49111"),
   f = n("765479");
@@ -20,7 +20,7 @@ function _(e) {
     windowKey: t,
     channel: n
   } = e;
-  return (0, a.jsx)(d.default, {
+  return (0, a.jsx)(s.default, {
     withTitleBar: !0,
     windowKey: t,
     title: n.name,
@@ -36,9 +36,9 @@ function _(e) {
 }
 
 function E(e, t) {
-  let n = (0, r.useOpenInPopoutExperiment)(t),
+  let n = (0, d.useOpenInPopoutExperiment)(t),
     u = l.useCallback(() => {
-      s.open("".concat(c.PopoutWindowKeys.CHANNEL_POPOUT, "-").concat(e.id), t => (0, a.jsx)(_, {
+      r.open("".concat(c.PopoutWindowKeys.CHANNEL_POPOUT, "-").concat(e.id), t => (0, a.jsx)(_, {
         windowKey: t,
         channel: e
       }), {

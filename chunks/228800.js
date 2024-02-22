@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("427953"),
   C = n("871388"),
   p = n("389153"),
-  m = n("56947"),
-  E = n("386045"),
+  E = n("56947"),
+  m = n("386045"),
   g = n("734217"),
   S = n("139321"),
   _ = n("562228"),
@@ -34,8 +34,8 @@ var a = n("37983"),
   y = n("430025"),
   O = n("659500"),
   D = n("773336"),
-  j = n("412861"),
-  P = n("79254"),
+  P = n("412861"),
+  j = n("79254"),
   b = n("64096"),
   H = n("49111"),
   F = n("80028"),
@@ -54,13 +54,13 @@ var a = n("37983"),
       Y = (0, f.useAppContext)(),
       X = s.useRef(null),
       q = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
-      J = (0, r.useStateFromStores)([E.default], () => E.default.getSettings().clipsEnabled),
-      Q = (0, r.useStateFromStores)([E.default], () => E.default.getLastClipsSession()),
-      $ = (0, r.useStateFromStoresArray)([E.default], () => E.default.getNewClipIds()),
+      J = (0, r.useStateFromStores)([m.default], () => m.default.getSettings().clipsEnabled),
+      Q = (0, r.useStateFromStores)([m.default], () => m.default.getLastClipsSession()),
+      $ = (0, r.useStateFromStoresArray)([m.default], () => m.default.getNewClipIds()),
       ee = (0, r.useStateFromStores)([I.default], () => null == I.default.getCurrentSidebarChannelId(V.id)),
       {
         showClipsHeaderEntrypoint: et
-      } = m.ClipsExperiment.useExperiment({
+      } = E.ClipsExperiment.useExperiment({
         location: "ChannelAttachButton"
       }, {
         autoTrackExposure: !1
@@ -68,15 +68,15 @@ var a = n("37983"),
       en = (0, r.useStateFromStores)([S.HotspotStore], () => S.HotspotStore.hasHotspot(S.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
       ea = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, F.CLIPS_GALLERY_MODAL_KEY)),
       es = (0, r.useStateFromStores)([N.default], () => N.default.hasLayers()),
-      el = (0, r.useStateFromStores)([E.default], () => E.default.hasClips()),
+      el = (0, r.useStateFromStores)([m.default], () => m.default.hasClips()),
       [ei, er] = s.useState(null),
-      eo = (0, m.useEnableClips)() && (J || el),
+      eo = (0, E.useEnableClips)() && (J || el),
       eu = V.isPrivate(),
       ed = (0, r.useStateFromStores)([v.default], () => eu || v.default.can(H.Permissions.ATTACH_FILES, V) && v.default.can(H.Permissions.SEND_MESSAGES, V)),
       ec = (0, c.default)(Q);
     (null == ec ? void 0 : ec.newClipIds.length) !== (null == Q ? void 0 : Q.newClipIds.length) && (null !== (t = null == Q ? void 0 : Q.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ei && en && ee && !ea && !et && !es && er("recentClips");
     let ef = (e, t, n) => {
-      null != t && "ETOOLARGE" === t.code ? (0, j.showUploadFileSizeExceededError)(V, []) : (0, j.promptToUpload)(e, V, W, {
+      null != t && "ETOOLARGE" === t.code ? (0, P.showUploadFileSizeExceededError)(V, []) : (0, P.promptToUpload)(e, V, W, {
         requireConfirm: !0,
         showLargeMessageDialog: n
       }), O.ComponentDispatch.dispatchToLastSubscribed(H.ComponentActions.TEXTAREA_FOCUS)
@@ -106,8 +106,8 @@ var a = n("37983"),
     });
     let eC = (0, A.useCanStartPublicThread)(V),
       ep = (0, A.useCanStartPrivateThread)(V),
-      em = !M.UseLegacyChatInput.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
-      eE = (0, r.useStateFromStores)([v.default, T.default], () => (0, p.canUseApplicationCommands)(v.default, T.default, K, V)),
+      eE = !M.UseLegacyChatInput.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
+      em = (0, r.useStateFromStores)([v.default, T.default], () => (0, p.canUseApplicationCommands)(v.default, T.default, K, V)),
       eg = (0, _.useCanPostPollsInChannel)(null != V ? V : void 0),
       eS = (0, u.useRedesignIconContext)().enabled,
       e_ = (0, h.useActivitiesInTextButtonVisibility)(V.id, "ChannelAttachButton"),
@@ -115,9 +115,9 @@ var a = n("37983"),
       eA = (0, b.default)({
         canAttachFiles: ed,
         canStartThreads: eC || ep,
-        useSlate: em,
+        useSlate: eE,
         hasClips: eo,
-        canUseApplicationCommands: eE,
+        canUseApplicationCommands: em,
         channel: V,
         activities: q,
         newClipsCount: eT,
@@ -168,7 +168,7 @@ var a = n("37983"),
               lastClipsSession: Q
             });
           case "attachMenu":
-            return (0, a.jsx)(P.default, {
+            return (0, a.jsx)(j.default, {
               ...e,
               onClose: () => er(null),
               options: eA,

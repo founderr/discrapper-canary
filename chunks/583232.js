@@ -16,14 +16,14 @@
           value: e
         }), a.statusExpiresAtMs = null != o ? "".concat(Date.now() + o) : "0"
       }, n.UserSettingsDelay.INFREQUENT_USER_ACTION);
-      let l = {
+      let f = {
         next_status: e,
         prev_status: a,
         ...d.default.getGlobalStats()
       };
-      null != t && (l = {
-        ...l,
+      null != t && (f = {
+        ...f,
         ...t,
         expire_duration_minutes: null != o ? o / 1e3 : null
-      }), c.default.track(r.AnalyticEvents.USER_STATUS_UPDATED, l)
+      }), c.default.track(r.AnalyticEvents.USER_STATUS_UPDATED, f)
     }

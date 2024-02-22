@@ -24,7 +24,7 @@ var l = n("37983"),
       collapsed: m,
       speakers: p,
       channel: E,
-      isStreamLive: g
+      isStreamLive: S
     } = e;
     return (0, l.jsxs)(r.Clickable, {
       onClick: a,
@@ -46,7 +46,7 @@ var l = n("37983"),
         children: [(0, l.jsx)(f.default, {
           channel: E,
           speakers: p
-        }), g && (0, l.jsx)(c.default, {})]
+        }), S && (0, l.jsx)(c.default, {})]
       }), (0, l.jsx)(o.default, {
         width: 20,
         height: 20,

@@ -35,9 +35,9 @@ var a = n("506838"),
   R = n("28007"),
   b = n("880731"),
   G = n("562228"),
-  U = n("793277");
+  P = n("793277");
 n("685841");
-var P = n("256572"),
+var U = n("256572"),
   w = n("364685"),
   k = n("804888"),
   B = n("263024"),
@@ -512,7 +512,7 @@ let eg = {
       let a = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       if (t.reaction) return Promise.resolve();
-      let s = await (0, U.default)(e);
+      let s = await (0, P.default)(e);
       if (null != s) return eh.sendMessage(s, t, a, l);
       let i = () => eh._sendMessage(e, t, l),
         r = C.LocalMessageBackgroundSendingExperiment.getCurrentConfig({
@@ -616,7 +616,7 @@ let eg = {
     },
     _sendMessage(e, t, n) {
       var a, s;
-      let i = (0, U.default)(e);
+      let i = (0, P.default)(e);
       if (null != i) return ec.info("Converting channel to a private channel"), i.then(e => {
         ec.info("Finished converting channel to a private channel"), eh._sendMessage(e, t, n)
       });
@@ -636,8 +636,8 @@ let eg = {
           poll: C
         } = n,
         L = null !== (a = n.flags) && void 0 !== a ? a : 0,
-        [N, P] = (0, k.default)(d);
-      if (N && (d = P, L = (0, ee.addFlag)(L, ei.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === d && null == h && null == M && null == C) return Promise.reject(Error("not sending empty message"));
+        [N, U] = (0, k.default)(d);
+      if (N && (d = U, L = (0, ee.addFlag)(L, ei.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === d && null == h && null == M && null == C) return Promise.reject(Error("not sending empty message"));
       let B = null != T ? ei.MessageTypes.REPLY : ei.MessageTypes.DEFAULT,
         F = null !== (s = n.nonce) && void 0 !== s ? s : (0, v.createNonce)();
       if (!1 !== n.eagerDispatch) {
@@ -851,8 +851,8 @@ let eg = {
       let l = function(e, t) {
           let n = W.default.getMessage(e, t);
           if (null == n || n.type !== ei.MessageTypes.REPLY) return;
-          let a = P.default.getMessageByReference(n.messageReference);
-          if (a.state === P.ReferencedMessageState.LOADED) {
+          let a = U.default.getMessageByReference(n.messageReference);
+          if (a.state === U.ReferencedMessageState.LOADED) {
             if (!n.mentions.includes(a.message.author.id)) return {
               parse: Object.values(ei.AllowedMentionTypes),
               replied_user: !1

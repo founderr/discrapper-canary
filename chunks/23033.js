@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("697218"),
   p = n("433487"),
   E = n("448881"),
-  g = n("2973"),
-  S = n("588025"),
+  S = n("2973"),
+  g = n("588025"),
   C = n("227231"),
   _ = n("315130"),
   I = n("45198"),
@@ -36,7 +36,7 @@ var l = n("37983"),
     } = e, R = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentUser()), {
       isCurrentUserStreamingQuestApplication: j,
       quest: L
-    } = (0, r.useStateFromStoresObject)([h.default, d.default, g.default], () => {
+    } = (0, r.useStateFromStoresObject)([h.default, d.default, S.default], () => {
       let e = d.default.getParticipants(s),
         t = function(e, t, n) {
           for (let a of e)
@@ -46,7 +46,7 @@ var l = n("37983"),
                 s = (null == e ? void 0 : e.id) != null ? (0, C.getQuestByApplicationId)(t, e.id) : null;
               if (null != s && (null === (l = s.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null) return s
             } return null
-        }(e, g.default.quests, h.default),
+        }(e, S.default.quests, h.default),
         n = null != t && null != R && function(e, t, n, l) {
           for (let s of e) {
             var a;
@@ -58,16 +58,16 @@ var l = n("37983"),
         isCurrentUserStreamingQuestApplication: n,
         quest: t
       }
-    }, [s, R]), y = (0, r.useStateFromStores)([f.default], () => f.default.locale), O = (0, r.useStateFromStores)([g.default], () => null != L && g.default.isEnrolling(L.id), [L]), P = (0, r.useStateFromStores)([d.default], () => ((null == R ? void 0 : R.id) == null ? null : d.default.getParticipant(s, R.id)) != null, [s, R]), b = a.useMemo(() => null == L ? "" : new Date(L.config.expiresAt).toLocaleDateString(y, {
+    }, [s, R]), y = (0, r.useStateFromStores)([f.default], () => f.default.locale), O = (0, r.useStateFromStores)([S.default], () => null != L && S.default.isEnrolling(L.id), [L]), P = (0, r.useStateFromStores)([d.default], () => ((null == R ? void 0 : R.id) == null ? null : d.default.getParticipant(s, R.id)) != null, [s, R]), b = a.useMemo(() => null == L ? "" : new Date(L.config.expiresAt).toLocaleDateString(y, {
       dateStyle: "short"
     }), [L, y]), D = a.useCallback(() => {}, []), U = a.useCallback(() => {
-      null != L && (0, E.enrollInQuest)(L.id, S.QuestContent.QUEST_LIVE_STREAM)
+      null != L && (0, E.enrollInQuest)(L.id, g.QuestContent.QUEST_LIVE_STREAM)
     }, [L]), w = a.useCallback(() => {
       u.default.open(x.UserSettingsSections.INVENTORY)
     }, []), F = (0, T.useHandleClaimQuestsReward)(L);
     if (null == L) return null;
     let k = (null === (t = L.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-      B = (null === (n = L.userStatus) || void 0 === n ? void 0 : n.completedAt) != null;
+      V = (null === (n = L.userStatus) || void 0 === n ? void 0 : n.completedAt) != null;
     return P ? (0, l.jsxs)("div", {
       className: i(M.wrapper, {
         [M.wrapperAccepted]: k
@@ -115,14 +115,14 @@ var l = n("37983"),
             }), (0, l.jsx)(o.Text, {
               color: "header-secondary",
               variant: "text-xs/medium",
-              children: B ? A.default.Messages.QUESTS_CLAIM_BY.format({
+              children: V ? A.default.Messages.QUESTS_CLAIM_BY.format({
                 expirationDate: b
               }) : A.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: b
               })
             })]
           })]
-        }), k && !B && !j && (0, l.jsx)(v.default, {
+        }), k && !V && !j && (0, l.jsx)(v.default, {
           quest: L
         }), (0, l.jsxs)("div", {
           className: M.ctas,
@@ -143,17 +143,17 @@ var l = n("37983"),
               submitting: O,
               children: A.default.Messages.QUESTS_ACCEPT_QUEST
             })]
-          }), k && !B && j && (0, l.jsx)(_.default, {
+          }), k && !V && j && (0, l.jsx)(_.default, {
             color: o.tokens.colors.BG_BRAND,
             quest: L
-          }), k && !B && !j && (0, l.jsx)(o.Button, {
+          }), k && !V && !j && (0, l.jsx)(o.Button, {
             className: M.cta,
             color: o.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: w,
             size: o.Button.Sizes.SMALL,
             children: A.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
-          }), B && (0, l.jsx)(o.Button, {
+          }), V && (0, l.jsx)(o.Button, {
             className: M.cta,
             color: o.Button.Colors.BRAND,
             fullWidth: !0,

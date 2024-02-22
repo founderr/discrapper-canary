@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("378765"),
   p = n("115531"),
   E = n("585513"),
-  g = n("981913"),
-  S = n("49111"),
+  S = n("981913"),
+  g = n("49111"),
   C = n("782340");
 
 function _(e) {
@@ -116,14 +116,14 @@ function T(e) {
       null === (e = x.current) || void 0 === e || e.focus()
     }, []);
   (0, m.useComponentAction)({
-    event: S.ComponentActions.FOCUS_CHAT_BUTTON,
+    event: g.ComponentActions.FOCUS_CHAT_BUTTON,
     handler: v ? null : y
   });
   let [O, P] = a.useState(!1), b = a.useCallback(() => {
     f && P(!0)
   }, [f]);
   (0, m.useComponentAction)({
-    event: S.ComponentActions.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+    event: g.ComponentActions.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
     handler: b
   }), a.useEffect(() => {
     let e;
@@ -136,7 +136,7 @@ function T(e) {
   let D = [t];
   return R > 0 && D.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: R
-  })), M > 0 && D.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, l.jsx)(g.default, {
+  })), M > 0 && D.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, l.jsx)(S.default, {
     buttonRef: x,
     onClick: j,
     label: t,

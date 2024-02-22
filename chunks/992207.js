@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 });
 var l = n("37983");
@@ -19,8 +19,8 @@ var a = n("414456"),
   m = n("386045"),
   p = n("99795"),
   E = n("782340"),
-  g = n("688257"),
-  S = e => {
+  S = n("688257"),
+  g = e => {
     let {
       className: t,
       channelId: n
@@ -34,17 +34,17 @@ var a = n("414456"),
     return a ? (0, l.jsxs)(o.TooltipContainer, {
       text: E.default.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
       color: o.TooltipColors.GREY,
-      className: s(t, g.clipsEnabledIndicator),
+      className: s(t, S.clipsEnabledIndicator),
       children: [(0, l.jsx)(h.IconBadge, {
         icon: f.default,
         shape: h.BadgeShapes.ROUND_LEFT,
         color: r.default.unsafe_rawColors.PRIMARY_500.css,
-        className: g.clipBadgeIcon
+        className: S.clipBadgeIcon
       }), (0, l.jsx)(h.TextBadge, {
         text: E.default.Messages.CLIPS_ENABLED_BADGE,
         shape: h.BadgeShapes.ROUND_RIGHT,
         color: r.default.unsafe_rawColors.PRIMARY_500.css,
-        className: g.clipBadgeText
+        className: S.clipBadgeText
       })]
     }) : null
   }

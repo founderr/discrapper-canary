@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("393171"),
   p = n("242757"),
   E = n("305961"),
-  g = n("957255"),
-  S = n("466079"),
+  S = n("957255"),
+  g = n("466079"),
   C = n("444657"),
   _ = n("679243"),
   I = n("832897"),
@@ -50,11 +50,11 @@ function N(e) {
       dismissedActivityEntryPointTileChannel: null
     })
   }, [M.id, D]);
-  let F = (0, i.useStateFromStores)([g.default], () => M.isPrivate() || (0, p.canViewInviteModal)(g.default, b, M), [b, M]),
+  let F = (0, i.useStateFromStores)([S.default], () => M.isPrivate() || (0, p.canViewInviteModal)(S.default, b, M), [b, M]),
     k = (null == b ? void 0 : b.afkChannelId) === M.id,
-    B = M.userLimit <= 0 || M.userLimit > 1,
+    V = M.userLimit <= 0 || M.userLimit > 1,
     {
-      vcTileActivityExperimentType: V
+      vcTileActivityExperimentType: B
     } = d.VcTileActivitiesEntryPointExperiment.useExperiment({
       location: "8711e9_1"
     }, {
@@ -91,7 +91,7 @@ function N(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != b && !k && ((V !== d.VcTileActivityExperimentType.ONE_OR_TWO_USERS || 2 !== U) && (V !== d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS || !(U >= 2)) || !H || Y || G || z ? B && 1 === U && F && ([d.VcTileActivityExperimentType.ONE_OR_TWO_USERS, d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS].includes(V) && H && !Y ? K.push(e => (0, l.jsx)(C.ActivityEntryPointTile, {
+  }, []), null != b && !k && ((B !== d.VcTileActivityExperimentType.ONE_OR_TWO_USERS || 2 !== U) && (B !== d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS || !(U >= 2)) || !H || Y || G || z ? V && 1 === U && F && ([d.VcTileActivityExperimentType.ONE_OR_TWO_USERS, d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS].includes(B) && H && !Y ? K.push(e => (0, l.jsx)(C.ActivityEntryPointTile, {
     channel: M,
     guild: b,
     width: e,
@@ -115,7 +115,7 @@ function N(e) {
     var n, l;
     return null !== (l = null === (n = t[e]) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : "empty-tile"
   }, [t]);
-  return (0, l.jsx)(S.default, {
+  return (0, l.jsx)(g.default, {
     className: R,
     keyExtractor: Z,
     paddingTop: 64,

@@ -1,83 +1,83 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return G
   }
 });
 var a = n("37983");
 n("884691");
-var u = n("77078"),
+var s = n("77078"),
   r = n("272030"),
-  s = n("838446"),
-  l = n("158534"),
-  d = n("846883"),
-  i = n("812204"),
+  u = n("838446"),
+  i = n("158534"),
+  l = n("846883"),
+  d = n("812204"),
   o = n("243288"),
-  f = n("321135"),
-  c = n("873254"),
-  S = n("861370"),
-  M = n("726750"),
-  m = n("170990"),
-  E = n("304582"),
-  g = n("72057"),
-  _ = n("489836"),
+  c = n("321135"),
+  f = n("873254"),
+  m = n("861370"),
+  h = n("726750"),
+  p = n("170990"),
+  M = n("304582"),
+  x = n("72057"),
+  g = n("489836"),
   v = n("406703"),
-  I = n("343856"),
-  p = n("502533"),
-  A = n("314838"),
-  h = n("383161"),
-  x = n("421602"),
-  T = n("432487"),
-  C = n("151200"),
-  N = n("692986"),
+  S = n("343856"),
+  j = n("502533"),
+  _ = n("314838"),
+  C = n("383161"),
+  I = n("421602"),
+  N = n("432487"),
+  E = n("151200"),
+  T = n("692986"),
   O = n("806179"),
   R = n("816106"),
-  j = n("623879"),
-  D = n("49111"),
-  y = n("782340"),
-  F = (0, l.default)((0, s.default)(function(e) {
+  A = n("623879"),
+  U = n("49111"),
+  P = n("782340"),
+  G = (0, i.default)((0, u.default)(function(e) {
     var t;
     let {
       user: n,
-      channel: s,
-      context: l,
-      showChatItems: i = !0,
-      showMediaItems: D = !1,
-      showChannelCallItems: F = !1,
-      showModalItems: b = !0,
-      onSelect: U
-    } = e, L = (0, O.default)(n.id, null), V = (0, h.default)(n, null, l), P = (0, C.default)(n.id, s.id), G = (0, x.default)(n.id, l), w = (0, v.default)(n, l), H = (0, g.default)({
+      channel: u,
+      context: i,
+      showChatItems: d = !0,
+      showMediaItems: U = !1,
+      showChannelCallItems: G = !1,
+      showModalItems: y = !0,
+      onSelect: b
+    } = e, w = (0, O.default)(n.id, null), L = (0, C.default)(n, null, i), F = (0, E.default)(n.id, u.id), k = (0, I.default)(n.id, i), D = (0, v.default)(n, i), z = (0, x.default)({
       user: n,
-      context: l
-    }), k = (0, E.default)(n), B = (0, R.default)(n.id), z = (0, T.default)(n.id, s.id), W = (0, N.default)(n.id), Y = (0, p.default)(n.id, s.id), K = (0, A.default)(n), X = (0, d.default)(null, n), Z = (0, m.default)(n), q = (0, _.default)(n), J = (0, S.default)({
+      context: i
+    }), W = (0, M.default)(n), B = (0, R.default)(n.id), H = (0, N.default)(n.id, u.id), Y = (0, T.default)(n.id), X = (0, j.default)(n.id, u.id), Z = (0, _.default)(n), V = (0, l.default)(null, n), q = (0, p.default)(n), J = (0, g.default)(n), K = (0, m.default)({
       id: n.id,
-      label: y.default.Messages.COPY_ID_USER
-    }), Q = (0, j.default)(n.id), $ = (0, f.default)(n.id), ee = (0, o.default)(s.id), et = (0, M.default)(n), en = (0, c.default)(n.id), ea = (0, I.default)(n, s), eu = n.isNonUserBot(), er = s.isManaged(), es = null === (t = s.recipients) || void 0 === t ? void 0 : t.includes(n.id);
-    return (0, a.jsxs)(u.Menu, {
+      label: P.default.Messages.COPY_ID_USER
+    }), Q = (0, A.default)(n.id), $ = (0, c.default)(n.id), ee = (0, o.default)(u.id), et = (0, h.default)(n), en = (0, f.default)(n.id), ea = (0, S.default)(n, u), es = n.isNonUserBot(), er = u.isManaged(), eu = null === (t = u.recipients) || void 0 === t ? void 0 : t.includes(n.id);
+    return (0, a.jsxs)(s.Menu, {
       navId: "user-context",
       onClose: r.closeContextMenu,
-      "aria-label": y.default.Messages.USER_ACTIONS_MENU_LABEL,
-      onSelect: U,
-      children: [!eu && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(u.MenuGroup, {
+      "aria-label": P.default.Messages.USER_ACTIONS_MENU_LABEL,
+      onSelect: b,
+      children: [!es && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)(s.MenuGroup, {
           children: et
-        }), (0, a.jsxs)(u.MenuGroup, {
-          children: [b && L, i && V, G, w, !er && P, b && H, b && k, Q]
-        }), D && (0, a.jsx)(u.MenuGroup, {
+        }), (0, a.jsxs)(s.MenuGroup, {
+          children: [y && w, d && L, k, D, !er && F, y && z, y && W, Q]
+        }), U && (0, a.jsx)(s.MenuGroup, {
           children: B
-        }), es && (0, a.jsxs)(u.MenuGroup, {
-          children: [!er && z, ea]
-        }), (0, a.jsx)(u.MenuGroup, {
-          children: b && X
-        }), (0, a.jsxs)(u.MenuGroup, {
-          children: [D && W, D && Y, b && K, Z, b && q, D && en]
-        }), F && (0, a.jsxs)(u.MenuGroup, {
+        }), eu && (0, a.jsxs)(s.MenuGroup, {
+          children: [!er && H, ea]
+        }), (0, a.jsx)(s.MenuGroup, {
+          children: y && V
+        }), (0, a.jsxs)(s.MenuGroup, {
+          children: [U && Y, U && X, y && Z, q, y && J, U && en]
+        }), G && (0, a.jsxs)(s.MenuGroup, {
           children: [ee, $]
         })]
-      }), (0, a.jsx)(u.MenuGroup, {
-        children: J
+      }), (0, a.jsx)(s.MenuGroup, {
+        children: K
       })]
     })
   }, {
-    object: D.AnalyticsObjects.CONTEXT_MENU
-  }), [i.default.CONTEXT_MENU, i.default.GROUP_DM_USER_MENU])
+    object: U.AnalyticsObjects.CONTEXT_MENU
+  }), [d.default.CONTEXT_MENU, d.default.GROUP_DM_USER_MENU])

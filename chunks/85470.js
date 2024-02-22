@@ -17,8 +17,8 @@ var a = n("884691"),
   h = n("26989"),
   C = n("88093"),
   p = n("377253"),
-  m = n("957255"),
-  E = n("306160"),
+  E = n("957255"),
+  m = n("306160"),
   g = n("659500"),
   S = n("773336"),
   _ = n("299039"),
@@ -29,7 +29,7 @@ var a = n("884691"),
   N = n("49111");
 
 function v(e) {
-  return m.default.can(N.Permissions.MANAGE_MESSAGES, e)
+  return E.default.can(N.Permissions.MANAGE_MESSAGES, e)
 }
 var L = function(e, t, n) {
   let L = a.useRef(n);
@@ -37,8 +37,8 @@ var L = function(e, t, n) {
     var a, R, x, y, O;
     if (!L.current || n.target !== n.currentTarget) return;
     let D = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
-      j = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
-      P = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
+      P = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
+      j = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
       b = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
       H = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
       F = p.default.getMessage(t, e),
@@ -51,7 +51,7 @@ var L = function(e, t, n) {
         D && (v(U) || w) && (n.preventDefault(), (0, I.deleteMessage)(U, F, n));
         break;
       case "c":
-        ((0, S.isMac)() ? b : P) && E.SUPPORTS_COPY && (n.preventDefault(), (0, E.copy)(F.content));
+        ((0, S.isMac)() ? b : j) && m.SUPPORTS_COPY && (n.preventDefault(), (0, m.copy)(F.content));
         break;
       case "e":
         if (D) {
@@ -75,7 +75,7 @@ var L = function(e, t, n) {
               channel: e,
               canChat: t,
               renderReactions: n,
-              canAddNewReactions: t && m.default.can(N.Permissions.ADD_REACTIONS, e),
+              canAddNewReactions: t && E.default.can(N.Permissions.ADD_REACTIONS, e),
               isLurking: null != e.guild_id && l.default.isLurking(e.guild_id),
               isGuest: null != e.guild_id && h.default.isCurrentUserGuest(e.guild_id),
               isActiveChannelOrUnarchivableThread: (0, r.getIsActiveChannelOrUnarchivableThread)(e)
@@ -96,7 +96,7 @@ var L = function(e, t, n) {
         }
         break;
       case "enter":
-        j && (n.preventDefault(), (0, I.markMessageUnread)(U, F));
+        P && (n.preventDefault(), (0, I.markMessageUnread)(U, F));
         break;
       case "escape":
         f.default.isEditing(U.id, F.id) ? s.default.endEditMessage(U.id) : g.ComponentDispatch.dispatch(N.ComponentActions.TEXTAREA_FOCUS)

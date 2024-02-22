@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useCanReplyToMessage: function() {
-    return m
+    return M
   },
   canReplyToMessage: function() {
     return g
@@ -34,19 +34,19 @@ function E(e, t, n) {
   return i && (d ? r : l)
 }
 
-function M(e, t, n, a, i) {
+function m(e, t, n, a, i) {
   let l = t.hasFlag(c.MessageFlags.EPHEMERAL),
     s = t.state === c.MessageStates.SENT,
     u = !e.isArchivedThread() || i;
   return n && s && !l && !a && u
 }
 
-function m(e, t) {
+function M(e, t) {
   var n;
   let a = (0, r.useCanUnarchiveThread)(e),
     [, s] = (0, l.useCurrentUserCommunicationDisabled)(null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : void 0),
     u = (0, i.useStateFromStores)([d.default], () => null != e && null != t && E(e, t, d.default));
-  return null != e && null != t && M(e, t, u, s, a)
+  return null != e && null != t && m(e, t, u, s, a)
 }
 
 function g(e, t) {
@@ -55,5 +55,5 @@ function g(e, t) {
     i = E(e, t, d.default),
     s = o.default.getCurrentUser(),
     [, u] = (0, l.userCommunicationDisabled)(null == s ? void 0 : s.id, null !== (n = e.getGuildId()) && void 0 !== n ? n : void 0);
-  return M(e, t, i, u, a)
+  return m(e, t, i, u, a)
 }
