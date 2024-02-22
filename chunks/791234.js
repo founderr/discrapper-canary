@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   getEmbedColor: function() {
-    return E
+    return g
   },
   ForumPostMediaTypes: function() {
     return l
   },
   useForumPostMediaThumbnail: function() {
-    return I
-  },
-  useForumPostMediaProperties: function() {
     return _
   },
-  useFindFirstMediaProperties: function() {
+  useForumPostMediaProperties: function() {
     return N
   },
-  useFirstMediaIsEmbed: function() {
+  useFindFirstMediaProperties: function() {
     return A
   },
-  shouldShowAddMediaToOriginalPostModal: function() {
+  useFirstMediaIsEmbed: function() {
     return y
   },
-  messageContainsGifOrVideo: function() {
+  shouldShowAddMediaToOriginalPostModal: function() {
     return x
+  },
+  messageContainsGifOrVideo: function() {
+    return O
   }
-}), n("702976"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007"), n("808653");
+}), n("702976"), n("222007"), n("808653");
 var l, i, a = n("884691"),
   s = n("651693"),
   r = n("610730"),
@@ -35,9 +35,10 @@ var l, i, a = n("884691"),
   f = n("568734"),
   m = n("449008"),
   p = n("299039"),
-  h = n("49111");
+  h = n("253981"),
+  E = n("49111");
 
-function E(e, t) {
+function g(e, t) {
   if (null == e || null == e.embeds[0]) return;
   let {
     color: n
@@ -45,7 +46,7 @@ function E(e, t) {
   return null != n && "#ffffff" === n.toLowerCase() || t ? void 0 : n
 }
 
-function g(e) {
+function S(e) {
   if (null == e) return !1;
   let {
     filename: t,
@@ -55,21 +56,21 @@ function g(e) {
   return (0, s.isImageFile)(t) && null != n && n > 0 && null != l && l > 0
 }
 
-function S(e) {
+function C(e) {
   return null != e && null != e && (0, s.isVideoFile)(e.filename) && null != e.proxy_url
 }
 
-function C(e) {
-  return g(e) || S(e)
+function T(e) {
+  return S(e) || C(e)
 }(i = l || (l = {})).EMBED = "embed", i.ATTACHMENT = "attachment";
 
-function T(e) {
+function v(e) {
   let t = o.InlineAttachmentMedia.useSetting();
   return function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.InlineAttachmentMedia.getSetting();
     if (!t) return [];
     let n = null == e ? void 0 : e.attachments;
-    return null == e || null == n ? [] : n.filter(C).map(e => {
+    return null == e || null == n ? [] : n.filter(T).map(e => {
       let {
         proxy_url: t,
         url: n,
@@ -83,10 +84,11 @@ function T(e) {
       } = e;
       if (null == r || null == o) return null;
       let c = (0, s.isVideoFile)(u),
-        m = null != e.flags && (0, f.hasFlag)(e.flags, h.MessageAttachmentFlags.IS_THUMBNAIL),
+        m = null != e.flags && (0, f.hasFlag)(e.flags, E.MessageAttachmentFlags.IS_THUMBNAIL),
         p = null != t ? t : n;
       if (c) {
-        let e = new URL(t);
+        let e = h.default.toURLSafe(t);
+        if (null == e) return null;
         e.searchParams.append("format", "jpeg"), p = e.toString()
       }
       return {
@@ -105,7 +107,7 @@ function T(e) {
   }(e, t)
 }
 
-function v(e, t) {
+function I(e, t) {
   let n = o.InlineEmbedMedia.useSetting(),
     l = o.RenderEmbeds.useSetting();
   if (null == e) return [];
@@ -134,9 +136,9 @@ function v(e, t) {
   }).filter(m.isNotNullish) : []
 }
 
-function I(e, t) {
+function _(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    l = _(e, n);
+    l = N(e, n);
   return a.useMemo(() => {
     if (null == t) return [];
     if (!t.isMediaChannel()) return l;
@@ -147,34 +149,34 @@ function I(e, t) {
   }, [t, l])
 }
 
-function _(e, t) {
-  let n = T(e),
-    l = v(e, t);
+function N(e, t) {
+  let n = v(e),
+    l = I(e, t);
   return [...n, ...l]
 }
 
-function N(e, t) {
+function A(e, t) {
   var n, l;
-  let i = T(e),
-    a = v(e, t);
+  let i = v(e),
+    a = I(e, t);
   return null !== (l = null !== (n = i[0]) && void 0 !== n ? n : a[0]) && void 0 !== l ? l : null
 }
 
-function A(e, t) {
-  let n = T(e),
-    l = v(e, t);
+function y(e, t) {
+  let n = v(e),
+    l = I(e, t);
   return null == n[0] && null != l[0]
 }
 
-function y(e, t) {
+function x(e, t) {
   var n;
   let l = u.default.getChannel(t);
   if (null == l) return !1;
   let i = d.default.getMessage(l.id, p.default.castChannelIdAsMessageId(l.id));
-  return null != i && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && l.isForumPost() && l.ownerId === (null === (n = c.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === r.default.getCount(l.id) && (0 === i.attachments.length || null == i.attachments.find(e => g(e) || S(e)))
+  return null != i && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && l.isForumPost() && l.ownerId === (null === (n = c.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === r.default.getCount(l.id) && (0 === i.attachments.length || null == i.attachments.find(e => S(e) || C(e)))
 }
 
-function x(e) {
+function O(e) {
   return e.reduce((e, t) => ({
     containsVideo: e.containsVideo || t.isVideo,
     containsGif: e.containsGif || (0, s.isAnimatedImageUrl)(t.src)

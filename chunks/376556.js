@@ -1,15 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
-}), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
+});
 var i = n("917351"),
   r = n.n(i),
   s = n("669491"),
-  a = n("49111");
-let o = [{
-    type: a.PlatformTypes.TWITCH,
+  a = n("253981"),
+  o = n("49111");
+let l = [{
+    type: o.PlatformTypes.TWITCH,
     name: "Twitch",
     color: s.default.unsafe_rawColors.TWITCH.css,
     icon: {
@@ -29,7 +30,7 @@ let o = [{
     },
     domains: ["twitch.tv", "twitch.com"]
   }, {
-    type: a.PlatformTypes.YOUTUBE,
+    type: o.PlatformTypes.YOUTUBE,
     name: "YouTube",
     color: s.default.unsafe_rawColors.YOUTUBE.css,
     icon: {
@@ -49,7 +50,7 @@ let o = [{
     },
     domains: ["youtube.com", "youtu.be"]
   }, {
-    type: a.PlatformTypes.BATTLENET,
+    type: o.PlatformTypes.BATTLENET,
     name: "Battle.net",
     color: s.default.unsafe_rawColors.BATTLENET.css,
     icon: {
@@ -62,7 +63,7 @@ let o = [{
     },
     enabled: !0
   }, {
-    type: a.PlatformTypes.SKYPE,
+    type: o.PlatformTypes.SKYPE,
     name: "Skype",
     color: s.default.unsafe_rawColors.SKYPE.css,
     icon: {
@@ -81,7 +82,7 @@ let o = [{
       return "skype:".concat(encodeURIComponent(t), "?userinfo")
     }
   }, {
-    type: a.PlatformTypes.LEAGUE_OF_LEGENDS,
+    type: o.PlatformTypes.LEAGUE_OF_LEGENDS,
     name: "League of Legends",
     color: s.default.unsafe_rawColors.LOL.css,
     icon: {
@@ -94,7 +95,7 @@ let o = [{
     },
     enabled: !0
   }, {
-    type: a.PlatformTypes.STEAM,
+    type: o.PlatformTypes.STEAM,
     name: "Steam",
     color: s.default.unsafe_rawColors.STEAM.css,
     icon: {
@@ -114,7 +115,7 @@ let o = [{
     },
     hasMetadata: !0
   }, {
-    type: a.PlatformTypes.REDDIT,
+    type: o.PlatformTypes.REDDIT,
     name: "Reddit",
     color: s.default.unsafe_rawColors.REDDIT.css,
     icon: {
@@ -134,7 +135,7 @@ let o = [{
     },
     hasMetadata: !0
   }, {
-    type: a.PlatformTypes.FACEBOOK,
+    type: o.PlatformTypes.FACEBOOK,
     name: "Facebook",
     color: s.default.unsafe_rawColors.FACEBOOK.css,
     icon: {
@@ -147,7 +148,7 @@ let o = [{
     },
     enabled: !0
   }, {
-    type: a.PlatformTypes.TWITTER_LEGACY,
+    type: o.PlatformTypes.TWITTER_LEGACY,
     name: "Twitter",
     color: s.default.unsafe_rawColors.TWITTER.css,
     icon: {
@@ -168,7 +169,7 @@ let o = [{
     domains: ["twitter.com"],
     hasMetadata: !0
   }, {
-    type: a.PlatformTypes.TWITTER,
+    type: o.PlatformTypes.TWITTER,
     name: "X",
     color: s.default.unsafe_rawColors.TWITTER.css,
     icon: {
@@ -189,7 +190,7 @@ let o = [{
     domains: ["x.com"],
     hasMetadata: !0
   }, {
-    type: a.PlatformTypes.SPOTIFY,
+    type: o.PlatformTypes.SPOTIFY,
     name: "Spotify",
     color: s.default.unsafe_rawColors.SPOTIFY.css,
     icon: {
@@ -208,7 +209,7 @@ let o = [{
       return "https://open.spotify.com/user/".concat(encodeURIComponent(t))
     }
   }, {
-    type: a.PlatformTypes.XBOX,
+    type: o.PlatformTypes.XBOX,
     name: "Xbox",
     color: s.default.unsafe_rawColors.XBOX.css,
     icon: {
@@ -222,7 +223,7 @@ let o = [{
     },
     enabled: !0
   }, {
-    type: a.PlatformTypes.SAMSUNG,
+    type: o.PlatformTypes.SAMSUNG,
     name: "Samsung Galaxy",
     color: s.default.unsafe_rawColors.SAMSUNG.css,
     icon: {
@@ -235,7 +236,7 @@ let o = [{
     },
     enabled: !1
   }, {
-    type: a.PlatformTypes.GITHUB,
+    type: o.PlatformTypes.GITHUB,
     name: "GitHub",
     color: s.default.unsafe_rawColors.GITHUB.css,
     icon: {
@@ -255,7 +256,7 @@ let o = [{
     },
     domains: ["github.com"]
   }, {
-    type: a.PlatformTypes.PLAYSTATION,
+    type: o.PlatformTypes.PLAYSTATION,
     name: "PlayStation Network",
     color: s.default.unsafe_rawColors.PLAYSTATION.css,
     icon: {
@@ -268,7 +269,7 @@ let o = [{
     },
     enabled: !0
   }, {
-    type: a.PlatformTypes.PLAYSTATION_STAGING,
+    type: o.PlatformTypes.PLAYSTATION_STAGING,
     name: "PlayStation Network (Staging)",
     color: s.default.unsafe_rawColors.PLAYSTATION.css,
     icon: {
@@ -281,7 +282,7 @@ let o = [{
     },
     enabled: !1
   }, {
-    type: a.PlatformTypes.EPIC_GAMES,
+    type: o.PlatformTypes.EPIC_GAMES,
     name: "Epic Games",
     icon: {
       lightPNG: n("1308"),
@@ -293,7 +294,7 @@ let o = [{
     },
     enabled: !0
   }, {
-    type: a.PlatformTypes.RIOT_GAMES,
+    type: o.PlatformTypes.RIOT_GAMES,
     name: "Riot Games",
     icon: {
       lightPNG: n("300525"),
@@ -305,7 +306,7 @@ let o = [{
     },
     enabled: !0
   }, {
-    type: a.PlatformTypes.PAYPAL,
+    type: o.PlatformTypes.PAYPAL,
     name: "PayPal",
     icon: {
       lightPNG: n("347775"),
@@ -318,7 +319,7 @@ let o = [{
     enabled: !0,
     hasMetadata: !0
   }, {
-    type: a.PlatformTypes.EBAY,
+    type: o.PlatformTypes.EBAY,
     name: "eBay",
     icon: {
       lightPNG: n("14366"),
@@ -337,7 +338,7 @@ let o = [{
       return "https://www.ebay.com/usr/".concat(encodeURIComponent(t))
     }
   }, {
-    type: a.PlatformTypes.TIKTOK,
+    type: o.PlatformTypes.TIKTOK,
     name: "TikTok",
     icon: {
       lightPNG: n("482311"),
@@ -356,7 +357,7 @@ let o = [{
       return "https://www.tiktok.com/@".concat(encodeURIComponent(t))
     }
   }, {
-    type: a.PlatformTypes.INSTAGRAM,
+    type: o.PlatformTypes.INSTAGRAM,
     name: "Instagram",
     icon: {
       lightPNG: n("299059"),
@@ -374,7 +375,7 @@ let o = [{
       return "https://www.instagram.com/".concat(encodeURIComponent(t))
     }
   }, {
-    type: a.PlatformTypes.CRUNCHYROLL,
+    type: o.PlatformTypes.CRUNCHYROLL,
     name: "Crunchyroll",
     color: s.default.unsafe_rawColors.CRUNCHYROLL.css,
     icon: {
@@ -387,7 +388,7 @@ let o = [{
     },
     enabled: !0
   }, {
-    type: a.PlatformTypes.DOMAIN,
+    type: o.PlatformTypes.DOMAIN,
     name: "Domain",
     icon: {
       lightPNG: n("145159"),
@@ -405,29 +406,30 @@ let o = [{
     },
     enabled: !0
   }],
-  l = r.keyBy(o, "type"),
-  u = {};
-o.forEach(e => {
+  u = r.keyBy(l, "type"),
+  c = {};
+l.forEach(e => {
   var t;
   null === (t = e.domains) || void 0 === t || t.forEach(t => {
-    u[t] = e
+    c[t] = e
   })
 });
-var c = {
+var d = {
   get(e) {
     var t;
-    return null !== (t = l[e]) && void 0 !== t ? t : null
+    return null !== (t = u[e]) && void 0 !== t ? t : null
   },
   getByUrl(e) {
-    let t = new URL(e),
-      n = t.hostname,
+    let t = a.default.toURLSafe(e);
+    if (null == t) return;
+    let n = t.hostname,
       i = n.startsWith("www.") ? n.slice(4) : n;
-    return u[i]
+    return c[i]
   },
-  isSupported: e => Object.prototype.hasOwnProperty.call(l, e),
-  map: e => o.map(e),
+  isSupported: e => Object.prototype.hasOwnProperty.call(u, e),
+  map: e => l.map(e),
   filter(e) {
-    let t = o.filter(e);
+    let t = l.filter(e);
     return t.sort((e, t) => {
       let {
         name: n
@@ -437,5 +439,5 @@ var c = {
       return n.localeCompare(i)
     }), t
   },
-  find: e => o.find(e)
+  find: e => l.find(e)
 }

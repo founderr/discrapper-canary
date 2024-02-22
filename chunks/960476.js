@@ -4,36 +4,36 @@ r.r(t), r.d(t, {
     return y
   },
   trackSearchResultViewed: function() {
-    return S
+    return v
   },
   search: function() {
-    return T
-  },
-  fetchSuggestions: function() {
     return C
   },
-  resetSearch: function() {
+  fetchSuggestions: function() {
     return A
   },
-  trackSelectGIF: function() {
+  resetSearch: function() {
     return G
   },
-  initializeSearch: function() {
+  trackSelectGIF: function() {
     return x
   },
-  fetchTrending: function() {
+  initializeSearch: function() {
     return N
   },
-  fetchTrendingGIFs: function() {
+  fetchTrending: function() {
     return P
   },
-  addFavoriteGIF: function() {
+  fetchTrendingGIFs: function() {
     return M
   },
-  removeFavoriteGIF: function() {
+  addFavoriteGIF: function() {
     return O
+  },
+  removeFavoriteGIF: function() {
+    return k
   }
-}), r("781738"), r("511434"), r("313619"), r("654714"), r("287168"), r("956660"), r("222007");
+}), r("781738");
 var s = r("917351"),
   n = r.n(s),
   l = r("748820"),
@@ -47,25 +47,26 @@ var s = r("917351"),
   f = r("510849"),
   m = r("599110"),
   p = r("564703"),
-  I = r("404118"),
-  g = r("49111"),
-  _ = r("397336"),
-  E = r("782340");
-let R = /-/g;
+  I = r("253981"),
+  g = r("404118"),
+  _ = r("49111"),
+  E = r("397336"),
+  R = r("782340");
+let S = /-/g;
 
 function y(e) {
   let t = null != e ? {
     [e]: 1
   } : {};
-  u.default.trackWithMetadata(g.AnalyticEvents.SEARCH_STARTED, {
-    search_type: g.SearchTypes.GIF,
+  u.default.trackWithMetadata(_.AnalyticEvents.SEARCH_STARTED, {
+    search_type: _.SearchTypes.GIF,
     load_id: f.default.getAnalyticsID(),
     num_modifiers: Object.keys(t).length,
     modifiers: t
   })
 }
 
-function S(e, t) {
+function v(e, t) {
   let {
     startTime: r,
     ...s
@@ -80,16 +81,16 @@ function S(e, t) {
   }), i = null == r ? {} : {
     load_duration_ms: Date.now() - r
   };
-  u.default.trackWithMetadata(g.AnalyticEvents.SEARCH_RESULT_VIEWED, {
+  u.default.trackWithMetadata(_.AnalyticEvents.SEARCH_RESULT_VIEWED, {
     ...l,
     ...i
   })
 }
 
-function v(e, t, r) {
+function F(e, t, r) {
   let s = Date.now();
   y(t), i.default.get({
-    url: g.Endpoints.GIFS_SEARCH,
+    url: _.Endpoints.GIFS_SEARCH,
     query: {
       q: e,
       media_format: f.default.getSelectedFormat(),
@@ -100,7 +101,7 @@ function v(e, t, r) {
     oldFormErrors: !0
   }).then(n => {
     let l = n.body;
-    S(l, t, {
+    v(l, t, {
       startTime: s,
       limit: r
     }), o.default.dispatch({
@@ -113,20 +114,20 @@ function v(e, t, r) {
     query: e
   }))
 }
-let F = n.debounce(v, 250);
+let T = n.debounce(F, 250);
 
-function T(e, t) {
+function C(e, t) {
   let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     s = arguments.length > 3 ? arguments[3] : void 0;
-  "" === e ? A() : (o.default.dispatch({
+  "" === e ? G() : (o.default.dispatch({
     type: "GIF_PICKER_QUERY",
     query: e
-  }), r ? v(e, t, s) : F(e, t, s))
+  }), r ? F(e, t, s) : T(e, t, s))
 }
 
-function C(e) {
+function A(e) {
   "" !== e && null != e && i.default.get({
-    url: g.Endpoints.GIFS_SUGGEST,
+    url: _.Endpoints.GIFS_SUGGEST,
     query: {
       q: e,
       provider: "tenor",
@@ -144,14 +145,14 @@ function C(e) {
   })
 }
 
-function A() {
+function G() {
   o.default.dispatch({
     type: "GIF_PICKER_QUERY",
     query: ""
   })
 }
 
-function G(e) {
+function x(e) {
   let {
     type: t,
     index: r,
@@ -167,13 +168,13 @@ function G(e) {
     results: l,
     totalResults: a
   });
-  u.default.trackWithMetadata(g.AnalyticEvents.SEARCH_RESULT_SELECTED, {
+  u.default.trackWithMetadata(_.AnalyticEvents.SEARCH_RESULT_SELECTED, {
     ...d,
     index_num: r,
     source_object: "GIF Picker",
     query: o
   }), null != c && i.default.post({
-    url: g.Endpoints.GIFS_SELECT,
+    url: _.Endpoints.GIFS_SELECT,
     body: {
       id: c,
       q: o
@@ -182,10 +183,10 @@ function G(e) {
   })
 }
 
-function x() {
-  let e = (0, l.v4)().replace(R, "");
-  u.default.trackWithMetadata(g.AnalyticEvents.SEARCH_OPENED, {
-    search_type: g.SearchTypes.GIF,
+function N() {
+  let e = (0, l.v4)().replace(S, "");
+  u.default.trackWithMetadata(_.AnalyticEvents.SEARCH_OPENED, {
+    search_type: _.SearchTypes.GIF,
     load_id: e
   }), o.default.wait(() => {
     o.default.dispatch({
@@ -195,9 +196,9 @@ function x() {
   })
 }
 
-function N() {
+function P() {
   i.default.get({
-    url: g.Endpoints.GIFS_TRENDING,
+    url: _.Endpoints.GIFS_TRENDING,
     query: {
       provider: "tenor",
       locale: d.default.locale,
@@ -219,10 +220,10 @@ function N() {
   })
 }
 
-function P(e) {
+function M(e) {
   let t = Date.now();
-  y(g.GIFPickerResultTypes.TRENDING_GIFS), i.default.get({
-    url: g.Endpoints.GIFS_TRENDING_GIFS,
+  y(_.GIFPickerResultTypes.TRENDING_GIFS), i.default.get({
+    url: _.Endpoints.GIFS_TRENDING_GIFS,
     query: {
       media_format: f.default.getSelectedFormat(),
       provider: "tenor",
@@ -234,7 +235,7 @@ function P(e) {
     let {
       body: s
     } = r;
-    S(s, g.GIFPickerResultTypes.TRENDING_GIFS, {
+    v(s, _.GIFPickerResultTypes.TRENDING_GIFS, {
       startTime: t,
       limit: e
     }), o.default.dispatch({
@@ -249,11 +250,11 @@ function P(e) {
 }
 
 function w(e) {
-  let t = new URL(e);
-  return (0, c.isAttachmentUrl)(t) ? (0, c.removeSignedUrlParameters)(t).toString() : e
+  let t = I.default.toURLSafe(e);
+  return null == t ? e : (0, c.isAttachmentUrl)(t) ? (0, c.removeSignedUrlParameters)(t).toString() : e
 }
 
-function M(e) {
+function O(e) {
   h.FrecencyUserSettingsActionCreators.updateAsync("favoriteGifs", t => {
     var r;
     let s = null !== (r = n.max(Object.values(t.gifs).map(e => e.order))) && void 0 !== r ? r : 0;
@@ -262,16 +263,16 @@ function M(e) {
       order: s + 1
     };
     let l = a.FavoriteGIFs.toBinary(t).length;
-    if (l > _.MAX_FAVORITE_GIFS_SIZE) return I.default.show({
-      title: E.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-      body: E.default.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY
+    if (l > E.MAX_FAVORITE_GIFS_SIZE) return g.default.show({
+      title: R.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+      body: R.default.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY
     }), !1;
     n.size(t.gifs) > 2 && (t.hideTooltip = !0)
-  }, _.UserSettingsDelay.INFREQUENT_USER_ACTION), m.default.track(g.AnalyticEvents.GIF_FAVORITED)
+  }, E.UserSettingsDelay.INFREQUENT_USER_ACTION), m.default.track(_.AnalyticEvents.GIF_FAVORITED)
 }
 
-function O(e) {
+function k(e) {
   h.FrecencyUserSettingsActionCreators.updateAsync("favoriteGifs", t => {
     e in t.gifs ? delete t.gifs[e] : delete t.gifs[w(e)]
-  }, _.UserSettingsDelay.INFREQUENT_USER_ACTION), m.default.track(g.AnalyticEvents.GIF_UNFAVORITED)
+  }, E.UserSettingsDelay.INFREQUENT_USER_ACTION), m.default.track(_.AnalyticEvents.GIF_UNFAVORITED)
 }

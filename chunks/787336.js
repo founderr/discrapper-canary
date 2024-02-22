@@ -1,78 +1,81 @@
 "use strict";
 r.r(t), r.d(t, {
   isAttachmentUrl: function() {
-    return d
-  },
-  removeSignedUrlParameters: function() {
     return h
   },
+  removeSignedUrlParameters: function() {
+    return f
+  },
   messageHasExpiredAttachmentUrl: function() {
-    return g
+    return _
   },
   maybeRefreshAttachmentUrl: function() {
-    return E
+    return R
   }
-}), r("222007"), r("511434"), r("313619"), r("654714"), r("287168"), r("956660");
+}), r("222007");
 var s, n = r("872717"),
   l = r("718517"),
-  i = r("519841"),
-  a = r("49111");
-let o = new Set([window.GLOBAL_ENV.CDN_HOST, null === (s = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === s ? void 0 : s.substring(2)]),
-  u = new Set(["/attachments/", "/ephemeral-attachments/"]),
-  c = 1 * l.default.Millis.HOUR;
-
-function d(e) {
-  return o.has(e.hostname) && Array.from(u).some(t => e.pathname.startsWith(t))
-}
+  i = r("253981"),
+  a = r("519841"),
+  o = r("49111");
+let u = new Set([window.GLOBAL_ENV.CDN_HOST, null === (s = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === s ? void 0 : s.substring(2)]),
+  c = new Set(["/attachments/", "/ephemeral-attachments/"]),
+  d = 1 * l.default.Millis.HOUR;
 
 function h(e) {
-  for (let t of (e = new URL(e), ["ex", "is", "hm"])) e.searchParams.delete(t);
-  return e
+  return u.has(e.hostname) && Array.from(c).some(t => e.pathname.startsWith(t))
 }
 
 function f(e) {
+  let t = i.default.toURLSafe(e);
+  if (null == t) return e;
+  for (let e of ["ex", "is", "hm"]) t.searchParams.delete(e);
+  return t
+}
+
+function m(e) {
   let t = function(e) {
     let t = e.searchParams.get("ex"),
       r = parseInt(null != t ? t : "", 16);
     return isNaN(r) ? void 0 : r * l.default.Millis.SECOND
   }(e);
-  return null == t || t <= Date.now() + c
-}
-
-function m(e) {
-  let t = new URL(e.url);
-  return f(t)
+  return null == t || t <= Date.now() + d
 }
 
 function p(e) {
-  if (null == e) return !1;
-  let t = new URL(e.url);
-  return !!d(t) && f(t)
+  let t = i.default.toURLSafe(e.url);
+  return null != t && m(t)
 }
 
 function I(e) {
-  var t;
-  return p(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(p)) || p(e.video)
+  if (null == e) return !1;
+  let t = i.default.toURLSafe(e.url);
+  return !!(null != t && h(t)) && m(t)
 }
 
 function g(e) {
-  return e.attachments.some(m) || e.embeds.some(I)
+  var t;
+  return I(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(I)) || I(e.video)
 }
-async function _(e) {
+
+function _(e) {
+  return e.attachments.some(p) || e.embeds.some(g)
+}
+async function E(e) {
   let t = await n.default.post({
-    url: a.Endpoints.ATTACHMENTS_REFRESH_URLS,
+    url: o.Endpoints.ATTACHMENTS_REFRESH_URLS,
     body: {
       attachment_urls: [e]
     }
   });
   return t.ok ? t.body.refreshed_urls[0].refreshed : void 0
 }
-async function E(e) {
-  if (!i.AttachmentLinkRefreshExperiment.getCurrentConfig({
+async function R(e) {
+  if (!a.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "link_clicked"
     }).enabled) return e;
-  let t = new URL(e);
-  if (!f(t)) return e;
-  let r = await _(e);
+  let t = i.default.toURLSafe(e);
+  if (null == t || !m(t)) return e;
+  let r = await E(e);
   return null != r ? r : e
 }
