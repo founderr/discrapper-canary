@@ -32,6 +32,9 @@ n.r(t), n.d(t, {
   },
   submitReportForInappropriateConversationSafetyAlert: function() {
     return g
+  },
+  showReportModalForInappropriateConversationSafetyAlert: function() {
+    return S
   }
 });
 var a = n("716241"),
@@ -162,6 +165,18 @@ async function g(e, t, n) {
   } catch {
     null == n || n()
   }
+}
+
+function S(e, t) {
+  I(d.ReportNames.MESSAGE, {
+    message_id: e.id,
+    channel_id: e.channel_id
+  }), (0, o.showReportModal)({
+    name: d.ReportNames.MESSAGE,
+    record: e
+  }, {
+    variant: "safety_alerts_v1"
+  }, t)
 }
 
 function I(e, t) {

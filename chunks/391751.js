@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var l = n("37983"),
@@ -10,23 +10,35 @@ var l = n("37983"),
   i = n("179137"),
   r = n("561359"),
   o = n("664336"),
-  u = n("782340"),
-  d = a.memo(function(e) {
+  u = n("324252"),
+  d = n("782340"),
+  c = a.memo(function(e) {
     let {
       channel: t
-    } = e, d = (0, i.useShouldShowSafetyToolsButtonForChannel)(t.id), c = a.useCallback(() => {
+    } = e, c = (0, i.useShouldShowSafetyToolsButtonForChannel)(t.id), f = a.useCallback(() => {
       (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("161297").then(n.bind(n, "161297"));
-        return t => (0, l.jsx)(e, {
-          ...t
-        })
+        return n => {
+          let {
+            onClose: a,
+            transitionState: s
+          } = n;
+          return (0, l.jsx)(e, {
+            otherUserId: t.getRecipientId(),
+            channelId: t.id,
+            onClose: a,
+            transitionState: s
+          })
+        }
+      }, {
+        modalKey: u.SAFETY_TOOLS_MODAL_KEY
       })
-    }, []);
-    return d ? (0, l.jsx)(o.default.Icon, {
+    }, [t]);
+    return c ? (0, l.jsx)(o.default.Icon, {
       icon: r.default,
-      onClick: c,
-      tooltip: u.default.Messages.SAFETY_TOOLS_BUTTON_LABEL
+      onClick: f,
+      tooltip: d.default.Messages.SAFETY_TOOLS_BUTTON_LABEL
     }) : null
   })
