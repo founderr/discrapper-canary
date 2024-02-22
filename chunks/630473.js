@@ -52,7 +52,7 @@ function C(e) {
   }, [n, t]), {
     handleDragStart: M,
     handleDragReset: x,
-    handleDragComplete: R
+    handleDragComplete: I
   } = (0, h.default)(t.availableTags, e => {
     (0, u.updateChannel)({
       availableTags: e
@@ -65,7 +65,7 @@ function C(e) {
       availableTags: t.availableTags,
       canManageChannels: n,
       onTagClick: p,
-      onDragComplete: R,
+      onDragComplete: I,
       onDragReset: x,
       onDragStart: M
     }, e.id)) : null, m ? (0, l.jsx)(d.Clickable, {

@@ -4,7 +4,7 @@ r.r(t), r.d(t, {
     return P
   },
   useElementPools: function() {
-    return M
+    return w
   },
   default: function() {
     return O
@@ -28,8 +28,8 @@ var s = r("37983"),
   _ = r("671434"),
   E = r("354553"),
   R = r("49111"),
-  y = r("782340"),
-  S = r("186046");
+  S = r("782340"),
+  y = r("186046");
 let v = [d.default.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.default.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
   F = 1220,
   T = Array.from({
@@ -51,7 +51,7 @@ function A(e, t) {
 
 function G(e, t, r, n) {
   if (!(e > 0)) return null == T[t] ? null : (0, s.jsx)("div", {
-    className: S.placeholder,
+    className: y.placeholder,
     style: {
       animationDelay: "".concat(75 * t, "ms"),
       ...r
@@ -117,7 +117,7 @@ class P extends n.PureComponent {
       src: e,
       width: t,
       height: r,
-      className: S.gif,
+      className: y.gif,
       alt: ""
     }) : null
   }
@@ -137,8 +137,8 @@ class P extends n.PureComponent {
       innerRef: e => {
         this.ref = e
       },
-      className: i(S.result, {
-        [S.focused]: l
+      className: i(y.result, {
+        [y.focused]: l
       }),
       onClick: this.handleClick,
       style: {
@@ -174,7 +174,7 @@ class P extends n.PureComponent {
     }), this._image.src = e.src)
   }
 }
-class w extends n.PureComponent {
+class M extends n.PureComponent {
   componentDidMount() {
     let {
       resultType: e,
@@ -208,35 +208,35 @@ class w extends n.PureComponent {
   renderEmptyFavorite(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (0, s.jsx)("div", {
-      className: S.emptyHint,
+      className: y.emptyHint,
       children: null != e ? (0, s.jsxs)("div", {
-        className: S.emptyHintCard,
+        className: y.emptyHintCard,
         children: [t ? (0, s.jsx)(_.default, {
-          className: S.emptyHintFavorite
+          className: y.emptyHintFavorite
         }) : null, (0, s.jsx)("div", {
-          className: S.emptyHintText,
+          className: y.emptyHintText,
           children: e
         })]
       }) : (0, s.jsx)("div", {
-        className: S.emptyHintSpacer
+        className: y.emptyHintSpacer
       })
     })
   }
   renderEmptyFavorites() {
     return (0, s.jsx)(h.Scroller, {
-      className: S.results,
+      className: y.results,
       fade: !0,
       children: (0, s.jsxs)("div", {
-        className: S.emptyHints,
-        children: [this.renderEmptyFavorite(y.default.Messages.NO_GIF_FAVORITES_HOW_TO_FAVORITE, !0), this.renderEmptyFavorite(y.default.Messages.NO_GIF_FAVORITES_WHERE_TO_FAVORITE), this.renderEmptyFavorite(y.default.Messages.NO_GIF_FAVORITES_GO_FAVORITE), Array.from({
+        className: y.emptyHints,
+        children: [this.renderEmptyFavorite(S.default.Messages.NO_GIF_FAVORITES_HOW_TO_FAVORITE, !0), this.renderEmptyFavorite(S.default.Messages.NO_GIF_FAVORITES_WHERE_TO_FAVORITE), this.renderEmptyFavorite(S.default.Messages.NO_GIF_FAVORITES_GO_FAVORITE), Array.from({
           length: 15
         }).map((e, t) => (0, s.jsx)(n.Fragment, {
           children: this.renderEmptyFavorite()
-        }, t)), this.renderEmptyFavorite(y.default.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE), Array.from({
+        }, t)), this.renderEmptyFavorite(S.default.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE), Array.from({
           length: 16
         }).map((e, t) => (0, s.jsx)(n.Fragment, {
           children: this.renderEmptyFavorite()
-        }, t)), this.renderEmptyFavorite(y.default.Messages.NO_GIF_FAVORITES_FLAVOR_STILL_HERE)]
+        }, t)), this.renderEmptyFavorite(S.default.Messages.NO_GIF_FAVORITES_FLAVOR_STILL_HERE)]
       })
     })
   }
@@ -248,8 +248,8 @@ class w extends n.PureComponent {
       resultType: n
     } = this.props;
     return 0 === e.length && t === r && n !== R.GIFPickerResultTypes.TRENDING_GIFS ? n === R.GIFPickerResultTypes.FAVORITES ? this.renderEmptyFavorites() : (0, s.jsx)(p.default, {
-      message: y.default.Messages.NO_GIF_SEARCH_RESULTS,
-      className: S.noResults
+      message: S.default.Messages.NO_GIF_SEARCH_RESULTS,
+      className: y.noResults
     }) : (0, s.jsx)(m.default, {
       getItemGrid: this.getItemGrid,
       getCoordsMap: this.getCoordsMap,
@@ -309,7 +309,7 @@ class w extends n.PureComponent {
         coords: r,
         onClick: this.handleClickItem,
         renderExtras: () => (0, s.jsx)(g.default, {
-          className: S.favButton,
+          className: y.favButton,
           ...i
         }),
         focused: C(i) === l,
@@ -333,19 +333,19 @@ class w extends n.PureComponent {
         suggestions: i
       } = this.props;
       return 1 === e ? (0, s.jsx)("div", {
-        className: S.endContainer,
+        className: y.endContainer,
         style: t,
         children: i.length > 0 ? (0, s.jsxs)(n.Fragment, {
           children: [(0, s.jsx)("div", {
-            className: S.endText,
-            children: y.default.Messages.GIF_PICKER_RELATED_SEARCH
+            className: y.endText,
+            children: S.default.Messages.GIF_PICKER_RELATED_SEARCH
           }), (0, s.jsx)("div", {
-            className: S.searchSuggestions,
+            className: y.searchSuggestions,
             children: i.map(e => (0, s.jsx)(h.Button, {
               look: h.Button.Looks.OUTLINED,
               color: h.Button.Colors.PRIMARY,
               size: h.Button.Sizes.SMALL,
-              className: S.searchSuggestion,
+              className: y.searchSuggestion,
               onClick: () => {
                 l(e)
               },
@@ -363,7 +363,7 @@ class w extends n.PureComponent {
       } = this.props;
       return 0 === n.length && (l !== i || a === R.GIFPickerResultTypes.TRENDING_GIFS) ? (0, s.jsx)(h.MasonryList, {
         fade: !0,
-        className: S.results,
+        className: y.results,
         sections: [T.length],
         columns: e,
         itemGutter: 12,
@@ -375,7 +375,7 @@ class w extends n.PureComponent {
         ref: this._masonryRef,
         fade: !0,
         itemGutter: 12,
-        className: S.results,
+        className: y.results,
         columns: e,
         sections: [n.length, 0],
         getItemKey: this.getItemKey,
@@ -400,14 +400,14 @@ class w extends n.PureComponent {
   }
 }
 
-function M() {
+function w() {
   let {
     renderWindow: e
   } = n.useContext(I.default), t = e.document, [r] = n.useState(() => new u.default(() => t.createElement("img"), e => {
     e.onload = null, e.src = ""
   })), [s] = n.useState(() => new u.default(() => {
     let e = t.createElement("video");
-    return e.className = S.gif, e.autoplay = !0, e.loop = !0, e.muted = !0, e.preload = "auto", e.controls = !1, e
+    return e.className = y.gif, e.autoplay = !0, e.loop = !0, e.muted = !0, e.preload = "auto", e.controls = !1, e
   }, e => {
     e.src = "", e.oncanplay = null;
     let {
@@ -421,8 +421,8 @@ function M() {
   }
 }
 var O = function(e) {
-  let t = M();
-  return (0, s.jsx)(w, {
+  let t = w();
+  return (0, s.jsx)(M, {
     ...e,
     ...t
   })

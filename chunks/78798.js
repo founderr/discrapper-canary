@@ -25,8 +25,8 @@ n("424973"), r.prototype.clear = function() {
     if (0 === a) return n._cursor = t, n;
     n._ancestors.push(t), t = t.get_child(a > 0)
   }
-  for (var o = n._ancestors.length - 1; o >= 0; --o)
-    if (0 > r(e, (t = n._ancestors[o]).data)) return n._cursor = t, n._ancestors.length = o, n;
+  for (var i = n._ancestors.length - 1; i >= 0; --i)
+    if (0 > r(e, (t = n._ancestors[i]).data)) return n._cursor = t, n._ancestors.length = i, n;
   return n._ancestors.length = 0, n
 }, r.prototype.upperBound = function(e) {
   for (var t = this.lowerBound(e), n = this._comparator; null !== t.data() && 0 === n(t.data(), e);) t.next();

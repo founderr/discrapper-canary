@@ -9,7 +9,7 @@ function r(e) {
 }
 n.r(t), n.d(t, {
   DragSourceImpl: function() {
-    return i
+    return o
   }
 }), n("222007"), n("70102");
 
@@ -20,7 +20,7 @@ function a(e, t) {
   }
 }
 
-function o(e, t, n) {
+function i(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,15 +28,15 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var i = function() {
+var o = function() {
   var e, t, n;
 
-  function i(e, t, n) {
+  function o(e, t, n) {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, i), o(this, "spec", void 0), o(this, "monitor", void 0), o(this, "connector", void 0), this.spec = e, this.monitor = t, this.connector = n
+    }(this, o), i(this, "spec", void 0), i(this, "monitor", void 0), i(this, "connector", void 0), this.spec = e, this.monitor = t, this.connector = n
   }
-  return e = i, t = [{
+  return e = o, t = [{
     key: "beginDrag",
     value: function() {
       var e, t = this.spec,
@@ -68,5 +68,5 @@ var i = function() {
         r = e.end;
       r && r(t.getItem(), t), n.reconnect()
     }
-  }], a(e.prototype, t), n && a(e, n), i
+  }], a(e.prototype, t), n && a(e, n), o
 }()

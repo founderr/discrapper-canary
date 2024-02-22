@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return p
   },
   HEIGHT_COMPACT_MESSAGE_START: function() {
-    return E
+    return m
   },
   HEIGHT_COMPACT_MESSAGE: function() {
-    return m
+    return E
   },
   HEIGHT_ATTACHMEMT_PADDING: function() {
     return g
@@ -71,7 +71,7 @@ function h(e) {
       className: C,
       style: p
     } = e,
-    E = s ? 50 : r.random(40, 50);
+    m = s ? 50 : r.random(40, 50);
   return !s && n ? t = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(c, {}), (0, a.jsx)(o.H, {
       className: u.header,
@@ -83,7 +83,7 @@ function h(e) {
     })]
   }) : s && (t = (0, a.jsxs)(a.Fragment, {
     children: [s && (0, a.jsx)(f, {
-      width: E,
+      width: m,
       className: l({
         [u.compactTimestamp]: !0,
         [u.hidden]: !n
@@ -126,8 +126,8 @@ function h(e) {
 }
 let C = 44,
   p = 22,
-  E = 26,
   m = 26,
+  E = 26,
   g = 6;
 
 function S(e) {

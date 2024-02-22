@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("390236"),
   p = n("95045"),
   E = n("574073"),
-  S = n("24373"),
-  g = n("41170"),
+  g = n("24373"),
+  S = n("41170"),
   C = n("377253"),
   _ = n("27618"),
   I = n("93427"),
@@ -54,7 +54,7 @@ function L(e) {
   } = (0, I.renderSingleLineMessage)(n, x, s, R.messageContent, {
     iconClass: R.messageContentIcon,
     iconSize: M.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
-  }), L = (0, S.getMessageStickers)(n), y = L.length > 0, O = y ? L.map(e => (0, l.jsx)(g.default, {
+  }), L = (0, g.getMessageStickers)(n), y = L.length > 0, O = y ? L.map(e => (0, l.jsx)(S.default, {
     className: R.sticker,
     size: 128,
     sticker: e,
@@ -125,17 +125,17 @@ function y(e) {
       })
     }, [r]), l && null == h.current ? h.current = r : !l && null != h.current && (h.current = null);
     let E = null !== (t = h.current) && void 0 !== t ? t : r,
-      S = (0, u.useStateFromStoresArray)([C.default], () => E.map(e => C.default.getMessage(n, e)), [n, E]);
+      g = (0, u.useStateFromStoresArray)([C.default], () => E.map(e => C.default.getMessage(n, e)), [n, E]);
     return {
       toastsHidden: d,
-      toastMessages: S.filter(x.isNotNullish)
+      toastMessages: g.filter(x.isNotNullish)
     }
   }({
     channelId: t,
     isFrozen: s,
     count: 3,
     lingerMs: j
-  }), m = a.useRef({}), [p, E] = a.useState({}), S = a.useCallback((e, t) => {
+  }), m = a.useRef({}), [p, E] = a.useState({}), g = a.useCallback((e, t) => {
     null == t ? delete m.current[e] : m.current[e] = t
   }, []);
   a.useLayoutEffect(() => {
@@ -147,12 +147,12 @@ function y(e) {
       e[l.id] = t, t += a + 8
     }!(0, r.isEqual)(e, p) && E(e)
   }, [h]);
-  let g = h.map(e => ({
+  let S = h.map(e => ({
       message: e,
       height: m.current[e.id],
       y: p[e.id]
     })),
-    _ = (0, o.useTransition)(g, {
+    _ = (0, o.useTransition)(S, {
       keys: e => e.message.id,
       from: () => ({
         opacity: 0
@@ -195,7 +195,7 @@ function y(e) {
       d(!1)
     },
     children: _((e, t) => (0, l.jsx)(o.animated.div, {
-      ref: e => S(t.message.id, null != e ? e.offsetHeight : null),
+      ref: e => g(t.message.id, null != e ? e.offsetHeight : null),
       className: R.toastWrapper,
       style: e,
       children: (0, l.jsx)(L, {

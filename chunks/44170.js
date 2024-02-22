@@ -25,10 +25,10 @@ e.exports = s, e.exports.once = function(e, t) {
     function o() {
       "function" == typeof e.removeListener && e.removeListener("error", a), n([].slice.call(arguments))
     }
-    y(e, t, o, {
+    _(e, t, o, {
       once: !0
     }), "error" !== t && function(e, t, n) {
-      "function" == typeof e.on && y(e, "error", t, n)
+      "function" == typeof e.on && _(e, "error", t, n)
     }(e, a, {
       once: !0
     })
@@ -70,17 +70,17 @@ function p(e, t, n) {
   return a.listener = n, r.wrapFn = a, a
 }
 
-function m(e, t, n) {
+function h(e, t, n) {
   var r = e._events;
   if (void 0 === r) return [];
   var a = r[t];
   return void 0 === a ? [] : "function" == typeof a ? n ? [a.listener || a] : [a] : n ? function(e) {
     for (var t = Array(e.length), n = 0; n < t.length; ++n) t[n] = e[n].listener || e[n];
     return t
-  }(a) : _(a, a.length)
+  }(a) : y(a, a.length)
 }
 
-function h(e) {
+function m(e) {
   var t = this._events;
   if (void 0 !== t) {
     var n = t[e];
@@ -90,7 +90,7 @@ function h(e) {
   return 0
 }
 
-function _(e, t) {
+function y(e, t) {
   for (var n = Array(t), r = 0; r < t; ++r) n[r] = e[r];
   return n
 }
@@ -125,7 +125,7 @@ Object.defineProperty(s, "defaultMaxListeners", {
   if (void 0 === u) return !1;
   if ("function" == typeof u) o(u, this, t);
   else {
-    for (var l = u.length, c = _(u, l), n = 0; n < l; ++n) o(c[n], this, t)
+    for (var l = u.length, c = y(u, l), n = 0; n < l; ++n) o(c[n], this, t)
   }
   return !0
 }, s.prototype.addListener = function(e, t) {
@@ -166,16 +166,16 @@ Object.defineProperty(s, "defaultMaxListeners", {
     for (r = t.length - 1; r >= 0; r--) this.removeListener(e, t[r]);
   return this
 }, s.prototype.listeners = function(e) {
-  return m(this, e, !0)
+  return h(this, e, !0)
 }, s.prototype.rawListeners = function(e) {
-  return m(this, e, !1)
+  return h(this, e, !1)
 }, s.listenerCount = function(e, t) {
-  return "function" == typeof e.listenerCount ? e.listenerCount(t) : h.call(e, t)
-}, s.prototype.listenerCount = h, s.prototype.eventNames = function() {
+  return "function" == typeof e.listenerCount ? e.listenerCount(t) : m.call(e, t)
+}, s.prototype.listenerCount = m, s.prototype.eventNames = function() {
   return this._eventsCount > 0 ? r(this._events) : []
 };
 
-function y(e, t, n, r) {
+function _(e, t, n, r) {
   if ("function" == typeof e.on) r.once ? e.once(t, n) : e.on(t, n);
   else if ("function" == typeof e.addEventListener) e.addEventListener(t, function a(o) {
     r.once && e.removeEventListener(t, a), n(o)

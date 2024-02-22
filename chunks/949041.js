@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return a
+    return n
   }
-}), n("70102");
-var i = n("884691");
+}), r("70102");
+var s = r("884691");
 
-function a() {
-  let e = (0, i.createContext)(void 0);
+function n() {
+  let e = (0, s.createContext)(void 0);
   return {
     Provider: t => {
       let {
-        initialStore: n,
-        createStore: a,
-        children: r
-      } = t, s = (0, i.useRef)();
-      return !s.current && (n && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !a && (a = () => n)), s.current = a()), (0, i.createElement)(e.Provider, {
-        value: s.current
-      }, r)
+        initialStore: r,
+        createStore: n,
+        children: i
+      } = t, l = (0, s.useRef)();
+      return !l.current && (r && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !n && (n = () => r)), l.current = n()), (0, s.createElement)(e.Provider, {
+        value: l.current
+      }, i)
     },
     useStore: function(t) {
-      let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.is,
-        a = (0, i.useContext)(e);
-      if (!a) throw Error("Seems like you have not used zustand provider as an ancestor.");
-      return a(t, n)
+      let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.is,
+        n = (0, s.useContext)(e);
+      if (!n) throw Error("Seems like you have not used zustand provider as an ancestor.");
+      return n(t, r)
     },
     useStoreApi: () => {
-      let t = (0, i.useContext)(e);
+      let t = (0, s.useContext)(e);
       if (!t) throw Error("Seems like you have not used zustand provider as an ancestor.");
-      return (0, i.useMemo)(() => ({
+      return (0, s.useMemo)(() => ({
         getState: t.getState,
         setState: t.setState,
         subscribe: t.subscribe,

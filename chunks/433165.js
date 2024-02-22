@@ -401,13 +401,13 @@ var r = {
     z̧: "z"
   },
   a = Object.keys(r).join("|"),
-  o = RegExp(a, "g"),
-  i = RegExp(a, ""),
+  i = RegExp(a, "g"),
+  o = RegExp(a, ""),
   s = function(e) {
-    return e.replace(o, function(e) {
+    return e.replace(i, function(e) {
       return r[e]
     })
   };
 e.exports = s, e.exports.has = function(e) {
-  return !!e.match(i)
+  return !!e.match(o)
 }, e.exports.remove = s

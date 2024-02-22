@@ -11,8 +11,8 @@ var r = Symbol.for("react.element"),
   d = Symbol.for("react.suspense"),
   f = Symbol.for("react.memo"),
   p = Symbol.for("react.lazy"),
-  m = Symbol.iterator,
-  h = {
+  h = Symbol.iterator,
+  m = {
     isMounted: function() {
       return !1
     },
@@ -20,17 +20,17 @@ var r = Symbol.for("react.element"),
     enqueueReplaceState: function() {},
     enqueueSetState: function() {}
   },
-  _ = Object.assign,
-  y = {};
+  y = Object.assign,
+  _ = {};
 
 function g(e, t, n) {
-  this.props = e, this.context = t, this.refs = y, this.updater = n || h
+  this.props = e, this.context = t, this.refs = _, this.updater = n || m
 }
 
 function v() {}
 
 function b(e, t, n) {
-  this.props = e, this.context = t, this.refs = y, this.updater = n || h
+  this.props = e, this.context = t, this.refs = _, this.updater = n || m
 }
 g.prototype.isReactComponent = {}, g.prototype.setState = function(e, t) {
   if ("object" != typeof e && "function" != typeof e && null != e) throw Error("setState(...): takes an object of state variables to update or a function which returns an object of state variables.");
@@ -39,7 +39,7 @@ g.prototype.isReactComponent = {}, g.prototype.setState = function(e, t) {
   this.updater.enqueueForceUpdate(this, e, "forceUpdate")
 }, v.prototype = g.prototype;
 var M = b.prototype = new v;
-M.constructor = b, _(M, g.prototype), M.isPureReactComponent = !0;
+M.constructor = b, y(M, g.prototype), M.isPureReactComponent = !0;
 var w = Array.isArray,
   k = Object.prototype.hasOwnProperty,
   L = {
@@ -127,12 +127,12 @@ function O(e, t, n) {
     }
     if (f = 0, i = "" === i ? "." : i + ":", w(t))
       for (var p = 0; p < t.length; p++) {
-        var h = i + x(d = t[p], p);
-        f += e(d, n, o, h, s)
+        var m = i + x(d = t[p], p);
+        f += e(d, n, o, m, s)
       } else {
         ;
-        if ("function" == typeof(h = null === (c = t) || "object" != typeof c ? null : "function" == typeof(c = m && c[m] || c["@@iterator"]) ? c : null))
-          for (t = h.call(t), p = 0; !(d = t.next()).done;) h = i + x(d = d.value, p++), f += e(d, n, o, h, s);
+        if ("function" == typeof(m = null === (c = t) || "object" != typeof c ? null : "function" == typeof(c = h && c[h] || c["@@iterator"]) ? c : null))
+          for (t = m.call(t), p = 0; !(d = t.next()).done;) m = i + x(d = d.value, p++), f += e(d, n, o, m, s);
         else if ("object" === d) throw Error("Objects are not valid as a React child (found: " + ("[object Object]" === (n = String(t)) ? "object with keys {" + Object.keys(t).join(", ") + "}" : n) + "). If you meant to render a collection of children, use an array instead.")
       }
     return f
@@ -187,7 +187,7 @@ t.Children = {
   ReactCurrentOwner: L
 }, t.cloneElement = function(e, t, n) {
   if (null == e) throw Error("React.cloneElement(...): The argument must be a React element, but you passed " + e + ".");
-  var a = _({}, e.props),
+  var a = y({}, e.props),
     o = e.key,
     i = e.ref,
     s = e._owner;

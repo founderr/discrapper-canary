@@ -8,8 +8,8 @@ var n = r("37983");
 r("884691");
 var o = r("271938"),
   a = r("831588"),
-  i = r("209535"),
-  l = r("49111");
+  l = r("209535"),
+  i = r("49111");
 
 function u(t, e) {
   var r, u;
@@ -18,9 +18,9 @@ function u(t, e) {
   };
 
   function s(r) {
-    if (!(0, a.isAuthenticated)() && o.default.getLoginStatus() !== l.LoginStates.LOGGING_IN && o.default.allowLogoutRedirect()) return null != e ? (0, n.jsx)(e, {
-      renderRedirect: (0, n.jsx)(i.default, {})
-    }) : (0, n.jsx)(i.default, {});
+    if (!(0, a.isAuthenticated)() && o.default.getLoginStatus() !== i.LoginStates.LOGGING_IN && o.default.allowLogoutRedirect()) return null != e ? (0, n.jsx)(e, {
+      renderRedirect: (0, n.jsx)(l.default, {})
+    }) : (0, n.jsx)(l.default, {});
     return (0, n.jsx)(t, {
       ...c.passProps ? r : null
     })

@@ -23,8 +23,8 @@ var a = n("37983"),
   h = n("506885"),
   C = n("27618"),
   p = n("162771"),
-  E = n("697218"),
-  m = n("79798"),
+  m = n("697218"),
+  E = n("79798"),
   g = n("476263"),
   S = n("718490"),
   _ = n("960454"),
@@ -44,7 +44,7 @@ function L(e) {
     inSidebar: f = !1,
     handleClick: h,
     handleContextMenu: p,
-    handleParentClick: m,
+    handleParentClick: E,
     handleParentContextMenu: g,
     renderFollowButton: S
   } = e, T = (0, c.default)(t, r), {
@@ -154,9 +154,9 @@ function L(e) {
           children: [y(e, N.default.Messages.TEXT_CHANNEL), (0, a.jsx)(A.default.Title, {
             level: R,
             onContextMenu: g,
-            onClick: m,
+            onClick: E,
             className: i(v.parentChannelName, v.cursorPointer),
-            children: (0, d.computeChannelName)(l, E.default, C.default)
+            children: (0, d.computeChannelName)(l, m.default, C.default)
           }), (0, a.jsx)(A.default.Caret, {})]
         })
       }
@@ -174,7 +174,7 @@ function L(e) {
         })]
       });
     case I.ChannelTypes.GUILD_DIRECTORY:
-      let P = (null == r ? void 0 : r.hasFeature(I.GuildFeatures.HUB)) ? N.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
+      let j = (null == r ? void 0 : r.hasFeature(I.GuildFeatures.HUB)) ? N.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
         guildName: n
       }) : n;
       return (0, a.jsxs)(s.Fragment, {
@@ -188,7 +188,7 @@ function L(e) {
           onClick: h,
           children: [null != L ? (0, a.jsxs)(o.HiddenVisually, {
             children: [L, ":"]
-          }) : null, " ", P]
+          }) : null, " ", j]
         })]
       });
     default:
@@ -198,15 +198,15 @@ function L(e) {
 let R = e => {
   let {
     channel: t
-  } = e, n = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), l = (0, r.useStateFromStores)([E.default], () => E.default.getUser(t.getRecipientId()));
+  } = e, n = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentUser()), l = (0, r.useStateFromStores)([m.default], () => m.default.getUser(t.getRecipientId()));
   return (s.useEffect(() => {
     (null == n ? void 0 : n.isStaff()) && (0, h.default)(l.id, l.getAvatarURL(void 0, 80), {
       dispatchWait: !0,
       withMutualGuilds: !0,
       withMutualFriendsCount: !0
     })
-  }, [n, l]), t.isDM() && (null == n ? void 0 : n.isStaff()) && (null == l ? void 0 : l.isStaff())) ? (0, a.jsx)(m.default, {
-    type: m.default.Types.STAFF_ONLY_DM
+  }, [n, l]), t.isDM() && (null == n ? void 0 : n.isStaff()) && (null == l ? void 0 : l.isStaff())) ? (0, a.jsx)(E.default, {
+    type: E.default.Types.STAFF_ONLY_DM
   }) : null
 };
 

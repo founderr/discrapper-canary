@@ -4,25 +4,25 @@ var r = n("459078"),
   o = n("589746"),
   i = a("%TypeError%"),
   s = a("%Function.prototype.apply%"),
-  c = a("%Function.prototype.call%"),
-  l = a("%Reflect.apply%", !0) || r.call(c, s),
-  u = a("%Object.defineProperty%", !0),
+  u = a("%Function.prototype.call%"),
+  l = a("%Reflect.apply%", !0) || r.call(u, s),
+  c = a("%Object.defineProperty%", !0),
   d = a("%Math.max%");
-if (u) try {
-  u({}, "a", {
+if (c) try {
+  c({}, "a", {
     value: 1
   })
 } catch (e) {
-  u = null
+  c = null
 }
 e.exports = function(e) {
   if ("function" != typeof e) throw new i("a function is required");
-  var t = l(r, c, arguments);
+  var t = l(r, u, arguments);
   return o(t, 1 + d(0, e.length - (arguments.length - 1)), !0)
 };
-var p = function() {
+var f = function() {
   return l(r, s, arguments)
 };
-u ? u(e.exports, "apply", {
-  value: p
-}) : e.exports.apply = p
+c ? c(e.exports, "apply", {
+  value: f
+}) : e.exports.apply = f

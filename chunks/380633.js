@@ -27,8 +27,8 @@ var e, i = n("859514"),
   S = a.URL,
   TypeError = a.TypeError,
   M = a.parseInt,
-  O = Math.floor,
-  I = Math.pow,
+  I = Math.floor,
+  O = Math.pow,
   N = c("".charAt),
   L = c(/./.exec),
   j = c([].join),
@@ -70,9 +70,9 @@ var e, i = n("859514"),
     }
     for (e = 0; e < r; e++)
       if (u = n[e], e === r - 1) {
-        if (u >= I(256, 5 - r)) return null
+        if (u >= O(256, 5 - r)) return null
       } else if (u > 255) return null;
-    for (e = 0, a = U(n); e < n.length; e++) a += n[e] * I(256, 3 - e);
+    for (e = 0, a = U(n); e < n.length; e++) a += n[e] * O(256, 3 - e);
     return a
   },
   to = function(t) {
@@ -135,7 +135,7 @@ var e, i = n("859514"),
   ta = function(t) {
     var r, n, e, i;
     if ("number" == typeof t) {
-      for (n = 0, r = []; n < 4; n++) F(r, t % 256), t = O(t / 256);
+      for (n = 0, r = []; n < 4; n++) F(r, t % 256), t = I(t / 256);
       return j(r, ".")
     }
     if ("object" == typeof t) {
@@ -203,8 +203,8 @@ var e, i = n("859514"),
   tA = {},
   tS = {},
   tM = {},
-  tO = {},
   tI = {},
+  tO = {},
   tN = {},
   tL = {},
   tj = {},
@@ -248,7 +248,7 @@ tB.prototype = {
               this.isSpecial() && tp[this.scheme] === this.port && (this.port = null);
               return
             }
-            u = "", "file" === this.scheme ? i = tO : this.isSpecial() && n && n.scheme === this.scheme ? i = tm : this.isSpecial() ? i = tE : "/" === s[o + 1] ? (i = t_, o++) : (this.cannotBeABaseURL = !0, q(this.path, ""), i = tP)
+            u = "", "file" === this.scheme ? i = tI : this.isSpecial() && n && n.scheme === this.scheme ? i = tm : this.isSpecial() ? i = tE : "/" === s[o + 1] ? (i = t_, o++) : (this.cannotBeABaseURL = !0, q(this.path, ""), i = tP)
           } else {
             if (r) return W;
             u = "", i = tb, o = 0;
@@ -261,7 +261,7 @@ tB.prototype = {
             this.scheme = n.scheme, this.path = d(n.path), this.query = n.query, this.fragment = "", this.cannotBeABaseURL = !0, i = tq;
             break
           }
-          i = "file" === n.scheme ? tO : tw;
+          i = "file" === n.scheme ? tI : tw;
           continue;
         case tm:
           if ("/" === l && "/" === s[o + 1]) i = tR, o++;
@@ -357,8 +357,8 @@ tB.prototype = {
             continue
           }
           break;
-        case tO:
-          if (this.scheme = "file", "/" === l || "\\" === l) i = tI;
+        case tI:
+          if (this.scheme = "file", "/" === l || "\\" === l) i = tO;
           else if (n && "file" === n.scheme) switch (l) {
             case e:
               this.host = n.host, this.path = d(n.path), this.query = n.query;
@@ -377,7 +377,7 @@ tB.prototype = {
             continue
           }
           break;
-        case tI:
+        case tO:
           if ("/" === l || "\\" === l) {
             i = tN;
             break

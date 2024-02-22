@@ -4,47 +4,47 @@ var r = n("886639"),
   o = n("418855"),
   i = n("649675"),
   s = n("763589"),
-  c = n("308274"),
+  u = n("308274"),
   l = n("470984"),
-  u = n("55082"),
+  c = n("55082"),
   d = n("579697"),
-  p = n("161323"),
-  f = TypeError,
+  f = n("161323"),
+  p = TypeError,
   h = function(e, t) {
     this.stopped = e, this.result = t
   },
   m = h.prototype;
 e.exports = function(e, t, n) {
-  var v, g, y, b, x, S, w, D = n && n.that,
-    C = !!(n && n.AS_ENTRIES),
-    k = !!(n && n.IS_RECORD),
-    P = !!(n && n.IS_ITERATOR),
-    E = !!(n && n.INTERRUPTED),
-    T = r(t, D),
-    M = function(e) {
-      return v && p(v, "normal", e), new h(!0, e)
+  var y, _, g, v, b, M, w, k = n && n.that,
+    L = !!(n && n.AS_ENTRIES),
+    D = !!(n && n.IS_RECORD),
+    T = !!(n && n.IS_ITERATOR),
+    S = !!(n && n.INTERRUPTED),
+    Y = r(t, k),
+    x = function(e) {
+      return y && f(y, "normal", e), new h(!0, e)
     },
-    R = function(e) {
-      return C ? (o(e), E ? T(e[0], e[1], M) : T(e[0], e[1])) : E ? T(e, M) : T(e)
+    O = function(e) {
+      return L ? (o(e), S ? Y(e[0], e[1], x) : Y(e[0], e[1])) : S ? Y(e, x) : Y(e)
     };
-  if (k) v = e.iterator;
-  else if (P) v = e;
+  if (D) y = e.iterator;
+  else if (T) y = e;
   else {
-    if (!(g = d(e))) throw f(i(e) + " is not iterable");
-    if (s(g)) {
-      for (y = 0, b = c(e); b > y; y++)
-        if ((x = R(e[y])) && l(m, x)) return x;
+    if (!(_ = d(e))) throw p(i(e) + " is not iterable");
+    if (s(_)) {
+      for (g = 0, v = u(e); v > g; g++)
+        if ((b = O(e[g])) && l(m, b)) return b;
       return new h(!1)
     }
-    v = u(e, g)
+    y = c(e, _)
   }
-  for (S = k ? e.next : v.next; !(w = a(S, v)).done;) {
+  for (M = D ? e.next : y.next; !(w = a(M, y)).done;) {
     try {
-      x = R(w.value)
+      b = O(w.value)
     } catch (e) {
-      p(v, "throw", e)
+      f(y, "throw", e)
     }
-    if ("object" == typeof x && x && l(m, x)) return x
+    if ("object" == typeof b && b && l(m, b)) return b
   }
   return new h(!1)
 }

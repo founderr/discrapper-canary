@@ -26,8 +26,8 @@ var l = s("37983"),
   p = s("492114"),
   M = s("42203"),
   x = s("957255"),
-  R = s("27618"),
-  I = s("697218"),
+  I = s("27618"),
+  R = s("697218"),
   A = s("228220"),
   O = s("659500"),
   L = s("291013"),
@@ -104,13 +104,13 @@ class H extends a.PureComponent {
               width: 12,
               height: 12,
               className: b.channelIcon
-            }) : null, (0, f.computeChannelName)(t, I.default, R.default), null != s ? (0, l.jsx)(i.Text, {
+            }) : null, (0, f.computeChannelName)(t, R.default, I.default), null != s ? (0, l.jsx)(i.Text, {
               tag: "span",
               variant: "text-xs/semibold",
               color: "header-secondary",
               lineClamp: 1,
               className: b.category,
-              children: (0, f.computeChannelName)(s, I.default, R.default)
+              children: (0, f.computeChannelName)(s, R.default, I.default)
             }) : null]
           }) : F.default.Messages.CHANNEL_SETTINGS
         }, {

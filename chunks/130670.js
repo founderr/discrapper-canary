@@ -19,14 +19,14 @@ function s(e, t, n) {
     d = !(0, i.default)() && n,
     f = (s.left + (d && c ? c.offsetLeft : 0)) / u,
     p = (s.top + (d && c ? c.offsetTop : 0)) / l,
-    m = s.width / u,
-    h = s.height / l;
+    h = s.width / u,
+    m = s.height / l;
   return {
-    width: m,
-    height: h,
+    width: h,
+    height: m,
     top: p,
-    right: f + m,
-    bottom: p + h,
+    right: f + h,
+    bottom: p + m,
     left: f,
     x: f,
     y: p

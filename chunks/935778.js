@@ -18,16 +18,16 @@ var r = Object.prototype.toString,
 e.exports = function(e) {
   var t, n = this;
   if ("function" != typeof n || "[object Function]" !== r.apply(n)) throw TypeError("Function.prototype.bind called on incompatible " + n);
-  for (var c = i(arguments, 1), l = a(0, n.length - c.length), u = [], d = 0; d < l; d++) u[d] = "$" + d;
-  if (t = Function("binder", "return function (" + s(u, ",") + "){ return binder.apply(this,arguments); }")(function() {
+  for (var u = i(arguments, 1), l = a(0, n.length - u.length), c = [], d = 0; d < l; d++) c[d] = "$" + d;
+  if (t = Function("binder", "return function (" + s(c, ",") + "){ return binder.apply(this,arguments); }")(function() {
       if (this instanceof t) {
-        var r = n.apply(this, o(c, arguments));
+        var r = n.apply(this, o(u, arguments));
         return Object(r) === r ? r : this
       }
-      return n.apply(e, o(c, arguments))
+      return n.apply(e, o(u, arguments))
     }), n.prototype) {
-    var p = function() {};
-    p.prototype = n.prototype, t.prototype = new p, p.prototype = null
+    var f = function() {};
+    f.prototype = n.prototype, t.prototype = new f, f.prototype = null
   }
   return t
 }

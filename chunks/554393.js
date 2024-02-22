@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("762147"),
   C = n("875978"),
   p = n("359132"),
-  E = n("836943"),
-  m = n("92981"),
+  m = n("836943"),
+  E = n("92981"),
   g = n("592707"),
   S = n("350134"),
   _ = n("755624"),
@@ -34,8 +34,8 @@ var a = n("37983"),
   y = n("688169"),
   O = n("49111"),
   D = n("782340"),
-  P = n("425833"),
-  j = n("159441");
+  j = n("425833"),
+  P = n("159441");
 
 function b(e) {
   let {
@@ -92,16 +92,16 @@ function b(e) {
     eo = z ? I.default : M.default;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: i(P.container, {
-        [P.header]: w
+      className: i(j.container, {
+        [j.header]: w
       }),
       ref: H,
       children: [(0, a.jsxs)("div", {
-        className: i(P.reactButtons, {
-          [P.loading]: ea
+        className: i(j.reactButtons, {
+          [j.loading]: ea
         }),
         children: [!el && !Y && null != ee && (0, a.jsx)("div", {
-          className: j.reactions,
+          className: P.reactions,
           children: (0, a.jsx)(S.Reaction, {
             message: Z,
             readOnly: !1,
@@ -126,21 +126,21 @@ function b(e) {
           isGuest: q,
           isPendingMember: J,
           maxReactions: U,
-          className: P.reactions,
+          className: j.reactions,
           useChatFontScaling: !1,
           isForumToolbar: !0,
           forceHideReactionCreates: !0
-        }), !Y && (0, a.jsx)(E.ButtonAddReaction, {
+        }), !Y && (0, a.jsx)(m.ButtonAddReaction, {
           type: C.ReactionTypes.NORMAL,
           message: Z,
           channel: W,
           useChatFontScaling: !1,
-          className: P.addReactButton,
+          className: j.addReactButton,
           isForumToolbar: !0,
           children: !el && D.default.Messages.FORUM_REACT_TO_POST
         })]
       }), (0, a.jsxs)("div", {
-        className: P.buttons,
+        className: j.buttons,
         children: [(0, a.jsx)(u.Tooltip, {
           text: D.default.Messages.FORUM_FOLLOW_TOOLTIP,
           children: e => (0, a.jsxs)(u.Button, {
@@ -148,9 +148,9 @@ function b(e) {
             look: u.Button.Looks.BLANK,
             size: u.Button.Sizes.SMALL,
             onClick: ei,
-            className: P.button,
-            innerClassName: i(P.buttonInner, {
-              [P.active]: z
+            className: j.button,
+            innerClassName: i(j.buttonInner, {
+              [j.active]: z
             }),
             children: [(0, a.jsx)(eo, {
               width: 16,
@@ -164,8 +164,8 @@ function b(e) {
             look: u.Button.Looks.BLANK,
             size: u.Button.Sizes.SMALL,
             onClick: er,
-            className: P.button,
-            innerClassName: P.buttonInner,
+            className: j.button,
+            innerClassName: j.buttonInner,
             children: [B ? (0, a.jsx)(I.default, {
               width: 16,
               height: 16
@@ -178,7 +178,7 @@ function b(e) {
       })]
     }), et && (0, a.jsx)(h.default, {
       threadId: t
-    }), (0, a.jsx)(m.default, {
+    }), (0, a.jsx)(E.default, {
       channel: W,
       isLastItem: l
     })]

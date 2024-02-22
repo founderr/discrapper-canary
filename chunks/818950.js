@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("890503"),
   C = n("336696"),
   p = n("38654"),
-  E = n("347738"),
-  m = n("845579"),
+  m = n("347738"),
+  E = n("845579"),
   g = n("271938"),
   S = n("836417"),
   _ = n("88093"),
@@ -34,8 +34,8 @@ var a = n("37983"),
   y = n("88243"),
   O = n("31511"),
   D = n("120379"),
-  P = n("221068"),
-  j = n("49111"),
+  j = n("221068"),
+  P = n("49111"),
   b = n("782340"),
   H = n("430759");
 let F = s.memo(function(e) {
@@ -45,8 +45,8 @@ let F = s.memo(function(e) {
     messageGroupSpacing: c,
     scrollerClassName: h,
     channel: C,
-    messages: E,
-    unreadCount: m,
+    messages: m,
+    unreadCount: E,
     showNewMessagesBar: g,
     messageDisplayCompact: S,
     channelStream: _,
@@ -72,7 +72,7 @@ let F = s.memo(function(e) {
     fontSize: N,
     groupSpacing: c
   }), [S, N, c]), w = (0, D.default)({
-    messages: E,
+    messages: m,
     channel: C,
     compact: S,
     hasUnreads: M,
@@ -85,10 +85,10 @@ let F = s.memo(function(e) {
     scrollerRef: w.ref,
     isEditing: null != I,
     keyboardModeEnabled: v,
-    hasMoreAfter: E.hasMoreAfter
+    hasMoreAfter: m.hasMoreAfter
   });
   let B = (n = C, (0, o.useStateFromStores)([p.default], () => {
-      let e = A.default.can(j.Permissions.READ_MESSAGE_HISTORY, n);
+      let e = A.default.can(P.Permissions.READ_MESSAGE_HISTORY, n);
       return e ? null : p.default.getViewingRolesTimestamp(n.getGuildId())
     })),
     {
@@ -97,10 +97,10 @@ let F = s.memo(function(e) {
       jumpToPresentBar: Z,
       forumPostActionBar: z,
       safetyWarningBanner: K
-    } = (0, P.default)({
+    } = (0, j.default)({
       channel: C,
-      messages: E,
-      unreadCount: m,
+      messages: m,
+      unreadCount: E,
       showNewMessagesBar: g,
       messageDisplayCompact: S,
       channelStream: _,
@@ -112,12 +112,12 @@ let F = s.memo(function(e) {
       showingQuarantineBanner: x,
       isAtBottom: F,
       jumpToPresent: () => {
-        if (E.hasPresent()) {
+        if (m.hasPresent()) {
           var e;
           null === (e = w.ref.current) || void 0 === e || e.scrollToBottom({
             animate: !f.default.useReducedMotion
           })
-        } else d.default.jumpToPresent(C.id, j.MAX_MESSAGES_PER_CHANNEL)
+        } else d.default.jumpToPresent(C.id, P.MAX_MESSAGES_PER_CHANNEL)
       }
     });
   ! function(e) {
@@ -138,13 +138,13 @@ let F = s.memo(function(e) {
         })
       }, [e]);
     (0, L.useComponentAction)({
-      event: j.ComponentActions.SCROLLTO_PRESENT,
+      event: P.ComponentActions.SCROLLTO_PRESENT,
       handler: t
     }), (0, L.useComponentAction)({
-      event: j.ComponentActions.SCROLL_PAGE_UP,
+      event: P.ComponentActions.SCROLL_PAGE_UP,
       handler: n
     }), (0, L.useComponentAction)({
-      event: j.ComponentActions.SCROLL_PAGE_DOWN,
+      event: P.ComponentActions.SCROLL_PAGE_DOWN,
       handler: a
     })
   }(w.ref);
@@ -187,8 +187,8 @@ let F = s.memo(function(e) {
           }), V, (0, a.jsx)("div", {
             className: i({
               [H.scrollerSpacer]: !x,
-              [H.empty]: 0 === E.length && !E.loadingMore,
-              [H.emptyForum]: 1 === E.length && !E.loadingMore && C.isForumPost() && (null === (t = E.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
+              [H.empty]: 0 === m.length && !m.loadingMore,
+              [H.emptyForum]: 1 === m.length && !m.loadingMore && C.isForumPost() && (null === (t = m.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
             })
           })]
         })]
@@ -214,7 +214,7 @@ var U = s.memo(function(e) {
         canManageMessages: a,
         permissionVersion: s
       } = (0, o.useStateFromStoresObject)([A.default], () => ({
-        canManageMessages: A.default.can(j.Permissions.MANAGE_MESSAGES, e),
+        canManageMessages: A.default.can(P.Permissions.MANAGE_MESSAGES, e),
         permissionVersion: null != t ? A.default.getGuildVersion(t) : null
       }), [e, t]);
     return {
@@ -227,10 +227,10 @@ var U = s.memo(function(e) {
     fontSize: y,
     messageDisplayCompact: O,
     renderSpoilers: D,
-    keyboardModeEnabled: P
+    keyboardModeEnabled: j
   } = function() {
-    let e = m.MessageDisplayCompact.useSetting(),
-      t = m.RenderSpoilers.useSetting(),
+    let e = E.MessageDisplayCompact.useSetting(),
+      t = E.RenderSpoilers.useSetting(),
       {
         messageGroupSpacing: n,
         fontSize: a,
@@ -273,15 +273,15 @@ var U = s.memo(function(e) {
       }, {
         autoTrackExposure: !1
       }),
-      r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(j.UserFlags.SPAMMER)) && void 0 !== n && n,
+      r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(P.UserFlags.SPAMMER)) && void 0 !== n && n,
       u = (0, c.useChannelSummariesExperiment)(e),
       d = (0, h.default)("use_topic_dividers_in_chat"),
-      f = (0, o.useStateFromStoresArray)([E.default], () => {
+      f = (0, o.useStateFromStoresArray)([m.default], () => {
         var t;
-        return u && d && null !== (t = E.default.summaries(e.id)) && void 0 !== t ? t : []
+        return u && d && null !== (t = m.default.summaries(e.id)) && void 0 !== t ? t : []
       }, [u, e.id, d]),
-      p = (0, o.useStateFromStores)([E.default], () => u ? E.default.selectedSummary(e.id) : null, [u, e.id]),
-      m = s.useMemo(() => (0, x.default)({
+      p = (0, o.useStateFromStores)([m.default], () => u ? m.default.selectedSummary(e.id) : null, [u, e.id]),
+      E = s.useMemo(() => (0, x.default)({
         channel: e,
         messages: a,
         oldestUnreadMessageId: l,
@@ -295,7 +295,7 @@ var U = s.memo(function(e) {
       });
     return {
       messages: a,
-      channelStream: m,
+      channelStream: E,
       oldestUnreadMessageId: l,
       editingMessageId: _
     }
@@ -317,7 +317,7 @@ var U = s.memo(function(e) {
       canChat: p,
       editingMessageId: k,
       fontSize: y,
-      keyboardModeEnabled: P,
+      keyboardModeEnabled: j,
       showingQuarantineBanner: n
     })
   })

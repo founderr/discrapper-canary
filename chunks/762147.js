@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("404008"),
   C = n("701909"),
   p = n("639440"),
-  E = n("673844"),
-  m = n("49111"),
+  m = n("673844"),
+  E = n("49111"),
   g = n("782340"),
   S = n("618509");
 
@@ -26,13 +26,13 @@ function _(e) {
   let {
     threadId: t
   } = e, n = (0, i.default)([u.default], () => u.default.getChannel(t)), _ = (0, i.default)([u.default], () => u.default.getChannel(null == n ? void 0 : n.parent_id)), T = s.useCallback(() => {
-    null != n && null != _ && ((0, o.trackWithMetadata)(m.AnalyticEvents.MEDIA_POST_SHARE_PROMPT_CLICKED, {
+    null != n && null != _ && ((0, o.trackWithMetadata)(E.AnalyticEvents.MEDIA_POST_SHARE_PROMPT_CLICKED, {
       media_post_id: n.id
     }), (0, l.copy)((0, h.getChannelLinkToCopy)(n, _)))
   }, [n, _]);
   return (0, a.jsxs)("div", {
     className: S.sharePromptContainer,
-    children: [(0, a.jsx)(E.default, {}), (0, a.jsxs)("div", {
+    children: [(0, a.jsx)(m.default, {}), (0, a.jsxs)("div", {
       className: S.sharePromptContent,
       children: [(0, a.jsx)(r.Text, {
         variant: "text-md/semibold",
@@ -42,7 +42,7 @@ function _(e) {
         variant: "text-sm/medium",
         color: "text-normal",
         children: g.default.Messages.MEDIA_POST_SHARE_PROMPT_SUBTITLE.format({
-          helpArticleUrl: C.default.getCreatorSupportArticleURL(m.HelpdeskArticles.MEDIA_CHANNEL)
+          helpArticleUrl: C.default.getCreatorSupportArticleURL(E.HelpdeskArticles.MEDIA_CHANNEL)
         })
       }), (0, a.jsx)(d.default, {
         size: 4

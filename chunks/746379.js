@@ -8,12 +8,12 @@ function a() {
 var o = /^([a-z0-9.+-]+:)/i,
   i = /:[0-9]*$/,
   s = /^(\/\/?(?!\/)[^?\s]*)(\?[^\s]*)?$/,
-  c = ["'"].concat(["{", "}", "|", "\\", "^", "`"].concat(["<", ">", '"', "`", " ", "\r", "\n", "	"])),
-  l = ["%", "/", "?", ";", "#"].concat(c),
-  u = ["/", "?", "#"],
+  u = ["'"].concat(["{", "}", "|", "\\", "^", "`"].concat(["<", ">", '"', "`", " ", "\r", "\n", "	"])),
+  l = ["%", "/", "?", ";", "#"].concat(u),
+  c = ["/", "?", "#"],
   d = /^[+a-z0-9A-Z_-]{0,63}$/,
-  p = /^([+a-z0-9A-Z_-]{0,63})(.*)$/,
-  f = {
+  f = /^([+a-z0-9A-Z_-]{0,63})(.*)$/,
+  p = {
     javascript: !0,
     "javascript:": !0
   },
@@ -33,9 +33,9 @@ var o = /^([a-z0-9.+-]+:)/i,
     "gopher:": !0,
     "file:": !0
   },
-  v = n("106504");
+  y = n("106504");
 
-function g(e, t, n) {
+function _(e, t, n) {
   if (e && "object" == typeof e && e instanceof a) return e;
   var r = new a;
   return r.parse(e, t, n), r
@@ -44,64 +44,64 @@ a.prototype.parse = function(e, t, n) {
   if ("string" != typeof e) throw TypeError("Parameter 'url' must be a string, not " + typeof e);
   var a = e.indexOf("?"),
     i = -1 !== a && a < e.indexOf("#") ? "?" : "#",
-    g = e.split(i);
-  g[0] = g[0].replace(/\\/g, "/");
-  var y = e = g.join(i);
-  if (y = y.trim(), !n && 1 === e.split("#").length) {
-    var b = s.exec(y);
-    if (b) return this.path = y, this.href = y, this.pathname = b[1], b[2] ? (this.search = b[2], t ? this.query = v.parse(this.search.substr(1)) : this.query = this.search.substr(1)) : t && (this.search = "", this.query = {}), this
+    _ = e.split(i);
+  _[0] = _[0].replace(/\\/g, "/");
+  var g = e = _.join(i);
+  if (g = g.trim(), !n && 1 === e.split("#").length) {
+    var v = s.exec(g);
+    if (v) return this.path = g, this.href = g, this.pathname = v[1], v[2] ? (this.search = v[2], t ? this.query = y.parse(this.search.substr(1)) : this.query = this.search.substr(1)) : t && (this.search = "", this.query = {}), this
   }
-  var x = o.exec(y);
-  if (x) {
-    var S = (x = x[0]).toLowerCase();
-    this.protocol = S, y = y.substr(x.length)
+  var b = o.exec(g);
+  if (b) {
+    var M = (b = b[0]).toLowerCase();
+    this.protocol = M, g = g.substr(b.length)
   }
-  if (n || x || y.match(/^\/\/[^@/]+@[^@/]+/)) {
-    var w = "//" === y.substr(0, 2);
-    w && !(x && h[x]) && (y = y.substr(2), this.slashes = !0)
+  if (n || b || g.match(/^\/\/[^@/]+@[^@/]+/)) {
+    var w = "//" === g.substr(0, 2);
+    w && !(b && h[b]) && (g = g.substr(2), this.slashes = !0)
   }
-  if (!h[x] && (w || x && !m[x])) {
-    for (var D, C, k = -1, P = 0; P < u.length; P++) {
-      var E = y.indexOf(u[P]); - 1 !== E && (-1 === k || E < k) && (k = E)
-    } - 1 !== (C = -1 === k ? y.lastIndexOf("@") : y.lastIndexOf("@", k)) && (D = y.slice(0, C), y = y.slice(C + 1), this.auth = decodeURIComponent(D)), k = -1;
-    for (var P = 0; P < l.length; P++) {
-      var E = y.indexOf(l[P]); - 1 !== E && (-1 === k || E < k) && (k = E)
-    } - 1 === k && (k = y.length), this.host = y.slice(0, k), y = y.slice(k), this.parseHost(), this.hostname = this.hostname || "";
-    var T = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];
-    if (!T) {
-      for (var M = this.hostname.split(/\./), P = 0, R = M.length; P < R; P++) {
-        var O = M[P];
-        if (O && !O.match(d)) {
-          for (var I = "", A = 0, L = O.length; A < L; A++) O.charCodeAt(A) > 127 ? I += "x" : I += O[A];
-          if (!I.match(d)) {
-            var N = M.slice(0, P),
-              j = M.slice(P + 1),
-              F = O.match(p);
-            F && (N.push(F[1]), j.unshift(F[2])), j.length && (y = "/" + j.join(".") + y), this.hostname = N.join(".");
+  if (!h[b] && (w || b && !m[b])) {
+    for (var k, L, D = -1, T = 0; T < c.length; T++) {
+      var S = g.indexOf(c[T]); - 1 !== S && (-1 === D || S < D) && (D = S)
+    } - 1 !== (L = -1 === D ? g.lastIndexOf("@") : g.lastIndexOf("@", D)) && (k = g.slice(0, L), g = g.slice(L + 1), this.auth = decodeURIComponent(k)), D = -1;
+    for (var T = 0; T < l.length; T++) {
+      var S = g.indexOf(l[T]); - 1 !== S && (-1 === D || S < D) && (D = S)
+    } - 1 === D && (D = g.length), this.host = g.slice(0, D), g = g.slice(D), this.parseHost(), this.hostname = this.hostname || "";
+    var Y = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];
+    if (!Y) {
+      for (var x = this.hostname.split(/\./), T = 0, O = x.length; T < O; T++) {
+        var E = x[T];
+        if (E && !E.match(d)) {
+          for (var P = "", j = 0, C = E.length; j < C; j++) E.charCodeAt(j) > 127 ? P += "x" : P += E[j];
+          if (!P.match(d)) {
+            var H = x.slice(0, T),
+              F = x.slice(T + 1),
+              A = E.match(f);
+            A && (H.push(A[1]), F.unshift(A[2])), F.length && (g = "/" + F.join(".") + g), this.hostname = H.join(".");
             break
           }
         }
       }
     }
-    this.hostname.length > 255 ? this.hostname = "" : this.hostname = this.hostname.toLowerCase(), !T && (this.hostname = r.toASCII(this.hostname));
-    var K = this.port ? ":" + this.port : "",
-      _ = this.hostname || "";
-    this.host = _ + K, this.href += this.host, T && (this.hostname = this.hostname.substr(1, this.hostname.length - 2), "/" !== y[0] && (y = "/" + y))
+    this.hostname.length > 255 ? this.hostname = "" : this.hostname = this.hostname.toLowerCase(), !Y && (this.hostname = r.toASCII(this.hostname));
+    var I = this.port ? ":" + this.port : "",
+      N = this.hostname || "";
+    this.host = N + I, this.href += this.host, Y && (this.hostname = this.hostname.substr(1, this.hostname.length - 2), "/" !== g[0] && (g = "/" + g))
   }
-  if (!f[S])
-    for (var P = 0, R = c.length; P < R; P++) {
-      var V = c[P];
-      if (-1 !== y.indexOf(V)) {
-        var z = encodeURIComponent(V);
-        z === V && (z = escape(V)), y = y.split(V).join(z)
+  if (!p[M])
+    for (var T = 0, O = u.length; T < O; T++) {
+      var R = u[T];
+      if (-1 !== g.indexOf(R)) {
+        var z = encodeURIComponent(R);
+        z === R && (z = escape(R)), g = g.split(R).join(z)
       }
     }
-  var B = y.indexOf("#"); - 1 !== B && (this.hash = y.substr(B), y = y.slice(0, B));
-  var U = y.indexOf("?");
-  if (-1 !== U ? (this.search = y.substr(U), this.query = y.substr(U + 1), t && (this.query = v.parse(this.query)), y = y.slice(0, U)) : t && (this.search = "", this.query = {}), y && (this.pathname = y), m[S] && this.hostname && !this.pathname && (this.pathname = "/"), this.pathname || this.search) {
-    var K = this.pathname || "",
-      H = this.search || "";
-    this.path = K + H
+  var W = g.indexOf("#"); - 1 !== W && (this.hash = g.substr(W), g = g.slice(0, W));
+  var B = g.indexOf("?");
+  if (-1 !== B ? (this.search = g.substr(B), this.query = g.substr(B + 1), t && (this.query = y.parse(this.query)), g = g.slice(0, B)) : t && (this.search = "", this.query = {}), g && (this.pathname = g), m[M] && this.hostname && !this.pathname && (this.pathname = "/"), this.pathname || this.search) {
+    var I = this.pathname || "",
+      U = this.search || "";
+    this.path = I + U
   }
   return this.href = this.format(), this
 };
@@ -113,7 +113,7 @@ a.prototype.format = function() {
     r = this.hash || "",
     a = !1,
     o = "";
-  this.host ? a = e + this.host : this.hostname && (a = e + (-1 === this.hostname.indexOf(":") ? this.hostname : "[" + this.hostname + "]"), this.port && (a += ":" + this.port)), this.query && "object" == typeof this.query && Object.keys(this.query).length && (o = v.stringify(this.query, {
+  this.host ? a = e + this.host : this.hostname && (a = e + (-1 === this.hostname.indexOf(":") ? this.hostname : "[" + this.hostname + "]"), this.port && (a += ":" + this.port)), this.query && "object" == typeof this.query && Object.keys(this.query).length && (o = y.stringify(this.query, {
     arrayFormat: "repeat",
     addQueryPrefix: !1
   }));
@@ -123,7 +123,7 @@ a.prototype.format = function() {
   }), t + a + n + (i = i.replace("#", "%23")) + r
 };
 a.prototype.resolve = function(e) {
-  return this.resolveObject(g(e, !1, !0)).format()
+  return this.resolveObject(_(e, !1, !0)).format()
 };
 a.prototype.resolveObject = function(e) {
   if ("string" == typeof e) {
@@ -136,69 +136,69 @@ a.prototype.resolveObject = function(e) {
   }
   if (n.hash = e.hash, "" === e.href) return n.href = n.format(), n;
   if (e.slashes && !e.protocol) {
-    for (var s = Object.keys(e), c = 0; c < s.length; c++) {
-      var l = s[c];
+    for (var s = Object.keys(e), u = 0; u < s.length; u++) {
+      var l = s[u];
       "protocol" !== l && (n[l] = e[l])
     }
     return m[n.protocol] && n.hostname && !n.pathname && (n.pathname = "/", n.path = n.pathname), n.href = n.format(), n
   }
   if (e.protocol && e.protocol !== n.protocol) {
     if (!m[e.protocol]) {
-      for (var u = Object.keys(e), d = 0; d < u.length; d++) {
-        var p = u[d];
-        n[p] = e[p]
+      for (var c = Object.keys(e), d = 0; d < c.length; d++) {
+        var f = c[d];
+        n[f] = e[f]
       }
       return n.href = n.format(), n
     }
     if (n.protocol = e.protocol, e.host || h[e.protocol]) n.pathname = e.pathname;
     else {
-      for (var f = (e.pathname || "").split("/"); f.length && !(e.host = f.shift()););
-      !e.host && (e.host = ""), !e.hostname && (e.hostname = ""), "" !== f[0] && f.unshift(""), f.length < 2 && f.unshift(""), n.pathname = f.join("/")
+      for (var p = (e.pathname || "").split("/"); p.length && !(e.host = p.shift()););
+      !e.host && (e.host = ""), !e.hostname && (e.hostname = ""), "" !== p[0] && p.unshift(""), p.length < 2 && p.unshift(""), n.pathname = p.join("/")
     }
     if (n.search = e.search, n.query = e.query, n.host = e.host || "", n.auth = e.auth, n.hostname = e.hostname || e.host, n.port = e.port, n.pathname || n.search) {
-      var v = n.pathname || "",
-        g = n.search || "";
-      n.path = v + g
+      var y = n.pathname || "",
+        _ = n.search || "";
+      n.path = y + _
     }
     return n.slashes = n.slashes || e.slashes, n.href = n.format(), n
   }
-  var y = n.pathname && "/" === n.pathname.charAt(0),
-    b = e.host || e.pathname && "/" === e.pathname.charAt(0),
-    x = b || y || n.host && e.pathname,
-    S = x,
+  var g = n.pathname && "/" === n.pathname.charAt(0),
+    v = e.host || e.pathname && "/" === e.pathname.charAt(0),
+    b = v || g || n.host && e.pathname,
+    M = b,
     w = n.pathname && n.pathname.split("/") || [],
-    f = e.pathname && e.pathname.split("/") || [],
-    D = n.protocol && !m[n.protocol];
-  if (D && (n.hostname = "", n.port = null, n.host && ("" === w[0] ? w[0] = n.host : w.unshift(n.host)), n.host = "", e.protocol && (e.hostname = null, e.port = null, e.host && ("" === f[0] ? f[0] = e.host : f.unshift(e.host)), e.host = null), x = x && ("" === f[0] || "" === w[0])), b) n.host = e.host || "" === e.host ? e.host : n.host, n.hostname = e.hostname || "" === e.hostname ? e.hostname : n.hostname, n.search = e.search, n.query = e.query, w = f;
-  else if (f.length) !w && (w = []), w.pop(), w = w.concat(f), n.search = e.search, n.query = e.query;
+    p = e.pathname && e.pathname.split("/") || [],
+    k = n.protocol && !m[n.protocol];
+  if (k && (n.hostname = "", n.port = null, n.host && ("" === w[0] ? w[0] = n.host : w.unshift(n.host)), n.host = "", e.protocol && (e.hostname = null, e.port = null, e.host && ("" === p[0] ? p[0] = e.host : p.unshift(e.host)), e.host = null), b = b && ("" === p[0] || "" === w[0])), v) n.host = e.host || "" === e.host ? e.host : n.host, n.hostname = e.hostname || "" === e.hostname ? e.hostname : n.hostname, n.search = e.search, n.query = e.query, w = p;
+  else if (p.length) !w && (w = []), w.pop(), w = w.concat(p), n.search = e.search, n.query = e.query;
   else if (null != e.search) {
-    if (D) {
+    if (k) {
       n.host = w.shift(), n.hostname = n.host;
-      var C = !!(n.host && n.host.indexOf("@") > 0) && n.host.split("@");
-      C && (n.auth = C.shift(), n.hostname = C.shift(), n.host = n.hostname)
+      var L = !!(n.host && n.host.indexOf("@") > 0) && n.host.split("@");
+      L && (n.auth = L.shift(), n.hostname = L.shift(), n.host = n.hostname)
     }
     return n.search = e.search, n.query = e.query, (null !== n.pathname || null !== n.search) && (n.path = (n.pathname ? n.pathname : "") + (n.search ? n.search : "")), n.href = n.format(), n
   }
   if (!w.length) return n.pathname = null, n.search ? n.path = "/" + n.search : n.path = null, n.href = n.format(), n;
-  for (var k = w.slice(-1)[0], P = (n.host || e.host || w.length > 1) && ("." === k || ".." === k) || "" === k, E = 0, T = w.length; T >= 0; T--) "." === (k = w[T]) ? w.splice(T, 1) : ".." === k ? (w.splice(T, 1), E++) : E && (w.splice(T, 1), E--);
-  if (!x && !S)
-    for (; E--; E) w.unshift("..");
-  x && "" !== w[0] && (!w[0] || "/" !== w[0].charAt(0)) && w.unshift(""), P && "/" !== w.join("/").substr(-1) && w.push("");
-  var M = "" === w[0] || w[0] && "/" === w[0].charAt(0);
-  if (D) {
-    n.hostname = M ? "" : w.length ? w.shift() : "", n.host = n.hostname;
-    var C = !!(n.host && n.host.indexOf("@") > 0) && n.host.split("@");
-    C && (n.auth = C.shift(), n.hostname = C.shift(), n.host = n.hostname)
+  for (var D = w.slice(-1)[0], T = (n.host || e.host || w.length > 1) && ("." === D || ".." === D) || "" === D, S = 0, Y = w.length; Y >= 0; Y--) "." === (D = w[Y]) ? w.splice(Y, 1) : ".." === D ? (w.splice(Y, 1), S++) : S && (w.splice(Y, 1), S--);
+  if (!b && !M)
+    for (; S--; S) w.unshift("..");
+  b && "" !== w[0] && (!w[0] || "/" !== w[0].charAt(0)) && w.unshift(""), T && "/" !== w.join("/").substr(-1) && w.push("");
+  var x = "" === w[0] || w[0] && "/" === w[0].charAt(0);
+  if (k) {
+    n.hostname = x ? "" : w.length ? w.shift() : "", n.host = n.hostname;
+    var L = !!(n.host && n.host.indexOf("@") > 0) && n.host.split("@");
+    L && (n.auth = L.shift(), n.hostname = L.shift(), n.host = n.hostname)
   }
-  return (x = x || n.host && w.length) && !M && w.unshift(""), w.length > 0 ? n.pathname = w.join("/") : (n.pathname = null, n.path = null), (null !== n.pathname || null !== n.search) && (n.path = (n.pathname ? n.pathname : "") + (n.search ? n.search : "")), n.auth = e.auth || n.auth, n.slashes = n.slashes || e.slashes, n.href = n.format(), n
+  return (b = b || n.host && w.length) && !x && w.unshift(""), w.length > 0 ? n.pathname = w.join("/") : (n.pathname = null, n.path = null), (null !== n.pathname || null !== n.search) && (n.path = (n.pathname ? n.pathname : "") + (n.search ? n.search : "")), n.auth = e.auth || n.auth, n.slashes = n.slashes || e.slashes, n.href = n.format(), n
 }, a.prototype.parseHost = function() {
   var e = this.host,
     t = i.exec(e);
   t && (":" !== (t = t[0]) && (this.port = t.substr(1)), e = e.substr(0, e.length - t.length)), e && (this.hostname = e)
-}, t.parse = g, t.resolve = function(e, t) {
-  return g(e, !1, !0).resolve(t)
+}, t.parse = _, t.resolve = function(e, t) {
+  return _(e, !1, !0).resolve(t)
 }, t.resolveObject = function(e, t) {
-  return e ? g(e, !1, !0).resolveObject(t) : t
+  return e ? _(e, !1, !0).resolveObject(t) : t
 }, t.format = function(e) {
-  return ("string" == typeof e && (e = g(e)), e instanceof a) ? e.format() : a.prototype.format.call(e)
+  return ("string" == typeof e && (e = _(e)), e instanceof a) ? e.format() : a.prototype.format.call(e)
 }, t.Url = a

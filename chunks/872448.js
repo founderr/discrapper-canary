@@ -13,9 +13,9 @@ var r = function(e) {
 };
 e.exports = function(e, t, n, a) {
   return (t = t || "&", n = n || "=", null === e && (e = void 0), "object" == typeof e) ? Object.keys(e).map(function(a) {
-    var o = encodeURIComponent(r(a)) + n;
+    var i = encodeURIComponent(r(a)) + n;
     return Array.isArray(e[a]) ? e[a].map(function(e) {
-      return o + encodeURIComponent(r(e))
-    }).join(t) : o + encodeURIComponent(r(e[a]))
+      return i + encodeURIComponent(r(e))
+    }).join(t) : i + encodeURIComponent(r(e[a]))
   }).filter(Boolean).join(t) : a ? encodeURIComponent(r(a)) + n + encodeURIComponent(r(e)) : ""
 }

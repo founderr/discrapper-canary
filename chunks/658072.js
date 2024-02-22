@@ -76,7 +76,7 @@ function j(e) {
     application: D,
     integration: y,
     webhooks: G
-  } = r, [B, H] = (0, s.useStateFromStoresArray)([m.default], () => [m.default.can(R.Permissions.MANAGE_ROLES, l), null == D.bot || m.default.canManageUser(R.Permissions.MANAGE_GUILD, D.bot.id, l)], [D.bot, l]), k = (0, s.useStateFromStores)([m.default], () => m.default.can(R.Permissions.MANAGE_WEBHOOKS, l), [l]), U = a.useCallback(() => {
+  } = r, [B, k] = (0, s.useStateFromStoresArray)([m.default], () => [m.default.can(R.Permissions.MANAGE_ROLES, l), null == D.bot || m.default.canManageUser(R.Permissions.MANAGE_GUILD, D.bot.id, l)], [D.bot, l]), H = (0, s.useStateFromStores)([m.default], () => m.default.can(R.Permissions.MANAGE_WEBHOOKS, l), [l]), U = a.useCallback(() => {
     P() && (0, i.openModal)(e => (0, n.jsx)(L, {
       guild: l,
       application: D,
@@ -162,7 +162,7 @@ function j(e) {
         children: (0, n.jsx)(i.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
-          children: k ? M.default.Messages.INTEGRATIONS_APPLICATION_NO_WEBHOOKS : M.default.Messages.INTEGRATIONS_APPLICATION_APPLICATION_WEBHOOK_PERMISSIONS
+          children: H ? M.default.Messages.INTEGRATIONS_APPLICATION_NO_WEBHOOKS : M.default.Messages.INTEGRATIONS_APPLICATION_APPLICATION_WEBHOOK_PERMISSIONS
         })
       })]
     }), (0, n.jsx)(i.FormDivider, {
@@ -174,7 +174,7 @@ function j(e) {
       children: [(0, n.jsx)(i.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: H ? M.default.Messages.INTEGRATIONS_APPLICATION_REMOVE_SUMMARY : M.default.Messages.INTEGRATIONS_APPLICATION_REMOVE_NO_PERMISSIONS
+        children: k ? M.default.Messages.INTEGRATIONS_APPLICATION_REMOVE_SUMMARY : M.default.Messages.INTEGRATIONS_APPLICATION_REMOVE_NO_PERMISSIONS
       }), (0, n.jsx)(I.default.Child, {
         grow: 0,
         shrink: 0,
@@ -182,7 +182,7 @@ function j(e) {
           size: i.Button.Sizes.SMALL,
           color: i.Button.Colors.RED,
           look: i.Button.Looks.FILLED,
-          disabled: !H,
+          disabled: !k,
           onClick: U,
           children: M.default.Messages.INTEGRATIONS_APPLICATION_REMOVE
         })

@@ -22,8 +22,8 @@ var s = r("37983"),
   _ = r("4445"),
   E = r("762518"),
   R = r("49111"),
-  y = r("782340"),
-  S = r("138667");
+  S = r("782340"),
+  y = r("138667");
 let v = (e, t) => (0, s.jsx)(_.CategoryColumn, {
   columns: e
 }, t);
@@ -42,13 +42,13 @@ class F extends n.PureComponent {
     } = e;
     return (0, s.jsxs)(n.Fragment, {
       children: [(0, s.jsx)("div", {
-        className: l === R.GIFPickerResultTypes.FAVORITES ? S.categoryFadeBlurple : S.categoryFade
+        className: l === R.GIFPickerResultTypes.FAVORITES ? y.categoryFadeBlurple : y.categoryFade
       }), (0, s.jsxs)("div", {
-        className: S.categoryText,
+        className: y.categoryText,
         children: [null != r ? (0, s.jsx)(r, {
-          className: S.categoryIcon
+          className: y.categoryIcon
         }) : null, (0, s.jsx)("span", {
-          className: S.categoryName,
+          className: y.categoryName,
           children: t
         })]
       })]
@@ -74,7 +74,7 @@ class F extends n.PureComponent {
         let r = i.sample(i.values(e));
         return {
           type: R.GIFPickerResultTypes.FAVORITES,
-          name: y.default.Messages.CATEGORY_FAVORITE,
+          name: S.default.Messages.CATEGORY_FAVORITE,
           icon: m.default,
           src: null != r ? r.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
           format: null !== (t = null == r ? void 0 : r.format) && void 0 !== t ? t : o.GIFType.IMAGE
@@ -144,7 +144,7 @@ class F extends n.PureComponent {
       }) : (0, s.jsx)(c.MasonryList, {
         ref: this._masonryRef,
         fade: !0,
-        className: S.container,
+        className: y.container,
         itemGutter: 12,
         getItemKey: this.getItemKey,
         columns: e,

@@ -22,8 +22,8 @@ var l, a, s = n("37983"),
   m = n("629109"),
   p = n("987317"),
   E = n("990766"),
-  S = n("901582"),
-  g = n("244201"),
+  g = n("901582"),
+  S = n("244201"),
   C = n("191225"),
   _ = n("372610"),
   I = n("812204"),
@@ -45,8 +45,8 @@ var l, a, s = n("37983"),
   w = n("479788"),
   F = n("375202"),
   k = n("16916"),
-  V = n("534222"),
-  B = n("147257"),
+  B = n("534222"),
+  V = n("147257"),
   H = n("109526"),
   G = n("550410"),
   W = n("124824"),
@@ -76,8 +76,8 @@ var l, a, s = n("37983"),
   em = n("977347"),
   ep = n("799808"),
   eE = n("727284"),
-  eS = n("49111"),
-  eg = n("99795"),
+  eg = n("49111"),
+  eS = n("99795"),
   eC = n("983127");
 
 function e_(e, t) {
@@ -94,14 +94,14 @@ function eI(e) {
     canGoLive: a,
     hasPermission: r,
     disabled: o
-  } = e, u = (0, g.useAppContext)(), d = (0, f.useStateFromStoresArray)([$.default], () => $.default.getAllActiveStreams()), c = d.find(e => e.ownerId === n.id), m = t.getGuildId(), p = i.useCallback(() => {
+  } = e, u = (0, S.useAppContext)(), d = (0, f.useStateFromStoresArray)([$.default], () => $.default.getAllActiveStreams()), c = d.find(e => e.ownerId === n.id), m = t.getGuildId(), p = i.useCallback(() => {
     if (null == l || l(), !a) return (0, em.default)();
-    (0, ep.default)(m, t.id, eS.AnalyticsPages.GUILD_CHANNEL)
-  }, [m, t.id, a, l]), S = (0, f.useStateFromStores)([D.default, ea.default], () => (0, F.default)(D.default, ea.default)), C = (0, N.default)(), _ = (0, x.default)() && null != S, I = () => {
+    (0, ep.default)(m, t.id, eg.AnalyticsPages.GUILD_CHANNEL)
+  }, [m, t.id, a, l]), g = (0, f.useStateFromStores)([D.default, ea.default], () => (0, F.default)(D.default, ea.default)), C = (0, N.default)(), _ = (0, x.default)() && null != g, I = () => {
     _ && (null == c ? (0, E.createBroadcastChannelOrStartStream)({
       channelId: t.id,
-      pid: null == S ? void 0 : S.pid
-    }) : (0, v.startBroadcastForStream)((0, U.encodeStreamKey)(c), null == S ? void 0 : S.pid))
+      pid: null == g ? void 0 : g.pid
+    }) : (0, v.startBroadcastForStream)((0, U.encodeStreamKey)(c), null == g ? void 0 : g.pid))
   }, T = () => {
     if (_) {
       (0, M.openStartBroadcastConfirmModal)(I);
@@ -197,17 +197,17 @@ let ev = i.memo(function(e) {
     channel: a
   } = e, r = (0, f.useStateFromStores)([R.default], () => R.default.getSelectedParticipant(a.id)), {
     reducedMotion: o
-  } = i.useContext(h.AccessibilityPreferencesContext), [u, d] = i.useState(!1), m = null == r ? void 0 : r.id, S = (0, f.useStateFromStores)([$.default], () => null != m ? $.default.getActiveStreamForStreamKey(m) : null, [m]), g = (null == r ? void 0 : r.type) === eg.ParticipantTypes.STREAM && null != S && S.ownerId !== (null == n ? void 0 : n.id), C = (0, f.useStateFromStoresArray)([$.default], () => $.default.getAllActiveStreamsForChannel(a.id).filter(e => {
+  } = i.useContext(h.AccessibilityPreferencesContext), [u, d] = i.useState(!1), m = null == r ? void 0 : r.id, g = (0, f.useStateFromStores)([$.default], () => null != m ? $.default.getActiveStreamForStreamKey(m) : null, [m]), S = (null == r ? void 0 : r.type) === eS.ParticipantTypes.STREAM && null != g && g.ownerId !== (null == n ? void 0 : n.id), C = (0, f.useStateFromStoresArray)([$.default], () => $.default.getAllActiveStreamsForChannel(a.id).filter(e => {
     let {
       ownerId: t
     } = e;
     return t !== (null == n ? void 0 : n.id)
-  })), _ = (0, V.useActiveEvent)(a.id), I = (0, N.useIsBroadcastingInChannel)(a.id), T = i.useCallback(() => {
-    if ((null == r ? void 0 : r.type) === eg.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
-    if (g) return "STREAM";
+  })), _ = (0, B.useActiveEvent)(a.id), I = (0, N.useIsBroadcastingInChannel)(a.id), T = i.useCallback(() => {
+    if ((null == r ? void 0 : r.type) === eS.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
+    if (S) return "STREAM";
     if (null != _) return "EVENT";
     return "CALL"
-  }, [r, t, g, _]), [v, x] = i.useState(T()), M = (0, c.useSpring)({
+  }, [r, t, S, _]), [v, x] = i.useState(T()), M = (0, c.useSpring)({
     opacity: u ? .2 : 1,
     transform: u && !o.enabled ? "scale(0.7)" : "scale(1)",
     config: {
@@ -226,10 +226,10 @@ let ev = i.memo(function(e) {
     e !== v && d(!0)
   }, [v, T]);
   let j = i.useCallback(() => {
-      if (null != S)(0, E.stopStream)((0, U.encodeStreamKey)(S));
+      if (null != g)(0, E.stopStream)((0, U.encodeStreamKey)(g));
       else
         for (let e of C)(0, E.stopStream)((0, U.encodeStreamKey)(e))
-    }, [C, S]),
+    }, [C, g]),
     L = (e, t) => {
       let i = {
         centerButton: !0,
@@ -263,7 +263,7 @@ let ev = i.memo(function(e) {
             channel: a
           });
         case "EVENT":
-          return (0, s.jsx)(B.default, {
+          return (0, s.jsx)(V.default, {
             channelId: a.id,
             onClick: () => {
               p.default.disconnect(), null == l || l()
@@ -282,7 +282,7 @@ let ev = i.memo(function(e) {
         channel: a,
         currentUser: n,
         activeStreams: C,
-        handleGoLive: eS.NOOP_NULL,
+        handleGoLive: eg.NOOP_NULL,
         hideSelfOptions: !0,
         onClose: t
       })
@@ -310,7 +310,7 @@ function ex(e) {
     cameraUnavailable: n,
     hasCameraPermission: l,
     currentUser: a
-  } = e, r = (0, g.useAppContext)(), {
+  } = e, r = (0, S.useAppContext)(), {
     reachedLimit: u,
     limit: d
   } = (0, er.default)(t), c = i.useCallback(() => {
@@ -368,7 +368,7 @@ var eN = function(e) {
     selfMute: p,
     mute: E
   } = (0, eu.default)(t), {
-    canGoLive: g
+    canGoLive: S
   } = (0, f.useStateFromStoresObject)([et.default], () => ({
     canGoLive: (0, w.default)(et.default)
   })), _ = (0, b.default)(), v = (0, f.useStateFromStores)([P.default], () => null != P.default.getAwaitingRemoteSessionInfo()), x = null != _, N = (0, f.useStateFromStores)([en.default], () => {
@@ -392,13 +392,13 @@ var eN = function(e) {
     })
   });
   let F = es.default.can({
-    permission: eS.Permissions.ADD_REACTIONS,
+    permission: eg.Permissions.ADD_REACTIONS,
     user: i,
     context: t
   }) && !t.isPrivate() && !A;
   return (0, s.jsx)(U, {
-    children: (0, s.jsxs)(S.default, {
-      section: eS.AnalyticsSections.VOICE_CONTROL_TRAY,
+    children: (0, s.jsxs)(g.default, {
+      section: eg.AnalyticsSections.VOICE_CONTROL_TRAY,
       children: [(0, s.jsx)("div", {
         className: eC.eventPromptsContainer,
         children: (0, s.jsx)(H.default, {
@@ -446,7 +446,7 @@ var eN = function(e) {
           channel: t,
           currentUser: i,
           exitFullScreen: a,
-          canGoLive: g,
+          canGoLive: S,
           hasPermission: c
         }), (0, s.jsx)(h.Popout, {
           renderPopout: e => {

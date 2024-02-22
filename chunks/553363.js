@@ -14,17 +14,17 @@ function a(e) {
   }
 }
 
-function o(e, t) {
+function i(e, t) {
   return e === t || e != e && t != t
 }
 
-function i(e, t, n) {
+function o(e, t, n) {
   this.key = e, this.value = t, this._index = n
 }
 
 function s(e, t) {
-  for (var n = 0, a = "_" + t, i = a; r.call(e, i); i = a + n++)
-    if (o(e[i].key, t)) return e[i]
+  for (var n = 0, a = "_" + t, o = a; r.call(e, o); o = a + n++)
+    if (i(e[o].key, t)) return e[o]
 }
 e.exports = a, a.prototype.forEach = function(e, t) {
   t = t || this, Object.keys(this._data).forEach(function(n) {
@@ -38,10 +38,10 @@ e.exports = a, a.prototype.forEach = function(e, t) {
 }, a.prototype.set = function(e, t) {
   (function(e, t, n) {
     for (var a = 0, s = "_" + t, c = s; r.call(e, c); c = s + a++)
-      if (o(e[c].key, t)) {
+      if (i(e[c].key, t)) {
         e[c].value = n;
         return
-      } e.size++, e[c] = new i(t, n, c)
+      } e.size++, e[c] = new o(t, n, c)
   })(this._data, e, t)
 }, a.prototype.delete = function(e) {
   var t = s(this._data, e);

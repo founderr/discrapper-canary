@@ -29,8 +29,8 @@ var l = s("37983"),
   p = s("86678"),
   M = s("867805"),
   x = s("339792"),
-  R = s("630473"),
-  I = s("20105"),
+  I = s("630473"),
+  R = s("20105"),
   A = s("677315"),
   O = s("252862"),
   L = s("300322"),
@@ -239,7 +239,7 @@ class eN extends a.PureComponent {
           type: h.FormText.Types.DESCRIPTION,
           className: el.description,
           children: es.default.Messages.FORM_HELP_FORUM_TAGS
-        }), (0, l.jsx)(R.default, {
+        }), (0, l.jsx)(I.default, {
           channel: e
         })]
       }), (0, l.jsx)(h.Checkbox, {
@@ -293,7 +293,7 @@ class eN extends a.PureComponent {
               children: es.default.Messages.REMOVE
             }) : null]
           })]
-        }), (0, l.jsx)(I.default, {
+        }), (0, l.jsx)(R.default, {
           reactionEmoji: e.defaultReactionEmoji
         })]
       }), (0, l.jsx)(h.FormDivider, {

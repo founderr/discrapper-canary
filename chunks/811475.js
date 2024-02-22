@@ -20,8 +20,8 @@ var a = n("37983"),
   h = n("651057"),
   C = n("299285"),
   p = n("850391"),
-  E = n("149022"),
-  m = n("681060"),
+  m = n("149022"),
+  E = n("681060"),
   g = n("884351"),
   S = n("671071"),
   _ = n("401848"),
@@ -73,14 +73,14 @@ class v extends s.PureComponent {
       activityActionType: f,
       cooldown: h,
       application: C,
-      transitionState: E,
+      transitionState: m,
       onClose: g
     } = this.props, S = h > 0, _ = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
       seconds: Math.round((h + 1e3) / 1e3)
     }) : null;
     return (0, a.jsxs)(o.ModalRoot, {
       size: o.ModalSize.SMALL,
-      transitionState: E,
+      transitionState: m,
       "aria-label": this.renderTitle(),
       children: [(0, a.jsx)(o.ModalHeader, {
         separator: !1,
@@ -121,7 +121,7 @@ class v extends s.PureComponent {
               ...s
             })
           },
-          children: () => (0, a.jsx)(m.default, {
+          children: () => (0, a.jsx)(E.default, {
             className: I.textArea,
             textValue: e,
             richValue: t,
@@ -156,7 +156,7 @@ class v extends s.PureComponent {
   }
   constructor(...e) {
     super(...e), this.state = {
-      ...(0, E.createEmptyState)(),
+      ...(0, m.createEmptyState)(),
       textFocused: !0,
       contentWarningProps: null
     }, this.trackInvite = e => {

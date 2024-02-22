@@ -44,11 +44,11 @@ let E = Math.round((I.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
       attachmentsForLayout: t,
       getAttachmentKind: a
     });
-    if (3 === i) return (0, n.jsx)(O, {
+    if (3 === i) return (0, n.jsx)(S, {
       attachmentsForLayout: t,
       getAttachmentKind: a
     });
-    if (4 === i) return (0, n.jsx)(S, {
+    if (4 === i) return (0, n.jsx)(O, {
       attachmentsForLayout: t,
       getAttachmentKind: a
     });
@@ -109,7 +109,7 @@ let E = Math.round((I.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
       }, e.attachment.id))
     })
   },
-  O = e => {
+  S = e => {
     let {
       attachmentsForLayout: t,
       getAttachmentKind: a
@@ -140,7 +140,7 @@ let E = Math.round((I.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
       })]
     })
   },
-  S = e => {
+  O = e => {
     let {
       attachmentsForLayout: t,
       getAttachmentKind: a

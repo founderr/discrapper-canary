@@ -27,7 +27,7 @@ function E(e) {
     l.src = n, f[e] = l
   }
 }
-class S extends l.default.Store {
+class g extends l.default.Store {
   get visibleOverlayCanvas() {
     return m
   }
@@ -44,8 +44,8 @@ class S extends l.default.Store {
     return p
   }
 }
-S.displayName = "SharedCanvasStore";
-let g = new S(a.default, {
+g.displayName = "SharedCanvasStore";
+let S = new g(a.default, {
   SHARED_CANVAS_UPDATE_LINE_POINTS: function(e) {
     let {
       lineId: t,
@@ -120,4 +120,4 @@ let g = new S(a.default, {
     m = !m
   }
 });
-var C = g
+var C = S

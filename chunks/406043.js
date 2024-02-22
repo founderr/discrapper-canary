@@ -7,16 +7,16 @@ n.r(e), n.d(e, {
     return s
   },
   userCommunicationDisabled: function() {
-    return I
+    return c
   }
 });
 var i = n("446674"),
   u = n("26989"),
-  r = n("697218"),
-  a = n("509");
+  a = n("697218"),
+  r = n("509");
 
 function d(t) {
-  let e = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser());
+  let e = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser());
   return s(null == e ? void 0 : e.id, t)
 }
 
@@ -26,7 +26,7 @@ function l(t, e, n) {
 
 function o(t) {
   var e;
-  return [null !== (e = null == t ? void 0 : t.communicationDisabledUntil) && void 0 !== e ? e : null, (0, a.isMemberCommunicationDisabled)(t)]
+  return [null !== (e = null == t ? void 0 : t.communicationDisabledUntil) && void 0 !== e ? e : null, (0, r.isMemberCommunicationDisabled)(t)]
 }
 
 function s(t, e) {
@@ -34,7 +34,7 @@ function s(t, e) {
   return o(n)
 }
 
-function I(t, e) {
+function c(t, e) {
   let n = l(t, e, u.default);
   return o(n)
 }

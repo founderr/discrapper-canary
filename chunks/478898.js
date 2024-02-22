@@ -1,7 +1,7 @@
 "use strict";
 var r, a = Object.prototype.toString,
-  o = Function.prototype.toString,
-  i = /^\s*(?:function)?\*/,
+  i = Function.prototype.toString,
+  o = /^\s*(?:function)?\*/,
   s = n("149384")(),
   c = Object.getPrototypeOf,
   l = function() {
@@ -12,7 +12,7 @@ var r, a = Object.prototype.toString,
   };
 e.exports = function(e) {
   if ("function" != typeof e) return !1;
-  if (i.test(o.call(e))) return !0;
+  if (o.test(i.call(e))) return !0;
   if (!s) return "[object GeneratorFunction]" === a.call(e);
   if (!c) return !1;
   if (void 0 === r) {

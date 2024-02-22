@@ -51,7 +51,7 @@ function M(e) {
       commandLevelPermissions: b,
       defaultMemberPermissions: null == D ? void 0 : D.defaultMemberPermissions
     })
-  }, [g, D, j, b]), B = null != s ? s : t, [H, k] = a.useMemo(() => {
+  }, [g, D, j, b]), B = null != s ? s : t, [k, H] = a.useMemo(() => {
     let e = {},
       t = {};
     for (let [l, n] of Object.entries(M)) n.type === u.ApplicationCommandPermissionType.CHANNEL ? e[l] = n : t[l] = n;
@@ -112,7 +112,7 @@ function M(e) {
     }
     E.editPermissions(t, B, n)
   }, [t, M, B, U, F]), W = a.useCallback(() => {
-    let e = Object.keys(H);
+    let e = Object.keys(k);
     return (0, d.openModalLazy)(async () => {
       let {
         default: t
@@ -129,8 +129,8 @@ function M(e) {
         ...l
       })
     })
-  }, [w, H, g, P]), V = a.useCallback(() => {
-    let e = Object.keys(k);
+  }, [w, k, g, P]), V = a.useCallback(() => {
+    let e = Object.keys(H);
     return (0, d.openModalLazy)(async () => {
       let {
         default: t
@@ -147,7 +147,7 @@ function M(e) {
         ...l
       })
     })
-  }, [w, g, k, P]), Y = a.useCallback(() => (0, d.openModalLazy)(async () => {
+  }, [w, g, H, P]), Y = a.useCallback(() => (0, d.openModalLazy)(async () => {
     let {
       default: e
     } = await l.el("317671").then(l.bind(l, "317671")), t = D.defaultMemberPermissions;
@@ -159,13 +159,13 @@ function M(e) {
     buttonClick: V,
     buttonText: x.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD_BUTTON,
     noneSelectedText: x.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_ROLE_MEMBER_NO_ENTRIES,
-    overwrites: k,
+    overwrites: H,
     title: null == s ? x.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD : x.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_ROLE_MEMBER_HEADER
   }, {
     buttonClick: W,
     buttonText: x.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_ADD_BUTTON,
     noneSelectedText: x.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_NO_ENTRIES,
-    overwrites: H,
+    overwrites: k,
     title: null == s ? x.default.Messages.CHANNELS : x.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_HEADER
   }];
   return (0, n.jsxs)(a.Fragment, {

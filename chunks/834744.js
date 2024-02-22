@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   }
 });
 var a = n("37983");
@@ -19,10 +19,10 @@ var s = n("446674"),
   C = n("782340"),
   p = n("26445");
 
-function E(e) {
+function m(e) {
   let {
     channel: t
-  } = e, n = (0, i.default)(t, !0), E = (0, s.useStateFromStores)([u.default], () => u.default.can(h.Permissions.MANAGE_CHANNELS, t) && o.EDITABLE_CHANNEL_TYPES.has(t.type));
+  } = e, n = (0, i.default)(t, !0), m = (0, s.useStateFromStores)([u.default], () => u.default.can(h.Permissions.MANAGE_CHANNELS, t) && o.EDITABLE_CHANNEL_TYPES.has(t.type));
   return (0, a.jsxs)(f.default, {
     channelId: t.id,
     children: [(0, a.jsx)(f.EmptyMessageIcon, {
@@ -38,7 +38,7 @@ function E(e) {
           channelId: t.id
         })
       })
-    }), E ? (0, a.jsx)("div", {
+    }), m ? (0, a.jsx)("div", {
       className: p.buttonContainer,
       children: (0, a.jsx)(c.default, {
         label: C.default.Messages.EDIT_CHANNEL,

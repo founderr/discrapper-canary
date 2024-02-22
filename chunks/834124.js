@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var r = n("884691"),
   a = n("476042"),
-  o = n("947990");
-let i = e => {
+  i = n("947990");
+let o = e => {
     let t = "translate(".concat(e.x.toFixed(1), "px, ").concat(e.y.toFixed(1), "px)");
     return {
       pointerEvents: "none",
@@ -21,7 +21,7 @@ let i = e => {
   s = () => {
     let e = (0, r.useRef)(null),
       t = (0, a.useDragLayer)(t => ({
-        currentOffset: (0, o.calculatePointerPosition)(t, e),
+        currentOffset: (0, i.calculatePointerPosition)(t, e),
         isDragging: t.isDragging(),
         itemType: t.getItemType(),
         item: t.getItem(),
@@ -31,7 +31,7 @@ let i = e => {
       display: !0,
       itemType: t.itemType,
       item: t.item,
-      style: i(t.currentOffset),
+      style: o(t.currentOffset),
       monitor: t.monitor,
       ref: e
     } : {

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   DEFAULT_VALIDATION_RESULT: function() {
-    return i
+    return o
   },
   privateValidationStateProp: function() {
     return c
@@ -27,12 +27,12 @@ let a = {
     valueMissing: !1,
     valid: !0
   },
-  o = {
+  i = {
     ...a,
     customError: !0,
     valid: !1
   },
-  i = {
+  o = {
     isInvalid: !1,
     validationDetails: a,
     validationErrors: []
@@ -47,14 +47,14 @@ function l(e) {
       displayValidation: n,
       updateValidation: r,
       resetValidation: a,
-      commitValidation: o
+      commitValidation: i
     } = e[c];
     return {
       realtimeValidation: t,
       displayValidation: n,
       updateValidation: r,
       resetValidation: a,
-      commitValidation: o
+      commitValidation: i
     }
   }
   return function(e) {
@@ -65,13 +65,13 @@ function l(e) {
       value: c,
       builtinValidation: l,
       validate: f,
-      validationBehavior: h = "aria"
+      validationBehavior: m = "aria"
     } = e;
     n && (t || (t = "invalid" === n));
-    let m = t ? {
+    let h = t ? {
         isInvalid: !0,
         validationErrors: [],
-        validationDetails: o
+        validationDetails: i
       } : null,
       v = (0, r.useMemo)(() => d(function(e, t) {
         if ("function" == typeof e) {
@@ -87,9 +87,9 @@ function l(e) {
       [S, w] = (0, r.useState)(!1);
     g !== b && (x(g), w(!1));
     let D = (0, r.useMemo)(() => d(S ? [] : y), [S, y]),
-      C = (0, r.useRef)(i),
-      [k, P] = (0, r.useState)(i),
-      E = (0, r.useRef)(i),
+      C = (0, r.useRef)(o),
+      [k, P] = (0, r.useState)(o),
+      E = (0, r.useRef)(o),
       [T, M] = (0, r.useState)(!1);
     return (0, r.useEffect)(() => {
       if (!T) return;
@@ -97,16 +97,16 @@ function l(e) {
       let e = v || l || C.current;
       !p(e, E.current) && (E.current = e, P(e))
     }), {
-      realtimeValidation: m || D || v || l || i,
-      displayValidation: "native" === h ? m || D || k : m || D || v || l || k,
+      realtimeValidation: h || D || v || l || o,
+      displayValidation: "native" === m ? h || D || k : h || D || v || l || k,
       updateValidation(e) {
-        "aria" !== h || p(k, e) ? C.current = e : P(e)
+        "aria" !== m || p(k, e) ? C.current = e : P(e)
       },
       resetValidation() {
-        !p(i, E.current) && (E.current = i, P(i)), "native" === h && M(!1), w(!0)
+        !p(o, E.current) && (E.current = o, P(o)), "native" === m && M(!1), w(!0)
       },
       commitValidation() {
-        "native" === h && M(!0), w(!0)
+        "native" === m && M(!0), w(!0)
       }
     }
   }(e)
@@ -120,7 +120,7 @@ function d(e) {
   return e.length ? {
     isInvalid: !0,
     validationErrors: e,
-    validationDetails: o
+    validationDetails: i
   } : null
 }
 
@@ -134,17 +134,17 @@ function p(e, t) {
 function f() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
   let r = new Set,
-    o = !1,
-    i = {
+    i = !1,
+    o = {
       ...a
     };
   for (let e of t) {
     for (let t of e.validationErrors) r.add(t);
-    for (let t in o || (o = e.isInvalid), i) i[t] || (i[t] = e.validationDetails[t])
+    for (let t in i || (i = e.isInvalid), o) o[t] || (o[t] = e.validationDetails[t])
   }
-  return i.valid = !o, {
-    isInvalid: o,
+  return o.valid = !i, {
+    isInvalid: i,
     validationErrors: [...r],
-    validationDetails: i
+    validationDetails: o
   }
 }

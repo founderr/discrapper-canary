@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return v
   },
   useLayoutEffect: function() {
-    return o
+    return i
   },
   useResizeObserver: function() {
     return g
@@ -30,8 +30,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("424973");
 var r = n("884691"),
   a = n("38736");
-let o = "undefined" != typeof document ? r.useLayoutEffect : () => {},
-  i = new Map;
+let i = "undefined" != typeof document ? r.useLayoutEffect : () => {},
+  o = new Map;
 
 function s() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -42,20 +42,20 @@ function s() {
     let n = t[e];
     for (let e in n) {
       let t = r[e],
-        o = n[e];
-      "function" == typeof t && "function" == typeof o && "o" === e[0] && "n" === e[1] && e.charCodeAt(2) >= 65 && 90 >= e.charCodeAt(2) ? r[e] = function() {
+        i = n[e];
+      "function" == typeof t && "function" == typeof i && "o" === e[0] && "n" === e[1] && e.charCodeAt(2) >= 65 && 90 >= e.charCodeAt(2) ? r[e] = function() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return function() {
           for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
           for (let e of t) "function" == typeof e && e(...n)
         }
-      }(t, o) : ("className" === e || "UNSAFE_className" === e) && "string" == typeof t && "string" == typeof o ? r[e] = (0, a.default)(t, o) : "id" === e && t && o ? r.id = function(e, t) {
+      }(t, i) : ("className" === e || "UNSAFE_className" === e) && "string" == typeof t && "string" == typeof i ? r[e] = (0, a.default)(t, i) : "id" === e && t && i ? r.id = function(e, t) {
         if (e === t) return e;
-        let n = i.get(e);
+        let n = o.get(e);
         if (n) return n(t), t;
-        let r = i.get(t);
+        let r = o.get(t);
         return r ? (r(e), e) : t
-      }(t, o) : r[e] = void 0 !== o ? o : t
+      }(t, i) : r[e] = void 0 !== i ? i : t
     }
   }
   return r
@@ -82,15 +82,15 @@ function p(e) {
   return a
 }
 let f = new Map,
-  h = new Set;
+  m = new Set;
 
-function m() {
+function h() {
   if ("undefined" == typeof window) return;
   let e = t => {
     let n = f.get(t.target);
     if (n && (n.delete(t.propertyName), 0 === n.size && (t.target.removeEventListener("transitioncancel", e), f.delete(t.target)), 0 === f.size)) {
-      for (let e of h) e();
-      h.clear()
+      for (let e of m) e();
+      m.clear()
     }
   };
   document.body.addEventListener("transitionrun", t => {
@@ -110,7 +110,7 @@ function v(e) {
     }
   }), [e])
 }
-"undefined" != typeof document && ("loading" !== document.readyState ? m() : document.addEventListener("DOMContentLoaded", m));
+"undefined" != typeof document && ("loading" !== document.readyState ? h() : document.addEventListener("DOMContentLoaded", h));
 
 function g(e) {
   let {

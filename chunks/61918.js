@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("272030"),
   p = n("666020"),
   E = n("352674"),
-  S = n("888503"),
-  g = n("206230"),
+  g = n("888503"),
+  S = n("206230"),
   C = n("716241"),
   _ = n("86097"),
   I = n("95039"),
@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("49111"),
   F = n("782340"),
   k = n("559571");
-let V = U.default.getEnableHardwareAcceleration(),
-  B = 44 + S.AVATAR_DECORATION_PADDING,
+let B = U.default.getEnableHardwareAcceleration(),
+  V = 44 + g.AVATAR_DECORATION_PADDING,
   H = {
     origin: {
       x: 38,
@@ -75,7 +75,7 @@ class G extends a.Component {
       isTyping: m,
       isMobileOnline: p,
       premiumSince: E,
-      ...g
+      ...S
     } = this.props, C = null != E ? new Date(E) : null;
     return (0, l.jsx)(h.Popout, {
       preload: () => (0, x.default)(s.id, s.getAvatarURL(f, 80), {
@@ -90,10 +90,10 @@ class G extends a.Component {
         let {
           isShown: E
         } = h;
-        return (0, l.jsx)(S.default, {
+        return (0, l.jsx)(g.default, {
           className: k.member,
           onContextMenu: this.renderUserContextMenu,
-          shouldAnimateStatus: V,
+          shouldAnimateStatus: B,
           user: s,
           currentUser: i,
           nick: a,
@@ -110,7 +110,7 @@ class G extends a.Component {
           isMobile: p,
           onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
           selected: E,
-          itemProps: g,
+          itemProps: S,
           ...d
         })
       }
@@ -223,7 +223,7 @@ function z(e) {
   let {
     index: t
   } = e, n = (0, u.useListItem)("".concat(t));
-  return (0, l.jsx)(S.default, {
+  return (0, l.jsx)(g.default, {
     itemProps: n
   })
 }
@@ -247,10 +247,10 @@ class K extends a.Component {
     let {
       offsetHeight: t,
       scrollTop: n
-    } = e.getScrollerState(), l = Math.floor(t / B);
+    } = e.getScrollerState(), l = Math.floor(t / V);
     return {
       height: t,
-      rowHeight: B,
+      rowHeight: V,
       rowsVisible: l,
       y: n
     }
@@ -294,7 +294,7 @@ class K extends a.Component {
                   }),
                   paddingTop: 0,
                   sectionHeight: 40,
-                  rowHeight: B,
+                  rowHeight: V,
                   renderSection: this.renderSection,
                   renderRow: this.renderRow,
                   sections: e.map(e => e.count),
@@ -431,7 +431,7 @@ function Z(e) {
   let {
     channel: t,
     className: n
-  } = e, s = (0, c.useStateFromStores)([g.default], () => g.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([A.default], () => A.default.getProps(t.guild_id, t.id)), {
+  } = e, s = (0, c.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([A.default], () => A.default.getProps(t.guild_id, t.id)), {
     rows: o,
     groups: d
   } = r, f = a.useRef(null), h = a.useCallback((e, t) => {
@@ -439,7 +439,7 @@ function Z(e) {
     if (null == n) return;
     let l = parseInt(t, 10),
       [a, s] = n.getSectionRowFromIndex(l),
-      i = 0 === a && 0 === s ? B : 0;
+      i = 0 === a && 0 === s ? V : 0;
     n.scrollToIndex({
       section: a,
       row: s,

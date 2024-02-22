@@ -41,9 +41,9 @@ function E(e) {
     className: n,
     onPageChange: a,
     onMemberSelect: u
-  } = e, E = t.id, T = (0, r.default)([c.default], () => c.default.getEstimatedMemberSearchCountByGuildId(E), [E]), p = (0, d.useIsMakingRequest)(E), C = (0, d.useIsStillIndexing)(E), M = s.useCallback(e => {
+  } = e, E = t.id, T = (0, r.default)([c.default], () => c.default.getEstimatedMemberSearchCountByGuildId(E), [E]), p = (0, d.useIsMakingRequest)(E), C = (0, d.useIsStillIndexing)(E), I = s.useCallback(e => {
     null != e && (null == u || u(e))
-  }, [u]), I = (0, f.getSearchState)(C, p, T), A = s.useRef(null), N = s.useRef(null), b = s.useCallback(() => {
+  }, [u]), M = (0, f.getSearchState)(C, p, T), A = s.useRef(null), N = s.useRef(null), b = s.useCallback(() => {
     var e;
     null === (e = A.current) || void 0 === e || e.resetSearchText()
   }, []);
@@ -60,10 +60,10 @@ function E(e) {
         guild: t
       }), (0, l.jsx)(h.default, {
         guild: t,
-        onSelectRow: M,
-        searchState: I,
+        onSelectRow: I,
+        searchState: M,
         onResetForNewMembers: b
-      }), I !== f.SearchState.SUCCESS_STILL_INDEXING && (0, l.jsx)(m.default, {
+      }), M !== f.SearchState.SUCCESS_STILL_INDEXING && (0, l.jsx)(m.default, {
         guildId: t.id,
         onPageChange: a
       })]

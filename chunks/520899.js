@@ -1,20 +1,20 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return c
+    return o
   }
-}), a("222007");
-var n = a("446674"),
-  s = a("913144"),
-  r = a("718517");
+}), n("222007");
+var a = n("446674"),
+  s = n("913144"),
+  l = n("718517");
 let u = [],
-  l = new Set,
-  d = 0;
-class i extends n.default.Store {
+  i = new Set,
+  r = 0;
+class d extends a.default.Store {
   initialize() {
     setInterval(() => {
       this.emitChange()
-    }, 1 * r.default.Millis.MINUTE)
+    }, 1 * l.default.Millis.MINUTE)
   }
   getMessageReminders() {
     return u
@@ -27,10 +27,10 @@ class i extends n.default.Store {
     return u.filter(e => null == e.dueAt || new Date > e.dueAt).length
   }
   recentlyFetched() {
-    return new Date().getTime() - d < 1 * r.default.Millis.MINUTE
+    return new Date().getTime() - r < 1 * l.default.Millis.MINUTE
   }
   hasSentNotification(e) {
-    return l.has(e)
+    return i.has(e)
   }
   getState() {
     return {
@@ -38,34 +38,34 @@ class i extends n.default.Store {
     }
   }
 }
-i.displayName = "MessageRemindersStore";
-var c = new i(s.default, {
+d.displayName = "MessageRemindersStore";
+var o = new d(s.default, {
   SAVED_MESSAGES_UPDATE: function(e) {
     let {
       messages: t
     } = e;
-    d = new Date().getTime(), u = t.map(e => ({
+    r = new Date().getTime(), u = t.map(e => ({
       ...e,
       complete: !1
     })), t.forEach(e => {
-      null != e.dueAt && e.dueAt > new Date && l.delete(e.messageId), null != e.dueAt && e.dueAt < new Date && l.add(e.messageId)
+      null != e.dueAt && e.dueAt > new Date && i.delete(e.messageId), null != e.dueAt && e.dueAt < new Date && i.add(e.messageId)
     })
   },
   MESSAGE_REMINDER_TOGGLE: function(e) {
     let {
       messageId: t,
-      complete: a
-    } = e, n = u.findIndex(e => e.messageId === t);
-    if (-1 === n) return !1;
-    u[n] = {
-      ...u[n],
-      complete: a
+      complete: n
+    } = e, a = u.findIndex(e => e.messageId === t);
+    if (-1 === a) return !1;
+    u[a] = {
+      ...u[a],
+      complete: n
     }
   },
   MESSAGE_REMINDER_NOTIFIED: function(e) {
     let {
       messageId: t
     } = e;
-    l.add(t)
+    i.add(t)
   }
 })

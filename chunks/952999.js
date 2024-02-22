@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return D
   },
   default: function() {
-    return P
+    return j
   }
 }), n("222007"), n("424973");
 var a = n("37983"),
@@ -20,8 +20,8 @@ var a = n("37983"),
   h = n("716241"),
   C = n("299285"),
   p = n("983444"),
-  E = n("592407"),
-  m = n("970700"),
+  m = n("592407"),
+  E = n("970700"),
   g = n("271938"),
   S = n("305961"),
   _ = n("697218"),
@@ -74,13 +74,13 @@ function D(e) {
   })
 }
 
-function P(e) {
+function j(e) {
   let {
     channel: t
   } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && v.default.extractTimestamp(l.id) < Date.now() - R.WELCOME_OLD_GUILD_AGE_THRESHOLD, T = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
     canInvite: A,
-    canManageGuild: P,
-    canMessage: j
+    canManageGuild: j,
+    canMessage: P
   } = (0, p.usePermissions)(t, l), b = (0, u.useStateFromStores)([_.default], () => {
     var e, t;
     return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
@@ -126,7 +126,7 @@ function P(e) {
         h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
           setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
           action: x.AnalyticsActions.PERSONALIZE_SERVER
-        }), null != e && E.default.open(e.id, R.GuildSettingsSections.OVERVIEW, {
+        }), null != e && m.default.open(e.id, R.GuildSettingsSections.OVERVIEW, {
           section: R.AnalyticsSections.CHANNEL_WELCOME_CTA
         })
       }, [e]),
@@ -213,7 +213,7 @@ function P(e) {
   }(W), K = (0, u.useStateFromStores)([C.default], () => C.default.getGuildApplicationIds(null == l ? void 0 : l.id)), Y = K.length > 0;
   if (s.useEffect(() => {
       var e;
-      (0, m.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : R.EMPTY_STRING_GUILD_ID)
+      (0, E.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : R.EMPTY_STRING_GUILD_ID)
     }, [l]), null == l) return null;
   let X = [];
   !f && (A && X.push((0, a.jsx)(o.default.div, {
@@ -227,7 +227,7 @@ function P(e) {
       completed: H,
       onClick: k
     })
-  }, "invite")), P && X.push((0, a.jsx)(o.default.div, {
+  }, "invite")), j && X.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
       opacity: z[X.length]
@@ -238,7 +238,7 @@ function P(e) {
       completed: U,
       onClick: G
     })
-  }, "customize")), j && X.push((0, a.jsx)(o.default.div, {
+  }, "customize")), P && X.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
       opacity: z[X.length]

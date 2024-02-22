@@ -27,14 +27,14 @@ let m = {
     marginLeft: ".5em"
   };
 
-function S() {
+function g() {
   return (0, l.jsx)(o.default, {
     width: "1em",
     height: "1em"
   })
 }
 
-function g(e) {
+function S(e) {
   let [t, n] = a.useState(""), [i, o] = a.useState(null);
   a.useEffect(() => {
     (async () => {
@@ -86,7 +86,7 @@ function g(e) {
         children: [(0, l.jsxs)(s.Text, {
           variant: "text-md/normal",
           style: p,
-          children: ["We marked the time of your ", (0, l.jsx)(S, {}), " ", h.default.Messages.NOTICE_CALLSCOPE_MARK_ISSUE, " button press in the analytics logs. It can be used multiple times during your call."]
+          children: ["We marked the time of your ", (0, l.jsx)(g, {}), " ", h.default.Messages.NOTICE_CALLSCOPE_MARK_ISSUE, " button press in the analytics logs. It can be used multiple times during your call."]
         }), (0, l.jsx)(s.TextArea, {
           placeholder: h.default.Messages.NOTICE_CALLSCOPE_DIALOG_INPUT,
           autoFocus: !0,
@@ -184,7 +184,7 @@ function T(e) {
       (0, s.closeModal)(I)
     }, []),
     r = a.useCallback(() => {
-      (0, c.setRtcLogMarker)(), (0, s.openModalLazy)(() => Promise.resolve(e => (0, l.jsx)(g, {
+      (0, c.setRtcLogMarker)(), (0, s.openModalLazy)(() => Promise.resolve(e => (0, l.jsx)(S, {
         onClose: n
       })), {
         contextKey: t,

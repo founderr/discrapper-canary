@@ -89,16 +89,16 @@ n("854508"), n("424973"), n("70102"), n("843762"), n("808653"), e.exports = r, r
   var n = new r;
   if (t < e || t < 0) return n;
   e < 0 && (e = 0), t > this.length && (t = this.length);
-  for (var a = 0, o = this.head; null !== o && a < e; a++) o = o.next;
-  for (; null !== o && a < t; a++, o = o.next) n.push(o.value);
+  for (var a = 0, i = this.head; null !== i && a < e; a++) i = i.next;
+  for (; null !== i && a < t; a++, i = i.next) n.push(i.value);
   return n
 }, r.prototype.sliceReverse = function(e, t) {
   (t = t || this.length) < 0 && (t += this.length), (e = e || 0) < 0 && (e += this.length);
   var n = new r;
   if (t < e || t < 0) return n;
   e < 0 && (e = 0), t > this.length && (t = this.length);
-  for (var a = this.length, o = this.tail; null !== o && a > t; a--) o = o.prev;
-  for (; null !== o && a > e; a--, o = o.prev) n.push(o.value);
+  for (var a = this.length, i = this.tail; null !== i && a > t; a--) i = i.prev;
+  for (; null !== i && a > e; a--, i = i.prev) n.push(i.value);
   return n
 }, r.prototype.reverse = function() {
   for (var e = this.head, t = this.tail, n = e; null !== n; n = n.prev) {

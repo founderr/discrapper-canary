@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   MessageBlockColors: function() {
-    return a
+    return i
   },
   default: function() {
     return u
@@ -12,11 +12,11 @@ s("884691");
 var l = s("414456"),
   o = s.n(l),
   r = s("77078"),
-  i = s("754908");
-let a = {
-  RED: i.redMessageBlock,
-  YELLOW: i.yellowMessageBlock,
-  BROWN: i.brownMessageBlock
+  a = s("754908");
+let i = {
+  RED: a.redMessageBlock,
+  YELLOW: a.yellowMessageBlock,
+  BROWN: a.brownMessageBlock
 };
 
 function u(e) {
@@ -24,7 +24,7 @@ function u(e) {
     color: t,
     icon: s,
     children: l,
-    className: a
+    className: i
   } = e;
   return (0, n.jsx)(r.FormErrorBlock, {
     icon: e => (0, n.jsx)(s, {
@@ -32,8 +32,8 @@ function u(e) {
       width: 20,
       ...e
     }),
-    iconClassName: i.messageBlockIcon,
-    className: o(t, a),
+    iconClassName: a.messageBlockIcon,
+    className: o(t, i),
     children: l
   })
 }

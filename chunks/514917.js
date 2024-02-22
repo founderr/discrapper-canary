@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("795696"),
   p = n("635792"),
   E = n("252063"),
-  S = n("724110"),
-  g = n("373469"),
+  g = n("724110"),
+  S = n("373469"),
   C = n("42203"),
   _ = n("957255"),
   I = n("824563"),
@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("915712"),
   F = n("369869"),
   k = n("802279"),
-  V = n("465215"),
-  B = n("301998"),
+  B = n("465215"),
+  V = n("301998"),
   H = n("491250"),
   G = n("453649"),
   W = n("849674"),
@@ -88,14 +88,14 @@ var l = n("37983"),
       {
         activity: ep,
         customStatusActivity: eE,
-        isApplicationStreaming: eS,
-        isMobile: eg,
+        isApplicationStreaming: eg,
+        isMobile: eS,
         status: eC,
         hangStatusActivity: e_,
         isHangStatusPrimaryActivity: eI
-      } = (0, u.useStateFromStoresObject)([g.default, I.default, _.default], () => {
+      } = (0, u.useStateFromStoresObject)([S.default, I.default, _.default], () => {
         var e;
-        let t = null != g.default.getAnyStreamForUser(es.id);
+        let t = null != S.default.getAnyStreamForUser(es.id);
         return {
           activity: I.default.findActivity(es.id, e => {
             let {
@@ -126,12 +126,12 @@ var l = n("37983"),
           }) : null
         }
       }),
-      eT = null != ep || null != e_ || eS,
+      eT = null != ep || null != e_ || eg,
       ev = null !== (t = N.default.getNickname(null, n.id, es)) && void 0 !== t ? t : A.default.getName(es),
       ex = (0, u.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
       [eN, eA, eM, eR, ej] = (0, u.useStateFromStoresArray)([M.default], () => [M.default.getMutualFriendsCount(es.id), M.default.getMutualFriends(es.id), M.default.getMutualGuilds(es.id), M.default.isFetchingProfile(es.id), M.default.isFetchingFriends(es.id)]),
       eL = (0, G.useGetVoiceChannelInfoForVoiceActivitySection)(es.id),
-      ey = null != eL && !eS && !eI,
+      ey = null != eL && !eg && !eI,
       {
         showVoiceActivityInProfile: eO
       } = R.VoiceActivityProfileExperiment.useExperiment({
@@ -163,13 +163,13 @@ var l = n("37983"),
     }, [es]), a.useEffect(() => {
       null != er && ef && (0, y.trackProfilePanelViewed)({
         displayProfile: er,
-        isMobile: eg,
+        isMobile: eS,
         loadDurationMs: Date.now() - el.current,
         activity: ep,
         customStatusActivity: eE,
         status: eC
       })
-    }, [er, eg, ep, eE, eC, ef]);
+    }, [er, eS, ep, eE, eC, ef]);
     let eF = null == eM ? void 0 : eM.map(e => (0, l.jsx)(Z.default, {
         connection: e,
         user: es,
@@ -178,11 +178,11 @@ var l = n("37983"),
       ek = null == eA ? void 0 : eA.map(e => (0, l.jsx)(K.default, {
         connection: e
       }, e.key)),
-      eV = eo.map(e => (0, l.jsx)(Y.default, {
+      eB = eo.map(e => (0, l.jsx)(Y.default, {
         channel: n,
         integration: e
       }, e.application.id)),
-      eB = a.useCallback(() => {
+      eV = a.useCallback(() => {
         !es.bot && !ej && null == ek && (0, c.fetchMutualFriends)(es.id)
       }, [ej, ek, es.id, es.bot]),
       eH = a.useCallback(() => en(!0), []),
@@ -222,10 +222,10 @@ var l = n("37983"),
               animateOnHover: !0,
               isHovering: et
             }), !es.isSystemUser() && (0, l.jsxs)(l.Fragment, {
-              children: [(0, l.jsx)(V.default, {
+              children: [(0, l.jsx)(B.default, {
                 userId: r
               }), (0, l.jsx)(U.default, {})]
-            }), (0, l.jsx)(B.default, {
+            }), (0, l.jsx)(V.default, {
               user: es,
               setNote: !1,
               hideNote: !1
@@ -267,21 +267,21 @@ var l = n("37983"),
               isLoadingHeader: eR,
               isLoadingContents: ej,
               loadingContentsCount: eN,
-              onFocus: eB,
-              onHover: eB,
+              onFocus: eV,
+              onHover: eV,
               itemType: z.ListType.MutualFriendsList,
               children: ek
             }) : null]
           }), ed && (0, l.jsx)(P.default.Inner, {
             className: i(ee.profilePanelConnections, ee.appListThemedContainer),
             children: (0, l.jsxs)(z.default, {
-              header: eV.length > 0 ? $.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
-                count: eV.length
+              header: eB.length > 0 ? $.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
+                count: eB.length
               }) : $.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
               isLoadingContents: !eu,
               isLoadingHeader: !1,
               itemType: z.ListType.AppsList,
-              children: [eV, ec.length > 0 && (0, l.jsxs)("div", {
+              children: [eB, ec.length > 0 && (0, l.jsxs)("div", {
                 className: ee.appButtonContainer,
                 children: [0 === eo.length && (0, l.jsx)(d.Text, {
                   variant: "text-xs/normal",
@@ -289,7 +289,7 @@ var l = n("37983"),
                   children: $.default.Messages.PRIVATE_CHANNEL_ADD_APPS_INFO
                 }), (0, l.jsx)(d.Button, {
                   onClick: () => {
-                    (0, d.openModal)(e => (0, l.jsx)(S.default, {
+                    (0, d.openModal)(e => (0, l.jsx)(g.default, {
                       channelId: n.id,
                       ...e
                     }))

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   calculateBoxSize: function() {
-    return h
+    return m
   },
   calculateBoxSizes: function() {
-    return m
+    return h
   }
 }), n("222007");
 var r = n("209488"),
@@ -30,16 +30,16 @@ var r = n("209488"),
     contentBoxSize: f(),
     contentRect: new a.DOMRectReadOnly(0, 0, 0, 0)
   }),
-  m = function(e, t) {
+  h = function(e, t) {
     if (void 0 === t && (t = !1), s.has(e) && !t) return s.get(e);
     if ((0, o.isHidden)(e)) return s.set(e, p), p;
     var n = getComputedStyle(e),
       r = (0, o.isSVG)(e) && e.ownerSVGElement && e.getBBox(),
       i = !c && "border-box" === n.boxSizing,
-      m = l.test(n.writingMode || ""),
-      h = !r && u.test(n.overflowY || ""),
-      _ = !r && u.test(n.overflowX || ""),
-      y = r ? 0 : d(n.paddingTop),
+      h = l.test(n.writingMode || ""),
+      m = !r && u.test(n.overflowY || ""),
+      y = !r && u.test(n.overflowX || ""),
+      _ = r ? 0 : d(n.paddingTop),
       g = r ? 0 : d(n.paddingRight),
       v = r ? 0 : d(n.paddingBottom),
       b = r ? 0 : d(n.paddingLeft),
@@ -48,25 +48,25 @@ var r = n("209488"),
       k = r ? 0 : d(n.borderBottomWidth),
       L = r ? 0 : d(n.borderLeftWidth),
       D = b + g,
-      T = y + v,
+      T = _ + v,
       S = L + w,
       Y = M + k,
-      x = _ ? e.offsetHeight - Y - e.clientHeight : 0,
-      O = h ? e.offsetWidth - S - e.clientWidth : 0,
+      x = y ? e.offsetHeight - Y - e.clientHeight : 0,
+      O = m ? e.offsetWidth - S - e.clientWidth : 0,
       E = r ? r.width : d(n.width) - (i ? D + S : 0) - O,
       P = r ? r.height : d(n.height) - (i ? T + Y : 0) - x,
       j = E + D + O + S,
       C = P + T + x + Y,
       H = Object.freeze({
-        devicePixelContentBoxSize: f(Math.round(E * devicePixelRatio), Math.round(P * devicePixelRatio), m),
-        borderBoxSize: f(j, C, m),
-        contentBoxSize: f(E, P, m),
-        contentRect: new a.DOMRectReadOnly(b, y, E, P)
+        devicePixelContentBoxSize: f(Math.round(E * devicePixelRatio), Math.round(P * devicePixelRatio), h),
+        borderBoxSize: f(j, C, h),
+        contentBoxSize: f(E, P, h),
+        contentRect: new a.DOMRectReadOnly(b, _, E, P)
       });
     return s.set(e, H), H
   },
-  h = function(e, t, n) {
-    var a = m(e, n),
+  m = function(e, t, n) {
+    var a = h(e, n),
       o = a.borderBoxSize,
       i = a.contentBoxSize,
       s = a.devicePixelContentBoxSize;

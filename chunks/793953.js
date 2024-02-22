@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MessageType: function() {
-    return _
+    return y
   }
 }), n("70102");
 var r = n("803628"),
@@ -15,9 +15,9 @@ var r = n("803628"),
   d = n("107678"),
   f = n("928163"),
   p = n("154090"),
-  m = n("171742"),
-  h = n("926481");
-class _ {
+  h = n("171742"),
+  m = n("926481");
+class y {
   create(e) {
     let t = (0, l.reflectionCreate)(this);
     return void 0 !== e && (0, c.reflectionMergePartial)(this, t, e), t
@@ -41,7 +41,7 @@ class _ {
     (0, c.reflectionMergePartial)(this, e, t)
   }
   fromBinary(e, t) {
-    let n = (0, h.binaryReadOptions)(t);
+    let n = (0, m.binaryReadOptions)(t);
     return this.internalBinaryRead(n.readerFactory(e), e.byteLength, n)
   }
   fromJson(e, t) {
@@ -59,7 +59,7 @@ class _ {
     return JSON.stringify(this.toJson(e, t), null, null !== (n = null == t ? void 0 : t.prettySpaces) && void 0 !== n ? n : 0)
   }
   toBinary(e, t) {
-    let n = (0, m.binaryWriteOptions)(t);
+    let n = (0, h.binaryWriteOptions)(t);
     return this.internalBinaryWrite(e, n.writerFactory(), n).finish()
   }
   internalJsonRead(e, t, n) {

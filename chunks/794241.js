@@ -13,7 +13,7 @@ function a(e, t) {
   }
 }
 
-function o(e, t, n) {
+function i(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -21,7 +21,7 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var i = !1,
+var o = !1,
   s = !1,
   c = function() {
     var e, t, n;
@@ -29,7 +29,7 @@ var i = !1,
     function c(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-      }(this, c), o(this, "internalMonitor", void 0), o(this, "sourceId", null), this.internalMonitor = e.getMonitor()
+      }(this, c), i(this, "internalMonitor", void 0), i(this, "sourceId", null), this.internalMonitor = e.getMonitor()
     }
     return e = c, t = [{
       key: "receiveHandlerId",
@@ -44,11 +44,11 @@ var i = !1,
     }, {
       key: "canDrag",
       value: function() {
-        (0, r.invariant)(!i, "You may not call monitor.canDrag() inside your canDrag() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor");
+        (0, r.invariant)(!o, "You may not call monitor.canDrag() inside your canDrag() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor");
         try {
-          return i = !0, this.internalMonitor.canDragSource(this.sourceId)
+          return o = !0, this.internalMonitor.canDragSource(this.sourceId)
         } finally {
-          i = !1
+          o = !1
         }
       }
     }, {

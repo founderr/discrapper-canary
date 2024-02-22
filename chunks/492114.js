@@ -12,8 +12,8 @@ var u = n("917351"),
   h = n("446674"),
   C = n("872717"),
   p = n("913144"),
-  E = n("233069"),
-  m = n("813006"),
+  m = n("233069"),
+  E = n("813006"),
   g = n("517763"),
   S = n("766274"),
   _ = n("42203"),
@@ -59,14 +59,14 @@ let D = d.debounce(() => {
   n && i !== l && (i = l, b.emitChange())
 }, 500);
 
-function P(e) {
+function j(e) {
   return new g.default({
     code: e.code,
     temporary: e.temporary,
     revoked: e.revoked,
     inviter: null != e.inviter ? new S.default(e.inviter) : null,
-    channel: (0, E.createChannelRecordFromInvite)(e.channel),
-    guild: null != e.guild ? new m.default(e.guild) : null,
+    channel: (0, m.createChannelRecordFromInvite)(e.channel),
+    guild: null != e.guild ? new E.default(e.guild) : null,
     uses: e.uses,
     maxUses: e.max_uses,
     maxAge: e.max_age,
@@ -74,7 +74,7 @@ function P(e) {
     type: e.type
   })
 }
-class j extends h.default.Store {
+class P extends h.default.Store {
   initialize() {
     this.waitFor(_.default)
   }
@@ -119,8 +119,8 @@ class j extends h.default.Store {
     }
   }
 }
-j.displayName = "ChannelSettingsStore";
-let b = new j(p.default, {
+P.displayName = "ChannelSettingsStore";
+let b = new P(p.default, {
   CHANNEL_SETTINGS_INIT: x,
   CHANNEL_SETTINGS_OPEN: function(e) {
     v = !0, x(e)
@@ -161,8 +161,8 @@ let b = new j(p.default, {
       invitable: h,
       defaultAutoArchiveDuration: C,
       template: p,
-      defaultReactionEmoji: E,
-      rtcRegion: m,
+      defaultReactionEmoji: m,
+      rtcRegion: E,
       videoQualityMode: g,
       availableTags: S,
       defaultSortOrder: _,
@@ -180,12 +180,12 @@ let b = new j(p.default, {
     })), null != h && (i = i.set("threadMetadata", {
       ...i.threadMetadata,
       invitable: h
-    })), null != C && (i = i.set("defaultAutoArchiveDuration", C)), null != p && (i = i.set("template", p)), null != n && (i = i.set("type", n)), void 0 !== m && (i = i.set("rtcRegion", m)), null != g && (i = i.set("videoQualityMode", g)), void 0 !== E && (i = i.set("defaultReactionEmoji", E)), null != S && (i = i.set("availableTags", S)), null != _ && (i = i.set("defaultSortOrder", _)), null != T && (i = i.set("defaultForumLayout", T)), void 0 !== A && (i = i.set("iconEmoji", A)), null != M && (i = i.set("themeColor", M)), D()
+    })), null != C && (i = i.set("defaultAutoArchiveDuration", C)), null != p && (i = i.set("template", p)), null != n && (i = i.set("type", n)), void 0 !== E && (i = i.set("rtcRegion", E)), null != g && (i = i.set("videoQualityMode", g)), void 0 !== m && (i = i.set("defaultReactionEmoji", m)), null != S && (i = i.set("availableTags", S)), null != _ && (i = i.set("defaultSortOrder", _)), null != T && (i = i.set("defaultForumLayout", T)), void 0 !== A && (i = i.set("iconEmoji", A)), null != M && (i = i.set("themeColor", M)), D()
   },
   CHANNEL_SETTINGS_SET_SECTION: y,
   CHANNEL_SETTINGS_LOADED_INVITES: function(e) {
     I = {}, e.invites.forEach(e => {
-      I[e.code] = P(e)
+      I[e.code] = j(e)
     })
   },
   CHANNEL_UPDATES: function(e) {
@@ -226,7 +226,7 @@ let b = new j(p.default, {
   INSTANT_INVITE_CREATE_SUCCESS: function(e) {
     I = {
       ...I,
-      [e.invite.code]: P(e.invite)
+      [e.invite.code]: j(e.invite)
     }
   }
 });

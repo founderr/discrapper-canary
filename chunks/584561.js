@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   NativeDragSource: function() {
-    return o
+    return i
   }
 }), n("70102");
 
@@ -20,15 +20,15 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var o = function() {
+var i = function() {
   var e, t, n;
 
-  function o(e) {
+  function i(e) {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, o), a(this, "item", void 0), a(this, "config", void 0), this.config = e, this.item = {}, this.initializeExposedProperties()
+    }(this, i), a(this, "item", void 0), a(this, "config", void 0), this.config = e, this.item = {}, this.initializeExposedProperties()
   }
-  return e = o, t = [{
+  return e = i, t = [{
     key: "initializeExposedProperties",
     value: function() {
       var e = this;
@@ -75,5 +75,5 @@ var o = function() {
   }, {
     key: "endDrag",
     value: function() {}
-  }], r(e.prototype, t), n && r(e, n), o
+  }], r(e.prototype, t), n && r(e, n), i
 }()

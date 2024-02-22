@@ -18,8 +18,8 @@ var a = A("37983"),
   g = A("945330"),
   C = A("903635"),
   h = A("696104"),
-  m = A("949435"),
-  p = A("757515"),
+  p = A("949435"),
+  m = A("757515"),
   T = A("527382"),
   v = A("500307"),
   U = A("782340"),
@@ -34,7 +34,7 @@ function x(e) {
     onDeleteAttachment: i
   } = e, o = l.useCallback(() => {
     null == i || i(A.id)
-  }, [i, A.id]), c = n >= 1, f = n < 0, h = c || f, m = null !== (t = A.filename) && void 0 !== t ? t : A.id, T = (0, p.describeUploadProgressError)(n);
+  }, [i, A.id]), c = n >= 1, f = n < 0, h = c || f, p = null !== (t = A.filename) && void 0 !== t ? t : A.id, T = (0, m.describeUploadProgressError)(n);
   return (0, a.jsx)(s.TooltipContainer, {
     text: T,
     children: (0, a.jsxs)("div", {
@@ -51,13 +51,13 @@ function x(e) {
         horizontal: !0
       }), (0, a.jsx)(s.Text, {
         variant: "text-sm/normal",
-        children: m
+        children: p
       }), !h && (0, a.jsx)(s.Spinner, {
         className: I.attachedFileCardSpinner,
         type: s.Spinner.Type.SPINNING_CIRCLE
       }), h && null != i && (0, a.jsx)(s.Button, {
         "aria-label": U.default.Messages.GUILD_PRODUCT_DELETE_ATTACHMENT.format({
-          attachment: m
+          attachment: p
         }),
         className: I.deleteButton,
         innerClassName: I.deleteButtonInner,
@@ -84,9 +84,9 @@ function N(e) {
     addAttachment: d,
     deleteAttachment: c,
     fileUploadProgresses: g
-  } = (0, m.useGuildProductAttachmentManagerContext)(), C = l.useRef(!1);
+  } = (0, p.useGuildProductAttachmentManagerContext)(), C = l.useRef(!1);
 
-  function p(e) {
+  function m(e) {
     try {
       for (let t of e) d({
         platform: o.UploadPlatform.WEB,
@@ -104,7 +104,7 @@ function N(e) {
       title: U.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_TITLE,
       description: U.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
       icons: T.DEFAULT_FILE_UPLOAD_ICONS,
-      onDrop: p
+      onDrop: m
     }), (0, a.jsxs)(f.default, {
       className: I.addFileButtonLook,
       innerClassName: I.addFileButton,
@@ -114,7 +114,7 @@ function N(e) {
       "aria-describedby": E,
       multiple: !0,
       onChange: function(e) {
-        null != e.currentTarget.files && p(e.currentTarget.files)
+        null != e.currentTarget.files && m(e.currentTarget.files)
       },
       children: [(0, a.jsx)(h.default, {
         color: "currentColor",

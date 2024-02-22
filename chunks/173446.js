@@ -29,8 +29,8 @@ var l = s("37983"),
   p = s("901998"),
   M = s("492114"),
   x = s("26989"),
-  R = s("305961"),
-  I = s("957255"),
+  I = s("305961"),
+  R = s("957255"),
   A = s("697218"),
   O = s("669021"),
   L = s("730988"),
@@ -67,7 +67,7 @@ let G = o.default.connectStores([p.default, M.default], () => {
 function V(e) {
   let {
     overwrite: t
-  } = e, s = (0, o.useStateFromStores)([p.default], () => p.default.channel), a = (0, o.useStateFromStores)([R.default], () => null != s ? R.default.getGuild(s.getGuildId()) : null);
+  } = e, s = (0, o.useStateFromStores)([p.default], () => p.default.channel), a = (0, o.useStateFromStores)([I.default], () => null != s ? I.default.getGuild(s.getGuildId()) : null);
   if (null == s || null == a || null == t) return null;
   let {
     guild_id: n,
@@ -76,7 +76,7 @@ function V(e) {
     id: d
   } = t, f = () => {
     var e;
-    let t = R.default.getGuild(n);
+    let t = I.default.getGuild(n);
     if (null == t) return "";
     let s = t.getRole(d),
       l = A.default.getUser(d),
@@ -95,7 +95,7 @@ function V(e) {
       case "DENY":
         n = r.default.add(n, e)
     }
-    if (I.default.can(e, s, {
+    if (R.default.can(e, s, {
         [d]: {
           ...t,
           allow: a,
@@ -108,7 +108,7 @@ function V(e) {
         let s = A.default.getUser(t.id);
         null != s && (e = P.default.getName(s))
       } else if (t.type === T.PermissionOverwriteType.ROLE) {
-        let l = R.default.getGuild(s.getGuildId());
+        let l = I.default.getGuild(s.getGuildId());
         if (null != l) {
           let s = l.getRole(t.id);
           null != s && (e = s.name)
@@ -127,8 +127,8 @@ function V(e) {
       onConfirm: () => h.default.clearPermissionOverwrite(i, d)
     })
   }, N = e => {
-    let t = I.default.can(w.Permissions.ADMINISTRATOR, a) || I.default.can(w.Permissions.MANAGE_ROLES, s, void 0, void 0, !0);
-    return s.isGuildStageVoice() && C.STAGE_CHANNEL_DISABLED_PERMISSIONS.has(e) ? U.default.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION : !((!r.default.equals(e, w.Permissions.MANAGE_ROLES) || t) && (null == e || I.default.can(e, a) || t)) && U.default.Messages.HELP_MISSING_PERMISSION
+    let t = R.default.can(w.Permissions.ADMINISTRATOR, a) || R.default.can(w.Permissions.MANAGE_ROLES, s, void 0, void 0, !0);
+    return s.isGuildStageVoice() && C.STAGE_CHANNEL_DISABLED_PERMISSIONS.has(e) ? U.default.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION : !((!r.default.equals(e, w.Permissions.MANAGE_ROLES) || t) && (null == e || R.default.can(e, a) || t)) && U.default.Messages.HELP_MISSING_PERMISSION
   }, _ = d === n, M = s.isForumLikeChannel() && r.default.has(t.deny, w.Permissions.SEND_MESSAGES), x = r.default.has(t.deny, w.Permissions.SEND_MESSAGES), O = r.default.has(t.deny, w.Permissions.READ_MESSAGE_HISTORY), v = F.default.generateChannelPermissionSpec(n, s, _, {
     createPostsDisabled: M,
     sendMessagesDisabled: x,
@@ -241,7 +241,7 @@ function z() {
     channel: e,
     permissionOverwrites: t,
     selectedOverwriteId: n
-  } = (0, o.useStateFromStoresObject)([p.default], () => p.default), r = (0, o.useStateFromStores)([R.default], () => null != e ? R.default.getGuild(e.getGuildId()) : null), c = (0, S.default)(), m = (0, o.useStateFromStores)([N.default], () => N.default.roleStyle);
+  } = (0, o.useStateFromStoresObject)([p.default], () => p.default), r = (0, o.useStateFromStores)([I.default], () => null != e ? I.default.getGuild(e.getGuildId()) : null), c = (0, S.default)(), m = (0, o.useStateFromStores)([N.default], () => N.default.roleStyle);
   if (null == r || null == e || null == t) return null;
   let g = s => {
       let {
@@ -351,7 +351,7 @@ function K() {
     channel: e,
     permissionOverwrites: t,
     selectedOverwriteId: s
-  } = (0, o.useStateFromStoresObject)([p.default], () => p.default), a = (0, o.useStateFromStores)([R.default], () => null != e ? R.default.getGuild(e.getGuildId()) : null);
+  } = (0, o.useStateFromStoresObject)([p.default], () => p.default), a = (0, o.useStateFromStores)([I.default], () => null != e ? I.default.getGuild(e.getGuildId()) : null);
   if (null == a || null == e || null == t || null == s) return null;
   let n = t[s];
   return (0, l.jsxs)(L.default, {

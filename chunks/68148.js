@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("204947"),
   p = n("716241"),
   E = n("808742"),
-  S = n("342845"),
-  g = n("953109"),
+  g = n("342845"),
+  S = n("953109"),
   C = n("437825"),
   _ = n("142303"),
   I = n("462579"),
@@ -66,7 +66,7 @@ let D = e => {
     }, "add-status") : (0, l.jsx)(f.TooltipContainer, {
       className: b.iconSpacing,
       text: (0, E.getHangStatusText)(t),
-      children: (0, l.jsx)(S.default, {
+      children: (0, l.jsx)(g.default, {
         hangStatusActivity: t,
         className: i(b.hangStatusIcon, n)
       })
@@ -147,20 +147,20 @@ class w extends a.Component {
       isWatching: h,
       iconClassName: p,
       embeddedApplication: E,
-      otherClientSessionType: S,
-      voicePlatform: g,
+      otherClientSessionType: g,
+      voicePlatform: S,
       hangStatusActivity: T,
       showHangStatus: v,
       isSelf: j,
       application: D,
       guildId: w,
       channelId: F,
-      user: B,
+      user: V,
       handleHoverHangStatus: H
     } = this.props;
     if (o || c) return null;
     let G = [],
-      W = (0, l.jsx)(V, {
+      W = (0, l.jsx)(B, {
         iconClassName: p,
         mute: e,
         localMute: t,
@@ -187,12 +187,12 @@ class w extends a.Component {
       children: (0, l.jsx)(A.default, {
         className: i(b.icon, p)
       })
-    }, "activity")), S === O.GameConsoleTypes.XBOX || g === y.VoicePlatforms.XBOX ? G.push((0, l.jsx)("div", {
+    }, "activity")), g === O.GameConsoleTypes.XBOX || S === y.VoicePlatforms.XBOX ? G.push((0, l.jsx)("div", {
       className: i(b.iconSpacing),
       children: (0, l.jsx)(N.default, {
         className: i(b.icon, p)
       })
-    }, "xbox")) : (S === O.GameConsoleTypes.PLAYSTATION || g === y.VoicePlatforms.PLAYSTATION) && G.push((0, l.jsx)("div", {
+    }, "xbox")) : (g === O.GameConsoleTypes.PLAYSTATION || S === y.VoicePlatforms.PLAYSTATION) && G.push((0, l.jsx)("div", {
       className: i(b.iconSpacing),
       children: (0, l.jsx)(x.default, {
         className: i(b.icon, p)
@@ -225,8 +225,8 @@ class w extends a.Component {
           iconClassName: p,
           guildId: w,
           channelId: F,
-          userId: B.id
-        }, "".concat(B.id, "-game")) : (0, l.jsx)(U, {
+          userId: V.id
+        }, "".concat(V.id, "-game")) : (0, l.jsx)(U, {
           hangStatusActivity: T,
           iconClassName: p,
           isSelf: j
@@ -347,10 +347,10 @@ function k(e) {
     className: b.iconSpacing,
     children: (0, l.jsx)("div", {
       ref: c,
-      children: (0, l.jsx)(g.default, {
+      children: (0, l.jsx)(S.default, {
         className: i(b.icon, n),
         game: t,
-        size: g.default.Sizes.XSMALL,
+        size: S.default.Sizes.XSMALL,
         onMouseEnter: () => {
           p.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
             channel_id: r,
@@ -364,7 +364,7 @@ function k(e) {
   })
 }
 
-function V(e) {
+function B(e) {
   let {
     iconClassName: t,
     mute: n,

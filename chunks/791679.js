@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("305961"),
   p = n("580357"),
   E = n("476263"),
-  S = n("433487"),
-  g = n("987772"),
+  g = n("433487"),
+  S = n("987772"),
   C = n("587974"),
   _ = n("149279"),
   I = n("315102"),
@@ -84,7 +84,7 @@ function j(e) {
               })
             },
             "aria-label": N.default.Messages.HUB_ENTRY_UPDATE,
-            children: (0, l.jsx)(g.default, {
+            children: (0, l.jsx)(S.default, {
               className: A.overflowIcon
             })
           })
@@ -114,7 +114,7 @@ function j(e) {
                   null == a || a(), t(e)
                 },
                 "aria-label": N.default.Messages.MORE,
-                children: (0, l.jsx)(S.default, {
+                children: (0, l.jsx)(g.default, {
                   className: A.overflowIcon
                 })
               })
@@ -129,14 +129,14 @@ var L = e => {
   var t;
   let {
     entry: s
-  } = e, [i, S] = a.useState(!1), g = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(s.guildId)), _ = null != g, T = async () => {
-    S(!0);
+  } = e, [i, g] = a.useState(!1), S = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(s.guildId)), _ = null != S, T = async () => {
+    g(!0);
     try {
       _ ? (0, f.transitionToGuild)(s.guildId) : await d.default.joinGuild(s.guildId, {
         source: x.JoinGuildSources.DIRECTORY_ENTRY
       })
     } finally {
-      S(!1)
+      g(!1)
     }
   }, v = I.default.getGuildSplashURL({
     id: s.guildId,

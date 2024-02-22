@@ -26,8 +26,8 @@ var l = s("37983"),
   p = s("957255"),
   M = s("697218"),
   x = s("79798"),
-  R = s("145131"),
-  I = s("555158"),
+  I = s("145131"),
+  R = s("555158"),
   A = s("381546"),
   O = s("45029"),
   L = s("682344"),
@@ -111,13 +111,13 @@ function k(e) {
       }
       if (null == m) return null;
       let p = !C && null == n && null != m.id;
-      return (0, l.jsxs)(R.default, {
-        justify: R.default.Justify.BETWEEN,
-        align: R.default.Align.CENTER,
+      return (0, l.jsxs)(I.default, {
+        justify: I.default.Justify.BETWEEN,
+        align: I.default.Align.CENTER,
         className: V.memberRow,
-        children: [(0, l.jsx)(R.default, {
-          justify: R.default.Justify.START,
-          align: R.default.Align.CENTER,
+        children: [(0, l.jsx)(I.default, {
+          justify: I.default.Justify.START,
+          align: I.default.Align.CENTER,
           className: V.memberRowBody,
           children: c
         }), (0, l.jsx)(o.Text, {
@@ -206,9 +206,9 @@ function W(e) {
       id: "StageModeratorSettingCard"
     }), (0, l.jsxs)("div", {
       className: V.cardFolder,
-      children: [(0, l.jsxs)(R.default, {
-        justify: R.default.Justify.BETWEEN,
-        align: R.default.Align.CENTER,
+      children: [(0, l.jsxs)(I.default, {
+        justify: I.default.Justify.BETWEEN,
+        align: I.default.Align.CENTER,
         className: V.folderHeader,
         children: [(0, l.jsx)(o.FormTitle, {
           tag: "h5",
@@ -272,20 +272,20 @@ function Y(e) {
       className: V.cardFolder,
       children: [E && (0, l.jsx)("div", {
         className: V.adminWarning,
-        children: (0, l.jsx)(I.default, {
-          messageType: I.HelpMessageTypes.WARNING,
+        children: (0, l.jsx)(R.default, {
+          messageType: R.HelpMessageTypes.WARNING,
           children: G.default.Messages.CHANNEL_PERMISSIONS_EVERYONE_IS_ADMIN_WARNING
         })
       }), !h && !E && !n && (0, l.jsx)("div", {
         className: V.adminWarning,
-        children: (0, l.jsx)(I.default, {
-          messageType: I.HelpMessageTypes.WARNING,
+        children: (0, l.jsx)(R.default, {
+          messageType: R.HelpMessageTypes.WARNING,
           children: G.default.Messages.CHANNEL_PERMISSIONS_EVERYONE_CAN_NOT_VIEW_WARNING
         })
       }), n && (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsxs)(R.default, {
-          justify: R.default.Justify.BETWEEN,
-          align: R.default.Align.CENTER,
+        children: [(0, l.jsxs)(I.default, {
+          justify: I.default.Justify.BETWEEN,
+          align: I.default.Align.CENTER,
           className: V.folderHeader,
           children: [(0, l.jsx)(o.FormTitle, {
             tag: "h5",

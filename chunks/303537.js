@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 }), n("70102");
 var r = n("330762"),
   a = n("679640"),
-  o = n("373589");
+  i = n("373589");
 
-function i(e, t) {
+function o(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
@@ -114,12 +114,12 @@ var c = function() {
   }, {
     key: "didDragSourceOptionsChange",
     value: function() {
-      return !(0, o.shallowEqual)(this.lastConnectedDragSourceOptions, this.dragSourceOptions)
+      return !(0, i.shallowEqual)(this.lastConnectedDragSourceOptions, this.dragSourceOptions)
     }
   }, {
     key: "didDragPreviewOptionsChange",
     value: function() {
-      return !(0, o.shallowEqual)(this.lastConnectedDragPreviewOptions, this.dragPreviewOptions)
+      return !(0, i.shallowEqual)(this.lastConnectedDragPreviewOptions, this.dragPreviewOptions)
     }
   }, {
     key: "disconnectDragSource",
@@ -151,5 +151,5 @@ var c = function() {
     value: function() {
       this.dragPreviewNode = null, this.dragPreviewRef = null
     }
-  }], i(e.prototype, t), n && i(e, n), c
+  }], o(e.prototype, t), n && o(e, n), c
 }()

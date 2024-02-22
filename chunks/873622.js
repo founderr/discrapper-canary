@@ -22,8 +22,8 @@ var s = r("37983"),
   _ = r("762518"),
   E = r("49111"),
   R = r("115279"),
-  y = r("782340"),
-  S = r("901137");
+  S = r("782340"),
+  y = r("901137");
 let v = e => e.stopPropagation();
 class F extends n.PureComponent {
   componentDidMount() {
@@ -49,24 +49,24 @@ class F extends n.PureComponent {
       case E.GIFPickerResultTypes.FAVORITES:
         return (0, s.jsx)(o.FormTitle, {
           tag: "h5",
-          className: S.searchHeader,
-          children: y.default.Messages.CATEGORY_FAVORITE
+          className: y.searchHeader,
+          children: S.default.Messages.CATEGORY_FAVORITE
         });
       case E.GIFPickerResultTypes.TRENDING_GIFS:
         return (0, s.jsx)(o.FormTitle, {
           tag: "h5",
-          className: S.searchHeader,
-          children: y.default.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS
+          className: y.searchHeader,
+          children: S.default.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS
         });
       default:
         return (0, s.jsx)(m.default, {
-          className: S.searchBar,
+          className: y.searchBar,
           size: m.default.Sizes.MEDIUM,
           query: e,
           onChange: this.handleChangeQuery,
           onClear: this.handleClearQuery,
-          placeholder: y.default.Messages.SEARCH_TENOR,
-          "aria-label": y.default.Messages.SEARCH_TENOR,
+          placeholder: S.default.Messages.SEARCH_TENOR,
+          "aria-label": S.default.Messages.SEARCH_TENOR,
           ref: this.searchBarRef,
           autoFocus: !0
         })
@@ -78,10 +78,10 @@ class F extends n.PureComponent {
     } = this.state, t = null;
     return null != e && (t = (0, s.jsx)(o.Clickable, {
       onClick: this.handleClearQuery,
-      className: S.backButton,
-      "aria-label": y.default.Messages.BACK,
+      className: y.backButton,
+      "aria-label": S.default.Messages.BACK,
       children: (0, s.jsx)(p.default, {
-        title: y.default.Messages.BACK
+        title: S.default.Messages.BACK
       })
     })), (0, s.jsxs)(f.default, {
       align: f.default.Align.CENTER,
@@ -127,14 +127,14 @@ class F extends n.PureComponent {
       id: R.GIF_PICKER_TAB_PANEL_ID,
       role: "tabpanel",
       "aria-labelledby": R.GIF_PICKER_TAB_ID,
-      className: i(S.container, e),
+      className: i(y.container, e),
       onClick: v,
       ref: t,
       children: [(0, s.jsx)("div", {
-        className: S.header,
+        className: y.header,
         children: this.renderHeader()
       }), (0, s.jsx)("div", {
-        className: S.content,
+        className: y.content,
         children: this.renderContent()
       })]
     })

@@ -316,7 +316,7 @@ var e = function(t) {
     return !r.isUnit() && (!!(r.equals(2) || r.equals(3) || r.equals(5)) || !(r.isEven() || r.isDivisibleBy(3) || r.isDivisibleBy(5)) && (!!r.lesser(49) || void 0))
   }
 
-  function O(t, r) {
+  function I(t, r) {
     for (var n, i, o, u = t.prev(), a = u, f = 0; a.isEven();) a = a.divide(2), f++;
     t: for (i = 0; i < r.length; i++) {
       if (!t.lesser(r[i])) {
@@ -474,14 +474,14 @@ var e = function(t) {
     if (t !== n) return n;
     var i = this.abs(),
       o = i.bitLength();
-    if (o <= 64) return O(i, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
+    if (o <= 64) return I(i, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
     for (var u = Math.log(2) * o.toJSNumber(), a = Math.ceil(!0 === r ? 2 * Math.pow(u, 2) : u), f = [], c = 0; c < a; c++) f.push(e(c + 2));
-    return O(i, f)
+    return I(i, f)
   }, f.prototype.isPrime = a.prototype.isPrime = u.prototype.isPrime, u.prototype.isProbablePrime = function(r, n) {
     var i = M(this);
     if (t !== i) return i;
     for (var o = this.abs(), u = t === r ? 5 : r, a = [], f = 0; f < u; f++) a.push(e.randBetween(2, o.minus(2), n));
-    return O(o, a)
+    return I(o, a)
   }, f.prototype.isProbablePrime = a.prototype.isProbablePrime = u.prototype.isProbablePrime, u.prototype.modInv = function(t) {
     for (var r, n, i, o = e.zero, u = e.one, a = H(t), f = this.abs(); !f.isZero();) r = a.divide(f), n = o, i = a, o = u, a = f, u = n.subtract(r.multiply(u)), f = i.subtract(r.multiply(f));
     if (!a.isUnit()) throw Error(this.toString() + " and " + t.toString() + " are not co-prime");
@@ -503,9 +503,9 @@ var e = function(t) {
   }, f.prototype.prev = function() {
     return new f(this.value - BigInt(1))
   };
-  for (var I = [1]; 2 * I[I.length - 1] <= 1e7;) I.push(2 * I[I.length - 1]);
-  var N = I.length,
-    L = I[N - 1];
+  for (var O = [1]; 2 * O[O.length - 1] <= 1e7;) O.push(2 * O[O.length - 1]);
+  var N = O.length,
+    L = O[N - 1];
 
   function j(t) {
     return 1e7 >= Math.abs(t)
@@ -524,7 +524,7 @@ var e = function(t) {
     var n = this;
     if (n.isZero()) return n;
     for (; r >= N;) n = n.multiply(L), r -= N - 1;
-    return n.multiply(I[r])
+    return n.multiply(O[r])
   }, f.prototype.shiftLeft = a.prototype.shiftLeft = u.prototype.shiftLeft, u.prototype.shiftRight = function(t) {
     var r, n = H(t).toJSNumber();
     if (!j(n)) throw Error(String(n) + " is too large for shifting.");
@@ -533,7 +533,7 @@ var e = function(t) {
       if (e.isZero() || e.isNegative() && e.isUnit()) return e;
       e = (r = A(e, L))[1].isNegative() ? r[0].prev() : r[0], n -= N - 1
     }
-    return (r = A(e, I[n]))[1].isNegative() ? r[0].prev() : r[0]
+    return (r = A(e, O[n]))[1].isNegative() ? r[0].prev() : r[0]
   }, f.prototype.shiftRight = a.prototype.shiftRight = u.prototype.shiftRight, u.prototype.not = function() {
     return this.negate().prev()
   }, f.prototype.not = a.prototype.not = u.prototype.not, u.prototype.and = function(t) {

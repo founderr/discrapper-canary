@@ -54,8 +54,8 @@ class s {
           } else u[c] = s.T().internalBinaryRead(e, e.uint32(), n, u[c]);
           break;
         case "map":
-          let [p, m] = this.mapEntry(s, e, n);
-          u[c][p] = m
+          let [p, h] = this.mapEntry(s, e, n);
+          u[c][p] = h
       }
     }
   }

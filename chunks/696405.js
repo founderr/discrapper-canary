@@ -24,16 +24,16 @@ var l = n("37983"),
     } = e, {
       isHovered: s,
       setIsHovered: E,
-      onMouseEnter: S,
-      onMouseLeave: g,
+      onMouseEnter: g,
+      onMouseLeave: S,
       cancelTimers: C
     } = (0, d.default)(200, 300), [_, I] = a.useState(!1), T = (0, r.useStateFromStores)([f.default], () => f.default.effectCooldownEndTime), v = a.useMemo(() => null != T ? (T.getTime() - Date.now()) / 1e3 : 0, [T]), {
       seconds: x
     } = (0, u.default)(null != T ? T : new Date), N = x > 0, A = a.useCallback(e => {
-      if ("focus" !== e.type) !_ && !N && S()
-    }, [_, N, S]), M = a.useCallback(() => {
-      !_ && g()
-    }, [g, _]), R = a.useCallback((e, t) => {
+      if ("focus" !== e.type) !_ && !N && g()
+    }, [_, N, g]), M = a.useCallback(() => {
+      !_ && S()
+    }, [S, _]), R = a.useCallback((e, t) => {
       C(), I(!_), (!s || _) && (null == t || t(e))
     }, [C, _, s]), j = s || _;
     return (0, l.jsx)(o.Popout, {
@@ -53,7 +53,7 @@ var l = n("37983"),
           isHovered: j,
           channel: t,
           closePopout: n,
-          onMouseEnter: S,
+          onMouseEnter: g,
           onMouseLeave: M,
           onFocus: () => I(!0)
         })

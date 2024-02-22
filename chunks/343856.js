@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return M
   }
 });
 var a = n("37983");
 n("884691");
-var s = n("446674"),
+var u = n("446674"),
   r = n("669491"),
-  u = n("77078"),
-  i = n("450911"),
-  l = n("145079"),
-  d = n("87657"),
+  s = n("77078"),
+  l = n("450911"),
+  d = n("145079"),
+  i = n("87657"),
   o = n("697218"),
-  c = n("782340"),
-  f = n("766646");
+  f = n("782340"),
+  c = n("766646");
 
-function m(e) {
+function S(e) {
   let {
     color: t,
     className: n
@@ -53,51 +53,51 @@ function m(e) {
   })
 }
 
-function h(e, t) {
-  let n = (0, s.useStateFromStores)([o.default], () => o.default.getCurrentUser());
-  return null == n || t.ownerId !== n.id || e.id === n.id || (null == t ? void 0 : t.isBroadcastChannel()) ? null : (0, a.jsx)(u.MenuItem, {
+function M(e, t) {
+  let n = (0, u.useStateFromStores)([o.default], () => o.default.getCurrentUser());
+  return null == n || t.ownerId !== n.id || e.id === n.id || (null == t ? void 0 : t.isBroadcastChannel()) ? null : (0, a.jsx)(s.MenuItem, {
     id: "make-dm-owner",
     color: "danger",
-    label: c.default.Messages.CHANGE_DM_OWNER,
+    label: f.default.Messages.CHANGE_DM_OWNER,
     action: () => {
-      var s;
-      return s = n, void(0, u.openModal)(n => (0, a.jsxs)(u.ConfirmModal, {
-        bodyClassName: f.confirmModal,
-        header: c.default.Messages.TRANSFER_GROUP_OWNERSHIP,
-        confirmText: c.default.Messages.CONFIRM,
-        cancelText: c.default.Messages.CANCEL,
-        onConfirm: () => i.default.setDMOwner(t.id, e.id),
+      var u;
+      return u = n, void(0, s.openModal)(n => (0, a.jsxs)(s.ConfirmModal, {
+        bodyClassName: c.confirmModal,
+        header: f.default.Messages.TRANSFER_GROUP_OWNERSHIP,
+        confirmText: f.default.Messages.CONFIRM,
+        cancelText: f.default.Messages.CANCEL,
+        onConfirm: () => l.default.setDMOwner(t.id, e.id),
         ...n,
-        children: [(0, a.jsx)(m, {
+        children: [(0, a.jsx)(S, {
           color: r.default.unsafe_rawColors.PRIMARY_300.css
         }), (0, a.jsxs)("div", {
-          className: f.fromToWrapper,
+          className: c.fromToWrapper,
           children: [(0, a.jsx)("div", {
-            className: f.from,
-            children: (0, a.jsx)(d.default, {
-              user: s,
-              size: u.AvatarSizes.SIZE_80
+            className: c.from,
+            children: (0, a.jsx)(i.default, {
+              user: u,
+              size: s.AvatarSizes.SIZE_80
             })
           }), (0, a.jsx)("div", {
-            className: f.to,
-            children: (0, a.jsx)(d.default, {
+            className: c.to,
+            children: (0, a.jsx)(i.default, {
               user: e,
-              size: u.AvatarSizes.SIZE_80
+              size: s.AvatarSizes.SIZE_80
             })
           })]
-        }), (0, a.jsx)(u.Text, {
+        }), (0, a.jsx)(s.Text, {
           variant: "text-md/normal",
-          children: c.default.Messages.CONFIRM_CHANGE_DM_OWNER.format({
-            usernameHook: (t, n) => (0, a.jsx)(l.default, {
-              usernameIcon: (0, a.jsx)(u.Avatar, {
-                className: f.avatarIcon,
+          children: f.default.Messages.CONFIRM_CHANGE_DM_OWNER.format({
+            usernameHook: (t, n) => (0, a.jsx)(d.default, {
+              usernameIcon: (0, a.jsx)(s.Avatar, {
+                className: c.avatarIcon,
                 src: e.getAvatarURL(void 0, 16),
-                size: u.AvatarSizes.SIZE_16,
+                size: s.AvatarSizes.SIZE_16,
                 "aria-hidden": !0
               }),
-              className: f.discordTag,
-              usernameClass: f.username,
-              discriminatorClass: f.discriminator,
+              className: c.discordTag,
+              usernameClass: c.username,
+              discriminatorClass: c.discriminator,
               user: e
             }, n)
           })

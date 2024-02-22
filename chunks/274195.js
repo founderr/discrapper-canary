@@ -2,8 +2,8 @@
 n("222007"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102");
 var r = n("187798"),
   a = n("478898"),
-  o = n("48494"),
-  i = n("682086");
+  i = n("48494"),
+  o = n("682086");
 
 function s(e) {
   return e.call.bind(e)
@@ -14,8 +14,8 @@ var c = "undefined" != typeof BigInt,
   d = s(Number.prototype.valueOf),
   p = s(String.prototype.valueOf),
   f = s(Boolean.prototype.valueOf);
-if (c) var h = s(BigInt.prototype.valueOf);
-if (l) var m = s(Symbol.prototype.valueOf);
+if (c) var m = s(BigInt.prototype.valueOf);
+if (l) var h = s(Symbol.prototype.valueOf);
 
 function v(e, t) {
   if ("object" != typeof e) return !1;
@@ -25,49 +25,49 @@ function v(e, t) {
     return !1
   }
 }
-t.isArgumentsObject = r, t.isGeneratorFunction = a, t.isTypedArray = i;
+t.isArgumentsObject = r, t.isGeneratorFunction = a, t.isTypedArray = o;
 t.isPromise = function(e) {
   return "undefined" != typeof Promise && e instanceof Promise || null !== e && "object" == typeof e && "function" == typeof e.then && "function" == typeof e.catch
 };
 t.isArrayBufferView = function(e) {
-  return "undefined" != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : i(e) || C(e)
+  return "undefined" != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : o(e) || C(e)
 };
 t.isUint8Array = function(e) {
-  return "Uint8Array" === o(e)
+  return "Uint8Array" === i(e)
 };
 t.isUint8ClampedArray = function(e) {
-  return "Uint8ClampedArray" === o(e)
+  return "Uint8ClampedArray" === i(e)
 };
 t.isUint16Array = function(e) {
-  return "Uint16Array" === o(e)
+  return "Uint16Array" === i(e)
 };
 t.isUint32Array = function(e) {
-  return "Uint32Array" === o(e)
+  return "Uint32Array" === i(e)
 };
 t.isInt8Array = function(e) {
-  return "Int8Array" === o(e)
+  return "Int8Array" === i(e)
 };
 t.isInt16Array = function(e) {
-  return "Int16Array" === o(e)
+  return "Int16Array" === i(e)
 };
 t.isInt32Array = function(e) {
-  return "Int32Array" === o(e)
+  return "Int32Array" === i(e)
 };
 t.isFloat32Array = function(e) {
-  return "Float32Array" === o(e)
+  return "Float32Array" === i(e)
 };
 t.isFloat64Array = function(e) {
-  return "Float64Array" === o(e)
+  return "Float64Array" === i(e)
 };
 t.isBigInt64Array = function(e) {
-  return "BigInt64Array" === o(e)
+  return "BigInt64Array" === i(e)
 };
 
 function g(e) {
   return "[object Map]" === u(e)
 }
 t.isBigUint64Array = function(e) {
-  return "BigUint64Array" === o(e)
+  return "BigUint64Array" === i(e)
 }, g.working = "undefined" != typeof Map && g(new Map);
 
 function y(e) {
@@ -144,18 +144,18 @@ function R(e) {
   return v(e, f)
 }
 
-function O(e) {
-  return c && v(e, h)
+function I(e) {
+  return c && v(e, m)
 }
 
-function I(e) {
-  return l && v(e, m)
+function O(e) {
+  return l && v(e, h)
 }
 t.isWebAssemblyCompiledModule = function(e) {
   return "[object WebAssembly.Module]" === u(e)
-}, t.isNumberObject = T, t.isStringObject = M, t.isBooleanObject = R, t.isBigIntObject = O, t.isSymbolObject = I;
+}, t.isNumberObject = T, t.isStringObject = M, t.isBooleanObject = R, t.isBigIntObject = I, t.isSymbolObject = O;
 t.isBoxedPrimitive = function(e) {
-  return T(e) || M(e) || R(e) || O(e) || I(e)
+  return T(e) || M(e) || R(e) || I(e) || O(e)
 };
 t.isAnyArrayBuffer = function(e) {
   return "undefined" != typeof Uint8Array && (w(e) || E(e))

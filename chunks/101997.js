@@ -43,7 +43,7 @@ if (A.constructor !== x) {
   for (var S in !g && a(A, "constructor", u(1, x)), h)
     if (f(h, S)) {
       var M = h[S],
-        O = M.s;
-      !f(x, O) && a(x, O, u(6, M.c))
+        I = M.s;
+      !f(x, I) && a(x, I, u(6, M.c))
     }
 }

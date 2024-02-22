@@ -63,8 +63,8 @@ function g(e) {
     showContextMenu: p,
     theme: M,
     roleStyle: x,
-    "aria-label": R
-  } = e, I = a.useCallback(e => {
+    "aria-label": I
+  } = e, R = a.useCallback(e => {
     (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -84,7 +84,7 @@ function g(e) {
     selectedItem: T,
     onItemSelect: S,
     itemType: N,
-    "aria-label": null != _ ? "".concat(R, ", ").concat(_) : R,
+    "aria-label": null != _ ? "".concat(I, ", ").concat(_) : I,
     children: (0, l.jsxs)("div", {
       className: f.roleContent,
       children: ["dot" === x ? (0, l.jsx)(o.RoleDot, {
@@ -109,7 +109,7 @@ function g(e) {
         })
       }(), (0, l.jsx)("div", {
         className: f.roleInner,
-        onContextMenu: I,
+        onContextMenu: R,
         children: h
       }), p && null != i ? (0, l.jsx)(m, {
         guild: u,

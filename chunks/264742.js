@@ -12,8 +12,8 @@ s("884691");
 var l = s("414456"),
   o = s.n(l),
   r = s("819855"),
-  i = s("77078"),
-  a = s("841098"),
+  a = s("77078"),
+  i = s("841098"),
   u = s("223984"),
   c = s("417186"),
   d = s("715202");
@@ -33,7 +33,7 @@ function f(e) {
     ctaDisabled: h,
     ctaClassName: I,
     onClick: N
-  } = e, p = (0, a.default)();
+  } = e, p = (0, i.default)();
   return (0, n.jsx)(c.default, {
     className: o(d.statusWarningBlock, {
       [d.statusWarningBlockWithCta]: null != C
@@ -41,20 +41,20 @@ function f(e) {
     color: (0, r.isThemeDark)(p) ? s : u.MessageBlockColors.BROWN,
     children: (0, n.jsxs)("div", {
       className: l,
-      children: [(0, n.jsx)(i.Text, {
+      children: [(0, n.jsx)(a.Text, {
         variant: "text-sm/normal",
         color: "interactive-active",
         children: f
       }), null != C && null != N && (0, n.jsx)("div", {
         className: d.ctaButtonContainer,
-        children: (0, n.jsx)(i.Button, {
+        children: (0, n.jsx)(a.Button, {
           className: o(d.ctaButton, (0, r.isThemeDark)(p) ? void 0 : d.ctaBlackButton, I),
-          color: (0, r.isThemeDark)(p) ? i.Button.Colors.WHITE : i.Button.Colors.CUSTOM,
-          size: i.ButtonSizes.MEDIUM,
+          color: (0, r.isThemeDark)(p) ? a.Button.Colors.WHITE : a.Button.Colors.CUSTOM,
+          size: a.ButtonSizes.MEDIUM,
           onClick: N,
           disabled: h,
           submitting: _,
-          children: (0, n.jsx)(i.Text, {
+          children: (0, n.jsx)(a.Text, {
             className: d.ctaButtonText,
             variant: "text-sm/medium",
             children: C

@@ -44,11 +44,11 @@ function d(e) {
     cancelTimers: E
   } = (0, i.default)(200, 300);
 
-  function S(e) {
+  function g(e) {
     "focus" !== e.type && !d && m()
   }
 
-  function g() {
+  function S() {
     !d && p()
   }
 
@@ -69,7 +69,7 @@ function d(e) {
       isHovered: _,
       onFocus: () => c(!0),
       onMouseEnter: m,
-      onMouseLeave: g,
+      onMouseLeave: S,
       renderPopout: t,
       ...e
     }),
@@ -86,8 +86,8 @@ function d(e) {
             return t = e, n = a, void((t.key === r.KeyboardKeysUpdated.ENTER || t.key === r.KeyboardKeysUpdated.SPACE) && C(() => n(t)))
           },
           className: o.actionBarButton,
-          onMouseEnter: S,
-          onMouseLeave: g,
+          onMouseEnter: g,
+          onMouseLeave: S,
           isActive: _
         })
       })

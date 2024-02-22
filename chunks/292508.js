@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("206230"),
   p = n("320679"),
   E = n("191225"),
-  S = n("229661"),
-  g = n("812204"),
+  g = n("229661"),
+  S = n("812204"),
   C = n("685665"),
   _ = n("338733"),
   I = n("779601"),
@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("292687"),
   F = n("49111"),
   k = n("782340"),
-  V = n("928319");
-class B extends a.Component {
+  B = n("928319");
+class V extends a.Component {
   componentDidMount() {
     let {
       guestWindow: e
@@ -121,8 +121,8 @@ class B extends a.Component {
       keyboardModeEnabled: d,
       reducedMotionEnabled: m,
       fontScaleClass: E,
-      saturation: S,
-      withTitleBar: g,
+      saturation: g,
+      withTitleBar: S,
       guestWindow: C,
       clientThemesClassName: _,
       contentClassName: x
@@ -132,7 +132,7 @@ class B extends a.Component {
       "full-motion": !m,
       "keyboard-mode": d,
       "app-focused": n || a,
-      "low-saturation": S <= .4
+      "low-saturation": g <= .4
     });
     return (0, l.jsx)(u.BrowserRouter, {
       children: (0, l.jsx)(A.default, {
@@ -152,14 +152,14 @@ class B extends a.Component {
                       renderWindow: C,
                       children: (0, l.jsxs)(y.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
-                          className: V.popout,
-                          children: [g && null != N ? (0, l.jsx)(v.default, {
+                          className: B.popout,
+                          children: [S && null != N ? (0, l.jsx)(v.default, {
                             focused: n,
                             type: N,
                             windowKey: r,
                             macOSFrame: !0
                           }) : null, (0, l.jsx)("div", {
-                            className: i(V.content, x),
+                            className: i(B.content, x),
                             children: s
                           })]
                         }), (0, l.jsx)(c.Modals, {}), (0, l.jsx)(f.default, {}), (0, l.jsx)(y.AppLayerContainer, {})]
@@ -176,7 +176,7 @@ class B extends a.Component {
   }
   constructor(...e) {
     super(...e), this.rootRef = a.createRef(), this._cleanupWindowActionCreators = void 0, this.warnPopoutClose = e => {
-      this.props.connectedToEmbeddedActivity && !j.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = k.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, P.isPlatformEmbedded && (0, S.default)(() => {
+      this.props.connectedToEmbeddedActivity && !j.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = k.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, P.isPlatformEmbedded && (0, g.default)(() => {
         w.default.unmountWindow(this.props.windowKey), P.isPlatformEmbedded && D.default.close(this.props.windowKey)
       }))
     }, this.handleBlur = () => {
@@ -187,7 +187,7 @@ class B extends a.Component {
     }
   }
 }
-B.defaultProps = {
+V.defaultProps = {
   withTitleBar: !0
 };
 let H = a.forwardRef(function(e, t) {
@@ -212,7 +212,7 @@ let H = a.forwardRef(function(e, t) {
       fontScale: f,
       keyboardModeEnabled: h,
       reducedMotionEnabled: p,
-      fontScaleClass: S,
+      fontScaleClass: g,
       saturation: I
     } = (0, d.useStateFromStoresObject)([m.default], () => ({
       fontScale: m.default.fontScale,
@@ -226,14 +226,14 @@ let H = a.forwardRef(function(e, t) {
   let v = (0, N.default)(n, a),
     {
       AnalyticsLocationProvider: A
-    } = (0, C.default)(g.default.POPOUT_WINDOW),
+    } = (0, C.default)(S.default.POPOUT_WINDOW),
     {
       clientThemesClassName: j,
       clientThemesCSS: y
     } = (0, _.default)();
   return null == n ? null : (0, l.jsx)(c.DnDProvider, {
     children: (0, l.jsx)(A, {
-      children: (0, l.jsx)(B, {
+      children: (0, l.jsx)(V, {
         ref: t,
         ...e,
         guestWindow: n,
@@ -247,7 +247,7 @@ let H = a.forwardRef(function(e, t) {
         mouseModeEnabled: v,
         reducedMotionEnabled: p,
         connectedToEmbeddedActivity: T,
-        fontScaleClass: S,
+        fontScaleClass: g,
         saturation: I,
         clientThemesClassName: j,
         clientThemesCSS: y

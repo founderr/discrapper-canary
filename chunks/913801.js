@@ -8,8 +8,8 @@ var n = s("37983"),
   l = s("884691"),
   o = s("414456"),
   r = s.n(o),
-  i = s("862337"),
-  a = s("77078"),
+  a = s("862337"),
+  i = s("77078"),
   u = s("920700"),
   c = s("306160"),
   d = s("782340"),
@@ -26,25 +26,25 @@ class f extends l.PureComponent {
       className: l,
       inputClassName: o
     } = this.props, {
-      mode: i
-    } = this.state, c = i === u.default.Modes.SUCCESS ? d.default.Messages.COPIED : s;
+      mode: a
+    } = this.state, c = a === u.default.Modes.SUCCESS ? d.default.Messages.COPIED : s;
     return e ? (0, n.jsxs)("div", {
-      className: r(l, i),
-      children: [(0, n.jsx)(a.TextInput, {
+      className: r(l, a),
+      children: [(0, n.jsx)(i.TextInput, {
         value: t,
         inputClassName: o
-      }), (0, n.jsx)(a.Button, {
+      }), (0, n.jsx)(i.Button, {
         className: E.button,
         onClick: this.handleCopy,
-        size: a.Button.Sizes.MIN,
-        color: this.getVerticalButtonColor(i),
-        look: a.Button.Looks.FILLED,
+        size: i.Button.Sizes.MIN,
+        color: this.getVerticalButtonColor(a),
+        look: i.Button.Looks.FILLED,
         children: c
       })]
     }) : (0, n.jsx)(u.default, {
       ...this.props,
       onCopy: this.handleCopy,
-      mode: i,
+      mode: a,
       text: c
     })
   }
@@ -63,17 +63,17 @@ class f extends l.PureComponent {
   getVerticalButtonColor(e) {
     switch (e) {
       case u.default.Modes.SUCCESS:
-        return a.Button.Colors.GREEN;
+        return i.Button.Colors.GREEN;
       case u.default.Modes.ERROR:
-        return a.Button.Colors.RED;
+        return i.Button.Colors.RED;
       default:
-        return a.Button.Colors.BRAND
+        return i.Button.Colors.BRAND
     }
   }
   constructor(e) {
     super(e), this.state = {
       mode: u.default.Modes.DEFAULT
-    }, this._timeout = new i.Timeout, this.handleCopy = this.handleCopy.bind(this)
+    }, this._timeout = new a.Timeout, this.handleCopy = this.handleCopy.bind(this)
   }
 }
 f.defaultProps = {

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return y
   },
   IGNORE_CLASS_NAME: function() {
-    return m
+    return h
   }
 }), n("854508"), n("70102");
 var r, a, o = n("884691"),
@@ -38,13 +38,13 @@ var c = (void 0 === a && (a = 0), function() {
   d = {},
   f = {},
   p = ["touchstart", "touchmove"],
-  m = "ignore-react-onclickoutside";
+  h = "ignore-react-onclickoutside";
 
-function h(e, t) {
+function m(e, t) {
   var n = {};
   return -1 !== p.indexOf(t) && r && (n.passive = !e.props.preventDefault), n
 }
-var _ = function(e, t) {
+var y = function(e, t) {
   var n, a, p = e.displayName || e.name || "Component";
   return a = n = function(n) {
     function a(e) {
@@ -84,7 +84,7 @@ var _ = function(e, t) {
               return e
             })(e.composed && e.composedPath && e.composedPath().shift() || e.target, a.componentNode, a.props.outsideClickIgnoreClass) === document && a.__outsideClickHandler(e)
           }, e.forEach(function(e) {
-            document.addEventListener(e, d[a._uid], h(u(a), e))
+            document.addEventListener(e, d[a._uid], m(u(a), e))
           })
         }
       }, a.disableOnClickOutside = function() {
@@ -93,30 +93,30 @@ var _ = function(e, t) {
         if (e && "undefined" != typeof document) {
           var t = a.props.eventTypes;
           !t.forEach && (t = [t]), t.forEach(function(t) {
-            return document.removeEventListener(t, e, h(u(a), t))
+            return document.removeEventListener(t, e, m(u(a), t))
           }), delete d[a._uid]
         }
       }, a.getRef = function(e) {
         return a.instanceRef = e
       }, a._uid = c(), a
     }
-    m = a, _ = n, m.prototype = Object.create(_.prototype), m.prototype.constructor = m, s(m, _);
-    var m, _, y = a.prototype;
-    return y.getInstance = function() {
+    h = a, y = n, h.prototype = Object.create(y.prototype), h.prototype.constructor = h, s(h, y);
+    var h, y, _ = a.prototype;
+    return _.getInstance = function() {
       if (e.prototype && !e.prototype.isReactComponent) return this;
       var t = this.instanceRef;
       return t.getInstance ? t.getInstance() : t
-    }, y.componentDidMount = function() {
+    }, _.componentDidMount = function() {
       if ("undefined" != typeof document && !!document.createElement) {
         var e = this.getInstance();
         if (t && "function" == typeof t.handleClickOutside && (this.__clickOutsideHandlerProp = t.handleClickOutside(e), "function" != typeof this.__clickOutsideHandlerProp)) throw Error("WrappedComponent: " + p + " lacks a function for processing outside click events specified by the handleClickOutside config option.");
         this.componentNode = this.__getComponentNode(), !this.props.disableOnClickOutside && this.enableOnClickOutside()
       }
-    }, y.componentDidUpdate = function() {
+    }, _.componentDidUpdate = function() {
       this.componentNode = this.__getComponentNode()
-    }, y.componentWillUnmount = function() {
+    }, _.componentWillUnmount = function() {
       this.disableOnClickOutside()
-    }, y.render = function() {
+    }, _.render = function() {
       var t = this.props;
       t.excludeScrollbar;
       var n = function(e, t) {
@@ -131,7 +131,7 @@ var _ = function(e, t) {
   }(o.Component), n.displayName = "OnClickOutside(" + p + ")", n.defaultProps = {
     eventTypes: ["mousedown", "touchstart"],
     excludeScrollbar: t && t.excludeScrollbar || !1,
-    outsideClickIgnoreClass: m,
+    outsideClickIgnoreClass: h,
     preventDefault: !1,
     stopPropagation: !1
   }, n.getClass = function() {

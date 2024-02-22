@@ -22,7 +22,7 @@ function f(e) {
     m = (0, d.useStageHasMedia)(e.id),
     p = (0, l.useStateFromStores)([s.default], () => s.default.getGuild(e.guild_id), [e.guild_id]),
     E = (0, l.useStateFromStores)([i.default], () => i.default.can(u.MODERATE_STAGE_CHANNEL_PERMISSIONS, e), [e]),
-    S = null !== (t = null == p ? void 0 : p.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
-    g = !(null == p ? void 0 : p.isCommunity()) && S > c.MAX_STAGE_VIDEO_USER_LIMIT_TIER3;
-  return m && !n && E && !g && f + h >= S
+    g = null !== (t = null == p ? void 0 : p.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
+    S = !(null == p ? void 0 : p.isCommunity()) && g > c.MAX_STAGE_VIDEO_USER_LIMIT_TIER3;
+  return m && !n && E && !S && f + h >= g
 }

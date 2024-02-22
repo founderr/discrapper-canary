@@ -44,11 +44,11 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       var l = function(t, i) {
           var s = [];
           for (n = i = i || n; t;) {
-            for (var u = null, c = null, d = null, f = -1e5, p = 1e5, m = [a.get(t.charCodeAt(0)), o], h = 0; h < m.length; h++) {
-              var _ = m[h];
-              if (null != _)
-                for (var y = 0; y < _.length; y++) {
-                  var g = _[y],
+            for (var u = null, c = null, d = null, f = -1e5, p = 1e5, h = [a.get(t.charCodeAt(0)), o], m = 0; m < h.length; m++) {
+              var y = h[m];
+              if (null != y)
+                for (var _ = 0; _ < y.length; _++) {
+                  var g = y[_],
                     v = e[g],
                     b = v.order;
                   if (b > p) break;
@@ -72,28 +72,28 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
         };
       return l.rules = e, c.rules = e, c
     },
-    m = function(e) {
+    h = function(e) {
       var t = function(t, n) {
         return n.inline ? e.exec(t) : null
       };
       return t.regex = e, t
     },
-    h = function(e) {
+    m = function(e) {
       var t = function(t, n) {
         return n.inline ? null : e.exec(t)
       };
       return t.regex = e, t
     },
-    _ = function(e) {
+    y = function(e) {
       var t = function(t, n) {
         return e.exec(t)
       };
       return t.regex = e, t
     },
-    y = "function" == typeof Symbol && Symbol.for && Symbol.for("react.element") || 60103,
+    _ = "function" == typeof Symbol && Symbol.for && Symbol.for("react.element") || 60103,
     g = function(e, t, n) {
       return {
-        $$typeof: y,
+        $$typeof: _,
         type: e,
         key: null == t ? void 0 : t,
         ref: null,
@@ -162,9 +162,9 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
     C = /\n{2,}$/,
     H = /^ (?= *`)|(` *) $/g,
     F = / *\n+$/,
-    N = RegExp("^( *)(" + O + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + O + " )\\n*|\\s*\n*$)"),
+    A = RegExp("^( *)(" + O + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + O + " )\\n*|\\s*\n*$)"),
     I = /(?:^|\n)( *)$/;
-  var A = (e = /^ *\| *| *\| *$/g, t = / *$/, n = /^ *-+: *$/, r = /^ *:-+: *$/, a = /^ *:-+ *$/, o = function(e) {
+  var N = (e = /^ *\| *| *\| *$/g, t = / *$/, n = /^ *-+: *$/, r = /^ *:-+: *$/, a = /^ *:-+ *$/, o = function(e) {
       if (n.test(e)) return "right";
       if (r.test(e)) return "center";
       if (a.test(e)) return "left";
@@ -184,16 +184,16 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       parseTable: (s = function(t) {
         return function(n, r, a) {
           a.inline = !0;
-          var s, u, l, c, d, f, p, m = i(n[1], r, a, t);
-          var h = (s = n[2], u = 0, l = 0, t && (s = s.replace(e, "")), s.trim().split("|").map(o));
-          var _ = (c = n[3], d = r, f = a, p = t, c.trim().split("\n").map(function(e) {
+          var s, u, l, c, d, f, p, h = i(n[1], r, a, t);
+          var m = (s = n[2], u = 0, l = 0, t && (s = s.replace(e, "")), s.trim().split("|").map(o));
+          var y = (c = n[3], d = r, f = a, p = t, c.trim().split("\n").map(function(e) {
             return i(e, d, f, p)
           }));
           return a.inline = !1, {
             type: "table",
-            header: m,
-            align: h,
-            cells: _
+            header: h,
+            align: m,
+            cells: y
           }
         }
       })(!0),
@@ -247,7 +247,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       heading: {
         order: K++,
-        match: h(/^ *(#{1,6})([^\n]+?)#* *(?:\n *)+\n/),
+        match: m(/^ *(#{1,6})([^\n]+?)#* *(?:\n *)+\n/),
         parse: function(e, t, n) {
           return {
             level: e[1].length,
@@ -265,14 +265,14 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       nptable: {
         order: K++,
-        match: h(A.NPTABLE_REGEX),
-        parse: A.parseNpTable,
+        match: m(N.NPTABLE_REGEX),
+        parse: N.parseNpTable,
         react: null,
         html: null
       },
       lheading: {
         order: K++,
-        match: h(/^([^\n]+)\n *(=|-){3,} *(?:\n *)+\n/),
+        match: m(/^([^\n]+)\n *(=|-){3,} *(?:\n *)+\n/),
         parse: function(e, t, n) {
           return {
             type: "heading",
@@ -285,7 +285,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       hr: {
         order: K++,
-        match: h(/^( *[-*_]){3,} *(?:\n *)+\n/),
+        match: m(/^( *[-*_]){3,} *(?:\n *)+\n/),
         parse: x,
         react: function(e, t, n) {
           return g("hr", n.key, b)
@@ -296,7 +296,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       codeBlock: {
         order: K++,
-        match: h(/^(?:    [^\n]+\n*)+(?:\n *)+\n/),
+        match: m(/^(?:    [^\n]+\n*)+(?:\n *)+\n/),
         parse: function(e, t, n) {
           return {
             lang: void 0,
@@ -322,7 +322,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       fence: {
         order: K++,
-        match: h(/^ *(`{3,}|~{3,}) *(?:(\S+) *)?\n([\s\S]+?)\n?\1 *(?:\n *)+\n/),
+        match: m(/^ *(`{3,}|~{3,}) *(?:(\S+) *)?\n([\s\S]+?)\n?\1 *(?:\n *)+\n/),
         parse: function(e, t, n) {
           return {
             type: "codeBlock",
@@ -335,7 +335,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       blockQuote: {
         order: K++,
-        match: h(/^( *>[^\n]+(\n[^\n]+)*\n*)+\n{2,}/),
+        match: m(/^( *>[^\n]+(\n[^\n]+)*\n*)+\n{2,}/),
         parse: function(e, t, n) {
           return {
             content: t(e[0].replace(/^ *> ?/gm, ""), n)
@@ -356,7 +356,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
           var n = null == t.prevCapture ? "" : t.prevCapture[0],
             r = I.exec(n),
             a = t._list || !t.inline;
-          return r && a ? (e = r[1] + e, N.exec(e)) : null
+          return r && a ? (e = r[1] + e, A.exec(e)) : null
         },
         parse: function(e, t, n) {
           var r = e[2],
@@ -376,8 +376,8 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
               var f = n.inline,
                 p = n._list;
               n._list = !0, d ? (n.inline = !1, a = l.replace(F, "\n\n")) : (n.inline = !0, a = l.replace(F, ""));
-              var m = t(a, n);
-              return n.inline = f, n._list = p, m
+              var h = t(a, n);
+              return n.inline = f, n._list = p, h
             })
           }
         },
@@ -402,7 +402,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       def: {
         order: K++,
-        match: h(/^ *\[([^\]]+)\]: *<?([^\s>]*)>?(?: +["(]([^\n]+)[")])? *\n(?: *\n)*/),
+        match: m(/^ *\[([^\]]+)\]: *<?([^\s>]*)>?(?: +["(]([^\n]+)[")])? *\n(?: *\n)*/),
         parse: function(e, t, n) {
           var r = e[1].replace(/\s+/g, " ").toLowerCase(),
             a = e[2],
@@ -427,8 +427,8 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       table: {
         order: K++,
-        match: h(A.TABLE_REGEX),
-        parse: A.parseTable,
+        match: m(N.TABLE_REGEX),
+        parse: N.parseTable,
         react: function(e, t, n) {
           var r = function(t) {
               return null == e.align[t] ? {} : {
@@ -488,7 +488,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       newline: {
         order: K++,
         requiredFirstCharacters: ["\n"],
-        match: h(/^(?:\n *)*\n/),
+        match: m(/^(?:\n *)*\n/),
         parse: x,
         react: function(e, t, n) {
           return "\n"
@@ -499,7 +499,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       paragraph: {
         order: K++,
-        match: h(/^((?:[^\n]|\n(?! *\n))+)(?:\n *)+\n/),
+        match: m(/^((?:[^\n]|\n(?! *\n))+)(?:\n *)+\n/),
         parse: Y,
         react: function(e, t, n) {
           return g("div", n.key, {
@@ -516,7 +516,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       escape: {
         order: K++,
         requiredFirstCharacters: ["\\"],
-        match: m(/^\\([^0-9A-Za-z\s])/),
+        match: h(/^\\([^0-9A-Za-z\s])/),
         parse: function(e, t, n) {
           return {
             type: "text",
@@ -546,7 +546,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       autolink: {
         order: K++,
         requiredFirstCharacters: ["<"],
-        match: m(/^<([^: >]+:\/[^ >]+)>/),
+        match: h(/^<([^: >]+:\/[^ >]+)>/),
         parse: function(e, t, n) {
           return {
             type: "link",
@@ -562,7 +562,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       mailto: {
         order: K++,
-        match: m(/^<([^ >]+@[^ >]+)>/),
+        match: h(/^<([^ >]+@[^ >]+)>/),
         parse: function(e, t, n) {
           var r = e[1],
             a = e[1];
@@ -581,7 +581,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       url: {
         order: K++,
         requiredFirstCharacters: ["h"],
-        match: m(/^(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/),
+        match: h(/^(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/),
         parse: function(e, t, n) {
           return {
             type: "link",
@@ -599,7 +599,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       link: {
         order: K++,
         requiredFirstCharacters: ["["],
-        match: m(RegExp("^\\[(" + R + ")\\]\\(" + z + "\\)")),
+        match: h(RegExp("^\\[(" + R + ")\\]\\(" + z + "\\)")),
         parse: function(e, t, n) {
           return {
             content: t(e[1], n),
@@ -624,7 +624,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       image: {
         order: K++,
-        match: m(RegExp("^!\\[(" + R + ")\\]\\(" + z + "\\)")),
+        match: h(RegExp("^!\\[(" + R + ")\\]\\(" + z + "\\)")),
         parse: function(e, t, n) {
           return {
             alt: e[1],
@@ -649,7 +649,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       reflink: {
         order: K++,
-        match: m(RegExp("^\\[(" + R + ")\\]\\s*\\[([^\\]]*)\\]")),
+        match: h(RegExp("^\\[(" + R + ")\\]\\s*\\[([^\\]]*)\\]")),
         parse: function(e, t, n) {
           return B(e, n, {
             type: "link",
@@ -661,7 +661,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       refimage: {
         order: K++,
-        match: m(RegExp("^!\\[(" + R + ")\\]\\s*\\[([^\\]]*)\\]")),
+        match: h(RegExp("^!\\[(" + R + ")\\]\\s*\\[([^\\]]*)\\]")),
         parse: function(e, t, n) {
           return B(e, n, {
             type: "image",
@@ -673,7 +673,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       em: {
         order: K,
-        match: m(RegExp((U ? "^\\b_((?:_[_(]|\\\\[\\s\\S]|(?<!_)\\B_\\B|[^\\\\_])+?)_(?![(])\\b" : "^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b") + "|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)")),
+        match: h(RegExp((U ? "^\\b_((?:_[_(]|\\\\[\\s\\S]|(?<!_)\\B_\\B|[^\\\\_])+?)_(?![(])\\b" : "^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b") + "|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)")),
         quality: function(e) {
           return e[0].length + .2
         },
@@ -694,7 +694,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       strong: {
         order: K,
         requiredFirstCharacters: ["*"],
-        match: m(/^\*\*((?:\\[\s\S]|[^\\])+?)\*\*(?!\*)/),
+        match: h(/^\*\*((?:\\[\s\S]|[^\\])+?)\*\*(?!\*)/),
         quality: function(e) {
           return e[0].length + .1
         },
@@ -711,7 +711,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       u: {
         order: K++,
         requiredFirstCharacters: ["_"],
-        match: m(/^__((?:\\[\s\S]|[^\\])+?)__(?!_)/),
+        match: h(/^__((?:\\[\s\S]|[^\\])+?)__(?!_)/),
         quality: function(e) {
           return e[0].length
         },
@@ -728,7 +728,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       del: {
         order: K++,
         requiredFirstCharacters: ["~"],
-        match: m(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~]|\s(?!~~))+?)~~/),
+        match: h(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~]|\s(?!~~))+?)~~/),
         parse: Y,
         react: function(e, t, n) {
           return g("del", n.key, {
@@ -742,7 +742,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       inlineCode: {
         order: K++,
         requiredFirstCharacters: ["`"],
-        match: m(/^(`+)([\s\S]*?[^`])\1(?!`)/),
+        match: h(/^(`+)([\s\S]*?[^`])\1(?!`)/),
         parse: function(e, t, n) {
           return {
             content: e[2].replace(H, "$1")
@@ -760,7 +760,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       br: {
         order: K++,
         requiredFirstCharacters: [" "],
-        match: _(/^ {2,}\n/),
+        match: y(/^ {2,}\n/),
         parse: x,
         react: function(e, t, n) {
           return g("br", n.key, b)
@@ -771,7 +771,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       text: {
         order: K++,
-        match: _(/^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|$)/),
+        match: y(/^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|$)/),
         parse: function(e, t, n) {
           return {
             content: e[0]
@@ -796,26 +796,26 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
         return o(e, r = f(t, n))
       }
     },
-    G = p(V),
-    q = function(e, t) {
-      return (t = t || {}).inline = !1, G(e, t)
+    q = p(V),
+    G = function(e, t) {
+      return (t = t || {}).inline = !1, q(e, t)
     },
     $ = function(e, t) {
       var n = C.test(e);
-      return (t = t || {}).inline = !n, G(e, t)
+      return (t = t || {}).inline = !n, q(e, t)
     },
     Q = J(V, "react"),
     X = J(V, "html"),
     Z = function(e, t) {
-      return Q(q(e, t), t)
+      return Q(G(e, t), t)
     };
   return {
     defaultRules: V,
     parserFor: p,
     outputFor: J,
-    inlineRegex: m,
-    blockRegex: h,
-    anyScopeRegex: _,
+    inlineRegex: h,
+    blockRegex: m,
+    anyScopeRegex: y,
     parseInline: S,
     parseBlock: function(e, t, n) {
       var r = n.inline || !1;
@@ -825,16 +825,16 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
     },
     markdownToReact: Z,
     markdownToHtml: function(e, t) {
-      return X(q(e, t), t)
+      return X(G(e, t), t)
     },
     ReactMarkdown: function(e) {
       var t = {};
       for (var n in e) "source" !== n && Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
       return t.children = Z(e.source), g("div", null, t)
     },
-    defaultBlockParse: q,
+    defaultBlockParse: G,
     defaultInlineParse: function(e, t) {
-      return (t = t || {}).inline = !0, G(e, t)
+      return (t = t || {}).inline = !0, q(e, t)
     },
     defaultImplicitParse: $,
     defaultReactOutput: Q,
@@ -845,7 +845,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
     unescapeUrl: T,
     htmlTag: v,
     reactElement: g,
-    defaultRawParse: G,
+    defaultRawParse: q,
     ruleOutput: function(e, t) {
       return !t && "undefined" != typeof console && console.warn("simple-markdown ruleOutput should take 'react' or 'html' as the second argument."),
         function(n, r, a) {

@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var r = n("884691"),
   a = n("240849"),
-  o = n("708966"),
-  i = n("113581"),
+  i = n("708966"),
+  o = n("113581"),
   s = n("447259"),
   c = n("759840"),
   l = n("444324");
@@ -22,12 +22,12 @@ function u(e, t) {
     isRequired: d = !1,
     isReadOnly: p = !1,
     type: f = "text",
-    validationBehavior: h = "aria"
-  } = e, [m, v] = (0, o.useControlledState)(e.value, e.defaultValue || "", e.onChange), {
+    validationBehavior: m = "aria"
+  } = e, [h, v] = (0, i.useControlledState)(e.value, e.defaultValue || "", e.onChange), {
     focusableProps: g
   } = (0, s.useFocusable)(e, t), y = (0, l.useFormValidationState)({
     ...e,
-    value: m
+    value: h
   }), {
     isInvalid: b,
     validationErrors: x,
@@ -37,7 +37,7 @@ function u(e, t) {
     fieldProps: D,
     descriptionProps: C,
     errorMessageProps: k
-  } = (0, i.useField)({
+  } = (0, o.useField)({
     ...e,
     isInvalid: b,
     errorMessage: e.errorMessage || x
@@ -47,7 +47,7 @@ function u(e, t) {
     type: f,
     pattern: e.pattern
   };
-  return (0, a.useFormReset)(t, m, v), (0, c.useFormValidation)(e, y, t), (0, r.useEffect)(() => {
+  return (0, a.useFormReset)(t, h, v), (0, c.useFormValidation)(e, y, t), (0, r.useEffect)(() => {
     if (t.current instanceof(0, a.getOwnerWindow)(t.current).HTMLTextAreaElement) {
       let e = t.current;
       Object.defineProperty(e, "defaultValue", {
@@ -61,14 +61,14 @@ function u(e, t) {
     inputProps: (0, a.mergeProps)(P, "input" === n && E, {
       disabled: u,
       readOnly: p,
-      required: d && "native" === h,
-      "aria-required": d && "aria" === h || void 0,
+      required: d && "native" === m,
+      "aria-required": d && "aria" === m || void 0,
       "aria-invalid": b || void 0,
       "aria-errormessage": e["aria-errormessage"],
       "aria-activedescendant": e["aria-activedescendant"],
       "aria-autocomplete": e["aria-autocomplete"],
       "aria-haspopup": e["aria-haspopup"],
-      value: m,
+      value: h,
       onChange: e => v(e.target.value),
       autoComplete: e.autoComplete,
       autoCapitalize: e.autoCapitalize,
@@ -102,7 +102,7 @@ function d() {
 }
 
 function p(e, t, n) {
-  let o = (0, a.useEffectEvent)(e => {
+  let i = (0, a.useEffectEvent)(e => {
     let r, a = n.current;
     switch (e.inputType) {
       case "historyUndo":
@@ -130,11 +130,11 @@ function p(e, t, n) {
   (0, r.useEffect)(() => {
     if (!d()) return;
     let e = n.current;
-    return e.addEventListener("beforeinput", o, !1), () => {
-      e.removeEventListener("beforeinput", o, !1)
+    return e.addEventListener("beforeinput", i, !1), () => {
+      e.removeEventListener("beforeinput", i, !1)
     }
-  }, [n, o]);
-  let i = d() ? null : e => {
+  }, [n, i]);
+  let o = d() ? null : e => {
       let n = e.target.value.slice(0, e.target.selectionStart) + e.data + e.target.value.slice(e.target.selectionEnd);
       !t.validate(n) && e.preventDefault()
     },
@@ -145,17 +145,17 @@ function p(e, t, n) {
       errorMessageProps: p,
       ...f
     } = u(e, n),
-    h = (0, r.useRef)(null);
+    m = (0, r.useRef)(null);
   return {
     inputProps: (0, a.mergeProps)(c, {
-      onBeforeInput: i,
+      onBeforeInput: o,
       onCompositionStart() {
         let {
           value: e,
           selectionStart: t,
           selectionEnd: r
         } = n.current;
-        h.current = {
+        m.current = {
           value: e,
           selectionStart: t,
           selectionEnd: r
@@ -167,7 +167,7 @@ function p(e, t, n) {
             value: e,
             selectionStart: r,
             selectionEnd: a
-          } = h.current;
+          } = m.current;
           n.current.value = e, n.current.setSelectionRange(r, a), t.setInputValue(e)
         }
       }

@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 }), n("424973");
 var r = n("234160"),
   a = n("714413"),
-  o = n("125692");
+  i = n("125692");
 
-function i(e, t) {
+function o(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -22,7 +22,7 @@ function i(e, t) {
 function s(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
-    t % 2 ? i(Object(n), !0).forEach(function(t) {
+    t % 2 ? o(Object(n), !0).forEach(function(t) {
       (function(e, t, n) {
         t in e ? Object.defineProperty(e, t, {
           value: n,
@@ -31,7 +31,7 @@ function s(e) {
           writable: !0
         }) : e[t] = n
       })(e, t, n[t])
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : i(Object(n)).forEach(function(t) {
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : o(Object(n)).forEach(function(t) {
       Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t))
     })
   }
@@ -72,7 +72,7 @@ function l() {
     case a.REMOVE_TARGET:
       if (-1 === e.targetIds.indexOf(n.targetId)) return e;
       return s(s({}, e), {}, {
-        targetIds: (0, o.without)(e.targetIds, n.targetId)
+        targetIds: (0, i.without)(e.targetIds, n.targetId)
       });
     case r.DROP:
       return s(s({}, e), {}, {

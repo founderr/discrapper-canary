@@ -17,8 +17,8 @@ var n = s("37983"),
   l = s("884691"),
   o = s("414456"),
   r = s.n(o),
-  i = s("974667"),
-  a = s("509043"),
+  a = s("974667"),
+  i = s("509043"),
   u = s("77078"),
   c = s("248559"),
   d = s("449918"),
@@ -41,8 +41,8 @@ function g(e) {
     style: E = {},
     onClick: _,
     "aria-label": I
-  } = e, p = (0, i.useListItem)("color-".concat(t)), g = null != t ? (0, a.int2hex)(t) : E.backgroundColor, R = !1;
-  return l && !o ? R = !0 : (l || o) && (R = (0, a.getDarkness)(t) > .1), (0, n.jsx)(u.FocusRing, {
+  } = e, p = (0, a.useListItem)("color-".concat(t)), g = null != t ? (0, i.int2hex)(t) : E.backgroundColor, R = !1;
+  return l && !o ? R = !0 : (l || o) && (R = (0, i.getDarkness)(t) > .1), (0, n.jsx)(u.FocusRing, {
     offset: -2,
     children: (0, n.jsxs)("button", {
       type: "button",
@@ -118,12 +118,12 @@ let m = l.memo(e => {
     onChange: s,
     onClose: o,
     suggestedColors: r,
-    middle: i,
+    middle: a,
     footer: d,
     showEyeDropper: f
   } = e, h = (0, c.default)(), [p, g] = l.useState(() => {
     let e = null != t ? t : 0,
-      s = (0, a.int2hex)(e);
+      s = (0, i.int2hex)(e);
     return {
       current: e,
       pending: s,
@@ -132,7 +132,7 @@ let m = l.memo(e => {
   });
   l.useEffect(() => {
     if (null == t || t === p.current) return;
-    let e = (0, a.int2hex)(t);
+    let e = (0, i.int2hex)(t);
     g({
       current: t,
       pending: e,
@@ -141,14 +141,14 @@ let m = l.memo(e => {
   }, [t, p]), l.useEffect(() => o, [o]);
   let R = e => {
       let t = "#" === e[0] ? e : "#".concat(e);
-      if (!(0, a.isValidHex)(t)) {
+      if (!(0, i.isValidHex)(t)) {
         g(e => ({
           ...e,
           input: t
         }));
         return
       }
-      let n = (0, a.hex2int)(t);
+      let n = (0, i.hex2int)(t);
       g({
         current: n,
         pending: t,
@@ -169,7 +169,7 @@ let m = l.memo(e => {
         input: e
       }))
     }, L = e => {
-      s((0, a.hex2int)(e))
+      s((0, i.hex2int)(e))
     };
   return (0, n.jsxs)(u.Dialog, {
     "aria-label": I.default.Messages.PICK_A_COLOR,
@@ -188,7 +188,7 @@ let m = l.memo(e => {
         return L(t)
       },
       color: p.pending
-    }), i, (0, n.jsxs)("div", {
+    }), a, (0, n.jsxs)("div", {
       className: N.customColorPickerInputContainer,
       children: [f && null != h && (0, n.jsx)(_.Icon, {
         onClick: T,
@@ -222,7 +222,7 @@ function L(e) {
     defaultColor: s,
     customColor: l,
     colors: o,
-    value: a,
+    value: i,
     disabled: u,
     onChange: c,
     renderDefaultButton: d,
@@ -232,32 +232,32 @@ function L(e) {
     className: N.colorPickerRow,
     children: e.map(e => (0, n.jsx)(g, {
       color: e,
-      isSelected: e === a,
+      isSelected: e === i,
       onClick: c,
       disabled: u
     }, e))
-  }), _ = o.slice(0, o.length / 2), h = o.slice(o.length / 2, o.length), I = (0, i.default)({
+  }), _ = o.slice(0, o.length / 2), h = o.slice(o.length / 2, o.length), I = (0, a.default)({
     id: "color-picker",
     isEnabled: !0,
     scrollToStart: p,
     scrollToEnd: p
   });
-  return (0, n.jsx)(i.ListNavigatorProvider, {
+  return (0, n.jsx)(a.ListNavigatorProvider, {
     navigator: I,
-    children: (0, n.jsx)(i.ListNavigatorContainer, {
+    children: (0, n.jsx)(a.ListNavigatorContainer, {
       children: e => {
         let {
           ref: o,
-          ...i
+          ...a
         } = e;
         return (0, n.jsxs)("div", {
           className: r(N.container, t),
           ref: o,
-          ...i,
+          ...a,
           children: [(0, n.jsx)("div", {
             className: r(N.defaultContainer, f),
             children: d({
-              value: a,
+              value: i,
               color: s,
               onChange: c,
               disabled: u
@@ -265,7 +265,7 @@ function L(e) {
           }), (0, n.jsx)("div", {
             className: r(N.customContainer, f),
             children: E({
-              value: a,
+              value: i,
               customColor: l,
               disabled: u
             })

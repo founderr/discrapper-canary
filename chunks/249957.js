@@ -19,8 +19,8 @@ var a = n("414456"),
   m = n("68777"),
   p = n("463278"),
   E = n("608973"),
-  S = n("132881"),
-  g = n("865331");
+  g = n("132881"),
+  S = n("865331");
 
 function C(e) {
   let {
@@ -28,12 +28,12 @@ function C(e) {
     guildId: n
   } = e, a = (0, c.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
   return (0, l.jsxs)("div", {
-    className: s(g.header),
+    className: s(S.header),
     style: {
       backgroundColor: a
     },
     children: [(0, l.jsxs)("div", {
-      className: s(g.headerTitle),
+      className: s(S.headerTitle),
       children: [(0, l.jsx)(d.default, {
         width: 16,
         height: 16
@@ -44,8 +44,8 @@ function C(e) {
     }), (0, l.jsx)("div", {
       children: (0, l.jsx)(r.KeyCombo, {
         shortcut: "esc",
-        keyClassName: g.keyComboInner,
-        className: g.keyComboContainer
+        keyClassName: S.keyComboInner,
+        className: S.keyComboContainer
       })
     })]
   })
@@ -60,7 +60,7 @@ function _(e) {
     onNavigate: _
   } = e, I = (0, i.default)([u.default], () => u.default.getUser(t), [t]), T = (0, i.default)([o.default], () => o.default.getMember(n, t), [n, t]), v = (0, c.useProfileThemedPanelBackground)(t, n);
   return null == I || null == T ? null : (0, l.jsxs)(r.Scroller, {
-    className: s(g.container, d),
+    className: s(S.container, d),
     style: {
       backgroundColor: v
     },
@@ -68,10 +68,10 @@ function _(e) {
       userId: t,
       guildId: n
     }), (0, l.jsxs)("div", {
-      className: s(g.innerContainer),
+      className: s(S.innerContainer),
       children: [(0, l.jsx)(E.default, {
         member: T
-      }), (0, l.jsx)(S.default, {
+      }), (0, l.jsx)(g.default, {
         userId: t,
         guildId: n
       }), (0, l.jsx)(p.default, {

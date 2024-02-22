@@ -64,11 +64,11 @@ function M(e) {
     B = a.useCallback(() => {
       I.default.syncIntegration(l.id, s.id)
     }, [l.id, s.id]),
-    H = a.useCallback(() => {
+    k = a.useCallback(() => {
       null != s.role_id && (I.default.setSection(A.GuildSettingsSections.ROLES), I.default.selectRole(s.role_id))
     }, [s.role_id]),
     {
-      serviceName: k,
+      serviceName: H,
       channelURL: U,
       expireBehaviorLabel: F,
       syncLabel: w,
@@ -99,7 +99,7 @@ function M(e) {
       let e, t;
       let a = null != s.role_id ? l.getRole(s.role_id) : null;
       e = null != a ? (0, n.jsx)(u.Anchor, {
-        onClick: H,
+        onClick: k,
         children: a.name
       }) : C.default.Messages.NONE;
       let i = f.default.get(s.type);
@@ -112,7 +112,7 @@ function M(e) {
           datetime: o(s.synced_at).calendar()
         })
       }
-    }, [l, H, s.revoked, s.role_id, s.synced_at, s.type, s.user]),
+    }, [l, k, s.revoked, s.role_id, s.synced_at, s.type, s.user]),
     K = a.useMemo(() => {
       let e = m.default.getGuildEmoji(l.id),
         t = Object.values(l.roles).filter(e => null != e.tags && e.tags.integration_id === s.id).map(e => e.id);
@@ -133,7 +133,7 @@ function M(e) {
     let e = new URL(U);
     t = [{
       text: C.default.Messages.INTEGRATIONS_ACCOUNT_DESCRIPTION.format({
-        serviceName: k,
+        serviceName: H,
         accountUrl: U,
         accountUrlText: e.hostname + e.pathname
       })

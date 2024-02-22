@@ -14,37 +14,37 @@ if (s) try {
 } catch (e) {
   s = null
 }
-var c = function() {
+var u = function() {
     throw new o
   },
   l = s ? function() {
     try {
-      return arguments.callee, c
+      return arguments.callee, u
     } catch (e) {
       try {
         return s(arguments, "callee").get
       } catch (e) {
-        return c
+        return u
       }
     }
-  }() : c,
-  u = n("923771")(),
+  }() : u,
+  c = n("923771")(),
   d = n("29364")(),
-  p = Object.getPrototypeOf || (d ? function(e) {
+  f = Object.getPrototypeOf || (d ? function(e) {
     return e.__proto__
   } : null),
-  f = {},
-  h = "undefined" != typeof Uint8Array && p ? p(Uint8Array) : void 0,
+  p = {},
+  h = "undefined" != typeof Uint8Array && f ? f(Uint8Array) : void 0,
   m = {
     "%AggregateError%": "undefined" == typeof AggregateError ? void 0 : AggregateError,
     "%Array%": Array,
     "%ArrayBuffer%": "undefined" == typeof ArrayBuffer ? void 0 : ArrayBuffer,
-    "%ArrayIteratorPrototype%": u && p ? p([][Symbol.iterator]()) : void 0,
+    "%ArrayIteratorPrototype%": c && f ? f([][Symbol.iterator]()) : void 0,
     "%AsyncFromSyncIteratorPrototype%": void 0,
-    "%AsyncFunction%": f,
-    "%AsyncGenerator%": f,
-    "%AsyncGeneratorFunction%": f,
-    "%AsyncIteratorPrototype%": f,
+    "%AsyncFunction%": p,
+    "%AsyncGenerator%": p,
+    "%AsyncGeneratorFunction%": p,
+    "%AsyncIteratorPrototype%": p,
     "%Atomics%": "undefined" == typeof Atomics ? void 0 : Atomics,
     "%BigInt%": "undefined" == typeof BigInt ? void 0 : BigInt,
     "%BigInt64Array%": "undefined" == typeof BigInt64Array ? void 0 : BigInt64Array,
@@ -63,16 +63,16 @@ var c = function() {
     "%Float64Array%": "undefined" == typeof Float64Array ? void 0 : Float64Array,
     "%FinalizationRegistry%": "undefined" == typeof FinalizationRegistry ? void 0 : FinalizationRegistry,
     "%Function%": a,
-    "%GeneratorFunction%": f,
+    "%GeneratorFunction%": p,
     "%Int8Array%": "undefined" == typeof Int8Array ? void 0 : Int8Array,
     "%Int16Array%": "undefined" == typeof Int16Array ? void 0 : Int16Array,
     "%Int32Array%": "undefined" == typeof Int32Array ? void 0 : Int32Array,
     "%isFinite%": isFinite,
     "%isNaN%": isNaN,
-    "%IteratorPrototype%": u && p ? p(p([][Symbol.iterator]())) : void 0,
+    "%IteratorPrototype%": c && f ? f(f([][Symbol.iterator]())) : void 0,
     "%JSON%": "object" == typeof JSON ? JSON : void 0,
     "%Map%": "undefined" == typeof Map ? void 0 : Map,
-    "%MapIteratorPrototype%": "undefined" != typeof Map && u && p ? p(new Map()[Symbol.iterator]()) : void 0,
+    "%MapIteratorPrototype%": "undefined" != typeof Map && c && f ? f(new Map()[Symbol.iterator]()) : void 0,
     "%Math%": Math,
     "%Number%": Number,
     "%Object%": Object,
@@ -85,11 +85,11 @@ var c = function() {
     "%Reflect%": "undefined" == typeof Reflect ? void 0 : Reflect,
     "%RegExp%": RegExp,
     "%Set%": "undefined" == typeof Set ? void 0 : Set,
-    "%SetIteratorPrototype%": "undefined" != typeof Set && u && p ? p(new Set()[Symbol.iterator]()) : void 0,
+    "%SetIteratorPrototype%": "undefined" != typeof Set && c && f ? f(new Set()[Symbol.iterator]()) : void 0,
     "%SharedArrayBuffer%": "undefined" == typeof SharedArrayBuffer ? void 0 : SharedArrayBuffer,
     "%String%": String,
-    "%StringIteratorPrototype%": u && p ? p("" [Symbol.iterator]()) : void 0,
-    "%Symbol%": u ? Symbol : void 0,
+    "%StringIteratorPrototype%": c && f ? f("" [Symbol.iterator]()) : void 0,
+    "%Symbol%": c ? Symbol : void 0,
     "%SyntaxError%": r,
     "%ThrowTypeError%": l,
     "%TypedArray%": h,
@@ -103,13 +103,13 @@ var c = function() {
     "%WeakRef%": "undefined" == typeof WeakRef ? void 0 : WeakRef,
     "%WeakSet%": "undefined" == typeof WeakSet ? void 0 : WeakSet
   };
-if (p) try {
+if (f) try {
   null.error
 } catch (e) {
-  var v = p(p(e));
-  m["%Error.prototype%"] = v
+  var y = f(f(e));
+  m["%Error.prototype%"] = y
 }
-var g = function e(t) {
+var _ = function e(t) {
     var n;
     if ("%AsyncFunction%" === t) n = i("async function () {}");
     else if ("%GeneratorFunction%" === t) n = i("function* () {}");
@@ -119,11 +119,11 @@ var g = function e(t) {
       r && (n = r.prototype)
     } else if ("%AsyncIteratorPrototype%" === t) {
       var a = e("%AsyncGenerator%");
-      a && p && (n = p(a.prototype))
+      a && f && (n = f(a.prototype))
     }
     return m[t] = n, n
   },
-  y = {
+  g = {
     "%ArrayBufferPrototype%": ["ArrayBuffer", "prototype"],
     "%ArrayPrototype%": ["Array", "prototype"],
     "%ArrayProto_entries%": ["Array", "prototype", "entries"],
@@ -176,30 +176,30 @@ var g = function e(t) {
     "%WeakMapPrototype%": ["WeakMap", "prototype"],
     "%WeakSetPrototype%": ["WeakSet", "prototype"]
   },
-  b = n("459078"),
-  x = n("748795"),
-  S = b.call(Function.call, Array.prototype.concat),
-  w = b.call(Function.apply, Array.prototype.splice),
-  D = b.call(Function.call, String.prototype.replace),
-  C = b.call(Function.call, String.prototype.slice),
-  k = b.call(Function.call, RegExp.prototype.exec),
-  P = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
-  E = /\\(\\)?/g,
-  T = function(e) {
-    var t = C(e, 0, 1),
-      n = C(e, -1);
+  v = n("459078"),
+  b = n("748795"),
+  M = v.call(Function.call, Array.prototype.concat),
+  w = v.call(Function.apply, Array.prototype.splice),
+  k = v.call(Function.call, String.prototype.replace),
+  L = v.call(Function.call, String.prototype.slice),
+  D = v.call(Function.call, RegExp.prototype.exec),
+  T = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
+  S = /\\(\\)?/g,
+  Y = function(e) {
+    var t = L(e, 0, 1),
+      n = L(e, -1);
     if ("%" === t && "%" !== n) throw new r("invalid intrinsic syntax, expected closing `%`");
     if ("%" === n && "%" !== t) throw new r("invalid intrinsic syntax, expected opening `%`");
     var a = [];
-    return D(e, P, function(e, t, n, r) {
-      a[a.length] = n ? D(r, E, "$1") : t || e
+    return k(e, T, function(e, t, n, r) {
+      a[a.length] = n ? k(r, S, "$1") : t || e
     }), a
   },
-  M = function(e, t) {
+  x = function(e, t) {
     var n, a = e;
-    if (x(y, a) && (a = "%" + (n = y[a])[0] + "%"), x(m, a)) {
+    if (b(g, a) && (a = "%" + (n = g[a])[0] + "%"), b(m, a)) {
       var i = m[a];
-      if (i === f && (i = g(a)), void 0 === i && !t) throw new o("intrinsic " + e + " exists, but is not available. Please file an issue!");
+      if (i === p && (i = _(a)), void 0 === i && !t) throw new o("intrinsic " + e + " exists, but is not available. Please file an issue!");
       return {
         alias: n,
         name: a,
@@ -211,31 +211,31 @@ var g = function e(t) {
 e.exports = function(e, t) {
   if ("string" != typeof e || 0 === e.length) throw new o("intrinsic name must be a non-empty string");
   if (arguments.length > 1 && "boolean" != typeof t) throw new o('"allowMissing" argument must be a boolean');
-  if (null === k(/^%?[^%]*%?$/, e)) throw new r("`%` may not be present anywhere but at the beginning and end of the intrinsic name");
-  var n = T(e),
+  if (null === D(/^%?[^%]*%?$/, e)) throw new r("`%` may not be present anywhere but at the beginning and end of the intrinsic name");
+  var n = Y(e),
     a = n.length > 0 ? n[0] : "",
-    i = M("%" + a + "%", t),
-    c = i.name,
+    i = x("%" + a + "%", t),
+    u = i.name,
     l = i.value,
-    u = !1,
+    c = !1,
     d = i.alias;
-  d && (a = d[0], w(n, S([0, 1], d)));
-  for (var p = 1, f = !0; p < n.length; p += 1) {
-    var h = n[p],
-      v = C(h, 0, 1),
-      g = C(h, -1);
-    if (('"' === v || "'" === v || "`" === v || '"' === g || "'" === g || "`" === g) && v !== g) throw new r("property names with quotes must have matching quotes");
-    if (("constructor" === h || !f) && (u = !0), a += "." + h, x(m, c = "%" + a + "%")) l = m[c];
+  d && (a = d[0], w(n, M([0, 1], d)));
+  for (var f = 1, p = !0; f < n.length; f += 1) {
+    var h = n[f],
+      y = L(h, 0, 1),
+      _ = L(h, -1);
+    if (('"' === y || "'" === y || "`" === y || '"' === _ || "'" === _ || "`" === _) && y !== _) throw new r("property names with quotes must have matching quotes");
+    if (("constructor" === h || !p) && (c = !0), a += "." + h, b(m, u = "%" + a + "%")) l = m[u];
     else if (null != l) {
       if (!(h in l)) {
         if (!t) throw new o("base intrinsic for " + e + " exists, but the property is not available.");
         return
       }
-      if (s && p + 1 >= n.length) {
-        var y = s(l, h);
-        l = (f = !!y) && "get" in y && !("originalValue" in y.get) ? y.get : l[h]
-      } else f = x(l, h), l = l[h];
-      f && !u && (m[c] = l)
+      if (s && f + 1 >= n.length) {
+        var g = s(l, h);
+        l = (p = !!g) && "get" in g && !("originalValue" in g.get) ? g.get : l[h]
+      } else p = b(l, h), l = l[h];
+      p && !c && (m[u] = l)
     }
   }
   return l

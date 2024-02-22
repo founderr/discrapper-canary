@@ -131,11 +131,11 @@ t = n.nmd(t), n("854508"), n("70102"), n("424973"), n("808653"), n("222007"), e 
       return n[0] = k(n[0] || 0), n[1] = k(100 * n[1]) + "%", n[2] = k(100 * n[2]) + "%", "hsla" === e || n.length > 3 && n[3] < 1 ? (n[3] = n.length > 3 ? n[3] : 1, e = "hsla") : n.length = 3, e + "(" + n.join(",") + ")"
     },
     M = Math.round,
-    O = a.unpack,
-    I = Math.round,
+    I = a.unpack,
+    O = Math.round,
     N = function() {
       for (var t, r, n, e, i = [], o = arguments.length; o--;) i[o] = arguments[o];
-      var u = (i = O(i, "hsl"))[0],
+      var u = (i = I(i, "hsl"))[0],
         a = i[1],
         f = i[2];
       if (0 === a) r = n = e = 255 * f;
@@ -147,7 +147,7 @@ t = n.nmd(t), n("854508"), n("70102"), n("424973"), n("808653"), n("222007"), e 
           p = u / 360;
         c[0] = p + 1 / 3, c[1] = p, c[2] = p - 1 / 3;
         for (var v = 0; v < 3; v++) c[v] < 0 && (c[v] += 1), c[v] > 1 && (c[v] -= 1), 6 * c[v] < 1 ? s[v] = h + (l - h) * 6 * c[v] : 2 * c[v] < 1 ? s[v] = l : 3 * c[v] < 2 ? s[v] = h + (l - h) * (2 / 3 - c[v]) * 6 : s[v] = h;
-        r = (t = [I(255 * s[0]), I(255 * s[1]), I(255 * s[2])])[0], n = t[1], e = t[2]
+        r = (t = [O(255 * s[0]), O(255 * s[1]), O(255 * s[2])])[0], n = t[1], e = t[2]
       }
       return i.length > 3 ? [r, n, e, i[3]] : [r, n, e, 1]
     },
@@ -472,14 +472,14 @@ t = n.nmd(t), n("854508"), n("70102"), n("424973"), n("808653"), n("222007"), e 
     },
     tS = a.unpack,
     tM = Math.pow,
-    tO = function(t) {
+    tI = function(t) {
       return (t /= 255) <= .04045 ? t / 12.92 : tM((t + .055) / 1.055, 2.4)
     },
-    tI = function(t) {
+    tO = function(t) {
       return t > tA.t3 ? tM(t, 1 / 3) : t / tA.t2 + tA.t0
     },
     tN = function(t, r, n) {
-      return t = tO(t), r = tO(r), [tI((.4124564 * t + .3575761 * r + .1804375 * (n = tO(n))) / tA.Xn), tI((.2126729 * t + .7151522 * r + .072175 * n) / tA.Yn), tI((.0193339 * t + .119192 * r + .9503041 * n) / tA.Zn)]
+      return t = tI(t), r = tI(r), [tO((.4124564 * t + .3575761 * r + .1804375 * (n = tI(n))) / tA.Xn), tO((.2126729 * t + .7151522 * r + .072175 * n) / tA.Yn), tO((.0193339 * t + .119192 * r + .9503041 * n) / tA.Zn)]
     },
     tL = function() {
       for (var t = [], r = arguments.length; r--;) t[r] = arguments[r];
@@ -761,12 +761,12 @@ t = n.nmd(t), n("854508"), n("70102"), n("424973"), n("808653"), n("222007"), e 
       if (!r.length && "string" === t4(t) && t3[t.toLowerCase()]) return "named"
     }
   });
-  var t6 = a.unpack,
-    t7 = a.type,
+  var t7 = a.unpack,
+    t6 = a.type,
     t9 = a.type,
     t8 = function() {
       for (var t = [], r = arguments.length; r--;) t[r] = arguments[r];
-      var n = t6(t, "rgb");
+      var n = t7(t, "rgb");
       return (n[0] << 16) + (n[1] << 8) + n[2]
     };
   h.prototype.num = function() {
@@ -775,7 +775,7 @@ t = n.nmd(t), n("854508"), n("70102"), n("424973"), n("808653"), n("222007"), e 
     for (var t = [], r = arguments.length; r--;) t[r] = arguments[r];
     return new(Function.prototype.bind.apply(h, [null].concat(t, ["num"])))
   }, f.format.num = function(t) {
-    if ("number" == t7(t) && t >= 0 && t <= 16777215) return [t >> 16, t >> 8 & 255, 255 & t, 1];
+    if ("number" == t6(t) && t >= 0 && t <= 16777215) return [t >> 16, t >> 8 & 255, 255 & t, 1];
     throw Error("unknown num color: " + t)
   }, f.autodetect.push({
     p: 5,
@@ -952,12 +952,12 @@ t = n.nmd(t), n("854508"), n("70102"), n("424973"), n("808653"), n("222007"), e 
         i = (r > t ? e(new h([0, 0, 0]), this) : e(this, new h([255, 255, 255]))).rgb();
       return new h(i.concat([this._rgb[3]]))
     }
-    return rO.apply(void 0, this._rgb.slice(0, 3))
+    return rI.apply(void 0, this._rgb.slice(0, 3))
   };
-  var rO = function(t, r, n) {
-      return t = rI(t), r = rI(r), .2126 * t + .7152 * r + .0722 * (n = rI(n))
+  var rI = function(t, r, n) {
+      return t = rO(t), r = rO(r), .2126 * t + .7152 * r + .0722 * (n = rO(n))
     },
-    rI = function(t) {
+    rO = function(t) {
       return (t /= 255) <= .03928 ? t / 12.92 : rM((t + .055) / 1.055, 2.4)
     },
     rN = {},
@@ -1332,7 +1332,7 @@ t = n.nmd(t), n("854508"), n("70102"), n("424973"), n("808653"), n("222007"), e 
   })), rX.burn = rQ(r0(function(t, r) {
     return 255 * (1 - (1 - r / 255) / (t / 255))
   }));
-  for (var r1 = a.type, r2 = a.clip_rgb, r5 = a.TWOPI, r3 = Math.pow, r4 = Math.sin, r6 = Math.cos, r7 = Math.floor, r9 = Math.random, r8 = Math.log, nt = Math.pow, nr = Math.floor, nn = Math.abs, ne = function(t, r) {
+  for (var r1 = a.type, r2 = a.clip_rgb, r5 = a.TWOPI, r3 = Math.pow, r4 = Math.sin, r7 = Math.cos, r6 = Math.floor, r9 = Math.random, r8 = Math.log, nt = Math.pow, nr = Math.floor, nn = Math.abs, ne = function(t, r) {
       void 0 === r && (r = null);
       var n = {
         min: Number.MAX_VALUE,
@@ -1390,9 +1390,9 @@ t = n.nmd(t), n("854508"), n("70102"), n("424973"), n("808653"), n("222007"), e 
         for (k.push(i); _;) {
           for (var R = 0; R < n; R++) m[R] = 0;
           for (var x = 0; x < y; x++) {
-            for (var A = u[x], S = Number.MAX_VALUE, M = void 0, O = 0; O < n; O++) {
-              var I = nn(k[O] - A);
-              I < S && (S = I, M = O), m[M]++, b[x] = M
+            for (var A = u[x], S = Number.MAX_VALUE, M = void 0, I = 0; I < n; I++) {
+              var O = nn(k[I] - A);
+              O < S && (S = O, M = I), m[M]++, b[x] = M
             }
           }
           for (var N = Array(n), L = 0; L < n; L++) N[L] = null;
@@ -1511,7 +1511,7 @@ t = n.nmd(t), n("854508"), n("70102"), n("424973"), n("808653"), n("222007"), e 
       var f = r5 * ((t + 120) / 360 + r * a),
         c = r3(i[0] + o * a, e),
         s = (0 !== u ? n[0] + a * u : n) * c * (1 - c) / 2,
-        l = r6(f),
+        l = r7(f),
         h = r4(f);
       return p(r2([255 * (c + s * (-.14861 * l + 1.78277 * h)), 255 * (c + s * (-.29227 * l - .90649 * h)), 255 * (c + s * (1.97294 * l)), 1]))
     };
@@ -1529,7 +1529,7 @@ t = n.nmd(t), n("854508"), n("70102"), n("424973"), n("808653"), n("222007"), e 
       return p.scale(a)
     }, a.hue(n), a
   }, p.mix = p.interpolate = rj, p.random = function() {
-    for (var t = "#", r = 0; r < 6; r++) t += "0123456789abcdef".charAt(r7(16 * r9()));
+    for (var t = "#", r = 0; r < 6; r++) t += "0123456789abcdef".charAt(r6(16 * r9()));
     return new h(t, "hex")
   }, p.scale = rV, p.analyze = no.analyze, p.contrast = function(t, r) {
     t = new h(t), r = new h(r);
@@ -1566,16 +1566,16 @@ t = n.nmd(t), n("854508"), n("70102"), n("424973"), n("808653"), n("222007"), e 
       A = R >= 0 ? R : R + 360,
       S = x >= 0 ? x : x + 360,
       M = nl(A - S) > 180 ? (A + S + 360) / 2 : (A + S) / 2,
-      O = 1 - .17 * nh(u(M - 30)) + .24 * nh(u(2 * M)) + .32 * nh(u(3 * M + 6)) - .2 * nh(u(4 * M - 63)),
-      I = S - A;
-    I = 180 >= nl(I) ? I : S <= A ? I + 360 : I - 360, I = 2 * nu(w * k) * np(u(I) / 2);
+      I = 1 - .17 * nh(u(M - 30)) + .24 * nh(u(2 * M)) + .32 * nh(u(3 * M + 6)) - .2 * nh(u(4 * M - 63)),
+      O = S - A;
+    O = 180 >= nl(O) ? O : S <= A ? O + 360 : O - 360, O = 2 * nu(w * k) * np(u(O) / 2);
     var N = k - w,
       L = 1 + .015 * na(d - 50, 2) / nu(20 + na(d - 50, 2)),
       j = 1 + .045 * E,
-      P = 1 + .015 * E * O,
+      P = 1 + .015 * E * I,
       U = 30 * nv(-na((M - 275) / 25, 2)),
       q = -(2 * nu(na(E, 7) / (na(E, 7) + na(25, 7)))) * np(2 * u(U));
-    return nc(0, nf(100, nu(na((p - f) / (n * L), 2) + na(N / (e * j), 2) + na(I / (i * P), 2) + q * (N / (e * j)) * (I / (i * P)))))
+    return nc(0, nf(100, nu(na((p - f) / (n * L), 2) + na(N / (e * j), 2) + na(O / (i * P), 2) + q * (N / (e * j)) * (O / (i * P)))))
   }, p.distance = function(t, r, n) {
     void 0 === n && (n = "lab"), t = new h(t), r = new h(r);
     var e = t.get(n),

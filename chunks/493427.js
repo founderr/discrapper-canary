@@ -10,8 +10,8 @@ var r = function() {
     if ("string" == typeof t || "number" == typeof t) a += t;
     else if ("object" == typeof t) {
       if (Array.isArray(t)) {
-        var o = t.length;
-        for (n = 0; n < o; n++) t[n] && (r = e(t[n])) && (a && (a += " "), a += r)
+        var i = t.length;
+        for (n = 0; n < i; n++) t[n] && (r = e(t[n])) && (a && (a += " "), a += r)
       } else
         for (r in t) t[r] && (a && (a += " "), a += r)
     }

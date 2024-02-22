@@ -19,15 +19,15 @@ function s(e, t) {
     d = n.flipVariations,
     f = n.allowedAutoPlacements,
     p = void 0 === f ? a.placements : f,
-    m = (0, r.default)(s),
-    h = m ? d ? a.variationPlacements : a.variationPlacements.filter(function(e) {
-      return (0, r.default)(e) === m
+    h = (0, r.default)(s),
+    m = h ? d ? a.variationPlacements : a.variationPlacements.filter(function(e) {
+      return (0, r.default)(e) === h
     }) : a.basePlacements,
-    _ = h.filter(function(e) {
+    y = m.filter(function(e) {
       return p.indexOf(e) >= 0
     });
-  0 === _.length && (_ = h);
-  var y = _.reduce(function(t, n) {
+  0 === y.length && (y = m);
+  var _ = y.reduce(function(t, n) {
     return t[n] = (0, o.default)(e, {
       placement: n,
       boundary: u,
@@ -35,7 +35,7 @@ function s(e, t) {
       padding: c
     })[(0, i.default)(n)], t
   }, {});
-  return Object.keys(y).sort(function(e, t) {
-    return y[e] - y[t]
+  return Object.keys(_).sort(function(e, t) {
+    return _[e] - _[t]
   })
 }

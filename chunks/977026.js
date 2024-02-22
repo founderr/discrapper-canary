@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return eS
+    return eg
   }
 }), n("222007");
 var l = n("37983"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("338677"),
   p = n("76393"),
   E = n("479788"),
-  S = n("398604"),
-  g = n("109526"),
+  g = n("398604"),
+  S = n("109526"),
   C = n("487984"),
   _ = n("817963"),
   I = n("999180"),
@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("293137"),
   F = n("381546"),
   k = n("293499"),
-  V = n("277174"),
-  B = n("711486"),
+  B = n("277174"),
+  V = n("711486"),
   H = n("394640"),
   G = n("343571"),
   W = n("751661"),
@@ -85,7 +85,7 @@ function eu(e) {
   return (0, l.jsx)(R.CenterControlButton, {
     isActive: i,
     label: (t = i, n = u, t ? ei.default.Messages.AUDIENCE_LOWER_HAND : n ? ei.default.Messages.AUDIENCE_RAISE_HAND_CTA : ei.default.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
-    iconComponent: () => (0, l.jsx)(B.default, {
+    iconComponent: () => (0, l.jsx)(V.default, {
       className: i ? er.raisedHandButtonIconActive : er.raisedHandButtonIcon
     }),
     onClick: o,
@@ -120,7 +120,7 @@ function ec(e) {
     onClick: t,
     children: (0, l.jsxs)("div", {
       className: er.buttonWithTextInnerContainer,
-      children: [(0, l.jsx)(V.default, {
+      children: [(0, l.jsx)(B.default, {
         height: 24,
         width: 24,
         className: er.buttonWithTextIcon
@@ -139,9 +139,9 @@ function ef(e) {
     onSelect: n
   } = e, a = (0, d.useAppContext)(), {
     canManageGuildEvent: s
-  } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([Q.default], () => Q.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([S.default], () => S.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), {
+  } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([Q.default], () => Q.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([g.default], () => g.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), {
     suppress: h
-  } = (0, x.default)(t), m = y.default.getId(), [p] = (0, ea.default)(t), E = X.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), C = s(c);
+  } = (0, x.default)(t), m = y.default.getId(), [p] = (0, ea.default)(t), E = X.default.isModerator(m, t.id), S = (0, K.useCanModerateRequestToSpeak)(t.id), C = s(c);
   return f ? (E || C) && null != u ? (0, l.jsx)(o.Popout, {
     renderPopout: e => {
       let {
@@ -188,7 +188,7 @@ function ef(e) {
         popoutOpen: i
       })
     }
-  }) : h && !g || p ? (0, l.jsx)(o.Button, {
+  }) : h && !S || p ? (0, l.jsx)(o.Button, {
     size: o.Button.Sizes.MEDIUM,
     color: o.Button.Colors.RED,
     className: i(er.buttonSpacing, er.buttonWithTextButton),
@@ -305,14 +305,14 @@ let ep = a.memo(function(e) {
     selfMute: a,
     mute: s
   } = (0, x.default)(t), u = (0, K.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([p.default], () => null != p.default.getAwaitingRemoteSessionInfo()), {
-    cameraUnavailable: S,
-    enabled: g
+    cameraUnavailable: g,
+    enabled: S
   } = (0, I.default)(), C = (0, v.default)(t), {
     limit: _,
     reachedLimit: R
-  } = (0, T.default)(t), y = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), P = (0, r.useStateFromStores)([O.default], () => (0, E.default)(O.default)), U = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, V = R && !F || null != w && w.user.id !== (null == y ? void 0 : y.id);
+  } = (0, T.default)(t), y = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), P = (0, r.useStateFromStores)([O.default], () => (0, E.default)(O.default)), U = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, B = R && !F || null != w && w.user.id !== (null == y ? void 0 : y.id);
   if (null == y) return null;
-  let B = (0, l.jsxs)(l.Fragment, {
+  let V = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(o.Popout, {
       renderPopout: e => {
         let {
@@ -336,8 +336,8 @@ let ep = a.memo(function(e) {
         return (0, l.jsx)(L.default, {
           centerButton: !0,
           hasPermission: C,
-          enabled: g,
-          cameraUnavailable: S,
+          enabled: S,
+          cameraUnavailable: g,
           onChange: N.handleToggleVideo,
           onCameraUnavailable: A.default,
           channelLimitReached: R,
@@ -352,7 +352,7 @@ let ep = a.memo(function(e) {
       exitFullScreen: () => null,
       canGoLive: P,
       hasPermission: C,
-      disabled: V
+      disabled: B
     })]
   });
   return (0, l.jsxs)("div", {
@@ -363,7 +363,7 @@ let ep = a.memo(function(e) {
       channel: t
     }), U && !n ? (0, l.jsxs)("div", {
       className: i(er.avControls, er.buttonSpacing),
-      children: [k && _ > 0 && B, (0, l.jsx)(o.Popout, {
+      children: [k && _ > 0 && V, (0, l.jsx)(o.Popout, {
         renderPopout: e => {
           let {
             closePopout: t
@@ -420,7 +420,7 @@ function eE(e) {
     })]
   })
 }
-var eS = a.memo(function(e) {
+var eg = a.memo(function(e) {
   let {
     channel: t,
     isOnStartStageScreen: n
@@ -431,7 +431,7 @@ var eS = a.memo(function(e) {
     className: er.containerColumn,
     children: [(0, l.jsxs)("div", {
       className: er.eventPrompts,
-      children: [d ? (0, l.jsx)(g.default, {
+      children: [d ? (0, l.jsx)(S.default, {
         channelId: null == t ? void 0 : t.id
       }) : null, (0, l.jsx)("div", {
         className: er.separator

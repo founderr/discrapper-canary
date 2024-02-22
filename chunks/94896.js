@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 }), n("70102");
 var r = n("373589"),
   a = n("330762"),
-  o = n("679640");
+  i = n("679640");
 
-function i(e, t) {
+function o(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
@@ -32,7 +32,7 @@ var c = function() {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
     }(this, c), s(this, "hooks", (0, a.wrapConnectorHooks)({
       dropTarget: function(e, n) {
-        t.clearDropTarget(), t.dropTargetOptions = n, (0, o.isRef)(e) ? t.dropTargetRef = e : t.dropTargetNode = e, t.reconnect()
+        t.clearDropTarget(), t.dropTargetOptions = n, (0, i.isRef)(e) ? t.dropTargetRef = e : t.dropTargetNode = e, t.reconnect()
       }
     })), s(this, "handlerId", null), s(this, "dropTargetRef", null), s(this, "dropTargetNode", void 0), s(this, "dropTargetOptionsInternal", null), s(this, "unsubscribeDropTarget", void 0), s(this, "lastConnectedHandlerId", null), s(this, "lastConnectedDropTarget", null), s(this, "lastConnectedDropTargetOptions", null), s(this, "backend", void 0), this.backend = e
   }
@@ -98,5 +98,5 @@ var c = function() {
     value: function() {
       this.dropTargetRef = null, this.dropTargetNode = null
     }
-  }], i(e.prototype, t), n && i(e, n), c
+  }], o(e.prototype, t), n && o(e, n), c
 }()

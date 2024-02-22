@@ -67,8 +67,8 @@ class a {
     let t = Math.min(this.x, e.x),
       n = Math.min(this.y, e.y),
       r = Math.max(this.maxX, e.maxX) - t,
-      o = Math.max(this.maxY, e.maxY) - n;
-    return new a(t, n, r, o)
+      i = Math.max(this.maxY, e.maxY) - n;
+    return new a(t, n, r, i)
   }
   intersection(e) {
     if (!this.intersects(e)) return new a(0, 0, 0, 0);
@@ -83,6 +83,6 @@ class a {
     this.x = e, this.y = t, this.width = n, this.height = r
   }
 }
-let o = "undefined" != typeof window ? window.performance : null,
-  i = o && (o.now || o.webkitNow || o.msNow || o.mozNow);
-i && i.bind(o)
+let i = "undefined" != typeof window ? window.performance : null,
+  o = i && (i.now || i.webkitNow || i.msNow || i.mozNow);
+o && o.bind(i)

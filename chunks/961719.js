@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   useConnectDragPreview: function() {
-    return o
+    return i
   }
 });
 var r = n("884691");
@@ -15,7 +15,7 @@ function a(e) {
   }, [e])
 }
 
-function o(e) {
+function i(e) {
   return (0, r.useMemo)(function() {
     return e.hooks.dragPreview()
   }, [e])

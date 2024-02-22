@@ -1,7 +1,7 @@
 "use strict";
 A.r(t), A.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var a = A("37983");
@@ -49,7 +49,7 @@ function h(e) {
   })
 }
 
-function m(e) {
+function p(e) {
   let {
     onShowFullDescription: t,
     variant: A
@@ -77,7 +77,7 @@ function m(e) {
   })
 }
 
-function p(e) {
+function m(e) {
   let {
     imageUrl: t,
     name: A,
@@ -85,7 +85,7 @@ function p(e) {
     formattedPrice: i,
     role: u,
     ctaComponent: c,
-    shouldShowFullDescriptionButton: p = !0,
+    shouldShowFullDescriptionButton: m = !0,
     onShowFullDescription: T,
     productType: v,
     onTapCard: U,
@@ -127,7 +127,7 @@ function p(e) {
             lineClamp: N,
             text: l
           })
-        }), p && (0, a.jsx)(m, {
+        }), m && (0, a.jsx)(p, {
           onShowFullDescription: T,
           variant: O
         }), x || null == u || "" === u.name ? null : (0, a.jsxs)(a.Fragment, {

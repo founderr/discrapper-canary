@@ -11,7 +11,7 @@ if (o) try {
 }
 var i = a("%SyntaxError%"),
   s = a("%TypeError%"),
-  c = n("293471");
+  u = n("293471");
 e.exports = function(e, t, n) {
   if (!e || "object" != typeof e && "function" != typeof e) throw new s("`obj` must be an object or a function`");
   if ("string" != typeof t && "symbol" != typeof t) throw new s("`property` must be a string or a symbol`");
@@ -22,14 +22,14 @@ e.exports = function(e, t, n) {
   var r = arguments.length > 3 ? arguments[3] : null,
     a = arguments.length > 4 ? arguments[4] : null,
     l = arguments.length > 5 ? arguments[5] : null,
-    u = arguments.length > 6 && arguments[6],
-    d = !!c && c(e, t);
+    c = arguments.length > 6 && arguments[6],
+    d = !!u && u(e, t);
   if (o) o(e, t, {
     configurable: null === l && d ? d.configurable : !l,
     enumerable: null === r && d ? d.enumerable : !r,
     value: n,
     writable: null === a && d ? d.writable : !a
   });
-  else if (!u && (r || a || l)) throw new i("This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.");
+  else if (!c && (r || a || l)) throw new i("This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.");
   else e[t] = n
 }

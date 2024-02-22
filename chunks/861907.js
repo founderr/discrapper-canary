@@ -11,28 +11,28 @@ function r(e) {
       }
     },
     a = () => t,
-    o = function(e) {
+    i = function(e) {
       let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a,
-        o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Object.is;
+        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Object.is;
       console.warn("[DEPRECATED] Please use `subscribeWithSelector` middleware");
-      let i = r(t);
+      let o = r(t);
 
       function s() {
         let n = r(t);
-        if (!o(i, n)) {
-          let t = i;
-          e(i = n, t)
+        if (!i(o, n)) {
+          let t = o;
+          e(o = n, t)
         }
       }
       return n.add(s), () => n.delete(s)
     },
-    i = {
+    o = {
       setState: r,
       getState: a,
-      subscribe: (e, t, r) => t || r ? o(e, t, r) : (n.add(e), () => n.delete(e)),
+      subscribe: (e, t, r) => t || r ? i(e, t, r) : (n.add(e), () => n.delete(e)),
       destroy: () => n.clear()
     };
-  return t = e(r, a, i), i
+  return t = e(r, a, o), o
 }
 n.r(t), n.d(t, {
   default: function() {

@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("77078"),
   p = n("913144"),
   E = n("561288"),
-  S = n("450911"),
-  g = n("630086"),
+  g = n("450911"),
+  S = n("630086"),
   C = n("970728"),
   _ = n("369008"),
   I = n("736964"),
@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("27618"),
   F = n("102985"),
   k = n("697218"),
-  V = n("145131"),
-  B = n("476765"),
+  B = n("145131"),
+  V = n("476765"),
   H = n("570443"),
   G = n("76539"),
   W = n("664336"),
@@ -58,18 +58,18 @@ var l = n("37983"),
   ee = n("366160"),
   et = n("182893"),
   en = n("890957");
-let el = (0, B.uid)(),
-  ea = (0, B.uid)();
+let el = (0, V.uid)(),
+  ea = (0, V.uid)();
 
 function es(e) {
   let {
     className: t,
     children: n
   } = e;
-  return (0, l.jsxs)(V.default, {
-    align: V.default.Align.CENTER,
-    justify: V.default.Justify.CENTER,
-    direction: V.default.Direction.VERTICAL,
+  return (0, l.jsxs)(B.default, {
+    align: B.default.Align.CENTER,
+    justify: B.default.Justify.CENTER,
+    direction: B.default.Direction.VERTICAL,
     className: i(ee.errorState, t),
     children: [(0, l.jsx)("div", {
       className: i(ee.errorStateIcon, en.marginBottom20)
@@ -267,7 +267,7 @@ class eo extends a.PureComponent {
     return r.forEach(e => {
       let t = k.default.getUser(e);
       null != t && o.push(X.default.getName(t))
-    }), (0, l.jsxs)(V.default, {
+    }), (0, l.jsxs)(B.default, {
       className: i(ee.searchBar, en.marginTop20),
       children: [(0, l.jsx)(v.default, {
         ref: this.searchBarRef,
@@ -297,8 +297,8 @@ class eo extends a.PureComponent {
     let e = null != this.scrollerRef.current && this.state.separator,
       t = this.isNotFriends() ? $.default.Messages.GROUP_DM_ADD_FRIENDS : $.default.Messages.GROUP_DM_HEADER;
     return (0, l.jsxs)(m.ModalHeader, {
-      direction: V.default.Direction.VERTICAL,
-      align: V.default.Align.STRETCH,
+      direction: B.default.Direction.VERTICAL,
+      align: B.default.Align.STRETCH,
       className: ee.header,
       separator: e,
       children: [c.isMobile ? this.renderMobileCloseButton() : null, (0, l.jsx)(m.Heading, {
@@ -399,12 +399,12 @@ class eo extends a.PureComponent {
         tag: "h5",
         className: en.marginBottom8,
         children: $.default.Messages.GROUP_DM_INVITE_LINK_TITLE
-      }), (0, l.jsxs)(V.default, {
+      }), (0, l.jsxs)(B.default, {
         className: i(et.input, {
           [et.success]: s
         }),
-        justify: V.default.Justify.BETWEEN,
-        align: V.default.Align.CENTER,
+        justify: B.default.Justify.BETWEEN,
+        align: B.default.Align.CENTER,
         children: [r.length > 0 ? (0, l.jsx)(m.TextInput, {
           className: ee.copyInput,
           name: "invite",
@@ -454,8 +454,8 @@ class eo extends a.PureComponent {
     if (null != n) return (0, l.jsxs)(a.Fragment, {
       children: [(0, l.jsx)("div", {
         className: ee.footerSeparator
-      }), (0, l.jsx)(V.default, {
-        direction: V.default.Direction.VERTICAL,
+      }), (0, l.jsx)(B.default, {
+        direction: B.default.Direction.VERTICAL,
         className: ee.footer,
         children: n
       })]
@@ -578,17 +578,17 @@ class eo extends a.PureComponent {
       } = this.props, a = !t.has(e);
       a ? (_.default.addUser(e), n.length > 0 && _.default.clear(null == l ? void 0 : l.id)) : _.default.removeUser(e), this.forceFocus()
     }, this.handleAddFriendNavigation = () => {
-      (0, L.transitionTo)(J.Routes.FRIENDS), g.default.setSection(J.FriendsSections.ADD_FRIEND), this.props.onClose()
+      (0, L.transitionTo)(J.Routes.FRIENDS), S.default.setSection(J.FriendsSections.ADD_FRIEND), this.props.onClose()
     }, this.handleScroll = () => {
       let e = this.scrollerRef.current;
       null != e && this.setState({
         separator: !e.isScrolledToTop()
       })
     }, this.createNewDM = e => {
-      S.default.openPrivateChannel(e, !1, !1, "New Group DM")
+      g.default.openPrivateChannel(e, !1, !1, "New Group DM")
     }, this.pushToExistingDM = (e, t) => {
       let n = D.default.getChannelId() === e.id;
-      S.default.addRecipients(e.id, t, J.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(l => {
+      g.default.addRecipients(e.id, t, J.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(l => {
         if (n) {
           if (e.isDM() && l !== e.id) {
             E.default.call(l, !1, !0);

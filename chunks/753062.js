@@ -26,8 +26,8 @@ var e = n("859514"),
   A = n("579697"),
   S = n("79807"),
   M = n("174669"),
-  O = n("492470"),
-  I = M("iterator"),
+  I = n("492470"),
+  O = M("iterator"),
   N = "URLSearchParams",
   L = N + "Iterator",
   j = v.set,
@@ -202,7 +202,7 @@ if (l(tc, {
     },
     sort: function() {
       var t = P(this);
-      O(t.entries, function(t, r) {
+      I(t.entries, function(t, r) {
         return t.key > r.key ? 1 : -1
       }), t.updateURL()
     },
@@ -220,7 +220,7 @@ if (l(tc, {
     }
   }, {
     enumerable: !0
-  }), c(tc, I, tc.entries, {
+  }), c(tc, O, tc.entries, {
     name: "entries"
   }), c(tc, "toString", function() {
     return P(this).serialize()

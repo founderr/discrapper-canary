@@ -9,8 +9,8 @@ s("884691");
 var l = s("414456"),
   o = s.n(l),
   r = s("170861"),
-  i = s("274456"),
-  a = s("193919");
+  a = s("274456"),
+  i = s("193919");
 
 function u(e) {
   let {
@@ -22,7 +22,7 @@ function u(e) {
     children: (0, n.jsxs)("div", {
       className: r.innerContainer,
       children: [(0, n.jsx)("img", {
-        src: a,
+        src: i,
         alt: "",
         className: r.star
       }), (0, n.jsx)("div", {
@@ -32,7 +32,7 @@ function u(e) {
           height: 40
         })
       }), (0, n.jsx)("img", {
-        src: i,
+        src: a,
         alt: "",
         className: r.sparkle
       })]
