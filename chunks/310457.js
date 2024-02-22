@@ -1,35 +1,35 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var i = n("37983");
 n("884691");
 var r = n("446674"),
-  l = n("77078"),
-  s = n("679653"),
+  s = n("77078"),
+  l = n("679653"),
   a = n("42203"),
-  u = n("782340");
+  o = n("782340");
 
-function o(e) {
+function u(e) {
   let {
     onConfirm: t,
     onCancel: n,
-    channelId: o
-  } = e, c = (0, r.useStateFromStores)([a.default], () => null != o ? a.default.getChannel(o) : null), d = (0, s.default)(c, !0);
-  return (0, i.jsx)(l.DeclarativeConfirmModal, {
+    channelId: u
+  } = e, c = (0, r.useStateFromStores)([a.default], () => null != u ? a.default.getChannel(u) : null), d = (0, l.default)(c, !0);
+  return (0, i.jsx)(s.DeclarativeConfirmModal, {
     dismissable: !0,
-    header: u.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_TITLE,
-    confirmText: u.default.Messages.REMOVE,
-    cancelText: u.default.Messages.CANCEL,
+    header: o.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_TITLE,
+    confirmText: o.default.Messages.REMOVE,
+    cancelText: o.default.Messages.CANCEL,
     onConfirm: t,
     onCancel: n,
-    children: (0, i.jsx)(l.Text, {
+    children: (0, i.jsx)(s.Text, {
       variant: "text-sm/normal",
-      children: null != c ? u.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY.format({
+      children: null != c ? o.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY.format({
         channelName: d
-      }) : u.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY_GENERIC
+      }) : o.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY_GENERIC
     })
   })
 }

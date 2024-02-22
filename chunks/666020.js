@@ -1,88 +1,88 @@
 "use strict";
-n.r(e), n.d(e, {
+i.r(t), i.d(t, {
   subscribeMembers: function() {
-    return r
-  },
-  unsubscribeMembers: function() {
-    return a
-  },
-  subscribeToMemberUpdates: function() {
-    return d
-  },
-  unsubscribeFromMemberUpdates: function() {
     return l
   },
-  subscribeChannel: function() {
+  unsubscribeMembers: function() {
+    return u
+  },
+  subscribeToMemberUpdates: function() {
     return o
   },
-  subscribeChannelDimensions: function() {
+  unsubscribeFromMemberUpdates: function() {
     return s
+  },
+  subscribeChannel: function() {
+    return a
+  },
+  subscribeChannelDimensions: function() {
+    return d
   }
-}), n("424973");
-var i = n("913144"),
-  u = n("696605");
+}), i("424973");
+var n = i("913144"),
+  r = i("696605");
 
-function r(t, e) {
-  i.default.dispatch({
+function l(e, t) {
+  n.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD",
-    guildId: t,
-    userIds: e
-  })
-}
-
-function a(t, e) {
-  i.default.dispatch({
-    type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE",
-    guildId: t,
-    userIds: e
-  })
-}
-
-function d(t) {
-  i.default.dispatch({
-    type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES",
-    guildId: t
-  })
-}
-
-function l(t) {
-  i.default.dispatch({
-    type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES",
-    guildId: t
-  })
-}
-
-function o(t, e, n) {
-  i.default.dispatch({
-    type: "GUILD_SUBSCRIPTIONS_CHANNEL",
-    guildId: t,
-    channelId: e,
-    ranges: n
-  })
-}
-
-function s(t) {
-  let {
     guildId: e,
-    channelId: n,
-    y: i,
-    height: r,
-    rowHeight: a
-  } = t;
+    userIds: t
+  })
+}
 
-  function d(t) {
-    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return Math.max(0, Math.ceil(Math.ceil(t / a)) + e)
-  }
-  let l = [];
+function u(e, t) {
+  n.default.dispatch({
+    type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE",
+    guildId: e,
+    userIds: t
+  })
+}
 
-  function s(t) {
-    let e = t + (u.MINIMUM_RANGE - 1);
-    return l.push([t, e]), e + 1
+function o(e) {
+  n.default.dispatch({
+    type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES",
+    guildId: e
+  })
+}
+
+function s(e) {
+  n.default.dispatch({
+    type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES",
+    guildId: e
+  })
+}
+
+function a(e, t, i) {
+  n.default.dispatch({
+    type: "GUILD_SUBSCRIPTIONS_CHANNEL",
+    guildId: e,
+    channelId: t,
+    ranges: i
+  })
+}
+
+function d(e) {
+  let {
+    guildId: t,
+    channelId: i,
+    y: n,
+    height: l,
+    rowHeight: u
+  } = e;
+
+  function o(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+    return Math.max(0, Math.ceil(Math.ceil(e / u)) + t)
   }
-  let I = d(.5 * r),
-    E = d(i, -I),
-    c = d(i + r, I);
-  for (E > 0 && (E = Math.max(s(0), E)), E = Math.floor(E / u.MINIMUM_RANGE) * u.MINIMUM_RANGE; E <= c;) E = s(E);
-  o(e, n, l)
+  let s = [];
+
+  function d(e) {
+    let t = e + (r.MINIMUM_RANGE - 1);
+    return s.push([e, t]), t + 1
+  }
+  let f = o(.5 * l),
+    c = o(n, -f),
+    h = o(n + l, f);
+  for (c > 0 && (c = Math.max(d(0), c)), c = Math.floor(c / r.MINIMUM_RANGE) * r.MINIMUM_RANGE; c <= h;) c = d(c);
+  a(t, i, s)
 }

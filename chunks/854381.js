@@ -1,19 +1,19 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return l
+    return s
   }
 });
 var a = r("446674"),
   n = r("10514"),
   u = r("713518"),
   i = r("646718"),
-  s = r("843455");
+  l = r("843455");
 
-function l(e) {
+function s(e) {
   var t, r;
   let {
-    activeSubscription: l,
+    activeSubscription: s,
     skuIDs: o,
     paymentSourceId: c,
     isGift: d
@@ -23,10 +23,10 @@ function l(e) {
       let e = n.default.getPlanIdsForSkus(o).filter(e => !d || i.PREMIUM_PLANS.has(e));
       return e.length > 0 ? n.default.get(e[0]) : null
     }),
-    m = null == f ? [] : (0, u.getCurrencies)(f.id, c, d),
-    p = null !== (r = null !== (t = m.find(e => e === (null == l ? void 0 : l.currency))) && void 0 !== t ? t : m[0]) && void 0 !== r ? r : s.CurrencyCodes.USD;
+    E = null == f ? [] : (0, u.getCurrencies)(f.id, c, d),
+    m = null !== (r = null !== (t = E.find(e => e === (null == s ? void 0 : s.currency))) && void 0 !== t ? t : E[0]) && void 0 !== r ? r : l.CurrencyCodes.USD;
   return {
-    ...(0, u.useCurrencyWithPaymentSourceChange)(p, null == f ? void 0 : f.id, c, d, o),
-    currencies: m
+    ...(0, u.useCurrencyWithPaymentSourceChange)(m, null == f ? void 0 : f.id, c, d, o),
+    currencies: E
   }
 }

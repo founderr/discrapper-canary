@@ -6,30 +6,30 @@ n.r(t), n.d(t, {
 }), n("222007");
 var i = n("37983"),
   r = n("884691"),
-  l = n("133403"),
-  s = n("164527");
+  s = n("133403"),
+  l = n("164527");
 
 function a(e) {
   let {
     hasSetEmoji: t,
     onClick: n,
     children: a
-  } = e, [u, o] = r.useState(!1);
+  } = e, [o, u] = r.useState(!1);
   return (0, i.jsxs)("div", {
-    className: s.container,
+    className: l.container,
     onMouseEnter: () => {
       if (t) {
-        o(!0);
+        u(!0);
         return
       }
-      o(!1)
+      u(!1)
     },
     onMouseLeave: () => {
-      o(!1)
+      u(!1)
     },
-    children: [a, t && u && (0, i.jsx)(l.default, {
+    children: [a, t && o && (0, i.jsx)(s.default, {
       onClick: n,
-      className: s.removeButton
+      className: l.removeButton
     })]
   })
 }

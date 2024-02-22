@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return r
   }
 });
 var i = n("913144"),
@@ -11,7 +11,7 @@ var i = n("913144"),
   u = n("341329"),
   d = n("582713"),
   s = n("724210"),
-  E = {
+  r = {
     openPrivateChannelAsSidebar(e) {
       let {
         channelId: t,
@@ -42,7 +42,7 @@ var i = n("913144"),
         channelId: n,
         baseChannelId: a,
         flash: s = !0,
-        details: E
+        details: r
       } = e;
       i.default.dispatch({
         type: "SIDEBAR_VIEW_CHANNEL",
@@ -50,12 +50,12 @@ var i = n("913144"),
         guildId: t,
         baseChannelId: a,
         channelId: n,
-        details: E
+        details: r
       });
-      let r = null == E ? void 0 : E.initialMessageId;
-      null != r ? o.default.jumpToMessage({
+      let E = null == r ? void 0 : r.initialMessageId;
+      null != E ? o.default.jumpToMessage({
         channelId: n,
-        messageId: r,
+        messageId: E,
         flash: s,
         jumpType: l.JumpTypes.INSTANT
       }) : u.default.fetchMessages({
@@ -82,17 +82,17 @@ var i = n("913144"),
         baseChannelId: n,
         channelId: a,
         flash: s = !0,
-        details: E
+        details: r
       } = e;
       i.default.dispatch({
         type: "SIDEBAR_VIEW_CHANNEL",
         sidebarType: d.SidebarType.VIEW_THREAD,
         baseChannelId: n,
         channelId: a,
-        details: E
-      }), (null == E ? void 0 : E.initialMessageId) != null ? o.default.jumpToMessage({
+        details: r
+      }), (null == r ? void 0 : r.initialMessageId) != null ? o.default.jumpToMessage({
         channelId: a,
-        messageId: E.initialMessageId,
+        messageId: r.initialMessageId,
         flash: s,
         jumpType: l.JumpTypes.INSTANT
       }) : u.default.fetchMessages({

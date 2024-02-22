@@ -1,63 +1,63 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return _
+    return M
   }
 }), n("424973");
-var i = n("37983"),
-  u = n("884691"),
-  r = n("446674"),
-  a = n("77078"),
-  d = n("713841"),
-  l = n("79112"),
-  o = n("988721"),
-  s = n("592407"),
-  I = n("305961"),
-  E = n("957255"),
-  c = n("49111"),
-  T = n("782340");
+var a = n("37983"),
+  i = n("884691"),
+  l = n("446674"),
+  s = n("77078"),
+  u = n("713841"),
+  r = n("79112"),
+  d = n("988721"),
+  o = n("592407"),
+  c = n("305961"),
+  f = n("957255"),
+  E = n("49111"),
+  m = n("782340");
 
-function _(t) {
+function M(e) {
   let {
-    user: e,
+    user: t,
     guildId: n,
-    channel: _,
-    context: S
-  } = t, f = I.default.getGuild(n), N = (0, r.useStateFromStores)([E.default], () => null != f ? E.default.can(c.Permissions.MANAGE_GUILD, f) : null), p = (0, o.useContextIndexState)(_, !0, !0), G = (0, o.useUserIndexState)(!0, !0), {
-    isUserApp: A,
-    isGuildApp: D
-  } = u.useMemo(() => {
-    var t, n, i, u;
-    if ((null == e ? void 0 : e.id) == null) return {
+    channel: M,
+    context: g
+  } = e, p = c.default.getGuild(n), I = (0, l.useStateFromStores)([f.default], () => null != p ? f.default.can(E.Permissions.MANAGE_GUILD, p) : null), S = (0, d.useContextIndexState)(M, !0, !0), v = (0, d.useUserIndexState)(!0, !0), {
+    isUserApp: h,
+    isGuildApp: A
+  } = i.useMemo(() => {
+    var e, n, a, i;
+    if ((null == t ? void 0 : t.id) == null) return {
       isGuildApp: !1,
       isUserApp: !1
     };
-    let r = Object.values(null !== (i = null === (t = p.result) || void 0 === t ? void 0 : t.sections) && void 0 !== i ? i : {}),
-      a = Object.values(null !== (u = null === (n = G.result) || void 0 === n ? void 0 : n.sections) && void 0 !== u ? u : {});
+    let l = Object.values(null !== (a = null === (e = S.result) || void 0 === e ? void 0 : e.sections) && void 0 !== a ? a : {}),
+      s = Object.values(null !== (i = null === (n = v.result) || void 0 === n ? void 0 : n.sections) && void 0 !== i ? i : {});
     return {
-      isGuildApp: r.some(t => {
+      isGuildApp: l.some(e => {
         var n;
-        return (null === (n = t.descriptor.application) || void 0 === n ? void 0 : n.id) === (null == e ? void 0 : e.id)
+        return (null === (n = e.descriptor.application) || void 0 === n ? void 0 : n.id) === (null == t ? void 0 : t.id)
       }),
-      isUserApp: a.some(t => {
+      isUserApp: s.some(e => {
         var n;
-        return (null === (n = t.descriptor.application) || void 0 === n ? void 0 : n.id) === (null == e ? void 0 : e.id)
+        return (null === (n = e.descriptor.application) || void 0 === n ? void 0 : n.id) === (null == t ? void 0 : t.id)
       })
     }
-  }, [p, G, null == e ? void 0 : e.id]), M = u.useCallback(() => {
-    (null == f ? void 0 : f.id) != null && (s.default.open(f.id, c.GuildSettingsSections.INTEGRATIONS), d.default.setSection(c.IntegrationSettingsSections.APPLICATION, null == e ? void 0 : e.id))
-  }, [null == e ? void 0 : e.id, null == f ? void 0 : f.id]), O = u.useCallback(() => {
-    l.default.open(c.UserSettingsSections.AUTHORIZED_APPS)
-  }, []), m = S === c.AppContext.POPOUT;
-  if (!(null == e ? void 0 : e.bot) || !N || m || !D && !A) return null;
-  let U = [];
-  return D && U.push((0, i.jsx)(a.MenuItem, {
+  }, [S, v, null == t ? void 0 : t.id]), _ = i.useCallback(() => {
+    (null == p ? void 0 : p.id) != null && (o.default.open(p.id, E.GuildSettingsSections.INTEGRATIONS), u.default.setSection(E.IntegrationSettingsSections.APPLICATION, null == t ? void 0 : t.id))
+  }, [null == t ? void 0 : t.id, null == p ? void 0 : p.id]), T = i.useCallback(() => {
+    r.default.open(E.UserSettingsSections.AUTHORIZED_APPS)
+  }, []), C = g === E.AppContext.POPOUT;
+  if (!(null == t ? void 0 : t.bot) || !I || C || !A && !h) return null;
+  let R = [];
+  return A && R.push((0, a.jsx)(s.MenuItem, {
     id: "manage-integration",
-    label: T.default.Messages.MANAGE_INTEGRATION,
-    action: M
-  }, "manage-integration")), A && U.push((0, i.jsx)(a.MenuItem, {
+    label: m.default.Messages.MANAGE_INTEGRATION,
+    action: _
+  }, "manage-integration")), h && R.push((0, a.jsx)(s.MenuItem, {
     id: "manage-authorized-app",
-    label: T.default.Messages.MANAGE_AUTHORIZED_APP,
-    action: O
-  }, "manage-authorized-app")), U
+    label: m.default.Messages.MANAGE_AUTHORIZED_APP,
+    action: T
+  }, "manage-authorized-app")), R
 }

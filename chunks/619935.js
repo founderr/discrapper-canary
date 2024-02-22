@@ -1,10 +1,10 @@
 "use strict";
 r.r(t), r.d(t, {
   useBlockedPaymentsConfig: function() {
-    return s
+    return l
   },
   default: function() {
-    return l
+    return s
   }
 });
 var a = r("862205"),
@@ -40,7 +40,7 @@ let u = (0, a.createExperiment)({
     }]
   });
 
-function s() {
+function l() {
   let {
     paymentsBlocked: e
   } = u.useExperiment({
@@ -58,4 +58,4 @@ function s() {
   } = (0, n.default)();
   return e || t && "RU" === r
 }
-var l = u
+var s = u

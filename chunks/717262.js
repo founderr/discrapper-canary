@@ -76,8 +76,8 @@ var A = e => {
     pendingBanner: _,
     pendingBio: I,
     pendingPronouns: A,
-    pendingGlobalName: N,
-    pendingAccentColor: T,
+    pendingGlobalName: T,
+    pendingAccentColor: N,
     pendingAvatarDecoration: P,
     pendingThemeColors: R
   } = (0, i.useStateFromStoresObject)([p.default], () => {
@@ -97,10 +97,10 @@ var A = e => {
     pendingBio: w,
     pendingPronouns: A,
     pendingAvatar: v,
-    pendingGlobalName: N,
+    pendingGlobalName: T,
     pendingAvatarDecoration: P,
     pendingThemeColors: R,
-    pendingAccentColor: T,
+    pendingAccentColor: N,
     pendingProfileEffectId: null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : null,
     hideFakeActivity: M,
     useLargeBanner: !0

@@ -12,13 +12,13 @@ var n = r("884691"),
       {
         id: l,
         preset: i,
-        increment: a,
-        decrement: s
+        increment: s,
+        decrement: a
       } = (0, o.default)(e);
     return n.useEffect(() => {
       if (!r) return;
       let e = e => {
-        "ArrowUp" === e.key && (a(), e.preventDefault()), "ArrowDown" === e.key && (s(), e.preventDefault()), "r" === e.key && (null == t || t(), e.preventDefault())
+        "ArrowUp" === e.key && (s(), e.preventDefault()), "ArrowDown" === e.key && (a(), e.preventDefault()), "r" === e.key && (null == t || t(), e.preventDefault())
       };
       return window.addEventListener("keydown", e), () => {
         window.removeEventListener("keydown", e)

@@ -1,10 +1,10 @@
 "use strict";
 r.r(t), r.d(t, {
   fetchUserEntitlementsForApplication: function() {
-    return s
+    return l
   },
   fetchUserEntitlements: function() {
-    return l
+    return s
   },
   fetchGiftableEntitlements: function() {
     return o
@@ -15,7 +15,7 @@ var a = r("872717"),
   u = r("271560"),
   i = r("49111");
 
-function s(e) {
+function l(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   return n.default.wait(() => {
     n.default.dispatch({
@@ -39,7 +39,7 @@ function s(e) {
     })
   })
 }
-async function l(e) {
+async function s(e) {
   let {
     withSku: t = !1,
     withApplication: r = !1,

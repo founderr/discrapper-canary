@@ -7,23 +7,23 @@ n.r(t), n.d(t, {
 var i = n("37983");
 n("884691");
 var r = n("469563"),
-  l = n("390300"),
-  u = n("75196"),
+  s = n("390300"),
+  l = n("75196"),
   a = (0, r.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: n = 24,
       color: r = "currentColor",
-      foreground: l,
+      foreground: s,
       ...a
     } = e;
     return (0, i.jsx)("svg", {
-      ...(0, u.default)(a),
+      ...(0, l.default)(a),
       width: t,
       height: n,
       viewBox: "0 0 24 24",
       children: (0, i.jsx)("path", {
-        className: l,
+        className: s,
         fill: r,
         fillRule: "evenodd",
         clipRule: "evenodd",
@@ -31,6 +31,6 @@ var r = n("469563"),
         "aria-hidden": !0
       })
     })
-  }, l.VoiceNormalIcon, void 0, {
+  }, s.VoiceNormalIcon, void 0, {
     size: 24
   })

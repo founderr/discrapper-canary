@@ -1,49 +1,49 @@
 "use strict";
-n.r(e), n.d(e, {
+i.r(e), i.d(e, {
   mentionUser: function() {
-    return T
+    return x
   },
   default: function() {
-    return _
+    return m
   }
-}), n("222007");
-var i = n("37983");
-n("884691");
-var u = n("446674"),
-  r = n("77078"),
-  a = n("352674"),
-  d = n("42203"),
-  l = n("957255"),
-  o = n("18494"),
-  s = n("659500"),
-  I = n("158998"),
-  E = n("49111"),
-  c = n("782340");
+}), i("222007");
+var l = i("37983");
+i("884691");
+var r = i("446674"),
+  n = i("77078"),
+  a = i("352674"),
+  s = i("42203"),
+  o = i("957255"),
+  d = i("18494"),
+  c = i("659500"),
+  h = i("158998"),
+  u = i("49111"),
+  f = i("782340");
 
-function T(t, e) {
+function x(t, e) {
   let {
-    id: n
-  } = t, i = "@".concat(I.default.getUserTag(t, {
+    id: i
+  } = t, l = "@".concat(h.default.getUserTag(t, {
     decoration: "never"
   }));
-  s.ComponentDispatch.dispatchToLastSubscribed(E.ComponentActions.INSERT_TEXT, {
-    plainText: i,
-    rawText: "<@".concat(n, ">")
+  c.ComponentDispatch.dispatchToLastSubscribed(u.ComponentActions.INSERT_TEXT, {
+    plainText: l,
+    rawText: "<@".concat(i, ">")
   }), null != e && a.default.startTyping(e)
 }
 
-function _(t, e, n) {
-  let [a, s] = (0, u.useStateFromStoresArray)([o.default, d.default, l.default], () => {
-    let t = o.default.getChannelId(e),
-      n = d.default.getChannel(t),
-      i = null != n && (n.isMultiUserDM() || l.default.can(E.Permissions.SEND_MESSAGES, n));
-    return [t, i]
-  }, [e]), I = n === E.AppContext.POPOUT;
-  return !s || I ? null : (0, i.jsx)(r.MenuItem, {
+function m(t, e, i) {
+  let [a, c] = (0, r.useStateFromStoresArray)([d.default, s.default, o.default], () => {
+    let t = d.default.getChannelId(e),
+      i = s.default.getChannel(t),
+      l = null != i && (i.isMultiUserDM() || o.default.can(u.Permissions.SEND_MESSAGES, i));
+    return [t, l]
+  }, [e]), h = i === u.AppContext.POPOUT;
+  return !c || h ? null : (0, l.jsx)(n.MenuItem, {
     id: "mention",
-    label: c.default.Messages.MENTION,
+    label: f.default.Messages.MENTION,
     action: function() {
-      T(t, a)
+      x(t, a)
     }
   })
 }

@@ -10,19 +10,19 @@ var n = r("884691"),
     let t = u.default.profileEffects,
       [r, o] = n.useState(e),
       [l, i] = n.useState(u.default.getProfileEffectById(e)),
-      a = t.reduce((t, r, n) => (r.id === e && (t = n), t), 0),
-      [, s] = n.useState(a),
-      c = n.useRef(a);
+      s = t.reduce((t, r, n) => (r.id === e && (t = n), t), 0),
+      [, a] = n.useState(s),
+      c = n.useRef(s);
     return n.useEffect(() => {
       o(e), i(u.default.getProfileEffectById(e))
     }, [e, t]), {
       increment: () => {
         let e = (c.current + 1) % t.length;
-        c.current = e, s(e), o(t[e].id), i(t[e])
+        c.current = e, a(e), o(t[e].id), i(t[e])
       },
       decrement: () => {
         let e = 0 === c.current ? t.length - 1 : c.current - 1;
-        c.current = e, s(e), o(t[e].id), i(t[e])
+        c.current = e, a(e), o(t[e].id), i(t[e])
       },
       id: r,
       preset: l

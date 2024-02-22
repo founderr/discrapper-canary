@@ -1,99 +1,99 @@
 "use strict";
-let i, r, l, s;
-n.r(e), n.d(e, {
+let i, r, s, l;
+n.r(t), n.d(t, {
   default: function() {
-    return T
+    return C
   }
 });
-var u = n("748820"),
-  a = n("446674"),
-  o = n("913144"),
+var a = n("748820"),
+  o = n("446674"),
+  u = n("913144"),
   c = n("724210"),
   d = n("515631");
-let E = {};
+let f = {};
 
-function f(t) {
+function h(e) {
   return {
-    guildId: t,
-    sessionId: (0, u.v4)()
+    guildId: e,
+    sessionId: (0, a.v4)()
   }
 }
 
-function _(t) {
-  null != l && l.guildId === t ? (r = l, l = void 0) : r = f(t)
+function E(e) {
+  null != s && s.guildId === e ? (r = s, s = void 0) : r = h(e)
 }
-class I extends a.default.Store {
-  getSavedScrollPosition(t) {
-    return E[t]
+class p extends o.default.Store {
+  getSavedScrollPosition(e) {
+    return f[e]
   }
-  getHomeSessionId(t) {
-    return null != r && r.guildId === t ? r.sessionId : null != l && l.guildId === t ? l.sessionId : void 0
+  getHomeSessionId(e) {
+    return null != r && r.guildId === e ? r.sessionId : null != s && s.guildId === e ? s.sessionId : void 0
   }
-  getHomeSessionSource(t) {
-    return null != s && s.guildId === t ? s.source : d.GuildHomeLandingSource.ORGANIC
+  getHomeSessionSource(e) {
+    return null != l && l.guildId === e ? l.source : d.GuildHomeLandingSource.ORGANIC
   }
 }
-I.displayName = "GuildHomeStore";
-var T = new I(o.default, {
+p.displayName = "GuildHomeStore";
+var C = new p(u.default, {
   CONNECTION_OPEN: function() {
-    E = {}
+    f = {}
   },
-  GUILD_FEED_FETCH_FRESH_START: function(t) {
+  GUILD_FEED_FETCH_FRESH_START: function(e) {
     let {
-      guildId: e
-    } = t;
-    delete E[e]
+      guildId: t
+    } = e;
+    delete f[t]
   },
-  GUILD_HOME_SET_SCROLL_POSITION: function(t) {
+  GUILD_HOME_SET_SCROLL_POSITION: function(e) {
     let {
-      guildId: e,
+      guildId: t,
       scrollPosition: n
-    } = t;
-    E[e] = n
+    } = e;
+    f[t] = n
   },
-  CHANNEL_SELECT: function(t) {
+  CHANNEL_SELECT: function(e) {
     let {
-      guildId: e,
+      guildId: t,
       channelId: n
-    } = t;
-    if (null == e || null == n || !(0, c.isStaticChannelRoute)(n) || !(0, c.isGuildHomeChannel)(n)) {
-      i = void 0, r = void 0, l = void 0, s = void 0;
+    } = e;
+    if (null == t || null == n || !(0, c.isStaticChannelRoute)(n) || !(0, c.isGuildHomeChannel)(n)) {
+      i = void 0, r = void 0, s = void 0, l = void 0;
       return
     }
-    let u = (0, c.buildGuildStaticChannelId)(n, e);
-    if (i === u || null != r && r.guildId === e) return !1;
-    _(e), i = u, null != s && s.guildId !== e && (s = void 0)
+    let a = (0, c.buildGuildStaticChannelId)(n, t);
+    if (i === a || null != r && r.guildId === t) return !1;
+    E(t), i = a, null != l && l.guildId !== t && (l = void 0)
   },
-  CHANNEL_PRELOAD: function(t) {
+  CHANNEL_PRELOAD: function(e) {
     let {
-      guildId: e,
+      guildId: t,
       channelId: n
-    } = t;
-    if (null == e || null == n || !(0, c.isStaticChannelRoute)(n) || !(0, c.isGuildHomeChannel)(n)) {
-      l = void 0;
+    } = e;
+    if (null == t || null == n || !(0, c.isStaticChannelRoute)(n) || !(0, c.isGuildHomeChannel)(n)) {
+      s = void 0;
       return
     }
-    if (null != l && l.guildId === e) return !1;
-    l = f(e)
+    if (null != s && s.guildId === t) return !1;
+    s = h(t)
   },
-  GUILD_HOME_SET_SOURCE: function(t) {
+  GUILD_HOME_SET_SOURCE: function(e) {
     let {
-      source: e,
+      source: t,
       guildId: n
-    } = t;
-    s = {
+    } = e;
+    l = {
       guildId: n,
-      source: e
+      source: t
     }
   },
-  GUILD_HOME_ENSURE_HOME_SESSION: function(t) {
+  GUILD_HOME_ENSURE_HOME_SESSION: function(e) {
     let {
-      guildId: e
-    } = t;
-    if (null != r && r.guildId === e) return !1;
-    _(e)
+      guildId: t
+    } = e;
+    if (null != r && r.guildId === t) return !1;
+    E(t)
   },
   LOGOUT: function() {
-    r = void 0, l = void 0, s = void 0
+    r = void 0, s = void 0, l = void 0
   }
 })

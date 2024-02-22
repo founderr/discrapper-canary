@@ -1,123 +1,123 @@
 "use strict";
-n.r(e), n.d(e, {
+l.r(t), l.d(t, {
   useProfileThemeValues: function() {
-    return s
+    return h
   },
   getProfileTheme: function() {
-    return S
+    return E
   },
   getValueInColorGradientByPercentage: function() {
-    return c
+    return R
   },
   useAvatarBorderColor: function() {
-    return N
+    return _
   },
   calculateButtonColor: function() {
-    return f
+    return O
   },
   useMessageInputBorderColor: function() {
-    return D
+    return T
   },
   useDividerColor: function() {
-    return G
+    return C
   }
-}), n("222007");
-var r = n("884691"),
-  o = n("917351"),
-  u = n("509043"),
-  I = n("65597"),
-  i = n("669491"),
-  T = n("819855"),
-  l = n("206230"),
-  E = n("449918"),
-  _ = n("172182"),
-  a = n("49111");
+}), l("222007");
+var r = l("884691"),
+  n = l("917351"),
+  o = l("509043"),
+  u = l("65597"),
+  a = l("669491"),
+  i = l("819855"),
+  s = l("206230"),
+  c = l("449918"),
+  f = l("172182"),
+  d = l("49111");
 
-function s(t) {
-  let e = (0, I.default)([l.default], () => l.default.saturation);
-  return (0, r.useMemo)(() => null == t ? null : {
-    overlaySyncedWithUserTheme: i.default.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({
-      theme: t,
-      saturation: e
+function h(e) {
+  let t = (0, u.default)([s.default], () => s.default.saturation);
+  return (0, r.useMemo)(() => null == e ? null : {
+    overlaySyncedWithUserTheme: a.default.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({
+      theme: e,
+      saturation: t
     }).hsl(),
-    overlay: i.default.colors.PROFILE_GRADIENT_OVERLAY.resolve({
-      theme: t,
-      saturation: e
+    overlay: a.default.colors.PROFILE_GRADIENT_OVERLAY.resolve({
+      theme: e,
+      saturation: t
     }).hsl(),
-    sectionBox: i.default.colors.PROFILE_GRADIENT_SECTION_BOX.resolve({
-      theme: t,
-      saturation: e
+    sectionBox: a.default.colors.PROFILE_GRADIENT_SECTION_BOX.resolve({
+      theme: e,
+      saturation: t
     }).hsl(),
-    messageInputBorder: i.default.colors.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER.resolve({
-      theme: t,
-      saturation: e
+    messageInputBorder: a.default.colors.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER.resolve({
+      theme: e,
+      saturation: t
     }).hsl(),
-    dividerOpacity: t === i.default.themes.DARK ? .24 : .12,
-    noteBackgroundColor: i.default.colors.PROFILE_GRADIENT_NOTE_BACKGROUND.resolve({
-      theme: t,
-      saturation: e
+    dividerOpacity: e === a.default.themes.DARK ? .24 : .12,
+    noteBackgroundColor: a.default.colors.PROFILE_GRADIENT_NOTE_BACKGROUND.resolve({
+      theme: e,
+      saturation: t
     }).hsl(),
-    profileBodyBackgroundHover: i.default.colors.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER.resolve({
-      theme: t,
-      saturation: e
+    profileBodyBackgroundHover: a.default.colors.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER.resolve({
+      theme: e,
+      saturation: t
     }).hsl(),
-    rolePillBackgroundColor: i.default.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve({
-      theme: t,
-      saturation: e
+    rolePillBackgroundColor: a.default.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve({
+      theme: e,
+      saturation: t
     }).hsl(),
-    rolePillBorderColor: i.default.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER.resolve({
-      theme: t,
-      saturation: e
+    rolePillBorderColor: a.default.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER.resolve({
+      theme: e,
+      saturation: t
     }).hsl(),
-    icon: i.default.colors.INTERACTIVE_NORMAL.resolve({
-      theme: t,
-      saturation: e
+    icon: a.default.colors.INTERACTIVE_NORMAL.resolve({
+      theme: e,
+      saturation: t
     }).hsl()
-  }, [t, e])
+  }, [e, t])
 }
 
-function S(t) {
-  if (null == t) return null;
-  let e = (0, u.getDarkness)(t);
-  return e > .5 ? a.ThemeTypes.DARK : a.ThemeTypes.LIGHT
+function E(e) {
+  if (null == e) return null;
+  let t = (0, o.getDarkness)(e);
+  return t > .5 ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT
 }
 
-function c(t, e, n) {
-  let r = n / 100,
-    o = 1 - r;
-  return [Math.round(t[0] * o + e[0] * r), Math.round(t[1] * o + e[1] * r), Math.round(t[2] * o + e[2] * r)]
+function R(e, t, l) {
+  let r = l / 100,
+    n = 1 - r;
+  return [Math.round(e[0] * n + t[0] * r), Math.round(e[1] * n + t[1] * r), Math.round(e[2] * n + t[2] * r)]
 }
 
-function d(t, e) {
-  let n = (0, u.int2rgbArray)(t);
-  if (null == e) return 0;
-  let r = _.default.parseString(e);
+function I(e, t) {
+  let l = (0, o.int2rgbArray)(e);
+  if (null == t) return 0;
+  let r = f.default.parseString(t);
   if (null == r) return 0;
-  let o = [r.red, r.green, r.blue],
-    I = [n[0], n[1], n[2]],
-    i = r.alpha,
-    [T, l, E] = o.map((t, e) => Math.floor(i * t + (1 - i) * I[e]));
-  return (0, u.rgb2int)("rgba(".concat(T, ", ").concat(l, ", ").concat(E, ")"))
+  let n = [r.red, r.green, r.blue],
+    u = [l[0], l[1], l[2]],
+    a = r.alpha,
+    [i, s, c] = n.map((e, t) => Math.floor(a * e + (1 - a) * u[t]));
+  return (0, o.rgb2int)("rgba(".concat(i, ", ").concat(s, ", ").concat(c, ")"))
 }
 
-function N(t, e, n) {
-  let r = s(t);
-  return null == r || null == e ? null : d(e, n ? r.overlaySyncedWithUserTheme : r.overlay)
+function _(e, t, l) {
+  let r = h(e);
+  return null == r || null == t ? null : I(t, l ? r.overlaySyncedWithUserTheme : r.overlay)
 }
-let f = (0, o.memoize)(t => {
-  let e = (0, T.getContrastingColor)(t, {
+let O = (0, n.memoize)(e => {
+  let t = (0, i.getContrastingColor)(e, {
     base: "#ffffff",
-    contrastRatio: T.WCAGContrastRatios.HighContrastText
+    contrastRatio: i.WCAGContrastRatios.HighContrastText
   });
-  return (0, u.hex2int)(e)
-}, t => t);
+  return (0, o.hex2int)(t)
+}, e => e);
 
-function D(t, e) {
-  let n = s(t);
-  return null != n && null != e ? d(e, null == n ? void 0 : n.messageInputBorder) : null
+function T(e, t) {
+  let l = h(e);
+  return null != l && null != t ? I(t, null == l ? void 0 : l.messageInputBorder) : null
 }
 
-function G(t, e) {
-  let n = (0, E.useColorValue)(a.Color.WHITE_500).hex;
-  return (0, T.isThemeDark)(t) ? (0, u.hex2int)(n) : null != e ? f(e) : null
+function C(e, t) {
+  let l = (0, c.useColorValue)(d.Color.WHITE_500).hex;
+  return (0, i.isThemeDark)(e) ? (0, o.hex2int)(l) : null != t ? O(t) : null
 }

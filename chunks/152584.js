@@ -1,84 +1,84 @@
 "use strict";
 n.r(t), n.d(t, {
   accountDetailsInit: function() {
-    return S
-  },
-  accountDetailsClose: function() {
-    return T
-  },
-  disableAccount: function() {
-    return I
-  },
-  saveAccountRequest: function() {
-    return h
-  },
-  saveAccountChanges: function() {
-    return v
-  },
-  getHarvestStatus: function() {
-    return N
-  },
-  requestHarvest: function() {
-    return C
-  },
-  setPendingAvatar: function() {
-    return p
-  },
-  setPendingGlobalNameName: function() {
-    return g
-  },
-  setPendingAvatarDecoration: function() {
     return A
   },
-  setPendingProfileEffectId: function() {
-    return m
+  accountDetailsClose: function() {
+    return I
   },
-  clearErrors: function() {
+  disableAccount: function() {
     return R
   },
-  resetPendingAccountChanges: function() {
+  saveAccountRequest: function() {
+    return N
+  },
+  saveAccountChanges: function() {
+    return p
+  },
+  getHarvestStatus: function() {
+    return S
+  },
+  requestHarvest: function() {
+    return T
+  },
+  setPendingAvatar: function() {
+    return C
+  },
+  setPendingGlobalNameName: function() {
+    return m
+  },
+  setPendingAvatarDecoration: function() {
+    return h
+  },
+  setPendingProfileEffectId: function() {
     return L
   },
-  resetAllPending: function() {
-    return P
-  },
-  resetAndCloseUserProfileForm: function() {
+  clearErrors: function() {
     return D
   },
+  resetPendingAccountChanges: function() {
+    return O
+  },
+  resetAllPending: function() {
+    return U
+  },
+  resetAndCloseUserProfileForm: function() {
+    return g
+  },
   setDisableSubmit: function() {
-    return y
+    return P
   }
 });
-var i = n("872717"),
-  r = n("95410"),
-  l = n("819855"),
-  u = n("913144"),
-  a = n("393414"),
-  s = n("599110"),
-  o = n("315102"),
+var r = n("872717"),
+  s = n("95410"),
+  o = n("819855"),
+  a = n("913144"),
+  l = n("393414"),
+  u = n("599110"),
+  i = n("315102"),
   d = n("730622"),
   c = n("437822"),
-  f = n("49111"),
+  _ = n("49111"),
   E = n("191349"),
-  _ = n("782340");
+  f = n("782340");
 
-function S() {
-  u.default.dispatch({
+function A() {
+  a.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_INIT"
   })
 }
 
-function T() {
-  u.default.dispatch({
+function I() {
+  a.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_CLOSE"
   })
 }
 
-function I(e, t) {
-  let n = t ? _.default.Messages.DELETE_ACCOUNT : _.default.Messages.DISABLE_ACCOUNT,
-    r = t ? f.Endpoints.DELETE_ACCOUNT : f.Endpoints.DISABLE_ACCOUNT;
-  return (0, d.default)(t => i.default.post({
-    url: r,
+function R(e, t) {
+  let n = t ? f.default.Messages.DELETE_ACCOUNT : f.default.Messages.DISABLE_ACCOUNT,
+    s = t ? _.Endpoints.DELETE_ACCOUNT : _.Endpoints.DISABLE_ACCOUNT;
+  return (0, d.default)(t => r.default.post({
+    url: s,
     body: {
       password: e,
       ...t
@@ -90,157 +90,157 @@ function I(e, t) {
     },
     checkEnabled: !1
   }).then(() => {
-    c.default.logoutInternal(), (0, a.transitionTo)(f.Routes.DEFAULT_LOGGED_OUT)
+    c.default.logoutInternal(), (0, l.transitionTo)(_.Routes.DEFAULT_LOGGED_OUT)
   })
 }
-async function h(e) {
-  let t = await i.default.patch({
-      url: f.Endpoints.ME,
+async function N(e) {
+  let t = await r.default.patch({
+      url: _.Endpoints.ME,
       oldFormErrors: !0,
       body: e
     }),
     n = t.body;
   if (n.token) {
     let t = n.token;
-    delete n.token, u.default.dispatch({
+    delete n.token, a.default.dispatch({
       type: "UPDATE_TOKEN",
       token: t,
       userId: n.id
-    }), (null == e ? void 0 : e.password) != null && (null == e ? void 0 : e.new_password) != null && u.default.dispatch({
+    }), (null == e ? void 0 : e.password) != null && (null == e ? void 0 : e.new_password) != null && a.default.dispatch({
       type: "PASSWORD_UPDATED",
       userId: n.id
     })
   }
-  return u.default.dispatch({
+  return a.default.dispatch({
     type: "CURRENT_USER_UPDATE",
     user: n
   }), t
 }
 
-function v(e) {
+function p(e) {
   let {
     username: t,
     discriminator: n,
-    email: i,
-    emailToken: l,
-    password: a,
+    email: r,
+    emailToken: o,
+    password: l,
     avatar: c,
-    avatarDecoration: S,
-    newPassword: T,
-    globalName: I
+    avatarDecoration: A,
+    newPassword: I,
+    globalName: R
   } = e;
-  return u.default.dispatch({
+  return a.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SUBMIT"
   }), (0, d.default)(e => {
-    let u = {
+    let a = {
       username: t,
-      email: i,
-      email_token: l,
-      password: a,
+      email: r,
+      email_token: o,
+      password: l,
       avatar: c,
       discriminator: n,
-      global_name: I,
-      new_password: T,
+      global_name: R,
+      new_password: I,
       ...e
     };
-    null === S && (u.avatar_decoration_id = null), null != S && (u.avatar_decoration_id = S.id, u.avatar_decoration_sku_id = S.skuId);
-    let s = r.default.get(f.DEVICE_TOKEN),
-      o = (0, E.getDevicePushProvider)();
-    null != o && null != s && (u.push_provider = o, u.push_token = s);
-    let d = r.default.get(f.DEVICE_VOIP_TOKEN);
-    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != d && (u.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, u.push_voip_token = d), h(u)
+    null === A && (a.avatar_decoration_id = null), null != A && (a.avatar_decoration_id = A.id, a.avatar_decoration_sku_id = A.skuId);
+    let u = s.default.get(_.DEVICE_TOKEN),
+      i = (0, E.getDevicePushProvider)();
+    null != i && null != u && (a.push_provider = i, a.push_token = u);
+    let d = s.default.get(_.DEVICE_VOIP_TOKEN);
+    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != d && (a.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, a.push_voip_token = d), N(a)
   }, {
     checkEnabled: !1,
     modalProps: {
-      title: _.default.Messages.TWO_FA_CHANGE_ACCOUNT
+      title: f.default.Messages.TWO_FA_CHANGE_ACCOUNT
     },
     hooks: {
-      onEarlyClose: () => u.default.dispatch({
+      onEarlyClose: () => a.default.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE",
         errors: {}
       })
     }
   }).then(e => {
     let t = e.body;
-    return s.default.track(f.AnalyticEvents.USER_AVATAR_UPDATED, {
-      animated: (0, o.isAnimatedIconHash)(t.avatar)
-    }), u.default.dispatch({
+    return u.default.track(_.AnalyticEvents.USER_AVATAR_UPDATED, {
+      animated: (0, i.isAnimatedIconHash)(t.avatar)
+    }), a.default.dispatch({
       type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS"
     }), e
-  }, e => (u.default.dispatch({
+  }, e => (a.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE",
     errors: e.body
   }), e))
 }
 
-function N() {
-  return i.default.get({
-    url: f.Endpoints.USER_HARVEST,
+function S() {
+  return r.default.get({
+    url: _.Endpoints.USER_HARVEST,
     oldFormErrors: !0
   })
 }
 
-function C() {
-  return i.default.post({
-    url: f.Endpoints.USER_HARVEST,
+function T() {
+  return r.default.post({
+    url: _.Endpoints.USER_HARVEST,
     oldFormErrors: !0
   })
 }
 
-function p(e) {
-  u.default.dispatch({
+function C(e) {
+  a.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
     avatar: e
-  }), null == e ? l.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : l.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
+  }), null == e ? o.AccessibilityAnnouncer.announce(f.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : o.AccessibilityAnnouncer.announce(f.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
 }
 
-function g(e) {
-  u.default.dispatch({
+function m(e) {
+  a.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
     globalName: e
   })
 }
 
-function A(e) {
-  u.default.dispatch({
+function h(e) {
+  a.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
     avatarDecoration: e
   })
 }
 
-function m(e) {
-  u.default.dispatch({
+function L(e) {
+  a.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID",
     profileEffectId: e
   })
 }
 
-function R() {
-  u.default.dispatch({
+function D() {
+  a.default.dispatch({
     type: "USER_SETTINGS_CLEAR_ERRORS"
   })
 }
 
-function L() {
-  u.default.dispatch({
+function O() {
+  a.default.dispatch({
     type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
   })
 }
 
-function P() {
-  u.default.dispatch({
+function U() {
+  a.default.dispatch({
     type: "USER_SETTINGS_RESET_ALL_PENDING"
   })
 }
 
-function D() {
-  u.default.dispatch({
+function g() {
+  a.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
   })
 }
 
-function y(e) {
-  u.default.dispatch({
+function P(e) {
+  a.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
     disable: e
   })

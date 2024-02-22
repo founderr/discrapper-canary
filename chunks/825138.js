@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
 var i = n("37983");
 n("884691");
 var a = n("77078"),
-  r = n("79112"),
-  l = n("792105"),
+  l = n("79112"),
+  r = n("792105"),
   s = n("573240"),
-  u = n("170213"),
-  o = n("49111"),
+  o = n("170213"),
+  u = n("49111"),
   c = n("782340"),
   d = n("910300"),
   f = n("49155"),
@@ -21,8 +21,8 @@ var a = n("77078"),
       onClose: n,
       classificationId: E,
       source: _
-    } = e, S = (0, l.default)(), T = () => {
-      n(), r.default.open(o.UserSettingsSections.PRIVACY_AND_SAFETY, u.SafetyHubView.ACCOUNT_STANDING)
+    } = e, h = (0, r.default)(), S = () => {
+      n(), l.default.open(u.UserSettingsSections.PRIVACY_AND_SAFETY, o.SafetyHubView.ACCOUNT_STANDING)
     };
     return (0, i.jsxs)(a.ModalRoot, {
       className: d.modalRoot,
@@ -39,17 +39,17 @@ var a = n("77078"),
         })]
       }), (0, i.jsx)(a.ModalContent, {
         className: d.modalContent,
-        children: S ? (0, i.jsx)(a.Spinner, {}) : (0, i.jsx)(s.default, {
+        children: h ? (0, i.jsx)(a.Spinner, {}) : (0, i.jsx)(s.default, {
           classificationId: E,
           source: _,
-          onError: T
+          onError: S
         })
       }), (0, i.jsx)(a.ModalFooter, {
         children: (0, i.jsx)(a.Button, {
           className: d.button,
           type: "button",
           color: a.Button.Colors.BRAND,
-          onClick: T,
+          onClick: S,
           children: c.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2
         })
       })]

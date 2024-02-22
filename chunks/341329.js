@@ -81,13 +81,13 @@ function b(e) {
         if (N.default.hasOpenedThread(e)) return !1;
         if (null == l) {
           var t;
-          l = null !== (t = u.default.get(D, {})) && void 0 !== t ? t : {}
+          l = null !== (t = u.default.get(O, {})) && void 0 !== t ? t : {}
         }
         if (e in l) return !1;
         l[e] = Date.now();
-        let n = Date.now() - O;
+        let n = Date.now() - D;
         for (let e in l) l[e] < n && delete l[e];
-        return u.default.set(D, l), !0
+        return u.default.set(O, l), !0
       }(n)) R.log("Jumping to start of thread ".concat(g.id)), s.default.fetchMessages({
       channelId: n,
       limit: v.MAX_MESSAGES_PER_CHANNEL,
@@ -122,8 +122,8 @@ function b(e) {
     })
   }
 }
-let O = 90 * I.default.Millis.DAY,
-  D = "viewedThreadIds";
+let D = 90 * I.default.Millis.DAY,
+  O = "viewedThreadIds";
 
 function P() {
   let e = A.default.getChannelId();

@@ -30,13 +30,13 @@ function g(e) {
     onClose: n,
     transitionState: g,
     guildId: A
-  } = e, D = (0, a.default)([o.default], () => o.default.getId()), M = (0, a.default)([d.default], () => d.default.getMember(A, D), [A, D]), R = (0, a.default)([c.default], () => c.default.getGuild(A), [A]), U = null !== (t = null == R ? void 0 : R.name) && void 0 !== t ? t : "", C = (0, E.getAutomodQuarantinedGuildMemberFlags)(M), {
-    analyticsLocations: G
+  } = e, D = (0, a.default)([o.default], () => o.default.getId()), R = (0, a.default)([d.default], () => d.default.getMember(A, D), [A, D]), M = (0, a.default)([c.default], () => c.default.getGuild(A), [A]), G = null !== (t = null == M ? void 0 : M.name) && void 0 !== t ? t : "", U = (0, E.getAutomodQuarantinedGuildMemberFlags)(R), {
+    analyticsLocations: C
   } = (0, u.default)(s.default.AUTOMOD_PROFILE_QUARANTINE_ALERT), [m, O] = (0, h.useOpenFixQuarantinedProfileModal)({
     guildId: A,
-    analyticsLocations: G,
+    analyticsLocations: C,
     openWithoutBackstack: !0
-  }), y = C.has(L.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? p.default.Messages.GUILD_AUTOMOD_USERNAME_INVALID_MODAL_DESCRIPTION_MOBILE : p.default.Messages.GUILD_AUTOMOD_BIO_INVALID_MODAL_DESCRIPTION_MOBILE;
+  }), y = U.has(L.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? p.default.Messages.GUILD_AUTOMOD_USERNAME_INVALID_MODAL_DESCRIPTION_MOBILE : p.default.Messages.GUILD_AUTOMOD_BIO_INVALID_MODAL_DESCRIPTION_MOBILE;
   !O && (y = p.default.Messages.GUILD_AUTOMOD_USERNAME_INVALID_NO_PERMS_MODAL_DESCRIPTION_MOBILE);
   let v = O ? p.default.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : p.default.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
   return (r.useEffect(() => {
@@ -46,11 +46,11 @@ function g(e) {
       other_user_id: D
     })
   }, []), r.useEffect(() => {
-    if (null == R) {
+    if (null == M) {
       n();
       return
     }
-  }, [R, n]), null == R) ? null : (0, l.jsxs)(i.ModalRoot, {
+  }, [M, n]), null == M) ? null : (0, l.jsxs)(i.ModalRoot, {
     transitionState: g,
     size: i.ModalSize.SMALL,
     children: [(0, l.jsx)(i.ModalHeader, {
@@ -60,7 +60,7 @@ function g(e) {
         children: [(0, l.jsxs)("div", {
           className: S.guildIconContainer,
           children: [(0, l.jsx)(I.default, {
-            guild: R,
+            guild: M,
             size: I.default.Sizes.LARGER
           }), (0, l.jsx)("div", {
             className: S.statusContainer,
@@ -74,7 +74,7 @@ function g(e) {
           color: "header-primary",
           variant: "heading-md/semibold",
           children: p.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_MODAL_TITLE_MOBILE.format({
-            guildName: U
+            guildName: G
           })
         })]
       })

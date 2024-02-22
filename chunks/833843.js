@@ -1,171 +1,171 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return D
   }
 }), n("222007");
 var i = n("37983"),
-  r = n("884691"),
-  l = n("446674"),
-  u = n("77078"),
+  l = n("884691"),
+  r = n("446674"),
+  s = n("77078"),
   a = n("922770"),
-  s = n("267567"),
+  u = n("267567"),
   o = n("42203"),
   d = n("476765"),
   c = n("599110"),
   f = n("686904"),
-  E = n("933326"),
-  _ = n("398604"),
-  S = n("152475"),
-  T = n("598639"),
-  I = n("18284"),
-  h = n("821393"),
-  v = n("613767"),
-  N = n("822516"),
-  C = n("93550"),
-  p = n("707916"),
-  g = n("255050"),
-  A = n("644189"),
-  m = n("965353"),
-  R = n("360538"),
-  L = n("403901"),
-  P = n("369404"),
-  D = n("745049"),
-  y = n("49111"),
-  U = n("536430");
+  h = n("933326"),
+  E = n("398604"),
+  v = n("152475"),
+  C = n("598639"),
+  _ = n("18284"),
+  p = n("821393"),
+  S = n("613767"),
+  m = n("822516"),
+  g = n("93550"),
+  I = n("707916"),
+  N = n("255050"),
+  T = n("644189"),
+  A = n("965353"),
+  x = n("360538"),
+  R = n("403901"),
+  L = n("369404"),
+  y = n("745049"),
+  M = n("49111"),
+  P = n("536430");
 
-function G(e) {
+function j(e) {
   let {
     guildEvent: t,
     guild: n,
-    channel: r,
-    onActionTaken: u,
+    channel: l,
+    onActionTaken: s,
     isHub: a,
     isMember: o,
     recurrenceId: d
-  } = e, c = (0, _.isGuildScheduledEventActive)(t), f = (0, l.useStateFromStores)([_.default], () => _.default.isInterestedInEventRecurrence(t.id, d), [d, t]), E = (0, S.default)(t), T = (0, l.useStateFromStores)([s.default], () => s.default.isLurking(n.id), [n.id]), I = (0, v.useIsChannelPublic)(null == r ? void 0 : r.id, t.id), h = (0, P.default)({
+  } = e, c = (0, E.isGuildScheduledEventActive)(t), f = (0, r.useStateFromStores)([E.default], () => E.default.isInterestedInEventRecurrence(t.id, d), [d, t]), h = (0, v.default)(t), C = (0, r.useStateFromStores)([u.default], () => u.default.isLurking(n.id), [n.id]), _ = (0, S.useIsChannelPublic)(null == l ? void 0 : l.id, t.id), p = (0, L.default)({
     guild: n,
-    channel: r,
+    channel: l,
     guildScheduledEvent: t,
     isActive: c,
     recurrenceId: d,
-    onActionTaken: u
+    onActionTaken: s
   }), {
-    entity_type: N
+    entity_type: m
   } = t;
-  return a ? (0, i.jsx)(A.default, {
+  return a ? (0, i.jsx)(T.default, {
     isActive: c,
-    isUserLurking: T,
+    isUserLurking: C,
     rsvped: f,
     isMember: o,
     isDetailsView: !0,
     guildName: null == n ? void 0 : n.name,
-    isChannelPublic: I,
-    canInvite: E,
-    ...h
-  }) : (0, i.jsx)(p.default, {
+    isChannelPublic: _,
+    canInvite: h,
+    ...p
+  }) : (0, i.jsx)(I.default, {
     isActive: c,
-    isUserLurking: T,
+    isUserLurking: C,
     rsvped: f,
-    isChannelPublic: I,
-    canInvite: E,
-    entityType: N,
-    ...h
+    isChannelPublic: _,
+    canInvite: h,
+    entityType: m,
+    ...p
   })
 }
-var O = e => {
+var D = e => {
   let {
     guildScheduledEventId: t,
     parentGuildId: n,
-    transitionState: s,
-    initialRecurrenceId: S,
-    onClose: v
-  } = e, [p, A] = r.useState(S), P = (0, l.useStateFromStores)([_.default], () => _.default.getGuildScheduledEvent(t), [t]), O = null == P ? void 0 : P.id, M = null == P ? void 0 : P.guild_id, {
-    guild: x,
-    isMember: b
-  } = (0, T.default)(M, O), w = (0, a.default)(n), V = null == P ? void 0 : P.channel_id, F = (0, l.useStateFromStores)([o.default], () => o.default.getChannel(V), [V]), j = (0, d.useUID)(), [H, B] = r.useState(D.EventDetailSections.EVENT_INFO), k = (0, h.default)(O, p), Y = (0, I.default)(M, O, p), [Z, {
-    loading: W,
-    error: z
-  }] = (0, f.default)(() => E.default.getGuildEventUsers(null == P ? void 0 : P.id, p, M));
-  r.useEffect(() => {
-    null == P ? v() : c.default.track(y.AnalyticEvents.OPEN_MODAL, {
-      type: D.ANALYTICS_GUILD_EVENTS_MODAL_NAME,
-      guild_id: P.guild_id
+    transitionState: u,
+    initialRecurrenceId: v,
+    onClose: S
+  } = e, [I, T] = l.useState(v), L = (0, r.useStateFromStores)([E.default], () => E.default.getGuildScheduledEvent(t), [t]), D = null == L ? void 0 : L.id, w = null == L ? void 0 : L.guild_id, {
+    guild: b,
+    isMember: O
+  } = (0, C.default)(w, D), V = (0, a.default)(n), U = null == L ? void 0 : L.channel_id, F = (0, r.useStateFromStores)([o.default], () => o.default.getChannel(U), [U]), G = (0, d.useUID)(), [H, k] = l.useState(y.EventDetailSections.EVENT_INFO), B = (0, p.default)(D, I), Z = (0, _.default)(w, D, I), [W, {
+    loading: z,
+    error: Y
+  }] = (0, f.default)(() => h.default.getGuildEventUsers(null == L ? void 0 : L.id, I, w));
+  l.useEffect(() => {
+    null == L ? S() : c.default.track(M.AnalyticEvents.OPEN_MODAL, {
+      type: y.ANALYTICS_GUILD_EVENTS_MODAL_NAME,
+      guild_id: L.guild_id
     })
-  }, [P, v]);
-  let K = r.useRef(null),
-    [X, q] = r.useState(0);
-  if (r.useLayoutEffect(() => {
+  }, [L, S]);
+  let X = l.useRef(null),
+    [K, q] = l.useState(0);
+  if (l.useLayoutEffect(() => {
       var e, t;
-      let n = (null == P ? void 0 : P.recurrence_rule) != null ? 16 : 0;
-      q((null !== (t = null == K ? void 0 : null === (e = K.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 0) + n)
-    }, [K, null == P ? void 0 : P.recurrence_rule]), null == P || null == x || !b && !w) return null;
+      let n = (null == L ? void 0 : L.recurrence_rule) != null ? 16 : 0;
+      q((null !== (t = null == X ? void 0 : null === (e = X.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 0) + n)
+    }, [X, null == L ? void 0 : L.recurrence_rule]), null == L || null == b || !O && !V) return null;
   let J = e => {
-      e !== H && (e === D.EventDetailSections.RSVP_LIST && Z(), B(e))
+      e !== H && (e === y.EventDetailSections.RSVP_LIST && W(), k(e))
     },
-    Q = null != p ? p : (0, N.getNextRecurrenceIdInEvent)(P);
-  return (0, i.jsxs)(u.ModalRoot, {
-    size: u.ModalSize.MEDIUM,
-    transitionState: s,
-    "aria-labelledby": j,
-    className: U.root,
-    children: [(null == P ? void 0 : P.image) != null && (0, i.jsx)(g.default, {
-      source: (0, C.default)(P),
-      className: U.banner
-    }), (0, i.jsx)(m.default, {
-      onClose: v,
+    Q = null != I ? I : (0, m.getNextRecurrenceIdInEvent)(L);
+  return (0, i.jsxs)(s.ModalRoot, {
+    size: s.ModalSize.MEDIUM,
+    transitionState: u,
+    "aria-labelledby": G,
+    className: P.root,
+    children: [(null == L ? void 0 : L.image) != null && (0, i.jsx)(N.default, {
+      source: (0, g.default)(L),
+      className: P.banner
+    }), (0, i.jsx)(A.default, {
+      onClose: S,
       selectedTab: H,
       onTabSelected: J,
-      userCount: Y,
-      hasBanner: (null == P ? void 0 : P.image) != null,
-      isHub: w
+      userCount: Z,
+      hasBanner: (null == L ? void 0 : L.image) != null,
+      isHub: V
     }), (0, i.jsx)("div", {
-      className: U.container,
-      children: (0, i.jsx)(u.ModalContent, {
-        className: U.contentContainer,
+      className: P.container,
+      children: (0, i.jsx)(s.ModalContent, {
+        className: P.contentContainer,
         style: {
-          height: X
+          height: K
         },
-        children: (0, i.jsxs)(u.Slides, {
+        children: (0, i.jsxs)(s.Slides, {
           activeSlide: H,
           width: 600,
           centered: !1,
-          children: [(0, i.jsx)(u.Slide, {
-            id: D.EventDetailSections.EVENT_INFO,
-            children: (0, i.jsx)(R.default, {
-              guildEvent: P,
-              guild: x,
+          children: [(0, i.jsx)(s.Slide, {
+            id: y.EventDetailSections.EVENT_INFO,
+            children: (0, i.jsx)(x.default, {
+              guildEvent: L,
+              guild: b,
               channel: F,
-              headerId: j,
-              onClose: v,
-              onClickInterestedCount: () => J(D.EventDetailSections.RSVP_LIST),
-              isHub: w,
-              containerRef: K,
+              headerId: G,
+              onClose: S,
+              onClickInterestedCount: () => J(y.EventDetailSections.RSVP_LIST),
+              isHub: V,
+              containerRef: X,
               recurrenceId: Q,
-              setRecurrenceId: A
+              setRecurrenceId: T
             })
-          }), (0, i.jsx)(u.Slide, {
-            id: D.EventDetailSections.RSVP_LIST,
-            children: (0, i.jsx)(L.default, {
-              guildEvent: P,
+          }), (0, i.jsx)(s.Slide, {
+            id: y.EventDetailSections.RSVP_LIST,
+            children: (0, i.jsx)(R.default, {
+              guildEvent: L,
               recurrenceId: Q,
-              eventUsers: k,
-              loading: W,
-              containerHeight: X,
-              error: z
+              eventUsers: B,
+              loading: z,
+              containerHeight: K,
+              error: Y
             })
           })]
         })
       })
-    }), (0, i.jsx)(u.ModalFooter, {
-      className: U.footer,
-      children: (0, i.jsx)(G, {
-        guildEvent: P,
-        isHub: w,
-        isMember: b,
-        guild: x,
+    }), (0, i.jsx)(s.ModalFooter, {
+      className: P.footer,
+      children: (0, i.jsx)(j, {
+        guildEvent: L,
+        isHub: V,
+        isMember: O,
+        guild: b,
         channel: F,
-        onActionTaken: v,
+        onActionTaken: S,
         recurrenceId: Q
       })
     })]

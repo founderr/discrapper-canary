@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return I
+    return _
   }
 });
 var i, a, r, s, l = n("446674"),
@@ -29,7 +29,7 @@ function E() {
     f(e)
   })
 }
-class _ extends l.default.Store {
+class p extends l.default.Store {
   initialize() {
     this.waitFor(o.default)
   }
@@ -42,7 +42,7 @@ class _ extends l.default.Store {
     return null !== (t = c[e]) && void 0 !== t ? t : d
   }
 }
-var I = new _(u.default, {
+var _ = new p(u.default, {
   CHANNEL_CREATE: function(e) {
     f(e.channel)
   },

@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return l
+    return s
   }
 });
 var a = r("446674"),
@@ -12,7 +12,7 @@ let u = {
     fetched: !1
   },
   i = u;
-class s extends a.default.Store {
+class l extends a.default.Store {
   initialize() {
     i = u
   }
@@ -23,8 +23,8 @@ class s extends a.default.Store {
     return !i.isFetching && !i.fetched
   }
 }
-s.displayName = "UserPremiumLikelihoodStore";
-var l = new s(n.default, {
+l.displayName = "UserPremiumLikelihoodStore";
+var s = new l(n.default, {
   BILLING_USER_PREMIUM_LIKELIHOOD_FETCH: function() {
     i.isFetching = !0
   },

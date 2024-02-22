@@ -12,11 +12,11 @@ var o = n("917351"),
   u = n("6587"),
   d = n("393027"),
   s = n("923959"),
-  E = n("162771"),
-  r = n("677099"),
+  r = n("162771"),
+  E = n("677099"),
   _ = n("287850"),
-  A = n("659500"),
-  c = n("722525"),
+  c = n("659500"),
+  A = n("722525"),
   C = n("49111"),
   T = n("133335");
 
@@ -38,7 +38,7 @@ var I = l.throttle(function(e, t) {
     N = null !== (o = d.default.getState().guildId) && void 0 !== o ? o : C.ME,
     O = d.default.getState().channelId,
     L = function(e, t) {
-      let n = [C.ME, ...r.default.getFlattenedGuildIds()],
+      let n = [C.ME, ...E.default.getFlattenedGuildIds()],
         i = n.indexOf(e);
       return t > 0 ? n.slice(i).concat(n.slice(0, i), e) : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)))
     }(N, e),
@@ -49,8 +49,8 @@ var I = l.throttle(function(e, t) {
     if (u = p[R], T(N))
       for (; null != u && "" !== u;) {
         if ("string" == typeof u) {
-          if (_(N, u)) return (0, c.transitionToChannel)(N, u, !1, f)
-        } else if ("object" == typeof u && I(u.resourceId, u.type)) return N !== E.default.getGuildId() && (0, c.transitionToChannel)(N, null === (l = s.default.getDefaultChannel(N)) || void 0 === l ? void 0 : l.id), (0, a.openModalLazy)(async () => {
+          if (_(N, u)) return (0, A.transitionToChannel)(N, u, !1, f)
+        } else if ("object" == typeof u && I(u.resourceId, u.type)) return N !== r.default.getGuildId() && (0, A.transitionToChannel)(N, null === (l = s.default.getDefaultChannel(N)) || void 0 === l ? void 0 : l.id), (0, a.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("659707").then(n.bind(n, "659707"));
@@ -64,7 +64,7 @@ var I = l.throttle(function(e, t) {
     if (D += e, null == (N = L[D]) || "" === N) break;
     p = S(N, f), R = e < 0 ? p.length - 1 : 0
   }
-  A.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
+  c.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
     duration: 200,
     intensity: 2
   })

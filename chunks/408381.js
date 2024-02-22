@@ -1,41 +1,41 @@
 "use strict";
-a.r(t), a.d(t, {
+r.r(t), r.d(t, {
   MAX_CONTENT_WIDTH: function() {
-    return r
+    return u
   },
   getAssetSizeByHeight: function() {
-    return n
-  },
-  getBackgroundGradient: function() {
     return i
   },
+  getBackgroundGradient: function() {
+    return l
+  },
   getConfettiSprites: function() {
-    return u
+    return c
   }
 });
-var l = a("635058"),
-  s = a("547630");
-let r = 1060,
-  n = e => e * (0, s.default)(),
-  i = function(e) {
+var a = r("635058"),
+  n = r("547630");
+let u = 1060,
+  i = e => e * (0, n.default)(),
+  l = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
       {
-        primary: a,
-        secondary: l
+        primary: r,
+        secondary: a
       } = e;
-    return "linear-gradient(".concat(t, "deg, ").concat(a.toHslString(), ", ").concat(l.toHslString(), ")")
+    return "linear-gradient(".concat(t, "deg, ").concat(r.toHslString(), ", ").concat(a.toHslString(), ")")
   },
-  o = [a("424869"), a("714293")],
-  c = {
-    ["".concat(l.CollectiblesCategorySkuId.FANTASY)]: [a("655029"), a("290216")],
-    ["".concat(l.CollectiblesCategorySkuId.ANIME)]: [a("597704"), a("714293")],
-    ["".concat(l.CollectiblesCategorySkuId.BREAKFAST)]: [a("286642"), a("94646")],
-    ["".concat(l.CollectiblesCategorySkuId.HALLOWEEN)]: [a("638538"), a("861485")],
-    ["".concat(l.CollectiblesCategorySkuId.FALL)]: [a("740683"), a("489847")],
-    ["".concat(l.CollectiblesCategorySkuId.WINTER)]: [a("770704"), a("165057")],
-    ["".concat(l.CollectiblesCategorySkuId.MONSTERS)]: [a("330825"), a("125221")]
+  s = [r("424869"), r("714293")],
+  o = {
+    ["".concat(a.CollectiblesCategorySkuId.FANTASY)]: [r("655029"), r("290216")],
+    ["".concat(a.CollectiblesCategorySkuId.ANIME)]: [r("597704"), r("714293")],
+    ["".concat(a.CollectiblesCategorySkuId.BREAKFAST)]: [r("286642"), r("94646")],
+    ["".concat(a.CollectiblesCategorySkuId.HALLOWEEN)]: [r("638538"), r("861485")],
+    ["".concat(a.CollectiblesCategorySkuId.FALL)]: [r("740683"), r("489847")],
+    ["".concat(a.CollectiblesCategorySkuId.WINTER)]: [r("770704"), r("165057")],
+    ["".concat(a.CollectiblesCategorySkuId.MONSTERS)]: [r("330825"), r("125221")]
   },
-  u = e => {
+  c = e => {
     var t;
-    return null == e ? o : null !== (t = c[e]) && void 0 !== t ? t : o
+    return null == e ? s : null !== (t = o[e]) && void 0 !== t ? t : s
   }

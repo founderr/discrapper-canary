@@ -1,78 +1,78 @@
 "use strict";
-let n, i;
-r.r(e), r.d(e, {
+let a, n;
+r.r(t), r.d(t, {
   default: function() {
-    return I
+    return C
   }
 }), r("222007");
-var o = r("917351"),
-  u = r("446674"),
+var u = r("917351"),
+  i = r("446674"),
   l = r("913144"),
-  a = r("915639"),
-  T = r("491232");
+  s = r("915639"),
+  o = r("491232");
 let c = new Map,
-  E = new Map,
-  s = c,
-  _ = E,
-  d = !1;
-let S = () => {
-  s = c, _ = E, i = void 0, d = !1, n = void 0
+  d = new Map,
+  f = c,
+  E = d,
+  m = !1;
+let p = () => {
+  f = c, E = d, n = void 0, m = !1, a = void 0
 };
-class C extends u.default.Store {
+class S extends i.default.Store {
   initialize() {
-    this.syncWith([a.default], S)
+    this.syncWith([s.default], p)
   }
   get isFetching() {
-    return d
+    return m
   }
   get error() {
-    return n
+    return a
   }
   get lastFetched() {
-    return i
+    return n
   }
   get categories() {
-    return s
+    return f
   }
   get products() {
-    return _
+    return E
   }
-  getCategory(t) {
-    return null != t ? s.get(t) : void 0
+  getCategory(e) {
+    return null != e ? f.get(e) : void 0
   }
-  getProduct(t) {
-    return null != t ? _.get(t) : void 0
+  getProduct(e) {
+    return null != e ? E.get(e) : void 0
   }
-  getCategoryForProduct(t) {
-    let e = this.getProduct(t);
-    return this.getCategory(null == e ? void 0 : e.categorySkuId)
+  getCategoryForProduct(e) {
+    let t = this.getProduct(e);
+    return this.getCategory(null == t ? void 0 : t.categorySkuId)
   }
 }
-C.displayName = "CollectiblesCategoryStore";
-var I = new C(l.default, {
-  COLLECTIBLES_CATEGORIES_FETCH: t => {
-    d = !0, n = void 0
+S.displayName = "CollectiblesCategoryStore";
+var C = new S(l.default, {
+  COLLECTIBLES_CATEGORIES_FETCH: e => {
+    m = !0, a = void 0
   },
-  COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: t => {
-    0 === t.categories.length ? (s = c, _ = E) : !(0, o.isEqual)([...s.values()], t.categories) && (s = new Map(t.categories.map(t => [t.skuId, t])), _ = new Map((0, T.getProductsFromCategories)(s).map(t => [t.skuId, t]))), i = Date.now(), d = !1, n = void 0
+  COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: e => {
+    0 === e.categories.length ? (f = c, E = d) : !(0, u.isEqual)([...f.values()], e.categories) && (f = new Map(e.categories.map(e => [e.skuId, e])), E = new Map((0, o.getProductsFromCategories)(f).map(e => [e.skuId, e]))), n = Date.now(), m = !1, a = void 0
   },
-  COLLECTIBLES_CATEGORIES_FETCH_FAILURE: t => {
+  COLLECTIBLES_CATEGORIES_FETCH_FAILURE: e => {
     let {
-      error: e
-    } = t;
-    s = c, _ = E, d = !1, n = e
+      error: t
+    } = e;
+    f = c, E = d, m = !1, a = t
   },
-  COLLECTIBLES_PRODUCT_FETCH: t => {
-    d = !0, n = void 0
+  COLLECTIBLES_PRODUCT_FETCH: e => {
+    m = !0, a = void 0
   },
-  COLLECTIBLES_PRODUCT_FETCH_SUCCESS: t => {
-    _.set(t.product.skuId, t.product), d = !1, n = void 0
+  COLLECTIBLES_PRODUCT_FETCH_SUCCESS: e => {
+    E.set(e.product.skuId, e.product), m = !1, a = void 0
   },
-  COLLECTIBLES_PRODUCT_FETCH_FAILURE: t => {
+  COLLECTIBLES_PRODUCT_FETCH_FAILURE: e => {
     let {
-      error: e
-    } = t;
-    d = !1, n = e
+      error: t
+    } = e;
+    m = !1, a = t
   },
-  LOGOUT: S
+  LOGOUT: p
 })
