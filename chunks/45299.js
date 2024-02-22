@@ -54,7 +54,10 @@ var r = n("37983"),
         range: [0, 1],
         output: [(0, l.useToken)(a.default.colors.BACKGROUND_FLOATING).hex(), (0, l.useToken)(a.default.colors.STATUS_DANGER).hex()]
       }),
-      g = (0, l.useToken)(a.default.colors.TEXT_DANGER).hex();
+      g = A.to({
+        range: [0, 1],
+        output: [(0, l.useToken)(a.default.colors.TEXT_DANGER).hex(), (0, l.useToken)(a.default.unsafe_rawColors.WHITE_500).hex()]
+      });
     return (0, r.jsx)(s.animated.div, {
       className: d.container,
       style: {
