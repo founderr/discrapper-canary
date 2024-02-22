@@ -49,7 +49,7 @@ E.r(t), E.d(t, {
     return i
   },
   FamilyCenterAction: function() {
-    return r
+    return u
   },
   ACTION_TO_TEXT: function() {
     return H
@@ -61,7 +61,7 @@ E.r(t), E.d(t, {
     return w
   }
 }), E("222007");
-var _, T, n, I, s, a, A, i, r, u, l, C, d, o, N, R, S, M, L, c, D, f, Y = E("447669"),
+var _, T, n, I, s, a, A, i, u, r, l, C, d, o, N, R, S, M, L, c, D, f, Y = E("447669"),
   O = E("718517"),
   y = E("782340");
 let F = 30 * O.default.Millis.SECOND,
@@ -77,7 +77,7 @@ let F = 30 * O.default.Millis.SECOND,
     FAMILY_CENTER_SETTINGS: "/family-center/settings",
     FAMILY_CENTER_MY_FAMILY: "/family-center/my-family"
   }), [":", "?", "@"]);
-(C = _ || (_ = {}))[C.DM_MESSAGE_SEND = 1] = "DM_MESSAGE_SEND", C[C.GDM_MESSAGE_SEND = 2] = "GDM_MESSAGE_SEND", C[C.MESSAGE_REACT = 3] = "MESSAGE_REACT", C[C.ADD_FRIEND = 4] = "ADD_FRIEND", C[C.SEND_CALL = 5] = "SEND_CALL", C[C.CALL_JOIN = 6] = "CALL_JOIN", C[C.GUILD_JOIN = 7] = "GUILD_JOIN", (d = T || (T = {}))[d.PARENT = 1] = "PARENT", d[d.CHILD = 2] = "CHILD", (o = n || (n = {}))[o.PENDING = 1] = "PENDING", o[o.ACTIVE = 2] = "ACTIVE", o[o.INACTIVE = 3] = "INACTIVE", o[o.DECLINED = 4] = "DECLINED", o[o.EXPIRED = 5] = "EXPIRED", (N = I || (I = {}))[N.USER_ADD = 1] = "USER_ADD", N[N.GUILD_ADD = 2] = "GUILD_ADD", N[N.USER_INTERACTION = 3] = "USER_INTERACTION", N[N.GUILD_INTERACTION = 4] = "GUILD_INTERACTION", N[N.USER_CALLED = 5] = "USER_CALLED", (R = s || (s = {})).ACTIVITY = "ACTIVITY", R.REQUESTS = "REQUESTS", R.SETTINGS = "SETTINGS", (S = a || (a = {}))[S.ACTIVITY = 0] = "ACTIVITY", S[S.REQUESTS = 1] = "REQUESTS", S[S.SETTINGS = 2] = "SETTINGS", (M = A || (A = {})).SIDENAV = "SIDENAV", M.SETTINGS = "SETTINGS", (L = i || (i = {}))[L.SIDENAV = 0] = "SIDENAV", L[L.SETTINGS = 1] = "SETTINGS", (c = r || (r = {}))[c.TabChange = 0] = "TabChange", c[c.ShowQRCodeModal = 1] = "ShowQRCodeModal", c[c.RevealQRCode = 2] = "RevealQRCode", c[c.ScanQRCodeButton = 3] = "ScanQRCodeButton", c[c.ScanQRCode = 4] = "ScanQRCode", c[c.LoadMore = 5] = "LoadMore", c[c.SelectTeen = 6] = "SelectTeen", c[c.HideQRCode = 7] = "HideQRCode";
+(C = _ || (_ = {}))[C.DM_MESSAGE_SEND = 1] = "DM_MESSAGE_SEND", C[C.GDM_MESSAGE_SEND = 2] = "GDM_MESSAGE_SEND", C[C.MESSAGE_REACT = 3] = "MESSAGE_REACT", C[C.ADD_FRIEND = 4] = "ADD_FRIEND", C[C.SEND_CALL = 5] = "SEND_CALL", C[C.CALL_JOIN = 6] = "CALL_JOIN", C[C.GUILD_JOIN = 7] = "GUILD_JOIN", (d = T || (T = {}))[d.PARENT = 1] = "PARENT", d[d.CHILD = 2] = "CHILD", (o = n || (n = {}))[o.PENDING = 1] = "PENDING", o[o.ACTIVE = 2] = "ACTIVE", o[o.INACTIVE = 3] = "INACTIVE", o[o.DECLINED = 4] = "DECLINED", o[o.EXPIRED = 5] = "EXPIRED", (N = I || (I = {}))[N.USER_ADD = 1] = "USER_ADD", N[N.GUILD_ADD = 2] = "GUILD_ADD", N[N.USER_INTERACTION = 3] = "USER_INTERACTION", N[N.GUILD_INTERACTION = 4] = "GUILD_INTERACTION", N[N.USER_CALLED = 5] = "USER_CALLED", (R = s || (s = {})).ACTIVITY = "ACTIVITY", R.REQUESTS = "REQUESTS", R.SETTINGS = "SETTINGS", (S = a || (a = {}))[S.ACTIVITY = 0] = "ACTIVITY", S[S.REQUESTS = 1] = "REQUESTS", S[S.SETTINGS = 2] = "SETTINGS", (M = A || (A = {})).SIDENAV = "SIDENAV", M.SETTINGS = "SETTINGS", (L = i || (i = {}))[L.SIDENAV = 0] = "SIDENAV", L[L.SETTINGS = 1] = "SETTINGS", (c = u || (u = {}))[c.TabChange = 0] = "TabChange", c[c.ShowQRCodeModal = 1] = "ShowQRCodeModal", c[c.RevealQRCode = 2] = "RevealQRCode", c[c.ScanQRCodeButton = 3] = "ScanQRCodeButton", c[c.ScanQRCode = 4] = "ScanQRCode", c[c.LoadMore = 5] = "LoadMore", c[c.SelectTeen = 6] = "SelectTeen", c[c.HideQRCode = 7] = "HideQRCode";
 let H = new Map([
   [3, {
     tooltipHeader: () => y.default.Messages.FAMILY_CENTER_ACTIVITY_USER_INTERACTION_HEADER,
@@ -135,7 +135,7 @@ let H = new Map([
     sectionDescription: e => e ? y.default.Messages.FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT : y.default.Messages.FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN
   }]
 ]);
-(D = u || (u = {}))[D.CHECK = 0] = "CHECK", D[D.X = 1] = "X", (f = l || (l = {}))[f.GENERIC_ERROR = 0] = "GENERIC_ERROR", f[f.INELIGIBLE_FOR_FAMILY_CENTER = 1] = "INELIGIBLE_FOR_FAMILY_CENTER", f[f.PENDING_REQUEST_EXISTS = 2] = "PENDING_REQUEST_EXISTS", f[f.MAX_CONNECTIONS_REACHED = 3] = "MAX_CONNECTIONS_REACHED";
+(D = r || (r = {}))[D.CHECK = 0] = "CHECK", D[D.X = 1] = "X", (f = l || (l = {}))[f.GENERIC_ERROR = 0] = "GENERIC_ERROR", f[f.INELIGIBLE_FOR_FAMILY_CENTER = 1] = "INELIGIBLE_FOR_FAMILY_CENTER", f[f.PENDING_REQUEST_EXISTS = 2] = "PENDING_REQUEST_EXISTS", f[f.MAX_CONNECTIONS_REACHED = 3] = "MAX_CONNECTIONS_REACHED";
 let k = () => ({
     seconds: y.default.Messages.FAMILY_CENTER_PENDING_TIMESTAMP_SECONDS,
     minutes: y.default.Messages.FAMILY_CENTER_PENDING_TIMESTAMP_MINUTES,

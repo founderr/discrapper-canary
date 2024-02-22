@@ -10,7 +10,7 @@ E.r(t), E.d(t, {
     return i
   },
   default: function() {
-    return r
+    return u
   }
 });
 var _ = E("872717"),
@@ -65,7 +65,7 @@ async function i() {
     }), E
   })
 }
-var r = {
+var u = {
   async initialPageLoad() {
     var e, t, E, n;
     T.default.dispatch({
@@ -79,7 +79,7 @@ var r = {
       teen_audit_log: a,
       linked_users: A,
       users: i
-    } = I, r = {
+    } = I, u = {
       teenId: null == a ? void 0 : a.teen_user_id,
       rangeStartId: null == a ? void 0 : a.range_start_id,
       totals: null !== (e = null == a ? void 0 : a.totals) && void 0 !== e ? e : {},
@@ -89,10 +89,10 @@ var r = {
     };
     return T.default.dispatch({
       type: "FAMILY_CENTER_INITIAL_LOAD",
-      familyCenterTeenActivity: r,
+      familyCenterTeenActivity: u,
       linkedUsers: A,
       users: i
-    }), r
+    }), u
   },
   async fetchLinkedUsers() {
     let {
@@ -157,7 +157,7 @@ var r = {
       url: s.Endpoints.FAMILY_CENTER_TEEN_ACTIVITY_MORE(e, t, E, a)
     }), {
       teen_audit_log: i
-    } = A, r = {
+    } = A, u = {
       teenId: i.teen_user_id,
       rangeStartId: i.range_start_id,
       actions: i.actions,
@@ -170,7 +170,7 @@ var r = {
       action_display_type: t
     }), T.default.dispatch({
       type: "FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS",
-      familyCenterTeenActivity: r
+      familyCenterTeenActivity: u
     }), i
   },
   selectTab(e) {

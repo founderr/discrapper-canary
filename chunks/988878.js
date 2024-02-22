@@ -1,12 +1,12 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return u
+    return s
   }
 });
-var n = l("217145"),
-  a = l("429682");
+var i = n("217145"),
+  r = n("429682");
 
-function u(e) {
-  return (0, n.isIFrameModalUserEnabled)() || (0, a.isIFrameModalForGuildEnabled)(e)
+function s(e) {
+  return (0, i.isIFrameModalUserEnabled)() || (0, r.isIFrameModalForGuildEnabled)(e)
 }

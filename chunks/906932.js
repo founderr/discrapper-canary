@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return S
   },
   useGlobalOrGuildIdentityProfileEffect: function() {
-    return c
+    return I
   },
   useGlobalOrGuildIdentityPendingProfileEffect: function() {
-    return I
+    return c
   },
   setNewPendingUserBio: function() {
     return s
@@ -82,14 +82,14 @@ function S(e, t) {
   }
 }
 
-function c(e, t) {
+function I(e, t) {
   return (0, r.useStateFromStores)([E.default], () => {
     var n, i;
     return null == t ? null === (n = E.default.getUserProfile(e.id)) || void 0 === n ? void 0 : n.profileEffectId : null === (i = E.default.getGuildMemberProfile(e.id, t.id)) || void 0 === i ? void 0 : i.profileEffectId
   }, [e, t])
 }
 
-function I(e) {
+function c(e) {
   return (0, r.useStateFromStoresObject)([d.default, _.default], () => null == e ? {
     pendingProfileEffectId: d.default.getPendingProfileEffectId(),
     errors: d.default.getErrors().profileEffect

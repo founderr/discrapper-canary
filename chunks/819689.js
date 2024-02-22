@@ -51,8 +51,8 @@ var K = n("337543"),
   Y = n("957255"),
   j = n("824563"),
   J = n("660478"),
-  X = n("18494"),
-  z = n("162771"),
+  z = n("18494"),
+  X = n("162771"),
   q = n("401848"),
   Q = n("697218"),
   Z = n("599110"),
@@ -747,8 +747,8 @@ let eg = {
               else if (t === _.CodedLinkType.APP_DIRECTORY_PROFILE) Z.default.track(ei.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, {
                 application_id: d,
                 device_platform: l.isMobile ? "mobile_web" : "desktop_web",
-                guild_id: z.default.getGuildId(),
-                channel_id: X.default.getChannelId()
+                guild_id: X.default.getGuildId(),
+                channel_id: z.default.getChannelId()
               });
               else if (t === _.CodedLinkType.ACTIVITY_BOOKMARK);
               else if (t === _.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);

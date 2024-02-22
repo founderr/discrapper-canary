@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return S
   },
   handleProfileAccessibilityTooltipViewed: function() {
-    return c
+    return I
   },
   resetPendingProfileChanges: function() {
-    return I
+    return c
   },
   setPendingBanner: function() {
     return s
@@ -95,13 +95,13 @@ async function S(e, t) {
   }
 }
 
-function c() {
+function I() {
   r.default.dispatch({
     type: "USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED"
   })
 }
 
-function I() {
+function c() {
   r.default.dispatch({
     type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES"
   })

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
     return C
   }
 });
-var c = n("446674"),
-  I = n("913144"),
+var I = n("446674"),
+  c = n("913144"),
   s = n("49111");
 let f = s.FormStates.CLOSED,
   N = {},
@@ -27,7 +27,7 @@ function R() {
 function D() {
   o = void 0, _ = void 0, l = void 0, T = void 0, u = void 0
 }
-class G extends c.default.Store {
+class G extends I.default.Store {
   getFormState() {
     return f
   }
@@ -90,7 +90,7 @@ class G extends c.default.Store {
   }
 }
 G.displayName = "GuildIdentitySettingsStore";
-var C = new G(I.default, {
+var C = new G(c.default, {
   GUILD_IDENTITY_SETTINGS_INIT: function(e) {
     d = e.guild, f = s.FormStates.OPEN, N = {}, a = e.source, S = e.analyticsLocations
   },

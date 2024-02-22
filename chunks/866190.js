@@ -4,14 +4,14 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var r = n("884691"),
-  i = n("446674"),
+var i = n("884691"),
+  r = n("446674"),
   s = n("244201"),
-  o = n("471671");
+  l = n("471671");
 
 function a() {
   let {
     windowId: e
-  } = r.useContext(s.default);
-  return (0, i.useStateFromStores)([o.default], () => o.default.isFocused(e), [e])
+  } = i.useContext(s.default);
+  return (0, r.useStateFromStores)([l.default], () => l.default.isFocused(e), [e])
 }

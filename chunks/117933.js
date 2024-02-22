@@ -1,10 +1,10 @@
 "use strict";
 E.r(t), E.d(t, {
   getEmptyActivityFormatter: function() {
-    return r
+    return u
   },
   getActivityWindowTimestampFormatter: function() {
-    return u
+    return r
   },
   formatUserActivityTimestamp: function() {
     return l
@@ -30,12 +30,12 @@ let s = 3600,
   a = 24 * s,
   A = 2 * a,
   i = 7 * a,
-  r = () => ({
+  u = () => ({
     today: I.default.Messages.FAMILY_CENTER_EMPTY_ACTIVITY_TODAY,
     yesterday: I.default.Messages.FAMILY_CENTER_EMPTY_ACTIVITY_YESTERDAY,
     days: I.default.Messages.FAMILY_CENTER_EMPTY_ACTIVITY_DAYS
   }),
-  u = e => e ? {
+  r = e => e ? {
     today: I.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_PARENT_TODAY,
     yesterday: I.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_PARENT_YESTERDAY,
     days: I.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_PARENT_DAYS
