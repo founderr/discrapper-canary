@@ -149,6 +149,9 @@ function D(e) {
 let y = (0, d.cachedFunction)((e, t) => e.sortedGuildNodes().map(e => e.id)),
   P = (0, d.cachedFunction)((e, t) => e.getRoots().map(g));
 class L extends _.default {
+  initialize() {
+    this.waitFor(h.default, S.default, c.default, E.default, u.default)
+  }
   getGuildsTree() {
     return T
   }
@@ -173,14 +176,10 @@ class L extends _.default {
     }
   }
   constructor() {
-    super(), this.loadCache = () => {
-      let e = this.readSnapshot(L.LATEST_SNAPSHOT_VERSION),
-        t = null == e ? void 0 : e.tree;
-      null != t && (T = new l.GuildsTree).loadSnapshot(t)
-    }, this.registerActionHandlers({
+    super({
       CONNECTION_OPEN: C,
       OVERLAY_INITIALIZE: C,
-      CACHE_LOADED_LAZY: this.loadCache,
+      CACHE_LOADED_LAZY: () => this.loadCache(),
       GUILD_CREATE: C,
       GUILD_DELETE: C,
       GUILD_MEMBER_ADD: D,
@@ -189,7 +188,11 @@ class L extends _.default {
       GUILD_FOLDER_CREATE_LOCAL: R,
       GUILD_FOLDER_EDIT_LOCAL: N,
       GUILD_FOLDER_DELETE_LOCAL: O
-    }), this.waitFor(h.default, S.default, c.default, E.default, u.default)
+    }), this.loadCache = () => {
+      let e = this.readSnapshot(L.LATEST_SNAPSHOT_VERSION),
+        t = null == e ? void 0 : e.tree;
+      null != t && (T = new l.GuildsTree).loadSnapshot(t)
+    }
   }
 }
 L.displayName = "SortedGuildStore", L.LATEST_SNAPSHOT_VERSION = 1;
