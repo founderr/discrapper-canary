@@ -7,7 +7,6 @@ n.r(t), n.d(t, {
 var i = n("446674"),
   r = n("913144");
 let s = {
-    enable_swipe_shortcuts: "Gestures shortcuts - swipe from right to left.",
     disable_alpha_voice_panel: "Disable new Voice Panel UI: Currently the new voice ui is defaulted ON for staff.  It's not feature complete so if there's something you are missing, or you find a problem, you can disable it here.",
     highlight_experimental_icons: "Highlight experimental icons",
     enable_last_channel: "Enable launch into last channel",
