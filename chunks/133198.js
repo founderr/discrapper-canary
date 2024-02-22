@@ -662,5 +662,8 @@ let a = {
     },
     "action-sheet-gradient-bg": {
       name: "bg-base-secondary"
+    },
+    "you-bar-bg": {
+      name: "bg-surface-overlay"
     }
   }
