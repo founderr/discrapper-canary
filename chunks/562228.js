@@ -12,14 +12,17 @@ n.r(t), n.d(t, {
   useCanPostPollsInChannel: function() {
     return E
   },
-  isAnswerFilled: function() {
+  useCanPostImagePolls: function() {
     return f
   },
-  isIncompleteAnswer: function() {
+  isAnswerFilled: function() {
     return _
   },
-  createPollServerDataFromCreateRequest: function() {
+  isIncompleteAnswer: function() {
     return g
+  },
+  createPollServerDataFromCreateRequest: function() {
+    return h
   }
 }), n("781738"), n("222007");
 var a = n("748820"),
@@ -71,15 +74,19 @@ function E(e) {
   return n || a
 }
 
-function f(e, t) {
-  return t === l.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? null != e.image : null != e.text && e.text.length > 0
+function f() {
+  return !1
 }
 
 function _(e, t) {
+  return t === l.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? null != e.image : null != e.text && e.text.length > 0
+}
+
+function g(e, t) {
   return t === l.PollLayoutTypes.DEFAULT && null != e.image && (null == e.text || 0 === e.text.length)
 }
 
-function g(e) {
+function h(e) {
   var t, n;
   if (null == e) return;
   let a = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {
