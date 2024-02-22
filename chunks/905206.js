@@ -162,7 +162,7 @@ function M(e, t, n) {
     return e + (null !== (s = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== s ? s : 0)
   }, 0), z = p.default.Messages.POLL_VOTES_COUNT.format({
     count: String(K)
-  }), Q = "".concat(z, " • ").concat(null != j ? j : p.default.Messages.POLL_EXPIRED), Z = Math.max(...L.map(e => {
+  }), Q = "".concat(z, "  •  ").concat(null != j ? j : p.default.Messages.POLL_EXPIRED), Z = Math.max(...L.map(e => {
     var t, n;
     let s = A(w, "".concat(e.answer_id));
     return null !== (n = null == s ? void 0 : null === (t = s.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0
