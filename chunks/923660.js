@@ -136,7 +136,7 @@ function j(e) {
     guildPlans: s,
     overrideGuild: t
   } = e;
-  return (0, a.jsxs)("div", {
+  return (0, a.jsxs)(i.Scroller, {
     className: m.content,
     children: [(0, a.jsxs)("div", {
       className: m.header,

@@ -28,7 +28,7 @@ var a = t("37983"),
         })
       }, 400)
     }, []);
-    return (0, a.jsxs)("div", {
+    return (0, a.jsxs)(c.Scroller, {
       className: N.content,
       children: [(0, a.jsxs)("div", {
         className: N.header,

@@ -33,7 +33,7 @@ function R(e) {
   let {
     count: s
   } = e, [t, i] = l.useState("server");
-  return (0, a.jsxs)("div", {
+  return (0, a.jsxs)(r.Scroller, {
     className: C.content,
     children: [(0, a.jsxs)("div", {
       className: n(C.header, A.header),
