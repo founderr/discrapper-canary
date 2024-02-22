@@ -65,52 +65,41 @@ function j(e) {
     return i(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
   }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), I = (0, r.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), {
     pendingAvatar: j,
-    pendingNickname: b,
-    pendingBanner: U,
-    pendingBio: B,
-    pendingPronouns: y,
-    pendingThemeColors: F,
-    source: G
-  } = (0, r.useStateFromStoresObject)([O.default], () => {
-    let {
-      pendingAvatar: e,
-      pendingNickname: t,
-      pendingBio: s,
-      pendingPronouns: a,
-      pendingBanner: n,
-      pendingThemeColors: l
-    } = O.default.getAllPending();
-    return {
-      pendingAvatar: e,
-      pendingNickname: t,
-      pendingBanner: n,
-      pendingBio: s,
-      pendingPronouns: a,
-      pendingThemeColors: l,
-      source: O.default.getSource()
-    }
-  });
+    pendingAvatarDecoration: b,
+    pendingProfileEffectId: U,
+    pendingNickname: B,
+    pendingBanner: y,
+    pendingBio: F,
+    pendingPronouns: G,
+    pendingThemeColors: k,
+    source: H
+  } = (0, r.useStateFromStoresObject)([O.default], () => ({
+    ...O.default.getAllPending(),
+    source: O.default.getSource()
+  }));
   if (n.useEffect(() => () => d.default.wait(A.resetAllPending), []), n.useEffect(() => {
-      null != G && E.default.trackWithMetadata(D.AnalyticEvents.SETTINGS_PANE_VIEWED, {
+      null != H && E.default.trackWithMetadata(D.AnalyticEvents.SETTINGS_PANE_VIEWED, {
         settings_type: "guild",
         destination_pane: D.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
-        source: G
+        source: H
       })
-    }, [G]), I) return (0, a.jsx)(c.default, {});
+    }, [H]), I) return (0, a.jsx)(c.default, {});
   if (!u) return (0, a.jsx)(o.Spinner, {});
-  let k = C.default.canUsePremiumProfileCustomization(l),
-    H = {
+  let w = C.default.canUsePremiumProfileCustomization(l),
+    V = {
       user: l,
       guild: t,
-      canUsePremiumCustomization: k,
+      canUsePremiumCustomization: w,
       onAvatarChange: A.setPendingAvatar,
       onBannerChange: A.setPendingBanner,
       onUpsellClick: P,
       pendingAvatar: j,
-      pendingBanner: U,
-      pendingBio: B,
-      pendingPronouns: y,
-      pendingNickname: b,
+      pendingAvatarDecoration: b,
+      pendingProfileEffectId: U,
+      pendingBanner: y,
+      pendingBio: F,
+      pendingPronouns: G,
+      pendingNickname: B,
       activityName: v.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
       activityCharacter: f.FakeActivityCharacter.PHIBI,
       openPremiumSettings: L
@@ -132,8 +121,8 @@ function j(e) {
           guildName: null == t ? void 0 : t.name
         }),
         profilePreview: (0, a.jsx)(m.default, {
-          ...H,
-          pendingThemeColors: F
+          ...V,
+          pendingThemeColors: k
         }),
         children: (0, a.jsx)(R.default, {})
       })]

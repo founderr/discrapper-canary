@@ -1,108 +1,116 @@
 "use strict";
-let i, r, l, u, a, s, o, d, c;
+let i, r, u, o, _, l, E, T, d, a, S;
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return C
   }
 });
-var f = n("446674"),
-  E = n("913144"),
-  _ = n("49111");
-let S = _.FormStates.CLOSED,
-  T = {},
-  I = !1;
+var c = n("446674"),
+  I = n("913144"),
+  s = n("49111");
+let f = s.FormStates.CLOSED,
+  N = {},
+  A = !1;
 
-function h() {
-  S = _.FormStates.CLOSED, T = {}, o = null, d = void 0, c = []
+function U() {
+  f = s.FormStates.CLOSED, N = {}, d = null, a = void 0, S = []
 }
 
-function v() {
-  N(), C(), T = {}, S = _.FormStates.OPEN
+function p() {
+  R(), D(), N = {}, f = s.FormStates.OPEN
 }
 
-function N() {
-  i = void 0, a = void 0
+function R() {
+  i = void 0, E = void 0, r = void 0
 }
 
-function C() {
-  r = void 0, l = void 0, u = void 0, s = void 0
+function D() {
+  o = void 0, _ = void 0, l = void 0, T = void 0, u = void 0
 }
-class p extends f.default.Store {
+class G extends c.default.Store {
   getFormState() {
-    return S
+    return f
   }
   getErrors() {
-    return T
+    return N
   }
   showNotice() {
-    return void 0 !== i || void 0 !== r || void 0 !== l || void 0 !== u || void 0 !== a || void 0 !== s
+    return void 0 !== i || void 0 !== r || void 0 !== u || void 0 !== o || void 0 !== _ || void 0 !== l || void 0 !== E || void 0 !== T
   }
   getPendingAvatar() {
     return i
   }
-  getPendingBanner() {
+  getPendingAvatarDecoration() {
     return r
   }
-  getPendingBio() {
-    return l
-  }
-  getPendingNickname() {
-    return a
-  }
-  getPendingPronouns() {
+  getPendingProfileEffectId() {
     return u
   }
+  getPendingBanner() {
+    return o
+  }
+  getPendingBio() {
+    return _
+  }
+  getPendingNickname() {
+    return E
+  }
+  getPendingPronouns() {
+    return l
+  }
   getPendingAccentColor() {
-    return a
+    return E
   }
   getPendingThemeColors() {
-    return s
+    return T
   }
   getAllPending() {
     return {
       pendingAvatar: i,
-      pendingBanner: r,
-      pendingBio: l,
-      pendingPronouns: u,
-      pendingNickname: a,
-      pendingThemeColors: s
+      pendingAvatarDecoration: r,
+      pendingProfileEffectId: u,
+      pendingBanner: o,
+      pendingBio: _,
+      pendingPronouns: l,
+      pendingNickname: E,
+      pendingThemeColors: T
     }
   }
   getGuild() {
-    return o
-  }
-  getSource() {
     return d
   }
+  getSource() {
+    return a
+  }
   getAnalyticsLocations() {
-    return c
+    return S
   }
   getIsDisableSubmit() {
-    return I
+    return A
   }
 }
-p.displayName = "GuildIdentitySettingsStore";
-var g = new p(E.default, {
+G.displayName = "GuildIdentitySettingsStore";
+var C = new G(I.default, {
   GUILD_IDENTITY_SETTINGS_INIT: function(e) {
-    o = e.guild, S = _.FormStates.OPEN, T = {}, d = e.source, c = e.analyticsLocations
+    d = e.guild, f = s.FormStates.OPEN, N = {}, a = e.source, S = e.analyticsLocations
   },
-  GUILD_IDENTITY_SETTINGS_CLOSE: h,
+  GUILD_IDENTITY_SETTINGS_CLOSE: U,
   GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-    v(), h()
+    p(), U()
   },
   GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
-    o = e.guild, T = {}
+    d = e.guild, N = {}
   },
   GUILD_IDENTITY_SETTINGS_SUBMIT: function() {
-    S = _.FormStates.SUBMITTING, T = {}
+    f = s.FormStates.SUBMITTING, N = {}
   },
   GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function(e) {
     var t;
-    if (S !== _.FormStates.SUBMITTING) return !1;
-    S = _.FormStates.OPEN, T = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (f !== s.FormStates.SUBMITTING) return !1;
+    f = s.FormStates.OPEN, N = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   USER_PROFILE_UPDATE_FAILURE: function(e) {
-    S = _.FormStates.OPEN, T = e.errors
+    f = s.FormStates.OPEN, N = e.errors
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function(e) {
     let {
@@ -110,47 +118,59 @@ var g = new p(E.default, {
     } = e;
     i = t
   },
+  GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION: function(e) {
+    let {
+      avatarDecoration: t
+    } = e;
+    r = t
+  },
+  GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: function(e) {
+    let {
+      profileEffectId: t
+    } = e;
+    u = t
+  },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: function(e) {
     let {
       banner: t
     } = e;
-    r = t
+    o = t
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: function(e) {
     let {
       bio: t
     } = e;
-    l = t
+    _ = t
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: function(e) {
     let {
       pronouns: t
     } = e;
-    u = t
+    l = t
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: function(e) {
     let {
       nickname: t
     } = e;
-    a = t
+    E = t
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: function(e) {
     let {
       themeColors: t
     } = e;
-    s = t
+    T = t
   },
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: N,
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: C,
-  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: v,
-  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: v,
+  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: R,
+  GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: D,
+  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: p,
+  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: p,
   GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function() {
-    T = {}
+    N = {}
   },
   GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT: function(e) {
     let {
       disable: t
     } = e;
-    I = t
+    A = t
   }
 })

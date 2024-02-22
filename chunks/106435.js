@@ -37,6 +37,7 @@ function o(e) {
     eventHandlers: p
   } = (0, a.default)({
     user: t,
+    guildId: null != n ? n : void 0,
     size: (0, l.getDecorationSizeForAvatarSize)(o),
     showPending: u,
     animateOnHover: d,

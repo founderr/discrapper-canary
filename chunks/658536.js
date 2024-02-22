@@ -29,6 +29,9 @@ let r = null,
       guildId: e,
       nick: null !== (n = c.nick) && void 0 !== n ? n : E.username,
       avatar: null !== (a = c.avatar) && void 0 !== a ? a : void 0,
+      avatarDecoration: null != c.avatarDecoration ? {
+        ...c.avatarDecoration
+      } : void 0,
       premiumSince: null !== (r = c.premiumSince) && void 0 !== r ? r : void 0,
       isPending: null !== (s = c.isPending) && void 0 !== s && s,
       user: {

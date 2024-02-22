@@ -1,86 +1,82 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return C
+    return N
   }
 });
 var a = s("37983"),
   n = s("884691"),
   l = s("414456"),
   i = s.n(l),
-  r = s("65597"),
-  o = s("77078"),
-  d = s("685665"),
-  u = s("493390"),
-  c = s("217513"),
-  S = s("790618"),
-  E = s("181114"),
-  T = s("599110"),
-  f = s("719923"),
-  m = s("906932"),
-  _ = s("570697"),
-  g = s("632892"),
-  h = s("49111"),
-  N = s("646718"),
-  I = s("782340"),
-  p = s("535031");
+  r = s("77078"),
+  o = s("685665"),
+  d = s("493390"),
+  u = s("181114"),
+  c = s("599110"),
+  S = s("719923"),
+  E = s("906932"),
+  T = s("570697"),
+  f = s("632892"),
+  m = s("49111"),
+  _ = s("646718"),
+  g = s("782340"),
+  h = s("535031");
 
-function C(e) {
+function N(e) {
   let {
     user: t,
     guild: s,
     className: l,
-    forcedDivider: C = !1,
-    withTutorial: A = !1,
-    showBorder: O = !1,
-    isTryItOutFlow: x = !1,
-    initialSelectedEffectId: R
-  } = e, M = (0, c.default)(t.id, null == s ? void 0 : s.id), D = f.default.canUsePremiumProfileCustomization(t), {
-    analyticsLocations: v
-  } = (0, d.default)(), {
-    pendingProfileEffectId: L,
-    errors: P
-  } = (0, r.useStateFromStoresObject)([S.default], () => ({
-    pendingProfileEffectId: S.default.getPendingProfileEffectId(),
-    errors: S.default.getErrors().profileEffect
-  })), j = n.useCallback(() => (0, u.openProfileEffectModal)({
-    analyticsLocations: v,
-    initialSelectedEffectId: R
-  }), [v, R]);
+    forcedDivider: N = !1,
+    withTutorial: I = !1,
+    showBorder: p = !1,
+    isTryItOutFlow: C = !1,
+    initialSelectedEffectId: A
+  } = e, O = (0, E.useGlobalOrGuildIdentityProfileEffect)(t, s), x = S.default.canUsePremiumProfileCustomization(t), {
+    analyticsLocations: R
+  } = (0, o.default)(), {
+    pendingProfileEffectId: M,
+    errors: D
+  } = (0, E.useGlobalOrGuildIdentityPendingProfileEffect)(s), v = n.useCallback(() => (0, d.openProfileEffectModal)({
+    analyticsLocations: R,
+    initialSelectedEffectId: A,
+    guild: s
+  }), [R, A, s]);
   n.useEffect(() => {
-    D && T.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: N.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
-      location_stack: v
+    x && c.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: _.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
+      location_stack: R
     })
-  }, [D, v]);
-  let b = x || void 0 !== L ? null != L : (null == M ? void 0 : M.profileEffectId) != null,
-    U = A ? E.default : o.Button;
-  return (0, a.jsx)(_.default, {
-    forcedDivider: C,
-    borderType: g.FeatureBorderTypes.PREMIUM,
+  }, [x, R]);
+  let L = null != s,
+    P = C || void 0 !== M ? null != M : null != O,
+    j = I ? u.default : r.Button;
+  return (0, a.jsx)(T.default, {
+    forcedDivider: N,
+    borderType: f.FeatureBorderTypes.PREMIUM,
     hasBackground: !0,
-    title: I.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
-    showBorder: O,
-    errors: P,
+    title: g.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
+    showBorder: p,
+    errors: D,
     className: l,
     children: (0, a.jsxs)("div", {
-      className: p.buttonsContainer,
-      children: [(0, a.jsx)(U, {
-        size: o.Button.Sizes.SMALL,
-        onClick: j,
+      className: h.buttonsContainer,
+      children: [(0, a.jsx)(j, {
+        size: r.Button.Sizes.SMALL,
+        onClick: v,
         className: i({
-          [p.buttonHighlighted]: A
+          [h.buttonHighlighted]: I
         }),
-        children: I.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
-      }), b && (0, a.jsx)(o.Button, {
-        className: p.removeButton,
-        color: o.Button.Colors.PRIMARY,
-        look: o.Button.Looks.LINK,
-        size: o.Button.Sizes.SMALL,
+        children: g.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
+      }), P && (0, a.jsx)(r.Button, {
+        className: h.removeButton,
+        color: r.Button.Colors.PRIMARY,
+        look: r.Button.Looks.LINK,
+        size: r.Button.Sizes.SMALL,
         onClick: function() {
-          (0, m.setNewPendingProfileEffectId)(null, null == M ? void 0 : M.profileEffectId)
+          (0, E.setNewPendingProfileEffectId)(null, O, s)
         },
-        children: I.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
+        children: L ? g.default.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : g.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
       })]
     })
   })
