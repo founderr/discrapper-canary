@@ -15,7 +15,6 @@ function i(e, t) {
   let n = (0, s.match)(t).with(l.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => a.normalStylesImageOnlyAnswers).otherwise(() => a.normalStylesDefault),
     i = {
       styles: {
-        loser: n,
         loserSelected: n,
         normal: n,
         notVoted: n,

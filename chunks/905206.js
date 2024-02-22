@@ -54,7 +54,7 @@ let C = e => (0, s.match)(e).with({
   didSelfVote: !0
 }, () => "loserSelected").with({
   isExpired: !0
-}, () => "loser").with({
+}, () => "notVoted").with({
   didSelfVote: !0,
   isExpired: !1
 }, () => "voted").with({

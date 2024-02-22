@@ -325,14 +325,14 @@ function F(e) {
 
 function w(e) {
   return (0, a.jsx)(k, {
-    color: _.default.POLLS_VICTOR_BORDER,
+    color: _.default.STATUS_POSITIVE,
     ...e
   })
 }
 
 function H(e) {
   return (0, a.jsx)(k, {
-    color: _.default.POLLS_VOTED_BORDER,
+    color: (0, f.getColor)(M.Color.BRAND_500),
     ...e
   })
 }(l = s || (s = {}))[l.LIST_ITEM = 0] = "LIST_ITEM", l[l.RADIO = 1] = "RADIO", l[l.CHECKBOX = 2] = "CHECKBOX", l[l.LIST_ITEM_BUTTON = 3] = "LIST_ITEM_BUTTON"
