@@ -11,11 +11,11 @@ var i = n("917351"),
   u = n("191225"),
   d = n("203288"),
   s = n("398604"),
-  E = n("401690"),
-  r = n("755624"),
+  r = n("401690"),
+  E = n("755624"),
   _ = n("374363"),
-  A = n("271938"),
-  c = n("870691"),
+  c = n("271938"),
+  A = n("870691"),
   C = n("42203"),
   T = n("816092"),
   S = n("546463"),
@@ -122,7 +122,7 @@ function Y(e) {
 }
 class w extends l.default.Store {
   initialize() {
-    this.waitFor(E.default, A.default, c.default, C.default, T.default, u.default, S.default, d.default, s.default, r.default, I.default, f.default, N.default, O.default, _.default)
+    this.waitFor(r.default, c.default, A.default, C.default, T.default, u.default, S.default, d.default, s.default, E.default, I.default, f.default, N.default, O.default, _.default)
   }
   getGuild(e, t) {
     let n = g.getGuild(e, t);
@@ -240,7 +240,7 @@ var W = new w(a.default, {
       guildId: t,
       user: n
     } = e;
-    return A.default.getId() === n.id && g.clearGuildId(t)
+    return c.default.getId() === n.id && g.clearGuildId(t)
   },
   GUILD_MUTE_EXPIRED: m,
   GUILD_ROLE_CREATE: m,
@@ -255,6 +255,14 @@ var W = new w(a.default, {
   GUILD_UPDATE: M,
   IMPERSONATE_STOP: m,
   IMPERSONATE_UPDATE: m,
+  LOAD_CHANNELS: function(e) {
+    e.channels.forEach(e => {
+      let {
+        guildId: t
+      } = e;
+      return g.clearGuildId(t)
+    })
+  },
   LOAD_MESSAGES_SUCCESS: U,
   MESSAGE_ACK: U,
   MESSAGE_CREATE: function(e) {
