@@ -89,6 +89,7 @@ function C(e) {
             },
             className: h.itemContainer,
             children: (0, i.jsx)(o.default, {
+              className: h.seoAnchor,
               href: f.Routes.APPLICATION_DIRECTORY_PROFILE(s.id),
               children: (0, i.jsx)(d.default, {
                 application: s,
