@@ -150,12 +150,12 @@ let F = s.memo(function(e) {
   }(w.ref);
   let Y = (0, u.useFocusJumpSection)(),
     {
-      ref: X,
-      ...q
+      ref: q,
+      ...X
     } = (0, r.getContainerPropsFromNavigator)(G),
     J = s.useCallback(e => {
       var t;
-      w.ref.current = e, X.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
+      w.ref.current = e, q.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
     }, []);
   return (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: G,
@@ -178,7 +178,7 @@ let F = s.memo(function(e) {
           "aria-label": b.default.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
             channelName: C.name
           }),
-          ...q,
+          ...X,
           children: [(0, a.jsx)("span", {
             className: H.navigationDescription,
             id: "messagesNavigationDescription",

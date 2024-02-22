@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return Y
   },
   default: function() {
-    return q
+    return X
   }
 }), n("702976");
 var a = n("37983"),
@@ -77,7 +77,7 @@ function Y(e) {
     popouts: C,
     setPopout: p
   } = (0, D.default)(s.id, V.DEFAULT_POPOUTS), E = (0, L.default)(s), g = (0, x.getMessageAriaLabelledBy)(s), S = (0, x.getMessageAriaDescribedBy)(s);
-  return s.type === W.MessageTypes.THREAD_STARTER_MESSAGE && null != h && h.state === m.ReferencedMessageState.LOADED ? (0, a.jsx)(X, {
+  return s.type === W.MessageTypes.THREAD_STARTER_MESSAGE && null != h && h.state === m.ReferencedMessageState.LOADED ? (0, a.jsx)(q, {
     ...e,
     message: h.message,
     groupId: h.message.id
@@ -106,7 +106,7 @@ function Y(e) {
   })
 }
 
-function X(e) {
+function q(e) {
   var t, n, l, r, o;
   let {
     id: C,
@@ -127,9 +127,9 @@ function X(e) {
   } = (0, u.useListItem)(null !== (n = e.id) && void 0 !== n ? n : ""), {
     isFocused: K,
     handleFocus: Y,
-    handleBlur: X
+    handleBlur: q
   } = (0, y.useFocusInside)(F), {
-    popouts: q,
+    popouts: X,
     selected: J,
     setPopout: Q
   } = (0, D.default)(E.id, V.DEFAULT_POPOUTS), $ = S.InlineEmbedMedia.useSetting(), ee = S.RenderEmbeds.useSetting(), et = (0, d.useStateFromStores)([m.default], () => m.default.getMessageByReference(H)), en = (0, h.useShowImprovedMarkdownUserExperimentConfig)((null !== (l = E.editedTimestamp) && void 0 !== l ? l : E.timestamp).valueOf()), ea = (0, h.useShowImprovedMarkdownGuildExperimentConfig)(null !== (r = null === (t = e.channel) || void 0 === t ? void 0 : t.guild_id) && void 0 !== r ? r : "", (null !== (o = E.editedTimestamp) && void 0 !== o ? o : E.timestamp).valueOf()), {
@@ -174,12 +174,12 @@ function X(e) {
       zalgo: !0,
       onKeyDown: ef,
       onFocus: Y,
-      onBlur: X,
-      childrenRepliedMessage: (0, G.default)(e, Q, q, H, et),
+      onBlur: q,
+      childrenRepliedMessage: (0, G.default)(e, Q, X, H, et),
       childrenHeader: (0, U.default)({
         messageProps: e,
         setPopout: Q,
-        messagePopouts: q,
+        messagePopouts: X,
         replyReference: H,
         author: eh,
         repliedMessage: et,
@@ -203,7 +203,7 @@ function X(e) {
     })]
   })
 }
-var q = s.memo(function(e) {
+var X = s.memo(function(e) {
   var t, n, l;
   let r;
   let {
@@ -214,9 +214,9 @@ var q = s.memo(function(e) {
     },
     channel: Y,
     channel: {
-      id: X
+      id: q
     },
-    compact: q = !1,
+    compact: X = !1,
     className: J,
     flashKey: Q,
     groupId: $,
@@ -250,7 +250,7 @@ var q = s.memo(function(e) {
       handleFocus: eg,
       handleBlur: eS
     } = (0, y.useFocusInside)(en),
-    e_ = (0, d.useStateFromStores)([T.default], () => T.default.isEditing(X, K), [X, K]),
+    e_ = (0, d.useStateFromStores)([T.default], () => T.default.isEditing(q, K), [q, K]),
     eT = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled),
     eA = eo || e_ || eT && eE,
     eM = eA || ep,
@@ -270,9 +270,9 @@ var q = s.memo(function(e) {
       allowLinks: ev.showMaskedLinks || eL.showMaskedLinks,
       previewLinkTarget: ev.showMaskedLinks || eL.showMaskedLinks
     }),
-    ey = (0, O.default)(K, X, eT),
+    ey = (0, O.default)(K, q, eT),
     eO = (0, L.default)(N),
-    eD = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(X)),
+    eD = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(q)),
     eP = function(e) {
       let t = s.useRef(e);
       return s.useEffect(() => void(t.current = null != e ? e : t.current)), null != e ? e : t.current
@@ -311,11 +311,11 @@ var q = s.memo(function(e) {
           onContextMenu: ed,
           onKeyDown: ey,
           onClick: ec,
-          compact: q,
+          compact: X,
           contentOnly: ee,
           className: i(J, {
             [z.message]: !0,
-            [z.cozyMessage]: !q,
+            [z.cozyMessage]: !X,
             [z.mentioned]: N.mentioned && !(0, v.default)(N),
             [z.ephemeral]: (0, M.hasFlag)(N.flags, W.MessageFlags.EPHEMERAL),
             [z.systemMessage]: (0, v.default)(N),
@@ -365,7 +365,7 @@ var q = s.memo(function(e) {
     flashKey: eP,
     className: i({
       [z.backgroundFlash]: !0,
-      [z.groupStart]: !q && N.id === $
+      [z.groupStart]: !X && N.id === $
     }),
     children: eG
   }, "bg-flash-".concat(g)) : eG

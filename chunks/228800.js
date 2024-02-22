@@ -52,8 +52,8 @@ var a = n("37983"),
         canOnlyUseTextCommands: K
       } = e,
       Y = (0, f.useAppContext)(),
-      X = s.useRef(null),
-      q = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
+      q = s.useRef(null),
+      X = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
       J = (0, r.useStateFromStores)([m.default], () => m.default.getSettings().clipsEnabled),
       Q = (0, r.useStateFromStores)([m.default], () => m.default.getLastClipsSession()),
       $ = (0, r.useStateFromStoresArray)([m.default], () => m.default.getNewClipIds()),
@@ -98,7 +98,7 @@ var a = n("37983"),
     s.useEffect(() => {
       let e = () => {
         var e;
-        return null === (e = X.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+        return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
       };
       return O.ComponentDispatch.subscribe(H.ComponentActions.UPLOAD_FILE, e), () => {
         O.ComponentDispatch.unsubscribe(H.ComponentActions.UPLOAD_FILE, e)
@@ -119,15 +119,15 @@ var a = n("37983"),
         hasClips: eo,
         canUseApplicationCommands: em,
         channel: V,
-        activities: q,
+        activities: X,
         newClipsCount: eT,
         canPostPolls: eg,
         canLaunchActivities: null !== (w = null == e_ ? void 0 : e_.showInOmniButtonMenu) && void 0 !== w && w,
         appContext: Y
       });
     if (0 === eA.length) return null;
-    let eM = q.some(e => (0, C.default)(e, H.ActivityFlags.SYNC)),
-      eI = q.some(e => (0, C.default)(e, H.ActivityFlags.JOIN) && !(0, C.default)(e, H.ActivityFlags.EMBEDDED)) || eM;
+    let eM = X.some(e => (0, C.default)(e, H.ActivityFlags.SYNC)),
+      eI = X.some(e => (0, C.default)(e, H.ActivityFlags.JOIN) && !(0, C.default)(e, H.ActivityFlags.EMBEDDED)) || eM;
     G = eS ? (0, a.jsx)(o.CirclePlusIcon, {
       className: k.attachButtonIcon,
       colorClass: k.attachButtonPlus
@@ -175,7 +175,7 @@ var a = n("37983"),
               channel: V,
               onFileUpload: () => {
                 var e;
-                return null === (e = X.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+                return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
               },
               draftType: W,
               editorTextContent: Z,
@@ -194,7 +194,7 @@ var a = n("37983"),
         "aria-label": U.default.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
         onDoubleClick: ed ? () => {
           var e;
-          return null === (e = X.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+          return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
         } : void 0,
         ...e,
         children: G
@@ -204,7 +204,7 @@ var a = n("37983"),
       children: [(0, a.jsx)("div", {
         className: k.uploadInput,
         children: (0, a.jsx)(d.default, {
-          ref: X,
+          ref: q,
           onChange: e => {
             ef(e.currentTarget.files, e.currentTarget.err), e.currentTarget.value = ""
           },

@@ -51,8 +51,8 @@ function b(e) {
   } = (0, R.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
     disableReactionUpdates: K,
     disableReactionCreates: Y,
-    isLurking: X,
-    isGuest: q,
+    isLurking: q,
+    isGuest: X,
     isPendingMember: J
   } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(b)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = s.useCallback(e => {
     let t = e[0];
@@ -106,8 +106,8 @@ function b(e) {
             message: Z,
             readOnly: !1,
             useChatFontScaling: !1,
-            isLurking: X,
-            isGuest: q,
+            isLurking: q,
+            isGuest: X,
             isPendingMember: J,
             emoji: ee,
             type: C.ReactionTypes.NORMAL,
@@ -122,8 +122,8 @@ function b(e) {
           channel: W,
           disableReactionCreates: !Q || Y,
           disableReactionUpdates: K,
-          isLurking: X,
-          isGuest: q,
+          isLurking: q,
+          isGuest: X,
           isPendingMember: J,
           maxReactions: U,
           className: P.reactions,

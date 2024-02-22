@@ -215,11 +215,11 @@ function P(e) {
       var e;
       (0, m.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : R.EMPTY_STRING_GUILD_ID)
     }, [l]), null == l) return null;
-  let X = [];
-  !f && (A && X.push((0, a.jsx)(o.default.div, {
+  let q = [];
+  !f && (A && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[X.length]
+      opacity: z[q.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("243826"),
@@ -227,10 +227,10 @@ function P(e) {
       completed: H,
       onClick: k
     })
-  }, "invite")), P && X.push((0, a.jsx)(o.default.div, {
+  }, "invite")), P && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[X.length]
+      opacity: z[q.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("215036"),
@@ -238,10 +238,10 @@ function P(e) {
       completed: U,
       onClick: G
     })
-  }, "customize")), j && X.push((0, a.jsx)(o.default.div, {
+  }, "customize")), j && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[X.length]
+      opacity: z[q.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("505873"),
@@ -249,10 +249,10 @@ function P(e) {
       completed: F,
       onClick: w
     })
-  }, "message")), (0, N.isWeb)() && X.push((0, a.jsx)(o.default.div, {
+  }, "message")), (0, N.isWeb)() && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[X.length]
+      opacity: z[q.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("238032"),
@@ -260,10 +260,10 @@ function P(e) {
       completed: b,
       onClick: B
     })
-  }, "download")), X.push((0, a.jsx)(o.default.div, {
+  }, "download")), q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[X.length]
+      opacity: z[q.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("356451"),
@@ -272,8 +272,8 @@ function P(e) {
       onClick: V
     })
   }, "addapp")));
-  let q = T ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
-  f && (q = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
+  let X = T ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
+  f && (X = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
   let J = "".concat(I.default.getArticleURL(R.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
   return (0, a.jsx)(L.default, {
     channelId: t.id,
@@ -293,14 +293,14 @@ function P(e) {
             color: "header-secondary",
             className: i({
               [O.subtitle]: !0,
-              [O.noChildren]: 0 === X.length
+              [O.noChildren]: 0 === q.length
             }),
             variant: "text-sm/normal",
-            children: [q, " ", X.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
+            children: [X, " ", q.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
               guideURL: J
             }) : null]
           })]
-        }), X]
+        }), q]
       })
     })
   })

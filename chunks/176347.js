@@ -50,8 +50,8 @@ var a = n("37983"),
   z = n("818950"),
   K = n("28007"),
   Y = n("880731"),
-  X = n("943551"),
-  q = n("667137"),
+  q = n("943551"),
+  X = n("667137"),
   J = n("445499"),
   Q = n("319939"),
   $ = n("529805"),
@@ -282,7 +282,7 @@ class eO extends s.PureComponent {
       if (!this.props.poggermodeEnabled) return;
       let a = this.props.channel.id,
         s = ea.default.getId(),
-        l = X.default.getUserCombo(s, a),
+        l = q.default.getUserCombo(s, a),
         i = (null !== (n = null == l ? void 0 : l.value) && void 0 !== n ? n : 0) + 1;
       (0, K.updateCombo)({
         channelId: a,
@@ -545,7 +545,7 @@ class eD extends s.PureComponent {
                 ref: this.inputFormRef,
                 onSubmit: eR,
                 className: eL.form,
-                children: [S && (0, a.jsx)(q.default, {
+                children: [S && (0, a.jsx)(X.default, {
                   channelId: n.id
                 }), n.isPrivate() ? (0, a.jsx)(eM.default, {
                   channel: n,

@@ -50,8 +50,8 @@ var a = n("37983"),
   z = n("306160"),
   K = n("870190"),
   Y = n("61400"),
-  X = n("327054"),
-  q = n("583022"),
+  q = n("327054"),
+  X = n("583022"),
   J = n("363396"),
   Q = n("891405"),
   $ = n("261649"),
@@ -186,11 +186,11 @@ function er(e) {
     }), [t, I]), O = (0, _.useCanReplyToMessage)(t, n), D = (0, T.useCanStartPublicThread)(t, n), P = (0, T.useCanViewThreadForMessage)(n), j = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (x || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
     n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && x);
     let U = (0, K.canReportMessage)(n),
-      k = (0, X.default)(n, t, x),
+      k = (0, q.default)(n, t, x),
       w = !t.isSystemDM() && (0, Y.default)(n, f) && h && !m,
       {
         disableReactionCreates: G
-      } = (0, q.default)({
+      } = (0, X.default)({
         channel: t,
         canChat: I,
         renderReactions: g,
