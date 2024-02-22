@@ -65,7 +65,7 @@ var l = n("37983"),
       null != O && (0, E.enrollInQuest)(O.id, g.QuestContent.QUEST_LIVE_STREAM)
     }, [O]), F = a.useCallback(() => {
       o.default.open(N.UserSettingsSections.INVENTORY)
-    }, []), k = (0, v.useHandleClaimQuestsReward)(O);
+    }, []), k = (0, v.useHandleClaimQuestsReward)(O, g.QuestContent.QUEST_LIVE_STREAM);
     if (null == O) return null;
     let B = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
       V = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null;

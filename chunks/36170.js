@@ -123,64 +123,65 @@ function D(e) {
   let {
     transitionState: s,
     onClose: n,
-    quest: o
-  } = e, f = l.useMemo(() => {
+    quest: o,
+    location: f
+  } = e, h = l.useMemo(() => {
     var e;
     return (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null
-  }, []), h = o.config.rewardCodePlatforms.length > 1, [E, C] = l.useState(h ? null : o.config.rewardCodePlatforms[0]), {
-    rewardCode: p,
-    isFetchingRewardCode: g,
-    isClaimingRewardCode: M
+  }, []), E = o.config.rewardCodePlatforms.length > 1, [C, p] = l.useState(E ? null : o.config.rewardCodePlatforms[0]), {
+    rewardCode: g,
+    isFetchingRewardCode: M,
+    isClaimingRewardCode: N
   } = (0, r.useStateFromStoresObject)([x.default], () => ({
     rewardCode: x.default.getRewardCode(o.id),
     isFetchingRewardCode: x.default.isFetchingRewardCode(o.id),
     isClaimingRewardCode: x.default.isClaimingRewardCode(o.id)
-  })), [N, D] = l.useState(!1), O = h && (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null && null == p, j = l.useCallback((e, t) => {
-    D(!1), (0, v.claimQuestRewardCode)(e, t).catch(() => D(!0))
-  }, []), y = l.useCallback(e => {
-    D(!1), (0, v.fetchQuestRewardCode)(e).catch(() => D(!0))
+  })), [D, O] = l.useState(!1), j = E && (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null && null == g, y = l.useCallback((e, t, s) => {
+    O(!1), (0, v.claimQuestRewardCode)(e, t, s).catch(() => O(!0))
+  }, []), L = l.useCallback(e => {
+    O(!1), (0, v.fetchQuestRewardCode)(e).catch(() => O(!0))
   }, []);
   l.useEffect(() => {
     var e, t;
-    null == p && !N && !M && !g && !O && ((null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != E ? j(o.id, E) : (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null && y(o.id))
-  }, [o, p, M, g, N, O, E, j, y]);
-  let L = null;
-  f && null != p ? L = A.default.Messages.QUESTS_REWARD_CODE_HEADER : null != p ? L = A.default.Messages.QUESTS_REWARD_CODE_CONGRATS : O && (L = A.default.Messages.QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER);
-  let B = null != L ? (0, a.jsx)(m.Heading, {
+    null == g && !D && !N && !M && !j && ((null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != C ? y(o.id, C, f) : (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null && L(o.id))
+  }, [o, g, N, M, D, j, C, f, y, L]);
+  let B = null;
+  h && null != g ? B = A.default.Messages.QUESTS_REWARD_CODE_HEADER : null != g ? B = A.default.Messages.QUESTS_REWARD_CODE_CONGRATS : j && (B = A.default.Messages.QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER);
+  let b = null != B ? (0, a.jsx)(m.Heading, {
       variant: "heading-xl/semibold",
       color: "header-primary",
       className: I.heading,
-      children: L
+      children: B
     }) : null,
-    b = null;
-  O && (b = A.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS.format({
+    U = null;
+  j && (U = A.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS.format({
     rewardName: o.config.messages.rewardName
   }));
-  let U = null != E ? o.config.messages.rewardRedemptionInstructionsByPlatform[E] : void 0;
-  null != p && null != U && (b = U);
-  let k = null != b ? (0, a.jsx)(m.Text, {
+  let k = null != C ? o.config.messages.rewardRedemptionInstructionsByPlatform[C] : void 0;
+  null != g && null != k && (U = k);
+  let P = null != U ? (0, a.jsx)(m.Text, {
       variant: "text-sm/normal",
       color: "text-normal",
       className: I.bodyCopy,
-      children: b
+      children: U
     }) : null,
-    P = l.useMemo(() => o.config.rewardCodePlatforms.map(e => ({
+    F = l.useMemo(() => o.config.rewardCodePlatforms.map(e => ({
       label: (0, T.getPlatformString)(e),
       value: e
     })), [o.config.rewardCodePlatforms]),
-    F = null;
-  O && (F = (0, a.jsxs)(m.FormItem, {
+    Q = null;
+  j && (Q = (0, a.jsxs)(m.FormItem, {
     title: A.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL,
     children: [(0, a.jsx)(m.Select, {
       placeholder: A.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER,
-      options: P,
+      options: F,
       select: e => {
-        D(!1), C(e)
+        O(!1), p(e)
       },
-      isSelected: e => e === E,
+      isSelected: e => e === C,
       serialize: e => (0, T.getPlatformString)(e),
-      className: N ? I.errorInput : "",
-      isDisabled: M,
+      className: D ? I.errorInput : "",
+      isDisabled: N,
       renderOptionLabel: e => {
         let t = function(e) {
           switch (e) {
@@ -213,23 +214,23 @@ function D(e) {
           children: [t, e.label]
         })
       }
-    }), N ? (0, a.jsx)(m.InputError, {
+    }), D ? (0, a.jsx)(m.InputError, {
       error: A.default.Messages.QUESTS_REWARD_CODE_ERROR
     }) : null]
   }));
-  let Q = null == p && (g || M),
-    W = Q && !O ? (0, a.jsx)(m.Spinner, {
+  let W = null == g && (M || N),
+    H = W && !j ? (0, a.jsx)(m.Spinner, {
       className: I.spinner
     }) : null,
-    H = null;
-  null != p ? H = (0, a.jsx)(m.FormItem, {
+    Z = null;
+  null != g ? Z = (0, a.jsx)(m.FormItem, {
     title: A.default.Messages.QUESTS_REWARD_CODE_HEADER,
     children: (0, a.jsx)(R.default, {
-      value: p.code,
+      value: g.code,
       delay: 1e3,
       buttonColor: m.Button.Colors.BRAND
     })
-  }) : N && !O && (H = (0, a.jsx)(m.FormItem, {
+  }) : D && !j && (Z = (0, a.jsx)(m.FormItem, {
     title: A.default.Messages.QUESTS_REWARD_CODE_HEADER,
     children: (0, a.jsx)(m.TextInput, {
       disabled: !0,
@@ -237,19 +238,19 @@ function D(e) {
       inputClassName: I.errorInput
     })
   }));
-  let Z = () => {
+  let V = () => {
       var e;
-      O && null != E ? j(o.id, E) : N ? (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null ? y(o.id) : null != E && j(o.id, E) : n()
+      j && null != C ? y(o.id, C, f) : D ? (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null ? L(o.id) : null != C && y(o.id, C, f) : n()
     },
-    V = O && M,
-    z = !V && (O && null == E || Q),
-    Y = A.default.Messages.QUESTS_REWARD_CODE_DONE;
-  O ? Y = A.default.Messages.QUESTS_REWARD_CODE_GET_CODE : !O && N && (Y = A.default.Messages.QUESTS_REWARD_CODE_TRY_AGAIN);
-  let G = (0, a.jsx)(m.Button, {
-    onClick: () => Z(),
-    submitting: V,
-    disabled: z,
-    children: Y
+    z = j && N,
+    Y = !z && (j && null == C || W),
+    G = A.default.Messages.QUESTS_REWARD_CODE_DONE;
+  j ? G = A.default.Messages.QUESTS_REWARD_CODE_GET_CODE : !j && D && (G = A.default.Messages.QUESTS_REWARD_CODE_TRY_AGAIN);
+  let X = (0, a.jsx)(m.Button, {
+    onClick: () => V(),
+    submitting: z,
+    disabled: Y,
+    children: G
   });
   return (0, a.jsxs)(m.ModalRoot, {
     transitionState: s,
@@ -261,13 +262,13 @@ function D(e) {
         onClick: () => n()
       }), (0, a.jsx)(w, {
         quest: o,
-        rewardCode: p
+        rewardCode: g
       }), (0, a.jsxs)("div", {
         className: I.modalContent,
-        children: [B, k, F, W, H]
+        children: [b, P, Q, H, Z]
       })]
     }), (0, a.jsx)(m.ModalFooter, {
-      children: G
+      children: X
     })]
   })
 }

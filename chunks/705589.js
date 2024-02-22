@@ -41,7 +41,7 @@ let N = s.forwardRef(function(e, t) {
     dateStyle: "long"
   }), [D.config.expiresAt, b]), G = s.useMemo(() => D.config.videoAssets.includes(_.QuestContent.QUEST_BAR), [D]), j = s.useCallback(() => {
     (0, E.enrollInQuest)(D.id, _.QuestContent.QUEST_BAR)
-  }, [D]), w = (0, T.useHandleClaimQuestsReward)(D), k = (null === (n = D.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null;
+  }, [D]), w = (0, T.useHandleClaimQuestsReward)(D, _.QuestContent.QUEST_BAR), k = (null === (n = D.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null;
   return (0, a.jsx)(r.animated.div, {
     "aria-hidden": !O && v,
     className: i(N, A.contentExpanded),

@@ -16,18 +16,19 @@ var s = n("37983"),
   u = n("2973"),
   d = n("166604");
 
-function c(e) {
+function c(e, t) {
   return l.useCallback(() => {
     null != e && (0, a.openModalLazy)(async () => {
       let {
-        default: t
+        default: l
       } = await n.el("36170").then(n.bind(n, "36170"));
-      return n => (0, s.jsx)(t, {
+      return n => (0, s.jsx)(l, {
         ...n,
-        quest: e
+        quest: e,
+        location: t
       })
     })
-  }, [e])
+  }, [e, t])
 }
 
 function E(e) {

@@ -84,7 +84,7 @@ var N = function(e) {
     (0, E.enrollInQuest)(N.id, _.QuestContent.ACTIVITY_PANEL)
   }, [N]), P = s.useCallback(() => {
     d.default.open(p.UserSettingsSections.INVENTORY)
-  }, []), D = (0, S.useHandleClaimQuestsReward)(N);
+  }, []), D = (0, S.useHandleClaimQuestsReward)(N, _.QuestContent.ACTIVITY_PANEL);
   s.useEffect(() => {
     O.current = c
   }, [c]), s.useEffect(() => () => {

@@ -24,11 +24,12 @@ let T = (e, t, n) => n ? f.default.Messages.QUESTS_SHOW_CODE : e || t ? f.defaul
     return (null === (l = e.userStatus) || void 0 === l ? void 0 : l.enrolledAt) != null || (null === (a = e.userStatus) || void 0 === a ? void 0 : a.completedAt) != null || (null === (i = e.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null ? () => {
       (0, r.openModalLazy)(async () => {
         let {
-          default: t
+          default: l
         } = await n.el("36170").then(n.bind(n, "36170"));
-        return n => (0, s.jsx)(t, {
+        return n => (0, s.jsx)(l, {
           ...n,
-          quest: e
+          quest: e,
+          location: t
         })
       })
     } : () => {
