@@ -12,8 +12,8 @@ var _ = E("249654"),
   a = E("138505"),
   A = E("117933"),
   i = E("922832");
-let u = null,
-  r = null,
+let r = null,
+  u = null,
   l = {},
   C = D(),
   d = f(),
@@ -91,7 +91,7 @@ function U(e) {
     teenId: s,
     rangeStartId: a
   } = E;
-  u = s, r = a, y(T), O(I), F(n), Y(t), S = !1, M = _.default.fromTimestamp(Date.now()), R = !0
+  r = s, u = a, y(T), O(I), F(n), Y(t), S = !1, M = _.default.fromTimestamp(Date.now()), R = !0
 }
 
 function g(e) {
@@ -120,7 +120,7 @@ function V(e) {
     teenId: I,
     rangeStartId: s
   } = t;
-  u = I, r = s, y(E), O(T), F(n), S = !1, M = _.default.fromTimestamp(Date.now())
+  r = I, u = s, y(E), O(T), F(n), S = !1, M = _.default.fromTimestamp(Date.now())
 }
 
 function m(e) {
@@ -185,22 +185,9 @@ function w(e) {
 }
 
 function Q() {
-  u = null, r = null, l = {}, C = D(), d = f(), c = {}, S = !1, M = null
+  r = null, u = null, l = {}, C = D(), d = f(), c = {}, S = !1, M = null
 }
 class b extends n.default {
-  initialize() {
-    this.waitFor(I.default)
-  }
-  loadCache() {
-    let e = this.readSnapshot(b.LATEST_SNAPSHOT_VERSION);
-    if (null != e) Y(e.linkedUsers), F(e.guilds), y(e.teenActivity), d = e.teenActivityTotals.reduce((e, t) => {
-      let [E, _] = t.split(":"), T = (0, A.displayTypeFromString)(E);
-      return void 0 === T ? e : {
-        ...e,
-        [T]: parseInt(_, 10)
-      }
-    }, f())
-  }
   takeSnapshot() {
     return {
       version: b.LATEST_SNAPSHOT_VERSION,
@@ -222,7 +209,7 @@ class b extends n.default {
     }
   }
   getSelectedTeenId() {
-    return u
+    return r
   }
   getLinkedUsers() {
     return l
@@ -233,7 +220,7 @@ class b extends n.default {
     return null == E ? null : null !== (t = E.updated_at) && void 0 !== t ? t : E.created_at
   }
   getRangeStartTimestamp() {
-    return null == r ? null : _.default.extractTimestamp(r)
+    return null == u ? null : _.default.extractTimestamp(u)
   }
   getActionsForDisplayType(e) {
     return Object.values(C[e])
@@ -251,7 +238,7 @@ class b extends n.default {
     return N
   }
   getStartId() {
-    return r
+    return u
   }
   getIsInitialized() {
     return R
@@ -266,9 +253,18 @@ class b extends n.default {
     return null === M || _.default.age(M) > i.FAMILY_CENTER_REFETCH_COOLDOWN
   }
   constructor() {
-    super({
+    super(), this.loadCache = () => {
+      let e = this.readSnapshot(b.LATEST_SNAPSHOT_VERSION);
+      if (null != e) Y(e.linkedUsers), F(e.guilds), y(e.teenActivity), d = e.teenActivityTotals.reduce((e, t) => {
+        let [E, _] = t.split(":"), T = (0, A.displayTypeFromString)(E);
+        return void 0 === T ? e : {
+          ...e,
+          [T]: parseInt(_, 10)
+        }
+      }, f())
+    }, this.registerActionHandlers({
       CURRENT_USER_UPDATE: k,
-      CACHE_LOADED_LAZY: () => this.loadCache(),
+      CACHE_LOADED_LAZY: this.loadCache,
       FAMILY_CENTER_INITIAL_LOAD: U,
       FAMILY_CENTER_FETCH_START: p,
       FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: g,
@@ -281,7 +277,7 @@ class b extends n.default {
       FAMILY_CENTER_HANDLE_TAB_SELECT: H,
       SET_LOCATION_METADATA: w,
       LOGOUT: Q
-    })
+    }), this.waitFor(I.default)
   }
 }
 b.displayName = "FamilyCenterStore", b.LATEST_SNAPSHOT_VERSION = 3;

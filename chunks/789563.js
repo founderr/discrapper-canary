@@ -443,10 +443,6 @@ class eo extends E.default {
       r && et()
     }()
   }
-  loadCache() {
-    let e = this.readSnapshot(eo.LATEST_SNAPSHOT_VERSION);
-    null != e && ("loadedUserExperiments" in e ? (D = e.loadedUserExperiments, y = Q(e.loadedGuildExperiments)) : q(e.rawUserExperiments, e.rawGuildExperiments))
-  }
   takeSnapshot() {
     return {
       version: eo.LATEST_SNAPSHOT_VERSION,
@@ -606,19 +602,22 @@ class eo extends E.default {
     return Y(e, t, n, i)
   }
   constructor() {
-    super({
+    super(), this.trackExposure = j, this.loadCache = () => {
+      let e = this.readSnapshot(eo.LATEST_SNAPSHOT_VERSION);
+      null != e && ("loadedUserExperiments" in e ? (D = e.loadedUserExperiments, y = Q(e.loadedGuildExperiments)) : q(e.rawUserExperiments, e.rawGuildExperiments))
+    }, this.registerActionHandlers({
       LOGOUT: $,
       LOGIN_SUCCESS: ee,
       CONNECTION_OPEN: z,
       EXPERIMENTS_FETCH_SUCCESS: z,
       OVERLAY_INITIALIZE: Z,
-      CACHE_LOADED: () => this.loadCache(),
+      CACHE_LOADED: this.loadCache,
       EXPERIMENTS_FETCH_FAILURE: J,
       EXPERIMENT_REGISTER_LEGACY: er,
       EXPERIMENT_OVERRIDE_BUCKET: es,
       GUILD_CREATE: ea,
       GUILD_UPDATE: ea
-    }), this.trackExposure = j
+    })
   }
 }
 eo.displayName = "ExperimentStore", eo.LATEST_SNAPSHOT_VERSION = 1;

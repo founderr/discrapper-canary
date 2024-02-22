@@ -15,8 +15,8 @@ var i = n("917351"),
   d = n("455079"),
   a = n("677099");
 let S = new Set,
-  I = new Set,
-  c = {},
+  c = new Set,
+  I = {},
   s = {},
   f = {},
   N = {},
@@ -25,25 +25,25 @@ let S = new Set,
   p = !1;
 
 function R() {
-  S.clear(), I.clear(), c = {}, s = {}, f = {}, N = {}, A = {}, U = !1
+  S.clear(), c.clear(), I = {}, s = {}, f = {}, N = {}, A = {}, U = !1
 }
 
 function D(e) {
   let {
     userId: t
   } = e;
-  I.add(t)
+  c.add(t)
 }
 
 function G(e) {
   let {
     userId: t
   } = e;
-  I.delete(t)
+  c.delete(t)
 }
 
 function C(e) {
-  I.delete(e.userId), f[e.userId] = r(e.mutualFriends).map(e => ({
+  c.delete(e.userId), f[e.userId] = r(e.mutualFriends).map(e => ({
     key: e.id,
     user: new _.default(e),
     status: T.default.getStatus(e.id)
@@ -66,7 +66,7 @@ function P(e) {
 }
 
 function g(e) {
-  var t, n, i, r, o, _, l, T, d, I, f, U, p, R, D, G, C;
+  var t, n, i, r, o, _, l, T, d, c, f, U, p, R, D, G, C;
   if (S.delete(e.user.id), null != e.mutual_guilds) {
     let t = {};
     e.mutual_guilds.forEach(e => {
@@ -89,13 +89,13 @@ function g(e) {
   }
   let O = null !== (d = e.premium_since) && void 0 !== d ? d : null,
     P = e.application;
-  if (c[e.user.id] = {
+  if (I[e.user.id] = {
       userId: e.user.id,
       banner: null === (t = e.user_profile) || void 0 === t ? void 0 : t.banner,
       accentColor: null === (n = e.user_profile) || void 0 === n ? void 0 : n.accent_color,
       themeColors: null === (i = e.user_profile) || void 0 === i ? void 0 : i.theme_colors,
       popoutAnimationParticleType: null === (r = e.user_profile) || void 0 === r ? void 0 : r.popout_animation_particle_type,
-      bio: null !== (I = null === (o = e.user_profile) || void 0 === o ? void 0 : o.bio) && void 0 !== I ? I : "",
+      bio: null !== (c = null === (o = e.user_profile) || void 0 === o ? void 0 : o.bio) && void 0 !== c ? c : "",
       profileEffectId: null === (l = e.user_profile) || void 0 === l ? void 0 : null === (_ = l.profile_effect) || void 0 === _ ? void 0 : _.id,
       pronouns: null !== (f = null === (T = e.user_profile) || void 0 === T ? void 0 : T.pronouns) && void 0 !== f ? f : "",
       connectedAccounts: null !== (U = e.connected_accounts.filter(e => u.default.isSupported(e.type))) && void 0 !== U ? U : [],
@@ -146,7 +146,7 @@ function L(e) {
   let {
     userId: n
   } = e;
-  c[n] = null !== (t = c[n]) && void 0 !== t ? t : {
+  I[n] = null !== (t = I[n]) && void 0 !== t ? t : {
     connectedAccounts: [],
     applicationRoleConnections: [],
     premiumSince: null,
@@ -203,9 +203,9 @@ function h(e) {
       popout_animation_particle_type: o,
       theme_colors: _,
       profileEffectId: l
-    } = e, E = c[t];
+    } = e, E = I[t];
     if (null == E) return !1;
-    c[t] = {
+    I[t] = {
       ...E,
       accentColor: n,
       banner: i,
@@ -230,28 +230,25 @@ function M(e) {
   let {
     user: t
   } = e;
-  if (S.has(t.id) || null == c[t.id]) return !1;
-  c[t.id].lastFetched = 0
+  if (S.has(t.id) || null == I[t.id]) return !1;
+  I[t.id].lastFetched = 0
 }
 
 function b() {
-  S.clear(), c = {}, s = {}
+  S.clear(), I = {}, s = {}
 }
 class B extends d.default {
-  initialize() {
-    this.waitFor(a.default), this.syncWith([o.default], b)
-  }
   isFetchingProfile(e) {
     return S.has(e)
   }
   isFetchingFriends(e) {
-    return I.has(e)
+    return c.has(e)
   }
   get isSubmitting() {
     return U
   }
   getUserProfile(e) {
-    return c[e]
+    return I[e]
   }
   getGuildMemberProfile(e, t) {
     var n;
@@ -275,13 +272,22 @@ class B extends d.default {
       version: B.LATEST_SNAPSHOT_VERSION,
       data: [{
         userId: e,
-        profile: c[e]
+        profile: I[e]
       }]
     }
   }
   constructor() {
-    super({
-      CACHE_LOADED_LAZY: () => this.loadCache(),
+    super(), this.loadCache = () => {
+      let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);
+      null != e && e.forEach(e => {
+        let {
+          userId: t,
+          profile: n
+        } = e;
+        I[t] = n
+      })
+    }, this.registerActionHandlers({
+      CACHE_LOADED_LAZY: this.loadCache,
       USER_PROFILE_FETCH_START: v,
       USER_PROFILE_FETCH_FAILURE: L,
       USER_PROFILE_FETCH_SUCCESS: g,
@@ -299,16 +305,7 @@ class B extends d.default {
       GUILD_MEMBER_UPDATE: M,
       USER_UPDATE: M,
       LOGOUT: R
-    }), this.loadCache = () => {
-      let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);
-      null != e && e.forEach(e => {
-        let {
-          userId: t,
-          profile: n
-        } = e;
-        c[t] = n
-      })
-    }
+    }), this.waitFor(a.default), this.syncWith([o.default], b)
   }
 }
 B.displayName = "UserProfileStore", B.LATEST_SNAPSHOT_VERSION = 1;

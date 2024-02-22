@@ -56,13 +56,6 @@ function g(e) {
   return r.has(t.id) && (r.delete(t.id), n = !0), n
 }
 class m extends i.default {
-  initialize() {
-    this.waitFor(s.default)
-  }
-  loadCache() {
-    let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
-    null != e && (r = new Set(e))
-  }
   takeSnapshot() {
     return {
       version: m.LATEST_SNAPSHOT_VERSION,
@@ -85,15 +78,18 @@ class m extends i.default {
     return o
   }
   constructor() {
-    super({
+    super(), this.loadCache = () => {
+      let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
+      null != e && (r = new Set(e))
+    }, this.registerActionHandlers({
       CONNECTION_OPEN: l,
       CONNECTION_OPEN_SUPPLEMENTAL: l,
-      CACHE_LOADED_LAZY: () => this.loadCache(),
+      CACHE_LOADED_LAZY: this.loadCache,
       CHANNEL_CREATE: _,
       CHANNEL_UPDATES: c,
       CHANNEL_DELETE: g,
       MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f
-    })
+    }), this.waitFor(s.default)
   }
 }
 m.displayName = "SpamMessageRequestStore", m.LATEST_SNAPSHOT_VERSION = 1;

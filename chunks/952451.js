@@ -409,13 +409,6 @@ function ec(e) {
   return H(t)
 }
 class eg extends v.default {
-  initialize() {
-    this.waitFor(_.default, h.default, m.default, g.default, f.default, p.default, E.default, a.default, o.default)
-  }
-  loadCache() {
-    let e = this.readSnapshot(eg.LATEST_SNAPSHOT_VERSION);
-    null != e && (S = e.guilds, A = new Set(e.unreadGuilds))
-  }
   takeSnapshot() {
     return {
       version: eg.LATEST_SNAPSHOT_VERSION,
@@ -497,10 +490,13 @@ class eg extends v.default {
     return O(e).sentinel
   }
   constructor() {
-    super({
+    super(), this.loadCache = () => {
+      let e = this.readSnapshot(eg.LATEST_SNAPSHOT_VERSION);
+      null != e && (S = e.guilds, A = new Set(e.unreadGuilds))
+    }, this.registerActionHandlers({
       CONNECTION_OPEN: x,
       OVERLAY_INITIALIZE: B,
-      CACHE_LOADED_LAZY: () => this.loadCache(),
+      CACHE_LOADED_LAZY: this.loadCache,
       GUILD_CREATE: j,
       GUILD_DELETE: K,
       MESSAGE_CREATE: Q,
@@ -544,7 +540,7 @@ class eg extends v.default {
       RESORT_THREADS: X,
       NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: e_,
       TRY_ACK: X
-    })
+    }), this.waitFor(_.default, h.default, m.default, g.default, f.default, p.default, E.default, a.default, o.default)
   }
 }
 eg.displayName = "GuildReadStateStore", eg.LATEST_SNAPSHOT_VERSION = 1;
