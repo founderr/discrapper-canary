@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return I
   }
 }), n("222007");
 var l = n("37983"),
@@ -17,66 +17,58 @@ var l = n("37983"),
   m = n("219013"),
   p = n("233069"),
   h = n("882641"),
-  E = n("599110"),
-  g = n("964261"),
-  S = n("407462"),
-  C = n("526409"),
-  T = n("314848"),
-  v = n("49111"),
-  I = n("782340"),
-  _ = n("789215");
-let N = (0, p.createChannelRecord)({
-    id: v.ONE_STRING_CHANNEL_ID,
-    type: v.ChannelTypes.DM
+  E = n("964261"),
+  g = n("49111"),
+  S = n("782340"),
+  C = n("789215");
+let T = (0, p.createChannelRecord)({
+    id: g.ONE_STRING_CHANNEL_ID,
+    type: g.ChannelTypes.DM
   }),
-  A = i.forwardRef(function(e, t) {
+  v = i.forwardRef(function(e, t) {
     let {
-      user: n,
-      activity: a,
+      replyPlaceholder: n,
+      replyHeaderText: a,
       onEnter: r,
       showPopout: m,
       children: p,
       hide: h
-    } = e, [E, S] = i.useState(""), [C, T] = i.useState((0, c.toRichValue)("")), v = (0, u.default)();
+    } = e, [g, v] = i.useState(""), [I, _] = i.useState((0, c.toRichValue)("")), N = (0, u.default)();
     return i.useEffect(() => {
-      S(""), T((0, c.toRichValue)(""))
+      v(""), _((0, c.toRichValue)(""))
     }, [m]), (0, l.jsx)(o.Popout, {
       align: "right",
       position: "bottom",
       shouldShow: m,
       disablePointerEvents: !1,
       renderPopout: () => (0, l.jsx)("div", {
-        className: s([_.reply, "theme-".concat(v)]),
+        className: s([C.reply, "theme-".concat(N)]),
         ref: t,
         children: (0, l.jsx)(o.FocusLock, {
           containerRef: t,
           children: (0, l.jsxs)("div", {
             children: [(0, l.jsx)(o.Text, {
               variant: "text-xs/bold",
-              className: _.replyHeader,
-              children: I.default.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({
-                activity: a.name
-              })
+              className: C.replyHeader,
+              children: null != a ? a : S.default.Messages.CHAT
             }), (0, l.jsx)(f.default, {
-              placeholder: I.default.Messages.TEXTAREA_PLACEHOLDER.format({
-                channel: "@".concat(n.globalName)
-              }),
-              className: _.replyInput,
+              placeholder: null != n ? n : S.default.Messages.CHAT,
+              className: C.replyInput,
               showRemainingCharsAfterCount: -1,
               allowNewLines: !1,
-              maxCharacterCount: g.MAX_CHAR_COUNT,
-              channel: N,
+              maxCharacterCount: E.MAX_CHAR_COUNT,
+              channel: T,
               onChange: (e, t, n) => {
-                S(t), T(n)
+                v(t), _(n)
               },
               type: d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT,
-              textValue: E,
-              richValue: C,
+              textValue: g,
+              richValue: I,
               onSubmit: e => {
                 let {
                   value: t
                 } = e;
-                return t.length > g.MAX_CHAR_COUNT ? Promise.resolve({
+                return t.length > E.MAX_CHAR_COUNT ? Promise.resolve({
                   shouldClear: !1,
                   shouldRefocus: !0
                 }) : (r(t), h(), Promise.resolve({
@@ -95,115 +87,99 @@ let N = (0, p.createChannelRecord)({
       children: () => p
     })
   });
-var y = e => {
+var I = e => {
   let {
-    activity: t,
-    user: n,
-    showReact: a = !0,
-    showReply: d = !0,
-    requireConfirmation: c = !1,
-    filename: f,
-    altText: p,
-    reactor: g,
-    analyticsParams: y
-  } = e, [x, O] = i.useState(!1), R = (0, u.default)(), [M, L] = i.useState(!1), [P, b] = i.useState(!1), [j, U] = i.useState(), [D, k] = i.useState(""), w = i.useRef(null), F = i.useRef(null), G = (0, T.default)(n);
+    onInteraction: t,
+    replyHeaderText: n,
+    replyPlaceholder: a,
+    showReact: d = !0,
+    showReply: c = !0
+  } = e, f = (0, u.default)(), [p, I] = i.useState(!1), [_, N] = i.useState(!1), A = i.useRef(null), y = i.useRef(null);
 
-  function B(e) {
+  function x(e) {
     var t, n;
-    null != e.target && (!(null == w ? void 0 : null === (t = w.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && L(!1), !(null == F ? void 0 : null === (n = F.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && b(!1))
+    null != e.target && (!(null == A ? void 0 : null === (t = A.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && I(!1), !(null == y ? void 0 : null === (n = y.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && N(!1))
   }
-
-  function H(e) {
-    E.default.track(v.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
-      application_id: t.application_id,
-      interaction_type: e,
-      ...y
-    })
-  }
-  return (i.useEffect(() => {
+  return i.useEffect(() => {
     let e = e => {
-      "Escape" === e.key && (b(!1), L(!1))
+      "Escape" === e.key && (N(!1), I(!1))
     };
-    return document.addEventListener("keydown", e), document.addEventListener("mousedown", B), () => {
-      document.removeEventListener("keydown", e), document.removeEventListener("mousedown", B)
+    return document.addEventListener("keydown", e), document.addEventListener("mousedown", x), () => {
+      document.removeEventListener("keydown", e), document.removeEventListener("mousedown", x)
     }
-  }, []), G) ? (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)("div", {
-      className: _.reactions,
-      children: [a && (0, l.jsx)(o.Popout, {
+  }, []), (0, l.jsx)(l.Fragment, {
+    children: (0, l.jsxs)("div", {
+      className: C.reactions,
+      children: [d && (0, l.jsx)(o.Popout, {
         align: "right",
         position: "top",
-        shouldShow: M,
+        shouldShow: p,
         disablePointerEvents: !1,
         renderPopout: () => (0, l.jsx)("div", {
-          className: "theme-".concat(R),
-          ref: w,
+          className: "theme-".concat(f),
+          ref: A,
           children: (0, l.jsx)(m.ReactionPicker, {
-            messageId: v.EMPTY_STRING_MESSAGE_ID,
-            channel: N,
+            messageId: g.EMPTY_STRING_MESSAGE_ID,
+            channel: T,
             closePopout: () => {
-              L(!1)
+              I(!1)
             },
             onSelectEmoji: e => {
-              null != e && (H(S.ActivityReactorInteractionTypes.ReactSubmit), U(e), L(!1), O(!0))
+              null != e && (t({
+                interactionType: E.AtomicReactorInteractionTypes.ReactSubmit,
+                emoji: e,
+                reply: null
+              }), I(!1))
             }
           })
         }),
         children: () => (0, l.jsx)(o.Tooltip, {
-          text: I.default.Messages.ADD_REACTION,
+          text: S.default.Messages.ADD_REACTION,
           children: e => (0, l.jsx)("div", {
             ...e,
-            className: _.reaction,
+            className: C.reaction,
             children: (0, l.jsx)(h.default, {
               active: !1,
               tabIndex: 0,
               onClick: () => {
-                H(S.ActivityReactorInteractionTypes.ReactBegin), L(!0), b(!1)
+                t({
+                  interactionType: E.AtomicReactorInteractionTypes.ReactBegin,
+                  emoji: null,
+                  reply: null
+                }), I(!0), N(!1)
               }
             })
           })
         })
-      }), d && (0, l.jsx)(A, {
-        hide: () => b(!1),
-        ref: F,
-        user: n,
-        activity: t,
-        showPopout: P,
+      }), c && (0, l.jsx)(v, {
+        hide: () => N(!1),
+        ref: y,
+        replyHeaderText: n,
+        replyPlaceholder: a,
+        showPopout: _,
         onEnter: e => {
-          H(S.ActivityReactorInteractionTypes.ReplySubmit), k(e), O(!0)
+          t({
+            interactionType: E.AtomicReactorInteractionTypes.ReplySubmit,
+            emoji: null,
+            reply: e
+          })
         },
         children: (0, l.jsx)(o.Tooltip, {
-          text: I.default.Messages.MESSAGE_ACTION_REPLY,
+          text: S.default.Messages.MESSAGE_ACTION_REPLY,
           children: e => (0, l.jsx)("button", {
             ...e,
-            className: s(_.reaction, _.emojiButton),
+            className: s(C.reaction, C.emojiButton),
             onClick: () => {
-              H(S.ActivityReactorInteractionTypes.ReplyBegin), b(!0)
+              t({
+                interactionType: E.AtomicReactorInteractionTypes.ReplyBegin,
+                emoji: null,
+                reply: null
+              }), N(!0)
             },
             children: (0, l.jsx)(r.ArrowAngleLeftUpIcon, {})
           })
         })
       })]
-    }), x && (0, l.jsx)(g, {
-      activity: t,
-      user: n,
-      onComplete: e => {
-        null != j ? (H(S.ActivityReactorInteractionTypes.ReactSend), (0, C.sendReaction)({
-          discordCanvas: e,
-          reaction: j,
-          user: n,
-          requireConfirmation: c,
-          filename: f,
-          altText: p
-        }), U(void 0)) : null != D && (H(S.ActivityReactorInteractionTypes.ReplySend), (0, C.sendReply)({
-          discordCanvas: e,
-          reply: D,
-          user: n,
-          requireConfirmation: c,
-          filename: f,
-          altText: p
-        }), k("")), O(!1)
-      }
-    })]
-  }) : null
+    })
+  })
 }

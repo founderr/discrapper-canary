@@ -1,15 +1,19 @@
 "use strict";
+async function l(e) {
+  let t = new i,
+    n = [];
+  for (let l of Object.keys(e)) n.push(t.loadRemoteImage(l, e[l]));
+  return await Promise.all(n), t
+}
 n.r(t), n.d(t, {
-  AssetMap: function() {
+  loadAssetMap: function() {
     return l
   }
-});
-class l {
-  async loadRemoteImage(e) {
-    let t = "string" == typeof e ? e : e.name,
-      n = "string" == typeof e ? e : e.url,
-      l = new Image;
-    l.src = n, l.crossOrigin = "anonymous", await l.decode(), this.assets[t] = l
+}), n("424973"), n("222007");
+class i {
+  async loadRemoteImage(e, t) {
+    let n = new Image;
+    n.src = t, n.crossOrigin = "anonymous", await n.decode(), this.assets[e] = n
   }
   get(e) {
     return this.assets[e]

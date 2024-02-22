@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   UserActivityTypes: function() {
-    return P
+    return b
   },
   default: function() {
-    return b
+    return j
   }
 });
 var l = n("37983"),
@@ -19,24 +19,25 @@ var l = n("37983"),
   f = n("299285"),
   m = n("267196"),
   p = n("945701"),
-  h = n("285749"),
-  E = n("78512"),
-  g = n("314848"),
-  S = n("699209"),
-  C = n("769791"),
-  T = n("373469"),
-  v = n("42203"),
-  I = n("305961"),
-  _ = n("957255"),
-  N = n("697218"),
+  h = n("964261"),
+  E = n("235932"),
+  g = n("78512"),
+  S = n("314848"),
+  C = n("699209"),
+  T = n("769791"),
+  v = n("373469"),
+  I = n("42203"),
+  _ = n("305961"),
+  N = n("957255"),
   A = n("800762"),
   y = n("313873"),
   x = n("599110"),
   O = n("474293"),
   R = n("49111"),
-  M = n("970574");
+  M = n("782340"),
+  L = n("970574");
 
-function L(e) {
+function P(e) {
   let {
     type: t,
     source: n,
@@ -50,7 +51,7 @@ function L(e) {
     actionColor: p
   } = e;
   return (0, l.jsx)(c.default, {
-    className: (0, O.getClass)(M, "actions", t),
+    className: (0, O.getClass)(L, "actions", t),
     type: t,
     source: n,
     activity: i,
@@ -64,8 +65,8 @@ function L(e) {
     isEmbedded: m
   })
 }
-let P = y.default.Types;
-var b = function(e) {
+let b = y.default.Types;
+var j = function(e) {
   let {
     activity: t,
     user: n,
@@ -74,57 +75,83 @@ var b = function(e) {
     hideHeader: d = !1,
     analyticsParams: c,
     ...O
-  } = e, P = (0, r.useStateFromStores)([A.default, v.default], () => {
+  } = e, b = (0, r.useStateFromStores)([A.default, I.default], () => {
     var e;
-    return v.default.getChannel(null === (e = A.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId)
+    return I.default.getChannel(null === (e = A.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId)
   }), {
-    enableHangStatus: b
-  } = S.HangStatusExperiment.useExperiment({
-    guildId: null == P ? void 0 : P.guild_id,
+    enableHangStatus: j
+  } = C.HangStatusExperiment.useExperiment({
+    guildId: null == b ? void 0 : b.guild_id,
     location: "UserActivityContainer"
   }, {
     autoTrackExposure: !1
-  }), j = (0, r.useStateFromStores)([T.default], () => a ? T.default.getAnyStreamForUser(n.id) : null), U = b && _.default.can(R.Permissions.CONNECT, P), D = (null == t ? void 0 : t.type) === R.ActivityTypes.HANG_STATUS && U ? P : null, k = (0, r.useStateFromStores)([I.default, A.default, v.default], () => {
+  }), U = (0, r.useStateFromStores)([v.default], () => a ? v.default.getAnyStreamForUser(n.id) : null), D = j && N.default.can(R.Permissions.CONNECT, b), k = (null == t ? void 0 : t.type) === R.ActivityTypes.HANG_STATUS && D ? b : null, w = (0, r.useStateFromStores)([_.default, A.default, I.default], () => {
     var e, l;
-    return (0, u.default)(t, R.ActivityFlags.EMBEDDED) ? I.default.getGuild(null === (e = v.default.getChannel(null === (l = A.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === l ? void 0 : l.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? I.default.getGuild(D.getGuildId()) : null
-  }), w = (0, r.useStateFromStores)([I.default], () => null != j ? I.default.getGuild(j.guildId) : null), F = (0, r.useStateFromStores)([f.default], () => {
+    return (0, u.default)(t, R.ActivityFlags.EMBEDDED) ? _.default.getGuild(null === (e = I.default.getChannel(null === (l = A.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === l ? void 0 : l.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? _.default.getGuild(k.getGuildId()) : null
+  }), F = (0, r.useStateFromStores)([_.default], () => null != U ? _.default.getGuild(U.guildId) : null), G = (0, r.useStateFromStores)([f.default], () => {
     if (null != t) return null != t.application_id ? f.default.getApplication(t.application_id) : f.default.getApplicationByName(t.name);
     return null
-  }), G = (0, r.useStateFromStores)([N.default], () => N.default.getCurrentUser()), B = (0, m.default)(), H = (0, g.default)(n), V = B && null != t && H;
+  }), B = (0, m.default)(), H = (0, S.default)(n), V = B && null != t && H;
   return (i.useEffect(() => {
-    (null == t ? void 0 : t.type) === R.ActivityTypes.HANG_STATUS && U && x.default.track(R.AnalyticEvents.VIEW_HANG_STATUS, {
+    (null == t ? void 0 : t.type) === R.ActivityTypes.HANG_STATUS && D && x.default.track(R.AnalyticEvents.VIEW_HANG_STATUS, {
       source: "UserProfilePopout",
-      guild_id: null == D ? void 0 : D.guild_id,
-      channel_id: null == D ? void 0 : D.id
+      guild_id: null == k ? void 0 : k.guild_id,
+      channel_id: null == k ? void 0 : k.id
     })
-  }, [null == t ? void 0 : t.type, U, D]), (null == t ? void 0 : t.type) !== R.ActivityTypes.HANG_STATUS || U) ? (0, l.jsx)(y.default, {
+  }, [null == t ? void 0 : t.type, D, k]), (null == t ? void 0 : t.type) !== R.ActivityTypes.HANG_STATUS || D) ? (0, l.jsx)(y.default, {
     ...O,
     activity: t,
     user: n,
-    application: F,
+    application: G,
     hideHeader: d,
-    activityGuild: null != k ? k : w,
+    activityGuild: null != w ? w : F,
     showReactions: V,
     renderActions: o ? () => (0, l.jsxs)("div", {
-      className: s(V && M.actionsWrapper),
-      children: [(0, l.jsx)(L, {
+      className: s(V && L.actionsWrapper),
+      children: [(0, l.jsx)(P, {
         ...O,
-        applicationStream: j,
+        applicationStream: U,
         activity: t,
         user: n
       }), V && (0, l.jsx)(p.default, {
-        activity: t,
-        user: n,
-        filename: "".concat(null == G ? void 0 : G.globalName, "-reacting-to-").concat(t.name, ".png").toLowerCase(),
-        altText: (0, E.getActivityAltText)(n, t),
         showReact: !0,
         showReply: !0,
-        reactor: h.default,
-        analyticsParams: c
+        replyHeaderText: M.default.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({
+          activity: t.name
+        }),
+        replyPlaceholder: M.default.Messages.TEXTAREA_PLACEHOLDER.format({
+          channel: "@".concat(n.globalName)
+        }),
+        onInteraction: e => {
+          let {
+            interactionType: l,
+            emoji: i,
+            reply: a
+          } = e;
+          x.default.track(R.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
+            application_id: t.application_id,
+            interaction_type: l,
+            ...c
+          }), l === h.AtomicReactorInteractionTypes.ReactSubmit && null != i && (0, E.sendReactionToActivity)({
+            reaction: i,
+            user: n,
+            activity: t,
+            application: G,
+            altText: (0, g.getActivityAltText)(n, t),
+            stream: U
+          }), l === h.AtomicReactorInteractionTypes.ReplySubmit && null != a && (0, E.sendReplyToActivity)({
+            reply: a,
+            user: n,
+            activity: t,
+            application: G,
+            altText: (0, g.getActivityAltText)(n, t),
+            stream: U
+          })
+        }
       })]
     }) : null,
-    onOpenSpotifyTrack: C.openTrack,
-    onOpenSpotifyArtist: C.openArtist,
-    onOpenSpotifyAlbum: C.openAlbum
+    onOpenSpotifyTrack: T.openTrack,
+    onOpenSpotifyArtist: T.openArtist,
+    onOpenSpotifyAlbum: T.openAlbum
   }) : null
 }
