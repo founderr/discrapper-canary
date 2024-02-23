@@ -12,8 +12,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("966900"),
-  o = n("838048"),
-  u = n("359902"),
+  u = n("838048"),
+  o = n("359902"),
   d = n("780624"),
   c = n("120606"),
   f = n("77078"),
@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("204947"),
   p = n("716241"),
   E = n("808742"),
-  S = n("342845"),
-  g = n("953109"),
+  g = n("342845"),
+  S = n("953109"),
   C = n("437825"),
   _ = n("142303"),
   I = n("462579"),
@@ -66,7 +66,7 @@ let D = e => {
     }, "add-status") : (0, l.jsx)(f.TooltipContainer, {
       className: b.iconSpacing,
       text: (0, E.getHangStatusText)(t),
-      children: (0, l.jsx)(S.default, {
+      children: (0, l.jsx)(g.default, {
         hangStatusActivity: t,
         className: i(b.hangStatusIcon, n)
       })
@@ -118,15 +118,15 @@ class w extends a.Component {
       speaking: a,
       userNameClassName: s,
       mute: r,
-      serverMute: o,
-      isGuest: u
+      serverMute: u,
+      isGuest: o
     } = this.props;
     return n ? null : (0, l.jsxs)("div", {
       className: i(s, {
         [b.username]: !0,
-        [b.usernameSpeaking]: !r && !o && a
+        [b.usernameSpeaking]: !r && !u && a
       }),
-      children: [null != e ? e : j.default.getName(t), u ? (0, l.jsxs)("span", {
+      children: [null != e ? e : j.default.getName(t), o ? (0, l.jsxs)("span", {
         className: b.guestSuffix,
         children: ["\xa0", P.default.Messages.GUEST_NAME_SUFFIX]
       }) : ""]
@@ -140,27 +140,27 @@ class w extends a.Component {
       serverMute: a,
       deaf: s,
       serverDeaf: r,
-      collapsed: o,
-      video: u,
+      collapsed: u,
+      video: o,
       isStreaming: d,
       disabled: c,
       isWatching: h,
       iconClassName: p,
       embeddedApplication: E,
-      otherClientSessionType: S,
-      voicePlatform: g,
+      otherClientSessionType: g,
+      voicePlatform: S,
       hangStatusActivity: T,
       showHangStatus: v,
       isSelf: j,
       application: D,
       guildId: w,
       channelId: F,
-      user: B,
-      handleHoverHangStatus: G
+      user: V,
+      handleHoverHangStatus: H
     } = this.props;
-    if (o || c) return null;
-    let H = [],
-      W = (0, l.jsx)(V, {
+    if (u || c) return null;
+    let G = [],
+      W = (0, l.jsx)(B, {
         iconClassName: p,
         mute: e,
         localMute: t,
@@ -168,41 +168,41 @@ class w extends a.Component {
         deaf: s,
         serverDeaf: r
       });
-    u && (n ? H.push((0, l.jsx)(f.TooltipContainer, {
+    o && (n ? G.push((0, l.jsx)(f.TooltipContainer, {
       className: b.iconSpacing,
       text: P.default.Messages.LOCAL_VIDEO_DISABLED,
       children: (0, l.jsx)(_.default, {
         className: i(b.icon, p),
         foreground: b.strikethrough
       })
-    }, "video")) : H.push((0, l.jsx)(f.TooltipContainer, {
+    }, "video")) : G.push((0, l.jsx)(f.TooltipContainer, {
       className: b.iconSpacing,
       text: P.default.Messages.VIDEO,
       children: (0, l.jsx)(C.default, {
         className: i(b.icon, p)
       })
-    }, "video"))), null != E && H.push((0, l.jsx)(f.TooltipContainer, {
+    }, "video"))), null != E && G.push((0, l.jsx)(f.TooltipContainer, {
       text: (0, m.default)(E.name),
       className: b.iconSpacing,
       children: (0, l.jsx)(A.default, {
         className: i(b.icon, p)
       })
-    }, "activity")), S === O.GameConsoleTypes.XBOX || g === y.VoicePlatforms.XBOX ? H.push((0, l.jsx)("div", {
+    }, "activity")), g === O.GameConsoleTypes.XBOX || S === y.VoicePlatforms.XBOX ? G.push((0, l.jsx)("div", {
       className: i(b.iconSpacing),
       children: (0, l.jsx)(N.default, {
         className: i(b.icon, p)
       })
-    }, "xbox")) : (S === O.GameConsoleTypes.PLAYSTATION || g === y.VoicePlatforms.PLAYSTATION) && H.push((0, l.jsx)("div", {
+    }, "xbox")) : (g === O.GameConsoleTypes.PLAYSTATION || S === y.VoicePlatforms.PLAYSTATION) && G.push((0, l.jsx)("div", {
       className: i(b.iconSpacing),
       children: (0, l.jsx)(x.default, {
         className: i(b.icon, p)
       })
-    }, "playstation")), d ? H.push((0, l.jsx)("div", {
+    }, "playstation")), d ? G.push((0, l.jsx)("div", {
       className: i(b.iconSpacing, b.liveIconSpacing),
       children: (0, l.jsx)(M.default, {
         size: M.default.Sizes.SMALL
       })
-    }, "stream")) : h && H.push((0, l.jsx)(f.TooltipContainer, {
+    }, "stream")) : h && G.push((0, l.jsx)(f.TooltipContainer, {
       className: b.iconSpacing,
       text: P.default.Messages.WATCH_STREAM_WATCHING,
       children: (0, l.jsx)(I.default, {
@@ -211,22 +211,22 @@ class w extends a.Component {
     }, "watch"));
     let Y = null != D && !(0, R.hasFlag)(D.flags, L.ApplicationFlags.EMBEDDED),
       z = null == T && Y;
-    return 0 !== H.length || null != W || v || z ? (0, l.jsxs)("div", {
+    return 0 !== G.length || null != W || v || z ? (0, l.jsxs)("div", {
       className: b.icons,
       children: [(0, l.jsxs)("div", {
         className: b.iconGroup,
-        onMouseEnter: () => null == G ? void 0 : G(!1),
-        children: [W, H]
+        onMouseEnter: () => null == H ? void 0 : H(!1),
+        children: [W, G]
       }), v || z ? (0, l.jsx)("div", {
         className: b.iconGroup,
-        onMouseEnter: () => null == G ? void 0 : G(!0),
+        onMouseEnter: () => null == H ? void 0 : H(!0),
         children: z ? (0, l.jsx)(k, {
           application: D,
           iconClassName: p,
           guildId: w,
           channelId: F,
-          userId: B.id
-        }, "".concat(B.id, "-game")) : (0, l.jsx)(U, {
+          userId: V.id
+        }, "".concat(V.id, "-game")) : (0, l.jsx)(U, {
           hangStatusActivity: T,
           iconClassName: p,
           isSelf: j
@@ -242,20 +242,20 @@ class w extends a.Component {
       size: a,
       className: s,
       selected: r,
-      disabled: o,
-      overlap: u,
+      disabled: u,
+      overlap: o,
       "aria-label": d,
       tabIndex: c
     } = this.props;
     return (0, l.jsx)(f.Clickable, {
       className: i(s, {
         [b.voiceUser]: !0,
-        [b.overlap]: u,
+        [b.overlap]: o,
         [b.selected]: r,
         [b.clickable]: null != e,
         [b.userSmall]: a === L.OverlayAvatarSizes.SMALL,
         [b.userLarge]: a === L.OverlayAvatarSizes.LARGE,
-        [b.disabled]: !r && o
+        [b.disabled]: !r && u
       }),
       onClick: this.handleClick,
       onDoubleClick: this.handleDoubleClick,
@@ -329,15 +329,15 @@ function k(e) {
     iconClassName: n,
     guildId: s,
     channelId: r,
-    userId: o
-  } = e, [u, d] = a.useState(!1), c = (0, h.useIsVisible)(e => d(e));
+    userId: u
+  } = e, [o, d] = a.useState(!1), c = (0, h.useIsVisible)(e => d(e));
   return a.useEffect(() => {
-    u && p.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
+    o && p.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
       channel_id: r,
       guild_id: s,
-      user_id: o
+      user_id: u
     })
-  }, [t.id, r, s, o, u]), (0, l.jsx)(f.TooltipContainer, {
+  }, [t.id, r, s, u, o]), (0, l.jsx)(f.TooltipContainer, {
     text: P.default.Messages.UNFORMATTED_PLAYING_GAME.format({
       game: t.name
     }),
@@ -347,16 +347,16 @@ function k(e) {
     className: b.iconSpacing,
     children: (0, l.jsx)("div", {
       ref: c,
-      children: (0, l.jsx)(g.default, {
+      children: (0, l.jsx)(S.default, {
         className: i(b.icon, n),
         game: t,
-        size: g.default.Sizes.XSMALL,
+        size: S.default.Sizes.XSMALL,
         onMouseEnter: () => {
           p.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
             channel_id: r,
             guild_id: s,
             game_name: t.name,
-            user_id: o
+            user_id: u
           })
         }
       })
@@ -364,7 +364,7 @@ function k(e) {
   })
 }
 
-function V(e) {
+function B(e) {
   let {
     iconClassName: t,
     mute: n,
@@ -377,7 +377,7 @@ function V(e) {
     let e;
     if (m) {
       let n;
-      n = s ? u.MicrophoneDenyIcon : a ? u.MicrophoneDenyIcon : d.MicrophoneSlashIcon, e = (0, l.jsx)(n, {
+      n = s ? o.MicrophoneDenyIcon : a ? o.MicrophoneDenyIcon : d.MicrophoneSlashIcon, e = (0, l.jsx)(n, {
         className: i(b.icon, t, {
           [b.iconServer]: s
         }),
@@ -398,7 +398,7 @@ function V(e) {
   if (h || c) {
     let e;
     if (m) {
-      let n = h ? r.HeadphonesDenyIcon : o.HeadphonesSlashIcon;
+      let n = h ? r.HeadphonesDenyIcon : u.HeadphonesSlashIcon;
       e = (0, l.jsx)(n, {
         className: i(b.icon, t, {
           [b.iconServer]: h

@@ -19,8 +19,8 @@ n.r(t), n.d(t, {
 var l, a, s = n("884691"),
   i = n("308503"),
   r = n("16470"),
-  o = n("913144"),
-  u = n("84339"),
+  u = n("913144"),
+  o = n("84339"),
   d = n("390933"),
   c = n("25932"),
   f = n("49111");
@@ -41,7 +41,7 @@ let p = {
     lastMessage: null
   },
   E = (0, i.default)(() => new Map),
-  S = (e, t) => {
+  g = (e, t) => {
     E.setState(n => {
       let l = n.get(e);
       return null == l ? n.set(e, {
@@ -53,7 +53,7 @@ let p = {
       }), n
     })
   },
-  g = e => E(t => t.get(e), r.default);
+  S = e => E(t => t.get(e), r.default);
 
 function C(e, t, n) {
   let l = null != n ? n : {};
@@ -82,12 +82,12 @@ function _(e, t, n) {
     let {
       addtionalQuery: a,
       shouldDispatch: i = !1
-    } = l, r = s.useMemo(() => m(e, t, n, a), [e, t, n, a]), E = g(r), _ = (0, u.default)(r), [I, T] = s.useState({});
+    } = l, r = s.useMemo(() => m(e, t, n, a), [e, t, n, a]), E = S(r), _ = (0, o.default)(r), [I, T] = s.useState({});
     return s.useEffect(() => {
       if (_ !== r) {
         let l = C(e, n, a),
           s = new d.default(t, f.SearchTypes.GUILD, l);
-        S(r, {
+        g(r, {
           searchFetcher: s,
           messageCount: h,
           lastMessage: null
@@ -95,14 +95,14 @@ function _(e, t, n) {
           s.fetch(e => {
             let n = e.body,
               l = n.messages[0];
-            if (S(r, {
+            if (g(r, {
                 searchFetcher: s,
                 result: n,
                 messageCount: n.total_results,
                 lastMessage: l
               }), T({}), i) {
-              var a, u;
-              o.default.dispatch({
+              var a, o;
+              u.default.dispatch({
                 type: "MOD_VIEW_SEARCH_FINISH",
                 searchId: t,
                 guildId: t,
@@ -111,14 +111,14 @@ function _(e, t, n) {
                 channels: n.channels,
                 messages: n.messages,
                 threads: null !== (a = n.threads) && void 0 !== a ? a : [],
-                members: (null !== (u = n.members) && void 0 !== u ? u : []).map(e => (0, c.default)(e)),
+                members: (null !== (o = n.members) && void 0 !== o ? o : []).map(e => (0, c.default)(e)),
                 hasError: !1,
                 doingHistoricalIndex: n.doing_deep_historical_index,
                 documentsIndexed: n.documents_indexed
               })
             }
           }, e => {}, e => {
-            S(r, {
+            g(r, {
               messageCount: 0,
               lastMessage: null
             }), T({})
@@ -132,8 +132,8 @@ function _(e, t, n) {
 
 function I(e, t, n, l) {
   let a = s.useMemo(() => m(e, t, n, l, !0), [e, t, n, l]),
-    i = g(a),
-    r = (0, u.default)(a);
+    i = S(a),
+    r = (0, o.default)(a);
   return {
     key: a,
     previousKey: r,
@@ -145,14 +145,14 @@ function T(e, t, n) {
   var l, a, i;
   let {
     key: r,
-    state: o
+    state: u
   } = I(e, t, "messages", n), {
-    key: u,
+    key: o,
     state: c
   } = I(e, t, "links", n), {
     key: m,
     state: p
-  } = I(e, t, "media", n), E = s.useMemo(() => C(e, "all_counts", n), [e, n]), g = s.useMemo(() => ({
+  } = I(e, t, "media", n), E = s.useMemo(() => C(e, "all_counts", n), [e, n]), S = s.useMemo(() => ({
     tabs: {
       messages: C(e, "messages", E),
       links: C(e, "links", E),
@@ -163,8 +163,8 @@ function T(e, t, n) {
     let t = e.messages,
       n = e.links,
       l = e.media;
-    S(r, t), S(u, n), S(m, l)
-  }, [u, m, r]), T = s.useCallback(e => {
+    g(r, t), g(o, n), g(m, l)
+  }, [o, m, r]), T = s.useCallback(e => {
     _({
       messages: e,
       links: e,
@@ -172,7 +172,7 @@ function T(e, t, n) {
     })
   }, [_]);
   s.useEffect(() => {
-    let e = new d.SearchTabFetcherImpl(t, f.SearchTypes.GUILD, E, g);
+    let e = new d.SearchTabFetcherImpl(t, f.SearchTypes.GUILD, E, S);
     T({
       searchTabFetcher: e,
       messageCount: h,
@@ -193,20 +193,20 @@ function T(e, t, n) {
       else {
         var n, l, a, s, i, r;
         let e = t.tabs.messages,
-          o = t.tabs.links,
-          u = t.tabs.media;
+          u = t.tabs.links,
+          o = t.tabs.media;
         _({
           messages: {
             messageCount: null !== (n = null == e ? void 0 : e.total_results) && void 0 !== n ? n : 0,
             lastMessage: null !== (l = null == e ? void 0 : e.messages[0]) && void 0 !== l ? l : null
           },
           links: {
-            messageCount: null !== (a = null == o ? void 0 : o.total_results) && void 0 !== a ? a : 0,
-            lastMessage: null !== (s = null == o ? void 0 : o.messages[0]) && void 0 !== s ? s : null
+            messageCount: null !== (a = null == u ? void 0 : u.total_results) && void 0 !== a ? a : 0,
+            lastMessage: null !== (s = null == u ? void 0 : u.messages[0]) && void 0 !== s ? s : null
           },
           media: {
-            messageCount: null !== (i = null == u ? void 0 : u.total_results) && void 0 !== i ? i : 0,
-            lastMessage: null !== (r = null == u ? void 0 : u.messages[0]) && void 0 !== r ? r : null
+            messageCount: null !== (i = null == o ? void 0 : o.total_results) && void 0 !== i ? i : 0,
+            lastMessage: null !== (r = null == o ? void 0 : o.messages[0]) && void 0 !== r ? r : null
           }
         })
       }
@@ -215,10 +215,10 @@ function T(e, t, n) {
     return () => {
       e.cancel(), clearTimeout(n)
     }
-  }, [e, t, E, g, T, _]);
+  }, [e, t, E, S, T, _]);
   let [v, x] = s.useState({});
   return {
-    messagesCount: null !== (l = null == o ? void 0 : o.messageCount) && void 0 !== l ? l : h,
+    messagesCount: null !== (l = null == u ? void 0 : u.messageCount) && void 0 !== l ? l : h,
     linksCount: null !== (a = null == c ? void 0 : c.messageCount) && void 0 !== a ? a : h,
     mediaCount: null !== (i = null == p ? void 0 : p.messageCount) && void 0 !== i ? i : h
   }

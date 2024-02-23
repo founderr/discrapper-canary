@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("77078"),
-  u = n("685665"),
+  u = n("77078"),
+  o = n("685665"),
   d = n("649844"),
   c = n("393414"),
   f = n("697218"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("181114"),
   p = n("978679"),
   E = n("49111"),
-  S = n("782340"),
-  g = n("455701"),
+  g = n("782340"),
+  S = n("455701"),
   C = function(e) {
     let {
       subscriptionTier: t,
@@ -36,14 +36,14 @@ var l = n("37983"),
       ...M
     } = e, R = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentUser()), j = (0, r.useStateFromStores)([h.default], () => h.default.isFocused()), [L, y] = a.useState(!1), {
       analyticsLocations: O
-    } = (0, u.default)();
+    } = (0, o.default)();
     return (0, l.jsxs)(m.default, {
       pauseAnimation: !j || x,
       size: s,
-      className: i(g.giftButton, C),
+      className: i(S.giftButton, C),
       onlyShineOnHover: !0,
-      innerClassName: g.innerGiftButton,
-      color: o.Button.Colors.PRIMARY,
+      innerClassName: S.innerGiftButton,
+      color: u.Button.Colors.PRIMARY,
       onClick: e => {
         if (e.preventDefault(), null == R) {
           (0, c.transitionTo)(E.Routes.LOGIN);
@@ -67,16 +67,16 @@ var l = n("37983"),
       onMouseLeave: () => y(!1),
       ...M,
       children: [(0, l.jsx)("div", {
-        className: i(g.gradientBackground, {
-          [g.gradientBackgroundHover]: L
+        className: i(S.gradientBackground, {
+          [S.gradientBackgroundHover]: L
         })
       }), (0, l.jsx)(p.default, {
-        className: g.giftIcon
-      }), (0, l.jsx)(o.Text, {
+        className: S.giftIcon
+      }), (0, l.jsx)(u.Text, {
         variant: "text-sm/medium",
         color: "none",
-        className: i(g.buttonText, I),
-        children: null != _ ? _ : S.default.Messages.PREMIUM_GIFTING_BUTTON
+        className: i(S.buttonText, I),
+        children: null != _ ? _ : g.default.Messages.PREMIUM_GIFTING_BUTTON
       })]
     })
   }

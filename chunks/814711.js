@@ -9,16 +9,16 @@ var l = n("37983"),
   s = n("77078"),
   i = n("788220"),
   r = n("894282"),
-  o = n("960863");
+  u = n("960863");
 
-function u(e) {
+function o(e) {
   let {
     renderPopout: t,
     onMouseEnter: n,
     onMouseLeave: s,
     closePopout: i,
     isHovered: r,
-    ...o
+    ...u
   } = e;
   return a.useEffect(() => {
     !r && i()
@@ -27,7 +27,7 @@ function u(e) {
     onMouseLeave: s,
     children: t({
       closePopout: i,
-      ...o
+      ...u
     })
   })
 }
@@ -44,11 +44,11 @@ function d(e) {
     cancelTimers: E
   } = (0, i.default)(200, 300);
 
-  function S(e) {
+  function g(e) {
     "focus" !== e.type && !d && m()
   }
 
-  function g() {
+  function S() {
     !d && p()
   }
 
@@ -65,11 +65,11 @@ function d(e) {
     onRequestClose: () => {
       h(!1), c(!1)
     },
-    renderPopout: e => (0, l.jsx)(u, {
+    renderPopout: e => (0, l.jsx)(o, {
       isHovered: _,
       onFocus: () => c(!0),
       onMouseEnter: m,
-      onMouseLeave: g,
+      onMouseLeave: S,
       renderPopout: t,
       ...e
     }),
@@ -85,9 +85,9 @@ function d(e) {
             var t, n;
             return t = e, n = a, void((t.key === r.KeyboardKeysUpdated.ENTER || t.key === r.KeyboardKeysUpdated.SPACE) && C(() => n(t)))
           },
-          className: o.actionBarButton,
-          onMouseEnter: S,
-          onMouseLeave: g,
+          className: u.actionBarButton,
+          onMouseEnter: g,
+          onMouseLeave: S,
           isActive: _
         })
       })

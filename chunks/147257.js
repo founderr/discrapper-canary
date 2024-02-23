@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("77078"),
   i = n("244201"),
   r = n("817963"),
-  o = n("124824"),
-  u = n("981913"),
+  u = n("124824"),
+  o = n("981913"),
   d = n("42203"),
   c = n("293137"),
   f = n("381546"),
@@ -19,8 +19,8 @@ var a = n("446674"),
   m = n("322224"),
   p = n("649275"),
   E = n("534222"),
-  S = n("782340"),
-  g = n("864820");
+  g = n("782340"),
+  S = n("864820");
 
 function C(e) {
   let {
@@ -45,17 +45,17 @@ function C(e) {
       let {
         closePopout: t
       } = e;
-      return (0, l.jsx)(o.default, {
+      return (0, l.jsx)(u.default, {
         children: (0, l.jsx)(s.Menu, {
           navId: "exit-options",
           onSelect: () => {},
-          "aria-label": S.default.Messages.DISCONNECT_MENU,
+          "aria-label": g.default.Messages.DISCONNECT_MENU,
           onClose: t,
           children: (0, l.jsx)(s.MenuItem, {
             id: "end-voice-event",
             color: "danger",
             action: N,
-            label: S.default.Messages.END_EVENT,
+            label: g.default.Messages.END_EVENT,
             icon: f.default
           })
         })
@@ -68,18 +68,18 @@ function C(e) {
       let {
         onClick: t
       } = e;
-      return (0, l.jsx)(u.CenterControlButton, {
-        label: S.default.Messages.DISCONNECT_SELF,
+      return (0, l.jsx)(o.CenterControlButton, {
+        label: g.default.Messages.DISCONNECT_SELF,
         color: "red",
         iconComponent: c.default,
         onClick: x,
         onPopoutClick: t,
-        className: g.buttonSpacing
+        className: S.buttonSpacing
       })
     }
-  }) : (0, l.jsx)(u.CenterControlButton, {
-    className: g.buttonSpacing,
-    label: S.default.Messages.DISCONNECT_SELF,
+  }) : (0, l.jsx)(o.CenterControlButton, {
+    className: S.buttonSpacing,
+    label: g.default.Messages.DISCONNECT_SELF,
     color: "red",
     iconComponent: c.default,
     onClick: n

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("394846"),
-  o = n("77078"),
-  u = n("272030"),
+  u = n("77078"),
+  o = n("272030"),
   d = n("754474"),
   c = n("315102"),
   f = n("506885"),
@@ -23,12 +23,12 @@ function E(e) {
   let {
     channel: s,
     integration: E
-  } = e, S = c.default.getApplicationIconURL({
+  } = e, g = c.default.getApplicationIconURL({
     id: E.application.id,
     icon: E.application.icon,
     size: 40
-  }), g = a.useCallback(e => {
-    (0, u.openContextMenuLazy)(e, async () => {
+  }), S = a.useCallback(e => {
+    (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("348866").then(n.bind(n, "348866"));
@@ -40,12 +40,12 @@ function E(e) {
     })
   }, [E, s]), C = (0, l.jsxs)("div", {
     className: m.listRow,
-    onContextMenu: g,
+    onContextMenu: S,
     children: [(0, l.jsx)("img", {
       className: i(m.listAvatar, p.icon),
       alt: "",
       "aria-hidden": !0,
-      src: S,
+      src: g,
       width: 40,
       height: 40
     }), (0, l.jsx)("div", {
@@ -62,8 +62,8 @@ function E(e) {
   } = E.application;
   return null == _ ? (0, l.jsx)("li", {
     children: C
-  }) : (0, l.jsx)(o.Popout, {
-    preload: () => (0, f.default)(_.id, S),
+  }) : (0, l.jsx)(u.Popout, {
+    preload: () => (0, f.default)(_.id, g),
     renderPopout: e => (0, l.jsx)(h.default, {
       ...e,
       userId: _.id,

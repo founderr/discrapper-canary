@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("77078"),
   i = n("660279"),
   r = n("998650"),
-  o = n("664336"),
-  u = n("659500"),
+  u = n("664336"),
+  o = n("659500"),
   d = n("414833"),
   c = n("547772"),
   f = n("648564"),
@@ -21,11 +21,11 @@ var l = n("37983"),
 function E(e) {
   let {
     channel: t
-  } = e, n = (0, d.useThreadNotificationSetting)(t), [E, S] = a.useState(!1), g = (0, s.useRedesignIconContext)().enabled;
+  } = e, n = (0, d.useThreadNotificationSetting)(t), [E, g] = a.useState(!1), S = (0, s.useRedesignIconContext)().enabled;
   a.useEffect(() => {
-    let e = () => S(!0);
-    return u.ComponentDispatch.subscribe(h.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
-      u.ComponentDispatch.unsubscribe(h.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e)
+    let e = () => g(!0);
+    return o.ComponentDispatch.subscribe(h.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
+      o.ComponentDispatch.unsubscribe(h.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e)
     }
   }, []);
   let C = m.default.Messages.NOTIFICATION_SETTINGS;
@@ -35,7 +35,7 @@ function E(e) {
     position: "bottom",
     align: "right",
     autoInvert: !1,
-    onRequestClose: () => S(!1),
+    onRequestClose: () => g(!1),
     renderPopout: e => (0, l.jsx)(c.default, {
       ...e,
       channel: t,
@@ -46,12 +46,12 @@ function E(e) {
       let {
         isShown: a
       } = t;
-      return (0, l.jsx)(o.default.Icon, {
+      return (0, l.jsx)(u.default.Icon, {
         ...e,
-        onClick: () => S(e => !e),
+        onClick: () => g(e => !e),
         tooltip: a ? null : C,
         icon: n === f.ThreadMemberFlags.NO_MESSAGES ? r.default : i.default,
-        foreground: n !== f.ThreadMemberFlags.NO_MESSAGES || g ? null : p.strikethrough,
+        foreground: n !== f.ThreadMemberFlags.NO_MESSAGES || S ? null : p.strikethrough,
         "aria-label": C,
         selected: a
       })

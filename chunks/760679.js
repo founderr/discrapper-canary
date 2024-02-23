@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   drawLinePoint: function() {
-    return o
+    return u
   },
   addLinePoints: function() {
-    return u
+    return o
   },
   updateLinePoints: function() {
     return d
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return E
   },
   toggleOverlayCanvas: function() {
-    return S
+    return g
   }
 });
 var l = n("981980"),
@@ -37,7 +37,7 @@ var l = n("981980"),
   i = n("315841"),
   r = n("49111");
 
-function o(e, t, n, l, a) {
+function u(e, t, n, l, a) {
   s.default.dispatch({
     type: "SHARED_CANVAS_DRAW_LINE_POINT",
     channelId: e,
@@ -48,7 +48,7 @@ function o(e, t, n, l, a) {
   })
 }
 
-function u(e, t, n, l) {
+function o(e, t, n, l) {
   return a.default.post({
     url: r.Endpoints.SHARED_CANVAS_LINES(e, n),
     body: {
@@ -117,7 +117,7 @@ function E(e) {
   })
 }
 
-function S() {
+function g() {
   s.default.dispatch({
     type: "TOGGLE_OVERLAY_CANVAS"
   })

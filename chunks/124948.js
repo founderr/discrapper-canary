@@ -12,7 +12,7 @@ var r = n("917351"),
   o = n("560208"),
   s = n("42203"),
   d = n("26989");
-let E = new a.default(d.default.isMember, (e, t) => {
+let _ = new a.default(d.default.isMember, (e, t) => {
   u.default.dispatch({
     type: "GUILD_MEMBERS_REQUEST",
     guildIds: [e],
@@ -20,12 +20,12 @@ let E = new a.default(d.default.isMember, (e, t) => {
   })
 });
 
-function _() {
-  E.reset()
+function E() {
+  _.reset()
 }
 
 function c(e, t) {
-  return E.request(e, t), !1
+  return _.request(e, t), !1
 }
 
 function I(e, t) {
@@ -63,10 +63,10 @@ class f extends l.default.Store {
 }
 f.displayName = "GuildMemberRequesterStore";
 var p = new f(u.default, {
-  CONNECTION_CLOSED: _,
-  CONNECTION_OPEN: _,
+  CONNECTION_CLOSED: E,
+  CONNECTION_OPEN: E,
   CONNECTION_RESUMED: function() {
-    return E.requestUnacknowledged(), !1
+    return _.requestUnacknowledged(), !1
   },
   GUILD_MEMBERS_CHUNK: function(e) {
     let {
@@ -75,8 +75,8 @@ var p = new f(u.default, {
       notFound: r
     } = e;
     return n.forEach(e => {
-      E.acknowledge(t, e.user.id)
-    }), null != r && r.forEach(e => E.acknowledge(t, e)), !1
+      _.acknowledge(t, e.user.id)
+    }), null != r && r.forEach(e => _.acknowledge(t, e)), !1
   },
   SEARCH_FINISH: T,
   MOD_VIEW_SEARCH_FINISH: T,

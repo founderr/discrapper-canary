@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("271841"),
   i = n("605451"),
   r = n("577776"),
-  o = n("77078"),
-  u = n("79112"),
+  u = n("77078"),
+  o = n("79112"),
   d = n("635956"),
   c = n("632892"),
   f = n("697218"),
@@ -19,8 +19,8 @@ var a = n("446674"),
   m = n("216422"),
   p = n("719923"),
   E = n("49111"),
-  S = n("994428"),
-  g = n("646718"),
+  g = n("994428"),
+  S = n("646718"),
   C = n("397336"),
   _ = n("782340"),
   I = n("694393");
@@ -31,16 +31,16 @@ function T(e) {
     onClose: n,
     markAsDismissed: T
   } = e, v = (0, a.useStateFromStores)([f.default], () => f.default.getCurrentUser());
-  let x = (t = null == v ? void 0 : v.premiumType) === g.PremiumTypes.TIER_2 ? _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
+  let x = (t = null == v ? void 0 : v.premiumType) === S.PremiumTypes.TIER_2 ? _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
     N = p.default.canUseCustomCallSounds(v);
   return (0, l.jsxs)(c.default, {
     isShown: !0,
     type: c.FeatureBorderTypes.PREMIUM,
     className: I.upsellOuter,
     backgroundClassName: I.upsellInner,
-    children: [null != T ? (0, l.jsx)(o.Clickable, {
+    children: [null != T ? (0, l.jsx)(u.Clickable, {
       className: I.close,
-      onClick: () => null == T ? void 0 : T(S.ContentDismissActionType.DISMISS),
+      onClick: () => null == T ? void 0 : T(g.ContentDismissActionType.DISMISS),
       "aria-label": _.default.Messages.CLOSE,
       children: (0, l.jsx)(h.default, {
         className: I.closeIcon,
@@ -62,18 +62,18 @@ function T(e) {
       children: x
     }), N ? (0, l.jsx)(s.Button, {
       onClick: function() {
-        u.default.open(E.UserSettingsSections.VOICE, C.SOUNDBOARD_SUBSECTION), null == n || n(), null == T || T(S.ContentDismissActionType.PRIMARY)
+        o.default.open(E.UserSettingsSections.VOICE, C.SOUNDBOARD_SUBSECTION), null == n || n(), null == T || T(g.ContentDismissActionType.PRIMARY)
       },
       children: _.default.Messages.CHECK_IT_OUT
     }) : (0, l.jsx)(d.default, {
       buttonText: _.default.Messages.PREMIUM_UPSELL_GET_NITRO,
-      subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
+      subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
       premiumModalAnalyticsLocation: {
         section: E.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
         object: E.AnalyticsObjects.BUTTON_CTA
       },
       color: s.Button.Colors.GREEN,
-      onSubscribeModalClose: () => null == T ? void 0 : T(S.ContentDismissActionType.PRIMARY)
+      onSubscribeModalClose: () => null == T ? void 0 : T(g.ContentDismissActionType.PRIMARY)
     })]
   })
 }

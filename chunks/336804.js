@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("907002"),
-  o = n("617258"),
-  u = n("446674"),
+  u = n("617258"),
+  o = n("446674"),
   d = n("669491"),
   c = n("769846"),
   f = n("77078"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("685665"),
   p = n("506885"),
   E = n("697218"),
-  S = n("216422"),
-  g = n("956089"),
+  g = n("216422"),
+  S = n("956089"),
   C = n("980423"),
   _ = n("599110"),
   I = n("719923"),
@@ -29,7 +29,7 @@ var l = n("37983"),
   N = n("646718"),
   A = n("782340"),
   M = n("72523");
-let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
+let R = (0, u.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
   j = {
     opacity: 0,
     transform: "translate3d(100%, 0, 0)"
@@ -59,7 +59,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
   U = e => {
     let t, s, {
         participant: r,
-        isUpsellEnabled: o,
+        isUpsellEnabled: u,
         shape: c,
         size: p,
         didTrackUpsellViewed: R,
@@ -85,8 +85,8 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
       {
         location: D
       } = (0, h.useAnalyticsContext)(),
-      U = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-      w = o && !I.default.isPremium(U, N.PremiumTypes.TIER_1) && !I.default.canStreamQuality(I.default.StreamQuality.MID, U),
+      U = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
+      w = u && !I.default.isPremium(U, N.PremiumTypes.TIER_1) && !I.default.canStreamQuality(I.default.StreamQuality.MID, U),
       F = a.useCallback(() => {
         w && b && (0, f.openModalLazy)(async () => {
           let {
@@ -116,7 +116,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         className: i(M.qualityIndicator, p, C.LiveIndicatorShapes[c], P ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
           [M.clickable]: w && b
         }),
-        children: [b ? (0, l.jsx)(S.default, {
+        children: [b ? (0, l.jsx)(g.default, {
           className: M.premiumStreamIcon
         }) : null, (0, l.jsx)("span", {
           className: M.qualityResolution,
@@ -126,7 +126,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         })]
       })
     });
-    return (0, l.jsx)(g.TextBadge, {
+    return (0, l.jsx)(S.TextBadge, {
       text: k,
       className: i(L, M.qualityIndicatorBadge),
       color: d.default.unsafe_rawColors.PRIMARY_500.css,
@@ -138,8 +138,8 @@ var w = e => {
     participant: t,
     showQuality: n,
     isUpsellEnabled: s = !0,
-    size: o,
-    className: u
+    size: u,
+    className: o
   } = e, [d, c] = a.useState(!1), h = (0, T.getMaxQuality)(t), {
     reducedMotion: m
   } = a.useContext(f.AccessibilityPreferencesContext), E = n && null != h;
@@ -148,7 +148,7 @@ var w = e => {
       dispatchWait: !0
     })
   }, [t]);
-  let S = (0, r.useTransition)(E, {
+  let g = (0, r.useTransition)(E, {
       enter: {
         from: m.enabled ? y : j,
         to: m.enabled ? O : L
@@ -168,13 +168,13 @@ var w = e => {
     return (0, l.jsxs)("div", {
       className: i(M.streamQualityIndicator, n),
       ...a,
-      children: [S((e, n) => n ? (0, l.jsx)(r.animated.div, {
+      children: [g((e, n) => n ? (0, l.jsx)(r.animated.div, {
         style: e,
         children: (0, l.jsx)(U, {
           className: M.liveQualityIndicator,
           participant: t,
-          size: o,
-          shape: g.BadgeShapes.ROUND_LEFT,
+          size: u,
+          shape: S.BadgeShapes.ROUND_LEFT,
           isUpsellEnabled: s,
           didTrackUpsellViewed: d,
           setDidTrackUpsellViewed: c
@@ -184,12 +184,12 @@ var w = e => {
         className: M.liveIndicator,
         children: (0, l.jsx)(C.default, {
           look: C.LiveIndicatorLooks.RED,
-          size: o,
-          shape: E ? g.BadgeShapes.ROUND_RIGHT : g.BadgeShapes.ROUND
+          size: u,
+          shape: E ? S.BadgeShapes.ROUND_RIGHT : S.BadgeShapes.ROUND
         })
       })]
     })
   })({
-    className: u
+    className: o
   })
 }

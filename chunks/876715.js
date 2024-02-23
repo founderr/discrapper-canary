@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("95410"),
-  o = n("457112"),
-  u = n("679243"),
+  u = n("457112"),
+  o = n("679243"),
   d = n("49111"),
   c = n("802542"),
   f = n("678016");
@@ -23,22 +23,22 @@ function m(e) {
     height: s,
     channel: m,
     participants: p
-  } = e, [E, S] = function() {
+  } = e, [E, g] = function() {
     let [e, t] = a.useState(() => r.default.get(h, d.PictureInPicturePositions.BOTTOM_RIGHT));
     return [e, a.useCallback(e => {
       r.default.set(h, e), t(e)
     }, [])]
-  }(), g = a.useRef(null), C = null == m.getGuildId() ? 70 : 50;
+  }(), S = a.useRef(null), C = null == m.getGuildId() ? 70 : 50;
   return a.useLayoutEffect(() => {
     var e;
-    null === (e = g.current) || void 0 === e || e.ensureIsInPosition()
+    null === (e = S.current) || void 0 === e || e.ensureIsInPosition()
   }, [p.length]), (0, l.jsx)("div", {
     className: c.container,
-    children: (0, l.jsx)(o.PictureInPictureWindow, {
+    children: (0, l.jsx)(u.PictureInPictureWindow, {
       position: E,
       id: 0,
-      ref: g,
-      onMove: (e, t) => S(t),
+      ref: S,
+      onMove: (e, t) => g(t),
       maxX: t,
       maxY: s,
       edgeOffsetTop: C,
@@ -47,12 +47,12 @@ function m(e) {
       edgeOffsetRight: 16,
       children: (0, l.jsx)("div", {
         className: c.tileContainer,
-        children: p.map(e => (0, l.jsx)(u.default, {
+        children: p.map(e => (0, l.jsx)(o.default, {
           participant: e,
           channel: m,
           onContextMenu: n,
           className: i(c.tile, f.elevationHigh),
-          fit: u.CallTileFit.COVER,
+          fit: o.CallTileFit.COVER,
           inCall: !0,
           inPopout: !1,
           width: 160

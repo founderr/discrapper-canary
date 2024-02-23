@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("151426"),
   i = n("255397"),
   r = n("264732"),
-  o = n("176347"),
-  u = n("665182"),
+  u = n("176347"),
+  o = n("665182"),
   d = n("850391"),
   c = n("10641"),
   f = n("474643"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("945330"),
   p = n("664336"),
   E = n("659500"),
-  S = n("412090"),
-  g = n("49111"),
+  g = n("412090"),
+  S = n("49111"),
   C = n("994428"),
   _ = n("782340"),
   I = n("370835"),
@@ -35,17 +35,17 @@ var l = n("37983"),
       })
     }, []);
     let v = a.useCallback(() => {
-        i.default.updateChatOpen(t.id, !1), E.ComponentDispatch.safeDispatch(g.ComponentActions.FOCUS_CHAT_BUTTON)
+        i.default.updateChatOpen(t.id, !1), E.ComponentDispatch.safeDispatch(S.ComponentActions.FOCUS_CHAT_BUTTON)
       }, [t.id]),
       x = (0, l.jsx)(p.default.Icon, {
         icon: m.default,
         tooltip: _.default.Messages.CLOSE,
         onClick: v
       });
-    return (0, l.jsxs)(u.default, {
-      sidebarType: u.ChatSidebarType.CallChatSidebar,
+    return (0, l.jsxs)(o.default, {
+      sidebarType: o.ChatSidebarType.CallChatSidebar,
       maxWidth: T,
-      floatingLayer: S.default,
+      floatingLayer: g.default,
       children: [(0, l.jsx)(r.default, {
         channel: t,
         draftType: f.DraftType.ChannelMessage
@@ -61,7 +61,7 @@ var l = n("37983"),
         })]
       }), (0, l.jsx)("div", {
         className: I.chat,
-        children: (0, l.jsx)(o.default, {
+        children: (0, l.jsx)(u.default, {
           channel: t,
           guild: n,
           chatInputType: d.ChatInputTypes.SIDEBAR

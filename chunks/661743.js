@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n.n(r),
-  u = n("446674"),
+  u = n.n(r),
+  o = n("446674"),
   d = n("151426"),
   c = n("77078"),
   f = n("943722"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("697218"),
   p = n("468759"),
   E = n("987772"),
-  S = n("956089"),
-  g = n("315102"),
+  g = n("956089"),
+  S = n("315102"),
   C = n("233965"),
   _ = n("32346"),
   I = n("808742"),
@@ -48,7 +48,7 @@ let M = e => {
   R = e => {
     let {
       currentStatus: t
-    } = e, s = a.useRef(_.default.getRecentCustomStatuses()), r = a.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = a.useState(null != t ? t : null), y = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), O = () => {
+    } = e, s = a.useRef(_.default.getRecentCustomStatuses()), r = a.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = a.useState(null != t ? t : null), y = (0, o.useStateFromStores)([m.default], () => m.default.getCurrentUser()), O = () => {
       !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
     }, P = (e, t) => {
       e.stopPropagation(), (0, C.updateHangStatus)(t, !0), O()
@@ -93,7 +93,7 @@ let M = e => {
               variant: "text-md/semibold",
               color: "header-primary",
               children: N.default.Messages.ACTIVITY_STATUS
-            }), (0, l.jsx)(S.TextBadge, {
+            }), (0, l.jsx)(g.TextBadge, {
               text: N.default.Messages.BETA,
               disableColor: !0,
               className: A.newBadge
@@ -110,7 +110,7 @@ let M = e => {
               children: [(0, l.jsx)(c.Avatar, {
                 className: A.avatar,
                 size: c.AvatarSizes.SIZE_40,
-                src: (0, g.getUserAvatarURL)(y),
+                src: (0, S.getUserAvatarURL)(y),
                 "aria-hidden": !0
               }), (0, l.jsx)("div", {
                 className: A.outline
@@ -164,7 +164,7 @@ let M = e => {
         }), (0, l.jsxs)("div", {
           className: A.iconsContainer,
           children: [s.current.map((e, n) => {
-            let a = e.status === (null == t ? void 0 : t.details) && o.isEqual(e.emoji, null == t ? void 0 : t.emoji);
+            let a = e.status === (null == t ? void 0 : t.details) && u.isEqual(e.emoji, null == t ? void 0 : t.emoji);
             return (0, l.jsx)(c.Clickable, {
               "aria-label": e.status,
               onMouseEnter: () => F(e),

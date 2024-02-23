@@ -16,9 +16,9 @@ var r = n("414456"),
   c = n("30672"),
   f = n("100844"),
   h = n("607391"),
-  p = n("782340"),
-  E = n("100469");
-let C = n("588281");
+  E = n("782340"),
+  C = n("100469");
+let p = n("588281");
 
 function m(e) {
   let {
@@ -33,30 +33,30 @@ function m(e) {
     return t !== d.default.getId()
   }));
   return (0, a.jsx)("div", {
-    className: s(E.content, E.streamHidden, {
-      [E.small]: S
+    className: s(C.content, C.streamHidden, {
+      [C.small]: S
     }),
     children: (0, a.jsx)(h.default, {
-      className: E.streamHiddenEmptyState,
-      artURL: C,
+      className: C.streamHiddenEmptyState,
+      artURL: p,
       noArt: r,
       selected: m,
       size: (0, h.getSizeForWidth)(n),
-      header: S ? null : p.default.Messages.STREAM_HIDDEN,
+      header: S ? null : E.default.Messages.STREAM_HIDDEN,
       description: m ? null : (0, a.jsxs)("div", {
-        className: s(E.streamHiddenCTA, {
-          [E.largePaddingTop]: !S
+        className: s(C.streamHiddenCTA, {
+          [C.largePaddingTop]: !S
         }),
         children: [(0, a.jsx)(f.CallTileCTA, {
           isSmall: S,
           children: (0, a.jsx)(l.Text, {
             variant: S ? "text-sm/semibold" : "text-md/semibold",
             color: "none",
-            children: n < 175 ? p.default.Messages.WATCH : p.default.Messages.WATCH_STREAM
+            children: n < 175 ? E.default.Messages.WATCH : E.default.Messages.WATCH_STREAM
           })
         }), g ? (0, a.jsx)(f.CallTileCTA, {
-          className: E.addCTA,
-          tooltip: p.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+          className: C.addCTA,
+          tooltip: E.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
           onClick: e => {
             e.stopPropagation(), (0, u.watchStream)(t.stream, {
               forceMultiple: !0
@@ -64,7 +64,7 @@ function m(e) {
           },
           isSmall: S,
           children: (0, a.jsx)(c.default, {
-            className: E.addStreamIcon
+            className: C.addStreamIcon
           })
         }) : null]
       })

@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return N
   },
   getStreamEligibleChannels: function() {
-    return A
+    return R
   }
 }), n("424973"), n("222007");
 var r, i, l = n("446674"),
@@ -22,8 +22,8 @@ var r, i, l = n("446674"),
   o = n("923959"),
   s = n("305961"),
   d = n("957255"),
-  E = n("800762"),
-  _ = n("404008"),
+  _ = n("800762"),
+  E = n("404008"),
   c = n("49111"),
   I = n("782340");
 let S = (e, t) => (0, a.isPrivate)(e.type) || t.canBasicChannel(c.BasicPermissions.CONNECT | c.BasicPermissions.VIEW_CHANNEL, e);
@@ -54,19 +54,19 @@ function p(e, t, n, r, i) {
   let l;
   if (null == e) return [!1, 2];
   let u = t.isInChannel(e.id),
-    o = e instanceof a.ChannelRecordBase && (0, _.isChannelFull)(e, t, n),
+    o = e instanceof a.ChannelRecordBase && (0, E.isChannelFull)(e, t, n),
     s = S(e, r),
     d = null != i.getAwaitingRemoteSessionInfo() || null != i.getRemoteSessionId();
   d ? l = 0 : s || u ? o && !u && (l = 1) : l = 2;
-  let E = !__OVERLAY__ && !d && (u || s && !o);
-  return [E, l]
+  let _ = !__OVERLAY__ && !d && (u || s && !o);
+  return [_, l]
 }
 
 function N(e) {
-  return (0, l.useStateFromStoresArray)([E.default, s.default, d.default, u.default], () => p(e, E.default, s.default, d.default, u.default))
+  return (0, l.useStateFromStoresArray)([_.default, s.default, d.default, u.default], () => p(e, _.default, s.default, d.default, u.default))
 }
 
-function A(e, t, n) {
+function R(e, t, n) {
   let r = [];
   for (let {
       channel: i

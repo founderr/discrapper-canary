@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("65597"),
-  o = n("77078"),
-  u = n("987317"),
+  u = n("77078"),
+  o = n("987317"),
   d = n("771325"),
   c = n("271938"),
   f = n("26989"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("945956"),
   p = n("697218"),
   E = n("599110"),
-  S = n("233965"),
-  g = n("699209"),
+  g = n("233965"),
+  S = n("699209"),
   C = n("808742"),
   _ = n("342845"),
   I = n("661743"),
@@ -34,7 +34,7 @@ var l = n("37983"),
       previewIsOpen: A
     } = e, {
       enableHangStatus: M
-    } = g.HangStatusExperiment.useExperiment({
+    } = S.HangStatusExperiment.useExperiment({
       guildId: N.guild_id,
       location: "HangStatusPopout"
     }), R = (0, r.default)([c.default], () => c.default.getId()), j = (0, r.default)([p.default], () => p.default.getUser(s)), L = (0, r.default)([m.default], () => m.default.getChannelId() === N.id), y = (0, r.default)([h.default], () => h.default.can(T.Permissions.CONNECT, N)), O = (0, r.default)([f.default], () => null != N.guild_id && null != j ? f.default.getMember(N.guild_id, s) : null), P = a.useMemo(() => null != j ? (0, d.getPreviewAvatar)(void 0, O, j, {
@@ -63,11 +63,11 @@ var l = n("37983"),
           className: x.contentContainer,
           children: [(0, l.jsxs)("div", {
             className: x.statusGroup,
-            children: [(0, l.jsx)(o.Text, {
+            children: [(0, l.jsx)(u.Text, {
               variant: "text-xs/medium",
               color: "text-muted",
               children: v.default.Messages.STATUS_LEAD_IN_JUST
-            }), (0, l.jsx)(o.Text, {
+            }), (0, l.jsx)(u.Text, {
               variant: "text-sm/semibold",
               color: "text-normal",
               className: x.statusText,
@@ -80,9 +80,9 @@ var l = n("37983"),
               hangStatusActivity: t
             }), (0, l.jsxs)("div", {
               className: x.avatarWrapper,
-              children: [(0, l.jsx)(o.Avatar, {
+              children: [(0, l.jsx)(u.Avatar, {
                 className: x.avatar,
-                size: o.AvatarSizes.SIZE_40,
+                size: u.AvatarSizes.SIZE_40,
                 src: P,
                 "aria-hidden": !0
               }), (0, l.jsx)("div", {
@@ -90,23 +90,23 @@ var l = n("37983"),
               })]
             })]
           })]
-        }), !L && y ? (0, l.jsx)(o.Button, {
+        }), !L && y ? (0, l.jsx)(u.Button, {
           className: x.cta,
-          size: o.Button.Sizes.SMALL,
+          size: u.Button.Sizes.SMALL,
           onClick: () => {
-            !L && y && (u.default.selectVoiceChannel(N.id), E.default.track(T.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
+            !L && y && (o.default.selectVoiceChannel(N.id), E.default.track(T.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
               source: "HangStatusPopout",
               guild_id: N.guild_id,
               channel_id: N.id
             }))
           },
           children: v.default.Messages.CUSTOM_HANG_STATUS_CTA
-        }) : null, L ? (0, l.jsx)(o.Button, {
+        }) : null, L ? (0, l.jsx)(u.Button, {
           className: x.cta,
-          size: o.Button.Sizes.SMALL,
+          size: u.Button.Sizes.SMALL,
           onClick: () => {
             let e = t.state;
-            e === T.HangStatusTypes.CUSTOM ? (0, o.openModalLazy)(async () => {
+            e === T.HangStatusTypes.CUSTOM ? (0, u.openModalLazy)(async () => {
               let {
                 default: e
               } = await n.el("579371").then(n.bind(n, "579371"));
@@ -115,7 +115,7 @@ var l = n("37983"),
                 startingText: t.details,
                 startingEmoji: t.emoji
               })
-            }) : (0, S.updateHangStatus)(e, !0), E.default.track(T.AnalyticEvents.SWIPE_HANG_STATUS, {
+            }) : (0, g.updateHangStatus)(e, !0), E.default.track(T.AnalyticEvents.SWIPE_HANG_STATUS, {
               guild_id: N.guild_id,
               channel_id: N.id,
               media_session_id: m.default.getMediaSessionId()

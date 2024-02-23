@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), n("222007");
 var l = n("37983");
@@ -10,8 +10,8 @@ var a = n("65597"),
   s = n("151426"),
   i = n("272030"),
   r = n("235145"),
-  o = n("78581"),
-  u = n("429829"),
+  u = n("78581"),
+  o = n("429829"),
   d = n("191191"),
   c = n("244390"),
   f = n("124824"),
@@ -19,16 +19,16 @@ var a = n("65597"),
   m = n("42887"),
   p = n("754576"),
   E = n("814711"),
-  S = n("782340");
+  g = n("782340");
 
-function g(e) {
+function S(e) {
   let {
     channel: t,
-    themeable: g
+    themeable: S
   } = e, C = t.getGuildId(), {
     mute: _,
     suppress: I
-  } = (0, c.default)(t), T = (0, a.default)([m.default], () => m.default.isDeaf()), v = _ || I || T, x = (0, o.useSoundBoardDismissContentTypes)({
+  } = (0, c.default)(t), T = (0, a.default)([m.default], () => m.default.isDeaf()), v = _ || I || T, x = (0, u.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: v
   }), [N, A] = (0, r.useGetDismissibleContent)(x);
 
@@ -53,7 +53,7 @@ function g(e) {
           guildId: C,
           channel: t,
           onClose: n,
-          gridNotice: N === s.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, l.jsx)(u.CustomCallSoundUpsell, {
+          gridNotice: N === s.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, l.jsx)(o.CustomCallSoundUpsell, {
             onClose: n,
             markAsDismissed: A
           }),
@@ -62,11 +62,11 @@ function g(e) {
       })
     },
     children: e => (0, l.jsx)(h.default, {
-      themeable: g,
+      themeable: S,
       label: function() {
-        if (_) return S.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (I) return S.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (T) return S.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED
+        if (_) return g.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+        if (I) return g.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (T) return g.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED
       }(),
       iconComponent: p.default,
       disabled: v,

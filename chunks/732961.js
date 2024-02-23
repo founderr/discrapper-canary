@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("907002"),
-  o = n("84339"),
-  u = n("109489"),
+  u = n("84339"),
+  o = n("109489"),
   d = n("271938"),
   c = n("42887"),
   f = n("659500"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("876715"),
   p = n("842044"),
   E = n("329515"),
-  S = n("49111"),
-  g = n("99795"),
+  g = n("49111"),
+  S = n("99795"),
   C = n("772313"),
   _ = n("233636");
 let I = 16 / 9,
@@ -47,15 +47,15 @@ function v(e) {
     w = null != A,
     F = c.default.getVideoComponent(),
     k = d.default.getId(),
-    [V, B] = a.useState(null),
-    [G, H] = a.useState(!0),
+    [B, V] = a.useState(null),
+    [H, G] = a.useState(!0),
     [W, Y] = a.useState(!1),
-    z = j.type === g.ParticipantTypes.ACTIVITY,
+    z = j.type === S.ParticipantTypes.ACTIVITY,
     K = !z && null != j.streamId,
-    Z = K && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : I,
+    Z = K && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : I,
     X = b <= 2 * T + 144,
     Q = L && !X,
-    q = (0, o.default)(Q),
+    q = (0, u.default)(Q),
     J = 0;
   (z || Q) && (J += 72), z && !Q && (J += 48), Q && (J += .5 * T + 8);
   let $ = b - 2 * J,
@@ -65,7 +65,7 @@ function v(e) {
     el = !Q && !z;
   t = el ? 40 + Math.max(0, 72 - (b - et) / 2) : Q ? -16 : -8, a.useEffect(() => {
     let e = setTimeout(() => {
-      H(!1)
+      G(!1)
     }, 250);
     return () => {
       clearTimeout(e)
@@ -79,9 +79,9 @@ function v(e) {
         clamp: !0
       },
       onStart: () => Y(!0),
-      onChange: () => f.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET),
+      onChange: () => f.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET),
       onRest: () => {
-        Y(!1), f.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET)
+        Y(!1), f.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET)
       }
     }),
     es = (0, r.useSpring)({
@@ -106,7 +106,7 @@ function v(e) {
         clamp: !0
       }
     }),
-    eo = (0, r.useTransition)(j, {
+    eu = (0, r.useTransition)(j, {
       keys: e => null == e ? void 0 : e.id,
       config: {
         ...r.config.stiff,
@@ -123,8 +123,8 @@ function v(e) {
         opacity: 0
       }
     }),
-    eu = a.useCallback(e => {
-      B(e), H(!1)
+    eo = a.useCallback(e => {
+      V(e), G(!1)
     }, []),
     ed = Q || O ? [] : (0, p.getPipParticipants)(x, j, k),
     {
@@ -136,7 +136,7 @@ function v(e) {
     children: [(0, l.jsxs)("div", {
       className: _.tileWrapper,
       style: {
-        opacity: K && G ? 0 : 1
+        opacity: K && H ? 0 : 1
       },
       children: [(0, l.jsxs)(r.animated.div, {
         className: _.videoFrame,
@@ -153,7 +153,7 @@ function v(e) {
             style: {
               aspectRatio: Z
             },
-            children: eo((e, t, a) => {
+            children: eu((e, t, a) => {
               let {
                 key: i
               } = a;
@@ -172,21 +172,21 @@ function v(e) {
                   onClick: n,
                   onDoubleClick: v,
                   onContextMenu: s,
-                  onVideoResize: eu,
+                  onVideoResize: eo,
                   inCall: M,
                   inPopout: w
                 })
               }, i) : null
             })
           })
-        }), X || D === S.ChannelLayouts.MINIMUM || D === S.ChannelLayouts.NORMAL ? null : (0, l.jsx)(r.animated.div, {
+        }), X || D === g.ChannelLayouts.MINIMUM || D === g.ChannelLayouts.NORMAL ? null : (0, l.jsx)(r.animated.div, {
           className: i(_.actionRow, {
             [_.idle]: U
           }),
           style: {
             bottom: er.value
           },
-          children: (0, l.jsx)(u.default, {
+          children: (0, l.jsx)(o.default, {
             channelId: R.id,
             isParticipantsOpen: L,
             isVertical: !0

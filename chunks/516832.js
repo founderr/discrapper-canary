@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("907002"),
   i = n("446674"),
   r = n("413197"),
-  o = n("84339"),
-  u = n("485328"),
+  u = n("84339"),
+  o = n("485328"),
   d = n("982108"),
   c = n("561744"),
   f = n("994906"),
@@ -18,9 +18,9 @@ var l = n("37983"),
   m = n("598263"),
   p = n("276867"),
   E = n("789150"),
-  S = n("49111");
+  g = n("49111");
 
-function g(e, t) {
+function S(e, t) {
   return n => {
     if (0 === n) return "auto";
     let l = "forwards" === t.current,
@@ -38,7 +38,7 @@ function C(e) {
     onClose: I,
     analyticsLocation: T,
     className: v
-  } = e, x = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), N = null !== (t = null == x ? void 0 : x.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, A = (0, o.default)(C);
+  } = e, x = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), N = null !== (t = null == x ? void 0 : x.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, A = (0, u.default)(C);
   let M = null == (n = N) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
     R = (0, c.default)(M),
     {
@@ -50,7 +50,7 @@ function C(e) {
       })
     }, [x, _, C]),
     y = a.useMemo(() => ({
-      [S.KeybindActions.CLOSE_MODAL]: {
+      [g.KeybindActions.CLOSE_MODAL]: {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
@@ -59,7 +59,7 @@ function C(e) {
         }
       }
     }), [I, N, L]);
-  a.useEffect(() => (u.default.enable(), u.default.enableTemp(y), () => u.default.disableTemp()), [y]);
+  a.useEffect(() => (o.default.enable(), o.default.enableTemp(y), () => o.default.disableTemp()), [y]);
   let O = (0, s.useTransition)(N, {
     immediate: A !== C,
     value: 0,
@@ -83,7 +83,7 @@ function C(e) {
     children: O((e, t, n) => {
       var a, i, r;
       let {
-        key: o
+        key: u
       } = n;
       return (0, l.jsx)(s.animated.div, {
         style: {
@@ -96,8 +96,8 @@ function C(e) {
           ...j.enabled ? {
             opacity: null === (a = e.value) || void 0 === a ? void 0 : a.to(e => 1 - Math.abs(e))
           } : {
-            left: null === (i = e.value) || void 0 === i ? void 0 : i.to(g("left", R)),
-            right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g("right", R))
+            left: null === (i = e.value) || void 0 === i ? void 0 : i.to(S("left", R)),
+            right: null === (r = e.value) || void 0 === r ? void 0 : r.to(S("right", R))
           }
         },
         children: function(e) {
@@ -127,7 +127,7 @@ function C(e) {
               return null
           }
         }(t)
-      }, o)
+      }, u)
     })
   })
 }

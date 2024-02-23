@@ -9,8 +9,8 @@ var l = n("446674"),
   s = n("867805"),
   i = n("697218"),
   r = n("402671"),
-  o = n("315841"),
-  u = n("52477"),
+  u = n("315841"),
+  o = n("52477"),
   d = n("827520");
 let c = {},
   f = {},
@@ -27,7 +27,7 @@ function E(e) {
     l.src = n, f[e] = l
   }
 }
-class S extends l.default.Store {
+class g extends l.default.Store {
   get visibleOverlayCanvas() {
     return m
   }
@@ -44,8 +44,8 @@ class S extends l.default.Store {
     return p
   }
 }
-S.displayName = "SharedCanvasStore";
-let g = new S(a.default, {
+g.displayName = "SharedCanvasStore";
+let S = new g(a.default, {
   SHARED_CANVAS_UPDATE_LINE_POINTS: function(e) {
     let {
       lineId: t,
@@ -54,7 +54,7 @@ let g = new S(a.default, {
       streamerId: a
     } = e, s = c[a];
     if (null == s) c[a] = [{
-      type: o.DrawableType.LINE,
+      type: u.DrawableType.LINE,
       id: t,
       userId: l,
       points: n
@@ -62,11 +62,11 @@ let g = new S(a.default, {
     else {
       let e = s.find(e => e.id === t);
       null == e ? s.push({
-        type: o.DrawableType.LINE,
+        type: u.DrawableType.LINE,
         id: t,
         userId: l,
         points: n
-      }) : (0, u.isLine)(e) && e.points.push(...n)
+      }) : (0, o.isLine)(e) && e.points.push(...n)
     }
     E(l)
   },
@@ -75,10 +75,10 @@ let g = new S(a.default, {
     let {
       emojiHose: a,
       streamerId: i,
-      userId: u
+      userId: o
     } = e, f = {
       ...a,
-      type: o.DrawableType.EMOJI_HOSE
+      type: u.DrawableType.EMOJI_HOSE
     };
     if (null == c[i]) c[i] = [f];
     else {
@@ -97,7 +97,7 @@ let g = new S(a.default, {
         animated: !1
       }, d.EMOJI_HOSE_EMOJI_SIZE)
     }
-    E(u)
+    E(o)
   },
   SHARED_CANVAS_CLEAR_DRAWABLES: function(e) {
     let {
@@ -120,4 +120,4 @@ let g = new S(a.default, {
     m = !m
   }
 });
-var C = g
+var C = S

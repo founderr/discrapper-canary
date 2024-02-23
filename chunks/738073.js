@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), n("222007");
 var l = n("37983"),
@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("77078"),
-  u = n("851387"),
+  u = n("77078"),
+  o = n("851387"),
   d = n("697218"),
   c = n("440351"),
   f = n("701909"),
@@ -47,7 +47,7 @@ class E extends a.PureComponent {
       agreement: m.default.Messages.NSFW_ACCEPT,
       disagreement: m.default.Messages.NSFW_DECLINE
     });
-    return (0, l.jsx)(o.AdvancedScroller, {
+    return (0, l.jsx)(u.AdvancedScroller, {
       ref: this.scroller,
       className: p.scroller,
       children: (0, l.jsx)("div", {
@@ -61,16 +61,16 @@ class E extends a.PureComponent {
       let {
         guild: e
       } = this.props;
-      null != e && u.default.nsfwReturnToSafety(e.id)
+      null != e && o.default.nsfwReturnToSafety(e.id)
     }, this.handleAgree = () => {
       let {
         guild: e
       } = this.props;
-      null != e && u.default.nsfwAgree(e.id)
+      null != e && o.default.nsfwAgree(e.id)
     }
   }
 }
-var S = r.default.connectStores([d.default], () => {
+var g = r.default.connectStores([d.default], () => {
   var e;
   return {
     nsfwDisallowed: (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1

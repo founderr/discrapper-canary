@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return E
   },
   shouldShowCallscopeUI: function() {
-    return S
+    return g
   },
   setCallscopeIssue: function() {
-    return g
+    return S
   }
 }), n("424973"), n("222007");
 var l = n("811022"),
@@ -15,8 +15,8 @@ var l = n("811022"),
   s = n("398183"),
   i = n("913144"),
   r = n("629803"),
-  o = n("367632"),
-  u = n("147746"),
+  u = n("367632"),
+  o = n("147746"),
   d = n("271938"),
   c = n("697218"),
   f = n("773336"),
@@ -46,13 +46,13 @@ class m {
       t = JSON.stringify(e, void 0, 4);
     console.log("[callscope] Submitting issues...\n".concat(t));
     try {
-      await (0, u.uploadDebugLogFiles)(h.DebugLogCategory.RTC, e)
+      await (0, o.uploadDebugLogFiles)(h.DebugLogCategory.RTC, e)
     } catch (e) {
       console.error("[callscope] Error uploading logs", e)
     }
     try {
       let e = c.default.getCurrentUser();
-      await (0, o.submitReport)({
+      await (0, u.submitReport)({
         name: "Issue from ".concat(null == e ? void 0 : e.username, "#").concat(null == e ? void 0 : e.discriminator),
         priority: 2,
         description: t,
@@ -77,11 +77,11 @@ function E() {
   return p
 }
 
-function S() {
+function g() {
   return p.shouldShowUI()
 }
 
-function g(e) {
+function S(e) {
   p.issues.push({
     date: new Date,
     description: e
@@ -103,7 +103,7 @@ class _ {
     }
     C.info("CallscopeManager: Uploading rtc logs in ".concat(1e4, " ms..."));
     let t = d.default.getId();
-    await (0, s.sleep)(1e4), await (0, u.uploadCallscopeLogs)(e.channelId, t, e.rtcLogEphemeralKey, e.context)
+    await (0, s.sleep)(1e4), await (0, o.uploadCallscopeLogs)(e.channelId, t, e.rtcLogEphemeralKey, e.context)
   }
 }
 class I extends a.default.Store {}
@@ -120,7 +120,7 @@ I.displayName = "CallscopeStore", new I(i.default, __OVERLAY__ ? {} : {
       case h.RTCConnectionStates.RTC_CONNECTED:
         if (null != e.rtcLogEphemeralKey) {
           let t = d.default.getId(),
-            l = (0, u.getBlindIds)(e.channelId, t, e.rtcLogEphemeralKey);
+            l = (0, o.getBlindIds)(e.channelId, t, e.rtcLogEphemeralKey);
           0 === p.rtcConnections.size && (p.callStartedAt = new Date), p.isInCallscopeCall = !0, p.blindIds.push({
             date: new Date,
             context: e.context,

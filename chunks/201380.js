@@ -15,8 +15,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("316693"),
-  o = n("77078"),
-  u = n("255397"),
+  u = n("77078"),
+  o = n("255397"),
   d = n("272030"),
   c = n("987317"),
   f = n("990766"),
@@ -24,8 +24,8 @@ var l = n("37983"),
   m = n("76393"),
   p = n("845038"),
   E = n("374014"),
-  S = n("223913"),
-  g = n("709463"),
+  g = n("223913"),
+  S = n("709463"),
   C = n("264429"),
   _ = n("930291"),
   I = n("506885"),
@@ -48,7 +48,7 @@ function b(e) {
   } = e;
   return (0, l.jsx)("div", {
     className: P.moreContainer,
-    children: (0, l.jsxs)(o.Text, {
+    children: (0, l.jsxs)(u.Text, {
       color: "text-muted",
       variant: "text-sm/medium",
       children: ["+", t]
@@ -72,7 +72,7 @@ function D(e) {
       children: (0, l.jsx)(M.default, {
         className: P.audienceIcon
       })
-    }), (0, l.jsx)(o.Text, {
+    }), (0, l.jsx)(u.Text, {
       color: "text-muted",
       variant: "text-sm/medium",
       children: a
@@ -85,7 +85,7 @@ class U extends a.PureComponent {
       channel: e,
       isStreaming: t
     } = this.props;
-    return t && (0, S.canWatchStream)(e, A.default, x.default, N.default, m.default)[0]
+    return t && (0, g.canWatchStream)(e, A.default, x.default, N.default, m.default)[0]
   }
   render() {
     let {
@@ -101,7 +101,7 @@ class U extends a.PureComponent {
       "data-dnd-name": i.name,
       onMouseEnter: a ? void 0 : this.handleMouseEnter,
       onMouseLeave: a ? void 0 : this.handleHidePreview,
-      children: (0, l.jsx)(o.Popout, {
+      children: (0, l.jsx)(u.Popout, {
         preload: () => (0, I.default)(s.id, s.getAvatarURL(i.guild_id, 80), {
           guildId: i.guild_id,
           channelId: i.id
@@ -163,7 +163,7 @@ class U extends a.PureComponent {
         channelId: t.id,
         guildId: t.guild_id
       };
-      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, g.default)(a), u.default.selectParticipant(a.channelId, (0, E.encodeStreamKey)(a))) : (0, f.watchStreamAndTransitionToStream)(a), null == l || l(e.id)
+      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, S.default)(a), o.default.selectParticipant(a.channelId, (0, E.encodeStreamKey)(a))) : (0, f.watchStreamAndTransitionToStream)(a), null == l || l(e.id)
     }, this.handleJoinVoice = () => {
       let {
         user: e,
@@ -234,15 +234,15 @@ class U extends a.PureComponent {
         voicePlatform: a,
         shouldShowPreview: s,
         mute: r,
-        localMute: u,
+        localMute: o,
         localVideoDisabled: d,
         speaking: c,
         user: f,
         deaf: h,
         priority: m,
         collapsed: E,
-        isStreaming: S,
-        isGuest: g,
+        isStreaming: g,
+        isGuest: S,
         nick: C,
         video: _,
         serverMute: I,
@@ -261,10 +261,10 @@ class U extends a.PureComponent {
         user: f,
         speaking: c,
         mute: r,
-        localMute: u,
+        localMute: o,
         localVideoDisabled: d,
-        isStreaming: S,
-        isGuest: g,
+        isStreaming: g,
+        isGuest: S,
         video: _,
         priority: m,
         deaf: h,
@@ -294,7 +294,7 @@ class U extends a.PureComponent {
       };
       if (t) {
         var F;
-        return (0, l.jsx)(o.Tooltip, {
+        return (0, l.jsx)(u.Tooltip, {
           text: null !== (F = (0, p.default)(n)) && void 0 !== F ? F : O.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
           children: e => {
             let {
@@ -309,9 +309,9 @@ class U extends a.PureComponent {
           }
         })
       }
-      return (0, l.jsx)(o.Popout, {
+      return (0, l.jsx)(u.Popout, {
         position: "right",
-        renderPopout: M && D || !S ? this.renderHangStatusPopout : this.renderStreamPopout,
+        renderPopout: M && D || !g ? this.renderHangStatusPopout : this.renderStreamPopout,
         shouldShow: s && !b,
         onRequestClose: this.handleHidePreview,
         spacing: 0,

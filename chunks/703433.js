@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("65597"),
   r = n("797350"),
-  o = n("237020"),
-  u = n("352567"),
+  u = n("237020"),
+  o = n("352567"),
   d = n("305861"),
   c = n("715072"),
   f = n("77078"),
@@ -19,8 +19,8 @@ var a = n("414456"),
   m = n("290491"),
   p = n("305961"),
   E = n("18494"),
-  S = n("124969"),
-  g = n("153769"),
+  g = n("124969"),
+  S = n("153769"),
   C = n("994906"),
   _ = n("136281"),
   I = n("49111"),
@@ -48,11 +48,11 @@ function x(e) {
             color: "text-normal",
             children: T.default.Messages.MEMBER_VERIFICATION_ACCOUNT_VERIFIED
           }),
-          description: a ? (0, l.jsx)(o.CheckmarkBoldIcon, {
+          description: a ? (0, l.jsx)(u.CheckmarkBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_POSITIVE_FOREGROUND
-          }) : (0, l.jsx)(u.CloseLargeBoldIcon, {
+          }) : (0, l.jsx)(o.CloseLargeBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_DANGER_FOREGROUND
@@ -68,17 +68,17 @@ function x(e) {
             color: "text-normal",
             children: T.default.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
           }),
-          description: x === h.UserRulesAgreementLevel.AGREED ? (0, l.jsx)(o.CheckmarkBoldIcon, {
+          description: x === h.UserRulesAgreementLevel.AGREED ? (0, l.jsx)(u.CheckmarkBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_POSITIVE_FOREGROUND
-          }) : (0, l.jsx)(u.CloseLargeBoldIcon, {
+          }) : (0, l.jsx)(o.CloseLargeBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_DANGER_FOREGROUND
           })
         }), (0, l.jsx)(_.UserModInfoItem, {
-          icon: (0, l.jsx)(g.default, {
+          icon: (0, l.jsx)(S.default, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX
           }),
@@ -93,9 +93,9 @@ function x(e) {
             children: N
           })
         }), (0, l.jsx)(_.UserModInfoItem, {
-          icon: (0, l.jsx)(S.GuildIcon, {
+          icon: (0, l.jsx)(g.GuildIcon, {
             guild: n,
-            size: S.GuildIcon.Sizes.SMOL,
+            size: g.GuildIcon.Sizes.SMOL,
             animate: !1,
             className: v.guildIcon
           }),

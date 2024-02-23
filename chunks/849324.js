@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("974667"),
   r = n("446674"),
-  o = n("77078"),
-  u = n("145079"),
+  u = n("77078"),
+  o = n("145079"),
   d = n("87657"),
   c = n("824563"),
   f = n("145131"),
@@ -25,24 +25,24 @@ function p(e) {
     hideDiscriminator: a,
     comparator: p,
     selected: E,
-    checked: S,
-    onClick: g,
+    checked: g,
+    onClick: S,
     onMouseEnter: C,
     "aria-setsize": _,
     "aria-posinset": I
   } = e, T = (0, r.useStateFromStores)([c.default], () => c.default.getStatus(t.id)), v = (0, i.useListItem)(String(t.id));
-  return (0, l.jsx)(o.Clickable, {
+  return (0, l.jsx)(u.Clickable, {
     id: "user-row-".concat(n),
     className: m.friendWrapper,
     onClick: () => {
-      null != g && g(t.id)
+      null != S && S(t.id)
     },
     onMouseEnter: () => {
       null != C && C(n)
     },
     ...v,
     role: "option",
-    "aria-selected": S,
+    "aria-selected": g,
     "aria-setsize": _,
     "aria-posinset": I,
     children: (0, l.jsxs)(f.default, {
@@ -57,13 +57,13 @@ function p(e) {
       }), (0, l.jsxs)(f.default, {
         className: m.match,
         align: f.default.Align.BASELINE,
-        children: [(0, l.jsx)(o.Text, {
+        children: [(0, l.jsx)(u.Text, {
           tag: "strong",
           className: m.nickname,
           "aria-hidden": !0,
           variant: "text-md/medium",
           children: null != p && p === t.tag ? h.default.getName(t) : null != p && "" !== p ? p : h.default.getName(t)
-        }), (0, l.jsx)(u.default, {
+        }), (0, l.jsx)(o.default, {
           user: t,
           hideDiscriminator: a,
           className: m.discordTag,
@@ -71,10 +71,10 @@ function p(e) {
           discriminatorClass: m.weightMedium,
           forceUsername: !0
         })]
-      }), (0, l.jsx)(o.Checkbox, {
+      }), (0, l.jsx)(u.Checkbox, {
         displayOnly: !0,
         size: 22,
-        value: S,
+        value: g,
         className: m.checkbox
       })]
     })

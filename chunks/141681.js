@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("458960"),
-  o = n("446674"),
-  u = n("266491"),
+  u = n("446674"),
+  o = n("266491"),
   d = n("819855"),
   c = n("77078"),
   f = n("841098"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("823050"),
   p = n("99795"),
   E = n("133006"),
-  S = n("125047"),
-  g = n("403693");
+  g = n("125047"),
+  S = n("403693");
 let C = {
     STEPS: 23,
     FRAME_DURATION: 17,
@@ -122,14 +122,14 @@ class T extends a.PureComponent {
       children: t,
       className: n
     } = this.props, a = (0, d.isThemeDark)(e), s = i(E.sprite, {
-      [g.crossWhite]: a,
-      [g.crossGrey]: !a
+      [S.crossWhite]: a,
+      [S.crossGrey]: !a
     });
     return (0, l.jsxs)(r.default.div, {
       className: i(E.transition, n),
       style: this.getWidthStyle(),
       children: [(0, l.jsx)("div", {
-        className: i(E.spriteWrapper, S.horizontal, S.justifyCenter, S.alignCenter),
+        className: i(E.spriteWrapper, g.horizontal, g.justifyCenter, g.alignCenter),
         children: (0, l.jsx)(r.default.div, {
           className: s,
           style: this.getSpriteStyle()
@@ -152,11 +152,11 @@ function v(e) {
     onContextMenu: s,
     className: r,
     onClick: d,
-    width: S,
-    guildId: g
+    width: g,
+    guildId: S
   } = e, C = (0, f.default)();
-  let _ = (t = S, n = a.length, ((0, c.getAvatarSize)(c.AvatarSizes.SIZE_80) + 16) * n > t ? c.AvatarSizes.SIZE_40 : c.AvatarSizes.SIZE_80),
-    I = (0, o.useStateFromStores)([h.default], () => h.default.isFocused()),
+  let _ = (t = g, n = a.length, ((0, c.getAvatarSize)(c.AvatarSizes.SIZE_80) + 16) * n > t ? c.AvatarSizes.SIZE_40 : c.AvatarSizes.SIZE_80),
+    I = (0, u.useStateFromStores)([h.default], () => h.default.isFocused()),
     v = a.map(e => {
       var t, n;
       if (e.type !== p.ParticipantTypes.USER) return null;
@@ -164,25 +164,25 @@ function v(e) {
         user: a,
         voiceState: i,
         speaking: r,
-        ringing: o
+        ringing: u
       } = e;
       return (0, l.jsx)(T, {
         className: E.participant,
         width: (0, c.getAvatarSize)(_),
         theme: C,
         children: (0, l.jsx)(m.default, {
-          src: a.getAvatarURL(g, (0, c.getAvatarSize)(_), r && I),
+          src: a.getAvatarURL(S, (0, c.getAvatarSize)(_), r && I),
           size: _,
           muted: null !== (t = null == i ? void 0 : i.isVoiceMuted()) && void 0 !== t && t,
           deafen: null !== (n = null == i ? void 0 : i.isVoiceDeafened()) && void 0 !== n && n,
           speaking: r,
-          ringing: o,
+          ringing: u,
           onClick: t => null == d ? void 0 : d(e, t),
           onContextMenu: t => null == s ? void 0 : s(e, t)
         }, e.id)
       }, a.id)
     });
-  return (0, l.jsx)(u.default, {
+  return (0, l.jsx)(o.default, {
     component: "div",
     className: i(E.root, r),
     children: v

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("917351"),
   i = n.n(s),
   r = n("446674"),
-  o = n("913144"),
-  u = n("272030"),
+  u = n("913144"),
+  o = n("272030"),
   d = n("264732"),
   c = n("716241"),
   f = n("701916"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("176347"),
   p = n("850391"),
   E = n("557809"),
-  S = n("144491"),
-  g = n("42203"),
+  g = n("144491"),
+  S = n("42203"),
   C = n("474643"),
   _ = n("305961"),
   I = n("800762"),
@@ -35,21 +35,21 @@ function R(e) {
     channelId: t,
     baseChannelId: s,
     channelViewSource: R = "Split View"
-  } = e, j = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(t)), L = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(null == j ? void 0 : j.getGuildId())), y = (0, h.default)(j);
+  } = e, j = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(t)), L = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(null == j ? void 0 : j.getGuildId())), y = (0, h.default)(j);
   (function(e) {
     let t = (0, r.useStateFromStores)([I.default], () => null != e && !i.isEmpty(I.default.getVoiceStatesForChannel(e.id)));
     a.useEffect(() => {
-      t && null != e && (o.default.dispatch({
+      t && null != e && (u.default.dispatch({
         type: "SIDEBAR_CLOSE",
         baseChannelId: e.parent_id
-      }), (0, S.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
+      }), (0, g.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
     }, [t, e])
   })(j);
   let O = a.useRef(!1);
   if (a.useEffect(() => {
       if (null == j || O.current) return;
       O.current = !0;
-      let e = (0, f.collectThreadMetadata)(g.default.getChannel(j.id), !0);
+      let e = (0, f.collectThreadMetadata)(S.default.getChannel(j.id), !0);
       (0, c.trackWithMetadata)(N.AnalyticEvents.CHANNEL_OPENED, {
         ...e,
         ...(0, c.getChannelOpenedMetadata)(j.id),
@@ -76,7 +76,7 @@ function R(e) {
         guild: L,
         inSidebar: !0,
         handleContextMenu: function(e) {
-          (0, u.openContextMenuLazy)(e, async () => {
+          (0, o.openContextMenuLazy)(e, async () => {
             let {
               default: e
             } = await n.el("994827").then(n.bind(n, "994827"));
@@ -87,7 +87,7 @@ function R(e) {
           })
         },
         handleClick: function() {
-          null != j && (0, S.transitionToChannel)(j.id)
+          null != j && (0, g.transitionToChannel)(j.id)
         }
       })
     }), (0, l.jsx)("div", {

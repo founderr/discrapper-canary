@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 }), n("222007");
 var l = n("884691"),
@@ -10,14 +10,14 @@ var l = n("884691"),
   i = n("244480"),
   r = n("808422");
 
-function o(e) {
+function u(e) {
   let t = (0, a.useStateFromStores)([s.default], () => s.default.getId()),
     n = (0, r.default)(t, e.id),
-    o = n === r.RequestToSpeakStates.REQUESTED_TO_SPEAK || n === r.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-    [u, d] = l.useState(o);
+    u = n === r.RequestToSpeakStates.REQUESTED_TO_SPEAK || n === r.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+    [o, d] = l.useState(u);
   return l.useEffect(() => {
-    d(o)
-  }, [o]), [u, function() {
-    n === r.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, i.audienceAckRequestToSpeak)(e, !0) : (0, i.toggleRequestToSpeak)(e, !u), d(!u)
+    d(u)
+  }, [u]), [o, function() {
+    n === r.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, i.audienceAckRequestToSpeak)(e, !0) : (0, i.toggleRequestToSpeak)(e, !o), d(!o)
   }]
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getMediaPostEmbedCommonData: function() {
-    return _
+    return E
   },
   getMediaPostEmbedChannelPath: function() {
     return c
@@ -18,13 +18,13 @@ var r = n("312016"),
   o = n("856220"),
   s = n("49111"),
   d = n("894488"),
-  E = n("782340");
+  _ = n("782340");
 
-function _(e) {
+function E(e) {
   var t, n, r, i, l;
   let {
     mediaPostEmbedData: s,
-    guild: _,
+    guild: E,
     parentChannel: c,
     postThread: I,
     user: S,
@@ -34,9 +34,9 @@ function _(e) {
   if (null == s) return null;
   let p = (0, o.getThumbnailImage)(s.thumbnail),
     N = !f && s.has_media_attachment,
-    A = f ? E.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : E.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
-    R = null != S ? a.default.getName(s.guild_id, s.channel_id, S) : void 0,
-    C = null == S ? void 0 : S.getAvatarURL(null == _ ? void 0 : _.id, 40);
+    R = f ? _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
+    A = null != S ? a.default.getName(s.guild_id, s.channel_id, S) : void 0,
+    C = null == S ? void 0 : S.getAvatarURL(null == E ? void 0 : E.id, 40);
   (null == C || T !== s.guild_id) && (C = u.default.getGuildIconURL({
     id: s.guild_id,
     icon: s.guild_icon,
@@ -51,27 +51,27 @@ function _(e) {
       } = e;
       return null != t && null != n && t >= n
     }(s.thumbnail) && !N,
-    h = (null === (t = s.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (r = s.thumbnail) || void 0 === r ? void 0 : null === (n = r.filename) || void 0 === n ? void 0 : n.startsWith(d.SPOILER_ATTACHMENT_PREFIX));
+    O = (null === (t = s.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (r = s.thumbnail) || void 0 === r ? void 0 : null === (n = r.filename) || void 0 === n ? void 0 : n.startsWith(d.SPOILER_ATTACHMENT_PREFIX));
   return {
     title: null !== (i = s.title) && void 0 !== i ? i : "",
     subtitle: s.description,
-    ctaText: A,
+    ctaText: R,
     coverImage: p,
-    coverImageOverlayText: N ? E.default.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
+    coverImageOverlayText: N ? _.default.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
     parentChannelId: s.parent_channel_id,
     threadId: s.channel_id,
     postThread: I,
     messageId: s.message_id,
     canAccess: f,
     guildId: s.guild_id,
-    guildName: null !== (l = null == _ ? void 0 : _.name) && void 0 !== l ? l : s.guild_name,
+    guildName: null !== (l = null == E ? void 0 : E.name) && void 0 !== l ? l : s.guild_name,
     authorId: null == s ? void 0 : s.author_id,
-    authorName: R,
+    authorName: A,
     channelName: null == c ? void 0 : c.name,
     avatarUrl: C,
     shouldShowBlurredThumbnailImage: N,
     shouldContainMediaWithBackground: L,
-    shouldSpoiler: h,
+    shouldSpoiler: O,
     obscureAwaitingScan: !1,
     flags: s.flags,
     contentScanVersion: s.content_scan_version

@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("77078"),
   r = n("155207"),
-  o = n("981913"),
-  u = n("782340"),
+  u = n("981913"),
+  o = n("782340"),
   d = n("164825");
 
 function c(e) {
@@ -37,8 +37,8 @@ function f(e) {
     count: t,
     ...n
   } = e;
-  return (0, l.jsx)(o.default, {
-    label: u.default.Messages.CHANNEL_CALL_PARTICIPANTS,
+  return (0, l.jsx)(u.default, {
+    label: o.default.Messages.CHANNEL_CALL_PARTICIPANTS,
     iconComponent: e => {
       let {
         className: n

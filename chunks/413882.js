@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useRequestToSpeakPermission: function() {
-    return u
+    return o
   }
 }), n("222007");
 var l = n("884691"),
@@ -9,15 +9,15 @@ var l = n("884691"),
   s = n("42203"),
   i = n("991170"),
   r = n("244480"),
-  o = n("49111");
+  u = n("49111");
 
-function u(e) {
+function o(e) {
   let t = (0, a.useStateFromStores)([s.default], () => s.default.getChannel(e), [e]),
-    n = i.default.canEveryoneRole(o.Permissions.REQUEST_TO_SPEAK, t),
-    [u, d] = l.useState(n);
+    n = i.default.canEveryoneRole(u.Permissions.REQUEST_TO_SPEAK, t),
+    [o, d] = l.useState(n);
   return l.useEffect(() => {
-    n !== u && d(n)
-  }, [n]), [u, e => {
-    null != t && (d(e), (0, r.setEveryoneRolePermissionAllowed)(t, o.Permissions.REQUEST_TO_SPEAK, e))
+    n !== o && d(n)
+  }, [n]), [o, e => {
+    null != t && (d(e), (0, r.setEveryoneRolePermissionAllowed)(t, u.Permissions.REQUEST_TO_SPEAK, e))
   }]
 }

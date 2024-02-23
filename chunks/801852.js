@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ActivitiesMiniShelf: function() {
-    return H
+    return G
   }
 }), n("222007"), n("424973");
 var l = n("37983"),
@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("90915"),
-  o = n("748820"),
-  u = n("446674"),
+  u = n("748820"),
+  o = n("446674"),
   d = n("77078"),
   c = n("997289"),
   f = n("244201"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("812204"),
   p = n("685665"),
   E = n("393414"),
-  S = n("161778"),
-  g = n("124824"),
+  g = n("161778"),
+  S = n("124824"),
   C = n("772280"),
   _ = n("82636"),
   I = n("599110"),
@@ -41,15 +41,15 @@ var l = n("37983"),
   w = n("789335"),
   F = n("274889"),
   k = n("894860"),
-  V = n("717387"),
-  B = n("861948");
-let G = "vc-activities-".concat((0, o.v4)()),
-  H = a.forwardRef(function(e, t) {
+  B = n("717387"),
+  V = n("861948");
+let H = "vc-activities-".concat((0, u.v4)()),
+  G = a.forwardRef(function(e, t) {
     let {
       channel: n,
       isHovered: s,
-      closePopout: o,
-      onMouseEnter: H,
+      closePopout: u,
+      onMouseEnter: G,
       onMouseLeave: W,
       onClick: Y,
       className: z
@@ -79,7 +79,7 @@ let G = "vc-activities-".concat((0, o.v4)()),
       location: "activties_mini_shelf"
     }, {
       autoTrackExposure: !0
-    }), J = (0, u.useStateFromStores)([S.default], () => S.default.getState().theme), $ = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
+    }), J = (0, o.useStateFromStores)([g.default], () => g.default.getState().theme), $ = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
       id: ee,
       guild_id: et
     } = n;
@@ -89,8 +89,8 @@ let G = "vc-activities-".concat((0, o.v4)()),
         guild_id: et
       })
     }, [ee, et]), a.useEffect(() => {
-      !s && o()
-    }, [o, s]);
+      !s && u()
+    }, [u, s]);
     let en = (0, f.useAppContext)(),
       {
         analyticsLocations: el,
@@ -101,8 +101,8 @@ let G = "vc-activities-".concat((0, o.v4)()),
         AnalyticsLocationProvider: ei
       } = (0, p.default)([...el, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
       er = en === P.AppContext.POPOUT,
-      eo = (0, c.useAnalyticsContext)(),
-      eu = function(e) {
+      eu = (0, c.useAnalyticsContext)(),
+      eo = function(e) {
         let t = (0, R.default)({
             guildId: e
           }),
@@ -121,17 +121,17 @@ let G = "vc-activities-".concat((0, o.v4)()),
         (0, y.default)({
           channel: n,
           guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
-          locationObject: eo.location,
+          locationObject: eu.location,
           openInPopout: er,
           analyticsLocations: el
         }), W(), Y()
-      }, [eo, el, n, Y, W, er]),
+      }, [eu, el, n, Y, W, er]),
       ec = a.useCallback(e => {
-        H(), I.default.track(P.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
+        G(), I.default.track(P.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
           guild_id: n.getGuildId()
         })
-      }, [H, n]),
+      }, [G, n]),
       ef = K ? (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)("img", {
           alt: b.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_GAME_NIGHT_POSTER_ALT,
@@ -157,7 +157,7 @@ let G = "vc-activities-".concat((0, o.v4)()),
           })]
         }), (0, l.jsx)("img", {
           className: D.freeRight,
-          src: B,
+          src: V,
           alt: b.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
         })]
       }) : Z ? (0, l.jsxs)(r.Link, {
@@ -174,11 +174,11 @@ let G = "vc-activities-".concat((0, o.v4)()),
           [D.clickableBannerReducedMotion]: $
         }),
         onClick: () => {
-          Y(), o(), (0, E.transitionTo)(P.Routes.ACTIVITY_DETAILS(O.KRUNKER_STRIKE_APPLICATION_ID), void 0, void 0, es)
+          Y(), u(), (0, E.transitionTo)(P.Routes.ACTIVITY_DETAILS(O.KRUNKER_STRIKE_APPLICATION_ID), void 0, void 0, es)
         },
         children: [(0, l.jsx)("img", {
           alt: b.default.Messages.EMBEDDED_ACTIVITIES_KRUNKER_STRIKE_POSTER_ALT,
-          src: V,
+          src: B,
           className: D.poster
         }), (0, l.jsx)("div", {
           className: D.posterDivider
@@ -188,7 +188,7 @@ let G = "vc-activities-".concat((0, o.v4)()),
           [D.clickableBannerReducedMotion]: $
         }),
         onClick: () => {
-          Y(), o(), (0, E.transitionTo)(P.Routes.ACTIVITY_DETAILS(O.COLONIST_APPLICATION_ID), void 0, void 0, es)
+          Y(), u(), (0, E.transitionTo)(P.Routes.ACTIVITY_DETAILS(O.COLONIST_APPLICATION_ID), void 0, void 0, es)
         },
         children: [(0, l.jsx)("img", {
           alt: b.default.Messages.EMBEDDED_ACTIVITIES_COLONIST_POSTER_ALT,
@@ -199,16 +199,16 @@ let G = "vc-activities-".concat((0, o.v4)()),
         })]
       }) : null;
     return (0, l.jsx)(ea, {
-      children: (0, l.jsx)(g.default, {
+      children: (0, l.jsx)(S.default, {
         children: (0, l.jsxs)(d.Dialog, {
           ref: t,
-          "aria-labelledby": G,
+          "aria-labelledby": H,
           className: z,
           children: [(0, l.jsx)(d.HeadingLevel, {
             forceLevel: 2,
             children: (0, l.jsx)(d.HiddenVisually, {
               children: (0, l.jsx)(d.H, {
-                id: G,
+                id: H,
                 children: b.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
               })
             })
@@ -244,11 +244,11 @@ let G = "vc-activities-".concat((0, o.v4)()),
               children: ef
             }), (0, l.jsxs)("div", {
               className: D.activityContainer,
-              children: [eu.map(e => (0, l.jsx)(j.ActivitySuggestion, {
+              children: [eo.map(e => (0, l.jsx)(j.ActivitySuggestion, {
                 channel: n,
                 activityItem: e,
                 onClick: () => {
-                  o(), Y()
+                  u(), Y()
                 },
                 aspectRatio: j.ActivitySuggestion.AspectRatio.THIRTEEN_BY_ELEVEN,
                 animatedDivClass: D.activitySuggestion

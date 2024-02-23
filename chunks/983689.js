@@ -15,12 +15,12 @@ var a = n("884691"),
   c = n("227602"),
   f = n("791776"),
   h = n("13798"),
-  p = n("49111"),
-  E = n("894282");
+  E = n("49111"),
+  C = n("894282");
 
-function C(e) {
+function p(e) {
   let t = e.ctrlKey || e.altKey || e.metaKey;
-  e.key === E.KeyboardEventKey.Tab && !t && !__OVERLAY__ && !(0, s.hasAnyModalOpen)() && d.default.maybeShowKeyboardNavigationExplainerModal()
+  e.key === C.KeyboardEventKey.Tab && !t && !__OVERLAY__ && !(0, s.hasAnyModalOpen)() && d.default.maybeShowKeyboardNavigationExplainerModal()
 }
 
 function m() {
@@ -33,21 +33,21 @@ var S = function(e, t) {
     ! function(e, t) {
       var n, a;
       let r = (0, f.isInputLikeElement)(null === (n = (0, f.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement);
-      if (r && e.key !== E.KeyboardEventKey.Tab) return;
-      let s = e.ctrlKey || e.altKey || e.metaKey || e.key !== E.KeyboardEventKey.Tab && e.shiftKey;
+      if (r && e.key !== C.KeyboardEventKey.Tab) return;
+      let s = e.ctrlKey || e.altKey || e.metaKey || e.key !== C.KeyboardEventKey.Tab && e.shiftKey;
       if (s) return;
       let i = function(e) {
         let t = h.keyToCode("shift"),
           n = h.keyToCode("tab");
-        if (e.key === E.KeyboardEventKey.Tab && e.shiftKey && null != t && null != n) return [
-          [p.KeyboardDeviceTypes.KEYBOARD_KEY, t],
-          [p.KeyboardDeviceTypes.KEYBOARD_KEY, n]
+        if (e.key === C.KeyboardEventKey.Tab && e.shiftKey && null != t && null != n) return [
+          [E.KeyboardDeviceTypes.KEYBOARD_KEY, t],
+          [E.KeyboardDeviceTypes.KEYBOARD_KEY, n]
         ];
-        let a = E.NavigationKeyShortcutMap.get(e.key);
+        let a = C.NavigationKeyShortcutMap.get(e.key);
         if (null != a) {
           let e = h.keyToCode(a);
           if (null != e) return [
-            [p.KeyboardDeviceTypes.KEYBOARD_KEY, e]
+            [E.KeyboardDeviceTypes.KEYBOARD_KEY, e]
           ]
         }
         return null
@@ -55,7 +55,7 @@ var S = function(e, t) {
       null != i && !c.default.hasExactKeybind(i) && !l.default.hasBind(null !== (a = h.codeToKey(i[0])) && void 0 !== a ? a : "") && ((0, u.enableKeyboardMode)(), r && !t && e.preventDefault())
     }(e, t)
   }, [t]);
-  return (0, a.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", m), e.addEventListener("keydown", C)) : e.addEventListener("keydown", s), () => {
-    n ? (e.removeEventListener("mousedown", m), e.removeEventListener("keydown", C)) : e.removeEventListener("keydown", s)
+  return (0, a.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", m), e.addEventListener("keydown", p)) : e.addEventListener("keydown", s), () => {
+    n ? (e.removeEventListener("mousedown", m), e.removeEventListener("keydown", p)) : e.removeEventListener("keydown", s)
   }), [e, s, n]), n
 }

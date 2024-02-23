@@ -10,8 +10,8 @@ var r, i, l = n("917351"),
   o = n("913144"),
   s = n("42203"),
   d = n("923959"),
-  E = n("26989"),
-  _ = n("305961"),
+  _ = n("26989"),
+  E = n("305961"),
   c = n("697218"),
   I = n("800762"),
   S = n("991170"),
@@ -24,7 +24,7 @@ let p = {},
     moderator: !1
   };
 
-function A(e, t) {
+function R(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   null == p[t] && (p[t] = {});
   let r = function(e, t) {
@@ -32,7 +32,7 @@ function A(e, t) {
     let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       u = s.default.getChannel(t),
       a = null == u ? void 0 : u.getGuildId(),
-      o = _.default.getGuild(a);
+      o = E.default.getGuild(a);
     if (null == o || null == u || !u.isGuildStageVoice()) return N;
     return {
       speaker: function(e, t) {
@@ -51,7 +51,7 @@ function A(e, t) {
   return p[t][e] = r, r
 }
 
-function R(e, t) {
+function A(e, t) {
   var n;
   if (null == t) return !1;
   let r = s.default.getChannel(t);
@@ -86,7 +86,7 @@ function L(e) {
   }(n.id, t)
 }
 
-function h(e) {
+function O(e) {
   let {
     guild: t
   } = e;
@@ -95,9 +95,9 @@ function h(e) {
     (null == n || n.guild_id === t.id) && delete p[e]
   }
 }
-class O extends a.default.Store {
+class h extends a.default.Store {
   initialize() {
-    this.waitFor(E.default, s.default, _.default, c.default, I.default)
+    this.waitFor(_.default, s.default, E.default, c.default, I.default)
   }
   isSpeaker(e, t) {
     return this.getPermissionsForUser(e, t).speaker
@@ -115,12 +115,12 @@ class O extends a.default.Store {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (null == e || null == t) return N;
     let i = null === (n = p[t]) || void 0 === n ? void 0 : n[e];
-    if (null != i) return r && null == i.moderator ? A(e, t, !0) : i;
-    return A(e, t, r)
+    if (null != i) return r && null == i.moderator ? R(e, t, !0) : i;
+    return R(e, t, r)
   }
 }
-O.displayName = "StageChannelRoleStore";
-var P = new O(o.default, {
+h.displayName = "StageChannelRoleStore";
+var P = new h(o.default, {
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
@@ -141,7 +141,7 @@ var P = new O(o.default, {
   PASSIVE_UPDATE_V1: function(e) {
     var t;
     let n = C(e.guildId);
-    for (let r of null !== (t = e.voiceStates) && void 0 !== t ? t : []) n = R(r.userId, r.channelId) || n;
+    for (let r of null !== (t = e.voiceStates) && void 0 !== t ? t : []) n = A(r.userId, r.channelId) || n;
     return n
   },
   VOICE_STATE_UPDATES: function(e) {
@@ -153,9 +153,9 @@ var P = new O(o.default, {
         userId: n,
         channelId: r
       } = t;
-      return R(n, r) || e
+      return A(n, r) || e
     }, !1)
   },
-  GUILD_CREATE: h,
-  GUILD_DELETE: h
+  GUILD_CREATE: O,
+  GUILD_DELETE: O
 })

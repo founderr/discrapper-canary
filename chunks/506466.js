@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("748820"),
-  o = n("337062"),
-  u = n("77078"),
+  u = n("337062"),
+  o = n("77078"),
   d = n("981913"),
   c = n("782340"),
   f = n("583546");
@@ -20,7 +20,7 @@ function h(e) {
     width: t = 24,
     height: n = 24,
     isBadged: s = !1
-  } = e, [i] = a.useState(() => (0, r.v4)()), d = (0, u.useRedesignIconContext)().enabled;
+  } = e, [i] = a.useState(() => (0, r.v4)()), d = (0, o.useRedesignIconContext)().enabled;
   return (0, l.jsxs)("svg", {
     width: t,
     height: n,
@@ -41,7 +41,7 @@ function h(e) {
       })
     }), d ? (0, l.jsx)("g", {
       mask: "url(#".concat(i, ")"),
-      children: (0, l.jsx)(o.HandRequestSpeakListIcon, {})
+      children: (0, l.jsx)(u.HandRequestSpeakListIcon, {})
     }) : (0, l.jsx)("path", {
       fill: "currentColor",
       fillRule: "evenodd",
@@ -61,7 +61,7 @@ function m(e) {
     className: i(f.raisedHandIcon, t),
     children: [(0, l.jsx)(h, {
       isBadged: a
-    }), a ? (0, l.jsx)(u.Text, {
+    }), a ? (0, l.jsx)(o.Text, {
       className: f.raisedHandCount,
       variant: "text-xs/semibold",
       children: n > 99 ? "99+" : n
@@ -76,18 +76,18 @@ function p(e) {
     className: s,
     numRequestToSpeak: i,
     onClick: r,
-    ...o
-  } = e, u = a.useCallback(() => {
+    ...u
+  } = e, o = a.useCallback(() => {
     null == r || r(), t()
   }, [r, t]);
   return (0, l.jsx)(d.default, {
-    onClick: u,
+    onClick: o,
     label: n ? c.default.Messages.REQUEST_TO_SPEAK_AREA_CLOSE : c.default.Messages.REQUEST_TO_SPEAK_AREA_OPEN,
     className: s,
     iconComponent: () => (0, l.jsx)(m, {
       numRequestToSpeak: i,
       className: s
     }),
-    ...o
+    ...u
   })
 }

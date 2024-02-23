@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("446674"),
   r = n("397485"),
-  o = n("170152"),
-  u = n("782340"),
+  u = n("170152"),
+  o = n("782340"),
   d = n("613429");
 
 function c(e) {
@@ -19,10 +19,10 @@ function c(e) {
       channelId: n,
       userId: a
     } = e,
-    [c, f] = (0, i.useStateFromStoresArray)([o.default], () => [o.default.getWaitingHighFive(n, a), o.default.getCompletedHighFive(n, a)]);
+    [c, f] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.getWaitingHighFive(n, a), u.default.getCompletedHighFive(n, a)]);
   if (null != f) t = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("img", {
-      alt: u.default.Messages.CALL_HIGH_FIVE_EXCLAMATION,
+      alt: o.default.Messages.CALL_HIGH_FIVE_EXCLAMATION,
       src: (0, r.getEffectUrl)({
         name: f[0],
         id: null,
@@ -30,7 +30,7 @@ function c(e) {
       }),
       className: s(d.completeLeft, d.highFive)
     }), (0, l.jsx)("img", {
-      alt: u.default.Messages.CALL_HIGH_FIVE_EXCLAMATION,
+      alt: o.default.Messages.CALL_HIGH_FIVE_EXCLAMATION,
       src: (0, r.getEffectUrl)({
         name: f[1],
         id: null,
@@ -42,7 +42,7 @@ function c(e) {
   else {
     if (null == c) return null;
     t = (0, l.jsx)("img", {
-      alt: u.default.Messages.CALL_HIGH_FIVE_EXCLAMATION,
+      alt: o.default.Messages.CALL_HIGH_FIVE_EXCLAMATION,
       src: (0, r.getEffectUrl)({
         name: c,
         id: null,

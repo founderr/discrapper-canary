@@ -17,15 +17,15 @@ var r = n("446674"),
 function c(e, t, c) {
   var f;
   let h = (0, l.useGetStreamApplication)(e),
-    p = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
-    E = null != e ? (0, i.encodeStreamKey)(e) : o.default.getActiveStreamKey(),
-    C = null !== (f = o.default.getVideoStats(E)) && void 0 !== f ? f : {},
+    E = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
+    C = null != e ? (0, i.encodeStreamKey)(e) : o.default.getActiveStreamKey(),
+    p = null !== (f = o.default.getVideoStats(C)) && void 0 !== f ? f : {},
     m = {
-      media_session_id: o.default.getMediaSessionId(E),
-      rtc_connection_id: o.default.getRtcConnectionId(E),
-      stream_region: o.default.getRegion(E),
-      max_viewers: o.default.getMaxViewers(E),
-      ...C
+      media_session_id: o.default.getMediaSessionId(C),
+      rtc_connection_id: o.default.getRtcConnectionId(C),
+      stream_region: o.default.getRegion(C),
+      max_viewers: o.default.getMaxViewers(C),
+      ...p
     };
   return null == e ? null : (0, a.jsx)(s.MenuItem, {
     id: "report-stream-problem",
@@ -38,7 +38,7 @@ function c(e, t, c) {
         return n => (0, a.jsx)(t, {
           stream: e,
           streamApplication: h,
-          isStreamer: p === (null == e ? void 0 : e.ownerId),
+          isStreamer: E === (null == e ? void 0 : e.ownerId),
           analyticsData: m,
           ...n
         })

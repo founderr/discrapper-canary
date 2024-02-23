@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("77078"),
-  u = n("851387"),
+  u = n("77078"),
+  o = n("851387"),
   d = n("84339"),
   c = n("750560"),
   f = n("812204"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("645266"),
   p = n("506885"),
   E = n("430312"),
-  S = n("26989"),
-  g = n("697218"),
+  g = n("26989"),
+  S = n("697218"),
   C = n("459824"),
   _ = n("516832"),
   I = n("986358"),
@@ -34,7 +34,7 @@ function x(e) {
     className: x,
     infoPanelClassName: N,
     style: A
-  } = e, M = (0, C.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([g.default], () => g.default.getUser(t), [t]), j = (0, r.useStateFromStores)([S.default], () => S.default.getMember(n, t), [n, t]), [L, y] = a.useState(null == R || null == j), O = (0, d.default)(j), P = a.useRef(null), {
+  } = e, M = (0, C.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), j = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [L, y] = a.useState(null == R || null == j), O = (0, d.default)(j), P = a.useRef(null), {
     AnalyticsLocationProvider: b
   } = (0, h.default)(f.default.GUILD_MEMBER_MOD_VIEW);
   return (a.useEffect(() => {
@@ -53,7 +53,7 @@ function x(e) {
     [n]: [t]
   }), a.useEffect(() => {
     (async function e() {
-      let e = [u.default.requestMembersById(n, [t]), (0, m.getMemberSupplemental)(n, [t]), (0, p.default)(t, void 0, {
+      let e = [o.default.requestMembersById(n, [t]), (0, m.getMemberSupplemental)(n, [t]), (0, p.default)(t, void 0, {
         guildId: n,
         dispatchWait: !0
       })];
@@ -62,9 +62,9 @@ function x(e) {
   }, [n, t]), M) ? L || null == R || null == j ? (0, l.jsx)("div", {
     className: i(v.sidebarContianer, v.loadingContainer, x),
     style: A,
-    children: (0, l.jsx)(o.Spinner, {
+    children: (0, l.jsx)(u.Spinner, {
       animated: !0,
-      type: L ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
+      type: L ? u.Spinner.Type.SPINNING_CIRCLE : u.Spinner.Type.CHASING_DOTS
     })
   }) : (0, l.jsx)(b, {
     children: (0, l.jsx)("div", {

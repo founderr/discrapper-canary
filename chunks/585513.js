@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("748820"),
-  o = n("469563"),
-  u = n("733154"),
+  u = n("469563"),
+  o = n("733154"),
   d = n("77078"),
   c = n("996496"),
   f = n("881242");
@@ -21,7 +21,7 @@ function h(e) {
     height: n = 24,
     isBadged: s = !1,
     isTyping: i = !1
-  } = e, [c] = a.useState(() => (0, r.v4)()), f = (0, o.useRedesignIconContext)().enabled;
+  } = e, [c] = a.useState(() => (0, r.v4)()), f = (0, u.useRedesignIconContext)().enabled;
   return (0, l.jsxs)("svg", {
     width: t,
     height: n,
@@ -50,7 +50,7 @@ function h(e) {
       })
     }), f ? (0, l.jsx)("g", {
       mask: "url(#".concat(c, ")"),
-      children: (0, l.jsx)(u.ChatIcon, {
+      children: (0, l.jsx)(o.ChatIcon, {
         width: t,
         height: n,
         color: "currentColor"
@@ -70,15 +70,15 @@ function m(e) {
     unreadCount: a,
     mentionCount: s,
     isTyping: r,
-    canBadge: o
-  } = e, u = null != s && s > 0, d = null !== (t = u ? s : a) && void 0 !== t ? t : 0, m = o && null != a && a > 0;
+    canBadge: u
+  } = e, o = null != s && s > 0, d = null !== (t = o ? s : a) && void 0 !== t ? t : 0, m = u && null != a && a > 0;
   return (0, l.jsxs)("div", {
     className: i(f.chatIcon, n),
     children: [(0, l.jsx)(h, {
       isBadged: m,
       isTyping: r
     }), m && (0, l.jsx)(c.default, {
-      hasMentions: u,
+      hasMentions: o,
       truncatedCount: d > 99 ? "99+" : d,
       className: f.badge
     })]

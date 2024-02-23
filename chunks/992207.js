@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var l = n("37983");
@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("446674"),
   r = n("669491"),
-  o = n("77078"),
-  u = n("191145"),
+  u = n("77078"),
+  o = n("191145"),
   d = n("161454"),
   c = n("373469"),
   f = n("522049"),
@@ -19,32 +19,32 @@ var a = n("414456"),
   m = n("386045"),
   p = n("99795"),
   E = n("782340"),
-  S = n("688257"),
-  g = e => {
+  g = n("688257"),
+  S = e => {
     let {
       className: t,
       channelId: n
-    } = e, a = (0, i.useStateFromStores)([c.default, u.default, m.default, d.default], () => {
+    } = e, a = (0, i.useStateFromStores)([c.default, o.default, m.default, d.default], () => {
       var e;
       if (null == n) return !1;
       let t = c.default.getCurrentUserActiveStream(),
         l = null === (e = d.default.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
-      return null != t && !!m.default.getSettings().clipsEnabled || null != l && !!m.default.getSettings().decoupledClipsEnabled || u.default.getParticipants(n).some(e => e.type === p.ParticipantTypes.USER && m.default.isClipsEnabledForUser(e.user.id))
+      return null != t && !!m.default.getSettings().clipsEnabled || null != l && !!m.default.getSettings().decoupledClipsEnabled || o.default.getParticipants(n).some(e => e.type === p.ParticipantTypes.USER && m.default.isClipsEnabledForUser(e.user.id))
     });
-    return a ? (0, l.jsxs)(o.TooltipContainer, {
+    return a ? (0, l.jsxs)(u.TooltipContainer, {
       text: E.default.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
-      color: o.TooltipColors.GREY,
-      className: s(t, S.clipsEnabledIndicator),
+      color: u.TooltipColors.GREY,
+      className: s(t, g.clipsEnabledIndicator),
       children: [(0, l.jsx)(h.IconBadge, {
         icon: f.default,
         shape: h.BadgeShapes.ROUND_LEFT,
         color: r.default.unsafe_rawColors.PRIMARY_500.css,
-        className: S.clipBadgeIcon
+        className: g.clipBadgeIcon
       }), (0, l.jsx)(h.TextBadge, {
         text: E.default.Messages.CLIPS_ENABLED_BADGE,
         shape: h.BadgeShapes.ROUND_RIGHT,
         color: r.default.unsafe_rawColors.PRIMARY_500.css,
-        className: S.clipBadgeText
+        className: g.clipBadgeText
       })]
     }) : null
   }

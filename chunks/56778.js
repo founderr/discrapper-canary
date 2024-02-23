@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n.n(r),
-  u = n("446674"),
+  u = n.n(r),
+  o = n("446674"),
   d = n("77078"),
   c = n("970728"),
   f = n("378438"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("161778"),
   p = n("845579"),
   E = n("744983"),
-  S = n("18494"),
-  g = n("230559"),
+  g = n("18494"),
+  S = n("230559"),
   C = n("659500"),
   _ = n("767094"),
   I = n("565996"),
@@ -46,7 +46,7 @@ class A extends a.Component {
         l = 0,
         a = 0,
         s = 0;
-      null != t.props.searchResults && o(t.props.searchResults).flatten().filter(e => e.isSearchHit).forEach(e => {
+      null != t.props.searchResults && u(t.props.searchResults).flatten().filter(e => e.isSearchHit).forEach(e => {
         null != e.content && "" !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && s++), null != e.embeds && e.embeds.length > 0 && a++, null != e.attachments && e.attachments.length > 0 && l++
       }), h.default.trackWithMetadata(v.AnalyticEvents.SEARCH_RESULT_VIEWED, {
         search_type: t.props.searchType,
@@ -148,7 +148,7 @@ class R extends a.PureComponent {
         callback: n
       })
     }, this.selectChannel = e => {
-      e !== S.default.getChannelId() && c.default.transitionToInviteChannelSync(e)
+      e !== g.default.getChannelId() && c.default.transitionToInviteChannelSync(e)
     }, this.searchPrevious = () => {
       let {
         searchId: e,
@@ -214,7 +214,7 @@ class R extends a.PureComponent {
       let e = E.default.getSearchType(this.props.searchId),
         t = e === v.SearchTypes.GUILD ? x.default.Messages.SEARCH_GUILD_STILL_INDEXING : x.default.Messages.SEARCH_DM_STILL_INDEXING;
       return (0, l.jsxs)(M, {
-        children: [(0, l.jsx)(g.default, {}), (0, l.jsx)("div", {
+        children: [(0, l.jsx)(S.default, {}), (0, l.jsx)("div", {
           className: (N.emptyResultsText, N.stillIndexing),
           children: t
         })]
@@ -270,7 +270,7 @@ function j(e) {
   } = e;
   return (0, l.jsx)(R, {
     searchId: t,
-    ...(0, u.useStateFromStoresObject)([E.default], () => ({
+    ...(0, o.useStateFromStoresObject)([E.default], () => ({
       search: E.default.getResultsState(t),
       searchAnalyticsId: E.default.getAnalyticsId(t),
       searchType: E.default.getSearchType()
@@ -278,7 +278,7 @@ function j(e) {
     ...(0, _.default)(t),
     renderEmbeds: p.RenderEmbeds.useSetting(),
     developerMode: p.DeveloperMode.useSetting(),
-    ...(0, u.useStateFromStoresObject)([m.default], () => {
+    ...(0, o.useStateFromStoresObject)([m.default], () => {
       let {
         theme: e
       } = m.default;

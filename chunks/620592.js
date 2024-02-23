@@ -11,8 +11,8 @@ var l, a, s = n("37983");
 n("884691");
 var i = n("414456"),
   r = n.n(i),
-  o = n("145131"),
-  u = n("600123"),
+  u = n("145131"),
+  o = n("600123"),
   d = n("890317");
 
 function c(e) {
@@ -35,23 +35,23 @@ function c(e) {
       children: null == n ? void 0 : n()
     }), null == r ? void 0 : r(), (0, s.jsxs)("div", {
       className: d.bottomControls,
-      children: [(0, s.jsx)(o.default, {
+      children: [(0, s.jsx)(u.default, {
         grow: 0,
         shrink: 1,
         basis: "50%",
-        align: o.default.Align.CENTER,
+        align: u.default.Align.CENTER,
         children: null == l ? void 0 : l()
-      }), (0, s.jsx)(o.default, {
+      }), (0, s.jsx)(u.default, {
         grow: 1,
-        justify: o.default.Justify.CENTER,
-        align: o.default.Align.CENTER,
+        justify: u.default.Justify.CENTER,
+        align: u.default.Align.CENTER,
         children: null == a ? void 0 : a()
-      }), (0, s.jsx)(o.default, {
+      }), (0, s.jsx)(u.default, {
         grow: 0,
         shrink: 1,
-        justify: o.default.Justify.END,
+        justify: u.default.Justify.END,
         basis: "50%",
-        align: o.default.Align.CENTER,
+        align: u.default.Align.CENTER,
         children: null == i ? void 0 : i()
       })]
     })]
@@ -65,7 +65,7 @@ function f(e) {
     onActive: l,
     onForceIdle: a,
     idle: i,
-    children: o,
+    children: u,
     renderChatButton: f,
     renderChatToasts: h,
     renderVoiceChannelEffects: m,
@@ -81,7 +81,7 @@ function f(e) {
     onMouseDown: l,
     onMouseLeave: a,
     onDoubleClick: n,
-    children: [o, null != t ? (0, s.jsx)(u.default, {
+    children: [u, null != t ? (0, s.jsx)(o.default, {
       size: "large",
       ...t
     }) : null, (0, s.jsx)(c, {

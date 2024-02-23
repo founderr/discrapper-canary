@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("77078"),
   i = n("30874"),
   r = n("308798"),
-  o = n("646240"),
-  u = n("37774"),
+  u = n("646240"),
+  o = n("37774"),
   d = n("117399"),
   c = n("400501"),
   f = n("542640"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("772371"),
   p = n("604656"),
   E = n("861370"),
-  S = n("565298"),
-  g = n("144491"),
+  g = n("565298"),
+  S = n("144491"),
   C = n("945330"),
   _ = n("758710"),
   I = n("433487"),
@@ -38,7 +38,7 @@ function R(e) {
   function r() {
     i(e => !e)
   }
-  let o = M.default.Messages.MORE;
+  let u = M.default.Messages.MORE;
   return (0, l.jsx)(s.Popout, {
     shouldShow: n,
     animation: s.Popout.Animation.NONE,
@@ -59,9 +59,9 @@ function R(e) {
       return (0, l.jsx)(T.default.Icon, {
         ...e,
         onClick: r,
-        tooltip: n ? null : o,
+        tooltip: n ? null : u,
         icon: I.default,
-        "aria-label": o,
+        "aria-label": u,
         selected: n
       })
     }
@@ -73,13 +73,13 @@ function j(e) {
     channel: t,
     closePopout: n,
     onSelect: a
-  } = e, S = (0, o.default)(t, "Sidebar Overflow"), C = (0, d.default)(t), I = (0, h.default)(t), T = (0, m.default)(t), x = (0, i.default)(t), N = (0, u.default)(t), R = (0, f.default)(t.id), j = (0, c.default)(t), L = (0, r.default)(t), y = (0, E.default)({
+  } = e, g = (0, u.default)(t, "Sidebar Overflow"), C = (0, d.default)(t), I = (0, h.default)(t), T = (0, m.default)(t), x = (0, i.default)(t), N = (0, o.default)(t), R = (0, f.default)(t.id), j = (0, c.default)(t), L = (0, r.default)(t), y = (0, E.default)({
     id: t.id,
     label: M.default.Messages.COPY_ID_THREAD
   }), O = (0, p.default)(t);
 
   function P() {
-    (0, g.transitionToChannel)(t.id)
+    (0, S.transitionToChannel)(t.id)
   }
   return (0, l.jsxs)(s.Menu, {
     navId: "thread-context",
@@ -87,7 +87,7 @@ function j(e) {
     "aria-label": M.default.Messages.THREAD_ACTIONS_MENU_LABEL,
     onSelect: a,
     children: [(0, l.jsxs)(s.MenuGroup, {
-      children: [S, (0, l.jsx)(s.MenuItem, {
+      children: [g, (0, l.jsx)(s.MenuItem, {
         id: "open",
         label: M.default.Messages.OPEN_IN_FULL_VIEW,
         action: P
@@ -137,7 +137,7 @@ function L(e) {
     }), (0, l.jsx)(T.default.Icon, {
       icon: C.default,
       tooltip: M.default.Messages.CLOSE,
-      onClick: () => (0, N.closeThreadSidebar)((0, S.getGuildIdForGenericRedirect)(t), null != n ? n : t.parent_id)
+      onClick: () => (0, N.closeThreadSidebar)((0, g.getGuildIdForGenericRedirect)(t), null != n ? n : t.parent_id)
     })]
   })
 }

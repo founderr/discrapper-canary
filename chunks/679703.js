@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("669491"),
   i = n("77078"),
   r = n("888237"),
-  o = n("18517"),
-  u = n("109526"),
+  u = n("18517"),
+  o = n("109526"),
   d = n("487984"),
   c = n("817963"),
   f = n("957255"),
@@ -19,8 +19,8 @@ var a = n("446674"),
   m = n("811305"),
   p = n("923510"),
   E = n("759718"),
-  S = n("58763"),
-  g = n("119184"),
+  g = n("58763"),
+  S = n("119184"),
   C = n("782340"),
   _ = n("921148");
 
@@ -85,11 +85,11 @@ function v(e) {
     onContinueClick: n
   } = e, s = (0, a.useStateFromStores)([f.default], () => f.default.can(p.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), r = t.guild_id, {
     canCreateGuildEvent: m
-  } = (0, c.useManageResourcePermissions)(t), v = (0, S.default)(t.id), {
+  } = (0, c.useManageResourcePermissions)(t), v = (0, g.default)(t.id), {
     usersInSummary: x
   } = (0, E.default)(t.id);
   return (0, l.jsxs)("div", {
-    children: [(0, l.jsx)(g.default, {
+    children: [(0, l.jsx)(S.default, {
       children: (0, l.jsx)("div", {
         className: _.iconBackground,
         children: (0, l.jsx)(h.default, {
@@ -109,12 +109,12 @@ function v(e) {
         variant: "text-sm/normal",
         children: C.default.Messages.STAGE_START_PROMPT_SUBTITLE
       })]
-    }), v ? null : (0, l.jsx)(u.default, {
+    }), v ? null : (0, l.jsx)(o.default, {
       channelId: t.id
     }), s ? (0, l.jsx)(d.default, {
       className: _.eventPrompt,
       channel: t
-    }) : null, m ? (0, l.jsx)(o.default, {
+    }) : null, m ? (0, l.jsx)(u.default, {
       className: _.eventPrompt,
       guildId: r
     }) : null, (s || x.length > 0) && (0, l.jsx)("hr", {

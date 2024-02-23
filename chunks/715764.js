@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("77078"),
-  u = n("255397"),
+  u = n("77078"),
+  o = n("255397"),
   d = n("103723"),
   c = n("191145"),
   f = n("161306"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("106435"),
   p = n("271938"),
   E = n("26989"),
-  S = n("42887"),
-  g = n("471671"),
+  g = n("42887"),
+  S = n("471671"),
   C = n("754775"),
   _ = n("512264"),
   I = n("387111"),
@@ -28,15 +28,15 @@ var l = n("37983"),
   x = n("353927"),
   N = n("782340"),
   A = n("532351");
-let M = o.AvatarSizes.SIZE_80,
-  R = o.AvatarSizes.SIZE_40;
+let M = u.AvatarSizes.SIZE_80,
+  R = u.AvatarSizes.SIZE_40;
 
 function j(e) {
   let {
     participant: t,
     channel: n,
     inCall: s,
-    width: o,
+    width: u,
     paused: j,
     selected: L,
     fit: y,
@@ -44,11 +44,11 @@ function j(e) {
     blocked: P,
     noVideoRender: b = !1,
     pulseSpeakingIndicator: D = !1
-  } = e, U = S.default.getVideoComponent(), w = (0, r.useStateFromStores)([p.default], () => p.default.getId()), {
+  } = e, U = g.default.getVideoComponent(), w = (0, r.useStateFromStores)([p.default], () => p.default.getId()), {
     user: F,
     streamId: k,
-    speaking: V
-  } = t, B = F.id === w, G = (0, T.default)(t), H = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([S.default], () => null != F.id && S.default.isLocalVideoDisabled(F.id, (0, f.default)(t.type)), [F.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, F.id)), K = I.default.getName(n.getGuildId(), n.id, F) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = V && (W || H), X = o < 124 ? R : M, {
+    speaking: B
+  } = t, V = F.id === w, H = (0, T.default)(t), G = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([g.default], () => null != F.id && g.default.isLocalVideoDisabled(F.id, (0, f.default)(t.type)), [F.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, F.id)), K = I.default.getName(n.getGuildId(), n.id, F) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = B && (W || G), X = u < 124 ? R : M, {
     avatarSrc: Q,
     avatarDecorationSrc: q
   } = (0, m.default)({
@@ -58,12 +58,12 @@ function j(e) {
     animateOnHover: !Z
   }), J = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
   return (a.useEffect(() => {
-    n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === F.id && u.default.selectParticipant(n.id, null)
-  }, [G]), s && !Y && !b && G && !L && null != U && S.default.supports(x.Features.VIDEO)) ? (0, l.jsx)(_.default, {
+    n.isGuildStageVoice() && !H && (null == J ? void 0 : J.id) === F.id && o.default.selectParticipant(n.id, null)
+  }, [H]), s && !Y && !b && H && !L && null != U && g.default.supports(x.Features.VIDEO)) ? (0, l.jsx)(_.default, {
     onResize: O,
     wrapperClassName: A.videoWrapper,
     className: A.content,
-    mirror: B,
+    mirror: V,
     streamId: k,
     videoComponent: U,
     fit: y,
@@ -81,7 +81,7 @@ function j(e) {
       backgroundSrc: F.getAvatarURL(n.guild_id, 80),
       size: X,
       pulseSpeakingIndicator: D,
-      speaking: V,
+      speaking: B,
       userId: F.id
     })
   })

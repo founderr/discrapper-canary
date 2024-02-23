@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var l = n("37983"),
@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("907002"),
   i = n("446674"),
   r = n("819855"),
-  o = n("386045"),
-  u = n("803725"),
+  u = n("386045"),
+  o = n("803725"),
   d = n("728658"),
   c = n("374014"),
   f = n("983782"),
@@ -28,19 +28,19 @@ let m = {
     precision: 1e-4,
     bounce: 0
   },
-  S = {
+  g = {
     duration: 1e3
   };
 
-function g(e) {
+function S(e) {
   let {
     stream: t,
     inPopout: n
   } = e, {
-    reducedMotion: g
-  } = a.useContext(r.AccessibilityPreferencesContext), C = (0, a.useRef)(null), _ = d.useClipsButtonStore.getState().clipsButtonRef, I = (0, c.encodeStreamKey)(t), T = (0, i.useStateFromStores)([o.default], () => o.default.getActiveAnimation()), v = (0, i.useStateFromStoresArray)([o.default], () => o.default.getStreamClipAnimations(I)), x = (0, a.useRef)();
+    reducedMotion: S
+  } = a.useContext(r.AccessibilityPreferencesContext), C = (0, a.useRef)(null), _ = d.useClipsButtonStore.getState().clipsButtonRef, I = (0, c.encodeStreamKey)(t), T = (0, i.useStateFromStores)([u.default], () => u.default.getActiveAnimation()), v = (0, i.useStateFromStoresArray)([u.default], () => u.default.getStreamClipAnimations(I)), x = (0, a.useRef)();
   a.useEffect(() => () => {
-    (0, u.dismissSaveClipAnimation)(I)
+    (0, o.dismissSaveClipAnimation)(I)
   }, [I]);
   let N = () => {
       var e;
@@ -86,7 +86,7 @@ function g(e) {
         position: "fixed",
         visibility: "hidden",
         opacity: 1,
-        ...g.enabled ? A(e) : N()
+        ...S.enabled ? A(e) : N()
       }),
       enter: e => [{
         opacity: 1,
@@ -95,7 +95,7 @@ function g(e) {
       }],
       leave: {
         opacity: 0,
-        ...!g.enabled && {
+        ...!S.enabled && {
           height: 0,
           width: 0,
           ...(() => {
@@ -106,9 +106,9 @@ function g(e) {
           })()
         }
       },
-      config: g.enabled ? S : E,
+      config: S.enabled ? g : E,
       onRest: (e, t) => {
-        null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, u.dismissSaveClipAnimation)(I, t.item.timestamp)
+        null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, o.dismissSaveClipAnimation)(I, t.item.timestamp)
       }
     });
   return (0, s.useChain)([M, j], [0, .1], 3e3), (0, l.jsxs)(l.Fragment, {

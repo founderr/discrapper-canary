@@ -10,8 +10,8 @@ var a = n("627445"),
   s = n.n(a),
   i = n("446674"),
   r = n("77078"),
-  o = n("901582"),
-  u = n("697218"),
+  u = n("901582"),
+  o = n("697218"),
   d = n("348852"),
   c = n("873254"),
   f = n("49111"),
@@ -21,11 +21,11 @@ function m(e) {
   let {
     onClose: t,
     onSelect: n
-  } = e, a = (0, i.useStateFromStores)([u.default], () => {
-    let e = u.default.getCurrentUser();
+  } = e, a = (0, i.useStateFromStores)([o.default], () => {
+    let e = o.default.getCurrentUser();
     return s(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e
   }), m = (0, d.default)(), p = (0, c.default)(a.id);
-  return (0, l.jsx)(o.default, {
+  return (0, l.jsx)(u.default, {
     object: f.AnalyticsObjects.CONTEXT_MENU,
     children: (0, l.jsxs)(r.Menu, {
       onClose: t,

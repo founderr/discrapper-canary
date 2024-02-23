@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), n("424973");
 var l = n("884691"),
@@ -9,8 +9,8 @@ var l = n("884691"),
   s = n("669491"),
   i = n("77078"),
   r = n("462274"),
-  o = n("800762"),
-  u = n("760679"),
+  u = n("800762"),
+  o = n("760679"),
   d = n("242260"),
   c = n("315841"),
   f = n("52477"),
@@ -19,8 +19,8 @@ var l = n("884691"),
   p = n("827520");
 let E = 1e3 / 60;
 
-function S(e, t, n, S) {
-  let g = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
+function g(e, t, n, g) {
+  let S = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
     C = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
     _ = (0, i.useToken)(s.default.unsafe_rawColors.WHITE_500).hex(),
     I = l.useRef({}),
@@ -45,12 +45,12 @@ function S(e, t, n, S) {
         if (null == p) return;
         let {
           width: E,
-          height: S
-        } = f.getBoundingClientRect(), g = [];
+          height: g
+        } = f.getBoundingClientRect(), S = [];
         n.forEach(e => {
-          let t = null != o.default.getVoiceStateForChannel(i, e.userId);
+          let t = null != u.default.getVoiceStateForChannel(i, e.userId);
           if (!t) {
-            g.push(e);
+            S.push(e);
             return
           }! function(e) {
             let {
@@ -61,8 +61,8 @@ function S(e, t, n, S) {
               fallbackColor: s,
               outlineColorDark: i,
               outlineColorLight: r,
-              linesDrawnAt: o,
-              streamerId: u,
+              linesDrawnAt: u,
+              streamerId: o,
               deadDrawables: d
             } = e;
             switch (t.type) {
@@ -75,7 +75,7 @@ function S(e, t, n, S) {
                   fallbackColor: s,
                   outlineColorDark: i,
                   outlineColorLight: r,
-                  linesDrawnAt: o,
+                  linesDrawnAt: u,
                   deadDrawables: d
                 });
               case c.DrawableType.EMOJI_HOSE:
@@ -87,7 +87,7 @@ function S(e, t, n, S) {
                   fallbackColor: s,
                   outlineColorDark: i,
                   outlineColorLight: r,
-                  streamerId: u,
+                  streamerId: o,
                   deadDrawables: d
                 })
             }
@@ -95,26 +95,26 @@ function S(e, t, n, S) {
             drawable: e,
             context: p,
             canvasWidth: E,
-            canvasHeight: S,
+            canvasHeight: g,
             fallbackColor: l,
             outlineColorDark: r,
             outlineColorLight: d,
             linesDrawnAt: a,
-            deadDrawables: g,
+            deadDrawables: S,
             streamerId: s
           })
-        }), g.length > 0 && (0, u.clearDrawables)(g, s)
+        }), S.length > 0 && (0, o.clearDrawables)(S, s)
       }({
         canvasRef: e,
         drawables: n,
-        fallbackColor: g,
+        fallbackColor: S,
         linesDrawnAt: I,
         streamerId: t,
         outlineColorDark: C,
         outlineColorLight: _,
-        channelId: S
+        channelId: g
       })
-    }, [e, S, g, C, _]);
+    }, [e, g, S, C, _]);
   l.useEffect(() => {
     let t = new ResizeObserver(() => {
       let t = e.current;

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("77078"),
-  o = n("837899"),
-  u = n("849467"),
+  u = n("837899"),
+  o = n("849467"),
   d = n("155207"),
   c = n("980423"),
   f = n("215536"),
@@ -24,7 +24,7 @@ var l = n("37983"),
       collapsed: m,
       speakers: p,
       channel: E,
-      isStreamLive: S
+      isStreamLive: g
     } = e;
     return (0, l.jsxs)(r.Clickable, {
       onClick: a,
@@ -33,7 +33,7 @@ var l = n("37983"),
         width: 20,
         height: 20,
         className: h.micIcon
-      }) : (0, l.jsx)(u.default, {
+      }) : (0, l.jsx)(o.default, {
         width: 20,
         height: 20,
         className: h.micIcon
@@ -46,8 +46,8 @@ var l = n("37983"),
         children: [(0, l.jsx)(f.default, {
           channel: E,
           speakers: p
-        }), S && (0, l.jsx)(c.default, {})]
-      }), (0, l.jsx)(o.default, {
+        }), g && (0, l.jsx)(c.default, {})]
+      }), (0, l.jsx)(u.default, {
         width: 20,
         height: 20,
         className: i(h.downIcon, {

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("77078"),
-  o = n("808388"),
-  u = n("782340"),
+  u = n("808388"),
+  o = n("782340"),
   d = n("705542");
 
 function c(e) {
@@ -39,12 +39,12 @@ function c(e) {
 function f(e) {
   let [t, n] = a.useState(), [s, i] = a.useState(), [r, d] = a.useState(!1), [f, h] = a.useState(!1), {
     enabled: m
-  } = (0, o.useRoleSubscriptionMaxTiersExperiment)(e);
+  } = (0, u.useRoleSubscriptionMaxTiersExperiment)(e);
   a.useEffect(() => {
     m && null != t && null != s ? d(t < s) : d(!1)
   }, [m, t, s]);
   let p = a.useMemo(() => r ? (0, l.jsx)(c, {
-    text: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_LISTINGS_SCROLLABLE_NOTICE,
+    text: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_LISTINGS_SCROLLABLE_NOTICE,
     hasScrolled: f
   }) : null, [r, f]);
   return {

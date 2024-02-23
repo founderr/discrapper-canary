@@ -7,17 +7,17 @@ n.r(t), n.d(t, {
 var l, a, s = n("37983"),
   i = n("884691"),
   r = n("414456"),
-  o = n.n(r),
-  u = n("627445"),
-  d = n.n(u),
+  u = n.n(r),
+  o = n("627445"),
+  d = n.n(o),
   c = n("446674"),
   f = n("77078"),
   h = n("272030"),
   m = n("308289"),
   p = n("750560"),
   E = n("506885"),
-  S = n("981601"),
-  g = n("26989"),
+  g = n("981601"),
+  S = n("26989"),
   C = n("957255"),
   _ = n("824563"),
   I = n("945330"),
@@ -44,7 +44,7 @@ let b = i.memo(function(e) {
     });
     return (0, s.jsxs)(x.default, {
       toolbar: l,
-      className: o(P.headerContainer, {
+      className: u(P.headerContainer, {
         [P.chatOpen]: n
       }),
       children: [(0, s.jsx)(x.default.Icon, {
@@ -61,10 +61,10 @@ let b = i.memo(function(e) {
       channel: t,
       participant: l,
       tempDisableOnInit: a = !1
-    } = e, [r, u] = i.useState(a);
+    } = e, [r, o] = i.useState(a);
     i.useEffect(() => {
       if (!r) return;
-      let e = setTimeout(() => u(!1), 1e3);
+      let e = setTimeout(() => o(!1), 1e3);
       return () => clearTimeout(e)
     }, []);
     let C = t.getGuildId();
@@ -75,7 +75,7 @@ let b = i.memo(function(e) {
     } = (0, c.useStateFromStoresObject)([_.default], () => ({
       isMobile: _.default.isMobileOnline(l.user.id),
       status: _.default.getStatus(l.user.id, C)
-    })), A = (0, c.useStateFromStores)([g.default], () => g.default.getMember(C, l.user.id)), j = i.useMemo(() => ({
+    })), A = (0, c.useStateFromStores)([S.default], () => S.default.getMember(C, l.user.id)), j = i.useMemo(() => ({
       [C]: [l.user.id]
     }), [C, l.user.id]);
     (0, p.useSubscribeGuildMembers)(j);
@@ -109,7 +109,7 @@ let b = i.memo(function(e) {
           guildId: t.guild_id,
           channelId: t.id
         }),
-        renderPopout: e => (0, s.jsx)(S.default, {
+        renderPopout: e => (0, s.jsx)(g.default, {
           ...e,
           userId: l.user.id,
           guildId: C,
@@ -161,7 +161,7 @@ let b = i.memo(function(e) {
         text: O.default.Messages.REQUEST_TO_SPEAK_DECLINE,
         children: e => (0, s.jsx)(f.Button, {
           ...e,
-          innerClassName: o(P.buttonContainer, P.buttonMargin),
+          innerClassName: u(P.buttonContainer, P.buttonMargin),
           look: f.Button.Looks.BLANK,
           size: f.Button.Sizes.NONE,
           onClick: b,
@@ -208,7 +208,7 @@ function F(e) {
     chatOpen: l
   } = e, a = (0, A.useSortedRequestToSpeakParticipants)(t.id), i = (0, c.useStateFromStores)([C.default], () => C.default.can(y.Permissions.MANAGE_CHANNELS, t) || C.default.can(y.Permissions.MANAGE_ROLES, t)), r = [i ? 1 : 0, Math.max(1, a.length)];
   return (0, s.jsxs)("div", {
-    className: o(P.container, {
+    className: u(P.container, {
       [P.chatOpen]: l
     }),
     children: [(0, s.jsx)(b, {

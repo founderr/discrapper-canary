@@ -18,17 +18,17 @@ var l = n("316693"),
   s = n("26989"),
   i = n("305961"),
   r = n("697218"),
-  o = n("991170"),
-  u = n("49111"),
+  u = n("991170"),
+  o = n("49111"),
   d = n("69741");
-let c = [u.Permissions.USE_CLYDE_AI],
-  f = Object.keys(u.Permissions).filter(e => !c.includes(u.Permissions[e])),
+let c = [o.Permissions.USE_CLYDE_AI],
+  f = Object.keys(o.Permissions).filter(e => !c.includes(o.Permissions[e])),
   h = d.MODERATOR_PERMISSIONS.map(e => {
-    let t = f.find(t => u.Permissions[t] === e);
+    let t = f.find(t => o.Permissions[t] === e);
     if (null == t) throw Error("Permission ".concat(e, " not found in Permissions"));
     return t
   }),
-  m = new Set(u.ElevatedPermissionsList);
+  m = new Set(o.ElevatedPermissionsList);
 
 function p(e, t, n) {
   let d = (0, a.default)([i.default], () => i.default.getGuild(t), [t]);
@@ -38,21 +38,21 @@ function p(e, t, n) {
       c = r.default.getUser(e);
     if (null == d || null == i || null == c) return a;
     let f = d.getRole(d.id),
-      h = o.default.computePermissions({
+      h = u.default.computePermissions({
         user: c,
         context: d
       });
     for (let e of n) {
-      let t = u.Permissions[e];
+      let t = o.Permissions[e];
       if (l.default.has(h, t)) {
         for (let n of (a[e] = [], i.roles)) {
           let s = null == d ? void 0 : d.roles[n];
           if (null == s) continue;
-          let i = l.default.has(s.permissions, u.Permissions.ADMINISTRATOR);
+          let i = l.default.has(s.permissions, o.Permissions.ADMINISTRATOR);
           (i || l.default.hasAny(s.permissions, t)) && a[e].push(s.id)
         }
         if (null != f) {
-          let n = l.default.has(f.permissions, u.Permissions.ADMINISTRATOR);
+          let n = l.default.has(f.permissions, o.Permissions.ADMINISTRATOR);
           (n || l.default.hasAny(f.permissions, t)) && a[e].push(f.id)
         }
         d.isOwner(c) && a[e].push(c.id)

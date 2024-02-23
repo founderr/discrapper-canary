@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), n("222007");
 var l = n("37983"),
@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("519705"),
-  o = n("282109"),
-  u = n("660279"),
+  u = n("282109"),
+  o = n("660279"),
   d = n("998650"),
   c = n("664336"),
   f = n("659500"),
@@ -18,12 +18,12 @@ var l = n("37983"),
   m = n("957825"),
   p = n("49111"),
   E = n("782340"),
-  S = n("752024");
+  g = n("752024");
 
-function g(e) {
+function S(e) {
   let {
     channel: t
-  } = e, n = (0, i.useRedesignIconContext)().enabled, [g, C] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.isChannelMuted(t.getGuildId(), t.id), o.default.resolvedMessageNotifications(t)], [t]), [_, I] = a.useState(!1);
+  } = e, n = (0, i.useRedesignIconContext)().enabled, [S, C] = (0, s.useStateFromStoresArray)([u.default], () => [u.default.isChannelMuted(t.getGuildId(), t.id), u.default.resolvedMessageNotifications(t)], [t]), [_, I] = a.useState(!1);
   a.useEffect(() => {
     let e = () => I(!0);
     return f.ComponentDispatch.subscribe(p.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
@@ -32,8 +32,8 @@ function g(e) {
   }, []);
   let T = e => {
       e.shiftKey ? r.default.updateChannelOverrideSettings(t.guild_id, t.id, {
-        muted: !g
-      }, h.NotificationLabel.muted(!g)) : I(e => !e)
+        muted: !S
+      }, h.NotificationLabel.muted(!S)) : I(e => !e)
     },
     v = E.default.Messages.NOTIFICATION_SETTINGS;
   return (0, l.jsx)(i.Popout, {
@@ -57,8 +57,8 @@ function g(e) {
         ...e,
         onClick: T,
         tooltip: a ? null : v,
-        icon: g || C !== p.UserNotificationSettings.ALL_MESSAGES ? d.default : u.default,
-        foreground: g && !n ? S.strikethrough : null,
+        icon: S || C !== p.UserNotificationSettings.ALL_MESSAGES ? d.default : o.default,
+        foreground: S && !n ? g.strikethrough : null,
         "aria-label": v,
         selected: a
       })

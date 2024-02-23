@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("151426"),
   r = n("77078"),
-  o = n("997289"),
-  u = n("244201"),
+  u = n("997289"),
+  o = n("244201"),
   d = n("886860"),
   c = n("614175"),
   f = n("903178"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("926128"),
   p = n("191225"),
   E = n("426631"),
-  S = n("380691"),
-  g = n("943349"),
+  g = n("380691"),
+  S = n("943349"),
   C = n("702173"),
   _ = n("801852"),
   I = n("10524"),
@@ -41,22 +41,22 @@ function L(e) {
     location: "7152d0_1"
   }, {
     autoTrackExposure: !0
-  }), L = (0, s.useStateFromStores)([p.default], () => p.default.isLaunchingActivity()), y = (0, g.useEmbeddedActivityLaunchability)(t.id), O = (0, g.getEmbeddedActivityLaunchabilityLabel)(y), P = y !== g.EmbeddedActivityLaunchability.CAN_LAUNCH || L, {
+  }), L = (0, s.useStateFromStores)([p.default], () => p.default.isLaunchingActivity()), y = (0, S.useEmbeddedActivityLaunchability)(t.id), O = (0, S.getEmbeddedActivityLaunchabilityLabel)(y), P = y !== S.EmbeddedActivityLaunchability.CAN_LAUNCH || L, {
     isHovered: b,
     setIsHovered: D,
     onMouseEnter: U,
     onMouseLeave: w
-  } = (0, N.default)(200, 300), F = (0, S.useShowActivityIndicator)(), {
+  } = (0, N.default)(200, 300), F = (0, g.useShowActivityIndicator)(), {
     enabled: k
   } = c.ActivitiesGameNightExperiment.useExperiment({
     location: "7152d0_2"
   }, {
     autoTrackExposure: !1
-  }), V = F && !k, B = (0, E.default)({
+  }), B = F && !k, V = (0, E.default)({
     channelId: t.id
-  }), G = !P && n, H = a.useCallback(e => {
+  }), H = !P && n, G = a.useCallback(e => {
     "focus" !== e.type && U()
-  }, [U]), W = (0, o.useAnalyticsContext)(), Y = (0, u.useAppContext)(), z = Y === M.AppContext.POPOUT, {
+  }, [U]), W = (0, u.useAnalyticsContext)(), Y = (0, o.useAppContext)(), z = Y === M.AppContext.POPOUT, {
     analyticsLocations: K
   } = (0, v.default)(), Z = a.useCallback(() => {
     (0, T.default)({
@@ -95,7 +95,7 @@ function L(e) {
             closePopout: n,
             setPopoutRef: s
           } = e;
-          return G ? (0, l.jsx)(_.ActivitiesMiniShelf, {
+          return H ? (0, l.jsx)(_.ActivitiesMiniShelf, {
             ref: s,
             channel: t,
             closePopout: n,
@@ -109,15 +109,15 @@ function L(e) {
           children: [(0, l.jsx)(A.default, {
             disabled: P,
             "aria-label": O,
-            label: G ? void 0 : O,
-            isActivityActive: B || b,
+            label: H ? void 0 : O,
+            isActivityActive: V || b,
             className: j.controlButton,
             onClick: () => {
               Z(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(R.ContentDismissActionType.UNKNOWN)
             },
-            onMouseEnter: H,
+            onMouseEnter: G,
             onMouseLeave: w
-          }), V ? (0, l.jsx)(I.FreeActivityIndicatorDot, {
+          }), B ? (0, l.jsx)(I.FreeActivityIndicatorDot, {
             top: 4,
             right: 10,
             size: 12,
