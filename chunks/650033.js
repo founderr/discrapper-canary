@@ -18,7 +18,6 @@ let s = {
     channel_list_layout_animations: "Enable experimental channel list layout animations",
     message_preview_animations: "Enable message preview animations",
     recent_channels_throttle: "Throttle recent channels reordering",
-    force_voice_panel: "Force new voice panel to be shown.",
     enable_server_discovery: "Enable Server Discovery Search on mobile",
     messages_badge_num_channels: "Messages tab badge counts # of unread channels instead of # of unread messages",
     redesign_individual_feature_you_tab: "Enable You tab in the old UI",
