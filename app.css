@@ -3515,7 +3515,7 @@
 }
 
 .title__746ed {
-    font-size: 1.0625rem
+    font-size: 17px
 }
 
 .developerResources_fdd04d:hover {
@@ -3546,8 +3546,8 @@
 }
 
 .backHeader__18afe {
-    font-size: 1.0625rem;
-    line-height: 1.5rem;
+    font-size: 17px;
+    line-height: 24px;
     color: var(--interactive-normal)
 }
 
@@ -45888,8 +45888,8 @@ html .progress__4ef76 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -93475,12 +93475,10 @@ html .tabBadge__002b3 {
 }
 
 .theme-dark .learnMoreCTA__7d633 {
-    border: #c269c3 solid;
     color: #c269c3
 }
 
 .theme-light .learnMoreCTA__7d633 {
-    border: #b64ab7 solid;
     color: #b64ab7
 }
 
