@@ -21,7 +21,6 @@ let s = {
     force_voice_panel: "Force new voice panel to be shown.",
     enable_server_discovery: "Enable Server Discovery Search on mobile",
     messages_badge_num_channels: "Messages tab badge counts # of unread channels instead of # of unread messages",
-    main_tab_launchpad: "Enable LaunchPad in Main Tab",
     redesign_individual_feature_you_tab: "Enable You tab in the old UI",
     disable_theme_key: "Disable reloading the entire app when the theme changes",
     theme_setting_in_account_sheet: "Show theme settings in the Account action sheet",
