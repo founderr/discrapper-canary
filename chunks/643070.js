@@ -4,7 +4,7 @@ r.r(t), r.d(t, {
     return a
   },
   NONE_ITEM: function() {
-    return m
+    return E
   },
   SHOP_ITEM: function() {
     return p
@@ -15,25 +15,25 @@ r.r(t), r.d(t, {
 }), r("222007"), r("808653"), r("424973");
 var a, n, u = r("884691"),
   i = r("917351"),
-  l = r("65597"),
-  s = r("853987"),
+  s = r("65597"),
+  l = r("853987"),
   o = r("775416"),
   c = r("491232"),
   d = r("697218"),
   f = r("719923"),
-  E = r("782340");
+  m = r("782340");
 (n = a || (a = {})).PURCHASE = "purchase", n.PREMIUM_PURCHASE = "premium_purchase", n.PREVIEW = "preview", n.PREMIUM_PREVIEW = "premium_preview";
-let m = {
+let E = {
     id: "None"
   },
   p = {
     id: "Shop"
   };
 var S = () => {
-  let e = (0, l.default)([d.default], () => d.default.getCurrentUser()),
+  let e = (0, s.default)([d.default], () => d.default.getCurrentUser()),
     t = f.default.canUseCollectibles(e),
-    r = (0, l.default)([o.default], () => o.default.purchases),
-    [a, n] = (0, l.useStateFromStoresArray)([s.default], () => [s.default.categories, s.default.products]);
+    r = (0, s.default)([o.default], () => o.default.purchases),
+    [a, n] = (0, s.useStateFromStoresArray)([l.default], () => [l.default.categories, l.default.products]);
   return (0, u.useMemo)(() => {
     let e = (0, i.uniqBy)([...(0, c.getAvatarDecorationsFromPurchases)(r), ...(0, c.getAvatarDecorationsFromCategories)(a)], "id"),
       u = e.reduce((e, a) => {
@@ -54,19 +54,19 @@ var S = () => {
       });
     return [{
       section: "purchase",
-      items: [m, p, ...u.purchase],
+      items: [E, p, ...u.purchase],
       height: 12,
-      header: E.default.Messages.CHANGE_DECORATION_MODAL_PURCHASE_HEADER
+      header: m.default.Messages.CHANGE_DECORATION_MODAL_PURCHASE_HEADER
     }, {
       section: u.premium_purchase.length > 0 ? "premium_purchase" : "premium_preview",
       items: u.premium_purchase.length > 0 ? u.premium_purchase : u.premium_preview,
       height: 12,
-      header: E.default.Messages.CHANGE_DECORATION_MODAL_PREMIUM_STARTER_HEADER
+      header: m.default.Messages.CHANGE_DECORATION_MODAL_PREMIUM_STARTER_HEADER
     }, {
       section: "preview",
       items: u.preview,
       height: 12,
-      header: E.default.Messages.PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER
+      header: m.default.Messages.PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER
     }].filter(e => {
       let {
         items: t

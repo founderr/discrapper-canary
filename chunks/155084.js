@@ -1,58 +1,58 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 }), n("222007"), n("424973");
-var i = n("615361"),
-  r = n("872717"),
-  a = n("773336"),
-  s = n("827032"),
+var r = n("615361"),
+  s = n("872717"),
+  i = n("773336"),
+  a = n("827032"),
   l = n("49111");
-let u = new Set(["darwin", "linux", "win32", "ios", "android"]);
-var o = new class t {
-  increment(t) {
-    let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+let o = new Set(["darwin", "linux", "win32", "ios", "android"]);
+var u = new class e {
+  increment(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       {
         name: n,
-        tags: r
-      } = t,
+        tags: s
+      } = e,
       l = {
         name: n,
-        tags: (0, s.getGlobalTagsArray)()
+        tags: (0, a.getGlobalTagsArray)()
       };
-    null != r && r.forEach(t => {
-      l.tags.push(t)
+    null != s && s.forEach(e => {
+      l.tags.push(e)
     });
-    let o = function() {
-      if ((0, a.isWeb)()) return "web";
+    let u = function() {
+      if ((0, i.isWeb)()) return "web";
       {
-        let t = (0, a.getPlatformName)();
-        return u.has(t) ? t : null
+        let e = (0, i.getPlatformName)();
+        return o.has(e) ? e : null
       }
     }();
-    null != o && l.tags.push("platform:".concat(o));
+    null != u && l.tags.push("platform:".concat(u));
     let c = function() {
-      let t = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
-      return i.ReleaseChannelsSets.ALL.has(t) ? t : null
+      let e = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
+      return r.ReleaseChannelsSets.ALL.has(e) ? e : null
     }();
-    null != c && l.tags.push("release_channel:".concat(c)), this._metrics.push(l), (e || this._metrics.length >= 100) && this._flush()
+    null != c && l.tags.push("release_channel:".concat(c)), this._metrics.push(l), (t || this._metrics.length >= 100) && this._flush()
   }
   _flush() {
     if (this._metrics.length > 0) {
-      let t = [...this._metrics];
-      r.default.post({
+      let e = [...this._metrics];
+      s.default.post({
         url: l.Endpoints.METRICS,
         body: {
-          metrics: t,
+          metrics: e,
           client_info: {
-            built_at: "1708712168059",
-            build_number: "268536"
+            built_at: "1708717876555",
+            build_number: "268579"
           }
         },
         retries: 1
-      }).catch(e => {
-        this._metrics.length + t.length < 100 && (this._metrics = [...this._metrics, ...t])
+      }).catch(t => {
+        this._metrics.length + e.length < 100 && (this._metrics = [...this._metrics, ...e])
       })
     }
     this._metrics = []

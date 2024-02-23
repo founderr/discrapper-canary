@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return l
   }
 });
 var i = n("49111");
 
-function r(e) {
+function l(e) {
   let {
     CDN_HOST: t,
     PROJECT_ENV: n

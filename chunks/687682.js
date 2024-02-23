@@ -14,17 +14,17 @@ var o = function(e) {
     i = n.useCallback(() => {
       l.current = !1, cancelAnimationFrame(r.current)
     }, []),
-    s = n.useCallback(n => {
+    a = n.useCallback(n => {
       null == o.current && (o.current = n);
       let u = n - o.current;
-      u >= t && (o.current = n, e(u)), l.current && (r.current = requestAnimationFrame(s))
+      u >= t && (o.current = n, e(u)), l.current && (r.current = requestAnimationFrame(a))
     }, [e, t]),
-    a = n.useCallback(() => {
-      l.current = !0, o.current = void 0, r.current = requestAnimationFrame(s)
-    }, [s]);
-  return n.useEffect(() => (r.current = requestAnimationFrame(s), () => cancelAnimationFrame(r.current)), []), {
+    s = n.useCallback(() => {
+      l.current = !0, o.current = void 0, r.current = requestAnimationFrame(a)
+    }, [a]);
+  return n.useEffect(() => (r.current = requestAnimationFrame(a), () => cancelAnimationFrame(r.current)), []), {
     stop: i,
-    reset: a,
+    reset: s,
     ticking: l
   }
 }

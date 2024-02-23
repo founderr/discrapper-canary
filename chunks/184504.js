@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return T
   }
 }), n("222007");
 var r = n("37983"),
@@ -245,7 +245,7 @@ class m extends i.PureComponent {
     }
   }
 }
-var g = a.default.connectStores([p.default, _.default], () => {
+var T = a.default.connectStores([p.default, _.default], () => {
   let e = p.default.getCurrentUser();
   return o(null != e, "MFAEnableSuccess: currentUser cannot be undefined"), {
     currentUser: e,

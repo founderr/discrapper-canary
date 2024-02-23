@@ -1,143 +1,143 @@
 "use strict";
 n.r(t), n.d(t, {
   RawInviteCopyInputConnected: function() {
-    return S
+    return A
   },
   InviteCopyInput: function() {
-    return A
+    return x
   }
 }), n("222007");
 var l = n("37983"),
-  a = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
   r = n("498574"),
   u = n("446674"),
-  d = n("862337"),
-  o = n("77078"),
+  o = n("862337"),
+  d = n("77078"),
   c = n("162771"),
-  E = n("102985"),
-  f = n("599110"),
-  h = n("306160"),
-  v = n("568734"),
-  _ = n("354023"),
-  I = n("865699"),
-  m = n("91366"),
-  T = n("49111"),
-  N = n("782340"),
-  g = n("696862"),
-  C = n("182893"),
-  x = n("125047"),
-  p = n("890957");
-let S = u.default.connectStores([E.default], () => ({
-    hideValue: E.default.hideInstantInvites
+  f = n("102985"),
+  h = n("599110"),
+  I = n("306160"),
+  g = n("568734"),
+  E = n("354023"),
+  _ = n("865699"),
+  p = n("91366"),
+  v = n("49111"),
+  m = n("782340"),
+  T = n("696862"),
+  S = n("182893"),
+  N = n("125047"),
+  C = n("890957");
+let A = u.default.connectStores([f.default], () => ({
+    hideValue: f.default.hideInstantInvites
   }))(e => {
     let {
       value: t,
       autoFocus: n,
-      hideValue: s,
+      hideValue: a,
       onCopy: r,
       disabled: u
-    } = e, [c, E] = a.useState(!1), [f, v] = a.useState(!1), _ = a.useMemo(() => new d.DelayedCall(1e3, () => v(!1)), [v]);
-    return a.useEffect(() => () => {
-      _.cancel()
-    }, [_]), (0, l.jsxs)("div", {
-      className: i(C.input, x.flexJustifyBetween, x.flexCenter, {
-        [C.success]: f,
-        [C.focused]: c
+    } = e, [c, f] = i.useState(!1), [h, g] = i.useState(!1), E = i.useMemo(() => new o.DelayedCall(1e3, () => g(!1)), [g]);
+    return i.useEffect(() => () => {
+      E.cancel()
+    }, [E]), (0, l.jsxs)("div", {
+      className: s(S.input, N.flexJustifyBetween, N.flexCenter, {
+        [S.success]: h,
+        [S.focused]: c
       }),
-      children: [(0, l.jsx)(o.TextInput, {
-        className: g.copyInput,
+      children: [(0, l.jsx)(d.TextInput, {
+        className: T.copyInput,
         name: "invite",
-        value: s ? N.default.Messages.INSTANT_INVITE_HIDDEN : t,
+        value: a ? m.default.Messages.INSTANT_INVITE_HIDDEN : t,
         editable: !1,
-        inputClassName: g.input,
+        inputClassName: T.input,
         autoFocus: n,
-        onFocus: () => n ? E(!0) : null,
-        onBlur: () => n ? E(!1) : null,
+        onFocus: () => n ? f(!0) : null,
+        onBlur: () => n ? f(!1) : null,
         spellCheck: "false",
         onClick: e => e.currentTarget.select(),
-        "aria-label": N.default.Messages.FORM_LABEL_INVITE_LINK,
+        "aria-label": m.default.Messages.FORM_LABEL_INVITE_LINK,
         disabled: u
-      }), h.SUPPORTS_COPY ? (0, l.jsx)(o.Button, {
-        size: o.Button.Sizes.SMALL,
-        color: f ? o.Button.Colors.GREEN : o.Button.Colors.BRAND,
-        className: g.copyButton,
+      }), I.SUPPORTS_COPY ? (0, l.jsx)(d.Button, {
+        size: d.Button.Sizes.SMALL,
+        color: h ? d.Button.Colors.GREEN : d.Button.Colors.BRAND,
+        className: T.copyButton,
         onClick: () => {
-          v(!0), _.delay(), r(t)
+          g(!0), E.delay(), r(t)
         },
         disabled: u,
-        children: f ? N.default.Messages.INVITE_COPIED : N.default.Messages.COPY
+        children: h ? m.default.Messages.INVITE_COPIED : m.default.Messages.COPY
       }) : null]
     })
   }),
-  A = e => {
+  x = e => {
     let {
       guild: t,
       noInvitesAvailable: n,
-      showFriends: s,
+      showFriends: a,
       onClose: u,
-      modalState: d,
-      isGuestInviteCreationToggleEnabled: E,
-      inviteFlags: C,
-      setInviteFlags: x,
-      showGuestInviteToggleForCurrentVoiceChannel: A,
-      copyValue: L,
-      changePage: R,
-      inviteChannel: M,
-      source: y,
-      code: D,
-      guildScheduledEvent: j,
-      disabled: G
+      modalState: o,
+      isGuestInviteCreationToggleEnabled: f,
+      inviteFlags: S,
+      setInviteFlags: N,
+      showGuestInviteToggleForCurrentVoiceChannel: x,
+      copyValue: M,
+      changePage: y,
+      inviteChannel: w,
+      source: R,
+      code: L,
+      guildScheduledEvent: O,
+      disabled: D
     } = e, {
-      maxAge: V,
-      maxUses: O,
-      networkError: U,
-      showVanityURL: b
-    } = d, P = a.useCallback(() => {
-      (0, h.copy)(L), f.default.track(T.AnalyticEvents.COPY_INSTANT_INVITE, {
+      maxAge: U,
+      maxUses: b,
+      networkError: P,
+      showVanityURL: F
+    } = o, V = i.useCallback(() => {
+      (0, I.copy)(M), h.default.track(v.AnalyticEvents.COPY_INSTANT_INVITE, {
         server: c.default.getGuildId(),
-        channel: null == M ? void 0 : M.id,
-        channel_type: null == M ? void 0 : M.type,
-        location: y,
-        code: D,
-        guild_scheduled_event_id: null == j ? void 0 : j.id
+        channel: null == w ? void 0 : w.id,
+        channel_type: null == w ? void 0 : w.type,
+        location: R,
+        code: L,
+        guild_scheduled_event_id: null == O ? void 0 : O.id
       })
-    }, [L, M, y, D, j]);
+    }, [M, w, R, L, O]);
     return (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(S, {
-        value: L,
-        autoFocus: s,
-        onCopy: P,
-        disabled: G
-      }), E ? (0, l.jsx)("div", {
-        className: g.temporaryMembershipContainerBackground,
-        children: (0, l.jsx)(o.FormSwitch, {
-          className: g.temporaryMembershipContainer,
-          value: (0, v.hasFlag)(C, r.GuildInviteFlags.IS_GUEST_INVITE),
-          onChange: e => x((0, v.setFlag)(C, r.GuildInviteFlags.IS_GUEST_INVITE, e)),
-          note: N.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
-          disabled: G,
+      children: [(0, l.jsx)(A, {
+        value: M,
+        autoFocus: a,
+        onCopy: V,
+        disabled: D
+      }), f ? (0, l.jsx)("div", {
+        className: T.temporaryMembershipContainerBackground,
+        children: (0, l.jsx)(d.FormSwitch, {
+          className: T.temporaryMembershipContainer,
+          value: (0, g.hasFlag)(S, r.GuildInviteFlags.IS_GUEST_INVITE),
+          onChange: e => N((0, g.setFlag)(S, r.GuildInviteFlags.IS_GUEST_INVITE, e)),
+          note: m.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
+          disabled: D,
           hideBorder: !0,
-          children: A ? N.default.Messages.GRANT_GUEST_MEMBERSHIP_VOICE_ONLY : N.default.Messages.GRANT_GUEST_MEMBERSHIP
+          children: x ? m.default.Messages.GRANT_GUEST_MEMBERSHIP_VOICE_ONLY : m.default.Messages.GRANT_GUEST_MEMBERSHIP
         })
-      }) : null, n || b ? null : (0, l.jsxs)(o.Text, {
+      }) : null, n || F ? null : (0, l.jsxs)(d.Text, {
         variant: "text-xs/normal",
-        className: i(p.marginTop8, g.footerText),
-        children: [(0, _.maxAgeString)(V, O), " ", s ? (0, l.jsx)(o.Anchor, {
-          onClick: () => R(m.InstantInviteModalPages.SETTINGS),
-          children: N.default.Messages.INVITE_EDIT_LINK
+        className: s(C.marginTop8, T.footerText),
+        children: [(0, E.maxAgeString)(U, b), " ", a ? (0, l.jsx)(d.Anchor, {
+          onClick: () => y(p.InstantInviteModalPages.SETTINGS),
+          children: m.default.Messages.INVITE_EDIT_LINK
         }) : null]
-      }), !n && s && b ? (0, l.jsxs)(o.Text, {
+      }), !n && a && F ? (0, l.jsxs)(d.Text, {
         variant: "text-xs/normal",
-        className: i(p.marginTop8, g.footerText),
-        children: [N.default.Messages.INVITE_VANITY_USED, " ", (0, l.jsx)(o.Anchor, {
-          onClick: () => R(m.InstantInviteModalPages.SETTINGS),
-          children: N.default.Messages.INVITE_EDIT_LINK
+        className: s(C.marginTop8, T.footerText),
+        children: [m.default.Messages.INVITE_VANITY_USED, " ", (0, l.jsx)(d.Anchor, {
+          onClick: () => y(p.InstantInviteModalPages.SETTINGS),
+          children: m.default.Messages.INVITE_EDIT_LINK
         })]
-      }) : null, null != U ? (0, l.jsx)(I.InviteErrorMessage, {
+      }) : null, null != P ? (0, l.jsx)(_.InviteErrorMessage, {
         guild: t,
-        error: U,
+        error: P,
         onClose: u
       }) : null]
     })

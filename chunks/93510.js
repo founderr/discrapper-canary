@@ -1,42 +1,42 @@
 "use strict";
 n.r(t), n.d(t, {
   CircleQuestionIcon: function() {
-    return l
+    return a
   }
 });
-var s = n("37983");
+var r = n("37983");
 n("884691");
-var r = n("669491"),
-  a = n("82169");
-let l = e => {
+var s = n("669491"),
+  i = n("82169");
+let a = e => {
   let {
     width: t = 24,
     height: n = 24,
-    secondaryColor: l = "transparent",
-    secondaryColorClass: i = "",
-    color: u = r.default.colors.INTERACTIVE_NORMAL,
-    colorClass: c = "",
-    ...o
+    secondaryColor: a = "transparent",
+    secondaryColorClass: l = "",
+    color: o = s.default.colors.INTERACTIVE_NORMAL,
+    colorClass: u = "",
+    ...c
   } = e;
-  return (0, s.jsxs)("svg", {
-    ...(0, a.default)(o),
+  return (0, r.jsxs)("svg", {
+    ...(0, i.default)(c),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: n,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: [(0, s.jsx)("circle", {
+    children: [(0, r.jsx)("circle", {
       cx: "12",
       cy: "12",
       r: "10",
-      fill: "string" == typeof l ? l : l.css,
-      className: i
-    }), (0, s.jsx)("path", {
-      fill: "string" == typeof u ? u : u.css,
+      fill: "string" == typeof a ? a : a.css,
+      className: l
+    }), (0, r.jsx)("path", {
+      fill: "string" == typeof o ? o : o.css,
       fillRule: "evenodd",
       d: "M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm-.28-16c-.98 0-1.81.47-2.27 1.14A1 1 0 1 1 7.8 7.01 4.73 4.73 0 0 1 11.72 5c2.5 0 4.65 1.88 4.65 4.38 0 2.1-1.54 3.77-3.52 4.24l.14 1a1 1 0 0 1-1.98.27l-.28-2a1 1 0 0 1 .99-1.14c1.54 0 2.65-1.14 2.65-2.38 0-1.23-1.1-2.37-2.65-2.37ZM13 17.88a1.13 1.13 0 1 1-2.25 0 1.13 1.13 0 0 1 2.25 0Z",
       clipRule: "evenodd",
-      className: c
+      className: u
     })]
   })
 }

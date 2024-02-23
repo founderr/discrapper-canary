@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return d
   },
   default: function() {
-    return f
+    return _
   }
 });
 var r = n("37983");
@@ -34,7 +34,7 @@ function d(e) {
   })
 }
 
-function f(e) {
+function _(e) {
   let {
     className: t,
     forceUseColorForSparkles: n = !1,

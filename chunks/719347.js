@@ -1,24 +1,24 @@
 "use strict";
-var r, i;
-n.r(e), n.d(e, {
+var r, s;
+n.r(t), n.d(t, {
   MEDIA_MOSAIC_MAX_WIDTH: function() {
-    return u
+    return i
   },
   MEDIA_MOSAIC_MAX_HEIGHT: function() {
-    return o
+    return a
   },
   MINIMUM_MEDIA_MOSAIC_DIM: function() {
-    return a
+    return l
   },
   MediaLayoutType: function() {
     return r
   },
   SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE: function() {
-    return s
+    return o
   }
 });
-let u = 550,
-  o = 350,
-  a = 40;
-(i = r || (r = {})).STATIC = "STATIC", i.RESPONSIVE = "RESPONSIVE", i.MOSAIC = "MOSAIC";
-let s = 20
+let i = 550,
+  a = 350,
+  l = 40;
+(s = r || (r = {})).STATIC = "STATIC", s.RESPONSIVE = "RESPONSIVE", s.MOSAIC = "MOSAIC";
+let o = 20

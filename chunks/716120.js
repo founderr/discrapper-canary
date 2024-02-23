@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return E
+    return m
   }
 });
 var a = r("37983");
@@ -9,41 +9,41 @@ r("884691");
 var n = r("414456"),
   u = r.n(n),
   i = r("65597"),
-  l = r("854588"),
-  s = r("206230"),
+  s = r("854588"),
+  l = r("206230"),
   o = r("284679"),
   c = r("491232"),
   d = r("408381"),
   f = r("467618"),
-  E = e => {
+  m = e => {
     let {
       asset: t,
       assetUrlOverride: r,
       size: n = d.MAX_CONTENT_WIDTH,
-      className: E,
-      style: m,
+      className: m,
+      style: E,
       children: p
-    } = e, S = (0, i.default)([s.default], () => s.default.saturation);
+    } = e, S = (0, i.default)([l.default], () => l.default.saturation);
     return (0, a.jsx)("div", {
-      className: u(f.banner, E),
+      className: u(f.banner, m),
       style: (() => {
-        if (null == t) return m;
+        if (null == t) return E;
         if (1 === S) return null != r ? {
-          ...m,
+          ...E,
           backgroundImage: "url(".concat(r, "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)"),
           backgroundBlendMode: "multiply",
           backgroundSize: "cover"
         } : {
-          ...m,
+          ...E,
           backgroundImage: "url(".concat((0, c.getCollectiblesAssetURL)(t, {
             size: n,
             format: "jpg"
           }), ")"),
           backgroundSize: "cover"
         };
-        let e = (0, o.hexOpacityToRgba)(l.default.unsafe_rawColors.BLACK_500, 1 - S);
+        let e = (0, o.hexOpacityToRgba)(s.default.unsafe_rawColors.BLACK_500, 1 - S);
         return {
-          ...m,
+          ...E,
           backgroundImage: "linear-gradient(".concat(e, ", ").concat(e, "), url(").concat((0, c.getCollectiblesAssetURL)(t, {
             size: n,
             format: "jpg"

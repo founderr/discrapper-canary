@@ -7,7 +7,7 @@ r.r(t), r.d(t, {
     return i
   },
   getBackgroundGradient: function() {
-    return l
+    return s
   },
   getConfettiSprites: function() {
     return c
@@ -17,7 +17,7 @@ var a = r("635058"),
   n = r("547630");
 let u = 1060,
   i = e => e * (0, n.default)(),
-  l = function(e) {
+  s = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
       {
         primary: r,
@@ -25,7 +25,7 @@ let u = 1060,
       } = e;
     return "linear-gradient(".concat(t, "deg, ").concat(r.toHslString(), ", ").concat(a.toHslString(), ")")
   },
-  s = [r("424869"), r("714293")],
+  l = [r("424869"), r("714293")],
   o = {
     ["".concat(a.CollectiblesCategorySkuId.FANTASY)]: [r("655029"), r("290216")],
     ["".concat(a.CollectiblesCategorySkuId.ANIME)]: [r("597704"), r("714293")],
@@ -37,5 +37,5 @@ let u = 1060,
   },
   c = e => {
     var t;
-    return null == e ? s : null !== (t = o[e]) && void 0 !== t ? t : s
+    return null == e ? l : null !== (t = o[e]) && void 0 !== t ? t : l
   }

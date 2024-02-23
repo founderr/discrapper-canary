@@ -1,79 +1,79 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return h
   }
 }), n("222007");
 var i = n("872717"),
-  r = n("689988"),
-  l = n("870691"),
+  a = n("689988"),
+  r = n("870691"),
   s = n("42203"),
-  a = n("718517"),
-  o = n("49111");
-let u = {},
-  c = 0,
-  d = 15 * a.default.Millis.SECOND;
+  l = n("718517"),
+  u = n("49111");
+let o = {},
+  d = 0,
+  c = 15 * l.default.Millis.SECOND;
 
 function f() {
-  u = {
-    ...l.default.getCollapsedCategories()
+  o = {
+    ...r.default.getCollapsedCategories()
   }
 }
 
-function h() {
-  !__OVERLAY__ && (clearTimeout(c), c = setTimeout(() => _({}), d))
+function E() {
+  !__OVERLAY__ && (clearTimeout(d), d = setTimeout(() => _({}), c))
 }
-async function E(e, t) {
-  null == e || e === o.ME ? await i.default.patch({
-    url: o.Endpoints.USER_GUILD_SETTINGS(o.ME),
+async function p(e, t) {
+  null == e || e === u.ME ? await i.default.patch({
+    url: u.Endpoints.USER_GUILD_SETTINGS(u.ME),
     body: t
   }) : await _(null != t ? {
-    [null != e ? e : o.ME]: t
+    [null != e ? e : u.ME]: t
   } : {})
 }
 async function _(e) {
-  clearTimeout(c);
+  clearTimeout(d);
   let t = 0 !== Object.keys(e).length,
-    n = l.default.getCollapsedCategories(),
-    r = function() {
+    n = r.default.getCollapsedCategories(),
+    a = function() {
       let e = {},
-        t = l.default.getCollapsedCategories();
-      for (let n in t) t[n] !== u[n] && (e[n] = !0);
-      for (let n in u) t[n] !== u[n] && (e[n] = !0);
+        t = r.default.getCollapsedCategories();
+      for (let n in t) t[n] !== o[n] && (e[n] = !0);
+      for (let n in o) t[n] !== o[n] && (e[n] = !0);
       return e
     }();
-  for (let i in r) {
-    let r = s.default.getChannel(i);
-    null != r && null != r.guild_id && (!(r.guild_id in e) && (e[r.guild_id] = {}), null == e[r.guild_id].channel_overrides && (e[r.guild_id].channel_overrides = {}), e[r.guild_id].channel_overrides[r.id] = {
-      ...e[r.guild_id].channel_overrides[r.id],
-      collapsed: r.id in n
+  for (let i in a) {
+    let a = s.default.getChannel(i);
+    null != a && null != a.guild_id && (!(a.guild_id in e) && (e[a.guild_id] = {}), null == e[a.guild_id].channel_overrides && (e[a.guild_id].channel_overrides = {}), e[a.guild_id].channel_overrides[a.id] = {
+      ...e[a.guild_id].channel_overrides[a.id],
+      collapsed: a.id in n
     }, t = !0)
   }
-  return t ? (u = {
+  return t ? (o = {
     ...n
-  }, delete e[o.FAVORITES], (await i.default.patch({
-    url: o.Endpoints.USER_GUILD_SETTINGS_BULK,
+  }, delete e[u.FAVORITES], (await i.default.patch({
+    url: u.Endpoints.USER_GUILD_SETTINGS_BULK,
     body: {
       guilds: e
     }
   })).body) : []
 }
 
-function p() {
-  u = {
-    ...l.default.getCollapsedCategories()
+function C() {
+  o = {
+    ...r.default.getCollapsedCategories()
   }
 }
-class v extends r.default {
+class I extends a.default {
   constructor(...e) {
     super(...e), this.actions = {
-      CATEGORY_COLLAPSE: h,
-      CATEGORY_EXPAND: h,
-      CATEGORY_COLLAPSE_ALL: h,
-      CATEGORY_EXPAND_ALL: h,
+      CATEGORY_COLLAPSE: E,
+      CATEGORY_EXPAND: E,
+      CATEGORY_COLLAPSE_ALL: E,
+      CATEGORY_EXPAND_ALL: E,
       POST_CONNECTION_OPEN: f,
-      USER_GUILD_SETTINGS_FULL_UPDATE: p
-    }, this.saveUserGuildSettings = E, this.saveUserGuildSettingsBulk = _
+      USER_GUILD_SETTINGS_FULL_UPDATE: C
+    }, this.saveUserGuildSettings = p, this.saveUserGuildSettingsBulk = _
   }
 }
-var g = new v
+var h = new I

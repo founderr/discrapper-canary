@@ -10,10 +10,10 @@ r.r(t), r.d(t, {
     return i
   },
   COMMON_CONFETTI_MAX_SPRITE_SIZE: function() {
-    return s
+    return a
   },
   COMMON_CONFETTI_BASE_CONFIG: function() {
-    return a
+    return s
   },
   COMMON_CONFETTI_ENVIRONMENT: function() {
     return c
@@ -27,8 +27,8 @@ let o = u,
     src: r("283397"),
     colorize: !1
   }],
-  s = 28,
-  a = {
+  a = 28,
+  s = {
     velocity: {
       type: "static-random",
       minValue: {
@@ -50,7 +50,7 @@ let o = u,
     size: {
       type: "static-random",
       minValue: 14,
-      maxValue: s
+      maxValue: a
     }
   },
   c = new n.Environment

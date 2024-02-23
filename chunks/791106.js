@@ -7,19 +7,19 @@ n.r(t), n.d(t, {
     return o
   },
   default: function() {
-    return h
+    return C
   }
 });
-var s = n("37983"),
-  a = n("884691"),
-  r = n("748820"),
-  i = n("669491");
+var r = n("37983"),
+  s = n("884691"),
+  i = n("748820"),
+  a = n("669491");
 let l = Object.freeze({
-    PREMIUM_TIER_0: (0, r.v4)(),
-    PREMIUM_TIER_1: (0, r.v4)(),
-    PREMIUM_TIER_2: (0, r.v4)(),
-    PREMIUM_GUILD: (0, r.v4)(),
-    PREMIUM_GUILD_BADGE_V2_BACKGROUND: (0, r.v4)()
+    PREMIUM_TIER_0: (0, i.v4)(),
+    PREMIUM_TIER_1: (0, i.v4)(),
+    PREMIUM_TIER_2: (0, i.v4)(),
+    PREMIUM_GUILD: (0, i.v4)(),
+    PREMIUM_GUILD_BADGE_V2_BACKGROUND: (0, i.v4)()
   }),
   o = {
     PREMIUM_TIER_0: "url(#".concat(l.PREMIUM_TIER_0, ")"),
@@ -28,62 +28,62 @@ let l = Object.freeze({
     PREMIUM_GUILD: "url(#".concat(l.PREMIUM_GUILD, ")"),
     PREMIUM_GUILD_BADGE_V2_BACKGROUND: "url(#".concat(l.PREMIUM_GUILD_BADGE_V2_BACKGROUND, ")")
   },
-  u = () => (0, s.jsxs)("linearGradient", {
+  u = () => (0, r.jsxs)("linearGradient", {
     id: l.PREMIUM_TIER_0,
-    children: [(0, s.jsx)("stop", {
+    children: [(0, r.jsx)("stop", {
       offset: ".1762",
-      stopColor: i.default.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS.css
-    }), (0, s.jsx)("stop", {
+      stopColor: a.default.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS.css
+    }), (0, r.jsx)("stop", {
       offset: "0.5351",
-      stopColor: i.default.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2.css
-    }), (0, s.jsx)("stop", {
+      stopColor: a.default.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2.css
+    }), (0, r.jsx)("stop", {
       offset: "1",
-      stopColor: i.default.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS.css
+      stopColor: a.default.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS.css
     })]
   }),
-  d = () => (0, s.jsxs)("linearGradient", {
+  c = () => (0, r.jsxs)("linearGradient", {
     id: l.PREMIUM_TIER_1,
-    children: [(0, s.jsx)("stop", {
-      stopColor: i.default.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css
-    }), (0, s.jsx)("stop", {
+    children: [(0, r.jsx)("stop", {
+      stopColor: a.default.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css
+    }), (0, r.jsx)("stop", {
       offset: "1",
-      stopColor: i.default.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css
+      stopColor: a.default.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css
     })]
   }),
-  c = () => (0, s.jsxs)("linearGradient", {
+  d = () => (0, r.jsxs)("linearGradient", {
     id: l.PREMIUM_TIER_2,
-    children: [(0, s.jsx)("stop", {
-      stopColor: i.default.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css
-    }), (0, s.jsx)("stop", {
+    children: [(0, r.jsx)("stop", {
+      stopColor: a.default.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css
+    }), (0, r.jsx)("stop", {
       offset: "0.502368",
-      stopColor: i.default.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2.css
-    }), (0, s.jsx)("stop", {
+      stopColor: a.default.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2.css
+    }), (0, r.jsx)("stop", {
       offset: "1",
-      stopColor: i.default.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS.css
+      stopColor: a.default.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS.css
     })]
   }),
-  f = () => (0, s.jsxs)("linearGradient", {
+  _ = () => (0, r.jsxs)("linearGradient", {
     id: l.PREMIUM_GUILD,
-    children: [(0, s.jsx)("stop", {
-      stopColor: i.default.unsafe_rawColors.GUILD_BOOSTING_BLUE.css
-    }), (0, s.jsx)("stop", {
+    children: [(0, r.jsx)("stop", {
+      stopColor: a.default.unsafe_rawColors.GUILD_BOOSTING_BLUE.css
+    }), (0, r.jsx)("stop", {
       offset: "1",
-      stopColor: i.default.unsafe_rawColors.GUILD_BOOSTING_PURPLE.css
+      stopColor: a.default.unsafe_rawColors.GUILD_BOOSTING_PURPLE.css
     })]
   }),
-  _ = () => (0, s.jsxs)("linearGradient", {
+  f = () => (0, r.jsxs)("linearGradient", {
     id: l.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
     gradientTransform: "rotate(45)",
-    children: [(0, s.jsx)("stop", {
+    children: [(0, r.jsx)("stop", {
       offset: "0",
-      stopColor: i.default.unsafe_rawColors.PREMIUM_TIER_2_PURPLE.css
-    }), (0, s.jsx)("stop", {
+      stopColor: a.default.unsafe_rawColors.PREMIUM_TIER_2_PURPLE.css
+    }), (0, r.jsx)("stop", {
       offset: "1",
-      stopColor: i.default.unsafe_rawColors.PREMIUM_TIER_2_PINK.css
+      stopColor: a.default.unsafe_rawColors.PREMIUM_TIER_2_PINK.css
     })]
   }),
-  E = a.memo(function() {
-    return (0, s.jsxs)("svg", {
+  E = s.memo(function() {
+    return (0, r.jsxs)("svg", {
       viewBox: "0 0 1 1",
       style: {
         position: "absolute",
@@ -94,7 +94,7 @@ let l = Object.freeze({
         height: 1
       },
       "aria-hidden": !0,
-      children: [u(), d(), c(), f(), _()]
+      children: [u(), c(), d(), _(), f()]
     })
   }, () => !0);
-var h = E
+var C = E

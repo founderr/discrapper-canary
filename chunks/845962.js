@@ -9,26 +9,26 @@ var u = r("917351"),
   o = r("446674"),
   l = r("913144");
 let i = [],
-  s = !1;
-let a = i,
+  a = !1;
+let s = i,
   c = {},
   f = null,
   d = e => {
-    a = (0, u.cloneDeep)(e);
+    s = (0, u.cloneDeep)(e);
     let t = {};
-    a.forEach(e => {
+    s.forEach(e => {
       t[e.id] = e
     }), c = t
   };
 class E extends o.default.Store {
   get isFetching() {
-    return s
+    return a
   }
   get fetchError() {
     return n
   }
   get profileEffects() {
-    return a
+    return s
   }
   get tryItOutId() {
     return f
@@ -40,19 +40,19 @@ class E extends o.default.Store {
 E.displayName = "ProfileEffectStore";
 var T = new E(l.default, {
   USER_PROFILE_EFFECTS_FETCH: () => {
-    s = !0
+    a = !0
   },
   USER_PROFILE_EFFECTS_FETCH_SUCCESS: e => {
     let {
       profileEffects: t
     } = e;
-    s = !1, d(0 === t.length ? i : t)
+    a = !1, d(0 === t.length ? i : t)
   },
   USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
     let {
       error: t
     } = e;
-    s = !1, n = t, d(i)
+    a = !1, n = t, d(i)
   },
   PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
     let {
@@ -61,6 +61,6 @@ var T = new E(l.default, {
     f = t
   },
   LOGOUT: e => {
-    s = !1, d(i), f = null
+    a = !1, d(i), f = null
   }
 })

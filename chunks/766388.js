@@ -1,30 +1,30 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   BoostTier2SimpleIcon: function() {
-    return a
+    return s
   }
 });
-var n = r("37983");
-r("884691");
-var l = r("669491"),
-  s = r("82169");
-let a = e => {
+var r = n("37983");
+n("884691");
+var l = n("669491"),
+  a = n("82169");
+let s = e => {
   let {
     width: t = 24,
-    height: r = 24,
-    color: a = l.default.colors.INTERACTIVE_NORMAL,
+    height: n = 24,
+    color: s = l.default.colors.INTERACTIVE_NORMAL,
     colorClass: i = "",
-    ...u
+    ...o
   } = e;
-  return (0, n.jsx)("svg", {
-    ...(0, s.default)(u),
+  return (0, r.jsx)("svg", {
+    ...(0, a.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
-    height: r,
+    height: n,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: (0, n.jsx)("path", {
-      fill: "string" == typeof a ? a : a.css,
+    children: (0, r.jsx)("path", {
+      fill: "string" == typeof s ? s : s.css,
       d: "M10.95 1.4a1.59 1.59 0 0 1 2.1 0l4.9 4A3.37 3.37 0 0 1 19 8v8c0 1.07-.4 2.06-1.05 2.6l-4.9 4c-.65.53-1.45.53-2.1 0l-4.9-4A3.37 3.37 0 0 1 5 16V8c0-1.07.4-2.06 1.05-2.6l4.9-4Z",
       className: i
     })

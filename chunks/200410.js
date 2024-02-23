@@ -1,19 +1,19 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return a
+    return i
   }
 });
-var a, n = r("666038");
-a = class e extends n.default {
+var i, a = n("666038");
+i = class e extends a.default {
   static fromServer(t) {
     let {
-      sku_id: r,
-      ...a
+      sku_id: n,
+      ...i
     } = t;
     return new e({
-      ...a,
-      skuId: r
+      ...i,
+      skuId: n
     })
   }
   constructor(e) {
