@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   PictureInPictureWindow: function() {
-    return p
+    return h
   },
   default: function() {
-    return E
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,14 +15,13 @@ var a = n("37983"),
   u = n("773336"),
   o = n("325753"),
   d = n("49111"),
-  c = n("578549"),
-  f = n("678016");
-let h = {
+  c = n("578549");
+let f = {
   top: 80,
   bottom: 132,
   left: 80
 };
-class p extends r.PureComponent {
+class h extends r.PureComponent {
   componentDidMount() {
     this.setPosition(this.props.position)
   }
@@ -194,49 +193,47 @@ class p extends r.PureComponent {
     }
   }
 }
-p.defaultProps = {
+h.defaultProps = {
   hidden: !1,
   roundCorners: !0
 };
-var E = r.memo(e => {
+var p = r.memo(e => {
   let {
     selectedPIPWindow: t,
     pipWindows: n,
     maxX: r,
     maxY: s,
-    onWindowMove: l,
-    dockedRect: u,
-    pictureInPictureComponents: o,
-    appContext: E,
-    roundCorners: C
+    onWindowMove: i,
+    dockedRect: l,
+    pictureInPictureComponents: u,
+    appContext: o,
+    roundCorners: p
   } = e;
   return (0, a.jsx)("div", {
     className: c.pictureInPicture,
     children: (() => {
       if (null == t) return null;
       let e = n.map(e => {
-          if (e.id !== t.id && e.component !== d.PictureInPictureComponents.EMBED_IFRAME) return null;
-          let n = "string" == typeof e.component ? o[e.component] : e.component;
-          return (0, a.jsx)(n, {
-            ...e.props
-          }, "pipWindow-".concat(e.id))
-        }),
-        m = e.length > 1 ? c.noBoxShadow : {};
-      return (0, a.jsx)(p, {
-        className: i(c.pictureInPictureWindowOverflow, f.elevationHigh, m),
-        appContext: E,
+        if (e.id !== t.id && e.component !== d.PictureInPictureComponents.EMBED_IFRAME) return null;
+        let n = "string" == typeof e.component ? u[e.component] : e.component;
+        return (0, a.jsx)(n, {
+          ...e.props
+        }, "pipWindow-".concat(e.id))
+      });
+      return (0, a.jsx)(h, {
+        appContext: o,
         position: t.position,
         id: t.id,
         hidden: t.hidden,
-        onMove: l,
+        onMove: i,
         maxX: r,
         maxY: s,
-        dockedRect: u,
-        edgeOffsetTop: h.top,
-        edgeOffsetBottom: h.bottom,
-        edgeOffsetLeft: h.left,
-        edgeOffsetRight: h.top,
-        roundCorners: C,
+        dockedRect: l,
+        edgeOffsetTop: f.top,
+        edgeOffsetBottom: f.bottom,
+        edgeOffsetLeft: f.left,
+        edgeOffsetRight: f.top,
+        roundCorners: p,
         children: e
       })
     })()
