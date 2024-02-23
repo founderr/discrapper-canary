@@ -9620,6 +9620,7 @@ e.exports = Object.freeze({
   BILLING_ADDRESS_ACTION: "Add billing address",
   DEFAULT_CUSTOM_GIFT_MESSAGE: "You’re awesome, just like this gift. Enjoy!",
   MOBILE_CUSTOM_GIFT_PLAN_SELECTION_HEADER: "Gift {username} a new Nitro membership",
+  MOBILE_CUSTOM_GIFT_PLAN_SELECTION_HEADER_NO_USERNAME: "Gift a new Nitro membership",
   MOBILE_CUSTOM_GIFT_PLAN_SELECTION_BODY: "Warning: gift may cause uncontrollable happiness!",
   MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2: "Choose from {monthlyPrice}/month or {yearlyPrice}/year",
   MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Your recipient will receive:",
