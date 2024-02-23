@@ -68,22 +68,10 @@ let er = 936,
     let {
       guild: t,
       seenManagerRef: a
-    } = e, s = function(e, t) {
-      let {
-        showRefreshButton: a
-      } = P.GuildFeedRefreshButtonExperiment.useExperiment({
-        location: "69386d_1"
-      }, {
-        autoTrackExposure: !1
-      });
-      n.useEffect(() => {
-        P.GuildFeedRefreshButtonExperiment.trackExposure({
-          location: "69386d_2"
-        })
-      }, []);
-      let s = (0, r.useStateFromStores)([G.default], () => G.default.can(et.Permissions.MANAGE_MESSAGES, e), [e]),
-        i = [];
-      return a && i.push((0, l.jsx)(k.Icon, {
+    } = e, n = function(e, t) {
+      let a = (0, r.useStateFromStores)([G.default], () => G.default.can(et.Permissions.MANAGE_MESSAGES, e), [e]),
+        n = [];
+      return n.push((0, l.jsx)(k.Icon, {
         tooltip: en.default.Messages.REFRESH,
         icon: H.default,
         onClick: function() {
@@ -96,16 +84,16 @@ let er = 936,
             }
           })
         }
-      })), s && i.push((0, l.jsx)(p.default, {
+      })), a && n.push((0, l.jsx)(p.default, {
         guildId: e.id
-      })), i
+      })), n
     }(t, a);
     return (0, l.jsxs)(T.default, {
       channelId: ea.StaticChannelRoute.GUILD_HOME,
       guildId: t.id,
       className: i(ei.title, es.background),
       innerClassname: es.headerBarInner,
-      toolbar: s,
+      toolbar: n,
       children: [(0, l.jsx)(T.default.Icon, {
         icon: y.default,
         "aria-hidden": !0
