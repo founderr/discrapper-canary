@@ -1,84 +1,49 @@
 "use strict";
 n.r(t), n.d(t, {
   ProductCard: function() {
-    return r
-  },
-  ProductCardBenefit: function() {
-    return s
+    return l
   }
 });
 var i = n("37983");
 n("884691");
-var a = n("370621");
+var r = n("700052"),
+  a = n("502026"),
+  s = n("370621");
 
-function r(e) {
+function l(e) {
   let {
     imgSrc: t,
     title: n,
-    description: r,
-    price: s,
-    priceLabel: l,
-    purchaseButton: o,
-    benefits: u
+    description: l,
+    purchaseButton: o
   } = e;
   return (0, i.jsxs)("div", {
-    className: a.productCard,
+    className: s.productCard,
     children: [(0, i.jsx)("div", {
-      className: a.cardHeaderImg,
+      className: s.cardHeaderImg,
       style: null != t ? {
         backgroundImage: "url(".concat(t.toString(), ")")
-      } : void 0
-    }), (0, i.jsxs)("div", {
-      className: a.cardTitleWrapper,
-      children: [(0, i.jsx)("div", {
-        className: a.cardTitleName,
-        children: n
-      }), null != r && (0, i.jsx)("div", {
-        className: a.cardTitleDesc,
-        children: r
-      })]
-    }), (0, i.jsxs)("div", {
-      className: a.cardPrice,
-      children: [(0, i.jsxs)("div", {
-        children: [(0, i.jsx)("div", {
-          children: s
-        }), (0, i.jsx)("div", {
-          className: a.cardPriceLabel,
-          children: l
-        })]
-      }), o]
-    }), null != u && u.items.length > 0 && (0, i.jsxs)("div", {
-      className: a.cardBenefitsWrapper,
-      children: [(0, i.jsx)("div", {
-        className: a.cardBenefitTitle,
-        children: u.title
-      }), u.items]
-    })]
-  })
-}
-
-function s(e) {
-  let {
-    icon: t,
-    name: n,
-    description: r
-  } = e;
-  return (0, i.jsxs)("div", {
-    className: a.cardBenefit,
-    children: [null != t && (0, i.jsx)("div", {
-      className: a.cardBenefitIcon,
-      children: "string" == typeof t ? t : (0, i.jsx)("img", {
-        src: t.toString(),
-        alt: ""
+      } : void 0,
+      children: null == t && (0, i.jsx)(r.BadgeIcon, {
+        color: "white",
+        height: 128,
+        width: 128
       })
     }), (0, i.jsxs)("div", {
-      children: [(0, i.jsx)("div", {
-        className: a.cardBenefitName,
+      className: s.details,
+      children: [(0, i.jsx)(a.Text, {
+        color: "header-primary",
+        variant: "text-md/semibold",
         children: n
-      }), (0, i.jsx)("div", {
-        className: a.cardBenefitDesc,
-        children: r
+      }), (0, i.jsx)(a.Text, {
+        className: s.description,
+        color: "text-muted",
+        variant: "text-sm/normal",
+        children: l
       })]
+    }), o && (0, i.jsxs)("div", {
+      className: s.footer,
+      children: [(0, i.jsx)("div", {}), o]
     })]
   })
 }
