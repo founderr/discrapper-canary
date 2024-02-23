@@ -9,8 +9,8 @@ var a = n("917351"),
   s = n.n(a),
   i = n("446674"),
   r = n("913144"),
-  u = n("447909"),
-  o = n("233069"),
+  o = n("447909"),
+  u = n("233069"),
   d = n("159885"),
   c = n("158998"),
   f = n("42203"),
@@ -51,7 +51,7 @@ function A() {
     friends: !0
   }, t, function() {
     let e = h.default.getFrequentlyWithoutFetchingLatest(),
-      t = e.filter(e => e instanceof o.PrivateChannelRecord && e.isDM()),
+      t = e.filter(e => e instanceof u.PrivateChannelRecord && e.isDM()),
       n = Math.max(...t.map(e => {
         let {
           id: t
@@ -94,7 +94,7 @@ function j(e) {
 }
 
 function L() {
-  return null != l && (l.destroy(), l = null), u.default.getSearchContext(j, 1e3)
+  return null != l && (l.destroy(), l = null), o.default.getSearchContext(j, 1e3)
 }
 
 function y(e) {

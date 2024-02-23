@@ -4,33 +4,33 @@ n.r(t), n.d(t, {
     return _
   },
   useFlattenedChannelIdListWithThreads: function() {
-    return c
+    return A
   }
 }), n("424973");
 var i = n("884691"),
   o = n("446674"),
   l = n("123561"),
   a = n("829072"),
-  u = n("233069"),
-  d = n("870691"),
+  d = n("233069"),
+  u = n("870691"),
   s = n("952451"),
-  r = n("49111"),
-  E = n("695838");
+  E = n("49111"),
+  r = n("695838");
 
 function _(e, t, n) {
-  let i = e === E.FAVORITES_RAW_GUILD_ID || e === r.FAVORITES ? (0, a.computeFavoritesState)() : l.default.getGuildWithoutChangingCommunityRows(e).guildChannels;
-  return A(i, t, n)
+  let i = e === r.FAVORITES_RAW_GUILD_ID || e === E.FAVORITES ? (0, a.computeFavoritesState)() : l.default.getGuildWithoutChangingCommunityRows(e).guildChannels;
+  return c(i, t, n)
 }
 
-function c(e, t, n, l, a) {
-  let u = (0, o.useStateFromStores)([s.default], () => s.default.getGuildChangeSentinel(e)),
-    r = (0, o.useStateFromStores)([d.default], () => d.default.version);
-  return (0, i.useMemo)(() => A(t, l, a).map(e => e.id), [t, n, u, r])
+function A(e, t, n, l, a) {
+  let d = (0, o.useStateFromStores)([s.default], () => s.default.getGuildChangeSentinel(e)),
+    E = (0, o.useStateFromStores)([u.default], () => u.default.version);
+  return (0, i.useMemo)(() => c(t, l, a).map(e => e.id), [t, n, d, E])
 }
 
-function A(e, t, n) {
+function c(e, t, n) {
   let i = [];
   return e.forEachShownChannel(e => {
-    ((0, u.isGuildSelectableChannelType)(e.type) || t && (0, u.isGuildVocalChannelType)(e.type)) && i.push(e)
+    ((0, d.isGuildSelectableChannelType)(e.type) || t && (0, d.isGuildVocalChannelType)(e.type)) && i.push(e)
   }, n), i
 }

@@ -18,21 +18,21 @@ function E(e, t) {
   let a = e.id,
     E = l.useRef();
   null == E.current && (E.current = [(0, c.generateEmptyPollAnswer)(), (0, c.generateEmptyPollAnswer)()]);
-  let [_, f] = l.useState(E.current), [m, L] = l.useState(""), [T, p] = l.useState(n.PollLayoutTypes.DEFAULT), [C, P] = l.useState(!1), [R, O] = l.useState(d.PollDurations.ONE_DAY), x = _.filter(e => (0, c.isAnswerFilled)(e, T)), I = _.filter(e => (0, c.isIncompleteAnswer)(e, T)), h = m.length > 0 && x.length >= d.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === I.length, [N, {
+  let [_, m] = l.useState(E.current), [L, f] = l.useState(""), [T, p] = l.useState(n.PollLayoutTypes.DEFAULT), [C, P] = l.useState(!1), [R, x] = l.useState(d.PollDurations.ONE_DAY), O = _.filter(e => (0, c.isAnswerFilled)(e, T)), h = _.filter(e => (0, c.isIncompleteAnswer)(e, T)), N = L.length > 0 && O.length >= d.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === h.length, [I, {
     error: g,
     loading: S
   }] = (0, s.default)(u.default.createPoll), M = _.length < d.MAX_NUMBER_OF_ANSWERS_PER_POLL, v = l.useCallback(() => {
-    M && f(e => [...e, (0, c.generateEmptyPollAnswer)()])
-  }, [M]), D = l.useCallback((e, t) => {
-    f(a => {
+    M && m(e => [...e, (0, c.generateEmptyPollAnswer)()])
+  }, [M]), j = l.useCallback((e, t) => {
+    m(a => {
       let l = [...a];
       return l[t] = {
         ...l[t],
         text: e
       }, l
     })
-  }, []), j = l.useCallback((e, t) => {
-    f(a => {
+  }, []), D = l.useCallback((e, t) => {
+    m(a => {
       let l = [...a];
       return l[t] = {
         ...l[t],
@@ -46,25 +46,25 @@ function E(e, t) {
     null != s && s.mediaURL !== a && o.removePollUploadAttachment(e, n.localCreationAnswerId, (0, r.getFileNameFromGifUrl)(n.localCreationAnswerId, s.mediaURL))
   }, [_]), k = l.useCallback(async (e, t, a) => {
     let l = _[t].localCreationAnswerId;
-    y(e, t), j(A(a, i.PollMediaUploadAttachmentStatus.PREPARING), t);
+    y(e, t), D(A(a, i.PollMediaUploadAttachmentStatus.PREPARING), t);
     let n = await o.handlePollGifAttachmentAdd(e, l, a);
     if (null == n) {
-      j(A(a, i.PollMediaUploadAttachmentStatus.ERROR), t);
+      D(A(a, i.PollMediaUploadAttachmentStatus.ERROR), t);
       return
     }
-    j(A(a, i.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t)
-  }, [_, j, y]), b = l.useCallback((e, t, a) => {
+    D(A(a, i.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t)
+  }, [_, D, y]), b = l.useCallback((e, t, a) => {
     let l = _[t].localCreationAnswerId,
       n = URL.createObjectURL(a);
-    y(e, t), j(A(n, i.PollMediaUploadAttachmentStatus.PREPARING), t), o.handlePollMediaAttachmentAdd(e, l, a), j(A(n, i.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t)
-  }, [_, j, y]), w = l.useCallback((e, t) => {
-    y(a, t), j({
+    y(e, t), D(A(n, i.PollMediaUploadAttachmentStatus.PREPARING), t), o.handlePollMediaAttachmentAdd(e, l, a), D(A(n, i.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t)
+  }, [_, D, y]), w = l.useCallback((e, t) => {
+    y(a, t), D({
       emoji: e,
       stickerId: void 0,
       mediaAttachmentState: void 0
     }, t)
-  }, [a, j, y]), U = l.useCallback(e => {
-    y(a, e), f(t => {
+  }, [a, D, y]), U = l.useCallback(e => {
+    y(a, e), m(t => {
       let a = [...t];
       return a.splice(e, 1), a
     })
@@ -73,30 +73,30 @@ function E(e, t) {
     o.removeAllPollUploadAttachments(a)
   }, [a]);
   let B = l.useCallback(async () => {
-    await N({
+    await I({
       channel: e,
-      question: m,
-      answers: x,
+      question: L,
+      answers: O,
       allowMultiSelect: C,
       duration: R,
       layout: T,
       onClose: t
     })
-  }, [m, x, C, R, N, e, T, t]);
+  }, [L, O, C, R, I, e, T, t]);
   return {
     answers: _,
-    question: m,
-    setQuestion: L,
+    question: L,
+    setQuestion: f,
     selectedLayoutType: T,
     setSelectedLayoutType: p,
     allowMultiSelect: C,
     setAllowMultiSelect: P,
     duration: R,
-    setDuration: O,
-    canPost: h,
+    setDuration: x,
+    canPost: N,
     canAddMoreAnswers: M,
     handleAddAnswer: v,
-    handleAnswerTextChange: D,
+    handleAnswerTextChange: j,
     handleGifSelect: k,
     handleEmojiSelect: w,
     handleCustomUpload: b,

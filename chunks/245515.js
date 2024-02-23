@@ -104,7 +104,7 @@ let T = [{
   }
 }];
 
-function w(e) {
+function N(e) {
   let {
     actionLog: r,
     initialHeight: t
@@ -162,7 +162,7 @@ function w(e) {
     })]
   })
 }
-let N = [{
+let w = [{
   key: "action",
   cellClassName: k.actionColumn,
   render(e) {
@@ -206,12 +206,12 @@ function E() {
     children: [(0, a.jsx)(c.ScrollerThin, {
       className: k.tableContainer,
       children: (0, a.jsx)(y.default, {
-        columns: N,
+        columns: w,
         data: t,
         selectedRowKey: null == i ? void 0 : i.toString(),
         onClickRow: e => o(Number.parseInt(e, 10))
       })
-    }), null != s && (0, a.jsx)(w, {
+    }), null != s && (0, a.jsx)(N, {
       actionLog: s,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
     })]

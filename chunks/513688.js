@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   guildDirectoryEntryFromServer: function() {
-    return u
+    return o
   },
   MAX_CATEGORY_SERVERS: function() {
-    return o
+    return u
   },
   orderByTotalMemberCount: function() {
     return d
@@ -25,8 +25,8 @@ var l = n("627445"),
   i = n.n(s),
   r = n("730647");
 
-function u(e) {
-  var t, n, l, s, i, u, o;
+function o(e) {
+  var t, n, l, s, i, o, u;
   return a(e.type === r.DirectoryEntryTypes.GUILD, "Directory entries must be connected to a guild!"), {
     channelId: e.directory_channel_id,
     guildId: e.entity_id,
@@ -40,11 +40,11 @@ function u(e) {
     splash: null === (l = e.guild) || void 0 === l ? void 0 : l.splash,
     features: new Set(null === (s = e.guild) || void 0 === s ? void 0 : s.features),
     approximateMemberCount: null === (i = e.guild) || void 0 === i ? void 0 : i.approximate_member_count,
-    approximatePresenceCount: null === (u = e.guild) || void 0 === u ? void 0 : u.approximate_presence_count,
-    featurableInDirectory: null === (o = e.guild) || void 0 === o ? void 0 : o.featurable_in_directory
+    approximatePresenceCount: null === (o = e.guild) || void 0 === o ? void 0 : o.approximate_presence_count,
+    featurableInDirectory: null === (u = e.guild) || void 0 === u ? void 0 : u.featurable_in_directory
   }
 }
-let o = 5;
+let u = 5;
 
 function d(e) {
   return i.orderBy(e, [e => e.approximateMemberCount], ["desc"])
@@ -53,7 +53,7 @@ function d(e) {
 function c(e) {
   var t;
   let n = e.filter(e => e.featurableInDirectory && h(e));
-  return (t = n, i.orderBy(t, [e => e.createdAt], ["desc"])).slice(0, o)
+  return (t = n, i.orderBy(t, [e => e.createdAt], ["desc"])).slice(0, u)
 }
 
 function f(e) {

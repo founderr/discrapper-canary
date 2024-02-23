@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("526812"),
   i = n("404607"),
   r = n("670902"),
-  u = n("339792"),
-  o = n("680986"),
+  o = n("339792"),
+  u = n("680986"),
   d = n("258039"),
   c = n("821343"),
   f = n("68238"),
@@ -22,10 +22,10 @@ function p(e) {
   var t, n;
   let {
     channel: p
-  } = e, E = (0, o.useCanManageChannel)(p), S = (0, a.useStateFromStores)([s.default], () => s.default.hasHidden(p.id)), g = (0, d.isOnboardingDismissed)(p.id), {
+  } = e, E = (0, u.useCanManageChannel)(p), S = (0, a.useStateFromStores)([s.default], () => s.default.hasHidden(p.id)), g = (0, d.isOnboardingDismissed)(p.id), {
     sortOrder: C,
     tagFilter: _
-  } = (0, u.useForumChannelStore)(p.id), I = (0, a.useStateFromStores)([r.default, c.default], () => {
+  } = (0, o.useForumChannelStore)(p.id), I = (0, a.useStateFromStores)([r.default, c.default], () => {
     let e = r.default.getThreadIds(p.id, C, _);
     if (e.length > 0) return !0;
     let t = c.default.getThreads(p.id, C, _);

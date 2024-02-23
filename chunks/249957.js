@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("65597"),
   r = n("77078"),
-  u = n("26989"),
-  o = n("697218"),
+  o = n("26989"),
+  u = n("697218"),
   d = n("339123"),
   c = n("763225"),
   f = n("703433"),
@@ -58,7 +58,7 @@ function _(e) {
     location: a,
     className: d,
     onNavigate: _
-  } = e, I = (0, i.default)([o.default], () => o.default.getUser(t), [t]), T = (0, i.default)([u.default], () => u.default.getMember(n, t), [n, t]), v = (0, c.useProfileThemedPanelBackground)(t, n);
+  } = e, I = (0, i.default)([u.default], () => u.default.getUser(t), [t]), T = (0, i.default)([o.default], () => o.default.getMember(n, t), [n, t]), v = (0, c.useProfileThemedPanelBackground)(t, n);
   return null == I || null == T ? null : (0, l.jsxs)(r.Scroller, {
     className: s(g.container, d),
     style: {

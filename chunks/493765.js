@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   getNameForKeybindGroup: function() {
-    return V
+    return v
   },
   getDescriptionForKeybindGroup: function() {
     return F
@@ -21,14 +21,14 @@ n.r(t), n.d(t, {
 }), n("70102");
 var i, o, l = n("102457"),
   a = n("55562"),
-  u = n("863536"),
-  d = n("786720"),
+  d = n("863536"),
+  u = n("786720"),
   s = n("211314"),
-  r = n("218143"),
-  E = n("586819"),
+  E = n("218143"),
+  r = n("586819"),
   _ = n("953260"),
-  c = n("798232"),
-  A = n("278412"),
+  A = n("798232"),
+  c = n("278412"),
   C = n("222301"),
   T = n("903376"),
   S = n("242149"),
@@ -38,8 +38,8 @@ var i, o, l = n("102457"),
   O = n("709079"),
   L = n("616903"),
   D = n("271524"),
-  p = n("333949"),
-  R = n("945924"),
+  R = n("333949"),
+  p = n("945924"),
   h = n("648900"),
   b = n("838021"),
   G = n("745991"),
@@ -52,31 +52,31 @@ var i, o, l = n("102457"),
   K = n("229645"),
   H = n("202035"),
   B = n("49111"),
-  v = n("782340");
+  V = n("782340");
 
-function V(e) {
+function v(e) {
   switch (e) {
     case "NAVIGATION":
-      return v.default.Messages.USER_SETTINGS_KEYBINDS_NAVIGATION_SECTION_TITLE;
+      return V.default.Messages.USER_SETTINGS_KEYBINDS_NAVIGATION_SECTION_TITLE;
     case "VOICE_AND_VIDEO":
-      return v.default.Messages.USER_SETTINGS_KEYBINDS_VOICE_AND_VIDEO_SECTION_TITLE;
+      return V.default.Messages.USER_SETTINGS_KEYBINDS_VOICE_AND_VIDEO_SECTION_TITLE;
     case "CHAT":
-      return v.default.Messages.USER_SETTINGS_KEYBINDS_CHAT_SECTION_TITLE;
+      return V.default.Messages.USER_SETTINGS_KEYBINDS_CHAT_SECTION_TITLE;
     case "MISCELLANEOUS":
-      return v.default.Messages.USER_SETTINGS_KEYBINDS_MISCELLANEOUS_SECTION_TITLE;
+      return V.default.Messages.USER_SETTINGS_KEYBINDS_MISCELLANEOUS_SECTION_TITLE;
     case "MESSAGE":
-      return v.default.Messages.USER_SETTINGS_KEYBINDS_MESSAGE_SECTION_TITLE;
+      return V.default.Messages.USER_SETTINGS_KEYBINDS_MESSAGE_SECTION_TITLE;
     case "DND":
-      return v.default.Messages.USER_SETTINGS_KEYBINDS_DND_SECTION_TITLE
+      return V.default.Messages.USER_SETTINGS_KEYBINDS_DND_SECTION_TITLE
   }
 }
 
 function F(e) {
   switch (e) {
     case "MESSAGE":
-      return v.default.Messages.USER_SETTINGS_KEYBINDS_MESSAGE_DESCRIPTION;
+      return V.default.Messages.USER_SETTINGS_KEYBINDS_MESSAGE_DESCRIPTION;
     case "DND":
-      return v.default.Messages.USER_SETTINGS_KEYBINDS_DND_DESCRIPTION;
+      return V.default.Messages.USER_SETTINGS_KEYBINDS_DND_DESCRIPTION;
     default:
       return null
   }
@@ -103,10 +103,10 @@ let w = {
   [B.KeybindActions.MENTION_CHANNEL_PREV]: m.MENTION_PREV,
   [B.KeybindActions.TOGGLE_PREVIOUS_GUILD]: a.TOGGLE_PREVIOUS_GUILD,
   [B.KeybindActions.JUMP_TO_GUILD]: _.JUMP_TO_GUILD,
-  [B.KeybindActions.SUBMIT]: p.SUBMIT,
-  [B.KeybindActions.TEXTAREA_FOCUS]: R.TEXTAREA_FOCUS,
-  [B.KeybindActions.MARK_CHANNEL_READ]: c.MARK_CHANNEL_READ,
-  [B.KeybindActions.MARK_SERVER_READ]: A.MARK_SERVER_READ,
+  [B.KeybindActions.SUBMIT]: R.SUBMIT,
+  [B.KeybindActions.TEXTAREA_FOCUS]: p.TEXTAREA_FOCUS,
+  [B.KeybindActions.MARK_CHANNEL_READ]: A.MARK_CHANNEL_READ,
+  [B.KeybindActions.MARK_SERVER_READ]: c.MARK_SERVER_READ,
   [B.KeybindActions.TOGGLE_CHANNEL_PINS]: G.TOGGLE_CHANNEL_PINS,
   [B.KeybindActions.TOGGLE_INBOX_UNREADS_TAB]: P.TOGGLE_INBOX_UNREADS_TAB,
   [B.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ]: P.MARK_TOP_INBOX_CHANNEL_READ,
@@ -119,19 +119,19 @@ let w = {
   [B.KeybindActions.SCROLL_UP]: f.SCROLL_UP,
   [B.KeybindActions.SCROLL_DOWN]: f.SCROLL_DOWN,
   [B.KeybindActions.QUICKSWITCHER_SHOW]: S.QUICKSWITCHER_SHOW,
-  [B.KeybindActions.CREATE_DM_GROUP]: u.CREATE_DM_GROUP,
+  [B.KeybindActions.CREATE_DM_GROUP]: d.CREATE_DM_GROUP,
   [B.KeybindActions.SEARCH_EMOJIS]: N.SEARCH_EMOJIS,
   [B.KeybindActions.SEARCH_GIFS]: O.SEARCH_GIFS,
   [B.KeybindActions.SEARCH_STICKERS]: L.SEARCH_STICKERS,
   [B.KeybindActions.TOGGLE_HOTKEYS]: M.TOGGLE_HOTKEYS,
   [B.KeybindActions.JUMP_TO_FIRST_UNREAD]: C.JUMP_TO_FIRST_UNREAD,
-  [B.KeybindActions.CREATE_GUILD]: d.CREATE_GUILD,
+  [B.KeybindActions.CREATE_GUILD]: u.CREATE_GUILD,
   [B.KeybindActions.UPLOAD_FILE]: y.UPLOAD_FILE,
   [B.KeybindActions.RETURN_TO_AUDIO_CHANNEL]: I.RETURN_TO_AUDIO_CHANNEL,
   [B.KeybindActions.CALL_ACCEPT]: l.CALL_ACCEPT,
   [B.KeybindActions.CALL_START]: l.CALL_START,
-  [B.KeybindActions.FOCUS_SEARCH]: r.FOCUS_SEARCH,
-  [B.KeybindActions.JUMP_TO_CURRENT_CALL]: E.JUMP_TO_CURRENT_CALL,
+  [B.KeybindActions.FOCUS_SEARCH]: E.FOCUS_SEARCH,
+  [B.KeybindActions.JUMP_TO_CURRENT_CALL]: r.JUMP_TO_CURRENT_CALL,
   [B.KeybindActions.ZOOM_IN]: H.ZOOM_IN,
   [B.KeybindActions.ZOOM_OUT]: H.ZOOM_OUT,
   [B.KeybindActions.ZOOM_RESET]: H.ZOOM_RESET,
@@ -141,185 +141,185 @@ let w = {
 
 function W() {
   return [{
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_SERVERS,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_SERVERS,
     binds: Y(B.KeybindActions.SERVER_PREV, B.KeybindActions.SERVER_NEXT),
     group: "NAVIGATION"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_CHANNELS,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_CHANNELS,
     binds: Y(B.KeybindActions.CHANNEL_PREV, B.KeybindActions.CHANNEL_NEXT),
     group: "NAVIGATION"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_BACK_FORWARD,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_BACK_FORWARD,
     binds: Y(B.KeybindActions.NAVIGATE_BACK, B.KeybindActions.NAVIGATE_FORWARD),
     group: "NAVIGATION"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_CHANNELS,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_CHANNELS,
     binds: Y(B.KeybindActions.UNREAD_PREV, B.KeybindActions.UNREAD_NEXT),
     group: "NAVIGATION"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_MENTION_CHANNELS,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_MENTION_CHANNELS,
     binds: Y(B.KeybindActions.MENTION_CHANNEL_PREV, B.KeybindActions.MENTION_CHANNEL_NEXT),
     group: "NAVIGATION"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_TO_CALL,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_TO_CALL,
     binds: Y(B.KeybindActions.JUMP_TO_CURRENT_CALL),
     group: "NAVIGATION"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PREVIOUS_GUILD,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PREVIOUS_GUILD,
     binds: Y(B.KeybindActions.TOGGLE_PREVIOUS_GUILD),
     group: "NAVIGATION"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_QUICKSWITCHER,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_QUICKSWITCHER,
     binds: Y(B.KeybindActions.QUICKSWITCHER_SHOW),
     group: "NAVIGATION"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_GUILD,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_GUILD,
     binds: Y(B.KeybindActions.CREATE_GUILD),
     group: "NAVIGATION",
     groupEnd: !0
   }, {
-    description: v.default.Messages.DND_OPERATION_LABEL_START,
+    description: V.default.Messages.DND_OPERATION_LABEL_START,
     binds: ["mod+d"],
     group: "DND"
   }, {
-    description: v.default.Messages.DND_OPERATION_LABEL_MOVE,
+    description: V.default.Messages.DND_OPERATION_LABEL_MOVE,
     binds: ["up", "down"],
     group: "DND"
   }, {
-    description: v.default.Messages.DND_OPERATION_LABEL_DROP,
+    description: V.default.Messages.DND_OPERATION_LABEL_DROP,
     binds: ["spacebar", "enter"],
     group: "DND"
   }, {
-    description: v.default.Messages.DND_OPERATION_LABEL_CANCEL,
+    description: V.default.Messages.DND_OPERATION_LABEL_CANCEL,
     binds: ["esc"],
     group: "DND",
     groupEnd: !0
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_SERVER_READ,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_SERVER_READ,
     binds: Y(B.KeybindActions.MARK_SERVER_READ),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_CHANNEL_READ,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_CHANNEL_READ,
     binds: Y(B.KeybindActions.MARK_CHANNEL_READ),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_DM_GROUP,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_DM_GROUP,
     binds: Y(B.KeybindActions.CREATE_DM_GROUP),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PINS,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PINS,
     binds: Y(B.KeybindActions.TOGGLE_CHANNEL_PINS),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_INBOX,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_INBOX,
     binds: Y(B.KeybindActions.TOGGLE_INBOX_UNREADS_TAB),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_TOP_INBOX_CHANNEL_READ,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_TOP_INBOX_CHANNEL_READ,
     binds: Y(B.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_USERS,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_USERS,
     binds: Y(B.KeybindActions.TOGGLE_USERS),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_EMOJIS,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_EMOJIS,
     binds: Y(B.KeybindActions.SEARCH_EMOJIS),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_GIFS,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_GIFS,
     binds: Y(B.KeybindActions.SEARCH_GIFS),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_STICKERS,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_STICKERS,
     binds: Y(B.KeybindActions.SEARCH_STICKERS),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SCROLL_CHAT,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_SCROLL_CHAT,
     binds: Y(B.KeybindActions.SCROLL_UP, B.KeybindActions.SCROLL_DOWN),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_JUMP_TO_FIRST_UNREAD,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_JUMP_TO_FIRST_UNREAD,
     binds: Y(B.KeybindActions.JUMP_TO_FIRST_UNREAD),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
     binds: Y(B.KeybindActions.TEXTAREA_FOCUS),
     group: "CHAT"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_UPLOAD_FILE,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_UPLOAD_FILE,
     binds: Y(B.KeybindActions.UPLOAD_FILE),
     group: "CHAT",
     groupEnd: !0
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_MUTE,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_MUTE,
     binds: Y(B.KeybindActions.TOGGLE_MUTE),
     group: "VOICE_AND_VIDEO"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_DEAFEN,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_DEAFEN,
     binds: Y(B.KeybindActions.TOGGLE_DEAFEN),
     group: "VOICE_AND_VIDEO"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_ACCEPT,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_ACCEPT,
     binds: Y(B.KeybindActions.CALL_ACCEPT),
     group: "VOICE_AND_VIDEO"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_DECLINE,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_DECLINE,
     binds: Y(B.KeybindActions.MARK_CHANNEL_READ),
     group: "VOICE_AND_VIDEO"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_START,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_START,
     binds: Y(B.KeybindActions.CALL_START),
     group: "VOICE_AND_VIDEO",
     groupEnd: !0
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_HELP,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_HELP,
     binds: Y(B.KeybindActions.TOGGLE_HELP),
     group: "MISCELLANEOUS"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH,
     binds: Y(B.KeybindActions.FOCUS_SEARCH),
     group: "MISCELLANEOUS"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG,
     binds: ["h+h+right+n+k"],
     group: "MISCELLANEOUS",
     groupEnd: !0
   }, {
-    description: v.default.Messages.EDIT_MESSAGE,
+    description: V.default.Messages.EDIT_MESSAGE,
     binds: ["e"],
     group: "MESSAGE"
   }, {
-    description: v.default.Messages.DELETE_MESSAGE,
+    description: V.default.Messages.DELETE_MESSAGE,
     binds: ["backspace"],
     group: "MESSAGE"
   }, {
-    description: v.default.Messages.PIN_MESSAGE,
+    description: V.default.Messages.PIN_MESSAGE,
     binds: ["p"],
     group: "MESSAGE"
   }, {
-    description: v.default.Messages.ADD_REACTION,
+    description: V.default.Messages.ADD_REACTION,
     binds: ["plus"],
     group: "MESSAGE"
   }, {
-    description: v.default.Messages.MESSAGE_ACTION_REPLY,
+    description: V.default.Messages.MESSAGE_ACTION_REPLY,
     binds: ["r"],
     group: "MESSAGE"
   }, {
-    description: v.default.Messages.COPY_TEXT,
+    description: V.default.Messages.COPY_TEXT,
     binds: ["mod+c"],
     group: "MESSAGE"
   }, {
-    description: v.default.Messages.MARK_UNREAD,
+    description: V.default.Messages.MARK_UNREAD,
     binds: ["alt+enter"],
     group: "MESSAGE"
   }, {
-    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
+    description: V.default.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
     binds: ["escape"],
     group: "MESSAGE",
     groupEnd: !0
   }, {
-    description: v.default.Messages.USER_SETTINGS_KEYBIND_VIBE_WITH_WUMPUS_DESCRIPTION,
+    description: V.default.Messages.USER_SETTINGS_KEYBIND_VIBE_WITH_WUMPUS_DESCRIPTION,
     binds: Y(B.KeybindActions.VIBE_WITH_WUMPUS),
     group: "MISCELLANEOUS"
   }]

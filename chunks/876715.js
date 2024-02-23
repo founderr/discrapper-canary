@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("95410"),
-  u = n("457112"),
-  o = n("679243"),
+  o = n("457112"),
+  u = n("679243"),
   d = n("49111"),
   c = n("802542"),
   f = n("678016");
@@ -34,7 +34,7 @@ function m(e) {
     null === (e = g.current) || void 0 === e || e.ensureIsInPosition()
   }, [p.length]), (0, l.jsx)("div", {
     className: c.container,
-    children: (0, l.jsx)(u.PictureInPictureWindow, {
+    children: (0, l.jsx)(o.PictureInPictureWindow, {
       position: E,
       id: 0,
       ref: g,
@@ -47,12 +47,12 @@ function m(e) {
       edgeOffsetRight: 16,
       children: (0, l.jsx)("div", {
         className: c.tileContainer,
-        children: p.map(e => (0, l.jsx)(o.default, {
+        children: p.map(e => (0, l.jsx)(u.default, {
           participant: e,
           channel: m,
           onContextMenu: n,
           className: i(c.tile, f.elevationHigh),
-          fit: o.CallTileFit.COVER,
+          fit: u.CallTileFit.COVER,
           inCall: !0,
           inPopout: !1,
           width: 160

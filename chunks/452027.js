@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("151426"),
   i = n("255397"),
   r = n("264732"),
-  u = n("176347"),
-  o = n("665182"),
+  o = n("176347"),
+  u = n("665182"),
   d = n("850391"),
   c = n("10641"),
   f = n("474643"),
@@ -42,8 +42,8 @@ var l = n("37983"),
         tooltip: _.default.Messages.CLOSE,
         onClick: v
       });
-    return (0, l.jsxs)(o.default, {
-      sidebarType: o.ChatSidebarType.CallChatSidebar,
+    return (0, l.jsxs)(u.default, {
+      sidebarType: u.ChatSidebarType.CallChatSidebar,
       maxWidth: T,
       floatingLayer: S.default,
       children: [(0, l.jsx)(r.default, {
@@ -61,7 +61,7 @@ var l = n("37983"),
         })]
       }), (0, l.jsx)("div", {
         className: I.chat,
-        children: (0, l.jsx)(u.default, {
+        children: (0, l.jsx)(o.default, {
           channel: t,
           guild: n,
           chatInputType: d.ChatInputTypes.SIDEBAR

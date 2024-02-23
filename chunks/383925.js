@@ -40,12 +40,12 @@ function T() {
     return e
   }, e
 }
-let w = {
+let N = {
     ...b.semanticColorTokens,
     ...m.componentColorTokens,
     ...g.gradients
   },
-  N = {
+  w = {
     ...A(b.semanticColorTokens),
     ...A(m.componentColorTokens)
   },
@@ -70,7 +70,7 @@ function A(e) {
   return Object.keys(e).forEach(t => {
     let a = e[t];
     if ("name" in a) a = function e(r) {
-      let t = w[r.name];
+      let t = N[r.name];
       return "name" in t ? e(t) : t
     }(a);
     r[t] = {
@@ -109,10 +109,10 @@ function P() {
       return [o, s, c, d, u, h]
     }("color-override-03-03-23", {
       rawPalette: f.rawPalette,
-      semanticTokens: N
+      semanticTokens: w
     }),
     [m, g] = i.useState(""),
-    [b, w] = i.useState({}),
+    [b, N] = i.useState({}),
     [L, _] = i.useState({}),
     A = i.useMemo(() => {
       let e = Object.keys(r);
@@ -272,7 +272,7 @@ function P() {
           onClick: () => {
             a({
               rawPalette: f.rawPalette,
-              semanticTokens: N
+              semanticTokens: w
             })
           },
           children: "Reset all"
@@ -302,9 +302,9 @@ function P() {
           margin: 8,
           alignItems: "center"
         },
-        children: Object.keys(N).filter(e => "" === m || e.toLowerCase().includes(m)).map(r => {
+        children: Object.keys(w).filter(e => "" === m || e.toLowerCase().includes(m)).map(r => {
           var a;
-          let l = N[r][e],
+          let l = w[r][e],
             o = null == t[r] ? {
               ...l
             } : t[r][e],
@@ -326,7 +326,7 @@ function P() {
               children: (0, n.jsx)(y.Checkbox, {
                 value: b[r],
                 onChange: () => {
-                  w(e => ({
+                  N(e => ({
                     ...e,
                     [r]: !e[r]
                   }))

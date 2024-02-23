@@ -14,8 +14,8 @@ function r(e) {
   let {
     initialPlanId: t,
     activeSubscription: r,
-    trialId: u,
-    trialFooterMessageOverride: o,
+    trialId: o,
+    trialFooterMessageOverride: u,
     onClose: d,
     analyticsObject: c,
     analyticsLocation: f,
@@ -59,8 +59,8 @@ function r(e) {
             renderHeader: p,
             renderPurchaseConfirmation: E,
             planGroup: S,
-            trialId: u,
-            trialFooterMessageOverride: o,
+            trialId: o,
+            trialFooterMessageOverride: u,
             reviewWarningMessage: g
           })
         })

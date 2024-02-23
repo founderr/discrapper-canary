@@ -10,8 +10,8 @@ var a = n("77078"),
   s = n("664336"),
   i = n("466148"),
   r = n("393745"),
-  u = n("782340"),
-  o = n("992831");
+  o = n("782340"),
+  u = n("992831");
 
 function d(e) {
   let {
@@ -20,12 +20,12 @@ function d(e) {
   } = e, d = (0, i.default)(t.id, n);
   return null == t ? null : (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(s.default.Divider, {
-      className: o.divider
+      className: u.divider
     }), (0, l.jsx)(r.GuildEventTimeStatus, {
       startTime: d.startTime.toISOString(),
       status: t.status,
-      liveText: u.default.Messages.LIVE_EVENT,
-      className: o.eventSchedule,
+      liveText: o.default.Messages.LIVE_EVENT,
+      className: u.eventSchedule,
       textVariant: "text-lg/semibold",
       eventType: t.entity_type,
       guildEventId: null == t ? void 0 : t.id,
@@ -33,7 +33,7 @@ function d(e) {
     }), (0, l.jsx)(a.Text, {
       color: "header-secondary",
       variant: "text-md/normal",
-      className: o.eventName,
+      className: u.eventName,
       children: t.name
     })]
   })

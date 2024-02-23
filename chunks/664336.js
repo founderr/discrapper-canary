@@ -44,8 +44,8 @@ let g = e => {
       "aria-label": S,
       "aria-hidden": j,
       "aria-checked": T,
-      "aria-expanded": w,
-      "aria-haspopup": N
+      "aria-expanded": N,
+      "aria-haspopup": w
     } = e, E = (0, a.jsx)(g, {
       x: 0,
       y: 0,
@@ -102,8 +102,8 @@ let g = e => {
           "aria-label": L,
           "aria-hidden": j,
           "aria-checked": T,
-          "aria-haspopup": N,
-          "aria-expanded": w,
+          "aria-haspopup": w,
+          "aria-expanded": N,
           tabIndex: o || null == f ? -1 : 0,
           children: [s ? (0, a.jsx)(p.default, {
             mask: p.default.Masks.HEADER_BAR_BADGE,

@@ -66,7 +66,7 @@ function C() {
         can: n
       }, r)
     }),
-    w = Object.values(null != j ? j : {}).map(e => {
+    N = Object.values(null != j ? j : {}).map(e => {
       let {
         title: r,
         flag: t
@@ -91,7 +91,7 @@ function C() {
         children: [(0, a.jsx)(s.Heading, {
           variant: "heading-md/semibold",
           children: null != n ? "Permissions in ".concat(n.name) : "No guild selected"
-        }), w]
+        }), N]
       })]
     })
   })

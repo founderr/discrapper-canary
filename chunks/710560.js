@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("151426"),
   r = n("77078"),
-  u = n("191145"),
-  o = n("384997"),
+  o = n("191145"),
+  u = n("384997"),
   d = n("124824"),
   c = n("981913"),
   f = n("778588"),
@@ -48,32 +48,32 @@ function N(e) {
   } = e, N = (0, m.default)(), A = (0, s.useStateFromStores)([h.default], () => {
     var e, t;
     return null === (e = h.default.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
-  }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, j] = (0, s.useStateFromStoresArray)([u.default], () => [u.default.getMode(t.id), u.default.getLayout(t.id)]), L = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), y = (0, p.default)(), O = y.filter(e => e.twoWayLink), [P, b] = a.useState(!1);
+  }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, j] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), L = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), y = (0, p.default)(), O = y.filter(e => e.twoWayLink), [P, b] = a.useState(!1);
   if (null == N && 0 === y.length || t.isBroadcastChannel()) return null;
   let D = _.ChannelModes.VOICE !== R && [_.ChannelLayouts.NO_CHAT, _.ChannelLayouts.FULL_SCREEN].includes(j) ? "top" : "bottom",
     U = [];
-  return O.length > 0 && U.push(i.DismissibleContent.DONUT_DESKTOP_NUX), (0, l.jsx)(o.default, {
+  return O.length > 0 && U.push(i.DismissibleContent.DONUT_DESKTOP_NUX), (0, l.jsx)(u.default, {
     contentTypes: U,
     children: e => {
       let {
         visibleContent: a,
         markAsDismissed: s
-      } = e, u = a === i.DismissibleContent.DONUT_DESKTOP_NUX;
+      } = e, o = a === i.DismissibleContent.DONUT_DESKTOP_NUX;
       return (0, l.jsxs)(l.Fragment, {
         children: [n ? (0, l.jsx)("div", {
           className: v.leftDivider
         }) : null, (0, l.jsx)(r.Popout, {
           position: D,
-          spacing: u ? 16 : void 0,
+          spacing: o ? 16 : void 0,
           positionKey: "".concat(R, ":").concat(j),
           onRequestClose: () => b(!1),
-          shouldShow: (u || P) && !M && !L,
+          shouldShow: (o || P) && !M && !L,
           renderPopout: e => {
             let {
               closePopout: n
             } = e;
             return (0, l.jsx)(d.default, {
-              children: u ? (0, l.jsx)(E.default, {
+              children: o ? (0, l.jsx)(E.default, {
                 popoutPosition: D,
                 onDismiss: () => s(I.ContentDismissActionType.UNKNOWN),
                 onAccept: () => {

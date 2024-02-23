@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("124299"),
-  u = n("154462");
-let o = 16 / 9;
+  o = n("154462");
+let u = 16 / 9;
 
 function d(e, t) {
   return Math.floor((t - e) / (8 + e)) + 1
@@ -56,14 +56,14 @@ function f(e) {
       l = e > 25 ? c(a, t, e => {
         let l = d(e, t),
           a = function(e, t) {
-            let n = e / o;
+            let n = e / u;
             return Math.ceil((t - n) / (8 + n)) + 1
           }(e, n);
         return l * a > 25
       }) : c(a, t, l => {
         let a = d(l, t),
           s = function(e, t) {
-            let n = e / o;
+            let n = e / u;
             return Math.floor((t - n) / (8 + n)) + 1
           }(l, n);
         return a * s >= e
@@ -84,7 +84,7 @@ function f(e) {
       rows: l,
       columns: a
     }
-  })(C, _, I), [C, _, I]), A = N + 1, M = A * v + (A - 1) * 8, R = M <= S, j = Math.floor(v / o) + 8, L = Math.max(0, I - j * x) / 2;
+  })(C, _, I), [C, _, I]), A = N + 1, M = A * v + (A - 1) * 8, R = M <= S, j = Math.floor(v / u) + 8, L = Math.max(0, I - j * x) / 2;
   return (0, l.jsx)(r.default, {
     fade: !0,
     className: n,
@@ -93,19 +93,19 @@ function f(e) {
       var t;
       let n = e * N;
       return (0, l.jsx)("div", {
-        className: u.row,
+        className: o.row,
         children: null == s ? void 0 : null === (t = s.slice(n, n + N)) || void 0 === t ? void 0 : t.map((e, t) => {
           var a;
           let s = n + t;
           return (0, l.jsx)("div", {
             style: T,
-            className: i(u.tile, {
-              [u.padColumn]: R,
-              [u.noVerticalMargin]: s >= (x - 1) * N,
-              [u.noHorizontalMargin]: (s + 1) % N == 0 || s === C - 1
+            className: i(o.tile, {
+              [o.padColumn]: R,
+              [o.noVerticalMargin]: s >= (x - 1) * N,
+              [o.noHorizontalMargin]: (s + 1) % N == 0 || s === C - 1
             }),
             children: (0, l.jsx)("div", {
-              className: u.tileSizer,
+              className: o.tileSizer,
               children: e(v)
             })
           }, null !== (a = null == f ? void 0 : f(s)) && void 0 !== a ? a : s)

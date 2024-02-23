@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return f
+    return m
   }
 });
 var l = a("37983"),
@@ -17,24 +17,24 @@ var l = a("37983"),
   A = a("843455"),
   _ = a("161625");
 
-function f(e) {
+function m(e) {
   let {
     channel: t,
     parentModalKey: a,
     lastActiveInputIndex: s,
-    onEmojiSelect: f,
-    onGifSelect: m,
-    positionTargetRef: L
+    onEmojiSelect: m,
+    onGifSelect: L,
+    positionTargetRef: f
   } = e, {
     showPollExpressionPicker: T,
     closePollExpressionPicker: p
   } = (0, E.default)(), C = (0, i.useStateFromStores)([d.default], () => t.isPrivate() || d.default.can(A.Permissions.ATTACH_FILES, t)), P = n.useCallback(e => {
-    r(null != s, "Expected to have an active input"), (null == e ? void 0 : e.gifSrc) != null && m(t.id, s, (0, c.makeTenorProxyURL)(e.gifSrc)), p()
-  }, [p, s, m, t.id]), R = n.useCallback(e => {
-    r(null != s, "Expected to have an active input"), r(null != e, "Expected to have an emoji"), f(e, s), p()
-  }, [s, f, p]);
+    r(null != s, "Expected to have an active input"), (null == e ? void 0 : e.gifSrc) != null && L(t.id, s, (0, c.makeTenorProxyURL)(e.gifSrc)), p()
+  }, [p, s, L, t.id]), R = n.useCallback(e => {
+    r(null != s, "Expected to have an active input"), r(null != e, "Expected to have an emoji"), m(e, s), p()
+  }, [s, m, p]);
   return T ? (0, l.jsx)(u.default, {
-    positionTargetRef: L,
+    positionTargetRef: f,
     type: o.ChatInputTypes.CREATE_POLL,
     hideGifFavorites: !0,
     includeCreateEmojiButton: !1,

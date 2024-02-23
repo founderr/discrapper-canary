@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("627445"),
   i = n.n(s),
   r = n("866227"),
-  u = n.n(r),
-  o = n("446674"),
+  o = n.n(r),
+  u = n("446674"),
   d = n("913144"),
   c = n("775433"),
   f = n("834897"),
@@ -35,27 +35,27 @@ var l = n("37983"),
   y = n("782340"),
   O = (e, t, n, s) => {
     let r;
-    let O = (0, o.useStateFromStores)([g.default], () => g.default.isLurking(t)),
+    let O = (0, u.useStateFromStores)([g.default], () => g.default.isLurking(t)),
       P = (0, S.useShowMemberVerificationGate)(t),
-      b = (0, o.useStateFromStores)([E.default], () => null != t ? E.default.getRequest(t) : null),
+      b = (0, u.useStateFromStores)([E.default], () => null != t ? E.default.getRequest(t) : null),
       D = (null == b ? void 0 : b.applicationStatus) === p.GuildJoinRequestApplicationStatuses.SUBMITTED,
       U = null == e ? void 0 : e.subscription_plans[0],
       w = null == U ? void 0 : U.id,
       F = (null == e ? void 0 : e.published) === !0,
       k = null == U ? void 0 : U.sku_id,
-      B = (0, o.useStateFromStores)([_.default], () => null != w ? _.default.get(w) : null),
+      V = (0, u.useStateFromStores)([_.default], () => null != w ? _.default.get(w) : null),
       {
-        activeSubscription: V,
-        activeSubscriptionPlanFromStore: H
+        activeSubscription: B,
+        activeSubscriptionPlanFromStore: G
       } = (0, N.default)(n),
-      G = null == V || null != H,
+      H = null == B || null != G,
       W = (0, v.useSubscriptionListingsForGroup)(n, {
         includeSoftDeleted: !0
       }),
       Y = W.map(e => e.subscription_plans[0].id),
-      z = (0, x.getRoleSubscriptionMutationPlanId)(V),
+      z = (0, x.getRoleSubscriptionMutationPlanId)(B),
       K = null != z,
-      Z = (null == V ? void 0 : V.trialId) != null,
+      Z = (null == B ? void 0 : B.trialId) != null,
       {
         loading: X,
         getTrialPurchaseEligibility: Q
@@ -64,9 +64,9 @@ var l = n("37983"),
       {
         analyticsLocations: J
       } = (0, h.default)(),
-      $ = (null == V ? void 0 : V.paymentGateway) === L.PaymentGateways.APPLE_PARTNER;
+      $ = (null == B ? void 0 : B.paymentGateway) === L.PaymentGateways.APPLE_PARTNER;
     D ? r = y.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : O && !P ? r = y.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : z === w ? r = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
-      changeDate: null != V ? u(V.currentPeriodEnd).format("MMM DD, YYYY") : ""
+      changeDate: null != B ? o(B.currentPeriodEnd).format("MMM DD, YYYY") : ""
     }) : K ? r = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : Z ? r = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : $ && (r = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
     let ee = (0, f.default)(j.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY);
     a.useEffect(() => {
@@ -83,7 +83,7 @@ var l = n("37983"),
             n = null == q ? void 0 : null === (r = q.active_trial) || void 0 === r ? void 0 : r.id
           } else a = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER
         }(0, C.default)({
-          activeSubscription: V,
+          activeSubscription: B,
           analyticsSubscriptionType: L.SubscriptionTypes.GUILD,
           trialId: n,
           trialFooterMessageOverride: (null == q ? void 0 : q.active_trial) != null ? y.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_RENEWAL_FOOTER_V2.format({
@@ -118,13 +118,13 @@ var l = n("37983"),
           }),
           reviewWarningMessage: a
         })
-      }, [F, e, U, V, Y, t, J, s, Q, q, ee]),
+      }, [F, e, U, B, Y, t, J, s, Q, q, ee]),
       en = a.useCallback(() => {
         (0, m.openMemberVerificationModal)(t)
       }, [t]);
     return {
       openModal: P ? en : et,
-      canOpenModal: !O && null != B && G && !D && !K && !Z && !$,
+      canOpenModal: !O && null != V && H && !D && !K && !Z && !$,
       cannotOpenReason: r,
       isCheckingTrialEligibility: X
     }

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("880317"),
   i = n("77078"),
   r = n("404118"),
-  u = n("819689"),
-  o = n("378438"),
+  o = n("819689"),
+  u = n("378438"),
   d = n("419135"),
   c = n("206230"),
   f = n("679653"),
@@ -53,7 +53,7 @@ function P(e) {
   } = n, A = a.useCallback(e => {
     if (x) return;
     let t = e - 1;
-    null == g || g(t), o.changePage(f, t)
+    null == g || g(t), u.changePage(f, t)
   }, [f, x, g]), M = a.useCallback(e => {
     if (e.blocked) r.default.show({
       title: y.default.Messages.UNBLOCK_TO_JUMP_TITLE,
@@ -65,7 +65,7 @@ function P(e) {
     else {
       let t = C.default.getChannel(e.channel_id),
         n = null != t ? t.getGuildId() : null;
-      u.default.trackJump(e.channel_id, e.id, "Search Results", {
+      o.default.trackJump(e.channel_id, e.id, "Search Results", {
         search_id: v.default.getAnalyticsId(f)
       }), (0, E.transitionTo)(L.Routes.CHANNEL(n, e.channel_id, e.id))
     }
@@ -103,7 +103,7 @@ function P(e) {
     focusedIndex: 0,
     setFocus: U,
     onSelect: w
-  }), k = v.default.getQuery(f), B = v.default.getSearchType(f) === L.SearchTypes.FAVORITES, V = (0, d.createASTHighlighter)(null !== (t = null == k ? void 0 : k.content) && void 0 !== t ? t : ""), H = j.map(e => {
+  }), k = v.default.getQuery(f), V = v.default.getSearchType(f) === L.SearchTypes.FAVORITES, B = (0, d.createASTHighlighter)(null !== (t = null == k ? void 0 : k.content) && void 0 !== t ? t : ""), G = j.map(e => {
     let {
       channel: t,
       results: n,
@@ -112,7 +112,7 @@ function P(e) {
     return (0, l.jsx)(b, {
       channel: t,
       results: n,
-      highlighter: V,
+      highlighter: B,
       startIndex: a,
       resultRefs: P,
       totalResults: I,
@@ -122,27 +122,27 @@ function P(e) {
       offset: _,
       jumpToMessage: M,
       listNavigator: F,
-      favoriteSearch: B
+      favoriteSearch: V
     }, "".concat(t.id, "-").concat(a))
   });
-  H.push();
-  let G = a.useRef(null);
+  G.push();
+  let H = a.useRef(null);
   a.useLayoutEffect(() => {
     var e;
-    null === (e = G.current) || void 0 === e || e.focus()
+    null === (e = H.current) || void 0 === e || e.focus()
   }, [p]);
   let W = (0, i.useFocusJumpSection)();
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
-      ref: G,
+      ref: H,
       ...F.getContainerProps(),
       ...W,
       "aria-busy": x,
-      children: H
+      children: G
     }), S > 0 ? (0, l.jsxs)(i.Clickable, {
       tag: "div",
       className: O.resultsBlocked,
-      onClick: () => o.setShowBlockedResults(f, !N),
+      onClick: () => u.setShowBlockedResults(f, !N),
       children: [(0, l.jsx)("div", {
         className: O.resultsBlockedImage
       }), (0, l.jsx)("div", {
@@ -153,7 +153,7 @@ function P(e) {
           count: S
         })
       })]
-    }) : null, !x && !B && (0, l.jsx)(R.default, {
+    }) : null, !x && !V && (0, l.jsx)(R.default, {
       changePage: A,
       offset: _,
       totalResults: I,
@@ -167,8 +167,8 @@ function b(e) {
   let {
     channel: s,
     results: r,
-    highlighter: u,
-    startIndex: o,
+    highlighter: o,
+    startIndex: u,
     resultRefs: d,
     totalResults: c,
     scrollTo: E,
@@ -182,19 +182,19 @@ function b(e) {
     if (e === x.default.getChannelId()) return;
     let t = C.default.getChannel(e);
     if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, S.transitionToChannel)(t.id)
-  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, B = (null == s ? void 0 : s.parent_id) != null ? C.default.getChannel(s.parent_id) : null, V = null != B ? B.name : null, H = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, G = null != B ? (0, h.default)(B) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
+  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == s ? void 0 : s.parent_id) != null ? C.default.getChannel(s.parent_id) : null, B = null != V ? V.name : null, G = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, H = null != V ? (0, h.default)(V) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
     content: Y
   } = (0, p.default)({
     content: F,
     embeds: []
   }, {
-    postProcessor: u
+    postProcessor: o
   }), z = a.useRef(null), [K, Z] = a.useState(!1);
   a.useEffect(() => {
     let e = z.current;
     null != e && null != e.offsetWidth && null != e.scrollWidth && Z(e.offsetWidth < e.scrollWidth)
   }, []);
-  let X = [F, V, k].filter(e => null != e).join(", ");
+  let X = [F, B, k].filter(e => null != e).join(", ");
   return (0, l.jsx)(A.ObscuredDisplayContext.Provider, {
     value: (0, m.default)(U, W),
     children: (0, l.jsxs)("ul", {
@@ -205,7 +205,7 @@ function b(e) {
         onClick: () => w(s.id),
         children: (0, l.jsxs)("div", {
           className: O.channelNameContainer,
-          children: [(0, l.jsx)(H, {
+          children: [(0, l.jsx)(G, {
             className: O.channelNameIcon,
             width: 16,
             height: 16
@@ -218,12 +218,12 @@ function b(e) {
               className: O.channelNameText,
               children: [D && null !== k && "".concat(k, " : "), Y]
             })
-          }), null != B && null != V && null != G ? (0, l.jsxs)(i.Clickable, {
+          }), null != V && null != B && null != H ? (0, l.jsxs)(i.Clickable, {
             className: O.parentChannelNameClickable,
             onClick: e => {
-              e.stopPropagation(), w(B.id)
+              e.stopPropagation(), w(V.id)
             },
-            children: [(0, l.jsx)(G, {
+            children: [(0, l.jsx)(H, {
               className: O.parentChannelNameIcon,
               width: 12,
               height: 12
@@ -231,12 +231,12 @@ function b(e) {
               className: O.parentChannelNameText,
               variant: "text-xs/medium",
               color: "header-secondary",
-              children: V
+              children: B
             })]
           }) : null]
         })
       }), r.map((e, t) => {
-        let n = o + t;
+        let n = u + t;
         return (0, l.jsx)(j.default, {
           ref: e => d.current[n] = e,
           totalResults: c,

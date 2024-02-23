@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("974667"),
   r = n("446674"),
-  u = n("77078"),
-  o = n("145079"),
+  o = n("77078"),
+  u = n("145079"),
   d = n("87657"),
   c = n("824563"),
   f = n("145131"),
@@ -31,7 +31,7 @@ function p(e) {
     "aria-setsize": _,
     "aria-posinset": I
   } = e, T = (0, r.useStateFromStores)([c.default], () => c.default.getStatus(t.id)), v = (0, i.useListItem)(String(t.id));
-  return (0, l.jsx)(u.Clickable, {
+  return (0, l.jsx)(o.Clickable, {
     id: "user-row-".concat(n),
     className: m.friendWrapper,
     onClick: () => {
@@ -57,13 +57,13 @@ function p(e) {
       }), (0, l.jsxs)(f.default, {
         className: m.match,
         align: f.default.Align.BASELINE,
-        children: [(0, l.jsx)(u.Text, {
+        children: [(0, l.jsx)(o.Text, {
           tag: "strong",
           className: m.nickname,
           "aria-hidden": !0,
           variant: "text-md/medium",
           children: null != p && p === t.tag ? h.default.getName(t) : null != p && "" !== p ? p : h.default.getName(t)
-        }), (0, l.jsx)(o.default, {
+        }), (0, l.jsx)(u.default, {
           user: t,
           hideDiscriminator: a,
           className: m.discordTag,
@@ -71,7 +71,7 @@ function p(e) {
           discriminatorClass: m.weightMedium,
           forceUsername: !0
         })]
-      }), (0, l.jsx)(u.Checkbox, {
+      }), (0, l.jsx)(o.Checkbox, {
         displayOnly: !0,
         size: 22,
         value: S,

@@ -11,14 +11,14 @@ var i = n("884691"),
   o = n("917351"),
   l = n.n(o),
   a = n("151426"),
-  u = n("191225"),
-  d = n("379881"),
+  d = n("191225"),
+  u = n("379881"),
   s = n("106682"),
-  r = n("398604"),
-  E = n("401690"),
+  E = n("398604"),
+  r = n("401690"),
   _ = n("755624"),
-  c = n("233069"),
-  A = n("870691"),
+  A = n("233069"),
+  c = n("870691"),
   C = n("42203"),
   T = n("816092"),
   S = n("546463"),
@@ -28,9 +28,9 @@ var i = n("884691"),
   O = n("282109"),
   L = n("449008"),
   D = n("319839"),
-  p = n("695838"),
-  R = n("843455");
-let h = [u.default, d.default, r.default, E.default, _.default, A.default, C.default, S.default, I.default, f.default, N.default, O.default];
+  R = n("695838"),
+  p = n("843455");
+let h = [d.default, u.default, E.default, r.default, _.default, c.default, C.default, S.default, I.default, f.default, N.default, O.default];
 
 function b() {
   let [e, t] = i.useState(() => G());
@@ -41,36 +41,36 @@ function b() {
 }
 
 function G() {
-  let e = d.default.getFavoriteChannels(),
-    t = O.default.isGuildCollapsed(p.FAVORITES_RAW_GUILD_ID),
+  let e = u.default.getFavoriteChannels(),
+    t = O.default.isGuildCollapsed(R.FAVORITES_RAW_GUILD_ID),
     n = N.default.getChannelId(),
     i = C.default.getChannel(n),
     o = N.default.getVoiceChannelId(),
-    u = [],
-    r = {};
+    d = [],
+    E = {};
   for (let t in e) {
     let n = e[t],
       i = C.default.getChannel(n.id);
     if (null == i || n.type === a.FavoriteChannelType.CATEGORY) continue;
     let o = (0, s.createFavoritesChannelRecord)(e, n, i);
     if (null == n.parentId || !(n.parentId in e)) {
-      u.push(o);
+      d.push(o);
       continue
-    }!(n.parentId in r) && (r[n.parentId] = []), r[n.parentId].push(o)
+    }!(n.parentId in E) && (E[n.parentId] = []), E[n.parentId].push(o)
   }
 
   function _(n, a) {
     let {
-      isCollapsed: u,
-      isMuted: d
+      isCollapsed: d,
+      isMuted: u
     } = a;
     return l(n).map(n => {
       var s;
-      if (!n.isPrivate() && !I.default.can(R.Permissions.VIEW_CHANNEL, n)) return null;
-      let r = null != i && (i.id === n.id || o === n.id),
+      if (!n.isPrivate() && !I.default.can(p.Permissions.VIEW_CHANNEL, n)) return null;
+      let E = null != i && (i.id === n.id || o === n.id),
         _ = null != i && i.isThread() && i.parent_id === n.id,
-        A = null !== (s = r || _ || !u ? E.default.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : E.default.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) && void 0 !== s ? s : {},
-        C = (0, D.computeThreadIds)(n, A, i, o, t),
+        c = null !== (s = E || _ || !d ? r.default.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : r.default.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) && void 0 !== s ? s : {},
+        C = (0, D.computeThreadIds)(n, c, i, o, t),
         S = T.default.isCollapsed(n.id),
         N = O.default.isChannelMuted(n.guild_id, n.id),
         L = {
@@ -85,7 +85,7 @@ function G() {
           isFirstVoiceChannel: !1,
           subtitle: (0, D.computeSubtitle)(n, S, !1)
         };
-      return r || _ || f.default.getMentionCount(n.id) > 0 ? L : t && N || u && (N || d || (0, c.isGuildReadableType)(n.type) && !1 === f.default.hasUnread(n.id)) ? null : L
+      return E || _ || f.default.getMentionCount(n.id) > 0 ? L : t && N || d && (N || u || (0, A.isGuildReadableType)(n.type) && !1 === f.default.hasUnread(n.id)) ? null : L
     }).filter(L.isNotNullish).sortBy(e => {
       let {
         record: t
@@ -98,12 +98,12 @@ function G() {
       isMuted: !1,
       isCollapsed: !1,
       position: 0,
-      getChannelRecords: () => u,
-      getShownChannelIds: () => u.map(e => e.id),
-      getShownChannelAndThreadIds: () => u.map(e => e.id),
-      isEmpty: () => 0 === u.length,
+      getChannelRecords: () => d,
+      getShownChannelIds: () => d.map(e => e.id),
+      getShownChannelAndThreadIds: () => d.map(e => e.id),
+      isEmpty: () => 0 === d.length,
       get channelList() {
-        return null == S && (S = _(u, this)), S
+        return null == S && (S = _(d, this)), S
       }
     },
     b = l(e).values().filter(e => e.type === a.FavoriteChannelType.CATEGORY).sortBy(e => e.order).map(e => {
@@ -111,10 +111,10 @@ function G() {
       let {
         id: n,
         order: i
-      } = e, o = d.default.getCategoryRecord(n), l = null !== (t = r[n]) && void 0 !== t ? t : [], a = O.default.isChannelMuted(p.FAVORITES_RAW_GUILD_ID, n), u = A.default.isCollapsed(n), s = null;
+      } = e, o = u.default.getCategoryRecord(n), l = null !== (t = E[n]) && void 0 !== t ? t : [], a = O.default.isChannelMuted(R.FAVORITES_RAW_GUILD_ID, n), d = c.default.isCollapsed(n), s = null;
       return {
         isMuted: a,
-        isCollapsed: u,
+        isCollapsed: d,
         record: o,
         id: n,
         position: i,
@@ -133,7 +133,7 @@ function G() {
       getRow: () => null
     },
     g = {
-      id: p.FAVORITES_RAW_GUILD_ID,
+      id: R.FAVORITES_RAW_GUILD_ID,
       hideMutedChannels: t,
       favoritesSectionNumber: 1,
       recentsSectionNumber: 2,

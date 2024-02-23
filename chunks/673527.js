@@ -12,8 +12,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("77078"),
-  o = n("410348"),
+  o = n("77078"),
+  u = n("410348"),
   d = n("782340"),
   c = n("329422");
 
@@ -25,10 +25,10 @@ function f(e) {
   } = e;
   return (0, l.jsx)("div", {
     className: i(c.emptyPreviewContainer, a),
-    children: t ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsxs)(l.Fragment, {
+    children: t ? (0, l.jsx)(o.Spinner, {}) : (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: c.emptyPreviewImage
-      }), n ? null : (0, l.jsx)(u.Text, {
+      }), n ? null : (0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "none",
         className: c.emptyPreviewText,
@@ -44,16 +44,16 @@ function h(e) {
     className: n,
     noText: s = !1
   } = e, {
-    url: u,
+    url: o,
     isLoading: d
-  } = (0, r.useStateFromStoresObject)([o.default], () => ({
-    url: o.default.getPreviewURL(t.guildId, t.channelId, t.ownerId),
-    isLoading: o.default.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
-  })), h = a.useRef(d ? null : u);
+  } = (0, r.useStateFromStoresObject)([u.default], () => ({
+    url: u.default.getPreviewURL(t.guildId, t.channelId, t.ownerId),
+    isLoading: u.default.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
+  })), h = a.useRef(d ? null : o);
   a.useEffect(() => {
-    !d && (h.current = u)
-  }, [u, d]);
-  let m = null == u || d ? h.current : u;
+    !d && (h.current = o)
+  }, [o, d]);
+  let m = null == o || d ? h.current : o;
   return null == m ? (0, l.jsx)(f, {
     className: n,
     isLoading: d,

@@ -9,16 +9,16 @@ var l = n("446674"),
   s = n("574933"),
   i = n("692038"),
   r = n("95045"),
-  u = n("27618"),
-  o = n("744983");
+  o = n("27618"),
+  u = n("744983");
 
 function d(e) {
-  let t = (0, l.useStateFromStores)([o.default, s.default], () => {
+  let t = (0, l.useStateFromStores)([u.default, s.default], () => {
       var t;
-      let n = o.default.getQuery(e),
-        l = o.default.getRawResults(e);
+      let n = u.default.getQuery(e),
+        l = u.default.getRawResults(e);
       if (null == n || null == l) return [];
-      let u = (0, a.createASTHighlighter)(null !== (t = n.content) && void 0 !== t ? t : "");
+      let o = (0, a.createASTHighlighter)(null !== (t = n.content) && void 0 !== t ? t : "");
       return l.map(e => e.map(e => {
         let t = s.default.getMessage(e.id, e.channel_id),
           n = (0, i.createMessageRecord)(e);
@@ -26,16 +26,16 @@ function d(e) {
           attachments: t.attachments,
           embeds: t.embeds
         })), n.isSearchHit ? n.set("customRenderedContent", (0, r.default)(n, {
-          postProcessor: u,
+          postProcessor: o,
           allowHeading: !0,
           allowList: !0
         })) : n
       }))
     }, [e], l.statesWillNeverBeEqual),
-    [n, d] = (0, l.useStateFromStores)([u.default], () => {
+    [n, d] = (0, l.useStateFromStores)([o.default], () => {
       let e = 0,
         n = t.map(t => t.filter(t => {
-          let n = u.default.isBlocked(t.author.id);
+          let n = o.default.isBlocked(t.author.id);
           return n && t.isSearchHit && e++, !n || t.isSearchHit
         }));
       return [n, e]

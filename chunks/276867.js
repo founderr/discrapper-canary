@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("65597"),
-  u = n("77078"),
-  o = n("412013"),
+  o = n("77078"),
+  u = n("412013"),
   d = n("592407"),
   c = n("978970"),
   f = n("26989"),
@@ -45,16 +45,16 @@ function x(e) {
       className: i(v.permissionItemHeader),
       children: [(0, l.jsxs)("div", {
         className: v.permissionTitle,
-        children: [(0, l.jsx)(u.Text, {
+        children: [(0, l.jsx)(o.Text, {
           variant: "text-md/medium",
           color: A ? "text-danger" : "header-primary",
           children: x
-        }), null != g && (0, l.jsx)(u.Text, {
+        }), null != g && (0, l.jsx)(o.Text, {
           variant: "text-xs/normal",
           color: "header-muted",
           children: g
         })]
-      }), (0, l.jsx)(u.Text, {
+      }), (0, l.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "text-normal",
         children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({
@@ -63,19 +63,19 @@ function x(e) {
       })]
     }), null != N && (0, l.jsx)("div", {
       className: v.permissionItemDescription,
-      children: (0, l.jsx)(u.Text, {
+      children: (0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-secondary",
         children: N
       })
     }), (0, l.jsx)("div", {
       className: v.permissionItemRoleContainer,
-      children: p.map(e => (0, l.jsx)(u.Clickable, {
+      children: p.map(e => (0, l.jsx)(o.Clickable, {
         className: i(v.roleTooltipItem, {
           [v.editable]: R && e !== E.id
         }),
         onClick: () => j(e),
-        children: (0, l.jsx)(o.default, {
+        children: (0, l.jsx)(u.default, {
           role: E.getRole(e),
           guildId: E.id
         })
@@ -89,13 +89,13 @@ function N(e) {
     userId: t,
     guildId: n,
     location: s,
-    className: o,
+    className: u,
     onNavigate: d
   } = e, c = (0, r.default)([p.default], () => p.default.getUser(t), [t]), m = (0, r.default)([h.default], () => h.default.getGuild(n), [n]), N = (0, r.default)([f.default], () => f.default.getMember(n, t), [n, t]), A = (0, g.useProfileThemedPanelBackground)(t, n), M = (0, C.useUserPermissionsAndRoles)(t, n, C.ALL_PERMISSIONS), R = Object.keys(M).length, j = a.useMemo(() => null != m ? E.default.getGuildPermissionSpecMap(m) : null, [m]), L = a.useMemo(() => null != m ? E.default.generateGuildPermissionSpec(m) : null, [m]), y = a.useMemo(() => {
     if (null == m || null == j || null == N) return null;
     if (0 === R) return (0, l.jsx)("div", {
       className: i(v.permissionChiplet, v.noModPerms),
-      children: (0, l.jsx)(u.Text, {
+      children: (0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-positive",
         children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND
@@ -119,7 +119,7 @@ function N(e) {
     }), e
   }, [m, j, N, R, M, L]);
   return null == c || null == N ? null : (0, l.jsxs)("div", {
-    className: i(T.container, o),
+    className: i(T.container, u),
     style: {
       backgroundColor: A
     },
@@ -127,9 +127,9 @@ function N(e) {
       guildId: n,
       userId: t,
       onNavigate: d
-    }), (0, l.jsx)(u.Scroller, {
+    }), (0, l.jsx)(o.Scroller, {
       className: v.permissionsGroupContainer,
-      children: (0, l.jsx)(u.FormItem, {
+      children: (0, l.jsx)(o.FormItem, {
         title: I.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE,
         titleClassName: v.infoTitle,
         children: (0, l.jsx)("div", {

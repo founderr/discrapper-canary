@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("77078"),
-  o = n("987317"),
+  o = n("77078"),
+  u = n("987317"),
   d = n("244201"),
   c = n("191145"),
   f = n("266392"),
@@ -41,10 +41,10 @@ var l = n("37983"),
   w = n("293137"),
   F = n("381546"),
   k = n("293499"),
-  B = n("277174"),
-  V = n("711486"),
-  H = n("394640"),
-  G = n("343571"),
+  V = n("277174"),
+  B = n("711486"),
+  G = n("394640"),
+  H = n("343571"),
   W = n("751661"),
   Y = n("244480"),
   z = n("716214"),
@@ -64,7 +64,7 @@ var l = n("37983"),
   ei = n("782340"),
   er = n("198281");
 
-function eu(e) {
+function eo(e) {
   let {
     channel: t,
     appContext: n
@@ -73,24 +73,24 @@ function eu(e) {
     (0, W.openEndStageModal)(t, n);
     return
   }
-  o.default.disconnect()
+  u.default.disconnect()
 }
 
-function eo(e) {
+function eu(e) {
   var t, n;
   let {
     channel: a
-  } = e, s = (0, en.default)(a.id), [i, u] = (0, ea.default)(a), o = (0, r.useStateFromStores)([P.default], () => P.default.can(es.Permissions.REQUEST_TO_SPEAK, a));
+  } = e, s = (0, en.default)(a.id), [i, o] = (0, ea.default)(a), u = (0, r.useStateFromStores)([P.default], () => P.default.can(es.Permissions.REQUEST_TO_SPEAK, a));
   if (s) return null;
   return (0, l.jsx)(R.CenterControlButton, {
     isActive: i,
-    label: (t = i, n = o, t ? ei.default.Messages.AUDIENCE_LOWER_HAND : n ? ei.default.Messages.AUDIENCE_RAISE_HAND_CTA : ei.default.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
-    iconComponent: () => (0, l.jsx)(V.default, {
+    label: (t = i, n = u, t ? ei.default.Messages.AUDIENCE_LOWER_HAND : n ? ei.default.Messages.AUDIENCE_RAISE_HAND_CTA : ei.default.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
+    iconComponent: () => (0, l.jsx)(B.default, {
       className: i ? er.raisedHandButtonIconActive : er.raisedHandButtonIcon
     }),
-    onClick: u,
+    onClick: o,
     className: er.buttonSpacing,
-    disabled: !o && !i
+    disabled: !u && !i
   })
 }
 let ed = a.memo(function(e) {
@@ -101,7 +101,7 @@ let ed = a.memo(function(e) {
     className: er.container,
     children: [(0, l.jsx)(em, {
       channelId: t.id
-    }), n ? (0, l.jsx)(eo, {
+    }), n ? (0, l.jsx)(eu, {
       channel: t
     }) : null, (0, l.jsx)(ef, {
       channel: t
@@ -113,18 +113,18 @@ function ec(e) {
   let {
     onClick: t
   } = e;
-  return (0, l.jsx)(u.Button, {
-    size: u.Button.Sizes.MEDIUM,
+  return (0, l.jsx)(o.Button, {
+    size: o.Button.Sizes.MEDIUM,
     color: er.primaryButtonColor,
     className: i(er.buttonSpacing, er.buttonWithTextButton),
     onClick: t,
     children: (0, l.jsxs)("div", {
       className: er.buttonWithTextInnerContainer,
-      children: [(0, l.jsx)(B.default, {
+      children: [(0, l.jsx)(V.default, {
         height: 24,
         width: 24,
         className: er.buttonWithTextIcon
-      }), (0, l.jsx)(u.Text, {
+      }), (0, l.jsx)(o.Text, {
         color: "none",
         variant: "text-sm/medium",
         children: ei.default.Messages.MODERATOR_RAISE_OWN_HAND
@@ -139,21 +139,21 @@ function ef(e) {
     onSelect: n
   } = e, a = (0, d.useAppContext)(), {
     canManageGuildEvent: s
-  } = (0, _.useManageResourcePermissions)(t), o = (0, r.useStateFromStores)([Q.default], () => Q.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([S.default], () => S.default.getGuildScheduledEvent(null == o ? void 0 : o.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), {
+  } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([Q.default], () => Q.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([S.default], () => S.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), {
     suppress: h
   } = (0, x.default)(t), m = y.default.getId(), [p] = (0, ea.default)(t), E = X.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), C = s(c);
-  return f ? (E || C) && null != o ? (0, l.jsx)(u.Popout, {
+  return f ? (E || C) && null != u ? (0, l.jsx)(o.Popout, {
     renderPopout: e => {
       let {
         closePopout: s
       } = e;
       return (0, l.jsx)(M.default, {
-        children: (0, l.jsx)(u.Menu, {
+        children: (0, l.jsx)(o.Menu, {
           navId: "exit-options",
           "aria-label": ei.default.Messages.SET_STATUS,
           onClose: s,
           onSelect: n,
-          children: (0, l.jsx)(u.MenuItem, {
+          children: (0, l.jsx)(o.MenuItem, {
             id: "end-stage",
             color: "danger",
             action: () => (0, W.openEndGuildEventConfirmationModal)(t, a),
@@ -165,7 +165,7 @@ function ef(e) {
     },
     align: "center",
     position: "top",
-    animation: u.Popout.Animation.FADE,
+    animation: o.Popout.Animation.FADE,
     children: (e, n) => {
       let {
         onClick: s
@@ -180,7 +180,7 @@ function ef(e) {
           height: 24,
           width: 24
         }),
-        onClick: () => eu({
+        onClick: () => eo({
           channel: t,
           appContext: a
         }),
@@ -188,11 +188,11 @@ function ef(e) {
         popoutOpen: i
       })
     }
-  }) : h && !g || p ? (0, l.jsx)(u.Button, {
-    size: u.Button.Sizes.MEDIUM,
-    color: u.Button.Colors.RED,
+  }) : h && !g || p ? (0, l.jsx)(o.Button, {
+    size: o.Button.Sizes.MEDIUM,
+    color: o.Button.Colors.RED,
     className: i(er.buttonSpacing, er.buttonWithTextButton),
-    onClick: () => eu({
+    onClick: () => eo({
       channel: t,
       appContext: a
     }),
@@ -202,7 +202,7 @@ function ef(e) {
         height: 24,
         width: 24,
         className: er.buttonWithTextIcon
-      }), (0, l.jsx)(u.Text, {
+      }), (0, l.jsx)(o.Text, {
         color: "none",
         variant: "text-sm/medium",
         children: ei.default.Messages.AUDIENCE_DISCONNECT
@@ -216,13 +216,13 @@ function ef(e) {
       height: 24,
       width: 24
     }),
-    onClick: () => eu({
+    onClick: () => eo({
       channel: t,
       appContext: a
     })
-  }) : (0, l.jsx)(u.Button, {
-    size: u.Button.Sizes.MEDIUM,
-    color: u.Button.Colors.GREEN,
+  }) : (0, l.jsx)(o.Button, {
+    size: o.Button.Sizes.MEDIUM,
+    color: o.Button.Colors.GREEN,
     className: i(er.buttonSpacing, er.buttonWithTextButton),
     onClick: () => {
       var e;
@@ -234,7 +234,7 @@ function ef(e) {
         height: 24,
         width: 24,
         className: er.buttonWithTextIcon
-      }), (0, l.jsx)(u.Text, {
+      }), (0, l.jsx)(o.Text, {
         color: "none",
         variant: "text-sm/medium",
         children: ei.default.Messages.STAGE_CHANNEL_JOIN
@@ -247,8 +247,8 @@ function eh(e) {
   let {
     onClick: t
   } = e;
-  return (0, l.jsx)(u.Button, {
-    size: u.Button.Sizes.MEDIUM,
+  return (0, l.jsx)(o.Button, {
+    size: o.Button.Sizes.MEDIUM,
     color: er.primaryButtonColor,
     className: i(er.buttonSpacing, er.buttonWithTextButton),
     onClick: t,
@@ -258,7 +258,7 @@ function eh(e) {
         height: 24,
         width: 24,
         className: er.buttonWithTextIcon
-      }), (0, l.jsx)(u.Text, {
+      }), (0, l.jsx)(o.Text, {
         color: "none",
         variant: "text-sm/medium",
         children: ei.default.Messages.MOVE_ME_TO_AUDIENCE
@@ -275,10 +275,10 @@ function em(e) {
     isActive: n,
     className: er.buttonSpacing,
     label: n ? ei.default.Messages.STAGE_MUSIC_UNMUTE : ei.default.Messages.STAGE_MUSIC_MUTE,
-    iconComponent: () => n ? (0, l.jsx)(G.default, {
+    iconComponent: () => n ? (0, l.jsx)(H.default, {
       height: 24,
       width: 24
-    }) : (0, l.jsx)(H.default, {
+    }) : (0, l.jsx)(G.default, {
       height: 24,
       width: 24
     }),
@@ -287,10 +287,10 @@ function em(e) {
     isActive: s,
     className: er.buttonSpacing,
     label: s ? ei.default.Messages.STAGE_MUSIC_MUTE : ei.default.Messages.STAGE_MUSIC_UNMUTE,
-    iconComponent: () => s ? (0, l.jsx)(H.default, {
+    iconComponent: () => s ? (0, l.jsx)(G.default, {
       height: 24,
       width: 24
-    }) : (0, l.jsx)(G.default, {
+    }) : (0, l.jsx)(H.default, {
       height: 24,
       width: 24
     }),
@@ -304,16 +304,16 @@ let ep = a.memo(function(e) {
     suppress: n,
     selfMute: a,
     mute: s
-  } = (0, x.default)(t), o = (0, K.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([p.default], () => null != p.default.getAwaitingRemoteSessionInfo()), {
+  } = (0, x.default)(t), u = (0, K.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([p.default], () => null != p.default.getAwaitingRemoteSessionInfo()), {
     cameraUnavailable: S,
     enabled: g
   } = (0, I.default)(), C = (0, v.default)(t), {
     limit: _,
     reachedLimit: R
-  } = (0, T.default)(t), y = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), P = (0, r.useStateFromStores)([O.default], () => (0, E.default)(O.default)), U = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, B = R && !F || null != w && w.user.id !== (null == y ? void 0 : y.id);
+  } = (0, T.default)(t), y = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), P = (0, r.useStateFromStores)([O.default], () => (0, E.default)(O.default)), U = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, V = R && !F || null != w && w.user.id !== (null == y ? void 0 : y.id);
   if (null == y) return null;
-  let V = (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(u.Popout, {
+  let B = (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsx)(o.Popout, {
       renderPopout: e => {
         let {
           closePopout: t
@@ -326,7 +326,7 @@ let ep = a.memo(function(e) {
       },
       position: "top",
       align: "center",
-      animation: u.Popout.Animation.FADE,
+      animation: o.Popout.Animation.FADE,
       children: (e, t) => {
         let {
           onClick: n
@@ -352,18 +352,18 @@ let ep = a.memo(function(e) {
       exitFullScreen: () => null,
       canGoLive: P,
       hasPermission: C,
-      disabled: B
+      disabled: V
     })]
   });
   return (0, l.jsxs)("div", {
     className: er.container,
     children: [(0, l.jsx)(em, {
       channelId: t.id
-    }), U && (0, l.jsx)(eo, {
+    }), U && (0, l.jsx)(eu, {
       channel: t
     }), U && !n ? (0, l.jsxs)("div", {
       className: i(er.avControls, er.buttonSpacing),
-      children: [k && _ > 0 && V, (0, l.jsx)(u.Popout, {
+      children: [k && _ > 0 && B, (0, l.jsx)(o.Popout, {
         renderPopout: e => {
           let {
             closePopout: t
@@ -378,7 +378,7 @@ let ep = a.memo(function(e) {
         },
         align: "center",
         position: "top",
-        animation: u.Popout.Animation.FADE,
+        animation: o.Popout.Animation.FADE,
         children: (e, t) => {
           let {
             onClick: i
@@ -397,7 +397,7 @@ let ep = a.memo(function(e) {
           })
         }
       })]
-    }) : null, U && o && n && (0, l.jsx)(ec, {
+    }) : null, U && u && n && (0, l.jsx)(ec, {
       onClick: () => (0, Y.audienceAckRequestToSpeak)(t, !1)
     }), U && !n && (0, l.jsx)(eh, {
       onClick: () => (0, Y.moveSelfToAudience)(t)
@@ -424,7 +424,7 @@ var eS = a.memo(function(e) {
   let {
     channel: t,
     isOnStartStageScreen: n
-  } = e, a = (0, en.default)(t.id), s = (0, K.useCanModerateRequestToSpeak)(t.id), i = (0, r.useStateFromStores)([P.default], () => P.default.can(Z.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), u = (0, el.default)(t.id), o = (0, r.useStateFromStores)([c.default], () => null != t ? c.default.getSelectedParticipant(t.id) : null), d = !u && null == o;
+  } = e, a = (0, en.default)(t.id), s = (0, K.useCanModerateRequestToSpeak)(t.id), i = (0, r.useStateFromStores)([P.default], () => P.default.can(Z.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), o = (0, el.default)(t.id), u = (0, r.useStateFromStores)([c.default], () => null != t ? c.default.getSelectedParticipant(t.id) : null), d = !o && null == u;
   return n ? (0, l.jsx)(eE, {
     channel: t
   }) : a || s ? (0, l.jsxs)("div", {

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("65597"),
-  u = n("77078"),
-  o = n("987317"),
+  o = n("77078"),
+  u = n("987317"),
   d = n("771325"),
   c = n("271938"),
   f = n("26989"),
@@ -63,11 +63,11 @@ var l = n("37983"),
           className: x.contentContainer,
           children: [(0, l.jsxs)("div", {
             className: x.statusGroup,
-            children: [(0, l.jsx)(u.Text, {
+            children: [(0, l.jsx)(o.Text, {
               variant: "text-xs/medium",
               color: "text-muted",
               children: v.default.Messages.STATUS_LEAD_IN_JUST
-            }), (0, l.jsx)(u.Text, {
+            }), (0, l.jsx)(o.Text, {
               variant: "text-sm/semibold",
               color: "text-normal",
               className: x.statusText,
@@ -80,9 +80,9 @@ var l = n("37983"),
               hangStatusActivity: t
             }), (0, l.jsxs)("div", {
               className: x.avatarWrapper,
-              children: [(0, l.jsx)(u.Avatar, {
+              children: [(0, l.jsx)(o.Avatar, {
                 className: x.avatar,
-                size: u.AvatarSizes.SIZE_40,
+                size: o.AvatarSizes.SIZE_40,
                 src: P,
                 "aria-hidden": !0
               }), (0, l.jsx)("div", {
@@ -90,23 +90,23 @@ var l = n("37983"),
               })]
             })]
           })]
-        }), !L && y ? (0, l.jsx)(u.Button, {
+        }), !L && y ? (0, l.jsx)(o.Button, {
           className: x.cta,
-          size: u.Button.Sizes.SMALL,
+          size: o.Button.Sizes.SMALL,
           onClick: () => {
-            !L && y && (o.default.selectVoiceChannel(N.id), E.default.track(T.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
+            !L && y && (u.default.selectVoiceChannel(N.id), E.default.track(T.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
               source: "HangStatusPopout",
               guild_id: N.guild_id,
               channel_id: N.id
             }))
           },
           children: v.default.Messages.CUSTOM_HANG_STATUS_CTA
-        }) : null, L ? (0, l.jsx)(u.Button, {
+        }) : null, L ? (0, l.jsx)(o.Button, {
           className: x.cta,
-          size: u.Button.Sizes.SMALL,
+          size: o.Button.Sizes.SMALL,
           onClick: () => {
             let e = t.state;
-            e === T.HangStatusTypes.CUSTOM ? (0, u.openModalLazy)(async () => {
+            e === T.HangStatusTypes.CUSTOM ? (0, o.openModalLazy)(async () => {
               let {
                 default: e
               } = await n.el("579371").then(n.bind(n, "579371"));

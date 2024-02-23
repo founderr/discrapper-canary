@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var l = n("37983");
@@ -11,7 +11,7 @@ var a = n("446674"),
   i = n("629109"),
   r = n("42887");
 
-function u() {
+function o() {
   let e = (0, a.useStateFromStores)([r.default], () => Object.values(r.default.getInputDevices())),
     t = (0, a.useStateFromStores)([r.default], () => r.default.getInputDeviceId());
   return e.map(e => {

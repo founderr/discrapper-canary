@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var l = n("37983");
@@ -10,27 +10,27 @@ var a = n("77078"),
   s = n("452804"),
   i = n("135230"),
   r = n("168973"),
-  u = n("782340");
+  o = n("782340");
 
-function o(e) {
+function u(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {},
     n = t => {
       s.default.updatedUnsyncedSettings({
         disableEmbeddedActivityPopOutAlert: !0
       }), t(), e()
     },
-    o = !r.default.disableEmbeddedActivityPopOutAlert;
-  o ? (0, a.openModal)(a => (0, l.jsx)(i.default, {
-    confirmText: u.default.Messages.EMBEDDED_ACTIVITIES_YEP,
-    secondaryConfirmText: u.default.Messages.DONT_ASK_AGAIN,
-    title: u.default.Messages.EMBEDDED_ACTIVITIES_CAREFUL,
-    cancelText: u.default.Messages.EMBEDDED_ACTIVITIES_NVM,
+    u = !r.default.disableEmbeddedActivityPopOutAlert;
+  u ? (0, a.openModal)(a => (0, l.jsx)(i.default, {
+    confirmText: o.default.Messages.EMBEDDED_ACTIVITIES_YEP,
+    secondaryConfirmText: o.default.Messages.DONT_ASK_AGAIN,
+    title: o.default.Messages.EMBEDDED_ACTIVITIES_CAREFUL,
+    cancelText: o.default.Messages.EMBEDDED_ACTIVITIES_NVM,
     onConfirm: () => {
       a.onClose(), e()
     },
     onCancel: t,
     onConfirmSecondary: () => n(a.onClose),
-    body: u.default.Messages.EMBEDDED_ACTIVITIES_POP_IN_WARNING,
+    body: o.default.Messages.EMBEDDED_ACTIVITIES_POP_IN_WARNING,
     ...a
   }), {}, a.POPOUT_MODAL_CONTEXT) : e()
 }

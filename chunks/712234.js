@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var l = n("446674"),
@@ -23,7 +23,7 @@ class r extends l.default.PersistedStore {
   }
 }
 r.displayName = "CallChatToastsStore", r.persistKey = "CallChatToasts";
-var u = new r(a.default, {
+var o = new r(a.default, {
   CALL_CHAT_TOASTS_SET_ENABLED: function(e) {
     let {
       channelId: t,

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("77078"),
-  o = n("685665"),
+  o = n("77078"),
+  u = n("685665"),
   d = n("649844"),
   c = n("393414"),
   f = n("697218"),
@@ -36,14 +36,14 @@ var l = n("37983"),
       ...M
     } = e, R = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentUser()), j = (0, r.useStateFromStores)([h.default], () => h.default.isFocused()), [L, y] = a.useState(!1), {
       analyticsLocations: O
-    } = (0, o.default)();
+    } = (0, u.default)();
     return (0, l.jsxs)(m.default, {
       pauseAnimation: !j || x,
       size: s,
       className: i(g.giftButton, C),
       onlyShineOnHover: !0,
       innerClassName: g.innerGiftButton,
-      color: u.Button.Colors.PRIMARY,
+      color: o.Button.Colors.PRIMARY,
       onClick: e => {
         if (e.preventDefault(), null == R) {
           (0, c.transitionTo)(E.Routes.LOGIN);
@@ -72,7 +72,7 @@ var l = n("37983"),
         })
       }), (0, l.jsx)(p.default, {
         className: g.giftIcon
-      }), (0, l.jsx)(u.Text, {
+      }), (0, l.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "none",
         className: i(g.buttonText, I),

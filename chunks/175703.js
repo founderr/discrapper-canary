@@ -14,12 +14,12 @@ var a = n("77078"),
       forceLightTheme: n,
       hideEditButton: i,
       children: r,
-      onRequestOpen: u,
-      onRequestClose: o
+      onRequestOpen: o,
+      onRequestClose: u
     } = e;
     return (0, l.jsx)(a.Popout, {
-      onRequestOpen: u,
-      onRequestClose: o,
+      onRequestOpen: o,
+      onRequestClose: u,
       animation: a.Popout.Animation.NONE,
       position: "bottom",
       spacing: 4,

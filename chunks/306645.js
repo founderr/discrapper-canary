@@ -9,8 +9,8 @@ var l = n("884691"),
   s = n("374014"),
   i = n("205817"),
   r = n("599110"),
-  u = n("49111"),
-  o = n("646718");
+  o = n("49111"),
+  u = n("646718");
 
 function d(e, t) {
   let {
@@ -24,9 +24,9 @@ function d(e, t) {
     if (c(e, t, n), null != h.current) {
       if (null != m) {
         var l, a, s;
-        l = e, a = m, s = Date.now() - h.current, r.default.track(u.AnalyticEvents.PREMIUM_FEATURE_USAGE, {
-          feature_name: "".concat(o.AnalyticsPremiumFeatureNames.SHARED_CANVAS, "_").concat(l.type),
-          feature_tier: o.AnalyticsPremiumFeatureTiers.FREE,
+        l = e, a = m, s = Date.now() - h.current, r.default.track(o.AnalyticEvents.PREMIUM_FEATURE_USAGE, {
+          feature_name: "".concat(u.AnalyticsPremiumFeatureNames.SHARED_CANVAS, "_").concat(l.type),
+          feature_tier: u.AnalyticsPremiumFeatureTiers.FREE,
           media_session_id: a.getMediaSessionId(),
           parent_media_session_id: a.parentMediaSessionId,
           guild_id: a.guildId,

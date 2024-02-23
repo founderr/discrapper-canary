@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  u = n("446674"),
-  o = n("996496"),
+  o = n("446674"),
+  u = n("996496"),
   d = n("981913"),
   c = n("660478"),
   f = n("191542"),
@@ -28,18 +28,18 @@ function I(e) {
     channelId: t,
     className: n,
     ...s
-  } = e, I = a.useRef(null), T = (0, u.useStateFromStores)([E.default], () => E.default.getFocusedLayout() === S.FocusedActivityLayouts.RESIZABLE), v = a.useCallback(() => {
+  } = e, I = a.useRef(null), T = (0, o.useStateFromStores)([E.default], () => E.default.getFocusedLayout() === S.FocusedActivityLayouts.RESIZABLE), v = a.useCallback(() => {
     let e = T ? S.FocusedActivityLayouts.NO_CHAT : S.FocusedActivityLayouts.RESIZABLE;
     (0, p.updateFocusedActivityLayout)(e)
   }, [T]), {
     unreadCount: x,
     mentionCount: N
   } = function(e) {
-    let t = (0, u.useStateFromStores)([f.default], () => !(0, r.isEmpty)(f.default.getTypingUsers(e)), [e]),
+    let t = (0, o.useStateFromStores)([f.default], () => !(0, r.isEmpty)(f.default.getTypingUsers(e)), [e]),
       {
         unreadCount: n,
         mentionCount: l
-      } = (0, u.useStateFromStoresObject)([c.default], () => ({
+      } = (0, o.useStateFromStoresObject)([c.default], () => ({
         unreadCount: c.default.getUnreadCount(e),
         mentionCount: c.default.getMentionCount(e)
       }), [e]);
@@ -61,7 +61,7 @@ function I(e) {
   N > 0 && R.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: N
   })), x > 0 && R.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
-  let j = (0, u.useStateFromStores)([E.default], () => E.default.getFocusedLayout()),
+  let j = (0, o.useStateFromStores)([E.default], () => E.default.getFocusedLayout()),
     L = N > 0 ? N : x,
     y = L > 0;
   return (0, l.jsxs)("div", {
@@ -76,7 +76,7 @@ function I(e) {
       themeable: !0,
       className: i(n, _.circularButton, j === S.FocusedActivityLayouts.NO_CHAT ? _.upArrow : _.downArrow),
       ...s
-    }), y ? (0, l.jsx)(o.default, {
+    }), y ? (0, l.jsx)(u.default, {
       hasMentions: N > 0,
       truncatedCount: L > 99 ? "99+" : L,
       className: _.badge

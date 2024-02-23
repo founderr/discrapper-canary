@@ -13,11 +13,11 @@ function a() {
       let {
         initialStore: n,
         createStore: a,
-        children: l
-      } = t, r = (0, i.useRef)();
-      return !r.current && (n && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !a && (a = () => n)), r.current = a()), (0, i.createElement)(e.Provider, {
-        value: r.current
-      }, l)
+        children: r
+      } = t, s = (0, i.useRef)();
+      return !s.current && (n && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !a && (a = () => n)), s.current = a()), (0, i.createElement)(e.Provider, {
+        value: s.current
+      }, r)
     },
     useStore: function(t) {
       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.is,

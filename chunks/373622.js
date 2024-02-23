@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var l = n("617258"),
@@ -9,9 +9,9 @@ var l = n("617258"),
   s = n("834897"),
   i = n("677795");
 let r = (0, l.cssValueToNumber)(a.default.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE),
-  u = (0, l.cssValueToNumber)(a.default.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE_MOBILE);
+  o = (0, l.cssValueToNumber)(a.default.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE_MOBILE);
 
-function o() {
+function u() {
   let e = (0, s.default)(i.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY);
-  return e ? u : r
+  return e ? o : r
 }

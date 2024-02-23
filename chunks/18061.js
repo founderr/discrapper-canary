@@ -8,8 +8,8 @@ var l, a = n("37983"),
   s = n("884691"),
   i = n("917351"),
   r = n.n(i),
-  u = n("118810"),
-  o = n("77078"),
+  o = n("118810"),
+  u = n("77078"),
   d = n("272030"),
   c = n("699473"),
   f = n("42203"),
@@ -25,10 +25,10 @@ l = class extends s.PureComponent {
       totalResults: s
     } = this.props, i = r.find(e, e => e.isSearchHit);
     if (null == i) return null;
-    let u = f.default.getChannel(i.channel_id);
-    if (null == u) return null;
+    let o = f.default.getChannel(i.channel_id);
+    if (null == o) return null;
     let d = "search-result-".concat(i.id);
-    return (0, a.jsx)(o.FocusRing, {
+    return (0, a.jsx)(u.FocusRing, {
       ringTarget: this.hitRef,
       ringClassName: m.searchResultFocusRing,
       offset: 4,
@@ -38,7 +38,7 @@ l = class extends s.PureComponent {
         "aria-posinset": 1 + n + l,
         "aria-setsize": s,
         "aria-labelledby": d,
-        children: [(0, a.jsx)(o.Clickable, {
+        children: [(0, a.jsx)(u.Clickable, {
           tabIndex: -1,
           onClick: this.handleMessageClick,
           innerRef: this.containerRef,
@@ -52,7 +52,7 @@ l = class extends s.PureComponent {
             children: (0, a.jsx)(c.default, {
               id: d,
               message: i,
-              channel: u,
+              channel: o,
               onContextMenu: e => this.handleContextMenu(e, i),
               animateAvatar: !1,
               subscribeToComponentDispatch: !1,
@@ -62,7 +62,7 @@ l = class extends s.PureComponent {
         }), (0, a.jsx)("div", {
           className: m.buttonsContainer,
           "aria-hidden": !0,
-          children: (0, a.jsx)(o.Clickable, {
+          children: (0, a.jsx)(u.Clickable, {
             className: m.button,
             onClick: this.jumpTo,
             children: h.default.Messages.JUMP
@@ -98,7 +98,7 @@ l = class extends s.PureComponent {
           if (null != l && !l.isCollapsed) return !0;
           if (null == e || null == t) return !1;
           for (;
-            (0, u.isElement)(e) && e !== t;) {
+            (0, o.isElement)(e) && e !== t;) {
             ;
             let {
               tagName: t

@@ -27,7 +27,7 @@ var a = t("37983"),
   S = t("782340"),
   j = t("731343"),
   T = t("699412");
-let w = [{
+let N = [{
   key: "event",
   cellClassName: j.eventColumn,
   render(e) {
@@ -47,7 +47,7 @@ let w = [{
   }
 }];
 
-function N(e) {
+function w(e) {
   let {
     children: r
   } = e;
@@ -115,7 +115,7 @@ let L = [{
               children: i
             })
           })]
-        }), (0, a.jsx)(N, {
+        }), (0, a.jsx)(w, {
           children: Object.entries(t).map(e => {
             let [r, t] = e;
             return (0, a.jsx)(E, {
@@ -211,7 +211,7 @@ function A() {
     }), (0, a.jsx)(d.ScrollerThin, {
       className: j.tableContainer,
       children: (0, a.jsx)(v.default, {
-        columns: w,
+        columns: N,
         data: o,
         selectedRowKey: s,
         onClickRow: u

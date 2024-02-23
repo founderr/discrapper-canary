@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   ZOOM_IN: function() {
-    return u
+    return d
   },
   ZOOM_OUT: function() {
-    return d
+    return u
   },
   ZOOM_RESET: function() {
     return s
   },
   default: function() {
-    return r
+    return E
   }
 });
 var i = n("180748"),
@@ -20,12 +20,12 @@ var i = n("180748"),
 function a(e) {
   return l.Accessibility.ZOOM_SCALES[Math.max(0, Math.min(l.Accessibility.ZOOM_SCALES.indexOf(o.default.zoom) + e, l.Accessibility.ZOOM_SCALES.length - 1))]
 }
-let u = {
+let d = {
     binds: ["mod+plus"],
     comboKeysBindGlobal: !0,
     action: () => ((0, i.setZoom)(a(1)), !1)
   },
-  d = {
+  u = {
     binds: ["mod+minus"],
     comboKeysBindGlobal: !0,
     action: () => ((0, i.setZoom)(a(-1)), !1)
@@ -35,8 +35,8 @@ let u = {
     comboKeysBindGlobal: !0,
     action: () => ((0, i.setZoom)(l.Accessibility.ZOOM_DEFAULT), !1)
   };
-var r = {
-  ZOOM_IN: u,
-  ZOOM_OUT: d,
+var E = {
+  ZOOM_IN: d,
+  ZOOM_OUT: u,
   ZOOM_RESET: s
 }

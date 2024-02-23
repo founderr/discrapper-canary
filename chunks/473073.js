@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("891722"),
   r = n("77078"),
-  u = n("763225"),
-  o = n("789150"),
+  o = n("763225"),
+  u = n("789150"),
   d = n("782340"),
   c = n("823494"),
   f = n("865331");
@@ -21,8 +21,8 @@ function h(e) {
     userId: t,
     guildId: n,
     onNavigate: a,
-    backPanel: h = o.ModViewPanel.INFO
-  } = e, m = (0, u.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
+    backPanel: h = u.ModViewPanel.INFO
+  } = e, m = (0, o.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
   return (0, l.jsxs)("div", {
     className: s(f.header),
     style: {

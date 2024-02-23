@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var l = n("37983");
@@ -10,14 +10,14 @@ var a = n("669491"),
   s = n("469563"),
   i = n("382269"),
   r = n("75196"),
-  u = (0, s.replaceIcon)(function(e) {
+  o = (0, s.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: n = 24,
       color: s = "currentColor",
       foregroundColor: i = a.default.unsafe_rawColors.RED_400.css,
-      foreground: u,
-      background: o,
+      foreground: o,
+      background: u,
       ...d
     } = e;
     return (0, l.jsxs)("svg", {
@@ -30,7 +30,7 @@ var a = n("669491"),
         fill: "none",
         fillRule: "evenodd",
         children: (0, l.jsx)("path", {
-          className: u,
+          className: o,
           fill: i,
           d: "M21.47,3.39,20.14,2.05,2.53,19.66,3.86,21l4.41-4.4,1.3-1.31,1.75-1.74,3.83-3.83Z"
         })
@@ -38,15 +38,15 @@ var a = n("669491"),
         fill: "none",
         children: [(0, l.jsx)("polygon", {
           points: "17 11.14 16.55 11.59 14.14 14 19 14 19 12 17 12 17 11.14",
-          className: o,
+          className: u,
           fill: s
         }), (0, l.jsx)("polygon", {
           points: "16.91 3 5 3 5 5 7 5 7 12 5 12 5 14 5.91 14 16.91 3",
-          className: o,
+          className: u,
           fill: s
         }), (0, l.jsx)("polygon", {
           points: "12.72 15.42 11 17.14 11 22 13 22 13 15.14 12.72 15.42",
-          className: o,
+          className: u,
           fill: s
         })]
       })]

@@ -13,9 +13,9 @@ n.r(t), n.d(t, {
 var l, a, s = n("37983"),
   i = n("884691"),
   r = n("414456"),
-  u = n.n(r),
-  o = n("627445"),
-  d = n.n(o),
+  o = n.n(r),
+  u = n("627445"),
+  d = n.n(u),
   c = n("907002"),
   f = n("446674"),
   h = n("77078"),
@@ -45,10 +45,10 @@ var l, a, s = n("37983"),
   w = n("479788"),
   F = n("375202"),
   k = n("16916"),
-  B = n("534222"),
-  V = n("147257"),
-  H = n("109526"),
-  G = n("550410"),
+  V = n("534222"),
+  B = n("147257"),
+  G = n("109526"),
+  H = n("550410"),
   W = n("124824"),
   Y = n("213943"),
   z = n("742683"),
@@ -67,8 +67,8 @@ var l, a, s = n("37983"),
   es = n("991170"),
   ei = n("999180"),
   er = n("830210"),
-  eu = n("289180"),
-  eo = n("244390"),
+  eo = n("289180"),
+  eu = n("244390"),
   ed = n("252234"),
   ec = n("696405"),
   ef = n("951691"),
@@ -93,8 +93,8 @@ function eI(e) {
     exitFullScreen: l,
     canGoLive: a,
     hasPermission: r,
-    disabled: u
-  } = e, o = (0, g.useAppContext)(), d = (0, f.useStateFromStoresArray)([$.default], () => $.default.getAllActiveStreams()), c = d.find(e => e.ownerId === n.id), m = t.getGuildId(), p = i.useCallback(() => {
+    disabled: o
+  } = e, u = (0, g.useAppContext)(), d = (0, f.useStateFromStoresArray)([$.default], () => $.default.getAllActiveStreams()), c = d.find(e => e.ownerId === n.id), m = t.getGuildId(), p = i.useCallback(() => {
     if (null == l || l(), !a) return (0, em.default)();
     (0, ep.default)(m, t.id, eS.AnalyticsPages.GUILD_CHANNEL)
   }, [m, t.id, a, l]), S = (0, f.useStateFromStores)([D.default, ea.default], () => (0, F.default)(D.default, ea.default)), C = (0, N.default)(), _ = (0, x.default)() && null != S, I = () => {
@@ -141,10 +141,10 @@ function eI(e) {
       onPopoutClick: a ? n : null,
       popoutOpen: t,
       shouldShowTooltip: !t,
-      disabled: u
+      disabled: o
     })
   };
-  return C ? R() : (0, s.jsx)(G.default, {
+  return C ? R() : (0, s.jsx)(H.default, {
     children: (0, s.jsx)(h.Popout, {
       renderPopout: e => {
         let {
@@ -157,7 +157,7 @@ function eI(e) {
             activeStreams: null != c ? [c] : [],
             handleGoLive: p,
             onClose: l,
-            appContext: o
+            appContext: u
           })
         })
       },
@@ -196,26 +196,26 @@ let ev = i.memo(function(e) {
     onDisconnectCall: l,
     channel: a
   } = e, r = (0, f.useStateFromStores)([R.default], () => R.default.getSelectedParticipant(a.id)), {
-    reducedMotion: u
-  } = i.useContext(h.AccessibilityPreferencesContext), [o, d] = i.useState(!1), m = null == r ? void 0 : r.id, S = (0, f.useStateFromStores)([$.default], () => null != m ? $.default.getActiveStreamForStreamKey(m) : null, [m]), g = (null == r ? void 0 : r.type) === eg.ParticipantTypes.STREAM && null != S && S.ownerId !== (null == n ? void 0 : n.id), C = (0, f.useStateFromStoresArray)([$.default], () => $.default.getAllActiveStreamsForChannel(a.id).filter(e => {
+    reducedMotion: o
+  } = i.useContext(h.AccessibilityPreferencesContext), [u, d] = i.useState(!1), m = null == r ? void 0 : r.id, S = (0, f.useStateFromStores)([$.default], () => null != m ? $.default.getActiveStreamForStreamKey(m) : null, [m]), g = (null == r ? void 0 : r.type) === eg.ParticipantTypes.STREAM && null != S && S.ownerId !== (null == n ? void 0 : n.id), C = (0, f.useStateFromStoresArray)([$.default], () => $.default.getAllActiveStreamsForChannel(a.id).filter(e => {
     let {
       ownerId: t
     } = e;
     return t !== (null == n ? void 0 : n.id)
-  })), _ = (0, B.useActiveEvent)(a.id), I = (0, N.useIsBroadcastingInChannel)(a.id), T = i.useCallback(() => {
+  })), _ = (0, V.useActiveEvent)(a.id), I = (0, N.useIsBroadcastingInChannel)(a.id), T = i.useCallback(() => {
     if ((null == r ? void 0 : r.type) === eg.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
     if (g) return "STREAM";
     if (null != _) return "EVENT";
     return "CALL"
   }, [r, t, g, _]), [v, x] = i.useState(T()), M = (0, c.useSpring)({
-    opacity: o ? .2 : 1,
-    transform: o && !u.enabled ? "scale(0.7)" : "scale(1)",
+    opacity: u ? .2 : 1,
+    transform: u && !o.enabled ? "scale(0.7)" : "scale(1)",
     config: {
       mass: 2,
-      tension: o ? 600 : 1e3,
+      tension: u ? 600 : 1e3,
       friction: 45,
       precision: .01,
-      clamp: o
+      clamp: u
     },
     onRest: () => {
       x(T()), d(!1)
@@ -263,7 +263,7 @@ let ev = i.memo(function(e) {
             channel: a
           });
         case "EVENT":
-          return (0, s.jsx)(V.default, {
+          return (0, s.jsx)(B.default, {
             channelId: a.id,
             onClick: () => {
               p.default.disconnect(), null == l || l()
@@ -311,7 +311,7 @@ function ex(e) {
     hasCameraPermission: l,
     currentUser: a
   } = e, r = (0, g.useAppContext)(), {
-    reachedLimit: o,
+    reachedLimit: u,
     limit: d
   } = (0, er.default)(t), c = i.useCallback(() => {
     (0, eE.default)(() => p.default.selectVoiceChannel(t.id, !0), r)
@@ -329,7 +329,7 @@ function ex(e) {
       centerButton: !0,
       join: !0,
       color: "green",
-      channelLimitReached: o,
+      channelLimitReached: u,
       channelLimit: d,
       channel: t,
       cameraUnavailable: n,
@@ -342,7 +342,7 @@ function ex(e) {
       centerButton: !0,
       color: "green",
       channel: t,
-      className: u(eC.controlButton, eC.lastButton),
+      className: o(eC.controlButton, eC.lastButton),
       onClick: h
     }), E ? (0, s.jsx)(Y.default, {
       color: "red",
@@ -362,12 +362,12 @@ var eN = function(e) {
     return d(null != e, "CenterControlTray: currentUser cannot be undefined"), e
   }), {
     cameraUnavailable: r,
-    enabled: o
-  } = (0, ei.default)(), c = (0, eu.default)(t), {
+    enabled: u
+  } = (0, ei.default)(), c = (0, eo.default)(t), {
     suppress: m,
     selfMute: p,
     mute: E
-  } = (0, eo.default)(t), {
+  } = (0, eu.default)(t), {
     canGoLive: g
   } = (0, f.useStateFromStoresObject)([et.default], () => ({
     canGoLive: (0, w.default)(et.default)
@@ -401,11 +401,11 @@ var eN = function(e) {
       section: eS.AnalyticsSections.VOICE_CONTROL_TRAY,
       children: [(0, s.jsx)("div", {
         className: eC.eventPromptsContainer,
-        children: (0, s.jsx)(H.default, {
+        children: (0, s.jsx)(G.default, {
           channelId: t.id
         })
       }), (0, s.jsxs)("div", {
-        className: u(eC.wrapper, n),
+        className: o(eC.wrapper, n),
         children: [!x && (0, s.jsx)(h.Popout, {
           renderPopout: e => {
             let {
@@ -430,7 +430,7 @@ var eN = function(e) {
               centerButton: !0,
               hasPermission: c,
               className: eC.controlButton,
-              enabled: o,
+              enabled: u,
               cameraUnavailable: r,
               onChange: e_,
               onCameraUnavailable: eh.default,

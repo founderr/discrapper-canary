@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("913144"),
   r = n("600965"),
-  u = n("292687"),
-  o = n("659500"),
+  o = n("292687"),
+  u = n("659500"),
   d = n("191225"),
   c = n("420444"),
   f = n("577261"),
@@ -28,7 +28,7 @@ function E(e) {
       className: i,
       style: r
     } = e,
-    E = (0, s.useStateFromStores)([u.default], () => u.default.getWindow(m.PopoutWindowKeys.CHANNEL_CALL_POPOUT)),
+    E = (0, s.useStateFromStores)([o.default], () => o.default.getWindow(m.PopoutWindowKeys.CHANNEL_CALL_POPOUT)),
     S = (0, f.default)(),
     g = (0, s.useStateFromStores)([d.default], () => d.default.getActivityPanelMode()),
     C = null != S && !(0, c.default)(S.channelId) && g === h.ActivityPanelModes.PANEL;
@@ -47,8 +47,8 @@ function E(e) {
         }))
       }
     }, [n, t]);
-  return a.useEffect(() => (t.addEventListener("resize", T), o.ComponentDispatch.subscribe(m.ComponentActions.REMEASURE_TARGET, T), () => {
-    t.removeEventListener("resize", T), o.ComponentDispatch.unsubscribe(m.ComponentActions.REMEASURE_TARGET, T)
+  return a.useEffect(() => (t.addEventListener("resize", T), u.ComponentDispatch.subscribe(m.ComponentActions.REMEASURE_TARGET, T), () => {
+    t.removeEventListener("resize", T), u.ComponentDispatch.unsubscribe(m.ComponentActions.REMEASURE_TARGET, T)
   }), [T, t]), a.useLayoutEffect(() => {
     let e = I.current;
     if (null == e) return;

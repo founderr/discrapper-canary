@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("271841"),
   i = n("605451"),
   r = n("577776"),
-  u = n("77078"),
-  o = n("79112"),
+  o = n("77078"),
+  u = n("79112"),
   d = n("635956"),
   c = n("632892"),
   f = n("697218"),
@@ -38,7 +38,7 @@ function T(e) {
     type: c.FeatureBorderTypes.PREMIUM,
     className: I.upsellOuter,
     backgroundClassName: I.upsellInner,
-    children: [null != T ? (0, l.jsx)(u.Clickable, {
+    children: [null != T ? (0, l.jsx)(o.Clickable, {
       className: I.close,
       onClick: () => null == T ? void 0 : T(S.ContentDismissActionType.DISMISS),
       "aria-label": _.default.Messages.CLOSE,
@@ -62,7 +62,7 @@ function T(e) {
       children: x
     }), N ? (0, l.jsx)(s.Button, {
       onClick: function() {
-        o.default.open(E.UserSettingsSections.VOICE, C.SOUNDBOARD_SUBSECTION), null == n || n(), null == T || T(S.ContentDismissActionType.PRIMARY)
+        u.default.open(E.UserSettingsSections.VOICE, C.SOUNDBOARD_SUBSECTION), null == n || n(), null == T || T(S.ContentDismissActionType.PRIMARY)
       },
       children: _.default.Messages.CHECK_IT_OUT
     }) : (0, l.jsx)(d.default, {

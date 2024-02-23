@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("118849"),
   i = n("290581"),
   r = n("664336"),
-  u = n("379881"),
-  o = n("200008"),
+  o = n("379881"),
+  u = n("200008"),
   d = n("986373"),
   c = n("498139"),
   f = n("20209"),
@@ -24,7 +24,7 @@ function m(e) {
     isFavoritesPerk: n
   } = (0, c.useFavoritesServerExperiment)("ChannelFavoritesHeaderButton"), m = (0, f.default)(), {
     notifyFavoriteAdded: p
-  } = (0, d.useFavoriteAdded)(), E = (0, a.useStateFromStores)([u.default], () => u.default.isFavorite(t.id));
+  } = (0, d.useFavoriteAdded)(), E = (0, a.useStateFromStores)([o.default], () => o.default.isFavorite(t.id));
   if (!n || m) return null;
   let S = E ? i.default : s.default,
     g = E ? h.default.Messages.UNFAVORITE_CHANNEL : h.default.Messages.FAVORITE_CHANNEL;
@@ -33,7 +33,7 @@ function m(e) {
     tooltip: g,
     "aria-label": g,
     onClick: () => {
-      E ? (0, o.removeFavoriteChannel)(t.id) : (p(), (0, o.addFavoriteChannel)(t.id))
+      E ? (0, u.removeFavoriteChannel)(t.id) : (p(), (0, u.addFavoriteChannel)(t.id))
     }
   })
 }

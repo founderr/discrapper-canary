@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("42203"),
-  u = n("305961"),
-  o = n("837008"),
+  o = n("305961"),
+  u = n("837008"),
   d = n("291444"),
   c = n("847426"),
   f = n("900076"),
@@ -26,7 +26,7 @@ function S(e) {
   } = e, S = (0, d.useSubscriptionListingsForChannel)({
     guildId: t,
     channelId: n
-  }), g = (0, o.useGroupListingsForGuild)(t), C = (0, o.useSubscriptionsSettings)(t), _ = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), I = null == _ ? void 0 : _.name, T = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(n)), v = a.useMemo(() => {
+  }), g = (0, u.useGroupListingsForGuild)(t), C = (0, u.useSubscriptionsSettings)(t), _ = (0, s.useStateFromStores)([o.default], () => o.default.getGuild(t), [t]), I = null == _ ? void 0 : _.name, T = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(n)), v = a.useMemo(() => {
     let e = {};
     for (let t of g)
       for (let n of t.subscription_listings_ids) e[n] = t.id;

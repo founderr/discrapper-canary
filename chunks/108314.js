@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return F
   },
   default: function() {
-    return B
+    return V
   }
 }), n("222007");
 var l = n("37983"),
@@ -12,8 +12,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("77078"),
-  o = n("834897"),
+  o = n("77078"),
+  u = n("834897"),
   d = n("38654"),
   c = n("160299"),
   f = n("191814"),
@@ -45,12 +45,12 @@ let U = e => {
       benefits: t,
       header: n,
       guildId: s
-    } = e, [i, r] = a.useState(!1), o = i ? t : t.slice(0, 5), d = t.length > 5, c = t.length - 5, m = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION_WITH_ITEMS.format({
+    } = e, [i, r] = a.useState(!1), u = i ? t : t.slice(0, 5), d = t.length > 5, c = t.length - 5, m = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION_WITH_ITEMS.format({
       numTruncated: c
     }), p = (0, h.useUID)();
     return 0 === t.length ? null : (0, l.jsxs)("div", {
       className: D.benefitsSection,
-      children: [(0, l.jsx)(u.Heading, {
+      children: [(0, l.jsx)(o.Heading, {
         variant: "text-xs/bold",
         color: "header-secondary",
         className: D.sectionHeader,
@@ -61,7 +61,7 @@ let U = e => {
       }), (0, l.jsx)("ul", {
         className: D.benefitsList,
         "aria-labelledby": p,
-        children: o.map((e, t) => (0, l.jsx)("li", {
+        children: u.map((e, t) => (0, l.jsx)("li", {
           children: (0, l.jsx)(R.default, {
             guildId: s,
             benefit: e
@@ -81,7 +81,7 @@ let U = e => {
     } = e, a = (0, v.default)(t), [s] = _.useTierEmojiIds(n, t), i = a.filter(e => s.has(e.id));
     return 0 === i.length ? null : (0, l.jsxs)("div", {
       className: D.benefitsSection,
-      children: [(0, l.jsx)(u.Heading, {
+      children: [(0, l.jsx)(o.Heading, {
         variant: "text-xs/bold",
         color: "header-secondary",
         className: D.sectionHeader,
@@ -94,7 +94,7 @@ let U = e => {
         className: D.emojiList,
         children: i.map((e, t) => {
           var n;
-          return (0, l.jsx)(u.Tooltip, {
+          return (0, l.jsx)(o.Tooltip, {
             text: e.name,
             "aria-label": !1,
             children: t => {
@@ -122,11 +122,11 @@ let U = e => {
       listingId: t,
       guildId: n,
       className: a
-    } = e, s = (0, x.default)(n, t), [r] = _.useChannelBenefits(t), o = (0, N.default)(r), [d] = _.useIntangibleBenefits(t), c = _.useRole(t, n), [h] = _.useTierEmojiIds(t, n);
-    return null == s && 0 === o.length && 0 === d.length && 0 === h.size ? null : (0, l.jsxs)("div", {
+    } = e, s = (0, x.default)(n, t), [r] = _.useChannelBenefits(t), u = (0, N.default)(r), [d] = _.useIntangibleBenefits(t), c = _.useRole(t, n), [h] = _.useTierEmojiIds(t, n);
+    return null == s && 0 === u.length && 0 === d.length && 0 === h.size ? null : (0, l.jsxs)("div", {
       className: i(D.subscriptionPerks, a),
-      children: [null != s && (0, l.jsxs)(u.HeadingLevel, {
-        component: (0, l.jsx)(u.Heading, {
+      children: [null != s && (0, l.jsxs)(o.HeadingLevel, {
+        component: (0, l.jsx)(o.Heading, {
           variant: "text-xs/bold",
           color: "header-secondary",
           className: D.sectionHeader,
@@ -141,7 +141,7 @@ let U = e => {
         })]
       }), (0, l.jsx)(U, {
         header: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_EXCLUSIVE_CHANNELS_SECTION_TITLE,
-        benefits: o,
+        benefits: u,
         guildId: n
       }), (0, l.jsx)(U, {
         header: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_ADDITIONAL_BENEFITS_SECTION_TITLE,
@@ -167,16 +167,16 @@ let U = e => {
       children: [s, (0, l.jsx)(m.default, {
         className: D.toggleTruncationButtonIcon
       })]
-    }), (0, l.jsx)(u.Button, {
-      look: u.Button.Looks.BLANK,
-      size: u.Button.Sizes.NONE,
+    }), (0, l.jsx)(o.Button, {
+      look: o.Button.Looks.BLANK,
+      size: o.Button.Sizes.NONE,
       className: D.toggleTruncationButton,
       innerClassName: D.toggleTruncationButtonInner,
       onClick: n,
       children: t
     })
   };
-var B = e => {
+var V = e => {
   var t;
   let {
     listingId: n,
@@ -191,10 +191,10 @@ var B = e => {
   } = (0, y.default)(p, s, h, m), M = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
     activeSubscription: R,
     activeSubscriptionListing: U
-  } = (0, I.default)(h), w = (null == U ? void 0 : U.id) === n, B = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [V, H] = a.useState(!1), [G, W] = a.useState(!1), Y = a.useCallback(e => {
+  } = (0, I.default)(h), w = (null == U ? void 0 : U.id) === n, V = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [B, G] = a.useState(!1), [H, W] = a.useState(!1), Y = a.useCallback(e => {
     let t = !1;
     null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t)
-  }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [X] = _.useTrialLimit(n), Q = (0, T.default)(s, n), q = null != Z && null == R && Q, J = (0, o.default)(O.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = a.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), el = (null == p ? void 0 : p.published) === !0, ea = (null == p ? void 0 : p.soft_deleted) === !0, es = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+  }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [X] = _.useTrialLimit(n), Q = (0, T.default)(s, n), q = null != Z && null == R && Q, J = (0, u.default)(O.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = a.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), el = (null == p ? void 0 : p.published) === !0, ea = (null == p ? void 0 : p.soft_deleted) === !0, es = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
   return (el || en) && !ea ? (0, l.jsxs)("article", {
     className: D.container,
     "aria-label": z,
@@ -205,7 +205,7 @@ var B = e => {
           interval: Z.interval,
           interval_count: Z.interval_count
         })
-      }), (0, l.jsx)(u.Tooltip, {
+      }), (0, l.jsx)(o.Tooltip, {
         clickableOnMobile: !0,
         text: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({
           activeTrialUserLimit: null != X ? X : 0
@@ -230,13 +230,13 @@ var B = e => {
         }), et && (0, l.jsxs)(l.Fragment, {
           children: [J && (0, l.jsx)("div", {
             className: D.divider
-          }), w ? (0, l.jsx)(u.Button, {
+          }), w ? (0, l.jsx)(o.Button, {
             fullWidth: !0,
-            look: u.Button.Looks.OUTLINED,
-            color: u.Button.Colors.PRIMARY,
+            look: o.Button.Looks.OUTLINED,
+            color: o.Button.Colors.PRIMARY,
             disabled: !0,
-            children: B ? b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
-          }) : (0, l.jsx)(u.Tooltip, {
+            children: V ? b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
+          }) : (0, l.jsx)(o.Tooltip, {
             text: v ? null : x,
             "aria-label": null !== (t = v && x) && void 0 !== t && t,
             children: e => (0, l.jsx)(A.default, {
@@ -250,21 +250,21 @@ var B = e => {
             })
           }), (0, l.jsx)(f.default, {
             size: 16
-          }), (0, l.jsx)(u.Text, {
+          }), (0, l.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "text-normal",
-            className: i((!G || !V) && D.tierDescriptionTruncate),
+            className: i((!H || !B) && D.tierDescriptionTruncate),
             children: (0, l.jsx)("div", {
               ref: Y,
               children: K
             })
-          }), G && (0, l.jsx)(k, {
-            isViewAll: V,
-            onToggle: () => H(e => !e),
+          }), H && (0, l.jsx)(k, {
+            isViewAll: B,
+            onToggle: () => G(e => !e),
             showMoreText: es
           })]
         })]
-      }), et && (0, l.jsx)(u.HeadingLevel, {
+      }), et && (0, l.jsx)(o.HeadingLevel, {
         children: (0, l.jsx)(F, {
           listingId: n,
           guildId: s

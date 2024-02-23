@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("917351"),
   i = n.n(s),
   r = n("446674"),
-  u = n("242740"),
-  o = n("889014"),
+  o = n("242740"),
+  u = n("889014"),
   d = n("848848"),
   c = n("300322"),
   f = n("957255"),
@@ -23,10 +23,10 @@ var l = n("37983"),
   C = a.memo(function(e) {
     let {
       channel: t
-    } = e, n = (0, o.default)(), s = (0, r.useStateFromStores)([h.default], () => h.default.isInChannel(t.id)), C = (0, r.useStateFromStores)([h.default], () => !i.isEmpty(h.default.getVoiceStatesForChannel(t.id))), _ = (0, r.useStateFromStores)([f.default], () => f.default.can(S.Permissions.CONNECT, t)), {
+    } = e, n = (0, u.default)(), s = (0, r.useStateFromStores)([h.default], () => h.default.isInChannel(t.id)), C = (0, r.useStateFromStores)([h.default], () => !i.isEmpty(h.default.getVoiceStatesForChannel(t.id))), _ = (0, r.useStateFromStores)([f.default], () => f.default.can(S.Permissions.CONNECT, t)), {
       needSubscriptionToAccess: I
     } = (0, d.default)(t.id), T = (0, c.useIsActiveChannelOrUnarchivableThread)(t), v = a.useCallback(() => {
-      u.default.handleVoiceConnect({
+      o.default.handleVoiceConnect({
         channel: t,
         connected: s,
         needSubscriptionToAccess: I,

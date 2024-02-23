@@ -16,10 +16,10 @@ var a = n("469563"),
       color: a = "currentColor",
       className: s,
       foreground: r,
-      ...u
+      ...o
     } = e;
     return (0, l.jsx)("svg", {
-      ...(0, i.default)(u),
+      ...(0, i.default)(o),
       className: s,
       width: t,
       height: n,

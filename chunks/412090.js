@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   },
   ChannelCallChatLayerProvider: function() {
-    return u
+    return o
   },
   default: function() {
-    return o
+    return u
   }
 });
 var l = n("77078");
@@ -15,5 +15,5 @@ let {
   Layer: a,
   LayerContainer: s,
   LayerProvider: i
-} = (0, l.createLayer)("ChannelCallChat"), r = s, u = i;
-var o = a
+} = (0, l.createLayer)("ChannelCallChat"), r = s, o = i;
+var u = a

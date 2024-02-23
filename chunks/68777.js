@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("866227"),
-  u = n.n(r),
-  o = n("65597"),
+  o = n.n(r),
+  u = n("65597"),
   d = n("77078"),
   c = n("252073"),
   f = n("309021"),
@@ -33,7 +33,7 @@ function A(e) {
     log: t,
     member: n,
     guild: s
-  } = e, r = f.getSimpleAuditLogTitleFromChange(t), c = f.getSimpleAuditLogTitleContextFromChange(t), p = f.getStringForBanReason(t), g = f.getSimpleAuditLogChangeDetails(t), C = (0, h.useAuditLogDate)(t.id), I = (0, o.default)([S.default], () => null != t.userId ? S.default.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), N = a.useCallback(e => t => {
+  } = e, r = f.getSimpleAuditLogTitleFromChange(t), c = f.getSimpleAuditLogTitleContextFromChange(t), p = f.getStringForBanReason(t), g = f.getSimpleAuditLogChangeDetails(t), C = (0, h.useAuditLogDate)(t.id), I = (0, u.default)([S.default], () => null != t.userId ? S.default.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), N = a.useCallback(e => t => {
     t.preventDefault(), t.stopPropagation(), null != e && (0, m.openMemberProfile)(e)
   }, []), A = a.useCallback(() => null == t.user ? null : (0, l.jsx)(d.Tooltip, {
     text: T.default.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
@@ -74,7 +74,7 @@ function A(e) {
         }), null != c && (0, l.jsxs)(d.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          children: ["(", "string" == typeof c ? c : u(c).fromNow(), ")"]
+          children: ["(", "string" == typeof c ? c : o(c).fromNow(), ")"]
         })]
       }), (0, l.jsx)("div", {
         className: v.auditLogItemDate,
@@ -129,7 +129,7 @@ function A(e) {
 function M(e) {
   let {
     member: t
-  } = e, n = (0, o.default)([g.default], () => g.default.getGuild(t.guildId), [t.guildId]), s = (0, o.default)([p.default], () => {
+  } = e, n = (0, u.default)([g.default], () => g.default.getGuild(t.guildId), [t.guildId]), s = (0, u.default)([p.default], () => {
     let e = p.default.logs;
     return null == e || null == n ? [] : C.transformLogs(e, n)
   }, [n]);

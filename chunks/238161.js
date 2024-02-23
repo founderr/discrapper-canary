@@ -51,7 +51,7 @@ let S = async () => {
   } catch {} finally {
     await (0, d.fetchUserOffer)()
   }
-}, w = async (e, r) => {
+}, N = async (e, r) => {
   try {
     await o.default.post({
       url: x.Endpoints.UNACK_USER_OFFER(e, r)
@@ -59,7 +59,7 @@ let S = async () => {
   } catch {} finally {
     await (0, d.fetchUserOffer)()
   }
-}, N = async () => {
+}, w = async () => {
   try {
     let {
       body: e
@@ -89,7 +89,7 @@ function L(e) {
     offer: s,
     offerOptions: u,
     forceRefetch: h
-  } = e, [y, x] = n.useState(!1), [v, S] = n.useState(!1), [j, N] = n.useState(!1), [E, L] = n.useState(!1);
+  } = e, [y, x] = n.useState(!1), [v, S] = n.useState(!1), [j, w] = n.useState(!1), [E, L] = n.useState(!1);
   n.useEffect(() => {
     j && L(!0);
     let e = setTimeout(() => {
@@ -111,7 +111,7 @@ function L(e) {
     } = e;
     return r === P
   })) || void 0 === r ? void 0 : r.label) && void 0 !== t ? t : "Unknown", I = null != A, D = null != A && new Date(A).getTime() < Date.now(), B = (null == M ? void 0 : M.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, G = async () => {
-    N(!0), I ? await w(_, "trial") : await (0, d.acknowledgeUserOffer)(s), h(), N(!1)
+    w(!0), I ? await N(_, "trial") : await (0, d.acknowledgeUserOffer)(s), h(), w(!1)
   };
   n.useEffect(() => {
     if (y) {
@@ -142,7 +142,7 @@ function L(e) {
         children: O
       }), (0, a.jsx)(c.Clickable, {
         onClick: async () => {
-          N(!0), await T(_, "trial"), h(), N(!1)
+          w(!0), await T(_, "trial"), h(), w(!1)
         },
         children: (0, a.jsx)(g.default, {
           className: l(C.icon, C.trashIcon)
@@ -234,7 +234,7 @@ function _(e) {
   }, [x]);
   let {
     id: j,
-    expires_at: N,
+    expires_at: w,
     applied_at: E,
     discount_id: L,
     discount: _
@@ -243,8 +243,8 @@ function _(e) {
       value: r
     } = e;
     return r === L
-  })) || void 0 === r ? void 0 : r.label) && void 0 !== t ? t : "Unknown", R = null != N, P = null != N && new Date(N).getTime() < Date.now(), M = async () => {
-    k(!0), R ? await w(j, "discount") : await (0, d.acknowledgeUserOffer)(void 0, i), s(), k(!1)
+  })) || void 0 === r ? void 0 : r.label) && void 0 !== t ? t : "Unknown", R = null != w, P = null != w && new Date(w).getTime() < Date.now(), M = async () => {
+    k(!0), R ? await N(j, "discount") : await (0, d.acknowledgeUserOffer)(void 0, i), s(), k(!1)
   };
   n.useEffect(() => {
     if (u) {
@@ -346,7 +346,7 @@ function _(e) {
 }
 
 function A() {
-  let [e, r] = n.useState([]), [t, i] = n.useState([]), [o, p] = n.useState(), [m, g] = n.useState(), [f, b] = n.useState([]), [x, k] = n.useState([]), [T, w] = n.useState(!0);
+  let [e, r] = n.useState([]), [t, i] = n.useState([]), [o, p] = n.useState(), [m, g] = n.useState(), [f, b] = n.useState([]), [x, k] = n.useState([]), [T, N] = n.useState(!0);
   n.useEffect(() => {
     (0 === e.length || 0 === t.length || T) && S().then(e => {
       let t = Object.keys(e.trial).map(r => ({
@@ -360,7 +360,7 @@ function A() {
       r(t), i(a), null == o && p(t[0].value), null == m && g(a[0].value)
     })
   }, [e, t, o, m, T]), n.useEffect(() => {
-    T && (w(!1), h.default.forceReset(), (0, d.fetchUserOffer)(), N().then(e => {
+    T && (N(!1), h.default.forceReset(), (0, d.fetchUserOffer)(), w().then(e => {
       let r = e.trial.sort((e, r) => e.id.localeCompare(r.id));
       b(r);
       let t = e.discount.sort((e, r) => e.id.localeCompare(r.id));
@@ -368,11 +368,11 @@ function A() {
     }))
   }, [T]);
   let A = async () => {
-    null != o && (await j(o, "trial"), w(!0))
+    null != o && (await j(o, "trial"), N(!0))
   }, R = async () => {
-    null != m && (await j(m, "discount"), w(!0))
+    null != m && (await j(m, "discount"), N(!0))
   }, P = async () => {
-    await E(), w(!0)
+    await E(), N(!0)
   };
   return (0, a.jsx)(c.ScrollerThin, {
     className: l(v.panel),
@@ -395,7 +395,7 @@ function A() {
             children: "Clear Mobile Trials DismissibleContent"
           }), (0, a.jsx)(c.Button, {
             size: c.Button.Sizes.SMALL,
-            onClick: () => w(!0),
+            onClick: () => N(!0),
             children: "Refresh DevTools"
           })]
         })]
@@ -447,7 +447,7 @@ function A() {
         }), f.map(r => (0, a.jsx)(L, {
           offer: r,
           offerOptions: e,
-          forceRefetch: () => w(!0)
+          forceRefetch: () => N(!0)
         }, r.id))]
       }), x.length > 0 && (0, a.jsxs)("section", {
         className: C.section,
@@ -457,7 +457,7 @@ function A() {
         }), x.map(e => (0, a.jsx)(_, {
           offer: e,
           offerOptions: t,
-          forceRefetch: () => w(!0)
+          forceRefetch: () => N(!0)
         }, e.id))]
       })]
     })

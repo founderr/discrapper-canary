@@ -21,9 +21,9 @@ function E(e, t) {
   let [a, s] = l.useState(null), E = l.useCallback(a => {
     var l, E, A;
     let _ = r.useExpressionPickerStore.getState().lastActiveView,
-      f = e.isPrivate() || i.default.can(c.Permissions.ATTACH_FILES, e);
-    let m = (l = f, E = _, A = t, l ? null != E && o.POLLS_SUPPORTED_EXPRESSION_PICKER_VIEW_TYPES.has(E) ? E : A === n.PollLayoutTypes.DEFAULT ? u.ExpressionPickerViewType.EMOJI : u.ExpressionPickerViewType.GIF : u.ExpressionPickerViewType.EMOJI);
-    s(e => (e === a ? (0, r.toggleExpressionPicker)(m, d) : (0, r.openExpressionPicker)(m, d), a))
+      m = e.isPrivate() || i.default.can(c.Permissions.ATTACH_FILES, e);
+    let L = (l = m, E = _, A = t, l ? null != E && o.POLLS_SUPPORTED_EXPRESSION_PICKER_VIEW_TYPES.has(E) ? E : A === n.PollLayoutTypes.DEFAULT ? u.ExpressionPickerViewType.EMOJI : u.ExpressionPickerViewType.GIF : u.ExpressionPickerViewType.EMOJI);
+    s(e => (e === a ? (0, r.toggleExpressionPicker)(L, d) : (0, r.openExpressionPicker)(L, d), a))
   }, [e, t]);
   return {
     lastActiveInputIndex: a,

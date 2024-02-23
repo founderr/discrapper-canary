@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return G
+    return H
   }
 }), n("222007");
 var l = n("37983"),
@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("627445"),
-  u = n.n(r),
-  o = n("90915"),
+  o = n.n(r),
+  u = n("90915"),
   d = n("446674"),
   c = n("77078"),
   f = n("988738"),
@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("292687"),
   F = n("49111"),
   k = n("782340"),
-  B = n("928319");
-class V extends a.Component {
+  V = n("928319");
+class B extends a.Component {
   componentDidMount() {
     let {
       guestWindow: e
@@ -72,14 +72,14 @@ class V extends a.Component {
       saturation: e,
       guestWindow: t
     } = this.props, n = t.document.documentElement;
-    u(null != n, "Window document element was null"), n.style.setProperty("--saturation-factor", e.toString())
+    o(null != n, "Window document element was null"), n.style.setProperty("--saturation-factor", e.toString())
   }
   updateLocale() {
     let {
       locale: e,
       guestWindow: t
     } = this.props, n = t.document.documentElement;
-    u(null != n, "Window document element was null"), n.lang = e
+    o(null != n, "Window document element was null"), n.lang = e
   }
   updateTitle() {
     let {
@@ -93,14 +93,14 @@ class V extends a.Component {
       fontScale: e,
       guestWindow: t
     } = this.props, n = t.document.documentElement;
-    u(null != n, "Window document element was null"), n.style.fontSize = "".concat(e, "%")
+    o(null != n, "Window document element was null"), n.style.fontSize = "".concat(e, "%")
   }
   updateClientTheme() {
     let {
       clientThemesCSS: e,
       guestWindow: t
     } = this.props, n = t.document, l = (0, n.head);
-    u(null != l, "Window document ".concat("head", " was null"));
+    o(null != l, "Window document ".concat("head", " was null"));
     let a = l.querySelector("style[".concat(_.CLIENT_THEMES_DATA_ATTRIBUTE, "]"));
     if (null != a) {
       a.textContent = e;
@@ -117,7 +117,7 @@ class V extends a.Component {
       appFocused: a,
       children: s,
       windowKey: r,
-      mouseModeEnabled: u,
+      mouseModeEnabled: o,
       keyboardModeEnabled: d,
       reducedMotionEnabled: m,
       fontScaleClass: E,
@@ -127,14 +127,14 @@ class V extends a.Component {
       clientThemesClassName: _,
       contentClassName: x
     } = this.props, N = (0, P.getPlatform)(), M = i(E, {
-      "mouse-mode": u,
+      "mouse-mode": o,
       "reduce-motion": m,
       "full-motion": !m,
       "keyboard-mode": d,
       "app-focused": n || a,
       "low-saturation": S <= .4
     });
-    return (0, l.jsx)(o.BrowserRouter, {
+    return (0, l.jsx)(u.BrowserRouter, {
       children: (0, l.jsx)(A.default, {
         children: (0, l.jsx)(c.ThemeContextProvider, {
           theme: e,
@@ -152,14 +152,14 @@ class V extends a.Component {
                       renderWindow: C,
                       children: (0, l.jsxs)(y.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
-                          className: B.popout,
+                          className: V.popout,
                           children: [g && null != N ? (0, l.jsx)(v.default, {
                             focused: n,
                             type: N,
                             windowKey: r,
                             macOSFrame: !0
                           }) : null, (0, l.jsx)("div", {
-                            className: i(B.content, x),
+                            className: i(V.content, x),
                             children: s
                           })]
                         }), (0, l.jsx)(c.Modals, {}), (0, l.jsx)(f.default, {}), (0, l.jsx)(y.AppLayerContainer, {})]
@@ -187,10 +187,10 @@ class V extends a.Component {
     }
   }
 }
-V.defaultProps = {
+B.defaultProps = {
   withTitleBar: !0
 };
-let H = a.forwardRef(function(e, t) {
+let G = a.forwardRef(function(e, t) {
   let {
     guestWindow: n,
     focused: a
@@ -198,7 +198,7 @@ let H = a.forwardRef(function(e, t) {
     guestWindow: w.default.getWindow(e.windowKey),
     focused: w.default.getWindowFocused(e.windowKey)
   }));
-  u(null != n, "Missing guestWindow reference");
+  o(null != n, "Missing guestWindow reference");
   let s = (0, d.useStateFromStores)([L.default], () => L.default.isFocused()),
     {
       locale: i,
@@ -207,7 +207,7 @@ let H = a.forwardRef(function(e, t) {
       locale: M.default.locale,
       theme: R.default.theme
     })),
-    o = (0, d.useStateFromStores)([m.default], () => m.default.useForcedColors ? "yes" : "no"),
+    u = (0, d.useStateFromStores)([m.default], () => m.default.useForcedColors ? "yes" : "no"),
     {
       fontScale: f,
       keyboardModeEnabled: h,
@@ -233,7 +233,7 @@ let H = a.forwardRef(function(e, t) {
     } = (0, _.default)();
   return null == n ? null : (0, l.jsx)(c.DnDProvider, {
     children: (0, l.jsx)(A, {
-      children: (0, l.jsx)(V, {
+      children: (0, l.jsx)(B, {
         ref: t,
         ...e,
         guestWindow: n,
@@ -241,7 +241,7 @@ let H = a.forwardRef(function(e, t) {
         appFocused: s,
         locale: i,
         theme: r,
-        forcedColors: o,
+        forcedColors: u,
         fontScale: f,
         keyboardModeEnabled: h,
         mouseModeEnabled: v,
@@ -255,4 +255,4 @@ let H = a.forwardRef(function(e, t) {
     })
   })
 });
-var G = H
+var H = G

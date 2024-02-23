@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return V
   }
 }), n("424973");
 var l = n("37983"),
@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  u = n.n(r),
-  o = n("446674"),
+  o = n.n(r),
+  u = n("446674"),
   d = n("77078"),
   c = n("777274"),
   f = n("76813"),
@@ -45,7 +45,7 @@ function k(e) {
   let {
     channelId: t,
     guildId: n
-  } = e, a = Date.now(), s = (0, o.useStateFromStores)([M.default, y.default], () => u(M.default.getSpeakers()).map(e => y.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, S.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, a)).slice(0, 3).value());
+  } = e, a = Date.now(), s = (0, u.useStateFromStores)([M.default, y.default], () => o(M.default.getSpeakers()).map(e => y.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, S.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, a)).slice(0, 3).value());
   return 0 === s.length ? null : (0, l.jsx)(l.Fragment, {
     children: s.map((e, t) => (0, l.jsx)(d.Tooltip, {
       position: "bottom",
@@ -67,53 +67,53 @@ function k(e) {
   })
 }
 
-function B(e) {
+function V(e) {
   let {
     inPopout: t,
     channel: n,
     appContext: s,
     inCall: i,
     isChatOpen: r,
-    exitFullScreen: u
+    exitFullScreen: o
   } = e, S = n.id, {
     voiceParticipantsHidden: M,
     selectedParticipant: j,
     userParticipantCount: w
-  } = (0, o.useStateFromStoresObject)([y.default], () => ({
+  } = (0, u.useStateFromStoresObject)([y.default], () => ({
     selectedParticipant: y.default.getSelectedParticipant(S),
     voiceParticipantsHidden: y.default.getVoiceParticipantsHidden(S),
     userParticipantCount: y.default.getUserParticipantCount(S)
-  }), [S]), B = (0, O.default)(n), {
-    preventIdle: V,
-    allowIdle: H
-  } = (0, C.usePreventIdle)("popup"), G = [];
-  if (B) {
+  }), [S]), V = (0, O.default)(n), {
+    preventIdle: B,
+    allowIdle: G
+  } = (0, C.usePreventIdle)("popup"), H = [];
+  if (V) {
     let e = (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(j.id) : void 0,
       t = (null == j ? void 0 : j.type) === D.ParticipantTypes.ACTIVITY ? j.id : void 0;
-    G.push((0, l.jsx)(x.default, {
+    H.push((0, l.jsx)(x.default, {
       className: F.button,
       channel: n,
       applicationId: t,
       stream: e,
-      exitFullScreen: u,
+      exitFullScreen: o,
       analyticsLocation: n.type === U.ChannelTypes.GUILD_VOICE ? U.AnalyticsPages.GUILD_CHANNEL : U.AnalyticsPages.DM_CHANNEL
     }, "invite-button"))
   }
-  return M && G.push((0, l.jsx)(k, {
+  return M && H.push((0, l.jsx)(k, {
     channelId: S,
     guildId: n.guild_id
-  }, "current-speaker")), G.push((0, l.jsx)(h.default, {
+  }, "current-speaker")), H.push((0, l.jsx)(h.default, {
     className: F.button,
     channelId: S
-  }, "clips-enabled-indicator")), (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM && (G.push((0, l.jsx)(g.default, {
+  }, "clips-enabled-indicator")), (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM && (H.push((0, l.jsx)(g.default, {
     className: F.button,
     participant: j
-  }, "warning")), G.push((0, l.jsx)(p.default, {
+  }, "warning")), H.push((0, l.jsx)(p.default, {
     size: L.default.Sizes.LARGE,
     className: F.button,
     participant: j,
     showQuality: !0
-  }, "live-indicator"))), M && G.push((0, l.jsx)(d.Popout, {
+  }, "live-indicator"))), M && H.push((0, l.jsx)(d.Popout, {
     position: "bottom",
     renderPopout: () => (0, l.jsx)(_.default, {
       children: (0, l.jsx)(b.default, {
@@ -132,22 +132,22 @@ function B(e) {
         className: F.button
       })
     }
-  }, "call-members-popout")), i && G.push(null != j ? (0, l.jsx)(v.default, {
+  }, "call-members-popout")), i && H.push(null != j ? (0, l.jsx)(v.default, {
     className: F.button,
     channelId: S
   }, "deselect-participant") : (0, l.jsx)(A.default, {
     className: F.button,
     channelId: S,
     isHorizontal: !0
-  }, "select-participant")), !t && G.push((0, l.jsx)(f.default, {
+  }, "select-participant")), !t && H.push((0, l.jsx)(f.default, {
     className: F.button
-  }, "clips")), G.push((0, l.jsx)(E.default, {
-    onOpen: V,
-    onClose: H,
+  }, "clips")), H.push((0, l.jsx)(E.default, {
+    onOpen: B,
+    onClose: G,
     className: F.button
-  }, "recents")), G.push((0, l.jsx)(c.CallscopeChannelCallIssueMarker, {
+  }, "recents")), H.push((0, l.jsx)(c.CallscopeChannelCallIssueMarker, {
     className: F.button
-  }, "callscope-marker")), G.push((0, l.jsx)(d.Popout, {
+  }, "callscope-marker")), H.push((0, l.jsx)(d.Popout, {
     position: "bottom",
     renderPopout: e => {
       let {
@@ -158,7 +158,7 @@ function B(e) {
           channelId: S,
           onClose: t,
           appContext: s,
-          exitFullScreen: u
+          exitFullScreen: o
         })
       })
     },
@@ -173,13 +173,13 @@ function B(e) {
         className: F.lastButton
       })
     }
-  }, "more-options-popout")), !r && (G.push((0, l.jsx)(R.default.Divider, {
+  }, "more-options-popout")), !r && (H.push((0, l.jsx)(R.default.Divider, {
     className: F.divider
-  }, "divider")), G.push((0, l.jsx)(I.ChatButton, {
+  }, "divider")), H.push((0, l.jsx)(I.ChatButton, {
     channelId: n.id,
     className: F.chatButtonSpacer,
     disabled: !0
   }, "chat-spacer"))), (0, l.jsx)(l.Fragment, {
-    children: G
+    children: H
   })
 }

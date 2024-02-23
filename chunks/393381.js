@@ -10,35 +10,35 @@ var a = n("77078"),
   s = n("461380"),
   i = n("484456"),
   r = n("559979"),
-  u = n("70695"),
-  o = n("348091");
+  o = n("70695"),
+  u = n("348091");
 
 function d(e) {
   let {
     benefit: t,
     guildId: n,
     onClick: d
-  } = e, c = (0, u.default)(n, t.ref_id), f = (0, l.jsx)(i.default, {
+  } = e, c = (0, o.default)(n, t.ref_id), f = (0, l.jsx)(i.default, {
     guildId: n,
     emojiId: t.emoji_id,
     emojiName: t.emoji_name
   });
   return (0, l.jsxs)(a.Clickable, {
-    className: o.container,
+    className: u.container,
     onClick: () => {
       null == c || c.navigateToChannel(), d()
     },
     "aria-label": null == c ? void 0 : c.ariaLabel,
     role: "link",
     children: [(0, l.jsx)("div", {
-      className: o.emojiContainer,
+      className: u.emojiContainer,
       children: f
     }), (0, l.jsxs)("div", {
-      className: o.infoContainer,
+      className: u.infoContainer,
       children: [(0, l.jsx)(a.Text, {
         variant: "text-md/medium",
         color: "header-primary",
-        className: o.name,
+        className: u.name,
         children: (0, r.default)(t)
       }), (0, l.jsx)(a.Text, {
         color: "interactive-normal",
@@ -47,7 +47,7 @@ function d(e) {
       })]
     }), (0, l.jsx)(s.default, {
       direction: s.default.Directions.RIGHT,
-      className: o.caret
+      className: u.caret
     })]
   })
 }

@@ -28,8 +28,8 @@ var k = t("224249"),
   S = t("21573"),
   j = t("245515"),
   T = t("172248"),
-  w = t("811199"),
-  N = t("175768"),
+  N = t("811199"),
+  w = t("175768"),
   E = t("358344"),
   L = t("34971"),
   _ = t("134034"),
@@ -111,7 +111,7 @@ function F() {
       }), e.push({
         id: "modals",
         name: "Modals",
-        render: () => (0, a.jsx)(N.default, {})
+        render: () => (0, a.jsx)(w.default, {})
       }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") && (e.push({
         id: "trials",
         name: "Trials",
@@ -149,7 +149,7 @@ function F() {
     properties: {
       panel: l
     }
-  }), (0, a.jsxs)(w.DevToolsLayerProvider, {
+  }), (0, a.jsxs)(N.DevToolsLayerProvider, {
     children: [(0, a.jsxs)(f.default, {
       className: B.headerBar,
       toolbar: (0, a.jsx)(f.default.Icon, {
@@ -163,7 +163,7 @@ function F() {
       }), (0, a.jsx)(f.default.Title, {
         children: "DevTools"
       })]
-    }), (0, a.jsx)(t, {}), i(), (0, a.jsx)(w.DevToolsLayerContainer, {
+    }), (0, a.jsx)(t, {}), i(), (0, a.jsx)(N.DevToolsLayerContainer, {
       className: D.layerContainer
     })]
   })

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var l, a, s = n("37983"),
   i = n("884691"),
   r = n("414456"),
-  u = n.n(r),
-  o = n("907002"),
+  o = n.n(r),
+  u = n("907002"),
   d = n("446674"),
   c = n("669491"),
   f = n("77078"),
@@ -65,10 +65,10 @@ function R(e) {
         labelType: P
       })
     })
-  }), [l.application.name, P]), B = i.useMemo(() => (0, g.default)(l.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
+  }), [l.application.name, P]), V = i.useMemo(() => (0, g.default)(l.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
     className: N.iconOuterContainer,
     children: (0, s.jsx)("div", {
-      className: u(N.iconInnerContainer, N.nitroIconContainer),
+      className: o(N.iconInnerContainer, N.nitroIconContainer),
       children: (0, s.jsx)(p.default, {
         width: 16,
         height: 16,
@@ -77,15 +77,15 @@ function R(e) {
       })
     })
   }) : (0, s.jsx)("div", {
-    className: u(N.iconOuterContainer, N.lockBackground),
+    className: o(N.iconOuterContainer, N.lockBackground),
     children: (0, s.jsx)("div", {
-      className: u(N.iconInnerContainer, N.lockIconContainer),
+      className: o(N.iconInnerContainer, N.lockIconContainer),
       children: (0, s.jsx)(m.default, {
         color: "var(--interactive-active)",
         className: N.lock
       })
     })
-  }), [l.activity, F, j]), V = i.useMemo(() => {
+  }), [l.activity, F, j]), B = i.useMemo(() => {
     switch (O) {
       case C.ActivityAction.JOIN:
         return (0, s.jsx)("div", {
@@ -103,7 +103,7 @@ function R(e) {
         return (0, s.jsx)("div", {
           className: N.activityAction,
           children: (0, s.jsx)("div", {
-            className: u(N.activityActionButton, N.activityActionButtonDanger),
+            className: o(N.activityActionButton, N.activityActionButtonDanger),
             children: (0, s.jsx)(f.Text, {
               variant: "text-sm/medium",
               color: "always-white",
@@ -126,7 +126,7 @@ function R(e) {
     onMouseEnter: U,
     onMouseLeave: w,
     innerClassName: N.activityItemButtonInnerClass,
-    children: (0, s.jsx)(o.Spring, {
+    children: (0, s.jsx)(u.Spring, {
       config: M,
       from: {
         value: 0
@@ -138,8 +138,8 @@ function R(e) {
         let {
           value: t
         } = e;
-        return (0, s.jsx)(o.animated.div, {
-          className: u((0, S.getThemeClass)(v.ThemeTypes.DARK), N.activityItem, R, {
+        return (0, s.jsx)(u.animated.div, {
+          className: o((0, S.getThemeClass)(v.ThemeTypes.DARK), N.activityItem, R, {
             [N.activityItem_13_11]: 0 === r,
             [N.activityItem_16_9]: 1 === r
           }),
@@ -152,7 +152,7 @@ function R(e) {
               applicationName: l.application.name,
               imageClassName: N.activitySuggestionImage,
               imageNotFoundClassName: N.brokenImageIconWrapper
-            }), k, B, V]
+            }), k, V, B]
           })
         })
       }

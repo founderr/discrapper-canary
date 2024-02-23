@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var l = n("37983");
@@ -11,20 +11,20 @@ var a = n("255397"),
   i = n("782340");
 let r = n("328989");
 
-function u(e) {
+function o(e) {
   let {
     width: t,
     className: n,
-    channelId: u,
-    noArt: o = !1
+    channelId: o,
+    noArt: u = !1
   } = e;
   return (0, l.jsx)(s.default, {
     artURL: r,
-    noArt: o,
+    noArt: u,
     size: (0, s.getSizeForWidth)(t),
     className: n,
     callToAction: i.default.Messages.STREAM_SHOW_ALL_PARTICIPANTS,
     header: i.default.Messages.STREAM_PARTICIPANTS_HIDDEN.format(),
-    onCTAClick: () => a.default.toggleVoiceParticipantsHidden(u, !1)
+    onCTAClick: () => a.default.toggleVoiceParticipantsHidden(o, !1)
   })
 }
