@@ -38,11 +38,12 @@ let u = e => {
       let e = t.other_user instanceof s.default ? t.other_user : new s.default(t.other_user);
       n = (0, a.jsx)("img", {
         alt: "",
-        className: o.avatar,
+        className: o.image,
         src: e.getAvatarURL(void 0, 40)
       }), l = !0
     } else n = null != t.icon_url ? (0, a.jsx)("img", {
       alt: "",
+      className: o.image,
       src: t.icon_url
     }) : (0, a.jsx)("img", {
       alt: "",
