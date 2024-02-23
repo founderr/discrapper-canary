@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return N
   }
 });
 var a = s("37983"),
@@ -15,23 +15,24 @@ var a = s("37983"),
   d = s("377114"),
   S = s("652126"),
   _ = s("615992"),
-  c = s("161297"),
-  E = s("514914"),
-  A = s("324252"),
-  O = s("782340"),
-  I = s("744228");
+  c = s("15408"),
+  E = s("161297"),
+  A = s("514914"),
+  O = s("324252"),
+  I = s("782340"),
+  f = s("744228");
 
 function C(e) {
   let {
     children: t
   } = e;
   return (0, a.jsx)("div", {
-    className: I.actionGroup,
+    className: f.actionGroup,
     children: t
   })
 }
 
-function f(e) {
+function L(e) {
   let {
     title: t,
     subTitle: s,
@@ -40,9 +41,9 @@ function f(e) {
     onPress: T
   } = e;
   return (0, a.jsxs)("div", {
-    className: I.actionRow,
+    className: f.actionRow,
     children: [(0, a.jsxs)("div", {
-      className: I.actionButtonDetails,
+      className: f.actionButtonDetails,
       children: [(0, a.jsx)(i.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
@@ -61,13 +62,13 @@ function f(e) {
   })
 }
 
-function L(e) {
+function x(e) {
   let {
     title: t,
     onPress: s
   } = e;
   return (0, a.jsxs)(i.Clickable, {
-    className: T(I.actionRow, I.clickableActionRow),
+    className: T(f.actionRow, f.clickableActionRow),
     onClick: s,
     children: [(0, a.jsx)(i.Text, {
       variant: "text-md/semibold",
@@ -80,38 +81,38 @@ function L(e) {
     })]
   })
 }
-var x = function(e) {
+var N = function(e) {
   let {
     otherUserId: t,
     channelId: n,
     transitionToSlide: T
-  } = e, r = (0, S.useShouldShowHelplineLink)(), o = (0, _.useLastChannelMessage)(n), I = l.useCallback(() => {
-    (0, i.closeModal)(A.SAFETY_TOOLS_MODAL_KEY)
-  }, []), x = l.useCallback(() => {
-    (0, i.closeModal)(A.SAFETY_TOOLS_MODAL_KEY)
-  }, []), N = l.useMemo(() => {
+  } = e, r = (0, S.useShouldShowHelplineLink)(), o = (0, _.useLastChannelMessage)(n), f = l.useCallback(() => {
+    (0, i.closeModal)(O.SAFETY_TOOLS_MODAL_KEY)
+  }, []), N = l.useCallback(() => {
+    (0, i.closeModal)(O.SAFETY_TOOLS_MODAL_KEY)
+  }, []), h = l.useMemo(() => {
     let e = {
-        title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_TITLE,
-        subTitle: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_SUBTITLE,
-        buttonText: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_BUTTON,
+        title: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_TITLE,
+        subTitle: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_SUBTITLE,
+        buttonText: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_BUTTON,
         buttonColor: i.ButtonColors.PRIMARY,
         onPress: () => {
-          (0, u.default)(A.CRISIS_TEXT_LINE_URL)
+          (0, u.default)(O.CRISIS_TEXT_LINE_URL)
         }
       },
       l = {
-        title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE,
-        subTitle: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_SUBTITLE,
-        buttonText: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_BUTTON,
+        title: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE,
+        subTitle: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_SUBTITLE,
+        buttonText: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_BUTTON,
         buttonColor: i.ButtonColors.PRIMARY,
         onPress: () => {
-          (0, u.default)(A.NOFILTR_URL)
+          (0, u.default)(O.NOFILTR_URL)
         }
       };
     return [{
-      title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
-      subTitle: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_SUBTITLE,
-      buttonText: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
+      title: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
+      subTitle: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_SUBTITLE,
+      buttonText: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
       buttonColor: i.ButtonColors.PRIMARY,
       onPress: () => {
         (0, i.openModalLazy)(async () => {
@@ -125,8 +126,8 @@ var x = function(e) {
             } = s;
             return (0, a.jsx)(e, {
               transitionState: l,
-              onBlock: I,
-              onBlockAndReport: x,
+              onBlock: f,
+              onBlockAndReport: N,
               onCancel: () => {
                 null == T || T()
               },
@@ -138,41 +139,32 @@ var x = function(e) {
         })
       }
     }, {
-      title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
-      subTitle: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_SUBTITLE,
-      buttonText: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
+      title: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
+      subTitle: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_SUBTITLE,
+      buttonText: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
       buttonColor: i.ButtonColors.PRIMARY,
       onPress: () => {
-        (0, i.closeModal)(A.SAFETY_TOOLS_MODAL_KEY), (0, d.showReportModalForInappropriateConversationSafetyAlert)(o)
+        (0, i.closeModal)(O.SAFETY_TOOLS_MODAL_KEY), (0, d.showReportModalForInappropriateConversationSafetyAlert)(o)
       }
     }, r ? e : l, {
-      title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE,
-      subTitle: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE,
-      buttonText: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON,
+      title: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE,
+      subTitle: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE,
+      buttonText: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON,
       buttonColor: i.ButtonColors.BRAND,
       onPress: () => {
-        (0, i.openModalLazy)(async () => {
-          let {
-            default: e
-          } = await s.el("166260").then(s.bind(s, "166260"));
-          return t => (0, a.jsx)(e, {
-            ...t
-          })
-        }, {
-          onCloseCallback: i.closeAllModals
-        })
+        (0, c.default)(i.closeAllModals)
       }
     }]
-  }, [n, t, o, r, I, x]), h = l.useMemo(() => [{
-    title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE,
-    onPress: () => T(c.SafetyToolsSlides.SAFETY_TIPS)
+  }, [n, t, o, r, f, N]), M = l.useMemo(() => [{
+    title: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE,
+    onPress: () => T(E.SafetyToolsSlides.SAFETY_TIPS)
   }, {
-    title: O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE,
-    onPress: () => T(c.SafetyToolsSlides.ABOUT_SAFETY_ALERTS)
+    title: I.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE,
+    onPress: () => T(E.SafetyToolsSlides.ABOUT_SAFETY_ALERTS)
   }], [T]);
-  return (0, a.jsxs)(E.default, {
+  return (0, a.jsxs)(A.default, {
     children: [(0, a.jsx)(C, {
-      children: N.map(e => {
+      children: h.map(e => {
         let {
           title: t,
           subTitle: s,
@@ -180,7 +172,7 @@ var x = function(e) {
           buttonColor: n,
           onPress: T
         } = e;
-        return (0, a.jsx)(f, {
+        return (0, a.jsx)(L, {
           title: t,
           subTitle: s,
           buttonText: l,
@@ -189,12 +181,12 @@ var x = function(e) {
         }, t)
       })
     }), (0, a.jsx)(C, {
-      children: h.map(e => {
+      children: M.map(e => {
         let {
           title: t,
           onPress: s
         } = e;
-        return (0, a.jsx)(L, {
+        return (0, a.jsx)(x, {
           title: t,
           onPress: s
         }, t)
