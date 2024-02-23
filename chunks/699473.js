@@ -49,15 +49,15 @@ var s = n("37983"),
       trackAnnouncementViews: F = !1,
       asPartialPreview: w = !0,
       ...H
-    } = e, V = l.isFirstMessageInForumPost(j), Y = (0, u.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = l.editedTimestamp) && void 0 !== t ? t : l.timestamp).valueOf()), W = (0, u.useShowImprovedMarkdownGuildExperimentConfig)(j.guild_id, (null !== (n = l.editedTimestamp) && void 0 !== n ? n : l.timestamp).valueOf()), {
-      content: K,
+    } = e, V = l.isFirstMessageInForumPost(j), Y = (0, u.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = l.editedTimestamp) && void 0 !== t ? t : l.timestamp).valueOf()), K = (0, u.useShowImprovedMarkdownGuildExperimentConfig)(j.guild_id, (null !== (n = l.editedTimestamp) && void 0 !== n ? n : l.timestamp).valueOf()), {
+      content: W,
       hasSpoilerEmbeds: z
     } = (0, S.default)(l, {
       hideSimpleEmbedContent: U,
-      allowList: V || Y.showListsAndHeaders || W.showListsAndHeaders,
-      allowHeading: V || Y.showListsAndHeaders || W.showListsAndHeaders,
-      allowLinks: Y.showMaskedLinks || W.showMaskedLinks,
-      previewLinkTarget: Y.showMaskedLinks || W.showMaskedLinks
+      allowList: V || Y.showListsAndHeaders || K.showListsAndHeaders,
+      allowHeading: V || Y.showListsAndHeaders || K.showListsAndHeaders,
+      allowLinks: Y.showMaskedLinks || K.showMaskedLinks,
+      previewLinkTarget: Y.showMaskedLinks || K.showMaskedLinks
     }), Q = l.type === L.MessageTypes.REPLY ? l.messageReference : void 0, Z = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(Q)), J = (0, r.useListItem)(l.id), X = (0, N.default)(l), q = (0, o.useStateFromStores)([E.default], () => l.hasFlag(L.MessageFlags.HAS_THREAD) && E.default.getChannel(I.default.castMessageIdAsChannelId(l.id))), $ = (0, d.useRoleIcon)({
       guildId: j.guild_id,
       roleId: X.iconRoleId
@@ -88,7 +88,7 @@ var s = n("37983"),
       childrenMessageContent: (0, h.default)({
         ...e,
         asPartialPreview: w
-      }, K),
+      }, W),
       childrenSystemMessage: (0, M.default)(e),
       onContextMenu: D,
       onClick: x,

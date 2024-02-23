@@ -1,41 +1,41 @@
 "use strict";
 n.r(t), n.d(t, {
   getDecorationSizeForAvatarSize: function() {
-    return o
+    return s
   },
   openAvatarDecorationModal: function() {
-    return u
+    return o
   }
 });
-var r = n("37983");
+var a = n("37983");
 n("884691");
-var s = n("77078"),
-  i = n("393414");
+var l = n("77078"),
+  r = n("393414");
 n("103603");
-var a = n("573135"),
-  l = n("49111");
+var i = n("573135"),
+  u = n("49111");
 
-function o(e) {
-  return "number" != typeof e ? (0, s.getAvatarSize)(e) * a.DECORATION_TO_AVATAR_RATIO : e * a.DECORATION_TO_AVATAR_RATIO
+function s(e) {
+  return "number" != typeof e ? (0, l.getAvatarSize)(e) * i.DECORATION_TO_AVATAR_RATIO : e * i.DECORATION_TO_AVATAR_RATIO
 }
-let u = e => {
+let o = e => {
   let {
     analyticsLocations: t,
-    initialSelectedDecoration: a,
-    isTryItOutFlow: o,
-    guild: u
+    initialSelectedDecoration: i,
+    isTryItOutFlow: s,
+    guild: o
   } = e;
-  (0, s.openModalLazy)(async () => {
-    (0, i.getHistory)().location.pathname === l.Routes.COLLECTIBLES_SHOP_FULLSCREEN && (0, i.transitionTo)(l.Routes.APP);
+  (0, l.openModalLazy)(async () => {
+    (0, r.getHistory)().location.pathname === u.Routes.COLLECTIBLES_SHOP_FULLSCREEN && (0, r.transitionTo)(u.Routes.APP);
     let {
       default: e
     } = await n.el("791050").then(n.bind(n, "791050"));
-    return n => (0, r.jsx)(e, {
+    return n => (0, a.jsx)(e, {
       ...n,
       analyticsLocations: t,
-      initialSelectedDecoration: a,
-      isTryItOutFlow: o,
-      guild: u
+      initialSelectedDecoration: i,
+      isTryItOutFlow: s,
+      guild: o
     })
   }, {})
 }

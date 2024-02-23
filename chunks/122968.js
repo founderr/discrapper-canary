@@ -17,8 +17,8 @@ function c(e) {
     benefits: t,
     includeDescription: n = !1,
     maxBenefits: c = 3,
-    onDetails: u
-  } = e, d = Number.isFinite(c) ? t.slice(0, c) : t;
+    onDetails: d
+  } = e, u = Number.isFinite(c) ? t.slice(0, c) : t;
   return (0, i.jsxs)("div", {
     className: o.container,
     children: [(0, i.jsxs)("div", {
@@ -27,7 +27,7 @@ function c(e) {
         color: "header-secondary",
         variant: "eyebrow",
         children: l.default.Messages.Storefront.BENEFITS_TITLE
-      }), d.map(e => (0, i.jsxs)("div", {
+      }), u.map(e => (0, i.jsxs)("div", {
         className: o.benefit,
         children: [(0, i.jsx)("div", {
           children: e.icon
@@ -43,10 +43,10 @@ function c(e) {
           })]
         })]
       }, e.id))]
-    }), null != u && (0, i.jsx)(r.FocusRing, {
+    }), null != d && (0, i.jsx)(r.FocusRing, {
       children: (0, i.jsx)("button", {
         className: o.button,
-        onClick: u,
+        onClick: d,
         type: "button",
         children: (0, i.jsxs)(s.Text, {
           className: o.details,

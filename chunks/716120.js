@@ -1,57 +1,57 @@
 "use strict";
-r.r(t), r.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return m
   }
 });
-var a = r("37983");
-r("884691");
-var n = r("414456"),
-  u = r.n(n),
-  i = r("65597"),
-  s = r("854588"),
-  l = r("206230"),
-  o = r("284679"),
-  c = r("491232"),
-  d = r("408381"),
-  f = r("467618"),
+var l = a("37983");
+a("884691");
+var s = a("414456"),
+  r = a.n(s),
+  n = a("65597"),
+  i = a("854588"),
+  o = a("206230"),
+  c = a("284679"),
+  u = a("491232"),
+  d = a("408381"),
+  f = a("467618"),
   m = e => {
     let {
       asset: t,
-      assetUrlOverride: r,
-      size: n = d.MAX_CONTENT_WIDTH,
+      assetUrlOverride: a,
+      size: s = d.MAX_CONTENT_WIDTH,
       className: m,
-      style: E,
-      children: p
-    } = e, S = (0, i.default)([l.default], () => l.default.saturation);
-    return (0, a.jsx)("div", {
-      className: u(f.banner, m),
+      style: p,
+      children: C
+    } = e, g = (0, n.default)([o.default], () => o.default.saturation);
+    return (0, l.jsx)("div", {
+      className: r(f.banner, m),
       style: (() => {
-        if (null == t) return E;
-        if (1 === S) return null != r ? {
-          ...E,
-          backgroundImage: "url(".concat(r, "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)"),
+        if (null == t) return p;
+        if (1 === g) return null != a ? {
+          ...p,
+          backgroundImage: "url(".concat(a, "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)"),
           backgroundBlendMode: "multiply",
           backgroundSize: "cover"
         } : {
-          ...E,
-          backgroundImage: "url(".concat((0, c.getCollectiblesAssetURL)(t, {
-            size: n,
+          ...p,
+          backgroundImage: "url(".concat((0, u.getCollectiblesAssetURL)(t, {
+            size: s,
             format: "jpg"
           }), ")"),
           backgroundSize: "cover"
         };
-        let e = (0, o.hexOpacityToRgba)(s.default.unsafe_rawColors.BLACK_500, 1 - S);
+        let e = (0, c.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - g);
         return {
-          ...E,
-          backgroundImage: "linear-gradient(".concat(e, ", ").concat(e, "), url(").concat((0, c.getCollectiblesAssetURL)(t, {
-            size: n,
+          ...p,
+          backgroundImage: "linear-gradient(".concat(e, ", ").concat(e, "), url(").concat((0, u.getCollectiblesAssetURL)(t, {
+            size: s,
             format: "jpg"
           }), ")"),
           backgroundBlendMode: "saturation",
           backgroundSize: "cover"
         }
       })(),
-      children: p
+      children: C
     })
   }

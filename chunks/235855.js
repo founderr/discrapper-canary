@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 }), n("222007"), n("70102");
 var i = n("884691"),
-  l = n("748820"),
-  r = n("157590");
-let s = (0, l.v4)(),
+  r = n("748820"),
+  s = n("157590");
+let l = (0, r.v4)(),
   a = new Map,
   u = new Map;
 class o extends i.Component {
@@ -48,9 +48,9 @@ class o extends i.Component {
       rootMargin: n,
       threshold: i
     } = e;
-    t ? a.has(t) ? this.elementId = a.get(t) || "" : a.set(t, (0, l.v4)()) : this.elementId = s;
+    t ? a.has(t) ? this.elementId = a.get(t) || "" : a.set(t, (0, r.v4)()) : this.elementId = l;
     let o = this.getVisibilityObserverId();
-    !u.has(o) && u.set(o, new r.default({
+    !u.has(o) && u.set(o, new s.default({
       root: t,
       rootMargin: n,
       threshold: i
@@ -64,4 +64,4 @@ o.defaultProps = {
   rootMargin: "0px 0px 0px 0px",
   threshold: [0, Number.MIN_VALUE]
 };
-var d = o
+var c = o

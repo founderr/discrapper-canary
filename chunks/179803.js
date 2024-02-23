@@ -38,10 +38,10 @@ function p(e, t) {
   if (-1 === A) return !1;
   let g = null == p || p > C[A];
   if (!g) return !1;
-  let h = T.find(e => !(0, l.isDismissibleContentDismissed)(e)) === t;
-  if (!h) return !1;
+  let I = T.find(e => !(0, l.isDismissibleContentDismissed)(e)) === t;
+  if (!I) return !1;
   let {
-    showLifecycleUpsells: I
+    showLifecycleUpsells: h
   } = E.default.getCurrentConfig({
     guildId: e,
     location: "7f5b67_1"
@@ -49,7 +49,7 @@ function p(e, t) {
     disable: r || !(0, S.isGuildOnboardingSettingsAvailable)(e),
     autoTrackExposure: !0
   });
-  return I
+  return h
 }
 
 function A(e, t) {

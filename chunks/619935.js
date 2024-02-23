@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   useBlockedPaymentsConfig: function() {
-    return s
+    return i
   },
   default: function() {
     return l
@@ -24,7 +24,7 @@ let u = (0, a.createExperiment)({
       }
     }]
   }),
-  i = (0, a.createExperiment)({
+  s = (0, a.createExperiment)({
     kind: "user",
     id: "2022-03_block_russian_purchases_desktop",
     label: "Block purchases based on country (desktop specific flags)",
@@ -40,7 +40,7 @@ let u = (0, a.createExperiment)({
     }]
   });
 
-function s() {
+function i() {
   let {
     paymentsBlocked: e
   } = u.useExperiment({
@@ -49,7 +49,7 @@ function s() {
     autoTrackExposure: !1
   }), {
     checkPaymentSource: t
-  } = i.useExperiment({
+  } = s.useExperiment({
     location: "c519a9_2"
   }, {
     autoTrackExposure: !1

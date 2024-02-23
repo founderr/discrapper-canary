@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   isProfileEffectRecord: function() {
-    return l
+    return i
   },
   default: function() {
-    return i
+    return a
   }
 });
-var i, a = n("265586"),
-  r = n("200410");
-let l = e => e instanceof i;
-i = class e extends r.default {
+var a, l = r("265586"),
+  n = r("200410");
+let i = e => e instanceof a;
+a = class e extends n.default {
   static fromServer(t) {
     return new e({
       ...super.fromServer(t),
@@ -18,6 +18,6 @@ i = class e extends r.default {
     })
   }
   constructor(e) {
-    super(e), this.type = a.CollectiblesItemType.PROFILE_EFFECT
+    super(e), this.type = l.CollectiblesItemType.PROFILE_EFFECT
   }
 }

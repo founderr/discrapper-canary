@@ -1,40 +1,40 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
     return f
   }
 });
-var i = n("884691"),
-  a = n("65597"),
-  r = n("170313"),
-  l = n("424562"),
-  s = n("906932"),
-  o = n("26989"),
-  u = n("790618"),
-  c = n("697218"),
-  d = n("783142"),
+var a = r("884691"),
+  l = r("65597"),
+  n = r("170313"),
+  i = r("424562"),
+  u = r("906932"),
+  o = r("26989"),
+  s = r("790618"),
+  c = r("697218"),
+  d = r("783142"),
   f = e => {
     let {
       isTryItOut: t,
-      analyticsLocations: n,
+      analyticsLocations: r,
       guildId: f
-    } = e, E = (0, a.default)([c.default], () => c.default.getCurrentUser()), _ = (0, a.default)([o.default], () => null != f && null != E ? o.default.getMember(f, E.id) : null), h = null != _ ? _.avatarDecoration : null == E ? void 0 : E.avatarDecoration, S = (0, r.default)(n), {
-      pendingAvatar: p,
-      pendingAvatarDecoration: A,
+    } = e, v = (0, l.default)([c.default], () => c.default.getCurrentUser()), C = (0, l.default)([o.default], () => null != f && null != v ? o.default.getMember(f, v.id) : null), E = null != C ? C.avatarDecoration : null == v ? void 0 : v.avatarDecoration, A = (0, n.default)(r), {
+      pendingAvatar: T,
+      pendingAvatarDecoration: g,
       pendingErrors: m
-    } = (0, a.useStateFromStoresObject)([u.default, l.default], () => ({
-      pendingAvatar: t ? u.default.getTryItOutAvatar() : null != f ? l.default.getPendingAvatar() : u.default.getPendingAvatar(),
-      pendingAvatarDecoration: t ? u.default.getTryItOutAvatarDecoration() : null != f ? l.default.getPendingAvatarDecoration() : u.default.getPendingAvatarDecoration(),
-      pendingErrors: null != f ? l.default.getErrors().avatarDecoration : u.default.getErrors().avatarDecoration
-    })), C = (0, i.useCallback)(e => (0, s.setNewPendingAvatar)(e, null == E ? void 0 : E.avatar), [null == E ? void 0 : E.avatar]), v = (0, i.useCallback)(e => {
-      (0, s.setNewPendingAvatarDecoration)(f, e), null != e && S(e)
-    }, [S, f]);
+    } = (0, l.useStateFromStoresObject)([s.default, i.default], () => ({
+      pendingAvatar: t ? s.default.getTryItOutAvatar() : null != f ? i.default.getPendingAvatar() : s.default.getPendingAvatar(),
+      pendingAvatarDecoration: t ? s.default.getTryItOutAvatarDecoration() : null != f ? i.default.getPendingAvatarDecoration() : s.default.getPendingAvatarDecoration(),
+      pendingErrors: null != f ? i.default.getErrors().avatarDecoration : s.default.getErrors().avatarDecoration
+    })), I = (0, a.useCallback)(e => (0, u.setNewPendingAvatar)(e, null == v ? void 0 : v.avatar), [null == v ? void 0 : v.avatar]), P = (0, a.useCallback)(e => {
+      (0, u.setNewPendingAvatarDecoration)(f, e), null != e && A(e)
+    }, [A, f]);
     return {
-      pendingAvatar: p,
-      pendingAvatarDecoration: A,
-      setPendingAvatar: t ? d.setTryItOutAvatar : C,
-      setPendingAvatarDecoration: t ? d.setTryItOutAvatarDecoration : v,
-      savedAvatarDecoration: h,
+      pendingAvatar: T,
+      pendingAvatarDecoration: g,
+      setPendingAvatar: t ? d.setTryItOutAvatar : I,
+      setPendingAvatarDecoration: t ? d.setTryItOutAvatarDecoration : P,
+      savedAvatarDecoration: E,
       pendingErrors: m
     }
   }

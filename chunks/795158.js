@@ -8,14 +8,14 @@ var a = r("37983");
 r("884691");
 var n = r("77078"),
   u = r("106435"),
-  i = r("50885"),
-  s = r("782340");
-let l = i.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
+  s = r("50885"),
+  i = r("782340");
+let l = s.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
 var o = e => {
   let {
     user: t,
     avatarDecorationOverride: r,
-    status: i,
+    status: s,
     avatarSize: o = n.AvatarSizes.SIZE_120,
     "aria-hidden": c = !1
   } = e, {
@@ -32,8 +32,8 @@ var o = e => {
     avatarDecoration: d,
     src: f,
     size: o,
-    status: i,
-    "aria-label": c ? void 0 : s.default.Messages.USER_SETTINGS_AVATAR,
+    status: s,
+    "aria-label": c ? void 0 : i.default.Messages.USER_SETTINGS_AVATAR,
     "aria-hidden": c,
     ...m
   })

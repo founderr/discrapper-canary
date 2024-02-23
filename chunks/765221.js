@@ -7,16 +7,16 @@ r.r(t), r.d(t, {
 var a = r("37983"),
   n = r("884691"),
   u = r("414456"),
-  i = r.n(u),
-  s = r("506838"),
+  s = r.n(u),
+  i = r("506838"),
   l = r("171210"),
   o = r("65597"),
   c = r("77078"),
   d = r("252744"),
   f = r("853987"),
   m = r("426497"),
-  E = r("491232"),
-  p = r("743826"),
+  p = r("491232"),
+  E = r("743826"),
   S = r("216422"),
   h = r("468759"),
   _ = r("600785"),
@@ -34,11 +34,11 @@ let N = () => 80,
       className: r,
       onSelect: n,
       isSelected: u = !1,
-      ...s
+      ...i
     } = e;
     return (0, a.jsx)(c.Clickable, {
-      className: i(P.decorationGridItem, u ? P.selected : void 0, r),
-      ...s,
+      className: s(P.decorationGridItem, u ? P.selected : void 0, r),
+      ...i,
       onClick: n,
       children: t
     })
@@ -48,16 +48,16 @@ let N = () => 80,
       user: t,
       avatarDecoration: r,
       innerRef: u,
-      section: i,
-      isSelected: s = !1,
+      section: s,
+      isSelected: i = !1,
       ...c
-    } = e, p = (0, o.default)([f.default], () => {
+    } = e, E = (0, o.default)([f.default], () => {
       let e = f.default.getProduct(r.skuId);
-      return (0, E.isPremiumCollectiblesProduct)(e)
-    }), h = (0, o.default)([m.default], () => m.default.isItemViewed(r)), g = I.default.canUseCollectibles(t), N = i === T.Section.PREMIUM_PURCHASE && !g, [L, y] = n.useState(s);
+      return (0, p.isPremiumCollectiblesProduct)(e)
+    }), h = (0, o.default)([m.default], () => m.default.isItemViewed(r)), g = I.default.canUseCollectibles(t), N = s === T.Section.PREMIUM_PURCHASE && !g, [L, y] = n.useState(i);
     n.useEffect(() => {
-      s && y(!0)
-    }, [s]);
+      i && y(!0)
+    }, [i]);
     let b = n.useRef(null),
       x = (0, d.default)(null != u ? u : b),
       {
@@ -71,16 +71,16 @@ let N = () => 80,
     return (0, a.jsxs)(R, {
       className: N ? P.decorationGridItemChurned : void 0,
       innerRef: null != u ? u : b,
-      isSelected: s,
+      isSelected: i,
       ...c,
       children: [(0, a.jsx)("img", {
         className: P.presetDecorationImg,
         src: M,
         alt: r.label
       }), (() => {
-        let e = i === T.Section.PURCHASE || i === T.Section.PREMIUM_PURCHASE && g;
+        let e = s === T.Section.PURCHASE || s === T.Section.PREMIUM_PURCHASE && g;
         if (e) return null;
-        let t = !h && !s && !L;
+        let t = !h && !i && !L;
         return t ? (0, a.jsx)(C.PremiumBadge, {
           className: P.newBadge,
           text: (0, a.jsxs)("div", {
@@ -91,7 +91,7 @@ let N = () => 80,
             }), A.default.Messages.NEW]
           })
         }) : (0, a.jsx)(C.IconBadge, {
-          icon: p ? () => (0, a.jsx)(S.default, {
+          icon: E ? () => (0, a.jsx)(S.default, {
             width: 14,
             height: 14
           }) : () => (0, a.jsx)(_.default, {
@@ -110,7 +110,7 @@ var y = e => {
     guild: r,
     pendingAvatarDecoration: n,
     selectedAvatarDecorationRef: u,
-    onSelect: i,
+    onSelect: s,
     onOpenShop: l
   } = e, o = (0, T.default)();
   return (0, a.jsx)(c.MasonryList, {
@@ -130,15 +130,15 @@ var y = e => {
     removeEdgeItemGutters: !0,
     renderItem: (e, d, f, m) => {
       let {
-        section: E,
+        section: p,
         items: S
       } = o[e];
-      return (0, s.match)(S[d]).with(T.NONE_ITEM, () => (0, a.jsxs)(R, {
+      return (0, i.match)(S[d]).with(T.NONE_ITEM, () => (0, a.jsxs)(R, {
         style: {
           ...f
         },
         isSelected: null === n,
-        onSelect: () => i(null),
+        onSelect: () => s(null),
         children: [(0, a.jsx)(h.default, {
           className: P.notAllowedIcon
         }), (0, a.jsx)(c.Text, {
@@ -149,7 +149,7 @@ var y = e => {
       }, m)).with(T.SHOP_ITEM, () => (0, a.jsxs)(R, {
         style: f,
         onSelect: l,
-        children: [(0, a.jsx)(p.default, {
+        children: [(0, a.jsx)(E.default, {
           className: P.shopIcon
         }), (0, a.jsx)(c.Text, {
           variant: "text-xs/normal",
@@ -164,10 +164,10 @@ var y = e => {
           },
           user: t,
           avatarDecoration: e,
-          section: E,
+          section: p,
           innerRef: r ? u : void 0,
           isSelected: r,
-          onSelect: () => i(e)
+          onSelect: () => s(e)
         }, m)
       })
     },

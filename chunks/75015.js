@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   UploadTypes: function() {
-    return i
+    return a
   },
   EDITING_CONTAINER_WIDTH: function() {
-    return o
+    return u
   },
   USER_BANNER_MAX_WIDTH: function() {
-    return u
+    return o
   },
   USER_BANNER_MAX_HEIGHT: function() {
     return c
@@ -16,73 +16,73 @@ n.r(t), n.d(t, {
     return d
   },
   GUILD_BANNER_MAX_HEIGHT: function() {
-    return _
-  },
-  SCHEDULED_EVENT_IMAGE_MAX_WIDTH: function() {
     return f
   },
+  SCHEDULED_EVENT_IMAGE_MAX_WIDTH: function() {
+    return _
+  },
   SCHEDULED_EVENT_IMAGE_MAX_HEIGHT: function() {
-    return E
-  },
-  HOME_HEADER_MAX_WIDTH: function() {
-    return C
-  },
-  HOME_HEADER_MAX_HEIGHT: function() {
-    return I
-  },
-  BANNER_ASPECT_RATIO: function() {
     return h
   },
-  GUILD_BANNER_ASPECT_RATIO: function() {
-    return p
+  HOME_HEADER_MAX_WIDTH: function() {
+    return E
   },
-  SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
+  HOME_HEADER_MAX_HEIGHT: function() {
     return A
   },
-  HOME_HEADER_ASPECT_RATIO: function() {
-    return R
+  BANNER_ASPECT_RATIO: function() {
+    return p
   },
-  MAX_BANNER_OVERLAY_HEIGHT: function() {
-    return N
+  GUILD_BANNER_ASPECT_RATIO: function() {
+    return I
   },
-  MAX_GUILD_BANNER_OVERLAY_HEIGHT: function() {
+  SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
     return T
   },
-  MAX_SCHEDULED_EVENT_IMAGE_OVERLAY_HEIGHT: function() {
+  HOME_HEADER_ASPECT_RATIO: function() {
     return m
   },
+  MAX_BANNER_OVERLAY_HEIGHT: function() {
+    return g
+  },
+  MAX_GUILD_BANNER_OVERLAY_HEIGHT: function() {
+    return R
+  },
+  MAX_SCHEDULED_EVENT_IMAGE_OVERLAY_HEIGHT: function() {
+    return N
+  },
   MAX_HOME_HEADER_OVERLAY_HEIGHT: function() {
-    return S
+    return v
   },
   VIDEO_BACKGROUND_ASPECT_RATIO: function() {
-    return L
+    return C
   },
   MAX_VIDEO_OVERLAY_HEIGHT: function() {
-    return P
+    return M
   },
   MessageTypes: function() {
-    return a
+    return s
   }
 });
-var r, s, i, a, l = n("917219");
-(r = i || (i = {}))[r.AVATAR = 0] = "AVATAR", r[r.BANNER = 1] = "BANNER", r[r.GUILD_BANNER = 2] = "GUILD_BANNER", r[r.VIDEO_BACKGROUND = 3] = "VIDEO_BACKGROUND", r[r.SCHEDULED_EVENT_IMAGE = 4] = "SCHEDULED_EVENT_IMAGE", r[r.HOME_HEADER = 5] = "HOME_HEADER", r[r.AVATAR_DECORATION = 6] = "AVATAR_DECORATION";
-let o = 568,
-  u = 2400,
+var i, r, a, s, l = n("917219");
+(i = a || (a = {}))[i.AVATAR = 0] = "AVATAR", i[i.BANNER = 1] = "BANNER", i[i.GUILD_BANNER = 2] = "GUILD_BANNER", i[i.VIDEO_BACKGROUND = 3] = "VIDEO_BACKGROUND", i[i.SCHEDULED_EVENT_IMAGE = 4] = "SCHEDULED_EVENT_IMAGE", i[i.HOME_HEADER = 5] = "HOME_HEADER", i[i.AVATAR_DECORATION = 6] = "AVATAR_DECORATION";
+let u = 568,
+  o = 2400,
   c = 848,
   d = 2400,
-  _ = 1350,
-  f = 2400,
-  E = 960,
-  C = 2400,
-  I = 600,
-  h = 17 / 6,
-  p = 16 / 9,
-  A = 2.5,
-  R = 4,
-  N = o / h,
-  T = o / p,
-  m = o / A,
-  S = o / R,
-  L = l.BACKGROUND_REPLACEMENT_SIZE.width / l.BACKGROUND_REPLACEMENT_SIZE.height,
-  P = o / L;
-(s = a || (a = {}))[s.CROP_GIF_START = 0] = "CROP_GIF_START", s[s.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", s[s.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"
+  f = 1350,
+  _ = 2400,
+  h = 960,
+  E = 2400,
+  A = 600,
+  p = 17 / 6,
+  I = 16 / 9,
+  T = 2.5,
+  m = 4,
+  g = u / p,
+  R = u / I,
+  N = u / T,
+  v = u / m,
+  C = l.BACKGROUND_REPLACEMENT_SIZE.width / l.BACKGROUND_REPLACEMENT_SIZE.height,
+  M = u / C;
+(r = s || (s = {}))[r.CROP_GIF_START = 0] = "CROP_GIF_START", r[r.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", r[r.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"

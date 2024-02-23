@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return d
   }
 });
 var i = n("37983");
@@ -16,7 +16,7 @@ let c = {
   height: 12
 };
 
-function u(e) {
+function d(e) {
   let {
     tagType: t
   } = e;

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983");
 n("884691");
 var a = n("77078"),
-  r = n("79112"),
-  l = n("792105"),
+  l = n("79112"),
+  r = n("792105"),
   s = n("573240"),
   o = n("170213"),
   u = n("49111"),
@@ -21,8 +21,8 @@ var a = n("77078"),
       onClose: n,
       classificationId: E,
       source: _
-    } = e, h = (0, l.default)(), S = () => {
-      n(), r.default.open(u.UserSettingsSections.PRIVACY_AND_SAFETY, o.SafetyHubView.ACCOUNT_STANDING)
+    } = e, h = (0, r.default)(), S = () => {
+      n(), l.default.open(u.UserSettingsSections.PRIVACY_AND_SAFETY, o.SafetyHubView.ACCOUNT_STANDING)
     };
     return (0, i.jsxs)(a.ModalRoot, {
       className: d.modalRoot,

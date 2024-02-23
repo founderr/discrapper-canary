@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
     return f
   }
-}), n("794252");
-var i = n("884691"),
-  a = n("506838"),
-  r = n("265586"),
-  l = n("65597"),
-  s = n("599110"),
-  o = n("853987"),
-  u = n("491232"),
-  c = n("49111"),
-  d = n("646718"),
+}), r("794252");
+var a = r("884691"),
+  l = r("506838"),
+  n = r("265586"),
+  i = r("65597"),
+  u = r("599110"),
+  o = r("853987"),
+  s = r("491232"),
+  c = r("49111"),
+  d = r("646718"),
   f = e => {
-    let t = (0, l.default)([o.default], () => o.default.products);
-    return (0, i.useCallback)(n => {
+    let t = (0, i.default)([o.default], () => o.default.products);
+    return (0, a.useCallback)(r => {
       let {
-        type: i,
-        skuId: l
-      } = n, o = t.get(l);
-      s.default.track(c.AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, {
-        feature_name: (0, a.match)(i).with(r.CollectiblesItemType.AVATAR_DECORATION, () => d.AnalyticsPremiumFeatureNames.AVATAR_DECORATION).with(r.CollectiblesItemType.PROFILE_EFFECT, () => d.AnalyticsPremiumFeatureNames.PROFILE_EFFECT).otherwise(() => void 0),
-        feature_tier: (0, u.isPremiumCollectiblesProduct)(o) ? d.AnalyticsPremiumFeatureTiers.FREE : d.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD,
+        type: a,
+        skuId: i
+      } = r, o = t.get(i);
+      u.default.track(c.AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, {
+        feature_name: (0, l.match)(a).with(n.CollectiblesItemType.AVATAR_DECORATION, () => d.AnalyticsPremiumFeatureNames.AVATAR_DECORATION).with(n.CollectiblesItemType.PROFILE_EFFECT, () => d.AnalyticsPremiumFeatureNames.PROFILE_EFFECT).otherwise(() => void 0),
+        feature_tier: (0, s.isPremiumCollectiblesProduct)(o) ? d.AnalyticsPremiumFeatureTiers.FREE : d.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD,
         feature_selection: null == o ? void 0 : o.name,
         location_stack: e
       })

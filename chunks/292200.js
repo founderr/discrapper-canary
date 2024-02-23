@@ -70,7 +70,7 @@ function Y(e) {
   })
 }
 
-function W(e, t) {
+function K(e, t) {
   switch (e) {
     case _.AutomodAlertActionType.DELETE_USER_MESSAGE:
       return (0, s.jsx)(v.default, {
@@ -98,14 +98,14 @@ function W(e, t) {
   }
 }
 
-function K(e) {
+function W(e) {
   let {
     alertAction: t,
     guildId: n
   } = e, l = (0, c.useStateFromStores)([g.default], () => g.default.getUser(t.actor), [t.actor]);
   try {
     let e = parseInt(t.actionType);
-    if (null == l) return W(e, {});
+    if (null == l) return K(e, {});
     let a = function(e, t, n) {
       var s;
       let l = null !== (s = U.default.getNickname(n, null, t)) && void 0 !== s ? s : j.default.getUserTag(t),
@@ -138,7 +138,7 @@ function K(e) {
     }(t, l, n);
     return (0, s.jsx)(E.Tooltip, {
       text: a,
-      children: t => W(e, t)
+      children: t => K(e, t)
     })
   } catch (e) {
     return null
@@ -152,7 +152,7 @@ function z(e) {
   } = e, l = Object.values(t.actions).sort((e, t) => e.actionType < t.actionType ? 1 : -1);
   return (0, s.jsx)("div", {
     className: H.alertActionsIconContainer,
-    children: l.map(e => (0, s.jsx)(K, {
+    children: l.map(e => (0, s.jsx)(W, {
       alertAction: e,
       guildId: n
     }, e.actionType))
@@ -177,8 +177,8 @@ function Q(e) {
   } = (0, u.useListItem)(null != t ? t : ""), {
     isFocused: U,
     handleFocus: j,
-    handleBlur: W
-  } = (0, A.useFocusInside)(R), K = (0, c.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), Q = (0, c.useStateFromStores)([h.default], () => h.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
+    handleBlur: K
+  } = (0, A.useFocusInside)(R), W = (0, c.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), Q = (0, c.useStateFromStores)([h.default], () => h.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
     ruleName: Z,
     embedChannel: J,
     decisionId: X,
@@ -288,7 +288,7 @@ function Q(e) {
             hideTimestamp: !0,
             className: i(H.embedCard, {
               [H.compact]: n,
-              [H.selected]: er || K && U,
+              [H.selected]: er || W && U,
               [H.isClickable]: null != et && null != J
             }),
             childrenAccessories: (0, s.jsxs)(s.Fragment, {
@@ -349,7 +349,7 @@ function Q(e) {
             popoutProps: eo,
             zalgo: !0,
             onFocus: j,
-            onBlur: W,
+            onBlur: K,
             onClick: ed
           })
         }), (0, s.jsx)(V, {

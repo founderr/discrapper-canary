@@ -37,16 +37,16 @@ n.r(t), n.d(t, {
     return g
   },
   getQuestForTargetedContent: function() {
-    return h
-  },
-  getPlatformString: function() {
     return I
   },
+  getPlatformString: function() {
+    return h
+  },
   calculatePercentComplete: function() {
-    return m
+    return R
   },
   getContextualEntrypointHeading: function() {
-    return R
+    return m
   },
   isDismissible: function() {
     return N
@@ -145,12 +145,12 @@ let S = e => "".concat(l).concat(e).concat("/reward.png"),
   A = (e, t) => "".concat(l).concat(e, "/").concat(t).concat("/game_logotype.png"),
   g = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
-function h(e, t) {
+function I(e, t) {
   for (let [n, s] of e)
     if (!o(s) && s.targetedContent.includes(t)) return s;
   return null
 }
-let I = e => {
+let h = e => {
   switch (e) {
     case i.QuestRewardCodePlatforms.XBOX:
       return a.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -165,7 +165,7 @@ let I = e => {
   }
 };
 
-function m(e) {
+function R(e) {
   if (null == e.userStatus) return 0;
   let {
     streamProgressSeconds: t,
@@ -178,11 +178,11 @@ function m(e) {
   return Math.min(t / 60 / s, 1)
 }
 
-function R(e) {
+function m(e) {
   var t, n;
   if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return a.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
   if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
-    let t = m(e);
+    let t = R(e);
     return t >= .75 ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE : t >= .45 && t <= .55 ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY : t > 0 ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED : a.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
   }
   return a.default.Messages.QUESTS_TITLE.format({

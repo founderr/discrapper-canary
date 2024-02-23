@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return S
   }
 }), n("222007");
 var i, r, a = n("37983"),
@@ -9,54 +9,54 @@ var i, r, a = n("37983"),
   l = n("446674"),
   o = n("77078"),
   c = n("55620"),
-  u = n("651057"),
-  d = n("299285"),
+  d = n("651057"),
+  u = n("299285"),
   f = n("20606"),
   h = n("907038"),
   m = n("539938"),
-  p = n("653047"),
+  v = n("653047"),
   g = n("552712"),
-  v = n("131233"),
+  p = n("131233"),
   x = n("49111"),
   b = n("782340"),
-  S = n("454436");
+  j = n("454436");
 
-function E(e) {
+function S(e) {
   let {
     onClose: t,
     transitionState: n,
     appId: i,
     guildId: r,
-    subscriptionGroupListing: E
-  } = e, [I, j] = s.useState(() => {
-    let e = d.default.getApplication(i);
+    subscriptionGroupListing: S
+  } = e, [R, E] = s.useState(() => {
+    let e = u.default.getApplication(i);
     if (null != e) return {
       status: 2,
       app: e
     };
-    let t = d.default.isFetchingApplication(i);
+    let t = u.default.isFetchingApplication(i);
     return t ? {
       status: 1
     } : {
       status: 0
     }
-  }), R = 2 === I.status ? I.app : null;
+  }), N = 2 === R.status ? R.app : null;
   s.useEffect(() => {
-    0 === I.status && (j({
+    0 === R.status && (E({
       status: 1
-    }), u.default.fetchApplication(i).then(e => {
-      j({
+    }), d.default.fetchApplication(i).then(e => {
+      E({
         status: 2,
-        app: p.default.createFromServer(e)
+        app: v.default.createFromServer(e)
       })
     }).catch(e => {
-      j({
+      E({
         status: 3,
         error: e.message
       })
     }))
-  }, [i, I.status]);
-  let N = (0, l.useStateFromStoresArray)([g.default], () => g.default.getForApplication(i).filter(e => {
+  }, [i, R.status]);
+  let T = (0, l.useStateFromStoresArray)([g.default], () => g.default.getForApplication(i).filter(e => {
     switch (e.type) {
       case x.SKUTypes.DURABLE:
       case x.SKUTypes.CONSUMABLE:
@@ -67,13 +67,13 @@ function E(e) {
   }), [i]);
   if (s.useEffect(() => {
       (0, c.fetchAllStoreListingsForApplication)(i)
-    }, [i]), null == R) return null;
-  let T = b.default.Messages.STOREFRONT_TITLE.format({
-    appName: R.name
+    }, [i]), null == N) return null;
+  let I = b.default.Messages.STOREFRONT_TITLE.format({
+    appName: N.name
   });
   return (0, a.jsxs)(o.ModalRoot, {
     transitionState: n,
-    "aria-label": T,
+    "aria-label": I,
     size: o.ModalSize.LARGE,
     children: [(0, a.jsx)(o.ModalHeader, {
       children: (0, a.jsxs)(m.default, {
@@ -82,18 +82,18 @@ function E(e) {
           "aria-hidden": !0,
           color: f.default.INTERACTIVE_ACTIVE
         }), (0, a.jsx)(m.default.Title, {
-          children: T
+          children: I
         }), (0, a.jsx)(o.ModalCloseButton, {
           onClick: t,
-          className: S.modalCloseButton
+          className: j.modalCloseButton
         })]
       })
     }), (0, a.jsx)(o.ModalContent, {
-      children: (0, a.jsx)(v.default, {
-        app: R,
-        subscriptionGroupListing: E,
+      children: (0, a.jsx)(p.default, {
+        app: N,
+        subscriptionGroupListing: S,
         guildId: r,
-        products: N
+        products: T
       })
     })]
   })

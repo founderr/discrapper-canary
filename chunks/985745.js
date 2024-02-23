@@ -10,7 +10,7 @@ n("860677"), n("854508"), ! function(e, t) {
     o = o && o.setTimeout ? o : e, "[object process]" === ({}).toString.call(e.process) ? function() {
       n = function(e) {
         i.nextTick(function() {
-          u(e)
+          d(e)
         })
       }
     }() : function() {
@@ -24,7 +24,7 @@ n("860677"), n("854508"), ! function(e, t) {
     }() ? function() {
       var t = "setImmediate$" + Math.random() + "$",
         i = function(n) {
-          n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && u(+n.data.slice(t.length))
+          n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && d(+n.data.slice(t.length))
         };
       e.addEventListener ? e.addEventListener("message", i, !1) : e.attachEvent("onmessage", i), n = function(n) {
         e.postMessage(t + n, "*")
@@ -32,7 +32,7 @@ n("860677"), n("854508"), ! function(e, t) {
     }() : e.MessageChannel ? function() {
       var e = new MessageChannel;
       e.port1.onmessage = function(e) {
-        u(e.data)
+        d(e.data)
       }, n = function(t) {
         e.port2.postMessage(t)
       }
@@ -41,12 +41,12 @@ n("860677"), n("854508"), ! function(e, t) {
       n = function(t) {
         var n = l.createElement("script");
         n.onreadystatechange = function() {
-          u(t), n.onreadystatechange = null, e.removeChild(n), n = null
+          d(t), n.onreadystatechange = null, e.removeChild(n), n = null
         }, e.appendChild(n)
       }
     }() : function() {
       n = function(e) {
-        setTimeout(u, 0, e)
+        setTimeout(d, 0, e)
       }
     }(), o.setImmediate = function(e) {
       "function" != typeof e && (e = Function("" + e));
@@ -63,8 +63,8 @@ n("860677"), n("854508"), ! function(e, t) {
     delete a[e]
   }
 
-  function u(e) {
-    if (s) setTimeout(u, 0, e);
+  function d(e) {
+    if (s) setTimeout(d, 0, e);
     else {
       var t = a[e];
       if (t) {

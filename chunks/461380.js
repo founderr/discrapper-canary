@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return p
   }
 });
 var i = n("37983");
 n("884691");
-var l = n("414456"),
-  r = n.n(l),
-  s = n("384737"),
+var r = n("414456"),
+  s = n.n(r),
+  l = n("384737"),
   a = n("448052"),
   u = n("748802"),
   o = n("260792"),
-  d = n("77078"),
-  c = n("75196"),
+  c = n("77078"),
+  d = n("75196"),
   f = n("366842");
 let h = {
     UP: f.directionUp,
@@ -25,40 +25,40 @@ let h = {
     let {
       direction: t = h.DOWN,
       width: n = 24,
-      height: l = 24,
+      height: r = 24,
       color: E = "currentColor",
-      transition: v = f.transition,
-      className: C,
-      foreground: _,
-      expanded: p,
-      ...S
+      transition: p = f.transition,
+      className: v,
+      foreground: C,
+      expanded: S,
+      ..._
     } = e, {
       enabled: m
-    } = (0, d.useRedesignIconContext)(), g = t;
-    if (!0 === p ? g = h.DOWN : !1 === p && (g = h.RIGHT), m) {
+    } = (0, c.useRedesignIconContext)(), I = t;
+    if (!0 === S ? I = h.DOWN : !1 === S && (I = h.RIGHT), m) {
       let e = {
         [h.UP]: o.ChevronSmallUpIcon,
-        [h.DOWN]: s.ChevronSmallDownIcon,
+        [h.DOWN]: l.ChevronSmallDownIcon,
         [h.LEFT]: a.ChevronSmallLeftIcon,
         [h.RIGHT]: u.ChevronSmallRightIcon
-      } [g];
+      } [I];
       return (0, i.jsx)(e, {
-        ...S,
-        className: C,
+        ..._,
+        className: v,
         width: n,
-        height: l,
+        height: r,
         color: E,
-        colorClass: _
+        colorClass: C
       })
     }
     return (0, i.jsx)("svg", {
-      className: r(C, v, g),
+      className: s(v, p, I),
       width: n,
-      height: l,
+      height: r,
       viewBox: "0 0 24 24",
-      ...(0, c.default)(S),
+      ...(0, d.default)(_),
       children: (0, i.jsx)("path", {
-        className: _,
+        className: C,
         fill: "none",
         stroke: E,
         strokeWidth: "2",
@@ -70,4 +70,4 @@ let h = {
     })
   };
 E.Directions = h;
-var v = E
+var p = E

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CREATE_GUILD_EVENT_CORE_PERMISSIONS: function() {
-    return s
+    return l
   },
   CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: function() {
     return a
@@ -11,8 +11,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("316693"),
-  l = n("923510"),
-  r = n("49111");
-let s = r.Permissions.VIEW_CHANNEL,
-  a = i.default.combine(s, r.Permissions.CONNECT),
-  u = i.default.combine(s, l.MODERATE_STAGE_CHANNEL_PERMISSIONS)
+  r = n("923510"),
+  s = n("49111");
+let l = s.Permissions.VIEW_CHANNEL,
+  a = i.default.combine(l, s.Permissions.CONNECT),
+  u = i.default.combine(l, r.MODERATE_STAGE_CHANNEL_PERMISSIONS)

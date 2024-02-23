@@ -1,50 +1,50 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 });
-var a = s("37983");
-s("884691");
-var l = s("414456"),
-  n = s.n(l),
-  i = s("819855"),
-  r = s("841098"),
-  o = s("449918"),
-  d = s("832132"),
-  u = s("818643"),
-  c = s("608684"),
-  E = s("49111"),
-  _ = s("854045");
-let I = E.Color.PRIMARY_400,
-  T = E.Color.PRIMARY_500;
+var l = n("37983");
+n("884691");
+var a = n("414456"),
+  s = n.n(a),
+  i = n("819855"),
+  r = n("841098"),
+  u = n("449918"),
+  d = n("832132"),
+  o = n("818643"),
+  c = n("608684"),
+  E = n("49111"),
+  f = n("854045");
+let h = E.Color.PRIMARY_400,
+  v = E.Color.PRIMARY_500;
 
-function f(e) {
+function _(e) {
   let {
     enabled: t,
-    imageClassName: s,
-    iconWrapperClassName: l,
+    imageClassName: n,
+    iconWrapperClassName: a,
     ...E
-  } = e, f = (0, r.default)(), S = (0, i.isThemeDark)(f) ? I : T, m = {
+  } = e, _ = (0, r.default)(), I = (0, i.isThemeDark)(_) ? h : v, m = {
     height: 18,
     width: 18,
-    color: (0, o.getColor)(S)
+    color: (0, u.getColor)(I)
   };
-  return (0, a.jsx)(c.default, {
-    className: n({
-      [_.avatarUploader]: t,
-      [_.avatarUploaderDisabled]: !t
+  return (0, l.jsx)(c.default, {
+    className: s({
+      [f.avatarUploader]: t,
+      [f.avatarUploaderDisabled]: !t
     }),
-    imageClassName: n(s, _.avatarUploaderInnerSquare, {
-      [_.avatarUploaderInnerSquareDisabled]: !t
+    imageClassName: s(n, f.avatarUploaderInnerSquare, {
+      [f.avatarUploaderInnerSquareDisabled]: !t
     }),
-    icon: null != E.image && "" !== E.image ? (0, a.jsx)(d.default, {
+    icon: null != E.image && "" !== E.image ? (0, l.jsx)(d.default, {
       ...m
-    }) : (0, a.jsx)(u.default, {
+    }) : (0, l.jsx)(o.default, {
       ...m
     }),
-    iconClassName: n(_.avatarUploadIcon, _.hideDefaultIcon),
-    iconWrapperClassName: l,
+    iconClassName: s(f.avatarUploadIcon, f.hideDefaultIcon),
+    iconWrapperClassName: a,
     showIcon: !0,
     showIconDisabled: !0,
     hideSize: !0,

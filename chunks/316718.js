@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   fetchUserEntitlementsForApplication: function() {
-    return s
+    return i
   },
   fetchUserEntitlements: function() {
     return l
@@ -13,9 +13,9 @@ r.r(t), r.d(t, {
 var a = r("872717"),
   n = r("913144"),
   u = r("271560"),
-  i = r("49111");
+  s = r("49111");
 
-function s(e) {
+function i(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   return n.default.wait(() => {
     n.default.dispatch({
@@ -23,7 +23,7 @@ function s(e) {
       applicationId: e
     })
   }), a.default.get({
-    url: i.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
+    url: s.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
     oldFormErrors: !0,
     query: {
       exclude_consumed: t
@@ -50,7 +50,7 @@ async function l(e) {
   });
   try {
     let e = await a.default.get({
-      url: i.Endpoints.ENTITLEMENTS_FOR_USER,
+      url: s.Endpoints.ENTITLEMENTS_FOR_USER,
       query: {
         with_sku: t,
         with_application: r,
@@ -73,7 +73,7 @@ async function o() {
   });
   try {
     let e = await (0, u.httpGetWithCountryCodeQuery)({
-      url: i.Endpoints.ENTITLEMENTS_GIFTABLE
+      url: s.Endpoints.ENTITLEMENTS_GIFTABLE
     });
     n.default.dispatch({
       type: "ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS",

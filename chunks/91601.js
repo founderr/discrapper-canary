@@ -17,21 +17,21 @@ function o(e) {
     description: n,
     imgSrc: o,
     purchaseButton: c,
-    subscriptionType: u,
-    title: d
+    subscriptionType: d,
+    title: u
   } = e;
   return (0, i.jsxs)("div", {
     className: l.container,
     children: [(0, i.jsxs)("div", {
       className: l.card,
-      children: [null != u && (0, i.jsx)(s.default, {
-        tagType: u
+      children: [null != d && (0, i.jsx)(s.default, {
+        tagType: d
       }), (0, i.jsxs)("div", {
         className: l.body,
         children: [(0, i.jsx)(a.Text, {
           tag: "div",
           variant: "heading-lg/semibold",
-          children: d
+          children: u
         }), (0, i.jsx)("div", {
           className: l.image,
           children: null != o ? (0, i.jsx)("img", {

@@ -18,15 +18,15 @@ function o(e) {
     body: r,
     icon: o,
     selected: c,
-    disabled: u
+    disabled: d
   } = e;
   return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("button", {
       type: "button",
       onClick: () => {
-        !u && t()
+        !d && t()
       },
-      disabled: u,
+      disabled: d,
       className: a(l.wrapper, {
         [l.selected]: c
       }),
