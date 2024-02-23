@@ -238,14 +238,13 @@ class Z extends n.PureComponent {
     })
   }
   renderDmSafetyAlerts() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-      {
-        isEligibleForSafetyAlerts: t,
-        dmSafetyAlerts: s,
-        userIsConsideredAdult: n
-      } = this.props;
-    return n || !t ? null : (0, a.jsxs)(a.Fragment, {
-      children: [e && (0, a.jsx)(E.FormDivider, {
+    let {
+      isEligibleForSafetyAlerts: e,
+      dmSafetyAlerts: t,
+      userIsConsideredAdult: s
+    } = this.props;
+    return s || !e ? null : (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(E.FormDivider, {
         className: z.marginBottom20
       }), (0, a.jsxs)(E.FormSection, {
         className: z.marginBottom20,
@@ -256,9 +255,9 @@ class Z extends n.PureComponent {
           children: W.default.Messages.SAFETY_ALERTS_SETTINGS_HEADER
         }), (0, a.jsx)(E.FormItem, {
           children: (0, a.jsx)(E.FormSwitch, {
-            value: s,
+            value: t,
             note: W.default.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({
-              learnMoreLink: "TODO"
+              learnMoreLink: y.default.getArticleURL(V.HelpdeskArticles.SAFETY_ALERTS)
             }),
             onChange: D.updateDmSafetyAlertsSetting,
             children: W.default.Messages.SAFETY_ALERTS_SETTING_TITLE
@@ -270,30 +269,32 @@ class Z extends n.PureComponent {
   renderDMSafety() {
     var e;
     let t = this.props.dmSpamFilter !== S.DmSpamFilterV2.DEFAULT_UNSET ? this.props.dmSpamFilter : null !== (e = w.ExplicitContentFilterToDmSpamFilterV2.get(this.props.explicitContentFilter)) && void 0 !== e ? e : S.DmSpamFilterV2.NON_FRIENDS;
-    return this.props.mediaRedactionIsEnabled ? (0, a.jsxs)(E.FormSection, {
-      tag: E.FormTitleTags.H3,
-      className: z.marginBottom20,
-      children: [this.renderSelfModExplicitContentSettings(), this.renderDmSafetyAlerts(), (0, a.jsxs)(E.FormItem, {
-        tag: E.FormTitleTags.H5,
-        className: z.marginBottom4,
-        title: W.default.Messages.USER_DM_SPAM_FILTER,
-        children: [(0, a.jsx)(E.FormText, {
-          type: E.FormTextTypes.DESCRIPTION,
-          className: z.marginBottom8,
-          children: W.default.Messages.USER_DM_SPAM_FILTER_HELP.format({
-            appealLink: y.default.getArticleURL(V.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
-          })
-        }), (0, a.jsx)(E.RadioGroup, {
-          value: t,
-          options: (0, F.generateDmSpamOptions)(),
-          onChange: e => {
-            let {
-              value: t
-            } = e;
-            return H.DmSpamFilterV2.updateSetting(t)
-          }
+    return this.props.mediaRedactionIsEnabled ? (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsxs)(E.FormSection, {
+        tag: E.FormTitleTags.H3,
+        className: z.marginBottom20,
+        children: [this.renderSelfModExplicitContentSettings(), (0, a.jsxs)(E.FormItem, {
+          tag: E.FormTitleTags.H5,
+          className: z.marginBottom4,
+          title: W.default.Messages.USER_DM_SPAM_FILTER,
+          children: [(0, a.jsx)(E.FormText, {
+            type: E.FormTextTypes.DESCRIPTION,
+            className: z.marginBottom8,
+            children: W.default.Messages.USER_DM_SPAM_FILTER_HELP.format({
+              appealLink: y.default.getArticleURL(V.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
+            })
+          }), (0, a.jsx)(E.RadioGroup, {
+            value: t,
+            options: (0, F.generateDmSpamOptions)(),
+            onChange: e => {
+              let {
+                value: t
+              } = e;
+              return H.DmSpamFilterV2.updateSetting(t)
+            }
+          })]
         })]
-      })]
+      }), this.renderDmSafetyAlerts()]
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(E.FormSection, {
         tag: E.FormTitleTags.H5,
@@ -320,7 +321,7 @@ class Z extends n.PureComponent {
             }
           })]
         })]
-      }), this.renderDmSafetyAlerts(!0)]
+      }), this.renderDmSafetyAlerts()]
     })
   }
   renderServerPrivacy() {
@@ -678,7 +679,7 @@ function X() {
     r = (0, N.useExplicitContentSettingOrDefault)(),
     d = (0, C.default)(),
     u = (0, R.useIsEligibleForInappropriateConversationWarning)({
-      location: "userSettings"
+      location: "user_settings_web"
     }),
     S = (0, M.useSafetyAlertsSettingOrDefault)();
   return (0, a.jsx)(Z, {
@@ -700,9 +701,9 @@ function X() {
     explicitContentSettingFriendDm: r.explicitContentFriendDm,
     explicitContentSettingNonFriendDm: r.explicitContentNonFriendDm,
     userIsConsideredAdult: null == d || d,
-    subsection: l,
     isEligibleForSafetyAlerts: u,
     dmSafetyAlerts: S,
+    subsection: l,
     ...t
   })
 }
