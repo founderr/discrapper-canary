@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return g
   }
 }), n("222007");
 var s = n("446674"),
@@ -13,9 +13,10 @@ let r = !1,
   o = new Set,
   d = new Set,
   c = new Set,
-  E = new Map;
+  E = new Map,
+  S = new Map;
 
-function S(e, t) {
+function _(e, t) {
   a = new Map(a);
   let n = a.get(e);
   null != n && a.set(e, {
@@ -24,7 +25,7 @@ function S(e, t) {
   })
 }
 
-function _(e, t) {
+function f(e, t) {
   let n = new Map(E);
   n.set(e, t), E = n;
   let s = a.get(e),
@@ -36,20 +37,24 @@ function _(e, t) {
         claimedAt: t.claimedAt
       }
     };
-    S(e, n)
+    _(e, n)
   }
 }
 
-function f(e) {
+function T(e) {
+  null != S.get(e) && (S = new Map(S)).delete(e)
+}
+
+function C(e) {
   let t = new Set(u);
   t.delete(e), u = t
 }
 
-function T(e) {
+function p(e) {
   let t = new Set(c);
   t.delete(e), c = t
 }
-class C extends s.default.Store {
+class A extends s.default.Store {
   get quests() {
     return a
   }
@@ -74,11 +79,14 @@ class C extends s.default.Store {
   getRewardCode(e) {
     return E.get(e)
   }
+  getStreamHeartbeatFailure(e) {
+    return S.get(e)
+  }
 }
-C.displayName = "QuestsStore";
-var p = new C(i.default, {
+A.displayName = "QuestsStore";
+var g = new A(i.default, {
   LOGOUT: function() {
-    r = !1, a = new Map, l = 0, u = new Set
+    r = !1, a = new Map, l = 0, u = new Set, S = new Map
   },
   QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
     l = Date.now(), r = !0
@@ -95,10 +103,22 @@ var p = new C(i.default, {
   QUESTS_SEND_HEARTBEAT_SUCCESS: function(e) {
     let {
       questId: t,
-      userStatus: n
+      streamKey: n,
+      userStatus: s
     } = e;
-    S(t, {
-      userStatus: n
+    _(t, {
+      userStatus: s
+    }), T(n)
+  },
+  QUESTS_SEND_HEARTBEAT_FAILURE: function(e) {
+    let {
+      questId: t,
+      streamKey: n
+    } = e, s = S.get(n);
+    null == s && (S = new Map(S)).set(n, {
+      questId: t,
+      streamKey: n,
+      firstFailedAt: Date.now()
     })
   },
   QUESTS_ENROLL_BEGIN: function(e) {
@@ -111,15 +131,15 @@ var p = new C(i.default, {
     let {
       enrolledQuestUserStatus: t
     } = e;
-    S(t.questId, {
+    _(t.questId, {
       userStatus: t
-    }), f(t.questId)
+    }), C(t.questId)
   },
   QUESTS_ENROLL_FAILURE: function(e) {
     let {
       questId: t
     } = e;
-    f(t)
+    C(t)
   },
   QUESTS_FETCH_REWARD_CODE_BEGIN: function(e) {
     let {
@@ -132,7 +152,7 @@ var p = new C(i.default, {
       questId: t,
       rewardCode: n
     } = e, s = new Set(d);
-    s.delete(t), d = s, _(t, n)
+    s.delete(t), d = s, f(t, n)
   },
   QUESTS_FETCH_REWARD_CODE_FAILURE: function(e) {
     let {
@@ -151,7 +171,7 @@ var p = new C(i.default, {
       questId: t,
       rewardCode: n
     } = e, s = new Set(o);
-    s.delete(t), o = s, _(t, n)
+    s.delete(t), o = s, f(t, n)
   },
   QUESTS_CLAIM_REWARD_CODE_FAILURE: function(e) {
     let {
@@ -169,13 +189,25 @@ var p = new C(i.default, {
     let {
       dismissedQuestUserStatus: t
     } = e;
-    S(t.questId, {
+    _(t.questId, {
       userStatus: t
-    }), T(t.questId)
+    }), p(t.questId)
   },
   QUESTS_DISMISS_CONTENT_FAILURE: function(e) {
     let {
       questId: t
+    } = e;
+    p(t)
+  },
+  STREAM_CLOSE: function(e) {
+    let {
+      streamKey: t
+    } = e;
+    T(t)
+  },
+  QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: function(e) {
+    let {
+      streamKey: t
     } = e;
     T(t)
   }

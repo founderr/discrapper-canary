@@ -4,14 +4,19 @@ n.r(t), n.d(t, {
     return i
   },
   DismissibleQuestContentFlags: function() {
-    return a
+    return l
+  },
+  CONSECUTIVE_HEARTBEAT_PERIOD_MS: function() {
+    return u
   }
 });
-var s, i, r = n("588025");
+var s, i, r = n("718517"),
+  a = n("588025");
 (s = i || (i = {})).ACTIVITY_PANEL = "quests_bar_activity_panel", s.QUESTS_MANAGER = "quests_manager", s.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory", s.USE_QUESTS = "use_quests";
-let a = {
-  [r.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE]: 1,
-  [r.QuestContent.QUEST_BAR]: 2,
-  [r.QuestContent.ACTIVITY_PANEL]: 4,
-  [r.QuestContent.QUEST_LIVE_STREAM]: 8
-}
+let l = {
+    [a.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE]: 1,
+    [a.QuestContent.QUEST_BAR]: 2,
+    [a.QuestContent.ACTIVITY_PANEL]: 4,
+    [a.QuestContent.QUEST_LIVE_STREAM]: 8
+  },
+  u = 2 * r.default.Millis.MINUTE

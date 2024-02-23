@@ -17,6 +17,9 @@ n.r(t), n.d(t, {
   },
   dismissQuestContent: function() {
     return _
+  },
+  dismissProgressTrackingFailureNotice: function() {
+    return f
   }
 });
 var s = n("872717"),
@@ -186,4 +189,11 @@ async function _(e, t) {
       })
     }
   }
+}
+
+function f(e) {
+  i.default.dispatch({
+    type: "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE",
+    streamKey: e
+  })
 }
