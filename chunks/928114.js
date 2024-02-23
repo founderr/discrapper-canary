@@ -1,5 +1,5 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   gradients: function() {
     return a
   }
@@ -339,26 +339,6 @@ let a = {
     light: {
       color: "gradient.mid",
       lightness: .98
-    }
-  },
-  "embed-background": {
-    dark: {
-      color: "white.500",
-      opacity: .1
-    },
-    light: {
-      color: "white.500",
-      opacity: .25
-    }
-  },
-  "embed-background-alternate": {
-    dark: {
-      color: "white.500",
-      opacity: .075
-    },
-    light: {
-      color: "white.500",
-      opacity: .25
     }
   }
 }
