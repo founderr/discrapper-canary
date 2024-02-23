@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   isPremiumCollectiblesProduct: function() {
     return c
   },
@@ -10,112 +10,110 @@ n.r(t), n.d(t, {
     return f
   },
   extractPriceByPurchaseTypes: function() {
-    return E
-  },
-  isFreeCollectiblesProduct: function() {
-    return _
-  },
-  getProductsFromCategories: function() {
-    return h
-  },
-  getAvatarDecorationsFromPurchases: function() {
-    return A
-  },
-  getAvatarDecorationsFromCategories: function() {
-    return m
-  },
-  getCollectiblesAssetURL: function() {
-    return C
-  },
-  getProfileEffectsFromPurchases: function() {
     return v
   },
-  getProfileEffectsFromCategories: function() {
-    return g
+  isFreeCollectiblesProduct: function() {
+    return C
   },
-  groupProfileEffects: function() {
+  getProductsFromCategories: function() {
+    return E
+  },
+  getAvatarDecorations: function() {
     return I
   },
+  getCollectiblesAssetURL: function() {
+    return P
+  },
+  getProfileEffectsFromPurchases: function() {
+    return p
+  },
+  getProfileEffectsFromCategories: function() {
+    return F
+  },
+  groupProfileEffects: function() {
+    return _
+  },
   isCollectiblesGiftCode: function() {
-    return T
+    return O
   },
   getLogoSize: function() {
-    return N
+    return y
   }
-}), n("222007");
-var i = n("917351"),
-  a = n("265586"),
-  r = n("407063"),
-  l = n("153160"),
-  s = n("730297"),
-  o = n("806410"),
-  u = n("49111");
+}), r("222007");
+var a = r("917351"),
+  l = r("265586"),
+  n = r("407063"),
+  i = r("153160"),
+  u = r("730297"),
+  o = r("806410"),
+  s = r("49111");
 let c = e => (null == e ? void 0 : e.premiumType) != null,
-  d = e => (null == e ? void 0 : e.purchaseType) === u.EntitlementTypes.PREMIUM_PURCHASE,
+  d = e => (null == e ? void 0 : e.purchaseType) === s.EntitlementTypes.PREMIUM_PURCHASE,
   f = (e, t) => {
-    let n = E(e, t ? u.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : u.PriceSetAssignmentPurchaseTypes.DEFAULT);
-    return null == n ? "" : (0, l.formatPrice)(null == n ? void 0 : n.amount, null == n ? void 0 : n.currency)
+    let r = v(e, t ? s.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : s.PriceSetAssignmentPurchaseTypes.DEFAULT);
+    return null == r ? "" : (0, i.formatPrice)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency)
   },
-  E = (e, t) => {
-    var n, i, a;
-    let r = null !== (a = e.prices[t]) && void 0 !== a ? a : null;
-    return null == r ? null : null === (i = r.countryPrices) || void 0 === i ? void 0 : null === (n = i.prices) || void 0 === n ? void 0 : n[0]
+  v = (e, t) => {
+    var r, a, l;
+    let n = null !== (l = e.prices[t]) && void 0 !== l ? l : null;
+    return null == n ? null : null === (a = n.countryPrices) || void 0 === a ? void 0 : null === (r = a.prices) || void 0 === r ? void 0 : r[0]
   },
-  _ = e => {
+  C = e => {
     var t;
-    return (null === (t = E(e, u.PriceSetAssignmentPurchaseTypes.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0
+    return (null === (t = v(e, s.PriceSetAssignmentPurchaseTypes.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0
   },
-  h = e => {
-    let t = (0, i.flatMap)([...e.values()], "products");
-    return (0, i.uniqBy)(t, "storeListingId")
+  E = e => {
+    let t = (0, a.flatMap)([...e.values()], "products");
+    return (0, a.uniqBy)(t, "storeListingId")
   },
-  S = (e, t) => {
-    if (t === a.CollectiblesItemType.AVATAR_DECORATION) {
-      let t = (0, i.flatMap)([...e.values()], "items").filter(s.isAvatarDecorationRecord);
-      return (0, i.uniqBy)(t, "id")
+  A = (e, t) => {
+    if (t === l.CollectiblesItemType.AVATAR_DECORATION) {
+      let t = (0, a.flatMap)([...e.values()], "items").filter(u.isAvatarDecorationRecord);
+      return (0, a.uniqBy)(t, "id")
     }
-    if (t === a.CollectiblesItemType.PROFILE_EFFECT) {
-      let t = (0, i.flatMap)([...e.values()], "items").filter(o.isProfileEffectRecord);
-      return (0, i.uniqBy)(t, "id")
-    }
-  },
-  p = (e, t) => {
-    let n = h(e);
-    if (t === a.CollectiblesItemType.AVATAR_DECORATION) {
-      let e = (0, i.flatMap)(n, "items").filter(s.isAvatarDecorationRecord);
-      return (0, i.uniqBy)(e, "id")
-    }
-    if (t === a.CollectiblesItemType.PROFILE_EFFECT) {
-      let e = (0, i.flatMap)(n, "items").filter(o.isProfileEffectRecord);
-      return (0, i.uniqBy)(e, "id")
+    if (t === l.CollectiblesItemType.PROFILE_EFFECT) {
+      let t = (0, a.flatMap)([...e.values()], "items").filter(o.isProfileEffectRecord);
+      return (0, a.uniqBy)(t, "id")
     }
   },
-  A = e => S(e, a.CollectiblesItemType.AVATAR_DECORATION),
-  m = e => p(e, a.CollectiblesItemType.AVATAR_DECORATION),
-  C = (e, t) => {
-    var n;
+  T = (e, t) => {
+    let r = E(e);
+    if (t === l.CollectiblesItemType.AVATAR_DECORATION) {
+      let e = (0, a.flatMap)(r, "items").filter(u.isAvatarDecorationRecord);
+      return (0, a.uniqBy)(e, "id")
+    }
+    if (t === l.CollectiblesItemType.PROFILE_EFFECT) {
+      let e = (0, a.flatMap)(r, "items").filter(o.isProfileEffectRecord);
+      return (0, a.uniqBy)(e, "id")
+    }
+  },
+  g = e => A(e, l.CollectiblesItemType.AVATAR_DECORATION),
+  m = e => T(e, l.CollectiblesItemType.AVATAR_DECORATION),
+  I = (e, t) => (0, a.uniqBy)([...g(e), ...m(t)], "id"),
+  P = (e, t) => {
+    var r;
     let {
-      CDN_HOST: i,
-      API_ENDPOINT: a
-    } = window.GLOBAL_ENV, l = (0, r.getBestMediaProxySize)(t.size * (0, r.getDevicePixelRatio)()), s = null !== (n = null == t ? void 0 : t.format) && void 0 !== n ? n : "png";
-    if (null != i) return "".concat(location.protocol, "//").concat(i, "/app-assets/").concat(u.COLLECTIBLES_APPLICATION_ID, "/").concat(e, ".").concat(s, "?size=").concat(l);
-    let o = u.Endpoints.APPLICATION_ASSET(u.COLLECTIBLES_APPLICATION_ID, e, s);
-    return "".concat(location.protocol).concat(a).concat(o, "?size=").concat(l)
+      CDN_HOST: a,
+      API_ENDPOINT: l
+    } = window.GLOBAL_ENV, i = (0, n.getBestMediaProxySize)(t.size * (0, n.getDevicePixelRatio)()), u = null !== (r = null == t ? void 0 : t.format) && void 0 !== r ? r : "png";
+    if (null != a) return "".concat(location.protocol, "//").concat(a, "/app-assets/").concat(s.COLLECTIBLES_APPLICATION_ID, "/").concat(e, ".").concat(u, "?size=").concat(i);
+    let o = s.Endpoints.APPLICATION_ASSET(s.COLLECTIBLES_APPLICATION_ID, e, u);
+    return "".concat(location.protocol).concat(l).concat(o, "?size=").concat(i)
   },
-  v = e => S(e, a.CollectiblesItemType.PROFILE_EFFECT),
-  g = e => p(e, a.CollectiblesItemType.PROFILE_EFFECT),
-  I = (e, t) => {
-    let n = v(t),
-      i = g(e).filter(e => {
+  p = e => A(e, l.CollectiblesItemType.PROFILE_EFFECT),
+  F = e => T(e, l.CollectiblesItemType.PROFILE_EFFECT),
+  _ = (e, t) => {
+    let r = p(t),
+      a = F(e).filter(e => {
         let {
           id: t
         } = e;
-        return !n.some(e => e.id === t)
+        return !r.some(e => e.id === t)
       });
     return {
-      purchased: n,
-      shopPreviews: i
+      purchased: r,
+      shopPreviews: a
     }
   },
-  T = e => e.applicationId === u.COLLECTIBLES_APPLICATION_ID,
-  N = e => 3.8 * e
+  O = e => e.applicationId === s.COLLECTIBLES_APPLICATION_ID,
+  y = e => 3.8 * e
