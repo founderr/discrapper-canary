@@ -92,12 +92,14 @@ function c(e) {
   var t, n, s;
   return {
     id: e.id,
+    preview: e.preview,
     config: {
       expiresAt: (t = e.config).expires_at,
       streamDurationRequirementMinutes: t.stream_duration_requirement_minutes,
       gameTitle: t.game_title,
       getGameLink: t.get_game_link,
       applicationId: t.application_id,
+      applicationName: t.application_name,
       messages: {
         questName: (n = t.messages).quest_name,
         rewardName: n.reward_name,
