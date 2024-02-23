@@ -51,8 +51,8 @@ var i, s, l, a = n("627445"),
   L = n("870691"),
   T = n("42203"),
   R = n("816092"),
-  b = n("305961"),
-  A = n("957255"),
+  A = n("305961"),
+  b = n("957255"),
   O = n("660478"),
   D = n("18494"),
   G = n("282109"),
@@ -64,8 +64,8 @@ var i, s, l, a = n("627445"),
   H = n("323137"),
   B = n("796618"),
   x = n("49111"),
-  Y = n("724210"),
-  k = n("843455");
+  k = n("724210"),
+  Y = n("843455");
 let W = "placeholder-channel-id",
   z = 2;
 (l = i || (i = {}))[l.CannotShow = 1] = "CannotShow", l[l.DoNotShow = 2] = "DoNotShow", l[l.WouldShowIfUncollapsed = 3] = "WouldShowIfUncollapsed", l[l.Show = 4] = "Show";
@@ -312,7 +312,7 @@ class Z {
     var n, i;
     this.id = e, this.sortedNamedCategories = null, this.sections = null, this.rows = null, this.firstVoiceChannel = void 0, this.allChannelsById = null, this.version = 0, this.hideMutedChannels = G.default.isGuildCollapsed(this.id), this.mutedChannelIds = G.default.getMutedChannels(this.id), this.optedInChannels = null !== (n = G.default.getOptedInChannelsWithPendingUpdates(this.id)) && void 0 !== n ? n : G.default.getOptedInChannels(this.id), this.optInEnabled = (0, E.isOptInEnabledForGuild)(this.id), this.hideResourceChannels = (0, g.canSeeOnboardingHome)(this.id), this.favoriteChannelIds = new Set(null !== (i = G.default.getGuildFavorites(this.id)) && void 0 !== i ? i : []), this.suggestedFavoriteChannelId = _.default.getSuggestedChannelId(this.id), this.collapsedCategoryIds = L.default.getCollapsedCategories();
     let s = T.default.getMutableGuildChannelsForGuild(this.id),
-      l = b.default.getGuild(this.id),
+      l = A.default.getGuild(this.id),
       a = {},
       d = [],
       o = {};
@@ -388,7 +388,7 @@ class $ extends Q {
 }
 class ee extends Q {
   shouldShowEmptyCategory() {
-    return !!(super.shouldShowEmptyCategory() || A.default.can(k.Permissions.MANAGE_CHANNELS, this.record) && A.default.can(k.Permissions.VIEW_CHANNEL, this.record) && h.isEmpty(this.channels) && (!this.guild.optInEnabled || this.guild.optedInChannels.has(this.id))) || !1
+    return !!(super.shouldShowEmptyCategory() || b.default.can(Y.Permissions.MANAGE_CHANNELS, this.record) && b.default.can(Y.Permissions.VIEW_CHANNEL, this.record) && h.isEmpty(this.channels) && (!this.guild.optInEnabled || this.guild.optedInChannels.has(this.id))) || !1
   }
   constructor(e, t, n, i) {
     for (let s of (super(e), this.record = t, this.id = t.id, this.isCollapsed = !0 === e.collapsedCategoryIds[t.id], this.isMuted = e.mutedChannelIds.has(t.id), this.channels = {}, n)) this.channels[s.id] = new er(this, s, i)
@@ -632,7 +632,7 @@ class er extends ea {
       activeJoinedRelevantThreads: s,
       activeJoinedUnreadThreads: l
     } = e, a = [];
-    if (!A.default.can(k.Permissions.VIEW_CHANNEL, this.record)) {
+    if (!b.default.can(Y.Permissions.VIEW_CHANNEL, this.record)) {
       if (this.id === i) return {
         renderLevel: 4,
         threadIds: a
@@ -651,7 +651,7 @@ class er extends ea {
     let o = (null == n ? void 0 : n.id) === this.id || i === this.id,
       u = null != n && n.isThread() && n.parent_id === this.id,
       c = null !== (t = o || u || !this.category.isCollapsed && !this.isMuted ? s[this.id] : l[this.id]) && void 0 !== t ? t : {};
-    return (a = eC(this.record, c, n, i, d.hideMutedChannels), d.optInEnabled && d.hideResourceChannels && this.record.hasFlag(Y.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) ? {
+    return (a = eC(this.record, c, n, i, d.hideMutedChannels), d.optInEnabled && d.hideResourceChannels && this.record.hasFlag(k.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) ? {
       renderLevel: o ? 4 : 1,
       threadIds: a
     } : !d.optInEnabled || d.optedInChannels.has(this.id) || null != r && d.optedInChannels.has(r) ? o || u || !h.isEmpty(a) || O.default.getMentionCount(this.id) > 0 ? {
@@ -680,7 +680,7 @@ class ed extends ea {
       selectedVoiceChannelId: i,
       activeJoinedRelevantThreads: s
     } = e;
-    return A.default.can(k.Permissions.VIEW_CHANNEL, this.record) ? {
+    return b.default.can(Y.Permissions.VIEW_CHANNEL, this.record) ? {
       renderLevel: 4,
       threadIds: eC(this.record, null !== (t = s[this.id]) && void 0 !== t ? t : {}, n, i, !1)
     } : {
@@ -697,7 +697,7 @@ class eh extends ea {
       selectedVoiceChannelId: i,
       activeJoinedRelevantThreads: s
     } = e;
-    return A.default.can(k.Permissions.VIEW_CHANNEL, this.record) ? {
+    return b.default.can(Y.Permissions.VIEW_CHANNEL, this.record) ? {
       renderLevel: ep(this, e) ? 4 : 3,
       threadIds: eC(this.record, null !== (t = s[this.id]) && void 0 !== t ? t : {}, n, i, !1)
     } : {
@@ -726,7 +726,7 @@ class eo extends er {
 class eu extends er {
   getRenderLevel(e) {
     let t = this.category.guild;
-    return !A.default.can(k.Permissions.VIEW_CHANNEL, this.record) || 4 === e || 3 === e || ef(t, this.record) ? 1 : this.category.isCollapsed ? h.some(U.default.getVoiceStatesForChannel(this.record.id)) ? 4 : 3 : 4
+    return !b.default.can(Y.Permissions.VIEW_CHANNEL, this.record) || 4 === e || 3 === e || ef(t, this.record) ? 1 : this.category.isCollapsed ? h.some(U.default.getVoiceStatesForChannel(this.record.id)) ? 4 : 3 : 4
   }
   computeState(e) {
     let t = super.computeState(e),
@@ -808,7 +808,7 @@ function eI(e, t, n) {
     selectedChannel: i,
     activeJoinedRelevantThreads: s
   } = n;
-  if (t.type === x.ChannelTypes.GUILD_DIRECTORY || !e.optInEnabled || t.isGuildVocal() || e.optedInChannels.has(t.id) || t.isThread() || null != t.parent_id && e.optedInChannels.has(t.parent_id) || e.hideResourceChannels && t.hasFlag(Y.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) return !1;
+  if (t.type === x.ChannelTypes.GUILD_DIRECTORY || !e.optInEnabled || t.isGuildVocal() || e.optedInChannels.has(t.id) || t.isThread() || null != t.parent_id && e.optedInChannels.has(t.parent_id) || e.hideResourceChannels && t.hasFlag(k.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) return !1;
   if (null != i && !(0, I.isInMainTabsExperiment)() && (i.id === t.id || i.isThread() && i.parent_id === t.id) || O.default.getMentionCount(t.id) > 0) return !0;
   let l = y.default.getNewChannelIds(e.id),
     a = Array.from(l).sort((e, t) => P.default.compare(t, e));
