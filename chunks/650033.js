@@ -11,7 +11,6 @@ let l = {
     enable_recently_active: "Enable recently active channels",
     happening_main_tab: "Enable Happening tab containing summaries",
     enable_recently_active_summaries: "Enable summaries in recently active view",
-    redesign_individual_feature_you_tab: "Enable You tab in the old UI",
     disable_theme_key: "Disable reloading the entire app when the theme changes",
     theme_setting_in_account_sheet: "Show theme settings in the Account action sheet",
     cozy_header: "Cozy header",
