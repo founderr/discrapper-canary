@@ -22,8 +22,8 @@ var n = l("274870"),
   N = l("733160"),
   g = l("990864"),
   _ = l("274652"),
-  p = l("922744"),
-  I = l("155207"),
+  I = l("922744"),
+  p = l("155207"),
   x = l("745183"),
   v = l("368121"),
   A = l("944633"),
@@ -38,7 +38,7 @@ function j(e, t) {
       return a.default;
     case M.ChannelTypes.GROUP_DM:
       let l = (0, n.getIsBroadcastingGDM)(e.id);
-      return l ? d.default : I.default;
+      return l ? d.default : p.default;
     case M.ChannelTypes.GUILD_ANNOUNCEMENT:
       if (e.isNSFW()) return _.default;
       if ((0, L.default)(e)) return g.default;
@@ -64,11 +64,11 @@ function j(e, t) {
       return v.default;
     case M.ChannelTypes.ANNOUNCEMENT_THREAD:
     case M.ChannelTypes.PUBLIC_THREAD:
-      if (e.isNSFW()) return p.default;
+      if (e.isNSFW()) return I.default;
       if (e.isForumPost()) return S.default;
       else return T.default;
     case M.ChannelTypes.PRIVATE_THREAD:
-      if (e.isNSFW()) return p.default;
+      if (e.isNSFW()) return I.default;
       return x.default;
     case M.ChannelTypes.GUILD_DIRECTORY:
       return s.default;

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return I
+    return p
   }
 }), l("881410");
 var n = l("37983");
@@ -24,7 +24,7 @@ var a = l("414456"),
   g = l("961523"),
   _ = l("206464");
 
-function p(e) {
+function I(e) {
   let {
     guildId: t,
     onClick: l
@@ -52,7 +52,7 @@ function p(e) {
   }) : null
 }
 
-function I(e) {
+function p(e) {
   let {
     onSelectGuild: t
   } = e, l = (0, u.useStateFromStores)([m.default], () => m.default.getGuildFolders());
@@ -63,7 +63,7 @@ function I(e) {
       let {
         guildIds: l
       } = e;
-      return l.map(e => (0, n.jsx)(p, {
+      return l.map(e => (0, n.jsx)(I, {
         guildId: e,
         onClick: t
       }, e))

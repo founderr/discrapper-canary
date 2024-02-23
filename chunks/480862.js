@@ -35,7 +35,7 @@ function C(e) {
     section: c.AnalyticsSections.STREAM_SETTINGS,
     object: c.AnalyticsObjects.PREMIUM_UPSELL_BANNER,
     objectType: c.AnalyticsObjectTypes.BUY
-  }, p = () => (0, n.jsx)(u.default, {
+  }, I = () => (0, n.jsx)(u.default, {
     className: s(S.enhancedCTA, {
       [S.ctaGradientBackground]: N
     }),
@@ -76,8 +76,8 @@ function C(e) {
           look: r.Button.Looks.OUTLINED,
           size: r.Button.Sizes.TINY,
           children: m.default.Messages.LEARN_MORE
-        }), p()]
-      }) : p()
+        }), I()]
+      }) : I()
     })]
   }) : (0, n.jsxs)(r.Clickable, {
     onClick: () => a({

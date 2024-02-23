@@ -26,8 +26,8 @@ var n = l("37983"),
       tryItText: N,
       dismissText: g,
       onTryFeature: _,
-      onClose: p,
-      className: I,
+      onClose: I,
+      className: p,
       inlineArt: x = !1,
       isPremiumFeature: v = !1,
       shouldUseHorizontalButtons: A = !1,
@@ -38,24 +38,24 @@ var n = l("37983"),
       art: j,
       isPremiumEarlyAccess: O = !1,
       maxWidth: D = 280
-    } = e, P = A ? i.Button.Sizes.LARGE : i.Button.Sizes.MAX, [b, U] = a.useState(!1), {
-      ref: G,
-      width: y
+    } = e, P = A ? i.Button.Sizes.LARGE : i.Button.Sizes.MAX, [G, U] = a.useState(!1), {
+      ref: b,
+      width: V
     } = (0, u.default)();
 
-    function V(e) {
+    function w(e) {
       (0, o.markDismissibleContentAsDismissed)(T, {
         dismissAction: e
       })
     }
     return a.useEffect(() => {
       var e, t;
-      let l = (null !== (t = null === (e = G.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-      !b && l > D && U(!0)
-    }, [b, y, G, D]), a.useEffect(() => {
+      let l = (null !== (t = null === (e = b.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
+      !G && l > D && U(!0)
+    }, [G, V, b, D]), a.useEffect(() => {
       (0, o.requestMarkDismissibleContentAsShown)(T)
     }, [T]), (0, n.jsx)("div", {
-      className: I,
+      className: p,
       ref: t,
       children: (0, n.jsxs)("div", {
         className: r(S.content, h, {
@@ -92,14 +92,14 @@ var n = l("37983"),
             children: l
           }) : l]
         }), (0, n.jsx)("div", {
-          ref: G,
-          className: b || !A ? S.buttonContainerVertical : S.buttonContainerHorizontal,
+          ref: b,
+          className: G || !A ? S.buttonContainerVertical : S.buttonContainerHorizontal,
           children: null != _ ? (0, n.jsxs)(n.Fragment, {
             children: [(0, n.jsx)(i.Button, {
               className: S.button,
               size: P,
               onClick: e => {
-                null == p || p(e), _(e), V(f.ContentDismissActionType.PRIMARY)
+                null == I || I(e), _(e), w(f.ContentDismissActionType.PRIMARY)
               },
               color: v || O ? i.Button.Colors.BRAND : i.Button.Colors.WHITE,
               look: v || O ? i.Button.Looks.INVERTED : i.Button.Looks.FILLED,
@@ -108,7 +108,7 @@ var n = l("37983"),
               className: S.button,
               size: P,
               onClick: e => {
-                null == p || p(e), V(f.ContentDismissActionType.DISMISS)
+                null == I || I(e), w(f.ContentDismissActionType.DISMISS)
               },
               color: v || O ? i.Button.Colors.WHITE : i.Button.Colors.BRAND,
               look: v || O ? i.Button.Looks.LINK : i.Button.Looks.FILLED,
@@ -118,7 +118,7 @@ var n = l("37983"),
             className: S.button,
             size: i.Button.Sizes.MAX,
             onClick: e => {
-              null == p || p(e), V(f.ContentDismissActionType.PRIMARY)
+              null == I || I(e), w(f.ContentDismissActionType.PRIMARY)
             },
             color: i.Button.Colors.WHITE,
             children: m.default.Messages.EDUCATION_NEW_FEATURE_CONFIRM

@@ -30,7 +30,7 @@ function g(e) {
   r(null != t, "Camera capture device cannot be null");
   let i = (0, S.default)(),
     g = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
-    [_, p] = a.useState(function(e, t, l) {
+    [_, I] = a.useState(function(e, t, l) {
       if (null != t && null != l) {
         let n = t.find(t => t.id === e);
         if (null == n) return;
@@ -63,7 +63,7 @@ function g(e) {
           value: _,
           className: N.marginaTop8,
           onChange: e => {
-            p(e), s(e)
+            I(e), s(e)
           },
           options: u.map(g, e => {
             let {

@@ -22,8 +22,8 @@ var n = l("37983"),
   N = l("803725"),
   g = l("49111"),
   _ = l("994428"),
-  p = l("782340"),
-  I = l("942175"),
+  I = l("782340"),
+  p = l("942175"),
   x = l("961523");
 let v = e => {
   let {
@@ -52,25 +52,25 @@ let v = e => {
         dismissibleContent: u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK,
         shouldUseHorizontalButtons: !0,
         inlineArt: !0,
-        artClassName: I.clipsEducationArt,
+        artClassName: p.clipsEducationArt,
         position: "right",
-        header: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
-        headerClassName: I.clipsEducationHeader,
+        header: I.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
+        headerClassName: p.clipsEducationHeader,
         body: (0, n.jsxs)(n.Fragment, {
           children: [(0, n.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "always-white",
-            children: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
+            children: I.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
           }), x ? (0, n.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "always-white",
-            className: I.warningText,
-            children: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
+            className: p.warningText,
+            children: I.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
               url: S.default.getArticleURL(g.HelpdeskArticles.CLIPS)
             })
           }) : null]
         }),
-        tryItText: p.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
+        tryItText: I.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
         onTryFeature: e => {
           (0, N.updateClipsEnabled)({
             clipsEnabled: !0,
@@ -94,17 +94,17 @@ var A = function(e) {
   r(null != s, "Clips keybind should be set");
   let u = C.toString(s.shortcut, !0);
   return (0, n.jsx)(o.FormItem, {
-    title: p.default.Messages.CLIPS_SETTINGS,
+    title: I.default.Messages.CLIPS_SETTINGS,
     titleClassName: x.formItemTitle,
     className: x.modalContent,
     children: (0, n.jsxs)("div", {
-      className: I.container,
+      className: p.container,
       children: [(0, n.jsx)(v, {
         clipsEnabled: a,
         guildId: l,
         isAnimationDone: t,
         children: (0, n.jsx)(o.FormSwitch, {
-          className: I.formSwitch,
+          className: p.formSwitch,
           value: a,
           onChange: e => (0, N.updateClipsEnabled)({
             clipsEnabled: e,
@@ -112,18 +112,18 @@ var A = function(e) {
             trackAnalytics: !0
           }),
           hideBorder: !0,
-          children: p.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
+          children: I.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
         })
       }), (0, n.jsx)(o.Text, {
         variant: "text-xs/normal",
         color: "interactive-normal",
-        className: I.description,
-        children: p.default.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
+        className: p.description,
+        children: I.default.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
           keybind: u,
           keybindHook: () => (0, n.jsx)("span", {
-            className: I.keybindHintKeys,
+            className: p.keybindHintKeys,
             children: (0, n.jsx)(o.KeyCombo, {
-              className: I.keybindShortcut,
+              className: p.keybindShortcut,
               shortcut: u
             })
           })

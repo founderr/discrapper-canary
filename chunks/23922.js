@@ -22,8 +22,8 @@ var n = l("37983"),
   N = l("773336"),
   g = l("301834"),
   _ = l("756898"),
-  p = l("375202"),
-  I = l("321443"),
+  I = l("375202"),
+  p = l("321443"),
   x = l("444276"),
   v = l("353927"),
   A = l("782340"),
@@ -87,7 +87,7 @@ async function L() {
 }
 
 function M(e) {
-  let t = (0, N.isWindows)() ? (0, p.default)(m.default, C.default) : null,
+  let t = (0, N.isWindows)() ? (0, I.default)(m.default, C.default) : null,
     l = m.default.getRunningGames();
   return null != t && (0, _.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, _.default)(e.id, t.windowHandle)) ? 1 : 0
 }
@@ -100,7 +100,7 @@ function j(e) {
     enableGoLiveCaptureCard: s
   } = g.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), i = S.default.supports(v.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [m, C] = a.useState(null), [N, _] = a.useState(null), p = null != N && N.length > 0, [L, M] = a.useState(u.DesktopSources.WINDOW), [j, O] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
+  }), i = S.default.supports(v.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [m, C] = a.useState(null), [N, _] = a.useState(null), I = null != N && N.length > 0, [L, M] = a.useState(u.DesktopSources.WINDOW), [j, O] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
   a.useEffect(() => {
     let e = P.current;
     return T().then(e => {
@@ -121,7 +121,7 @@ function j(e) {
       e.stop()
     }
   }, []);
-  let b = a.useCallback(e => {
+  let G = a.useCallback(e => {
       if (null !== e) {
         var t;
         D.current = e, O((t = !e.isScrolledToTop(), t))
@@ -143,7 +143,7 @@ function j(e) {
     align: E.default.Align.CENTER,
     children: (0, n.jsx)(c.Spinner, {})
   });
-  let G = U.map(e => {
+  let b = U.map(e => {
     let {
       id: a
     } = e, s = (null == t ? void 0 : t.id) === a;
@@ -159,14 +159,14 @@ function j(e) {
     }, a)
   });
 
-  function y() {
+  function V() {
     let e = D.current;
     null != e && O(!e.isScrolledToTop())
   }
   return (0, n.jsxs)(a.Fragment, {
     children: [(0, n.jsxs)("div", {
       className: R.segmentContainer,
-      children: [(0, n.jsx)(I.default, {
+      children: [(0, n.jsx)(p.default, {
         separator: j
       }), (0, n.jsx)(c.SegmentedControl, {
         options: function() {
@@ -177,7 +177,7 @@ function j(e) {
             name: A.default.Messages.GO_LIVE_MODAL_SCREENS,
             value: u.DesktopSources.SCREEN
           }];
-          return s && i && p && e.push({
+          return s && i && I && e.push({
             name: A.default.Messages.GO_LIVE_MODAL_CAPTURE,
             value: u.DesktopSources.CAMERA
           }), e
@@ -195,25 +195,25 @@ function j(e) {
     }), L === u.DesktopSources.CAMERA ? (0, n.jsx)("div", {
       className: R.sourceContainer,
       children: (0, n.jsx)(c.AdvancedScroller, {
-        ref: b,
+        ref: G,
         className: R.sourceScroller,
-        onScroll: y,
+        onScroll: V,
         children: (0, n.jsx)(h.default, {
           layout: h.default.Layout.WRAP,
           columns: 2,
           className: R.sourceContainer,
-          children: G
+          children: b
         })
       })
     }) : (0, n.jsx)(c.AdvancedScroller, {
-      ref: b,
+      ref: G,
       className: R.sourceScroller,
-      onScroll: y,
+      onScroll: V,
       children: (0, n.jsx)(h.default, {
         layout: h.default.Layout.WRAP,
         columns: 2,
         className: R.sourceContainer,
-        children: G
+        children: b
       })
     })]
   })

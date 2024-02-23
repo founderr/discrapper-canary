@@ -18412,8 +18412,6 @@ html.disable-forced-colors * {
 .mediaAttachmentsContainer_edba75 {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
     max-width: 550px;
     border-radius: 8px;
     overflow: hidden
