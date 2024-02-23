@@ -15116,6 +15116,7 @@ e.exports = Object.freeze({
   COLLECTIBLES_PURCHASE: "Buy for {price}",
   COLLECTIBLES_BUY_DECORATION: "Buy Decoration",
   COLLECTIBLES_ADD_TO_YOUR_COLLECTION: "Add to your collection",
+  COLLECTIBLES_CLAIM: "Claim",
   COLLECTIBLES_COLLECTING: "Collecting",
   COLLECTIBLES_COLLECTING_FINISHED: "Collecting finished",
   COLLECTIBLES_NITRO_EXCLUSIVE: "Nitro exclusive",
