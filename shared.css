@@ -27913,6 +27913,7 @@ span.button__4f306.disabled_dc5630 {
     align-self: stretch;
     display: flex;
     flex-direction: column;
+    height: 118px;
     gap: 12px
 }
 
@@ -27946,10 +27947,11 @@ span.button__4f306.disabled_dc5630 {
 
 .container_a98e7e {
     border-radius: 8px;
+    max-width: 375px;
+    overflow: hidden;
     -webkit-user-select: none;
     -moz-user-select: none;
-    user-select: none;
-    overflow: hidden
+    user-select: none
 }
 
 .image__2e834 {
