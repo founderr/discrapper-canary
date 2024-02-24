@@ -28064,7 +28064,7 @@ span.button__4f306.disabled_dc5630 {
 }
 
 .scrollContainer_a442c2:after {
-    background: linear-gradient(0deg, var(--primary-660)-3.62%, var(--primary-630)96.84%);
+    background: linear-gradient(0deg, var(--primary-660)-3.62%, rgba(0, 0, 0, 0)96.84%);
     bottom: 0;
     content: "";
     height: 52px;
