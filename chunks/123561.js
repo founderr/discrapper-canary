@@ -8,14 +8,14 @@ var i = n("917351"),
   o = n.n(i),
   l = n("446674"),
   a = n("913144"),
-  u = n("191225"),
-  d = n("203288"),
+  d = n("191225"),
+  u = n("203288"),
   s = n("398604"),
-  r = n("401690"),
-  E = n("755624"),
+  E = n("401690"),
+  r = n("755624"),
   _ = n("374363"),
-  c = n("271938"),
-  A = n("870691"),
+  A = n("271938"),
+  c = n("870691"),
   C = n("42203"),
   T = n("816092"),
   S = n("546463"),
@@ -25,11 +25,11 @@ var i = n("917351"),
   O = n("282109"),
   L = n("449008"),
   D = n("299039"),
-  p = n("319839"),
-  R = n("397336");
+  R = n("319839"),
+  p = n("397336");
 let h = null,
   b = null,
-  G = new p.default;
+  G = new R.default;
 
 function g() {
   let e = N.default.getChannelId(),
@@ -96,14 +96,14 @@ function B() {
   }), h = e, b = t, !0)
 }
 
-function v(e) {
+function V(e) {
   let {
     id: t
   } = e, n = C.default.getChannel(t);
   return null == n ? G.clearGuildId(t) : G.clearGuildId(n.guild_id)
 }
 
-function V(e) {
+function v(e) {
   let {
     guildId: t
   } = e;
@@ -122,7 +122,7 @@ function Y(e) {
 }
 class w extends l.default.Store {
   initialize() {
-    this.waitFor(r.default, c.default, A.default, C.default, T.default, u.default, S.default, d.default, s.default, E.default, I.default, f.default, N.default, O.default, _.default)
+    this.waitFor(E.default, A.default, c.default, C.default, T.default, d.default, S.default, u.default, s.default, r.default, I.default, f.default, N.default, O.default, _.default)
   }
   getGuild(e, t) {
     let n = G.getGuild(e, t);
@@ -168,9 +168,9 @@ var W = new w(a.default, {
   BULK_CLEAR_RECENTS: U,
   CACHE_LOADED_LAZY: g,
   CATEGORY_COLLAPSE_ALL: U,
-  CATEGORY_COLLAPSE: v,
+  CATEGORY_COLLAPSE: V,
   CATEGORY_EXPAND_ALL: U,
-  CATEGORY_EXPAND: v,
+  CATEGORY_EXPAND: V,
   CHANNEL_ACK: m,
   CHANNEL_COLLAPSE: function(e) {
     var t;
@@ -240,7 +240,7 @@ var W = new w(a.default, {
       guildId: t,
       user: n
     } = e;
-    return c.default.getId() === n.id && G.clearGuildId(t)
+    return A.default.getId() === n.id && G.clearGuildId(t)
   },
   GUILD_MUTE_EXPIRED: U,
   GUILD_ROLE_CREATE: U,
@@ -320,7 +320,7 @@ var W = new w(a.default, {
     let {
       settings: n
     } = e;
-    if (n.type !== R.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
+    if (n.type !== p.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
     let i = null === (t = n.proto.guilds) || void 0 === t ? void 0 : t.guilds,
       o = !1;
     return null != i && D.default.keys(i).forEach(e => {
@@ -328,8 +328,8 @@ var W = new w(a.default, {
       null != t && (o = G.updateRecentsCategory(e) || o)
     }), o
   },
-  VOICE_CATEGORY_COLLAPSE: V,
-  VOICE_CATEGORY_EXPAND: V,
+  VOICE_CATEGORY_COLLAPSE: v,
+  VOICE_CATEGORY_EXPAND: v,
   VOICE_CHANNEL_SELECT: B,
   VOICE_CHANNEL_STATUS_UPDATE: function(e) {
     return G.nonPositionalChannelIdUpdate(e.id)

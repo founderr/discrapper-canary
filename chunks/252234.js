@@ -54,7 +54,7 @@ function L(e) {
     autoTrackExposure: !1
   }), B = F && !k, V = (0, E.default)({
     channelId: t.id
-  }), H = !P && n, G = a.useCallback(e => {
+  }), G = !P && n, H = a.useCallback(e => {
     "focus" !== e.type && U()
   }, [U]), W = (0, u.useAnalyticsContext)(), Y = (0, o.useAppContext)(), z = Y === M.AppContext.POPOUT, {
     analyticsLocations: K
@@ -95,7 +95,7 @@ function L(e) {
             closePopout: n,
             setPopoutRef: s
           } = e;
-          return H ? (0, l.jsx)(_.ActivitiesMiniShelf, {
+          return G ? (0, l.jsx)(_.ActivitiesMiniShelf, {
             ref: s,
             channel: t,
             closePopout: n,
@@ -109,13 +109,13 @@ function L(e) {
           children: [(0, l.jsx)(A.default, {
             disabled: P,
             "aria-label": O,
-            label: H ? void 0 : O,
+            label: G ? void 0 : O,
             isActivityActive: V || b,
             className: j.controlButton,
             onClick: () => {
               Z(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(R.ContentDismissActionType.UNKNOWN)
             },
-            onMouseEnter: G,
+            onMouseEnter: H,
             onMouseLeave: w
           }), B ? (0, l.jsx)(I.FreeActivityIndicatorDot, {
             top: 4,

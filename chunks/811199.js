@@ -1,5 +1,5 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   DevToolsLayerContainer: function() {
     return s
   },
@@ -10,7 +10,7 @@ t.r(r), t.d(r, {
     return d
   }
 });
-var a = t("77078");
+var a = r("77078");
 let {
   Layer: n,
   LayerContainer: i,

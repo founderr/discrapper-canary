@@ -1,13 +1,13 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return l
   }
 });
-var a = t("37983");
-t("884691");
-var n = t("358344"),
-  i = t("388557");
+var a = r("37983");
+r("884691");
+var n = r("358344"),
+  i = r("388557");
 
 function l() {
   return (0, a.jsxs)(a.Fragment, {

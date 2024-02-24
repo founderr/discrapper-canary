@@ -1,10 +1,10 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return i
   }
 });
-var a = t("237436");
+var a = r("237436");
 let n = {
   figma: {
     category: "chat"

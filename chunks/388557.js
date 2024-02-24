@@ -1,22 +1,22 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return k
   }
-}), t("222007"), t("70102");
-var a = t("37983"),
-  n = t("884691"),
-  i = t("414456"),
-  l = t.n(i),
-  o = t("65597"),
-  s = t("872717"),
-  c = t("77078"),
-  d = t("850068"),
-  u = t("521012"),
-  h = t("811199"),
-  p = t("49111"),
-  m = t("699412"),
-  g = t("961295");
+}), r("222007"), r("70102");
+var a = r("37983"),
+  n = r("884691"),
+  i = r("414456"),
+  l = r.n(i),
+  o = r("65597"),
+  s = r("872717"),
+  c = r("77078"),
+  d = r("850068"),
+  u = r("521012"),
+  h = r("811199"),
+  p = r("49111"),
+  m = r("699412"),
+  g = r("961295");
 let f = [{
     label: "Nitro Monthly",
     value: "511651880837840896"
@@ -85,7 +85,7 @@ let f = [{
   };
 
 function k() {
-  let [e, r] = n.useState("511651880837840896"), t = (0, o.default)([u.default], () => u.default.getPremiumSubscription()), i = async () => {
+  let [e, t] = n.useState("511651880837840896"), r = (0, o.default)([u.default], () => u.default.getPremiumSubscription()), i = async () => {
     await s.default.post({
       url: "/debug/subscription",
       body: {
@@ -107,15 +107,15 @@ function k() {
         children: "Manage Subscription"
       }), (0, a.jsxs)("section", {
         className: g.buttons,
-        children: [null == t && (0, a.jsxs)(a.Fragment, {
+        children: [null == r && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(c.Text, {
             variant: "text-md/normal",
             children: " Subscription Type"
           }), (0, a.jsx)(c.Select, {
             serialize: e => e,
-            isSelected: r => r === e,
+            isSelected: t => t === e,
             options: f,
-            select: r,
+            select: t,
             popoutLayerContext: h.devToolsLayerContext
           }), (0, a.jsx)(c.Button, {
             size: c.Button.Sizes.SMALL,
@@ -127,8 +127,8 @@ function k() {
           onClick: p,
           children: "Delete Subscription"
         })]
-      }), null != t && (0, a.jsx)(v, {
-        subscription: t
+      }), null != r && (0, a.jsx)(v, {
+        subscription: r
       })]
     })
   })
@@ -136,9 +136,9 @@ function k() {
 
 function v(e) {
   let {
-    subscription: r
-  } = e, t = e => {
-    if (null == e && (e = r.status), e in b) return b[e];
+    subscription: t
+  } = e, r = e => {
+    if (null == e && (e = t.status), e in b) return b[e];
     throw Error("Unknown status")
   }, n = async e => {
     await s.default.patch({
@@ -147,7 +147,7 @@ function v(e) {
         subscription_status: e
       }
     })
-  }, i = r.planIdFromItems in {
+  }, i = t.planIdFromItems in {
     "978380692553465866": !0,
     "1024422698568122368": !0
   };
@@ -163,23 +163,23 @@ function v(e) {
       children: [(0, a.jsxs)(c.Text, {
         variant: "text-md/normal",
         children: [" Subscription Type: ", (() => {
-          let e = r.planIdFromItems;
+          let e = t.planIdFromItems;
           if (null == e) throw Error("No plan id");
           if (e in x) return x[e];
           throw Error("Unknown plan id")
         })(), " "]
       }), (0, a.jsxs)(c.Text, {
         variant: "text-md/normal",
-        children: [" Subscription ID ", r.id, " "]
+        children: [" Subscription ID ", t.id, " "]
       }), (0, a.jsxs)(c.Text, {
         style: {
           marginBottom: "15px"
         },
         variant: "text-md/normal",
-        children: ["Subscription Status: ", t()]
+        children: ["Subscription Status: ", r()]
       }), (0, a.jsx)(c.Select, {
-        serialize: e => t(e),
-        isSelected: e => e === r.status,
+        serialize: e => r(e),
+        isSelected: e => e === t.status,
         options: y,
         select: n,
         popoutLayerContext: h.devToolsLayerContext

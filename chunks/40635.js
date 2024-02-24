@@ -112,7 +112,7 @@ var l = n("37983"),
           directory_guild_id: N.id
         }))
       },
-      H = () => {
+      G = () => {
         U(""), h.clearDirectorySearch(x.id)
       };
     return w ? (0, l.jsx)(_.default, {
@@ -120,7 +120,7 @@ var l = n("37983"),
       setSearchQuery: U,
       mostRecentQuery: O,
       handleSearchKeyPress: V,
-      handleClearSearch: H,
+      handleClearSearch: G,
       handleCreateOrAddGuild: B,
       searchResults: b,
       searchFetching: P
@@ -140,7 +140,7 @@ var l = n("37983"),
       searchQuery: D,
       setSearchQuery: U,
       handleSearchKeyPress: V,
-      handleClearSearch: H,
+      handleClearSearch: G,
       handleCreateOrAddGuild: B,
       currentCategoryId: A,
       handleSelectCategory: e => {

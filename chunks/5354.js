@@ -1,10 +1,10 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return a
   }
 });
-var a = (0, t("237436").defineColorTokens)({
+var a = (0, r("237436").defineColorTokens)({
   "scrollbar-thin-thumb": {
     dark: "primary.730",
     light: {

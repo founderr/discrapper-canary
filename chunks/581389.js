@@ -47,8 +47,8 @@ var l, a, s = n("37983"),
   k = n("16916"),
   B = n("534222"),
   V = n("147257"),
-  H = n("109526"),
-  G = n("550410"),
+  G = n("109526"),
+  H = n("550410"),
   W = n("124824"),
   Y = n("213943"),
   z = n("742683"),
@@ -144,7 +144,7 @@ function eI(e) {
       disabled: u
     })
   };
-  return C ? R() : (0, s.jsx)(G.default, {
+  return C ? R() : (0, s.jsx)(H.default, {
     children: (0, s.jsx)(h.Popout, {
       renderPopout: e => {
         let {
@@ -401,7 +401,7 @@ var eN = function(e) {
       section: eg.AnalyticsSections.VOICE_CONTROL_TRAY,
       children: [(0, s.jsx)("div", {
         className: eC.eventPromptsContainer,
-        children: (0, s.jsx)(H.default, {
+        children: (0, s.jsx)(G.default, {
           channelId: t.id
         })
       }), (0, s.jsxs)("div", {

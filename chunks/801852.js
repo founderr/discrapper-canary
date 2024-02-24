@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ActivitiesMiniShelf: function() {
-    return G
+    return H
   }
 }), n("222007"), n("424973");
 var l = n("37983"),
@@ -43,13 +43,13 @@ var l = n("37983"),
   k = n("894860"),
   B = n("717387"),
   V = n("861948");
-let H = "vc-activities-".concat((0, u.v4)()),
-  G = a.forwardRef(function(e, t) {
+let G = "vc-activities-".concat((0, u.v4)()),
+  H = a.forwardRef(function(e, t) {
     let {
       channel: n,
       isHovered: s,
       closePopout: u,
-      onMouseEnter: G,
+      onMouseEnter: H,
       onMouseLeave: W,
       onClick: Y,
       className: z
@@ -127,11 +127,11 @@ let H = "vc-activities-".concat((0, u.v4)()),
         }), W(), Y()
       }, [eu, el, n, Y, W, er]),
       ec = a.useCallback(e => {
-        G(), I.default.track(P.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
+        H(), I.default.track(P.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
           guild_id: n.getGuildId()
         })
-      }, [G, n]),
+      }, [H, n]),
       ef = K ? (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)("img", {
           alt: b.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_GAME_NIGHT_POSTER_ALT,
@@ -202,13 +202,13 @@ let H = "vc-activities-".concat((0, u.v4)()),
       children: (0, l.jsx)(S.default, {
         children: (0, l.jsxs)(d.Dialog, {
           ref: t,
-          "aria-labelledby": H,
+          "aria-labelledby": G,
           className: z,
           children: [(0, l.jsx)(d.HeadingLevel, {
             forceLevel: 2,
             children: (0, l.jsx)(d.HiddenVisually, {
               children: (0, l.jsx)(d.H, {
-                id: H,
+                id: G,
                 children: b.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
               })
             })

@@ -1,26 +1,26 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return o
   }
 });
-var a = t("37983");
-t("884691");
-var n = t("469563"),
-  i = t("400033"),
-  l = t("75196"),
+var a = r("37983");
+r("884691");
+var n = r("469563"),
+  i = r("400033"),
+  l = r("75196"),
   o = (0, n.replaceIcon)(function(e) {
     let {
-      width: r = 16,
-      height: t = 16,
+      width: t = 16,
+      height: r = 16,
       color: n = "currentColor",
       foreground: i,
       ...o
     } = e;
     return (0, a.jsx)("svg", {
       ...(0, l.default)(o),
-      width: r,
-      height: t,
+      width: t,
+      height: r,
       viewBox: "0 0 22 23",
       children: (0, a.jsxs)("g", {
         fill: "none",

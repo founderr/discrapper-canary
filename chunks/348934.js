@@ -1,5 +1,5 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   canCurrentUserManageMessageFilters: function() {
     return s
   },
@@ -12,27 +12,27 @@ t.r(r), t.d(r, {
   useIsUserProfileRuleEnabled: function() {
     return u
   }
-}), t("222007");
-var a = t("446674"),
-  n = t("305961"),
-  i = t("957255"),
-  l = t("49111");
+}), r("222007");
+var a = r("446674"),
+  n = r("305961"),
+  i = r("957255"),
+  l = r("49111");
 let o = function(e) {
-  let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [n.default, i.default],
-    [t, a] = r,
-    o = t.getGuild(e);
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [n.default, i.default],
+    [r, a] = t,
+    o = r.getGuild(e);
   return null != o && a.can(l.Permissions.MANAGE_GUILD, o)
 };
 
 function s(e) {
   if (null == e) return !1;
-  let r = o(e);
-  return r
+  let t = o(e);
+  return t
 }
 
 function c(e) {
-  let r = o(e);
-  return r
+  let t = o(e);
+  return t
 }
 
 function d(e) {
@@ -41,7 +41,7 @@ function d(e) {
 
 function u(e) {
   return (0, a.useStateFromStores)([n.default], () => {
-    let r = n.default.getGuild(e);
-    return (null == r ? void 0 : r.hasFeature(l.GuildFeatures.COMMUNITY)) || !1
+    let t = n.default.getGuild(e);
+    return (null == t ? void 0 : t.hasFeature(l.GuildFeatures.COMMUNITY)) || !1
   }, [e])
 }

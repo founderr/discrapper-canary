@@ -1,34 +1,34 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return g
+    return m
   }
 });
-var n = r("446674"),
-  s = r("913144"),
-  i = r("177589"),
+var i = r("446674"),
+  n = r("913144"),
+  s = r("177589"),
   l = r("824563"),
   a = r("843823"),
   u = r("697218"),
   o = r("49111");
-let d = !1,
-  c = {},
+let c = !1,
+  d = {},
   f = {};
 
-function h(e) {
+function p(e) {
   let t = !1;
   return e.forEach(e => {
     t = !1 !== E(e) || t
   }), t
 }
 
-function p(e) {
+function h(e) {
   let t = f[e];
   if (null == t) return !1;
   let r = t.gameId;
-  return null != c[r] && (c = {
-    ...c
-  }, delete c[r][e], 0 === Object.values(c[r]).length && delete c[r]), f = {
+  return null != d[r] && (d = {
+    ...d
+  }, delete d[r][e], 0 === Object.values(d[r]).length && delete d[r]), f = {
     ...f
   }, delete f[e], !0
 }
@@ -39,44 +39,44 @@ function E(e) {
     activities: r
   } = e;
   if (null == t) return !1;
-  let n = r.filter(e => e.type !== o.ActivityTypes.CUSTOM_STATUS);
-  if (0 === n.length) return p(t.id);
-  let s = !1;
-  return n.forEach(e => {
+  let i = r.filter(e => e.type !== o.ActivityTypes.CUSTOM_STATUS);
+  if (0 === i.length) return h(t.id);
+  let n = !1;
+  return i.forEach(e => {
     (function(e, t) {
-      var r, n, s, l;
-      let a = (0, i.default)(e);
-      if (null == a) return p(t.id);
+      var r, i, n, l;
+      let a = (0, s.default)(e);
+      if (null == a) return h(t.id);
       let u = f[t.id];
-      null != u && u.gameId !== a && p(t.id);
-      let o = null !== (n = null === (r = e.timestamps) || void 0 === r ? void 0 : r.start) && void 0 !== n ? n : Date.now(),
-        d = {
+      null != u && u.gameId !== a && h(t.id);
+      let o = null !== (i = null === (r = e.timestamps) || void 0 === r ? void 0 : r.start) && void 0 !== i ? i : Date.now(),
+        c = {
           userId: t.id,
           activity: e,
           startedPlaying: o
         };
-      return s = a, l = d, c = {
-        ...c,
-        [s]: {
-          ...c[s],
+      return n = a, l = c, d = {
+        ...d,
+        [n]: {
+          ...d[n],
           [l.userId]: l
         }
       }, f = {
         ...f,
         [l.userId]: {
-          gameId: s,
+          gameId: n,
           startedPlaying: l.startedPlaying
         }
       }, !0
-    })(e, t) && (s = !0)
-  }), s
+    })(e, t) && (n = !0)
+  }), n
 }
 
-function v() {
+function _() {
   let e = !1;
-  if (!a.default.needsRefresh() && !d) {
+  if (!a.default.needsRefresh() && !c) {
     let t;
-    c = {}, f = {}, t = !1, l.default.getUserIds().forEach(e => {
+    d = {}, f = {}, t = !1, l.default.getUserIds().forEach(e => {
       let r = u.default.getUser(e);
       null != r && (t = E({
         user: r,
@@ -84,44 +84,44 @@ function v() {
       }) || t)
     }), e = t
   }
-  return d = !a.default.needsRefresh(), e
+  return c = !a.default.needsRefresh(), e
 }
-class _ extends n.default.Store {
+class v extends i.default.Store {
   initialize() {
-    this.waitFor(a.default), this.syncWith([a.default], v)
+    this.waitFor(a.default), this.syncWith([a.default], _)
   }
   get games() {
-    return c
+    return d
   }
   get usersPlaying() {
     return f
   }
   get gameIds() {
-    return Object.keys(c)
+    return Object.keys(d)
   }
   getNowPlaying(e) {
-    return c[e]
+    return d[e]
   }
   getUserGame(e) {
     return f[e]
   }
 }
-_.displayName = "NowPlayingStore";
-var g = new _(s.default, {
+v.displayName = "NowPlayingStore";
+var m = new v(n.default, {
   CONNECTION_OPEN: function() {
-    c = {}, f = {}
+    d = {}, f = {}
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
       guilds: t,
       presences: r
-    } = e, n = !1;
+    } = e, i = !1;
     return t.forEach(e => {
-      h(e.presences) && (n = !0)
-    }), h(r) && (n = !0), n
+      p(e.presences) && (i = !0)
+    }), p(r) && (i = !0), i
   },
   LOGOUT: function() {
-    c = {}, f = {}
+    d = {}, f = {}
   },
   PRESENCE_UPDATES: function(e) {
     let {
@@ -133,6 +133,6 @@ var g = new _(s.default, {
     let {
       presences: t
     } = e;
-    return h(t)
+    return p(t)
   }
 })

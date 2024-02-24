@@ -50,7 +50,7 @@ function k(e) {
     channel: n,
     closePopout: p,
     onFocus: C
-  } = e, y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([g.default], () => g.default.getCurrentUser()), B = _.default.canUseFancyVoiceChannelReactions(k), V = (0, i.useStateFromStores)([T.default], () => T.default.getState().animationType), H = a.useRef(!1), G = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...G, ...F], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
+  } = e, y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([g.default], () => g.default.getCurrentUser()), B = _.default.canUseFancyVoiceChannelReactions(k), V = (0, i.useStateFromStores)([T.default], () => T.default.getState().animationType), G = a.useRef(!1), H = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...H, ...F], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: n,
     intention: U
@@ -80,7 +80,7 @@ function k(e) {
       })
     },
     Q = e => {
-      H.current = e, e && f.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
+      G.current = e, e && f.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
         channel_id: q,
         guild_id: J
       })
@@ -149,9 +149,9 @@ function k(e) {
               },
               onShowUpsell: () => (0, A.openEffectsUpsellModal)({
                 analytics: {
-                  type: H.current ? O.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : O.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
+                  type: G.current ? O.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : O.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
                   object: j.AnalyticsObjects.VOICE_CHANNEL_EFFECTS_TOGGLE,
-                  section: H.current ? j.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : j.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
+                  section: G.current ? j.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : j.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
                 }
               })
             })

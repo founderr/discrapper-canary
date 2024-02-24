@@ -1,5 +1,5 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return l
   },
@@ -9,10 +9,10 @@ t.r(r), t.d(r, {
   getEPSBankDisplayNameFromBankName: function() {
     return d
   }
-}), t("222007");
-var a = t("862205"),
-  n = t("49111"),
-  i = t("782340"),
+}), r("222007");
+var a = r("862205"),
+  n = r("49111"),
+  i = r("782340"),
   l = (0, a.createExperiment)({
     kind: "user",
     id: "2021-08_regional_payment_methods",

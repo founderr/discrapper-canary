@@ -1,5 +1,5 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   IconTypes: function() {
     return a
   },
@@ -9,12 +9,12 @@ t.r(r), t.d(r, {
   default: function() {
     return h
   }
-}), t("781738");
-var a, n, i = t("37983"),
-  l = t("884691"),
-  o = t("414456"),
-  s = t.n(o),
-  c = t("870620");
+}), r("781738");
+var a, n, i = r("37983"),
+  l = r("884691"),
+  o = r("414456"),
+  s = r.n(o),
+  c = r("870620");
 (n = a || (a = {})).UNKNOWN = "unknown", n.VISA = "visa", n.DISCOVER = "discover", n.MASTERCARD = "mastercard", n.AMEX = "amex", n.PAYPAL = "paypal", n.PAYMENT_REQUEST = "paymentRequest", n.G_PAY = "gPay", n.DINERS = "diners", n.JCB = "jcb", n.UNIONPAY = "unionpay", n.SOFORT = "sofort", n.PRZELEWY24 = "przelewy24", n.GIROPAY = "giropay", n.PAYSAFECARD = "paysafecard", n.GCASH = "gcash", n.GRABPAY = "grabpay", n.MOMO_WALLET = "momo_wallet", n.VENMO = "venmo", n.KAKAOPAY = "kakaopay", n.GOPAY_WALLET = "gopay_wallet", n.BANCONTACT = "bancontact", n.EPS = "eps", n.IDEAL = "ideal", n.CASH_APP = "cash_app", n.APPLE = "apple";
 let d = {
   SMALL: c.cardIconSmall,
@@ -25,21 +25,21 @@ let d = {
 class u extends l.PureComponent {
   static getType(e) {
     if (null == e) return "unknown";
-    let r = e.replace(/[^a-z0-9_]/gi, "").toUpperCase();
-    return a[r] || "unknown"
+    let t = e.replace(/[^a-z0-9_]/gi, "").toUpperCase();
+    return a[t] || "unknown"
   }
   render() {
     let {
       flipped: e,
-      type: r,
-      className: t,
+      type: t,
+      className: r,
       size: a
     } = this.props;
     return (0, i.jsx)("div", {
-      className: s(a, c[r], t, {
+      className: s(a, c[t], r, {
         [c.flipped]: e
       }),
-      children: r
+      children: t
     })
   }
 }

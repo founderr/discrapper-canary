@@ -57,7 +57,7 @@ var N = (0, u.default)(e => {
   }, U = (0, h.useThrottleDurationForChannel)(l.id), [w, F] = (0, h.useStageChannelParticipantsListThrottled)(l.id, D, U), k = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]], {
     speakerTileWidth: B,
     speakerTileHeight: V
-  } = T(a, b), H = N ? a - 32 : Math.min(a - 64, 3 * B + 8), G = e => e === w.length - 1 || 0 === R && 1 === e, [W, Y] = i.useState(!1), [z, K] = i.useState(!1);
+  } = T(a, b), G = N ? a - 32 : Math.min(a - 64, 3 * B + 8), H = e => e === w.length - 1 || 0 === R && 1 === e, [W, Y] = i.useState(!1), [z, K] = i.useState(!1);
   return (0, s.jsx)(p.default, {
     sections: k,
     renderSection: e => {
@@ -99,7 +99,7 @@ var N = (0, u.default)(e => {
             children: (0, s.jsx)(S.default, {
               channel: l,
               participant: a[0],
-              width: H
+              width: G
             })
           }, "selected-participant");
         case 1:
@@ -125,17 +125,17 @@ var N = (0, u.default)(e => {
     },
     rowHeight: e => {
       let t = null == F[e][0];
-      return t ? 0 : 0 === e ? H / S.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? W ? 0 : V : z ? 0 : 98
+      return t ? 0 : 0 === e ? G / S.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? W ? 0 : V : z ? 0 : 98
     },
     renderFooter: e => {
       let {
         section: t
       } = e;
-      return G(t) ? (0, s.jsx)("div", {
+      return H(t) ? (0, s.jsx)("div", {
         className: _.spacer
       }, "bottom-spacer") : null
     },
-    footerHeight: e => 1 === e ? 8 : 0 === e ? 12 : G(e) ? 88 : 0,
+    footerHeight: e => 1 === e ? 8 : 0 === e ? 12 : H(e) ? 88 : 0,
     className: _.scroller,
     chunkSize: 60,
     onScroll: u

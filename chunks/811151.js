@@ -1,24 +1,24 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return i
   }
 });
-var a = t("37983");
-t("884691");
-var n = t("75196");
+var a = r("37983");
+r("884691");
+var n = r("75196");
 
 function i(e) {
   let {
-    width: r = 24,
-    height: t = 24,
+    width: t = 24,
+    height: r = 24,
     color: i = "currentColor",
     ...l
   } = e;
   return (0, a.jsxs)("svg", {
     ...(0, n.default)(l),
-    width: r,
-    height: t,
+    width: t,
+    height: r,
     viewBox: "0 0 16 16",
     children: [(0, a.jsx)("path", {
       fillRule: "evenodd",

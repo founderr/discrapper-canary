@@ -1,17 +1,17 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   ReceiptIcon: function() {
     return l
   }
 });
-var a = t("37983");
-t("884691");
-var n = t("669491"),
-  i = t("82169");
+var a = r("37983");
+r("884691");
+var n = r("669491"),
+  i = r("82169");
 let l = e => {
   let {
-    width: r = 24,
-    height: t = 24,
+    width: t = 24,
+    height: r = 24,
     color: l = n.default.colors.INTERACTIVE_NORMAL,
     colorClass: o = "",
     ...s
@@ -19,8 +19,8 @@ let l = e => {
   return (0, a.jsx)("svg", {
     ...(0, i.default)(s),
     xmlns: "http://www.w3.org/2000/svg",
-    width: r,
-    height: t,
+    width: t,
+    height: r,
     fill: "none",
     viewBox: "0 0 24 24",
     children: (0, a.jsx)("path", {

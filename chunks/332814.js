@@ -1,5 +1,5 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   Properties: function() {
     return s
   },
@@ -10,46 +10,46 @@ t.r(r), t.d(r, {
     return d
   }
 });
-var a = t("37983");
-t("884691");
-var n = t("414456"),
-  i = t.n(n),
-  l = t("77078"),
-  o = t("699412");
+var a = r("37983");
+r("884691");
+var n = r("414456"),
+  i = r.n(n),
+  l = r("77078"),
+  o = r("699412");
 
 function s(e) {
   let {
-    className: r,
-    children: t
+    className: t,
+    children: r
   } = e;
   return (0, a.jsx)("dl", {
-    className: i(o.properties, r),
-    children: t
+    className: i(o.properties, t),
+    children: r
   })
 }
 
 function c(e) {
   let {
-    name: r,
-    children: t
+    name: t,
+    children: r
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("dt", {
       className: o.propertyName,
-      children: r
-    }), (0, a.jsx)("dd", {
       children: t
+    }), (0, a.jsx)("dd", {
+      children: r
     })]
   })
 }
 
 function d(e) {
   let {
-    value: r
+    value: t
   } = e;
   return (0, a.jsx)(l.Checkbox, {
     size: 16,
-    value: r,
+    value: t,
     shape: l.Checkbox.Shapes.SMALL_BOX,
     displayOnly: !0
   })

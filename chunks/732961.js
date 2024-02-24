@@ -48,7 +48,7 @@ function v(e) {
     F = c.default.getVideoComponent(),
     k = d.default.getId(),
     [B, V] = a.useState(null),
-    [H, G] = a.useState(!0),
+    [G, H] = a.useState(!0),
     [W, Y] = a.useState(!1),
     z = j.type === S.ParticipantTypes.ACTIVITY,
     K = !z && null != j.streamId,
@@ -65,7 +65,7 @@ function v(e) {
     el = !Q && !z;
   t = el ? 40 + Math.max(0, 72 - (b - et) / 2) : Q ? -16 : -8, a.useEffect(() => {
     let e = setTimeout(() => {
-      G(!1)
+      H(!1)
     }, 250);
     return () => {
       clearTimeout(e)
@@ -124,7 +124,7 @@ function v(e) {
       }
     }),
     eo = a.useCallback(e => {
-      V(e), G(!1)
+      V(e), H(!1)
     }, []),
     ed = Q || O ? [] : (0, p.getPipParticipants)(x, j, k),
     {
@@ -136,7 +136,7 @@ function v(e) {
     children: [(0, l.jsxs)("div", {
       className: _.tileWrapper,
       style: {
-        opacity: K && H ? 0 : 1
+        opacity: K && G ? 0 : 1
       },
       children: [(0, l.jsxs)(r.animated.div, {
         className: _.videoFrame,

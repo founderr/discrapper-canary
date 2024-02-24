@@ -1,24 +1,24 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return h
   }
 });
-var a = t("37983");
-t("884691");
-var n = t("414456"),
-  i = t.n(n),
-  l = t("77078"),
-  o = t("15408"),
-  s = t("484894"),
-  c = t("769284"),
-  d = t("890957");
+var a = r("37983");
+r("884691");
+var n = r("414456"),
+  i = r.n(n),
+  l = r("77078"),
+  o = r("15408"),
+  s = r("484894"),
+  c = r("769284"),
+  d = r("890957");
 let u = () => {
-  t.el("776502").then(t.bind(t, "776502")).then(e => {
+  r.el("776502").then(r.bind(r, "776502")).then(e => {
     let {
-      openMFAModal: r
+      openMFAModal: t
     } = e;
-    r({
+    t({
       ticket: "ticket",
       methods: [{
         type: "webauthn",

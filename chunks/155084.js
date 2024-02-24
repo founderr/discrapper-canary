@@ -46,8 +46,8 @@ var o = new class t {
         body: {
           metrics: t,
           client_info: {
-            built_at: "1708728548331",
-            build_number: "268688"
+            built_at: "1708768710040",
+            build_number: "268842"
           }
         },
         retries: 1

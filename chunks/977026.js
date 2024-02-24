@@ -43,8 +43,8 @@ var l = n("37983"),
   k = n("293499"),
   B = n("277174"),
   V = n("711486"),
-  H = n("394640"),
-  G = n("343571"),
+  G = n("394640"),
+  H = n("343571"),
   W = n("751661"),
   Y = n("244480"),
   z = n("716214"),
@@ -275,10 +275,10 @@ function em(e) {
     isActive: n,
     className: er.buttonSpacing,
     label: n ? ei.default.Messages.STAGE_MUSIC_UNMUTE : ei.default.Messages.STAGE_MUSIC_MUTE,
-    iconComponent: () => n ? (0, l.jsx)(G.default, {
+    iconComponent: () => n ? (0, l.jsx)(H.default, {
       height: 24,
       width: 24
-    }) : (0, l.jsx)(H.default, {
+    }) : (0, l.jsx)(G.default, {
       height: 24,
       width: 24
     }),
@@ -287,10 +287,10 @@ function em(e) {
     isActive: s,
     className: er.buttonSpacing,
     label: s ? ei.default.Messages.STAGE_MUSIC_MUTE : ei.default.Messages.STAGE_MUSIC_UNMUTE,
-    iconComponent: () => s ? (0, l.jsx)(H.default, {
+    iconComponent: () => s ? (0, l.jsx)(G.default, {
       height: 24,
       width: 24
-    }) : (0, l.jsx)(G.default, {
+    }) : (0, l.jsx)(H.default, {
       height: 24,
       width: 24
     }),

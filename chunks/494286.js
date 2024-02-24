@@ -43,8 +43,8 @@ var l = n("37983"),
   k = n("393414"),
   B = n("168973"),
   V = n("581389"),
-  H = n("103738"),
-  G = n("486030"),
+  G = n("103738"),
+  H = n("486030"),
   W = n("908583"),
   Y = n("550410"),
   z = n("115531"),
@@ -229,7 +229,7 @@ class ew extends a.PureComponent {
       screenMessage: this.screenMessage,
       disableGradients: E,
       idle: !m && n && !E && e.idle,
-      children: n && this.popoutOpen && !this.inPopout ? null : (0, l.jsx)(H.default, {
+      children: n && this.popoutOpen && !this.inPopout ? null : (0, l.jsx)(G.default, {
         ref: this._contentRef,
         inCall: n,
         paused: this.paused,
@@ -498,7 +498,7 @@ class ew extends a.PureComponent {
           canChangeLayout: p,
           canInvite: E
         } = this.viewProperties,
-        g = s ? (0, l.jsx)(G.default, {
+        g = s ? (0, l.jsx)(H.default, {
           channel: n,
           stream: (null == r ? void 0 : r.type) === ey.ParticipantTypes.STREAM ? (0, D.decodeStreamKey)(r.id) : void 0,
           applicationId: (null == r ? void 0 : r.type) === ey.ParticipantTypes.ACTIVITY ? r.id : void 0,
@@ -693,8 +693,8 @@ var eF = function(e) {
       chatOpen: eI.default.getChatOpen(n.id),
       participantsVersion: eI.default.getParticipantsVersion(n.id)
     }
-  }, [E, n.id]), H = (0, o.useStateFromStoresArray)([en.default], () => en.default.getAllActiveStreams()), {
-    selectedStream: G
+  }, [E, n.id]), G = (0, o.useStateFromStoresArray)([en.default], () => en.default.getAllActiveStreams()), {
+    selectedStream: H
   } = (0, o.useStateFromStoresObject)([en.default], () => ({
     selectedStream: null != V ? en.default.getActiveStreamForStreamKey(V.id) : null
   }), [V]), W = (0, o.useStateFromStores)([ei.default], () => ei.default.getGuild(n.getGuildId())), Y = (0, o.useStateFromStores)([es.default], () => es.default.getCall(n.id), [n.id]), z = (0, o.useStateFromStores)([eu.default], () => eu.default.getMentionCount(n.id), [n.id]), K = (0, o.useStateFromStores)([el.default], () => el.default.getId()), {
@@ -743,7 +743,7 @@ var eF = function(e) {
             popoutWindow: Z,
             popoutWindowAlwaysOnTop: X,
             mentionCount: z,
-            selectedStream: G,
+            selectedStream: H,
             mode: D,
             inCall: C,
             participants: M,
@@ -755,7 +755,7 @@ var eF = function(e) {
             shouldUseVoiceEffectsActionBar: em,
             currentUserId: K,
             selectedParticipant: V,
-            allActiveStreams: H,
+            allActiveStreams: G,
             useNewInviteButton: ed,
             connectedToEmbeddedActivity: eh,
             showChatToasts: q,

@@ -43,8 +43,8 @@ var l = n("37983"),
   k = n("534471"),
   B = n("145635"),
   V = n("277354"),
-  H = n("100082"),
-  G = n("598050"),
+  G = n("100082"),
+  H = n("598050"),
   W = n("977026"),
   Y = n("679703"),
   z = n("276086"),
@@ -143,7 +143,7 @@ function ea(e) {
     onContinueClick: () => {
       (0, k.setIsOnStartStageScreen)(!1), !S && (0, D.connectToStage)(n)
     }
-  }) : S ? (0, l.jsx)(G.default, {
+  }) : S ? (0, l.jsx)(H.default, {
     channel: n,
     onScroll: e => {
       let {
@@ -178,7 +178,7 @@ function ea(e) {
       popoutWindowAlwaysOnTop: c,
       selectedParticipant: I
     }) : null,
-    renderHeader: () => (0, l.jsx)(H.default, {
+    renderHeader: () => (0, l.jsx)(G.default, {
       inPopout: g === Z.AppContext.POPOUT,
       toggleRequestToSpeakSidebar: s,
       showRequestToSpeakSidebar: o,

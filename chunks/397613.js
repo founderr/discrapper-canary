@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   ErrorBoundary: function() {
-    return r
+    return s
   }
 }), n("70102"), n("222007");
 var i = n("884691");
-let a = (0, i.createContext)(null),
-  l = {
+let r = (0, i.createContext)(null),
+  a = {
     didCatch: !1,
     error: null
   };
-class r extends i.Component {
+class s extends i.Component {
   static getDerivedStateFromError(e) {
     return {
       didCatch: !0,
@@ -22,11 +22,11 @@ class r extends i.Component {
       error: e
     } = this.state;
     if (null !== e) {
-      for (var t, n, i = arguments.length, a = Array(i), r = 0; r < i; r++) a[r] = arguments[r];
+      for (var t, n, i = arguments.length, r = Array(i), s = 0; s < i; s++) r[s] = arguments[s];
       null === (t = (n = this.props).onReset) || void 0 === t || t.call(n, {
-        args: a,
+        args: r,
         reason: "imperative-api"
-      }), this.setState(l)
+      }), this.setState(a)
     }
   }
   componentDidCatch(e, t) {
@@ -44,12 +44,12 @@ class r extends i.Component {
           t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
         return e.length !== t.length || e.some((e, n) => !Object.is(e, t[n]))
       }(e.resetKeys, i)) {
-      var a, r;
-      null === (a = (r = this.props).onReset) || void 0 === a || a.call(r, {
+      var r, s;
+      null === (r = (s = this.props).onReset) || void 0 === r || r.call(s, {
         next: i,
         prev: e.resetKeys,
         reason: "keys"
-      }), this.setState(l)
+      }), this.setState(a)
     }
   }
   render() {
@@ -57,30 +57,30 @@ class r extends i.Component {
       children: e,
       fallbackRender: t,
       FallbackComponent: n,
-      fallback: l
+      fallback: a
     } = this.props, {
-      didCatch: r,
-      error: u
-    } = this.state, s = e;
-    if (r) {
+      didCatch: s,
+      error: l
+    } = this.state, o = e;
+    if (s) {
       let e = {
-        error: u,
+        error: l,
         resetErrorBoundary: this.resetErrorBoundary
       };
-      if ((0, i.isValidElement)(l)) s = l;
-      else if ("function" == typeof t) s = t(e);
-      else if (n) s = (0, i.createElement)(n, e);
-      else throw u
+      if ((0, i.isValidElement)(a)) o = a;
+      else if ("function" == typeof t) o = t(e);
+      else if (n) o = (0, i.createElement)(n, e);
+      else throw l
     }
-    return (0, i.createElement)(a.Provider, {
+    return (0, i.createElement)(r.Provider, {
       value: {
-        didCatch: r,
-        error: u,
+        didCatch: s,
+        error: l,
         resetErrorBoundary: this.resetErrorBoundary
       }
-    }, s)
+    }, o)
   }
   constructor(e) {
-    super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = l
+    super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = a
   }
 }

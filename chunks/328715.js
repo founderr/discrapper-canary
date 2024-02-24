@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return G
+    return H
   }
 }), n("222007");
 var l = n("37983");
@@ -82,7 +82,7 @@ function V(e) {
   })
 }
 
-function H(e) {
+function G(e) {
   let t, {
       focusedApplication: n,
       focusedParticipant: a,
@@ -134,7 +134,7 @@ function H(e) {
   })
 }
 
-function G(e) {
+function H(e) {
   let {
     channel: t,
     guild: a,
@@ -162,7 +162,7 @@ function G(e) {
         className: s(F.channelStatusClickable, {
           [F.hoverable]: B
         }),
-        onClick: B ? G : void 0,
+        onClick: B ? H : void 0,
         children: [(0, l.jsx)(r.Text, {
           variant: "text-xs/normal",
           className: s(F.channelStatus, k.markup, {
@@ -179,7 +179,7 @@ function G(e) {
       })
     }) : null;
 
-  function G() {
+  function H() {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
@@ -216,7 +216,7 @@ function G(e) {
       }), (0, l.jsx)(C.HeaderGuildBreadcrumb, {
         channel: t,
         guild: a
-      }), (0, l.jsx)(H, {
+      }), (0, l.jsx)(G, {
         focusedApplication: v,
         focusedParticipant: E,
         channel: t

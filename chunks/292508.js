@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return G
+    return H
   }
 }), n("222007");
 var l = n("37983"),
@@ -190,7 +190,7 @@ class V extends a.Component {
 V.defaultProps = {
   withTitleBar: !0
 };
-let H = a.forwardRef(function(e, t) {
+let G = a.forwardRef(function(e, t) {
   let {
     guestWindow: n,
     focused: a
@@ -255,4 +255,4 @@ let H = a.forwardRef(function(e, t) {
     })
   })
 });
-var G = H
+var H = G

@@ -1,40 +1,40 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return S
   }
-}), t("222007");
-var a = t("37983"),
-  n = t("884691"),
-  i = t("414456"),
-  l = t.n(i),
-  o = t("446674"),
-  s = t("77078"),
-  c = t("810567"),
-  d = t("547896"),
-  u = t("664336"),
-  h = t("50625"),
-  p = t("928063"),
-  m = t("637171"),
-  g = t("724209"),
-  f = t("699412"),
-  b = t("232276");
+}), r("222007");
+var a = r("37983"),
+  n = r("884691"),
+  i = r("414456"),
+  l = r.n(i),
+  o = r("446674"),
+  s = r("77078"),
+  c = r("810567"),
+  d = r("547896"),
+  u = r("664336"),
+  h = r("50625"),
+  p = r("928063"),
+  m = r("637171"),
+  g = r("724209"),
+  f = r("699412"),
+  b = r("232276");
 
-function y(e, r) {
-  return e.store.getName().localeCompare(r.store.getName())
+function y(e, t) {
+  return e.store.getName().localeCompare(t.store.getName())
 }
 
 function x(e) {
   let {
-    store: r,
-    dataGetter: t
-  } = e, [i, l] = n.useState(t(r));
+    store: t,
+    dataGetter: r
+  } = e, [i, l] = n.useState(r(t));
   return n.useEffect(() => {
-    let e = () => l(t(r));
-    return e(), r.addChangeListener(e), () => {
-      r.removeChangeListener(e)
+    let e = () => l(r(t));
+    return e(), t.addChangeListener(e), () => {
+      t.removeChangeListener(e)
     }
-  }, [r, t]), (0, a.jsx)(s.ScrollerThin, {
+  }, [t, r]), (0, a.jsx)(s.ScrollerThin, {
     className: b.inspectorContainer,
     children: (0, a.jsx)(h.default, {
       data: i
@@ -46,9 +46,9 @@ let k = [{
     cellClassName: b.eventColumn,
     render(e) {
       let {
-        store: r
+        store: t
       } = e;
-      return r.getName()
+      return t.getName()
     }
   }],
   v = [{
@@ -56,15 +56,15 @@ let k = [{
     name: "Local Variables",
     render(e) {
       let {
-        store: r
+        store: t
       } = e;
-      return null == r.__getLocalVars ? (0, a.jsxs)("div", {
+      return null == t.__getLocalVars ? (0, a.jsxs)("div", {
         className: b.inspectorContainer,
         children: ["Store is missing ", (0, a.jsx)("code", {
           children: "__getLocalVars"
         }), " method."]
       }) : (0, a.jsx)(x, {
-        store: r,
+        store: t,
         dataGetter: e => e.__getLocalVars()
       })
     }
@@ -73,10 +73,10 @@ let k = [{
     name: "Store Instance",
     render(e) {
       let {
-        store: r
+        store: t
       } = e;
       return (0, a.jsx)(x, {
-        store: r,
+        store: t,
         dataGetter: e => e
       })
     }
@@ -84,8 +84,8 @@ let k = [{
 
 function C(e) {
   let {
-    store: r,
-    initialHeight: t
+    store: t,
+    initialHeight: r
   } = e, {
     TabBar: n,
     renderSelectedTab: i
@@ -95,35 +95,35 @@ function C(e) {
   return (0, a.jsxs)(p.default, {
     className: b.subPanel,
     minHeight: 100,
-    initialHeight: t,
+    initialHeight: r,
     children: [(0, a.jsx)(n, {}), (0, a.jsxs)(u.default, {
       className: l(f.headerBar, b.subPanelHeaderBar),
       children: [(0, a.jsx)(u.default.Icon, {
         icon: d.default,
-        tooltip: r.getName()
+        tooltip: t.getName()
       }), (0, a.jsx)(u.default.Title, {
-        children: r.getName()
+        children: t.getName()
       })]
     }), i({
-      store: r
+      store: t
     })]
   })
 }
 
 function S() {
   let e = n.useRef(null),
-    [r, t] = n.useState(""),
+    [t, r] = n.useState(""),
     i = o.Store.getAll(),
     d = n.useMemo(() => i.map(e => ({
       key: e._dispatchToken,
       store: e
     })).sort(y), [i]),
-    u = d.filter(e => (function(e, r) {
+    u = d.filter(e => (function(e, t) {
       let {
-        store: t
+        store: r
       } = e;
-      return t.getName().toLowerCase().includes(r.toLowerCase())
-    })(e, r)),
+      return r.getName().toLowerCase().includes(t.toLowerCase())
+    })(e, t)),
     [h, p] = n.useState(),
     g = i.find(e => e._dispatchToken === h);
   return (0, a.jsxs)("div", {
@@ -134,9 +134,9 @@ function S() {
       children: (0, a.jsx)(c.default, {
         className: b.searchBar,
         size: c.default.Sizes.SMALL,
-        query: r,
-        onChange: t,
-        onClear: () => t(""),
+        query: t,
+        onChange: r,
+        onClear: () => r(""),
         placeholder: "Search stores",
         "aria-label": "Search stores"
       })

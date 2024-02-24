@@ -28,7 +28,7 @@ function S(e) {
     appId: i,
     guildId: r,
     subscriptionGroupListing: S
-  } = e, [R, E] = s.useState(() => {
+  } = e, [N, E] = s.useState(() => {
     let e = u.default.getApplication(i);
     if (null != e) return {
       status: 2,
@@ -40,9 +40,9 @@ function S(e) {
     } : {
       status: 0
     }
-  }), N = 2 === R.status ? R.app : null;
+  }), R = 2 === N.status ? N.app : null;
   s.useEffect(() => {
-    0 === R.status && (E({
+    0 === N.status && (E({
       status: 1
     }), d.default.fetchApplication(i).then(e => {
       E({
@@ -55,8 +55,8 @@ function S(e) {
         error: e.message
       })
     }))
-  }, [i, R.status]);
-  let T = (0, l.useStateFromStoresArray)([g.default], () => g.default.getForApplication(i).filter(e => {
+  }, [i, N.status]);
+  let I = (0, l.useStateFromStoresArray)([g.default], () => g.default.getForApplication(i).filter(e => {
     switch (e.type) {
       case x.SKUTypes.DURABLE:
       case x.SKUTypes.CONSUMABLE:
@@ -67,13 +67,13 @@ function S(e) {
   }), [i]);
   if (s.useEffect(() => {
       (0, c.fetchAllStoreListingsForApplication)(i)
-    }, [i]), null == N) return null;
-  let I = b.default.Messages.STOREFRONT_TITLE.format({
-    appName: N.name
+    }, [i]), null == R) return null;
+  let T = b.default.Messages.STOREFRONT_TITLE.format({
+    appName: R.name
   });
   return (0, a.jsxs)(o.ModalRoot, {
     transitionState: n,
-    "aria-label": I,
+    "aria-label": T,
     size: o.ModalSize.LARGE,
     children: [(0, a.jsx)(o.ModalHeader, {
       children: (0, a.jsxs)(m.default, {
@@ -82,7 +82,7 @@ function S(e) {
           "aria-hidden": !0,
           color: f.default.INTERACTIVE_ACTIVE
         }), (0, a.jsx)(m.default.Title, {
-          children: I
+          children: T
         }), (0, a.jsx)(o.ModalCloseButton, {
           onClick: t,
           className: j.modalCloseButton
@@ -90,10 +90,10 @@ function S(e) {
       })
     }), (0, a.jsx)(o.ModalContent, {
       children: (0, a.jsx)(p.default, {
-        app: N,
+        app: R,
         subscriptionGroupListing: S,
         guildId: r,
-        products: T
+        products: I
       })
     })]
   })

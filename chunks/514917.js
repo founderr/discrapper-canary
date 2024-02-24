@@ -43,8 +43,8 @@ var l = n("37983"),
   k = n("802279"),
   B = n("465215"),
   V = n("301998"),
-  H = n("491250"),
-  G = n("453649"),
+  G = n("491250"),
+  H = n("453649"),
   W = n("849674"),
   Y = n("817080"),
   z = n("390413"),
@@ -130,7 +130,7 @@ var l = n("37983"),
       ev = null !== (t = N.default.getNickname(null, n.id, es)) && void 0 !== t ? t : A.default.getName(es),
       ex = (0, o.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
       [eN, eA, eM, eR, ej] = (0, o.useStateFromStoresArray)([M.default], () => [M.default.getMutualFriendsCount(es.id), M.default.getMutualFriends(es.id), M.default.getMutualGuilds(es.id), M.default.isFetchingProfile(es.id), M.default.isFetchingFriends(es.id)]),
-      eL = (0, G.useGetVoiceChannelInfoForVoiceActivitySection)(es.id),
+      eL = (0, H.useGetVoiceChannelInfoForVoiceActivitySection)(es.id),
       ey = null != eL && !eg && !eI,
       {
         showVoiceActivityInProfile: eO
@@ -185,12 +185,12 @@ var l = n("37983"),
       eV = a.useCallback(() => {
         !es.bot && !ej && null == ek && (0, c.fetchMutualFriends)(es.id)
       }, [ej, ek, es.id, es.bot]),
-      eH = a.useCallback(() => en(!0), []),
-      eG = a.useCallback(() => en(!1), []);
+      eG = a.useCallback(() => en(!0), []),
+      eH = a.useCallback(() => en(!1), []);
     return ef ? (0, l.jsx)("aside", {
       className: ee.profilePanel,
-      onMouseEnter: eH,
-      onMouseLeave: eG,
+      onMouseEnter: eG,
+      onMouseLeave: eH,
       children: (0, l.jsxs)(P.default, {
         user: es,
         profileType: Q.UserProfileTypes.PANEL,
@@ -209,7 +209,7 @@ var l = n("37983"),
             animateAssets: et,
             forceShowPremiumBadge: et
           }), (0, l.jsxs)(P.default.Inner, {
-            children: [(0, l.jsx)(H.default, {
+            children: [(0, l.jsx)(G.default, {
               user: es,
               nickname: ev,
               pronouns: null == er ? void 0 : er.pronouns
@@ -231,7 +231,7 @@ var l = n("37983"),
               hideNote: !1
             })]
           }), eO && ey ? (0, l.jsx)(P.default.Inner, {
-            children: (0, l.jsx)(G.default, {
+            children: (0, l.jsx)(H.default, {
               voiceGuild: eL.voiceGuild,
               voiceChannel: eL.voiceChannel,
               color: ee.appButtonColor
