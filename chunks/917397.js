@@ -40,11 +40,15 @@ function p(e, t) {
   return r ? null == a || null == s || null == i ? 1 : (0, f.hasFlag)(null !== (n = s.flags) && void 0 !== n ? n : 0, m.GuildMemberFlags.BYPASSES_VERIFICATION) || (0, f.hasFlag)(null !== (l = s.flags) && void 0 !== l ? l : 0, m.GuildMemberFlags.COMPLETED_ONBOARDING) ? 2 : 1 : 0
 }
 
-function E(e) {
-  let t = (0, u.default)([c.default], () => c.default.getUser(e), [e]);
-  if (null == t) return !1;
-  let n = (null == t ? void 0 : t.isPhoneVerified()) || (null == t ? void 0 : t.isStaff());
-  return t.verified || n
+function E(e, t) {
+  var n;
+  let l = (0, u.default)([c.default], () => c.default.getUser(e), [e]),
+    a = (0, u.default)([o.default], () => o.default.getMember(t, e), [t, e]);
+  if (null == l || null == a) return !1;
+  let s = (0, f.hasFlag)(null !== (n = a.flags) && void 0 !== n ? n : 0, m.GuildMemberFlags.BYPASSES_VERIFICATION),
+    i = (null == l ? void 0 : l.isPhoneVerified()) || (null == l ? void 0 : l.isStaff()),
+    r = (null == a ? void 0 : a.joinedAt) != null;
+  return l.verified || i || r || s
 }
 
 function g(e) {

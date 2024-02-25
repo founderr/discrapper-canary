@@ -30,7 +30,7 @@ var a = n("414456"),
 function x(e) {
   let {
     member: t
-  } = e, n = (0, i.default)([p.default], () => p.default.getGuild(t.guildId), [t.guildId]), a = (0, h.useUserAccountVerified)(t.userId), x = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId), N = (0, h.useUserAccountAgeDate)(t.userId), A = (0, h.useGuildMemberJoinedAtDate)(t.userId, t.guildId);
+  } = e, n = (0, i.default)([p.default], () => p.default.getGuild(t.guildId), [t.guildId]), a = (0, h.useUserAccountVerified)(t.userId, t.guildId), x = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId), N = (0, h.useUserAccountAgeDate)(t.userId), A = (0, h.useGuildMemberJoinedAtDate)(t.userId, t.guildId);
   return null == n ? null : (0, l.jsx)("div", {
     className: s(v.safetySignalsMainContainer),
     children: (0, l.jsx)(f.FormItem, {
