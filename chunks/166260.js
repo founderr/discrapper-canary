@@ -1,108 +1,106 @@
 "use strict";
-e.r(s), e.d(s, {
+s.r(e), s.d(e, {
   VibingWumpus: function() {
-    return A
+    return h
   },
   default: function() {
     return _
   }
-}), e("222007");
-var n = e("37983"),
-  i = e("884691"),
-  a = e("414456"),
-  u = e.n(a),
-  r = e("65597"),
-  o = e("283322"),
-  l = e("473109"),
-  c = e("77078"),
-  d = e("206230"),
-  f = e("491605"),
-  I = e("559922"),
-  N = e("782340"),
-  h = e("509728"),
-  p = e("932379"),
-  M = e("340419");
+}), s("222007");
+var n = s("37983"),
+  a = s("884691"),
+  i = s("414456"),
+  u = s.n(i),
+  r = s("65597"),
+  o = s("77078"),
+  l = s("206230"),
+  c = s("491605"),
+  d = s("830837"),
+  p = s("132755"),
+  f = s("559922"),
+  N = s("782340"),
+  m = s("509728"),
+  I = s("932379"),
+  M = s("340419");
 
-function A(t) {
+function h(t) {
   let {
-    onClose: s
-  } = t, [a, A] = i.useState(!1), _ = (0, r.default)([d.default], () => d.default.useReducedMotion);
-  i.useEffect(() => ((0, I.playVibingWumpusMusic)(), () => {
-    (0, I.stopVibingWumpusMusic)()
+    onClose: e
+  } = t, i = (0, r.default)([l.default], () => l.default.useReducedMotion), [h, _] = a.useState(!1);
+  a.useEffect(() => ((0, f.playVibingWumpusMusic)(), () => {
+    (0, f.stopVibingWumpusMusic)()
   }), []);
-  async function g() {
+  let x = () => {
+    h ? (0, f.playVibingWumpusMusic)() : (0, f.stopVibingWumpusMusic)(), _(!h)
+  };
+  async function A() {
     let {
       default: t
-    } = await e.el("926299").then(e.t.bind(e, "926299", 19));
+    } = await s.el("926299").then(s.t.bind(s, "926299", 19));
     return t
   }
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)("div", {
-      className: h.ringContainer,
+      className: m.ringContainer,
       children: (0, n.jsx)("img", {
         src: M,
         alt: "",
-        className: h.ringArt
+        className: m.ringArt
       })
-    }), (0, n.jsx)(f.default, {
-      importData: g,
-      shouldAnimate: !_,
-      className: h.wumpus,
-      pauseAtFrame: 200
-    }), (0, n.jsx)(c.ModalCloseButton, {
-      onClick: s,
-      className: h.closeButton
-    }), (0, n.jsxs)(c.ModalContent, {
-      className: u(p.body, h.body),
+    }), (0, n.jsx)(c.default, {
+      importData: A,
+      shouldAnimate: !h && !i,
+      className: m.wumpus,
+      pauseAtFrame: i ? 200 : void 0
+    }), (0, n.jsx)(o.Tooltip, {
+      text: h ? N.default.Messages.PLAY : N.default.Messages.PAUSE,
+      position: "top",
+      "aria-label": h ? N.default.Messages.PLAY : N.default.Messages.PAUSE,
+      children: t => (0, n.jsx)(o.Clickable, {
+        ...t,
+        onClick: x,
+        className: m.iconButton,
+        children: h ? (0, n.jsx)(p.default, {
+          className: m.icon
+        }) : (0, n.jsx)(d.default, {
+          className: m.icon
+        })
+      })
+    }), (0, n.jsxs)(o.ModalContent, {
+      className: u(I.body, m.body),
       children: [(0, n.jsxs)("div", {
-        className: u(p.textContainer, h.textContainer),
-        children: [(0, n.jsx)(c.Heading, {
+        className: u(I.textContainer, m.textContainer),
+        children: [(0, n.jsx)(o.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
           children: N.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_HEADER
-        }), (0, n.jsx)(c.Text, {
+        }), (0, n.jsx)(o.Text, {
           variant: "text-md/normal",
           color: "header-secondary",
           children: N.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_DESCRIPTION
         })]
-      }), (0, n.jsxs)("div", {
-        className: h.buttonContainer,
-        children: [(0, n.jsx)(c.Button, {
+      }), (0, n.jsx)("div", {
+        className: m.buttonContainer,
+        children: (0, n.jsx)(o.Button, {
           fullWidth: !0,
-          color: c.Button.Colors.BRAND,
-          size: c.Button.Sizes.MEDIUM,
-          onClick: s,
+          color: o.Button.Colors.BRAND,
+          size: o.Button.Sizes.MEDIUM,
+          onClick: e,
           children: N.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_RETURN
-        }), (0, n.jsxs)(c.Button, {
-          color: c.Button.Colors.TRANSPARENT,
-          look: c.Button.Looks.OUTLINED,
-          size: c.Button.Sizes.MEDIUM,
-          onClick: () => {
-            a ? (0, I.playVibingWumpusMusic)() : (0, I.stopVibingWumpusMusic)(), A(!a)
-          },
-          fullWidth: !0,
-          innerClassName: h.mute,
-          children: [a ? (0, n.jsx)(l.MusicSlashIcon, {
-            width: 20,
-            height: 20
-          }) : (0, n.jsx)(o.MusicIcon, {
-            width: 20,
-            height: 20
-          }), a ? N.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_UNMUTE : N.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_MUTE]
-        })]
+        })
       })]
     })]
   })
 }
 var _ = t => {
   let {
-    onClose: s,
-    transitionState: e
+    onClose: e,
+    transitionState: s
   } = t;
-  return (0, n.jsx)(c.ModalRoot, {
-    transitionState: e,
-    children: (0, n.jsx)(A, {
-      onClose: s
+  return (0, n.jsx)(o.ModalRoot, {
+    transitionState: s,
+    children: (0, n.jsx)(h, {
+      onClose: e
     })
   })
 }
