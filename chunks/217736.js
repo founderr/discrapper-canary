@@ -34,13 +34,15 @@ function o(e) {
     warningId: n,
     senderId: a,
     warningType: s,
-    cta: r
+    cta: r,
+    isNudgeWarning: o
   } = e;
   l.default.track(i.AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, {
     channel_id: t,
     warning_id: null != n ? parseInt(n) : void 0,
     warning_type: s,
     other_user_id: a,
-    cta: r
+    cta: r,
+    is_nudge_warning: o
   })
-}(a = s || (s = {})).DISMISS = "dismiss", a.OPEN_MORE_TIPS = "open_more_tips", a.USER_BANNER_BLOCK_CONFIRM = "user_banner_block_confirm", a.USER_BANNER_BLOCK_CANCEL = "user_banner_block_cancel", a.USER_MODAL_BLOCK_CONFIRM = "user_modal_block_confirm", a.USER_MODAL_BLOCK_CANCEL = "user_modal_block_cancel", a.USER_SAFETY_TOOLS_BLOCK_CONFIRM = "user_safety_tools_block_confirm", a.USER_SAFETY_TOOLS_BLOCK_CANCEL = "user_safety_tools_block_cancel", a.USER_MODAL_MUTE = "user_modal_mute", a.USER_MODAL_UNMUTE = "user_modal_unmute", a.FEEDBACK_UPVOTE = "feedback_upvote", a.FEEDBACK_DOWNVOTE = "feedback_downvote"
+}(a = s || (s = {})).DISMISS = "dismiss", a.OPEN_MORE_TIPS = "open_more_tips", a.USER_BANNER_BLOCK_CONFIRM = "user_banner_block_confirm", a.USER_BANNER_BLOCK_AND_REPORT_CONFIRM = "user_banner_block_and_report_confirm", a.USER_BANNER_BLOCK_CANCEL = "user_banner_block_cancel", a.USER_BANNER_OPEN_SAFETY_TOOLS = "user_banner_open_safety_tools", a.USER_MODAL_BLOCK_CONFIRM = "user_modal_block_confirm", a.USER_MODAL_BLOCK_CANCEL = "user_modal_block_cancel", a.USER_SAFETY_TOOLS_BLOCK_CONFIRM = "user_safety_tools_block_confirm", a.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM = "user_safety_tools_block_and_report_confirm", a.USER_SAFETY_TOOLS_BLOCK_CANCEL = "user_safety_tools_block_cancel", a.USER_SAFETY_TOOLS_REPORT = "user_safety_tools_report", a.USER_SAFETY_TOOLS_NO_FILTR = "user_safety_tools_no_filtr", a.USER_SAFETY_TOOLS_CTL = "user_safety_tools_ctl", a.USER_SAFETY_TOOLS_VIBING_WUMPUS = "user_safety_tools_vibing_wumpus", a.USER_SAFETY_TOOLS_SAFETY_TIPS = "user_safety_tools_safety_tips", a.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS = "user_safety_tools_about_safety_alerts", a.USER_MODAL_MUTE = "user_modal_mute", a.USER_MODAL_UNMUTE = "user_modal_unmute", a.FEEDBACK_UPVOTE = "feedback_upvote", a.FEEDBACK_DOWNVOTE = "feedback_downvote"

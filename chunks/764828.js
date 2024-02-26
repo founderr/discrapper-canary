@@ -82,7 +82,7 @@ var _ = new p(u.default, {
       warningIds: n
     } = e, i = c[t];
     if (null == i) return;
-    let a = Date.now().toString();
+    let a = new Date().toISOString();
     c[t] = i.map(e => n.includes(e.id) ? {
       ...e,
       dismiss_timestamp: a
