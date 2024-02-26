@@ -1,35 +1,40 @@
 "use strict";
 n.r(t), n.d(t, {
   SafetyWarningTypes: function() {
-    return r
+    return i
   },
   SafetyWarningFeedbackTypes: function() {
-    return s
+    return a
   },
   default: function() {
-    return _
+    return I
   }
-});
+}), n("222007");
 var i, a, r, s, l = n("446674"),
   u = n("913144"),
   o = n("42203");
-(i = r || (r = {}))[i.STRANGER_DANGER = 1] = "STRANGER_DANGER", i[i.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", i[i.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (a = s || (s = {}))[a.UPVOTE = 0] = "UPVOTE", a[a.DOWNVOTE = 1] = "DOWNVOTE";
+(r = i || (i = {}))[r.STRANGER_DANGER = 1] = "STRANGER_DANGER", r[r.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", r[r.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (s = a || (a = {}))[s.UPVOTE = 0] = "UPVOTE", s[s.DOWNVOTE = 1] = "DOWNVOTE";
 let d = [],
-  c = {};
+  c = {},
+  f = new Set;
 
-function f(e) {
+function E(e) {
+  return 2 === e.type || 3 === e.type
+}
+
+function p(e) {
   let {
     safetyWarnings: t
   } = e;
-  null != t && (c[e.id] = t), null == t && null != c[e.id] && delete c[e.id]
+  null != t && (c[e.id] = t, t.some(e => E(e) && null != e.dismiss_timestamp) && f.add(e.id)), null == t && (null != c[e.id] && delete c[e.id], f.delete(e.id))
 }
 
-function E() {
+function _() {
   c = {}, Object.values(o.default.getMutablePrivateChannels()).forEach(e => {
-    f(e)
+    p(e)
   })
 }
-class p extends l.default.Store {
+class C extends l.default.Store {
   initialize() {
     this.waitFor(o.default)
   }
@@ -41,21 +46,27 @@ class p extends l.default.Store {
     var t;
     return null !== (t = c[e]) && void 0 !== t ? t : d
   }
+  hasShownInitialTooltipForChannel(e) {
+    return f.has(e)
+  }
 }
-var _ = new p(u.default, {
+var I = new C(u.default, {
   CHANNEL_CREATE: function(e) {
-    f(e.channel)
+    p(e.channel)
   },
   CHANNEL_DELETE: function(e) {
-    null != c[e.channel.id] && delete c[e.channel.id]
+    let {
+      channel: t
+    } = e;
+    null != c[t.id] && delete c[t.id], f.delete(t.id)
   },
   CHANNEL_UPDATES: function(e) {
     e.channels.forEach(e => {
-      f(e)
+      p(e)
     })
   },
-  CONNECTION_OPEN: E,
-  CONNECTION_OPEN_SUPPLEMENTAL: E,
+  CONNECTION_OPEN: _,
+  CONNECTION_OPEN_SUPPLEMENTAL: _,
   CHANNEL_SAFETY_WARNING_FEEDBACK: function(e) {
     let {
       channelId: t,
@@ -82,10 +93,12 @@ var _ = new p(u.default, {
       warningIds: n
     } = e, i = c[t];
     if (null == i) return;
-    let a = new Date().toISOString();
+    let a = i.find(e => n.includes(e.id) && E(e));
+    null != a && f.add(t);
+    let r = new Date().toISOString();
     c[t] = i.map(e => n.includes(e.id) ? {
       ...e,
-      dismiss_timestamp: a
+      dismiss_timestamp: r
     } : e)
   }
 })
