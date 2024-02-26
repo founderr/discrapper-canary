@@ -7,8 +7,8 @@ l.r(t), l.d(t, {
 var a = l("37983");
 l("884691");
 var n = l("446674"),
-  u = l("77078"),
-  i = l("851387"),
+  i = l("77078"),
+  u = l("851387"),
   d = l("987317"),
   s = l("679653"),
   r = l("271938"),
@@ -45,18 +45,18 @@ function C(e, t) {
       context: l
     })) && !(0, g.isChannelFull)(l, I.default, E.default))
   });
-  return 0 === T.length ? null : (0, a.jsx)(u.MenuItem, {
+  return 0 === T.length ? null : (0, a.jsx)(i.MenuItem, {
     id: "voice-move",
     label: A.default.Messages.MOVE_TO,
     children: T.map(l => {
       let {
         channel: n
       } = l;
-      return (0, a.jsx)(u.MenuItem, {
+      return (0, a.jsx)(i.MenuItem, {
         id: n.id,
         action: () => {
           var l;
-          return l = n, void(e.id === r.default.getId() ? d.default.selectVoiceChannel(l.id) : i.default.setChannel(t, e.id, l.id))
+          return l = n, void(e.id === r.default.getId() ? d.default.selectVoiceChannel(l.id) : u.default.setChannel(t, e.id, l.id))
         },
         label: (0, s.computeChannelName)(n, m.default, S.default)
       }, n.id)

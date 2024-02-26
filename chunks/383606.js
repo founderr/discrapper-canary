@@ -6,8 +6,8 @@ l.r(t), l.d(t, {
 }), l("884691");
 var a = l("812204"),
   n = l("716241"),
-  u = l("599110"),
-  i = l("789150"),
+  i = l("599110"),
+  u = l("789150"),
   d = l("49111");
 
 function s(e, t, l) {
@@ -15,9 +15,9 @@ function s(e, t, l) {
     r = {
       guild_id: e,
       target_user_id: t,
-      subpanel_name: i.ModViewPanelNameMap[l],
+      subpanel_name: u.ModViewPanelNameMap[l],
       location: s,
       ...(0, n.collectGuildAnalyticsMetadata)(e)
     };
-  return u.default.track(d.AnalyticEvents.GUILD_MOD_VIEW_OPENED, r)
+  return i.default.track(d.AnalyticEvents.GUILD_MOD_VIEW_OPENED, r)
 }

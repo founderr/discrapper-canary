@@ -6,24 +6,24 @@ n.r(t), n.d(t, {
 }), n("222007"), n("424973"), n("808653");
 var l = n("917351"),
   a = n.n(l),
-  s = n("249654"),
-  i = n("446674"),
-  r = n("913144"),
-  u = n("42203"),
-  o = n("26989"),
-  d = n("10802"),
-  c = n("824563"),
-  f = n("101125"),
-  h = n("697218"),
-  m = n("449008"),
-  p = n("991170"),
+  s = n("446674"),
+  i = n("913144"),
+  r = n("42203"),
+  u = n("26989"),
+  o = n("10802"),
+  d = n("824563"),
+  c = n("101125"),
+  f = n("697218"),
+  h = n("449008"),
+  m = n("991170"),
+  p = n("299039"),
   E = n("158998"),
   g = n("49111");
 let S = {};
 class C {
   rebuild(e) {
     this.version++, this.sections = {}, null != e && (this.allUserIds = new Set(e));
-    let t = u.default.getChannel(this.parentId);
+    let t = r.default.getChannel(this.parentId);
     a(Array.from(this.allUserIds)).map(e => {
       let [n, l, a] = this.calculateNewState(e, t);
       return {
@@ -32,7 +32,7 @@ class C {
         displayName: l,
         canViewChannel: a
       }
-    }).sort((e, t) => s.default.compare(e.userId, t.userId)).sortBy(e => e.displayName).forEach(e => {
+    }).sort((e, t) => p.default.compare(e.userId, t.userId)).sortBy(e => e.displayName).forEach(e => {
       this.addUser(e.userId, e.sectionId, e.displayName, e.canViewChannel, !0)
     })
   }
@@ -41,11 +41,11 @@ class C {
   }
   updateUserId(e) {
     if (!this.allUserIds.has(e)) return !1;
-    let [t, n, l] = this.findOldState(e), [a, s, i] = this.calculateNewState(e, u.default.getChannel(this.parentId));
+    let [t, n, l] = this.findOldState(e), [a, s, i] = this.calculateNewState(e, r.default.getChannel(this.parentId));
     return (t !== a || n !== s || l !== i) && (this.removeUserId(e, t), this.addUser(e, a, s, i), !0)
   }
   addUserId(e) {
-    let [t, n, l] = this.calculateNewState(e, u.default.getChannel(this.parentId));
+    let [t, n, l] = this.calculateNewState(e, r.default.getChannel(this.parentId));
     this.addUser(e, t, n, l)
   }
   removeUserId(e, t) {
@@ -56,7 +56,7 @@ class C {
   }
   addUser(e, t, n, l, a) {
     this.allUserIds.add(e);
-    let s = h.default.getUser(e);
+    let s = f.default.getUser(e);
     if (null == s || "" === s.username) return;
     !(t in this.sections) && (this.sections[t] = {
       sectionId: t,
@@ -107,20 +107,20 @@ class C {
   }
   calculateNewState(e, t) {
     var n, l;
-    let a = o.default.getMember(this.guildId, e),
-      s = h.default.getUser(e),
-      i = h.default.getCurrentUser(),
+    let a = u.default.getMember(this.guildId, e),
+      s = f.default.getUser(e),
+      i = f.default.getCurrentUser(),
       r = (null == s ? void 0 : s.id) === (null == i ? void 0 : i.id),
-      u = r ? f.default.getStatus() : c.default.getStatus(e, this.guildId),
-      d = null != s && null != t && p.default.can({
+      o = r ? c.default.getStatus() : d.default.getStatus(e, this.guildId),
+      h = null != s && null != t && m.default.can({
         permission: g.Permissions.VIEW_CHANNEL,
         user: s,
         context: t
       }),
-      m = u !== g.StatusTypes.OFFLINE && u !== g.StatusTypes.INVISIBLE && u !== g.StatusTypes.UNKNOWN,
-      S = m ? null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : "online" : "offline",
+      p = o !== g.StatusTypes.OFFLINE && o !== g.StatusTypes.INVISIBLE && o !== g.StatusTypes.UNKNOWN,
+      S = p ? null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : "online" : "offline",
       C = null !== (l = null == a ? void 0 : a.nick) && void 0 !== l ? l : E.default.getName(s);
-    return [S, null == C ? void 0 : C.toLowerCase(), d]
+    return [S, null == C ? void 0 : C.toLowerCase(), h]
   }
   constructor(e, t, n) {
     this.guildId = e, this.parentId = t, this.threadId = n, this.version = 0, this.sections = {}, this.allUserIds = new Set
@@ -145,16 +145,16 @@ function T(e) {
   for (let e in S) S[e].guildId === t && (S[e].rebuild(), n = !0);
   return n
 }
-class v extends i.default.Store {
+class v extends s.default.Store {
   initialize() {
-    this.waitFor(u.default, o.default, d.default, c.default, f.default, h.default), this.syncWith([d.default], () => {
-      let e = d.default.getSubscribedThreadIds(),
+    this.waitFor(r.default, u.default, o.default, d.default, c.default, f.default), this.syncWith([o.default], () => {
+      let e = o.default.getSubscribedThreadIds(),
         t = !1;
       for (let n in S) !e.has(n) && (delete S[n], t = !0);
       return t
-    }), this.syncWith([f.default], () => {
+    }), this.syncWith([c.default], () => {
       var e;
-      return I(null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
+      return I(null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
     })
   }
   getMemberListVersion(e) {
@@ -174,7 +174,7 @@ class v extends i.default.Store {
   }
 }
 v.displayName = "ThreadMemberListStore";
-var x = new v(r.default, {
+var x = new v(i.default, {
   CONNECTION_OPEN: function() {
     S = {}
   },
@@ -215,7 +215,7 @@ var x = new v(r.default, {
       threadId: t,
       guildId: n,
       members: l
-    } = e, a = u.default.getChannel(t), s = null == a ? void 0 : a.parent_id;
+    } = e, a = r.default.getChannel(t), s = null == a ? void 0 : a.parent_id;
     null != s && (S[t] = new C(n, s, t), S[t].rebuild(l.map(e => e.user_id)))
   },
   USER_UPDATE: _,
@@ -239,7 +239,7 @@ var x = new v(r.default, {
     } = e, n = a(t).map(e => {
       var t;
       return null === (t = e.user) || void 0 === t ? void 0 : t.id
-    }).filter(m.isNotNullish).uniq().value(), l = !1;
+    }).filter(h.isNotNullish).uniq().value(), l = !1;
     for (let e in S) S[e].updateMultipleUserIds(n) && (l = !0);
     return l
   },

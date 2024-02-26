@@ -9,12 +9,12 @@ var n = l("37983"),
   i = l("77078"),
   r = l("244201"),
   o = l("401642"),
-  a = l("599110"),
-  d = l("49111"),
+  d = l("599110"),
+  a = l("49111"),
   s = l("782340");
 
 function c(e, t, l) {
-  let c = u.useContext(a.AnalyticsContext),
+  let c = u.useContext(d.AnalyticsContext),
     f = (0, r.useWindowDispatch)();
   return (0, n.jsx)(i.MenuItem, {
     id: "user-profile",
@@ -25,7 +25,7 @@ function c(e, t, l) {
         guildId: null != t ? t : void 0,
         channelId: null != l ? l : void 0,
         analyticsLocation: c.location
-      }), f.dispatch(d.ComponentActions.POPOUT_CLOSE)
+      }), f.dispatch(a.ComponentActions.POPOUT_CLOSE)
     }
   })
 }

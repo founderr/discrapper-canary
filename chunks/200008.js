@@ -25,11 +25,11 @@ n.r(t), n.d(t, {
     return g
   }
 }), n("222007");
-var r = n("249654"),
-  a = n("151426"),
-  i = n("872173"),
-  o = n("42203"),
-  u = n("957255"),
+var r = n("151426"),
+  a = n("872173"),
+  i = n("42203"),
+  o = n("957255"),
+  u = n("299039"),
   s = n("379881"),
   l = n("843455");
 
@@ -47,9 +47,9 @@ function d(e) {
       delete e[t];
       continue
     }
-    if (n.type === a.FavoriteChannelType.CATEGORY) continue;
-    let r = o.default.getChannel(t);
-    if (null == r || !r.isPrivate() && !u.default.can(l.Permissions.VIEW_CHANNEL, r)) {
+    if (n.type === r.FavoriteChannelType.CATEGORY) continue;
+    let a = i.default.getChannel(t);
+    if (null == a || !a.isPrivate() && !o.default.can(l.Permissions.VIEW_CHANNEL, a)) {
       delete e[t];
       continue
     }
@@ -58,42 +58,42 @@ function d(e) {
 
 function f(e, t) {
   let n = s.default.isFavorite(e);
-  !n && i.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
-    n.favoriteChannels[e] = a.FavoriteChannel.create({
+  !n && a.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+    n.favoriteChannels[e] = r.FavoriteChannel.create({
       nickname: "",
-      type: a.FavoriteChannelType.REFERENCE_ORIGINAL,
+      type: r.FavoriteChannelType.REFERENCE_ORIGINAL,
       position: c(),
       parentId: null != t ? t : "0"
     }), d(n.favoriteChannels)
-  }, i.UserSettingsDelay.FREQUENT_USER_ACTION)
+  }, a.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
 function C(e) {
   let t = s.default.getFavorite(e);
-  null != t && i.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
-    if (delete n.favoriteChannels[e], t.type === a.FavoriteChannelType.CATEGORY)
+  null != t && a.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+    if (delete n.favoriteChannels[e], t.type === r.FavoriteChannelType.CATEGORY)
       for (let t in n.favoriteChannels) n.favoriteChannels[t].parentId === e && (n.favoriteChannels[t].parentId = "0");
     d(n.favoriteChannels)
-  }, i.UserSettingsDelay.INFREQUENT_USER_ACTION)
+  }, a.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
 function v(e, t) {
   let n = s.default.isFavorite(e);
-  n && i.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+  n && a.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
     n.favoriteChannels[e].nickname = null != t ? t : ""
-  }, i.UserSettingsDelay.INFREQUENT_USER_ACTION)
+  }, a.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
 function h(e) {
-  let t = r.default.fromTimestamp(Date.now());
-  i.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
-    n.favoriteChannels[t] = a.FavoriteChannel.create({
+  let t = u.default.fromTimestamp(Date.now());
+  a.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+    n.favoriteChannels[t] = r.FavoriteChannel.create({
       nickname: e,
-      type: a.FavoriteChannelType.CATEGORY,
+      type: r.FavoriteChannelType.CATEGORY,
       position: c(),
       parentId: "0"
     })
-  }, i.UserSettingsDelay.FREQUENT_USER_ACTION)
+  }, a.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
 function p(e) {
@@ -101,23 +101,23 @@ function p(e) {
 }
 
 function E(e) {
-  i.PreloadedUserSettingsActionCreators.updateAsync("favorites", t => {
+  a.PreloadedUserSettingsActionCreators.updateAsync("favorites", t => {
     for (let r of e)
       if (null != r.position && (t.favoriteChannels[r.id].position = r.position), void 0 !== r.parent_id) {
         var n;
         t.favoriteChannels[r.id].parentId = null !== (n = r.parent_id) && void 0 !== n ? n : "0"
       }
-  }, i.UserSettingsDelay.FREQUENT_USER_ACTION)
+  }, a.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
 function A(e, t) {
-  i.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+  a.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
     n.favoriteChannels[e].parentId = null != t ? t : "0"
-  }, i.UserSettingsDelay.FREQUENT_USER_ACTION)
+  }, a.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
 function g() {
-  i.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
+  a.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
     e.muted = !e.muted
-  }, i.UserSettingsDelay.INFREQUENT_USER_ACTION)
+  }, a.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }

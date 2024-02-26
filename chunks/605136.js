@@ -47,8 +47,8 @@ function l(e, t) {
     i = {};
   return t.sort((t, n) => {
     var i, r;
-    let a = t.id === e ? 1 / 0 : -(null !== (i = t.originalPosition) && void 0 !== i ? i : t.position),
-      o = n.id === e ? 1 / 0 : -(null !== (r = n.originalPosition) && void 0 !== r ? r : n.position);
+    let a = e === t.id ? 1 / 0 : -(null !== (i = t.originalPosition) && void 0 !== i ? i : t.position),
+      o = e === n.id ? 1 / 0 : -(null !== (r = n.originalPosition) && void 0 !== r ? r : n.position);
     return a === o ? s.default.compare(t.id, n.id) : a < o ? -1 : a === o ? 0 : 1
   }).forEach((e, t) => {
     e.position = n - t, i[e.id] = e

@@ -7,16 +7,16 @@ u.r(e), u.d(e, {
     return F
   }
 }), u("424973"), u("222007");
-var l, n, d = u("249654"),
-  i = u("446674"),
-  r = u("407846"),
-  a = u("913144"),
-  o = u("718517");
+var l, n, d = u("446674"),
+  i = u("407846"),
+  r = u("913144"),
+  a = u("718517"),
+  o = u("299039");
 (n = l || (l = {}))[n.NOT_FETCHED = 0] = "NOT_FETCHED", n[n.FETCHING = 1] = "FETCHING", n[n.FETCHED = 2] = "FETCHED";
 let c = {},
   s = {},
   E = {},
-  C = 10 * o.default.Millis.MINUTE;
+  C = 10 * a.default.Millis.MINUTE;
 
 function f(t) {
   return "guild:".concat(t)
@@ -25,15 +25,15 @@ function f(t) {
 function _(t) {
   return "guild:".concat(t, ":published")
 }
-let T = new r.default(t => {
+let T = new i.default(t => {
     let e = [f(t.guild_id)];
     return t.published && e.push(_(t.guild_id)), e
   }, t => (function(t) {
-    let e = d.default.extractTimestamp(t.id);
+    let e = o.default.extractTimestamp(t.id);
     return t.published ? -e : -e + 1e12
   })(t)),
   D = [];
-class U extends i.default.Store {
+class U extends d.default.Store {
   getGuildProductsForGuildFetchState(t) {
     var e;
     return null !== (e = c[t]) && void 0 !== e ? e : 0
@@ -57,7 +57,7 @@ class U extends i.default.Store {
   }
 }
 U.displayName = "GuildProductsStore";
-var F = new U(a.default, {
+var F = new U(r.default, {
   CONNECTION_OPEN: function() {
     T.clear(), c = {}, s = {}, E = {}
   },

@@ -8,14 +8,14 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("424973");
 var l = n("884691"),
-  i = n("249654"),
-  a = n("446674"),
-  s = n("817963"),
-  r = n("872173"),
-  o = n("305961"),
-  u = n("957255"),
-  d = n("697218"),
-  c = n("719923"),
+  i = n("446674"),
+  a = n("817963"),
+  s = n("872173"),
+  r = n("305961"),
+  o = n("957255"),
+  u = n("697218"),
+  d = n("719923"),
+  c = n("299039"),
   f = n("880342"),
   m = n("469607"),
   p = n("235004"),
@@ -29,7 +29,7 @@ function S(e) {
       type: h.SoundboardSoundItemType.SOUND,
       sound: e
     }));
-  return t ? n.sort((e, t) => i.default.compare(e.sound.soundId, t.sound.soundId)) : n
+  return t ? n.sort((e, t) => c.default.compare(e.sound.soundId, t.sound.soundId)) : n
 }
 
 function C(e) {
@@ -79,16 +79,16 @@ function T(e, t) {
 function v(e) {
   let {
     filterOutEmptyCurrentGuild: t = !1
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser()), [g, v, I] = (0, a.useStateFromStoresArray)([p.default], () => [p.default.getSounds(), p.default.getFavorites(), p.default.isFetching()]), _ = (0, E.useSortedGuildIdsForSoundboard)(e, !1), N = (0, a.useStateFromStoresArray)([o.default], () => {
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], c = (0, i.useStateFromStores)([u.default], () => u.default.getCurrentUser()), [g, v, I] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getSounds(), p.default.getFavorites(), p.default.isFetching()]), _ = (0, E.useSortedGuildIdsForSoundboard)(e, !1), N = (0, i.useStateFromStoresArray)([r.default], () => {
     let e = [];
     return _.forEach(t => {
-      let n = o.default.getGuild(t);
+      let n = r.default.getGuild(t);
       null != n && e.push(n)
     }), e
-  }), A = c.default.canUseSoundboardEverywhere(i), y = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(null == e ? void 0 : e.guild_id)), x = (0, a.useStateFromStores)([u.default], () => {
+  }), A = d.default.canUseSoundboardEverywhere(c), y = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(null == e ? void 0 : e.guild_id)), x = (0, i.useStateFromStores)([o.default], () => {
     let {
       canCreateExpressions: e
-    } = (0, s.getManageResourcePermissions)(y);
+    } = (0, a.getManageResourcePermissions)(y);
     return e
   }, [y]), {
     canSeeRecentlyHeard: O,
@@ -98,11 +98,11 @@ function v(e) {
     autoTrackExposure: !0
   }), M = function() {
     l.useEffect(() => {
-      r.FrecencyUserSettingsActionCreators.loadIfNecessary()
+      s.FrecencyUserSettingsActionCreators.loadIfNecessary()
     }, []);
-    let e = (0, a.useStateFromStores)([m.default], () => m.default.frecentlyPlayedSounds);
+    let e = (0, i.useStateFromStores)([m.default], () => m.default.frecentlyPlayedSounds);
     return e
-  }(), L = (0, a.useStateFromStoresArray)([m.default], () => m.default.recentlyHeardSoundIds);
+  }(), L = (0, i.useStateFromStoresArray)([m.default], () => m.default.recentlyHeardSoundIds);
   return l.useMemo(() => {
     let e = [];
     return n ? (T(e, g), {

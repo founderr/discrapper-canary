@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return d
   }
 }), n("222007");
-var a = n("249654"),
-  s = n("913144"),
+var a = n("913144"),
+  s = n("299039"),
   l = n("578287"),
   i = n("716724"),
   r = n("613652"),
@@ -21,7 +21,7 @@ var a = n("249654"),
           socket: t
         } = e;
         return (0, l.validatePostMessageTransport)(t.transport), Promise.resolve({
-          instance_id: a.default.fromTimestamp(Date.now())
+          instance_id: s.default.fromTimestamp(Date.now())
         })
       }
     },
@@ -40,10 +40,10 @@ var a = n("249654"),
           }
         } = e;
         (0, l.validatePostMessageTransport)(t.transport);
-        let a = (0, r.default)();
-        return null != t.application.id && (null == a ? void 0 : a.id) != null && s.default.dispatch({
+        let s = (0, r.default)();
+        return null != t.application.id && (null == s ? void 0 : s.id) != null && a.default.dispatch({
           type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
-          channelId: a.id,
+          channelId: s.id,
           instanceId: n
         }), Promise.resolve()
       }
@@ -58,7 +58,7 @@ var a = n("249654"),
         } = e;
         (0, l.validatePostMessageTransport)(t.transport);
         let n = (0, r.default)();
-        return null != t.application.id && (null == n ? void 0 : n.id) != null && s.default.dispatch({
+        return null != t.application.id && (null == n ? void 0 : n.id) != null && a.default.dispatch({
           type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
           channelId: n.id,
           instanceId: null

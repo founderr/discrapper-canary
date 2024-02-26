@@ -24,19 +24,19 @@ var l = n("884691"),
   a = n.n(s),
   i = n("866227"),
   r = n.n(i),
-  o = n("249654"),
-  u = n("446674"),
-  c = n("151426"),
-  d = n("267363"),
-  h = n("320954"),
-  f = n("10641"),
-  p = n("290886"),
-  g = n("319839"),
-  v = n("194704"),
-  m = n("393414"),
-  C = n("42203"),
-  D = n("245997"),
-  E = n("660478"),
+  o = n("446674"),
+  u = n("151426"),
+  c = n("267363"),
+  d = n("320954"),
+  h = n("10641"),
+  f = n("290886"),
+  p = n("319839"),
+  g = n("194704"),
+  v = n("393414"),
+  m = n("42203"),
+  C = n("245997"),
+  D = n("660478"),
+  E = n("299039"),
   N = n("49111"),
   T = n("724210"),
   _ = n("796618"),
@@ -49,7 +49,7 @@ function O(e, t) {
 
 function x(e, t, n, s) {
   s = s.toLowerCase();
-  let i = (0, p.useCanSeeOnboardingHome)(e),
+  let i = (0, f.useCanSeeOnboardingHome)(e),
     r = l.useCallback((e, t) => !(i && e.channel.hasFlag(T.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== N.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || a(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [i]);
   return l.useMemo(() => {
     let e = {
@@ -61,13 +61,13 @@ function x(e, t, n, s) {
         channel: l
       } = n;
       "null" === l.id && (e.null = t.null.filter(e => r(e, s))), e[l.id] = t[l.id].filter(e => r(e, s))
-    }), e._categories = t._categories.filter(t => "null" === t.channel.id || 0 === s.length || e[t.channel.id].length > 0), (0, h.default)(e._categories, e).forEach(O), e
+    }), e._categories = t._categories.filter(t => "null" === t.channel.id || 0 === s.length || e[t.channel.id].length > 0), (0, d.default)(e._categories, e).forEach(O), e
   }, [t, n, r, s])
 }
 
 function S(e) {
   let t = e.getSections();
-  if (t[g.SECTION_INDEX_COMMUNITY] > 0) {
+  if (t[p.SECTION_INDEX_COMMUNITY] > 0) {
     let t = e.getCommunitySection().getRow(0);
     switch (t) {
       case _.ChannelListCommunityRow.GUILD_HOME:
@@ -78,7 +78,7 @@ function S(e) {
         return T.StaticChannelRoute.MEMBER_APPLICATIONS
     }
   }
-  for (let l = g.SECTION_INDEX_UNCATEGORIZED_CHANNELS; l < e.voiceChannelsSectionNumber; l++)
+  for (let l = p.SECTION_INDEX_UNCATEGORIZED_CHANNELS; l < e.voiceChannelsSectionNumber; l++)
     if (t[l] > 0) {
       var n;
       let t = null === (n = e.getChannelFromSectionRow(l, 0)) || void 0 === n ? void 0 : n.channel;
@@ -88,18 +88,18 @@ function S(e) {
 
 function M(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-  (0, v.bulkClearRecents)(e, t), (0, d.bulkAck)(t.map(e => ({
+  (0, g.bulkClearRecents)(e, t), (0, c.bulkAck)(t.map(e => ({
     channelId: e,
     readStateType: I.ReadStateTypes.CHANNEL,
-    messageId: E.default.lastMessageId(e)
-  }))), null != n && (0, m.transitionTo)(N.Routes.CHANNEL(e, n))
+    messageId: D.default.lastMessageId(e)
+  }))), null != n && (0, v.transitionTo)(N.Routes.CHANNEL(e, n))
 }
 
 function R(e, t, n, l) {
-  let s = (0, f.useIsDismissibleContentDismissed)(c.DismissibleContent.CHANNEL_BROWSER_NUX),
-    a = (0, u.useStateFromStoresObject)([C.default], () => {
+  let s = (0, h.useIsDismissibleContentDismissed)(u.DismissibleContent.CHANNEL_BROWSER_NUX),
+    a = (0, o.useStateFromStoresObject)([m.default], () => {
       let t = {},
-        n = C.default.getMutableGuildChannelsForGuild(e);
+        n = m.default.getMutableGuildChannelsForGuild(e);
       for (let e in n) {
         let {
           parent_id: s
@@ -126,7 +126,7 @@ function R(e, t, n, l) {
 
 function A(e) {
   var t, n;
-  let l = (0, u.useStateFromStores)([D.default], () => D.default.getCategories(e)),
+  let l = (0, o.useStateFromStores)([C.default], () => C.default.getCategories(e)),
     s = l._categories.length,
     a = l._categories[l._categories.length - 1];
   if (null == a) return 0;
@@ -138,6 +138,6 @@ function A(e) {
 function U(e) {
   var t;
   return L.default.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
-    timeAgo: r(o.default.extractTimestamp(null !== (t = E.default.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow()
+    timeAgo: r(E.default.extractTimestamp(null !== (t = D.default.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow()
   })
 }

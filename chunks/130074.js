@@ -22,8 +22,8 @@ var a = n("77078"),
   I = n("972701"),
   h = n("390008"),
   N = n("936947"),
-  S = n("918034"),
-  T = n("976127"),
+  T = n("918034"),
+  S = n("976127"),
   A = n("856030"),
   g = n("726750"),
   v = n("170990"),
@@ -70,7 +70,7 @@ var a = n("77078"),
       channel: n,
       guildId: void 0,
       onHeightUpdate: B
-    }), ep = (0, I.useAddToFavoritesItem)(n), e_ = (0, I.useRemoveFromFavoritesItem)(n), eC = (0, h.default)(n), eI = (0, N.default)(n), eh = (0, T.useMessageRequestItem)(n), eN = (0, S.useInappropriateConversationItem)(n), eS = (0, A.useSafetyWarningsItem)(n), eT = n.isManaged(), eA = t.isNonUserBot();
+    }), ep = (0, I.useAddToFavoritesItem)(n), e_ = (0, I.useRemoveFromFavoritesItem)(n), eC = (0, h.default)(n), eI = (0, N.default)(n), eh = (0, S.useMessageRequestItem)(n), eN = (0, T.useInappropriateConversationItem)(n), eT = (0, A.useSafetyWarningsItem)(n), eS = n.isManaged(), eA = t.isNonUserBot();
     return (0, i.jsxs)(a.Menu, {
       navId: "user-context",
       onClose: r.closeContextMenu,
@@ -81,7 +81,7 @@ var a = n("77078"),
       }), (0, i.jsx)(a.MenuGroup, {
         children: eh
       }), (0, i.jsx)(a.MenuGroup, {
-        children: eS
+        children: eT
       }), (0, i.jsx)(a.MenuGroup, {
         children: eN
       }), (0, i.jsxs)(a.MenuGroup, {
@@ -90,7 +90,7 @@ var a = n("77078"),
         children: !eA && ec
       }), (0, i.jsxs)(a.MenuGroup, {
         children: [!eA && (0, i.jsxs)(i.Fragment, {
-          children: [V && Y, Z, !eT && ee, V && K, V && z, q]
+          children: [V && Y, Z, !eS && ee, V && K, V && z, q]
         }), X]
       }), !eA && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(a.MenuGroup, {

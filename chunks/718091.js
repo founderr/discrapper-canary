@@ -13,43 +13,43 @@ var l = n("37983"),
   o = n("866227"),
   d = n.n(o),
   c = n("394846"),
-  f = n("249654"),
-  h = n("446674"),
-  m = n("77078"),
-  p = n("913144"),
-  E = n("561288"),
-  g = n("450911"),
-  S = n("630086"),
-  C = n("970728"),
-  _ = n("369008"),
-  I = n("736964"),
-  T = n("304580"),
-  v = n("137223"),
-  x = n("244201"),
-  N = n("716241"),
-  A = n("274870"),
-  M = n("843962"),
-  R = n("679653"),
-  j = n("52393"),
-  L = n("393414"),
-  y = n("233069"),
-  O = n("42203"),
-  P = n("330154"),
-  b = n("501090"),
-  D = n("945956"),
-  U = n("660478"),
-  w = n("27618"),
-  F = n("102985"),
-  k = n("697218"),
-  B = n("145131"),
-  V = n("476765"),
-  G = n("570443"),
-  H = n("76539"),
-  W = n("664336"),
-  Y = n("599110"),
-  z = n("306160"),
-  K = n("659500"),
-  Z = n("449008"),
+  f = n("446674"),
+  h = n("77078"),
+  m = n("913144"),
+  p = n("561288"),
+  E = n("450911"),
+  g = n("630086"),
+  S = n("970728"),
+  C = n("369008"),
+  _ = n("736964"),
+  I = n("304580"),
+  T = n("137223"),
+  v = n("244201"),
+  x = n("716241"),
+  N = n("274870"),
+  A = n("843962"),
+  M = n("679653"),
+  R = n("52393"),
+  j = n("393414"),
+  L = n("233069"),
+  y = n("42203"),
+  O = n("330154"),
+  P = n("501090"),
+  b = n("945956"),
+  D = n("660478"),
+  U = n("27618"),
+  w = n("102985"),
+  F = n("697218"),
+  k = n("145131"),
+  B = n("476765"),
+  V = n("570443"),
+  G = n("76539"),
+  H = n("664336"),
+  W = n("599110"),
+  Y = n("306160"),
+  z = n("659500"),
+  K = n("449008"),
+  Z = n("299039"),
   X = n("158998"),
   Q = n("993063"),
   q = n("849324"),
@@ -58,18 +58,18 @@ var l = n("37983"),
   ee = n("366160"),
   et = n("182893"),
   en = n("890957");
-let el = (0, V.uid)(),
-  ea = (0, V.uid)();
+let el = (0, B.uid)(),
+  ea = (0, B.uid)();
 
 function es(e) {
   let {
     className: t,
     children: n
   } = e;
-  return (0, l.jsxs)(B.default, {
-    align: B.default.Align.CENTER,
-    justify: B.default.Justify.CENTER,
-    direction: B.default.Direction.VERTICAL,
+  return (0, l.jsxs)(k.default, {
+    align: k.default.Align.CENTER,
+    justify: k.default.Justify.CENTER,
+    direction: k.default.Direction.VERTICAL,
     className: i(ee.errorState, t),
     children: [(0, l.jsx)("div", {
       className: i(ee.errorStateIcon, en.marginBottom20)
@@ -81,26 +81,26 @@ let ei = e => {
     let {
       channel: n,
       onClose: a
-    } = e, s = null !== (t = (0, R.default)(n)) && void 0 !== t ? t : "", i = (0, h.useStateFromStores)([U.default], () => {
+    } = e, s = null !== (t = (0, M.default)(n)) && void 0 !== t ? t : "", i = (0, f.useStateFromStores)([D.default], () => {
       var e;
-      return null !== (e = U.default.lastMessageId(n.id)) && void 0 !== e ? e : n.id
+      return null !== (e = D.default.lastMessageId(n.id)) && void 0 !== e ? e : n.id
     });
-    return (0, l.jsx)(m.Clickable, {
+    return (0, l.jsx)(h.Clickable, {
       onClick: () => {
-        (0, L.transitionToGuild)(J.ME, n.id), a()
+        (0, j.transitionToGuild)(J.ME, n.id), a()
       },
       children: (0, l.jsxs)("div", {
         className: ee.confirmChannelItemContainer,
-        children: [(0, l.jsx)(m.Avatar, {
-          src: (0, M.getChannelIconURL)(n),
-          size: m.AvatarSizes.SIZE_24,
+        children: [(0, l.jsx)(h.Avatar, {
+          src: (0, A.getChannelIconURL)(n),
+          size: h.AvatarSizes.SIZE_24,
           "aria-label": s
         }), (0, l.jsx)("span", {
           className: ee.confirmChannelName,
           children: s
         }), (0, l.jsx)("span", {
           className: ee.lastActiveTimestamp,
-          children: d(f.default.extractTimestamp(i)).fromNow()
+          children: d(Z.default.extractTimestamp(i)).fromNow()
         })]
       })
     })
@@ -110,27 +110,27 @@ let ei = e => {
       onConfirm: t,
       channelIds: n,
       ...a
-    } = e, s = (0, h.useStateFromStoresArray)([O.default], () => Array.from(n).map(O.default.getChannel), [n]);
-    return (0, l.jsxs)(m.ConfirmModal, {
+    } = e, s = (0, f.useStateFromStoresArray)([y.default], () => Array.from(n).map(y.default.getChannel), [n]);
+    return (0, l.jsxs)(h.ConfirmModal, {
       header: $.default.Messages.GROUP_DM_INVITE_CONFIRM,
       confirmText: $.default.Messages.GROUP_DM_INVITE_CONFIRM_BUTTON,
       cancelText: $.default.Messages.CANCEL,
       onConfirm: t,
-      confirmButtonColor: m.Button.Colors.BRAND,
+      confirmButtonColor: h.Button.Colors.BRAND,
       ...a,
-      children: [(0, l.jsx)(m.Text, {
+      children: [(0, l.jsx)(h.Text, {
         variant: "text-md/normal",
         children: $.default.Messages.GROUP_DM_INVITE_CONFIRM_DESCRIPTION
-      }), (0, l.jsx)(m.FormTitle, {
+      }), (0, l.jsx)(h.FormTitle, {
         className: ee.selectExistingFormHeader,
         children: $.default.Messages.GROUP_DM_INVITE_SELECT_EXISTING
-      }), (0, l.jsx)(m.Scroller, {
+      }), (0, l.jsx)(h.Scroller, {
         className: ee.confirmInviteScroller,
-        children: s.filter(Z.isNotNullish).sort((e, t) => {
+        children: s.filter(K.isNotNullish).sort((e, t) => {
           var n, l;
           let a = null !== (n = e.lastMessageId) && void 0 !== n ? n : e.id,
             s = null !== (l = t.lastMessageId) && void 0 !== l ? l : t.id;
-          return f.default.compare(s, a)
+          return Z.default.compare(s, a)
         }).map(e => (0, l.jsx)(ei, {
           onClose: a.onClose,
           channel: e
@@ -143,25 +143,25 @@ class eu extends a.PureComponent {
     let {
       channel: e
     } = this.props;
-    p.default.wait(() => _.default.open(null == e ? void 0 : e.id));
-    let t = (0, N.collectChannelAnalyticsMetadata)(e);
-    null != e ? e.isDM() ? Y.default.track(J.AnalyticEvents.OPEN_POPOUT, {
+    m.default.wait(() => C.default.open(null == e ? void 0 : e.id));
+    let t = (0, x.collectChannelAnalyticsMetadata)(e);
+    null != e ? e.isDM() ? W.default.track(J.AnalyticEvents.OPEN_POPOUT, {
       ...t,
       type: "Add Friends to DM",
       source: "DM",
       is_friend: !this.isNotFriends()
-    }) : Y.default.track(J.AnalyticEvents.OPEN_POPOUT, {
+    }) : W.default.track(J.AnalyticEvents.OPEN_POPOUT, {
       ...t,
       type: "Add Friends to DM",
       source: "Group DM"
-    }) : Y.default.track(J.AnalyticEvents.OPEN_POPOUT, {
+    }) : W.default.track(J.AnalyticEvents.OPEN_POPOUT, {
       ...t,
       type: "New Group DM",
       source: "Friends List"
-    }), K.ComponentDispatch.subscribe(J.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), K.ComponentDispatch.subscribe(J.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown)
+    }), z.ComponentDispatch.subscribe(J.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), z.ComponentDispatch.subscribe(J.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown)
   }
   componentWillUnmount() {
-    K.ComponentDispatch.unsubscribe(J.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), K.ComponentDispatch.unsubscribe(J.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), p.default.wait(() => _.default.close())
+    z.ComponentDispatch.unsubscribe(J.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), z.ComponentDispatch.unsubscribe(J.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), m.default.wait(() => C.default.close())
   }
   isNotFriends() {
     let {
@@ -170,7 +170,7 @@ class eu extends a.PureComponent {
     if (null == e || !e.isDM()) return !1;
     let t = e.getRecipientId();
     if (null == t) throw Error("no recipient in DM");
-    return !w.default.isFriend(t)
+    return !U.default.isFriend(t)
   }
   createInvite() {
     let {
@@ -184,7 +184,7 @@ class eu extends a.PureComponent {
     }, {
       autoTrackExposure: !1
     });
-    C.default.createInvite(e.id, {
+    S.default.createInvite(e.id, {
       max_age: t
     }, J.InstantInviteSources.GROUP_DM)
   }
@@ -197,7 +197,7 @@ class eu extends a.PureComponent {
   getMaxParticipants() {
     let {
       channel: e
-    } = this.props, t = k.default.getCurrentUser();
+    } = this.props, t = F.default.getCurrentUser();
     return null != t && t.isStaff() ? J.MAX_GROUP_DM_STAFF_PARTICIPANTS : null != e && e.isBroadcastChannel() ? J.MAX_GROUP_DM_BROADCAST_PARTICIPANTS : null != e && e.userLimit > 0 ? e.userLimit : J.MAX_GROUP_DM_PARTICIPANTS
   }
   getRemaining() {
@@ -212,7 +212,7 @@ class eu extends a.PureComponent {
       channel: e,
       selectedUsers: t
     } = this.props, n = this.getRemaining(), a = null != e && 0 === t.size || n < 0, s = t.size > 1 ? $.default.Messages.CREATE_GROUP_DM : $.default.Messages.CREATE_DM;
-    return (0, l.jsx)(m.Button, {
+    return (0, l.jsx)(h.Button, {
       fullWidth: !0,
       disabled: a,
       onClick: this.handleInviteUsers,
@@ -229,8 +229,8 @@ class eu extends a.PureComponent {
       a = 0 === t.size || n < 0;
     return (0, l.jsx)("div", {
       className: ee.addButton,
-      children: (0, l.jsx)(m.Button, {
-        size: m.Button.Sizes.SMALL,
+      children: (0, l.jsx)(h.Button, {
+        size: h.Button.Sizes.SMALL,
         disabled: a,
         onClick: this.handleInviteUsers,
         children: $.default.Messages.ADD
@@ -245,7 +245,7 @@ class eu extends a.PureComponent {
       }) : $.default.Messages.GROUP_DM_INVITE_REMAINING.format({
         number: e
       });
-    return (0, l.jsx)(m.Text, {
+    return (0, l.jsx)(h.Text, {
       variant: "text-xs/normal",
       className: i(ee.subtitle, {
         [ee.subtitleWarning]: e < 0
@@ -265,17 +265,17 @@ class eu extends a.PureComponent {
     if (!n || this.isNotFriends()) return null;
     let u = [];
     return r.forEach(e => {
-      let t = k.default.getUser(e);
+      let t = F.default.getUser(e);
       null != t && u.push(X.default.getName(t))
-    }), (0, l.jsxs)(B.default, {
+    }), (0, l.jsxs)(k.default, {
       className: i(ee.searchBar, en.marginTop20),
-      children: [(0, l.jsx)(v.default, {
+      children: [(0, l.jsx)(T.default, {
         ref: this.searchBarRef,
         className: ee.searchBarComponent,
         autoFocus: !0,
         placeholder: 0 === r.size ? $.default.Messages.GROUP_DM_SEARCH_PLACEHOLDER : void 0,
         disabled: this.isPartyFull(),
-        size: v.default.Sizes.MEDIUM,
+        size: T.default.Sizes.MEDIUM,
         query: t,
         selectedRow: s,
         sections: [null !== (e = null == a ? void 0 : a.length) && void 0 !== e ? e : 0],
@@ -296,12 +296,12 @@ class eu extends a.PureComponent {
   renderHeader() {
     let e = null != this.scrollerRef.current && this.state.separator,
       t = this.isNotFriends() ? $.default.Messages.GROUP_DM_ADD_FRIENDS : $.default.Messages.GROUP_DM_HEADER;
-    return (0, l.jsxs)(m.ModalHeader, {
-      direction: B.default.Direction.VERTICAL,
-      align: B.default.Align.STRETCH,
+    return (0, l.jsxs)(h.ModalHeader, {
+      direction: k.default.Direction.VERTICAL,
+      align: k.default.Align.STRETCH,
       className: ee.header,
       separator: e,
-      children: [c.isMobile ? this.renderMobileCloseButton() : null, (0, l.jsx)(m.Heading, {
+      children: [c.isMobile ? this.renderMobileCloseButton() : null, (0, l.jsx)(h.Heading, {
         id: el,
         variant: "heading-lg/semibold",
         children: t
@@ -317,18 +317,18 @@ class eu extends a.PureComponent {
     if (this.isNotFriends()) {
       let t = null != e ? e.getRecipientId() : null;
       if (null == t) throw Error("no recipient in DM");
-      let n = k.default.getUser(t),
+      let n = F.default.getUser(t),
         a = null != n ? n.username : "",
-        s = null != n && w.default.getRelationshipType(n.id) === J.RelationshipTypes.PENDING_OUTGOING;
+        s = null != n && U.default.getRelationshipType(n.id) === J.RelationshipTypes.PENDING_OUTGOING;
       return (0, l.jsxs)(es, {
         className: ee.notFriends,
         children: [(0, l.jsx)("div", {
           children: $.default.Messages.GROUP_DM_INVITE_NOT_FRIENDS.format({
             username: a
           })
-        }), (0, l.jsx)(m.Button, {
+        }), (0, l.jsx)(h.Button, {
           disabled: s,
-          size: m.Button.Sizes.SMALL,
+          size: h.Button.Sizes.SMALL,
           onClick: () => null != n ? this.handleAddFriend(n) : null,
           className: en.marginTop20,
           children: s ? $.default.Messages.ADD_FRIEND_BUTTON_AFTER : $.default.Messages.ADD_FRIEND_BUTTON
@@ -349,7 +349,7 @@ class eu extends a.PureComponent {
       children: (0, l.jsx)("div", {
         children: $.default.Messages.GROUP_DM_INVITE_EMPTY
       })
-    }) : (0, l.jsx)(m.List, {
+    }) : (0, l.jsx)(h.List, {
       ref: this.scrollerRef,
       sections: [n.length],
       className: ee.scroller,
@@ -370,11 +370,11 @@ class eu extends a.PureComponent {
       className: ee.noFriends,
       children: [(0, l.jsx)("div", {
         children: $.default.Messages.GROUP_DM_INVITE_NO_FRIENDS
-      }), (0, l.jsx)(m.Button, {
+      }), (0, l.jsx)(h.Button, {
         autoFocus: !0,
-        color: m.Button.Colors.GREEN,
+        color: h.Button.Colors.GREEN,
         fullWidth: !0,
-        size: m.Button.Sizes.SMALL,
+        size: h.Button.Sizes.SMALL,
         onClick: this.handleAddFriendNavigation,
         className: en.marginTop20,
         children: $.default.Messages.ADD_FRIEND
@@ -393,19 +393,19 @@ class eu extends a.PureComponent {
       copied: s
     } = this.state;
     if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
-    let r = null != t ? (0, j.default)(t.code) : "";
+    let r = null != t ? (0, R.default)(t.code) : "";
     return (0, l.jsxs)(a.Fragment, {
-      children: [(0, l.jsx)(m.FormTitle, {
+      children: [(0, l.jsx)(h.FormTitle, {
         tag: "h5",
         className: en.marginBottom8,
         children: $.default.Messages.GROUP_DM_INVITE_LINK_TITLE
-      }), (0, l.jsxs)(B.default, {
+      }), (0, l.jsxs)(k.default, {
         className: i(et.input, {
           [et.success]: s
         }),
-        justify: B.default.Justify.BETWEEN,
-        align: B.default.Align.CENTER,
-        children: [r.length > 0 ? (0, l.jsx)(m.TextInput, {
+        justify: k.default.Justify.BETWEEN,
+        align: k.default.Align.CENTER,
+        children: [r.length > 0 ? (0, l.jsx)(h.TextInput, {
           className: ee.copyInput,
           name: "invite",
           value: n ? $.default.Messages.INSTANT_INVITE_HIDDEN : r,
@@ -413,29 +413,29 @@ class eu extends a.PureComponent {
           inputClassName: ee.input,
           spellCheck: "false",
           onClick: e => e.currentTarget.select()
-        }) : (0, l.jsx)(m.TextInput, {
+        }) : (0, l.jsx)(h.TextInput, {
           className: ee.copyInput,
           name: "invite",
           value: r,
-          placeholder: (0, j.default)($.default.Messages.GROUP_DM_INVITE_LINK_EXAMPLE),
+          placeholder: (0, R.default)($.default.Messages.GROUP_DM_INVITE_LINK_EXAMPLE),
           editable: !1,
           inputClassName: ee.input,
           spellCheck: "false",
           onClick: () => this.createInvite()
-        }), z.SUPPORTS_COPY && r.length > 0 ? (0, l.jsx)(m.Button, {
-          size: m.Button.Sizes.SMALL,
-          color: s ? m.Button.Colors.GREEN : m.Button.Colors.BRAND,
+        }), Y.SUPPORTS_COPY && r.length > 0 ? (0, l.jsx)(h.Button, {
+          size: h.Button.Sizes.SMALL,
+          color: s ? h.Button.Colors.GREEN : h.Button.Colors.BRAND,
           className: ee.copyButton,
           onClick: () => this.handleCopyInvite(r),
           children: s ? $.default.Messages.INVITE_COPIED : $.default.Messages.COPY
-        }) : null, 0 === r.length ? (0, l.jsx)(m.Button, {
-          size: m.Button.Sizes.SMALL,
-          color: m.Button.Colors.BRAND,
+        }) : null, 0 === r.length ? (0, l.jsx)(h.Button, {
+          size: h.Button.Sizes.SMALL,
+          color: h.Button.Colors.BRAND,
           className: ee.copyButton,
           onClick: () => this.createInvite(),
           children: $.default.Messages.GROUP_DM_INVITE_LINK_CREATE
         }) : null]
-      }), r.length > 0 ? (0, l.jsx)(m.Text, {
+      }), r.length > 0 ? (0, l.jsx)(h.Text, {
         variant: "text-xs/normal",
         className: i(en.marginTop8, ee.footerText),
         children: $.default.Messages.INVITE_EXPIRES_HOURS.format({
@@ -454,8 +454,8 @@ class eu extends a.PureComponent {
     if (null != n) return (0, l.jsxs)(a.Fragment, {
       children: [(0, l.jsx)("div", {
         className: ee.footerSeparator
-      }), (0, l.jsx)(B.default, {
-        direction: B.default.Direction.VERTICAL,
+      }), (0, l.jsx)(k.default, {
+        direction: k.default.Direction.VERTICAL,
         className: ee.footer,
         children: n
       })]
@@ -465,14 +465,14 @@ class eu extends a.PureComponent {
     let {
       transitionState: e
     } = this.props;
-    return (0, l.jsxs)(m.ModalRoot, {
-      transitionState: null != e ? e : m.ModalTransitionState.ENTERED,
+    return (0, l.jsxs)(h.ModalRoot, {
+      transitionState: null != e ? e : h.ModalTransitionState.ENTERED,
       className: ee.popout,
       children: [this.renderHeader(), this.renderBody(), this.renderFooter()]
     })
   }
   handleAddFriend(e) {
-    this.props.onClose(), I.default.sendRequest({
+    this.props.onClose(), _.default.sendRequest({
       discordTag: X.default.getUserTag(e, {
         identifiable: "always"
       }),
@@ -498,10 +498,10 @@ class eu extends a.PureComponent {
     }, this.renderMobileCloseButton = () => (0, l.jsx)("div", {
       className: i(ee.mobileToolsContainer),
       ref: this._mobileCloseRef,
-      children: (0, l.jsx)(m.FocusRingScope, {
+      children: (0, l.jsx)(h.FocusRingScope, {
         containerRef: this._mobileCloseRef,
         children: (0, l.jsx)("div", {
-          children: (0, l.jsx)(T.default, {
+          children: (0, l.jsx)(I.default, {
             className: ee.mobileToolsCloseIcon,
             closeAction: this.props.onClose,
             keybind: "ESC"
@@ -547,15 +547,15 @@ class eu extends a.PureComponent {
       let e = this.searchBarRef.current;
       null == e || e.focus()
     }, this.focusResult = e => {
-      _.default.select(e)
+      C.default.select(e)
     }, this.handleSelect = (e, t) => {
       let {
         results: n,
         channel: l
       } = this.props;
-      null == t ? _.default.clear(null == l ? void 0 : l.id) : null != n && this.handleClick(n[t].user.id)
+      null == t ? C.default.clear(null == l ? void 0 : l.id) : null != n && this.handleClick(n[t].user.id)
     }, this.handleSelectionChange = (e, t) => {
-      _.default.select(t);
+      C.default.select(t);
       let n = this.scrollerRef.current;
       null != n && n.scrollToIndex({
         section: e,
@@ -566,35 +566,35 @@ class eu extends a.PureComponent {
       let {
         channel: t
       } = this.props;
-      _.default.search(e, null == t ? void 0 : t.id)
+      C.default.search(e, null == t ? void 0 : t.id)
     }, this.handleRemoveUser = e => {
       let t = Array.from(this.props.selectedUsers);
-      _.default.removeUser(t[e]), this.forceFocus()
+      C.default.removeUser(t[e]), this.forceFocus()
     }, this.handleClick = e => {
       let {
         selectedUsers: t,
         query: n,
         channel: l
       } = this.props, a = !t.has(e);
-      a ? (_.default.addUser(e), n.length > 0 && _.default.clear(null == l ? void 0 : l.id)) : _.default.removeUser(e), this.forceFocus()
+      a ? (C.default.addUser(e), n.length > 0 && C.default.clear(null == l ? void 0 : l.id)) : C.default.removeUser(e), this.forceFocus()
     }, this.handleAddFriendNavigation = () => {
-      (0, L.transitionTo)(J.Routes.FRIENDS), S.default.setSection(J.FriendsSections.ADD_FRIEND), this.props.onClose()
+      (0, j.transitionTo)(J.Routes.FRIENDS), g.default.setSection(J.FriendsSections.ADD_FRIEND), this.props.onClose()
     }, this.handleScroll = () => {
       let e = this.scrollerRef.current;
       null != e && this.setState({
         separator: !e.isScrolledToTop()
       })
     }, this.createNewDM = e => {
-      g.default.openPrivateChannel(e, !1, !1, "New Group DM")
+      E.default.openPrivateChannel(e, !1, !1, "New Group DM")
     }, this.pushToExistingDM = (e, t) => {
-      let n = D.default.getChannelId() === e.id;
-      g.default.addRecipients(e.id, t, J.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(l => {
+      let n = b.default.getChannelId() === e.id;
+      E.default.addRecipients(e.id, t, J.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(l => {
         if (n) {
           if (e.isDM() && l !== e.id) {
-            E.default.call(l, !1, !0);
+            p.default.call(l, !1, !0);
             return
           }
-          E.default.ring(l, t)
+          p.default.ring(l, t)
         }
       })
     }, this.handleInviteUsers = () => {
@@ -605,18 +605,18 @@ class eu extends a.PureComponent {
       } = this.props, a = Array.from(t);
       if (null != e) {
         let t = ec(Array.from(new Set([...e.recipients, ...a])));
-        t.size > 0 ? (0, m.openModal)(n => (0, l.jsx)(er, {
+        t.size > 0 ? (0, h.openModal)(n => (0, l.jsx)(er, {
           ...n,
           onConfirm: () => this.pushToExistingDM(e, a),
           channelIds: t
-        }), {}, (0, m.modalContextFromAppContext)(this.context.appContext)) : this.pushToExistingDM(e, a)
+        }), {}, (0, h.modalContextFromAppContext)(this.context.appContext)) : this.pushToExistingDM(e, a)
       } else {
         let e = ec(a);
-        a.length > 1 && e.size > 0 ? (0, m.openModal)(t => (0, l.jsx)(er, {
+        a.length > 1 && e.size > 0 ? (0, h.openModal)(t => (0, l.jsx)(er, {
           ...t,
           onConfirm: () => this.createNewDM(a),
           channelIds: e
-        }), {}, (0, m.modalContextFromAppContext)(this.context.appContext)) : this.createNewDM(a)
+        }), {}, (0, h.modalContextFromAppContext)(this.context.appContext)) : this.createNewDM(a)
       }
       n()
     }, this.handleCopyInvite = e => {
@@ -624,13 +624,13 @@ class eu extends a.PureComponent {
         channel: t,
         invite: n
       } = this.props;
-      null != n && (0, z.copy)(e), null != this.copyTimeout && clearTimeout(this.copyTimeout), this.setState({
+      null != n && (0, Y.copy)(e), null != this.copyTimeout && clearTimeout(this.copyTimeout), this.setState({
         copied: !0
       }), this.copyTimeout = setTimeout(() => {
         this.setState({
           copied: !1
         })
-      }, 1e3), Y.default.track(J.AnalyticEvents.COPY_INSTANT_INVITE, {
+      }, 1e3), W.default.track(J.AnalyticEvents.COPY_INSTANT_INVITE, {
         server: null,
         channel: null != t ? t.id : null,
         channel_type: null != t ? t.type : null,
@@ -640,16 +640,16 @@ class eu extends a.PureComponent {
     }
   }
 }
-eu.contextType = x.default;
-let eo = h.default.connectStores([b.default, P.default, F.default], e => {
+eu.contextType = v.default;
+let eo = f.default.connectStores([P.default, O.default, w.default], e => {
   let t, {
     channel: n
   } = e;
-  return null != n && null != (t = P.default.getInvite(n.id)) && t.isExpired() && (t = null), {
-    ...b.default.getState(),
+  return null != n && null != (t = O.default.getInvite(n.id)) && t.isExpired() && (t = null), {
+    ...P.default.getState(),
     invite: t,
-    hideDiscriminator: F.default.hidePersonalInformation,
-    hideInstantInvites: F.default.hideInstantInvites
+    hideDiscriminator: w.default.hidePersonalInformation,
+    hideInstantInvites: w.default.hideInstantInvites
   }
 })(eu);
 
@@ -663,10 +663,10 @@ function ed(e) {
     popoutPosition: u = "bottom",
     popoutAlign: o = "right",
     subscribeToGlobalHotkey: d = !1
-  } = e, [c, f] = a.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), h = (0, A.useIsBroadcastingGDM)(null == t ? void 0 : t.id), p = a.useCallback(() => f(e => !e), []);
-  return (a.useEffect(() => (d && K.ComponentDispatch.subscribe(J.ComponentActions.TOGGLE_DM_CREATE, p), () => {
-    K.ComponentDispatch.unsubscribe(J.ComponentActions.TOGGLE_DM_CREATE, p)
-  }), [d, p]), h) ? null : (0, l.jsx)(m.Popout, {
+  } = e, [c, f] = a.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), m = (0, N.useIsBroadcastingGDM)(null == t ? void 0 : t.id), p = a.useCallback(() => f(e => !e), []);
+  return (a.useEffect(() => (d && z.ComponentDispatch.subscribe(J.ComponentActions.TOGGLE_DM_CREATE, p), () => {
+    z.ComponentDispatch.unsubscribe(J.ComponentActions.TOGGLE_DM_CREATE, p)
+  }), [d, p]), m) ? null : (0, l.jsx)(h.Popout, {
     renderPopout: e => (0, l.jsx)(eo, {
       ...e,
       onClose: e.closePopout,
@@ -676,11 +676,11 @@ function ed(e) {
     shouldShow: c,
     align: o,
     onRequestClose: () => f(!1),
-    animation: m.Popout.Animation.NONE,
-    children: e => (0, l.jsx)(W.default.Icon, {
+    animation: h.Popout.Animation.NONE,
+    children: e => (0, l.jsx)(H.default.Icon, {
       ...e,
       onClick: p,
-      icon: null != s ? s : null == t ? G.default : H.default,
+      icon: null != s ? s : null == t ? V.default : G.default,
       className: n,
       iconClassName: n,
       tooltip: i,
@@ -691,7 +691,7 @@ function ed(e) {
 
 function ec(e) {
   let t = ef(e);
-  return new Set(u(O.default.getMutablePrivateChannels()).values().filter(e => (0, y.isMultiUserDM)(e.type)).filter(e => ef(e.recipients) === t).map(e => e.id).value())
+  return new Set(u(y.default.getMutablePrivateChannels()).values().filter(e => (0, L.isMultiUserDM)(e.type)).filter(e => ef(e.recipients) === t).map(e => e.id).value())
 }
 
 function ef(e) {

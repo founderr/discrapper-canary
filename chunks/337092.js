@@ -11,30 +11,30 @@ var a = l("37983"),
   o = l("917351"),
   d = l("969176"),
   r = l.n(d),
-  u = l("249654"),
-  C = l("65597"),
-  c = l("669491"),
-  f = l("77078"),
-  E = l("87657"),
-  m = l("149638"),
-  M = l("681937"),
-  h = l("509"),
-  _ = l("459824"),
-  T = l("654017"),
-  x = l("982108"),
-  S = l("305961"),
-  A = l("957255"),
-  p = l("697218"),
-  L = l("91551"),
-  H = l("4845"),
-  N = l("635731"),
-  g = l("491401"),
-  I = l("663745"),
-  R = l("781896"),
-  v = l("864982"),
-  j = l("151185"),
-  D = l("339123"),
-  b = l("387111"),
+  u = l("65597"),
+  C = l("669491"),
+  c = l("77078"),
+  f = l("87657"),
+  E = l("149638"),
+  m = l("681937"),
+  M = l("509"),
+  h = l("459824"),
+  _ = l("654017"),
+  T = l("982108"),
+  x = l("305961"),
+  S = l("957255"),
+  A = l("697218"),
+  p = l("91551"),
+  L = l("4845"),
+  H = l("635731"),
+  N = l("491401"),
+  g = l("663745"),
+  I = l("781896"),
+  R = l("864982"),
+  v = l("151185"),
+  j = l("339123"),
+  D = l("387111"),
+  b = l("299039"),
   O = l("158998"),
   B = l("64905"),
   V = l("490931"),
@@ -51,32 +51,32 @@ var a = l("37983"),
 let q = n.memo(function(e) {
   let {
     member: t
-  } = e, l = n.useMemo(() => (0, h.isCommunicationDisabled)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), s = n.useMemo(() => null == t.communicationDisabledUntil ? new Date : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
+  } = e, l = n.useMemo(() => (0, M.isCommunicationDisabled)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), s = n.useMemo(() => null == t.communicationDisabledUntil ? new Date : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
   return (0, a.jsxs)("div", {
     className: i(J.flagContainer),
-    children: [t.hasUnusualDmActivity && (0, a.jsx)(f.Tooltip, {
+    children: [t.hasUnusualDmActivity && (0, a.jsx)(c.Tooltip, {
       text: G.default.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY_TOOLTIP,
       children: e => {
         let {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(H.default, {
+        return (0, a.jsx)(L.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
           onMouseLeave: l,
-          color: c.default.colors.TEXT_MUTED.css
+          color: C.default.colors.TEXT_MUTED.css
         })
       }
-    }), l && (0, a.jsx)(f.Tooltip, {
+    }), l && (0, a.jsx)(c.Tooltip, {
       "aria-label": G.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP,
       allowOverflow: !0,
       text: (0, a.jsxs)("div", {
         className: J.communicationDisabledTooltip,
         children: [(0, a.jsx)("div", {
           children: G.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP
-        }), (0, a.jsx)(L.default, {
+        }), (0, a.jsx)(p.default, {
           deadline: s,
           showUnits: !0,
           stopAtOneSec: !0
@@ -87,42 +87,42 @@ let q = n.memo(function(e) {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(g.default, {
+        return (0, a.jsx)(N.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
           onMouseLeave: l,
-          color: c.default.colors.TEXT_DANGER.css
+          color: C.default.colors.TEXT_DANGER.css
         })
       }
-    }), (0, T.isSpammer)(t.userId) && (0, a.jsx)(f.Tooltip, {
+    }), (0, _.isSpammer)(t.userId) && (0, a.jsx)(c.Tooltip, {
       text: G.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY_TOOLTIP,
       children: e => {
         let {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(v.default, {
+        return (0, a.jsx)(R.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
           onMouseLeave: l,
-          color: c.default.colors.TEXT_DANGER.css
+          color: C.default.colors.TEXT_DANGER.css
         })
       }
-    }), (0, M.hasAutomodQuarantinedProfile)(t) && (0, a.jsx)(f.Tooltip, {
+    }), (0, m.hasAutomodQuarantinedProfile)(t) && (0, a.jsx)(c.Tooltip, {
       text: G.default.Messages.MEMBER_SAFETY_QUARANTINED_USER_TOOLTIP,
       children: e => {
         let {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(N.default, {
+        return (0, a.jsx)(H.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
           onMouseLeave: l,
-          color: c.default.colors.TEXT_MUTED.css
+          color: C.default.colors.TEXT_MUTED.css
         })
       }
     })]
@@ -132,7 +132,7 @@ let q = n.memo(function(e) {
 function z(e) {
   let {
     member: t
-  } = e, l = (0, C.default)([S.default], () => S.default.getGuild(t.guildId), [t.guildId]), s = n.useMemo(() => {
+  } = e, l = (0, u.default)([x.default], () => x.default.getGuild(t.guildId), [t.guildId]), s = n.useMemo(() => {
     var e;
     if (null == l) return [];
     let a = null !== (e = null == l ? void 0 : l.roles) && void 0 !== e ? e : {};
@@ -154,7 +154,7 @@ let K = n.memo(function(e) {
     let {
       member: t,
       highestRole: l
-    } = e, s = (0, C.default)([S.default], () => S.default.getGuild(t.guildId), [t.guildId]), [o, d] = n.useState(!1), r = t.roles.length - 1, u = n.useMemo(() => new Intl.NumberFormat(G.default.getLocale()).format(r), [r]), c = (0, Z.useContextMenuModerateRoles)(t), E = (0, C.default)([A.default], () => A.default.can(Y.Permissions.MANAGE_ROLES, s), [s]), m = n.useCallback(e => () => {
+    } = e, s = (0, u.default)([x.default], () => x.default.getGuild(t.guildId), [t.guildId]), [o, d] = n.useState(!1), r = t.roles.length - 1, C = n.useMemo(() => new Intl.NumberFormat(G.default.getLocale()).format(r), [r]), f = (0, Z.useContextMenuModerateRoles)(t), E = (0, u.default)([S.default], () => S.default.can(Y.Permissions.MANAGE_ROLES, s), [s]), m = n.useCallback(e => () => {
       d(!0), null == e || e()
     }, []), M = n.useCallback(e => () => {
       d(!1), null == e || e()
@@ -165,7 +165,7 @@ let K = n.memo(function(e) {
         className: i(J.roleTooltipItem, J.highestRole),
         role: l,
         guildId: t.guildId
-      }), r > 0 && (0, a.jsx)(f.Tooltip, {
+      }), r > 0 && (0, a.jsx)(c.Tooltip, {
         "aria-label": G.default.Messages.MEMBER_SAFETY_MORE_ROLES_TOOLTIP,
         tooltipContentClassName: J.roleTooltip,
         allowOverflow: !0,
@@ -180,30 +180,30 @@ let K = n.memo(function(e) {
             onMouseEnter: t,
             onMouseLeave: l
           } = e;
-          return (0, a.jsx)(f.Clickable, {
+          return (0, a.jsx)(c.Clickable, {
             className: i(J.otherRoles),
             onMouseEnter: m(t),
             onMouseLeave: M(l),
-            children: (0, a.jsxs)(f.Text, {
+            children: (0, a.jsxs)(c.Text, {
               variant: "text-xs/medium",
               color: "header-primary",
-              children: ["+", u]
+              children: ["+", C]
             })
           })
         }
-      }), E && (0, a.jsx)(f.Tooltip, {
+      }), E && (0, a.jsx)(c.Tooltip, {
         text: G.default.Messages.MEMBER_SAFETY_TABLE_ADD_ROLES_TOOLTIP,
         children: e => {
           let {
             onMouseEnter: t,
             onMouseLeave: l
           } = e;
-          return (0, a.jsx)(f.Clickable, {
+          return (0, a.jsx)(c.Clickable, {
             className: i(J.otherRoles, J.addRoleContainer),
-            onClick: c,
+            onClick: f,
             onMouseEnter: t,
             onMouseLeave: l,
-            children: (0, a.jsx)(j.default, {
+            children: (0, a.jsx)(v.default, {
               className: i(J.addRoleIcon),
               width: 16,
               height: 16
@@ -223,20 +223,20 @@ let K = n.memo(function(e) {
     }, [l]);
     return null == s || null == l ? null : (0, a.jsxs)("div", {
       className: i(J.memberNameContainer),
-      children: [(0, a.jsx)(f.Clickable, {
+      children: [(0, a.jsx)(c.Clickable, {
         className: i(J.memberAvatar),
         onClick: o,
-        children: (0, a.jsx)(E.default, {
+        children: (0, a.jsx)(f.default, {
           user: s
         })
       }), (0, a.jsx)("div", {
         className: i(J.memberName),
-        children: (0, a.jsx)(f.Text, {
+        children: (0, a.jsx)(c.Text, {
           variant: "text-sm/medium",
-          children: (0, a.jsx)(f.Clickable, {
+          children: (0, a.jsx)(c.Clickable, {
             onClick: o,
-            children: (0, a.jsx)(f.NameWithRole, {
-              name: b.default.getName(l.guildId, null, s),
+            children: (0, a.jsx)(c.NameWithRole, {
+              name: D.default.getName(l.guildId, null, s),
               color: null !== (t = l.colorString) && void 0 !== t ? t : void 0,
               className: i(J.memberNameText)
             })
@@ -244,11 +244,11 @@ let K = n.memo(function(e) {
         })
       }), (0, a.jsx)("div", {
         className: i(J.memberGlobalName),
-        children: (0, a.jsx)(f.Text, {
+        children: (0, a.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
           tag: "span",
-          children: (0, a.jsx)(f.Clickable, {
+          children: (0, a.jsx)(c.Clickable, {
             onClick: o,
             tag: "span",
             children: O.default.getUserTag(s)
@@ -275,23 +275,23 @@ function X(e) {
   } = e, [o, d] = n.useState(null);
   n.useEffect(() => {
     d(Q(t.joinedAtTimestamp))
-  }, [t.joinedAtTimestamp]), (0, m.default)(() => {
+  }, [t.joinedAtTimestamp]), (0, E.default)(() => {
     d(Q(t.joinedAtTimestamp))
   }, 1e4);
   let r = s ? "text-brand" : "text-normal";
   return (null == o ? void 0 : o.short) == null ? null : l ? (0, a.jsx)("div", {
     className: i(J.joinedAtContainer),
-    children: (0, a.jsx)(f.Text, {
+    children: (0, a.jsx)(c.Text, {
       variant: "text-sm/medium",
       color: r,
       children: o.long
     })
   }) : (0, a.jsx)("div", {
     className: i(J.joinedAtContainer),
-    children: (0, a.jsx)(f.Tooltip, {
+    children: (0, a.jsx)(c.Tooltip, {
       align: "left",
       text: o.long,
-      children: e => (0, a.jsx)(f.Text, {
+      children: e => (0, a.jsx)(c.Text, {
         ...e,
         variant: "text-sm/medium",
         color: r,
@@ -309,7 +309,7 @@ let $ = n.memo(function(e) {
       accountCreationDateShort: i,
       accountCreationDateLong: o
     } = n.useMemo(() => {
-      let e = u.default.extractTimestamp(t.userId),
+      let e = b.default.extractTimestamp(t.userId),
         l = (0, B.formatDateRelativeTime)(e, B.MembersTableDateFormats.ACCOUNT_AGE),
         a = new Date(e).toLocaleDateString(G.default.getLocale(), B.ACCOUNT_AGE_DATE_TOOLTIP_CONFIG);
       return {
@@ -317,14 +317,14 @@ let $ = n.memo(function(e) {
         accountCreationDateLong: a
       }
     }, [t.userId]), d = s ? "text-brand" : "text-normal";
-    return l ? (0, a.jsx)(f.Text, {
+    return l ? (0, a.jsx)(c.Text, {
       variant: "text-sm/medium",
       color: d,
       children: o
-    }) : (0, a.jsx)(f.Tooltip, {
+    }) : (0, a.jsx)(c.Tooltip, {
       align: "left",
       text: o,
-      children: e => (0, a.jsx)(f.Text, {
+      children: e => (0, a.jsx)(c.Text, {
         ...e,
         variant: "text-sm/medium",
         color: d,
@@ -339,40 +339,40 @@ let $ = n.memo(function(e) {
       highestRole: s,
       isHoldingAdvancedInfoKey: o,
       onOpenModerationMenu: d,
-      onOpenProfileMenu: u,
-      compact: c
-    } = e, E = (0, C.default)([A.default, S.default], () => A.default.can(Y.Permissions.MANAGE_GUILD, S.default.getGuild(t.guildId)), [t.guildId]), {
+      onOpenProfileMenu: C,
+      compact: f
+    } = e, E = (0, u.default)([S.default, x.default], () => S.default.can(Y.Permissions.MANAGE_GUILD, x.default.getGuild(t.guildId)), [t.guildId]), {
       selectedUserIds: m,
       addUsers: M,
-      removeUser: h
-    } = (0, k.default)(t.guildId), T = (0, y.useCanAccessBulkBanningFeature)(t.guildId), x = (0, y.useCanBulkBanUser)(t.guildId, T, t.userId), p = (0, _.useCanAccessGuildMemberModView)(t.guildId), L = (0, C.default)([U.default], () => {
+      removeUser: _
+    } = (0, k.default)(t.guildId), T = (0, y.useCanAccessBulkBanningFeature)(t.guildId), A = (0, y.useCanBulkBanUser)(t.guildId, T, t.userId), p = (0, h.useCanAccessGuildMemberModView)(t.guildId), L = (0, u.default)([U.default], () => {
       var e;
       return null !== (e = U.default.getSearchStateByGuildId(t.guildId).selectedSort) && void 0 !== e ? e : V.OrderBy.ORDER_BY_UNSPECIFIED
     }, [t.guildId], r), H = n.useCallback(e => {
-      e.stopPropagation(), e.preventDefault(), null != t && x && (m.has(t.userId) ? h(t.userId) : M([t.userId]))
-    }, [M, x, t, h, m]), N = L === V.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, g = L === V.OrderBy.ORDER_BY_USER_ID_ASC || L === V.OrderBy.ORDER_BY_USER_ID_DESC;
+      e.stopPropagation(), e.preventDefault(), null != t && A && (m.has(t.userId) ? _(t.userId) : M([t.userId]))
+    }, [M, A, t, _, m]), N = L === V.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, R = L === V.OrderBy.ORDER_BY_USER_ID_ASC || L === V.OrderBy.ORDER_BY_USER_ID_DESC;
     return (0, a.jsxs)(a.Fragment, {
-      children: [T && (0, a.jsx)(f.Tooltip, {
+      children: [T && (0, a.jsx)(c.Tooltip, {
         tooltipClassName: J.disabledActionTooltip,
-        shouldShow: !x,
+        shouldShow: !A,
         text: G.default.Messages.MEMBER_SAFETY_ACTION_PERMISSIONS_MISSING,
         children: e => (0, a.jsx)("td", {
           ...e,
           children: (0, a.jsx)("div", {
             className: i(J.checkbox, J.xsmallCol),
-            children: (0, a.jsx)(f.Clickable, {
+            children: (0, a.jsx)(c.Clickable, {
               onClick: H,
-              children: (0, a.jsx)(f.Checkbox, {
-                type: f.Checkbox.Types.INVERTED,
+              children: (0, a.jsx)(c.Checkbox, {
+                type: c.Checkbox.Types.INVERTED,
                 value: m.has(t.userId),
-                disabled: !x
+                disabled: !A
               })
             })
           })
         })
       }), (0, a.jsx)("td", {
         className: i({
-          [J.compact]: c
+          [J.compact]: f
         }),
         children: (0, a.jsx)(W, {
           member: t,
@@ -380,7 +380,7 @@ let $ = n.memo(function(e) {
         })
       }), (0, a.jsx)("td", {
         className: i(J.smallCol, {
-          [J.compact]: c
+          [J.compact]: f
         }),
         children: (0, a.jsx)(X, {
           showLongDate: o,
@@ -389,16 +389,16 @@ let $ = n.memo(function(e) {
         })
       }), (0, a.jsx)("td", {
         className: i(J.smallCol, {
-          [J.compact]: c
+          [J.compact]: f
         }),
         children: (0, a.jsx)($, {
           showLongDate: o,
           member: t,
-          isSortedBy: g
+          isSortedBy: R
         })
       }), E && (0, a.jsx)("td", {
         className: i(J.smallCol, {
-          [J.compact]: c
+          [J.compact]: f
         }),
         children: (0, a.jsx)(w.default, {
           userId: t.userId,
@@ -406,7 +406,7 @@ let $ = n.memo(function(e) {
         })
       }), (0, a.jsx)("td", {
         className: i(J.mediumCol, {
-          [J.compact]: c
+          [J.compact]: f
         }),
         children: (0, a.jsx)(K, {
           member: t,
@@ -414,51 +414,51 @@ let $ = n.memo(function(e) {
         })
       }), (0, a.jsx)("td", {
         className: i(J.smallCol, {
-          [J.compact]: c
+          [J.compact]: f
         }),
         children: (0, a.jsx)(q, {
           member: t
         })
       }), (0, a.jsx)("td", {
         className: i(J.smallCol, {
-          [J.compact]: c
+          [J.compact]: f
         }),
         children: (0, a.jsxs)("div", {
           className: i(J.actionCell),
-          children: [(0, a.jsx)(f.Tooltip, {
+          children: [(0, a.jsx)(c.Tooltip, {
             text: p ? G.default.Messages.MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP : G.default.Messages.MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP,
             children: e => {
               let {
                 onMouseEnter: t,
                 onMouseLeave: l
               } = e;
-              return (0, a.jsx)(f.Clickable, {
+              return (0, a.jsx)(c.Clickable, {
                 onMouseEnter: t,
                 onMouseLeave: l,
-                onClick: u,
+                onClick: C,
                 className: i(J.button),
-                children: p ? (0, a.jsx)(D.default, {
+                children: p ? (0, a.jsx)(j.default, {
                   width: et,
                   height: et
-                }) : (0, a.jsx)(R.default, {
+                }) : (0, a.jsx)(I.default, {
                   width: et,
                   height: et
                 })
               })
             }
-          }), (0, a.jsx)(f.Tooltip, {
+          }), (0, a.jsx)(c.Tooltip, {
             text: G.default.Messages.MEMBER_SAFETY_TABLE_OVERFLOW_TOOLTIP,
             children: e => {
               let {
                 onMouseEnter: t,
                 onMouseLeave: l
               } = e;
-              return (0, a.jsx)(f.Clickable, {
+              return (0, a.jsx)(c.Clickable, {
                 onMouseEnter: t,
                 onMouseLeave: l,
                 onClick: d,
                 className: i(J.button),
-                children: (0, a.jsx)(I.default, {
+                children: (0, a.jsx)(g.default, {
                   width: et,
                   height: et
                 })
@@ -477,11 +477,11 @@ var ea = n.memo(function(e) {
     guildId: l,
     style: s,
     onSelect: d,
-    rowSelected: u,
+    rowSelected: C,
     isLoading: c = !1,
     isHoldingAdvancedInfoKey: f = !1,
     compact: E = !1
-  } = e, m = (0, C.default)([x.default], () => x.default.getGuildSidebarState(l), [l]), M = (null == m ? void 0 : m.details.userId) === t, h = (0, C.default)([U.default], () => U.default.getEnhancedMember(l, t), [l, t]), _ = (0, Z.useHighestRole)(h), T = (0, C.default)([p.default], () => p.default.getUser(t), [t]), S = (0, Z.useContextMenuModerateUser)(null != h ? h : void 0), A = n.useCallback(e => {
+  } = e, m = (0, u.default)([T.default], () => T.default.getGuildSidebarState(l), [l]), M = (null == m ? void 0 : m.details.userId) === t, h = (0, u.default)([U.default], () => U.default.getEnhancedMember(l, t), [l, t]), _ = (0, Z.useHighestRole)(h), x = (0, u.default)([A.default], () => A.default.getUser(t), [t]), S = (0, Z.useContextMenuModerateUser)(null != h ? h : void 0), p = n.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), S(e)
   }, [S]), L = n.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), null != h && (null == d || d(h))
@@ -492,16 +492,16 @@ var ea = n.memo(function(e) {
     role: "row",
     value: h,
     style: s,
-    className: i(J.roundedRow, J.memberRowContainer, u && J.selected, M && J.memberSelected, c && J.loading),
+    className: i(J.roundedRow, J.memberRowContainer, C && J.selected, M && J.memberSelected, c && J.loading),
     equalityFn: N,
     onClick: L,
-    onContextMenu: A,
+    onContextMenu: p,
     children: (0, a.jsx)(ee, {
       member: h,
-      user: T,
+      user: x,
       highestRole: _,
       isHoldingAdvancedInfoKey: f,
-      onOpenModerationMenu: A,
+      onOpenModerationMenu: p,
       onOpenProfileMenu: H,
       compact: E
     })

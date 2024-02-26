@@ -10,8 +10,8 @@ var u = l("77078"),
   i = l("272030"),
   r = l("901582"),
   o = l("158534"),
-  a = l("812204"),
-  d = l("861370"),
+  d = l("812204"),
+  a = l("861370"),
   s = l("421602"),
   c = l("806179"),
   f = l("97508"),
@@ -22,11 +22,11 @@ var u = l("77078"),
       user: t,
       guildId: l,
       analyticsContext: o,
-      onSelect: a
-    } = e, h = (0, c.default)(t.id), p = (0, f.default)(t.id, l), x = (0, d.default)({
+      onSelect: d
+    } = e, h = (0, c.default)(t.id), E = (0, f.default)(t.id, l), p = (0, a.default)({
       id: t.id,
       label: O.default.Messages.COPY_ID_USER
-    }), E = (0, s.default)(t.id), _ = t.isNonUserBot();
+    }), x = (0, s.default)(t.id), R = t.isNonUserBot();
     return (0, n.jsx)(r.default, {
       context: o,
       object: M.AnalyticsObjects.CONTEXT_MENU,
@@ -34,14 +34,14 @@ var u = l("77078"),
         navId: "user-context",
         onClose: i.closeContextMenu,
         "aria-label": O.default.Messages.USER_ACTIONS_MENU_LABEL,
-        onSelect: a,
+        onSelect: d,
         children: [(0, n.jsxs)(u.MenuGroup, {
-          children: [!_ && h, !_ && E]
+          children: [!R && h, !R && x]
         }), (0, n.jsx)(u.MenuGroup, {
-          children: !_ && p
+          children: !R && E
         }), (0, n.jsx)(u.MenuGroup, {
-          children: x
+          children: p
         })]
       })
     })
-  }, [a.default.CONTEXT_MENU, a.default.AUDIT_LOG_USER_MENU])
+  }, [d.default.CONTEXT_MENU, d.default.AUDIT_LOG_USER_MENU])

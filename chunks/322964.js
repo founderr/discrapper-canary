@@ -6,16 +6,16 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   l = n("884691"),
-  s = n("249654"),
-  i = n("77078"),
-  r = n("308289"),
-  o = n("537325"),
-  u = n("367376"),
-  d = n("401642"),
-  c = n("845579"),
-  f = n("766274"),
-  h = n("697218"),
-  E = n("599110"),
+  s = n("77078"),
+  i = n("308289"),
+  r = n("537325"),
+  o = n("367376"),
+  u = n("401642"),
+  d = n("845579"),
+  c = n("766274"),
+  f = n("697218"),
+  h = n("599110"),
+  E = n("299039"),
   m = n("253981"),
   p = n("352273"),
   S = n("360191"),
@@ -33,23 +33,23 @@ var a = n("37983"),
 function R(e) {
   var t, n, l;
   let {
-    item: s
-  } = e, o = null === (t = s.message) || void 0 === t ? void 0 : t.content;
-  if (null == o) return (0, a.jsx)("div", {
+    item: r
+  } = e, u = null === (t = r.message) || void 0 === t ? void 0 : t.content;
+  if (null == u) return (0, a.jsx)("div", {
     children: " "
   });
-  let d = null !== (l = h.default.getUser(null === (n = s.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : new f.default(s.other_user),
-    c = u.default.parse(o);
+  let d = null !== (l = f.default.getUser(null === (n = r.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : new c.default(r.other_user),
+    h = o.default.parse(u);
   return (0, a.jsxs)("div", {
     className: M.messagePreviewContainer,
-    children: [(0, a.jsx)(r.default, {
+    children: [(0, a.jsx)(i.default, {
       user: d,
-      size: i.AvatarSizes.SIZE_24
-    }), (0, a.jsx)(i.Text, {
+      size: s.AvatarSizes.SIZE_24
+    }), (0, a.jsx)(s.Text, {
       className: M.messagePreviewText,
       variant: "text-sm/normal",
       lineClamp: 2,
-      children: c
+      children: h
     })]
   })
 }
@@ -61,10 +61,10 @@ function L(e) {
     }
   } = e;
   if (null == t) return null;
-  let n = u.default.parse(t);
+  let n = o.default.parse(t);
   return (0, a.jsx)("div", {
     className: M.calloutContainer,
-    children: (0, a.jsx)(i.Text, {
+    children: (0, a.jsx)(s.Text, {
       variant: "text-sm/normal",
       lineClamp: 2,
       children: n
@@ -82,7 +82,7 @@ function O(e) {
       className: M.checkbox,
       alt: "",
       src: n
-    }), (0, a.jsx)(i.Text, {
+    }), (0, a.jsx)(s.Text, {
       className: M.lifecycleText,
       variant: "text-xs/bold",
       color: "header-secondary",
@@ -93,11 +93,11 @@ function O(e) {
 let b = l.memo(function(e) {
     var t;
     let {
-      item: r,
-      ackedBeforeId: c
-    } = e, f = (0, N.useNotificationCenterItemAcked)(r, c), h = l.useCallback(async () => {
-      if (!f && (0, p.markNotificationCenterItemAcked)(r), null != r.item_enum && r.item_enum === S.ItemEnum.FIND_FRIENDS) {
-        (0, i.openModalLazy)(async () => {
+      item: i,
+      ackedBeforeId: d
+    } = e, c = (0, N.useNotificationCenterItemAcked)(i, d), f = l.useCallback(async () => {
+      if (!c && (0, p.markNotificationCenterItemAcked)(i), null != i.item_enum && i.item_enum === S.ItemEnum.FIND_FRIENDS) {
+        (0, s.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("927960").then(n.bind(n, "927960"));
@@ -108,73 +108,73 @@ let b = l.memo(function(e) {
         });
         return
       }
-      if (null != r.deeplink) {
-        let e = m.default.safeParseWithQuery(r.deeplink);
+      if (null != i.deeplink) {
+        let e = m.default.safeParseWithQuery(i.deeplink);
         if (null == e) return;
         let t = e.hostname,
           n = e.path;
         if (null == t || null == n) return;
         if (m.default.isDiscordHostname(t)) {
           let e = n.match("^/users/(\\d+)");
-          null != e && 2 === e.length ? (0, d.openUserProfileModal)({
+          null != e && 2 === e.length ? (0, u.openUserProfileModal)({
             userId: e[1],
             analyticsLocation: {
               section: C.AnalyticsSections.NOTIFICATION_CENTER
             }
-          }) : await (0, o.default)(n)
+          }) : await (0, r.default)(n)
         }
-        E.default.track(C.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
+        h.default.track(C.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
           action_type: S.NotificationCenterActionTypes.CLICKED,
-          notification_center_id: r.id,
-          item_type: r.type,
-          acked: f
+          notification_center_id: i.id,
+          item_type: i.type,
+          acked: c
         })
       }
-    }, [r, f]), A = null;
-    r.type === S.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != r.other_user && (A = (0, a.jsx)(T.default, {
-      userId: r.other_user.id
+    }, [i, c]), A = null;
+    i.type === S.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != i.other_user && (A = (0, a.jsx)(T.default, {
+      userId: i.other_user.id
     }));
-    let v = null != r.local_id;
+    let v = null != i.local_id;
     return (0, a.jsxs)("div", {
       className: M.row,
-      children: [(0, a.jsxs)(i.ClickableContainer, {
+      children: [(0, a.jsxs)(s.ClickableContainer, {
         className: M.rowContent,
         focusProps: {
           offset: 4
         },
-        "aria-label": r.body,
-        onClick: h,
-        children: [f ? null : (0, a.jsx)("div", {
+        "aria-label": i.body,
+        onClick: f,
+        children: [c ? null : (0, a.jsx)("div", {
           className: M.unread
         }), (0, a.jsx)(_.ForYouItemImage, {
-          item: r
+          item: i
         }), (0, a.jsxs)("div", {
           className: M.body,
-          children: ["lifecycle_item" === r.type && null != r.item_enum && (0, a.jsx)(O, {
-            item: r
-          }), (0, a.jsx)(i.Text, {
+          children: ["lifecycle_item" === i.type && null != i.item_enum && (0, a.jsx)(O, {
+            item: i
+          }), (0, a.jsx)(s.Text, {
             variant: "text-md/normal",
-            color: f ? "text-muted" : "text-normal",
-            children: u.default.parse(r.body)
-          }), (null === (t = r.message) || void 0 === t ? void 0 : t.content) != null ? (0, a.jsx)(R, {
-            item: r
-          }) : null, null != r.callout ? (0, a.jsx)(L, {
-            item: r
-          }) : null, (0, a.jsx)(i.Text, {
+            color: c ? "text-muted" : "text-normal",
+            children: o.default.parse(i.body)
+          }), (null === (t = i.message) || void 0 === t ? void 0 : t.content) != null ? (0, a.jsx)(R, {
+            item: i
+          }) : null, null != i.callout ? (0, a.jsx)(L, {
+            item: i
+          }) : null, (0, a.jsx)(s.Text, {
             variant: "text-xs/medium",
-            color: f ? "text-muted" : "header-secondary",
-            children: (0, g.getRelativeTimestamp)(s.default.extractTimestamp(r.id))
+            color: c ? "text-muted" : "header-secondary",
+            children: (0, g.getRelativeTimestamp)(E.default.extractTimestamp(i.id))
           }), A]
         })]
       }), v ? null : (0, a.jsx)(I.MoreButton, {
-        item: r
+        item: i
       })]
     })
   }),
   y = l.memo(function(e) {
     let {
       items: t
-    } = e, n = c.NotificationCenterAckedBeforeId.useSetting();
+    } = e, n = d.NotificationCenterAckedBeforeId.useSetting();
     return (0, a.jsx)(a.Fragment, {
       children: t.map(e => (0, a.jsx)(b, {
         item: e,

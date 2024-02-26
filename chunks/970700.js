@@ -4,14 +4,14 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var i = n("872717"),
-  l = n("913144"),
+var l = n("872717"),
+  i = n("913144"),
   r = n("653047"),
   d = n("766274"),
   s = n("49111");
 
 function u(e) {
-  i.default.get({
+  l.default.get({
     url: s.Endpoints.GUILD_INTEGRATIONS(e),
     query: {
       include_applications: !0,
@@ -20,7 +20,7 @@ function u(e) {
     oldFormErrors: !0
   }).then(t => {
     let n = t.body.map(e => (null != e.user && (e.user = new d.default(e.user)), null != e.application && (e.application = r.default.createFromServer(e.application)), e));
-    l.default.dispatch({
+    i.default.dispatch({
       type: "GUILD_SETTINGS_LOADED_INTEGRATIONS",
       guildId: e,
       integrations: n

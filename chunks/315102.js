@@ -47,11 +47,11 @@ n.r(t), n.d(t, {
 var r = n("552442"),
   s = n.n(r),
   a = n("522632"),
-  o = n("249654"),
-  l = n("234251"),
-  u = n("407063"),
-  c = n("240481"),
-  d = n("773336"),
+  o = n("234251"),
+  l = n("407063"),
+  u = n("240481"),
+  c = n("773336"),
+  d = n("299039"),
   f = n("49111"),
   E = n("680894"),
   p = n("363577");
@@ -59,7 +59,7 @@ i = n("523096").default;
 let h = i.DEFAULT_AVATARS;
 i.DEFAULT_GROUP_DM_AVATARS;
 let _ = i.canUseWebp(),
-  S = (0, d.isAndroid)();
+  S = (0, c.isAndroid)();
 
 function m(e) {
   let t, {
@@ -68,17 +68,17 @@ function m(e) {
     id: r,
     hash: s,
     size: o,
-    canAnimate: l = !1,
+    canAnimate: u = !1,
     keepAspectRatio: c,
     format: d = null
   } = e;
   if (null == r || null == s) return;
-  let f = null != d ? d : l && x(s) ? "gif" : "jpg";
-  l && F(s) && (f = "mp4");
+  let f = null != d ? d : u && x(s) ? "gif" : "jpg";
+  u && F(s) && (f = "mp4");
   let E = window.GLOBAL_ENV.CDN_HOST;
   if (null != E ? ("jpg" === f && (f = _ ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(E, "/").concat(i, "/").concat(r, "/").concat(s, ".").concat(f)) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(r, s, f), "mp4" === f) return t;
   let p = {};
-  return null != o && (p.size = (0, u.getBestMediaProxySize)(o * (0, u.getDevicePixelRatio)())), null != c && (p.keep_aspect_ratio = c), t + "?".concat(a.stringify(p))
+  return null != o && (p.size = (0, l.getBestMediaProxySize)(o * (0, l.getDevicePixelRatio)())), null != c && (p.keep_aspect_ratio = c), t + "?".concat(a.stringify(p))
 }
 
 function T(e) {
@@ -88,12 +88,12 @@ function T(e) {
     size: i,
     forcePNG: r = !1
   } = e, s = _ && !r ? "webp" : "png", a = _ && !S ? "&quality=lossless" : "";
-  return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/emojis/").concat(t, ".").concat(n ? "gif" : s, "?size=").concat((0, u.getBestMediaProxySize)(i * (0, u.getDevicePixelRatio)())).concat(a) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.EMOJI(t, n ? "gif" : s)
+  return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/emojis/").concat(t, ".").concat(n ? "gif" : s, "?size=").concat((0, l.getBestMediaProxySize)(i * (0, l.getDevicePixelRatio)())).concat(a) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.EMOJI(t, n ? "gif" : s)
 }
 
 function g(e, t) {
   if (null == e && null == t) return h[0];
-  let n = (0, c.parseInteger)(t, 0);
+  let n = (0, u.parseInteger)(t, 0);
   return n > 0 ? h[n % 5] : null != e ? h[s(e).shiftRight(22).mod(6).toJSNumber()] : h[0]
 }
 
@@ -136,12 +136,12 @@ function v(e) {
       canAnimate: s = !1,
       size: o = f.AVATAR_SIZE
     } = e,
-    l = s && x(r) ? "gif" : "jpg",
+    u = s && x(r) ? "gif" : "jpg",
     {
       CDN_HOST: c
     } = window.GLOBAL_ENV;
-  return null != c ? ("jpg" === l && (l = _ ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(c).concat(f.Endpoints.GUILD_MEMBER_AVATAR(n, i, r, l))) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_MEMBER_AVATAR(n, i, r, l), t + "?".concat(a.stringify({
-    size: (0, u.getBestMediaProxySize)(o * (0, u.getDevicePixelRatio)())
+  return null != c ? ("jpg" === u && (u = _ ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(c).concat(f.Endpoints.GUILD_MEMBER_AVATAR(n, i, r, u))) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_MEMBER_AVATAR(n, i, r, u), t + "?".concat(a.stringify({
+    size: (0, l.getBestMediaProxySize)(o * (0, l.getDevicePixelRatio)())
   }))
 }
 
@@ -169,7 +169,7 @@ function R(e) {
   if (null == i) return;
   let a = window.GLOBAL_ENV.CDN_HOST,
     o = r && x(i) ? "gif" : "png";
-  return t = (null != a ? "".concat(location.protocol, "//").concat(a, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.USER_BANNER(n, i, o)) + "?size=".concat((0, u.getBestMediaProxySize)(s * (0, u.getDevicePixelRatio)()))
+  return t = (null != a ? "".concat(location.protocol, "//").concat(a, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.USER_BANNER(n, i, o)) + "?size=".concat((0, l.getBestMediaProxySize)(s * (0, l.getDevicePixelRatio)()))
 }
 
 function N(e) {
@@ -182,8 +182,8 @@ function N(e) {
   let {
     CDN_HOST: r,
     API_ENDPOINT: s
-  } = window.GLOBAL_ENV, a = f.Endpoints.AVATAR_DECORATION_PRESETS(t.asset), o = new URL(null != r ? "".concat(location.protocol, "//").concat(r).concat(a) : "".concat(location.protocol).concat(s).concat(a));
-  return o.searchParams.set("size", "".concat((0, u.getBestMediaProxySize)(n * (0, u.getDevicePixelRatio)()))), o.searchParams.set("passthrough", "".concat(i && (0, l.isAnimatedAvatarDecoration)(t.asset))), o.toString()
+  } = window.GLOBAL_ENV, a = f.Endpoints.AVATAR_DECORATION_PRESETS(t.asset), u = new URL(null != r ? "".concat(location.protocol, "//").concat(r).concat(a) : "".concat(location.protocol).concat(s).concat(a));
+  return u.searchParams.set("size", "".concat((0, l.getBestMediaProxySize)(n * (0, l.getDevicePixelRatio)()))), u.searchParams.set("passthrough", "".concat(i && (0, o.isAnimatedAvatarDecoration)(t.asset))), u.toString()
 }
 
 function O(e) {
@@ -196,9 +196,9 @@ function O(e) {
   } = e;
   if (null == r || null == i) return;
   let o = window.GLOBAL_ENV.CDN_HOST,
-    l = s && x(r) ? "gif" : "png",
-    c = f.Endpoints.GUILD_MEMBER_BANNER(i, n, r, l);
-  return t = (null != o ? "".concat(location.protocol, "//").concat(o).concat(c) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c) + "?size=".concat((0, u.getBestMediaProxySize)(a * (0, u.getDevicePixelRatio)()))
+    u = s && x(r) ? "gif" : "png",
+    c = f.Endpoints.GUILD_MEMBER_BANNER(i, n, r, u);
+  return t = (null != o ? "".concat(location.protocol, "//").concat(o).concat(c) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c) + "?size=".concat((0, l.getBestMediaProxySize)(a * (0, l.getDevicePixelRatio)()))
 }
 
 function D(e) {
@@ -208,7 +208,7 @@ function D(e) {
     size: r
   } = e;
   if (null == i) return null;
-  null == r && (r = window.screen.width * (0, u.getDevicePixelRatio)()), r = (0, u.getBestMediaProxySize)(r);
+  null == r && (r = window.screen.width * (0, l.getDevicePixelRatio)()), r = (0, l.getBestMediaProxySize)(r);
   let s = window.GLOBAL_ENV.CDN_HOST;
   return t = (null != s ? "".concat(location.protocol, "//").concat(s, "/splashes/").concat(n, "/").concat(i, ".jpg") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_SPLASH(n, i)) + "?size=".concat(r)
 }
@@ -220,11 +220,11 @@ function y(e) {
     } = e,
     r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   if (null == i) return null;
-  let s = (0, u.getBestMediaProxySize)(240 * (0, u.getDevicePixelRatio)()),
+  let s = (0, l.getBestMediaProxySize)(240 * (0, l.getDevicePixelRatio)()),
     a = _ ? "webp" : "jpg",
     o = r && x(i) ? "gif" : a,
-    l = window.GLOBAL_ENV.CDN_HOST;
-  return t = (null != l ? "".concat(location.protocol, "//").concat(l, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_BANNER(n, i, o)) + "?size=".concat(s), "jpg" === o && (t += "&quality=lossless"), t
+    u = window.GLOBAL_ENV.CDN_HOST;
+  return t = (null != u ? "".concat(location.protocol, "//").concat(u, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_BANNER(n, i, o)) + "?size=".concat(s), "jpg" === o && (t += "&quality=lossless"), t
 }
 
 function P(e) {
@@ -233,7 +233,7 @@ function P(e) {
     homeHeader: i
   } = e;
   if (null == i) return null;
-  let r = (0, u.getBestMediaProxySize)(1096 * (0, u.getDevicePixelRatio)()),
+  let r = (0, l.getBestMediaProxySize)(1096 * (0, l.getDevicePixelRatio)()),
     s = window.GLOBAL_ENV.CDN_HOST;
   return t = (null != s ? "".concat(location.protocol, "//").concat(s, "/home-headers/").concat(n, "/").concat(i, ".png") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_HOME_HEADER(n, i)) + "?size=".concat(r)
 }
@@ -245,7 +245,7 @@ function L(e) {
     size: r
   } = e;
   if (null == i) return null;
-  null == r && (r = window.screen.width * (0, u.getDevicePixelRatio)()), r = (0, u.getBestMediaProxySize)(r);
+  null == r && (r = window.screen.width * (0, l.getDevicePixelRatio)()), r = (0, l.getBestMediaProxySize)(r);
   let s = window.GLOBAL_ENV.CDN_HOST;
   return t = (null != s ? "".concat(location.protocol, "//").concat(s, "/discovery-splashes/").concat(n, "/").concat(i, ".jpg") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_DISCOVERY_SPLASH(n, i)) + "?size=".concat(r)
 }
@@ -353,13 +353,13 @@ function k(e) {
   let {
     id: s,
     icon: a,
-    applicationId: l,
-    size: u
+    applicationId: o,
+    size: l
   } = e;
-  if (null != l) return null !== (t = U({
-    id: l,
+  if (null != o) return null !== (t = U({
+    id: o,
     icon: a,
-    size: u
+    size: l
   })) && void 0 !== t ? t : i.DEFAULT_CHANNEL_ICON;
   return null !== (n = m({
     endpoint: f.Endpoints.CHANNEL_ICON,
@@ -367,8 +367,8 @@ function k(e) {
     id: s,
     hash: a,
     canAnimate: !1,
-    size: u
-  })) && void 0 !== n ? n : (r = s, i.DEFAULT_GROUP_DM_AVATARS[o.default.extractTimestamp(r) % i.DEFAULT_GROUP_DM_AVATARS.length])
+    size: l
+  })) && void 0 !== n ? n : (r = s, i.DEFAULT_GROUP_DM_AVATARS[d.default.extractTimestamp(r) % i.DEFAULT_GROUP_DM_AVATARS.length])
 }
 
 function x(e) {
@@ -498,7 +498,7 @@ var H = {
   makeSource: B,
   getAnimatableSourceWithFallback(e, t) {
     let n = t(e);
-    if (!(0, d.isAndroid)() || !e || "number" == typeof n) return n;
+    if (!(0, c.isAndroid)() || !e || "number" == typeof n) return n;
     {
       let e = t(!1);
       return "number" != typeof e && e.uri === n.uri ? e : [n, {

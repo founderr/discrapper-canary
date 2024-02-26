@@ -1,17 +1,17 @@
 "use strict";
 l.r(t), l.d(t, {
   openDisableCommunication: function() {
-    return u
+    return i
   },
   openEnableCommunication: function() {
-    return i
+    return u
   }
 });
 var a = l("37983");
 l("884691");
 var n = l("77078");
 
-function u(e, t, u) {
+function i(e, t, i) {
   (0, n.openModalLazy)(async () => {
     let {
       default: n
@@ -19,13 +19,13 @@ function u(e, t, u) {
     return l => (0, a.jsx)(n, {
       guildId: e,
       userId: t,
-      anaylticsLocations: u,
+      anaylticsLocations: i,
       ...l
     })
   })
 }
 
-function i(e, t, u) {
+function u(e, t, i) {
   (0, n.openModalLazy)(async () => {
     let {
       default: n
@@ -33,7 +33,7 @@ function i(e, t, u) {
     return l => (0, a.jsx)(n, {
       guildId: e,
       userId: t,
-      anaylticsLocations: u,
+      anaylticsLocations: i,
       ...l
     })
   })

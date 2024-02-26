@@ -11,8 +11,8 @@ var E = n("446674"),
   r = n("393414"),
   s = n("271938"),
   l = n("489622"),
-  I = n("861348"),
-  c = n("170213"),
+  c = n("861348"),
+  I = n("170213"),
   S = n("49111"),
   a = n("782340"),
   _ = n("97911");
@@ -27,7 +27,7 @@ function A() {
       variant: "text-md/normal",
       children: a.default.Messages.SAFETY_HUB_STANDALONE_PAGE_NAGBAR
     }), (0, i.jsx)(l.NoticeButtonAnchor, {
-      href: c.SafetyHubLinks.WARNING_SYSTEM_HELPCENTER_LINK,
+      href: I.SafetyHubLinks.WARNING_SYSTEM_HELPCENTER_LINK,
       children: (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
         color: "always-white",
@@ -40,7 +40,7 @@ function A() {
 function N() {
   return (0, i.jsx)("div", {
     className: _.pageContainer,
-    children: (0, i.jsx)(I.default, {})
+    children: (0, i.jsx)(c.default, {})
   })
 }
 

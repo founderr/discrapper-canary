@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return I
   },
   EnableCommunityModalSteps: function() {
-    return i
+    return l
   }
 }), n("222007");
-var i, l, r = n("316693"),
+var l, i, r = n("316693"),
   d = n("49111");
 let s = "publicSuccessModalSeen",
   u = "667560445975986187",
@@ -38,4 +38,4 @@ let s = "publicSuccessModalSeen",
   _ = r.default.combine(...E),
   S = 1e3,
   I = "Enable Community Modal";
-(l = i || (i = {})).SAFETY_CHECK = "safety_check", l.BASICS = "basics", l.FINISH = "finish"
+(i = l || (l = {})).SAFETY_CHECK = "safety_check", i.BASICS = "basics", i.FINISH = "finish"
