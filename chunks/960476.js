@@ -1,19 +1,19 @@
 "use strict";
-r.r(t), r.d(t, {
+s.r(t), s.d(t, {
   trackSearchStart: function() {
-    return y
+    return S
   },
   trackSearchResultViewed: function() {
-    return v
+    return F
   },
   search: function() {
     return C
   },
   fetchSuggestions: function() {
-    return A
+    return G
   },
   resetSearch: function() {
-    return G
+    return A
   },
   trackSelectGIF: function() {
     return x
@@ -31,30 +31,30 @@ r.r(t), r.d(t, {
     return O
   },
   removeFavoriteGIF: function() {
-    return k
+    return D
   }
-}), r("781738");
-var s = r("917351"),
-  n = r.n(s),
-  l = r("748820"),
-  i = r("872717"),
-  a = r("713349"),
-  o = r("913144"),
-  u = r("716241"),
-  c = r("787336"),
-  d = r("915639"),
-  h = r("872173"),
-  f = r("510849"),
-  m = r("599110"),
-  p = r("564703"),
-  I = r("253981"),
-  g = r("404118"),
-  _ = r("49111"),
-  E = r("397336"),
-  R = r("782340");
-let S = /-/g;
+}), s("781738");
+var r = s("917351"),
+  n = s.n(r),
+  l = s("748820"),
+  i = s("872717"),
+  a = s("713349"),
+  o = s("913144"),
+  u = s("716241"),
+  c = s("787336"),
+  d = s("915639"),
+  h = s("872173"),
+  f = s("510849"),
+  p = s("599110"),
+  m = s("564703"),
+  I = s("253981"),
+  g = s("404118"),
+  _ = s("49111"),
+  E = s("397336"),
+  R = s("782340");
+let y = /-/g;
 
-function y(e) {
+function S(e) {
   let t = null != e ? {
     [e]: 1
   } : {};
@@ -66,20 +66,20 @@ function y(e) {
   })
 }
 
-function v(e, t) {
+function F(e, t) {
   let {
-    startTime: r,
-    ...s
+    startTime: s,
+    ...r
   } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, n = {
     offset: 0,
     limit: null,
     totalResults: e.length
-  }, l = (0, p.calculateAnalyticsMetadata)(f.default.getAnalyticsID(), t, {
+  }, l = (0, m.calculateAnalyticsMetadata)(f.default.getAnalyticsID(), t, {
     ...n,
-    ...s,
+    ...r,
     results: e
-  }), i = null == r ? {} : {
-    load_duration_ms: Date.now() - r
+  }), i = null == s ? {} : {
+    load_duration_ms: Date.now() - s
   };
   u.default.trackWithMetadata(_.AnalyticEvents.SEARCH_RESULT_VIEWED, {
     ...l,
@@ -87,23 +87,23 @@ function v(e, t) {
   })
 }
 
-function F(e, t, r) {
-  let s = Date.now();
-  y(t), i.default.get({
+function v(e, t, s) {
+  let r = Date.now();
+  S(t), i.default.get({
     url: _.Endpoints.GIFS_SEARCH,
     query: {
       q: e,
       media_format: f.default.getSelectedFormat(),
       provider: "tenor",
       locale: d.default.locale,
-      limit: r
+      limit: s
     },
     oldFormErrors: !0
   }).then(n => {
     let l = n.body;
-    v(l, t, {
-      startTime: s,
-      limit: r
+    F(l, t, {
+      startTime: r,
+      limit: s
     }), o.default.dispatch({
       type: "GIF_PICKER_QUERY_SUCCESS",
       query: e,
@@ -114,18 +114,18 @@ function F(e, t, r) {
     query: e
   }))
 }
-let T = n.debounce(F, 250);
+let T = n.debounce(v, 250);
 
 function C(e, t) {
-  let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    s = arguments.length > 3 ? arguments[3] : void 0;
-  "" === e ? G() : (o.default.dispatch({
+  let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    r = arguments.length > 3 ? arguments[3] : void 0;
+  "" === e ? A() : (o.default.dispatch({
     type: "GIF_PICKER_QUERY",
     query: e
-  }), r ? F(e, t, s) : T(e, t, s))
+  }), s ? v(e, t, r) : T(e, t, r))
 }
 
-function A(e) {
+function G(e) {
   "" !== e && null != e && i.default.get({
     url: _.Endpoints.GIFS_SUGGEST,
     query: {
@@ -136,16 +136,16 @@ function A(e) {
     },
     oldFormErrors: !0
   }).then(t => {
-    let r = t.body;
+    let s = t.body;
     o.default.dispatch({
       type: "GIF_PICKER_SUGGESTIONS_SUCCESS",
       query: e,
-      items: r
+      items: s
     })
   })
 }
 
-function G() {
+function A() {
   o.default.dispatch({
     type: "GIF_PICKER_QUERY",
     query: ""
@@ -155,22 +155,22 @@ function G() {
 function x(e) {
   let {
     type: t,
-    index: r,
-    offset: s,
+    index: s,
+    offset: r,
     limit: n,
     results: l,
     totalResults: a,
     query: o,
     gifId: c
-  } = e, d = (0, p.calculateAnalyticsMetadata)(f.default.getAnalyticsID(), t, {
-    offset: s,
+  } = e, d = (0, m.calculateAnalyticsMetadata)(f.default.getAnalyticsID(), t, {
+    offset: r,
     limit: n,
     results: l,
     totalResults: a
   });
   u.default.trackWithMetadata(_.AnalyticEvents.SEARCH_RESULT_SELECTED, {
     ...d,
-    index_num: r,
+    index_num: s,
     source_object: "GIF Picker",
     query: o
   }), null != c && i.default.post({
@@ -184,7 +184,7 @@ function x(e) {
 }
 
 function N() {
-  let e = (0, l.v4)().replace(S, "");
+  let e = (0, l.v4)().replace(y, "");
   u.default.trackWithMetadata(_.AnalyticEvents.SEARCH_OPENED, {
     search_type: _.SearchTypes.GIF,
     load_id: e
@@ -209,20 +209,20 @@ function P() {
     let {
       body: t
     } = e, {
-      categories: r,
-      gifs: s
+      categories: s,
+      gifs: r
     } = t;
     o.default.dispatch({
       type: "GIF_PICKER_TRENDING_FETCH_SUCCESS",
-      trendingCategories: r,
-      trendingGIFPreview: s[0]
+      trendingCategories: s,
+      trendingGIFPreview: r[0]
     })
   })
 }
 
 function M(e) {
   let t = Date.now();
-  y(_.GIFPickerResultTypes.TRENDING_GIFS), i.default.get({
+  S(_.GIFPickerResultTypes.TRENDING_GIFS), i.default.get({
     url: _.Endpoints.GIFS_TRENDING_GIFS,
     query: {
       media_format: f.default.getSelectedFormat(),
@@ -231,16 +231,16 @@ function M(e) {
       limit: e
     },
     oldFormErrors: !0
-  }).then(r => {
+  }).then(s => {
     let {
-      body: s
-    } = r;
-    v(s, _.GIFPickerResultTypes.TRENDING_GIFS, {
+      body: r
+    } = s;
+    F(r, _.GIFPickerResultTypes.TRENDING_GIFS, {
       startTime: t,
       limit: e
     }), o.default.dispatch({
       type: "GIF_PICKER_QUERY_SUCCESS",
-      items: s
+      items: r
     })
   }, () => {
     o.default.dispatch({
@@ -256,11 +256,11 @@ function w(e) {
 
 function O(e) {
   h.FrecencyUserSettingsActionCreators.updateAsync("favoriteGifs", t => {
-    var r;
-    let s = null !== (r = n.max(Object.values(t.gifs).map(e => e.order))) && void 0 !== r ? r : 0;
+    var s;
+    let r = null !== (s = n.max(Object.values(t.gifs).map(e => e.order))) && void 0 !== s ? s : 0;
     t.gifs[w(e.url)] = {
       ...e,
-      order: s + 1
+      order: r + 1
     };
     let l = a.FavoriteGIFs.toBinary(t).length;
     if (l > E.MAX_FAVORITE_GIFS_SIZE) return g.default.show({
@@ -268,11 +268,11 @@ function O(e) {
       body: R.default.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY
     }), !1;
     n.size(t.gifs) > 2 && (t.hideTooltip = !0)
-  }, E.UserSettingsDelay.INFREQUENT_USER_ACTION), m.default.track(_.AnalyticEvents.GIF_FAVORITED)
+  }, E.UserSettingsDelay.INFREQUENT_USER_ACTION), p.default.track(_.AnalyticEvents.GIF_FAVORITED)
 }
 
-function k(e) {
+function D(e) {
   h.FrecencyUserSettingsActionCreators.updateAsync("favoriteGifs", t => {
     e in t.gifs ? delete t.gifs[e] : delete t.gifs[w(e)]
-  }, E.UserSettingsDelay.INFREQUENT_USER_ACTION), m.default.track(_.AnalyticEvents.GIF_UNFAVORITED)
+  }, E.UserSettingsDelay.INFREQUENT_USER_ACTION), p.default.track(_.AnalyticEvents.GIF_UNFAVORITED)
 }

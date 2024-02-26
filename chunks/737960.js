@@ -1,29 +1,29 @@
 "use strict";
-r.r(t), r.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return i
   }
 });
-var s = r("37983"),
-  n = r("884691"),
-  l = r("308723");
+var r = s("37983"),
+  n = s("884691"),
+  l = s("308723");
 
 function i(e) {
-  return n.forwardRef(function(t, r) {
+  return n.forwardRef(function(t, s) {
     let i = n.useRef();
-    return n.useImperativeHandle(r, () => ({
+    return n.useImperativeHandle(s, () => ({
       triggerResize: () => {
         var e;
         null === (e = i.current) || void 0 === e || e.onResize()
       }
-    })), (0, s.jsx)(l.default, {
+    })), (0, r.jsx)(l.default, {
       ref: i,
-      children: r => {
+      children: s => {
         let {
           width: n,
           height: l
-        } = r;
-        return (0, s.jsx)(e, {
+        } = s;
+        return (0, r.jsx)(e, {
           ...t,
           width: n,
           height: l

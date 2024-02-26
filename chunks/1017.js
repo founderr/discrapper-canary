@@ -11,8 +11,8 @@ var i = r("446674"),
   a = r("843823"),
   u = r("697218"),
   o = r("49111");
-let c = !1,
-  d = {},
+let d = !1,
+  c = {},
   f = {};
 
 function p(e) {
@@ -26,9 +26,9 @@ function h(e) {
   let t = f[e];
   if (null == t) return !1;
   let r = t.gameId;
-  return null != d[r] && (d = {
-    ...d
-  }, delete d[r][e], 0 === Object.values(d[r]).length && delete d[r]), f = {
+  return null != c[r] && (c = {
+    ...c
+  }, delete c[r][e], 0 === Object.values(c[r]).length && delete c[r]), f = {
     ...f
   }, delete f[e], !0
 }
@@ -50,15 +50,15 @@ function E(e) {
       let u = f[t.id];
       null != u && u.gameId !== a && h(t.id);
       let o = null !== (i = null === (r = e.timestamps) || void 0 === r ? void 0 : r.start) && void 0 !== i ? i : Date.now(),
-        c = {
+        d = {
           userId: t.id,
           activity: e,
           startedPlaying: o
         };
-      return n = a, l = c, d = {
-        ...d,
+      return n = a, l = d, c = {
+        ...c,
         [n]: {
-          ...d[n],
+          ...c[n],
           [l.userId]: l
         }
       }, f = {
@@ -74,9 +74,9 @@ function E(e) {
 
 function _() {
   let e = !1;
-  if (!a.default.needsRefresh() && !c) {
+  if (!a.default.needsRefresh() && !d) {
     let t;
-    d = {}, f = {}, t = !1, l.default.getUserIds().forEach(e => {
+    c = {}, f = {}, t = !1, l.default.getUserIds().forEach(e => {
       let r = u.default.getUser(e);
       null != r && (t = E({
         user: r,
@@ -84,23 +84,23 @@ function _() {
       }) || t)
     }), e = t
   }
-  return c = !a.default.needsRefresh(), e
+  return d = !a.default.needsRefresh(), e
 }
 class v extends i.default.Store {
   initialize() {
     this.waitFor(a.default), this.syncWith([a.default], _)
   }
   get games() {
-    return d
+    return c
   }
   get usersPlaying() {
     return f
   }
   get gameIds() {
-    return Object.keys(d)
+    return Object.keys(c)
   }
   getNowPlaying(e) {
-    return d[e]
+    return c[e]
   }
   getUserGame(e) {
     return f[e]
@@ -109,7 +109,7 @@ class v extends i.default.Store {
 v.displayName = "NowPlayingStore";
 var m = new v(n.default, {
   CONNECTION_OPEN: function() {
-    d = {}, f = {}
+    c = {}, f = {}
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
@@ -121,7 +121,7 @@ var m = new v(n.default, {
     }), p(r) && (i = !0), i
   },
   LOGOUT: function() {
-    d = {}, f = {}
+    c = {}, f = {}
   },
   PRESENCE_UPDATES: function(e) {
     let {

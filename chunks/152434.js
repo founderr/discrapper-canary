@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return N
   }
 }), s("781738");
 var a = s("37983"),
@@ -19,12 +19,12 @@ var a = s("37983"),
   g = s("970366"),
   m = s("271938"),
   S = s("124969"),
-  C = s("659500"),
-  T = s("49111"),
+  T = s("659500"),
+  C = s("49111"),
   A = s("782340"),
   E = s("890957");
 d.default.initialize();
-class N extends r.PureComponent {
+class _ extends r.PureComponent {
   componentDidMount() {
     (0, g.trackAppUIViewed)("reset_password")
   }
@@ -129,7 +129,7 @@ class N extends r.PureComponent {
       if (null != e && e.preventDefault(), 0 === n.length) {
         this.setState({
           error: A.default.Messages.PASSWORD_REQUIRED
-        }), C.ComponentDispatch.dispatch(T.ComponentActions.WAVE_EMPHASIZE);
+        }), T.ComponentDispatch.dispatch(C.ComponentActions.WAVE_EMPHASIZE);
         return
       }
       null != o && this.setState({
@@ -205,19 +205,19 @@ class N extends r.PureComponent {
         });
         return
       }
-      e(T.Routes.APP)
+      e(C.Routes.APP)
     }, this.handleGoToLogin = () => {
       let {
         transitionTo: e
       } = this.props;
-      h.default.loginReset(), e(T.Routes.LOGIN)
+      h.default.loginReset(), e(C.Routes.LOGIN)
     }, this.isSubmitting = () => {
       let {
         loginStatus: e
       } = this.props, {
         working: t
       } = this.state;
-      return t || e === T.LoginStates.LOGGING_IN_MFA
+      return t || e === C.LoginStates.LOGGING_IN_MFA
     }, this.handleOpenApp = () => {
       (0, f.default)("password_reset")
     }, this.hasError = e => null != this.props.errors[e] || null != this.state.error, this.renderError = e => {
@@ -242,18 +242,18 @@ class N extends r.PureComponent {
     }
   }
 }
-N.defaultProps = {
+_.defaultProps = {
   transitionTo: e => s.g.location.assign(e),
   replaceWith: e => s.g.location.replace(e)
 };
-var _ = function(e) {
+var N = function(e) {
   let t = (0, d.useStateFromStoresObject)([m.default], () => ({
     loginStatus: m.default.getLoginStatus(),
     mfaTicket: m.default.getMFATicket(),
     errors: m.default.getErrors(),
     mfaMethods: m.default.getMFAMethods()
   }));
-  return (0, a.jsx)(N, {
+  return (0, a.jsx)(_, {
     ...e,
     ...t
   })

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("424973");
 var i = n("37983"),
   a = n("884691"),
-  l = n("759843"),
-  s = n("446674"),
+  s = n("759843"),
+  l = n("446674"),
   r = n("77078"),
   o = n("450911"),
   u = n("685073"),
@@ -21,8 +21,8 @@ var i = n("37983"),
   g = n("705955"),
   v = n("27618"),
   C = n("697218"),
-  A = n("466857"),
-  y = n("578706"),
+  y = n("466857"),
+  A = n("578706"),
   T = n("83900"),
   S = n("599110"),
   E = n("315102"),
@@ -41,21 +41,21 @@ function M(e) {
     activityItem: t,
     analyticsLocations: n,
     ...m
-  } = e, h = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
+  } = e, h = (0, l.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
     analyticsLocations: I
   } = (0, f.default)(n);
   (0, p.default)({
-    type: l.ImpressionTypes.MODAL,
-    name: l.ImpressionNames.ACTIVITY_BOOKMARK_SHARE_MODAL,
+    type: s.ImpressionTypes.MODAL,
+    name: s.ImpressionNames.ACTIVITY_BOOKMARK_SHARE_MODAL,
     properties: {
       application_id: t.application.id,
       location_stack: I
     }
   });
-  let [v, y] = a.useState(""), [T, E] = a.useState([]), x = (0, w.default)({
+  let [v, A] = a.useState(""), [T, E] = a.useState([]), x = (0, w.default)({
     applicationId: t.application.id,
     size: 256
-  }), N = "".concat(window.location.origin).concat(L.Routes.ACTIVITY_DETAILS(t.application.id)), _ = (0, s.useStateFromStoresArray)([g.default], () => g.default.getInviteSuggestionRows());
+  }), N = "".concat(window.location.origin).concat(L.Routes.ACTIVITY_DETAILS(t.application.id)), _ = (0, l.useStateFromStoresArray)([g.default], () => g.default.getInviteSuggestionRows());
   a.useEffect(() => {
     (0, u.loadInviteSuggestions)({
       omitUserIds: new Set,
@@ -104,17 +104,17 @@ function M(e) {
       })]
     }), (0, i.jsxs)(r.ModalContent, {
       className: D.modalContent,
-      children: [(0, i.jsx)(A.default, {
+      children: [(0, i.jsx)(y.default, {
         className: D.searchBar,
         placeholder: j.default.Messages.SEARCH,
         label: j.default.Messages.SEARCH,
         searchTerm: v,
-        onChange: e => y(e),
-        onClear: () => y("")
+        onChange: e => A(e),
+        onClear: () => A("")
       }), _.map((e, t) => (0, i.jsxs)(a.Fragment, {
         children: [0 === t ? null : (0, i.jsx)("div", {
           className: D.rowDivider
-        }), (0, i.jsx)(O, {
+        }), (0, i.jsx)(k, {
           row: e,
           onClick: () => {
             let t = [...T];
@@ -157,7 +157,7 @@ function M(e) {
         className: D.footerDivider
       }), (0, i.jsxs)("div", {
         className: D.copySendBar,
-        children: [(0, i.jsx)(k, {
+        children: [(0, i.jsx)(O, {
           link: N,
           applicationId: t.application.id
         }), (0, i.jsx)(r.Button, {
@@ -170,49 +170,49 @@ function M(e) {
   })
 }
 
-function O(e) {
+function k(e) {
   let {
     row: t,
     onClick: n,
     checked: a
-  } = e, l = null, s = null, o = null;
+  } = e, s = null, l = null, o = null;
   switch (t.type) {
     case R.RowTypes.DM:
     case R.RowTypes.FRIEND:
-      l = (0, i.jsx)(r.Avatar, {
+      s = (0, i.jsx)(r.Avatar, {
         size: r.AvatarSizes.SIZE_40,
         src: t.item.getAvatarURL(null, 128, !1),
         "aria-label": t.item.username
-      }), s = _.default.getName(t.item), o = _.default.getUserTag(t.item);
+      }), l = _.default.getName(t.item), o = _.default.getUserTag(t.item);
       break;
     case R.RowTypes.GROUP_DM: {
       let e = (0, m.getChannelIconURL)(t.item),
         n = (0, h.computeChannelName)(t.item, C.default, v.default);
-      l = (0, i.jsx)(r.Avatar, {
+      s = (0, i.jsx)(r.Avatar, {
         src: e,
         "aria-label": n,
         size: r.AvatarSizes.SIZE_40
-      }), s = (0, h.computeChannelName)(t.item, C.default, v.default);
+      }), l = (0, h.computeChannelName)(t.item, C.default, v.default);
       break
     }
     case R.RowTypes.CHANNEL: {
       let e = t.item,
         n = I.default.getGuild(e.guild_id);
       if (null == n) return null;
-      if (s = "#".concat((0, h.computeChannelName)(e, C.default, v.default)), o = n.name, null != n.icon) {
+      if (l = "#".concat((0, h.computeChannelName)(e, C.default, v.default)), o = n.name, null != n.icon) {
         let t = E.default.getGuildIconURL({
           id: e.guild_id,
           icon: n.icon,
           size: 40
         });
-        l = (0, i.jsx)(r.Avatar, {
+        s = (0, i.jsx)(r.Avatar, {
           src: t,
-          "aria-label": s,
+          "aria-label": l,
           size: r.AvatarSizes.SIZE_40
         })
       } else {
         let e = (0, N.getAcronym)(n.name);
-        l = (0, i.jsx)("div", {
+        s = (0, i.jsx)("div", {
           className: D.acronym,
           "aria-hidden": !0,
           children: e
@@ -227,13 +227,13 @@ function O(e) {
       className: D.rowLeft,
       children: [(0, i.jsx)("div", {
         className: D.rowAvatar,
-        children: l
+        children: s
       }), (0, i.jsxs)("div", {
         className: D.rowNameContainer,
         children: [(0, i.jsx)(r.Text, {
           variant: "text-md/semibold",
           className: D.rowName,
-          children: s
+          children: l
         }), (0, i.jsx)(r.Text, {
           variant: "text-xs/medium",
           className: D.rowSubName,
@@ -249,11 +249,11 @@ function O(e) {
   })
 }
 
-function k(e) {
+function O(e) {
   let {
     applicationId: t,
     link: n
-  } = e, l = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), [o, u] = a.useState(!1);
+  } = e, s = (0, l.useStateFromStores)([C.default], () => C.default.getCurrentUser()), [o, u] = a.useState(!1);
   return a.useEffect(() => {
     let e;
     return o && (e = setTimeout(() => {
@@ -266,11 +266,11 @@ function k(e) {
     color: r.Button.Colors.LINK,
     onClick: function() {
       S.default.track(L.AnalyticEvents.ACTIVITY_BOOKMARK_COPY_URL, {
-        user_id: null == l ? void 0 : l.id,
+        user_id: null == s ? void 0 : s.id,
         application_id: t
       }), (0, x.copy)(n), u(!0)
     },
     innerClassName: D.copyButton,
-    children: [o ? (0, i.jsx)(y.default, {}) : (0, i.jsx)(T.default, {}), o ? j.default.Messages.COPIED : j.default.Messages.COPY_LINK]
+    children: [o ? (0, i.jsx)(A.default, {}) : (0, i.jsx)(T.default, {}), o ? j.default.Messages.COPIED : j.default.Messages.COPY_LINK]
   })
 }

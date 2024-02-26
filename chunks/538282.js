@@ -1,5 +1,5 @@
 "use strict";
-r.r(t), r.d(t, {
+s.r(t), s.d(t, {
   openExpressionPicker: function() {
     return c
   },
@@ -13,20 +13,20 @@ r.r(t), r.d(t, {
     return f
   },
   setExpressionPickerView: function() {
-    return m
+    return p
   },
   setSearchQuery: function() {
-    return p
+    return m
   },
   useExpressionPickerStore: function() {
     return I
   }
 });
-var s = r("995008"),
-  n = r.n(s),
-  l = r("308503"),
-  i = r("136759"),
-  a = r("13030");
+var r = s("995008"),
+  n = s.n(r),
+  l = s("308503"),
+  i = s("136759"),
+  a = s("13030");
 let o = Object.freeze({
     activeView: null,
     lastActiveView: null,
@@ -62,20 +62,20 @@ let o = Object.freeze({
   h = e => {
     let t = u.getState();
     if (null == t.activeView) {
-      var r;
-      c(null !== (r = t.lastActiveView) && void 0 !== r ? r : a.ExpressionPickerViewType.EMOJI, e)
+      var s;
+      c(null !== (s = t.lastActiveView) && void 0 !== s ? s : a.ExpressionPickerViewType.EMOJI, e)
     } else d()
   },
   f = (e, t) => {
     u.getState().activeView === e ? d() : c(e, t)
   },
-  m = e => {
+  p = e => {
     u.setState({
       activeView: e,
       lastActiveView: u.getState().activeView
     })
   },
-  p = function(e) {
+  m = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     u.setState({
       searchQuery: e,

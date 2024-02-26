@@ -1,31 +1,31 @@
 "use strict";
-r.r(t), r.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return I
   }
-}), r("222007");
-var s = r("37983"),
-  n = r("884691"),
-  l = r("414456"),
-  i = r.n(l),
-  a = r("77078"),
-  o = r("960476"),
-  u = r("140331"),
-  c = r("118849"),
-  d = r("671434"),
-  h = r("659500"),
-  f = r("49111"),
-  m = r("782340"),
-  p = r("420804"),
+}), s("222007");
+var r = s("37983"),
+  n = s("884691"),
+  l = s("414456"),
+  i = s.n(l),
+  a = s("77078"),
+  o = s("960476"),
+  u = s("140331"),
+  c = s("118849"),
+  d = s("671434"),
+  h = s("659500"),
+  f = s("49111"),
+  p = s("782340"),
+  m = s("420804"),
   I = n.memo(function(e) {
     let {
       width: t,
-      height: r,
+      height: s,
       src: l,
       url: I,
       format: g,
       className: _
-    } = e, [E, R] = n.useState(!1), S = (0, u.useIsFavoriteGIF)(I), y = S ? m.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : m.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, v = S ? d.default : c.default;
+    } = e, [E, R] = n.useState(!1), y = (0, u.useIsFavoriteGIF)(I), S = y ? p.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : p.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, F = y ? d.default : c.default;
     n.useEffect(() => {
       if (!E) return;
       let e = setTimeout(() => {
@@ -33,28 +33,28 @@ var s = r("37983"),
       }, 500);
       return () => clearTimeout(e)
     }, [E]);
-    let F = e => {
-      e.preventDefault(), e.stopPropagation(), R(!0), S ? (0, o.removeFavoriteGIF)(I) : ((0, o.addFavoriteGIF)({
+    let v = e => {
+      e.preventDefault(), e.stopPropagation(), R(!0), y ? (0, o.removeFavoriteGIF)(I) : ((0, o.addFavoriteGIF)({
         url: I,
         src: l,
         width: t,
-        height: r,
+        height: s,
         format: g
       }), h.ComponentDispatch.dispatch(f.ComponentActions.FAVORITE_GIF))
     };
-    return (0, s.jsx)(a.Tooltip, {
-      text: y,
-      children: e => (0, s.jsx)(a.Clickable, {
+    return (0, r.jsx)(a.Tooltip, {
+      text: S,
+      children: e => (0, r.jsx)(a.Clickable, {
         ...e,
-        className: i(_, p.size, p.gifFavoriteButton, {
-          [p.selected]: S,
-          [p.showPulse]: E
+        className: i(_, m.size, m.gifFavoriteButton, {
+          [m.selected]: y,
+          [m.showPulse]: E
         }),
         onMouseDown: e => e.preventDefault(),
-        onClick: F,
+        onClick: v,
         onDoubleClick: e => e.preventDefault(),
-        children: (0, s.jsx)(v, {
-          className: p.icon
+        children: (0, r.jsx)(F, {
+          className: m.icon
         })
       })
     })

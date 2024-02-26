@@ -4,26 +4,26 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var u = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("446674"),
-  r = n("77078"),
-  i = n("305961"),
+var i = n("446674"),
+  u = n("77078"),
+  r = n("305961"),
   o = n("697218"),
   a = n("782340");
 
 function s(e, t) {
-  let s = (0, l.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
-    d = (0, l.useStateFromStores)([i.default], () => i.default.getGuild(t));
-  return null == d || null == s || e.id === d.ownerId || e.bot || !d.isOwnerWithRequiredMfaLevel(s) ? null : (0, u.jsx)(r.MenuItem, {
+  let s = (0, i.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
+    d = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(t));
+  return null == d || null == s || e.id === d.ownerId || e.bot || !d.isOwnerWithRequiredMfaLevel(s) ? null : (0, l.jsx)(u.MenuItem, {
     id: "transfer-ownership",
     color: "danger",
     label: a.default.Messages.TRANSFER_OWNERSHIP,
-    action: () => (0, r.openModalLazy)(async () => {
+    action: () => (0, u.openModalLazy)(async () => {
       let {
         default: t
       } = await n.el("878551").then(n.bind(n, "878551"));
-      return n => (0, u.jsx)(t, {
+      return n => (0, l.jsx)(t, {
         ...n,
         guild: d,
         fromUser: s,

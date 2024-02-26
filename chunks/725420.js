@@ -34,9 +34,9 @@ function C(e) {
     transitionState: C,
     onClose: x,
     onSave: N
-  } = e, L = (0, I.useBroadcastingStoredSelectedTags)(), [B, w] = n.useState(L), [O, M] = n.useState(""), p = c.BroadcastAllowFriends.useSetting(), [y, U] = n.useState(null == p || p), b = c.BroadcastAutoBroadcast.useSetting(), [G, j] = n.useState(b), [F, k] = n.useState(!1), [P, H] = n.useState(!1), V = (0, E.useSelfBroadcast)(), Y = (0, _.default)(null == V ? void 0 : V.channelId), z = n.useMemo(() => p !== y || !(0, r.isEqual)(L, B) || b !== G, [p, y, L, B, b, G]), W = null != N, X = n.useMemo(() => y || Object.keys(B[m.RowType.USER]).length > 0 || Object.keys(B[m.RowType.GUILD]).length > 0, [y, B]), q = !X && null != V || !X && W || !z && !W, Q = n.useMemo(() => "@" === O.trim().charAt(0), [O]), J = (0, s.useStateFromStoresArray)([f.default], () => f.default.getGuildIds()), K = (0, I.useFilteredGuilds)(J), Z = n.useMemo(() => K.map(e => e.id), [K]), [$, ee] = (0, I.useBroadcastingPrivacyAudience)(Q, function(e) {
+  } = e, L = (0, I.useBroadcastingStoredSelectedTags)(), [B, w] = n.useState(L), [M, O] = n.useState(""), p = c.BroadcastAllowFriends.useSetting(), [y, U] = n.useState(null == p || p), b = c.BroadcastAutoBroadcast.useSetting(), [G, j] = n.useState(b), [F, k] = n.useState(!1), [P, H] = n.useState(!1), V = (0, E.useSelfBroadcast)(), Y = (0, _.default)(null == V ? void 0 : V.channelId), z = n.useMemo(() => p !== y || !(0, r.isEqual)(L, B) || b !== G, [p, y, L, B, b, G]), W = null != N, X = n.useMemo(() => y || Object.keys(B[m.RowType.USER]).length > 0 || Object.keys(B[m.RowType.GUILD]).length > 0, [y, B]), q = !X && null != V || !X && W || !z && !W, Q = n.useMemo(() => "@" === M.trim().charAt(0), [M]), J = (0, s.useStateFromStoresArray)([f.default], () => f.default.getGuildIds()), K = (0, I.useFilteredGuilds)(J), Z = n.useMemo(() => K.map(e => e.id), [K]), [$, ee] = (0, I.useBroadcastingPrivacyAudience)(Q, function(e) {
     var t;
-    let a = (t = O.trim(), Q ? t.slice(1) : t),
+    let a = (t = M.trim(), Q ? t.slice(1) : t),
       l = RegExp("".concat(T.default.escape(a)), "i");
     return l.test(e)
   }, y);
@@ -59,7 +59,7 @@ function C(e) {
   }
 
   function ea(e) {
-    M(e)
+    O(e)
   }
 
   function el(e, t) {
@@ -110,9 +110,9 @@ function C(e) {
   }, [W]), n.useEffect(() => {
     let e = (0, r.chunk)(Z, 100);
     e.forEach(e => {
-      A.default.requestMembers(e, O.trim())
+      A.default.requestMembers(e, M.trim())
     })
-  }, [Z, O]), (0, l.jsxs)(d.ModalRoot, {
+  }, [Z, M]), (0, l.jsxs)(d.ModalRoot, {
     transitionState: C,
     children: [(0, l.jsx)(d.Heading, {
       variant: "heading-xl/semibold",
@@ -146,7 +146,7 @@ function C(e) {
         })]
       }), (0, l.jsx)(g.default, {
         selectedTags: B[m.RowType.USER],
-        query: O,
+        query: M,
         onQueryChange: ea,
         onClickRow: e => el(m.RowType.USER, e),
         onRemoveTag: e => en(m.RowType.USER, e),
@@ -163,7 +163,7 @@ function C(e) {
         maxCount: R.BROADCASTING_MAX_ALLOWED_USER_IDS
       }), (0, l.jsx)(g.default, {
         selectedTags: B[m.RowType.GUILD],
-        query: O,
+        query: M,
         onQueryChange: ea,
         onClickRow: e => el(m.RowType.GUILD, e),
         onRemoveTag: e => en(m.RowType.GUILD, e),

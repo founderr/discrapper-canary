@@ -20,25 +20,25 @@ var n = a("446674"),
 function p(e, t) {
   let p = s.default.getId(),
     T = t === f.AppContext.POPOUT,
-    A = (0, n.useStateFromStores)([c.default, o.default], () => c.default.getVoiceChannelId() === o.default.getDMFromUserId(e.id)),
-    S = (0, n.useStateFromStores)([r.default], () => r.default.isBlocked(e.id));
-  if (p === e.id || T || A || e.bot) return null;
-  let v = () => d.default.openPrivateChannel(e.id, !0),
-    _ = !u.default.disableCallUserConfirmationPrompt;
+    S = (0, n.useStateFromStores)([c.default, o.default], () => c.default.getVoiceChannelId() === o.default.getDMFromUserId(e.id)),
+    A = (0, n.useStateFromStores)([r.default], () => r.default.isBlocked(e.id));
+  if (p === e.id || T || S || e.bot) return null;
+  let _ = () => d.default.openPrivateChannel(e.id, !0),
+    v = !u.default.disableCallUserConfirmationPrompt;
   return (0, i.jsx)(l.MenuItem, {
     id: "call",
     label: I.default.Messages.CALL,
-    action: _ ? () => {
+    action: v ? () => {
       (0, l.openModalLazy)(async () => {
         let {
           default: e
         } = await a.el("241890").then(a.bind(a, "241890"));
         return t => (0, i.jsx)(e, {
-          onSubmit: v,
+          onSubmit: _,
           ...t
         })
       })
-    } : v,
-    disabled: S
+    } : _,
+    disabled: A
   })
 }

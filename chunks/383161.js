@@ -1,49 +1,49 @@
 "use strict";
-i.r(e), i.d(e, {
+n.r(t), n.d(t, {
   mentionUser: function() {
-    return x
+    return f
   },
   default: function() {
-    return m
+    return T
   }
-}), i("222007");
-var l = i("37983");
-i("884691");
-var r = i("446674"),
-  n = i("77078"),
-  a = i("352674"),
-  s = i("42203"),
-  o = i("957255"),
-  d = i("18494"),
-  c = i("659500"),
-  h = i("158998"),
-  u = i("49111"),
-  f = i("782340");
+}), n("222007");
+var i = n("37983");
+n("884691");
+var l = n("446674"),
+  u = n("77078"),
+  a = n("352674"),
+  r = n("42203"),
+  d = n("957255"),
+  o = n("18494"),
+  s = n("659500"),
+  c = n("158998"),
+  E = n("49111"),
+  _ = n("782340");
 
-function x(t, e) {
+function f(e, t) {
   let {
-    id: i
-  } = t, l = "@".concat(h.default.getUserTag(t, {
+    id: n
+  } = e, i = "@".concat(c.default.getUserTag(e, {
     decoration: "never"
   }));
-  c.ComponentDispatch.dispatchToLastSubscribed(u.ComponentActions.INSERT_TEXT, {
-    plainText: l,
-    rawText: "<@".concat(i, ">")
-  }), null != e && a.default.startTyping(e)
+  s.ComponentDispatch.dispatchToLastSubscribed(E.ComponentActions.INSERT_TEXT, {
+    plainText: i,
+    rawText: "<@".concat(n, ">")
+  }), null != t && a.default.startTyping(t)
 }
 
-function m(t, e, i) {
-  let [a, c] = (0, r.useStateFromStoresArray)([d.default, s.default, o.default], () => {
-    let t = d.default.getChannelId(e),
-      i = s.default.getChannel(t),
-      l = null != i && (i.isMultiUserDM() || o.default.can(u.Permissions.SEND_MESSAGES, i));
-    return [t, l]
-  }, [e]), h = i === u.AppContext.POPOUT;
-  return !c || h ? null : (0, l.jsx)(n.MenuItem, {
+function T(e, t, n) {
+  let [a, s] = (0, l.useStateFromStoresArray)([o.default, r.default, d.default], () => {
+    let e = o.default.getChannelId(t),
+      n = r.default.getChannel(e),
+      i = null != n && (n.isMultiUserDM() || d.default.can(E.Permissions.SEND_MESSAGES, n));
+    return [e, i]
+  }, [t]), c = n === E.AppContext.POPOUT;
+  return !s || c ? null : (0, i.jsx)(u.MenuItem, {
     id: "mention",
-    label: f.default.Messages.MENTION,
+    label: _.default.Messages.MENTION,
     action: function() {
-      x(t, a)
+      f(e, a)
     }
   })
 }

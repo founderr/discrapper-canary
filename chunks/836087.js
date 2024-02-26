@@ -113,16 +113,16 @@ function x(e) {
     compact: m = !1,
     disableInteraction: g = !1,
     maxVisibleUsers: v = 3
-  } = e, [A, x] = r.useState(!1), L = r.useRef(new d.DelayedCall(150, () => x(!1))), R = (0, o.useStateFromStoresArray)([E.default, C.default], () => {
+  } = e, [A, x] = r.useState(!1), R = r.useRef(new d.DelayedCall(150, () => x(!1))), L = (0, o.useStateFromStoresArray)([E.default, C.default], () => {
     if (l.type === _.ParticipantTypes.STREAM) {
       let e = E.default.getViewerIds(l.id);
       return e.length > 0 ? e.map(e => C.default.getUser(e)).filter(S.isNotNullish) : O
     }
     return l.type === _.ParticipantTypes.ACTIVITY ? l.participants.size > 0 ? Array.from(l.participants).map(e => C.default.getUser(e)).filter(S.isNotNullish) : O : O
   }, [l]), y = r.useCallback(() => {
-    L.current.cancel(), x(!0)
+    R.current.cancel(), x(!0)
   }, []), P = r.useCallback(() => {
-    L.current.delay()
+    R.current.delay()
   }, []), D = r.useCallback((e, t) => {
     y(), (0, f.openContextMenuLazy)(e, async () => {
       let {
@@ -136,24 +136,24 @@ function x(e) {
       onClose: P
     })
   }, [P, y]);
-  if (0 === R.length) return null;
+  if (0 === L.length) return null;
   if (m) return (0, a.jsx)(N, {
     maxVisibleUsers: v,
-    users: R,
+    users: L,
     guildId: s,
     channelId: t,
     className: p,
     participantType: l.type
   });
-  let b = u(R).take(v).map(e => (0, a.jsx)(c.Avatar, {
+  let b = u(L).take(v).map(e => (0, a.jsx)(c.Avatar, {
     src: e.getAvatarURL(s, 24),
     "aria-label": e.username,
     size: c.AvatarSizes.SIZE_24,
     className: I.viewer
   }, e.id)).value();
-  return R.length > v && (b[b.length - 1] = (0, a.jsxs)("div", {
+  return L.length > v && (b[b.length - 1] = (0, a.jsxs)("div", {
     className: I.overflow,
-    children: ["+", R.length - v + 1]
+    children: ["+", L.length - v + 1]
   }, "overflow")), (0, a.jsx)(h.default, {
     section: T.AnalyticsSections.STREAM_VIEWER_POPOUT,
     children: (0, a.jsx)("div", {
@@ -165,7 +165,7 @@ function x(e) {
           handleUserContextMenu: D,
           guildId: s,
           channelId: t,
-          users: R,
+          users: L,
           disableInteraction: g
         }),
         shouldShow: A,

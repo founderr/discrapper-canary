@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return R
   }
 });
 var a = n("37983");
@@ -117,7 +117,7 @@ let A = e => T.default.close(e),
     })
   };
 
-function L(e) {
+function R(e) {
   let {
     focused: t,
     type: n,

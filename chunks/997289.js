@@ -1,9 +1,9 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   useAnalyticsContext: function() {
-    return a
+    return u
   }
 });
 var i = n("884691"),
-  u = n("599110");
-let a = () => i.useContext(u.AnalyticsContext)
+  l = n("599110");
+let u = () => i.useContext(l.AnalyticsContext)

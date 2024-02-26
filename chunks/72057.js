@@ -24,12 +24,12 @@ function p(e) {
   } = e, {
     id: T
   } = t, {
-    loading: A,
-    note: S
-  } = (0, d.default)(T), v = !A && null != S && S.length > 0, _ = p === c.AppContext.POPOUT, m = n.useContext(r.AnalyticsContext);
-  return T === s.default.getId() || o.default.hidePersonalInformation || _ ? null : (0, i.jsx)(l.MenuItem, {
+    loading: S,
+    note: A
+  } = (0, d.default)(T), _ = !S && null != A && A.length > 0, v = p === c.AppContext.POPOUT, m = n.useContext(r.AnalyticsContext);
+  return T === s.default.getId() || o.default.hidePersonalInformation || v ? null : (0, i.jsx)(l.MenuItem, {
     id: "note",
-    label: A ? I.default.Messages.LOADING_NOTE : v ? I.default.Messages.EDIT_NOTE : I.default.Messages.ADD_NOTE,
+    label: S ? I.default.Messages.LOADING_NOTE : _ ? I.default.Messages.EDIT_NOTE : I.default.Messages.ADD_NOTE,
     action: () => {
       (0, u.openUserProfileModal)({
         userId: t.id,

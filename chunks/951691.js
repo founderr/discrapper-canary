@@ -53,7 +53,7 @@ function I(e) {
     onClose: I,
     onSelect: A,
     appContext: M = g.AppContext.APP
-  } = e, N = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS), O = null !== (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, x = v(n, r, l), L = (0, o.default)(O, M), R = (0, u.default)(O, M, g.NOOP_NULL), y = null == O ? (0, a.jsx)(s.MenuItem, {
+  } = e, N = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS), O = null !== (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, x = v(n, r, l), R = (0, o.default)(O, M), L = (0, u.default)(O, M, g.NOOP_NULL), y = null == O ? (0, a.jsx)(s.MenuItem, {
     id: "share-your-screen",
     label: T.default.Messages.SHARE_YOUR_SCREEN,
     icon: E.default,
@@ -62,8 +62,8 @@ function I(e) {
     children: [S.isPlatformEmbedded ? (0, a.jsx)(s.MenuItem, {
       id: "stream-settings",
       label: T.default.Messages.SCREENSHARE_STREAM_QUALITY,
-      children: L
-    }) : null, h ? R : null, N ? (0, a.jsx)(s.MenuItem, {
+      children: R
+    }) : null, h ? L : null, N ? (0, a.jsx)(s.MenuItem, {
       id: "change-windows",
       label: T.default.Messages.SCREENSHARE_CHANGE_WINDOWS,
       icon: E.default,

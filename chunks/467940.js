@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return U
+    return L
   }
 });
-var u = n("37983"),
-  l = n("884691"),
-  r = n("446674"),
-  i = n("77078"),
+var l = n("37983"),
+  i = n("884691"),
+  u = n("446674"),
+  r = n("77078"),
   o = n("272030"),
   a = n("838446"),
   s = n("158534"),
@@ -16,78 +16,78 @@ var u = n("37983"),
   f = n("685665"),
   E = n("861370"),
   _ = n("230947"),
-  S = n("130037"),
-  m = n("26989"),
-  M = n("800762"),
+  m = n("130037"),
+  h = n("26989"),
+  S = n("800762"),
   C = n("300925"),
-  p = n("489836"),
-  A = n("421602"),
+  M = n("489836"),
+  v = n("421602"),
   g = n("459870"),
-  h = n("325882"),
-  v = n("625187"),
+  p = n("325882"),
+  A = n("625187"),
   T = n("806179"),
-  y = n("97508"),
-  O = n("49111"),
-  I = n("782340"),
-  U = (0, s.default)((0, a.default)(function(e) {
+  I = n("97508"),
+  N = n("49111"),
+  y = n("782340"),
+  L = (0, s.default)((0, a.default)(function(e) {
     var t;
     let {
       user: n,
       guildId: a,
       channelId: s,
-      context: O,
-      onSelect: U,
-      moderationAlertId: L,
-      analyticsLocation: R,
-      analyticsLocations: D,
-      onCloseContextMenu: N,
-      showTransferOwnershipItem: b
+      context: N,
+      onSelect: L,
+      moderationAlertId: O,
+      analyticsLocation: U,
+      analyticsLocations: R,
+      onCloseContextMenu: b,
+      showTransferOwnershipItem: D
     } = e, {
-      analyticsLocations: x
-    } = (0, f.default)(c.default.CONTEXT_MENU), P = (0, d.useAnalyticsContext)(), F = null !== (t = null == D ? void 0 : D[0]) && void 0 !== t ? t : x[0], j = (0, S.useTrackModerationAction)(a, {
-      location: F,
+      analyticsLocations: G
+    } = (0, f.default)(c.default.CONTEXT_MENU), F = (0, d.useAnalyticsContext)(), P = null !== (t = null == R ? void 0 : R[0]) && void 0 !== t ? t : G[0], x = (0, m.useTrackModerationAction)(a, {
+      location: P,
       targetUserId: n.id
-    }), k = (0, r.useStateFromStores)([M.default], () => {
+    }), w = (0, u.useStateFromStores)([S.default], () => {
       var e;
-      return null !== (e = M.default.getUserVoiceChannelId(a, n.id)) && void 0 !== e ? e : void 0
-    }, [a, n.id]), B = l.useCallback(() => {
-      j(S.ModerationActionType.COPY_ID)
-    }, [j]), w = (0, r.useStateFromStores)([m.default], () => m.default.isMember(a, n.id), [a, n.id]), G = (0, T.default)(n.id, a), H = (0, A.default)(n.id, O), V = (0, _.default)({
+      return null !== (e = S.default.getUserVoiceChannelId(a, n.id)) && void 0 !== e ? e : void 0
+    }, [a, n.id]), H = i.useCallback(() => {
+      x(m.ModerationActionType.COPY_ID)
+    }, [x]), j = (0, u.useStateFromStores)([h.default], () => h.default.isMember(a, n.id), [a, n.id]), k = (0, T.default)(n.id, a), B = (0, v.default)(n.id, N), V = (0, _.default)({
       guildId: a,
       userId: n.id,
-      analyticsLocation: null != R ? R : P.location,
-      analyticsLocations: [F],
-      context: O
-    }), K = (0, p.default)(n, F), Y = (0, C.default)(n, a, null != s ? s : k, F), W = (0, h.default)(s, L), Z = (0, v.default)(n, a), z = (0, y.default)(n.id, a, !1, F), q = (0, E.default)({
+      analyticsLocation: null != U ? U : F.location,
+      analyticsLocations: [P],
+      context: N
+    }), W = (0, M.default)(n, P), Y = (0, C.default)(n, a, null != s ? s : w, P), K = (0, p.default)(s, O), X = (0, A.default)(n, a), Z = (0, I.default)(n.id, a, !1, P), z = (0, E.default)({
       id: n.id,
-      label: I.default.Messages.COPY_ID_USER,
-      onSuccess: B
-    }), X = (0, g.default)(n, a), Q = !!(null == n ? void 0 : n.isNonUserBot());
-    return (0, u.jsxs)(i.Menu, {
+      label: y.default.Messages.COPY_ID_USER,
+      onSuccess: H
+    }), q = (0, g.default)(n, a), J = !!(null == n ? void 0 : n.isNonUserBot());
+    return (0, l.jsxs)(r.Menu, {
       navId: "user-context",
       onClose: () => {
-        (0, o.closeContextMenu)(), null == N || N()
+        (0, o.closeContextMenu)(), null == b || b()
       },
-      "aria-label": I.default.Messages.USER_ACTIONS_MENU_LABEL,
-      onSelect: U,
-      children: [!Q && (0, u.jsxs)(u.Fragment, {
-        children: [(0, u.jsxs)(i.MenuGroup, {
-          children: [G, H]
-        }), (0, u.jsxs)(i.MenuGroup, {
-          children: [V, K]
-        }), w && (0, u.jsxs)(u.Fragment, {
-          children: [(0, u.jsx)(i.MenuGroup, {
+      "aria-label": y.default.Messages.USER_ACTIONS_MENU_LABEL,
+      onSelect: L,
+      children: [!J && (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsxs)(r.MenuGroup, {
+          children: [k, B]
+        }), (0, l.jsxs)(r.MenuGroup, {
+          children: [V, W]
+        }), j && (0, l.jsxs)(l.Fragment, {
+          children: [(0, l.jsx)(r.MenuGroup, {
             children: Y
-          }), (0, u.jsxs)(i.MenuGroup, {
-            children: [z, X]
+          }), (0, l.jsxs)(r.MenuGroup, {
+            children: [Z, q]
           })]
-        }), null != L ? W : null, b && null != Z ? (0, u.jsx)(i.MenuGroup, {
-          children: Z
+        }), null != O ? K : null, D && null != X ? (0, l.jsx)(r.MenuGroup, {
+          children: X
         }) : null]
-      }), (0, u.jsx)(i.MenuGroup, {
-        children: q
+      }), (0, l.jsx)(r.MenuGroup, {
+        children: z
       })]
     })
   }, {
-    object: O.AnalyticsObjects.CONTEXT_MENU
+    object: N.AnalyticsObjects.CONTEXT_MENU
   }), [c.default.CONTEXT_MENU, c.default.GUILD_MODERATION_USER_MENU])

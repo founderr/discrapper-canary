@@ -28,10 +28,10 @@ var l = n("77078"),
       channel: t,
       selected: u,
       onSelect: s
-    } = e, r = t.isOwner(_.default.getId()), T = (0, v.default)(t), y = (0, E.default)(t), h = (0, A.default)(t, u), m = (0, c.default)({
+    } = e, r = t.isOwner(_.default.getId()), T = (0, v.default)(t), y = (0, E.default)(t), h = (0, A.default)(t, u), S = (0, c.default)({
       id: t.id,
       label: M.default.Messages.COPY_ID_CHANNEL
-    }), S = (0, o.default)(t), C = (0, f.useAddToFavoritesItem)(t), N = (0, f.useRemoveFromFavoritesItem)(t), g = (0, I.default)(t), O = (0, p.default)(t);
+    }), m = (0, o.default)(t), C = (0, f.useAddToFavoritesItem)(t), N = (0, f.useRemoveFromFavoritesItem)(t), g = (0, I.default)(t), O = (0, p.default)(t);
     return null == t || t.isManaged() ? null : (0, a.jsxs)(l.Menu, {
       navId: "gdm-context",
       "aria-label": M.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
@@ -74,7 +74,7 @@ var l = n("77078"),
           action: () => i.default.setIcon(t.id, null)
         }) : null]
       }), (0, a.jsx)(l.MenuGroup, {
-        children: S
+        children: m
       }), (0, a.jsx)(l.MenuGroup, {
         children: y
       }), (0, a.jsx)(l.MenuGroup, {
@@ -82,7 +82,7 @@ var l = n("77078"),
       }), (0, a.jsx)(l.MenuGroup, {
         children: N
       }), (0, a.jsx)(l.MenuGroup, {
-        children: m
+        children: S
       })]
     })
   }, {

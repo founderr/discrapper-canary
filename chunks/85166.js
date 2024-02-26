@@ -1,36 +1,36 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
 });
 var i = n("37983");
 n("884691");
-var u = n("446674"),
-  a = n("77078"),
-  l = n("42203"),
-  d = n("305961"),
-  r = n("957255"),
-  s = n("697218"),
-  o = n("244480"),
+var l = n("446674"),
+  u = n("77078"),
+  a = n("42203"),
+  r = n("305961"),
+  d = n("957255"),
+  o = n("697218"),
+  s = n("244480"),
   c = n("325861"),
   E = n("49111"),
-  T = n("782340");
+  _ = n("782340");
 
-function f(t, e, n) {
+function f(e, t, n) {
   var f;
-  let I = l.default.getChannel(n),
-    _ = (0, u.useStateFromStores)([d.default], () => d.default.getGuild(e), [e]),
-    S = (0, u.useStateFromStores)([c.default], () => c.default.getPermissionsForUser(t.id, n), [n, t.id]),
-    p = (null === (f = s.default.getCurrentUser()) || void 0 === f ? void 0 : f.id) === t.id,
-    N = (0, u.useStateFromStores)([r.default], () => null != n && r.default.canWithPartialContext(E.Permissions.MUTE_MEMBERS, {
+  let T = a.default.getChannel(n),
+    I = (0, l.useStateFromStores)([r.default], () => r.default.getGuild(t), [t]),
+    S = (0, l.useStateFromStores)([c.default], () => c.default.getPermissionsForUser(e.id, n), [n, e.id]),
+    N = (null === (f = o.default.getCurrentUser()) || void 0 === f ? void 0 : f.id) === e.id,
+    p = (0, l.useStateFromStores)([d.default], () => null != n && d.default.canWithPartialContext(E.Permissions.MUTE_MEMBERS, {
       channelId: n
     }), [n]);
-  return null != I && null != _ && (N || p) && S.speaker ? (0, i.jsx)(a.MenuItem, {
+  return null != T && null != I && (p || N) && S.speaker ? (0, i.jsx)(u.MenuItem, {
     id: "audience",
-    label: p ? T.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE : T.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
+    label: N ? _.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE : _.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
     action: () => {
-      p ? (0, o.moveSelfToAudience)(I) : (0, o.moveUserToAudience)(t, I)
+      N ? (0, s.moveSelfToAudience)(T) : (0, s.moveUserToAudience)(e, T)
     }
   }) : null
 }
