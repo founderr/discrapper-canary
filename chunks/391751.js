@@ -1,23 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return h
   }
 });
 var l = n("37983"),
   a = n("884691"),
   s = n("77078"),
   i = n("774298"),
-  r = n("561359"),
-  u = n("664336"),
-  o = n("324252"),
-  d = n("782340"),
-  c = a.memo(function(e) {
+  r = n("13355"),
+  u = n("217736"),
+  o = n("561359"),
+  d = n("664336"),
+  c = n("324252"),
+  f = n("782340"),
+  h = a.memo(function(e) {
     let {
       channel: t
-    } = e, a = (0, i.useInappropriateConversationSafetyToolsWarningForChannel)(t.id);
-    return null == a ? null : (0, l.jsx)(u.default.Icon, {
-      icon: r.default,
+    } = e, a = (0, i.useInappropriateConversationSafetyToolsWarningForChannel)(t.id), h = null != (0, r.useSafetyToolsButtonTooltipForChannel)(t.id);
+    return null == a ? null : (0, l.jsx)(d.default.Icon, {
+      icon: o.default,
       onClick: () => {
         (0, s.openModalLazy)(async () => {
           let {
@@ -38,9 +40,16 @@ var l = n("37983"),
             })
           }
         }, {
-          modalKey: o.SAFETY_TOOLS_MODAL_KEY
+          modalKey: c.SAFETY_TOOLS_MODAL_KEY
+        }), (0, u.trackCtaEvent)({
+          channelId: t.id,
+          senderId: t.getRecipientId(),
+          warningId: a.id,
+          warningType: a.type,
+          cta: u.CtaEventTypes.USER_SAFETY_TOOLS_BUTTON_CLICK,
+          isNudgeWarning: h
         })
       },
-      tooltip: d.default.Messages.SAFETY_TOOLS_BUTTON_LABEL
+      tooltip: f.default.Messages.SAFETY_TOOLS_BUTTON_LABEL
     })
   })

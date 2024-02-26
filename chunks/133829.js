@@ -42,7 +42,7 @@ function h(e) {
       warningId: n,
       senderId: h,
       warningType: C,
-      cta: u.CtaEventTypes.DISMISS
+      cta: u.CtaEventTypes.USER_BANNER_DISMISS
     })
   }, [m, t, n, h, C]);
   return (0, a.jsxs)("div", {

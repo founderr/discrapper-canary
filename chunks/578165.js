@@ -23,6 +23,7 @@ function I(e) {
   let t = (0, r.getInappropriateConversationTakeoverForChannel)(_);
   return null != t && ((0, a.showTakeoverModal)({
     warningId: t.id,
+    warningType: t.type,
     senderId: E.getRecipientId(),
     channelId: _
   }), !0)
@@ -42,6 +43,7 @@ function s(e) {
   let o = (0, r.getInappropriateConversationTakeoverForChannel)(t.id);
   return !!(null != o && t.isDM()) && ((0, a.showTakeoverModal)({
     warningId: o.id,
+    warningType: o.type,
     senderId: t.getRecipientId(),
     channelId: t.id
   }), !0)

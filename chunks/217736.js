@@ -1,48 +1,48 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   trackViewedEvent: function() {
-    return r
+    return i
   },
   CtaEventTypes: function() {
-    return s
+    return a
   },
   trackCtaEvent: function() {
-    return o
+    return l
   }
 });
-var a, s, l = n("599110"),
-  i = n("49111");
+var n, a, o = s("599110"),
+  r = s("49111");
 
-function r(e, t) {
+function i(e, t) {
   let {
-    channelId: n,
-    warningId: a,
-    senderId: s,
-    warningType: i
+    channelId: s,
+    warningId: n,
+    senderId: a,
+    warningType: r
   } = t;
-  l.default.track(e, {
-    channel_id: n,
-    warning_id: null != a ? parseInt(a) : void 0,
-    warning_type: i,
-    other_user_id: s
+  o.default.track(e, {
+    channel_id: s,
+    warning_id: null != n ? parseInt(n) : void 0,
+    warning_type: r,
+    other_user_id: a
   })
 }
 
-function o(e) {
+function l(e) {
   let {
     channelId: t,
-    warningId: n,
-    senderId: a,
-    warningType: s,
-    cta: r,
-    isNudgeWarning: o
+    warningId: s,
+    senderId: n,
+    warningType: a,
+    cta: i,
+    isNudgeWarning: l
   } = e;
-  l.default.track(i.AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, {
+  o.default.track(r.AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, {
     channel_id: t,
-    warning_id: null != n ? parseInt(n) : void 0,
-    warning_type: s,
-    other_user_id: a,
-    cta: r,
-    is_nudge_warning: o
+    warning_id: null != s ? parseInt(s) : void 0,
+    warning_type: a,
+    other_user_id: n,
+    cta: i,
+    is_nudge_warning: l
   })
-}(a = s || (s = {})).DISMISS = "dismiss", a.OPEN_MORE_TIPS = "open_more_tips", a.USER_BANNER_BLOCK_CONFIRM = "user_banner_block_confirm", a.USER_BANNER_BLOCK_AND_REPORT_CONFIRM = "user_banner_block_and_report_confirm", a.USER_BANNER_BLOCK_CANCEL = "user_banner_block_cancel", a.USER_BANNER_OPEN_SAFETY_TOOLS = "user_banner_open_safety_tools", a.USER_MODAL_BLOCK_CONFIRM = "user_modal_block_confirm", a.USER_MODAL_BLOCK_CANCEL = "user_modal_block_cancel", a.USER_SAFETY_TOOLS_BLOCK_CONFIRM = "user_safety_tools_block_confirm", a.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM = "user_safety_tools_block_and_report_confirm", a.USER_SAFETY_TOOLS_BLOCK_CANCEL = "user_safety_tools_block_cancel", a.USER_SAFETY_TOOLS_REPORT = "user_safety_tools_report", a.USER_SAFETY_TOOLS_NO_FILTR = "user_safety_tools_no_filtr", a.USER_SAFETY_TOOLS_CTL = "user_safety_tools_ctl", a.USER_SAFETY_TOOLS_VIBING_WUMPUS = "user_safety_tools_vibing_wumpus", a.USER_SAFETY_TOOLS_SAFETY_TIPS = "user_safety_tools_safety_tips", a.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS = "user_safety_tools_about_safety_alerts", a.USER_MODAL_MUTE = "user_modal_mute", a.USER_MODAL_UNMUTE = "user_modal_unmute", a.FEEDBACK_UPVOTE = "feedback_upvote", a.FEEDBACK_DOWNVOTE = "feedback_downvote"
+}(n = a || (a = {})).OPEN_MORE_TIPS = "open_more_tips", n.USER_BANNER_DISMISS = "user_banner_dismiss", n.USER_BANNER_BLOCK_CONFIRM = "user_banner_block_confirm", n.USER_BANNER_BLOCK_AND_REPORT_CONFIRM = "user_banner_block_and_report_confirm", n.USER_BANNER_BLOCK_CANCEL = "user_banner_block_cancel", n.USER_BANNER_OPEN_SAFETY_TOOLS = "user_banner_open_safety_tools", n.USER_MODAL_BLOCK_CONFIRM = "user_modal_block_confirm", n.USER_MODAL_BLOCK_CANCEL = "user_modal_block_cancel", n.USER_TAKEOVER_MODAL_DISMISS = "user_takeover_modal_dismiss", n.USER_SAFETY_TOOLS_BUTTON_CLICK = "user_safety_tools_button_click", n.USER_SAFETY_TOOLS_BLOCK_CONFIRM = "user_safety_tools_block_confirm", n.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM = "user_safety_tools_block_and_report_confirm", n.USER_SAFETY_TOOLS_BLOCK_CANCEL = "user_safety_tools_block_cancel", n.USER_SAFETY_TOOLS_REPORT = "user_safety_tools_report", n.USER_SAFETY_TOOLS_NO_FILTR = "user_safety_tools_no_filtr", n.USER_SAFETY_TOOLS_CTL = "user_safety_tools_ctl", n.USER_SAFETY_TOOLS_VIBING_WUMPUS = "user_safety_tools_vibing_wumpus", n.USER_SAFETY_TOOLS_SAFETY_TIPS = "user_safety_tools_safety_tips", n.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS = "user_safety_tools_about_safety_alerts", n.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS = "user_safety_tools_about_safety_alerts_dismiss", n.USER_SAFETY_TOOLS_DISMISS = "user_safety_tools_dismiss", n.USER_MODAL_MUTE = "user_modal_mute", n.USER_MODAL_UNMUTE = "user_modal_unmute", n.FEEDBACK_UPVOTE = "feedback_upvote", n.FEEDBACK_DOWNVOTE = "feedback_downvote"
