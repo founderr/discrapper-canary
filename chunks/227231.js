@@ -3,6 +3,9 @@ n.r(t), n.d(t, {
   getQuestByApplicationId: function() {
     return u
   },
+  isQuestExpired: function() {
+    return o
+  },
   questUserStatusFromServer: function() {
     return d
   },
@@ -147,7 +150,7 @@ let S = e => "".concat(l).concat(e).concat("/reward.png"),
 
 function I(e, t) {
   for (let [n, s] of e)
-    if (!o(s) && s.targetedContent.includes(t)) return s;
+    if (s.targetedContent.includes(t)) return s;
   return null
 }
 let h = e => {

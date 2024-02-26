@@ -1,24 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   useHandleClaimQuestsReward: function() {
-    return c
+    return f
   },
   useQuests: function() {
-    return E
+    return _
+  },
+  useIsQuestExpired: function() {
+    return T
   }
 }), n("222007");
 var s = n("37983"),
   l = n("884691"),
-  a = n("77078"),
-  i = n("446674"),
-  r = n("448881"),
-  o = n("374023"),
-  u = n("2973"),
-  d = n("166604");
+  a = n("862337"),
+  i = n("77078"),
+  r = n("446674"),
+  o = n("448881"),
+  u = n("374023"),
+  d = n("2973"),
+  c = n("227231"),
+  E = n("166604");
 
-function c(e, t) {
+function f(e, t) {
   return l.useCallback(() => {
-    null != e && (0, a.openModalLazy)(async () => {
+    null != e && (0, i.openModalLazy)(async () => {
       let {
         default: l
       } = await n.el("36170").then(n.bind(n, "36170"));
@@ -31,20 +36,20 @@ function c(e, t) {
   }, [e, t])
 }
 
-function E(e) {
-  let [t, n] = l.useState(!1), s = (0, i.useStateFromStoresArray)([u.default], () => [...u.default.quests.values()]), {
+function _(e) {
+  let [t, n] = l.useState(!1), s = (0, r.useStateFromStoresArray)([d.default], () => [...d.default.quests.values()]), {
     isFetchingCurrentQuests: a,
-    lastFetchedCurrentQuests: c
-  } = (0, i.useStateFromStoresObject)([u.default], () => ({
-    isFetchingCurrentQuests: u.default.isFetchingCurrentQuests,
-    lastFetchedCurrentQuests: u.default.lastFetchedCurrentQuests
-  })), E = (0, o.getIsEligibleForQuests)({
-    location: d.QuestsExperimentLocations.USE_QUESTS,
+    lastFetchedCurrentQuests: i
+  } = (0, r.useStateFromStoresObject)([d.default], () => ({
+    isFetchingCurrentQuests: d.default.isFetchingCurrentQuests,
+    lastFetchedCurrentQuests: d.default.lastFetchedCurrentQuests
+  })), c = (0, u.getIsEligibleForQuests)({
+    location: E.QuestsExperimentLocations.USE_QUESTS,
     autoTrackExposure: !1
   });
   l.useEffect(() => {
-    E && !t && !a && 0 === c && (n(!0), (0, r.fetchCurrentQuests)())
-  }, [E, t, a, c]);
+    c && !t && !a && 0 === i && (n(!0), (0, o.fetchCurrentQuests)())
+  }, [c, t, a, i]);
   let f = l.useMemo(() => {
     let t = null != e ? new Set(e) : null;
     return s.filter(e => null == t || t.has(e.id))
@@ -53,4 +58,22 @@ function E(e) {
     quests: f,
     isFetchingCurrentQuests: a
   }
+}
+
+function T(e) {
+  let [t, n] = l.useState(() => null != e && (0, c.isQuestExpired)(e));
+  return l.useEffect(() => {
+    if (null != e && !(0, c.isQuestExpired)(e)) {
+      let t = new a.Timeout,
+        s = () => {
+          let l = Date.parse(e.config.expiresAt) - Date.now();
+          t.start(l, () => {
+            (0, c.isQuestExpired)(e) ? n(!0): s()
+          })
+        };
+      return s(), () => {
+        t.stop()
+      }
+    }
+  }, [e]), t
 }

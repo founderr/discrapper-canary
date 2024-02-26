@@ -92,18 +92,19 @@ var R = function(e) {
     var e;
     null === (e = v.current) || void 0 === e || e.call(v)
   }, []);
-  let x = (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-    b = (null === (l = R.userStatus) || void 0 === l ? void 0 : l.completedAt) != null,
-    U = (null == R ? void 0 : R.userStatus) == null || (0, I.isDismissed)(R.userStatus, C.QuestContent.ACTIVITY_PANEL);
-  return U ? null : (0, a.jsxs)("div", {
+  let x = (0, m.useIsQuestExpired)(R),
+    b = (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+    U = (null === (l = R.userStatus) || void 0 === l ? void 0 : l.completedAt) != null,
+    G = (null == R ? void 0 : R.userStatus) == null || (0, I.isDismissed)(R.userStatus, C.QuestContent.ACTIVITY_PANEL);
+  return G || x ? null : (0, a.jsxs)("div", {
     className: i(A.wrapper, {
-      [A.wrapperQuestAccepted]: x
+      [A.wrapperQuestAccepted]: b
     }),
     onClick: L,
     onKeyPress: L,
     children: [(0, a.jsxs)("div", {
       className: A.utils,
-      children: [x ? (0, a.jsx)(N, {
+      children: [b ? (0, a.jsx)(N, {
         quest: R
       }) : (0, a.jsx)(S.default, {
         textOpacity: .5
@@ -114,7 +115,7 @@ var R = function(e) {
           className: A.submenuIcon
         })
       })]
-    }), !x && (0, a.jsxs)(a.Fragment, {
+    }), !b && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(N, {
         quest: R
       }), (0, a.jsx)(o.Text, {
@@ -127,12 +128,12 @@ var R = function(e) {
           streamingDurationRequirement: R.config.streamDurationRequirementMinutes
         })
       })]
-    }), x && !b && (0, a.jsx)(p.default, {
+    }), b && !U && (0, a.jsx)(p.default, {
       className: A.rewardTileWithInstructions,
       quest: R
     }), (0, a.jsxs)("div", {
       className: A.ctas,
-      children: [!x && (0, a.jsxs)(a.Fragment, {
+      children: [!b && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(o.Button, {
           className: A.cta,
           color: o.Button.Colors.PRIMARY,
@@ -149,14 +150,14 @@ var R = function(e) {
           submitting: O,
           children: g.default.Messages.QUESTS_ACCEPT_QUEST
         })]
-      }), x && !b && (0, a.jsx)(o.Button, {
+      }), b && !U && (0, a.jsx)(o.Button, {
         className: A.cta,
         color: o.Button.Colors.BRAND,
         fullWidth: !0,
         onClick: D,
         size: o.Button.Sizes.SMALL,
         children: g.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
-      }), b && (0, a.jsx)(o.Button, {
+      }), U && (0, a.jsx)(o.Button, {
         className: A.cta,
         color: o.Button.Colors.BRAND,
         fullWidth: !0,

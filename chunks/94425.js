@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return x
   }
 }), n("222007"), n("808653");
 var a = n("37983"),
@@ -22,20 +22,21 @@ var a = n("37983"),
   S = n("227231"),
   m = n("919354"),
   p = n("705589"),
-  T = n("166604"),
-  g = n("335294");
-let A = {
+  T = n("686098"),
+  g = n("166604"),
+  A = n("335294");
+let N = {
     "layers[1].shapes[1].g.k.k": [0, .522, .278, .776, .5, .522, .278, .776, 1, .522, .278, .776],
     "layers[2].shapes[1].g.k.k": [0, .714, .271, .757, .5, .714, .271, .757, 1, .714, .271, .757]
   },
-  N = [0, .5, 1],
-  R = {
+  R = [0, .5, 1],
+  O = {
     "layers[1].shapes[0].it[1].c.k": [1, .466666668653, .972549021244],
     "layers[2].shapes[0].it[1].c.k": [1, .466666668653, .972549021244],
     "layers[3].shapes[0].it[1].c.k": [1, .466666668653, .972549021244]
   };
 
-function O(e, t, n) {
+function v(e, t, n) {
   for (let a in t) {
     let s = t[a],
       l = o.get(e, a);
@@ -44,54 +45,54 @@ function O(e, t, n) {
     o.set(e, a, i)
   }
 }
-let v = new Map;
-async function L(e, t) {
-  let a = v.get(e);
+let L = new Map;
+async function M(e, t) {
+  let a = L.get(e);
   if (null != a) return a;
   let s = (await n.el("723469").then(n.t.bind(n, "723469", 19))).default;
-  return O(s, A, t), v.set(e, s), s
+  return v(s, N, t), L.set(e, s), s
 }
-let M = new Map;
-async function P(e, t) {
-  let a = M.get(e);
+let P = new Map;
+async function D(e, t) {
+  let a = P.get(e);
   if (null != a) return a;
   let s = (await n.el("479580").then(n.t.bind(n, "479580", 19))).default;
-  return O(s, R, t), M.set(e, s), s
+  return v(s, O, t), P.set(e, s), s
 }
 
-function D(e) {
+function y(e) {
   return e + .5 * (255 - e)
 }
-var y = function() {
+var x = function() {
   var e, t, n;
   let l = (0, _.useIsEligibleForQuests)({
-      location: T.QuestsExperimentLocations.ACTIVITY_PANEL,
+      location: g.QuestsExperimentLocations.ACTIVITY_PANEL,
       autoTrackExposure: !0
     }),
     r = (0, d.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     o = (0, d.useStateFromStores)([C.default], () => (0, S.getQuestForTargetedContent)(C.default.quests, I.QuestContent.QUEST_BAR)),
-    A = (0, d.useStateFromStores)([f.default], () => f.default.isFocused()),
-    R = !r && A,
-    O = s.useRef(-1),
-    v = s.useRef(!1),
-    [M, y] = s.useState(!1),
-    [x, b] = s.useState(!1),
-    [U, G] = s.useState(!1),
-    [j, w] = s.useState(!0),
-    [k, F] = s.useState(!0),
-    [B, H] = s.useState(240),
-    V = s.useRef(!1),
-    Y = s.useRef(null),
-    W = (null == o ? void 0 : null === (e = o.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
-    K = (null == o ? void 0 : null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-    z = (null == o ? void 0 : null === (n = o.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-    q = (null == o ? void 0 : o.userStatus) != null && (0, S.isDismissed)(null == o ? void 0 : o.userStatus, I.QuestContent.QUEST_BAR),
-    Q = s.useMemo(() => {
+    N = (0, d.useStateFromStores)([f.default], () => f.default.isFocused()),
+    O = !r && N,
+    v = s.useRef(-1),
+    L = s.useRef(!1),
+    [P, x] = s.useState(!1),
+    [b, U] = s.useState(!1),
+    [G, j] = s.useState(!1),
+    [w, k] = s.useState(!0),
+    [F, B] = s.useState(!0),
+    [H, V] = s.useState(240),
+    Y = s.useRef(!1),
+    W = s.useRef(null),
+    K = (null == o ? void 0 : null === (e = o.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
+    z = (null == o ? void 0 : null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+    q = (null == o ? void 0 : null === (n = o.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
+    Q = (null == o ? void 0 : o.userStatus) != null && (0, S.isDismissed)(null == o ? void 0 : o.userStatus, I.QuestContent.QUEST_BAR),
+    Z = s.useMemo(() => {
       if (null == o) return null;
       let e = (0, h.hexToRgb)(o.config.colors.primary);
-      return [D(e.r) / 255, D(e.g) / 255, D(e.b) / 255]
+      return [y(e.r) / 255, y(e.g) / 255, y(e.b) / 255]
     }, [o]),
-    Z = s.useMemo(() => {
+    X = s.useMemo(() => {
       if (null == o) return null;
       let e = (0, h.hexToRgb)(o.config.colors.primary),
         t = {
@@ -99,62 +100,63 @@ var y = function() {
           g: e.g / 255,
           b: e.b / 255
         };
-      return N.reduce((e, n) => [...e, n, t.r, t.g, t.b], [])
+      return R.reduce((e, n) => [...e, n, t.r, t.g, t.b], [])
     }, [o]),
-    X = s.useCallback(() => {
-      var e, t;
-      H((null !== (t = null === (e = Y.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), G(!0)
-    }, []),
-    J = s.useCallback(() => {
-      y(!0)
-    }, []),
+    J = (0, T.useIsQuestExpired)(o),
     $ = s.useCallback(() => {
-      y(!1), !v.current && !K && G(!1)
-    }, [K]),
+      var e, t;
+      V((null !== (t = null === (e = W.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), j(!0)
+    }, []),
     ee = s.useCallback(() => {
-      y(!1), G(!1), v.current = !1
+      x(!0)
     }, []),
     et = s.useCallback(() => {
-      window.clearTimeout(O.current), V.current = !0, b(!1), X()
-    }, [X]),
+      x(!1), !L.current && !z && j(!1)
+    }, [z]),
     en = s.useCallback(() => {
-      if (!K) !M && (O.current = window.setTimeout(() => {
-        !v.current && G(!1)
-      }, 200))
-    }, [M, K]),
+      x(!1), j(!1), L.current = !1
+    }, []),
     ea = s.useCallback(() => {
-      v.current = !0, et()
-    }, [et]),
+      window.clearTimeout(v.current), Y.current = !0, U(!1), $()
+    }, [$]),
     es = s.useCallback(() => {
-      v.current = !1, en()
-    }, [en]),
+      if (!z) !P && (v.current = window.setTimeout(() => {
+        !L.current && j(!1)
+      }, 200))
+    }, [P, z]),
     el = s.useCallback(() => {
-      V.current = !0
+      L.current = !0, ea()
+    }, [ea]),
+    ei = s.useCallback(() => {
+      L.current = !1, es()
+    }, [es]),
+    er = s.useCallback(() => {
+      Y.current = !0
     }, []);
   s.useEffect(() => {
-    if (V.current) return;
+    if (Y.current) return;
     let e = window.setTimeout(() => {
-      b(f.default.isFocused())
+      U(f.default.isFocused())
     }, 500);
     return () => {
       window.clearTimeout(e)
     }
   }, []), s.useEffect(() => {
-    K && X()
-  }, [K, X]);
-  let ei = l && !q && !z && null != o,
-    er = s.useRef(ei);
+    z && $()
+  }, [z, $]);
+  let eo = l && !Q && !q && null != o && !J,
+    eu = s.useRef(eo);
   s.useLayoutEffect(() => {
-    ei !== er.current && F(!1), er.current = ei
-  }, [ei]);
+    eo !== eu.current && B(!1), eu.current = eo
+  }, [eo]);
   let {
-    expansionFactor: eo
+    expansionFactor: ed
   } = (0, u.useSpring)({
     from: {
       expansionFactor: 0
     },
     to: {
-      expansionFactor: U ? 1 : 0
+      expansionFactor: G ? 1 : 0
     },
     config: {
       tension: 300,
@@ -163,19 +165,19 @@ var y = function() {
     },
     immediate: r,
     onRest: () => {
-      w(!0)
+      k(!0)
     },
     onStart: () => {
-      w(!1)
+      k(!1)
     }
   }), {
-    visibilityFactor: eu
+    visibilityFactor: ec
   } = (0, u.useSpring)({
     from: {
       visibilityFactor: 0
     },
     to: {
-      visibilityFactor: ei ? 1 : 0
+      visibilityFactor: eo ? 1 : 0
     },
     config: {
       tension: 250,
@@ -184,80 +186,80 @@ var y = function() {
     },
     immediate: r,
     onRest: () => {
-      F(!0)
+      B(!0)
     },
     onStart: () => {
-      F(!1)
+      B(!1)
     }
   });
-  return l && null != o && (ei || !k) ? (0, a.jsxs)(u.animated.div, {
-    className: i(g.wrapper, {
-      [g.wrapperVisible]: ei && k
+  return l && null != o && (eo || !F) ? (0, a.jsxs)(u.animated.div, {
+    className: i(A.wrapper, {
+      [A.wrapperVisible]: eo && F
     }),
     style: {
       color: o.config.colors.secondary,
-      height: eu.to({
+      height: ec.to({
         range: [0, 1],
-        output: [0, K && U ? B : 40]
+        output: [0, z && G ? H : 40]
       })
     },
     children: [(0, a.jsxs)(u.animated.div, {
-      onMouseLeave: es,
-      onMouseEnter: ea,
-      onFocus: et,
-      onBlur: en,
-      className: i(g.contentWrapper, {
-        [g.contentWrapperExpanded]: U,
-        [g.contentWrapperAccepted]: W
+      onMouseLeave: ei,
+      onMouseEnter: el,
+      onFocus: ea,
+      onBlur: es,
+      className: i(A.contentWrapper, {
+        [A.contentWrapperExpanded]: G,
+        [A.contentWrapperAccepted]: K
       }),
       style: {
-        backgroundImage: W ? "linear-gradient(90deg, ".concat(o.config.colors.primary, ", ").concat(o.config.colors.secondary, ")") : void 0,
-        height: eo.to({
+        backgroundImage: K ? "linear-gradient(90deg, ".concat(o.config.colors.primary, ", ").concat(o.config.colors.secondary, ")") : void 0,
+        height: ed.to({
           range: [0, 1],
-          output: [40, W ? B : 240]
+          output: [40, K ? H : 240]
         }),
-        transform: eu.to({
+        transform: ec.to({
           range: [0, 1],
           output: [100, 0]
         }).to(e => "translateY(".concat(e, "%)"))
       },
       children: [(0, a.jsx)(m.default, {
-        className: g.content,
-        expansionFactor: eo,
-        isExpanded: U,
-        isExpansionAnimationComplete: j,
+        className: A.content,
+        expansionFactor: ed,
+        isExpanded: G,
+        isExpansionAnimationComplete: w,
         quest: o
       }), (0, a.jsx)(p.default, {
-        className: g.content,
-        onCtxMenuOpen: J,
-        onCtxMenuClose: $,
-        onCtxMenuSelect: ee,
-        expansionFactor: eo,
-        isExpanded: U,
-        isExpansionAnimationComplete: j,
+        className: A.content,
+        onCtxMenuOpen: ee,
+        onCtxMenuClose: et,
+        onCtxMenuSelect: en,
+        expansionFactor: ed,
+        isExpanded: G,
+        isExpansionAnimationComplete: w,
         quest: o,
         useReducedMotion: r,
-        ref: Y
+        ref: W
       })]
-    }), null != Z && !W && (!U || U && !j) && (0, a.jsx)("div", {
-      className: g.lottieAnimationBackgroundWrapper,
+    }), null != X && !K && (!G || G && !w) && (0, a.jsx)("div", {
+      className: A.lottieAnimationBackgroundWrapper,
       children: (0, a.jsx)(E.default, {
-        importData: () => L(o.id, Z),
-        shouldAnimate: R,
-        className: i(g.lottieAnimation, g.lottieAnimationBackground),
+        importData: () => M(o.id, X),
+        shouldAnimate: O,
+        className: i(A.lottieAnimation, A.lottieAnimationBackground),
         loop: !0
       })
-    }), !W && null != Q && (0, a.jsx)(E.default, {
-      importData: () => P(o.id, Q),
-      shouldAnimate: x,
-      className: i(g.lottieAnimation, g.lottieAnimationForeground, {
-        [g.lottieAnimationForegroundHidden]: !x
+    }), !K && null != Z && (0, a.jsx)(E.default, {
+      importData: () => D(o.id, Z),
+      shouldAnimate: b,
+      className: i(A.lottieAnimation, A.lottieAnimationForeground, {
+        [A.lottieAnimationForegroundHidden]: !b
       }),
       loop: !1,
-      onComplete: el,
-      autoplay: x
+      onComplete: er,
+      autoplay: b
     }), (0, a.jsx)("div", {
-      className: g.backgroundFallback
+      className: A.backgroundFallback
     })]
   }) : null
 }

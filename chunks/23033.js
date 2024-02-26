@@ -65,15 +65,16 @@ var l = n("37983"),
       null != O && (0, E.enrollInQuest)(O.id, S.QuestContent.QUEST_LIVE_STREAM)
     }, [O]), F = a.useCallback(() => {
       o.default.open(N.UserSettingsSections.INVENTORY)
-    }, []), k = (0, v.useHandleClaimQuestsReward)(O, S.QuestContent.QUEST_LIVE_STREAM);
+    }, []), k = (0, v.useHandleClaimQuestsReward)(O, S.QuestContent.QUEST_LIVE_STREAM), B = (0, v.useIsQuestExpired)(O);
     if (null == O) return null;
-    let B = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-      V = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null;
-    return D ? (0, l.jsxs)("div", {
+    let V = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+      G = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+      H = null != O.userStatus && (0, C.isDismissed)(O.userStatus, S.QuestContent.QUEST_LIVE_STREAM);
+    return H || B || !D ? null : (0, l.jsxs)("div", {
       className: i(R.wrapper, {
-        [R.wrapperAccepted]: B
+        [R.wrapperAccepted]: V
       }),
-      children: [!B && (0, l.jsxs)("div", {
+      children: [!V && (0, l.jsxs)("div", {
         className: R.rewardTileWrapper,
         children: [(0, l.jsx)("img", {
           alt: O.config.messages.rewardName,
@@ -87,7 +88,7 @@ var l = n("37983"),
         className: R.content,
         children: [(0, l.jsxs)("div", {
           className: R.heading,
-          children: [B && y ? (0, l.jsx)("img", {
+          children: [V && y ? (0, l.jsx)("img", {
             alt: O.config.messages.rewardName,
             className: R.rewardTile,
             src: (0, C.getRewardAssetUrl)(O.id)
@@ -122,18 +123,18 @@ var l = n("37983"),
             }), (0, l.jsx)(u.Text, {
               color: "header-secondary",
               variant: "text-xs/medium",
-              children: V ? M.default.Messages.QUESTS_CLAIM_BY.format({
+              children: G ? M.default.Messages.QUESTS_CLAIM_BY.format({
                 expirationDate: U
               }) : M.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: U
               })
             })]
           })]
-        }), B && !V && !y && (0, l.jsx)(x.default, {
+        }), V && !G && !y && (0, l.jsx)(x.default, {
           quest: O
         }), (0, l.jsxs)("div", {
           className: R.ctas,
-          children: [!B && (0, l.jsxs)(l.Fragment, {
+          children: [!V && (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(u.Button, {
               className: R.cta,
               color: u.Button.Colors.PRIMARY,
@@ -150,17 +151,17 @@ var l = n("37983"),
               submitting: b,
               children: M.default.Messages.QUESTS_ACCEPT_QUEST
             })]
-          }), B && !V && y && (0, l.jsx)(_.default, {
+          }), V && !G && y && (0, l.jsx)(_.default, {
             color: u.tokens.colors.BG_BRAND,
             quest: O
-          }), B && !V && !y && (0, l.jsx)(u.Button, {
+          }), V && !G && !y && (0, l.jsx)(u.Button, {
             className: R.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: F,
             size: u.Button.Sizes.SMALL,
             children: M.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
-          }), V && (0, l.jsx)(u.Button, {
+          }), G && (0, l.jsx)(u.Button, {
             className: R.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
@@ -170,5 +171,5 @@ var l = n("37983"),
           })]
         })]
       })]
-    }) : null
+    })
   }
