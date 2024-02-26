@@ -20,9 +20,9 @@ var a = n("884691"),
   E = n("556118"),
   m = n("777484"),
   g = n("894488"),
-  S = n("49111");
+  _ = n("49111");
 
-function _(e) {
+function S(e) {
   var t, n;
   if (null == e.jumpTargetId || !e.ready) return null;
   let {
@@ -119,7 +119,7 @@ class A {
     }
     if (null != e.messages.jumpTargetId) {
       if (this.isLoading()) return;
-      let n = _(e.messages);
+      let n = S(e.messages);
       if (null == n || this.isJumping() || e.messages.jumpSequenceId === t.jumpSequenceId) {
         if (this.isJumping()) {
           null != n ? this.scrollToMessage(n, !0) : this.jumping = !1;
@@ -138,7 +138,7 @@ class A {
     }
     let i = e.messages.last(),
       r = t.last();
-    if (null != i && i.state === S.MessageStates.SENDING && (null == r ? void 0 : r.id) !== i.id) {
+    if (null != i && i.state === _.MessageStates.SENDING && (null == r ? void 0 : r.id) !== i.id) {
       this.setScrollToBottom();
       return
     }
@@ -347,7 +347,7 @@ class A {
       hasUnreads: t
     } = this.props;
     if (null != e.jumpTargetId) {
-      let n = _(e);
+      let n = S(e);
       if (null == n) return;
       let a = this.getElementFromMessageId(n);
       (0, i.isElement)(a) ? this.scrollTo(this.getOffsetOrientationFromNode(a, "middle", t ? this.newMessageBarBuffer() : g.MESSAGE_PADDING), !0): this.scrollToNewMessages(!0, "middle")
@@ -379,8 +379,8 @@ class A {
       initialScrollTop: e
     } = this;
     this.initialScrollTop = void 0;
-    let t = _(this.props.messages);
-    null != t ? this.scrollToMessage(t, !1) : this.props.hasUnreads && this.props.channel.type !== S.ChannelTypes.GUILD_VOICE && this.props.channel.type !== S.ChannelTypes.GUILD_STAGE_VOICE ? this.scrollToNewMessages() : null != e ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll) : this.setScrollToBottom()
+    let t = S(this.props.messages);
+    null != t ? this.scrollToMessage(t, !1) : this.props.hasUnreads && this.props.channel.type !== _.ChannelTypes.GUILD_VOICE && this.props.channel.type !== _.ChannelTypes.GUILD_STAGE_VOICE ? this.scrollToNewMessages() : null != e ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll) : this.setScrollToBottom()
   }
   scrollTo(e) {
     var t;
@@ -407,7 +407,7 @@ class A {
       } = this.props;
     if (t.hasMoreAfter) {
       var a, s;
-      a = n, o.default.jumpToPresent(a.id, S.MAX_MESSAGES_PER_CHANNEL), (0, f.transitionToGuild)(null !== (s = a.getGuildId()) && void 0 !== s ? s : S.ME, a.id)
+      a = n, o.default.jumpToPresent(a.id, _.MAX_MESSAGES_PER_CHANNEL), (0, f.transitionToGuild)(null !== (s = a.getGuildId()) && void 0 !== s ? s : _.ME, a.id)
     } else this.scrollTo(Number.MAX_SAFE_INTEGER, e, () => {
       this.jumping = !1, this.handleScroll()
     })
@@ -557,7 +557,7 @@ class A {
         channelId: n.props.channel.id,
         before: e,
         after: t,
-        limit: S.MAX_MESSAGES_PER_CHANNEL,
+        limit: _.MAX_MESSAGES_PER_CHANNEL,
         truncate: !0
       })
     }, this.updateStoreDimensionsDebounced = l.debounce(this.updateStoreDimensions, 200), this.props = e, this.loading = e.messages.loadingMore;

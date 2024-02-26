@@ -1,21 +1,21 @@
 "use strict";
 i.r(t), i.d(t, {
   useDeveloperActivityShelfItems: function() {
-    return o
+    return u
   }
 });
 var l = i("884691"),
   a = i("446674"),
   n = i("84460"),
   r = i("954016");
-let o = () => {
+let u = () => {
   let {
     isEnabled: e,
     lastUsedObject: t
   } = (0, a.useStateFromStoresObject)([n.default], () => ({
     isEnabled: n.default.getIsEnabled(),
     lastUsedObject: n.default.getLastUsedObject()
-  }), []), i = (0, a.useStateFromStoresArray)([n.default], () => n.default.getDeveloperShelfItems(), []), o = l.useMemo(() => e ? i.map(e => {
+  }), []), i = (0, a.useStateFromStoresArray)([n.default], () => n.default.getDeveloperShelfItems(), []), u = l.useMemo(() => e ? i.map(e => {
     let t = {
       application: e,
       activity: {
@@ -30,7 +30,7 @@ let o = () => {
       a = t[i.application.id];
     return null == l ? 1 : null == a ? -1 : a - l
   }) : [], [i, e, t]);
-  return o.length <= 0 ? [] : [
-    [r.ActivityAccessStatus.UNLOCKED, o]
+  return u.length <= 0 ? [] : [
+    [r.ActivityAccessStatus.UNLOCKED, u]
   ]
 }

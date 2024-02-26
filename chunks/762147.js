@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return S
   }
 });
 var a = n("37983"),
@@ -20,20 +20,20 @@ var a = n("37983"),
   E = n("673844"),
   m = n("49111"),
   g = n("782340"),
-  S = n("618509");
+  _ = n("618509");
 
-function _(e) {
+function S(e) {
   let {
     threadId: t
-  } = e, n = (0, i.default)([u.default], () => u.default.getChannel(t)), _ = (0, i.default)([u.default], () => u.default.getChannel(null == n ? void 0 : n.parent_id)), T = s.useCallback(() => {
-    null != n && null != _ && ((0, o.trackWithMetadata)(m.AnalyticEvents.MEDIA_POST_SHARE_PROMPT_CLICKED, {
+  } = e, n = (0, i.default)([u.default], () => u.default.getChannel(t)), S = (0, i.default)([u.default], () => u.default.getChannel(null == n ? void 0 : n.parent_id)), T = s.useCallback(() => {
+    null != n && null != S && ((0, o.trackWithMetadata)(m.AnalyticEvents.MEDIA_POST_SHARE_PROMPT_CLICKED, {
       media_post_id: n.id
-    }), (0, l.copy)((0, h.getChannelLinkToCopy)(n, _)))
-  }, [n, _]);
+    }), (0, l.copy)((0, h.getChannelLinkToCopy)(n, S)))
+  }, [n, S]);
   return (0, a.jsxs)("div", {
-    className: S.sharePromptContainer,
+    className: _.sharePromptContainer,
     children: [(0, a.jsx)(E.default, {}), (0, a.jsxs)("div", {
-      className: S.sharePromptContent,
+      className: _.sharePromptContent,
       children: [(0, a.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
@@ -47,8 +47,8 @@ function _(e) {
       }), (0, a.jsx)(d.default, {
         size: 4
       }), (0, a.jsxs)(r.Button, {
-        className: S.sharePromptCta,
-        innerClassName: S.ctaContent,
+        className: _.sharePromptCta,
+        innerClassName: _.ctaContent,
         onClick: T,
         children: [(0, a.jsx)(f.default, {
           height: "16px",
@@ -60,7 +60,7 @@ function _(e) {
         })]
       })]
     }), (0, a.jsx)(r.Clickable, {
-      className: S.closeButton,
+      className: _.closeButton,
       onClick: () => {
         (0, p.dismissMediaPostSharePrompt)(t)
       },

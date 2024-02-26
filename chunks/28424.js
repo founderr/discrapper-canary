@@ -27,7 +27,7 @@ function d(e) {
     loaded: E
   } = (0, o.useMessageRequestPreview)(t), m = t.isDM() ? t.getRecipientId() : null, g = (0, r.useLongestChannelMessageBeforeReply)(t.id, m);
   if (null == g && (E || p)) return null;
-  let S = () => {
+  let _ = () => {
     null == f || f(), l.default.closePrivateChannel(t.id)
   };
   return (0, a.jsx)(s.Button, {
@@ -36,7 +36,7 @@ function d(e) {
     color: s.Button.Colors.RED,
     disabled: null == g,
     onClick: e => {
-      e.stopPropagation(), null == c || c(), null != g && (0, i.showReportModalForFirstDM)(g, S)
+      e.stopPropagation(), null == c || c(), null != g && (0, i.showReportModalForFirstDM)(g, _)
     },
     onMouseEnter: h,
     onMouseLeave: C,

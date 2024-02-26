@@ -8,9 +8,9 @@ var l = i("37983"),
   a = i("884691"),
   n = i("77078"),
   r = i("798609"),
-  o = i("956089"),
-  d = i("782340"),
-  u = i("827755");
+  u = i("956089"),
+  o = i("782340"),
+  d = i("827755");
 
 function c(e) {
   let {
@@ -18,11 +18,11 @@ function c(e) {
     labelType: i,
     collapsed: c = !1,
     showTooltip: s = !1
-  } = e, f = i === r.EmbeddedActivityLabelTypes.NEW ? d.default.Messages.NEW : d.default.Messages.UPDATED, p = i === r.EmbeddedActivityLabelTypes.NEW ? u.activityNewBadge : u.activityUpdatedBadge, [v, m] = a.useState(c ? "" : f);
+  } = e, f = i === r.EmbeddedActivityLabelTypes.NEW ? o.default.Messages.NEW : o.default.Messages.UPDATED, p = i === r.EmbeddedActivityLabelTypes.NEW ? d.activityNewBadge : d.activityUpdatedBadge, [v, m] = a.useState(c ? "" : f);
   if (a.useEffect(() => {
-      c ? m("") : i === r.EmbeddedActivityLabelTypes.NEW ? m(d.default.Messages.NEW) : i === r.EmbeddedActivityLabelTypes.UPDATED && m(d.default.Messages.UPDATED)
+      c ? m("") : i === r.EmbeddedActivityLabelTypes.NEW ? m(o.default.Messages.NEW) : i === r.EmbeddedActivityLabelTypes.UPDATED && m(o.default.Messages.UPDATED)
     }, [c, i]), i === r.EmbeddedActivityLabelTypes.NONE) return null;
-  let b = (0, l.jsx)(o.TextBadge, {
+  let b = (0, l.jsx)(u.TextBadge, {
     className: p,
     disableColor: !0,
     text: (0, l.jsx)("span", {
@@ -30,12 +30,12 @@ function c(e) {
     })
   });
   if (!s) return b;
-  let A = d.default.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({
+  let A = o.default.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({
     activity: t
   });
   return (0, l.jsx)(n.TooltipContainer, {
     text: A,
-    tooltipContentClassName: u.tooltip,
+    tooltipContentClassName: d.tooltip,
     children: b
   })
 }

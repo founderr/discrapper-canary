@@ -26,8 +26,8 @@ var a = n("37983"),
   E = n("697218"),
   m = n("79798"),
   g = n("476263"),
-  S = n("718490"),
-  _ = n("960454"),
+  _ = n("718490"),
+  S = n("960454"),
   T = n("740961"),
   A = n("539938"),
   M = n("540853"),
@@ -46,7 +46,7 @@ function L(e) {
     handleContextMenu: p,
     handleParentClick: m,
     handleParentContextMenu: g,
-    renderFollowButton: S
+    renderFollowButton: _
   } = e, T = (0, c.default)(t, r), {
     prefix: L,
     level: R
@@ -110,7 +110,7 @@ function L(e) {
             size: o.AvatarSizes.SIZE_24,
             src: (0, u.getChannelIconURL)(t, 80, !1)
           })
-        }), (0, a.jsx)(_.default, {
+        }), (0, a.jsx)(S.default, {
           channel: t
         }, "channel-".concat(t.id))]
       });
@@ -124,7 +124,7 @@ function L(e) {
           onContextMenu: p,
           onClick: h,
           children: x
-        }), null != S ? S() : null]
+        }), null != _ ? _() : null]
       });
     case I.ChannelTypes.GUILD_VOICE:
       return (0, a.jsxs)(s.Fragment, {
@@ -216,7 +216,7 @@ function x(e, t) {
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(R, {
           channel: e
-        }), (0, a.jsx)(S.default, {
+        }), (0, a.jsx)(_.default, {
           channel: e
         }, e.id)]
       });

@@ -24,8 +24,8 @@ var a = n("37983"),
       onButtonClick: E,
       imageSrc: m,
       animationSrc: g,
-      secondaryButtonText: S,
-      onSecondaryButtonClick: _,
+      secondaryButtonText: _,
+      onSecondaryButtonClick: S,
       children: T,
       useReducedMotion: A = !1
     } = e, M = (0, i.useStateFromStores)([o.default], () => o.default.getState().isMembersOpen);
@@ -60,14 +60,14 @@ var a = n("37983"),
         })]
       }), (0, a.jsxs)("div", {
         className: c.buttonContainer,
-        children: [null != S && (0, a.jsx)(r.Button, {
+        children: [null != _ && (0, a.jsx)(r.Button, {
           className: c.button,
           size: r.Button.Sizes.SMALL,
-          onClick: _,
+          onClick: S,
           look: r.Button.Looks.LINK,
           color: r.Button.Colors.PRIMARY,
           submitting: p,
-          children: S
+          children: _
         }), null != h && (0, a.jsx)(r.Button, {
           className: c.button,
           size: r.Button.Sizes.SMALL,

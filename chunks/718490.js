@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("956089"),
   m = n("664336"),
   g = n("811305"),
-  S = n("117362"),
-  _ = n("449008"),
+  _ = n("117362"),
+  S = n("449008"),
   T = n("49111"),
   A = n("590456"),
   M = n("782340"),
@@ -51,14 +51,14 @@ class N {
     })
   }
   constructor(e, t) {
-    this.generateNicknameGuildPairs = (0, S.cachedFunction)(e => {
+    this.generateNicknameGuildPairs = (0, _.cachedFunction)(e => {
       var t;
       let n = i(c.default.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId)).toPairs().map(e => {
         let [t, n] = e;
         return [t, n.map(e => {
           var t;
           return null === (t = f.default.getGuild(e)) || void 0 === t ? void 0 : t.name
-        }).filter(_.isNotNullish)]
+        }).filter(S.isNotNullish)]
       }).value();
       return n
     }), this.renderMoreAvatars = () => (0, a.jsx)(o.TooltipContainer, {

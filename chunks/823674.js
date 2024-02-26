@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("520899"),
   m = n("166257"),
   g = n("432173"),
-  S = n("219013"),
-  _ = n("625149"),
+  _ = n("219013"),
+  S = n("625149"),
   T = n("300322"),
   A = n("845579"),
   M = n("271938"),
@@ -48,8 +48,8 @@ var a = n("37983"),
   W = n("149279"),
   Z = n("599110"),
   z = n("306160"),
-  K = n("870190"),
-  Y = n("61400"),
+  Y = n("870190"),
+  K = n("61400"),
   q = n("327054"),
   X = n("583022"),
   J = n("363396"),
@@ -154,7 +154,7 @@ function er(e) {
     canPublish: h,
     canReact: m,
     canConfigureJoin: g,
-    canReply: S,
+    canReply: _,
     canStartThread: I,
     canViewThread: x,
     isExpanded: G,
@@ -177,17 +177,17 @@ function er(e) {
       isFocused: r
     } = e, {
       author: o
-    } = n, d = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(t.guild_id), [t.guild_id]), f = (0, u.useStateFromStores)([M.default], () => M.default.getId()), h = (0, T.useIsActiveChannelOrUnarchivableThread)(t), m = (0, T.useIsNonModInLockedThread)(t), g = A.RenderReactions.useSetting(), S = A.DeveloperMode.useSetting(), I = (0, u.useStateFromStores)([L.default], () => null == t.guild_id || L.default.canChatInGuild(t.guild_id), [t]), {
+    } = n, d = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(t.guild_id), [t.guild_id]), f = (0, u.useStateFromStores)([M.default], () => M.default.getId()), h = (0, T.useIsActiveChannelOrUnarchivableThread)(t), m = (0, T.useIsNonModInLockedThread)(t), g = A.RenderReactions.useSetting(), _ = A.DeveloperMode.useSetting(), I = (0, u.useStateFromStores)([L.default], () => null == t.guild_id || L.default.canChatInGuild(t.guild_id), [t]), {
       canManageMessages: x,
       canAddNewReactions: y
     } = (0, u.useStateFromStoresObject)([R.default], () => ({
       canAddNewReactions: I && R.default.can(et.Permissions.ADD_REACTIONS, t),
       canManageMessages: R.default.can(et.Permissions.MANAGE_MESSAGES, t)
-    }), [t, I]), O = (0, _.useCanReplyToMessage)(t, n), D = (0, T.useCanStartPublicThread)(t, n), P = (0, T.useCanViewThreadForMessage)(n), j = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (x || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
+    }), [t, I]), O = (0, S.useCanReplyToMessage)(t, n), D = (0, T.useCanStartPublicThread)(t, n), P = (0, T.useCanViewThreadForMessage)(n), j = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (x || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
     n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && x);
-    let U = (0, K.canReportMessage)(n),
+    let U = (0, Y.canReportMessage)(n),
       k = (0, q.default)(n, t, x),
-      w = !t.isSystemDM() && (0, Y.default)(n, f) && h && !m,
+      w = !t.isSystemDM() && (0, K.default)(n, f) && h && !m,
       {
         disableReactionCreates: G
       } = (0, X.default)({
@@ -225,7 +225,7 @@ function er(e) {
       canStartThread: D,
       canViewThread: P,
       canCopy: z.SUPPORTS_COPY,
-      hasDeveloperMode: S,
+      hasDeveloperMode: _,
       canReact: !G && g,
       canPublish: B,
       canConfigureJoin: W,
@@ -295,7 +295,7 @@ function er(e) {
         label: n.pinned ? en.default.Messages.UNPIN_MESSAGE : en.default.Messages.PIN_MESSAGE,
         icon: k.default,
         onClick: J.pinMessage
-      }) : null, S && f ? ei({
+      }) : null, _ && f ? ei({
         key: "reply-self",
         channel: t,
         message: n,
@@ -310,7 +310,7 @@ function er(e) {
       renderEmojiPicker: eu,
       shouldShow: $,
       isFocused: ec
-    }) : null, S && !f ? ei({
+    }) : null, _ && !f ? ei({
       key: "reply-other",
       channel: t,
       message: n,
@@ -431,7 +431,7 @@ function eu(e, t, n) {
         object: et.AnalyticsObjects.EMOJI_REACTION_PICKER_POPOUT
       }
     };
-  return (0, a.jsx)(S.ReactionPicker, {
+  return (0, a.jsx)(_.ReactionPicker, {
     channel: e,
     closePopout: n,
     onSelectEmoji: (a, s, l) => {

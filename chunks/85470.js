@@ -20,8 +20,8 @@ var a = n("884691"),
   E = n("957255"),
   m = n("306160"),
   g = n("659500"),
-  S = n("773336"),
-  _ = n("299039"),
+  _ = n("773336"),
+  S = n("299039"),
   T = n("61400"),
   A = n("913491"),
   M = n("583022"),
@@ -51,7 +51,7 @@ var L = function(e, t, n) {
         D && (v(U) || w) && (n.preventDefault(), (0, I.deleteMessage)(U, F, n));
         break;
       case "c":
-        ((0, S.isMac)() ? b : j) && m.SUPPORTS_COPY && (n.preventDefault(), (0, m.copy)(F.content));
+        ((0, _.isMac)() ? b : j) && m.SUPPORTS_COPY && (n.preventDefault(), (0, m.copy)(F.content));
         break;
       case "e":
         if (D) {
@@ -91,7 +91,7 @@ var L = function(e, t, n) {
       case "t":
         if (D && (0, r.computeCanStartPublicThread)(U, F)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(U, F, "Message Shortcut");
         else if (F.hasFlag(N.MessageFlags.HAS_THREAD)) {
-          let e = c.default.getChannel(_.default.castMessageIdAsChannelId(F.id));
+          let e = c.default.getChannel(S.default.castMessageIdAsChannelId(F.id));
           null != e && (D || H) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, H))
         }
         break;

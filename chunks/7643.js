@@ -25,16 +25,16 @@ function m(e) {
     onAcceptSuccess: n,
     onRejectSuccess: s,
     onError: m
-  } = e, g = (0, C.default)(), [S, _] = a.useState(!1), [T, A] = a.useState(!1), [M, I] = a.useState(!1), [N, v] = a.useState(!1), [L, R] = a.useState(!1), x = S || T || M, y = a.useCallback(async e => {
+  } = e, g = (0, C.default)(), [_, S] = a.useState(!1), [T, A] = a.useState(!1), [M, I] = a.useState(!1), [N, v] = a.useState(!1), [L, R] = a.useState(!1), x = _ || T || M, y = a.useCallback(async e => {
     if (!x) {
-      _(!0);
+      S(!0);
       try {
         await (0, f.acceptMessageRequest)(e), v(!0), null == n || n()
       } catch (t) {
         let e = new i.APIError(t);
         null == m || m(e)
       } finally {
-        _(!1)
+        S(!1)
       }
     }
   }, [x, n, m]), O = a.useCallback(async e => {
@@ -125,7 +125,7 @@ function m(e) {
     rejectMessageRequest: O,
     rejectAll: D,
     markAsNotSpam: j,
-    isAcceptLoading: S,
+    isAcceptLoading: _,
     isRejectLoading: T,
     isUserProfileLoading: M,
     isOptimisticAccepted: N,

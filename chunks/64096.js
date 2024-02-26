@@ -21,8 +21,8 @@ var a, s, l = n("871388"),
   E = n("777987"),
   m = n("82636"),
   g = n("12724"),
-  S = n("654276"),
-  _ = n("49111"),
+  _ = n("654276"),
+  S = n("49111"),
   T = n("782340");
 
 function A(e) {
@@ -47,7 +47,7 @@ function A(e) {
     type: "UPLOAD_TEXT_AS_FILE",
     icon: g.default,
     display: T.default.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
-  })), A && t && R !== _.AppContext.POPOUT && x.push({
+  })), A && t && R !== S.AppContext.POPOUT && x.push({
     type: "CLIPS",
     icon: c.default,
     display: T.default.Messages.CLIPS_SHARE_A_CLIP,
@@ -55,7 +55,7 @@ function A(e) {
     badgeColor: r.default.BG_BRAND
   }), n && x.push({
     type: "CREATE_THREAD",
-    icon: S.default,
+    icon: _.default,
     display: T.default.Messages.CREATE_THREAD
   }), v && x.push({
     type: "POLL",
@@ -70,7 +70,7 @@ function A(e) {
     icon: m.default,
     display: T.default.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL
   }), I.forEach(e => {
-    !(0, l.default)(e, _.ActivityFlags.EMBEDDED) && (e.type === _.ActivityTypes.PLAYING && (0, l.default)(e, _.ActivityFlags.JOIN) && x.push({
+    !(0, l.default)(e, S.ActivityFlags.EMBEDDED) && (e.type === S.ActivityTypes.PLAYING && (0, l.default)(e, S.ActivityFlags.JOIN) && x.push({
       type: "INVITE_TO_GAME",
       icon: C.default,
       display: T.default.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
@@ -78,7 +78,7 @@ function A(e) {
         game: null != e ? e.name : ""
       }),
       activity: e
-    }), e.type === _.ActivityTypes.LISTENING && (0, l.default)(e, _.ActivityFlags.SYNC) && x.push({
+    }), e.type === S.ActivityTypes.LISTENING && (0, l.default)(e, S.ActivityFlags.SYNC) && x.push({
       type: "INVITE_TO_LISTEN",
       icon: p.default,
       display: T.default.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
@@ -86,7 +86,7 @@ function A(e) {
         name: null != e ? e.name : ""
       }),
       activity: e
-    }), e.type === _.ActivityTypes.WATCHING && (0, l.default)(e, _.ActivityFlags.SYNC) && x.push({
+    }), e.type === S.ActivityTypes.WATCHING && (0, l.default)(e, S.ActivityFlags.SYNC) && x.push({
       type: "INVITE_TO_WATCH",
       icon: f.default,
       display: T.default.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({

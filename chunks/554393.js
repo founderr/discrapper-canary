@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("836943"),
   m = n("92981"),
   g = n("592707"),
-  S = n("350134"),
-  _ = n("755624"),
+  _ = n("350134"),
+  S = n("755624"),
   T = n("263024"),
   A = n("42203"),
   M = n("660279"),
@@ -48,9 +48,9 @@ function b(e) {
     width: F
   } = (0, d.default)(), [U, k] = s.useState(3), [w, G] = s.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(t), [t]), {
     firstMessage: Z
-  } = (0, R.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
-    disableReactionUpdates: K,
-    disableReactionCreates: Y,
+  } = (0, R.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([S.default], () => S.default.hasJoined(t)), {
+    disableReactionUpdates: Y,
+    disableReactionCreates: K,
     isLurking: q,
     isGuest: X,
     isPendingMember: J
@@ -100,9 +100,9 @@ function b(e) {
         className: i(P.reactButtons, {
           [P.loading]: ea
         }),
-        children: [!el && !Y && null != ee && (0, a.jsx)("div", {
+        children: [!el && !K && null != ee && (0, a.jsx)("div", {
           className: j.reactions,
-          children: (0, a.jsx)(S.Reaction, {
+          children: (0, a.jsx)(_.Reaction, {
             message: Z,
             readOnly: !1,
             useChatFontScaling: !1,
@@ -120,8 +120,8 @@ function b(e) {
         }), (0, a.jsx)(g.default, {
           message: Z,
           channel: W,
-          disableReactionCreates: !Q || Y,
-          disableReactionUpdates: K,
+          disableReactionCreates: !Q || K,
+          disableReactionUpdates: Y,
           isLurking: q,
           isGuest: X,
           isPendingMember: J,
@@ -130,7 +130,7 @@ function b(e) {
           useChatFontScaling: !1,
           isForumToolbar: !0,
           forceHideReactionCreates: !0
-        }), !Y && (0, a.jsx)(E.ButtonAddReaction, {
+        }), !K && (0, a.jsx)(E.ButtonAddReaction, {
           type: C.ReactionTypes.NORMAL,
           message: Z,
           channel: W,

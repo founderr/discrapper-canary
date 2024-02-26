@@ -25,18 +25,18 @@ function d(e) {
     onReportSubmit: p,
     onMouseEnter: E,
     onMouseLeave: m
-  } = e, g = (0, r.useIsRelationshipTypeSpamReportable)(t), S = (0, o.useLongestChannelMessageBeforeReply)(n.id, t);
-  if (!g || null == S) return null;
-  let _ = () => {
+  } = e, g = (0, r.useIsRelationshipTypeSpamReportable)(t), _ = (0, o.useLongestChannelMessageBeforeReply)(n.id, t);
+  if (!g || null == _) return null;
+  let S = () => {
     null == p || p(), l.default.closePrivateChannel(n.id, h)
   };
   return (0, a.jsx)(s.Button, {
     className: c,
     size: d,
     color: s.Button.Colors.RED,
-    disabled: null == S,
+    disabled: null == _,
     onClick: () => {
-      null == C || C(), (0, i.showReportModalForFirstDM)(S, _)
+      null == C || C(), (0, i.showReportModalForFirstDM)(_, S)
     },
     onMouseEnter: E,
     onMouseLeave: m,

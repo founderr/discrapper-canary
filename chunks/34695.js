@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("957255"),
   m = n("697218"),
   g = n("158998"),
-  S = n("19846"),
-  _ = n("172554"),
+  _ = n("19846"),
+  S = n("172554"),
   T = n("172643"),
   A = n("710357"),
   M = n("931922"),
@@ -95,19 +95,19 @@ function D(e) {
       children: T
     }), x.default.Messages.BEGINNING_DM.format({
       username: d
-    }), (0, a.jsx)(S.default, {
+    }), (0, a.jsx)(_.default, {
       userId: n.getRecipientId(),
       channel: n,
       showingBanner: u
     })]
   });
-  if (n.isMultiUserDM()) return n.isManaged() ? (0, a.jsxs)(_.default, {
+  if (n.isMultiUserDM()) return n.isManaged() ? (0, a.jsxs)(S.default, {
     channelId: n.id,
-    children: [(0, a.jsx)(_.EmptyMessageHeader, {
+    children: [(0, a.jsx)(S.EmptyMessageHeader, {
       children: x.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: d
       })
-    }), (0, a.jsx)(_.EmptyMessageBody, {
+    }), (0, a.jsx)(S.EmptyMessageBody, {
       children: x.default.Messages.BEGINNING_GROUP_DM_MANAGED
     })]
   }) : (0, a.jsx)(A.default, {
@@ -119,9 +119,9 @@ function D(e) {
   return N ? (0, a.jsx)(O, {
     channel: n,
     canManageRoles: M
-  }) : (0, a.jsx)(_.default, {
+  }) : (0, a.jsx)(S.default, {
     channelId: n.id,
-    children: (0, a.jsx)(_.EmptyMessageBody, {
+    children: (0, a.jsx)(S.EmptyMessageBody, {
       children: x.default.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({
         channelName: d
       })

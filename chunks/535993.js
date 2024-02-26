@@ -20,7 +20,7 @@ let u = s.memo(function(e) {
     interactionAvatarProfile: f,
     interactionData: h,
     setPopout: C
-  } = e, p = (0, l.useStateFromStores)([i.default], () => null != n.interaction && i.default.isBlocked(n.interaction.user.id), [n.interaction]), E = (0, o.useContextMenuUser)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, u.id), m = (0, o.useClickInteractionUserUsername)(n.interaction, u, c, C), g = (0, o.useClickInteractionUserAvatar)(f, C), S = (0, o.useClickInteractionCommandName)(h, C), _ = s.useCallback(() => C({
+  } = e, p = (0, l.useStateFromStores)([i.default], () => null != n.interaction && i.default.isBlocked(n.interaction.user.id), [n.interaction]), E = (0, o.useContextMenuUser)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, u.id), m = (0, o.useClickInteractionUserUsername)(n.interaction, u, c, C), g = (0, o.useClickInteractionUserAvatar)(f, C), _ = (0, o.useClickInteractionCommandName)(h, C), S = s.useCallback(() => C({
     interactionUsernameProfile: !1,
     interactionAvatarProfile: !1,
     interactionData: !1
@@ -35,9 +35,9 @@ let u = s.memo(function(e) {
     showDataPopout: h,
     onClickAvatar: g,
     onClickUsername: m,
-    onClickCommand: S,
+    onClickCommand: _,
     onUserContextMenu: E,
-    onPopoutRequestClose: _
+    onPopoutRequestClose: S
   })
 });
 

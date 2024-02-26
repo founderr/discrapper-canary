@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("659500"),
   m = n("254490"),
   g = n("412861"),
-  S = n("149022"),
-  _ = n("64096"),
+  _ = n("149022"),
+  S = n("64096"),
   T = n("49111"),
   A = n("186859"),
   M = n("782340"),
@@ -74,7 +74,7 @@ function L(e) {
   }
 
   function H() {
-    p.default.track(T.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, S.toRichValue)("/"))
+    p.default.track(T.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, _.toRichValue)("/"))
   }
 
   function F() {
@@ -150,32 +150,32 @@ function L(e) {
         })]
       });
       switch (e.type) {
-        case _.AttachmentTypes.UPLOAD_A_FILE:
+        case S.AttachmentTypes.UPLOAD_A_FILE:
           return (0, a.jsx)(i.MenuItem, {
             id: "upload-file",
             label: s,
             action: L
           }, "upload-file");
-        case _.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
+        case S.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
           if ("" === O) return null;
           return (0, a.jsx)(i.MenuItem, {
             id: "upload-text-as-file",
             label: s,
             action: w
           }, "upload-text-as-file");
-        case _.AttachmentTypes.CLIPS:
+        case S.AttachmentTypes.CLIPS:
           return (0, a.jsx)(i.MenuItem, {
             id: "clips",
             label: s,
             action: F
           }, "clips");
-        case _.AttachmentTypes.POLL:
+        case S.AttachmentTypes.POLL:
           return (0, a.jsx)(i.MenuItem, {
             id: "poll",
             label: s,
             action: U
           }, "poll");
-        case _.AttachmentTypes.INVITE_TO_PLAY_GAME:
+        case S.AttachmentTypes.INVITE_TO_PLAY_GAME:
           return (0, a.jsx)(i.MenuItem, {
             id: "play",
             label: s,
@@ -188,7 +188,7 @@ function L(e) {
               }), N(n, t, T.ActivityActionTypes.JOIN, j))
             }
           }, "play");
-        case _.AttachmentTypes.INVITE_TO_LISTEN:
+        case S.AttachmentTypes.INVITE_TO_LISTEN:
           return (0, a.jsx)(i.MenuItem, {
             id: "listen",
             label: s,
@@ -200,7 +200,7 @@ function L(e) {
               }), N(n, t, T.ActivityActionTypes.LISTEN, j))
             }
           }, "listen");
-        case _.AttachmentTypes.INVITE_TO_WATCH:
+        case S.AttachmentTypes.INVITE_TO_WATCH:
           return (0, a.jsx)(i.MenuItem, {
             id: "watch",
             label: s,
@@ -212,19 +212,19 @@ function L(e) {
               }), N(n, t, T.ActivityActionTypes.WATCH, j))
             }
           }, "watch");
-        case _.AttachmentTypes.CREATE_THREAD:
+        case S.AttachmentTypes.CREATE_THREAD:
           return (0, a.jsx)(i.MenuItem, {
             id: "THREAD",
             label: s,
             action: b
           }, "THREAD");
-        case _.AttachmentTypes.SLASH_COMMAND:
+        case S.AttachmentTypes.SLASH_COMMAND:
           return (0, a.jsx)(i.MenuItem, {
             id: "SLASH_COMMAND",
             label: s,
             action: H
           }, "SLASH_COMMAND");
-        case _.AttachmentTypes.ACTIVITY:
+        case S.AttachmentTypes.ACTIVITY:
           return (0, a.jsx)(i.MenuItem, {
             id: "activity",
             label: s,

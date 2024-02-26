@@ -17,18 +17,18 @@ var l = i("884691"),
   a = i("446674"),
   n = i("442939"),
   r = i("824563"),
-  o = i("697218"),
-  d = i("449008"),
-  u = i("191225");
+  u = i("697218"),
+  o = i("449008"),
+  d = i("191225");
 
 function c(e, t) {
-  let i = (0, a.useStateFromStoresArray)([u.default], () => null != e && null != e.id && "" !== e.id ? u.default.getEmbeddedActivitiesForChannel(e.id) : u.NO_ACTIVITIES),
+  let i = (0, a.useStateFromStoresArray)([d.default], () => null != e && null != e.id && "" !== e.id ? d.default.getEmbeddedActivitiesForChannel(e.id) : d.NO_ACTIVITIES),
     l = f(i, t);
   return l
 }
 
 function s(e) {
-  let t = (0, a.useStateFromStores)([u.default], () => null != e ? u.default.getEmbeddedActivitiesForGuild(e) : u.NO_ACTIVITIES),
+  let t = (0, a.useStateFromStores)([d.default], () => null != e ? d.default.getEmbeddedActivitiesForGuild(e) : d.NO_ACTIVITIES),
     i = f(t),
     n = l.useMemo(() => {
       let e = new Map;
@@ -45,14 +45,14 @@ function s(e) {
 function f(e, t) {
   let i = e.map(e => e.applicationId),
     r = (0, n.default)(i),
-    u = new Set([]);
+    d = new Set([]);
   for (let t of e)
-    for (let e of t.userIds) u.add(e);
-  let c = (0, a.useStateFromStoresArray)([o.default], () => {
+    for (let e of t.userIds) d.add(e);
+  let c = (0, a.useStateFromStoresArray)([u.default], () => {
       let e = [];
-      for (let t of u) e.push(o.default.getUser(t));
+      for (let t of d) e.push(u.default.getUser(t));
       return e
-    }, [u]),
+    }, [d]),
     s = l.useMemo(() => {
       let i = new Map;
       c.forEach(e => {
@@ -74,7 +74,7 @@ function f(e, t) {
           application: a,
           userParticipantAvatarUrls: n
         }
-      }).filter(d.isNotNullish);
+      }).filter(o.isNotNullish);
       return l
     }, [e, r, c, t]);
   return s

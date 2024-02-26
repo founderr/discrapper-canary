@@ -25,7 +25,7 @@ function E(e) {
     senderId: m
   } = e, g = s.useCallback(() => {
     (0, u.dismissChannelSafetyWarnings)(t, [E])
-  }, [t, E]), S = s.useCallback(e => () => {
+  }, [t, E]), _ = s.useCallback(e => () => {
     r.default.addRelationship({
       userId: m,
       context: {
@@ -50,7 +50,7 @@ function E(e) {
       name: l.MetricEvents.SAFETY_WARNING_VIEW
     })
   }, [t, E, m]);
-  let _ = () => {
+  let S = () => {
       (0, i.openModalLazy)(async () => {
         let {
           default: e
@@ -67,7 +67,7 @@ function E(e) {
             warningId: E,
             senderId: m,
             handleBlock: () => {
-              T(c.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM, c.CtaEventTypes.USER_MODAL_BLOCK_CANCEL, _)
+              T(c.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM, c.CtaEventTypes.USER_MODAL_BLOCK_CANCEL, S)
             }
           })
         }
@@ -81,7 +81,7 @@ function E(e) {
         return n => (0, a.jsx)(i, {
           ...n,
           userId: m,
-          confirmBlock: S(e),
+          confirmBlock: _(e),
           onCancel: () => {
             null == l || l(), (0, c.trackCtaEvent)({
               channelId: t,
@@ -105,7 +105,7 @@ function E(e) {
     primaryButtonText: p.default.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
     primaryButtonColor: i.Button.Colors.BRAND,
     onPrimaryButtonClick: () => {
-      _(), (0, c.trackCtaEvent)({
+      S(), (0, c.trackCtaEvent)({
         channelId: t,
         warningId: E,
         senderId: m,

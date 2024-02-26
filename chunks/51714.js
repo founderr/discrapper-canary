@@ -23,8 +23,8 @@ function d(e) {
     } = e,
     m = [],
     g = !1,
-    S = null != h ? i.default.extractTimestamp(h) : null,
-    _ = null;
+    _ = null != h ? i.default.extractTimestamp(h) : null,
+    S = null;
   return f.forEach(e => {
     var s, T, A, M, I, N, v, L;
     if (null != p && p.length > 0) {
@@ -35,18 +35,18 @@ function d(e) {
         let n = i.default.extractTimestamp(p[e].startId),
           a = i.default.extractTimestamp(p[e].endId);
         if (t >= n && t <= a) {
-          if (_ === p[e].id) break;
+          if (S === p[e].id) break;
           m.push({
             type: u.ChannelStreamTypes.DIVIDER,
             content: p[e].topic,
             contentKey: p[e].id
-          }), _ = p[e].id;
+          }), S = p[e].id;
           break
         }
       }
     }
     let R = (0, l.dateFormat)(e.timestamp, "LL");
-    R !== t && null == _ && (m.push({
+    R !== t && null == S && (m.push({
       type: u.ChannelStreamTypes.DIVIDER,
       content: R,
       contentKey: R
@@ -70,22 +70,22 @@ function d(e) {
         key: A.id
       }, T.push(t)) : n = (t = I).content[t.content.length - 1], [t, n])
     }
-    if (h === e.id && null != S) {
-      if (null != x && x.type === u.ChannelStreamTypes.DIVIDER) x.unreadId = e.id, S = null;
+    if (h === e.id && null != _) {
+      if (null != x && x.type === u.ChannelStreamTypes.DIVIDER) x.unreadId = e.id, _ = null;
       else if (null !== y) {
         ;
         N = y, v = c, (L = e).isFirstMessageInForumPost(v) || N.content.push({
           type: u.ChannelStreamTypes.DIVIDER,
           unreadId: L.id
-        }), N.hasUnread = !0, S = null
+        }), N.hasUnread = !0, _ = null
       } else !e.isFirstMessageInForumPost(c) && m.push({
         type: u.ChannelStreamTypes.DIVIDER,
         unreadId: e.id
-      }), S = null
-    } else null != S && i.default.extractTimestamp(e.id) > S && (!e.isFirstMessageInForumPost(c) && m.push({
+      }), _ = null
+    } else null != _ && i.default.extractTimestamp(e.id) > _ && (!e.isFirstMessageInForumPost(c) && m.push({
       type: u.ChannelStreamTypes.DIVIDER,
       unreadId: e.id
-    }), S = null);
+    }), _ = null);
     let P = (null == x ? void 0 : x.type) === u.ChannelStreamTypes.MESSAGE ? d : x;
     (0, r.isNewGroupItem)(c, P, e) && (n = e.id);
     let j = {

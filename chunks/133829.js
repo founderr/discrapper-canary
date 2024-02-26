@@ -25,8 +25,8 @@ function h(e) {
     description: E,
     onDismiss: m,
     primaryButtonText: g,
-    secondaryButtonText: S,
-    primaryButtonColor: _,
+    secondaryButtonText: _,
+    primaryButtonColor: S,
     secondaryButtonColor: T,
     onPrimaryButtonClick: A,
     onSecondaryButtonClick: M
@@ -68,7 +68,7 @@ function h(e) {
       className: c.buttons,
       children: [(0, a.jsx)(i.Button, {
         size: i.Button.Sizes.SMALL,
-        color: _,
+        color: S,
         "aria-label": g,
         onClick: A,
         className: c.ctaButton,
@@ -77,9 +77,9 @@ function h(e) {
         size: i.Button.Sizes.SMALL,
         color: T,
         className: c.ctaButton,
-        "aria-label": S,
+        "aria-label": _,
         onClick: M,
-        children: S
+        children: _
       })]
     }), (0, a.jsx)(i.Clickable, {
       className: c.closeButton,

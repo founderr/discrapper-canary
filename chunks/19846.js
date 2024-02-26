@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("982108"),
   m = n("27618"),
   g = n("697218"),
-  S = n("587974"),
-  _ = n("315102"),
+  _ = n("587974"),
+  S = n("315102"),
   T = n("841397"),
   A = n("49111"),
   M = n("680894"),
@@ -34,7 +34,7 @@ let L = e => {
     } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getMutualGuilds(t), [t]), l = s.useMemo(() => null != n ? n.slice(0, 3).map((e, t) => {
       let {
         guild: s
-      } = e, l = null != s ? _.default.getGuildIconURL({
+      } = e, l = null != s ? S.default.getGuildIconURL({
         id: s.id,
         icon: s.icon,
         size: 24
@@ -46,9 +46,9 @@ let L = e => {
           alt: "",
           className: v.avatar
         }, t);
-      return i ? r : (0, a.jsx)(S.default, {
+      return i ? r : (0, a.jsx)(_.default, {
         className: v.avatarMask,
-        mask: S.default.Masks.VOICE_USER_SUMMARY_ITEM,
+        mask: _.default.Masks.VOICE_USER_SUMMARY_ITEM,
         width: 24,
         height: 24,
         children: r
@@ -205,13 +205,13 @@ let L = e => {
       onError: l,
       onAcceptSuccess: o,
       onRejectSuccess: i
-    }), S = f || C || p || m;
+    }), _ = f || C || p || m;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(r.Button, {
         className: v.action,
         size: r.Button.Sizes.TINY,
         onClick: () => u(t),
-        disabled: S,
+        disabled: _,
         submitting: f,
         children: N.default.Messages.MESSAGE_REQUEST_ACCEPT
       }), (0, a.jsx)(r.Button, {
@@ -219,7 +219,7 @@ let L = e => {
         size: r.Button.Sizes.TINY,
         onClick: () => c(t),
         color: r.Button.Colors.PRIMARY,
-        disabled: S,
+        disabled: _,
         submitting: C,
         children: N.default.Messages.MESSAGE_REQUEST_IGNORE
       })]

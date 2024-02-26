@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return S
   }
 }), n("222007");
 var a = n("37983"),
@@ -52,7 +52,7 @@ function m(e) {
 function g(e) {
   return e.matches("a") || "highlight" === e.className || e.className.includes("mention")
 }
-class S extends s.Component {
+class _ extends s.Component {
   render() {
     let {
       channel: e
@@ -118,4 +118,4 @@ class S extends s.Component {
     }
   }
 }
-var _ = S
+var S = _

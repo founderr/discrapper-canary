@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("659500"),
   m = n("568734"),
   g = n("718422"),
-  S = n("49111"),
-  _ = n("5762");
+  _ = n("49111"),
+  S = n("5762");
 
 function T(e) {
   let {
@@ -45,7 +45,7 @@ function A(e) {
     id: o
   } = t, {
     id: u
-  } = n, C = t.getGuildId(), E = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, A = null != E && E.hasFeature(S.GuildFeatures.NEWS), I = g && A, {
+  } = n, C = t.getGuildId(), E = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === _.ChannelTypes.GUILD_ANNOUNCEMENT, A = null != E && E.hasFeature(_.GuildFeatures.NEWS), I = g && A, {
     editingMessage: N,
     editingTextValue: v,
     editingRichValue: L
@@ -56,13 +56,13 @@ function A(e) {
   }), [o]), R = (0, l.useStateFromStores)([d.default], () => d.default.getId()), x = s.useCallback((e, n, a) => {
     let {
       content: s
-    } = a, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === R || l);
-    return u && null != N && (0, m.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, s) : i.default.editMessage(e, n, {
+    } = a, l = h.default.can(_.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === R || l);
+    return u && null != N && (0, m.hasFlag)(N.flags, _.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, s) : i.default.editMessage(e, n, {
       content: s
     }), Promise.resolve()
   }, [N, I, R, t]), y = s.useCallback(e => (0, s.createElement)(M, {
     ...e,
-    className: _.channelTextArea,
+    className: S.channelTextArea,
     key: u
   }), [u]);
   return null != v && null != L ? (0, a.jsx)(p.default, {
@@ -90,10 +90,10 @@ function M(e) {
     onSubmit: d,
     onKeyDown: c
   } = e, [f, h] = s.useState(!0), C = s.useCallback(() => h(!0), []), p = s.useCallback(() => h(!1), []);
-  return s.useEffect(() => (E.ComponentDispatch.subscribe(S.ComponentActions.TEXTAREA_FOCUS, C), E.ComponentDispatch.subscribe(S.ComponentActions.TEXTAREA_BLUR, p), () => {
-    E.ComponentDispatch.unsubscribe(S.ComponentActions.TEXTAREA_FOCUS, C), E.ComponentDispatch.unsubscribe(S.ComponentActions.TEXTAREA_BLUR, p)
+  return s.useEffect(() => (E.ComponentDispatch.subscribe(_.ComponentActions.TEXTAREA_FOCUS, C), E.ComponentDispatch.subscribe(_.ComponentActions.TEXTAREA_BLUR, p), () => {
+    E.ComponentDispatch.unsubscribe(_.ComponentActions.TEXTAREA_FOCUS, C), E.ComponentDispatch.unsubscribe(_.ComponentActions.TEXTAREA_BLUR, p)
   }), [C, p]), (0, a.jsx)(u.default, {
-    className: _.channelTextArea,
+    className: S.channelTextArea,
     textValue: t,
     richValue: n,
     channel: i,

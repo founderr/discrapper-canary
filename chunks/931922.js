@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("454273"),
   m = n("462430"),
   g = n("592407"),
-  S = n("367376"),
-  _ = n("305961"),
+  _ = n("367376"),
+  S = n("305961"),
   T = n("957255"),
   A = n("697218"),
   M = n("987772"),
@@ -40,7 +40,7 @@ var a = n("37983"),
 function b(e) {
   let {
     channel: t
-  } = e, [n, l] = s.useState(!1), r = (0, p.default)(t, !0), b = (0, c.useStateFromStores)([_.default], () => _.default.getGuild(t.guild_id)), H = (0, c.useStateFromStores)([A.default], () => A.default.getUser(null == b ? void 0 : b.ownerId)), F = s.useMemo(() => null != b ? o(b.roles).sortBy(e => -e.position).filter(e => !(0, E.isEveryoneRoleId)(b.id, e.id)).value() : [], [b]), U = s.useMemo(() => o(F).filter(e => {
+  } = e, [n, l] = s.useState(!1), r = (0, p.default)(t, !0), b = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), H = (0, c.useStateFromStores)([A.default], () => A.default.getUser(null == b ? void 0 : b.ownerId)), F = s.useMemo(() => null != b ? o(b.roles).sortBy(e => -e.position).filter(e => !(0, E.isEveryoneRoleId)(b.id, e.id)).value() : [], [b]), U = s.useMemo(() => o(F).filter(e => {
     if (null == b) return !1;
     let n = L.default.computePermissionsForRoles({
       forceRoles: {
@@ -85,7 +85,7 @@ function b(e) {
     }), (0, a.jsx)(y.EmptyMessageBody, {
       children: P.default.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
         channelName: r,
-        topicHook: () => S.default.parseTopic(t.topic, !0, {
+        topicHook: () => _.default.parseTopic(t.topic, !0, {
           channelId: t.id
         })
       })

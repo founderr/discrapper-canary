@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("56947"),
   m = n("386045"),
   g = n("734217"),
-  S = n("139321"),
-  _ = n("562228"),
+  _ = n("139321"),
+  S = n("562228"),
   T = n("140596"),
   A = n("300322"),
   M = n("845579"),
@@ -49,9 +49,9 @@ var a = n("37983"),
         draftType: W,
         editorTextContent: Z,
         setValue: z,
-        canOnlyUseTextCommands: K
+        canOnlyUseTextCommands: Y
       } = e,
-      Y = (0, f.useAppContext)(),
+      K = (0, f.useAppContext)(),
       q = s.useRef(null),
       X = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
       J = (0, r.useStateFromStores)([m.default], () => m.default.getSettings().clipsEnabled),
@@ -65,7 +65,7 @@ var a = n("37983"),
       }, {
         autoTrackExposure: !1
       }),
-      en = (0, r.useStateFromStores)([S.HotspotStore], () => S.HotspotStore.hasHotspot(S.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
+      en = (0, r.useStateFromStores)([_.HotspotStore], () => _.HotspotStore.hasHotspot(_.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
       ea = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, F.CLIPS_GALLERY_MODAL_KEY)),
       es = (0, r.useStateFromStores)([N.default], () => N.default.hasLayers()),
       el = (0, r.useStateFromStores)([m.default], () => m.default.hasClips()),
@@ -107,10 +107,10 @@ var a = n("37983"),
     let eC = (0, A.useCanStartPublicThread)(V),
       ep = (0, A.useCanStartPrivateThread)(V),
       eE = !M.UseLegacyChatInput.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
-      em = (0, r.useStateFromStores)([v.default, T.default], () => (0, p.canUseApplicationCommands)(v.default, T.default, K, V)),
-      eg = (0, _.useCanPostPollsInChannel)(null != V ? V : void 0),
-      eS = (0, u.useRedesignIconContext)().enabled,
-      e_ = (0, h.useActivitiesInTextButtonVisibility)(V.id, "ChannelAttachButton"),
+      em = (0, r.useStateFromStores)([v.default, T.default], () => (0, p.canUseApplicationCommands)(v.default, T.default, Y, V)),
+      eg = (0, S.useCanPostPollsInChannel)(null != V ? V : void 0),
+      e_ = (0, u.useRedesignIconContext)().enabled,
+      eS = (0, h.useActivitiesInTextButtonVisibility)(V.id, "ChannelAttachButton"),
       eT = null !== (l = null == $ ? void 0 : $.length) && void 0 !== l ? l : 0,
       eA = (0, b.default)({
         canAttachFiles: ed,
@@ -122,13 +122,13 @@ var a = n("37983"),
         activities: X,
         newClipsCount: eT,
         canPostPolls: eg,
-        canLaunchActivities: null !== (w = null == e_ ? void 0 : e_.showInOmniButtonMenu) && void 0 !== w && w,
-        appContext: Y
+        canLaunchActivities: null !== (w = null == eS ? void 0 : eS.showInOmniButtonMenu) && void 0 !== w && w,
+        appContext: K
       });
     if (0 === eA.length) return null;
     let eM = X.some(e => (0, C.default)(e, H.ActivityFlags.SYNC)),
       eI = X.some(e => (0, C.default)(e, H.ActivityFlags.JOIN) && !(0, C.default)(e, H.ActivityFlags.EMBEDDED)) || eM;
-    G = eS ? (0, a.jsx)(o.CirclePlusIcon, {
+    G = e_ ? (0, a.jsx)(o.CirclePlusIcon, {
       className: k.attachButtonIcon,
       colorClass: k.attachButtonPlus
     }) : eI ? (0, a.jsx)(y.default, {

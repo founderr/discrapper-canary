@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("347738"),
   m = n("845579"),
   g = n("271938"),
-  S = n("836417"),
-  _ = n("88093"),
+  _ = n("836417"),
+  S = n("88093"),
   T = n("377253"),
   A = n("957255"),
   M = n("660478"),
@@ -48,8 +48,8 @@ let F = s.memo(function(e) {
     messages: E,
     unreadCount: m,
     showNewMessagesBar: g,
-    messageDisplayCompact: S,
-    channelStream: _,
+    messageDisplayCompact: _,
+    channelStream: S,
     uploads: T,
     hasUnreads: M,
     editingMessageId: I,
@@ -57,7 +57,7 @@ let F = s.memo(function(e) {
     keyboardModeEnabled: v,
     filterAfterTimestamp: R,
     showingQuarantineBanner: x
-  } = e, [F, U] = s.useState(!1), k = s.useMemo(() => S ? (0, y.generateMessageSpecs)({
+  } = e, [F, U] = s.useState(!1), k = s.useMemo(() => _ ? (0, y.generateMessageSpecs)({
     compact: !0,
     messageGroups: 30,
     groupRange: 4,
@@ -71,10 +71,10 @@ let F = s.memo(function(e) {
     attachments: 8,
     fontSize: N,
     groupSpacing: c
-  }), [S, N, c]), w = (0, D.default)({
+  }), [_, N, c]), w = (0, D.default)({
     messages: E,
     channel: C,
-    compact: S,
+    compact: _,
     hasUnreads: M,
     focusId: I,
     placeholderHeight: k.totalHeight,
@@ -96,14 +96,14 @@ let F = s.memo(function(e) {
       newMessagesBar: W,
       jumpToPresentBar: Z,
       forumPostActionBar: z,
-      safetyWarningBanner: K
+      safetyWarningBanner: Y
     } = (0, P.default)({
       channel: C,
       messages: E,
       unreadCount: m,
       showNewMessagesBar: g,
-      messageDisplayCompact: S,
-      channelStream: _,
+      messageDisplayCompact: _,
+      channelStream: S,
       uploads: T,
       loadMore: w.loadMore,
       scrollManager: w,
@@ -148,7 +148,7 @@ let F = s.memo(function(e) {
       handler: a
     })
   }(w.ref);
-  let Y = (0, u.useFocusJumpSection)(),
+  let K = (0, u.useFocusJumpSection)(),
     {
       ref: q,
       ...X
@@ -161,7 +161,7 @@ let F = s.memo(function(e) {
     navigator: G,
     children: (0, a.jsxs)("div", {
       className: i(H.messagesWrapper, l, "group-spacing-".concat(c)),
-      children: [null != K ? K : W, (0, a.jsxs)(u.PinToBottomScrollerAuto, {
+      children: [null != Y ? Y : W, (0, a.jsxs)(u.PinToBottomScrollerAuto, {
         ref: J,
         customTheme: !0,
         className: i(h, H.scroller),
@@ -170,7 +170,7 @@ let F = s.memo(function(e) {
         onScroll: w.handleScroll,
         onMouseDown: w.handleMouseDown,
         onMouseUp: w.handleMouseUp,
-        ...Y,
+        ...K,
         tabIndex: -1,
         role: "group",
         children: [z, (0, a.jsxs)("ol", {
@@ -209,7 +209,7 @@ var U = s.memo(function(e) {
     canChat: p
   } = function(e) {
     let t = e.getGuildId(),
-      n = (0, o.useStateFromStores)([_.default], () => null == t || _.default.canChatInGuild(t), [t]),
+      n = (0, o.useStateFromStores)([S.default], () => null == t || S.default.canChatInGuild(t), [t]),
       {
         canManageMessages: a,
         permissionVersion: s
@@ -289,15 +289,15 @@ var U = s.memo(function(e) {
         summaries: f,
         selectedSummary: p
       }), [a, e, l, i, f, p]),
-      _ = (0, o.useStateFromStores)([S.default], () => {
+      S = (0, o.useStateFromStores)([_.default], () => {
         var t;
-        return null === (t = S.default.getEditingMessage(e.id)) || void 0 === t ? void 0 : t.id
+        return null === (t = _.default.getEditingMessage(e.id)) || void 0 === t ? void 0 : t.id
       });
     return {
       messages: a,
       channelStream: m,
       oldestUnreadMessageId: l,
-      editingMessageId: _
+      editingMessageId: S
     }
   }(t);
   return (0, a.jsx)(v.ObscuredDisplayContext.Provider, {

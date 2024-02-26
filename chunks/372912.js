@@ -21,9 +21,9 @@ var s = n("414456"),
   E = n("172554"),
   m = n("49111"),
   g = n("782340"),
-  S = n("247703");
+  _ = n("247703");
 
-function _(e) {
+function S(e) {
   var t, s;
   let {
     userId: u,
@@ -44,11 +44,11 @@ function _(e) {
       })
     })
   }
-  let _ = null !== (s = null !== (t = null == m ? void 0 : m.nick) && void 0 !== t ? t : p.default.getName(E)) && void 0 !== s ? s : "???",
+  let S = null !== (s = null !== (t = null == m ? void 0 : m.nick) && void 0 !== t ? t : p.default.getName(E)) && void 0 !== s ? s : "???",
     T = null == m ? void 0 : m.colorString;
   return null == E ? (0, a.jsx)("span", {
-    className: l(S.threadCreatorName, S.unknownCreatorName),
-    children: _
+    className: l(_.threadCreatorName, _.unknownCreatorName),
+    children: S
   }) : (0, a.jsx)(r.Popout, {
     preload: () => (0, d.default)(E.id, E.getAvatarURL(C.guild_id, 80), {
       guildId: C.guild_id,
@@ -64,10 +64,10 @@ function _(e) {
     children: e => (0, a.jsx)(r.Clickable, {
       ...e,
       tag: "span",
-      className: S.threadCreatorName,
+      className: _.threadCreatorName,
       onContextMenu: g,
       children: (0, a.jsx)(r.NameWithRole, {
-        name: _,
+        name: S,
         color: null != T ? T : void 0
       })
     })
@@ -89,9 +89,9 @@ function T(e) {
       variant: "text-md/normal",
       color: "header-secondary",
       children: (0, a.jsx)("div", {
-        className: S.subtitle,
+        className: _.subtitle,
         children: g.default.Messages.THREAD_STARTED_BY.format({
-          usernameHook: (e, n) => (0, a.jsx)(_, {
+          usernameHook: (e, n) => (0, a.jsx)(S, {
             userId: t.ownerId,
             channel: t
           }, n)
@@ -113,9 +113,9 @@ function A(e) {
   return (0, a.jsxs)(E.default, {
     channelId: n.id,
     children: [(0, a.jsx)("div", {
-      className: S.iconWrapper,
+      className: _.iconWrapper,
       children: (0, a.jsx)(s, {
-        className: S.icon
+        className: _.icon
       })
     }), (0, a.jsx)(E.EmptyMessageHeader, {
       children: n.name

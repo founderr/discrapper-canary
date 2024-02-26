@@ -64,7 +64,7 @@ var g = s.memo(function(e) {
     collapsedReason: u
   } = e, {
     hasJumpTarget: d = !1
-  } = n, [C, g] = s.useState(d), S = s.useCallback(() => g(e => !e), []), _ = n.hasUnread ? n.content.length - 1 : n.content.length;
+  } = n, [C, g] = s.useState(d), _ = s.useCallback(() => g(e => !e), []), S = n.hasUnread ? n.content.length - 1 : n.content.length;
   return (0, a.jsxs)("div", {
     className: i({
       [E.groupStart]: !0,
@@ -74,10 +74,10 @@ var g = s.memo(function(e) {
       isUnread: !0,
       id: o
     }, "divider") : null, (0, a.jsx)(m, {
-      count: _,
+      count: S,
       compact: r,
       expanded: C,
-      onClick: S,
+      onClick: _,
       collapsedReason: u
     }, "collapsed-message-item"), C ? n.content.map((e, t) => {
       if (e.type === h.ChannelStreamTypes.DIVIDER && t > 0) {

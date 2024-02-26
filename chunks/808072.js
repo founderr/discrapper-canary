@@ -20,8 +20,8 @@ var a, s, l, i, r, o, u = n("37983"),
   E = n("439932"),
   m = n("145131"),
   g = n("49111"),
-  S = n("782340"),
-  _ = n("778548");
+  _ = n("782340"),
+  S = n("778548");
 (r = s || (s = {})).CENTER = "center", r.LEFT = "left", (o = l || (l = {})).TOP = "top", o.MIDDLE = "middle";
 class T extends d.PureComponent {
   componentDidMount() {
@@ -50,37 +50,37 @@ class T extends d.PureComponent {
       onClickSkipAll: r
     } = this.props, o = "left" === t || n, d = "center" === t || !o;
     return (0, u.jsxs)(C.Dialog, {
-      className: f(_.popoutRoot, l),
+      className: f(S.popoutRoot, l),
       children: [null != e && (0, u.jsx)(m.default, {
-        className: _.mediaContainer,
+        className: S.mediaContainer,
         justify: o ? m.default.Justify.START : m.default.Justify.CENTER,
         children: e()
       }), (0, u.jsx)(C.H, {
         className: f({
-          [_.titleCenter]: d,
-          [_.titleLeft]: o
+          [S.titleCenter]: d,
+          [S.titleLeft]: o
         }),
         children: a
       }), (0, u.jsx)("string" == typeof s ? "p" : "div", {
         className: f({
-          [_.bodyCenter]: d,
-          [_.bodyLeft]: o
+          [S.bodyCenter]: d,
+          [S.bodyLeft]: o
         }),
         children: s
       }), (0, u.jsxs)(m.default, {
-        className: _.buttonContainer,
+        className: S.buttonContainer,
         justify: o ? m.default.Justify.BETWEEN : m.default.Justify.CENTER,
         children: [(0, u.jsx)(C.Button, {
           size: C.ButtonSizes.SMALL,
           onClick: this.handleDismiss,
-          children: S.default.Messages.TUTORIAL_CLOSE
+          children: _.default.Messages.TUTORIAL_CLOSE
         }), (0, u.jsx)(C.Button, {
           size: C.ButtonSizes.SMALL,
           look: C.Button.Looks.BLANK,
           onClick: r,
           color: (0, h.isThemeLight)(i) ? C.Button.Colors.PRIMARY : C.Button.Colors.WHITE,
-          className: o ? _.buttonSkipLeftAlign : _.buttonSkipCenterAlign,
-          children: S.default.Messages.SKIP_ALL_TIPS
+          className: o ? S.buttonSkipLeftAlign : S.buttonSkipCenterAlign,
+          children: _.default.Messages.SKIP_ALL_TIPS
         })]
       })]
     })
@@ -145,16 +145,16 @@ class T extends d.PureComponent {
       return (0, u.jsx)(T, {
         ...this.props,
         className: f({
-          [_.bottom]: "bottom" === n,
-          [_.contentNarrowNoMedia]: !s && !r,
-          [_.contentNarrowWithMedia]: !s && r,
-          [_.contentWideNoMedia]: s && !r,
-          [_.contentWideWithMedia]: s && r,
-          [_.right]: "right" === n,
-          [_.top]: "top" === n,
-          [_.left]: "left" === n,
-          [_.arrowAlignmentTop]: "top" === l,
-          [_.arrowAlignmentMiddle]: "middle" === l,
+          [S.bottom]: "bottom" === n,
+          [S.contentNarrowNoMedia]: !s && !r,
+          [S.contentNarrowWithMedia]: !s && r,
+          [S.contentWideNoMedia]: s && !r,
+          [S.contentWideWithMedia]: s && r,
+          [S.right]: "right" === n,
+          [S.top]: "top" === n,
+          [S.left]: "left" === n,
+          [S.arrowAlignmentTop]: "top" === l,
+          [S.arrowAlignmentMiddle]: "middle" === l,
           "force-theme": null != a
         }, (0, E.getThemeClass)(a)),
         onClickComplete: () => this.onClickComplete(t),

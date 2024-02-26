@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("233322"),
   m = n("567054"),
   g = n("982527"),
-  S = n("388166"),
-  _ = n("631360"),
+  _ = n("388166"),
+  S = n("631360"),
   T = n("267567"),
   A = n("88187"),
   M = n("13066"),
@@ -75,8 +75,8 @@ class k extends s.PureComponent {
       canSendMessages: p,
       channelFollowingUsersSeen: E,
       showLurkerModeUpsellPopout: g,
-      showMemberVerificationModal: S,
-      useReducedMotion: _,
+      showMemberVerificationModal: _,
+      useReducedMotion: S,
       isStaff: T,
       guildJoinRequest: A
     } = this.props, {
@@ -84,13 +84,13 @@ class k extends s.PureComponent {
       shouldShowLurkerModeSuccessPopout: I
     } = this.state, N = {
       theme: h,
-      useReducedMotion: _
+      useReducedMotion: S
     };
     if (e && !p) N.message = F.default.Messages.FOLLOW_NEWS_CHAT_INPUT_MESSAGE, null != E && E >= 1e3 && (N.subtitle = F.default.Messages.FOLLOW_NEWS_CHAT_INPUT_SUBTITLE.format({
       count: (1e3 * Math.floor(E / 1e3)).toLocaleString()
     })), N.buttonText = F.default.Messages.FOLLOW, N.onButtonClick = this.handleFollowAnnouncement, N.imageSrc = n("757000"), t && (N.onSecondaryButtonClick = this.handleJoinServer, N.secondaryButtonText = F.default.Messages.LURKER_MODE_CHAT_INPUT_BUTTON);
-    else if (l) N.message = F.default.Messages.GUILD_VERIFICATION_TEXT_NOT_CLAIMED, N.buttonText = F.default.Messages.CLAIM_ACCOUNT, N.onButtonClick = S ? this.handleShowMemberVerification : this.handleClaimAccount, N.imageSrc = n("524939");
-    else if (S) switch (null == A ? void 0 : A.applicationStatus) {
+    else if (l) N.message = F.default.Messages.GUILD_VERIFICATION_TEXT_NOT_CLAIMED, N.buttonText = F.default.Messages.CLAIM_ACCOUNT, N.onButtonClick = _ ? this.handleShowMemberVerification : this.handleClaimAccount, N.imageSrc = n("524939");
+    else if (_) switch (null == A ? void 0 : A.applicationStatus) {
       case m.GuildJoinRequestApplicationStatuses.SUBMITTED:
         N.message = F.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, N.subtitle = F.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_SUBTITLE, N.buttonText = F.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, N.onButtonClick = this.handleCancelApplication, N.imageSrc = n("897176");
         break;
@@ -276,7 +276,7 @@ class k extends s.PureComponent {
       if (null == e || null == t || !n || (0, p.isApprovedAndAcked)(t)) return null;
       let s = () => C.default.ackUserGuildJoinRequest(e.id, t.id);
       return (0, a.jsx)(o.Modal, {
-        renderModal: t => (0, a.jsx)(S.default, {
+        renderModal: t => (0, a.jsx)(_.default, {
           ...t,
           onAccept: s,
           guildName: e.name
@@ -295,7 +295,7 @@ function w(e) {
   } = e, i = s.getGuildId(), o = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(i)), u = (0, r.useStateFromStores)([y.default], () => y.default.getCheck(i)), d = s.type === b.ChannelTypes.GUILD_ANNOUNCEMENT && null != o && o.hasFeature(b.GuildFeatures.NEWS), c = (0, r.useStateFromStores)([L.default], () => d ? L.default.getFollowerStatsForChannel(s.id) : null), h = (0, r.useStateFromStores)([T.default], () => T.default.isLurking(i)), C = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), p = null !== (t = null == C ? void 0 : C.isStaff()) && void 0 !== t && t, E = (0, r.useStateFromStores)([R.default], () => {
     var e, t;
     return null != C && null !== (t = null === (e = R.default.getMember(i, C.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t
-  }), S = !!(null == o ? void 0 : o.hasVerificationGate()), A = (E || u.notClaimed) && S, M = (0, r.useStateFromStores)([_.default], () => _.default.shouldShowPopout(i)), I = (0, r.useStateFromStores)([O.default], () => O.default.can(b.Permissions.SEND_MESSAGES, s)), N = (0, r.useStateFromStores)([g.default], () => g.default.getRequest(i)), j = {
+  }), _ = !!(null == o ? void 0 : o.hasVerificationGate()), A = (E || u.notClaimed) && _, M = (0, r.useStateFromStores)([S.default], () => S.default.shouldShowPopout(i)), I = (0, r.useStateFromStores)([O.default], () => O.default.can(b.Permissions.SEND_MESSAGES, s)), N = (0, r.useStateFromStores)([g.default], () => g.default.getRequest(i)), j = {
     ...u,
     guild: o,
     isLurking: h,
@@ -305,7 +305,7 @@ function w(e) {
     theme: v.default.theme,
     canSendMessages: I,
     channelFollowingUsersSeen: null != c ? c.usersSeenEver : null,
-    hasVerificationGate: S,
+    hasVerificationGate: _,
     showMemberVerificationModal: A,
     guildJoinRequestStatus: null !== (n = null == N ? void 0 : N.applicationStatus) && void 0 !== n ? n : m.GuildJoinRequestApplicationStatuses.STARTED,
     guildJoinRequest: N,

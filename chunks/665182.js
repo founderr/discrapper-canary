@@ -60,7 +60,7 @@ function m(e) {
       case 4:
         return "homeSidebarWidth"
     }
-  }(t), [g, S] = i.useState(h.default[m]), _ = i.useCallback(e => {
+  }(t), [g, _] = i.useState(h.default[m]), S = i.useCallback(e => {
     c.default.updatedUnsyncedSettings({
       [m]: e
     })
@@ -82,8 +82,8 @@ function m(e) {
     }), !T && (0, l.jsx)(E, {
       maxWidth: n,
       resizableNode: f,
-      onResize: S,
-      onResizeEnd: _
+      onResize: _,
+      onResizeEnd: S
     }), (0, l.jsx)("div", {
       ref: f,
       className: o(p.container, {

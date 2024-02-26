@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return S
   }
 });
 var a = n("37983");
@@ -22,7 +22,7 @@ var s = n("414456"),
   m = n("782340"),
   g = n("141342");
 
-function S(e) {
+function _(e) {
   let {
     summary: t,
     channel: n
@@ -81,7 +81,7 @@ function S(e) {
   })
 }
 
-function _(e) {
+function S(e) {
   var t, n;
   let s, {
       item: i,
@@ -99,7 +99,7 @@ function _(e) {
       height: 16
     }), i.content]
   }) : (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(S, {
+    children: [(0, a.jsx)(_, {
       summary: f,
       channel: o
     }), (0, a.jsx)(d.default, {

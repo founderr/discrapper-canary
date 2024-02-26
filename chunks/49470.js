@@ -8,16 +8,16 @@ var a = s("37983");
 s("884691");
 var n = s("77078"),
   l = s("249900"),
-  i = s("588025"),
-  r = s("301259"),
-  o = s("686098"),
+  i = s("879364"),
+  r = s("588025"),
+  o = s("301259"),
   d = s("782340"),
   u = s("38845"),
   c = () => {
     let {
       quests: e,
       isFetchingCurrentQuests: t
-    } = (0, o.useQuests)();
+    } = (0, i.useQuests)();
     return t ? (0, a.jsx)(n.Spinner, {
       className: u.spinner
     }) : 0 === e.length ? null : (0, a.jsx)(n.FormSection, {
@@ -32,9 +32,9 @@ var n = s("77078"),
         }),
         children: [(0, a.jsx)(n.FormDivider, {
           className: u.divider
-        }), e.map(e => (0, a.jsx)(r.QuestsCard, {
+        }), e.map(e => (0, a.jsx)(o.QuestsCard, {
           quest: e,
-          location: i.QuestContent.QUEST_INVENTORY_CARD
+          location: r.QuestContent.QUEST_INVENTORY_CARD
         }, e.id))]
       })
     })

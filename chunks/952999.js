@@ -23,8 +23,8 @@ var a = n("37983"),
   E = n("592407"),
   m = n("970700"),
   g = n("271938"),
-  S = n("305961"),
-  _ = n("697218"),
+  _ = n("305961"),
+  S = n("697218"),
   T = n("461380"),
   A = n("36694"),
   M = n("659500"),
@@ -77,13 +77,13 @@ function D(e) {
 function P(e) {
   let {
     channel: t
-  } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && v.default.extractTimestamp(l.id) < Date.now() - R.WELCOME_OLD_GUILD_AGE_THRESHOLD, T = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
+  } = e, l = (0, u.useStateFromStores)([_.default], () => null != t ? _.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && v.default.extractTimestamp(l.id) < Date.now() - R.WELCOME_OLD_GUILD_AGE_THRESHOLD, T = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
     canInvite: A,
     canManageGuild: P,
     canMessage: j
-  } = (0, p.usePermissions)(t, l), b = (0, u.useStateFromStores)([_.default], () => {
+  } = (0, p.usePermissions)(t, l), b = (0, u.useStateFromStores)([S.default], () => {
     var e, t;
-    return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
+    return (null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
   }), {
     guildPopulated: H,
     guildMessaged: F,
@@ -210,7 +210,7 @@ function P(e) {
       titleAnimatedStyle: l,
       opacities: a
     }
-  }(W), K = (0, u.useStateFromStores)([C.default], () => C.default.getGuildApplicationIds(null == l ? void 0 : l.id)), Y = K.length > 0;
+  }(W), Y = (0, u.useStateFromStores)([C.default], () => C.default.getGuildApplicationIds(null == l ? void 0 : l.id)), K = Y.length > 0;
   if (s.useEffect(() => {
       var e;
       (0, m.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : R.EMPTY_STRING_GUILD_ID)
@@ -268,7 +268,7 @@ function P(e) {
     children: (0, a.jsx)(D, {
       iconUrl: n("356451"),
       header: y.default.Messages.WELCOME_CTA_APPS_RECOMMENDATION_TITLE,
-      completed: Y,
+      completed: K,
       onClick: V
     })
   }, "addapp")));

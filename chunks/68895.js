@@ -24,8 +24,8 @@ function m(e) {
   let {
     guild: t,
     disabledUntil: n
-  } = e, [m, g] = (0, f.useCommunicationDisabledNoticeStore)(t.id), S = (0, s.useStateFromStores)([o.default, r.default], () => o.default.getMember(t.id, r.default.getId()), [t.id]);
-  return (0, c.useCommunicationDisabledCountdownCleanup)(S), (0, a.jsxs)("div", {
+  } = e, [m, g] = (0, f.useCommunicationDisabledNoticeStore)(t.id), _ = (0, s.useStateFromStores)([o.default, r.default], () => o.default.getMember(t.id, r.default.getId()), [t.id]);
+  return (0, c.useCommunicationDisabledCountdownCleanup)(_), (0, a.jsxs)("div", {
     children: [m ? (0, a.jsx)(h.default, {
       onClose: () => g(t.id),
       guildName: t.name

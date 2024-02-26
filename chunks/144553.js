@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("574073"),
   m = n("909917"),
   g = n("380986"),
-  S = n("49111"),
-  _ = n("782340");
+  _ = n("49111"),
+  S = n("782340");
 let T = s.memo(function(e) {
   var t, n, T;
   let {
@@ -34,28 +34,28 @@ let T = s.memo(function(e) {
     setPopout: R
   } = e, x = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, E.useNullableMessageAuthor)(x), O = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = A.editedTimestamp) && void 0 !== t ? t : A.timestamp).valueOf()), D = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == I ? void 0 : I.guild_id) && void 0 !== n ? n : "", (null !== (T = A.editedTimestamp) && void 0 !== T ? T : A.timestamp).valueOf()), P = s.useMemo(() => {
     if (null == x) return null;
-    if (x.type === S.MessageTypes.USER_JOIN) return (0, i.astToString)(C.default.getSystemMessageUserJoin(x.id).astFormat({
+    if (x.type === _.MessageTypes.USER_JOIN) return (0, i.astToString)(C.default.getSystemMessageUserJoin(x.id).astFormat({
       username: null != y ? y.nick : x.author.username,
       usernameHook: e => e
     }));
-    if (x.type === S.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE) return (0, i.astToString)((0, u.getRoleSubscriptionPurchaseSystemMessageAstFormattedContent)({
+    if (x.type === _.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE) return (0, i.astToString)((0, u.getRoleSubscriptionPurchaseSystemMessageAstFormattedContent)({
       username: null != y ? y.nick : x.author.username,
       guildId: null == I ? void 0 : I.guild_id,
       roleSubscriptionData: x.roleSubscriptionData
     }));
-    if (x.type === S.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.astToString)((0, r.getApplicationSubscriptionSystemMessageASTContent)({
+    if (x.type === _.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.astToString)((0, r.getApplicationSubscriptionSystemMessageASTContent)({
       application: null == x ? void 0 : x.application,
       username: null == y ? void 0 : y.nick
     }));
-    else if (x.type === S.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED) return (0, i.astToString)((0, d.getPrivateChannelIntegrationAddedSystemMessageASTContent)({
+    else if (x.type === _.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED) return (0, i.astToString)((0, d.getPrivateChannelIntegrationAddedSystemMessageASTContent)({
       application: null == x ? void 0 : x.application,
       username: null == y ? void 0 : y.nick
     }));
-    else if (x.type === S.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_REMOVED) return (0, i.astToString)((0, d.getPrivateChannelIntegrationRemovedSystemMessageASTContent)({
+    else if (x.type === _.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_REMOVED) return (0, i.astToString)((0, d.getPrivateChannelIntegrationRemovedSystemMessageASTContent)({
       application: null == x ? void 0 : x.application,
       username: null == y ? void 0 : y.nick
     }));
-    else if (x.type === S.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT) return "" !== x.content ? x.content : _.default.Messages.DEADCHAT_PROMPT_1;
+    else if (x.type === _.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT) return "" !== x.content ? x.content : S.default.Messages.DEADCHAT_PROMPT_1;
     if (null != x.content && "" !== x.content) {
       let e = x.isFirstMessageInForumPost(I) ? {
         formatInline: !0,
@@ -104,7 +104,7 @@ function A(e, t, n, s, l) {
   } = e, {
     referencedUsernameProfile: u,
     referencedAvatarProfile: d
-  } = n, c = i.type === S.MessageTypes.REPLY && null != s && (0, a.jsx)(T, {
+  } = n, c = i.type === _.MessageTypes.REPLY && null != s && (0, a.jsx)(T, {
     baseMessage: i,
     replyReference: s,
     referencedMessage: l,

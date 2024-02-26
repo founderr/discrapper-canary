@@ -17,12 +17,12 @@ var a = n("37983"),
   E = n("491605"),
   h = n("284679"),
   _ = n("374023"),
-  C = n("2973"),
-  I = n("588025"),
-  S = n("227231"),
-  m = n("919354"),
-  p = n("705589"),
-  T = n("686098"),
+  C = n("879364"),
+  I = n("2973"),
+  S = n("588025"),
+  m = n("227231"),
+  p = n("919354"),
+  T = n("705589"),
   g = n("166604"),
   A = n("335294");
 let N = {
@@ -70,7 +70,7 @@ var x = function() {
       autoTrackExposure: !0
     }),
     r = (0, d.useStateFromStores)([c.default], () => c.default.useReducedMotion),
-    o = (0, d.useStateFromStores)([C.default], () => (0, S.getQuestForTargetedContent)(C.default.quests, I.QuestContent.QUEST_BAR)),
+    o = (0, d.useStateFromStores)([I.default], () => (0, m.getQuestForTargetedContent)(I.default.quests, S.QuestContent.QUEST_BAR)),
     N = (0, d.useStateFromStores)([f.default], () => f.default.isFocused()),
     O = !r && N,
     v = s.useRef(-1),
@@ -86,7 +86,7 @@ var x = function() {
     K = (null == o ? void 0 : null === (e = o.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
     z = (null == o ? void 0 : null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
     q = (null == o ? void 0 : null === (n = o.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-    Q = (null == o ? void 0 : o.userStatus) != null && (0, S.isDismissed)(null == o ? void 0 : o.userStatus, I.QuestContent.QUEST_BAR),
+    Q = (null == o ? void 0 : o.userStatus) != null && (0, m.isDismissed)(null == o ? void 0 : o.userStatus, S.QuestContent.QUEST_BAR),
     Z = s.useMemo(() => {
       if (null == o) return null;
       let e = (0, h.hexToRgb)(o.config.colors.primary);
@@ -102,7 +102,7 @@ var x = function() {
         };
       return R.reduce((e, n) => [...e, n, t.r, t.g, t.b], [])
     }, [o]),
-    J = (0, T.useIsQuestExpired)(o),
+    J = (0, C.useIsQuestExpired)(o),
     $ = s.useCallback(() => {
       var e, t;
       V((null !== (t = null === (e = W.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), j(!0)
@@ -223,13 +223,13 @@ var x = function() {
           output: [100, 0]
         }).to(e => "translateY(".concat(e, "%)"))
       },
-      children: [(0, a.jsx)(m.default, {
+      children: [(0, a.jsx)(p.default, {
         className: A.content,
         expansionFactor: ed,
         isExpanded: G,
         isExpansionAnimationComplete: w,
         quest: o
-      }), (0, a.jsx)(p.default, {
+      }), (0, a.jsx)(T.default, {
         className: A.content,
         onCtxMenuOpen: ee,
         onCtxMenuClose: et,

@@ -20,8 +20,8 @@ var a = n("37983"),
   E = n("593195"),
   m = n("578706"),
   g = n("347895"),
-  S = n("129092"),
-  _ = n("726274"),
+  _ = n("129092"),
+  S = n("726274"),
   T = n("290886"),
   A = n("205454"),
   M = n("782340"),
@@ -74,7 +74,7 @@ function L(e) {
   } = e, {
     channelAction: E,
     completed: T
-  } = (0, _.useMemberActionsForChannel)(f, h), A = (0, _.useNextMemberAction)(f, null == E ? void 0 : E.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), R = (null == E ? void 0 : E.actionType) === S.NewMemberActionTypes.VIEW, x = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = s.useState(!1), [D] = s.useState(new r.default.Value(0)), [P] = s.useState(new r.default.Value(0));
+  } = (0, S.useMemberActionsForChannel)(f, h), A = (0, S.useNextMemberAction)(f, null == E ? void 0 : E.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), R = (null == E ? void 0 : E.actionType) === _.NewMemberActionTypes.VIEW, x = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = s.useState(!1), [D] = s.useState(new r.default.Value(0)), [P] = s.useState(new r.default.Value(0));
   s.useEffect(() => {
     T ? r.default.timing(D, {
       toValue: 0,
@@ -176,7 +176,7 @@ function R(e) {
   } = e, l = (0, T.useCanSeeOnboardingHome)(t), i = (0, o.default)([C.default], () => {
     var e;
     return (null === (e = C.default.getSelfMember(t)) || void 0 === e ? void 0 : e.isPending) === !0
-  }), r = (0, _.useAllActionsCompleted)(t);
+  }), r = (0, S.useAllActionsCompleted)(t);
   return r || i || !l ? null : (0, a.jsx)(L, {
     guildId: t,
     channel: n,

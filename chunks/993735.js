@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
 var s = n("37983");
 n("884691");
 var l = n("77078"),
-  a = n("588025"),
-  i = n("301259"),
-  r = n("686098"),
+  a = n("879364"),
+  i = n("588025"),
+  r = n("301259"),
   o = n("987099"),
   u = n("571777");
 
@@ -19,14 +19,14 @@ function d(e) {
   } = e, {
     quests: n,
     isFetchingCurrentQuests: d
-  } = (0, r.useQuests)([t]);
+  } = (0, a.useQuests)([t]);
   if (d) return (0, s.jsx)(l.Spinner, {
     className: u.spinner
   });
   if (0 === n.length) return (0, s.jsx)(o.InvalidQuestsEmbed, {});
   let [c] = n;
-  return (0, s.jsx)(i.QuestsCard, {
+  return (0, s.jsx)(r.QuestsCard, {
     quest: c,
-    location: a.QuestContent.QUESTS_EMBED
+    location: i.QuestContent.QUESTS_EMBED
   }, c.id)
 }

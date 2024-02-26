@@ -23,8 +23,8 @@ var a = n("37983"),
   E = n("149022"),
   m = n("681060"),
   g = n("884351"),
-  S = n("671071"),
-  _ = n("401848"),
+  _ = n("671071"),
+  S = n("401848"),
   T = n("718422"),
   A = n("49111"),
   M = n("782340"),
@@ -75,7 +75,7 @@ class v extends s.PureComponent {
       application: C,
       transitionState: E,
       onClose: g
-    } = this.props, S = h > 0, _ = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
+    } = this.props, _ = h > 0, S = _ ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
       seconds: Math.round((h + 1e3) / 1e3)
     }) : null;
     return (0, a.jsxs)(o.ModalRoot, {
@@ -136,11 +136,11 @@ class v extends s.PureComponent {
         })]
       }), (0, a.jsxs)(o.ModalFooter, {
         children: [(0, a.jsx)(o.Tooltip, {
-          text: _,
+          text: S,
           children: e => (0, a.jsx)("div", {
             ...e,
             children: (0, a.jsx)(o.Button, {
-              disabled: S,
+              disabled: _,
               onClick: this.handleShare,
               children: M.default.Messages.INVITE_EMBED_SEND_INVITE
             })
@@ -241,13 +241,13 @@ class v extends s.PureComponent {
     }
   }
 }
-var L = r.default.connectStores([_.default, C.default], e => {
+var L = r.default.connectStores([S.default, C.default], e => {
   let {
     channel: t,
     activity: n
   } = e;
   return {
-    cooldown: _.default.getSlowmodeCooldownGuess(t.id),
-    application: null != n.application_id ? C.default.getApplication(n.application_id) : S.SpotifyApplication
+    cooldown: S.default.getSlowmodeCooldownGuess(t.id),
+    application: null != n.application_id ? C.default.getApplication(n.application_id) : _.SpotifyApplication
   }
 })(v)

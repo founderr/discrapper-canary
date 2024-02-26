@@ -23,8 +23,8 @@ var a = n("37983"),
   E = n("808072"),
   m = n("807061"),
   g = n("826431"),
-  S = n("612246"),
-  _ = n("587335");
+  _ = n("612246"),
+  S = n("587335");
 class T extends s.PureComponent {
   componentDidMount() {
     this.updateCache()
@@ -97,30 +97,30 @@ class T extends s.PureComponent {
     } = l, {
       offsetX: p,
       offsetY: g
-    } = this.state, S = {
+    } = this.state, _ = {
       left: null != p ? s.x + p : void 0,
       top: null != g ? s.y + g : void 0
     }, T = e => {
       let t = n && !e;
       return !0 !== d ? null : (0, a.jsxs)("div", {
         children: [(0, a.jsx)("div", {
-          className: i(_.top, {
-            [_.animating]: t,
-            [_.notAnimating]: !t
+          className: i(S.top, {
+            [S.animating]: t,
+            [S.notAnimating]: !t
           })
         }), (0, a.jsx)("div", {
-          className: i(_.bottom, {
-            [_.animating]: t,
-            [_.notAnimating]: !t
+          className: i(S.bottom, {
+            [S.animating]: t,
+            [S.notAnimating]: !t
           })
         })]
       })
     }, A = e => {
       let t = n && !e;
       return {
-        [_.animating]: t,
-        [_.notAnimating]: !t,
-        [_.highPriority]: d
+        [S.animating]: t,
+        [S.notAnimating]: !t,
+        [S.highPriority]: d
       }
     }, M = this.getTutorialPopoutText();
     return (0, a.jsx)(E.default, {
@@ -141,14 +141,14 @@ class T extends s.PureComponent {
         } = t;
         return (0, a.jsx)(f.Clickable, {
           ...e,
-          className: _.indicator,
-          style: S,
+          className: S.indicator,
+          style: _,
           children: (0, a.jsxs)("div", {
-            className: i(_.animationContainer, A(n)),
+            className: i(S.animationContainer, A(n)),
             children: [T(n), (0, a.jsx)("div", {
-              className: i(_.innerCircle, A(n))
+              className: i(S.innerCircle, A(n))
             }), (0, a.jsx)("div", {
-              className: i(_.outerCircle, A(n))
+              className: i(S.outerCircle, A(n))
             })]
           })
         })
@@ -170,10 +170,10 @@ var A = function() {
     tutorialData: t,
     windowFocused: n,
     shouldShowAny: s
-  } = (0, c.useStateFromStoresObject)([S.default, p.default, C.default], () => ({
-    indicators: S.default.getIndicators(),
-    tutorialData: S.default.getData(),
-    shouldShowAny: S.default.shouldShowAnyIndicators() && !C.default.hasLayers(),
+  } = (0, c.useStateFromStoresObject)([_.default, p.default, C.default], () => ({
+    indicators: _.default.getIndicators(),
+    tutorialData: _.default.getData(),
+    shouldShowAny: _.default.shouldShowAnyIndicators() && !C.default.hasLayers(),
     windowFocused: p.default.isFocused()
   }));
   return s ? (0, a.jsx)(a.Fragment, {

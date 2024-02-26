@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return g
   },
   default: function() {
-    return S
+    return _
   }
 });
 var a = n("37983");
@@ -130,7 +130,7 @@ let C = 44,
   m = 26,
   g = 6;
 
-function S(e) {
+function _(e) {
   let {
     messages: t,
     groupSpacing: n = 0,

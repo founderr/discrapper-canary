@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   usePermissions: function() {
-    return S
+    return _
   },
   useCompletedStates: function() {
-    return _
+    return S
   }
 }), n("222007");
 var a = n("884691"),
@@ -24,7 +24,7 @@ var a = n("884691"),
   m = n("299039"),
   g = n("49111");
 
-function S(e, t) {
+function _(e, t) {
   return (0, i.useStateFromStoresObject)([E.default], () => ({
     canInvite: (0, r.canViewInviteModal)(E.default, t, e),
     canManageGuild: null != t && E.default.can(g.Permissions.MANAGE_GUILD, t),
@@ -33,7 +33,7 @@ function S(e, t) {
   }), [t, e])
 }
 
-function _(e) {
+function S(e) {
   var t;
   return {
     guildPopulated: function(e) {
