@@ -70,7 +70,9 @@ var s = n("37983"),
             className: p.questInfo,
             children: [(0, s.jsx)(o.Heading, {
               variant: "heading-xxl/bold",
-              children: a.config.messages.questName
+              children: N.default.Messages.QUEST.format({
+                questName: a.config.messages.questName
+              })
             }), (0, s.jsx)(o.Text, {
               variant: "text-xs/normal",
               children: N.default.Messages.QUESTS_AVAILABLE_THROUGH.format({
