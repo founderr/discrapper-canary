@@ -308,7 +308,7 @@ let o = {
     neverLoadBeforeConnectionOpen: !0
   },
   QuestsManager: {
-    actions: ["POST_CONNECTION_OPEN", "QUESTS_SEND_HEARTBEAT_SUCCESS", "QUESTS_ENROLL_SUCCESS", "RUNNING_GAMES_CHANGE", "STREAM_START", "STREAM_CLOSE"],
+    actions: ["POST_CONNECTION_OPEN", "QUESTS_SEND_HEARTBEAT_SUCCESS", "QUESTS_ENROLL_SUCCESS", "RUNNING_GAMES_CHANGE", "STREAM_START", "STREAM_CLOSE", "STREAM_UPDATE"],
     inlineRequire: () => E("319405").default,
     neverLoadBeforeConnectionOpen: !0
   },

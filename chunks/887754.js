@@ -62,7 +62,7 @@ function L(e) {
   i(null != s, "Guild cannot be null here");
   let d = l.useMemo(() => n.find(e => (0, u.isEveryoneRoleId)(s.id, e.id)), [n, s]);
   i(null != d, "Guild must have an everyone role");
-  let E = l.useMemo(() => n.filter(e => (0, u.isEveryoneRoleId)(s.id, e.id)), [n, s]),
+  let E = l.useMemo(() => n.filter(e => !(0, u.isEveryoneRoleId)(s.id, e.id)), [n, s]),
     _ = (0, r.useStateFromStores)([f.default], () => f.default.getSelectedRoleId()),
     [I, C] = l.useState(E.length > 0);
   l.useEffect(() => {

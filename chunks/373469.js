@@ -18,8 +18,8 @@ var a = n("446674"),
   f = n("42887"),
   p = n("957255"),
   N = n("945956"),
-  R = n("18494"),
-  A = n("800762"),
+  A = n("18494"),
+  R = n("800762"),
   C = n("49111"),
   L = n("706530");
 let O = null,
@@ -69,7 +69,7 @@ function v(e, t) {
 function U(e) {
   if (v(e.streamType, e.channelId)) return !0;
   let t = S.default.getBasicChannel(e.channelId);
-  return null != t && (0, E.canWatchStream)(t, A.default, T.default, p.default, s.default)[0]
+  return null != t && (0, E.canWatchStream)(t, R.default, T.default, p.default, s.default)[0]
 }
 class M extends a.default.Store {
   initialize() {
@@ -100,7 +100,7 @@ class M extends a.default.Store {
     return null !== (t = this.getActiveStreamForStreamKey(n)) && void 0 !== t ? t : null
   }
   getCurrentUserActiveStream() {
-    let e = R.default.getVoiceChannelId(),
+    let e = A.default.getVoiceChannelId(),
       t = S.default.getChannel(e);
     return null == t ? null : this.getActiveStreamForUser(I.default.getId(), t.getGuildId())
   }
@@ -111,11 +111,15 @@ class M extends a.default.Store {
   }
   getStreamerActiveStreamMetadata() {
     var e;
-    let t = R.default.getVoiceChannelId(),
+    let t = A.default.getVoiceChannelId(),
       n = S.default.getChannel(t);
     if (null == n) return null;
     let r = this.getActiveStreamForUser(I.default.getId(), n.getGuildId());
     return null == r ? null : null !== (e = u[(0, _.encodeStreamKey)(r)]) && void 0 !== e ? e : null
+  }
+  getStreamerActiveStreamMetadataForStream(e) {
+    var t;
+    return null !== (t = u[e]) && void 0 !== t ? t : null
   }
   getAnyStreamForUser(e) {
     var t;
