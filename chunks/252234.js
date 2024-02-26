@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CenterControlTrayActivityButton: function() {
-    return A
+    return N
   }
 }), n("424973");
 var l = n("37983"),
@@ -11,56 +11,49 @@ var l = n("37983"),
   r = n("77078"),
   u = n("997289"),
   o = n("244201"),
-  d = n("886860"),
-  c = n("191225"),
-  f = n("426631"),
-  h = n("380691"),
-  m = n("943349"),
-  p = n("702173"),
-  E = n("801852"),
-  S = n("10524"),
-  g = n("478272"),
-  C = n("685665"),
-  _ = n("384997"),
-  I = n("788220"),
-  T = n("863590"),
-  v = n("49111"),
-  x = n("994428"),
-  N = n("983127");
+  d = n("191225"),
+  c = n("426631"),
+  f = n("380691"),
+  h = n("943349"),
+  m = n("702173"),
+  p = n("801852"),
+  E = n("10524"),
+  S = n("478272"),
+  g = n("685665"),
+  C = n("384997"),
+  _ = n("788220"),
+  I = n("863590"),
+  T = n("49111"),
+  v = n("994428"),
+  x = n("983127");
 
-function A(e) {
+function N(e) {
   let {
     channel: t
-  } = e, {
-    enableCenterControlTrayMiniShelf: n
-  } = d.ActivitiesAutoSuggestExperiment.useExperiment({
-    location: "7152d0_1"
-  }, {
-    autoTrackExposure: !0
-  }), A = (0, s.useStateFromStores)([c.default], () => c.default.isLaunchingActivity()), M = (0, m.useEmbeddedActivityLaunchability)(t.id), R = (0, m.getEmbeddedActivityLaunchabilityLabel)(M), j = M !== m.EmbeddedActivityLaunchability.CAN_LAUNCH || A, {
-    isHovered: L,
-    setIsHovered: y,
-    onMouseEnter: O,
-    onMouseLeave: P
-  } = (0, I.default)(200, 300), b = (0, h.useShowActivityIndicator)(), D = (0, f.default)({
+  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), N = (0, h.useEmbeddedActivityLaunchability)(t.id), A = (0, h.getEmbeddedActivityLaunchabilityLabel)(N), M = N !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
+    isHovered: R,
+    setIsHovered: j,
+    onMouseEnter: L,
+    onMouseLeave: y
+  } = (0, _.default)(200, 300), O = (0, f.useShowActivityIndicator)(), P = (0, c.default)({
     channelId: t.id
-  }), U = !j && n, w = a.useCallback(e => {
-    "focus" !== e.type && O()
-  }, [O]), F = (0, u.useAnalyticsContext)(), k = (0, o.useAppContext)(), B = k === v.AppContext.POPOUT, {
-    analyticsLocations: V
-  } = (0, C.default)(), G = a.useCallback(() => {
-    (0, g.default)({
+  }), b = !M, D = a.useCallback(e => {
+    "focus" !== e.type && L()
+  }, [L]), U = (0, u.useAnalyticsContext)(), w = (0, o.useAppContext)(), F = w === T.AppContext.POPOUT, {
+    analyticsLocations: k
+  } = (0, g.default)(), B = a.useCallback(() => {
+    (0, S.default)({
       channel: t,
       guildId: t.guild_id,
-      locationObject: F.location,
-      openInPopout: B,
-      analyticsLocations: V
+      locationObject: U.location,
+      openInPopout: F,
+      analyticsLocations: k
     })
-  }, [F.location, V, t, B]), H = [];
-  n && !j && H.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES);
-  let W = (0, p.default)(t.id);
-  return W && !j && H.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, l.jsx)(_.default, {
-    contentTypes: H,
+  }, [U.location, k, t, F]), V = [];
+  !M && V.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES);
+  let G = (0, m.default)(t.id);
+  return G && !M && V.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, l.jsx)(C.default, {
+    contentTypes: V,
     children: e => {
       let {
         visibleContent: n,
@@ -68,46 +61,46 @@ function A(e) {
       } = e;
       return (0, l.jsx)(r.Popout, {
         fixed: !0,
-        shouldShow: L,
+        shouldShow: R,
         animationPosition: "bottom",
         position: "bottom",
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-          y(!1)
+          j(!1)
         },
         renderPopout: e => {
           let {
             closePopout: n,
             setPopoutRef: s
           } = e;
-          return U ? (0, l.jsx)(E.ActivitiesMiniShelf, {
+          return b ? (0, l.jsx)(p.ActivitiesMiniShelf, {
             ref: s,
             channel: t,
             closePopout: n,
-            onMouseEnter: O,
-            onMouseLeave: P,
-            isHovered: L,
-            onClick: () => a(x.ContentDismissActionType.UNKNOWN)
+            onMouseEnter: L,
+            onMouseLeave: y,
+            isHovered: R,
+            onClick: () => a(v.ContentDismissActionType.UNKNOWN)
           }) : (0, l.jsx)(l.Fragment, {})
         },
         children: () => (0, l.jsxs)(l.Fragment, {
-          children: [(0, l.jsx)(T.default, {
-            disabled: j,
-            "aria-label": R,
-            label: U ? void 0 : R,
-            isActivityActive: D || L,
-            className: N.controlButton,
+          children: [(0, l.jsx)(I.default, {
+            disabled: M,
+            "aria-label": A,
+            label: b ? void 0 : A,
+            isActivityActive: P || R,
+            className: x.controlButton,
             onClick: () => {
-              G(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(x.ContentDismissActionType.UNKNOWN)
+              B(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(v.ContentDismissActionType.UNKNOWN)
             },
-            onMouseEnter: w,
-            onMouseLeave: P
-          }), b ? (0, l.jsx)(S.FreeActivityIndicatorDot, {
+            onMouseEnter: D,
+            onMouseLeave: y
+          }), O ? (0, l.jsx)(E.FreeActivityIndicatorDot, {
             top: 4,
             right: 10,
             size: 12,
-            maskColor: S.MaskColor.BLACK
+            maskColor: E.MaskColor.BLACK
           }) : null]
         })
       })
