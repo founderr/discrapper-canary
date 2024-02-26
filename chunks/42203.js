@@ -304,7 +304,7 @@ class ea extends a.default.Store {
     if (null != e) return P[e]
   }
   getDMUserIds() {
-    return Object.keys(P)
+    return m.default.keys(P)
   }
   getPrivateChannelsVersion() {
     return L

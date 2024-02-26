@@ -25,8 +25,8 @@ var l = n("446674"),
   M = n("305961"),
   y = n("957255"),
   h = n("824563"),
-  m = n("27618"),
-  S = n("18494"),
+  S = n("27618"),
+  m = n("18494"),
   C = n("101125"),
   N = n("697218"),
   g = n("800762"),
@@ -59,7 +59,7 @@ function K(e, t) {
       } = e;
       return n.has(t.id)
     }) : n
-  }, [t, e]), W = (0, D.default)(), Z = (0, l.useStateFromStores)([y.default], () => null == e || e.isPrivate() || y.default.can(k.Permissions.SEND_MESSAGES, e), [e]), $ = (0, l.useStateFromStoresArray)([O.default], () => [...Q.map(e => null != e.application_id && O.default.getState(e.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), ...q.map(e => O.default.getState(e.applicationId, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING)], [Q, q]), ee = (0, r.default)([...Q.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...q.map(e => e.applicationId)]), et = null == e ? void 0 : e.id, en = (0, l.useStateFromStoresArray)([E.default, M.default, T.default, m.default, S.default, g.default, y.default], () => [...Q.map(e => (0, L.default)({
+  }, [t, e]), W = (0, D.default)(), Z = (0, l.useStateFromStores)([y.default], () => null == e || e.isPrivate() || y.default.can(k.Permissions.SEND_MESSAGES, e), [e]), $ = (0, l.useStateFromStoresArray)([O.default], () => [...Q.map(e => null != e.application_id && O.default.getState(e.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), ...q.map(e => O.default.getState(e.applicationId, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING)], [Q, q]), ee = (0, r.default)([...Q.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...q.map(e => e.applicationId)]), et = null == e ? void 0 : e.id, en = (0, l.useStateFromStoresArray)([E.default, M.default, T.default, S.default, m.default, g.default, y.default], () => [...Q.map(e => (0, L.default)({
     user: null != t ? t : X,
     activity: e,
     application: ee.find(t => (null == t ? void 0 : t.id) === e.application_id),
@@ -69,8 +69,8 @@ function K(e, t) {
     ChannelStore: E.default,
     GuildStore: M.default,
     GuildMemberCountStore: T.default,
-    RelationshipStore: m.default,
-    SelectedChannelStore: S.default,
+    RelationshipStore: S.default,
+    SelectedChannelStore: m.default,
     VoiceStateStore: g.default,
     PermissionStore: y.default
   })), ...q.map(e => {
@@ -140,7 +140,7 @@ function K(e, t) {
         userId: t.id,
         sessionId: e.session_id,
         applicationId: e.application_id,
-        channelId: S.default.getVoiceChannelId(),
+        channelId: m.default.getVoiceChannelId(),
         messageId: null,
         intent: J.ActivityIntent.PLAY,
         embedded: (0, U.default)(e, k.ActivityFlags.EMBEDDED)
@@ -233,7 +233,7 @@ function K(e, t) {
     }
   }), q.forEach((e, t) => {
     var n;
-    let l = e.userIds.has(null !== (n = null == X ? void 0 : X.id) && void 0 !== n ? n : ""),
+    let l = e.userIds.has(null !== (n = null == X ? void 0 : X.id) && void 0 !== n ? n : k.EMPTY_STRING_USER_ID),
       d = t + Q.length,
       u = $[d] || l,
       s = H.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY;

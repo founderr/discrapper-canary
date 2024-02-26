@@ -300,7 +300,7 @@ function ee(e) {
 function et(e) {
   return (0, o.useStateFromStoresArray)([I.default, N.default, F.default], () => {
     let t = N.default.getCurrentUser();
-    return l(I.default.getTypingUsers(e.id)).keys().filter(e => e !== (null == t ? void 0 : t.id)).reject(F.default.isBlocked).map(e => N.default.getUser(e)).filter(O.isNotNullish).map(e => e.id).value()
+    return l(I.default.getTypingUsers(e.id)).keys().filter(e => e !== (null == t ? void 0 : t.id)).reject(e => F.default.isBlocked(e)).map(e => N.default.getUser(e)).filter(O.isNotNullish).map(e => e.id).value()
   })
 }
 

@@ -33,7 +33,7 @@ function c(e) {
       type: a.ChannelTypes.DM,
       name: null !== (t = e.channelSummary) && void 0 !== t ? t : "",
       guild_id: d.EMPTY_STRING_GUILD_ID,
-      recipients: [null !== (n = e.authorId) && void 0 !== n ? n : ""]
+      recipients: [null !== (n = e.authorId) && void 0 !== n ? n : d.EMPTY_STRING_USER_ID]
     }) : new l.GuildTextualChannelRecord({
       id: e.channelId,
       type: null == e.guildId ? a.ChannelTypes.DM : a.ChannelTypes.GUILD_TEXT,

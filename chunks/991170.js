@@ -209,7 +209,7 @@ var U = {
     } else s = null != s ? s : {}, n = r;
     if (null == n) return T;
     let d = {
-      userId: "",
+      userId: m.EMPTY_STRING_USER_ID,
       nick: "",
       guildId: n.id,
       guildMemberAvatar: null,
@@ -222,7 +222,7 @@ var U = {
       communicationDisabledUntil: null
     };
     return y({
-      userId: "",
+      userId: m.EMPTY_STRING_USER_ID,
       member: d,
       guild: n,
       overwrites: s,

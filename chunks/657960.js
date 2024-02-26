@@ -104,7 +104,7 @@ var D = e => {
     refreshOnDepChange: m
   }), x = l.useMemo(() => N.filter(e => {
     var t;
-    return e.payout_account_status !== L.PayoutAccountStatuses.BLOCKED && (0, c.isUserTeamAdministrator)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "", e)
+    return e.payout_account_status !== L.PayoutAccountStatuses.BLOCKED && (0, c.isUserTeamAdministrator)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : R.EMPTY_STRING_USER_ID, e)
   }), [N, s]), D = x.length > 0, v = l.useCallback(async () => {
     f.default.track(R.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
       is_onboarding_v2: S,

@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return m
+    return D
   }
 }), a("222007");
 var l, n, r = a("917351"),
@@ -10,60 +10,61 @@ var l, n, r = a("917351"),
   d = a("913144"),
   o = a("766274"),
   u = a("271938"),
-  c = a("9759"),
-  S = a("837374");
+  c = a("299039"),
+  S = a("9759"),
+  f = a("837374");
 (n = l || (l = {}))[n.INVALID = 0] = "INVALID", n[n.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", n[n.VALID = 2] = "VALID";
-let f = new Set,
-  A = new Set,
+let A = new Set,
   T = new Set,
-  _ = [],
-  E = {
+  _ = new Set,
+  E = [],
+  I = {
     BROADCASTS_BY_USER_ID: e => "user:".concat(e),
     BROADCASTS_BY_CHANNEL_ID: e => "channel:".concat(e),
     BROADCASTS_BY_VALIDITY: e => "validity:".concat(e)
   },
-  I = new i.default(function(e) {
-    let t = f.has(e.userId) ? 1 : 0;
-    return null != e.viewers && (t = 2), [E.BROADCASTS_BY_USER_ID(e.userId), E.BROADCASTS_BY_CHANNEL_ID(e.channelId), E.BROADCASTS_BY_VALIDITY(t)]
+  g = new i.default(function(e) {
+    let t = A.has(e.userId) ? 1 : 0;
+    return null != e.viewers && (t = 2), [I.BROADCASTS_BY_USER_ID(e.userId), I.BROADCASTS_BY_CHANNEL_ID(e.channelId), I.BROADCASTS_BY_VALIDITY(t)]
   }, e => e.channelId);
 
-function g(e, t, a) {
+function R(e, t, a) {
   if (u.default.getId() === e) return !1;
   if (null == t) {
-    let t = I.get(e);
-    return !!(null != t && (0, r.isEqual)(t.source, a)) && (I.delete(e), void 0)
-  }!f.has(e) && !A.has(e) && (T.add(e), _ = [...T]);
-  let l = (0, S.broadcastFromServer)(t, e, a);
-  I.set(e, l)
+    let t = g.get(e);
+    return !!(null != t && (0, r.isEqual)(t.source, a)) && (g.delete(e), void 0)
+  }!A.has(e) && !T.has(e) && (_.add(e), E = [..._]);
+  let l = (0, f.broadcastFromServer)(t, e, a);
+  g.set(e, l)
 }
 
-function R(e) {
+function h(e) {
   return null != e ? {
-    type: S.BroadcastSourceType.GUILD,
+    type: f.BroadcastSourceType.GUILD,
     guildId: e
   } : {
-    type: S.BroadcastSourceType.GLOBAL
+    type: f.BroadcastSourceType.GLOBAL
   }
 }
-class h extends s.default.Store {
+class m extends s.default.Store {
   getBroadcasts() {
-    return I.values(E.BROADCASTS_BY_VALIDITY(2))
+    return g.values(I.BROADCASTS_BY_VALIDITY(2))
   }
   getBroadcastsToValidateChannels() {
-    return I.values(E.BROADCASTS_BY_VALIDITY(1))
+    return g.values(I.BROADCASTS_BY_VALIDITY(1))
   }
   getBroadcastByChannel(e) {
-    return I.values(E.BROADCASTS_BY_CHANNEL_ID(e))[0]
+    return g.values(I.BROADCASTS_BY_CHANNEL_ID(e))[0]
   }
   getBroadcastByUser(e) {
-    return I.get(e)
+    return g.get(e)
   }
   getUserIdsToValidate() {
-    return _
+    return E
   }
 }
-h.displayName = "BroadcastingStore";
-var m = new h(d.default, {
+m.displayName = "BroadcastingStore";
+var D = new m(d.default, {
   PRESENCE_UPDATES: function(e) {
     let {
       updates: t
@@ -74,7 +75,7 @@ var m = new h(d.default, {
         broadcast: a,
         guildId: l
       } = e;
-      g(t.id, a, R(l))
+      R(t.id, a, h(l))
     })
   },
   PRESENCES_REPLACE: function(e) {
@@ -87,7 +88,7 @@ var m = new h(d.default, {
         broadcast: a,
         guildId: l
       } = e;
-      g(t.id, a, R(l))
+      R(t.id, a, h(l))
     })
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
@@ -101,7 +102,7 @@ var m = new h(d.default, {
         broadcast: a,
         guildId: l
       } = e;
-      g(t.id, a, R(l))
+      R(t.id, a, h(l))
     }), a.forEach(e => {
       let {
         presences: t,
@@ -112,7 +113,7 @@ var m = new h(d.default, {
           user: t,
           broadcast: l
         } = e;
-        g(t.id, l, R(a))
+        R(t.id, l, h(a))
       })
     })
   },
@@ -120,10 +121,10 @@ var m = new h(d.default, {
     let {
       data: t
     } = e;
-    Object.keys(t).forEach(e => {
-      c.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? f.add(e) : A.add(e), T.clear(), _ = [...T];
-      let a = I.get(e);
-      null != a && (I.delete(e), I.set(e, a))
+    c.default.keys(t).forEach(e => {
+      S.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? A.add(e) : T.add(e), _.clear(), E = [..._];
+      let a = g.get(e);
+      null != a && (g.delete(e), g.set(e, a))
     })
   },
   BROADCAST_VIEWERS_UPDATE: function(e) {
@@ -131,8 +132,8 @@ var m = new h(d.default, {
       viewers: t
     } = e;
     Object.entries(t).forEach(e => {
-      let [t, a] = e, l = I.get(t);
-      null != l && I.set(t, {
+      let [t, a] = e, l = g.get(t);
+      null != l && g.set(t, {
         ...l,
         viewers: a
       })
@@ -142,9 +143,9 @@ var m = new h(d.default, {
     let {
       channelId: t,
       user: a
-    } = e, l = I.values(E.BROADCASTS_BY_CHANNEL_ID(t))[0];
+    } = e, l = g.values(I.BROADCASTS_BY_CHANNEL_ID(t))[0];
     if (null == l || null == l.viewers || l.viewers.some(e => e.id === a.id)) return !1;
-    I.set(l.userId, {
+    g.set(l.userId, {
       ...l,
       viewers: [...l.viewers, new o.default(a)]
     })
@@ -153,9 +154,9 @@ var m = new h(d.default, {
     let {
       channelId: t,
       user: a
-    } = e, l = I.values(E.BROADCASTS_BY_CHANNEL_ID(t))[0];
+    } = e, l = g.values(I.BROADCASTS_BY_CHANNEL_ID(t))[0];
     if (null == l || null == l.viewers) return !1;
-    I.set(l.userId, {
+    g.set(l.userId, {
       ...l,
       viewers: l.viewers.filter(e => e.id !== a.id)
     })
@@ -164,15 +165,15 @@ var m = new h(d.default, {
     var t;
     let {
       channel: a
-    } = e, l = I.values(E.BROADCASTS_BY_CHANNEL_ID(a.id))[0];
+    } = e, l = g.values(I.BROADCASTS_BY_CHANNEL_ID(a.id))[0];
     if (null == l) return !1;
     let n = null !== (t = a.rawRecipients) && void 0 !== t ? t : [];
-    I.set(l.userId, {
+    g.set(l.userId, {
       ...l,
       viewers: n.filter(e => e.id !== l.userId).map(e => new o.default(e))
     })
   },
   LOGOUT: function() {
-    f.clear(), A.clear(), T.clear(), _ = [], I.clear()
+    A.clear(), T.clear(), _.clear(), E = [], g.clear()
   }
 })

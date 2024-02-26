@@ -181,7 +181,7 @@ class m extends a.default {
       for (let e of u) {
         let t = s[e];
         if (null == t) continue;
-        let u = Object.keys(t);
+        let u = f.default.keys(t);
         for (let s of u) {
           let u = l.get(s),
             i = t[s];

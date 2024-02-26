@@ -77,7 +77,7 @@ function T(e) {
 class C extends o.default.PersistedStore {
   initialize(e) {
     h = null != e ? e : {}, ! function() {
-      for (let [e, t] of Object.entries(h))
+      for (let [e, t] of l.default.entries(h))
         for (let [n, s] of l.default.entries(t)) {
           let t = s[0];
           null != t && ("" === t.draft || "" === t.draft.trim()) && p(n, 0, e)

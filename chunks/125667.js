@@ -149,7 +149,7 @@ class W extends a.PureComponent {
       isComboing: x
     } = this.props, {
       rateLimitPerUser: C
-    } = m, N = O.default.getCurrentUser(), E = I.default.getGuild(t), _ = C > 0, M = S ? [] : u(r).keys().filter(e => e !== (null == N ? void 0 : N.id)).reject(A.default.isBlocked).map(e => O.default.getUser(e)).filter(P.isNotNullish).map(e => D.default.getName(t, this.props.channel.id, e)).value();
+    } = m, N = O.default.getCurrentUser(), E = I.default.getGuild(t), _ = C > 0, M = S ? [] : u(r).keys().filter(e => e !== (null == N ? void 0 : N.id)).reject(e => A.default.isBlocked(e)).map(e => O.default.getUser(e)).filter(P.isNotNullish).map(e => D.default.getName(t, this.props.channel.id, e)).value();
     if (0 === M.length && !_ && !x) return a && null != s ? (0, n.jsx)(z, {
       activity: s,
       isFocused: l

@@ -10,6 +10,7 @@ var l = n("446674"),
 let s = !1,
   r = Object.freeze({
     userAffinities: [],
+    affinityUserIds: new Set,
     lastFetched: 0
   }),
   u = Object.freeze({

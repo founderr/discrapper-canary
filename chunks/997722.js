@@ -50,6 +50,10 @@ var D = n("901946"),
   z = n("49111"),
   q = n("353927");
 let X = /^https/.test((i = "https:", "https:")) ? "wss:" : "ws:";
+
+function Q(e) {
+  return e
+}
 r = class extends E.default {
   get quality() {
     let e = this.getLastPing();
@@ -451,10 +455,10 @@ r = class extends E.default {
         rtxSsrc: r,
         videoStreamParameters: s
       }), this.userId === e && (this.sendVideo(null != n ? n : 0, null != i ? i : 0, null != r ? r : 0, s), null == s || s.forEach(t => {
-        100 === t.quality && this.emit(x.RTCConnectionEvent.VideoSourceQualityChanged, this.guildId, this.channelId, e, t.maxResolution, t.maxFrameRate, this.context)
+        if (100 === t.quality) this.emit(x.RTCConnectionEvent.VideoSourceQualityChanged, this.guildId, this.channelId, e, t.maxResolution, t.maxFrameRate, this.context)
       }))
     }), u.on(p.BaseConnectionEvent.FirstFrame, (e, t, n) => {
-      null != this._localMediaSinkWantsManager && (this._localMediaSinkWantsManager.setFirstFrameReceived(t), this.emit(x.RTCConnectionEvent.Video, this.guildId, this.channelId, e, n, this.rtcServerId))
+      if (null != this._localMediaSinkWantsManager) this._localMediaSinkWantsManager.setFirstFrameReceived(t), this.emit(x.RTCConnectionEvent.Video, this.guildId, this.channelId, e, n, this.rtcServerId)
     }), u.on(p.BaseConnectionEvent.Silence, e => {
       this._inputDetected = this._inputDetected || !e
     }), u.on(p.BaseConnectionEvent.Connected, (i, r) => {

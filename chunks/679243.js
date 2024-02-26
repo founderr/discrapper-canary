@@ -129,7 +129,7 @@ let eo = a.memo(e => {
       muted: null !== (s = t.type === ea.ParticipantTypes.USER && (null === (l = t.voiceState) || void 0 === l ? void 0 : l.isVoiceMuted())) && void 0 !== s && s,
       deafened: null !== (i = t.type === ea.ParticipantTypes.USER && (null === (a = t.voiceState) || void 0 === a ? void 0 : a.isVoiceDeafened())) && void 0 !== i && i
     }
-  }(eE, d, V.getGuildId()), eA = d.type === ea.ParticipantTypes.STREAM && eg === eE, eM = (0, r.useStateFromStores)([j.default], () => null != eg ? j.default.getEffectForUserId(eg) : null), eR = (0, r.useStateFromStores)([D.default], () => D.default.getVoicePlatformForChannel(V.id, null != eg ? eg : "")), {
+  }(eE, d, V.getGuildId()), eA = d.type === ea.ParticipantTypes.STREAM && eg === eE, eM = (0, r.useStateFromStores)([j.default], () => null != eg ? j.default.getEffectForUserId(eg) : null), eR = (0, r.useStateFromStores)([D.default], () => D.default.getVoicePlatformForChannel(V.id, null != eg ? eg : el.EMPTY_STRING_USER_ID)), {
     enableHangStatus: ej
   } = I.HangStatusExperiment.useExperiment({
     guildId: V.guild_id,

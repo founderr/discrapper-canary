@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return E
+    return _
   }
 }), s("222007");
 var a, r, n = s("37983"),
@@ -17,68 +17,69 @@ var a, r, n = s("37983"),
   g = s("350218"),
   m = s("851460"),
   S = s("583374"),
+  T = s("49111"),
   C = s("782340"),
-  T = s("699764");
+  A = s("699764");
 (r = a || (a = {}))[r.MANAGE_ACCOUNTS = 0] = "MANAGE_ACCOUNTS", r[r.LOGIN = 1] = "LOGIN";
-let A = {
+let E = {
   0: d.ModalSize.SMALL,
   1: d.ModalSize.DYNAMIC
 };
 
-function E(e) {
+function _(e) {
   let {
     transitionState: t,
     onClose: s
   } = e, [a, r] = o.useState(0), {
-    currentUser: E,
+    currentUser: _,
     multiAccountUsers: N
   } = (0, i.useStateFromStoresObject)([c.default, p.default], () => ({
     currentUser: c.default.getCurrentUser(),
     multiAccountUsers: p.default.getUsers()
-  })), [_, M] = o.useState(!1), [R, O] = o.useState(""), [I, L] = o.useState(null);
+  })), [M, R] = o.useState(!1), [O, I] = o.useState(T.EMPTY_STRING_USER_ID), [L, x] = o.useState(null);
   o.useEffect(() => {
-    if (_) L((0, n.jsx)(f.default, {
+    if (M) x((0, n.jsx)(f.default, {
       messageType: f.HelpMessageTypes.ERROR,
-      className: T.infoMessage,
+      className: A.infoMessage,
       children: C.default.Messages.MULTI_ACCOUNT_MAX_ACCOUNTS_ERROR.format({
         maxNumAccounts: S.MAX_ACCOUNTS
       })
-    })), O("");
-    else if (null != R) {
-      let e = c.default.getUser(R);
-      null != e && L((0, n.jsx)(f.default, {
+    })), I(T.EMPTY_STRING_USER_ID);
+    else if (null != O) {
+      let e = c.default.getUser(O);
+      null != e && x((0, n.jsx)(f.default, {
         messageType: f.HelpMessageTypes.POSITIVE,
-        className: T.infoMessage,
+        className: A.infoMessage,
         children: C.default.Messages.MULTI_ACCOUNT_LOGGED_OUT.format({
           username: e.username
         })
-      })), M(!1)
+      })), R(!1)
     }
-  }, [R, _]), o.useEffect(() => {
-    N.length < S.MAX_ACCOUNTS && M(!1)
+  }, [O, M]), o.useEffect(() => {
+    N.length < S.MAX_ACCOUNTS && R(!1)
   }, [N]), (0, h.default)({
     type: l.ImpressionTypes.MODAL,
     name: 0 === a ? l.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : l.ImpressionNames.USER_LOGIN
   });
-  let x = null;
-  return 0 === a ? x = (0, n.jsxs)(n.Fragment, {
+  let P = null;
+  return 0 === a ? P = (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(d.ModalHeader, {
       separator: !1,
       children: (0, n.jsxs)("div", {
-        className: T.header,
+        className: A.header,
         children: [(0, n.jsx)(d.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
           children: C.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS
         }), (0, n.jsx)(d.Text, {
-          className: T.subheaderText,
+          className: A.subheaderText,
           color: "header-secondary",
           variant: "text-md/normal",
           children: C.default.Messages.SWITCH_ACCOUNTS_MODAL_SUBHEADER
         })]
       })
     }), (0, n.jsxs)(d.ModalContent, {
-      children: [I, (0, n.jsx)(m.default, {
+      children: [L, (0, n.jsx)(m.default, {
         actionText: C.default.Messages.SWITCH_ACCOUNTS_ACTION_SWITCH,
         onAction: (e, t) => {
           switch (e) {
@@ -89,17 +90,17 @@ function E(e) {
               s();
               break;
             case m.MultiAccountActionType.REMOVED:
-              t === (null == E ? void 0 : E.id) && s(), O(t)
+              t === (null == _ ? void 0 : _.id) && s(), I(t)
           }
         }
       }), (0, n.jsx)("div", {
-        className: T.actions,
+        className: A.actions,
         children: (0, n.jsx)(d.Button, {
           look: d.Button.Looks.LINK,
           color: d.Button.Colors.PRIMARY,
           onClick: () => {
             if (N.length >= S.MAX_ACCOUNTS) {
-              M(!0);
+              R(!0);
               return
             }
             r(1)
@@ -112,21 +113,21 @@ function E(e) {
         })
       })]
     })]
-  }) : 1 === a && (x = (0, n.jsx)(g.default, {
+  }) : 1 === a && (P = (0, n.jsx)(g.default, {
     onClose: () => {
       u.default.dispatch({
         type: "CLEAR_AUTHENTICATION_ERRORS"
       }), r(0)
     }
   })), (0, n.jsx)(d.ModalRoot, {
-    className: T.modal,
+    className: A.modal,
     transitionState: t,
-    size: A[a],
+    size: E[a],
     "aria-label": C.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
     children: (0, n.jsx)(d.Sequencer, {
       step: a,
       steps: [0, 1],
-      children: x
+      children: P
     })
   })
 }

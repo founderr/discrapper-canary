@@ -2,7 +2,7 @@
 let l, i, a, s, r, u, o;
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return M
   }
 }), n("222007");
 var d = n("446674"),
@@ -10,28 +10,29 @@ var d = n("446674"),
   f = n("116460"),
   h = n("449008"),
   I = n("354023"),
-  g = n("42203"),
-  E = n("27618"),
-  _ = n("843823"),
-  p = n("49111"),
-  v = n("91366");
-let m = new Set,
-  T = [],
-  S = new Map;
+  g = n("299039"),
+  E = n("42203"),
+  _ = n("27618"),
+  p = n("843823"),
+  v = n("49111"),
+  m = n("91366");
+let T = new Set,
+  S = [],
+  N = new Map;
 
-function N(e) {
+function C(e) {
   let t = new Set,
-    n = null == s || o === v.InviteTargetTypes.EMBEDDED_APPLICATION ? void 0 : s.id,
-    l = (0, I.getMostRecentDMedUser)(m, n);
-  for (let e of (null != l && !E.default.isBlocked(l.id) && t.add(l.id), _.default.getUserAffinitiesUserIds())) t.add(e);
+    n = null == s || o === m.InviteTargetTypes.EMBEDDED_APPLICATION ? void 0 : s.id,
+    l = (0, I.getMostRecentDMedUser)(T, n);
+  for (let e of (null != l && !_.default.isBlocked(l.id) && t.add(l.id), p.default.getUserAffinitiesUserIds())) t.add(e);
   let i = new Set;
-  if (o === v.InviteTargetTypes.EMBEDDED_APPLICATION) {
+  if (o === m.InviteTargetTypes.EMBEDDED_APPLICATION) {
     let e = f.default.getChannelHistory();
-    e.map(e => g.default.getChannel(e)).filter(h.isNotNullish).filter(e => e.type === p.ChannelTypes.GUILD_TEXT).slice(0, 3).forEach(e => i.add(e.id))
+    e.map(e => E.default.getChannel(e)).filter(h.isNotNullish).filter(e => e.type === v.ChannelTypes.GUILD_TEXT).slice(0, 3).forEach(e => i.add(e.id))
   }
   return (0, I.generateRowsForQuery)({
     query: e,
-    omitUserIds: m,
+    omitUserIds: T,
     suggestedUserIds: t,
     maxRowsWithoutQuery: 100,
     omitGuildId: n,
@@ -40,19 +41,19 @@ function N(e) {
   })
 }
 
-function C(e) {
-  T = e, S = new Map, e.forEach((e, t) => {
-    S.set(e, {
+function A(e) {
+  S = e, N = new Map, e.forEach((e, t) => {
+    N.set(e, {
       index: t
     })
   })
 }
-class A extends d.default.Store {
+class x extends d.default.Store {
   initialize() {
-    this.waitFor(E.default, _.default)
+    this.waitFor(_.default, p.default)
   }
   getInviteSuggestionRows() {
-    return T
+    return S
   }
   getTotalSuggestionsCount() {
     return i
@@ -61,19 +62,19 @@ class A extends d.default.Store {
     return l
   }
   getSelectedInviteMetadata(e) {
-    let t = S.get(e),
-      n = _.default.getUserAffinitiesUserIds();
+    let t = N.get(e),
+      n = p.default.getUserAffinitiesUserIds();
     return null != t ? {
       rowNum: t.index,
       isAffinitySuggestion: e.isSuggested,
-      numTotal: T.length,
+      numTotal: S.length,
       numAffinityConnections: n.size,
       isFiltered: a
     } : null
   }
 }
-A.displayName = "InviteSuggestionsStore";
-var x = new A(c.default, {
+x.displayName = "InviteSuggestionsStore";
+var M = new x(c.default, {
   LOAD_INVITE_SUGGESTIONS: function(e) {
     let {
       omitUserIds: t,
@@ -83,19 +84,19 @@ var x = new A(c.default, {
       inviteTargetType: f
     } = e;
     s = null != d ? n : null, r = d, u = c, o = f;
-    let h = E.default.getRelationships(),
-      g = Object.keys(h).filter(e => h[e] === p.RelationshipTypes.BLOCKED),
-      _ = (0, I.getUsersAlreadyJoined)({
+    let h = _.default.getRelationships(),
+      E = g.default.keys(h).filter(e => h[e] === v.RelationshipTypes.BLOCKED),
+      p = (0, I.getUsersAlreadyJoined)({
         channel: r,
         applicationId: u,
         inviteTargetType: f
       });
-    m = new Set([...t, ...g, ..._]), a = !1;
+    T = new Set([...t, ...E, ...p]), a = !1;
     let {
-      rows: v,
-      counts: S
-    } = N("");
-    C(v), l = S, i = T.length
+      rows: m,
+      counts: N
+    } = C("");
+    A(m), l = N, i = S.length
   },
   INVITE_SUGGESTIONS_SEARCH: function(e) {
     let {
@@ -104,7 +105,7 @@ var x = new A(c.default, {
     a = "" !== t;
     let {
       rows: n
-    } = N(t);
-    C(n)
+    } = C(t);
+    A(n)
   }
 })
