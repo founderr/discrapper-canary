@@ -57775,8 +57775,24 @@ html .progress__4ef76 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-top: 20px;
     padding-bottom: 8px
+}
+
+.confrimDiscountsButtonsError__8734a {
+    padding-top: 4px
+}
+
+.confrimDiscountsButtonsNoError__90c59 {
+    padding-top: 20px
+}
+
+.redemptionFailedMessage__99e71 {
+    display: flex;
+    justify-content: flex-end
+}
+
+.redemptionFailedMessageCopy_c71ac2 {
+    color: red
 }
 
 .body_a87294 {

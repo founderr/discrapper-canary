@@ -1,83 +1,109 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return N
+    return R
   }
-});
-var s = n("37983");
-n("884691");
-var a = n("819855"),
-  l = n("77078"),
-  i = n("841098"),
-  r = n("701909"),
-  u = n("719923"),
-  o = n("153160"),
-  c = n("478968"),
-  d = n("510928"),
-  _ = n("646718"),
-  f = n("49111"),
-  m = n("782340"),
-  I = n("893643"),
-  E = n("940420"),
-  C = n("591726"),
-  N = function(e) {
+}), s("222007");
+var n = s("37983"),
+  a = s("884691"),
+  i = s("414456"),
+  l = s.n(i),
+  r = s("872717"),
+  u = s("819855"),
+  o = s("77078"),
+  c = s("841098"),
+  d = s("701909"),
+  _ = s("719923"),
+  f = s("153160"),
+  m = s("478968"),
+  E = s("510928"),
+  I = s("646718"),
+  C = s("49111"),
+  N = s("782340"),
+  M = s("893643"),
+  p = s("940420"),
+  T = s("591726"),
+  R = function(e) {
     let {
       premiumSubscription: t,
-      premiumType: n,
-      onClose: N,
-      onConfirm: M,
-      userDiscountOffer: p
-    } = e, T = (0, i.default)(), R = (0, a.isThemeDark)(T) ? E : C, P = (0, c.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, p), S = (0, u.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), A = (0, o.formatPrice)(S.amount, S.currency);
-    return null == p ? null : (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(d.default, {
-        premiumType: n,
-        onClose: N
-      }), (0, s.jsx)(l.ModalContent, {
-        className: I.body,
-        children: (0, s.jsxs)("div", {
-          className: I.confirmDiscountContent,
-          children: [(0, s.jsx)(l.Heading, {
+      premiumType: s,
+      onClose: i,
+      onConfirm: R,
+      userDiscountOffer: P
+    } = e, [S, A] = a.useState(!1), [L, g] = a.useState(!1), O = async e => {
+      try {
+        g(!0), A(!1), await r.default.post({
+          url: C.Endpoints.USER_OFFER_REDEEM,
+          body: {
+            user_discount_offer_id: e
+          }
+        }), R()
+      } catch (e) {
+        A(!0)
+      }
+      g(!1)
+    }, x = (0, c.default)(), h = (0, u.isThemeDark)(x) ? p : T, y = (0, m.useChurnDiscountedPrice)(t, I.SubscriptionPlans.PREMIUM_MONTH_TIER_2, P), D = (0, _.getPrice)(I.SubscriptionPlans.PREMIUM_MONTH_TIER_2), v = (0, f.formatPrice)(D.amount, D.currency);
+    return null == P ? null : (0, n.jsxs)(n.Fragment, {
+      children: [(0, n.jsx)(E.default, {
+        premiumType: s,
+        onClose: i
+      }), (0, n.jsx)(o.ModalContent, {
+        className: M.body,
+        children: (0, n.jsxs)("div", {
+          className: M.confirmDiscountContent,
+          children: [(0, n.jsx)(o.Heading, {
             variant: "heading-xl/bold",
-            children: m.default.Messages.CHURN_DISCOUNT_CONFIRM_HEADER.format({
-              percent: p.discount.amount
+            children: N.default.Messages.CHURN_DISCOUNT_CONFIRM_HEADER.format({
+              percent: P.discount.amount
             })
-          }), (0, s.jsxs)("div", {
-            className: I.confirmDiscountDescription,
-            children: [(0, s.jsx)("img", {
+          }), (0, n.jsxs)("div", {
+            className: M.confirmDiscountDescription,
+            children: [(0, n.jsx)("img", {
               alt: "",
-              src: R,
-              className: I.confirmDiscountIcon
-            }), (0, s.jsx)(l.Text, {
+              src: h,
+              className: M.confirmDiscountIcon
+            }), (0, n.jsx)(o.Text, {
               variant: "text-sm/medium",
-              children: m.default.Messages.CHURN_DISCOUNT_CONFIRM_DESCRIPTION.format({
-                percent: p.discount.amount,
-                numMonths: p.discount.user_usage_limit,
-                price: A
+              children: N.default.Messages.CHURN_DISCOUNT_CONFIRM_DESCRIPTION.format({
+                percent: P.discount.amount,
+                numMonths: P.discount.user_usage_limit,
+                price: v
               })
             })]
-          }), (0, s.jsx)("div", {
-            className: I.confirmDiscountLegalese,
-            children: (0, s.jsx)(l.Text, {
+          }), (0, n.jsx)("div", {
+            className: M.confirmDiscountLegalese,
+            children: (0, n.jsx)(o.Text, {
               variant: "text-xs/semibold",
-              className: I.confirmDiscountLegaleseText,
-              children: m.default.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
-                discountedPrice: P,
-                billingPeriod: (0, u.getDiscountIntervalString)(p.discount.user_usage_limit_interval),
-                numMonths: p.discount.user_usage_limit,
-                fullPrice: A,
-                helpdeskArticle: r.default.getArticleURL(f.HelpdeskArticles.PAID_TERMS)
+              className: M.confirmDiscountLegaleseText,
+              children: N.default.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
+                discountedPrice: y,
+                billingPeriod: (0, _.getDiscountIntervalString)(P.discount.user_usage_limit_interval),
+                numMonths: P.discount.user_usage_limit,
+                fullPrice: v,
+                helpdeskArticle: d.default.getArticleURL(C.HelpdeskArticles.PAID_TERMS)
               })
             })
-          }), (0, s.jsxs)("div", {
-            className: I.confirmDiscountButtons,
-            children: [(0, s.jsx)(l.Button, {
-              look: l.ButtonLooks.LINK,
-              onClick: () => N(),
-              children: m.default.Messages.CHURN_DISCOUNT_NEVERMIND
-            }), (0, s.jsx)(l.Button, {
-              size: l.ButtonSizes.SMALL,
-              onClick: () => M(),
-              children: m.default.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
+          }), S && (0, n.jsx)("div", {
+            className: M.redemptionFailedMessage,
+            children: (0, n.jsx)(o.Text, {
+              variant: "text-xs/semibold",
+              className: M.redemptionFailedMessageCopy,
+              children: N.default.Messages.CHURN_DISCOUNT_REDEMPTION_ERROR
+            })
+          }), (0, n.jsxs)("div", {
+            className: l(M.confirmDiscountButtons, {
+              [M.confrimDiscountsButtonsError]: S,
+              [M.confrimDiscountsButtonsNoError]: !S
+            }),
+            children: [(0, n.jsx)(o.Button, {
+              look: o.ButtonLooks.LINK,
+              onClick: () => i(),
+              children: N.default.Messages.CHURN_DISCOUNT_NEVERMIND
+            }), (0, n.jsx)(o.Button, {
+              size: o.ButtonSizes.SMALL,
+              submitting: L,
+              onClick: () => O(P.id),
+              children: N.default.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
             })]
           })]
         })
