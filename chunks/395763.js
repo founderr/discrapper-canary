@@ -20,8 +20,8 @@ var i = n("414456"),
   m = n("577261"),
   p = n("698372"),
   E = n("969380"),
-  g = n("401207"),
-  S = n("141962"),
+  S = n("401207"),
+  g = n("141962"),
   C = n("320817"),
   _ = n("812204"),
   I = n("685665"),
@@ -71,10 +71,10 @@ function O(e) {
     application: m,
     currentEmbeddedApplication: p,
     channel: E,
-    width: g
+    width: S
   } = e;
-  let C = (l = g) > 400 ? 2 : l > 300 ? 1 : 0;
-  let [_] = (a = g) > 400 ? [o.AvatarSizes.SIZE_56, 56] : a > 300 ? [o.AvatarSizes.SIZE_32, 32] : [o.AvatarSizes.SIZE_24, 24], T = (0, u.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, u.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
+  let C = (l = S) > 400 ? 2 : l > 300 ? 1 : 0;
+  let [_] = (a = S) > 400 ? [o.AvatarSizes.SIZE_56, 56] : a > 300 ? [o.AvatarSizes.SIZE_32, 32] : [o.AvatarSizes.SIZE_24, 24], T = (0, u.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, u.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
     analyticsLocations: L
   } = (0, I.default)(), O = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), b = (0, h.useEmbeddedActivityJoinability)({
     userId: null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -116,7 +116,7 @@ function O(e) {
             currentEmbeddedApplication: p,
             activityChannelId: E.id,
             locationObject: O.location,
-            embeddedActivitiesManager: S.default,
+            embeddedActivitiesManager: g.default,
             analyticsLocations: L
           })
         },
@@ -155,15 +155,15 @@ function P(e) {
     applicationId: u,
     names: L,
     size: 1024
-  }), S = !d;
+  }), g = !d;
   return (0, s.jsx)(r, {
     children: (0, s.jsx)("div", {
       className: j.container,
       children: (0, s.jsxs)(s.Fragment, {
-        children: [!l && d && (0, s.jsx)(g.default, {
+        children: [!l && d && (0, s.jsx)(S.default, {
           className: j.iframe,
           embedId: (0, C.default)(i.id, u)
-        }), S && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
+        }), g && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
           className: j.splashImage,
           alt: f.name,
           src: h
@@ -173,7 +173,7 @@ function P(e) {
           participants: t.participants,
           application: f,
           currentEmbeddedApplication: c
-        }), a || S ? null : (0, s.jsx)("div", {
+        }), a || g ? null : (0, s.jsx)("div", {
           className: j.clickShield
         })]
       })

@@ -30,8 +30,8 @@ let N = s.forwardRef(function(e, t) {
   let {
     className: N,
     expansionFactor: R,
-    isExpanded: O,
-    isExpansionAnimationComplete: v,
+    isExpanded: v,
+    isExpansionAnimationComplete: O,
     onCtxMenuOpen: L,
     onCtxMenuClose: M,
     onCtxMenuSelect: P,
@@ -46,7 +46,7 @@ let N = s.forwardRef(function(e, t) {
     location: _.QuestContent.QUEST_BAR
   }), k = (null === (n = D.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null;
   return (0, a.jsx)(r.animated.div, {
-    "aria-hidden": !O && v,
+    "aria-hidden": !v && O,
     className: i(N, A.contentExpanded),
     style: {
       opacity: R.to({

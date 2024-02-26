@@ -30,9 +30,9 @@ var l, a, s = n("37983"),
   m = n("12896"),
   E = n("233069"),
   g = n("373469"),
-  I = n("305961"),
-  _ = n("957255"),
-  S = n("162771"),
+  S = n("305961"),
+  I = n("957255"),
+  _ = n("162771"),
   N = n("36694"),
   T = n("945330"),
   A = n("474571"),
@@ -57,7 +57,7 @@ function D(e) {
     tabIndex: l,
     forceShowButtons: a,
     hasChannelInfo: i = !1
-  } = e, r = (0, u.useStateFromStores)([_.default, S.default], () => n || S.default.getGuildId() === x.FAVORITES || !_.default.can(x.Permissions.MANAGE_CHANNELS, t) && !_.default.can(x.Permissions.MANAGE_ROLES, t) && !_.default.can(x.Permissions.MANAGE_WEBHOOKS, t) || (0, E.isGuildSelectableChannelType)(t.type) && !_.default.can(x.Permissions.VIEW_CHANNEL, t) || t.isGuildVocal() && !_.default.can(x.Permissions.CONNECT, t) || !E.EDITABLE_CHANNEL_TYPES.has(t.type));
+  } = e, r = (0, u.useStateFromStores)([I.default, _.default], () => n || _.default.getGuildId() === x.FAVORITES || !I.default.can(x.Permissions.MANAGE_CHANNELS, t) && !I.default.can(x.Permissions.MANAGE_ROLES, t) && !I.default.can(x.Permissions.MANAGE_WEBHOOKS, t) || (0, E.isGuildSelectableChannelType)(t.type) && !I.default.can(x.Permissions.VIEW_CHANNEL, t) || t.isGuildVocal() && !I.default.can(x.Permissions.CONNECT, t) || !E.EDITABLE_CHANNEL_TYPES.has(t.type));
   if (r) return null;
 
   function f() {
@@ -99,7 +99,7 @@ function b(e) {
     tabIndex: i,
     forceShowButtons: r,
     hasChannelInfo: c = !1
-  } = e, C = (0, u.useStateFromStores)([I.default], () => I.default.getGuild(t.getGuildId())), E = (0, u.useStateFromStores)([p.default], () => p.default.getStageInstanceByChannel(t.id), [t.id]), S = (0, u.useStateFromStores)([f.default], () => f.default.getActiveEventByChannel(t.id), [t.id]), N = (0, u.useStateFromStores)([_.default], () => (0, h.canViewInviteModal)(_.default, C, t, E)), T = (0, u.useStateFromStores)([_.default], () => _.default.can(x.Permissions.CREATE_INSTANT_INVITE, t) ? R.default.Messages.CREATE_INSTANT_INVITE : R.default.Messages.INVITE_TO_SERVER);
+  } = e, C = (0, u.useStateFromStores)([S.default], () => S.default.getGuild(t.getGuildId())), E = (0, u.useStateFromStores)([p.default], () => p.default.getStageInstanceByChannel(t.id), [t.id]), _ = (0, u.useStateFromStores)([f.default], () => f.default.getActiveEventByChannel(t.id), [t.id]), N = (0, u.useStateFromStores)([I.default], () => (0, h.canViewInviteModal)(I.default, C, t, E)), T = (0, u.useStateFromStores)([I.default], () => I.default.can(x.Permissions.CREATE_INSTANT_INVITE, t) ? R.default.Messages.CREATE_INSTANT_INVITE : R.default.Messages.INVITE_TO_SERVER);
   if (a || !N) return null;
 
   function A() {
@@ -115,7 +115,7 @@ function b(e) {
           channel: t,
           streamUserId: 1 === e.length ? e[0].ownerId : null,
           source: x.InstantInviteSources.GUILD_CHANNELS,
-          guildScheduledEvent: S
+          guildScheduledEvent: _
         })
       })
     }

@@ -28,8 +28,8 @@ var s = n("316693"),
   A = n("18494"),
   N = n("162771"),
   R = n("831588"),
-  O = n("969388"),
-  v = n("1544"),
+  v = n("969388"),
+  O = n("1544"),
   L = n("619317"),
   M = n("49111");
 let P = new m.default("CacheStore"),
@@ -77,12 +77,12 @@ async function F(e, t, n) {
     m = T.default.loadCachedMessages.measureAsyncWithoutNesting(() => k(e, f, E)),
     g = T.default.fetchInitialGuildCache.measureAsync(() => B(e, n)),
     R = null != e ? a.default.timeAsync("\uD83D\uDCBE", "cache: private_channels", () => I.default.getAsync(e, null)) : Promise.resolve([]),
-    O = null == e ? Promise.resolve({}) : a.default.timeAsync("\uD83D\uDCBE", "cache: user_settings", () => C.default.getAll(e)),
-    v = null == e ? Promise.resolve([]) : a.default.timeAsync("\uD83D\uDCBE", "cache: read_states", () => h.default.getAll(e)),
+    v = null == e ? Promise.resolve({}) : a.default.timeAsync("\uD83D\uDCBE", "cache: user_settings", () => C.default.getAll(e)),
+    O = null == e ? Promise.resolve([]) : a.default.timeAsync("\uD83D\uDCBE", "cache: read_states", () => h.default.getAll(e)),
     M = null == e ? Promise.resolve([]) : a.default.timeAsync("\uD83D\uDCBE", "cache: user_guild_settings", () => _.default.getAll(e)),
     [
       [D, y], x, b, U, G, j
-    ] = await Promise.all([m, g, R, O, v, M]),
+    ] = await Promise.all([m, g, R, v, O, M]),
     w = performance.now() - S;
   if (P.verbose("cache loaded in ".concat(w, "ms (channel_history ").concat(D, "ms)")), null == y) return (0, L.default)("database:history_cache_null"), P.verbose("finished without dispatching CACHE_LOADED"), [!1, null, 0];
   {
@@ -194,7 +194,7 @@ async function H(e, t, n, l) {
               n.permissions = s.default.deserialize(n.permissions)
             }
       }
-      null != e.channels && (0, v.default)(e.channels), null != e.privateChannels && (0, v.default)(e.privateChannels), null != e.guildChannels && (0, v.deserializeChannelEntries)(e.guildChannels)
+      null != e.channels && (0, O.default)(e.channels), null != e.privateChannels && (0, O.default)(e.privateChannels), null != e.guildChannels && (0, O.deserializeChannelEntries)(e.guildChannels)
     })(o)), T.default.dispatchLazyCache.measure(() => r.default.dispatch(o)), P.verbose("late lazy cache loaded (ok: true, took: ".concat(performance.now() - a, "ms)")), _.addAnalytics({
       usedCacheAtStartup: !0
     });
@@ -267,7 +267,7 @@ class Y extends l.default.Store {
     return (0, R.isAuthenticated)() ? y ? (P.log("Not writing cache because caches cleared"), !1) : !!e || !!j || (P.log("Not writing cache because never connected"), !1) : (P.log("Not writing cache because not authenticated"), !1)
   }
   async loadCacheAsync(e, t) {
-    let n = (0, O.callOnce)(t);
+    let n = (0, v.callOnce)(t);
     if ("initializing" !== x) {
       (0, L.default)("cache:lazy_cache_not_initializing"), n(), setTimeout(() => {
         var e, t;

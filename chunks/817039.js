@@ -15,8 +15,8 @@ function r(e) {
     applicationName: l,
     imageClassName: r,
     imageNotFoundClassName: c
-  } = e, [d, o] = a.useState(!1);
-  return "not-found" === t.state || d ? (0, i.jsx)("div", {
+  } = e, [o, d] = a.useState(!1);
+  return "not-found" === t.state || o ? (0, i.jsx)("div", {
     className: c,
     children: (0, i.jsx)(n.default, {
       className: s.brokenImageIcon
@@ -25,6 +25,6 @@ function r(e) {
     alt: l,
     className: r,
     src: t.url,
-    onError: () => o(!0)
+    onError: () => d(!0)
   })
 }

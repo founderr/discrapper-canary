@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("551042"),
   p = n("77078"),
   E = n("272030"),
-  g = n("942722"),
-  S = n("561963"),
+  S = n("942722"),
+  g = n("561963"),
   C = n("264732"),
   _ = n("738073"),
   I = n("737960"),
@@ -72,8 +72,8 @@ var l = n("37983"),
   em = n("58343"),
   ep = n("445375"),
   eE = n("38861"),
-  eg = n("31673"),
-  eS = n("338273"),
+  eS = n("31673"),
+  eg = n("338273"),
   eC = n("861570"),
   e_ = n("970366"),
   eI = n("401642"),
@@ -263,7 +263,7 @@ class e1 extends a.PureComponent {
     }, "private-channel-profile-".concat(t.id));
     else if (i === ez.ChannelSections.MEMBERS) switch (t.type) {
       case ez.ChannelTypes.GROUP_DM:
-        return (0, l.jsx)(g.default, {
+        return (0, l.jsx)(S.default, {
           channel: t
         }, "private-channel-recipients-".concat(t.id));
       case ez.ChannelTypes.GUILD_DIRECTORY:
@@ -287,7 +287,7 @@ class e1 extends a.PureComponent {
         break;
       case ez.ChannelTypes.PUBLIC_THREAD:
       case ez.ChannelTypes.PRIVATE_THREAD:
-        if (!t.isArchivedThread() && null != a) return (0, l.jsx)(S.default, {
+        if (!t.isArchivedThread() && null != a) return (0, l.jsx)(g.default, {
           channel: t,
           guild: a
         }, "channel-members-".concat(t.id))
@@ -558,7 +558,7 @@ class e1 extends a.PureComponent {
             channel: t
           }, "browser")), e.isVocalThread() && s.push((0, l.jsx)(el.default, {
             channel: e
-          }, "thread-call")), s.push((0, l.jsx)(eg.default, {
+          }, "thread-call")), s.push((0, l.jsx)(eS.default, {
             channel: e
           }, "notifications")), s.push((0, l.jsx)(Z.default, {
             channel: e
@@ -566,7 +566,7 @@ class e1 extends a.PureComponent {
             channelId: e.id
           }, "members")), null != t && (0, T.canSeeChannelSummaries)(e) && s.push((0, l.jsx)(X.default, {
             channel: e
-          }, "summaries")), s.push((0, l.jsx)(eS.default, {
+          }, "summaries")), s.push((0, l.jsx)(eg.default, {
             channel: e
           }, "threads-overflow"));
           break;
@@ -711,7 +711,7 @@ var e4 = a.memo(function(e) {
   var t;
   let {
     providedChannel: n
-  } = e, [s, i] = a.useState(null), r = (0, f.useStateFromStores)([eb.default], () => eb.default.getChannelId()), u = (0, f.useStateFromStores)([eb.default], () => eb.default.getVoiceChannelId()), o = (0, f.useStateFromStores)([eM.default], () => null != n ? n : eM.default.getChannel(r), [r, n]), p = (0, f.useStateFromStores)([eM.default], () => eM.default.getChannel(u), [u]), E = null == o ? void 0 : o.parent_id, g = (0, f.useStateFromStores)([eM.default], () => eM.default.getChannel(E), [E]), S = (0, f.useStateFromStores)([ey.default], () => ey.default.getGuild(null == o ? void 0 : o.guild_id), [o]), {
+  } = e, [s, i] = a.useState(null), r = (0, f.useStateFromStores)([eb.default], () => eb.default.getChannelId()), u = (0, f.useStateFromStores)([eb.default], () => eb.default.getVoiceChannelId()), o = (0, f.useStateFromStores)([eM.default], () => null != n ? n : eM.default.getChannel(r), [r, n]), p = (0, f.useStateFromStores)([eM.default], () => eM.default.getChannel(u), [u]), E = null == o ? void 0 : o.parent_id, S = (0, f.useStateFromStores)([eM.default], () => eM.default.getChannel(E), [E]), g = (0, f.useStateFromStores)([ey.default], () => ey.default.getGuild(null == o ? void 0 : o.guild_id), [o]), {
     needSubscriptionToAccess: C
   } = (0, G.default)(null !== (t = null == o ? void 0 : o.id) && void 0 !== t ? t : void 0), _ = (0, f.useStateFromStores)([M.default], () => {
     let e = null != r ? M.default.getParticipants(r) : [],
@@ -722,13 +722,13 @@ var e4 = a.memo(function(e) {
     return x.default.getSelfEmbeddedActivityForChannel(null !== (e = null == o ? void 0 : o.id) && void 0 !== e ? e : ez.EMPTY_STRING_CHANNEL_ID)
   }), N = (0, f.useStateFromStores)([x.default], () => x.default.getActivityPanelMode()), R = null != I && !(0, A.default)(null == o ? void 0 : o.id) && N === eK.ActivityPanelModes.PANEL, j = (0, f.useStateFromStores)([ew.default], () => null != o && o.isVocalThread() && !d.isEmpty(ew.default.getVoiceStatesForChannel(o.id)), [o]), L = (null == o ? void 0 : o.isGuildVocal()) || R || _ || j, {
     welcomeModalChannelId: y
-  } = (0, c.useLocation)(), O = (0, f.useStateFromStores)([ei.default], () => null != o && ei.default.isLurking(o.guild_id), [o]), P = (0, f.useStateFromStores)([ex.default], () => ex.default.hasSeen(null == o ? void 0 : o.guild_id, O), [o, O]), D = (0, f.useStateFromStores)([M.default, x.default], () => null != x.default.getConnectedActivityChannelId() && x.default.getActivityPanelMode() === eK.ActivityPanelModes.PANEL ? x.default.getFocusedLayout() === eK.FocusedActivityLayouts.NO_CHAT ? ez.ChannelLayouts.NO_CHAT : ez.ChannelLayouts.NORMAL : null != r ? M.default.getLayout(r) : ez.ChannelLayouts.NORMAL, [r]), U = (0, f.useStateFromStores)([M.default], () => null != o ? M.default.getSelectedParticipant(o.id) : null), w = (0, f.useStateFromStores)([eU.default], () => eU.default.getCurrentUser()), F = (0, ea.default)(S), k = (0, eN.default)(y, null == S ? void 0 : S.id), {
+  } = (0, c.useLocation)(), O = (0, f.useStateFromStores)([ei.default], () => null != o && ei.default.isLurking(o.guild_id), [o]), P = (0, f.useStateFromStores)([ex.default], () => ex.default.hasSeen(null == o ? void 0 : o.guild_id, O), [o, O]), D = (0, f.useStateFromStores)([M.default, x.default], () => null != x.default.getConnectedActivityChannelId() && x.default.getActivityPanelMode() === eK.ActivityPanelModes.PANEL ? x.default.getFocusedLayout() === eK.FocusedActivityLayouts.NO_CHAT ? ez.ChannelLayouts.NO_CHAT : ez.ChannelLayouts.NORMAL : null != r ? M.default.getLayout(r) : ez.ChannelLayouts.NORMAL, [r]), U = (0, f.useStateFromStores)([M.default], () => null != o ? M.default.getSelectedParticipant(o.id) : null), w = (0, f.useStateFromStores)([eU.default], () => eU.default.getCurrentUser()), F = (0, ea.default)(g), k = (0, eN.default)(y, null == g ? void 0 : g.id), {
     section: B,
     channelSidebarState: V
   } = (0, f.useStateFromStoresObject)([eA.default], () => ({
     section: eA.default.getSection(r, null == o ? void 0 : o.isDM()),
     channelSidebarState: eA.default.getSidebarState(r)
-  }), [r, o]), H = null == S ? void 0 : S.id, W = (0, f.useStateFromStores)([eA.default], () => eA.default.getGuildSidebarState(H), [H]), Y = (0, f.useStateFromStores)([eD.default], () => eD.default.getGuildId()), z = Y === ez.FAVORITES, K = (0, eB.default)(o), Z = (0, eB.default)(o, !0), X = null != o && u === o.id, Q = null != o && o.isGuildStageVoice();
+  }), [r, o]), H = null == g ? void 0 : g.id, W = (0, f.useStateFromStores)([eA.default], () => eA.default.getGuildSidebarState(H), [H]), Y = (0, f.useStateFromStores)([eD.default], () => eD.default.getGuildId()), z = Y === ez.FAVORITES, K = (0, eB.default)(o), Z = (0, eB.default)(o, !0), X = null != o && u === o.id, Q = null != o && o.isGuildStageVoice();
   a.useEffect(() => {
     var e, t, n;
     let l = (0, er.getHistory)();
@@ -759,7 +759,7 @@ var e4 = a.memo(function(e) {
     channel: o,
     channelName: K,
     formattedChannelName: Z,
-    parentChannel: g,
+    parentChannel: S,
     voiceChannel: p,
     layout: D,
     needSubscriptionToAccess: C,
@@ -768,7 +768,7 @@ var e4 = a.memo(function(e) {
     section: B,
     channelSidebarState: V,
     guildSidebarState: W,
-    guild: S,
+    guild: g,
     searchId: (0, f.useStateFromStores)([eP.default], () => eP.default.getCurrentSearchId()),
     showCall: !C && L,
     nsfwAgree: (0, f.useStateFromStores)([eL.default], () => eL.default.didAgree(null == o ? void 0 : o.guild_id)),
@@ -776,7 +776,7 @@ var e4 = a.memo(function(e) {
     isUnavailable: (0, f.useStateFromStores)([ej.default], () => (null == o ? void 0 : o.guild_id) != null && ej.default.isUnavailable(o.guild_id), [o]),
     showRealNameModal: F,
     showWelcomeModal: !P && k,
-    showFollowButton: (null == o ? void 0 : o.type) === ez.ChannelTypes.GUILD_ANNOUNCEMENT && (null == S ? void 0 : S.hasFeature(ez.GuildFeatures.NEWS)) || !1,
+    showFollowButton: (null == o ? void 0 : o.type) === ez.ChannelTypes.GUILD_ANNOUNCEMENT && (null == g ? void 0 : g.hasFeature(ez.GuildFeatures.NEWS)) || !1,
     ...(0, f.useStateFromStoresObject)([ew.default], () => ({
       hasVideo: null != o && ew.default.hasVideo(o.id)
     }), [o]),

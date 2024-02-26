@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return d
   }
 });
 var n = s("37983");
@@ -12,27 +12,27 @@ var a = s("77078"),
   i = s("158998"),
   l = s("33320"),
   u = s("782340"),
-  c = s("932379"),
-  d = s("546597");
+  _ = s("932379"),
+  c = s("546597");
 
-function N(e) {
+function d(e) {
   let {
     senderId: t,
     onNavigate: s,
-    onClose: N
-  } = e, I = (0, o.useStateFromStores)([r.default], () => {
+    onClose: d
+  } = e, E = (0, o.useStateFromStores)([r.default], () => {
     let e = r.default.getUser(t);
     return i.default.getName(e)
   });
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)("img", {
-      src: d,
+      src: c,
       alt: u.default.Messages.INAPPROPRIATE_CONVERSATION_WUMPUS_EXCLAMATION_ALT,
-      className: c.heroImage
+      className: _.heroImage
     }), (0, n.jsxs)(a.ModalContent, {
-      className: c.body,
+      className: _.body,
       children: [(0, n.jsxs)("div", {
-        className: c.textContainer,
+        className: _.textContainer,
         children: [(0, n.jsx)(a.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
@@ -40,34 +40,34 @@ function N(e) {
         }), (0, n.jsx)(a.Text, {
           variant: "text-md/medium",
           color: "header-secondary",
-          className: c.description,
+          className: _.description,
           children: u.default.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_DESCRIPTION.format({
-            username: I
+            username: E
           })
         })]
       }), (0, n.jsxs)("div", {
-        className: c.buttonContainer,
+        className: _.buttonContainer,
         children: [(0, n.jsx)(a.Button, {
           color: a.Button.Colors.BRAND_NEW,
           size: a.Button.Sizes.LARGE,
-          className: c.button,
+          className: _.button,
           onClick: () => s(l.InappropriateConversationModalSlideKeys.TAKE_ACTION),
           children: u.default.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION
         }), (0, n.jsx)(a.Button, {
           color: a.Button.Colors.PRIMARY,
           size: a.Button.Sizes.LARGE,
-          className: c.button,
+          className: _.button,
           onClick: () => s(l.InappropriateConversationModalSlideKeys.SAFETY_TIPS),
           children: u.default.Messages.INAPPROPRIATE_CONVERSATION_READ_SAFETY_TIPS
         })]
       })]
     }), (0, n.jsx)(a.ModalFooter, {
-      className: c.footer,
+      className: _.footer,
       children: (0, n.jsx)(a.Button, {
         look: a.Button.Looks.LINK,
         color: a.Button.Colors.TRANSPARENT,
         size: a.Button.Sizes.MEDIUM,
-        onClick: N,
+        onClick: d,
         children: u.default.Messages.CLOSE
       })
     })]

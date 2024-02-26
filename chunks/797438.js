@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("363887"),
   E = n("472942"),
   g = n("492950"),
-  I = n("610898"),
-  _ = n("829562"),
-  S = n("782340"),
+  S = n("610898"),
+  I = n("829562"),
+  _ = n("782340"),
   N = n("849831"),
   T = n("99725");
 let A = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
@@ -74,7 +74,7 @@ function x(e) {
     K(e)
   }, []), Q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && G()
-  }, [G, d]), J = null != B && "" !== B ? B : null != M && "" !== M ? M : S.default.Messages.SERVER_FOLDER_PLACEHOLDER, q = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
+  }, [G, d]), q = null != B && "" !== B ? B : null != M && "" !== M ? M : _.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
     from: {
       height: 0
     },
@@ -87,15 +87,15 @@ function x(e) {
     config: {
       duration: A
     }
-  }), en = a.useCallback(e => null == n ? void 0 : n(F, e), [n, F]), el = (0, l.jsxs)(I.ListItem, {
+  }), en = a.useCallback(e => null == n ? void 0 : n(F, e), [n, F]), el = (0, l.jsxs)(S.ListItem, {
     children: [(0, l.jsx)(h.default, {
       disabled: Z || d,
       hovered: H,
       selected: s,
       unread: R,
       className: T.pill
-    }), (0, l.jsx)(_.default, {
-      text: J,
+    }), (0, l.jsx)(I.default, {
+      text: q,
       disabled: D,
       selected: s,
       disableWrapper: !0,
@@ -104,7 +104,7 @@ function x(e) {
         className: i({
           [T.wobble]: !Z && Y && !d
         }),
-        "data-dnd-name": J,
+        "data-dnd-name": q,
         children: Z ? (0, l.jsx)(g.default, {}) : (0, l.jsx)(m.default, {
           folderNode: t,
           expanded: d,
@@ -112,18 +112,18 @@ function x(e) {
           sorting: D,
           mediaState: C,
           mentionCount: x,
-          tooltipName: J,
+          tooltipName: q,
           folderGroupId: $,
           onClick: G,
           onContextMenu: U,
           onHoverChange: k,
           onKeyDown: Q,
-          treeItemProps: q,
+          treeItemProps: J,
           folderIconContent: w
         })
       })
     }), y ? (0, l.jsx)(E.default, {
-      name: J,
+      name: q,
       targetNode: t,
       onDragOverChanged: X
     }) : null]
@@ -150,7 +150,7 @@ function x(e) {
         children: V.map(P)
       }, a)
     }), y && d ? (0, l.jsx)(E.FolderEndDropTarget, {
-      name: J,
+      name: q,
       targetNode: t
     }) : null]
   })

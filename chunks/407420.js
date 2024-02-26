@@ -31,7 +31,7 @@ function T(L) {
     children: [(0, t.jsx)(N, {
       flipX: a,
       className: e
-    }), (0, t.jsx)(g, {
+    }), (0, t.jsx)(p, {
       flipX: a,
       className: e
     }), (0, t.jsx)(x, {
@@ -137,7 +137,7 @@ function N(L) {
 }
 let A = [H.default.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css, H.default.unsafe_rawColors.DISCORD_8TH_BDAY_GREEN.css, H.default.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css];
 
-function g(L) {
+function p(L) {
   let {
     className: e,
     flipX: a
@@ -185,7 +185,7 @@ function g(L) {
     }
   })
 }
-let p = [H.default.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css, H.default.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css, H.default.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css];
+let g = [H.default.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css, H.default.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css, H.default.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css];
 
 function x(L) {
   let {
@@ -194,7 +194,7 @@ function x(L) {
   } = L;
   return (0, t.jsx)(m, {
     flipX: a,
-    colors: p,
+    colors: g,
     children: L => {
       let {
         style: a,

@@ -21,9 +21,9 @@ var a = n("446674"),
   m = n("161454"),
   E = n("374014"),
   g = n("375202"),
-  I = n("373469"),
-  _ = n("271938"),
-  S = n("18494"),
+  S = n("373469"),
+  I = n("271938"),
+  _ = n("18494"),
   N = n("101125"),
   T = n("703370"),
   A = n("774223"),
@@ -33,8 +33,8 @@ var a = n("446674"),
   R = n("782340");
 
 function M() {
-  let e = (0, a.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
-    t = (0, a.useStateFromStores)([_.default], () => _.default.getId()),
+  let e = (0, a.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()),
+    t = (0, a.useStateFromStores)([I.default], () => I.default.getId()),
     n = (0, a.useStateFromStores)([m.default, T.default], () => (0, g.default)(m.default, T.default)),
     {
       canBroadcast: M
@@ -45,7 +45,7 @@ function M() {
     }),
     O = (0, c.default)() && null != n,
     y = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
-    D = (0, a.useStateFromStoresArray)([I.default], () => I.default.getAllActiveStreams());
+    D = (0, a.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams());
   if (!O && !y) return null;
   if (d.default.trackExposure({
       location: "broadcast_button_rtc_panel"

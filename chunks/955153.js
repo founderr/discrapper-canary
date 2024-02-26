@@ -1,10 +1,10 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   BirthdayActivitiesExperiment: function() {
     return a
   }
 });
-var l = i("862205");
+var l = n("862205");
 let a = (0, l.createExperiment)({
   kind: "user",
   id: "2023-03_birthday_activities",

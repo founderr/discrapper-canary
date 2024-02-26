@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return I
   }
 }), n("702976"), n("222007");
-var a = n("37983"),
-  s = n("884691"),
+var s = n("37983"),
+  a = n("884691"),
   l = n("446674"),
   i = n("819689"),
   r = n("249561"),
@@ -17,11 +17,11 @@ var a = n("37983"),
   h = n("957255"),
   C = n("497880"),
   p = n("851220"),
-  E = n("659500"),
-  m = n("568734"),
+  m = n("659500"),
+  E = n("568734"),
   g = n("718422"),
-  _ = n("49111"),
-  S = n("5762");
+  S = n("49111"),
+  _ = n("5762");
 
 function T(e) {
   let {
@@ -45,7 +45,7 @@ function A(e) {
     id: o
   } = t, {
     id: u
-  } = n, C = t.getGuildId(), E = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === _.ChannelTypes.GUILD_ANNOUNCEMENT, A = null != E && E.hasFeature(_.GuildFeatures.NEWS), I = g && A, {
+  } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, A = null != m && m.hasFeature(S.GuildFeatures.NEWS), I = g && A, {
     editingMessage: N,
     editingTextValue: v,
     editingRichValue: L
@@ -53,19 +53,19 @@ function A(e) {
     editingMessage: c.default.getEditingMessage(o),
     editingTextValue: c.default.getEditingTextValue(o),
     editingRichValue: c.default.getEditingRichValue(o)
-  }), [o]), R = (0, l.useStateFromStores)([d.default], () => d.default.getId()), x = s.useCallback((e, n, a) => {
+  }), [o]), R = (0, l.useStateFromStores)([d.default], () => d.default.getId()), x = a.useCallback((e, n, s) => {
     let {
-      content: s
-    } = a, l = h.default.can(_.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === R || l);
-    return u && null != N && (0, m.hasFlag)(N.flags, _.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, s) : i.default.editMessage(e, n, {
-      content: s
+      content: a
+    } = s, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === R || l);
+    return u && null != N && (0, E.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, a) : i.default.editMessage(e, n, {
+      content: a
     }), Promise.resolve()
-  }, [N, I, R, t]), y = s.useCallback(e => (0, s.createElement)(M, {
+  }, [N, I, R, t]), y = a.useCallback(e => (0, a.createElement)(M, {
     ...e,
-    className: S.channelTextArea,
+    className: _.channelTextArea,
     key: u
   }), [u]);
-  return null != v && null != L ? (0, a.jsx)(p.default, {
+  return null != v && null != L ? (0, s.jsx)(p.default, {
     ref: void 0,
     channel: t,
     message: n,
@@ -89,11 +89,11 @@ function M(e) {
     onChange: r,
     onSubmit: d,
     onKeyDown: c
-  } = e, [f, h] = s.useState(!0), C = s.useCallback(() => h(!0), []), p = s.useCallback(() => h(!1), []);
-  return s.useEffect(() => (E.ComponentDispatch.subscribe(_.ComponentActions.TEXTAREA_FOCUS, C), E.ComponentDispatch.subscribe(_.ComponentActions.TEXTAREA_BLUR, p), () => {
-    E.ComponentDispatch.unsubscribe(_.ComponentActions.TEXTAREA_FOCUS, C), E.ComponentDispatch.unsubscribe(_.ComponentActions.TEXTAREA_BLUR, p)
-  }), [C, p]), (0, a.jsx)(u.default, {
-    className: S.channelTextArea,
+  } = e, [f, h] = a.useState(!0), C = a.useCallback(() => h(!0), []), p = a.useCallback(() => h(!1), []);
+  return a.useEffect(() => (m.ComponentDispatch.subscribe(S.ComponentActions.TEXTAREA_FOCUS, C), m.ComponentDispatch.subscribe(S.ComponentActions.TEXTAREA_BLUR, p), () => {
+    m.ComponentDispatch.unsubscribe(S.ComponentActions.TEXTAREA_FOCUS, C), m.ComponentDispatch.unsubscribe(S.ComponentActions.TEXTAREA_BLUR, p)
+  }), [C, p]), (0, s.jsx)(u.default, {
+    className: _.channelTextArea,
     textValue: t,
     richValue: n,
     channel: i,
@@ -114,14 +114,14 @@ function M(e) {
 
 function I(e, t, n) {
   let {
-    message: s,
+    message: a,
     channel: l
   } = e;
-  return n ? (0, a.jsx)(A, {
+  return n ? (0, s.jsx)(A, {
     channel: l,
-    message: s
-  }) : (0, a.jsx)(C.default, {
-    message: s,
+    message: a
+  }) : (0, s.jsx)(C.default, {
+    message: a,
     content: t
   })
 }

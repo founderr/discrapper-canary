@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("76393"),
   p = n("374014"),
   E = n("223913"),
-  g = n("506885"),
-  S = n("981601"),
+  S = n("506885"),
+  g = n("981601"),
   C = n("373469"),
   _ = n("305961"),
   I = n("957255"),
@@ -53,11 +53,11 @@ let L = 16 / 9,
       id: p
     } = t;
     return (0, l.jsx)(u.Popout, {
-      preload: null == n ? void 0 : () => (0, g.default)(n.user.id, n.user.getAvatarURL(s.guild_id, 80), {
+      preload: null == n ? void 0 : () => (0, S.default)(n.user.id, n.user.getAvatarURL(s.guild_id, 80), {
         guildId: s.guild_id,
         channelId: s.id
       }),
-      renderPopout: e => (0, l.jsx)(S.default, {
+      renderPopout: e => (0, l.jsx)(g.default, {
         ...e,
         guildId: i,
         channelId: s.id,
@@ -92,9 +92,9 @@ let L = 16 / 9,
       width: i,
       isModerator: d,
       onContextMenu: f,
-      inPopout: g
+      inPopout: S
     } = e, {
-      reducedMotion: S
+      reducedMotion: g
     } = a.useContext(u.AccessibilityPreferencesContext), {
       id: x,
       blocked: y
@@ -123,11 +123,11 @@ let L = 16 / 9,
       channel: s,
       className: j.tile,
       inCall: !0,
-      inPopout: g,
+      inPopout: S,
       onClick: D,
       onContextMenu: f,
       paused: !1,
-      pulseSpeakingIndicator: !S.enabled,
+      pulseSpeakingIndicator: !g.enabled,
       width: i,
       children: d && n.type === R.ParticipantTypes.USER && (0, l.jsx)(A.default, {})
     }, x)
@@ -144,7 +144,7 @@ var P = a.memo(function(e) {
     user: m
   } = a, p = (0, r.useStateFromStores)([h.default], () => h.default.getParticipant(s.id, a.id), [s.id, a.id]), E = (0, r.useStateFromStores)([x.default], () => x.default.isModerator(m.id, s.id), [s.id, m.id]);
   if (null == p || p.type === R.ParticipantTypes.ACTIVITY) return null;
-  let g = (e, t) => {
+  let S = (e, t) => {
       switch (e.type) {
         case R.ParticipantTypes.HIDDEN_STREAM:
         case R.ParticipantTypes.STREAM:
@@ -182,9 +182,9 @@ var P = a.memo(function(e) {
           })
       }
     },
-    S = p.type === R.ParticipantTypes.USER && !(null === (t = p.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+    g = p.type === R.ParticipantTypes.USER && !(null === (t = p.voiceState) || void 0 === t ? void 0 : t.selfVideo);
   return (0, l.jsx)(l.Fragment, {
-    children: S ? (0, l.jsx)(y, {
+    children: g ? (0, l.jsx)(y, {
       stageParticipant: a,
       rtcParticipant: p,
       channel: s,
@@ -192,7 +192,7 @@ var P = a.memo(function(e) {
       user: m,
       width: u,
       isModerator: E,
-      onContextMenu: g,
+      onContextMenu: S,
       inPopout: o === M.AppContext.POPOUT
     }) : (0, l.jsx)(O, {
       stageParticipant: a,
@@ -202,7 +202,7 @@ var P = a.memo(function(e) {
       user: m,
       width: u,
       isModerator: E,
-      onContextMenu: g,
+      onContextMenu: S,
       inPopout: o === M.AppContext.POPOUT
     })
   })

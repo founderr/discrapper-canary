@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return C
   }
 }), n("222007");
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("446674"),
+var a = n("446674"),
   l = n("77078"),
   i = n("619335"),
   r = n("680986"),
@@ -23,25 +23,25 @@ function C(e) {
     channel: n
   } = e, C = (0, r.useAppliedTags)(n), {
     firstMessage: p
-  } = (0, s.useStateFromStoresObject)([o.default], () => o.default.getMessage(n.id)), E = new Set((0, r.useVisibleAppliedForumTags)(n, C)), m = null !== (t = (0, i.default)(n)) && void 0 !== t ? t : d.default;
-  return (0, a.jsxs)(c.default, {
+  } = (0, a.useStateFromStoresObject)([o.default], () => o.default.getMessage(n.id)), m = new Set((0, r.useVisibleAppliedForumTags)(n, C)), E = null !== (t = (0, i.default)(n)) && void 0 !== t ? t : d.default;
+  return (0, s.jsxs)(c.default, {
     channelId: n.id,
     className: h.container,
-    children: [(0, a.jsx)("div", {
+    children: [(0, s.jsx)("div", {
       className: h.iconWrapper,
-      children: (0, a.jsx)(m, {
+      children: (0, s.jsx)(E, {
         className: h.icon,
         strokeWidth: 1.75
       })
-    }), (0, a.jsx)(c.EmptyMessageHeader, {
+    }), (0, s.jsx)(c.EmptyMessageHeader, {
       className: h.header,
       children: n.name
-    }), null == p && (0, a.jsx)(l.Text, {
+    }), null == p && (0, s.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       children: f.default.Messages.REPLY_QUOTE_MESSAGE_DELETED
-    }), (0, a.jsx)(u.default, {
-      appliedTags: E
+    }), (0, s.jsx)(u.default, {
+      appliedTags: m
     })]
   })
 }

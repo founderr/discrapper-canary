@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("393027"),
   E = n("373469"),
   g = n("42203"),
-  I = n("18494"),
-  _ = n("800762"),
-  S = n("290581"),
+  S = n("18494"),
+  I = n("800762"),
+  _ = n("290581"),
   N = n("15738"),
   T = n("108189"),
   A = n("299039"),
@@ -56,7 +56,7 @@ function j() {
       favoriteChannels: L.default.getFavoriteChannels(),
       favoriteServerMuted: L.default.favoriteServerMuted
     })),
-    w = (0, o.useStateFromStores)([I.default], () => I.default.getChannelId(O.FAVORITES)),
+    w = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(O.FAVORITES)),
     F = (0, o.useStateFromStores)([g.default], () => g.default.getChannel(w)),
     B = (0, m.default)(e => e.guildId),
     V = B === O.FAVORITES,
@@ -65,7 +65,7 @@ function j() {
       unread: k
     } = (0, x.default)(P),
     Y = function(e) {
-      let t = (0, o.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
+      let t = (0, o.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
         n = null != t && null != e[t],
         l = (0, o.useStateFromStores)([E.default], () => {
           if (!n) return !1;
@@ -73,7 +73,7 @@ function j() {
           return null != t && null != e[t.channelId]
         }),
         a = (0, o.useStateFromStores)([E.default], () => E.default.getAllApplicationStreams().some(t => null != e[t.channelId])),
-        s = (0, o.useStateFromStores)([_.default], () => n && null != t && _.default.hasVideo(t), [n, t]),
+        s = (0, o.useStateFromStores)([I.default], () => n && null != t && I.default.hasVideo(t), [n, t]),
         i = (0, o.useStateFromStoresArray)([f.default], () => A.default.keys(e).reduce((e, t) => (e.push(...f.default.getEmbeddedActivitiesForChannel(t)), e), [])),
         r = (0, o.useStateFromStores)([f.default], () => Array.from(f.default.getSelfEmbeddedActivities().values()).some(t => {
           let {
@@ -142,7 +142,7 @@ function j() {
               className: i(D.ring, {
                 [D.ringActive]: t
               }),
-              children: (0, l.jsx)(S.default, {
+              children: (0, l.jsx)(_.default, {
                 className: D.favoriteIcon,
                 width: 20,
                 height: 20

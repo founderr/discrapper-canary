@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return b
   }
 }), n("222007");
-var a = n("37983"),
-  s = n("884691"),
+var s = n("37983"),
+  a = n("884691"),
   l = n("414456"),
   i = n.n(l),
   r = n("281071"),
@@ -17,11 +17,11 @@ var a = n("37983"),
   h = n("762147"),
   C = n("875978"),
   p = n("359132"),
-  E = n("836943"),
-  m = n("92981"),
+  m = n("836943"),
+  E = n("92981"),
   g = n("592707"),
-  _ = n("350134"),
-  S = n("755624"),
+  S = n("350134"),
+  _ = n("755624"),
   T = n("263024"),
   A = n("42203"),
   M = n("660279"),
@@ -44,27 +44,27 @@ function b(e) {
     isLastItem: l = !1,
     parentChannelId: b
   } = e, {
-    ref: H,
-    width: F
-  } = (0, d.default)(), [U, k] = s.useState(3), [w, G] = s.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(t), [t]), {
-    firstMessage: Z
-  } = (0, R.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([S.default], () => S.default.hasJoined(t)), {
+    ref: F,
+    width: H
+  } = (0, d.default)(), [U, k] = a.useState(3), [B, w] = a.useState(!n), [G, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(t), [t]), {
+    firstMessage: z
+  } = (0, R.useFirstForumPostMessage)(W), Z = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
     disableReactionUpdates: Y,
     disableReactionCreates: K,
     isLurking: q,
     isGuest: X,
     isPendingMember: J
-  } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(b)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = s.useCallback(e => {
+  } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(b)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = a.useCallback(e => {
     let t = e[0];
     if (null != t && n) {
       let e = t.intersectionRect,
         n = t.boundingClientRect,
-        a = (e.bottom - e.top) / (n.bottom - n.top);
-      G(a < 1)
+        s = (e.bottom - e.top) / (n.bottom - n.top);
+      w(s < 1)
     }
   }, [n]);
-  s.useLayoutEffect(() => {
-    let e = H.current;
+  a.useLayoutEffect(() => {
+    let e = F.current;
     if (null == e || !n) return;
     let t = new IntersectionObserver(en, {
       threshold: 1
@@ -73,13 +73,13 @@ function b(e) {
       t.disconnect()
     }
   });
-  let [ea, es] = s.useState(!0);
-  if (s.useEffect(() => {
-      if (null != F) k(Math.floor((F - 280) / 58)), es(!1)
-    }, [F]), null == W || null == Z) return null;
-  let el = Z.reactions.length > 0,
+  let [es, ea] = a.useState(!0);
+  if (a.useEffect(() => {
+      if (null != H) k(Math.floor((H - 280) / 58)), ea(!1)
+    }, [H]), null == W || null == z) return null;
+  let el = z.reactions.length > 0,
     ei = () => {
-      z ? T.default.leaveThread(W, "Forum Toolbar") : T.default.joinThread(W, "Forum Toolbar")
+      Z ? T.default.leaveThread(W, "Forum Toolbar") : T.default.joinThread(W, "Forum Toolbar")
     },
     er = () => {
       (0, x.trackForumPostLinkCopied)({
@@ -89,21 +89,21 @@ function b(e) {
         }
       }), (0, r.copy)((0, v.getChannelLinkToCopy)(W, $)), V(!0)
     },
-    eo = z ? I.default : M.default;
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)("div", {
+    eo = Z ? I.default : M.default;
+  return (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsxs)("div", {
       className: i(P.container, {
-        [P.header]: w
+        [P.header]: B
       }),
-      ref: H,
-      children: [(0, a.jsxs)("div", {
+      ref: F,
+      children: [(0, s.jsxs)("div", {
         className: i(P.reactButtons, {
-          [P.loading]: ea
+          [P.loading]: es
         }),
-        children: [!el && !K && null != ee && (0, a.jsx)("div", {
+        children: [!el && !K && null != ee && (0, s.jsx)("div", {
           className: j.reactions,
-          children: (0, a.jsx)(_.Reaction, {
-            message: Z,
+          children: (0, s.jsx)(S.Reaction, {
+            message: z,
             readOnly: !1,
             useChatFontScaling: !1,
             isLurking: q,
@@ -117,8 +117,8 @@ function b(e) {
             burst_count: 0,
             me_burst: !1
           })
-        }), (0, a.jsx)(g.default, {
-          message: Z,
+        }), (0, s.jsx)(g.default, {
+          message: z,
           channel: W,
           disableReactionCreates: !Q || K,
           disableReactionUpdates: Y,
@@ -130,55 +130,55 @@ function b(e) {
           useChatFontScaling: !1,
           isForumToolbar: !0,
           forceHideReactionCreates: !0
-        }), !K && (0, a.jsx)(E.ButtonAddReaction, {
+        }), !K && (0, s.jsx)(m.ButtonAddReaction, {
           type: C.ReactionTypes.NORMAL,
-          message: Z,
+          message: z,
           channel: W,
           useChatFontScaling: !1,
           className: P.addReactButton,
           isForumToolbar: !0,
           children: !el && D.default.Messages.FORUM_REACT_TO_POST
         })]
-      }), (0, a.jsxs)("div", {
+      }), (0, s.jsxs)("div", {
         className: P.buttons,
-        children: [(0, a.jsx)(u.Tooltip, {
+        children: [(0, s.jsx)(u.Tooltip, {
           text: D.default.Messages.FORUM_FOLLOW_TOOLTIP,
-          children: e => (0, a.jsxs)(u.Button, {
+          children: e => (0, s.jsxs)(u.Button, {
             ...e,
             look: u.Button.Looks.BLANK,
             size: u.Button.Sizes.SMALL,
             onClick: ei,
             className: P.button,
             innerClassName: i(P.buttonInner, {
-              [P.active]: z
+              [P.active]: Z
             }),
-            children: [(0, a.jsx)(eo, {
+            children: [(0, s.jsx)(eo, {
               width: 16,
               height: 16
-            }), z ? D.default.Messages.FORUM_FOLLOWING_POST : D.default.Messages.FOLLOW]
+            }), Z ? D.default.Messages.FORUM_FOLLOWING_POST : D.default.Messages.FOLLOW]
           })
-        }), (0, a.jsx)(u.Tooltip, {
+        }), (0, s.jsx)(u.Tooltip, {
           text: D.default.Messages.COPY_LINK,
-          children: e => (0, a.jsxs)(u.Button, {
+          children: e => (0, s.jsxs)(u.Button, {
             ...e,
             look: u.Button.Looks.BLANK,
             size: u.Button.Sizes.SMALL,
             onClick: er,
             className: P.button,
             innerClassName: P.buttonInner,
-            children: [B ? (0, a.jsx)(I.default, {
+            children: [G ? (0, s.jsx)(I.default, {
               width: 16,
               height: 16
-            }) : (0, a.jsx)(N.default, {
+            }) : (0, s.jsx)(N.default, {
               width: 16,
               height: 16
-            }), B ? D.default.Messages.COPIED : null]
+            }), G ? D.default.Messages.COPIED : null]
           })
         })]
       })]
-    }), et && (0, a.jsx)(h.default, {
+    }), et && (0, s.jsx)(h.default, {
       threadId: t
-    }), (0, a.jsx)(m.default, {
+    }), (0, s.jsx)(E.default, {
       channel: W,
       isLastItem: l
     })]

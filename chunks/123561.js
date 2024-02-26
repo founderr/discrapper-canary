@@ -103,14 +103,14 @@ function V(e) {
   return null == n ? G.clearGuildId(t) : G.clearGuildId(n.guild_id)
 }
 
-function v(e) {
+function F(e) {
   let {
     guildId: t
   } = e;
   return G.clearGuildId(t)
 }
 
-function F() {
+function v() {
   return G.updateSubtitles()
 }
 
@@ -147,12 +147,12 @@ class w extends l.default.Store {
 }
 w.displayName = "ChannelListStore";
 var W = new w(a.default, {
-  APPLICATION_FETCH_FAIL: F,
-  APPLICATION_FETCH_SUCCESS: F,
-  APPLICATION_FETCH: F,
-  APPLICATIONS_FETCH_FAIL: F,
-  APPLICATIONS_FETCH_SUCCESS: F,
-  APPLICATIONS_FETCH: F,
+  APPLICATION_FETCH_FAIL: v,
+  APPLICATION_FETCH_SUCCESS: v,
+  APPLICATION_FETCH: v,
+  APPLICATIONS_FETCH_FAIL: v,
+  APPLICATIONS_FETCH_SUCCESS: v,
+  APPLICATIONS_FETCH: v,
   BACKGROUND_SYNC: g,
   BULK_ACK: function(e) {
     let {
@@ -196,7 +196,7 @@ var W = new w(a.default, {
       G.clearGuildId(e) && (n = !0)
     }), n
   },
-  CONNECTION_OPEN_SUPPLEMENTAL: F,
+  CONNECTION_OPEN_SUPPLEMENTAL: v,
   CONNECTION_OPEN: g,
   CURRENT_USER_UPDATE: g,
   DECAY_READ_STATES: g,
@@ -218,9 +218,9 @@ var W = new w(a.default, {
     return G.updateSubtitles(t, n)
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function(e) {
-    F()
+    v()
   },
-  EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: F,
+  EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: v,
   ENABLE_AUTOMATIC_ACK: m,
   FETCH_GUILD_EVENTS_FOR_GUILD: function(e) {
     let {
@@ -228,13 +228,13 @@ var W = new w(a.default, {
     } = e;
     return G.updateSubtitles(t)
   },
-  GAMES_DATABASE_FETCH_FAIL: F,
-  GAMES_DATABASE_FETCH: F,
-  GAMES_DATABASE_UPDATE: F,
-  GUILD_APPLICATIONS_FETCH_SUCCESS: F,
+  GAMES_DATABASE_FETCH_FAIL: v,
+  GAMES_DATABASE_FETCH: v,
+  GAMES_DATABASE_UPDATE: v,
+  GUILD_APPLICATIONS_FETCH_SUCCESS: v,
   GUILD_CREATE: M,
   GUILD_DELETE: M,
-  GUILD_FEED_FETCH_SUCCESS: F,
+  GUILD_FEED_FETCH_SUCCESS: v,
   GUILD_MEMBER_UPDATE: function(e) {
     let {
       guildId: t,
@@ -328,8 +328,8 @@ var W = new w(a.default, {
       null != t && (o = G.updateRecentsCategory(e) || o)
     }), o
   },
-  VOICE_CATEGORY_COLLAPSE: v,
-  VOICE_CATEGORY_EXPAND: v,
+  VOICE_CATEGORY_COLLAPSE: F,
+  VOICE_CATEGORY_EXPAND: F,
   VOICE_CHANNEL_SELECT: B,
   VOICE_CHANNEL_STATUS_UPDATE: function(e) {
     return G.nonPositionalChannelIdUpdate(e.id)

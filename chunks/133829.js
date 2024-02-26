@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return h
   }
 });
-var a = n("37983"),
-  s = n("884691"),
+var s = n("37983"),
+  a = n("884691"),
   l = n("432710"),
   i = n("77078"),
   r = n("155084"),
@@ -22,71 +22,71 @@ function h(e) {
     senderId: h,
     warningType: C,
     header: p,
-    description: E,
-    onDismiss: m,
+    description: m,
+    onDismiss: E,
     primaryButtonText: g,
-    secondaryButtonText: _,
-    primaryButtonColor: S,
+    secondaryButtonText: S,
+    primaryButtonColor: _,
     secondaryButtonColor: T,
     onPrimaryButtonClick: A,
     onSecondaryButtonClick: M
   } = e;
-  s.useEffect(() => {
+  a.useEffect(() => {
     r.default.increment({
       name: l.MetricEvents.SAFETY_WARNING_VIEW
     })
   }, []);
-  let I = s.useCallback(() => {
-    null == m || m(), (0, u.trackCtaEvent)({
+  let I = a.useCallback(() => {
+    null == E || E(), (0, u.trackCtaEvent)({
       channelId: t,
       warningId: n,
       senderId: h,
       warningType: C,
       cta: u.CtaEventTypes.USER_BANNER_DISMISS
     })
-  }, [m, t, n, h, C]);
-  return (0, a.jsxs)("div", {
+  }, [E, t, n, h, C]);
+  return (0, s.jsxs)("div", {
     className: c.strangerDangerBanner,
-    children: [(0, a.jsxs)("div", {
+    children: [(0, s.jsxs)("div", {
       className: c.shieldAndHeading,
-      children: [(0, a.jsx)("img", {
+      children: [(0, s.jsx)("img", {
         className: c.safetyShieldIcon,
         src: f,
         alt: ""
-      }), (0, a.jsxs)("div", {
-        children: [(0, a.jsx)(i.Heading, {
+      }), (0, s.jsxs)("div", {
+        children: [(0, s.jsx)(i.Heading, {
           variant: "heading-md/semibold",
           color: "text-primary",
           children: p
-        }), (0, a.jsx)(i.Text, {
+        }), (0, s.jsx)(i.Text, {
           variant: "text-sm/normal",
           color: "text-primary",
-          children: E
+          children: m
         })]
       })]
-    }), (0, a.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: c.buttons,
-      children: [(0, a.jsx)(i.Button, {
+      children: [(0, s.jsx)(i.Button, {
         size: i.Button.Sizes.SMALL,
-        color: S,
+        color: _,
         "aria-label": g,
         onClick: A,
         className: c.ctaButton,
         children: g
-      }), (0, a.jsx)(i.Button, {
+      }), (0, s.jsx)(i.Button, {
         size: i.Button.Sizes.SMALL,
         color: T,
         className: c.ctaButton,
-        "aria-label": _,
+        "aria-label": S,
         onClick: M,
-        children: _
+        children: S
       })]
-    }), (0, a.jsx)(i.Clickable, {
+    }), (0, s.jsx)(i.Clickable, {
       className: c.closeButton,
       onClick: I,
       role: "button",
       "aria-label": d.default.Messages.DISMISS,
-      children: (0, a.jsx)(o.default, {
+      children: (0, s.jsx)(o.default, {
         width: 24,
         height: 24,
         className: c.closeButton

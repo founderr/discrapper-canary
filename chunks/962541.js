@@ -26,9 +26,9 @@ function d(e) {
     onMouseEnter: m,
     onMouseLeave: E,
     "aria-label": g,
-    "aria-checked": I,
-    role: _,
-    tooltipColor: S,
+    "aria-checked": S,
+    role: I,
+    tooltipColor: _,
     tooltipForceOpen: N
   } = e, T = a.isValidElement(f) ? f : (0, l.jsx)(f, {
     width: 20,
@@ -39,7 +39,7 @@ function d(e) {
     tooltipClassName: p,
     text: t,
     "aria-label": g,
-    color: S,
+    color: _,
     forceOpen: N,
     children: e => {
       let {
@@ -69,8 +69,8 @@ function d(e) {
           null == f || f(), null == E || E()
         },
         onContextMenu: s,
-        role: _,
-        "aria-checked": I,
+        role: I,
+        "aria-checked": S,
         children: [null != n ? (0, l.jsx)(o.default, {
           width: 20,
           height: 20,

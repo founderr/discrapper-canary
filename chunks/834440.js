@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return v
   }
 });
 var a = n("37983"),
@@ -60,15 +60,15 @@ function R(e) {
     })]
   })
 }
-var O = function(e) {
+var v = function(e) {
   var t, l;
   let {
     onUnmount: c,
-    quest: O
-  } = e, v = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(O.id), [O]), L = s.useRef(c), M = s.useCallback(e => {
+    quest: v
+  } = e, O = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(v.id), [v]), L = s.useRef(c), M = s.useCallback(e => {
     e.stopPropagation()
   }, []), P = s.useCallback(e => {
-    (0, E.trackQuestContentClicked)(O.id, I.QuestContent.ACTIVITY_PANEL, E.QuestContentCTA.OPEN_CONTEXT_MENU), (0, u.openContextMenuLazy)(e, async () => {
+    (0, E.trackQuestContentClicked)(v.id, I.QuestContent.ACTIVITY_PANEL, E.QuestContentCTA.OPEN_CONTEXT_MENU), (0, u.openContextMenuLazy)(e, async () => {
       let {
         QuestsEntryContextMenu: e
       } = await n.el("275986").then(n.bind(n, "275986"));
@@ -76,18 +76,18 @@ var O = function(e) {
         var n;
         return (0, a.jsx)(e, {
           ...t,
-          quest: O,
+          quest: v,
           questContent: I.QuestContent.ACTIVITY_PANEL,
-          shouldShowDisclosure: (null === (n = O.userStatus) || void 0 === n ? void 0 : n.enrolledAt) == null
+          shouldShowDisclosure: (null === (n = v.userStatus) || void 0 === n ? void 0 : n.enrolledAt) == null
         })
       }
     })
-  }, [O]), D = s.useCallback(() => {
-    (0, h.enrollInQuest)(O.id, I.QuestContent.ACTIVITY_PANEL)
-  }, [O]), y = s.useCallback(() => {
+  }, [v]), D = s.useCallback(() => {
+    (0, h.enrollInQuest)(v.id, I.QuestContent.ACTIVITY_PANEL)
+  }, [v]), y = s.useCallback(() => {
     d.default.open(g.UserSettingsSections.INVENTORY)
   }, []), x = (0, p.useHandleClaimQuestsReward)({
-    quest: O,
+    quest: v,
     location: I.QuestContent.ACTIVITY_PANEL
   });
   s.useEffect(() => {
@@ -96,10 +96,10 @@ var O = function(e) {
     var e;
     null === (e = L.current) || void 0 === e || e.call(L)
   }, []);
-  let b = (0, _.useIsQuestExpired)(O),
-    U = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-    G = (null === (l = O.userStatus) || void 0 === l ? void 0 : l.completedAt) != null,
-    j = (null == O ? void 0 : O.userStatus) == null || (0, S.isDismissed)(O.userStatus, I.QuestContent.ACTIVITY_PANEL);
+  let b = (0, _.useIsQuestExpired)(v),
+    U = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+    G = (null === (l = v.userStatus) || void 0 === l ? void 0 : l.completedAt) != null,
+    j = (null == v ? void 0 : v.userStatus) == null || (0, S.isDismissed)(v.userStatus, I.QuestContent.ACTIVITY_PANEL);
   return j || b ? null : (0, a.jsxs)("div", {
     className: i(N.wrapper, {
       [N.wrapperQuestAccepted]: U
@@ -109,7 +109,7 @@ var O = function(e) {
     children: [(0, a.jsxs)("div", {
       className: N.utils,
       children: [U ? (0, a.jsx)(R, {
-        quest: O
+        quest: v
       }) : (0, a.jsx)(m.default, {
         textOpacity: .5
       }), (0, a.jsx)(o.Clickable, {
@@ -121,20 +121,20 @@ var O = function(e) {
       })]
     }), !U && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(R, {
-        quest: O
+        quest: v
       }), (0, a.jsx)(o.Text, {
         className: N.instructions,
         variant: "text-sm/normal",
         color: "text-normal",
         children: A.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-          gameTitle: O.config.messages.gameTitle,
-          questReward: O.config.messages.rewardNameWithArticle,
-          streamingDurationRequirement: O.config.streamDurationRequirementMinutes
+          gameTitle: v.config.messages.gameTitle,
+          questReward: v.config.messages.rewardNameWithArticle,
+          streamingDurationRequirement: v.config.streamDurationRequirementMinutes
         })
       })]
     }), U && !G && (0, a.jsx)(T.default, {
       className: N.rewardTileWithInstructions,
-      quest: O
+      quest: v
     }), (0, a.jsxs)("div", {
       className: N.ctas,
       children: [!U && (0, a.jsxs)(a.Fragment, {
@@ -151,7 +151,7 @@ var O = function(e) {
           fullWidth: !0,
           onClick: D,
           size: o.Button.Sizes.SMALL,
-          submitting: v,
+          submitting: O,
           children: A.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), U && !G && (0, a.jsx)(o.Button, {

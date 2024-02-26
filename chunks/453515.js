@@ -65,7 +65,7 @@ function R() {
   for (let e of Object.keys(m)) g(m[e]);
   T = !1
 }
-class O extends s.default.Store {
+class v extends s.default.Store {
   initialize() {
     this.waitFor(u.default, d.default, h.default), this.syncWith([d.default], N)
   }
@@ -73,7 +73,7 @@ class O extends s.default.Store {
     return m
   }
 }
-O.displayName = "ActivityTrackingStore", new O(r.default, {
+v.displayName = "ActivityTrackingStore", new v(r.default, {
   RUNNING_GAMES_CHANGE: () => N(),
   CONNECTION_OPEN: function() {
     if (T) return !1;

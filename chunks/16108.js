@@ -7,16 +7,16 @@ s.r(t), s.d(t, {
     return u
   },
   markAsMessageRequest: function() {
-    return c
+    return _
   },
   rejectMessageRequest: function() {
-    return d
+    return c
   },
   rejectMessageRequestBatch: function() {
-    return N
+    return d
   },
   fetchUserCountryCode: function() {
-    return I
+    return E
   }
 });
 var n = s("872717"),
@@ -45,7 +45,7 @@ function u(e) {
   })
 }
 
-function c(e) {
+function _(e) {
   return n.default.put({
     url: i.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
     body: {
@@ -54,13 +54,13 @@ function c(e) {
   })
 }
 
-function d(e) {
+function c(e) {
   return n.default.delete({
     url: i.Endpoints.CHANNEL_RECIPIENT_CONSENT(e)
   })
 }
 
-function N(e) {
+function d(e) {
   return n.default.put({
     url: i.Endpoints.CHANNEL_RECIPIENT_REJECT_BATCH(),
     body: {
@@ -69,6 +69,6 @@ function N(e) {
   })
 }
 
-function I() {
+function E() {
   o.default.getLocationMetadata()
 }

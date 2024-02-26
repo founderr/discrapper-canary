@@ -10,8 +10,8 @@ var i = l("37983"),
   s = l.n(n),
   r = l("77078"),
   c = l("766274"),
-  d = l("368121"),
-  o = l("107294"),
+  o = l("368121"),
+  d = l("107294"),
   u = l("633827");
 class f extends a.PureComponent {
   renderUsers() {
@@ -23,22 +23,22 @@ class f extends a.PureComponent {
     } = this.props, a = [], n = e.length === t ? e.length : t - 1, s = 0;
     for (; s < n && s < e.length;) {
       let t = s === e.length - 1;
-      a.push(l(e[s] || null, t ? null : o.avatarMasked, "user-".concat(s), t)), s++
+      a.push(l(e[s] || null, t ? null : d.avatarMasked, "user-".concat(s), t)), s++
     }
     if (s < e.length) {
       let t = Math.min(e.length - s, 99);
-      a.push(i("+".concat(t), o.moreUsers, "more-users", t))
+      a.push(i("+".concat(t), d.moreUsers, "more-users", t))
     }
     return a
   }
   renderIcon() {
     return this.props.icon ? (0, i.jsx)("div", {
-      className: o.iconContainer,
-      children: (0, i.jsx)(d.default, {
+      className: d.iconContainer,
+      children: (0, i.jsx)(o.default, {
         width: 16,
         height: 16,
-        foreground: o.foreground,
-        className: o.icon
+        foreground: d.foreground,
+        className: d.icon
       })
     }) : null
   }
@@ -47,7 +47,7 @@ class f extends a.PureComponent {
       className: e
     } = this.props;
     return (0, i.jsxs)("div", {
-      className: s(e, o.container),
+      className: s(e, d.container),
       ref: e => this._ref = e,
       children: [this.renderIcon(), this.renderUsers()]
     })
@@ -56,17 +56,17 @@ class f extends a.PureComponent {
     super(...e), this.defaultRenderUser = (e, t, l, a) => {
       let {
         onClick: n,
-        size: d,
+        size: o,
         guildId: f
       } = this.props, v = e instanceof c.default ? e : null != e ? e.user : null;
       return null == v ? (0, i.jsx)("div", {
-        className: s(o.emptyUser, t)
+        className: s(d.emptyUser, t)
       }, l) : (0, i.jsx)(r.Avatar, {
         tabIndex: 0,
-        src: v.getAvatarURL(f, (0, r.getAvatarSize)(d)),
-        size: d,
+        src: v.getAvatarURL(f, (0, r.getAvatarSize)(o)),
+        size: o,
         "aria-label": v.username,
-        className: s(t, u.cursorPointer, o.avatarSize),
+        className: s(t, u.cursorPointer, d.avatarSize),
         onClick: e => null != n ? n(e, v, this._ref) : null
       }, v.id)
     }

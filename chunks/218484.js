@@ -20,12 +20,12 @@ var a = n("446674"),
   m = n("49111"),
   E = n("724210");
 let g = m.AppContext.APP,
+  S = !1,
   I = !1,
-  _ = !1,
-  S = [];
+  _ = [];
 
 function N() {
-  I = !0
+  S = !0
 }
 class T extends a.default.Store {
   initialize() {
@@ -33,13 +33,13 @@ class T extends a.default.Store {
   }
   isOpen() {
     let e = __OVERLAY__ ? m.AppContext.OVERLAY : m.AppContext.APP;
-    return !!(I && S.length > 0 && g === e)
+    return !!(S && _.length > 0 && g === e)
   }
   getProps() {
     return {
-      invite: S.length > 0 ? S[0][0] : null,
+      invite: _.length > 0 ? _[0][0] : null,
       error: null != l && "" !== l ? l : null,
-      submitting: _
+      submitting: I
     }
   }
 }
@@ -48,7 +48,7 @@ var A = new T(s.default, {
   OVERLAY_INITIALIZE: N,
   CONNECTION_OPEN: N,
   CONNECTION_CLOSED: function() {
-    I = !1
+    S = !1
   },
   INVITE_MODAL_OPEN: function(e) {
     let t = e.invite;
@@ -80,11 +80,11 @@ var A = new T(s.default, {
         }
       }
     }
-    if (S.some(e => {
+    if (_.some(e => {
         let [n] = e;
         return n.code === t.code
       })) return !1;
-    g = e.context, _ = !1;
+    g = e.context, I = !1;
     let l = function(e) {
       let {
         approximate_member_count: t,
@@ -115,21 +115,21 @@ var A = new T(s.default, {
         ...e.inviter
       }), h
     }(t);
-    S.push([l, e.resolve])
+    _.push([l, e.resolve])
   },
   INVITE_MODAL_CLOSE: function() {
-    if (l = null, _ = !1, S.length > 0) {
-      let [, e] = S.shift();
+    if (l = null, I = !1, _.length > 0) {
+      let [, e] = _.shift();
       null != e && e()
     }
   },
   INVITE_ACCEPT: function() {
-    _ = !0
+    I = !0
   },
   INVITE_MODAL_ERROR: function(e) {
     let {
       message: t
     } = e;
-    l = t, _ = !1
+    l = t, I = !1
   }
 })

@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("206230"),
   p = n("320679"),
   E = n("191225"),
-  g = n("229661"),
-  S = n("812204"),
+  S = n("229661"),
+  g = n("812204"),
   C = n("685665"),
   _ = n("338733"),
   I = n("779601"),
@@ -121,8 +121,8 @@ class V extends a.Component {
       keyboardModeEnabled: d,
       reducedMotionEnabled: m,
       fontScaleClass: E,
-      saturation: g,
-      withTitleBar: S,
+      saturation: S,
+      withTitleBar: g,
       guestWindow: C,
       clientThemesClassName: _,
       contentClassName: x
@@ -132,7 +132,7 @@ class V extends a.Component {
       "full-motion": !m,
       "keyboard-mode": d,
       "app-focused": n || a,
-      "low-saturation": g <= .4
+      "low-saturation": S <= .4
     });
     return (0, l.jsx)(o.BrowserRouter, {
       children: (0, l.jsx)(A.default, {
@@ -153,7 +153,7 @@ class V extends a.Component {
                       children: (0, l.jsxs)(y.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
                           className: B.popout,
-                          children: [S && null != N ? (0, l.jsx)(v.default, {
+                          children: [g && null != N ? (0, l.jsx)(v.default, {
                             focused: n,
                             type: N,
                             windowKey: r,
@@ -176,7 +176,7 @@ class V extends a.Component {
   }
   constructor(...e) {
     super(...e), this.rootRef = a.createRef(), this._cleanupWindowActionCreators = void 0, this.warnPopoutClose = e => {
-      this.props.connectedToEmbeddedActivity && !j.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = k.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, P.isPlatformEmbedded && (0, g.default)(() => {
+      this.props.connectedToEmbeddedActivity && !j.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = k.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, P.isPlatformEmbedded && (0, S.default)(() => {
         w.default.unmountWindow(this.props.windowKey), P.isPlatformEmbedded && D.default.close(this.props.windowKey)
       }))
     }, this.handleBlur = () => {
@@ -212,7 +212,7 @@ let G = a.forwardRef(function(e, t) {
       fontScale: f,
       keyboardModeEnabled: h,
       reducedMotionEnabled: p,
-      fontScaleClass: g,
+      fontScaleClass: S,
       saturation: I
     } = (0, d.useStateFromStoresObject)([m.default], () => ({
       fontScale: m.default.fontScale,
@@ -226,7 +226,7 @@ let G = a.forwardRef(function(e, t) {
   let v = (0, N.default)(n, a),
     {
       AnalyticsLocationProvider: A
-    } = (0, C.default)(S.default.POPOUT_WINDOW),
+    } = (0, C.default)(g.default.POPOUT_WINDOW),
     {
       clientThemesClassName: j,
       clientThemesCSS: y
@@ -247,7 +247,7 @@ let G = a.forwardRef(function(e, t) {
         mouseModeEnabled: v,
         reducedMotionEnabled: p,
         connectedToEmbeddedActivity: T,
-        fontScaleClass: g,
+        fontScaleClass: S,
         saturation: I,
         clientThemesClassName: j,
         clientThemesCSS: y

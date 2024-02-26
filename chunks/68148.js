@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("204947"),
   p = n("716241"),
   E = n("808742"),
-  g = n("342845"),
-  S = n("953109"),
+  S = n("342845"),
+  g = n("953109"),
   C = n("437825"),
   _ = n("142303"),
   I = n("462579"),
@@ -66,7 +66,7 @@ let D = e => {
     }, "add-status") : (0, l.jsx)(f.TooltipContainer, {
       className: b.iconSpacing,
       text: (0, E.getHangStatusText)(t),
-      children: (0, l.jsx)(g.default, {
+      children: (0, l.jsx)(S.default, {
         hangStatusActivity: t,
         className: i(b.hangStatusIcon, n)
       })
@@ -147,8 +147,8 @@ class w extends a.Component {
       isWatching: h,
       iconClassName: p,
       embeddedApplication: E,
-      otherClientSessionType: g,
-      voicePlatform: S,
+      otherClientSessionType: S,
+      voicePlatform: g,
       hangStatusActivity: T,
       showHangStatus: v,
       isSelf: j,
@@ -187,12 +187,12 @@ class w extends a.Component {
       children: (0, l.jsx)(A.default, {
         className: i(b.icon, p)
       })
-    }, "activity")), g === O.GameConsoleTypes.XBOX || S === y.VoicePlatforms.XBOX ? H.push((0, l.jsx)("div", {
+    }, "activity")), S === O.GameConsoleTypes.XBOX || g === y.VoicePlatforms.XBOX ? H.push((0, l.jsx)("div", {
       className: i(b.iconSpacing),
       children: (0, l.jsx)(N.default, {
         className: i(b.icon, p)
       })
-    }, "xbox")) : (g === O.GameConsoleTypes.PLAYSTATION || S === y.VoicePlatforms.PLAYSTATION) && H.push((0, l.jsx)("div", {
+    }, "xbox")) : (S === O.GameConsoleTypes.PLAYSTATION || g === y.VoicePlatforms.PLAYSTATION) && H.push((0, l.jsx)("div", {
       className: i(b.iconSpacing),
       children: (0, l.jsx)(x.default, {
         className: i(b.icon, p)
@@ -347,10 +347,10 @@ function k(e) {
     className: b.iconSpacing,
     children: (0, l.jsx)("div", {
       ref: c,
-      children: (0, l.jsx)(S.default, {
+      children: (0, l.jsx)(g.default, {
         className: i(b.icon, n),
         game: t,
-        size: S.default.Sizes.XSMALL,
+        size: g.default.Sizes.XSMALL,
         onMouseEnter: () => {
           p.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
             channel_id: r,

@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("812204"),
   p = n("685665"),
   E = n("850391"),
-  g = n("149022"),
-  S = n("681060"),
+  S = n("149022"),
+  g = n("681060"),
   C = n("376215"),
   _ = n("172554"),
   I = n("699473"),
@@ -119,15 +119,15 @@ function X(e) {
       updateThreadSettings: s
     }
   }(t, n), {
-    textAreaState: S,
+    textAreaState: g,
     setTextAreaState: C
   } = function(e, t) {
-    let [n, l] = a.useState((0, g.createEmptyState)());
+    let [n, l] = a.useState((0, S.createEmptyState)());
     return a.useEffect(() => {
       function n(n) {
         var a;
         let s = A.default.getDraft(e.id, A.DraftType.FirstThreadMessage);
-        (0 === s.length || !0 === n) && l((0, g.createState)(s)), t(null !== (a = A.default.getThreadSettings(e.id)) && void 0 !== a ? a : {})
+        (0 === s.length || !0 === n) && l((0, S.createState)(s)), t(null !== (a = A.default.getThreadSettings(e.id)) && void 0 !== a ? a : {})
       }
       return n(!0), A.default.addChangeListener(n), () => {
         A.default.removeChangeListener(n)
@@ -204,7 +204,7 @@ function X(e) {
     parentMessageId: n,
     threadSettings: m,
     privateThreadMode: I,
-    textAreaState: S,
+    textAreaState: g,
     location: s
   }), R = (0, k.getIsPrivate)(m, I) ? O.default : P.default;
   return (0, l.jsx)("div", {
@@ -251,7 +251,7 @@ function X(e) {
           className: Y.submitContainer,
           children: [(0, l.jsx)(J, {
             parentChannel: t,
-            textAreaState: S,
+            textAreaState: g,
             setTextAreaState: C,
             submit: M,
             error: N
@@ -347,7 +347,7 @@ function J(e) {
     setTextAreaState: s,
     submit: c,
     error: f
-  } = e, [h, m] = a.useState(!0), p = a.useCallback(() => m(!0), []), E = a.useCallback(() => m(!1), []), g = a.useCallback((e, n, l) => {
+  } = e, [h, m] = a.useState(!0), p = a.useCallback(() => m(!0), []), E = a.useCallback(() => m(!1), []), S = a.useCallback((e, n, l) => {
     o.default.saveDraft(t.id, n, A.DraftType.FirstThreadMessage), s(e => ("" !== n && e.textValue !== n ? d.default.startTyping(t.id) : "" === n && d.default.stopTyping(t.id), {
       textValue: n,
       richValue: l
@@ -381,7 +381,7 @@ function J(e) {
       children: (0, l.jsx)(u.InputError, {
         error: T
       })
-    }), (0, l.jsx)(S.default, {
+    }), (0, l.jsx)(g.default, {
       type: K,
       channel: t,
       placeholder: W.default.Messages.FORM_THREAD_STARTER_MESSAGE_PLACEHOLDER,
@@ -394,7 +394,7 @@ function J(e) {
       }),
       onFocus: p,
       onBlur: E,
-      onChange: g,
+      onChange: S,
       onSubmit: _,
       promptToUpload: w.promptToUpload
     })]

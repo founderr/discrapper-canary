@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return _
   }
 }), n("222007");
-var a = n("37983"),
-  s = n("884691"),
+var s = n("37983"),
+  a = n("884691"),
   l = n("414456"),
   i = n.n(l),
   r = n("118810"),
@@ -17,29 +17,29 @@ var a = n("37983"),
   h = n("539938"),
   C = n("49111"),
   p = n("782340"),
-  E = n("628631");
+  m = n("628631");
 
-function m(e) {
+function E(e) {
   let {
     channel: t,
     onClose: n,
-    transitionState: s
+    transitionState: a
   } = e, l = (0, c.default)(t, !0);
-  return (0, a.jsx)(o.ModalRoot, {
-    transitionState: s,
+  return (0, s.jsx)(o.ModalRoot, {
+    transitionState: a,
     "aria-label": p.default.Messages.FORM_LABEL_CHANNEL_TOPIC,
-    children: (0, a.jsx)(o.ModalContent, {
-      children: (0, a.jsx)(d.default, {
+    children: (0, s.jsx)(o.ModalContent, {
+      children: (0, s.jsx)(d.default, {
         selectable: !0,
         onClose: n,
-        renderHeader: () => (0, a.jsx)(o.Heading, {
+        renderHeader: () => (0, s.jsx)(o.Heading, {
           variant: "heading-lg/semibold",
           children: l
         }),
-        children: (0, a.jsx)(o.Text, {
+        children: (0, s.jsx)(o.Text, {
           selectable: !0,
           variant: "text-md/normal",
-          className: E.content,
+          className: m.content,
           children: f.default.parseTopic(t.topic, !0, {
             channelId: t.id
           })
@@ -52,23 +52,23 @@ function m(e) {
 function g(e) {
   return e.matches("a") || "highlight" === e.className || e.className.includes("mention")
 }
-class _ extends s.Component {
+class S extends a.Component {
   render() {
     let {
       channel: e
     } = this.props;
-    return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0, a.jsxs)(s.Fragment, {
-      children: [(0, a.jsx)(h.default.Divider, {}), (0, a.jsxs)("div", {
-        className: i(E.topic, E.expandable),
+    return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0, s.jsxs)(a.Fragment, {
+      children: [(0, s.jsx)(h.default.Divider, {}), (0, s.jsxs)("div", {
+        className: i(m.topic, m.expandable),
         onMouseDown: this.onMouseDown,
         onMouseMove: this.onMouseMove,
         onMouseUp: this.onMouseUp,
         onContextMenu: this.handleContextMenu,
         onClick: this.handleClick,
-        children: [(0, a.jsx)(o.Clickable, {
+        children: [(0, s.jsx)(o.Clickable, {
           onClick: this.handleClick,
           "aria-label": p.default.Messages.OPEN_CHANNEL_TOPIC,
-          className: E.topicClickTarget
+          className: m.topicClickTarget
         }), f.default.parseTopic(e.topic, !0, {
           channelId: e.id,
           allowLinks: !0
@@ -83,7 +83,7 @@ class _ extends s.Component {
         if (g(t)) return;
         let e = t.parentNode;
         if ((0, r.isElement)(e) && g(e)) return
-      }(0, o.openModal)(e => (0, a.jsx)(m, {
+      }(0, o.openModal)(e => (0, s.jsx)(E, {
         ...e,
         ...this.props
       }))
@@ -96,16 +96,16 @@ class _ extends s.Component {
     }, this.handleContextMenu = e => {
       let {
         channel: t,
-        guild: s
+        guild: a
       } = this.props;
       (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("229233").then(n.bind(n, "229233"));
-        return n => (0, a.jsx)(e, {
+        return n => (0, s.jsx)(e, {
           ...n,
           channel: t,
-          guild: s,
+          guild: a,
           includeTopic: !0
         })
       })
@@ -118,4 +118,4 @@ class _ extends s.Component {
     }
   }
 }
-var S = _
+var _ = S

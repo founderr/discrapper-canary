@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("520480"),
   E = n("813531"),
   g = n("749387"),
-  I = n("260488"),
-  _ = n("12896"),
-  S = n("27618"),
+  S = n("260488"),
+  I = n("12896"),
+  _ = n("27618"),
   N = n("18494"),
   T = n("697218"),
   A = n("340412"),
@@ -63,7 +63,7 @@ function k(e) {
     badge: f,
     link: C,
     showProgressBadge: p
-  } = e, I = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [S, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, D] = a.useState(0), [j, F] = a.useState(!1), {
+  } = e, S = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [_, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, D] = a.useState(0), [j, F] = a.useState(!1), {
     canViewBroadcasts: k
   } = h.default.useExperiment({
     location: "home_button_no_track"
@@ -87,8 +87,8 @@ function k(e) {
   }) : K && (X = (0, l.jsx)(R.default, {
     className: V.broadcastBadge
   }));
-  let Q = t || S || I,
-    J = (0, l.jsx)(o.BlobMask, {
+  let Q = t || _ || S,
+    q = (0, l.jsx)(o.BlobMask, {
       highlight: K,
       selected: Q,
       lowerBadge: f > 0 ? (0, P.renderMentionBadge)(f) : null,
@@ -122,7 +122,7 @@ function k(e) {
         children: (0, l.jsx)(c.default, {})
       })
     }),
-    q = K ? (0, l.jsx)(o.Popout, {
+    J = K ? (0, l.jsx)(o.Popout, {
       position: "right",
       renderPopout: e => {
         let {
@@ -137,7 +137,7 @@ function k(e) {
       },
       spacing: 8,
       shouldShow: j,
-      children: () => J
+      children: () => q
     }) : null;
   return (0, l.jsx)("div", {
     className: V.tutorialContainer,
@@ -149,21 +149,21 @@ function k(e) {
         F(!1)
       }, 250)
     },
-    children: (0, l.jsx)(_.default, {
+    children: (0, l.jsx)(I.default, {
       inlineSpecs: H,
       tutorialId: "friends-list",
       position: "right",
       children: (0, l.jsxs)(G.ListItem, {
         children: [(0, l.jsx)(M.default, {
           selected: t,
-          hovered: S,
+          hovered: _,
           className: V.pill
-        }), null != q ? q : (0, l.jsx)(U.default, {
+        }), null != J ? J : (0, l.jsx)(U.default, {
           color: o.Tooltip.Colors.PRIMARY,
           hideOnClick: !0,
           text: z,
           selected: t,
-          children: J
+          children: q
         })]
       })
     })
@@ -182,7 +182,7 @@ function Y() {
       return l > 0 && l < 100
     }),
     n = (0, i.useStateFromStores)([C.default], () => C.default.getUserIdsToValidate()),
-    s = (0, i.useStateFromStores)([S.default], () => S.default.getPendingCount()),
+    s = (0, i.useStateFromStores)([_.default], () => _.default.getPendingCount()),
     r = Object.keys(F.SubscriptionTrials),
     {
       unviewedTrialCount: o,
@@ -193,19 +193,19 @@ function Y() {
     })),
     c = o + d,
     h = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
-    m = (0, I.useMessageRequestsCount)(),
+    m = (0, S.useMessageRequestsCount)(),
     E = s + c + m,
     g = E === c && c > 0 && s + m === 0;
   a.useEffect(() => {
     n.length > 0 && (0, f.fetchBroadcasterBuckets)()
   }, [n]), (0, p.default)();
-  let _ = L.default.getHomeLink();
-  return g && (_ = w.Routes.APPLICATION_STORE), (0, l.jsx)(k, {
+  let I = L.default.getHomeLink();
+  return g && (I = w.Routes.APPLICATION_STORE), (0, l.jsx)(k, {
     selected: e,
     user: h,
     selectedChannelId: N.default.getChannelId(w.ME),
     badge: E,
-    link: _,
+    link: I,
     showProgressBadge: t
   })
 }

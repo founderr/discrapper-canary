@@ -8,8 +8,8 @@ var n = s("37983");
 s("884691");
 var a = s("414456"),
   l = s.n(a),
-  r = s("77078"),
-  T = s("968246");
+  T = s("77078"),
+  r = s("968246");
 
 function o(e) {
   let {
@@ -18,24 +18,24 @@ function o(e) {
     headerText: a
   } = e;
   return (0, n.jsxs)("div", {
-    className: l(T.tipsSection, s),
+    className: l(r.tipsSection, s),
     children: [(0, n.jsx)("div", {
-      className: T.tipsHeader,
-      children: (0, n.jsx)(r.Heading, {
+      className: r.tipsHeader,
+      children: (0, n.jsx)(T.Heading, {
         variant: "heading-lg/bold",
-        className: T.headerText,
+        className: r.headerText,
         children: a
       })
     }), (0, n.jsx)("ul", {
-      className: T.tipsList,
+      className: r.tipsList,
       children: t.map((e, t) => (0, n.jsxs)("li", {
-        className: T.tipRow,
-        children: [(0, n.jsx)(r.Heading, {
+        className: r.tipRow,
+        children: [(0, n.jsx)(T.Heading, {
           variant: "heading-md/semibold",
           color: "text-brand",
-          className: T.tipNumber,
+          className: r.tipNumber,
           children: t + 1
-        }), (0, n.jsx)(r.Text, {
+        }), (0, n.jsx)(T.Text, {
           variant: "text-sm/medium",
           children: e
         })]

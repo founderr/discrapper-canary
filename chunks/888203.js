@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   useInappropriateConversationWarningsForChannel: function() {
-    return l
+    return o
   }
 });
-var a = n("446674"),
-  s = n("764828");
+var n = s("446674"),
+  a = s("764828");
 
-function l(e) {
-  let t = (0, a.useStateFromStores)([s.default], () => s.default.getChannelSafetyWarnings(e), [e]);
-  return t.filter(e => e.type === s.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === s.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2)
+function o(e) {
+  let t = (0, n.useStateFromStores)([a.default], () => a.default.getChannelSafetyWarnings(e), [e]);
+  return t.filter(e => e.type === a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2)
 }

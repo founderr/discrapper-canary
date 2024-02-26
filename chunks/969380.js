@@ -13,10 +13,10 @@ function s(e) {
     applicationId: t,
     size: l,
     names: s = n
-  } = e, [r, c] = i.useState(null), [d, o] = i.useState(!0), u = (0, a.getAssetImage)(t, r, l);
+  } = e, [r, c] = i.useState(null), [o, d] = i.useState(!0), u = (0, a.getAssetImage)(t, r, l);
   return i.useEffect(() => {
     (0, a.fetchAssetIds)(t, s).then(e => {
-      for (let t of (o(!1), e))
+      for (let t of (d(!1), e))
         if (null != t && "" !== t) {
           c(t);
           return
@@ -24,6 +24,6 @@ function s(e) {
     })
   }, [t]), {
     url: u,
-    state: d ? "loading" : null != u ? "fetched" : "not-found"
+    state: o ? "loading" : null != u ? "fetched" : "not-found"
   }
 }

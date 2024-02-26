@@ -19,8 +19,8 @@ var a = n("414456"),
   m = n("68777"),
   p = n("463278"),
   E = n("608973"),
-  g = n("132881"),
-  S = n("782340"),
+  S = n("132881"),
+  g = n("782340"),
   C = n("865331");
 
 function _(e) {
@@ -40,7 +40,7 @@ function _(e) {
         height: 16
       }), (0, l.jsx)(r.Heading, {
         variant: "heading-md/semibold",
-        children: S.default.Messages.GUILD_MEMBER_MOD_VIEW_TITLE
+        children: g.default.Messages.GUILD_MEMBER_MOD_VIEW_TITLE
       })]
     }), (0, l.jsx)("div", {
       children: (0, l.jsx)(r.KeyCombo, {
@@ -58,7 +58,7 @@ function I(e) {
     guildId: n,
     location: a,
     className: d,
-    onNavigate: S
+    onNavigate: g
   } = e, I = (0, i.default)([o.default], () => o.default.getUser(t), [t]), T = (0, i.default)([u.default], () => u.default.getMember(n, t), [n, t]), v = (0, c.useProfileThemedPanelBackground)(t, n);
   return null == I || null == T ? null : (0, l.jsxs)(r.Scroller, {
     className: s(C.container, d),
@@ -72,12 +72,12 @@ function I(e) {
       className: s(C.innerContainer),
       children: [(0, l.jsx)(E.default, {
         member: T
-      }), (0, l.jsx)(g.default, {
+      }), (0, l.jsx)(S.default, {
         userId: t,
         guildId: n
       }), (0, l.jsx)(p.default, {
         member: T,
-        onNavigate: S
+        onNavigate: g
       }), (0, l.jsx)(h.default, {
         member: T
       }), (0, l.jsx)(f.default, {

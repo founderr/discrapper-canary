@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return p
+    return I
   }
 }), l("881410");
 var n = l("37983");
@@ -17,14 +17,14 @@ var a = l("414456"),
   f = l("957255"),
   m = l("677099"),
   S = l("476263"),
-  C = l("461380"),
-  E = l("223913"),
+  E = l("461380"),
+  C = l("223913"),
   h = l("644169"),
-  N = l("782340"),
-  g = l("961523"),
-  _ = l("206464");
+  g = l("782340"),
+  _ = l("961523"),
+  N = l("206464");
 
-function I(e) {
+function p(e) {
   let {
     guildId: t,
     onClick: l
@@ -32,38 +32,38 @@ function I(e) {
     let {
       channel: t
     } = e;
-    return (0, E.canStreamInChannel)(t, c.default, f.default)
+    return (0, C.canStreamInChannel)(t, c.default, f.default)
   }));
   return null != a && s ? (0, n.jsxs)(o.Clickable, {
     onClick: () => l(t),
-    className: _.guildRow,
+    className: N.guildRow,
     children: [(0, n.jsx)(S.default, {
       guild: a,
       size: S.default.Sizes.SMALL,
-      className: _.guildIcon
+      className: N.guildIcon
     }), (0, n.jsx)(o.Text, {
       variant: "text-md/normal",
-      className: _.guildName,
+      className: N.guildName,
       children: a.toString()
-    }), (0, n.jsx)(C.default, {
-      direction: C.default.Directions.RIGHT,
-      className: _.guildArrow
+    }), (0, n.jsx)(E.default, {
+      direction: E.default.Directions.RIGHT,
+      className: N.guildArrow
     })]
   }) : null
 }
 
-function p(e) {
+function I(e) {
   let {
     onSelectGuild: t
   } = e, l = (0, u.useStateFromStores)([m.default], () => m.default.getGuildFolders());
   return (0, n.jsx)(h.default, {
-    title: N.default.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
-    scrollerClassName: s(_.guildScroller, g.marginBottom),
+    title: g.default.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
+    scrollerClassName: s(N.guildScroller, _.marginBottom),
     children: i.flatMap(l, e => {
       let {
         guildIds: l
       } = e;
-      return l.map(e => (0, n.jsx)(I, {
+      return l.map(e => (0, n.jsx)(p, {
         guildId: e,
         onClick: t
       }, e))

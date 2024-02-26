@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), n("222007");
 var l = n("37983"),
@@ -19,23 +19,23 @@ var l = n("37983"),
   p = n("782340"),
   E = n("72750");
 
-function g(e) {
+function S(e) {
   let {
     guildId: t,
     channelId: n
-  } = e, g = (0, d.useSubscriptionListingsForChannel)({
+  } = e, S = (0, d.useSubscriptionListingsForChannel)({
     guildId: t,
     channelId: n
-  }), S = (0, o.useGroupListingsForGuild)(t), C = (0, o.useSubscriptionsSettings)(t), _ = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), I = null == _ ? void 0 : _.name, T = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(n)), v = a.useMemo(() => {
+  }), g = (0, o.useGroupListingsForGuild)(t), C = (0, o.useSubscriptionsSettings)(t), _ = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), I = null == _ ? void 0 : _.name, T = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(n)), v = a.useMemo(() => {
     let e = {};
-    for (let t of S)
+    for (let t of g)
       for (let n of t.subscription_listings_ids) e[n] = t.id;
     return e
-  }, [S]);
+  }, [g]);
   return ((0, c.default)({
     guildId: t,
     location: m.AnalyticsLocations.ROLE_SUBSCRIPTION_GATED_CHANNEL,
-    relevantSubscriptionListingIds: g.map(e => e.id)
+    relevantSubscriptionListingIds: S.map(e => e.id)
   }), null == _) ? (0, l.jsx)("div", {
     className: E.spinnerContainer,
     children: (0, l.jsx)(i.Spinner, {
@@ -57,7 +57,7 @@ function g(e) {
       children: null == C ? void 0 : C.description
     }), (0, l.jsx)(f.default, {
       guildId: t,
-      children: g.filter(e => null != v[e.id]).map(e => (0, l.jsx)(h.default, {
+      children: S.filter(e => null != v[e.id]).map(e => (0, l.jsx)(h.default, {
         guildId: t,
         listingId: e.id,
         groupListingId: v[e.id],

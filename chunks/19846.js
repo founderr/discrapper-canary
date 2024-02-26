@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return y
   }
 });
-var a = n("37983"),
-  s = n("884691"),
+var s = n("37983"),
+  a = n("884691"),
   l = n("394846"),
   i = n("446674"),
   r = n("77078"),
@@ -17,11 +17,11 @@ var a = n("37983"),
   h = n("208021"),
   C = n("713135"),
   p = n("401642"),
-  E = n("982108"),
-  m = n("27618"),
+  m = n("982108"),
+  E = n("27618"),
   g = n("697218"),
-  _ = n("587974"),
-  S = n("315102"),
+  S = n("587974"),
+  _ = n("315102"),
   T = n("841397"),
   A = n("49111"),
   M = n("680894"),
@@ -31,38 +31,38 @@ var a = n("37983"),
 let L = e => {
     let {
       userId: t
-    } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getMutualGuilds(t), [t]), l = s.useMemo(() => null != n ? n.slice(0, 3).map((e, t) => {
+    } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getMutualGuilds(t), [t]), l = a.useMemo(() => null != n ? n.slice(0, 3).map((e, t) => {
       let {
-        guild: s
-      } = e, l = null != s ? S.default.getGuildIconURL({
-        id: s.id,
-        icon: s.icon,
+        guild: a
+      } = e, l = null != a ? _.default.getGuildIconURL({
+        id: a.id,
+        icon: a.icon,
         size: 24
       }) : null;
       if (null == l) return null;
       let i = t === (n.length > 3 ? 3 : n.length) - 1,
-        r = (0, a.jsx)("img", {
+        r = (0, s.jsx)("img", {
           src: l,
           alt: "",
           className: v.avatar
         }, t);
-      return i ? r : (0, a.jsx)(_.default, {
+      return i ? r : (0, s.jsx)(S.default, {
         className: v.avatarMask,
-        mask: _.default.Masks.VOICE_USER_SUMMARY_ITEM,
+        mask: S.default.Masks.VOICE_USER_SUMMARY_ITEM,
         width: 24,
         height: 24,
         children: r
       }, t)
     }).filter(e => null != e) : [], [n]);
-    return null == n || 0 === n.length ? (0, a.jsx)(r.Text, {
+    return null == n || 0 === n.length ? (0, s.jsx)(r.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
       children: N.default.Messages.NO_MUTUAL_GUILDS
-    }) : (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)("div", {
+    }) : (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)("div", {
         className: v.avatarContainer,
         children: l
-      }), (0, a.jsx)(r.Clickable, {
+      }), (0, s.jsx)(r.Clickable, {
         onClick: () => {
           (0, p.openUserProfileModal)({
             userId: t,
@@ -72,7 +72,7 @@ let L = e => {
             }
           })
         },
-        children: (0, a.jsx)(r.Text, {
+        children: (0, s.jsx)(r.Text, {
           className: v.mutualGuilds,
           variant: "text-sm/normal",
           children: N.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
@@ -86,22 +86,22 @@ let L = e => {
     var t;
     let {
       relationshipType: n,
-      userId: s,
+      userId: a,
       showingBanner: l
-    } = e, i = null === (t = g.default.getUser(s)) || void 0 === t ? void 0 : t.bot, u = () => {
+    } = e, i = null === (t = g.default.getUser(a)) || void 0 === t ? void 0 : t.bot, u = () => {
       o.default.addRelationship({
-        userId: s,
+        userId: a,
         context: {
           location: A.AnalyticsPages.DM_CHANNEL
         }
       })
-    }, d = (0, a.jsx)(r.Button, {
+    }, d = (0, s.jsx)(r.Button, {
       className: v.action,
       size: r.Button.Sizes.TINY,
       color: r.Button.Colors.PRIMARY,
       onClick: () => {
         o.default.addRelationship({
-          userId: s,
+          userId: a,
           context: {
             location: A.AnalyticsPages.DM_CHANNEL
           },
@@ -112,8 +112,8 @@ let L = e => {
     });
     switch (n) {
       case A.RelationshipTypes.NONE:
-        return (0, a.jsxs)(a.Fragment, {
-          children: [!i && !l && (0, a.jsx)(r.Button, {
+        return (0, s.jsxs)(s.Fragment, {
+          children: [!i && !l && (0, s.jsx)(r.Button, {
             className: v.action,
             size: r.Button.Sizes.TINY,
             onClick: u,
@@ -121,12 +121,12 @@ let L = e => {
           }), d]
         });
       case A.RelationshipTypes.FRIEND:
-        return (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(r.Button, {
+        return (0, s.jsxs)(s.Fragment, {
+          children: [(0, s.jsx)(r.Button, {
             className: v.action,
             size: r.Button.Sizes.TINY,
             onClick: () => {
-              o.default.removeFriend(s, {
+              o.default.removeFriend(a, {
                 location: A.AnalyticsPages.DM_CHANNEL
               })
             },
@@ -135,11 +135,11 @@ let L = e => {
           }), d]
         });
       case A.RelationshipTypes.BLOCKED:
-        return (0, a.jsx)(r.Button, {
+        return (0, s.jsx)(r.Button, {
           className: v.action,
           size: r.Button.Sizes.TINY,
           onClick: () => {
-            o.default.unblockUser(s, {
+            o.default.unblockUser(a, {
               location: A.AnalyticsPages.DM_CHANNEL
             })
           },
@@ -147,23 +147,23 @@ let L = e => {
           children: N.default.Messages.UNBLOCK
         });
       case A.RelationshipTypes.PENDING_INCOMING:
-        return (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(r.Text, {
+        return (0, s.jsxs)(s.Fragment, {
+          children: [(0, s.jsx)(r.Text, {
             className: v.action,
             color: "header-secondary",
             variant: "text-sm/normal",
             children: N.default.Messages.FRIEND_REQUEST_RECEIVED
-          }), (0, a.jsx)(r.Button, {
+          }), (0, s.jsx)(r.Button, {
             className: v.action,
             size: r.Button.Sizes.TINY,
             onClick: u,
             children: N.default.Messages.FRIEND_REQUEST_ACCEPT
-          }), (0, a.jsx)(r.Button, {
+          }), (0, s.jsx)(r.Button, {
             className: v.action,
             size: r.Button.Sizes.TINY,
             color: r.Button.Colors.PRIMARY,
             onClick: () => {
-              o.default.cancelFriendRequest(s, {
+              o.default.cancelFriendRequest(a, {
                 location: A.AnalyticsPages.DM_CHANNEL
               })
             },
@@ -171,8 +171,8 @@ let L = e => {
           }), d]
         });
       case A.RelationshipTypes.PENDING_OUTGOING:
-        return (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(r.Button, {
+        return (0, s.jsxs)(s.Fragment, {
+          children: [(0, s.jsx)(r.Button, {
             className: v.action,
             size: r.Button.Sizes.TINY,
             disabled: !0,
@@ -187,39 +187,39 @@ let L = e => {
     let {
       channelId: t,
       otherUserId: n
-    } = e, l = s.useCallback(() => {
+    } = e, l = a.useCallback(() => {
       (0, r.showToast)((0, r.createToast)(N.default.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE))
-    }, []), i = s.useCallback(() => {
-      h.default.closeChannelSidebar(E.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
-    }, []), o = s.useCallback(() => {
-      h.default.closeChannelSidebar(E.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+    }, []), i = a.useCallback(() => {
+      h.default.closeChannelSidebar(m.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+    }, []), o = a.useCallback(() => {
+      h.default.closeChannelSidebar(m.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
     }, []), {
       acceptMessageRequest: u,
       rejectMessageRequest: c,
       isAcceptLoading: f,
       isRejectLoading: C,
       isOptimisticAccepted: p,
-      isOptimisticRejected: m
+      isOptimisticRejected: E
     } = (0, d.useMessageRequestActions)({
       user: g.default.getUser(n),
       onError: l,
       onAcceptSuccess: o,
       onRejectSuccess: i
-    }), _ = f || C || p || m;
-    return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(r.Button, {
+    }), S = f || C || p || E;
+    return (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(r.Button, {
         className: v.action,
         size: r.Button.Sizes.TINY,
         onClick: () => u(t),
-        disabled: _,
+        disabled: S,
         submitting: f,
         children: N.default.Messages.MESSAGE_REQUEST_ACCEPT
-      }), (0, a.jsx)(r.Button, {
+      }), (0, s.jsx)(r.Button, {
         className: v.action,
         size: r.Button.Sizes.TINY,
         onClick: () => c(t),
         color: r.Button.Colors.PRIMARY,
-        disabled: _,
+        disabled: S,
         submitting: C,
         children: N.default.Messages.MESSAGE_REQUEST_IGNORE
       })]
@@ -229,56 +229,56 @@ var y = e => {
   let {
     userId: t,
     channel: n,
-    showingBanner: s
+    showingBanner: a
   } = e, {
     channelId: r
-  } = (0, c.useMessageRequestSidebarState)(), o = (0, i.useStateFromStores)([u.default], () => null != r && u.default.isSpam(r), [r]), d = (0, i.useStateFromStores)([m.default], () => m.default.getRelationshipType(t), [t]), h = n.id === r;
-  return t === M.CLYDE_AI_USER_ID ? null : o || h ? (0, a.jsxs)("div", {
+  } = (0, c.useMessageRequestSidebarState)(), o = (0, i.useStateFromStores)([u.default], () => null != r && u.default.isSpam(r), [r]), d = (0, i.useStateFromStores)([E.default], () => E.default.getRelationshipType(t), [t]), h = n.id === r;
+  return t === M.CLYDE_AI_USER_ID ? null : o || h ? (0, s.jsxs)("div", {
     className: v.mobileContainer,
-    children: [(0, a.jsx)("div", {
+    children: [(0, s.jsx)("div", {
       className: v.mobileMutualGuilds,
-      children: (0, a.jsx)(L, {
+      children: (0, s.jsx)(L, {
         userId: t
       })
-    }), (0, a.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: v.mobileButtons,
-      children: [(0, a.jsx)(x, {
+      children: [(0, s.jsx)(x, {
         channelId: n.id,
         otherUserId: t
-      }), (0, a.jsx)(f.default, {
+      }), (0, s.jsx)(f.default, {
         channel: n
       })]
     })]
-  }) : !0 === l.isMobile || h ? (0, a.jsxs)("div", {
+  }) : !0 === l.isMobile || h ? (0, s.jsxs)("div", {
     className: v.mobileContainer,
-    children: [(0, a.jsx)("div", {
+    children: [(0, s.jsx)("div", {
       className: v.mobileMutualGuilds,
-      children: (0, a.jsx)(L, {
+      children: (0, s.jsx)(L, {
         userId: t
       })
-    }), (0, a.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: v.mobileButtons,
-      children: [(0, a.jsx)(R, {
+      children: [(0, s.jsx)(R, {
         relationshipType: d,
         userId: t,
-        showingBanner: s
-      }), !s && (0, a.jsx)(T.default, {
+        showingBanner: a
+      }), !a && (0, s.jsx)(T.default, {
         otherUserId: t,
         channel: n,
         navigateAwayOnReportSuccess: !1
       })]
     })]
-  }) : (0, a.jsxs)("div", {
+  }) : (0, s.jsxs)("div", {
     className: v.container,
-    children: [(0, a.jsx)(L, {
+    children: [(0, s.jsx)(L, {
       userId: t
-    }), (0, a.jsx)("div", {
+    }), (0, s.jsx)("div", {
       className: v.divider
-    }), (0, a.jsx)(R, {
+    }), (0, s.jsx)(R, {
       relationshipType: d,
       userId: t,
-      showingBanner: s
-    }), !s && (0, a.jsx)(T.default, {
+      showingBanner: a
+    }), !a && (0, s.jsx)(T.default, {
       otherUserId: t,
       channel: n
     })]

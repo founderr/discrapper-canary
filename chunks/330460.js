@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var n = s("37983");
@@ -12,16 +12,16 @@ var a = s("77078"),
   i = s("324252"),
   l = s("782340"),
   u = s("932379"),
-  c = s("82480");
+  _ = s("82480");
 
-function d(e) {
+function c(e) {
   let {
     onNavigate: t,
     onClose: s
-  } = e, d = (0, i.getInappropriateConversationsSafetyTips)();
+  } = e, c = (0, i.getInappropriateConversationsSafetyTips)();
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)("img", {
-      src: c,
+      src: _,
       alt: l.default.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TIPS_ALT,
       className: u.heroImage
     }), (0, n.jsxs)(a.ModalContent, {
@@ -36,7 +36,7 @@ function d(e) {
       }), (0, n.jsx)("div", {
         className: u.safetyTips,
         children: (0, n.jsx)(o.default, {
-          tips: d,
+          tips: c,
           headerText: l.default.Messages.INAPPROPRIATE_CONVERSATION_TIPS_DESCRIPTION
         })
       })]

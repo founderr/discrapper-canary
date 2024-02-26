@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("384997"),
   N = n("785770"),
   R = n("260488"),
-  O = n("639547"),
-  v = n("775032"),
+  v = n("639547"),
+  O = n("775032"),
   L = n("25132"),
   M = n("300962"),
   P = n("154889"),
@@ -199,7 +199,7 @@ let eE = e => {
       selected: t
     } = e, n = (0, R.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
       channelId: l
-    } = (0, N.useMessageRequestSidebarState)(), i = (0, O.useShouldShowMessageRequestsRow)();
+    } = (0, N.useMessageRequestSidebarState)(), i = (0, v.useShouldShowMessageRequestsRow)();
     if (!i) return null;
     let r = null == l ? void 0 : () => h.default.preload(ed.ME, l);
     return (0, a.jsx)(er.LinkButton, {
@@ -217,7 +217,7 @@ let eE = e => {
   eS = e => {
     let {
       selected: t
-    } = e, n = ec.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = H.FamilyCenterEnabled.useSetting(), r = (0, v.default)(), [u, d] = s.useState(!0);
+    } = e, n = ec.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = H.FamilyCenterEnabled.useSetting(), r = (0, O.default)(), [u, d] = s.useState(!0);
     return i && r ? (0, a.jsx)(er.LinkButton, {
       selected: t,
       route: ed.Routes.FAMILY_CENTER,

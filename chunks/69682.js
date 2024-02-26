@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return E
   },
   default: function() {
-    return g
+    return S
   }
 });
 var l = n("37983"),
@@ -47,14 +47,14 @@ function E(e) {
   })
 }
 
-function g(e) {
+function S(e) {
   let t, {
       user: o,
       onClose: d
     } = e,
-    g = (0, s.useStateFromStores)([c.default], () => c.default.getMutualFriends(o.id));
+    S = (0, s.useStateFromStores)([c.default], () => c.default.getMutualFriends(o.id));
 
-  function S(e) {
+  function g(e) {
     d(), (0, f.openUserProfileModal)({
       userId: e,
       analyticsLocation: {
@@ -75,11 +75,11 @@ function g(e) {
     })
   }
   return a.useEffect(() => {
-    null == g && (0, u.fetchMutualFriends)(o.id)
-  }, [g, o.id]), t = null == g ? (0, l.jsx)("div", {
+    null == S && (0, u.fetchMutualFriends)(o.id)
+  }, [S, o.id]), t = null == S ? (0, l.jsx)("div", {
     className: p.empty,
     children: (0, l.jsx)(i.Spinner, {})
-  }) : 0 === g.length ? (0, l.jsxs)("div", {
+  }) : 0 === S.length ? (0, l.jsxs)("div", {
     className: p.empty,
     children: [(0, l.jsx)("div", {
       className: p.emptyIconFriends
@@ -87,10 +87,10 @@ function g(e) {
       className: p.emptyText,
       children: m.default.Messages.NO_MUTUAL_FRIENDS
     })]
-  }) : g.map(e => (0, l.jsx)(E, {
+  }) : S.map(e => (0, l.jsx)(E, {
     user: e.user,
     status: e.status,
-    onSelect: S,
+    onSelect: g,
     onContextMenu: C
   }, e.key)), (0, l.jsx)(i.ScrollerThin, {
     className: p.listScroller,

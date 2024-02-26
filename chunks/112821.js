@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var l = n("37983"),
@@ -19,12 +19,12 @@ var l = n("37983"),
   p = n("782340");
 let E = [];
 
-function g(e) {
+function S(e) {
   let {
     channel: t,
-    onJump: g
+    onJump: S
   } = e, {
-    messages: S,
+    messages: g,
     loading: C
   } = (0, s.useStateFromStoresObject)([c.default], () => {
     let e = c.default.getPinnedMessages(t.id),
@@ -37,7 +37,7 @@ function g(e) {
   return a.useEffect(() => {
     o.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "pins"
-    }).enabled && S.some(d.messageHasExpiredAttachmentUrl) && u.default.fetchPins(t.id, !0)
+    }).enabled && g.some(d.messageHasExpiredAttachmentUrl) && u.default.fetchPins(t.id, !0)
   }, []), a.useEffect(() => {
     _ && u.default.ackPins(t.id)
   }, [_, t.id]), (0, l.jsx)(r.Dialog, {
@@ -47,13 +47,13 @@ function g(e) {
         u.default.ackPins(t.id), u.default.fetchPins(t.id)
       },
       channel: t,
-      messages: S,
+      messages: g,
       loading: C,
       analyticsName: "Channel Pins",
       onCloseMessage: function(e, n) {
         null != e && (n.shiftKey ? u.default.unpinMessage(t, e.id) : m.default.confirmUnpin(t, e))
       },
-      onJump: g,
+      onJump: S,
       getProTip: function() {
         return t.isPrivate() ? p.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : p.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL
       },

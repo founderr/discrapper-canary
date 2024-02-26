@@ -34,7 +34,7 @@ let E = a.memo(function(e) {
     return n.forEach(t => {
       null != E[t.channelId] && e++
     }), e
-  }, [E, n]), I = null == n ? 0 : n.length;
+  }, [E, n]), S = null == n ? 0 : n.length;
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(i.Clickable, {
       className: p.progressBarContainer,
@@ -54,7 +54,7 @@ let E = a.memo(function(e) {
             className: p.rightText,
             children: C.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
               numberHook: m,
-              total: I.toString(),
+              total: S.toString(),
               completed: g.toString()
             })
           }), (0, l.jsx)(c.default, {
@@ -67,7 +67,7 @@ let E = a.memo(function(e) {
       }), (0, l.jsx)(i.Progress, {
         className: p.progressBar,
         foregroundGradientColor: [(0, r.getColor)(f.Color.GREEN_300), (0, r.getColor)(f.Color.GREEN_230)],
-        percent: g / I * 100 + 3,
+        percent: g / S * 100 + 3,
         animate: !0
       })]
     }), (0, l.jsx)("div", {

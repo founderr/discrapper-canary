@@ -32,9 +32,9 @@ var l = n("679653"),
   m = n("305961"),
   E = n("945956"),
   g = n("27618"),
-  I = n("18494"),
-  _ = n("162771"),
-  S = n("101125"),
+  S = n("18494"),
+  I = n("162771"),
+  _ = n("101125"),
   N = n("282109"),
   T = n("697218"),
   A = n("568734"),
@@ -50,7 +50,7 @@ function y(e, t, n) {
     a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
   if (t.hasFlag(R.UserFlags.SPAMMER) || n.isManaged()) return !1;
   let i = n.getGuildId();
-  return !(null != i && s.default.isLurking(i) || t.id === e.id || g.default.isBlocked(t.id) || !l && S.default.getStatus() === R.StatusTypes.DND || f.QuietMode.getSetting() || !a && N.default.allowNoMessages(n)) && !0
+  return !(null != i && s.default.isLurking(i) || t.id === e.id || g.default.isBlocked(t.id) || !l && _.default.getStatus() === R.StatusTypes.DND || f.QuietMode.getSetting() || !a && N.default.allowNoMessages(n)) && !0
 }
 
 function D(e, t) {
@@ -64,7 +64,7 @@ function D(e, t) {
     u = T.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
   if (null == s || null == r || null == u || s.type === R.ChannelTypes.GROUP_DM && e.type === R.MessageTypes.RECIPIENT_REMOVE || !y(r, u, s, a) || i.default.isMessageRequest(t)) return !1;
   if (!l) {
-    let e = I.default.getChannelId(_.default.getGuildId());
+    let e = S.default.getChannelId(I.default.getGuildId());
     if (e === s.id || C.default.getCurrentSidebarChannelId(e) === s.id) return !1
   }
   if (void 0 !== e.activity_instance && null != e.interaction && e.interaction.user.id === r.id) return !1;
@@ -93,13 +93,13 @@ function D(e, t) {
 
 function b(e, t) {
   var n;
-  let l = I.default.getChannelId(_.default.getGuildId());
+  let l = S.default.getChannelId(I.default.getGuildId());
   if (l !== t) return !1;
   let a = p.default.getChannel(t);
   e.type === R.MessageTypes.THREAD_STARTER_MESSAGE && (a = p.default.getChannel(null == a ? void 0 : a.parent_id));
   let s = T.default.getCurrentUser(),
     i = T.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
-  return !(null == a || null == s || null == i || a.isManaged() || i.hasFlag(R.UserFlags.SPAMMER) || g.default.isBlocked(i.id) || i.id === s.id || S.default.getStatus() === R.StatusTypes.DND || f.QuietMode.getSetting() || N.default.allowNoMessages(a)) && !0
+  return !(null == a || null == s || null == i || a.isManaged() || i.hasFlag(R.UserFlags.SPAMMER) || g.default.isBlocked(i.id) || i.id === s.id || _.default.getStatus() === R.StatusTypes.DND || f.QuietMode.getSetting() || N.default.allowNoMessages(a)) && !0
 }
 
 function j(e, t) {
@@ -109,7 +109,7 @@ function j(e, t) {
     s = T.default.getUser(e.ownerId);
   if (null == t || null == a || null == s || !y(a, s, t, l, !0) || N.default.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id)) return !1;
   if (!n) {
-    let e = I.default.getChannelId(_.default.getGuildId());
+    let e = S.default.getChannelId(I.default.getGuildId());
     if (e === t.id) return !1
   }
   return N.default.getNewForumThreadsCreated(t)

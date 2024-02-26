@@ -76,29 +76,29 @@ var p = a.memo(function(e) {
   } = e, {
     hasDivider: E,
     canHaveVoiceSummary: g
-  } = a.useMemo(() => (0, o.getSectionFooterConfig)(n, m, t), [n, m, t, u]), I = a.useMemo(() => t === r.SECTION_INDEX_COMMUNITY ? null : n.getCategoryFromSection(t), [n, t, u]), _ = a.useMemo(() => null != I && I.isCollapsed ? (0, i.computeSummarizedVoiceUsers)({
-    channels: I.getChannelRecords(),
+  } = a.useMemo(() => (0, o.getSectionFooterConfig)(n, m, t), [n, m, t, u]), S = a.useMemo(() => t === r.SECTION_INDEX_COMMUNITY ? null : n.getCategoryFromSection(t), [n, t, u]), I = a.useMemo(() => null != S && S.isCollapsed ? (0, i.computeSummarizedVoiceUsers)({
+    channels: S.getChannelRecords(),
     selectedChannelId: C,
     selectedVoiceChannelId: p,
     voiceStates: d
-  }) : [], [I, C, p, d]);
+  }) : [], [S, C, p, d]);
   if (t === n.voiceChannelsSectionNumber) return (0, l.jsx)(f, {
     guildChannels: n,
     guildChannelsVersion: u
   });
-  let S = E ? (0, l.jsx)("div", {
+  let _ = E ? (0, l.jsx)("div", {
     className: c.sectionDivider
   }) : null;
-  return g && 0 !== _.length ? (0, l.jsxs)(l.Fragment, {
+  return g && 0 !== I.length ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: c.voiceUserSummary,
       children: (0, l.jsx)(s.default, {
         renderIcon: !0,
-        users: _,
+        users: I,
         max: 8,
         showUserPopout: !0,
         guildId: h
       })
-    }), S]
-  }) : S
+    }), _]
+  }) : _
 })

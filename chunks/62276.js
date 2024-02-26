@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return R
+    return V
   }
 }), l("222007");
 var i = l("37983"),
@@ -10,8 +10,8 @@ var i = l("37983"),
   s = l.n(n),
   r = l("446674"),
   c = l("77078"),
-  d = l("272030"),
-  o = l("811425"),
+  o = l("272030"),
+  d = l("811425"),
   u = l("206230"),
   f = l("697218"),
   v = l("155207"),
@@ -20,41 +20,41 @@ var i = l("37983"),
   I = l("58608"),
   E = l("659500"),
   x = l("449008"),
-  p = l("387111"),
-  C = l("159885"),
-  T = l("191225"),
+  C = l("387111"),
+  T = l("159885"),
+  p = l("191225"),
   S = l("686569"),
-  A = l("607573"),
-  g = l("555584"),
+  g = l("607573"),
+  A = l("555584"),
   _ = l("817039"),
   N = l("687292"),
   j = l("141962"),
   D = l("905647"),
-  M = l("49111"),
-  y = l("782340"),
+  y = l("49111"),
+  M = l("782340"),
   L = l("962529"),
-  V = l("728791");
+  b = l("728791");
 
-function R(e) {
+function V(e) {
   let {
     activityItem: t,
     channel: n,
-    guildId: R,
-    locationObject: b,
+    guildId: V,
+    locationObject: R,
     onActivityItemVisible: O,
     onActivityItemSelected: H
   } = e, {
     imageBackground: B,
     videoUrl: F,
     activityAction: w,
-    staffReleasePhase: k,
+    staffReleasePhase: P,
     onActivityItemSelected: Y,
-    labelType: P
-  } = (0, A.default)({
+    labelType: k
+  } = (0, g.default)({
     activityItem: t,
     channel: n,
-    guildId: R,
-    locationObject: b,
+    guildId: V,
+    locationObject: R,
     onActivityItemVisible: O,
     onActivityItemSelected: H,
     embeddedActivitiesManager: j.default
@@ -63,20 +63,20 @@ function R(e) {
     enableMinimalActivityDetails: G
   } = S.ExperimentShelfToDetailPage.useExperiment({
     location: "05846b_1"
-  }), Z = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), W = (0, r.useStateFromStoresArray)([T.default, f.default], () => T.default.getUsersHavePlayedByApp(t.application.id).filter(e => {
+  }), Z = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), W = (0, r.useStateFromStoresArray)([p.default, f.default], () => p.default.getUsersHavePlayedByApp(t.application.id).filter(e => {
     var t;
     return (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) !== e
-  }).map(e => f.default.getUser(e)).filter(x.isNotNullish), [t.application.id]), z = null != W[0] ? (0, C.truncateText)(p.default.getName(null, null, W[0]), 25) : null, K = null;
-  null != z && W.length > 1 ? K = y.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
+  }).map(e => f.default.getUser(e)).filter(x.isNotNullish), [t.application.id]), z = null != W[0] ? (0, T.truncateText)(C.default.getName(null, null, W[0]), 25) : null, K = null;
+  null != z && W.length > 1 ? K = M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
     username1: z,
     extras: W.length - 1
-  }) : null != z && (K = y.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format({
+  }) : null != z && (K = M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format({
     username1: z
   }));
   let X = a.useCallback(e => e && (null == O ? void 0 : O({
       applicationId: t.application.id
     })), [t.application.id, O]),
-    q = (0, o.useIsVisible)(X, .8, !0),
+    q = (0, d.useIsVisible)(X, .8, !0),
     [J, Q] = a.useState(!1),
     [$, ee] = a.useState(J);
   a.useEffect(() => {
@@ -84,13 +84,13 @@ function R(e) {
   }, [J]);
   let et = () => Q(!0),
     el = () => Q(!1),
-    ei = null == t.application.maxParticipants || -1 === t.application.maxParticipants ? y.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : y.default.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({
+    ei = null == t.application.maxParticipants || -1 === t.application.maxParticipants ? M.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : M.default.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({
       count: t.application.maxParticipants
     }),
     ea = a.useCallback(() => {
-      U ? E.ComponentDispatch.dispatch(M.ComponentActions.SHOW_ACTIVITY_DETAILS, {
+      U ? E.ComponentDispatch.dispatch(y.ComponentActions.SHOW_ACTIVITY_DETAILS, {
         applicationId: t.application.id
-      }) : w === A.ActivityAction.START && Y()
+      }) : w === g.ActivityAction.START && Y()
     }, [w, t, U, Y]),
     en = D.ACTIVITIES_EXTRA_DETAILS[t.application.id],
     es = (null == en ? void 0 : en.playersSuggestionMin) != null && (null == en ? void 0 : en.playersSuggestionMax) != null ? "".concat(en.playersSuggestionMin, " - ").concat(en.playersSuggestionMax) : void 0;
@@ -101,7 +101,7 @@ function R(e) {
     }),
     onClick: ea,
     onContextMenu: e => {
-      (0, d.openContextMenuLazy)(e, async () => {
+      (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await l.el("639028").then(l.bind(l, "639028"));
@@ -135,7 +135,7 @@ function R(e) {
           autoPlay: !0,
           muted: !0
         })
-      }) : null, w !== A.ActivityAction.START ? (0, i.jsx)(g.ActivityActionOverlayButton, {
+      }) : null, w !== g.ActivityAction.START ? (0, i.jsx)(A.ActivityActionOverlayButton, {
         action: w,
         onClick: Y
       }) : null, G && null != es ? (0, i.jsx)("div", {
@@ -156,13 +156,13 @@ function R(e) {
           className: L.badgeContainer,
           children: [(0, i.jsx)(N.default, {
             name: t.application.name,
-            labelType: P
-          }), null != k ? (0, i.jsx)(c.Tooltip, {
-            text: k,
+            labelType: k
+          }), null != P ? (0, i.jsx)(c.Tooltip, {
+            text: P,
             children: e => (0, i.jsx)("img", {
               className: L.staffBadge,
-              alt: k,
-              src: V,
+              alt: P,
+              src: b,
               ...e
             })
           }) : null]
@@ -210,7 +210,7 @@ function R(e) {
         }),
         children: [(0, i.jsx)(c.Text, {
           variant: "text-sm/semibold",
-          children: y.default.Messages.LEARN_MORE
+          children: M.default.Messages.LEARN_MORE
         }), (0, i.jsx)(h.default, {
           width: 16,
           height: 16

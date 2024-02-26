@@ -20,9 +20,9 @@ var l = n("917351"),
   m = n("619443"),
   E = n("177589"),
   g = n("67139"),
-  I = n("671071"),
-  _ = n("322631"),
-  S = n("947297"),
+  S = n("671071"),
+  I = n("322631"),
+  _ = n("947297"),
   N = n("373469"),
   T = n("42203"),
   A = n("350522"),
@@ -58,7 +58,7 @@ function K(e) {
   let t = F[e];
   return null == t && (F = {
     ...F,
-    [e]: new S.default({
+    [e]: new _.default({
       name: e
     })
   }), F[e]
@@ -68,7 +68,7 @@ function W(e) {
   let t = B[e];
   return null == t && (B = {
     ...B,
-    [e]: new _.default({
+    [e]: new I.default({
       url: e
     })
   }), B[e]
@@ -79,7 +79,7 @@ function Z(e) {
 }
 
 function z(e) {
-  if ((0, d.default)(e)) return I.SpotifyApplication;
+  if ((0, d.default)(e)) return S.SpotifyApplication;
   let t = null != e.application_id ? C.default.getApplication(e.application_id) : null;
   return null != t ? t : (0, c.default)(e) ? K(e.name) : (0, f.default)(e) && null != e.url ? W(e.url) : (null != e.application_id && Z(e.application_id), t)
 }
@@ -95,7 +95,7 @@ function Q(e) {
   return M.default.isFriend(e.id)
 }
 
-function J(e, t, n) {
+function q(e, t, n) {
   var l, s, i, d, c;
   let f;
   let h = y.default.getCurrentUser(),
@@ -117,14 +117,14 @@ function J(e, t, n) {
       }), null == d) continue;
     let c = (0, E.default)(d);
     if (null == c) continue;
-    G = c === I.SPOTIFY_APPLICATION_ID;
+    G = c === S.SPOTIFY_APPLICATION_ID;
     let f = function(e) {
         let t = C.default.getApplication(e);
         return null != t ? t : "string" != typeof e ? (new(0, p.default)("NowPlayingViewStore").error("Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e), {
           tags: {
             source: "ACTIVITIES"
           }
-        }), null) : e === I.SPOTIFY_APPLICATION_ID ? I.SpotifyApplication : e.startsWith(S.XBOX_APPLICATION_ID_PREFIX) ? K(e.slice(S.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(_.TWITCH_APPLICATION_ID_PREFIX) ? W(e.slice(_.TWITCH_APPLICATION_ID_PREFIX.length)) : (Z(e), null)
+        }), null) : e === S.SPOTIFY_APPLICATION_ID ? S.SpotifyApplication : e.startsWith(_.XBOX_APPLICATION_ID_PREFIX) ? K(e.slice(_.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(I.TWITCH_APPLICATION_ID_PREFIX) ? W(e.slice(I.TWITCH_APPLICATION_ID_PREFIX.length)) : (Z(e), null)
       }(c),
       m = null === (l = d.timestamps) || void 0 === l ? void 0 : l.start;
     if ((0, u.default)(d)) {
@@ -209,12 +209,12 @@ function J(e, t, n) {
   }
 }
 
-function q() {
+function J() {
   return G && m.default.isConnected()
 }
 let $ = a.throttle(() => {
   ! function() {
-    if (!q()) return;
+    if (!J()) return;
     V.clear();
     let e = Array.from(k()).reduce((e, t) => {
         let n = y.default.getUser(t);
@@ -228,7 +228,7 @@ let $ = a.throttle(() => {
       }),
       n = function(e) {
         let t = k(),
-          n = J.bind(null, t);
+          n = q.bind(null, t);
         return a(e).mapValues(n)
       }(t),
       l = n.values().orderBy([e => e.partiedMembers.length > 1, e => e.applicationStreams.length > 0, e => e.voiceChannels.length > 0, e => e.currentActivities.length > 0, e => e.isSpotifyActivity, e => e.priorityMembers.map(e => e.user.username.toLowerCase()).join(" ")], ["desc", "desc", "desc", "desc", "asc", "asc"]).value();
@@ -245,7 +245,7 @@ let $ = a.throttle(() => {
 }, 1e3);
 
 function ee() {
-  return !!q() && ($(), !1)
+  return !!J() && ($(), !1)
 }
 class et extends s.default.Store {
   initialize() {

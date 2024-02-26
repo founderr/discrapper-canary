@@ -18,9 +18,9 @@ var l, a, s = n("37983"),
   m = n("815553"),
   E = n("274870"),
   g = n("718091"),
-  I = n("288518"),
-  _ = n("415435"),
-  S = n("486503"),
+  S = n("288518"),
+  I = n("415435"),
+  _ = n("486503"),
   N = n("161778"),
   T = n("42203"),
   A = n("824563"),
@@ -360,9 +360,9 @@ var G = e => {
     theme: n,
     children: l,
     showDMHeader: a
-  } = e, r = i.Children.count(l), o = T.default.getMutablePrivateChannels(), c = (0, _.filterOutMessageRequestsAndSpam)(o), f = (0, d.useStateFromStoresArray)([L.default, I.default, S.default], () => {
+  } = e, r = i.Children.count(l), o = T.default.getMutablePrivateChannels(), c = (0, I.filterOutMessageRequestsAndSpam)(o), f = (0, d.useStateFromStoresArray)([L.default, S.default, _.default], () => {
     let e = L.default.getPrivateChannelIds(),
-      t = (0, _.filterOutMessageRequestsAndSpamById)(e, [I.default, S.default]);
+      t = (0, I.filterOutMessageRequestsAndSpamById)(e, [S.default, _.default]);
     return (0, E.filterBroadcastingGDMs)(t)
   }, []), h = (0, d.useStateFromStoresObject)([C.default, N.default, T.default], () => ({
     theme: N.default.darkSidebar ? O.ThemeTypes.DARK : n,

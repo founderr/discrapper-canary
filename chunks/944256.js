@@ -46,7 +46,7 @@ let m = e => {
   let {
     listingId: t,
     isListingPublished: n
-  } = e, m = (0, o.default)(), [p] = u.useName(t), [E] = u.useImage(t, m), [g] = u.useSubscriptionPlan(t);
+  } = e, m = (0, o.default)(), [p] = u.useName(t), [E] = u.useImage(t, m), [S] = u.useSubscriptionPlan(t);
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(f, {
       listingName: p
@@ -59,15 +59,15 @@ let m = e => {
       variant: "heading-xl/semibold",
       className: c.tierPrice,
       tag: "div",
-      children: (0, i.formatPrice)(g.price, g.currency)
+      children: (0, i.formatPrice)(S.price, S.currency)
     }), (0, l.jsx)(a.Text, {
       variant: "text-xs/normal",
       color: "interactive-normal",
       className: c.tierPeriod,
       children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
         period: (0, r.formatPlanInterval)({
-          interval: g.interval,
-          interval_count: g.interval_count
+          interval: S.interval,
+          interval_count: S.interval_count
         })
       })
     })]

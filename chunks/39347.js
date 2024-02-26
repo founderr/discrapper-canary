@@ -21,9 +21,9 @@ var a = n("446674"),
   m = n("956089"),
   E = n("89073"),
   g = n("982721"),
-  I = n("973539"),
-  _ = n("447235"),
-  S = n("360723"),
+  S = n("973539"),
+  I = n("447235"),
+  _ = n("360723"),
   N = n("137376"),
   T = n("522052"),
   A = n("49111"),
@@ -45,7 +45,7 @@ function R(e) {
     isNewChannel: G,
     muted: U,
     resolvedUnreadSetting: P
-  } = e, w = (0, a.useStateFromStores)([C.default], () => C.default.getMentionCount(n.id)), F = (0, r.default)(n), B = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([p.default], () => p.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, _.default)({
+  } = e, w = (0, a.useStateFromStores)([C.default], () => C.default.getMentionCount(n.id)), F = (0, r.default)(n), B = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([p.default], () => p.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, I.default)({
     channel: n,
     locked: B,
     video: V || H,
@@ -54,7 +54,7 @@ function R(e) {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(A.GuildFeatures.COMMUNITY)) && void 0 !== t && t
   });
-  if ((0, I.default)(w)) return (0, l.jsx)(T.default, {
+  if ((0, S.default)(w)) return (0, l.jsx)(T.default, {
     mentionsCount: w
   });
   if ((0, u.showPremiumChannelIconButton)(b)) return (0, l.jsx)(u.default, {
@@ -85,7 +85,7 @@ function R(e) {
   }) : M && (0, E.hasStream)(O) && W ? (0, l.jsx)(m.TextBadge, {
     text: v.default.Messages.LIVE,
     color: s.default.unsafe_rawColors.RED_400.css
-  }) : null != D && D && (0, g.showChannelItemEmbeddedActivities)(F) ? (0, l.jsx)(S.default, {
+  }) : null != D && D && (0, g.showChannelItemEmbeddedActivities)(F) ? (0, l.jsx)(_.default, {
     embeddedApps: F,
     muted: U
   }) : null

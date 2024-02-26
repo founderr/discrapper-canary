@@ -23,22 +23,22 @@ function m(e) {
     height: s,
     channel: m,
     participants: p
-  } = e, [E, g] = function() {
+  } = e, [E, S] = function() {
     let [e, t] = a.useState(() => r.default.get(h, d.PictureInPicturePositions.BOTTOM_RIGHT));
     return [e, a.useCallback(e => {
       r.default.set(h, e), t(e)
     }, [])]
-  }(), S = a.useRef(null), C = null == m.getGuildId() ? 70 : 50;
+  }(), g = a.useRef(null), C = null == m.getGuildId() ? 70 : 50;
   return a.useLayoutEffect(() => {
     var e;
-    null === (e = S.current) || void 0 === e || e.ensureIsInPosition()
+    null === (e = g.current) || void 0 === e || e.ensureIsInPosition()
   }, [p.length]), (0, l.jsx)("div", {
     className: c.container,
     children: (0, l.jsx)(u.PictureInPictureWindow, {
       position: E,
       id: 0,
-      ref: S,
-      onMove: (e, t) => g(t),
+      ref: g,
+      onMove: (e, t) => S(t),
       maxX: t,
       maxY: s,
       edgeOffsetTop: C,

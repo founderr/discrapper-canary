@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return E
   }
 }), n("222007");
-var a = n("394846"),
-  s = n("446674"),
+var s = n("394846"),
+  a = n("446674"),
   l = n("913144"),
   i = n("619443"),
   r = n("624309"),
@@ -32,13 +32,13 @@ function p() {
       }
   }
 }
-class E extends s.default.Store {
+class m extends a.default.Store {
   initialize() {
     p(), this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type), this.waitFor(i.default)
   }
   shouldShow(e) {
     var t;
-    return !(!h || c || o.CONFERENCE_MODE_ENABLED || (t = e, a.isMobile && ["writing-messages", "organize-by-topic"].includes(t))) && (f[e] || !1)
+    return !(!h || c || o.CONFERENCE_MODE_ENABLED || (t = e, s.isMobile && ["writing-messages", "organize-by-topic"].includes(t))) && (f[e] || !1)
   }
   shouldShowAnyIndicators() {
     return !c
@@ -54,8 +54,8 @@ class E extends s.default.Store {
     return null != t ? t[e] : null
   }
 }
-E.displayName = "TutorialIndicatorStore";
-var m = new E(l.default, {
+m.displayName = "TutorialIndicatorStore";
+var E = new m(l.default, {
   CONNECTION_OPEN: function(e) {
     let {
       tutorial: t

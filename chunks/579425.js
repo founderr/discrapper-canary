@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("697218"),
   p = n("824326"),
   E = n("315102"),
-  g = n("387111"),
-  S = n("299039"),
+  S = n("387111"),
+  g = n("299039"),
   C = n("481931");
 
 function _(e) {
@@ -27,7 +27,7 @@ function _(e) {
     nowPlaying: t,
     guildId: n,
     channelId: a
-  } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getUser(t.userId)), o = null != s ? E.default.getUserAvatarURL(s) : null, d = g.default.getName(n, a, s), c = i.duration(i().diff(i(Number(t.startedPlaying)))).humanize(), f = null != t.activity.details ? "".concat(t.activity.details, " - ").concat(c) : c;
+  } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getUser(t.userId)), o = null != s ? E.default.getUserAvatarURL(s) : null, d = S.default.getName(n, a, s), c = i.duration(i().diff(i(Number(t.startedPlaying)))).humanize(), f = null != t.activity.details ? "".concat(t.activity.details, " - ").concat(c) : c;
   return (0, l.jsxs)("div", {
     className: C.userGameContainer,
     children: [(0, l.jsx)("div", {
@@ -58,7 +58,7 @@ function I(e) {
     game: t,
     guildId: n,
     channelId: s
-  } = e, i = a.useMemo(() => S.default.keys(t).filter(e => f.default.isMember(n, e)), [t, n]), d = i.length > 0 ? t[i[0]] : null, c = null == d ? void 0 : d.activity.application_id, h = (0, r.useStateFromStores)([o.default], () => null != c ? o.default.getApplication(c) : null != d ? o.default.getApplicationByName(d.activity.name) : null);
+  } = e, i = a.useMemo(() => g.default.keys(t).filter(e => f.default.isMember(n, e)), [t, n]), d = i.length > 0 ? t[i[0]] : null, c = null == d ? void 0 : d.activity.application_id, h = (0, r.useStateFromStores)([o.default], () => null != c ? o.default.getApplication(c) : null != d ? o.default.getApplicationByName(d.activity.name) : null);
   return 0 === i.length || null == d ? null : (0, l.jsxs)("div", {
     className: C.gameContainer,
     children: [(0, l.jsxs)("div", {

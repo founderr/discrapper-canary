@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("280168"),
   N = n("800762"),
   R = n("316133"),
-  O = n("449008"),
-  v = n("709681"),
+  v = n("449008"),
+  O = n("709681"),
   L = n("49111");
 
 function M(e, t, n, a) {
@@ -37,7 +37,7 @@ function M(e, t, n, a) {
       l = new r.BatchedStoreListener(e, () => {
         let e = t(),
           l = n(s, e);
-        null != l && !p.default.isSoundDisabled(l) && (0, v.playSound)(l, null != a ? a : .4), s = e
+        null != l && !p.default.isSoundDisabled(l) && (0, O.playSound)(l, null != a ? a : .4), s = e
       });
     return l.attach("useSound"), () => l.detach()
   })
@@ -190,7 +190,7 @@ function j() {
   return M([g.default, u.default, C.default], () => {
     let e = g.default.getVoiceChannelId(),
       t = C.default.getId(),
-      n = (0, O.isNotNullish)(e) ? u.default.getEmbeddedActivitiesForChannel(e) : u.NO_ACTIVITIES;
+      n = (0, v.isNotNullish)(e) ? u.default.getEmbeddedActivitiesForChannel(e) : u.NO_ACTIVITIES;
     return {
       voiceChannelId: e,
       currentUserId: t,
@@ -213,7 +213,7 @@ function j() {
     e.channelActivities.length < l.length && (n = "activity_launch", r = !0);
     let u = e.channelActivities.find(e => e.userIds.has(s)),
       d = l.find(e => e.userIds.has(s));
-    if (void 0 === d && (0, O.isNotNullish)(u) && (n = "activity_end", r = !0), void 0 === u && (0, O.isNotNullish)(d) && d.userIds.size > 1 && (n = "activity_user_join", r = !0), (0, O.isNotNullish)(d) && (0, O.isNotNullish)(u) && (d.userIds.size > u.userIds.size && (n = "activity_user_join", r = !0), d.userIds.size < u.userIds.size && (n = "activity_user_left", r = !0)), r && o.ActivitiesSoundsExperiment.trackExposure({
+    if (void 0 === d && (0, v.isNotNullish)(u) && (n = "activity_end", r = !0), void 0 === u && (0, v.isNotNullish)(d) && d.userIds.size > 1 && (n = "activity_user_join", r = !0), (0, v.isNotNullish)(d) && (0, v.isNotNullish)(u) && (d.userIds.size > u.userIds.size && (n = "activity_user_join", r = !0), d.userIds.size < u.userIds.size && (n = "activity_user_left", r = !0)), r && o.ActivitiesSoundsExperiment.trackExposure({
         location: "5ef733_2"
       }), i) return n
   }), null

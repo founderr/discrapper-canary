@@ -8,15 +8,15 @@ var n = s("37983");
 s("884691");
 var a = s("414456"),
   l = s.n(a),
-  r = s("77078"),
-  T = s("130152"),
+  T = s("77078"),
+  r = s("130152"),
   o = function(e) {
     let {
       children: t,
       style: s
     } = e;
-    return (0, n.jsx)(r.ModalContent, {
-      className: l(T.modalContent, s),
+    return (0, n.jsx)(T.ModalContent, {
+      className: l(r.modalContent, s),
       children: t
     })
   }

@@ -28,7 +28,7 @@ var a = n("37983"),
   N = n("782340"),
   R = n("393719");
 
-function O(e) {
+function v(e) {
   let {
     user: t,
     onSelect: n
@@ -78,7 +78,7 @@ function O(e) {
     })]
   })
 }
-class v extends s.PureComponent {
+class O extends s.PureComponent {
   componentWillLeave(e) {
     null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e)
   }
@@ -149,7 +149,7 @@ class v extends s.PureComponent {
       let {
         user: t
       } = this.props;
-      (0, d.openContextMenu)(e, e => (0, a.jsx)(O, {
+      (0, d.openContextMenu)(e, e => (0, a.jsx)(v, {
         ...e,
         user: t
       }), {
@@ -164,4 +164,4 @@ class v extends s.PureComponent {
     }
   }
 }
-var L = v
+var L = O

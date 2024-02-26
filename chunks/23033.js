@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("697218"),
   p = n("433487"),
   E = n("448881"),
-  g = n("879364"),
-  S = n("2973"),
+  S = n("879364"),
+  g = n("2973"),
   C = n("588025"),
   _ = n("227231"),
   I = n("315130"),
@@ -38,7 +38,7 @@ var l = n("37983"),
     } = e, y = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentUser()), {
       isCurrentUserStreamingQuestApplication: O,
       quest: P
-    } = (0, r.useStateFromStoresObject)([h.default, d.default, S.default], () => {
+    } = (0, r.useStateFromStoresObject)([h.default, d.default, g.default], () => {
       let e = d.default.getParticipants(L),
         t = function(e, t, n) {
           for (let a of e)
@@ -48,7 +48,7 @@ var l = n("37983"),
                 s = (null == e ? void 0 : e.id) != null ? (0, _.getQuestByApplicationId)(t, e.id) : null;
               if (null != s && (null === (l = s.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null) return s
             } return null
-        }(e, S.default.quests, h.default),
+        }(e, g.default.quests, h.default),
         n = null != t && null != y && function(e, t, n, l) {
           for (let s of e) {
             var a;
@@ -60,7 +60,7 @@ var l = n("37983"),
         isCurrentUserStreamingQuestApplication: n,
         quest: t
       }
-    }, [L, y]), b = (0, r.useStateFromStores)([f.default], () => f.default.locale), D = (0, r.useStateFromStores)([S.default], () => null != P && S.default.isEnrolling(P.id), [P]), U = (0, r.useStateFromStores)([d.default], () => ((null == y ? void 0 : y.id) == null ? null : d.default.getParticipant(L, y.id)) != null, [L, y]), w = a.useMemo(() => null == P ? "" : new Date(P.config.expiresAt).toLocaleDateString(b, {
+    }, [L, y]), b = (0, r.useStateFromStores)([f.default], () => f.default.locale), D = (0, r.useStateFromStores)([g.default], () => null != P && g.default.isEnrolling(P.id), [P]), U = (0, r.useStateFromStores)([d.default], () => ((null == y ? void 0 : y.id) == null ? null : d.default.getParticipant(L, y.id)) != null, [L, y]), w = a.useMemo(() => null == P ? "" : new Date(P.config.expiresAt).toLocaleDateString(b, {
       dateStyle: "short"
     }), [P, b]), F = a.useCallback(() => {
       null != P && (0, E.enrollInQuest)(P.id, C.QuestContent.QUEST_LIVE_STREAM)
@@ -69,7 +69,7 @@ var l = n("37983"),
     }, []), B = (0, x.useHandleClaimQuestsReward)({
       quest: P,
       location: C.QuestContent.QUEST_LIVE_STREAM
-    }), V = (0, g.useIsQuestExpired)(P);
+    }), V = (0, S.useIsQuestExpired)(P);
     if (null == P) return null;
     let G = (null === (t = P.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
       H = (null === (n = P.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,

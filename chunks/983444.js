@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   usePermissions: function() {
-    return _
+    return S
   },
   useCompletedStates: function() {
-    return S
+    return _
   }
 }), n("222007");
-var a = n("884691"),
-  s = n("917351"),
-  l = n.n(s),
+var s = n("884691"),
+  a = n("917351"),
+  l = n.n(a),
   i = n("446674"),
   r = n("242757"),
   o = n("913491"),
@@ -20,20 +20,20 @@ var a = n("884691"),
   h = n("305961"),
   C = n("778588"),
   p = n("377253"),
-  E = n("957255"),
-  m = n("299039"),
+  m = n("957255"),
+  E = n("299039"),
   g = n("49111");
 
-function _(e, t) {
-  return (0, i.useStateFromStoresObject)([E.default], () => ({
-    canInvite: (0, r.canViewInviteModal)(E.default, t, e),
-    canManageGuild: null != t && E.default.can(g.Permissions.MANAGE_GUILD, t),
-    canMessage: null != e && E.default.can(g.Permissions.SEND_MESSAGES, e),
-    canCreateChannel: null != t && E.default.can(g.Permissions.MANAGE_CHANNELS, t)
+function S(e, t) {
+  return (0, i.useStateFromStoresObject)([m.default], () => ({
+    canInvite: (0, r.canViewInviteModal)(m.default, t, e),
+    canManageGuild: null != t && m.default.can(g.Permissions.MANAGE_GUILD, t),
+    canMessage: null != e && m.default.can(g.Permissions.SEND_MESSAGES, e),
+    canCreateChannel: null != t && m.default.can(g.Permissions.MANAGE_CHANNELS, t)
   }), [t, e])
 }
 
-function S(e) {
+function _(e) {
   var t;
   return {
     guildPopulated: function(e) {
@@ -41,14 +41,14 @@ function S(e) {
         n = (0, i.useStateFromStoresArray)([p.default], () => null != t ? p.default.getMessages(t.id).toArray() : []);
       return (0, i.useStateFromStores)([f.default], () => {
         var t;
-        let a = null !== (t = f.default.getMemberCount(null == e ? void 0 : e.id)) && void 0 !== t ? t : 0,
-          s = n.some(e => e.type === g.MessageTypes.USER_JOIN);
-        return a > 1 || s
+        let s = null !== (t = f.default.getMemberCount(null == e ? void 0 : e.id)) && void 0 !== t ? t : 0,
+          a = n.some(e => e.type === g.MessageTypes.USER_JOIN);
+        return s > 1 || a
       }, [e, n])
     }(e),
     guildMessaged: function(e) {
       let t = (0, i.useStateFromStores)([d.default], () => null != e ? d.default.getMutableBasicGuildChannelsForGuild(e.id) : null),
-        n = a.useMemo(() => null == t ? [] : l.values(t), [t]);
+        n = s.useMemo(() => null == t ? [] : l.values(t), [t]);
       return function(e) {
         let t = (0, i.useStateFromStores)([u.default], () => u.default.getId());
         return (0, i.useStateFromStores)([p.default], () => l.some(e, e => {
@@ -66,10 +66,10 @@ function S(e) {
       let e = c.default.getChannels(null == t ? void 0 : t.id),
         n = e[c.GUILD_VOCAL_CHANNELS_KEY];
 
-      function a(e) {
-        return null != t && m.default.extractTimestamp(e.channel.id) - m.default.extractTimestamp(t.id) > 500
+      function s(e) {
+        return null != t && E.default.extractTimestamp(e.channel.id) - E.default.extractTimestamp(t.id) > 500
       }
-      return e[0, c.GUILD_SELECTABLE_CHANNELS_KEY].some(a) || n.some(a)
+      return e[0, c.GUILD_SELECTABLE_CHANNELS_KEY].some(s) || n.some(s)
     }, [t]))
   }
 }

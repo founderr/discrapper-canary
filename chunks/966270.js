@@ -24,9 +24,9 @@ let h = a.forwardRef(function(e, t) {
     tooltip: m,
     upperBadge: E,
     lowerBadge: g,
-    lowerBadgeWidth: I,
-    showPill: _ = !0,
-    className: S,
+    lowerBadgeWidth: S,
+    showPill: I = !0,
+    className: _,
     "aria-label": N,
     children: T,
     onMouseEnter: A,
@@ -34,7 +34,7 @@ let h = a.forwardRef(function(e, t) {
     onMouseDown: v
   } = e, x = (0, r.useTreeItem)(n), [R, M] = a.useState(!1), O = "string" == typeof m && null == N ? m : N;
   return (0, l.jsxs)(d.ListItem, {
-    children: [_ ? (0, l.jsx)("div", {
+    children: [I ? (0, l.jsx)("div", {
       className: f.pill,
       children: (0, l.jsx)(u.default, {
         hovered: R,
@@ -48,7 +48,7 @@ let h = a.forwardRef(function(e, t) {
         selected: p || R,
         upperBadge: E,
         lowerBadge: g,
-        lowerBadgeWidth: I,
+        lowerBadgeWidth: S,
         children: (0, l.jsx)(o.Clickable, {
           innerRef: t,
           onMouseEnter: () => {
@@ -58,7 +58,7 @@ let h = a.forwardRef(function(e, t) {
             null == L || L(), M(!1)
           },
           onMouseDown: v,
-          className: i(f.circleIconButton, S, {
+          className: i(f.circleIconButton, _, {
             [f.selected]: p || R
           }),
           onClick: s,

@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("876715"),
   p = n("842044"),
   E = n("329515"),
-  g = n("49111"),
-  S = n("99795"),
+  S = n("49111"),
+  g = n("99795"),
   C = n("772313"),
   _ = n("233636");
 let I = 16 / 9,
@@ -50,7 +50,7 @@ function v(e) {
     [B, V] = a.useState(null),
     [G, H] = a.useState(!0),
     [W, Y] = a.useState(!1),
-    z = j.type === S.ParticipantTypes.ACTIVITY,
+    z = j.type === g.ParticipantTypes.ACTIVITY,
     K = !z && null != j.streamId,
     Z = K && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : I,
     X = b <= 2 * T + 144,
@@ -79,9 +79,9 @@ function v(e) {
         clamp: !0
       },
       onStart: () => Y(!0),
-      onChange: () => f.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET),
+      onChange: () => f.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET),
       onRest: () => {
-        Y(!1), f.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET)
+        Y(!1), f.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET)
       }
     }),
     es = (0, r.useSpring)({
@@ -179,7 +179,7 @@ function v(e) {
               }, i) : null
             })
           })
-        }), X || D === g.ChannelLayouts.MINIMUM || D === g.ChannelLayouts.NORMAL ? null : (0, l.jsx)(r.animated.div, {
+        }), X || D === S.ChannelLayouts.MINIMUM || D === S.ChannelLayouts.NORMAL ? null : (0, l.jsx)(r.animated.div, {
           className: i(_.actionRow, {
             [_.idle]: U
           }),

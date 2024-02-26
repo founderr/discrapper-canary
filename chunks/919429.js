@@ -21,9 +21,9 @@ var a = n("414456"),
   m = n("15684"),
   E = n("300322"),
   g = n("42203"),
-  I = n("305961"),
-  _ = n("957255"),
-  S = n("660478"),
+  S = n("305961"),
+  I = n("957255"),
+  _ = n("660478"),
   N = n("282109"),
   T = n("697218"),
   A = n("79234"),
@@ -66,13 +66,13 @@ class D extends L.default {
       canReorderChannel: m,
       isSubscriptionGated: E,
       isFavoriteSuggestion: g,
-      subtitle: I,
-      forceTopLevelThread: _,
-      embeddedApps: S,
+      subtitle: S,
+      forceTopLevelThread: I,
+      embeddedApps: _,
       resolvedUnreadSetting: N,
       withGuildIcon: T,
       enableActivities: A
-    } = this.props, L = A && null != S && S.length > 0, v = (0, C.getChannelSubtitle)(I), R = (0, l.jsx)("li", {
+    } = this.props, L = A && null != _ && _.length > 0, v = (0, C.getChannelSubtitle)(S), R = (0, l.jsx)("li", {
       className: s(this.getClassName(), {
         [y.disabled]: this.isDisabled(),
         [y.selected]: n
@@ -101,7 +101,7 @@ class D extends L.default {
           onContextMenu: this.handleContextMenu,
           connectDragPreview: m ? p : null,
           isFavoriteSuggestion: g,
-          channelTypeOverride: _ ? M.ChannelTypes.GUILD_TEXT : void 0,
+          channelTypeOverride: I ? M.ChannelTypes.GUILD_TEXT : void 0,
           resolvedUnreadSetting: N,
           withGuildIcon: T,
           "aria-label": (0, h.default)({
@@ -199,7 +199,7 @@ class D extends L.default {
         });
         return
       }
-      let a = I.default.getGuild(t.getGuildId());
+      let a = S.default.getGuild(t.getGuildId());
       null != a && (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -226,15 +226,15 @@ function j(e) {
   } = e, {
     hasActiveThreads: u,
     hasMoreActiveThreads: d
-  } = (0, E.useHasActiveThreads)(t), h = (0, i.useStateFromStoresObject)([S.default], () => ({
-    unread: S.default.hasUnread(t.id),
-    ackMessageId: S.default.ackMessageId(t.id),
-    mentionCount: S.default.getMentionCount(t.id)
-  })), C = (0, i.useStateFromStores)([N.default], () => N.default.resolveUnreadSetting(t)), I = (0, i.useStateFromStoresObject)([g.default, _.default], () => {
+  } = (0, E.useHasActiveThreads)(t), h = (0, i.useStateFromStoresObject)([_.default], () => ({
+    unread: _.default.hasUnread(t.id),
+    ackMessageId: _.default.ackMessageId(t.id),
+    mentionCount: _.default.getMentionCount(t.id)
+  })), C = (0, i.useStateFromStores)([N.default], () => N.default.resolveUnreadSetting(t)), S = (0, i.useStateFromStoresObject)([g.default, I.default], () => {
     let e = g.default.getChannel(t.parent_id);
     return {
-      canManageChannel: _.default.can(M.Permissions.MANAGE_CHANNELS, t),
-      canReorderChannel: !0 !== a && (n.id === O.FAVORITES_RAW_GUILD_ID || (null != e ? _.default.can(M.Permissions.MANAGE_CHANNELS, e) : _.default.can(M.Permissions.MANAGE_CHANNELS, n)))
+      canManageChannel: I.default.can(M.Permissions.MANAGE_CHANNELS, t),
+      canReorderChannel: !0 !== a && (n.id === O.FAVORITES_RAW_GUILD_ID || (null != e ? I.default.can(M.Permissions.MANAGE_CHANNELS, e) : I.default.can(M.Permissions.MANAGE_CHANNELS, n)))
     }
   }), A = (0, i.useStateFromStores)([m.default], () => m.default.shouldIndicateNewChannel(n.id, t.id)), {
     needSubscriptionToAccess: L,
@@ -255,7 +255,7 @@ function j(e) {
   }), G = (0, f.default)(t);
   return (0, l.jsx)(b, {
     ...h,
-    ...I,
+    ...S,
     ...e,
     hasActiveThreads: u,
     hasMoreActiveThreads: d,

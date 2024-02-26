@@ -21,9 +21,9 @@ var l = n("37983"),
       participants: m,
       channel: p,
       hasConnectPermission: E
-    } = e, g = m.filter(c.isUserParticipant), S = (0, u.useShowMemberVerificationGate)(p.guild_id), C = a.useCallback(() => {
-      S ? (0, r.openMemberVerificationModal)(p.guild_id, () => i.default.selectVoiceChannel(p.id)) : i.default.selectVoiceChannel(p.id)
-    }, [p.id, p.guild_id, S]), _ = 4 === g.length ? 2 : 3;
+    } = e, S = m.filter(c.isUserParticipant), g = (0, u.useShowMemberVerificationGate)(p.guild_id), C = a.useCallback(() => {
+      g ? (0, r.openMemberVerificationModal)(p.guild_id, () => i.default.selectVoiceChannel(p.id)) : i.default.selectVoiceChannel(p.id)
+    }, [p.id, p.guild_id, g]), _ = 4 === S.length ? 2 : 3;
     return (0, l.jsxs)("div", {
       className: h.container,
       children: [(0, l.jsx)("div", {
@@ -31,7 +31,7 @@ var l = n("37983"),
         style: {
           maxWidth: 168 * _
         },
-        children: g.slice(0, 5).map(e => (0, l.jsx)(d.default, {
+        children: S.slice(0, 5).map(e => (0, l.jsx)(d.default, {
           participant: e,
           channel: p,
           className: h.tile,
@@ -50,7 +50,7 @@ var l = n("37983"),
         children: (0, l.jsx)(s.Text, {
           color: "header-secondary",
           variant: "text-sm/normal",
-          children: (t = p, 0 === (n = g).length ? f.default.Messages.CURRENTLY_IN_VOICE_EMPTY : 1 === n.length ? f.default.Messages.CURRENTLY_IN_VOICE_1.format({
+          children: (t = p, 0 === (n = S).length ? f.default.Messages.CURRENTLY_IN_VOICE_EMPTY : 1 === n.length ? f.default.Messages.CURRENTLY_IN_VOICE_1.format({
             a: (0, o.default)(t, n[0])
           }) : 2 === n.length ? f.default.Messages.CURRENTLY_IN_VOICE_2.format({
             a: (0, o.default)(t, n[0]),

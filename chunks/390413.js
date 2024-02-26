@@ -27,11 +27,11 @@ var m = e => {
     loadingContentsCount: m = 0,
     className: p,
     onHover: E,
-    onFocus: g
-  } = e, [S, C] = i.useState(!0), _ = (0, s.jsx)("div", {
+    onFocus: S
+  } = e, [g, C] = i.useState(!0), _ = (0, s.jsx)("div", {
     className: f.iconWrapper,
     children: (0, s.jsx)(d.default, {
-      direction: S ? d.default.Directions.RIGHT : d.default.Directions.DOWN
+      direction: g ? d.default.Directions.RIGHT : d.default.Directions.DOWN
     })
   });
   return (0, s.jsxs)("div", {
@@ -41,8 +41,8 @@ var m = e => {
       innerClassName: f.collapseBtnContent,
       color: o.ButtonColors.CUSTOM,
       onMouseEnter: E,
-      onFocus: g,
-      onClick: () => C(!S),
+      onFocus: S,
+      onClick: () => C(!g),
       children: a ? (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(c.ContentBlob, {
           width: 34,
@@ -59,7 +59,7 @@ var m = e => {
       })
     }), (0, s.jsx)("ul", {
       className: u(f.connectionList, {
-        [f.isCollapsed]: S
+        [f.isCollapsed]: g
       }),
       children: r ? Array.from({
         length: m

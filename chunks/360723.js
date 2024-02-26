@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return d
+    return o
   }
 });
 var i = l("37983");
@@ -12,7 +12,7 @@ var a = l("414456"),
   r = l("953109"),
   c = l("749170");
 
-function d(e) {
+function o(e) {
   let {
     className: t,
     embeddedApps: l,

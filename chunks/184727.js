@@ -23,8 +23,8 @@ function h(e) {
     forceLightTheme: p,
     hideEditButton: E = !1
   } = e, {
-    isEntryAdmin: g,
-    canEdit: S,
+    isEntryAdmin: S,
+    canEdit: g,
     canRemove: C
   } = (0, c.default)(t), _ = (0, r.default)({
     id: t.guildId,
@@ -32,7 +32,7 @@ function h(e) {
     onSuccess: m
   });
   a.useEffect(() => {
-    !S && !C && null == _ && (0, i.closeContextMenu)()
+    !g && !C && null == _ && (0, i.closeContextMenu)()
   });
   let I = () => {
     d.removeDirectoryGuildEntry(t.channelId, t.guildId)
@@ -48,7 +48,7 @@ function h(e) {
     "aria-label": f.default.Messages.GUILD_ACTIONS_MENU_LABEL,
     onSelect: h,
     children: [(0, l.jsxs)(s.MenuGroup, {
-      children: [S && !E ? (0, l.jsx)(s.MenuItem, {
+      children: [g && !E ? (0, l.jsx)(s.MenuItem, {
         id: "update-entry",
         label: f.default.Messages.HUB_ENTRY_UPDATE,
         action: function() {
@@ -81,7 +81,7 @@ function h(e) {
           })), T()
         },
         color: "danger"
-      }) : null, g ? null : (0, l.jsx)(l.Fragment, {
+      }) : null, S ? null : (0, l.jsx)(l.Fragment, {
         children: (0, l.jsx)(s.MenuItem, {
           id: "report-server-listing",
           label: f.default.Messages.REPORT_SERVER_NO_NAME,

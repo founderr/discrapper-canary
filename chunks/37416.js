@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return J
+    return q
   }
 }), n("222007"), n("70102");
 var l = n("37983");
@@ -21,9 +21,9 @@ var a = n("414456"),
   m = n("481699"),
   E = n("679653"),
   g = n("242740"),
-  I = n("557661"),
-  _ = n("261552"),
-  S = n("233322"),
+  S = n("557661"),
+  I = n("261552"),
+  _ = n("233322"),
   N = n("157186"),
   T = n("848848"),
   A = n("534222"),
@@ -85,7 +85,7 @@ class X extends F.default {
       connected: n,
       enableHangStatus: a,
       allowChannelTopic: s
-    } = this.props, i = null === (e = (0, I.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
+    } = this.props, i = null === (e = (0, S.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
       hovered: r
     } = this.state;
     return (0, l.jsx)(k.default, {
@@ -141,9 +141,9 @@ class X extends F.default {
       connectUserDropTarget: C,
       connectDragPreview: E,
       canReorderChannel: g,
-      canMoveMembers: I,
-      showTutorial: _,
-      hasActiveEvent: S,
+      canMoveMembers: S,
+      showTutorial: I,
+      hasActiveEvent: _,
       embeddedApps: N,
       isSubscriptionGated: T,
       isFavoriteSuggestion: A,
@@ -176,7 +176,7 @@ class X extends F.default {
               return (0, l.jsxs)(V.default, {
                 className: z.iconVisibility,
                 iconClassName: s({
-                  [z.iconLive]: S
+                  [z.iconLive]: _
                 }),
                 channel: e,
                 selected: !A && t,
@@ -215,7 +215,7 @@ class X extends F.default {
         })
       }), this.renderVoiceUsers()]
     });
-    return I && (O = C(O)), g && (O = f(h(O))), _ && (O = (0, l.jsx)(R.default, {
+    return S && (O = C(O)), g && (O = f(h(O))), I && (O = (0, l.jsx)(R.default, {
       tutorialId: "voice-conversations",
       position: "right",
       offsetX: -20,
@@ -279,7 +279,7 @@ class X extends F.default {
       let {
         channel: e
       } = this.props, t = e.getGuildId();
-      null != t && (0, N.shouldShowMembershipVerificationGate)(t) && (0, S.openMemberVerificationModal)(t), this.handleVoiceConnect()
+      null != t && (0, N.shouldShowMembershipVerificationGate)(t) && (0, _.openMemberVerificationModal)(t), this.handleVoiceConnect()
     }, this.handleVoiceStatusClick = e => {
       let {
         connected: t,
@@ -368,7 +368,7 @@ class X extends F.default {
 }
 let Q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(X));
 
-function J(e) {
+function q(e) {
   let {
     guild: t,
     channel: n,
@@ -392,9 +392,9 @@ function J(e) {
       unverifiedAccount: !l.canChat
     }
   }), C = (0, i.useStateFromStores)([U.default], () => U.default.hasVideo(n.id)), p = (0, h.default)(n), m = (0, E.default)(n), g = (0, A.useActiveEvent)(n.id), {
-    isSubscriptionGated: I,
-    needSubscriptionToAccess: S
-  } = (0, T.default)(n.id), N = (0, _.default)(), L = (0, i.useStateFromStores)([G.default], () => G.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
+    isSubscriptionGated: S,
+    needSubscriptionToAccess: _
+  } = (0, T.default)(n.id), N = (0, I.default)(), L = (0, i.useStateFromStores)([G.default], () => G.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
     enableHangStatus: R,
     allowChannelTopic: M
   } = v.HangStatusExperiment.useExperiment({
@@ -407,8 +407,8 @@ function J(e) {
     isChannelSelected: r,
     isChannelCollapsed: o,
     voiceStates: u,
-    isSubscriptionGated: I,
-    needSubscriptionToAccess: S,
+    isSubscriptionGated: S,
+    needSubscriptionToAccess: _,
     enableConnectedUserLimit: !0,
     enableActivities: !0
   }), P = x && null == y;
@@ -418,8 +418,8 @@ function J(e) {
     embeddedActivityType: K.ActivityTypes.PLAYING,
     video: C,
     hasActiveEvent: null != g,
-    isSubscriptionGated: I,
-    needSubscriptionToAccess: S,
+    isSubscriptionGated: S,
+    needSubscriptionToAccess: _,
     ...d,
     ...f,
     ...e,
