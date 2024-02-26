@@ -1,67 +1,67 @@
 "use strict";
 n.r(t), n.d(t, {
   isAdmin: function() {
-    return T
-  },
-  getRoleRowData: function() {
     return S
   },
-  sortRoles: function() {
+  getRoleRowData: function() {
     return O
   },
-  getNoRolesRow: function() {
+  sortRoles: function() {
     return I
   },
+  getNoRolesRow: function() {
+    return A
+  },
   isEveryoneRoleId: function() {
-    return M
+    return p
   },
   getRolesRows: function() {
-    return h
-  },
-  getRolesRowsWithPermissionDisabled: function() {
     return m
   },
-  getExistingRolesRows: function() {
+  getRolesRowsWithPermissionDisabled: function() {
     return g
   },
-  getExistingRolesRowWithPermissionDisabled: function() {
+  getExistingRolesRows: function() {
     return C
   },
-  getMembersRows: function() {
-    return P
+  getExistingRolesRowWithPermissionDisabled: function() {
+    return w
   },
-  getExistingMembersRows: function() {
+  getMembersRows: function() {
     return y
   },
-  getRowTypeLabel: function() {
+  getExistingMembersRows: function() {
     return G
   },
-  getRemoveTooltipHint: function() {
+  getRowTypeLabel: function() {
     return H
   },
-  flipEveryonePermission: function() {
+  getRemoveTooltipHint: function() {
     return U
   },
-  toggleChannelEveryonePermission: function() {
+  flipEveryonePermission: function() {
     return B
   },
-  grantUserChannelAccess: function() {
+  toggleChannelEveryonePermission: function() {
     return b
   },
-  isPrivateGuildChannel: function() {
+  grantUserChannelAccess: function() {
     return V
   },
-  hasCustomRoles: function() {
+  isPrivateGuildChannel: function() {
     return k
   },
-  canCreatePrivateChannel: function() {
+  hasCustomRoles: function() {
     return W
   },
-  getPrivateChannelHintText: function() {
+  canCreatePrivateChannel: function() {
     return F
   },
-  extractPermissionOverwrites: function() {
+  getPrivateChannelHintText: function() {
     return x
+  },
+  extractPermissionOverwrites: function() {
+    return Y
   }
 }), n("424973");
 var r = n("316693"),
@@ -74,48 +74,49 @@ var r = n("316693"),
   d = n("404008"),
   f = n("449008"),
   E = n("991170"),
-  c = n("158998"),
-  N = n("606762"),
-  _ = n("49111"),
-  R = n("782340");
-
-function T(e) {
-  return r.default.has(e.permissions, _.Permissions.ADMINISTRATOR)
-}
+  c = n("299039"),
+  N = n("158998"),
+  _ = n("606762"),
+  R = n("49111"),
+  T = n("782340");
 
 function S(e) {
+  return r.default.has(e.permissions, R.Permissions.ADMINISTRATOR)
+}
+
+function O(e) {
   var t, n;
   let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  let l = (n = e, r.default.has(n.permissions, _.Permissions.ADMINISTRATOR) ? N.RowType.ADMINISTRATOR : N.RowType.ROLE);
+  let l = (n = e, r.default.has(n.permissions, R.Permissions.ADMINISTRATOR) ? _.RowType.ADMINISTRATOR : _.RowType.ROLE);
   return {
     rowType: l,
-    colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, i.int2hex)(_.DEFAULT_ROLE_COLOR),
+    colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, i.int2hex)(R.DEFAULT_ROLE_COLOR),
     name: e.name,
     id: e.id,
-    disabled: T(e) || s,
+    disabled: S(e) || s,
     key: "".concat(l, ":").concat(e.id),
     tags: e.tags
   }
 }
 
-function O(e, t) {
-  let n = T(e) ? 0 : 1,
-    r = T(t) ? 0 : 1;
+function I(e, t) {
+  let n = S(e) ? 0 : 1,
+    r = S(t) ? 0 : 1;
   return n !== r ? n - r : t.position - e.position
 }
 
-function I() {
-  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : R.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
+function A() {
+  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
   return [{
-    rowType: N.RowType.EMPTY_STATE,
-    colorString: (0, i.int2hex)(_.DEFAULT_ROLE_COLOR),
+    rowType: _.RowType.EMPTY_STATE,
+    colorString: (0, i.int2hex)(R.DEFAULT_ROLE_COLOR),
     name: e,
     disabled: !0,
     id: "EMPTY_STATE"
   }]
 }
 
-function A(e, t, n, i) {
+function M(e, t, n, i) {
   let s = o.default.getCurrentUser();
   if (null == s) return !1;
   if (null == e) return s.id !== t;
@@ -123,59 +124,58 @@ function A(e, t, n, i) {
   return (null == i ? void 0 : i[t]) != null && (l = i[t]), null == l || !r.default.has(l.allow, n)
 }
 
-function M(e, t) {
-  return e === t
-}
-
 function p(e, t) {
-  var n;
-  return n = e.id, n !== t.id
+  return c.default.castGuildIdAsEveryoneGuildRoleId(e) === t
 }
 
-function h(e, t, n) {
-  let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0;
-  return null == e.roles ? [] : Object.values(e.roles).filter(i => !T(i) && A(t, i.id, n) && p(e, i) && r(i.name)).sort(O).map(e => S(e))
+function h(e, t) {
+  return !p(e.id, t.id)
 }
 
 function m(e, t, n) {
-  let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0;
-  return null == e.roles ? [] : Object.values(e.roles).filter(r => !T(r) && A(t, r.id, n) && p(e, r) && i(r.name)).sort(O).map(e => S(e, r.default.has(e.permissions, n)))
+  let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0;
+  return null == e.roles ? [] : Object.values(e.roles).filter(i => !S(i) && M(t, i.id, n) && h(e, i) && r(i.name)).sort(I).map(e => O(e))
 }
 
-function g(e, t, n, r) {
+function g(e, t, n) {
+  let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0;
+  return null == e.roles ? [] : Object.values(e.roles).filter(r => !S(r) && M(t, r.id, n) && h(e, r) && i(r.name)).sort(I).map(e => O(e, r.default.has(e.permissions, n)))
+}
+
+function C(e, t, n, r) {
   var i, s, l, u;
   let a = [];
   if (null == e.roles) return a;
-  return 0 === (a = (i = e, s = t, l = n, u = r, Object.values(i.roles).filter(e => T(e) || !A(s, e.id, l, u) && p(i, e))).sort(O).map(e => S(e))).length ? I(R.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : a
+  return 0 === (a = (i = e, s = t, l = n, u = r, Object.values(i.roles).filter(e => S(e) || !M(s, e.id, l, u) && h(i, e))).sort(I).map(e => O(e))).length ? A(T.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : a
 }
 
-function C(e, t, n, i) {
+function w(e, t, n, i) {
   var s, l, u, a;
   let o = [];
   if (null == e.roles) return o;
   return 0 === (o = (s = e, l = t, u = n, a = i, Object.values(s.roles).filter(e => {
     var t;
-    return T(e) || !A(l, e.id, u, a) && p(s, e) || r.default.has(r.default.combine(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
-  })).sort(O).map(e => S(e, r.default.has(e.permissions, n)))).length ? I(R.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : o
-}
-
-function w(e, t) {
-  var n;
-  return null !== (n = a.default.getNick(t.id, e.id)) && void 0 !== n ? n : c.default.getName(e)
+    return S(e) || !M(l, e.id, u, a) && h(s, e) || r.default.has(r.default.combine(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
+  })).sort(I).map(e => O(e, r.default.has(e.permissions, n)))).length ? A(T.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : o
 }
 
 function v(e, t) {
-  return t.isOwner(e)
+  var n;
+  return null !== (n = a.default.getNick(t.id, e.id)) && void 0 !== n ? n : N.default.getName(e)
 }
 
 function L(e, t) {
+  return t.isOwner(e)
+}
+
+function D(e, t) {
   var n, r, i;
-  let s = (r = e, t.isOwner(r) ? N.RowType.OWNER : N.RowType.MEMBER);
+  let s = (r = e, t.isOwner(r) ? _.RowType.OWNER : _.RowType.MEMBER);
   return {
     rowType: s,
-    name: w(e, t),
+    name: v(e, t),
     nickname: null !== (n = a.default.getNick(t.id, e.id)) && void 0 !== n ? n : null,
-    username: c.default.getName(e),
+    username: N.default.getName(e),
     id: e.id,
     avatarURL: e.getAvatarURL(t.id, 24),
     bot: e.bot,
@@ -185,59 +185,59 @@ function L(e, t) {
   }
 }
 
-function D(e, t) {
+function P(e, t) {
   return e.rowType !== t.rowType ? e.rowType - t.rowType : e.name.toLocaleLowerCase().localeCompare(t.name.toLocaleLowerCase())
 }
 
-function P(e, t, n, r) {
+function y(e, t, n, r) {
   let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return e.map(o.default.getUser).filter(f.isNotNullish).filter(e => !n.isOwner(e) && A(t, e.id, r) && (i(w(e, n)) || i(e.username) || i(e.discriminator))).map(e => L(e, n)).sort(D)
+  return e.map(o.default.getUser).filter(f.isNotNullish).filter(e => !n.isOwner(e) && M(t, e.id, r) && (i(v(e, n)) || i(e.username) || i(e.discriminator))).map(e => D(e, n)).sort(P)
 }
 
-function y(e, t, n, r, i) {
+function G(e, t, n, r, i) {
   var s, l, u, a, d;
   return (s = e, l = t, u = n, a = r, d = i, s.map(o.default.getUser).filter(f.isNotNullish).filter(e => {
     var t;
-    return !A(l, e.id, a, d) || (t = e, u.isOwner(t))
-  })).map(e => L(e, n)).sort(D)
+    return !M(l, e.id, a, d) || (t = e, u.isOwner(t))
+  })).map(e => D(e, n)).sort(P)
 }
 
-function G(e, t) {
+function H(e, t) {
   switch (e) {
-    case N.RowType.ROLE:
-      return R.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
-    case N.RowType.OWNER:
-      return R.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_OWNER;
-    case N.RowType.ADMINISTRATOR:
-      return R.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ADMINISTRATOR;
-    case N.RowType.MEMBER:
-      return t ? R.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_MEMBER : null;
-    case N.RowType.USER:
-      return R.default.Messages.USER;
-    case N.RowType.GUILD:
-      return R.default.Messages.SERVER;
-    case N.RowType.EMPTY_STATE:
+    case _.RowType.ROLE:
+      return T.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
+    case _.RowType.OWNER:
+      return T.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_OWNER;
+    case _.RowType.ADMINISTRATOR:
+      return T.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ADMINISTRATOR;
+    case _.RowType.MEMBER:
+      return t ? T.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_MEMBER : null;
+    case _.RowType.USER:
+      return T.default.Messages.USER;
+    case _.RowType.GUILD:
+      return T.default.Messages.SERVER;
+    case _.RowType.EMPTY_STATE:
       return null
   }
 }
 
-function H(e) {
+function U(e) {
   switch (e) {
-    case N.RowType.ROLE:
-      return R.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
-    case N.RowType.OWNER:
-      return R.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
-    case N.RowType.ADMINISTRATOR:
-      return R.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
-    case N.RowType.MEMBER:
-      return R.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
-    case N.RowType.EMPTY_STATE:
+    case _.RowType.ROLE:
+      return T.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
+    case _.RowType.OWNER:
+      return T.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
+    case _.RowType.ADMINISTRATOR:
+      return T.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
+    case _.RowType.MEMBER:
+      return T.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
+    case _.RowType.EMPTY_STATE:
     default:
       return null
   }
 }
 
-function U(e, t, n) {
+function B(e, t, n) {
   let i = e.permissionOverwrites[e.guild_id];
   null == i && (i = E.default.makeEveryoneOverwrite(e.guild_id));
   let s = {
@@ -246,12 +246,12 @@ function U(e, t, n) {
   return s.deny = r.default.remove(s.deny, t), s.allow = r.default.remove(s.allow, t), !n && (s.deny = r.default.add(s.deny, t)), s
 }
 
-function B(e, t, n) {
-  let r = U(e, t, n);
+function b(e, t, n) {
+  let r = B(e, t, n);
   (0, s.updatePermission)(e, r.id, r.allow, r.deny)
 }
 
-function b(e, t) {
+function V(e, t) {
   let n = o.default.getCurrentUser();
   if (null == n) return;
   let i = e.permissionOverwrites[n.id];
@@ -272,41 +272,41 @@ function b(e, t) {
   }
 }
 
-function V(e, t) {
+function k(e, t) {
   if (null == e) return !1;
   let n = e.permissionOverwrites[e.guild_id];
   return (null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && r.default.has(n.deny, e.accessPermissions)
 }
 
-function k(e) {
+function W(e) {
   let t = Object.keys(e.roles);
   return 0 !== t.length && (1 !== t.length || t[0] !== e.id)
 }
 
-function W(e, t, n) {
-  return e === _.ChannelTypes.GUILD_TEXT || e === _.ChannelTypes.GUILD_ANNOUNCEMENT ? t : !(0, u.isGuildVocalChannelType)(e) && e !== _.ChannelTypes.GUILD_CATEGORY || t && n
+function F(e, t, n) {
+  return e === R.ChannelTypes.GUILD_TEXT || e === R.ChannelTypes.GUILD_ANNOUNCEMENT ? t : !(0, u.isGuildVocalChannelType)(e) && e !== R.ChannelTypes.GUILD_CATEGORY || t && n
 }
 
-function F(e) {
+function x(e) {
   switch (e) {
-    case _.ChannelTypes.GUILD_TEXT:
-    case _.ChannelTypes.GUILD_ANNOUNCEMENT:
-      return R.default.Messages.PRIVATE_TEXT_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
-    case _.ChannelTypes.GUILD_VOICE:
-      return R.default.Messages.PRIVATE_VOICE_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
-    case _.ChannelTypes.GUILD_CATEGORY:
-      return R.default.Messages.PRIVATE_CATEGORY_CREATION_PERMISSION_MISSING_HINT.format();
+    case R.ChannelTypes.GUILD_TEXT:
+    case R.ChannelTypes.GUILD_ANNOUNCEMENT:
+      return T.default.Messages.PRIVATE_TEXT_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
+    case R.ChannelTypes.GUILD_VOICE:
+      return T.default.Messages.PRIVATE_VOICE_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
+    case R.ChannelTypes.GUILD_CATEGORY:
+      return T.default.Messages.PRIVATE_CATEGORY_CREATION_PERMISSION_MISSING_HINT.format();
     default:
       return null
   }
 }
 
-function x(e, t) {
+function Y(e, t) {
   let n = [];
   return Object.values(e).forEach(e => {
     let {
       row: r
     } = e;
-    null != r.id && "" !== r.id && (r.rowType === N.RowType.ROLE ? n.push((0, d.permissionOverwriteForRole)(r.id, t)) : r.rowType === N.RowType.MEMBER && n.push((0, d.permissionOverwriteForUser)(r.id, t)))
+    null != r.id && "" !== r.id && (r.rowType === _.RowType.ROLE ? n.push((0, d.permissionOverwriteForRole)(r.id, t)) : r.rowType === _.RowType.MEMBER && n.push((0, d.permissionOverwriteForUser)(r.id, t)))
   }), n
 }

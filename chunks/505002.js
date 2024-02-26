@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return y
+    return F
   }
 }), s("222007");
 var a = s("37983"),
@@ -12,34 +12,35 @@ var a = s("37983"),
   o = s.n(r),
   d = s("446674"),
   u = s("77078"),
-  c = s("269936"),
-  E = s("405645"),
-  _ = s("692038"),
-  I = s("815297"),
-  T = s("291655"),
-  f = s("766274"),
-  S = s("957255"),
-  m = s("439932"),
-  N = s("766419"),
-  g = s("50693"),
-  h = s("243863"),
-  C = s("91816"),
-  R = s("902750"),
-  x = s("449804"),
-  L = s("53948"),
-  O = s("49111"),
-  p = s("782340"),
-  A = s("893494"),
-  M = s("445494"),
-  D = s("452593"),
-  v = s("572701");
-let j = (0, c.makeLazy)({
+  c = s("454273"),
+  E = s("269936"),
+  _ = s("405645"),
+  I = s("692038"),
+  T = s("815297"),
+  f = s("291655"),
+  S = s("766274"),
+  m = s("957255"),
+  N = s("439932"),
+  g = s("766419"),
+  h = s("50693"),
+  C = s("243863"),
+  R = s("91816"),
+  x = s("902750"),
+  L = s("449804"),
+  O = s("53948"),
+  p = s("49111"),
+  A = s("782340"),
+  M = s("893494"),
+  D = s("445494"),
+  v = s("452593"),
+  j = s("572701");
+let G = (0, E.makeLazy)({
     createPromise: () => s.el("282585").then(s.bind(s, "282585")),
     webpackId: "282585"
   }),
-  G = o.debounce((e, t) => (0, N.updateRoleName)(e, t), 200);
+  U = o.debounce((e, t) => (0, g.updateRoleName)(e, t), 200);
 
-function U(e) {
+function P(e) {
   let {
     role: t,
     disabled: s
@@ -47,64 +48,64 @@ function U(e) {
   return l.useEffect(() => {
     i(t.name)
   }, [t.name]), (0, a.jsx)(u.FormItem, {
-    title: p.default.Messages.FORM_LABEL_ROLE_NAME,
+    title: A.default.Messages.FORM_LABEL_ROLE_NAME,
     required: !0,
     children: (0, a.jsx)(u.TextInput, {
       type: "text",
       value: n,
-      maxLength: O.ROLE_NAME_MAX_LENGTH,
+      maxLength: p.ROLE_NAME_MAX_LENGTH,
       onChange: function(e) {
-        i(e), G(t.id, e)
+        i(e), U(t.id, e)
       },
       disabled: s
     })
   })
 }
 
-function P(e) {
+function b(e) {
   let {
     role: t,
     disabled: s
   } = e;
   return (0, a.jsxs)(u.FormItem, {
-    className: A.colorPicker,
-    title: p.default.Messages.FORM_LABEL_ROLE_COLOR,
+    className: M.colorPicker,
+    title: A.default.Messages.FORM_LABEL_ROLE_COLOR,
     required: !0,
     children: [(0, a.jsx)(u.FormText, {
-      className: A.colorDescription,
-      children: p.default.Messages.ROLE_COLOR_HELP
-    }), (0, a.jsx)(j, {
-      defaultColor: O.DEFAULT_ROLE_COLOR,
-      colors: O.ROLE_COLORS,
+      className: M.colorDescription,
+      children: A.default.Messages.ROLE_COLOR_HELP
+    }), (0, a.jsx)(G, {
+      defaultColor: p.DEFAULT_ROLE_COLOR,
+      colors: p.ROLE_COLORS,
       value: t.color,
       disabled: s,
       onChange: e => {
         var s, a;
-        return s = t, a = e, void(s.color !== a && (a !== O.DEFAULT_ROLE_COLOR || 0 !== s.color) && (a === O.DEFAULT_ROLE_COLOR && (a = 0), (0, N.updateRoleColor)(s.id, a)))
+        return s = t, a = e, void(s.color !== a && (a !== p.DEFAULT_ROLE_COLOR || 0 !== s.color) && (a === p.DEFAULT_ROLE_COLOR && (a = 0), (0, g.updateRoleColor)(s.id, a)))
       },
       customPickerPosition: "right"
     }, t.id)]
   })
 }
 
-function b(e) {
+function B(e) {
   var t, n;
   let {
     role: i,
     guildId: r
   } = e;
-  let o = (n = p.default.Messages.ROLE_SAMPLE_MESSAGE, l.useMemo(() => {
-      let e = (0, _.createMessageRecord)({
-        ...(0, I.default)({
+  let o = (n = A.default.Messages.ROLE_SAMPLE_MESSAGE, l.useMemo(() => {
+      let e = (0, I.createMessageRecord)({
+        ...(0, T.default)({
           channelId: "1337",
           content: n
         }),
-        state: O.MessageStates.SENT,
+        state: p.MessageStates.SENT,
         id: "31337"
       });
-      return e.author = new f.default({
+      return e.author = new S.default({
         id: "313337",
-        username: p.default.Messages.WUMPUS,
+        username: A.default.Messages.WUMPUS,
         discriminator: "0000",
         bot: !1
       }), e.author.getAvatarURL = () => s("457737"), e
@@ -114,37 +115,37 @@ function b(e) {
       colorString: null !== (t = i.colorString) && void 0 !== t ? t : void 0
     },
     c = {
-      src: D,
-      name: i.name
-    },
-    S = {
       src: v,
       name: i.name
     },
-    N = (0, E.useRoleIconForPreview)(r, i);
+    E = {
+      src: j,
+      name: i.name
+    },
+    m = (0, _.useRoleIconForPreview)(r, i);
   return (0, a.jsx)(u.FocusBlock, {
     children: (0, a.jsxs)("div", {
-      className: A.previewContainer,
+      className: M.previewContainer,
       "aria-hidden": !0,
       children: [(0, a.jsx)("div", {
-        className: (0, m.getThemeClass)(O.ThemeTypes.LIGHT),
+        className: (0, N.getThemeClass)(p.ThemeTypes.LIGHT),
         children: (0, a.jsx)("div", {
-          className: A.messageContainer,
-          children: (0, a.jsx)(T.default, {
+          className: M.messageContainer,
+          children: (0, a.jsx)(f.default, {
             author: d,
             message: o,
-            roleIcon: null != N ? N : S,
+            roleIcon: null != m ? m : E,
             isGroupStart: !0
           })
         })
       }), (0, a.jsx)("div", {
-        className: (0, m.getThemeClass)(O.ThemeTypes.DARK),
+        className: (0, N.getThemeClass)(p.ThemeTypes.DARK),
         children: (0, a.jsx)("div", {
-          className: A.messageContainer,
-          children: (0, a.jsx)(T.default, {
+          className: M.messageContainer,
+          children: (0, a.jsx)(f.default, {
             author: d,
             message: o,
-            roleIcon: null != N ? N : c,
+            roleIcon: null != m ? m : c,
             isGroupStart: !0
           })
         })
@@ -153,7 +154,7 @@ function b(e) {
   })
 }
 
-function B(e) {
+function y(e) {
   let {
     role: t,
     disabled: s
@@ -162,83 +163,83 @@ function B(e) {
     children: [(0, a.jsx)(u.FormSwitch, {
       disabled: s,
       value: t.hoist,
-      onChange: e => (0, N.toggleRoleSettings)(t.id, e, t.mentionable),
+      onChange: e => (0, g.toggleRoleSettings)(t.id, e, t.mentionable),
       hideBorder: !0,
-      children: p.default.Messages.FORM_LABEL_HOIST_DESCRIPTION
+      children: A.default.Messages.FORM_LABEL_HOIST_DESCRIPTION
     }), (0, a.jsx)(u.FormDivider, {
-      className: A.divider
+      className: M.divider
     }), (0, a.jsx)(u.FormSwitch, {
       disabled: s,
       value: t.mentionable,
-      onChange: e => (0, N.toggleRoleSettings)(t.id, t.hoist, e),
-      note: p.default.Messages.FORM_LABEL_MENTIONABLE_DESCRIPTION,
+      onChange: e => (0, g.toggleRoleSettings)(t.id, t.hoist, e),
+      note: A.default.Messages.FORM_LABEL_MENTIONABLE_DESCRIPTION,
       hideBorder: !0,
-      children: p.default.Messages.FORM_LABEL_MENTIONABLE.format()
+      children: A.default.Messages.FORM_LABEL_MENTIONABLE.format()
     })]
   })
 }
 
-function y(e) {
+function F(e) {
   let {
     guild: t,
     role: s,
     locked: l,
     setSelectedSection: n
-  } = e, r = s.id === (null == t ? void 0 : t.id), o = l || r, c = (0, d.useStateFromStores)([S.default], () => S.default.canImpersonateRole(t, s)), {
-    headerHeight: E,
-    headerRef: _
-  } = (0, g.default)(0), {
-    scrolledToTop: I,
-    handleScroll: T
-  } = (0, C.useScrolledToTop)();
+  } = e, r = (0, c.isEveryoneRoleId)(null == t ? void 0 : t.id, s.id), o = l || r, E = (0, d.useStateFromStores)([m.default], () => m.default.canImpersonateRole(t, s)), {
+    headerHeight: _,
+    headerRef: I
+  } = (0, h.default)(0), {
+    scrolledToTop: T,
+    handleScroll: f
+  } = (0, R.useScrolledToTop)();
   return (0, a.jsx)(u.AdvancedScrollerAuto, {
-    className: A.scroller,
+    className: M.scroller,
     style: {
-      scrollPaddingTop: E
+      scrollPaddingTop: _
     },
-    onScroll: T,
+    onScroll: f,
     children: (0, a.jsxs)("div", {
-      className: M.contentWidth,
+      className: D.contentWidth,
       children: [(0, a.jsx)("div", {
-        className: i(M.header, M.stickyHeader, {
-          [M.stickyHeaderElevated]: !I
+        className: i(D.header, D.stickyHeader, {
+          [D.stickyHeaderElevated]: !T
         }),
-        ref: _,
-        children: (0, a.jsx)(C.default, {
+        ref: I,
+        children: (0, a.jsx)(R.default, {
           guild: t,
           role: s,
-          selectedSection: L.GuildSettingsRoleEditSections.DISPLAY,
+          selectedSection: O.GuildSettingsRoleEditSections.DISPLAY,
           setSelectedSection: n
         })
-      }), (0, a.jsx)(U, {
-        role: s,
-        disabled: o
-      }), (0, a.jsx)("div", {
-        className: A.noticeContainer,
-        children: (0, a.jsx)(x.default, {
-          role: s
-        })
-      }), (0, a.jsx)(u.FormDivider, {
-        className: A.divider
       }), (0, a.jsx)(P, {
         role: s,
         disabled: o
-      }), (0, a.jsx)(h.default, {
+      }), (0, a.jsx)("div", {
+        className: M.noticeContainer,
+        children: (0, a.jsx)(L.default, {
+          role: s
+        })
+      }), (0, a.jsx)(u.FormDivider, {
+        className: M.divider
+      }), (0, a.jsx)(b, {
+        role: s,
+        disabled: o
+      }), (0, a.jsx)(C.default, {
         guild: t,
         disabled: o,
         role: s
-      }), (0, a.jsx)(b, {
+      }), (0, a.jsx)(B, {
         role: s,
         guildId: t.id
       }), (0, a.jsx)(u.FormDivider, {
-        className: A.divider
-      }), (0, a.jsx)(B, {
+        className: M.divider
+      }), (0, a.jsx)(y, {
         role: s,
         disabled: o
-      }), c ? (0, a.jsxs)(a.Fragment, {
+      }), E ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.FormDivider, {
-          className: A.divider
-        }), (0, a.jsx)(R.ImpersonateRoleDescription, {
+          className: M.divider
+        }), (0, a.jsx)(x.ImpersonateRoleDescription, {
           guildId: t.id,
           role: s
         })]

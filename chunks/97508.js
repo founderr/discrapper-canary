@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return E
+    return R
   }
 });
 var n = l("37983");
@@ -10,14 +10,15 @@ var u = l("509043"),
   i = l("446674"),
   r = l("77078"),
   o = l("206230"),
+  d = l("454273"),
   a = l("130037"),
-  d = l("592407"),
-  s = l("26989"),
-  c = l("305961"),
-  f = l("957255"),
-  M = l("449008"),
-  O = l("49111"),
-  h = l("782340"),
+  s = l("592407"),
+  c = l("26989"),
+  f = l("305961"),
+  M = l("957255"),
+  O = l("449008"),
+  h = l("49111"),
+  E = l("782340"),
   p = l("235324");
 
 function x(e, t) {
@@ -26,64 +27,64 @@ function x(e, t) {
     className: p.roleRow,
     children: ["dot" === t ? (0, n.jsx)(r.RoleDot, {
       className: p.roleDot,
-      color: null !== (l = e.colorString) && void 0 !== l ? l : (0, u.int2hex)(O.DEFAULT_ROLE_COLOR),
+      color: null !== (l = e.colorString) && void 0 !== l ? l : (0, u.int2hex)(h.DEFAULT_ROLE_COLOR),
       background: !1,
       tooltip: !1
     }) : (0, n.jsx)(r.RoleCircle, {
       className: p.roleDot,
-      color: null !== (i = e.colorString) && void 0 !== i ? i : (0, u.int2hex)(O.DEFAULT_ROLE_COLOR)
+      color: null !== (i = e.colorString) && void 0 !== i ? i : (0, u.int2hex)(h.DEFAULT_ROLE_COLOR)
     }), (0, n.jsx)("div", {
       children: e.name
     })]
   })
 }
 
-function E(e, t) {
+function R(e, t) {
   let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-    p = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]),
-    E = (0, i.useStateFromStores)([o.default], () => o.default.roleStyle),
+    p = (0, i.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]),
+    R = (0, i.useStateFromStores)([o.default], () => o.default.roleStyle),
     _ = (0, a.useTrackModerationAction)(t, {
       location: u,
       targetUserId: e
     }),
     {
-      userRoles: R,
+      userRoles: v,
       isGuildMember: m,
       canManageRoles: g
-    } = (0, i.useStateFromStoresObject)([s.default, f.default], () => {
-      let l = s.default.getMember(t, e);
+    } = (0, i.useStateFromStoresObject)([c.default, M.default], () => {
+      let l = c.default.getMember(t, e);
       return {
         userRoles: null != l ? l.roles : [],
         isGuildMember: null != l,
-        canManageRoles: null != p && f.default.can(O.Permissions.MANAGE_ROLES, p)
+        canManageRoles: null != p && M.default.can(h.Permissions.MANAGE_ROLES, p)
       }
     }, [e, t, p]);
-  if (__OVERLAY__ || null == R || null == p || !m) return null;
-  let v = f.default.getHighestRole(p),
-    S = Object.values(p.roles).filter(e => e.id !== p.id),
-    b = g ? S.map(l => {
-      let u = l.managed || !f.default.isRoleHigher(p, v, l),
-        i = -1 !== R.indexOf(l.id);
+  if (__OVERLAY__ || null == v || null == p || !m) return null;
+  let S = M.default.getHighestRole(p),
+    b = Object.values(p.roles).filter(e => !(0, d.isEveryoneRoleId)(p.id, e.id)),
+    j = g ? b.map(l => {
+      let u = l.managed || !M.default.isRoleHigher(p, S, l),
+        i = -1 !== v.indexOf(l.id);
       return u && !i ? null : (0, n.jsx)(r.MenuCheckboxItem, {
         id: l.id,
-        label: () => x(l, E),
+        label: () => x(l, R),
         disabled: u,
         action: () => {
           var n;
-          return n = l, void(R.includes(n.id) ? (d.default.updateMemberRoles(t, e, R.filter(e => e !== n.id), [], [n.id]), _(a.ModerationActionType.REMOVE_ROLE)) : (d.default.updateMemberRoles(t, e, R.concat([n.id]), [n.id], []), _(a.ModerationActionType.ADD_ROLE)))
+          return n = l, void(v.includes(n.id) ? (s.default.updateMemberRoles(t, e, v.filter(e => e !== n.id), [], [n.id]), _(a.ModerationActionType.REMOVE_ROLE)) : (s.default.updateMemberRoles(t, e, v.concat([n.id]), [n.id], []), _(a.ModerationActionType.ADD_ROLE)))
         },
         checked: i
       }, l.id)
-    }) : S.filter(e => -1 !== R.indexOf(e.id)).map(e => e.id === p.id ? null : (0, n.jsx)(r.MenuItem, {
+    }) : b.filter(e => -1 !== v.indexOf(e.id)).map(e => (0, d.isEveryoneRoleId)(p.id, e.id) ? null : (0, n.jsx)(r.MenuItem, {
       id: e.id,
-      label: () => x(e, E)
+      label: () => x(e, R)
     }, e.id));
-  return 0 === b.filter(M.isNotNullish).length ? null : l ? b : (0, n.jsx)(r.MenuItem, {
+  return 0 === j.filter(O.isNotNullish).length ? null : l ? j : (0, n.jsx)(r.MenuItem, {
     id: "roles",
-    label: h.default.Messages.ROLES_LIST.format({
-      numRoles: b.length
+    label: E.default.Messages.ROLES_LIST.format({
+      numRoles: j.length
     }),
-    children: b
+    children: j
   })
 }

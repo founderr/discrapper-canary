@@ -1,7 +1,7 @@
 "use strict";
 a.r(s), a.d(s, {
   default: function() {
-    return j
+    return R
   }
 }), a("424973");
 var t = a("37983"),
@@ -153,7 +153,7 @@ function h(e) {
   })
 }
 
-function j(e) {
+function R(e) {
   let {
     guild: s,
     transitionState: a,
@@ -171,7 +171,7 @@ function j(e) {
   }, [s]);
   if (null == s) return null;
   let m = async () => {
-    let e = null == s ? void 0 : s.getRole(s.id);
+    let e = null == s ? void 0 : s.getRole(s.getEveryoneRoleId());
     if (null == e) return;
     let a = l.default.remove(e.permissions, u.MODERATOR_PERMISSIONS_FLAG);
     await (0, c.saveRoleSettings)(s.id, [{

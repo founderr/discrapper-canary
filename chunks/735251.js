@@ -21,7 +21,7 @@ function s(e, t) {
             a = t.permissionOverwrites[l];
           (0, r.isSubscriptionRole)(u) && (0, i.isChannelAccessGrantedBy)(t, a) && n.add(u)
         }
-        let l = e.getRole(e.id),
+        let l = e.getRole(e.getEveryoneRoleId()),
           a = null != l && !u.default.has(l.permissions, d.Permissions.VIEW_CHANNEL),
           s = (0, i.isChannelAccessDeniedBy)(t, t.permissionOverwrites[e.id]);
         if (a && !s)

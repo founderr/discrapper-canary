@@ -143,7 +143,7 @@ function y(e) {
     R = (0, h.default)(s.id),
     O = s.isOwner(N),
     j = () => {
-      let e = s.roles[s.id];
+      let e = s.roles[s.getEveryoneRoleId()];
       o.default.close();
       let t = {
         [e.id]: e

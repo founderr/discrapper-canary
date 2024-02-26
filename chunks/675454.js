@@ -74,7 +74,7 @@ function C(e) {
 function L(e) {
   let {
     guild: t
-  } = e, n = t.getRole(t.id);
+  } = e, n = t.getRole(t.getEveryoneRoleId());
   if (null == n) return null;
   let {
     name: s,
@@ -272,7 +272,7 @@ function F(e) {
   }, [t]);
   if (null == t) return null;
   let N = () => {
-      let e = null == t ? void 0 : t.getRole(t.id);
+      let e = null == t ? void 0 : t.getRole(t.getEveryoneRoleId());
       if (null == e) return;
       let n = l.default.remove(e.permissions, A.MODERATOR_PERMISSIONS_FLAG);
       (0, _.saveRoleSettings)(t.id, [{

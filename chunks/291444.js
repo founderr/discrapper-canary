@@ -29,7 +29,7 @@ function c(e) {
       if (!(a || e.published)) return !1;
       let s = n.permissionOverwrites[e.role_id];
       if ((0, o.isChannelAccessGrantedBy)(n, s)) return !0;
-      let i = t.getRole(t.id),
+      let i = t.getRole(t.getEveryoneRoleId()),
         r = null != i && !l.default.has(i.permissions, d.Permissions.VIEW_CHANNEL),
         u = (0, o.isChannelAccessDeniedBy)(n, n.permissionOverwrites[t.id]),
         c = t.getRole(e.role_id);

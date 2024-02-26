@@ -42,7 +42,7 @@ function D(e) {
   (0, _.useNewOwnerOnboardingRequired)(l);
   let P = i.useCallback(() => {
     if (null == l) return;
-    let e = l.roles[l.id];
+    let e = l.roles[l.getEveryoneRoleId()];
     T.default.close();
     let t = {
       [e.id]: e

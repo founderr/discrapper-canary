@@ -17,8 +17,8 @@ var a = t("37983"),
   _ = t("679653"),
   N = t("592407"),
   M = t("766419"),
-  T = t("900938"),
-  I = t("610903"),
+  I = t("900938"),
+  T = t("610903"),
   m = t("978970"),
   L = t("161778"),
   x = t("923959"),
@@ -193,7 +193,7 @@ let H = e => {
       disableEveryoneRolePermissions: _,
       headerId: N,
       theme: M
-    } = e, T = (0, c.isThemeDark)(M) ? F : Y;
+    } = e, I = (0, c.isThemeDark)(M) ? F : Y;
     return l.useEffect(() => {
       (0, D.trackEnableCommunityFlow)({
         fromStep: R.EnableCommunityModalSteps.BASICS,
@@ -206,7 +206,7 @@ let H = e => {
         className: b.content,
         children: [(0, a.jsx)("img", {
           alt: "",
-          src: T,
+          src: I,
           width: 80
         }), (0, a.jsx)(E.Heading, {
           variant: "heading-xl/semibold",
@@ -306,7 +306,7 @@ let H = e => {
 function W(e) {
   let {
     guild: s
-  } = e, t = s.getRole(s.id);
+  } = e, t = s.getRole(s.getEveryoneRoleId());
   if (null == t) return null;
   let {
     name: l,
@@ -535,7 +535,7 @@ var Q = e => {
   }, []);
   let {
     guild: n
-  } = (0, o.useStateFromStoresObject)([T.default], () => T.default.getProps()), d = (0, o.useStateFromStores)([L.default], () => L.default.theme), [c, E] = l.useState(!1), [m, f] = l.useState(!R.MODERATOR_PERMISSIONS.some(e => g.default.canEveryone(e, n))), [A, p] = l.useState(R.CREATE_NEW_CHANNEL_VALUE), [v, D] = l.useState(R.CREATE_NEW_CHANNEL_VALUE), [P] = l.useState(null == n ? void 0 : n.defaultMessageNotifications), [B] = l.useState(null == n ? void 0 : n.verificationLevel), [F] = l.useState(null == n ? void 0 : n.explicitContentFilter), [Y] = l.useState(m), y = null == n ? void 0 : n.getRole(null == n ? void 0 : n.id), G = (0, o.useStateFromStores)([x.default], () => null != n ? x.default.getChannels(n.id) : null, [n]), W = (0, S.useUID)(), {
+  } = (0, o.useStateFromStoresObject)([I.default], () => I.default.getProps()), d = (0, o.useStateFromStores)([L.default], () => L.default.theme), [c, E] = l.useState(!1), [m, f] = l.useState(!R.MODERATOR_PERMISSIONS.some(e => g.default.canEveryone(e, n))), [A, p] = l.useState(R.CREATE_NEW_CHANNEL_VALUE), [v, D] = l.useState(R.CREATE_NEW_CHANNEL_VALUE), [P] = l.useState(null == n ? void 0 : n.defaultMessageNotifications), [B] = l.useState(null == n ? void 0 : n.verificationLevel), [F] = l.useState(null == n ? void 0 : n.explicitContentFilter), [Y] = l.useState(m), y = null == n ? void 0 : n.getRole(null == n ? void 0 : n.getEveryoneRoleId()), G = (0, o.useStateFromStores)([x.default], () => null != n ? x.default.getChannels(n.id) : null, [n]), W = (0, S.useUID)(), {
     enabled: X
   } = (0, u.useIsMassMentionsDefaultDisabledExperiment)(null !== (s = null == n ? void 0 : n.id) && void 0 !== s ? s : U.EMPTY_STRING_GUILD_ID);
   if (null == n) return null;
@@ -682,7 +682,7 @@ var Q = e => {
       disableNextStep: !c,
       overviewTitle: j.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_TITLE
     }];
-  return (0, a.jsx)(I.default, {
+  return (0, a.jsx)(T.default, {
     stepData: ea,
     title: j.default.Messages.ENABLE_COMMUNITY_MODAL_TITLE,
     transitionState: t,

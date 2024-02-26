@@ -54,7 +54,7 @@ function u(e) {
       })
     }(e.guild_id, new Set(e.channels)), null != e.roles && function(e, _) {
       var E, t;
-      Object.keys(null !== (t = null === (E = N.default.getGuild(e)) || void 0 === E ? void 0 : E.roles) && void 0 !== t ? t : {}).forEach(E => {
+      O.default.keys(null !== (t = null === (E = N.default.getGuild(e)) || void 0 === E ? void 0 : E.roles) && void 0 !== t ? t : {}).forEach(E => {
         !_.has(E) && r.default.dispatch({
           type: "GUILD_ROLE_DELETE",
           guildId: e,

@@ -29,7 +29,7 @@ function f(e) {
 function S(e) {
   let {
     guild: t
-  } = e, l = t.roles[t.id], c = f(t), E = c.length > 0, S = _.MODERATOR_PERMISSIONS.some(e => !o.default.can(e, t, null, {
+  } = e, l = t.roles[t.getEveryoneRoleId()], c = f(t), E = c.length > 0, S = _.MODERATOR_PERMISSIONS.some(e => !o.default.can(e, t, null, {
     [l.id]: {
       ...l,
       permissions: i.default.remove(l.permissions, e)

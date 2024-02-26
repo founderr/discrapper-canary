@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useThreadMemberListSections: function() {
-    return d
+    return c
   }
 }), n("222007"), n("424973");
 var l = n("884691"),
@@ -9,24 +9,24 @@ var l = n("884691"),
   s = n.n(a),
   i = n("446674"),
   r = n("593752"),
-  u = n("782340");
-let o = [];
+  u = n("843455"),
+  o = n("782340");
+let d = [];
 
-function d(e, t) {
+function c(e, t) {
   let {
     version: n,
     members: a
   } = (0, i.useStateFromStoresObject)([r.default], () => ({
     version: r.default.getMemberListVersion(e),
     members: r.default.getMemberListSections(e)
-  })), d = l.useMemo(() => {
-    if (null == t) return o;
+  })), c = l.useMemo(() => {
+    if (null == t) return d;
     let e = s(t.roles).values().filter(e => e.hoist).sortBy(e => e.position).reverse().map(e => e.id).value();
-    return e.push("online", "offline"), e.map(e => {
-      var n, l;
-      let s = t.roles[e],
-        i = "online" === e ? u.default.Messages.STATUS_ONLINE : "offline" === e ? u.default.Messages.STATUS_OFFLINE : s.name,
-        r = null !== (l = null == a ? void 0 : null === (n = a[e]) || void 0 === n ? void 0 : n.userIds) && void 0 !== l ? l : [];
+    return e.push(u.StatusTypes.ONLINE, u.StatusTypes.OFFLINE), e.map(e => {
+      var n, l, s;
+      let i = e === u.StatusTypes.ONLINE ? o.default.Messages.STATUS_ONLINE : e === u.StatusTypes.OFFLINE ? o.default.Messages.STATUS_OFFLINE : null === (n = t.roles[e]) || void 0 === n ? void 0 : n.name,
+        r = null !== (s = null == a ? void 0 : null === (l = a[e]) || void 0 === l ? void 0 : l.userIds) && void 0 !== s ? s : [];
       return {
         label: i,
         userIds: r,
@@ -35,5 +35,5 @@ function d(e, t) {
       }
     })
   }, [null == t ? void 0 : t.roles, a, n]);
-  return null != a ? d : o
+  return null != a ? c : d
 }

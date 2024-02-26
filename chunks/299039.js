@@ -37,5 +37,8 @@ var i = n("917351"),
     },
     castMessageIdAsChannelId: function(e) {
       return e
+    },
+    castGuildIdAsEveryoneGuildRoleId: function(e) {
+      return e
     }
   }

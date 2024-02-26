@@ -50,7 +50,7 @@ function I(e, t) {
     let s = e.permissionOverwrites[i];
     if ((0, d.isChannelAccessGrantedBy)(e, s)) return !0
   }
-  let r = t.getRole(t.id),
+  let r = t.getRole(t.getEveryoneRoleId()),
     s = null != r && !i.default.has(r.permissions, S.Permissions.VIEW_CHANNEL),
     a = (0, d.isChannelAccessDeniedBy)(e, e.permissionOverwrites[t.id]);
   if (s && !a) {

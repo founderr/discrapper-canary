@@ -14,7 +14,7 @@ let d = o.Permissions.VIEW_CHANNEL;
 
 function u(e) {
   let t = (0, n.useStateFromStores)([i.default], () => i.default.getGuild(e), [e]),
-    s = null == t ? void 0 : t.roles[t.id],
+    s = null == t ? void 0 : t.roles[t.getEveryoneRoleId()],
     o = a.useMemo(() => {
       if (null == s) return r.GuildRoleSubscriptionFormat.SOME_CHANNELS;
       let e = l.default.has(s.permissions, d);

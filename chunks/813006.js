@@ -66,6 +66,9 @@ i = class extends r.default {
   getRole(e) {
     return this.roles[e]
   }
+  getEveryoneRoleId() {
+    return o.default.castGuildIdAsEveryoneGuildRoleId(this.id)
+  }
   getMaxEmojiSlots() {
     return Math.max(this.hasFeature(u.GuildFeatures.MORE_EMOJI) ? 200 : c.EMOJI_MAX_SLOTS, d.BoostedGuildFeatures[this.premiumTier].limits.emoji)
   }

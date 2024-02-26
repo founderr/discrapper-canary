@@ -35,7 +35,7 @@ function p(e) {
   }, [l.id, A]);
   let C = a.useMemo(() => {
     var e, t, n;
-    let a = l.getRole(l.id),
+    let a = l.getRole(l.getEveryoneRoleId()),
       i = null !== (t = null == _ ? void 0 : null === (e = _.roles) || void 0 === e ? void 0 : e.map(e => l.getRole(e)).filter(N.isNotNullish)) && void 0 !== t ? t : [],
       r = null !== (n = null == a ? void 0 : a.permissions) && void 0 !== n ? n : E.default.NONE;
     for (let e of i) r = s.default.add(r, e.permissions);

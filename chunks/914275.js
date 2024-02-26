@@ -37,7 +37,7 @@ function p(e, t, n) {
       i = s.default.getMember(t, e),
       c = r.default.getUser(e);
     if (null == d || null == i || null == c) return a;
-    let f = d.getRole(d.id),
+    let f = d.getRole(d.getEveryoneRoleId()),
       h = u.default.computePermissions({
         user: c,
         context: d

@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return g
+    return f
   }
 }), r("222007");
 var o = r("37983"),
@@ -12,26 +12,27 @@ var o = r("37983"),
   i = r("77078"),
   u = r("351105"),
   d = r("581583"),
-  c = r("957255"),
-  p = r("414943"),
-  h = r("782340"),
-  v = r("418563"),
-  g = e => {
+  c = r("454273"),
+  p = r("957255"),
+  h = r("414943"),
+  v = r("782340"),
+  g = r("418563"),
+  f = e => {
     let {
       guild: t,
       transitionState: r,
       onClose: n
-    } = e, [g, f] = a.useState(7), [m, b] = a.useState(null), [x, E] = a.useState([]), S = a.useCallback(async () => {
-      b(null);
-      let e = await u.default.updateEstimate(t.id, g, x);
-      b(e)
-    }, [g, t.id, x]);
+    } = e, [f, m] = a.useState(7), [b, E] = a.useState(null), [x, S] = a.useState([]), M = a.useCallback(async () => {
+      E(null);
+      let e = await u.default.updateEstimate(t.id, f, x);
+      E(e)
+    }, [f, t.id, x]);
     a.useEffect(() => {
-      S()
-    }, [S]);
-    let M = (0, s.useStateFromStoresArray)([c.default], () => {
-      let e = c.default.getHighestRole(t);
-      return l(t.roles).sortBy(e => e.position).filter(e => e.id !== t.id).filter(r => c.default.isRoleHigher(t, e, r)).value().map(e => {
+      M()
+    }, [M]);
+    let R = (0, s.useStateFromStoresArray)([p.default], () => {
+      let e = p.default.getHighestRole(t);
+      return l(t.roles).sortBy(e => e.position).filter(e => !(0, c.isEveryoneRoleId)(t.id, e.id)).filter(r => p.default.isRoleHigher(t, e, r)).value().map(e => {
         let {
           id: t,
           name: r
@@ -48,21 +49,21 @@ var o = r("37983"),
         separator: !1,
         children: (0, o.jsxs)(i.Heading, {
           variant: "heading-lg/semibold",
-          children: [h.default.Messages.PRUNE_MEMBERS, "—", null != t ? t.toString() : ""]
+          children: [v.default.Messages.PRUNE_MEMBERS, "—", null != t ? t.toString() : ""]
         })
       }), (0, o.jsxs)("div", {
-        className: v.content,
+        className: g.content,
         children: [(0, o.jsx)(i.FormItem, {
-          title: h.default.Messages.FORM_LABEL_LAST_SEEN,
+          title: v.default.Messages.FORM_LABEL_LAST_SEEN,
           children: (0, o.jsx)(i.RadioGroup, {
-            value: g,
+            value: f,
             options: [{
-              name: h.default.Messages.LAST_SEEN.format({
+              name: v.default.Messages.LAST_SEEN.format({
                 days: 7
               }),
               value: 7
             }, {
-              name: h.default.Messages.LAST_SEEN.format({
+              name: v.default.Messages.LAST_SEEN.format({
                 days: 30
               }),
               value: 30
@@ -71,17 +72,17 @@ var o = r("37983"),
               let {
                 value: t
               } = e;
-              f(t)
+              m(t)
             },
-            className: v.spacing
+            className: g.spacing
           })
         }), (0, o.jsx)(i.FormItem, {
-          title: h.default.Messages.PRUNE_WITH_ROLES,
-          children: (0, o.jsx)(p.default, {
+          title: v.default.Messages.PRUNE_WITH_ROLES,
+          children: (0, o.jsx)(h.default, {
             isMulti: !0,
-            options: M,
+            options: R,
             onChange: e => {
-              E(e.map(e => e.value))
+              S(e.map(e => e.value))
             },
             value: x,
             multiValueRenderer: e => {
@@ -91,11 +92,11 @@ var o = r("37983"),
               if (null == a) return null;
               let n = x.indexOf(r);
               return (0, o.jsx)(d.MemberRole, {
-                className: v.role,
+                className: g.role,
                 role: a,
                 canRemove: !0,
                 onRemove: () => {
-                  E([...x.slice(0, n), ...x.slice(n + 1)])
+                  S([...x.slice(0, n), ...x.slice(n + 1)])
                 },
                 onMouseDown: e => {
                   e.stopPropagation(), e.preventDefault()
@@ -107,26 +108,26 @@ var o = r("37983"),
           })
         }), (0, o.jsx)(i.FormText, {
           type: i.FormText.Types.DESCRIPTION,
-          className: v.spacing,
-          children: x.length > 0 ? h.default.Messages.FORM_HELP_LAST_SEEN_WITH_ROLES_1.format({
-            members: m,
-            days: g
-          }) : h.default.Messages.FORM_HELP_LAST_SEEN_1.format({
-            members: m,
-            days: g
+          className: g.spacing,
+          children: x.length > 0 ? v.default.Messages.FORM_HELP_LAST_SEEN_WITH_ROLES_1.format({
+            members: b,
+            days: f
+          }) : v.default.Messages.FORM_HELP_LAST_SEEN_1.format({
+            members: b,
+            days: f
           })
         })]
       }), (0, o.jsxs)(i.ModalFooter, {
         children: [(0, o.jsx)(i.Button, {
           onClick: () => {
-            u.default.prune(t.id, g, x), n()
+            u.default.prune(t.id, f, x), n()
           },
-          children: h.default.Messages.PRUNE
+          children: v.default.Messages.PRUNE
         }), (0, o.jsx)(i.Button, {
           look: i.Button.Looks.LINK,
           color: i.Button.Colors.PRIMARY,
           onClick: n,
-          children: h.default.Messages.CANCEL
+          children: v.default.Messages.CANCEL
         })]
       })]
     })

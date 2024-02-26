@@ -15,19 +15,20 @@ var l = a("37983"),
   _ = a("191814"),
   c = a("423487"),
   E = a("359366"),
-  f = a("565559"),
-  T = a("782340"),
-  D = a("342269");
+  T = a("565559"),
+  f = a("49111"),
+  D = a("782340"),
+  O = a("342269");
 
-function O(e) {
+function I(e) {
   var t;
   let {
     guildProductListing: a,
     guildId: n
-  } = e, d = (0, i.default)([o.default], () => o.default.getGuild(n)), s = null == d ? void 0 : d.roles[null !== (t = null == a ? void 0 : a.role_id) && void 0 !== t ? t : ""];
+  } = e, d = (0, i.default)([o.default], () => o.default.getGuild(n)), s = null == d ? void 0 : d.roles[null !== (t = null == a ? void 0 : a.role_id) && void 0 !== t ? t : f.EMPTY_STRING_GUILD_ROLE_ID];
   return null == s ? null : (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(u.Heading, {
-      className: D.warningSectionHeader,
+      className: O.warningSectionHeader,
       variant: "text-md/medium",
       color: "text-normal",
       children: [(0, l.jsx)(c.default, {
@@ -36,10 +37,10 @@ function O(e) {
       }), (0, l.jsx)(_.default, {
         horizontal: !0,
         size: 8
-      }), T.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING_HEADER]
+      }), D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING_HEADER]
     }), (0, l.jsx)(u.Text, {
       variant: "text-md/normal",
-      children: T.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING.format({
+      children: D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING.format({
         roleName: s.name
       })
     })]
@@ -51,14 +52,14 @@ function m(e) {
     guildId: t,
     productId: a,
     ...d
-  } = e, [i] = n.useState(() => f.default.getGuildProduct(a));
+  } = e, [i] = n.useState(() => T.default.getGuildProduct(a));
   s(null != i, "guildProductListing cannot be null");
   let [o, _] = n.useState(!1), c = async () => {
     try {
       _(!0), await E.deleteGuildProductListing(t, a)
     } catch (e) {
       r.default.show({
-        title: T.default.Messages.GUILD_PRODUCTS_DELETE_ERROR_TITLE,
+        title: D.default.Messages.GUILD_PRODUCTS_DELETE_ERROR_TITLE,
         body: e.message
       })
     } finally {
@@ -67,18 +68,18 @@ function m(e) {
   };
   return (0, l.jsxs)(u.ConfirmModal, {
     ...d,
-    className: D.modalContainer,
-    header: T.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_HEADER,
-    confirmText: T.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BUTTON,
-    cancelText: T.default.Messages.CANCEL,
+    className: O.modalContainer,
+    header: D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_HEADER,
+    confirmText: D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BUTTON,
+    cancelText: D.default.Messages.CANCEL,
     loading: o,
     onConfirm: c,
     children: [(0, l.jsx)(u.Text, {
       variant: "text-md/normal",
-      children: T.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY.format({
+      children: D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY.format({
         productName: i.name
       })
-    }), (0, l.jsx)(O, {
+    }), (0, l.jsx)(I, {
       guildProductListing: i,
       guildId: t
     })]

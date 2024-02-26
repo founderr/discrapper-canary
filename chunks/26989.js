@@ -125,23 +125,23 @@ function F(e) {
     fullProfileLoadedTimestamp: p,
     flags: h
   } = e, {
-    colorString: _,
-    colorRoleId: m,
-    iconRoleId: T,
-    hoistRoleId: g,
-    highestRoleId: I
-  } = x(a, o), A = {
+    colorString: m,
+    colorRoleId: T,
+    iconRoleId: g,
+    hoistRoleId: I,
+    highestRoleId: A
+  } = x(a, o), R = {
     userId: t,
     nick: n,
     guildId: i,
     avatar: r,
     avatarDecoration: s,
     roles: o,
-    colorString: _,
-    colorRoleId: m,
-    iconRoleId: T,
-    hoistRoleId: g,
-    highestRoleId: I,
+    colorString: m,
+    colorRoleId: T,
+    iconRoleId: g,
+    hoistRoleId: I,
+    highestRoleId: A,
     premiumSince: l,
     isPending: u,
     joinedAt: c,
@@ -149,19 +149,19 @@ function F(e) {
     unusualDMActivityUntil: f,
     fullProfileLoadedTimestamp: p,
     flags: h
-  }, R = C[i];
-  if (null == R) return A;
+  }, N = C[i];
+  if (null == N) return R;
   if (t === S.default.getId()) {
     if (E.default.isViewingRoles(i) || E.default.isFullServerPreview(i)) {
       let e = E.default.getViewingRoles(i);
       v[i] = {
-        ...A,
+        ...R,
         ...E.default.getMemberOptions(i),
-        roles: null != e ? Object.keys(e) : []
+        roles: null != e ? _.default.keys(e) : []
       }
     } else null != v[i] && delete v[i]
   }
-  return A
+  return R
 }(r = i || (i = {}))[r.GUILD = 0] = "GUILD", r[r.USER = 1] = "USER";
 
 function V(e) {

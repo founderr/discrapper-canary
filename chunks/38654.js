@@ -90,7 +90,7 @@ var E = new f(r.default, {
       guildId: t,
       data: n
     } = e;
-    delete n.roles[t], d[t] = {
+    delete n.roles[o.default.castGuildIdAsEveryoneGuildRoleId(t)], d[t] = {
       ...n,
       timestamp: Date.now()
     }
