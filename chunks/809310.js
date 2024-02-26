@@ -278,7 +278,7 @@ class Y extends l.default.Store {
     try {
       let t = g.default.getId(),
         a = S.default.carefullyOpenDatabase(t),
-        [s, l, i] = await F(a, t, e);
+        [s, l, i] = await T.default.loadMiniCache.measureAsync(() => F(a, t, e));
       s ? (n(), await H(a, t, l, i)) : (n(), await (V(() => r.default.dispatch({
         type: "CACHE_LOADED_LAZY_NO_CACHE"
       })), Promise.resolve()))

@@ -75,9 +75,9 @@ var C = new class e {
     if (null == this.synced || null == t || !(0, a.isCacheEnabled)()) return;
     let n = u.default.getGuildIds(),
       s = n.filter(e => !this.synced.has(e));
-    for (let a of (h.verbose("scheduling basic_channel optimstic writes (guilds: ".concat(s.length, ")")), n))
+    for (let a of (h.verbose("scheduling basic_channel optimstic writes (guilds: ".concat(s.length, ")")), n)) {
+      if (null == this.synced || t !== f.default.database() || e !== l.default.lastTimeConnectedChanged()) break;
       if (!this.synced.has(a)) {
-        if (t !== f.default.database() || e !== l.default.lastTimeConnectedChanged()) break;
         h.verbose("optimstically writing basic_channels (guild: ".concat(a, ")"));
         try {
           await o.ChannelLoader.loadGuildIds([a]), await t.transaction(e => this.syncOne(a, e), "handlePostConnectionOpen")
@@ -87,6 +87,7 @@ var C = new class e {
         }
         await new Promise(e => setTimeout(e, 1e3))
       }
+    }
   }
   handleGuildCreate(e, t) {
     this.handleOneGuildCreate(e.guild, t)
