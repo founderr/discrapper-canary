@@ -11,9 +11,15 @@ var i = n("917351"),
   r = n.n(i),
   s = n("249654"),
   a = {
-    age: s.default.age,
-    extractTimestamp: s.default.extractTimestamp,
-    compare: s.default.compare,
+    age: function(e) {
+      return s.default.age(e)
+    },
+    extractTimestamp: function(e) {
+      return s.default.extractTimestamp(e)
+    },
+    compare: function(e, t) {
+      return s.default.compare(e, t)
+    },
     atPreviousMillisecond: function(e) {
       return s.default.atPreviousMillisecond(e)
     },
