@@ -5,21 +5,21 @@ i.r(t), i.d(t, {
   }
 });
 var l = i("884691"),
-  a = i("446674"),
-  n = i("84460"),
-  r = i("954016");
+  n = i("446674"),
+  a = i("84460"),
+  d = i("954016");
 let u = () => {
   let {
     isEnabled: e,
     lastUsedObject: t
-  } = (0, a.useStateFromStoresObject)([n.default], () => ({
-    isEnabled: n.default.getIsEnabled(),
-    lastUsedObject: n.default.getLastUsedObject()
-  }), []), i = (0, a.useStateFromStoresArray)([n.default], () => n.default.getDeveloperShelfItems(), []), u = l.useMemo(() => e ? i.map(e => {
+  } = (0, n.useStateFromStoresObject)([a.default], () => ({
+    isEnabled: a.default.getIsEnabled(),
+    lastUsedObject: a.default.getLastUsedObject()
+  }), []), i = (0, n.useStateFromStoresArray)([a.default], () => a.default.getDeveloperShelfItems(), []), u = l.useMemo(() => e ? i.map(e => {
     let t = {
       application: e,
       activity: {
-        ...r.DEFAULT_EMBEDDED_ACTIVITY_CONFIG,
+        ...d.DEFAULT_EMBEDDED_ACTIVITY_CONFIG,
         ...e.embeddedActivityConfig,
         application_id: e.id
       }
@@ -27,10 +27,8 @@ let u = () => {
     return t
   }).sort((e, i) => {
     let l = t[e.application.id],
-      a = t[i.application.id];
-    return null == l ? 1 : null == a ? -1 : a - l
+      n = t[i.application.id];
+    return null == l ? 1 : null == n ? -1 : n - l
   }) : [], [i, e, t]);
-  return u.length <= 0 ? [] : [
-    [r.ActivityAccessStatus.UNLOCKED, u]
-  ]
+  return u
 }

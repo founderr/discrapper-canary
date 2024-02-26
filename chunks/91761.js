@@ -1,27 +1,23 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return o
+    return r
   }
 }), i("222007");
 var l = i("446674"),
-  a = i("84460"),
-  n = i("807106"),
-  r = i("119420"),
-  u = i("243244");
+  n = i("84460"),
+  a = i("743925"),
+  d = i("807106"),
+  u = i("119420");
 
-function o(e) {
+function r(e) {
   let {
     guildId: t,
-    isWatchTogetherPromoEnabled: i = !1,
-    enableFilter: o = !1
+    enableFilter: i = !1
   } = e, {
-    filter: d
-  } = (0, l.useStateFromStoresObject)([a.default], () => ({
-    filter: a.default.getFilter()
-  })), c = (0, u.default)(t, i), s = (0, n.default)(c), f = (0, r.useDeveloperActivityShelfItems)();
-  return [...f, ...s].map(e => {
-    let [t, i] = e;
-    return [t, i.filter(e => !o || "" === d || e.application.name.toLocaleLowerCase().includes(d.toLocaleLowerCase()))]
-  })
+    filter: r
+  } = (0, l.useStateFromStoresObject)([n.default], () => ({
+    filter: n.default.getFilter()
+  })), o = (0, a.useActivityShelfData)(t), c = (0, d.default)(o), s = (0, u.useDeveloperActivityShelfItems)();
+  return [...s, ...c].filter(e => !i || "" === r || e.application.name.toLocaleLowerCase().includes(r.toLocaleLowerCase()))
 }

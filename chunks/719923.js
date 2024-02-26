@@ -1360,9 +1360,6 @@ var eL = Object.freeze({
   hasFreeBoosts: function(e) {
     return (0, f.canUserUse)(f.FREE_BOOSTS, e)
   },
-  canUsePremiumActivities: function(e) {
-    return (0, f.canUserUse)(f.HOST_PREMIUM_ACTIVITIES, e)
-  },
   canUseCustomStickersEverywhere: function(e) {
     return (0, f.canUserUse)(f.STICKERS_EVERYWHERE, e)
   },
