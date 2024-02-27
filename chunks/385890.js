@@ -15,8 +15,8 @@ var i = n("446674"),
   d = n("177998"),
   c = n("697218"),
   f = n("145131"),
-  E = n("635357"),
-  p = n("642906"),
+  p = n("635357"),
+  E = n("642906"),
   S = n("85336"),
   _ = n("650484"),
   m = n("646718"),
@@ -41,7 +41,7 @@ function x(e) {
     loading: l = !1
   } = e, {
     hasPaymentSources: o
-  } = (0, p.usePaymentContext)(), u = o ? S.Step.REVIEW : S.Step.ADD_PAYMENT_STEPS;
+  } = (0, E.usePaymentContext)(), u = o ? S.Step.REVIEW : S.Step.ADD_PAYMENT_STEPS;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(a.Button, {
       onClick: () => t(u),
@@ -64,17 +64,19 @@ function h(e) {
     giftRecipientError: T,
     validatingGiftRecipient: h,
     giftRecipient: g
-  } = (0, E.useGiftContext)(), {
+  } = (0, p.useGiftContext)(), {
     selectedSkuId: P,
     selectedSkuPricePreview: N
-  } = (0, p.usePaymentContext)(), A = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser());
+  } = (0, E.usePaymentContext)(), A = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser());
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(_.PaymentPortalBody, {
       children: (0, s.jsxs)("div", {
         className: C.stepBody,
         children: [(0, s.jsx)("div", {
           className: C.bodyColumnMiddle,
-          children: (0, s.jsx)(u.GiftAnimationOptions, {})
+          children: (0, s.jsx)(u.GiftAnimationOptions, {
+            isShopGift: !0
+          })
         }), (0, s.jsxs)("div", {
           className: C.bodyColumnRight,
           children: [(0, s.jsx)(l.default, {
