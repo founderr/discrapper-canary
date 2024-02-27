@@ -72,10 +72,11 @@ async function _(e) {
     currency: a,
     applyEntitlements: E = !1,
     analyticsLocations: _,
-    analyticsLocation: c
+    analyticsLocation: c,
+    userDiscountOfferId: d
   } = e;
   null != r && (r = (0, f.coerceExistingItemsToNewItemInterval)(r));
-  let d = {
+  let R = {
     items: null == r ? void 0 : r.map(e => {
       let {
         planId: t,
@@ -89,7 +90,8 @@ async function _(e) {
     payment_source_id: n,
     renewal: i,
     apply_entitlements: E,
-    currency: a
+    currency: a,
+    userDiscountOfferId: d
   };
   try {
     let e = await l.default.patch({
@@ -98,7 +100,7 @@ async function _(e) {
         location: c,
         location_stack: _
       },
-      body: d,
+      body: R,
       oldFormErrors: !0
     });
     return s.default.createInvoiceFromServer(e.body)
