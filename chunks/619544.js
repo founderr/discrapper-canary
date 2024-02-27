@@ -53,8 +53,10 @@ function E(e) {
       fallback: (0, s.jsx)("div", {
         className: a(d.attachment, d.mediaMissing)
       })
-    }), u && (0, s.jsx)(o.PollAnswerSelectedIcon, {
+    }), u && (0, s.jsx)(o.PollAnswerVotedIcon, {
       size: 40,
+      isVictor: f,
+      isExpired: l,
       className: d.selectedIcon
     }), r && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(c, {
@@ -62,11 +64,10 @@ function E(e) {
         percentage: t.votesPercentage,
         label: t.votes,
         myAvatarUrl: E ? i : void 0
-      }), !l && E && (0, s.jsx)(o.PollAnswerVotedIcon, {
+      }), (!l && E || f) && (0, s.jsx)(o.PollAnswerVotedIcon, {
         size: 18,
-        className: d.pollAnswerIcon
-      }), f && (0, s.jsx)(o.PollAnswerVictorIcon, {
-        size: 18,
+        isVictor: f,
+        isExpired: l,
         className: d.pollAnswerIcon
       })]
     })]
@@ -78,7 +79,8 @@ function f(e) {
     isExpired: t,
     hasVoted: n,
     myAvatarUrl: l,
-    ...i
+    answersInteraction: i,
+    ...r
   } = e;
   return (0, s.jsx)(o.PollAnswers, {
     className: d.answersContainer,
@@ -86,12 +88,14 @@ function f(e) {
       [d.currentlyVoting]: !n && !t
     }),
     myAvatarUrl: l,
+    answersInteraction: i,
     renderAnswerContent: e => (0, s.jsx)(E, {
       answer: e,
       isExpired: t,
       hasVoted: n,
-      myAvatarUrl: l
+      myAvatarUrl: l,
+      answersInteraction: i
     }),
-    ...i
+    ...r
   })
 }

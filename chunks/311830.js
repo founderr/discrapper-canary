@@ -100,7 +100,7 @@ function S(e) {
       answersInteraction: t.answersInteraction,
       answerTapAccessibilityLabel: t.answerTapAccessibilityLabel,
       isExpired: t.isExpired,
-      isInteractive: t.canTapAnswers,
+      canTapAnswers: t.canTapAnswers,
       hasSelectedAnyAnswer: t.hasSelectedAnswer,
       hasVoted: t.hasVoted,
       myAvatarUrl: t.myAvatarUrl
@@ -116,6 +116,11 @@ function S(e) {
     children: (0, s.jsxs)(u.HeadingLevel, {
       children: [(0, s.jsx)(I, {
         media: n.question
+      }), null != n.promptLabel && (0, s.jsx)(u.Text, {
+        variant: "text-sm/normal",
+        color: "text-muted",
+        className: T.prompt,
+        children: n.promptLabel
       }), d, (0, s.jsxs)("div", {
         className: T.bottomBar,
         children: [(0, s.jsx)(p, {
