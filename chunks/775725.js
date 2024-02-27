@@ -23,7 +23,8 @@ let I = (e, t, n) => n ? _.default.Messages.QUESTS_SHOW_CODE : e || t ? _.defaul
   N = (e, t) => {
     var l, a, i;
     return (null === (l = e.userStatus) || void 0 === l ? void 0 : l.enrolledAt) != null || (null === (a = e.userStatus) || void 0 === a ? void 0 : a.completedAt) != null || (null === (i = e.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null ? () => {
-      (0, r.openModalLazy)(async () => {
+      var l;
+      (0, o.trackQuestContentClicked)(e.id, t, (null === (l = e.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null ? o.QuestContentCTA.SHOW_REWARD : o.QuestContentCTA.CLAIM_REWARD), (0, r.openModalLazy)(async () => {
         let {
           default: l
         } = await n.el("36170").then(n.bind(n, "36170"));

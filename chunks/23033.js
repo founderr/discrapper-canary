@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("433487"),
   p = n("815496"),
   E = n("448881"),
-  S = n("879364"),
-  g = n("2973"),
+  g = n("879364"),
+  S = n("2973"),
   C = n("588025"),
   _ = n("227231"),
   I = n("315130"),
@@ -38,7 +38,7 @@ var l = n("37983"),
     } = e, y = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), {
       isCurrentUserStreamingQuestApplication: O,
       quest: P
-    } = (0, r.useStateFromStoresObject)([f.default, d.default, g.default], () => {
+    } = (0, r.useStateFromStoresObject)([f.default, d.default, S.default], () => {
       let e = d.default.getParticipants(L),
         t = function(e, t, n) {
           for (let a of e)
@@ -48,7 +48,7 @@ var l = n("37983"),
                 s = (null == e ? void 0 : e.id) != null ? (0, _.getQuestByApplicationId)(t, e.id) : null;
               if (null != s && (null === (l = s.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null) return s
             } return null
-        }(e, g.default.quests, f.default),
+        }(e, S.default.quests, f.default),
         n = null != t && null != y && function(e, t, n, l) {
           for (let s of e) {
             var a;
@@ -60,26 +60,28 @@ var l = n("37983"),
         isCurrentUserStreamingQuestApplication: n,
         quest: t
       }
-    }, [L, y]), b = (0, r.useStateFromStores)([g.default], () => null != P && g.default.isEnrolling(P.id), [P]), D = (0, r.useStateFromStores)([d.default], () => ((null == y ? void 0 : y.id) == null ? null : d.default.getParticipant(L, y.id)) != null, [L, y]), U = (0, S.useQuestFormattedDate)(null == P ? void 0 : P.config.expiresAt), w = (0, S.useQuestFormattedDate)(null == P ? void 0 : P.config.rewardCodeExpiresAt), F = a.useCallback(() => {
+    }, [L, y]), b = (0, r.useStateFromStores)([S.default], () => null != P && S.default.isEnrolling(P.id), [P]), D = (0, r.useStateFromStores)([d.default], () => ((null == y ? void 0 : y.id) == null ? null : d.default.getParticipant(L, y.id)) != null, [L, y]), U = (0, g.useQuestFormattedDate)(null == P ? void 0 : P.config.expiresAt), w = (0, g.useQuestFormattedDate)(null == P ? void 0 : P.config.rewardCodeExpiresAt), F = a.useCallback(() => {
       null != P && (0, E.enrollInQuest)(P.id, {
         questContent: C.QuestContent.QUEST_LIVE_STREAM,
         questContentCTA: p.QuestContentCTA.ACCEPT_QUEST
       })
     }, [P]), k = a.useCallback(() => {
-      o.default.open(A.UserSettingsSections.INVENTORY)
-    }, []), B = (0, x.useHandleClaimQuestsReward)({
+      null != P && ((0, p.trackQuestContentClicked)(P.id, C.QuestContent.QUEST_LIVE_STREAM, p.QuestContentCTA.TRACK_PROGRESS), o.default.open(A.UserSettingsSections.INVENTORY))
+    }, [P]), B = a.useCallback(() => {
+      null != P && ((0, p.trackQuestContentClicked)(P.id, C.QuestContent.QUEST_LIVE_STREAM, p.QuestContentCTA.LEARN_MORE), o.default.open(A.UserSettingsSections.INVENTORY))
+    }, [P]), V = (0, x.useHandleClaimQuestsReward)({
       quest: P,
       location: C.QuestContent.QUEST_LIVE_STREAM
-    }), V = (0, S.useIsQuestExpired)(P);
+    }), G = (0, g.useIsQuestExpired)(P);
     if (null == P) return null;
-    let G = (null === (t = P.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-      H = (null === (n = P.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-      W = null != P.userStatus && (0, _.isDismissed)(P.userStatus, C.QuestContent.QUEST_LIVE_STREAM);
-    return W || V || !D ? null : (0, l.jsxs)("div", {
+    let H = (null === (t = P.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+      W = (null === (n = P.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+      Y = null != P.userStatus && (0, _.isDismissed)(P.userStatus, C.QuestContent.QUEST_LIVE_STREAM);
+    return Y || G || !D ? null : (0, l.jsxs)("div", {
       className: i(j.wrapper, {
-        [j.wrapperAccepted]: G
+        [j.wrapperAccepted]: H
       }),
-      children: [!G && (0, l.jsxs)("div", {
+      children: [!H && (0, l.jsxs)("div", {
         className: j.rewardTileWrapper,
         children: [(0, l.jsx)("img", {
           alt: P.config.messages.rewardName,
@@ -93,7 +95,7 @@ var l = n("37983"),
         className: j.content,
         children: [(0, l.jsxs)("div", {
           className: j.heading,
-          children: [G && O ? (0, l.jsx)("img", {
+          children: [H && O ? (0, l.jsx)("img", {
             alt: P.config.messages.rewardName,
             className: j.rewardTile,
             src: (0, _.getRewardAssetUrl)(P.id)
@@ -128,24 +130,24 @@ var l = n("37983"),
             }), (0, l.jsx)(u.Text, {
               color: "header-secondary",
               variant: "text-xs/medium",
-              children: H ? R.default.Messages.QUESTS_CLAIM_BY.format({
+              children: W ? R.default.Messages.QUESTS_CLAIM_BY.format({
                 expirationDate: w
               }) : R.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: U
               })
             })]
           })]
-        }), G && !H && !O && (0, l.jsx)(N.default, {
+        }), H && !W && !O && (0, l.jsx)(N.default, {
           quest: P
         }), (0, l.jsxs)("div", {
           className: j.ctas,
-          children: [!G && (0, l.jsxs)(l.Fragment, {
+          children: [!H && (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(u.Button, {
               className: j.cta,
               color: u.Button.Colors.PRIMARY,
               fullWidth: !0,
               size: u.Button.Sizes.SMALL,
-              onClick: k,
+              onClick: B,
               children: R.default.Messages.QUESTS_LEARN_MORE_V2
             }), (0, l.jsx)(u.Button, {
               className: j.cta,
@@ -156,21 +158,21 @@ var l = n("37983"),
               submitting: b,
               children: R.default.Messages.QUESTS_ACCEPT_QUEST
             })]
-          }), G && !H && O && (0, l.jsx)(I.default, {
+          }), H && !W && O && (0, l.jsx)(I.default, {
             color: u.tokens.colors.BG_BRAND,
             quest: P
-          }), G && !H && !O && (0, l.jsx)(u.Button, {
+          }), H && !W && !O && (0, l.jsx)(u.Button, {
             className: j.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: k,
             size: u.Button.Sizes.SMALL,
             children: R.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
-          }), H && (0, l.jsx)(u.Button, {
+          }), W && (0, l.jsx)(u.Button, {
             className: j.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
-            onClick: B,
+            onClick: V,
             size: u.Button.Sizes.SMALL,
             children: R.default.Messages.QUESTS_CLAIM_YOUR_REWARD
           })]

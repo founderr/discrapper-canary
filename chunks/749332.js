@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return g
   }
 }), n("222007");
 var s = n("37983"),
@@ -17,112 +17,115 @@ var s = n("37983"),
   f = n("433487"),
   _ = n("58608"),
   T = n("306160"),
-  I = n("879364"),
-  m = n("588025"),
-  N = n("227231"),
-  p = n("45198"),
-  S = n("782340"),
-  A = n("444092");
-let C = e => {
+  I = n("815496"),
+  m = n("879364"),
+  N = n("588025"),
+  p = n("227231"),
+  S = n("45198"),
+  A = n("782340"),
+  C = n("444092");
+let h = e => {
   let {
-    quest: t
-  } = e, [n, a] = l.useState(!1), i = l.useRef(new o.Timeout);
+    quest: t,
+    location: n
+  } = e, [a, i] = l.useState(!1), r = l.useRef(new o.Timeout);
   l.useEffect(() => {
-    let e = i.current;
+    let e = r.current;
     return function() {
       e.stop()
     }
   }, []);
-  let r = () => {
-    (0, T.copy)((0, N.getQuestUrl)(t.id)), a(!0), i.current.start(1e3, () => a(!1))
+  let d = () => {
+    (0, I.trackQuestContentClicked)(t.id, n, I.QuestContentCTA.COPY_QUEST_URL), (0, T.copy)((0, p.getQuestUrl)(t.id)), i(!0), r.current.start(1e3, () => i(!1))
   };
   return (0, s.jsx)(u.Tooltip, {
-    forceOpen: n,
-    shouldShow: n,
+    forceOpen: a,
+    shouldShow: a,
     color: u.Tooltip.Colors.GREEN,
-    text: S.default.Messages.COPY_SUCCESS_1,
+    text: A.default.Messages.COPY_SUCCESS_1,
     children: () => (0, s.jsx)(u.Button, {
       color: u.Button.Colors.PRIMARY,
       size: u.Button.Sizes.SMALL,
-      onClick: () => r(),
-      children: S.default.Messages.QUESTS_SHARE_QUEST
+      onClick: () => d(),
+      children: A.default.Messages.QUESTS_SHARE_QUEST
     })
   })
 };
-var h = e => {
+var g = e => {
   var t;
   let {
     isFocused: a,
     quest: o,
     location: T
-  } = e, h = (0, r.useStateFromStores)([E.default], () => E.default.getState().theme), g = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = l.useMemo(() => o.config.videoAssets.includes(T), [o, T]), O = l.useRef(null), R = (0, I.useIsQuestExpired)(o), L = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, v = (0, I.useQuestFormattedDate)(o.config.expiresAt, {
+  } = e, g = (0, r.useStateFromStores)([E.default], () => E.default.getState().theme), M = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = l.useMemo(() => o.config.videoAssets.includes(T), [o, T]), R = l.useRef(null), L = (0, m.useIsQuestExpired)(o), v = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, P = (0, m.useQuestFormattedDate)(o.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
-  }), P = (0, I.useQuestFormattedDate)(o.config.rewardCodeExpiresAt, {
+  }), D = (0, m.useQuestFormattedDate)(o.config.rewardCodeExpiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
   });
   return l.useEffect(() => {
-    null != O.current && (a ? O.current.play() : (O.current.pause(), O.current.currentTime = 0))
+    null != R.current && (a ? R.current.play() : (R.current.pause(), R.current.currentTime = 0))
   }, [a]), (0, s.jsxs)("div", {
-    className: i(A.outerContainer, {
-      [A.outerContainerGiftInventory]: T === m.QuestContent.QUEST_INVENTORY_CARD,
-      [A.outerContainerEmbed]: T === m.QuestContent.QUESTS_EMBED
+    className: i(C.outerContainer, {
+      [C.outerContainerGiftInventory]: T === N.QuestContent.QUEST_INVENTORY_CARD,
+      [C.outerContainerEmbed]: T === N.QuestContent.QUESTS_EMBED
     }),
     children: [(0, s.jsx)(_.default, {
       autoPlay: !1,
       loop: !1,
       muted: !0,
       playsInline: !0,
-      className: A.questSplash,
+      className: C.questSplash,
       controls: !1,
-      poster: (0, N.getHeroStaticAssetUrl)(o.id),
-      ref: O,
-      children: !g && M && (0, s.jsx)("source", {
-        src: (0, N.getHeroAnimatedAssetUrl)(o.id),
+      poster: (0, p.getHeroStaticAssetUrl)(o.id),
+      ref: R,
+      children: !M && O && (0, s.jsx)("source", {
+        src: (0, p.getHeroAnimatedAssetUrl)(o.id),
         type: "video/webm"
       })
     }), (0, s.jsxs)("div", {
-      className: A.header,
+      className: C.header,
       children: [(0, s.jsxs)("div", {
-        className: A.headerContent,
+        className: C.headerContent,
         children: [(0, s.jsxs)("div", {
           children: [(0, s.jsxs)("div", {
-            className: A.iconLogotypeContainer,
+            className: C.iconLogotypeContainer,
             children: [(0, s.jsx)("img", {
-              src: (0, N.getGameTileAssetUrl)(o.id),
+              src: (0, p.getGameTileAssetUrl)(o.id),
               alt: "",
-              className: A.questIcon
+              className: C.questIcon
             }), (0, s.jsx)("img", {
-              src: (0, N.getGameLogotypeAssetUrl)(o.id, h),
+              src: (0, p.getGameLogotypeAssetUrl)(o.id, g),
               alt: "",
-              className: A.questLogotype
-            }), (0, s.jsx)(p.default, {})]
+              className: C.questLogotype
+            }), (0, s.jsx)(S.default, {})]
           }), (0, s.jsxs)("div", {
-            className: A.questInfo,
+            className: C.questInfo,
             children: [(0, s.jsx)(u.Heading, {
               variant: "heading-xxl/bold",
-              children: S.default.Messages.QUEST.format({
+              children: A.default.Messages.QUEST.format({
                 questName: o.config.messages.questName
               })
             }), (0, s.jsx)(u.Text, {
               variant: "text-xs/normal",
-              children: L ? S.default.Messages.QUESTS_CLAIM_BY.format({
+              children: v ? A.default.Messages.QUESTS_CLAIM_BY.format({
+                expirationDate: D
+              }) : A.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: P
-              }) : S.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
-                expirationDate: v
               })
             })]
           })]
-        }), !R && T === m.QuestContent.QUEST_INVENTORY_CARD && (0, s.jsx)(C, {
-          quest: o
+        }), !L && T === N.QuestContent.QUEST_INVENTORY_CARD && (0, s.jsx)(h, {
+          quest: o,
+          location: T
         })]
       }), (0, s.jsx)(u.Clickable, {
-        className: A.submenuWrapper,
+        className: C.submenuWrapper,
         onClick: e => {
-          (0, d.openContextMenuLazy)(e, async () => {
+          (0, I.trackQuestContentClicked)(o.id, T, I.QuestContentCTA.OPEN_CONTEXT_MENU), (0, d.openContextMenuLazy)(e, async () => {
             let {
               QuestsEntryContextMenu: e
             } = await n.el("275986").then(n.bind(n, "275986"));
@@ -138,7 +141,7 @@ var h = e => {
           })
         },
         children: (0, s.jsx)(f.default, {
-          className: A.submenuIcon
+          className: C.submenuIcon
         })
       })]
     })]
