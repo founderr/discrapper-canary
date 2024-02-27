@@ -40,7 +40,7 @@ function c(e) {
 
 function E(e) {
   var t, n;
-  return (0, a.isImageFile)(e.filename) ? "".concat(u.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
+  return (0, a.isImageFile)(e.filename) || (0, a.isVideoFile)(e.filename) ? "".concat(u.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
 }
 
 function f(e) {
