@@ -38,7 +38,8 @@ function E() {
         children: (0, a.jsx)(l.TextInput, {
           tabIndex: -1,
           value: e,
-          editable: !1
+          editable: !1,
+          "aria-hidden": !0
         })
       })
     })
