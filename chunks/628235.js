@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("650893"),
   g = s("697218"),
   h = s("145131"),
-  N = s("306160"),
-  I = s("222038"),
+  I = s("306160"),
+  N = s("222038"),
   p = s("462369"),
   C = s("803163"),
   A = s("49111"),
@@ -38,9 +38,9 @@ function D(e) {
       consumed: s
     }
   } = e, l = "".concat(t.substr(0, 4), "-").concat(t.substr(4)), i = n.useRef(null), r = n.useCallback(e => {
-    if ("c" === e.key && e.metaKey && N.SUPPORTS_COPY) {
+    if ("c" === e.key && e.metaKey && I.SUPPORTS_COPY) {
       var t;
-      e.preventDefault(), e.stopPropagation(), (0, N.copy)(l), null == i || null === (t = i.current) || void 0 === t || t.focus()
+      e.preventDefault(), e.stopPropagation(), (0, I.copy)(l), null == i || null === (t = i.current) || void 0 === t || t.focus()
     }
   }, [l]);
   return (0, a.jsx)("li", {
@@ -230,7 +230,7 @@ class v extends n.PureComponent {
     let {
       currentUser: e
     } = this.props;
-    return I.hasCrypto ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, a.jsx)(o.FormSection, {
+    return N.hasCrypto ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, a.jsx)(o.FormSection, {
       title: x.default.Messages.TWO_FA,
       children: (0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,

@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
 var a = r("37983"),
   n = r("884691"),
   i = r("414456"),
-  l = r.n(i),
-  o = r("77078"),
+  o = r.n(i),
+  l = r("77078"),
   s = r("837899"),
   c = r("425190"),
   d = r("49111"),
@@ -41,8 +41,8 @@ class p extends n.PureComponent {
     } = this.props, f = e.map(e => {
       let h = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
         p = r === d.TableSortDirections.ASCENDING ? c.default : s.default;
-      return (0, a.jsx)(o.Clickable, {
-        className: l(u.headerCell, i, e.headerCellClassName, e.cellClassName, n === e.key && m, {
+      return (0, a.jsx)(l.Clickable, {
+        className: o(u.headerCell, i, e.headerCellClassName, e.cellClassName, n === e.key && m, {
           [u.clickable]: this.isSortable(e)
         }),
         onClick: this.isSortable(e) ? () => this.handleSort(e.key) : void 0,
@@ -55,7 +55,7 @@ class p extends n.PureComponent {
       }, e.key)
     });
     return (0, a.jsx)(h, {
-      className: l(p, u.row, {
+      className: o(p, u.row, {
         [u.stickyHeader]: g
       }),
       children: f
@@ -68,7 +68,7 @@ class p extends n.PureComponent {
       sortData: r,
       sortKey: a,
       sortDirection: i,
-      bodyCellClassName: o,
+      bodyCellClassName: l,
       rowClassName: s,
       cellProps: c,
       rowProps: h,
@@ -83,22 +83,22 @@ class p extends n.PureComponent {
           return t === a
         }) : null,
         n = [...t],
-        l = null != r && r.sort,
-        o = null != r && null != a && this.isSortable(r) ? n.sort("function" == typeof l ? (e, t) => l(e, t, i) : this.getDefaultSort(a)) : n;
-      g = null != r && i === d.TableSortDirections.DESCENDING ? o.reverse() : o
+        o = null != r && r.sort,
+        l = null != r && null != a && this.isSortable(r) ? n.sort("function" == typeof o ? (e, t) => o(e, t, i) : this.getDefaultSort(a)) : n;
+      g = null != r && i === d.TableSortDirections.DESCENDING ? l.reverse() : l
     }
     return g.map((t, r) => {
       let a = e.map(e => (0, n.createElement)(m, {
         ...c,
         key: e.key,
         item: t,
-        className: l(o, e.bodyCellClassName, e.cellClassName)
+        className: o(l, e.bodyCellClassName, e.cellClassName)
       }, null != e.render ? e.render(t, c, r) : t[e.key]));
       return (0, n.createElement)(p, {
         ...h,
         key: t.key,
         item: t,
-        className: l(u.row, s)
+        className: o(u.row, s)
       }, a)
     })
   }

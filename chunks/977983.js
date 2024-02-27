@@ -22,7 +22,7 @@ function p(e) {
   var t, n;
   let {
     channel: p
-  } = e, E = (0, o.useCanManageChannel)(p), S = (0, a.useStateFromStores)([s.default], () => s.default.hasHidden(p.id)), g = (0, d.isOnboardingDismissed)(p.id), {
+  } = e, E = (0, o.useCanManageChannel)(p), g = (0, a.useStateFromStores)([s.default], () => s.default.hasHidden(p.id)), S = (0, d.isOnboardingDismissed)(p.id), {
     sortOrder: C,
     tagFilter: _
   } = (0, u.useForumChannelStore)(p.id), I = (0, a.useStateFromStores)([r.default, c.default], () => {
@@ -31,12 +31,12 @@ function p(e) {
     let t = c.default.getThreads(p.id, C, _);
     return !!(t.length > 0) || !1
   }, [p.id, C, _]), T = p.isMediaChannel();
-  if (!E || g || T && I) return null;
-  let v = (t = S, n = T, t ? n ? m.default.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : m.default.Messages.FORUM_CHANNEL_ONBOARDING_SHOW : n ? m.default.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : m.default.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
+  if (!E || S || T && I) return null;
+  let v = (t = g, n = T, t ? n ? m.default.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : m.default.Messages.FORUM_CHANNEL_ONBOARDING_SHOW : n ? m.default.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : m.default.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
   return (0, l.jsx)(h.Icon, {
     tooltip: v,
     icon: f.default,
-    onClick: () => i.default.hideAdminOnboarding(p.id, !S),
-    selected: !S
+    onClick: () => i.default.hideAdminOnboarding(p.id, !g),
+    selected: !g
   })
 }

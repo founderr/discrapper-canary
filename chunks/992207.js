@@ -19,8 +19,8 @@ var a = n("414456"),
   m = n("956089"),
   p = n("56947"),
   E = n("386045"),
-  S = n("99795"),
-  g = n("782340"),
+  g = n("99795"),
+  S = n("782340"),
   C = n("688257"),
   _ = e => {
     let {
@@ -37,10 +37,10 @@ var a = n("414456"),
       if (null == n) return !1;
       let t = f.default.getCurrentUserActiveStream(),
         l = null === (e = d.default.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
-      return null != t && !!E.default.getSettings().clipsEnabled && !!a || null != l && !!E.default.getSettings().decoupledClipsEnabled && !!_ || o.default.getParticipants(n).some(e => e.type === S.ParticipantTypes.USER && E.default.isClipsEnabledForUser(e.user.id))
+      return null != t && !!E.default.getSettings().clipsEnabled && !!a || null != l && !!E.default.getSettings().decoupledClipsEnabled && !!_ || o.default.getParticipants(n).some(e => e.type === g.ParticipantTypes.USER && E.default.isClipsEnabledForUser(e.user.id))
     });
     return I ? (0, l.jsxs)(u.TooltipContainer, {
-      text: g.default.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
+      text: S.default.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
       color: u.TooltipColors.GREY,
       className: s(t, C.clipsEnabledIndicator),
       children: [(0, l.jsx)(m.IconBadge, {
@@ -49,7 +49,7 @@ var a = n("414456"),
         color: r.default.unsafe_rawColors.PRIMARY_500.css,
         className: C.clipBadgeIcon
       }), (0, l.jsx)(m.TextBadge, {
-        text: g.default.Messages.CLIPS_ENABLED_BADGE,
+        text: S.default.Messages.CLIPS_ENABLED_BADGE,
         shape: m.BadgeShapes.ROUND_RIGHT,
         color: r.default.unsafe_rawColors.PRIMARY_500.css,
         className: C.clipBadgeText

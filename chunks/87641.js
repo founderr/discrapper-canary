@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return N
   }
 }), s("222007");
 var a = s("37983"),
@@ -80,7 +80,7 @@ h.defaultProps = {
   hideDivider: !1,
   onEditClick: () => {}
 };
-class N extends n.PureComponent {
+class I extends n.PureComponent {
   renderFooter() {
     let {
       paymentSources: e
@@ -187,4 +187,4 @@ class N extends n.PureComponent {
     }
   }
 }
-var I = N
+var N = I

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return N
   }
 }), s("222007");
 var a = s("37983"),
@@ -21,10 +21,10 @@ var a = s("37983"),
   _ = s("271445"),
   g = s("49111"),
   h = s("782340"),
-  N = s("26423");
+  I = s("26423");
 
-function I() {
-  let [e] = n.useState(() => f.default.getEnableHardwareAcceleration()), t = m.DisableGamesTab.useSetting(), s = m.DeveloperMode.useSetting(), I = m.DisableHomeAutoNav.useSetting(), {
+function N() {
+  let [e] = n.useState(() => f.default.getEnableHardwareAcceleration()), t = m.DisableGamesTab.useSetting(), s = m.DeveloperMode.useSetting(), N = m.DisableHomeAutoNav.useSetting(), {
     hasLibraryApplication: p,
     testModeApplicationId: C
   } = (0, l.useStateFromStoresObject)([u.default, d.default], () => ({
@@ -77,17 +77,17 @@ function I() {
       onChange: O,
       children: h.default.Messages.DEVELOPER_APPLICATION_TEST_MODE
     }), (0, a.jsx)(r.FormSwitch, {
-      value: !I,
+      value: !N,
       note: h.default.Messages.USER_SETTINGS_HOME_AUTO_NAV_HELP_TEXT.format({
         helpCenterLink: E.default.getArticleURL(g.HelpdeskArticles.GUILD_HOME)
       }),
       onChange: R,
       children: (0, a.jsxs)("div", {
-        className: N.badgedItem,
+        className: I.badgedItem,
         children: [h.default.Messages.USER_SETTINGS_HOME_AUTO_NAV, (0, a.jsx)(c.TextBadge, {
           text: h.default.Messages.BETA,
           color: i.default.unsafe_rawColors.BRAND_500.css,
-          className: N.betaTag
+          className: I.betaTag
         })]
       })
     })]

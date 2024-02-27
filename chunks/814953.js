@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("133403"),
   g = s("913801"),
   h = s("960460"),
-  N = s("355025"),
-  I = s("809310"),
+  I = s("355025"),
+  N = s("809310"),
   p = s("34966"),
   C = s("269936"),
   A = s("619443"),
@@ -138,7 +138,7 @@ class Q extends n.Component {
     this.setState({
       loading: !0
     });
-    let e = await (0, N.getBuildOverride)();
+    let e = await (0, I.getBuildOverride)();
     this.setState({
       loading: !1,
       buildOverrides: e,
@@ -770,7 +770,7 @@ function X() {
           A.default.getSocket().close(), A.default.getSocket().connect()
         },
         children: "Reset Socket"
-      }), I.ENABLE_CACHE_STORE && (0, a.jsx)(S.Button, {
+      }), N.ENABLE_CACHE_STORE && (0, a.jsx)(S.Button, {
         onClick: () => {
           E.default.dispatch({
             type: "CLEAR_CACHES",

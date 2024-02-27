@@ -45,15 +45,15 @@ function S(e) {
     showBorder: _ = !1,
     borderType: g,
     hasBackground: h = !1,
-    forcedDivider: N = !1,
-    showPremiumIcon: I = !1
+    forcedDivider: I = !1,
+    showPremiumIcon: N = !1
   } = e;
   return (0, a.jsx)("div", {
     className: l(u.customizationSection, E, {
       [u.disabled]: f,
       [u.hideDivider]: m,
       [u.showBorder]: _,
-      [u.withDivider]: N
+      [u.withDivider]: I
     }),
     children: (0, a.jsxs)(d.default, {
       className: u.customizationSectionBorder,
@@ -64,7 +64,7 @@ function S(e) {
       children: [(0, a.jsxs)(i.FormTitle, {
         className: u.title,
         id: n,
-        children: [t, I && (0, a.jsx)(o.default, {}), s]
+        children: [t, N && (0, a.jsx)(o.default, {}), s]
       }), null != r ? (0, a.jsx)(i.FormText, {
         type: i.FormText.Types.DESCRIPTION,
         className: u.sectionDescription,

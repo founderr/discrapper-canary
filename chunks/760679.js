@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return E
   },
   toggleOverlayCanvas: function() {
-    return S
+    return g
   }
 });
 var l = n("981980"),
@@ -117,7 +117,7 @@ function E(e) {
   })
 }
 
-function S() {
+function g() {
   s.default.dispatch({
     type: "TOGGLE_OVERLAY_CANVAS"
   })

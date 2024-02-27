@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("54346"),
   g = s("684581"),
   h = s("488284"),
-  N = s("649649"),
-  I = s("640497"),
+  I = s("649649"),
+  N = s("640497"),
   p = s("128887"),
   C = s("699668"),
   A = s("748021"),
@@ -456,14 +456,14 @@ function X() {
 }
 
 function J() {
-  let e = I.NotificationsExperiment.useExperiment({
+  let e = N.NotificationsExperiment.useExperiment({
       location: "UserSettingsNotifications"
     }, {
       autoTrackExposure: !1
     }).enabled,
     {
       manuallyOpen: t
-    } = I.UnreadsEntryPointExperiment.useExperiment({
+    } = N.UnreadsEntryPointExperiment.useExperiment({
       location: "UserSettingsNotifications"
     }, {
       autoTrackExposure: !1
@@ -496,7 +496,7 @@ function J() {
 }
 async function $(e) {
   e(!0);
-  let t = await (0, N.listSnapshots)();
+  let t = await (0, I.listSnapshots)();
   0 === t.length ? await (0, C.revertToOldSystem)() : c.default.show({
     title: w.default.Messages.CONFIRM,
     body: w.default.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({

@@ -17,14 +17,14 @@ var r = n("446674"),
 function c(e, t, c) {
   var f;
   let h = (0, l.useGetStreamApplication)(e),
-    p = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
-    E = null != e ? (0, i.encodeStreamKey)(e) : o.default.getActiveStreamKey(),
-    C = null !== (f = o.default.getVideoStats(E)) && void 0 !== f ? f : {},
+    E = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
+    p = null != e ? (0, i.encodeStreamKey)(e) : o.default.getActiveStreamKey(),
+    C = null !== (f = o.default.getVideoStats(p)) && void 0 !== f ? f : {},
     m = {
-      media_session_id: o.default.getMediaSessionId(E),
-      rtc_connection_id: o.default.getRtcConnectionId(E),
-      stream_region: o.default.getRegion(E),
-      max_viewers: o.default.getMaxViewers(E),
+      media_session_id: o.default.getMediaSessionId(p),
+      rtc_connection_id: o.default.getRtcConnectionId(p),
+      stream_region: o.default.getRegion(p),
+      max_viewers: o.default.getMaxViewers(p),
       ...C
     };
   return null == e ? null : (0, a.jsx)(s.MenuItem, {
@@ -38,7 +38,7 @@ function c(e, t, c) {
         return n => (0, a.jsx)(t, {
           stream: e,
           streamApplication: h,
-          isStreamer: p === (null == e ? void 0 : e.ownerId),
+          isStreamer: E === (null == e ? void 0 : e.ownerId),
           analyticsData: m,
           ...n
         })

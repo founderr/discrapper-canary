@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("931138"),
   g = s("398288"),
   h = s("462579"),
-  N = s("867544"),
-  I = s("907566"),
+  I = s("867544"),
+  N = s("907566"),
   p = s("267675"),
   C = s("688342"),
   A = s("486952"),
@@ -181,7 +181,7 @@ function G(e) {
             onClick: H,
             onMouseEnter: t,
             onMouseLeave: s,
-            children: (0, a.jsx)(I.default, {
+            children: (0, a.jsx)(N.default, {
               className: L.toggleIconOn,
               foreground: L.fill,
               width: 24,
@@ -198,7 +198,7 @@ function G(e) {
         foreground: L.fill,
         width: 24,
         height: 24
-      }) : (0, a.jsx)(N.default, {
+      }) : (0, a.jsx)(I.default, {
         className: L.toggleIconOff,
         background: L.fill,
         foreground: L.fill,

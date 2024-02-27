@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("27618"),
   p = n("191542"),
   E = n("697218"),
-  S = n("79798"),
-  g = n("151185"),
+  g = n("79798"),
+  S = n("151185"),
   C = n("11056"),
   _ = n("826684"),
   I = n("599110"),
@@ -41,11 +41,11 @@ function P(e) {
     channel: a
   } = e, {
     status: d,
-    activities: S
+    activities: g
   } = (0, i.useStateFromStoresObject)([m.default, E.default, h.default], () => m.default.isFriend(t.id) || t === E.default.getCurrentUser() ? {
     status: h.default.getStatus(t.id),
     activities: h.default.getActivities(t.id)
-  } : {}), g = (0, i.useStateFromStores)([p.default], () => null != p.default.getTypingUsers(a.id)[t.id]), C = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()), _ = (0, i.useStateFromStores)([h.default], () => h.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([m.default], () => m.default.getNickname(t.id)), T = e => {
+  } : {}), S = (0, i.useStateFromStores)([p.default], () => null != p.default.getTypingUsers(a.id)[t.id]), C = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()), _ = (0, i.useStateFromStores)([h.default], () => h.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([m.default], () => m.default.getNickname(t.id)), T = e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -82,9 +82,9 @@ function P(e) {
       isOwner: t.id === a.ownerId,
       ownerTooltipText: j.default.Messages.GROUP_OWNER,
       shouldAnimateStatus: O,
-      isTyping: g,
+      isTyping: S,
       status: d,
-      activities: S,
+      activities: g,
       channel: a,
       onContextMenu: T,
       isMobile: _,
@@ -138,7 +138,7 @@ function b(e) {
         "aria-label": i.application.name,
         statusTooltip: !0
       }),
-      decorators: (0, l.jsx)(S.default, {
+      decorators: (0, l.jsx)(g.default, {
         className: L.botTag,
         verified: null == h ? void 0 : h.isVerifiedBot()
       }),
@@ -188,9 +188,9 @@ function D(e) {
       fade: !0,
       children: [(0, l.jsxs)(_.default, {
         className: y.membersGroup,
-        children: ["".concat(j.default.Messages.MEMBERS, "—").concat(o.length, " "), v ? (0, l.jsx)(S.default, {
+        children: ["".concat(j.default.Messages.MEMBERS, "—").concat(o.length, " "), v ? (0, l.jsx)(g.default, {
           className: y.decorator,
-          type: S.default.Types.STAFF_ONLY_DM
+          type: g.default.Types.STAFF_ONLY_DM
         }) : null]
       }), o.map(e => (0, l.jsx)(P, {
         user: e,
@@ -217,7 +217,7 @@ function D(e) {
           },
           avatar: (0, l.jsx)("div", {
             className: y.appIconWrapper,
-            children: (0, l.jsx)(g.default, {
+            children: (0, l.jsx)(S.default, {
               width: 18,
               height: 18
             })

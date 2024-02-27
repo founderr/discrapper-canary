@@ -23,8 +23,8 @@ function r(e) {
     analyticsSubscriptionType: m,
     renderHeader: p,
     renderPurchaseConfirmation: E,
-    planGroup: S,
-    reviewWarningMessage: g,
+    planGroup: g,
+    reviewWarningMessage: S,
     skuId: C
   } = e;
   (0, a.openModalLazy)(async () => {
@@ -58,10 +58,10 @@ function r(e) {
             skuId: C,
             renderHeader: p,
             renderPurchaseConfirmation: E,
-            planGroup: S,
+            planGroup: g,
             trialId: u,
             trialFooterMessageOverride: o,
-            reviewWarningMessage: g
+            reviewWarningMessage: S
           })
         })
       })

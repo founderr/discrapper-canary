@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("795696"),
   p = n("635792"),
   E = n("252063"),
-  S = n("724110"),
-  g = n("373469"),
+  g = n("724110"),
+  S = n("373469"),
   C = n("42203"),
   _ = n("957255"),
   I = n("824563"),
@@ -50,8 +50,8 @@ var l = n("37983"),
   z = n("390413"),
   K = n("104649"),
   Z = n("80615"),
-  X = n("80531"),
-  Q = n("590456"),
+  Q = n("80531"),
+  X = n("590456"),
   q = n("49111"),
   J = n("646718"),
   $ = n("782340"),
@@ -88,14 +88,14 @@ var l = n("37983"),
       {
         activity: ep,
         customStatusActivity: eE,
-        isApplicationStreaming: eS,
-        isMobile: eg,
+        isApplicationStreaming: eg,
+        isMobile: eS,
         status: eC,
         hangStatusActivity: e_,
         isHangStatusPrimaryActivity: eI
-      } = (0, o.useStateFromStoresObject)([g.default, I.default, _.default], () => {
+      } = (0, o.useStateFromStoresObject)([S.default, I.default, _.default], () => {
         var e;
-        let t = null != g.default.getAnyStreamForUser(es.id);
+        let t = null != S.default.getAnyStreamForUser(es.id);
         return {
           activity: I.default.findActivity(es.id, e => {
             let {
@@ -126,12 +126,12 @@ var l = n("37983"),
           }) : null
         }
       }),
-      eT = null != ep || null != e_ || eS,
+      eT = null != ep || null != e_ || eg,
       ev = null !== (t = N.default.getNickname(null, n.id, es)) && void 0 !== t ? t : A.default.getName(es),
       ex = (0, o.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
       [eN, eA, eM, eR, ej] = (0, o.useStateFromStoresArray)([M.default], () => [M.default.getMutualFriendsCount(es.id), M.default.getMutualFriends(es.id), M.default.getMutualGuilds(es.id), M.default.isFetchingProfile(es.id), M.default.isFetchingFriends(es.id)]),
       eL = (0, H.useGetVoiceChannelInfoForVoiceActivitySection)(es.id),
-      ey = null != eL && !eS && !eI,
+      ey = null != eL && !eg && !eI,
       {
         showVoiceActivityInProfile: eO
       } = R.VoiceActivityProfileExperiment.useExperiment({
@@ -163,13 +163,13 @@ var l = n("37983"),
     }, [es]), a.useEffect(() => {
       null != er && ef && (0, y.trackProfilePanelViewed)({
         displayProfile: er,
-        isMobile: eg,
+        isMobile: eS,
         loadDurationMs: Date.now() - el.current,
         activity: ep,
         customStatusActivity: eE,
         status: eC
       })
-    }, [er, eg, ep, eE, eC, ef]);
+    }, [er, eS, ep, eE, eC, ef]);
     let eF = null == eM ? void 0 : eM.map(e => (0, l.jsx)(Z.default, {
         connection: e,
         user: es,
@@ -193,7 +193,7 @@ var l = n("37983"),
       onMouseLeave: eH,
       children: (0, l.jsxs)(P.default, {
         user: es,
-        profileType: Q.UserProfileTypes.PANEL,
+        profileType: X.UserProfileTypes.PANEL,
         useDefaultClientTheme: !0,
         children: [eU.shouldShow && (0, l.jsx)(b.default, {
           user: es,
@@ -202,7 +202,7 @@ var l = n("37983"),
           isInSidebar: !0,
           ...eU
         }, es.id), (0, l.jsxs)(d.ScrollerNone, {
-          children: [(0, l.jsx)(X.default, {
+          children: [(0, l.jsx)(Q.default, {
             user: es,
             displayProfile: er,
             channel: n,
@@ -289,7 +289,7 @@ var l = n("37983"),
                   children: $.default.Messages.PRIVATE_CHANNEL_ADD_APPS_INFO
                 }), (0, l.jsx)(d.Button, {
                   onClick: () => {
-                    (0, d.openModal)(e => (0, l.jsx)(S.default, {
+                    (0, d.openModal)(e => (0, l.jsx)(g.default, {
                       channelId: n.id,
                       ...e
                     }))

@@ -6,8 +6,8 @@ r.r(t), r.d(t, {
 });
 var a, n = r("37983"),
   i = r("884691"),
-  l = r("414456"),
-  o = r.n(l),
+  o = r("414456"),
+  l = r.n(o),
   s = r("404828"),
   c = r.n(s),
   d = r("269936"),
@@ -97,7 +97,7 @@ let y = {
       react(e, t, a) {
         let i = () => (0, n.jsx)("pre", {
           children: (0, n.jsx)("code", {
-            className: o(g.scrollbarGhostHairline, "hljs"),
+            className: l(g.scrollbarGhostHairline, "hljs"),
             children: b(e)
           })
         }, a.key);
@@ -111,7 +111,7 @@ let y = {
               let r = t.highlight(e.lang, e.content, !0);
               return null == r ? i() : (0, n.jsx)("pre", {
                 children: (0, n.jsx)("code", {
-                  className: o(g.scrollbarGhostHairline, "hljs", r.language),
+                  className: l(g.scrollbarGhostHairline, "hljs", r.language),
                   dangerouslySetInnerHTML: {
                     __html: r.value
                   }
@@ -133,12 +133,12 @@ class v extends i.PureComponent {
       state: r,
       parser: a,
       output: i
-    } = this.props, l = a("".concat(t, "\n\n"), {
+    } = this.props, o = a("".concat(t, "\n\n"), {
       inline: !1,
       ...r
-    }), s = i(l);
+    }), s = i(o);
     return (0, n.jsx)("div", {
-      className: o(m.markdown, e),
+      className: l(m.markdown, e),
       children: s
     })
   }

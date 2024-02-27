@@ -41,7 +41,7 @@ function C(e) {
     name: S,
     emojiId: j,
     emojiName: E
-  } = t, y = null != C, [M, k] = i.useState(!1), T = (0, u.useStateFromStores)([h.default], () => null != j ? h.default.getUsableCustomEmojiById(j) : null), N = y || null != s, A = (!y || !M) && (null != j || null != E), F = 0 === n, I = i.useRef(null), R = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), w = (0, a.jsxs)(a.Fragment, {
+  } = t, y = null != C, [M, k] = i.useState(!1), T = (0, u.useStateFromStores)([h.default], () => null != j ? h.default.getUsableCustomEmojiById(j) : null), N = y || null != s, A = (!y || !M) && (null != j || null != E), F = 0 === n, I = i.useRef(null), w = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), R = (0, a.jsxs)(a.Fragment, {
     children: [A ? (0, a.jsx)(f.default, {
       className: o(x.emoji, {
         [x.small]: F
@@ -71,7 +71,7 @@ function C(e) {
       [x.selected]: b
     }, r),
     onClick: e => {
-      null == s || s(e), null == C || C(t), !R && null != I.current && I.current.blur()
+      null == s || s(e), null == C || C(t), !w && null != I.current && I.current.blur()
     },
     onMouseEnter: () => y && k(!0),
     onMouseLeave: () => y && k(!1)
@@ -88,13 +88,13 @@ function C(e) {
     role: "button",
     "aria-pressed": b,
     ...L,
-    children: w
+    children: R
   }) : (0, a.jsx)("div", {
     "aria-label": null != v ? v : p.default.Messages.FORUM_TAG_A11Y_TAG_BY.format({
       tagName: S
     }),
     ...L,
-    children: w
+    children: R
   })
 }
 
@@ -141,7 +141,7 @@ function v(e) {
     name: S,
     emojiId: j,
     emojiName: E
-  } = t, y = null != C, [M, k] = i.useState(!1), T = (0, u.useStateFromStores)([h.default], () => null != j ? h.default.getUsableCustomEmojiById(j) : null), N = y || null != s, A = (!y || !M) && (null != j || null != E), F = 0 === n, I = i.useRef(null), R = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), w = (0, a.jsxs)(a.Fragment, {
+  } = t, y = null != C, [M, k] = i.useState(!1), T = (0, u.useStateFromStores)([h.default], () => null != j ? h.default.getUsableCustomEmojiById(j) : null), N = y || null != s, A = (!y || !M) && (null != j || null != E), F = 0 === n, I = i.useRef(null), w = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), R = (0, a.jsxs)(a.Fragment, {
     children: [A ? (0, a.jsx)(f.default, {
       className: o(x.emoji, {
         [x.small]: F
@@ -169,7 +169,7 @@ function v(e) {
       [x.selected]: b
     }, r),
     onClick: e => {
-      null == s || s(e), null == C || C(t), !R && null != I.current && I.current.blur()
+      null == s || s(e), null == C || C(t), !w && null != I.current && I.current.blur()
     },
     onMouseEnter: () => y && k(!0),
     onMouseLeave: () => y && k(!1)
@@ -186,10 +186,10 @@ function v(e) {
     role: "button",
     "aria-pressed": b,
     ...L,
-    children: w
+    children: R
   }) : (0, a.jsx)("div", {
     ...L,
-    children: w
+    children: R
   })
 }
 

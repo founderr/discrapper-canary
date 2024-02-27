@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return I
   },
   replaceAllContent: function() {
-    return R
+    return w
   },
   setCollapsedSelection: function() {
-    return w
+    return R
   },
   setCollapsedEndSelection: function() {
     return L
@@ -185,23 +185,23 @@ function I(e) {
   return null != n && n.hasFocus && (t = l.EditorState.moveFocusToEnd(t)), t
 }
 
-function R(e, t) {
+function w(e, t) {
   let n = N(t);
   return M(e, t, 0, n.length)
 }
 
-function w(e, t) {
+function R(e, t) {
   let n = t.getSelection();
   return n = (n = n.set("focusOffset", e)).set("anchorOffset", e), l.EditorState.forceSelection(t, n)
 }
 
 function L(e) {
   let t = e.getCurrentContent().getFirstBlock().getText();
-  return w(t.length, e)
+  return R(t.length, e)
 }
 
 function _(e) {
-  return w(0, e)
+  return R(0, e)
 }
 
 function B(e) {

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return I
   }
 });
 var a = s("37983"),
@@ -22,13 +22,13 @@ var a = s("37983"),
   g = s("782340"),
   h = s("535031");
 
-function N(e) {
+function I(e) {
   let {
     user: t,
     guild: s,
     className: l,
-    forcedDivider: N = !1,
-    withTutorial: I = !1,
+    forcedDivider: I = !1,
+    withTutorial: N = !1,
     showBorder: p = !1,
     isTryItOutFlow: C = !1,
     initialSelectedEffectId: A
@@ -50,9 +50,9 @@ function N(e) {
   }, [x, R]);
   let L = null != s,
     P = C || void 0 !== M ? null != M : null != O,
-    j = I ? u.default : r.Button;
+    j = N ? u.default : r.Button;
   return (0, a.jsx)(T.default, {
-    forcedDivider: N,
+    forcedDivider: I,
     borderType: f.FeatureBorderTypes.PREMIUM,
     hasBackground: !0,
     title: g.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
@@ -65,7 +65,7 @@ function N(e) {
         size: r.Button.Sizes.SMALL,
         onClick: v,
         className: i({
-          [h.buttonHighlighted]: I
+          [h.buttonHighlighted]: N
         }),
         children: g.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
       }), P && (0, a.jsx)(r.Button, {

@@ -7,9 +7,9 @@ r.r(t), r.d(t, {
 var a = r("37983"),
   n = r("884691"),
   i = r("414456"),
-  l = r.n(i),
-  o = r("866227"),
-  s = r.n(o),
+  o = r.n(i),
+  l = r("866227"),
+  s = r.n(l),
   c = r("446674"),
   d = r("77078"),
   u = r("145079"),
@@ -85,10 +85,10 @@ let L = [{
           timestamp: n,
           fingerprint: i
         }
-      } = e, o = h.default.getUser(i), c = s(n);
+      } = e, l = h.default.getUser(i), c = s(n);
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(g.default, {
-          className: l(T.headerBar, j.subPanelHeaderBar),
+          className: o(T.headerBar, j.subPanelHeaderBar),
           children: [(0, a.jsx)(g.default.Icon, {
             icon: p.default,
             tooltip: t
@@ -104,10 +104,10 @@ let L = [{
               title: (0, f.dateFormat)(c, "LLLL"),
               children: (0, f.calendarFormat)(c)
             })
-          }), null != o && (0, a.jsx)(x.Property, {
+          }), null != l && (0, a.jsx)(x.Property, {
             name: "User",
             children: (0, a.jsx)(u.default, {
-              user: o
+              user: l
             })
           }), (0, a.jsx)(x.Property, {
             name: "Fingerprint",
@@ -163,13 +163,13 @@ function A() {
   let e = n.useRef(null),
     t = (0, c.useStateFromStores)([b.default], () => b.default.loggedEvents),
     [r, i] = n.useState(Object.keys(_)),
-    o = t.filter(e => {
+    l = t.filter(e => {
       for (let t of r)
         if (_[t].filter(e)) return !0;
       return !1
     }),
     [s, u] = n.useState(void 0),
-    h = o.find(e => e.key === s),
+    h = l.find(e => e.key === s),
     {
       TabBar: p,
       renderSelectedTab: g
@@ -178,7 +178,7 @@ function A() {
     }, []);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: l(T.panel, j.panel),
+    className: o(T.panel, j.panel),
     children: [(0, a.jsxs)("div", {
       className: j.toolbar,
       children: [(0, a.jsx)(d.Button, {
@@ -199,7 +199,7 @@ function A() {
         children: Object.entries(_).map(e => {
           let [t, n] = e;
           return (0, a.jsx)(d.Clickable, {
-            className: l(j.filter, r.includes(t) && j.activeFilter),
+            className: o(j.filter, r.includes(t) && j.activeFilter),
             onClick: () => {
               var e;
               return e = t, void i(t => t.includes(e) ? t.filter(t => t !== e) : [...t, e])
@@ -212,7 +212,7 @@ function A() {
       className: j.tableContainer,
       children: (0, a.jsx)(v.default, {
         columns: w,
-        data: o,
+        data: l,
         selectedRowKey: s,
         onClickRow: u
       })

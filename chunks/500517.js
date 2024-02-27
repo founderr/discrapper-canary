@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("841098"),
   g = s("376556"),
   h = s("572943"),
-  N = s("535013"),
-  I = s("816499"),
+  I = s("535013"),
+  N = s("816499"),
   p = s("926994"),
   C = s("10641"),
   A = s("47319"),
@@ -251,25 +251,25 @@ function q(e) {
       var t;
       let s = null !== (t = e.metadata) && void 0 !== t ? t : {},
         n = null,
-        l = (0, N.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], _);
+        l = (0, I.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], _);
       switch (e.type) {
         case w.PlatformTypes.REDDIT:
-          n = (0, I.generateRedditMetadataItems)(s, K.metadataItem);
+          n = (0, N.generateRedditMetadataItems)(s, K.metadataItem);
           break;
         case w.PlatformTypes.STEAM:
-          n = (0, I.generateSteamMetadataItems)(s, K.metadataItem);
+          n = (0, N.generateSteamMetadataItems)(s, K.metadataItem);
           break;
         case w.PlatformTypes.TWITTER:
-          n = (0, I.generateTwitterMetadataItems)(s, K.metadataItem);
+          n = (0, N.generateTwitterMetadataItems)(s, K.metadataItem);
           break;
         case w.PlatformTypes.EBAY:
-          n = (0, I.generateEbayMetadataItems)(s, K.metadataItem);
+          n = (0, N.generateEbayMetadataItems)(s, K.metadataItem);
           break;
         case w.PlatformTypes.PAYPAL:
-          n = (0, I.generatePaypalMetadataItems)(s, K.metadataItem);
+          n = (0, N.generatePaypalMetadataItems)(s, K.metadataItem);
           break;
         case w.PlatformTypes.TIKTOK:
-          n = (0, I.generateTikTokMetadataItems)(s, K.metadataItem)
+          n = (0, N.generateTikTokMetadataItems)(s, K.metadataItem)
       }
       null !== l && (null == n && (n = []), null == n || n.push((0, a.jsx)(c.Text, {
         variant: "text-xs/normal",

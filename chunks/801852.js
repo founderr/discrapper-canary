@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("812204"),
   p = n("685665"),
   E = n("393414"),
-  S = n("161778"),
-  g = n("124824"),
+  g = n("161778"),
+  S = n("124824"),
   C = n("772280"),
   _ = n("82636"),
   I = n("599110"),
@@ -65,19 +65,19 @@ let F = "vc-activities-".concat((0, u.v4)()),
       location: "activties_mini_shelf"
     }, {
       autoTrackExposure: !0
-    }), z = (0, o.useStateFromStores)([S.default], () => S.default.getState().theme), K = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
+    }), z = (0, o.useStateFromStores)([g.default], () => g.default.getState().theme), K = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
       id: Z,
-      guild_id: X
+      guild_id: Q
     } = n;
     a.useEffect(() => {
       I.default.track(y.AnalyticEvents.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
         channel_id: Z,
-        guild_id: X
+        guild_id: Q
       })
-    }, [Z, X]), a.useEffect(() => {
+    }, [Z, Q]), a.useEffect(() => {
       !s && u()
     }, [u, s]);
-    let Q = (0, f.useAppContext)(),
+    let X = (0, f.useAppContext)(),
       {
         analyticsLocations: q,
         AnalyticsLocationProvider: J
@@ -86,7 +86,7 @@ let F = "vc-activities-".concat((0, u.v4)()),
         analyticsLocations: $,
         AnalyticsLocationProvider: ee
       } = (0, p.default)([...q, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
-      et = Q === y.AppContext.POPOUT,
+      et = X === y.AppContext.POPOUT,
       en = (0, c.useAnalyticsContext)(),
       el = function(e) {
         let t = (0, A.default)({
@@ -153,7 +153,7 @@ let F = "vc-activities-".concat((0, u.v4)()),
         })]
       }) : null;
     return (0, l.jsx)(J, {
-      children: (0, l.jsx)(g.default, {
+      children: (0, l.jsx)(S.default, {
         children: (0, l.jsxs)(d.Dialog, {
           ref: t,
           "aria-labelledby": F,

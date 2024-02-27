@@ -19,8 +19,8 @@ var r = n("446674"),
   c = n("373469"),
   f = n("42887"),
   h = n("697218"),
-  p = n("394832"),
-  E = n("985622"),
+  E = n("394832"),
+  p = n("985622"),
   C = n("356553"),
   m = n("387111"),
   S = n("773336"),
@@ -53,10 +53,10 @@ function I(e) {
     onClose: I,
     onSelect: A,
     appContext: M = g.AppContext.APP
-  } = e, x = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS), R = null !== (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, N = v(n, r, l), L = (0, o.default)(R, M), O = (0, u.default)(R, M, g.NOOP_NULL), y = null == R ? (0, a.jsx)(s.MenuItem, {
+  } = e, x = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS), N = null !== (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, R = v(n, r, l), L = (0, o.default)(N, M), O = (0, u.default)(N, M, g.NOOP_NULL), y = null == N ? (0, a.jsx)(s.MenuItem, {
     id: "share-your-screen",
     label: T.default.Messages.SHARE_YOUR_SCREEN,
-    icon: p.default,
+    icon: E.default,
     action: m
   }) : (0, a.jsxs)(a.Fragment, {
     children: [S.isPlatformEmbedded ? (0, a.jsx)(s.MenuItem, {
@@ -66,13 +66,13 @@ function I(e) {
     }) : null, h ? O : null, x ? (0, a.jsx)(s.MenuItem, {
       id: "change-windows",
       label: T.default.Messages.SCREENSHARE_CHANGE_WINDOWS,
-      icon: p.default,
+      icon: E.default,
       action: m
     }) : null, (0, a.jsx)(s.MenuItem, {
       id: "stop-streaming",
       label: T.default.Messages.STOP_STREAMING,
-      icon: E.default,
-      action: () => (0, d.default)(R)
+      icon: p.default,
+      action: () => (0, d.default)(N)
     })]
   });
   return (0, a.jsx)(i.default, {
@@ -81,9 +81,9 @@ function I(e) {
       onSelect: A,
       navId: "manage-streams",
       onClose: I,
-      "aria-label": null != R ? T.default.Messages.STOP_STREAMING : T.default.Messages.SHARE_YOUR_SCREEN,
+      "aria-label": null != N ? T.default.Messages.STOP_STREAMING : T.default.Messages.SHARE_YOUR_SCREEN,
       children: [(0, a.jsx)(s.MenuGroup, {
-        children: N.map(e => {
+        children: R.map(e => {
           let {
             stream: t,
             username: n

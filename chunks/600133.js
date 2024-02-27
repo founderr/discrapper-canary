@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return eD
   },
   default: function() {
-    return eW
+    return eK
   }
 }), n("222007");
 var s = n("866227"),
@@ -49,8 +49,8 @@ var s = n("866227"),
   H = n("662285"),
   V = n("808422"),
   Y = n("374363"),
-  K = n("373469"),
-  W = n("271938"),
+  W = n("373469"),
+  K = n("271938"),
   z = n("250404"),
   Q = n("533222"),
   Z = n("42203"),
@@ -664,14 +664,14 @@ let eF = [eg.NoticeTypes.QUARANTINED, eg.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
     },
     [eg.NoticeTypes.QUESTS_PROGRESS_INTERRUPTION]: {
       predicate: () => {
-        let e = K.default.getCurrentUserActiveStream();
+        let e = W.default.getCurrentUserActiveStream();
         if (null == e) return !1;
         let t = (0, C.encodeStreamKey)(e),
           n = F.default.getStreamHeartbeatFailure(t);
         return null != n && Date.now() - n.firstFailedAt >= eL.CONSECUTIVE_HEARTBEAT_PERIOD_MS
       },
       metadata: () => {
-        let e = K.default.getCurrentUserActiveStream();
+        let e = W.default.getCurrentUserActiveStream();
         return {
           streamKey: null != e ? (0, C.encodeStreamKey)(e) : null
         }
@@ -717,9 +717,9 @@ function eV() {
 function eY() {
   return !eo.default.enabled && delete eU[eg.NoticeTypes.STREAMER_MODE], eV()
 }
-class eK extends a.default.Store {
+class eW extends a.default.Store {
   initialize() {
-    this.syncWith([eu.default, es.default, X.default, ei.default, G.default, eI.default, z.default, J.default, Y.default, M.default, F.default, K.default], eV), this.waitFor(ec.default, er.default, $.default, q.default, el.default, ee.default, eo.default, p.default, ei.default, ed.default, H.default, S.default, es.default, eA.default, eC.default, eN.default, et.default, eT.default, eh.default, X.default, e_.default, en.default, G.default, em.default, eI.default, J.default, P.default, m.default, T.default, k.default, F.default, K.default)
+    this.syncWith([eu.default, es.default, X.default, ei.default, G.default, eI.default, z.default, J.default, Y.default, M.default, F.default, W.default], eV), this.waitFor(ec.default, er.default, $.default, q.default, el.default, ee.default, eo.default, p.default, ei.default, ed.default, H.default, S.default, es.default, eA.default, eC.default, eN.default, et.default, eT.default, eh.default, X.default, e_.default, en.default, G.default, em.default, eI.default, J.default, P.default, m.default, T.default, k.default, F.default, W.default)
   }
   hasNotice() {
     return null != eb && null != eb.type
@@ -731,8 +731,8 @@ class eK extends a.default.Store {
     return ek(e)
   }
 }
-eK.displayName = "NoticeStore";
-var eW = new eK(u.default, {
+eW.displayName = "NoticeStore";
+var eK = new eW(u.default, {
   CURRENT_USER_UPDATE: eV,
   MEDIA_ENGINE_SET_AUDIO_ENABLED: eV,
   CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: eV,
@@ -766,7 +766,7 @@ var eW = new eK(u.default, {
   IMPERSONATE_STOP: eV,
   IMPERSONATE_UPDATE: eV,
   GUILD_MEMBER_ADD: function(e) {
-    return e.user.id === W.default.getId() && eV()
+    return e.user.id === K.default.getId() && eV()
   },
   GUILD_MEMBER_UPDATE: eV,
   SURVEY_FETCHED: eV,
@@ -782,7 +782,7 @@ var eW = new eK(u.default, {
       let {
         userId: t
       } = e;
-      return t !== W.default.getId()
+      return t !== K.default.getId()
     }) && eV()
   },
   STREAMER_MODE_UPDATE: eY,

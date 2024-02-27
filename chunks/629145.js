@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("956967"),
   g = s("878720"),
   h = s("553257"),
-  N = s("167209"),
-  I = s("217513"),
+  I = s("167209"),
+  N = s("217513"),
   p = s("289918"),
   C = s("590006"),
   A = s("106435"),
@@ -48,7 +48,7 @@ function H(e) {
   let {
     className: r,
     user: o
-  } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, N.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, m = null != d.current && d.current.scrollWidth > d.current.clientWidth, g = !o.isClaimed(), I = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || g, p = I ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+  } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, I.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, m = null != d.current && d.current.scrollWidth > d.current.clientWidth, g = !o.isClaimed(), N = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || g, p = N ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, a.jsxs)("div", {
     className: i(G.field, r),
     children: [(0, a.jsx)("div", {
@@ -97,7 +97,7 @@ function H(e) {
       text: p,
       children: e => (0, a.jsx)(c.Button, {
         ...e,
-        disabled: I,
+        disabled: N,
         size: c.Button.Sizes.SMALL,
         className: G.fieldButton,
         color: c.Button.Colors.PRIMARY,
@@ -385,7 +385,7 @@ function Q() {
       let e = x.default.getCurrentUser();
       return o(null != e, "UserSettingsAccountProfileCard: currentUser cannot be undefined"), e
     }),
-    s = (0, I.default)(t.id),
+    s = (0, N.default)(t.id),
     n = P.StatusSetting.useSetting(),
     l = (0, d.useStateFromStores)([O.default], () => O.default.getErrors()),
     i = null == l ? void 0 : null === (e = l.avatar) || void 0 === e ? void 0 : e[0],

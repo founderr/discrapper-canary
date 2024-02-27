@@ -6,8 +6,8 @@ var r = n("952133"),
   a = Math.min;
 e.exports = function(e, t, n) {
   var s, u, c, d, f, p, x = 0,
-    v = !1,
     h = !1,
+    v = !1,
     m = !0;
   if ("function" != typeof e) throw TypeError("Expected a function");
 
@@ -16,18 +16,18 @@ e.exports = function(e, t, n) {
       r = u;
     return s = u = void 0, x = t, d = e.apply(r, n)
   }
-  t = l(t) || 0, r(n) && (v = !!n.leading, c = (h = "maxWait" in n) ? i(l(n.maxWait) || 0, t) : c, m = "trailing" in n ? !!n.trailing : m);
+  t = l(t) || 0, r(n) && (h = !!n.leading, c = (v = "maxWait" in n) ? i(l(n.maxWait) || 0, t) : c, m = "trailing" in n ? !!n.trailing : m);
 
   function j(e) {
     var n = e - p,
       r = e - x;
-    return void 0 === p || n >= t || n < 0 || h && r >= c
+    return void 0 === p || n >= t || n < 0 || v && r >= c
   }
 
   function C() {
     var e, n, r, l, i = o();
     if (j(i)) return b(i);
-    f = setTimeout(C, (n = (e = i) - p, r = e - x, l = t - n, h ? a(l, c - r) : l))
+    f = setTimeout(C, (n = (e = i) - p, r = e - x, l = t - n, v ? a(l, c - r) : l))
   }
 
   function b(e) {
@@ -40,9 +40,9 @@ e.exports = function(e, t, n) {
     if (s = arguments, u = this, p = n, r) {
       if (void 0 === f) {
         ;
-        return x = e = p, f = setTimeout(C, t), v ? g(e) : d
+        return x = e = p, f = setTimeout(C, t), h ? g(e) : d
       }
-      if (h) return clearTimeout(f), f = setTimeout(C, t), g(p)
+      if (v) return clearTimeout(f), f = setTimeout(C, t), g(p)
     }
     return void 0 === f && (f = setTimeout(C, t)), d
   }

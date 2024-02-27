@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getGameName: function() {
-    return p
+    return E
   },
   startBroadcastForStream: function() {
-    return E
+    return p
   },
   stopBroadcast: function() {
     return C
@@ -28,13 +28,13 @@ var a = n("872717"),
   f = n("194051"),
   h = n("49111");
 
-function p(e) {
+function E(e) {
   var t;
   let n = null !== (t = null == e ? void 0 : e.gameName) && void 0 !== t ? t : null == e ? void 0 : e.name;
   return null != n ? n.trim() : null
 }
 
-function E(e, t) {
+function p(e, t) {
   if (null == t) return;
   let {
     canBroadcast: n
@@ -52,15 +52,15 @@ function E(e, t) {
   if (null == l || null == f) return;
   let h = u.default.getId();
   if (l !== h) return;
-  let E = u.default.getSessionId();
-  if (null == E) return;
+  let p = u.default.getSessionId();
+  if (null == p) return;
   let C = o.default.getChannel(f),
     m = null != C && C.isBroadcastChannel();
   if (null == C || l !== C.ownerId || !m) return;
   let S = function(e) {
     var t;
     let n = s.default.getGameForPID(e),
-      a = p(n),
+      a = E(n),
       r = d.default.getGameByName(a);
     return null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : "0"
   }(t);
@@ -72,7 +72,7 @@ function E(e, t) {
       broadcast: e
     })
   }({
-    sessionId: E,
+    sessionId: p,
     userId: h,
     applicationId: S,
     channelId: C.id,

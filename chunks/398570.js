@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
 var a = r("748820"),
   n = r("391679"),
   i = r("446674"),
-  l = r("913144"),
-  o = r("271938"),
+  o = r("913144"),
+  l = r("271938"),
   s = r("368694");
 let c = 0,
   d = [],
@@ -29,7 +29,7 @@ class p extends i.default.Store {
   }
 }
 p.displayName = "AnalyticsLogStore";
-var m = new p(l.default, {
+var m = new p(o.default, {
   TRACK: function(e) {
     let {
       event: t,
@@ -42,7 +42,7 @@ var m = new p(l.default, {
         key: (c++).toString(),
         event: t,
         properties: r,
-        fingerprint: null != (i = a) ? (0, n.extractId)(i) : o.default.getId(),
+        fingerprint: null != (i = a) ? (0, n.extractId)(i) : l.default.getId(),
         timestamp: new Date
       }]).length > 500 && d.shift()
     }
@@ -53,8 +53,8 @@ var m = new p(l.default, {
       descriptor: r,
       exposureType: n,
       excluded: i,
-      location: l,
-      previouslyTracked: o
+      location: o,
+      previouslyTracked: l
     } = e;
     if (!!s.default.isDeveloper) h && (u = [...u, {
       key: (0, a.v4)(),
@@ -62,8 +62,8 @@ var m = new p(l.default, {
       descriptor: r,
       exposureType: n,
       excluded: i,
-      location: l,
-      previouslyTracked: o,
+      location: o,
+      previouslyTracked: l,
       timestamp: new Date
     }]).length > 500 && u.shift()
   },

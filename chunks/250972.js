@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("415133"),
   g = s("42060"),
   h = s("167209"),
-  N = s("363861"),
-  I = s("506885"),
+  I = s("363861"),
+  N = s("506885"),
   p = s("305961"),
   C = s("650893"),
   A = s("102985"),
@@ -48,7 +48,7 @@ class w extends n.PureComponent {
     let {
       currentUser: e
     } = this.props;
-    (0, I.default)(e.id, e.getAvatarURL(void 0, 80))
+    (0, N.default)(e.id, e.getAvatarURL(void 0, 80))
   }
   componentWillUnmount() {
     S.default.clearBackupCodes(), (0, E.accountDetailsClose)()
@@ -114,7 +114,7 @@ class w extends n.PureComponent {
         date: (0, _.getLocalizedForcedUUDate)(this.props.locale)
       }) : G.default.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, a.jsx)(M.default, {
         className: k.noticeTextButton,
-        onClick: () => (0, N.default)(F.PomeloEntrypoints.USER_SETTINGS),
+        onClick: () => (0, I.default)(F.PomeloEntrypoints.USER_SETTINGS),
         children: G.default.Messages.GET_STARTED
       })]
     }) : null

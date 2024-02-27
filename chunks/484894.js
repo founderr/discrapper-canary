@@ -8,8 +8,8 @@ var a = r("37983");
 r("884691");
 var n = r("446674"),
   i = r("77078"),
-  l = r("811199"),
-  o = r("285471"),
+  o = r("811199"),
+  l = r("285471"),
   s = r("400205"),
   c = r("697218"),
   d = r("646718");
@@ -25,9 +25,9 @@ let u = e => {
         options: d.PREMIUM_TYPE_OVERRIDE_OPTIONS,
         value: u,
         onChange: e => {
-          (0, o.updateClientPremiumTypeOverride)(e, r)
+          (0, l.updateClientPremiumTypeOverride)(e, r)
         },
-        popoutLayerContext: t ? l.devToolsLayerContext : void 0
+        popoutLayerContext: t ? o.devToolsLayerContext : void 0
       })
     }), (0, a.jsx)(i.Button, {
       look: i.Button.Looks.LINK,
@@ -35,7 +35,7 @@ let u = e => {
         padding: "0"
       },
       onClick: () => {
-        (0, o.updateClientPremiumTypeOverride)(d.UNSELECTED_PREMIUM_TYPE_OVERRIDE, r)
+        (0, l.updateClientPremiumTypeOverride)(d.UNSELECTED_PREMIUM_TYPE_OVERRIDE, r)
       },
       children: "Reset premium type override"
     })]

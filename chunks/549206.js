@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("70845"),
   p = n("95045"),
   E = n("393414"),
-  S = n("144491"),
-  g = n("845579"),
+  g = n("144491"),
+  S = n("845579"),
   C = n("42203"),
   _ = n("305961"),
   I = n("957255"),
@@ -43,8 +43,8 @@ function P(e) {
     renderEmbeds: h,
     scrollTo: m,
     searchResults: p,
-    blockCount: S,
-    onChangePage: g
+    blockCount: g,
+    onChangePage: S
   } = e, {
     offset: _,
     totalResults: I,
@@ -53,8 +53,8 @@ function P(e) {
   } = n, A = a.useCallback(e => {
     if (x) return;
     let t = e - 1;
-    null == g || g(t), o.changePage(f, t)
-  }, [f, x, g]), M = a.useCallback(e => {
+    null == S || S(t), o.changePage(f, t)
+  }, [f, x, S]), M = a.useCallback(e => {
     if (e.blocked) r.default.show({
       title: y.default.Messages.UNBLOCK_TO_JUMP_TITLE,
       body: y.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
@@ -139,7 +139,7 @@ function P(e) {
       ...W,
       "aria-busy": x,
       children: G
-    }), S > 0 ? (0, l.jsxs)(i.Clickable, {
+    }), g > 0 ? (0, l.jsxs)(i.Clickable, {
       tag: "div",
       className: O.resultsBlocked,
       onClick: () => o.setShowBlockedResults(f, !N),
@@ -148,9 +148,9 @@ function P(e) {
       }), (0, l.jsx)("div", {
         className: O.resultsBlockedText,
         children: N ? y.default.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({
-          count: S
+          count: g
         }) : y.default.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({
-          count: S
+          count: g
         })
       })]
     }) : null, !x && !B && (0, l.jsx)(R.default, {
@@ -178,10 +178,10 @@ function b(e) {
     jumpToMessage: P,
     listNavigator: b,
     favoriteSearch: D
-  } = e, U = g.RenderSpoilers.useSetting(), w = a.useCallback(e => {
+  } = e, U = S.RenderSpoilers.useSetting(), w = a.useCallback(e => {
     if (e === x.default.getChannelId()) return;
     let t = C.default.getChannel(e);
-    if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, S.transitionToChannel)(t.id)
+    if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, g.transitionToChannel)(t.id)
   }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, B = (null == s ? void 0 : s.parent_id) != null ? C.default.getChannel(s.parent_id) : null, V = null != B ? B.name : null, G = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, H = null != B ? (0, h.default)(B) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
     content: Y
   } = (0, p.default)({
@@ -194,13 +194,13 @@ function b(e) {
     let e = z.current;
     null != e && null != e.offsetWidth && null != e.scrollWidth && Z(e.offsetWidth < e.scrollWidth)
   }, []);
-  let X = [F, V, k].filter(e => null != e).join(", ");
+  let Q = [F, V, k].filter(e => null != e).join(", ");
   return (0, l.jsx)(A.ObscuredDisplayContext.Provider, {
     value: (0, m.default)(U, W),
     children: (0, l.jsxs)("ul", {
       role: "group",
       className: O.searchResultGroup,
-      "aria-label": X,
+      "aria-label": Q,
       children: [(0, l.jsx)(i.Clickable, {
         onClick: () => w(s.id),
         children: (0, l.jsxs)("div", {

@@ -22,8 +22,8 @@ var n = s("627445"),
   _ = s("555898"),
   g = s("713135"),
   h = s("26989"),
-  N = s("697218"),
-  I = s("216422"),
+  I = s("697218"),
+  N = s("216422"),
   p = s("719923"),
   C = s("158998"),
   A = s("929423"),
@@ -39,8 +39,8 @@ function P(e) {
   var t, s, n, P;
   let {
     guild: j
-  } = e, b = (0, i.useStateFromStores)([N.default], () => {
-    let e = N.default.getCurrentUser();
+  } = e, b = (0, i.useStateFromStores)([I.default], () => {
+    let e = I.default.getCurrentUser();
     return l(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
   }), {
     pendingAvatar: U,
@@ -110,7 +110,7 @@ function P(e) {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [v.default.Messages.USER_SETTINGS_AVATAR, (0, a.jsx)(r.Tooltip, {
             text: v.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-            children: e => (0, a.jsx)(I.default, {
+            children: e => (0, a.jsx)(N.default, {
               ...e,
               className: L.nitroWheel
             })
@@ -147,7 +147,7 @@ function P(e) {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [v.default.Messages.USER_PROFILE_ABOUT_ME, (0, a.jsx)(r.Tooltip, {
             text: v.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-            children: e => (0, a.jsx)(I.default, {
+            children: e => (0, a.jsx)(N.default, {
               ...e,
               className: L.nitroWheel
             })

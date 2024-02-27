@@ -39,20 +39,20 @@ var n = l("37983"),
       isPremiumEarlyAccess: O = !1,
       maxWidth: D = 280
     } = e, P = A ? i.Button.Sizes.LARGE : i.Button.Sizes.MAX, [G, U] = a.useState(!1), {
-      ref: b,
-      width: V
+      ref: w,
+      width: b
     } = (0, u.default)();
 
-    function w(e) {
+    function V(e) {
       (0, o.markDismissibleContentAsDismissed)(T, {
         dismissAction: e
       })
     }
     return a.useEffect(() => {
       var e, t;
-      let l = (null !== (t = null === (e = b.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
+      let l = (null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
       !G && l > D && U(!0)
-    }, [G, V, b, D]), a.useEffect(() => {
+    }, [G, b, w, D]), a.useEffect(() => {
       (0, o.requestMarkDismissibleContentAsShown)(T)
     }, [T]), (0, n.jsx)("div", {
       className: p,
@@ -92,14 +92,14 @@ var n = l("37983"),
             children: l
           }) : l]
         }), (0, n.jsx)("div", {
-          ref: b,
+          ref: w,
           className: G || !A ? S.buttonContainerVertical : S.buttonContainerHorizontal,
           children: null != _ ? (0, n.jsxs)(n.Fragment, {
             children: [(0, n.jsx)(i.Button, {
               className: S.button,
               size: P,
               onClick: e => {
-                null == I || I(e), _(e), w(f.ContentDismissActionType.PRIMARY)
+                null == I || I(e), _(e), V(f.ContentDismissActionType.PRIMARY)
               },
               color: v || O ? i.Button.Colors.BRAND : i.Button.Colors.WHITE,
               look: v || O ? i.Button.Looks.INVERTED : i.Button.Looks.FILLED,
@@ -108,7 +108,7 @@ var n = l("37983"),
               className: S.button,
               size: P,
               onClick: e => {
-                null == I || I(e), w(f.ContentDismissActionType.DISMISS)
+                null == I || I(e), V(f.ContentDismissActionType.DISMISS)
               },
               color: v || O ? i.Button.Colors.WHITE : i.Button.Colors.BRAND,
               look: v || O ? i.Button.Looks.LINK : i.Button.Looks.FILLED,
@@ -118,7 +118,7 @@ var n = l("37983"),
             className: S.button,
             size: i.Button.Sizes.MAX,
             onClick: e => {
-              null == I || I(e), w(f.ContentDismissActionType.PRIMARY)
+              null == I || I(e), V(f.ContentDismissActionType.PRIMARY)
             },
             color: i.Button.Colors.WHITE,
             children: m.default.Messages.EDUCATION_NEW_FEATURE_CONFIRM

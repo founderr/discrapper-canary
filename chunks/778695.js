@@ -114,7 +114,7 @@ var _ = function(e) {
     drop: m,
     platform: _,
     transitionState: g
-  } = e, h = (0, d.useUID)(), [N, I] = n.useState();
+  } = e, h = (0, d.useUID)(), [I, N] = n.useState();
   n.useEffect(() => {
     null == o && r.default.wait(async () => {
       await (0, u.fetchCodePlatformAvailability)(m.dropsQuestId)
@@ -165,12 +165,12 @@ var _ = function(e) {
               }), (0, a.jsxs)(i.FormSection, {
                 className: T.dropFormSection,
                 children: [(0, a.jsx)(i.SingleSelect, {
-                  onChange: I,
+                  onChange: N,
                   options: p.map(e => ({
                     value: e,
                     label: (0, S.getPlatformLabel)(e)
                   })),
-                  value: n ? p[0] : N,
+                  value: n ? p[0] : I,
                   isDisabled: !e,
                   className: e ? "" : T.selectDangerBorder,
                   look: e ? i.SelectLooks.FILLED : i.SelectLooks.CUSTOM
@@ -189,9 +189,9 @@ var _ = function(e) {
                     let {
                       default: e
                     } = await s.el("343495").then(s.bind(s, "343495"));
-                    return s => (void 0 !== N || n) && (0, a.jsx)(e, {
+                    return s => (void 0 !== I || n) && (0, a.jsx)(e, {
                       ...s,
-                      platform: void 0 === N ? p[0] : N,
+                      platform: void 0 === I ? p[0] : I,
                       code: o,
                       dropsQuestId: m.dropsQuestId,
                       closeParentModal: t,
@@ -199,7 +199,7 @@ var _ = function(e) {
                     })
                   })
                 },
-                disabled: void 0 === N && !n,
+                disabled: void 0 === I && !n,
                 children: E.default.Messages.UNLOCK_CODE
               }), e ? (0, a.jsx)(i.Button, {
                 onClick: t,

@@ -124,16 +124,16 @@ function O(e) {
     return u(null != e, "StreamSettings: user cannot be undefined"), e
   }), G = g.default.canStreamQuality(g.StreamQuality.MID, P), {
     location: U
-  } = (0, f.useAnalyticsContext)(), b = (0, m.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+  } = (0, f.useAnalyticsContext)(), w = (0, m.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !1
-  }), V = !G && !b, {
-    enabled: w,
-    variant: H
+  }), b = !G && !w, {
+    enabled: V,
+    variant: y
   } = S.default.useExperiment({
     location: "StreamSettingsUpsellBanner"
   }, {
-    autoTrackExposure: V
-  }), y = w && S.GradientVariants.includes(H), [k, F] = a.useState(!1), B = D ? p.GoLiveDeviceResolutionButtons : p.ApplicationStreamResolutionButtons, W = {
+    autoTrackExposure: b
+  }), H = V && S.GradientVariants.includes(y), [k, F] = a.useState(!1), B = D ? p.GoLiveDeviceResolutionButtons : p.ApplicationStreamResolutionButtons, W = {
     ...U,
     section: x.AnalyticsSections.STREAM_SETTINGS
   }, z = (0, n.jsx)(E.default, {
@@ -142,7 +142,7 @@ function O(e) {
       selected: e.value === s,
       needsPremium: !(0, _.default)(l, e.value, r, P, O),
       analyticsLocation: W,
-      useGradient: y,
+      useGradient: H,
       onClick: () => i(e.value),
       onClose: t,
       setIsHovering: F
@@ -153,7 +153,7 @@ function O(e) {
       selected: e.value === r,
       needsPremium: !(0, _.default)(l, s, e.value, P, O),
       analyticsLocation: W,
-      useGradient: y,
+      useGradient: H,
       onClick: () => N(e.value),
       onClose: t,
       setIsHovering: F
@@ -180,7 +180,7 @@ function O(e) {
           })
         })
       })
-    }), V ? (0, n.jsx)(I.default, {
+    }), b ? (0, n.jsx)(I.default, {
       message: v.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
       onClose: t,
       openStreamUpsellModal: L
@@ -198,10 +198,10 @@ function O(e) {
         titleClassName: A.formItemTitleSlim,
         children: Z
       })]
-    }), V ? (0, n.jsx)(I.default, {
+    }), b ? (0, n.jsx)(I.default, {
       onClose: t,
       openStreamUpsellModal: L,
-      glow: k && y
+      glow: k && H
     }) : null]
   });
   return (0, n.jsx)(c.default, {

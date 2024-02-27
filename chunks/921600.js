@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("815297"),
   g = s("574073"),
   h = s("291655"),
-  N = s("67508"),
-  I = s("76629"),
+  I = s("67508"),
+  N = s("76629"),
   p = s("981957"),
   C = s("145131"),
   A = s("476765"),
@@ -48,7 +48,7 @@ let k = (0, A.uid)(),
     (0, E.setSaturation)(e)
   }, 250),
   Y = o.debounce(e => {
-    (0, I.setSpeechRate)(e)
+    (0, N.setSpeechRate)(e)
   }, 250);
 
 function W(e) {
@@ -302,13 +302,13 @@ function J() {
     }), (0, a.jsx)(u.FormSwitch, {
       className: F.marginBottom40,
       value: e,
-      note: null != o ? (0, N.default)(o) : void 0,
+      note: null != o ? (0, I.default)(o) : void 0,
       onChange: D.GifAutoPlay.updateSetting,
       children: B.default.Messages.GIF_AUTO_PLAY_LABEL
     }), (0, a.jsx)(u.FormSwitch, {
       className: i(F.marginTop8, F.marginBottom20),
       value: t,
-      note: null != c ? (0, N.default)(c) : void 0,
+      note: null != c ? (0, I.default)(c) : void 0,
       onChange: D.AnimateEmoji.updateSetting,
       children: B.default.Messages.ANIMATE_EMOJI
     })]
@@ -327,7 +327,7 @@ function $() {
     children: [(0, a.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
       className: F.marginBottom8,
-      children: null != t ? (0, N.default)(t) : B.default.Messages.STICKERS_AUTO_PLAY_HELP
+      children: null != t ? (0, I.default)(t) : B.default.Messages.STICKERS_AUTO_PLAY_HELP
     }), (0, a.jsx)(u.RadioGroup, {
       options: [{
         name: B.default.Messages.STICKERS_ALWAYS_ANIMATE,
@@ -404,9 +404,9 @@ function et() {
           color: u.ButtonColors.BRAND_NEW,
           onClick: () => {
             if (s) {
-              (0, I.stopSpeaking)(), l(!1);
+              (0, N.stopSpeaking)(), l(!1);
               return
-            }(0, I.speakText)(B.default.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST, !0, void 0, () => l(!0), () => l(!1)), l(!0)
+            }(0, N.speakText)(B.default.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST, !0, void 0, () => l(!0), () => l(!1)), l(!0)
           },
           children: (0, a.jsxs)(C.default, {
             align: C.default.Align.CENTER,

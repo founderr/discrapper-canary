@@ -32,13 +32,13 @@ function E(e) {
     _ = f && !i,
     g = i ? "header-primary" : "text-muted",
     h = i ? "header-secondary" : "text-muted",
-    N = r(s),
-    I = null != m && i,
-    p = I ? o.Clickable : "div";
+    I = r(s),
+    N = null != m && i,
+    p = N ? o.Clickable : "div";
   return (0, a.jsxs)(p, {
-    className: l(S.container, I && S.actionable),
+    className: l(S.container, N && S.actionable),
     onClick: () => {
-      I && m()
+      N && m()
     },
     children: [(0, a.jsx)("div", {
       className: S.iconContainer,
@@ -53,7 +53,7 @@ function E(e) {
         variant: "text-xxs/semibold",
         color: "text-muted",
         className: S.unlocked,
-        children: (0, d.calendarFormat)(N)
+        children: (0, d.calendarFormat)(I)
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
         color: g,

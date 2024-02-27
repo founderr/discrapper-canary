@@ -28,8 +28,8 @@ function m(e) {
     isTryItOutFlow: g = !1
   } = e, {
     analyticsLocations: h
-  } = (0, o.default)(), N = null != s, {
-    userAvatarDecoration: I,
+  } = (0, o.default)(), I = null != s, {
+    userAvatarDecoration: N,
     guildAvatarDecoration: p,
     pendingAvatarDecoration: C,
     pendingErrors: A
@@ -37,7 +37,7 @@ function m(e) {
     analyticsLocations: h,
     isTryItOutFlow: g,
     guild: s
-  }), [h, g, s]), x = g || void 0 !== C ? null != C : (N ? p : I) != null, R = _ ? c.default : r.Button;
+  }), [h, g, s]), x = g || void 0 !== C ? null != C : (I ? p : N) != null, R = _ ? c.default : r.Button;
   return (0, a.jsx)(E.default, {
     className: l,
     forcedDivider: m,

@@ -15,8 +15,8 @@ var a = n("37983"),
   c = n("428958"),
   f = n("161778"),
   h = n("144747"),
-  p = n("983782"),
-  E = n("659500"),
+  E = n("983782"),
+  p = n("659500"),
   C = n("452453"),
   m = n("49111");
 let S = e => {
@@ -27,7 +27,7 @@ let S = e => {
     rect: o,
     position: f,
     align: h,
-    impressionName: E,
+    impressionName: p,
     impressionProperties: C
   } = e, S = r.useRef(null);
   r.useEffect(() => {
@@ -53,7 +53,7 @@ let S = e => {
     null === (e = S.current) || void 0 === e || e.updatePosition()
   }), (0, c.default)({
     type: i.ImpressionTypes.MENU,
-    name: E,
+    name: p,
     properties: C
   });
   let _ = (0, d.useWindowDispatch)(),
@@ -63,7 +63,7 @@ let S = e => {
     v = r.useCallback(() => {
       _.dispatch(m.ComponentActions.POPOUT_HIDE)
     }, [_]);
-  return (0, a.jsx)(p.AppReferencePositionLayer, {
+  return (0, a.jsx)(E.AppReferencePositionLayer, {
     onMount: T,
     onUnmount: v,
     reference: () => o,
@@ -81,7 +81,7 @@ class g extends r.PureComponent {
       renderLazy: e,
       renderWindow: t
     } = this.props;
-    if (t.addEventListener("resize", this.closeResize, !0), E.ComponentDispatch.subscribe(m.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e) {
+    if (t.addEventListener("resize", this.closeResize, !0), p.ComponentDispatch.subscribe(m.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e) {
       let t = setTimeout(() => {
         this.setState({
           render: () => (0, a.jsx)(u.MenuSpinner, {})
@@ -107,7 +107,7 @@ class g extends r.PureComponent {
     let {
       renderWindow: e
     } = this.props;
-    e.removeEventListener("resize", this.closeResize, !0), E.ComponentDispatch.unsubscribe(m.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu)
+    e.removeEventListener("resize", this.closeResize, !0), p.ComponentDispatch.unsubscribe(m.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu)
   }
   render() {
     var e;

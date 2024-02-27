@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return N
   }
 }), s("794252");
 var a = s("37983"),
@@ -70,13 +70,13 @@ let g = () => (0, a.jsxs)(a.Fragment, {
       })]
     })]
   }),
-  N = e => {
+  I = e => {
     let {
       variation: t
     } = e;
     return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(h, {})).otherwise(() => (0, a.jsx)(g, {}))
   };
-var I = () => {
+var N = () => {
   let {
     analyticsLocations: e
   } = (0, u.default)(d.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL), t = n.useRef(null), s = (0, E.default)("CollectiblesUpsellBanner");
@@ -88,7 +88,7 @@ var I = () => {
   }, [e]), (0, a.jsxs)("div", {
     ref: t,
     className: i(_.container, _.shopForAllBackgroundImage),
-    children: [(0, a.jsx)(N, {
+    children: [(0, a.jsx)(I, {
       variation: s
     }), (0, a.jsx)(o.Button, {
       onClick: () => {

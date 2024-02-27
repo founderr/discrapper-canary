@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return C
   },
   resetQuestPreviewStatus: function() {
-    return p
+    return A
   },
   resetQuestDismissibilityStatus: function() {
-    return A
+    return p
   }
 });
 var s = n("872717"),
@@ -226,7 +226,7 @@ async function C(e) {
     })
   }
 }
-async function p(e) {
+async function A(e) {
   try {
     let t = await s.default.delete({
       url: o.Endpoints.QUESTS_PREVIEW_STATUS(e),
@@ -244,7 +244,7 @@ async function p(e) {
     })
   }
 }
-async function A(e) {
+async function p(e) {
   try {
     let t = await s.default.delete({
       url: o.Endpoints.QUESTS_PREVIEW_DISMISSIBILITY(e),

@@ -10,41 +10,41 @@ r.r(t), r.d(t, {
 var a = r("312016"),
   n = r("367376"),
   i = r("240873"),
-  l = r("49111");
-let o = new Set([l.MessageEmbedTypes.IMAGE, l.MessageEmbedTypes.GIFV]),
+  o = r("49111");
+let l = new Set([o.MessageEmbedTypes.IMAGE, o.MessageEmbedTypes.GIFV]),
   s = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 
 function c(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     r = t.formatInline ? n.default.parseInlineReply : n.default.parse;
   return function(e, t, r) {
-    var n, l;
+    var n, o;
     let {
       toAST: c = !1,
       hideSimpleEmbedContent: d = !0,
       formatInline: p = !1,
       postProcessor: m
     } = r, g = !1;
-    let f = e(t.content, !0, (n = t, l = r, {
-      allowLinks: null != n.webhookId || !!l.allowLinks,
+    let f = e(t.content, !0, (n = t, o = r, {
+      allowLinks: null != n.webhookId || !!o.allowLinks,
       allowEmojiLinks: null != n.webhookId,
       channelId: n.channel_id,
       messageId: n.id,
       mentionChannels: n.mentionChannels,
-      isInteracting: !!l.isInteracting,
-      formatInline: !!l.formatInline,
-      noStyleAndInteraction: !!l.noStyleAndInteraction,
-      allowHeading: !!l.allowHeading,
-      allowList: !!l.allowList,
-      previewLinkTarget: !!l.previewLinkTarget,
-      disableAnimatedEmoji: !!l.disableAnimatedEmoji,
+      isInteracting: !!o.isInteracting,
+      formatInline: !!o.formatInline,
+      noStyleAndInteraction: !!o.noStyleAndInteraction,
+      allowHeading: !!o.allowHeading,
+      allowList: !!o.allowList,
+      previewLinkTarget: !!o.previewLinkTarget,
+      disableAnimatedEmoji: !!o.disableAnimatedEmoji,
       disableAutoBlockNewlines: !0,
       muted: !1
     }), (e, r) => (!Array.isArray(e) && (e = [e]), d && (e = function(e, t) {
       if (1 !== e.length || 1 !== t.length) return e;
       let r = e[0],
         a = t[0];
-      return ("link" === r.type || "attachmentLink" === r.type) && o.has(a.type) && (0, i.isEmbedInline)(a) ? [] : e
+      return ("link" === r.type || "attachmentLink" === r.type) && l.has(a.type) && (0, i.isEmbedInline)(a) ? [] : e
     }(e, t.embeds)), !p && (e = function(e, t) {
       return t ? u(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = u(e[0].content)), e)
     }(e, r)), g = function(e, t) {

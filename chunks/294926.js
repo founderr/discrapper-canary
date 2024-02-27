@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("18494"),
   p = n("697218"),
   E = n("717018"),
-  S = n("811305"),
-  g = n("659500"),
+  g = n("811305"),
+  S = n("659500"),
   C = n("439932"),
   _ = n("550766"),
   I = n("191225"),
@@ -65,13 +65,13 @@ function O(e) {
     });
     return e.observe(z.current), () => e.disconnect()
   }, []);
-  let X = K.width / Math.max(K.height, 1),
-    Q = X < M.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
+  let Q = K.width / Math.max(K.height, 1),
+    X = Q < M.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
     q = 0,
     J = 0,
     $ = K.width,
     ee = K.height;
-  Q ? ((ee = K.width / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > K.height && ($ = (ee = K.height) * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), J = (K.height - ee) / 2) : (($ = Math.min(K.height * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > K.width && (ee = ($ = K.width) / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), q = (K.width - $) / 2);
+  X ? ((ee = K.width / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > K.height && ($ = (ee = K.height) * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), J = (K.height - ee) / 2) : (($ = Math.min(K.height * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > K.width && (ee = ($ = K.width) / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), q = (K.width - $) / 2);
   let et = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId());
   if (null == D) return null;
   let en = F.get(null === (n = w[0]) || void 0 === n ? void 0 : null === (t = n.application) || void 0 === t ? void 0 : t.id),
@@ -109,7 +109,7 @@ function O(e) {
         })
       }), null != et ? (0, l.jsxs)("div", {
         className: L.footer,
-        children: [(0, l.jsx)(S.default, {
+        children: [(0, l.jsx)(g.default, {
           renderIcon: !1,
           users: el,
           size: 32,
@@ -147,12 +147,12 @@ function O(e) {
       maxHeight: O,
       resizableNode: B,
       onResize: e => {
-        g.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        S.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !0
         }), W(e)
       },
       onResizeEnd: e => {
-        g.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        S.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !1
         }), Y(e)
       }

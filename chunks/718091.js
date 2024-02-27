@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("913144"),
   p = n("561288"),
   E = n("450911"),
-  S = n("630086"),
-  g = n("970728"),
+  g = n("630086"),
+  S = n("970728"),
   C = n("369008"),
   _ = n("736964"),
   I = n("304580"),
@@ -50,8 +50,8 @@ var l = n("37983"),
   z = n("659500"),
   K = n("449008"),
   Z = n("299039"),
-  X = n("158998"),
-  Q = n("993063"),
+  Q = n("158998"),
+  X = n("993063"),
   q = n("849324"),
   J = n("49111"),
   $ = n("782340"),
@@ -179,12 +179,12 @@ class eu extends a.PureComponent {
     if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
     let {
       inviteMaxAgeSeconds: t
-    } = Q.default.getCurrentConfig({
+    } = X.default.getCurrentConfig({
       location: "5326c5_1"
     }, {
       autoTrackExposure: !1
     });
-    g.default.createInvite(e.id, {
+    S.default.createInvite(e.id, {
       max_age: t
     }, J.InstantInviteSources.GROUP_DM)
   }
@@ -266,7 +266,7 @@ class eu extends a.PureComponent {
     let u = [];
     return r.forEach(e => {
       let t = F.default.getUser(e);
-      null != t && u.push(X.default.getName(t))
+      null != t && u.push(Q.default.getName(t))
     }), (0, l.jsxs)(k.default, {
       className: i(ee.searchBar, en.marginTop20),
       children: [(0, l.jsx)(T.default, {
@@ -473,7 +473,7 @@ class eu extends a.PureComponent {
   }
   handleAddFriend(e) {
     this.props.onClose(), _.default.sendRequest({
-      discordTag: X.default.getUserTag(e, {
+      discordTag: Q.default.getUserTag(e, {
         identifiable: "always"
       }),
       context: {
@@ -578,7 +578,7 @@ class eu extends a.PureComponent {
       } = this.props, a = !t.has(e);
       a ? (C.default.addUser(e), n.length > 0 && C.default.clear(null == l ? void 0 : l.id)) : C.default.removeUser(e), this.forceFocus()
     }, this.handleAddFriendNavigation = () => {
-      (0, j.transitionTo)(J.Routes.FRIENDS), S.default.setSection(J.FriendsSections.ADD_FRIEND), this.props.onClose()
+      (0, j.transitionTo)(J.Routes.FRIENDS), g.default.setSection(J.FriendsSections.ADD_FRIEND), this.props.onClose()
     }, this.handleScroll = () => {
       let e = this.scrollerRef.current;
       null != e && this.setState({

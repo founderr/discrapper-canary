@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("79112"),
   g = s("457971"),
   h = s("447435"),
-  N = s("10130"),
-  I = s("298878"),
+  I = s("10130"),
+  N = s("298878"),
   p = s("916650"),
   C = s("775032"),
   A = s("36978"),
@@ -189,7 +189,7 @@ class Z extends n.PureComponent {
         className: z.marginBottom8,
         children: (0, a.jsxs)("div", {
           className: i(K.betaTagContainer),
-          children: [W.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(I.default, {
+          children: [W.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(N.default, {
             className: K.betaTagIcon
           })]
         })
@@ -410,7 +410,7 @@ class Z extends n.PureComponent {
         onChange: this.handleChangeDropsOptedOut,
         children: (0, a.jsxs)("div", {
           className: i(K.betaTagContainer, K.dependentSetting),
-          children: [W.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT, (0, a.jsx)(I.default, {
+          children: [W.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT, (0, a.jsx)(N.default, {
             className: K.betaTagIcon
           })]
         })
@@ -676,7 +676,7 @@ function X() {
     n = (0, c.useStateFromStores)([O.default], () => O.default.getFetchError()),
     l = (0, c.useStateFromStores)([P.default], () => P.default.getSubsection()),
     i = (0, g.useIsEligibleForExplicitMediaRedaction)(),
-    r = (0, N.useExplicitContentSettingOrDefault)(),
+    r = (0, I.useExplicitContentSettingOrDefault)(),
     d = (0, C.default)(),
     u = (0, R.useIsEligibleForInappropriateConversationWarning)({
       location: "user_settings_web"

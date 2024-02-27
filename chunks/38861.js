@@ -23,9 +23,9 @@ function p(e) {
   } = e, [n, p] = a.useState(!1), E = (0, s.useStateFromStores)([r.default, u.default], () => {
     let e = u.default.getCurrentUser();
     return null == e || t.isNSFW() && (!e.nsfwAllowed || !r.default.didAgree(t.getGuildId()))
-  }, [t]), S = a.useCallback(() => {
+  }, [t]), g = a.useCallback(() => {
     p(!1)
-  }, []), g = a.useCallback(() => {
+  }, []), S = a.useCallback(() => {
     !n && (0, c.trackThreadBrowserOpened)("Popout"), p(!n)
   }, [n]);
   return (0, l.jsx)(i.Popout, {
@@ -34,13 +34,13 @@ function p(e) {
     align: "right",
     autoInvert: !1,
     shouldShow: n,
-    onRequestClose: S,
+    onRequestClose: g,
     renderPopout: function() {
       return (0, l.jsx)(i.Dialog, {
         children: (0, l.jsx)(f.default, {
           className: m.browser,
           channel: t,
-          onClose: S
+          onClose: g
         })
       })
     },
@@ -51,7 +51,7 @@ function p(e) {
       return (0, l.jsx)(d.Icon, {
         ...e,
         className: m.icon,
-        onClick: g,
+        onClick: S,
         icon: o.default,
         "aria-label": h.default.Messages.THREADS,
         tooltip: n ? null : h.default.Messages.THREADS,

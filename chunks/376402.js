@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("11899"),
   g = s("713135"),
   h = s("102985"),
-  N = s("697218"),
-  I = s("599110"),
+  I = s("697218"),
+  N = s("599110"),
   p = s("701909"),
   C = s("719923"),
   A = s("929423"),
@@ -34,7 +34,7 @@ var a = s("37983"),
   v = s("782340");
 
 function L() {
-  I.default.track(D.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+  N.default.track(D.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
     location_page: D.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS,
     location_object: D.AnalyticsObjects.BADGE
   }), (0, A.closeGuildIdentitySettings)(), u.default.open(D.UserSettingsSections.PREMIUM)
@@ -60,10 +60,10 @@ function j(e) {
     selectedGuild: t
   } = e, {
     AnalyticsLocationProvider: s
-  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([N.default], () => {
-    let e = N.default.getCurrentUser();
+  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([I.default], () => {
+    let e = I.default.getCurrentUser();
     return i(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
-  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), I = (0, r.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), {
+  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), N = (0, r.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), {
     pendingAvatar: j,
     pendingAvatarDecoration: b,
     pendingProfileEffectId: U,
@@ -83,7 +83,7 @@ function j(e) {
         destination_pane: D.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
         source: H
       })
-    }, [H]), I) return (0, a.jsx)(c.default, {});
+    }, [H]), N) return (0, a.jsx)(c.default, {});
   if (!u) return (0, a.jsx)(o.Spinner, {});
   let w = C.default.canUsePremiumProfileCustomization(l),
     V = {

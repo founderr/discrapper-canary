@@ -23,11 +23,11 @@ function E(e) {
   let {
     channel: s,
     integration: E
-  } = e, S = c.default.getApplicationIconURL({
+  } = e, g = c.default.getApplicationIconURL({
     id: E.application.id,
     icon: E.application.icon,
     size: 40
-  }), g = a.useCallback(e => {
+  }), S = a.useCallback(e => {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -40,12 +40,12 @@ function E(e) {
     })
   }, [E, s]), C = (0, l.jsxs)("div", {
     className: m.listRow,
-    onContextMenu: g,
+    onContextMenu: S,
     children: [(0, l.jsx)("img", {
       className: i(m.listAvatar, p.icon),
       alt: "",
       "aria-hidden": !0,
-      src: S,
+      src: g,
       width: 40,
       height: 40
     }), (0, l.jsx)("div", {
@@ -63,7 +63,7 @@ function E(e) {
   return null == _ ? (0, l.jsx)("li", {
     children: C
   }) : (0, l.jsx)(u.Popout, {
-    preload: () => (0, f.default)(_.id, S),
+    preload: () => (0, f.default)(_.id, g),
     renderPopout: e => (0, l.jsx)(h.default, {
       ...e,
       userId: _.id,

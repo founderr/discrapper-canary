@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("298878"),
   g = s("697218"),
   h = s("888400"),
-  N = s("411511"),
-  I = s("782340"),
+  I = s("411511"),
+  N = s("782340"),
   p = s("399953");
 let C = "YYYY-MM-DD HH:mm";
 
@@ -47,8 +47,8 @@ function A(e) {
     dropsQuestId: _,
     assets: g,
     articleUrl: h
-  } = t, N = (0, f.getDropByQuestId)(_);
-  if (null == N) return null;
+  } = t, I = (0, f.getDropByQuestId)(_);
+  if (null == I) return null;
   let C = () => {
     (0, T.enrollDropsUser)(_).then(() => {
       S.default.wait(async () => {
@@ -79,13 +79,13 @@ function A(e) {
               variant: "text-xs/medium",
               color: "text-normal",
               className: p.availableUntil,
-              children: I.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+              children: N.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
                 endDate: o(m, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
               })
             })]
           })]
         }), (0, a.jsx)(c.Tooltip, {
-          text: s && !l ? I.default.Messages.DROPS_GIFT_INVENTORY_REDEMPTION_TOOLTIP : null,
+          text: s && !l ? N.default.Messages.DROPS_GIFT_INVENTORY_REDEMPTION_TOOLTIP : null,
           tooltipContentClassName: p.redeemTooltipContent,
           children: e => (0, a.jsx)(c.Button, {
             className: p.promotionCardButton,
@@ -94,7 +94,7 @@ function A(e) {
             onClick: C,
             disabled: s && !l,
             ...e,
-            children: s ? I.default.Messages.REDEEM : I.default.Messages.DROPS_GIFT_INVENTORY_ENROLL
+            children: s ? N.default.Messages.REDEEM : N.default.Messages.DROPS_GIFT_INVENTORY_ENROLL
           })
         })]
       })
@@ -110,13 +110,13 @@ function A(e) {
           color: "text-muted",
           variant: "text-sm/normal",
           className: p.dropCriteriaText,
-          children: N.messages.giftInfo()
+          children: I.messages.giftInfo()
         })
       }), (0, a.jsx)(c.Text, {
         color: "text-muted",
         variant: "text-sm/normal",
         className: p.dropLearnMore,
-        children: I.default.Messages.DROPS_LEARN_MORE.format({
+        children: N.default.Messages.DROPS_LEARN_MORE.format({
           faqUrl: h
         })
       })]
@@ -129,9 +129,9 @@ function O(e) {
     drop: t,
     code: s,
     platform: l
-  } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, h.dateFormat)(o(t.endDate), "LL"), E = I.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+  } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, h.dateFormat)(o(t.endDate), "LL"), E = N.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
     endDate: S
-  }), T = u ? I.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : I.default.Messages.PROMOTION_CARD_ACTION_CLAIM, f = n.useCallback(() => d(!1), []);
+  }), T = u ? N.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : N.default.Messages.PROMOTION_CARD_ACTION_CLAIM, f = n.useCallback(() => d(!1), []);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: i(p.skuCard, p.promotionCard),
@@ -230,7 +230,7 @@ var x = function(e) {
     className: p.dropsHeaderContainer,
     children: [(0, a.jsx)(c.Heading, {
       variant: "heading-md/semibold",
-      children: I.default.Messages.DROPS_GIFT_INVENTORY_TITLE
+      children: N.default.Messages.DROPS_GIFT_INVENTORY_TITLE
     }), (0, a.jsx)(_.default, {
       className: p.betaTagIcon
     })]
@@ -240,8 +240,8 @@ var x = function(e) {
       className: p.divider
     }), (0, a.jsx)("div", {
       className: p.dropsHelpText,
-      children: I.default.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
-        blogURL: N.DropsFaqUrl
+      children: N.default.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
+        blogURL: I.DropsFaqUrl
       })
     })]
   }) : 0 === l.length && 0 === i.length ? null : (0, a.jsxs)(c.FormSection, {
@@ -280,7 +280,7 @@ var x = function(e) {
       }) : null
     }), "string" == typeof(null == r ? void 0 : r.id) && i.length > 0 ? (0, a.jsx)("div", {
       className: p.feedback,
-      children: I.default.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
+      children: N.default.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
         feedbackURL: "https://survey.alchemer.com/s3/7043098/Discord-Drops-CSAT?user_id=".concat(null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : "")
       })
     }) : null]

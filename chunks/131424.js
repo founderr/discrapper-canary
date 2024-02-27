@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return I
   }
 });
 var a = s("37983");
@@ -40,14 +40,14 @@ function h(e) {
     })
   })
 }
-var N = function(e) {
+var I = function(e) {
   let {
     className: t,
     guildId: s,
     boostingVariant: n,
-    showSparkes: N
-  } = e, I = (0, i.default)([u.default], () => u.default.getGuild(s), [s]);
-  return null == I ? (0, a.jsx)("div", {
+    showSparkes: I
+  } = e, N = (0, i.default)([u.default], () => u.default.getGuild(s), [s]);
+  return null == N ? (0, a.jsx)("div", {
     className: l(t, g.guildContainer),
     children: (0, a.jsx)("div", {
       className: g.guildInfoContainer,
@@ -60,13 +60,13 @@ var N = function(e) {
     className: l(t, g.guildContainer),
     children: [(0, a.jsx)(c.default, {
       className: g.guildIcon,
-      guild: I,
+      guild: N,
       size: c.default.Sizes.LARGER
     }), (0, a.jsxs)("div", {
       className: g.guildInfoContainer,
       children: [(0, a.jsx)(r.Text, {
         variant: "text-lg/bold",
-        children: I.name
+        children: N.name
       }), (0, a.jsxs)("div", {
         className: g.guildBoostStatsContainer,
         children: [(0, a.jsx)(S.default, {
@@ -77,20 +77,20 @@ var N = function(e) {
           variant: "text-sm/bold",
           color: "text-muted",
           children: _.default.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({
-            subscriptions: I.premiumSubscriberCount
+            subscriptions: N.premiumSubscriberCount
           })
         }), (0, a.jsx)("div", {
           className: g.separator
         }), (0, a.jsx)(r.Text, {
           variant: "text-sm/bold",
           color: "text-muted",
-          children: (0, f.getTierName)(I.premiumTier, {
+          children: (0, f.getTierName)(N.premiumTier, {
             useLevels: !1
           })
         })]
       })]
     }), n ? (0, a.jsx)(d.default, {
-      guild: I,
+      guild: N,
       analyticsLocation: {
         page: m.AnalyticsPages.GUILD_BOOSTING_USER_SETTINGS,
         section: m.AnalyticsSections.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
@@ -105,7 +105,7 @@ var N = function(e) {
       color: r.Button.Colors.PRIMARY,
       onClick: () => {
         (0, o.openGuildBoostingMarketingModal)({
-          guildId: I.id,
+          guildId: N.id,
           location: {
             section: m.AnalyticsSections.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA
           }
@@ -113,7 +113,7 @@ var N = function(e) {
       },
       size: r.Button.Sizes.MEDIUM,
       children: _.default.Messages.NAVIGATE_TO_GUILD
-    }), N && (0, a.jsxs)(a.Fragment, {
+    }), I && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h, {
         className: g.sparkle1
       }), (0, a.jsx)(E.default, {

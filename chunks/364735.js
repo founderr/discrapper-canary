@@ -5,9 +5,9 @@ r.r(t), r.d(t, {
   }
 });
 var a, n, i = r("37983"),
-  l = r("884691"),
-  o = r("414456"),
-  s = r.n(o),
+  o = r("884691"),
+  l = r("414456"),
+  s = r.n(l),
   c = r("77078"),
   d = r("339783"),
   u = r("865146"),
@@ -17,7 +17,7 @@ var a, n, i = r("37983"),
   g = r("159885"),
   f = r("782340"),
   b = r("29419");
-(a = class extends l.PureComponent {
+(a = class extends o.PureComponent {
   get typeString() {
     let {
       paymentSource: e

@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("783142"),
   g = s("217513"),
   h = s("225849"),
-  N = s("790618"),
-  I = s("216422"),
+  I = s("790618"),
+  N = s("216422"),
   p = s("599110"),
   C = s("719923"),
   A = s("184900"),
@@ -56,10 +56,10 @@ function y(e) {
     tryItOutBanner: q,
     tryItOutAvatarDecoration: Z,
     tryItOutProfileEffectId: X
-  } = (0, l.useStateFromStoresObject)([N.default], () => {
-    let e = N.default.getAllPending(),
-      t = N.default.getErrors(),
-      s = N.default.getAllTryItOut();
+  } = (0, l.useStateFromStoresObject)([I.default], () => {
+    let e = I.default.getAllPending(),
+      t = I.default.getErrors(),
+      s = I.default.getAllTryItOut();
     return {
       ...e,
       ...s,
@@ -102,7 +102,7 @@ function y(e) {
       children: [(0, a.jsx)(O.default, {
         layoutClassName: B.tryItOutLayout,
         previewTitle: (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(I.default, {
+          children: [(0, a.jsx)(N.default, {
             className: B.premiumIcon
           }), U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
         }),

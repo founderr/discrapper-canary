@@ -16,8 +16,8 @@ var r = n("414456"),
   c = n("191145"),
   f = n("270227"),
   h = n("940277"),
-  p = n("386811"),
-  E = n("964264"),
+  E = n("386811"),
+  p = n("964264"),
   C = n("655804"),
   m = n("58463"),
   S = n("238500"),
@@ -31,7 +31,7 @@ let A = e => T.default.close(e),
   x = (e, t) => {
     (0, g.isMac)() && !t.altKey ? T.default.fullscreen(e) : T.default.maximize(e)
   },
-  R = e => {
+  N = e => {
     let {
       windowKey: t,
       themeOverride: n,
@@ -55,7 +55,7 @@ let A = e => T.default.close(e),
         onClick: e => x(t, e),
         "aria-label": v.default.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
         tabIndex: -1,
-        children: (0, a.jsx)(E.default, {})
+        children: (0, a.jsx)(p.default, {})
       }), (0, a.jsx)(l.Clickable, {
         className: I.winButtonMinMax,
         onClick: () => M(t),
@@ -65,7 +65,7 @@ let A = e => T.default.close(e),
       })]
     })
   },
-  N = e => {
+  R = e => {
     let {
       focused: t,
       windowKey: n,
@@ -88,7 +88,7 @@ let A = e => T.default.close(e),
           onClick: () => A(n),
           "aria-label": v.default.Messages.TITLE_BAR_CLOSE_WINDOW,
           tabIndex: -1,
-          children: (0, a.jsx)(p.default, {
+          children: (0, a.jsx)(E.default, {
             color: "#4c0000"
           })
         }), (0, a.jsx)(l.Clickable, {
@@ -128,13 +128,13 @@ function L(e) {
   if (f) return null;
   switch (n) {
     case g.PlatformTypes.WINDOWS:
-      return (0, a.jsx)(R, {
+      return (0, a.jsx)(N, {
         windowKey: r,
         themeOverride: l,
         hasOpenLayer: h
       });
     case g.PlatformTypes.OSX:
-      return (0, a.jsx)(N, {
+      return (0, a.jsx)(R, {
         focused: t,
         windowKey: r,
         frame: s,

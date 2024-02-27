@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("108314"),
   g = s("946964"),
   h = s("649844"),
-  N = s("509167"),
-  I = s("635956"),
+  I = s("509167"),
+  N = s("635956"),
   p = s("305961"),
   C = s("521012"),
   A = s("49111"),
@@ -79,7 +79,7 @@ var M = function() {
             label: "None"
           }],
           onChange: e => t(e)
-        }), (0, a.jsx)(I.default, {
+        }), (0, a.jsx)(N.default, {
           subscriptionTier: e,
           isGift: !0,
           premiumModalAnalyticsLocation: {}
@@ -281,7 +281,7 @@ var M = function() {
           value: z,
           onChange: Q
         }), (0, a.jsx)(r.Button, {
-          onClick: () => (0, N.default)({
+          onClick: () => (0, I.default)({
             applicationId: W,
             skuId: z,
             analyticsLocations: k

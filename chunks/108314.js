@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("837899"),
   p = n("425190"),
   E = n("68238"),
-  S = n("315102"),
-  g = n("577357"),
+  g = n("315102"),
+  S = n("577357"),
   C = n("837008"),
   _ = n("167109"),
   I = n("176687"),
@@ -65,7 +65,7 @@ let U = e => {
           children: (0, l.jsx)(R.default, {
             guildId: s,
             benefit: e
-          }, (0, g.getBenefitKey)(e))
+          }, (0, S.getBenefitKey)(e))
         }, t))
       }), d && (0, l.jsx)(k, {
         isViewAll: i,
@@ -102,7 +102,7 @@ let U = e => {
               return (0, l.jsx)("img", {
                 ...t,
                 className: D.emojiListEmoji,
-                src: (n = e, S.default.getEmojiURL({
+                src: (n = e, g.default.getEmojiURL({
                   id: n.id,
                   animated: n.animated,
                   size: 24
@@ -184,7 +184,7 @@ var B = e => {
     groupListingId: h,
     analyticsLocation: m
   } = e, p = (0, C.useSubscriptionListing)(n), {
-    openModal: S,
+    openModal: g,
     canOpenModal: v,
     cannotOpenReason: x,
     isCheckingTrialEligibility: N
@@ -194,21 +194,21 @@ var B = e => {
   } = (0, I.default)(h), w = (null == U ? void 0 : U.id) === n, B = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [V, G] = a.useState(!1), [H, W] = a.useState(!1), Y = a.useCallback(e => {
     let t = !1;
     null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t)
-  }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [X] = _.useTrialLimit(n), Q = (0, T.default)(s, n), q = null != Z && null == R && Q, J = (0, o.default)(O.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = a.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), el = (null == p ? void 0 : p.published) === !0, ea = (null == p ? void 0 : p.soft_deleted) === !0, es = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+  }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [Q] = _.useTrialLimit(n), X = (0, T.default)(s, n), q = null != Z && null == R && X, J = (0, o.default)(O.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = a.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), el = (null == p ? void 0 : p.published) === !0, ea = (null == p ? void 0 : p.soft_deleted) === !0, es = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
   return (el || en) && !ea ? (0, l.jsxs)("article", {
     className: D.container,
     "aria-label": z,
     children: [q && (0, l.jsxs)("div", {
       className: i(D.tierTrialIndicator, D.tierTopIndicator),
       children: [b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_PERIOD.format({
-        trialPeriodDuration: (0, g.formatPlanIntervalDuration)({
+        trialPeriodDuration: (0, S.formatPlanIntervalDuration)({
           interval: Z.interval,
           interval_count: Z.interval_count
         })
       }), (0, l.jsx)(u.Tooltip, {
         clickableOnMobile: !0,
         text: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({
-          activeTrialUserLimit: null != X ? X : 0
+          activeTrialUserLimit: null != Q ? Q : 0
         }),
         children: e => (0, l.jsx)(E.default, {
           className: D.tierTrialIndicatorIcon,
@@ -244,7 +244,7 @@ var B = e => {
               fullWidth: !0,
               disabled: !v || M,
               submitting: N,
-              onClick: S,
+              onClick: g,
               onlyShineOnHover: !0,
               children: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
             })

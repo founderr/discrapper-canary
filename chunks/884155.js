@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("32346"),
   p = n("835040"),
   E = n("373469"),
-  S = n("271938"),
-  g = n("26989"),
+  g = n("271938"),
+  S = n("26989"),
   C = n("42887"),
   _ = n("957255"),
   I = n("824563"),
@@ -44,10 +44,10 @@ let b = a.memo(e => {
     channel: i,
     sessionId: u,
     nick: _
-  } = e, A = s.id, P = (0, r.useStateFromStores)([S.default], () => S.default.getId() === A, [A]), [b, D, U] = (0, r.useStateFromStoresArray)([C.default], () => P ? [!C.default.isSupported() || C.default.isSelfMute() || C.default.isSelfMutedTemporarily(), C.default.isSelfDeaf(), !1] : [!C.default.isSupported() || C.default.isLocalMute(A), !1, C.default.isLocalVideoDisabled(A)], [P, A]), w = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), F = (0, o.default)({
+  } = e, A = s.id, P = (0, r.useStateFromStores)([g.default], () => g.default.getId() === A, [A]), [b, D, U] = (0, r.useStateFromStoresArray)([C.default], () => P ? [!C.default.isSupported() || C.default.isSelfMute() || C.default.isSelfMutedTemporarily(), C.default.isSelfDeaf(), !1] : [!C.default.isSupported() || C.default.isLocalMute(A), !1, C.default.isLocalVideoDisabled(A)], [P, A]), w = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), F = (0, o.default)({
     userId: A,
     checkSoundSharing: !0
-  }), k = (0, r.useStateFromStores)([g.default], () => g.default.isGuestOrLurker(i.guild_id, A)), B = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
+  }), k = (0, r.useStateFromStores)([S.default], () => S.default.isGuestOrLurker(i.guild_id, A)), B = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
     let {
       userIds: t
     } = e;
@@ -56,7 +56,7 @@ let b = a.memo(e => {
   null != Y && j.default.trackExposure({
     location: "voice_users"
   });
-  let [z, K] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(A, i.getGuildId()), E.default.getActiveStreamForUser(A, i.getGuildId())], [i, A]), Z = (0, r.useStateFromStores)([v.default], () => v.default.getSessionById(u)), X = R.default.useName(s), Q = (0, r.useStateFromStores)([N.default], () => N.default.getVoicePlatformForChannel(i.id, A), [i.id, A]), {
+  let [z, K] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(A, i.getGuildId()), E.default.getActiveStreamForUser(A, i.getGuildId())], [i, A]), Z = (0, r.useStateFromStores)([v.default], () => v.default.getSessionById(u)), Q = R.default.useName(s), X = (0, r.useStateFromStores)([N.default], () => N.default.getVoicePlatformForChannel(i.id, A), [i.id, A]), {
     enableHangStatus: q
   } = h.HangStatusExperiment.useExperiment({
     guildId: i.guild_id,
@@ -71,10 +71,10 @@ let b = a.memo(e => {
     isShaking: F,
     children: (0, l.jsx)(L.default, {
       ...e,
-      nick: null != _ ? _ : X,
+      nick: null != _ ? _ : Q,
       canDrag: e.canDrag && !k,
       otherClientSessionType: null == Z ? void 0 : null === (t = Z.clientInfo) || void 0 === t ? void 0 : t.os,
-      voicePlatform: Q,
+      voicePlatform: X,
       localMute: b && !P,
       localVideoDisabled: U,
       mute: n || b,
@@ -85,9 +85,9 @@ let b = a.memo(e => {
       isStreaming: null != z && z.channelId === i.id,
       isWatching: null != K && K.state !== y.ApplicationStreamStates.ENDED,
       isGuest: k,
-      showHangStatus: J && q && (S.default.getId() === s.id || null != ee),
+      showHangStatus: J && q && (g.default.getId() === s.id || null != ee),
       hangStatusActivity: P ? $ : ee,
-      isSelf: S.default.getId() === s.id,
+      isSelf: g.default.getId() === s.id,
       application: G ? Y : void 0
     })
   })
@@ -105,7 +105,7 @@ var D = function(e) {
     location: m,
     numAudience: p,
     withGuildIcon: E = !1,
-    className: g,
+    className: S,
     children: C
   } = e, [T, v] = a.useState(null), [x, N] = a.useState(!1), M = a.useRef(null), R = a.useRef(new u.DelayedCall(50, () => {
     v(M.current), M.current = null
@@ -141,7 +141,7 @@ var D = function(e) {
         return (0, l.jsx)(b, {
           user: a,
           nick: i,
-          isSelfOnOtherClient: S.default.getId() === a.id && r.sessionId !== S.default.getSessionId(),
+          isSelfOnOtherClient: g.default.getId() === a.id && r.sessionId !== g.default.getSessionId(),
           mute: r.isVoiceMuted(),
           deaf: r.isVoiceDeafened(),
           video: r.selfVideo,
@@ -167,7 +167,7 @@ var D = function(e) {
     })), t
   })();
   return null == w && null == C ? null : (0, l.jsxs)(A.VoiceUserList, {
-    className: i(g, P.list, {
+    className: i(S, P.list, {
       [P.collapsed]: d,
       [P.withGuildIcon]: E
     }),

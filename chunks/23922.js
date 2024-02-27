@@ -143,7 +143,7 @@ function j(e) {
     align: E.default.Align.CENTER,
     children: (0, n.jsx)(c.Spinner, {})
   });
-  let b = U.map(e => {
+  let w = U.map(e => {
     let {
       id: a
     } = e, s = (null == t ? void 0 : t.id) === a;
@@ -159,7 +159,7 @@ function j(e) {
     }, a)
   });
 
-  function V() {
+  function b() {
     let e = D.current;
     null != e && O(!e.isScrolledToTop())
   }
@@ -197,23 +197,23 @@ function j(e) {
       children: (0, n.jsx)(c.AdvancedScroller, {
         ref: G,
         className: R.sourceScroller,
-        onScroll: V,
+        onScroll: b,
         children: (0, n.jsx)(h.default, {
           layout: h.default.Layout.WRAP,
           columns: 2,
           className: R.sourceContainer,
-          children: b
+          children: w
         })
       })
     }) : (0, n.jsx)(c.AdvancedScroller, {
       ref: G,
       className: R.sourceScroller,
-      onScroll: V,
+      onScroll: b,
       children: (0, n.jsx)(h.default, {
         layout: h.default.Layout.WRAP,
         columns: 2,
         className: R.sourceContainer,
-        children: b
+        children: w
       })
     })]
   })

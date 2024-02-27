@@ -153,8 +153,8 @@ function O(e, t, n) {
     reactions: H,
     selectedAnswerIds: V,
     submitting: Y,
-    tapShouldOpenVotersModal: K,
-    showResults: W
+    tapShouldOpenVotersModal: W,
+    showResults: K
   } = D, z = (0, _.getTotalVotes)(H), Q = S.default.Messages.POLL_VOTES_COUNT.format({
     count: String(z)
   }), Z = "".concat(Q, "  •  ").concat(null != b ? b : S.default.Messages.POLL_EXPIRED), J = Math.max(...v.map(e => {
@@ -176,7 +176,7 @@ function O(e, t, n) {
         isInteractive: w,
         isSelected: f,
         isLeader: _,
-        showResults: W
+        showResults: K
       });
     return {
       answerId: o,
@@ -272,7 +272,7 @@ function O(e, t, n) {
     presentation: "text",
     enabled: !1
   })), ee = !w || F || B ? void 0 : {
-    label: W ? S.default.Messages.POLL_HIDE_VOTES : S.default.Messages.POLL_SHOW_VOTES,
+    label: K ? S.default.Messages.POLL_HIDE_VOTES : S.default.Messages.POLL_SHOW_VOTES,
     presentation: "textButton",
     enabled: !0,
     type: "showVotes"
@@ -292,7 +292,7 @@ function O(e, t, n) {
     promptLabel: en,
     answers: X,
     answersInteraction: (0, s.match)({
-      tapShouldOpenVotersModal: K,
+      tapShouldOpenVotersModal: W,
       canTapAnswers: x,
       canSelectMultipleAnswers: et
     }).with({
@@ -305,7 +305,7 @@ function O(e, t, n) {
       canSelectMultipleAnswers: !0
     }, () => T.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
     answerTapAccessibilityLabel: (0, s.match)({
-      tapShouldOpenVotersModal: K,
+      tapShouldOpenVotersModal: W,
       platform: (0, E.getNativePlatform)()
     }).with({
       tapShouldOpenVotersModal: !0,

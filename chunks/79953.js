@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
 var a = r("37983"),
   n = r("884691"),
   i = r("414456"),
-  l = r.n(i),
-  o = r("446674"),
+  o = r.n(i),
+  l = r("446674"),
   s = r("77078"),
   c = r("810567"),
   d = r("547896"),
@@ -28,9 +28,9 @@ function x(e) {
   let {
     store: t,
     dataGetter: r
-  } = e, [i, l] = n.useState(r(t));
+  } = e, [i, o] = n.useState(r(t));
   return n.useEffect(() => {
-    let e = () => l(r(t));
+    let e = () => o(r(t));
     return e(), t.addChangeListener(e), () => {
       t.removeChangeListener(e)
     }
@@ -97,7 +97,7 @@ function C(e) {
     minHeight: 100,
     initialHeight: r,
     children: [(0, a.jsx)(n, {}), (0, a.jsxs)(u.default, {
-      className: l(f.headerBar, b.subPanelHeaderBar),
+      className: o(f.headerBar, b.subPanelHeaderBar),
       children: [(0, a.jsx)(u.default.Icon, {
         icon: d.default,
         tooltip: t.getName()
@@ -113,7 +113,7 @@ function C(e) {
 function S() {
   let e = n.useRef(null),
     [t, r] = n.useState(""),
-    i = o.Store.getAll(),
+    i = l.Store.getAll(),
     d = n.useMemo(() => i.map(e => ({
       key: e._dispatchToken,
       store: e
@@ -128,7 +128,7 @@ function S() {
     g = i.find(e => e._dispatchToken === h);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: l(f.panel, b.panel),
+    className: o(f.panel, b.panel),
     children: [(0, a.jsx)("div", {
       className: b.toolbar,
       children: (0, a.jsx)(c.default, {

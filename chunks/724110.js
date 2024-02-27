@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("701909"),
   p = n("253981"),
   E = n("252063"),
-  S = n("49111"),
-  g = n("782340"),
+  g = n("49111"),
+  S = n("782340"),
   C = n("473240"),
   _ = n("271861");
 let I = new Set(["Spacebar", " ", "Enter"]);
@@ -37,7 +37,7 @@ function T(e) {
     channelId: t
   });
   a.useEffect(() => {
-    (0, u.trackWithMetadata)(S.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
+    (0, u.trackWithMetadata)(g.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
   }, []);
   let N = e => {
       var t;
@@ -58,7 +58,7 @@ function T(e) {
         host: l,
         path: a
       } = i.parse(n, !0), r = p.default.isDiscordHostname(l) || window.location.host === l;
-      return !!r && a === S.Routes.OAUTH2_AUTHORIZED && (null != t && s(), !0)
+      return !!r && a === g.Routes.OAUTH2_AUTHORIZED && (null != t && s(), !0)
     }, [s]);
   return (0, l.jsxs)(r.ModalRoot, {
     transitionState: n,
@@ -76,12 +76,12 @@ function T(e) {
           children: [(0, l.jsx)(r.Heading, {
             variant: "heading-xl/bold",
             className: C.modalHeader,
-            children: g.default.Messages.PRIVATE_CHANNEL_AVAILABLE_APPS
+            children: S.default.Messages.PRIVATE_CHANNEL_AVAILABLE_APPS
           }), (0, l.jsx)(r.Text, {
             variant: "text-md/medium",
             className: C.modalHeader,
-            children: g.default.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
-              helpCenterLink: m.default.getArticleURL(S.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
+            children: S.default.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
+              helpCenterLink: m.default.getArticleURL(g.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
             })
           })]
         }), (0, l.jsx)("div", {
@@ -121,7 +121,7 @@ function T(e) {
                     onClick: n => {
                       n.stopPropagation(), (0, d.openOAuth2Modal)({
                         clientId: e.id,
-                        scopes: [S.OAuth2Scopes.APPLICATIONS_COMMANDS],
+                        scopes: [g.OAuth2Scopes.APPLICATIONS_COMMANDS],
                         channelId: t,
                         disableGuildSelect: !0,
                         callback: M
@@ -129,7 +129,7 @@ function T(e) {
                     },
                     size: r.Button.Sizes.SMALL,
                     color: r.Button.Colors.PRIMARY,
-                    children: g.default.Messages.ADD
+                    children: S.default.Messages.ADD
                   })]
                 })]
               }),
@@ -145,11 +145,11 @@ function T(e) {
                   userId: i.id,
                   channelId: t,
                   analyticsLocation: {
-                    section: S.AnalyticsSections.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL
+                    section: g.AnalyticsSections.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL
                   }
                 })
               },
-              "aria-label": g.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADD_MODAL_ROW_INFO.format({
+              "aria-label": S.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADD_MODAL_ROW_INFO.format({
                 appName: e.name
               }),
               children: s
@@ -167,12 +167,12 @@ function T(e) {
       className: C.modalFooter,
       children: [(0, l.jsx)(r.Button, {
         onClick: s,
-        children: g.default.Messages.DONE
+        children: S.default.Messages.DONE
       }), (0, l.jsx)(r.Button, {
         look: r.Button.Looks.LINK,
         onClick: s,
         color: r.Button.Colors.PRIMARY,
-        children: g.default.Messages.CANCEL
+        children: S.default.Messages.CANCEL
       })]
     })]
   })

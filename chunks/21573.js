@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
 var a = r("37983"),
   n = r("884691"),
   i = r("446674"),
-  l = r("77078"),
-  o = r("508815"),
+  o = r("77078"),
+  l = r("508815"),
   s = r("916523"),
   c = r("722109");
 
@@ -16,11 +16,11 @@ function d() {
   let e = (0, i.useStateFromStores)([s.default], () => s.default.allWithDescriptions(), [], i.statesWillNeverBeEqual),
     t = n.useMemo(() => e.map(e => {
       let [t, r, n] = e;
-      return (0, a.jsx)(l.FormItem, {
-        children: (0, a.jsx)(l.FormSwitch, {
+      return (0, a.jsx)(o.FormItem, {
+        children: (0, a.jsx)(o.FormSwitch, {
           value: r,
           note: t,
-          onChange: e => (0, o.toggle)(t, e),
+          onChange: e => (0, l.toggle)(t, e),
           hideBorder: !0,
           children: n
         })
@@ -28,8 +28,8 @@ function d() {
     }), [e]);
   return (0, a.jsxs)("div", {
     className: c.container,
-    children: [(0, a.jsx)(l.Button, {
-      onClick: o.clearAll,
+    children: [(0, a.jsx)(o.Button, {
+      onClick: l.clearAll,
       className: c.button,
       fullWidth: !0,
       children: "Clear all"

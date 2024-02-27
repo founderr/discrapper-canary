@@ -222,7 +222,7 @@ let K = a.memo(e => {
     })
   });
 
-function X(e) {
+function Q(e) {
   let {
     index: t
   } = e, n = (0, o.useListItem)("".concat(t));
@@ -230,7 +230,7 @@ function X(e) {
     itemProps: n
   })
 }
-class Q extends a.Component {
+class X extends a.Component {
   shouldComponentUpdate(e) {
     return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length
   }
@@ -406,7 +406,7 @@ class Q extends a.Component {
           index: a
         }, "content-inventory-".concat(i.entry.id))
       }
-      return (0, l.jsx)(X, {
+      return (0, l.jsx)(Q, {
         index: a
       }, "placeholder-".concat(t, ":").concat(n))
     }, this.handleScroll = () => {
@@ -530,7 +530,7 @@ function q(e) {
     className: i(G.container, n),
     children: (0, l.jsx)(o.ListNavigatorProvider, {
       navigator: g,
-      children: (0, l.jsx)(Q, {
+      children: (0, l.jsx)(X, {
         ...e,
         ...r,
         version: f,

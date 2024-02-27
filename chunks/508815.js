@@ -4,7 +4,7 @@ r.r(t), r.d(t, {
     return i
   },
   clearAll: function() {
-    return l
+    return o
   }
 });
 var a = r("913144"),
@@ -19,6 +19,6 @@ function i(e, t) {
   })
 }
 
-function l() {
+function o() {
   for (let e in n.default.all()) i(e, !1)
 }

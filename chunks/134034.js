@@ -8,8 +8,8 @@ var a = r("37983");
 r("884691");
 var n = r("414456"),
   i = r.n(n),
-  l = r("77078"),
-  o = r("15408"),
+  o = r("77078"),
+  l = r("15408"),
   s = r("484894"),
   c = r("769284"),
   d = r("890957");
@@ -44,14 +44,14 @@ function h() {
       })
     }), (0, a.jsx)("div", {
       className: i(c.buttonsContainer, d.marginBottom20),
-      children: (0, a.jsx)(l.Button, {
+      children: (0, a.jsx)(o.Button, {
         onClick: u,
         children: "Launch MFA"
       })
     }), (0, a.jsx)("div", {
       className: i(c.buttonsContainer, d.marginBottom20),
-      children: (0, a.jsx)(l.Button, {
-        onClick: () => (0, o.default)(),
+      children: (0, a.jsx)(o.Button, {
+        onClick: () => (0, l.default)(),
         children: "Launch Vibing Wumpus"
       })
     })]

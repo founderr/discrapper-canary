@@ -14,6 +14,6 @@ var a = r("77078");
 let {
   Layer: n,
   LayerContainer: i,
-  LayerProvider: l,
-  layerContext: o
-} = (0, a.createLayer)("DevTools"), s = i, c = l, d = o
+  LayerProvider: o,
+  layerContext: l
+} = (0, a.createLayer)("DevTools"), s = i, c = o, d = l

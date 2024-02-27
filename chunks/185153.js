@@ -60,7 +60,7 @@ function g(e) {
       }
     }).filter(E.isNotNullish);
     return null != s && e.unshift(s), e
-  }, [_, g, s]), N = n.useCallback(e => {
+  }, [_, g, s]), I = n.useCallback(e => {
     let t = (null == e ? void 0 : e.label) === (null == s ? void 0 : s.label) && (null == e ? void 0 : e.value) === (null == s ? void 0 : s.value);
     return null == e || "" === e.value || t ? null : (0, a.jsx)(S.default, {
       className: m.guildSelectOptionIcon,
@@ -81,7 +81,7 @@ function g(e) {
     },
     value: t,
     options: h,
-    renderOptionPrefix: N,
+    renderOptionPrefix: I,
     renderOptionSuffix: i,
     placeholder: f.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_PLACEHOLDER
   })

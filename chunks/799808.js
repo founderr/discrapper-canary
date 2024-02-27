@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return p
   }
 });
 var a = n("37983");
@@ -16,9 +16,9 @@ var r = n("77078"),
   c = n("697218"),
   f = n("773336"),
   h = n("49111"),
-  p = n("686298");
+  E = n("686298");
 
-function E(e, t, E) {
+function p(e, t, p) {
   let C = u.default.getWindowOpen(h.PopoutWindowKeys.CHANNEL_CALL_POPOUT) ? h.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
   if ((0, l.default)(C), f.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
     let {
@@ -27,12 +27,12 @@ function E(e, t, E) {
     return n => (0, a.jsx)(t, {
       ...n,
       guildId: e,
-      analyticsLocation: E
+      analyticsLocation: p
     })
   });
   else {
     var m;
-    let n = (0, i.default)(p.ApplicationStreamPresets.PRESET_CUSTOM, p.ApplicationStreamResolutions.RESOLUTION_1080, p.ApplicationStreamFPS.FPS_30, c.default.getCurrentUser(), null === (m = o.default.getGuild(e)) || void 0 === m ? void 0 : m.premiumTier) ? {
+    let n = (0, i.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, E.ApplicationStreamResolutions.RESOLUTION_1080, E.ApplicationStreamFPS.FPS_30, c.default.getCurrentUser(), null === (m = o.default.getGuild(e)) || void 0 === m ? void 0 : m.premiumTier) ? {
       width: 1920,
       height: 1080
     } : {

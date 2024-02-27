@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("242757"),
   p = n("305961"),
   E = n("957255"),
-  S = n("466079"),
-  g = n("444657"),
+  g = n("466079"),
+  S = n("444657"),
   C = n("679243"),
   _ = n("832897"),
   I = n("308419"),
@@ -80,7 +80,7 @@ function x(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != P && !F && (!(D >= 2) || !B || H || V || W ? k && 1 === D && w && (B && !H ? Y.push(e => (0, l.jsx)(g.ActivityEntryPointTile, {
+  }, []), null != P && !F && (!(D >= 2) || !B || H || V || W ? k && 1 === D && w && (B && !H ? Y.push(e => (0, l.jsx)(S.ActivityEntryPointTile, {
     channel: A,
     guild: P,
     width: e,
@@ -92,7 +92,7 @@ function x(e) {
     channel: A,
     guild: P,
     inPopout: O
-  }))) : Y.push(e => (0, l.jsx)(g.ActivityEntryPointTile, {
+  }))) : Y.push(e => (0, l.jsx)(S.ActivityEntryPointTile, {
     channel: A,
     guild: P,
     width: e,
@@ -104,7 +104,7 @@ function x(e) {
     var n, l;
     return null !== (l = null === (n = t[e]) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : "empty-tile"
   }, [t]);
-  return (0, l.jsx)(S.default, {
+  return (0, l.jsx)(g.default, {
     className: M,
     keyExtractor: z,
     paddingTop: 64,

@@ -15,8 +15,8 @@ var a = n("37983"),
   c = n("305961"),
   f = n("42887"),
   h = n("697218"),
-  p = n("49111"),
-  E = n("686298"),
+  E = n("49111"),
+  p = n("686298"),
   C = n("353927"),
   m = n("782340");
 
@@ -35,7 +35,7 @@ function S(e, t) {
       if (null != T) {
         let e = {
           qualityOptions: {
-            preset: E.ApplicationStreamPresets.PRESET_CUSTOM,
+            preset: p.ApplicationStreamPresets.PRESET_CUSTOM,
             resolution: r,
             frameRate: s
           },
@@ -53,7 +53,7 @@ function S(e, t) {
       var o, d;
       o = t, d = {
         ...A,
-        object: p.AnalyticsObjects.RADIO_ITEM,
+        object: E.AnalyticsObjects.RADIO_ITEM,
         objectType: u
       }, (0, i.openModalLazy)(async () => {
         let {
@@ -64,45 +64,45 @@ function S(e, t) {
           analyticsSource: d
         })
       }, {
-        contextKey: o === p.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
+        contextKey: o === E.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
       })
     }
   }, [t, A, T]);
   if (null == e) return null;
-  let x = S === E.ApplicationStreamPresets.PRESET_DOCUMENTS ? E.ApplicationStreamFPS.FPS_30 : _,
-    R = E.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
+  let x = S === p.ApplicationStreamPresets.PRESET_DOCUMENTS ? p.ApplicationStreamFPS.FPS_30 : _,
+    N = p.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
       let {
         value: t,
         label: n
-      } = e, r = (0, o.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, g, t, v, I);
+      } = e, r = (0, o.default)(p.ApplicationStreamPresets.PRESET_CUSTOM, g, t, v, I);
       return (0, a.jsx)(i.MenuRadioItem, {
         group: "stream-settings-fps",
         id: "stream-settings-fps-".concat(t),
         label: n,
         checked: t === _,
-        action: () => M(r, g, t, p.AnalyticsObjectTypes.RESOLUTION)
+        action: () => M(r, g, t, E.AnalyticsObjectTypes.RESOLUTION)
       }, "stream-settings-fps-".concat(t))
     }),
-    N = E.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
+    R = p.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
       let {
         value: t,
         label: n
-      } = e, r = (0, o.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, t, x, v, I);
+      } = e, r = (0, o.default)(p.ApplicationStreamPresets.PRESET_CUSTOM, t, x, v, I);
       return (0, a.jsx)(i.MenuRadioItem, {
         group: "stream-settings-resolution",
         id: "stream-settings-resolution-".concat(t),
         label: n,
         checked: t === g,
-        action: () => M(r, t, x, p.AnalyticsObjectTypes.RESOLUTION)
+        action: () => M(r, t, x, E.AnalyticsObjectTypes.RESOLUTION)
       }, "stream-settings-resolution-".concat(t))
     });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(i.MenuGroup, {
       label: m.default.Messages.SCREENSHARE_FRAME_RATE,
-      children: R
+      children: N
     }), (0, a.jsx)(i.MenuGroup, {
       label: m.default.Messages.STREAM_RESOLUTION,
-      children: N
+      children: R
     })]
   })
 }

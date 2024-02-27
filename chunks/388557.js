@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
 var a = r("37983"),
   n = r("884691"),
   i = r("414456"),
-  l = r.n(i),
-  o = r("65597"),
+  o = r.n(i),
+  l = r("65597"),
   s = r("872717"),
   c = r("77078"),
   d = r("850068"),
@@ -85,7 +85,7 @@ let f = [{
   };
 
 function k() {
-  let [e, t] = n.useState("511651880837840896"), r = (0, o.default)([u.default], () => u.default.getPremiumSubscription()), i = async () => {
+  let [e, t] = n.useState("511651880837840896"), r = (0, l.default)([u.default], () => u.default.getPremiumSubscription()), i = async () => {
     await s.default.post({
       url: "/debug/subscription",
       body: {
@@ -96,7 +96,7 @@ function k() {
     await s.default.delete("/debug/subscription"), await (0, d.fetchSubscriptions)()
   };
   return (0, a.jsx)(c.ScrollerThin, {
-    className: l(m.panel),
+    className: o(m.panel),
     children: (0, a.jsxs)("div", {
       className: g.panelInner,
       children: [(0, a.jsx)(c.Text, {
@@ -159,7 +159,7 @@ function v(e) {
       variant: "text-md/normal",
       children: "Existing Subscription"
     }), (0, a.jsxs)("div", {
-      className: l(g.card, i ? g.gradientWrapperTier0 : g.gradientWrapperTier2),
+      className: o(g.card, i ? g.gradientWrapperTier0 : g.gradientWrapperTier2),
       children: [(0, a.jsxs)(c.Text, {
         variant: "text-md/normal",
         children: [" Subscription Type: ", (() => {

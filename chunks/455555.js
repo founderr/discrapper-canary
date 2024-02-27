@@ -49,8 +49,8 @@ var s = n("37983"),
   H = n("649844"),
   V = n("983424"),
   Y = n("538620"),
-  K = n("425538"),
-  W = n("448881"),
+  W = n("425538"),
+  K = n("448881"),
   z = n("703537"),
   Q = n("55282"),
   Z = n("42203"),
@@ -808,19 +808,19 @@ let eA = l.memo(function() {
       });
     case eE.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION:
       let {
-        dismissUntil: eK, decisionId: eW
+        dismissUntil: eW, decisionId: eK
       } = ec.metadata;
       return (0, s.jsxs)(ei.default, {
         color: ei.NoticeColors.WARNING,
         children: [(0, s.jsx)(ei.NoticeCloseButton, {
           noticeType: eE.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION,
           onClick: () => {
-            null != g && (0, y.clearMentionRaidDetected)(g), eS(eK)
+            null != g && (0, y.clearMentionRaidDetected)(g), eS(eW)
           }
         }), eI.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE, (0, s.jsx)(ei.NoticeButton, {
           onClick: () => {
-            null != g && (0, y.removeMentionRaidRestrictionWithFeedback)(g, eW, () => {
-              eS(eK), (0, y.clearMentionRaidDetected)(g)
+            null != g && (0, y.removeMentionRaidRestrictionWithFeedback)(g, eK, () => {
+              eS(eW), (0, y.clearMentionRaidDetected)(g)
             })
           },
           children: eI.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
@@ -854,7 +854,7 @@ let eA = l.memo(function() {
       });
     case eE.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING:
       let ez = i().add(5, "days").toDate();
-      return (0, s.jsx)(K.default, {
+      return (0, s.jsx)(W.default, {
         dismissCurrentNotice: () => {
           (0, L.markDismissibleContentAsDismissed)(es.typeToDismissibleContent[eE.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]), eS(ez)
         },
@@ -881,7 +881,7 @@ let eA = l.memo(function() {
           noticeType: eE.NoticeTypes.QUESTS_PROGRESS_INTERRUPTION,
           onClick: () => {
             var e;
-            (null === (e = ec.metadata) || void 0 === e ? void 0 : e.streamKey) != null && (0, W.dismissProgressTrackingFailureNotice)(ec.metadata.streamKey)
+            (null === (e = ec.metadata) || void 0 === e ? void 0 : e.streamKey) != null && (0, K.dismissProgressTrackingFailureNotice)(ec.metadata.streamKey)
           }
         }), eI.default.Messages.QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE]
       });

@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("972155"),
   p = n("732961"),
   E = n("153984"),
-  S = n("49111"),
-  g = n("99795"),
+  g = n("49111"),
+  S = n("99795"),
   C = n("772313"),
   _ = (0, r.default)(e => {
     let {
@@ -45,9 +45,9 @@ var l = n("37983"),
       awaitingRemoteSessionInfo: D
     } = e;
     a.useEffect(() => {
-      c.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET)
+      c.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET)
     }, [L, y]);
-    let U = a.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(o.default.getId())), [n, r]);
+    let U = a.useMemo(() => n.filter(e => e.type !== S.ParticipantTypes.ACTIVITY || !e.participants.has(o.default.getId())), [n, r]);
     if ((null == D ? void 0 : D.channelId) === x.id) return (0, l.jsx)(h.default, {
       height: y
     });
@@ -56,7 +56,7 @@ var l = n("37983"),
       participants: t,
       hasConnectPermission: N
     });
-    if (P === S.ChannelModes.VOICE) return (0, l.jsx)(u.default, {
+    if (P === g.ChannelModes.VOICE) return (0, l.jsx)(u.default, {
       guildId: x.guild_id,
       width: L,
       className: C.voiceCallWrapper,

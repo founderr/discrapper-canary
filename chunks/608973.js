@@ -21,7 +21,7 @@ var l = n("37983"),
 function E(e) {
   let {
     member: t
-  } = e, n = t.userId, E = t.guildId, S = (0, s.default)([o.default], () => o.default.getEnhancedMember(E, n), [n, E]), g = null != S ? S : t, C = g.unusualDMActivityUntil, _ = a.useCallback(e => {
+  } = e, n = t.userId, E = t.guildId, g = (0, s.default)([o.default], () => o.default.getEnhancedMember(E, n), [n, E]), S = null != g ? g : t, C = S.unusualDMActivityUntil, _ = a.useCallback(e => {
     if (null == e) return null;
     let t = new Date(e).getTime();
     return (0, u.formatDateRelativeTime)(t, u.MembersTableDateFormats.JOINED_AT)

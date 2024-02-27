@@ -26,14 +26,14 @@ function g(e) {
     showOverlay: s,
     children: g
   } = e, h = (0, i.default)(), {
-    analyticsLocations: N
+    analyticsLocations: I
   } = (0, o.default)(r.default.PREMIUM_UPSELL_OVERLAY);
   return (n.useEffect(() => {
     s && u.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      location_stack: N,
+      location_stack: I,
       type: E.PremiumUpsellTypes.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
     })
-  }, [s, N]), s) ? (0, a.jsxs)("div", {
+  }, [s, I]), s) ? (0, a.jsxs)("div", {
     className: f.upsellOverlayContainer,
     children: [(0, a.jsx)("div", {
       children: g

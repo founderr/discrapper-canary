@@ -25,20 +25,20 @@ function s(e) {
   let x = o.useCallback(e => {
       null == u || u(e), p(null)
     }, [u, p]),
-    v = o.useCallback(e => {
+    h = o.useCallback(e => {
       null == u || u(e), p(e)
     }, [u, p]),
-    h = o.useCallback(() => (0, r.jsx)(i.CustomColorPicker, {
-      onChange: v,
+    v = o.useCallback(() => (0, r.jsx)(i.CustomColorPicker, {
+      onChange: h,
       value: f
-    }), [v, f]),
+    }), [h, f]),
     m = o.useCallback(e => {
       let t = (0, r.jsx)(i.CustomColorButton, {
         ...e,
         "aria-label": a.default.Messages.CUSTOM_COLOR
       });
       return c ? t : (0, r.jsx)(l.Popout, {
-        renderPopout: h,
+        renderPopout: v,
         position: d,
         children: e => (0, r.jsx)(l.Tooltip, {
           text: a.default.Messages.CUSTOM_COLOR,
@@ -50,7 +50,7 @@ function s(e) {
           })
         })
       })
-    }, [d, c, h]),
+    }, [d, c, v]),
     g = o.useCallback(e => {
       let t = (0, r.jsx)(i.DefaultColorButton, {
         ...e

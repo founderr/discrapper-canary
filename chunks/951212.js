@@ -19,8 +19,8 @@ var r = n("77078"),
   c = n("49111");
 let f = window.matchMedia("(prefers-reduced-motion: reduce)"),
   h = window.matchMedia("(prefers-contrast: more)"),
-  p = window.matchMedia("(prefers-contrast: less)"),
-  E = window.matchMedia("(prefers-color-scheme: dark)"),
+  E = window.matchMedia("(prefers-contrast: less)"),
+  p = window.matchMedia("(prefers-color-scheme: dark)"),
   C = window.matchMedia("(prefers-color-scheme: light)"),
   m = window.matchMedia("(forced-colors: active)"),
   S = 5;
@@ -30,7 +30,7 @@ function g() {
 }
 var _ = {
   initBasic() {
-    f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), E.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), m.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), h.addListener(this.handleSystemPrefersContrastChanged), p.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
+    f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), p.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), m.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), h.addListener(this.handleSystemPrefersContrastChanged), E.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
   },
   init() {
     this.initBasic(), s.default.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
@@ -63,7 +63,7 @@ var _ = {
   },
   handleSystemColorPreferencesChanged() {
     let e;
-    E.matches ? e = c.ThemeTypes.DARK : C.matches && (e = c.ThemeTypes.LIGHT);
+    p.matches ? e = c.ThemeTypes.DARK : C.matches && (e = c.ThemeTypes.LIGHT);
     let t = !u.isPlatformEmbedded || g(),
       n = t && m.matches ? "active" : "none";
     s.default.wait(() => {
@@ -72,7 +72,7 @@ var _ = {
   },
   handleSystemPrefersContrastChanged() {
     let e = "no-preference";
-    h.matches ? e = "more" : p.matches && (e = "less"), s.default.wait(() => {
+    h.matches ? e = "more" : E.matches && (e = "less"), s.default.wait(() => {
       o.systemPrefersContrastChanged(e)
     })
   }

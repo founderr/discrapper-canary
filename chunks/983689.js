@@ -15,12 +15,12 @@ var a = n("884691"),
   c = n("227602"),
   f = n("791776"),
   h = n("13798"),
-  p = n("49111"),
-  E = n("894282");
+  E = n("49111"),
+  p = n("894282");
 
 function C(e) {
   let t = e.ctrlKey || e.altKey || e.metaKey;
-  e.key === E.KeyboardEventKey.Tab && !t && !__OVERLAY__ && !(0, s.hasAnyModalOpen)() && d.default.maybeShowKeyboardNavigationExplainerModal()
+  e.key === p.KeyboardEventKey.Tab && !t && !__OVERLAY__ && !(0, s.hasAnyModalOpen)() && d.default.maybeShowKeyboardNavigationExplainerModal()
 }
 
 function m() {
@@ -33,21 +33,21 @@ var S = function(e, t) {
     ! function(e, t) {
       var n, a;
       let r = (0, f.isInputLikeElement)(null === (n = (0, f.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement);
-      if (r && e.key !== E.KeyboardEventKey.Tab) return;
-      let s = e.ctrlKey || e.altKey || e.metaKey || e.key !== E.KeyboardEventKey.Tab && e.shiftKey;
+      if (r && e.key !== p.KeyboardEventKey.Tab) return;
+      let s = e.ctrlKey || e.altKey || e.metaKey || e.key !== p.KeyboardEventKey.Tab && e.shiftKey;
       if (s) return;
       let i = function(e) {
         let t = h.keyToCode("shift"),
           n = h.keyToCode("tab");
-        if (e.key === E.KeyboardEventKey.Tab && e.shiftKey && null != t && null != n) return [
-          [p.KeyboardDeviceTypes.KEYBOARD_KEY, t],
-          [p.KeyboardDeviceTypes.KEYBOARD_KEY, n]
+        if (e.key === p.KeyboardEventKey.Tab && e.shiftKey && null != t && null != n) return [
+          [E.KeyboardDeviceTypes.KEYBOARD_KEY, t],
+          [E.KeyboardDeviceTypes.KEYBOARD_KEY, n]
         ];
-        let a = E.NavigationKeyShortcutMap.get(e.key);
+        let a = p.NavigationKeyShortcutMap.get(e.key);
         if (null != a) {
           let e = h.keyToCode(a);
           if (null != e) return [
-            [p.KeyboardDeviceTypes.KEYBOARD_KEY, e]
+            [E.KeyboardDeviceTypes.KEYBOARD_KEY, e]
           ]
         }
         return null

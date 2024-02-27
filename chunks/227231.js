@@ -31,22 +31,22 @@ n.r(t), n.d(t, {
     return C
   },
   getGameTileAssetUrl: function() {
-    return p
+    return A
   },
   getGameLogotypeAssetUrl: function() {
-    return A
+    return p
   },
   getQuestUrl: function() {
     return I
   },
   getQuestForTargetedContent: function() {
-    return g
+    return R
   },
   getPlatformString: function() {
-    return N
+    return g
   },
   calculatePercentComplete: function() {
-    return R
+    return N
   },
   getContextualEntrypointHeading: function() {
     return U
@@ -148,16 +148,16 @@ let S = e => "".concat(u).concat(e).concat("/reward.png"),
   f = e => "".concat(u).concat(e).concat("/hero.webm"),
   T = e => "".concat(u).concat(e).concat("/quests_bar_hero.png"),
   C = e => "".concat(u).concat(e).concat("/quests_bar_hero.webm"),
-  p = e => "".concat(u).concat(e).concat("/game_tile.png"),
-  A = (e, t) => "".concat(u).concat(e, "/").concat(t).concat("/game_logotype.png"),
+  A = e => "".concat(u).concat(e).concat("/game_tile.png"),
+  p = (e, t) => "".concat(u).concat(e, "/").concat(t).concat("/game_logotype.png"),
   I = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
-function g(e, t) {
+function R(e, t) {
   for (let [n, s] of e)
     if (s.targetedContent.includes(t)) return s;
   return null
 }
-let N = e => {
+let g = e => {
   switch (e) {
     case i.QuestRewardCodePlatforms.XBOX:
       return a.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -172,7 +172,7 @@ let N = e => {
   }
 };
 
-function R(e) {
+function N(e) {
   if (null == e.userStatus) return 0;
   let {
     streamProgressSeconds: t,
@@ -189,7 +189,7 @@ function U(e) {
   var t, n;
   if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return a.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
   if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
-    let t = R(e);
+    let t = N(e);
     return t >= .75 ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE : t >= .45 && t <= .55 ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY : t > 0 ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED : a.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
   }
   return a.default.Messages.QUESTS_TITLE.format({

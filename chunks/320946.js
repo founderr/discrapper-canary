@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("233322"),
   p = n("567054"),
   E = n("982527"),
-  S = n("157186"),
-  g = n("267567"),
+  g = n("157186"),
+  S = n("267567"),
   C = n("666391"),
   _ = n("10514"),
   I = n("701909"),
@@ -35,8 +35,8 @@ var l = n("37983"),
   y = n("782340"),
   O = (e, t, n, s) => {
     let r;
-    let O = (0, o.useStateFromStores)([g.default], () => g.default.isLurking(t)),
-      P = (0, S.useShowMemberVerificationGate)(t),
+    let O = (0, o.useStateFromStores)([S.default], () => S.default.isLurking(t)),
+      P = (0, g.useShowMemberVerificationGate)(t),
       b = (0, o.useStateFromStores)([E.default], () => null != t ? E.default.getRequest(t) : null),
       D = (null == b ? void 0 : b.applicationStatus) === p.GuildJoinRequestApplicationStatuses.SUBMITTED,
       U = null == e ? void 0 : e.subscription_plans[0],
@@ -57,8 +57,8 @@ var l = n("37983"),
       K = null != z,
       Z = (null == V ? void 0 : V.trialId) != null,
       {
-        loading: X,
-        getTrialPurchaseEligibility: Q
+        loading: Q,
+        getTrialPurchaseEligibility: X
       } = (0, A.useGetTrialPurchaseEligibility)(),
       q = (0, v.useSubscriptionTrial)(null == e ? void 0 : e.id),
       {
@@ -77,7 +77,7 @@ var l = n("37983"),
     let et = a.useCallback(async () => {
         let n, a;
         if (i(null != e, "No subscription listing"), i(null != U, "No subscription plan"), i(F, "Cannot purchase this unpublished plan"), (null == q ? void 0 : q.active_trial) != null) {
-          let l = await Q(t, e.id, q.active_trial.id);
+          let l = await X(t, e.id, q.active_trial.id);
           if ((null == l ? void 0 : l.is_eligible) === !0) {
             var r;
             n = null == q ? void 0 : null === (r = q.active_trial) || void 0 === r ? void 0 : r.id
@@ -118,7 +118,7 @@ var l = n("37983"),
           }),
           reviewWarningMessage: a
         })
-      }, [F, e, U, V, Y, t, J, s, Q, q, ee]),
+      }, [F, e, U, V, Y, t, J, s, X, q, ee]),
       en = a.useCallback(() => {
         (0, m.openMemberVerificationModal)(t)
       }, [t]);
@@ -126,6 +126,6 @@ var l = n("37983"),
       openModal: P ? en : et,
       canOpenModal: !O && null != B && H && !D && !K && !Z && !$,
       cannotOpenReason: r,
-      isCheckingTrialEligibility: X
+      isCheckingTrialEligibility: Q
     }
   }

@@ -21,10 +21,10 @@ var a = n("446674"),
   c = n("567469"),
   f = n("998716"),
   h = n("834052"),
-  p = n("274438");
-let E = e => e / 400,
+  E = n("274438");
+let p = e => e / 400,
   C = !1,
-  m = (0, o.createSound)("stage_waiting", "stage_waiting", E(i.default.getOutputVolume()));
+  m = (0, o.createSound)("stage_waiting", "stage_waiting", p(i.default.getOutputVolume()));
 
 function S() {
   let e = l.default.getVoiceChannelId();
@@ -42,9 +42,9 @@ function S() {
     m.stop(), C = !1;
     return
   }
-  let a = p.default.shouldPlay();
+  let a = E.default.shouldPlay();
   if (a) {
-    m.volume = E(i.default.getOutputVolume()), m.loop(), C = !0;
+    m.volume = p(i.default.getOutputVolume()), m.loop(), C = !0;
     return
   }
   let r = h.default.isLive(e);
@@ -52,13 +52,13 @@ function S() {
     m.stop(), C = !1;
     return
   }
-  let o = p.default.isMuted();
+  let o = E.default.isMuted();
   if (o) {
     m.pause(), C = !1;
     return
   }
   let d = null != Object.values(u.default.getVoiceStatesForChannel(e)).find(e => !e.suppress && !e.isVoiceMuted());
-  d || C ? d && (m.pause(), C = !1) : (m.volume = E(i.default.getOutputVolume()), m.loop(), C = !0)
+  d || C ? d && (m.pause(), C = !1) : (m.volume = p(i.default.getOutputVolume()), m.loop(), C = !0)
 }
 
 function g(e) {
@@ -108,7 +108,7 @@ class T extends r.default {
     let {
       volume: t
     } = e;
-    m.volume = E(t)
+    m.volume = p(t)
   }
   handleToggleSelfDeaf() {
     S()

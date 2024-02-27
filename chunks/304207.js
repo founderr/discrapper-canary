@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
 var a = r("37983"),
   n = r("884691"),
   i = r("414456"),
-  l = r.n(i),
-  o = r("759843"),
+  o = r.n(i),
+  l = r("759843"),
   s = r("446674"),
   c = r("77078"),
   d = r("594203"),
@@ -133,7 +133,7 @@ function F() {
     {
       TabBar: r,
       renderSelectedTab: i,
-      selectedTabId: l
+      selectedTabId: o
     } = (0, O.default)({
       tabs: t,
       initialSelectedTabId: null !== (e = y.default.lastOpenTabId) && void 0 !== e ? e : void 0,
@@ -144,10 +144,10 @@ function F() {
       }
     }, [t]);
   return (0, u.default)({
-    type: o.ImpressionTypes.PANE,
-    name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
+    type: l.ImpressionTypes.PANE,
+    name: l.ImpressionNames.VIEW_PANEL_DEVTOOLS,
     properties: {
-      panel: l
+      panel: o
     }
   }), (0, a.jsxs)(w.DevToolsLayerProvider, {
     children: [(0, a.jsxs)(f.default, {
@@ -173,14 +173,14 @@ function U() {
   let e = n.useRef(null),
     t = (0, s.useStateFromStores)([y.default], () => y.default.sidebarWidth),
     [r, i] = n.useState(null),
-    o = n.useCallback(e => (0, b.updateDevToolsSettings)({
+    l = n.useCallback(e => (0, b.updateDevToolsSettings)({
       sidebarWidth: e
     }), []);
   return (n.useEffect(() => {
     null === r && null !== t && i(t)
   }, [t, r]), null === r) ? null : (0, a.jsxs)("div", {
     ref: e,
-    className: l(D.container),
+    className: o(D.container),
     style: {
       minWidth: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
       width: r
@@ -188,7 +188,7 @@ function U() {
     children: [(0, a.jsx)(G, {
       resizableNode: e,
       onResize: i,
-      onResizeEnd: o
+      onResizeEnd: l
     }), (0, a.jsx)("div", {
       className: D.sidebarContent,
       children: (0, a.jsx)(F, {})
@@ -199,7 +199,7 @@ function U() {
 function H() {
   let e = (0, s.useStateFromStores)([y.default], () => y.default.displayTools);
   return e ? (0, a.jsx)("div", {
-    className: l(D.container, D.mobileContainerExpanded),
+    className: o(D.container, D.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
       className: D.sidebarContent,
       children: (0, a.jsx)(F, {})
@@ -209,7 +209,7 @@ function H() {
     children: (0, a.jsx)(c.Clickable, {
       onClick: b.toggleDisplayDevTools,
       children: (0, a.jsxs)(f.default, {
-        className: l(B.headerBar, D.mobileHeaderCollapsed),
+        className: o(B.headerBar, D.mobileHeaderCollapsed),
         toolbar: (0, a.jsx)(p.default, {
           direction: p.default.Directions.UP
         }),

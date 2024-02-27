@@ -50,11 +50,11 @@ function C(e) {
   t.delete(e), l = t
 }
 
-function p(e) {
+function A(e) {
   let t = new Set(c);
   t.delete(e), c = t
 }
-class A extends s.default.Store {
+class p extends s.default.Store {
   get quests() {
     return a
   }
@@ -83,8 +83,8 @@ class A extends s.default.Store {
     return S.get(e)
   }
 }
-A.displayName = "QuestsStore";
-var I = new A(i.default, {
+p.displayName = "QuestsStore";
+var I = new p(i.default, {
   LOGOUT: function() {
     r = !1, a = new Map, u = 0, l = new Set, S = new Map
   },
@@ -191,13 +191,13 @@ var I = new A(i.default, {
     } = e;
     _(t.questId, {
       userStatus: t
-    }), p(t.questId)
+    }), A(t.questId)
   },
   QUESTS_DISMISS_CONTENT_FAILURE: function(e) {
     let {
       questId: t
     } = e;
-    p(t)
+    A(t)
   },
   STREAM_CLOSE: function(e) {
     let {

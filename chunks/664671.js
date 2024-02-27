@@ -74,7 +74,7 @@ function h(e) {
   }, t.id)
 }
 
-function N(e) {
+function I(e) {
   (0, i.openModalLazy)(async () => {
     let {
       default: t
@@ -86,7 +86,7 @@ function N(e) {
   })
 }
 
-function I(e) {
+function N(e) {
   (0, i.openModalLazy)(async () => {
     let {
       default: t
@@ -200,8 +200,8 @@ var p = function(e) {
       children: A.map(e => (0, a.jsx)(h, {
         guildBoostSlot: e,
         isCancellable: M,
-        onCancel: N,
-        onUncancel: I,
+        onCancel: I,
+        onUncancel: N,
         premiumSubscription: T,
         useReducedMotion: f
       }, e.id))

@@ -25,10 +25,10 @@ function E(e) {
   a.useEffect(() => {
     u.default.loadThread(E)
   });
-  let S = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
-    g = S === h.FAVORITES,
+  let g = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
+    S = g === h.FAVORITES,
     C = (0, i.useStateFromStores)([o.default], () => o.default.theme);
-  return t = g ? (0, l.jsx)(c.EmptyStateText, {
+  return t = S ? (0, l.jsx)(c.EmptyStateText, {
     note: m.default.Messages.FAVORITES_EMPTY_BODY,
     children: m.default.Messages.FAVORITES_EMPTY_TITLE
   }) : null != E ? (0, l.jsx)(r.Spinner, {
@@ -43,8 +43,8 @@ function E(e) {
     }), (0, l.jsxs)(c.default, {
       theme: C,
       children: [(0, l.jsx)(c.EmptyStateImage, {
-        darkSrc: g ? n("41912") : n("605834"),
-        lightSrc: g ? n("706692") : n("976585"),
+        darkSrc: S ? n("41912") : n("605834"),
+        lightSrc: S ? n("706692") : n("976585"),
         width: 272,
         height: 222
       }), t]

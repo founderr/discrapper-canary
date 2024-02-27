@@ -25,23 +25,23 @@ var N = e => {
     senderId: n,
     modalProps: a,
     channelId: N
-  } = e, A = null != (0, u.useSafetyToolsButtonTooltipForChannel)(N), [R, I] = r.useState(0), S = r.useCallback(e => {
+  } = e, R = null != (0, u.useSafetyToolsButtonTooltipForChannel)(N), [A, S] = r.useState(0), I = r.useCallback(e => {
     (0, l.trackCtaEvent)({
       channelId: N,
       senderId: n,
       warningId: t,
       warningType: s,
       cta: e,
-      isNudgeWarning: A
+      isNudgeWarning: R
     })
-  }, [N, n, t, s, A]), [C, O] = r.useState(!1);
+  }, [N, n, t, s, R]), [O, C] = r.useState(!1);
 
   function f(e) {
-    I(e)
+    S(e)
   }
 
   function p() {
-    a.onClose(), (0, _.dismissChannelSafetyWarnings)(N, [t]), S(l.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS)
+    a.onClose(), (0, _.dismissChannelSafetyWarnings)(N, [t]), I(l.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS)
   }
   return (0, o.jsx)(i.ModalRoot, {
     transitionState: a.transitionState,
@@ -49,7 +49,7 @@ var N = e => {
       className: T.container,
       children: (0, o.jsxs)(i.Slides, {
         width: 440,
-        activeSlide: R,
+        activeSlide: A,
         centered: !1,
         overflow: "visible",
         contentDisplay: "flex",
@@ -60,7 +60,7 @@ var N = e => {
             senderId: n,
             onNavigate: f,
             onClose: p,
-            trackAnalyticsEvent: S
+            trackAnalyticsEvent: I
           })
         }), (0, o.jsx)(i.Slide, {
           id: 1,
@@ -78,11 +78,11 @@ var N = e => {
             channelId: N,
             onNavigate: f,
             onClose: p,
-            hasReported: C,
+            hasReported: O,
             onReport: function() {
-              O(!0)
+              C(!0)
             },
-            trackAnalyticsEvent: S
+            trackAnalyticsEvent: I
           })
         })]
       })

@@ -24,8 +24,8 @@ var l = n("37983"),
   m = n("76393"),
   p = n("845038"),
   E = n("374014"),
-  S = n("223913"),
-  g = n("709463"),
+  g = n("223913"),
+  S = n("709463"),
   C = n("264429"),
   _ = n("930291"),
   I = n("506885"),
@@ -85,7 +85,7 @@ class U extends a.PureComponent {
       channel: e,
       isStreaming: t
     } = this.props;
-    return t && (0, S.canWatchStream)(e, A.default, x.default, N.default, m.default)[0]
+    return t && (0, g.canWatchStream)(e, A.default, x.default, N.default, m.default)[0]
   }
   render() {
     let {
@@ -163,7 +163,7 @@ class U extends a.PureComponent {
         channelId: t.id,
         guildId: t.guild_id
       };
-      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, g.default)(a), o.default.selectParticipant(a.channelId, (0, E.encodeStreamKey)(a))) : (0, f.watchStreamAndTransitionToStream)(a), null == l || l(e.id)
+      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, S.default)(a), o.default.selectParticipant(a.channelId, (0, E.encodeStreamKey)(a))) : (0, f.watchStreamAndTransitionToStream)(a), null == l || l(e.id)
     }, this.handleJoinVoice = () => {
       let {
         user: e,
@@ -241,8 +241,8 @@ class U extends a.PureComponent {
         deaf: h,
         priority: m,
         collapsed: E,
-        isStreaming: S,
-        isGuest: g,
+        isStreaming: g,
+        isGuest: S,
         nick: C,
         video: _,
         serverMute: I,
@@ -263,8 +263,8 @@ class U extends a.PureComponent {
         mute: r,
         localMute: o,
         localVideoDisabled: d,
-        isStreaming: S,
-        isGuest: g,
+        isStreaming: g,
+        isGuest: S,
         video: _,
         priority: m,
         deaf: h,
@@ -311,7 +311,7 @@ class U extends a.PureComponent {
       }
       return (0, l.jsx)(u.Popout, {
         position: "right",
-        renderPopout: M && D || !S ? this.renderHangStatusPopout : this.renderStreamPopout,
+        renderPopout: M && D || !g ? this.renderHangStatusPopout : this.renderStreamPopout,
         shouldShow: s && !b,
         onRequestClose: this.handleHidePreview,
         spacing: 0,

@@ -8,8 +8,8 @@ var a = r("37983");
 r("884691");
 var n = r("414456"),
   i = r.n(n),
-  l = r("316693"),
-  o = r("446674"),
+  o = r("316693"),
+  l = r("446674"),
   s = r("77078"),
   c = r("679653"),
   d = r("42203"),
@@ -28,7 +28,7 @@ function v(e) {
   let {
     title: t,
     can: r
-  } = e, n = r ? g.default : f.default, l = (0, a.jsx)("div", {
+  } = e, n = r ? g.default : f.default, o = (0, a.jsx)("div", {
     className: i(x.iconOuter, r ? x.iconCheck : x.iconCross),
     children: (0, a.jsx)(n, {
       className: x.icon
@@ -36,7 +36,7 @@ function v(e) {
   });
   return (0, a.jsxs)("div", {
     className: x.scope,
-    children: [l, (0, a.jsx)("div", {
+    children: [o, (0, a.jsx)("div", {
       className: x.scopeInner,
       children: (0, a.jsx)(s.Text, {
         variant: "text-md/normal",
@@ -47,12 +47,12 @@ function v(e) {
 }
 
 function C() {
-  let e = (0, o.useStateFromStores)([p.default], () => p.default.getChannelId()),
-    t = (0, o.useStateFromStores)([m.default], () => m.default.getGuildId()),
-    r = (0, o.useStateFromStores)([d.default], () => d.default.getChannel(e)),
-    n = (0, o.useStateFromStores)([u.default], () => u.default.getGuild(t)),
-    g = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(r)),
-    f = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(n)),
+  let e = (0, l.useStateFromStores)([p.default], () => p.default.getChannelId()),
+    t = (0, l.useStateFromStores)([m.default], () => m.default.getGuildId()),
+    r = (0, l.useStateFromStores)([d.default], () => d.default.getChannel(e)),
+    n = (0, l.useStateFromStores)([u.default], () => u.default.getGuild(t)),
+    g = (0, l.useStateFromStores)([h.default], () => h.default.computePermissions(r)),
+    f = (0, l.useStateFromStores)([h.default], () => h.default.computePermissions(n)),
     C = (0, c.default)(r, !0),
     S = null != r ? (0, y.getChannelPermissionSpecMap)(r, !1, !0) : null,
     j = null != n ? b.default.getGuildPermissionSpecMap(n) : null,
@@ -60,7 +60,7 @@ function C() {
       let {
         title: t,
         flag: r
-      } = e, n = l.default.has(g, r);
+      } = e, n = o.default.has(g, r);
       return (0, a.jsx)(v, {
         title: t,
         can: n
@@ -70,7 +70,7 @@ function C() {
       let {
         title: t,
         flag: r
-      } = e, n = l.default.has(f, r);
+      } = e, n = o.default.has(f, r);
       return (0, a.jsx)(v, {
         title: t,
         can: n
