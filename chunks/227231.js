@@ -56,6 +56,9 @@ n.r(t), n.d(t, {
   },
   isDismissed: function() {
     return m
+  },
+  includesTarget: function() {
+    return O
   }
 }), n("222007");
 var s = n("568734"),
@@ -200,4 +203,8 @@ function h(e) {
 
 function m(e, t) {
   return (0, s.hasFlag)(e.dismissedQuestContent, r.DismissibleQuestContentFlags[t])
+}
+
+function O(e, t) {
+  return e.targetedContent.includes(t)
 }

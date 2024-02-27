@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   SHAKE_INTENSITY_DEFAULT: function() {
-    return T
+    return g
   },
   SHAKE_INTENSITY_MAX: function() {
-    return g
+    return v
   },
   SHAKE_INTENSITY_INCREMENT: function() {
     return N
@@ -31,13 +31,13 @@ var s = n("37983"),
   b = n("49111"),
   _ = n("782340"),
   x = n("380640");
-let v = Object.freeze({
+let T = Object.freeze({
     shouldPreventNavigation: !1,
     onPreventNavigation: null,
     sidebarOpen: !0
   }),
-  T = 1.4,
-  g = 15,
+  g = 1.4,
+  v = 15,
   N = 2;
 
 function E(e) {
@@ -82,7 +82,7 @@ class j extends i.PureComponent {
     let {
       section: t
     } = e;
-    t !== this.props.section && (this._intensity = T)
+    t !== this.props.section && (this._intensity = g)
   }
   componentWillUnmount() {
     this._unmounted = !0, this._subscribedStores.forEach(e => e.removeChangeListener(this.handleNoticeStoreUpdate)), this.props.sections.forEach(e => {
@@ -103,7 +103,7 @@ class j extends i.PureComponent {
     return null != s && s.stores.some(e => e.showNotice() && !(null != e.canCloseEarly && e.canCloseEarly())) ? (m.ComponentDispatch.dispatch(b.ComponentActions.SHAKE_APP, {
       duration: 300,
       intensity: this._intensity
-    }), this._intensity = Math.min(this._intensity + N, g), m.ComponentDispatch.dispatch(b.ComponentActions.EMPHASIZE_NOTICE), !1) : (this._intensity = T, !0)
+    }), this._intensity = Math.min(this._intensity + N, v), m.ComponentDispatch.dispatch(b.ComponentActions.EMPHASIZE_NOTICE), !1) : (this._intensity = g, !0)
   }
   renderSidebar(e) {
     let {
@@ -191,8 +191,8 @@ class j extends i.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), this._unmounted = !1, this._intensity = T, this._subscribedStores = [], this.scrollerRef = i.createRef(), this.state = {
-      ...v,
+    super(...e), this._unmounted = !1, this._intensity = g, this._subscribedStores = [], this.scrollerRef = i.createRef(), this.state = {
+      ...T,
       sidebarOpen: this.props.section !== b.UserSettingsSections.SUBSCRIPTIONS && this.props.section !== b.UserSettingsSections.PROFILE_CUSTOMIZATION
     }, this.setPreventNavigation = (e, t) => {
       this.setState({
@@ -215,7 +215,7 @@ class j extends i.PureComponent {
         null != l && l.forEach(e => {
           !this._subscribedStores.includes(e) && (e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e))
         }), this.setState({
-          ...v,
+          ...T,
           sidebarOpen: !1
         })
       };
@@ -231,7 +231,7 @@ class j extends i.PureComponent {
         null == e || e()
       }
     }, this.handleNoticeStoreUpdate = () => {
-      !this._unmounted && (this._intensity = T, this.forceUpdate())
+      !this._unmounted && (this._intensity = g, this.forceUpdate())
     }, this.renderSettingsSectionTabBarItem = (e, t, n) => {
       let {
         section: i,
@@ -243,26 +243,29 @@ class j extends i.PureComponent {
         className: p,
         newIndicator: S,
         newIndicatorDismissibleContentTypes: C,
-        badgeCount: v
-      } = e, T = null;
-      i === b.UserSettingsSections.ACCOUNT && this.props.isEligibleForPomelo ? T = (0, s.jsx)(h.default, {
+        badgeCount: T
+      } = e, g = null;
+      i === b.UserSettingsSections.ACCOUNT && this.props.isEligibleForPomelo ? g = (0, s.jsx)(h.default, {
         color: o.default.colors.STATUS_WARNING.css
-      }) : null != e.decoration ? T = (0, s.jsx)(r.Text, {
+      }) : i === b.UserSettingsSections.INVENTORY && this.props.hasNewQuests ? g = (0, s.jsx)(f.TextBadge, {
+        text: _.default.Messages.NEW,
+        color: o.default.colors.BG_BRAND.css
+      }) : null != e.decoration ? g = (0, s.jsx)(r.Text, {
         variant: "text-md/normal",
         color: "text-muted",
         children: e.decoration
-      }) : null != n && (null == C ? void 0 : C.includes(n)) && !t ? T = null != S ? S : (0, s.jsx)(f.TextBadge, {
+      }) : null != n && (null == C ? void 0 : C.includes(n)) && !t ? g = null != S ? S : (0, s.jsx)(f.TextBadge, {
         text: _.default.Messages.NEW
-      }) : null != m ? T = m : null != v && v > 0 && (T = (0, s.jsx)(f.NumberBadge, {
-        count: v
+      }) : null != m ? g = m : null != T && T > 0 && (g = (0, s.jsx)(f.NumberBadge, {
+        count: T
       }));
-      let g = i === b.UserSettingsSections.PREMIUM ? (0, s.jsx)(d.default, {
+      let v = i === b.UserSettingsSections.PREMIUM ? (0, s.jsx)(d.default, {
         label: l,
         isSelected: t,
-        decoration: T
-      }) : null == T ? l : (0, s.jsxs)("div", {
+        decoration: g
+      }) : null == g ? l : (0, s.jsxs)("div", {
         className: x.tabBarItemContainer,
-        children: [l, T]
+        children: [l, g]
       });
       return (0, s.jsx)(r.TabBar.Item, {
         color: u,
@@ -270,7 +273,7 @@ class j extends i.PureComponent {
         onClick: c,
         className: p,
         "aria-label": a,
-        children: g
+        children: v
       }, i)
     }
   }

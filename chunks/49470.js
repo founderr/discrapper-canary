@@ -18,7 +18,7 @@ var n = s("77078"),
       quests: e,
       isFetchingCurrentQuests: t
     } = (0, i.useQuests)();
-    return t ? (0, a.jsx)(n.Spinner, {
+    return ((0, i.useDismissNewQuestBadge)(), t) ? (0, a.jsx)(n.Spinner, {
       className: u.spinner
     }) : 0 === e.length ? null : (0, a.jsx)(n.FormSection, {
       className: u.questsContainer,
