@@ -13,17 +13,17 @@ var s = n("37983"),
   u = n("987317"),
   d = n("990766"),
   c = n("798609"),
-  E = n("63522"),
-  f = n("881536"),
-  _ = n("441979"),
-  T = n("605250"),
-  I = n("201131"),
-  m = n("95039"),
-  N = n("289967"),
-  p = n("866027"),
-  S = n("398604"),
-  A = n("477558"),
-  C = n("592407"),
+  E = n("881536"),
+  f = n("441979"),
+  _ = n("605250"),
+  T = n("201131"),
+  I = n("95039"),
+  m = n("289967"),
+  N = n("866027"),
+  p = n("398604"),
+  S = n("477558"),
+  A = n("592407"),
+  C = n("569382"),
   h = n("86456"),
   g = n("393414"),
   M = n("244480"),
@@ -89,7 +89,7 @@ function eh(e) {
   } = t, {
     guild_id: o
   } = n, u = t.getChannelId(), d = (0, a.useStateFromStores)([U.default], () => U.default.getGuild(o), [o]), c = l.useCallback(() => {
-    null != d && (0, m.openGuildBoostingMarketingModal)({
+    null != d && (0, I.openGuildBoostingMarketingModal)({
       guildId: d.id,
       location: {
         section: ep.AnalyticsSections.CHANNEL_TEXT_AREA,
@@ -316,7 +316,7 @@ let eM = Object.freeze({
       message: t,
       compact: n,
       onClick: () => {
-        null != r && C.default.open(r, ep.GuildSettingsSections.DISCOVERY)
+        null != r && A.default.open(r, ep.GuildSettingsSections.DISCOVERY)
       }
     })
   },
@@ -391,7 +391,7 @@ let eM = Object.freeze({
       compact: n,
       channel: l
     } = e;
-    return (0, I.isAutomodMessageRecord)(t) ? (0, s.jsx)(H.default, {
+    return (0, T.isAutomodMessageRecord)(t) ? (0, s.jsx)(H.default, {
       message: t,
       compact: n,
       channel: l
@@ -425,7 +425,7 @@ let eM = Object.freeze({
       usernameHook: a
     })
   },
-  [ep.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE]: p.default,
+  [ep.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE]: N.default,
   [ep.MessageTypes.PURCHASE_NOTIFICATION]: function(e) {
     var t;
     let {
@@ -433,7 +433,7 @@ let eM = Object.freeze({
       channel: l,
       compact: a
     } = e;
-    return (null === (t = n.purchaseNotification) || void 0 === t ? void 0 : t.type) === c.PurchaseNotificationType.GUILD_PRODUCT ? (0, s.jsx)(N.default, {
+    return (null === (t = n.purchaseNotification) || void 0 === t ? void 0 : t.type) === c.PurchaseNotificationType.GUILD_PRODUCT ? (0, s.jsx)(m.default, {
       message: n,
       channel: l,
       compact: a
@@ -445,13 +445,13 @@ let eM = Object.freeze({
       message: t,
       channel: n,
       compact: l
-    } = e, i = (0, eN.useUsernameHook)(t.author, n.id, n.guild_id), r = (0, a.useStateFromStores)([S.default], () => S.default.getActiveEventByChannel(n.id), [n.id]);
+    } = e, i = (0, eN.useUsernameHook)(t.author, n.id, n.guild_id), r = (0, a.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(n.id), [n.id]);
     return (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(ea.default, {
         message: t,
         compact: l,
         usernameHook: i
-      }), null != r && r.name === t.content ? (0, s.jsx)(A.default, {
+      }), null != r && r.name === t.content ? (0, s.jsx)(S.default, {
         code: "".concat(n.guild_id, "-").concat(r.id)
       }) : null]
     })
@@ -519,7 +519,7 @@ let eM = Object.freeze({
       usernameHook: a
     })
   },
-  [ep.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: E.default,
+  [ep.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: C.default,
   [ep.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED]: h.PrivateChannelIntegrationAddedSystemMessage,
   [ep.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: h.PrivateChannelIntegrationRemovedSystemMessage,
   [ep.MessageTypes.PREMIUM_REFERRAL]: void 0,
@@ -529,7 +529,7 @@ let eM = Object.freeze({
       channel: n,
       compact: l
     } = e;
-    return (0, s.jsx)(_.default, {
+    return (0, s.jsx)(f.default, {
       message: t,
       channel: n,
       compact: l
@@ -542,7 +542,7 @@ let eM = Object.freeze({
       channel: n,
       compact: l
     } = e;
-    return (0, s.jsx)(f.default, {
+    return (0, s.jsx)(E.default, {
       message: t,
       channel: n,
       compact: l
@@ -560,7 +560,7 @@ var eO = l.memo(function(e) {
   } = t, i = eM[a];
   if (null == i) {
     var r;
-    return r = Error("unknown message type ".concat(t.type)), eT.default.captureException(r), new(0, T.default)("SystemMessage").error("", r), null
+    return r = Error("unknown message type ".concat(t.type)), eT.default.captureException(r), new(0, _.default)("SystemMessage").error("", r), null
   }
   return (0, s.jsx)(w.default, {
     message: t,
