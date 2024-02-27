@@ -27,9 +27,9 @@ function m() {
       animateOnHover: !0
     }),
     m = e => null != e.globalName ? e.globalName : e.username,
-    _ = i.useMemo(() => e.length >= 2 ? d.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
+    _ = i.useMemo(() => e.length >= 2 ? d.default.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({
       username: m(e[0])
-    }) : 1 === e.length ? d.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
+    }) : 1 === e.length ? d.default.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({
       username: m(e[0])
     }) : "", [e]);
   return 0 === e.length ? null : (0, r.jsxs)("div", {

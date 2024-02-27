@@ -24,12 +24,12 @@ function I(e) {
   } = e, u = (0, l.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), c = u.map((e, t) => (0, a.jsx)(T, {
     affinity: e,
     applyMask: t !== u.length - 1
-  }, e.id)), I = e => null != e.globalName ? e.globalName : e.username, f = i.useMemo(() => 3 === u.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
+  }, e.id)), I = e => null != e.globalName ? e.globalName : e.username, f = i.useMemo(() => 3 === u.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({
     username: I(u[2])
-  }) : 2 === u.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_2.format({
+  }) : 2 === u.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_V2_2.format({
     username: I(u[1]),
     otherUsername: I(u[0])
-  }) : 1 === u.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
+  }) : 1 === u.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({
     username: I(u[0])
   }) : "", [u]);
   return 0 === u.length ? null : (0, a.jsxs)("div", {
