@@ -1,54 +1,58 @@
 "use strict";
 n.r(t), n.d(t, {
   useQuests: function() {
-    return c
+    return E
   },
   useIsQuestExpired: function() {
-    return E
+    return f
+  },
+  useQuestFormattedDate: function() {
+    return _
   }
 }), n("222007");
 var s = n("884691"),
   l = n("862337"),
   a = n("446674"),
-  i = n("448881"),
-  r = n("374023"),
-  o = n("2973"),
-  u = n("227231"),
-  d = n("166604");
+  i = n("915639"),
+  r = n("448881"),
+  o = n("374023"),
+  u = n("2973"),
+  d = n("227231"),
+  c = n("166604");
 
-function c(e) {
-  let [t, n] = s.useState(!1), l = (0, a.useStateFromStoresArray)([o.default], () => [...o.default.quests.values()]), {
-    isFetchingCurrentQuests: u,
-    lastFetchedCurrentQuests: c
-  } = (0, a.useStateFromStoresObject)([o.default], () => ({
-    isFetchingCurrentQuests: o.default.isFetchingCurrentQuests,
-    lastFetchedCurrentQuests: o.default.lastFetchedCurrentQuests
-  })), E = (0, r.getIsEligibleForQuests)({
-    location: d.QuestsExperimentLocations.USE_QUESTS,
+function E(e) {
+  let [t, n] = s.useState(!1), l = (0, a.useStateFromStoresArray)([u.default], () => [...u.default.quests.values()]), {
+    isFetchingCurrentQuests: i,
+    lastFetchedCurrentQuests: d
+  } = (0, a.useStateFromStoresObject)([u.default], () => ({
+    isFetchingCurrentQuests: u.default.isFetchingCurrentQuests,
+    lastFetchedCurrentQuests: u.default.lastFetchedCurrentQuests
+  })), E = (0, o.getIsEligibleForQuests)({
+    location: c.QuestsExperimentLocations.USE_QUESTS,
     autoTrackExposure: !1
   });
   s.useEffect(() => {
-    E && !t && !u && 0 === c && (n(!0), (0, i.fetchCurrentQuests)())
-  }, [E, t, u, c]);
+    E && !t && !i && 0 === d && (n(!0), (0, r.fetchCurrentQuests)())
+  }, [E, t, i, d]);
   let f = s.useMemo(() => {
     let t = null != e ? new Set(e) : null;
     return l.filter(e => null == t || t.has(e.id))
   }, [e, l]);
   return {
     quests: f,
-    isFetchingCurrentQuests: u
+    isFetchingCurrentQuests: i
   }
 }
 
-function E(e) {
-  let [t, n] = s.useState(() => null != e && (0, u.isQuestExpired)(e));
+function f(e) {
+  let [t, n] = s.useState(() => null != e && (0, d.isQuestExpired)(e));
   return s.useEffect(() => {
-    if (null != e && !(0, u.isQuestExpired)(e)) {
+    if (null != e && !(0, d.isQuestExpired)(e)) {
       let t = new l.Timeout,
         s = () => {
           let l = Date.parse(e.config.expiresAt) - Date.now();
           t.start(l, () => {
-            (0, u.isQuestExpired)(e) ? n(!0): s()
+            (0, d.isQuestExpired)(e) ? n(!0): s()
           })
         };
       return s(), () => {
@@ -56,4 +60,12 @@ function E(e) {
       }
     }
   }, [e]), t
+}
+
+function _(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      dateStyle: "short"
+    },
+    n = (0, a.useStateFromStores)([i.default], () => i.default.locale);
+  return s.useMemo(() => null == e ? "" : new Date(e).toLocaleDateString(n, t), [e, t, n])
 }

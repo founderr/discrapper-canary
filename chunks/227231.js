@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return g
   },
   getPlatformString: function() {
-    return h
+    return N
   },
   calculatePercentComplete: function() {
     return R
@@ -52,10 +52,10 @@ n.r(t), n.d(t, {
     return U
   },
   isDismissible: function() {
-    return m
+    return h
   },
   isDismissed: function() {
-    return N
+    return m
   }
 }), n("222007");
 var s = n("568734"),
@@ -122,6 +122,7 @@ function c(e) {
         primary: (s = t.colors).primary,
         secondary: s.secondary
       },
+      rewardCodeExpiresAt: t.reward_code_expires_at,
       rewardCodePlatforms: t.reward_code_platforms.filter(e => i.QUEST_REWARD_CODE_PLATFORMS_SET.has(e)),
       videoAssets: t.video_assets
     },
@@ -153,7 +154,7 @@ function g(e, t) {
     if (s.targetedContent.includes(t)) return s;
   return null
 }
-let h = e => {
+let N = e => {
   switch (e) {
     case i.QuestRewardCodePlatforms.XBOX:
       return a.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -193,10 +194,10 @@ function U(e) {
   })
 }
 
-function m(e) {
+function h(e) {
   return e in r.DismissibleQuestContentFlags
 }
 
-function N(e, t) {
+function m(e, t) {
   return (0, s.hasFlag)(e.dismissedQuestContent, r.DismissibleQuestContentFlags[t])
 }

@@ -11,11 +11,11 @@ var a = n("37983"),
   r = n("907002"),
   o = n("446674"),
   u = n("77078"),
-  d = n("915639"),
-  c = n("433487"),
-  f = n("58608"),
-  E = n("815496"),
-  h = n("448881"),
+  d = n("433487"),
+  c = n("58608"),
+  f = n("815496"),
+  E = n("448881"),
+  h = n("879364"),
   _ = n("2973"),
   C = n("588025"),
   I = n("227231"),
@@ -38,12 +38,10 @@ let R = s.forwardRef(function(e, t) {
     onCtxMenuSelect: D,
     quest: y,
     useReducedMotion: x
-  } = e, b = (0, o.useStateFromStores)([_.default], () => _.default.isEnrolling(y.id), [y]), U = (0, o.useStateFromStores)([d.default], () => d.default.locale), G = s.useMemo(() => new Date(y.config.expiresAt).toLocaleDateString(U, {
-    dateStyle: "long"
-  }), [y.config.expiresAt, U]), j = s.useMemo(() => y.config.videoAssets.includes(C.QuestContent.QUEST_BAR), [y]), w = s.useCallback(() => {
-    (0, h.enrollInQuest)(y.id, {
+  } = e, b = (0, o.useStateFromStores)([_.default], () => _.default.isEnrolling(y.id), [y]), U = (0, h.useQuestFormattedDate)(y.config.expiresAt), G = (0, h.useQuestFormattedDate)(y.config.rewardCodeExpiresAt), j = s.useMemo(() => y.config.videoAssets.includes(C.QuestContent.QUEST_BAR), [y]), w = s.useCallback(() => {
+    (0, E.enrollInQuest)(y.id, {
       questContent: C.QuestContent.QUEST_BAR,
-      questContentCTA: E.QuestContentCTA.ACCEPT_QUEST
+      questContentCTA: f.QuestContentCTA.ACCEPT_QUEST
     })
   }, [y]), k = (0, g.useHandleClaimQuestsReward)({
     quest: y,
@@ -82,7 +80,7 @@ let R = s.forwardRef(function(e, t) {
               children: B ? A.default.Messages.QUESTS_CLAIM_BY.format({
                 expirationDate: G
               }) : A.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
-                expirationDate: G
+                expirationDate: U
               })
             })]
           })]
@@ -96,7 +94,7 @@ let R = s.forwardRef(function(e, t) {
           children: e => (0, a.jsx)(u.Clickable, {
             ...e,
             className: N.submenuWrapper,
-            children: (0, a.jsx)(c.default, {
+            children: (0, a.jsx)(d.default, {
               className: N.submenuIcon
             })
           })
@@ -138,7 +136,7 @@ let R = s.forwardRef(function(e, t) {
             children: e => (0, a.jsx)(u.Clickable, {
               ...e,
               className: N.submenuWrapper,
-              children: (0, a.jsx)(c.default, {
+              children: (0, a.jsx)(d.default, {
                 className: N.submenuIcon
               })
             })
@@ -183,7 +181,7 @@ let R = s.forwardRef(function(e, t) {
         style: {
           color: y.config.colors.primary
         },
-        children: (0, a.jsx)(f.default, {
+        children: (0, a.jsx)(c.default, {
           autoPlay: !x,
           loop: !0,
           muted: !0,

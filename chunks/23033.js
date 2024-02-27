@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return L
   }
 }), n("222007");
 var l = n("37983"),
@@ -13,169 +13,166 @@ var l = n("37983"),
   o = n("79112"),
   d = n("191145"),
   c = n("582415"),
-  f = n("915639"),
-  h = n("824563"),
-  m = n("697218"),
-  p = n("433487"),
-  E = n("815496"),
-  S = n("448881"),
-  g = n("879364"),
-  C = n("2973"),
-  _ = n("588025"),
-  I = n("227231"),
-  T = n("315130"),
-  v = n("45198"),
-  x = n("275986"),
-  N = n("385416"),
-  A = n("255697"),
-  M = n("49111"),
-  R = n("99795"),
-  j = n("782340"),
-  L = n("140999"),
-  y = function(e) {
+  f = n("824563"),
+  h = n("697218"),
+  m = n("433487"),
+  p = n("815496"),
+  E = n("448881"),
+  S = n("879364"),
+  g = n("2973"),
+  C = n("588025"),
+  _ = n("227231"),
+  I = n("315130"),
+  T = n("45198"),
+  v = n("275986"),
+  x = n("385416"),
+  N = n("255697"),
+  A = n("49111"),
+  M = n("99795"),
+  R = n("782340"),
+  j = n("140999"),
+  L = function(e) {
     var t, n, s;
     let {
-      channelId: y
-    } = e, O = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentUser()), {
-      isCurrentUserStreamingQuestApplication: P,
-      quest: b
-    } = (0, r.useStateFromStoresObject)([h.default, d.default, C.default], () => {
-      let e = d.default.getParticipants(y),
+      channelId: L
+    } = e, y = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), {
+      isCurrentUserStreamingQuestApplication: O,
+      quest: P
+    } = (0, r.useStateFromStoresObject)([f.default, d.default, g.default], () => {
+      let e = d.default.getParticipants(L),
         t = function(e, t, n) {
           for (let a of e)
-            if (a.type === R.ParticipantTypes.STREAM) {
+            if (a.type === M.ParticipantTypes.STREAM) {
               var l;
               let e = (0, c.getStreamerApplication)(a.stream, n),
-                s = (null == e ? void 0 : e.id) != null ? (0, I.getQuestByApplicationId)(t, e.id) : null;
+                s = (null == e ? void 0 : e.id) != null ? (0, _.getQuestByApplicationId)(t, e.id) : null;
               if (null != s && (null === (l = s.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null) return s
             } return null
-        }(e, C.default.quests, h.default),
-        n = null != t && null != O && function(e, t, n, l) {
+        }(e, g.default.quests, f.default),
+        n = null != t && null != y && function(e, t, n, l) {
           for (let s of e) {
             var a;
-            if (s.type === R.ParticipantTypes.STREAM && s.user.id === n.id && t.config.applicationId === (null === (a = (0, c.getStreamerApplication)(s.stream, l)) || void 0 === a ? void 0 : a.id)) return !0
+            if (s.type === M.ParticipantTypes.STREAM && s.user.id === n.id && t.config.applicationId === (null === (a = (0, c.getStreamerApplication)(s.stream, l)) || void 0 === a ? void 0 : a.id)) return !0
           }
           return !1
-        }(e, t, O, h.default);
+        }(e, t, y, f.default);
       return {
         isCurrentUserStreamingQuestApplication: n,
         quest: t
       }
-    }, [y, O]), D = (0, r.useStateFromStores)([f.default], () => f.default.locale), U = (0, r.useStateFromStores)([C.default], () => null != b && C.default.isEnrolling(b.id), [b]), w = (0, r.useStateFromStores)([d.default], () => ((null == O ? void 0 : O.id) == null ? null : d.default.getParticipant(y, O.id)) != null, [y, O]), F = a.useMemo(() => null == b ? "" : new Date(b.config.expiresAt).toLocaleDateString(D, {
-      dateStyle: "short"
-    }), [b, D]), k = a.useCallback(() => {
-      null != b && (0, S.enrollInQuest)(b.id, {
-        questContent: _.QuestContent.QUEST_LIVE_STREAM,
-        questContentCTA: E.QuestContentCTA.ACCEPT_QUEST
+    }, [L, y]), b = (0, r.useStateFromStores)([g.default], () => null != P && g.default.isEnrolling(P.id), [P]), D = (0, r.useStateFromStores)([d.default], () => ((null == y ? void 0 : y.id) == null ? null : d.default.getParticipant(L, y.id)) != null, [L, y]), U = (0, S.useQuestFormattedDate)(null == P ? void 0 : P.config.expiresAt), w = (0, S.useQuestFormattedDate)(null == P ? void 0 : P.config.rewardCodeExpiresAt), F = a.useCallback(() => {
+      null != P && (0, E.enrollInQuest)(P.id, {
+        questContent: C.QuestContent.QUEST_LIVE_STREAM,
+        questContentCTA: p.QuestContentCTA.ACCEPT_QUEST
       })
-    }, [b]), B = a.useCallback(() => {
-      o.default.open(M.UserSettingsSections.INVENTORY)
-    }, []), V = (0, N.useHandleClaimQuestsReward)({
-      quest: b,
-      location: _.QuestContent.QUEST_LIVE_STREAM
-    }), G = (0, g.useIsQuestExpired)(b);
-    if (null == b) return null;
-    let H = (null === (t = b.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-      W = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-      Y = null != b.userStatus && (0, I.isDismissed)(b.userStatus, _.QuestContent.QUEST_LIVE_STREAM);
-    return Y || G || !w ? null : (0, l.jsxs)("div", {
-      className: i(L.wrapper, {
-        [L.wrapperAccepted]: H
+    }, [P]), k = a.useCallback(() => {
+      o.default.open(A.UserSettingsSections.INVENTORY)
+    }, []), B = (0, x.useHandleClaimQuestsReward)({
+      quest: P,
+      location: C.QuestContent.QUEST_LIVE_STREAM
+    }), V = (0, S.useIsQuestExpired)(P);
+    if (null == P) return null;
+    let G = (null === (t = P.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+      H = (null === (n = P.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+      W = null != P.userStatus && (0, _.isDismissed)(P.userStatus, C.QuestContent.QUEST_LIVE_STREAM);
+    return W || V || !D ? null : (0, l.jsxs)("div", {
+      className: i(j.wrapper, {
+        [j.wrapperAccepted]: G
       }),
-      children: [!H && (0, l.jsxs)("div", {
-        className: L.rewardTileWrapper,
+      children: [!G && (0, l.jsxs)("div", {
+        className: j.rewardTileWrapper,
         children: [(0, l.jsx)("img", {
-          alt: b.config.messages.rewardName,
-          className: L.rewardTile,
-          src: (0, I.getRewardAssetUrl)(b.id)
-        }), (0, l.jsx)(v.default, {
+          alt: P.config.messages.rewardName,
+          className: j.rewardTile,
+          src: (0, _.getRewardAssetUrl)(P.id)
+        }), (0, l.jsx)(T.default, {
           bgOpacity: .32,
-          className: L.sponsoredTag
+          className: j.sponsoredTag
         })]
       }), (0, l.jsxs)("div", {
-        className: L.content,
+        className: j.content,
         children: [(0, l.jsxs)("div", {
-          className: L.heading,
-          children: [H && P ? (0, l.jsx)("img", {
-            alt: b.config.messages.rewardName,
-            className: L.rewardTile,
-            src: (0, I.getRewardAssetUrl)(b.id)
+          className: j.heading,
+          children: [G && O ? (0, l.jsx)("img", {
+            alt: P.config.messages.rewardName,
+            className: j.rewardTile,
+            src: (0, _.getRewardAssetUrl)(P.id)
           }) : (0, l.jsx)("img", {
-            className: L.gameTile,
-            alt: b.config.messages.gameTitle,
-            src: (0, I.getGameTileAssetUrl)(b.id)
+            className: j.gameTile,
+            alt: P.config.messages.gameTitle,
+            src: (0, _.getGameTileAssetUrl)(P.id)
           }), (0, l.jsxs)("div", {
-            className: L.details,
+            className: j.details,
             children: [(0, l.jsxs)("div", {
-              className: L.headingWithSubmenu,
+              className: j.headingWithSubmenu,
               children: [(0, l.jsx)(u.Heading, {
-                className: L.questTitle,
+                className: j.questTitle,
                 variant: "heading-md/semibold",
                 color: "header-primary",
-                children: P ? (0, I.getContextualEntrypointHeading)(b) : j.default.Messages.QUESTS_TITLE.format({
-                  questName: b.config.messages.questName
+                children: O ? (0, _.getContextualEntrypointHeading)(P) : R.default.Messages.QUESTS_TITLE.format({
+                  questName: P.config.messages.questName
                 })
-              }), (0, l.jsx)(x.QuestsEntryContextMenuPopout, {
-                questContent: _.QuestContent.QUEST_LIVE_STREAM,
-                quest: b,
+              }), (0, l.jsx)(v.QuestsEntryContextMenuPopout, {
+                questContent: C.QuestContent.QUEST_LIVE_STREAM,
+                quest: P,
                 preventIdle: !0,
-                shouldShowDisclosure: (null === (s = b.userStatus) || void 0 === s ? void 0 : s.enrolledAt) == null,
+                shouldShowDisclosure: (null === (s = P.userStatus) || void 0 === s ? void 0 : s.enrolledAt) == null,
                 children: e => (0, l.jsx)(u.Clickable, {
                   ...e,
-                  className: L.submenuWrapper,
-                  children: (0, l.jsx)(p.default, {
-                    className: L.submenuIcon
+                  className: j.submenuWrapper,
+                  children: (0, l.jsx)(m.default, {
+                    className: j.submenuIcon
                   })
                 })
               })]
             }), (0, l.jsx)(u.Text, {
               color: "header-secondary",
               variant: "text-xs/medium",
-              children: W ? j.default.Messages.QUESTS_CLAIM_BY.format({
-                expirationDate: F
-              }) : j.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
-                expirationDate: F
+              children: H ? R.default.Messages.QUESTS_CLAIM_BY.format({
+                expirationDate: w
+              }) : R.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
+                expirationDate: U
               })
             })]
           })]
-        }), H && !W && !P && (0, l.jsx)(A.default, {
-          quest: b
+        }), G && !H && !O && (0, l.jsx)(N.default, {
+          quest: P
         }), (0, l.jsxs)("div", {
-          className: L.ctas,
-          children: [!H && (0, l.jsxs)(l.Fragment, {
+          className: j.ctas,
+          children: [!G && (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(u.Button, {
-              className: L.cta,
+              className: j.cta,
               color: u.Button.Colors.PRIMARY,
               fullWidth: !0,
               size: u.Button.Sizes.SMALL,
-              onClick: B,
-              children: j.default.Messages.QUESTS_LEARN_MORE_V2
+              onClick: k,
+              children: R.default.Messages.QUESTS_LEARN_MORE_V2
             }), (0, l.jsx)(u.Button, {
-              className: L.cta,
+              className: j.cta,
               color: u.Button.Colors.GREEN,
               fullWidth: !0,
-              onClick: k,
+              onClick: F,
               size: u.Button.Sizes.SMALL,
-              submitting: U,
-              children: j.default.Messages.QUESTS_ACCEPT_QUEST
+              submitting: b,
+              children: R.default.Messages.QUESTS_ACCEPT_QUEST
             })]
-          }), H && !W && P && (0, l.jsx)(T.default, {
+          }), G && !H && O && (0, l.jsx)(I.default, {
             color: u.tokens.colors.BG_BRAND,
-            quest: b
-          }), H && !W && !P && (0, l.jsx)(u.Button, {
-            className: L.cta,
+            quest: P
+          }), G && !H && !O && (0, l.jsx)(u.Button, {
+            className: j.cta,
+            color: u.Button.Colors.BRAND,
+            fullWidth: !0,
+            onClick: k,
+            size: u.Button.Sizes.SMALL,
+            children: R.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
+          }), H && (0, l.jsx)(u.Button, {
+            className: j.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: B,
             size: u.Button.Sizes.SMALL,
-            children: j.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
-          }), W && (0, l.jsx)(u.Button, {
-            className: L.cta,
-            color: u.Button.Colors.BRAND,
-            fullWidth: !0,
-            onClick: V,
-            size: u.Button.Sizes.SMALL,
-            children: j.default.Messages.QUESTS_CLAIM_YOUR_REWARD
+            children: R.default.Messages.QUESTS_CLAIM_YOUR_REWARD
           })]
         })]
       })]
