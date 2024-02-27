@@ -46,8 +46,13 @@ let h = e => (0, s.match)(e).with({
   isInteractive: !1
 }, () => "normalVote").with({
   isExpired: !0,
-  isLeader: !0
-}, () => "victor").with({
+  isLeader: !0,
+  didSelfVote: !0
+}, () => "victorSelected").with({
+  isExpired: !0,
+  isLeader: !0,
+  didSelfVote: !1
+}, () => "victorNotSelected").with({
   isExpired: !0,
   didSelfVote: !0
 }, () => "loserSelected").with({

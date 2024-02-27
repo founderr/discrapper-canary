@@ -20,7 +20,8 @@ function i(e, t) {
         notVoted: n,
         selected: n,
         voted: a.votedStyles,
-        victor: a.victorStyles,
+        victorSelected: a.victorStyles,
+        victorNotSelected: a.victorStyles,
         normalVote: n
       }
     };
