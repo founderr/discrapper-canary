@@ -27790,6 +27790,18 @@ html .progress__4ef76 {
     background: linear-gradient(90deg, var(--black-500).04%, rgba(0, 0, 0, 0))
 }
 
+.questControls__9f18c {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-around;
+    align-items: center
+}
+
+.questControlsTitle_f61d46 {
+    margin-right: 10px
+}
+
 .questsCard_a68cbc {
     width: 660px;
     margin-bottom: 16px;

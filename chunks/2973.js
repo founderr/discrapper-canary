@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return I
   }
 }), n("222007");
 var s = n("446674"),
   i = n("913144");
 let r = !1,
   a = new Map,
-  l = 0,
-  u = new Set,
+  u = 0,
+  l = new Set,
   o = new Set,
   d = new Set,
   c = new Set,
@@ -46,8 +46,8 @@ function T(e) {
 }
 
 function C(e) {
-  let t = new Set(u);
-  t.delete(e), u = t
+  let t = new Set(l);
+  t.delete(e), l = t
 }
 
 function p(e) {
@@ -62,10 +62,10 @@ class A extends s.default.Store {
     return r
   }
   get lastFetchedCurrentQuests() {
-    return l
+    return u
   }
   isEnrolling(e) {
-    return u.has(e)
+    return l.has(e)
   }
   isClaimingRewardCode(e) {
     return o.has(e)
@@ -84,12 +84,12 @@ class A extends s.default.Store {
   }
 }
 A.displayName = "QuestsStore";
-var g = new A(i.default, {
+var I = new A(i.default, {
   LOGOUT: function() {
-    r = !1, a = new Map, l = 0, u = new Set, S = new Map
+    r = !1, a = new Map, u = 0, l = new Set, S = new Map
   },
   QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
-    l = Date.now(), r = !0
+    u = Date.now(), r = !0
   },
   QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function(e) {
     let {
@@ -98,7 +98,7 @@ var g = new A(i.default, {
     for (let e of (r = !1, a = new Map, t)) a.set(e.id, e)
   },
   QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function() {
-    l = 0, r = !1
+    u = 0, r = !1
   },
   QUESTS_SEND_HEARTBEAT_SUCCESS: function(e) {
     let {
@@ -124,8 +124,8 @@ var g = new A(i.default, {
   QUESTS_ENROLL_BEGIN: function(e) {
     let {
       questId: t
-    } = e, n = new Set(u);
-    n.add(t), u = n
+    } = e, n = new Set(l);
+    n.add(t), l = n
   },
   QUESTS_ENROLL_SUCCESS: function(e) {
     let {
@@ -210,5 +210,13 @@ var g = new A(i.default, {
       streamKey: t
     } = e;
     T(t)
+  },
+  QUESTS_PREVIEW_UPDATE_SUCCESS: function(e) {
+    let {
+      previewQuestUserStatus: t
+    } = e;
+    _(t.questId, {
+      userStatus: t
+    })
   }
 })
