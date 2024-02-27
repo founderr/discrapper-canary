@@ -27354,18 +27354,24 @@ html .progress__4ef76 {
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between
+    gap: 16px
 }
 
 .textButton__33241 {
     padding-left: 0;
     padding-right: 0;
-    cursor: pointer
+    cursor: pointer;
+    color: var(--interactive-active)
 }
 
 .textButton__33241 :hover {
+    color: var(--interactive-active);
     -webkit-text-decoration: underline;
     text-decoration: underline
+}
+
+.secondaryAction__6fd41 {
+    margin-right: auto
 }
 
 .invalidWrapper_a453d5 {

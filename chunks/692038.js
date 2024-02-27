@@ -79,6 +79,7 @@ function y(e) {
     reactions: D(null != C ? C : e.reactions),
     interaction: L,
     interactionData: null != N ? N : e.interaction_data,
+    interactionMetadata: e.interaction_metadata,
     roleSubscriptionData: e.role_subscription_data,
     purchaseNotification: e.purchase_notification,
     poll: null == e.poll ? void 0 : (0, a.default)(e.poll),
