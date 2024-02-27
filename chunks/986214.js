@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return p
+    return D
   }
 });
 var n = i("404118"),
@@ -23,11 +23,11 @@ var n = i("404118"),
   v = i("407908"),
   S = i("578708"),
   N = i("702173"),
-  h = i("954016"),
-  y = i("49111"),
-  D = i("782340");
+  y = i("954016"),
+  h = i("49111"),
+  p = i("782340");
 
-function p(e) {
+function D(e) {
   let {
     activityItem: t,
     currentActivity: i,
@@ -36,14 +36,14 @@ function p(e) {
     guildId: f,
     embeddedActivitiesManager: T,
     analyticsLocations: C
-  } = e, v = u.default.getGuild(f), S = d.default.getCurrentUser(), h = _.default.getConnectedActivityChannelId(), p = a.default.getChannel(h);
+  } = e, v = u.default.getGuild(f), S = d.default.getCurrentUser(), y = _.default.getConnectedActivityChannelId(), D = a.default.getChannel(y);
   if (null == v && !(0, N.isPrivateChannelWithEnabledActivities)(c) || null == S || null == t) return Promise.resolve(!1);
   let {
     application: g,
     activity: L
   } = t;
   if (null == g) return Promise.resolve(!1);
-  if (null == c) return s.ComponentDispatch.dispatch(y.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
+  if (null == c) return s.ComponentDispatch.dispatch(h.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
     applicationId: g.id
   }), Promise.resolve(!1);
   let m = null != c ? (0, A.getEmbeddedActivityLaunchability)({
@@ -53,8 +53,8 @@ function p(e) {
     PermissionStore: r.default
   }) : A.EmbeddedActivityLaunchability.NO_CHANNEL;
   if (m !== A.EmbeddedActivityLaunchability.CAN_LAUNCH) return m === A.EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, l.showActivitiesInvalidPermissionsAlert)() : m === A.EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && n.default.show({
-    title: D.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
-    body: D.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+    title: p.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
+    body: p.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
     hideActionSheet: !1
   }), Promise.resolve(!1);
   let P = function() {
@@ -86,7 +86,7 @@ function p(e) {
     })
   };
   return null != i ? new Promise(e => {
-    (0, I.default)(i, p, () => {
+    (0, I.default)(i, D, () => {
       T.leaveActivity({
         channelId: c,
         applicationId: i.id
@@ -107,7 +107,7 @@ async function O(e) {
   } = e, s = d.default.getCurrentUser(), _ = a.default.getChannel(t);
   if (null == s || null == _) return !1;
   let E = (0, T.default)(t),
-    I = h.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(_.type);
+    I = y.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(_.type);
   if (E) {
     let e = await (0, C.default)({
       channelId: t,
@@ -116,7 +116,7 @@ async function O(e) {
     if (!e) return !1
   } else if (!(0, o.isActivitiesInTextEnabled)(_, "handleStartEmbeddedActivity") || !I) return !1;
   return f.startEmbeddedActivity(t, l.id, u), (0, S.default)(i, t), (0, v.default)({
-    type: y.AnalyticsGameOpenTypes.LAUNCH,
+    type: h.AnalyticsGameOpenTypes.LAUNCH,
     userId: s.id,
     applicationId: l.id,
     locationObject: n,

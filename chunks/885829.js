@@ -27,18 +27,18 @@ async function C(e) {
     instanceId: v,
     inputApplication: S,
     analyticsLocations: N,
-    embeddedActivitiesManager: h
-  } = e, y = _.default.getEmbeddedActivitiesForChannel(i), D = y.find(e => e.applicationId === C && (null == v || e.instanceId === v)), p = S;
-  if (null == p) {
+    embeddedActivitiesManager: y
+  } = e, h = _.default.getEmbeddedActivitiesForChannel(i), p = h.find(e => e.applicationId === C && (null == v || e.instanceId === v)), D = S;
+  if (null == D) {
     let e = await l.default.fetchApplication(C);
-    p = r.default.createFromServer(e)
+    D = r.default.createFromServer(e)
   }
-  if (null == D || null == p) return;
+  if (null == p || null == D) return;
   let O = c.default.getCurrentUser(),
     g = d.default.getChannel(i),
     L = (0, A.default)({
       userId: null == O ? void 0 : O.id,
-      application: p,
+      application: D,
       channelId: i,
       currentUser: O,
       isActivitiesEnabledForCurrentPlatform: (0, I.getIsActivitiesEnabledForCurrentPlatform)(g),
@@ -96,12 +96,12 @@ async function C(e) {
   }({
     embeddedActivityJoinability: L,
     handleCanJoin: async function e() {
-      null != D && await (0, E.default)({
-        applicationId: D.applicationId,
+      null != p && await (0, E.default)({
+        applicationId: p.applicationId,
         currentEmbeddedApplication: M,
         activityChannelId: i,
         locationObject: {},
-        embeddedActivitiesManager: h,
+        embeddedActivitiesManager: y,
         analyticsLocations: N
       })
     }

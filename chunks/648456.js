@@ -22,10 +22,10 @@ var n, l = i("627445"),
   v = i("697218"),
   S = i("599110"),
   N = i("773336"),
-  h = i("289732"),
-  y = i("550766"),
-  D = i("191225"),
-  p = i("602718"),
+  y = i("289732"),
+  h = i("550766"),
+  p = i("191225"),
+  D = i("602718"),
   O = i("885829"),
   g = i("986214"),
   L = i("126939"),
@@ -53,10 +53,10 @@ async function B(e) {
     analyticsLocations: n
   } = e, l = A.default.getChannel(t), a = null == l ? void 0 : l.getGuildId(), u = v.default.getCurrentUser();
   if (null == l || null == u) return;
-  let r = D.default.getShelfActivities(a),
-    d = h.default.getState().shelfOrder,
-    s = 0 === D.default.getEmbeddedActivitiesForChannel(t).filter(e => e.applicationId === i).length,
-    o = (0, p.default)({
+  let r = p.default.getShelfActivities(a),
+    d = y.default.getState().shelfOrder,
+    s = 0 === p.default.getEmbeddedActivitiesForChannel(t).filter(e => e.applicationId === i).length,
+    o = (0, D.default)({
       applicationId: i,
       activityConfigs: r
     }),
@@ -105,10 +105,10 @@ async function G(e) {
   let {
     channelId: n,
     applicationId: l
-  } = e, a = F[l], u = A.default.getChannel(n), r = D.default.getEmbeddedActivityDurationMs(n, l), d = v.default.getCurrentUser(), s = null == u ? void 0 : u.getGuildId();
+  } = e, a = F[l], u = A.default.getChannel(n), r = p.default.getEmbeddedActivityDurationMs(n, l), d = v.default.getCurrentUser(), s = null == u ? void 0 : u.getGuildId();
   if (null == a || null == u || null == d) return;
-  let o = D.default.getShelfActivities(s),
-    c = (0, p.default)({
+  let o = p.default.getShelfActivities(s),
+    c = (0, D.default)({
       applicationId: l,
       activityConfigs: o
     }),
@@ -150,7 +150,7 @@ function H(e) {
     embeddedActivity: l,
     connections: a,
     updateCode: r
-  } = e, s = I.default.getId(), o = D.default.getEmbeddedActivitiesForChannel(n), c = A.default.getChannel(n);
+  } = e, s = I.default.getId(), o = p.default.getEmbeddedActivitiesForChannel(n), c = A.default.getChannel(n);
   if (r === U.EmbeddedActivityUpdateCodes.ACTIVITY_STARTED && null !== (i = null == c ? void 0 : c.isPrivate()) && void 0 !== i && i && o.length <= 1 && void 0 === a.find(e => e.user_id === s) && d.default.selectParticipant(n, null), !a.some(e => e.user_id === s)) return;
   let f = T.default.getMediaSessionId(),
     {
@@ -174,7 +174,7 @@ function k(e) {
   for (let e in F) F[e].mediaSessionIds.push(t);
   let i = T.default.getChannelId();
   if (null != i) {
-    let e = D.default.getSelfEmbeddedActivityForChannel(i),
+    let e = p.default.getSelfEmbeddedActivityForChannel(i),
       n = null == e ? void 0 : e.applicationId,
       l = null == e ? void 0 : e.instanceId,
       r = (0, m.default)(e);
@@ -204,17 +204,17 @@ n = class extends s.default {
           channelId: t,
           applicationId: i
         }
-        of D.default.getSelfEmbeddedActivities().values())(0, b.default)(t) && t !== e && this.leaveActivity({
+        of p.default.getSelfEmbeddedActivities().values())(0, b.default)(t) && t !== e && this.leaveActivity({
         channelId: t,
         applicationId: i
       });
       if (null != e) {
-        let t = D.default.getEmbeddedActivitiesForChannel(e),
+        let t = p.default.getEmbeddedActivitiesForChannel(e),
           i = I.default.getId();
         t.forEach(e => {
           if (e.userIds.has(i)) {
-            let t = D.default.getSelfEmbeddedActivityForChannel(e.channelId);
-            null == t && (0, y.disconnectEmbeddedActivity)(e.channelId, e.applicationId)
+            let t = p.default.getSelfEmbeddedActivityForChannel(e.channelId);
+            null == t && (0, h.disconnectEmbeddedActivity)(e.channelId, e.applicationId)
           }
         })
       }
@@ -258,7 +258,7 @@ n = class extends s.default {
             applicationId: e,
             channelId: t
           }
-          of D.default.getSelfEmbeddedActivities().values()) e === n && this.leaveActivity({
+          of p.default.getSelfEmbeddedActivities().values()) e === n && this.leaveActivity({
           channelId: t,
           applicationId: n
         });
@@ -273,7 +273,7 @@ n = class extends s.default {
         analyticsLocations: r
       } = e, d = A.default.getChannel(a);
       if (void 0 === d || E.GUILD_VOCAL_CHANNEL_TYPES.has(null == d ? void 0 : d.type) && C.default.getVoiceChannelId() !== a) return;
-      let s = D.default.getSelfEmbeddedActivityForChannel(a);
+      let s = p.default.getSelfEmbeddedActivityForChannel(a);
       if ((null == s ? void 0 : s.applicationId) === u) return;
       let f = await o.default.fetchApplication(u),
         _ = (0, L.getIsActivitiesEnabledForCurrentPlatform)(d);
@@ -291,31 +291,31 @@ n = class extends s.default {
         {
           activityConfigs: v,
           applications: S
-        } = await (0, y.fetchShelf)({
+        } = await (0, h.fetchShelf)({
           guildId: T
         }),
-        N = (0, p.default)({
+        N = (0, D.default)({
           applicationId: u,
           activityConfigs: v,
           applications: S
         });
       if (null == N) {
-        let e = await (0, y.fetchShelf)({
+        let e = await (0, h.fetchShelf)({
           guildId: T,
           force: !0
         });
-        N = (0, p.default)({
+        N = (0, D.default)({
           applicationId: u,
           activityConfigs: e.activityConfigs,
           applications: e.applications
         })
       }
-      let h = D.default.getEmbeddedActivitiesForChannel(a).find(e => e.applicationId === u),
-        m = null !== (n = null == h ? void 0 : h.userIds.size) && void 0 !== n ? n : 0;
+      let y = p.default.getEmbeddedActivitiesForChannel(a).find(e => e.applicationId === u),
+        m = null !== (n = null == y ? void 0 : y.userIds.size) && void 0 !== n ? n : 0;
       m > 0 ? (0, O.maybeJoinEmbeddedActivity)({
         channelId: a,
         applicationId: u,
-        instanceId: null == h ? void 0 : h.instanceId,
+        instanceId: null == y ? void 0 : y.instanceId,
         inputApplication: null,
         analyticsLocations: r,
         embeddedActivitiesManager: this

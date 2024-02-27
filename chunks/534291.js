@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return x
   },
   ListContentScroller: function() {
-    return T
+    return g
   },
   DefaultCustomContentScroller: function() {
-    return g
+    return v
   },
   ContentTypes: function() {
     return i
@@ -36,8 +36,8 @@ let x = {
     DIVIDER: "DIVIDER",
     CUSTOM: "CUSTOM"
   },
-  v = o.createContext(null);
-class T extends o.PureComponent {
+  T = o.createContext(null);
+class g extends o.PureComponent {
   renderContent() {
     let {
       scrollerRef: e,
@@ -60,7 +60,7 @@ class T extends o.PureComponent {
   }
 }
 
-function g(e) {
+function v(e) {
   let {
     children: t
   } = e;
@@ -75,7 +75,7 @@ function g(e) {
     })
   })
 }
-T.defaultProps = {
+g.defaultProps = {
   paddingTop: 60,
   paddingBottom: 60
 }, (s = i || (i = {})).MINIMAL = "minimal", s.CUSTOM = "custom", s.DEFAULT = "default", s.WIDE = "wide";
@@ -125,8 +125,8 @@ var j = function(e) {
     sidebarTheme: S,
     contentType: b,
     scrollerRef: x,
-    mobileSidebarOpen: T,
-    toggleSidebar: g,
+    mobileSidebarOpen: g,
+    toggleSidebar: v,
     hideSidebar: j = !1
   } = e, R = o.useRef(null), I = o.useRef(null), P = (0, m.default)(i), M = (0, c.useTransition)(j, {
     from: {
@@ -138,7 +138,7 @@ var j = function(e) {
     },
     reverse: j,
     config: c.config.stiff
-  }), y = o.useCallback(e => {
+  }), A = o.useCallback(e => {
     R.current = e, null != x && (x.current = e)
   }, [x]);
   o.useLayoutEffect(() => {
@@ -146,9 +146,9 @@ var j = function(e) {
       to: 0
     })
   }, [i, P, R]);
-  let A = (0, l.jsx)(E, {
+  let y = (0, l.jsx)(E, {
     isMobile: d.isMobile,
-    mobileSidebarOpen: T,
+    mobileSidebarOpen: g,
     closeAction: r
   });
 
@@ -167,7 +167,7 @@ var j = function(e) {
       children: [!s && (null == t ? null : (0, l.jsx)("div", {
         className: a(_.sidebarRegion, (0, C.getThemeClass)(S), {
           [_.flexFullWidth]: d.isMobile,
-          [_.hidden]: d.isMobile && !1 === T
+          [_.hidden]: d.isMobile && !1 === g
         }),
         children: (0, l.jsx)(f.AdvancedScrollerThin, {
           className: _.sidebarRegionScroller,
@@ -178,37 +178,37 @@ var j = function(e) {
             }),
             children: [d.isMobile && (0, l.jsx)("div", {
               className: _.mobileSidebarHeader,
-              children: A
+              children: y
             }), t]
           })
         })
       })), function() {
-        let e = null != g && null != r && T,
+        let e = null != v && null != r && g,
           t = d.isMobile && (0, l.jsxs)("div", {
             className: a(_.mobileContentHeader, {
               [_.hideHamburger]: !e
             }),
             children: [e && (0, l.jsx)(u.default, {
-              onClick: g
-            }), A]
+              onClick: v
+            }), y]
           });
         if ("custom" === b) return (0, l.jsxs)(h.default, {
           component: "div",
           className: _.contentRegion,
-          children: [t, n, !d.isMobile && A, U()]
+          children: [t, n, !d.isMobile && y, U()]
         });
         let s = N[null != b ? b : "default"];
         return (0, l.jsxs)(h.default, {
           component: "div",
           className: a(_.contentRegion, {
-            [_.hidden]: d.isMobile && !0 === T
+            [_.hidden]: d.isMobile && !0 === g
           }),
           children: [(0, l.jsxs)("div", {
             className: _.contentTransitionWrap,
             children: [t, (0, l.jsxs)(f.AdvancedScrollerAuto, {
               className: a(_.contentRegionScroller, j ? _.contentRegionHiddenSidebar : _.contentRegionShownSidebar),
-              ref: y,
-              children: [(0, l.jsx)(v.Provider, {
+              ref: A,
+              children: [(0, l.jsx)(T.Provider, {
                 value: R.current,
                 children: (0, l.jsx)(f.TabBar.Panel, {
                   id: i,
@@ -224,7 +224,7 @@ var j = function(e) {
                     children: n
                   })
                 })
-              }), !d.isMobile && A]
+              }), !d.isMobile && y]
             })]
           }), U()]
         })

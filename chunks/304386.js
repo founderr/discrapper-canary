@@ -29,7 +29,7 @@ function S(e) {
     b = (0, r.usePremiumDiscountOffer)(),
     _ = (0, d.useIsEligibleForBogoPromotion)(),
     x = (0, o.useStateFromStores)([f.default], () => f.default.isLocalizedPromoEnabled),
-    v = x && null == C && null == n;
+    T = x && null == C && null == n;
   return t = _ ? (0, s.jsx)(c.default, {}) : null != b ? (0, s.jsx)(h.PremiumDiscountOfferTabBadge, {
     isTabSelected: S,
     userDiscount: b,
@@ -37,21 +37,21 @@ function S(e) {
   }) : null != C ? (0, s.jsx)(h.PremiumTrialOfferTabBadge, {
     isTabSelected: S,
     trialOffer: C
-  }) : null != n ? n : v ? (0, s.jsx)(u.LocalizedPricingBadgeIcon, {
+  }) : null != n ? n : T ? (0, s.jsx)(u.LocalizedPricingBadgeIcon, {
     entryPoint: u.BadgeEntryPoint.SettingsMenu
   }) : (0, s.jsx)(m.default, {
     isSelected: S
   }), (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)("div", {
       className: l(p.premiumLabel, {
-        [p.selected]: (S || v) && !_
+        [p.selected]: (S || T) && !_
       }),
       children: [i, t]
     }), (0, s.jsx)("div", {
       className: l(p.background, {
-        [p.auPromo]: v && !S,
-        [p.auPromoSelected]: v && S,
-        [p.selectedBackground]: !v && !_ && S
+        [p.auPromo]: T && !S,
+        [p.auPromoSelected]: T && S,
+        [p.selectedBackground]: !T && !_ && S
       })
     })]
   })
