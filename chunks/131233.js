@@ -19,9 +19,9 @@ var i, r, a = n("37983"),
   p = n("77078"),
   x = n("812204"),
   b = n("685665"),
-  j = n("153335"),
-  S = n("509167"),
-  N = n("377527"),
+  j = n("509167"),
+  S = n("377527"),
+  N = n("375010"),
   E = n("698041"),
   R = n("153160"),
   I = n("271560"),
@@ -118,7 +118,7 @@ function B(e) {
     listing: r
   } = e, {
     openModal: l
-  } = (0, j.default)({
+  } = (0, N.default)({
     listing: r,
     guildId: i,
     groupListingId: n,
@@ -130,7 +130,7 @@ function B(e) {
       id: e.id,
       title: e.name,
       description: e.description,
-      icon: (0, N.getBenefitIcon)(t, e.icon)
+      icon: (0, S.getBenefitIcon)(t, e.icon)
     }))) && void 0 !== n ? n : []
   }, [t, r.store_listing_benefits]), c = s.useMemo(() => {
     var e;
@@ -200,7 +200,7 @@ function A(e) {
   if (null == u) return null;
   let f = (0, a.jsx)(p.Button, {
     onClick: () => {
-      (0, S.default)({
+      (0, j.default)({
         applicationId: s,
         skuId: r.id,
         analyticsLocations: l

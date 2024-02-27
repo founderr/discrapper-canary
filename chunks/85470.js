@@ -44,12 +44,12 @@ var L = function(e, t, n) {
       U = p.default.getMessage(t, e),
       k = c.default.getChannel(t);
     if (null == U || null == k) return;
-    let w = d.default.getId(),
-      B = U.author.id === w,
-      G = (null === (a = U.interactionMetadata) || void 0 === a ? void 0 : a.user_id) === w;
+    let G = d.default.getId(),
+      B = U.author.id === G,
+      w = (null === (a = U.interactionMetadata) || void 0 === a ? void 0 : a.user_id) === G;
     switch (n.key.toLowerCase()) {
       case "backspace":
-        P && (v(k) || B || G) && (n.preventDefault(), (0, I.deleteMessage)(k, U, n));
+        P && (v(k) || B || w) && (n.preventDefault(), (0, I.deleteMessage)(k, U, n));
         break;
       case "c":
         ((0, _.isMac)() ? F : b) && m.SUPPORTS_COPY && (n.preventDefault(), (0, m.copy)(U.content));
@@ -57,7 +57,7 @@ var L = function(e, t, n) {
       case "e":
         if (P) {
           ;
-          if (R = w, y = k, x = U, !y.isSystemDM() && (0, T.default)(x, R)) n.preventDefault(), (0, I.editMessage)(k, U)
+          if (R = G, y = k, x = U, !y.isSystemDM() && (0, T.default)(x, R)) n.preventDefault(), (0, I.editMessage)(k, U)
         }
         break;
       case "p":

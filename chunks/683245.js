@@ -20,9 +20,9 @@ function f(e) {
     width: n,
     noArt: f = !1,
     selected: h = !1
-  } = e, E = (0, s.useStateFromStores)([u.default], () => u.default.getChannel(t.channelId));
+  } = e, p = (0, s.useStateFromStores)([u.default], () => u.default.getChannel(t.channelId));
   return r.useEffect(() => {
-    (null == E ? void 0 : E.isGuildStageVoice()) && (0, i.closeStream)((0, l.encodeStreamKey)(t), !1)
+    (null == p ? void 0 : p.isGuildStageVoice()) && (0, i.closeStream)((0, l.encodeStreamKey)(t), !1)
   }, []), (0, a.jsx)(o.default, {
     artURL: c,
     noArt: f,

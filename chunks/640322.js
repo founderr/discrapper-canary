@@ -9,16 +9,16 @@ var a = n("37983"),
   l = n("446674"),
   i = n("151426"),
   r = n("95410"),
-  o = n("489560"),
-  u = n("55058"),
-  d = n("384997"),
-  c = n("48821"),
-  f = n("388437"),
-  E = n("667048"),
-  h = n("153014"),
-  _ = n("79176"),
-  C = n("986321"),
-  I = n("519440"),
+  o = n("55058"),
+  u = n("384997"),
+  d = n("48821"),
+  c = n("388437"),
+  f = n("667048"),
+  E = n("153014"),
+  h = n("79176"),
+  _ = n("986321"),
+  C = n("519440"),
+  I = n("600177"),
   S = n("947337"),
   m = n("197881"),
   p = n("401774"),
@@ -38,15 +38,15 @@ function M(e) {
   var t;
   let {
     guild: n
-  } = e, [o, c] = s.useState(null !== (t = r.default.get(O.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), h = e => {
-    r.default.set(O.LAST_HIDDEN_CHANNEL_NOTICE, e), c(e)
+  } = e, [d, E] = s.useState(null !== (t = r.default.get(O.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), _ = e => {
+    r.default.set(O.LAST_HIDDEN_CHANNEL_NOTICE, e), E(e)
   }, C = (0, l.useStateFromStoresArray)(O.CHANNEL_NOTICE_STORES, () => O.CHANNEL_NOTICES.filter(e => {
     let {
       store: t
     } = e;
-    return null == t ? void 0 : t.channelNoticePredicate(n, o)
+    return null == t ? void 0 : t.channelNoticePredicate(n, d)
   }).map(e => e.dismissibleContentType));
-  return (0, a.jsx)(d.default, {
+  return (0, a.jsx)(u.default, {
     contentTypes: C,
     groupName: v.DismissibleContentGroupName.CHANNEL_NOTICES,
     children: e => {
@@ -54,11 +54,11 @@ function M(e) {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        h(Date.now()), s(v.ContentDismissActionType.UNKNOWN)
+        _(Date.now()), s(v.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
-            return (0, a.jsx)(_.default, {
+            return (0, a.jsx)(h.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -68,7 +68,7 @@ function M(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
-            return (0, a.jsx)(E.default, {
+            return (0, a.jsx)(f.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -78,7 +78,7 @@ function M(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.CHANNEL_NOTICE_GUILD_BANNER:
-            return (0, a.jsx)(f.default, {
+            return (0, a.jsx)(c.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -88,7 +88,7 @@ function M(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.LINKED_ROLE_ADMIN_GUILD:
-            return (0, a.jsx)(u.default, {
+            return (0, a.jsx)(o.default, {
               guild: n,
               markAsDismissed: () => s(v.ContentDismissActionType.UNKNOWN)
             });
@@ -113,7 +113,7 @@ var P = e => {
         guild: t
       });
     case R.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
-      return (0, a.jsx)(c.default, {
+      return (0, a.jsx)(d.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.MAX_MEMBER_COUNT:
@@ -121,7 +121,7 @@ var P = e => {
         guild: t
       });
     case R.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
-      return (0, a.jsx)(h.default, {
+      return (0, a.jsx)(E.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.GUILD_MFA_WARNING:
@@ -129,15 +129,15 @@ var P = e => {
         guild: t
       });
     case R.ConnectedChannelNotices.COMMANDS_MIGRATION:
-      return (0, a.jsx)(I.default, {
+      return (0, a.jsx)(C.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
-      return (0, a.jsx)(o.default, {
+      return (0, a.jsx)(I.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.HUB_STUDY_ROOM:
-      return (0, a.jsx)(C.default, {
+      return (0, a.jsx)(_.default, {
         guild: t
       })
   }

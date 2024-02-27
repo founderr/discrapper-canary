@@ -9,13 +9,13 @@ var l = n("37983"),
   a = n("627445"),
   i = n.n(a),
   s = n("77078"),
-  r = n("333955"),
-  o = n("210721"),
-  c = n("53253"),
-  d = n("154889"),
-  f = n("917247"),
-  _ = n("65324"),
-  E = n("510928"),
+  r = n("210721"),
+  o = n("53253"),
+  c = n("154889"),
+  d = n("917247"),
+  f = n("65324"),
+  _ = n("510928"),
+  E = n("713536"),
   p = n("659632"),
   m = n("635357"),
   S = n("642906"),
@@ -42,19 +42,19 @@ function N(e) {
     isGift: v,
     selectedGiftStyle: L,
     giftRecipient: k
-  } = (0, m.useGiftContext)(), x = v && (0, p.shouldShowCustomGiftExperience)(k) && h === P.Step.CONFIRM && null != L && g !== T.SKUProductLines.COLLECTIBLES, U = null != n && null != h, b = h !== P.Step.SKU_SELECT && null != y, D = (0, f.usePremiumTrialOffer)(a), G = !v && null != D && null != y && (0, M.SubscriptionTrials)[D.trial_id].skus.includes(y), Y = (0, d.usePremiumDiscountOffer)(), j = null == Y ? void 0 : null === (t = Y.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => M.SubscriptionPlanInfo[e].skuId === y), H = !v && null != Y && null != y && j, {
+  } = (0, m.useGiftContext)(), x = v && (0, p.shouldShowCustomGiftExperience)(k) && h === P.Step.CONFIRM && null != L && g !== T.SKUProductLines.COLLECTIBLES, U = null != n && null != h, b = h !== P.Step.SKU_SELECT && null != y, D = (0, d.usePremiumTrialOffer)(a), G = !v && null != D && null != y && (0, M.SubscriptionTrials)[D.trial_id].skus.includes(y), Y = (0, c.usePremiumDiscountOffer)(), j = null == Y ? void 0 : null === (t = Y.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => M.SubscriptionPlanInfo[e].skuId === y), H = !v && null != Y && null != y && j, {
     enabled: B
-  } = c.default.useExperiment({
+  } = o.default.useExperiment({
     location: "PaymentModalHeader"
   }, {
     autoTrackExposure: !1
-  }), w = (0, c.useIsSeasonalGiftingActive)(), K = B && w, F = u.useMemo(() => {
+  }), w = (0, o.useIsSeasonalGiftingActive)(), K = B && w, F = u.useMemo(() => {
     if (null == h) return;
     let e = null;
     if (x) e = (0, l.jsxs)("div", {
       className: I.container,
-      children: [(0, l.jsx)(_.default, {
-        defaultAnimationState: o.AnimationState.LOOP,
+      children: [(0, l.jsx)(f.default, {
+        defaultAnimationState: r.AnimationState.LOOP,
         giftStyle: L,
         className: I.seasonalGiftBoxHeaderIcon
       }), (0, l.jsx)(s.ModalCloseButton, {
@@ -63,11 +63,11 @@ function N(e) {
       })]
     });
     else if (U) e = n(null != C ? C : null, N, h);
-    else if (O === A.PurchaseTypes.ONE_TIME) e = (0, l.jsx)(r.PurchaseHeader, {
+    else if (O === A.PurchaseTypes.ONE_TIME) e = (0, l.jsx)(E.PurchaseHeader, {
       step: h,
       onClose: N
     });
-    else if (b) i(y in M.PremiumSubscriptionSKUToPremiumType, "invalid sku id: ".concat(y)), e = (0, l.jsx)(E.default, {
+    else if (b) i(y in M.PremiumSubscriptionSKUToPremiumType, "invalid sku id: ".concat(y)), e = (0, l.jsx)(_.default, {
       currentStep: null != h ? h : void 0,
       purchaseState: R,
       premiumType: M.PremiumSubscriptionSKUToPremiumType[y],

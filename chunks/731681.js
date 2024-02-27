@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
 var a, s, l = n("884691"),
   i = n("446674"),
   r = n("583367"),
-  o = n("650509"),
-  u = n("933326"),
-  d = n("73675"),
-  c = n("568500"),
-  f = n("534222"),
-  E = n("341563"),
-  h = n("702411"),
+  o = n("933326"),
+  u = n("73675"),
+  d = n("568500"),
+  c = n("534222"),
+  f = n("341563"),
+  E = n("702411"),
+  h = n("991254"),
   _ = n("226511"),
   C = n("735201"),
   I = n("957255"),
@@ -51,26 +51,26 @@ function N(e) {
     P = (0, g.getGuildTierFromAppliedBoostCount)(M, n) !== A.BoostedGuildTiers.NONE,
     D = null != a && Date.now() - a <= 432e5,
     y = !D && !L && v && P,
-    x = (0, c.useGuildHasLiveChannelNotice)(n),
+    x = (0, d.useGuildHasLiveChannelNotice)(n),
     b = (0, i.useStateFromStores)([m.default], () => m.default.isVisible(e)),
-    U = h.default.useShouldShowChannelNotice(n),
-    G = (0, o.useUnseenEndedApplicationSubscriptionEntitlements)(e),
+    U = E.default.useShouldShowChannelNotice(n),
+    G = (0, h.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {
       enableStudyGroup: j
-    } = (0, E.useHubStudyGroupExperiment)(e),
+    } = (0, f.useHubStudyGroupExperiment)(e),
     w = G.length > 0,
     k = j && !(null == e ? void 0 : e.hasFeature(A.GuildFeatures.HUB)),
     {
       canSeeUpcomingEventsNotices: F
-    } = d.default.useExperiment({
+    } = u.default.useExperiment({
       guildId: n,
       location: "useVisibleConnectedNotice"
     }, {
       autoTrackExposure: !1
     }),
-    B = (0, f.useGuildUpcomingEventsNotice)(n);
+    B = (0, c.useGuildUpcomingEventsNotice)(n);
   if (l.useEffect(() => {
-      u.default.getGuildEventsForCurrentUser(n)
+      o.default.getGuildEventsForCurrentUser(n)
     }, [n]), l.useEffect(() => {
       let e = -1;
       return y && (e = window.setTimeout(() => {

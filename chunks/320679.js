@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return p
   }
 });
 var a = n("37983"),
@@ -29,7 +29,7 @@ function h(e) {
   })
 }
 
-function E(e) {
+function p(e) {
   let {
     children: t
   } = e, n = (0, i.useStateFromStoresObject)([d.default], () => ({

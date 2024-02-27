@@ -41,7 +41,7 @@ function p(e, t) {
   let g = T.find(e => !(0, u.isDismissibleContentDismissed)(e)) === t;
   if (!g) return !1;
   let {
-    showLifecycleUpsells: h
+    showLifecycleUpsells: N
   } = E.default.getCurrentConfig({
     guildId: e,
     location: "7f5b67_1"
@@ -49,7 +49,7 @@ function p(e, t) {
     disable: r || !(0, S.isGuildOnboardingSettingsAvailable)(e),
     autoTrackExposure: !0
   });
-  return h
+  return N
 }
 
 function A(e, t) {

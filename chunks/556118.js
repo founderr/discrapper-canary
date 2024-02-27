@@ -47,9 +47,9 @@ var a = n("37983"),
   H = n("789790"),
   U = n("227984"),
   k = n("82080"),
-  w = n("535993"),
+  G = n("535993"),
   B = n("144553"),
-  G = n("862451"),
+  w = n("862451"),
   V = n("894488"),
   W = n("49111"),
   Z = n("782340"),
@@ -98,7 +98,7 @@ function K(e) {
       replyReference: l,
       author: E
     }),
-    childrenSystemMessage: (0, G.default)(e),
+    childrenSystemMessage: (0, w.default)(e),
     childrenMessageContent: null,
     "aria-labelledby": g,
     "aria-describedby": _,
@@ -123,7 +123,7 @@ function q(e) {
     groupId: j
   } = e, F = E.type === W.MessageTypes.REPLY ? E.messageReference : void 0, {
     onFocus: H,
-    ...w
+    ...G
   } = (0, u.useListItem)(null !== (n = e.id) && void 0 !== n ? n : ""), {
     isFocused: Y,
     handleFocus: K,
@@ -159,7 +159,7 @@ function q(e) {
       "aria-label": Z.default.Messages.JUMP,
       children: Z.default.Messages.JUMP
     }), (0, a.jsx)(A.default, {
-      ...w,
+      ...G,
       id: C,
       compact: N,
       className: i(R, {
@@ -193,7 +193,7 @@ function q(e) {
         renderComponentAccessory: !1,
         renderSuppressEmbeds: !1
       }),
-      childrenSystemMessage: (0, G.default)(e),
+      childrenSystemMessage: (0, w.default)(e),
       childrenMessageContent: eE,
       onMouseMove: es,
       onMouseLeave: el,
@@ -290,7 +290,7 @@ var X = s.memo(function(e) {
     }),
     ek = null != eH;
   r = N.type === W.MessageTypes.CUSTOM_GIFT ? "" : !eS && ek ? (0, F.default)(e, eR) : (0, k.default)(e, eR, eS);
-  let ew = N.id === $,
+  let eG = N.id === $,
     eB = (0, a.jsx)(c.FocusRing, {
       offset: {
         left: 4,
@@ -319,7 +319,7 @@ var X = s.memo(function(e) {
             [z.mentioned]: N.mentioned && !(0, v.default)(N),
             [z.ephemeral]: (0, M.hasFlag)(N.flags, W.MessageFlags.EPHEMERAL),
             [z.systemMessage]: (0, v.default)(N),
-            [z.groupStart]: !ee && (ew || N.type === W.MessageTypes.REPLY),
+            [z.groupStart]: !ee && (eG || N.type === W.MessageTypes.REPLY),
             [z.selected]: eA,
             [z.replying]: (null == eD ? void 0 : eD.message.id) === N.id,
             [z.interactionSending]: N.isCommandType() && N.state === W.MessageStates.SENDING,
@@ -327,7 +327,7 @@ var X = s.memo(function(e) {
           }),
           zalgo: !eS,
           childrenRepliedMessage: ee ? void 0 : (0, B.default)(e, eu, er, et, ei),
-          childrenExecutedCommand: (0, w.default)(e, eu, er),
+          childrenExecutedCommand: (0, G.default)(e, eu, er),
           childrenHeader: ee ? void 0 : (0, U.default)({
             messageProps: e,
             setPopout: eu,
@@ -350,7 +350,7 @@ var X = s.memo(function(e) {
             messagePopouts: er,
             isFocused: ep || eE
           }) : void 0,
-          childrenSystemMessage: (0, G.default)(e),
+          childrenSystemMessage: (0, w.default)(e),
           childrenMessageContent: r,
           onMouseMove: ef,
           onMouseLeave: eh,

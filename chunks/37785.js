@@ -7,20 +7,20 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   u = n("884691"),
   o = n("77078"),
-  r = n("393414"),
-  i = n("49111"),
+  i = n("393414"),
+  r = n("49111"),
   a = u.forwardRef(function(e, t) {
     let {
       href: n,
       children: a,
       onClick: c,
-      onKeyPress: p,
-      focusProps: d,
+      onKeyPress: d,
+      focusProps: p,
       ...l
     } = e, f = u.useCallback(e => {
-      !e.repeat && ((e.charCode === i.KeyboardKeys.SPACE || e.charCode === i.KeyboardKeys.ENTER) && (e.preventDefault(), null != n && (0, r.transitionTo)(n), null == c || c()), null == p || p(e))
-    }, [n, p, c]), m = u.useCallback(e => {
-      !e.metaKey && !e.shiftKey && 0 === e.button && (e.preventDefault(), e.stopPropagation(), null != n && (0, r.transitionTo)(n), null == c || c())
+      !e.repeat && ((e.charCode === r.KeyboardKeys.SPACE || e.charCode === r.KeyboardKeys.ENTER) && (e.preventDefault(), null != n && (0, i.transitionTo)(n), null == c || c()), null == d || d(e))
+    }, [n, d, c]), m = u.useCallback(e => {
+      !e.metaKey && !e.shiftKey && 0 === e.button && (e.preventDefault(), e.stopPropagation(), null != n && (0, i.transitionTo)(n), null == c || c())
     }, [n, c]), _ = (0, s.jsx)("a", {
       ref: t,
       href: n,
@@ -30,7 +30,7 @@ var s = n("37983"),
       children: a
     });
     return (0, s.jsx)(o.FocusRing, {
-      ...d,
+      ...p,
       children: _
     })
   })

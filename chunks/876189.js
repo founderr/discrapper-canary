@@ -24,19 +24,19 @@ var a = n("37983"),
   N = n("846325"),
   p = n("49111"),
   A = n("782340"),
-  D = n("216445");
+  O = n("216445");
 
-function O(e) {
+function D(e) {
   let {
     availableSlots: t,
     className: n
   } = e;
   return (0, a.jsxs)(u.Text, {
-    className: s(D.suffixNode, n),
+    className: s(O.suffixNode, n),
     variant: "text-sm/medium",
     color: "text-primary",
     children: [(0, a.jsx)(g.default, {
-      className: D.speakerIcon
+      className: O.speakerIcon
     }), A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_AVAILABLE_COUNT.format({
       slots: t
     })]
@@ -81,8 +81,8 @@ function C(e) {
       }
     }), [g, C]),
     I = l.useCallback(e => null == e || "" === e.value ? null : (0, a.jsx)(m.default, {
-      className: s(D.guildSelectOptionIcon, {
-        [D.disabledOption]: e.disabled
+      className: s(O.guildSelectOptionIcon, {
+        [O.disabledOption]: e.disabled
       }),
       guild: g[e.value],
       size: m.default.Sizes.SMOL,
@@ -90,16 +90,16 @@ function C(e) {
     }), [g]),
     x = l.useCallback(e => {
       let t = null == e ? void 0 : e.value;
-      return null == t || "" === t ? null : (0, a.jsx)(O, {
+      return null == t || "" === t ? null : (0, a.jsx)(D, {
         className: s({
-          [D.disabledOption]: null == e ? void 0 : e.disabled
+          [O.disabledOption]: null == e ? void 0 : e.disabled
         }),
         availableSlots: C[t]
       })
     }, [C]),
     M = l.useCallback(e => (0, a.jsx)("div", {
       className: s({
-        [D.disabledOption]: e.disabled
+        [O.disabledOption]: e.disabled
       }),
       children: e.label
     }), []),

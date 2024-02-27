@@ -29,7 +29,7 @@ function d(e) {
     className: c,
     artURL: f,
     noArt: h = !1,
-    selected: E = !1
+    selected: p = !1
   } = e;
   return (0, a.jsxs)(l.default, {
     className: c,
@@ -54,7 +54,7 @@ function d(e) {
       className: u.description,
       variant: "text-sm/medium",
       children: o
-    }) : null, E || null == n ? null : (0, a.jsx)(i.Button, {
+    }) : null, p || null == n ? null : (0, a.jsx)(i.Button, {
       className: u.outerButton,
       size: i.Button.Sizes.NONE,
       color: i.Button.Colors.WHITE,

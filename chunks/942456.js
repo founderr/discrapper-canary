@@ -18,16 +18,16 @@ var a, n, i = s("37983"),
   m = s("77078"),
   _ = s("54239"),
   N = s("545158"),
-  S = s("104449"),
-  P = s("299285"),
-  R = s("609190"),
-  T = s("442379"),
-  C = s("565559"),
-  A = s("928576"),
-  h = s("407417"),
-  L = s("246421"),
-  M = s("264742"),
-  g = s("537325"),
+  S = s("299285"),
+  P = s("609190"),
+  R = s("442379"),
+  T = s("565559"),
+  C = s("928576"),
+  A = s("407417"),
+  h = s("246421"),
+  L = s("264742"),
+  M = s("537325"),
+  g = s("739295"),
   y = s("24373"),
   x = s("41170"),
   D = s("865146"),
@@ -137,10 +137,10 @@ function ef(e) {
   let {
     guildId: t,
     guildProductListingId: s
-  } = e, a = (0, T.useFetchGuildProductListing)(t, s, {
+  } = e, a = (0, R.useFetchGuildProductListing)(t, s, {
     requireCurrentGuild: !1
-  }), n = (0, A.useProductType)(a), l = (0, I.useStateFromStores)([U.default], () => U.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? ea.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = r.useCallback(async () => {
-    (null == l ? void 0 : l.hasFeature(ee.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, g.default)(ee.Routes.GUILD_PRODUCT(t, s)) : await (0, g.default)(ee.Routes.CHANNEL(t)), (0, _.popLayer)()
+  }), n = (0, C.useProductType)(a), l = (0, I.useStateFromStores)([U.default], () => U.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? ea.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = r.useCallback(async () => {
+    (null == l ? void 0 : l.hasFeature(ee.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, M.default)(ee.Routes.GUILD_PRODUCT(t, s)) : await (0, M.default)(ee.Routes.CHANNEL(t)), (0, _.popLayer)()
   }, [l, t, s]);
   return (0, i.jsxs)(i.Fragment, {
     children: [null != u && (0, i.jsx)(ec, {
@@ -161,9 +161,9 @@ function eE(e) {
   let {
     guildId: a,
     guildProductListingId: n
-  } = e, r = (0, T.useFetchGuildProductListing)(a, n, {
+  } = e, r = (0, R.useFetchGuildProductListing)(a, n, {
     requireCurrentGuild: !1
-  }), l = (0, I.useStateFromStores)([C.default], () => C.default.getGuildProductFetchState(n) === C.FetchState.FETCHING), u = null == r ? void 0 : r.role_id, o = (0, I.useStateFromStores)([U.default], () => {
+  }), l = (0, I.useStateFromStores)([T.default], () => T.default.getGuildProductFetchState(n) === T.FetchState.FETCHING), u = null == r ? void 0 : r.role_id, o = (0, I.useStateFromStores)([U.default], () => {
     var e;
     return null != u ? null === (e = U.default.getGuild(a)) || void 0 === e ? void 0 : e.roles[u] : void 0
   }, [a, u]), d = (null !== (s = null == r ? void 0 : null === (t = r.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0, c = null != o;
@@ -178,7 +178,7 @@ function eE(e) {
         color: "header-secondary",
         className: en.guildProductBenefitLabel,
         children: ea.default.Messages.GUILD_PRODUCT_BILLING_ACCESS_DOWNLOADABLES
-      }), (0, i.jsx)(h.default, {
+      }), (0, i.jsx)(A.default, {
         guildId: a,
         productId: r.id
       })]
@@ -190,7 +190,7 @@ function eE(e) {
         color: "header-secondary",
         className: en.guildProductBenefitLabel,
         children: ea.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_ROLE_UNLOCKED
-      }), (0, i.jsx)(L.default, {
+      }), (0, i.jsx)(h.default, {
         role: o
       })]
     })]
@@ -360,7 +360,7 @@ class ep extends r.PureComponent {
     let {
       payment: e
     } = this.props;
-    return (0, i.jsx)(R.default, {
+    return (0, i.jsx)(P.default, {
       payment: e
     })
   }
@@ -592,9 +592,9 @@ class ep extends r.PureComponent {
     return n ? (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("div", {
         className: en.sectionDivider
-      }), e.isSoftDeletedProduct ? (0, i.jsx)(M.default, {
+      }), e.isSoftDeletedProduct ? (0, i.jsx)(L.default, {
         className: en.warningBlock,
-        buttonPosition: M.WarningBlockButtonPosition.RIGHT,
+        buttonPosition: L.WarningBlockButtonPosition.RIGHT,
         notice: ea.default.Messages.GUILD_PRODUCT_BILLING_PRODUCT_UNAVAILABLE,
         ctaLabel: ea.default.Messages.GUILD_PRODUCT_BILLING_CONTACT_SUPPORT,
         onClick: () => (0, N.default)(ei(s))
@@ -745,16 +745,16 @@ function eI(e) {
     applicationStatistics: E,
     gameApplication: p,
     paymentSources: m
-  } = (0, I.useStateFromStoresObject)([v.default, b.default, P.default], () => {
+  } = (0, I.useStateFromStoresObject)([v.default, b.default, S.default], () => {
     var e, t;
     return {
       applicationStatistics: null != d ? b.default.getCurrentUserStatisticsForApplication(d) : null,
-      gameApplication: null !== (t = P.default.getApplication(null != d ? d : "")) && void 0 !== t ? t : null === (e = a.sku) || void 0 === e ? void 0 : e.application,
+      gameApplication: null !== (t = S.default.getApplication(null != d ? d : "")) && void 0 !== t ? t : null === (e = a.sku) || void 0 === e ? void 0 : e.application,
       paymentSources: v.default.paymentSources
     }
-  }), _ = (0, I.useStateFromStores)([P.default], () => null != c ? P.default.getApplication(c) : null);
+  }), _ = (0, I.useStateFromStores)([S.default], () => null != c ? S.default.getApplication(c) : null);
   r.useEffect(() => {
-    f && null != c && (0, S.fetchApplication)(c)
+    f && null != c && (0, g.fetchApplication)(c)
   }, [c, f]);
   let N = (0, I.useStateFromStores)([U.default], () => U.default.getGuild(null == p ? void 0 : p.guildId));
   return (0, i.jsx)(ep, {

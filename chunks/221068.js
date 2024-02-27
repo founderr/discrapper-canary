@@ -41,9 +41,9 @@ var a = n("37983"),
   H = n("366757"),
   U = n("699473"),
   k = n("556118"),
-  w = n("342009"),
+  G = n("342009"),
   B = n("97810"),
-  G = n("933629"),
+  w = n("933629"),
   V = n("88243"),
   W = n("753089"),
   Z = n("210062"),
@@ -152,7 +152,7 @@ function $(e) {
       }, "forum-post-action-bar-".concat(y.id));
       if (e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED || e.type === K.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER) {
         let t;
-        return t = e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? X.default.Messages.BLOCKED_MESSAGE_COUNT : X.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, a.jsx)(w.default, {
+        return t = e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? X.default.Messages.BLOCKED_MESSAGE_COUNT : X.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, a.jsx)(G.default, {
           unreadId: Y.NEW_MESSAGE_BAR_ID,
           messages: e,
           channel: y,
@@ -265,7 +265,7 @@ function $(e) {
             },
             children: n
           });
-          s = (0, a.jsx)(G.NewTopicsBar, {
+          s = (0, a.jsx)(w.NewTopicsBar, {
             scrollManager: es,
             content: e,
             channel: y
@@ -294,13 +294,13 @@ function $(e) {
               children: n
             })
           });
-          s = (0, a.jsx)(G.NewMessagesBar, {
+          s = (0, a.jsx)(w.NewMessagesBar, {
             content: e,
             channelId: y.id
           })
         }
       }
-    } else eE.includes(z.ChatOverlays.NEW_MESSAGES) && (s = (0, a.jsx)(G.NewMessagesBar, {
+    } else eE.includes(z.ChatOverlays.NEW_MESSAGES) && (s = (0, a.jsx)(w.NewMessagesBar, {
       content: e.format({
         count: $,
         timestamp: l
@@ -308,10 +308,10 @@ function $(e) {
       channelId: y.id
     }))
   }
-  if (null == s && (0, o.canSeeChannelSummaries)(y) && eh && eE.includes(z.ChatOverlays.SUMMARIES) && (s = (0, a.jsx)(G.TopicsPill, {
+  if (null == s && (0, o.canSeeChannelSummaries)(y) && eh && eE.includes(z.ChatOverlays.SUMMARIES) && (s = (0, a.jsx)(w.TopicsPill, {
       channel: y,
       scrollManager: es
-    })), U.error) r = (0, a.jsx)(G.ErrorLoadingBar, {
+    })), U.error) r = (0, a.jsx)(w.ErrorLoadingBar, {
     loading: U.loadingMore,
     onClick: () => {
       var e;
@@ -326,8 +326,8 @@ function $(e) {
     let {
       jumpReturnTargetId: e
     } = U;
-    r = U.loadingMore && U.jumpedToPresent ? (0, a.jsx)(G.JumpToPresentBar, {}) : null != e ? (0, a.jsx)(G.JumpToPresentBar, {
-      type: G.JumpBarType.REPLY,
+    r = U.loadingMore && U.jumpedToPresent ? (0, a.jsx)(w.JumpToPresentBar, {}) : null != e ? (0, a.jsx)(w.JumpToPresentBar, {
+      type: w.JumpBarType.REPLY,
       onClick: () => {
         var t, n;
         return t = y, n = e, void i.default.jumpToMessage({
@@ -336,7 +336,7 @@ function $(e) {
           flash: !0
         })
       }
-    }) : (0, a.jsx)(G.JumpToPresentBar, {
+    }) : (0, a.jsx)(w.JumpToPresentBar, {
       onClick: () => (function(e) {
         i.default.jumpToPresent(e.id, K.MAX_MESSAGES_PER_CHANNEL);
         let t = L.default.getChannelId();

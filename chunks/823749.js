@@ -22,8 +22,8 @@ var a, l, i = n("37983"),
   N = n("876189"),
   p = n("846325"),
   A = n("49111"),
-  D = n("782340"),
-  O = n("509252");
+  O = n("782340"),
+  D = n("509252");
 (l = a || (a = {})).READY = "ready", l.ENCODING_FAILED = "encoding-failed", l.ENCODING = "encoding", l.UPLOADING = "uploading";
 let C = [{
   name: "audio",
@@ -78,11 +78,11 @@ function b(e) {
   let ee = function(e) {
       switch (e) {
         case "encoding":
-          return D.default.Messages.SOUNDBOARD_MODAL_AUDIO_STATE_ENCODING;
+          return O.default.Messages.SOUNDBOARD_MODAL_AUDIO_STATE_ENCODING;
         case "encoding-failed":
-          return D.default.Messages.SOUNDBOARD_MODAL_AUDIO_STATE_ENCODING_FAILED;
+          return O.default.Messages.SOUNDBOARD_MODAL_AUDIO_STATE_ENCODING_FAILED;
         case "uploading":
-          return D.default.Messages.SOUNDBOARD_MODAL_AUDIO_STATE_UPLOADING
+          return O.default.Messages.SOUNDBOARD_MODAL_AUDIO_STATE_UPLOADING
       }
       return null
     }(X),
@@ -164,24 +164,24 @@ function b(e) {
     transitionState: x,
     children: [(0, i.jsx)(c.ModalCloseButton, {
       onClick: I,
-      className: O.modalClose
+      className: D.modalClose
     }), (0, i.jsx)(c.ModalHeader, {
-      className: O.headerContainer,
+      className: D.headerContainer,
       separator: !1,
       children: (0, i.jsx)(c.Heading, {
-        className: O.header,
+        className: D.header,
         variant: "heading-xl/extrabold",
-        children: en ? D.default.Messages.SOUNDBOARD_SOUND_UPDATE_MODAL_HEADER : D.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_HEADER
+        children: en ? O.default.Messages.SOUNDBOARD_SOUND_UPDATE_MODAL_HEADER : O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_HEADER
       })
     }), (0, i.jsxs)(c.ModalContent, {
-      className: O.content,
+      className: D.content,
       children: [null != W && !W.hasFieldErrors() && (0, i.jsx)(c.FormErrorBlock, {
-        className: O.section,
+        className: D.section,
         children: W.message
       }), M ? (0, i.jsx)(c.FormItem, {
         required: !0,
-        className: O.section,
-        title: D.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT,
+        className: D.section,
+        title: O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT,
         children: (0, i.jsx)(N.default, {
           value: Z,
           onChange: J
@@ -194,24 +194,24 @@ function b(e) {
       }), en || null != o ? null : (0, i.jsx)(c.FormItem, {
         required: !0,
         error: null == W ? void 0 : W.getFirstFieldErrorMessage("sound"),
-        className: O.section,
-        title: D.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_FILE,
+        className: D.section,
+        title: O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_FILE,
         children: (0, i.jsx)(m.default, {
           filename: null !== (l = null == F ? void 0 : F.name) && void 0 !== l ? l : "",
-          buttonText: D.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_BROWSE,
-          placeholder: D.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_INPUT_PLACEHOLDER,
+          buttonText: O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_BROWSE,
+          placeholder: O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_INPUT_PLACEHOLDER,
           onFileSelect: Q,
           filters: C
         })
       }), (0, i.jsxs)("div", {
-        className: O.multiInput,
+        className: D.multiInput,
         children: [(0, i.jsx)(c.FormItem, {
           required: !0,
           error: null == W ? void 0 : W.getFirstFieldErrorMessage("name"),
-          className: u(O.section, O.halfInput),
-          title: D.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_NAME,
+          className: u(D.section, D.halfInput),
+          title: O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_NAME,
           children: (0, i.jsx)(c.TextInput, {
-            placeholder: D.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_NAME,
+            placeholder: O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_NAME,
             value: T,
             onChange: y,
             maxLength: p.MAX_LENGTH_SOUND_NAME
@@ -219,8 +219,8 @@ function b(e) {
         }), er]
       }), (0, i.jsx)(c.FormItem, {
         error: null == W ? void 0 : W.getFirstFieldErrorMessage("volume"),
-        className: O.section,
-        title: D.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_VOLUME,
+        className: D.section,
+        title: O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_VOLUME,
         children: (0, i.jsx)(c.Slider, {
           initialValue: L,
           onValueChange: e => U(e),
@@ -234,16 +234,16 @@ function b(e) {
         submitting: G,
         size: c.Button.Sizes.SMALL,
         onClick: es,
-        children: en ? D.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SAVE : D.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_UPLOAD
+        children: en ? O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SAVE : O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_UPLOAD
       }), (0, i.jsx)(c.Button, {
         disabled: G,
         onClick: I,
         size: c.Button.Sizes.SMALL,
         look: c.Button.Looks.LINK,
         color: c.Button.Colors.PRIMARY,
-        children: D.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_CANCEL
+        children: O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_CANCEL
       }), null != ee && (0, i.jsx)("div", {
-        className: O.soundStateHint,
+        className: D.soundStateHint,
         children: (0, i.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "text-muted",

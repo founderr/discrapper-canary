@@ -21,44 +21,44 @@ var a = n("446674"),
   c = n("567469"),
   f = n("998716"),
   h = n("834052"),
-  E = n("274438");
-let C = e => e / 400,
-  p = !1,
-  m = (0, o.createSound)("stage_waiting", "stage_waiting", C(i.default.getOutputVolume()));
+  p = n("274438");
+let E = e => e / 400,
+  C = !1,
+  m = (0, o.createSound)("stage_waiting", "stage_waiting", E(i.default.getOutputVolume()));
 
 function S() {
   let e = l.default.getVoiceChannelId();
   if (null == e) {
-    m.stop(), p = !1;
+    m.stop(), C = !1;
     return
   }
   let t = s.default.getChannel(e);
   if (!(null == t ? void 0 : t.isGuildStageVoice())) {
-    m.stop(), p = !1;
+    m.stop(), C = !1;
     return
   }
   let n = i.default.isSelfDeaf();
   if (n) {
-    m.stop(), p = !1;
+    m.stop(), C = !1;
     return
   }
-  let a = E.default.shouldPlay();
+  let a = p.default.shouldPlay();
   if (a) {
-    m.volume = C(i.default.getOutputVolume()), m.loop(), p = !0;
+    m.volume = E(i.default.getOutputVolume()), m.loop(), C = !0;
     return
   }
   let r = h.default.isLive(e);
   if (r) {
-    m.stop(), p = !1;
+    m.stop(), C = !1;
     return
   }
-  let o = E.default.isMuted();
+  let o = p.default.isMuted();
   if (o) {
-    m.pause(), p = !1;
+    m.pause(), C = !1;
     return
   }
   let d = null != Object.values(u.default.getVoiceStatesForChannel(e)).find(e => !e.suppress && !e.isVoiceMuted());
-  d || p ? d && (m.pause(), p = !1) : (m.volume = C(i.default.getOutputVolume()), m.loop(), p = !0)
+  d || C ? d && (m.pause(), C = !1) : (m.volume = E(i.default.getOutputVolume()), m.loop(), C = !0)
 }
 
 function g(e) {
@@ -83,23 +83,23 @@ class T extends r.default {
     } = e;
     if (null != t) {
       let e = s.default.getChannel(t);
-      (null == e ? void 0 : e.isGuildStageVoice()) ? S(): (m.stop(), p = !1)
-    } else m.stop(), p = !1
+      (null == e ? void 0 : e.isGuildStageVoice()) ? S(): (m.stop(), C = !1)
+    } else m.stop(), C = !1
   }
   handleLogout() {
-    m.stop(), p = !1
+    m.stop(), C = !1
   }
   handlePlay(e) {
     let {
       play: t
     } = e;
-    t ? S() : (m.pause(), p = !1)
+    t ? S() : (m.pause(), C = !1)
   }
   handleMute(e) {
     let {
       muted: t
     } = e;
-    t ? (m.pause(), p = !1) : S()
+    t ? (m.pause(), C = !1) : S()
   }
   handleVoiceStateUpdates() {
     S()
@@ -108,7 +108,7 @@ class T extends r.default {
     let {
       volume: t
     } = e;
-    m.volume = C(t)
+    m.volume = E(t)
   }
   handleToggleSelfDeaf() {
     S()

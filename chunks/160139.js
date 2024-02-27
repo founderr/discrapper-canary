@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return L
   }
 });
 var a = n("37983");
@@ -16,9 +16,9 @@ var r = n("414456"),
   c = n("191145"),
   f = n("270227"),
   h = n("940277"),
-  E = n("386811"),
-  C = n("964264"),
-  p = n("655804"),
+  p = n("386811"),
+  E = n("964264"),
+  C = n("655804"),
   m = n("58463"),
   S = n("238500"),
   g = n("773336"),
@@ -28,10 +28,10 @@ var r = n("414456"),
   I = n("804392");
 let A = e => T.default.close(e),
   M = e => T.default.minimize(e),
-  N = (e, t) => {
+  x = (e, t) => {
     (0, g.isMac)() && !t.altKey ? T.default.fullscreen(e) : T.default.maximize(e)
   },
-  O = e => {
+  R = e => {
     let {
       windowKey: t,
       themeOverride: n,
@@ -52,10 +52,10 @@ let A = e => T.default.close(e),
         children: (0, a.jsx)(h.default, {})
       }), (0, a.jsx)(l.Clickable, {
         className: I.winButtonMinMax,
-        onClick: e => N(t, e),
+        onClick: e => x(t, e),
         "aria-label": v.default.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
         tabIndex: -1,
-        children: (0, a.jsx)(C.default, {})
+        children: (0, a.jsx)(E.default, {})
       }), (0, a.jsx)(l.Clickable, {
         className: I.winButtonMinMax,
         onClick: () => M(t),
@@ -65,7 +65,7 @@ let A = e => T.default.close(e),
       })]
     })
   },
-  x = e => {
+  N = e => {
     let {
       focused: t,
       windowKey: n,
@@ -88,7 +88,7 @@ let A = e => T.default.close(e),
           onClick: () => A(n),
           "aria-label": v.default.Messages.TITLE_BAR_CLOSE_WINDOW,
           tabIndex: -1,
-          children: (0, a.jsx)(E.default, {
+          children: (0, a.jsx)(p.default, {
             color: "#4c0000"
           })
         }), (0, a.jsx)(l.Clickable, {
@@ -101,10 +101,10 @@ let A = e => T.default.close(e),
           })
         }), (0, a.jsx)(l.Clickable, {
           className: I.macButtonMaximize,
-          onClick: e => N(n, e),
+          onClick: e => x(n, e),
           "aria-label": v.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
           tabIndex: -1,
-          children: (0, a.jsx)(p.default, {
+          children: (0, a.jsx)(C.default, {
             color: "#006500"
           })
         })]
@@ -117,7 +117,7 @@ let A = e => T.default.close(e),
     })
   };
 
-function R(e) {
+function L(e) {
   let {
     focused: t,
     type: n,
@@ -128,13 +128,13 @@ function R(e) {
   if (f) return null;
   switch (n) {
     case g.PlatformTypes.WINDOWS:
-      return (0, a.jsx)(O, {
+      return (0, a.jsx)(R, {
         windowKey: r,
         themeOverride: l,
         hasOpenLayer: h
       });
     case g.PlatformTypes.OSX:
-      return (0, a.jsx)(x, {
+      return (0, a.jsx)(N, {
         focused: t,
         windowKey: r,
         frame: s,

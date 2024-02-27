@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return w
+    return G
   }
 }), n("222007");
 var a = n("37983"),
@@ -287,7 +287,7 @@ class k extends s.PureComponent {
   }
 }
 
-function w(e) {
+function G(e) {
   var t, n;
   let {
     channel: s,

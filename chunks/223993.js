@@ -7,12 +7,12 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   u = n("884691"),
   o = n("77078"),
-  r = n("545158"),
-  i = n("37785"),
+  i = n("545158"),
+  r = n("37785"),
   a = n("709681"),
   c = n("782340"),
-  p = n("72758");
-let d = [{
+  d = n("72758");
+let p = [{
   preBold: "That's pretty...",
   bold: "fly!"
 }, {
@@ -47,9 +47,9 @@ function f(e) {
   u.useEffect(() => {
     (0, a.playSound)("success", .1)
   }, []);
-  let m = u.useRef(d[Math.floor(Math.random() * d.length)]).current;
+  let m = u.useRef(p[Math.floor(Math.random() * p.length)]).current;
   return (0, s.jsx)(o.ModalRoot, {
-    className: p.bugReporterSubmitModalRoot,
+    className: d.bugReporterSubmitModalRoot,
     transitionState: t,
     "aria-label": c.default.Messages.SUBMIT_BUG,
     children: (0, s.jsxs)(o.ModalContent, {
@@ -57,18 +57,18 @@ function f(e) {
         overflow: "hidden",
         paddingRight: "0px"
       },
-      className: p.modalContent,
+      className: d.modalContent,
       paddingFix: !1,
       children: [(0, s.jsx)(o.ModalCloseButton, {
         onClick: () => {
           null == n || n()
         },
-        className: p.closeButton
+        className: d.closeButton
       }), (0, s.jsxs)(o.Text, {
-        className: p.submitText,
+        className: d.submitText,
         variant: "text-sm/normal",
-        children: ["Thanks for submitting a ", (0, s.jsx)(i.default, {
-          onClick: () => (0, r.default)(f.permalink_url),
+        children: ["Thanks for submitting a ", (0, s.jsx)(r.default, {
+          onClick: () => (0, i.default)(f.permalink_url),
           children: "bug"
         }), "!", (0, s.jsx)("br", {}), (0, s.jsx)(l, {
           punConfig: m

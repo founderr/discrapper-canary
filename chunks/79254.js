@@ -117,7 +117,7 @@ function L(e) {
     })
   }
 
-  function w() {
+  function G() {
     let e = O,
       n = "txt",
       a = "",
@@ -161,7 +161,7 @@ function L(e) {
           return (0, a.jsx)(i.MenuItem, {
             id: "upload-text-as-file",
             label: s,
-            action: w
+            action: G
           }, "upload-text-as-file");
         case S.AttachmentTypes.CLIPS:
           return (0, a.jsx)(i.MenuItem, {

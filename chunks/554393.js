@@ -46,7 +46,7 @@ function b(e) {
   } = e, {
     ref: F,
     width: H
-  } = (0, d.default)(), [U, k] = s.useState(3), [w, B] = s.useState(!n), [G, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(t), [t]), {
+  } = (0, d.default)(), [U, k] = s.useState(3), [G, B] = s.useState(!n), [w, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(t), [t]), {
     firstMessage: Z
   } = (0, R.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([S.default], () => S.default.hasJoined(t)), {
     disableReactionUpdates: Y,
@@ -93,7 +93,7 @@ function b(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: i(P.container, {
-        [P.header]: w
+        [P.header]: G
       }),
       ref: F,
       children: [(0, a.jsxs)("div", {
@@ -166,13 +166,13 @@ function b(e) {
             onClick: er,
             className: P.button,
             innerClassName: P.buttonInner,
-            children: [G ? (0, a.jsx)(I.default, {
+            children: [w ? (0, a.jsx)(I.default, {
               width: 16,
               height: 16
             }) : (0, a.jsx)(N.default, {
               width: 16,
               height: 16
-            }), G ? D.default.Messages.COPIED : null]
+            }), w ? D.default.Messages.COPIED : null]
           })
         })]
       })]

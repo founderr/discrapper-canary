@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return E
   }
 });
 var a = n("37983"),
@@ -15,37 +15,37 @@ var a = n("37983"),
   c = n("217513"),
   f = n("845579"),
   h = n("49111"),
-  E = n("491595"),
-  C = function(e) {
+  p = n("491595"),
+  E = function(e) {
     let {
       style: t,
       src: n,
-      backgroundSrc: C,
-      userId: p,
+      backgroundSrc: E,
+      userId: C,
       pulseSpeakingIndicator: m = !1,
       speaking: S = !1,
       ...g
-    } = e, _ = null != C ? C : n, T = (0, l.default)(_, s.default.unsafe_rawColors.PRIMARY_800.css), v = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, I = (0, c.default)(null != p ? p : h.EMPTY_STRING_USER_ID), A = null == I ? void 0 : I.getBannerURL({
+    } = e, _ = null != E ? E : n, T = (0, l.default)(_, s.default.unsafe_rawColors.PRIMARY_800.css), v = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, I = (0, c.default)(null != C ? C : h.EMPTY_STRING_USER_ID), A = null == I ? void 0 : I.getBannerURL({
       size: 1024,
       canAnimate: f.GifAutoPlay.getSetting()
     });
     if (r.useEffect(() => {
-        null != p && v && (0, d.default)(p, void 0, {
+        null != C && v && (0, d.default)(C, void 0, {
           dispatchWait: !0
         })
-      }, [v, p]), null == n) return null;
+      }, [v, C]), null == n) return null;
     let M = (0, a.jsx)(i.Avatar, {
-        className: E.avatarWrapper,
+        className: p.avatarWrapper,
         src: n,
         ...g
       }),
-      N = {
+      x = {
         ...t,
         backgroundColor: T
       };
-    return null != A && S && v && (N.backgroundImage = "url(".concat(A, ")"), N.backgroundSize = "cover"), (0, a.jsx)("div", {
-      style: N,
-      className: E.background,
+    return null != A && S && v && (x.backgroundImage = "url(".concat(A, ")"), x.backgroundSize = "cover"), (0, a.jsx)("div", {
+      style: x,
+      className: p.background,
       children: m ? (0, a.jsx)(o.default, {
         shouldAnimate: S,
         children: M

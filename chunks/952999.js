@@ -90,9 +90,9 @@ function P(e) {
     guildPersonalized: U
   } = (0, p.useCompletedStates)(l), {
     handleInvite: k,
-    handleMessage: w,
+    handleMessage: G,
     handlePersonalize: B,
-    handleDownload: G,
+    handleDownload: w,
     handleAddApplication: V
   } = function(e) {
     let t = s.useCallback(() => {
@@ -247,7 +247,7 @@ function P(e) {
       iconUrl: n("505873"),
       header: x.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
       completed: H,
-      onClick: w
+      onClick: G
     })
   }, "message")), (0, N.isWeb)() && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
@@ -258,7 +258,7 @@ function P(e) {
       iconUrl: n("238032"),
       header: x.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
       completed: b,
-      onClick: G
+      onClick: w
     })
   }, "download")), q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,

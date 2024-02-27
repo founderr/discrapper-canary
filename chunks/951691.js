@@ -19,9 +19,9 @@ var r = n("446674"),
   c = n("373469"),
   f = n("42887"),
   h = n("697218"),
-  E = n("394832"),
-  C = n("985622"),
-  p = n("356553"),
+  p = n("394832"),
+  E = n("985622"),
+  C = n("356553"),
   m = n("387111"),
   S = n("773336"),
   g = n("49111"),
@@ -53,26 +53,26 @@ function I(e) {
     onClose: I,
     onSelect: A,
     appContext: M = g.AppContext.APP
-  } = e, N = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS), O = null !== (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, x = v(n, r, l), R = (0, o.default)(O, M), L = (0, u.default)(O, M, g.NOOP_NULL), y = null == O ? (0, a.jsx)(s.MenuItem, {
+  } = e, x = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS), R = null !== (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, N = v(n, r, l), L = (0, o.default)(R, M), O = (0, u.default)(R, M, g.NOOP_NULL), y = null == R ? (0, a.jsx)(s.MenuItem, {
     id: "share-your-screen",
     label: T.default.Messages.SHARE_YOUR_SCREEN,
-    icon: E.default,
+    icon: p.default,
     action: m
   }) : (0, a.jsxs)(a.Fragment, {
     children: [S.isPlatformEmbedded ? (0, a.jsx)(s.MenuItem, {
       id: "stream-settings",
       label: T.default.Messages.SCREENSHARE_STREAM_QUALITY,
-      children: R
-    }) : null, h ? L : null, N ? (0, a.jsx)(s.MenuItem, {
+      children: L
+    }) : null, h ? O : null, x ? (0, a.jsx)(s.MenuItem, {
       id: "change-windows",
       label: T.default.Messages.SCREENSHARE_CHANGE_WINDOWS,
-      icon: E.default,
+      icon: p.default,
       action: m
     }) : null, (0, a.jsx)(s.MenuItem, {
       id: "stop-streaming",
       label: T.default.Messages.STOP_STREAMING,
-      icon: C.default,
-      action: () => (0, d.default)(O)
+      icon: E.default,
+      action: () => (0, d.default)(R)
     })]
   });
   return (0, a.jsx)(i.default, {
@@ -81,9 +81,9 @@ function I(e) {
       onSelect: A,
       navId: "manage-streams",
       onClose: I,
-      "aria-label": null != O ? T.default.Messages.STOP_STREAMING : T.default.Messages.SHARE_YOUR_SCREEN,
+      "aria-label": null != R ? T.default.Messages.STOP_STREAMING : T.default.Messages.SHARE_YOUR_SCREEN,
       children: [(0, a.jsx)(s.MenuGroup, {
-        children: x.map(e => {
+        children: N.map(e => {
           let {
             stream: t,
             username: n
@@ -93,7 +93,7 @@ function I(e) {
             label: T.default.Messages.STOP_WATCHING_USER.format({
               username: n
             }),
-            icon: p.default,
+            icon: C.default,
             action: () => (0, d.default)(t)
           }, "manage-stream-menu".concat(t.ownerId))
         })

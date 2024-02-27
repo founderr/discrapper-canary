@@ -8,9 +8,9 @@ var a = n("37983"),
   s = n("884691"),
   l = n("446674"),
   i = n("933805"),
-  r = n("409129"),
-  o = n("193865"),
-  u = n("843257"),
+  r = n("193865"),
+  o = n("843257"),
+  u = n("846564"),
   d = n("950576"),
   c = n("256572"),
   f = n("27618"),
@@ -32,18 +32,18 @@ let T = s.memo(function(e) {
     referencedUsernameProfile: v,
     referencedAvatarProfile: L,
     setPopout: R
-  } = e, y = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, x = (0, E.useNullableMessageAuthor)(y), O = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = A.editedTimestamp) && void 0 !== t ? t : A.timestamp).valueOf()), D = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == I ? void 0 : I.guild_id) && void 0 !== n ? n : "", (null !== (T = A.editedTimestamp) && void 0 !== T ? T : A.timestamp).valueOf()), P = s.useMemo(() => {
+  } = e, y = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, x = (0, E.useNullableMessageAuthor)(y), O = (0, r.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = A.editedTimestamp) && void 0 !== t ? t : A.timestamp).valueOf()), D = (0, r.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == I ? void 0 : I.guild_id) && void 0 !== n ? n : "", (null !== (T = A.editedTimestamp) && void 0 !== T ? T : A.timestamp).valueOf()), P = s.useMemo(() => {
     if (null == y) return null;
     if (y.type === _.MessageTypes.USER_JOIN) return (0, i.astToString)(C.default.getSystemMessageUserJoin(y.id).astFormat({
       username: null != x ? x.nick : y.author.username,
       usernameHook: e => e
     }));
-    if (y.type === _.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE) return (0, i.astToString)((0, u.getRoleSubscriptionPurchaseSystemMessageAstFormattedContent)({
+    if (y.type === _.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE) return (0, i.astToString)((0, o.getRoleSubscriptionPurchaseSystemMessageAstFormattedContent)({
       username: null != x ? x.nick : y.author.username,
       guildId: null == I ? void 0 : I.guild_id,
       roleSubscriptionData: y.roleSubscriptionData
     }));
-    if (y.type === _.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.astToString)((0, r.getApplicationSubscriptionSystemMessageASTContent)({
+    if (y.type === _.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.astToString)((0, u.getApplicationSubscriptionSystemMessageASTContent)({
       application: null == y ? void 0 : y.application,
       username: null == x ? void 0 : x.nick
     }));
@@ -75,12 +75,12 @@ let T = s.memo(function(e) {
   }, [y, x, I, O, D]), j = (0, l.useStateFromStores)([f.default], () => null != y && f.default.isBlocked(y.author.id), [y]), b = (0, g.useContextMenuUser)(null == y ? void 0 : y.author.id, I.id), F = (0, g.useClickReply)(A, y, j), H = (0, g.useClickReferencedMessageAuthorUsername)(y, I, v, R), U = (0, g.useClickReferencedMessageAuthorAvatar)(L, R), k = s.useCallback(() => R({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
-  }), [R]), w = (0, E.useNullableMessageAuthor)(A);
+  }), [R]), G = (0, E.useNullableMessageAuthor)(A);
   return (0, a.jsx)(h.default, {
     repliedAuthor: x,
     baseMessage: A,
     channel: I,
-    baseAuthor: w,
+    baseAuthor: G,
     referencedMessage: M,
     content: P,
     compact: N,

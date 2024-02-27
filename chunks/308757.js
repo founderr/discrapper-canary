@@ -19,13 +19,13 @@ var l = n("627445"),
   c = n("465527"),
   E = n("55620"),
   f = n("775433"),
-  _ = n("524503"),
-  T = n("333955"),
-  I = n("308592"),
-  m = n("846286"),
-  N = n("509167"),
-  p = n("292687"),
-  S = n("929479"),
+  _ = n("308592"),
+  T = n("426380"),
+  I = n("509167"),
+  m = n("292687"),
+  N = n("929479"),
+  p = n("927078"),
+  S = n("713536"),
   A = n("697218"),
   C = n("357957"),
   h = n("521012"),
@@ -49,7 +49,7 @@ function R(e, t) {
 }
 
 function L() {
-  let e = p.default.getWindow(O.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
+  let e = m.default.getWindow(O.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     t = null != e && !e.closed;
   return t ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
 }
@@ -66,9 +66,9 @@ async function v(e) {
   if (null == c) {
     let e = await (0, E.fetchAllStoreListingsForApplication)(t),
       s = e.find(e => e.sku.id === n);
-    a(null != s, "Could not find store listing for sku"), s.sku.type === O.SKUTypes.SUBSCRIPTION_GROUP && await (0, _.fetchAllSubscriptionListingsDataForApplication)(t, s.id)
-  }(null == (c = null != c ? c : g.default.get(n)) ? void 0 : c.type) === O.SKUTypes.SUBSCRIPTION && !(0, I.getSubscriptionPlansLoaded)([c.id]) && await (0, f.fetchSubscriptionPlansForSKU)(c.id);
-  let p = L(),
+    a(null != s, "Could not find store listing for sku"), s.sku.type === O.SKUTypes.SUBSCRIPTION_GROUP && await (0, p.fetchAllSubscriptionListingsDataForApplication)(t, s.id)
+  }(null == (c = null != c ? c : g.default.get(n)) ? void 0 : c.type) === O.SKUTypes.SUBSCRIPTION && !(0, _.getSubscriptionPlansLoaded)([c.id]) && await (0, f.fetchSubscriptionPlansForSKU)(c.id);
+  let m = L(),
     C = A.default.getCurrentUser();
   if (null != c && c.premium) {
     if (M.default.canInstallPremiumApplications(C)) return R(c, d);
@@ -91,9 +91,9 @@ async function v(e) {
         };
         switch (l) {
           case O.AppContext.APP:
-            return S.default.openPremiumPaymentModalInApp(t);
+            return N.default.openPremiumPaymentModalInApp(t);
           case O.AppContext.OVERLAY:
-            return S.default.openPremiumPaymentModalInOverlay(t);
+            return N.default.openPremiumPaymentModalInOverlay(t);
           default:
             throw Error("Unexpected app context: ".concat(l))
         }
@@ -102,12 +102,12 @@ async function v(e) {
     }(c, i, o, r, d), await R(c, d)
   } else {
     if (null == c || c.type !== O.SKUTypes.SUBSCRIPTION) return new Promise(async (e, s) => {
-      await (0, N.default)({
+      await (0, I.default)({
         applicationId: t,
         skuId: n,
         analyticsLocationObject: o,
         analyticsLocations: r,
-        contextKey: p,
+        contextKey: m,
         onComplete: t => {
           var n;
           e(null !== (n = null == t ? void 0 : t.entitlements) && void 0 !== n ? n : [])
@@ -120,13 +120,13 @@ async function v(e) {
     await
 
     function(e, t, n, l, a) {
-      return (0, m.openActivityApplicationPaymentModal)({
+      return (0, T.openActivityApplicationPaymentModal)({
         applicationId: e,
         skuId: t,
         initialPlanId: n,
         analyticsLocationObject: l,
         analyticsLocations: a,
-        renderHeader: (e, t, n) => (0, s.jsx)(T.PurchaseHeader, {
+        renderHeader: (e, t, n) => (0, s.jsx)(S.PurchaseHeader, {
           step: n,
           onClose: () => t(!1)
         })

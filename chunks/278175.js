@@ -27,11 +27,11 @@ var E = s.memo(function(e) {
     ...m.defaultWaveformConfig
   }, {
     audio: S
-  } = (0, c.useAudioTrimmerStore)(), v = null != S, _ = s.useRef(null), N = s.useRef(null), p = s.useRef(null), [A, D] = s.useState(0), [O, C] = s.useState(0), [b, I] = s.useState(0), [x, M] = s.useState(!1), [T, y] = s.useState(!1), [L, U] = s.useState(!1), [R, w] = s.useState(0), [P, j] = s.useState(-1), F = s.useMemo(() => R / E.fineTuningScale, [E.fineTuningScale, R]);
+  } = (0, c.useAudioTrimmerStore)(), v = null != S, _ = s.useRef(null), N = s.useRef(null), p = s.useRef(null), [A, O] = s.useState(0), [D, C] = s.useState(0), [b, I] = s.useState(0), [x, M] = s.useState(!1), [T, y] = s.useState(!1), [L, U] = s.useState(!1), [R, w] = s.useState(0), [P, j] = s.useState(-1), F = s.useMemo(() => R / E.fineTuningScale, [E.fineTuningScale, R]);
   s.useEffect(() => {
     if (null == S) return;
     let e = S.duration * d.default.Millis.SECOND;
-    D(0), C(0), I(e), w(e)
+    O(0), C(0), I(e), w(e)
   }, [S]);
   let V = s.useCallback((e, t) => {
       if (n(), 0 === e.button) switch (t) {
@@ -62,7 +62,7 @@ var E = s.memo(function(e) {
       if (null == S || !x) return;
       let t = parseInt(e.target.value),
         n = t > b ? b : t;
-      a((0, f.toSeconds)(n)), D(n), C(n)
+      a((0, f.toSeconds)(n)), O(n), C(n)
     }, [S, a, b, x]),
     G = s.useCallback(e => {
       if (null == S || !T) return;
@@ -79,24 +79,24 @@ var E = s.memo(function(e) {
     null != l && v && l({
       startPositionMs: A,
       endPositionMs: b,
-      playheadPositionMs: O
+      playheadPositionMs: D
     })
-  }, [A, b, l, v, O]), s.useEffect(() => {
+  }, [A, b, l, v, D]), s.useEffect(() => {
     let e;
     if (null != S) return t && (e = setInterval(() => {
-      S.currentTime < (0, f.toSeconds)(b) ? S.currentTime >= (0, f.toSeconds)(O) && C(S.currentTime * d.default.Millis.SECOND) : (n((0, f.toSeconds)(A)), C(A))
+      S.currentTime < (0, f.toSeconds)(b) ? S.currentTime >= (0, f.toSeconds)(D) && C(S.currentTime * d.default.Millis.SECOND) : (n((0, f.toSeconds)(A)), C(A))
     }, 16)), () => {
       clearInterval(e)
     }
-  }, [S, b, n, O, t, A]), s.useEffect(() => {
+  }, [S, b, n, D, t, A]), s.useEffect(() => {
     if (E.fineTuningDelay <= 0) return;
     let e = setTimeout(() => {
-      x && A == A && -1 === P ? j(A) : L && b == b && -1 === P ? j(b) : T && O == O && -1 === P && j(O)
+      x && A == A && -1 === P ? j(A) : L && b == b && -1 === P ? j(b) : T && D == D && -1 === P && j(D)
     }, E.fineTuningDelay);
     return () => {
       clearTimeout(e)
     }
-  }, [E.fineTuningDelay, L, b, P, T, O, x, A]), (0, i.jsxs)("div", {
+  }, [E.fineTuningDelay, L, b, P, T, D, x, A]), (0, i.jsxs)("div", {
     className: u(g.timeline, {
       [g.initialized]: v
     }),
@@ -135,7 +135,7 @@ var E = s.memo(function(e) {
           type: "range",
           min: (0, f.getMinValue)(P, F, R),
           max: (0, f.getMaxValue)(P, F, R),
-          value: O,
+          value: D,
           onChange: G,
           onMouseDown: e => V(e, 1),
           onMouseUp: () => k(1),
@@ -183,7 +183,7 @@ var E = s.memo(function(e) {
             [g.dragging]: T || x || L || t
           }),
           style: {
-            left: "".concat((0, f.getStartHandleValue)(O, P, F, R), "%")
+            left: "".concat((0, f.getStartHandleValue)(D, P, F, R), "%")
           }
         })
       })]

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return N
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,9 +15,9 @@ var a = n("37983"),
   c = n("77078"),
   f = n("960460"),
   h = n("489740"),
-  E = n("355025"),
-  C = n("51545"),
-  p = n("155084"),
+  p = n("355025"),
+  E = n("51545"),
+  C = n("155084"),
   m = n("393414"),
   S = n("90404"),
   g = n("599110"),
@@ -30,7 +30,7 @@ var a = n("37983"),
 function M() {
   let [e, t] = r.useState(!1), n = (0, d.useStateFromStores)([h.default], () => {
     var e;
-    return (0, E.probablyHasBuildOverride)() ? null === (e = h.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+    return (0, p.probablyHasBuildOverride)() ? null === (e = h.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
   });
   if (null == n) return null;
   let s = async () => {
@@ -48,15 +48,15 @@ function M() {
     children: I.default.Messages.CLEAR_BUILD_OVERRIDE
   })
 }
-let N = i.throttle(() => {
-  p.default.increment({
+let x = i.throttle(() => {
+  C.default.increment({
     name: o.MetricEvents.APP_CRASHED,
     tags: ["reason:".concat(l.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
   }, !0)
 }, 100, {
   trailing: !1
 });
-class O extends r.PureComponent {
+class R extends r.PureComponent {
   componentDidCatch(e, t) {
     this.triggerSoftCrash(e, t)
   }
@@ -75,8 +75,8 @@ class O extends r.PureComponent {
       error_message: e.message,
       error_stack: e.stack,
       sentry_issue_id: a,
-      uses_client_mods: (0, C.usesClientMods)()
-    }), N(), T.default.cleanupDisplaySleep()
+      uses_client_mods: (0, E.usesClientMods)()
+    }), x(), T.default.cleanupDisplaySleep()
   }
   _handleSubmitReport() {
     location.reload(!0)
@@ -128,4 +128,4 @@ class O extends r.PureComponent {
     }, this.discordErrorsSet = !1
   }
 }
-var x = O
+var N = R

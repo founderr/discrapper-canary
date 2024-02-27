@@ -4,23 +4,23 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("469563"),
-  l = n("607387"),
+var l = n("469563"),
+  a = n("607387"),
   i = n("75196"),
-  r = (0, s.replaceIcon)(function(e) {
+  r = (0, l.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: n = 24,
-      ...s
+      ...l
     } = e;
-    return (0, a.jsx)("svg", {
-      ...(0, i.default)(s),
+    return (0, s.jsx)("svg", {
+      ...(0, i.default)(l),
       width: t,
       height: n,
       viewBox: "0 0 24 24"
     })
-  }, l.AppsIcon, void 0, {
+  }, a.AppsIcon, void 0, {
     size: 24
   })

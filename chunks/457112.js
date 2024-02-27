@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return h
   },
   default: function() {
-    return E
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -46,7 +46,7 @@ class h extends r.PureComponent {
       maxX: i,
       maxY: o,
       dockedRect: c
-    } = this.props, f = Math.round(n), h = Math.round(o - r - this._height), E = Math.round(a), C = Math.round(i - s - this._width), p = (0, u.getPlatform)(), m = p !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+    } = this.props, f = Math.round(n), h = Math.round(o - r - this._height), p = Math.round(a), E = Math.round(i - s - this._width), C = (0, u.getPlatform)(), m = C !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
     if (null != c) {
       var S, g;
       return {
@@ -57,19 +57,19 @@ class h extends r.PureComponent {
     switch (e) {
       case d.PictureInPicturePositions.TOP_LEFT:
         return {
-          y: f, x: E
+          y: f, x: p
         };
       case d.PictureInPicturePositions.BOTTOM_LEFT:
         return {
-          y: h, x: E
+          y: h, x: p
         };
       case d.PictureInPicturePositions.TOP_RIGHT:
         return {
-          y: f, x: C
+          y: f, x: E
         };
       default:
         return {
-          y: h, x: C
+          y: h, x: E
         }
     }
   }
@@ -197,7 +197,7 @@ h.defaultProps = {
   hidden: !1,
   roundCorners: !0
 };
-var E = r.memo(e => {
+var p = r.memo(e => {
   let {
     selectedPIPWindow: t,
     pipWindows: n,
@@ -207,7 +207,7 @@ var E = r.memo(e => {
     dockedRect: l,
     pictureInPictureComponents: u,
     appContext: o,
-    roundCorners: E
+    roundCorners: p
   } = e;
   return (0, a.jsx)("div", {
     className: c.pictureInPicture,
@@ -233,7 +233,7 @@ var E = r.memo(e => {
         edgeOffsetBottom: f.bottom,
         edgeOffsetLeft: f.left,
         edgeOffsetRight: f.top,
-        roundCorners: E,
+        roundCorners: p,
         children: e
       })
     })()

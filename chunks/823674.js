@@ -41,9 +41,9 @@ var a = n("37983"),
   H = n("433487"),
   U = n("987772"),
   k = n("566998"),
-  w = n("516358"),
+  G = n("516358"),
   B = n("550515"),
-  G = n("959097"),
+  w = n("959097"),
   V = n("228220"),
   W = n("149279"),
   Z = n("599110"),
@@ -186,9 +186,9 @@ function er(e) {
       canManageMessages: R.default.can(et.Permissions.MANAGE_MESSAGES, n)
     }), [n, y]), D = (0, S.useCanReplyToMessage)(n, a), P = (0, T.useCanStartPublicThread)(n, a), j = (0, T.useCanViewThreadForMessage)(a), b = (0, u.useStateFromStores)([C.default], () => null != n.guild_id && C.default.isLurking(n.guild_id), [n]), F = (0, u.useStateFromStores)([N.default], () => null != n.guild_id && N.default.isCurrentUserGuest(n.guild_id), [n]), H = d.id === h, U = (null === (t = a.interactionMetadata) || void 0 === t ? void 0 : t.user_id) === h, k = (x || H || U) && m && !et.MessageTypesSets.UNDELETABLE.has(a.type);
     a.type === et.MessageTypes.AUTO_MODERATION_ACTION && (k = k && x);
-    let w = (0, Y.canReportMessage)(a),
+    let G = (0, Y.canReportMessage)(a),
       B = (0, q.default)(a, n, x),
-      G = !n.isSystemDM() && (0, K.default)(a, h) && m && !g,
+      w = !n.isSystemDM() && (0, K.default)(a, h) && m && !g,
       {
         disableReactionCreates: V
       } = (0, X.default)({
@@ -219,9 +219,9 @@ function er(e) {
       channel: n,
       message: a,
       canPin: B,
-      canEdit: G,
+      canEdit: w,
       canDelete: k,
-      canReport: w,
+      canReport: G,
       canReply: D,
       canStartThread: P,
       canViewThread: j,
@@ -301,7 +301,7 @@ function er(e) {
         channel: t,
         message: n,
         label: en.default.Messages.MESSAGE_ACTION_REPLY,
-        icon: w.default,
+        icon: G.default,
         onClick: J.replyToMessage
       }) : null]
     }) : null, m && !ed ? (0, a.jsx)(Q.default, {
@@ -316,7 +316,7 @@ function er(e) {
       channel: t,
       message: n,
       label: en.default.Messages.MESSAGE_ACTION_REPLY,
-      icon: w.default,
+      icon: G.default,
       onClick: J.replyToMessage
     }) : null, f ? ei({
       key: "edit",
@@ -330,14 +330,14 @@ function er(e) {
       channel: t,
       message: n,
       label: en.default.Messages.CREATE_THREAD,
-      icon: G.default,
+      icon: w.default,
       onClick: J.createThread
     }) : null, !I && y ? ei({
       key: "view-thread",
       channel: t,
       message: n,
       label: en.default.Messages.VIEW_THREAD,
-      icon: G.default,
+      icon: w.default,
       onClick: J.goToThread
     }) : null, h ? ei({
       key: "publish",

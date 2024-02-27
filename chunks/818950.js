@@ -71,7 +71,7 @@ let H = s.memo(function(e) {
     attachments: 8,
     fontSize: N,
     groupSpacing: c
-  }), [_, N, c]), w = (0, D.default)({
+  }), [_, N, c]), G = (0, D.default)({
     messages: E,
     channel: C,
     compact: _,
@@ -82,12 +82,12 @@ let H = s.memo(function(e) {
     handleScrollToBottom: s.useCallback(() => U(!0), [U]),
     handleScrollFromBottom: s.useCallback(() => U(!1), [U])
   }), B = (0, O.default)({
-    scrollerRef: w.ref,
+    scrollerRef: G.ref,
     isEditing: null != I,
     keyboardModeEnabled: v,
     hasMoreAfter: E.hasMoreAfter
   });
-  let G = (n = C, (0, o.useStateFromStores)([p.default], () => {
+  let w = (n = C, (0, o.useStateFromStores)([p.default], () => {
       let e = A.default.can(j.Permissions.READ_MESSAGE_HISTORY, n);
       return e ? null : p.default.getViewingRolesTimestamp(n.getGuildId())
     })),
@@ -105,16 +105,16 @@ let H = s.memo(function(e) {
       messageDisplayCompact: _,
       channelStream: S,
       uploads: T,
-      loadMore: w.loadMore,
-      scrollManager: w,
+      loadMore: G.loadMore,
+      scrollManager: G,
       specs: k,
-      filterAfterTimestamp: null != R ? R : G,
+      filterAfterTimestamp: null != R ? R : w,
       showingQuarantineBanner: y,
       isAtBottom: H,
       jumpToPresent: () => {
         if (E.hasPresent()) {
           var e;
-          null === (e = w.ref.current) || void 0 === e || e.scrollToBottom({
+          null === (e = G.ref.current) || void 0 === e || e.scrollToBottom({
             animate: !f.default.useReducedMotion
           })
         } else d.default.jumpToPresent(C.id, j.MAX_MESSAGES_PER_CHANNEL)
@@ -147,7 +147,7 @@ let H = s.memo(function(e) {
       event: j.ComponentActions.SCROLL_PAGE_DOWN,
       handler: a
     })
-  }(w.ref);
+  }(G.ref);
   let K = (0, u.useFocusJumpSection)(),
     {
       ref: q,
@@ -155,7 +155,7 @@ let H = s.memo(function(e) {
     } = (0, r.getContainerPropsFromNavigator)(B),
     J = s.useCallback(e => {
       var t;
-      w.ref.current = e, q.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
+      G.ref.current = e, q.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
     }, []);
   return (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: B,
@@ -166,10 +166,10 @@ let H = s.memo(function(e) {
         customTheme: !0,
         className: i(h, F.scroller),
         contentClassName: F.scrollerContent,
-        onResize: w.handleResize,
-        onScroll: w.handleScroll,
-        onMouseDown: w.handleMouseDown,
-        onMouseUp: w.handleMouseUp,
+        onResize: G.handleResize,
+        onScroll: G.handleScroll,
+        onMouseDown: G.handleMouseDown,
+        onMouseUp: G.handleMouseUp,
         ...K,
         tabIndex: -1,
         role: "group",

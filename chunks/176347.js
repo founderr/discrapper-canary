@@ -41,9 +41,9 @@ var a = n("37983"),
   H = n("952104"),
   U = n("509"),
   k = n("406043"),
-  w = n("68895"),
+  G = n("68895"),
   B = n("934288"),
-  G = n("87635"),
+  w = n("87635"),
   V = n("734570"),
   W = n("884351"),
   Z = n("818950"),
@@ -532,7 +532,7 @@ class eD extends s.PureComponent {
                 forceCozy: S,
                 filterAfterTimestamp: C,
                 showingQuarantineBanner: h
-              }), null == n.guild_id || I ? null : (0, a.jsx)(G.default, {
+              }), null == n.guild_id || I ? null : (0, a.jsx)(w.default, {
                 guildId: n.guild_id,
                 channel: n
               }), S ? null : null !== (e = this.renderMessageBanner({
@@ -643,7 +643,7 @@ class eD extends s.PureComponent {
         communicationDisabledUntil: l,
         showAutomodUserProfileChatBlocker: i
       } = e;
-      return t.type === eN.ChannelTypes.DM && n ? (0, a.jsx)(J.default, {}) : null != l && (0, U.isCommunicationDisabled)(l) && null != s && !eo.default.can(eN.Permissions.ADMINISTRATOR, s) ? (0, a.jsx)(w.CommunicationDisabledBanner, {
+      return t.type === eN.ChannelTypes.DM && n ? (0, a.jsx)(J.default, {}) : null != l && (0, U.isCommunicationDisabled)(l) && null != s && !eo.default.can(eN.Permissions.ADMINISTRATOR, s) ? (0, a.jsx)(G.CommunicationDisabledBanner, {
         guild: s,
         disabledUntil: l
       }) : i ? (0, a.jsx)(H.AutomodUserProfileQuarantineChatInputNotice, {

@@ -21,8 +21,8 @@ var u = n("37983"),
   o = n("446674"),
   s = n("191225"),
   c = n("837707"),
-  S = n("650509"),
-  d = n("619935"),
+  S = n("619935"),
+  d = n("991254"),
   E = n("467292"),
   f = n("622839"),
   _ = n("105097"),
@@ -59,7 +59,7 @@ function H(t) {
     purchaseType: Y = y.PurchaseTypes.SUBSCRIPTION,
     applicationId: W,
     referralCode: V
-  } = t, k = (0, h.default)(), Z = (0, d.useBlockedPaymentsConfig)(), x = (0, P.default)(), {
+  } = t, k = (0, h.default)(), Z = (0, S.useBlockedPaymentsConfig)(), x = (0, P.default)(), {
     paymentSources: J,
     hasPaymentSources: Q,
     paymentSourceId: X,
@@ -126,7 +126,7 @@ function H(t) {
     if (null == t) return null;
     let e = null != X ? X : f.NO_PAYMENT_SOURCE;
     return t[e]
-  }, [tp, tZ, X]), tJ = (0, S.useApplication)(W), tQ = (0, T.hasFlag)(null !== (e = null == tJ ? void 0 : tJ.flags) && void 0 !== e ? e : 0, y.ApplicationFlags.EMBEDDED) && (0, T.hasFlag)(null !== (n = null == tJ ? void 0 : tJ.flags) && void 0 !== n ? n : 0, y.ApplicationFlags.EMBEDDED_IAP), tX = (0, o.useStateFromStores)([s.default], () => Array.from(s.default.getSelfEmbeddedActivities().values()).find(t => {
+  }, [tp, tZ, X]), tJ = (0, d.useApplication)(W), tQ = (0, T.hasFlag)(null !== (e = null == tJ ? void 0 : tJ.flags) && void 0 !== e ? e : 0, y.ApplicationFlags.EMBEDDED) && (0, T.hasFlag)(null !== (n = null == tJ ? void 0 : tJ.flags) && void 0 !== n ? n : 0, y.ApplicationFlags.EMBEDDED_IAP), tX = (0, o.useStateFromStores)([s.default], () => Array.from(s.default.getSelfEmbeddedActivities().values()).find(t => {
     let {
       applicationId: e
     } = t;

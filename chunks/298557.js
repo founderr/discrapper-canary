@@ -26,12 +26,12 @@ var i = l("37983"),
   v = l("612039"),
   x = l("545158"),
   R = l("389153"),
-  T = l("650509"),
-  N = l("913678"),
-  P = l("462274"),
-  y = l("69927"),
-  j = l("861370"),
-  O = l("978970"),
+  T = l("462274"),
+  N = l("69927"),
+  P = l("861370"),
+  y = l("978970"),
+  j = l("991254"),
+  O = l("766366"),
   S = l("393414"),
   L = l("485422"),
   D = l("915639"),
@@ -129,7 +129,7 @@ function ev(e) {
       application: eY
     }),
     eH = (0, _.useStateFromStores)([M.default], () => M.default.getSessionId());
-  (0, y.usePageTitle)({
+  (0, N.usePageTitle)({
     location: null == eY ? void 0 : eY.name
   });
   let eG = a.useCallback(async () => {
@@ -191,8 +191,8 @@ function ev(e) {
       icon: null == eY ? void 0 : eY.icon,
       size: eC
     }),
-    eU = (0, P.default)(ew, f.default.unsafe_rawColors.PRIMARY_800.css),
-    eB = (0, j.default)({
+    eU = (0, T.default)(ew, f.default.unsafe_rawColors.PRIMARY_800.css),
+    eB = (0, P.default)({
       id: null !== (o = null == eY ? void 0 : eY.id) && void 0 !== o ? o : "",
       label: ep.default.Messages.COPY_ID_APPLICATION
     }),
@@ -213,7 +213,7 @@ function ev(e) {
   let ez = a.useMemo(() => {
       var e;
       let t = null == eY ? void 0 : null === (e = eY.install_params) || void 0 === e ? void 0 : e.permissions;
-      if (null != t) return O.OrderedPermissions.filter(e => p.default.has(p.default.deserialize(t), e))
+      if (null != t) return y.OrderedPermissions.filter(e => p.default.has(p.default.deserialize(t), e))
     }, [null == eY ? void 0 : null === (n = eY.install_params) || void 0 === n ? void 0 : n.permissions]),
     eZ = a.useCallback(e => {
       eL(e), er.current = !0, (null == eY ? void 0 : eY.id) != null && F.default.track(eu.AnalyticEvents.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
@@ -339,7 +339,7 @@ function ev(e) {
     }, [eY, k, eW, m, E]),
     {
       applicationSubscriptionListingsShown: e9
-    } = (0, T.default)({
+    } = (0, j.default)({
       applicationId: null == eY ? void 0 : eY.id,
       groupListingId: null == eY ? void 0 : eY.primary_sku_id,
       guildId: E
@@ -451,7 +451,7 @@ function ev(e) {
           break
         }
         case ed.ApplicationDirectoryProfileSections.PREMIUM:
-          e9 && (null == eY ? void 0 : eY.primary_sku_id) != null && e.push((0, i.jsx)(N.default, {
+          e9 && (null == eY ? void 0 : eY.primary_sku_id) != null && e.push((0, i.jsx)(O.default, {
             applicationId: eY.id,
             applicationPrimarySkuId: null == eY ? void 0 : eY.primary_sku_id,
             analyticsLocation: eu.AnalyticsLocations.APP_DIRECTORY_PROFILE,

@@ -33,13 +33,13 @@ var _ = l.memo(function(e) {
     onChange: _
   } = e, {
     audio: N
-  } = (0, f.useAudioTrimmerStore)(), [p, A] = l.useState(!1), [D, O] = l.useState(v), {
+  } = (0, f.useAudioTrimmerStore)(), [p, A] = l.useState(!1), [O, D] = l.useState(v), {
     playheadPositionMs: C,
     endPositionMs: b,
     startPositionMs: I
-  } = D, x = null != N, M = b - I, T = M > g.MAX_SOUND_LENGTH_SECONDS * d.default.Millis.SECOND;
+  } = O, x = null != N, M = b - I, T = M > g.MAX_SOUND_LENGTH_SECONDS * d.default.Millis.SECOND;
   l.useEffect(() => {
-    null != N && O({
+    null != N && D({
       playheadPositionMs: 0,
       endPositionMs: N.duration * d.default.Millis.SECOND,
       startPositionMs: 0
@@ -58,7 +58,7 @@ var _ = l.memo(function(e) {
       }
     }, [N, b, y, C, p, I, i]),
     U = l.useCallback(e => {
-      O(e), null == _ || _({
+      D(e), null == _ || _({
         startMs: e.startPositionMs,
         endMs: e.endPositionMs
       })

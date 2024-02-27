@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return w
+    return G
   }
 }), n("222007"), n("70102");
 var a = n("37983"),
@@ -41,10 +41,10 @@ var a = n("37983"),
   H = n("80028"),
   U = n("782340"),
   k = n("465597"),
-  w = s.memo(function(e) {
-    var t, l, w;
+  G = s.memo(function(e) {
+    var t, l, G;
     let B, {
-        className: G,
+        className: w,
         channel: V,
         draftType: W,
         editorTextContent: Z,
@@ -122,7 +122,7 @@ var a = n("37983"),
         activities: X,
         newClipsCount: eT,
         canPostPolls: eg,
-        canLaunchActivities: null !== (w = null == eS ? void 0 : eS.showInOmniButtonMenu) && void 0 !== w && w,
+        canLaunchActivities: null !== (G = null == eS ? void 0 : eS.showInOmniButtonMenu) && void 0 !== G && G,
         appContext: K
       });
     if (0 === eA.length) return null;
@@ -189,7 +189,7 @@ var a = n("37983"),
       children: e => (0, a.jsx)(u.Button, {
         look: u.Button.Looks.BLANK,
         size: u.Button.Sizes.NONE,
-        className: i(k.attachButton, G),
+        className: i(k.attachButton, w),
         innerClassName: k.attachButtonInner,
         "aria-label": U.default.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
         onDoubleClick: ed ? () => {

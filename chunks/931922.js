@@ -67,12 +67,12 @@ function b(e) {
         l = u.default.has(s.allow, D.Permissions.VIEW_CHANNEL);
       return a || l
     }).value()
-  }, [t, F]), w = T.default.can(D.Permissions.MANAGE_CHANNELS, t) || T.default.can(D.Permissions.MANAGE_ROLES, t);
+  }, [t, F]), G = T.default.can(D.Permissions.MANAGE_CHANNELS, t) || T.default.can(D.Permissions.MANAGE_ROLES, t);
 
   function B() {
     h.default.open(t.id)
   }
-  let G = s.useCallback(() => l(!1), []);
+  let w = s.useCallback(() => l(!1), []);
   return (0, a.jsxs)(x.default, {
     channelId: t.id,
     children: [(0, a.jsx)(x.EmptyMessageIcon, {
@@ -89,7 +89,7 @@ function b(e) {
           channelId: t.id
         })
       })
-    }), w ? (0, a.jsxs)("div", {
+    }), G ? (0, a.jsxs)("div", {
       className: j.channelSettingButtons,
       children: [(0, a.jsx)(y.default, {
         label: P.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
@@ -139,13 +139,13 @@ function b(e) {
         var s, l;
         let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(D.DEFAULT_ROLE_COLOR),
           o = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== void 0;
-        return w ? (0, a.jsx)(N.default, {
+        return G ? (0, a.jsx)(N.default, {
           className: i(j.role, {
             [j.last]: n === U.length - 1
           }),
           roleName: e.name,
           roleColor: r,
-          disabled: !w,
+          disabled: !G,
           verified: o,
           onClick: () => {
             g.default.open(t.guild_id, D.GuildSettingsSections.MEMBERS), g.default.selectRole(e.id)
@@ -162,7 +162,7 @@ function b(e) {
     }), n ? (0, a.jsx)(f.Modal, {
       renderModal: e => (0, a.jsx)(m.default, {
         ...e,
-        onClose: () => (G(), e.onClose()),
+        onClose: () => (w(), e.onClose()),
         channelId: t.id
       }),
       onCloseRequest: () => l(!1)

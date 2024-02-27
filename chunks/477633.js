@@ -35,7 +35,7 @@ var a = n("37983"),
         duration: t,
         ...null != E ? E : {}
       }
-    }, [n, E]), p = (0, f.useAudioBufferData)(t), A = (0, f.useAudioWaveformData)(p, _.current, N), D = (0, d.default)(), O = (0, c.useColorValue)((0, u.isThemeDark)(D) ? m.Color.PRIMARY_300 : m.Color.PRIMARY_700), C = null == p || null == A, b = 0 === S.width || 0 === S.height, I = (b || C) && null != t, x = l.useCallback(() => {
+    }, [n, E]), p = (0, f.useAudioBufferData)(t), A = (0, f.useAudioWaveformData)(p, _.current, N), O = (0, d.default)(), D = (0, c.useColorValue)((0, u.isThemeDark)(O) ? m.Color.PRIMARY_300 : m.Color.PRIMARY_700), C = null == p || null == A, b = 0 === S.width || 0 === S.height, I = (b || C) && null != t, x = l.useCallback(() => {
       null != _.current && v({
         width: _.current.offsetWidth,
         height: _.current.offsetHeight
@@ -60,7 +60,7 @@ var a = n("37983"),
       if (0 !== S.width && 0 !== S.height && null != A && A.length > 0) {
         let e = n / A.length,
           l = -(e * (h.defaultWaveformConfig.waveformBarWidth - 1));
-        t.clearRect(0, 0, n, a), t.fillStyle = O.hex;
+        t.clearRect(0, 0, n, a), t.fillStyle = D.hex;
         for (let n = 0; n < A.length; n++) {
           let i = A[n] * a,
             s = n * e + l,
@@ -68,7 +68,7 @@ var a = n("37983"),
           t.fillRect(s, r, e - l, i)
         }
       }
-    }, [O, S, D, A]), (0, a.jsxs)("div", {
+    }, [D, S, O, A]), (0, a.jsxs)("div", {
       className: s(g.container, i),
       children: [(0, a.jsx)("canvas", {
         className: g.waveformCanvas,

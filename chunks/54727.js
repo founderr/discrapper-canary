@@ -19,13 +19,13 @@ function d(e) {
     channel: n,
     onClick: d,
     ...c
-  } = e, f = t ? u.CenterControlButton : u.default, h = n.isBroadcastChannel(), E = (0, i.useIsBroadcastingInChannel)(n.id);
+  } = e, f = t ? u.CenterControlButton : u.default, h = n.isBroadcastChannel(), p = (0, i.useIsBroadcastingInChannel)(n.id);
   return (0, a.jsx)(f, {
     ...c,
     onClick: () => {
-      E && (0, s.stopBroadcast)(), r.default.disconnect(), null == d || d()
+      p && (0, s.stopBroadcast)(), r.default.disconnect(), null == d || d()
     },
     iconComponent: l.default,
-    label: E ? o.default.Messages.STOP_BROADCASTING : h ? o.default.Messages.LEAVE_BROADCAST : o.default.Messages.DISCONNECT_SELF
+    label: p ? o.default.Messages.STOP_BROADCASTING : h ? o.default.Messages.LEAVE_BROADCAST : o.default.Messages.DISCONNECT_SELF
   })
 }
