@@ -14,8 +14,8 @@ var n = s("37983"),
   c = s("841098"),
   d = s("701909"),
   _ = s("719923"),
-  f = s("153160"),
-  m = s("478968"),
+  m = s("153160"),
+  f = s("478968"),
   E = s("510928"),
   I = s("646718"),
   C = s("49111"),
@@ -42,7 +42,7 @@ var n = s("37983"),
         A(!0)
       }
       g(!1)
-    }, x = (0, c.default)(), h = (0, u.isThemeDark)(x) ? p : T, y = (0, m.useChurnDiscountedPrice)(t, I.SubscriptionPlans.PREMIUM_MONTH_TIER_2, P), D = (0, _.getPrice)(I.SubscriptionPlans.PREMIUM_MONTH_TIER_2), v = (0, f.formatPrice)(D.amount, D.currency);
+    }, x = (0, c.default)(), h = (0, u.isThemeDark)(x) ? p : T, y = (0, f.useChurnDiscountedPrice)(t, I.SubscriptionPlans.PREMIUM_MONTH_TIER_2, P), D = (0, _.getPrice)(I.SubscriptionPlans.PREMIUM_MONTH_TIER_2), v = (0, m.formatPrice)(D.amount, D.currency);
     return null == P ? null : (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(E.default, {
         premiumType: s,

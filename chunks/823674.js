@@ -30,20 +30,20 @@ var a = n("37983"),
   v = n("305961"),
   L = n("88093"),
   R = n("957255"),
-  x = n("886074"),
-  y = n("36562"),
+  y = n("886074"),
+  x = n("36562"),
   O = n("662255"),
   D = n("85175"),
   P = n("83900"),
   j = n("993477"),
   b = n("733160"),
-  H = n("100300"),
-  F = n("433487"),
+  F = n("100300"),
+  H = n("433487"),
   U = n("987772"),
   k = n("566998"),
   w = n("516358"),
-  G = n("550515"),
-  B = n("959097"),
+  B = n("550515"),
+  G = n("959097"),
   V = n("228220"),
   W = n("149279"),
   Z = n("599110"),
@@ -135,7 +135,7 @@ function ei(e) {
           children: [(0, a.jsx)(i, {
             className: ea.icon,
             ...r
-          }), E && (0, a.jsx)(x.default, {})]
+          }), E && (0, a.jsx)(y.default, {})]
         }), p && (0, a.jsx)(W.Separator, {})]
       })
     }
@@ -156,8 +156,8 @@ function er(e) {
     canConfigureJoin: g,
     canReply: _,
     canStartThread: I,
-    canViewThread: x,
-    isExpanded: G,
+    canViewThread: y,
+    isExpanded: B,
     showMoreUtilities: W,
     showEmojiPicker: $,
     showMessageRemindersActions: ea,
@@ -178,29 +178,29 @@ function er(e) {
       isFocused: o
     } = e, {
       author: d
-    } = a, f = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(n.guild_id), [n.guild_id]), h = (0, u.useStateFromStores)([M.default], () => M.default.getId()), m = (0, T.useIsActiveChannelOrUnarchivableThread)(n), g = (0, T.useIsNonModInLockedThread)(n), _ = A.RenderReactions.useSetting(), I = A.DeveloperMode.useSetting(), x = (0, u.useStateFromStores)([L.default], () => null == n.guild_id || L.default.canChatInGuild(n.guild_id), [n]), {
-      canManageMessages: y,
+    } = a, f = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(n.guild_id), [n.guild_id]), h = (0, u.useStateFromStores)([M.default], () => M.default.getId()), m = (0, T.useIsActiveChannelOrUnarchivableThread)(n), g = (0, T.useIsNonModInLockedThread)(n), _ = A.RenderReactions.useSetting(), I = A.DeveloperMode.useSetting(), y = (0, u.useStateFromStores)([L.default], () => null == n.guild_id || L.default.canChatInGuild(n.guild_id), [n]), {
+      canManageMessages: x,
       canAddNewReactions: O
     } = (0, u.useStateFromStoresObject)([R.default], () => ({
-      canAddNewReactions: x && R.default.can(et.Permissions.ADD_REACTIONS, n),
+      canAddNewReactions: y && R.default.can(et.Permissions.ADD_REACTIONS, n),
       canManageMessages: R.default.can(et.Permissions.MANAGE_MESSAGES, n)
-    }), [n, x]), D = (0, S.useCanReplyToMessage)(n, a), P = (0, T.useCanStartPublicThread)(n, a), j = (0, T.useCanViewThreadForMessage)(a), b = (0, u.useStateFromStores)([C.default], () => null != n.guild_id && C.default.isLurking(n.guild_id), [n]), H = (0, u.useStateFromStores)([N.default], () => null != n.guild_id && N.default.isCurrentUserGuest(n.guild_id), [n]), F = d.id === h, U = (null === (t = a.interactionMetadata) || void 0 === t ? void 0 : t.user_id) === h, k = (y || F || U) && m && !et.MessageTypesSets.UNDELETABLE.has(a.type);
-    a.type === et.MessageTypes.AUTO_MODERATION_ACTION && (k = k && y);
+    }), [n, y]), D = (0, S.useCanReplyToMessage)(n, a), P = (0, T.useCanStartPublicThread)(n, a), j = (0, T.useCanViewThreadForMessage)(a), b = (0, u.useStateFromStores)([C.default], () => null != n.guild_id && C.default.isLurking(n.guild_id), [n]), F = (0, u.useStateFromStores)([N.default], () => null != n.guild_id && N.default.isCurrentUserGuest(n.guild_id), [n]), H = d.id === h, U = (null === (t = a.interactionMetadata) || void 0 === t ? void 0 : t.user_id) === h, k = (x || H || U) && m && !et.MessageTypesSets.UNDELETABLE.has(a.type);
+    a.type === et.MessageTypes.AUTO_MODERATION_ACTION && (k = k && x);
     let w = (0, Y.canReportMessage)(a),
-      G = (0, q.default)(a, n, y),
-      B = !n.isSystemDM() && (0, K.default)(a, h) && m && !g,
+      B = (0, q.default)(a, n, x),
+      G = !n.isSystemDM() && (0, K.default)(a, h) && m && !g,
       {
         disableReactionCreates: V
       } = (0, X.default)({
         channel: n,
-        canChat: x,
+        canChat: y,
         renderReactions: _,
         canAddNewReactions: O,
         isLurking: b,
-        isGuest: H,
+        isGuest: F,
         isActiveChannelOrUnarchivableThread: m
       }),
-      W = n.type === et.ChannelTypes.GUILD_ANNOUNCEMENT && null != f && f.hasFeature(et.GuildFeatures.NEWS) && (F || y) && a.type === et.MessageTypes.DEFAULT,
+      W = n.type === et.ChannelTypes.GUILD_ANNOUNCEMENT && null != f && f.hasFeature(et.GuildFeatures.NEWS) && (H || x) && a.type === et.MessageTypes.DEFAULT,
       Z = n.getGuildId(),
       J = null != Z && (a.type === et.MessageTypes.USER_JOIN || a.type === et.MessageTypes.GUILD_INVITE_REMINDER) && R.default.canWithPartialContext(et.Permissions.MANAGE_GUILD, {
         guildId: Z
@@ -218,8 +218,8 @@ function er(e) {
     return {
       channel: n,
       message: a,
-      canPin: G,
-      canEdit: B,
+      canPin: B,
+      canEdit: G,
       canDelete: k,
       canReport: w,
       canReply: D,
@@ -253,7 +253,7 @@ function er(e) {
     })
   }, [$, er]), eC = (0, T.useIsActiveChannelOrUnarchivableThread)(t), ep = n.hasFlag(et.MessageFlags.CROSSPOSTED);
   return (0, a.jsxs)(a.Fragment, {
-    children: [G ? (0, a.jsxs)(a.Fragment, {
+    children: [B ? (0, a.jsxs)(a.Fragment, {
       children: [l && eo ? ei({
         key: "copy-id",
         channel: t,
@@ -280,7 +280,7 @@ function er(e) {
         channel: t,
         message: n,
         label: es ? en.default.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : en.default.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
-        icon: es ? y.default : H.default,
+        icon: es ? x.default : F.default,
         onClick: es ? J.markMessageRemindersAsComplete : J.markMessageAsReminder
       }) : null, eC ? ei({
         key: "mark-unread",
@@ -330,14 +330,14 @@ function er(e) {
       channel: t,
       message: n,
       label: en.default.Messages.CREATE_THREAD,
-      icon: B.default,
+      icon: G.default,
       onClick: J.createThread
-    }) : null, !I && x ? ei({
+    }) : null, !I && y ? ei({
       key: "view-thread",
       channel: t,
       message: n,
       label: en.default.Messages.VIEW_THREAD,
-      icon: B.default,
+      icon: G.default,
       onClick: J.goToThread
     }) : null, h ? ei({
       key: "publish",
@@ -347,7 +347,7 @@ function er(e) {
       icon: b.default,
       onClick: J.publishMessage,
       disabled: ep
-    }) : null, r && (ed || G) ? ei({
+    }) : null, r && (ed || B) ? ei({
       key: "delete",
       channel: t,
       message: n,
@@ -355,8 +355,8 @@ function er(e) {
       icon: V.default,
       onClick: J.deleteMessage,
       dangerous: !0,
-      separator: !G
-    }) : null, G && r ? null : (0, a.jsx)(d.Popout, {
+      separator: !B
+    }) : null, B && r ? null : (0, a.jsx)(d.Popout, {
       renderPopout: e => {
         let {
           updatePosition: s,
@@ -385,7 +385,7 @@ function er(e) {
         return ei({
           key: "more",
           label: en.default.Messages.MORE,
-          icon: F.default,
+          icon: H.default,
           channel: t,
           message: n,
           selected: i,
@@ -406,7 +406,7 @@ function eo(e) {
     children: [!s && l && ei({
       key: "retry",
       label: en.default.Messages.RETRY,
-      icon: G.default,
+      icon: B.default,
       channel: t,
       message: n,
       onClick: J.retrySendMessage

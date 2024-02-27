@@ -74,7 +74,7 @@ function L(e) {
   } = e, {
     channelAction: E,
     completed: T
-  } = (0, S.useMemberActionsForChannel)(f, h), A = (0, S.useNextMemberAction)(f, null == E ? void 0 : E.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), R = (null == E ? void 0 : E.actionType) === _.NewMemberActionTypes.VIEW, x = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = s.useState(!1), [D] = s.useState(new r.default.Value(0)), [P] = s.useState(new r.default.Value(0));
+  } = (0, S.useMemberActionsForChannel)(f, h), A = (0, S.useNextMemberAction)(f, null == E ? void 0 : E.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), R = (null == E ? void 0 : E.actionType) === _.NewMemberActionTypes.VIEW, y = (0, u.useToken)(u.tokens.colors.WHITE), [x, O] = s.useState(!1), [D] = s.useState(new r.default.Value(0)), [P] = s.useState(new r.default.Value(0));
   s.useEffect(() => {
     T ? r.default.timing(D, {
       toValue: 0,
@@ -88,19 +88,19 @@ function L(e) {
       delay: 400
     }).start()
   }, [T, D, R, L]), s.useEffect(() => {
-    T && y && r.default.timing(P, {
+    T && x && r.default.timing(P, {
       toValue: 1,
       duration: L ? 0 : 350,
       easing: r.default.Easing.quad,
       delay: 400
     }).start()
-  }, [T, P, y, L]);
+  }, [T, P, x, L]);
   let j = s.useCallback(() => {
     null != A && (0, g.selectNewMemberActionChannel)(f, A.channelId)
   }, [f, A]);
-  return null == E || R && !y ? null : (0, a.jsx)("div", {
+  return null == E || R && !x ? null : (0, a.jsx)("div", {
     className: i(I.container, C),
-    children: y && null != A ? (0, a.jsx)(r.default.div, {
+    children: x && null != A ? (0, a.jsx)(r.default.div, {
       style: {
         marginBottom: P.interpolate({
           inputRange: [0, 1],
@@ -130,7 +130,7 @@ function L(e) {
           children: (0, a.jsx)(p.default, {
             width: 16,
             height: 16,
-            color: x.hex(),
+            color: y.hex(),
             className: I.nextIcon
           })
         })]
@@ -160,7 +160,7 @@ function L(e) {
         })]
       }), T ? (0, a.jsx)(m.default, {
         className: I.completed,
-        backgroundColor: x.hex(),
+        backgroundColor: y.hex(),
         width: 20,
         height: 20
       }) : null]

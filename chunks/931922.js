@@ -30,8 +30,8 @@ var a = n("37983"),
   v = n("317134"),
   L = n("991170"),
   R = n("158998"),
-  x = n("938244"),
-  y = n("172554"),
+  y = n("938244"),
+  x = n("172554"),
   O = n("730859"),
   D = n("49111"),
   P = n("782340"),
@@ -40,7 +40,7 @@ var a = n("37983"),
 function b(e) {
   let {
     channel: t
-  } = e, [n, l] = s.useState(!1), r = (0, p.default)(t, !0), b = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), H = (0, c.useStateFromStores)([A.default], () => A.default.getUser(null == b ? void 0 : b.ownerId)), F = s.useMemo(() => null != b ? o(b.roles).sortBy(e => -e.position).filter(e => !(0, E.isEveryoneRoleId)(b.id, e.id)).value() : [], [b]), U = s.useMemo(() => o(F).filter(e => {
+  } = e, [n, l] = s.useState(!1), r = (0, p.default)(t, !0), b = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), F = (0, c.useStateFromStores)([A.default], () => A.default.getUser(null == b ? void 0 : b.ownerId)), H = s.useMemo(() => null != b ? o(b.roles).sortBy(e => -e.position).filter(e => !(0, E.isEveryoneRoleId)(b.id, e.id)).value() : [], [b]), U = s.useMemo(() => o(H).filter(e => {
     if (null == b) return !1;
     let n = L.default.computePermissionsForRoles({
       forceRoles: {
@@ -49,9 +49,9 @@ function b(e) {
       context: t
     });
     return u.default.has(n, D.Permissions.ADMINISTRATOR) || u.default.has(n, D.Permissions.VIEW_CHANNEL)
-  }).value(), [t, b, F]), k = (0, c.useStateFromStoresArray)([A.default], () => {
+  }).value(), [t, b, H]), k = (0, c.useStateFromStoresArray)([A.default], () => {
     let e = {};
-    for (let n of (null != H && (e[H.id] = H), Object.values(t.permissionOverwrites))) {
+    for (let n of (null != F && (e[F.id] = F), Object.values(t.permissionOverwrites))) {
       if (n.type !== C.PermissionOverwriteType.MEMBER || null != e[n.id]) continue;
       let t = A.default.getUser(n.id);
       null != t && (e[t.id] = t)
@@ -67,22 +67,22 @@ function b(e) {
         l = u.default.has(s.allow, D.Permissions.VIEW_CHANNEL);
       return a || l
     }).value()
-  }, [t, H]), w = T.default.can(D.Permissions.MANAGE_CHANNELS, t) || T.default.can(D.Permissions.MANAGE_ROLES, t);
+  }, [t, F]), w = T.default.can(D.Permissions.MANAGE_CHANNELS, t) || T.default.can(D.Permissions.MANAGE_ROLES, t);
 
-  function G() {
+  function B() {
     h.default.open(t.id)
   }
-  let B = s.useCallback(() => l(!1), []);
-  return (0, a.jsxs)(y.default, {
+  let G = s.useCallback(() => l(!1), []);
+  return (0, a.jsxs)(x.default, {
     channelId: t.id,
-    children: [(0, a.jsx)(y.EmptyMessageIcon, {
+    children: [(0, a.jsx)(x.EmptyMessageIcon, {
       locked: !0,
       channelType: t.type
-    }), (0, a.jsx)(y.EmptyMessageHeader, {
+    }), (0, a.jsx)(x.EmptyMessageHeader, {
       children: P.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: r
       })
-    }), (0, a.jsx)(y.EmptyMessageBody, {
+    }), (0, a.jsx)(x.EmptyMessageBody, {
       children: P.default.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
         channelName: r,
         topicHook: () => _.default.parseTopic(t.topic, !0, {
@@ -91,16 +91,16 @@ function b(e) {
       })
     }), w ? (0, a.jsxs)("div", {
       className: j.channelSettingButtons,
-      children: [(0, a.jsx)(x.default, {
+      children: [(0, a.jsx)(y.default, {
         label: P.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
         onClick: () => l(!0),
         icon: (0, a.jsx)(I.default, {
           width: 16,
           height: 16
         })
-      }), (0, a.jsx)(x.default, {
+      }), (0, a.jsx)(y.default, {
         label: P.default.Messages.EDIT_CHANNEL,
-        onClick: G,
+        onClick: B,
         icon: (0, a.jsx)(M.default, {
           width: 16,
           height: 16
@@ -162,7 +162,7 @@ function b(e) {
     }), n ? (0, a.jsx)(f.Modal, {
       renderModal: e => (0, a.jsx)(m.default, {
         ...e,
-        onClose: () => (B(), e.onClose()),
+        onClose: () => (G(), e.onClose()),
         channelId: t.id
       }),
       onCloseRequest: () => l(!1)

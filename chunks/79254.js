@@ -51,8 +51,8 @@ function L(e) {
     options: r,
     onFileUpload: L,
     onClose: R,
-    onSelect: x,
-    draftType: y,
+    onSelect: y,
+    draftType: x,
     editorTextContent: O,
     setValue: D,
     openClips: P
@@ -73,11 +73,11 @@ function L(e) {
     (0, h.openThreadSidebarForCreating)(t, void 0, "Plus Button")
   }
 
-  function H() {
+  function F() {
     p.default.track(T.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, _.toRichValue)("/"))
   }
 
-  function F() {
+  function H() {
     P()
   }
 
@@ -124,12 +124,12 @@ function L(e) {
       s = O.match(v);
     null != s && (a = s[1], n = s[2], e = s[3], a += s[4]), (0, g.promptToUpload)([(0, m.makeFile)(new Blob([e], {
       type: "text/plain"
-    }), "message.".concat(n))], t, y), E.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.CLEAR_TEXT), "" !== a && E.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.INSERT_TEXT, {
+    }), "message.".concat(n))], t, x), E.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.CLEAR_TEXT), "" !== a && E.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.INSERT_TEXT, {
       plainText: a
     })
   }
   return (0, a.jsx)(i.Menu, {
-    onSelect: x,
+    onSelect: y,
     navId: "channel-attach",
     onClose: R,
     "aria-label": M.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
@@ -167,7 +167,7 @@ function L(e) {
           return (0, a.jsx)(i.MenuItem, {
             id: "clips",
             label: s,
-            action: F
+            action: H
           }, "clips");
         case S.AttachmentTypes.POLL:
           return (0, a.jsx)(i.MenuItem, {
@@ -222,7 +222,7 @@ function L(e) {
           return (0, a.jsx)(i.MenuItem, {
             id: "SLASH_COMMAND",
             label: s,
-            action: H
+            action: F
           }, "SLASH_COMMAND");
         case S.AttachmentTypes.ACTIVITY:
           return (0, a.jsx)(i.MenuItem, {

@@ -15,12 +15,12 @@ var n = s("37983"),
       confettiVelocityMultiplier: r,
       sprites: u,
       colors: o
-    } = e, [c, d] = a.useState(null), _ = (0, i.useConfettiCannon)(s, c), [f, m] = a.useState(!1);
+    } = e, [c, d] = a.useState(null), _ = (0, i.useConfettiCannon)(s, c), [m, f] = a.useState(!1);
     return a.useEffect(() => {
       let e = Array(10).fill(0);
-      return null != t && _.isReady && !f && (e = e.map((s, n) => setTimeout(() => {
+      return null != t && _.isReady && !m && (e = e.map((s, n) => setTimeout(() => {
         var s, a;
-        n === e.length - 1 && m(!0), _.createMultipleConfetti((s = t.getBoundingClientRect(), a = null != (a = r) ? a : 1, {
+        n === e.length - 1 && f(!0), _.createMultipleConfetti((s = t.getBoundingClientRect(), a = null != (a = r) ? a : 1, {
           ...l.COMMON_CONFETTI_BASE_CONFIG,
           position: {
             type: "static-random",
@@ -52,7 +52,7 @@ var n = s("37983"),
       }, 100 * n))), () => {
         for (let t of e) clearTimeout(t)
       }
-    }, [_, t, f, r]), (0, n.jsx)(i.SpriteCanvas, {
+    }, [_, t, m, r]), (0, n.jsx)(i.SpriteCanvas, {
       ref: d,
       sprites: null != u ? u : l.COMMON_CONFETTI_SPRITES,
       colors: null != o ? o : l.COMMON_CONFETTI_COLORS,

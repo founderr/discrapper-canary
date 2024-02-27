@@ -1,13 +1,13 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return s
+    return n
   }
 });
 var l = a("884691"),
-  n = a("773336");
+  s = a("773336");
 
-function s(e) {
+function n(e) {
   let t = l.useRef(e);
   return l.useEffect(() => {
     t.current = e
@@ -15,9 +15,9 @@ function s(e) {
     let a = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
       l = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey),
       {
-        disabled: s = !1,
+        disabled: n = !1,
         onSubmit: r
       } = t.current;
-    if ("enter" === e.key.toLowerCase())("macos" === (0, n.getOS)() ? l : a) && !s && (e.preventDefault(), r())
+    if ("enter" === e.key.toLowerCase())("macos" === (0, s.getOS)() ? l : a) && !n && (e.preventDefault(), r())
   }, [])
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return x
   }
 });
 var a = n("37983"),
@@ -183,7 +183,7 @@ let L = e => {
         return null
     }
   },
-  x = e => {
+  y = e => {
     let {
       channelId: t,
       otherUserId: n
@@ -225,7 +225,7 @@ let L = e => {
       })]
     })
   };
-var y = e => {
+var x = e => {
   let {
     userId: t,
     channel: n,
@@ -242,7 +242,7 @@ var y = e => {
       })
     }), (0, a.jsxs)("div", {
       className: v.mobileButtons,
-      children: [(0, a.jsx)(x, {
+      children: [(0, a.jsx)(y, {
         channelId: n.id,
         otherUserId: t
       }), (0, a.jsx)(f.default, {

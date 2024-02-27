@@ -51,8 +51,8 @@ function d(e) {
       content: R,
       contentKey: R
     }), t = R);
-    let x = m[m.length - 1],
-      y = null,
+    let y = m[m.length - 1],
+      x = null,
       O = (0, o.isSpam)(e);
     g = g || O;
     let D = function(e, t, n) {
@@ -64,17 +64,17 @@ function d(e) {
     if (null !== D) {
       ;
       let t, n;
-      [y, x] = (T = m, A = e, M = D, n = I = x, null == I || I.type !== M ? (t = {
+      [x, y] = (T = m, A = e, M = D, n = I = y, null == I || I.type !== M ? (t = {
         type: M,
         content: [],
         key: A.id
       }, T.push(t)) : n = (t = I).content[t.content.length - 1], [t, n])
     }
     if (h === e.id && null != _) {
-      if (null != x && x.type === u.ChannelStreamTypes.DIVIDER) x.unreadId = e.id, _ = null;
-      else if (null !== y) {
+      if (null != y && y.type === u.ChannelStreamTypes.DIVIDER) y.unreadId = e.id, _ = null;
+      else if (null !== x) {
         ;
-        N = y, v = c, (L = e).isFirstMessageInForumPost(v) || N.content.push({
+        N = x, v = c, (L = e).isFirstMessageInForumPost(v) || N.content.push({
           type: u.ChannelStreamTypes.DIVIDER,
           unreadId: L.id
         }), N.hasUnread = !0, _ = null
@@ -86,7 +86,7 @@ function d(e) {
       type: u.ChannelStreamTypes.DIVIDER,
       unreadId: e.id
     }), _ = null);
-    let P = (null == x ? void 0 : x.type) === u.ChannelStreamTypes.MESSAGE ? d : x;
+    let P = (null == y ? void 0 : y.type) === u.ChannelStreamTypes.MESSAGE ? d : y;
     (0, r.isNewGroupItem)(c, P, e) && (n = e.id);
     let j = {
       type: e.type === u.MessageTypes.THREAD_STARTER_MESSAGE ? u.ChannelStreamTypes.THREAD_STARTER_MESSAGE : u.ChannelStreamTypes.MESSAGE,
@@ -96,15 +96,15 @@ function d(e) {
     n === e.id && (d = j);
     let {
       jumpSequenceId: b,
-      jumpFlash: H,
-      jumpTargetId: F
+      jumpFlash: F,
+      jumpTargetId: H
     } = f;
-    H && e.id === F && null != b && (j.flashKey = b), f.jumpTargetId === e.id && (j.jumpTarget = !0), null != E && e.id === E.startId && E.count > 1 && m.push({
+    F && e.id === H && null != b && (j.flashKey = b), f.jumpTargetId === e.id && (j.jumpTarget = !0), null != E && e.id === E.startId && E.count > 1 && m.push({
       type: u.ChannelStreamTypes.DIVIDER,
       content: E.topic,
       contentKey: E.startId,
       isSummaryDivider: !0
-    }), null !== y ? (y.content.push(j), j.jumpTarget && (y.hasJumpTarget = !0)) : m.push(j), e.isFirstMessageInForumPost(c) && m.push({
+    }), null !== x ? (x.content.push(j), j.jumpTarget && (x.hasJumpTarget = !0)) : m.push(j), e.isFirstMessageInForumPost(c) && m.push({
       type: u.ChannelStreamTypes.FORUM_POST_ACTION_BAR
     }), null != E && e.id === E.endId && E.count > 1 && m.push({
       type: u.ChannelStreamTypes.DIVIDER,

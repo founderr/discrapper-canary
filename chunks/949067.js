@@ -1,23 +1,23 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   useLongestChannelMessageBeforeReply: function() {
-    return o
+    return l
   }
-}), s("222007");
-var n = s("446674"),
-  a = s("377253");
+}), n("222007");
+var a = n("446674"),
+  s = n("377253");
 
-function o(e, t) {
-  return (0, n.useStateFromStores)([a.default], () => {
+function l(e, t) {
+  return (0, a.useStateFromStores)([s.default], () => {
     if (null == t) return;
-    let s = a.default.getMessages(e),
-      n = s.findOldest(e => e.author.id === t);
-    if (null == n) return;
-    let o = s.toArray();
-    for (let e of o) {
+    let n = s.default.getMessages(e),
+      a = n.findOldest(e => e.author.id === t);
+    if (null == a) return;
+    let l = n.toArray();
+    for (let e of l) {
       if (e.author.id !== t) break;
-      e.content.length > (null == n ? void 0 : n.content.length) && (n = e)
+      e.content.length > (null == a ? void 0 : a.content.length) && (a = e)
     }
-    return n
+    return a
   }, [e, t])
 }

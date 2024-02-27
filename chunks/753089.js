@@ -49,10 +49,10 @@ function M(e) {
         !e.ok && 429 === e.status && M(S.default.Messages.RATE_LIMITED)
       }
     }, [n.id, n.type, l]),
-    x = S.default.Messages.WAVE_TO.format({
+    y = S.default.Messages.WAVE_TO.format({
       username: v
     }),
-    y = null != l && "" !== l ? (0, a.jsx)(o.Text, {
+    x = null != l && "" !== l ? (0, a.jsx)(o.Text, {
       className: T.error,
       color: "text-danger",
       variant: "text-sm/normal",
@@ -70,9 +70,9 @@ function M(e) {
       }), (0, a.jsx)(o.Text, {
         className: T.text,
         variant: "text-md/medium",
-        children: x
+        children: y
       })]
-    }), y]
+    }), x]
   }) : (0, a.jsxs)("div", {
     className: T.containerExpanded,
     children: [(0, a.jsx)(f.default, {
@@ -82,7 +82,7 @@ function M(e) {
       className: T.button,
       onClick: R,
       disabled: !!l,
-      children: x
-    }), y]
+      children: y
+    }), x]
   })
 }

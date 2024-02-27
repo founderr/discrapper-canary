@@ -128,8 +128,8 @@ async function C(e, t) {
     invitable: v,
     availableTags: L,
     defaultSortOrder: R,
-    defaultForumLayout: x,
-    iconEmoji: y,
+    defaultForumLayout: y,
+    iconEmoji: x,
     themeColor: O
   } = t, D = r.default.getChannel(e);
   return s.default.dispatch({
@@ -167,11 +167,11 @@ async function C(e, t) {
         moderated: e.moderated
       })),
       default_sort_order: R,
-      default_forum_layout: x,
-      icon_emoji: null != y ? {
-        id: y.id,
-        name: y.name
-      } : null === y ? null : void 0,
+      default_forum_layout: y,
+      icon_emoji: null != x ? {
+        id: x.id,
+        name: x.name
+      } : null === x ? null : void 0,
       theme_color: O
     },
     oldFormErrors: !0

@@ -1,7 +1,7 @@
 "use strict";
-var l, n;
+var l, s;
 a.r(t), a.d(t, {
   PollMediaUploadAttachmentStatus: function() {
     return l
   }
-}), (n = l || (l = {})).PREPARING = "PREPARING", n.READY_TO_UPLOAD = "READY_TO_UPLOAD", n.ERROR = "ERROR"
+}), (s = l || (l = {})).PREPARING = "PREPARING", s.READY_TO_UPLOAD = "READY_TO_UPLOAD", s.ERROR = "ERROR"

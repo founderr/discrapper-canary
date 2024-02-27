@@ -34,40 +34,40 @@ function v(e) {
 var L = function(e, t, n) {
   let L = a.useRef(n);
   return L.current = n, a.useCallback(n => {
-    var a, R, x, y, O, D;
+    var a, R, y, x, O, D;
     if (!L.current || n.target !== n.currentTarget) return;
     let P = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
       j = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
       b = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
-      H = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
-      F = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
+      F = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
+      H = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
       U = p.default.getMessage(t, e),
       k = c.default.getChannel(t);
     if (null == U || null == k) return;
     let w = d.default.getId(),
-      G = U.author.id === w,
-      B = (null === (a = U.interactionMetadata) || void 0 === a ? void 0 : a.user_id) === w;
+      B = U.author.id === w,
+      G = (null === (a = U.interactionMetadata) || void 0 === a ? void 0 : a.user_id) === w;
     switch (n.key.toLowerCase()) {
       case "backspace":
-        P && (v(k) || G || B) && (n.preventDefault(), (0, I.deleteMessage)(k, U, n));
+        P && (v(k) || B || G) && (n.preventDefault(), (0, I.deleteMessage)(k, U, n));
         break;
       case "c":
-        ((0, _.isMac)() ? H : b) && m.SUPPORTS_COPY && (n.preventDefault(), (0, m.copy)(U.content));
+        ((0, _.isMac)() ? F : b) && m.SUPPORTS_COPY && (n.preventDefault(), (0, m.copy)(U.content));
         break;
       case "e":
         if (P) {
           ;
-          if (R = w, x = k, y = U, !x.isSystemDM() && (0, T.default)(y, R)) n.preventDefault(), (0, I.editMessage)(k, U)
+          if (R = w, y = k, x = U, !y.isSystemDM() && (0, T.default)(x, R)) n.preventDefault(), (0, I.editMessage)(k, U)
         }
         break;
       case "p":
-        if (P || F) {
+        if (P || H) {
           ;
           if (O = k, D = U, !O.isSystemDM() && !(0, A.default)(D) && (v(O) || O.isPrivate())) n.preventDefault(), (0, I.pinMessage)(k, U, n)
         }
         break;
       case "+":
-        (P || F) && function(e) {
+        (P || H) && function(e) {
           let t = null == e.guild_id || C.default.canChatInGuild(e.guild_id),
             n = u.RenderReactions.getSetting(),
             {
@@ -87,13 +87,13 @@ var L = function(e, t, n) {
         }));
         break;
       case "r":
-        (P || F) && (0, i.canReplyToMessage)(k, U) && (n.preventDefault(), (0, I.replyToMessage)(k, U, n));
+        (P || H) && (0, i.canReplyToMessage)(k, U) && (n.preventDefault(), (0, I.replyToMessage)(k, U, n));
         break;
       case "t":
         if (P && (0, r.computeCanStartPublicThread)(k, U)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(k, U, "Message Shortcut");
         else if (U.hasFlag(N.MessageFlags.HAS_THREAD)) {
           let e = c.default.getChannel(S.default.castMessageIdAsChannelId(U.id));
-          null != e && (P || F) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, F))
+          null != e && (P || H) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, H))
         }
         break;
       case "enter":

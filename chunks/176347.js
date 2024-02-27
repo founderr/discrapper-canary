@@ -30,20 +30,20 @@ var a = n("37983"),
   v = n("389153"),
   L = n("916565"),
   R = n("850391"),
-  x = n("149022"),
-  y = n("159492"),
+  y = n("149022"),
+  x = n("159492"),
   O = n("998415"),
   D = n("228800"),
   P = n("681060"),
   j = n("939563"),
   b = n("538282"),
-  H = n("956967"),
-  F = n("952104"),
+  F = n("956967"),
+  H = n("952104"),
   U = n("509"),
   k = n("406043"),
   w = n("68895"),
-  G = n("934288"),
-  B = n("87635"),
+  B = n("934288"),
+  G = n("87635"),
   V = n("734570"),
   W = n("884351"),
   Z = n("818950"),
@@ -87,9 +87,9 @@ var a = n("37983"),
 function eR(e) {
   e.preventDefault()
 }
-let ex = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
+let ey = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
 
-function ey(e) {
+function ex(e) {
   let {
     isSidebar: t,
     ...n
@@ -120,7 +120,7 @@ class eO extends s.PureComponent {
     }
     if (e.hasModalOpen && !this.props.hasModalOpen) {
       let e = es.default.getDraft(n.id, es.DraftType.ChannelMessage);
-      e !== a && this.setState((0, x.createState)(e))
+      e !== a && this.setState((0, y.createState)(e))
     }
     t.textValue.length < eN.MAX_MESSAGE_LENGTH && a.length >= eN.MAX_MESSAGE_LENGTH && eh.default.track(eN.AnalyticEvents.MESSAGE_LENGTH_LIMIT_REACHED, {})
   }
@@ -226,7 +226,7 @@ class eO extends s.PureComponent {
   constructor(...e) {
     var t;
     super(...e), t = this, this.isFirstChange = !0, this.editorRef = null, this.state = {
-      ...(0, x.createState)(es.default.getDraft(this.props.channel.id, es.DraftType.ChannelMessage)),
+      ...(0, y.createState)(es.default.getDraft(this.props.channel.id, es.DraftType.ChannelMessage)),
       contentWarningProps: null
     }, this.draftDidChange = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t.props,
@@ -234,7 +234,7 @@ class eO extends s.PureComponent {
           textValue: n
         } = t.state,
         a = es.default.getDraft(e.channel.id, es.DraftType.ChannelMessage);
-      n !== a && ("" === a || "" === n) && t.setState((0, x.createState)(a), () => {
+      n !== a && ("" === a || "" === n) && t.setState((0, y.createState)(a), () => {
         if (n !== a) {
           let {
             onFocus: e
@@ -299,7 +299,7 @@ class eO extends s.PureComponent {
       } = this.props;
       c.default.changeDraft(s, t, es.DraftType.ChannelMessage);
       let l = "" !== t && n !== this.state.richValue,
-        i = l && !ex.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
+        i = l && !ey.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
       this.isFirstChange = !1, i && this.state.textValue.length < t.length && this.handleIncrementCombo(), i ? h.default.startTyping(s) : "" === t && h.default.stopTyping(s), l && a && (0, _.disableKeyboardMode)(), this.setState({
         textValue: t,
         richValue: n
@@ -401,7 +401,7 @@ class eO extends s.PureComponent {
           ...m,
           stickerIds: a
         }) : f.default.sendStickers(o.id, a, t, m, E.tts) : f.default.sendMessage(o.id, E, void 0, m);
-        return this.setState((0, x.createEmptyState)()), (0, Q.deletePendingReply)(o.id), (0, ee.clearStickerPreview)(o.id, d.drafts.type), {
+        return this.setState((0, y.createEmptyState)()), (0, Q.deletePendingReply)(o.id), (0, ee.clearStickerPreview)(o.id, d.drafts.type), {
           shouldClear: !0,
           shouldRefocus: !0
         }
@@ -417,7 +417,7 @@ class eO extends s.PureComponent {
       editorTextContent: this.state.textValue,
       setValue: this.handleSetValue,
       canOnlyUseTextCommands: e
-    }), this.renderAppLauncherButton = () => (0, a.jsx)(y.default, {}), this.renderApplicationCommandIcon = (e, t, n) => (0, a.jsx)(O.default, {
+    }), this.renderAppLauncherButton = () => (0, a.jsx)(x.default, {}), this.renderApplicationCommandIcon = (e, t, n) => (0, a.jsx)(O.default, {
       className: n,
       command: e,
       section: t,
@@ -506,7 +506,7 @@ class eD extends s.PureComponent {
           }), (0, a.jsx)(eC.ComponentAction, {
             event: eN.ComponentActions.OPEN_EXPRESSION_PICKER,
             handler: this.handleOpenExpressionPicker
-          }), (0, a.jsxs)(ey, {
+          }), (0, a.jsxs)(ex, {
             isSidebar: I,
             className: eL.chatContent,
             "aria-label": t.format({
@@ -532,7 +532,7 @@ class eD extends s.PureComponent {
                 forceCozy: S,
                 filterAfterTimestamp: C,
                 showingQuarantineBanner: h
-              }), null == n.guild_id || I ? null : (0, a.jsx)(B.default, {
+              }), null == n.guild_id || I ? null : (0, a.jsx)(G.default, {
                 guildId: n.guild_id,
                 channel: n
               }), S ? null : null !== (e = this.renderMessageBanner({
@@ -646,7 +646,7 @@ class eD extends s.PureComponent {
       return t.type === eN.ChannelTypes.DM && n ? (0, a.jsx)(J.default, {}) : null != l && (0, U.isCommunicationDisabled)(l) && null != s && !eo.default.can(eN.Permissions.ADMINISTRATOR, s) ? (0, a.jsx)(w.CommunicationDisabledBanner, {
         guild: s,
         disabledUntil: l
-      }) : i ? (0, a.jsx)(F.AutomodUserProfileQuarantineChatInputNotice, {
+      }) : i ? (0, a.jsx)(H.AutomodUserProfileQuarantineChatInputNotice, {
         guild: s
       }) : null
     }
@@ -661,10 +661,10 @@ var eP = s.memo(function(e) {
   } = e, {
     placeholder: i,
     accessibilityLabel: r
-  } = (0, eT.default)(t), o = (0, J.useShouldBlockDMInputForQuarantinedUser)(ec.default.getCurrentUser(), t), [c] = (0, k.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, H.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, u.useStateFromStores)([ec.default], () => ec.default.getCurrentUser()), C = (0, u.useStateFromStores)([ei.default], () => {
+  } = (0, eT.default)(t), o = (0, J.useShouldBlockDMInputForQuarantinedUser)(ec.default.getCurrentUser(), t), [c] = (0, k.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, F.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, u.useStateFromStores)([ec.default], () => ec.default.getCurrentUser()), C = (0, u.useStateFromStores)([ei.default], () => {
     var e, t, a;
     return null != h && null !== (a = null === (e = ei.default.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eN.EMPTY_STRING_GUILD_ID, null == h ? void 0 : h.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== a && a
-  }), p = (0, u.useStateFromStores)([Y.default], () => Y.default.isEnabled()), E = (0, X.default)(t.id), m = (0, G.default)(t.id);
+  }), p = (0, u.useStateFromStores)([Y.default], () => Y.default.isEnabled()), E = (0, X.default)(t.id), m = (0, B.default)(t.id);
   return (0, a.jsx)(eD, {
     channel: t,
     isEditing: null != (0, u.useStateFromStores)([el.default], () => el.default.getEditingMessageId(t.id)),

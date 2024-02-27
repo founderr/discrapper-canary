@@ -144,17 +144,17 @@ var N = s.memo(function(e) {
       value: 0,
       multiplier: 1
     }, [N]),
-    x = s.useRef(R);
+    y = s.useRef(R);
   s.useEffect(() => {
-    (R.multiplier > 1 || R.value > 0) && (x.current = R)
+    (R.multiplier > 1 || R.value > 0) && (y.current = R)
   }, [R]);
   let {
-    multiplier: y,
+    multiplier: x,
     value: O
   } = s.useMemo(() => ({
-    value: v ? R.value : x.current.value,
-    multiplier: v ? R.multiplier : x.current.multiplier
-  }), [v, R, x]);
+    value: v ? R.value : y.current.value,
+    multiplier: v ? R.multiplier : y.current.multiplier
+  }), [v, R, y]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(M, {
       channelId: t,
@@ -165,7 +165,7 @@ var N = s.memo(function(e) {
       style: L,
       children: (0, a.jsx)(I, {
         value: O,
-        multiplier: y
+        multiplier: x
       })
     })]
   })

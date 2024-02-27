@@ -30,15 +30,15 @@ var a = n("37983"),
   v = n("505684"),
   L = n("378765"),
   R = n("70845"),
-  x = n("51714"),
-  y = n("88243"),
+  y = n("51714"),
+  x = n("88243"),
   O = n("31511"),
   D = n("120379"),
   P = n("221068"),
   j = n("49111"),
   b = n("782340"),
-  H = n("430759");
-let F = s.memo(function(e) {
+  F = n("430759");
+let H = s.memo(function(e) {
   var t, n;
   let {
     className: l,
@@ -56,15 +56,15 @@ let F = s.memo(function(e) {
     fontSize: N,
     keyboardModeEnabled: v,
     filterAfterTimestamp: R,
-    showingQuarantineBanner: x
-  } = e, [F, U] = s.useState(!1), k = s.useMemo(() => _ ? (0, y.generateMessageSpecs)({
+    showingQuarantineBanner: y
+  } = e, [H, U] = s.useState(!1), k = s.useMemo(() => _ ? (0, x.generateMessageSpecs)({
     compact: !0,
     messageGroups: 30,
     groupRange: 4,
     attachments: 8,
     fontSize: N,
     groupSpacing: c
-  }) : (0, y.generateMessageSpecs)({
+  }) : (0, x.generateMessageSpecs)({
     compact: !1,
     messageGroups: 26,
     groupRange: 4,
@@ -81,13 +81,13 @@ let F = s.memo(function(e) {
     canLoadMore: null == R,
     handleScrollToBottom: s.useCallback(() => U(!0), [U]),
     handleScrollFromBottom: s.useCallback(() => U(!1), [U])
-  }), G = (0, O.default)({
+  }), B = (0, O.default)({
     scrollerRef: w.ref,
     isEditing: null != I,
     keyboardModeEnabled: v,
     hasMoreAfter: E.hasMoreAfter
   });
-  let B = (n = C, (0, o.useStateFromStores)([p.default], () => {
+  let G = (n = C, (0, o.useStateFromStores)([p.default], () => {
       let e = A.default.can(j.Permissions.READ_MESSAGE_HISTORY, n);
       return e ? null : p.default.getViewingRolesTimestamp(n.getGuildId())
     })),
@@ -108,9 +108,9 @@ let F = s.memo(function(e) {
       loadMore: w.loadMore,
       scrollManager: w,
       specs: k,
-      filterAfterTimestamp: null != R ? R : B,
-      showingQuarantineBanner: x,
-      isAtBottom: F,
+      filterAfterTimestamp: null != R ? R : G,
+      showingQuarantineBanner: y,
+      isAtBottom: H,
       jumpToPresent: () => {
         if (E.hasPresent()) {
           var e;
@@ -152,20 +152,20 @@ let F = s.memo(function(e) {
     {
       ref: q,
       ...X
-    } = (0, r.getContainerPropsFromNavigator)(G),
+    } = (0, r.getContainerPropsFromNavigator)(B),
     J = s.useCallback(e => {
       var t;
       w.ref.current = e, q.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
     }, []);
   return (0, a.jsx)(r.ListNavigatorProvider, {
-    navigator: G,
+    navigator: B,
     children: (0, a.jsxs)("div", {
-      className: i(H.messagesWrapper, l, "group-spacing-".concat(c)),
+      className: i(F.messagesWrapper, l, "group-spacing-".concat(c)),
       children: [null != Y ? Y : W, (0, a.jsxs)(u.PinToBottomScrollerAuto, {
         ref: J,
         customTheme: !0,
-        className: i(h, H.scroller),
-        contentClassName: H.scrollerContent,
+        className: i(h, F.scroller),
+        contentClassName: F.scrollerContent,
         onResize: w.handleResize,
         onScroll: w.handleScroll,
         onMouseDown: w.handleMouseDown,
@@ -174,21 +174,21 @@ let F = s.memo(function(e) {
         tabIndex: -1,
         role: "group",
         children: [z, (0, a.jsxs)("ol", {
-          className: H.scrollerInner,
+          className: F.scrollerInner,
           "aria-label": b.default.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
             channelName: C.name
           }),
           ...X,
           children: [(0, a.jsx)("span", {
-            className: H.navigationDescription,
+            className: F.navigationDescription,
             id: "messagesNavigationDescription",
             "aria-hidden": !0,
             children: b.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
           }), V, (0, a.jsx)("div", {
             className: i({
-              [H.scrollerSpacer]: !x,
-              [H.empty]: 0 === E.length && !E.loadingMore,
-              [H.emptyForum]: 1 === E.length && !E.loadingMore && C.isForumPost() && (null === (t = E.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
+              [F.scrollerSpacer]: !y,
+              [F.empty]: 0 === E.length && !E.loadingMore,
+              [F.emptyForum]: 1 === E.length && !E.loadingMore && C.isForumPost() && (null === (t = E.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
             })
           })]
         })]
@@ -224,7 +224,7 @@ var U = s.memo(function(e) {
     }
   }(t), {
     messageGroupSpacing: L,
-    fontSize: y,
+    fontSize: x,
     messageDisplayCompact: O,
     renderSpoilers: D,
     keyboardModeEnabled: P
@@ -256,7 +256,7 @@ var U = s.memo(function(e) {
     }
   }(), {
     messages: b,
-    channelStream: H,
+    channelStream: F,
     oldestUnreadMessageId: U,
     editingMessageId: k
   } = function(e) {
@@ -281,7 +281,7 @@ var U = s.memo(function(e) {
         return u && d && null !== (t = E.default.summaries(e.id)) && void 0 !== t ? t : []
       }, [u, e.id, d]),
       p = (0, o.useStateFromStores)([E.default], () => u ? E.default.selectedSummary(e.id) : null, [u, e.id]),
-      m = s.useMemo(() => (0, x.default)({
+      m = s.useMemo(() => (0, y.default)({
         channel: e,
         messages: a,
         oldestUnreadMessageId: l,
@@ -302,21 +302,21 @@ var U = s.memo(function(e) {
   }(t);
   return (0, a.jsx)(v.ObscuredDisplayContext.Provider, {
     value: (0, R.default)(D, u),
-    children: (0, a.jsx)(F, {
+    children: (0, a.jsx)(H, {
       ...r,
       messageGroupSpacing: L,
       showNewMessagesBar: !0,
       channel: t,
       messageDisplayCompact: !i && (l || O),
       messages: b,
-      channelStream: H,
+      channelStream: F,
       permissionVersion: d,
       uploads: (0, o.useStateFromStores)([I.default], () => I.default.getFiles(t.id), [t]),
       unreadCount: (0, o.useStateFromStores)([M.default], () => M.default.getUnreadCount(t.id), [t]),
       hasUnreads: null != U,
       canChat: p,
       editingMessageId: k,
-      fontSize: y,
+      fontSize: x,
       keyboardModeEnabled: P,
       showingQuarantineBanner: n
     })

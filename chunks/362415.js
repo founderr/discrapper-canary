@@ -5,8 +5,8 @@ a.r(t), a.d(t, {
   }
 }), a("424973");
 var l = a("884691"),
-  n = a("716241"),
-  s = a("49111");
+  s = a("716241"),
+  n = a("49111");
 
 function r(e, t, a, r) {
   let i = l.useCallback(() => {
@@ -18,7 +18,7 @@ function r(e, t, a, r) {
       null != e.text && l.push(e.text);
       let t = e.image;
       null != t && (null != t.emoji ? o += 1 : null != t.stickerId ? u += 1 : null != t.mediaAttachmentState && (i += 1))
-    }), n.default.trackWithMetadata(s.AnalyticEvents.POLL_CREATION_CANCELLED, {
+    }), s.default.trackWithMetadata(n.AnalyticEvents.POLL_CREATION_CANCELLED, {
       question_text: e,
       answers_text: l,
       answers_count: t.length,

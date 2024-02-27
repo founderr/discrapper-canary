@@ -14,8 +14,8 @@ var n = s("37983"),
   c = s("923702"),
   d = s("719923"),
   _ = s("153160"),
-  f = s("478968"),
-  m = s("510928"),
+  m = s("478968"),
+  f = s("510928"),
   E = s("646718"),
   I = s("782340"),
   C = s("454555"),
@@ -30,7 +30,7 @@ function p(e) {
     confettiCanvas: T,
     userWasChurned: R = !1,
     userDiscountOffer: P
-  } = e, S = (0, u.default)(), A = (0, l.isThemeDark)(S) ? N : M, L = a.useRef(null), [g, O] = a.useState(!1), x = (0, f.useChurnDiscountedPrice)(t, E.SubscriptionPlans.PREMIUM_MONTH_TIER_2, P), h = (0, d.getPrice)(E.SubscriptionPlans.PREMIUM_MONTH_TIER_2), y = (0, _.formatPrice)(h.amount, h.currency), D = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+  } = e, S = (0, u.default)(), A = (0, l.isThemeDark)(S) ? N : M, L = a.useRef(null), [g, O] = a.useState(!1), x = (0, m.useChurnDiscountedPrice)(t, E.SubscriptionPlans.PREMIUM_MONTH_TIER_2, P), h = (0, d.getPrice)(E.SubscriptionPlans.PREMIUM_MONTH_TIER_2), y = (0, _.formatPrice)(h.amount, h.currency), D = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   if (a.useEffect(() => {
       null != L.current && null != x && O(!0)
     }, [L, g, x]), null == P || null == x) return null;
@@ -48,7 +48,7 @@ function p(e) {
       })
     });
   return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(m.default, {
+    children: [(0, n.jsx)(f.default, {
       premiumType: s,
       className: C.cancellationHeader,
       onClose: p

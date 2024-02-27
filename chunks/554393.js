@@ -30,8 +30,8 @@ var a = n("37983"),
   v = n("404008"),
   L = n("680986"),
   R = n("612278"),
-  x = n("867965"),
-  y = n("688169"),
+  y = n("867965"),
+  x = n("688169"),
   O = n("49111"),
   D = n("782340"),
   P = n("425833"),
@@ -44,9 +44,9 @@ function b(e) {
     isLastItem: l = !1,
     parentChannelId: b
   } = e, {
-    ref: H,
-    width: F
-  } = (0, d.default)(), [U, k] = s.useState(3), [w, G] = s.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(t), [t]), {
+    ref: F,
+    width: H
+  } = (0, d.default)(), [U, k] = s.useState(3), [w, B] = s.useState(!n), [G, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(t), [t]), {
     firstMessage: Z
   } = (0, R.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([S.default], () => S.default.hasJoined(t)), {
     disableReactionUpdates: Y,
@@ -54,17 +54,17 @@ function b(e) {
     isLurking: q,
     isGuest: X,
     isPendingMember: J
-  } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(b)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = s.useCallback(e => {
+  } = (0, p.default)(W), Q = (0, x.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(b)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = s.useCallback(e => {
     let t = e[0];
     if (null != t && n) {
       let e = t.intersectionRect,
         n = t.boundingClientRect,
         a = (e.bottom - e.top) / (n.bottom - n.top);
-      G(a < 1)
+      B(a < 1)
     }
   }, [n]);
   s.useLayoutEffect(() => {
-    let e = H.current;
+    let e = F.current;
     if (null == e || !n) return;
     let t = new IntersectionObserver(en, {
       threshold: 1
@@ -75,14 +75,14 @@ function b(e) {
   });
   let [ea, es] = s.useState(!0);
   if (s.useEffect(() => {
-      if (null != F) k(Math.floor((F - 280) / 58)), es(!1)
-    }, [F]), null == W || null == Z) return null;
+      if (null != H) k(Math.floor((H - 280) / 58)), es(!1)
+    }, [H]), null == W || null == Z) return null;
   let el = Z.reactions.length > 0,
     ei = () => {
       z ? T.default.leaveThread(W, "Forum Toolbar") : T.default.joinThread(W, "Forum Toolbar")
     },
     er = () => {
-      (0, x.trackForumPostLinkCopied)({
+      (0, y.trackForumPostLinkCopied)({
         postId: W.id,
         location: {
           section: O.AnalyticsSections.CHANNEL_HEADER
@@ -95,7 +95,7 @@ function b(e) {
       className: i(P.container, {
         [P.header]: w
       }),
-      ref: H,
+      ref: F,
       children: [(0, a.jsxs)("div", {
         className: i(P.reactButtons, {
           [P.loading]: ea
@@ -166,13 +166,13 @@ function b(e) {
             onClick: er,
             className: P.button,
             innerClassName: P.buttonInner,
-            children: [B ? (0, a.jsx)(I.default, {
+            children: [G ? (0, a.jsx)(I.default, {
               width: 16,
               height: 16
             }) : (0, a.jsx)(N.default, {
               width: 16,
               height: 16
-            }), B ? D.default.Messages.COPIED : null]
+            }), G ? D.default.Messages.COPIED : null]
           })
         })]
       })]

@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
     return i
   },
   clearChannelSafetyWarnings: function() {
-    return l
+    return _
   }
 });
 var n = s("872717"),
@@ -37,7 +37,7 @@ function i(e, t, s) {
   })
 }
 
-function l(e) {
+function _(e) {
   a.default.dispatch({
     type: "CLEAR_CHANNEL_SAFETY_WARNINGS",
     channelId: e
