@@ -17,9 +17,6 @@ n.r(t), n.d(t, {
   },
   PollDurations: function() {
     return s
-  },
-  POLLS_SUPPORTED_EXPRESSION_PICKER_VIEW_TYPES: function() {
-    return c
   }
 }), n("222007");
 var s, l, a = n("13030");
@@ -28,5 +25,4 @@ let i = "POLL_CREATION_MODAL_KEY",
   o = 6,
   u = 300,
   d = 55;
-(l = s || (s = {}))[l.ONE_HOUR = 1] = "ONE_HOUR", l[l.ONE_DAY = 24] = "ONE_DAY", l[l.THREE_DAYS = 72] = "THREE_DAYS", l[l.SEVEN_DAYS = 168] = "SEVEN_DAYS";
-let c = new Set([a.ExpressionPickerViewType.GIF, a.ExpressionPickerViewType.EMOJI])
+(l = s || (s = {}))[l.ONE_HOUR = 1] = "ONE_HOUR", l[l.ONE_DAY = 24] = "ONE_DAY", l[l.THREE_DAYS = 72] = "THREE_DAYS", l[l.SEVEN_DAYS = 168] = "SEVEN_DAYS", a.ExpressionPickerViewType.GIF, a.ExpressionPickerViewType.EMOJI
