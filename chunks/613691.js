@@ -117,38 +117,38 @@ function h(e, t) {
   }), t))
 }
 
-function v(e, t, n) {
-  let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-    i = l.SpotifyEndpoints.PLAYER_OPEN(l.SpotifyResourceTypes.TRACK, n, !1),
+function v(e, t, n, s) {
+  let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+    a = l.SpotifyEndpoints.PLAYER_OPEN(s, n, !1),
     {
-      deviceId: a,
-      position: o,
-      contextUri: d,
-      repeat: u
-    } = s;
+      deviceId: o,
+      position: d,
+      contextUri: u,
+      repeat: f
+    } = i;
   return c.put(e, t, {
     url: l.SpotifyEndpoints.PLAYER_PLAY,
     query: {
-      device_id: a
+      device_id: o
     },
     body: {
-      context_uri: null != d ? d : void 0,
-      uris: null == d ? [i] : void 0,
-      offset: null != d ? {
-        uri: i
+      context_uri: null != u ? u : void 0,
+      uris: null == u ? [a] : void 0,
+      offset: null != u ? {
+        uri: a
       } : void 0,
-      position_ms: null != o ? o : 0
+      position_ms: null != d ? d : 0
     }
-  }).then(n => null == u ? n : c.put(e, t, {
+  }).then(n => null == f ? n : c.put(e, t, {
     url: l.SpotifyEndpoints.PLAYER_REPEAT,
     query: {
-      device_id: a,
-      state: u ? "context" : "off"
+      device_id: o,
+      state: f ? "context" : "off"
     }
   })).then(e => (r.default.dispatch({
     type: "SPOTIFY_PLAYER_PLAY",
     id: n,
-    position: null != o ? o : 0
+    position: null != d ? d : 0
   }), e))
 }
 
