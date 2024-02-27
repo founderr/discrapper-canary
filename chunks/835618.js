@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var i = s("414456"),
-  n = s.n(i),
-  r = s("77078"),
+  r = s.n(i),
+  n = s("77078"),
   l = s("685665"),
   o = s("53253"),
   u = s("635956"),
@@ -34,29 +34,29 @@ var i = s("414456"),
     }), m = R && S;
     return (0, a.jsx)(f, {
       children: (0, a.jsxs)("div", {
-        className: n(c.container, t),
+        className: r(c.container, t),
         children: [(0, a.jsxs)("div", {
           className: c.textContainer,
           style: i,
-          children: [(0, a.jsx)(r.Heading, {
+          children: [(0, a.jsx)(n.Heading, {
             variant: "heading-lg/extrabold",
             className: c.heading,
             children: m ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.default.Messages.GIFT_NITRO
-          }), (0, a.jsx)(r.Text, {
+          }), (0, a.jsx)(n.Text, {
             variant: "text-sm/medium",
             children: m ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
           }), (0, a.jsx)(u.default, {
             isGift: !0,
             className: c.giftCardButton,
-            look: r.Button.Looks.OUTLINED,
+            look: n.Button.Looks.OUTLINED,
             buttonText: d.default.Messages.GIFT_NITRO,
             buttonTextClassName: c.giftButtonCTA,
-            color: r.Button.Colors.CUSTOM,
+            color: n.Button.Colors.CUSTOM,
             premiumModalAnalyticsLocation: T
           })]
         }), (0, a.jsx)("img", {
           src: m ? E : _,
-          className: n(c.bannerImage, s),
+          className: r(c.bannerImage, s),
           alt: "gift nitro banner"
         })]
       })

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var i = s("90915"),
-  n = s("446674"),
-  r = s("77078"),
+  r = s("446674"),
+  n = s("77078"),
   l = s("901582"),
   o = s("86621"),
   u = s("984376"),
@@ -23,14 +23,14 @@ var i = s("90915"),
   R = s("646718"),
   m = s("782340"),
   A = s("571366");
-let p = n.default.connectStores([I.default], () => ({
+let p = r.default.connectStores([I.default], () => ({
   user: I.default.getCurrentUser()
 }))((0, u.default)((0, o.default)(e => {
   let {
     AnalyticsLocationProvider: t
   } = (0, c.default)(d.default.HOME_PAGE_PREMIUM_TAB), {
     isAuthenticated: s,
-    user: n
+    user: r
   } = e;
   return s ? (0, a.jsxs)("div", {
     className: A.homeWrapperNormal,
@@ -47,10 +47,10 @@ let p = n.default.connectStores([I.default], () => ({
         })]
       })
     }), (0, a.jsx)(t, {
-      children: null == n ? (0, a.jsx)(T.default, {
+      children: null == r ? (0, a.jsx)(T.default, {
         align: T.default.Align.CENTER,
         justify: T.default.Justify.CENTER,
-        children: (0, a.jsx)(r.Spinner, {
+        children: (0, a.jsx)(n.Spinner, {
           className: A.spinner
         })
       }) : (0, a.jsx)(E.default, {

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var i = s("414456"),
-  n = s.n(i),
-  r = s("448052"),
+  r = s.n(i),
+  n = s("448052"),
   l = s("77078"),
   o = s("782340"),
   u = s("871610"),
@@ -19,7 +19,7 @@ var i = s("414456"),
       onBackClick: s
     } = e;
     return (0, a.jsxs)("div", {
-      className: n(u.container, t),
+      className: r(u.container, t),
       "data-testid": "all-perks-hero-header",
       children: [(0, a.jsx)("img", {
         src: d,
@@ -32,7 +32,7 @@ var i = s("414456"),
           children: (0, a.jsxs)(l.Clickable, {
             onClick: s,
             className: u.backButton,
-            children: [(0, a.jsx)(r.ChevronSmallLeftIcon, {
+            children: [(0, a.jsx)(n.ChevronSmallLeftIcon, {
               color: "currentColor"
             }), o.default.Messages.BACK]
           })

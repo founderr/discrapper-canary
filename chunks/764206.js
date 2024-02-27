@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 });
 var a, i = s("37983"),
-  n = s("884691"),
-  r = s("414456"),
-  l = s.n(r),
+  r = s("884691"),
+  n = s("414456"),
+  l = s.n(n),
   o = s("888400"),
   u = s("943232"),
   d = s("36694"),
@@ -33,10 +33,10 @@ let f = e => {
       circle: t,
       smallHeader: s,
       text: a,
-      className: n
+      className: r
     } = e;
     return (0, i.jsxs)("div", {
-      className: l(T.recommendationReason, n),
+      className: l(T.recommendationReason, r),
       children: [t, (0, i.jsxs)("div", {
         className: T.description,
         children: [null != s ? (0, i.jsx)("div", {
@@ -49,7 +49,7 @@ let f = e => {
       })]
     })
   };
-a = class extends n.Component {
+a = class extends r.Component {
   render() {
     let {
       reason: e,

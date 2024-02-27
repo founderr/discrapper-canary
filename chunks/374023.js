@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   useIsEligibleForQuests: function() {
-    return l
+    return u
   }
 });
 var s = n("619935"),
@@ -45,7 +45,7 @@ let r = (0, i.createExperiment)({
     });
     return i.enabled && !a.paymentsBlocked
   },
-  l = e => {
+  u = e => {
     let {
       location: t,
       autoTrackExposure: n

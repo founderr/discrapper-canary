@@ -8,6 +8,6 @@ var t = E("286235");
 
 function o() {
   var e;
-  let _ = parseInt((e = "269137", "269137"));
-  return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("269137")), _ = 0), _
+  let _ = parseInt((e = "269194", "269194"));
+  return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("269194")), _ = 0), _
 }

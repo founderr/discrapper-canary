@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("65597"),
   i = s("819855"),
-  n = s("79112"),
-  r = s("841098"),
+  r = s("79112"),
+  n = s("841098"),
   l = s("697218"),
   o = s("719923"),
   u = s("49111"),
@@ -42,7 +42,7 @@ let k = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
   B = e => {
     let {
       styles: t
-    } = e, s = (0, r.default)(), i = (0, a.default)([l.default], () => {
+    } = e, s = (0, n.default)(), i = (0, a.default)([l.default], () => {
       let e = l.default.getCurrentUser();
       return o.default.canUsePremiumProfileCustomization(e)
     }), B = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, y = {
@@ -81,7 +81,7 @@ let k = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
         title: c.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
         description: e => {
           let t = () => {
-            n.default.open(u.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
+            r.default.open(u.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
               scrollPosition: d.ProfileCustomizationScrollPositions.TRY_IT_OUT,
               analyticsLocations: e
             })

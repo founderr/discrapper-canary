@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   i = s("884691"),
-  n = s("414456"),
-  r = s.n(n),
+  r = s("414456"),
+  n = s.n(r),
   l = s("446674"),
   o = s("77078"),
   u = s("913144"),
@@ -42,7 +42,7 @@ var a = s("37983"),
     let {
       entrypoint: t = U.PremiumMarketingEntrypoints.UserSettings
     } = e, s = (0, f.useBlockedPaymentsConfig)(), {
-      AnalyticsLocationProvider: n,
+      AnalyticsLocationProvider: r,
       sourceAnalyticsLocations: k
     } = (0, T.default)(I.default.PREMIUM_MARKETING), {
       enabled: B
@@ -69,14 +69,14 @@ var a = s("37983"),
     if (J) return (0, a.jsx)(E.default, {});
     if (s) return (0, a.jsx)(R.BlockedPaymentsContentSettings, {});
     let q = t === U.PremiumMarketingEntrypoints.ApplicationStoreHome;
-    return q && z && !B ? (0, a.jsx)(n, {
+    return q && z && !B ? (0, a.jsx)(r, {
       children: (0, a.jsx)(b.default, {})
-    }) : y && W && !w ? (0, a.jsx)(n, {
+    }) : y && W && !w ? (0, a.jsx)(r, {
       children: (0, a.jsx)(D.default, {
         entrypoint: t
       })
     }) : (0, a.jsx)("div", {
-      className: r(G.container, G.loading),
+      className: n(G.container, G.loading),
       children: (0, a.jsx)(o.Spinner, {})
     })
   }

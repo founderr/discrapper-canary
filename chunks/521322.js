@@ -6,36 +6,36 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   i = s("884691"),
-  n = s("458960"),
-  r = s("458177");
+  r = s("458960"),
+  n = s("458177");
 let l = e => {
   let {
     isVisible: t,
     children: s
-  } = e, [l] = (0, i.useState)(new n.default.Value(t ? 1 : 0)), [o] = (0, i.useState)(new n.default.Value(t ? 1 : .99));
+  } = e, [l] = (0, i.useState)(new r.default.Value(t ? 1 : 0)), [o] = (0, i.useState)(new r.default.Value(t ? 1 : .99));
   (0, i.useEffect)(() => {
     t ? u() : d()
   }, [t]);
   let u = () => {
-      n.default.parallel([n.default.timing(l, {
+      r.default.parallel([r.default.timing(l, {
         toValue: 1,
         duration: 700
-      }), n.default.timing(o, {
+      }), r.default.timing(o, {
         toValue: 1,
         duration: 700
       })]).start()
     },
     d = () => {
-      n.default.parallel([n.default.timing(l, {
+      r.default.parallel([r.default.timing(l, {
         toValue: 0,
         duration: 700
-      }), n.default.timing(o, {
+      }), r.default.timing(o, {
         toValue: .99,
         duration: 700
       })]).start()
     };
-  return (0, a.jsx)(n.default.div, {
-    className: r.fullScreen,
+  return (0, a.jsx)(r.default.div, {
+    className: n.fullScreen,
     style: {
       opacity: l,
       transform: [{

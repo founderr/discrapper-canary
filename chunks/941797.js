@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   i = s("884691"),
-  n = s("414456"),
-  r = s.n(n),
+  r = s("414456"),
+  n = s.n(r),
   l = s("907002"),
   o = s("891722"),
   u = s("704426"),
@@ -18,7 +18,7 @@ var a = s("37983"),
     let {
       cards: t,
       className: s,
-      cardType: n
+      cardType: r
     } = e, E = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [I, T] = i.useState(0), [f, S] = i.useState(E()), [R, m] = i.useState(!1), A = t.length;
     i.useEffect(() => {
       let e = () => {
@@ -44,7 +44,7 @@ var a = s("37983"),
           onClick: R ? () => {
             T(e => 0 === e ? A - f : e - 1)
           } : void 0,
-          className: r({
+          className: n({
             [_.leftArrow]: R,
             [_.inactiveArrow]: !R
           }),
@@ -65,7 +65,7 @@ var a = s("37983"),
               },
               children: (0, a.jsx)(c.default, {
                 ...t[s],
-                cardType: n
+                cardType: r
               }, "".concat(t[s].name, "_").concat(s, "_perks_card"))
             }, "".concat(t[s].name, "_").concat(s, "_animated_div"))
           })

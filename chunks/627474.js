@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983"),
   i = s("884691"),
-  n = s("414456"),
-  r = s.n(n),
+  r = s("414456"),
+  n = s.n(r),
   l = s("77078"),
   o = s("411691"),
   u = s("527715"),
@@ -21,16 +21,16 @@ let T = e => {
     showAllPerksButton: t,
     leftAlignHeaders: s,
     title: i,
-    headerClassname: n
-  } = e, r = (0, a.jsx)(l.Heading, {
+    headerClassname: r
+  } = e, n = (0, a.jsx)(l.Heading, {
     variant: "heading-xxl/extrabold",
     color: "header-primary",
-    className: null != n ? n : I.heading,
+    className: null != r ? r : I.heading,
     children: i
   });
-  return null == t ? r : s ? (0, a.jsxs)("div", {
+  return null == t ? n : s ? (0, a.jsxs)("div", {
     className: I.sectionHeader,
-    children: [r, null != t && (0, a.jsx)("div", {
+    children: [n, null != t && (0, a.jsx)("div", {
       className: I.showAllPerksButton,
       children: t
     })]
@@ -38,7 +38,7 @@ let T = e => {
     className: I.container,
     children: (0, a.jsx)("div", {
       className: I.sectionHeaderSeeAll,
-      children: r
+      children: n
     })
   })
 };
@@ -46,7 +46,7 @@ var f = e => {
   let {
     className: t,
     variant: s = _.PerksDiscoverabilityVariants.PERKS_DISCOVERABILITY,
-    noBackground: n = !1,
+    noBackground: r = !1,
     leftAlignHeaders: f = !1,
     showAllPerksButton: S,
     headerClassname: R,
@@ -72,7 +72,7 @@ var f = e => {
     h = M.some(e => null != e.pillText);
   return (0, a.jsxs)("div", {
     ref: A,
-    className: r(I.section, {
+    className: n(I.section, {
       [I.centerAlignSection]: !f,
       [I.leftAlignSection]: f
     }, t),
@@ -84,7 +84,7 @@ var f = e => {
     }), !g && (0, a.jsx)(l.Text, {
       variant: "text-lg/normal",
       color: "header-primary",
-      className: r(I.subtitle, {
+      className: n(I.subtitle, {
         [I.subtitle]: null == S || f,
         [I.subtitleWithButton]: null != S && !f,
         [I.fullWidth]: C || f,
@@ -94,16 +94,16 @@ var f = e => {
       }),
       children: P.subtitle
     }), !f && null != S && (0, a.jsx)("div", {
-      className: r(I.showAllPerksButtonCenter),
+      className: n(I.showAllPerksButtonCenter),
       children: S
     }), (0, a.jsx)("div", {
-      className: r({
+      className: n({
         [I.cardContainer]: m,
         [I.cardContainerNarrowWidth]: !m
       }),
       children: M.map((e, t) => (0, a.jsx)(E.default, {
         ...e,
-        forceShadow: n
+        forceShadow: r
       }, "".concat(e.name, "_").concat(t)))
     })]
   })

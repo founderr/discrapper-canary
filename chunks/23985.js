@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983"),
   i = s("884691"),
-  n = s("414456"),
-  r = s.n(n),
+  r = s("414456"),
+  n = s.n(r),
   l = s("446674"),
   o = s("1017"),
   u = s("102985"),
@@ -57,12 +57,12 @@ class A extends i.Component {
       nonSocialReasons: t,
       storeListing: s,
       hidePersonalInformation: i,
-      className: n
+      className: r
     } = this.props;
     if (0 === e.length && 0 === t.length && null == s.staffNotes) return null;
     let l = this.getReviewToRender();
     return (0, a.jsxs)("div", {
-      className: r(m.root, n),
+      className: n(m.root, r),
       children: [(0, a.jsx)("div", {
         className: m.header,
         children: R.default.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION

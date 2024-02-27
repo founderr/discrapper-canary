@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var i = s("414456"),
-  n = s.n(i),
-  r = s("77078"),
+  r = s.n(i),
+  n = s("77078"),
   l = s("812204"),
   o = s("685665"),
   u = s("324878"),
@@ -25,7 +25,7 @@ var i = s("414456"),
     } = (0, o.default)(l.default.PREMIUM_MARKETING_HERO_CTA), i = (0, u.useHasActiveTrial)();
     return (0, a.jsx)(s, {
       children: (0, a.jsxs)("div", {
-        className: n(E.container, t),
+        className: r(E.container, t),
         "data-testid": "subscriber-nitro-home-hero-header",
         children: [(0, a.jsx)("img", {
           src: I,
@@ -35,18 +35,18 @@ var i = s("414456"),
           className: E.content,
           children: [(0, a.jsx)(c.PremiumPillWithSparkles, {
             text: _.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
-            className: n(E.trialPill, {
+            className: r(E.trialPill, {
               [E.hidden]: !i
             }),
             colorOptions: c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
-          }), (0, a.jsx)(r.Heading, {
+          }), (0, a.jsx)(n.Heading, {
             variant: "display-lg",
             color: "always-white",
             children: _.default.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE
           }), (0, a.jsx)("div", {
             className: E.buttonContainer,
             children: (0, a.jsx)(d.default, {
-              color: r.ButtonColors.BRAND,
+              color: n.ButtonColors.BRAND,
               buttonText: _.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
               className: E.button,
               isGift: !0

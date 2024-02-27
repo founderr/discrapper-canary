@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
     return X
   }
 });
-var a, i, n = s("65597"),
-  r = s("151426"),
+var a, i, r = s("65597"),
+  n = s("151426"),
   l = s("79112"),
   o = s("841098"),
   u = s("812204"),
@@ -55,7 +55,7 @@ var a, i, n = s("65597"),
 var X = () => {
   let {
     analyticsLocations: e
-  } = (0, d.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, o.default)(), s = g.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.default)([T.default], () => T.default.getPremiumTypeSubscription()), i = null != a ? S.default.getPremiumPlanItem(a) : null, X = null != i ? S.default.getSkuIdForPlan(i.planId) : null, Z = X === A.PremiumSubscriptionSKUs.TIER_2, {
+  } = (0, d.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, o.default)(), s = g.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, r.default)([T.default], () => T.default.getPremiumTypeSubscription()), i = null != a ? S.default.getPremiumPlanItem(a) : null, X = null != i ? S.default.getSkuIdForPlan(i.planId) : null, Z = X === A.PremiumSubscriptionSKUs.TIER_2, {
     flipped: J
   } = (0, R.useWhatsNewAvatarDecoRollout)(), {
     flipped: q
@@ -83,7 +83,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: v,
       canReveal: J,
-      dismissibleContentType: r.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
+      dismissibleContentType: n.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     } : {
       name: "avatarDecorations",
       title: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
@@ -92,7 +92,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: v,
       canReveal: J,
-      dismissibleContentType: r.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
+      dismissibleContentType: n.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     },
     clientThemes: {
       name: "clientThemes",
@@ -200,7 +200,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: H,
       canReveal: q,
-      dismissibleContentType: r.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
+      dismissibleContentType: n.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
     } : {
       name: "profileEffects",
       title: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
@@ -209,7 +209,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: H,
       canReveal: q,
-      dismissibleContentType: r.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
+      dismissibleContentType: n.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
     },
     profiles: {
       name: "profiles",

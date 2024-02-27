@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983"),
   i = s("884691"),
-  n = s("414456"),
-  r = s.n(n),
+  r = s("414456"),
+  n = s.n(r),
   l = s("446674"),
   o = s("77078"),
   u = s("106435"),
@@ -20,7 +20,7 @@ function I(e) {
   let {
     smallerText: t,
     className: s,
-    textColor: n
+    textColor: r
   } = e, u = (0, l.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), c = u.map((e, t) => (0, a.jsx)(T, {
     affinity: e,
     applyMask: t !== u.length - 1
@@ -33,7 +33,7 @@ function I(e) {
     username: I(u[0])
   }) : "", [u]);
   return 0 === u.length ? null : (0, a.jsxs)("div", {
-    className: r(E.container, s),
+    className: n(E.container, s),
     children: [(0, a.jsx)("div", {
       className: E.iconContainer,
       children: c
@@ -42,11 +42,11 @@ function I(e) {
       children: (0, a.jsx)(function() {
         return t ? (0, a.jsx)(o.Text, {
           variant: "text-lg/medium",
-          color: n,
+          color: r,
           children: f
         }) : (0, a.jsx)(o.Heading, {
           variant: "heading-xl/medium",
-          color: n,
+          color: r,
           children: f
         })
       }, {})
@@ -60,19 +60,19 @@ function T(e) {
     applyMask: s
   } = e, {
     avatarSrc: i,
-    eventHandlers: n
+    eventHandlers: r
   } = (0, u.default)({
     user: t,
     size: c.AvatarSizes.SIZE_32,
     animateOnHover: !0
   });
   return (0, a.jsx)(o.Avatar, {
-    className: r(E.icon, {
+    className: n(E.icon, {
       [E.mask]: s
     }),
     src: i,
     "aria-label": t.username,
     size: c.AvatarSizes.SIZE_32,
-    ...n
+    ...r
   })
 }

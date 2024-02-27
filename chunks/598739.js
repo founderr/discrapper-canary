@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   NitroLandingPages: function() {
-    return n
+    return r
   },
   PerksDiscoverabilityVariants: function() {
-    return r
+    return n
   },
   getThemedImage: function() {
     return I
@@ -16,14 +16,14 @@ s.r(t), s.d(t, {
     return f
   }
 });
-var a, i, n, r, l = s("446674"),
+var a, i, r, n, l = s("446674"),
   o = s("819855"),
   u = s("411691"),
   d = s("521012"),
   c = s("719923"),
   _ = s("646718"),
   E = s("782340");
-(a = n || (n = {})).SEE_ALL = "See All Nitro Perks", a.MARKETING = "Marketing", a.HOME = "Home", (i = r || (r = {})).PERKS_DISCOVERABILITY = "perks_discoverability", i.WHATS_NEW = "whats_new", i.CARD_CAROUSEL_FIRST_ROW = "card_carousel_first_row", i.CARD_CAROUSEL_SECOND_ROW = "card_carousel_second_row", i.CARD_CAROUSEL_THIRD_ROW = "card_carousel_final_row";
+(a = r || (r = {})).SEE_ALL = "See All Nitro Perks", a.MARKETING = "Marketing", a.HOME = "Home", (i = n || (n = {})).PERKS_DISCOVERABILITY = "perks_discoverability", i.WHATS_NEW = "whats_new", i.CARD_CAROUSEL_FIRST_ROW = "card_carousel_first_row", i.CARD_CAROUSEL_SECOND_ROW = "card_carousel_second_row", i.CARD_CAROUSEL_THIRD_ROW = "card_carousel_final_row";
 let I = (e, t, s) => (0, o.isThemeDark)(e) ? t : s,
   T = (e, t, s, a) => {
     let i = [];

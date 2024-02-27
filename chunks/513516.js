@@ -4,9 +4,9 @@ s.r(t), s.d(t, {
     return A
   }
 });
-var a, i, n = s("37983");
+var a, i, r = s("37983");
 s("884691");
-var r = s("77078"),
+var n = s("77078"),
   l = s("915639"),
   o = s("36694"),
   u = s("945330"),
@@ -23,7 +23,7 @@ let S = e => {
       badge: s,
       variant: a
     } = e;
-    return (0, n.jsxs)(r.Text, {
+    return (0, r.jsxs)(n.Text, {
       color: "text-normal",
       variant: null != a ? a : "text-sm/normal",
       children: [t, " ", s]
@@ -34,7 +34,7 @@ let S = e => {
       text: t,
       variant: s
     } = e;
-    return (0, n.jsx)(r.Text, {
+    return (0, r.jsx)(n.Text, {
       color: "header-primary",
       variant: null != s ? s : "text-md/semibold",
       children: t
@@ -44,18 +44,18 @@ let S = e => {
     let {
       includes: t
     } = e;
-    return t ? (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(o.default, {
+    return t ? (0, r.jsxs)(r.Fragment, {
+      children: [(0, r.jsx)(o.default, {
         className: f.checkmarkIcon,
         "aria-hidden": !0
-      }), (0, n.jsx)(r.HiddenVisually, {
+      }), (0, r.jsx)(n.HiddenVisually, {
         children: T.default.Messages.INCLUDED
       })]
-    }) : (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(u.default, {
+    }) : (0, r.jsxs)(r.Fragment, {
+      children: [(0, r.jsx)(u.default, {
         className: f.closeIcon,
         "aria-hidden": !0
-      }), (0, n.jsx)(r.HiddenVisually, {
+      }), (0, r.jsx)(n.HiddenVisually, {
         children: T.default.Messages.NOT_INCLUDED
       })]
     })
@@ -67,230 +67,230 @@ let A = (e, t, s, a) => {
     }),
     o = {
       0: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           variant: i ? "heading-lg/extrabold" : void 0,
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE
         }),
-        column1: (0, n.jsx)(n.Fragment, {
-          children: (0, n.jsx)(R, {
+        column1: (0, r.jsx)(r.Fragment, {
+          children: (0, r.jsx)(R, {
             variant: i ? "heading-md/semibold" : void 0,
             text: d.default.formatPriceString(e, E.SubscriptionIntervalTypes.MONTH)
           })
         }),
-        column2: (0, n.jsx)(n.Fragment, {
-          children: (0, n.jsx)(R, {
+        column2: (0, r.jsx)(r.Fragment, {
+          children: (0, r.jsx)(R, {
             text: s ? a : d.default.formatPriceString(t, E.SubscriptionIntervalTypes.MONTH)
           })
         }),
         withBottomBorder: !i
       },
       1: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_EMOJI
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !0
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       2: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STICKER_V2
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !0
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       3: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !0
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       4: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !0
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       5: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
         }),
-        column1: (0, n.jsx)(R, {
+        column1: (0, r.jsx)(R, {
           text: (0, d.getMaxFileSizeForPremiumType)(E.PremiumTypes.TIER_0)
         }),
-        column2: (0, n.jsx)(R, {
+        column2: (0, r.jsx)(R, {
           text: (0, d.getMaxFileSizeForPremiumType)(E.PremiumTypes.TIER_2)
         })
       },
       6: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !1
         }),
-        column2: (0, n.jsx)(R, {
+        column2: (0, r.jsx)(R, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_STREAMING_DETAILS
         })
       },
       7: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
             numBoosts: E.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
             percentageOff: (0, c.formatPercent)(l.default.locale, E.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
           })
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !1
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       8: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PROFILE_THEMES
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !1
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       9: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_PROFILE
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !1
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       10: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS_GENERIC
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !1
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       11: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_CLIENT_THEME
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !1
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       12: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BADGE
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !0
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       13: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_VIDEO_BACKGROUND
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !0
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       14: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_SOUNDS_ANYWHERE
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !1
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         }),
         withBottomBorder: !i
       },
       15: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_ENTRY_SOUNDS_V2
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !1
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       21: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.AVATAR_PROFILE_BANNER_MARKETING
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !1
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       16: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_LIMIT
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !1
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         })
       },
       17: {
-        label: (0, n.jsx)(S, {
+        label: (0, r.jsx)(S, {
           text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_MESSAGE_LENGTH.format({
             maxChars: I.MAX_MESSAGE_LENGTH_PREMIUM
           })
         }),
-        column1: (0, n.jsx)(m, {
+        column1: (0, r.jsx)(m, {
           includes: !1
         }),
-        column2: (0, n.jsx)(m, {
+        column2: (0, r.jsx)(m, {
           includes: !0
         }),
         withBottomBorder: !i
       },
       18: {
-        label: (0, n.jsx)(r.Heading, {
+        label: (0, r.jsx)(n.Heading, {
           className: f.textColor,
           variant: "display-sm",
           children: "Make Discord Yours"
@@ -300,7 +300,7 @@ let A = (e, t, s, a) => {
         withBottomBorder: !1
       },
       19: {
-        label: (0, n.jsx)(r.Heading, {
+        label: (0, r.jsx)(n.Heading, {
           className: f.textColor,
           variant: "display-sm",
           children: "Enjoy an Upgraded Discord"
@@ -310,7 +310,7 @@ let A = (e, t, s, a) => {
         withBottomBorder: !1
       },
       20: {
-        label: (0, n.jsx)(r.Heading, {
+        label: (0, r.jsx)(n.Heading, {
           className: f.textColor,
           variant: "display-sm",
           children: "Show Up the Way You Want"

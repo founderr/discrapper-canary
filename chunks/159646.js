@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var i = s("414456"),
-  n = s.n(i),
-  r = s("77078"),
+  r = s.n(i),
+  n = s("77078"),
   l = s("79112"),
   o = s("423487"),
   u = s("701909"),
@@ -33,17 +33,17 @@ var i = s("414456"),
     let N = () => l.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
       g = null != A ? d.default.getSkuIdForPlan(A.planId) : null,
       C = g === _.PremiumSubscriptionSKUs.TIER_1;
-    return s = null != R ? R : m || S ? "always-white" : "text-normal", (0, a.jsxs)(r.Card, {
-      className: n(T.container, f, {
+    return s = null != R ? R : m || S ? "always-white" : "text-normal", (0, a.jsxs)(n.Card, {
+      className: r(T.container, f, {
         [T.lightTextLink]: S,
         [T.centerText]: m
       }),
-      type: r.Card.Types.CUSTOM,
+      type: n.Card.Types.CUSTOM,
       children: [(0, a.jsx)(o.default, {
-        className: n(T.icon, {
+        className: r(T.icon, {
           [T.lightThemeColorOnly]: m || S
         })
-      }), (0, a.jsx)(r.Text, {
+      }), (0, a.jsx)(n.Text, {
         variant: "text-sm/medium",
         color: s,
         children: C ? I.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({

@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983"),
   i = s("884691"),
-  n = s("895530"),
-  r = s("18987"),
+  r = s("895530"),
+  n = s("18987"),
   l = s("145131"),
   o = s("49111"),
   u = s("782340"),
@@ -18,7 +18,7 @@ class c extends i.PureComponent {
       contentRating: e,
       contentRatingAgency: t
     } = this.props.sku;
-    return null == e || null == t ? null : (0, a.jsx)(r.default, {
+    return null == e || null == t ? null : (0, a.jsx)(n.default, {
       className: d.rating,
       agency: t,
       rating: e.rating
@@ -89,16 +89,16 @@ class c extends i.PureComponent {
           7: u.default.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_DISCRIMINATION
         }
       },
-      r = e.descriptors.map(e => i[t][e]).join(", ");
+      n = e.descriptors.map(e => i[t][e]).join(", ");
     return (0, a.jsxs)("div", {
       className: s,
-      children: [(0, a.jsx)(n.default, {
+      children: [(0, a.jsx)(r.default, {
         children: u.default.Messages.APPLICATION_STORE_SECTION_TITLE_RATINGS
       }), (0, a.jsxs)(l.default, {
         className: d.content,
         children: [this.renderContentRatingImage(), (0, a.jsx)("div", {
           className: d.info,
-          children: r
+          children: n
         })]
       })]
     })
