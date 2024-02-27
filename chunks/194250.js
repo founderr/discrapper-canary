@@ -19,8 +19,8 @@ var l = n("37983"),
   v = n("93550"),
   _ = n("953143"),
   I = n("745049"),
-  m = n("75015"),
-  T = n("837979"),
+  T = n("75015"),
+  m = n("837979"),
   N = n("782340"),
   g = n("777181");
 
@@ -91,7 +91,7 @@ function x(e) {
     return null != e ? e : {
       startDate: i(O)
     }
-  }, [t, O]), [F, w] = a.useState(null), k = a.useRef(null);
+  }, [t, O]), [F, w] = a.useState(() => (0, h.recurrenceRuleToOption)(i(O), U)), k = a.useRef(null);
   a.useEffect(() => {
     if (R) {
       var e;
@@ -115,7 +115,7 @@ function x(e) {
           imgURI: e,
           file: t,
           onCrop: H,
-          uploadType: m.UploadTypes.SCHEDULED_EVENT_IMAGE,
+          uploadType: T.UploadTypes.SCHEDULED_EVENT_IMAGE,
           allowSkip: !0,
           ...n
         })
@@ -141,7 +141,7 @@ function x(e) {
             })
           },
           placeholder: N.default.Messages.GUILD_EVENT_CREATE_TOPIC_PLACEHOLDER,
-          maxLength: T.MAX_STAGE_TOPIC_LENGTH,
+          maxLength: m.MAX_STAGE_TOPIC_LENGTH,
           value: j,
           autoComplete: "off",
           inputRef: k
