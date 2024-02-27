@@ -416,26 +416,6 @@ function m(e) {
       null != i ? i(e, e => t(e)) : n(Error("RTC region latency test is not supported."))
     })
   }
-  getSoundshareStatus() {
-    return new Promise((e, t) => {
-      let {
-        getSoundshareStatus: n
-      } = (0, p.getVoiceEngine)();
-      null != n ? n(t => e(t)) : t(Error("getSoundshareStatus is not supported."))
-    })
-  }
-  enableSoundshare() {
-    return new Promise((e, t) => {
-      let {
-        enableSoundshare: n
-      } = (0, p.getVoiceEngine)();
-      null != n ? n((t, n) => e({
-        code: t,
-        message: n,
-        willRetry: !1
-      })) : t(Error("enableSoundshare is not supported."))
-    })
-  }
   createReplayConnection(e, t) {
     let n = d.default.createReplay(e, t);
     return null == n ? null : (n.on(u.BaseConnectionEvent.Destroy, e => {

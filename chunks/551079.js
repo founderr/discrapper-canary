@@ -227,12 +227,6 @@ i = class extends o.default {
   rankRtcRegions(e) {
     return Promise.reject(Error("RTC region latency test is not supported."))
   }
-  getSoundshareStatus() {
-    return Promise.reject(Error("getSoundshareStatus is not supported."))
-  }
-  enableSoundshare() {
-    return Promise.reject(Error("enableSoundshare is not supported."))
-  }
   applyMediaFilterSettings(e) {
     return Promise.resolve()
   }

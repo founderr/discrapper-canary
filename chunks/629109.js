@@ -327,10 +327,5 @@ var A = {
       type: "MEDIA_ENGINE_INTERACTION_REQUIRED",
       required: !1
     })
-  },
-  enableSoundshare() {
-    !g() && s.default.dispatch({
-      type: "MEDIA_ENGINE_ENABLE_SOUNDSHARE"
-    })
   }
 }
