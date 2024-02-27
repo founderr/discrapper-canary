@@ -10,12 +10,12 @@ s.r(t), s.d(t, {
 var n, a, o = s("37983"),
   r = s("884691"),
   i = s("77078"),
-  l = s("277734"),
-  u = s("217736"),
-  _ = s("13355"),
-  c = s("271201"),
-  d = s("330460"),
-  E = s("763332"),
+  _ = s("277734"),
+  l = s("217736"),
+  u = s("13355"),
+  E = s("271201"),
+  c = s("330460"),
+  d = s("763332"),
   T = s("417365");
 (a = n || (n = {}))[a.INTRO = 0] = "INTRO", a[a.SAFETY_TIPS = 1] = "SAFETY_TIPS", a[a.TAKE_ACTION = 2] = "TAKE_ACTION";
 var N = e => {
@@ -25,21 +25,23 @@ var N = e => {
     senderId: n,
     modalProps: a,
     channelId: N
-  } = e, I = null != (0, _.useSafetyToolsButtonTooltipForChannel)(N), [R, S] = r.useState(0), [A, f] = r.useState(!1);
-
-  function C(e) {
-    S(e)
-  }
-
-  function O() {
-    a.onClose(), (0, l.dismissChannelSafetyWarnings)(N, [t]), (0, u.trackCtaEvent)({
+  } = e, A = null != (0, u.useSafetyToolsButtonTooltipForChannel)(N), [R, I] = r.useState(0), S = r.useCallback(e => {
+    (0, l.trackCtaEvent)({
       channelId: N,
       senderId: n,
       warningId: t,
       warningType: s,
-      cta: u.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS,
-      isNudgeWarning: I
+      cta: e,
+      isNudgeWarning: A
     })
+  }, [N, n, t, s, A]), [C, O] = r.useState(!1);
+
+  function f(e) {
+    I(e)
+  }
+
+  function p() {
+    a.onClose(), (0, _.dismissChannelSafetyWarnings)(N, [t]), S(l.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS)
   }
   return (0, o.jsx)(i.ModalRoot, {
     transitionState: a.transitionState,
@@ -53,32 +55,34 @@ var N = e => {
         contentDisplay: "flex",
         children: [(0, o.jsx)(i.Slide, {
           id: 0,
-          children: (0, o.jsx)(c.default, {
-            warningId: t,
-            senderId: n,
-            onNavigate: C,
-            onClose: O
-          })
-        }), (0, o.jsx)(i.Slide, {
-          id: 1,
-          children: (0, o.jsx)(d.default, {
-            warningId: t,
-            senderId: n,
-            onNavigate: C,
-            onClose: O
-          })
-        }), (0, o.jsx)(i.Slide, {
-          id: 2,
           children: (0, o.jsx)(E.default, {
             warningId: t,
             senderId: n,
+            onNavigate: f,
+            onClose: p,
+            trackAnalyticsEvent: S
+          })
+        }), (0, o.jsx)(i.Slide, {
+          id: 1,
+          children: (0, o.jsx)(c.default, {
+            warningId: t,
+            senderId: n,
+            onNavigate: f,
+            onClose: p
+          })
+        }), (0, o.jsx)(i.Slide, {
+          id: 2,
+          children: (0, o.jsx)(d.default, {
+            warningId: t,
+            senderId: n,
             channelId: N,
-            onNavigate: C,
-            onClose: O,
-            hasReported: A,
+            onNavigate: f,
+            onClose: p,
+            hasReported: C,
             onReport: function() {
-              f(!0)
-            }
+              O(!0)
+            },
+            trackAnalyticsEvent: S
           })
         })]
       })
