@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   COLLECTIBLES_GIFT_CUSTOMIZATION_STEP: function() {
-    return C
+    return T
   }
 });
 var s = n("37983");
@@ -19,11 +19,12 @@ var i = n("446674"),
   p = n("642906"),
   S = n("85336"),
   _ = n("650484"),
-  m = n("782340"),
-  I = n("645547");
-let C = {
+  m = n("646718"),
+  I = n("782340"),
+  C = n("645547");
+let T = {
   key: S.Step.GIFT_CUSTOMIZATION,
-  renderStep: e => (0, s.jsx)(x, {
+  renderStep: e => (0, s.jsx)(h, {
     ...e
   }),
   options: {
@@ -31,7 +32,7 @@ let C = {
   }
 };
 
-function T(e) {
+function x(e) {
   let {
     onStepChange: t,
     onBackClick: n,
@@ -46,51 +47,51 @@ function T(e) {
       onClick: () => t(u),
       disabled: r,
       submitting: l,
-      children: m.default.Messages.PAGINATION_NEXT
+      children: I.default.Messages.PAGINATION_NEXT
     }), i ? (0, s.jsx)(d.default, {
       onClick: n
     }) : null]
   })
 }
 
-function x(e) {
+function h(e) {
   let {
     handleStepChange: t,
     handleClose: n
   } = e, {
     customGiftMessage: d = "",
     setCustomGiftMessage: S,
-    giftRecipientError: C,
-    validatingGiftRecipient: x,
-    giftRecipient: h
+    giftRecipientError: T,
+    validatingGiftRecipient: h,
+    giftRecipient: g
   } = (0, E.useGiftContext)(), {
-    selectedSkuId: g,
-    selectedSkuPricePreview: P
-  } = (0, p.usePaymentContext)(), N = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser());
+    selectedSkuId: P,
+    selectedSkuPricePreview: N
+  } = (0, p.usePaymentContext)(), A = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser());
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(_.PaymentPortalBody, {
       children: (0, s.jsxs)("div", {
-        className: I.stepBody,
+        className: C.stepBody,
         children: [(0, s.jsx)("div", {
-          className: I.bodyColumnMiddle,
+          className: C.bodyColumnMiddle,
           children: (0, s.jsx)(u.GiftAnimationOptions, {})
         }), (0, s.jsxs)("div", {
-          className: I.bodyColumnRight,
+          className: C.bodyColumnRight,
           children: [(0, s.jsx)(l.default, {
-            selectedSkuId: g,
-            className: I.sendTo
+            selectedSkuId: P,
+            className: C.sendTo
           }), (0, s.jsx)(o.default, {
-            sectionTitle: m.default.Messages.GIFT_OPTIONAL_MESSAGE,
+            sectionTitle: I.default.Messages.GIFT_OPTIONAL_MESSAGE,
             onTextChange: e => null == S ? void 0 : S(e),
             pendingText: d,
             currentText: d,
             disableThemedBackground: !0,
-            className: I.customGiftMessageWrapper,
-            innerClassName: I.customGiftMessage
+            className: C.customGiftMessageWrapper,
+            innerClassName: C.customGiftMessage
           }), (0, s.jsx)(r.default, {
-            selectedSkuId: g,
-            selectedSkuPricePreview: P,
-            className: I.giftPreview
+            selectedSkuId: P,
+            selectedSkuPricePreview: N,
+            className: C.giftPreview
           })]
         })]
       })
@@ -98,11 +99,11 @@ function x(e) {
       children: (0, s.jsx)(a.ModalFooter, {
         justify: f.default.Justify.BETWEEN,
         align: f.default.Align.CENTER,
-        children: (0, s.jsx)(T, {
+        children: (0, s.jsx)(x, {
           onStepChange: t,
           onBackClick: n,
-          disabled: null != C || null == h || h.id === (null == N ? void 0 : N.id) || d.length > o.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
-          loading: x
+          disabled: null != T || null == g || g.id === (null == A ? void 0 : A.id) || d.length > m.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
+          loading: h
         })
       })
     })]

@@ -194,6 +194,9 @@ n.r(t), n.d(t, {
   },
   AllSeasonalGiftStyles: function() {
     return ew
+  },
+  CUSTOM_GIFT_MESSAGE_MAX_LENGTH: function() {
+    return ek
   }
 }), n("222007");
 var i, r, s, a, o, l, u, c, d, f, E, p, h, _, S, m, T, g, I, C, v, A, R, N, O, D, y, P, L, b, M, U, G, w, k, x, F = n("49111"),
@@ -561,4 +564,5 @@ let eb = new Set(["PL", "TR"]),
   eM = [1, 2, 3],
   eU = [4, 5, 7, 6],
   eG = [8, 9, 11, 10],
-  ew = eG.concat(eM)
+  ew = eG.concat(eM),
+  ek = 190
