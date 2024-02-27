@@ -39,35 +39,35 @@ function c(e) {
 function E(e) {
   let {
     answer: t,
-    hasVoted: n,
-    isExpired: l,
-    myAvatarUrl: i
-  } = e, r = n || l, u = !0 === t.isSelected, E = !0 === t.didSelfVote, f = !0 === t.isVictor;
+    isExpired: n,
+    myAvatarUrl: l,
+    canShowVoteCounts: i
+  } = e, r = !0 === t.isSelected, u = !0 === t.didSelfVote, E = !0 === t.isVictor;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(o.PollMediaView, {
       attachmentClassName: a(d.attachment, {
-        [d.attachmentWithResults]: r
+        [d.attachmentWithResults]: i
       }),
       emojiClassName: d.emoji,
       media: t.pollMedia,
       fallback: (0, s.jsx)("div", {
         className: a(d.attachment, d.mediaMissing)
       })
-    }), u && (0, s.jsx)(o.PollAnswerVotedIcon, {
+    }), r && (0, s.jsx)(o.PollAnswerVotedIcon, {
       size: 40,
-      isVictor: f,
-      isExpired: l,
+      isVictor: E,
+      isExpired: n,
       className: d.selectedIcon
-    }), r && (0, s.jsxs)(s.Fragment, {
+    }), i && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(c, {
-        didSelfVote: E,
+        didSelfVote: u,
         percentage: t.votesPercentage,
         label: t.votes,
-        myAvatarUrl: E ? i : void 0
-      }), (!l && E || f) && (0, s.jsx)(o.PollAnswerVotedIcon, {
+        myAvatarUrl: u ? l : void 0
+      }), (!n && u || E) && (0, s.jsx)(o.PollAnswerVotedIcon, {
         size: 18,
-        isVictor: f,
-        isExpired: l,
+        isVictor: E,
+        isExpired: n,
         className: d.pollAnswerIcon
       })]
     })]
@@ -80,7 +80,8 @@ function f(e) {
     hasVoted: n,
     myAvatarUrl: l,
     answersInteraction: i,
-    ...r
+    canShowVoteCounts: r,
+    ...u
   } = e;
   return (0, s.jsx)(o.PollAnswers, {
     className: d.answersContainer,
@@ -92,10 +93,10 @@ function f(e) {
     renderAnswerContent: e => (0, s.jsx)(E, {
       answer: e,
       isExpired: t,
-      hasVoted: n,
       myAvatarUrl: l,
-      answersInteraction: i
+      answersInteraction: i,
+      canShowVoteCounts: r
     }),
-    ...r
+    ...u
   })
 }

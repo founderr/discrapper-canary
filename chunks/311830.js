@@ -30,12 +30,14 @@ function I(e) {
 
 function m(e) {
   let {
-    children: t
+    className: t,
+    children: n
   } = e;
   return (0, s.jsx)(u.Text, {
     variant: "text-sm/normal",
     color: "text-muted",
-    children: t
+    className: t,
+    children: n
   })
 }
 
@@ -53,8 +55,8 @@ function N(e) {
     size: u.Button.Sizes.NONE,
     buttonRef: a,
     children: (0, s.jsx)(u.Text, {
-      variant: "text-sm/semibold",
-      color: "text-link",
+      variant: "text-sm/medium",
+      color: "none",
       children: t
     })
   })
@@ -64,27 +66,33 @@ function p(e) {
   let {
     action: t,
     channelId: n,
-    messageId: a
+    messageId: a,
+    className: i
   } = e, {
-    actionButtonRef: i,
-    manageFocusOnAction: r
-  } = (0, f.usePollFocusManager)(), o = l.useCallback(async () => {
+    actionButtonRef: r,
+    manageFocusOnAction: o
+  } = (0, f.usePollFocusManager)(), c = l.useCallback(async () => {
     (null == t ? void 0 : t.type) != null && (await d.default.handlePollActionTapped({
       channelId: n,
       messageId: a,
       type: t.type
-    }), r(t.type))
-  }, [null == t ? void 0 : t.type, n, a, r]);
-  return null == t ? null : "button" === t.presentation ? (0, s.jsx)(u.Button, {
-    buttonRef: i,
-    onClick: o,
+    }), o(t.type))
+  }, [null == t ? void 0 : t.type, n, a, o]);
+  return null == t ? null : "button" === t.presentation || "secondaryButton" === t.presentation ? (0, s.jsx)(u.Button, {
+    buttonRef: r,
+    onClick: c,
     disabled: !t.enabled,
+    color: "secondaryButton" === t.presentation ? u.Button.Colors.PRIMARY : u.Button.Colors.BRAND,
+    size: u.Button.Sizes.SMALL,
+    className: i,
     children: t.label
   }) : "textButton" === t.presentation ? (0, s.jsx)(N, {
-    buttonRef: i,
-    onClick: o,
+    buttonRef: r,
+    onClick: c,
+    className: i,
     children: t.label
   }) : (0, s.jsx)(m, {
+    className: i,
     children: t.label
   })
 }
@@ -103,7 +111,8 @@ function S(e) {
       canTapAnswers: t.canTapAnswers,
       hasSelectedAnyAnswer: t.hasSelectedAnswer,
       hasVoted: t.hasVoted,
-      myAvatarUrl: t.myAvatarUrl
+      myAvatarUrl: t.myAvatarUrl,
+      canShowVoteCounts: t.canShowVoteCounts
     };
     return (0, r.match)(t.layoutType).with(o.PollLayoutTypes.DEFAULT, () => (0, s.jsx)(_.TextAndImageAnswers, {
       ...n
@@ -126,7 +135,12 @@ function S(e) {
         children: [(0, s.jsx)(p, {
           channelId: t.getChannelId(),
           messageId: t.id,
-          action: n.secondaryAction
+          action: n.secondaryAction,
+          className: T.secondaryAction
+        }), (0, s.jsx)(p, {
+          channelId: t.getChannelId(),
+          messageId: t.id,
+          action: n.tertiaryAction
         }), (0, s.jsx)(p, {
           channelId: t.getChannelId(),
           messageId: t.id,

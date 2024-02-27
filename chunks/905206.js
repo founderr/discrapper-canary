@@ -248,7 +248,7 @@ function M(e, t, n) {
     canRemoveVote: !0
   }, () => ({
     label: p.default.Messages.POLL_REMOVE_VOTE,
-    presentation: "textButton",
+    presentation: "secondaryButton",
     enabled: !0,
     type: "remove"
   })).otherwise(() => ({

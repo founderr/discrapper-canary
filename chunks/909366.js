@@ -93,8 +93,9 @@ function p(e) {
     answer: t,
     isExpired: n,
     hasVoted: l,
-    answersInteraction: r
-  } = e, o = l || n, u = !0 === t.isSelected, c = !0 === t.didSelfVote, E = !0 === t.isVictor;
+    answersInteraction: r,
+    canShowVoteCounts: o
+  } = e, u = !0 === t.isSelected, c = !0 === t.didSelfVote, E = !0 === t.isVictor;
   return (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)("div", {
       className: a(T.answerInner, {
@@ -132,7 +133,8 @@ function S(e) {
     hasVoted: t,
     isExpired: n,
     answersInteraction: l,
-    ...a
+    canShowVoteCounts: a,
+    ...i
   } = e;
   return (0, s.jsx)(f.PollAnswers, {
     className: T.answersContainer,
@@ -142,8 +144,9 @@ function S(e) {
       answer: e,
       isExpired: n,
       hasVoted: t,
-      answersInteraction: l
+      answersInteraction: l,
+      canShowVoteCounts: a
     }),
-    ...a
+    ...i
   })
 }
