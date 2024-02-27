@@ -185,7 +185,7 @@ function D(e, t) {
 function M(e) {
   var t;
   let n = null != e.byWeekday ? [...e.byWeekday] : null,
-    l = null === (t = e.byNWeekday) || void 0 === t ? void 0 : t.map(e => new(0, s.Weekday)(e.day).nth(e.n)),
+    l = null === (t = e.byNWeekday) || void 0 === t ? void 0 : t.map(e => new s.Weekday(e.day, e.n)),
     a = new Date(e.start);
   return a.setMilliseconds(0), new s.RRule({
     dtstart: a,
@@ -247,8 +247,8 @@ function k(e) {
 function G(e, t) {
   let n = function(e, t) {
     let n = k(t),
-      l = p(t.toDate().getDay()),
-      a = Math.ceil(t.toDate().getDate() / 7),
+      l = p(t.toDate().getUTCDay()),
+      a = Math.ceil(t.toDate().getUTCDate() / 7),
       r = t.toDate();
     switch (r.setMilliseconds(0), e) {
       case o.RecurrenceOptions.NONE:
