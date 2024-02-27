@@ -4,9 +4,8 @@ s.r(t), s.d(t, {
     return r
   }
 });
-var a = s("862205"),
-  i = s("706922");
-let n = (0, a.createExperiment)({
+var a = s("862205");
+let i = (0, a.createExperiment)({
     kind: "user",
     id: "2024-02_all_marketing_page_optimization_phase_1",
     label: "Marketing Page Optimizations - Phase 1",
@@ -26,15 +25,10 @@ let n = (0, a.createExperiment)({
       autoTrackExposure: e
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
       autoTrackExposure: !1
-    }, t = i.AllPerksExperiment.useExperiment({
-      location: "Marketing Optimization"
-    }, {
-      autoTrackExposure: !1
-    }).enabled;
-    return n.useExperiment({
+    };
+    return i.useExperiment({
       location: "experiment_hook"
     }, {
-      autoTrackExposure: !t && e,
-      disable: t
+      autoTrackExposure: e
     }).enabled
   }
