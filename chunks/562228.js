@@ -23,8 +23,11 @@ n.r(t), n.d(t, {
   },
   createPollServerDataFromCreateRequest: function() {
     return h
+  },
+  getTotalVotes: function() {
+    return m
   }
-}), n("781738"), n("222007");
+}), n("781738"), n("222007"), n("808653");
 var a = n("748820"),
   l = n("418009"),
   s = n("957255"),
@@ -111,4 +114,11 @@ function h(e) {
     expiry: l,
     answers: a
   }
+}
+
+function m(e) {
+  return e.reduce((e, t) => {
+    var n, a;
+    return e + (null !== (a = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== a ? a : 0)
+  }, 0)
 }

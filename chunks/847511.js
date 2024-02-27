@@ -225,39 +225,30 @@ async function x(e) {
 }
 var y = {
   handlePollAnswerTapped: function(e) {
-    var t, n, s, l, a;
+    var t, n;
     let {
-      answerId: i,
-      ...r
+      answerId: s,
+      ...l
     } = e, {
-      channelId: o,
-      messageId: u,
-      message: c
-    } = O(r), {
-      tapShouldOpenVotersModal: E,
-      reactions: f
-    } = null !== (n = (0, g.computeBasicPollChatData)(c)) && void 0 !== n ? n : {};
-    if (!0 === E) {
-      let e = null !== (a = null === (l = (0, g.reactionForId)(null != f ? f : [], i)) || void 0 === l ? void 0 : null === (s = l.count_details) || void 0 === s ? void 0 : s.vote) && void 0 !== a ? a : 0;
-      if (0 === e) {
-        d.default.show({
-          title: M.default.Messages.POLL_NO_VOTES_FOR_ANSWER_TITLE,
-          body: M.default.Messages.POLL_NO_VOTES_FOR_ANSWER_BODY
-        });
-        return
-      }
+      channelId: a,
+      messageId: i,
+      message: r
+    } = O(l), {
+      tapShouldOpenVotersModal: o
+    } = null !== (n = (0, g.computeBasicPollChatData)(r)) && void 0 !== n ? n : {};
+    if (!0 === o) {
       S.showVotesForAnswer({
-        channelId: o,
-        messageId: u,
-        answerId: i
+        channelId: a,
+        messageId: i,
+        answerId: s
       });
       return
     }
-    let _ = null === (t = c.poll) || void 0 === t ? void 0 : t.allow_multiselect;
-    (0, h.updatePollState)(o, u, e => {
+    let u = null === (t = r.poll) || void 0 === t ? void 0 : t.allow_multiselect;
+    (0, h.updatePollState)(a, i, e => {
       if (null == e) return {
-        channelId: o,
-        selectedAnswerIds: new Set([i]),
+        channelId: a,
+        selectedAnswerIds: new Set([s]),
         submitting: !1,
         editing: !1,
         showResults: !1
@@ -266,11 +257,11 @@ var y = {
           ...e
         },
         n = new Set(t.selectedAnswerIds);
-      if (t.selectedAnswerIds = n, n.has(i)) n.delete(i);
+      if (t.selectedAnswerIds = n, n.has(s)) n.delete(s);
       else {
-        if (!_)
+        if (!u)
           for (let e of n) n.delete(e);
-        n.add(i)
+        n.add(s)
       }
       return t
     })
