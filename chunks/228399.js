@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 });
 var a = n("37983"),
@@ -10,29 +10,30 @@ var a = n("37983"),
   i = n.n(l),
   r = n("77078"),
   o = n("79112"),
-  u = n("227231"),
-  d = n("49111"),
-  c = n("782340"),
-  f = n("297261"),
-  E = function(e) {
+  u = n("815496"),
+  d = n("227231"),
+  c = n("49111"),
+  f = n("782340"),
+  E = n("297261"),
+  h = function(e) {
     let {
       className: t,
       quest: n
     } = e, l = s.useCallback(() => {
-      o.default.open(d.UserSettingsSections.INVENTORY)
-    }, []);
+      (0, u.trackQuestContentClicked)(n.id, e.questContent, u.QuestContentCTA.REWARD_LEARN_MORE), o.default.open(c.UserSettingsSections.INVENTORY)
+    }, [n, e.questContent]);
     return (0, a.jsxs)(r.Clickable, {
-      className: i(f.questRewardTile, t),
+      className: i(E.questRewardTile, t),
       onClick: l,
       children: [(0, a.jsx)(r.Text, {
         color: "always-white",
         variant: "text-xs/normal",
-        className: f.questRewardTileDetailsLearnMore,
-        children: c.default.Messages.QUESTS_LEARN_MORE_STACKED.format()
+        className: E.questRewardTileDetailsLearnMore,
+        children: f.default.Messages.QUESTS_LEARN_MORE_STACKED.format()
       }), (0, a.jsx)("img", {
         alt: n.config.messages.rewardName,
-        className: f.questRewardTileAsset,
-        src: (0, u.getRewardAssetUrl)(n.id)
+        className: E.questRewardTileAsset,
+        src: (0, d.getRewardAssetUrl)(n.id)
       })]
     })
   }

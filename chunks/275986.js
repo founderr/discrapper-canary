@@ -1,110 +1,118 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   QuestsEntryContextMenu: function() {
-    return M
+    return q
   },
   QuestsEntryContextMenuPopout: function() {
-    return O
+    return p
   }
 });
-var s = n("37983");
-n("884691");
-var u = n("821455"),
-  o = n("923748"),
-  i = n("551042"),
+var s = n("37983"),
+  u = n("884691"),
+  o = n("821455"),
+  i = n("923748"),
+  l = n("551042"),
   a = n("77078"),
-  l = n("272030"),
-  r = n("545158"),
-  E = n("124824"),
-  c = n("306160"),
-  C = n("815496"),
-  d = n("448881"),
-  _ = n("588025"),
-  N = n("227231"),
+  r = n("272030"),
+  c = n("545158"),
+  d = n("124824"),
+  C = n("306160"),
+  E = n("815496"),
+  _ = n("448881"),
+  f = n("588025"),
+  M = n("227231"),
   T = n("843455"),
-  f = n("782340");
+  N = n("782340");
 
-function M(t) {
-  var e;
-  let E = (0, N.isDismissible)(t.questContent);
+function q(e) {
+  var t;
+  let u = (0, M.isDismissible)(e.questContent);
   return (0, s.jsxs)(a.Menu, {
     variant: "fixed",
     onSelect: () => {
-      null != t.onSelect ? t.onSelect() : (0, l.closeContextMenu)()
+      null != e.onSelect ? e.onSelect() : (0, r.closeContextMenu)()
     },
     navId: "quests-entry",
-    "aria-label": f.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
-    onClose: null !== (e = null == t ? void 0 : t.onClose) && void 0 !== e ? e : T.NOOP,
+    "aria-label": N.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+    onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : T.NOOP,
     children: [(0, s.jsxs)(a.MenuGroup, {
       children: [(0, s.jsx)(a.MenuItem, {
         id: "get-game",
-        label: f.default.Messages.QUESTS_GET_THIS_GAME,
+        label: N.default.Messages.QUESTS_GET_THIS_GAME,
         action: () => {
-          (0, C.trackQuestContentClicked)(t.quest.id, t.questContent, C.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK), (0, r.default)(t.quest.config.getGameLink)
+          (0, E.trackQuestContentClicked)(e.quest.id, e.questContent, E.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK), (0, c.default)(e.quest.config.getGameLink)
         },
-        icon: o.LinkExternalMediumIcon
-      }), t.questContent === _.QuestContent.QUESTS_EMBED && (0, s.jsx)(a.MenuItem, {
+        icon: i.LinkExternalMediumIcon
+      }), e.questContent === f.QuestContent.QUESTS_EMBED && (0, s.jsx)(a.MenuItem, {
         id: "share-link",
-        label: f.default.Messages.QUESTS_SHARE_LINK,
+        label: N.default.Messages.QUESTS_SHARE_LINK,
         action: () => {
-          (0, C.trackQuestContentClicked)(t.quest.id, t.questContent, C.QuestContentCTA.CONTEXT_MENU_COPY_LINK), (0, c.copy)((0, N.getQuestUrl)(t.quest.id))
+          (0, E.trackQuestContentClicked)(e.quest.id, e.questContent, E.QuestContentCTA.CONTEXT_MENU_COPY_LINK), (0, C.copy)((0, M.getQuestUrl)(e.quest.id))
         },
-        icon: u.CopyIcon
+        icon: o.CopyIcon
       })]
     }, "major-actions"), (0, s.jsxs)(a.MenuGroup, {
-      children: [t.shouldShowDisclosure && (0, s.jsx)(a.MenuItem, {
+      children: [e.shouldShowDisclosure && (0, s.jsx)(a.MenuItem, {
         id: "display-disclosure",
-        label: f.default.Messages.QUESTS_DISCLOSURE_LABEL,
+        label: N.default.Messages.QUESTS_DISCLOSURE_LABEL,
         action: () => {
-          (0, C.trackQuestContentClicked)(t.quest.id, t.questContent, C.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE), (0, i.openModalLazy)(async () => {
+          (0, E.trackQuestContentClicked)(e.quest.id, e.questContent, E.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE), (0, l.openModalLazy)(async () => {
             let {
-              default: e
+              default: t
             } = await n.el("970143").then(n.bind(n, "970143"));
-            return n => (0, s.jsx)(e, {
+            return n => (0, s.jsx)(t, {
               ...n,
-              questContent: t.questContent,
-              questConfig: t.quest.config
+              questContent: e.questContent,
+              questConfig: e.quest.config
             })
           })
         }
-      }), E && (0, s.jsx)(a.MenuItem, {
+      }), u && (0, s.jsx)(a.MenuItem, {
         id: "hide-entrypoint",
-        label: f.default.Messages.QUESTS_HIDE_THIS,
+        label: N.default.Messages.QUESTS_HIDE_THIS,
         action: () => {
-          (0, C.trackQuestContentClicked)(t.quest.id, t.questContent, C.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT), (0, N.isDismissible)(t.questContent) && (0, d.dismissQuestContent)(t.quest.id, t.questContent)
+          (0, E.trackQuestContentClicked)(e.quest.id, e.questContent, E.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT), (0, M.isDismissible)(e.questContent) && (0, _.dismissQuestContent)(e.quest.id, e.questContent)
         },
-        subtext: f.default.Messages.QUESTS_FIND_QUEST
+        subtext: N.default.Messages.QUESTS_FIND_QUEST
       })]
     }, "minor-actions")]
   })
 }
 
-function O(t) {
+function p(e) {
   let {
-    children: e,
+    children: t,
     onOpen: n,
-    onClose: u,
-    preventIdle: o,
-    ...i
-  } = t;
+    onClose: o,
+    preventIdle: i,
+    quest: l,
+    questContent: r,
+    ...c
+  } = e, C = u.useCallback(() => {
+    (0, E.trackQuestContentClicked)(l.id, r, E.QuestContentCTA.OPEN_CONTEXT_MENU), null != n && n()
+  }, [n, l, r]);
   return (0, s.jsx)(a.Popout, {
-    onRequestOpen: n,
-    onRequestClose: u,
-    renderPopout: t => {
+    onRequestOpen: C,
+    onRequestClose: o,
+    renderPopout: e => {
       let {
-        closePopout: e
-      } = t;
-      return o ? (0, s.jsx)(E.default, {
-        children: (0, s.jsx)(M, {
-          ...i,
-          onClose: e
+        closePopout: t
+      } = e;
+      return i ? (0, s.jsx)(d.default, {
+        children: (0, s.jsx)(q, {
+          ...c,
+          quest: l,
+          questContent: r,
+          onClose: t
         })
-      }) : (0, s.jsx)(M, {
-        ...i,
-        onClose: e
+      }) : (0, s.jsx)(q, {
+        ...c,
+        quest: l,
+        questContent: r,
+        onClose: t
       })
     },
     animation: a.Popout.Animation.NONE,
-    children: t => e(t)
+    children: e => t(e)
   })
 }

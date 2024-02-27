@@ -83,7 +83,10 @@ var O = function(e) {
       }
     })
   }, [O]), D = s.useCallback(() => {
-    (0, h.enrollInQuest)(O.id, I.QuestContent.ACTIVITY_PANEL)
+    (0, h.enrollInQuest)(O.id, {
+      questContent: I.QuestContent.ACTIVITY_PANEL,
+      questContentCTA: E.QuestContentCTA.ACCEPT_QUEST
+    })
   }, [O]), y = s.useCallback(() => {
     d.default.open(g.UserSettingsSections.INVENTORY)
   }, []), x = (0, p.useHandleClaimQuestsReward)({
