@@ -34,9 +34,9 @@ function _(e) {
     setPurchaseError: C,
     purchaseErrorBlockRef: O,
     paymentAuthenticationState: h,
-    selectedSkuId: R
+    selectedSkuId: M
   } = (0, o.usePaymentContext)(), {
-    isGift: M
+    isGift: R
   } = (0, c.useGiftContext)(), g = {
     ...(0, i.useSharedPaymentModal)(),
     paymentSources: S,
@@ -46,7 +46,7 @@ function _(e) {
     setPurchaseError: C,
     purchaseErrorBlockRef: O,
     paymentAuthenticationState: h
-  }, x = (0, l.usePremiumTrialOffer)(E), v = !M && null != x && null != R && (0, m.SubscriptionTrials)[x.trial_id].skus.includes(R), y = null != I ? I : () => {
+  }, x = (0, l.usePremiumTrialOffer)(E), v = !R && null != x && null != M && (0, m.SubscriptionTrials)[x.trial_id].skus.includes(M), y = null != I ? I : () => {
     let e = Object.values(S).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
     _(e, {
       trackedFromStep: d.Step.PAYMENT_TYPE

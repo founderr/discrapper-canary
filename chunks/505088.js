@@ -1,4 +1,4 @@
 "use strict";
 n.r(t);
-var i = n("506070");
-n.es(i, t)
+var l = n("506070");
+n.es(l, t)

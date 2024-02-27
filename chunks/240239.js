@@ -20,20 +20,20 @@ var l = n("37983"),
   m = n("27978"),
   E = n("64657"),
   g = n("49111"),
-  S = n("782340"),
-  I = n("377960");
-let _ = [{
+  I = n("782340"),
+  _ = n("377960");
+let S = [{
   icon: (0, l.jsx)(c.default, {
-    className: I.icon
+    className: _.icon
   }),
   key: "EVENTS",
   getName: e => {
     let {
       numEvents: t
     } = e;
-    return t > 0 ? S.default.Messages.GUILD_EVENTS_PLURAL.format({
+    return t > 0 ? I.default.Messages.GUILD_EVENTS_PLURAL.format({
       number: t
-    }) : S.default.Messages.GUILD_EVENTS
+    }) : I.default.Messages.GUILD_EVENTS
   },
   handler: e => (0, i.openModalLazy)(async () => {
     let {
@@ -46,17 +46,17 @@ let _ = [{
   })
 }, {
   icon: (0, l.jsx)(f.default, {
-    className: I.icon
+    className: _.icon
   }),
   key: "JOIN_SERVERS",
-  getName: () => S.default.Messages.HUB_SIDEBAR_JOIN_SERVERS,
+  getName: () => I.default.Messages.HUB_SIDEBAR_JOIN_SERVERS,
   handler: (e, t) => (0, u.transitionToGuild)(e.id, t.id)
 }, {
   icon: (0, l.jsx)(C.default, {
-    className: I.icon
+    className: _.icon
   }),
   key: "ADD_SERVERS",
-  getName: () => S.default.Messages.HUB_SIDEBAR_ADD_SERVERS,
+  getName: () => I.default.Messages.HUB_SIDEBAR_ADD_SERVERS,
   handler: (e, t) => (0, i.openModalLazy)(async () => {
     let {
       default: a
@@ -70,10 +70,10 @@ let _ = [{
   })
 }, {
   icon: (0, l.jsx)(h.default, {
-    className: I.icon
+    className: _.icon
   }),
   key: "INVITE_MEMBERS",
-  getName: () => S.default.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
+  getName: () => I.default.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
   handler: (e, t) => (0, i.openModalLazy)(async () => {
     let {
       default: a
@@ -108,12 +108,12 @@ var N = e => {
     numEvents: i.length
   }), [i.length]), h = e => {
     if (null != n) {
-      let l = _.find(t => t.key === e);
+      let l = S.find(t => t.key === e);
       null == l || l.handler(t, n)
     }
   }, C = (0, E.useHubUnreadCount)(n);
   return (0, l.jsx)("div", {
-    children: _.map(e => {
+    children: S.map(e => {
       if (!u && "EVENTS" === e.key) return null;
       let t = c && "JOIN_SERVERS" === e.key;
       return (0, l.jsx)(p.default, {
@@ -128,10 +128,10 @@ var N = e => {
         },
         onClick: () => h(e.key),
         selected: t,
-        className: I.optionItem,
-        selectedClassName: I.selected,
-        innerClassName: I.itemInner,
-        avatarClassName: I.avatar,
+        className: _.optionItem,
+        selectedClassName: _.selected,
+        innerClassName: _.itemInner,
+        avatarClassName: _.avatar,
         children: "JOIN_SERVERS" === e.key && C > 0 ? (0, o.renderMentionBadge)(C) : null
       }, e.key)
     })

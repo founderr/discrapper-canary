@@ -29,8 +29,8 @@ let T = /^\/([a-zA-Z0-9-]+)$/,
   f = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
   p = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
   N = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
-  R = /^\/application-directory\/([0-9-]+)\/?$/,
-  A = /^\/activities\/([0-9-]+)\/?$/,
+  A = /^\/application-directory\/([0-9-]+)\/?$/,
+  R = /^\/activities\/([0-9-]+)\/?$/,
   C = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
   L = /^\/channels\/([0-9]+)\/shop$/,
   O = /^\/clyde-profiles\/([0-9-]+)\/?$/,
@@ -143,7 +143,7 @@ function x(e) {
       } : null
     }(r.pathname);
     null != s && a(I.CodedLinkType.EVENT, "".concat(s.guildId, "-").concat(s.guildEventId) + (null != s.recurrenceId ? "-".concat(s.recurrenceId) : ""));
-    let E = null == u ? void 0 : u.match(R);
+    let E = null == u ? void 0 : u.match(A);
     if (null != E) {
       let e = E[1];
       a(I.CodedLinkType.APP_DIRECTORY_PROFILE, e)
@@ -153,7 +153,7 @@ function x(e) {
       let e = c[1];
       a(I.CodedLinkType.CLYDE_PROFILE, e)
     }
-    let S = null == u ? void 0 : u.match(A);
+    let S = null == u ? void 0 : u.match(R);
     if (null != S) {
       let e = S[1];
       a(I.CodedLinkType.ACTIVITY_BOOKMARK, e)

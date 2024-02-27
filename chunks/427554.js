@@ -8,8 +8,8 @@ var l = n("37983");
 n("884691");
 var s = n("414456"),
   u = n.n(s),
-  i = n("77078"),
-  a = n("299039"),
+  a = n("77078"),
+  i = n("299039"),
   o = n("276676"),
   r = n("123030"),
   d = n("782340"),
@@ -25,21 +25,21 @@ function E(e) {
     activeRecurrenceId: h
   } = e, {
     recurrenceStartTimes: C,
-    canViewMoreRecurrences: N,
-    updateRecurrenceStartTimes: v
+    canViewMoreRecurrences: g,
+    updateRecurrenceStartTimes: N
   } = (0, o.default)(s, t, n);
   return (0, l.jsxs)("div", {
     className: c.recurrences,
-    children: [(0, l.jsx)(i.Heading, {
+    children: [(0, l.jsx)(a.Heading, {
       variant: "heading-sm/medium",
       className: c.heading,
       children: d.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS
-    }), (0, l.jsxs)(i.Scroller, {
+    }), (0, l.jsxs)(a.Scroller, {
       className: u(c.scroller, {
         [c.showScroller]: !f
       }),
       children: [C.map(e => {
-        let t = a.default.fromTimestamp(e.getTime());
+        let t = i.default.fromTimestamp(e.getTime());
         return (0, l.jsx)(r.default, {
           recurrenceId: t,
           originalScheduledStartTime: e,
@@ -47,14 +47,14 @@ function E(e) {
           onClick: E,
           isActive: t === h
         }, t)
-      }), N && (0, l.jsx)(i.Button, {
+      }), g && (0, l.jsx)(a.Button, {
         grow: !1,
         onClick: e => {
-          e.stopPropagation(), v()
+          e.stopPropagation(), N()
         },
-        look: i.Button.Looks.LINK,
-        size: i.Button.Sizes.MIN,
-        color: i.Button.Colors.LINK,
+        look: a.Button.Looks.LINK,
+        size: a.Button.Sizes.MIN,
+        color: a.Button.Colors.LINK,
         className: c.button,
         children: d.default.Messages.GUILD_SCHEDULED_EVENT_VIEW_MORE_RECURRENCES
       })]

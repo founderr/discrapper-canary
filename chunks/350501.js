@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("24156"),
   E = n("774473"),
   g = n("679864"),
-  S = n("553372"),
-  I = n("846325"),
-  _ = n("711582");
+  I = n("553372"),
+  _ = n("846325"),
+  S = n("711582");
 
 function N(e) {
   let {
@@ -38,7 +38,7 @@ function N(e) {
     let [t, n] = (0, i.useStateFromStoresArray)([C.default], () => [C.default.getSounds(), C.default.getFavorites()]);
     return a.useMemo(() => {
       let l = [],
-        a = [...e, I.DEFAULT_SOUND_GUILD_ID],
+        a = [...e, _.DEFAULT_SOUND_GUILD_ID],
         s = (e, a) => {
           var s, i;
           let r = null !== (i = null === (s = t.get(e)) || void 0 === s ? void 0 : s.sort((e, t) => f.default.compare(e.soundId, t.soundId))) && void 0 !== i ? i : [];
@@ -90,9 +90,9 @@ function N(e) {
       let t = M[e];
       null != t && P(t)
     }, [M, P]),
-    V = a.useMemo(() => M.map(e => (0, l.jsx)(S.default, {
+    V = a.useMemo(() => M.map(e => (0, l.jsx)(I.default, {
       interactive: L,
-      className: _.soundButton,
+      className: S.soundButton,
       sound: e,
       focused: D === e.soundId,
       channel: n

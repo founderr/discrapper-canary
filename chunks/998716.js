@@ -22,8 +22,8 @@ var r, i, l, u, a, o = n("407846"),
   f = n("800762"),
   p = n("387111"),
   N = n("325861"),
-  R = n("834052"),
-  A = n("808422"),
+  A = n("834052"),
+  R = n("808422"),
   C = n("922673"),
   L = n("49111");
 
@@ -50,7 +50,7 @@ function h(e) {
 }
 
 function P(e) {
-  return e === A.RequestToSpeakStates.REQUESTED_TO_SPEAK || e === A.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+  return e === R.RequestToSpeakStates.REQUESTED_TO_SPEAK || e === R.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
 }
 
 function g(e) {
@@ -61,7 +61,7 @@ function g(e) {
     blocked: i,
     isFriend: l
   } = e, u = [];
-  return P(r) && u.push("ALL_REQUESTED_TO_SPEAK"), r === A.RequestToSpeakStates.REQUESTED_TO_SPEAK && u.push("REQUESTED_TO_SPEAK_ONLY"), t ? u.push("SPEAKER") : (null != n ? u.push(n.id) : u.push("NO_ROLE"), u.push("AUDIENCE")), i && u.push("BLOCKED"), l && u.push("FRIEND"), u
+  return P(r) && u.push("ALL_REQUESTED_TO_SPEAK"), r === R.RequestToSpeakStates.REQUESTED_TO_SPEAK && u.push("REQUESTED_TO_SPEAK_ONLY"), t ? u.push("SPEAKER") : (null != n ? u.push(n.id) : u.push("NO_ROLE"), u.push("AUDIENCE")), i && u.push("BLOCKED"), l && u.push("FRIEND"), u
 }(u = r || (r = {})).SPEAKER = "SPEAKER", u.AUDIENCE = "AUDIENCE", u.NO_ROLE = "NO_ROLE", u.ALL_REQUESTED_TO_SPEAK = "ALL_REQUESTED_TO_SPEAK", u.REQUESTED_TO_SPEAK_ONLY = "REQUESTED_TO_SPEAK_ONLY", u.BLOCKED = "BLOCKED", u.FRIEND = "FRIEND", u.SELECTED = "SELECTED", u.MEDIA = "MEDIA", (a = i || (i = {})).VOICE = "VOICE", a.STREAM = "STREAM", l = class {
   _getParticipantsForUser(e, t) {
     var n, r;
@@ -70,7 +70,7 @@ function g(e) {
       u = f.default.getVoiceStateForChannel(this.channelId, e);
     if (null == u) return l;
     let a = T.default.getUser(e);
-    if (null == a) return null != this.guildId && R.default.isPublic(this.channelId) && c.default.requestMember(this.guildId, e), l;
+    if (null == a) return null != this.guildId && A.default.isPublic(this.channelId) && c.default.requestMember(this.guildId, e), l;
     let o = null != t ? t[0] : null,
       s = {
         user: a,
@@ -87,7 +87,7 @@ function g(e) {
         ...s,
         type: "VOICE",
         id: a.id,
-        rtsState: (0, A.getAudienceRequestToSpeakState)(u)
+        rtsState: (0, R.getAudienceRequestToSpeakState)(u)
       };
     l.push(E);
     let O = null !== (r = _.default.getStreamForUser(e, this.guildId)) && void 0 !== r ? r : _.default.getActiveStreamForUser(e, this.guildId);
@@ -97,7 +97,7 @@ function g(e) {
         ...s,
         id: e,
         type: "STREAM",
-        rtsState: A.RequestToSpeakStates.NONE
+        rtsState: R.RequestToSpeakStates.NONE
       }, l.push(i)
     }
     return l

@@ -71,12 +71,12 @@ function m(e) {
     max: 5,
     showUserPopout: !1
   }));
-  let E = (0, u.default)(t);
+  let C = (0, u.default)(t);
   return (0, n.jsxs)("div", {
     className: s(f.channelInfo, {
       [f.selected]: a
     }),
-    children: [(0, n.jsx)(E, {
+    children: [(0, n.jsx)(C, {
       className: f.channelIcon
     }), (0, n.jsx)("div", {
       className: f.channelName,

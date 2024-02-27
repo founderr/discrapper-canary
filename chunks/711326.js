@@ -34,8 +34,8 @@ function E(e) {
   if (null == s) return null;
   let p = (0, o.getThumbnailImage)(s.thumbnail),
     N = !f && s.has_media_attachment,
-    R = f ? _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
-    A = null != S ? a.default.getName(s.guild_id, s.channel_id, S) : void 0,
+    A = f ? _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
+    R = null != S ? a.default.getName(s.guild_id, s.channel_id, S) : void 0,
     C = null == S ? void 0 : S.getAvatarURL(null == E ? void 0 : E.id, 40);
   (null == C || T !== s.guild_id) && (C = u.default.getGuildIconURL({
     id: s.guild_id,
@@ -55,7 +55,7 @@ function E(e) {
   return {
     title: null !== (i = s.title) && void 0 !== i ? i : "",
     subtitle: s.description,
-    ctaText: R,
+    ctaText: A,
     coverImage: p,
     coverImageOverlayText: N ? _.default.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
     parentChannelId: s.parent_channel_id,
@@ -66,7 +66,7 @@ function E(e) {
     guildId: s.guild_id,
     guildName: null !== (l = null == E ? void 0 : E.name) && void 0 !== l ? l : s.guild_name,
     authorId: null == s ? void 0 : s.author_id,
-    authorName: A,
+    authorName: R,
     channelName: null == c ? void 0 : c.name,
     avatarUrl: C,
     shouldShowBlurredThumbnailImage: N,

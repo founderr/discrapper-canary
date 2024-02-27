@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return E
   }
 });
-var s = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  s = n("884691"),
   l = n("446674"),
   i = n("77078"),
   r = n("206230"),
@@ -22,29 +22,29 @@ let p = () => n.el("170206").then(n.t.bind(n, "170206", 19)).then(e => {
   } = e;
   return t
 });
-var m = a.memo(function(e) {
+var E = s.memo(function(e) {
   let {
     channel: t,
     isLastItem: n
-  } = e, a = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), m = (0, l.useStateFromStores)([d.default], () => d.default.can(f.Permissions.SEND_MESSAGES_IN_THREADS, t)), E = (0, o.useIsNonModInLockedThread)(t), g = (0, l.useStateFromStores)([u.default], () => u.default.getId());
-  return n ? m && !E && t.ownerId !== g ? (0, s.jsxs)("div", {
+  } = e, s = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), E = (0, l.useStateFromStores)([d.default], () => d.default.can(f.Permissions.SEND_MESSAGES_IN_THREADS, t)), m = (0, o.useIsNonModInLockedThread)(t), g = (0, l.useStateFromStores)([u.default], () => u.default.getId());
+  return n ? E && !m && t.ownerId !== g ? (0, a.jsxs)("div", {
     className: C.box,
-    children: [(0, s.jsx)(c.default, {
+    children: [(0, a.jsx)(c.default, {
       importData: p,
-      shouldAnimate: !a,
+      shouldAnimate: !s,
       className: C.animation
-    }), (0, s.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: C.textContainer,
-      children: [(0, s.jsx)(i.Heading, {
+      children: [(0, a.jsx)(i.Heading, {
         variant: "heading-md/semibold",
         children: h.default.Messages.FORUM_START_THE_CONVERSATION_HEADER
-      }), (0, s.jsx)(i.Text, {
+      }), (0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         children: h.default.Messages.FORUM_START_THE_CONVERSATION_DESCRIPTION
       })]
     })]
-  }) : null : (0, s.jsx)("div", {
+  }) : null : (0, a.jsx)("div", {
     className: C.divider
   })
 })

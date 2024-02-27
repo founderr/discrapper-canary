@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var s = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("446674"),
+var s = n("446674"),
   l = n("77078"),
   i = n("206230"),
   r = n("843962"),
@@ -20,26 +20,26 @@ function c(e) {
     channel: n,
     children: c,
     user: f
-  } = e, h = (0, a.useStateFromStores)([i.default], () => i.default.useReducedMotion), C = null !== (t = (0, o.default)(n)) && void 0 !== t ? t : "", {
+  } = e, h = (0, s.useStateFromStores)([i.default], () => i.default.useReducedMotion), C = null !== (t = (0, o.default)(n)) && void 0 !== t ? t : "", {
     avatarDecorationSrc: p,
-    eventHandlers: m,
-    isAnimating: E
+    eventHandlers: E,
+    isAnimating: m
   } = (0, u.default)({
     user: f,
     size: l.AvatarSizes.SIZE_80,
     animateOnHover: !0
   });
-  return (0, s.jsxs)(d.default, {
+  return (0, a.jsxs)(d.default, {
     channelId: n.id,
-    ...m,
-    children: [(0, s.jsx)(l.Avatar, {
+    ...E,
+    children: [(0, a.jsx)(l.Avatar, {
       "aria-label": C,
       size: l.AvatarSizes.SIZE_80,
-      src: (0, r.getChannelIconURL)(n, 80, !h && E),
+      src: (0, r.getChannelIconURL)(n, 80, !h && m),
       avatarDecoration: p
-    }), (0, s.jsx)(d.EmptyMessageHeader, {
+    }), (0, a.jsx)(d.EmptyMessageHeader, {
       children: C
-    }), (0, s.jsx)(d.EmptyMessageBody, {
+    }), (0, a.jsx)(d.EmptyMessageBody, {
       children: c
     })]
   })

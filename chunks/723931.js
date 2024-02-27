@@ -52,8 +52,8 @@ var s = n("37983"),
   H = n("705423"),
   V = n("315021"),
   Y = n("24373"),
-  K = n("943508"),
-  W = n("300322"),
+  W = n("943508"),
+  K = n("300322"),
   z = n("415829"),
   Q = n("845579"),
   Z = n("271938"),
@@ -423,7 +423,7 @@ class ek extends l.Component {
         channel: n,
         isInteracting: l
       } = this.props;
-    return 0 === t.length ? null : t.map(e => (0, s.jsx)(K.default, {
+    return 0 === t.length ? null : t.map(e => (0, s.jsx)(W.default, {
       channel: n,
       isInteracting: l,
       renderableSticker: e
@@ -669,7 +669,7 @@ function eF(e) {
   } = (0, o.useStateFromStoresObject)([q.default], () => ({
     canAddNewReactions: I && q.default.can(eR.Permissions.ADD_REACTIONS, a),
     canManageMessages: q.default.can(eR.Permissions.MANAGE_MESSAGES, a)
-  }), [I, a]), [, M] = (0, R.useCurrentUserCommunicationDisabled)(a.guild_id), O = (0, W.useIsActiveChannelOrUnarchivableThread)(a), L = (u === i.author.id || C) && i.author.id !== eR.LOCAL_BOT_ID && !1 !== r && !(0, ed.hasFlag)(i.flags, eR.MessageFlags.EPHEMERAL) && O, v = u === i.author.id && O, P = i.author.id === u, D = i.isFirstMessageInForumPost(a), x = (0, em.default)({
+  }), [I, a]), [, M] = (0, R.useCurrentUserCommunicationDisabled)(a.guild_id), O = (0, K.useIsActiveChannelOrUnarchivableThread)(a), L = (u === i.author.id || C) && i.author.id !== eR.LOCAL_BOT_ID && !1 !== r && !(0, ed.hasFlag)(i.flags, eR.MessageFlags.EPHEMERAL) && O, v = u === i.author.id && O, P = i.author.id === u, D = i.isFirstMessageInForumPost(a), x = (0, em.default)({
     channel: a,
     canChat: I,
     renderReactions: _,

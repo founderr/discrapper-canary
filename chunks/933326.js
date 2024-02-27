@@ -7,15 +7,15 @@ n.r(t), n.d(t, {
 var l = n("689988"),
   s = n("21121"),
   u = n("162771"),
-  i = n("398604"),
-  a = n("322224");
+  a = n("398604"),
+  i = n("322224");
 let o = {},
   r = new Set,
   d = async e => {
-    let t = i.default.getGuildScheduledEventsForGuild(e);
+    let t = a.default.getGuildScheduledEventsForGuild(e);
     if (0 !== t.length) {
       if (!r.has(e)) try {
-        await a.default.getGuildEventsForCurrentUser(e), r.add(e)
+        await i.default.getGuildEventsForCurrentUser(e), r.add(e)
       } catch (e) {}
     }
   };
@@ -25,12 +25,12 @@ class c extends l.default {
     if (!(Date.now() - o["".concat(e, "-").concat(t)] < 18e5) || 0 !== l.length) {
       o["".concat(e, "-").concat(t)] = Date.now(), l.forEach(n => o["".concat(e, "-").concat(t, "-").concat(n)] = Date.now());
       try {
-        await a.default.fetchGuildEventUserCounts(e, t, l)
+        await i.default.fetchGuildEventUserCounts(e, t, l)
       } catch (e) {}
     }
   }
   getGuildEventUsers(e, t, n) {
-    return a.default.fetchUsersForGuildEvent(e, t, n)
+    return i.default.fetchUsersForGuildEvent(e, t, n)
   }
   getGuildEventsForCurrentUser(e) {
     return d(e)
@@ -40,7 +40,7 @@ class c extends l.default {
     let e = (0, s.isInMainTabsExperiment)(),
       t = u.default.getLastSelectedGuildId();
     if (e && null != t) {
-      let e = i.default.getGuildScheduledEventsForGuild(t);
+      let e = a.default.getGuildScheduledEventsForGuild(t);
       e.forEach(e => this.getGuildEventUserCounts(t, e.id, []))
     }
   }
@@ -68,7 +68,7 @@ class c extends l.default {
       guildId: t
     } = e;
     if (null == t) return;
-    let n = i.default.getGuildScheduledEventsForGuild(t);
+    let n = a.default.getGuildScheduledEventsForGuild(t);
     n.forEach(e => this.getGuildEventUserCounts(t, e.id, []))
   }
   constructor(...e) {

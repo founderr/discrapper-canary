@@ -30,13 +30,13 @@ let N = {
     "layers[2].shapes[1].g.k.k": [0, .714, .271, .757, .5, .714, .271, .757, 1, .714, .271, .757]
   },
   R = [0, .5, 1],
-  v = {
+  O = {
     "layers[1].shapes[0].it[1].c.k": [1, .466666668653, .972549021244],
     "layers[2].shapes[0].it[1].c.k": [1, .466666668653, .972549021244],
     "layers[3].shapes[0].it[1].c.k": [1, .466666668653, .972549021244]
   };
 
-function O(e, t, n) {
+function v(e, t, n) {
   for (let a in t) {
     let s = t[a],
       l = o.get(e, a);
@@ -50,14 +50,14 @@ async function M(e, t) {
   let a = L.get(e);
   if (null != a) return a;
   let s = (await n.el("723469").then(n.t.bind(n, "723469", 19))).default;
-  return O(s, N, t), L.set(e, s), s
+  return v(s, N, t), L.set(e, s), s
 }
 let P = new Map;
 async function D(e, t) {
   let a = P.get(e);
   if (null != a) return a;
   let s = (await n.el("479580").then(n.t.bind(n, "479580", 19))).default;
-  return O(s, v, t), P.set(e, s), s
+  return v(s, O, t), P.set(e, s), s
 }
 
 function y(e) {
@@ -72,8 +72,8 @@ var x = function() {
     r = (0, d.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     o = (0, d.useStateFromStores)([I.default], () => (0, m.getQuestForTargetedContent)(I.default.quests, S.QuestContent.QUEST_BAR)),
     N = (0, d.useStateFromStores)([f.default], () => f.default.isFocused()),
-    v = !r && N,
-    O = s.useRef(-1),
+    O = !r && N,
+    v = s.useRef(-1),
     L = s.useRef(!1),
     [P, x] = s.useState(!1),
     [b, U] = s.useState(!1),
@@ -117,10 +117,10 @@ var x = function() {
       x(!1), j(!1), L.current = !1
     }, []),
     ea = s.useCallback(() => {
-      window.clearTimeout(O.current), Y.current = !0, U(!1), $()
+      window.clearTimeout(v.current), Y.current = !0, U(!1), $()
     }, [$]),
     es = s.useCallback(() => {
-      if (!z) !P && (O.current = window.setTimeout(() => {
+      if (!z) !P && (v.current = window.setTimeout(() => {
         !L.current && j(!1)
       }, 200))
     }, [P, z]),
@@ -245,7 +245,7 @@ var x = function() {
       className: A.lottieAnimationBackgroundWrapper,
       children: (0, a.jsx)(E.default, {
         importData: () => M(o.id, X),
-        shouldAnimate: v,
+        shouldAnimate: O,
         className: i(A.lottieAnimation, A.lottieAnimationBackground),
         loop: !0
       })

@@ -30,21 +30,21 @@ var a = n("414456"),
   m = n("987772"),
   E = n("82636"),
   g = n("368121"),
-  S = n("228427"),
-  I = n("956089"),
-  _ = n("471374"),
+  I = n("228427"),
+  _ = n("956089"),
+  S = n("471374"),
   N = n("49111"),
   T = n("853708");
 
 function A(e, t) {
-  return (0, l.jsx)(I.NumberBadge, {
+  return (0, l.jsx)(_.NumberBadge, {
     count: e,
     color: t
   })
 }
 
 function L() {
-  return (0, l.jsx)(I.IconBadge, {
+  return (0, l.jsx)(_.IconBadge, {
     icon: o.default,
     disableColor: !0,
     className: T.unavailableBadge
@@ -62,11 +62,11 @@ function v(e) {
       activity: o,
       gaming: c
     } = e,
-    f = (0, _.isGamingVoiceActivityEnabled)("Guild Icon", !1);
-  if (!r && !i && !o && !a && !l && c && _.default.trackExposure({
+    f = (0, S.isGamingVoiceActivityEnabled)("Guild Icon", !1);
+  if (!r && !i && !o && !a && !l && c && S.default.trackExposure({
       location: "Guild Icon"
     }), r) t = u.default;
-  else if (i) t = S.default;
+  else if (i) t = I.default;
   else if (o) t = E.default;
   else if (a) t = p.default;
   else if (l) t = d.default;
@@ -112,7 +112,7 @@ function R(e) {
   } : {
     color: (0, i.getColor)(n)
   };
-  return (0, l.jsx)(I.IconBadge, {
+  return (0, l.jsx)(_.IconBadge, {
     icon: t,
     className: s(T.iconBadge, {
       [T.isCurrentUserConnected]: a

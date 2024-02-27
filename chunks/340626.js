@@ -47,11 +47,11 @@ n.r(t), n.d(t, {
         query: t,
         categoryId: a
       });
-      let S = Object.assign({}, E, n.filters),
-        I = Object.keys(S),
-        _ = I.map(e => "".concat(e).concat(S[e]));
-      a !== C.DISCOVERY_ALL_CATEGORIES_ID && _.push("(primary_category_id=".concat(a, " OR categories.id=").concat(a, ")"));
-      let N = _.join(" AND ");
+      let I = Object.assign({}, E, n.filters),
+        _ = Object.keys(I),
+        S = _.map(e => "".concat(e).concat(I[e]));
+      a !== C.DISCOVERY_ALL_CATEGORIES_ID && S.push("(primary_category_id=".concat(a, " OR categories.id=").concat(a, ")"));
+      let N = S.join(" AND ");
       try {
         let i = g.search(t, {
             filters: N,
@@ -110,13 +110,13 @@ n.r(t), n.d(t, {
     }
   },
   getSearchResultsCount: function() {
-    return S
-  },
-  fetchPopularGuildsForCategory: function() {
     return I
   },
-  fetchFeaturedOrPopularGuilds: function() {
+  fetchPopularGuildsForCategory: function() {
     return _
+  },
+  fetchFeaturedOrPopularGuilds: function() {
+    return S
   },
   fetchGamesYouPlayGuilds: function() {
     return N
@@ -160,7 +160,7 @@ function g() {
   }))
 }
 
-function S(e, t) {
+function I(e, t) {
   let n = d.default.getSearchIndex();
   if (null == n) return;
   let l = Object.assign({}, E, t),
@@ -201,7 +201,7 @@ function S(e, t) {
     })
   }
 }
-async function I(e) {
+async function _(e) {
   o.default.dispatch({
     type: "GUILD_DISCOVERY_POPULAR_FETCH_START",
     categoryId: e
@@ -229,7 +229,7 @@ async function I(e) {
     })
   }
 }
-async function _(e, t) {
+async function S(e, t) {
   o.default.dispatch({
     type: "GUILD_DISCOVERY_FETCH_START",
     section: h.GuildDiscoverySections.FEATURED

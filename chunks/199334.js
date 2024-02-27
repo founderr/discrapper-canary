@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return I
   }
 });
 var l = n("37983"),
@@ -21,16 +21,16 @@ var l = n("37983"),
   E = n("850665"),
   g = n("919163");
 
-function S(e) {
+function I(e) {
   let {
     channel: t,
     connected: n,
     hovered: s,
-    subtitle: S,
-    onClick: I,
-    enableHangStatus: _,
+    subtitle: I,
+    onClick: _,
+    enableHangStatus: S,
     allowChannelTopic: N
-  } = e, T = (0, r.useStateFromStores)([u.default], () => u.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, r.useStateFromStores)([c.default], () => (!_ || !!N) && c.default.can(p.Permissions.SET_VOICE_CHANNEL_STATUS, t)), v = null != S && S.length > 0;
+  } = e, T = (0, r.useStateFromStores)([u.default], () => u.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, r.useStateFromStores)([c.default], () => (!S || !!N) && c.default.can(p.Permissions.SET_VOICE_CHANNEL_STATUS, t)), v = null != I && I.length > 0;
   a.useEffect(() => {
     A && C.default.track(p.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
       guild_id: t.guild_id,
@@ -42,7 +42,7 @@ function S(e) {
   let R = i(E.statusDiv, n && L ? E.hoverable : null);
   if (A) return (0, l.jsx)(o.Clickable, {
     className: R,
-    onClick: L ? I : void 0,
+    onClick: L ? _ : void 0,
     children: (0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: i(E.statusText, g.markup),
@@ -55,7 +55,7 @@ function S(e) {
   });
   if (n && L && (!v || s)) return (0, l.jsxs)(o.Clickable, {
     className: R,
-    onClick: I,
+    onClick: _,
     children: [(0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: E.statusText,
@@ -67,7 +67,7 @@ function S(e) {
     })]
   });
   if (v) return (0, l.jsx)(f.default, {
-    children: S
+    children: I
   });
   return null
 }

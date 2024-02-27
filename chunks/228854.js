@@ -21,9 +21,9 @@ var a = n("65597"),
   m = n("803725"),
   E = n("49111"),
   g = n("782340"),
-  S = n("249576");
+  I = n("249576");
 
-function I(e) {
+function _(e) {
   (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
@@ -34,7 +34,7 @@ function I(e) {
   })
 }
 
-function _() {
+function S() {
   (0, m.saveClip)()
 }
 let N = e => {
@@ -56,30 +56,30 @@ let N = e => {
         dismissibleContent: s.DismissibleContent.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
         shouldUseHorizontalButtons: !0,
         inlineArt: !0,
-        artClassName: S.clipsEducationArt,
+        artClassName: I.clipsEducationArt,
         position: "top",
         header: (0, l.jsx)("div", {
-          className: S.header,
+          className: I.header,
           children: g.default.Messages.CLIPS_ONBOARDING_CLIP_BUTTON_ACTIVITY_PANEL_COACHMARK_TITLE.format({
             keybind: t,
             keybindHook: () => (0, l.jsx)("span", {
-              className: S.keybindHintKeys,
+              className: I.keybindHintKeys,
               children: (0, l.jsx)(i.KeyCombo, {
-                className: S.keybindShortcut,
+                className: I.keybindShortcut,
                 shortcut: t
               })
             })
           })
         }),
-        headerClassName: S.clipsEducationHeader,
+        headerClassName: I.clipsEducationHeader,
         body: (0, l.jsx)(l.Fragment, {
           children: (0, l.jsx)(i.Text, {
             variant: "text-sm/normal",
             color: "always-white",
-            className: S.bodyText,
+            className: I.bodyText,
             children: g.default.Messages.CLIPS_ONBOARDING_CLIP_BUTTON_ACTIVITY_PANEL_COACHMARK_BODY.format({
               keybindHook: () => (0, l.jsx)("div", {
-                className: S.keyCombo,
+                className: I.keyCombo,
                 children: t
               }),
               keybind: t
@@ -114,8 +114,8 @@ var T = () => {
       tooltipText: null != i ? g.default.Messages.CLIPS_SAVE_CLIP_TOOLTIP.format({
         hotkey: h.toString(null == i ? void 0 : i.shortcut, !0)
       }) : g.default.Messages.CLIPS_EDIT_SAVE_CLIP,
-      onClick: _,
-      onContextMenu: I,
+      onClick: S,
+      onContextMenu: _,
       icon: c.default
     })
   })

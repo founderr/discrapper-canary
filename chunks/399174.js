@@ -43,13 +43,13 @@ let g = (0, h.makeLazy)({
     webpackId: "725621",
     name: "GuildSettings"
   }),
-  v = {
+  O = {
     [p.Layers.USER_SETTINGS]: () => (0, a.jsx)(g, {}),
     [p.Layers.CHANNEL_SETTINGS]: () => (0, a.jsx)(A, {}),
     [p.Layers.GUILD_SETTINGS]: () => (0, a.jsx)(R, {}),
     [p.Layers.COLLECTIBLES_SHOP]: () => (0, a.jsx)(N, {})
   },
-  O = "SHOWN",
+  v = "SHOWN",
   L = "HIDDEN",
   M = {
     friction: 10,
@@ -73,8 +73,8 @@ class D extends s.PureComponent {
       mode: n
     } = e;
     if (t !== n) {
-      if (t === O && n === L) return this.animateIn();
-      if (t === L && n === O) return this.animateUnder()
+      if (t === v && n === L) return this.animateIn();
+      if (t === L && n === v) return this.animateUnder()
     }
   }
   componentWillEnter(e) {
@@ -212,15 +212,15 @@ class y extends s.PureComponent {
       length: s
     } = t, l = [];
     return l.push((0, a.jsx)(D, {
-      mode: 0 !== s || n ? L : O,
+      mode: 0 !== s || n ? L : v,
       baseLayer: !0,
       children: e
     }, "layer-base")), t.forEach((e, t) => l.push(this.renderComponent(e, t, s))), l
   }
   renderComponent(e, t, n) {
     let s;
-    return s = "string" == typeof e ? v[e]() : (0, a.jsx)(e, {}), (0, a.jsxs)(D, {
-      mode: t === n - 1 ? O : L,
+    return s = "string" == typeof e ? O[e]() : (0, a.jsx)(e, {}), (0, a.jsxs)(D, {
+      mode: t === n - 1 ? v : L,
       children: [(0, a.jsx)(P, {}), s]
     }, "layer-".concat(t))
   }

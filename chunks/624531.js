@@ -22,7 +22,7 @@ var l = n("37983"),
     let {
       guildNode: t,
       lowerBadge: n
-    } = e, E = t.id, g = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(E)), S = (0, i.useCurrentUserGuildBadgeStatus)(E), I = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), _ = (0, s.useStateFromStores)([u.default], () => u.default.isUnavailable(E)), N = (0, o.default)(e => e.guildId), T = (0, C.default)(E), {
+    } = e, E = t.id, g = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(E)), I = (0, i.useCurrentUserGuildBadgeStatus)(E), _ = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), S = (0, s.useStateFromStores)([u.default], () => u.default.isUnavailable(E)), N = (0, o.default)(e => e.guildId), T = (0, C.default)(E), {
       badge: A,
       unread: L
     } = (0, s.useStateFromStoresObject)([d.default], () => ({
@@ -39,13 +39,13 @@ var l = n("37983"),
     return (0, l.jsx)(p.default, {
       ...e,
       guild: g,
-      unavailable: _,
-      animatable: I,
+      unavailable: S,
+      animatable: _,
       selected: N === E,
       badge: A,
       lowerBadge: x,
       unread: L,
       mediaState: T,
-      guildJoinRequestStatus: S
+      guildJoinRequestStatus: I
     })
   })

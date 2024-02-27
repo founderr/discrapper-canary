@@ -61,11 +61,11 @@ let I = new u.default(e => {
   p = {},
   N = {};
 
-function R(e) {
+function A(e) {
   I.set(e.id, e), S += 1
 }
 
-function A(e) {
+function R(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   I.delete(e), delete p[e], t && delete N[e], S += 1
 }
@@ -110,14 +110,14 @@ function h(e, t, n) {
 }
 
 function P(e, t) {
-  I.values(E.GUILD_EVENT(e)).forEach(e => A(e.id, t))
+  I.values(E.GUILD_EVENT(e)).forEach(e => R(e.id, t))
 }
 
 function g(e) {
   let {
     guildScheduledEvent: t
   } = e;
-  return R(t), !0
+  return A(t), !0
 }
 
 function D(e) {
@@ -127,7 +127,7 @@ function D(e) {
   if (null == n) return !1;
   let r = n.guild_scheduled_event_exceptions.findIndex(e => e.event_exception_id === t.event_exception_id),
     i = [...n.guild_scheduled_event_exceptions];
-  return r < 0 ? i.push(t) : i[r] = t, R({
+  return r < 0 ? i.push(t) : i[r] = t, A({
     ...n,
     guild_scheduled_event_exceptions: i
   }), !0
@@ -211,13 +211,13 @@ var M = new U(a.default, {
     let {
       guilds: t
     } = e;
-    return I.clear(), S = 0, p = {}, N = {}, T.forEach(R), t.forEach(e => e.guild_scheduled_events.forEach(e => R(e))), !0
+    return I.clear(), S = 0, p = {}, N = {}, T.forEach(A), t.forEach(e => e.guild_scheduled_events.forEach(e => A(e))), !0
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    return P(t.id, !1), t.guild_scheduled_events.forEach(e => R(e)), !0
+    return P(t.id, !1), t.guild_scheduled_events.forEach(e => A(e)), !0
   },
   GUILD_DELETE: function(e) {
     let {
@@ -229,7 +229,7 @@ var M = new U(a.default, {
     let {
       guildScheduledEvent: t
     } = e;
-    R(t)
+    A(t)
   },
   FETCH_GUILD_EVENTS_FOR_GUILD: function(e) {
     let {
@@ -237,8 +237,8 @@ var M = new U(a.default, {
       guildScheduledEvents: n
     } = e, r = I.values(E.GUILD_EVENT(t), !0).map(e => e.id), l = n.map(e => e.id);
     for (let e of (i.difference(r, l).forEach(e => {
-        A(e)
-      }), n)) R(e);
+        R(e)
+      }), n)) A(e);
     return !0
   },
   GUILD_SCHEDULED_EVENT_CREATE: g,
@@ -247,7 +247,7 @@ var M = new U(a.default, {
     let {
       guildScheduledEvent: t
     } = e;
-    return A(t.id), !0
+    return R(t.id), !0
   },
   GUILD_SCHEDULED_EVENT_USER_ADD: function(e) {
     var t, n;
@@ -309,7 +309,7 @@ var M = new U(a.default, {
     let {
       invite: t
     } = e, n = t.guild_scheduled_event;
-    return null != n && (R(n), !0)
+    return null != n && (A(n), !0)
   },
   GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: D,
   GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: D,
@@ -319,7 +319,7 @@ var M = new U(a.default, {
     } = e, n = I.get(t.event_id);
     if (null == n) return !1;
     let r = n.guild_scheduled_event_exceptions.filter(e => e.event_exception_id !== t.event_exception_id);
-    return R({
+    return A({
       ...n,
       guild_scheduled_event_exceptions: r
     }), !0
@@ -328,7 +328,7 @@ var M = new U(a.default, {
     let {
       eventId: t
     } = e, n = I.get(t);
-    return null != n && (R({
+    return null != n && (A({
       ...n,
       guild_scheduled_event_exceptions: []
     }), !0)

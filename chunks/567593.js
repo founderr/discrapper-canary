@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("952451"),
   E = n("305961"),
   g = n("660478"),
-  S = n("18494"),
-  I = n("316133"),
-  _ = n("822332"),
+  I = n("18494"),
+  _ = n("316133"),
+  S = n("822332"),
   N = n("409082"),
   T = n("476765"),
   A = n("659500"),
@@ -74,13 +74,13 @@ let G = o.default.connectStores([g.default, p.default], e => {
       category: p.default.getChannel(t.parent_id)
     }
   })(j),
-  U = o.default.connectStores([I.default], e => {
+  U = o.default.connectStores([_.default], e => {
     let {
       channel: t
     } = e;
     if (null == t.guild_id) throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
     return {
-      voiceStates: I.default.getVoiceStates(t.guild_id)[t.id]
+      voiceStates: _.default.getVoiceStates(t.guild_id)[t.id]
     }
   })(j),
   P = o.default.connectStores([m.default], e => {
@@ -209,11 +209,11 @@ class V extends a.PureComponent {
     return "quick-switcher-".concat(this._listId, "-item-").concat(e)
   }
   renderProtip() {
-    return (0, l.jsx)(_.default, {
+    return (0, l.jsx)(S.default, {
       className: i(y.protip, {
         [y.hasContent]: this.state.query.length > 0
       }),
-      type: _.default.Types.INLINE,
+      type: S.default.Types.INLINE,
       children: O.default.Messages.QUICKSWITCHER_PROTIP.format({
         userSymbolHook: (e, t) => B(t, h.AutocompleterQuerySymbols.USER, O.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
         textChannelSymbolHook: (e, t) => B(t, h.AutocompleterQuerySymbols.TEXT_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
@@ -362,7 +362,7 @@ class V extends a.PureComponent {
             return n => (0, l.jsx)(e, {
               ...n,
               channel: t.record,
-              selected: S.default.getChannelId() === t.record.id,
+              selected: I.default.getChannelId() === t.record.id,
               onSelect: v.hide
             })
           });

@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("449008"),
   E = n("447235"),
   g = n("563903"),
-  S = n("321314"),
-  I = n("137376"),
-  _ = n("789482"),
+  I = n("321314"),
+  _ = n("137376"),
+  S = n("789482"),
   N = n("49111"),
   T = n("782340"),
   A = n("950043");
@@ -34,8 +34,8 @@ function L(e) {
     guild: h,
     onAction: p,
     voiceStates: E,
-    isChannelSelected: S,
-    shouldShowSettingNudge: I
+    isChannelSelected: I,
+    shouldShowSettingNudge: _
   } = e;
   ! function(e, t) {
     let n = a.useMemo(() => {
@@ -51,9 +51,9 @@ function L(e) {
     }, [e, t]);
     (0, r.useSubscribeGuildMembers)(n)
   }(f, E);
-  let _ = (0, o.default)(f),
+  let S = (0, o.default)(f),
     L = new Map;
-  _.forEach(e => {
+  S.forEach(e => {
     L.set(e.application.id, e)
   });
   let x = null !== (t = null == E ? void 0 : E.filter(m.isNotNullish)) && void 0 !== t ? t : [],
@@ -95,7 +95,7 @@ function L(e) {
     className: A.container,
     children: [(0, l.jsx)(v, {
       channel: f,
-      isChannelSelected: S,
+      isChannelSelected: I,
       voiceStatesCount: null !== (c = null == E ? void 0 : E.length) && void 0 !== c ? c : 0
     }), (0, l.jsx)("div", {
       className: A.headerDivider
@@ -111,7 +111,7 @@ function L(e) {
         members: n,
         onAction: p
       }, t)
-    }), I && (0, l.jsxs)(l.Fragment, {
+    }), _ && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: A.headerDivider
       }), (0, l.jsx)("div", {
@@ -151,13 +151,13 @@ function v(e) {
   }), u = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), d = (0, c.getChannelIconComponent)(t, u);
   return null == d ? null : (0, l.jsxs)("div", {
     className: A.popoutHeaderContainer,
-    children: [(0, l.jsx)(S.default, {
+    children: [(0, l.jsx)(I.default, {
       channel: t
-    }), o ? (0, l.jsx)(I.default, {
+    }), o ? (0, l.jsx)(_.default, {
       userCount: a,
       video: r,
       channel: t
-    }) : (0, l.jsx)(_.default, {
+    }) : (0, l.jsx)(S.default, {
       userCount: a
     })]
   })

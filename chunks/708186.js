@@ -32,9 +32,9 @@ var l = n("37983"),
   m = n("282109"),
   E = n("98292"),
   g = n("381546"),
-  S = n("256170"),
-  I = n("689476"),
-  _ = n("368121"),
+  I = n("256170"),
+  _ = n("689476"),
+  S = n("368121"),
   N = n("826684"),
   T = n("323137"),
   A = n("2003"),
@@ -50,7 +50,7 @@ let M = a.memo(function(e) {
       channel: s,
       connectChannelDragSource: f,
       connectChannelDropTarget: g,
-      disableManageChannels: _,
+      disableManageChannels: S,
       position: T,
       sortingPosition: A,
       hideIcon: M,
@@ -131,7 +131,7 @@ let M = a.memo(function(e) {
             focusProps: {
               enabled: !1
             },
-            children: [M ? null : (0, l.jsx)(S.default, {
+            children: [M ? null : (0, l.jsx)(I.default, {
               className: x.icon
             }), (0, l.jsx)(N.default, {
               className: x.name,
@@ -142,7 +142,7 @@ let M = a.memo(function(e) {
           }), (0, l.jsx)("div", {
             onClick: R,
             className: x.children,
-            children: b && !_ ? (0, l.jsx)(u.Tooltip, {
+            children: b && !S ? (0, l.jsx)(u.Tooltip, {
               text: v.default.Messages.CREATE_CHANNEL,
               children: e => {
                 let {
@@ -166,7 +166,7 @@ let M = a.memo(function(e) {
                       left: -4
                     }
                   },
-                  children: (0, l.jsx)(I.default, {
+                  children: (0, l.jsx)(_.default, {
                     width: 18,
                     height: 18,
                     className: x.addButtonIcon
@@ -222,7 +222,7 @@ let y = a.memo(function(e) {
     return n ? (0, l.jsxs)(u.Clickable, {
       className: x.voiceChannelsButton,
       onClick: s,
-      children: [(0, l.jsx)(_.default, {
+      children: [(0, l.jsx)(S.default, {
         className: x.voiceChannelsToggleIcon,
         width: 16,
         height: 16
@@ -233,7 +233,7 @@ let y = a.memo(function(e) {
     }) : (0, l.jsxs)(u.Clickable, {
       className: x.voiceChannelsButton,
       onClick: s,
-      children: [(0, l.jsx)(_.default, {
+      children: [(0, l.jsx)(S.default, {
         className: x.voiceChannelsToggleIcon,
         width: 16,
         height: 16

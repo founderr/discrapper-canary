@@ -58,18 +58,18 @@ var r = n("316693"),
   p = n("646718"),
   N = n("782340");
 let {
-  GUILD_VOICE: R,
-  GUILD_CATEGORY: A,
+  GUILD_VOICE: A,
+  GUILD_CATEGORY: R,
   GUILD_STAGE_VOICE: C
 } = f.ChannelTypes;
 
 function L(e, t) {
-  return e === t || e === A
+  return e === t || e === R
 }
 
 function O(e, t, n) {
   let i = S.default.NONE;
-  return ((0, s.isGuildSelectableChannelType)(t) || t === A) && (i = r.default.add(i, f.Permissions.VIEW_CHANNEL)), (L(t, R) || L(t, C)) && (i = r.default.add(i, f.Permissions.VIEW_CHANNEL), i = r.default.add(i, f.Permissions.CONNECT)), {
+  return ((0, s.isGuildSelectableChannelType)(t) || t === R) && (i = r.default.add(i, f.Permissions.VIEW_CHANNEL)), (L(t, A) || L(t, C)) && (i = r.default.add(i, f.Permissions.VIEW_CHANNEL), i = r.default.add(i, f.Permissions.CONNECT)), {
     id: e,
     type: n,
     deny: S.default.NONE,
@@ -83,7 +83,7 @@ function h(e, t, n) {
   if (n.length > 0 || l) {
     var a, o, d;
     let n;
-    u.push((a = e, o = t, d = i.PermissionOverwriteType.ROLE, n = S.default.NONE, ((0, s.isGuildSelectableChannelType)(o) || o === A) && (n = r.default.add(n, f.Permissions.VIEW_CHANNEL)), L(o, R) && (n = r.default.add(n, f.Permissions.VIEW_CHANNEL), n = r.default.add(n, f.Permissions.CONNECT)), {
+    u.push((a = e, o = t, d = i.PermissionOverwriteType.ROLE, n = S.default.NONE, ((0, s.isGuildSelectableChannelType)(o) || o === R) && (n = r.default.add(n, f.Permissions.VIEW_CHANNEL)), L(o, A) && (n = r.default.add(n, f.Permissions.VIEW_CHANNEL), n = r.default.add(n, f.Permissions.CONNECT)), {
       id: a,
       type: d,
       allow: S.default.NONE,

@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return N
   },
   isAccessibleChannelPath: function() {
-    return R
+    return A
   }
 });
 var r = n("42203"),
@@ -77,7 +77,7 @@ function N(e) {
   return !!e.isPrivate() || l.default.can(a.Permissions.VIEW_CHANNEL, e)
 }
 
-function R(e) {
+function A(e) {
   let {
     guildId: t,
     channelId: n

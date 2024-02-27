@@ -48,7 +48,7 @@ function B(e) {
     channel: k
   } = e, F = (0, x.useMediaPostEmbedData)(r, B), {
     setPopout: w
-  } = (0, S.default)(B.id, U.DEFAULT_POPOUTS), H = (0, p.useContextMenuMessage)(B, k, w, !0), V = h.GifAutoPlay.useSetting(), Y = (0, P.useIsWindowFocused)(), [K, W] = l.useState(!1), [z, Q] = l.useState((null == F ? void 0 : F.coverImage) == null), Z = (0, c.default)([f.default], () => f.default.useReducedMotion), J = (0, c.default)([g.default, M.default], () => {
+  } = (0, S.default)(B.id, U.DEFAULT_POPOUTS), H = (0, p.useContextMenuMessage)(B, k, w, !0), V = h.GifAutoPlay.useSetting(), Y = (0, P.useIsWindowFocused)(), [W, K] = l.useState(!1), [z, Q] = l.useState((null == F ? void 0 : F.coverImage) == null), Z = (0, c.default)([f.default], () => f.default.useReducedMotion), J = (0, c.default)([g.default, M.default], () => {
     var e;
     return g.default.isMember(null == F ? void 0 : F.guildId, null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
   }, [F]), X = (0, c.default)([g.default], () => {
@@ -57,10 +57,10 @@ function B(e) {
   }), {
     reducedMotion: q
   } = l.useContext(E.AccessibilityPreferencesContext), [$, ee] = l.useState(!1), et = l.useCallback(() => {
-    W(!0)
-  }, [W]), en = l.useCallback(() => {
-    W(!1)
-  }, [W]), es = l.useCallback(async () => {
+    K(!0)
+  }, [K]), en = l.useCallback(() => {
+    K(!1)
+  }, [K]), es = l.useCallback(async () => {
     null != F && ((0, _.trackWithMetadata)(y.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
       media_post_id: F.threadId,
       channel_id: k.id,
@@ -106,7 +106,7 @@ function B(e) {
         onContextMenu: H,
         onError: () => Q(!0)
       }) : (0, s.jsx)(I.default, {
-        src: !(Y && (V || K)) && ed ? "".concat(eu, "?format=png") : eu,
+        src: !(Y && (V || W)) && ed ? "".concat(eu, "?format=png") : eu,
         backgroundSrc: "".concat(eu, "?format=png"),
         alt: j.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         aspectRatio: 16 / 9,

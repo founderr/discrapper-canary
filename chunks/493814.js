@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("697218"),
   E = n("145131"),
   g = n("791106"),
-  S = n("476765"),
-  I = n("124969"),
-  _ = n("83900"),
+  I = n("476765"),
+  _ = n("124969"),
+  S = n("83900"),
   N = n("216422"),
   T = n("128295"),
   A = n("414868"),
@@ -87,7 +87,7 @@ function P(e) {
     className: i(j.iconContainer, t),
     children: [(0, l.jsx)(T.default, {
       className: j.iconSparklePlus
-    }), (0, l.jsx)(_.default, {
+    }), (0, l.jsx)(S.default, {
       className: j.iconLink,
       width: 40,
       height: 40
@@ -100,7 +100,7 @@ function P(e) {
 function w(e) {
   let {
     transitionState: t
-  } = e, n = (0, S.useUID)(), {
+  } = e, n = (0, I.useUID)(), {
     AnalyticsLocationProvider: a
   } = (0, c.default)(d.default.INVITE_MODAL);
   return (0, l.jsx)(a, {
@@ -120,10 +120,10 @@ function w(e) {
         }), (0, l.jsx)("div", {
           className: j.errorBody,
           children: b.default.Messages.INVITE_MODAL_ERROR_INVALID_BODY
-        }), (0, l.jsx)(I.Button, {
-          size: I.Button.Sizes.LARGE,
+        }), (0, l.jsx)(_.Button, {
+          size: _.Button.Sizes.LARGE,
           onClick: () => M.default.close(),
-          color: I.Button.Colors.BRAND,
+          color: _.Button.Colors.BRAND,
           children: b.default.Messages.INVITE_MODAL_ERROR_BUTTON_TEXT
         })]
       })
@@ -142,12 +142,12 @@ function F(e) {
   let {
     invite: C,
     error: g,
-    submitting: _
+    submitting: S
   } = (0, r.useStateFromStoresObject)([O.default], () => O.default.getProps());
   a.useEffect(() => {
     !__OVERLAY__ && x.isPlatformEmbedded && ((0, x.isWindows)() ? R.default.minimize() : R.default.restore(), R.default.focus())
   }, []);
-  let N = (0, S.useUID)(),
+  let N = (0, I.useUID)(),
     {
       AnalyticsLocationProvider: T
     } = (0, c.default)(d.default.INVITE_MODAL);
@@ -217,12 +217,12 @@ function F(e) {
                     onMouseEnter: t,
                     onMouseLeave: n
                   } = e;
-                  return (0, l.jsx)(I.Button, {
-                    size: I.Button.Sizes.LARGE,
+                  return (0, l.jsx)(_.Button, {
+                    size: _.Button.Sizes.LARGE,
                     onClick: A,
-                    submitting: _,
+                    submitting: S,
                     disabled: H,
-                    color: B ? I.Button.Colors.GREEN : I.Button.Colors.BRAND,
+                    color: B ? _.Button.Colors.GREEN : _.Button.Colors.BRAND,
                     onMouseEnter: t,
                     onMouseLeave: n,
                     children: H ? b.default.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : k
@@ -230,28 +230,28 @@ function F(e) {
                 }
               }) : (0, l.jsxs)("div", {
                 className: j.buttonGroup,
-                children: [(0, l.jsx)(I.Button, {
-                  size: I.Button.Sizes.LARGE,
+                children: [(0, l.jsx)(_.Button, {
+                  size: _.Button.Sizes.LARGE,
                   onClick: A,
-                  submitting: _,
+                  submitting: S,
                   children: b.default.Messages.PLAY
-                }), (0, l.jsx)(I.Button, {
-                  color: I.Button.Colors.PRIMARY,
-                  size: I.Button.Sizes.LARGE,
+                }), (0, l.jsx)(_.Button, {
+                  color: _.Button.Colors.PRIMARY,
+                  size: _.Button.Sizes.LARGE,
                   onClick: A,
-                  submitting: _,
+                  submitting: S,
                   children: b.default.Messages.SPECTATE
                 })]
               }), (0, l.jsx)(E.default, {
                 justify: E.default.Justify.CENTER,
                 className: G.marginTop8,
-                children: (0, l.jsx)(I.Button, {
-                  look: I.Button.Looks.LINK,
+                children: (0, l.jsx)(_.Button, {
+                  look: _.Button.Looks.LINK,
                   className: j.noThanksButton,
                   onClick: function() {
                     M.default.close()
                   },
-                  color: I.Button.Colors.TRANSPARENT,
+                  color: _.Button.Colors.TRANSPARENT,
                   children: b.default.Messages.INIVTE_MODAL_NO_THANKS
                 })
               })]

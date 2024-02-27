@@ -26,9 +26,9 @@ var l = n("37983"),
   m = n("502651"),
   E = n("139375"),
   g = n("843962"),
-  S = n("679653"),
-  I = n("379881"),
-  _ = n("262973"),
+  I = n("679653"),
+  _ = n("379881"),
+  S = n("262973"),
   N = n("106435"),
   T = n("373469"),
   A = n("824563"),
@@ -152,7 +152,7 @@ function W(e) {
     user: r,
     size: h.AvatarSizes.SIZE_32,
     animateOnHover: !(s || G)
-  }), q = (0, f.useStateFromStores)([x.default], () => x.default.isChannelMuted(t.getGuildId(), t.id)), J = (0, f.useStateFromStores)([L.default], () => L.default.getMentionCount(t.id) > 0), $ = (0, S.default)(t), ee = (0, f.useStateFromStores)([I.default], () => I.default.isFavorite(t.id)), et = () => {
+  }), J = (0, f.useStateFromStores)([x.default], () => x.default.isChannelMuted(t.getGuildId(), t.id)), q = (0, f.useStateFromStores)([L.default], () => L.default.getMentionCount(t.id) > 0), $ = (0, I.default)(t), ee = (0, f.useStateFromStores)([_.default], () => _.default.isFavorite(t.id)), et = () => {
     K(!0)
   }, en = () => {
     K(!1)
@@ -253,7 +253,7 @@ function W(e) {
       "aria-label": r.username,
       statusTooltip: !0
     })
-  }, ec = t.isMultiUserDM(), ef = t.isSystemDM(), eh = (0, _.systemDMRedesignEnabled)();
+  }, ec = t.isMultiUserDM(), ef = t.isSystemDM(), eh = (0, S.systemDMRedesignEnabled)();
   return (0, l.jsx)(d.ListNavigatorItem, {
     id: t.id,
     children: e => {
@@ -283,7 +283,7 @@ function W(e) {
           }),
           as: "div",
           onClick: ei,
-          muted: q,
+          muted: J,
           selected: s,
           children: [(0, l.jsx)(u.Link, {
             innerRef: W,
@@ -291,14 +291,14 @@ function W(e) {
             className: B.link,
             "aria-label": (0, E.default)({
               channel: t,
-              unread: J
+              unread: q
             }),
             ...a,
             children: (0, l.jsx)(y.default, {
               avatar: ed(),
               selected: s,
-              highlighted: J,
-              muted: null != q && q,
+              highlighted: q,
+              muted: null != J && J,
               subText: eu(),
               name: (0, l.jsx)(O.default, {
                 children: $

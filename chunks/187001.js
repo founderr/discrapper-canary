@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return E
+    return C
   }
 });
 var n = l("37983"),
@@ -16,7 +16,7 @@ var n = l("37983"),
   f = l("782340"),
   m = l("304756"),
   S = l("961523"),
-  E = () => {
+  C = () => {
     let e = (0, r.useAnalyticsContext)(),
       {
         analyticsLocations: t

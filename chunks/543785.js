@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("18494"),
   E = n("697218"),
   g = n("471671"),
-  S = n("15738"),
-  I = n("956089"),
-  _ = n("108189"),
+  I = n("15738"),
+  _ = n("956089"),
+  S = n("108189"),
   N = n("610898"),
   T = n("829562"),
   A = n("255991"),
@@ -130,7 +130,7 @@ class M extends a.PureComponent {
     return (0, l.jsx)(s.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, l.jsxs)(N.ListItem, {
-        children: [(0, l.jsx)(S.default, {
+        children: [(0, l.jsx)(I.default, {
           hovered: !C && h,
           selected: !C && n,
           unread: !C && f,
@@ -147,10 +147,10 @@ class M extends a.PureComponent {
               screenshare: d,
               isCurrentUserConnected: c
             }),
-            lowerBadgeWidth: (0, I.getBadgeWidthForValue)(a),
+            lowerBadgeWidth: (0, _.getBadgeWidthForValue)(a),
             children: (0, l.jsx)(i.ListNavigatorItem, {
               id: e.id,
-              children: a => (0, l.jsx)(_.default, {
+              children: a => (0, l.jsx)(S.default, {
                 to: L.Routes.CHANNEL(L.ME, e.id),
                 onMouseEnter: () => this.setState({
                   hovered: !0
@@ -222,8 +222,8 @@ var O = a.forwardRef(function(e, t) {
     c = (0, r.useStateFromStores)([p.default], () => p.default.getMentionCount(n), [n]),
     E = s === n,
     g = !1,
-    S = !1;
-  return E && (g = i === L.ChannelModes.VOICE, S = i === L.ChannelModes.VIDEO), (0, l.jsx)(M, {
+    I = !1;
+  return E && (g = i === L.ChannelModes.VOICE, I = i === L.ChannelModes.VIDEO), (0, l.jsx)(M, {
     ...e,
     ref: t,
     channelName: a,
@@ -231,7 +231,7 @@ var O = a.forwardRef(function(e, t) {
     selected: u === n,
     badge: c,
     audio: g,
-    video: S,
+    video: I,
     stream: o,
     isCurrentUserInThisDMCall: E
   })

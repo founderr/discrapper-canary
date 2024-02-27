@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var s = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
+var s = n("77078"),
   l = n("450911"),
   i = n("377114"),
   r = n("949067"),
@@ -16,7 +16,7 @@ var a = n("77078"),
 function d(e) {
   let {
     channel: t,
-    buttonSize: n = a.ButtonSizes.TINY,
+    buttonSize: n = s.ButtonSizes.TINY,
     className: d,
     onReportClick: c,
     onReportSubmit: f,
@@ -24,19 +24,19 @@ function d(e) {
     onMouseLeave: C
   } = e, {
     error: p,
-    loaded: m
-  } = (0, o.useMessageRequestPreview)(t), E = t.isDM() ? t.getRecipientId() : null, g = (0, r.useLongestChannelMessageBeforeReply)(t.id, E);
-  if (null == g && (m || p)) return null;
-  let S = () => {
+    loaded: E
+  } = (0, o.useMessageRequestPreview)(t), m = t.isDM() ? t.getRecipientId() : null, g = (0, r.useLongestChannelMessageBeforeReply)(t.id, m);
+  if (null == g && (E || p)) return null;
+  let _ = () => {
     null == f || f(), l.default.closePrivateChannel(t.id)
   };
-  return (0, s.jsx)(a.Button, {
+  return (0, a.jsx)(s.Button, {
     className: d,
     size: n,
-    color: a.Button.Colors.RED,
+    color: s.Button.Colors.RED,
     disabled: null == g,
     onClick: e => {
-      e.stopPropagation(), null == c || c(), null != g && (0, i.showReportModalForFirstDM)(g, S)
+      e.stopPropagation(), null == c || c(), null != g && (0, i.showReportModalForFirstDM)(g, _)
     },
     onMouseEnter: h,
     onMouseLeave: C,

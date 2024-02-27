@@ -23,31 +23,31 @@ var f = e => {
       style: m,
       to: E,
       onClick: g,
-      selected: S = !1,
-      ...I
+      selected: I = !1,
+      ..._
     } = e,
-    _ = (0, r.useHistory)();
+    S = (0, r.useHistory)();
   if (null == f && null != h) {
     var N;
     n = null !== (N = c[(t = (0, u.getAcronym)(h)).length - 1]) && void 0 !== N ? N : c[c.length - 1]
   }
   let T = a.useCallback(e => {
     if (null == E);
-    else if ("string" == typeof E) _.push(E);
+    else if ("string" == typeof E) S.push(E);
     else {
       let {
         pathname: e = "",
         state: t
       } = E;
-      _.push(e, t)
+      S.push(e, t)
     }
     null != g && g(e)
-  }, [_, E, g]);
+  }, [S, E, g]);
   return (0, l.jsxs)(o.Clickable, {
-    ...I,
+    ..._,
     onClick: T,
     className: i(p, d.wrapper, {
-      [d.selected]: S
+      [d.selected]: I
     }),
     "aria-label": null != C && "" !== C ? C : null != h ? h : "",
     style: {

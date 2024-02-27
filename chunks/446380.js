@@ -20,10 +20,10 @@ var l = n("37983"),
   m = n("783735"),
   E = n("41594"),
   g = n("49111"),
-  S = n("133335"),
-  I = n("65369");
+  I = n("133335"),
+  _ = n("65369");
 
-function _(e, t) {
+function S(e, t) {
   let n = t.getGuildId();
   if (null == n) throw Error("TextChannel, preloadChannel: Channel does not have a guildId");
   o.default.preload(n, t.id)
@@ -39,21 +39,21 @@ class N extends m.default {
       canReorderChannel: r
     } = this.props, o = (0, l.jsx)("li", {
       className: i(this.getClassName(), {
-        [I.disabled]: this.isDisabled()
+        [_.disabled]: this.isDisabled()
       }),
       "data-dnd-name": e.name,
       children: (0, l.jsxs)(E.default, {
-        className: I.iconVisibility,
+        className: _.iconVisibility,
         channel: e,
         selected: t,
         onClick: this.handleClick,
-        onMouseDown: _,
+        onMouseDown: S,
         onContextMenu: this.handleContextMenu,
         connectDragPreview: r ? s : null,
         "aria-label": (0, c.default)({
           channel: e
         }),
-        resolvedUnreadSetting: S.UnreadSetting.ONLY_MENTIONS,
+        resolvedUnreadSetting: I.UnreadSetting.ONLY_MENTIONS,
         children: [this.renderInviteButton(), this.renderEditButton()]
       })
     });

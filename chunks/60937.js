@@ -24,12 +24,12 @@ function p(e) {
     m = (0, c.useShowRoleSubscriptionsInChannelList)(e.id),
     E = (0, a.useGuildShopVisibleInGuild)(e),
     g = (0, u.useCanSeeOnboardingHome)(e.id),
-    S = (0, l.default)([o.default], () => o.default.getNewMemberActions(e.id), [e.id]),
-    I = (0, d.default)(e.id),
-    _ = (0, r.useCanAccessMemberSafetyPage)(e.id),
+    I = (0, l.default)([o.default], () => o.default.getNewMemberActions(e.id), [e.id]),
+    _ = (0, d.default)(e.id),
+    S = (0, r.useCanAccessMemberSafetyPage)(e.id),
     N = [],
     T = e.hasFeature(C.GuildFeatures.HUB),
     A = e.hasFeature(C.GuildFeatures.COMMUNITY),
     L = e.hasFeature(C.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
-  return T && N.push(h.ChannelListCommunityRow.GUILD_HUB_HEADER_OPTIONS), g && I && null != S && S.length > 0 ? N.push(h.ChannelListCommunityRow.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && N.push(h.ChannelListCommunityRow.GUILD_PREMIUM_PROGRESS_BAR), !T && (t || g) && N.push(h.ChannelListCommunityRow.GUILD_HOME), n && N.push(h.ChannelListCommunityRow.GUILD_SCHEDULED_EVENTS), !T && A && N.push(h.ChannelListCommunityRow.CHANNELS_AND_ROLES), m && N.push(h.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS), E && N.push(h.ChannelListCommunityRow.GUILD_SHOP), p && N.push(h.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS), _ && (A || L) && N.push(h.ChannelListCommunityRow.GUILD_MOD_DASH_MEMBER_SAFETY), N
+  return T && N.push(h.ChannelListCommunityRow.GUILD_HUB_HEADER_OPTIONS), g && _ && null != I && I.length > 0 ? N.push(h.ChannelListCommunityRow.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && N.push(h.ChannelListCommunityRow.GUILD_PREMIUM_PROGRESS_BAR), !T && (t || g) && N.push(h.ChannelListCommunityRow.GUILD_HOME), n && N.push(h.ChannelListCommunityRow.GUILD_SCHEDULED_EVENTS), !T && A && N.push(h.ChannelListCommunityRow.CHANNELS_AND_ROLES), m && N.push(h.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS), E && N.push(h.ChannelListCommunityRow.GUILD_SHOP), p && N.push(h.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS), S && (A || L) && N.push(h.ChannelListCommunityRow.GUILD_MOD_DASH_MEMBER_SAFETY), N
 }

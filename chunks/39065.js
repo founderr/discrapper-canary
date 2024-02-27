@@ -27,8 +27,8 @@ var s = n("37983"),
   C = n("605886"),
   O = n("286350"),
   h = n("102492"),
-  R = n("376641"),
-  M = n("49111"),
+  M = n("376641"),
+  R = n("49111"),
   g = n("252182");
 
 function x(e) {
@@ -49,8 +49,8 @@ function x(e) {
     analyticsLocation: F,
     purchaseTokenAuthState: k,
     openInvoiceId: Y,
-    metadata: w,
-    backButtonEligible: H,
+    metadata: H,
+    backButtonEligible: w,
     disablePurchase: W,
     isTrial: Z = !1
   } = e, {
@@ -78,14 +78,14 @@ function x(e) {
   } = (0, o.default)(), e_ = null != q ? Q[q] : null, [eE, eI] = r.useState(ed), [ep, eN] = r.useState(!1), {
     hasEntitlements: eS
   } = (0, m.useSubscriptionEntitlements)(eo, er), eP = (0, P.isPrepaidPaymentSource)(V.paymentSourceId), eT = eS || ed, eA = (0, d.useIsPrepaidPaymentPastDue)(), eC = null, eO = null;
-  if (X === M.PurchaseTypes.ONE_TIME) {
+  if (X === R.PurchaseTypes.ONE_TIME) {
     var eh;
     l(null != $, "SKU must be selected for one-time purchases"), l(null != (eC = null !== (eh = ee[$]) && void 0 !== eh ? eh : null), "SKU must exist and be fetched.");
     let e = et[$],
       t = null != q ? q : p.NO_PAYMENT_SOURCE;
     eO = null != e ? e[t] : null
   }
-  let eR = async () => {
+  let eM = async () => {
     await (0, C.purchaseProduct)({
       setPurchaseState: n,
       setHasAcceptedTerms: z,
@@ -108,7 +108,7 @@ function x(e) {
       openInvoiceId: Y,
       premiumSubscription: t,
       onNext: x,
-      metadata: w,
+      metadata: H,
       sku: eC,
       skuPricePreview: eO,
       purchaseType: X,
@@ -126,7 +126,7 @@ function x(e) {
         if (null == E.default.redirectedPaymentId) return;
         await (0, c.redirectedPaymentSucceeded)(E.default.redirectedPaymentId), n(O.PurchaseState.COMPLETED), x()
       } catch (e) {
-        n(O.PurchaseState.FAIL), j(e), S.default.track(M.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+        n(O.PurchaseState.FAIL), j(e), S.default.track(R.AnalyticEvents.PAYMENT_FLOW_FAILED, {
           ...G,
           payment_error_code: null == e ? void 0 : e.code,
           payment_source_id: q,
@@ -135,13 +135,13 @@ function x(e) {
         })
       } finally {
         eI(!1), (0, c.resetPaymentIntentId)()
-      } else k === I.PurchaseTokenAuthState.SUCCESS && await eR()
+      } else k === I.PurchaseTokenAuthState.SUCCESS && await eM()
     };
     e()
   }, [ef]), r.useEffect(() => {
-    ed && !er && null == t && eR()
+    ed && !er && null == t && eM()
   }, [ed, er, t]);
-  let eM = null != Y || X === M.PurchaseTypes.ONE_TIME && !er;
+  let eR = null != Y || X === R.PurchaseTypes.ONE_TIME && !er;
   return ed ? null : (0, s.jsxs)(u.ModalFooter, {
     align: N.default.Align.CENTER,
     children: [(0, s.jsx)(_.default, {
@@ -156,9 +156,9 @@ function x(e) {
       planGroup: B,
       isPrepaid: eP,
       isTrial: Z,
-      makePurchase: eR,
+      makePurchase: eM,
       needsPaymentSource: null == e_ && !eT
-    }), (0, s.jsx)(R.default, {}), H && !eM ? (0, s.jsx)("div", {
+    }), (0, s.jsx)(M.default, {}), w && !eR ? (0, s.jsx)("div", {
       className: g.back,
       children: (0, s.jsx)(f.default, {
         onClick: a

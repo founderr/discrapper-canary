@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return E
+    return C
   }
 });
 var n = l("37983");
@@ -18,36 +18,36 @@ var a = l("414456"),
   m = l("782340"),
   S = l("863782");
 
-function E(e) {
+function C(e) {
   let {
     message: t,
     onClose: l,
     openStreamUpsellModal: a,
-    glow: E = !1
+    glow: C = !1
   } = e, {
-    enabled: C,
+    enabled: E,
     variant: h
   } = i.default.useExperiment({
     location: "StreamSettingsUpsellBanner"
   }, {
     autoTrackExposure: !0
-  }), g = C && i.GradientVariants.includes(h), _ = C && [i.EnhancedHDStreamingRoadblockVariants.VARIANT_1A, i.EnhancedHDStreamingRoadblockVariants.VARIANT_1B].includes(h), N = {
+  }), N = E && i.GradientVariants.includes(h), g = E && [i.EnhancedHDStreamingRoadblockVariants.VARIANT_1A, i.EnhancedHDStreamingRoadblockVariants.VARIANT_1B].includes(h), _ = {
     section: c.AnalyticsSections.STREAM_SETTINGS,
     object: c.AnalyticsObjects.PREMIUM_UPSELL_BANNER,
     objectType: c.AnalyticsObjectTypes.BUY
-  }, p = () => (0, n.jsx)(u.default, {
+  }, I = () => (0, n.jsx)(u.default, {
     className: s(S.enhancedCTA, {
-      [S.ctaGradientBackground]: g
+      [S.ctaGradientBackground]: N
     }),
     iconClassName: S.premiumIcon,
     subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
     buttonText: m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
     size: r.Button.Sizes.TINY,
-    premiumModalAnalyticsLocation: N
+    premiumModalAnalyticsLocation: _
   });
-  return C ? (0, n.jsxs)("div", {
+  return E ? (0, n.jsxs)("div", {
     className: s(S.upsellBanner, S.enhancedBanner, {
-      [S.gradientGlow]: E
+      [S.gradientGlow]: C
     }),
     children: [(0, n.jsxs)("div", {
       className: S.iconTextContainer,
@@ -56,32 +56,32 @@ function E(e) {
       }), (0, n.jsx)(r.Text, {
         variant: "text-sm/medium",
         className: s(S.upsellText, S.enhancedUpsellText),
-        children: null != t ? t : _ ? m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_V2 : m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V2.format({
+        children: null != t ? t : g ? m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_V2 : m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V2.format({
           onClick: () => a({
-            analyticsLocation: N,
+            analyticsLocation: _,
             onClose: l
           })
         })
       })]
     }), (0, n.jsx)("div", {
       className: S.enhancedCTAs,
-      children: _ ? (0, n.jsxs)(n.Fragment, {
+      children: g ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(r.Button, {
           className: s(S.enhancedCTA, S.learnMoreCTA),
-          color: g ? r.Button.Colors.CUSTOM : r.Button.Colors.TRANSPARENT,
+          color: N ? r.Button.Colors.CUSTOM : r.Button.Colors.TRANSPARENT,
           onClick: () => a({
-            analyticsLocation: N,
+            analyticsLocation: _,
             onClose: l
           }),
           look: r.Button.Looks.OUTLINED,
           size: r.Button.Sizes.TINY,
           children: m.default.Messages.LEARN_MORE
-        }), p()]
-      }) : p()
+        }), I()]
+      }) : I()
     })]
   }) : (0, n.jsxs)(r.Clickable, {
     onClick: () => a({
-      analyticsLocation: N,
+      analyticsLocation: _,
       onClose: l
     }),
     className: s(S.upsellBanner, S.gradientBackground),

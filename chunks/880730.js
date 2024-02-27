@@ -26,16 +26,16 @@ var l = n("37983"),
   m = n("592407"),
   E = n("957255"),
   g = n("461380"),
-  S = n("427459"),
-  I = n("159885"),
-  _ = n("514256"),
+  I = n("427459"),
+  _ = n("159885"),
+  S = n("514256"),
   N = n("223817"),
   T = n("379532"),
   A = n("944305"),
   L = n("49111"),
   v = n("782340"),
   x = n("395914");
-let R = (0, I.cssValueToNumber)(u.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let R = (0, _.cssValueToNumber)(u.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
   M = e => {
     let {
       guild: t,
@@ -74,14 +74,14 @@ var b = e => {
   } = (0, p.default)(h.default.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
     premiumSubscriberCount: u,
     id: m
-  } = t, I = (0, S.getGuildTierFromAppliedBoostCount)(u, m), R = (0, S.getNextTier)(I, t.id), O = null == R, y = null != R ? R : I, b = (0, o.useStateFromStores)([N.default], () => {
+  } = t, _ = (0, I.getGuildTierFromAppliedBoostCount)(u, m), R = (0, I.getNextTier)(_, t.id), O = null == R, y = null != R ? R : _, b = (0, o.useStateFromStores)([N.default], () => {
     var e;
     return null !== (e = N.default.getCountForGuild(m)) && void 0 !== e ? e : 0
   }), j = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), G = (0, o.useStateFromStores)([E.default], () => E.default.can(L.Permissions.MANAGE_GUILD, t));
   a.useEffect(() => {
-    b !== u && (0, _.updateGuildPremiumSubscriptionCount)(m, u)
+    b !== u && (0, S.updateGuildPremiumSubscriptionCount)(m, u)
   }, [m, b, u]);
-  let U = "".concat(Math.min(100, u / (0, S.getAppliedGuildBoostsRequired)(t.id)[y] * 100), "%"),
+  let U = "".concat(Math.min(100, u / (0, I.getAppliedGuildBoostsRequired)(t.id)[y] * 100), "%"),
     {
       current: P
     } = a.useRef(U),
@@ -116,17 +116,17 @@ var b = e => {
       })
     },
     H = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({
-      levelName: (0, S.getShortenedTierName)(y)
+      levelName: (0, I.getShortenedTierName)(y)
     }),
     k = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
       numBoosts: u,
-      numTotal: (0, S.getAppliedGuildBoostsRequired)(t.id)[y]
+      numTotal: (0, I.getAppliedGuildBoostsRequired)(t.id)[y]
     });
-  return O && (H = (0, S.getShortenedTierName)(y), k = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
+  return O && (H = (0, I.getShortenedTierName)(y), k = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
     numBoosts: u
   })), (0, l.jsx)(d.Tooltip, {
     text: O ? v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({
-      levelName: (0, S.getTierName)(y)
+      levelName: (0, I.getTierName)(y)
     }),
     color: d.Tooltip.Colors.BLACK,
     position: "top",

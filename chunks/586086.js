@@ -76,8 +76,8 @@ var R = e => {
     defaultLanguage: r,
     availableLanguages: c,
     isFetchingSearch: R,
-    scroller: v,
-    loadingGuildId: O,
+    scroller: O,
+    loadingGuildId: v,
     theme: L,
     currentCategoryId: M,
     currentCategoryName: P,
@@ -102,7 +102,7 @@ var R = e => {
       }
     }), F(!1)
   }, K = () => {
-    null == v || v.scrollTo({
+    null == O || O.scrollTo({
       to: 0
     })
   };
@@ -177,7 +177,7 @@ var R = e => {
               loading: j,
               loadingPlaceholderCount: T,
               onViewGuild: D,
-              loadingGuildId: O,
+              loadingGuildId: v,
               theme: L,
               analyticsContext: h.AnalyticsContexts.SEARCH,
               onGuildCardSeen: y,

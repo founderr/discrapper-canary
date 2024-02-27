@@ -74,8 +74,8 @@ var a, s = n("746379"),
   A = n("718517"),
   N = n("387111"),
   R = n("655518"),
-  v = n("861309"),
-  O = n("694352"),
+  O = n("861309"),
+  v = n("694352"),
   L = n("492249"),
   M = n("49111");
 let P = null !== (a = l.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
@@ -181,7 +181,7 @@ function F(e, t, n) {
       self_deaf: i,
       suppress: r
     },
-    user: (0, O.default)(u)
+    user: (0, v.default)(u)
   }
 }
 
@@ -189,7 +189,7 @@ function B(e, t, n) {
   let a = T.default.getUser(t);
   return {
     type: e,
-    user: null != a ? (0, O.default)(a) : null,
+    user: null != a ? (0, v.default)(a) : null,
     presence: {
       status: p.default.getStatus(t),
       activity: null != n ? p.default.getApplicationActivity(t, n) : p.default.getPrimaryActivity(t)
@@ -262,10 +262,10 @@ function z(e, t, n) {
     if ("string" == typeof n) {
       if (e.transport === L.TransportTypes.POST_MESSAGE) {
         let e = (0, d.default)(t);
-        if (null == e || !j(n, [e])) throw new v.default({
+        if (null == e || !j(n, [e])) throw new O.default({
           closeCode: M.RPCCloseCodes.INVALID_ORIGIN
         }, "Invalid Origin")
-      } else if (!j(n, s)) throw new v.default({
+      } else if (!j(n, s)) throw new O.default({
         closeCode: M.RPCCloseCodes.INVALID_ORIGIN
       }, "Invalid Origin")
     }
@@ -277,7 +277,7 @@ function z(e, t, n) {
       flags: u
     }
   }, () => {
-    throw new v.default({
+    throw new O.default({
       closeCode: M.RPCCloseCodes.INVALID_CLIENTID
     }, "Invalid Client ID")
   })
@@ -342,13 +342,13 @@ function X(e, t) {
 }
 
 function J(e) {
-  if (e !== L.TransportTypes.POST_MESSAGE) throw new v.default({
+  if (e !== L.TransportTypes.POST_MESSAGE) throw new O.default({
     errorCode: M.RPCErrors.INVALID_COMMAND
   }, 'command not available from "'.concat(e, " transport"))
 }
 
 function $(e) {
-  if (null == e.id) throw new v.default({
+  if (null == e.id) throw new O.default({
     errorCode: M.RPCErrors.INVALID_COMMAND
   }, "Invalid application")
 }

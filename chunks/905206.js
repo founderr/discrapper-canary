@@ -156,12 +156,12 @@ function M(e, t, n) {
     selectedAnswerIds: H,
     submitting: V,
     tapShouldOpenVotersModal: Y,
-    showResults: K
-  } = P, W = w.reduce((e, t) => {
+    showResults: W
+  } = P, K = w.reduce((e, t) => {
     var n, s;
     return e + (null !== (s = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== s ? s : 0)
   }, 0), z = p.default.Messages.POLL_VOTES_COUNT.format({
-    count: String(W)
+    count: String(K)
   }), Q = "".concat(z, "  •  ").concat(null != j ? j : p.default.Messages.POLL_EXPIRED), Z = Math.max(...L.map(e => {
     var t, n;
     let s = A(w, "".concat(e.answer_id));
@@ -181,7 +181,7 @@ function M(e, t, n) {
         isInteractive: F,
         isSelected: f,
         isLeader: _,
-        showResults: K
+        showResults: W
       });
     return {
       answerId: o,
@@ -221,7 +221,7 @@ function M(e, t, n) {
       didSelfVote: T,
       style: I,
       shouldAnimateTransition: V,
-      votesPercentage: Math.round(100 * (0 === W ? 0 : E / W)),
+      votesPercentage: Math.round(100 * (0 === K ? 0 : E / K)),
       votes: (0, s.match)(v).with(l.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(E), ")")).otherwise(() => p.default.Messages.POLL_VOTES_COUNT.format({
         count: String(E)
       }))
@@ -277,7 +277,7 @@ function M(e, t, n) {
     presentation: "text",
     enabled: !1
   })), $ = !F || k || G ? void 0 : {
-    label: K ? p.default.Messages.POLL_HIDE_VOTES : p.default.Messages.POLL_SHOW_VOTES,
+    label: W ? p.default.Messages.POLL_HIDE_VOTES : p.default.Messages.POLL_SHOW_VOTES,
     presentation: "textButton",
     enabled: !0,
     type: "showVotes"

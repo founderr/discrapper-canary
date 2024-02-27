@@ -21,9 +21,9 @@ var a = n("414456"),
   m = n("316133"),
   E = n("272339"),
   g = n("82636"),
-  S = n("368121"),
-  I = n("228427"),
-  _ = n("619911"),
+  I = n("368121"),
+  _ = n("228427"),
+  S = n("619911"),
   N = n("811305"),
   T = n("449008"),
   A = n("299039"),
@@ -87,10 +87,10 @@ function y() {
     }, [a]),
     j = (0, o.useStateFromStoresArray)([p.default], () => b.map(e => p.default.getUser(e)), [b]),
     G = (0, o.useStateFromStoresArray)([p.default], () => D.map(e => p.default.getUser(e)), [D]),
-    U = O(S.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
+    U = O(I.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
   let P = (e = M, t = y, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
-      children: [(0, l.jsx)(I.default, {
+      children: [(0, l.jsx)(_.default, {
         className: R.activityIcon
       }), (0, l.jsx)(N.default, {
         guildId: void 0,
@@ -109,7 +109,7 @@ function y() {
         })]
       })]
     })),
-    w = O(_.default, G.filter(e => null != e && !b.includes(e.id))),
+    w = O(S.default, G.filter(e => null != e && !b.includes(e.id))),
     F = O(g.default, j);
   return (0, l.jsxs)(l.Fragment, {
     children: [P, U, w, F]

@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   useMessageRequestActions: function() {
-    return E
+    return m
   }
 }), n("222007");
-var s = n("884691"),
-  a = n("767590"),
-  l = n.n(a),
+var a = n("884691"),
+  s = n("767590"),
+  l = n.n(s),
   i = n("448993"),
   r = n("377114"),
   o = n("713135"),
@@ -17,52 +17,52 @@ var s = n("884691"),
   h = n("997011"),
   C = n("541881"),
   p = n("973199"),
-  m = n("49111");
+  E = n("49111");
 
-function E(e) {
+function m(e) {
   let {
     user: t,
     onAcceptSuccess: n,
-    onRejectSuccess: a,
-    onError: E
-  } = e, g = (0, C.default)(), [S, _] = s.useState(!1), [T, A] = s.useState(!1), [M, I] = s.useState(!1), [N, v] = s.useState(!1), [L, R] = s.useState(!1), x = S || T || M, y = s.useCallback(async e => {
+    onRejectSuccess: s,
+    onError: m
+  } = e, g = (0, C.default)(), [_, S] = a.useState(!1), [T, A] = a.useState(!1), [M, I] = a.useState(!1), [N, v] = a.useState(!1), [L, R] = a.useState(!1), x = _ || T || M, y = a.useCallback(async e => {
     if (!x) {
-      _(!0);
+      S(!0);
       try {
         await (0, f.acceptMessageRequest)(e), v(!0), null == n || n()
       } catch (t) {
         let e = new i.APIError(t);
-        null == E || E(e)
+        null == m || m(e)
       } finally {
-        _(!1)
+        S(!1)
       }
     }
-  }, [x, n, E]), O = s.useCallback(async e => {
+  }, [x, n, m]), O = a.useCallback(async e => {
     if (!x) {
       A(!0);
       try {
-        await (0, f.rejectMessageRequest)(e), R(!0), null == a || a()
+        await (0, f.rejectMessageRequest)(e), R(!0), null == s || s()
       } catch (t) {
         let e = new i.APIError(t);
-        null == E || E(e)
+        null == m || m(e)
       } finally {
         A(!1)
       }
     }
-  }, [x, a, E]), D = s.useCallback(async e => {
+  }, [x, s, m]), D = a.useCallback(async e => {
     if (x) return;
     A(!0);
     let t = l(e, p.BATCH_REJECT_LIMIT);
     try {
       for (let e of t) await (0, f.rejectMessageRequestBatch)(e);
-      R(!0), null == a || a()
+      R(!0), null == s || s()
     } catch (t) {
       let e = new i.APIError(t);
-      null == E || E(e)
+      null == m || m(e)
     } finally {
       A(!1)
     }
-  }, [x, a, E]), P = s.useCallback(async e => {
+  }, [x, s, m]), P = a.useCallback(async e => {
     if (x) return;
     if (null != t && null == o.default.getMutualGuilds(t.id)) {
       I(!0);
@@ -77,11 +77,11 @@ function E(e) {
     }
     let n = async () => {
       var n;
-      let s = null != t ? null === (n = o.default.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
-      c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
+      let a = null != t ? null === (n = o.default.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
+      c.default.track(E.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
         action: p.MessageRequestAnalyticsAction.ACCEPT_CONFIRMATION_PROMPT,
         channel_id: e,
-        mutual_guild_ids: null != s ? s : [],
+        mutual_guild_ids: null != a ? a : [],
         other_user_id: null == t ? void 0 : t.id
       }), await y(e)
     };
@@ -90,42 +90,42 @@ function E(e) {
       onConfirm: n,
       onCancel: () => {
         var n;
-        let s = null != t ? null === (n = o.default.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
-        c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
+        let a = null != t ? null === (n = o.default.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
+        c.default.track(E.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
           action: p.MessageRequestAnalyticsAction.DISMISS_CONFIRMATION_PROMPT,
           channel_id: e,
-          mutual_guild_ids: null != s ? s : [],
+          mutual_guild_ids: null != a ? a : [],
           other_user_id: null == t ? void 0 : t.id
         })
       }
     })
-  }, [y, x, t]), j = s.useCallback((e, t, n) => {
-    let s = (s, a) => {
-        a && d.NonSpamRetrainingOptIn.updateSetting(s), s && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
+  }, [y, x, t]), j = a.useCallback((e, t, n) => {
+    let a = (a, s) => {
+        s && d.NonSpamRetrainingOptIn.updateSetting(a), a && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(E.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
           action: p.MessageRequestAnalyticsAction.ACCEPT_HAM_CONFIRMATION_PROMPT,
           channel_id: e.id,
-          is_dont_show_again_checked: a,
-          non_spam_retraining_opt_in: s
+          is_dont_show_again_checked: s,
+          non_spam_retraining_opt_in: a
         }), null != n && n()
       },
-      a = d.NonSpamRetrainingOptIn.getSetting();
-    null == a ? (0, h.onMarkAsNotSpamConfirmationModal)({
+      s = d.NonSpamRetrainingOptIn.getSetting();
+    null == s ? (0, h.onMarkAsNotSpamConfirmationModal)({
       channel: e,
-      onConfirm: s,
+      onConfirm: a,
       onCancel: () => {
-        c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
+        c.default.track(E.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
           action: p.MessageRequestAnalyticsAction.DISMISS_HAM_CONFIRMATION_PROMPT,
           channel_id: e.id
         })
       }
-    }) : s(a)
+    }) : a(s)
   }, [y]);
   return {
     acceptMessageRequest: g ? P : y,
     rejectMessageRequest: O,
     rejectAll: D,
     markAsNotSpam: j,
-    isAcceptLoading: S,
+    isAcceptLoading: _,
     isRejectLoading: T,
     isUserProfileLoading: M,
     isOptimisticAccepted: N,

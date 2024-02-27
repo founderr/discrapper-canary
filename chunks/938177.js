@@ -20,10 +20,10 @@ var l = n("37983"),
   m = n("315102"),
   E = n("449008"),
   g = n("158998"),
-  S = n("188110");
-let I = C.Sizes.SIZE_24;
+  I = n("188110");
+let _ = C.Sizes.SIZE_24;
 
-function _(e) {
+function S(e) {
   var t, n;
   let {
     activity: s,
@@ -43,20 +43,20 @@ function _(e) {
       children: () => (0, l.jsx)("img", {
         alt: n,
         src: t,
-        className: S.applicationLargeImage
+        className: I.applicationLargeImage
       })
     })
   }(r) : null;
   let h = null !== (t = c.large_image) && void 0 !== t ? t : c.small_image,
     C = (0, u.default)(s),
-    E = C ? S.spotifyLargeImage : S.applicationLargeImage,
+    E = C ? I.spotifyLargeImage : I.applicationLargeImage,
     g = null != h ? (0, l.jsx)("img", {
       alt: null !== (n = c.large_text) && void 0 !== n ? n : "",
       src: (0, p.getAssetImage)(f, h, [128, 128]),
       className: E
     }) : null;
   return C && null != d ? (g = (0, l.jsx)(o.Clickable, {
-    className: S.clickable,
+    className: I.clickable,
     onClick: () => {
       d(s, i.id)
     },
@@ -84,7 +84,7 @@ function N(e) {
   else {
     if (!(null != t && (0, u.default)(t)) || null == t.sync_id || null == s || null == a) return null;
     i = s, r = (0, l.jsx)(o.Clickable, {
-      className: S.headerLink,
+      className: I.headerLink,
       onClick: () => {
         a(t)
       },
@@ -93,7 +93,7 @@ function N(e) {
   }
   return (0, l.jsx)(h.default, {
     title: i,
-    className: S.header,
+    className: I.header,
     children: r
   })
 }
@@ -106,13 +106,13 @@ function T(e) {
   } = e, s = null == t ? void 0 : t.details, r = null == t ? void 0 : t.state, o = s;
   return (null != t && (0, u.default)(t) && null != r && (o = [(0, l.jsx)(f.default, {
     artists: r,
-    linkClassName: S.bodyLink,
+    linkClassName: I.bodyLink,
     canOpen: null != t.sync_id,
     onOpenSpotifyArtist: e => {
       null == a || a(t, n.id, e)
     }
   }, r)]), null == o || "" === o) ? null : (0, l.jsx)("div", {
-    className: i(S.ellipsisRow, S.colorHeaderSecondary, S.bodyTextSize),
+    className: i(I.ellipsisRow, I.colorHeaderSecondary, I.bodyTextSize),
     children: o
   })
 }
@@ -122,7 +122,7 @@ function A(e) {
     activity: t
   } = e, n = null == t ? void 0 : t.state;
   return null == n || "" === n || (0, u.default)(t) ? null : (0, l.jsx)("div", {
-    className: i(S.ellipsisRow, S.colorHeaderSecondary, S.bodyTextSize, S.activity),
+    className: i(I.ellipsisRow, I.colorHeaderSecondary, I.bodyTextSize, I.activity),
     children: n
   })
 }
@@ -143,7 +143,7 @@ function L(e) {
   return (0, l.jsx)(c.default, {
     start: a,
     end: s,
-    className: S.timeBar,
+    className: I.timeBar,
     themed: !0,
     singleLine: !0
   })
@@ -171,16 +171,16 @@ function v(e) {
       }), e
     }, [c, x]);
   return x ? (0, l.jsxs)("div", {
-    className: S.flexColumn,
+    className: I.flexColumn,
     children: [(0, l.jsxs)("div", {
-      className: S.flexRow,
-      children: [(0, l.jsx)(_, {
+      className: I.flexRow,
+      children: [(0, l.jsx)(S, {
         activity: t,
         user: s,
         embeddedApp: n,
         onOpenSpotifyAlbum: p
       }), (0, l.jsxs)("div", {
-        className: S.detailsAndAvatarsContainer,
+        className: I.detailsAndAvatarsContainer,
         children: [(0, l.jsx)(N, {
           activity: t,
           embeddedApp: n,
@@ -192,10 +192,10 @@ function v(e) {
         }), (0, l.jsx)(A, {
           activity: t
         }), m.length > 0 && (0, l.jsx)(C.default, {
-          className: S.usersSummary,
+          className: I.usersSummary,
           guildId: i.guild_id,
           users: v,
-          size: I,
+          size: _,
           max: 7,
           renderUser: e => {
             var t;
@@ -206,9 +206,9 @@ function v(e) {
               text: a,
               position: "bottom",
               children: (0, l.jsx)("img", {
-                src: e.getAvatarURL(i.guild_id, I),
+                src: e.getAvatarURL(i.guild_id, _),
                 alt: a,
-                className: S.avatar
+                className: I.avatar
               }, e.id)
             }, e.id)
           }

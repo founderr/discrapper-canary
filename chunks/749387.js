@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("754493"),
   E = n("813531"),
   g = n("395635"),
-  S = n("49111"),
-  I = n("782340"),
-  _ = n("307994");
+  I = n("49111"),
+  _ = n("782340"),
+  S = n("307994");
 
 function N(e) {
   var t;
@@ -31,10 +31,10 @@ function N(e) {
     applicationId: a
   } = e, i = (0, s.useStateFromStores)([f.default], () => f.default.getUser(n)), o = null !== (t = p.default.getGlobalName(i)) && void 0 !== t ? t : p.default.getUserTag(i), u = (0, d.useGetOrFetchApplication)(a);
   return null == i ? null : (0, l.jsxs)("div", {
-    className: _.broadcast,
+    className: S.broadcast,
     children: [(0, l.jsxs)("div", {
       children: [(0, l.jsxs)("div", {
-        className: _.inline,
+        className: S.inline,
         children: [(0, l.jsx)(r.Avatar, {
           size: r.AvatarSizes.SIZE_16,
           src: i.getAvatarURL(null, 16),
@@ -46,9 +46,9 @@ function N(e) {
       }), (0, l.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        children: (null == u ? void 0 : u.name) != null ? I.default.Messages.STREAMING.format({
+        children: (null == u ? void 0 : u.name) != null ? _.default.Messages.STREAMING.format({
           name: u.name
-        }) : I.default.Messages.STREAMING_A_GAME
+        }) : _.default.Messages.STREAMING_A_GAME
       })]
     }), (0, l.jsx)(h.default, {
       game: u
@@ -61,17 +61,17 @@ function T(e) {
     closePopout: t
   } = e, n = (0, E.default)(), s = n.slice(0, 3), d = (0, m.default)(), f = n.length - s.length;
   return a.useEffect(() => {
-    u.default.trackWithMetadata(S.AnalyticEvents.BROADCAST_POPOUT_VIEWED, {
+    u.default.trackWithMetadata(I.AnalyticEvents.BROADCAST_POPOUT_VIEWED, {
       num_broadcasts_shown: s.length,
       num_active_broadcasts: n.length,
       is_broadcasting: d
     })
   }, [n.length, s.length, d]), (0, l.jsxs)("div", {
-    className: _.container,
+    className: S.container,
     children: [(0, l.jsxs)("div", {
-      className: _.header,
+      className: S.header,
       children: [(0, l.jsxs)("div", {
-        className: _.inline,
+        className: S.inline,
         children: [(0, l.jsx)(C.default, {
           color: i.default.colors.HEADER_PRIMARY.css,
           height: 16,
@@ -79,35 +79,35 @@ function T(e) {
         }), (0, l.jsx)(r.Heading, {
           variant: "heading-md/semibold",
           color: "header-primary",
-          children: I.default.Messages.LIVE_BROADCASTS
+          children: _.default.Messages.LIVE_BROADCASTS
         })]
       }), (0, l.jsx)(g.default, {})]
     }), s.map((e, t) => (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(N, {
         ...e
       }, e.userId), t !== s.length - 1 && (0, l.jsx)("hr", {
-        className: _.separator
+        className: S.separator
       })]
     })), f > 0 && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("hr", {
-        className: _.separator
+        className: S.separator
       }), (0, l.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        children: I.default.Messages.MORE_OPEN_BROADCASTS.format({
+        children: _.default.Messages.MORE_OPEN_BROADCASTS.format({
           count: f
         })
       })]
     }), (0, l.jsx)(r.Button, {
       onClick: () => {
-        (0, c.transitionTo)(S.Routes.ME), o.default.setSection(S.FriendsSections.ONLINE), u.default.trackWithMetadata(S.AnalyticEvents.BROADCAST_LIST_VISITED, {
+        (0, c.transitionTo)(I.Routes.ME), o.default.setSection(I.FriendsSections.ONLINE), u.default.trackWithMetadata(I.AnalyticEvents.BROADCAST_LIST_VISITED, {
           num_active_broadcasts: n.length,
           friends_tab_clicked: !1,
           is_broadcasting: d
         }), t()
       },
-      className: _.button,
-      children: I.default.Messages.VIEW_OPEN_BROADCASTS
+      className: S.button,
+      children: _.default.Messages.VIEW_OPEN_BROADCASTS
     })]
   })
 }

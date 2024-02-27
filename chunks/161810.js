@@ -31,7 +31,7 @@ function A() {
   m = _.FormStates.OPEN, p = {}, T = !1
 }
 let N = r.debounce(() => {
-  T && ((null == I || r.isEqual(I, R(I.id))) && (T = !1), !T && O.emitChange())
+  T && ((null == I || r.isEqual(I, R(I.id))) && (T = !1), !T && v.emitChange())
 }, 500);
 
 function R(e) {
@@ -42,7 +42,7 @@ function R(e) {
     return n === e
   })
 }
-class v extends o.default.Store {
+class O extends o.default.Store {
   initialize() {
     this.waitFor(c.default, f.default, h.default, E.default)
   }
@@ -77,8 +77,8 @@ class v extends o.default.Store {
     }
   }
 }
-v.displayName = "ChannelSettingsIntegrationsStore";
-let O = new v(u.default, __OVERLAY__ ? {} : {
+O.displayName = "ChannelSettingsIntegrationsStore";
+let v = new O(u.default, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_INIT: A,
   INTEGRATION_SETTINGS_SAVE_SUCCESS: A,
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
@@ -166,4 +166,4 @@ let O = new v(u.default, __OVERLAY__ ? {} : {
     m = _.FormStates.OPEN, p = null !== (t = e.errors) && void 0 !== t ? t : {}
   }
 });
-var L = O
+var L = v

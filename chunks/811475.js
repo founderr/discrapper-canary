@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return L
   }
 }), n("222007");
-var s = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  s = n("884691"),
   l = n("627445"),
   i = n.n(l),
   r = n("446674"),
@@ -20,17 +20,17 @@ var s = n("37983"),
   h = n("651057"),
   C = n("299285"),
   p = n("850391"),
-  m = n("149022"),
-  E = n("681060"),
+  E = n("149022"),
+  m = n("681060"),
   g = n("884351"),
-  S = n("671071"),
-  _ = n("401848"),
+  _ = n("671071"),
+  S = n("401848"),
   T = n("718422"),
   A = n("49111"),
   M = n("782340"),
   I = n("49077");
 let N = "ActivityInvite";
-class v extends a.PureComponent {
+class v extends s.PureComponent {
   componentDidMount() {
     this.fetchApplication()
   }
@@ -65,7 +65,7 @@ class v extends a.PureComponent {
       textValue: e,
       richValue: t,
       textFocused: n,
-      contentWarningProps: a
+      contentWarningProps: s
     } = this.state, {
       activity: l,
       analyticsLocations: r,
@@ -73,26 +73,26 @@ class v extends a.PureComponent {
       activityActionType: f,
       cooldown: h,
       application: C,
-      transitionState: m,
+      transitionState: E,
       onClose: g
-    } = this.props, S = h > 0, _ = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
+    } = this.props, _ = h > 0, S = _ ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
       seconds: Math.round((h + 1e3) / 1e3)
     }) : null;
-    return (0, s.jsxs)(o.ModalRoot, {
+    return (0, a.jsxs)(o.ModalRoot, {
       size: o.ModalSize.SMALL,
-      transitionState: m,
+      transitionState: E,
       "aria-label": this.renderTitle(),
-      children: [(0, s.jsx)(o.ModalHeader, {
+      children: [(0, a.jsx)(o.ModalHeader, {
         separator: !1,
-        children: (0, s.jsx)(o.Heading, {
+        children: (0, a.jsx)(o.Heading, {
           variant: "heading-lg/semibold",
           children: this.renderTitle()
         })
-      }), (0, s.jsxs)(o.ModalContent, {
-        children: [(0, s.jsx)("div", {
+      }), (0, a.jsxs)(o.ModalContent, {
+        children: [(0, a.jsx)("div", {
           className: I.subHeader,
           children: M.default.Messages.MESSAGE_PREVIEW
-        }), (0, s.jsx)(d.default, {
+        }), (0, a.jsx)(d.default, {
           activityActionType: f,
           activity: l,
           className: I.preview,
@@ -100,28 +100,28 @@ class v extends a.PureComponent {
           partyId: null != l.party ? l.party.id : null,
           isPreview: !0,
           analyticsLocations: r
-        }), (0, s.jsx)("div", {
+        }), (0, a.jsx)("div", {
           className: I.subHeader,
           children: M.default.Messages.ADD_A_COMMENT_OPTIONAL
-        }), (0, s.jsx)(o.Popout, {
+        }), (0, a.jsx)(o.Popout, {
           position: "top",
           onRequestClose: () => {
             var e;
-            null == a || null === (e = a.onCancel) || void 0 === e || e.call(a), this.setState({
+            null == s || null === (e = s.onCancel) || void 0 === e || e.call(s), this.setState({
               contentWarningProps: null
             })
           },
-          shouldShow: null != a,
+          shouldShow: null != s,
           renderPopout: e => {
             let {
               closePopout: t
             } = e;
-            return i(null != a, "ActivityInvite.render - renderPopout: contentWarningProps cannot be null"), (0, s.jsx)(c.default, {
+            return i(null != s, "ActivityInvite.render - renderPopout: contentWarningProps cannot be null"), (0, a.jsx)(c.default, {
               onClose: t,
-              ...a
+              ...s
             })
           },
-          children: () => (0, s.jsx)(E.default, {
+          children: () => (0, a.jsx)(m.default, {
             className: I.textArea,
             textValue: e,
             richValue: t,
@@ -134,18 +134,18 @@ class v extends a.PureComponent {
             disableThemedBackground: !0
           })
         })]
-      }), (0, s.jsxs)(o.ModalFooter, {
-        children: [(0, s.jsx)(o.Tooltip, {
-          text: _,
-          children: e => (0, s.jsx)("div", {
+      }), (0, a.jsxs)(o.ModalFooter, {
+        children: [(0, a.jsx)(o.Tooltip, {
+          text: S,
+          children: e => (0, a.jsx)("div", {
             ...e,
-            children: (0, s.jsx)(o.Button, {
-              disabled: S,
+            children: (0, a.jsx)(o.Button, {
+              disabled: _,
               onClick: this.handleShare,
               children: M.default.Messages.INVITE_EMBED_SEND_INVITE
             })
           })
-        }), (0, s.jsx)(o.Button, {
+        }), (0, a.jsx)(o.Button, {
           look: o.Button.Looks.LINK,
           color: o.Button.Colors.PRIMARY,
           onClick: g,
@@ -156,7 +156,7 @@ class v extends a.PureComponent {
   }
   constructor(...e) {
     super(...e), this.state = {
-      ...(0, m.createEmptyState)(),
+      ...(0, E.createEmptyState)(),
       textFocused: !0,
       contentWarningProps: null
     }, this.trackInvite = e => {
@@ -164,20 +164,20 @@ class v extends a.PureComponent {
         let {
           activity: t,
           channel: n,
-          activityActionType: s
-        } = this.props, a = "";
-        switch (s) {
+          activityActionType: a
+        } = this.props, s = "";
+        switch (a) {
           case A.ActivityActionTypes.JOIN:
-            a = "Invite to Join";
+            s = "Invite to Join";
             break;
           case A.ActivityActionTypes.LISTEN:
-            a = "Invite to Listen";
+            s = "Invite to Listen";
             break;
           case A.ActivityActionTypes.WATCH:
-            a = "Invite to Watch"
+            s = "Invite to Watch"
         }
         return f.default.trackWithMetadata(A.AnalyticEvents.INVITE_SENT, {
-          location: "Channel Text Area - ".concat(a),
+          location: "Channel Text Area - ".concat(s),
           invite_type: t.type === A.ActivityTypes.LISTENING ? A.LoggingInviteTypes.SPOTIFY : A.LoggingInviteTypes.APPLICATION,
           application_id: t.application_id,
           guild_id: n.getGuildId(),
@@ -195,13 +195,13 @@ class v extends a.PureComponent {
         channel: e,
         activity: t,
         activityActionType: n,
-        cooldown: s,
-        onClose: a
+        cooldown: a,
+        onClose: s
       } = this.props, {
         textValue: l,
         contentWarningProps: i
       } = this.state;
-      if (s > 0) return Promise.resolve({
+      if (a > 0) return Promise.resolve({
         shouldClear: !1,
         shouldRefocus: !0
       });
@@ -214,7 +214,7 @@ class v extends a.PureComponent {
         contentWarningProps: null
       }), u.default.sendMessage(e.id, r, !0, {
         activityAction: o
-      }).then(e => this.trackInvite(e)), a(), Promise.resolve({
+      }).then(e => this.trackInvite(e)), s(), Promise.resolve({
         shouldClear: !0,
         shouldRefocus: !0
       })) : (0, T.applyChatRestrictions)({
@@ -230,7 +230,7 @@ class v extends a.PureComponent {
         } = t;
         return n ? (u.default.sendMessage(e.id, r, !0, {
           activityAction: o
-        }).then(e => this.trackInvite(e)), a(), {
+        }).then(e => this.trackInvite(e)), s(), {
           shouldClear: !1,
           shouldRefocus: !1
         }) : {
@@ -241,13 +241,13 @@ class v extends a.PureComponent {
     }
   }
 }
-var L = r.default.connectStores([_.default, C.default], e => {
+var L = r.default.connectStores([S.default, C.default], e => {
   let {
     channel: t,
     activity: n
   } = e;
   return {
-    cooldown: _.default.getSlowmodeCooldownGuess(t.id),
-    application: null != n.application_id ? C.default.getApplication(n.application_id) : S.SpotifyApplication
+    cooldown: S.default.getSlowmodeCooldownGuess(t.id),
+    application: null != n.application_id ? C.default.getApplication(n.application_id) : _.SpotifyApplication
   }
 })(v)

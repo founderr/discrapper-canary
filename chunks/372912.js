@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return A
   }
 });
-var s = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("414456"),
-  l = n.n(a),
+var s = n("414456"),
+  l = n.n(s),
   i = n("446674"),
   r = n("77078"),
   o = n("272030"),
@@ -18,56 +18,56 @@ var a = n("414456"),
   h = n("697218"),
   C = n("959097"),
   p = n("158998"),
-  m = n("172554"),
-  E = n("49111"),
+  E = n("172554"),
+  m = n("49111"),
   g = n("782340"),
-  S = n("247703");
+  _ = n("247703");
 
-function _(e) {
-  var t, a;
+function S(e) {
+  var t, s;
   let {
     userId: u,
     channel: C
-  } = e, m = (0, i.useStateFromStores)([h.default], () => h.default.getUser(u)), E = (0, i.useStateFromStores)([f.default], () => null != u ? f.default.getMember(C.guild_id, u) : null);
+  } = e, E = (0, i.useStateFromStores)([h.default], () => h.default.getUser(u)), m = (0, i.useStateFromStores)([f.default], () => null != u ? f.default.getMember(C.guild_id, u) : null);
 
   function g(e) {
-    if (null == m) return null;
+    if (null == E) return null;
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("721429").then(n.bind(n, "721429"));
-      return t => (0, s.jsx)(e, {
+      return t => (0, a.jsx)(e, {
         ...t,
-        user: m,
+        user: E,
         guildId: C.guild_id,
         channel: C
       })
     })
   }
-  let _ = null !== (a = null !== (t = null == E ? void 0 : E.nick) && void 0 !== t ? t : p.default.getName(m)) && void 0 !== a ? a : "???",
-    T = null == E ? void 0 : E.colorString;
-  return null == m ? (0, s.jsx)("span", {
-    className: l(S.threadCreatorName, S.unknownCreatorName),
-    children: _
-  }) : (0, s.jsx)(r.Popout, {
-    preload: () => (0, d.default)(m.id, m.getAvatarURL(C.guild_id, 80), {
+  let S = null !== (s = null !== (t = null == m ? void 0 : m.nick) && void 0 !== t ? t : p.default.getName(E)) && void 0 !== s ? s : "???",
+    T = null == m ? void 0 : m.colorString;
+  return null == E ? (0, a.jsx)("span", {
+    className: l(_.threadCreatorName, _.unknownCreatorName),
+    children: S
+  }) : (0, a.jsx)(r.Popout, {
+    preload: () => (0, d.default)(E.id, E.getAvatarURL(C.guild_id, 80), {
       guildId: C.guild_id,
       channelId: C.id
     }),
-    renderPopout: e => (0, s.jsx)(c.default, {
-      userId: m.id,
+    renderPopout: e => (0, a.jsx)(c.default, {
+      userId: E.id,
       guildId: C.guild_id,
       channelId: C.id,
       ...e
     }),
     position: "right",
-    children: e => (0, s.jsx)(r.Clickable, {
+    children: e => (0, a.jsx)(r.Clickable, {
       ...e,
       tag: "span",
-      className: S.threadCreatorName,
+      className: _.threadCreatorName,
       onContextMenu: g,
-      children: (0, s.jsx)(r.NameWithRole, {
-        name: _,
+      children: (0, a.jsx)(r.NameWithRole, {
+        name: S,
         color: null != T ? T : void 0
       })
     })
@@ -80,24 +80,24 @@ function T(e) {
   } = e, {
     threadMetadata: n
   } = t;
-  return null == n ? (0, s.jsx)("div", {
+  return null == n ? (0, a.jsx)("div", {
     style: {
       marginTop: -8
     }
-  }) : (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(r.Text, {
+  }) : (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      children: (0, s.jsx)("div", {
-        className: S.subtitle,
+      children: (0, a.jsx)("div", {
+        className: _.subtitle,
         children: g.default.Messages.THREAD_STARTED_BY.format({
-          usernameHook: (e, n) => (0, s.jsx)(_, {
+          usernameHook: (e, n) => (0, a.jsx)(S, {
             userId: t.ownerId,
             channel: t
           }, n)
         })
       })
-    }), t.type === E.ChannelTypes.PRIVATE_THREAD ? (0, s.jsx)(r.Text, {
+    }), t.type === m.ChannelTypes.PRIVATE_THREAD ? (0, a.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       children: g.default.Messages.EMPTY_MESSAGE_PRIVATE_THREAD_INSTRUCTIONS
@@ -109,17 +109,17 @@ function A(e) {
   var t;
   let {
     channel: n
-  } = e, a = null !== (t = (0, u.default)(n)) && void 0 !== t ? t : C.default;
-  return (0, s.jsxs)(m.default, {
+  } = e, s = null !== (t = (0, u.default)(n)) && void 0 !== t ? t : C.default;
+  return (0, a.jsxs)(E.default, {
     channelId: n.id,
-    children: [(0, s.jsx)("div", {
-      className: S.iconWrapper,
-      children: (0, s.jsx)(a, {
-        className: S.icon
+    children: [(0, a.jsx)("div", {
+      className: _.iconWrapper,
+      children: (0, a.jsx)(s, {
+        className: _.icon
       })
-    }), (0, s.jsx)(m.EmptyMessageHeader, {
+    }), (0, a.jsx)(E.EmptyMessageHeader, {
       children: n.name
-    }), (0, s.jsx)(T, {
+    }), (0, a.jsx)(T, {
       channel: n
     })]
   })

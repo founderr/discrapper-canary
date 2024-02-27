@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return y
   }
 }), n("424973");
 var i = n("917351"),
@@ -16,12 +16,12 @@ var i = n("917351"),
   f = n("546463"),
   h = n("260320"),
   p = n("169602"),
-  E = n("697218"),
-  g = n("703370"),
-  m = n("901165"),
+  g = n("697218"),
+  m = n("703370"),
+  E = n("901165"),
   S = n("158998"),
   v = n("522019"),
-  I = l.default.connectStores([o.default, g.default, u.default, E.default, m.default, h.default, c.default, p.default, f.default, s.default], () => {
+  y = l.default.connectStores([o.default, m.default, u.default, g.default, E.default, h.default, c.default, p.default, f.default, s.default], () => {
     var e, t;
     let n;
     let i = h.default.getLobbiesWithVoice().find(e => null != c.default.getApplication(e.application_id)),
@@ -30,7 +30,7 @@ var i = n("917351"),
     if (null != i) {
       let e = c.default.getApplication(i.application_id);
       (null == e ? void 0 : e.name) != null && (v = e.name), n = i.application_id, a.each(p.default.getVoiceStates(i.id), e => {
-        let t = E.default.getUser(e.userId);
+        let t = g.default.getUser(e.userId);
         null != t && l.push({
           voiceState: e,
           user: t,
@@ -39,9 +39,9 @@ var i = n("917351"),
         })
       })
     }
-    let I = (0, r.default)(o.default, g.default),
-      y = u.default.getCurrentUserActiveStream(),
-      _ = u.default.getStreamerActiveStreamMetadata();
+    let y = (0, r.default)(o.default, m.default),
+      O = u.default.getCurrentUserActiveStream(),
+      C = u.default.getStreamerActiveStreamMetadata();
     return {
       title: v,
       context: n,
@@ -52,13 +52,13 @@ var i = n("917351"),
         return t
       }),
       lobbyId: null != i ? i.id : void 0,
-      displayUserMode: m.default.getDisplayUserMode(),
-      displayNameMode: m.default.getDisplayNameMode(),
-      avatarSizeMode: m.default.getAvatarSizeMode(),
-      application: null != I ? s.default.getApplication(null !== (t = null === (e = f.default.getGameByGameData(I)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : "") : null,
-      streamApplication: (0, d.default)(I),
-      stream: y,
-      streamMetadata: _,
+      displayUserMode: E.default.getDisplayUserMode(),
+      displayNameMode: E.default.getDisplayNameMode(),
+      avatarSizeMode: E.default.getAvatarSizeMode(),
+      application: null != y ? s.default.getApplication(null !== (t = null === (e = f.default.getGameByGameData(y)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : "") : null,
+      streamApplication: (0, d.default)(y),
+      stream: O,
+      streamMetadata: C,
       hasStream: !1
     }
   })(v.VoiceWidget)
