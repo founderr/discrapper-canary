@@ -233,7 +233,7 @@ function P(e) {
                 }, {
                   [L.appLauncherOnboardingCommandName]: n
                 }, L.clickable),
-                children: [(0, s.jsx)(S.default, {
+                children: [n && (0, s.jsx)(S.default, {
                   height: 10,
                   width: 10,
                   className: L.appsIcon
