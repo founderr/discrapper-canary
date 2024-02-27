@@ -34,18 +34,18 @@ function S(e) {
   } = (0, s.useStateFromStoresObject)([r.default], () => ({
     viewerClippingAllowed: null != g && (r.default.isViewerClippingAllowedForUser(g.ownerId) || C),
     isAtMaxSavingClipOperations: r.default.getIsAtMaxSaveClipOperations()
-  })), T = (null == g ? void 0 : g.ownerId) === f.default.getId(), v = !(T || _) || I || null == n, x = a.useCallback(e => (0, l.jsx)(i.CameraIcon, {
+  })), T = r.default.getSettings().clipsEnabled, v = (null == g ? void 0 : g.ownerId) === f.default.getId(), x = !T || !(v || _) || I || null == n, N = a.useCallback(e => (0, l.jsx)(i.CameraIcon, {
     ...e,
     color: "currentColor"
   }), []);
   return (0, l.jsx)(d.default, {
     className: E.actionBarButton,
     onClick: () => {
-      !v && (T ? (0, u.saveClip)() : (0, u.saveClip)(n.id))
+      !x && (v ? (0, u.saveClip)() : (0, u.saveClip)(n.id))
     },
-    disabled: v,
-    iconComponent: x,
-    label: null == g ? p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : T || _ ? I ? void 0 : p.default.Messages.CLIPS_SAVE : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
+    disabled: x,
+    iconComponent: N,
+    label: null == g ? p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : v || _ ? T ? I ? void 0 : p.default.Messages.CLIPS_SAVE : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
     grow: !1
   })
 }

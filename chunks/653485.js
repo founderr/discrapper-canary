@@ -18,10 +18,10 @@ var a = s("37983"),
   T = s("216503"),
   f = s("42887"),
   m = s("227602"),
-  _ = s("773336"),
-  g = s("56947"),
-  h = s("386045"),
-  N = s("30591"),
+  _ = s("56947"),
+  g = s("386045"),
+  h = s("30591"),
+  N = s("18346"),
   I = s("803725"),
   p = s("119052"),
   C = s("80028"),
@@ -41,8 +41,8 @@ function L() {
       decoupledClipsEnabled: l,
       clipsLength: L,
       clipsQuality: P
-    } = (0, r.useStateFromStoresObject)([h.default], () => h.default.getSettings()),
-    j = (0, r.useStateFromStores)([h.default], () => h.default.getHardwareClassification()),
+    } = (0, r.useStateFromStoresObject)([g.default], () => g.default.getSettings()),
+    j = (0, r.useStateFromStores)([g.default], () => g.default.getHardwareClassification()),
     b = (0, r.useStateFromStores)([m.default], () => m.default.getKeybindForAction(A.GlobalKeybindActions.SAVE_CLIP, !0)),
     {
       enableDecoupledGameClipping: U
@@ -51,16 +51,17 @@ function L() {
     }, {
       autoTrackExposure: !1
     }),
+    B = (0, N.default)(f.default),
     {
-      showClipsHeaderEntrypoint: B
-    } = g.ClipsExperiment.useExperiment({
+      showClipsHeaderEntrypoint: y
+    } = _.ClipsExperiment.useExperiment({
       location: "clips_recording_settings"
     }, {
       autoTrackExposure: !1
     });
   i(null != b, "Save clip keybind unset");
-  let y = (0, r.useStateFromStores)([E.default], () => E.default.locale),
-    F = n.useMemo(() => [{
+  let F = (0, r.useStateFromStores)([E.default], () => E.default.locale),
+    G = n.useMemo(() => [{
       value: C.ClipsLengthSettings.SECONDS_30,
       label: R.default.Messages.CLIPS_LENGTH_SECONDS.format({
         count: 30
@@ -75,8 +76,8 @@ function L() {
       label: R.default.Messages.CLIPS_LENGTH_MINUTES.format({
         count: 2
       })
-    }], [y]),
-    G = n.useMemo(() => [{
+    }], [F]),
+    k = n.useMemo(() => [{
       value: O.ApplicationStreamResolutions.RESOLUTION_480,
       label: R.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
         resolution: O.ApplicationStreamResolutions.RESOLUTION_480
@@ -99,8 +100,8 @@ function L() {
     }, {
       value: O.ApplicationStreamResolutions.RESOLUTION_SOURCE,
       label: R.default.Messages.SCREENSHARE_SOURCE
-    }], [y]),
-    k = n.useMemo(() => [{
+    }], [F]),
+    H = n.useMemo(() => [{
       value: O.ApplicationStreamFPS.FPS_15,
       label: R.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
         fps: O.ApplicationStreamFPS.FPS_15
@@ -115,8 +116,8 @@ function L() {
       label: R.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
         fps: O.ApplicationStreamFPS.FPS_60
       })
-    }], [y]),
-    H = n.useCallback(e => {
+    }], [F]),
+    w = n.useCallback(e => {
       d.default.setKeybind({
         ...b,
         shortcut: e
@@ -133,7 +134,7 @@ function L() {
             scrollPosition: x.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })
-      }), j === N.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
+      }), j === h.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
         look: T.InfoBoxLooks.WARNING,
         className: D.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
@@ -152,7 +153,7 @@ function L() {
         className: D.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_QUALITY_INFOBOX
       })]
-    }), U && (0, _.isWindows)() && (0, a.jsxs)(a.Fragment, {
+    }), U && B && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.FormDivider, {}), (0, a.jsx)(o.FormSection, {
         className: v.marginTop20,
         disabled: !e,
@@ -169,7 +170,7 @@ function L() {
           children: R.default.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS
         })
       })]
-    }), B && (0, a.jsxs)(a.Fragment, {
+    }), y && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.FormDivider, {}), (0, a.jsx)(o.FormSection, {
         className: v.marginTop20,
         children: (0, a.jsx)(o.FormSwitch, {
@@ -189,7 +190,7 @@ function L() {
         title: R.default.Messages.CLIPS_SETTINGS_LENGTH,
         note: R.default.Messages.CLIPS_SETTINGS_LENGTH_HELP,
         value: L,
-        options: F
+        options: G
       }), (0, a.jsx)(p.SelectItem, {
         className: D.formItem,
         select: e => I.updateClipsQuality({
@@ -199,7 +200,7 @@ function L() {
         title: R.default.Messages.CLIPS_SETTINGS_RESOLUTION,
         note: R.default.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
         value: P.resolution,
-        options: G
+        options: k
       }), (0, a.jsx)(p.SelectItem, {
         className: D.formItem,
         select: e => I.updateClipsQuality({
@@ -209,7 +210,7 @@ function L() {
         title: R.default.Messages.CLIPS_SETTINGS_FRAMERATE,
         note: R.default.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
         value: P.frameRate,
-        options: k
+        options: H
       }), (0, a.jsx)(p.InputItem, {
         className: D.formItem,
         title: R.default.Messages.CLIPS_SETTINGS_KEYBIND,
@@ -218,7 +219,7 @@ function L() {
           className: M.keyRecorder,
           children: (0, a.jsx)(c.default, {
             defaultValue: b.shortcut,
-            onChange: H
+            onChange: w
           })
         })
       })]

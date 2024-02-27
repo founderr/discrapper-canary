@@ -174,11 +174,17 @@ function F(e) {
 }
 
 function V(e) {
+  let {
+    enabled: t,
+    trackAnalytics: n = !1
+  } = e;
   r.default.dispatch({
     type: "CLIPS_SETTINGS_UPDATE",
     settings: {
-      viewerClipsEnabled: e
+      viewerClipsEnabled: t
     }
+  }), n && v.default.track(L.AnalyticEvents.CLIPS_SETTINGS_UPDATED, {
+    viewer_clips_enabled: t
   })
 }
 
