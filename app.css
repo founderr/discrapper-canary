@@ -1711,19 +1711,6 @@
     text-align: center
 }
 
-.gamepadButtonText__77d59 {
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--white-500);
-    margin-right: 30px
-}
-
-.gamepadButtonContainer_a682a6 {
-    display: flex;
-    flex-direction: row;
-    align-items: center
-}
-
 .applicationDetails__6d654 {
     padding: 24px 0
 }
@@ -124575,6 +124562,19 @@ div.nagbar_c731ff {
 
 .channelTitleIcon__23bcc {
     vertical-align: middle
+}
+
+.gamepadButtonText__4ce0f {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-500);
+    margin-right: 30px
+}
+
+.gamepadButtonContainer__24210 {
+    display: flex;
+    flex-direction: row;
+    align-items: center
 }
 
 .leftPanel_e31826 {
