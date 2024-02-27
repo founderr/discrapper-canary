@@ -92,7 +92,7 @@ function R(e) {
       return d.default.has(i, M.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : d.default.has(a, M.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
     }, []).sort().join(",")).toString()
   }(t) : t.memberListId
-}(a = i || (i = {})).GROUP = "GROUP", a.MEMBER = "MEMBER";
+}(a = i || (i = {})).GROUP = "GROUP", a.MEMBER = "MEMBER", a.CONTENT_INVENTORY = "CONTENT_INVENTORY", a.CONTENT_INVENTORY_GROUP = "CONTENT_INVENTORY_GROUP";
 class b {
   updateOwnerId() {
     let e = A.default.getGuild(this.guildId);
