@@ -15,8 +15,8 @@ var n, a, i = s("37983"),
   c = s("627445"),
   d = s.n(c),
   _ = s("446674"),
-  f = s("819855"),
-  m = s("77078"),
+  m = s("819855"),
+  f = s("77078"),
   E = s("850068"),
   I = s("841098"),
   C = s("812204"),
@@ -106,11 +106,11 @@ function G(e) {
       } = e;
       return !j.PREMIUM_PLANS.has(t)
     })) != null,
-    O = g ? (0, i.jsx)(m.Button, {
+    O = g ? (0, i.jsx)(f.Button, {
       onClick: () => a(3),
       children: k.default.Messages.NEXT
-    }) : (0, i.jsx)(m.Button, {
-      color: m.Button.Colors.RED,
+    }) : (0, i.jsx)(f.Button, {
+      color: f.Button.Colors.RED,
       disabled: d,
       onClick: async () => {
         await w({
@@ -126,9 +126,9 @@ function G(e) {
         planPremiumType: S.default.getDisplayPremiumType(s.planId)
       })
     }),
-    x = (0, i.jsx)(m.Button, {
-      look: m.Button.Looks.LINK,
-      color: (0, f.isThemeLight)(p) ? m.Button.Colors.PRIMARY : m.Button.Colors.WHITE,
+    x = (0, i.jsx)(f.Button, {
+      look: f.Button.Looks.LINK,
+      color: (0, m.isThemeLight)(p) ? f.Button.Colors.PRIMARY : f.Button.Colors.WHITE,
       onClick: r,
       children: u ? k.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK : k.default.Messages.CANCEL
     });
@@ -137,19 +137,19 @@ function G(e) {
       premiumType: n,
       className: F.cancellationHeader,
       onClose: r
-    }) : (0, i.jsxs)(m.ModalHeader, {
+    }) : (0, i.jsxs)(f.ModalHeader, {
       separator: !1,
-      children: [(0, i.jsx)(m.FormTitle, {
-        tag: m.FormTitleTags.H4,
+      children: [(0, i.jsx)(f.FormTitle, {
+        tag: f.FormTitleTags.H4,
         children: k.default.Messages.PREMIUM_CANCEL_CONFIRM_TITLE.format({
           planPremiumType: S.default.getDisplayPremiumType(s.planId)
         })
-      }), (0, i.jsx)(m.ModalCloseButton, {
+      }), (0, i.jsx)(f.ModalCloseButton, {
         onClick: r
       })]
-    }), (0, i.jsxs)(m.ModalContent, {
+    }), (0, i.jsxs)(f.ModalContent, {
       className: F.body,
-      children: [E ? (0, i.jsx)(m.FormErrorBlock, {
+      children: [E ? (0, i.jsx)(f.FormErrorBlock, {
         className: F.errorBlock,
         children: k.default.Messages.BILLING_ERROR_GENERIC
       }) : null, (0, i.jsx)("div", {
@@ -157,7 +157,7 @@ function G(e) {
       }), (0, i.jsx)("div", {
         children: A
       })]
-    }), (0, i.jsxs)(m.ModalFooter, {
+    }), (0, i.jsxs)(f.ModalFooter, {
       justify: T.default.Justify.START,
       children: [O, x]
     })]
@@ -177,7 +177,7 @@ function H(e) {
     analyticsLocations: a,
     analyticsLocation: C.default.CANCEL_INVOICE_PREVIEW
   }), r = (0, _.useStateFromStores)([p.default], () => p.default.get(n.planId));
-  if (null == l || null == r) return (0, i.jsx)(m.Spinner, {
+  if (null == l || null == r) return (0, i.jsx)(f.Spinner, {
     className: F.loading
   });
   let {
@@ -220,25 +220,25 @@ function W(e) {
     onClose: a,
     analyticsLocation: r
   } = e, [o, c] = l.useState(!1), [d, _] = l.useState(!1), {
-    analyticsLocations: f
+    analyticsLocations: m
   } = (0, N.default)();
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(b.default, {
       premiumType: s,
       onClose: a
-    }), (0, i.jsxs)(m.ModalContent, {
+    }), (0, i.jsxs)(f.ModalContent, {
       className: u(F.previewStep, F.body),
-      children: [d ? (0, i.jsx)(m.FormErrorBlock, {
+      children: [d ? (0, i.jsx)(f.FormErrorBlock, {
         className: F.errorBlock,
         children: k.default.Messages.BILLING_ERROR_GENERIC
       }) : null, (0, i.jsx)(H, {
         premiumSubscription: t
       })]
-    }), (0, i.jsxs)(m.ModalFooter, {
+    }), (0, i.jsxs)(f.ModalFooter, {
       align: T.default.Align.CENTER,
       justify: T.default.Justify.BETWEEN,
-      children: [(0, i.jsx)(m.Button, {
-        color: m.Button.Colors.RED,
+      children: [(0, i.jsx)(f.Button, {
+        color: f.Button.Colors.RED,
         disabled: o,
         onClick: async () => {
           await w({
@@ -246,7 +246,7 @@ function W(e) {
             onClose: a,
             premiumSubscription: t,
             setIsCancelling: c,
-            analyticsLocations: f,
+            analyticsLocations: m,
             analyticsLocation: r
           })
         },
@@ -273,8 +273,8 @@ let K = {
   1: "What You're Losing",
   2: "Confirm Cancellation",
   3: "Preview Updated Subscription",
-  4: "Confirm Discount",
-  5: "Discount Successfully Applied"
+  4: "Redeem Churn Discount Started",
+  5: "Redeem Churn Discount Completed"
 };
 
 function V(e) {
@@ -337,12 +337,12 @@ function V(e) {
         subtitleText: k.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
         footer: (0, i.jsxs)("div", {
           className: F.whatYouLoseButtonContainer,
-          children: [(0, i.jsx)(m.Button, {
+          children: [(0, i.jsx)(f.Button, {
             onClick: () => v(2),
             children: k.default.Messages.CONTINUE
-          }), (0, i.jsx)(m.Button, {
-            look: m.Button.Looks.LINK,
-            color: (0, f.isThemeDark)(P) ? m.Button.Colors.WHITE : m.Button.Colors.PRIMARY,
+          }), (0, i.jsx)(f.Button, {
+            look: f.Button.Looks.LINK,
+            color: (0, m.isThemeDark)(P) ? f.Button.Colors.WHITE : f.Button.Colors.PRIMARY,
             onClick: () => H(D),
             children: k.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
           })]
@@ -400,7 +400,7 @@ function V(e) {
       ref: M,
       className: F.confettiCanvas,
       environment: _.current
-    }), (0, i.jsx)(m.ModalRoot, {
+    }), (0, i.jsx)(f.ModalRoot, {
       transitionState: a,
       children: s
     })]
