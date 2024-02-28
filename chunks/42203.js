@@ -95,9 +95,10 @@ class V {
 
 function B(e, t, n) {
   if (null == e || "null" === e || U.has(e) || 0 === t && d.default.hasGuild(e)) return;
+  let i = l.default.database();
+  if (null == i) return;
   v.verbose("hydrating guild (guild: ".concat(e, ", trace: ").concat(n, ")"));
-  let i = l.default.database(),
-    r = null != i ? (0, u.tryLoadOrResetCacheGateway)("ensureGuildLoaded(".concat(e, ")"), () => c.default.getSync(i, e)) : null;
+  let r = (0, u.tryLoadOrResetCacheGateway)("ensureGuildLoaded(".concat(e, ")"), () => c.default.getSync(i, e));
   if (null == r) {
     U.add(e), d.default.restored(e), v.log("load returned null; early returning (guild: ".concat(e, ", database: ").concat(i, ")"));
     return
