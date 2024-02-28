@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   InappropriateConversationWarningBanner: function() {
-    return p
+    return C
   }
 });
 var a = n("37983"),
@@ -14,36 +14,35 @@ var a = n("37983"),
   d = n("217736"),
   c = n("133829"),
   f = n("324252"),
-  h = n("49111"),
-  C = n("782340");
+  h = n("782340");
 
-function p(e) {
+function C(e) {
   let {
     channelId: t,
-    warningId: p,
-    senderId: E
-  } = e, m = s.useCallback(() => {
-    (0, o.dismissChannelSafetyWarnings)(t, [p])
-  }, [t, p]);
+    warningId: C,
+    senderId: p
+  } = e, E = s.useCallback(() => {
+    (0, o.dismissChannelSafetyWarnings)(t, [C])
+  }, [t, C]), m = s.useMemo(() => ({
+    channelId: t,
+    warningId: C,
+    senderId: p,
+    warningType: u.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2
+  }), [t, C, p]);
   s.useEffect(() => {
-    (0, d.trackViewedEvent)(h.AnalyticEvents.SAFETY_WARNING_VIEWED, {
-      channelId: t,
-      warningId: p,
-      senderId: E,
-      warningType: u.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2
+    (0, d.trackNamedViewEvent)({
+      ...m,
+      viewName: d.ViewNameTypes.SAFETY_WARNING_BANNER
     }), r.default.increment({
       name: l.MetricEvents.SAFETY_WARNING_VIEW
     })
-  }, [t, p, E]);
+  }, [m]);
   let g = s.useCallback(e => {
       (0, d.trackCtaEvent)({
-        channelId: t,
-        warningId: p,
-        senderId: E,
-        warningType: u.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
+        ...m,
         cta: e
       })
-    }, [t, p, E]),
+    }, [m]),
     _ = s.useCallback(() => {
       (0, i.openModalLazy)(async () => {
         let {
@@ -55,9 +54,9 @@ function p(e) {
             onClose: l
           } = n;
           return (0, a.jsx)(e, {
-            otherUserId: E,
+            otherUserId: p,
             channelId: t,
-            warningId: p,
+            warningId: C,
             warningType: u.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
             transitionState: s,
             onClose: l
@@ -66,13 +65,13 @@ function p(e) {
       }, {
         modalKey: f.SAFETY_TOOLS_MODAL_KEY
       }), g(d.CtaEventTypes.USER_BANNER_OPEN_SAFETY_TOOLS)
-    }, [t, E, p, g]),
+    }, [t, p, C, g]),
     S = s.useCallback(() => {
-      m(), g(d.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM)
-    }, [m, g]),
+      E(), g(d.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM)
+    }, [E, g]),
     T = s.useCallback(() => {
-      m(), g(d.CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM)
-    }, [m, g]),
+      E(), g(d.CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM)
+    }, [E, g]),
     A = s.useCallback(() => {
       (0, i.openModalLazy)(async () => {
         let {
@@ -91,24 +90,24 @@ function p(e) {
               null == l || l(), g(d.CtaEventTypes.USER_BANNER_BLOCK_CANCEL)
             },
             onClose: l,
-            userId: E,
+            userId: p,
             channelId: t
           })
         }
       })
-    }, [S, T, E, t, g]);
+    }, [S, T, p, t, g]);
   return (0, a.jsx)(c.SafetyWarningBanner, {
     channelId: t,
-    warningId: p,
-    senderId: E,
+    warningId: C,
+    senderId: p,
     warningType: u.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
-    header: C.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
-    description: C.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
-    onDismiss: m,
-    primaryButtonText: C.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
+    header: h.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
+    description: h.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
+    onDismiss: E,
+    primaryButtonText: h.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
     primaryButtonColor: i.Button.Colors.BRAND,
     onPrimaryButtonClick: _,
-    secondaryButtonText: C.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON,
+    secondaryButtonText: h.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON,
     secondaryButtonColor: i.Button.Colors.PRIMARY,
     onSecondaryButtonClick: A
   })

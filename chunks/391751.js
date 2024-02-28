@@ -21,10 +21,26 @@ var l = n("37983"),
       channel: t
     } = e, p = (0, r.useInappropriateConversationSafetyToolsWarningForChannel)(t.id), E = (0, u.useSafetyToolsButtonTooltipForChannel)(t.id);
     a.useEffect(() => {
-      null != E && (s.AccessibilityAnnouncer.announce(h.default.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
+      null != E && null != p && (s.AccessibilityAnnouncer.announce(h.default.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
         (0, i.dismissChannelSafetyWarnings)(t.id, [E.id])
-      }, 5e3))
-    }, [t, E]);
+      }, 5e3), (0, o.trackNamedViewEvent)({
+        channelId: t.id,
+        senderId: t.getRecipientId(),
+        warningId: p.id,
+        warningType: p.type,
+        isNudgeWarning: null != E,
+        viewName: o.ViewNameTypes.SAFETY_TOOLS_NUDGE_TOOLTIP
+      }))
+    }, [t, p, E]), a.useEffect(() => {
+      null != p && (0, o.trackNamedViewEvent)({
+        channelId: t.id,
+        senderId: t.getRecipientId(),
+        warningId: p.id,
+        warningType: p.type,
+        isNudgeWarning: null != E,
+        viewName: o.ViewNameTypes.SAFETY_TOOLS_BUTTON
+      })
+    }, []);
     let g = a.useCallback(() => {
       null != E && (0, i.dismissChannelSafetyWarnings)(t.id, [E.id]), null != p && ((0, s.openModalLazy)(async () => {
         let {
