@@ -128,9 +128,9 @@ var O = function(e) {
     enabled: B
   } = (0, R.default)({
     location: "subscription_header"
-  }), j = (0, T.usePremiumDiscountOffer)(), G = null == j ? void 0 : null === (t = j.discount) || void 0 === t ? void 0 : t.amount, F = (0, P.useHasDiscountApplied)(), w = () => {
-    (r.status === L.SubscriptionStatusTypes.ACTIVE || r.status === L.SubscriptionStatusTypes.PAST_DUE) && k()
-  }, k = () => {
+  }), j = (0, T.usePremiumDiscountOffer)(), G = null == j ? void 0 : null === (t = j.discount) || void 0 === t ? void 0 : t.amount, F = (0, P.useHasDiscountApplied)(), w = (0, P.useActiveDiscountDuration)(), k = () => {
+    (r.status === L.SubscriptionStatusTypes.ACTIVE || r.status === L.SubscriptionStatusTypes.PAST_DUE) && Y()
+  }, Y = () => {
     (0, u.openModalLazy)(async () => {
       let {
         default: e
@@ -142,7 +142,7 @@ var O = function(e) {
         analyticsLocations: b
       })
     })
-  }, Y = () => {
+  }, H = () => {
     if (null != r && null != r.planIdFromItems) {
       let e = I.default.get(r.planIdFromItems);
       if (null == e) {
@@ -160,21 +160,21 @@ var O = function(e) {
         subscription: r
       })
     }
-  }, H = N.default.getPlanIdFromInvoice(r, f);
-  if ((0, p.isNoneSubscription)(H)) return null;
-  let V = N.default.getStatusFromInvoice(r, f),
-    K = N.default.getPremiumType(H),
-    W = {
-      [g.tier0]: K === h.PremiumTypes.TIER_0,
-      [g.tier1]: K === h.PremiumTypes.TIER_1,
-      [g.tier2]: K === h.PremiumTypes.TIER_2,
-      [g.canceled]: V === L.SubscriptionStatusTypes.CANCELED,
-      [g.failedPayment]: (0, N.isSubscriptionStatusFailedPayment)(V)
+  }, V = N.default.getPlanIdFromInvoice(r, f);
+  if ((0, p.isNoneSubscription)(V)) return null;
+  let K = N.default.getStatusFromInvoice(r, f),
+    W = N.default.getPremiumType(V),
+    z = {
+      [g.tier0]: W === h.PremiumTypes.TIER_0,
+      [g.tier1]: W === h.PremiumTypes.TIER_1,
+      [g.tier2]: W === h.PremiumTypes.TIER_2,
+      [g.canceled]: K === L.SubscriptionStatusTypes.CANCELED,
+      [g.failedPayment]: (0, N.isSubscriptionStatusFailedPayment)(K)
     },
-    z = null;
-  switch (K) {
+    Z = null;
+  switch (W) {
     case h.PremiumTypes.TIER_0:
-      z = (0, a.jsxs)(a.Fragment, {
+      Z = (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(_.default, {
           className: g.discordWordmark,
           "aria-label": M.default.Messages.PREMIUM_TIER_0
@@ -184,23 +184,24 @@ var O = function(e) {
       });
       break;
     case h.PremiumTypes.TIER_1:
-      z = (0, a.jsx)(U, {});
+      Z = (0, a.jsx)(U, {});
       break;
     case h.PremiumTypes.TIER_2:
-      z = (0, a.jsx)(m.default, {
+      Z = (0, a.jsx)(m.default, {
         className: g.planName,
         "aria-label": M.default.Messages.PREMIUM_TITLE
       })
   }
   return (0, a.jsx)(D, {
-    wordMark: z,
-    subscriptionInfo: (n = H, l(null != f, "Expected renewalInvoicePreview"), (0, a.jsx)("div", {
+    wordMark: Z,
+    subscriptionInfo: (n = V, l(null != f, "Expected renewalInvoicePreview"), (0, a.jsx)("div", {
       className: g.planInfo,
       children: (0, N.getPlanDescriptionFromInvoice)({
         planId: n,
         subscription: r,
         renewalInvoicePreview: f,
-        hasDiscountApplied: F
+        hasDiscountApplied: F,
+        activeDiscountDuration: w
       })
     })),
     buttons: (() => {
@@ -228,7 +229,7 @@ var O = function(e) {
         look: u.ButtonLooks.INVERTED,
         color: u.ButtonColors.BRAND,
         submitting: v,
-        onClick: Y,
+        onClick: H,
         children: M.default.Messages.RESUBSCRIBE
       });
       if (e === L.SubscriptionStatusTypes.ACTIVE || e === L.SubscriptionStatusTypes.PAST_DUE) {
@@ -242,7 +243,7 @@ var O = function(e) {
             look: u.ButtonLooks.LINK,
             color: u.ButtonColors.WHITE,
             submitting: v,
-            onClick: w,
+            onClick: k,
             children: M.default.Messages.PREMIUM_PAUSE_OR_CANCEL
           }) : (0, a.jsx)(u.Button, {
             className: g.toolsButton,
@@ -250,7 +251,7 @@ var O = function(e) {
             look: u.ButtonLooks.LINK,
             color: u.ButtonColors.WHITE,
             submitting: v,
-            onClick: w,
+            onClick: k,
             children: M.default.Messages.CANCEL
           }), (0, a.jsx)(u.Tooltip, {
             text: s,
@@ -272,7 +273,7 @@ var O = function(e) {
         })
       }
     })(),
-    statusClasses: W,
+    statusClasses: z,
     shouldUseDiscountMarketing: F,
     discountAmount: G
   })

@@ -511,42 +511,43 @@ function X(e) {
     planId: r,
     price: s,
     includePremiumGuilds: a,
-    hasDiscountApplied: o
-  } = e, l = R.default.formatPriceString(R.default.getDefaultPrice(y.SubscriptionPlans.PREMIUM_MONTH_TIER_2), y.SubscriptionIntervalTypes.MONTH), u = ef(i) || null == i.paymentSourceId && !i.isPurchasedExternally && !(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), c = null != s, d = i.status === O.SubscriptionStatusTypes.UNPAID && null !== i.latestInvoice && (null === (n = i.latestInvoice) || void 0 === n ? void 0 : n.status) === O.InvoiceStatusTypes.OPEN, f = u ? O.SubscriptionStatusTypes.CANCELED : d ? O.SubscriptionStatusTypes.UNPAID : i.status, E = y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (a ? et(i.additionalPlans) : 0);
+    hasDiscountApplied: o,
+    activeDiscountDuration: l
+  } = e, u = R.default.formatPriceString(R.default.getDefaultPrice(y.SubscriptionPlans.PREMIUM_MONTH_TIER_2), y.SubscriptionIntervalTypes.MONTH), c = ef(i) || null == i.paymentSourceId && !i.isPurchasedExternally && !(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), d = null != s, f = i.status === O.SubscriptionStatusTypes.UNPAID && null !== i.latestInvoice && (null === (n = i.latestInvoice) || void 0 === n ? void 0 : n.status) === O.InvoiceStatusTypes.OPEN, E = c ? O.SubscriptionStatusTypes.CANCELED : f ? O.SubscriptionStatusTypes.UNPAID : i.status, p = y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (a ? et(i.additionalPlans) : 0);
   switch (r) {
     case y.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
     case y.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
-      switch (f) {
+      switch (E) {
         case O.SubscriptionStatusTypes.CANCELED:
-          return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format({
+          return d ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format({
             price: s
           }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE;
         case O.SubscriptionStatusTypes.ACCOUNT_HOLD:
-          return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format({
+          return d ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format({
             price: s
           }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE.format();
         case O.SubscriptionStatusTypes.UNPAID:
           return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAYMENT.format();
         default:
-          return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({
+          return d ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({
             price: s
           }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_NO_PRICE
       }
     case y.SubscriptionPlans.PREMIUM_MONTH_TIER_1:
     case y.SubscriptionPlans.PREMIUM_YEAR_TIER_1:
-      switch (f) {
+      switch (E) {
         case O.SubscriptionStatusTypes.CANCELED:
-          return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format({
+          return d ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format({
             price: s
           }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE;
         case O.SubscriptionStatusTypes.ACCOUNT_HOLD:
-          return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format({
+          return d ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format({
             price: s
           }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE.format();
         case O.SubscriptionStatusTypes.UNPAID:
           return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAYMENT.format();
         default:
-          return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({
+          return d ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({
             price: s
           }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_NO_PRICE
       }
@@ -554,34 +555,35 @@ function X(e) {
     case y.SubscriptionPlans.PREMIUM_YEAR_TIER_2:
     case y.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2:
     case y.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2:
-      switch (f) {
+      switch (E) {
         case O.SubscriptionStatusTypes.CANCELED:
-          return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION.format({
+          return d ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION.format({
             price: s,
-            num: E
+            num: p
           }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE.format({
-            num: E
+            num: p
           });
         case O.SubscriptionStatusTypes.ACCOUNT_HOLD:
-          return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD.format({
+          return d ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD.format({
             price: s,
-            num: E
+            num: p
           }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE.format({
-            num: E
+            num: p
           });
         case O.SubscriptionStatusTypes.UNPAID:
           return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAYMENT.format({
-            num: E
+            num: p
           });
         default:
-          return o ? L.default.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION.format({
-            discountedPrice: s,
-            regularPrice: l
-          }) : c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
+          return o ? L.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
+            percent: 30,
+            regularPrice: u,
+            numMonths: null != l ? l : y.DISCOUNT_DURATION_FALLBACK
+          }) : d ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
             price: s,
-            num: E
+            num: p
           }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_NO_PRICE.format({
-            num: E
+            num: p
           })
       }
     default:
@@ -595,11 +597,12 @@ function Q(e) {
     subscription: n,
     planId: i,
     includePremiumGuilds: r = !1,
-    hasDiscountApplied: s = !1
-  } = e, a = m.default.get(i);
-  return l(null != a, "Missing plan"), X({
+    hasDiscountApplied: s = !1,
+    activeDiscountDuration: a
+  } = e, o = m.default.get(i);
+  return l(null != o, "Missing plan"), X({
     subscription: n,
-    planId: a.id,
+    planId: o.id,
     price: function(e, t, n) {
       let i = e.invoiceItems.find(e => {
           let {
@@ -612,9 +615,10 @@ function Q(e) {
           currency: t.currency
         }).amount : i.amount;
       return (0, N.formatRate)((0, N.formatPrice)(r, e.currency), n.interval, n.intervalCount)
-    }(t, n, a),
+    }(t, n, o),
     includePremiumGuilds: r,
-    hasDiscountApplied: s
+    hasDiscountApplied: s,
+    activeDiscountDuration: a
   })
 }
 

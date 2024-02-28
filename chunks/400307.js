@@ -32,8 +32,8 @@ var f = n("414456"),
   _ = n("866227"),
   E = n.n(_),
   T = n("446674"),
-  C = n("669491"),
-  I = n("819855"),
+  I = n("669491"),
+  C = n("819855"),
   p = n("77078"),
   S = n("841098"),
   P = n("206230"),
@@ -44,8 +44,8 @@ var f = n("414456"),
   g = n("697218"),
   h = n("521012"),
   x = n("594098"),
-  v = n("491614"),
-  N = n("716589"),
+  N = n("491614"),
+  v = n("716589"),
   A = n("46829"),
   U = n("118503"),
   b = n("41250"),
@@ -108,7 +108,7 @@ function el(e) {
   } = e;
   switch (i) {
     case 1:
-      t = C.default.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS.css;
+      t = I.default.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS.css;
       break;
     case 3:
       t = "url(#".concat(J.PREMIUM_NEW_TIER_2_SVG_GRADIENT_ID, ")");
@@ -249,8 +249,8 @@ function eu(e) {
     showYearlyPrice: l,
     isStacked: a,
     isFullScreen: s
-  } = e, o = (0, T.useStateFromStores)([h.default], () => h.default.getPremiumTypeSubscription()), u = (0, T.useStateFromStores)([g.default], () => g.default.getCurrentUser()), c = (0, K.useHasDiscountApplied)(), f = n === Q.PremiumTypes.TIER_0 ? Q.PremiumSubscriptionSKUs.TIER_0 : Q.PremiumSubscriptionSKUs.TIER_2, _ = (null == o ? void 0 : o.trialId) != null ? null == u ? void 0 : u.premiumType : c ? Q.PremiumTypes.TIER_2 : null, C = (0, Z.usePremiumTrialOffer)(), I = null == C ? void 0 : C.subscription_trial;
-  if (!t && null != _ && n === _ && null != o && null != o.planIdFromItems && !a) {
+  } = e, o = (0, T.useStateFromStores)([h.default], () => h.default.getPremiumTypeSubscription()), u = (0, T.useStateFromStores)([g.default], () => g.default.getCurrentUser()), c = (0, K.useHasDiscountApplied)(), f = (0, K.useActiveDiscountDuration)(), _ = n === Q.PremiumTypes.TIER_0 ? Q.PremiumSubscriptionSKUs.TIER_0 : Q.PremiumSubscriptionSKUs.TIER_2, I = (null == o ? void 0 : o.trialId) != null ? null == u ? void 0 : u.premiumType : c ? Q.PremiumTypes.TIER_2 : null, C = (0, Z.usePremiumTrialOffer)(), S = null == C ? void 0 : C.subscription_trial;
+  if (!t && null != I && n === I && null != o && null != o.planIdFromItems && !a) {
     let e = null != o.trialEndsAt ? E(null == o ? void 0 : o.trialEndsAt).diff(E(), "d") : 0,
       t = Q.SubscriptionPlanInfo[o.planIdFromItems],
       n = k.default.formatPriceString(k.default.getDefaultPrice(t.id), t.interval);
@@ -262,25 +262,26 @@ function eu(e) {
         children: 0 === i ? ee.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
           remainingTime: e,
           price: n
-        }) : ee.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION.format({
+        }) : ee.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
           percent: 30,
-          regularPrice: n
+          regularPrice: n,
+          numMonths: null != f ? f : Q.DISCOUNT_DURATION_FALLBACK
         })
       })
     })
   }
   if (!t && r && !a) {
-    var S, P, R, L;
+    var P, R, L, O;
     let e = k.default.formatPriceString(k.default.getDefaultPrice(n === Q.PremiumTypes.TIER_0 ? Q.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : Q.SubscriptionPlans.PREMIUM_MONTH_TIER_2), Q.SubscriptionIntervalTypes.MONTH);
     return (0, d.jsx)(p.Heading, {
       variant: "heading-md/normal",
       color: "always-white",
       className: et.trialHeader,
       children: 0 === i ? ee.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW.format({
-        planName: (0, k.getTierDisplayName)(null !== (P = Q.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (S = null == I ? void 0 : I.sku_id) && void 0 !== S ? S : Q.PremiumSubscriptionSKUs.NONE]) && void 0 !== P ? P : Q.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+        planName: (0, k.getTierDisplayName)(null !== (R = Q.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (P = null == S ? void 0 : S.sku_id) && void 0 !== P ? P : Q.PremiumSubscriptionSKUs.NONE]) && void 0 !== R ? R : Q.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
         duration: (0, k.formatIntervalDuration)({
-          intervalType: null !== (R = null == I ? void 0 : I.interval) && void 0 !== R ? R : Q.SubscriptionIntervalTypes.DAY,
-          intervalCount: null !== (L = null == I ? void 0 : I.interval_count) && void 0 !== L ? L : 30,
+          intervalType: null !== (L = null == S ? void 0 : S.interval) && void 0 !== L ? L : Q.SubscriptionIntervalTypes.DAY,
+          intervalCount: null !== (O = null == S ? void 0 : S.interval_count) && void 0 !== O ? O : 30,
           capitalize: !1
         }),
         price: e
@@ -292,7 +293,7 @@ function eu(e) {
   }
   return (0, d.jsxs)(d.Fragment, {
     children: [(0, d.jsx)(X.default, {
-      subscriptionTier: f,
+      subscriptionTier: _,
       isGift: t,
       className: m(et.price, {
         [et.priceStacked]: a && s,
@@ -300,7 +301,7 @@ function eu(e) {
       }),
       variant: a ? "heading-lg/extrabold" : void 0
     }), l && (0, d.jsx)(X.default, {
-      subscriptionTier: f,
+      subscriptionTier: _,
       interval: Q.SubscriptionIntervalTypes.YEAR,
       isGift: t,
       className: et.price
@@ -321,7 +322,7 @@ function ec() {
       Icon: A.default,
       text: ee.default.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM
     }), (0, d.jsx)(es, {
-      Icon: v.default,
+      Icon: N.default,
       text: ee.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED
     }), (0, d.jsx)(es, {
       Icon: y.default,
@@ -341,7 +342,7 @@ function ed(e) {
     isGift: s = !1,
     variant: o = 0,
     isFullScreen: u
-  } = e, c = (0, T.useStateFromStores)([h.default], () => h.default.getPremiumTypeSubscription()), f = (0, T.useStateFromStores)([g.default], () => g.default.getCurrentUser()), _ = (0, Z.usePremiumTrialOffer)(), E = null == _ ? void 0 : null === (t = _.subscription_trial) || void 0 === t ? void 0 : t.sku_id, C = (null == c ? void 0 : c.trialId) != null, I = (null == c ? void 0 : c.trialId) != null ? null == f ? void 0 : f.premiumType : null, S = null != E || C, P = 1 === o;
+  } = e, c = (0, T.useStateFromStores)([h.default], () => h.default.getPremiumTypeSubscription()), f = (0, T.useStateFromStores)([g.default], () => g.default.getCurrentUser()), _ = (0, Z.usePremiumTrialOffer)(), E = null == _ ? void 0 : null === (t = _.subscription_trial) || void 0 === t ? void 0 : t.sku_id, I = (null == c ? void 0 : c.trialId) != null, C = (null == c ? void 0 : c.trialId) != null ? null == f ? void 0 : f.premiumType : null, S = null != E || I, P = 1 === o;
   return (0, d.jsxs)("div", {
     className: m(et.card, a, {
       [et.card]: !P,
@@ -378,7 +379,7 @@ function ed(e) {
       }), (0, d.jsx)("div", {
         className: et.rimGlowTier0
       })]
-    }), s || I !== Q.PremiumTypes.TIER_0 ? null : (0, d.jsxs)(d.Fragment, {
+    }), s || C !== Q.PremiumTypes.TIER_0 ? null : (0, d.jsxs)(d.Fragment, {
       children: [(0, d.jsx)(el, {
         text: ee.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
         className: et.topRimPill,
@@ -477,7 +478,7 @@ function ef(e) {
       Icon: j.default,
       text: ee.default.Messages.PREMIUM_TIER_HD_STREAMING_ITEM
     }), (0, d.jsx)(es, {
-      Icon: N.default,
+      Icon: v.default,
       text: ee.default.Messages.PREMIUM_TIER_CUSTOM_PROFILE_ITEM
     })]
   });
@@ -493,7 +494,7 @@ function ef(e) {
       Icon: A.default,
       text: ee.default.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM
     }), (0, d.jsx)(es, {
-      Icon: v.default,
+      Icon: N.default,
       text: ee.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED
     }), (0, d.jsx)(es, {
       Icon: j.default,
@@ -502,7 +503,7 @@ function ef(e) {
       Icon: U.default,
       text: ee.default.Messages.PREMIUM_TIER_SERVER_BOOST_ITEM
     }), (0, d.jsx)(es, {
-      Icon: N.default,
+      Icon: v.default,
       text: ee.default.Messages.PREMIUM_TIER_CUSTOM_PROFILE_ITEM
     }), a && s && (0, d.jsx)(q.default, {})]
   })
@@ -523,26 +524,26 @@ function em(e) {
     } = e,
     _ = (0, T.useStateFromStores)([h.default], () => h.default.getPremiumTypeSubscription()),
     E = (0, T.useStateFromStores)([g.default], () => g.default.getCurrentUser()),
-    C = (0, Z.usePremiumTrialOffer)(),
-    P = null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
+    I = (0, Z.usePremiumTrialOffer)(),
+    P = null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
     R = (null == _ ? void 0 : _.trialId) != null ? null == E ? void 0 : E.premiumType : null,
     L = (0, K.useIsInPremiumOfferExperience)(),
     O = (0, V.usePremiumDiscountOffer)(),
     M = (0, K.useHasDiscountApplied)(),
-    v = null != P || null != R ? 0 : null != O || M ? 1 : null,
-    N = 1 === c,
+    N = null != P || null != R ? 0 : null != O || M ? 1 : null,
+    v = 1 === c,
     A = (0, z.useIsEligibleForBogoPromotion)(),
     U = !o && L,
     D = (0, z.getBOGOPillCopy)(),
-    y = (0, I.isThemeLight)((0, S.default)()),
-    j = y && N ? 5 : 2;
-  return U && !N ? n = et.rimGlowTier2 : U && N && !y && (n = et.rimGlowTier2Stacked), (0, d.jsxs)("div", {
+    y = (0, C.isThemeLight)((0, S.default)()),
+    j = y && v ? 5 : 2;
+  return U && !v ? n = et.rimGlowTier2 : U && v && !y && (n = et.rimGlowTier2Stacked), (0, d.jsxs)("div", {
     className: m(et.card, s, {
-      [et.withTier2Rim]: U && !N,
-      [et.withTier2RimStacked]: U && N,
+      [et.withTier2Rim]: U && !v,
+      [et.withTier2RimStacked]: U && v,
       [et.withCardHover]: U,
-      [et.tier2Stacked]: N,
-      [et.tier2]: !N
+      [et.tier2Stacked]: v,
+      [et.tier2]: !v
     }),
     children: [!o && null != O && (0, V.discountOfferHasTier)(O, Q.PremiumSubscriptionSKUs.TIER_2) && void 0 !== O.discount.amount ? (0, d.jsxs)(d.Fragment, {
       children: [(0, d.jsx)(el, {
@@ -589,24 +590,24 @@ function em(e) {
       })
     }) : null, (0, d.jsxs)("div", {
       className: m({
-        [et.body]: N && f,
-        [et.bodySmallScreen]: N && !f
+        [et.body]: v && f,
+        [et.bodySmallScreen]: v && !f
       }),
       children: [(0, d.jsx)("div", {
         className: m({
-          [et.planContainer]: N && f,
-          [et.planContainerSmallScreen]: N && !f
+          [et.planContainer]: v && f,
+          [et.planContainerSmallScreen]: v && !f
         }),
         children: (0, d.jsxs)("div", {
           className: m({
-            [et.subscriptionPlanInfo]: N
+            [et.subscriptionPlanInfo]: v
           }),
           children: [(0, d.jsx)(b.default, {
             className: m({
-              [et.title]: !N,
-              [et.tier2Title]: !N,
-              [et.tier2TitleStacked]: N && f,
-              [et.tier2TitleStackedSmallScreen]: N && !f
+              [et.title]: !v,
+              [et.tier2Title]: !v,
+              [et.tier2TitleStacked]: v && f,
+              [et.tier2TitleStackedSmallScreen]: v && !f
             })
           }), !o && P !== Q.PremiumSubscriptionSKUs.TIER_2 && A && (0, d.jsx)(p.Text, {
             variant: "text-xs/bold",
@@ -615,20 +616,20 @@ function em(e) {
           }), (0, d.jsx)(eu, {
             isGift: o,
             premiumTier: Q.PremiumTypes.TIER_2,
-            offerType: v,
+            offerType: N,
             offerTierMatchesCard: P === Q.PremiumSubscriptionSKUs.TIER_2 || (0, V.discountOfferHasTier)(O, Q.PremiumSubscriptionSKUs.TIER_2),
             showYearlyPrice: l,
-            isStacked: N,
+            isStacked: v,
             isFullScreen: f
           })]
         })
       }), (0, d.jsxs)("div", {
         className: m({
-          [et.perkContainer]: N && f,
-          [et.perkContainerSmallScreen]: N && !f
+          [et.perkContainer]: v && f,
+          [et.perkContainerSmallScreen]: v && !f
         }),
         children: [(0, d.jsxs)("div", {
-          children: [N && (0, d.jsx)(p.Heading, {
+          children: [v && (0, d.jsx)(p.Heading, {
             className: m({
               [et.stackedCardTitle]: f,
               [et.stackedCardTitleSmallScreen]: !f
@@ -640,16 +641,16 @@ function em(e) {
             isModal: u,
             isGift: o
           })]
-        }), N && (0, d.jsx)(Y.default, {
-          isStacked: N,
+        }), v && (0, d.jsx)(Y.default, {
+          isStacked: v,
           ctaButton: i,
           isGift: o,
           trialOfferTier: P,
           discountOffer: O
         })]
       })]
-    }), !N && (0, d.jsx)(Y.default, {
-      isStacked: N,
+    }), !v && (0, d.jsx)(Y.default, {
+      isStacked: v,
       ctaButton: i,
       isGift: o,
       trialOfferTier: P,

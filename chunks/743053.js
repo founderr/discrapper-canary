@@ -53,46 +53,48 @@ var a = s("37983"),
 function Q() {
   let e = (0, d.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()),
     t = (0, j.useHasDiscountApplied)(),
-    s = (0, I.default)(),
+    s = (0, j.useActiveDiscountDuration)(),
+    n = (0, I.default)(),
     {
-      enabled: n
+      enabled: l
     } = (0, U.default)();
   if (null == e || null == e.planIdFromItems) return null;
-  let l = null != e.trialId,
-    r = t || l,
-    u = null != e.trialEndsAt ? o(e.trialEndsAt).diff(o(), "d") : 0,
-    E = H.SubscriptionPlanInfo[e.planIdFromItems],
-    T = P.default.formatPriceString(P.default.getDefaultPrice(E.id), E.interval);
+  let r = null != e.trialId,
+    u = t || r,
+    E = null != e.trialEndsAt ? o(e.trialEndsAt).diff(o(), "d") : 0,
+    T = H.SubscriptionPlanInfo[e.planIdFromItems],
+    m = P.default.formatPriceString(P.default.getDefaultPrice(T.id), T.interval);
   return (0, a.jsxs)("div", {
     className: i(Y.tierCard, {
-      [Y.withTier2Rim]: r
+      [Y.withTier2Rim]: u
     }),
     children: [(0, a.jsxs)("div", {
       className: Y.tierInfo,
       children: [(0, a.jsx)(v.default, {
         className: i(Y.tierTitle)
-      }), r ? (0, a.jsxs)(a.Fragment, {
+      }), u ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(F.PremiumPillWithSparkles, {
-          text: l ? V.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : V.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
+          text: r ? V.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : V.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
           className: Y.topRimPill,
-          colorOptions: (0, c.isThemeDark)(s) ? F.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : F.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+          colorOptions: (0, c.isThemeDark)(n) ? F.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : F.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL
         }), (0, a.jsx)("div", {
           className: Y.rimGlowTier2
         }), (0, a.jsx)(S.Heading, {
           variant: "heading-md/normal",
           color: "always-white",
           className: Y.trialHeader,
-          children: l ? V.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
-            remainingTime: u,
-            price: T
-          }) : V.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION.format({
+          children: r ? V.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
+            remainingTime: E,
+            price: m
+          }) : V.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
             percent: 30,
-            regularPrice: T
+            regularPrice: m,
+            numMonths: null != s ? s : H.DISCOUNT_DURATION_FALLBACK
           })
         })]
       }) : (0, a.jsx)(G.default, {
         subscriptionTier: H.PremiumSubscriptionSKUs.TIER_2
-      }), (0, a.jsx)(F.Tier2FeatureItems, {}), n ? null : (0, a.jsx)(S.Button, {
+      }), (0, a.jsx)(F.Tier2FeatureItems, {}), l ? null : (0, a.jsx)(S.Button, {
         className: Y.tierCardButton,
         color: S.Button.Colors.WHITE,
         onClick: () => {
