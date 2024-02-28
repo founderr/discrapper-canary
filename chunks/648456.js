@@ -1,5 +1,8 @@
 "use strict";
 i.r(t), i.d(t, {
+  getActiveAnalyticsSessionIDs: function() {
+    return J
+  },
   default: function() {
     return n
   }
@@ -189,6 +192,10 @@ function k(e) {
       }), delete Y[n]
     }
   }
+}
+
+function J(e) {
+  return F[e]
 }
 n = class extends s.default {
   _initialize() {
