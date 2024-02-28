@@ -33,8 +33,8 @@ var i = l("37983"),
   N = l("141962"),
   j = l("231457"),
   D = l("49111"),
-  y = l("782340"),
-  M = l("424263");
+  M = l("782340"),
+  y = l("424263");
 
 function L(e) {
   let t = (0, n.useStateFromStores)([v.default, h.default], () => {
@@ -75,14 +75,14 @@ function V(e) {
     w = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())),
     P = L(null != d ? d : void 0);
   if ((null == N ? void 0 : N.application) == null || null == F) return null;
-  let Y = (null == w ? void 0 : w.name) == null || (null == w ? void 0 : w.name) === "" ? y.default.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : "#".concat(w.name);
+  let Y = (null == w ? void 0 : w.name) == null || (null == w ? void 0 : w.name) === "" ? M.default.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : "#".concat(w.name);
   return (0, i.jsxs)(s.Scroller, {
-    className: M.scroll,
+    className: y.scroll,
     children: [null != H || null != B ? (0, i.jsx)(I.default, {
       aspectRatio: 16 / 9,
-      className: M.imageContainer,
+      className: y.imageContainer,
       children: (0, i.jsx)(E.default, {
-        className: M.video,
+        className: y.video,
         src: H,
         loop: !0,
         autoPlay: !A,
@@ -90,18 +90,18 @@ function V(e) {
         muted: !0
       })
     }) : null, (0, i.jsxs)("div", {
-      className: M.descriptionArea,
+      className: y.descriptionArea,
       children: [(0, i.jsx)(s.Heading, {
         variant: "heading-xl/semibold",
         children: null == N ? void 0 : N.application.name
       }), (0, i.jsx)(s.Text, {
-        className: M.descriptionAreaSubtext,
+        className: y.descriptionAreaSubtext,
         variant: "text-md/normal",
         children: null == N ? void 0 : N.application.description
       })]
     }), (0, i.jsx)(s.Select, {
-      placeholder: y.default.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
-      optionClassName: M.option,
+      placeholder: M.default.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
+      optionClassName: y.option,
       options: R,
       isSelected: e => {
         let {
@@ -141,7 +141,7 @@ function V(e) {
         })
       }
     }), P && T ? (0, i.jsxs)(s.Clickable, {
-      className: M.checkboxContainer,
+      className: y.checkboxContainer,
       onClick: () => {
         let e = !D;
         r.default.updatedUnsyncedSettings({
@@ -150,12 +150,12 @@ function V(e) {
       },
       children: [(0, i.jsx)(s.Checkbox, {
         type: s.Checkbox.Types.INVERTED,
-        className: M.checkbox,
+        className: y.checkbox,
         value: D,
         displayOnly: !0
       }), (0, i.jsxs)(s.Text, {
         variant: "text-sm/normal",
-        children: [y.default.Messages.EMBEDDED_ACTIVITIES_SEND_ACTIVITY_INVITE, " ", (0, i.jsx)("strong", {
+        children: [M.default.Messages.EMBEDDED_ACTIVITIES_SEND_ACTIVITY_INVITE, " ", (0, i.jsx)("strong", {
           children: Y
         })]
       })]
@@ -179,7 +179,7 @@ function R(e) {
     if (null == v || "" === v || null == S || null == l || "" === l) return;
     let e = await (0, T.default)({
       activityItem: S,
-      currentActivity: g,
+      currentEmbeddedApplication: g,
       locationObject: a,
       channelId: v,
       guildId: l,
@@ -195,21 +195,21 @@ function R(e) {
   };
   return (0, i.jsx)(I, {
     children: (0, i.jsxs)("div", {
-      className: M.footerContainer,
+      className: y.footerContainer,
       children: [(0, i.jsx)(s.Clickable, {
         onClick: r,
-        className: M.backToBrowse,
+        className: y.backToBrowse,
         children: (0, i.jsx)(s.Text, {
           color: "header-secondary",
           variant: "text-md/normal",
-          children: y.default.Messages.BACK
+          children: M.default.Messages.BACK
         })
       }), null == v ? (0, i.jsx)("div", {}) : (0, i.jsx)(s.Button, {
-        className: M.launchButton,
+        className: y.launchButton,
         onClick: R,
         color: b ? s.Button.Colors.GREEN : void 0,
         fullWidth: !0,
-        children: b ? y.default.Messages.EMBEDDED_ACTIVITIES_JOIN : y.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH
+        children: b ? M.default.Messages.EMBEDDED_ACTIVITIES_JOIN : M.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH
       })]
     })
   })

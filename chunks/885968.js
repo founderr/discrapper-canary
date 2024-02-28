@@ -77,7 +77,7 @@ function R(e) {
         });
         await (0, E.default)({
           activityItem: s,
-          currentActivity: y,
+          currentEmbeddedApplication: y,
           channelId: R,
           guildId: L,
           locationObject: x.location,

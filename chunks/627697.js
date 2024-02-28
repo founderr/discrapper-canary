@@ -74,7 +74,7 @@ function b(e) {
         let e = H.isPrivate() && !_.default.isCallActive(w),
           t = () => (0, O.default)({
             activityItem: n,
-            currentActivity: Q,
+            currentEmbeddedApplication: Q,
             channelId: w,
             guildId: V,
             embeddedActivitiesManager: v.default,
