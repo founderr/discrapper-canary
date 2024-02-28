@@ -93,14 +93,14 @@ var p = new C(l.default, {
       accountStanding: a,
       isDsaEligible: n
     } = t;
-    o[e.id] = e, c[e.id] = u.ClassificationRequestState.SUCCESS, d = a, _ = !1, E = null, T = n
+    o[e.id] = e, c[e.id] = u.ClassificationRequestState.SUCCESS, d = a, _ = !1, E = null, T = n, S = !0
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(t) {
     let {
       error: e,
       classificationId: a
     } = t;
-    _ = !1, E = e, c[a] = u.ClassificationRequestState.FAILED
+    _ = !1, E = e, c[a] = u.ClassificationRequestState.FAILED, S = !1
   },
   SAFETY_HUB_APPEAL_OPEN: function(t) {
     let {
