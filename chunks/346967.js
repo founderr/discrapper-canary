@@ -17,8 +17,9 @@ function r(e) {
 }
 var u = a.memo(function(e) {
   let {
-    index: t
-  } = e, n = (0, s.useListItem)("".concat(t));
+    index: t,
+    entry: n
+  } = e, a = (0, s.useListItem)("".concat(t));
   return (0, l.jsx)(i.Clickable, {
     onClick: () => {},
     style: {
@@ -33,10 +34,10 @@ var u = a.memo(function(e) {
         right: 4
       }
     },
-    ...n,
+    ...a,
     role: "listitem",
-    children: (0, l.jsx)("div", {
-      children: "WOW NICE CONTENT"
+    children: (0, l.jsxs)("div", {
+      children: [t, " - ", n.id]
     })
   })
 })

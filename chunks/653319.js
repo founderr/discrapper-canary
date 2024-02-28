@@ -24,27 +24,28 @@ function f(e) {
     version: c
   } = e, [f, h] = l.useState(!1), m = (0, a.useStateFromStores)([i.default], () => i.default.getFeed(u.ContentInventoryFeedKey.GLOBAL_FEED)), [p, E, g] = l.useMemo(() => {
     if (null == m || 0 === m.entries.length) return [t, n, c];
-    let e = f ? m.entries.length : 3,
-      l = m.entries.slice(0, e),
-      a = l.map(e => ({
+    let e = m.entries.map(e => e.content),
+      l = f ? m.entries.length : 3,
+      a = e.slice(0, l),
+      i = a.map(e => ({
         type: s.MemberListRowTypes.CONTENT_INVENTORY,
         entry: e
       })),
-      i = {
+      u = {
         id: o.MEMBER_LIST_CONTENT_GROUP_ID,
         type: s.MemberListRowTypes.CONTENT_INVENTORY_GROUP,
         key: o.MEMBER_LIST_CONTENT_GROUP_ID,
-        count: a.length,
+        count: i.length,
         index: n.length,
         title: d.default.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
         onToggleExpand: () => h(e => !e),
         expanded: f,
-        expandedCount: m.entries.length,
-        feedHeight: a.map(r.getContentRowHeight).reduce((e, t) => e + t, 0)
+        expandedCount: e.length,
+        feedHeight: i.map(r.getContentRowHeight).reduce((e, t) => e + t, 0)
       },
-      u = [i, ...t],
-      p = [...n, i, ...a];
-    return [u, p, Math.random()]
+      p = [u, ...t],
+      E = [...n, u, ...i];
+    return [p, E, Math.random()]
   }, [f, m, t, n, c]);
   return {
     groups: p,
