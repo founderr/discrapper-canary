@@ -100,5 +100,11 @@ var I = new C(u.default, {
       ...e,
       dismiss_timestamp: r
     } : e)
+  },
+  ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: function(e) {
+    let {
+      channelId: t
+    } = e;
+    f.add(t)
   }
 })
