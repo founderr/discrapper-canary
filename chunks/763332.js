@@ -19,8 +19,8 @@ var n = s("37983"),
   R = s("217736"),
   N = s("615992"),
   A = s("33320"),
-  I = s("324252"),
-  S = s("49111"),
+  S = s("324252"),
+  I = s("49111"),
   O = s("782340"),
   f = s("932379"),
   C = s("921208");
@@ -34,20 +34,20 @@ function p(e) {
     hasReported: P,
     onReport: g,
     trackAnalyticsEvent: L
-  } = e, h = (0, l.useStateFromStores)([T.default], () => T.default.isBlocked(p)), [M, v] = a.useState(h), y = (0, d.useShouldShowHelplineLink)(), [x, B] = a.useState(!1), U = (0, N.useLastChannelMessage)(m), F = () => {
+  } = e, h = (0, l.useStateFromStores)([T.default], () => T.default.isBlocked(p)), [M, v] = a.useState(h), y = (0, d.useShouldShowHelplineLink)(), [x, B] = a.useState(!1), F = (0, N.useLastChannelMessage)(m), U = () => {
     v(!0), u.default.addRelationship({
       userId: p,
       context: {
         location: "InappropriateConversationModal-web"
       },
-      type: S.RelationshipTypes.BLOCKED
+      type: I.RelationshipTypes.BLOCKED
     }), L(R.CtaEventTypes.USER_TAKEOVER_MODAL_BLOCK)
   }, D = () => {
     v(!1), u.default.unblockUser(p, {
       location: "InappropriateConversationModal-web"
     }), L(R.CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK)
   }, b = async () => {
-    null != U && (B(!0), await (0, c.submitReportForInappropriateConversationSafetyAlert)(U, () => {
+    null != F && (B(!0), await (0, c.submitReportForInappropriateConversationSafetyAlert)(F, () => {
       (0, _.showToast)((0, _.createToast)(O.default.Messages.INAPPROPRIATE_CONVERSATION_REPORT_TOAST, _.ToastType.SUCCESS)), g()
     }, () => {
       (0, _.showToast)((0, _.createToast)(O.default.Messages.INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST, _.ToastType.FAILURE))
@@ -80,7 +80,7 @@ function p(e) {
           className: f.button,
           innerClassName: f.buttonInner,
           onClick: () => {
-            M ? D() : F()
+            M ? D() : U()
           },
           children: [(0, n.jsx)(o.CircleXIcon, {
             height: 20,
@@ -108,14 +108,14 @@ function p(e) {
           className: f.button,
           innerClassName: f.buttonInner,
           onClick: () => {
-            y ? ((0, E.default)(I.CRISIS_TEXT_LINE_URL), L(R.CtaEventTypes.USER_TAKEOVER_MODAL_CTL)) : ((0, E.default)(I.NOFILTR_URL), L(R.CtaEventTypes.USER_TAKEOVER_MODAL_NO_FILTR))
+            y ? ((0, E.default)(S.CRISIS_TEXT_LINE_URL), L(R.CtaEventTypes.USER_TAKEOVER_MODAL_CTL)) : ((0, E.default)(S.NOFILTR_URL), L(R.CtaEventTypes.USER_TAKEOVER_MODAL_NO_FILTR))
           },
           children: [(0, n.jsx)(r.ChatIcon, {
             height: 20,
             width: 20,
             color: _.tokens.colors.WHITE,
             className: f.buttonIcon
-          }), y ? O.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL : O.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_NOFILTR]
+          }), y ? O.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL : O.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE]
         })]
       })]
     }), (0, n.jsxs)(_.ModalFooter, {
