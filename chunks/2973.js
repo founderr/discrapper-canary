@@ -217,6 +217,6 @@ var I = new p(i.default, {
     } = e;
     _(t.questId, {
       userStatus: t
-    })
+    }), null == t.claimedAt && (E = new Map(E)).delete(t.questId)
   }
 })
