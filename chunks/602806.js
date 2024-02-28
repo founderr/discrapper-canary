@@ -173,17 +173,21 @@ var U = () => {
     T = e => {
       S(e)
     },
-    _ = () => (0, a.jsx)("div", {
+    _ = () => {
+      S("")
+    },
+    N = () => (0, a.jsx)("div", {
       className: v.searchContainer,
       children: (0, a.jsx)(p.default, {
         size: p.default.Sizes.MEDIUM,
         query: r,
         onChange: T,
+        onClear: _,
         placeholder: D.default.Messages.INTEGRATIONS_SEARCH,
         "aria-label": D.default.Messages.INTEGRATIONS_SEARCH
       })
     }),
-    N = (e, t) => (0, a.jsxs)(P, {
+    C = (e, t) => (0, a.jsxs)(P, {
       className: v.marginTop20,
       children: [(0, a.jsx)(I.EmptyStateImage, {
         darkSrc: s("541956"),
@@ -195,7 +199,7 @@ var U = () => {
         children: t
       })]
     }),
-    C = n.useMemo(() => {
+    A = n.useMemo(() => {
       let e = r.trim().toLowerCase();
       return "" === e || null == t ? t : t.length < 100 ? t.filter(t => o(e, t.application.name.toLowerCase())) : t.filter(t => t.application.name.toLowerCase().includes(e))
     }, [t, r]);
@@ -209,13 +213,13 @@ var U = () => {
         title: D.default.Messages.APPLICATIONS_AND_CONNECTIONS,
         body: D.default.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
       }),
-      children: null == t || null == C ? (0, a.jsx)(u.Spinner, {
+      children: null == t || null == A ? (0, a.jsx)(u.Spinner, {
         className: L.marginTop20,
         type: u.Spinner.Type.SPINNING_CIRCLE
-      }) : 0 === t.length ? N(D.default.Messages.NO_AUTHORIZED_APPS_NOTE, D.default.Messages.NO_AUTHORIZED_APPS) : 0 === C.length ? (0, a.jsxs)(a.Fragment, {
-        children: [_(), N(null, D.default.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
+      }) : 0 === t.length ? C(D.default.Messages.NO_AUTHORIZED_APPS_NOTE, D.default.Messages.NO_AUTHORIZED_APPS) : 0 === A.length ? (0, a.jsxs)(a.Fragment, {
+        children: [N(), C(null, D.default.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
       }) : (0, a.jsxs)(a.Fragment, {
-        children: [_(), C.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(b, {
+        children: [N(), A.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(b, {
           onDelete: () => i(e),
           ...e
         }, e.id))]
