@@ -25,8 +25,8 @@ var a = n("37983"),
   T = n("263024"),
   A = n("42203"),
   M = n("660279"),
-  I = n("36694"),
-  N = n("83900"),
+  N = n("36694"),
+  I = n("83900"),
   v = n("404008"),
   L = n("680986"),
   R = n("612278"),
@@ -46,7 +46,7 @@ function b(e) {
   } = e, {
     ref: F,
     width: H
-  } = (0, d.default)(), [U, k] = s.useState(3), [G, B] = s.useState(!n), [w, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(t), [t]), {
+  } = (0, d.default)(), [U, k] = s.useState(3), [w, G] = s.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(t), [t]), {
     firstMessage: Z
   } = (0, R.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([S.default], () => S.default.hasJoined(t)), {
     disableReactionUpdates: Y,
@@ -60,7 +60,7 @@ function b(e) {
       let e = t.intersectionRect,
         n = t.boundingClientRect,
         a = (e.bottom - e.top) / (n.bottom - n.top);
-      B(a < 1)
+      G(a < 1)
     }
   }, [n]);
   s.useLayoutEffect(() => {
@@ -89,11 +89,11 @@ function b(e) {
         }
       }), (0, r.copy)((0, v.getChannelLinkToCopy)(W, $)), V(!0)
     },
-    eo = z ? I.default : M.default;
+    eo = z ? N.default : M.default;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: i(P.container, {
-        [P.header]: G
+        [P.header]: w
       }),
       ref: F,
       children: [(0, a.jsxs)("div", {
@@ -166,13 +166,13 @@ function b(e) {
             onClick: er,
             className: P.button,
             innerClassName: P.buttonInner,
-            children: [w ? (0, a.jsx)(I.default, {
+            children: [B ? (0, a.jsx)(N.default, {
               width: 16,
               height: 16
-            }) : (0, a.jsx)(N.default, {
+            }) : (0, a.jsx)(I.default, {
               width: 16,
               height: 16
-            }), w ? D.default.Messages.COPIED : null]
+            }), B ? D.default.Messages.COPIED : null]
           })
         })]
       })]

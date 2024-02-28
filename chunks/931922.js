@@ -25,8 +25,8 @@ var a = n("37983"),
   T = n("957255"),
   A = n("697218"),
   M = n("987772"),
-  I = n("155207"),
-  N = n("917686"),
+  N = n("155207"),
+  I = n("917686"),
   v = n("317134"),
   L = n("991170"),
   R = n("158998"),
@@ -67,12 +67,12 @@ function b(e) {
         l = u.default.has(s.allow, D.Permissions.VIEW_CHANNEL);
       return a || l
     }).value()
-  }, [t, F]), G = T.default.can(D.Permissions.MANAGE_CHANNELS, t) || T.default.can(D.Permissions.MANAGE_ROLES, t);
+  }, [t, F]), w = T.default.can(D.Permissions.MANAGE_CHANNELS, t) || T.default.can(D.Permissions.MANAGE_ROLES, t);
 
-  function B() {
+  function G() {
     h.default.open(t.id)
   }
-  let w = s.useCallback(() => l(!1), []);
+  let B = s.useCallback(() => l(!1), []);
   return (0, a.jsxs)(x.default, {
     channelId: t.id,
     children: [(0, a.jsx)(x.EmptyMessageIcon, {
@@ -89,18 +89,18 @@ function b(e) {
           channelId: t.id
         })
       })
-    }), G ? (0, a.jsxs)("div", {
+    }), w ? (0, a.jsxs)("div", {
       className: j.channelSettingButtons,
       children: [(0, a.jsx)(y.default, {
         label: P.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
         onClick: () => l(!0),
-        icon: (0, a.jsx)(I.default, {
+        icon: (0, a.jsx)(N.default, {
           width: 16,
           height: 16
         })
       }), (0, a.jsx)(y.default, {
         label: P.default.Messages.EDIT_CHANNEL,
-        onClick: B,
+        onClick: G,
         icon: (0, a.jsx)(M.default, {
           width: 16,
           height: 16
@@ -139,13 +139,13 @@ function b(e) {
         var s, l;
         let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(D.DEFAULT_ROLE_COLOR),
           o = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== void 0;
-        return G ? (0, a.jsx)(N.default, {
+        return w ? (0, a.jsx)(I.default, {
           className: i(j.role, {
             [j.last]: n === U.length - 1
           }),
           roleName: e.name,
           roleColor: r,
-          disabled: !G,
+          disabled: !w,
           verified: o,
           onClick: () => {
             g.default.open(t.guild_id, D.GuildSettingsSections.MEMBERS), g.default.selectRole(e.id)
@@ -162,7 +162,7 @@ function b(e) {
     }), n ? (0, a.jsx)(f.Modal, {
       renderModal: e => (0, a.jsx)(m.default, {
         ...e,
-        onClose: () => (w(), e.onClose()),
+        onClose: () => (B(), e.onClose()),
         channelId: t.id
       }),
       onCloseRequest: () => l(!1)

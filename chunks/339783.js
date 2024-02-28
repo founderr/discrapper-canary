@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return o
+    return l
   },
   getIdealBankDisplayNameFromBankName: function() {
     return s
@@ -13,7 +13,7 @@ r.r(t), r.d(t, {
 var a = r("862205"),
   n = r("49111"),
   i = r("782340"),
-  o = (0, a.createExperiment)({
+  l = (0, a.createExperiment)({
     kind: "user",
     id: "2021-08_regional_payment_methods",
     label: "Regional Payment Methods",
@@ -152,7 +152,7 @@ var a = r("862205"),
       }
     }]
   });
-let l = new Map([
+let o = new Map([
   ["abn_amro", "ABN AMRO"],
   ["asn_bank", "ASN Bank"],
   ["bunq", "Bunq"],
@@ -168,7 +168,7 @@ let l = new Map([
 ]);
 
 function s(e) {
-  return void 0 !== e && l.has(e) ? l.get(e) : i.default.Messages.PAYMENT_SOURCE_UNKNOWN
+  return void 0 !== e && o.has(e) ? o.get(e) : i.default.Messages.PAYMENT_SOURCE_UNKNOWN
 }
 let c = new Map([
   ["arzte_und_apotheker_bank", "\xc4rzte- und Apothekerbank"],

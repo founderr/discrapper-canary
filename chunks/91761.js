@@ -1,23 +1,23 @@
 "use strict";
-i.r(t), i.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return r
+    return o
   }
-}), i("222007");
-var l = i("446674"),
-  n = i("84460"),
-  a = i("743925"),
-  d = i("807106"),
-  u = i("119420");
+}), l("222007");
+var i = l("446674"),
+  n = l("84460"),
+  a = l("743925"),
+  d = l("807106"),
+  u = l("119420");
 
-function r(e) {
+function o(e) {
   let {
     guildId: t,
-    enableFilter: i = !1
+    enableFilter: l = !1
   } = e, {
-    filter: r
-  } = (0, l.useStateFromStoresObject)([n.default], () => ({
+    filter: o
+  } = (0, i.useStateFromStoresObject)([n.default], () => ({
     filter: n.default.getFilter()
-  })), o = (0, a.useActivityShelfData)(t), c = (0, d.default)(o), s = (0, u.useDeveloperActivityShelfItems)();
-  return [...s, ...c].filter(e => !i || "" === r || e.application.name.toLocaleLowerCase().includes(r.toLocaleLowerCase()))
+  })), r = (0, a.useActivityShelfData)(t), c = (0, d.default)(r), s = (0, u.useDeveloperActivityShelfItems)();
+  return [...s, ...c].filter(e => !l || "" === o || e.application.name.toLocaleLowerCase().includes(o.toLocaleLowerCase()))
 }

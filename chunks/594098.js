@@ -17,8 +17,8 @@ var r, Image, i = n("37983"),
   _ = n("193513"),
   E = n("719347"),
   T = n("49111"),
-  C = n("782340"),
-  I = n("366822"),
+  I = n("782340"),
+  C = n("366822"),
   p = n("653240"),
   S = n("140802");
 
@@ -29,7 +29,7 @@ function P(e) {
     alt: r
   } = e, l = (0, c.default)();
   return (0, i.jsx)("div", {
-    className: I.imageErrorWrapper,
+    className: C.imageErrorWrapper,
     style: function(e, t) {
       switch (t) {
         case E.MediaLayoutType.MOSAIC:
@@ -46,8 +46,8 @@ function P(e) {
     }(t, n),
     children: (0, i.jsx)("img", {
       src: (0, o.isThemeLight)(l) ? S : p,
-      className: I.imageError,
-      alt: null != r ? r : C.default.Messages.IMAGE
+      className: C.imageError,
+      alt: null != r ? r : I.default.Messages.IMAGE
     })
   })
 }(r = class extends l.PureComponent {
@@ -70,8 +70,8 @@ function P(e) {
       mediaLayoutType: g,
       limitResponsiveWidth: h = !0,
       accessory: x,
-      zoomable: v,
-      original: N,
+      zoomable: N,
+      original: v,
       children: A,
       renderAccessory: U,
       onClick: b,
@@ -112,10 +112,10 @@ function P(e) {
       ringTarget: this._containerRef,
       focusTarget: this._clickableRef,
       children: (0, i.jsxs)("div", {
-        className: s(I.imageWrapper, {
-          [I.imageZoom]: v,
-          [I.imageWrapperBackground]: r !== T.ImageReadyStates.READY,
-          [I.clickable]: null != b
+        className: s(C.imageWrapper, {
+          [C.imageZoom]: N,
+          [C.imageWrapperBackground]: r !== T.ImageReadyStates.READY,
+          [C.clickable]: null != b
         }, t),
         style: function(e, t, n, r) {
           return r === E.MediaLayoutType.MOSAIC ? {
@@ -131,20 +131,20 @@ function P(e) {
           } : e
         }(F, h, y, g),
         ...j,
-        children: [null != N && (0, i.jsx)("a", {
+        children: [null != v && (0, i.jsx)("a", {
           tabIndex: -1,
           onClick: b,
           "aria-hidden": !0,
-          className: I.originalLink,
-          href: N,
+          className: C.originalLink,
+          href: v,
           ref: this._containerRef,
           "data-role": "img",
           "data-safe-src": l
         }), null != b ? (0, i.jsx)(u.Clickable, {
-          className: I.clickableWrapper,
+          className: C.clickableWrapper,
           tabIndex: null != D ? D : 0,
           onClick: b,
-          "aria-label": null != c ? c : C.default.Messages.IMAGE,
+          "aria-label": null != c ? c : I.default.Messages.IMAGE,
           "aria-describedby": d.IMAGE_OPEN_DIALOG_DESCRIPTION,
           innerRef: this._clickableRef,
           focusProps: {
@@ -152,7 +152,7 @@ function P(e) {
           },
           children: e
         }) : e, null != w ? (0, i.jsx)("div", {
-          className: I.imageAccessory,
+          className: C.imageAccessory,
           children: w
         }) : null]
       })
@@ -174,7 +174,7 @@ function P(e) {
     } = e;
     return (0, i.jsx)("img", {
       className: null != l ? l : void 0,
-      alt: null != r ? r : C.default.Messages.IMAGE,
+      alt: null != r ? r : I.default.Messages.IMAGE,
       src: t,
       style: R(n, a)
     })

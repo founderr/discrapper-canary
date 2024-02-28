@@ -52,8 +52,8 @@ function x(e) {
   let w = (0, i.useStateFromStores)([E.default], () => A.isPrivate() || (0, m.canViewInviteModal)(E.default, P, A), [P, A]),
     F = (null == P ? void 0 : P.afkChannelId) === A.id,
     k = A.userLimit <= 0 || A.userLimit > 1,
-    B = (0, i.useStateFromStores)([o.default], () => o.default.getEmbeddedActivitiesForChannel(A.id).length <= 0),
-    V = (0, h.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
+    V = (0, i.useStateFromStores)([o.default], () => o.default.getEmbeddedActivitiesForChannel(A.id).length <= 0),
+    B = (0, h.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
     G = (0, d.useEmbeddedActivityLaunchability)(A.id),
     H = G !== d.EmbeddedActivityLaunchability.CAN_LAUNCH,
     W = null != b && b === A.id,
@@ -80,7 +80,7 @@ function x(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != P && !F && (!(D >= 2) || !B || H || V || W ? k && 1 === D && w && (B && !H ? Y.push(e => (0, l.jsx)(S.ActivityEntryPointTile, {
+  }, []), null != P && !F && (!(D >= 2) || !V || H || B || W ? k && 1 === D && w && (V && !H ? Y.push(e => (0, l.jsx)(S.ActivityEntryPointTile, {
     channel: A,
     guild: P,
     width: e,

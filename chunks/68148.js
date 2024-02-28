@@ -155,12 +155,12 @@ class w extends a.Component {
       application: D,
       guildId: w,
       channelId: F,
-      user: V,
+      user: B,
       handleHoverHangStatus: G
     } = this.props;
     if (u || c) return null;
     let H = [],
-      W = (0, l.jsx)(B, {
+      W = (0, l.jsx)(V, {
         iconClassName: p,
         mute: e,
         localMute: t,
@@ -225,8 +225,8 @@ class w extends a.Component {
           iconClassName: p,
           guildId: w,
           channelId: F,
-          userId: V.id
-        }, "".concat(V.id, "-game")) : (0, l.jsx)(U, {
+          userId: B.id
+        }, "".concat(B.id, "-game")) : (0, l.jsx)(U, {
           hangStatusActivity: T,
           iconClassName: p,
           isSelf: j
@@ -364,7 +364,7 @@ function k(e) {
   })
 }
 
-function B(e) {
+function V(e) {
   let {
     iconClassName: t,
     mute: n,

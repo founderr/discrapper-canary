@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   isSpotifyPlayable: function() {
     return f
   },
@@ -23,26 +23,26 @@ var n = i("376556"),
   o = i("49111");
 let c = 30 * a.default.Millis.SECOND;
 
-function f(e) {
-  return null != e.getActiveSocketAndDevice() || r.default.isProtocolRegistered()
+function f(t) {
+  return null != t.getActiveSocketAndDevice() || r.default.isProtocolRegistered()
 }
 
 function _() {
-  let e = d.default.getActiveSocketAndDevice();
-  if (null != e) return Promise.resolve(e);
+  let t = d.default.getActiveSocketAndDevice();
+  if (null != t) return Promise.resolve(t);
   if (!r.default.isProtocolRegistered()) return Promise.reject(Error("protocol is not registered"));
-  let t = d.default.getPlayableComputerDevices();
-  if (l.default.isObservedAppRunning(n.default.get(o.PlatformTypes.SPOTIFY).name) && t.length > 0) {
+  let e = d.default.getPlayableComputerDevices();
+  if (l.default.isObservedAppRunning(n.default.get(o.PlatformTypes.SPOTIFY).name) && e.length > 0) {
     let {
-      socket: e,
+      socket: t,
       device: i
-    } = t[0];
-    return (0, u.setActiveDevice)(e.accountId, i.id), Promise.resolve({
-      socket: e,
+    } = e[0];
+    return (0, u.setActiveDevice)(t.accountId, i.id), Promise.resolve({
+      socket: t,
       device: i
     })
   }
-  return new Promise((e, i) => {
+  return new Promise((t, i) => {
     let n = setTimeout(() => {
         d.default.removeChangeListener(l), i(Error("timeout launching spotify"))
       }, c),
@@ -52,8 +52,8 @@ function _() {
             socket: a,
             device: r
           }
-          of i) null == t.find(e => e.device.id === r.id) && (clearTimeout(n), d.default.removeChangeListener(l), setImmediate(() => {
-          (0, u.setActiveDevice)(a.accountId, r.id), e({
+          of i) null == e.find(t => t.device.id === r.id) && (clearTimeout(n), d.default.removeChangeListener(l), setImmediate(() => {
+          (0, u.setActiveDevice)(a.accountId, r.id), t({
             socket: a,
             device: r
           })
@@ -64,21 +64,21 @@ function _() {
 }
 
 function E() {
-  let e = d.default.getActiveSocketAndDevice();
-  if (null == e) return null;
+  let t = d.default.getActiveSocketAndDevice();
+  if (null == t) return null;
   let {
-    socket: t
-  } = e;
-  return t.isPremium
+    socket: e
+  } = t;
+  return e.isPremium
 }
 
 function I() {
-  let e = d.default.getActiveSocketAndDevice();
-  if (null == e) return Promise.reject(Error("no active profile"));
+  let t = d.default.getActiveSocketAndDevice();
+  if (null == t) return Promise.reject(Error("no active profile"));
   let {
-    socket: t
-  } = e;
-  return t.isPremium ? Promise.resolve() : (0, u.getProfile)(t.accountId, t.accessToken).then(() => {
-    if (!t.isPremium) return Promise.reject(Error("spotify account is not premium"))
+    socket: e
+  } = t;
+  return e.isPremium ? Promise.resolve() : (0, u.getProfile)(e.accountId, e.accessToken).then(() => {
+    if (!e.isPremium) return Promise.reject(Error("spotify account is not premium"))
   })
 }

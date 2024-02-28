@@ -1,10 +1,10 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return y
+    return M
   },
   ActivityDirectoryFooter: function() {
-    return M
+    return y
   }
 }), l("222007");
 var i = l("37983"),
@@ -34,7 +34,7 @@ let N = (0, r.cssValueToNumber)(o.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTOR
   j = (0, r.cssValueToNumber)(o.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
   D = (0, r.cssValueToNumber)(o.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
 
-function y(e) {
+function M(e) {
   let {
     channel: t,
     guildId: l,
@@ -42,7 +42,7 @@ function y(e) {
     onClose: r,
     onActivityItemVisible: o,
     scrollerRef: g
-  } = e, [y, M] = a.useState(0), L = (0, x.default)({
+  } = e, [M, y] = a.useState(0), L = (0, x.default)({
     guildId: l,
     enableFilter: !0
   }), b = (0, c.useStateFromStores)([h.default], () => h.default.getCurrentUser()), V = (0, c.useStateFromStores)([v.default], () => v.default.getGuild(l), [l]), {
@@ -62,7 +62,7 @@ function y(e) {
 
     function t() {
       var e, t;
-      M(null !== (t = null === (e = g.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
+      y(null !== (t = null === (e = g.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
     }
   }, [g]);
   let {
@@ -87,7 +87,7 @@ function y(e) {
       children: [Y && !F ? (0, i.jsx)("div", {
         className: _.scrollBackgroundContainer,
         style: {
-          top: -y
+          top: -M
         },
         children: (0, i.jsx)("div", {
           className: s(_.scrollTierBackground),
@@ -138,7 +138,7 @@ function y(e) {
   })
 }
 
-function M() {
+function y() {
   return (0, i.jsx)(d.Text, {
     variant: "text-sm/normal",
     children: A.default.Messages.EMBEDDED_ACTIVITIES_FEEDBACK_SURVEY.format({

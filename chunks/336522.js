@@ -31,7 +31,7 @@ function m(e) {
     icons: m,
     fileSize: _,
     onClose: E
-  } = e, T = (0, u.useUID)(), C = null != m ? m : d.DEFAULT_FILE_UPLOAD_ICONS;
+  } = e, T = (0, u.useUID)(), I = null != m ? m : d.DEFAULT_FILE_UPLOAD_ICONS;
   return i ? (0, r.jsx)(o.default, {
     transitionState: a,
     onClose: E,
@@ -45,7 +45,7 @@ function m(e) {
       children: (0, r.jsxs)("div", {
         className: f.inner,
         children: [(0, r.jsx)(c.default, {
-          icons: C
+          icons: I
         }), (0, r.jsx)("div", {
           id: T,
           className: f.title,

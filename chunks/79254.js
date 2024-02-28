@@ -25,9 +25,9 @@ var a = n("37983"),
   T = n("49111"),
   A = n("186859"),
   M = n("782340"),
-  I = n("245150");
+  N = n("245150");
 
-function N(e, t, s, l) {
+function I(e, t, s, l) {
   (0, i.openModalLazy)(async () => {
     let {
       default: i
@@ -117,7 +117,7 @@ function L(e) {
     })
   }
 
-  function G() {
+  function w() {
     let e = O,
       n = "txt",
       a = "",
@@ -133,18 +133,18 @@ function L(e) {
     navId: "channel-attach",
     onClose: R,
     "aria-label": M.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    className: I.menu,
+    className: N.menu,
     children: r.map(function(e) {
       var n;
       let s = (0, a.jsxs)("div", {
-        className: I.optionLabel,
+        className: N.optionLabel,
         children: [(0, a.jsx)(e.icon, {
-          className: I.optionIcon
+          className: N.optionIcon
         }), (0, a.jsx)("div", {
-          className: I.optionName,
+          className: N.optionName,
           children: e.display
         }), null != e.badgeVal && e.badgeVal > 0 && (0, a.jsx)(C.NumberBadge, {
-          className: I.badge,
+          className: N.badge,
           color: null !== (n = e.badgeColor) && void 0 !== n ? n : l.default.STATUS_DANGER,
           count: e.badgeVal
         })]
@@ -161,7 +161,7 @@ function L(e) {
           return (0, a.jsx)(i.MenuItem, {
             id: "upload-text-as-file",
             label: s,
-            action: G
+            action: w
           }, "upload-text-as-file");
         case S.AttachmentTypes.CLIPS:
           return (0, a.jsx)(i.MenuItem, {
@@ -185,7 +185,7 @@ function L(e) {
                 type: "Send Join Invite",
                 application_id: n.application_id,
                 location: T.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), N(n, t, T.ActivityActionTypes.JOIN, j))
+              }), I(n, t, T.ActivityActionTypes.JOIN, j))
             }
           }, "play");
         case S.AttachmentTypes.INVITE_TO_LISTEN:
@@ -197,7 +197,7 @@ function L(e) {
               return n = e.activity, void(p.default.track(T.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
                 location: T.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), N(n, t, T.ActivityActionTypes.LISTEN, j))
+              }), I(n, t, T.ActivityActionTypes.LISTEN, j))
             }
           }, "listen");
         case S.AttachmentTypes.INVITE_TO_WATCH:
@@ -209,7 +209,7 @@ function L(e) {
               return n = e.activity, void(p.default.track(T.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
                 location: T.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), N(n, t, T.ActivityActionTypes.WATCH, j))
+              }), I(n, t, T.ActivityActionTypes.WATCH, j))
             }
           }, "watch");
         case S.AttachmentTypes.CREATE_THREAD:

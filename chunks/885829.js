@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   maybeJoinEmbeddedActivity: function() {
     return C
   }
@@ -19,29 +19,29 @@ var n = i("404118"),
   I = i("126939"),
   A = i("501260"),
   T = i("782340");
-async function C(e) {
-  var t;
+async function C(t) {
+  var e;
   let {
     channelId: i,
     applicationId: C,
     instanceId: v,
     inputApplication: S,
     analyticsLocations: N,
-    embeddedActivitiesManager: y
-  } = e, h = _.default.getEmbeddedActivitiesForChannel(i), p = h.find(e => e.applicationId === C && (null == v || e.instanceId === v)), D = S;
+    embeddedActivitiesManager: p
+  } = t, y = _.default.getEmbeddedActivitiesForChannel(i), h = y.find(t => t.applicationId === C && (null == v || t.instanceId === v)), D = S;
   if (null == D) {
-    let e = await l.default.fetchApplication(C);
-    D = r.default.createFromServer(e)
+    let t = await l.default.fetchApplication(C);
+    D = r.default.createFromServer(t)
   }
-  if (null == p || null == D) return;
+  if (null == h || null == D) return;
   let O = c.default.getCurrentUser(),
-    g = d.default.getChannel(i),
-    L = (0, A.default)({
+    L = d.default.getChannel(i),
+    g = (0, A.default)({
       userId: null == O ? void 0 : O.id,
       application: D,
       channelId: i,
       currentUser: O,
-      isActivitiesEnabledForCurrentPlatform: (0, I.getIsActivitiesEnabledForCurrentPlatform)(g),
+      isActivitiesEnabledForCurrentPlatform: (0, I.getIsActivitiesEnabledForCurrentPlatform)(L),
       ChannelStore: d.default,
       VoiceStateStore: f.default,
       PermissionStore: o.default,
@@ -49,13 +49,13 @@ async function C(e) {
     }),
     m = _.default.getSelfEmbeddedActivityForChannel(i),
     P = null == m ? void 0 : m.applicationId,
-    M = null != P && null !== (t = a.default.getApplication(P)) && void 0 !== t ? t : void 0;
-  ! function(e) {
+    M = null != P && null !== (e = a.default.getApplication(P)) && void 0 !== e ? e : void 0;
+  ! function(t) {
     let {
-      embeddedActivityJoinability: t,
+      embeddedActivityJoinability: e,
       handleCanJoin: i
-    } = e;
-    switch (t) {
+    } = t;
+    switch (e) {
       case A.EmbeddedActivityJoinability.CAN_JOIN:
         null == i || i();
         break;
@@ -94,14 +94,14 @@ async function C(e) {
         })
     }
   }({
-    embeddedActivityJoinability: L,
-    handleCanJoin: async function e() {
-      null != p && await (0, E.default)({
-        applicationId: p.applicationId,
+    embeddedActivityJoinability: g,
+    handleCanJoin: async function t() {
+      null != h && await (0, E.default)({
+        applicationId: h.applicationId,
         currentEmbeddedApplication: M,
         activityChannelId: i,
         locationObject: {},
-        embeddedActivitiesManager: y,
+        embeddedActivitiesManager: p,
         analyticsLocations: N
       })
     }

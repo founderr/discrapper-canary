@@ -1,35 +1,35 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return h
+    return p
   }
-}), n("222007");
-var l = n("446674"),
-  i = n("913144"),
-  a = n("27618");
-let s = !1,
-  r = Object.freeze({
+}), r("222007");
+var a = r("446674"),
+  n = r("913144"),
+  i = r("27618");
+let l = !1,
+  o = Object.freeze({
     userAffinities: [],
     affinityUserIds: new Set,
     lastFetched: 0
   }),
-  u = Object.freeze({
+  s = Object.freeze({
     userAffinitiesMap: new Map,
     affinityUserIds: new Set
   }),
-  o = {
-    ...r
+  c = {
+    ...o
   },
   d = {
-    ...u
+    ...s
   };
 
-function c() {
-  let e = new Map(o.userAffinities.filter(e => {
+function u() {
+  let e = new Map(c.userAffinities.filter(e => {
       let {
         user_id: t
       } = e;
-      return !a.default.isBlocked(t)
+      return !i.default.isBlocked(t)
     }).map(e => [e.user_id, e])),
     t = new Set(e.keys());
   d = {
@@ -37,21 +37,21 @@ function c() {
     affinityUserIds: t
   }
 }
-class f extends l.default.PersistedStore {
+class h extends a.default.PersistedStore {
   initialize(e) {
-    this.waitFor(a.default), null != e && (o.userAffinities = e.userAffinities, o.lastFetched = e.lastFetched, c()), this.syncWith([a.default], c)
+    this.waitFor(i.default), null != e && (c.userAffinities = e.userAffinities, c.lastFetched = e.lastFetched, u()), this.syncWith([i.default], u)
   }
   needsRefresh() {
-    return Date.now() - o.lastFetched > 864e5
+    return Date.now() - c.lastFetched > 864e5
   }
   getFetching() {
-    return s
+    return l
   }
   getState() {
-    return o
+    return c
   }
   getUserAffinities() {
-    return o.userAffinities
+    return c.userAffinities
   }
   getUserAffinity(e) {
     return d.userAffinitiesMap.get(e)
@@ -60,26 +60,26 @@ class f extends l.default.PersistedStore {
     return d.affinityUserIds
   }
 }
-f.displayName = "UserAffinitiesStore", f.persistKey = "UserAffinitiesStore", f.migrations = [e => null];
-var h = new f(i.default, {
+h.displayName = "UserAffinitiesStore", h.persistKey = "UserAffinitiesStore", h.migrations = [e => null];
+var p = new h(n.default, {
   LOAD_USER_AFFINITIES_SUCCESS: function(e) {
     var t;
     let {
-      affinities: n
+      affinities: r
     } = e;
-    o.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : [], o.lastFetched = Date.now(), c(), s = !1
+    c.userAffinities = null !== (t = r.user_affinities) && void 0 !== t ? t : [], c.lastFetched = Date.now(), u(), l = !1
   },
   LOAD_USER_AFFINITIES: function() {
-    s = !0
+    l = !0
   },
   LOAD_USER_AFFINITIES_FAILURE: function() {
-    s = !1
+    l = !1
   },
   LOGOUT: function() {
-    o = {
-      ...r
+    c = {
+      ...o
     }, d = {
-      ...u
+      ...s
     }
   }
 })

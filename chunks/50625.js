@@ -1,15 +1,15 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return g
+    return m
   }
 }), r("222007");
 var a = r("37983");
 r("884691");
 var n = r("420117"),
   i = r("669491"),
-  o = r("841098"),
-  l = r("505684"),
+  l = r("841098"),
+  o = r("505684"),
   s = r("49111"),
   c = r("699412");
 let d = {
@@ -30,26 +30,26 @@ function u(e) {
 let h = u(d),
   p = u(d);
 
-function m(e) {
-  return s.TOKEN_REGEX.test(e) ? (0, a.jsx)(l.default, {
-    type: l.default.Types.TEXT,
+function f(e) {
+  return s.TOKEN_REGEX.test(e) ? (0, a.jsx)(o.default, {
+    type: o.default.Types.TEXT,
     children: () => (0, a.jsx)(a.Fragment, {
       children: e
     })
   }) : e
 }
 
-function g(e) {
+function m(e) {
   let {
     data: t
-  } = e, r = (0, o.default)();
+  } = e, r = (0, l.default)();
   return (0, a.jsx)("div", {
     className: c.inspectorWrapper,
     children: (0, a.jsx)(n.JSONTree, {
       data: t,
       theme: "light" === r ? p : h,
       invertTheme: !1,
-      valueRenderer: m
+      valueRenderer: f
     })
   })
 }

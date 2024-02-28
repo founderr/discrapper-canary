@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
 var a = r("37983"),
   n = r("884691"),
   i = r("414456"),
-  o = r.n(i),
-  l = r("77078"),
+  l = r.n(i),
+  o = r("77078"),
   s = r("158352"),
   c = r("699412");
 
@@ -21,8 +21,8 @@ function d(e) {
     onClickRow: u,
     selectedRowKey: h,
     ...p
-  } = e, m = n.useMemo(() => t.map(e => ({
-    renderHeader: () => (0, a.jsx)(l.Text, {
+  } = e, f = n.useMemo(() => t.map(e => ({
+    renderHeader: () => (0, a.jsx)(o.Text, {
       variant: "text-sm/semibold",
       children: e.key
     }),
@@ -30,15 +30,15 @@ function d(e) {
   })), [t]);
   return (0, a.jsx)(s.default, {
     ...p,
-    columns: m,
+    columns: f,
     rowComponent: null != r ? r : e => {
       let {
         item: t,
         children: r
-      } = e, n = o(c.tableRow, {
+      } = e, n = l(c.tableRow, {
         [c.selectedTableRow]: t.key === h
       });
-      return null != u ? (0, a.jsx)(l.Clickable, {
+      return null != u ? (0, a.jsx)(o.Clickable, {
         className: n,
         onClick: () => u(t.key),
         children: r
@@ -47,7 +47,7 @@ function d(e) {
         children: r
       })
     },
-    headerClassName: o(c.tableHeader, i),
+    headerClassName: l(c.tableHeader, i),
     stickyHeader: null == d || d
   })
 }

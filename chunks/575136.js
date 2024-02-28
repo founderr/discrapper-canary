@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return c
   },
@@ -12,61 +12,61 @@ i.r(t), i.d(t, {
   useEmbeddedAppsWithPresence: function() {
     return p
   }
-}), i("222007"), i("424973");
-var l = i("884691"),
-  n = i("446674"),
-  a = i("442939"),
-  d = i("824563"),
-  u = i("697218"),
-  r = i("449008"),
-  o = i("191225");
+}), l("222007"), l("424973");
+var i = l("884691"),
+  n = l("446674"),
+  a = l("442939"),
+  d = l("824563"),
+  u = l("697218"),
+  o = l("449008"),
+  r = l("191225");
 
 function c(e, t) {
-  let i = (0, n.useStateFromStoresArray)([o.default], () => null != e && null != e.id && "" !== e.id ? o.default.getEmbeddedActivitiesForChannel(e.id) : o.NO_ACTIVITIES),
-    l = f(i, t);
-  return l
+  let l = (0, n.useStateFromStoresArray)([r.default], () => null != e && null != e.id && "" !== e.id ? r.default.getEmbeddedActivitiesForChannel(e.id) : r.NO_ACTIVITIES),
+    i = f(l, t);
+  return i
 }
 
 function s(e) {
-  let t = (0, n.useStateFromStores)([o.default], () => null != e ? o.default.getEmbeddedActivitiesForGuild(e) : o.NO_ACTIVITIES),
-    i = f(t),
-    a = l.useMemo(() => {
+  let t = (0, n.useStateFromStores)([r.default], () => null != e ? r.default.getEmbeddedActivitiesForGuild(e) : r.NO_ACTIVITIES),
+    l = f(t),
+    a = i.useMemo(() => {
       let e = new Map;
-      return i.forEach(t => {
-        var i;
-        let l = t.embeddedActivity.channelId,
-          n = null !== (i = e.get(l)) && void 0 !== i ? i : [];
-        n.push(t), e.set(l, n)
+      return l.forEach(t => {
+        var l;
+        let i = t.embeddedActivity.channelId,
+          n = null !== (l = e.get(i)) && void 0 !== l ? l : [];
+        n.push(t), e.set(i, n)
       }), e
-    }, [i]);
+    }, [l]);
   return a
 }
 
 function f(e, t) {
-  let i = e.map(e => e.applicationId),
-    d = (0, a.default)(i),
-    o = new Set([]);
+  let l = e.map(e => e.applicationId),
+    d = (0, a.default)(l),
+    r = new Set([]);
   for (let t of e)
-    for (let e of t.userIds) o.add(e);
+    for (let e of t.userIds) r.add(e);
   let c = (0, n.useStateFromStoresArray)([u.default], () => {
       let e = [];
-      for (let t of o) e.push(u.default.getUser(t));
+      for (let t of r) e.push(u.default.getUser(t));
       return e
-    }, [o]),
-    s = l.useMemo(() => {
-      let i = new Map;
+    }, [r]),
+    s = i.useMemo(() => {
+      let l = new Map;
       c.forEach(e => {
-        null != e && i.set(e.id, e)
+        null != e && l.set(e.id, e)
       });
-      let l = e.map((e, l) => {
-        let n = d[l],
+      let i = e.map((e, i) => {
+        let n = d[i],
           a = [];
         if (null != a)
-          for (let l of e.userIds) {
-            let e = i.get(l);
+          for (let i of e.userIds) {
+            let e = l.get(i);
             if (null != e && null != t) {
-              let i = t(e);
-              null != i && a.push(i)
+              let l = t(e);
+              null != l && a.push(l)
             }
           }
         return null == n ? null : {
@@ -74,8 +74,8 @@ function f(e, t) {
           application: n,
           userParticipantAvatarUrls: a
         }
-      }).filter(r.isNotNullish);
-      return l
+      }).filter(o.isNotNullish);
+      return i
     }, [e, d, c, t]);
   return s
 }
@@ -84,14 +84,14 @@ function p(e) {
   let t = (0, n.useStateFromStores)([d.default], () => {
     let t = new Map;
     return e.forEach(e => {
-      var i;
-      let l = d.default.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, t => {
-        var i;
-        return t.application_id === (null == e ? void 0 : null === (i = e.application) || void 0 === i ? void 0 : i.id)
+      var l;
+      let i = d.default.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, t => {
+        var l;
+        return t.application_id === (null == e ? void 0 : null === (l = e.application) || void 0 === l ? void 0 : l.id)
       });
-      t.set(null == e ? void 0 : null === (i = e.application) || void 0 === i ? void 0 : i.id, {
+      t.set(null == e ? void 0 : null === (l = e.application) || void 0 === l ? void 0 : l.id, {
         ...e,
-        presenceActivity: l
+        presenceActivity: i
       })
     }), t
   }, [e], n.statesWillNeverBeEqual);

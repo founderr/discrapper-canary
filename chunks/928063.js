@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
 var a = r("37983"),
   n = r("884691"),
   i = r("414456"),
-  o = r.n(i),
-  l = r("594203"),
+  l = r.n(i),
+  o = r("594203"),
   s = r("779274");
 
 function c(e) {
@@ -16,11 +16,11 @@ function c(e) {
     resizableNode: t,
     minHeight: r,
     onResize: n
-  } = e, i = (0, l.default)({
+  } = e, i = (0, o.default)({
     minDimension: r,
     resizableDomNodeRef: t,
     onElementResize: n,
-    orientation: l.ResizeOrientation.VERTICAL_TOP,
+    orientation: o.ResizeOrientation.VERTICAL_TOP,
     usePointerEvents: !0
   });
   return (0, a.jsx)("div", {
@@ -34,21 +34,21 @@ function d(e) {
     children: t,
     className: r,
     initialHeight: i,
-    minHeight: l
+    minHeight: o
   } = e, d = n.useRef(null), [u, h] = n.useState(i);
   return (0, a.jsxs)("div", {
     ref: d,
     className: s.container,
     style: {
-      minHeight: l,
+      minHeight: o,
       height: u
     },
     children: [(0, a.jsx)(c, {
       resizableNode: d,
-      minHeight: l,
+      minHeight: o,
       onResize: h
     }), (0, a.jsx)("div", {
-      className: o(s.subPanelContent, r),
+      className: l(s.subPanelContent, r),
       children: t
     })]
   })

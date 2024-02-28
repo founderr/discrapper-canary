@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("292687"),
   F = n("49111"),
   k = n("782340"),
-  B = n("928319");
-class V extends a.Component {
+  V = n("928319");
+class B extends a.Component {
   componentDidMount() {
     let {
       guestWindow: e
@@ -152,14 +152,14 @@ class V extends a.Component {
                       renderWindow: C,
                       children: (0, l.jsxs)(y.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
-                          className: B.popout,
+                          className: V.popout,
                           children: [S && null != N ? (0, l.jsx)(v.default, {
                             focused: n,
                             type: N,
                             windowKey: r,
                             macOSFrame: !0
                           }) : null, (0, l.jsx)("div", {
-                            className: i(B.content, x),
+                            className: i(V.content, x),
                             children: s
                           })]
                         }), (0, l.jsx)(c.Modals, {}), (0, l.jsx)(f.default, {}), (0, l.jsx)(y.AppLayerContainer, {})]
@@ -187,7 +187,7 @@ class V extends a.Component {
     }
   }
 }
-V.defaultProps = {
+B.defaultProps = {
   withTitleBar: !0
 };
 let G = a.forwardRef(function(e, t) {
@@ -233,7 +233,7 @@ let G = a.forwardRef(function(e, t) {
     } = (0, _.default)();
   return null == n ? null : (0, l.jsx)(c.DnDProvider, {
     children: (0, l.jsx)(A, {
-      children: (0, l.jsx)(V, {
+      children: (0, l.jsx)(B, {
         ref: t,
         ...e,
         guestWindow: n,

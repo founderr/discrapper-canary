@@ -18,8 +18,8 @@ var r = n("37983"),
   _ = n("154889"),
   E = n("917247"),
   T = n("956597"),
-  C = n("635956"),
-  I = n("646718"),
+  I = n("635956"),
+  C = n("646718"),
   p = n("49111"),
   S = n("782340"),
   P = n("758542"),
@@ -34,8 +34,8 @@ function L(e) {
     analyticsSource: g,
     analyticsLocation: h,
     body: x,
-    context: v,
-    glowUp: N,
+    context: N,
+    glowUp: v,
     modalClassName: A,
     artContainerClassName: U,
     bodyClassName: b,
@@ -47,7 +47,7 @@ function L(e) {
     subscribeButtonText: w,
     showNewBadge: k = !1,
     enableArtBoxShadow: H = !0,
-    subscriptionTier: G = I.PremiumSubscriptionSKUs.TIER_2,
+    subscriptionTier: G = C.PremiumSubscriptionSKUs.TIER_2,
     isLoading: K = !1,
     hideBackButton: V,
     backButtonText: Z,
@@ -61,7 +61,7 @@ function L(e) {
     location: "PremiumUpsellModal"
   }, {
     autoTrackExposure: !1
-  }), ee = Q && O === I.PremiumUpsellTypes.STREAM_QUALITY_UPSELL, et = ee && m.GradientVariants.includes($);
+  }), ee = Q && O === C.PremiumUpsellTypes.STREAM_QUALITY_UPSELL, et = ee && m.GradientVariants.includes($);
   i.useEffect(() => {
     !K && (z ? d.default.track(p.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
       type: "".concat(O, " - Tier ").concat(M.boostedGuildTier),
@@ -104,13 +104,13 @@ function L(e) {
           children: (0, r.jsx)(T.default, {
             onClose: y,
             type: O,
-            subscriptionTier: null !== (l = null == Y ? void 0 : null === (n = Y.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== l ? l : I.PremiumSubscriptionSKUs.TIER_2,
+            subscriptionTier: null !== (l = null == Y ? void 0 : null === (n = Y.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== l ? l : C.PremiumSubscriptionSKUs.TIER_2,
             headingText: L,
-            context: v,
+            context: N,
             analyticsLocationObject: h,
             discountOffer: X,
             trialOffer: Y,
-            children: N
+            children: v
           })
         }) : (0, r.jsxs)(r.Fragment, {
           children: [(0, r.jsx)(s.Heading, {
@@ -162,7 +162,7 @@ function L(e) {
               percent: X.discount.amount
             }))
           }
-          return (0, r.jsx)(C.default, {
+          return (0, r.jsx)(I.default, {
             className: a({
               [P.getNitroCTA]: et
             }),

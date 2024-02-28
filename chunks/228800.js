@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return G
+    return w
   }
 }), n("222007"), n("70102");
 var a = n("37983"),
@@ -25,8 +25,8 @@ var a = n("37983"),
   T = n("140596"),
   A = n("300322"),
   M = n("845579"),
-  I = n("982108"),
-  N = n("778588"),
+  N = n("982108"),
+  I = n("778588"),
   v = n("957255"),
   L = n("101125"),
   R = n("351825"),
@@ -41,10 +41,10 @@ var a = n("37983"),
   H = n("80028"),
   U = n("782340"),
   k = n("465597"),
-  G = s.memo(function(e) {
-    var t, l, G;
-    let B, {
-        className: w,
+  w = s.memo(function(e) {
+    var t, l, w;
+    let G, {
+        className: B,
         channel: V,
         draftType: W,
         editorTextContent: Z,
@@ -57,7 +57,7 @@ var a = n("37983"),
       J = (0, r.useStateFromStores)([m.default], () => m.default.getSettings().clipsEnabled),
       Q = (0, r.useStateFromStores)([m.default], () => m.default.getLastClipsSession()),
       $ = (0, r.useStateFromStoresArray)([m.default], () => m.default.getNewClipIds()),
-      ee = (0, r.useStateFromStores)([I.default], () => null == I.default.getCurrentSidebarChannelId(V.id)),
+      ee = (0, r.useStateFromStores)([N.default], () => null == N.default.getCurrentSidebarChannelId(V.id)),
       {
         showClipsHeaderEntrypoint: et
       } = E.ClipsExperiment.useExperiment({
@@ -67,7 +67,7 @@ var a = n("37983"),
       }),
       en = (0, r.useStateFromStores)([_.HotspotStore], () => _.HotspotStore.hasHotspot(_.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
       ea = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, H.CLIPS_GALLERY_MODAL_KEY)),
-      es = (0, r.useStateFromStores)([N.default], () => N.default.hasLayers()),
+      es = (0, r.useStateFromStores)([I.default], () => I.default.hasLayers()),
       el = (0, r.useStateFromStores)([m.default], () => m.default.hasClips()),
       [ei, er] = s.useState(null),
       eo = (0, E.useEnableClips)() && (J || el),
@@ -122,16 +122,16 @@ var a = n("37983"),
         activities: X,
         newClipsCount: eT,
         canPostPolls: eg,
-        canLaunchActivities: null !== (G = null == eS ? void 0 : eS.showInOmniButtonMenu) && void 0 !== G && G,
+        canLaunchActivities: null !== (w = null == eS ? void 0 : eS.showInOmniButtonMenu) && void 0 !== w && w,
         appContext: K
       });
     if (0 === eA.length) return null;
     let eM = X.some(e => (0, C.default)(e, F.ActivityFlags.SYNC)),
-      eI = X.some(e => (0, C.default)(e, F.ActivityFlags.JOIN) && !(0, C.default)(e, F.ActivityFlags.EMBEDDED)) || eM;
-    B = e_ ? (0, a.jsx)(o.CirclePlusIcon, {
+      eN = X.some(e => (0, C.default)(e, F.ActivityFlags.JOIN) && !(0, C.default)(e, F.ActivityFlags.EMBEDDED)) || eM;
+    G = e_ ? (0, a.jsx)(o.CirclePlusIcon, {
       className: k.attachButtonIcon,
       colorClass: k.attachButtonPlus
-    }) : eI ? (0, a.jsx)(x.default, {
+    }) : eN ? (0, a.jsx)(x.default, {
       className: k.attachButtonIcon,
       foreground: k.attachButtonPlay,
       background: k.attachButtonPlus,
@@ -149,7 +149,7 @@ var a = n("37983"),
       width: 24,
       height: 24
     });
-    let eN = (0, a.jsx)(u.Popout, {
+    let eI = (0, a.jsx)(u.Popout, {
       shouldShow: null != ei,
       animation: u.Popout.Animation.NONE,
       align: "recentClips" === ei ? "center" : "left",
@@ -189,7 +189,7 @@ var a = n("37983"),
       children: e => (0, a.jsx)(u.Button, {
         look: u.Button.Looks.BLANK,
         size: u.Button.Sizes.NONE,
-        className: i(k.attachButton, w),
+        className: i(k.attachButton, B),
         innerClassName: k.attachButtonInner,
         "aria-label": U.default.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
         onDoubleClick: ed ? () => {
@@ -197,7 +197,7 @@ var a = n("37983"),
           return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
         } : void 0,
         ...e,
-        children: B
+        children: G
       })
     });
     return (0, a.jsxs)(a.Fragment, {
@@ -214,7 +214,7 @@ var a = n("37983"),
         })
       }), (0, a.jsx)("div", {
         className: k.attachWrapper,
-        children: eN
+        children: eI
       })]
     })
   })

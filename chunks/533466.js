@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("579425"),
   F = n("336804"),
   k = n("928265"),
-  B = n("744568"),
-  V = n("257869"),
+  V = n("744568"),
+  B = n("257869"),
   G = n("848848"),
   H = n("93252"),
   W = n("661455"),
@@ -95,8 +95,8 @@ var l = n("37983"),
   ew = n("800762"),
   eF = n("980423"),
   ek = n("439932"),
-  eB = n("679653"),
-  eV = n("176347"),
+  eV = n("679653"),
+  eB = n("176347"),
   eG = n("665182"),
   eH = n("61918"),
   eW = n("656612"),
@@ -213,7 +213,7 @@ class e1 extends a.PureComponent {
     } = this.props;
     if (u(null != e, "Missing channel in Channel.renderChat"), s) return (u(null != n, "premium channels must exist within a guild"), null == e ? void 0 : e.isRoleSubscriptionTemplatePreviewChannel()) ? (0, l.jsx)(H.default, {
       guildId: n.id
-    }) : (0, l.jsx)(V.GroupListingsFetchContextProvider, {
+    }) : (0, l.jsx)(B.GroupListingsFetchContextProvider, {
       guildId: n.id,
       children: (0, l.jsx)(W.default, {
         channelId: e.id,
@@ -240,7 +240,7 @@ class e1 extends a.PureComponent {
         sidebarState: t
       }, e.id)
     }
-    return (0, l.jsx)(eV.default, {
+    return (0, l.jsx)(eB.default, {
       channel: e,
       guild: n,
       chatInputType: j.ChatInputTypes.NORMAL
@@ -375,7 +375,7 @@ class e1 extends a.PureComponent {
           style: {
             width: ez.DEFAULT_CHAT_SIDEBAR_WIDTH
           },
-          children: (0, l.jsx)(B.default, {
+          children: (0, l.jsx)(V.default, {
             guildId: e,
             userId: t,
             onClose: () => ec.default.closeGuildSidebar(e)
@@ -723,12 +723,12 @@ var e4 = a.memo(function(e) {
   }), N = (0, f.useStateFromStores)([x.default], () => x.default.getActivityPanelMode()), R = null != I && !(0, A.default)(null == o ? void 0 : o.id) && N === eK.ActivityPanelModes.PANEL, j = (0, f.useStateFromStores)([ew.default], () => null != o && o.isVocalThread() && !d.isEmpty(ew.default.getVoiceStatesForChannel(o.id)), [o]), L = (null == o ? void 0 : o.isGuildVocal()) || R || _ || j, {
     welcomeModalChannelId: y
   } = (0, c.useLocation)(), O = (0, f.useStateFromStores)([ei.default], () => null != o && ei.default.isLurking(o.guild_id), [o]), P = (0, f.useStateFromStores)([ex.default], () => ex.default.hasSeen(null == o ? void 0 : o.guild_id, O), [o, O]), D = (0, f.useStateFromStores)([M.default, x.default], () => null != x.default.getConnectedActivityChannelId() && x.default.getActivityPanelMode() === eK.ActivityPanelModes.PANEL ? x.default.getFocusedLayout() === eK.FocusedActivityLayouts.NO_CHAT ? ez.ChannelLayouts.NO_CHAT : ez.ChannelLayouts.NORMAL : null != r ? M.default.getLayout(r) : ez.ChannelLayouts.NORMAL, [r]), U = (0, f.useStateFromStores)([M.default], () => null != o ? M.default.getSelectedParticipant(o.id) : null), w = (0, f.useStateFromStores)([eU.default], () => eU.default.getCurrentUser()), F = (0, ea.default)(S), k = (0, eN.default)(y, null == S ? void 0 : S.id), {
-    section: B,
-    channelSidebarState: V
+    section: V,
+    channelSidebarState: B
   } = (0, f.useStateFromStoresObject)([eA.default], () => ({
     section: eA.default.getSection(r, null == o ? void 0 : o.isDM()),
     channelSidebarState: eA.default.getSidebarState(r)
-  }), [r, o]), H = null == S ? void 0 : S.id, W = (0, f.useStateFromStores)([eA.default], () => eA.default.getGuildSidebarState(H), [H]), Y = (0, f.useStateFromStores)([eD.default], () => eD.default.getGuildId()), z = Y === ez.FAVORITES, K = (0, eB.default)(o), Z = (0, eB.default)(o, !0), Q = null != o && u === o.id, X = null != o && o.isGuildStageVoice();
+  }), [r, o]), H = null == S ? void 0 : S.id, W = (0, f.useStateFromStores)([eA.default], () => eA.default.getGuildSidebarState(H), [H]), Y = (0, f.useStateFromStores)([eD.default], () => eD.default.getGuildId()), z = Y === ez.FAVORITES, K = (0, eV.default)(o), Z = (0, eV.default)(o, !0), Q = null != o && u === o.id, X = null != o && o.isGuildStageVoice();
   a.useEffect(() => {
     var e, t, n;
     let l = (0, er.getHistory)();
@@ -765,8 +765,8 @@ var e4 = a.memo(function(e) {
     needSubscriptionToAccess: C,
     isLurking: O,
     hasModalOpen: et,
-    section: B,
-    channelSidebarState: V,
+    section: V,
+    channelSidebarState: B,
     guildSidebarState: W,
     guild: S,
     searchId: (0, f.useStateFromStores)([eP.default], () => eP.default.getCurrentSearchId()),

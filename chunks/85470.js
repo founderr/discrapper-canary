@@ -25,11 +25,11 @@ var a = n("884691"),
   T = n("61400"),
   A = n("913491"),
   M = n("583022"),
-  I = n("363396"),
-  N = n("49111");
+  N = n("363396"),
+  I = n("49111");
 
 function v(e) {
-  return E.default.can(N.Permissions.MANAGE_MESSAGES, e)
+  return E.default.can(I.Permissions.MANAGE_MESSAGES, e)
 }
 var L = function(e, t, n) {
   let L = a.useRef(n);
@@ -44,12 +44,12 @@ var L = function(e, t, n) {
       U = p.default.getMessage(t, e),
       k = c.default.getChannel(t);
     if (null == U || null == k) return;
-    let G = d.default.getId(),
-      B = U.author.id === G,
-      w = (null === (a = U.interactionMetadata) || void 0 === a ? void 0 : a.user_id) === G;
+    let w = d.default.getId(),
+      G = U.author.id === w,
+      B = (null === (a = U.interactionMetadata) || void 0 === a ? void 0 : a.user_id) === w;
     switch (n.key.toLowerCase()) {
       case "backspace":
-        P && (v(k) || B || w) && (n.preventDefault(), (0, I.deleteMessage)(k, U, n));
+        P && (v(k) || G || B) && (n.preventDefault(), (0, N.deleteMessage)(k, U, n));
         break;
       case "c":
         ((0, _.isMac)() ? F : b) && m.SUPPORTS_COPY && (n.preventDefault(), (0, m.copy)(U.content));
@@ -57,13 +57,13 @@ var L = function(e, t, n) {
       case "e":
         if (P) {
           ;
-          if (R = G, y = k, x = U, !y.isSystemDM() && (0, T.default)(x, R)) n.preventDefault(), (0, I.editMessage)(k, U)
+          if (R = w, y = k, x = U, !y.isSystemDM() && (0, T.default)(x, R)) n.preventDefault(), (0, N.editMessage)(k, U)
         }
         break;
       case "p":
         if (P || H) {
           ;
-          if (O = k, D = U, !O.isSystemDM() && !(0, A.default)(D) && (v(O) || O.isPrivate())) n.preventDefault(), (0, I.pinMessage)(k, U, n)
+          if (O = k, D = U, !O.isSystemDM() && !(0, A.default)(D) && (v(O) || O.isPrivate())) n.preventDefault(), (0, N.pinMessage)(k, U, n)
         }
         break;
       case "+":
@@ -76,31 +76,31 @@ var L = function(e, t, n) {
               channel: e,
               canChat: t,
               renderReactions: n,
-              canAddNewReactions: t && E.default.can(N.Permissions.ADD_REACTIONS, e),
+              canAddNewReactions: t && E.default.can(I.Permissions.ADD_REACTIONS, e),
               isLurking: null != e.guild_id && l.default.isLurking(e.guild_id),
               isGuest: null != e.guild_id && h.default.isCurrentUserGuest(e.guild_id),
               isActiveChannelOrUnarchivableThread: (0, r.getIsActiveChannelOrUnarchivableThread)(e)
             });
           return !a && n
-        }(k) && (n.preventDefault(), g.ComponentDispatch.dispatchKeyed(N.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, U.id, {
+        }(k) && (n.preventDefault(), g.ComponentDispatch.dispatchKeyed(I.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, U.id, {
           emojiPicker: !0
         }));
         break;
       case "r":
-        (P || H) && (0, i.canReplyToMessage)(k, U) && (n.preventDefault(), (0, I.replyToMessage)(k, U, n));
+        (P || H) && (0, i.canReplyToMessage)(k, U) && (n.preventDefault(), (0, N.replyToMessage)(k, U, n));
         break;
       case "t":
         if (P && (0, r.computeCanStartPublicThread)(k, U)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(k, U, "Message Shortcut");
-        else if (U.hasFlag(N.MessageFlags.HAS_THREAD)) {
+        else if (U.hasFlag(I.MessageFlags.HAS_THREAD)) {
           let e = c.default.getChannel(S.default.castMessageIdAsChannelId(U.id));
           null != e && (P || H) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, H))
         }
         break;
       case "enter":
-        j && (n.preventDefault(), (0, I.markMessageUnread)(k, U));
+        j && (n.preventDefault(), (0, N.markMessageUnread)(k, U));
         break;
       case "escape":
-        f.default.isEditing(k.id, U.id) ? s.default.endEditMessage(k.id) : g.ComponentDispatch.dispatch(N.ComponentActions.TEXTAREA_FOCUS)
+        f.default.isEditing(k.id, U.id) ? s.default.endEditMessage(k.id) : g.ComponentDispatch.dispatch(I.ComponentActions.TEXTAREA_FOCUS)
     }
   }, [e, t])
 }

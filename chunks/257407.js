@@ -50,13 +50,13 @@ function k(e) {
     channel: n,
     closePopout: p,
     onFocus: C
-  } = e, y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([g.default], () => g.default.getCurrentUser()), B = _.default.canUseFancyVoiceChannelReactions(k), V = (0, i.useStateFromStores)([T.default], () => T.default.getState().animationType), G = a.useRef(!1), H = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...H, ...F], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
+  } = e, y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([g.default], () => g.default.getCurrentUser()), V = _.default.canUseFancyVoiceChannelReactions(k), B = (0, i.useStateFromStores)([T.default], () => T.default.getState().animationType), G = a.useRef(!1), H = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...H, ...F], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: n,
     intention: U
   })).slice(0, L.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT), Y = null !== (t = v.default.recentlyUsedEmojis) && void 0 !== t ? t : [], z = Y.filter(e => !W.slice(0, L.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT - 1).some(t => t.name === e.name));
   z.length > 0 && W.splice(W.length - 1, 1, z[0]);
-  let K = (0, x.sampleAnimationId)(V),
+  let K = (0, x.sampleAnimationId)(B),
     Z = e => {
       o.default.dispatch({
         type: "VOICE_CHANNEL_EFFECT_RECENT_EMOJI",
@@ -65,9 +65,9 @@ function k(e) {
         channel: n,
         emoji: e,
         location: I.VoiceChannelEffectSentLocation.EMOJI_PICKER,
-        animationType: V,
+        animationType: B,
         animationId: K,
-        isPremium: B
+        isPremium: V
       })
     },
     Q = () => {
@@ -96,7 +96,7 @@ function k(e) {
     })
   }, [q, J]);
   let $ = y ? [r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
-    ee = V === R.VoiceChannelEffectAnimationType.PREMIUM;
+    ee = B === R.VoiceChannelEffectAnimationType.PREMIUM;
   return (0, l.jsx)(h.default, {
     contentTypes: $,
     children: e => {
@@ -139,7 +139,7 @@ function k(e) {
               labelText: b.default.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
               value: ee,
               onChange: () => {
-                if (B) return f.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
+                if (V) return f.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
                   channel_id: q,
                   guild_id: J,
                   enabled: !ee

@@ -31,8 +31,8 @@ var a = n("37983"),
   T = n("740961"),
   A = n("539938"),
   M = n("540853"),
-  I = n("49111"),
-  N = n("782340"),
+  N = n("49111"),
+  I = n("782340"),
   v = n("250455");
 
 function L(e) {
@@ -53,32 +53,32 @@ function L(e) {
   } = function(e, t) {
     var n, a;
     switch (e) {
-      case I.ChannelTypes.DM:
+      case N.ChannelTypes.DM:
         return {
-          prefix: N.default.Messages.DIRECT_MESSAGE, level: 1
+          prefix: I.default.Messages.DIRECT_MESSAGE, level: 1
         };
-      case I.ChannelTypes.GROUP_DM:
+      case N.ChannelTypes.GROUP_DM:
         return {
-          prefix: N.default.Messages.GROUP_DM, level: 1
+          prefix: I.default.Messages.GROUP_DM, level: 1
         };
-      case I.ChannelTypes.GUILD_DIRECTORY:
+      case N.ChannelTypes.GUILD_DIRECTORY:
         return {
           prefix: null !== (n = null == t ? void 0 : t.name) && void 0 !== n ? n : "", level: 1
         };
-      case I.ChannelTypes.GUILD_ANNOUNCEMENT:
-      case I.ChannelTypes.GUILD_TEXT:
-      case I.ChannelTypes.GUILD_FORUM:
-      case I.ChannelTypes.GUILD_MEDIA:
-      case I.ChannelTypes.GUILD_STAGE_VOICE:
-      case I.ChannelTypes.GUILD_VOICE:
+      case N.ChannelTypes.GUILD_ANNOUNCEMENT:
+      case N.ChannelTypes.GUILD_TEXT:
+      case N.ChannelTypes.GUILD_FORUM:
+      case N.ChannelTypes.GUILD_MEDIA:
+      case N.ChannelTypes.GUILD_STAGE_VOICE:
+      case N.ChannelTypes.GUILD_VOICE:
         return {
           prefix: null !== (a = null == t ? void 0 : t.name) && void 0 !== a ? a : "", level: 1
         };
-      case I.ChannelTypes.ANNOUNCEMENT_THREAD:
-      case I.ChannelTypes.PUBLIC_THREAD:
-      case I.ChannelTypes.PRIVATE_THREAD:
+      case N.ChannelTypes.ANNOUNCEMENT_THREAD:
+      case N.ChannelTypes.PUBLIC_THREAD:
+      case N.ChannelTypes.PRIVATE_THREAD:
         return {
-          prefix: N.default.Messages.THREAD, level: 2
+          prefix: I.default.Messages.THREAD, level: 2
         };
       default:
         return {
@@ -91,18 +91,18 @@ function L(e) {
     }) : null, " ", n]
   });
   switch (t.type) {
-    case I.ChannelTypes.DM:
+    case N.ChannelTypes.DM:
       return (0, a.jsx)(M.default, {
         level: R,
         channel: t,
         handleClick: h,
         handleContextMenu: p
       });
-    case I.ChannelTypes.GROUP_DM:
+    case N.ChannelTypes.GROUP_DM:
       if (t.isManaged()) return y;
       return (0, a.jsxs)(s.Fragment, {
         children: [(0, a.jsx)(o.HiddenVisually, {
-          children: N.default.Messages.GROUP_DM
+          children: I.default.Messages.GROUP_DM
         }), (0, a.jsx)("div", {
           children: (0, a.jsx)(o.Avatar, {
             "aria-hidden": !0,
@@ -114,44 +114,44 @@ function L(e) {
           channel: t
         }, "channel-".concat(t.id))]
       });
-    case I.ChannelTypes.GUILD_ANNOUNCEMENT:
-    case I.ChannelTypes.GUILD_TEXT:
-    case I.ChannelTypes.GUILD_FORUM:
-    case I.ChannelTypes.GUILD_MEDIA:
+    case N.ChannelTypes.GUILD_ANNOUNCEMENT:
+    case N.ChannelTypes.GUILD_TEXT:
+    case N.ChannelTypes.GUILD_FORUM:
+    case N.ChannelTypes.GUILD_MEDIA:
       return (0, a.jsxs)(s.Fragment, {
-        children: [x(T, t.type === I.ChannelTypes.GUILD_ANNOUNCEMENT ? N.default.Messages.NEWS_CHANNEL : N.default.Messages.TEXT_CHANNEL), (0, a.jsx)(A.default.Title, {
+        children: [x(T, t.type === N.ChannelTypes.GUILD_ANNOUNCEMENT ? I.default.Messages.NEWS_CHANNEL : I.default.Messages.TEXT_CHANNEL), (0, a.jsx)(A.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
           children: y
         }), null != _ ? _() : null]
       });
-    case I.ChannelTypes.GUILD_VOICE:
+    case N.ChannelTypes.GUILD_VOICE:
       return (0, a.jsxs)(s.Fragment, {
-        children: [x(T, N.default.Messages.VOICE_CHANNEL), (0, a.jsx)(A.default.Title, {
+        children: [x(T, I.default.Messages.VOICE_CHANNEL), (0, a.jsx)(A.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
           children: y
         })]
       });
-    case I.ChannelTypes.GUILD_STAGE_VOICE:
+    case N.ChannelTypes.GUILD_STAGE_VOICE:
       return (0, a.jsxs)(s.Fragment, {
-        children: [x(T, N.default.Messages.STAGE_CHANNEL), (0, a.jsx)(A.default.Title, {
+        children: [x(T, I.default.Messages.STAGE_CHANNEL), (0, a.jsx)(A.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
           children: y
         })]
       });
-    case I.ChannelTypes.ANNOUNCEMENT_THREAD:
-    case I.ChannelTypes.PUBLIC_THREAD:
-    case I.ChannelTypes.PRIVATE_THREAD:
+    case N.ChannelTypes.ANNOUNCEMENT_THREAD:
+    case N.ChannelTypes.PUBLIC_THREAD:
+    case N.ChannelTypes.PRIVATE_THREAD:
       let O = null;
       if (!f && null != l) {
         let e = (0, c.default)(l, r);
         O = (0, a.jsxs)(s.Fragment, {
-          children: [x(e, N.default.Messages.TEXT_CHANNEL), (0, a.jsx)(A.default.Title, {
+          children: [x(e, I.default.Messages.TEXT_CHANNEL), (0, a.jsx)(A.default.Title, {
             level: R,
             onContextMenu: g,
             onClick: m,
@@ -160,9 +160,9 @@ function L(e) {
           }), (0, a.jsx)(A.default.Caret, {})]
         })
       }
-      let D = (null == l ? void 0 : l.type) != null && I.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
+      let D = (null == l ? void 0 : l.type) != null && N.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
       return (0, a.jsxs)(s.Fragment, {
-        children: [O, x(D ? null : T, N.default.Messages.THREAD), (0, a.jsx)(A.default.Title, {
+        children: [O, x(D ? null : T, I.default.Messages.THREAD), (0, a.jsx)(A.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
@@ -173,8 +173,8 @@ function L(e) {
           children: y
         })]
       });
-    case I.ChannelTypes.GUILD_DIRECTORY:
-      let P = (null == r ? void 0 : r.hasFeature(I.GuildFeatures.HUB)) ? N.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
+    case N.ChannelTypes.GUILD_DIRECTORY:
+      let P = (null == r ? void 0 : r.hasFeature(N.GuildFeatures.HUB)) ? I.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
         guildName: n
       }) : n;
       return (0, a.jsxs)(s.Fragment, {
@@ -212,7 +212,7 @@ let R = e => {
 
 function y(e, t) {
   switch (e.type) {
-    case I.ChannelTypes.DM:
+    case N.ChannelTypes.DM:
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(R, {
           channel: e
@@ -220,11 +220,11 @@ function y(e, t) {
           channel: e
         }, e.id)]
       });
-    case I.ChannelTypes.GUILD_ANNOUNCEMENT:
-    case I.ChannelTypes.GUILD_TEXT:
-    case I.ChannelTypes.GUILD_VOICE:
-    case I.ChannelTypes.GUILD_STAGE_VOICE:
-    case I.ChannelTypes.GROUP_DM:
+    case N.ChannelTypes.GUILD_ANNOUNCEMENT:
+    case N.ChannelTypes.GUILD_TEXT:
+    case N.ChannelTypes.GUILD_VOICE:
+    case N.ChannelTypes.GUILD_STAGE_VOICE:
+    case N.ChannelTypes.GROUP_DM:
       return null != t ? (0, a.jsx)(T.default, {
         channel: e,
         guild: t
@@ -252,7 +252,7 @@ function O(e) {
     channel: n,
     caretPosition: s = "left"
   } = e, l = (0, r.useStateFromStores)([p.default], () => p.default.getGuildId());
-  return l !== I.FAVORITES || null == t ? null : (0, a.jsxs)("div", {
+  return l !== N.FAVORITES || null == t ? null : (0, a.jsxs)("div", {
     className: v.guildBreadcrumbContainer,
     children: ["left" === s && (0, a.jsx)(A.default.Caret, {
       direction: "left"

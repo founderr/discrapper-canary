@@ -30,8 +30,8 @@ var i = l("37983"),
   N = l("550766"),
   j = l("686569"),
   D = l("623611"),
-  y = l("293564"),
-  M = l("218274"),
+  M = l("293564"),
+  y = l("218274"),
   L = l("891209"),
   b = l("954016"),
   V = l("49111"),
@@ -209,7 +209,7 @@ function U(e) {
           },
           children: (0, i.jsx)(G, {
             slide: q,
-            children: (0, i.jsx)(y.default, {
+            children: (0, i.jsx)(M.default, {
               scrollerRef: es,
               channel: t,
               guildId: l,
@@ -228,7 +228,7 @@ function U(e) {
           },
           children: (0, i.jsx)(G, {
             slide: q,
-            children: (0, i.jsx)(M.default, {
+            children: (0, i.jsx)(y.default, {
               applicationId: et,
               selectedChannelId: ei,
               setSelectedChannelId: ea,
@@ -258,7 +258,7 @@ function U(e) {
         children: (() => {
           switch (q) {
             case b.ActivityShelfSlides.DIRECTORY:
-              return (0, i.jsx)(y.ActivityDirectoryFooter, {});
+              return (0, i.jsx)(M.ActivityDirectoryFooter, {});
             case b.ActivityShelfSlides.SELECT_CHANNEL:
               return (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)("div", {
@@ -266,7 +266,7 @@ function U(e) {
                 }), (0, i.jsx)(d.ModalFooter, {
                   separator: !1,
                   className: O.footer,
-                  children: (0, i.jsx)(M.ChannelSelectorFooter, {
+                  children: (0, i.jsx)(y.ChannelSelectorFooter, {
                     onBack: ed,
                     onClose: o,
                     guildId: l,

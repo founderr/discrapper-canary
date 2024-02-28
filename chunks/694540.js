@@ -39,12 +39,12 @@ function _() {
     n = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
     _ = (0, o.useHasActiveTrial)(),
     [E, T] = r.useState(!1),
-    [C, I] = r.useState([]);
+    [I, C] = r.useState([]);
   r.useEffect(() => {
     null != e && l.default.wait(() => c.default.markOutboundPromotionsSeen())
   }, [e]);
   let p = r.useCallback(e => {
-      I(t => t.some(t => {
+      C(t => t.some(t => {
         let {
           promotion: n
         } = t;
@@ -59,9 +59,9 @@ function _() {
   }, [e, S]), r.useEffect(() => {
     l.default.wait(() => {
       (0, u.fetchClaimedOutboundPromotionCodes)().then(e => {
-        I(e), T(!0)
+        C(e), T(!0)
       }).catch(() => {
-        I([]), T(!0)
+        C([]), T(!0)
       })
     })
   }, []);
@@ -70,14 +70,14 @@ function _() {
       code: e,
       promotion: t
     }
-    of C) P[t.id] = e;
+    of I) P[t.id] = e;
   let R = new Set(t.map(e => {
       let {
         id: t
       } = e;
       return t
     })),
-    L = C.filter(e => {
+    L = I.filter(e => {
       let {
         promotion: t
       } = e;

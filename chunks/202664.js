@@ -18,8 +18,8 @@ var r = n("37983"),
   _ = n("843647"),
   E = n("789946"),
   T = n("646718"),
-  C = n("49111"),
-  I = n("527382"),
+  I = n("49111"),
+  C = n("527382"),
   p = n("782340"),
   S = n("348133");
 
@@ -41,7 +41,7 @@ function P(e) {
     M = !R && O === T.PremiumTypes.TIER_0,
     g = (0, s.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
     h = (0, r.jsx)(u.default, {
-      icons: I.DEFAULT_FILE_UPLOAD_ICONS
+      icons: C.DEFAULT_FILE_UPLOAD_ICONS
     });
   t = M ? p.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
     premiumPlan: (0, f.getPremiumTypeDisplayName)(T.PremiumTypes.TIER_0),
@@ -68,7 +68,7 @@ function P(e) {
       }
       return n
     }, [g]),
-    v = (0, r.jsxs)("div", {
+    N = (0, r.jsxs)("div", {
       className: S.body,
       children: [(0, r.jsx)("span", {
         children: x
@@ -83,13 +83,13 @@ function P(e) {
     enableArtBoxShadow: !1,
     type: T.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
     title: p.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-    body: v,
+    body: N,
     context: p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
       maxSize: p.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
     }),
     glowUp: t,
     analyticsLocation: {
-      section: C.AnalyticsSections.FILE_UPLOAD_POPOUT
+      section: I.AnalyticsSections.FILE_UPLOAD_POPOUT
     },
     onClose: n,
     subscriptionTier: M ? T.PremiumSubscriptionSKUs.TIER_0 : T.PremiumSubscriptionSKUs.TIER_2,

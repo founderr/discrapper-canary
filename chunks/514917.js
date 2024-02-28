@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("915712"),
   F = n("369869"),
   k = n("802279"),
-  B = n("465215"),
-  V = n("301998"),
+  V = n("465215"),
+  B = n("301998"),
   G = n("491250"),
   H = n("453649"),
   W = n("849674"),
@@ -178,11 +178,11 @@ var l = n("37983"),
       ek = null == eA ? void 0 : eA.map(e => (0, l.jsx)(K.default, {
         connection: e
       }, e.key)),
-      eB = eu.map(e => (0, l.jsx)(Y.default, {
+      eV = eu.map(e => (0, l.jsx)(Y.default, {
         channel: n,
         integration: e
       }, e.application.id)),
-      eV = a.useCallback(() => {
+      eB = a.useCallback(() => {
         !es.bot && !ej && null == ek && (0, c.fetchMutualFriends)(es.id)
       }, [ej, ek, es.id, es.bot]),
       eG = a.useCallback(() => en(!0), []),
@@ -222,10 +222,10 @@ var l = n("37983"),
               animateOnHover: !0,
               isHovering: et
             }), !es.isSystemUser() && (0, l.jsxs)(l.Fragment, {
-              children: [(0, l.jsx)(B.default, {
+              children: [(0, l.jsx)(V.default, {
                 userId: r
               }), (0, l.jsx)(U.default, {})]
-            }), (0, l.jsx)(V.default, {
+            }), (0, l.jsx)(B.default, {
               user: es,
               setNote: !1,
               hideNote: !1
@@ -267,21 +267,21 @@ var l = n("37983"),
               isLoadingHeader: eR,
               isLoadingContents: ej,
               loadingContentsCount: eN,
-              onFocus: eV,
-              onHover: eV,
+              onFocus: eB,
+              onHover: eB,
               itemType: z.ListType.MutualFriendsList,
               children: ek
             }) : null]
           }), ed && (0, l.jsx)(P.default.Inner, {
             className: i(ee.profilePanelConnections, ee.appListThemedContainer),
             children: (0, l.jsxs)(z.default, {
-              header: eB.length > 0 ? $.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
-                count: eB.length
+              header: eV.length > 0 ? $.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
+                count: eV.length
               }) : $.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
               isLoadingContents: !eo,
               isLoadingHeader: !1,
               itemType: z.ListType.AppsList,
-              children: [eB, ec.length > 0 && (0, l.jsxs)("div", {
+              children: [eV, ec.length > 0 && (0, l.jsxs)("div", {
                 className: ee.appButtonContainer,
                 children: [0 === eu.length && (0, l.jsx)(d.Text, {
                   variant: "text-xs/normal",

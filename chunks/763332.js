@@ -16,9 +16,9 @@ var n = s("37983"),
   c = s("377114"),
   d = s("652126"),
   T = s("27618"),
-  R = s("217736"),
-  N = s("615992"),
-  A = s("33320"),
+  N = s("217736"),
+  A = s("615992"),
+  R = s("33320"),
   S = s("324252"),
   I = s("49111"),
   O = s("782340"),
@@ -34,24 +34,24 @@ function p(e) {
     hasReported: P,
     onReport: g,
     trackAnalyticsEvent: L
-  } = e, h = (0, l.useStateFromStores)([T.default], () => T.default.isBlocked(p)), [M, v] = a.useState(h), y = (0, d.useShouldShowHelplineLink)(), [x, B] = a.useState(!1), F = (0, N.useLastChannelMessage)(m), U = () => {
+  } = e, h = (0, l.useStateFromStores)([T.default], () => T.default.isBlocked(p)), [M, v] = a.useState(h), y = (0, d.useShouldShowHelplineLink)(), [x, F] = a.useState(!1), B = (0, A.useLastChannelMessage)(m), U = () => {
     v(!0), u.default.addRelationship({
       userId: p,
       context: {
         location: "InappropriateConversationModal-web"
       },
       type: I.RelationshipTypes.BLOCKED
-    }), L(R.CtaEventTypes.USER_TAKEOVER_MODAL_BLOCK)
+    }), L(N.CtaEventTypes.USER_TAKEOVER_MODAL_BLOCK)
   }, D = () => {
     v(!1), u.default.unblockUser(p, {
       location: "InappropriateConversationModal-web"
-    }), L(R.CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK)
+    }), L(N.CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK)
   }, b = async () => {
-    null != F && (B(!0), await (0, c.submitReportForInappropriateConversationSafetyAlert)(F, () => {
+    null != B && (F(!0), await (0, c.submitReportForInappropriateConversationSafetyAlert)(B, () => {
       (0, _.showToast)((0, _.createToast)(O.default.Messages.INAPPROPRIATE_CONVERSATION_REPORT_TOAST, _.ToastType.SUCCESS)), g()
     }, () => {
       (0, _.showToast)((0, _.createToast)(O.default.Messages.INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST, _.ToastType.FAILURE))
-    }), B(!1), L(R.CtaEventTypes.USER_TAKEOVER_MODAL_REPORT))
+    }), F(!1), L(N.CtaEventTypes.USER_TAKEOVER_MODAL_REPORT))
   };
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)("img", {
@@ -108,7 +108,7 @@ function p(e) {
           className: f.button,
           innerClassName: f.buttonInner,
           onClick: () => {
-            y ? ((0, E.default)(S.CRISIS_TEXT_LINE_URL), L(R.CtaEventTypes.USER_TAKEOVER_MODAL_CTL)) : ((0, E.default)(S.NOFILTR_URL), L(R.CtaEventTypes.USER_TAKEOVER_MODAL_NO_FILTR))
+            y ? ((0, E.default)(S.CRISIS_TEXT_LINE_URL), L(N.CtaEventTypes.USER_TAKEOVER_MODAL_CTL)) : ((0, E.default)(S.NOFILTR_URL), L(N.CtaEventTypes.USER_TAKEOVER_MODAL_NO_FILTR))
           },
           children: [(0, n.jsx)(r.ChatIcon, {
             height: 20,
@@ -130,7 +130,7 @@ function p(e) {
         look: _.Button.Looks.LINK,
         color: _.Button.Colors.TRANSPARENT,
         size: _.Button.Sizes.MEDIUM,
-        onClick: () => t(A.InappropriateConversationModalSlideKeys.INTRO),
+        onClick: () => t(R.InappropriateConversationModalSlideKeys.INTRO),
         children: O.default.Messages.BACK
       })]
     })]

@@ -25,8 +25,8 @@ var a = n("37983"),
   T = n("300322"),
   A = n("845579"),
   M = n("271938"),
-  I = n("836417"),
-  N = n("26989"),
+  N = n("836417"),
+  I = n("26989"),
   v = n("305961"),
   L = n("88093"),
   R = n("957255"),
@@ -41,9 +41,9 @@ var a = n("37983"),
   H = n("433487"),
   U = n("987772"),
   k = n("566998"),
-  G = n("516358"),
-  B = n("550515"),
-  w = n("959097"),
+  w = n("516358"),
+  G = n("550515"),
+  B = n("959097"),
   V = n("228220"),
   W = n("149279"),
   Z = n("599110"),
@@ -155,9 +155,9 @@ function er(e) {
     canReact: m,
     canConfigureJoin: g,
     canReply: _,
-    canStartThread: I,
+    canStartThread: N,
     canViewThread: y,
-    isExpanded: B,
+    isExpanded: G,
     showMoreUtilities: W,
     showEmojiPicker: $,
     showMessageRemindersActions: ea,
@@ -178,17 +178,17 @@ function er(e) {
       isFocused: o
     } = e, {
       author: d
-    } = a, f = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(n.guild_id), [n.guild_id]), h = (0, u.useStateFromStores)([M.default], () => M.default.getId()), m = (0, T.useIsActiveChannelOrUnarchivableThread)(n), g = (0, T.useIsNonModInLockedThread)(n), _ = A.RenderReactions.useSetting(), I = A.DeveloperMode.useSetting(), y = (0, u.useStateFromStores)([L.default], () => null == n.guild_id || L.default.canChatInGuild(n.guild_id), [n]), {
+    } = a, f = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(n.guild_id), [n.guild_id]), h = (0, u.useStateFromStores)([M.default], () => M.default.getId()), m = (0, T.useIsActiveChannelOrUnarchivableThread)(n), g = (0, T.useIsNonModInLockedThread)(n), _ = A.RenderReactions.useSetting(), N = A.DeveloperMode.useSetting(), y = (0, u.useStateFromStores)([L.default], () => null == n.guild_id || L.default.canChatInGuild(n.guild_id), [n]), {
       canManageMessages: x,
       canAddNewReactions: O
     } = (0, u.useStateFromStoresObject)([R.default], () => ({
       canAddNewReactions: y && R.default.can(et.Permissions.ADD_REACTIONS, n),
       canManageMessages: R.default.can(et.Permissions.MANAGE_MESSAGES, n)
-    }), [n, y]), D = (0, S.useCanReplyToMessage)(n, a), P = (0, T.useCanStartPublicThread)(n, a), j = (0, T.useCanViewThreadForMessage)(a), b = (0, u.useStateFromStores)([C.default], () => null != n.guild_id && C.default.isLurking(n.guild_id), [n]), F = (0, u.useStateFromStores)([N.default], () => null != n.guild_id && N.default.isCurrentUserGuest(n.guild_id), [n]), H = d.id === h, U = (null === (t = a.interactionMetadata) || void 0 === t ? void 0 : t.user_id) === h, k = (x || H || U) && m && !et.MessageTypesSets.UNDELETABLE.has(a.type);
+    }), [n, y]), D = (0, S.useCanReplyToMessage)(n, a), P = (0, T.useCanStartPublicThread)(n, a), j = (0, T.useCanViewThreadForMessage)(a), b = (0, u.useStateFromStores)([C.default], () => null != n.guild_id && C.default.isLurking(n.guild_id), [n]), F = (0, u.useStateFromStores)([I.default], () => null != n.guild_id && I.default.isCurrentUserGuest(n.guild_id), [n]), H = d.id === h, U = (null === (t = a.interactionMetadata) || void 0 === t ? void 0 : t.user_id) === h, k = (x || H || U) && m && !et.MessageTypesSets.UNDELETABLE.has(a.type);
     a.type === et.MessageTypes.AUTO_MODERATION_ACTION && (k = k && x);
-    let G = (0, Y.canReportMessage)(a),
-      B = (0, q.default)(a, n, x),
-      w = !n.isSystemDM() && (0, K.default)(a, h) && m && !g,
+    let w = (0, Y.canReportMessage)(a),
+      G = (0, q.default)(a, n, x),
+      B = !n.isSystemDM() && (0, K.default)(a, h) && m && !g,
       {
         disableReactionCreates: V
       } = (0, X.default)({
@@ -218,15 +218,15 @@ function er(e) {
     return {
       channel: n,
       message: a,
-      canPin: B,
-      canEdit: w,
+      canPin: G,
+      canEdit: B,
       canDelete: k,
-      canReport: G,
+      canReport: w,
       canReply: D,
       canStartThread: P,
       canViewThread: j,
       canCopy: z.SUPPORTS_COPY,
-      hasDeveloperMode: I,
+      hasDeveloperMode: N,
       canReact: !V && _,
       canPublish: W,
       canConfigureJoin: J,
@@ -253,7 +253,7 @@ function er(e) {
     })
   }, [$, er]), eC = (0, T.useIsActiveChannelOrUnarchivableThread)(t), ep = n.hasFlag(et.MessageFlags.CROSSPOSTED);
   return (0, a.jsxs)(a.Fragment, {
-    children: [B ? (0, a.jsxs)(a.Fragment, {
+    children: [G ? (0, a.jsxs)(a.Fragment, {
       children: [l && eo ? ei({
         key: "copy-id",
         channel: t,
@@ -301,7 +301,7 @@ function er(e) {
         channel: t,
         message: n,
         label: en.default.Messages.MESSAGE_ACTION_REPLY,
-        icon: G.default,
+        icon: w.default,
         onClick: J.replyToMessage
       }) : null]
     }) : null, m && !ed ? (0, a.jsx)(Q.default, {
@@ -316,7 +316,7 @@ function er(e) {
       channel: t,
       message: n,
       label: en.default.Messages.MESSAGE_ACTION_REPLY,
-      icon: G.default,
+      icon: w.default,
       onClick: J.replyToMessage
     }) : null, f ? ei({
       key: "edit",
@@ -325,19 +325,19 @@ function er(e) {
       label: en.default.Messages.EDIT,
       icon: U.default,
       onClick: J.editMessage
-    }) : null, I ? ei({
+    }) : null, N ? ei({
       key: "thread",
       channel: t,
       message: n,
       label: en.default.Messages.CREATE_THREAD,
-      icon: w.default,
+      icon: B.default,
       onClick: J.createThread
-    }) : null, !I && y ? ei({
+    }) : null, !N && y ? ei({
       key: "view-thread",
       channel: t,
       message: n,
       label: en.default.Messages.VIEW_THREAD,
-      icon: w.default,
+      icon: B.default,
       onClick: J.goToThread
     }) : null, h ? ei({
       key: "publish",
@@ -347,7 +347,7 @@ function er(e) {
       icon: b.default,
       onClick: J.publishMessage,
       disabled: ep
-    }) : null, r && (ed || B) ? ei({
+    }) : null, r && (ed || G) ? ei({
       key: "delete",
       channel: t,
       message: n,
@@ -355,8 +355,8 @@ function er(e) {
       icon: V.default,
       onClick: J.deleteMessage,
       dangerous: !0,
-      separator: !B
-    }) : null, B && r ? null : (0, a.jsx)(d.Popout, {
+      separator: !G
+    }) : null, G && r ? null : (0, a.jsx)(d.Popout, {
       renderPopout: e => {
         let {
           updatePosition: s,
@@ -406,7 +406,7 @@ function eo(e) {
     children: [!s && l && ei({
       key: "retry",
       label: en.default.Messages.RETRY,
-      icon: B.default,
+      icon: G.default,
       channel: t,
       message: n,
       onClick: J.retrySendMessage
@@ -452,7 +452,7 @@ var ed = s.memo(function(e) {
     channel: t,
     message: n,
     isHeader: s
-  } = e, l = (0, u.useStateFromStores)([I.default], () => I.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
+  } = e, l = (0, u.useStateFromStores)([N.default], () => N.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
     let {
       channel: t,
       message: n

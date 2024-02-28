@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("102985"),
   F = n("697218"),
   k = n("145131"),
-  B = n("476765"),
-  V = n("570443"),
+  V = n("476765"),
+  B = n("570443"),
   G = n("76539"),
   H = n("664336"),
   W = n("599110"),
@@ -58,8 +58,8 @@ var l = n("37983"),
   ee = n("366160"),
   et = n("182893"),
   en = n("890957");
-let el = (0, B.uid)(),
-  ea = (0, B.uid)();
+let el = (0, V.uid)(),
+  ea = (0, V.uid)();
 
 function es(e) {
   let {
@@ -680,7 +680,7 @@ function ed(e) {
     children: e => (0, l.jsx)(H.default.Icon, {
       ...e,
       onClick: p,
-      icon: null != s ? s : null == t ? V.default : G.default,
+      icon: null != s ? s : null == t ? B.default : G.default,
       className: n,
       iconClassName: n,
       tooltip: i,

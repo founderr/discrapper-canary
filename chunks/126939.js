@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   useIsActivitiesEnabledForCurrentPlatform: function() {
     return a
   },
@@ -13,10 +13,10 @@ function l() {
   return !n.isMobile && !n.isTablet && !0
 }
 
-function a(e) {
+function a(t) {
   return l()
 }
 
-function u(e) {
+function u(t) {
   return l()
 }

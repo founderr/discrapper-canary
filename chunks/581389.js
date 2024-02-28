@@ -45,8 +45,8 @@ var l, a, s = n("37983"),
   w = n("479788"),
   F = n("375202"),
   k = n("16916"),
-  B = n("534222"),
-  V = n("147257"),
+  V = n("534222"),
+  B = n("147257"),
   G = n("109526"),
   H = n("550410"),
   W = n("124824"),
@@ -202,7 +202,7 @@ let ev = i.memo(function(e) {
       ownerId: t
     } = e;
     return t !== (null == n ? void 0 : n.id)
-  })), _ = (0, B.useActiveEvent)(a.id), I = (0, N.useIsBroadcastingInChannel)(a.id), T = i.useCallback(() => {
+  })), _ = (0, V.useActiveEvent)(a.id), I = (0, N.useIsBroadcastingInChannel)(a.id), T = i.useCallback(() => {
     if ((null == r ? void 0 : r.type) === eS.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
     if (S) return "STREAM";
     if (null != _) return "EVENT";
@@ -263,7 +263,7 @@ let ev = i.memo(function(e) {
             channel: a
           });
         case "EVENT":
-          return (0, s.jsx)(V.default, {
+          return (0, s.jsx)(B.default, {
             channelId: a.id,
             onClick: () => {
               p.default.disconnect(), null == l || l()

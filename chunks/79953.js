@@ -7,20 +7,20 @@ r.r(t), r.d(t, {
 var a = r("37983"),
   n = r("884691"),
   i = r("414456"),
-  o = r.n(i),
-  l = r("446674"),
+  l = r.n(i),
+  o = r("446674"),
   s = r("77078"),
   c = r("810567"),
   d = r("547896"),
   u = r("664336"),
   h = r("50625"),
   p = r("928063"),
-  m = r("637171"),
-  g = r("724209"),
-  f = r("699412"),
-  b = r("232276");
+  f = r("637171"),
+  m = r("724209"),
+  g = r("699412"),
+  y = r("232276");
 
-function y(e, t) {
+function b(e, t) {
   return e.store.getName().localeCompare(t.store.getName())
 }
 
@@ -28,14 +28,14 @@ function x(e) {
   let {
     store: t,
     dataGetter: r
-  } = e, [i, o] = n.useState(r(t));
+  } = e, [i, l] = n.useState(r(t));
   return n.useEffect(() => {
-    let e = () => o(r(t));
+    let e = () => l(r(t));
     return e(), t.addChangeListener(e), () => {
       t.removeChangeListener(e)
     }
   }, [t, r]), (0, a.jsx)(s.ScrollerThin, {
-    className: b.inspectorContainer,
+    className: y.inspectorContainer,
     children: (0, a.jsx)(h.default, {
       data: i
     })
@@ -43,7 +43,7 @@ function x(e) {
 }
 let k = [{
     key: "name",
-    cellClassName: b.eventColumn,
+    cellClassName: y.eventColumn,
     render(e) {
       let {
         store: t
@@ -59,7 +59,7 @@ let k = [{
         store: t
       } = e;
       return null == t.__getLocalVars ? (0, a.jsxs)("div", {
-        className: b.inspectorContainer,
+        className: y.inspectorContainer,
         children: ["Store is missing ", (0, a.jsx)("code", {
           children: "__getLocalVars"
         }), " method."]
@@ -89,15 +89,15 @@ function C(e) {
   } = e, {
     TabBar: n,
     renderSelectedTab: i
-  } = (0, g.default)({
+  } = (0, m.default)({
     tabs: v
   }, []);
   return (0, a.jsxs)(p.default, {
-    className: b.subPanel,
+    className: y.subPanel,
     minHeight: 100,
     initialHeight: r,
     children: [(0, a.jsx)(n, {}), (0, a.jsxs)(u.default, {
-      className: o(f.headerBar, b.subPanelHeaderBar),
+      className: l(g.headerBar, y.subPanelHeaderBar),
       children: [(0, a.jsx)(u.default.Icon, {
         icon: d.default,
         tooltip: t.getName()
@@ -113,11 +113,11 @@ function C(e) {
 function S() {
   let e = n.useRef(null),
     [t, r] = n.useState(""),
-    i = l.Store.getAll(),
+    i = o.Store.getAll(),
     d = n.useMemo(() => i.map(e => ({
       key: e._dispatchToken,
       store: e
-    })).sort(y), [i]),
+    })).sort(b), [i]),
     u = d.filter(e => (function(e, t) {
       let {
         store: r
@@ -125,14 +125,14 @@ function S() {
       return r.getName().toLowerCase().includes(t.toLowerCase())
     })(e, t)),
     [h, p] = n.useState(),
-    g = i.find(e => e._dispatchToken === h);
+    m = i.find(e => e._dispatchToken === h);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: o(f.panel, b.panel),
+    className: l(g.panel, y.panel),
     children: [(0, a.jsx)("div", {
-      className: b.toolbar,
+      className: y.toolbar,
       children: (0, a.jsx)(c.default, {
-        className: b.searchBar,
+        className: y.searchBar,
         size: c.default.Sizes.SMALL,
         query: t,
         onChange: r,
@@ -141,15 +141,15 @@ function S() {
         "aria-label": "Search stores"
       })
     }), (0, a.jsx)(s.ScrollerThin, {
-      className: b.tableContainer,
-      children: (0, a.jsx)(m.default, {
+      className: y.tableContainer,
+      children: (0, a.jsx)(f.default, {
         columns: k,
         data: u,
         selectedRowKey: h,
         onClickRow: p
       })
-    }), null != g && (0, a.jsx)(C, {
-      store: g,
+    }), null != m && (0, a.jsx)(C, {
+      store: m,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
     })]
   })

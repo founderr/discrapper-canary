@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return T
   },
   claimOutboundPromotion: function() {
-    return C
+    return I
   },
   getOutboundPromotionRedemptionUrl: function() {
-    return I
+    return C
   },
   shouldShowOutboundPromotionNotice: function() {
     return p
@@ -90,7 +90,7 @@ async function T() {
     t = e.body;
   return t.map(E)
 }
-async function C(e) {
+async function I(e) {
   let t = await r.default.post({
       url: d.Endpoints.CLAIM_OUTBOUND_PROMOTION_CODE(e)
     }),
@@ -98,7 +98,7 @@ async function C(e) {
   return E(n)
 }
 
-function I(e, t) {
+function C(e, t) {
   return null != t.outboundRedemptionUrlFormat ? t.outboundRedemptionUrlFormat.replace("{code}", encodeURIComponent(e)) : t.outboundRedemptionPageLink
 }
 

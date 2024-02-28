@@ -46,8 +46,8 @@ let F = "vc-activities-".concat((0, u.v4)()),
       isHovered: s,
       closePopout: u,
       onMouseEnter: k,
-      onMouseLeave: B,
-      onClick: V,
+      onMouseLeave: V,
+      onClick: B,
       className: G
     } = e, {
       enabled: H
@@ -106,8 +106,8 @@ let F = "vc-activities-".concat((0, u.v4)()),
           locationObject: en.location,
           openInPopout: et,
           analyticsLocations: q
-        }), B(), V()
-      }, [en, q, n, V, B, et]),
+        }), V(), B()
+      }, [en, q, n, B, V, et]),
       es = a.useCallback(e => {
         k(), I.default.track(y.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
@@ -128,7 +128,7 @@ let F = "vc-activities-".concat((0, u.v4)()),
           [P.clickableBannerReducedMotion]: K
         }),
         onClick: () => {
-          V(), u(), (0, E.transitionTo)(y.Routes.ACTIVITY_DETAILS(L.KRUNKER_STRIKE_APPLICATION_ID), void 0, void 0, $)
+          B(), u(), (0, E.transitionTo)(y.Routes.ACTIVITY_DETAILS(L.KRUNKER_STRIKE_APPLICATION_ID), void 0, void 0, $)
         },
         children: [(0, l.jsx)("img", {
           alt: O.default.Messages.EMBEDDED_ACTIVITIES_KRUNKER_STRIKE_POSTER_ALT,
@@ -142,7 +142,7 @@ let F = "vc-activities-".concat((0, u.v4)()),
           [P.clickableBannerReducedMotion]: K
         }),
         onClick: () => {
-          V(), u(), (0, E.transitionTo)(y.Routes.ACTIVITY_DETAILS(L.COLONIST_APPLICATION_ID), void 0, void 0, $)
+          B(), u(), (0, E.transitionTo)(y.Routes.ACTIVITY_DETAILS(L.COLONIST_APPLICATION_ID), void 0, void 0, $)
         },
         children: [(0, l.jsx)("img", {
           alt: O.default.Messages.EMBEDDED_ACTIVITIES_COLONIST_POSTER_ALT,
@@ -169,7 +169,7 @@ let F = "vc-activities-".concat((0, u.v4)()),
           }), (0, l.jsxs)("div", {
             className: P.container,
             onMouseEnter: es,
-            onMouseLeave: B,
+            onMouseLeave: V,
             children: [(0, l.jsxs)("div", {
               className: P.titleContainer,
               children: [(0, l.jsxs)("div", {
@@ -202,7 +202,7 @@ let F = "vc-activities-".concat((0, u.v4)()),
                 channel: n,
                 activityItem: e,
                 onClick: () => {
-                  u(), V()
+                  u(), B()
                 },
                 aspectRatio: M.ActivitySuggestion.AspectRatio.THIRTEEN_BY_ELEVEN,
                 animatedDivClass: P.activitySuggestion

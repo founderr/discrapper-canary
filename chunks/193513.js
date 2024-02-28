@@ -48,8 +48,8 @@ function _(e) {
     placeholder: _,
     placeholderVersion: E,
     placeholderStyle: T,
-    children: C
-  } = e, I = t === u.ImageReadyStates.LOADING, [p] = i.useState(() => Date.now()), [S] = i.useState(I), [P, R] = i.useState(!1), L = i.useMemo(() => {
+    children: I
+  } = e, C = t === u.ImageReadyStates.LOADING, [p] = i.useState(() => Date.now()), [S] = i.useState(C), [P, R] = i.useState(!1), L = i.useMemo(() => {
     if (S && 1 === E && null != _) {
       let e = Uint8Array.from(atob(_), e => e.charCodeAt(0)),
         t = (0, o.thumbHashToRGBA)(e, {
@@ -69,14 +69,14 @@ function _(e) {
     }
   }, [S]);
   let O = t === u.ImageReadyStates.READY && Date.now() - p < 200,
-    M = (0, l.useTransition)(I && null != L, O ? f : d),
-    g = (0, l.useTransition)(I && P, m);
+    M = (0, l.useTransition)(C && null != L, O ? f : d),
+    g = (0, l.useTransition)(C && P, m);
   return (0, r.jsxs)("div", {
     className: c.loadingOverlay,
     style: {
       aspectRatio: n
     },
-    children: [C, M((e, t) => t && (0, r.jsx)(l.animated.img, {
+    children: [I, M((e, t) => t && (0, r.jsx)(l.animated.img, {
       style: {
         ...T,
         ...e

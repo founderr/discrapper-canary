@@ -32,8 +32,8 @@ function o(e) {
     animateOnHover: d,
     avatarOverride: m
   }), {
-    avatarPlaceholderSrc: C,
-    avatarDecorationSrc: I,
+    avatarPlaceholderSrc: I,
+    avatarDecorationSrc: C,
     eventHandlers: p
   } = (0, a.default)({
     user: t,
@@ -49,8 +49,8 @@ function o(e) {
     T.onMouseLeave(), p.onMouseLeave()
   }, [T, p]);
   return {
-    avatarPlaceholderSrc: C,
-    avatarDecorationSrc: I,
+    avatarPlaceholderSrc: I,
+    avatarDecorationSrc: C,
     avatarSrc: _,
     isAnimating: E,
     eventHandlers: {

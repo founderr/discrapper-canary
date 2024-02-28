@@ -11,9 +11,9 @@ r.r(t), r.d(t, {
   }
 }), r("781738");
 var a, n, i = r("37983"),
-  o = r("884691"),
-  l = r("414456"),
-  s = r.n(l),
+  l = r("884691"),
+  o = r("414456"),
+  s = r.n(o),
   c = r("870620");
 (n = a || (a = {})).UNKNOWN = "unknown", n.VISA = "visa", n.DISCOVER = "discover", n.MASTERCARD = "mastercard", n.AMEX = "amex", n.PAYPAL = "paypal", n.PAYMENT_REQUEST = "paymentRequest", n.G_PAY = "gPay", n.DINERS = "diners", n.JCB = "jcb", n.UNIONPAY = "unionpay", n.SOFORT = "sofort", n.PRZELEWY24 = "przelewy24", n.GIROPAY = "giropay", n.PAYSAFECARD = "paysafecard", n.GCASH = "gcash", n.GRABPAY = "grabpay", n.MOMO_WALLET = "momo_wallet", n.VENMO = "venmo", n.KAKAOPAY = "kakaopay", n.GOPAY_WALLET = "gopay_wallet", n.BANCONTACT = "bancontact", n.EPS = "eps", n.IDEAL = "ideal", n.CASH_APP = "cash_app", n.APPLE = "apple";
 let d = {
@@ -22,7 +22,7 @@ let d = {
   LARGE: c.cardIconLarge,
   XLARGE: c.cardIconXLarge
 };
-class u extends o.PureComponent {
+class u extends l.PureComponent {
   static getType(e) {
     if (null == e) return "unknown";
     let t = e.replace(/[^a-z0-9_]/gi, "").toUpperCase();

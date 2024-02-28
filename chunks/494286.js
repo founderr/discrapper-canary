@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("383294"),
   F = n("292687"),
   k = n("393414"),
-  B = n("168973"),
-  V = n("581389"),
+  V = n("168973"),
+  B = n("581389"),
   G = n("103738"),
   H = n("486030"),
   W = n("908583"),
@@ -311,7 +311,7 @@ class ew extends a.PureComponent {
   }
   constructor(...e) {
     super(...e), this._prevLayout = eO.ChannelLayouts.MINIMUM, this._wrapperRef = a.createRef(), this._callContainerRef = a.createRef(), this._channelChatRef = a.createRef(), this._contentRef = a.createRef(), this._videoBackgroundTooltipTimeout = new c.Timeout, this._lastIdleProps = null, this.state = {
-      resizedHeight: B.default.callHeaderHeight
+      resizedHeight: V.default.callHeaderHeight
     }, this.handleFullScreenChange = () => {
       let e = this.getRootNode();
       null != e && !(0, e_.isFullScreen)(e, this.currentDocument) && this.props.layout === eO.ChannelLayouts.FULL_SCREEN && this.handleFullScreen()
@@ -469,7 +469,7 @@ class ew extends a.PureComponent {
         inCall: t,
         layout: n
       } = this.props;
-      return t || n === eO.ChannelLayouts.MINIMUM || n === eO.ChannelLayouts.NORMAL ? (0, l.jsx)(V.default, {
+      return t || n === eO.ChannelLayouts.MINIMUM || n === eO.ChannelLayouts.NORMAL ? (0, l.jsx)(B.default, {
         exitFullScreen: this.maybeLeaveFullScreen,
         channel: e,
         onDisconnectCall: this.handleDisconnect,
@@ -677,7 +677,7 @@ var eF = function(e) {
     layout: U,
     participantsOpen: w,
     chatOpen: k,
-    selectedParticipant: V
+    selectedParticipant: B
   } = (0, o.useStateFromStoresObject)([eI.default], () => {
     let e = E === eO.AppContext.POPOUT,
       t = eI.default.getMode(n.id);
@@ -696,14 +696,14 @@ var eF = function(e) {
   }, [E, n.id]), G = (0, o.useStateFromStoresArray)([en.default], () => en.default.getAllActiveStreams()), {
     selectedStream: H
   } = (0, o.useStateFromStoresObject)([en.default], () => ({
-    selectedStream: null != V ? en.default.getActiveStreamForStreamKey(V.id) : null
-  }), [V]), W = (0, o.useStateFromStores)([ei.default], () => ei.default.getGuild(n.getGuildId())), Y = (0, o.useStateFromStores)([es.default], () => es.default.getCall(n.id), [n.id]), z = (0, o.useStateFromStores)([eu.default], () => eu.default.getMentionCount(n.id), [n.id]), K = (0, o.useStateFromStores)([el.default], () => el.default.getId()), {
+    selectedStream: null != B ? en.default.getActiveStreamForStreamKey(B.id) : null
+  }), [B]), W = (0, o.useStateFromStores)([ei.default], () => ei.default.getGuild(n.getGuildId())), Y = (0, o.useStateFromStores)([es.default], () => es.default.getCall(n.id), [n.id]), z = (0, o.useStateFromStores)([eu.default], () => eu.default.getMentionCount(n.id), [n.id]), K = (0, o.useStateFromStores)([el.default], () => el.default.getId()), {
     popoutWindow: Z,
     popoutWindowAlwaysOnTop: Q
   } = (0, o.useStateFromStoresObject)([F.default], () => ({
     popoutWindow: F.default.getWindow(eO.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     popoutWindowAlwaysOnTop: F.default.getIsAlwaysOnTop(eO.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
-  })), X = (0, o.useStateFromStores)([er.default], () => er.default.can(eO.Permissions.CONNECT, n)), q = (0, o.useStateFromStores)([ea.default], () => ea.default.getToastsEnabled(n.id)), J = (0, o.useStateFromStores)([O.default], () => O.default.getAwaitingRemoteSessionInfo()), $ = (0, o.useStateFromStores)([B.default], () => B.default.callHeaderHeight), ee = a.useCallback(e => {
+  })), X = (0, o.useStateFromStores)([er.default], () => er.default.can(eO.Permissions.CONNECT, n)), q = (0, o.useStateFromStores)([ea.default], () => ea.default.getToastsEnabled(n.id)), J = (0, o.useStateFromStores)([O.default], () => O.default.getAwaitingRemoteSessionInfo()), $ = (0, o.useStateFromStores)([V.default], () => V.default.callHeaderHeight), ee = a.useCallback(e => {
     S.default.updatedUnsyncedSettings({
       callHeaderHeight: e
     })
@@ -754,7 +754,7 @@ var eF = function(e) {
             maxSidebarWidth: r - 550,
             shouldUseVoiceEffectsActionBar: em,
             currentUserId: K,
-            selectedParticipant: V,
+            selectedParticipant: B,
             allActiveStreams: G,
             useNewInviteButton: ed,
             connectedToEmbeddedActivity: eh,

@@ -36,7 +36,7 @@ function h(e) {
       name: l.MetricEvents.SAFETY_WARNING_VIEW
     })
   }, []);
-  let I = s.useCallback(() => {
+  let N = s.useCallback(() => {
     null == m || m(), (0, u.trackCtaEvent)({
       channelId: t,
       warningId: n,
@@ -83,7 +83,7 @@ function h(e) {
       })]
     }), (0, a.jsx)(i.Clickable, {
       className: c.closeButton,
-      onClick: I,
+      onClick: N,
       role: "button",
       "aria-label": d.default.Messages.DISMISS,
       children: (0, a.jsx)(o.default, {

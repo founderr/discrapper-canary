@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return T
   },
   getPreviewDisplayName: function() {
-    return C
+    return I
   },
   isColorDark: function() {
-    return I
+    return C
   }
 });
 var r = n("37983");
@@ -77,11 +77,11 @@ function T(e, t) {
   return "" === e ? null : null != e ? e : t
 }
 
-function C(e, t) {
+function I(e, t) {
   return "" === e ? null : null != e ? e : t
 }
 
-function I(e) {
+function C(e) {
   let t = null != e ? (0, i.getDarkness)(e) : 1;
   return t > .25
 }

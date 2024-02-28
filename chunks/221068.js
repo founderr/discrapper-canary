@@ -25,8 +25,8 @@ var a = n("37983"),
   T = n("347738"),
   A = n("339670"),
   M = n("21763"),
-  I = n("719926"),
-  N = n("957255"),
+  N = n("719926"),
+  I = n("957255"),
   v = n("660478"),
   L = n("18494"),
   R = n("697218"),
@@ -41,9 +41,9 @@ var a = n("37983"),
   H = n("366757"),
   U = n("699473"),
   k = n("556118"),
-  G = n("342009"),
-  B = n("97810"),
-  w = n("933629"),
+  w = n("342009"),
+  G = n("97810"),
+  B = n("933629"),
   V = n("88243"),
   W = n("753089"),
   Z = n("210062"),
@@ -66,7 +66,7 @@ let Q = s.memo(function(e) {
   return (0, a.jsx)(U.default, {
     isGroupStart: l,
     channel: n,
-    message: new I.default({
+    message: new N.default({
       id: t.id,
       key: "pending-upload-".concat(t.id),
       type: K.MessageTypes.DEFAULT,
@@ -137,7 +137,7 @@ function $(e) {
           item: e,
           channel: y,
           isBeforeGroup: null == e.content && J(en[t + 1])
-        }) : (0, a.jsx)(B.default, {
+        }) : (0, a.jsx)(G.default, {
           isUnread: l,
           isBeforeGroup: null == e.content && J(en[t + 1]),
           id: l ? Y.NEW_MESSAGE_BAR_ID : void 0,
@@ -152,7 +152,7 @@ function $(e) {
       }, "forum-post-action-bar-".concat(y.id));
       if (e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED || e.type === K.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER) {
         let t;
-        return t = e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? X.default.Messages.BLOCKED_MESSAGE_COUNT : X.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, a.jsx)(G.default, {
+        return t = e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? X.default.Messages.BLOCKED_MESSAGE_COUNT : X.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, a.jsx)(w.default, {
           unreadId: Y.NEW_MESSAGE_BAR_ID,
           messages: e,
           channel: y,
@@ -161,7 +161,7 @@ function $(e) {
         }, e.key)
       }
       if (null != ei && ei > e.content.timestamp.getTime() * O.default.Millis.SECOND) return;
-      let l = N.default.can(K.Permissions.CREATE_INSTANT_INVITE, y);
+      let l = I.default.can(K.Permissions.CREATE_INSTANT_INVITE, y);
       if ((0, j.default)(e.content, l)) return;
       e.type === K.ChannelStreamTypes.MESSAGE && null == eS && (eS = e);
       let i = e.groupId === (null == eS ? void 0 : eS.groupId) ? eS.content.id : e.groupId,
@@ -180,7 +180,7 @@ function $(e) {
   eT.push(...eA);
   let eM = en[en.length - 1];
   if (null != eo && ea.forEach((e, t) => {
-      let n = 0 === t && (0, b.isNewGroupItem)(y, eM, new I.default({
+      let n = 0 === t && (0, b.isNewGroupItem)(y, eM, new N.default({
         type: K.MessageTypes.DEFAULT,
         author: eo
       }));
@@ -265,7 +265,7 @@ function $(e) {
             },
             children: n
           });
-          s = (0, a.jsx)(w.NewTopicsBar, {
+          s = (0, a.jsx)(B.NewTopicsBar, {
             scrollManager: es,
             content: e,
             channel: y
@@ -294,13 +294,13 @@ function $(e) {
               children: n
             })
           });
-          s = (0, a.jsx)(w.NewMessagesBar, {
+          s = (0, a.jsx)(B.NewMessagesBar, {
             content: e,
             channelId: y.id
           })
         }
       }
-    } else eE.includes(z.ChatOverlays.NEW_MESSAGES) && (s = (0, a.jsx)(w.NewMessagesBar, {
+    } else eE.includes(z.ChatOverlays.NEW_MESSAGES) && (s = (0, a.jsx)(B.NewMessagesBar, {
       content: e.format({
         count: $,
         timestamp: l
@@ -308,10 +308,10 @@ function $(e) {
       channelId: y.id
     }))
   }
-  if (null == s && (0, o.canSeeChannelSummaries)(y) && eh && eE.includes(z.ChatOverlays.SUMMARIES) && (s = (0, a.jsx)(w.TopicsPill, {
+  if (null == s && (0, o.canSeeChannelSummaries)(y) && eh && eE.includes(z.ChatOverlays.SUMMARIES) && (s = (0, a.jsx)(B.TopicsPill, {
       channel: y,
       scrollManager: es
-    })), U.error) r = (0, a.jsx)(w.ErrorLoadingBar, {
+    })), U.error) r = (0, a.jsx)(B.ErrorLoadingBar, {
     loading: U.loadingMore,
     onClick: () => {
       var e;
@@ -326,8 +326,8 @@ function $(e) {
     let {
       jumpReturnTargetId: e
     } = U;
-    r = U.loadingMore && U.jumpedToPresent ? (0, a.jsx)(w.JumpToPresentBar, {}) : null != e ? (0, a.jsx)(w.JumpToPresentBar, {
-      type: w.JumpBarType.REPLY,
+    r = U.loadingMore && U.jumpedToPresent ? (0, a.jsx)(B.JumpToPresentBar, {}) : null != e ? (0, a.jsx)(B.JumpToPresentBar, {
+      type: B.JumpBarType.REPLY,
       onClick: () => {
         var t, n;
         return t = y, n = e, void i.default.jumpToMessage({
@@ -336,7 +336,7 @@ function $(e) {
           flash: !0
         })
       }
-    }) : (0, a.jsx)(w.JumpToPresentBar, {
+    }) : (0, a.jsx)(B.JumpToPresentBar, {
       onClick: () => (function(e) {
         i.default.jumpToPresent(e.id, K.MAX_MESSAGES_PER_CHANNEL);
         let t = L.default.getChannelId();

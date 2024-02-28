@@ -22,7 +22,7 @@ function d(e) {
     onNavigate: s,
     onClose: d,
     trackAnalyticsEvent: T
-  } = e, R = (0, r.useStateFromStores)([o.default], () => {
+  } = e, N = (0, r.useStateFromStores)([o.default], () => {
     let e = o.default.getUser(t);
     return i.default.getName(e)
   });
@@ -44,7 +44,7 @@ function d(e) {
           color: "header-secondary",
           className: E.description,
           children: u.default.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_DESCRIPTION.format({
-            username: R
+            username: N
           })
         })]
       }), (0, n.jsxs)("div", {

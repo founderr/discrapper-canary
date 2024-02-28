@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
 var a = r("37983"),
   n = r("884691"),
   i = r("414456"),
-  o = r.n(i),
-  l = r("446674"),
+  l = r.n(i),
+  o = r("446674"),
   s = r("77078"),
   c = r("220462"),
   d = r("676574"),
@@ -18,7 +18,7 @@ var a = r("37983"),
 function p(e) {
   let {
     devSettingsCategory: t
-  } = e, r = (0, l.useStateFromStores)([d.default], () => d.default.allByCategory(t), [t], l.statesWillNeverBeEqual), i = n.useMemo(() => r.map(e => {
+  } = e, r = (0, o.useStateFromStores)([d.default], () => d.default.allByCategory(t), [t], o.statesWillNeverBeEqual), i = n.useMemo(() => r.map(e => {
     let [t, r, {
       label: n
     }] = e;
@@ -31,7 +31,7 @@ function p(e) {
     }, t)
   }), [r]);
   return (0, a.jsx)("div", {
-    className: o(h.panel, u.panel),
+    className: l(h.panel, u.panel),
     children: i
   })
 }

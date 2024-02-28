@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return I
   }
 }), n("222007");
 var r = n("446674"),
@@ -73,7 +73,7 @@ class T extends r.default.PersistedStore {
   }
 }
 T.displayName = "PromotionsStore", T.persistKey = "PromotionsPersistedStore";
-var C = new T(i.default, {
+var I = new T(i.default, {
   ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: function(e) {
     let {
       activeOutboundPromotions: t,

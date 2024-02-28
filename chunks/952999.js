@@ -28,8 +28,8 @@ var a = n("37983"),
   T = n("461380"),
   A = n("36694"),
   M = n("659500"),
-  I = n("701909"),
-  N = n("773336"),
+  N = n("701909"),
+  I = n("773336"),
   v = n("299039"),
   L = n("172554"),
   R = n("49111"),
@@ -90,9 +90,9 @@ function P(e) {
     guildPersonalized: U
   } = (0, p.useCompletedStates)(l), {
     handleInvite: k,
-    handleMessage: G,
-    handlePersonalize: B,
-    handleDownload: w,
+    handleMessage: w,
+    handlePersonalize: G,
+    handleDownload: B,
     handleAddApplication: V
   } = function(e) {
     let t = s.useCallback(() => {
@@ -236,7 +236,7 @@ function P(e) {
       iconUrl: n("215036"),
       header: x.default.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
       completed: U,
-      onClick: B
+      onClick: G
     })
   }, "customize")), j && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
@@ -247,9 +247,9 @@ function P(e) {
       iconUrl: n("505873"),
       header: x.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
       completed: H,
-      onClick: G
+      onClick: w
     })
-  }, "message")), (0, N.isWeb)() && q.push((0, a.jsx)(o.default.div, {
+  }, "message")), (0, I.isWeb)() && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
       opacity: z[q.length]
@@ -258,7 +258,7 @@ function P(e) {
       iconUrl: n("238032"),
       header: x.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
       completed: b,
-      onClick: w
+      onClick: B
     })
   }, "download")), q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
@@ -274,7 +274,7 @@ function P(e) {
   }, "addapp")));
   let X = T ? x.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : x.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
   f && (X = x.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-  let J = "".concat(I.default.getArticleURL(R.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
+  let J = "".concat(N.default.getArticleURL(R.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
   return (0, a.jsx)(L.default, {
     channelId: t.id,
     children: (0, a.jsx)("div", {

@@ -1,13 +1,13 @@
 "use strict";
-i.r(t), i.d(t, {
+l.r(t), l.d(t, {
   useDeveloperActivityShelfItems: function() {
     return u
   }
 });
-var l = i("884691"),
-  n = i("446674"),
-  a = i("84460"),
-  d = i("954016");
+var i = l("884691"),
+  n = l("446674"),
+  a = l("84460"),
+  d = l("954016");
 let u = () => {
   let {
     isEnabled: e,
@@ -15,7 +15,7 @@ let u = () => {
   } = (0, n.useStateFromStoresObject)([a.default], () => ({
     isEnabled: a.default.getIsEnabled(),
     lastUsedObject: a.default.getLastUsedObject()
-  }), []), i = (0, n.useStateFromStoresArray)([a.default], () => a.default.getDeveloperShelfItems(), []), u = l.useMemo(() => e ? i.map(e => {
+  }), []), l = (0, n.useStateFromStoresArray)([a.default], () => a.default.getDeveloperShelfItems(), []), u = i.useMemo(() => e ? l.map(e => {
     let t = {
       application: e,
       activity: {
@@ -25,10 +25,10 @@ let u = () => {
       }
     };
     return t
-  }).sort((e, i) => {
-    let l = t[e.application.id],
-      n = t[i.application.id];
-    return null == l ? 1 : null == n ? -1 : n - l
-  }) : [], [i, e, t]);
+  }).sort((e, l) => {
+    let i = t[e.application.id],
+      n = t[l.application.id];
+    return null == i ? 1 : null == n ? -1 : n - i
+  }) : [], [l, e, t]);
   return u
 }

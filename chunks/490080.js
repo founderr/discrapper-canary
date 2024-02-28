@@ -30,8 +30,8 @@ var i = l("37983"),
   N = l("141962"),
   j = l("639028"),
   D = l("782340"),
-  y = l("453193"),
-  M = l("728791");
+  M = l("453193"),
+  y = l("728791");
 
 function L(e) {
   let {
@@ -39,11 +39,11 @@ function L(e) {
     icon: l
   } = e;
   return (0, i.jsxs)(c.Text, {
-    className: y.activityTag,
+    className: M.activityTag,
     color: "interactive-normal",
     variant: "text-xs/semibold",
     children: [(0, E.isNotNullish)(l) ? (0, i.jsx)(l, {
-      className: y.icon,
+      className: M.icon,
       backgroundColor: "interactive-normal"
     }) : null, t]
   })
@@ -67,16 +67,16 @@ function b(e) {
     var u, v;
     let e = "".concat((0, p.default)(null !== (u = l.maxParticipants) && void 0 !== u ? u : 0));
     return s && (e = null !== (v = l.description) && void 0 !== v ? v : ""), (0, i.jsx)(c.Text, {
-      className: y.activitySubtitleText,
+      className: M.activitySubtitleText,
       variant: "text-xs/normal",
       color: "interactive-normal",
       children: e
     })
   }
   return (0, i.jsxs)("div", {
-    className: y.activitySubtitleText,
+    className: M.activitySubtitleText,
     children: [(0, i.jsx)(c.Text, {
-      className: y.usersArePlayingText,
+      className: M.usersArePlayingText,
       variant: "text-xs/normal",
       children: o.length > 1 ? D.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
         username: d,
@@ -138,14 +138,14 @@ function V(e) {
         ...e
       }))
     } : void 0,
-    className: s(y.activityItem, {
-      [y.large]: !0 === C,
-      [y.disabled]: O !== S.ActivityAction.START
+    className: s(M.activityItem, {
+      [M.large]: !0 === C,
+      [M.disabled]: O !== S.ActivityAction.START
     }),
     children: [(0, i.jsxs)("div", {
       ref: U,
-      className: s(y.activityImageContainer, {
-        [y.large]: !0 === C
+      className: s(M.activityImageContainer, {
+        [M.large]: !0 === C
       }),
       onMouseEnter: K,
       onFocus: K,
@@ -154,17 +154,17 @@ function V(e) {
       children: [(0, i.jsx)(A.default, {
         imageBackground: V,
         applicationName: Y.name,
-        imageClassName: s(y.activityImage, {
-          [y.large]: !0 === C
+        imageClassName: s(M.activityImage, {
+          [M.large]: !0 === C
         }),
-        imageNotFoundClassName: y.brokenImageIconWrapper
+        imageNotFoundClassName: M.brokenImageIconWrapper
       }), null != R && W && O === S.ActivityAction.START ? (0, i.jsx)("div", {
-        className: s(y.activityVideo, {
-          [y.videoFadeOut]: !G
+        className: s(M.activityVideo, {
+          [M.videoFadeOut]: !G
         }),
         onAnimationEnd: () => G ? null : z(!1),
         children: (0, i.jsx)(I.default, {
-          className: y.activityVideo,
+          className: M.activityVideo,
           src: R,
           loop: !0,
           autoPlay: !0,
@@ -174,9 +174,9 @@ function V(e) {
         action: O,
         onClick: B
       }) : null, (0, i.jsx)("div", {
-        className: y.overlayBadge,
+        className: M.overlayBadge,
         children: (0, i.jsx)("div", {
-          className: y.badgeContainer,
+          className: M.badgeContainer,
           children: (0, i.jsx)(_.default, {
             name: Y.name,
             labelType: F
@@ -185,35 +185,35 @@ function V(e) {
       }), P ? (0, i.jsx)(c.Tooltip, {
         text: D.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
         children: e => (0, i.jsx)("div", {
-          className: y.devShelfBadge,
+          className: M.devShelfBadge,
           ...e,
           children: (0, i.jsx)(h.default, {
-            className: y.devShelfIcon
+            className: M.devShelfIcon
           })
         })
       }) : null]
     }), (0, i.jsxs)("div", {
-      className: s(y.activityTextContainer, {
-        [y.large]: C
+      className: s(M.activityTextContainer, {
+        [M.large]: C
       }),
       children: [C ? (0, i.jsx)(c.Text, {
-        className: y.activityMaxParticipantsLarge,
+        className: M.activityMaxParticipantsLarge,
         variant: "text-xs/normal",
         color: "interactive-normal",
         children: (0, p.default)(null !== (t = Y.maxParticipants) && void 0 !== t ? t : 0)
       }) : null, (0, i.jsxs)("div", {
-        className: y.activityName,
+        className: M.activityName,
         children: [(0, i.jsx)(c.Heading, {
-          className: y.activityTitleText,
+          className: M.activityTitleText,
           variant: "heading-md/semibold",
           color: "interactive-active",
           children: Y.name
         }), null != w ? (0, i.jsx)(c.Tooltip, {
           text: w,
           children: e => (0, i.jsx)("img", {
-            className: y.staffBadge,
+            className: M.staffBadge,
             alt: w,
-            src: M,
+            src: y,
             ...e
           })
         }) : null]
@@ -224,7 +224,7 @@ function V(e) {
         guildId: f,
         large: C
       }), (0, i.jsx)("div", {
-        className: y.activityTagsContainer,
+        className: M.activityTagsContainer,
         children: Y.tags.slice(0, 3).map(e => (0, i.jsx)(L, {
           value: e
         }, "activity-tag-".concat(Y.id, "-").concat(e)))

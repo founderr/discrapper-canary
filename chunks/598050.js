@@ -58,12 +58,12 @@ var A = (0, u.default)(e => {
     [f.StageChannelParticipantNamedIndex.SPEAKER]: D,
     [f.StageChannelParticipantNamedIndex.AUDIENCE]: b,
     [f.StageChannelParticipantNamedIndex.SELECTED]: 1
-  }, w = (0, h.useThrottleDurationForChannel)(l.id), [F, k] = (0, h.useStageChannelParticipantsListThrottled)(l.id, U, w), B = [Math.max(null !== (t = F[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = F[1]) && void 0 !== n ? n : 1, 1), F[2]], {
-    speakerTileWidth: V,
+  }, w = (0, h.useThrottleDurationForChannel)(l.id), [F, k] = (0, h.useStageChannelParticipantsListThrottled)(l.id, U, w), V = [Math.max(null !== (t = F[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = F[1]) && void 0 !== n ? n : 1, 1), F[2]], {
+    speakerTileWidth: B,
     speakerTileHeight: G
-  } = T(a, D), H = A ? a - 32 : Math.min(a - 64, 3 * V + 8), W = e => e === F.length - 1 || 0 === j && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
+  } = T(a, D), H = A ? a - 32 : Math.min(a - 64, 3 * B + 8), W = e => e === F.length - 1 || 0 === j && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
   return (0, s.jsx)(p.default, {
-    sections: B,
+    sections: V,
     renderSection: e => {
       let {
         section: t
@@ -110,7 +110,7 @@ var A = (0, u.default)(e => {
           if (Y) return null;
           return (0, s.jsx)(i.Fragment, {
             children: (0, s.jsx)(E.default, {
-              tileWidth: V,
+              tileWidth: B,
               channel: l,
               participants: a,
               selectedParticipant: L

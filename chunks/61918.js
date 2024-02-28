@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("449008"),
   F = n("158998"),
   k = n("50885"),
-  B = n("49111"),
-  V = n("782340"),
+  V = n("49111"),
+  B = n("782340"),
   G = n("559571");
 let H = k.default.getEnableHardwareAcceleration(),
   W = 44 + g.AVATAR_DECORATION_PADDING,
@@ -140,7 +140,7 @@ class z extends a.Component {
       } = this.props, n = "@".concat(F.default.getUserTag(e, {
         decoration: "never"
       })), l = "<@".concat(e.id, ">");
-      U.ComponentDispatch.dispatchToLastSubscribed(B.ComponentActions.INSERT_TEXT, {
+      U.ComponentDispatch.dispatchToLastSubscribed(V.ComponentActions.INSERT_TEXT, {
         plainText: n,
         rawText: l
       }), E.default.startTyping(t.id)
@@ -151,8 +151,8 @@ class z extends a.Component {
       null != t && (e.stopPropagation(), (0, x.openGuildBoostingMarketingModal)({
         guildId: t,
         location: {
-          section: B.AnalyticsSections.MEMBER_LIST,
-          object: B.AnalyticsObjects.BOOST_GEM_ICON
+          section: V.AnalyticsSections.MEMBER_LIST,
+          object: V.AnalyticsObjects.BOOST_GEM_ICON
         }
       }))
     }, this.renderUserPopout = e => (0, l.jsx)(R.default, {
@@ -162,8 +162,8 @@ class z extends a.Component {
       channelId: this.props.channel.id,
       analyticsParams: {
         location: {
-          page: B.AnalyticsPages.GUILD_CHANNEL,
-          section: B.AnalyticsSections.MEMBER_LIST
+          page: V.AnalyticsPages.GUILD_CHANNEL,
+          section: V.AnalyticsSections.MEMBER_LIST
         }
       }
     })
@@ -200,7 +200,7 @@ let K = a.memo(e => {
       guildId: s,
       size: 16
     });
-    return t === B.StatusTypes.UNKNOWN ? (0, l.jsx)("div", {
+    return t === V.StatusTypes.UNKNOWN ? (0, l.jsx)("div", {
       className: G.membersGroup,
       children: (0, l.jsx)("div", {
         className: G.memberGroupsPlaceholder
@@ -208,7 +208,7 @@ let K = a.memo(e => {
     }) : (0, l.jsxs)(b.default, {
       className: G.membersGroup,
       children: [(0, l.jsx)(h.HiddenVisually, {
-        children: V.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+        children: B.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
           title: n,
           count: a
         })
@@ -286,7 +286,7 @@ class X extends a.Component {
             component: (0, l.jsx)(h.HiddenVisually, {
               children: (0, l.jsx)(h.H, {
                 id: s,
-                children: V.default.Messages.MEMBERS_LIST_LANDMARK_LABEL.format({
+                children: B.default.Messages.MEMBERS_LIST_LANDMARK_LABEL.format({
                   channel: n.name
                 })
               })
@@ -300,7 +300,7 @@ class X extends a.Component {
                 } = n;
                 return (0, l.jsx)(h.List, {
                   innerRole: r,
-                  innerAriaLabel: V.default.Messages.MEMBERS,
+                  innerAriaLabel: B.default.Messages.MEMBERS,
                   ref: e => {
                     var t;
                     this._list = e, this.props.listRef.current = e, s.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
@@ -464,14 +464,14 @@ class X extends a.Component {
       this.hasContentFeed() && (t = t.filter(e => e.section !== v.CONTENT_FEED_SECTION));
       let l = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(w.isNotNullish);
       if (0 === l.length) return;
-      let a = l.reduce((e, t) => t.type !== j.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === B.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
+      let a = l.reduce((e, t) => t.type !== j.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === V.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
         num_users_visible: 0,
         num_users_visible_with_mobile_indicator: 0,
         num_users_visible_with_game_activity: 0,
         num_users_visible_with_activity: 0,
         num_users_visible_with_avatar_decoration: 0
       });
-      this.lastReportedAnalyticsChannel = this.props.channel.id, C.default.trackWithMetadata(B.AnalyticEvents.MEMBER_LIST_VIEWED, {
+      this.lastReportedAnalyticsChannel = this.props.channel.id, C.default.trackWithMetadata(V.AnalyticEvents.MEMBER_LIST_VIEWED, {
         ...a
       })
     }

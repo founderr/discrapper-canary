@@ -45,7 +45,7 @@ function O(e) {
     renderExternalHeader: b
   } = e, D = (0, v.default)(), U = (0, r.useStateFromStoresArray)([I.default], () => null != P ? I.default.getEmbeddedActivitiesForChannel(P) : [], [P]), w = (0, T.useEmbeddedApps)(U), F = (0, T.useEmbeddedAppsWithPresence)(w), k = a.useCallback(() => {
     (0, _.updateActivityPanelMode)(M.ActivityPanelModes.PIP)
-  }, []), B = a.useRef(null), V = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), G = V !== M.FocusedActivityLayouts.NO_CHAT, [H, W] = a.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : O), Y = a.useCallback(e => {
+  }, []), V = a.useRef(null), B = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), G = B !== M.FocusedActivityLayouts.NO_CHAT, [H, W] = a.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : O), Y = a.useCallback(e => {
     o.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
@@ -77,8 +77,8 @@ function O(e) {
   let en = F.get(null === (n = w[0]) || void 0 === n ? void 0 : null === (t = n.application) || void 0 === t ? void 0 : t.id),
     el = [];
   return null != en && (el = Array.from(en.embeddedActivity.userIds).map(e => p.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, l.jsxs)("div", {
-    className: i(L.wrapper, y[V], (0, C.getThemeClass)(R.ThemeTypes.DARK)),
-    ref: B,
+    className: i(L.wrapper, y[B], (0, C.getThemeClass)(R.ThemeTypes.DARK)),
+    ref: V,
     style: G && null != H ? {
       minHeight: 200,
       maxHeight: O,
@@ -145,7 +145,7 @@ function O(e) {
     }), G ? (0, l.jsx)(d.default, {
       minHeight: 480,
       maxHeight: O,
-      resizableNode: B,
+      resizableNode: V,
       onResize: e => {
         S.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !0

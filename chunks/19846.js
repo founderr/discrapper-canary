@@ -25,8 +25,8 @@ var a = n("37983"),
   T = n("841397"),
   A = n("49111"),
   M = n("680894"),
-  I = n("590456"),
-  N = n("782340"),
+  N = n("590456"),
+  I = n("782340"),
   v = n("817302");
 let L = e => {
     let {
@@ -57,7 +57,7 @@ let L = e => {
     return null == n || 0 === n.length ? (0, a.jsx)(r.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
-      children: N.default.Messages.NO_MUTUAL_GUILDS
+      children: I.default.Messages.NO_MUTUAL_GUILDS
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
         className: v.avatarContainer,
@@ -66,7 +66,7 @@ let L = e => {
         onClick: () => {
           (0, p.openUserProfileModal)({
             userId: t,
-            section: I.UserProfileSections.MUTUAL_GUILDS,
+            section: N.UserProfileSections.MUTUAL_GUILDS,
             analyticsLocation: {
               section: A.AnalyticsSections.DIRECT_MESSAGE
             }
@@ -75,7 +75,7 @@ let L = e => {
         children: (0, a.jsx)(r.Text, {
           className: v.mutualGuilds,
           variant: "text-sm/normal",
-          children: N.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+          children: I.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
             count: n.length
           })
         })
@@ -108,7 +108,7 @@ let L = e => {
           type: A.RelationshipTypes.BLOCKED
         })
       },
-      children: N.default.Messages.BLOCK
+      children: I.default.Messages.BLOCK
     });
     switch (n) {
       case A.RelationshipTypes.NONE:
@@ -117,7 +117,7 @@ let L = e => {
             className: v.action,
             size: r.Button.Sizes.TINY,
             onClick: u,
-            children: N.default.Messages.ADD_FRIEND
+            children: I.default.Messages.ADD_FRIEND
           }), d]
         });
       case A.RelationshipTypes.FRIEND:
@@ -131,7 +131,7 @@ let L = e => {
               })
             },
             color: r.Button.Colors.PRIMARY,
-            children: N.default.Messages.REMOVE_FRIEND
+            children: I.default.Messages.REMOVE_FRIEND
           }), d]
         });
       case A.RelationshipTypes.BLOCKED:
@@ -144,7 +144,7 @@ let L = e => {
             })
           },
           color: r.Button.Colors.PRIMARY,
-          children: N.default.Messages.UNBLOCK
+          children: I.default.Messages.UNBLOCK
         });
       case A.RelationshipTypes.PENDING_INCOMING:
         return (0, a.jsxs)(a.Fragment, {
@@ -152,12 +152,12 @@ let L = e => {
             className: v.action,
             color: "header-secondary",
             variant: "text-sm/normal",
-            children: N.default.Messages.FRIEND_REQUEST_RECEIVED
+            children: I.default.Messages.FRIEND_REQUEST_RECEIVED
           }), (0, a.jsx)(r.Button, {
             className: v.action,
             size: r.Button.Sizes.TINY,
             onClick: u,
-            children: N.default.Messages.FRIEND_REQUEST_ACCEPT
+            children: I.default.Messages.FRIEND_REQUEST_ACCEPT
           }), (0, a.jsx)(r.Button, {
             className: v.action,
             size: r.Button.Sizes.TINY,
@@ -167,7 +167,7 @@ let L = e => {
                 location: A.AnalyticsPages.DM_CHANNEL
               })
             },
-            children: N.default.Messages.FRIEND_REQUEST_IGNORE
+            children: I.default.Messages.FRIEND_REQUEST_IGNORE
           }), d]
         });
       case A.RelationshipTypes.PENDING_OUTGOING:
@@ -176,7 +176,7 @@ let L = e => {
             className: v.action,
             size: r.Button.Sizes.TINY,
             disabled: !0,
-            children: N.default.Messages.ADD_FRIEND_BUTTON_AFTER
+            children: I.default.Messages.ADD_FRIEND_BUTTON_AFTER
           }), d]
         });
       default:
@@ -188,7 +188,7 @@ let L = e => {
       channelId: t,
       otherUserId: n
     } = e, l = s.useCallback(() => {
-      (0, r.showToast)((0, r.createToast)(N.default.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE))
+      (0, r.showToast)((0, r.createToast)(I.default.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE))
     }, []), i = s.useCallback(() => {
       h.default.closeChannelSidebar(E.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
     }, []), o = s.useCallback(() => {
@@ -213,7 +213,7 @@ let L = e => {
         onClick: () => u(t),
         disabled: _,
         submitting: f,
-        children: N.default.Messages.MESSAGE_REQUEST_ACCEPT
+        children: I.default.Messages.MESSAGE_REQUEST_ACCEPT
       }), (0, a.jsx)(r.Button, {
         className: v.action,
         size: r.Button.Sizes.TINY,
@@ -221,7 +221,7 @@ let L = e => {
         color: r.Button.Colors.PRIMARY,
         disabled: _,
         submitting: C,
-        children: N.default.Messages.MESSAGE_REQUEST_IGNORE
+        children: I.default.Messages.MESSAGE_REQUEST_IGNORE
       })]
     })
   };

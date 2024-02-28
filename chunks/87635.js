@@ -25,9 +25,9 @@ var a = n("37983"),
   T = n("290886"),
   A = n("205454"),
   M = n("782340"),
-  I = n("490259");
+  N = n("490259");
 
-function N(e) {
+function I(e) {
   let {
     action: t
   } = e, n = (0, o.default)([h.default], () => h.default.getChannel(t.channelId)), s = (0, c.default)(n, !0);
@@ -60,7 +60,7 @@ function v(e) {
     emojiName: l,
     size: A.CTAEmojiSize.MEDIUM,
     defaultComponent: (0, a.jsx)(r, {
-      className: I.channelIcon
+      className: N.channelIcon
     })
   })
 }
@@ -99,7 +99,7 @@ function L(e) {
     null != A && (0, g.selectNewMemberActionChannel)(f, A.channelId)
   }, [f, A]);
   return null == E || R && !x ? null : (0, a.jsx)("div", {
-    className: i(I.container, C),
+    className: i(N.container, C),
     children: x && null != A ? (0, a.jsx)(r.default.div, {
       style: {
         marginBottom: P.interpolate({
@@ -108,35 +108,35 @@ function L(e) {
         })
       },
       children: (0, a.jsxs)(u.Clickable, {
-        className: i(I.banner, I.clickable),
+        className: i(N.banner, N.clickable),
         onClick: j,
         children: [(0, a.jsx)(v, {
           channelId: A.channelId,
           emojiId: null === (t = A.emoji) || void 0 === t ? void 0 : t.id,
           emojiName: null == A ? void 0 : null === (n = A.emoji) || void 0 === n ? void 0 : n.name
         }), (0, a.jsxs)("div", {
-          className: I.text,
+          className: N.text,
           children: [(0, a.jsx)(u.Text, {
             variant: "text-md/semibold",
             color: "header-primary",
             children: M.default.Messages.MEMBER_ACTIONS_NEXT_STEP.format({
               step: A.title
             })
-          }), (0, a.jsx)(N, {
+          }), (0, a.jsx)(I, {
             action: A
           })]
         }), (0, a.jsx)("div", {
-          className: I.iconCircle,
+          className: N.iconCircle,
           children: (0, a.jsx)(p.default, {
             width: 16,
             height: 16,
             color: y.hex(),
-            className: I.nextIcon
+            className: N.nextIcon
           })
         })]
       })
     }) : (0, a.jsxs)(r.default.div, {
-      className: I.banner,
+      className: N.banner,
       style: {
         marginBottom: D.interpolate({
           inputRange: [0, 1],
@@ -148,7 +148,7 @@ function L(e) {
         emojiId: null === (l = E.emoji) || void 0 === l ? void 0 : l.id,
         emojiName: null == E ? void 0 : null === (c = E.emoji) || void 0 === c ? void 0 : c.name
       }), (0, a.jsxs)("div", {
-        className: I.text,
+        className: N.text,
         children: [(0, a.jsx)(u.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
@@ -159,7 +159,7 @@ function L(e) {
           children: M.default.Messages.MEMBER_ACTION_CHAT
         })]
       }), T ? (0, a.jsx)(m.default, {
-        className: I.completed,
+        className: N.completed,
         backgroundColor: y.hex(),
         width: 20,
         height: 20

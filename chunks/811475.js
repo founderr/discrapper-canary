@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   activityInviteKey: function() {
-    return N
+    return I
   },
   default: function() {
     return L
@@ -28,8 +28,8 @@ var a = n("37983"),
   T = n("718422"),
   A = n("49111"),
   M = n("782340"),
-  I = n("49077");
-let N = "ActivityInvite";
+  N = n("49077");
+let I = "ActivityInvite";
 class v extends s.PureComponent {
   componentDidMount() {
     this.fetchApplication()
@@ -90,18 +90,18 @@ class v extends s.PureComponent {
         })
       }), (0, a.jsxs)(o.ModalContent, {
         children: [(0, a.jsx)("div", {
-          className: I.subHeader,
+          className: N.subHeader,
           children: M.default.Messages.MESSAGE_PREVIEW
         }), (0, a.jsx)(d.default, {
           activityActionType: f,
           activity: l,
-          className: I.preview,
+          className: N.preview,
           application: C,
           partyId: null != l.party ? l.party.id : null,
           isPreview: !0,
           analyticsLocations: r
         }), (0, a.jsx)("div", {
-          className: I.subHeader,
+          className: N.subHeader,
           children: M.default.Messages.ADD_A_COMMENT_OPTIONAL
         }), (0, a.jsx)(o.Popout, {
           position: "top",
@@ -122,7 +122,7 @@ class v extends s.PureComponent {
             })
           },
           children: () => (0, a.jsx)(m.default, {
-            className: I.textArea,
+            className: N.textArea,
             textValue: e,
             richValue: t,
             focused: n,
@@ -130,7 +130,7 @@ class v extends s.PureComponent {
             onChange: this.handleTextChange,
             onSubmit: this.handleShare,
             type: p.ChatInputTypes.FORM,
-            parentModalKey: N,
+            parentModalKey: I,
             disableThemedBackground: !0
           })
         })]

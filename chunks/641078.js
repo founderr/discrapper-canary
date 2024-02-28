@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return x
   },
   maybeFetchActiveBogoPromotion: function() {
-    return N
+    return v
   },
   isEligibleForBOGOAnnouncementModal: function() {
     return A
@@ -27,8 +27,8 @@ var r = n("866227"),
   _ = n("340412"),
   E = n("719923"),
   T = n("982457"),
-  C = n("433947"),
-  I = n("705337"),
+  I = n("433947"),
+  C = n("705337"),
   p = n("935566"),
   S = n("917247"),
   P = n("538620"),
@@ -90,7 +90,7 @@ function x() {
     _ = Date.now(),
     {
       enabled: E
-    } = I.default.useExperiment({
+    } = C.default.useExperiment({
       location: "153d31_2"
     }, {
       autoTrackExposure: f,
@@ -98,7 +98,7 @@ function x() {
     });
   return !(_ > c) && E
 }
-async function v() {
+async function N() {
   var e;
   let t = f.default.getCurrentUser(),
     n = !(null == t ? void 0 : t.isClaimed()),
@@ -114,14 +114,14 @@ async function v() {
     } = (0, p.isBogoPromotionExperimentEnabled)(),
     {
       enabled: l
-    } = I.default.getCurrentConfig({
+    } = C.default.getCurrentConfig({
       location: "153d31_4"
     }, {
       autoTrackExposure: !1
     }),
     {
       enabled: a
-    } = C.BOGOAnnouncementModalExperiment.getCurrentConfig({
+    } = I.BOGOAnnouncementModalExperiment.getCurrentConfig({
       location: "153d31_5"
     }, {
       autoTrackExposure: !1
@@ -137,8 +137,8 @@ async function v() {
     mostRecentSubscription: o
   })
 }
-async function N() {
-  let e = await v();
+async function v() {
+  let e = await N();
   if (!e) return;
   let t = L.default.bogoPromotion;
   if (null != t) {
@@ -151,7 +151,7 @@ async function A() {
   let e = L.default.bogoPromotion,
     t = null != e && new Date(e.endDate).valueOf() >= Date.now() && new Date(e.startDate).valueOf() <= Date.now(),
     n = (0, c.isDismissibleContentDismissed)(a.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL),
-    r = await v(),
+    r = await N(),
     {
       enabled: i
     } = p.BogoPromotionExperiment.getCurrentConfig({
@@ -161,7 +161,7 @@ async function A() {
     }),
     {
       enabled: l
-    } = C.BOGOAnnouncementModalExperiment.getCurrentConfig({
+    } = I.BOGOAnnouncementModalExperiment.getCurrentConfig({
       location: "153d31_7"
     }, {
       autoTrackExposure: t && i && !n && r

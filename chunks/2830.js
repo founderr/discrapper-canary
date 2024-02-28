@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return V
   }
 }), n("424973");
 var l = n("37983"),
@@ -67,7 +67,7 @@ function k(e) {
   })
 }
 
-function B(e) {
+function V(e) {
   let {
     inPopout: t,
     channel: n,
@@ -83,11 +83,11 @@ function B(e) {
     selectedParticipant: y.default.getSelectedParticipant(g),
     voiceParticipantsHidden: y.default.getVoiceParticipantsHidden(g),
     userParticipantCount: y.default.getUserParticipantCount(g)
-  }), [g]), B = (0, O.default)(n), {
-    preventIdle: V,
+  }), [g]), V = (0, O.default)(n), {
+    preventIdle: B,
     allowIdle: G
   } = (0, C.usePreventIdle)("popup"), H = [];
-  if (B) {
+  if (V) {
     let e = (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(j.id) : void 0,
       t = (null == j ? void 0 : j.type) === D.ParticipantTypes.ACTIVITY ? j.id : void 0;
     H.push((0, l.jsx)(x.default, {
@@ -142,7 +142,7 @@ function B(e) {
   }, "select-participant")), !t && H.push((0, l.jsx)(f.default, {
     className: F.button
   }, "clips")), H.push((0, l.jsx)(E.default, {
-    onOpen: V,
+    onOpen: B,
     onClose: G,
     className: F.button
   }, "recents")), H.push((0, l.jsx)(c.CallscopeChannelCallIssueMarker, {

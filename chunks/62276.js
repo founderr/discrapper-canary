@@ -30,8 +30,8 @@ var i = l("37983"),
   N = l("687292"),
   j = l("141962"),
   D = l("905647"),
-  y = l("49111"),
-  M = l("782340"),
+  M = l("49111"),
+  y = l("782340"),
   L = l("962529"),
   b = l("728791");
 
@@ -67,10 +67,10 @@ function V(e) {
     var t;
     return (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) !== e
   }).map(e => f.default.getUser(e)).filter(x.isNotNullish), [t.application.id]), z = null != W[0] ? (0, T.truncateText)(C.default.getName(null, null, W[0]), 25) : null, K = null;
-  null != z && W.length > 1 ? K = M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
+  null != z && W.length > 1 ? K = y.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
     username1: z,
     extras: W.length - 1
-  }) : null != z && (K = M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format({
+  }) : null != z && (K = y.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format({
     username1: z
   }));
   let X = a.useCallback(e => e && (null == O ? void 0 : O({
@@ -84,11 +84,11 @@ function V(e) {
   }, [J]);
   let et = () => Q(!0),
     el = () => Q(!1),
-    ei = null == t.application.maxParticipants || -1 === t.application.maxParticipants ? M.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : M.default.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({
+    ei = null == t.application.maxParticipants || -1 === t.application.maxParticipants ? y.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : y.default.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({
       count: t.application.maxParticipants
     }),
     ea = a.useCallback(() => {
-      U ? E.ComponentDispatch.dispatch(y.ComponentActions.SHOW_ACTIVITY_DETAILS, {
+      U ? E.ComponentDispatch.dispatch(M.ComponentActions.SHOW_ACTIVITY_DETAILS, {
         applicationId: t.application.id
       }) : w === g.ActivityAction.START && Y()
     }, [w, t, U, Y]),
@@ -210,7 +210,7 @@ function V(e) {
         }),
         children: [(0, i.jsx)(c.Text, {
           variant: "text-sm/semibold",
-          children: M.default.Messages.LEARN_MORE
+          children: y.default.Messages.LEARN_MORE
         }), (0, i.jsx)(h.default, {
           width: 16,
           height: 16

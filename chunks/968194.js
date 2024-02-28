@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   sync: function() {
     return o
   },
@@ -16,58 +16,58 @@ var n = i("872717"),
   u = i("49111"),
   r = i("450484");
 
-function d(e) {
-  if ("string" == typeof e) return e;
+function d(t) {
+  if ("string" == typeof t) return t;
   throw Error("value is not a string")
 }
 
-function s(e) {
-  let t = (0, r.getSpotifyResourceType)(d(e.type));
-  if (null === t) throw Error("invalid type ".concat(e.type));
+function s(t) {
+  let e = (0, r.getSpotifyResourceType)(d(t.type));
+  if (null === e) throw Error("invalid type ".concat(t.type));
   return {
-    context_uri: "string" == typeof e.context_uri ? e.context_uri : void 0,
-    album_id: d(e.album_id),
-    artist_ids: Array.isArray(e.artist_ids) ? e.artist_ids.map(d) : [],
-    type: t,
-    button_urls: Array.isArray(e.button_url) ? e.button_url.map(d) : []
+    context_uri: "string" == typeof t.context_uri ? t.context_uri : void 0,
+    album_id: d(t.album_id),
+    artist_ids: Array.isArray(t.artist_ids) ? t.artist_ids.map(d) : [],
+    type: e,
+    button_urls: Array.isArray(t.button_url) ? t.button_url.map(d) : []
   }
 }
 
-function o(e, t) {
+function o(t, e) {
   l.default.dispatch({
     type: "ACTIVITY_SYNC",
-    activity: e,
-    userId: t
+    activity: t,
+    userId: e
   })
 }
 
-function c(e, t) {
-  f(e, t).then(i => l.default.dispatch({
+function c(t, e) {
+  f(t, e).then(i => l.default.dispatch({
     type: "ACTIVITY_PLAY",
-    activity: e,
-    userId: t,
+    activity: t,
+    userId: e,
     metadata: i
   })).catch(() => l.default.dispatch({
     type: "ACTIVITY_PLAY",
-    activity: e,
-    userId: t
+    activity: t,
+    userId: e
   }))
 }
-async function f(e, t) {
-  let i = e.metadata;
+async function f(t, e) {
+  let i = t.metadata;
   if (null != i) return s(i);
-  let r = a.default.getActivityMetadata(t);
+  let r = a.default.getActivityMetadata(e);
   if (null != r) return s(r);
-  if (null == e.session_id) throw Error("null/undefined session_id");
+  if (null == t.session_id) throw Error("null/undefined session_id");
   let {
     body: d
   } = await n.default.get({
-    url: u.Endpoints.USER_ACTIVITY_METADATA(t, e.session_id, e.application_id),
+    url: u.Endpoints.USER_ACTIVITY_METADATA(e, t.session_id, t.application_id),
     oldFormErrors: !0
   });
   return l.default.dispatch({
     type: "ACTIVITY_METADATA_UPDATE",
     metadata: d,
-    userId: t
+    userId: e
   }), s(d)
 }

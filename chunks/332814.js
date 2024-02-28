@@ -14,8 +14,8 @@ var a = r("37983");
 r("884691");
 var n = r("414456"),
   i = r.n(n),
-  o = r("77078"),
-  l = r("699412");
+  l = r("77078"),
+  o = r("699412");
 
 function s(e) {
   let {
@@ -23,7 +23,7 @@ function s(e) {
     children: r
   } = e;
   return (0, a.jsx)("dl", {
-    className: i(l.properties, t),
+    className: i(o.properties, t),
     children: r
   })
 }
@@ -35,7 +35,7 @@ function c(e) {
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("dt", {
-      className: l.propertyName,
+      className: o.propertyName,
       children: t
     }), (0, a.jsx)("dd", {
       children: r
@@ -47,10 +47,10 @@ function d(e) {
   let {
     value: t
   } = e;
-  return (0, a.jsx)(o.Checkbox, {
+  return (0, a.jsx)(l.Checkbox, {
     size: 16,
     value: t,
-    shape: o.Checkbox.Shapes.SMALL_BOX,
+    shape: l.Checkbox.Shapes.SMALL_BOX,
     displayOnly: !0
   })
 }

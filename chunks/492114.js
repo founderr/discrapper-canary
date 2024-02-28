@@ -20,8 +20,8 @@ var u = n("917351"),
   T = n("49111");
 let A = T.FormStates.CLOSED,
   M = {},
-  I = {},
-  N = !1,
+  N = {},
+  I = !1,
   v = !1,
   L = null,
   R = ["name", "type", "topic_", "bitrate_", "userLimit_", "nsfw_", "flags_", "rateLimitPerUser_", "defaultThreadRateLimitPerUser", "defaultAutoArchiveDuration", "template", "defaultReactionEmoji", "rtcRegion", "videoQualityMode", "threadMetadata", "banner", "availableTags", "defaultSortOrder", "defaultForumLayout", "iconEmoji", "themeColor"];
@@ -37,19 +37,19 @@ function y(e) {
 }
 
 function x(e) {
-  a = e.section, s = e.subsection, null != i && a === T.ChannelSettingsSections.INSTANT_INVITES && (N = !0, C.default.get({
+  a = e.section, s = e.subsection, null != i && a === T.ChannelSettingsSections.INSTANT_INVITES && (I = !0, C.default.get({
     url: T.Endpoints.INSTANT_INVITES(i.id),
     oldFormErrors: !0
   }).then(e => {
-    N = !1, p.default.dispatch({
+    I = !1, p.default.dispatch({
       type: "CHANNEL_SETTINGS_LOADED_INVITES",
       invites: e.body
     })
-  }, () => N = !1))
+  }, () => I = !1))
 }
 
 function O() {
-  v = !1, A = T.FormStates.CLOSED, a = null, i = l = null, r = null, I = {}
+  v = !1, A = T.FormStates.CLOSED, a = null, i = l = null, r = null, N = {}
 }
 let D = d.debounce(() => {
   if (null == i || null == l) return !1;
@@ -89,8 +89,8 @@ class j extends h.default.Store {
   }
   getInvites() {
     return {
-      invites: I,
-      loading: N
+      invites: N,
+      loading: I
     }
   }
   showNotice() {
@@ -112,7 +112,7 @@ class j extends h.default.Store {
       channel: i,
       section: a,
       subsection: s,
-      invites: I,
+      invites: N,
       selectedOverwriteId: o,
       hasChanges: this.hasChanges(),
       analyticsLocation: L
@@ -184,8 +184,8 @@ let b = new j(p.default, {
   },
   CHANNEL_SETTINGS_SET_SECTION: x,
   CHANNEL_SETTINGS_LOADED_INVITES: function(e) {
-    I = {}, e.invites.forEach(e => {
-      I[e.code] = P(e)
+    N = {}, e.invites.forEach(e => {
+      N[e.code] = P(e)
     })
   },
   CHANNEL_UPDATES: function(e) {
@@ -219,13 +219,13 @@ let b = new j(p.default, {
     A = T.FormStates.CLOSED
   },
   INSTANT_INVITE_REVOKE_SUCCESS: function(e) {
-    I = {
-      ...I
-    }, delete I[e.code]
+    N = {
+      ...N
+    }, delete N[e.code]
   },
   INSTANT_INVITE_CREATE_SUCCESS: function(e) {
-    I = {
-      ...I,
+    N = {
+      ...N,
       [e.invite.code]: P(e.invite)
     }
   }

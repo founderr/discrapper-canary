@@ -13,10 +13,10 @@ function i(e) {
     width: t = 24,
     height: r = 24,
     color: i = "currentColor",
-    ...o
+    ...l
   } = e;
   return (0, a.jsxs)("svg", {
-    ...(0, n.default)(o),
+    ...(0, n.default)(l),
     width: t,
     height: r,
     viewBox: "0 0 16 16",

@@ -1,14 +1,14 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return m
+    return f
   }
 }), r("222007");
 var a = r("37983"),
   n = r("884691"),
   i = r("414456"),
-  o = r.n(i),
-  l = r("77078"),
+  l = r.n(i),
+  o = r("77078"),
   s = r("837899"),
   c = r("425190"),
   d = r("49111"),
@@ -36,13 +36,13 @@ class p extends n.PureComponent {
       sortKey: n,
       headerCellClassName: i,
       headerClassName: p,
-      sortedHeaderCellClassName: m,
-      stickyHeader: g
-    } = this.props, f = e.map(e => {
+      sortedHeaderCellClassName: f,
+      stickyHeader: m
+    } = this.props, g = e.map(e => {
       let h = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
         p = r === d.TableSortDirections.ASCENDING ? c.default : s.default;
-      return (0, a.jsx)(l.Clickable, {
-        className: o(u.headerCell, i, e.headerCellClassName, e.cellClassName, n === e.key && m, {
+      return (0, a.jsx)(o.Clickable, {
+        className: l(u.headerCell, i, e.headerCellClassName, e.cellClassName, n === e.key && f, {
           [u.clickable]: this.isSortable(e)
         }),
         onClick: this.isSortable(e) ? () => this.handleSort(e.key) : void 0,
@@ -55,10 +55,10 @@ class p extends n.PureComponent {
       }, e.key)
     });
     return (0, a.jsx)(h, {
-      className: o(p, u.row, {
-        [u.stickyHeader]: g
+      className: l(p, u.row, {
+        [u.stickyHeader]: m
       }),
-      children: f
+      children: g
     })
   }
   renderBody() {
@@ -68,13 +68,13 @@ class p extends n.PureComponent {
       sortData: r,
       sortKey: a,
       sortDirection: i,
-      bodyCellClassName: l,
+      bodyCellClassName: o,
       rowClassName: s,
       cellProps: c,
       rowProps: h,
       rowComponent: p,
-      cellComponent: m
-    } = this.props, g = t;
+      cellComponent: f
+    } = this.props, m = t;
     if (r) {
       let r = null != a ? e.find(e => {
           let {
@@ -83,22 +83,22 @@ class p extends n.PureComponent {
           return t === a
         }) : null,
         n = [...t],
-        o = null != r && r.sort,
-        l = null != r && null != a && this.isSortable(r) ? n.sort("function" == typeof o ? (e, t) => o(e, t, i) : this.getDefaultSort(a)) : n;
-      g = null != r && i === d.TableSortDirections.DESCENDING ? l.reverse() : l
+        l = null != r && r.sort,
+        o = null != r && null != a && this.isSortable(r) ? n.sort("function" == typeof l ? (e, t) => l(e, t, i) : this.getDefaultSort(a)) : n;
+      m = null != r && i === d.TableSortDirections.DESCENDING ? o.reverse() : o
     }
-    return g.map((t, r) => {
-      let a = e.map(e => (0, n.createElement)(m, {
+    return m.map((t, r) => {
+      let a = e.map(e => (0, n.createElement)(f, {
         ...c,
         key: e.key,
         item: t,
-        className: o(l, e.bodyCellClassName, e.cellClassName)
+        className: l(o, e.bodyCellClassName, e.cellClassName)
       }, null != e.render ? e.render(t, c, r) : t[e.key]));
       return (0, n.createElement)(p, {
         ...h,
         key: t.key,
         item: t,
-        className: o(u.row, s)
+        className: l(u.row, s)
       }, a)
     })
   }
@@ -138,4 +138,4 @@ p.SortDirection = d.TableSortDirections, p.defaultProps = {
   sortData: !0,
   stickyHeader: !1
 };
-var m = p
+var f = p
