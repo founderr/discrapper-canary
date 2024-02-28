@@ -15,53 +15,56 @@ n.r(t), n.d(t, {
   isEveryoneRoleId: function() {
     return p
   },
-  getRolesRows: function() {
-    return m
+  isNotEveryoneRoleId: function() {
+    return h
   },
-  getRolesRowsWithPermissionDisabled: function() {
+  getRolesRows: function() {
     return g
   },
-  getExistingRolesRows: function() {
+  getRolesRowsWithPermissionDisabled: function() {
     return C
   },
-  getExistingRolesRowWithPermissionDisabled: function() {
+  getExistingRolesRows: function() {
     return w
   },
-  getMembersRows: function() {
-    return y
+  getExistingRolesRowWithPermissionDisabled: function() {
+    return v
   },
-  getExistingMembersRows: function() {
+  getMembersRows: function() {
     return G
   },
-  getRowTypeLabel: function() {
+  getExistingMembersRows: function() {
     return H
   },
-  getRemoveTooltipHint: function() {
+  getRowTypeLabel: function() {
     return U
   },
-  flipEveryonePermission: function() {
+  getRemoveTooltipHint: function() {
     return B
   },
-  toggleChannelEveryonePermission: function() {
+  flipEveryonePermission: function() {
     return b
   },
-  grantUserChannelAccess: function() {
+  toggleChannelEveryonePermission: function() {
     return V
   },
-  isPrivateGuildChannel: function() {
+  grantUserChannelAccess: function() {
     return k
   },
-  hasCustomRoles: function() {
+  isPrivateGuildChannel: function() {
     return W
   },
-  canCreatePrivateChannel: function() {
+  hasCustomRoles: function() {
     return F
   },
-  getPrivateChannelHintText: function() {
+  canCreatePrivateChannel: function() {
     return x
   },
-  extractPermissionOverwrites: function() {
+  getPrivateChannelHintText: function() {
     return Y
+  },
+  extractPermissionOverwrites: function() {
+    return j
   }
 }), n("424973");
 var r = n("316693"),
@@ -129,51 +132,55 @@ function p(e, t) {
 }
 
 function h(e, t) {
+  return !p(e, t)
+}
+
+function m(e, t) {
   return !p(e.id, t.id)
 }
 
-function m(e, t, n) {
-  let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0;
-  return null == e.roles ? [] : Object.values(e.roles).filter(i => !S(i) && M(t, i.id, n) && h(e, i) && r(i.name)).sort(I).map(e => O(e))
-}
-
 function g(e, t, n) {
-  let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0;
-  return null == e.roles ? [] : Object.values(e.roles).filter(r => !S(r) && M(t, r.id, n) && h(e, r) && i(r.name)).sort(I).map(e => O(e, r.default.has(e.permissions, n)))
+  let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0;
+  return null == e.roles ? [] : Object.values(e.roles).filter(i => !S(i) && M(t, i.id, n) && m(e, i) && r(i.name)).sort(I).map(e => O(e))
 }
 
-function C(e, t, n, r) {
+function C(e, t, n) {
+  let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0;
+  return null == e.roles ? [] : Object.values(e.roles).filter(r => !S(r) && M(t, r.id, n) && m(e, r) && i(r.name)).sort(I).map(e => O(e, r.default.has(e.permissions, n)))
+}
+
+function w(e, t, n, r) {
   var i, s, l, u;
   let a = [];
   if (null == e.roles) return a;
-  return 0 === (a = (i = e, s = t, l = n, u = r, Object.values(i.roles).filter(e => S(e) || !M(s, e.id, l, u) && h(i, e))).sort(I).map(e => O(e))).length ? A(T.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : a
+  return 0 === (a = (i = e, s = t, l = n, u = r, Object.values(i.roles).filter(e => S(e) || !M(s, e.id, l, u) && m(i, e))).sort(I).map(e => O(e))).length ? A(T.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : a
 }
 
-function w(e, t, n, i) {
+function v(e, t, n, i) {
   var s, l, u, a;
   let o = [];
   if (null == e.roles) return o;
   return 0 === (o = (s = e, l = t, u = n, a = i, Object.values(s.roles).filter(e => {
     var t;
-    return S(e) || !M(l, e.id, u, a) && h(s, e) || r.default.has(r.default.combine(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
+    return S(e) || !M(l, e.id, u, a) && m(s, e) || r.default.has(r.default.combine(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
   })).sort(I).map(e => O(e, r.default.has(e.permissions, n)))).length ? A(T.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : o
 }
 
-function v(e, t) {
+function L(e, t) {
   var n;
   return null !== (n = a.default.getNick(t.id, e.id)) && void 0 !== n ? n : N.default.getName(e)
 }
 
-function L(e, t) {
+function D(e, t) {
   return t.isOwner(e)
 }
 
-function D(e, t) {
+function y(e, t) {
   var n, r, i;
   let s = (r = e, t.isOwner(r) ? _.RowType.OWNER : _.RowType.MEMBER);
   return {
     rowType: s,
-    name: v(e, t),
+    name: L(e, t),
     nickname: null !== (n = a.default.getNick(t.id, e.id)) && void 0 !== n ? n : null,
     username: N.default.getName(e),
     id: e.id,
@@ -189,20 +196,20 @@ function P(e, t) {
   return e.rowType !== t.rowType ? e.rowType - t.rowType : e.name.toLocaleLowerCase().localeCompare(t.name.toLocaleLowerCase())
 }
 
-function y(e, t, n, r) {
+function G(e, t, n, r) {
   let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return e.map(o.default.getUser).filter(f.isNotNullish).filter(e => !n.isOwner(e) && M(t, e.id, r) && (i(v(e, n)) || i(e.username) || i(e.discriminator))).map(e => D(e, n)).sort(P)
+  return e.map(o.default.getUser).filter(f.isNotNullish).filter(e => !n.isOwner(e) && M(t, e.id, r) && (i(L(e, n)) || i(e.username) || i(e.discriminator))).map(e => y(e, n)).sort(P)
 }
 
-function G(e, t, n, r, i) {
+function H(e, t, n, r, i) {
   var s, l, u, a, d;
   return (s = e, l = t, u = n, a = r, d = i, s.map(o.default.getUser).filter(f.isNotNullish).filter(e => {
     var t;
     return !M(l, e.id, a, d) || (t = e, u.isOwner(t))
-  })).map(e => D(e, n)).sort(P)
+  })).map(e => y(e, n)).sort(P)
 }
 
-function H(e, t) {
+function U(e, t) {
   switch (e) {
     case _.RowType.ROLE:
       return T.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
@@ -221,7 +228,7 @@ function H(e, t) {
   }
 }
 
-function U(e) {
+function B(e) {
   switch (e) {
     case _.RowType.ROLE:
       return T.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
@@ -237,7 +244,7 @@ function U(e) {
   }
 }
 
-function B(e, t, n) {
+function b(e, t, n) {
   let i = e.permissionOverwrites[e.guild_id];
   null == i && (i = E.default.makeEveryoneOverwrite(e.guild_id));
   let s = {
@@ -246,12 +253,12 @@ function B(e, t, n) {
   return s.deny = r.default.remove(s.deny, t), s.allow = r.default.remove(s.allow, t), !n && (s.deny = r.default.add(s.deny, t)), s
 }
 
-function b(e, t, n) {
-  let r = B(e, t, n);
+function V(e, t, n) {
+  let r = b(e, t, n);
   (0, s.updatePermission)(e, r.id, r.allow, r.deny)
 }
 
-function V(e, t) {
+function k(e, t) {
   let n = o.default.getCurrentUser();
   if (null == n) return;
   let i = e.permissionOverwrites[n.id];
@@ -272,22 +279,22 @@ function V(e, t) {
   }
 }
 
-function k(e, t) {
+function W(e, t) {
   if (null == e) return !1;
   let n = e.permissionOverwrites[e.guild_id];
   return (null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && r.default.has(n.deny, e.accessPermissions)
 }
 
-function W(e) {
+function F(e) {
   let t = Object.keys(e.roles);
   return 0 !== t.length && (1 !== t.length || t[0] !== e.id)
 }
 
-function F(e, t, n) {
+function x(e, t, n) {
   return e === R.ChannelTypes.GUILD_TEXT || e === R.ChannelTypes.GUILD_ANNOUNCEMENT ? t : !(0, u.isGuildVocalChannelType)(e) && e !== R.ChannelTypes.GUILD_CATEGORY || t && n
 }
 
-function x(e) {
+function Y(e) {
   switch (e) {
     case R.ChannelTypes.GUILD_TEXT:
     case R.ChannelTypes.GUILD_ANNOUNCEMENT:
@@ -301,7 +308,7 @@ function x(e) {
   }
 }
 
-function Y(e, t) {
+function j(e, t) {
   let n = [];
   return Object.values(e).forEach(e => {
     let {

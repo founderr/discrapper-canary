@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), n("881410"), n("222007"), n("424973");
 var i = n("917351"),
@@ -12,10 +12,11 @@ var i = n("917351"),
   d = n("923959"),
   o = n("660478"),
   r = n("599110"),
-  c = n("49111"),
-  f = n("133335");
+  c = n("299039"),
+  f = n("49111"),
+  S = n("133335");
 
-function S(e, t, n) {
+function g(e, t, n) {
   let i = s.flatMap(e, e => {
     let t = d.default.getSelectableChannelIds(e),
       n = d.default.getVocalChannelIds(e),
@@ -29,20 +30,20 @@ function S(e, t, n) {
     return i
   }).map(e => ({
     channelId: e,
-    readStateType: f.ReadStateTypes.CHANNEL,
+    readStateType: S.ReadStateTypes.CHANNEL,
     messageId: o.default.lastMessageId(e)
   }));
   return e.forEach(e => {
     i.push({
-      channelId: e,
-      readStateType: f.ReadStateTypes.GUILD_EVENT,
-      messageId: o.default.lastMessageId(e, f.ReadStateTypes.GUILD_EVENT)
+      channelId: c.default.castGuildIdAsReadStateChannelId(e),
+      readStateType: S.ReadStateTypes.GUILD_EVENT,
+      messageId: o.default.lastMessageId(e, S.ReadStateTypes.GUILD_EVENT)
     }), i.push({
-      channelId: e,
-      readStateType: f.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
+      channelId: c.default.castGuildIdAsReadStateChannelId(e),
+      readStateType: S.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
       messageId: l.default.ackIdForGuild(e)
     })
-  }), r.default.track(c.AnalyticEvents.MARK_AS_READ, {
+  }), r.default.track(f.AnalyticEvents.MARK_AS_READ, {
     source: t,
     type: "guild"
   }), (0, a.bulkAck)(i, n)
