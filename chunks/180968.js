@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return l
   },
   getSearchQueryForUser: function() {
-    return C
+    return S
   },
   useServerMessageHistoryForUser: function() {
     return _
@@ -53,9 +53,9 @@ let p = {
       }), n
     })
   },
-  S = e => E(t => t.get(e), r.default);
+  C = e => E(t => t.get(e), r.default);
 
-function C(e, t, n) {
+function S(e, t, n) {
   let l = null != n ? n : {};
   switch (t) {
     case "links":
@@ -82,10 +82,10 @@ function _(e, t, n) {
     let {
       addtionalQuery: a,
       shouldDispatch: i = !1
-    } = l, r = s.useMemo(() => m(e, t, n, a), [e, t, n, a]), E = S(r), _ = (0, o.default)(r), [I, T] = s.useState({});
+    } = l, r = s.useMemo(() => m(e, t, n, a), [e, t, n, a]), E = C(r), _ = (0, o.default)(r), [I, T] = s.useState({});
     return s.useEffect(() => {
       if (_ !== r) {
-        let l = C(e, n, a),
+        let l = S(e, n, a),
           s = new d.default(t, f.SearchTypes.GUILD, l);
         g(r, {
           searchFetcher: s,
@@ -132,7 +132,7 @@ function _(e, t, n) {
 
 function I(e, t, n, l) {
   let a = s.useMemo(() => m(e, t, n, l, !0), [e, t, n, l]),
-    i = S(a),
+    i = C(a),
     r = (0, o.default)(a);
   return {
     key: a,
@@ -152,11 +152,11 @@ function T(e, t, n) {
   } = I(e, t, "links", n), {
     key: m,
     state: p
-  } = I(e, t, "media", n), E = s.useMemo(() => C(e, "all_counts", n), [e, n]), S = s.useMemo(() => ({
+  } = I(e, t, "media", n), E = s.useMemo(() => S(e, "all_counts", n), [e, n]), C = s.useMemo(() => ({
     tabs: {
-      messages: C(e, "messages", E),
-      links: C(e, "links", E),
-      media: C(e, "media", E)
+      messages: S(e, "messages", E),
+      links: S(e, "links", E),
+      media: S(e, "media", E)
     },
     track_exact_total_hits: !0
   }), [e, E]), _ = s.useCallback(e => {
@@ -172,7 +172,7 @@ function T(e, t, n) {
     })
   }, [_]);
   s.useEffect(() => {
-    let e = new d.SearchTabFetcherImpl(t, f.SearchTypes.GUILD, E, S);
+    let e = new d.SearchTabFetcherImpl(t, f.SearchTypes.GUILD, E, C);
     T({
       searchTabFetcher: e,
       messageCount: h,
@@ -215,7 +215,7 @@ function T(e, t, n) {
     return () => {
       e.cancel(), clearTimeout(n)
     }
-  }, [e, t, E, S, T, _]);
+  }, [e, t, E, C, T, _]);
   let [v, x] = s.useState({});
   return {
     messagesCount: null !== (l = null == u ? void 0 : u.messageCount) && void 0 !== l ? l : h,

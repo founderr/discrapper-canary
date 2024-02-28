@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return s
   }
 }), n("222007");
-var i = n("446674"),
-  l = n("913144");
-let u = {},
-  a = {},
-  r = new Set;
-class d extends i.default.Store {
+var l = n("446674"),
+  u = n("913144");
+let r = {},
+  i = {},
+  a = new Set;
+class d extends l.default.Store {
   getCompletedActions(e) {
-    return null == e ? null : a[e]
+    return null == e ? null : i[e]
   }
   hasCompletedActionForChannel(e, t) {
     let n = this.getCompletedActions(e);
@@ -19,18 +19,18 @@ class d extends i.default.Store {
   }
   getState(e) {
     return null == e ? {} : {
-      completedActions: a[e],
-      loading: r.has(e)
+      completedActions: i[e],
+      loading: a.has(e)
     }
   }
 }
 d.displayName = "GuildOnboardingMemberActionStore";
-var o = new d(l.default, {
+var s = new d(u.default, {
   GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function(e) {
     let {
       guildId: t
     } = e;
-    r.add(t)
+    a.add(t)
   },
   GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: function(e) {
     let {
@@ -38,33 +38,33 @@ var o = new d(l.default, {
       guildId: n
     } = e;
     if (null == t) {
-      a[n] = u;
+      i[n] = r;
       return
     }
-    a[n] = t, r.delete(n)
+    i[n] = t, a.delete(n)
   },
   GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: function(e) {
     let {
       guildId: t
     } = e;
-    r.delete(t)
+    a.delete(t)
   },
   GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: function(e) {
     let {
       guildId: t
     } = e;
-    if (null == a[t]) return !1;
-    delete a[t]
+    if (null == i[t]) return !1;
+    delete i[t]
   },
   COMPLETE_NEW_MEMBER_ACTION: function(e) {
     let {
       guildId: t,
       channelId: n
     } = e;
-    a = {
-      ...a,
+    i = {
+      ...i,
       [t]: {
-        ...a[t],
+        ...i[t],
         [n]: !0
       }
     }
@@ -73,7 +73,7 @@ var o = new d(l.default, {
     let {
       guild: t
     } = e;
-    if (null == a[t.id]) return !1;
-    delete a[t.id]
+    if (null == i[t.id]) return !1;
+    delete i[t.id]
   }
 })

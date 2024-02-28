@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return y
   }
 }), n("222007"), n("424973");
 var l = n("37983"),
@@ -19,20 +19,20 @@ var l = n("37983"),
   h = n("383018"),
   E = n("474643"),
   g = n("585722"),
-  S = n("898260"),
-  C = n("378765"),
+  C = n("898260"),
+  S = n("378765"),
   T = n("393377"),
-  v = n("761354"),
-  I = n("49111"),
+  I = n("761354"),
+  v = n("49111"),
   _ = n("986548"),
   N = n("356410");
 let A = [];
 
-function y(e) {
+function x(e) {
   let {
     channelId: t,
     type: n
-  } = e, a = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), y = (0, p.default)("attachments", o.Orientations.HORIZONTAL), x = (0, u.useStateFromStores)([g.default], () => g.default.getUploads(t, n.drafts.type)), {
+  } = e, a = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), x = (0, p.default)("attachments", o.Orientations.HORIZONTAL), y = (0, u.useStateFromStores)([g.default], () => g.default.getUploads(t, n.drafts.type)), {
     isApplicationCommand: O,
     commandOptions: R,
     commandOptionStates: M
@@ -63,10 +63,10 @@ function y(e) {
     return d.default.subscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e), () => d.default.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)
   }, [t, n]);
   let j = i.useCallback(() => {
-    y.focusFirstVisibleItem()
-  }, [y]);
-  return ((0, C.useComponentAction)({
-    event: I.ComponentActions.FOCUS_ATTACHMENT_AREA,
+    x.focusFirstVisibleItem()
+  }, [x]);
+  return ((0, S.useComponentAction)({
+    event: v.ComponentActions.FOCUS_ATTACHMENT_AREA,
     handler: j
   }), i.useEffect(() => {
     if (O) {
@@ -77,9 +77,9 @@ function y(e) {
         c.default.remove(t, e.name, n.drafts.type)
       }), b(L)
     }
-  }, [t, L.length, n]), !O && 0 === x.length || O && 0 === L.length) ? null : (0, l.jsxs)(i.Fragment, {
+  }, [t, L.length, n]), !O && 0 === y.length || O && 0 === L.length) ? null : (0, l.jsxs)(i.Fragment, {
     children: [(0, l.jsx)(r.ListNavigatorProvider, {
-      navigator: y,
+      navigator: x,
       children: (0, l.jsx)(r.ListNavigatorContainer, {
         children: e => {
           let {
@@ -94,7 +94,7 @@ function y(e) {
               channelId: t,
               keyboardModeEnabled: a,
               option: e
-            }, e.name)) : x.map(e => (0, l.jsx)(v.default, {
+            }, e.name)) : y.map(e => (0, l.jsx)(I.default, {
               channelId: t,
               draftType: n.drafts.type,
               upload: e,
@@ -104,16 +104,16 @@ function y(e) {
           })
         }
       })
-    }), n.drafts.type === E.DraftType.FirstThreadMessage ? null : (0, l.jsx)(S.default, {})]
+    }), n.drafts.type === E.DraftType.FirstThreadMessage ? null : (0, l.jsx)(C.default, {})]
   })
 }
-var x = i.memo(function(e) {
+var y = i.memo(function(e) {
   let {
     channelId: t,
     type: n,
     canAttachFiles: i
   } = e;
-  return i ? (0, l.jsx)(y, {
+  return i ? (0, l.jsx)(x, {
     channelId: t,
     type: n
   }) : null

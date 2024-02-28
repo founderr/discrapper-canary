@@ -10,20 +10,20 @@ s.r(t), s.d(t, {
     return _
   }
 });
-var n, a, o = s("599110"),
-  r = s("49111");
+var n, a, r = s("599110"),
+  o = s("49111");
 
 function i(e, t) {
   let {
     channelId: s,
     warningId: n,
     senderId: a,
-    warningType: r
+    warningType: o
   } = t;
-  o.default.track(e, {
+  r.default.track(e, {
     channel_id: s,
     warning_id: null != n ? parseInt(n) : void 0,
-    warning_type: r,
+    warning_type: o,
     other_user_id: a
   })
 }
@@ -37,7 +37,7 @@ function _(e) {
     cta: i,
     isNudgeWarning: _
   } = e;
-  o.default.track(r.AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, {
+  r.default.track(o.AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, {
     channel_id: t,
     warning_id: null != s ? parseInt(s) : void 0,
     warning_type: a,

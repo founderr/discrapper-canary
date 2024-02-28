@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return g
   },
   useTextChangeHandler: function() {
-    return S
+    return C
   }
 }), n("222007"), n("424973");
 var l = n("884691"),
@@ -46,7 +46,7 @@ let E = (0, m.promiseThrottle)(o.fetchStickerPacks, h.REQUEST_THROTTLE_DURATION_
       }, [e, n, i, t, a]);
     return o
   },
-  S = e => {
+  C = e => {
     let {
       setTextInputValue: t,
       setHasDismissed: n,

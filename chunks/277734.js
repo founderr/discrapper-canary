@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   dismissChannelSafetyWarnings: function() {
-    return r
+    return o
   },
   setChannelSafetyWarningFeedback: function() {
     return i
@@ -12,15 +12,15 @@ s.r(t), s.d(t, {
 });
 var n = s("872717"),
   a = s("913144"),
-  o = s("49111");
+  r = s("49111");
 
-function r(e, t) {
+function o(e, t) {
   return a.default.dispatch({
     type: "DISMISS_CHANNEL_SAFETY_WARNINGS",
     channelId: e,
     warningIds: t
   }), n.default.post({
-    url: o.Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(e),
+    url: r.Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(e),
     body: {
       warning_ids: t
     },

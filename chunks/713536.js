@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return g
   },
   PurchaseConfirmation: function() {
-    return S
+    return C
   }
 });
 var l = n("37983");
@@ -79,7 +79,7 @@ let E = e => {
     })
   };
 
-function S(e) {
+function C(e) {
   let {
     tierName: t,
     onConfirm: n,

@@ -26,12 +26,12 @@ function g(e) {
   } = e, g = (0, d.useSubscriptionListingsForChannel)({
     guildId: t,
     channelId: n
-  }), S = (0, o.useGroupListingsForGuild)(t), C = (0, o.useSubscriptionsSettings)(t), _ = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), I = null == _ ? void 0 : _.name, T = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(n)), v = a.useMemo(() => {
+  }), C = (0, o.useGroupListingsForGuild)(t), S = (0, o.useSubscriptionsSettings)(t), _ = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), I = null == _ ? void 0 : _.name, T = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(n)), v = a.useMemo(() => {
     let e = {};
-    for (let t of S)
+    for (let t of C)
       for (let n of t.subscription_listings_ids) e[n] = t.id;
     return e
-  }, [S]);
+  }, [C]);
   return ((0, c.default)({
     guildId: t,
     location: m.AnalyticsLocations.ROLE_SUBSCRIPTION_GATED_CHANNEL,
@@ -54,7 +54,7 @@ function g(e) {
       className: E.joinCtaSubtitle,
       variant: "text-md/normal",
       color: "header-secondary",
-      children: null == C ? void 0 : C.description
+      children: null == S ? void 0 : S.description
     }), (0, l.jsx)(f.default, {
       guildId: t,
       children: g.filter(e => null != v[e.id]).map(e => (0, l.jsx)(h.default, {

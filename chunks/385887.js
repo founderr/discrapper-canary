@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return g
   },
   DOMUtils: function() {
-    return v
+    return I
   }
 }), n("222007");
 var l = n("627445"),
@@ -302,14 +302,14 @@ let d = {
       return m.isText(i) && m.isText(a) && n.offset <= i.text.length && l.offset <= a.text.length
     }
   },
-  S = (e, t) => {
+  C = (e, t) => {
     let n = (t.top + t.bottom) / 2;
     return e.top <= n && e.bottom >= n
   },
-  C = (e, t, n) => {
+  S = (e, t, n) => {
     let l = d.toDOMRange(e, t).getBoundingClientRect(),
       i = d.toDOMRange(e, n).getBoundingClientRect();
-    return S(l, i) && S(i, l)
+    return C(l, i) && C(i, l)
   },
   T = (e, t, n, l) => {
     let i = {
@@ -324,9 +324,9 @@ let d = {
         anchor: n[r],
         focus: n[r]
       };
-      if (C(e, t, i) ? l ? s = r : a = r : l ? a = r : s = r, r = Math.floor((a + s) / 2), !l && r === n.length - 2 && s === n.length - 1) {
+      if (S(e, t, i) ? l ? s = r : a = r : l ? a = r : s = r, r = Math.floor((a + s) / 2), !l && r === n.length - 2 && s === n.length - 1) {
         let t = n[n.length - 1];
-        C(e, {
+        S(e, {
           anchor: t,
           focus: t
         }, i) && (r = s)
@@ -334,7 +334,7 @@ let d = {
     }
     return n[r]
   },
-  v = {
+  I = {
     getLineStart(e, t, n) {
       let l;
       let i = d.getParentElement(e, t);
@@ -387,13 +387,13 @@ let d = {
       let n = E.toPoint(e.selection);
       if (null == n) return null;
       if (t) {
-        let t = v.getLineStart(e, n, !1);
+        let t = I.getLineStart(e, n, !1);
         return null == t ? null : {
           anchor: t,
           focus: n
         }
       } {
-        let t = v.getLineEnd(e, n, !0);
+        let t = I.getLineEnd(e, n, !0);
         return null == t ? null : {
           anchor: n,
           focus: t

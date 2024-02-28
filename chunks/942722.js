@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("191542"),
   E = n("697218"),
   g = n("79798"),
-  S = n("151185"),
-  C = n("11056"),
+  C = n("151185"),
+  S = n("11056"),
   _ = n("826684"),
   I = n("599110"),
   T = n("315102"),
@@ -32,8 +32,8 @@ var l = n("37983"),
   R = n("49111"),
   j = n("782340"),
   L = n("591665"),
-  y = n("559571");
-let O = A.default.getEnableHardwareAcceleration();
+  O = n("559571");
+let y = A.default.getEnableHardwareAcceleration();
 
 function P(e) {
   let {
@@ -45,7 +45,7 @@ function P(e) {
   } = (0, i.useStateFromStoresObject)([m.default, E.default, h.default], () => m.default.isFriend(t.id) || t === E.default.getCurrentUser() ? {
     status: h.default.getStatus(t.id),
     activities: h.default.getActivities(t.id)
-  } : {}), S = (0, i.useStateFromStores)([p.default], () => null != p.default.getTypingUsers(a.id)[t.id]), C = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()), _ = (0, i.useStateFromStores)([h.default], () => h.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([m.default], () => m.default.getNickname(t.id)), T = e => {
+  } : {}), C = (0, i.useStateFromStores)([p.default], () => null != p.default.getTypingUsers(a.id)[t.id]), S = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()), _ = (0, i.useStateFromStores)([h.default], () => h.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([m.default], () => m.default.getNickname(t.id)), T = e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -78,11 +78,11 @@ function P(e) {
     },
     children: e => (0, l.jsx)(M.default, {
       user: t,
-      currentUser: C,
+      currentUser: S,
       isOwner: t.id === a.ownerId,
       ownerTooltipText: j.default.Messages.GROUP_OWNER,
-      shouldAnimateStatus: O,
-      isTyping: S,
+      shouldAnimateStatus: y,
+      isTyping: C,
       status: d,
       activities: g,
       channel: a,
@@ -125,7 +125,7 @@ function b(e) {
     }),
     position: s.isMobile ? "window_center" : "left",
     spacing: 16,
-    children: e => (0, l.jsx)(C.default, {
+    children: e => (0, l.jsx)(S.default, {
       onContextMenu: d,
       className: L.member,
       name: (0, l.jsx)("span", {
@@ -182,14 +182,14 @@ function D(e) {
   }, [t.guild_id, t.id, t.type]);
   let v = u && o.every(e => e.isStaff());
   return (0, l.jsx)("div", {
-    className: y.membersWrap,
+    className: O.membersWrap,
     children: (0, l.jsxs)(r.Scroller, {
-      className: y.members,
+      className: O.members,
       fade: !0,
       children: [(0, l.jsxs)(_.default, {
-        className: y.membersGroup,
+        className: O.membersGroup,
         children: ["".concat(j.default.Messages.MEMBERS, "—").concat(o.length, " "), v ? (0, l.jsx)(g.default, {
-          className: y.decorator,
+          className: O.decorator,
           type: g.default.Types.STAFF_ONLY_DM
         }) : null]
       }), o.map(e => (0, l.jsx)(P, {
@@ -197,12 +197,12 @@ function D(e) {
         channel: t
       }, e.id)), p && (f.length > 0 || m && h.length > 0) && (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(_.default, {
-          className: y.membersGroup,
+          className: O.membersGroup,
           children: "".concat(j.default.Messages.APPS, "—").concat(f.length)
         }), f.map(e => (0, l.jsx)(b, {
           integration: e,
           channel: t
-        }, e.application.id)), T.length > 0 && (0, l.jsx)(C.default, {
+        }, e.application.id)), T.length > 0 && (0, l.jsx)(S.default, {
           className: L.member,
           onClick: () => {
             (0, r.openModalLazy)(async () => {
@@ -216,8 +216,8 @@ function D(e) {
             })
           },
           avatar: (0, l.jsx)("div", {
-            className: y.appIconWrapper,
-            children: (0, l.jsx)(S.default, {
+            className: O.appIconWrapper,
+            children: (0, l.jsx)(C.default, {
               width: 18,
               height: 18
             })

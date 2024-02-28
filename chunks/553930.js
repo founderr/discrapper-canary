@@ -44,8 +44,8 @@ function E(e) {
   let {
     emojiHose: E,
     context: g,
-    canvasWidth: S,
-    canvasHeight: C,
+    canvasWidth: C,
+    canvasHeight: S,
     fallbackColor: _,
     outlineColorDark: I,
     outlineColorLight: T,
@@ -54,8 +54,8 @@ function E(e) {
   } = e;
   g.save();
   let N = u.default.getEmojiImage(null !== (n = null !== (t = E.emojiId) && void 0 !== t ? t : E.emojiName) && void 0 !== n ? n : ""),
-    A = (0, d.normalizeCoordinate)(E.x, S),
-    M = (0, d.normalizeCoordinate)(E.y, C),
+    A = (0, d.normalizeCoordinate)(E.x, C),
+    M = (0, d.normalizeCoordinate)(E.y, S),
     {
       outlineColor: R
     } = (0, d.getUserColors)(E.userId, I, T, _);

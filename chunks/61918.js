@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("666020"),
   E = n("352674"),
   g = n("888503"),
-  S = n("206230"),
-  C = n("716241"),
+  C = n("206230"),
+  S = n("716241"),
   _ = n("86097"),
   I = n("29319"),
   T = n("346967"),
@@ -32,8 +32,8 @@ var l = n("37983"),
   R = n("981601"),
   j = n("19766"),
   L = n("305961"),
-  y = n("191542"),
-  O = n("697218"),
+  O = n("191542"),
+  y = n("697218"),
   P = n("476765"),
   b = n("826684"),
   D = n("483093"),
@@ -43,8 +43,8 @@ var l = n("37983"),
   k = n("50885"),
   B = n("49111"),
   V = n("782340"),
-  G = n("559571");
-let H = k.default.getEnableHardwareAcceleration(),
+  H = n("559571");
+let G = k.default.getEnableHardwareAcceleration(),
   W = 44 + g.AVATAR_DECORATION_PADDING,
   Y = {
     origin: {
@@ -78,8 +78,8 @@ class z extends a.Component {
       isTyping: m,
       isMobileOnline: p,
       premiumSince: E,
-      ...S
-    } = this.props, C = null != E ? new Date(E) : null;
+      ...C
+    } = this.props, S = null != E ? new Date(E) : null;
     return (0, l.jsx)(h.Popout, {
       preload: () => (0, M.default)(s.id, s.getAvatarURL(f, 80), {
         guildId: f,
@@ -94,9 +94,9 @@ class z extends a.Component {
           isShown: E
         } = h;
         return (0, l.jsx)(g.default, {
-          className: G.member,
+          className: H.member,
           onContextMenu: this.renderUserContextMenu,
-          shouldAnimateStatus: H,
+          shouldAnimateStatus: G,
           user: s,
           currentUser: i,
           nick: a,
@@ -104,7 +104,7 @@ class z extends a.Component {
           activities: r,
           applicationStream: u,
           isOwner: n,
-          premiumSince: C,
+          premiumSince: S,
           colorString: e,
           colorRoleName: t,
           isTyping: m,
@@ -113,7 +113,7 @@ class z extends a.Component {
           isMobile: p,
           onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
           selected: E,
-          itemProps: S,
+          itemProps: C,
           ...d
         })
       }
@@ -177,7 +177,7 @@ let K = a.memo(e => {
       channel: a,
       user: s,
       index: i
-    } = e, r = (0, o.useListItem)("".concat(i)), u = (0, c.useStateFromStores)([y.default], () => y.default.isTyping(a.id, s.id)), d = (0, c.useStateFromStores)([O.default], () => O.default.getCurrentUser()), f = (0, c.useStateFromStores)([L.default], () => {
+    } = e, r = (0, o.useListItem)("".concat(i)), u = (0, c.useStateFromStores)([O.default], () => O.default.isTyping(a.id, s.id)), d = (0, c.useStateFromStores)([y.default], () => y.default.getCurrentUser()), f = (0, c.useStateFromStores)([L.default], () => {
       var e, n;
       return null != t ? null === (n = L.default.getGuild(a.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(t)) || void 0 === e ? void 0 : e.name : void 0
     }, [a, t]);
@@ -201,12 +201,12 @@ let K = a.memo(e => {
       size: 16
     });
     return t === B.StatusTypes.UNKNOWN ? (0, l.jsx)("div", {
-      className: G.membersGroup,
+      className: H.membersGroup,
       children: (0, l.jsx)("div", {
-        className: G.memberGroupsPlaceholder
+        className: H.memberGroupsPlaceholder
       })
     }) : (0, l.jsxs)(b.default, {
-      className: G.membersGroup,
+      className: H.membersGroup,
       children: [(0, l.jsx)(h.HiddenVisually, {
         children: V.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
           title: n,
@@ -215,14 +215,14 @@ let K = a.memo(e => {
       }), (0, l.jsxs)("span", {
         "aria-hidden": !0,
         children: [null != i ? (0, l.jsx)(D.default, {
-          className: G.roleIcon,
+          className: H.roleIcon,
           ...i
         }) : null, n, " — ", a]
       })]
     })
   });
 
-function Q(e) {
+function X(e) {
   let {
     index: t
   } = e, n = (0, o.useListItem)("".concat(t));
@@ -230,7 +230,7 @@ function Q(e) {
     itemProps: n
   })
 }
-class X extends a.Component {
+class Q extends a.Component {
   shouldComponentUpdate(e) {
     return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length
   }
@@ -280,7 +280,7 @@ class X extends a.Component {
     return (0, l.jsx)(h.FocusJumpSection, {
       children: a => (0, l.jsx)(P.UID, {
         children: s => (0, l.jsx)("aside", {
-          className: i(G.membersWrap, G.hiddenMembers),
+          className: i(H.membersWrap, H.hiddenMembers),
           "aria-labelledby": s,
           children: (0, l.jsx)(h.HeadingLevel, {
             component: (0, l.jsx)(h.HiddenVisually, {
@@ -305,8 +305,8 @@ class X extends a.Component {
                     var t;
                     this._list = e, this.props.listRef.current = e, s.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
                   },
-                  className: i(G.members, {
-                    [G.fullWidth]: d.isMobile
+                  className: i(H.members, {
+                    [H.fullWidth]: d.isMobile
                   }),
                   paddingTop: 0,
                   sectionHeight: 40,
@@ -406,7 +406,7 @@ class X extends a.Component {
           index: a
         }, "content-inventory-".concat(i.entry.id))
       }
-      return (0, l.jsx)(Q, {
+      return (0, l.jsx)(X, {
         index: a
       }, "placeholder-".concat(t, ":").concat(n))
     }, this.handleScroll = () => {
@@ -471,7 +471,7 @@ class X extends a.Component {
         num_users_visible_with_activity: 0,
         num_users_visible_with_avatar_decoration: 0
       });
-      this.lastReportedAnalyticsChannel = this.props.channel.id, C.default.trackWithMetadata(B.AnalyticEvents.MEMBER_LIST_VIEWED, {
+      this.lastReportedAnalyticsChannel = this.props.channel.id, S.default.trackWithMetadata(B.AnalyticEvents.MEMBER_LIST_VIEWED, {
         ...a
       })
     }
@@ -482,7 +482,7 @@ function q(e) {
   let {
     channel: t,
     className: n
-  } = e, s = (0, c.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([j.default], () => j.default.getProps(t.guild_id, t.id)), {
+  } = e, s = (0, c.useStateFromStores)([C.default], () => C.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([j.default], () => j.default.getProps(t.guild_id, t.id)), {
     rows: u,
     groups: d,
     version: f
@@ -527,10 +527,10 @@ function q(e) {
     scrollToEnd: E
   });
   return (0, l.jsx)("div", {
-    className: i(G.container, n),
+    className: i(H.container, n),
     children: (0, l.jsx)(o.ListNavigatorProvider, {
       navigator: g,
-      children: (0, l.jsx)(X, {
+      children: (0, l.jsx)(Q, {
         ...e,
         ...r,
         version: f,

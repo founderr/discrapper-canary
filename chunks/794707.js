@@ -22,13 +22,13 @@ let u = i.forwardRef(function(e, t) {
     renderInspector: h,
     renderEmptySearchState: E,
     rowCount: g,
-    rowCountBySection: S,
-    rowHeight: C,
+    rowCountBySection: C,
+    rowHeight: S,
     sectionHeaderHeight: T,
-    sectionFooterHeight: v
-  } = e, I = i.useRef(!1), _ = i.useRef(null), N = (0, s.useExpressionPickerStore)(e => e.searchQuery), A = n.useStore(e => e.activeCategoryIndex), y = (0, r.useSynchronizedActiveCategoryIndexForScrollPosition)({
+    sectionFooterHeight: I
+  } = e, v = i.useRef(!1), _ = i.useRef(null), N = (0, s.useExpressionPickerStore)(e => e.searchQuery), A = n.useStore(e => e.activeCategoryIndex), x = (0, r.useSynchronizedActiveCategoryIndexForScrollPosition)({
     activeCategoryIndex: A,
-    isScrolling: I,
+    isScrolling: v,
     listRef: _,
     onActiveCategoryIndexChange: n.setActiveCategoryIndex,
     scrollOffset: 20,
@@ -79,16 +79,16 @@ let u = i.forwardRef(function(e, t) {
     children: [N.length > 0 && !u && null != E ? E() : (0, l.jsx)(a.default, {
       role: "none presentation",
       listPadding: d,
-      onScroll: y,
+      onScroll: x,
       renderRow: c,
       renderSection: f,
       renderSectionHeader: m,
       renderSectionFooter: p,
       rowCount: g,
-      rowCountBySection: S,
-      rowHeight: C,
+      rowCountBySection: C,
+      rowHeight: S,
       sectionHeaderHeight: T,
-      sectionFooterHeight: v,
+      sectionFooterHeight: I,
       stickyHeaders: !0,
       ref: _
     }), null == h ? void 0 : h()]

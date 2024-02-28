@@ -34,7 +34,7 @@ function g() {
   })
 }
 
-function S(e) {
+function C(e) {
   let [t, n] = a.useState(""), [i, u] = a.useState(null);
   a.useEffect(() => {
     (async () => {
@@ -112,7 +112,7 @@ function S(e) {
   })
 }
 
-function C(e) {
+function S(e) {
   let t = a.useCallback(() => {
     d.default.copy(e.text)
   }, [e.text]);
@@ -152,7 +152,7 @@ function _(e) {
                   userSelect: "text"
                 },
                 children: n.blindChannelId
-              }), (0, l.jsx)(C, {
+              }), (0, l.jsx)(S, {
                 text: n.blindChannelId
               })]
             }), (0, l.jsxs)("li", {
@@ -163,7 +163,7 @@ function _(e) {
                   userSelect: "text"
                 },
                 children: n.blindUserId
-              }), (0, l.jsx)(C, {
+              }), (0, l.jsx)(S, {
                 text: n.blindUserId
               })]
             })]
@@ -184,7 +184,7 @@ function T(e) {
       (0, s.closeModal)(I)
     }, []),
     r = a.useCallback(() => {
-      (0, c.setRtcLogMarker)(), (0, s.openModalLazy)(() => Promise.resolve(e => (0, l.jsx)(S, {
+      (0, c.setRtcLogMarker)(), (0, s.openModalLazy)(() => Promise.resolve(e => (0, l.jsx)(C, {
         onClose: n
       })), {
         contextKey: t,

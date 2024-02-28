@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return y
   }
 }), n("222007");
 var l = n("37983"),
@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("697218"),
   E = n("717018"),
   g = n("811305"),
-  S = n("659500"),
-  C = n("439932"),
+  C = n("659500"),
+  S = n("439932"),
   _ = n("550766"),
   I = n("191225"),
   T = n("575136"),
@@ -32,20 +32,20 @@ var l = n("37983"),
   R = n("49111"),
   j = n("782340"),
   L = n("986304");
-let y = {
+let O = {
   [M.FocusedActivityLayouts.NO_CHAT]: L.noChat,
   [M.FocusedActivityLayouts.RESIZABLE]: L.resizable
 };
 
-function O(e) {
+function y(e) {
   var t, n, s;
   let {
-    maxHeight: O,
+    maxHeight: y,
     connectedChannelId: P,
     renderExternalHeader: b
   } = e, D = (0, v.default)(), U = (0, r.useStateFromStoresArray)([I.default], () => null != P ? I.default.getEmbeddedActivitiesForChannel(P) : [], [P]), w = (0, T.useEmbeddedApps)(U), F = (0, T.useEmbeddedAppsWithPresence)(w), k = a.useCallback(() => {
     (0, _.updateActivityPanelMode)(M.ActivityPanelModes.PIP)
-  }, []), B = a.useRef(null), V = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), G = V !== M.FocusedActivityLayouts.NO_CHAT, [H, W] = a.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : O), Y = a.useCallback(e => {
+  }, []), B = a.useRef(null), V = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), H = V !== M.FocusedActivityLayouts.NO_CHAT, [G, W] = a.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : y), Y = a.useCallback(e => {
     o.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
@@ -65,28 +65,28 @@ function O(e) {
     });
     return e.observe(z.current), () => e.disconnect()
   }, []);
-  let Q = K.width / Math.max(K.height, 1),
-    X = Q < M.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
+  let X = K.width / Math.max(K.height, 1),
+    Q = X < M.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
     q = 0,
     J = 0,
     $ = K.width,
     ee = K.height;
-  X ? ((ee = K.width / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > K.height && ($ = (ee = K.height) * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), J = (K.height - ee) / 2) : (($ = Math.min(K.height * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > K.width && (ee = ($ = K.width) / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), q = (K.width - $) / 2);
+  Q ? ((ee = K.width / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > K.height && ($ = (ee = K.height) * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), J = (K.height - ee) / 2) : (($ = Math.min(K.height * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > K.width && (ee = ($ = K.width) / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), q = (K.width - $) / 2);
   let et = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId());
   if (null == D) return null;
   let en = F.get(null === (n = w[0]) || void 0 === n ? void 0 : null === (t = n.application) || void 0 === t ? void 0 : t.id),
     el = [];
   return null != en && (el = Array.from(en.embeddedActivity.userIds).map(e => p.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, l.jsxs)("div", {
-    className: i(L.wrapper, y[V], (0, C.getThemeClass)(R.ThemeTypes.DARK)),
+    className: i(L.wrapper, O[V], (0, S.getThemeClass)(R.ThemeTypes.DARK)),
     ref: B,
-    style: G && null != H ? {
+    style: H && null != G ? {
       minHeight: 200,
-      maxHeight: O,
-      height: H
+      maxHeight: y,
+      height: G
     } : void 0,
     children: [null == b ? void 0 : b(), (0, l.jsxs)("div", {
       className: L.activityPanelContainer,
-      children: [G ? null : (0, l.jsx)("div", {
+      children: [H ? null : (0, l.jsx)("div", {
         className: L.header,
         children: (0, l.jsx)(u.Text, {
           color: "header-primary",
@@ -142,17 +142,17 @@ function O(e) {
           className: L.flex
         })]
       }) : null]
-    }), G ? (0, l.jsx)(d.default, {
+    }), H ? (0, l.jsx)(d.default, {
       minHeight: 480,
-      maxHeight: O,
+      maxHeight: y,
       resizableNode: B,
       onResize: e => {
-        S.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        C.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !0
         }), W(e)
       },
       onResizeEnd: e => {
-        S.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        C.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !1
         }), Y(e)
       }

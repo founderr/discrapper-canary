@@ -19,16 +19,16 @@ var l = n("37983"),
   h = n("666897"),
   E = n("505684"),
   g = n("36694"),
-  S = n("413709"),
-  C = n("873218"),
+  C = n("413709"),
+  S = n("873218"),
   T = n("250832"),
-  v = n("22248"),
-  I = n("28236"),
+  I = n("22248"),
+  v = n("28236"),
   _ = n("306160"),
   N = n("794818"),
   A = n("844659"),
-  y = n("657057"),
-  x = n("886125"),
+  x = n("657057"),
+  y = n("886125"),
   O = n("180161"),
   R = n("781423"),
   M = n("47677"),
@@ -54,7 +54,7 @@ function D(e) {
     children: n ? (0, l.jsx)(g.default, {
       width: 16,
       height: 16
-    }) : (0, l.jsx)(S.default, {
+    }) : (0, l.jsx)(C.default, {
       width: 16,
       height: 16
     })
@@ -146,7 +146,7 @@ let k = {
     }, n.key)
   },
   soundboard: {
-    react: e => (0, l.jsx)(I.default, {
+    react: e => (0, l.jsx)(v.default, {
       channelId: e.channelId,
       soundId: e.soundId,
       jumbo: e.jumboable
@@ -209,7 +209,7 @@ let k = {
     }
   },
   timestamp: {
-    react: (e, t, n) => (0, l.jsx)(y.default, {
+    react: (e, t, n) => (0, l.jsx)(x.default, {
       node: e
     }, n.key)
   },
@@ -255,13 +255,13 @@ let k = {
     }
   },
   channel: {
-    react: (e, t, n) => (0, l.jsx)(C.default, {
+    react: (e, t, n) => (0, l.jsx)(S.default, {
       iconType: e.iconType,
       children: (0, A.smartOutput)(e, t, n)
     }, n.key)
   },
   message: {
-    react: (e, t, n) => (0, l.jsx)(v.default, {}, n.key)
+    react: (e, t, n) => (0, l.jsx)(I.default, {}, n.key)
   }
 };
 
@@ -319,6 +319,6 @@ function w(e) {
     }(e),
     channelMention: (0, O.default)(e),
     commandMention: (0, R.default)(e),
-    attachmentLink: (0, x.default)(e)
+    attachmentLink: (0, y.default)(e)
   }
 }

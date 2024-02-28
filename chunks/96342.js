@@ -158,16 +158,16 @@ let g = {
       type: "inlineObject"
     }
   },
-  S = new Set(["*", "_", "\\"]),
-  C = {},
+  C = new Set(["*", "_", "\\"]),
+  S = {},
   T = {};
 for (let e in c.default.RULES) {
   if (!(e in g)) throw Error("Slate: Unknown markdown rule: ".concat(e, ".  If you have just added a new markdown rule ") + "then you probably need to add it to this file so that the rich chat box understands it.");
   let t = g[e];
-  "skip" !== t.type && (C[e] = v(c.default.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (T[e] = v("text" === e ? f.default : c.default.RULES[e]))
+  "skip" !== t.type && (S[e] = I(c.default.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (T[e] = I("text" === e ? f.default : c.default.RULES[e]))
 }
 
-function v(e) {
+function I(e) {
   i(null != e.parse, "Slate: rule must have a parse function");
   let t = e.parse;
   return {
@@ -178,7 +178,7 @@ function v(e) {
     }
   }
 }
-let I = {
+let v = {
     url: {
       parse: e => null == (0, d.punycodeLink)(e[1]) ? {
         type: "text",
@@ -219,17 +219,17 @@ let I = {
       }
     }
   },
-  _ = (0, m.default)([C, I]),
-  N = (0, m.default)([T, I]),
+  _ = (0, m.default)([S, v]),
+  N = (0, m.default)([T, v]),
   A = o.astParserFor(_),
-  y = o.astParserFor(N),
-  x = {
+  x = o.astParserFor(N),
+  y = {
     max: 1 / 0,
     maxAge: 1 * p.default.Millis.MINUTE,
     updateAgeOnGet: !0
   },
-  O = new s(x),
-  R = new s(x);
+  O = new s(y),
+  R = new s(y);
 
 function M(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -266,7 +266,7 @@ function M(e, t) {
                 0: ""
               },
               type: "paragraph",
-              content: (n ? y : A)(s, !1, {
+              content: (n ? x : A)(s, !1, {
                 returnMentionIds: !0,
                 disableAutoBlockNewlines: !0,
                 guildId: t
@@ -470,7 +470,7 @@ function U(e, t) {
 
 function D(e, t, n, l) {
   for (; n < l;)
-    if (S.has(t[n])) n = b(e, t, t[n], n, "syntaxBefore"), n = U(t, n);
+    if (C.has(t[n])) n = b(e, t, t[n], n, "syntaxBefore"), n = U(t, n);
     else break;
   return n
 }

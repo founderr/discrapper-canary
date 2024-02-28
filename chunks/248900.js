@@ -1,40 +1,40 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return r
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("77078"),
-  u = l("306160"),
-  s = l("598639"),
-  d = l("49111"),
-  r = l("782340");
+var l = n("37983");
+n("884691");
+var u = n("77078"),
+  a = n("306160"),
+  d = n("598639"),
+  i = n("49111"),
+  s = n("782340");
 
-function i(e, t, l) {
-  let i = null != l,
+function r(e, t, n) {
+  let r = null != n,
     {
       isMember: o
-    } = (0, s.default)(t, e);
+    } = (0, d.default)(t, e);
   if (!o) return null;
 
   function c() {
-    let n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    (0, u.copy)("".concat(location.protocol, "//").concat(location.host).concat(d.Routes.GUILD_EVENT_DETAILS(t, e, n ? null : l))), (0, a.showToast)((0, a.createToast)(r.default.Messages.COPIED_LINK, a.ToastType.SUCCESS))
+    let l = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+    (0, a.copy)("".concat(location.protocol, "//").concat(location.host).concat(i.Routes.GUILD_EVENT_DETAILS(t, e, l ? null : n))), (0, u.showToast)((0, u.createToast)(s.default.Messages.COPIED_LINK, u.ToastType.SUCCESS))
   }
-  return (0, n.jsx)(a.MenuItem, {
-    id: r.default.Messages.COPY_EVENT_LINK,
-    label: r.default.Messages.COPY_EVENT_LINK,
-    action: i ? void 0 : () => c(!0),
-    children: i && (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(a.MenuItem, {
-        id: r.default.Messages.COPY_RECURRENCE_LINK,
-        label: r.default.Messages.COPY_RECURRENCE_LINK,
+  return (0, l.jsx)(u.MenuItem, {
+    id: s.default.Messages.COPY_EVENT_LINK,
+    label: s.default.Messages.COPY_EVENT_LINK,
+    action: r ? void 0 : () => c(!0),
+    children: r && (0, l.jsxs)(l.Fragment, {
+      children: [(0, l.jsx)(u.MenuItem, {
+        id: s.default.Messages.COPY_RECURRENCE_LINK,
+        label: s.default.Messages.COPY_RECURRENCE_LINK,
         action: () => c(!1)
-      }), (0, n.jsx)(a.MenuItem, {
-        id: r.default.Messages.COPY_SERIES_LINK,
-        label: r.default.Messages.COPY_SERIES_LINK,
+      }), (0, l.jsx)(u.MenuItem, {
+        id: s.default.Messages.COPY_SERIES_LINK,
+        label: s.default.Messages.COPY_SERIES_LINK,
         action: () => c(!0)
       })]
     })

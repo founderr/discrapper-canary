@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Avatars: function() {
-    return y
+    return O
   },
   default: function() {
     return P
@@ -21,8 +21,8 @@ var i = n("414456"),
   p = n("698372"),
   E = n("969380"),
   g = n("401207"),
-  S = n("141962"),
-  C = n("320817"),
+  C = n("141962"),
+  S = n("320817"),
   _ = n("812204"),
   I = n("685665"),
   T = n("442939"),
@@ -36,7 +36,7 @@ var i = n("414456"),
 (a = l || (l = {}))[a.SMALL = 0] = "SMALL", a[a.MEDIUM = 1] = "MEDIUM", a[a.LARGE = 2] = "LARGE";
 let L = ["embedded_background"];
 
-function y(e) {
+function O(e) {
   let {
     avatarSize: t,
     guildId: n,
@@ -64,7 +64,7 @@ function y(e) {
   })
 }
 
-function O(e) {
+function y(e) {
   var t, n, l, a;
   let {
     participants: i,
@@ -73,25 +73,25 @@ function O(e) {
     channel: E,
     width: g
   } = e;
-  let C = (l = g) > 400 ? 2 : l > 300 ? 1 : 0;
+  let S = (l = g) > 400 ? 2 : l > 300 ? 1 : 0;
   let [_] = (a = g) > 400 ? [o.AvatarSizes.SIZE_56, 56] : a > 300 ? [o.AvatarSizes.SIZE_32, 32] : [o.AvatarSizes.SIZE_24, 24], T = (0, u.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, u.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
     analyticsLocations: L
-  } = (0, I.default)(), O = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), b = (0, h.useEmbeddedActivityJoinability)({
+  } = (0, I.default)(), y = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), b = (0, h.useEmbeddedActivityJoinability)({
     userId: null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
     channelId: E.id,
     application: m
   }), D = b === h.EmbeddedActivityJoinability.CAN_JOIN, U = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
   return (0, s.jsxs)("div", {
     className: j.splash,
-    children: [(0, s.jsx)(y, {
+    children: [(0, s.jsx)(O, {
       avatarSize: _,
       guildId: U,
       channelId: E.id,
       users: T
     }), (0, s.jsx)(o.Text, {
       className: r(j.subheader, {
-        [j.small]: 0 === C,
-        [j.medium]: 1 === C
+        [j.small]: 0 === S,
+        [j.medium]: 1 === S
       }),
       variant: "text-sm/normal",
       children: T.length > 1 ? R.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
@@ -102,8 +102,8 @@ function O(e) {
       })
     }), (0, s.jsx)(o.Text, {
       className: r(j.header, {
-        [j.small]: 0 === C,
-        [j.medium]: 1 === C
+        [j.small]: 0 === S,
+        [j.medium]: 1 === S
       }),
       variant: "text-sm/normal",
       children: m.name
@@ -115,8 +115,8 @@ function O(e) {
             applicationId: N.applicationId,
             currentEmbeddedApplication: p,
             activityChannelId: E.id,
-            locationObject: O.location,
-            embeddedActivitiesManager: S.default,
+            locationObject: y.location,
+            embeddedActivitiesManager: C.default,
             analyticsLocations: L
           })
         },
@@ -129,7 +129,7 @@ function O(e) {
             case 0:
               return o.Button.Sizes.SMALL
           }
-        }(C),
+        }(S),
         className: j.button,
         color: o.Button.Colors.PRIMARY,
         children: R.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
@@ -155,25 +155,25 @@ function P(e) {
     applicationId: u,
     names: L,
     size: 1024
-  }), S = !d;
+  }), C = !d;
   return (0, s.jsx)(r, {
     children: (0, s.jsx)("div", {
       className: j.container,
       children: (0, s.jsxs)(s.Fragment, {
         children: [!l && d && (0, s.jsx)(g.default, {
           className: j.iframe,
-          embedId: (0, C.default)(i.id, u)
-        }), S && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
+          embedId: (0, S.default)(i.id, u)
+        }), C && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
           className: j.splashImage,
           alt: f.name,
           src: h
-        }) : null, !d && !l && null != f && (0, s.jsx)(O, {
+        }) : null, !d && !l && null != f && (0, s.jsx)(y, {
           width: n,
           channel: i,
           participants: t.participants,
           application: f,
           currentEmbeddedApplication: c
-        }), a || S ? null : (0, s.jsx)("div", {
+        }), a || C ? null : (0, s.jsx)("div", {
           className: j.clickShield
         })]
       })

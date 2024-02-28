@@ -25,21 +25,21 @@ function g(e) {
   let {
     stream: i,
     applicationId: g,
-    channel: S,
-    exitFullScreen: C,
+    channel: C,
+    exitFullScreen: S,
     appContext: _,
     analyticsLocation: I,
     className: T,
     ...v
-  } = e, x = null == S ? void 0 : S.getGuildId(), N = null == S ? void 0 : S.id, A = (0, u.useStateFromStores)([f.default], () => null != x ? f.default.getGuild(x) : null, [x]), M = (0, u.useStateFromStores)([d.default], () => d.default.getActiveEventByChannel(N), [N]);
-  if (t = A, a = S, !(null != t && null != a && h.default.can(m.Permissions.CREATE_INSTANT_INVITE, a))) return null;
+  } = e, x = null == C ? void 0 : C.getGuildId(), N = null == C ? void 0 : C.id, A = (0, u.useStateFromStores)([f.default], () => null != x ? f.default.getGuild(x) : null, [x]), M = (0, u.useStateFromStores)([d.default], () => d.default.getActiveEventByChannel(N), [N]);
+  if (t = A, a = C, !(null != t && null != a && h.default.can(m.Permissions.CREATE_INSTANT_INVITE, a))) return null;
   let R = p.default.Messages.INSTANT_INVITE;
   return null != i ? R = p.default.Messages.INVITE_STREAM_HEADER : null != g && (R = p.default.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(o.Button, {
       size: o.Button.Sizes.SMALL,
       color: E.buttonColor,
       onClick: () => {
-        r(null != A, "guild cannot be null"), r(null != S, "channel cannot be null"), ! function(e) {
+        r(null != A, "guild cannot be null"), r(null != C, "channel cannot be null"), ! function(e) {
           let {
             guild: t,
             channel: a,
@@ -70,11 +70,11 @@ function g(e) {
           })
         }({
           guild: A,
-          channel: S,
+          channel: C,
           streamUserId: null == i ? void 0 : i.ownerId,
           applicationId: g,
           appContext: _,
-          exitFullScreen: C,
+          exitFullScreen: S,
           analyticsLocation: I,
           guildScheduledEvent: M
         })
@@ -83,11 +83,11 @@ function g(e) {
       ...v,
       children: R
     }), (0, l.jsx)(c.default, {
-      channel: S,
+      channel: C,
       stream: i,
       appContext: _,
       className: s(T, E.iconButton),
-      exitFullScreen: C,
+      exitFullScreen: S,
       analyticsLocation: I,
       guildScheduledEvent: M
     })]

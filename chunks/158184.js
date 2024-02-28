@@ -14,8 +14,8 @@ var s = n("37983"),
   d = n("923702"),
   c = n("658756"),
   f = n("408381"),
-  E = n("177586"),
-  p = n("635357"),
+  p = n("177586"),
+  E = n("635357"),
   S = n("642906"),
   _ = n("891865"),
   m = n("650484"),
@@ -32,8 +32,8 @@ function C(e) {
     application: d
   } = (0, S.usePaymentContext)(), f = (0, l.default)([u.default], () => u.default.getProduct(o));
   r(null != o, "Expected selectedSkuId"), r(null != d, "Expected application");
-  let E = a[o];
-  return (r(null != E, "Expected sku"), null == f) ? null : (0, s.jsxs)(m.PaymentPortalBody, {
+  let p = a[o];
+  return (r(null != p, "Expected sku"), null == f) ? null : (0, s.jsxs)(m.PaymentPortalBody, {
     children: [(0, s.jsx)(I.default, {}), (0, s.jsx)(c.CollectiblesCollectedModalInner, {
       product: f,
       onClose: t,
@@ -52,11 +52,11 @@ function T(e) {
     giftRecipient: c,
     giftMessageError: m,
     isSendingMessage: I
-  } = (0, p.useGiftContext)(), T = (0, l.default)([o.default], () => o.default.useReducedMotion), x = i.useRef(null), {
+  } = (0, E.useGiftContext)(), T = (0, l.default)([o.default], () => o.default.useReducedMotion), x = i.useRef(null), {
     selectedSkuId: h
   } = (0, S.usePaymentContext)(), g = (0, l.default)([u.default], () => u.default.getProduct(h)), {
     confettiColors: P
-  } = (0, E.default)(null == g ? void 0 : g.styles);
+  } = (0, p.default)(null == g ? void 0 : g.styles);
   return t ? (0, s.jsxs)("div", {
     ref: x,
     children: [(0, s.jsx)(_.default, {

@@ -21,16 +21,16 @@ var l = n("37983"),
 function E(e) {
   let {
     member: t
-  } = e, n = t.userId, E = t.guildId, g = (0, s.default)([o.default], () => o.default.getEnhancedMember(E, n), [n, E]), S = null != g ? g : t, C = S.unusualDMActivityUntil, _ = a.useCallback(e => {
+  } = e, n = t.userId, E = t.guildId, g = (0, s.default)([o.default], () => o.default.getEnhancedMember(E, n), [n, E]), C = null != g ? g : t, S = C.unusualDMActivityUntil, _ = a.useCallback(e => {
     if (null == e) return null;
     let t = new Date(e).getTime();
     return (0, u.formatDateRelativeTime)(t, u.MembersTableDateFormats.JOINED_AT)
-  }, []), I = a.useMemo(() => null == t ? null : _(C), [t, _, C]), T = a.useMemo(() => (0, r.isCommunicationDisabled)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), v = a.useMemo(() => null == t.communicationDisabledUntil ? new Date : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]), x = null == C && !T;
+  }, []), I = a.useMemo(() => null == t ? null : _(S), [t, _, S]), T = a.useMemo(() => (0, r.isCommunicationDisabled)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), v = a.useMemo(() => null == t.communicationDisabledUntil ? new Date : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]), x = null == S && !T;
   return x ? null : (0, l.jsx)(i.FormItem, {
     title: m.default.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
     titleClassName: p.infoTitle,
     children: (0, l.jsxs)(h.UserModInfoItemContainer, {
-      children: [null != C && (0, l.jsx)(h.UserModInfoItem, {
+      children: [null != S && (0, l.jsx)(h.UserModInfoItem, {
         icon: (0, l.jsx)(c.default, {
           width: h.USER_MOD_ICON_SIZE_PX,
           height: h.USER_MOD_ICON_SIZE_PX,

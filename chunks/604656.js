@@ -1,26 +1,26 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return d
   }
 });
-var n = a("37983");
-a("884691");
-var r = a("77078"),
-  i = a("263024"),
-  s = a("300322"),
-  u = a("49111"),
-  l = a("782340");
+var a = n("37983");
+n("884691");
+var l = n("77078"),
+  i = n("263024"),
+  u = n("300322"),
+  r = n("49111"),
+  s = n("782340");
 
-function o(e) {
-  var t, a;
-  let o = (0, s.useIsThreadModerator)(e);
-  if (!o || e.type !== u.ChannelTypes.PRIVATE_THREAD) return null;
-  let d = null === (a = null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.invitable) || void 0 === a || a;
-  return (0, n.jsx)(r.MenuCheckboxItem, {
+function d(e) {
+  var t, n;
+  let d = (0, u.useIsThreadModerator)(e);
+  if (!d || e.type !== r.ChannelTypes.PRIVATE_THREAD) return null;
+  let o = null === (n = null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.invitable) || void 0 === n || n;
+  return (0, a.jsx)(l.MenuCheckboxItem, {
     id: "toggle-thread-invitable",
-    label: l.default.Messages.THREAD_INVITABLE_TOGGLE_LABEL,
-    checked: d,
-    action: () => i.default.setInvitable(e, !d)
+    label: s.default.Messages.THREAD_INVITABLE_TOGGLE_LABEL,
+    checked: o,
+    action: () => i.default.setInvitable(e, !o)
   })
 }

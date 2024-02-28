@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return Q
+    return X
   }
 }), n("222007");
 var l = n("37983"),
@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("206230"),
   E = n("95039"),
   g = n("405645"),
-  S = n("256648"),
-  C = n("593752"),
+  C = n("256648"),
+  S = n("593752"),
   _ = n("506885"),
   I = n("981601"),
   T = n("373469"),
@@ -32,8 +32,8 @@ var l = n("37983"),
   R = n("697218"),
   j = n("543289"),
   L = n("45029"),
-  y = n("155207"),
-  O = n("826684"),
+  O = n("155207"),
+  y = n("826684"),
   P = n("483093"),
   b = n("599110"),
   D = n("659500"),
@@ -43,8 +43,8 @@ var l = n("37983"),
   k = n("888503"),
   B = n("49111"),
   V = n("782340"),
-  G = n("363092"),
-  H = n("559571");
+  H = n("363092"),
+  G = n("559571");
 let W = F.default.getEnableHardwareAcceleration(),
   Y = 44 + k.AVATAR_DECORATION_PADDING,
   z = a.memo(function(e) {
@@ -56,29 +56,29 @@ let W = F.default.getEnableHardwareAcceleration(),
     } = e, u = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), g = (0, c.useStateFromStores)([x.default], () => {
       var e, n;
       return (null == p ? void 0 : p.colorRoleId) != null ? null === (n = x.default.getGuild(t.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(p.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-    }, [t.guild_id, p]), S = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == S ? void 0 : S.id) === (null == j ? void 0 : j.id), y = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), O = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), b = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, o.useListItem)(i), F = (0, c.useStateFromStores)([C.default], () => C.default.canUserViewChannel(t.id, s, i)), G = (null == S ? void 0 : S.id) != null && S.id === r, H = a.useCallback(e => {
-      null != S && (0, h.openContextMenuLazy)(e, async () => {
+    }, [t.guild_id, p]), C = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == C ? void 0 : C.id) === (null == j ? void 0 : j.id), O = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), y = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), b = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, o.useListItem)(i), F = (0, c.useStateFromStores)([S.default], () => S.default.canUserViewChannel(t.id, s, i)), H = (null == C ? void 0 : C.id) != null && C.id === r, G = a.useCallback(e => {
+      null != C && (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("721429").then(n.bind(n, "721429"));
         return n => (0, l.jsx)(e, {
           ...n,
-          user: S,
+          user: C,
           guildId: t.guild_id,
           channel: t
         })
       })
-    }, [S, t]), Y = a.useCallback(() => {
-      if (null == S) return;
-      let e = "@".concat(w.default.getUserTag(S, {
+    }, [C, t]), Y = a.useCallback(() => {
+      if (null == C) return;
+      let e = "@".concat(w.default.getUserTag(C, {
           decoration: "never"
         })),
-        n = "<@".concat(S.id, ">");
+        n = "<@".concat(C.id, ">");
       D.ComponentDispatch.dispatchToLastSubscribed(B.ComponentActions.INSERT_TEXT, {
         plainText: e,
         rawText: n
       }), m.default.startTyping(t.id)
-    }, [S, t]), z = a.useCallback(e => {
+    }, [C, t]), z = a.useCallback(e => {
       e.stopPropagation(), (0, E.openGuildBoostingMarketingModal)({
         guildId: t.guild_id,
         location: {
@@ -87,16 +87,16 @@ let W = F.default.getEnableHardwareAcceleration(),
         }
       })
     }, [t.guild_id]);
-    if (null == S) return null;
+    if (null == C) return null;
     let K = null == p ? void 0 : p.premiumSince;
     return (0, l.jsx)(f.Popout, {
-      preload: () => (0, _.default)(S.id, S.getAvatarURL(t.guild_id, 80), {
+      preload: () => (0, _.default)(C.id, C.getAvatarURL(t.guild_id, 80), {
         guildId: t.guild_id,
         channelId: t.id
       }),
       renderPopout: e => (0, l.jsx)(I.default, {
         ...e,
-        userId: S.id,
+        userId: C.id,
         guildId: t.guild_id,
         channelId: t.id,
         analyticsParams: {
@@ -114,26 +114,26 @@ let W = F.default.getEnableHardwareAcceleration(),
           isShown: a
         } = n;
         return (0, l.jsx)(k.default, {
-          onContextMenu: H,
+          onContextMenu: G,
           shouldAnimateStatus: W,
-          user: S,
+          user: C,
           currentUser: j,
           nick: null == p ? void 0 : p.nick,
-          status: y,
+          status: O,
           activities: P,
           colorString: null == p ? void 0 : p.colorString,
           colorRoleName: g,
           isTyping: u,
           channel: t,
           guildId: t.guild_id,
-          isMobile: O,
+          isMobile: y,
           selected: a,
           applicationStream: b,
           premiumSince: null == K ? null : new Date(K),
           onClickPremiumGuildIcon: z,
           itemProps: U,
           lostPermissionTooltipText: F ? void 0 : V.default.Messages.THREAD_MEMBER_WITHOUT_ACCESS,
-          isOwner: G,
+          isOwner: H,
           ...e
         })
       }
@@ -151,18 +151,18 @@ let W = F.default.getEnableHardwareAcceleration(),
       size: 16
     });
     return t === B.StatusTypes.UNKNOWN ? (0, l.jsx)("div", {
-      className: H.membersGroup,
+      className: G.membersGroup,
       children: (0, l.jsx)("div", {
-        className: H.memberGroupsPlaceholder
+        className: G.memberGroupsPlaceholder
       })
-    }) : (0, l.jsxs)(O.default, {
-      className: H.membersGroup,
+    }) : (0, l.jsxs)(y.default, {
+      className: G.membersGroup,
       "aria-label": V.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
         title: n,
         count: a
       }),
       children: [null != i ? (0, l.jsx)(P.default, {
-        className: H.roleIcon,
+        className: G.roleIcon,
         ...i
       }) : null, (0, l.jsxs)("span", {
         "aria-hidden": !0,
@@ -176,11 +176,11 @@ let W = F.default.getEnableHardwareAcceleration(),
     } = e;
     return t.type === B.ChannelTypes.PRIVATE_THREAD ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
-        className: G.divider
+        className: H.divider
       }), (0, l.jsxs)(f.Text, {
         variant: "text-xs/bold",
         color: "header-secondary",
-        className: G.private,
+        className: H.private,
         children: [(0, l.jsx)(L.default, {
           width: 12,
           height: 12
@@ -188,17 +188,17 @@ let W = F.default.getEnableHardwareAcceleration(),
       }), (0, l.jsx)(f.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        className: G.instructions,
+        className: H.instructions,
         children: V.default.Messages.MEMBER_LIST_PRIVATE_THREAD_INSTRUCTIONS
       })]
     }) : null
   });
 
-function Q(e) {
+function X(e) {
   let {
     channel: t,
     guild: n
-  } = e, s = "members-".concat(t.id), r = (0, S.useThreadMemberListSections)(t.id, n), d = r.filter(e => e.userIds.length > 0).reverse()[0], {
+  } = e, s = "members-".concat(t.id), r = (0, C.useThreadMemberListSections)(t.id, n), d = r.filter(e => e.userIds.length > 0).reverse()[0], {
     navigator: h,
     listRef: m
   } = function(e, t) {
@@ -258,19 +258,19 @@ function Q(e) {
         channel_type: t.type,
         guild_id: t.guild_id
       })
-    }, [t.guild_id, t.id, t.type]), E) return (0, l.jsx)(X, {
+    }, [t.guild_id, t.id, t.type]), E) return (0, l.jsx)(Q, {
     channel: t
   });
   let g = u.omit(h.containerProps, ["ref"]),
-    C = U.default.getGuildVisualOwnerId(n);
+    S = U.default.getGuildVisualOwnerId(n);
   return (0, l.jsx)(o.ListNavigatorProvider, {
     navigator: h,
     children: (0, l.jsx)(f.FocusJumpSection, {
       children: e => (0, l.jsx)("div", {
-        className: i(H.membersWrap, H.hiddenMembers),
+        className: i(G.membersWrap, G.hiddenMembers),
         children: (0, l.jsx)(f.List, {
           ref: m,
-          className: H.members,
+          className: G.members,
           paddingTop: 0,
           sectionHeight: 40,
           renderSection: e => {
@@ -297,7 +297,7 @@ function Q(e) {
               channel: t,
               sectionId: i,
               userId: s[a],
-              guildOwnerId: C
+              guildOwnerId: S
             }, s[a])
           },
           footerHeight: e => r[e] === d && t.type === B.ChannelTypes.PRIVATE_THREAD ? 80 : 0,
@@ -316,33 +316,33 @@ function Q(e) {
   })
 }
 
-function X(e) {
+function Q(e) {
   let {
     channel: t
   } = e;
   return (0, l.jsxs)("div", {
-    className: i(H.membersWrap, H.hiddenMembers, H.members, G.emptyState),
+    className: i(G.membersWrap, G.hiddenMembers, G.members, H.emptyState),
     children: [(0, l.jsx)(f.Text, {
-      className: G.emptyStateHeader,
+      className: H.emptyStateHeader,
       variant: "text-xs/bold",
       color: "interactive-normal",
       children: V.default.Messages.MEMBERS
     }), (0, l.jsxs)("div", {
-      className: G.emptyStateIconContainer,
+      className: H.emptyStateIconContainer,
       children: [(0, l.jsx)("div", {
-        className: G.emptyStateIcon,
-        children: (0, l.jsx)(y.default, {
+        className: H.emptyStateIcon,
+        children: (0, l.jsx)(O.default, {
           width: 32,
           height: 32
         })
       }), (0, l.jsx)(j.default, {
-        className: G.emptyStateStars
+        className: H.emptyStateStars
       })]
     }), (0, l.jsx)(f.Heading, {
       variant: "heading-md/semibold",
       children: t.isForumPost() ? V.default.Messages.FORUM_POST_MEMBER_LIST_EMPTY_STATE_HEADER : V.default.Messages.THREAD_MEMBER_LIST_EMPTY_STATE_HEADER
     }), (0, l.jsx)(f.Text, {
-      className: G.emptyStateSubtext,
+      className: H.emptyStateSubtext,
       variant: "text-sm/normal",
       color: "header-secondary",
       children: V.default.Messages.THREAD_MEMBER_LIST_EMPTY_STATE_SUBTEXT

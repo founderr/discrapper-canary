@@ -26,11 +26,11 @@ function m(e) {
     identityCTA: h,
     className: E,
     isTryItOut: g = !1,
-    lastSection: S
+    lastSection: C
   } = e;
   return (0, l.jsx)(d.default, {
     className: a(f.container, E),
-    lastSection: S,
+    lastSection: C,
     children: (0, l.jsxs)("div", {
       className: n ? f.copiableNameTag : void 0,
       children: [(0, l.jsx)(o.CopiableField, {

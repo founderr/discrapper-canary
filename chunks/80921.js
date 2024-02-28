@@ -23,28 +23,28 @@ var l = n("37983"),
         disabled: a,
         type: m
       } = e,
-      [g, S] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default),
-      C = i.useContext(u.default),
-      [T, v] = i.useState(!1),
-      I = g === p.ExpressionPickerViewType.STICKER,
+      [g, C] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default),
+      S = i.useContext(u.default),
+      [T, I] = i.useState(!1),
+      v = g === p.ExpressionPickerViewType.STICKER,
       _ = i.useCallback(() => {
         (0, d.toggleExpressionPicker)(p.ExpressionPickerViewType.STICKER, m)
       }, [m]);
     i.useEffect(() => {
       let e = () => {
           requestAnimationFrame(() => {
-            v(!0)
+            I(!0)
           })
         },
         t = () => {
           requestAnimationFrame(() => {
-            v(!1)
+            I(!1)
           })
         };
-      return C.addListener("sticker-suggestions-shown", e), C.addListener("sticker-suggestions-hidden", t), () => {
-        C.removeListener("sticker-suggestions-shown", e), C.removeListener("sticker-suggestions-hidden", t)
+      return S.addListener("sticker-suggestions-shown", e), S.addListener("sticker-suggestions-hidden", t), () => {
+        S.removeListener("sticker-suggestions-shown", e), S.removeListener("sticker-suggestions-hidden", t)
       }
-    }, [C]);
+    }, [S]);
     let N = (0, o.useRedesignIconContext)().enabled;
     return a ? null : (n = (0, l.jsx)(f.default, {
       className: N ? "" : E.stickerIcon,
@@ -56,14 +56,14 @@ var l = n("37983"),
       children: (0, l.jsx)(c.default, {
         innerClassName: s(E.button, E.stickerButton, {
           [E.stickerButtonWithNotification]: !1,
-          [E.stickerButtonTilted]: T && !I
+          [E.stickerButtonTilted]: T && !v
         }),
         onClick: _,
-        isActive: I,
+        isActive: v,
         "aria-label": h.default.Messages.STICKER_BUTTON_LABEL,
-        "aria-expanded": I,
+        "aria-expanded": v,
         "aria-haspopup": "dialog",
-        "aria-controls": S,
+        "aria-controls": C,
         sparkle: !1,
         notification: null,
         children: n

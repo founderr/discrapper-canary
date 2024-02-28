@@ -25,16 +25,16 @@ var l = n("37983"),
   h = n("679653"),
   E = n("419830"),
   g = n("404345"),
-  S = n("364685"),
-  C = n("24373"),
+  C = n("364685"),
+  S = n("24373"),
   T = n("305961"),
-  v = n("27618"),
-  I = n("697218"),
+  I = n("27618"),
+  v = n("697218"),
   _ = n("158998"),
   N = n("563911"),
   A = n("346955"),
-  y = n("548775"),
-  x = n("49111"),
+  x = n("548775"),
+  y = n("49111"),
   O = n("782340"),
   R = n("723199");
 
@@ -265,7 +265,7 @@ j.Generic = class e extends b {
     let {
       channel: e,
       category: t
-    } = this.props, n = e.type === x.ChannelTypes.GUILD_CATEGORY ? A.default : (0, E.getChannelIconComponent)(e);
+    } = this.props, n = e.type === y.ChannelTypes.GUILD_CATEGORY ? A.default : (0, E.getChannelIconComponent)(e);
     return (0, l.jsxs)(N.AutocompleteRowContent, {
       children: [null != n && (0, l.jsx)(N.AutocompleteRowIcon, {
         children: (0, l.jsx)(n, {
@@ -273,7 +273,7 @@ j.Generic = class e extends b {
         })
       }), (0, l.jsx)(N.AutocompleteRowContentPrimary, {
         children: (0, l.jsx)(N.AutocompleteRowHeading, {
-          children: (0, h.computeChannelName)(e, I.default, v.default)
+          children: (0, h.computeChannelName)(e, v.default, I.default)
         })
       }), null != t ? (0, l.jsx)(N.AutocompleteRowContentSecondary, {
         children: t.name
@@ -287,7 +287,7 @@ j.Generic = class e extends b {
     } = this.props;
     return (0, l.jsxs)(N.AutocompleteRowContent, {
       children: [(0, l.jsx)(N.AutocompleteRowIcon, {
-        children: (0, l.jsx)(y.default, {
+        children: (0, l.jsx)(x.default, {
           className: R.icon,
           foreground: R.iconForeground
         })
@@ -381,7 +381,7 @@ j.Generic = class e extends b {
     } = this.props, {
       hovered: o
     } = this.state;
-    return (0, C.isStandardSticker)(r) ? n = null === (e = S.default.getStickerPack(r.pack_id)) || void 0 === e ? void 0 : e.name : (0, C.isGuildSticker)(r) && (n = null === (t = T.default.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name), (0, l.jsxs)(N.AutocompleteRowContent, {
+    return (0, S.isStandardSticker)(r) ? n = null === (e = C.default.getStickerPack(r.pack_id)) || void 0 === e ? void 0 : e.name : (0, S.isGuildSticker)(r) && (n = null === (t = T.default.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name), (0, l.jsxs)(N.AutocompleteRowContent, {
       children: [(0, l.jsx)(N.AutocompleteRowIcon, {
         children: a(r, o || !0 === s)
       }), (0, l.jsxs)(N.AutocompleteRowContentPrimary, {

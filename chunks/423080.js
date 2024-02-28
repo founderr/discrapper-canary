@@ -22,16 +22,16 @@ var l = n("37983"),
   h = n("5367"),
   E = n("100835"),
   g = n("38654"),
-  S = n("319165"),
-  C = n("488464"),
+  C = n("319165"),
+  S = n("488464"),
   T = n("998716"),
-  v = n("170183"),
-  I = n("689275"),
+  I = n("170183"),
+  v = n("689275"),
   _ = n("373469"),
   N = n("546463"),
   A = n("923959"),
-  y = n("824563"),
-  x = n("282109"),
+  x = n("824563"),
+  y = n("282109"),
   O = n("697218"),
   R = n("316133"),
   M = n("580357"),
@@ -75,7 +75,7 @@ function Z(e) {
     color: "text-muted",
     className: n,
     children: H.default.Messages.FORM_LABEL_MUTED
-  }) : (0, l.jsx)(S.default, {
+  }) : (0, l.jsx)(C.default, {
     muteConfig: t,
     className: n
   })
@@ -85,7 +85,7 @@ function J(e) {
   var t, n, a;
   let {
     guild: r
-  } = e, d = r.id, m = (0, u.useStateFromStoresArray)([A.default, I.default], () => {
+  } = e, d = r.id, m = (0, u.useStateFromStoresArray)([A.default, v.default], () => {
     let e = A.default.getChannels(d)[A.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
         let {
           channel: t
@@ -97,9 +97,9 @@ function J(e) {
         } = e;
         return t.id
       }),
-      t = Object.values(I.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e));
+      t = Object.values(v.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e));
     return [...e, ...t]
-  }, [d]), p = (0, v.default)(d), h = i.useMemo(() => p.map(e => e.id), [p]), E = (0, u.useStateFromStores)([R.default], () => R.default.getVoiceStates(d), [d]), g = o.flatMap(m, e => {
+  }, [d]), p = (0, I.default)(d), h = i.useMemo(() => p.map(e => e.id), [p]), E = (0, u.useStateFromStores)([R.default], () => R.default.getVoiceStates(d), [d]), g = o.flatMap(m, e => {
     var t;
     if (e === r.afkChannelId) return [];
     let n = null !== (t = E[e]) && void 0 !== t ? t : [];
@@ -109,21 +109,21 @@ function J(e) {
       } = e;
       return t
     })
-  }), S = (0, u.useStateFromStoresArray)([C.default], () => o.flatMap(h, e => {
+  }), C = (0, u.useStateFromStoresArray)([S.default], () => o.flatMap(h, e => {
     if (e === r.afkChannelId) return [];
-    let t = C.default.getMutableParticipants(e, T.StageChannelParticipantNamedIndex.SPEAKER);
+    let t = S.default.getMutableParticipants(e, T.StageChannelParticipantNamedIndex.SPEAKER);
     return t.filter(e => e.type === T.StageChannelParticipantTypes.VOICE).map(e => {
       let {
         user: t
       } = e;
       return t
     })
-  })), M = (0, u.useStateFromStores)([C.default], () => {
+  })), M = (0, u.useStateFromStores)([S.default], () => {
     let e = 0;
-    for (let t of h) e += C.default.getParticipantCount(t, T.StageChannelParticipantNamedIndex.AUDIENCE);
+    for (let t of h) e += S.default.getParticipantCount(t, T.StageChannelParticipantNamedIndex.AUDIENCE);
     return e
-  }), L = (0, u.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([y.default, N.default], () => g.filter(e => y.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != N.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(P.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), J = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([O.default], () => L.map(e => O.default.getUser(e)), [L]), X = z(U.default, g.filter(e => !L.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
-  let Q = (t = d, n = S, a = M, 0 === n.length ? null : (0, l.jsxs)("div", {
+  }), L = (0, u.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([x.default, N.default], () => g.filter(e => x.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != N.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(P.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), J = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([O.default], () => L.map(e => O.default.getUser(e)), [L]), X = z(U.default, g.filter(e => !L.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
+  let Q = (t = d, n = C, a = M, 0 === n.length ? null : (0, l.jsxs)("div", {
       className: V.row,
       children: [(0, l.jsx)(D.default, {
         className: V.activityIcon
@@ -149,9 +149,9 @@ function J(e) {
     {
       isMuted: et,
       muteConfig: en
-    } = (0, u.useStateFromStoresObject)([x.default], () => ({
-      isMuted: x.default.isMuted(d),
-      muteConfig: x.default.getMuteConfig(d)
+    } = (0, u.useStateFromStoresObject)([y.default], () => ({
+      isMuted: y.default.isMuted(d),
+      muteConfig: y.default.getMuteConfig(d)
     }), [d]);
   return null != K && G.default.trackExposure({
     location: "Guild Tooltip"

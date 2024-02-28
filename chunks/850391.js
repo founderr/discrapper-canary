@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   ChatInputTypes: function() {
-    return v
+    return I
   }
 });
 var l, i, a = n("394846"),
@@ -333,7 +333,7 @@ let r = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  S = {
+  C = {
     analyticsName: "rules_input",
     drafts: {
       type: s.DraftType.ChannelMessage
@@ -347,7 +347,7 @@ let r = {
     },
     showCharacterCount: !0
   },
-  C = {
+  S = {
     analyticsName: "forum_channel_guidelines",
     drafts: {
       type: s.DraftType.ChannelMessage
@@ -381,7 +381,7 @@ let r = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  v = {
+  I = {
     NORMAL: r,
     OVERLAY: o,
     SIDEBAR: u,
@@ -391,9 +391,9 @@ let r = {
     THREAD_CREATION: m,
     PROFILE_BIO_INPUT: E,
     CUSTOM_GIFT: g,
-    RULES_INPUT: S,
+    RULES_INPUT: C,
     CREATE_FORUM_POST: p,
     CREATE_POLL: h,
-    FORUM_CHANNEL_GUIDELINES: C,
+    FORUM_CHANNEL_GUIDELINES: S,
     ATOMIC_REACTOR_REPLY_INPUT: T
   }

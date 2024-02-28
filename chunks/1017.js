@@ -1,12 +1,12 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return m
+    return g
   }
 });
-var i = r("446674"),
-  n = r("913144"),
-  s = r("177589"),
+var n = r("446674"),
+  s = r("913144"),
+  i = r("177589"),
   l = r("824563"),
   a = r("843823"),
   u = r("697218"),
@@ -15,14 +15,14 @@ let d = !1,
   c = {},
   f = {};
 
-function p(e) {
+function h(e) {
   let t = !1;
   return e.forEach(e => {
     t = !1 !== E(e) || t
   }), t
 }
 
-function h(e) {
+function p(e) {
   let t = f[e];
   if (null == t) return !1;
   let r = t.gameId;
@@ -39,40 +39,40 @@ function E(e) {
     activities: r
   } = e;
   if (null == t) return !1;
-  let i = r.filter(e => e.type !== o.ActivityTypes.CUSTOM_STATUS);
-  if (0 === i.length) return h(t.id);
-  let n = !1;
-  return i.forEach(e => {
+  let n = r.filter(e => e.type !== o.ActivityTypes.CUSTOM_STATUS);
+  if (0 === n.length) return p(t.id);
+  let s = !1;
+  return n.forEach(e => {
     (function(e, t) {
-      var r, i, n, l;
-      let a = (0, s.default)(e);
-      if (null == a) return h(t.id);
+      var r, n, s, l;
+      let a = (0, i.default)(e);
+      if (null == a) return p(t.id);
       let u = f[t.id];
-      null != u && u.gameId !== a && h(t.id);
-      let o = null !== (i = null === (r = e.timestamps) || void 0 === r ? void 0 : r.start) && void 0 !== i ? i : Date.now(),
+      null != u && u.gameId !== a && p(t.id);
+      let o = null !== (n = null === (r = e.timestamps) || void 0 === r ? void 0 : r.start) && void 0 !== n ? n : Date.now(),
         d = {
           userId: t.id,
           activity: e,
           startedPlaying: o
         };
-      return n = a, l = d, c = {
+      return s = a, l = d, c = {
         ...c,
-        [n]: {
-          ...c[n],
+        [s]: {
+          ...c[s],
           [l.userId]: l
         }
       }, f = {
         ...f,
         [l.userId]: {
-          gameId: n,
+          gameId: s,
           startedPlaying: l.startedPlaying
         }
       }, !0
-    })(e, t) && (n = !0)
-  }), n
+    })(e, t) && (s = !0)
+  }), s
 }
 
-function _() {
+function v() {
   let e = !1;
   if (!a.default.needsRefresh() && !d) {
     let t;
@@ -86,9 +86,9 @@ function _() {
   }
   return d = !a.default.needsRefresh(), e
 }
-class v extends i.default.Store {
+class _ extends n.default.Store {
   initialize() {
-    this.waitFor(a.default), this.syncWith([a.default], _)
+    this.waitFor(a.default), this.syncWith([a.default], v)
   }
   get games() {
     return c
@@ -106,8 +106,8 @@ class v extends i.default.Store {
     return f[e]
   }
 }
-v.displayName = "NowPlayingStore";
-var m = new v(n.default, {
+_.displayName = "NowPlayingStore";
+var g = new _(s.default, {
   CONNECTION_OPEN: function() {
     c = {}, f = {}
   },
@@ -115,10 +115,10 @@ var m = new v(n.default, {
     let {
       guilds: t,
       presences: r
-    } = e, i = !1;
+    } = e, n = !1;
     return t.forEach(e => {
-      p(e.presences) && (i = !0)
-    }), p(r) && (i = !0), i
+      h(e.presences) && (n = !0)
+    }), h(r) && (n = !0), n
   },
   LOGOUT: function() {
     c = {}, f = {}
@@ -133,6 +133,6 @@ var m = new v(n.default, {
     let {
       presences: t
     } = e;
-    return p(t)
+    return h(t)
   }
 })

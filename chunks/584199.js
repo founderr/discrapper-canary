@@ -25,8 +25,8 @@ function r(e) {
     onContextMenu: p,
     onDoubleClick: E,
     onVideoResize: g,
-    paused: S,
-    pulseSpeakingIndicator: C,
+    paused: C,
+    pulseSpeakingIndicator: S,
     participant: _,
     width: I,
     ...T
@@ -54,8 +54,8 @@ function r(e) {
         onDoubleClick: E,
         onVideoResize: g,
         participant: _,
-        paused: S,
-        pulseSpeakingIndicator: C,
+        paused: C,
+        pulseSpeakingIndicator: S,
         videoComponent: v,
         width: I,
         ...T

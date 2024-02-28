@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var n = s("37983");
 s("884691");
 var a = s("77078"),
-  o = s("446674"),
-  r = s("697218"),
+  r = s("446674"),
+  o = s("697218"),
   i = s("158998"),
   _ = s("217736"),
   l = s("33320"),
@@ -22,8 +22,8 @@ function d(e) {
     onNavigate: s,
     onClose: d,
     trackAnalyticsEvent: T
-  } = e, N = (0, o.useStateFromStores)([r.default], () => {
-    let e = r.default.getUser(t);
+  } = e, R = (0, r.useStateFromStores)([o.default], () => {
+    let e = o.default.getUser(t);
     return i.default.getName(e)
   });
   return (0, n.jsxs)(n.Fragment, {
@@ -44,7 +44,7 @@ function d(e) {
           color: "header-secondary",
           className: E.description,
           children: u.default.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_DESCRIPTION.format({
-            username: N
+            username: R
           })
         })]
       }), (0, n.jsxs)("div", {

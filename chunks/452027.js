@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("664336"),
   E = n("659500"),
   g = n("412090"),
-  S = n("49111"),
-  C = n("994428"),
+  C = n("49111"),
+  S = n("994428"),
   _ = n("782340"),
   I = n("370835"),
   T = function(e) {
@@ -31,11 +31,11 @@ var l = n("37983"),
     } = e;
     a.useEffect(() => {
       (0, c.markDismissibleContentAsDismissed)(s.DismissibleContent.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, {
-        dismissAction: C.ContentDismissActionType.AUTO
+        dismissAction: S.ContentDismissActionType.AUTO
       })
     }, []);
     let v = a.useCallback(() => {
-        i.default.updateChatOpen(t.id, !1), E.ComponentDispatch.safeDispatch(S.ComponentActions.FOCUS_CHAT_BUTTON)
+        i.default.updateChatOpen(t.id, !1), E.ComponentDispatch.safeDispatch(C.ComponentActions.FOCUS_CHAT_BUTTON)
       }, [t.id]),
       x = (0, l.jsx)(p.default.Icon, {
         icon: m.default,

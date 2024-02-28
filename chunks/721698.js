@@ -10,16 +10,16 @@ n.r(t), n.d(t, {
     return g
   },
   getSimilarApplications: function() {
-    return S
+    return C
   },
   search: function() {
-    return C
+    return S
   },
   getCollections: function() {
     return T
   },
   fetchIntegrationApplicationIdsForMyGuilds: function() {
-    return v
+    return I
   }
 }), n("222007");
 var l = n("981980"),
@@ -117,7 +117,7 @@ async function g() {
     categories: n.body
   })
 }
-async function S(e) {
+async function C(e) {
   var t;
   let {
     applicationId: n,
@@ -171,7 +171,7 @@ async function S(e) {
     }
   }
 }
-async function C(e) {
+async function S(e) {
   var t;
   let {
     query: n,
@@ -277,7 +277,7 @@ async function T() {
     }
   }
 }
-async function v() {
+async function I() {
   let e = Date.now(),
     t = f.default.getFetchState(),
     n = f.default.getLastFetchTimeMs(),

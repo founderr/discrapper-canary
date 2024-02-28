@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   OneTimePaymentPredicateStep: function() {
-    return E
+    return p
   }
 }), n("222007");
 var s = n("37983"),
@@ -15,14 +15,14 @@ var s = n("37983"),
   c = n("628738"),
   f = n("49111");
 
-function E(e) {
+function p(e) {
   let {
     handleStepChange: t,
     handleClose: n
   } = e, {
     blockedPayments: a,
-    hasFetchedSkus: E,
-    paymentSources: p,
+    hasFetchedSkus: p,
+    paymentSources: E,
     hasFetchedPaymentSources: S,
     application: _,
     skusById: m,
@@ -32,8 +32,8 @@ function E(e) {
   } = (0, o.useGiftContext)(), [T, x] = i.useState(!0);
   return (i.useEffect(() => {
     let e = null != _;
-    E && S && e && x(!1)
-  }, [E, S, _]), i.useEffect(() => {
+    p && S && e && x(!1)
+  }, [p, S, _]), i.useEffect(() => {
     if (T || a) return;
     r(null != I, "Expected selectedSkuId");
     let e = m[I];
@@ -41,12 +41,12 @@ function E(e) {
       t(d.Step.GIFT_CUSTOMIZATION);
       return
     }
-    if (0 === Object.keys(p).length) {
+    if (0 === Object.keys(E).length) {
       t(d.Step.ADD_PAYMENT_STEPS);
       return
     }
     t(d.Step.REVIEW)
-  }, [T, a, t, p, C, m, I]), T) ? (0, s.jsx)(c.default, {}) : a ? (0, s.jsx)(l.BlockedPaymentsContentModal, {
+  }, [T, a, t, E, C, m, I]), T) ? (0, s.jsx)(c.default, {}) : a ? (0, s.jsx)(l.BlockedPaymentsContentModal, {
     onClose: n
   }) : null
 }

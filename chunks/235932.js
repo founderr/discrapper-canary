@@ -24,7 +24,7 @@ let h = async e => {
     reaction: t,
     altText: n,
     ...l
-  } = e, i = await S(l);
+  } = e, i = await C(l);
   (0, d.sendReaction)({
     file: i,
     altText: n,
@@ -36,7 +36,7 @@ let h = async e => {
     reply: t,
     altText: n,
     ...l
-  } = e, i = await S(l);
+  } = e, i = await C(l);
   (0, d.sendReply)({
     file: i,
     altText: n,
@@ -54,7 +54,7 @@ let h = async e => {
   } = (0, f.getProfileInfo)(a, "black"), r = "dark" === s, d = (0, f.getActivityPlatform)(l), {
     assets: c,
     application_id: p
-  } = l, h = (0, o.getAssetImage)(p, null == c ? void 0 : c.large_image, 64), E = null == i ? void 0 : i.getIconURL(64), g = null != d ? r ? d.icon.darkPNG : d.icon.lightPNG : l.type === m.ActivityTypes.PLAYING ? r ? n("944857") : n("248073") : null, S = l.type === m.ActivityTypes.HANG_STATUS && (null === (t = l.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, u.getEmojiUrl)({
+  } = l, h = (0, o.getAssetImage)(p, null == c ? void 0 : c.large_image, 64), E = null == i ? void 0 : i.getIconURL(64), g = null != d ? r ? d.icon.darkPNG : d.icon.lightPNG : l.type === m.ActivityTypes.PLAYING ? r ? n("944857") : n("248073") : null, C = l.type === m.ActivityTypes.HANG_STATUS && (null === (t = l.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, u.getEmojiUrl)({
     id: l.emoji.id,
     name: l.emoji.name,
     animated: !1
@@ -69,11 +69,11 @@ let h = async e => {
     ...null != E && {
       ApplicationImage: E
     },
-    ...null != S && {
-      HangStatus: S
+    ...null != C && {
+      HangStatus: C
     }
   }
-}, S = async e => {
+}, C = async e => {
   let {
     user: t,
     activity: n,
@@ -88,7 +88,7 @@ let h = async e => {
     assetsToLoad: d,
     drawImage: e => {
       var s;
-      null != u ? N(e, n, t) : (0, a.default)(n) ? v(e, n, t) : (0, i.default)(n) && n.name === l.default.get(m.PlatformTypes.LEAGUE_OF_LEGENDS).name ? _(e, n, t) : n.type === m.ActivityTypes.HANG_STATUS ? I(e, n, t) : T(e, n, t), (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has("Platform")) && e.drawImage("Platform", {
+      null != u ? N(e, n, t) : (0, a.default)(n) ? I(e, n, t) : (0, i.default)(n) && n.name === l.default.get(m.PlatformTypes.LEAGUE_OF_LEGENDS).name ? _(e, n, t) : n.type === m.ActivityTypes.HANG_STATUS ? v(e, n, t) : T(e, n, t), (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has("Platform")) && e.drawImage("Platform", {
         x: c.canvasWidth - c.padding - c.platformSize,
         y: c.padding
       }, {
@@ -103,7 +103,7 @@ let h = async e => {
       fileType: "png"
     }
   })
-}, C = (e, t) => {
+}, S = (e, t) => {
   e.setColor("dark" === t ? "white" : "black"), e.drawPath(c.ACTIVITY_IMAGE_FALLBACK_PATH, {
     x: c.padding,
     y: c.padding
@@ -140,7 +140,7 @@ let h = async e => {
   }, {
     w: c.activitySize,
     h: c.activitySize
-  }, 8) : C(e, r);
+  }, 8) : S(e, r);
   let o = c.activitySize + c.padding + c.imagePadding;
   e.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 16,
@@ -156,7 +156,7 @@ let h = async e => {
     x: o,
     y: c.fontPadding + 2 * c.lineHeight
   }, !0))
-}, v = (e, t, n) => {
+}, I = (e, t, n) => {
   var l, i;
   e.setSize({
     w: c.canvasWidth,
@@ -198,7 +198,7 @@ let h = async e => {
     x: r,
     y: c.fontPadding + 2 * c.lineHeight
   }, !0)
-}, I = (e, t, l) => {
+}, v = (e, t, l) => {
   var i, a;
   e.setSize({
     w: c.canvasWidth,
@@ -224,7 +224,7 @@ let h = async e => {
   }, {
     w: c.activitySize,
     h: c.activitySize
-  }, 8) : C(e, r);
+  }, 8) : S(e, r);
   let o = c.activitySize + c.padding + c.imagePadding;
   e.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 14,
@@ -325,7 +325,7 @@ let h = async e => {
   }, {
     w: c.activitySize,
     h: c.activitySize
-  }, 8) : C(e, r);
+  }, 8) : S(e, r);
   let o = c.activitySize + c.padding + c.imagePadding;
   e.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 16,

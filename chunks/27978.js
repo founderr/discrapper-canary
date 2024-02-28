@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return l
   }
 });
-var u = (0, n("862205").createExperiment)({
+var l = (0, n("862205").createExperiment)({
   kind: "guild",
   id: "2021-11_hub_events",
   label: "Hub Events",

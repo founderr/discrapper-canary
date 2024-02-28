@@ -25,7 +25,7 @@ function p(e) {
     onFocus: h
   } = e, [E, g] = i.useState(!1);
 
-  function S() {
+  function C() {
     return (0, l.jsx)(u.Dialog, {
       className: m.popoutWrapper,
       children: (0, l.jsx)(u.Scroller, {
@@ -66,7 +66,7 @@ function p(e) {
         }).value(),
         t = r.length - a;
       return t > 0 && (e[e.length - 1] = (0, l.jsx)(u.Popout, {
-        renderPopout: S,
+        renderPopout: C,
         shouldShow: E,
         position: "bottom",
         onRequestClose: () => g(!1),

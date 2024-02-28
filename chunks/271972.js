@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return C
+    return S
   }
 });
 var l, i, a = n("37983"),
@@ -21,44 +21,44 @@ var l, i, a = n("37983"),
   E = n("782340"),
   g = n("831594");
 
-function S(e) {
+function C(e) {
   e.stopPropagation()
 }(l = i || (i = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM", l[l.CLIP = 2] = "CLIP";
-var C = s.forwardRef(function(e, t) {
+var S = s.forwardRef(function(e, t) {
   let {
     id: n,
     channelId: l,
     className: i,
     children: s,
     actions: r,
-    handleEditModal: C,
+    handleEditModal: S,
     keyboardModeEnabled: T,
-    onKeyDown: v,
-    draftType: I,
+    onKeyDown: I,
+    draftType: v,
     size: _ = 1
   } = e, {
     onFocus: N,
     ...A
   } = (0, u.useListItem)(n), {
-    handleFocus: y,
-    handleBlur: x
+    handleFocus: x,
+    handleBlur: y
   } = (0, p.useFocusInside)(N), O = 0 === _, R = null != r;
   return (0, a.jsx)(d.FocusRing, {
     children: (0, a.jsx)("li", {
       ...A,
-      onFocus: y,
-      onBlur: x,
+      onFocus: x,
+      onBlur: y,
       onKeyDown: e => {
         if (T) {
           switch (e.which) {
             case h.KeyboardKeys.D:
-              e.preventDefault(), c.default.remove(l, n, I);
+              e.preventDefault(), c.default.remove(l, n, v);
               return;
             case h.KeyboardKeys.E:
-              null != C && (e.preventDefault(), C(e));
+              null != S && (e.preventDefault(), S(e));
               return;
             case h.KeyboardKeys.BACKSPACE:
-              e.ctrlKey ? (e.preventDefault(), c.default.clearAll(l, I)) : (e.preventDefault(), c.default.remove(l, n, I));
+              e.ctrlKey ? (e.preventDefault(), c.default.clearAll(l, v)) : (e.preventDefault(), c.default.remove(l, n, v));
               return;
             case h.KeyboardKeys.ARROW_UP:
               let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
@@ -67,7 +67,7 @@ var C = s.forwardRef(function(e, t) {
                 atEnd: !0
               })
           }
-          null == v || v(e)
+          null == I || I(e)
         }
       },
       className: o(g.upload, i, {
@@ -82,7 +82,7 @@ var C = s.forwardRef(function(e, t) {
             className: o(g.actionBar, {
               [g.smallActionBar]: O
             }),
-            onContextMenu: S,
+            onContextMenu: C,
             "aria-label": E.default.Messages.ATTACHMENT_UTILITIES,
             children: (0, a.jsx)(f.default, {
               className: o({

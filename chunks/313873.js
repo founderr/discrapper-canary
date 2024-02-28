@@ -20,16 +20,16 @@ var l, i, a = n("37983"),
   h = n("376556"),
   E = n("609030"),
   g = n("309570"),
-  S = n("985677"),
-  C = n("429928"),
+  C = n("985677"),
+  S = n("429928"),
   T = n("36539"),
-  v = n("502651"),
-  I = n("419830"),
+  I = n("502651"),
+  v = n("419830"),
   _ = n("808742"),
   N = n("342845"),
   A = n("239380"),
-  y = n("118033"),
-  x = n("315102"),
+  x = n("118033"),
+  y = n("315102"),
   O = n("568734"),
   R = n("474293"),
   M = n("339521"),
@@ -70,7 +70,7 @@ function K(e) {
       activity: n
     } = e,
     l = (0, p.default)();
-  if ((0, C.default)(n) && (t = k.PlatformTypes.SPOTIFY), null != n.platform && [k.ActivityGamePlatforms.PS4, k.ActivityGamePlatforms.PS5].includes(n.platform) && (t = k.PlatformTypes.PLAYSTATION), null == t) return null;
+  if ((0, S.default)(n) && (t = k.PlatformTypes.SPOTIFY), null != n.platform && [k.ActivityGamePlatforms.PS4, k.ActivityGamePlatforms.PS5].includes(n.platform) && (t = k.PlatformTypes.PLAYSTATION), null == t) return null;
   let i = h.default.get(t);
   return (0, a.jsx)("img", {
     alt: "",
@@ -93,10 +93,10 @@ class W extends s.PureComponent {
     return (0, R.getClass)(G, e, this.props.type, t)
   }
   isStreamerOnTypeProfile() {
-    return (0, v.default)(this.activity) && ("Profile" === this.props.type || "ProfileV2" === this.props.type)
+    return (0, I.default)(this.activity) && ("Profile" === this.props.type || "ProfileV2" === this.props.type)
   }
   isStreamerOnTypeActivityFeed() {
-    return (0, v.default)(this.activity) && "ActivityFeed" === this.props.type
+    return (0, I.default)(this.activity) && "ActivityFeed" === this.props.type
   }
   renderHeader(e) {
     let t;
@@ -145,7 +145,7 @@ class W extends s.PureComponent {
         server: l.name
       })
     }(null == u ? void 0 : u.type) === k.ActivityTypes.HANG_STATUS && (t = F.default.Messages.STATUS_LEAD_IN_JUST);
-    let m = (0, I.getChannelIconComponent)(i, l);
+    let m = (0, v.getChannelIconComponent)(i, l);
     return null != i && (t = i.name), (0, a.jsxs)("div", {
       className: G.headerContainer,
       children: [null != i && null !== m ? (0, a.jsx)(m, {
@@ -187,8 +187,8 @@ class W extends s.PureComponent {
       application_id: c
     } = e;
     if (null == d || null == d.large_image && null == d.small_image) return null;
-    (0, v.default)(e) && (i = B[u]);
-    let m = (0, C.default)(e),
+    (0, I.default)(e) && (i = B[u]);
+    let m = (0, S.default)(e),
       p = null != d.large_image ? (0, a.jsx)("img", {
         alt: null !== (t = d.large_text) && void 0 !== t ? t : "",
         src: H(c, d.large_image, null != i ? i : [w.ImageSizes.LARGE, w.ImageSizes.LARGE]),
@@ -202,15 +202,15 @@ class W extends s.PureComponent {
       onClick: this.handleOpenSpotifyAlbum,
       children: p
     });
-    else if ((0, y.isStageActivity)(e)) {
-      let t = (0, y.unpackStageChannelParty)(e);
+    else if ((0, x.isStageActivity)(e)) {
+      let t = (0, x.unpackStageChannelParty)(e);
       if (null == t) return null;
       p = (0, a.jsx)(D.default, {
         mask: D.default.Masks.SQUIRCLE,
         width: w.ImageSizes.SMALL,
         height: w.ImageSizes.SMALL,
         children: (0, a.jsx)("img", {
-          src: null !== (l = x.default.getGuildIconURL({
+          src: null !== (l = y.default.getGuildIconURL({
             id: t.guildId,
             icon: d.small_image,
             size: w.ImageSizes.SMALL
@@ -238,7 +238,7 @@ class W extends s.PureComponent {
         href: e.url,
         children: p
       })]
-    })), !(0, y.isStageActivity)(e) && null != d.small_image && (r = (0, a.jsx)(f.Tooltip, {
+    })), !(0, x.isStageActivity)(e) && null != d.small_image && (r = (0, a.jsx)(f.Tooltip, {
       text: "" !== d.small_text ? d.small_text : null,
       position: "top",
       children: e => {
@@ -297,17 +297,17 @@ class W extends s.PureComponent {
       type: s
     } = e;
     if (s === k.ActivityTypes.CUSTOM_STATUS) return null;
-    let r = (0, S.default)(e),
+    let r = (0, C.default)(e),
       o = e.name,
       u = o;
     return (s === k.ActivityTypes.HANG_STATUS ? u = (0, _.getHangStatusText)(e) : r && null != n ? u = (0, a.jsx)("span", {
       className: G.activityName,
       children: u
-    }) : !r && (o = i, u = i, (0, C.default)(e) && null != e.sync_id && null != i ? u = (0, a.jsx)(f.Anchor, {
+    }) : !r && (o = i, u = i, (0, S.default)(e) && null != e.sync_id && null != i ? u = (0, a.jsx)(f.Anchor, {
       className: G.bodyLink,
       onClick: this.handleOpenSpotifyTrack,
       children: i
-    }) : (0, y.isStageActivity)(e) && (u = e.name)), null == u) ? null : (0, a.jsx)(f.Text, {
+    }) : (0, x.isStageActivity)(e) && (u = e.name)), null == u) ? null : (0, a.jsx)(f.Text, {
       title: o,
       variant: "text-sm/semibold",
       className: (0, R.getClass)(G, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"),
@@ -328,8 +328,8 @@ class W extends s.PureComponent {
     }) : null, t = null != i ? () => {
       (0, A.transitionToGuild)(i.id)
     } : void 0;
-    else if (!(0, S.default)(e)) {
-      if (r = s = l, (0, C.default)(e) && null != l) s = F.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
+    else if (!(0, C.default)(e)) {
+      if (r = s = l, (0, S.default)(e) && null != l) s = F.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
         artists: r,
         artistsHook: (t, n) => (0, a.jsx)(U.default, {
           artists: l,
@@ -338,12 +338,12 @@ class W extends s.PureComponent {
           onOpenSpotifyArtist: this.handleOpenSpotifyArtist
         }, n)
       });
-      else if ((0, y.isStageActivity)(e)) {
+      else if ((0, x.isStageActivity)(e)) {
         var o;
         s = null === (o = e.assets) || void 0 === o ? void 0 : o.small_text
       }
     }
-    return null == s || 0 === s.length ? null : ((0, v.default)(e) && (s = F.default.Messages.STREAMER_PLAYING.format({
+    return null == s || 0 === s.length ? null : ((0, I.default)(e) && (s = F.default.Messages.STREAMER_PLAYING.format({
       game: s
     })), null != t) ? (0, a.jsx)(f.Clickable, {
       onClick: t,
@@ -352,7 +352,7 @@ class W extends s.PureComponent {
       children: s
     }) : (0, a.jsx)("div", {
       title: null != r ? r : void 0,
-      className: (0, v.default)(e) || (0, C.default)(e) ? G.detailsWrap : G.details,
+      className: (0, I.default)(e) || (0, S.default)(e) ? G.detailsWrap : G.details,
       children: s
     })
   }
@@ -360,7 +360,7 @@ class W extends s.PureComponent {
     let {
       activityGuild: t
     } = this.props;
-    if (!(0, S.default)(e) || (0, C.default)(e)) return null;
+    if (!(0, C.default)(e) || (0, S.default)(e)) return null;
     let {
       timestamps: n
     } = e;
@@ -374,7 +374,7 @@ class W extends s.PureComponent {
     })
   }
   renderTimeBar(e) {
-    if (!(0, C.default)(e)) return null;
+    if (!(0, S.default)(e)) return null;
     let {
       timestamps: t
     } = e;
@@ -398,17 +398,17 @@ class W extends s.PureComponent {
       party: r,
       assets: o
     } = e, u = s, d = u;
-    return (!(0, S.default)(e) && (d = u = null == o ? void 0 : o.large_text, (0, C.default)(e) && null != u && (u = F.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
+    return (!(0, C.default)(e) && (d = u = null == o ? void 0 : o.large_text, (0, S.default)(e) && null != u && (u = F.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
       album: d,
       albumHook: (t, n) => null != e.sync_id && null != d ? (0, a.jsx)(f.Anchor, {
         className: G.bodyLink,
         onClick: this.handleOpenSpotifyAlbum,
         children: d
       }, n) : d
-    }))), null != u && 0 !== u.length && e.type !== k.ActivityTypes.CUSTOM_STATUS || (0, y.isStageActivity)(e)) ? ((null == r ? void 0 : r.size) == null && [(0, w.POKER_NIGHT_APPLICATION_ID)].includes(null !== (n = e.application_id) && void 0 !== n ? n : "") ? i = F.default.Messages.USER_ACTIVITY_STATE_SIZE.format({
+    }))), null != u && 0 !== u.length && e.type !== k.ActivityTypes.CUSTOM_STATUS || (0, x.isStageActivity)(e)) ? ((null == r ? void 0 : r.size) == null && [(0, w.POKER_NIGHT_APPLICATION_ID)].includes(null !== (n = e.application_id) && void 0 !== n ? n : "") ? i = F.default.Messages.USER_ACTIVITY_STATE_SIZE.format({
       count: "0",
       max: null !== (l = null == t ? void 0 : t.getMaxParticipants()) && void 0 !== l ? l : 0
-    }) : (0, y.isStageActivity)(e) && (null == r ? void 0 : r.size) != null ? i = F.default.Messages.USER_ACTIVITY_STAGE_STATE_SIZE.format({
+    }) : (0, x.isStageActivity)(e) && (null == r ? void 0 : r.size) != null ? i = F.default.Messages.USER_ACTIVITY_STAGE_STATE_SIZE.format({
       numSpeakers: r.size[0],
       numListeners: r.size[1] - r.size[0]
     }) : (null == r ? void 0 : r.size) != null && r.size.length >= 2 && (i = F.default.Messages.USER_ACTIVITY_STATE_SIZE.format({
@@ -444,21 +444,21 @@ class W extends s.PureComponent {
       h = this.renderDetails(r),
       E = this.renderState(r, i),
       g = this.renderTimePlayed(r),
-      S = null != n ? n() : null,
-      C = this.renderTimeBar(r),
-      v = ![e, p, h, E, g, C, S].some(e => null != e);
+      C = null != n ? n() : null,
+      S = this.renderTimeBar(r),
+      I = ![e, p, h, E, g, S, C].some(e => null != e);
     return (0, a.jsxs)("div", {
       className: o(this.getTypeClass("activity"), l),
-      children: [this.renderHeader(v), (0, a.jsxs)("div", {
+      children: [this.renderHeader(I), (0, a.jsxs)("div", {
         className: o(m ? G.bodyAlignCenter : G.bodyNormal, s && !u && !f && G.wrap),
         children: [(0, a.jsxs)("div", {
           className: G.activityDetails,
           children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(L.default.Child, {
             className: o((0, R.getClass)(G, "content", m ? "GameImage" : null != e ? "Images" : "NoImages", t)),
-            children: [p, h, E, g, u || f ? null : C, c ? S : null]
+            children: [p, h, E, g, u || f ? null : S, c ? C : null]
           })]
-        }), d ? S : null]
-      }), u ? C : null, u || f ? S : null, (0, a.jsx)(K, {
+        }), d ? C : null]
+      }), u ? S : null, u || f ? C : null, (0, a.jsx)(K, {
         activity: r
       })]
     })

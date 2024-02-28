@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("914275"),
   E = n("789150"),
   g = n("49111"),
-  S = n("782340"),
-  C = n("206845");
+  C = n("782340"),
+  S = n("206845");
 
 function _(e) {
   var t, n;
@@ -31,16 +31,16 @@ function _(e) {
     specMap: u
   } = e, f = g.Permissions[a], h = null !== (n = null === (t = u[f.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, c.getPermissionName)(f), m = p.ELEVATED_PERMISSIONS.has(f);
   return (0, l.jsx)(o.Tooltip, {
-    "aria-label": S.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
-    tooltipClassName: C.roleTooltipContainer,
-    tooltipContentClassName: C.roleTooltipContentContainer,
+    "aria-label": C.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
+    tooltipClassName: S.roleTooltipContainer,
+    tooltipContentClassName: S.roleTooltipContentContainer,
     allowOverflow: !0,
     text: (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
-        children: m ? S.default.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY : S.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY
+        children: m ? C.default.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY : C.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY
       }), s.map(e => (0, l.jsx)("div", {
-        className: i(C.roleTooltipItem),
+        className: i(S.roleTooltipItem),
         children: (0, l.jsx)(d.default, {
           role: r.getRole(e),
           guildId: r.id
@@ -53,8 +53,8 @@ function _(e) {
         onMouseLeave: n
       } = e;
       return (0, l.jsx)(o.Clickable, {
-        className: i(C.permissionChiplet, {
-          [C.elevatedPermission]: m
+        className: i(S.permissionChiplet, {
+          [S.elevatedPermission]: m
         }),
         onMouseEnter: t,
         onMouseLeave: n,
@@ -74,11 +74,11 @@ var I = a.memo(function(e) {
   } = e, s = (0, r.default)([f.default], () => f.default.getGuild(t.guildId), [t.guildId]), d = (0, p.useUserPermissionsAndRoles)(t.userId, t.guildId, p.MOD_PERMISSIONS), c = (0, p.useUserPermissionsAndRoles)(t.userId, t.guildId, p.ALL_PERMISSIONS), I = Object.keys(d).length, T = Object.keys(c).length, v = a.useMemo(() => null != s ? h.default.getGuildPermissionSpecMap(s) : null, [s]), x = a.useMemo(() => null != s ? h.default.generateGuildPermissionSpec(s) : null, [s]), N = a.useMemo(() => {
     if (null == s || null == v) return null;
     if (0 === I) return (0, l.jsx)("div", {
-      className: i(C.permissionChiplet, C.noModPerms),
+      className: i(S.permissionChiplet, S.noModPerms),
       children: (0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-positive",
-        children: S.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND
+        children: C.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND
       })
     });
     let e = [];
@@ -99,18 +99,18 @@ var I = a.memo(function(e) {
   }, [s, I, d, x, v]);
   return null == s ? null : (0, l.jsx)(o.FormItem, {
     title: (0, l.jsxs)("div", {
-      className: C.headerContainer,
+      className: S.headerContainer,
       children: [(0, l.jsx)(o.Text, {
         variant: "eyebrow",
         color: "header-secondary",
-        children: S.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE
+        children: C.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE
       }), (0, l.jsxs)(o.Clickable, {
-        className: C.viewAllPermissions,
+        className: S.viewAllPermissions,
         onClick: () => n(E.ModViewPanel.PERMISSIONS),
         children: [(0, l.jsx)(o.Text, {
           variant: "eyebrow",
           color: "interactive-normal",
-          children: S.default.Messages.GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS.format({
+          children: C.default.Messages.GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS.format({
             count: T
           })
         }), (0, l.jsx)(u.ChevronSmallRightIcon, {
@@ -119,11 +119,11 @@ var I = a.memo(function(e) {
         })]
       })]
     }),
-    titleClassName: C.infoTitle,
+    titleClassName: S.infoTitle,
     children: (0, l.jsx)(m.UserModInfoItemContainer, {
       children: (0, l.jsx)(m.UserModInfoItem, {
         description: (0, l.jsx)("div", {
-          className: C.permissionsContainer,
+          className: S.permissionsContainer,
           children: N
         })
       })

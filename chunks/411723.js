@@ -26,15 +26,15 @@ var i = n("414456"),
       applicationId: i,
       title: s,
       guildId: g,
-      className: S
-    } = e, C = (0, d.useGetOrFetchApplication)(i), T = (0, o.useStateFromStoresArray)([f.default], () => {
+      className: C
+    } = e, S = (0, d.useGetOrFetchApplication)(i), T = (0, o.useStateFromStoresArray)([f.default], () => {
       var e;
       return null !== (e = n.map(e => f.default.getUser(e)).filter(p.isNotNullish)) && void 0 !== e ? e : []
-    }), v = null == C ? void 0 : C.name, I = r(t).fromNow();
+    }), I = null == S ? void 0 : S.name, v = r(t).fromNow();
     return null == t ? null : (0, l.jsxs)("div", {
-      className: a(S, E.container),
+      className: a(C, E.container),
       children: [(0, l.jsx)(m.default, {
-        game: C
+        game: S
       }), (0, l.jsxs)("div", {
         className: E.textSection,
         children: [null != s && "" !== s ? (0, l.jsx)(u.Text, {
@@ -49,7 +49,7 @@ var i = n("414456"),
           variant: "text-xs/medium",
           color: "text-muted",
           className: E.subtitle,
-          children: [null != v ? "".concat(v, " • ") : null, I]
+          children: [null != I ? "".concat(I, " • ") : null, v]
         }), (0, l.jsx)(u.Text, {
           variant: "text-xs/medium",
           color: "text-muted",

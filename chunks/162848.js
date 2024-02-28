@@ -15,8 +15,8 @@ var i = n("414456"),
   d = n("688318"),
   c = n("635357"),
   f = n("184900"),
-  E = n("845962"),
-  p = n("506885"),
+  p = n("845962"),
+  E = n("506885"),
   S = n("697218"),
   _ = n("153160"),
   m = n("426188"),
@@ -44,7 +44,7 @@ let h = e => {
     var t;
     let {
       profileEffect: n
-    } = e, i = (0, l.useStateFromStores)([E.default], () => E.default.getProfileEffectById(n.id)), {
+    } = e, i = (0, l.useStateFromStores)([p.default], () => p.default.getProfileEffectById(n.id)), {
       accessibilityLabel: a,
       thumbnailPreviewSrc: r,
       title: o
@@ -71,7 +71,7 @@ var P = e => {
     product: u
   } = (0, m.useFetchCollectiblesProduct)(t), {
     giftRecipient: d,
-    giftRecipientError: E
+    giftRecipientError: p
   } = (0, c.useGiftContext)(), x = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentUser());
   if (null == u || null == n) return null;
   let [P] = u.items, N = null != d && d.id !== (null == x ? void 0 : x.id);
@@ -83,7 +83,7 @@ var P = e => {
         className: T.previewTitle,
         children: C.default.Messages.COLLECTIBLES_GIFT_LABEL
       }), N && (0, s.jsx)(o.Popout, {
-        preload: () => (0, p.default)(d.id, d.getAvatarURL(null, 80)),
+        preload: () => (0, E.default)(d.id, d.getAvatarURL(null, 80)),
         renderPopout: e => (0, s.jsx)(f.default, {
           ...e,
           user: d,
@@ -109,7 +109,7 @@ var P = e => {
       }, d.id)]
     }), (0, s.jsxs)("div", {
       className: a(T.previewContainer, {
-        [T.previewContainerError]: null != E
+        [T.previewContainerError]: null != p
       }),
       children: [P.type === r.CollectiblesItemType.AVATAR_DECORATION && (0, s.jsx)(h, {
         avatarDecoration: P
@@ -129,11 +129,11 @@ var P = e => {
         variant: "text-md/semibold",
         children: (0, _.formatPrice)(n.amount, n.currency)
       })]
-    }), null != E && (0, s.jsx)(o.Text, {
+    }), null != p && (0, s.jsx)(o.Text, {
       className: T.recipientError,
       variant: "text-sm/normal",
       color: "status-danger-background",
-      children: E
+      children: p
     })]
   })
 }

@@ -23,10 +23,10 @@ var i = n("414456"),
 function g(e) {
   return {
     react(t, i, g) {
-      let S = g.noStyleAndInteraction ? void 0 : async n => {
+      let C = g.noStyleAndInteraction ? void 0 : async n => {
         let l = await (0, c.maybeRefreshAttachmentUrl)(t.attachmentUrl);
         e.shouldStopPropagation && (null == n || n.stopPropagation()), d.default.trackLinkClicked(l), e.shouldCloseDefaultModals && (0, r.closeAllModals)(), (0, u.default)(l)
-      }, C = g.noStyleAndInteraction ? p.NOOP : e => {
+      }, S = g.noStyleAndInteraction ? p.NOOP : e => {
         (0, o.openContextMenuLazy)(e, async () => {
           let {
             default: e
@@ -41,8 +41,8 @@ function g(e) {
       return (0, l.jsxs)(f.default, {
         role: "link",
         href: t.attachmentUrl,
-        onClick: S,
-        onContextMenu: C,
+        onClick: C,
+        onContextMenu: S,
         className: "attachmentLink",
         children: [(0, l.jsx)(s.AttachmentIcon, {
           className: a(E.icon, h.icon),

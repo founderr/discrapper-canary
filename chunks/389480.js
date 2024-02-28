@@ -21,7 +21,7 @@ function g(e, t) {
   }
 }
 
-function S(e) {
+function C(e) {
   let {
     soundId: t,
     guildId: n,
@@ -56,7 +56,7 @@ n.r(t), n.d(t, {
     return g
   },
   soundboardSoundToAPI: function() {
-    return S
+    return C
   },
   SoundboardSoundGridSectionType: function() {
     return r

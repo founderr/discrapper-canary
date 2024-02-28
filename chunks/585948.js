@@ -25,10 +25,10 @@ let o = e => {
   }, [c]), {
     gridDispatch: E,
     getItemProps: g,
-    getRowProps: S,
-    gridContainerProps: C,
+    getRowProps: C,
+    gridContainerProps: S,
     handleGridContainerKeyDown: T,
-    isUsingKeyboardNavigation: v
+    isUsingKeyboardNavigation: I
   } = (0, r.useExpressionPickerGridKeyboardNavigation)({
     columnCounts: t,
     gridNavigatorId: d,
@@ -51,9 +51,9 @@ let o = e => {
     })
   }, e => e.inspectedExpressionPosition), [E, u]), {
     getItemProps: g,
-    getRowProps: S,
-    gridContainerProps: C,
+    getRowProps: C,
+    gridContainerProps: S,
     handleGridContainerKeyDown: T,
-    isUsingKeyboardNavigation: v
+    isUsingKeyboardNavigation: I
   }
 }

@@ -23,28 +23,28 @@ let E = i.forwardRef(function(e, t) {
     gridNavigatorId: a,
     isFullRow: E,
     onKeyDown: g,
-    onFocus: S,
-    autoFocus: C,
+    onFocus: C,
+    autoFocus: S,
     className: T,
-    defaultSearchPlaceholder: v
-  } = e, I = i.useRef(null), _ = (0, c.useExpressionPickerStore)(e => e.searchQuery), [N, A] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), y = i.useCallback(e => {
+    defaultSearchPlaceholder: I
+  } = e, v = i.useRef(null), _ = (0, c.useExpressionPickerStore)(e => e.searchQuery), [N, A] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), x = i.useCallback(e => {
     var t;
     d.EmojiPickerStore.setActiveCategoryIndex("" === e ? 0 : f.INACTIVE_CATEGORY_INDEX), d.EmojiPickerStore.setInspectedExpressionPosition(0, 0), d.EmojiPickerStore.setSearchPlaceholder(null), (0, c.setSearchQuery)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0)
-  }, [n]), x = i.useCallback(() => {
+  }, [n]), y = i.useCallback(() => {
     (0, c.setSearchQuery)("")
   }, []);
   return i.useImperativeHandle(t, () => ({
     focus: () => {
       var e;
-      return null === (e = I.current) || void 0 === e ? void 0 : e.focus()
+      return null === (e = v.current) || void 0 === e ? void 0 : e.focus()
     }
   })), (0, l.jsx)(u.default, {
-    autoFocus: C,
+    autoFocus: S,
     query: _,
-    ref: I,
+    ref: v,
     size: u.default.Sizes.MEDIUM,
-    placeholder: null != A ? A : v,
-    onClear: x,
+    placeholder: null != A ? A : I,
+    onClear: y,
     onKeyDown: e => {
       switch (e.keyCode) {
         case m.KeyboardKeys.ARROW_LEFT:
@@ -55,8 +55,8 @@ let E = i.forwardRef(function(e, t) {
       }
       g(e)
     },
-    onFocus: S,
-    onQueryChange: y,
+    onFocus: C,
+    onQueryChange: x,
     className: s(T, {
       [h.searchBarFullRow]: E
     }),

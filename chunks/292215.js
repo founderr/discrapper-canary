@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return f
   },
   ONE_TIME_PAYMENT_ADD_PAYMENT_STEP_CONFIG: function() {
-    return E
+    return p
   },
   REVIEW_STEP_CONFIG: function() {
     return _
@@ -32,7 +32,7 @@ let f = {
       ...e
     })
   },
-  E = {
+  p = {
     key: a.Step.ADD_PAYMENT_STEPS,
     renderStep: e => (0, s.jsx)(s.Fragment, {
       children: (0, s.jsx)(r.PaymentModalAddPaymentStep, {
@@ -50,7 +50,7 @@ let f = {
       renderHeader: !0
     }
   },
-  p = {
+  E = {
     key: a.Step.AWAITING_PURCHASE_TOKEN_AUTH,
     renderStep: () => (0, s.jsx)(o.default, {})
   },
@@ -70,4 +70,4 @@ let f = {
       ...e
     })
   },
-  I = [p, S]
+  I = [E, S]

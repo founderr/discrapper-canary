@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   isEligibleForInappropriateConversationWarning: function() {
-    return s
+    return l
   },
   useIsEligibleForInappropriateConversationWarning: function() {
-    return l
+    return s
   }
 });
 var i = n("862205");
@@ -39,7 +39,7 @@ let a = (0, i.createExperiment)({
     }]
   });
 
-function s(e) {
+function l(e) {
   let {
     location: t,
     autoTrackExposure: n = !1
@@ -50,16 +50,16 @@ function s(e) {
   }, {
     autoTrackExposure: n
   }), {
-    enabled: s
+    enabled: l
   } = r.getCurrentConfig({
     location: t
   }, {
     autoTrackExposure: n
   });
-  return i || s
+  return i || l
 }
 
-function l(e) {
+function s(e) {
   let {
     location: t,
     autoTrackExposure: n = !1
@@ -70,11 +70,11 @@ function l(e) {
   }, {
     autoTrackExposure: n
   }), {
-    enabled: s
+    enabled: l
   } = r.useExperiment({
     location: t
   }, {
     autoTrackExposure: n
   });
-  return i || s
+  return i || l
 }

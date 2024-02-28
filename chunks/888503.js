@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   AVATAR_DECORATION_PADDING: function() {
-    return y
+    return x
   },
   default: function() {
-    return x
+    return y
   }
 }), n("222007");
 var l = n("37983"),
@@ -22,24 +22,24 @@ var l = n("37983"),
   h = n("928201"),
   E = n("118503"),
   g = n("11056"),
-  S = n("159885"),
-  C = n("158998"),
+  C = n("159885"),
+  S = n("158998"),
   T = n("943722"),
-  v = n("49111"),
-  I = n("988268"),
+  I = n("49111"),
+  v = n("988268"),
   _ = n("39141"),
   N = n("782340"),
   A = n("591665");
-let y = (0, S.cssValueToNumber)(r.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
-var x = function(e) {
+let x = (0, C.cssValueToNumber)(r.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+var y = function(e) {
   let {
     selected: t = !1,
     colorString: n,
     colorRoleName: a,
     isOwner: r,
-    ownerTooltipText: S,
-    lostPermissionTooltipText: y,
-    isTyping: x = !1,
+    ownerTooltipText: C,
+    lostPermissionTooltipText: x,
+    isTyping: y = !1,
     nick: O,
     user: R,
     currentUser: M,
@@ -65,7 +65,7 @@ var x = function(e) {
     id: q,
     tabIndex: X,
     itemProps: Q
-  } = e, $ = C.default.useName(R), [ee, et] = i.useState(!1), [en, el] = i.useState(null), {
+  } = e, $ = S.default.useName(R), [ee, et] = i.useState(!1), [en, el] = i.useState(null), {
     avatarDecorationSrc: ei,
     avatarSrc: ea,
     eventHandlers: es
@@ -76,8 +76,8 @@ var x = function(e) {
     guildId: w
   }), er = e => {
     el(e)
-  }, eo = () => null != r && r && null == y ? (0, l.jsx)(o.Tooltip, {
-    text: null != S ? S : N.default.Messages.GUILD_OWNER,
+  }, eo = () => null != r && r && null == x ? (0, l.jsx)(o.Tooltip, {
+    text: null != C ? C : N.default.Messages.GUILD_OWNER,
     children: e => (0, l.jsx)(h.default, {
       ...e,
       className: A.ownerIcon
@@ -95,7 +95,7 @@ var x = function(e) {
       })
     })
   }), ed = () => {
-    let e = (null == R ? void 0 : R.isClyde()) ? I.BotTagTypes.AI : I.BotTagTypes.BOT;
+    let e = (null == R ? void 0 : R.isClyde()) ? v.BotTagTypes.AI : v.BotTagTypes.BOT;
     return null != R && R.bot ? (0, l.jsx)(m.default, {
       className: A.botTag,
       type: e,
@@ -105,7 +105,7 @@ var x = function(e) {
     roleName: a,
     color: null != n ? n : void 0,
     name: null != O ? O : $
-  }), ef = b === v.StatusTypes.OFFLINE;
+  }), ef = b === I.StatusTypes.OFFLINE;
   return null == R ? (0, l.jsx)(p.default, {
     avatarSize: o.AvatarSizes.SIZE_32,
     className: A.placeholder
@@ -125,11 +125,11 @@ var x = function(e) {
     onMouseLeave: () => {
       et(!1)
     },
-    name: null == y ? (0, l.jsx)("span", {
+    name: null == x ? (0, l.jsx)("span", {
       className: A.username,
       children: ec()
     }) : (0, l.jsx)(o.Tooltip, {
-      text: y,
+      text: x,
       children: e => (0, l.jsx)("span", {
         ...e,
         className: s(A.username, A.lostPermission),
@@ -138,14 +138,14 @@ var x = function(e) {
     }),
     avatar: ((e, t) => {
       let n = j ? o.AnimatedAvatar : o.Avatar,
-        i = (0, u.default)(L) ? v.StatusTypes.STREAMING : b;
+        i = (0, u.default)(L) ? I.StatusTypes.STREAMING : b;
       return i = t ? void 0 : i, (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(n, {
           ...es,
           size: o.AvatarSizes.SIZE_32,
           src: ea,
           isMobile: U,
-          isTyping: x,
+          isTyping: y,
           status: i,
           "aria-label": e.username,
           statusTooltip: !0,
@@ -153,13 +153,13 @@ var x = function(e) {
           typingIndicatorRef: er
         }), (0, l.jsx)(c.default, {
           confettiSpawnRef: en,
-          shouldFire: x && null != M && e.id !== M.id,
+          shouldFire: y && null != M && e.id !== M.id,
           confettiLocation: _.ConfettiLocation.MEMBER_USER
         })]
       })
     })(R, ef),
     subText: (() => {
-      let e = null != L ? L.find(e => e.type === v.ActivityTypes.CUSTOM_STATUS) : null,
+      let e = null != L ? L.find(e => e.type === I.ActivityTypes.CUSTOM_STATUS) : null,
         t = null != e && null != R && (0, d.default)(e, R, k);
       return (0, l.jsx)(T.default, {
         className: A.activity,

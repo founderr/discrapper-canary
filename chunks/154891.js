@@ -20,8 +20,8 @@ var l = n("884691"),
 let E = 1e3 / 60;
 
 function g(e, t, n, g) {
-  let S = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
-    C = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
+  let C = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
+    S = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
     _ = (0, i.useToken)(s.default.unsafe_rawColors.WHITE_500).hex(),
     I = l.useRef({}),
     T = l.useRef(new a.Interval),
@@ -46,11 +46,11 @@ function g(e, t, n, g) {
         let {
           width: E,
           height: g
-        } = f.getBoundingClientRect(), S = [];
+        } = f.getBoundingClientRect(), C = [];
         n.forEach(e => {
           let t = null != u.default.getVoiceStateForChannel(i, e.userId);
           if (!t) {
-            S.push(e);
+            C.push(e);
             return
           }! function(e) {
             let {
@@ -100,21 +100,21 @@ function g(e, t, n, g) {
             outlineColorDark: r,
             outlineColorLight: d,
             linesDrawnAt: a,
-            deadDrawables: S,
+            deadDrawables: C,
             streamerId: s
           })
-        }), S.length > 0 && (0, o.clearDrawables)(S, s)
+        }), C.length > 0 && (0, o.clearDrawables)(C, s)
       }({
         canvasRef: e,
         drawables: n,
-        fallbackColor: S,
+        fallbackColor: C,
         linesDrawnAt: I,
         streamerId: t,
-        outlineColorDark: C,
+        outlineColorDark: S,
         outlineColorLight: _,
         channelId: g
       })
-    }, [e, g, S, C, _]);
+    }, [e, g, C, S, _]);
   l.useEffect(() => {
     let t = new ResizeObserver(() => {
       let t = e.current;

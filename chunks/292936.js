@@ -17,16 +17,16 @@ var l, i, a = n("37983"),
   h = n("685665"),
   E = n("200197"),
   g = n("538282"),
-  S = n("866353"),
-  C = n("364685"),
+  C = n("866353"),
+  S = n("364685"),
   T = n("161585"),
-  v = n("24373"),
-  I = n("41170"),
+  I = n("24373"),
+  v = n("41170"),
   _ = n("591522"),
   N = n("209069"),
   A = n("845579"),
-  y = n("945330"),
-  x = n("587974"),
+  x = n("945330"),
+  y = n("587974"),
   O = n("599110"),
   R = n("510500"),
   M = n("171209"),
@@ -63,20 +63,20 @@ function F(e) {
     },
     onClick: () => d(s, l),
     onMouseOver: r,
-    children: [(0, a.jsx)(x.default, {
-      mask: x.default.Masks.STICKER_ROUNDED_RECT,
+    children: [(0, a.jsx)(y.default, {
+      mask: y.default.Masks.STICKER_ROUNDED_RECT,
       width: U + 4,
       height: U + 4,
       className: b.mask,
       children: (0, a.jsx)("div", {
         className: b.maskBackground
       })
-    }), (0, a.jsx)(I.default, {
+    }), (0, a.jsx)(v.default, {
       maskAsset: !0,
       size: U,
       sticker: s,
       className: b.sticker
-    }), l !== S.StickerSendability.SENDABLE && (0, a.jsx)(_.default, {
+    }), l !== C.StickerSendability.SENDABLE && (0, a.jsx)(_.default, {
       size: 14
     })]
   })
@@ -90,7 +90,7 @@ var G = s.memo(function(e) {
     onSelectSticker: r,
     stickerIconVisible: c = !1,
     submitButtonVisible: f = !1
-  } = e, I = s.useContext(E.default), [_, x] = s.useState(null), [j, U] = s.useState(!1), [D, G] = s.useState(null), B = (0, g.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, j, l), {
+  } = e, v = s.useContext(E.default), [_, y] = s.useState(null), [j, U] = s.useState(!1), [D, G] = s.useState(null), B = (0, g.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, j, l), {
     analyticsLocations: Q,
     AnalyticsLocationProvider: $
   } = (0, h.default)(p.default.EXPRESSION_SUGGESTIONS), {
@@ -100,7 +100,7 @@ var G = s.memo(function(e) {
     setTextInputValue: K,
     setHasDismissed: U,
     setHasSelection: q,
-    setFocusedSuggestionType: x
+    setFocusedSuggestionType: y
   });
   s.useEffect(() => {
     let e = e => {
@@ -110,13 +110,13 @@ var G = s.memo(function(e) {
         let t = "" !== e && null != e;
         if (q(t), t) {
           var l;
-          x(null), null === (l = n.current) || void 0 === l || l.focus()
+          y(null), null === (l = n.current) || void 0 === l || l.focus()
         }
       };
-    return I.addListener("text-changed", ee), I.addListener("autocomplete-visibility-change", e), I.addListener("selection-changed", t), () => {
-      I.removeListener("text-changed", ee), I.removeListener("autocomplete-visibility-change", e), I.removeListener("selection-changed", t)
+    return v.addListener("text-changed", ee), v.addListener("autocomplete-visibility-change", e), v.addListener("selection-changed", t), () => {
+      v.removeListener("text-changed", ee), v.removeListener("autocomplete-visibility-change", e), v.removeListener("selection-changed", t)
     }
-  }, [ee, n, I]), s.useLayoutEffect(() => {
+  }, [ee, n, v]), s.useLayoutEffect(() => {
     null == _ && G(null)
   }, [_]);
   let [en, el] = s.useState(!1);
@@ -181,7 +181,7 @@ var G = s.memo(function(e) {
       hasStickerResults: ei,
       shouldRenderSuggestions: ea,
       focusedSuggestionType: _,
-      setFocusedSuggestionType: x,
+      setFocusedSuggestionType: y,
       setHasDismissed: U,
       setFocusedStickerListItem: G,
       setTextInputValue: K
@@ -191,22 +191,22 @@ var G = s.memo(function(e) {
         if (O.default.track(L.AnalyticEvents.AUTO_SUGGEST_EXPRESSION_SELECTED, {
             sticker_id: e.id,
             suggestion_trigger: W
-          }), t === S.StickerSendability.SENDABLE) U(!0), r(e, T.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), K("");
-        else if ((0, v.isStandardSticker)(e)) {
-          let t = C.default.getStickerPack(e.pack_id);
+          }), t === C.StickerSendability.SENDABLE) U(!0), r(e, T.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), K("");
+        else if ((0, I.isStandardSticker)(e)) {
+          let t = S.default.getStickerPack(e.pack_id);
           null != t && (0, N.default)({
             stickerPack: t,
             analyticsLocations: Q
           })
         }
-        I.emit("sticker-suggestions-hidden")
+        v.emit("sticker-suggestions-hidden")
       }
     },
     eo = s.useRef([]),
     eu = s.useRef(!1);
   s.useEffect(() => {
-    ea && (eo.current = X), ea !== eu.current && (I.emit(ea ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), ea && ((0, M.throttledTrackExpressionSuggestionDisplayed)(V), Y(V))), eu.current = ea
-  }, [I, ea, X, V]);
+    ea && (eo.current = X), ea !== eu.current && (v.emit(ea ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), ea && ((0, M.throttledTrackExpressionSuggestionDisplayed)(V), Y(V))), eu.current = ea
+  }, [v, ea, X, V]);
   let ed = !ea,
     ec = ea ? X : eo.current;
   return (0, a.jsx)($, {
@@ -297,7 +297,7 @@ var G = s.memo(function(e) {
               },
               children: (0, a.jsx)(m.Tooltip, {
                 text: P.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_DISABLE,
-                children: e => (0, a.jsx)(y.default, {
+                children: e => (0, a.jsx)(x.default, {
                   ...e,
                   className: b.closeIcon
                 })

@@ -23,15 +23,15 @@ let p = e => {
     isListingPublished: n,
     expanded: p,
     onToggleExpanded: E
-  } = e, g = (0, c.default)(), [S] = d.useName(t), [C] = d.useImage(t, g), [_] = d.useSubscriptionPlan(t);
+  } = e, g = (0, c.default)(), [C] = d.useName(t), [S] = d.useImage(t, g), [_] = d.useSubscriptionPlan(t);
   return (0, l.jsxs)("div", {
     className: m.container,
     children: [(0, l.jsx)(f.GuildRoleSubscriptionCardTierImage, {
-      image: C
+      image: S
     }), (0, l.jsxs)("div", {
       className: m.tierTextInfoContainer,
       children: [(0, l.jsx)(f.GuildRoleSubscriptionCardTierName, {
-        listingName: S
+        listingName: C
       }), (0, l.jsxs)("div", {
         className: m.tierPriceContainer,
         children: [!n && (0, l.jsx)(s.MonetizationListingDraftBadge, {}), (0, l.jsxs)(a.Text, {

@@ -26,12 +26,12 @@ var l, i, a = n("917351"),
   h = n("402671"),
   E = n("82230"),
   g = n("568088"),
-  S = n("397485"),
-  C = n("626334"),
+  C = n("397485"),
+  S = n("626334"),
   T = n("49111"),
-  v = n("846325");
+  I = n("846325");
 
-function I(e) {
+function v(e) {
   let t = new AbortController,
     n = (0, a.throttle)(n => {
       m.default.getVoiceChannelId() !== e && t.abort()
@@ -47,9 +47,9 @@ function _(e, t, n) {
   let {
     abortController: i,
     onRequestProgress: a
-  } = I(e), r = null !== (l = E.default.getState().animationType) && void 0 !== l ? l : C.VoiceChannelEffectAnimationType.BASIC, u = {
+  } = v(e), r = null !== (l = E.default.getState().animationType) && void 0 !== l ? l : S.VoiceChannelEffectAnimationType.BASIC, u = {
     animation_type: r,
-    animation_id: (0, S.sampleAnimationId)(r, S.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
+    animation_id: (0, C.sampleAnimationId)(r, C.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
   };
   s.default.post({
     url: T.Endpoints.CUSTOM_CALL_SOUNDS(e),
@@ -67,13 +67,13 @@ function N(e, t, n, l) {
     {
       abortController: o,
       onRequestProgress: u
-    } = I(e),
+    } = v(e),
     m = {
       sound_id: t.soundId,
       emoji_id: t.emojiId,
       emoji_name: null !== (a = t.emojiName) && void 0 !== a ? a : null == r ? void 0 : r.name
     };
-  t.guildId !== v.DEFAULT_SOUND_GUILD_ID && (m.source_guild_id = t.guildId), s.default.post({
+  t.guildId !== I.DEFAULT_SOUND_GUILD_ID && (m.source_guild_id = t.guildId), s.default.post({
     url: T.Endpoints.SEND_SOUNDBOARD_SOUND(e),
     body: m,
     signal: o.signal,
@@ -92,7 +92,7 @@ let A = async e => {
     isPremium: o
   } = e;
   if (null == n || g.default.isOnCooldown) return;
-  let u = o && null != i ? i : C.VoiceChannelEffectAnimationType.BASIC;
+  let u = o && null != i ? i : S.VoiceChannelEffectAnimationType.BASIC;
   try {
     let e = null != n.id ? {
       emoji_id: n.id,
@@ -108,7 +108,7 @@ let A = async e => {
     await s.default.post({
       url: T.Endpoints.VOICE_CHANNEL_EFFECTS(t.id),
       body: e
-    }), x(t, n, l, u), r.default.dispatch({
+    }), y(t, n, l, u), r.default.dispatch({
       type: "VOICE_CHANNEL_EFFECT_SENT_LOCAL"
     })
   } catch (e) {
@@ -120,10 +120,10 @@ let A = async e => {
       })
     }
   }
-}, y = {
-  [C.VoiceChannelEffectAnimationType.BASIC]: "Basic",
-  [C.VoiceChannelEffectAnimationType.PREMIUM]: "Premium"
-}, x = (e, t, n, l) => {
+}, x = {
+  [S.VoiceChannelEffectAnimationType.BASIC]: "Basic",
+  [S.VoiceChannelEffectAnimationType.PREMIUM]: "Premium"
+}, y = (e, t, n, l) => {
   let {
     unicode: i,
     custom: a,
@@ -131,7 +131,7 @@ let A = async e => {
     managed: r,
     managedExternal: o,
     animated: d
-  } = (0, h.countEmoji)([t], e.getGuildId()), c = y[l];
+  } = (0, h.countEmoji)([t], e.getGuildId()), c = x[l];
   u.default.trackWithMetadata(T.AnalyticEvents.VOICE_CHANNEL_EFFECT_SENT, {
     channel_id: e.id,
     guild_id: e.getGuildId(),

@@ -6,23 +6,23 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var l = n("414456"),
-  r = n.n(l),
+var r = n("414456"),
+  l = n.n(r),
   s = n("446674"),
   a = n("77078"),
   u = n("272030"),
   o = n("145079"),
-  d = n("119184"),
-  c = n("506885"),
+  c = n("119184"),
+  d = n("506885"),
   f = n("981601"),
   h = n("271938"),
-  E = n("824563"),
-  v = n("101125"),
+  v = n("824563"),
+  E = n("101125"),
   C = n("697218"),
-  _ = n("155207"),
+  S = n("155207"),
   p = n("18284"),
-  S = n("745049"),
-  m = n("782340"),
+  m = n("745049"),
+  _ = n("782340"),
   g = n("519951");
 
 function I(e) {
@@ -31,10 +31,10 @@ function I(e) {
   } = e;
   return (0, i.jsxs)("div", {
     className: g.emptyContainer,
-    children: [(0, i.jsx)(d.default, {
+    children: [(0, i.jsx)(c.default, {
       children: (0, i.jsx)("div", {
         className: g.circle,
-        children: (0, i.jsx)(_.default, {
+        children: (0, i.jsx)(S.default, {
           height: 40,
           width: 40,
           className: g.icon
@@ -50,7 +50,7 @@ function N() {
       color: "header-primary",
       variant: "heading-xl/semibold",
       className: g.title,
-      children: m.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
+      children: _.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
     })
   })
 }
@@ -61,7 +61,7 @@ function T() {
       color: "header-secondary",
       variant: "heading-md/semibold",
       className: g.errorTitle,
-      children: m.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
+      children: _.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
     })
   })
 }
@@ -74,8 +74,8 @@ function A(e) {
     children: (0, i.jsxs)("div", {
       className: g.listRow,
       children: [(0, i.jsx)("div", {
-        className: r(g.listRowCircle, g.listAvatar),
-        children: (0, i.jsx)(_.default, {
+        className: l(g.listRowCircle, g.listAvatar),
+        children: (0, i.jsx)(S.default, {
           height: 14,
           width: 14,
           className: g.icon
@@ -83,7 +83,7 @@ function A(e) {
       }), (0, i.jsx)(a.Text, {
         color: "text-normal",
         variant: "text-md/normal",
-        children: m.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_REMAINING.format({
+        children: _.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_REMAINING.format({
           userRemainCount: t
         })
       })]
@@ -95,41 +95,41 @@ function x(e) {
   var t;
   let {
     eventUser: n,
-    onContextMenu: l
-  } = e, u = (0, s.useStateFromStores)([C.default], () => C.default.getUser(n.user_id)), d = null === (t = n.member) || void 0 === t ? void 0 : t.guildId, _ = (0, s.useStateFromStores)([v.default, E.default, h.default], () => n.user_id === h.default.getId() ? v.default.getStatus() : E.default.getStatus(n.user_id, d), [n.user_id, d]);
+    onContextMenu: r
+  } = e, u = (0, s.useStateFromStores)([C.default], () => C.default.getUser(n.user_id)), c = null === (t = n.member) || void 0 === t ? void 0 : t.guildId, S = (0, s.useStateFromStores)([E.default, v.default, h.default], () => n.user_id === h.default.getId() ? E.default.getStatus() : v.default.getStatus(n.user_id, c), [n.user_id, c]);
   return null == u ? null : (0, i.jsx)(a.Popout, {
-    preload: () => (0, c.default)(u.id, u.getAvatarURL(d, 80), {
-      guildId: d
+    preload: () => (0, d.default)(u.id, u.getAvatarURL(c, 80), {
+      guildId: c
     }),
     renderPopout: e => (0, i.jsx)(f.default, {
       ...e,
       userId: n.user_id,
-      guildId: d
+      guildId: c
     }),
     position: "left",
     spacing: 16,
     children: (e, t) => {
-      var s, d;
+      var s, c;
       let {
-        isShown: c
+        isShown: d
       } = t;
       return (0, i.jsxs)(a.Clickable, {
-        className: r(g.listRow, g.interactiveRow, {
-          [g.selected]: c
+        className: l(g.listRow, g.interactiveRow, {
+          [g.selected]: d
         }),
-        onContextMenu: e => l(e, u),
+        onContextMenu: e => r(e, u),
         ...e,
         children: [(0, i.jsx)(a.Avatar, {
           src: u.getAvatarURL(null === (s = n.member) || void 0 === s ? void 0 : s.guildId, 24),
           "aria-label": u.username,
           size: a.AvatarSizes.SIZE_24,
           className: g.listAvatar,
-          status: _
+          status: S
         }), (0, i.jsx)(o.default, {
           user: u,
           className: g.listName,
           discriminatorClass: g.listDiscriminator,
-          nick: null === (d = n.member) || void 0 === d ? void 0 : d.nick
+          nick: null === (c = n.member) || void 0 === c ? void 0 : c.nick
         })]
       })
     }
@@ -140,13 +140,13 @@ function R(e) {
   let {
     eventUsers: t,
     usersNotShownCount: n = 0,
-    onContextMenu: l
+    onContextMenu: r
   } = e;
   return (0, i.jsxs)(a.ScrollerThin, {
     className: g.listScroller,
     children: [t.map(e => (0, i.jsx)(x, {
       eventUser: e,
-      onContextMenu: l
+      onContextMenu: r
     }, e.user_id)), n > 0 && (0, i.jsx)(A, {
       count: n
     })]
@@ -181,30 +181,30 @@ function y(e) {
 function M(e) {
   let {
     guildEvent: t,
-    recurrenceId: l,
-    eventUsers: r,
+    recurrenceId: r,
+    eventUsers: l,
     loading: s,
     error: o,
-    containerHeight: d
-  } = e, c = (0, p.default)(t.guild_id, t.id, l);
-  if (s && 0 === r.length) return (0, i.jsx)(y, {
-    height: d,
+    containerHeight: c
+  } = e, d = (0, p.default)(t.guild_id, t.id, r);
+  if (s && 0 === l.length) return (0, i.jsx)(y, {
+    height: c,
     children: (0, i.jsx)(a.Spinner, {
       type: a.Spinner.Type.SPINNING_CIRCLE,
       className: g.spinner
     })
   });
-  if (null != o && 0 === r.length) return (0, i.jsx)(y, {
-    height: d,
+  if (null != o && 0 === l.length) return (0, i.jsx)(y, {
+    height: c,
     children: (0, i.jsx)(T, {})
   });
   let f = 0;
-  return r.length >= S.MAX_RSVP_USER_DISPLAY_COUNT && c > S.MAX_RSVP_USER_DISPLAY_COUNT && (f = Math.max(c - r.length, 0)), 0 === r.length ? (0, i.jsx)(y, {
-    height: d,
+  return l.length >= m.MAX_RSVP_USER_DISPLAY_COUNT && d > m.MAX_RSVP_USER_DISPLAY_COUNT && (f = Math.max(d - l.length, 0)), 0 === l.length ? (0, i.jsx)(y, {
+    height: c,
     children: (0, i.jsx)(N, {})
   }) : (0, i.jsx)(L, {
     children: (0, i.jsx)(R, {
-      eventUsers: r,
+      eventUsers: l,
       onContextMenu: function(e, t) {
         (0, u.openContextMenuLazy)(e, async () => {
           let {

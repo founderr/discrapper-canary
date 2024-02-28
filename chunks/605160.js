@@ -4,19 +4,19 @@ n.r(t), n.d(t, {
     return l
   },
   getObscureReason: function() {
-    return S
+    return C
   },
   getObscureReasonForEmbed: function() {
-    return C
+    return S
   },
   getForumPostShouldObscure: function() {
     return T
   },
   useShouldObscure: function() {
-    return v
+    return I
   },
   getObscuredAlt: function() {
-    return I
+    return v
   }
 }), n("702976"), n("794252");
 var l, i, a = n("506838"),
@@ -33,7 +33,7 @@ var l, i, a = n("506838"),
   E = n("49111"),
   g = n("782340");
 (i = l || (l = {})).SPOILER = "spoiler", i.EXPLICIT_CONTENT = "explicit_content", i.POTENTIAL_EXPLICIT_CONTENT = "potential_explicit_content";
-let S = (e, t) => {
+let C = (e, t) => {
     let {
       spoiler: n,
       flags: l = 0,
@@ -41,7 +41,7 @@ let S = (e, t) => {
     } = e;
     return t && (0, o.isPendingScan)(i) ? "potential_explicit_content" : t && ((0, p.hasFlag)(l, E.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA) || r.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : n || (0, p.hasFlag)(l, E.MessageAttachmentFlags.IS_SPOILER) ? "spoiler" : null
   },
-  C = (e, t, n, l, i) => {
+  S = (e, t, n, l, i) => {
     let {
       flags: a = 0,
       contentScanVersion: s
@@ -68,11 +68,11 @@ function T(e, t, n) {
   }, n) ? [!0, "explicit_content"] : e.spoiler ? [t, "spoiler"] : [!1, void 0]
 }
 
-function v(e) {
+function I(e) {
   let {
     channel: t,
     media: n
   } = e, l = (0, s.default)([m.default], () => null != t && m.default.can(E.Permissions.MANAGE_MESSAGES, t)), i = c.RenderSpoilers.useSetting(), a = (0, u.useShouldRedactExplicitContentForForum)();
   return T(n, !(0, h.default)(i, l), a)
 }
-let I = e => (0, a.match)(e).with("explicit_content", () => g.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => g.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
+let v = e => (0, a.match)(e).with("explicit_content", () => g.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => g.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)

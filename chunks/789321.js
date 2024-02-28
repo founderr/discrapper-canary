@@ -22,27 +22,27 @@ var l = n("37983"),
   h = n("688318"),
   E = n("21526"),
   g = n("853987"),
-  S = n("491232"),
-  C = n("845962"),
+  C = n("491232"),
+  S = n("845962"),
   T = n("697218"),
-  v = n("945330"),
-  I = n("719923"),
+  I = n("945330"),
+  v = n("719923"),
   _ = n("627601"),
   N = n("994428"),
   A = n("782340"),
-  y = n("154477"),
-  x = n("604689");
+  x = n("154477"),
+  y = n("604689");
 
 function O(e) {
   let {
     onClick: t
   } = e;
   return (0, l.jsx)(u.Clickable, {
-    className: y.closeButton,
+    className: x.closeButton,
     onClick: t,
     "aria-label": A.default.Messages.DISMISS,
-    children: (0, l.jsx)(v.default, {
-      className: y.closeIcon,
+    children: (0, l.jsx)(I.default, {
+      className: x.closeIcon,
       width: 18,
       height: 18
     })
@@ -53,7 +53,7 @@ let R = 76,
     variant: "text-sm/normal",
     color: "text-normal",
     tag: "span",
-    className: y.ctaLink,
+    className: x.ctaLink,
     children: e
   }),
   L = e => {
@@ -67,11 +67,11 @@ let R = 76,
       size: (0, p.getDecorationSizeForAvatarSize)(u.AvatarSizes.SIZE_48)
     });
     return (0, l.jsx)(u.Clickable, {
-      className: y.avatarButton,
+      className: x.avatarButton,
       onClick: n,
       "aria-label": A.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
       children: (0, l.jsx)(u.Avatar, {
-        src: x,
+        src: y,
         avatarDecoration: i,
         size: u.AvatarSizes.SIZE_48,
         "aria-hidden": !0
@@ -85,8 +85,8 @@ var P = e => {
     displayProfile: a,
     onClose: p,
     onDismiss: h,
-    isInSidebar: v = !1,
-    canShowAvatarDecorationUpsell: x = !1,
+    isInSidebar: I = !1,
+    canShowAvatarDecorationUpsell: y = !1,
     canShowProfileEffectUpsell: P = !1,
     upsellSource: b
   } = e, {
@@ -96,17 +96,17 @@ var P = e => {
     height: k
   } = (0, d.default)(), w = i.useMemo(() => ({
     top: "-".concat((null != k ? k : R) + 6, "px")
-  }), [k]), F = (0, o.default)([T.default], () => T.default.getCurrentUser()), G = I.default.canUseCollectibles(F), {
+  }), [k]), F = (0, o.default)([T.default], () => T.default.getCurrentUser()), G = v.default.canUseCollectibles(F), {
     setUpsellSource: B,
     reset: H
   } = (0, _.useUserPopoutCollectiblesUpsellStore)();
   i.useEffect(() => (B(b), () => {
     H()
   }), [B, b, H]);
-  let V = (0, o.default)([C.default], () => C.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
+  let V = (0, o.default)([S.default], () => S.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
     [K, W] = (0, o.useStateFromStoresArray)([g.default], () => {
       var e;
-      return [(0, S.isPremiumCollectiblesProduct)(g.default.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, S.isPremiumCollectiblesProduct)(g.default.getProduct(null == V ? void 0 : V.skuId))]
+      return [(0, C.isPremiumCollectiblesProduct)(g.default.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, C.isPremiumCollectiblesProduct)(g.default.getProduct(null == V ? void 0 : V.skuId))]
     }),
     Y = i.useCallback(() => {
       var e, t, l, i;
@@ -119,8 +119,8 @@ var P = e => {
     z = i.useCallback(() => {
       null == h || h(N.ContentDismissActionType.DISMISS)
     }, [h]);
-  if (!x && !P) return null;
-  let Z = (0, r.match)([x, P]).with([!0, !0], () => K && W && G ? A.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+  if (!y && !P) return null;
+  let Z = (0, r.match)([y, P]).with([!0, !0], () => K && W && G ? A.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : K && W ? A.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
     openShop: M
@@ -139,18 +139,18 @@ var P = e => {
   }))).otherwise(() => null);
   return (0, l.jsx)("div", {
     style: w,
-    className: s(y.containerWrapper, {
-      [y.animation]: !U,
-      [y.inSidebar]: v
+    className: s(x.containerWrapper, {
+      [x.animation]: !U,
+      [x.inSidebar]: I
     }),
     ref: D,
     children: (0, l.jsxs)("div", {
-      className: y.container,
-      children: [x && (0, l.jsx)(L, {
+      className: x.container,
+      children: [y && (0, l.jsx)(L, {
         user: n,
         onClick: Y
       }), (0, l.jsx)(u.Clickable, {
-        className: x ? y.contentWithAvatar : y.content,
+        className: y ? x.contentWithAvatar : x.content,
         onClick: Y,
         "aria-label": A.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
         children: (0, l.jsx)(u.Text, {
@@ -160,7 +160,7 @@ var P = e => {
           children: Z
         })
       }), (0, l.jsx)("div", {
-        className: y.buttons,
+        className: x.buttons,
         children: (0, l.jsx)(O, {
           onClick: z
         })

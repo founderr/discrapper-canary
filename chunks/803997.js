@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("550766"),
   E = n("191225"),
   g = n("272505"),
-  S = n("49111"),
-  C = n("782340"),
+  C = n("49111"),
+  S = n("782340"),
   _ = n("518958");
 
 function I(e) {
@@ -53,17 +53,17 @@ function I(e) {
     null === (e = I.current) || void 0 === e || e.focus()
   }, []);
   (0, m.useComponentAction)({
-    event: S.ComponentActions.FOCUS_CHAT_BUTTON,
+    event: C.ComponentActions.FOCUS_CHAT_BUTTON,
     handler: A
   });
-  let M = T ? C.default.Messages.HIDE_CHAT : C.default.Messages.SHOW_CHAT,
+  let M = T ? S.default.Messages.HIDE_CHAT : S.default.Messages.SHOW_CHAT,
     R = [M];
-  N > 0 && R.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+  N > 0 && R.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: N
-  })), x > 0 && R.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+  })), x > 0 && R.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
   let j = (0, u.useStateFromStores)([E.default], () => E.default.getFocusedLayout()),
     L = N > 0 ? N : x,
-    y = L > 0;
+    O = L > 0;
   return (0, l.jsxs)("div", {
     className: _.wrapper,
     children: [(0, l.jsx)(d.default, {
@@ -76,7 +76,7 @@ function I(e) {
       themeable: !0,
       className: i(n, _.circularButton, j === g.FocusedActivityLayouts.NO_CHAT ? _.upArrow : _.downArrow),
       ...s
-    }), y ? (0, l.jsx)(o.default, {
+    }), O ? (0, l.jsx)(o.default, {
       hasMentions: N > 0,
       truncatedCount: L > 99 ? "99+" : L,
       className: _.badge

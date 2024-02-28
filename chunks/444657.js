@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ActivityEntryPointTile: function() {
-    return y
+    return O
   }
 });
 var l = n("37983"),
@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("685665"),
   E = n("10641"),
   g = n("36562"),
-  S = n("945330"),
-  C = n("381546"),
+  C = n("945330"),
+  S = n("381546"),
   _ = n("564875"),
   I = n("82636"),
   T = n("924506"),
@@ -33,7 +33,7 @@ var l = n("37983"),
   j = n("885399"),
   L = n("861948");
 
-function y(e) {
+function O(e) {
   let {
     channel: t,
     guild: n,
@@ -42,7 +42,7 @@ function y(e) {
     handleClose: i,
     userParticipantCount: r
   } = e;
-  return a < 250 ? (0, l.jsx)(O, {
+  return a < 250 ? (0, l.jsx)(y, {
     channel: t,
     guild: n,
     width: a,
@@ -64,7 +64,7 @@ function y(e) {
   })
 }
 
-function O(e) {
+function y(e) {
   let {
     channel: t,
     inPopout: n,
@@ -111,7 +111,7 @@ function O(e) {
       }), (0, l.jsx)(o.Clickable, {
         onClick: a,
         className: i((0, x.getThemeClass)(A.ThemeTypes.DARK), j.shelfButtonCloseButton),
-        children: (0, l.jsx)(C.default, {
+        children: (0, l.jsx)(S.default, {
           width: 24,
           height: 24,
           className: j.closeButtonIcon,
@@ -287,7 +287,7 @@ function D(e) {
             n_participants: d
           }), s()
         },
-        children: (0, l.jsx)(S.default, {
+        children: (0, l.jsx)(C.default, {
           className: j.closeButton
         })
       })]

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return v
   }
 });
 var l = n("37983"),
@@ -19,8 +19,8 @@ var l = n("37983"),
   h = n("671434"),
   E = n("389480"),
   g = n("782340"),
-  S = n("108886");
-let C = [8, 8, 8, 8];
+  C = n("108886");
+let S = [8, 8, 8, 8];
 
 function T(e) {
   let {
@@ -32,16 +32,16 @@ function T(e) {
   return (0, l.jsx)(o.Clickable, {
     ...a,
     onClick: i,
-    className: s(S.categoryIcon, {
-      [S.selected]: n
+    className: s(C.categoryIcon, {
+      [C.selected]: n
     }),
     children: (0, l.jsx)(t, {
-      className: S.categoryIconIcon
+      className: C.categoryIconIcon
     })
   })
 }
 
-function v(e, t, n, i) {
+function I(e, t, n, i) {
   return (0, l.jsx)(o.Tooltip, {
     text: function(e) {
       switch (e.categoryInfo.type) {
@@ -101,7 +101,7 @@ function v(e, t, n, i) {
         case E.SoundboardSoundGridSectionType.GUILD:
           return (0, l.jsx)(o.Clickable, {
             ...i,
-            className: S.category,
+            className: C.category,
             onClick: t,
             children: (0, l.jsx)(u.default, {
               guild: e.categoryInfo.guild,
@@ -122,20 +122,20 @@ function v(e, t, n, i) {
   })
 }
 
-function I(e) {
+function v(e) {
   let {
     soundboardListRef: t,
     categories: n,
-    listPadding: a = C
+    listPadding: a = S
   } = e, s = i.useRef(null);
   return (0, l.jsx)(c.default, {
-    className: S.categoryList,
+    className: C.categoryList,
     categoryListRef: s,
     expressionsListRef: t,
     store: d.SoundboardPickerStore,
     categories: n,
     listPadding: a,
-    renderCategoryListItem: v,
+    renderCategoryListItem: I,
     rowCount: n.length,
     categoryHeight: 40
   })

@@ -30,36 +30,36 @@ var h = function(e) {
     renderButtonContents: h,
     active: E,
     onClick: g,
-    "aria-controls": S,
-    focusProps: C
-  } = e, [T, v] = i.useState(!1), [I, _] = i.useState(50), N = T || E, A = (0, d.getClass)(m, "emojiButton", N ? "Hovered" : "Normal");
-  let y = (t = I, {
+    "aria-controls": C,
+    focusProps: S
+  } = e, [T, I] = i.useState(!1), [v, _] = i.useState(50), N = T || E, A = (0, d.getClass)(m, "emojiButton", N ? "Hovered" : "Normal");
+  let x = (t = v, {
       "--custom-emoji-sprite-size": "".concat(24, "px"),
       "--custom-emoji-sprite-row": Math.floor(t / 20),
       "--custom-emoji-sprite-col": t % 20
     }),
-    x = i.useCallback(() => {
-      if (!N) v(!0), _(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
-    }, [N, v, _]),
+    y = i.useCallback(() => {
+      if (!N) I(!0), _(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
+    }, [N, I, _]),
     O = i.useCallback(() => {
-      v(!1)
-    }, [v]),
+      I(!1)
+    }, [I]),
     R = i.useCallback(() => (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonFocused), []);
   return (0, l.jsx)(o.Button, {
     look: o.Button.Looks.BLANK,
     size: o.Button.Sizes.NONE,
     tabIndex: n,
     className: s(A, a),
-    onMouseEnter: x,
-    onMouseOver: x,
+    onMouseEnter: y,
+    onMouseOver: y,
     onMouseLeave: O,
     onFocus: R,
     onClick: g,
     "aria-label": f.default.Messages.SELECT_EMOJI,
-    "aria-controls": S,
+    "aria-controls": C,
     "aria-expanded": E,
     "aria-haspopup": "dialog",
-    focusProps: C,
+    focusProps: S,
     children: null != h ? h() : (0, l.jsx)(r.Spring, {
       config: p,
       to: {
@@ -72,7 +72,7 @@ var h = function(e) {
         return (0, l.jsxs)(r.animated.div, {
           className: m.spriteContainer,
           style: {
-            ...y,
+            ...x,
             transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
           },
           children: [(0, l.jsx)("div", {

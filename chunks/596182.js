@@ -95,20 +95,20 @@ function g(e) {
       channel: m,
       showOptions: h,
       showImage: g,
-      optionStates: S,
-      onOptionClick: C,
+      optionStates: C,
+      onOptionClick: S,
       section: T,
-      isSelectable: v = !0
+      isSelectable: I = !0
     } = e,
-    I = i.useMemo(() => {
+    v = i.useMemo(() => {
       var e;
       return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find(e => e.name === d)
     }, [d, u]),
-    _ = null != d ? null == S ? void 0 : S[d] : null;
+    _ = null != d ? null == C ? void 0 : C[d] : null;
   r = null != _ && (null === (t = _.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = _.lastValidationResult.error) && void 0 !== n ? n : "" : null;
   let N = g && null != T ? (0, c.getIconComponent)(T) : null;
   return (0, l.jsxs)("div", {
-    className: s(p.wrapper, v ? null : p.disabled),
+    className: s(p.wrapper, I ? null : p.disabled),
     children: [null != N ? (0, l.jsx)(N, {
       className: p.image,
       channel: m,
@@ -124,12 +124,12 @@ function g(e) {
           children: f.COMMAND_SENTINEL + u.displayName
         }), h ? (0, l.jsx)(E, {
           command: u,
-          optionStates: S,
-          onOptionClick: C
+          optionStates: C,
+          onOptionClick: S
         }) : null]
       }), (0, l.jsx)(o.AutocompleteRowSubheading, {
         className: s(p.description, null != r ? p.error : null),
-        children: null !== (a = null != r ? r : null == I ? void 0 : I.displayDescription) && void 0 !== a ? a : u.displayDescription
+        children: null !== (a = null != r ? r : null == v ? void 0 : v.displayDescription) && void 0 !== a ? a : u.displayDescription
       })]
     }), (0, l.jsx)(o.AutocompleteRowContentSecondary, {
       className: p.source,

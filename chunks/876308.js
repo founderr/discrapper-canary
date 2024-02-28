@@ -19,11 +19,11 @@ var l = n("37983"),
   h = n("659500"),
   E = n("718517"),
   g = n("829536"),
-  S = n("534107"),
-  C = n("49111"),
+  C = n("534107"),
+  S = n("49111"),
   T = n("782340"),
-  v = n("722552");
-let I = i.lazy(() => n.el("403130").then(n.bind(n, "403130")));
+  I = n("722552");
+let v = i.lazy(() => n.el("403130").then(n.bind(n, "403130")));
 
 function _(e) {
   let {
@@ -33,15 +33,15 @@ function _(e) {
   } = e, a = null == n ? "--:--" : t ? (0, c.convertSecondsToClockFormat)(Math.ceil(n - i)) : (0, c.convertSecondsToClockFormat)(Math.ceil(n));
   return (0, l.jsx)(o.Text, {
     variant: "text-sm/normal",
-    className: v.duration,
+    className: I.duration,
     tabularNumbers: !0,
     children: a
   })
 }
 var N = i.memo(function(e) {
   var t, n, a, c, N, A;
-  let y, {
-      src: x,
+  let x, {
+      src: y,
       volume: O = 1,
       onVolumeChange: R,
       onMute: M,
@@ -129,11 +129,11 @@ var N = i.memo(function(e) {
     }(), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [t, n, a]), c = x, N = W, A = Y, i.useEffect(() => {
-    if (N) return h.ComponentDispatch.dispatch(C.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
+  }, [t, n, a]), c = y, N = W, A = Y, i.useEffect(() => {
+    if (N) return h.ComponentDispatch.dispatch(S.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
       src: c
-    }), h.ComponentDispatch.subscribe(C.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
-      h.ComponentDispatch.unsubscribe(C.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
+    }), h.ComponentDispatch.subscribe(S.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
+      h.ComponentDispatch.unsubscribe(S.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
     };
 
     function e(e) {
@@ -145,11 +145,11 @@ var N = i.memo(function(e) {
   }, [c, N, A]);
   let ep = W ? m.default : p.default,
     eh = W ? T.default.Messages.PAUSE : T.default.Messages.PLAY;
-  y = "Safari" === platform.name ? (0, l.jsx)(i.Suspense, {
-    children: (0, l.jsx)(I, {
+  x = "Safari" === platform.name ? (0, l.jsx)(i.Suspense, {
+    children: (0, l.jsx)(v, {
       ref: w,
-      className: v.audioElement,
-      src: x,
+      className: I.audioElement,
+      src: y,
       preload: X,
       playing: W && !z,
       onEnded: es,
@@ -160,7 +160,7 @@ var N = i.memo(function(e) {
     })
   }) : (0, l.jsx)(d.default, {
     ref: w,
-    className: v.audioElement,
+    className: I.audioElement,
     controls: !1,
     preload: X,
     onEnded: es,
@@ -170,7 +170,7 @@ var N = i.memo(function(e) {
     volume: $,
     playing: W && !z,
     children: (0, l.jsx)("source", {
-      src: x
+      src: y
     })
   });
   let eE = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion),
@@ -178,30 +178,30 @@ var N = i.memo(function(e) {
       enabled: eg
     } = (0, o.useRedesignIconContext)();
   return (0, l.jsxs)("div", {
-    className: s(v.container, {
-      [v.playing]: W
+    className: s(I.container, {
+      [I.playing]: W
     }),
     onMouseEnter: el,
     children: [(0, l.jsx)("div", {
-      className: v.rippleContainer,
+      className: I.rippleContainer,
       children: (0, l.jsx)("div", {
-        className: s(v.ripple, {
-          [v.reducedMotion]: eE
+        className: s(I.ripple, {
+          [I.reducedMotion]: eE
         })
       })
     }), (0, l.jsx)(o.Clickable, {
-      className: v.playButtonContainer,
+      className: I.playButtonContainer,
       onClick: en,
       "aria-label": eh,
       children: (0, l.jsx)(ep, {
-        className: s(v.playIcon, {
-          [v.oldPlayIconSpacing]: !eg && !W
+        className: s(I.playIcon, {
+          [I.oldPlayIconSpacing]: !eg && !W
         }),
         width: 18,
         height: 18
       })
-    }), (0, l.jsx)(S.default, {
-      className: v.waveform,
+    }), (0, l.jsx)(C.default, {
+      className: I.waveform,
       waveform: L,
       currentTime: F,
       duration: null != B ? B : 1,
@@ -215,9 +215,9 @@ var N = i.memo(function(e) {
       currentTime: F,
       duration: B
     }), (0, l.jsx)(f.default, {
-      className: v.volumeButton,
-      iconClassName: v.volumeButtonIcon,
-      sliderWrapperClassName: v.volumeSlider,
+      className: I.volumeButton,
+      iconClassName: I.volumeButtonIcon,
+      sliderWrapperClassName: I.volumeSlider,
       muted: V,
       value: (0, g.amplitudeToPerceptual)($, 1),
       minValue: 0,
@@ -227,6 +227,6 @@ var N = i.memo(function(e) {
       onToggleMute: eu,
       onVolumeShow: b,
       onVolumeHide: j
-    }), y]
+    }), x]
   })
 })

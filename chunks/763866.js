@@ -19,16 +19,16 @@ var l = n("37983"),
   h = n("765698"),
   E = n("906889"),
   g = n("10532"),
-  S = n("648149"),
-  C = n("915712"),
+  C = n("648149"),
+  S = n("915712"),
   T = n("261523"),
-  v = n("369869"),
-  I = n("545590"),
+  I = n("369869"),
+  v = n("545590"),
   _ = n("316095"),
   N = n("802279"),
   A = n("577172"),
-  y = n("465215"),
-  x = n("301998"),
+  x = n("465215"),
+  y = n("301998"),
   O = n("379657"),
   R = n("853780"),
   M = n("574191"),
@@ -100,7 +100,7 @@ function D(e) {
       user: w,
       nickname: eo,
       pronouns: null == F ? void 0 : F.pronouns,
-      usernameIcon: w.hasAvatarForGuild(null == G ? void 0 : G.id) && (0, l.jsx)(S.default, {
+      usernameIcon: w.hasAvatarForGuild(null == G ? void 0 : G.id) && (0, l.jsx)(C.default, {
         user: w,
         nickname: eo
       }),
@@ -117,15 +117,15 @@ function D(e) {
         }),
         onScroll: er,
         ref: ei,
-        children: [(0, l.jsx)(I.default, {
+        children: [(0, l.jsx)(v.default, {
           user: w,
           guildId: null == G ? void 0 : G.id
-        }), (0, l.jsx)(v.default, {
+        }), (0, l.jsx)(I.default, {
           isUsingGuildBio: null !== (n = null == F ? void 0 : F.isUsingGuildMemberBio()) && void 0 !== n && n,
           bio: null == F ? void 0 : F.bio,
           guild: G,
           hidePersonalInformation: J
-        }), (0, l.jsx)(y.default, {
+        }), (0, l.jsx)(x.default, {
           userId: w.id,
           guild: G,
           guildMember: B
@@ -134,7 +134,7 @@ function D(e) {
           voiceGuild: Q.voiceGuild,
           onClose: V,
           color: U.buttonColor
-        }), (0, l.jsx)(C.default, {
+        }), (0, l.jsx)(S.default, {
           activity: D,
           user: w,
           guild: G,
@@ -164,7 +164,7 @@ function D(e) {
         }), null != q && void 0 !== H && (0, l.jsx)(R.default, {
           channelId: H,
           applicationId: q.id
-        }), (0, l.jsx)(x.default, {
+        }), (0, l.jsx)(y.default, {
           user: w,
           setNote: K,
           autoFocus: !W,

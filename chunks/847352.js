@@ -19,11 +19,11 @@ var l = n("37983"),
   h = n("791776"),
   E = n("82372"),
   g = n("426969"),
-  S = n("105571"),
-  C = n("634114"),
+  C = n("105571"),
+  S = n("634114"),
   T = n("49111"),
-  v = n("13030"),
-  I = n("942838"),
+  I = n("13030"),
+  v = n("942838"),
   _ = i.memo(function(e) {
     let {
       positionTargetRef: t,
@@ -31,8 +31,8 @@ var l = n("37983"),
       closeOnModalOuterClick: a = !1,
       parentModalKey: _
     } = e, N = i.useRef(null), A = i.useRef(null), {
-      renderWindow: y,
-      windowDispatch: x
+      renderWindow: x,
+      windowDispatch: y
     } = i.useContext(f.default), O = null != _, R = (0, u.useIsModalAtTop)(null != _ ? _ : ""), M = () => {
       E.dismissAppLauncherPopup()
     }, L = i.useCallback(e => {
@@ -41,7 +41,7 @@ var l = n("37983"),
       let {
         target: n
       } = e;
-      if ((0, r.isElement)(n) && null != n.closest("." + v.CHAT_INPUT_BUTTON_CLASSNAME)) return;
+      if ((0, r.isElement)(n) && null != n.closest("." + I.CHAT_INPUT_BUTTON_CLASSNAME)) return;
       for (;
         (0, r.isElement)(n);) {
         if (n === A.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
@@ -53,16 +53,16 @@ var l = n("37983"),
     }, [a, R, O]), P = i.useCallback(() => {
       M()
     }, []);
-    i.useLayoutEffect(() => (y.addEventListener("mousedown", L), y.addEventListener("contextmenu", L), x.subscribe(T.ComponentActions.POPOUT_CLOSE, P), () => {
-      y.removeEventListener("mousedown", L), y.removeEventListener("contextmenu", L), x.unsubscribe(T.ComponentActions.POPOUT_CLOSE, P)
-    }), [P, L, y, x]), (0, d.useFocusLock)(N), i.useEffect(() => {
+    i.useLayoutEffect(() => (x.addEventListener("mousedown", L), x.addEventListener("contextmenu", L), y.subscribe(T.ComponentActions.POPOUT_CLOSE, P), () => {
+      x.removeEventListener("mousedown", L), x.removeEventListener("contextmenu", L), y.unsubscribe(T.ComponentActions.POPOUT_CLOSE, P)
+    }), [P, L, x, y]), (0, d.useFocusLock)(N), i.useEffect(() => {
       (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
     }, [R, O]);
     let b = (0, o.useStateFromStores)([g.default], () => g.default.getCurrentAppDetail());
     return (0, l.jsx)(c.default, {
       section: T.AnalyticsSections.EXPRESSION_PICKER,
       children: (0, l.jsx)(m.AppReferencePositionLayer, {
-        className: I.positionLayer,
+        className: v.positionLayer,
         reference: t,
         position: "top",
         align: "left",
@@ -73,21 +73,21 @@ var l = n("37983"),
             isPositioned: t
           } = e;
           return (0, l.jsx)("section", {
-            className: s(I.positionContainer),
+            className: s(v.positionContainer),
             ref: N,
             role: "dialog",
             "aria-label": "Application Launcher",
             children: t ? (0, l.jsxs)("div", {
-              className: I.drawerSizingWrapper,
+              className: v.drawerSizingWrapper,
               ref: A,
               children: [(0, l.jsx)("div", {
-                className: I.resizeHandle
+                className: v.resizeHandle
               }), (0, l.jsxs)("div", {
-                className: I.contentWrapper,
-                children: [(0, l.jsx)(C.default, {
+                className: v.contentWrapper,
+                children: [(0, l.jsx)(S.default, {
                   channel: n,
                   isAppDetailPresent: null != b
-                }), null != b ? (0, l.jsx)(S.default, {
+                }), null != b ? (0, l.jsx)(C.default, {
                   channel: n,
                   appDetail: b
                 }, b.id) : null]

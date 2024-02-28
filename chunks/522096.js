@@ -24,16 +24,16 @@ function d(e) {
     defaultSearchPlaceholder: h,
     emptySearchPlaceholder: E,
     renderEmptyState: g,
-    renderRow: S,
-    renderSection: C,
+    renderRow: C,
+    renderSection: S,
     renderSectionHeader: T,
-    renderSectionFooter: v,
-    renderInspector: I,
+    renderSectionFooter: I,
+    renderInspector: v,
     renderEmptySearchState: _,
     renderCategoryList: N,
     renderHeaderAccessories: A,
-    rowHeight: y,
-    sectionHeaderHeight: x,
+    rowHeight: x,
+    sectionHeaderHeight: y,
     sectionFooterHeight: O,
     itemNodeWidth: R,
     listPaddingRight: M,
@@ -74,15 +74,15 @@ function d(e) {
     gridNavigatorId: b
   }), $ = i.useCallback(e => {
     let t = V[e];
-    return S(t, J(e), {
+    return C(t, J(e), {
       isUsingKeyboardNavigation: Q.current,
       gutterWidth: z,
       rowIndex: e
     }, t => Z(e, t), t => c.setInspectedExpressionPosition(t, e))
-  }, [V, Z, J, z, Q, S, c]), ee = i.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
+  }, [V, Z, J, z, Q, C, c]), ee = i.useCallback(e => null == S ? void 0 : S(t[e]), [t, S]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == I ? void 0 : I(t[e]), [t, I]), el = i.useCallback(() => {
     var e;
-    return null == I ? void 0 : I(null == V ? void 0 : null === (e = V[B.rowIndex]) || void 0 === e ? void 0 : e[B.columnIndex])
-  }, [V, B.columnIndex, B.rowIndex, I]);
+    return null == v ? void 0 : v(null == V ? void 0 : null === (e = V[B.rowIndex]) || void 0 === e ? void 0 : e[B.columnIndex])
+  }, [V, B.columnIndex, B.rowIndex, v]);
   i.useEffect(() => {
     m(G)
   }, [m, G]), i.useEffect(() => c.resetStoreState, [c.resetStoreState]), i.useLayoutEffect(() => {
@@ -120,15 +120,15 @@ function d(e) {
           hasSearchResults: p,
           listPadding: P,
           renderRow: $,
-          renderSection: null != C ? ee : void 0,
+          renderSection: null != S ? ee : void 0,
           renderSectionHeader: null != T ? et : void 0,
-          renderSectionFooter: null != v ? en : void 0,
-          renderInspector: null != I ? el : void 0,
+          renderSectionFooter: null != I ? en : void 0,
+          renderInspector: null != v ? el : void 0,
           renderEmptySearchState: _,
           rowCount: K,
           rowCountBySection: W,
-          rowHeight: y,
-          sectionHeaderHeight: x,
+          rowHeight: x,
+          sectionHeaderHeight: y,
           sectionFooterHeight: O
         }) : null
       })]

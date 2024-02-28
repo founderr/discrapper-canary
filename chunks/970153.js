@@ -65,8 +65,8 @@ function E(e, t) {
     }
   let h = f > 0 && p.NodeUtils.isType(e[f - 1], "blockQuote"),
     E = p.NodeUtils.isType(e[f], "blockQuote"),
-    S = p.NodeUtils.isType(e[m], "blockQuote"),
-    C = [];
+    C = p.NodeUtils.isType(e[m], "blockQuote"),
+    S = [];
   for (let t = f; t <= m; t++) {
     let n = e[t];
     if (o && p.TextUtils.isText(n) && 0 === n.text.length) continue;
@@ -78,7 +78,7 @@ function E(e, t) {
         path: s.path.slice(1),
         offset: s.offset
       } : void 0,
-      u = null == a || null == s || !h && (!E || S),
+      u = null == a || null == s || !h && (!E || C),
       c = g(n, {
         mode: i,
         start: l,
@@ -86,9 +86,9 @@ function E(e, t) {
         allowBlockQuotePrefix: u,
         preventEmojiSurrogates: d
       });
-    (!o || c.length > 0) && C.push(c)
+    (!o || c.length > 0) && S.push(c)
   }
-  return C.join(r)
+  return S.join(r)
 }
 
 function g(e, t) {

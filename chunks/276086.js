@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("773336"),
   E = n("563680"),
   g = n("49111"),
-  S = n("716208");
-let C = () => {
+  C = n("716208");
+let S = () => {
   i.default.wait(() => d.close(g.PopoutWindowKeys.CHANNEL_CALL_POPOUT))
 };
 
@@ -62,17 +62,17 @@ function _(e) {
     }, [d, I, _]),
     j = i && !I,
     L = x === g.ChannelModes.VIDEO && N && !j,
-    y = a.useCallback((e, l) => {
+    O = a.useCallback((e, l) => {
       l !== e && (r.default.updateLayout(t.id, l, n), l === g.ChannelLayouts.FULL_SCREEN && t.isPrivate() && m.ComponentDispatch.dispatch(g.ComponentActions.TEXTAREA_BLUR))
     }, [n, t]),
-    O = a.useCallback(e => {
-      if (null != R) e === g.ChannelLayouts.FULL_SCREEN && (y(e, A.current), (0, E.exitFullScreen)(e => {
+    y = a.useCallback(e => {
+      if (null != R) e === g.ChannelLayouts.FULL_SCREEN && (O(e, A.current), (0, E.exitFullScreen)(e => {
         A.current = e
       }, M))
-    }, [M, y, R]),
+    }, [M, O, R]),
     P = a.useCallback(e => () => {
-      null != R && (e !== g.ChannelLayouts.FULL_SCREEN ? (A.current = e, y(e, g.ChannelLayouts.FULL_SCREEN), (0, E.requestFullScreen)(R)) : O(e))
-    }, [y, O, R]);
+      null != R && (e !== g.ChannelLayouts.FULL_SCREEN ? (A.current = e, O(e, g.ChannelLayouts.FULL_SCREEN), (0, E.requestFullScreen)(R)) : y(e))
+    }, [O, y, R]);
   return (a.useEffect(() => {
     let e = () => {
       null != R && !(0, E.isFullScreen)(R, M) && v === g.ChannelLayouts.FULL_SCREEN && P(v)()
@@ -84,16 +84,16 @@ function _(e) {
     video_layout: I ? "popout" : v,
     ...(0, u.collectVoiceAnalyticsMetadata)(t.id)
   }), () => {
-    !(I && (0, p.isMac)()) && O(v)
+    !(I && (0, p.isMac)()) && y(v)
   }), [v, I]), a.useEffect(() => {
     null != R && T.current === g.ChannelModes.VIDEO && x === g.ChannelModes.VOICE && (0, E.exitFullScreen)(R, M)
   }, [M, x, T, R]), a.useEffect(() => {
-    !N && I && C()
+    !N && I && S()
   }, [N, I]), L) ? (0, l.jsx)(c.default, {
     themeable: !1,
     node: R,
     guestWindow: d,
-    className: S.rightTrayIcon,
+    className: C.rightTrayIcon,
     onClick: P(v)
   }) : null
 }

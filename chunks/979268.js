@@ -1,11 +1,11 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return r
+    return l
   }
 });
-var n = a("862205");
-let s = (0, n.createExperiment)({
+var a = n("862205");
+let s = (0, a.createExperiment)({
   kind: "user",
   id: "2022-08_message_todos_staff_only",
   label: "Message TODO list",
@@ -20,4 +20,4 @@ let s = (0, n.createExperiment)({
     }
   }]
 });
-var r = s
+var l = s

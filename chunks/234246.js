@@ -119,23 +119,23 @@ l = class extends i.EventEmitter {
     let {
       results: E,
       metadata: g
-    } = f.queryResults(this.props.channel, this.props.guild, m, i, p), S = 0;
-    for (let e of Object.values(E)) Array.isArray(e) && (S += e.length);
-    let C = !0 === E.isLoading,
-      T = this.shouldShow(S, C, f),
-      v = this.state.selectedIndex;
-    !T || C ? v = null : null != v && v >= S && (v = S - 1), T && !this.state.isVisible && (0, s.trackAutocompleteOpen)(c, this.props.channel, g), this.setState({
+    } = f.queryResults(this.props.channel, this.props.guild, m, i, p), C = 0;
+    for (let e of Object.values(E)) Array.isArray(e) && (C += e.length);
+    let S = !0 === E.isLoading,
+      T = this.shouldShow(C, S, f),
+      I = this.state.selectedIndex;
+    !T || S ? I = null : null != I && I >= C && (I = C - 1), T && !this.state.isVisible && (0, s.trackAutocompleteOpen)(c, this.props.channel, g), this.setState({
       query: {
         type: c,
         typeInfo: f,
         queryText: m,
         results: E,
-        resultCount: S,
+        resultCount: C,
         options: i,
-        isLoading: C
+        isLoading: S
       },
       isVisible: T,
-      selectedIndex: v
+      selectedIndex: I
     })
   }
   shouldShow(e, t, n) {

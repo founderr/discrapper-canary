@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return g
   },
   default: function() {
-    return S
+    return C
   }
 }), n("222007"), n("424973");
 var l = n("37983"),
@@ -68,16 +68,16 @@ function g(e, t) {
         f = null; - 1 !== d && (f = u[d], u.splice(d, 1));
       let h = null != f ? e - m - 8 : e,
         g = Math.max(0, Math.min(Math.floor((h - 8) / 132), 12, t.length)),
-        S = Math.min((h - 8) / g - 8, m),
-        C = Math.max(0, g - a.length),
+        C = Math.min((h - 8) / g - 8, m),
+        S = Math.max(0, g - a.length),
         _ = a.slice(0, g),
-        I = u.slice(0, C),
-        T = Array(C);
-      if (C > 0) {
+        I = u.slice(0, S),
+        T = Array(S);
+      if (S > 0) {
         let e = [];
         for (let t of I) {
           let n = r.current[t.id];
-          null != n && n < C ? T[n] = t : e.push(t)
+          null != n && n < S ? T[n] = t : e.push(t)
         }
         for (let t = 0; t < T.length; t++) {
           if (null != T[t]) continue;
@@ -92,7 +92,7 @@ function g(e, t) {
       let N = [..._, ...v];
       return null != f && N.push(f), {
         visibleParticipants: N,
-        participantTileWidth: S
+        participantTileWidth: C
       }
     }, [e, t, n]);
   return {
@@ -101,7 +101,7 @@ function g(e, t) {
   }
 }
 
-function S(e) {
+function C(e) {
   let {
     participants: t,
     participantTileWidth: n,

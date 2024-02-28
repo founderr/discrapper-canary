@@ -25,16 +25,16 @@ var l = n("37983"),
   h = n("697218"),
   E = n("118849"),
   g = n("671434"),
-  S = n("132755"),
-  C = n("151185"),
+  C = n("132755"),
+  S = n("151185"),
   T = n("368121"),
-  v = n("305122"),
-  I = n("235004"),
+  I = n("305122"),
+  v = n("235004"),
   _ = n("389480"),
   N = n("78581"),
   A = n("23106"),
-  y = n("796864"),
-  x = n("172858"),
+  x = n("796864"),
+  y = n("172858"),
   O = n("782340"),
   R = n("802501");
 
@@ -104,7 +104,7 @@ var P = i.forwardRef(function(e, t) {
     name: Y,
     emojiId: z,
     emojiName: Z
-  } = P, J = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, y.useSoundButtonContextMenu)(P, null == b ? void 0 : b.guild_id), {
+  } = P, J = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, x.useSoundButtonContextMenu)(P, null == b ? void 0 : b.guild_id), {
     playSoundboardSound: X,
     previewSound: Q,
     isPlayingSound: $
@@ -126,7 +126,7 @@ var P = i.forwardRef(function(e, t) {
     ei = i.useRef(.01),
     ea = i.useRef(new u.Interval),
     es = "1" === P.soundId,
-    er = (0, o.useStateFromStores)([I.default], () => I.default.isFavoriteSound(W), [W]),
+    er = (0, o.useStateFromStores)([v.default], () => v.default.isFavoriteSound(W), [W]),
     eo = "sound-".concat(P.soundId),
     eu = (0, r.useListItem)(eo),
     ed = null != z || null != Z,
@@ -134,7 +134,7 @@ var P = i.forwardRef(function(e, t) {
     ef = D || w && !ec;
 
   function em(e) {
-    e.stopPropagation(), e.currentTarget.blur(), er ? (0, v.removeFavoriteSound)(W) : (0, v.addFavoriteSound)(W)
+    e.stopPropagation(), e.currentTarget.blur(), er ? (0, I.removeFavoriteSound)(W) : (0, I.addFavoriteSound)(W)
   }
 
   function ep() {
@@ -166,7 +166,7 @@ var P = i.forwardRef(function(e, t) {
         })
       }), (0, l.jsxs)("div", {
         className: R.buttonOverlayActions,
-        children: [ef && eh, !F && !ec && (0, l.jsx)(S.default, {
+        children: [ef && eh, !F && !ec && (0, l.jsx)(C.default, {
           className: R.playIcon
         }), ef && ep()]
       })]
@@ -202,7 +202,7 @@ var P = i.forwardRef(function(e, t) {
       }),
       onClick: function() {
         if (es && !el && (ei.current = Math.min(ei.current + .01, .1), Math.random() < ei.current && ee(en.x, en.y, void 0, void 0, {
-            sprite: x.DUCK_CONFETTI_SPRITE
+            sprite: y.DUCK_CONFETTI_SPRITE
           })), null != B) {
           B();
           return
@@ -237,7 +237,7 @@ var P = i.forwardRef(function(e, t) {
                 className: R.buttonOverlayActions,
                 children: [eh, (0, l.jsxs)("div", {
                   className: R.addButton,
-                  children: [(0, l.jsx)(C.default, {
+                  children: [(0, l.jsx)(S.default, {
                     className: R.plusSign
                   }), (0, l.jsx)(c.Text, {
                     variant: "text-xs/medium",

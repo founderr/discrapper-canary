@@ -1,25 +1,25 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return l
+    return s
   }
 });
-var n = a("37983");
-a("884691");
-var r = a("77078"),
-  i = a("18054"),
-  s = a("300322"),
-  u = a("782340");
+var a = n("37983");
+n("884691");
+var l = n("77078"),
+  i = n("18054"),
+  u = n("300322"),
+  r = n("782340");
 
-function l(e) {
-  let t = (0, s.useCanManageThread)(e),
-    a = (0, s.useIsActiveChannelOrUnarchivableThread)(e),
-    l = (0, s.useIsNonModInLockedThread)(e);
-  return !t || !a || l || __OVERLAY__ ? null : (0, n.jsx)(r.MenuItem, {
+function s(e) {
+  let t = (0, u.useCanManageThread)(e),
+    n = (0, u.useIsActiveChannelOrUnarchivableThread)(e),
+    s = (0, u.useIsNonModInLockedThread)(e);
+  return !t || !n || s || __OVERLAY__ ? null : (0, a.jsx)(l.MenuItem, {
     id: "edit-thread",
-    label: e.isForumPost() ? u.default.Messages.EDIT_FORUM_POST : u.default.Messages.EDIT_THREAD,
+    label: e.isForumPost() ? r.default.Messages.EDIT_FORUM_POST : r.default.Messages.EDIT_THREAD,
     action: () => {
-      (0, r.closeAllModals)(), i.default.open(e.id)
+      (0, l.closeAllModals)(), i.default.open(e.id)
     }
   })
 }

@@ -19,16 +19,16 @@ var l = n("37983"),
   h = n("538282"),
   E = n("522096"),
   g = n("845579"),
-  S = n("697218"),
-  C = n("800762"),
+  C = n("697218"),
+  S = n("800762"),
   T = n("476765"),
-  v = n("461380"),
-  I = n("93393"),
+  I = n("461380"),
+  v = n("93393"),
   _ = n("153769"),
   N = n("671434"),
   A = n("229915"),
-  y = n("368121"),
-  x = n("719923"),
+  x = n("368121"),
+  y = n("719923"),
   O = n("389480"),
   R = n("78581"),
   M = n("262439"),
@@ -67,7 +67,7 @@ function V(e) {
             className: G.headerIcon
           });
         case O.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-          return (0, l.jsx)(I.default, {
+          return (0, l.jsx)(v.default, {
             className: G.headerIcon
           });
         case O.SoundboardSoundGridSectionType.FREQUENTLY_USED:
@@ -109,9 +109,9 @@ function V(e) {
             return F.default.Messages.SEARCH_RESULTS_SECTION_LABEL
         }
       }()
-    }), (0, l.jsx)(v.default, {
+    }), (0, l.jsx)(I.default, {
       className: G.headerIcon,
-      direction: n ? v.default.Directions.RIGHT : v.default.Directions.DOWN
+      direction: n ? I.default.Directions.RIGHT : I.default.Directions.DOWN
     })]
   })
 }
@@ -175,20 +175,20 @@ function Y(e) {
     onClose: o,
     onSelect: c,
     suppressPlaySound: m = !1,
-    shouldShowUpsell: v = !0,
-    gridNotice: I,
+    shouldShowUpsell: I = !0,
+    gridNotice: v,
     soundButtonOverlay: _,
     listPadding: N,
     renderHeader: A,
     defaultSoundsOnly: P = !1
   } = e, {
     analyticsLocations: b
-  } = (0, f.default)(), [Y, z] = i.useState(null), Z = (0, r.useStateFromStores)([S.default], () => S.default.getCurrentUser()), J = (0, r.useStateFromStores)([C.default], () => {
+  } = (0, f.default)(), [Y, z] = i.useState(null), Z = (0, r.useStateFromStores)([C.default], () => C.default.getCurrentUser()), J = (0, r.useStateFromStores)([S.default], () => {
     var e;
-    return C.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : w.EMPTY_STRING_USER_ID)
+    return S.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : w.EMPTY_STRING_USER_ID)
   }), q = (null == J ? void 0 : J.selfDeaf) || (null == J ? void 0 : J.mute) || (null == J ? void 0 : J.suppress), X = (0, h.useExpressionPickerStore)(e => e.searchQuery), Q = (0, T.useUID)(), {
     categories: $
-  } = (0, L.default)(a, void 0, P), [ee, et] = i.useState([]), en = (0, L.useSearchCategories)($, ee, X), el = g.SoundboardPickerCollapsedSections.useSetting(), ei = i.useMemo(() => new Set(el), [el]), ea = null == a, es = x.default.canUseCustomCallSounds(Z), er = i.useCallback(e => {
+  } = (0, L.default)(a, void 0, P), [ee, et] = i.useState([]), en = (0, L.useSearchCategories)($, ee, X), el = g.SoundboardPickerCollapsedSections.useSetting(), ei = i.useMemo(() => new Set(el), [el]), ea = null == a, es = y.default.canUseCustomCallSounds(Z), er = i.useCallback(e => {
     let t = !ei.has(e);
     t ? ei.add(e) : ei.delete(e), g.SoundboardPickerCollapsedSections.updateSetting(Array.from(ei))
   }, [ei]), eo = i.useCallback((e, t) => {
@@ -197,9 +197,9 @@ function Y(e) {
       (0, R.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : w.EMPTY_STRING_CHANNEL_ID, t)
     } else {
       if ((0, R.canUseSoundboardSound)(Z, e, a)) return;
-      v && z(e)
+      I && z(e)
     }
-  }, [m, Z, a, v]), eu = i.useCallback(e => {
+  }, [m, Z, a, I]), eu = i.useCallback(e => {
     switch (e.item.type) {
       case O.SoundboardSoundItemType.SOUND:
         return null == c || c(e.item.sound), eo(e.item.sound, b);
@@ -244,7 +244,7 @@ function Y(e) {
     className: G.settingsClickArea,
     onClick: em,
     "aria-label": F.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME,
-    children: (0, l.jsx)(y.default, {
+    children: (0, l.jsx)(x.default, {
       className: G.settingsIcon
     })
   }), [em]), eh = i.useCallback(e => (0, l.jsx)(j.default, {
@@ -287,7 +287,7 @@ function Y(e) {
       gridNavigatorId: Q,
       renderEmptySearchState: K,
       renderInspector: eE,
-      gridNotice: I,
+      gridNotice: v,
       renderHeader: A
     })]
   })

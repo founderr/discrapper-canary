@@ -20,8 +20,8 @@ var i = n("414456"),
   h = n("228427"),
   E = n("959097"),
   g = n("328413"),
-  S = n("782340"),
-  C = n("263218"),
+  C = n("782340"),
+  S = n("263218"),
   T = function(e) {
     let {
       iconType: t,
@@ -30,92 +30,92 @@ var i = n("414456"),
     switch (t) {
       case "voice":
         i = (0, l.jsx)(p.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.VOICE_CHANNEL
+          className: S.icon,
+          "aria-label": C.default.Messages.VOICE_CHANNEL
         });
         break;
       case "voice-locked":
         i = (0, l.jsx)(c.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.VOICE_CHANNEL_LOCKED
+          className: S.icon,
+          "aria-label": C.default.Messages.VOICE_CHANNEL_LOCKED
         });
         break;
       case "stage":
         i = (0, l.jsx)(h.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.STAGE_CHANNEL
+          className: S.icon,
+          "aria-label": C.default.Messages.STAGE_CHANNEL
         });
         break;
       case "stage-locked":
         i = (0, l.jsx)(c.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.STAGE_CHANNEL_LOCKED
+          className: S.icon,
+          "aria-label": C.default.Messages.STAGE_CHANNEL_LOCKED
         });
         break;
       case "thread":
         i = (0, l.jsx)(E.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.THREAD
+          className: S.icon,
+          "aria-label": C.default.Messages.THREAD
         });
         break;
       case "text":
         i = (0, l.jsx)(r.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.CHANNEL
+          className: S.icon,
+          "aria-label": C.default.Messages.CHANNEL
         });
         break;
       case "forum":
         i = (0, l.jsx)(u.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.FORUM_CHANNEL
+          className: S.icon,
+          "aria-label": C.default.Messages.FORUM_CHANNEL
         });
         break;
       case "post":
         i = (0, l.jsx)(d.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.FORUM_POST
+          className: S.icon,
+          "aria-label": C.default.Messages.FORUM_POST
         });
         break;
       case "home":
       case "guide":
         i = (0, l.jsx)(m.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.SERVER_GUIDE
+          className: S.icon,
+          "aria-label": C.default.Messages.SERVER_GUIDE
         });
         break;
       case "browse":
       case "customize":
         i = (0, l.jsx)(s.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.CHANNEL_BROWSER_TITLE
+          className: S.icon,
+          "aria-label": C.default.Messages.CHANNEL_BROWSER_TITLE
         });
         break;
       case "message":
         i = (0, l.jsx)(o.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.MESSAGE_A11Y_ROLE_DESCRIPTION
+          className: S.icon,
+          "aria-label": C.default.Messages.MESSAGE_A11Y_ROLE_DESCRIPTION
         });
         break;
       case "locked":
         i = (0, l.jsx)(c.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.NO_ACCESS
+          className: S.icon,
+          "aria-label": C.default.Messages.NO_ACCESS
         });
         break;
       case "media":
         i = (0, l.jsx)(f.default, {
-          className: C.icon,
-          "aria-label": S.default.Messages.MEDIA_CHANNEL
+          className: S.icon,
+          "aria-label": C.default.Messages.MEDIA_CHANNEL
         })
     }
     return (0, l.jsxs)("span", {
       className: a("channelWithIcon", {
-        [C.iconMentionText]: "text" === t
+        [S.iconMentionText]: "text" === t
       }),
       children: [(0, l.jsx)(g.default, {
         children: i
       }), null != n && "" !== n ? (0, l.jsx)("span", {
-        className: C.name,
+        className: S.name,
         children: n
       }) : null]
     })

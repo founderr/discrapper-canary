@@ -20,8 +20,8 @@ var i = n("917351"),
   h = n("317041"),
   E = n("782340"),
   g = n("92810"),
-  S = n("327769");
-let C = {
+  C = n("327769");
+let S = {
     results: {
       choices: []
     }
@@ -32,14 +32,14 @@ let C = {
       isLoading: !0
     }
   },
-  v = Array.from({
+  I = Array.from({
     length: 5
   }, () => ({
     name: "",
     displayName: "",
     value: ""
   })),
-  I = {
+  v = {
     results: {
       choices: [],
       isError: !0
@@ -59,7 +59,7 @@ let C = {
     queryResults(e, t, n, l, i) {
       var a;
       let s = u.default.getActiveOption(e.id);
-      if (null == s) return C;
+      if (null == s) return S;
       if (s.autocomplete) {
         if (i) {
           let i = u.default.getActiveCommand(e.id),
@@ -78,7 +78,7 @@ let C = {
           })
         }
         let a = o.default.getLastErrored(e.id);
-        if (a) return I;
+        if (a) return v;
         let r = o.default.getAutocompleteChoices(e.id, s.name, n);
         return null == r ? T : {
           results: {
@@ -108,12 +108,12 @@ let C = {
       } = e;
       return i ? (0, l.jsx)(s.default, {
         message: E.default.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_FAILED,
-        noResultsImageURL: S,
+        noResultsImageURL: C,
         className: g.noAutocompleteResults
       }) : 0 !== t.length || n ? (0, m.renderAutocompleteGroup)({
         query: r,
         selectedIndex: a,
-        autocompletes: n ? v : t,
+        autocompletes: n ? I : t,
         onHover: o,
         onClick: u,
         titleWithQuery: E.default.Messages.OPTIONS_MATCHING,
@@ -127,7 +127,7 @@ let C = {
         key: "choice"
       }) : (0, l.jsx)(s.default, {
         message: E.default.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_NO_OPTIONS,
-        noResultsImageURL: S,
+        noResultsImageURL: C,
         className: g.noAutocompleteResults
       })
     },

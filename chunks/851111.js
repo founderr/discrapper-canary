@@ -19,38 +19,38 @@ var l = n("37983"),
   h = n("216422"),
   E = n("719923"),
   g = n("788506"),
-  S = n("49111"),
-  C = n("646718"),
+  C = n("49111"),
+  S = n("646718"),
   T = n("782340"),
-  v = n("669821");
-let I = "premiumRetentionEmojiPickerNotice",
-  _ = o.default.get(I);
+  I = n("669821");
+let v = "premiumRetentionEmojiPickerNotice",
+  _ = o.default.get(v);
 var N = e => {
   let {
     closePopout: t,
     channel: n
   } = e, [a, N] = i.useState(!1), {
     subscription: A,
-    hasFetchedSubscriptions: y
+    hasFetchedSubscriptions: x
   } = (0, r.useStateFromStoresObject)([f.default], () => ({
     subscription: f.default.getPremiumSubscription(),
     hasFetchedSubscriptions: f.default.hasFetchedSubscriptions()
   }));
   if (i.useEffect(() => {
-      !y && (0, d.fetchSubscriptions)()
-    }, [y]), null == A || !(0, E.isSubscriptionStatusFailedPayment)(A.status) || a) return null;
-  let x = A.status === S.SubscriptionStatusTypes.PAST_DUE ? (0, E.getBillingGracePeriodDays)(A) : C.MAX_ACCOUNT_HOLD_DAYS,
-    O = s(A.currentPeriodStart).add(x, "days"),
+      !x && (0, d.fetchSubscriptions)()
+    }, [x]), null == A || !(0, E.isSubscriptionStatusFailedPayment)(A.status) || a) return null;
+  let y = A.status === C.SubscriptionStatusTypes.PAST_DUE ? (0, E.getBillingGracePeriodDays)(A) : S.MAX_ACCOUNT_HOLD_DAYS,
+    O = s(A.currentPeriodStart).add(y, "days"),
     R = "".concat(A.id, ":").concat(O.toISOString());
   if (_ === R) return null;
-  let M = E.default.getPremiumType(A.planId) === C.PremiumTypes.TIER_0 ? m.GradientCssUrls.PREMIUM_TIER_0 : E.default.getPremiumType(A.planId) === C.PremiumTypes.TIER_1 ? m.GradientCssUrls.PREMIUM_TIER_1 : m.GradientCssUrls.PREMIUM_TIER_2;
+  let M = E.default.getPremiumType(A.planId) === S.PremiumTypes.TIER_0 ? m.GradientCssUrls.PREMIUM_TIER_0 : E.default.getPremiumType(A.planId) === S.PremiumTypes.TIER_1 ? m.GradientCssUrls.PREMIUM_TIER_1 : m.GradientCssUrls.PREMIUM_TIER_2;
   return (0, l.jsxs)("div", {
-    className: v.premiumRetentionNotice,
+    className: I.premiumRetentionNotice,
     children: [(0, l.jsx)(h.default, {
-      className: v.premiumRetentionNoticeIcon,
+      className: I.premiumRetentionNoticeIcon,
       color: M
     }), (0, l.jsxs)("div", {
-      className: v.premiumRetentionNoticeContent,
+      className: I.premiumRetentionNoticeContent,
       children: [(0, l.jsx)(u.Text, {
         variant: "text-xs/normal",
         children: T.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
@@ -60,17 +60,17 @@ var N = e => {
       }), (0, l.jsx)("div", {
         children: (0, l.jsx)(u.Anchor, {
           onClick: () => {
-            (0, g.trackPremiumSettingsPaneOpened)(n), t(), c.default.open(S.UserSettingsSections.PREMIUM)
+            (0, g.trackPremiumSettingsPaneOpened)(n), t(), c.default.open(C.UserSettingsSections.PREMIUM)
           },
           children: T.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_UPDATE_PAYMENT_INFORMATION
         })
       })]
     }), (0, l.jsx)(u.Clickable, {
       onClick: () => {
-        o.default.set(I, R), _ = R, N(!0)
+        o.default.set(v, R), _ = R, N(!0)
       },
       children: (0, l.jsx)(p.default, {
-        className: v.premiumRetentionNoticeClose
+        className: I.premiumRetentionNoticeClose
       })
     })]
   })

@@ -20,9 +20,9 @@ var i = n("414456"),
   h = n("49111"),
   E = n("782340"),
   g = n("20010"),
-  S = n("862939");
+  C = n("862939");
 
-function C(e) {
+function S(e) {
   let {
     guildName: t
   } = e;
@@ -42,32 +42,32 @@ function T(e) {
     bio: i,
     hidePersonalInformation: c,
     isUsingGuildBio: T,
-    lastSection: v = !1,
-    animateOnHover: I = !1,
+    lastSection: I = !1,
+    animateOnHover: v = !1,
     isHovering: _ = !1,
     lineClamp: N
   } = e, {
     location: A
-  } = (0, o.useAnalyticsContext)(), y = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), x = f.default.canUsePremiumGuildMemberProfile(y);
+  } = (0, o.useAnalyticsContext)(), x = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), y = f.default.canUsePremiumGuildMemberProfile(x);
   return c || null == i || "" === i ? null : (0, l.jsxs)(p.default, {
-    lastSection: v,
+    lastSection: I,
     children: [(0, l.jsxs)(r.Heading, {
       variant: "eyebrow",
-      className: S.title,
+      className: C.title,
       children: [E.default.Messages.USER_POPOUT_ABOUT_ME, null != t && T && (0, l.jsx)(r.Tooltip, {
         color: r.Tooltip.Colors.CUSTOM,
         tooltipClassName: g.aboutMeGuildIconTooltip,
         "aria-label": E.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
           guildName: t.name
         }),
-        text: (0, l.jsx)(C, {
+        text: (0, l.jsx)(S, {
           guildName: t.name
         }),
         children: e => (0, l.jsx)(d.default, {
           ...e,
           onClick: () => {
             var t;
-            null == (t = e.onClick) || t(), null != y && !x && (0, r.openModalLazy)(async () => {
+            null == (t = e.onClick) || t(), null != x && !y && (0, r.openModalLazy)(async () => {
               let {
                 default: e
               } = await n.el("414242").then(n.bind(n, "414242"));
@@ -83,13 +83,13 @@ function T(e) {
           guild: t,
           size: d.default.Sizes.SMOL,
           className: a(g.aboutMeGuildIcon, {
-            [g.nonPremiumHoverState]: !x
+            [g.nonPremiumHoverState]: !y
           })
         })
       })]
     }), (0, l.jsx)(m.default, {
       userBio: i,
-      animateOnHover: I,
+      animateOnHover: v,
       isHovering: _,
       lineClamp: N
     })]

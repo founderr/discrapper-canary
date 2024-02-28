@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return m
+    return E
   }
 }), n("222007");
 var a, s, l = n("37983"),
@@ -20,7 +20,7 @@ var a, s, l = n("37983"),
   p = n("758534");
 (s = a || (a = {}))[s.PostSidebar = 0] = "PostSidebar", s[s.ThreadSidebar = 1] = "ThreadSidebar", s[s.CallChatSidebar = 2] = "CallChatSidebar", s[s.MessageRequestSidebar = 3] = "MessageRequestSidebar", s[s.HomeSidebar = 4] = "HomeSidebar";
 
-function E(e) {
+function m(e) {
   let {
     resizableNode: t,
     onResize: n,
@@ -40,14 +40,14 @@ function E(e) {
   })
 }
 
-function m(e) {
+function E(e) {
   let {
     sidebarType: t,
     maxWidth: n,
     onWidthChange: a,
     children: s,
     floatingLayer: r
-  } = e, f = i.useRef(null), m = function(e) {
+  } = e, f = i.useRef(null), E = function(e) {
     switch (e) {
       case 0:
         return "postSidebarWidth";
@@ -60,11 +60,11 @@ function m(e) {
       case 4:
         return "homeSidebarWidth"
     }
-  }(t), [g, _] = i.useState(h.default[m]), S = i.useCallback(e => {
+  }(t), [g, _] = i.useState(h.default[E]), S = i.useCallback(e => {
     c.default.updatedUnsyncedSettings({
-      [m]: e
+      [E]: e
     })
-  }, [m]), T = (0, C.shouldChannelChatFloat)({
+  }, [E]), T = (0, C.shouldChannelChatFloat)({
     maxWidth: n
   }), A = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = T ? A : A + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
   i.useEffect(() => {
@@ -79,7 +79,7 @@ function m(e) {
       style: {
         width: M
       }
-    }), !T && (0, l.jsx)(E, {
+    }), !T && (0, l.jsx)(m, {
       maxWidth: n,
       resizableNode: f,
       onResize: _,

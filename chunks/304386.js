@@ -4,54 +4,54 @@ n.r(t), n.d(t, {
     return S
   }
 });
-var s = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("414456"),
-  l = n.n(i),
+var s = n("414456"),
+  l = n.n(s),
   o = n("446674"),
   r = n("154889"),
   a = n("917247"),
   c = n("801388"),
-  u = n("770469"),
-  d = n("641078"),
+  d = n("770469"),
+  u = n("641078"),
   h = n("773367"),
-  f = n("160299"),
-  m = n("324929"),
+  m = n("160299"),
+  f = n("324929"),
   p = n("189405");
 
 function S(e) {
   let t, {
       decoration: n,
-      label: i,
+      label: s,
       isSelected: S
     } = e,
-    C = (0, a.usePremiumTrialOffer)(),
-    b = (0, r.usePremiumDiscountOffer)(),
-    _ = (0, d.useIsEligibleForBogoPromotion)(),
-    x = (0, o.useStateFromStores)([f.default], () => f.default.isLocalizedPromoEnabled),
-    T = x && null == C && null == n;
-  return t = _ ? (0, s.jsx)(c.default, {}) : null != b ? (0, s.jsx)(h.PremiumDiscountOfferTabBadge, {
+    b = (0, a.usePremiumTrialOffer)(),
+    g = (0, r.usePremiumDiscountOffer)(),
+    v = (0, u.useIsEligibleForBogoPromotion)(),
+    x = (0, o.useStateFromStores)([m.default], () => m.default.isLocalizedPromoEnabled),
+    N = x && null == b && null == n;
+  return t = v ? (0, i.jsx)(c.default, {}) : null != g ? (0, i.jsx)(h.PremiumDiscountOfferTabBadge, {
     isTabSelected: S,
-    userDiscount: b,
+    userDiscount: g,
     includesAmountOff: !1
-  }) : null != C ? (0, s.jsx)(h.PremiumTrialOfferTabBadge, {
+  }) : null != b ? (0, i.jsx)(h.PremiumTrialOfferTabBadge, {
     isTabSelected: S,
-    trialOffer: C
-  }) : null != n ? n : T ? (0, s.jsx)(u.LocalizedPricingBadgeIcon, {
-    entryPoint: u.BadgeEntryPoint.SettingsMenu
-  }) : (0, s.jsx)(m.default, {
+    trialOffer: b
+  }) : null != n ? n : N ? (0, i.jsx)(d.LocalizedPricingBadgeIcon, {
+    entryPoint: d.BadgeEntryPoint.SettingsMenu
+  }) : (0, i.jsx)(f.default, {
     isSelected: S
-  }), (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsxs)("div", {
+  }), (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsxs)("div", {
       className: l(p.premiumLabel, {
-        [p.selected]: (S || T) && !_
+        [p.selected]: (S || N) && !v
       }),
-      children: [i, t]
-    }), (0, s.jsx)("div", {
+      children: [s, t]
+    }), (0, i.jsx)("div", {
       className: l(p.background, {
-        [p.auPromo]: T && !S,
-        [p.auPromoSelected]: T && S,
-        [p.selectedBackground]: !T && !_ && S
+        [p.auPromo]: N && !S,
+        [p.auPromoSelected]: N && S,
+        [p.selectedBackground]: !N && !v && S
       })
     })]
   })

@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("271938"),
   C = n("377253"),
   p = n("697218"),
-  E = n("599110"),
-  m = n("158998"),
+  m = n("599110"),
+  E = n("158998"),
   g = n("913491"),
   _ = n("49111"),
   S = n("782340"),
@@ -35,11 +35,11 @@ function M(e) {
   }, []);
   let I = (0, r.useStateFromStores)([C.default, h.default], () => !!i(C.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === _.MessageStates.SENT && !(0, g.default)(e))),
     N = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-    v = null !== (t = m.default.useName(N)) && void 0 !== t ? t : S.default.Messages.WAVE_DEFAULT_RECIPIENT,
+    v = null !== (t = E.default.useName(N)) && void 0 !== t ? t : S.default.Messages.WAVE_DEFAULT_RECIPIENT,
     L = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(A)),
     R = s.useCallback(async () => {
       if (null == l || "" === l) try {
-        await u.default.sendGreetMessage(n.id, A), E.default.track(_.AnalyticEvents.DM_EMPTY_ACTION, {
+        await u.default.sendGreetMessage(n.id, A), m.default.track(_.AnalyticEvents.DM_EMPTY_ACTION, {
           channel_id: n.id,
           channel_type: n.type,
           source: "Wave",
@@ -49,10 +49,10 @@ function M(e) {
         !e.ok && 429 === e.status && M(S.default.Messages.RATE_LIMITED)
       }
     }, [n.id, n.type, l]),
-    y = S.default.Messages.WAVE_TO.format({
+    x = S.default.Messages.WAVE_TO.format({
       username: v
     }),
-    x = null != l && "" !== l ? (0, a.jsx)(o.Text, {
+    y = null != l && "" !== l ? (0, a.jsx)(o.Text, {
       className: T.error,
       color: "text-danger",
       variant: "text-sm/normal",
@@ -70,9 +70,9 @@ function M(e) {
       }), (0, a.jsx)(o.Text, {
         className: T.text,
         variant: "text-md/medium",
-        children: y
+        children: x
       })]
-    }), x]
+    }), y]
   }) : (0, a.jsxs)("div", {
     className: T.containerExpanded,
     children: [(0, a.jsx)(f.default, {
@@ -82,7 +82,7 @@ function M(e) {
       className: T.button,
       onClick: R,
       disabled: !!l,
-      children: y
-    }), x]
+      children: x
+    }), y]
   })
 }

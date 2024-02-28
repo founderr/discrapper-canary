@@ -19,7 +19,7 @@ var a = (0, r("237436").defineColorTokens)({
       opacity: .2
     },
     light: {
-      color: "green.360",
+      color: "green.400",
       opacity: .2
     }
   },

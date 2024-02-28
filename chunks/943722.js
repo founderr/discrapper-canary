@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return A
   },
   default: function() {
-    return x
+    return y
   }
 }), n("222007");
 var l = n("37983"),
@@ -22,11 +22,11 @@ var l = n("37983"),
   h = n("342845"),
   E = n("845579"),
   g = n("271938"),
-  S = n("42203"),
-  C = n("957255"),
+  C = n("42203"),
+  S = n("957255"),
   T = n("824563"),
-  v = n("800762"),
-  I = n("137783"),
+  I = n("800762"),
+  v = n("137783"),
   _ = n("49111"),
   N = n("73276");
 
@@ -53,7 +53,7 @@ function A(e) {
     })
   })
 }
-let y = e => {
+let x = e => {
   let {
     className: t,
     text: n
@@ -86,7 +86,7 @@ let y = e => {
     })
   })
 };
-var x = e => {
+var y = e => {
   var t;
   let {
     activities: n,
@@ -97,10 +97,10 @@ var x = e => {
     animate: u = !0,
     hideTooltip: f = !1,
     hideEmoji: E = !1,
-    user: x
-  } = e, O = null != n ? n.find(e => e.type === _.ActivityTypes.CUSTOM_STATUS) : null, R = (0, r.useStateFromStores)([g.default], () => g.default.getId() === (null == x ? void 0 : x.id)), M = (0, r.useStateFromStores)([p.default], () => R ? p.default.getHangStatusActivity() : null != n ? n.find(e => e.type === _.ActivityTypes.HANG_STATUS) : null), L = (0, r.useStateFromStores)([v.default, S.default], () => {
+    user: y
+  } = e, O = null != n ? n.find(e => e.type === _.ActivityTypes.CUSTOM_STATUS) : null, R = (0, r.useStateFromStores)([g.default], () => g.default.getId() === (null == y ? void 0 : y.id)), M = (0, r.useStateFromStores)([p.default], () => R ? p.default.getHangStatusActivity() : null != n ? n.find(e => e.type === _.ActivityTypes.HANG_STATUS) : null), L = (0, r.useStateFromStores)([I.default, C.default], () => {
     var e;
-    return null != M && null != x ? S.default.getChannel(null === (e = v.default.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null
+    return null != M && null != y ? C.default.getChannel(null === (e = I.default.getVoiceStateForUser(y.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), {
     enableHangStatus: P
   } = m.HangStatusExperiment.useExperiment({
@@ -108,7 +108,7 @@ var x = e => {
     location: "ActivityStatus"
   }, {
     autoTrackExposure: !1
-  }), b = null, j = P && null != M && C.default.can(_.Permissions.CONNECT, L);
+  }), b = null, j = P && null != M && S.default.can(_.Permissions.CONNECT, L);
   j ? b = (0, l.jsx)(h.default, {
     className: o,
     hangStatusActivity: M
@@ -118,16 +118,16 @@ var x = e => {
     hideTooltip: f,
     className: o
   }));
-  let U = (0, r.useStateFromStores)([T.default], () => null != x ? T.default.getStatus(x.id) : null),
+  let U = (0, r.useStateFromStores)([T.default], () => null != y ? T.default.getStatus(y.id) : null),
     D = null !== U && [_.StatusTypes.OFFLINE, _.StatusTypes.INVISIBLE].includes(U),
     k = null === (t = (0, c.default)(n, i, void 0, j)) || void 0 === t ? void 0 : t.activityText,
     w = null != k && k.length > 0;
   return D || null == b && !w ? null : (0, l.jsxs)("div", {
     className: a,
-    children: [b, (0, l.jsx)(y, {
+    children: [b, (0, l.jsx)(x, {
       text: k,
       className: s
-    }), null != n && n.some(d.default) ? (0, l.jsx)(I.default, {
+    }), null != n && n.some(d.default) ? (0, l.jsx)(v.default, {
       width: 16,
       height: 16,
       className: N.icon

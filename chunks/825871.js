@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EMPTY_RESULTS: function() {
-    return x
+    return y
   },
   FakeFooter: function() {
     return O
@@ -29,16 +29,16 @@ var i = n("271841"),
   h = n("389153"),
   E = n("396465"),
   g = n("355263"),
-  S = n("957255"),
-  C = n("501536"),
+  C = n("957255"),
+  S = n("501536"),
   T = n("655518"),
-  v = n("200294"),
-  I = n("851745"),
+  I = n("200294"),
+  v = n("851745"),
   _ = n("406291"),
   N = n("317041"),
   A = n("782340"),
-  y = n("826214");
-let x = {
+  x = n("826214");
+let y = {
   results: {
     entries: []
   }
@@ -62,16 +62,16 @@ function R() {
 function M(e) {
   return d.isInIndexExperiment({
     location: e
-  }) ? I.MAX_COMMAND_AUTOCOMPLETE_RESULTS : I.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY
+  }) ? v.MAX_COMMAND_AUTOCOMPLETE_RESULTS : v.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY
 }
 let L = {
   sentinel: _.COMMAND_SENTINEL,
-  stores: [m.default, f.default, u.default, S.default],
-  matches: (e, t, n, l, i) => i.commands !== I.CommandMode.DISABLED && null == m.default.getActiveCommand(e.id) && (l || i.commands !== I.CommandMode.OLD_BUILT_INS),
+  stores: [m.default, f.default, u.default, C.default],
+  matches: (e, t, n, l, i) => i.commands !== v.CommandMode.DISABLED && null == m.default.getActiveCommand(e.id) && (l || i.commands !== v.CommandMode.OLD_BUILT_INS),
   queryResults(e, t, n, l, i) {
-    if (0 === n.length && l.commands !== I.CommandMode.OLD_BUILT_INS) return x;
+    if (0 === n.length && l.commands !== v.CommandMode.OLD_BUILT_INS) return y;
     let a = M("CommandAutocompletes");
-    if (l.commands === I.CommandMode.OLD_BUILT_INS) {
+    if (l.commands === v.CommandMode.OLD_BUILT_INS) {
       let l = (0, o.getBuiltInCommands)(s.ApplicationCommandType.CHAT, !1, !1),
         i = RegExp("^".concat(T.default.escape(n)), "i"),
         r = (0, h.getMatchingGroupCommands)(l, i, {
@@ -79,7 +79,7 @@ let L = {
           guild: t
         }, a),
         u = o.BUILT_IN_SECTIONS[N.BuiltInSectionId.BUILT_IN];
-      return 0 === r.length ? x : {
+      return 0 === r.length ? y : {
         results: {
           entries: r.map(e => ({
             command: e,
@@ -97,18 +97,18 @@ let L = {
         text: r.text
       }, {
         limit: a,
-        placeholderCount: I.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
+        placeholderCount: v.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
         scoreMethod: c.ScoreMethod.COMMAND_OR_APPLICATION,
         allowFetch: i
       });
-    if (null == u) return x;
+    if (null == u) return y;
     let m = u;
     if (r.hasSpaceTerminator) {
       let e = r.text.trim(),
         t = e + " ";
       m = m.filter(n => n.name === e || n.name.startsWith(t))
     }
-    return 0 === m.length ? x : {
+    return 0 === m.length ? y : {
       results: {
         entries: m.slice(0, a).map(e => ({
           command: e,
@@ -129,7 +129,7 @@ let L = {
       onHover: o,
       onClick: u
     } = e, c = (0, g.getCommandQuery)(a, s);
-    if (r.commands !== I.CommandMode.OLD_BUILT_INS && !d.isInIndexExperiment({
+    if (r.commands !== v.CommandMode.OLD_BUILT_INS && !d.isInIndexExperiment({
         location: "CommandAutocompletes"
       })) return (0, l.jsx)(E.default, {
       channel: a,
@@ -138,8 +138,8 @@ let L = {
       onHover: o,
       onClick: u
     });
-    let f = r.commands === I.CommandMode.OLD_BUILT_INS;
-    return (0, v.renderAutocompleteGroup)({
+    let f = r.commands === v.CommandMode.OLD_BUILT_INS;
+    return (0, I.renderAutocompleteGroup)({
       query: c.text,
       selectedIndex: n,
       autocompletes: t,
@@ -148,7 +148,7 @@ let L = {
       titleWithQuery: A.default.Messages.COMMANDS_MATCHING,
       titleWithoutQuery: A.default.Messages.COMMANDS,
       getQuery: e => "".concat(_.COMMAND_SENTINEL).concat(e),
-      Component: f ? C.default.Command : C.default.NewCommand,
+      Component: f ? S.default.Command : S.default.NewCommand,
       getProps: e => {
         let {
           command: t,
@@ -164,7 +164,7 @@ let L = {
         }
       },
       key: "commands",
-      headerClassName: f ? y.legacyInputCommandHeader : null,
+      headerClassName: f ? x.legacyInputCommandHeader : null,
       headerTrailingContent: f ? (0, l.jsx)(i.Button, {
         type: "button",
         look: i.Button.Looks.LINK,
@@ -192,7 +192,7 @@ let L = {
       section: d
     } = t[n];
     if (u.inputType === p.ApplicationCommandInputType.PLACEHOLDER) return null;
-    if (i.commands === I.CommandMode.OLD_BUILT_INS) i.insertText(function(e) {
+    if (i.commands === v.CommandMode.OLD_BUILT_INS) i.insertText(function(e) {
       return "".concat(_.COMMAND_SENTINEL).concat(e.name)
     }(u));
     else {
@@ -206,7 +206,7 @@ let L = {
       })
     }
     return {
-      type: I.AutocompleteSelectionTypes.COMMAND
+      type: v.AutocompleteSelectionTypes.COMMAND
     }
   }
 };

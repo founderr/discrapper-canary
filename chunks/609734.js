@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return v
   }
 });
 var l = n("37983");
@@ -20,23 +20,23 @@ var i = n("414456"),
   h = n("351825"),
   E = n("306160"),
   g = n("253981"),
-  S = n("613676"),
-  C = n("49111"),
+  C = n("613676"),
+  S = n("49111"),
   T = n("782340"),
-  v = n("796440");
+  I = n("796440");
 
-function I(e) {
+function v(e) {
   var t;
   let {
     application: n,
     className: i
-  } = e, I = c.default.getChannel(f.default.getChannelId()), {
+  } = e, v = c.default.getChannel(f.default.getChannelId()), {
     appsInGDMEnabled: _,
     availableApplications: N
   } = (0, d.usePrivateChannelIntegrationState)({
-    channelId: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : C.EMPTY_STRING_CHANNEL_ID
+    channelId: null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : S.EMPTY_STRING_CHANNEL_ID
   });
-  if (null == n || !(0, S.canInstallApplication)(n.id, n.customInstallUrl, n.installParams)) return null;
+  if (null == n || !(0, C.canInstallApplication)(n.id, n.customInstallUrl, n.installParams)) return null;
   let A = _ && null != N.find(e => e.id === (null == n ? void 0 : n.id));
   return (0, l.jsx)(s.Button, {
     color: s.Button.Colors.PRIMARY,
@@ -67,18 +67,18 @@ function I(e) {
     onClick: () => {
       A ? (0, u.openOAuth2Modal)({
         clientId: n.id,
-        scopes: [C.OAuth2Scopes.APPLICATIONS_COMMANDS],
-        channelId: I.id,
+        scopes: [S.OAuth2Scopes.APPLICATIONS_COMMANDS],
+        channelId: v.id,
         disableGuildSelect: !0
-      }) : (0, S.installApplication)({
+      }) : (0, C.installApplication)({
         applicationId: n.id,
         customInstallUrl: n.customInstallUrl,
         installParams: n.installParams
       })
     },
-    className: a(v.applicationInstallButton, i),
+    className: a(I.applicationInstallButton, i),
     children: (0, l.jsxs)("div", {
-      className: v.applicationInstallButtonContent,
+      className: I.applicationInstallButtonContent,
       children: [(0, l.jsx)(h.default, {
         width: 16,
         height: 16
@@ -86,10 +86,10 @@ function I(e) {
         size: 4,
         horizontal: !0
       }), (0, l.jsx)("span", {
-        className: v.applicationInstallButtonText,
+        className: I.applicationInstallButtonText,
         children: A ? T.default.Messages.ADD : T.default.Messages.APPLICATION_ADD_BUTTON
       }), null == n.customInstallUrl || g.default.isDiscordUrl(n.customInstallUrl) ? null : (0, l.jsx)(p.default, {
-        className: v.launchIcon,
+        className: I.launchIcon,
         width: 16,
         height: 16
       })]

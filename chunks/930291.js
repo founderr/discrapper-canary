@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("697218"),
   E = n("599110"),
   g = n("233965"),
-  S = n("699209"),
-  C = n("808742"),
+  C = n("699209"),
+  S = n("808742"),
   _ = n("342845"),
   I = n("661743"),
   T = n("49111"),
@@ -34,12 +34,12 @@ var l = n("37983"),
       previewIsOpen: A
     } = e, {
       enableHangStatus: M
-    } = S.HangStatusExperiment.useExperiment({
+    } = C.HangStatusExperiment.useExperiment({
       guildId: N.guild_id,
       location: "HangStatusPopout"
-    }), R = (0, r.default)([c.default], () => c.default.getId()), j = (0, r.default)([p.default], () => p.default.getUser(s)), L = (0, r.default)([m.default], () => m.default.getChannelId() === N.id), y = (0, r.default)([h.default], () => h.default.can(T.Permissions.CONNECT, N)), O = (0, r.default)([f.default], () => null != N.guild_id && null != j ? f.default.getMember(N.guild_id, s) : null), P = a.useMemo(() => null != j ? (0, d.getPreviewAvatar)(void 0, O, j, {
+    }), R = (0, r.default)([c.default], () => c.default.getId()), j = (0, r.default)([p.default], () => p.default.getUser(s)), L = (0, r.default)([m.default], () => m.default.getChannelId() === N.id), O = (0, r.default)([h.default], () => h.default.can(T.Permissions.CONNECT, N)), y = (0, r.default)([f.default], () => null != N.guild_id && null != j ? f.default.getMember(N.guild_id, s) : null), P = a.useMemo(() => null != j ? (0, d.getPreviewAvatar)(void 0, y, j, {
       size: 40
-    }) : void 0, [O, j]);
+    }) : void 0, [y, j]);
     return (a.useEffect(() => {
       M && null != t && A && null != j && R !== s && E.default.track(T.AnalyticEvents.VIEW_HANG_STATUS, {
         source: "HangStatusPopout",
@@ -71,7 +71,7 @@ var l = n("37983"),
               variant: "text-sm/semibold",
               color: "text-normal",
               className: x.statusText,
-              children: (0, C.getHangStatusText)(t)
+              children: (0, S.getHangStatusText)(t)
             })]
           }), (0, l.jsxs)("div", {
             className: x.iconGroup,
@@ -90,11 +90,11 @@ var l = n("37983"),
               })]
             })]
           })]
-        }), !L && y ? (0, l.jsx)(u.Button, {
+        }), !L && O ? (0, l.jsx)(u.Button, {
           className: x.cta,
           size: u.Button.Sizes.SMALL,
           onClick: () => {
-            !L && y && (o.default.selectVoiceChannel(N.id), E.default.track(T.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
+            !L && O && (o.default.selectVoiceChannel(N.id), E.default.track(T.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
               source: "HangStatusPopout",
               guild_id: N.guild_id,
               channel_id: N.id

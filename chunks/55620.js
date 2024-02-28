@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return g
   },
   goToSKUStoreListing: function() {
-    return S
+    return C
   },
   goToApplicationStoreListing: function() {
-    return C
+    return S
   }
 });
 var l = n("872717"),
@@ -101,7 +101,7 @@ function g(e) {
   })
 }
 
-function S(e, t) {
+function C(e, t) {
   let {
     pathname: n,
     ...l
@@ -109,7 +109,7 @@ function S(e, t) {
   (0, s.transitionTo)(n, l)
 }
 
-function C(e, t) {
+function S(e, t) {
   let {
     pathname: n,
     ...l

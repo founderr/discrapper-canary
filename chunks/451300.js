@@ -19,11 +19,11 @@ var l = n("37983"),
   h = n("256860"),
   E = n("364685"),
   g = n("41170"),
-  S = n("281072"),
-  C = n("560241"),
+  C = n("281072"),
+  S = n("560241"),
   T = n("49111"),
-  v = n("646718"),
-  I = n("782340"),
+  I = n("646718"),
+  v = n("782340"),
   _ = n("192465");
 
 function N(e) {
@@ -34,21 +34,21 @@ function N(e) {
   } = e;
   (0, h.useFetchStickerPacks)();
   let {
-    analyticsLocations: y
-  } = (0, d.default)(u.default.EMPTY_STATE), x = (0, r.useStateFromStoresArray)([E.default], () => C.EMPTY_STATE_STICKERS.map(e => E.default.getStickerById(e)));
+    analyticsLocations: x
+  } = (0, d.default)(u.default.EMPTY_STATE), y = (0, r.useStateFromStoresArray)([E.default], () => S.EMPTY_STATE_STICKERS.map(e => E.default.getStickerById(e)));
   i.useEffect(() => {
     p.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: v.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
+      type: I.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
       source: {
         section: T.AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL
       },
-      location_stack: y
+      location_stack: x
     })
-  }, [y]);
+  }, [x]);
   let O = (0, f.usePremiumTrialOffer)(),
     R = (0, c.usePremiumDiscountOffer)(),
     M = null != O || null != R,
-    L = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === v.PremiumSubscriptionSKUs.TIER_0;
+    L = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === I.PremiumSubscriptionSKUs.TIER_0;
   return (0, l.jsxs)("div", {
     className: s(_.emptyState, N, {
       [_.unifyTrialUpsell]: M
@@ -57,30 +57,30 @@ function N(e) {
       discountOffer: R,
       trialOffer: O,
       onClose: A,
-      type: v.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
-      subscriptionTier: null !== (a = null == O ? void 0 : null === (n = O.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : v.PremiumSubscriptionSKUs.TIER_2,
-      children: I.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
+      type: I.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
+      subscriptionTier: null !== (a = null == O ? void 0 : null === (n = O.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : I.PremiumSubscriptionSKUs.TIER_2,
+      children: v.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
     }) : (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(o.Heading, {
         className: _.header,
         variant: "heading-xl/semibold",
-        children: I.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_TITLE
+        children: v.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_TITLE
       }), (0, l.jsx)(o.Text, {
         className: _.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
-        children: I.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
+        children: v.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
       }), (0, l.jsx)("div", {
         className: _.stickersRow,
-        children: x.filter(e => null != e).map(e => (0, l.jsx)(g.default, {
+        children: y.filter(e => null != e).map(e => (0, l.jsx)(g.default, {
           sticker: e,
           className: _.sticker,
           size: 80
         }, null == e ? void 0 : e.id))
       })]
-    }), !M && (0, l.jsx)(S.default, {
+    }), !M && (0, l.jsx)(C.default, {
       analyticsSection: T.AnalyticsSections.EXPRESSION_PICKER,
-      buttonText: M ? L ? I.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : I.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
+      buttonText: M ? L ? v.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : v.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
     })]
   })
 }

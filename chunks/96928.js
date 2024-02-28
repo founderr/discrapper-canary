@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return F
   }
 });
 var n = s("37983"),
@@ -11,20 +11,20 @@ var n = s("37983"),
   r = s("669491"),
   o = s("748802"),
   i = s("77078"),
-  S = s("545158"),
+  _ = s("545158"),
   u = s("377114"),
-  _ = s("652126"),
+  S = s("652126"),
   d = s("615992"),
   E = s("13355"),
   c = s("15408"),
   O = s("217736"),
   A = s("161297"),
-  C = s("514914"),
-  I = s("324252"),
+  I = s("514914"),
+  C = s("324252"),
   f = s("782340"),
   L = s("744228");
 
-function p(e) {
+function R(e) {
   let {
     children: t
   } = e;
@@ -34,7 +34,7 @@ function p(e) {
   })
 }
 
-function F(e) {
+function p(e) {
   let {
     title: t,
     subTitle: s,
@@ -64,7 +64,7 @@ function F(e) {
   })
 }
 
-function R(e) {
+function N(e) {
   let {
     title: t,
     onPress: s
@@ -83,14 +83,14 @@ function R(e) {
     })]
   })
 }
-var N = function(e) {
+var F = function(e) {
   let {
     otherUserId: t,
     channelId: l,
     warningId: T,
     warningType: r,
     transitionToSlide: o
-  } = e, L = (0, _.useShouldShowHelplineLink)(), N = (0, d.useLastChannelMessage)(l), h = null != (0, E.useSafetyToolsButtonTooltipForChannel)(l), x = a.useCallback(e => {
+  } = e, L = (0, S.useShouldShowHelplineLink)(), F = (0, d.useLastChannelMessage)(l), h = null != (0, E.useSafetyToolsButtonTooltipForChannel)(l), m = a.useCallback(e => {
     (0, O.trackCtaEvent)({
       channelId: l,
       warningId: T,
@@ -99,18 +99,18 @@ var N = function(e) {
       cta: e,
       isNudgeWarning: h
     })
-  }, [l, T, t, r, h]), Y = a.useCallback(() => {
-    (0, i.closeModal)(I.SAFETY_TOOLS_MODAL_KEY), x(O.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CONFIRM)
-  }, [x]), M = a.useCallback(() => {
-    (0, i.closeModal)(I.SAFETY_TOOLS_MODAL_KEY), x(O.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM)
-  }, [x]), m = a.useMemo(() => {
+  }, [l, T, t, r, h]), x = a.useCallback(() => {
+    (0, i.closeModal)(C.SAFETY_TOOLS_MODAL_KEY), m(O.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CONFIRM)
+  }, [m]), M = a.useCallback(() => {
+    (0, i.closeModal)(C.SAFETY_TOOLS_MODAL_KEY), m(O.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM)
+  }, [m]), Y = a.useMemo(() => {
     let e = {
         title: f.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_TITLE,
         subTitle: f.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_SUBTITLE,
         buttonText: f.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_BUTTON,
         buttonColor: i.ButtonColors.PRIMARY,
         onPress: () => {
-          (0, S.default)(I.CRISIS_TEXT_LINE_URL), x(O.CtaEventTypes.USER_SAFETY_TOOLS_CTL)
+          (0, _.default)(C.CRISIS_TEXT_LINE_URL), m(O.CtaEventTypes.USER_SAFETY_TOOLS_CTL)
         }
       },
       a = {
@@ -119,7 +119,7 @@ var N = function(e) {
         buttonText: f.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_BUTTON,
         buttonColor: i.ButtonColors.PRIMARY,
         onPress: () => {
-          (0, S.default)(I.NOFILTR_URL), x(O.CtaEventTypes.USER_SAFETY_TOOLS_NO_FILTR)
+          (0, _.default)(C.NOFILTR_URL), m(O.CtaEventTypes.USER_SAFETY_TOOLS_NO_FILTR)
         }
       };
     return [{
@@ -139,10 +139,10 @@ var N = function(e) {
             } = s;
             return (0, n.jsx)(e, {
               transitionState: a,
-              onBlock: Y,
+              onBlock: x,
               onBlockAndReport: M,
               onCancel: () => {
-                null == T || T(), x(O.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CANCEL)
+                null == T || T(), m(O.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CANCEL)
               },
               onClose: T,
               userId: t,
@@ -157,7 +157,7 @@ var N = function(e) {
       buttonText: f.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
       buttonColor: i.ButtonColors.PRIMARY,
       onPress: () => {
-        (0, i.closeModal)(I.SAFETY_TOOLS_MODAL_KEY), (0, u.showReportModalForInappropriateConversationSafetyAlert)(N), x(O.CtaEventTypes.USER_SAFETY_TOOLS_REPORT)
+        (0, i.closeModal)(C.SAFETY_TOOLS_MODAL_KEY), (0, u.showReportModalForInappropriateConversationSafetyAlert)(F), m(O.CtaEventTypes.USER_SAFETY_TOOLS_REPORT)
       }
     }, L ? e : a, {
       title: f.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE,
@@ -165,23 +165,23 @@ var N = function(e) {
       buttonText: f.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON,
       buttonColor: i.ButtonColors.BRAND,
       onPress: () => {
-        (0, c.default)(i.closeAllModals), x(O.CtaEventTypes.USER_SAFETY_TOOLS_VIBING_WUMPUS)
+        (0, c.default)(i.closeAllModals), m(O.CtaEventTypes.USER_SAFETY_TOOLS_VIBING_WUMPUS)
       }
     }]
-  }, [l, t, N, L, Y, M, x]), g = a.useMemo(() => [{
+  }, [l, t, F, L, x, M, m]), g = a.useMemo(() => [{
     title: f.default.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE,
     onPress: () => {
-      o(A.SafetyToolsSlides.SAFETY_TIPS), x(O.CtaEventTypes.USER_SAFETY_TOOLS_SAFETY_TIPS)
+      o(A.SafetyToolsSlides.SAFETY_TIPS), m(O.CtaEventTypes.USER_SAFETY_TOOLS_SAFETY_TIPS)
     }
   }, {
     title: f.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE,
     onPress: () => {
-      o(A.SafetyToolsSlides.ABOUT_SAFETY_ALERTS), x(O.CtaEventTypes.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS)
+      o(A.SafetyToolsSlides.ABOUT_SAFETY_ALERTS), m(O.CtaEventTypes.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS)
     }
-  }], [o, x]);
-  return (0, n.jsxs)(C.default, {
-    children: [(0, n.jsx)(p, {
-      children: m.map(e => {
+  }], [o, m]);
+  return (0, n.jsxs)(I.default, {
+    children: [(0, n.jsx)(R, {
+      children: Y.map(e => {
         let {
           title: t,
           subTitle: s,
@@ -189,7 +189,7 @@ var N = function(e) {
           buttonColor: l,
           onPress: T
         } = e;
-        return (0, n.jsx)(F, {
+        return (0, n.jsx)(p, {
           title: t,
           subTitle: s,
           buttonText: a,
@@ -197,13 +197,13 @@ var N = function(e) {
           onPress: T
         }, t)
       })
-    }), (0, n.jsx)(p, {
+    }), (0, n.jsx)(R, {
       children: g.map(e => {
         let {
           title: t,
           onPress: s
         } = e;
-        return (0, n.jsx)(R, {
+        return (0, n.jsx)(N, {
           title: t,
           onPress: s
         }, t)

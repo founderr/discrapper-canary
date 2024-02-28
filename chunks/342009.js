@@ -17,9 +17,9 @@ var a = n("37983"),
   h = n("49111"),
   C = n("782340"),
   p = n("864604"),
-  E = n("5762");
+  m = n("5762");
 
-function m(e) {
+function E(e) {
   let {
     expanded: t,
     onClick: n,
@@ -67,13 +67,13 @@ var g = s.memo(function(e) {
   } = n, [C, g] = s.useState(d), _ = s.useCallback(() => g(e => !e), []), S = n.hasUnread ? n.content.length - 1 : n.content.length;
   return (0, a.jsxs)("div", {
     className: i({
-      [E.groupStart]: !0,
+      [m.groupStart]: !0,
       [p.expanded]: C
     }),
     children: [n.hasUnread && (!C || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ChannelStreamTypes.DIVIDER) ? (0, a.jsx)(f.default, {
       isUnread: !0,
       id: o
-    }, "divider") : null, (0, a.jsx)(m, {
+    }, "divider") : null, (0, a.jsx)(E, {
       count: S,
       compact: r,
       expanded: C,

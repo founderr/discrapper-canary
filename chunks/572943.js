@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return g
   },
   usePlatforms: function() {
-    return S
+    return C
   },
   useLegacyPlatformType: function() {
-    return C
+    return S
   }
 }), n("222007");
 var l = n("884691"),
@@ -43,7 +43,7 @@ function g(e) {
   }
 }
 
-function S() {
+function C() {
   let e = (0, s.useStateFromStores)([u.default], () => u.default.getAccounts()),
     t = g({
       forUserProfile: !1
@@ -58,7 +58,7 @@ function S() {
   }, e => n.has(e.type), e => e.hasMetadata, e => !f.ACTIVITY_PLATFORM_TYPES.has(e.type), e => e.name])
 }
 
-function C(e) {
+function S(e) {
   let [t, n] = l.useState(!1);
 
   function i(e) {

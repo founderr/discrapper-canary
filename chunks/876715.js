@@ -28,20 +28,20 @@ function m(e) {
     return [e, a.useCallback(e => {
       r.default.set(h, e), t(e)
     }, [])]
-  }(), S = a.useRef(null), C = null == m.getGuildId() ? 70 : 50;
+  }(), C = a.useRef(null), S = null == m.getGuildId() ? 70 : 50;
   return a.useLayoutEffect(() => {
     var e;
-    null === (e = S.current) || void 0 === e || e.ensureIsInPosition()
+    null === (e = C.current) || void 0 === e || e.ensureIsInPosition()
   }, [p.length]), (0, l.jsx)("div", {
     className: c.container,
     children: (0, l.jsx)(u.PictureInPictureWindow, {
       position: E,
       id: 0,
-      ref: S,
+      ref: C,
       onMove: (e, t) => g(t),
       maxX: t,
       maxY: s,
-      edgeOffsetTop: C,
+      edgeOffsetTop: S,
       edgeOffsetBottom: 70,
       edgeOffsetLeft: 16,
       edgeOffsetRight: 16,

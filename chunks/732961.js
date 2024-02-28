@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("842044"),
   E = n("329515"),
   g = n("49111"),
-  S = n("99795"),
-  C = n("772313"),
+  C = n("99795"),
+  S = n("772313"),
   _ = n("233636");
 let I = 16 / 9,
   T = 8 + E.PARTICIPANTS_HEIGHT;
@@ -37,8 +37,8 @@ function v(e) {
       channel: R,
       selectedParticipant: j,
       showParticipants: L = !0,
-      className: y,
-      paused: O,
+      className: O,
+      paused: y,
       width: P,
       height: b,
       layout: D,
@@ -48,32 +48,32 @@ function v(e) {
     F = c.default.getVideoComponent(),
     k = d.default.getId(),
     [B, V] = a.useState(null),
-    [G, H] = a.useState(!0),
+    [H, G] = a.useState(!0),
     [W, Y] = a.useState(!1),
-    z = j.type === S.ParticipantTypes.ACTIVITY,
+    z = j.type === C.ParticipantTypes.ACTIVITY,
     K = !z && null != j.streamId,
     Z = K && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : I,
-    Q = b <= 2 * T + 144,
-    X = L && !Q,
-    q = (0, u.default)(X),
+    X = b <= 2 * T + 144,
+    Q = L && !X,
+    q = (0, u.default)(Q),
     J = 0;
-  (z || X) && (J += 72), z && !X && (J += 48), X && (J += .5 * T + 8);
+  (z || Q) && (J += 72), z && !Q && (J += 48), Q && (J += .5 * T + 8);
   let $ = b - 2 * J,
     ee = $ * Z,
     et = Math.floor(Math.min(P, ee) / Z),
     en = b > P / Z + 72 + T + 8,
-    el = !X && !z;
-  t = el ? 40 + Math.max(0, 72 - (b - et) / 2) : X ? -16 : -8, a.useEffect(() => {
+    el = !Q && !z;
+  t = el ? 40 + Math.max(0, 72 - (b - et) / 2) : Q ? -16 : -8, a.useEffect(() => {
     let e = setTimeout(() => {
-      H(!1)
+      G(!1)
     }, 250);
     return () => {
       clearTimeout(e)
     }
   }, []);
   let ea = (0, r.useSpring)({
-      value: X ? 1 : 0,
-      delay: en || !X ? 0 : 100,
+      value: Q ? 1 : 0,
+      delay: en || !Q ? 0 : 100,
       config: {
         ...r.config.stiff,
         clamp: !0
@@ -85,7 +85,7 @@ function v(e) {
       }
     }),
     es = (0, r.useSpring)({
-      value: X ? 1 : 0,
+      value: Q ? 1 : 0,
       config: {
         ...r.config.stiff,
         clamp: !0
@@ -97,7 +97,7 @@ function v(e) {
         ...r.config.stiff,
         clamp: !0
       },
-      immediate: q === X && es.value.idle
+      immediate: q === Q && es.value.idle
     }),
     er = (0, r.useSpring)({
       value: t,
@@ -124,19 +124,19 @@ function v(e) {
       }
     }),
     eo = a.useCallback(e => {
-      V(e), H(!1)
+      V(e), G(!1)
     }, []),
-    ed = X || O ? [] : (0, p.getPipParticipants)(x, j, k),
+    ed = Q || y ? [] : (0, p.getPipParticipants)(x, j, k),
     {
       visibleParticipants: ec,
       participantTileWidth: ef
     } = (0, E.useVisibleParticipants)(P, N);
   return (0, l.jsxs)("div", {
-    className: i(_.root, C.flexCenter, y),
+    className: i(_.root, S.flexCenter, O),
     children: [(0, l.jsxs)("div", {
       className: _.tileWrapper,
       style: {
-        opacity: K && G ? 0 : 1
+        opacity: K && H ? 0 : 1
       },
       children: [(0, l.jsxs)(r.animated.div, {
         className: _.videoFrame,
@@ -149,7 +149,7 @@ function v(e) {
           },
           className: _.videoWrapper,
           children: (0, l.jsx)("div", {
-            className: i(C.videoSizer),
+            className: i(S.videoSizer),
             style: {
               aspectRatio: Z
             },
@@ -158,15 +158,15 @@ function v(e) {
                 key: i
               } = a;
               return null != t ? (0, l.jsx)(r.animated.div, {
-                className: C.videoWrapperAnimated,
+                className: S.videoWrapperAnimated,
                 style: e,
                 children: (0, l.jsx)(h.default, {
                   focused: !0,
                   noBorder: ee >= P || $ >= b,
                   channel: R,
-                  className: C.focusedVideo,
+                  className: S.focusedVideo,
                   videoComponent: F,
-                  paused: O,
+                  paused: y,
                   width: P,
                   participant: t,
                   onClick: n,
@@ -179,7 +179,7 @@ function v(e) {
               }, i) : null
             })
           })
-        }), Q || D === g.ChannelLayouts.MINIMUM || D === g.ChannelLayouts.NORMAL ? null : (0, l.jsx)(r.animated.div, {
+        }), X || D === g.ChannelLayouts.MINIMUM || D === g.ChannelLayouts.NORMAL ? null : (0, l.jsx)(r.animated.div, {
           className: i(_.actionRow, {
             [_.idle]: U
           }),
@@ -208,7 +208,7 @@ function v(e) {
           participantTileWidth: ef,
           selectedParticipantId: j.id,
           inCall: M,
-          paused: O || W || !L,
+          paused: y || W || !L,
           popoutWindow: A
         })
       })]

@@ -23,8 +23,8 @@ var a = n("414456"),
   p = n("158998"),
   E = n("713135"),
   g = n("49111"),
-  S = n("782340"),
-  C = n("155502"),
+  C = n("782340"),
+  S = n("155502"),
   _ = n("56083");
 
 function I(e) {
@@ -42,21 +42,21 @@ function I(e) {
         right: 8
       }
     },
-    className: C.listRow,
+    className: S.listRow,
     onClick: () => i(t.id),
     onContextMenu: e => o(e, t),
     children: [(0, l.jsx)(m.default, {
       tabIndex: -1,
       guild: t,
       showBadge: !0,
-      className: s(C.listAvatar, null == t.icon ? _.guildAvatarWithoutIcon : null),
+      className: s(S.listAvatar, null == t.icon ? _.guildAvatarWithoutIcon : null),
       badgeStrokeColor: (0, f.getColor)((0, r.isThemeDark)(a) ? g.Color.PRIMARY_600 : g.Color.WHITE_500),
       size: m.default.Sizes.MEDIUM,
       active: !0
     }), (0, l.jsxs)("div", {
-      className: C.listRowContent,
+      className: S.listRowContent,
       children: [(0, l.jsx)("div", {
-        className: C.listName,
+        className: S.listName,
         children: t.toString()
       }), c || null != n ? (0, l.jsxs)("div", {
         className: _.guildNick,
@@ -95,12 +95,12 @@ function T(e) {
     })
   }
   return t = null == r || 0 === r.length ? (0, l.jsxs)("div", {
-    className: C.empty,
+    className: S.empty,
     children: [(0, l.jsx)("div", {
-      className: C.emptyIconGuilds
+      className: S.emptyIconGuilds
     }), (0, l.jsx)("div", {
-      className: C.emptyText,
-      children: S.default.Messages.NO_MUTUAL_GUILDS
+      className: S.emptyText,
+      children: C.default.Messages.NO_MUTUAL_GUILDS
     })]
   }) : r.map(e => {
     let {
@@ -116,7 +116,7 @@ function T(e) {
       onContextMenu: p
     }, t.id)
   }), (0, l.jsx)(u.ScrollerThin, {
-    className: C.listScroller,
+    className: S.listScroller,
     fade: !0,
     children: t
   })

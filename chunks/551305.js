@@ -51,16 +51,16 @@ var E = s.memo(function(e) {
     icon: r,
     children: E,
     onClick: g,
-    isActive: S,
-    onMouseEnter: C,
+    isActive: C,
+    onMouseEnter: S,
     onMouseLeave: T,
-    onFocus: v,
-    onBlur: I,
+    onFocus: I,
+    onBlur: v,
     pulse: _,
     sparkle: N,
     notification: A,
-    "aria-label": y,
-    "aria-expanded": x,
+    "aria-label": x,
+    "aria-expanded": y,
     "aria-haspopup": O,
     "aria-controls": R
   } = e, M = (0, u.useTransition)(null != E, {
@@ -86,22 +86,22 @@ var E = s.memo(function(e) {
   return (0, a.jsxs)(d.Button, {
     look: d.Button.Looks.BLANK,
     size: d.Button.Sizes.NONE,
-    "aria-label": y,
-    "aria-expanded": x,
+    "aria-label": x,
+    "aria-expanded": y,
     "aria-haspopup": O,
     "aria-controls": R,
     disabled: n,
     className: o(t, {
-      [p.active]: S
+      [p.active]: C
     }),
     innerClassName: o(p.button, l, {
       [p.pulseButton]: _
     }),
     onClick: g,
-    onMouseEnter: C,
+    onMouseEnter: S,
     onMouseLeave: T,
-    onFocus: v,
-    onBlur: I,
+    onFocus: I,
+    onBlur: v,
     focusProps: {
       offset: {
         top: 4,

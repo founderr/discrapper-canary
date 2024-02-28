@@ -1,39 +1,39 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
-var n = a("37983"),
-  r = a("884691"),
-  i = a("917351"),
-  s = a.n(i),
-  u = a("446674"),
-  l = a("77078"),
-  o = a("848848"),
-  d = a("300322"),
-  f = a("800762"),
-  c = a("242740"),
-  v = a("782340");
+var a = n("37983"),
+  l = n("884691"),
+  i = n("917351"),
+  u = n.n(i),
+  r = n("446674"),
+  s = n("77078"),
+  d = n("848848"),
+  o = n("300322"),
+  f = n("800762"),
+  c = n("242740"),
+  _ = n("782340");
 
-function h(e) {
-  let t = (0, d.useCanJoinThreadVoice)(e),
-    a = (0, u.useStateFromStores)([f.default], () => f.default.isInChannel(e.id)),
-    i = (0, u.useStateFromStores)([f.default], () => !s.isEmpty(f.default.getVoiceStatesForChannel(e.id))),
+function E(e) {
+  let t = (0, o.useCanJoinThreadVoice)(e),
+    n = (0, r.useStateFromStores)([f.default], () => f.default.isInChannel(e.id)),
+    i = (0, r.useStateFromStores)([f.default], () => !u.isEmpty(f.default.getVoiceStatesForChannel(e.id))),
     {
-      needSubscriptionToAccess: h
-    } = (0, o.default)(e.id),
-    C = r.useCallback(() => {
+      needSubscriptionToAccess: E
+    } = (0, d.default)(e.id),
+    T = l.useCallback(() => {
       c.default.handleVoiceConnect({
         channel: e,
-        connected: a,
-        needSubscriptionToAccess: h,
+        connected: n,
+        needSubscriptionToAccess: E,
         locked: !1
       })
-    }, [e, a, h]);
-  return a || !t ? null : (0, n.jsx)(l.MenuItem, {
+    }, [e, n, E]);
+  return n || !t ? null : (0, a.jsx)(s.MenuItem, {
     id: "join-thread-voice",
-    label: i ? v.default.Messages.JOIN_CALL : v.default.Messages.START_CALL,
-    action: C
+    label: i ? _.default.Messages.JOIN_CALL : _.default.Messages.START_CALL,
+    action: T
   })
 }

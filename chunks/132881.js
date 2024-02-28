@@ -24,10 +24,10 @@ function g(e) {
     userId: t,
     guildId: n
   } = e, g = (0, s.useStateFromStores)([o.default], () => o.default.getGuildSidebarState(n), [n]), {
-    messagesCount: S,
-    linksCount: C,
+    messagesCount: C,
+    linksCount: S,
     mediaCount: _
-  } = (0, f.useServerActivityCountsForUser)(t, n), I = new Intl.NumberFormat(p.default.getLocale()).format(S), T = new Intl.NumberFormat(p.default.getLocale()).format(C), v = new Intl.NumberFormat(p.default.getLocale()).format(_), x = a.useCallback(async e => {
+  } = (0, f.useServerActivityCountsForUser)(t, n), I = new Intl.NumberFormat(p.default.getLocale()).format(C), T = new Intl.NumberFormat(p.default.getLocale()).format(S), v = new Intl.NumberFormat(p.default.getLocale()).format(_), x = a.useCallback(async e => {
     if (null == g) return;
     let l = (0, f.getSearchQueryForUser)(t, e);
     await (0, c.openGuildMemberModViewSidebar)(n, t, g.baseChannelId, {
@@ -49,7 +49,7 @@ function g(e) {
           color: "text-normal",
           children: p.default.Messages.MESSAGES
         }),
-        description: S === f.HAS_NO_COUNT ? (0, l.jsx)(u.Spinner, {
+        description: C === f.HAS_NO_COUNT ? (0, l.jsx)(u.Spinner, {
           type: u.SpinnerTypes.SPINNING_CIRCLE,
           className: E.loadingSpinner
         }) : (0, l.jsx)(u.Text, {
@@ -57,7 +57,7 @@ function g(e) {
           color: "interactive-normal",
           children: I
         }),
-        onNavigate: S > 0 ? () => x(f.SearchKeyType.MESSAGES) : void 0
+        onNavigate: C > 0 ? () => x(f.SearchKeyType.MESSAGES) : void 0
       }), (0, l.jsx)(h.UserModInfoItem, {
         icon: (0, l.jsx)(r.LinkIcon, {
           width: h.USER_MOD_ICON_SIZE_PX,
@@ -68,7 +68,7 @@ function g(e) {
           color: "text-normal",
           children: p.default.Messages.QUICKSEARCH_LINKS
         }),
-        description: C === f.HAS_NO_COUNT ? (0, l.jsx)(u.Spinner, {
+        description: S === f.HAS_NO_COUNT ? (0, l.jsx)(u.Spinner, {
           type: u.SpinnerTypes.SPINNING_CIRCLE,
           className: E.loadingSpinner
         }) : (0, l.jsx)(u.Text, {
@@ -76,7 +76,7 @@ function g(e) {
           color: "interactive-normal",
           children: T
         }),
-        onNavigate: C > 0 ? () => x(f.SearchKeyType.LINKS) : void 0
+        onNavigate: S > 0 ? () => x(f.SearchKeyType.LINKS) : void 0
       }), (0, l.jsx)(h.UserModInfoItem, {
         icon: (0, l.jsx)(i.ImagesIcon, {
           width: h.USER_MOD_ICON_SIZE_PX,

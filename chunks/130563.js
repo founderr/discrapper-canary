@@ -4,15 +4,15 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("446674"),
-  l = n("42203"),
+var l = n("446674"),
+  a = n("42203"),
   u = n("18494");
 
 function i() {
-  return (0, a.useStateFromStores)([u.default, l.default], () => {
+  return (0, l.useStateFromStores)([u.default, a.default], () => {
     let e = u.default.getVoiceChannelId();
     if (null != e) {
-      let t = l.default.getChannel(e);
+      let t = a.default.getChannel(e);
       if (null == t ? void 0 : t.isGuildStageVoice()) return t
     }
     return null

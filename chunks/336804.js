@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("506885"),
   E = n("697218"),
   g = n("216422"),
-  S = n("956089"),
-  C = n("980423"),
+  C = n("956089"),
+  S = n("980423"),
   _ = n("599110"),
   I = n("719923"),
   T = n("12307"),
@@ -38,10 +38,10 @@ let R = (0, u.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
     opacity: 1,
     transform: "translate3d(0%, 0, 0)"
   },
-  y = {
+  O = {
     opacity: 0
   },
-  O = {
+  y = {
     opacity: 1
   },
   P = {
@@ -66,18 +66,18 @@ let R = (0, u.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         setDidTrackUpsellViewed: j,
         className: L
       } = e,
-      y = (0, T.getMaxQuality)(r),
+      O = (0, T.getMaxQuality)(r),
       {
-        analyticsLocations: O
+        analyticsLocations: y
       } = (0, m.default)(),
       P = null != (0, v.default)(r);
     try {
-      t = (0, T.isPremiumFPS)(y)
+      t = (0, T.isPremiumFPS)(O)
     } catch (e) {
       t = !1
     }
     try {
-      s = (0, T.isPremiumResolution)(y)
+      s = (0, T.isPremiumResolution)(O)
     } catch (e) {
       s = !1
     }
@@ -103,9 +103,9 @@ let R = (0, u.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
           type: N.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
-          location_stack: O
+          location_stack: y
         }), j(!0))
-      }, [t, s, b, R, j, O]), null == y) return null;
+      }, [t, s, b, R, j, y]), null == O) return null;
     let k = (0, l.jsx)(f.Tooltip, {
       text: P ? A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
@@ -113,20 +113,20 @@ let R = (0, u.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
       children: e => (0, l.jsxs)(f.Clickable, {
         ...e,
         onClick: F,
-        className: i(M.qualityIndicator, p, C.LiveIndicatorShapes[c], P ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
+        className: i(M.qualityIndicator, p, S.LiveIndicatorShapes[c], P ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
           [M.clickable]: w && b
         }),
         children: [b ? (0, l.jsx)(g.default, {
           className: M.premiumStreamIcon
         }) : null, (0, l.jsx)("span", {
           className: M.qualityResolution,
-          children: (0, T.getResolutionText)(y.maxResolution)
+          children: (0, T.getResolutionText)(O.maxResolution)
         }), (0, l.jsx)("span", {
-          children: (0, T.getFPSText)(y.maxFrameRate)
+          children: (0, T.getFPSText)(O.maxFrameRate)
         })]
       })
     });
-    return (0, l.jsx)(S.TextBadge, {
+    return (0, l.jsx)(C.TextBadge, {
       text: k,
       className: i(L, M.qualityIndicatorBadge),
       color: d.default.unsafe_rawColors.PRIMARY_500.css,
@@ -150,10 +150,10 @@ var w = e => {
   }, [t]);
   let g = (0, r.useTransition)(E, {
       enter: {
-        from: m.enabled ? y : j,
-        to: m.enabled ? O : L
+        from: m.enabled ? O : j,
+        to: m.enabled ? y : L
       },
-      leave: m.enabled ? y : j,
+      leave: m.enabled ? O : j,
       config: D
     }),
     _ = (0, r.useSpring)({
@@ -174,7 +174,7 @@ var w = e => {
           className: M.liveQualityIndicator,
           participant: t,
           size: u,
-          shape: S.BadgeShapes.ROUND_LEFT,
+          shape: C.BadgeShapes.ROUND_LEFT,
           isUpsellEnabled: s,
           didTrackUpsellViewed: d,
           setDidTrackUpsellViewed: c
@@ -182,10 +182,10 @@ var w = e => {
       }) : null), (0, l.jsx)(r.animated.div, {
         style: _,
         className: M.liveIndicator,
-        children: (0, l.jsx)(C.default, {
-          look: C.LiveIndicatorLooks.RED,
+        children: (0, l.jsx)(S.default, {
+          look: S.LiveIndicatorLooks.RED,
           size: u,
-          shape: E ? S.BadgeShapes.ROUND_RIGHT : S.BadgeShapes.ROUND
+          shape: E ? C.BadgeShapes.ROUND_RIGHT : C.BadgeShapes.ROUND
         })
       })]
     })

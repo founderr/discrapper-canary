@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return T
   },
   default: function() {
-    return v
+    return I
   }
 }), n("70102"), n("700225"), n("222007");
 var l, i, a, s, r, o, u = n("37983"),
@@ -56,7 +56,7 @@ let h = {
     time: t,
     ...n
   }),
-  S = {
+  C = {
     ACTIVITY_FEED: {
       START: {
         SECONDS: () => p.default.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
@@ -183,7 +183,7 @@ let h = {
     }
   };
 
-function C(e, t) {
+function S(e, t) {
   let n = E.findIndex(t => {
       let {
         max: n,
@@ -208,7 +208,7 @@ function C(e, t) {
 }
 
 function T(e, t) {
-  let n = null != e ? C(e, e => t.includes(e)) : "NONE",
+  let n = null != e ? S(e, e => t.includes(e)) : "NONE",
     l = null != n ? h[n] : null;
   return {
     unit: n,
@@ -216,7 +216,7 @@ function T(e, t) {
   }
 }
 
-function v(e) {
+function I(e) {
   var t;
   return (t = class extends d.PureComponent {
     componentDidMount() {
@@ -245,8 +245,8 @@ function v(e) {
       return null != e ? i = l - e : null != t && (i = l - t), Math.abs(i) / 1e3 / 60
     }
     getTimeUnit(e, t, n) {
-      let l = C(e, e => (function(e, t, n) {
-        let l = S[n];
+      let l = S(e, e => (function(e, t, n) {
+        let l = C[n];
         if (null != l) {
           let n = l[t];
           if (null != n) return null != n[e]
@@ -281,7 +281,7 @@ function v(e) {
       } = this.state, s = this.getType();
       if (null == s) return null;
       let r = this.getTimeUnit(a, t, s),
-        o = S[t][s];
+        o = C[t][s];
       if (null == o) return null;
       let d = o[r],
         c = Math.floor(this.transformTime(r, a));

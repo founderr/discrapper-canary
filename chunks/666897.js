@@ -23,10 +23,10 @@ var l = n("37983"),
       ...p
     } = e, [h, E] = i.useState(!1), g = i.useCallback(e => {
       E(!0), null == f || f(e)
-    }, [E, f]), S = i.useCallback(e => {
+    }, [E, f]), C = i.useCallback(e => {
       E(!1), null == m || m(e)
-    }, [E, m]), C = {};
-    return null != a && (C = {
+    }, [E, m]), S = {};
+    return null != a && (S = {
       color: (0, r.int2hex)(a),
       backgroundColor: h ? (0, r.int2rgba)(a, .3) : (0, r.int2rgba)(a, .1)
     }), (0, l.jsx)(o.Clickable, {
@@ -37,8 +37,8 @@ var l = n("37983"),
         interactive: p.onClick
       }),
       onMouseEnter: g,
-      onMouseLeave: S,
-      style: C,
+      onMouseLeave: C,
+      style: S,
       tabIndex: null != p.onClick ? 0 : -1,
       children: null != c ? (0, l.jsx)(u.default, {
         iconType: c,

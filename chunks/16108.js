@@ -21,14 +21,14 @@ s.r(t), s.d(t, {
 });
 var n = s("872717"),
   a = s("913144"),
-  o = s("437822"),
-  r = s("773163"),
+  r = s("437822"),
+  o = s("773163"),
   i = s("49111");
 async function _(e) {
   await n.default.put({
     url: i.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
     body: {
-      consent_status: r.MessageRequestConsentStatusTypes.ACCEPTED
+      consent_status: o.MessageRequestConsentStatusTypes.ACCEPTED
     }
   }), a.default.dispatch({
     type: "MESSAGE_REQUEST_ACCEPT_OPTIMISTIC",
@@ -40,7 +40,7 @@ function l(e) {
   return n.default.put({
     url: i.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
     body: {
-      consent_status: r.MessageRequestConsentStatusTypes.UNSPECIFIED
+      consent_status: o.MessageRequestConsentStatusTypes.UNSPECIFIED
     }
   })
 }
@@ -49,7 +49,7 @@ function u(e) {
   return n.default.put({
     url: i.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
     body: {
-      consent_status: r.MessageRequestConsentStatusTypes.PENDING
+      consent_status: o.MessageRequestConsentStatusTypes.PENDING
     }
   })
 }
@@ -70,5 +70,5 @@ function c(e) {
 }
 
 function d() {
-  o.default.getLocationMetadata()
+  r.default.getLocationMetadata()
 }

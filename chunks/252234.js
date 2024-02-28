@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("801852"),
   E = n("10524"),
   g = n("478272"),
-  S = n("685665"),
-  C = n("384997"),
+  C = n("685665"),
+  S = n("384997"),
   _ = n("788220"),
   I = n("863590"),
   T = n("49111"),
@@ -34,14 +34,14 @@ function N(e) {
     isHovered: R,
     setIsHovered: j,
     onMouseEnter: L,
-    onMouseLeave: y
-  } = (0, _.default)(200, 300), O = (0, f.useShowActivityIndicator)(), P = (0, c.default)({
+    onMouseLeave: O
+  } = (0, _.default)(200, 300), y = (0, f.useShowActivityIndicator)(), P = (0, c.default)({
     channelId: t.id
   }), b = !M, D = a.useCallback(e => {
     "focus" !== e.type && L()
   }, [L]), U = (0, u.useAnalyticsContext)(), w = (0, o.useAppContext)(), F = w === T.AppContext.POPOUT, {
     analyticsLocations: k
-  } = (0, S.default)(), B = a.useCallback(() => {
+  } = (0, C.default)(), B = a.useCallback(() => {
     (0, g.default)({
       channel: t,
       guildId: t.guild_id,
@@ -51,8 +51,8 @@ function N(e) {
     })
   }, [U.location, k, t, F]), V = [];
   !M && V.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES);
-  let G = (0, m.default)(t.id);
-  return G && !M && V.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, l.jsx)(C.default, {
+  let H = (0, m.default)(t.id);
+  return H && !M && V.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, l.jsx)(S.default, {
     contentTypes: V,
     children: e => {
       let {
@@ -79,7 +79,7 @@ function N(e) {
             channel: t,
             closePopout: n,
             onMouseEnter: L,
-            onMouseLeave: y,
+            onMouseLeave: O,
             isHovered: R,
             onClick: () => a(v.ContentDismissActionType.UNKNOWN)
           }) : (0, l.jsx)(l.Fragment, {})
@@ -95,8 +95,8 @@ function N(e) {
               B(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(v.ContentDismissActionType.UNKNOWN)
             },
             onMouseEnter: D,
-            onMouseLeave: y
-          }), O ? (0, l.jsx)(E.FreeActivityIndicatorDot, {
+            onMouseLeave: O
+          }), y ? (0, l.jsx)(E.FreeActivityIndicatorDot, {
             top: 4,
             right: 10,
             size: 12,

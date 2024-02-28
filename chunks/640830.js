@@ -10,19 +10,19 @@ n.r(t), n.d(t, {
     return g
   },
   getOptionValues: function() {
-    return S
+    return C
   },
   optionToValues: function() {
-    return C
+    return S
   },
   validateOptionValues: function() {
     return T
   },
   validateOption: function() {
-    return v
+    return I
   },
   findTextOptions: function() {
-    return I
+    return v
   }
 }), n("424973"), n("222007");
 var l = n("798609"),
@@ -67,7 +67,7 @@ function g(e) {
   return n
 }
 
-function S(e, t) {
+function C(e, t) {
   let n = {};
   if (null == t.options) return {};
   let l = h(e),
@@ -77,13 +77,13 @@ function S(e, t) {
     for (let t of a)
       if (f.NodeUtils.isType(t, "applicationCommandOption")) {
         let l = i[t.optionName];
-        null != l && (n[t.optionName] = C(e, l, t))
+        null != l && (n[t.optionName] = S(e, l, t))
       }
   }
   return n
 }
 
-function C(e, t, n) {
+function S(e, t, n) {
   let i = o.default.getCurrentlySelectedChannelId(),
     a = n.children.map(n => {
       if (t.type === l.ApplicationCommandOptionType.ATTACHMENT) {
@@ -133,11 +133,11 @@ function T(e, t, n, l, a) {
   return i.updateOptionValidationStates(n, r), r
 }
 
-function v(e, t, n, l, r) {
+function I(e, t, n, l, r) {
   var o;
   let [u] = l, d = a.default.getActiveCommand(n), c = null == d ? void 0 : null === (o = d.options) || void 0 === o ? void 0 : o.find(e => e.name === u.optionName);
   if (null == c) return;
-  let f = C(e, c, u),
+  let f = S(e, c, u),
     m = s.validateOptionContent({
       option: c,
       content: f,
@@ -152,7 +152,7 @@ function v(e, t, n, l, r) {
   }), m
 }
 
-function I(e, t) {
+function v(e, t) {
   if (null == t.options || 0 === t.options.length) return [];
   let n = f.EditorUtils.richValue(e),
     l = [],

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return I
   }
 });
 var l = n("37983");
@@ -20,11 +20,11 @@ var i = n("446674"),
   h = n("999203"),
   E = n("609734"),
   g = n("777003"),
-  S = n("49111"),
-  C = n("782340"),
+  C = n("49111"),
+  S = n("782340"),
   T = n("44492");
 
-function v(e) {
+function I(e) {
   let {
     user: t,
     guildId: n
@@ -52,7 +52,7 @@ function v(e) {
         app: a,
         listing: u,
         guildId: n
-      }) : (0, l.jsx)(I, {
+      }) : (0, l.jsx)(v, {
         guildId: n,
         listing: u
       }))]
@@ -60,7 +60,7 @@ function v(e) {
   }) : null
 }
 
-function I(e) {
+function v(e) {
   let {
     listing: t,
     guildId: n
@@ -71,7 +71,7 @@ function I(e) {
     guildId: n,
     groupListingId: null == t ? void 0 : t.id,
     showBenefitsFirst: !0,
-    analyticsLocation: S.AnalyticsLocations.BOT_PROFILE_POPOUT
+    analyticsLocation: C.AnalyticsLocations.BOT_PROFILE_POPOUT
   });
   return (0, l.jsx)(u.default, {
     onClick: a,
@@ -84,7 +84,7 @@ function I(e) {
       }), (0, l.jsx)(c.default, {
         size: 4,
         horizontal: !0
-      }), C.default.Messages.BOT_PROFILE_UPGRADE_CTA]
+      }), S.default.Messages.BOT_PROFILE_UPGRADE_CTA]
     })
   })
 }
@@ -120,7 +120,7 @@ function _(e) {
       }), (0, l.jsx)(c.default, {
         size: 4,
         horizontal: !0
-      }), C.default.Messages.STOREFRONT]
+      }), S.default.Messages.STOREFRONT]
     })
   })
 }

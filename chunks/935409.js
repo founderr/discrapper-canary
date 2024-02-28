@@ -25,16 +25,16 @@ var l = n("37983"),
   h = n("305961"),
   E = n("423487"),
   g = n("587974"),
-  S = n("599110"),
-  C = n("719923"),
+  C = n("599110"),
+  S = n("719923"),
   T = n("50885"),
-  v = n("713135"),
-  I = n("106435"),
+  I = n("713135"),
+  v = n("106435"),
   _ = n("289918"),
   N = n("878569"),
   A = n("590006"),
-  y = n("430312"),
-  x = n("401642"),
+  x = n("430312"),
+  y = n("401642"),
   O = n("590456"),
   R = n("49111"),
   M = n("646718"),
@@ -49,7 +49,7 @@ function U(e) {
     guildId: n,
     isTryItOutFlow: i,
     forProfileEffectModal: a
-  } = e, s = (0, o.useStateFromStores)([v.default], () => v.default.getUserProfile(t.id), [t]), r = (0, o.useStateFromStores)([h.default], () => h.default.getGuild(n), [n]), c = (0, f.useClydeProfilesEnabled)(r);
+  } = e, s = (0, o.useStateFromStores)([I.default], () => I.default.getUserProfile(t.id), [t]), r = (0, o.useStateFromStores)([h.default], () => h.default.getGuild(n), [n]), c = (0, f.useClydeProfilesEnabled)(r);
   return (0, l.jsxs)(l.Fragment, {
     children: [(null == s ? void 0 : s.profileFetchFailed) && (!t.isClyde() || c) && (0, l.jsx)(d.Tooltip, {
       text: L.default.Messages.USER_PROFILE_LOAD_ERROR,
@@ -83,19 +83,19 @@ function k(e) {
     onClose: h,
     disableUserProfileLink: E,
     profileType: T,
-    animateOnHover: v,
+    animateOnHover: I,
     hasProfileEffect: _
   } = e, {
     profileTheme: A
-  } = i.useContext(y.UserProfileContext), U = i.useContext(S.AnalyticsContext), k = t.isNonUserBot() && !t.isClyde(), w = C.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, M.PremiumTypes.TIER_2), F = i.useMemo(() => (0, m.shouldDisableUserPresenceInChannel)(t, p), [t, p]), G = E || t.isClyde(), {
+  } = i.useContext(x.UserProfileContext), U = i.useContext(C.AnalyticsContext), k = t.isNonUserBot() && !t.isClyde(), w = S.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, M.PremiumTypes.TIER_2), F = i.useMemo(() => (0, m.shouldDisableUserPresenceInChannel)(t, p), [t, p]), G = E || t.isClyde(), {
     avatarDecorationSrc: B,
     avatarSrc: H,
     eventHandlers: V
-  } = (0, I.default)({
+  } = (0, v.default)({
     user: t,
     guildId: f,
     size: b,
-    animateOnHover: v
+    animateOnHover: I
   }), K = (0, l.jsx)("div", {
     className: P.avatarHoverTarget,
     ...V,
@@ -129,7 +129,7 @@ function k(e) {
         [P.avatarWrapperNormal]: !k
       }, W),
       onClick: k || G ? void 0 : function() {
-        (0, x.openUserProfileModal)({
+        (0, y.openUserProfileModal)({
           userId: t.id,
           guildId: null != f ? f : void 0,
           channelId: null != p ? p : void 0,

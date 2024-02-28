@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return I
   }
 });
 var l = n("37983");
@@ -20,9 +20,9 @@ var i = n("551042"),
   h = n("406291"),
   E = n("49111"),
   g = n("782340"),
-  S = n("522572");
+  C = n("522572");
 
-function C(e, t) {
+function S(e, t) {
   return (0, l.jsx)(u.default, {
     sticker: e,
     isInteracting: t,
@@ -131,7 +131,7 @@ let T = {
         key: "emoji-upsell",
         indexOffset: t.length
       }) : null, (t.length > 0 || s.length > 0) && a.length > 0 && (0, l.jsx)(c.default.Divider, {
-        className: S.emojiStickersDivider
+        className: C.emojiStickersDivider
       }), (0, m.renderAutocompleteGroup)({
         query: o,
         selectedIndex: r,
@@ -147,7 +147,7 @@ let T = {
             sticker: n
           } = e;
           return {
-            renderSticker: C,
+            renderSticker: S,
             queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
             sticker: n,
             key: n.id
@@ -156,7 +156,7 @@ let T = {
         getQuery: e => e,
         key: "stickers",
         indexOffset: t.length + s.length,
-        headerClassName: t.length > 0 ? S.stickersHeaderWithEmojiResults : void 0
+        headerClassName: t.length > 0 ? C.stickersHeaderWithEmojiResults : void 0
       })]
     })
   },
@@ -209,4 +209,4 @@ let T = {
     }
   }
 };
-var v = T
+var I = T

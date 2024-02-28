@@ -21,8 +21,8 @@ var a = n("37983"),
       buttonText: h,
       buttonColor: C,
       buttonSubmitting: p,
-      onButtonClick: E,
-      imageSrc: m,
+      onButtonClick: m,
+      imageSrc: E,
       animationSrc: g,
       secondaryButtonText: _,
       onSecondaryButtonClick: S,
@@ -34,9 +34,9 @@ var a = n("37983"),
       children: s.Children.only(T)
     });
     let I = null;
-    return null != m ? I = (0, a.jsx)("img", {
+    return null != E ? I = (0, a.jsx)("img", {
       alt: "",
-      src: m,
+      src: E,
       className: c.image
     }) : null != g && (I = (0, a.jsx)(d.default, {
       importData: g,
@@ -71,7 +71,7 @@ var a = n("37983"),
         }), null != h && (0, a.jsx)(r.Button, {
           className: c.button,
           size: r.Button.Sizes.SMALL,
-          onClick: E,
+          onClick: m,
           submitting: p,
           color: null != C ? C : r.Button.Colors.PRIMARY,
           children: h

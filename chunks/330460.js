@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var n = s("37983");
 s("884691");
 var a = s("77078"),
-  o = s("632758"),
-  r = s("33320"),
+  r = s("632758"),
+  o = s("33320"),
   i = s("324252"),
   _ = s("782340"),
   l = s("932379"),
@@ -35,7 +35,7 @@ function E(e) {
         })
       }), (0, n.jsx)("div", {
         className: l.safetyTips,
-        children: (0, n.jsx)(o.default, {
+        children: (0, n.jsx)(r.default, {
           tips: E,
           headerText: _.default.Messages.INAPPROPRIATE_CONVERSATION_TIPS_DESCRIPTION
         })
@@ -52,7 +52,7 @@ function E(e) {
         look: a.Button.Looks.LINK,
         color: a.Button.Colors.TRANSPARENT,
         size: a.Button.Sizes.MEDIUM,
-        onClick: () => t(r.InappropriateConversationModalSlideKeys.INTRO),
+        onClick: () => t(o.InappropriateConversationModalSlideKeys.INTRO),
         children: _.default.Messages.BACK
       })]
     })]

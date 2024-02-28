@@ -47,11 +47,11 @@ var d = e => {
         let n = e(t);
         a(n), null == s || s(n)
       },
-      S = f ? "pointerup" : "mouseup",
-      C = f ? "pointermove" : "mousemove",
+      C = f ? "pointerup" : "mouseup",
+      S = f ? "pointermove" : "mousemove",
       T = n.current.ownerDocument;
-    return T.addEventListener(S, g), T.addEventListener(C, r), () => {
-      T.removeEventListener(S, g), T.removeEventListener(C, r), t.cancel()
+    return T.addEventListener(C, g), T.addEventListener(S, r), () => {
+      T.removeEventListener(C, g), T.removeEventListener(S, r), t.cancel()
     }
   }, [m, a, i, l, c, n, d, s, f]), r.useCallback(e => {
     let t = 1 === u(c);

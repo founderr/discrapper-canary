@@ -19,28 +19,28 @@ var l = n("37983"),
   h = n("945330"),
   E = n("256170"),
   g = n("315102"),
-  S = n("659500"),
-  C = n("82372"),
+  C = n("659500"),
+  S = n("82372"),
   T = n("476606"),
-  v = n("540843"),
-  I = n("49111"),
+  I = n("540843"),
+  v = n("49111"),
   _ = n("317041"),
   N = n("782340"),
   A = n("23429"),
-  y = n("919163");
+  x = n("919163");
 
-function x(e) {
+function y(e) {
   let {
     channel: t,
     command: n,
     section: a
   } = e, s = i.useCallback(() => {
-    C.dismissAppLauncherPopup(), u.setActiveCommand({
+    S.dismissAppLauncherPopup(), u.setActiveCommand({
       channelId: t.id,
       command: n,
       section: a,
       location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
-    }), S.ComponentDispatch.dispatch(I.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+    }), C.ComponentDispatch.dispatch(v.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: t.id
     })
   }, [t, n, a]);
@@ -65,7 +65,7 @@ function O(e) {
     appDetail: u
   } = e, {
     filterSection: c,
-    commandsByActiveSection: S
+    commandsByActiveSection: C
   } = d.useDiscovery(a, {
     commandType: o.ApplicationCommandType.CHAT
   }, {
@@ -73,10 +73,10 @@ function O(e) {
     limit: _.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
   }), {
-    commands: I
+    commands: v
   } = (0, T.default)({
     sectionId: u.id,
-    commandsByActiveSection: S
+    commandsByActiveSection: C
   });
   i.useEffect(() => {
     c(u.id)
@@ -88,7 +88,7 @@ function O(e) {
       botIconFirst: !0
     }),
     R = i.useCallback(() => {
-      C.dismissAppDetail()
+      S.dismissAppDetail()
     }, []),
     M = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
     L = (0, m.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != M ? M : ""),
@@ -129,13 +129,13 @@ function O(e) {
           variant: "heading-lg/bold",
           children: u.name
         }), (0, l.jsx)(r.Text, {
-          className: s(A.appDescription, y.markup),
+          className: s(A.appDescription, x.markup),
           variant: "text-sm/medium",
           lineClamp: 3,
           children: b
         })]
-      }), (0, l.jsx)(v.default, {
-        commands: I,
+      }), (0, l.jsx)(I.default, {
+        commands: v,
         channel: a
       }), (0, l.jsxs)("div", {
         className: A.commandListHeader,
@@ -148,7 +148,7 @@ function O(e) {
           children: ["Popular", (0, l.jsx)(E.default, {})]
         })]
       }), (0, l.jsx)("ul", {
-        children: I.map(e => (0, l.jsx)(x, {
+        children: v.map(e => (0, l.jsx)(y, {
           channel: a,
           command: e,
           section: u

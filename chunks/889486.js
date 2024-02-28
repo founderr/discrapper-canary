@@ -1,21 +1,21 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   handoffRemote: function() {
-    return d
+    return o
   }
 });
-var n = l("627445"),
-  a = l.n(n),
-  s = l("629109"),
-  u = l("987317"),
-  r = l("42887"),
-  o = l("700507"),
-  i = l("780338");
+var l = n("627445"),
+  a = n.n(l),
+  u = n("629109"),
+  r = n("987317"),
+  i = n("42887"),
+  d = n("700507"),
+  s = n("780338");
 
-function d(e, t) {
-  var l;
-  let n = null !== (l = e.sessionId) && void 0 !== l ? l : "";
-  (0, o.remoteDisconnect)(n), (0, o.disconnectRemote)();
-  let d = null != t ? t : e.channelId;
-  a(null != d, "attempted to transfer to unknown channel"), e.selfMute !== r.default.isSelfMute() && s.default.toggleSelfMute(), e.selfDeaf !== r.default.isSelfDeaf() && s.default.toggleSelfDeaf(), (0, i.default)(d, "discord_client", n), u.default.selectVoiceChannel(d, !1)
+function o(e, t) {
+  var n;
+  let l = null !== (n = e.sessionId) && void 0 !== n ? n : "";
+  (0, d.remoteDisconnect)(l), (0, d.disconnectRemote)();
+  let o = null != t ? t : e.channelId;
+  a(null != o, "attempted to transfer to unknown channel"), e.selfMute !== i.default.isSelfMute() && u.default.toggleSelfMute(), e.selfDeaf !== i.default.isSelfDeaf() && u.default.toggleSelfDeaf(), (0, s.default)(o, "discord_client", l), r.default.selectVoiceChannel(o, !1)
 }

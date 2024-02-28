@@ -19,25 +19,25 @@ var a = n("917351"),
   p = n("697218"),
   E = n("49111");
 let g = !1,
-  S = "",
-  C = 0,
+  C = "",
+  S = 0,
   _ = [],
   I = !1,
   T = new Set,
   v = null;
 
 function x() {
-  S = "", C = 0, _ = [], T = new Set, g = !1, v = null
+  C = "", S = 0, _ = [], T = new Set, g = !1, v = null
 }
 
 function N(e) {
-  S = e, C = 0, A()
+  C = e, S = 0, A()
 }
 
 function A() {
   if (!g) return !1;
   let e = f.default.getChannel(v);
-  if (0 === S.trim().length) return null != l && l.clearQuery(), _ = function(e) {
+  if (0 === C.trim().length) return null != l && l.clearQuery(), _ = function(e) {
     let t = m.default.getFriendIDs();
     return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
       let n = p.default.getUser(t);
@@ -47,7 +47,7 @@ function A() {
     }, []).sort(R)
   }(e), !0;
   let t = null != e ? e.recipients : [];
-  return null != l && l.setQuery(S, {
+  return null != l && l.setQuery(C, {
     friends: !0
   }, t, function() {
     let e = h.default.getFrequentlyWithoutFetchingLatest(),
@@ -83,7 +83,7 @@ function j(e) {
   let {
     results: t
   } = e;
-  g && "" !== S && (_ = t.map(e => {
+  g && "" !== C && (_ = t.map(e => {
     let {
       id: t
     } = e;
@@ -97,12 +97,12 @@ function L() {
   return null != l && (l.destroy(), l = null), u.default.getSearchContext(j, 1e3)
 }
 
-function y(e) {
+function O(e) {
   if (e.key !== E.NEW_GROUP_DM_POPOUT_ID) return !1;
   g = !0, M(), l = L(), v = null, N("")
 }
 
-function O(e) {
+function y(e) {
   if (e.key !== E.NEW_GROUP_DM_POPOUT_ID) return !1;
   P()
 }
@@ -124,12 +124,12 @@ class b extends i.default.Store {
     return T
   }
   getQuery() {
-    return S
+    return C
   }
   getState() {
     return {
-      query: S,
-      selectedRow: C,
+      query: C,
+      selectedRow: S,
       selectedUsers: T,
       results: _,
       hasFriends: I
@@ -150,19 +150,19 @@ let D = new b(r.default, {
     let l = g;
     return x(), g = l, v = n, A()
   },
-  MODAL_PUSH: y,
-  SHOW_ACTION_SHEET: y,
+  MODAL_PUSH: O,
+  SHOW_ACTION_SHEET: O,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
     g = !0, M(), l = L(), v = e.channelId, N("")
   },
-  MODAL_POP: O,
-  HIDE_ACTION_SHEET: O,
+  MODAL_POP: y,
+  HIDE_ACTION_SHEET: y,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: P,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function(e) {
     v = e.channelId, N(e.query)
   },
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function(e) {
-    C = e.row
+    S = e.row
   },
   PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function(e) {
     let {

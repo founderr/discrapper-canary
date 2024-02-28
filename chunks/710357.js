@@ -22,8 +22,8 @@ function c(e) {
     user: f
   } = e, h = (0, s.useStateFromStores)([i.default], () => i.default.useReducedMotion), C = null !== (t = (0, o.default)(n)) && void 0 !== t ? t : "", {
     avatarDecorationSrc: p,
-    eventHandlers: E,
-    isAnimating: m
+    eventHandlers: m,
+    isAnimating: E
   } = (0, u.default)({
     user: f,
     size: l.AvatarSizes.SIZE_80,
@@ -31,11 +31,11 @@ function c(e) {
   });
   return (0, a.jsxs)(d.default, {
     channelId: n.id,
-    ...E,
+    ...m,
     children: [(0, a.jsx)(l.Avatar, {
       "aria-label": C,
       size: l.AvatarSizes.SIZE_80,
-      src: (0, r.getChannelIconURL)(n, 80, !h && m),
+      src: (0, r.getChannelIconURL)(n, 80, !h && E),
       avatarDecoration: p
     }), (0, a.jsx)(d.EmptyMessageHeader, {
       children: C

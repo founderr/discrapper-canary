@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return A
   },
   updateVisibleMessages: function() {
-    return y
+    return x
   },
   useSummaryPolling: function() {
     return O
@@ -40,10 +40,10 @@ var l = n("884691"),
   h = n("718517"),
   E = n("347738");
 let g = 30 * h.default.Millis.SECOND,
-  S = 5 * h.default.Millis.SECOND,
-  C = {},
+  C = 5 * h.default.Millis.SECOND,
+  S = {},
   T = {};
-async function v(e, t) {
+async function I(e, t) {
   let n, l;
   if (!E.default.shouldFetch(e, t)) return;
   let i = Date.now();
@@ -68,7 +68,7 @@ async function v(e, t) {
     receivedAt: Date.now()
   })
 }
-async function I(e) {
+async function v(e) {
   var t, n;
   let l, i;
   if (!E.default.shouldFetch(e)) return;
@@ -109,14 +109,14 @@ function N() {
 }
 
 function A(e, t) {
-  null != e && null != t && v(e, t), u.default.dispatch({
+  null != e && null != t && I(e, t), u.default.dispatch({
     type: "SET_SELECTED_SUMMARY",
     channelId: e,
     summaryId: null != t ? t : null
   })
 }
 
-function y(e, t) {
+function x(e, t) {
   u.default.dispatch({
     type: "UPDATE_VISIBLE_MESSAGES",
     topVisibleMessage: null != e ? e : null,
@@ -124,8 +124,8 @@ function y(e, t) {
   })
 }
 
-function x(e, t) {
-  return null == C[e] && (C[e] = 0), null === t ? C[e] = 0 : C[e] += t, C[e]
+function y(e, t) {
+  return null == S[e] && (S[e] = 0), null === t ? S[e] = 0 : S[e] += t, S[e]
 }
 
 function O(e) {
@@ -233,21 +233,21 @@ async function P(e) {
 }
 let b = {
   startPolling: function(e) {
-    let t = x(e, 1);
+    let t = y(e, 1);
     t - 1 == 0 && (T[e] = setInterval(async () => {
       await b.fetchSummaries(e)
-    }, S))
+    }, C))
   },
   stopPolling: function(e) {
-    let t = x(e, -1);
-    t <= 0 && (x(e, 0), clearInterval(T[e]))
+    let t = y(e, -1);
+    t <= 0 && (y(e, 0), clearInterval(T[e]))
   },
   setSummaryFeedback: R,
   useSummaryPolling: O,
-  updateVisibleMessages: y,
+  updateVisibleMessages: x,
   setSelectedSummary: A,
   setHighlightedSummary: _,
-  fetchSummaries: I,
+  fetchSummaries: v,
   fetchSummariesBulk: L,
   useChannelSummaries: function(e) {
     let {

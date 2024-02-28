@@ -4,11 +4,11 @@ s.r(t), s.d(t, {
     return n
   },
   default: function() {
-    return N
+    return R
   }
 }), s("222007");
-var n, a, o = s("37983"),
-  r = s("884691"),
+var n, a, r = s("37983"),
+  o = s("884691"),
   i = s("77078"),
   _ = s("277734"),
   l = s("217736"),
@@ -18,71 +18,71 @@ var n, a, o = s("37983"),
   d = s("763332"),
   T = s("417365");
 (a = n || (n = {}))[a.INTRO = 0] = "INTRO", a[a.SAFETY_TIPS = 1] = "SAFETY_TIPS", a[a.TAKE_ACTION = 2] = "TAKE_ACTION";
-var N = e => {
+var R = e => {
   let {
     warningId: t,
     warningType: s,
     senderId: n,
     modalProps: a,
-    channelId: N
-  } = e, R = null != (0, u.useSafetyToolsButtonTooltipForChannel)(N), [A, S] = r.useState(0), I = r.useCallback(e => {
+    channelId: R
+  } = e, N = null != (0, u.useSafetyToolsButtonTooltipForChannel)(R), [A, I] = o.useState(0), S = o.useCallback(e => {
     (0, l.trackCtaEvent)({
-      channelId: N,
+      channelId: R,
       senderId: n,
       warningId: t,
       warningType: s,
       cta: e,
-      isNudgeWarning: R
+      isNudgeWarning: N
     })
-  }, [N, n, t, s, R]), [O, C] = r.useState(!1);
+  }, [R, n, t, s, N]), [O, f] = o.useState(!1);
 
-  function f(e) {
-    S(e)
+  function C(e) {
+    I(e)
   }
 
   function p() {
-    a.onClose(), (0, _.dismissChannelSafetyWarnings)(N, [t]), I(l.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS)
+    a.onClose(), (0, _.dismissChannelSafetyWarnings)(R, [t]), S(l.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS)
   }
-  return (0, o.jsx)(i.ModalRoot, {
+  return (0, r.jsx)(i.ModalRoot, {
     transitionState: a.transitionState,
-    children: (0, o.jsx)("div", {
+    children: (0, r.jsx)("div", {
       className: T.container,
-      children: (0, o.jsxs)(i.Slides, {
+      children: (0, r.jsxs)(i.Slides, {
         width: 440,
         activeSlide: A,
         centered: !1,
         overflow: "visible",
         contentDisplay: "flex",
-        children: [(0, o.jsx)(i.Slide, {
+        children: [(0, r.jsx)(i.Slide, {
           id: 0,
-          children: (0, o.jsx)(E.default, {
+          children: (0, r.jsx)(E.default, {
             warningId: t,
             senderId: n,
-            onNavigate: f,
+            onNavigate: C,
             onClose: p,
-            trackAnalyticsEvent: I
+            trackAnalyticsEvent: S
           })
-        }), (0, o.jsx)(i.Slide, {
+        }), (0, r.jsx)(i.Slide, {
           id: 1,
-          children: (0, o.jsx)(c.default, {
+          children: (0, r.jsx)(c.default, {
             warningId: t,
             senderId: n,
-            onNavigate: f,
+            onNavigate: C,
             onClose: p
           })
-        }), (0, o.jsx)(i.Slide, {
+        }), (0, r.jsx)(i.Slide, {
           id: 2,
-          children: (0, o.jsx)(d.default, {
+          children: (0, r.jsx)(d.default, {
             warningId: t,
             senderId: n,
-            channelId: N,
-            onNavigate: f,
+            channelId: R,
+            onNavigate: C,
             onClose: p,
             hasReported: O,
             onReport: function() {
-              C(!0)
+              f(!0)
             },
-            trackAnalyticsEvent: I
+            trackAnalyticsEvent: S
           })
         })]
       })

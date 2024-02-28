@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("619259"),
   C = n("865343"),
   p = n("148337"),
-  E = n("701909"),
-  m = n("124297"),
+  m = n("701909"),
+  E = n("124297"),
   g = n("497880"),
   _ = n("587904"),
   S = n("49111"),
@@ -57,7 +57,7 @@ let N = s.memo(function(e) {
       className: i(A.ephemeralAccessories, {
         [A.compact]: s
       }),
-      children: (0, a.jsx)(m.default, {
+      children: (0, a.jsx)(E.default, {
         message: t,
         onDeleteMessage: l,
         children: (0, a.jsx)(d.Text, {
@@ -66,7 +66,7 @@ let N = s.memo(function(e) {
           tag: "span",
           className: A.learnMore,
           children: T.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({
-            helpUrl: E.default.getArticleURL(S.HelpdeskArticles.GUILD_AUTOMOD_BLOCKED_MESSAGE)
+            helpUrl: m.default.getArticleURL(S.HelpdeskArticles.GUILD_AUTOMOD_BLOCKED_MESSAGE)
           })
         })
       })
@@ -80,14 +80,14 @@ var v = s.memo(function(e) {
     compact: r,
     message: d,
     children: p,
-    content: E,
-    onUpdate: m
+    content: m,
+    onUpdate: E
   } = e, S = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = s.useRef(!1), L = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), R = s.useCallback(() => {
     (null == L ? void 0 : L.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
   }, [d, L]);
   return s.useLayoutEffect(() => {
-    v.current ? null != m && m() : v.current = !0
-  }, [m, d.content, E, S, p]), (0, a.jsxs)("div", {
+    v.current ? null != E && E() : v.current = !0
+  }, [E, d.content, m, S, p]), (0, a.jsxs)("div", {
     id: (0, C.getMessageContentId)(d),
     className: i(l, M.markup, {
       [I.messageContent]: !0,
@@ -95,7 +95,7 @@ var v = s.memo(function(e) {
       [A.blockedEdit]: null == L ? void 0 : L.isBlockedEdit,
       [A.blockedSend]: !(null == L ? void 0 : L.isBlockedEdit)
     }),
-    children: [null != p ? p : (0, g.getContent)(d, E), (null == L ? void 0 : L.isBlockedEdit) && null != d.timestamp && (0, a.jsxs)(a.Fragment, {
+    children: [null != p ? p : (0, g.getContent)(d, m), (null == L ? void 0 : L.isBlockedEdit) && null != d.timestamp && (0, a.jsxs)(a.Fragment, {
       children: [" ", (0, a.jsx)(_.default, {
         timestamp: d.timestamp,
         isEdited: !0,

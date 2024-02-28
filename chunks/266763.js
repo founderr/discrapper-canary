@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 });
 var l = n("37983");
 n("884691");
-var a = n("446674"),
+var u = n("446674"),
   i = n("77078"),
-  u = n("592407"),
+  a = n("592407"),
   r = n("27978"),
   s = n("119184"),
   d = n("305961"),
@@ -29,10 +29,10 @@ function g(e) {
     location: "6597ca_1"
   }, {
     autoTrackExposure: !1
-  }), h = (0, a.useStateFromStores)([d.default, o.default], () => {
+  }), S = (0, u.useStateFromStores)([d.default, o.default], () => {
     let e = d.default.getGuild(t);
     return o.default.can(f.Permissions.MANAGE_ROLES, e)
-  }, [t]), p = (0, a.useStateFromStores)([d.default], () => {
+  }, [t]), h = (0, u.useStateFromStores)([d.default], () => {
     let e = d.default.getGuild(t);
     return g && (null == e ? void 0 : e.hasFeature(f.GuildFeatures.HUB))
   }, [t, g]);
@@ -51,19 +51,19 @@ function g(e) {
       color: "header-primary",
       variant: "heading-xl/semibold",
       className: v.title,
-      children: p ? E.default.Messages.HUB_EVENTS_HEADER_TITLE : E.default.Messages.GUILD_EVENT_MODAL_EMPTY_TITLE
+      children: h ? E.default.Messages.HUB_EVENTS_HEADER_TITLE : E.default.Messages.GUILD_EVENT_MODAL_EMPTY_TITLE
     }), (0, l.jsx)(i.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
       className: v.subtitle,
-      children: p ? E.default.Messages.HUB_EVENTS_HEADER_DESCRIPTION : E.default.Messages.GUILD_EVENT_MODAL_EMPTY_SUBTITLE
-    }), h && (0, l.jsx)(i.Text, {
+      children: h ? E.default.Messages.HUB_EVENTS_HEADER_DESCRIPTION : E.default.Messages.GUILD_EVENT_MODAL_EMPTY_SUBTITLE
+    }), S && (0, l.jsx)(i.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
       className: v.roleTip,
       children: E.default.Messages.GUILD_EVENT_ROLE_TIP.format({
         onClick: () => {
-          u.default.open(t, f.GuildSettingsSections.ROLES), n()
+          a.default.open(t, f.GuildSettingsSections.ROLES), n()
         }
       })
     })]

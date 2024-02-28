@@ -1,25 +1,25 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return o
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("446674"),
-  u = l("77078"),
-  s = l("377114"),
-  d = l("907566"),
-  r = l("398604"),
-  i = l("782340");
+var l = n("37983");
+n("884691");
+var u = n("446674"),
+  a = n("77078"),
+  d = n("377114"),
+  i = n("907566"),
+  s = n("398604"),
+  r = n("782340");
 
 function o(e) {
-  let t = (0, a.useStateFromStores)([r.default], () => r.default.getGuildScheduledEvent(e), [e]);
-  return null == e || null == t ? null : (0, n.jsx)(u.MenuItem, {
+  let t = (0, u.useStateFromStores)([s.default], () => s.default.getGuildScheduledEvent(e), [e]);
+  return null == e || null == t ? null : (0, l.jsx)(a.MenuItem, {
     id: "report-event",
-    label: i.default.Messages.REPORT_MODAL_REPORT_EVENT_MENU_ITEM,
-    action: () => (0, s.showReportModalForGuildScheduledEvent)(t),
-    icon: d.default,
+    label: r.default.Messages.REPORT_MODAL_REPORT_EVENT_MENU_ITEM,
+    action: () => (0, d.showReportModalForGuildScheduledEvent)(t),
+    icon: i.default,
     color: "danger"
   })
 }

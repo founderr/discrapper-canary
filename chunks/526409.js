@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   sendReaction: function() {
-    return S
+    return C
   },
   sendReply: function() {
-    return C
+    return S
   }
 }), n("70102");
 var l = n("913144"),
@@ -66,7 +66,7 @@ let E = e => {
       }
     }
   },
-  S = async e => {
+  C = async e => {
     let {
       file: t,
       reaction: n,
@@ -80,7 +80,7 @@ let E = e => {
       let e = (0, c.toReactionEmoji)(n);
       (0, d.addReaction)(r, o.id, e)
     }
-  }, C = async e => {
+  }, S = async e => {
     let {
       file: t,
       reply: n,

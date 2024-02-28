@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   StreamTileIndicators: function() {
-    return G
+    return H
   },
   default: function() {
-    return H
+    return G
   }
 });
 var l = n("37983"),
@@ -22,8 +22,8 @@ var l = n("37983"),
   p = n("673527"),
   E = n("336804"),
   g = n("952221"),
-  S = n("600123"),
-  C = n("373469"),
+  C = n("600123"),
+  S = n("373469"),
   _ = n("271938"),
   I = n("42203"),
   T = n("42887"),
@@ -35,8 +35,8 @@ var l = n("37983"),
   R = n("607391"),
   j = n("466211"),
   L = n("683245"),
-  y = n("772442"),
-  O = n("211019"),
+  O = n("772442"),
+  y = n("211019"),
   P = n("810640"),
   b = n("170643"),
   D = n("144565"),
@@ -47,14 +47,14 @@ var l = n("37983"),
   B = n("532351");
 let V = new f.default("StreamTile");
 
-function G(e) {
+function H(e) {
   let {
     participant: t,
     selected: n,
     focused: a,
     idle: s,
     width: i
-  } = e, u = (0, r.useStateFromStores)([C.default], () => C.default.getActiveStreamForUser(t.user.id, t.stream.guildId)), o = (0, D.isVideoCompact)(i);
+  } = e, u = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(t.user.id, t.stream.guildId)), o = (0, D.isVideoCompact)(i);
   return (0, l.jsxs)(l.Fragment, {
     children: [n ? null : (0, l.jsx)(b.default, {
       participant: t
@@ -68,7 +68,7 @@ function G(e) {
   })
 }
 
-function H(e) {
+function G(e) {
   let {
     participant: t,
     selected: n,
@@ -78,37 +78,37 @@ function H(e) {
     inPopout: A,
     width: b,
     focused: D
-  } = e, G = T.default.getVideoComponent(), H = (0, r.useStateFromStores)([_.default], () => _.default.getId()), W = (0, h.default)(), {
+  } = e, H = T.default.getVideoComponent(), G = (0, r.useStateFromStores)([_.default], () => _.default.getId()), W = (0, h.default)(), {
     stream: Y,
     user: z,
     streamId: K
-  } = t, Z = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(Y.channelId)), Q = (0, r.useStateFromStores)([C.default], () => C.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), X = (0, r.useStateFromStores)([C.default], () => C.default.getAllActiveStreams().length > 0), q = (0, r.useStateFromStores)([v.default], () => v.default.isFocused()), J = (null == Q ? void 0 : Q.ownerId) === H, $ = J && !q && !A, ee = null != Q ? (0, m.default)(Q, z, z.id === H, $) : null, et = b < 195;
+  } = t, Z = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(Y.channelId)), X = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), Q = (0, r.useStateFromStores)([S.default], () => S.default.getAllActiveStreams().length > 0), q = (0, r.useStateFromStores)([v.default], () => v.default.isFocused()), J = (null == X ? void 0 : X.ownerId) === G, $ = J && !q && !A, ee = null != X ? (0, m.default)(X, z, z.id === G, $) : null, et = b < 195;
   if (a.useEffect(() => {
-      !X && (null == Z ? void 0 : Z.isGuildStageVoice()) && !J && ((0, d.watchStream)(Y), o.default.updateStageStreamSize(Y.channelId, !1))
+      !Q && (null == Z ? void 0 : Z.isGuildStageVoice()) && !J && ((0, d.watchStream)(Y), o.default.updateStageStreamSize(Y.channelId, !1))
     }, []), a.useEffect(() => {
-      V.info("Stream Tile State - activeStream: ".concat(null != Q, " | selected: ").concat(n, " | Video: ").concat(null != G, " | MediaEngine: ").concat(T.default.supports(F.Features.VIDEO)))
-    }, [G, Q, n]), W) return (0, l.jsx)(P.default, {
+      V.info("Stream Tile State - activeStream: ".concat(null != X, " | selected: ").concat(n, " | Video: ").concat(null != H, " | MediaEngine: ").concat(T.default.supports(F.Features.VIDEO)))
+    }, [H, X, n]), W) return (0, l.jsx)(P.default, {
     stream: t.stream,
     isSmall: et,
     selected: n,
-    isSelfStream: z.id === H
+    isSelfStream: z.id === G
   });
-  if ((null == Q ? void 0 : Q.state) === U.ApplicationStreamStates.ENDED) return (0, l.jsx)(L.default, {
+  if ((null == X ? void 0 : X.state) === U.ApplicationStreamStates.ENDED) return (0, l.jsx)(L.default, {
     selected: n,
-    stream: Q,
+    stream: X,
     width: b
   });
-  if ((null == Q ? void 0 : Q.state) === U.ApplicationStreamStates.FAILED) return (0, l.jsx)(y.default, {
+  if ((null == X ? void 0 : X.state) === U.ApplicationStreamStates.FAILED) return (0, l.jsx)(O.default, {
     selected: n,
-    stream: Q,
+    stream: X,
     width: b
   });
-  else if (t.type === w.ParticipantTypes.HIDDEN_STREAM) return (0, l.jsx)(O.default, {
+  else if (t.type === w.ParticipantTypes.HIDDEN_STREAM) return (0, l.jsx)(y.default, {
     selected: n,
     participant: t,
     width: b
   });
-  else if (null != Q && !n && null != G && T.default.supports(F.Features.VIDEO)) return (0, l.jsxs)(l.Fragment, {
+  else if (null != X && !n && null != H && T.default.supports(F.Features.VIDEO)) return (0, l.jsxs)(l.Fragment, {
     children: [null != Z ? (0, l.jsx)(g.default, {
       focused: D,
       channelId: Z.id,
@@ -121,12 +121,12 @@ function H(e) {
       wrapperClassName: B.videoWrapper,
       className: B.content,
       streamId: K,
-      videoComponent: G,
+      videoComponent: H,
       fit: E,
       paused: f || $,
       videoSpinnerContext: J ? c.VideoSpinnerContext.SELF_STREAM : c.VideoSpinnerContext.REMOTE_STREAM,
       userId: z.id
-    }, K), null != ee ? (0, l.jsx)(S.default, {
+    }, K), null != ee ? (0, l.jsx)(C.default, {
       size: (0, R.getSizeForWidth)(b),
       ...ee
     }) : null, (0, l.jsx)(j.default, {
@@ -141,7 +141,7 @@ function H(e) {
     children: [(0, l.jsx)(p.default, {
       noText: !0,
       className: i(B.absoluteFill, {
-        [B.streamPreviewOpacity]: null == Q
+        [B.streamPreviewOpacity]: null == X
       }),
       stream: t.stream
     }), n ? null : (0, l.jsxs)(l.Fragment, {
@@ -152,7 +152,7 @@ function H(e) {
           color: "none",
           children: b < 175 ? k.default.Messages.WATCH : k.default.Messages.WATCH_STREAM
         })
-      }), X ? (0, l.jsx)(M.CallTileCTA, {
+      }), Q ? (0, l.jsx)(M.CallTileCTA, {
         className: B.addCTA,
         tooltip: k.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
         onClick: e => {

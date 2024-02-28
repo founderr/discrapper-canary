@@ -21,9 +21,9 @@ var l = n("37983"),
       participants: m,
       channel: p,
       hasConnectPermission: E
-    } = e, g = m.filter(c.isUserParticipant), S = (0, u.useShowMemberVerificationGate)(p.guild_id), C = a.useCallback(() => {
-      S ? (0, r.openMemberVerificationModal)(p.guild_id, () => i.default.selectVoiceChannel(p.id)) : i.default.selectVoiceChannel(p.id)
-    }, [p.id, p.guild_id, S]), _ = 4 === g.length ? 2 : 3;
+    } = e, g = m.filter(c.isUserParticipant), C = (0, u.useShowMemberVerificationGate)(p.guild_id), S = a.useCallback(() => {
+      C ? (0, r.openMemberVerificationModal)(p.guild_id, () => i.default.selectVoiceChannel(p.id)) : i.default.selectVoiceChannel(p.id)
+    }, [p.id, p.guild_id, C]), _ = 4 === g.length ? 2 : 3;
     return (0, l.jsxs)("div", {
       className: h.container,
       children: [(0, l.jsx)("div", {
@@ -65,7 +65,7 @@ var l = n("37983"),
         disabled: !E,
         className: h.joinButton,
         color: E ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
-        onClick: C,
+        onClick: S,
         size: s.Button.Sizes.MEDIUM,
         children: E ? f.default.Messages.JOIN_VOICE : f.default.Messages.CHANNEL_LOCKED_SHORT
       })]

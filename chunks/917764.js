@@ -20,12 +20,12 @@ var l = n("37983"),
       height: c = 32,
       shouldAnimate: f = !0,
       isLocked: m = !1
-    } = e, [p, h] = i.useState(!1), E = n.getIconURL(32, f && a), g = () => h(!0), S = () => h(!1);
+    } = e, [p, h] = i.useState(!1), E = n.getIconURL(32, f && a), g = () => h(!0), C = () => h(!1);
     return (0, l.jsxs)("div", {
       onFocus: g,
-      onBlur: S,
+      onBlur: C,
       onMouseOver: g,
-      onMouseLeave: S,
+      onMouseLeave: C,
       children: [(0, l.jsx)(o.default, {
         className: s(u.mask, t),
         mask: a || p ? o.MaskIDs.SQUIRCLE : o.MaskIDs.AVATAR_DEFAULT,

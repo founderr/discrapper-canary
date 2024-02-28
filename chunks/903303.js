@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return S
   }
 });
 var n = s("37983"),
@@ -11,9 +11,9 @@ var n = s("37983"),
   r = s("701909"),
   o = s("514914"),
   i = s("49111"),
-  S = s("782340"),
+  _ = s("782340"),
   u = s("821054"),
-  _ = function(e) {
+  S = function(e) {
     let {
       onClose: t
     } = e, s = a.useCallback(() => {
@@ -23,13 +23,13 @@ var n = s("37983"),
       style: u.wrapperStyle,
       children: [(0, n.jsx)(l.Text, {
         variant: "text-md/medium",
-        children: S.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format({
+        children: _.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format({
           learnMoreLink: r.default.getArticleURL(i.HelpdeskArticles.SAFETY_ALERTS)
         })
       }), (0, n.jsx)(l.Button, {
         className: u.settingsButton,
         onClick: s,
-        children: S.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS
+        children: _.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS
       })]
     })
   }

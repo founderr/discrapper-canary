@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   maybeFetchSoundboardSounds: function() {
-    return v
+    return I
   },
   uploadSound: function() {
-    return I
+    return v
   },
   updateSound: function() {
     return _
@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return A
   },
   removeFavoriteSound: function() {
-    return y
+    return x
   },
   playSoundLocally: function() {
-    return x
+    return y
   },
   reportSoundStartedPlaying: function() {
     return O
@@ -66,32 +66,32 @@ let g = async e => {
       type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE"
     }), new o.default(e)
   }
-}, S = e => new Promise(t => {
+}, C = e => new Promise(t => {
   let n = () => {
     s.default.unsubscribe(e, n), setTimeout(t, 0)
   };
   s.default.subscribe(e, n)
-}), C = e => {
+}), S = e => {
   if (!d.default.shouldFetchDefaultSounds()) return Promise.resolve();
   s.default.dispatch({
     type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS"
   });
-  let t = S("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
+  let t = C("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
   return g(e), t
 }, T = () => {
   let e = (0, f.getGuildIdsToFetchSoundsFor)();
   if (0 === e.length) return Promise.resolve();
-  let t = S("SOUNDBOARD_SOUNDS_RECEIVED");
+  let t = C("SOUNDBOARD_SOUNDS_RECEIVED");
   return s.default.dispatch({
     type: "GUILD_SOUNDBOARD_FETCH"
   }), s.default.dispatch({
     type: "REQUEST_SOUNDBOARD_SOUNDS",
     guildIds: e
   }), t
-}, v = () => __OVERLAY__ ? (s.default.dispatch({
+}, I = () => __OVERLAY__ ? (s.default.dispatch({
   type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST"
-}), Promise.all([])) : Promise.all([C(), T()]);
-async function I(e) {
+}), Promise.all([])) : Promise.all([S(), T()]);
+async function v(e) {
   let {
     guildId: t,
     name: n,
@@ -146,13 +146,13 @@ function A(e) {
   }), !1) : !t.soundIds.includes(e) && void t.soundIds.push(e), h.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function y(e) {
+function x(e) {
   u.FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", t => {
     t.soundIds = t.soundIds.filter(t => t !== e)
   }, h.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function x(e, t, n) {
+function y(e, t, n) {
   s.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY",
     sound: t,

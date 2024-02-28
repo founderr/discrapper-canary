@@ -32,9 +32,9 @@ function h(e) {
     isPremium: h,
     hasThemeColors: E,
     hasBanner: g,
-    forProfileEffectModal: S,
-    hasProfileEffect: C = !1
-  } = e, T = p[n], v = (0, o.useUID)(), I = function(e) {
+    forProfileEffectModal: C,
+    hasProfileEffect: S = !1
+  } = e, T = p[n], I = (0, o.useUID)(), v = function(e) {
     let {
       profileType: t,
       avatarSize: n,
@@ -47,11 +47,11 @@ function h(e) {
     let E = (0, r.getDecorationSizeForAvatarSize)(n),
       {
         size: g,
-        stroke: S
+        stroke: C
       } = (0, s.getAvatarSpecs)(n),
-      C = {
+      S = {
         avatarSize: g,
-        avatarBorderSize: S,
+        avatarBorderSize: C,
         avatarDecorationSize: E,
         avatarDecorationBorderSize: h,
         avatarDecorationOffsetY: -(E + 2 * h) / 2,
@@ -67,20 +67,20 @@ function h(e) {
     return (0, i.match)(t).with(c.UserProfileTypes.POPOUT, () => {
       let e = m ? (0, u.cssValueToNumber)(a.default.USER_PROFILE_THEMED_CONTAINER_USER_PROFILE_THEMED_PADDING) : 0;
       return {
-        ...C,
+        ...S,
         bannerWidth: (0, u.cssValueToNumber)(a.default.USER_PROFILE_THEMED_CONTAINER_USER_POPOUT_WIDTH),
         offsetX: 16 - e,
         offsetY: 4 + e,
         avatarDecorationOffsetX: 4
       }
     }).with(c.UserProfileTypes.MODAL, () => ({
-      ...C,
+      ...S,
       bannerWidth: (0, d.getUserBannerSize)(c.UserProfileTypes.MODAL),
       offsetX: 14,
       offsetY: 5,
       avatarDecorationOffsetX: 2
     })).with(c.UserProfileTypes.SETTINGS, () => ({
-      ...C,
+      ...S,
       bannerWidth: 660,
       offsetX: 16,
       offsetY: -22,
@@ -88,20 +88,20 @@ function h(e) {
     })).with(c.UserProfileTypes.PANEL, () => {
       let e = (0, u.cssValueToNumber)(a.default.USER_PROFILE_THEMED_CONTAINER_USER_PROFILE_THEMED_PADDING);
       return {
-        ...C,
+        ...S,
         bannerWidth: (0, u.cssValueToNumber)(a.default.USER_PROFILE_THEMED_CONTAINER_USER_POPOUT_WIDTH),
         offsetX: 16 - e,
         offsetY: 4 + e,
         avatarDecorationOffsetX: 4
       }
     }).with(c.UserProfileTypes.POMELO_POPOUT, () => ({
-      ...C,
+      ...S,
       bannerWidth: (0, d.getUserBannerSize)(c.UserProfileTypes.POMELO_POPOUT),
       offsetX: 20,
       offsetY: -20,
       avatarDecorationOffsetX: 10
     })).with(c.UserProfileTypes.CANCEL_MODAL, () => ({
-      ...C,
+      ...S,
       bannerWidth: (0, d.getUserBannerSize)(c.UserProfileTypes.CANCEL_MODAL),
       offsetX: 8,
       offsetY: 2,
@@ -113,20 +113,20 @@ function h(e) {
     hasBanner: g,
     isPremium: h,
     hasThemeColors: E,
-    hasProfileEffect: C
+    hasProfileEffect: S
   });
-  S && (I.bannerWidth = (0, u.cssValueToNumber)(a.default.USER_PROFILE_THEMED_CONTAINER_PROFILE_EFFECTS_USER_POPOUT_WIDTH));
-  let _ = I.avatarSize / 2 + I.avatarBorderSize,
-    N = I.bannerHeight - I.offsetY;
+  C && (v.bannerWidth = (0, u.cssValueToNumber)(a.default.USER_PROFILE_THEMED_CONTAINER_PROFILE_EFFECTS_USER_POPOUT_WIDTH));
+  let _ = v.avatarSize / 2 + v.avatarBorderSize,
+    N = v.bannerHeight - v.offsetY;
   return (0, l.jsxs)("svg", {
     className: m.bannerSVGWrapper,
-    viewBox: "0 0 ".concat(I.bannerWidth, " ").concat(I.bannerHeight),
+    viewBox: "0 0 ".concat(v.bannerWidth, " ").concat(v.bannerHeight),
     style: {
-      minWidth: I.bannerWidth,
-      minHeight: I.bannerHeight
+      minWidth: v.bannerWidth,
+      minHeight: v.bannerHeight
     },
     children: [(0, l.jsxs)("mask", {
-      id: v,
+      id: I,
       children: [(0, l.jsx)("rect", {
         fill: "white",
         x: "0",
@@ -135,7 +135,7 @@ function h(e) {
         height: "100%"
       }), (0, l.jsx)("circle", {
         fill: "black",
-        cx: I.offsetX + _,
+        cx: v.offsetX + _,
         cy: N,
         r: _
       })]
@@ -145,7 +145,7 @@ function h(e) {
       width: "100%",
       height: "100%",
       overflow: "visible",
-      mask: "url(#".concat(v, ")"),
+      mask: "url(#".concat(I, ")"),
       children: t
     })]
   })

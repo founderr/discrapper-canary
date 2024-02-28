@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("967241"),
   C = n("956089"),
   p = n("599110"),
-  E = n("659500"),
-  m = n("254490"),
+  m = n("659500"),
+  E = n("254490"),
   g = n("412861"),
   _ = n("149022"),
   S = n("64096"),
@@ -51,8 +51,8 @@ function L(e) {
     options: r,
     onFileUpload: L,
     onClose: R,
-    onSelect: y,
-    draftType: x,
+    onSelect: x,
+    draftType: y,
     editorTextContent: O,
     setValue: D,
     openClips: P
@@ -73,11 +73,11 @@ function L(e) {
     (0, h.openThreadSidebarForCreating)(t, void 0, "Plus Button")
   }
 
-  function F() {
+  function H() {
     p.default.track(T.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, _.toRichValue)("/"))
   }
 
-  function H() {
+  function F() {
     P()
   }
 
@@ -117,19 +117,19 @@ function L(e) {
     })
   }
 
-  function G() {
+  function w() {
     let e = O,
       n = "txt",
       a = "",
       s = O.match(v);
-    null != s && (a = s[1], n = s[2], e = s[3], a += s[4]), (0, g.promptToUpload)([(0, m.makeFile)(new Blob([e], {
+    null != s && (a = s[1], n = s[2], e = s[3], a += s[4]), (0, g.promptToUpload)([(0, E.makeFile)(new Blob([e], {
       type: "text/plain"
-    }), "message.".concat(n))], t, x), E.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.CLEAR_TEXT), "" !== a && E.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.INSERT_TEXT, {
+    }), "message.".concat(n))], t, y), m.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.CLEAR_TEXT), "" !== a && m.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.INSERT_TEXT, {
       plainText: a
     })
   }
   return (0, a.jsx)(i.Menu, {
-    onSelect: y,
+    onSelect: x,
     navId: "channel-attach",
     onClose: R,
     "aria-label": M.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
@@ -161,13 +161,13 @@ function L(e) {
           return (0, a.jsx)(i.MenuItem, {
             id: "upload-text-as-file",
             label: s,
-            action: G
+            action: w
           }, "upload-text-as-file");
         case S.AttachmentTypes.CLIPS:
           return (0, a.jsx)(i.MenuItem, {
             id: "clips",
             label: s,
-            action: H
+            action: F
           }, "clips");
         case S.AttachmentTypes.POLL:
           return (0, a.jsx)(i.MenuItem, {
@@ -222,7 +222,7 @@ function L(e) {
           return (0, a.jsx)(i.MenuItem, {
             id: "SLASH_COMMAND",
             label: s,
-            action: F
+            action: H
           }, "SLASH_COMMAND");
         case S.AttachmentTypes.ACTIVITY:
           return (0, a.jsx)(i.MenuItem, {

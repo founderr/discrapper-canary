@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return I
   }
 }), n("222007");
 var l = n("37983"),
@@ -19,20 +19,20 @@ var l = n("37983"),
   h = n("659186"),
   E = n("418062"),
   g = n("851745"),
-  S = n("280214"),
-  C = n("497858"),
+  C = n("280214"),
+  S = n("497858"),
   T = n("892149"),
-  v = i.forwardRef(function(e, t) {
-    var n, a, v, I, _;
+  I = i.forwardRef(function(e, t) {
+    var n, a, I, v, _;
     let {
       channel: N,
       type: A,
-      editorHeight: y,
-      onVisibilityChange: x
+      editorHeight: x,
+      onVisibilityChange: y
     } = e, O = (0, m.useUID)(), R = (0, o.useStateFromStores)([c.default], () => {
       var e;
       return null !== (e = c.default.getGuild(N.guild_id)) && void 0 !== e ? e : null
-    }, [N.guild_id]), M = i.useRef(), [L, P, b] = (0, C.default)({
+    }, [N.guild_id]), M = i.useRef(), [L, P, b] = (0, S.default)({
       ...e,
       guild: R
     }, t, M), j = (null === (n = A.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : p.default, U = (0, f.getAutocompleteRowId)(L.selectedIndex);
@@ -45,15 +45,15 @@ var l = n("37983"),
       location: "6e9811_2"
     }, {
       autoTrackExposure: !1
-    }), k = (0, S.useChannelAutocompleteLayerPosition)({
-      editorHeight: y,
+    }), k = (0, C.useChannelAutocompleteLayerPosition)({
+      editorHeight: x,
       type: A,
       state: L,
       isInPopoutExperiment: D
     }), w = i.useMemo(() => null == k ? "" : String(Date.now()), [null == k ? void 0 : k.top, null == k ? void 0 : k.left, null == k ? void 0 : k.bottom, null == k ? void 0 : k.right]);
     if (i.useEffect(() => {
-        x(L.isVisible)
-      }, [x, L.isVisible]), !L.isVisible || null == L.query || void 0 === k) return null;
+        y(L.isVisible)
+      }, [y, L.isVisible]), !L.isVisible || null == L.query || void 0 === k) return null;
     let F = null !== (a = L.query.typeInfo.renderResults({
       results: L.query.results,
       selectedIndex: L.selectedIndex,
@@ -71,7 +71,7 @@ var l = n("37983"),
         [T.bottom]: null == k && "bottom" === e.position
       },
       B = 490;
-    null != k && (B = (null === (v = A.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (I = L.query) || void 0 === I ? void 0 : I.type) === g.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
+    null != k && (B = (null === (I = A.autocomplete) || void 0 === I ? void 0 : I.small) ? 200 : (null === (v = L.query) || void 0 === v ? void 0 : v.type) === g.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
     let H = (0, l.jsx)(f.default, {
       id: O,
       className: s(T.autocomplete, G),

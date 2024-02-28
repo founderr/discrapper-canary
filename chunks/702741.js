@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return r
   }
 });
 var a = n("37983");
 n("884691");
-var i = n("77078"),
-  l = n("377114"),
+var l = n("77078"),
+  i = n("377114"),
   u = n("834052"),
   s = n("907566"),
-  r = n("782340");
+  d = n("782340");
 
-function o(e) {
+function r(e) {
   let t = u.default.isLive(e.id);
-  return e.isGuildStageVoice() && t ? (0, a.jsx)(i.MenuItem, {
+  return e.isGuildStageVoice() && t ? (0, a.jsx)(l.MenuItem, {
     id: "report-stage",
-    label: r.default.Messages.REPORT_MODAL_REPORT_STAGE_MENU_ITEM,
-    action: () => (0, l.showReportModalForStageChannel)(e),
+    label: d.default.Messages.REPORT_MODAL_REPORT_STAGE_MENU_ITEM,
+    action: () => (0, i.showReportModalForStageChannel)(e),
     icon: s.default,
     color: "danger"
   }) : null

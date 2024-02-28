@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("253981"),
   E = n("252063"),
   g = n("49111"),
-  S = n("782340"),
-  C = n("473240"),
+  C = n("782340"),
+  S = n("473240"),
   _ = n("271861");
 let I = new Set(["Spacebar", " ", "Enter"]);
 
@@ -63,29 +63,29 @@ function T(e) {
   return (0, l.jsxs)(r.ModalRoot, {
     transitionState: n,
     size: r.ModalSize.DYNAMIC,
-    className: C.modal,
+    className: S.modal,
     children: [(0, l.jsx)(r.ModalContent, {
-      className: C.modalContent,
+      className: S.modalContent,
       children: (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)("img", {
           src: _,
           alt: "",
-          className: C.image
+          className: S.image
         }), (0, l.jsxs)("div", {
-          className: C.headingContainer,
+          className: S.headingContainer,
           children: [(0, l.jsx)(r.Heading, {
             variant: "heading-xl/bold",
-            className: C.modalHeader,
-            children: S.default.Messages.PRIVATE_CHANNEL_AVAILABLE_APPS
+            className: S.modalHeader,
+            children: C.default.Messages.PRIVATE_CHANNEL_AVAILABLE_APPS
           }), (0, l.jsx)(r.Text, {
             variant: "text-md/medium",
-            className: C.modalHeader,
-            children: S.default.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
+            className: S.modalHeader,
+            children: C.default.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
               helpCenterLink: m.default.getArticleURL(g.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
             })
           })]
         }), (0, l.jsx)("div", {
-          className: C.applicationRowContainer,
+          className: S.applicationRowContainer,
           children: T ? v.map(e => {
             if (null != x.find(t => t.application.id === e.id)) return null;
             let n = null != e.description ? (0, o.parseBioReact)(e.description) : null,
@@ -96,16 +96,16 @@ function T(e) {
               }),
               s = (0, l.jsxs)(l.Fragment, {
                 children: [null != a && (0, l.jsx)("img", {
-                  className: C.applicationIcon,
+                  className: S.applicationIcon,
                   alt: "",
                   "aria-hidden": !0,
                   src: a,
                   width: 40,
                   height: 40
                 }), (0, l.jsxs)("div", {
-                  className: C.applicationRowContent,
+                  className: S.applicationRowContent,
                   children: [(0, l.jsxs)("div", {
-                    className: C.applicationText,
+                    className: S.applicationText,
                     children: [(0, l.jsx)(r.Heading, {
                       variant: "heading-md/medium",
                       children: e.name
@@ -117,7 +117,7 @@ function T(e) {
                     })]
                   }), (0, l.jsx)(r.Button, {
                     type: "button",
-                    innerClassName: C.applicationButtonHack,
+                    innerClassName: S.applicationButtonHack,
                     onClick: n => {
                       n.stopPropagation(), (0, d.openOAuth2Modal)({
                         clientId: e.id,
@@ -129,7 +129,7 @@ function T(e) {
                     },
                     size: r.Button.Sizes.SMALL,
                     color: r.Button.Colors.PRIMARY,
-                    children: S.default.Messages.ADD
+                    children: C.default.Messages.ADD
                   })]
                 })]
               }),
@@ -139,7 +139,7 @@ function T(e) {
             return null != i ? (0, l.jsx)(r.ClickableContainer, {
               onMouseDown: () => N(i),
               onKeyDown: e => A(e, i),
-              className: C.applicationRow,
+              className: S.applicationRow,
               onClick: () => {
                 (0, f.openUserProfileModal)({
                   userId: i.id,
@@ -149,30 +149,30 @@ function T(e) {
                   }
                 })
               },
-              "aria-label": S.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADD_MODAL_ROW_INFO.format({
+              "aria-label": C.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADD_MODAL_ROW_INFO.format({
                 appName: e.name
               }),
               children: s
             }, e.id) : (0, l.jsx)("div", {
-              className: C.applicationRow,
+              className: S.applicationRow,
               children: s
             }, e.id)
           }) : (0, l.jsx)(r.Spinner, {
-            className: C.spinner,
+            className: S.spinner,
             type: r.Spinner.Type.SPINNING_CIRCLE
           })
         })]
       })
     }), (0, l.jsxs)(r.ModalFooter, {
-      className: C.modalFooter,
+      className: S.modalFooter,
       children: [(0, l.jsx)(r.Button, {
         onClick: s,
-        children: S.default.Messages.DONE
+        children: C.default.Messages.DONE
       }), (0, l.jsx)(r.Button, {
         look: r.Button.Looks.LINK,
         onClick: s,
         color: r.Button.Colors.PRIMARY,
-        children: S.default.Messages.CANCEL
+        children: C.default.Messages.CANCEL
       })]
     })]
   })

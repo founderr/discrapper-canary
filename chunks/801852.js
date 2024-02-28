@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("685665"),
   E = n("393414"),
   g = n("161778"),
-  S = n("124824"),
-  C = n("772280"),
+  C = n("124824"),
+  S = n("772280"),
   _ = n("82636"),
   I = n("599110"),
   T = n("955153"),
@@ -32,8 +32,8 @@ var l = n("37983"),
   R = n("766914"),
   j = n("478272"),
   L = n("954016"),
-  y = n("49111"),
-  O = n("782340"),
+  O = n("49111"),
+  y = n("782340"),
   P = n("73687"),
   b = n("678070"),
   D = n("789335"),
@@ -48,9 +48,9 @@ let F = "vc-activities-".concat((0, u.v4)()),
       onMouseEnter: k,
       onMouseLeave: B,
       onClick: V,
-      className: G
+      className: H
     } = e, {
-      enabled: H
+      enabled: G
     } = T.BirthdayActivitiesExperiment.useExperiment({
       location: "8009ca_3"
     }), {
@@ -67,17 +67,17 @@ let F = "vc-activities-".concat((0, u.v4)()),
       autoTrackExposure: !0
     }), z = (0, o.useStateFromStores)([g.default], () => g.default.getState().theme), K = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
       id: Z,
-      guild_id: Q
+      guild_id: X
     } = n;
     a.useEffect(() => {
-      I.default.track(y.AnalyticEvents.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+      I.default.track(O.AnalyticEvents.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
         channel_id: Z,
-        guild_id: Q
+        guild_id: X
       })
-    }, [Z, Q]), a.useEffect(() => {
+    }, [Z, X]), a.useEffect(() => {
       !s && u()
     }, [u, s]);
-    let X = (0, f.useAppContext)(),
+    let Q = (0, f.useAppContext)(),
       {
         analyticsLocations: q,
         AnalyticsLocationProvider: J
@@ -86,7 +86,7 @@ let F = "vc-activities-".concat((0, u.v4)()),
         analyticsLocations: $,
         AnalyticsLocationProvider: ee
       } = (0, p.default)([...q, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
-      et = X === y.AppContext.POPOUT,
+      et = Q === O.AppContext.POPOUT,
       en = (0, c.useAnalyticsContext)(),
       el = function(e) {
         let t = (0, A.default)({
@@ -109,15 +109,15 @@ let F = "vc-activities-".concat((0, u.v4)()),
         }), B(), V()
       }, [en, q, n, V, B, et]),
       es = a.useCallback(e => {
-        k(), I.default.track(y.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
+        k(), I.default.track(O.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
           guild_id: n.getGuildId()
         })
       }, [k, n]),
-      ei = H ? (0, l.jsxs)(r.Link, {
-        to: y.Routes.ACTIVITIES,
+      ei = G ? (0, l.jsxs)(r.Link, {
+        to: O.Routes.ACTIVITIES,
         children: [(0, l.jsx)("img", {
-          alt: O.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
+          alt: y.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
           src: "light" === z ? b : D,
           className: P.poster
         }), (0, l.jsx)("div", {
@@ -128,10 +128,10 @@ let F = "vc-activities-".concat((0, u.v4)()),
           [P.clickableBannerReducedMotion]: K
         }),
         onClick: () => {
-          V(), u(), (0, E.transitionTo)(y.Routes.ACTIVITY_DETAILS(L.KRUNKER_STRIKE_APPLICATION_ID), void 0, void 0, $)
+          V(), u(), (0, E.transitionTo)(O.Routes.ACTIVITY_DETAILS(L.KRUNKER_STRIKE_APPLICATION_ID), void 0, void 0, $)
         },
         children: [(0, l.jsx)("img", {
-          alt: O.default.Messages.EMBEDDED_ACTIVITIES_KRUNKER_STRIKE_POSTER_ALT,
+          alt: y.default.Messages.EMBEDDED_ACTIVITIES_KRUNKER_STRIKE_POSTER_ALT,
           src: w,
           className: P.poster
         }), (0, l.jsx)("div", {
@@ -142,10 +142,10 @@ let F = "vc-activities-".concat((0, u.v4)()),
           [P.clickableBannerReducedMotion]: K
         }),
         onClick: () => {
-          V(), u(), (0, E.transitionTo)(y.Routes.ACTIVITY_DETAILS(L.COLONIST_APPLICATION_ID), void 0, void 0, $)
+          V(), u(), (0, E.transitionTo)(O.Routes.ACTIVITY_DETAILS(L.COLONIST_APPLICATION_ID), void 0, void 0, $)
         },
         children: [(0, l.jsx)("img", {
-          alt: O.default.Messages.EMBEDDED_ACTIVITIES_COLONIST_POSTER_ALT,
+          alt: y.default.Messages.EMBEDDED_ACTIVITIES_COLONIST_POSTER_ALT,
           src: U,
           className: P.poster
         }), (0, l.jsx)("div", {
@@ -153,17 +153,17 @@ let F = "vc-activities-".concat((0, u.v4)()),
         })]
       }) : null;
     return (0, l.jsx)(J, {
-      children: (0, l.jsx)(S.default, {
+      children: (0, l.jsx)(C.default, {
         children: (0, l.jsxs)(d.Dialog, {
           ref: t,
           "aria-labelledby": F,
-          className: G,
+          className: H,
           children: [(0, l.jsx)(d.HeadingLevel, {
             forceLevel: 2,
             children: (0, l.jsx)(d.HiddenVisually, {
               children: (0, l.jsx)(d.H, {
                 id: F,
-                children: O.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
+                children: y.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
               })
             })
           }), (0, l.jsxs)("div", {
@@ -179,15 +179,15 @@ let F = "vc-activities-".concat((0, u.v4)()),
                   color: "var(--interactive-active)"
                 }), (0, l.jsx)(d.Text, {
                   variant: "eyebrow",
-                  children: O.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
+                  children: y.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
                 })]
               }), (0, l.jsxs)(d.Clickable, {
                 className: P.titleRight,
                 onClick: ea,
                 children: [(0, l.jsx)(d.Text, {
                   variant: "eyebrow",
-                  children: O.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
-                }), (0, l.jsx)(C.default, {
+                  children: y.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
+                }), (0, l.jsx)(S.default, {
                   width: 12,
                   height: 12,
                   color: "var(--interactive-active)",

@@ -46,10 +46,10 @@ function r(e) {
     indexOffset: h = 0,
     headerClassName: E,
     headerTrailingContent: g,
-    footer: S
+    footer: C
   } = e;
-  if (null == S && (null == a || 0 === a.length)) return null;
-  let C = null == a ? void 0 : a.map((e, t) => {
+  if (null == C && (null == a || 0 === a.length)) return null;
+  let S = null == a ? void 0 : a.map((e, t) => {
     let l = t + h,
       a = f(e, l);
     return (0, i.createElement)(c, {
@@ -69,6 +69,6 @@ function r(e) {
       getQuery: m,
       headerClassName: E,
       headerTrailingContent: g
-    }) : null, C, S]
+    }) : null, S, C]
   }, p)
 }

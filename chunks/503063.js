@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return v
   }
 });
 var l = n("37983"),
@@ -19,18 +19,18 @@ var l = n("37983"),
   h = n("377253"),
   E = n("116320"),
   g = n("381546"),
-  S = n("49111"),
-  C = n("782340"),
+  C = n("49111"),
+  S = n("782340"),
   T = n("731851");
 
-function v(e) {
+function I(e) {
   let {
     channel: t,
     message: n,
     replyChainLength: a
   } = e;
   return i.useEffect(() => {
-    (0, u.trackWithMetadata)(S.AnalyticEvents.THREAD_NUDGE_SHOWN, {
+    (0, u.trackWithMetadata)(C.AnalyticEvents.THREAD_NUDGE_SHOWN, {
       type: "Reply Chain (".concat(3, ")"),
       reply_chain_length: a + 1,
       channel_id: t.id,
@@ -51,19 +51,19 @@ function v(e) {
       color: "header-secondary",
       className: T.text,
       variant: "text-sm/normal",
-      children: C.default.Messages.THREAD_REPLY_SUGGESTION.format({
+      children: S.default.Messages.THREAD_REPLY_SUGGESTION.format({
         count: Math.min(10, a + 1)
       })
     }), (0, l.jsx)(o.Text, {
       color: "text-link",
       className: T.createThreadButton,
       variant: "text-sm/semibold",
-      children: C.default.Messages.CREATE_THREAD
+      children: S.default.Messages.CREATE_THREAD
     })]
   })
 }
 
-function I(e) {
+function v(e) {
   let {
     reply: t,
     chatInputType: n
@@ -73,7 +73,7 @@ function I(e) {
     shouldMention: u,
     showMentionToggle: p
   } = t, {
-    nick: I,
+    nick: v,
     colorString: _,
     colorRoleName: N
   } = (0, d.default)(a), A = function(e, t) {
@@ -83,12 +83,12 @@ function I(e) {
       let e = l;
       for (let t = 0; t < 10; t++) {
         let l = h.default.getMessage(n, e);
-        if ((null == l ? void 0 : l.type) !== S.MessageTypes.REPLY || null == l.messageReference) return t;
+        if ((null == l ? void 0 : l.type) !== C.MessageTypes.REPLY || null == l.messageReference) return t;
         e = l.messageReference.message_id
       }
       return 10
     }, [n, l])
-  }(i, a), y = (0, m.useCanStartPublicThread)(i, a), x = n.showThreadPromptOnReply && A >= 2 && y;
+  }(i, a), x = (0, m.useCanStartPublicThread)(i, a), y = n.showThreadPromptOnReply && A >= 2 && x;
 
   function O(e) {
     e.stopPropagation(), (0, c.setPendingReplyShouldMention)(i.id, !u)
@@ -100,7 +100,7 @@ function I(e) {
       children: [(0, l.jsxs)("div", {
         className: T.replyBar,
         children: [(0, l.jsx)(o.Clickable, {
-          onClick: () => (0, f.transitionTo)(S.Routes.CHANNEL(i.getGuildId(), i.id, a.id)),
+          onClick: () => (0, f.transitionTo)(C.Routes.CHANNEL(i.getGuildId(), i.id, a.id)),
           focusProps: {
             offset: {
               top: -8,
@@ -113,10 +113,10 @@ function I(e) {
             color: "header-secondary",
             className: s(T.text, T.replyLabel),
             variant: "text-sm/normal",
-            children: C.default.Messages.REPLYING_TO.format({
+            children: S.default.Messages.REPLYING_TO.format({
               userHook: (e, t) => (0, l.jsx)(o.NameWithRole, {
                 className: T.name,
-                name: I,
+                name: v,
                 color: _,
                 roleName: N
               }, t)
@@ -126,7 +126,7 @@ function I(e) {
           className: T.actions,
           children: [p && (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(o.Tooltip, {
-              text: u ? C.default.Messages.REPLY_MENTION_ON_TOOLTIP : C.default.Messages.REPLY_MENTION_OFF_TOOLTIP,
+              text: u ? S.default.Messages.REPLY_MENTION_ON_TOOLTIP : S.default.Messages.REPLY_MENTION_OFF_TOOLTIP,
               children: e => {
                 let {
                   onMouseEnter: t,
@@ -147,9 +147,9 @@ function I(e) {
                     color: u ? "text-link" : "text-muted",
                     className: T.mentionButton,
                     children: [(0, l.jsx)(E.default, {
-                      "aria-label": C.default.Messages.MENTION,
+                      "aria-label": S.default.Messages.MENTION,
                       className: T.mentionIcon
-                    }), u ? C.default.Messages.REPLY_MENTION_ON : C.default.Messages.REPLY_MENTION_OFF]
+                    }), u ? S.default.Messages.REPLY_MENTION_ON : S.default.Messages.REPLY_MENTION_OFF]
                   })
                 })
               }
@@ -167,7 +167,7 @@ function I(e) {
             })
           })]
         })]
-      }), x && (0, l.jsx)(v, {
+      }), y && (0, l.jsx)(I, {
         channel: i,
         message: a,
         replyChainLength: A

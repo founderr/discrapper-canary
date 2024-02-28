@@ -17,9 +17,9 @@ var a = n("37983"),
   h = n("539938"),
   C = n("49111"),
   p = n("782340"),
-  E = n("628631");
+  m = n("628631");
 
-function m(e) {
+function E(e) {
   let {
     channel: t,
     onClose: n,
@@ -39,7 +39,7 @@ function m(e) {
         children: (0, a.jsx)(o.Text, {
           selectable: !0,
           variant: "text-md/normal",
-          className: E.content,
+          className: m.content,
           children: f.default.parseTopic(t.topic, !0, {
             channelId: t.id
           })
@@ -59,7 +59,7 @@ class _ extends s.Component {
     } = this.props;
     return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0, a.jsxs)(s.Fragment, {
       children: [(0, a.jsx)(h.default.Divider, {}), (0, a.jsxs)("div", {
-        className: i(E.topic, E.expandable),
+        className: i(m.topic, m.expandable),
         onMouseDown: this.onMouseDown,
         onMouseMove: this.onMouseMove,
         onMouseUp: this.onMouseUp,
@@ -68,7 +68,7 @@ class _ extends s.Component {
         children: [(0, a.jsx)(o.Clickable, {
           onClick: this.handleClick,
           "aria-label": p.default.Messages.OPEN_CHANNEL_TOPIC,
-          className: E.topicClickTarget
+          className: m.topicClickTarget
         }), f.default.parseTopic(e.topic, !0, {
           channelId: e.id,
           allowLinks: !0
@@ -83,7 +83,7 @@ class _ extends s.Component {
         if (g(t)) return;
         let e = t.parentNode;
         if ((0, r.isElement)(e) && g(e)) return
-      }(0, o.openModal)(e => (0, a.jsx)(m, {
+      }(0, o.openModal)(e => (0, a.jsx)(E, {
         ...e,
         ...this.props
       }))

@@ -14,8 +14,8 @@ var s = n("37983"),
   d = n("85336"),
   c = n("385179"),
   f = n("292215"),
-  E = n("639137"),
-  p = n("526139"),
+  p = n("639137"),
+  E = n("526139"),
   S = n("158184"),
   _ = n("385890"),
   m = n("337978"),
@@ -38,7 +38,7 @@ function x(e) {
   } = e, {
     analyticsLocations: L,
     AnalyticsLocationProvider: M
-  } = (0, l.default)([...v, r.default.COLLECTIBLES_PAYMENT_MODAL]), y = i.useRef(new a.Environment), [j, b] = i.useState(null), R = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, _.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, p.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
+  } = (0, l.default)([...v, r.default.COLLECTIBLES_PAYMENT_MODAL]), y = i.useRef(new a.Environment), [j, b] = i.useState(null), R = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, _.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, E.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
     key: d.Step.CONFIRM,
     renderStep: e => (0, s.jsx)(S.CollectiblesPaymentModalConfirmStep, {
       ...e,
@@ -75,7 +75,7 @@ function x(e) {
           initialPlanId: null,
           analyticsLocations: L,
           transitionState: x,
-          renderHeader: (e, t, n) => P ? (0, s.jsx)(E.default, {
+          renderHeader: (e, t, n) => P ? (0, s.jsx)(p.default, {
             step: n,
             onClose: () => t(!1)
           }) : (0, s.jsx)(m.default, {

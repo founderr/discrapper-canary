@@ -20,16 +20,16 @@ var i = n("414456"),
   h = n("895026"),
   E = n("506885"),
   g = n("981601"),
-  S = n("42203"),
-  C = n("26989"),
+  C = n("42203"),
+  S = n("26989"),
   T = n("305961"),
-  v = n("697218"),
-  I = n("145131"),
+  I = n("697218"),
+  v = n("145131"),
   _ = n("666897"),
   N = n("826684"),
   A = n("782340"),
-  y = n("665958"),
-  x = n("919163");
+  x = n("665958"),
+  y = n("919163");
 let O = (0, p.createExperiment)({
   kind: "user",
   id: "2021-07_role_popout",
@@ -56,12 +56,12 @@ function R(e) {
     children: M,
     inlinePreview: L = !1
   } = e, P = (0, u.useStateFromStores)([m.default], () => m.default.roleStyle), b = null != t && 0 !== t && !L, j = b && "dot" === P, U = e => (0, l.jsxs)(_.default, {
-    className: a(x.roleMention),
+    className: a(y.roleMention),
     color: "username" === P && b ? t : null,
     ...e,
     children: [j && (0, l.jsx)(d.RoleDot, {
       color: (0, o.int2hex)(t),
-      className: y.roleDot,
+      className: x.roleDot,
       background: !1,
       tooltip: !1
     }), M]
@@ -77,22 +77,22 @@ function R(e) {
       null != i && await (0, h.requestMembersForRole)(R, i)
     },
     renderPopout: e => {
-      let t = S.default.getChannel(s),
+      let t = C.default.getChannel(s),
         a = T.default.getGuild(R),
-        o = C.default.getMembers(a.id),
+        o = S.default.getMembers(a.id),
         u = null == i ? a.roles[a.getEveryoneRoleId()] : a.roles[i],
         m = r(o).filter(e => {
           if ("@everyone" === p || e.roles.includes(i)) {
-            let t = v.default.getUser(e.userId);
+            let t = I.default.getUser(e.userId);
             return null != t
           }
           return !1
         }).sortBy(e => {
           var t;
-          let n = v.default.getUser(e.userId);
+          let n = I.default.getUser(e.userId);
           return (null != n ? null !== (t = e.nick) && void 0 !== t ? t : n.username : "").toLocaleLowerCase()
         }).map(e => {
-          let i = v.default.getUser(e.userId);
+          let i = I.default.getUser(e.userId);
           return (0, l.jsx)(d.Popout, {
             preload: () => (0, E.default)(i.id, i.getAvatarURL(t.guild_id, 80), {
               guildId: t.guild_id,
@@ -138,13 +138,13 @@ function R(e) {
             }
           }, i.id)
         }).value();
-      return (0, l.jsx)(I.default, {
-        className: x.rolePopout,
+      return (0, l.jsx)(v.default, {
+        className: y.rolePopout,
         ...e,
         children: (0, l.jsxs)(d.Scroller, {
-          className: x.roleScroller,
+          className: y.roleScroller,
           children: [(0, l.jsx)(N.default, {
-            className: x.roleHeader,
+            className: y.roleHeader,
             "aria-label": A.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
               title: u.name,
               count: m.length

@@ -21,29 +21,29 @@ function p(e) {
   let {
     channelId: t,
     warningId: p,
-    senderId: E
-  } = e, m = s.useCallback(() => {
+    senderId: m
+  } = e, E = s.useCallback(() => {
     (0, o.dismissChannelSafetyWarnings)(t, [p])
   }, [t, p]);
   s.useEffect(() => {
     (0, d.trackViewedEvent)(h.AnalyticEvents.SAFETY_WARNING_VIEWED, {
       channelId: t,
       warningId: p,
-      senderId: E,
+      senderId: m,
       warningType: u.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2
     }), r.default.increment({
       name: l.MetricEvents.SAFETY_WARNING_VIEW
     })
-  }, [t, p, E]);
+  }, [t, p, m]);
   let g = s.useCallback(e => {
       (0, d.trackCtaEvent)({
         channelId: t,
         warningId: p,
-        senderId: E,
+        senderId: m,
         warningType: u.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
         cta: e
       })
-    }, [t, p, E]),
+    }, [t, p, m]),
     _ = s.useCallback(() => {
       (0, i.openModalLazy)(async () => {
         let {
@@ -55,7 +55,7 @@ function p(e) {
             onClose: l
           } = n;
           return (0, a.jsx)(e, {
-            otherUserId: E,
+            otherUserId: m,
             channelId: t,
             warningId: p,
             warningType: u.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
@@ -66,13 +66,13 @@ function p(e) {
       }, {
         modalKey: f.SAFETY_TOOLS_MODAL_KEY
       }), g(d.CtaEventTypes.USER_BANNER_OPEN_SAFETY_TOOLS)
-    }, [t, E, p, g]),
+    }, [t, m, p, g]),
     S = s.useCallback(() => {
-      m(), g(d.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM)
-    }, [m, g]),
+      E(), g(d.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM)
+    }, [E, g]),
     T = s.useCallback(() => {
-      m(), g(d.CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM)
-    }, [m, g]),
+      E(), g(d.CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM)
+    }, [E, g]),
     A = s.useCallback(() => {
       (0, i.openModalLazy)(async () => {
         let {
@@ -91,20 +91,20 @@ function p(e) {
               null == l || l(), g(d.CtaEventTypes.USER_BANNER_BLOCK_CANCEL)
             },
             onClose: l,
-            userId: E,
+            userId: m,
             channelId: t
           })
         }
       })
-    }, [S, T, E, t, g]);
+    }, [S, T, m, t, g]);
   return (0, a.jsx)(c.SafetyWarningBanner, {
     channelId: t,
     warningId: p,
-    senderId: E,
+    senderId: m,
     warningType: u.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
     header: C.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
     description: C.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
-    onDismiss: m,
+    onDismiss: E,
     primaryButtonText: C.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
     primaryButtonColor: i.Button.Colors.BRAND,
     onPrimaryButtonClick: _,

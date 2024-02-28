@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("824326"),
   E = n("315102"),
   g = n("387111"),
-  S = n("299039"),
-  C = n("481931");
+  C = n("299039"),
+  S = n("481931");
 
 function _(e) {
   let {
@@ -29,21 +29,21 @@ function _(e) {
     channelId: a
   } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getUser(t.userId)), o = null != s ? E.default.getUserAvatarURL(s) : null, d = g.default.getName(n, a, s), c = i.duration(i().diff(i(Number(t.startedPlaying)))).humanize(), f = null != t.activity.details ? "".concat(t.activity.details, " - ").concat(c) : c;
   return (0, l.jsxs)("div", {
-    className: C.userGameContainer,
+    className: S.userGameContainer,
     children: [(0, l.jsx)("div", {
-      className: C.userGameAvatar,
+      className: S.userGameAvatar,
       children: (0, l.jsx)(u.Avatar, {
         src: o,
         size: u.AvatarSizes.SIZE_32,
         "aria-label": null != d ? d : ""
       })
     }), (0, l.jsxs)("div", {
-      className: C.userGameInfo,
+      className: S.userGameInfo,
       children: [(0, l.jsx)(u.Text, {
         variant: "text-md/semibold",
         children: d
       }), (0, l.jsx)("div", {
-        className: C.userGameInfoDetails,
+        className: S.userGameInfoDetails,
         children: (0, l.jsx)(u.Text, {
           variant: "text-xs/medium",
           children: f
@@ -58,11 +58,11 @@ function I(e) {
     game: t,
     guildId: n,
     channelId: s
-  } = e, i = a.useMemo(() => S.default.keys(t).filter(e => f.default.isMember(n, e)), [t, n]), d = i.length > 0 ? t[i[0]] : null, c = null == d ? void 0 : d.activity.application_id, h = (0, r.useStateFromStores)([o.default], () => null != c ? o.default.getApplication(c) : null != d ? o.default.getApplicationByName(d.activity.name) : null);
+  } = e, i = a.useMemo(() => C.default.keys(t).filter(e => f.default.isMember(n, e)), [t, n]), d = i.length > 0 ? t[i[0]] : null, c = null == d ? void 0 : d.activity.application_id, h = (0, r.useStateFromStores)([o.default], () => null != c ? o.default.getApplication(c) : null != d ? o.default.getApplicationByName(d.activity.name) : null);
   return 0 === i.length || null == d ? null : (0, l.jsxs)("div", {
-    className: C.gameContainer,
+    className: S.gameContainer,
     children: [(0, l.jsxs)("div", {
-      className: C.gameHeader,
+      className: S.gameHeader,
       children: [null != h && (0, l.jsx)(u.Avatar, {
         src: h.getIconURL(16),
         size: u.AvatarSizes.SIZE_16,
@@ -86,20 +86,20 @@ function T(e) {
     channel: n
   } = e, a = (0, r.useStateFromStoresArray)([h.default], () => h.default.gameIds.sort((e, t) => ~~Number(e) - ~~Number(t))), s = (0, r.useStateFromStoresObject)([h.default], () => h.default.games);
   return (0, l.jsxs)(u.ScrollerAuto, {
-    className: C.container,
+    className: S.container,
     children: [(0, l.jsx)(c.default, {
-      className: C.alphaTag
+      className: S.alphaTag
     }), (0, l.jsxs)("div", {
-      className: C.partyUpContainer,
+      className: S.partyUpContainer,
       children: [(0, l.jsx)("div", {
-        className: C.partyUpIconContainer,
+        className: S.partyUpIconContainer,
         children: (0, l.jsx)(p.default, {})
       }), (0, l.jsx)(u.Text, {
         variant: "text-md/bold",
         children: "Party Up"
       })]
     }), (0, l.jsx)("div", {
-      className: C.games,
+      className: S.games,
       children: a.map(e => (0, l.jsx)(I, {
         game: s[e],
         guildId: t,
@@ -107,7 +107,7 @@ function T(e) {
       }, e))
     }), (0, l.jsx)(d.default, {
       channel: n,
-      className: C.channelMembers
+      className: S.channelMembers
     })]
   })
 }

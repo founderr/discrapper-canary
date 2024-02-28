@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return p
   },
   default: function() {
-    return C
+    return S
   }
 }), n("222007"), n("843762");
 var i = n("917351"),
@@ -30,7 +30,7 @@ let c = [],
     let e = (0, u.getEffectAnnouncement)(m);
     s.AccessibilityAnnouncer.announce(e, "polite"), m = []
   }, 500);
-class S extends a.default.Store {
+class C extends a.default.Store {
   get recentlyUsedEmojis() {
     return c
   }
@@ -44,8 +44,8 @@ class S extends a.default.Store {
     return f[e]
   }
 }
-S.displayName = "VoiceChannelEffectsStore";
-var C = new S(r.default, {
+C.displayName = "VoiceChannelEffectsStore";
+var S = new C(r.default, {
   VOICE_CHANNEL_EFFECT_CLEAR: e => {
     let {
       userId: t

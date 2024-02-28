@@ -20,8 +20,8 @@ var a = n("37983"),
   h = n("716241"),
   C = n("299285"),
   p = n("983444"),
-  E = n("592407"),
-  m = n("970700"),
+  m = n("592407"),
+  E = n("970700"),
   g = n("271938"),
   _ = n("305961"),
   S = n("697218"),
@@ -33,8 +33,8 @@ var a = n("37983"),
   v = n("299039"),
   L = n("172554"),
   R = n("49111"),
-  y = n("188631"),
-  x = n("782340"),
+  x = n("188631"),
+  y = n("782340"),
   O = n("658561");
 
 function D(e) {
@@ -85,20 +85,20 @@ function P(e) {
     var e, t;
     return (null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
   }), {
-    guildPopulated: F,
-    guildMessaged: H,
+    guildPopulated: H,
+    guildMessaged: F,
     guildPersonalized: U
   } = (0, p.useCompletedStates)(l), {
     handleInvite: k,
-    handleMessage: G,
+    handleMessage: w,
     handlePersonalize: B,
-    handleDownload: w,
+    handleDownload: G,
     handleAddApplication: V
   } = function(e) {
     let t = s.useCallback(() => {
         h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-          setup_type: y.AnalyticsSetupTypes.CHANNEL_WELCOME,
-          action: y.AnalyticsActions.INVITE
+          setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
+          action: x.AnalyticsActions.INVITE
         }), null != e && (0, c.openModalLazy)(async () => {
           let {
             default: t
@@ -115,8 +115,8 @@ function P(e) {
       }, [e]),
       l = s.useCallback(() => {
         h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-          setup_type: y.AnalyticsSetupTypes.CHANNEL_WELCOME,
-          action: y.AnalyticsActions.SEND_MESSAGE
+          setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
+          action: x.AnalyticsActions.SEND_MESSAGE
         }), M.ComponentDispatch.dispatch(R.ComponentActions.TEXTAREA_FOCUS, {
           highlight: !0,
           channelId: R.EMPTY_STRING_CHANNEL_ID
@@ -124,16 +124,16 @@ function P(e) {
       }, []),
       i = s.useCallback(() => {
         h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-          setup_type: y.AnalyticsSetupTypes.CHANNEL_WELCOME,
-          action: y.AnalyticsActions.PERSONALIZE_SERVER
-        }), null != e && E.default.open(e.id, R.GuildSettingsSections.OVERVIEW, {
+          setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
+          action: x.AnalyticsActions.PERSONALIZE_SERVER
+        }), null != e && m.default.open(e.id, R.GuildSettingsSections.OVERVIEW, {
           section: R.AnalyticsSections.CHANNEL_WELCOME_CTA
         })
       }, [e]),
       r = s.useCallback(() => {
         h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-          setup_type: y.AnalyticsSetupTypes.CHANNEL_WELCOME,
-          action: y.AnalyticsActions.DOWNLOAD
+          setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
+          action: x.AnalyticsActions.DOWNLOAD
         }), (0, c.openModalLazy)(async () => {
           let {
             default: e
@@ -146,8 +146,8 @@ function P(e) {
       }, []),
       o = s.useCallback(() => {
         null != e && (h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-          setup_type: y.AnalyticsSetupTypes.CHANNEL_WELCOME,
-          action: y.AnalyticsActions.ADD_APP
+          setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
+          action: x.AnalyticsActions.ADD_APP
         }), (0, c.openModalLazy)(async () => {
           let {
             default: t
@@ -169,7 +169,7 @@ function P(e) {
       handleDownload: r,
       handleAddApplication: o
     }
-  }(l), W = !(b || F || H || U), {
+  }(l), W = !(b || H || F || U), {
     titleAnimatedStyle: Z,
     opacities: z
   } = function(e) {
@@ -210,70 +210,70 @@ function P(e) {
       titleAnimatedStyle: l,
       opacities: a
     }
-  }(W), Y = (0, u.useStateFromStores)([C.default], () => C.default.getGuildApplicationIds(null == l ? void 0 : l.id)), K = Y.length > 0;
+  }(W), K = (0, u.useStateFromStores)([C.default], () => C.default.getGuildApplicationIds(null == l ? void 0 : l.id)), Y = K.length > 0;
   if (s.useEffect(() => {
       var e;
-      (0, m.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : R.EMPTY_STRING_GUILD_ID)
+      (0, E.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : R.EMPTY_STRING_GUILD_ID)
     }, [l]), null == l) return null;
-  let q = [];
-  !f && (A && q.push((0, a.jsx)(o.default.div, {
+  let X = [];
+  !f && (A && X.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("243826"),
-      header: x.default.Messages.WELCOME_CTA_INVITE_TITLE,
-      completed: F,
+      header: y.default.Messages.WELCOME_CTA_INVITE_TITLE,
+      completed: H,
       onClick: k
     })
-  }, "invite")), P && q.push((0, a.jsx)(o.default.div, {
+  }, "invite")), P && X.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("215036"),
-      header: x.default.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
+      header: y.default.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
       completed: U,
       onClick: B
     })
-  }, "customize")), j && q.push((0, a.jsx)(o.default.div, {
+  }, "customize")), j && X.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("505873"),
-      header: x.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
-      completed: H,
-      onClick: G
+      header: y.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
+      completed: F,
+      onClick: w
     })
-  }, "message")), (0, N.isWeb)() && q.push((0, a.jsx)(o.default.div, {
+  }, "message")), (0, N.isWeb)() && X.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("238032"),
-      header: x.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
+      header: y.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
       completed: b,
-      onClick: w
+      onClick: G
     })
-  }, "download")), q.push((0, a.jsx)(o.default.div, {
+  }, "download")), X.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, a.jsx)(D, {
       iconUrl: n("356451"),
-      header: x.default.Messages.WELCOME_CTA_APPS_RECOMMENDATION_TITLE,
-      completed: K,
+      header: y.default.Messages.WELCOME_CTA_APPS_RECOMMENDATION_TITLE,
+      completed: Y,
       onClick: V
     })
   }, "addapp")));
-  let X = T ? x.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : x.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
-  f && (X = x.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
+  let q = T ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
+  f && (q = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
   let J = "".concat(I.default.getArticleURL(R.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
   return (0, a.jsx)(L.default, {
     channelId: t.id,
@@ -286,21 +286,21 @@ function P(e) {
           children: [(0, a.jsx)(c.Heading, {
             className: O.titleName,
             variant: "heading-xxl/semibold",
-            children: x.default.Messages.WELCOME_CTA_TITLE.format({
+            children: y.default.Messages.WELCOME_CTA_TITLE.format({
               guildName: l.name
             })
           }), (0, a.jsxs)(c.Text, {
             color: "header-secondary",
             className: i({
               [O.subtitle]: !0,
-              [O.noChildren]: 0 === q.length
+              [O.noChildren]: 0 === X.length
             }),
             variant: "text-sm/normal",
-            children: [X, " ", q.length > 0 ? x.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
+            children: [q, " ", X.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
               guideURL: J
             }) : null]
           })]
-        }), q]
+        }), X]
       })
     })
   })

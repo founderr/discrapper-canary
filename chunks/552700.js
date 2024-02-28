@@ -22,8 +22,8 @@ var l = n("37983"),
   p = n("981601"),
   E = n("26989"),
   g = n("328275"),
-  S = n("118503"),
-  C = n("711486"),
+  C = n("118503"),
+  S = n("711486"),
   _ = n("387111"),
   I = n("808422"),
   T = n("26324");
@@ -45,7 +45,7 @@ let v = a.memo(function(e) {
         variant: "text-sm/normal",
         color: "header-primary",
         children: _.default.getName(t, n, a)
-      }), s ? (0, l.jsx)(S.default, {
+      }), s ? (0, l.jsx)(C.default, {
         className: T.boost,
         color: d.default.unsafe_rawColors.GUILD_BOOSTING_PINK.css
       }) : null]
@@ -66,7 +66,7 @@ let v = a.memo(function(e) {
     return (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsxs)("div", {
         className: T.avatarContainer,
-        children: [f && (0, l.jsx)(C.default, {
+        children: [f && (0, l.jsx)(S.default, {
           className: i(T.icon, {
             [T.invited]: c
           })
@@ -97,7 +97,7 @@ var A = a.memo(function(e) {
   } = e, {
     user: r,
     blocked: d
-  } = t, g = s.getGuildId(), S = (0, h.useAppContext)(), C = (0, o.useStateFromStores)([E.default], () => {
+  } = t, g = s.getGuildId(), C = (0, h.useAppContext)(), S = (0, o.useStateFromStores)([E.default], () => {
     var e;
     return null != g && (null === (e = E.default.getMember(g, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
   }, [g, r.id]);
@@ -117,9 +117,9 @@ var A = a.memo(function(e) {
           showChatItems: !1
         })
       }, {
-        context: S
+        context: C
       })
-    }, [r, g, s, S]),
+    }, [r, g, s, C]),
     I = a.useCallback(e => (0, l.jsx)(p.default, {
       ...e,
       guildId: g,
@@ -136,8 +136,8 @@ var A = a.memo(function(e) {
     spacing: 8,
     children: e => (0, l.jsx)(c.Clickable, {
       className: i(T.tileContainer, {
-        [T.singleIcon]: C || d,
-        [T.doubleIcon]: C && d
+        [T.singleIcon]: S || d,
+        [T.doubleIcon]: S && d
       }),
       onContextMenu: _,
       ...e,
@@ -145,7 +145,7 @@ var A = a.memo(function(e) {
         participant: t,
         guildId: g,
         channel: s,
-        isPremium: C
+        isPremium: S
       })
     })
   })

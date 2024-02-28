@@ -1,67 +1,67 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("446674"),
-  u = l("77078"),
-  s = l("817963"),
-  d = l("398604"),
-  r = l("397680"),
-  i = l("466148"),
-  o = l("842672"),
-  c = l("782340");
+var l = n("37983");
+n("884691");
+var u = n("446674"),
+  a = n("77078"),
+  d = n("817963"),
+  i = n("398604"),
+  s = n("397680"),
+  r = n("466148"),
+  o = n("842672"),
+  c = n("782340");
 
-function f(e) {
+function E(e) {
   let {
     guildEventId: t,
-    guild: f,
-    channel: E,
+    guild: E,
+    channel: f,
     recurrenceId: _,
     isRecurrenceItem: T
   } = e, {
-    canManageGuildEvent: M
-  } = (0, s.useManageResourcePermissions)(null != E ? E : f), v = (0, a.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(t)), I = M(v), g = (0, o.default)(), m = (0, r.default)(_, null == v ? void 0 : v.id), N = (0, i.default)(t, _);
-  if (!I || null == v) return null;
-  let R = null != v.recurrence_rule && !T,
-    S = e => {
-      (null == _ || e) && !T ? (0, u.openModalLazy)(async () => {
+    canManageGuildEvent: S
+  } = (0, d.useManageResourcePermissions)(null != f ? f : E), v = (0, u.useStateFromStores)([i.default], () => i.default.getGuildScheduledEvent(t)), g = S(v), I = (0, o.default)(), N = (0, s.default)(_, null == v ? void 0 : v.id), m = (0, r.default)(t, _);
+  if (!g || null == v) return null;
+  let M = null != v.recurrence_rule && !T,
+    h = e => {
+      (null == _ || e) && !T ? (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await l.el("590942").then(l.bind(l, "590942"));
-        return l => (0, n.jsx)(e, {
-          ...l,
+        } = await n.el("590942").then(n.bind(n, "590942"));
+        return n => (0, l.jsx)(e, {
+          ...n,
           guildScheduledEventId: t,
-          guildId: f.id
+          guildId: E.id
         })
-      }, g) : null != _ && (0, u.openModalLazy)(async () => {
+      }, I) : null != _ && (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await l.el("229798").then(l.bind(l, "229798"));
-        return t => (0, n.jsx)(e, {
+        } = await n.el("229798").then(n.bind(n, "229798"));
+        return t => (0, l.jsx)(e, {
           ...t,
           guildEvent: v,
           recurrenceId: _
         })
-      }, g)
+      }, I)
     };
-  return (0, n.jsx)(u.MenuItem, {
+  return (0, l.jsx)(a.MenuItem, {
     id: c.default.Messages.EDIT_EVENT,
     label: c.default.Messages.EDIT_EVENT,
-    action: R ? void 0 : () => S(!0),
-    children: R && (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(u.MenuItem, {
+    action: M ? void 0 : () => h(!0),
+    children: M && (0, l.jsxs)(l.Fragment, {
+      children: [(0, l.jsx)(a.MenuItem, {
         id: c.default.Messages.EDIT_THIS_EVENT,
         label: c.default.Messages.EDIT_THIS_EVENT,
-        action: () => S(!1),
-        disabled: (null == m ? void 0 : m.is_canceled) || N.startTime.getTime() < Date.now()
-      }), (0, n.jsx)(u.MenuItem, {
+        action: () => h(!1),
+        disabled: (null == N ? void 0 : N.is_canceled) || m.startTime.getTime() < Date.now()
+      }), (0, l.jsx)(a.MenuItem, {
         id: c.default.Messages.EDIT_ALL_EVENTS,
         label: c.default.Messages.EDIT_ALL_EVENTS,
-        action: () => S(!0),
+        action: () => h(!0),
         disabled: new Date(v.scheduled_start_time).getTime() < Date.now()
       })]
     })

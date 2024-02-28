@@ -24,21 +24,21 @@ let d = i.forwardRef(function(e, t) {
     muted: h,
     to: E,
     avatarClassName: g,
-    selectedClassName: S,
-    innerClassName: C,
+    selectedClassName: C,
+    innerClassName: S,
     wrapContent: T,
-    highlighted: v,
-    focusProps: I,
+    highlighted: I,
+    focusProps: v,
     ..._
   } = e;
   _.className = s(_.className, u.container, {
     [u.selected]: p,
-    [u.highlighted]: v,
-    [null != S ? S : ""]: p,
+    [u.highlighted]: I,
+    [null != C ? C : ""]: p,
     [u.clickable]: !p && (null != E || null != m)
   }), _["aria-selected"] = null !== (n = _["aria-selected"]) && void 0 !== n ? n : p;
   let N = (0, l.jsxs)("div", {
-    className: s(C, u.layout, {
+    className: s(S, u.layout, {
       [u.muted]: !p && h,
       [u.wrappedLayout]: T
     }),
@@ -65,7 +65,7 @@ let d = i.forwardRef(function(e, t) {
     }) : null]
   });
   return null != E ? (0, l.jsx)(o.FocusRing, {
-    ...I,
+    ...v,
     children: (0, l.jsx)(r.Link, {
       to: E,
       onClick: m,
@@ -76,13 +76,13 @@ let d = i.forwardRef(function(e, t) {
     })
   }) : null != m ? (0, l.jsx)(o.Clickable, {
     onClick: m,
-    focusProps: I,
+    focusProps: v,
     ..._,
     role: "listitem",
     innerRef: t,
     children: N
   }) : (0, l.jsx)(o.FocusRing, {
-    ...I,
+    ...v,
     children: (0, l.jsx)("div", {
       ..._,
       role: "listitem",

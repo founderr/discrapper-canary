@@ -25,10 +25,10 @@ function h(e) {
     content: h,
     stickers: E,
     uploads: g,
-    channel: S,
-    restrictMentions: C = !0,
+    channel: C,
+    restrictMentions: S = !0,
     respectCooldown: T = !0
-  } = e, v = f.default.canUseIncreasedMessageLength(u.default.getCurrentUser());
+  } = e, I = f.default.canUseIncreasedMessageLength(u.default.getCurrentUser());
   return new Promise(e => (function(e) {
     var t, n, u;
     let {
@@ -36,23 +36,23 @@ function h(e) {
       type: h,
       content: E,
       stickers: g,
-      uploads: S,
-      channel: C,
+      uploads: C,
+      channel: S,
       restrictMentions: T,
-      respectCooldown: v,
-      userCanUsePremiumMessageLength: I,
+      respectCooldown: I,
+      userCanUsePremiumMessageLength: v,
       resolve: _
     } = e;
-    if (0 === E.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == g || 0 === g.length) && (null == S || 0 === S.length)) {
+    if (0 === E.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == g || 0 === g.length) && (null == C || 0 === C.length)) {
       _({
         valid: !1,
         failureReason: m.MessageRestrictionTypes.EMPTY_MESSAGE
       });
       return
     }
-    let N = I ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
+    let N = v ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
     if (E.length > N) {
-      if (I || null == C) {
+      if (v || null == S) {
         ;
         n = E.length, u = N, (0, i.openModal)(e => (0, l.jsx)(s.default, {
           title: p.default.Messages.MESSAGE_TOO_LONG_HEADER,
@@ -68,7 +68,7 @@ function h(e) {
         })
       } else a.default.dispatch({
         type: "MESSAGE_LENGTH_UPSELL",
-        channel: C,
+        channel: S,
         content: E
       });
       _({
@@ -77,8 +77,8 @@ function h(e) {
       });
       return
     }
-    if (null != C) {
-      if (null != C.getGuildId() && v && o.default.getSlowmodeCooldownGuess(C.id) > 0) {
+    if (null != S) {
+      if (null != S.getGuildId() && I && o.default.getSlowmodeCooldownGuess(S.id) > 0) {
         _({
           valid: !1,
           failureReason: m.MessageRestrictionTypes.SLOWMODE_COOLDOWN
@@ -92,11 +92,11 @@ function h(e) {
             animation: n
           }
           of c.RESTRICTIONS) {
-          let l = e(E, C, T);
+          let l = e(E, S, T);
           if (!1 !== l) {
             f({
               analyticsType: t,
-              channel: C,
+              channel: S,
               onCancel: () => _({
                 valid: !1,
                 failureReason: m.MessageRestrictionTypes.SHOUTING_CANCELLED
@@ -134,10 +134,10 @@ function h(e) {
     content: h,
     stickers: E,
     uploads: g,
-    channel: S,
-    restrictMentions: C,
+    channel: C,
+    restrictMentions: S,
     respectCooldown: T,
-    userCanUsePremiumMessageLength: v,
+    userCanUsePremiumMessageLength: I,
     resolve: e
   }))
 }

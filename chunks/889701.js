@@ -19,16 +19,16 @@ var l = n("37983"),
   h = n("538282"),
   E = n("45961"),
   g = n("626301"),
-  S = n("716849"),
-  C = n("552917"),
+  C = n("716849"),
+  S = n("552917"),
   T = n("917247"),
-  v = n("845579"),
-  I = n("697218"),
+  I = n("845579"),
+  v = n("697218"),
   _ = n("599110"),
   N = n("159885"),
   A = n("570759"),
-  y = n("866353"),
-  x = n("178207"),
+  x = n("866353"),
+  y = n("178207"),
   O = n("256860"),
   R = n("364685"),
   M = n("161585"),
@@ -52,8 +52,8 @@ let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
   Z = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
   J = Y + 2 * Z,
   q = z + 2 * Z,
-  X = s(x.trackStickerSearchEmpty, 200),
-  Q = s(x.trackStickerSearchResultsViewed, 200),
+  X = s(y.trackStickerSearchEmpty, 200),
+  Q = s(y.trackStickerSearchResultsViewed, 200),
   $ = i.forwardRef(function(e, t) {
     var a;
     let {
@@ -66,7 +66,7 @@ let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
     } = (0, c.useAnalyticsContext)(), {
       AnalyticsLocationProvider: Z
     } = (0, m.default)(f.default.STICKER_PICKER);
-    (0, S.useMaybeFetchPremiumLikelihood)(C.default);
+    (0, C.useMaybeFetchPremiumLikelihood)(S.default);
     let $ = (null === (a = (0, T.usePremiumTrialOffer)()) || void 0 === a ? void 0 : a.subscription_trial) != null,
       ee = i.useRef(null),
       et = i.useRef(null),
@@ -86,38 +86,38 @@ let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         listPaddingLeft: H,
         listScrollbarWidth: 8
       }),
-      ed = v.StickerPickerCollapsedSections.useSetting(),
+      ed = I.StickerPickerCollapsedSections.useSetting(),
       ec = i.useMemo(() => new Set(ed), [ed]),
-      ef = (0, o.useStateFromStores)([I.default], () => I.default.getCurrentUser()),
+      ef = (0, o.useStateFromStores)([v.default], () => v.default.getCurrentUser()),
       em = i.useMemo(() => (0, k.getFilteredStickers)(ei, ef, u), [ei, ef, u]),
       ep = (0, O.useFavoriteStickers)(),
       eh = (0, O.useLatestFrecentStickers)(),
       eE = (0, o.useStateFromStoresObject)([R.default], () => R.default.getAllGuildStickers()),
       {
         sendable: eg = [],
-        sendableWithPremium: eS = []
+        sendableWithPremium: eC = []
       } = null != em ? em : {},
-      eC = eg.length + eS.length,
+      eS = eg.length + eC.length,
       eT = i.useCallback(e => {
-        "" === ei ? (0, x.trackStickerSelect)(e) : (0, x.trackStickerSearchSelect)(e, ei, eC), N(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
-      }, [N, ei, eC]),
-      ev = null != eu && eu > B,
+        "" === ei ? (0, y.trackStickerSelect)(e) : (0, y.trackStickerSearchSelect)(e, ei, eS), N(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
+      }, [N, ei, eS]),
+      eI = null != eu && eu > B,
       {
-        rowCount: eI,
+        rowCount: ev,
         rowCountBySection: e_,
         stickersGrid: eN,
         gutterWidth: eA,
-        columnCounts: ey
+        columnCounts: ex
       } = (0, O.useStickersGrid)({
         filteredStickers: em,
         stickersCategories: er,
         collapsedStickersCategories: ec,
         listWidth: eu,
         listPaddingRight: V,
-        stickerNodeMargin: ev ? K : W,
-        stickerNodeWidth: ev ? J : q
+        stickerNodeMargin: eI ? K : W,
+        stickerNodeWidth: eI ? J : q
       }),
-      ex = i.useCallback((e, t) => {
+      ey = i.useCallback((e, t) => {
         let {
           location: i
         } = t;
@@ -137,7 +137,7 @@ let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             });
             break;
           case M.StickerGridItemTypes.STICKER:
-            null != e.sticker && (0, y.isSendableSticker)(e.sticker, ef, u) && eT(e)
+            null != e.sticker && (0, x.isSendableSticker)(e.sticker, ef, u) && eT(e)
         }
       }, [z, ef, u, eT]),
       {
@@ -147,10 +147,10 @@ let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         handleGridContainerKeyDown: eL,
         isUsingKeyboardNavigation: eP
       } = (0, L.useKeyboardNavigation)({
-        columnCounts: ey,
+        columnCounts: ex,
         stickersListRef: et,
         stickersGrid: eN,
-        onGridItemSelect: ex,
+        onGridItemSelect: ey,
         store: p.StickerPickerStore,
         setInspectedStickerPosition: p.StickerPickerStore.setInspectedExpressionPosition,
         gridNavigatorId: w.GRID_NAVIGATOR_ID
@@ -166,7 +166,7 @@ let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       let l = 0;
       null != eE && [...eE.values()].forEach(e => {
         l += e.length
-      }), (0, x.trackStickerPickerOpen)({
+      }), (0, y.trackStickerPickerOpen)({
         containerWidth: s,
         favoriteStickers: ep,
         frequentlyUsedStickers: eh,
@@ -175,10 +175,10 @@ let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       })
     };
     i.useEffect(() => {
-      "" === es.current && "" !== ei && (0, x.trackStickerSearchStart)(), es.current = ei
+      "" === es.current && "" !== ei && (0, y.trackStickerSearchStart)(), es.current = ei
     }, [ei]), i.useEffect(() => {
-      0 === eC ? X(ei) : Q(ei, eC, ea)
-    }, [ei, eC, ea]), i.useLayoutEffect(() => {
+      0 === eS ? X(ei) : Q(ei, eS, ea)
+    }, [ei, eS, ea]), i.useLayoutEffect(() => {
       var e;
       null === (e = en.current) || void 0 === e || e.focus()
     }, []);
@@ -215,7 +215,7 @@ let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             gutterWidth: eA,
             isUsingKeyboardNavigation: eP,
             onSelectSticker: eT,
-            rowCount: eI,
+            rowCount: ev,
             rowCountBySection: e_,
             stickersCategories: er,
             stickersGrid: eN,

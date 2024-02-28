@@ -5,57 +5,57 @@ n.r(t), n.d(t, {
   }
 }), n("424973");
 var i = n("37983"),
-  l = n("884691"),
-  r = n("414456"),
-  s = n.n(r),
+  r = n("884691"),
+  l = n("414456"),
+  s = n.n(l),
   a = n("77078"),
   u = n("945330"),
   o = n("745049"),
-  d = n("782340"),
-  c = n("689560");
+  c = n("782340"),
+  d = n("689560");
 
 function f(e) {
   let {
     onClose: t,
     selectedTab: n,
-    onTabSelected: r,
+    onTabSelected: l,
     userCount: f,
     hasBanner: h,
-    isHub: E = !1
-  } = e, v = l.useRef(null);
-  l.useEffect(() => {
+    isHub: v = !1
+  } = e, E = r.useRef(null);
+  r.useEffect(() => {
     var e, t, n;
-    return null === (n = v.current) || void 0 === n ? void 0 : null === (t = n.ref) || void 0 === t ? void 0 : null === (e = t.blur) || void 0 === e ? void 0 : e.call(t)
+    return null === (n = E.current) || void 0 === n ? void 0 : null === (t = n.ref) || void 0 === t ? void 0 : null === (e = t.blur) || void 0 === e ? void 0 : e.call(t)
   }, []);
-  let C = d.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_TAB_TITLE.format({
+  let C = c.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_TAB_TITLE.format({
       userCount: f
     }),
-    _ = [(0, i.jsx)(a.TabBar.Item, {
-      className: c.tabBarItem,
+    S = [(0, i.jsx)(a.TabBar.Item, {
+      className: d.tabBarItem,
       id: o.EventDetailSections.EVENT_INFO,
-      children: d.default.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE
+      children: c.default.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE
     }, "event-details")];
-  return !E && _.push((0, i.jsx)(a.TabBar.Item, {
-    className: c.tabBarItem,
+  return !v && S.push((0, i.jsx)(a.TabBar.Item, {
+    className: d.tabBarItem,
     id: o.EventDetailSections.RSVP_LIST,
     children: C
   }, "is-hub")), (0, i.jsxs)("div", {
-    className: c.container,
+    className: d.container,
     children: [(0, i.jsx)(a.Clickable, {
-      ref: v,
+      ref: E,
       onClick: t,
-      className: c.closeButton,
-      "aria-label": d.default.Messages.CLOSE,
+      className: d.closeButton,
+      "aria-label": c.default.Messages.CLOSE,
       children: (0, i.jsx)(u.default, {
-        className: s(c.closeIcon, h && c.closeIconBanner)
+        className: s(d.closeIcon, h && d.closeIconBanner)
       })
     }), (0, i.jsx)(a.TabBar, {
-      className: c.tabBar,
-      "aria-label": d.default.Messages.OPTIONS,
+      className: d.tabBar,
+      "aria-label": c.default.Messages.OPTIONS,
       selectedItem: n,
       type: "top",
-      onItemSelect: r,
-      children: _
+      onItemSelect: l,
+      children: S
     })]
   })
 }

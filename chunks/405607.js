@@ -45,13 +45,13 @@ var f = function(e) {
     rowCount: h,
     getScrollOffsetForIndex: E,
     categoryHeight: g,
-    onScroll: S,
-    renderCategoryListItem: C,
+    onScroll: C,
+    renderCategoryListItem: S,
     rowCountBySection: T,
-    renderSection: v
-  } = e, I = u.useStore(e => e.activeCategoryIndex);
+    renderSection: I
+  } = e, v = u.useStore(e => e.activeCategoryIndex);
   c({
-    activeIndex: I,
+    activeIndex: v,
     categoryListRef: t,
     getScrollOffsetForIndex: E
   });
@@ -65,20 +65,20 @@ var f = function(e) {
         null === (l = n.current) || void 0 === l || l.scrollToSectionTop(e)
       }
     }, [n, u]),
-    N = i.useCallback(e => C(a[e], e, () => _(e), I === e), [I, a, _, C]),
+    N = i.useCallback(e => S(a[e], e, () => _(e), v === e), [v, a, _, S]),
     A = i.useMemo(() => "function" == typeof g ? e => g(a[e], e) : g, [a, g]);
   return (0, l.jsxs)("div", {
     className: s(d.wrapper, m),
     children: [(0, l.jsx)(r.default, {
       listPadding: p,
-      onScroll: S,
+      onScroll: C,
       ref: t,
       renderRow: N,
       rowCount: h,
       rowHeight: A,
       hideScrollbar: !0,
       rowCountBySection: T,
-      renderSection: v
+      renderSection: I
     }), null == f ? void 0 : f(_)]
   })
 }

@@ -52,11 +52,11 @@ let m = {
         query: h,
         options: E,
         onHover: g,
-        onClick: S
+        onClick: C
       } = e,
-      C = a.map((e, t) => (0, l.jsx)(s.default.User, {
+      S = a.map((e, t) => (0, l.jsx)(s.default.User, {
         guildId: p.guild_id,
-        onClick: S,
+        onClick: C,
         onHover: g,
         selected: m === t,
         index: t,
@@ -66,7 +66,7 @@ let m = {
         hidePersonalInformation: E.hidePersonalInformation
       }, e.user.id)),
       T = r.map((e, t) => (0, l.jsx)(s.default.Generic, {
-        onClick: S,
+        onClick: C,
         onHover: g,
         selected: m === t + a.length,
         index: a.length + t,
@@ -74,22 +74,22 @@ let m = {
         description: E.hideMentionDescription ? null : e.description,
         "aria-label": e.text
       }, e.text)),
-      v = o.map((e, t) => (0, l.jsx)(s.default.Role, {
-        onClick: S,
+      I = o.map((e, t) => (0, l.jsx)(s.default.Role, {
+        onClick: C,
         onHover: g,
         selected: m === t + a.length + r.length,
         index: a.length + r.length + t,
         role: e,
         hideDescription: E.hideMentionDescription
       }, e.id)),
-      I = E.mentions.user === d.UserMentionMode.DENY;
-    return I ? (t = f.default.Messages.ROLES_MATCHING, n = f.default.Messages.ROLES) : (t = f.default.Messages.MEMBERS_MATCHING, n = f.default.Messages.MEMBERS), (0, l.jsxs)(i.Fragment, {
+      v = E.mentions.user === d.UserMentionMode.DENY;
+    return v ? (t = f.default.Messages.ROLES_MATCHING, n = f.default.Messages.ROLES) : (t = f.default.Messages.MEMBERS_MATCHING, n = f.default.Messages.MEMBERS), (0, l.jsxs)(i.Fragment, {
       children: [(0, u.renderHeader)({
         titleWithQuery: t,
         titleWithoutQuery: n,
         query: h,
         getQuery: e => "".concat(c.MENTION_SENTINEL).concat(e)
-      }), C, a.length > 0 && r.length > 0 ? (0, l.jsx)(s.default.Divider, {}) : null, T, a.length > 0 && o.length > 0 || r.length > 0 && o.length > 0 ? (0, l.jsx)(s.default.Divider, {}) : null, v]
+      }), S, a.length > 0 && r.length > 0 ? (0, l.jsx)(s.default.Divider, {}) : null, T, a.length > 0 && o.length > 0 || r.length > 0 && o.length > 0 ? (0, l.jsx)(s.default.Divider, {}) : null, I]
     }, "mentions")
   },
   onSelect(e) {

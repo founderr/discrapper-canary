@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   default: function() {
-    return C
+    return S
   }
 }), n("424973");
 var l, i, a = n("37983");
@@ -21,18 +21,18 @@ var s = n("414456"),
   h = n("49111"),
   E = n("782340"),
   g = n("77374"),
-  S = n("696246");
+  C = n("696246");
 
-function C(e) {
+function S(e) {
   let {
     user: t,
     guildId: n,
     className: l,
     shrinkAtCount: i,
     shrinkToSize: s,
-    isTryItOutFlow: C,
+    isTryItOutFlow: S,
     size: T = 0
-  } = e, v = (0, m.default)(t.id, n), I = (0, f.default)(v).map(e => ({
+  } = e, I = (0, m.default)(t.id, n), v = (0, f.default)(I).map(e => ({
     ...e,
     src: (0, p.getBadgeAsset)(e.icon)
   })), _ = (0, d.useWindowDispatch)();
@@ -42,20 +42,20 @@ function C(e) {
     role: "group",
     children: (0, a.jsx)(c.default, {})
   });
-  C && null == I.find(e => "premium" === e.id) && I.push({
+  S && null == v.find(e => "premium" === e.id) && v.push({
     id: "premium",
-    icon: S,
-    src: S,
+    icon: C,
+    src: C,
     description: E.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
       date: new Date
     })
   });
-  let N = null != i && null != s && I.length > i ? s : T;
+  let N = null != i && null != s && v.length > i ? s : T;
   return (0, a.jsx)("div", {
-    className: r(l, I.length > 0 ? g.containerWithContent : g.container),
+    className: r(l, v.length > 0 ? g.containerWithContent : g.container),
     "aria-label": E.default.Messages.PROFILE_USER_BADGES,
     role: "group",
-    children: I.map(e => (0, a.jsx)(o.Tooltip, {
+    children: v.map(e => (0, a.jsx)(o.Tooltip, {
       position: "top",
       text: e.description,
       spacing: 12,

@@ -20,34 +20,34 @@ var i = n("446674"),
   h = n("659500"),
   E = n("295999"),
   g = n("49111"),
-  S = n("782340"),
-  C = n("570075");
+  C = n("782340"),
+  S = n("570075");
 
 function T(e) {
   let {
     isCurrentUser: t,
     color: n,
     look: T,
-    applicationStream: v
+    applicationStream: I
   } = e, {
-    activeStream: I,
+    activeStream: v,
     watchingOtherStream: _
   } = (0, i.useStateFromStoresObject)([c.default], () => ({
-    activeStream: c.default.getActiveStreamForApplicationStream(v),
-    watchingOtherStream: null != v && c.default.getAllActiveStreamsForChannel(v.channelId).filter(e => {
+    activeStream: c.default.getActiveStreamForApplicationStream(I),
+    watchingOtherStream: null != I && c.default.getAllActiveStreamsForChannel(I.channelId).filter(e => {
       let {
         ownerId: t
       } = e;
-      return t !== v.ownerId
+      return t !== I.ownerId
     }).length > 0
-  })), N = (0, i.useStateFromStores)([f.default], () => f.default.getChannel(null == v ? void 0 : v.channelId)), [A, y] = (0, d.useCanWatchStream)(N), x = (0, u.useWindowDispatch)(), O = null != I && null != v && I.state !== g.ApplicationStreamStates.ENDED && I.ownerId === v.ownerId, R = e => {
-    null != v && (r.default.selectVoiceChannel(v.channelId), !O && (0, o.watchStreamAndTransitionToStream)(v, {
+  })), N = (0, i.useStateFromStores)([f.default], () => f.default.getChannel(null == I ? void 0 : I.channelId)), [A, x] = (0, d.useCanWatchStream)(N), y = (0, u.useWindowDispatch)(), O = null != v && null != I && v.state !== g.ApplicationStreamStates.ENDED && v.ownerId === I.ownerId, R = e => {
+    null != I && (r.default.selectVoiceChannel(I.channelId), !O && (0, o.watchStreamAndTransitionToStream)(I, {
       forceMultiple: e
-    }), x.dispatch(g.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(g.ComponentActions.MODAL_CLOSE), s.default.popAll())
+    }), y.dispatch(g.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(g.ComponentActions.MODAL_CLOSE), s.default.popAll())
   };
-  if (null == v) return null;
-  let M = (0, d.getStreamCTAString)(y);
-  t ? M = S.default.Messages.WATCH_STREAM_STREAMING : O && (M = S.default.Messages.WATCH_STREAM_WATCHING);
+  if (null == I) return null;
+  let M = (0, d.getStreamCTAString)(x);
+  t ? M = C.default.Messages.WATCH_STREAM_STREAMING : O && (M = C.default.Messages.WATCH_STREAM_WATCHING);
   let L = {
     color: n,
     look: T
@@ -59,10 +59,10 @@ function T(e) {
       ...L,
       fullWidth: !0,
       children: [(0, l.jsx)(p.default, {
-        className: C.streamIcon
+        className: S.streamIcon
       }), M]
     }, "play"), _ && !O ? (0, l.jsx)(a.Tooltip, {
-      text: S.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+      text: C.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
       children: e => (0, l.jsx)(E.default, {
         ...e,
         onClick: () => {
@@ -70,10 +70,10 @@ function T(e) {
           null === (t = e.onClick) || void 0 === t || t.call(e), R(!0)
         },
         ...L,
-        className: C.iconButton,
-        size: C.iconButtonSize,
+        className: S.iconButton,
+        size: S.iconButtonSize,
         children: (0, l.jsx)(m.default, {
-          className: C.iconSize
+          className: S.iconSize
         })
       })
     }) : null]

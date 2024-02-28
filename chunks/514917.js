@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("635792"),
   E = n("252063"),
   g = n("724110"),
-  S = n("373469"),
-  C = n("42203"),
+  C = n("373469"),
+  S = n("42203"),
   _ = n("957255"),
   I = n("824563"),
   T = n("102985"),
@@ -32,8 +32,8 @@ var l = n("37983"),
   R = n("765698"),
   j = n("506885"),
   L = n("217513"),
-  y = n("893980"),
-  O = n("58351"),
+  O = n("893980"),
+  y = n("58351"),
   P = n("430312"),
   b = n("789321"),
   D = n("627601"),
@@ -43,15 +43,15 @@ var l = n("37983"),
   k = n("802279"),
   B = n("465215"),
   V = n("301998"),
-  G = n("491250"),
-  H = n("453649"),
+  H = n("491250"),
+  G = n("453649"),
   W = n("849674"),
   Y = n("817080"),
   z = n("390413"),
   K = n("104649"),
   Z = n("80615"),
-  Q = n("80531"),
-  X = n("590456"),
+  X = n("80531"),
+  Q = n("590456"),
   q = n("49111"),
   J = n("646718"),
   $ = n("782340"),
@@ -61,7 +61,7 @@ var l = n("37983"),
     let {
       channel: n,
       showCall: s
-    } = e, r = n.recipients[0], [et, en] = a.useState(!1), el = a.useRef(0), ea = (0, O.default)(), es = (0, o.useStateFromStores)([v.default], () => v.default.getUser(r)), ei = null == es ? void 0 : es.isNonUserBot();
+    } = e, r = n.recipients[0], [et, en] = a.useState(!1), el = a.useRef(0), ea = (0, y.default)(), es = (0, o.useStateFromStores)([v.default], () => v.default.getUser(r)), ei = null == es ? void 0 : es.isNonUserBot();
     u(null != es, "Profile Panel: user cannot be undefined");
     let er = (0, L.default)(es.id),
       {
@@ -73,9 +73,9 @@ var l = n("37983"),
         channelId: n.id
       }),
       ef = !ea && !s,
-      eh = (0, o.useStateFromStores)([x.default, C.default], () => {
+      eh = (0, o.useStateFromStores)([x.default, S.default], () => {
         var e;
-        return null != es ? C.default.getChannel(null === (e = x.default.getVoiceStateForUser(es.id)) || void 0 === e ? void 0 : e.channelId) : null
+        return null != es ? S.default.getChannel(null === (e = x.default.getVoiceStateForUser(es.id)) || void 0 === e ? void 0 : e.channelId) : null
       }),
       {
         enableHangStatus: em
@@ -89,13 +89,13 @@ var l = n("37983"),
         activity: ep,
         customStatusActivity: eE,
         isApplicationStreaming: eg,
-        isMobile: eS,
-        status: eC,
+        isMobile: eC,
+        status: eS,
         hangStatusActivity: e_,
         isHangStatusPrimaryActivity: eI
-      } = (0, o.useStateFromStoresObject)([S.default, I.default, _.default], () => {
+      } = (0, o.useStateFromStoresObject)([C.default, I.default, _.default], () => {
         var e;
-        let t = null != S.default.getAnyStreamForUser(es.id);
+        let t = null != C.default.getAnyStreamForUser(es.id);
         return {
           activity: I.default.findActivity(es.id, e => {
             let {
@@ -130,14 +130,14 @@ var l = n("37983"),
       ev = null !== (t = N.default.getNickname(null, n.id, es)) && void 0 !== t ? t : A.default.getName(es),
       ex = (0, o.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
       [eN, eA, eM, eR, ej] = (0, o.useStateFromStoresArray)([M.default], () => [M.default.getMutualFriendsCount(es.id), M.default.getMutualFriends(es.id), M.default.getMutualGuilds(es.id), M.default.isFetchingProfile(es.id), M.default.isFetchingFriends(es.id)]),
-      eL = (0, H.useGetVoiceChannelInfoForVoiceActivitySection)(es.id),
-      ey = null != eL && !eg && !eI,
+      eL = (0, G.useGetVoiceChannelInfoForVoiceActivitySection)(es.id),
+      eO = null != eL && !eg && !eI,
       {
-        showVoiceActivityInProfile: eO
+        showVoiceActivityInProfile: ey
       } = R.VoiceActivityProfileExperiment.useExperiment({
         location: "user DM panel"
       }, {
-        autoTrackExposure: ey && ef
+        autoTrackExposure: eO && ef
       }),
       {
         enabled: eP
@@ -161,15 +161,15 @@ var l = n("37983"),
         withMutualFriendsCount: !es.bot
       })
     }, [es]), a.useEffect(() => {
-      null != er && ef && (0, y.trackProfilePanelViewed)({
+      null != er && ef && (0, O.trackProfilePanelViewed)({
         displayProfile: er,
-        isMobile: eS,
+        isMobile: eC,
         loadDurationMs: Date.now() - el.current,
         activity: ep,
         customStatusActivity: eE,
-        status: eC
+        status: eS
       })
-    }, [er, eS, ep, eE, eC, ef]);
+    }, [er, eC, ep, eE, eS, ef]);
     let eF = null == eM ? void 0 : eM.map(e => (0, l.jsx)(Z.default, {
         connection: e,
         user: es,
@@ -185,15 +185,15 @@ var l = n("37983"),
       eV = a.useCallback(() => {
         !es.bot && !ej && null == ek && (0, c.fetchMutualFriends)(es.id)
       }, [ej, ek, es.id, es.bot]),
-      eG = a.useCallback(() => en(!0), []),
-      eH = a.useCallback(() => en(!1), []);
+      eH = a.useCallback(() => en(!0), []),
+      eG = a.useCallback(() => en(!1), []);
     return ef ? (0, l.jsx)("aside", {
       className: ee.profilePanel,
-      onMouseEnter: eG,
-      onMouseLeave: eH,
+      onMouseEnter: eH,
+      onMouseLeave: eG,
       children: (0, l.jsxs)(P.default, {
         user: es,
-        profileType: X.UserProfileTypes.PANEL,
+        profileType: Q.UserProfileTypes.PANEL,
         useDefaultClientTheme: !0,
         children: [eU.shouldShow && (0, l.jsx)(b.default, {
           user: es,
@@ -202,14 +202,14 @@ var l = n("37983"),
           isInSidebar: !0,
           ...eU
         }, es.id), (0, l.jsxs)(d.ScrollerNone, {
-          children: [(0, l.jsx)(Q.default, {
+          children: [(0, l.jsx)(X.default, {
             user: es,
             displayProfile: er,
             channel: n,
             animateAssets: et,
             forceShowPremiumBadge: et
           }), (0, l.jsxs)(P.default.Inner, {
-            children: [(0, l.jsx)(G.default, {
+            children: [(0, l.jsx)(H.default, {
               user: es,
               nickname: ev,
               pronouns: null == er ? void 0 : er.pronouns
@@ -230,8 +230,8 @@ var l = n("37983"),
               setNote: !1,
               hideNote: !1
             })]
-          }), eO && ey ? (0, l.jsx)(P.default.Inner, {
-            children: (0, l.jsx)(H.default, {
+          }), ey && eO ? (0, l.jsx)(P.default.Inner, {
+            children: (0, l.jsx)(G.default, {
               voiceGuild: eL.voiceGuild,
               voiceChannel: eL.voiceChannel,
               color: ee.appButtonColor

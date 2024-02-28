@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   SearchBarIcon: function() {
-    return S
+    return C
   },
   default: function() {
     return T
@@ -28,7 +28,7 @@ let g = Object.freeze({
   LARGE: E.large
 });
 (i = l || (l = {})).MEMBER = "MEMBER", i.ROLE = "ROLE", i.CHANNEL = "CHANNEL", i.GUILD = "GUILD", i.USER = "USER";
-let S = e => {
+let C = e => {
   let {
     hasContent: t,
     onClear: n,
@@ -68,7 +68,7 @@ let S = e => {
     })
   })
 };
-class C extends s.Component {
+class S extends s.Component {
   componentDidUpdate(e) {
     let {
       focusAfterReady: t,
@@ -163,10 +163,10 @@ class C extends s.Component {
       maxHeight: f,
       tags: p,
       onActivate: g,
-      className: C,
+      className: S,
       inputProps: T,
-      focusAfterReady: v
-    } = this.props, I = null != t && t.length > 0, _ = !1, N = [];
+      focusAfterReady: I
+    } = this.props, v = null != t && t.length > 0, _ = !1, N = [];
     return null != p && p.length > 0 && ("string" == typeof p[0] ? p.forEach((e, t) => N.push((0, a.jsxs)(u.Anchor, {
       focusProps: {
         offset: 4
@@ -205,7 +205,7 @@ class C extends s.Component {
       ringTarget: this.containerRef,
       children: (0, a.jsx)("div", {
         ref: this.containerRef,
-        className: o(C, E.container, r, (0, m.getThemeClass)(l), {
+        className: o(S, E.container, r, (0, m.getThemeClass)(l), {
           [E.disabled]: i
         }),
         children: (0, a.jsxs)(u.ScrollerThin, {
@@ -227,14 +227,14 @@ class C extends s.Component {
             onFocus: this.handleFocus,
             disabled: i,
             "aria-disabled": i,
-            autoFocus: !v && e,
+            autoFocus: !I && e,
             onMouseDown: g,
             ...this.defaultInputProps,
             ...T
-          }), null != s ? (0, a.jsx)(S, {
+          }), null != s ? (0, a.jsx)(C, {
             size: r,
             themeOverride: l,
-            hasContent: I,
+            hasContent: v,
             onClear: this.handleClear
           }) : null]
         })
@@ -296,7 +296,7 @@ class C extends s.Component {
     }
   }
 }
-C.Sizes = g, C.defaultProps = {
+S.Sizes = g, S.defaultProps = {
   size: g.SMALL,
   query: "",
   sections: [],
@@ -309,4 +309,4 @@ C.Sizes = g, C.defaultProps = {
   preventEscapePropagation: !0,
   useKeyboardNavigation: !0
 };
-var T = C
+var T = S

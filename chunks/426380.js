@@ -36,11 +36,11 @@ function E(e) {
     guildId: m,
     reviewWarningMessage: E,
     listing: g,
-    application: S,
-    showBenefitsFirst: C,
+    application: C,
+    showBenefitsFirst: S,
     eligibleApplicationSubscriptionGuilds: T,
-    onComplete: v,
-    forcesTransitionToGuild: I
+    onComplete: I,
+    forcesTransitionToGuild: v
   } = e;
   (0, s.openModalLazy)(async () => {
     let {
@@ -49,13 +49,13 @@ function E(e) {
       getApplicationSubscriptionPaymentSteps: h
     } = await n.el("999043").then(n.bind(n, "999043")), _ = h({
       guildId: m,
-      application: S,
+      application: C,
       listing: g,
-      showBenefitsFirst: C,
+      showBenefitsFirst: S,
       eligibleApplicationSubscriptionGuilds: T
     });
     return n => (0, l.jsx)(e, {
-      applicationId: S.id,
+      applicationId: C.id,
       activeSubscription: i,
       stepConfigs: _,
       skuIDs: [f],
@@ -71,10 +71,10 @@ function E(e) {
           renderHeader: d,
           planGroup: c,
           reviewWarningMessage: E,
-          applicationId: S.id,
+          applicationId: C.id,
           guildId: null != m ? m : void 0,
-          onComplete: v,
-          forcesTransitionToGuild: I
+          onComplete: I,
+          forcesTransitionToGuild: v
         })
       })
     })
@@ -88,7 +88,7 @@ let g = async e => {
   await u.default.fetchApplications([e], !1);
   let n = d.default.getApplication(e);
   return a(null != n, "Failed to find application with ID %s", e), n
-}, S = async e => {
+}, C = async e => {
   let t = f.default.getSubscriptionGroupListingForApplication(e);
   if (null != t) return t;
   let n = await (0, o.fetchAllStoreListingsForApplication)(e),
@@ -96,7 +96,7 @@ let g = async e => {
   a(null != l, "Failed to find subscription store listing"), await (0, c.fetchAllSubscriptionListingsDataForApplication)(e, null == l ? void 0 : l.id);
   let i = f.default.getSubscriptionGroupListingForApplication(e);
   return a(null != i, "Failed to find subscription group listing"), i
-}, C = async (e, t) => {
+}, S = async (e, t) => {
   let n = await (0, r.fetchUserEntitlementsForApplication)(e),
     l = n.filter(e => null == e.ends_at || new Date(e.ends_at) > new Date).find(e => e.sku_id === t);
   a(null == l, "User already has an active subscription to this SKU")
@@ -109,10 +109,10 @@ async function T(e) {
     analyticsLocationObject: i,
     analyticsLocations: s,
     renderHeader: r
-  } = e, o = await g(t), u = await S(t), d = (0, m.getPayableSubscriptionListing)(u);
+  } = e, o = await g(t), u = await C(t), d = (0, m.getPayableSubscriptionListing)(u);
   a(null != d, "Failed to find subscription listing");
   let c = (0, m.isApplicationUserSubscription)(d.sku_flags);
-  a(c, "Guild application subscriptions unsupported!"), a(d.published, "Subscription listing not published"), await C(t, n);
+  a(c, "Guild application subscriptions unsupported!"), a(d.published, "Subscription listing not published"), await S(t, n);
   let f = {
     initialPlanId: null != l ? l : null == d ? void 0 : d.subscription_plans[0].id,
     activeSubscription: null,

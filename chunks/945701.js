@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return v
   }
 }), n("222007");
 var l = n("37983"),
@@ -19,13 +19,13 @@ var l = n("37983"),
   h = n("882641"),
   E = n("964261"),
   g = n("49111"),
-  S = n("782340"),
-  C = n("789215");
+  C = n("782340"),
+  S = n("789215");
 let T = (0, p.createChannelRecord)({
     id: g.ONE_STRING_CHANNEL_ID,
     type: g.ChannelTypes.DM
   }),
-  v = i.forwardRef(function(e, t) {
+  I = i.forwardRef(function(e, t) {
     let {
       replyPlaceholder: n,
       replyHeaderText: a,
@@ -33,37 +33,37 @@ let T = (0, p.createChannelRecord)({
       showPopout: m,
       children: p,
       hide: h
-    } = e, [g, v] = i.useState(""), [I, _] = i.useState((0, c.toRichValue)("")), N = (0, u.default)();
+    } = e, [g, I] = i.useState(""), [v, _] = i.useState((0, c.toRichValue)("")), N = (0, u.default)();
     return i.useEffect(() => {
-      v(""), _((0, c.toRichValue)(""))
+      I(""), _((0, c.toRichValue)(""))
     }, [m]), (0, l.jsx)(o.Popout, {
       align: "right",
       position: "bottom",
       shouldShow: m,
       disablePointerEvents: !1,
       renderPopout: () => (0, l.jsx)("div", {
-        className: s([C.reply, "theme-".concat(N)]),
+        className: s([S.reply, "theme-".concat(N)]),
         ref: t,
         children: (0, l.jsx)(o.FocusLock, {
           containerRef: t,
           children: (0, l.jsxs)("div", {
             children: [(0, l.jsx)(o.Text, {
               variant: "text-xs/bold",
-              className: C.replyHeader,
-              children: null != a ? a : S.default.Messages.CHAT
+              className: S.replyHeader,
+              children: null != a ? a : C.default.Messages.CHAT
             }), (0, l.jsx)(f.default, {
-              placeholder: null != n ? n : S.default.Messages.CHAT,
-              className: C.replyInput,
+              placeholder: null != n ? n : C.default.Messages.CHAT,
+              className: S.replyInput,
               showRemainingCharsAfterCount: -1,
               allowNewLines: !1,
               maxCharacterCount: E.MAX_CHAR_COUNT,
               channel: T,
               onChange: (e, t, n) => {
-                v(t), _(n)
+                I(t), _(n)
               },
               type: d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT,
               textValue: g,
-              richValue: I,
+              richValue: v,
               onSubmit: e => {
                 let {
                   value: t
@@ -87,29 +87,29 @@ let T = (0, p.createChannelRecord)({
       children: () => p
     })
   });
-var I = e => {
+var v = e => {
   let {
     onInteraction: t,
     replyHeaderText: n,
     replyPlaceholder: a,
     showReact: d = !0,
     showReply: c = !0
-  } = e, f = (0, u.default)(), [p, I] = i.useState(!1), [_, N] = i.useState(!1), A = i.useRef(null), y = i.useRef(null);
+  } = e, f = (0, u.default)(), [p, v] = i.useState(!1), [_, N] = i.useState(!1), A = i.useRef(null), x = i.useRef(null);
 
-  function x(e) {
+  function y(e) {
     var t, n;
-    null != e.target && (!(null == A ? void 0 : null === (t = A.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && I(!1), !(null == y ? void 0 : null === (n = y.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && N(!1))
+    null != e.target && (!(null == A ? void 0 : null === (t = A.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && v(!1), !(null == x ? void 0 : null === (n = x.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && N(!1))
   }
   return i.useEffect(() => {
     let e = e => {
-      "Escape" === e.key && (N(!1), I(!1))
+      "Escape" === e.key && (N(!1), v(!1))
     };
-    return document.addEventListener("keydown", e), document.addEventListener("mousedown", x), () => {
-      document.removeEventListener("keydown", e), document.removeEventListener("mousedown", x)
+    return document.addEventListener("keydown", e), document.addEventListener("mousedown", y), () => {
+      document.removeEventListener("keydown", e), document.removeEventListener("mousedown", y)
     }
   }, []), (0, l.jsx)(l.Fragment, {
     children: (0, l.jsxs)("div", {
-      className: C.reactions,
+      className: S.reactions,
       children: [d && (0, l.jsx)(o.Popout, {
         align: "right",
         position: "top",
@@ -122,22 +122,22 @@ var I = e => {
             messageId: g.EMPTY_STRING_MESSAGE_ID,
             channel: T,
             closePopout: () => {
-              I(!1)
+              v(!1)
             },
             onSelectEmoji: e => {
               null != e && (t({
                 interactionType: E.AtomicReactorInteractionTypes.ReactSubmit,
                 emoji: e,
                 reply: null
-              }), I(!1))
+              }), v(!1))
             }
           })
         }),
         children: () => (0, l.jsx)(o.Tooltip, {
-          text: S.default.Messages.ADD_REACTION,
+          text: C.default.Messages.ADD_REACTION,
           children: e => (0, l.jsx)("div", {
             ...e,
-            className: C.reaction,
+            className: S.reaction,
             children: (0, l.jsx)(h.default, {
               active: !1,
               tabIndex: 0,
@@ -146,14 +146,14 @@ var I = e => {
                   interactionType: E.AtomicReactorInteractionTypes.ReactBegin,
                   emoji: null,
                   reply: null
-                }), I(!0), N(!1)
+                }), v(!0), N(!1)
               }
             })
           })
         })
-      }), c && (0, l.jsx)(v, {
+      }), c && (0, l.jsx)(I, {
         hide: () => N(!1),
-        ref: y,
+        ref: x,
         replyHeaderText: n,
         replyPlaceholder: a,
         showPopout: _,
@@ -165,10 +165,10 @@ var I = e => {
           })
         },
         children: (0, l.jsx)(o.Tooltip, {
-          text: S.default.Messages.MESSAGE_ACTION_REPLY,
+          text: C.default.Messages.MESSAGE_ACTION_REPLY,
           children: e => (0, l.jsx)("button", {
             ...e,
-            className: s(C.reaction, C.emojiButton),
+            className: s(S.reaction, S.emojiButton),
             onClick: () => {
               t({
                 interactionType: E.AtomicReactorInteractionTypes.ReplyBegin,

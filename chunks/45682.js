@@ -19,16 +19,16 @@ var l = n("37983"),
   h = n("181114"),
   E = n("216422"),
   g = n("719923"),
-  S = n("994428"),
-  C = n("782340"),
+  C = n("994428"),
+  S = n("782340"),
   T = n("577827");
-let v = {
+let I = {
   tension: 750,
   mass: 2.5,
   friction: 70
 };
 
-function I(e) {
+function v(e) {
   let {
     tooltipText: t,
     headingText: n,
@@ -58,16 +58,16 @@ function _(e) {
     checked: t,
     onClick: n,
     id: a = "burst-reaction-toggle-button"
-  } = e, E = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), _ = p.default.getCurrentUser(), N = null != _ && !(0, g.isPremium)(_), A = N ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [y, x] = (0, m.useSelectedDismissibleContent)(A), [O, R] = i.useState(!1), [M, L] = (0, r.useSpring)(() => ({})), P = (0, r.animated)(d.SuperReactionIcon);
+  } = e, E = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), _ = p.default.getCurrentUser(), N = null != _ && !(0, g.isPremium)(_), A = N ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [x, y] = (0, m.useSelectedDismissibleContent)(A), [O, R] = i.useState(!1), [M, L] = (0, r.useSpring)(() => ({})), P = (0, r.animated)(d.SuperReactionIcon);
   i.useEffect(() => {
-    let e = y === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-    e && (x(S.ContentDismissActionType.DISMISS), setTimeout(() => R(e), 200))
-  }, [y, x]);
-  let b = O ? C.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? C.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : C.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
-    j = O ? C.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
+    let e = x === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+    e && (y(C.ContentDismissActionType.DISMISS), setTimeout(() => R(e), 200))
+  }, [x, y]);
+  let b = O ? S.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? S.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : S.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
+    j = O ? S.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
   return (0, l.jsxs)(c.TooltipContainer, {
     position: "top",
-    text: (0, l.jsx)(I, {
+    text: (0, l.jsx)(v, {
       textColor: "always-white",
       tooltipText: b,
       headingText: j
@@ -87,7 +87,7 @@ function _(e) {
           to: {
             rotate: t ? "0deg" : "360deg"
           },
-          config: v
+          config: I
         }), null == n || n(), R(!1)
       },
       id: a,
@@ -110,7 +110,7 @@ function _(e) {
         children: (0, l.jsx)(c.Text, {
           className: T.visuallyHidden,
           variant: "text-sm/semibold",
-          children: C.default.Messages.SUPER_REACTION_TOGGLE_DISABLED
+          children: S.default.Messages.SUPER_REACTION_TOGGLE_DISABLED
         })
       })]
     })]

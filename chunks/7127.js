@@ -24,11 +24,11 @@ function f(e) {
     application: f
   } = (0, l.usePaymentContext)();
   a(null != i, "Expected selectedSkuId"), a(null != f, "Expected application");
-  let E = n[i];
-  a(null != E, "Expected sku");
-  let p = d.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+  let p = n[i];
+  a(null != p, "Expected sku");
+  let E = d.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
     applicationName: f.name,
-    itemName: E.name
+    itemName: p.name
   });
   return (0, s.jsxs)(u.PaymentPortalBody, {
     children: [(0, s.jsx)(o.default, {}), (0, s.jsxs)("div", {
@@ -39,7 +39,7 @@ function f(e) {
         children: "Success!"
       }), (0, s.jsx)(r.Text, {
         variant: "text-md/normal",
-        children: p
+        children: E
       }), (0, s.jsx)("div", {
         className: c.divider
       }), (0, s.jsx)(r.Button, {

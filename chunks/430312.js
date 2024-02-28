@@ -30,25 +30,25 @@ function p(e) {
     profileType: h,
     className: E,
     pendingThemeColors: g,
-    pendingProfileEffectId: S,
-    useDefaultClientTheme: C,
+    pendingProfileEffectId: C,
+    useDefaultClientTheme: S,
     children: T,
-    forceShowPremium: v = !1,
-    showOutOfBoundaryComponents: I = !1
+    forceShowPremium: I = !1,
+    showOutOfBoundaryComponents: v = !1
   } = e, _ = i.useRef(null), N = (0, o.default)(a.id, p), {
     profileTheme: A
   } = (0, u.default)(a, N, {
     themeElementRef: _,
     pendingThemeColors: g,
-    isPreview: v,
-    useDefaultClientTheme: C
-  }), y = (null == N ? void 0 : N.canEditThemes) || v, x = i.useMemo(() => ({
+    isPreview: I,
+    useDefaultClientTheme: S
+  }), x = (null == N ? void 0 : N.canEditThemes) || I, y = i.useMemo(() => ({
     profileType: h,
     profileTheme: A
   }), [h, A]);
   return (0, l.jsx)("div", {
     ref: _,
-    className: s((t = h, (0, r.match)(t).with(d.UserProfileTypes.POPOUT, d.UserProfileTypes.SETTINGS, d.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutOuter).with(d.UserProfileTypes.MODAL, () => f.userProfileModalOuter).with(d.UserProfileTypes.PANEL, () => f.userPanelOuter).with(d.UserProfileTypes.CARD, () => f.userCardOuter).exhaustive()), y ? f.userProfileOuterThemed : f.userProfileOuterUnthemed, c.profileColors, I ? f.showOutOfBoundaryComponents : void 0, "theme-".concat(A), E),
+    className: s((t = h, (0, r.match)(t).with(d.UserProfileTypes.POPOUT, d.UserProfileTypes.SETTINGS, d.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutOuter).with(d.UserProfileTypes.MODAL, () => f.userProfileModalOuter).with(d.UserProfileTypes.PANEL, () => f.userPanelOuter).with(d.UserProfileTypes.CARD, () => f.userCardOuter).exhaustive()), x ? f.userProfileOuterThemed : f.userProfileOuterUnthemed, c.profileColors, v ? f.showOutOfBoundaryComponents : void 0, "theme-".concat(A), E),
     children: (0, l.jsx)("div", {
       className: s((n = h, (0, r.match)(n).with(d.UserProfileTypes.POPOUT, d.UserProfileTypes.SETTINGS, d.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutInner).with(d.UserProfileTypes.MODAL, () => f.userProfileModalInner).with(d.UserProfileTypes.PANEL, () => f.userPanelInner).with(d.UserProfileTypes.CARD, () => f.userCardInner).exhaustive()), function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -66,9 +66,9 @@ function p(e) {
         }, () => f.userProfileInnerThemedWithBanner).with({
           canUsePremiumProfileCustomization: !0
         }, () => f.userProfileInnerThemedPremiumWithoutBanner).otherwise(() => f.userProfileInnerThemedNonPremium)
-      }((null == N ? void 0 : N.canUsePremiumProfileCustomization) || v, null !== S && ((null == N ? void 0 : N.banner) != null || void 0 !== S), h)),
+      }((null == N ? void 0 : N.canUsePremiumProfileCustomization) || I, null !== C && ((null == N ? void 0 : N.banner) != null || void 0 !== C), h)),
       children: (0, l.jsx)(m.Provider, {
-        value: x,
+        value: y,
         children: T
       })
     })

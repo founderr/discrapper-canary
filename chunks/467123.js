@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return C
   },
   isPointInCodeBlock: function() {
-    return I
+    return v
   },
   hasOpenPlainTextCodeBlock: function() {
     return _
@@ -36,7 +36,7 @@ let E = /^[a-z0-9_+\-.#]+$/,
 for (let e in h)
   if (null == e.match(E)) throw Error("Language name does not match regex: ".concat(e));
 
-function S(e) {
+function C(e) {
   let {
     onChange: t
   } = e, n = null;
@@ -85,19 +85,19 @@ function S(e) {
                 f = n && 0 === s.length,
                 p = l && 0 === s.length,
                 E = d ? s.slice(1) : s,
-                S = E.length % 2 == 1,
-                C = S && (null == u || "" === u || null != u.match(g)),
-                T = C && null != u && null !== (a = h[u.toLowerCase()]) && void 0 !== a ? a : null;
+                C = E.length % 2 == 1,
+                S = C && (null == u || "" === u || null != u.match(g)),
+                T = S && null != u && null !== (a = h[u.toLowerCase()]) && void 0 !== a ? a : null;
               return {
                 blockEntry: t,
                 wasInCodeBlock: n,
                 isInCodeBlock: f,
                 isStyledCodeBlockLine: p,
-                lang: S || d ? T : i,
+                lang: C || d ? T : i,
                 hljsTypes: null,
                 closesCodeBlock: d,
-                opensCodeBlock: S,
-                opensCodeBlockOnOwnLine: C
+                opensCodeBlock: C,
+                opensCodeBlockOnOwnLine: S
               }
             }(e, l, i, a, s), t.push(n)
           }
@@ -113,12 +113,12 @@ function S(e) {
                 if (null != i && null != l.default.getLanguage(i)) {
                   let n = function(e, t) {
                     let n = "".concat(e, "-").concat(t),
-                      l = v.get(n);
+                      l = I.get(n);
                     if (null != l) return l;
                     let i = r.default.highlight(t, e, !1);
                     if (null == i || i.illegal) return null;
                     let a = i.value.split("\n");
-                    return v.set(n, a), a
+                    return I.set(n, a), a
                   }(e, i);
                   if (null != n && n.length === t.length) {
                     let e = [];
@@ -128,7 +128,7 @@ function S(e) {
                         s = [],
                         r = 0,
                         o = 0;
-                      for (; null != (i = C.exec(a));) {
+                      for (; null != (i = S.exec(a));) {
                         let t = i.index + i[0].length,
                           n = i.index - o;
                         i.index > o && (e.length > 0 && s.push({
@@ -178,15 +178,15 @@ function S(e) {
     }), n = c.EditorUtils.richValue(e)), t()
   }, e
 }
-let C = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+let S = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
   T = {
     max: 1 / 0,
     maxAge: 1 * s.default.Millis.MINUTE,
     updateAgeOnGet: !0
   },
-  v = new a(T);
+  I = new a(T);
 
-function I(e, t) {
+function v(e, t) {
   let n = 0;
   for (let i of c.EditorUtils.nodes(e, {
       at: {
@@ -211,5 +211,5 @@ function I(e, t) {
 function _(e) {
   if (null == e.selection) return !1;
   let t = c.RangeUtils.start(e.selection);
-  return I(e, t)
+  return v(e, t)
 }

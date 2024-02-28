@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return A
   },
   useFirstMediaIsEmbed: function() {
-    return y
+    return x
   },
   shouldShowAddMediaToOriginalPostModal: function() {
-    return x
+    return y
   },
   messageContainsGifOrVideo: function() {
     return O
@@ -46,7 +46,7 @@ function g(e, t) {
   return null != n && "#ffffff" === n.toLowerCase() || t ? void 0 : n
 }
 
-function S(e) {
+function C(e) {
   if (null == e) return !1;
   let {
     filename: t,
@@ -56,15 +56,15 @@ function S(e) {
   return (0, s.isImageFile)(t) && null != n && n > 0 && null != l && l > 0
 }
 
-function C(e) {
+function S(e) {
   return null != e && null != e && (0, s.isVideoFile)(e.filename) && null != e.proxy_url
 }
 
 function T(e) {
-  return S(e) || C(e)
+  return C(e) || S(e)
 }(i = l || (l = {})).EMBED = "embed", i.ATTACHMENT = "attachment";
 
-function v(e) {
+function I(e) {
   let t = o.InlineAttachmentMedia.useSetting();
   return function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.InlineAttachmentMedia.getSetting();
@@ -107,7 +107,7 @@ function v(e) {
   }(e, t)
 }
 
-function I(e, t) {
+function v(e, t) {
   let n = o.InlineEmbedMedia.useSetting(),
     l = o.RenderEmbeds.useSetting();
   if (null == e) return [];
@@ -150,30 +150,30 @@ function _(e, t) {
 }
 
 function N(e, t) {
-  let n = v(e),
-    l = I(e, t);
+  let n = I(e),
+    l = v(e, t);
   return [...n, ...l]
 }
 
 function A(e, t) {
   var n, l;
-  let i = v(e),
-    a = I(e, t);
+  let i = I(e),
+    a = v(e, t);
   return null !== (l = null !== (n = i[0]) && void 0 !== n ? n : a[0]) && void 0 !== l ? l : null
 }
 
-function y(e, t) {
-  let n = v(e),
-    l = I(e, t);
+function x(e, t) {
+  let n = I(e),
+    l = v(e, t);
   return null == n[0] && null != l[0]
 }
 
-function x(e, t) {
+function y(e, t) {
   var n;
   let l = u.default.getChannel(t);
   if (null == l) return !1;
   let i = d.default.getMessage(l.id, p.default.castChannelIdAsMessageId(l.id));
-  return null != i && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && l.isForumPost() && l.ownerId === (null === (n = c.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === r.default.getCount(l.id) && (0 === i.attachments.length || null == i.attachments.find(e => S(e) || C(e)))
+  return null != i && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && l.isForumPost() && l.ownerId === (null === (n = c.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === r.default.getCount(l.id) && (0 === i.attachments.length || null == i.attachments.find(e => C(e) || S(e)))
 }
 
 function O(e) {

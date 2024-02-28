@@ -22,16 +22,16 @@ var l = n("37983"),
   h = n("515059"),
   E = n("501536"),
   g = n("124299"),
-  S = n("476765"),
-  C = n("507217"),
+  C = n("476765"),
+  S = n("507217"),
   T = n("240249"),
-  v = n("972620"),
-  I = n("524768"),
+  I = n("972620"),
+  v = n("524768"),
   _ = n("389153"),
   N = n("586450"),
   A = n("41884"),
-  y = n("355263"),
-  x = n("317041"),
+  x = n("355263"),
+  y = n("317041"),
   O = n("49111"),
   R = n("782340"),
   M = n("847948"),
@@ -60,11 +60,11 @@ var U = i.forwardRef(function(e, t) {
     filterSection: J
   } = T.useDiscovery(n, {
     commandType: d.ApplicationCommandType.CHAT,
-    builtIns: a ? v.BuiltInCommandFilter.ONLY_TEXT : v.BuiltInCommandFilter.ALLOW,
+    builtIns: a ? I.BuiltInCommandFilter.ONLY_TEXT : I.BuiltInCommandFilter.ALLOW,
     applicationCommands: !a
   }, {
     placeholderCount: 7,
-    limit: x.DISCOVERY_COMMANDS_QUERY_LIMIT,
+    limit: y.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
   }), q = (0, p.useSynchronizedActiveCategoryIndexForScrollPosition)({
     activeCategoryIndex: B,
@@ -102,17 +102,17 @@ var U = i.forwardRef(function(e, t) {
     }
   }, [Y, z]);
   let ee = i.useCallback(e => {
-      if (e.id === z || e.id === x.BuiltInSectionId.FRECENCY) {
+      if (e.id === z || e.id === y.BuiltInSectionId.FRECENCY) {
         var t;
         J(null), null === (t = w.current) || void 0 === t || t.scrollToSectionTop(0)
       } else J(e.id)
     }, [J, z]),
     et = i.useCallback((e, t, l) => {
-      C.setActiveCommand({
+      S.setActiveCommand({
         channelId: n.id,
         command: e,
         section: t,
-        location: I.ApplicationCommandTriggerLocations.DISCOVERY,
+        location: v.ApplicationCommandTriggerLocations.DISCOVERY,
         triggerSection: l
       })
     }, [n.id]);
@@ -141,7 +141,7 @@ var U = i.forwardRef(function(e, t) {
   let en = i.useCallback(e => {
       let t = V[e];
       if (null == t) return null;
-      let i = (0, y.getIconComponent)(t),
+      let i = (0, x.getIconComponent)(t),
         a = (0, l.jsx)(i, {
           channel: n,
           section: t,
@@ -181,7 +181,7 @@ var U = i.forwardRef(function(e, t) {
       let a = K[t.sectionIndex],
         s = a.data[t.sectionRowIndex],
         r = "".concat(a.section.id, ":").concat(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : e);
-      if (null == s || a.section.id !== s.applicationId && a.section.id !== x.BuiltInSectionId.FRECENCY || s.inputType === I.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(A.default, {}, r);
+      if (null == s || a.section.id !== s.applicationId && a.section.id !== y.BuiltInSectionId.FRECENCY || s.inputType === v.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(A.default, {}, r);
       let o = H.find(e => e.id === s.applicationId);
       return (0, l.jsx)(E.default.NewCommand, {
         index: e,
@@ -197,7 +197,7 @@ var U = i.forwardRef(function(e, t) {
         }
       }, r)
     }, [n, K, et, H, U]),
-    ea = (0, S.useUID)();
+    ea = (0, C.useUID)();
   return (0, f.useChannelEditorPopup)(ea, !0, (0, E.getAutocompleteRowId)(U)), i.useEffect(() => () => {
     (0, f.dismissChannelEditorPopup)()
   }, []), (0, l.jsxs)(E.default, {

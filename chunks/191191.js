@@ -19,8 +19,8 @@ var l = n("37983"),
   h = n("945956"),
   E = n("305122"),
   g = n("235004"),
-  S = n("534108"),
-  C = n("673431");
+  C = n("534108"),
+  S = n("673431");
 
 function T(e) {
   let {
@@ -28,13 +28,13 @@ function T(e) {
     channel: n,
     containerWidth: a,
     onClose: T,
-    onSelect: v,
-    analyticsSource: I,
+    onSelect: I,
+    analyticsSource: v,
     suppressPlaySound: _,
     shouldShowUpsell: N = !0,
     gridNotice: A,
-    autoWidth: y = !1,
-    soundButtonOverlay: x,
+    autoWidth: x = !1,
+    soundButtonOverlay: y,
     listPadding: O,
     renderHeader: R,
     defaultSoundsOnly: M
@@ -45,7 +45,7 @@ function T(e) {
     type: r.ImpressionTypes.POPOUT,
     name: r.ImpressionNames.SOUNDBOARD_POPOUT,
     properties: {
-      source: I,
+      source: v,
       guild_id: t,
       media_session_id: P
     }
@@ -53,20 +53,20 @@ function T(e) {
     E.maybeFetchSoundboardSounds(), p.FrecencyUserSettingsActionCreators.loadIfNecessary(), (0, m.setSearchQuery)("")
   }, []), (0, l.jsx)(b, {
     children: (0, l.jsx)("div", {
-      className: s(C.picker, {
-        [C.fetching]: L,
-        [C.autoWidth]: y
+      className: s(S.picker, {
+        [S.fetching]: L,
+        [S.autoWidth]: x
       }),
-      children: L ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsx)(S.default, {
+      children: L ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsx)(C.default, {
         guildId: t,
         channel: n,
         onClose: T,
-        onSelect: v,
+        onSelect: I,
         containerWidth: a,
         suppressPlaySound: _,
         shouldShowUpsell: N,
         gridNotice: A,
-        soundButtonOverlay: x,
+        soundButtonOverlay: y,
         listPadding: O,
         renderHeader: R,
         defaultSoundsOnly: M

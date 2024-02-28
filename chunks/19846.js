@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return y
   }
 });
 var a = n("37983"),
@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("208021"),
   C = n("713135"),
   p = n("401642"),
-  E = n("982108"),
-  m = n("27618"),
+  m = n("982108"),
+  E = n("27618"),
   g = n("697218"),
   _ = n("587974"),
   S = n("315102"),
@@ -183,29 +183,29 @@ let L = e => {
         return null
     }
   },
-  y = e => {
+  x = e => {
     let {
       channelId: t,
       otherUserId: n
     } = e, l = s.useCallback(() => {
       (0, r.showToast)((0, r.createToast)(N.default.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE))
     }, []), i = s.useCallback(() => {
-      h.default.closeChannelSidebar(E.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+      h.default.closeChannelSidebar(m.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
     }, []), o = s.useCallback(() => {
-      h.default.closeChannelSidebar(E.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+      h.default.closeChannelSidebar(m.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
     }, []), {
       acceptMessageRequest: u,
       rejectMessageRequest: c,
       isAcceptLoading: f,
       isRejectLoading: C,
       isOptimisticAccepted: p,
-      isOptimisticRejected: m
+      isOptimisticRejected: E
     } = (0, d.useMessageRequestActions)({
       user: g.default.getUser(n),
       onError: l,
       onAcceptSuccess: o,
       onRejectSuccess: i
-    }), _ = f || C || p || m;
+    }), _ = f || C || p || E;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(r.Button, {
         className: v.action,
@@ -225,14 +225,14 @@ let L = e => {
       })]
     })
   };
-var x = e => {
+var y = e => {
   let {
     userId: t,
     channel: n,
     showingBanner: s
   } = e, {
     channelId: r
-  } = (0, c.useMessageRequestSidebarState)(), o = (0, i.useStateFromStores)([u.default], () => null != r && u.default.isSpam(r), [r]), d = (0, i.useStateFromStores)([m.default], () => m.default.getRelationshipType(t), [t]), h = n.id === r;
+  } = (0, c.useMessageRequestSidebarState)(), o = (0, i.useStateFromStores)([u.default], () => null != r && u.default.isSpam(r), [r]), d = (0, i.useStateFromStores)([E.default], () => E.default.getRelationshipType(t), [t]), h = n.id === r;
   return t === M.CLYDE_AI_USER_ID ? null : o || h ? (0, a.jsxs)("div", {
     className: v.mobileContainer,
     children: [(0, a.jsx)("div", {
@@ -242,7 +242,7 @@ var x = e => {
       })
     }), (0, a.jsxs)("div", {
       className: v.mobileButtons,
-      children: [(0, a.jsx)(y, {
+      children: [(0, a.jsx)(x, {
         channelId: n.id,
         otherUserId: t
       }), (0, a.jsx)(f.default, {

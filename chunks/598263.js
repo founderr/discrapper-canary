@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("982108"),
   E = n("26989"),
   g = n("697218"),
-  S = n("994906"),
-  C = n("180968"),
+  C = n("994906"),
+  S = n("180968"),
   _ = n("473073"),
   I = n("763225"),
   T = n("789150"),
@@ -35,8 +35,8 @@ function N(e) {
     location: A,
     className: M,
     onNavigate: R
-  } = e, j = a.useRef(null), L = (0, u.default)([p.default], () => p.default.getGuildSidebarState(N), [N]), y = a.useRef(0), [O, P] = a.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), b = (0, C.useServerMessageHistoryForUser)(s, N, {
-    addtionalQuery: O,
+  } = e, j = a.useRef(null), L = (0, u.default)([p.default], () => p.default.getGuildSidebarState(N), [N]), O = a.useRef(0), [y, P] = a.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), b = (0, S.useServerMessageHistoryForUser)(s, N, {
+    addtionalQuery: y,
     shouldDispatch: !0
   }), D = (0, u.default)([g.default], () => g.default.getUser(s), [s]), U = (0, u.default)([E.default], () => E.default.getMember(N, s), [N, s]), w = (0, I.useProfileThemedPanelBackground)(s, N);
   a.useLayoutEffect(() => {
@@ -52,27 +52,27 @@ function N(e) {
   let F = a.useCallback(e => {
       if (null == L) return;
       let t = e.target.scrollTop;
-      y.current = t, (0, S.openGuildMemberModViewSidebar)(N, s, L.baseChannelId, {
+      O.current = t, (0, C.openGuildMemberModViewSidebar)(N, s, L.baseChannelId, {
         modViewPanel: T.ModViewPanel.MESSAGE_HISTORY,
-        additionalSearchQuery: O,
-        scrollOffset: y.current
+        additionalSearchQuery: y,
+        scrollOffset: O.current
       })
-    }, [N, s, L, O]),
+    }, [N, s, L, y]),
     k = (0, r.throttle)(F, 300),
     B = a.useCallback(e => {
       if (null == L) return;
       let t = {
-        ...O,
+        ...y,
         offset: 25 * e
       };
-      P(t), (0, S.openGuildMemberModViewSidebar)(N, s, L.baseChannelId, {
+      P(t), (0, C.openGuildMemberModViewSidebar)(N, s, L.baseChannelId, {
         modViewPanel: T.ModViewPanel.MESSAGE_HISTORY,
         additionalSearchQuery: t,
-        scrollOffset: y.current
+        scrollOffset: O.current
       })
-    }, [N, s, L, O]),
-    V = null !== (n = null == O ? void 0 : O.offset) && void 0 !== n ? n : 0,
-    G = (0, u.default)([c.default], () => {
+    }, [N, s, L, y]),
+    V = null !== (n = null == y ? void 0 : y.offset) && void 0 !== n ? n : 0,
+    H = (0, u.default)([c.default], () => {
       if (null == b.result) return [];
       let e = b.result.messages,
         t = (0, d.createASTHighlighter)("");
@@ -89,7 +89,7 @@ function N(e) {
         })) : l
       }))
     }, [b.result]),
-    H = a.useMemo(() => {
+    G = a.useMemo(() => {
       var e, t, n, l;
       return null == b.result ? {
         documentsIndexed: 0,
@@ -113,7 +113,7 @@ function N(e) {
         showNoResultsAlt: !1
       }
     }, [b.result, V]);
-  return null == D || null == U || null == H ? null : (0, l.jsxs)("div", {
+  return null == D || null == U || null == G ? null : (0, l.jsxs)("div", {
     className: i(v.container, M),
     style: {
       backgroundColor: w
@@ -127,8 +127,8 @@ function N(e) {
       ref: j,
       onScroll: k,
       children: (0, l.jsx)(m.default, {
-        searchResults: G,
-        search: H,
+        searchResults: H,
+        search: G,
         searchId: s,
         renderEmbeds: !0,
         blockCount: 0,

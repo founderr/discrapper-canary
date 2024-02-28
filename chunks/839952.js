@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return x
   }
 }), n("222007");
 var l = n("37983"),
@@ -19,15 +19,15 @@ var l = n("37983"),
   h = n("204591"),
   E = n("782340"),
   g = n("482211"),
-  S = n("356410");
+  C = n("356410");
 
-function C(e) {
+function S(e) {
   let {
     text: t,
     language: i
   } = e, a = () => (0, l.jsx)("pre", {
     children: (0, l.jsx)("code", {
-      className: s(S.scrollbarGhostHairline, g.codeView, "hljs"),
+      className: s(C.scrollbarGhostHairline, g.codeView, "hljs"),
       children: t
     })
   });
@@ -39,7 +39,7 @@ function C(e) {
       let n = e.highlight(i, t, !0);
       return null == n ? a() : (0, l.jsx)("pre", {
         children: (0, l.jsx)("code", {
-          className: s(S.scrollbarGhostHairline, g.codeView, "hljs", n.language),
+          className: s(C.scrollbarGhostHairline, g.codeView, "hljs", n.language),
           dangerouslySetInnerHTML: {
             __html: n.value
           }
@@ -74,7 +74,7 @@ function T(e) {
   })
 }
 
-function v(e) {
+function I(e) {
   let {
     attachment: t
   } = e, n = "".concat(t.filename, " (").concat((0, d.formatKbSize)(t.size), ")");
@@ -111,7 +111,7 @@ function v(e) {
   })
 }
 
-function I(e) {
+function v(e) {
   let {
     language: t,
     setLanguage: n
@@ -183,14 +183,14 @@ function N(e) {
     setLanguage: c,
     bytesLeft: f,
     className: m
-  } = e, p = null == i ? void 0 : i.split("\n"), h = null !== (t = null == p ? void 0 : p.length) && void 0 !== t ? t : 0, S = a ? 100 : 6, N = 0 === f, A = "";
-  N && a && h > S ? A = "\n..." : !N && (A = "..."), "" !== A && (N ? A += " " + E.default.Messages.PREVIEW_LINES_LEFT.format({
-    lines: h - S
+  } = e, p = null == i ? void 0 : i.split("\n"), h = null !== (t = null == p ? void 0 : p.length) && void 0 !== t ? t : 0, C = a ? 100 : 6, N = 0 === f, A = "";
+  N && a && h > C ? A = "\n..." : !N && (A = "..."), "" !== A && (N ? A += " " + E.default.Messages.PREVIEW_LINES_LEFT.format({
+    lines: h - C
   }) : A += " " + E.default.Messages.PREVIEW_BYTES_LEFT.format({
     formattedBytes: (0, d.formatKbSize)(f)
   }));
-  let y = (null == p ? void 0 : p.slice(0, S).join("\n")) + A,
-    x = a || S < h;
+  let x = (null == p ? void 0 : p.slice(0, C).join("\n")) + A,
+    y = a || C < h;
   return (0, l.jsxs)("div", {
     className: s(m, g.container),
     children: [(0, l.jsx)("div", {
@@ -199,15 +199,15 @@ function N(e) {
       }),
       children: null == i ? (0, l.jsx)(o.Spinner, {
         className: g.spinner
-      }) : (0, l.jsx)(C, {
-        text: y,
+      }) : (0, l.jsx)(S, {
+        text: x,
         language: u
       })
     }), (0, l.jsxs)(o.Text, {
       color: "header-secondary",
       className: g.footer,
       variant: "text-sm/normal",
-      children: [x ? (0, l.jsxs)(l.Fragment, {
+      children: [y ? (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(T, {
           expanded: a,
           setExpanded: r,
@@ -221,9 +221,9 @@ function N(e) {
         })]
       }) : null, (0, l.jsx)("div", {
         className: g.footerGap
-      }), (0, l.jsx)(v, {
-        attachment: n
       }), (0, l.jsx)(I, {
+        attachment: n
+      }), (0, l.jsx)(v, {
         language: u,
         setLanguage: c
       })]
@@ -252,7 +252,7 @@ function A(e) {
         className: g.modalTextContainer,
         children: null == a ? (0, l.jsx)(o.Spinner, {
           className: g.spinner
-        }) : (0, l.jsx)(C, {
+        }) : (0, l.jsx)(S, {
           text: f,
           language: u
         })
@@ -262,9 +262,9 @@ function A(e) {
         variant: "text-sm/normal",
         children: [(0, l.jsx)("div", {
           className: g.footerGap
-        }), (0, l.jsx)(v, {
-          attachment: r
         }), (0, l.jsx)(I, {
+          attachment: r
+        }), (0, l.jsx)(v, {
           language: u,
           setLanguage: c
         })]
@@ -272,7 +272,7 @@ function A(e) {
     })
   })
 }
-var y = i.memo(function(e) {
+var x = i.memo(function(e) {
   let {
     attachment: t,
     className: n,

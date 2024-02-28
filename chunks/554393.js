@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("762147"),
   C = n("875978"),
   p = n("359132"),
-  E = n("836943"),
-  m = n("92981"),
+  m = n("836943"),
+  E = n("92981"),
   g = n("592707"),
   _ = n("350134"),
   S = n("755624"),
@@ -30,8 +30,8 @@ var a = n("37983"),
   v = n("404008"),
   L = n("680986"),
   R = n("612278"),
-  y = n("867965"),
-  x = n("688169"),
+  x = n("867965"),
+  y = n("688169"),
   O = n("49111"),
   D = n("782340"),
   P = n("425833"),
@@ -44,17 +44,17 @@ function b(e) {
     isLastItem: l = !1,
     parentChannelId: b
   } = e, {
-    ref: F,
-    width: H
-  } = (0, d.default)(), [U, k] = s.useState(3), [G, B] = s.useState(!n), [w, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(t), [t]), {
+    ref: H,
+    width: F
+  } = (0, d.default)(), [U, k] = s.useState(3), [w, B] = s.useState(!n), [G, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(t), [t]), {
     firstMessage: Z
   } = (0, R.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([S.default], () => S.default.hasJoined(t)), {
-    disableReactionUpdates: Y,
-    disableReactionCreates: K,
-    isLurking: q,
-    isGuest: X,
+    disableReactionUpdates: K,
+    disableReactionCreates: Y,
+    isLurking: X,
+    isGuest: q,
     isPendingMember: J
-  } = (0, p.default)(W), Q = (0, x.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(b)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = s.useCallback(e => {
+  } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([A.default], () => A.default.getChannel(b)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = s.useCallback(e => {
     let t = e[0];
     if (null != t && n) {
       let e = t.intersectionRect,
@@ -64,7 +64,7 @@ function b(e) {
     }
   }, [n]);
   s.useLayoutEffect(() => {
-    let e = F.current;
+    let e = H.current;
     if (null == e || !n) return;
     let t = new IntersectionObserver(en, {
       threshold: 1
@@ -75,14 +75,14 @@ function b(e) {
   });
   let [ea, es] = s.useState(!0);
   if (s.useEffect(() => {
-      if (null != H) k(Math.floor((H - 280) / 58)), es(!1)
-    }, [H]), null == W || null == Z) return null;
+      if (null != F) k(Math.floor((F - 280) / 58)), es(!1)
+    }, [F]), null == W || null == Z) return null;
   let el = Z.reactions.length > 0,
     ei = () => {
       z ? T.default.leaveThread(W, "Forum Toolbar") : T.default.joinThread(W, "Forum Toolbar")
     },
     er = () => {
-      (0, y.trackForumPostLinkCopied)({
+      (0, x.trackForumPostLinkCopied)({
         postId: W.id,
         location: {
           section: O.AnalyticsSections.CHANNEL_HEADER
@@ -93,21 +93,21 @@ function b(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: i(P.container, {
-        [P.header]: G
+        [P.header]: w
       }),
-      ref: F,
+      ref: H,
       children: [(0, a.jsxs)("div", {
         className: i(P.reactButtons, {
           [P.loading]: ea
         }),
-        children: [!el && !K && null != ee && (0, a.jsx)("div", {
+        children: [!el && !Y && null != ee && (0, a.jsx)("div", {
           className: j.reactions,
           children: (0, a.jsx)(_.Reaction, {
             message: Z,
             readOnly: !1,
             useChatFontScaling: !1,
-            isLurking: q,
-            isGuest: X,
+            isLurking: X,
+            isGuest: q,
             isPendingMember: J,
             emoji: ee,
             type: C.ReactionTypes.NORMAL,
@@ -120,17 +120,17 @@ function b(e) {
         }), (0, a.jsx)(g.default, {
           message: Z,
           channel: W,
-          disableReactionCreates: !Q || K,
-          disableReactionUpdates: Y,
-          isLurking: q,
-          isGuest: X,
+          disableReactionCreates: !Q || Y,
+          disableReactionUpdates: K,
+          isLurking: X,
+          isGuest: q,
           isPendingMember: J,
           maxReactions: U,
           className: P.reactions,
           useChatFontScaling: !1,
           isForumToolbar: !0,
           forceHideReactionCreates: !0
-        }), !K && (0, a.jsx)(E.ButtonAddReaction, {
+        }), !Y && (0, a.jsx)(m.ButtonAddReaction, {
           type: C.ReactionTypes.NORMAL,
           message: Z,
           channel: W,
@@ -166,19 +166,19 @@ function b(e) {
             onClick: er,
             className: P.button,
             innerClassName: P.buttonInner,
-            children: [w ? (0, a.jsx)(I.default, {
+            children: [G ? (0, a.jsx)(I.default, {
               width: 16,
               height: 16
             }) : (0, a.jsx)(N.default, {
               width: 16,
               height: 16
-            }), w ? D.default.Messages.COPIED : null]
+            }), G ? D.default.Messages.COPIED : null]
           })
         })]
       })]
     }), et && (0, a.jsx)(h.default, {
       threadId: t
-    }), (0, a.jsx)(m.default, {
+    }), (0, a.jsx)(E.default, {
       channel: W,
       isLastItem: l
     })]

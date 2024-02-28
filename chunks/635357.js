@@ -28,13 +28,13 @@ function g(e) {
     children: h
   } = e, {
     selectedSkuId: E
-  } = (0, u.usePaymentContext)(), [g, S] = i.useState(n), [C, T] = i.useState(), [v, I] = i.useState(!1), _ = (0, o.shouldShowCustomGiftExperience)(g), N = (0, s.useIsSeasonalGiftingActive)(), {
+  } = (0, u.usePaymentContext)(), [g, C] = i.useState(n), [S, T] = i.useState(), [I, v] = i.useState(!1), _ = (0, o.shouldShowCustomGiftExperience)(g), N = (0, s.useIsSeasonalGiftingActive)(), {
     enabled: A
   } = s.default.useExperiment({
     location: "PaymentContextProvider"
   }, {
     autoTrackExposure: _ && N
-  }), [y, x] = i.useState(_ ? A && N ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : f : m), [O, R] = i.useState(t && (0, o.getGiftExperience)(g) === o.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? c.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : r), [M, L] = i.useState(void 0), [P, b] = i.useState(void 0), j = (0, o.useGetGiftCode)(E, t), [U, D] = i.useState(!1), [k, w] = i.useState(!1), [F, G] = i.useState(), B = i.useCallback(e => {
+  }), [x, y] = i.useState(_ ? A && N ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : f : m), [O, R] = i.useState(t && (0, o.getGiftExperience)(g) === o.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? c.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : r), [M, L] = i.useState(void 0), [P, b] = i.useState(void 0), j = (0, o.useGetGiftCode)(E, t), [U, D] = i.useState(!1), [k, w] = i.useState(!1), [F, G] = i.useState(), B = i.useCallback(e => {
     let {
       onSubscriptionConfirmation: t
     } = e;
@@ -50,19 +50,19 @@ function g(e) {
       giftCode: j,
       giftMessage: r,
       giftRecipient: g,
-      setGiftRecipient: S,
-      giftRecipientError: C,
+      setGiftRecipient: C,
+      giftRecipientError: S,
       setGiftRecipientError: T,
-      validatingGiftRecipient: v,
-      setValidatingGiftRecipient: I,
+      validatingGiftRecipient: I,
+      setValidatingGiftRecipient: v,
       soundEffect: M,
       setSoundEffect: L,
       emojiConfetti: P,
       setEmojiConfetti: b,
       customGiftMessage: O,
       setCustomGiftMessage: R,
-      selectedGiftStyle: y,
-      setSelectedGiftStyle: x,
+      selectedGiftStyle: x,
+      setSelectedGiftStyle: y,
       sendGiftMessage: B,
       hasSentMessage: U,
       isSendingMessage: k,
