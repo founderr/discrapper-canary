@@ -1,70 +1,70 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return E
+    return f
   }
-}), n("222007");
-var l = n("37983");
-n("884691");
-var u = n("446674"),
-  a = n("77078"),
-  d = n("817963"),
-  i = n("398604"),
-  s = n("322224"),
-  r = n("397680"),
-  o = n("466148"),
-  c = n("782340");
+}), l("222007");
+var n = l("37983");
+l("884691");
+var a = l("446674"),
+  u = l("77078"),
+  s = l("817963"),
+  d = l("398604"),
+  r = l("322224"),
+  i = l("397680"),
+  o = l("466148"),
+  c = l("782340");
 
-function E(e) {
+function f(e) {
   let {
     guildEventId: t,
-    recurrenceId: n,
-    guild: E,
-    channel: f
-  } = e, _ = null != n, {
+    recurrenceId: l,
+    guild: f,
+    channel: E
+  } = e, _ = null != l, {
     canManageGuildEvent: T
-  } = (0, d.useManageResourcePermissions)(null != f ? f : E), [S, v] = (0, u.useStateFromStoresArray)([i.default], () => [i.default.isActive(t), i.default.getGuildScheduledEvent(t)]), g = (0, r.default)(n, null == v ? void 0 : v.id), I = null != v && T(v), N = (null == v ? void 0 : v.recurrence_rule) != null && !_, {
-    startTime: m
-  } = (0, o.default)(t, n);
-  if (!I || S && !N && !_ || _ && !_ || null == v) return null;
-  if (S && _) {
-    var M;
-    if (null == m) return null;
-    let e = new Date(null !== (M = null == g ? void 0 : g.scheduled_start_time) && void 0 !== M ? M : m);
+  } = (0, s.useManageResourcePermissions)(null != E ? E : f), [M, v] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.isActive(t), d.default.getGuildScheduledEvent(t)]), I = (0, i.default)(l, null == v ? void 0 : v.id), g = null != v && T(v), m = (null == v ? void 0 : v.recurrence_rule) != null && !_, {
+    startTime: N
+  } = (0, o.default)(t, l);
+  if (!g || M && !m && !_ || _ && !_ || null == v) return null;
+  if (M && _) {
+    var R;
+    if (null == N) return null;
+    let e = new Date(null !== (R = null == I ? void 0 : I.scheduled_start_time) && void 0 !== R ? R : N);
     if (new Date > e) return null
   }
-  let h = e => {
-    (0, a.openModal)(u => (0, l.jsxs)(a.ConfirmModal, {
-      ...u,
+  let S = e => {
+    (0, u.openModal)(a => (0, n.jsxs)(u.ConfirmModal, {
+      ...a,
       header: c.default.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
-      confirmText: N || e ? c.default.Messages.DELETE_ALL_EVENTS : c.default.Messages.DELETE_EVENT,
+      confirmText: m || e ? c.default.Messages.DELETE_ALL_EVENTS : c.default.Messages.DELETE_EVENT,
       cancelText: c.default.Messages.NEVERMIND,
-      onConfirm: () => _ && !e ? s.default.deleteRecurrence(E.id, t, n, g) : s.default.deleteGuildEvent(t, E.id),
-      children: [(0, l.jsx)(a.Text, {
+      onConfirm: () => _ && !e ? r.default.deleteRecurrence(f.id, t, l, I) : r.default.deleteGuildEvent(t, f.id),
+      children: [(0, n.jsx)(u.Text, {
         variant: "text-md/normal",
         children: c.default.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY
-      }), (0, l.jsx)("br", {}), (N || e) && (0, l.jsx)(a.Text, {
+      }), (0, n.jsx)("br", {}), (m || e) && (0, n.jsx)(u.Text, {
         variant: "text-md/normal",
         children: c.default.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY_IS_RECURRING.format()
       })]
     }))
   };
-  return (0, l.jsx)(a.MenuItem, {
+  return (0, n.jsx)(u.MenuItem, {
     id: c.default.Messages.DELETE_EVENT,
     label: c.default.Messages.DELETE_EVENT,
-    action: _ ? void 0 : () => h(),
+    action: _ ? void 0 : () => S(),
     color: "danger",
-    children: _ && (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(a.MenuItem, {
+    children: _ && (0, n.jsxs)(n.Fragment, {
+      children: [(0, n.jsx)(u.MenuItem, {
         id: c.default.Messages.DELETE_THIS_EVENT,
         label: c.default.Messages.DELETE_THIS_EVENT,
-        action: () => h(),
-        disabled: null == g ? void 0 : g.is_canceled,
+        action: () => S(),
+        disabled: null == I ? void 0 : I.is_canceled,
         color: "danger"
-      }), (0, l.jsx)(a.MenuItem, {
+      }), (0, n.jsx)(u.MenuItem, {
         id: c.default.Messages.DELETE_ALL_EVENTS_IN_SERIES,
         label: c.default.Messages.DELETE_ALL_EVENTS_IN_SERIES,
-        action: () => h(!0),
+        action: () => S(!0),
         color: "danger"
       })]
     })

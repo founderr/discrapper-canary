@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return S
   }
 }), n("222007"), n("808653");
 var a = n("37983"),
@@ -15,32 +15,32 @@ var a = n("37983"),
   c = n("462392"),
   f = n("155158"),
   E = n("592407"),
-  M = n("49111"),
-  m = n("143460"),
+  m = n("49111"),
+  M = n("143460"),
   g = n("782340"),
-  S = n("974020");
-let I = m.AutomodTriggerType.KEYWORD;
+  p = n("974020");
+let I = M.AutomodTriggerType.KEYWORD;
 
-function p(e, t) {
+function S(e, t) {
   let {
     perGuildMaxCount: n
   } = r.triggerConfigs[I], {
-    isLoading: m,
-    saveRule: p
+    isLoading: M,
+    saveRule: S
   } = (0, o.useAutomodEditingRuleActions)(), {
-    createNewEditingRule: h
-  } = (0, o.useAutomodEditingRuleState)(), [v, _] = i.useState(!1), [A, T] = (0, u.useSyncAutomodRules)(t), {
+    createNewEditingRule: v
+  } = (0, o.useAutomodEditingRuleState)(), [h, A] = i.useState(!1), [_, T] = (0, u.useSyncAutomodRules)(t), {
     rulesByTriggerType: C,
     updateRule: R
-  } = (0, u.useAutomodRulesList)(t), y = i.useMemo(() => {
+  } = (0, u.useAutomodRulesList)(t), O = i.useMemo(() => {
     var e;
     return null !== (e = C[I]) && void 0 !== e ? e : []
-  }, [C]), O = 0 === y.length, x = n > y.length && !O, N = i.useMemo(() => (0, d.canCurrentUserManageMessageFilters)(t), [t]);
+  }, [C]), x = 0 === O.length, y = n > O.length && !x, N = i.useMemo(() => (0, d.canCurrentUserManageMessageFilters)(t), [t]);
   if (!N || null == e || 0 === e.length || null == t) return null;
   let b = e.split(" ").length,
-    G = () => {
-      null != t && ((0, s.closeContextMenu)(), E.default.open(t, M.GuildSettingsSections.GUILD_AUTOMOD), setTimeout(() => {
-        h(t, I, {
+    j = () => {
+      null != t && ((0, s.closeContextMenu)(), E.default.open(t, m.GuildSettingsSections.GUILD_AUTOMOD), setTimeout(() => {
+        v(t, I, {
           triggerMetadata: {
             keywordFilter: [e],
             regexPatterns: [],
@@ -49,7 +49,7 @@ function p(e, t) {
         })
       }, 400))
     },
-    j = async t => {
+    G = async t => {
       var n, a;
       (0, s.closeContextMenu)();
       let i = await (0, f.confirmAddKeyword)(t.name, e);
@@ -61,20 +61,20 @@ function p(e, t) {
           keywordFilter: [...null !== (a = null === (n = t.triggerMetadata) || void 0 === n ? void 0 : n.keywordFilter) && void 0 !== a ? a : [], e]
         }
       };
-      await p(l, y), R(l)
+      await S(l, O), R(l)
     }, D = (0, a.jsx)(a.Fragment, {
       children: (0, a.jsx)(l.MenuItem, {
         id: "automod-rules-loading",
         label: g.default.Messages.LOADING
       })
     });
-  return !A && (D = (0, a.jsxs)(a.Fragment, {
-    children: [O && (0, a.jsx)(l.MenuItem, {
+  return !_ && (D = (0, a.jsxs)(a.Fragment, {
+    children: [x && (0, a.jsx)(l.MenuItem, {
       id: "add-first-rule",
       label: g.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
-      action: G,
-      disabled: m
-    }), y.map(e => {
+      action: j,
+      disabled: M
+    }), O.map(e => {
       let t = (0, r.getAvailableActionTypes)(I).reduce((t, n) => {
         let a = e.actions.find(e => {
           let {
@@ -91,21 +91,21 @@ function p(e, t) {
         label: e.name,
         subtext: (0, a.jsx)(l.Text, {
           color: "text-muted",
-          className: S.actionTextHeader,
+          className: p.actionTextHeader,
           variant: "text-xs/normal",
           children: t.slice(2)
         }),
         group: "automod-rule-selection",
         checked: !1,
-        disabled: m,
-        action: () => j(e)
+        disabled: M,
+        action: () => G(e)
       }, e.id)
-    }), x && (0, a.jsxs)(a.Fragment, {
+    }), y && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(l.MenuSeparator, {}), (0, a.jsx)(l.MenuItem, {
         id: "add-another-rule",
         label: g.default.Messages.GUILD_AUTOMOD_ADD_NEW_RULE,
-        action: G,
-        disabled: m
+        action: j,
+        disabled: M
       })]
     })]
   })), (0, a.jsx)(l.MenuItem, {
@@ -114,7 +114,7 @@ function p(e, t) {
       keywordCount: b
     }),
     onFocus: () => {
-      !v && (_(!0), T())
+      !h && (A(!0), T())
     },
     children: D
   })

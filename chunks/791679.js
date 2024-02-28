@@ -22,8 +22,8 @@ var l = n("37983"),
   p = n("580357"),
   E = n("476263"),
   g = n("433487"),
-  C = n("987772"),
-  S = n("587974"),
+  S = n("987772"),
+  C = n("587974"),
   _ = n("149279"),
   I = n("315102"),
   T = n("187163"),
@@ -84,7 +84,7 @@ function j(e) {
               })
             },
             "aria-label": N.default.Messages.HUB_ENTRY_UPDATE,
-            children: (0, l.jsx)(C.default, {
+            children: (0, l.jsx)(S.default, {
               className: A.overflowIcon
             })
           })
@@ -129,7 +129,7 @@ var L = e => {
   var t;
   let {
     entry: s
-  } = e, [i, g] = a.useState(!1), C = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(s.guildId)), _ = null != C, T = async () => {
+  } = e, [i, g] = a.useState(!1), S = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(s.guildId)), _ = null != S, T = async () => {
     g(!0);
     try {
       _ ? (0, f.transitionToGuild)(s.guildId) : await d.default.joinGuild(s.guildId, {
@@ -171,8 +171,8 @@ var L = e => {
         })
       }), (0, l.jsx)("div", {
         className: A.guildIcon,
-        children: (0, l.jsx)(S.default, {
-          mask: S.default.Masks.SQUIRCLE,
+        children: (0, l.jsx)(C.default, {
+          mask: C.default.Masks.SQUIRCLE,
           width: 48,
           height: 48,
           children: (0, l.jsx)("div", {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return C
   }
 });
 var l = n("37983");
@@ -20,19 +20,19 @@ var a = n("446674"),
   p = n("649275"),
   E = n("534222"),
   g = n("782340"),
-  C = n("864820");
+  S = n("864820");
 
-function S(e) {
+function C(e) {
   let {
     channelId: t,
     onClick: n
-  } = e, S = (0, i.useAppContext)(), _ = (0, E.useActiveEvent)(t), I = (0, a.useStateFromStores)([d.default], () => d.default.getChannel(t), [t]), {
+  } = e, C = (0, i.useAppContext)(), _ = (0, E.useActiveEvent)(t), I = (0, a.useStateFromStores)([d.default], () => d.default.getChannel(t), [t]), {
     canManageGuildEvent: T
   } = (0, r.useManageResourcePermissions)(I), v = T(_);
   if (null == _) return null;
   let x = () => {
       if (null != I && (0, p.default)(I)) {
-        (0, h.openEndEventModal)(I, S);
+        (0, h.openEndEventModal)(I, C);
         return
       }
       n()
@@ -74,11 +74,11 @@ function S(e) {
         iconComponent: c.default,
         onClick: x,
         onPopoutClick: t,
-        className: C.buttonSpacing
+        className: S.buttonSpacing
       })
     }
   }) : (0, l.jsx)(o.CenterControlButton, {
-    className: C.buttonSpacing,
+    className: S.buttonSpacing,
     label: g.default.Messages.DISCONNECT_SELF,
     color: "red",
     iconComponent: c.default,

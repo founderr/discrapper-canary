@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("305961"),
   E = n("957255"),
   g = n("466079"),
-  C = n("444657"),
-  S = n("679243"),
+  S = n("444657"),
+  C = n("679243"),
   _ = n("832897"),
   I = n("308419"),
   T = n("49111"),
@@ -37,7 +37,7 @@ function x(e) {
     inCall: R,
     totalNumberOfParticipants: j,
     paused: L = !1
-  } = e, O = (0, u.useAppContext)(), y = O === T.AppContext.POPOUT, P = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(A.guild_id), [A.guild_id]), {
+  } = e, y = (0, u.useAppContext)(), O = y === T.AppContext.POPOUT, P = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(A.guild_id), [A.guild_id]), {
     dismissedActivityEntryPointTileChannel: b
   } = (0, _.useChannelCallVideoGridStore)(), D = (0, i.useStateFromStores)([f.default], () => f.default.getUserParticipantCount(A.id), [A]), U = a.useCallback(() => {
     _.useChannelCallVideoGridStore.setState({
@@ -54,10 +54,10 @@ function x(e) {
     k = A.userLimit <= 0 || A.userLimit > 1,
     B = (0, i.useStateFromStores)([o.default], () => o.default.getEmbeddedActivitiesForChannel(A.id).length <= 0),
     V = (0, h.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
-    H = (0, d.useEmbeddedActivityLaunchability)(A.id),
-    G = H !== d.EmbeddedActivityLaunchability.CAN_LAUNCH,
+    G = (0, d.useEmbeddedActivityLaunchability)(A.id),
+    H = G !== d.EmbeddedActivityLaunchability.CAN_LAUNCH,
     W = null != b && b === A.id,
-    Y = t.map(e => t => (0, l.jsx)(S.default, {
+    Y = t.map(e => t => (0, l.jsx)(C.default, {
       participant: e,
       channel: A,
       className: v.tile,
@@ -67,7 +67,7 @@ function x(e) {
       onContextMenu: N,
       inCall: R,
       width: t,
-      inPopout: y
+      inPopout: O
     }, e.id));
   (0, c.default)({
     type: s.ImpressionTypes.VIEW,
@@ -80,23 +80,23 @@ function x(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != P && !F && (!(D >= 2) || !B || G || V || W ? k && 1 === D && w && (B && !G ? Y.push(e => (0, l.jsx)(C.ActivityEntryPointTile, {
+  }, []), null != P && !F && (!(D >= 2) || !B || H || V || W ? k && 1 === D && w && (B && !H ? Y.push(e => (0, l.jsx)(S.ActivityEntryPointTile, {
     channel: A,
     guild: P,
     width: e,
-    inPopout: y,
+    inPopout: O,
     handleClose: U,
     userParticipantCount: D
   })) : Y.push(e => (0, l.jsx)(I.default, {
     width: e,
     channel: A,
     guild: P,
-    inPopout: y
-  }))) : Y.push(e => (0, l.jsx)(C.ActivityEntryPointTile, {
+    inPopout: O
+  }))) : Y.push(e => (0, l.jsx)(S.ActivityEntryPointTile, {
     channel: A,
     guild: P,
     width: e,
-    inPopout: y,
+    inPopout: O,
     handleClose: U,
     userParticipantCount: D
   })));

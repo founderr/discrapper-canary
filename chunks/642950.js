@@ -1,26 +1,26 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return p
+    return h
   }
 }), r("222007");
-var n = r("37983"),
-  s = r("884691"),
-  i = r("414456"),
-  l = r.n(i),
+var i = r("37983"),
+  n = r("884691"),
+  s = r("414456"),
+  l = r.n(s),
   a = r("77078"),
   u = r("54239"),
   o = r("79112"),
   d = r("49111"),
   c = r("782340"),
   f = r("44026");
-class h extends s.Component {
+class p extends n.Component {
   render() {
-    return (0, n.jsxs)("div", {
+    return (0, i.jsxs)("div", {
       className: f.streamerModeEnabled,
-      children: [(0, n.jsx)("div", {
+      children: [(0, i.jsx)("div", {
         className: f.streamerModeEnabledImage
-      }), (0, n.jsx)(a.Clickable, {
+      }), (0, i.jsx)(a.Clickable, {
         className: l(f.streamerModeEnabledBtn, {
           [f.disabled]: this.props.disableButton
         }),
@@ -35,7 +35,7 @@ class h extends s.Component {
     }
   }
 }
-h.defaultProps = {
+p.defaultProps = {
   disableButton: !1
 };
-var p = h
+var h = p

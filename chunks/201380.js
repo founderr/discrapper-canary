@@ -25,8 +25,8 @@ var l = n("37983"),
   p = n("845038"),
   E = n("374014"),
   g = n("223913"),
-  C = n("709463"),
-  S = n("264429"),
+  S = n("709463"),
+  C = n("264429"),
   _ = n("930291"),
   I = n("506885"),
   T = n("981601"),
@@ -38,8 +38,8 @@ var l = n("37983"),
   R = n("68148"),
   j = n("49111"),
   L = n("171644"),
-  O = n("706530"),
-  y = n("782340"),
+  y = n("706530"),
+  O = n("782340"),
   P = n("698964");
 
 function b(e) {
@@ -60,7 +60,7 @@ function D(e) {
   let {
     numAudience: t,
     collapsed: n
-  } = e, a = n ? t : y.default.Messages.LISTENING_COUNT.format({
+  } = e, a = n ? t : O.default.Messages.LISTENING_COUNT.format({
     count: t
   });
   return (0, l.jsxs)("div", {
@@ -158,12 +158,12 @@ class U extends a.PureComponent {
       } = this.props;
       if (!this.canWatchStream) return;
       let a = {
-        streamType: O.StreamTypes.GUILD,
+        streamType: y.StreamTypes.GUILD,
         ownerId: e.id,
         channelId: t.id,
         guildId: t.guild_id
       };
-      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, C.default)(a), o.default.selectParticipant(a.channelId, (0, E.encodeStreamKey)(a))) : (0, f.watchStreamAndTransitionToStream)(a), null == l || l(e.id)
+      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, S.default)(a), o.default.selectParticipant(a.channelId, (0, E.encodeStreamKey)(a))) : (0, f.watchStreamAndTransitionToStream)(a), null == l || l(e.id)
     }, this.handleJoinVoice = () => {
       let {
         user: e,
@@ -207,7 +207,7 @@ class U extends a.PureComponent {
         previewIsOpen: n,
         location: a
       } = this.props;
-      return (0, l.jsx)(S.default, {
+      return (0, l.jsx)(C.default, {
         user: e,
         channel: t,
         onWatch: this.handleWatchStream,
@@ -242,8 +242,8 @@ class U extends a.PureComponent {
         priority: m,
         collapsed: E,
         isStreaming: g,
-        isGuest: C,
-        nick: S,
+        isGuest: S,
+        nick: C,
         video: _,
         serverMute: I,
         serverDeaf: T,
@@ -253,7 +253,7 @@ class U extends a.PureComponent {
         hangStatusActivity: A,
         showHangStatus: M,
         isSelf: j,
-        application: O
+        application: y
       } = this.props, {
         userPopoutOpen: b,
         isHoveringHangStatus: D
@@ -264,11 +264,11 @@ class U extends a.PureComponent {
         localMute: o,
         localVideoDisabled: d,
         isStreaming: g,
-        isGuest: C,
+        isGuest: S,
         video: _,
         priority: m,
         deaf: h,
-        nick: S,
+        nick: C,
         collapsed: E,
         overlap: E,
         serverMute: I,
@@ -289,13 +289,13 @@ class U extends a.PureComponent {
         hangStatusActivity: A,
         showHangStatus: M,
         isSelf: j,
-        application: O,
+        application: y,
         channelId: N.id
       };
       if (t) {
         var F;
         return (0, l.jsx)(u.Tooltip, {
-          text: null !== (F = (0, p.default)(n)) && void 0 !== F ? F : y.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+          text: null !== (F = (0, p.default)(n)) && void 0 !== F ? F : O.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
           children: e => {
             let {
               onClick: t,

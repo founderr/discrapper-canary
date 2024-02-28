@@ -25,7 +25,7 @@ var R = e => {
     senderId: n,
     modalProps: a,
     channelId: R
-  } = e, N = null != (0, u.useSafetyToolsButtonTooltipForChannel)(R), [A, I] = o.useState(0), S = o.useCallback(e => {
+  } = e, N = null != (0, u.useSafetyToolsButtonTooltipForChannel)(R), [A, S] = o.useState(0), I = o.useCallback(e => {
     (0, l.trackCtaEvent)({
       channelId: R,
       senderId: n,
@@ -37,11 +37,11 @@ var R = e => {
   }, [R, n, t, s, N]), [O, f] = o.useState(!1);
 
   function C(e) {
-    I(e)
+    S(e)
   }
 
   function p() {
-    a.onClose(), (0, _.dismissChannelSafetyWarnings)(R, [t]), S(l.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS)
+    a.onClose(), (0, _.dismissChannelSafetyWarnings)(R, [t]), I(l.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS)
   }
   return (0, r.jsx)(i.ModalRoot, {
     transitionState: a.transitionState,
@@ -60,7 +60,7 @@ var R = e => {
             senderId: n,
             onNavigate: C,
             onClose: p,
-            trackAnalyticsEvent: S
+            trackAnalyticsEvent: I
           })
         }), (0, r.jsx)(i.Slide, {
           id: 1,
@@ -82,7 +82,7 @@ var R = e => {
             onReport: function() {
               f(!0)
             },
-            trackAnalyticsEvent: S
+            trackAnalyticsEvent: I
           })
         })]
       })

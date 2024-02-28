@@ -26,14 +26,14 @@ function i(e) {
     p = e => m + e.deltaTime,
     E = e => p(e) + 1500 >= Date.now(),
     g = e => p(e) <= Date.now() && E(e),
-    C = h.find(g);
-  if (null == C) {
+    S = h.find(g);
+  if (null == S) {
     !E(t.points[t.points.length - 1]) && f.push(t);
     return
   }
-  let S = (e, t) => {
+  let C = (e, t) => {
       let l = null;
-      n.lineWidth = t * window.devicePixelRatio, n.strokeStyle = e, n.beginPath(), n.moveTo(C.x, C.y);
+      n.lineWidth = t * window.devicePixelRatio, n.strokeStyle = e, n.beginPath(), n.moveTo(S.x, S.y);
       for (let e = 1; e < h.length; e++) {
         let t = h[e];
         g(t) && (n.lineTo(t.x, t.y), l = t)
@@ -44,7 +44,7 @@ function i(e) {
       fillColor: _,
       outlineColor: I
     } = (0, l.getUserColors)(t.userId, o, d, u),
-    T = S(I, 6 + s.OUTLINE_WIDTH),
+    T = C(I, 6 + s.OUTLINE_WIDTH),
     v = null != T && g(T);
-  v && (0, a.renderAvatarCursorOutline)(n, T.x, T.y, I, s.OUTLINE_WIDTH), S(_, 6), v && (0, a.renderAvatarCursor)(n, T.x, T.y, t.userId)
+  v && (0, a.renderAvatarCursorOutline)(n, T.x, T.y, I, s.OUTLINE_WIDTH), C(_, 6), v && (0, a.renderAvatarCursor)(n, T.x, T.y, t.userId)
 }

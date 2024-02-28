@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return p
   },
   default: function() {
-    return m
+    return E
   }
 }), n("702976");
 var a = n("872717"),
@@ -70,8 +70,8 @@ function h(e) {
     defaultReactionEmoji: h,
     rtcRegion: C,
     videoQualityMode: p,
-    autoArchiveDuration: m,
-    locked: E,
+    autoArchiveDuration: E,
+    locked: m,
     invitable: g,
     availableTags: _,
     defaultSortOrder: S,
@@ -95,8 +95,8 @@ function h(e) {
     defaultReactionEmoji: h,
     rtcRegion: C,
     videoQualityMode: p,
-    autoArchiveDuration: m,
-    locked: E,
+    autoArchiveDuration: E,
+    locked: m,
     invitable: g,
     availableTags: _,
     defaultSortOrder: S,
@@ -115,8 +115,8 @@ async function C(e, t) {
     userLimit: h,
     nsfw: C,
     flags: p,
-    permissionOverwrites: m,
-    rateLimitPerUser: E,
+    permissionOverwrites: E,
+    rateLimitPerUser: m,
     defaultThreadRateLimitPerUser: g,
     defaultAutoArchiveDuration: _,
     template: S,
@@ -128,8 +128,8 @@ async function C(e, t) {
     invitable: v,
     availableTags: L,
     defaultSortOrder: R,
-    defaultForumLayout: x,
-    iconEmoji: y,
+    defaultForumLayout: y,
+    iconEmoji: x,
     themeColor: O
   } = t, D = r.default.getChannel(e);
   return s.default.dispatch({
@@ -145,8 +145,8 @@ async function C(e, t) {
       user_limit: h,
       nsfw: C,
       flags: p,
-      permission_overwrites: m,
-      rate_limit_per_user: E,
+      permission_overwrites: E,
+      rate_limit_per_user: m,
       default_thread_rate_limit_per_user: g,
       default_auto_archive_duration: _,
       template: S,
@@ -167,11 +167,11 @@ async function C(e, t) {
         moderated: e.moderated
       })),
       default_sort_order: R,
-      default_forum_layout: x,
-      icon_emoji: null != y ? {
-        id: y.id,
-        name: y.name
-      } : null === y ? null : void 0,
+      default_forum_layout: y,
+      icon_emoji: null != x ? {
+        id: x.id,
+        name: x.name
+      } : null === x ? null : void 0,
       theme_color: O
     },
     oldFormErrors: !0
@@ -198,7 +198,7 @@ function p(e) {
     null != e && !(null == t ? void 0 : t.isThread()) && l.default.checkGuildTemplateDirty(e), c()
   })
 }
-var m = {
+var E = {
   init: d,
   open: function(e, t, n) {
     d(e, t, n), (0, o.pushLayer)(u.Layers.CHANNEL_SETTINGS)

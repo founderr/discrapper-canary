@@ -1,69 +1,69 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
-var l = n("446674"),
-  u = n("913144"),
+var u = n("446674"),
+  l = n("913144"),
   i = n("271938"),
-  a = n("398604"),
+  d = n("398604"),
   r = n("49129"),
-  s = n("745049");
-let d = {},
-  o = {};
+  a = n("745049");
+let s = {},
+  E = {};
 
 function c(e) {
   let t = {
-    ...d
+    ...s
   };
-  delete t[e], d = t;
+  delete t[e], s = t;
   let n = {
-    ...o
+    ...E
   };
-  delete n[e], o = n
+  delete n[e], E = n
 }
-class f extends l.default.PersistedStore {
+class o extends u.default.PersistedStore {
   initialize(e) {
     if (null != e) {
       var t, n;
-      d = null !== (t = e.upcomingEventDismissals) && void 0 !== t ? t : {}, o = null !== (n = e.upcomingEventSeenTimestamps) && void 0 !== n ? n : {}
+      s = null !== (t = e.upcomingEventDismissals) && void 0 !== t ? t : {}, E = null !== (n = e.upcomingEventSeenTimestamps) && void 0 !== n ? n : {}
     }
   }
   getGuildEventNoticeDismissalTime(e) {
-    return d[e]
+    return s[e]
   }
   getAllEventDismissals() {
-    return d
+    return s
   }
   getUpcomingNoticeSeenTime(e) {
-    return o[e]
+    return E[e]
   }
   getAllUpcomingNoticeSeenTimes() {
-    return o
+    return E
   }
   getState() {
     return {
-      upcomingEventDismissals: d,
-      upcomingEventSeenTimestamps: o
+      upcomingEventDismissals: s,
+      upcomingEventSeenTimestamps: E
     }
   }
 }
-f.displayName = "UpcomingEventNoticesStore", f.persistKey = "UpcomingEventNotices";
-var E = new f(u.default, {
+o.displayName = "UpcomingEventNoticesStore", o.persistKey = "UpcomingEventNotices";
+var f = new o(l.default, {
   UPCOMING_GUILD_EVENT_NOTICE_HIDE: function(e) {
     let {
       eventId: t
     } = e, n = {
-      ...d
+      ...s
     };
-    n[t] = Date.now(), d = n
+    n[t] = Date.now(), s = n
   },
   GUILD_SCHEDULED_EVENT_UPDATE: function(e) {
     let {
       guildScheduledEvent: t
     } = e;
-    (t.status === s.GuildScheduledEventStatus.CANCELED || t.status === s.GuildScheduledEventStatus.COMPLETED) && c(t.id)
+    (t.status === a.GuildScheduledEventStatus.CANCELED || t.status === a.GuildScheduledEventStatus.COMPLETED) && c(t.id)
   },
   GUILD_SCHEDULED_EVENT_DELETE: function(e) {
     let {
@@ -75,27 +75,27 @@ var E = new f(u.default, {
     let {
       userId: t,
       guildEventId: n
-    } = e, l = i.default.getId();
-    if (t !== l) return;
-    let u = a.default.getGuildScheduledEvent(n);
-    if (null == u || u.status !== s.GuildScheduledEventStatus.SCHEDULED) return;
-    let c = d[n];
+    } = e, u = i.default.getId();
+    if (t !== u) return;
+    let l = d.default.getGuildScheduledEvent(n);
+    if (null == l || l.status !== a.GuildScheduledEventStatus.SCHEDULED) return;
+    let c = s[n];
     if (null != c) return;
-    let f = o[n],
-      E = (0, r.getNextShownUpcomingEventNoticeType)(u, void 0, f, !1);
-    if (E === s.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
+    let o = E[n],
+      f = (0, r.getNextShownUpcomingEventNoticeType)(l, void 0, o, !1);
+    if (f === a.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
       let e = {
-        ...d
+        ...s
       };
-      e[n] = Date.now(), d = e
+      e[n] = Date.now(), s = e
     }
   },
   UPCOMING_GUILD_EVENT_NOTICE_SEEN: function(e) {
     let {
       guildEventId: t
     } = e, n = {
-      ...o
+      ...E
     };
-    n[t] = Date.now(), o = n
+    n[t] = Date.now(), E = n
   }
 })

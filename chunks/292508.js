@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return G
+    return H
   }
 }), n("222007");
 var l = n("37983"),
@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("320679"),
   E = n("191225"),
   g = n("229661"),
-  C = n("812204"),
-  S = n("685665"),
+  S = n("812204"),
+  C = n("685665"),
   _ = n("338733"),
   I = n("779601"),
   T = n("967889"),
@@ -32,8 +32,8 @@ var l = n("37983"),
   R = n("161778"),
   j = n("168973"),
   L = n("471671"),
-  O = n("983782"),
-  y = n("587974"),
+  y = n("983782"),
+  O = n("587974"),
   P = n("773336"),
   b = n("439932"),
   D = n("50885"),
@@ -122,8 +122,8 @@ class V extends a.Component {
       reducedMotionEnabled: m,
       fontScaleClass: E,
       saturation: g,
-      withTitleBar: C,
-      guestWindow: S,
+      withTitleBar: S,
+      guestWindow: C,
       clientThemesClassName: _,
       contentClassName: x
     } = this.props, N = (0, P.getPlatform)(), M = i(E, {
@@ -147,13 +147,13 @@ class V extends a.Component {
                 containerRef: this.rootRef,
                 children: (0, l.jsx)(p.default, {
                   children: (0, l.jsxs)(T.default, {
-                    children: [(0, l.jsx)(y.MaskLibrary, {}), (0, l.jsx)(h.AppWindowContextProvider, {
+                    children: [(0, l.jsx)(O.MaskLibrary, {}), (0, l.jsx)(h.AppWindowContextProvider, {
                       appContext: F.AppContext.POPOUT,
-                      renderWindow: S,
-                      children: (0, l.jsxs)(O.AppLayerProvider, {
+                      renderWindow: C,
+                      children: (0, l.jsxs)(y.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
                           className: B.popout,
-                          children: [C && null != N ? (0, l.jsx)(v.default, {
+                          children: [S && null != N ? (0, l.jsx)(v.default, {
                             focused: n,
                             type: N,
                             windowKey: r,
@@ -162,7 +162,7 @@ class V extends a.Component {
                             className: i(B.content, x),
                             children: s
                           })]
-                        }), (0, l.jsx)(c.Modals, {}), (0, l.jsx)(f.default, {}), (0, l.jsx)(O.AppLayerContainer, {})]
+                        }), (0, l.jsx)(c.Modals, {}), (0, l.jsx)(f.default, {}), (0, l.jsx)(y.AppLayerContainer, {})]
                       })
                     })]
                   })
@@ -190,7 +190,7 @@ class V extends a.Component {
 V.defaultProps = {
   withTitleBar: !0
 };
-let H = a.forwardRef(function(e, t) {
+let G = a.forwardRef(function(e, t) {
   let {
     guestWindow: n,
     focused: a
@@ -226,10 +226,10 @@ let H = a.forwardRef(function(e, t) {
   let v = (0, N.default)(n, a),
     {
       AnalyticsLocationProvider: A
-    } = (0, S.default)(C.default.POPOUT_WINDOW),
+    } = (0, C.default)(S.default.POPOUT_WINDOW),
     {
       clientThemesClassName: j,
-      clientThemesCSS: O
+      clientThemesCSS: y
     } = (0, _.default)();
   return null == n ? null : (0, l.jsx)(c.DnDProvider, {
     children: (0, l.jsx)(A, {
@@ -250,9 +250,9 @@ let H = a.forwardRef(function(e, t) {
         fontScaleClass: g,
         saturation: I,
         clientThemesClassName: j,
-        clientThemesCSS: O
+        clientThemesCSS: y
       })
     })
   })
 });
-var G = H
+var H = G

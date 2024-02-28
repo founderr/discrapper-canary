@@ -4,14 +4,14 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return m
+    return h
   }
 }), n("222007");
 var a, l, s = n("446674"),
   i = n("862337"),
   r = n("913144"),
-  d = n("718517"),
-  u = n("42203"),
+  u = n("718517"),
+  d = n("42203"),
   o = n("957255"),
   c = n("49111");
 (l = a || (a = {}))[l.SendMessage = 0] = "SendMessage", l[l.CreateThread = 1] = "CreateThread";
@@ -20,7 +20,7 @@ let E = {
   1: {}
 };
 
-function f(e, t, n) {
+function _(e, t, n) {
   if (function(e, t) {
       null != E[t][e.id] && (E[t][e.id].timer.stop(), delete E[t][e.id])
     }(e, t), function(e, t) {
@@ -42,50 +42,50 @@ function f(e, t, n) {
   }, !0)
 }
 
-function _(e, t) {
-  let n = u.default.getChannel(e);
+function f(e, t) {
+  let n = d.default.getChannel(e);
   if (null == n) return !1;
-  f(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * d.default.Millis.SECOND + 100)
+  _(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * u.default.Millis.SECOND + 100)
 }
 
 function g(e) {
   let {
     file: t
-  } = e, n = u.default.getChannel(t.channelId);
-  return null != n && f(n, 0, 0)
+  } = e, n = d.default.getChannel(t.channelId);
+  return null != n && _(n, 0, 0)
 }
-class h extends s.default.Store {
+class S extends s.default.Store {
   initialize() {
-    this.waitFor(u.default)
+    this.waitFor(d.default)
   }
   getSlowmodeCooldownGuess(e, t) {
     let n = E[null != t ? t : 0][e];
     return null != n ? n.cooldownMs : 0
   }
 }
-h.displayName = "SlowmodeStore";
-var m = new h(r.default, {
+S.displayName = "SlowmodeStore";
+var h = new S(r.default, {
   SLOWMODE_RESET_COOLDOWN: function(e) {
     let {
       channelId: t,
       slowmodeType: n
     } = e;
-    return _(t, n)
+    return f(t, n)
   },
   SLOWMODE_SET_COOLDOWN: function(e) {
     let {
       channelId: t,
       slowmodeType: n,
       cooldownMs: a
-    } = e, l = u.default.getChannel(t);
+    } = e, l = d.default.getChannel(t);
     if (null == l) return !1;
-    f(l, n, 0 === a ? 0 : a + 100)
+    _(l, n, 0 === a ? 0 : a + 100)
   },
   UPLOAD_START: function(e) {
     let {
       channelId: t
     } = e;
-    return _(t, 0)
+    return f(t, 0)
   },
   UPLOAD_FAIL: g,
   UPLOAD_CANCEL_REQUEST: g,
@@ -99,8 +99,8 @@ var m = new h(r.default, {
         let t = E[e][a.id],
           l = a.rateLimitPerUser;
         if (null == t || t.rateLimitPerUser === l) continue;
-        let s = Math.min(null !== (n = null == t ? void 0 : t.cooldownMs) && void 0 !== n ? n : 0, l * d.default.Millis.SECOND);
-        f(a, e, s)
+        let s = Math.min(null !== (n = null == t ? void 0 : t.cooldownMs) && void 0 !== n ? n : 0, l * u.default.Millis.SECOND);
+        _(a, e, s)
       }
     })
   },

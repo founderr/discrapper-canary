@@ -17,14 +17,14 @@ var l, a, r = n("37983"),
   f = n("15935"),
   h = n("569512"),
   m = n("941723"),
-  R = n("49111"),
-  g = n("235735");
+  g = n("49111"),
+  R = n("235735");
 (l = a || (a = {}))[l.NORMAL = 16] = "NORMAL", l[l.LARGE = 32] = "LARGE";
 let E = async e => {
   var t;
   let {
     effect: n
-  } = e, l = await (0, h.getBurstAnimation)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : R.EMPTY_STRING_MESSAGE_ID, n.emoji.name), a = await (0, m.getResizedAnimation)("".concat(n.channelId, ":").concat(n.messageId, ":").concat(n.emoji.name), n.url, l, n.color);
+  } = e, l = await (0, h.getBurstAnimation)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : g.EMPTY_STRING_MESSAGE_ID, n.emoji.name), a = await (0, m.getResizedAnimation)("".concat(n.channelId, ":").concat(n.messageId, ":").concat(n.emoji.name), n.url, l, n.color);
   return a.assets[0].p = n.url, a
 };
 
@@ -62,9 +62,9 @@ function S(e) {
       null != e && e.destroy()
     }
   }, [l, n, a]), (0, r.jsx)("div", {
-    className: g.effectsWrapper,
+    className: R.effectsWrapper,
     children: (0, r.jsx)("div", {
-      className: s(g.effect, t),
+      className: s(R.effect, t),
       style: {
         transform: "translateY(".concat(h, "px)"),
         height: u,

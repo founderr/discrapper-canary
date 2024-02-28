@@ -20,8 +20,8 @@ var a = n("446674"),
   p = n("923510"),
   E = n("759718"),
   g = n("58763"),
-  C = n("119184"),
-  S = n("782340"),
+  S = n("119184"),
+  C = n("782340"),
   _ = n("921148");
 
 function I(e) {
@@ -36,8 +36,8 @@ function I(e) {
       width: 20
     }),
     color: s.default.unsafe_rawColors.PRIMARY_700.css,
-    title: S.default.Messages.STAGE_CONTINUE_PROMPT_TITLE,
-    description: S.default.Messages.STAGE_CONTINUE_PROMPT_SUBTITLE,
+    title: C.default.Messages.STAGE_CONTINUE_PROMPT_TITLE,
+    description: C.default.Messages.STAGE_CONTINUE_PROMPT_SUBTITLE,
     onClick: t
   })
 }
@@ -61,15 +61,15 @@ function T(e) {
       color: "header-secondary",
       children: function(e) {
         if (0 === e.length) return "";
-        if (1 === e.length) return S.default.Messages.STAGE_AUDIENCE_WAITING_ONE.format({
+        if (1 === e.length) return C.default.Messages.STAGE_AUDIENCE_WAITING_ONE.format({
           first: e[0].userNick
         });
-        if (2 === e.length) return S.default.Messages.STAGE_AUDIENCE_WAITING_TWO.format({
+        if (2 === e.length) return C.default.Messages.STAGE_AUDIENCE_WAITING_TWO.format({
           first: e[0].userNick,
           second: e[1].userNick
         });
         let t = e.length - 2;
-        return S.default.Messages.STAGE_AUDIENCE_WAITING_MANY.format({
+        return C.default.Messages.STAGE_AUDIENCE_WAITING_MANY.format({
           first: e[0].userNick,
           second: e[1].userNick,
           numOthers: t
@@ -89,7 +89,7 @@ function v(e) {
     usersInSummary: x
   } = (0, E.default)(t.id);
   return (0, l.jsxs)("div", {
-    children: [(0, l.jsx)(C.default, {
+    children: [(0, l.jsx)(S.default, {
       children: (0, l.jsx)("div", {
         className: _.iconBackground,
         children: (0, l.jsx)(h.default, {
@@ -103,11 +103,11 @@ function v(e) {
       children: [(0, l.jsx)(i.Heading, {
         className: _.title,
         variant: "heading-xl/semibold",
-        children: S.default.Messages.STAGE_START_PROMPT_TITLE_MODERATOR
+        children: C.default.Messages.STAGE_START_PROMPT_TITLE_MODERATOR
       }), (0, l.jsx)(i.Text, {
         className: _.subtitle,
         variant: "text-sm/normal",
-        children: S.default.Messages.STAGE_START_PROMPT_SUBTITLE
+        children: C.default.Messages.STAGE_START_PROMPT_SUBTITLE
       })]
     }), v ? null : (0, l.jsx)(o.default, {
       channelId: t.id

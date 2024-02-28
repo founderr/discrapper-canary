@@ -9,32 +9,32 @@ var a = n("446674"),
   s = n("149022"),
   i = n("884351"),
   r = n("845579"),
-  d = n("377253");
-let u = {},
+  u = n("377253");
+let d = {},
   o = {};
 class c extends a.default.Store {
   isEditing(e, t) {
     var n;
-    return (null === (n = u[e]) || void 0 === n ? void 0 : n.messageId) === t
+    return (null === (n = d[e]) || void 0 === n ? void 0 : n.messageId) === t
   }
   isEditingAny(e) {
-    return null != u[e]
+    return null != d[e]
   }
   getEditingTextValue(e) {
     var t;
-    return null === (t = u[e]) || void 0 === t ? void 0 : t.textValue
+    return null === (t = d[e]) || void 0 === t ? void 0 : t.textValue
   }
   getEditingRichValue(e) {
     var t;
-    return null === (t = u[e]) || void 0 === t ? void 0 : t.richValue
+    return null === (t = d[e]) || void 0 === t ? void 0 : t.richValue
   }
   getEditingMessageId(e) {
     var t;
-    return null === (t = u[e]) || void 0 === t ? void 0 : t.messageId
+    return null === (t = d[e]) || void 0 === t ? void 0 : t.messageId
   }
   getEditingMessage(e) {
-    let t = u[e];
-    return null != t && null != t.messageId ? d.default.getMessage(e, t.messageId) : null
+    let t = d[e];
+    return null != t && null != t.messageId ? u.default.getMessage(e, t.messageId) : null
   }
   getEditActionSource(e) {
     return o[e]
@@ -48,12 +48,12 @@ var E = new c(l.default, {
       messageId: n,
       content: a,
       source: l
-    } = e, d = r.UseLegacyChatInput.getSetting(), c = i.default.unparse(a, t);
-    u[t] = {
+    } = e, u = r.UseLegacyChatInput.getSetting(), c = i.default.unparse(a, t);
+    d[t] = {
       channelId: t,
       messageId: n,
       textValue: c,
-      richValue: (0, s.toRichValue)(d ? c : a)
+      richValue: (0, s.toRichValue)(u ? c : a)
     }, o[t] = l
   },
   MESSAGE_UPDATE_EDIT: function(e) {
@@ -61,9 +61,9 @@ var E = new c(l.default, {
       channelId: t,
       textValue: n,
       richValue: a
-    } = e, l = u[t];
+    } = e, l = d[t];
     if (null == l) return !1;
-    u[t] = {
+    d[t] = {
       ...l,
       textValue: n,
       richValue: a
@@ -73,7 +73,7 @@ var E = new c(l.default, {
     let {
       channelId: t
     } = e;
-    if (null == t || null == u[t]) return !1;
-    delete u[t], delete o[t]
+    if (null == t || null == d[t]) return !1;
+    delete d[t], delete o[t]
   }
 })

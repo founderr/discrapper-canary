@@ -1,5 +1,5 @@
 "use strict";
-var a, l, s, i, r, d;
+var a, l, s, i, r, u;
 n.r(t), n.d(t, {
   ConfettiLocation: function() {
     return a
@@ -16,8 +16,8 @@ n.r(t), n.d(t, {
   SHAKE_STEP_DIVIDER: function() {
     return c
   }
-}), n("808653"), n("222007"), (i = a || (a = {}))[i.CHAT_INPUT = 0] = "CHAT_INPUT", i[i.REACTION = 1] = "REACTION", i[i.MEMBER_USER = 2] = "MEMBER_USER", i[i.CALL_TILE = 3] = "CALL_TILE", (r = l || (l = {}))[r.CHAT_INPUT = 0] = "CHAT_INPUT", r[r.VOICE_USER = 1] = "VOICE_USER", r[r.MENTION = 2] = "MENTION", (d = s || (s = {}))[d.LEVEL_1 = 0] = "LEVEL_1", d[d.LEVEL_2 = 1] = "LEVEL_2", d[d.LEVEL_3 = 2] = "LEVEL_3", d[d.LEVEL_4 = 3] = "LEVEL_4", d[d.LEVEL_5 = 4] = "LEVEL_5";
-let u = {
+}), n("808653"), n("222007"), (i = a || (a = {}))[i.CHAT_INPUT = 0] = "CHAT_INPUT", i[i.REACTION = 1] = "REACTION", i[i.MEMBER_USER = 2] = "MEMBER_USER", i[i.CALL_TILE = 3] = "CALL_TILE", (r = l || (l = {}))[r.CHAT_INPUT = 0] = "CHAT_INPUT", r[r.VOICE_USER = 1] = "VOICE_USER", r[r.MENTION = 2] = "MENTION", (u = s || (s = {}))[u.LEVEL_1 = 0] = "LEVEL_1", u[u.LEVEL_2 = 1] = "LEVEL_2", u[u.LEVEL_3 = 2] = "LEVEL_3", u[u.LEVEL_4 = 3] = "LEVEL_4", u[u.LEVEL_5 = 4] = "LEVEL_5";
+let d = {
     0: [
       [1, 1e-4],
       [25, .05],
@@ -69,9 +69,9 @@ let u = {
       [9001, 1e4]
     ]
   },
-  o = Object.keys(u).reduce((e, t) => ({
+  o = Object.keys(d).reduce((e, t) => ({
     ...e,
-    [t]: u[t].map(e => {
+    [t]: d[t].map(e => {
       let [t] = e;
       return t
     })
@@ -82,9 +82,9 @@ let u = {
     3: [],
     4: []
   }),
-  c = Object.keys(u).reduce((e, t) => ({
+  c = Object.keys(d).reduce((e, t) => ({
     ...e,
-    [t]: u[t].map(e => {
+    [t]: d[t].map(e => {
       let [t, n] = e;
       return n
     })

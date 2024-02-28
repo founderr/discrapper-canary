@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return C
+    return I
   }
 }), n("222007");
-var i, a, r, l, s = n("446674"),
+var i, a, r, s, l = n("446674"),
   u = n("913144"),
   o = n("42203");
-(r = i || (i = {}))[r.STRANGER_DANGER = 1] = "STRANGER_DANGER", r[r.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", r[r.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (l = a || (a = {}))[l.UPVOTE = 0] = "UPVOTE", l[l.DOWNVOTE = 1] = "DOWNVOTE";
+(r = i || (i = {}))[r.STRANGER_DANGER = 1] = "STRANGER_DANGER", r[r.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", r[r.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (s = a || (a = {}))[s.UPVOTE = 0] = "UPVOTE", s[s.DOWNVOTE = 1] = "DOWNVOTE";
 let d = [],
   c = {},
   f = new Set;
@@ -34,7 +34,7 @@ function _() {
     p(e)
   })
 }
-class h extends s.default.Store {
+class C extends l.default.Store {
   initialize() {
     this.waitFor(o.default)
   }
@@ -50,7 +50,7 @@ class h extends s.default.Store {
     return f.has(e)
   }
 }
-var C = new h(u.default, {
+var I = new C(u.default, {
   CHANNEL_CREATE: function(e) {
     p(e.channel)
   },

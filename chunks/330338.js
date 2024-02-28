@@ -5,36 +5,36 @@ n.r(t), n.d(t, {
   }
 });
 var i, o, l, a = n("446674"),
-  u = n("913144"),
-  d = n("42203"),
+  d = n("913144"),
+  u = n("42203"),
   s = n("476108"),
-  r = n("305961"),
-  E = n("18494"),
+  E = n("305961"),
+  r = n("18494"),
   _ = n("287850"),
-  c = n("49111");
-let A = (null !== (l = null === (o = window) || void 0 === o ? void 0 : null === (i = o.location) || void 0 === i ? void 0 : i.pathname) && void 0 !== l ? l : "").startsWith(c.Routes.ACTIVITIES) ? c.Routes.ACTIVITIES : null;
+  A = n("49111");
+let c = (null !== (l = null === (o = window) || void 0 === o ? void 0 : null === (i = o.location) || void 0 === i ? void 0 : i.pathname) && void 0 !== l ? l : "").startsWith(A.Routes.ACTIVITIES) ? A.Routes.ACTIVITIES : null;
 
 function C(e) {
   let {
     link: t
   } = e;
-  if (A === t) return !1;
-  A = t
+  if (c === t) return !1;
+  c = t
 }
 class T extends a.default.Store {
   initialize() {
-    this.waitFor(s.default, _.default, E.default, r.default, d.default)
+    this.waitFor(s.default, _.default, r.default, E.default, u.default)
   }
   getHomeLink() {
-    return null != A ? A : s.default.fallbackRoute
+    return null != c ? c : s.default.fallbackRoute
   }
 }
 T.displayName = "AppViewStore";
-var S = new T(u.default, {
+var S = new T(d.default, {
   OVERLAY_INITIALIZE: function() {
     let e = _.default.getPrivateChannelIds(),
-      t = E.default.getChannelId(c.ME);
-    (null != t || null != e[0]) && (A = c.Routes.CHANNEL(c.ME, null != t ? t : e[0]))
+      t = r.default.getChannelId(A.ME);
+    (null != t || null != e[0]) && (c = A.Routes.CHANNEL(A.ME, null != t ? t : e[0]))
   },
   APP_VIEW_SET_HOME_LINK: C,
   APPLICATION_STORE_LOCATION_CHANGE: function(e) {
@@ -47,8 +47,8 @@ var S = new T(u.default, {
     })
   },
   APPLICATION_STORE_RESET_NAVIGATION: function() {
-    if (null == A || !A.startsWith(c.Routes.APPLICATION_STORE)) return !1;
-    A = c.Routes.APPLICATION_STORE
+    if (null == c || !c.startsWith(A.Routes.APPLICATION_STORE)) return !1;
+    c = A.Routes.APPLICATION_STORE
   },
   CHANNEL_SELECT: function(e) {
     let {
@@ -56,8 +56,8 @@ var S = new T(u.default, {
       channelId: n
     } = e;
     if (null == t && null != n) {
-      let e = c.Routes.CHANNEL(c.ME, n);
-      if (e !== A) return A = e, !0
+      let e = A.Routes.CHANNEL(A.ME, n);
+      if (e !== c) return c = e, !0
     }
     return !1
   },
@@ -65,6 +65,6 @@ var S = new T(u.default, {
     let {
       channel: t
     } = e;
-    null == t.guild_id && null != t.id && null != A && A === c.Routes.CHANNEL(c.ME, t.id) && (A = null)
+    null == t.guild_id && null != t.id && null != c && c === A.Routes.CHANNEL(A.ME, t.id) && (c = null)
   }
 })

@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("506885"),
   E = n("430312"),
   g = n("26989"),
-  C = n("697218"),
-  S = n("459824"),
+  S = n("697218"),
+  C = n("459824"),
   _ = n("516832"),
   I = n("986358"),
   T = n("590456"),
@@ -34,16 +34,16 @@ function x(e) {
     className: x,
     infoPanelClassName: N,
     style: A
-  } = e, M = (0, S.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([C.default], () => C.default.getUser(t), [t]), j = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [L, O] = a.useState(null == R || null == j), y = (0, d.default)(j), P = a.useRef(null), {
+  } = e, M = (0, C.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), j = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [L, y] = a.useState(null == R || null == j), O = (0, d.default)(j), P = a.useRef(null), {
     AnalyticsLocationProvider: b
   } = (0, h.default)(f.default.GUILD_MEMBER_MOD_VIEW);
   return (a.useEffect(() => {
     !M && s()
   }, [M, s]), a.useEffect(() => {
-    let e = null != y && null == j;
+    let e = null != O && null == j;
     e && !L && s()
-  }, [L, j, s, y]), a.useEffect(() => {
-    null != R && null != j && O(!1)
+  }, [L, j, s, O]), a.useEffect(() => {
+    null != R && null != j && y(!1)
   }, [R, j]), a.useEffect(() => {
     let e = null == j;
     return !L && e && (P.current = window.setTimeout(s, 500)), () => {
@@ -57,7 +57,7 @@ function x(e) {
         guildId: n,
         dispatchWait: !0
       })];
-      await Promise.all(e), O(!1)
+      await Promise.all(e), y(!1)
     })()
   }, [n, t]), M) ? L || null == R || null == j ? (0, l.jsx)("div", {
     className: i(v.sidebarContianer, v.loadingContainer, x),

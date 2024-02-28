@@ -9,9 +9,9 @@ var a = n("446674"),
   s = n("377253");
 let i = {},
   r = {},
-  d = {};
+  u = {};
 
-function u(e) {
+function d(e) {
   if (null == e) return !1;
   let t = r[e];
   if (null == t) return !1;
@@ -26,7 +26,7 @@ function u(e) {
 }
 
 function o() {
-  i = {}, r = {}, d = {}
+  i = {}, r = {}, u = {}
 }
 class c extends a.default.Store {
   initialize() {
@@ -36,7 +36,7 @@ class c extends a.default.Store {
     return i[e]
   }
   getPendingReplyActionSource(e) {
-    return d[e]
+    return u[e]
   }
 }
 c.displayName = "PendingReplyStore";
@@ -54,7 +54,7 @@ var E = new c(l.default, {
       message: n,
       shouldMention: a,
       showMentionToggle: l
-    }, d[t.id] = s
+    }, u[t.id] = s
   },
   CREATE_SHALLOW_PENDING_REPLY: function(e) {
     let {
@@ -97,22 +97,22 @@ var E = new c(l.default, {
       id: l,
       channelId: s
     } = e;
-    if ((null === (n = i[s]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === l) delete i[s], delete d[s];
+    if ((null === (n = i[s]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === l) delete i[s], delete u[s];
     else {
       if ((null === (a = r[s]) || void 0 === a ? void 0 : a.messageId) !== l) return !1;
-      delete r[s], delete d[s]
+      delete r[s], delete u[s]
     }
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    u(t)
+    d(t)
   },
   LOAD_MESSAGES_SUCCESS: function(e) {
     let {
       channelId: t
     } = e;
-    u(t)
+    d(t)
   }
 })

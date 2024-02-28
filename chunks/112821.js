@@ -24,8 +24,8 @@ function g(e) {
     channel: t,
     onJump: g
   } = e, {
-    messages: C,
-    loading: S
+    messages: S,
+    loading: C
   } = (0, s.useStateFromStoresObject)([c.default], () => {
     let e = c.default.getPinnedMessages(t.id),
       n = null != e ? e.messages : E;
@@ -37,7 +37,7 @@ function g(e) {
   return a.useEffect(() => {
     o.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "pins"
-    }).enabled && C.some(d.messageHasExpiredAttachmentUrl) && u.default.fetchPins(t.id, !0)
+    }).enabled && S.some(d.messageHasExpiredAttachmentUrl) && u.default.fetchPins(t.id, !0)
   }, []), a.useEffect(() => {
     _ && u.default.ackPins(t.id)
   }, [_, t.id]), (0, l.jsx)(r.Dialog, {
@@ -47,8 +47,8 @@ function g(e) {
         u.default.ackPins(t.id), u.default.fetchPins(t.id)
       },
       channel: t,
-      messages: C,
-      loading: S,
+      messages: S,
+      loading: C,
       analyticsName: "Channel Pins",
       onCloseMessage: function(e, n) {
         null != e && (n.shiftKey ? u.default.unpinMessage(t, e.id) : m.default.confirmUnpin(t, e))

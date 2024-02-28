@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return L
   },
   renderTopic: function() {
-    return x
+    return y
   },
   HeaderGuildBreadcrumb: function() {
     return O
@@ -23,8 +23,8 @@ var a = n("37983"),
   h = n("506885"),
   C = n("27618"),
   p = n("162771"),
-  m = n("697218"),
-  E = n("79798"),
+  E = n("697218"),
+  m = n("79798"),
   g = n("476263"),
   _ = n("718490"),
   S = n("960454"),
@@ -44,7 +44,7 @@ function L(e) {
     inSidebar: f = !1,
     handleClick: h,
     handleContextMenu: p,
-    handleParentClick: E,
+    handleParentClick: m,
     handleParentContextMenu: g,
     renderFollowButton: _
   } = e, T = (0, c.default)(t, r), {
@@ -85,7 +85,7 @@ function L(e) {
           prefix: null, level: 1
         }
     }
-  }(t.type, r), x = (0, a.jsxs)(a.Fragment, {
+  }(t.type, r), y = (0, a.jsxs)(a.Fragment, {
     children: [null != L ? (0, a.jsxs)(o.HiddenVisually, {
       children: [L, ":"]
     }) : null, " ", n]
@@ -99,7 +99,7 @@ function L(e) {
         handleContextMenu: p
       });
     case I.ChannelTypes.GROUP_DM:
-      if (t.isManaged()) return x;
+      if (t.isManaged()) return y;
       return (0, a.jsxs)(s.Fragment, {
         children: [(0, a.jsx)(o.HiddenVisually, {
           children: N.default.Messages.GROUP_DM
@@ -119,29 +119,29 @@ function L(e) {
     case I.ChannelTypes.GUILD_FORUM:
     case I.ChannelTypes.GUILD_MEDIA:
       return (0, a.jsxs)(s.Fragment, {
-        children: [y(T, t.type === I.ChannelTypes.GUILD_ANNOUNCEMENT ? N.default.Messages.NEWS_CHANNEL : N.default.Messages.TEXT_CHANNEL), (0, a.jsx)(A.default.Title, {
+        children: [x(T, t.type === I.ChannelTypes.GUILD_ANNOUNCEMENT ? N.default.Messages.NEWS_CHANNEL : N.default.Messages.TEXT_CHANNEL), (0, a.jsx)(A.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
-          children: x
+          children: y
         }), null != _ ? _() : null]
       });
     case I.ChannelTypes.GUILD_VOICE:
       return (0, a.jsxs)(s.Fragment, {
-        children: [y(T, N.default.Messages.VOICE_CHANNEL), (0, a.jsx)(A.default.Title, {
+        children: [x(T, N.default.Messages.VOICE_CHANNEL), (0, a.jsx)(A.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
-          children: x
+          children: y
         })]
       });
     case I.ChannelTypes.GUILD_STAGE_VOICE:
       return (0, a.jsxs)(s.Fragment, {
-        children: [y(T, N.default.Messages.STAGE_CHANNEL), (0, a.jsx)(A.default.Title, {
+        children: [x(T, N.default.Messages.STAGE_CHANNEL), (0, a.jsx)(A.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
-          children: x
+          children: y
         })]
       });
     case I.ChannelTypes.ANNOUNCEMENT_THREAD:
@@ -151,18 +151,18 @@ function L(e) {
       if (!f && null != l) {
         let e = (0, c.default)(l, r);
         O = (0, a.jsxs)(s.Fragment, {
-          children: [y(e, N.default.Messages.TEXT_CHANNEL), (0, a.jsx)(A.default.Title, {
+          children: [x(e, N.default.Messages.TEXT_CHANNEL), (0, a.jsx)(A.default.Title, {
             level: R,
             onContextMenu: g,
-            onClick: E,
+            onClick: m,
             className: i(v.parentChannelName, v.cursorPointer),
-            children: (0, d.computeChannelName)(l, m.default, C.default)
+            children: (0, d.computeChannelName)(l, E.default, C.default)
           }), (0, a.jsx)(A.default.Caret, {})]
         })
       }
       let D = (null == l ? void 0 : l.type) != null && I.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
       return (0, a.jsxs)(s.Fragment, {
-        children: [O, y(D ? null : T, N.default.Messages.THREAD), (0, a.jsx)(A.default.Title, {
+        children: [O, x(D ? null : T, N.default.Messages.THREAD), (0, a.jsx)(A.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
@@ -170,7 +170,7 @@ function L(e) {
             [v.cursorPointer]: f,
             [v.forumPostTitle]: D
           }),
-          children: x
+          children: y
         })]
       });
     case I.ChannelTypes.GUILD_DIRECTORY:
@@ -198,19 +198,19 @@ function L(e) {
 let R = e => {
   let {
     channel: t
-  } = e, n = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentUser()), l = (0, r.useStateFromStores)([m.default], () => m.default.getUser(t.getRecipientId()));
+  } = e, n = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), l = (0, r.useStateFromStores)([E.default], () => E.default.getUser(t.getRecipientId()));
   return (s.useEffect(() => {
     (null == n ? void 0 : n.isStaff()) && (0, h.default)(l.id, l.getAvatarURL(void 0, 80), {
       dispatchWait: !0,
       withMutualGuilds: !0,
       withMutualFriendsCount: !0
     })
-  }, [n, l]), t.isDM() && (null == n ? void 0 : n.isStaff()) && (null == l ? void 0 : l.isStaff())) ? (0, a.jsx)(E.default, {
-    type: E.default.Types.STAFF_ONLY_DM
+  }, [n, l]), t.isDM() && (null == n ? void 0 : n.isStaff()) && (null == l ? void 0 : l.isStaff())) ? (0, a.jsx)(m.default, {
+    type: m.default.Types.STAFF_ONLY_DM
   }) : null
 };
 
-function x(e, t) {
+function y(e, t) {
   switch (e.type) {
     case I.ChannelTypes.DM:
       return (0, a.jsxs)(a.Fragment, {
@@ -234,7 +234,7 @@ function x(e, t) {
   }
 }
 
-function y(e, t) {
+function x(e, t) {
   return (0, a.jsxs)(a.Fragment, {
     children: [null !== e && (0, a.jsx)(A.default.Icon, {
       iconClassName: v.icon,

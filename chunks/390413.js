@@ -28,10 +28,10 @@ var m = e => {
     className: p,
     onHover: E,
     onFocus: g
-  } = e, [C, S] = i.useState(!0), _ = (0, s.jsx)("div", {
+  } = e, [S, C] = i.useState(!0), _ = (0, s.jsx)("div", {
     className: f.iconWrapper,
     children: (0, s.jsx)(d.default, {
-      direction: C ? d.default.Directions.RIGHT : d.default.Directions.DOWN
+      direction: S ? d.default.Directions.RIGHT : d.default.Directions.DOWN
     })
   });
   return (0, s.jsxs)("div", {
@@ -42,7 +42,7 @@ var m = e => {
       color: o.ButtonColors.CUSTOM,
       onMouseEnter: E,
       onFocus: g,
-      onClick: () => S(!C),
+      onClick: () => C(!S),
       children: a ? (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(c.ContentBlob, {
           width: 34,
@@ -59,7 +59,7 @@ var m = e => {
       })
     }), (0, s.jsx)("ul", {
       className: u(f.connectionList, {
-        [f.isCollapsed]: C
+        [f.isCollapsed]: S
       }),
       children: r ? Array.from({
         length: m

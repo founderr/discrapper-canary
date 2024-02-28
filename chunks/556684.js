@@ -31,7 +31,7 @@ function p() {
       guildId: t,
       channelId: n
     }
-  }, s.default), n = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(e)), p = (0, l.useStateFromStores)([u.default], () => null == n ? u.default.getChannel(t) : null), m = (0, l.useStateFromStores)([c.default], () => c.default.getCurrentUser()), E = null != p ? (0, r.getChannelIconURL)(p) : null, g = null != m ? m.getAvatarURL(e, 80) : h.DEFAULT_AVATARS[0], _ = (0, a.jsx)(i.Avatar, {
+  }, s.default), n = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(e)), p = (0, l.useStateFromStores)([u.default], () => null == n ? u.default.getChannel(t) : null), E = (0, l.useStateFromStores)([c.default], () => c.default.getCurrentUser()), m = null != p ? (0, r.getChannelIconURL)(p) : null, g = null != E ? E.getAvatarURL(e, 80) : h.DEFAULT_AVATARS[0], _ = (0, a.jsx)(i.Avatar, {
     src: g,
     "aria-hidden": !0,
     size: i.AvatarSizes.SIZE_80,
@@ -39,9 +39,9 @@ function p() {
   }), S = null;
   return S = null != n ? (0, a.jsx)(f.default, {
     guild: n
-  }) : null != E ? (0, a.jsx)(i.Avatar, {
+  }) : null != m ? (0, a.jsx)(i.Avatar, {
     "aria-hidden": !0,
-    src: E,
+    src: m,
     size: i.AvatarSizes.SIZE_80,
     className: C.avatarSizeOverride
   }) : _, (0, a.jsxs)("div", {

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   trackGuildInviteNotificationDismissed: function() {
-    return d
+    return u
   }
 });
 var a, l, s = n("716241"),
@@ -18,7 +18,7 @@ function r() {
   })
 }
 
-function d() {
+function u() {
   s.default.trackWithMetadata(i.AnalyticEvents.NOTIFICATION_CTA_CLICKED, {
     notification_type: "Reminder Notification",
     action: "Guild Invite",

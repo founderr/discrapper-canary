@@ -20,8 +20,8 @@ var a = n("414456"),
   p = n("463278"),
   E = n("608973"),
   g = n("132881"),
-  C = n("782340"),
-  S = n("865331");
+  S = n("782340"),
+  C = n("865331");
 
 function _(e) {
   let {
@@ -29,24 +29,24 @@ function _(e) {
     guildId: n
   } = e, a = (0, c.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
   return (0, l.jsxs)("div", {
-    className: s(S.header),
+    className: s(C.header),
     style: {
       backgroundColor: a
     },
     children: [(0, l.jsxs)("div", {
-      className: s(S.headerTitle),
+      className: s(C.headerTitle),
       children: [(0, l.jsx)(d.default, {
         width: 16,
         height: 16
       }), (0, l.jsx)(r.Heading, {
         variant: "heading-md/semibold",
-        children: C.default.Messages.GUILD_MEMBER_MOD_VIEW_TITLE
+        children: S.default.Messages.GUILD_MEMBER_MOD_VIEW_TITLE
       })]
     }), (0, l.jsx)("div", {
       children: (0, l.jsx)(r.KeyCombo, {
         shortcut: "esc",
-        keyClassName: S.keyComboInner,
-        className: S.keyComboContainer
+        keyClassName: C.keyComboInner,
+        className: C.keyComboContainer
       })
     })]
   })
@@ -58,10 +58,10 @@ function I(e) {
     guildId: n,
     location: a,
     className: d,
-    onNavigate: C
+    onNavigate: S
   } = e, I = (0, i.default)([o.default], () => o.default.getUser(t), [t]), T = (0, i.default)([u.default], () => u.default.getMember(n, t), [n, t]), v = (0, c.useProfileThemedPanelBackground)(t, n);
   return null == I || null == T ? null : (0, l.jsxs)(r.Scroller, {
-    className: s(S.container, d),
+    className: s(C.container, d),
     style: {
       backgroundColor: v
     },
@@ -69,7 +69,7 @@ function I(e) {
       userId: t,
       guildId: n
     }), (0, l.jsxs)("div", {
-      className: s(S.innerContainer),
+      className: s(C.innerContainer),
       children: [(0, l.jsx)(E.default, {
         member: T
       }), (0, l.jsx)(g.default, {
@@ -77,7 +77,7 @@ function I(e) {
         guildId: n
       }), (0, l.jsx)(p.default, {
         member: T,
-        onNavigate: C
+        onNavigate: S
       }), (0, l.jsx)(h.default, {
         member: T
       }), (0, l.jsx)(f.default, {

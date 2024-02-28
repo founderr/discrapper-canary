@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 });
 var a = n("446674"),
@@ -9,9 +9,9 @@ var a = n("446674"),
   s = n("82339"),
   i = n("579033");
 let r = {},
-  d = null;
+  u = null;
 
-function u(e, t) {
+function d(e, t) {
   var n;
   let a = null !== (n = r[e]) && void 0 !== n ? n : {
     code: e,
@@ -30,18 +30,18 @@ function o(e) {
 }
 
 function c(e) {
-  return u(e.code, t => {
+  return d(e.code, t => {
     let n = (0, s.default)(e);
     for (let e in n) t[e] = n[e]
   })
 }
 
 function E(e) {
-  return u(e.code, e => {
+  return d(e.code, e => {
     e.state = i.GuildTemplateStates.EXPIRED
   })
 }
-class f extends a.default.Store {
+class _ extends a.default.Store {
   getGuildTemplate(e) {
     return null != e ? r[e] : null
   }
@@ -55,11 +55,11 @@ class f extends a.default.Store {
     }
   }
   getDisplayedGuildTemplateCode() {
-    return d
+    return u
   }
 }
-f.displayName = "GuildTemplateStore";
-var _ = new f(l.default, {
+_.displayName = "GuildTemplateStore";
+var f = new _(l.default, {
   GUILD_TEMPLATE_RESOLVE: function(e) {
     let {
       code: t
@@ -84,25 +84,25 @@ var _ = new f(l.default, {
   GUILD_TEMPLATE_RESOLVE_FAILURE: E,
   GUILD_TEMPLATE_DELETE_SUCCESS: E,
   GUILD_TEMPLATE_ACCEPT: function(e) {
-    return u(e.code, e => {
+    return d(e.code, e => {
       e.state = i.GuildTemplateStates.ACCEPTING
     })
   },
   GUILD_TEMPLATE_ACCEPT_SUCCESS: function(e) {
-    return u(e.code, e => {
+    return d(e.code, e => {
       var t;
       e.state = i.GuildTemplateStates.ACCEPTED, e.usageCount = (null !== (t = e.usageCount) && void 0 !== t ? t : 0) + 1
     })
   },
   GUILD_TEMPLATE_ACCEPT_FAILURE: function(e) {
-    return u(e.code, e => {
+    return d(e.code, e => {
       e.state = i.GuildTemplateStates.RESOLVED
     })
   },
   GUILD_TEMPLATE_MODAL_SHOW: function(e) {
-    d = e.code
+    u = e.code
   },
   GUILD_TEMPLATE_MODAL_HIDE: function(e) {
-    d = null
+    u = null
   }
 })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   }
 }), n("222007");
 var a = n("394846"),
@@ -32,7 +32,7 @@ function p() {
       }
   }
 }
-class m extends s.default.Store {
+class E extends s.default.Store {
   initialize() {
     p(), this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type), this.waitFor(i.default)
   }
@@ -54,8 +54,8 @@ class m extends s.default.Store {
     return null != t ? t[e] : null
   }
 }
-m.displayName = "TutorialIndicatorStore";
-var E = new m(l.default, {
+E.displayName = "TutorialIndicatorStore";
+var m = new E(l.default, {
   CONNECTION_OPEN: function(e) {
     let {
       tutorial: t

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return o
   }
 }), n("222007");
 var l = n("884691"),
@@ -11,7 +11,7 @@ var l = n("884691"),
   a = n("795228"),
   d = n("49111");
 
-function s(e, t) {
+function o(e, t) {
   let n = (0, a.default)(null == e ? void 0 : e.id);
   return l.useMemo(() => {
     let l = null != e ? function(e, t) {
@@ -23,8 +23,8 @@ function s(e, t) {
         }
         let l = e.getRole(e.getEveryoneRoleId()),
           a = null != l && !u.default.has(l.permissions, d.Permissions.VIEW_CHANNEL),
-          s = (0, i.isChannelAccessDeniedBy)(t, t.permissionOverwrites[e.id]);
-        if (a && !s)
+          o = (0, i.isChannelAccessDeniedBy)(t, t.permissionOverwrites[e.id]);
+        if (a && !o)
           for (let t of Object.values(e.roles))(0, r.isSubscriptionRole)(t) && (0, i.isAllChannelsRole)(t) && n.add(t);
         return [...n]
       }(e, t) : [],

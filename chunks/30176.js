@@ -23,9 +23,9 @@ var a = n("77078"),
       handleSearchKeyPress: p,
       handleCreateOrAddGuild: E,
       searchResults: g,
-      searchFetching: C
+      searchFetching: S
     } = e;
-    if (C) t = (0, l.jsx)("div", {
+    if (S) t = (0, l.jsx)("div", {
       className: o.pageContainer,
       children: (0, l.jsx)(a.Spinner, {
         className: o.spinner

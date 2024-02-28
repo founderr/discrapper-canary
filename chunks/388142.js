@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   initiateChannelPrompts: function() {
-    return E
+    return f
   },
   forcePrompt: function() {
-    return S
+    return E
   },
   sendGamingStatsMessage: function() {
     return _
   },
   updateGamingStats: function() {
-    return f
+    return S
   }
 });
 var s = n("872717"),
@@ -23,7 +23,7 @@ var s = n("872717"),
   d = n("659500"),
   c = n("49111");
 
-function E(e) {
+function f(e) {
   s.default.post({
     url: c.Endpoints.INITIATE_CHANNEL_PROMPTS,
     body: {
@@ -32,7 +32,7 @@ function E(e) {
   })
 }
 
-function S(e) {
+function E(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT;
   s.default.post({
     url: c.Endpoints.FORCE_SEND_PROMPT(e),
@@ -53,7 +53,7 @@ async function _(e, t, n) {
     }
   }), T(t)
 }
-async function f(e) {
+async function S(e) {
   let t = await s.default.patch({
     url: c.Endpoints.UPDATE_GAMING_STATS(e.channel_id, e.id)
   });

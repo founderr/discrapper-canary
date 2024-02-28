@@ -24,8 +24,8 @@ let f = s.memo(function(e) {
       avatarProfile: h,
       setPopout: C,
       author: p,
-      repliedMessage: m,
-      roleIcon: E
+      repliedMessage: E,
+      roleIcon: m
     } = e, g = (0, d.useContextMenuUser)(t.author.id, n.id), _ = (0, d.useClickMessageAuthorUsername)(t, n, f, C), S = (0, d.useClickMessageAuthorAvatar)(h, C), T = s.useCallback(() => C({
       usernameProfile: !1,
       avatarProfile: !1,
@@ -35,7 +35,7 @@ let f = s.memo(function(e) {
       guildId: n.guild_id,
       message: t,
       channel: n,
-      repliedMessage: m,
+      repliedMessage: E,
       author: p,
       compact: i,
       subscribeToGroupId: r,
@@ -47,7 +47,7 @@ let f = s.memo(function(e) {
       onClickUsername: _,
       onContextMenu: g,
       onPopoutRequestClose: T,
-      roleIcon: E
+      roleIcon: m
     })
   }),
   h = s.memo(i.default);
@@ -65,22 +65,22 @@ function C(e) {
     message: c,
     compact: C,
     channel: p,
-    groupId: m
+    groupId: E
   } = t, {
-    usernameProfile: E,
+    usernameProfile: m,
     avatarProfile: g
   } = s;
   if ((0, r.default)(c)) return null;
-  let _ = c.id === m;
+  let _ = c.id === E;
   return _ || C || null != l ? (0, a.jsx)(f, {
     message: c,
     channel: p,
     compact: C,
-    subscribeToGroupId: m,
+    subscribeToGroupId: E,
     isGroupStart: _,
-    groupId: m,
+    groupId: E,
     setPopout: n,
-    usernameProfile: E,
+    usernameProfile: m,
     avatarProfile: g,
     author: i,
     repliedMessage: u,

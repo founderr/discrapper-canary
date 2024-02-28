@@ -25,8 +25,8 @@ var l = n("917351"),
   A = n("839462"),
   S = n("646630"),
   _ = n("788554"),
-  T = n("49111"),
-  I = n("317041"),
+  I = n("49111"),
+  T = n("317041"),
   N = n("680894"),
   v = n("782340");
 let R = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
@@ -216,7 +216,7 @@ let O = e => {
         }
         null == a && "@Clyde" === e[0] && (0, u.getClydeEnabled)(D(n), i) && (r = N.CLYDE_AI_USER_ID);
         let s = e[1],
-          d = null != s && T.ID_REGEX.test(s.trim()),
+          d = null != s && I.ID_REGEX.test(s.trim()),
           m = d && n.unknownUserMentionPlaceholder ? "@".concat(v.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
         return {
           userId: r,
@@ -243,7 +243,7 @@ let O = e => {
           type: "commandMention",
           id: e[2]
         };
-        let [, ...l] = e[1].split(" "), r = "".concat(e[2]).concat([...l].map(e => "".concat(I.SUB_COMMAND_KEY_SEPARATOR).concat(e)).join(""));
+        let [, ...l] = e[1].split(" "), r = "".concat(e[2]).concat([...l].map(e => "".concat(T.SUB_COMMAND_KEY_SEPARATOR).concat(e)).join(""));
         return {
           channelId: n.channelId,
           commandId: e[2],
@@ -319,7 +319,7 @@ let O = e => {
     spoiler: {
       order: L.default.order,
       requiredFirstCharacters: ["|"],
-      match: e => T.MARKDOWN_SPOILER_REGEXP.exec(e),
+      match: e => I.MARKDOWN_SPOILER_REGEXP.exec(e),
       parse: (e, t, n) => ({
         content: t(e[1], n),
         channelId: n.channelId
@@ -328,7 +328,7 @@ let O = e => {
     staticRouteLink: {
       order: L.default.order,
       requiredFirstCharacters: ["<"],
-      match: e => T.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e),
+      match: e => I.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e),
       parse(e, t, n) {
         let l = {
           home: v.default.Messages.SERVER_GUIDE,

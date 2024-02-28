@@ -21,7 +21,7 @@ function c(e) {
     stream: f,
     focused: h,
     canvas: m
-  } = e, p = l.useRef(!1), E = (0, a.default)([s.default], () => s.default.getDrawMode()), g = (0, u.default)((0, o.default)(t.id, n, c), f), C = (0, u.default)((0, d.default)(t.id, n, c), f), S = l.useCallback((e, t, n) => {
+  } = e, p = l.useRef(!1), E = (0, a.default)([s.default], () => s.default.getDrawMode()), g = (0, u.default)((0, o.default)(t.id, n, c), f), S = (0, u.default)((0, d.default)(t.id, n, c), f), C = l.useCallback((e, t, n) => {
     if (null == m) return;
     let {
       x: l,
@@ -31,23 +31,23 @@ function c(e) {
       case i.DrawableType.LINE:
         return g[e](t, l, a);
       case i.DrawableType.EMOJI_HOSE:
-        return C[e](t, l, a)
+        return S[e](t, l, a)
     }
-  }, [m, g, C]), _ = l.useCallback(e => {
-    h && null != E && (e.stopPropagation(), p.current = !0, S("handleMouseDown", E, e))
-  }, [S, E, h]), I = l.useCallback(e => {
-    h && null != E && (e.stopPropagation(), p.current && S("handleMouseMove", E, e))
-  }, [S, E, h]), T = l.useCallback(e => {
-    h && null != E && (e.stopPropagation(), p.current = !1, S("handleMouseUp", E, e))
-  }, [S, E, h]), v = l.useCallback(e => {
-    p.current && null != E && S("handleMouseEnter", E, e)
-  }, [S, E]);
+  }, [m, g, S]), _ = l.useCallback(e => {
+    h && null != E && (e.stopPropagation(), p.current = !0, C("handleMouseDown", E, e))
+  }, [C, E, h]), I = l.useCallback(e => {
+    h && null != E && (e.stopPropagation(), p.current && C("handleMouseMove", E, e))
+  }, [C, E, h]), T = l.useCallback(e => {
+    h && null != E && (e.stopPropagation(), p.current = !1, C("handleMouseUp", E, e))
+  }, [C, E, h]), v = l.useCallback(e => {
+    p.current && null != E && C("handleMouseEnter", E, e)
+  }, [C, E]);
   l.useEffect(() => {
     let e = e => {
-      null != E && (p.current = !1, S("handleMouseUp", E, e))
+      null != E && (p.current = !1, C("handleMouseUp", E, e))
     };
     return window.addEventListener("mouseup", e), () => window.removeEventListener("mouseup", e)
-  }, [S, E]);
+  }, [C, E]);
   let x = l.useCallback(e => {
     h && null != E && e.stopPropagation()
   }, [E, h]);

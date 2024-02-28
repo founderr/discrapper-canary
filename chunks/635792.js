@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return C
   }
 }), n("222007");
 var l = n("37983"),
@@ -19,13 +19,13 @@ var l = n("37983"),
   p = n("978679"),
   E = n("49111"),
   g = n("782340"),
-  C = n("455701"),
-  S = function(e) {
+  S = n("455701"),
+  C = function(e) {
     let {
       subscriptionTier: t,
       onClick: n,
       size: s,
-      className: S,
+      className: C,
       buttonText: _,
       buttonTextClassName: I,
       onSubscribeModalClose: T,
@@ -34,15 +34,15 @@ var l = n("37983"),
       giftMessage: N,
       giftRecipient: A,
       ...M
-    } = e, R = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentUser()), j = (0, r.useStateFromStores)([h.default], () => h.default.isFocused()), [L, O] = a.useState(!1), {
-      analyticsLocations: y
+    } = e, R = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentUser()), j = (0, r.useStateFromStores)([h.default], () => h.default.isFocused()), [L, y] = a.useState(!1), {
+      analyticsLocations: O
     } = (0, o.default)();
     return (0, l.jsxs)(m.default, {
       pauseAnimation: !j || x,
       size: s,
-      className: i(C.giftButton, S),
+      className: i(S.giftButton, C),
       onlyShineOnHover: !0,
-      innerClassName: C.innerGiftButton,
+      innerClassName: S.innerGiftButton,
       color: u.Button.Colors.PRIMARY,
       onClick: e => {
         if (e.preventDefault(), null == R) {
@@ -52,7 +52,7 @@ var l = n("37983"),
         null == n || n(e), (0, d.default)({
           isGift: !0,
           subscriptionTier: t,
-          analyticsLocations: y,
+          analyticsLocations: O,
           analyticsObject: {
             object: E.AnalyticsObjects.BUTTON_CTA,
             objectType: E.AnalyticsObjectTypes.GIFT,
@@ -63,19 +63,19 @@ var l = n("37983"),
           giftRecipient: A
         })
       },
-      onMouseEnter: () => O(!0),
-      onMouseLeave: () => O(!1),
+      onMouseEnter: () => y(!0),
+      onMouseLeave: () => y(!1),
       ...M,
       children: [(0, l.jsx)("div", {
-        className: i(C.gradientBackground, {
-          [C.gradientBackgroundHover]: L
+        className: i(S.gradientBackground, {
+          [S.gradientBackgroundHover]: L
         })
       }), (0, l.jsx)(p.default, {
-        className: C.giftIcon
+        className: S.giftIcon
       }), (0, l.jsx)(u.Text, {
         variant: "text-sm/medium",
         color: "none",
-        className: i(C.buttonText, I),
+        className: i(S.buttonText, I),
         children: null != _ ? _ : g.default.Messages.PREMIUM_GIFTING_BUTTON
       })]
     })

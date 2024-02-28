@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return C
   }
 });
 var l = n("37983"),
@@ -19,9 +19,9 @@ var l = n("37983"),
   p = n("136281"),
   E = n("49111"),
   g = n("782340"),
-  C = n("865331");
+  S = n("865331");
 
-function S(e) {
+function C(e) {
   let {
     member: t
   } = e, n = (0, r.default)([f.default], () => f.default.getGuild(t.guildId), [t.guildId]), s = a.useMemo(() => {
@@ -32,17 +32,17 @@ function S(e) {
       var n, a, s, i;
       return null !== (i = null !== (s = null === (n = l[t]) || void 0 === n ? void 0 : n.position) && void 0 !== s ? s : 0 - (null === (a = l[e]) || void 0 === a ? void 0 : a.position)) && void 0 !== i ? i : 0
     })
-  }, [t.roles, t.highestRoleId, n]), S = (0, r.default)([o.default], () => o.default.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]), _ = (0, d.useHighestRole)(S), I = (0, d.useContextMenuModerateRoles)(t), T = (0, r.default)([h.default], () => h.default.can(E.Permissions.MANAGE_ROLES, n), [n]);
+  }, [t.roles, t.highestRoleId, n]), C = (0, r.default)([o.default], () => o.default.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]), _ = (0, d.useHighestRole)(C), I = (0, d.useContextMenuModerateRoles)(t), T = (0, r.default)([h.default], () => h.default.can(E.Permissions.MANAGE_ROLES, n), [n]);
   return null == n ? null : (0, l.jsx)(u.FormItem, {
     title: g.default.Messages.ROLES,
-    titleClassName: C.infoTitle,
+    titleClassName: S.infoTitle,
     children: (0, l.jsx)(p.UserModInfoItemContainer, {
       children: (0, l.jsx)(p.UserModInfoItem, {
         description: (0, l.jsxs)("div", {
-          className: C.roleContainer,
+          className: S.roleContainer,
           children: [(0, l.jsx)(u.Tooltip, {
             "aria-label": g.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
-            tooltipContentClassName: C.permissionTooltip,
+            tooltipContentClassName: S.permissionTooltip,
             allowOverflow: !0,
             text: g.default.Messages.GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE,
             children: e => {
@@ -54,19 +54,19 @@ function S(e) {
                 onMouseEnter: n,
                 onMouseLeave: a,
                 children: (0, l.jsx)(c.default, {
-                  className: i(C.roleTooltipItem, C.highestRole),
+                  className: i(S.roleTooltipItem, S.highestRole),
                   role: _,
                   guildId: t.guildId
                 })
               })
             }
           }), s.map(e => (0, l.jsx)(c.default, {
-            className: i(C.roleTooltipItem),
+            className: i(S.roleTooltipItem),
             role: n.roles[e],
             guildId: t.guildId
           }, e)), T && (0, l.jsx)(u.Tooltip, {
             "aria-label": g.default.Messages.ADD_ROLE_A11Y_LABEL,
-            tooltipContentClassName: C.permissionTooltip,
+            tooltipContentClassName: S.permissionTooltip,
             allowOverflow: !0,
             text: g.default.Messages.ADD_ROLE_A11Y_LABEL,
             children: e => {
@@ -75,12 +75,12 @@ function S(e) {
                 onMouseLeave: n
               } = e;
               return (0, l.jsx)(u.Clickable, {
-                className: i(C.addRoleContainer),
+                className: i(S.addRoleContainer),
                 onClick: I,
                 onMouseEnter: t,
                 onMouseLeave: n,
                 children: (0, l.jsx)(m.default, {
-                  className: i(C.addRoleIcon),
+                  className: i(S.addRoleIcon),
                   width: 20,
                   height: 20
                 })

@@ -1,77 +1,77 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return v
+    return T
   }
 });
-var l = n("37983");
-n("884691");
-var a = n("65597"),
-  u = n("77078"),
-  r = n("926994"),
-  i = n("495194"),
-  d = n("945956"),
-  s = n("800762"),
-  o = n("889486"),
-  c = n("261552"),
-  f = n("742898"),
-  E = n("424024"),
-  C = n("49111"),
-  S = n("782340");
+var n = l("37983");
+l("884691");
+var a = l("65597"),
+  s = l("77078"),
+  u = l("926994"),
+  r = l("495194"),
+  o = l("945956"),
+  i = l("800762"),
+  d = l("889486"),
+  c = l("261552"),
+  f = l("742898"),
+  C = l("424024"),
+  h = l("49111"),
+  S = l("782340");
 
-function v(e) {
-  let t = (0, a.default)([d.default], () => d.default.getChannelId() === e.id),
-    v = (0, c.default)(),
-    h = (null == v ? void 0 : v.channelId) === e.id,
-    _ = (0, i.useIsVoiceChannelLocked)(e) && !e.isPrivate(),
-    N = (0, i.default)(e),
-    T = (0, a.default)([s.default], () => s.default.isInChannel(e.id)),
-    g = !T && N || _,
-    I = (0, f.default)();
-  if (!h && 0 === I.length) return null;
-  let m = t => {
+function T(e) {
+  let t = (0, a.default)([o.default], () => o.default.getChannelId() === e.id),
+    T = (0, c.default)(),
+    N = (null == T ? void 0 : T.channelId) === e.id,
+    m = (0, r.useIsVoiceChannelLocked)(e) && !e.isPrivate(),
+    _ = (0, r.default)(e),
+    A = (0, a.default)([i.default], () => i.default.isInChannel(e.id)),
+    L = !A && _ || m,
+    g = (0, f.default)();
+  if (!N && 0 === g.length) return null;
+  let I = t => {
     if (!t.twoWayLink || t.revoked) {
-      (0, r.default)(t.type, "Console Transfer Item");
+      (0, u.default)(t.type, "Console Transfer Item");
       return
     }
-    t.type === C.PlatformTypes.XBOX ? (0, u.openModalLazy)(async () => {
+    t.type === h.PlatformTypes.XBOX ? (0, s.openModalLazy)(async () => {
       let {
         default: t
-      } = await n.el("613895").then(n.bind(n, "613895"));
-      return n => (0, l.jsx)(t, {
-        ...n,
+      } = await l.el("613895").then(l.bind(l, "613895"));
+      return l => (0, n.jsx)(t, {
+        ...l,
         channel: e
       })
-    }) : (t.type === C.PlatformTypes.PLAYSTATION || t.type === C.PlatformTypes.PLAYSTATION_STAGING) && (0, u.openModalLazy)(async () => {
+    }) : (t.type === h.PlatformTypes.PLAYSTATION || t.type === h.PlatformTypes.PLAYSTATION_STAGING) && (0, s.openModalLazy)(async () => {
       let {
         default: a
-      } = await n.el("962512").then(n.bind(n, "962512"));
-      return n => (0, l.jsx)(a, {
-        ...n,
+      } = await l.el("962512").then(l.bind(l, "962512"));
+      return l => (0, n.jsx)(a, {
+        ...l,
         platform: t.type,
         channel: e
       })
     })
   };
-  return (0, l.jsx)(l.Fragment, {
-    children: h ? (0, l.jsx)(u.MenuItem, {
+  return (0, n.jsx)(n.Fragment, {
+    children: N ? (0, n.jsx)(s.MenuItem, {
       label: S.default.Messages.TRANSFER_VOICE_TO_DEVICE,
       id: "handoff",
       action: () => {
-        (0, o.handoffRemote)(v)
+        (0, d.handoffRemote)(T)
       },
-      icon: (0, E.default)(void 0),
-      disabled: g
-    }) : I.map(e => (0, l.jsx)(u.MenuItem, {
+      icon: (0, C.default)(void 0),
+      disabled: L
+    }) : g.map(e => (0, n.jsx)(s.MenuItem, {
       id: "transfer-".concat(e.type, "-").concat(e.id),
       label: function(e, t) {
-        if (e === C.PlatformTypes.XBOX) return t ? S.default.Messages.TRANSFER_VOICE_TO_XBOX : S.default.Messages.JOIN_ON_XBOX;
-        if (e === C.PlatformTypes.PLAYSTATION) return t ? S.default.Messages.CONSOLE_PLAYSTATION_TRANSFER_VOICE : S.default.Messages.CONSOLE_PLAYSTATION_JOIN_VOICE;
-        if (e === C.PlatformTypes.PLAYSTATION_STAGING) return t ? S.default.Messages.CONSOLE_PLAYSTATION_STAGING_TRANSFER_VOICE : S.default.Messages.CONSOLE_PLAYSTATION_STAGING_JOIN_VOICE
+        if (e === h.PlatformTypes.XBOX) return t ? S.default.Messages.TRANSFER_VOICE_TO_XBOX : S.default.Messages.JOIN_ON_XBOX;
+        if (e === h.PlatformTypes.PLAYSTATION) return t ? S.default.Messages.CONSOLE_PLAYSTATION_TRANSFER_VOICE : S.default.Messages.CONSOLE_PLAYSTATION_JOIN_VOICE;
+        if (e === h.PlatformTypes.PLAYSTATION_STAGING) return t ? S.default.Messages.CONSOLE_PLAYSTATION_STAGING_TRANSFER_VOICE : S.default.Messages.CONSOLE_PLAYSTATION_STAGING_JOIN_VOICE
       }(e.type, t),
-      action: () => m(e),
-      icon: (0, E.default)(e.type),
-      disabled: g
+      action: () => I(e),
+      icon: (0, C.default)(e.type),
+      disabled: L
     }, e.id))
   })
 }

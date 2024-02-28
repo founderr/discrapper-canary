@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return g
   },
   updateDirectoryEntry: function() {
-    return C
+    return S
   },
   selectDirectoryCategory: function() {
-    return S
+    return C
   },
   fetchGuildEntriesForIds: function() {
     return _
@@ -151,7 +151,7 @@ let E = a(async (e, t) => {
       channelId: e
     })
   },
-  C = async function(e, t, n) {
+  S = async function(e, t, n) {
     let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.DirectoryEntryCategories.UNCATEGORIZED,
       a = await i.default.patch({
         url: c.Endpoints.DIRECTORY_CHANNEL_ENTRY(e, t),
@@ -165,7 +165,7 @@ let E = a(async (e, t) => {
       channelId: e,
       entry: a.body
     })
-  }, S = (e, t) => {
+  }, C = (e, t) => {
     r.default.dispatch({
       type: "GUILD_DIRECTORY_CATEGORY_SELECT",
       channelId: e,

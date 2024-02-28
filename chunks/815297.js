@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return E
   },
   createBotMessage: function() {
-    return f
+    return _
   }
 }), n("702976"), n("424973");
 var a = n("627445"),
@@ -18,11 +18,11 @@ var a = n("627445"),
   s = n("256572"),
   i = n("766274"),
   r = n("697218"),
-  d = n("299039"),
-  u = n("49111");
+  u = n("299039"),
+  d = n("49111");
 
 function o() {
-  return d.default.fromTimestamp(Date.now())
+  return u.default.fromTimestamp(Date.now())
 }
 
 function c(e) {
@@ -49,42 +49,42 @@ function E(e) {
     channelId: t,
     content: n,
     tts: a = !1,
-    type: d = u.MessageTypes.DEFAULT,
+    type: u = d.MessageTypes.DEFAULT,
     messageReference: E,
-    allowedMentions: f,
-    author: _,
+    allowedMentions: _,
+    author: f,
     flags: g,
-    nonce: h,
-    poll: m
-  } = e, S = [];
-  if (d === u.MessageTypes.REPLY && (l(null != E, "Replies must have a message reference"), null == f || f.replied_user)) {
+    nonce: S,
+    poll: h
+  } = e, m = [];
+  if (u === d.MessageTypes.REPLY && (l(null != E, "Replies must have a message reference"), null == _ || _.replied_user)) {
     let e = s.default.getMessageByReference(E);
-    (null == e ? void 0 : e.state) === s.ReferencedMessageState.LOADED && S.push(c(e.message.author))
+    (null == e ? void 0 : e.state) === s.ReferencedMessageState.LOADED && m.push(c(e.message.author))
   }
-  return null == _ && (_ = r.default.getCurrentUser()), _ instanceof i.default && (_ = c(_)), l(null != _, "createMessage: author cannot be undefined"), {
-    id: null != h ? h : o(),
-    type: d,
+  return null == f && (f = r.default.getCurrentUser()), f instanceof i.default && (f = c(f)), l(null != f, "createMessage: author cannot be undefined"), {
+    id: null != S ? S : o(),
+    type: u,
     content: n,
     channel_id: t,
-    author: _,
+    author: f,
     attachments: [],
     embeds: [],
     pinned: !1,
-    mentions: S,
+    mentions: m,
     mention_channels: [],
     mention_roles: [],
     mention_everyone: !1,
     timestamp: new Date().toISOString(),
-    state: u.MessageStates.SENDING,
+    state: d.MessageStates.SENDING,
     tts: a,
     message_reference: E,
     flags: g,
-    nonce: h,
-    poll: m
+    nonce: S,
+    poll: h
   }
 }
 
-function f(e) {
+function _(e) {
   let {
     messageId: t,
     channelId: n,
@@ -94,14 +94,14 @@ function f(e) {
   } = e;
   return {
     id: null != t ? t : o(),
-    type: u.MessageTypes.DEFAULT,
-    flags: u.MessageFlags.EPHEMERAL,
+    type: d.MessageTypes.DEFAULT,
+    flags: d.MessageFlags.EPHEMERAL,
     content: a,
     channel_id: n,
     author: {
-      id: u.LOCAL_BOT_ID,
+      id: d.LOCAL_BOT_ID,
       username: "Clyde",
-      discriminator: u.NON_USER_BOT_DISCRIMINATOR,
+      discriminator: d.NON_USER_BOT_DISCRIMINATOR,
       avatar: "clyde",
       bot: !0
     },
@@ -113,7 +113,7 @@ function f(e) {
     mention_roles: [],
     mention_everyone: !1,
     timestamp: new Date().toISOString(),
-    state: u.MessageStates.SENT,
+    state: d.MessageStates.SENT,
     tts: !1,
     loggingName: s
   }

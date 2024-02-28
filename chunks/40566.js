@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return m
   }
 }), n("222007");
 var a = n("811022"),
@@ -9,21 +9,21 @@ var a = n("811022"),
   s = n("913144"),
   i = n("125273"),
   r = n("618421"),
-  d = n("42203"),
-  u = n("525065"),
+  u = n("42203"),
+  d = n("525065"),
   o = n("985365"),
   c = n("599110"),
   E = n("49111");
-let f = new a.default("MessageRoundtripTrackerStore");
+let _ = new a.default("MessageRoundtripTrackerStore");
 
-function _(e) {
+function f(e) {
   return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp
 }
 
 function g(e) {
-  let t = d.default.getBasicChannel(e.channelId);
+  let t = u.default.getBasicChannel(e.channelId);
   if (null == t) {
-    f.warn("Ignoring a messageData for channel ".concat(e.channelId, " because we can't find that channel."));
+    _.warn("Ignoring a messageData for channel ".concat(e.channelId, " because we can't find that channel."));
     return
   }
   if (Math.random() > .1) return;
@@ -37,14 +37,14 @@ function g(e) {
     channel_id: t.id,
     channel_type: t.type,
     guild_id: t.guild_id,
-    guild_size: u.default.getMemberCount(t.guild_id),
+    guild_size: d.default.getMemberCount(t.guild_id),
     mobile_network_type: o.default.getType(),
     ...null != l && {
       mobile_signal_strength_level: l
     }
   })
 }
-class h extends l.default.Store {
+class S extends l.default.Store {
   recordMessageSendAttempt(e, t) {
     let n = {
       initialSendTimestamp: Date.now(),
@@ -64,7 +64,7 @@ class h extends l.default.Store {
         ...t,
         apiResponseTimestamp: Date.now()
       };
-      _(n) ? (g(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n)
+      f(n) ? (g(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n)
     }
   }
   recordGatewayResponse(e) {
@@ -74,20 +74,20 @@ class h extends l.default.Store {
         ...t,
         gatewaySeenTimestamp: Date.now()
       };
-      _(n) ? (g(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n)
+      f(n) ? (g(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n)
     }
   }
   constructor(...e) {
     super(...e), this.pendingMessages = new Map
   }
 }
-let m = new h(s.default, {
+let h = new S(s.default, {
   MESSAGE_CREATE: function(e) {
     let {
       optimistic: t,
       message: n
     } = e, a = n.nonce;
-    !t && null != a && m.recordGatewayResponse(a)
+    !t && null != a && h.recordGatewayResponse(a)
   }
 });
-var S = m
+var m = h

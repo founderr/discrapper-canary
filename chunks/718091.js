@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("561288"),
   E = n("450911"),
   g = n("630086"),
-  C = n("970728"),
-  S = n("369008"),
+  S = n("970728"),
+  C = n("369008"),
   _ = n("736964"),
   I = n("304580"),
   T = n("137223"),
@@ -32,8 +32,8 @@ var l = n("37983"),
   R = n("52393"),
   j = n("393414"),
   L = n("233069"),
-  O = n("42203"),
-  y = n("330154"),
+  y = n("42203"),
+  O = n("330154"),
   P = n("501090"),
   b = n("945956"),
   D = n("660478"),
@@ -43,15 +43,15 @@ var l = n("37983"),
   k = n("145131"),
   B = n("476765"),
   V = n("570443"),
-  H = n("76539"),
-  G = n("664336"),
+  G = n("76539"),
+  H = n("664336"),
   W = n("599110"),
   Y = n("306160"),
   z = n("659500"),
   K = n("449008"),
   Z = n("299039"),
-  X = n("158998"),
-  Q = n("993063"),
+  Q = n("158998"),
+  X = n("993063"),
   q = n("849324"),
   J = n("49111"),
   $ = n("782340"),
@@ -110,7 +110,7 @@ let ei = e => {
       onConfirm: t,
       channelIds: n,
       ...a
-    } = e, s = (0, f.useStateFromStoresArray)([O.default], () => Array.from(n).map(O.default.getChannel), [n]);
+    } = e, s = (0, f.useStateFromStoresArray)([y.default], () => Array.from(n).map(y.default.getChannel), [n]);
     return (0, l.jsxs)(h.ConfirmModal, {
       header: $.default.Messages.GROUP_DM_INVITE_CONFIRM,
       confirmText: $.default.Messages.GROUP_DM_INVITE_CONFIRM_BUTTON,
@@ -143,7 +143,7 @@ class eu extends a.PureComponent {
     let {
       channel: e
     } = this.props;
-    m.default.wait(() => S.default.open(null == e ? void 0 : e.id));
+    m.default.wait(() => C.default.open(null == e ? void 0 : e.id));
     let t = (0, x.collectChannelAnalyticsMetadata)(e);
     null != e ? e.isDM() ? W.default.track(J.AnalyticEvents.OPEN_POPOUT, {
       ...t,
@@ -161,7 +161,7 @@ class eu extends a.PureComponent {
     }), z.ComponentDispatch.subscribe(J.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), z.ComponentDispatch.subscribe(J.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown)
   }
   componentWillUnmount() {
-    z.ComponentDispatch.unsubscribe(J.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), z.ComponentDispatch.unsubscribe(J.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), m.default.wait(() => S.default.close())
+    z.ComponentDispatch.unsubscribe(J.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), z.ComponentDispatch.unsubscribe(J.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), m.default.wait(() => C.default.close())
   }
   isNotFriends() {
     let {
@@ -179,12 +179,12 @@ class eu extends a.PureComponent {
     if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
     let {
       inviteMaxAgeSeconds: t
-    } = Q.default.getCurrentConfig({
+    } = X.default.getCurrentConfig({
       location: "5326c5_1"
     }, {
       autoTrackExposure: !1
     });
-    C.default.createInvite(e.id, {
+    S.default.createInvite(e.id, {
       max_age: t
     }, J.InstantInviteSources.GROUP_DM)
   }
@@ -266,7 +266,7 @@ class eu extends a.PureComponent {
     let u = [];
     return r.forEach(e => {
       let t = F.default.getUser(e);
-      null != t && u.push(X.default.getName(t))
+      null != t && u.push(Q.default.getName(t))
     }), (0, l.jsxs)(k.default, {
       className: i(ee.searchBar, en.marginTop20),
       children: [(0, l.jsx)(T.default, {
@@ -473,7 +473,7 @@ class eu extends a.PureComponent {
   }
   handleAddFriend(e) {
     this.props.onClose(), _.default.sendRequest({
-      discordTag: X.default.getUserTag(e, {
+      discordTag: Q.default.getUserTag(e, {
         identifiable: "always"
       }),
       context: {
@@ -547,15 +547,15 @@ class eu extends a.PureComponent {
       let e = this.searchBarRef.current;
       null == e || e.focus()
     }, this.focusResult = e => {
-      S.default.select(e)
+      C.default.select(e)
     }, this.handleSelect = (e, t) => {
       let {
         results: n,
         channel: l
       } = this.props;
-      null == t ? S.default.clear(null == l ? void 0 : l.id) : null != n && this.handleClick(n[t].user.id)
+      null == t ? C.default.clear(null == l ? void 0 : l.id) : null != n && this.handleClick(n[t].user.id)
     }, this.handleSelectionChange = (e, t) => {
-      S.default.select(t);
+      C.default.select(t);
       let n = this.scrollerRef.current;
       null != n && n.scrollToIndex({
         section: e,
@@ -566,17 +566,17 @@ class eu extends a.PureComponent {
       let {
         channel: t
       } = this.props;
-      S.default.search(e, null == t ? void 0 : t.id)
+      C.default.search(e, null == t ? void 0 : t.id)
     }, this.handleRemoveUser = e => {
       let t = Array.from(this.props.selectedUsers);
-      S.default.removeUser(t[e]), this.forceFocus()
+      C.default.removeUser(t[e]), this.forceFocus()
     }, this.handleClick = e => {
       let {
         selectedUsers: t,
         query: n,
         channel: l
       } = this.props, a = !t.has(e);
-      a ? (S.default.addUser(e), n.length > 0 && S.default.clear(null == l ? void 0 : l.id)) : S.default.removeUser(e), this.forceFocus()
+      a ? (C.default.addUser(e), n.length > 0 && C.default.clear(null == l ? void 0 : l.id)) : C.default.removeUser(e), this.forceFocus()
     }, this.handleAddFriendNavigation = () => {
       (0, j.transitionTo)(J.Routes.FRIENDS), g.default.setSection(J.FriendsSections.ADD_FRIEND), this.props.onClose()
     }, this.handleScroll = () => {
@@ -641,11 +641,11 @@ class eu extends a.PureComponent {
   }
 }
 eu.contextType = v.default;
-let eo = f.default.connectStores([P.default, y.default, w.default], e => {
+let eo = f.default.connectStores([P.default, O.default, w.default], e => {
   let t, {
     channel: n
   } = e;
-  return null != n && null != (t = y.default.getInvite(n.id)) && t.isExpired() && (t = null), {
+  return null != n && null != (t = O.default.getInvite(n.id)) && t.isExpired() && (t = null), {
     ...P.default.getState(),
     invite: t,
     hideDiscriminator: w.default.hidePersonalInformation,
@@ -677,10 +677,10 @@ function ed(e) {
     align: o,
     onRequestClose: () => f(!1),
     animation: h.Popout.Animation.NONE,
-    children: e => (0, l.jsx)(G.default.Icon, {
+    children: e => (0, l.jsx)(H.default.Icon, {
       ...e,
       onClick: p,
-      icon: null != s ? s : null == t ? V.default : H.default,
+      icon: null != s ? s : null == t ? V.default : G.default,
       className: n,
       iconClassName: n,
       tooltip: i,
@@ -691,7 +691,7 @@ function ed(e) {
 
 function ec(e) {
   let t = ef(e);
-  return new Set(u(O.default.getMutablePrivateChannels()).values().filter(e => (0, L.isMultiUserDM)(e.type)).filter(e => ef(e.recipients) === t).map(e => e.id).value())
+  return new Set(u(y.default.getMutablePrivateChannels()).values().filter(e => (0, L.isMultiUserDM)(e.type)).filter(e => ef(e.recipients) === t).map(e => e.id).value())
 }
 
 function ef(e) {

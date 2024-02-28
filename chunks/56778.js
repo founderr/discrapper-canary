@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("845579"),
   E = n("744983"),
   g = n("18494"),
-  C = n("230559"),
-  S = n("659500"),
+  S = n("230559"),
+  C = n("659500"),
   _ = n("767094"),
   I = n("565996"),
   T = n("549206"),
@@ -81,10 +81,10 @@ let M = e => {
 };
 class R extends a.PureComponent {
   componentDidMount() {
-    S.ComponentDispatch.subscribe(v.ComponentActions.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
+    C.ComponentDispatch.subscribe(v.ComponentActions.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
   }
   componentWillUnmount() {
-    S.ComponentDispatch.unsubscribe(v.ComponentActions.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
+    C.ComponentDispatch.unsubscribe(v.ComponentActions.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
   }
   componentDidUpdate(e) {
     let {
@@ -214,7 +214,7 @@ class R extends a.PureComponent {
       let e = E.default.getSearchType(this.props.searchId),
         t = e === v.SearchTypes.GUILD ? x.default.Messages.SEARCH_GUILD_STILL_INDEXING : x.default.Messages.SEARCH_DM_STILL_INDEXING;
       return (0, l.jsxs)(M, {
-        children: [(0, l.jsx)(C.default, {}), (0, l.jsx)("div", {
+        children: [(0, l.jsx)(S.default, {}), (0, l.jsx)("div", {
           className: (N.emptyResultsText, N.stillIndexing),
           children: t
         })]

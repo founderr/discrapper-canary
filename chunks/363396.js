@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   configureJoin: function() {
-    return _
+    return A
   },
   copyId: function() {
-    return A
+    return _
   },
   copyLink: function() {
     return T
@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return R
   },
   markMessageUnread: function() {
-    return y
-  },
-  pinMessage: function() {
     return O
   },
-  publishMessage: function() {
+  pinMessage: function() {
     return x
+  },
+  publishMessage: function() {
+    return y
   },
   retrySendMessage: function() {
     return N
@@ -31,16 +31,16 @@ n.r(t), n.d(t, {
     return b
   },
   createThread: function() {
-    return G
+    return j
   },
   goToThread: function() {
-    return j
+    return G
   },
   markMessageAsReminder: function() {
     return D
   },
   markMessageRemindersAsComplete: function() {
-    return F
+    return P
   }
 }), n("37983"), n("884691"), n("77078");
 var a = n("828986"),
@@ -55,44 +55,44 @@ var r = n("931318"),
   c = n("271938"),
   f = n("42203"),
   E = n("599110"),
-  M = n("404008"),
-  m = n("306160"),
+  m = n("404008"),
+  M = n("306160"),
   g = n("659500"),
-  S = n("299039"),
+  p = n("299039"),
   I = n("613387"),
-  p = n("456936"),
-  h = n("409058"),
-  v = n("49111");
+  S = n("456936"),
+  v = n("409058"),
+  h = n("49111");
 
-function _(e) {
+function A(e) {
   let t = e.getGuildId();
-  null != t && u.default.open(t, v.GuildSettingsSections.OVERVIEW)
+  null != t && u.default.open(t, h.GuildSettingsSections.OVERVIEW)
 }
 
-function A(e, t, n) {
-  (0, m.copy)(n.shiftKey ? "".concat(t.channel_id, "-").concat(t.id) : t.id)
+function _(e, t, n) {
+  (0, M.copy)(n.shiftKey ? "".concat(t.channel_id, "-").concat(t.id) : t.id)
 }
 
 function T(e, t) {
-  E.default.track(v.AnalyticEvents.MESSAGE_LINK_COPIED, {
+  E.default.track(h.AnalyticEvents.MESSAGE_LINK_COPIED, {
     message_id: t.id,
     channel: t.channel_id
-  }), (0, m.copy)((0, M.getChannelPermalink)(e.guild_id, e.id, t.id))
+  }), (0, M.copy)((0, m.getChannelPermalink)(e.guild_id, e.id, t.id))
 }
 
 function C(e, t, n) {
-  t.state === v.MessageStates.SEND_FAILED || n.shiftKey ? i.default.deleteMessage(e.id, t.id, t.state === v.MessageStates.SEND_FAILED) : l.default.confirmDelete(e, t)
+  t.state === h.MessageStates.SEND_FAILED || n.shiftKey ? i.default.deleteMessage(e.id, t.id, t.state === h.MessageStates.SEND_FAILED) : l.default.confirmDelete(e, t)
 }
 
 function R(e, t) {
   i.default.startEditMessage(e.id, t.id, t.content)
 }
 
-function y(e, t) {
-  (0, p.default)(e.id, t.id)
+function O(e, t) {
+  (0, S.default)(e.id, t.id)
 }
 
-function O(e, t, n) {
+function x(e, t, n) {
   if (!1 === t.pinned) {
     n.shiftKey ? a.default.pinMessage(e, t.id) : l.default.confirmPin(e, t);
     return
@@ -100,12 +100,12 @@ function O(e, t, n) {
   n.shiftKey ? a.default.unpinMessage(e, t.id) : l.default.confirmUnpin(e, t)
 }
 
-function x(e, t) {
+function y(e, t) {
   (0, s.default)(e.id, t.id)
 }
 
 function N(e, t) {
-  (0, h.default)(e, t, void 0, I.default.getOptions(t.id))
+  (0, v.default)(e, t, void 0, I.default.getOptions(t.id))
 }
 
 function b(e, t, n) {
@@ -116,15 +116,15 @@ function b(e, t, n) {
     message: t,
     shouldMention: !n.shiftKey && !i,
     showMentionToggle: !a && !i
-  }), g.ComponentDispatch.dispatchToLastSubscribed(v.ComponentActions.TEXTAREA_FOCUS)
-}
-
-function G(e, t) {
-  (0, o.openThreadSidebarForCreating)(e, t, "Message")
+  }), g.ComponentDispatch.dispatchToLastSubscribed(h.ComponentActions.TEXTAREA_FOCUS)
 }
 
 function j(e, t) {
-  let n = f.default.getChannel(S.default.castMessageIdAsChannelId(t.id));
+  (0, o.openThreadSidebarForCreating)(e, t, "Message")
+}
+
+function G(e, t) {
+  let n = f.default.getChannel(p.default.castMessageIdAsChannelId(t.id));
   null != n && (0, o.openThreadSidebarForViewing)(n)
 }
 
@@ -132,6 +132,6 @@ function D(e, t) {
   (0, r.addMessageReminders)(t)
 }
 
-function F(e, t) {
+function P(e, t) {
   (0, r.completeMessageReminders)(t.id)
 }

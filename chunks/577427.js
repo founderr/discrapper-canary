@@ -25,8 +25,8 @@ var l = n("448105"),
   A = n("535974"),
   S = n("352326"),
   _ = n("718517"),
-  T = n("117362"),
-  I = n("449008"),
+  I = n("117362"),
+  T = n("449008"),
   N = n("964889"),
   v = n("773336"),
   R = n("50885"),
@@ -53,17 +53,17 @@ let w = {
     [x.GameTableListKeys.LAST_PLAYED]: (e, t) => e.isNew && !t.isNew ? -1 : !e.isNew && t.isNew ? 1 : e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1,
     [x.GameTableListKeys.ACTIONS]: null
   },
-  k = (0, T.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.shouldShowInLibrary)),
-  F = (0, T.cachedFunction)(e => e.filter(e => null != e.libraryApplication && A.default.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
-  q = (0, T.cachedFunction)((e, t) => e.filter(e => r(t.toLowerCase(), e.application.name.toLowerCase()))),
-  B = (0, T.cachedFunction)((e, t, n, l) => {
+  k = (0, I.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.shouldShowInLibrary)),
+  F = (0, I.cachedFunction)(e => e.filter(e => null != e.libraryApplication && A.default.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
+  q = (0, I.cachedFunction)((e, t) => e.filter(e => r(t.toLowerCase(), e.application.name.toLowerCase()))),
+  B = (0, I.cachedFunction)((e, t, n, l) => {
     let r = w[t];
     if (null == r) return e;
     let a = [...e],
       i = a.sort(r);
     return n === x.TableSortDirections.DESCENDING ? i.reverse() : i
   }),
-  H = (0, T.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.libraryApplication.isHidden()));
+  H = (0, I.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.libraryApplication.isHidden()));
 
 function V(e, t) {
   let n = y.default.getCurrentUserStatisticsForApplication(e.id);
@@ -109,7 +109,7 @@ function K() {
         shouldShowInLibrary: (0, N.shouldShowGameInLibrary)(u, e, C.default),
         defaultAction: (0, M.getDefaultLibraryApplicationAction)(e, A.default, S.default)
       }
-    })(l, n, t, e, !0)).filter(I.isNotNullish),
+    })(l, n, t, e, !0)).filter(T.isNotNullish),
     u = l.map(l => (function(e, t, n, l) {
       let r = null != e ? d.default.getApplication(e) : null;
       if (null == r || null == e || t.has(e)) return null;
@@ -135,7 +135,7 @@ function K() {
         libraryApplication: null,
         defaultAction: null
       }
-    })(l, n, t, e)).filter(I.isNotNullish),
+    })(l, n, t, e)).filter(T.isNotNullish),
     s = [...u, ...a].sort((e, t) => e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1);
   return G = null != g.default.lastFetched && E.default.fetched, !i.isEqual(s, O) && (O = s, v.isPlatformEmbedded && R.default.setSystemTrayApplications(F(O).map(e => e.application).slice(0, 5)), !0)
 }

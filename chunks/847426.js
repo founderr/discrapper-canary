@@ -24,20 +24,20 @@ function h(e) {
     relevantSubscriptionListingIds: p
   } = e, E = (0, o.useGroupListingsFetchContext)("useTrackRoleSubscriptionUpsellAnalytics"), {
     activeSubscription: g
-  } = (0, c.default)(h), C = null != g, S = (0, a.useStateFromStoresArray)([d.default], () => (null != p ? p : []).filter(e => {
+  } = (0, c.default)(h), S = null != g, C = (0, a.useStateFromStoresArray)([d.default], () => (null != p ? p : []).filter(e => {
     var t;
     return (null === (t = d.default.getSubscriptionListing(e)) || void 0 === t ? void 0 : t.published) === !0
   }), [p]), {
     analyticsLocations: _
   } = (0, i.default)(null !== (t = (0, r.getLastRouteChangeSourceLocationStack)()) && void 0 !== t ? t : []), I = l.useRef(!1);
   l.useEffect(() => {
-    E && null != h && null != S && !I.current && (I.current = !0, u.default.track(f.AnalyticEvents.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, {
+    E && null != h && null != C && !I.current && (I.current = !0, u.default.track(f.AnalyticEvents.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, {
       role_subscription_group_listing_id: h,
-      role_subscription_listing_ids: S,
-      is_premium_member: C,
+      role_subscription_listing_ids: C,
+      is_premium_member: S,
       location_stack: _,
       location: m,
       ...(0, s.collectGuildAnalyticsMetadata)(n)
     }))
-  }, [n, h, E, m, S, C, _])
+  }, [n, h, E, m, C, S, _])
 }

@@ -24,8 +24,8 @@ function r(e) {
     renderHeader: p,
     renderPurchaseConfirmation: E,
     planGroup: g,
-    reviewWarningMessage: C,
-    skuId: S
+    reviewWarningMessage: S,
+    skuId: C
   } = e;
   (0, a.openModalLazy)(async () => {
     let {
@@ -43,7 +43,7 @@ function r(e) {
       return (0, l.jsx)(e, {
         activeSubscription: r,
         stepConfigs: i,
-        skuIDs: [S],
+        skuIDs: [C],
         children: (0, l.jsx)(s.GiftContextProvider, {
           children: (0, l.jsx)(a, {
             ...I,
@@ -55,13 +55,13 @@ function r(e) {
             analyticsObject: c,
             analyticsLocation: f,
             analyticsSubscriptionType: m,
-            skuId: S,
+            skuId: C,
             renderHeader: p,
             renderPurchaseConfirmation: E,
             planGroup: g,
             trialId: u,
             trialFooterMessageOverride: o,
-            reviewWarningMessage: C
+            reviewWarningMessage: S
           })
         })
       })

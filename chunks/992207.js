@@ -20,8 +20,8 @@ var a = n("414456"),
   p = n("56947"),
   E = n("386045"),
   g = n("99795"),
-  C = n("782340"),
-  S = n("688257"),
+  S = n("782340"),
+  C = n("688257"),
   _ = e => {
     let {
       className: t,
@@ -40,19 +40,19 @@ var a = n("414456"),
       return null != t && !!E.default.getSettings().clipsEnabled && !!a || null != l && !!E.default.getSettings().decoupledClipsEnabled && !!_ || o.default.getParticipants(n).some(e => e.type === g.ParticipantTypes.USER && E.default.isClipsEnabledForUser(e.user.id))
     });
     return I ? (0, l.jsxs)(u.TooltipContainer, {
-      text: C.default.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
+      text: S.default.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
       color: u.TooltipColors.GREY,
-      className: s(t, S.clipsEnabledIndicator),
+      className: s(t, C.clipsEnabledIndicator),
       children: [(0, l.jsx)(m.IconBadge, {
         icon: h.default,
         shape: m.BadgeShapes.ROUND_LEFT,
         color: r.default.unsafe_rawColors.PRIMARY_500.css,
-        className: S.clipBadgeIcon
+        className: C.clipBadgeIcon
       }), (0, l.jsx)(m.TextBadge, {
-        text: C.default.Messages.CLIPS_ENABLED_BADGE,
+        text: S.default.Messages.CLIPS_ENABLED_BADGE,
         shape: m.BadgeShapes.ROUND_RIGHT,
         color: r.default.unsafe_rawColors.PRIMARY_500.css,
-        className: S.clipBadgeText
+        className: C.clipBadgeText
       })]
     }) : null
   }

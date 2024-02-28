@@ -22,8 +22,8 @@ var l = n("37983"),
 function g(e) {
   let {
     channel: t
-  } = e, n = (0, s.useStateFromStores)([h.default], () => h.default.getSelectedParticipant(t.id)), g = (null == n ? void 0 : n.type) === m.ParticipantTypes.STREAM, C = (0, s.useStateFromStores)([c.default], () => g ? c.default.getActiveStreamForStreamKey(n.id) : null), {
-    ignoreSenderPreference: S
+  } = e, n = (0, s.useStateFromStores)([h.default], () => h.default.getSelectedParticipant(t.id)), g = (null == n ? void 0 : n.type) === m.ParticipantTypes.STREAM, S = (0, s.useStateFromStores)([c.default], () => g ? c.default.getActiveStreamForStreamKey(n.id) : null), {
+    ignoreSenderPreference: C
   } = o.default.useExperiment({
     location: "ActionBarClipsButton"
   }, {
@@ -32,9 +32,9 @@ function g(e) {
     viewerClippingAllowed: _,
     isAtMaxSavingClipOperations: I
   } = (0, s.useStateFromStoresObject)([r.default], () => ({
-    viewerClippingAllowed: null != C && (r.default.isViewerClippingAllowedForUser(C.ownerId) || S),
+    viewerClippingAllowed: null != S && (r.default.isViewerClippingAllowedForUser(S.ownerId) || C),
     isAtMaxSavingClipOperations: r.default.getIsAtMaxSaveClipOperations()
-  })), T = r.default.getSettings().clipsEnabled, v = (null == C ? void 0 : C.ownerId) === f.default.getId(), x = !T || !(v || _) || I || null == n, N = a.useCallback(e => (0, l.jsx)(i.CameraIcon, {
+  })), T = r.default.getSettings().clipsEnabled, v = (null == S ? void 0 : S.ownerId) === f.default.getId(), x = !T || !(v || _) || I || null == n, N = a.useCallback(e => (0, l.jsx)(i.CameraIcon, {
     ...e,
     color: "currentColor"
   }), []);
@@ -45,7 +45,7 @@ function g(e) {
     },
     disabled: x,
     iconComponent: N,
-    label: null == C ? p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : v || _ ? T ? I ? void 0 : p.default.Messages.CLIPS_SAVE : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
+    label: null == S ? p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : v || _ ? T ? I ? void 0 : p.default.Messages.CLIPS_SAVE : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
     grow: !1
   })
 }

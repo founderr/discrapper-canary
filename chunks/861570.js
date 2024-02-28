@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("850391"),
   E = n("557809"),
   g = n("144491"),
-  C = n("42203"),
-  S = n("474643"),
+  S = n("42203"),
+  C = n("474643"),
   _ = n("305961"),
   I = n("800762"),
   T = n("664336"),
@@ -35,7 +35,7 @@ function R(e) {
     channelId: t,
     baseChannelId: s,
     channelViewSource: R = "Split View"
-  } = e, j = (0, r.useStateFromStores)([C.default], () => C.default.getChannel(t)), L = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(null == j ? void 0 : j.getGuildId())), O = (0, h.default)(j);
+  } = e, j = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(t)), L = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(null == j ? void 0 : j.getGuildId())), y = (0, h.default)(j);
   (function(e) {
     let t = (0, r.useStateFromStores)([I.default], () => null != e && !i.isEmpty(I.default.getVoiceStatesForChannel(e.id)));
     a.useEffect(() => {
@@ -45,11 +45,11 @@ function R(e) {
       }), (0, g.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
     }, [t, e])
   })(j);
-  let y = a.useRef(!1);
+  let O = a.useRef(!1);
   if (a.useEffect(() => {
-      if (null == j || y.current) return;
-      y.current = !0;
-      let e = (0, f.collectThreadMetadata)(C.default.getChannel(j.id), !0);
+      if (null == j || O.current) return;
+      O.current = !0;
+      let e = (0, f.collectThreadMetadata)(S.default.getChannel(j.id), !0);
       (0, c.trackWithMetadata)(N.AnalyticEvents.CHANNEL_OPENED, {
         ...e,
         ...(0, c.getChannelOpenedMetadata)(j.id),
@@ -66,13 +66,13 @@ function R(e) {
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(d.default, {
       channel: j,
-      draftType: S.DraftType.ChannelMessage
+      draftType: C.DraftType.ChannelMessage
     }), (0, l.jsx)(T.default, {
       toolbar: P,
       "aria-label": A.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
       children: (0, E.renderTitle)({
         channel: j,
-        channelName: O,
+        channelName: y,
         guild: L,
         inSidebar: !0,
         handleContextMenu: function(e) {

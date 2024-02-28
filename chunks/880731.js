@@ -9,7 +9,7 @@ var a = n("917351"),
   s = n("913144"),
   i = n("39141");
 let r = !1,
-  d = {
+  u = {
     settingsVisible: !1,
     enabled: !1,
     combosEnabled: !0,
@@ -33,44 +33,44 @@ let r = !1,
     confettiCount: 5,
     warningSeen: !1
   },
-  u = (0, a.cloneDeep)(d);
+  d = (0, a.cloneDeep)(u);
 class o extends l.default.DeviceSettingsStore {
   initialize(e) {
-    u = {
-      ...u,
+    d = {
+      ...d,
       ...e
     }
   }
   getUserAgnosticState() {
-    return u
+    return d
   }
   get settingsVisible() {
-    return u.settingsVisible
+    return d.settingsVisible
   }
   isEnabled() {
     let {
       confettiLocation: e,
       shakeLocation: t
-    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, n = null == e || u.confettiEnabled && u.confettiEnabledLocations[e], a = null == t || u.screenshakeEnabled && u.screenshakeEnabledLocations[t];
-    return this.settingsVisible && !r && u.enabled && n && a
+    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, n = null == e || d.confettiEnabled && d.confettiEnabledLocations[e], a = null == t || d.screenshakeEnabled && d.screenshakeEnabledLocations[t];
+    return this.settingsVisible && !r && d.enabled && n && a
   }
   get shakeIntensity() {
-    return this.isEnabled() ? u.shakeIntensity : 0
+    return this.isEnabled() ? d.shakeIntensity : 0
   }
   get combosRequiredCount() {
-    return this.isEnabled() ? u.combosRequiredCount : 0
+    return this.isEnabled() ? d.combosRequiredCount : 0
   }
   get screenshakeEnabled() {
-    return u.screenshakeEnabled
+    return d.screenshakeEnabled
   }
   get screenshakeEnabledLocations() {
-    return u.screenshakeEnabledLocations
+    return d.screenshakeEnabledLocations
   }
   get combosEnabled() {
-    return u.combosEnabled
+    return d.combosEnabled
   }
   get comboSoundsEnabled() {
-    return u.comboSoundsEnabled
+    return d.comboSoundsEnabled
   }
 }
 o.displayName = "PoggermodeSettingsStore", o.persistKey = "PoggermodeSettingsStore";
@@ -79,8 +79,8 @@ var c = new o(s.default, {
     let {
       settings: t
     } = e;
-    u = {
-      ...u,
+    d = {
+      ...d,
       ...t
     }
   },

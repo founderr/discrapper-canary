@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 }), n("222007");
 var a = n("705909"),
@@ -9,12 +9,12 @@ var a = n("705909"),
   s = n("619443"),
   i = n("42203"),
   r = n("802493"),
-  d = n("883062"),
-  u = n("794897"),
+  u = n("883062"),
+  d = n("794897"),
   o = n("818697"),
   c = n("280468");
 let E = new l.default("Messages");
-class f {
+class _ {
   static computeUsersAndMembers(e) {
     (0, c.requireSortedDescending)(e);
     let t = new Map,
@@ -33,24 +33,24 @@ class f {
     if (this.connectionId = null, this.users = [], this.members = [], this.messages = [], e.length > 0) {
       var t;
       let n = null === (t = e[0]) || void 0 === t ? void 0 : t.connectionId,
-        [a, l] = f.computeUsersAndMembers(e);
+        [a, l] = _.computeUsersAndMembers(e);
       e.length > 0 && e.every(e => e.connectionId === n) && (this.connectionId = n), this.users = a, this.members = l, this.messages = e.map(e => e.message)
     }
   }
 }
-var _ = new class e {
+var f = new class e {
   async startupLoad(e, t, n, a) {
     let l = r.default.messages(e),
       s = await l.getLatest(t, n, a);
-    return new f(s)
+    return new _(s)
   }
   async load(e, t, n) {
     let a = i.default.getBasicChannel(t);
-    if (null == t || null == a || !(0, o.isReadableChannel)(a)) return new f([]);
+    if (null == t || null == a || !(0, o.isReadableChannel)(a)) return new _([]);
     {
       let l = r.default.messages(e),
         s = await l.getLatest(a.guild_id, t, n);
-      return new f(s)
+      return new _(s)
     }
   }
   handleMessageCreate(e, t) {
@@ -83,19 +83,19 @@ var _ = new class e {
   resetInMemoryState() {}
   insertStale(e, t, n, l) {
     let i = r.default.messagesTransaction(l),
-      u = s.default.lastTimeConnectedChanged();
-    i.put(e, t, d.KvMessage.fromMessage(e, t, n, u), a.ConflictOptions.Skip)
+      d = s.default.lastTimeConnectedChanged();
+    i.put(e, t, u.KvMessage.fromMessage(e, t, n, d), a.ConflictOptions.Skip)
   }
   upsertOne(e, t, n, l) {
     let i = r.default.messagesTransaction(l),
       o = s.default.lastTimeConnectedChanged();
-    i.put(e, t, d.KvMessage.fromMessage(e, t, n, o), a.ConflictOptions.Replace), i.trimChannel(e, t, u.default.saveLimit(t))
+    i.put(e, t, u.KvMessage.fromMessage(e, t, n, o), a.ConflictOptions.Replace), i.trimChannel(e, t, d.default.saveLimit(t))
   }
   upsertMany(e, t, n, a) {
     let l = r.default.messagesTransaction(a),
       i = s.default.lastTimeConnectedChanged();
-    for (let a of n) l.put(e, t, d.KvMessage.fromMessage(e, t, a, i));
-    l.trimChannel(e, t, u.default.saveLimit(t))
+    for (let a of n) l.put(e, t, u.KvMessage.fromMessage(e, t, a, i));
+    l.trimChannel(e, t, d.default.saveLimit(t))
   }
   async updateOne(e, t, n, a) {
     if (null == n.id) {
@@ -104,11 +104,11 @@ var _ = new class e {
     }
     let l = r.default.messages(a.database),
       i = await l.get(e, t, n.id),
-      u = s.default.lastTimeConnectedChanged();
-    null != i && l.put(e, t, d.KvMessage.fromMessage(e, t, {
+      d = s.default.lastTimeConnectedChanged();
+    null != i && l.put(e, t, u.KvMessage.fromMessage(e, t, {
       ...i.message,
       ...n
-    }, u))
+    }, d))
   }
   deleteOne(e, t, n, a) {
     r.default.messagesTransaction(a).deleteMessage(e, t, n)

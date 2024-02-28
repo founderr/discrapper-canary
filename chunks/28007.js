@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   updatePoggermodeSettings: function() {
-    return d
+    return u
   },
   updateCombo: function() {
-    return u
+    return d
   },
   clearMessageCombo: function() {
     return o
@@ -19,7 +19,7 @@ var a = n("913144"),
   i = n("943551"),
   r = n("767189");
 
-function d(e) {
+function u(e) {
   a.default.dispatch({
     type: "POGGERMODE_SETTINGS_UPDATE",
     settings: e
@@ -31,7 +31,7 @@ function d(e) {
   (0, r.default)(t)
 }
 
-function u(e) {
+function d(e) {
   a.default.dispatch({
     type: "POGGERMODE_UPDATE_COMBO",
     ...e
@@ -61,12 +61,12 @@ function c(e, t) {
       displayed: !1
     }
   });
-  let d = null != r && (null == r ? void 0 : r.value) > 0 ? (null !== (n = null == r ? void 0 : r.multiplier) && void 0 !== n ? n : 0) + 1 : 1;
+  let u = null != r && (null == r ? void 0 : r.value) > 0 ? (null !== (n = null == r ? void 0 : r.multiplier) && void 0 !== n ? n : 0) + 1 : 1;
   a.default.dispatch({
     type: "POGGERMODE_UPDATE_COMBO",
     channelId: e,
     userId: s,
-    multiplier: d,
+    multiplier: u,
     value: 0
   })
 }

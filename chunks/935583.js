@@ -23,7 +23,7 @@ n.r(t), n.d(t, {
     return c
   },
   TIMEOUT_TIME: function() {
-    return E
+    return f
   }
 });
 let u = /([^A-Za-z0-9_.]+)/g,
@@ -32,4 +32,4 @@ let u = /([^A-Za-z0-9_.]+)/g,
 let o = 32,
   d = "pomelo",
   c = [1564, 917505, 12644, 65279, 173, 6068, 10240, 4447, 847, 4448, 65440],
-  E = 2e3
+  f = 2e3

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 }), n("222007");
 var l = n("37983"),
@@ -20,15 +20,15 @@ let m = 6 * c.default.Millis.SECOND,
   E = 2 * c.default.Millis.SECOND,
   g = e => "scale(".concat(1 - -(e / 120), ") rotate(").concat(e, "deg)");
 
-function C(e) {
+function S(e) {
   let {
     userId: t,
     voiceChannelEffect: n,
     onComplete: s
   } = e, {
     emoji: c,
-    sentAt: C
-  } = n, S = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), [_, I] = a.useState(!0), T = !S, v = (0, r.useTransition)(_, {
+    sentAt: S
+  } = n, C = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), [_, I] = a.useState(!0), T = !C, v = (0, r.useTransition)(_, {
     from: {
       rotate: -120
     },
@@ -39,7 +39,7 @@ function C(e) {
       rotate: -120
     },
     config: r.config.default,
-    immediate: S,
+    immediate: C,
     onRest: (e, t) => {
       let {
         phase: n
@@ -49,12 +49,12 @@ function C(e) {
   });
   return (a.useEffect(() => {
     let e;
-    return Date.now() - C >= E ? (0, f.clearVoiceChannelEffectForUser)(t) : e = setTimeout(() => {
+    return Date.now() - S >= E ? (0, f.clearVoiceChannelEffectForUser)(t) : e = setTimeout(() => {
       I(!1), T && (0, f.clearVoiceChannelEffectForUser)(t)
     }, T ? p : m), () => {
       null != e && clearTimeout(e)
     }
-  }, [C, t, T]), T) ? null : v((e, t) => {
+  }, [S, t, T]), T) ? null : v((e, t) => {
     var n;
     let {
       rotate: a

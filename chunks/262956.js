@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 }), n("222007");
 var l = n("37983"),
@@ -19,14 +19,14 @@ var l = n("37983"),
   p = n("659500"),
   E = n("49111"),
   g = n("782340"),
-  C = function(e) {
+  S = function(e) {
     let {
       channel: t
     } = e, n = (0, s.useStateFromStores)([d.default, f.default], () => {
       let e = f.default.getCurrentUser();
       return null == e || t.isNSFW() && (!e.nsfwAllowed || !d.default.didAgree(t.getGuildId()))
-    }, [t]), [C, S] = a.useState(!1), _ = (0, s.useStateFromStores)([c.default], () => c.default.hasUnreadPins(t.id), [t]), I = (0, u.useWindowDispatch)(), T = (0, o.useIsBroadcastingGDM)(t.id), v = a.useCallback(() => {
-      !n && S(e => !e)
+    }, [t]), [S, C] = a.useState(!1), _ = (0, s.useStateFromStores)([c.default], () => c.default.hasUnreadPins(t.id), [t]), I = (0, u.useWindowDispatch)(), T = (0, o.useIsBroadcastingGDM)(t.id), v = a.useCallback(() => {
+      !n && C(e => !e)
     }, [n]);
 
     function x(e) {
@@ -35,13 +35,13 @@ var l = n("37983"),
     return (a.useEffect(() => (p.ComponentDispatch.subscribe(E.ComponentActions.TOGGLE_CHANNEL_PINS, v), () => {
       p.ComponentDispatch.unsubscribe(E.ComponentActions.TOGGLE_CHANNEL_PINS, v)
     }), [v]), T) ? null : (0, l.jsx)(i.Popout, {
-      shouldShow: C,
+      shouldShow: S,
       animation: i.Popout.Animation.NONE,
       position: "bottom",
       align: "right",
       autoInvert: !1,
       ignoreModalClicks: !0,
-      onRequestClose: () => S(!1),
+      onRequestClose: () => C(!1),
       renderPopout: function(e) {
         return (0, l.jsx)(r.default, {
           ...e,

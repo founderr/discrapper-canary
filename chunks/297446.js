@@ -22,8 +22,8 @@ var l = n("37983"),
   p = n("374014"),
   E = n("223913"),
   g = n("506885"),
-  C = n("981601"),
-  S = n("373469"),
+  S = n("981601"),
+  C = n("373469"),
   _ = n("305961"),
   I = n("957255"),
   T = n("800762"),
@@ -35,7 +35,7 @@ var l = n("37983"),
   R = n("99795"),
   j = n("3110");
 let L = 16 / 9,
-  O = e => {
+  y = e => {
     let {
       stageParticipant: t,
       rtcParticipant: n,
@@ -57,7 +57,7 @@ let L = 16 / 9,
         guildId: s.guild_id,
         channelId: s.id
       }),
-      renderPopout: e => (0, l.jsx)(C.default, {
+      renderPopout: e => (0, l.jsx)(S.default, {
         ...e,
         guildId: i,
         channelId: s.id,
@@ -84,7 +84,7 @@ let L = 16 / 9,
       })
     })
   },
-  y = e => {
+  O = e => {
     let {
       stageParticipant: t,
       rtcParticipant: n,
@@ -94,11 +94,11 @@ let L = 16 / 9,
       onContextMenu: f,
       inPopout: g
     } = e, {
-      reducedMotion: C
+      reducedMotion: S
     } = a.useContext(u.AccessibilityPreferencesContext), {
       id: x,
-      blocked: O
-    } = t, y = (0, r.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams(), []), {
+      blocked: y
+    } = t, O = (0, r.useStateFromStoresArray)([C.default], () => C.default.getAllActiveStreams(), []), {
       selectedParticipant: P,
       largeStream: b
     } = (0, r.useStateFromStoresObject)([h.default], () => ({
@@ -106,7 +106,7 @@ let L = 16 / 9,
       largeStream: null != s && h.default.getStageStreamSize(s.id)
     })), D = a.useCallback((e, t) => {
       if (e.type === R.ParticipantTypes.STREAM) {
-        let n = y.filter(t => (0, p.encodeStreamKey)(t) === e.id && t.state !== M.ApplicationStreamStates.ENDED);
+        let n = O.filter(t => (0, p.encodeStreamKey)(t) === e.id && t.state !== M.ApplicationStreamStates.ENDED);
         if (0 === n.length) {
           if (!(0, E.canWatchStream)(s, T.default, _.default, I.default, m.default)[0]) return;
           (0, c.watchStream)((0, p.decodeStreamKey)(e.id), {
@@ -114,12 +114,12 @@ let L = 16 / 9,
           })
         }
       }(null == P ? void 0 : P.id) === e.id ? b ? (o.default.selectParticipant(s.id, null), o.default.updateStageStreamSize(s.id, !1)) : o.default.updateStageStreamSize(s.id, !0) : (o.default.updateStageStreamSize(s.id, !1), o.default.selectParticipant(s.id, e.id))
-    }, [y, s, P, b]);
+    }, [O, s, P, b]);
     return (0, l.jsx)(N.default, {
       participant: n,
       aspectRatio: L,
       fit: n.type === R.ParticipantTypes.USER ? v.VideoStreamFit.COVER : void 0,
-      blocked: O,
+      blocked: y,
       channel: s,
       className: j.tile,
       inCall: !0,
@@ -127,7 +127,7 @@ let L = 16 / 9,
       onClick: D,
       onContextMenu: f,
       paused: !1,
-      pulseSpeakingIndicator: !C.enabled,
+      pulseSpeakingIndicator: !S.enabled,
       width: i,
       children: d && n.type === R.ParticipantTypes.USER && (0, l.jsx)(A.default, {})
     }, x)
@@ -182,9 +182,9 @@ var P = a.memo(function(e) {
           })
       }
     },
-    C = p.type === R.ParticipantTypes.USER && !(null === (t = p.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+    S = p.type === R.ParticipantTypes.USER && !(null === (t = p.voiceState) || void 0 === t ? void 0 : t.selfVideo);
   return (0, l.jsx)(l.Fragment, {
-    children: C ? (0, l.jsx)(O, {
+    children: S ? (0, l.jsx)(y, {
       stageParticipant: a,
       rtcParticipant: p,
       channel: s,
@@ -194,7 +194,7 @@ var P = a.memo(function(e) {
       isModerator: E,
       onContextMenu: g,
       inPopout: o === M.AppContext.POPOUT
-    }) : (0, l.jsx)(y, {
+    }) : (0, l.jsx)(O, {
       stageParticipant: a,
       rtcParticipant: p,
       channel: s,

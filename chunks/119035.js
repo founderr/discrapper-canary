@@ -21,7 +21,7 @@ let s = function(e, t) {
       value: a
     } = e, [l, s] = t, i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, r = a * n;
     if (r <= 0) return 0;
-    let d = l.reduce((e, t, n) => {
+    let u = l.reduce((e, t, n) => {
       if (r > t) {
         let e = s[n];
         if (n + 1 === l.length) return s[n];
@@ -31,7 +31,7 @@ let s = function(e, t) {
       }
       return r === t ? s[n] : e
     }, 0);
-    return Math.min(i, d)
+    return Math.min(i, u)
   },
   i = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.ShakeLevel.LEVEL_3;
@@ -46,15 +46,15 @@ let s = function(e, t) {
     [2500, .95],
     [9001, 1]
   ],
-  d = r.map(e => {
+  u = r.map(e => {
     let [t] = e;
     return t
   }),
-  u = r.map(e => {
+  d = r.map(e => {
     let [t, n] = e;
     return n
   }),
-  o = e => s(e, [d, u], 1),
+  o = e => s(e, [u, d], 1),
   c = e => 1 === e ? {
     color: l.Color.BRAND_500
   } : 2 === e || 3 === e ? {

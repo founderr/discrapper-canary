@@ -35,8 +35,8 @@ function h(e) {
   if (a.useEffect(() => {
       null != h && null == g && (0, u.updateFocusedActivityLayout)(f.FocusedActivityLayouts.RESIZABLE)
     }, [h, g]), !E) return null;
-  let C = null == m ? void 0 : m.applicationId;
-  return p !== f.ActivityPanelModes.PANEL || null == C ? null : null == h || null == m || (0, d.default)(h) || null == C ? null : (0, l.jsx)(c.default, {
+  let S = null == m ? void 0 : m.applicationId;
+  return p !== f.ActivityPanelModes.PANEL || null == S ? null : null == h || null == m || (0, d.default)(h) || null == S ? null : (0, l.jsx)(c.default, {
     maxHeight: t,
     connectedChannelId: h,
     renderExternalHeader: n

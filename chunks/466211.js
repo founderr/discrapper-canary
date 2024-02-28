@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 });
 var l = n("37983"),
@@ -32,19 +32,19 @@ let m = {
     duration: 1e3
   };
 
-function C(e) {
+function S(e) {
   let {
     stream: t,
     inPopout: n
   } = e, {
-    reducedMotion: C
-  } = a.useContext(r.AccessibilityPreferencesContext), S = (0, a.useRef)(null), _ = d.useClipsButtonStore.getState().clipsButtonRef, I = (0, c.encodeStreamKey)(t), T = (0, i.useStateFromStores)([u.default], () => u.default.getActiveAnimation()), v = (0, i.useStateFromStoresArray)([u.default], () => u.default.getStreamClipAnimations(I)), x = (0, a.useRef)();
+    reducedMotion: S
+  } = a.useContext(r.AccessibilityPreferencesContext), C = (0, a.useRef)(null), _ = d.useClipsButtonStore.getState().clipsButtonRef, I = (0, c.encodeStreamKey)(t), T = (0, i.useStateFromStores)([u.default], () => u.default.getActiveAnimation()), v = (0, i.useStateFromStoresArray)([u.default], () => u.default.getStreamClipAnimations(I)), x = (0, a.useRef)();
   a.useEffect(() => () => {
     (0, o.dismissSaveClipAnimation)(I)
   }, [I]);
   let N = () => {
       var e;
-      let t = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+      let t = null === (e = C.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
       return null == t || n ? m : {
         width: t.width,
         height: t.height,
@@ -86,7 +86,7 @@ function C(e) {
         position: "fixed",
         visibility: "hidden",
         opacity: 1,
-        ...C.enabled ? A(e) : N()
+        ...S.enabled ? A(e) : N()
       }),
       enter: e => [{
         opacity: 1,
@@ -95,7 +95,7 @@ function C(e) {
       }],
       leave: {
         opacity: 0,
-        ...!C.enabled && {
+        ...!S.enabled && {
           height: 0,
           width: 0,
           ...(() => {
@@ -106,7 +106,7 @@ function C(e) {
           })()
         }
       },
-      config: C.enabled ? g : E,
+      config: S.enabled ? g : E,
       onRest: (e, t) => {
         null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, o.dismissSaveClipAnimation)(I, t.item.timestamp)
       }
@@ -114,7 +114,7 @@ function C(e) {
   return (0, s.useChain)([M, j], [0, .1], 3e3), (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: h.hidden,
-      ref: S
+      ref: C
     }), R((e, t) => null != t && (0, l.jsx)(s.animated.div, {
       className: h.whiteFlash,
       style: e

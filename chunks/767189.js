@@ -10,7 +10,7 @@ var a = n("917351"),
   i = n("39141"),
   r = n("49111");
 
-function d(e) {
+function u(e) {
   switch (e) {
     case i.ShakeLocation.CHAT_INPUT:
       return "chat_input";
@@ -21,7 +21,7 @@ function d(e) {
   }
 }
 
-function u(e) {
+function d(e) {
   switch (e) {
     case i.ConfettiLocation.CHAT_INPUT:
       return "chat_input";
@@ -52,8 +52,8 @@ let c = l.throttle(e => {
     shakeIntensity: i,
     screenshakeEnabledLocations: c,
     confettiEnabled: E,
-    confettiSize: f,
-    confettiCount: _,
+    confettiSize: _,
+    confettiCount: f,
     confettiEnabledLocations: g
   } = e;
   s.default.track(r.AnalyticEvents.POGGERMODE_SETTINGS_UPDATED, {
@@ -62,11 +62,11 @@ let c = l.throttle(e => {
     combos_required_count: a,
     screenshake_enabled: l,
     shake_intensity: i,
-    screenshake_enabled_locations: o(c, d),
+    screenshake_enabled_locations: o(c, u),
     confetti_enabled: E,
-    confetti_size: f,
-    confetti_count: _,
-    confetti_enabled_locations: o(g, u)
+    confetti_size: _,
+    confetti_count: f,
+    confetti_enabled_locations: o(g, d)
   })
 }, 5e3);
 var E = c

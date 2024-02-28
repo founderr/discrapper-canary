@@ -18,8 +18,8 @@ var s = n("414456"),
   h = n("347738"),
   C = n("118094"),
   p = n("200521"),
-  m = n("894488"),
-  E = n("782340"),
+  E = n("894488"),
+  m = n("782340"),
   g = n("141342");
 
 function _(e) {
@@ -60,7 +60,7 @@ function _(e) {
         children: [(0, a.jsx)(o.Text, {
           variant: "text-xs/medium",
           color: "interactive-normal",
-          children: E.default.Messages.SUMMARY_FEEDBACK
+          children: m.default.Messages.SUMMARY_FEEDBACK
         }), (0, a.jsx)(o.Clickable, {
           onClick: e => l(e, p.FeedbackRating.GOOD),
           children: (0, a.jsx)(f.default, {
@@ -111,7 +111,7 @@ function S(e) {
     className: l(g.summaryDivider, p ? g.summaryDividerStart : g.summaryDividerEnd),
     contentClassName: p ? g.summaryStartContent : g.summaryEndContent,
     isUnread: C,
-    id: C ? m.NEW_MESSAGE_BAR_ID : void 0,
+    id: C ? E.NEW_MESSAGE_BAR_ID : void 0,
     children: s
   }, "divider-".concat(null !== (n = null !== (t = i.contentKey) && void 0 !== t ? t : i.unreadId) && void 0 !== n ? n : c))
 }

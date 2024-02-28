@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   },
   InvalidRegexPatternError: function() {
-    return d
+    return u
   },
   AUTOMOD_ERROR_CODES: function() {
-    return u
+    return d
   },
   getAutomodErrorMessageFromErrorResponse: function() {
     return o
@@ -21,8 +21,8 @@ var a = n("979911"),
   s = n("49111"),
   i = n("782340");
 class r extends Error {}
-class d extends Error {}
-let u = new Set([s.AbortCodes.AUTOMOD_MESSAGE_BLOCKED, s.AbortCodes.AUTOMOD_TITLE_BLOCKED, s.AbortCodes.AUTOMOD_INVALID_RUST_SERVICE_RESPONSE]);
+class u extends Error {}
+let d = new Set([s.AbortCodes.AUTOMOD_MESSAGE_BLOCKED, s.AbortCodes.AUTOMOD_TITLE_BLOCKED, s.AbortCodes.AUTOMOD_INVALID_RUST_SERVICE_RESPONSE]);
 
 function o(e, t) {
   if (null == e) return null;
@@ -30,7 +30,7 @@ function o(e, t) {
     code: n,
     message: a
   } = e;
-  if (!u.has(n)) return null;
+  if (!d.has(n)) return null;
   if (null != a) return a;
   if (null == t) return null;
   let r = l.default.getChannel(t);

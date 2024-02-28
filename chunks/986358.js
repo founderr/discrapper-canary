@@ -20,8 +20,8 @@ var a = n("414456"),
   p = n("26989"),
   E = n("305961"),
   g = n("957255"),
-  C = n("824563"),
-  S = n("101125"),
+  S = n("824563"),
+  C = n("101125"),
   _ = n("697218"),
   I = n("530346"),
   T = n("109264"),
@@ -33,8 +33,8 @@ var a = n("414456"),
   R = n("387111"),
   j = n("158998"),
   L = n("763225"),
-  O = n("49111"),
-  y = n("782340"),
+  y = n("49111"),
+  O = n("782340"),
   P = n("105871");
 
 function b(e) {
@@ -43,7 +43,7 @@ function b(e) {
     backgroundColor: n,
     guildId: a,
     onClose: s
-  } = e, u = t.id, o = (0, i.default)([S.default, C.default, m.default], () => u === m.default.getId() ? S.default.getStatus() : C.default.getStatus(u, a), [u, a]);
+  } = e, u = t.id, o = (0, i.default)([C.default, S.default, m.default], () => u === m.default.getId() ? C.default.getStatus() : S.default.getStatus(u, a), [u, a]);
   return (0, l.jsxs)("div", {
     className: P.topRow,
     style: {
@@ -120,12 +120,12 @@ function U(e) {
     member: s,
     guildId: m
   } = e, p = (0, i.default)([E.default], () => E.default.getGuild(m)), {
-    canKickUser: C,
-    canBanUser: S,
+    canKickUser: S,
+    canBanUser: C,
     canModerateMembers: x
   } = (0, i.useStateFromStoresObject)([g.default, _.default, E.default], () => ({
-    canKickUser: null != p && g.default.canManageUser(O.Permissions.KICK_MEMBERS, a, p),
-    canBanUser: null != p && g.default.canManageUser(O.Permissions.BAN_MEMBERS, a, p),
+    canKickUser: null != p && g.default.canManageUser(y.Permissions.KICK_MEMBERS, a, p),
+    canBanUser: null != p && g.default.canManageUser(y.Permissions.BAN_MEMBERS, a, p),
     canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, a.id, [_.default, E.default, g.default])
   }), [a, p]), R = (0, d.isMemberCommunicationDisabled)(s), {
     analyticsLocations: j,
@@ -138,7 +138,7 @@ function U(e) {
   return (0, l.jsxs)("div", {
     className: P.bottomRow,
     children: [(0, l.jsxs)(D, {
-      "aria-label": y.default.Messages.SEND_DM,
+      "aria-label": O.default.Messages.SEND_DM,
       style: {
         backgroundColor: t
       },
@@ -151,11 +151,11 @@ function U(e) {
       }), (0, l.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: y.default.Messages.SEND_DM
+        children: O.default.Messages.SEND_DM
       })]
     }), (0, l.jsxs)(D, {
-      disabled: !C,
-      "aria-label": y.default.Messages.KICK,
+      disabled: !S,
+      "aria-label": O.default.Messages.KICK,
       style: {
         backgroundColor: t
       },
@@ -179,11 +179,11 @@ function U(e) {
       }), (0, l.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: y.default.Messages.KICK
+        children: O.default.Messages.KICK
       })]
     }), (0, l.jsxs)(D, {
-      disabled: !S,
-      "aria-label": y.default.Messages.BAN,
+      disabled: !C,
+      "aria-label": O.default.Messages.BAN,
       style: {
         backgroundColor: t
       },
@@ -207,11 +207,11 @@ function U(e) {
       }), (0, l.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: y.default.Messages.BAN
+        children: O.default.Messages.BAN
       })]
     }), (0, l.jsxs)(D, {
       disabled: !x,
-      "aria-label": y.default.Messages.TIMEOUT_USER,
+      "aria-label": O.default.Messages.TIMEOUT_USER,
       style: {
         backgroundColor: t
       },
@@ -225,10 +225,10 @@ function U(e) {
       }), (0, l.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: R ? y.default.Messages.REMOVE : y.default.Messages.TIMEOUT_USER
+        children: R ? O.default.Messages.REMOVE : O.default.Messages.TIMEOUT_USER
       })]
     }), (0, l.jsxs)(D, {
-      "aria-label": y.default.Messages.COPY_ID,
+      "aria-label": O.default.Messages.COPY_ID,
       style: {
         backgroundColor: t
       },
@@ -243,7 +243,7 @@ function U(e) {
       }), (0, l.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: y.default.Messages.COPY_ID
+        children: O.default.Messages.COPY_ID
       })]
     })]
   })

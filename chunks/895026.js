@@ -13,15 +13,15 @@ var l = n("693566"),
   i = n("913144"),
   a = n("851387"),
   d = n("36402"),
-  s = n("49111");
-async function o(e) {
+  o = n("49111");
+async function s(e) {
   try {
     i.default.dispatch({
       type: "GUILD_ROLE_MEMBER_COUNT_FETCH_START",
       guildId: e
     });
     let t = await r.default.get({
-        url: s.Endpoints.GUILD_ROLE_MEMBER_COUNTS(e)
+        url: o.Endpoints.GUILD_ROLE_MEMBER_COUNTS(e)
       }),
       n = t.body;
     i.default.dispatch({
@@ -37,7 +37,7 @@ async function o(e) {
   }
 }
 async function c(e) {
-  d.default.shouldFetch(e) && await o(e)
+  d.default.shouldFetch(e) && await s(e)
 }
 let E = new u({
   maxAge: 1e4
@@ -49,7 +49,7 @@ function f(e, t) {
   if (!n || null == E.get(l)) {
     var u, i;
     return E.set(l, !0), u = e, i = t, r.default.get({
-      url: s.Endpoints.GUILD_ROLE_MEMBER_IDS(u, i)
+      url: o.Endpoints.GUILD_ROLE_MEMBER_IDS(u, i)
     }).then(e => (a.default.requestMembersById(u, e.body, !1), e.body.length))
   }
   return Promise.resolve(null)

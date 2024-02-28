@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("99795"),
   E = n("133006"),
   g = n("125047"),
-  C = n("403693");
-let S = {
+  S = n("403693");
+let C = {
     STEPS: 23,
     FRAME_DURATION: 17,
     FRAME_SIZE: 26
@@ -71,9 +71,9 @@ class T extends a.PureComponent {
     } = this;
     l.setValue(1), n.setValue(0);
     let s = [];
-    for (let e = 0; e < S.STEPS; e++) s.push(r.default.timing(n, {
-      toValue: -S.FRAME_SIZE * e,
-      duration: S.FRAME_DURATION
+    for (let e = 0; e < C.STEPS; e++) s.push(r.default.timing(n, {
+      toValue: -C.FRAME_SIZE * e,
+      duration: C.FRAME_DURATION
     }));
     r.default.sequence([r.default.timing(t, {
       toValue: 0,
@@ -122,8 +122,8 @@ class T extends a.PureComponent {
       children: t,
       className: n
     } = this.props, a = (0, d.isThemeDark)(e), s = i(E.sprite, {
-      [C.crossWhite]: a,
-      [C.crossGrey]: !a
+      [S.crossWhite]: a,
+      [S.crossGrey]: !a
     });
     return (0, l.jsxs)(r.default.div, {
       className: i(E.transition, n),
@@ -153,8 +153,8 @@ function v(e) {
     className: r,
     onClick: d,
     width: g,
-    guildId: C
-  } = e, S = (0, f.default)();
+    guildId: S
+  } = e, C = (0, f.default)();
   let _ = (t = g, n = a.length, ((0, c.getAvatarSize)(c.AvatarSizes.SIZE_80) + 16) * n > t ? c.AvatarSizes.SIZE_40 : c.AvatarSizes.SIZE_80),
     I = (0, u.useStateFromStores)([h.default], () => h.default.isFocused()),
     v = a.map(e => {
@@ -169,9 +169,9 @@ function v(e) {
       return (0, l.jsx)(T, {
         className: E.participant,
         width: (0, c.getAvatarSize)(_),
-        theme: S,
+        theme: C,
         children: (0, l.jsx)(m.default, {
-          src: a.getAvatarURL(C, (0, c.getAvatarSize)(_), r && I),
+          src: a.getAvatarURL(S, (0, c.getAvatarSize)(_), r && I),
           size: _,
           muted: null !== (t = null == i ? void 0 : i.isVoiceMuted()) && void 0 !== t && t,
           deafen: null !== (n = null == i ? void 0 : i.isVoiceDeafened()) && void 0 !== n && n,

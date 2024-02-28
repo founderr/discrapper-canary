@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return j
   },
   default: function() {
-    return O
+    return y
   }
 }), n("222007");
 var l = n("37983"),
@@ -22,8 +22,8 @@ var l = n("37983"),
   p = n("95045"),
   E = n("574073"),
   g = n("24373"),
-  C = n("41170"),
-  S = n("377253"),
+  S = n("41170"),
+  C = n("377253"),
   _ = n("27618"),
   I = n("93427"),
   T = n("315102"),
@@ -39,7 +39,7 @@ function L(e) {
   var t;
   let {
     message: n
-  } = e, s = (0, o.useStateFromStores)([_.default], () => _.default.isBlocked(n.author.id)), r = (0, E.useNullableMessageAuthor)(n), u = a.useContext(m.default), [c, S] = a.useState(!1), v = a.useCallback(e => {
+  } = e, s = (0, o.useStateFromStores)([_.default], () => _.default.isBlocked(n.author.id)), r = (0, E.useNullableMessageAuthor)(n), u = a.useContext(m.default), [c, C] = a.useState(!1), v = a.useCallback(e => {
     "A" !== e.target.nodeName && (f.default.updateChatOpen(n.channel_id, !0), h.default.jumpToMessage({
       channelId: n.channel_id,
       messageId: n.id,
@@ -54,7 +54,7 @@ function L(e) {
   } = (0, I.renderSingleLineMessage)(n, x, s, R.messageContent, {
     iconClass: R.messageContentIcon,
     iconSize: M.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
-  }), L = (0, g.getMessageStickers)(n), O = L.length > 0, y = O ? L.map(e => (0, l.jsx)(C.default, {
+  }), L = (0, g.getMessageStickers)(n), y = L.length > 0, O = y ? L.map(e => (0, l.jsx)(S.default, {
     className: R.sticker,
     size: 128,
     sticker: e,
@@ -63,19 +63,19 @@ function L(e) {
   return (0, l.jsxs)(d.Clickable, {
     className: R.toast,
     onMouseEnter: () => {
-      S(!0)
+      C(!0)
     },
     onMouseLeave: () => {
-      S(!1)
+      C(!1)
     },
     onClick: v,
     children: [(0, l.jsxs)("div", {
       className: i(R.messageContentWrapper, {
         [R.mentioned]: n.mentioned
       }),
-      children: [null !== (t = null != A ? A : y) && void 0 !== t ? t : (0, l.jsx)("span", {
+      children: [null !== (t = null != A ? A : O) && void 0 !== t ? t : (0, l.jsx)("span", {
         children: N
-      }), null != y ? null : j]
+      }), null != O ? null : j]
     }), (0, l.jsx)("img", {
       alt: "",
       src: (null == r ? void 0 : r.guildMemberAvatar) != null && null != u ? (0, T.getGuildMemberAvatarURLSimple)({
@@ -88,7 +88,7 @@ function L(e) {
   })
 }
 
-function O(e) {
+function y(e) {
   let {
     channelId: t,
     className: n
@@ -125,7 +125,7 @@ function O(e) {
       })
     }, [r]), l && null == h.current ? h.current = r : !l && null != h.current && (h.current = null);
     let E = null !== (t = h.current) && void 0 !== t ? t : r,
-      g = (0, o.useStateFromStoresArray)([S.default], () => E.map(e => S.default.getMessage(n, e)), [n, E]);
+      g = (0, o.useStateFromStoresArray)([C.default], () => E.map(e => C.default.getMessage(n, e)), [n, E]);
     return {
       toastsHidden: d,
       toastMessages: g.filter(x.isNotNullish)
@@ -147,12 +147,12 @@ function O(e) {
       e[l.id] = t, t += a + 8
     }!(0, r.isEqual)(e, p) && E(e)
   }, [h]);
-  let C = h.map(e => ({
+  let S = h.map(e => ({
       message: e,
       height: m.current[e.id],
       y: p[e.id]
     })),
-    _ = (0, u.useTransition)(C, {
+    _ = (0, u.useTransition)(S, {
       keys: e => e.message.id,
       from: () => ({
         opacity: 0

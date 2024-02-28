@@ -7,28 +7,28 @@ n.r(t), n.d(t, {
     return c
   },
   enrollInQuest: function() {
-    return E
+    return f
   },
   claimQuestRewardCode: function() {
-    return S
+    return E
   },
   fetchQuestRewardCode: function() {
     return _
   },
   dismissQuestContent: function() {
-    return f
+    return S
   },
   dismissProgressTrackingFailureNotice: function() {
     return T
   },
   completeQuestPreview: function() {
-    return C
+    return p
   },
   resetQuestPreviewStatus: function() {
-    return A
+    return C
   },
   resetQuestDismissibilityStatus: function() {
-    return p
+    return h
   }
 });
 var s = n("872717"),
@@ -94,7 +94,7 @@ async function c(e) {
     })
   }
 }
-async function E(e, t) {
+async function f(e, t) {
   null != t.questContentCTA && (0, a.trackQuestContentClicked)(e, t.questContent, t.questContentCTA);
   let n = u.default.isEnrolling(e);
   if (!n) {
@@ -121,7 +121,7 @@ async function E(e, t) {
     }
   }
 }
-async function S(e, t, n) {
+async function E(e, t, n) {
   let a = u.default.isClaimingRewardCode(e);
   if (!a) {
     i.default.dispatch({
@@ -175,7 +175,7 @@ async function _(e) {
     }
   }
 }
-async function f(e, t) {
+async function S(e, t) {
   let n = u.default.isDismissingContent(e);
   if (!n) {
     i.default.dispatch({
@@ -208,7 +208,7 @@ function T(e) {
     streamKey: e
   })
 }
-async function C(e) {
+async function p(e) {
   try {
     let t = await s.default.post({
       url: o.Endpoints.QUESTS_PREVIEW_COMPLETE(e),
@@ -226,7 +226,7 @@ async function C(e) {
     })
   }
 }
-async function A(e) {
+async function C(e) {
   try {
     let t = await s.default.delete({
       url: o.Endpoints.QUESTS_PREVIEW_STATUS(e),
@@ -244,7 +244,7 @@ async function A(e) {
     })
   }
 }
-async function p(e) {
+async function h(e) {
   try {
     let t = await s.default.delete({
       url: o.Endpoints.QUESTS_PREVIEW_DISMISSIBILITY(e),

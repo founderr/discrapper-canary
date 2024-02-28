@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 }), n("222007");
 var l = n("37983"),
@@ -20,13 +20,13 @@ var l = n("37983"),
   E = n("277842"),
   g = n("833345");
 
-function C(e) {
+function S(e) {
   let {
     checked: t,
     labelText: n,
     tooltipText: s,
-    canToggle: C,
-    iconAltText: S,
+    canToggle: S,
+    iconAltText: C,
     onChange: _,
     tooltipColor: I,
     className: T,
@@ -34,8 +34,8 @@ function C(e) {
     collapseWhenChecked: x = !0,
     onClick: N,
     disabled: A
-  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, j] = a.useState(!1), L = (0, c.default)(), O = (0, u.isThemeDark)(L) || t ? g : E, {
-    width: y = 0,
+  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, j] = a.useState(!1), L = (0, c.default)(), y = (0, u.isThemeDark)(L) || t ? g : E, {
+    width: O = 0,
     ref: P
   } = (0, d.default)(), {
     width: b = 0,
@@ -55,7 +55,7 @@ function C(e) {
       className: p.visuallyHidden,
       checked: t,
       onChange: function() {
-        if (C) {
+        if (S) {
           let e = !t;
           j(!0), null == _ || _(e)
         }
@@ -69,18 +69,18 @@ function C(e) {
       className: i(p.label, T, {
         [p.transition]: R,
         [p.labelChecked]: t,
-        [p.labelUnchecked]: !t && !C
+        [p.labelUnchecked]: !t && !S
       }),
       style: x ? {
-        width: t ? y : y + b
+        width: t ? O : O + b
       } : void 0,
       children: [t ? (0, l.jsx)(m.Shine, {
         className: p.shine,
         shinePaused: M
       }) : null, (0, l.jsx)("img", {
         ref: P,
-        src: O,
-        alt: S
+        src: y,
+        alt: C
       }), (0, l.jsx)("span", {
         ref: D,
         children: (0, l.jsx)(o.Text, {

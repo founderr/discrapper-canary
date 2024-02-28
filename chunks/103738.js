@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("732961"),
   E = n("153984"),
   g = n("49111"),
-  C = n("99795"),
-  S = n("772313"),
+  S = n("99795"),
+  C = n("772313"),
   _ = (0, r.default)(e => {
     let {
       participants: t,
@@ -38,18 +38,18 @@ var l = n("37983"),
       showParticipants: R = !0,
       paused: j = !1,
       width: L,
-      height: O,
-      idle: y,
+      height: y,
+      idle: O,
       mode: P,
       popoutWindow: b,
       awaitingRemoteSessionInfo: D
     } = e;
     a.useEffect(() => {
       c.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET)
-    }, [L, O]);
-    let U = a.useMemo(() => n.filter(e => e.type !== C.ParticipantTypes.ACTIVITY || !e.participants.has(o.default.getId())), [n, r]);
+    }, [L, y]);
+    let U = a.useMemo(() => n.filter(e => e.type !== S.ParticipantTypes.ACTIVITY || !e.participants.has(o.default.getId())), [n, r]);
     if ((null == D ? void 0 : D.channelId) === x.id) return (0, l.jsx)(h.default, {
-      height: O
+      height: y
     });
     if ((null == x ? void 0 : x.isGuildVocal()) && !M) return (0, l.jsx)(f.default, {
       channel: x,
@@ -59,21 +59,21 @@ var l = n("37983"),
     if (P === g.ChannelModes.VOICE) return (0, l.jsx)(u.default, {
       guildId: x.guild_id,
       width: L,
-      className: S.voiceCallWrapper,
+      className: C.voiceCallWrapper,
       participants: t,
       onContextMenu: T
     });
     if (n = M ? n : t, null == s) return 0 === n.length ? (0, l.jsx)(E.default, {
-      className: i(S.videoGrid, S.hiddenParticipants),
+      className: i(C.videoGrid, C.hiddenParticipants),
       channelId: x.id,
       width: L
     }) : (0, l.jsx)(d.default, {
-      className: S.videoGridWrapper,
+      className: C.videoGridWrapper,
       justify: d.default.Justify.CENTER,
       align: d.default.Align.CENTER,
       children: (0, l.jsx)(m.default, {
         channel: x,
-        className: S.videoGrid,
+        className: C.videoGrid,
         participants: U,
         totalNumberOfParticipants: t.length,
         onClick: I,
@@ -92,8 +92,8 @@ var l = n("37983"),
       participants: t,
       popoutWindow: b,
       className: A,
-      idle: y,
-      height: O,
+      idle: O,
+      height: y,
       width: L,
       layout: _,
       inCall: M,

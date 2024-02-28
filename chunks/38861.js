@@ -25,7 +25,7 @@ function p(e) {
     return null == e || t.isNSFW() && (!e.nsfwAllowed || !r.default.didAgree(t.getGuildId()))
   }, [t]), g = a.useCallback(() => {
     p(!1)
-  }, []), C = a.useCallback(() => {
+  }, []), S = a.useCallback(() => {
     !n && (0, c.trackThreadBrowserOpened)("Popout"), p(!n)
   }, [n]);
   return (0, l.jsx)(i.Popout, {
@@ -51,7 +51,7 @@ function p(e) {
       return (0, l.jsx)(d.Icon, {
         ...e,
         className: m.icon,
-        onClick: C,
+        onClick: S,
         icon: o.default,
         "aria-label": h.default.Messages.THREADS,
         tooltip: n ? null : h.default.Messages.THREADS,

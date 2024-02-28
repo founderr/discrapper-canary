@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return g
   },
   useAuditLogDate: function() {
-    return C
+    return S
   },
   useGuildMemberJoinedAtDate: function() {
-    return S
+    return C
   }
 }), n("702976"), n("222007");
 var l, a, s = n("884691"),
@@ -58,14 +58,14 @@ function g(e) {
   }, [e])
 }
 
-function C(e) {
+function S(e) {
   return s.useMemo(() => {
     let t = h.default.extractTimestamp(e);
     return r(new Date(t)).format("MM/DD/YYYY")
   }, [e])
 }
 
-function S(e, t) {
+function C(e, t) {
   let n = (0, u.default)([o.default], () => o.default.getMember(t, e), [t, e]),
     l = null == n ? void 0 : n.joinedAt;
   return s.useMemo(() => null == l ? "" : r(new Date(l)).format("MMM DD, YYYY"), [l])

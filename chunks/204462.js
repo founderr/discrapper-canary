@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return A
   }
 });
 var a = n("37983");
@@ -16,15 +16,15 @@ var i = n("414456"),
   c = n("300322"),
   f = n("845579"),
   E = n("957255"),
-  M = n("315102"),
-  m = n("402671"),
+  m = n("315102"),
+  M = n("402671"),
   g = n("49111"),
-  S = n("958706"),
+  p = n("958706"),
   I = n("782340"),
-  p = n("755640");
-let h = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
+  S = n("755640");
+let v = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 
-function v(e) {
+function h(e) {
   var t;
   let {
     emoji: n,
@@ -34,11 +34,11 @@ function v(e) {
     src: r,
     surrogates: d
   } = n;
-  return null == r && null != n.id ? r = M.default.getEmojiURL({
+  return null == r && null != n.id ? r = m.default.getEmojiURL({
     id: n.id,
     animated: !!s,
     size: 20
-  }) : null == r && (r = m.default.getURL(d)), (0, a.jsx)(u.Tooltip, {
+  }) : null == r && (r = M.default.getURL(d)), (0, a.jsx)(u.Tooltip, {
     text: n.allNamesString,
     hideOnClick: !0,
     spacing: 16,
@@ -47,16 +47,16 @@ function v(e) {
       "aria-label": I.default.Messages.ADD_REACTION_NAMED.format({
         emojiName: n.name
       }),
-      className: l(p.button, {
-        [p.focused]: i
+      className: l(S.button, {
+        [S.focused]: i
       }),
       ...e,
       children: null == r || "" === r.trim() ? (0, a.jsx)("span", {
-        className: l("emoji", "emoji-text", p.icon),
+        className: l("emoji", "emoji-text", S.icon),
         ...e,
         children: d
       }) : (0, a.jsx)("img", {
-        className: p.icon,
+        className: S.icon,
         src: r,
         alt: ""
       })
@@ -64,25 +64,25 @@ function v(e) {
   }, null !== (t = n.id) && void 0 !== t ? t : n.name)
 }
 
-function _(e, t) {
+function A(e, t) {
   let n = (0, r.useEmojiInPriorityOrder)(t.guild_id),
     i = n.filter(e => {
       var n;
-      return !(e.useSpriteSheet && h.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : "") >= 0) && !m.default.isEmojiPremiumLocked({
+      return !(e.useSpriteSheet && v.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : "") >= 0) && !M.default.isEmojiPremiumLocked({
         emoji: e,
         channel: t,
-        intention: S.EmojiIntention.REACTION
+        intention: p.EmojiIntention.REACTION
       })
     });
   i.length > 4 && (i.length = 4);
   let l = f.RenderReactions.useSetting(),
-    M = (0, c.useIsActiveChannelOrUnarchivableThread)(t),
-    I = (0, s.useStateFromStores)([E.default], () => l && M && (t.isPrivate() || E.default.can(g.Permissions.ADD_REACTIONS, t)), [t, M, l]),
-    _ = n => {
+    m = (0, c.useIsActiveChannelOrUnarchivableThread)(t),
+    I = (0, s.useStateFromStores)([E.default], () => l && m && (t.isPrivate() || E.default.can(g.Permissions.ADD_REACTIONS, t)), [t, m, l]),
+    A = n => {
       (0, d.addReaction)(t.id, e.id, (0, o.toReactionEmoji)(n), void 0)
     };
   return I && i.length > 0 ? (0, a.jsx)(u.MenuGroup, {
-    className: p.wrapper,
+    className: S.wrapper,
     children: i.map((e, t) => {
       var n;
       return (0, a.jsx)(u.MenuItem, {
@@ -91,12 +91,12 @@ function _(e, t) {
           let {
             isFocused: n
           } = t;
-          return (0, a.jsx)(v, {
+          return (0, a.jsx)(h, {
             emoji: e,
             isFocused: n
           })
         },
-        action: () => _(e),
+        action: () => A(e),
         dontCloseOnActionIfHoldingShiftKey: !0
       }, t)
     })

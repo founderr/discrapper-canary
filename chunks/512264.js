@@ -28,11 +28,11 @@ let h = i.memo(function(e) {
     paused: p = !1,
     streamPreviewURL: E,
     videoSpinnerContext: g,
-    userId: C
-  } = e, [S, _] = i.useState(!0), [I] = i.useState(() => new d.VideoSpinnerTimer("VideoStream"));
+    userId: S
+  } = e, [C, _] = i.useState(!0), [I] = i.useState(() => new d.VideoSpinnerTimer("VideoStream"));
   i.useEffect(() => {
-    !p && (S ? I.onSpinnerStarted() : null != t && I.trackSpinnerDuration(g, C, t))
-  }, [S, p, t, I, g, C]);
+    !p && (C ? I.onSpinnerStarted() : null != t && I.trackSpinnerDuration(g, S, t))
+  }, [C, p, t, I, g, S]);
   let T = i.useCallback(() => {
     _(!1)
   }, []);
@@ -48,9 +48,9 @@ let h = i.memo(function(e) {
       paused: p
     }), p ? null : (0, s.jsx)("div", {
       className: u(f.previewWrapper, {
-        [f.loading]: S
+        [f.loading]: C
       }),
-      children: S && (0, s.jsxs)(i.Fragment, {
+      children: C && (0, s.jsxs)(i.Fragment, {
         children: [null != E ? (0, s.jsx)("img", {
           src: E,
           alt: "",

@@ -1,44 +1,44 @@
 "use strict";
 n.r(t), n.d(t, {
   useStageParticipants: function() {
-    return i
+    return r
   },
   useStageParticipantsCount: function() {
-    return u
+    return s
   },
   useSortedRequestToSpeakParticipants: function() {
-    return o
+    return d
   },
   useActualStageSpeakerCount: function() {
-    return c
+    return o
   }
 }), n("222007");
 var l = n("446674"),
   a = n("334572"),
-  r = n("488464"),
-  s = n("998716");
+  i = n("488464"),
+  u = n("998716");
 
-function i(e, t) {
-  let [n] = (0, l.useStateFromStores)([r.default], () => [r.default.getMutableParticipants(e, t), r.default.getParticipantsVersion(e)], [e, t], a.isVersionEqual);
+function r(e, t) {
+  let [n] = (0, l.useStateFromStores)([i.default], () => [i.default.getMutableParticipants(e, t), i.default.getParticipantsVersion(e)], [e, t], a.isVersionEqual);
   return n
 }
 
-function u(e, t) {
-  return (0, l.useStateFromStores)([r.default], () => r.default.getParticipantCount(e, t), [e, t])
+function s(e, t) {
+  return (0, l.useStateFromStores)([i.default], () => i.default.getParticipantCount(e, t), [e, t])
 }
 
-function o(e) {
-  let [t] = (0, l.useStateFromStores)([r.default], () => {
-    let t = r.default.getMutableRequestToSpeakParticipants(e);
-    return [t, r.default.getRequestToSpeakParticipantsVersion(e)]
+function d(e) {
+  let [t] = (0, l.useStateFromStores)([i.default], () => {
+    let t = i.default.getMutableRequestToSpeakParticipants(e);
+    return [t, i.default.getRequestToSpeakParticipantsVersion(e)]
   }, [e], a.isVersionEqual);
   return t
 }
 
-function c(e) {
-  return (0, l.useStateFromStores)([r.default], () => {
-    let t = r.default.getMutableParticipants(e, s.StageChannelParticipantNamedIndex.SPEAKER),
-      n = t.filter(e => e.type === s.StageChannelParticipantTypes.VOICE);
+function o(e) {
+  return (0, l.useStateFromStores)([i.default], () => {
+    let t = i.default.getMutableParticipants(e, u.StageChannelParticipantNamedIndex.SPEAKER),
+      n = t.filter(e => e.type === u.StageChannelParticipantTypes.VOICE);
     return n.length
   }, [e])
 }

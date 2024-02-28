@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("468759"),
   E = n("987772"),
   g = n("956089"),
-  C = n("315102"),
-  S = n("233965"),
+  S = n("315102"),
+  C = n("233965"),
   _ = n("32346"),
   I = n("808742"),
   T = n("342845"),
@@ -48,14 +48,14 @@ let M = e => {
   R = e => {
     let {
       currentStatus: t
-    } = e, s = a.useRef(_.default.getRecentCustomStatuses()), r = a.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = a.useState(null != t ? t : null), O = (0, o.useStateFromStores)([m.default], () => m.default.getCurrentUser()), y = () => {
+    } = e, s = a.useRef(_.default.getRecentCustomStatuses()), r = a.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = a.useState(null != t ? t : null), y = (0, o.useStateFromStores)([m.default], () => m.default.getCurrentUser()), O = () => {
       !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
     }, P = (e, t) => {
-      e.stopPropagation(), (0, S.updateHangStatus)(t, !0), y()
+      e.stopPropagation(), (0, C.updateHangStatus)(t, !0), O()
     }, b = (e, t) => {
-      e.stopPropagation(), (0, S.updateCustomHangStatus)(t.status, t.emoji, !0), y()
+      e.stopPropagation(), (0, C.updateCustomHangStatus)(t.status, t.emoji, !0), O()
     }, D = a.useCallback(e => {
-      e.stopPropagation(), (0, S.clearHangStatus)(!0)
+      e.stopPropagation(), (0, C.clearHangStatus)(!0)
     }, []), U = e => {
       e.stopPropagation(), (0, c.openModalLazy)(async () => {
         let {
@@ -64,7 +64,7 @@ let M = e => {
         return t => (0, l.jsx)(e, {
           ...t
         })
-      }), y()
+      }), O()
     }, w = a.useCallback(e => {
       L({
         type: v.ActivityTypes.HANG_STATUS,
@@ -105,12 +105,12 @@ let M = e => {
             children: N.default.Messages.HANG_STATUS_HELP
           }), (0, l.jsxs)("div", {
             className: A.iconGroup,
-            children: [null != O && (0, l.jsxs)("div", {
+            children: [null != y && (0, l.jsxs)("div", {
               className: A.avatarWrapper,
               children: [(0, l.jsx)(c.Avatar, {
                 className: A.avatar,
                 size: c.AvatarSizes.SIZE_40,
-                src: (0, C.getUserAvatarURL)(O),
+                src: (0, S.getUserAvatarURL)(y),
                 "aria-hidden": !0
               }), (0, l.jsx)("div", {
                 className: A.outline

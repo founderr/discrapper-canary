@@ -24,16 +24,16 @@ function E(e) {
   let {
     applicationId: E,
     stream: g,
-    channel: C,
-    exitFullScreen: S,
+    channel: S,
+    exitFullScreen: C,
     appContext: _,
     analyticsLocation: I,
     guildScheduledEvent: T,
     ...v
-  } = e, x = (0, u.useAppContext)(), N = null == C ? void 0 : C.getGuildId(), A = (0, i.useStateFromStores)([o.default], () => null != N ? o.default.getGuild(N) : null, [N]);
-  return (t = A, a = C, null != t && null != a && d.default.can(m.Permissions.CREATE_INSTANT_INVITE, a)) ? (0, l.jsx)(h.default, {
+  } = e, x = (0, u.useAppContext)(), N = null == S ? void 0 : S.getGuildId(), A = (0, i.useStateFromStores)([o.default], () => null != N ? o.default.getGuild(N) : null, [N]);
+  return (t = A, a = S, null != t && null != a && d.default.can(m.Permissions.CREATE_INSTANT_INVITE, a)) ? (0, l.jsx)(h.default, {
     onClick: () => {
-      s(null != A, "guild cannot be null"), s(null != C, "channel cannot be null"), ! function(e) {
+      s(null != A, "guild cannot be null"), s(null != S, "channel cannot be null"), ! function(e) {
         let {
           guild: t,
           channel: a,
@@ -64,11 +64,11 @@ function E(e) {
         })
       }({
         guild: A,
-        channel: C,
+        channel: S,
         streamUserId: null == g ? void 0 : g.ownerId,
         applicationId: E,
         appContext: null != _ ? _ : x,
-        exitFullScreen: S,
+        exitFullScreen: C,
         analyticsLocation: I,
         guildScheduledEvent: T
       })

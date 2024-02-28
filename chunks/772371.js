@@ -1,43 +1,43 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return f
   }
 });
-var a = n("37983");
-n("884691");
-var l = n("446674"),
-  i = n("77078"),
-  u = n("755624"),
-  r = n("263024"),
-  s = n("414833"),
-  d = n("648564"),
-  o = n("782340");
+var n = a("37983");
+a("884691");
+var r = a("446674"),
+  i = a("77078"),
+  s = a("755624"),
+  u = a("263024"),
+  l = a("414833"),
+  o = a("648564"),
+  d = a("782340");
 
 function f(e) {
-  let t = (0, s.useThreadNotificationSetting)(e),
-    n = (0, l.useStateFromStores)([u.default], () => u.default.hasJoined(e.id));
-  return n ? (0, a.jsx)(i.MenuItem, {
+  let t = (0, l.useThreadNotificationSetting)(e),
+    a = (0, r.useStateFromStores)([s.default], () => s.default.hasJoined(e.id));
+  return a ? (0, n.jsx)(i.MenuItem, {
     id: "thread-notifications",
-    label: o.default.Messages.NOTIFICATION_SETTINGS,
-    children: (0, d.getThreadNotificationOptions)().map(n => {
+    label: d.default.Messages.NOTIFICATION_SETTINGS,
+    children: (0, o.getThreadNotificationOptions)().map(a => {
       let {
-        setting: l,
-        label: u
-      } = n;
-      return (0, a.jsx)(i.MenuRadioItem, {
+        setting: r,
+        label: s
+      } = a;
+      return (0, n.jsx)(i.MenuRadioItem, {
         group: "thread-notifications",
-        id: "".concat(l),
-        label: u,
-        action: () => r.default.setNotificationSettings(e, {
-          flags: l
+        id: "".concat(r),
+        label: s,
+        action: () => u.default.setNotificationSettings(e, {
+          flags: r
         }),
-        checked: l === t
-      }, l)
+        checked: r === t
+      }, r)
     })
-  }) : (0, a.jsx)(i.MenuItem, {
+  }) : (0, n.jsx)(i.MenuItem, {
     id: "notifications-disabled",
-    label: o.default.Messages.NOTIFICATION_SETTINGS,
+    label: d.default.Messages.NOTIFICATION_SETTINGS,
     disabled: !0
   })
 }

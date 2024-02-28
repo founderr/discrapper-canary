@@ -1,88 +1,88 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   },
   useActiveEvent: function() {
-    return I
+    return g
   },
   useActiveEventsByChannel: function() {
-    return _
+    return p
   },
   useGuildUpcomingEventsNotice: function() {
-    return T
-  },
-  useGuildActiveEvent: function() {
-    return x
-  },
-  useGuildChannelScheduledEvents: function() {
     return D
   },
-  useFirstActiveEventChannel: function() {
+  useGuildActiveEvent: function() {
+    return m
+  },
+  useGuildChannelScheduledEvents: function() {
     return G
   },
+  useFirstActiveEventChannel: function() {
+    return y
+  },
   useImminentUpcomingGuildEvents: function() {
-    return R
+    return U
   }
 }), n("222007"), n("808653");
-var l = n("884691"),
-  u = n("446674"),
+var u = n("884691"),
+  l = n("446674"),
   i = n("962199"),
-  a = n("42203"),
+  d = n("42203"),
   r = n("923959"),
-  s = n("305961"),
-  d = n("957255"),
-  o = n("718517"),
+  a = n("305961"),
+  s = n("957255"),
+  E = n("718517"),
   c = n("449008"),
-  f = n("398604"),
-  E = n("49129"),
-  v = n("431934"),
-  g = n("466148"),
+  o = n("398604"),
+  f = n("49129"),
+  _ = n("431934"),
+  v = n("466148"),
   S = n("822516"),
-  h = n("745049"),
-  N = n("49111");
-let m = [],
-  C = 15 * o.default.Millis.MINUTE;
+  N = n("745049"),
+  I = n("49111");
+let T = [],
+  C = 15 * E.default.Millis.MINUTE;
 
-function p(e, t) {
-  return (0, u.useStateFromStoresArray)([s.default, i.default, f.default, d.default, a.default, r.default], () => {
-    let n = s.default.getGuild(e);
-    if (null == n) return m;
-    let l = n.hasFeature(N.GuildFeatures.HUB);
-    if (l) {
-      var u, o;
-      let e = null === (u = r.default.getDefaultChannel(n.id)) || void 0 === u ? void 0 : u.id,
-        t = null !== (o = i.default.getEventDirectoryEntries(e)) && void 0 !== o ? o : [];
+function h(e, t) {
+  return (0, l.useStateFromStoresArray)([a.default, i.default, o.default, s.default, d.default, r.default], () => {
+    let n = a.default.getGuild(e);
+    if (null == n) return T;
+    let u = n.hasFeature(I.GuildFeatures.HUB);
+    if (u) {
+      var l, E;
+      let e = null === (l = r.default.getDefaultChannel(n.id)) || void 0 === l ? void 0 : l.id,
+        t = null !== (E = i.default.getEventDirectoryEntries(e)) && void 0 !== E ? E : [];
       return t.map(e => {
         let t = e.scheduledEventId,
-          n = f.default.getGuildScheduledEvent(t);
+          n = o.default.getGuildScheduledEvent(t);
         return null != n ? n : i.default.getCachedGuildScheduledEventById(t)
       }).filter(c.isNotNullish)
     }
-    let E = f.default.getGuildScheduledEventsByIndex(null != t ? t : f.StaticGuildEventIndexes.GUILD_EVENT_UPCOMING(n.id));
-    return E.filter(e => {
+    let f = o.default.getGuildScheduledEventsByIndex(null != t ? t : o.StaticGuildEventIndexes.GUILD_EVENT_UPCOMING(n.id));
+    return f.filter(e => {
       let t = e.channel_id;
       if (null == t) return !0;
-      let n = a.default.getChannel(t);
-      return d.default.can(N.Permissions.VIEW_CHANNEL, n)
+      let n = d.default.getChannel(t);
+      return s.default.can(I.Permissions.VIEW_CHANNEL, n)
     })
   }, [t, e])
 }
 
-function I(e) {
-  return (0, u.useStateFromStores)([f.default, a.default, d.default], () => {
-    let t = a.default.getChannel(e);
-    if (!d.default.can(N.Permissions.VIEW_CHANNEL, t)) return null;
+function g(e) {
+  return (0, l.useStateFromStores)([o.default, d.default, s.default], () => {
+    let t = d.default.getChannel(e);
+    if (!s.default.can(I.Permissions.VIEW_CHANNEL, t)) return null;
     let n = null == t ? void 0 : t.guild_id;
     if (null == n) return null;
-    let l = f.default.getGuildScheduledEventsByIndex(f.StaticGuildEventIndexes.CHANNEL_EVENT_ACTIVE(e));
-    return l.length > 0 ? l[0] : null
+    let u = o.default.getGuildScheduledEventsByIndex(o.StaticGuildEventIndexes.CHANNEL_EVENT_ACTIVE(e));
+    return u.length > 0 ? u[0] : null
   }, [e])
 }
 
-function _(e) {
-  let t = (0, u.useStateFromStoresArray)([f.default], () => f.default.getGuildScheduledEventsForGuild(e), [e]),
-    n = l.useMemo(() => {
+function p(e) {
+  let t = (0, l.useStateFromStoresArray)([o.default], () => o.default.getGuildScheduledEventsForGuild(e), [e]),
+    n = u.useMemo(() => {
       let e = new Map;
       return t.forEach(t => {
         let n = t.channel_id;
@@ -92,85 +92,85 @@ function _(e) {
   return n
 }
 
-function T(e) {
+function D(e) {
   var t, n;
-  let l = (t = e, (0, u.useStateFromStoresArray)([f.default, a.default, d.default], () => {
-      let e = f.default.getGuildScheduledEventsByIndex(f.StaticGuildEventIndexes.GUILD_EVENT_UPCOMING(t));
+  let u = (t = e, (0, l.useStateFromStoresArray)([o.default, d.default, s.default], () => {
+      let e = o.default.getGuildScheduledEventsByIndex(o.StaticGuildEventIndexes.GUILD_EVENT_UPCOMING(t));
       return e.filter(e => {
-        if (e.entity_type === h.GuildScheduledEventEntityTypes.NONE || e.status !== h.GuildScheduledEventStatus.SCHEDULED) return !1;
+        if (e.entity_type === N.GuildScheduledEventEntityTypes.NONE || e.status !== N.GuildScheduledEventStatus.SCHEDULED) return !1;
         if (null == e.channel_id) return !0;
-        let t = a.default.getChannel(e.channel_id);
-        return d.default.can(N.Permissions.VIEW_CHANNEL, t)
+        let t = d.default.getChannel(e.channel_id);
+        return s.default.can(I.Permissions.VIEW_CHANNEL, t)
       })
     }, [t])),
-    i = (0, u.useStateFromStoresObject)([v.default], () => v.default.getAllEventDismissals()),
-    r = (0, u.useStateFromStoresObject)([v.default], () => v.default.getAllUpcomingNoticeSeenTimes()),
-    s = (0, u.useStateFromStoresObject)([f.default], () => null == l ? {} : l.reduce((e, t) => {
+    i = (0, l.useStateFromStoresObject)([_.default], () => _.default.getAllEventDismissals()),
+    r = (0, l.useStateFromStoresObject)([_.default], () => _.default.getAllUpcomingNoticeSeenTimes()),
+    a = (0, l.useStateFromStoresObject)([o.default], () => null == u ? {} : u.reduce((e, t) => {
       let n = (0, S.getNextRecurrenceIdInEvent)(t);
       return {
         ...e,
-        [t.id]: f.default.isInterestedInEventRecurrence(t.id, n)
+        [t.id]: o.default.isInterestedInEventRecurrence(t.id, n)
       }
-    }, {}), [l]);
-  if (null != l && null != s)
-    for (let e = 0; e < l.length; e++) {
+    }, {}), [u]);
+  if (null != u && null != a)
+    for (let e = 0; e < u.length; e++) {
       ;
-      let t = l[e],
-        u = i[t.id],
-        a = r[t.id],
-        d = null !== (n = s[t.id]) && void 0 !== n && n,
-        o = (0, E.getNextShownUpcomingEventNoticeType)(t, u, a, d);
-      if (null != o) return {
+      let t = u[e],
+        l = i[t.id],
+        d = r[t.id],
+        s = null !== (n = a[t.id]) && void 0 !== n && n,
+        E = (0, f.getNextShownUpcomingEventNoticeType)(t, l, d, s);
+      if (null != E) return {
         upcomingEvent: t,
-        noticeType: o
+        noticeType: E
       }
     }
 }
 
-function x(e) {
-  return (0, u.useStateFromStores)([f.default, a.default, d.default], () => {
-    let t = f.default.getGuildScheduledEventsByIndex(f.StaticGuildEventIndexes.GUILD_EVENT_ACTIVE(e));
+function m(e) {
+  return (0, l.useStateFromStores)([o.default, d.default, s.default], () => {
+    let t = o.default.getGuildScheduledEventsByIndex(o.StaticGuildEventIndexes.GUILD_EVENT_ACTIVE(e));
     return t.find(e => {
-      if (e.entity_type === h.GuildScheduledEventEntityTypes.NONE || !(0, f.isGuildScheduledEventActive)(e)) return !1;
+      if (e.entity_type === N.GuildScheduledEventEntityTypes.NONE || !(0, o.isGuildScheduledEventActive)(e)) return !1;
       if (null == e.channel_id) return !0;
-      let t = a.default.getChannel(e.channel_id);
-      return d.default.can(N.Permissions.VIEW_CHANNEL, t)
+      let t = d.default.getChannel(e.channel_id);
+      return s.default.can(I.Permissions.VIEW_CHANNEL, t)
     })
   }, [e])
 }
 
-function D(e) {
-  return (0, u.useStateFromStores)([f.default], () => f.default.getGuildScheduledEventsByIndex(f.StaticGuildEventIndexes.CHANNEL_EVENT_UPCOMING(e)), [e])
+function G(e) {
+  return (0, l.useStateFromStores)([o.default], () => o.default.getGuildScheduledEventsByIndex(o.StaticGuildEventIndexes.CHANNEL_EVENT_UPCOMING(e)), [e])
 }
 
-function G(e) {
-  return (0, u.useStateFromStores)([a.default, f.default], () => {
-    let t = f.default.getGuildScheduledEventsByIndex(f.StaticGuildEventIndexes.GUILD_EVENT_ACTIVE(e)).find(e => {
-      let t = a.default.getChannel(e.channel_id);
+function y(e) {
+  return (0, l.useStateFromStores)([d.default, o.default], () => {
+    let t = o.default.getGuildScheduledEventsByIndex(o.StaticGuildEventIndexes.GUILD_EVENT_ACTIVE(e)).find(e => {
+      let t = d.default.getChannel(e.channel_id);
       return null != t
     });
-    return a.default.getChannel(null == t ? void 0 : t.channel_id)
+    return d.default.getChannel(null == t ? void 0 : t.channel_id)
   }, [e])
 }
 
-function R(e) {
-  let [t, n] = l.useState(() => Date.now());
-  l.useEffect(() => {
+function U(e) {
+  let [t, n] = u.useState(() => Date.now());
+  u.useEffect(() => {
     let e = setInterval(() => {
       n(Date.now())
     }, C);
     return () => clearInterval(e)
   }, []);
-  let i = (0, u.useStateFromStores)([f.default], () => null == e ? [] : f.default.getGuildScheduledEventsByIndex(f.StaticGuildEventIndexes.CHANNEL_EVENT_UPCOMING(e)), [e, t]),
-    a = l.useMemo(() => i.filter(e => {
+  let i = (0, l.useStateFromStores)([o.default], () => null == e ? [] : o.default.getGuildScheduledEventsByIndex(o.StaticGuildEventIndexes.CHANNEL_EVENT_UPCOMING(e)), [e, t]),
+    d = u.useMemo(() => i.filter(e => {
       let {
         startTime: t,
         endTime: n
-      } = (0, g.getEventSchedule)(e), {
-        withinStartWindow: l,
-        diffMinutes: u
+      } = (0, v.getEventSchedule)(e), {
+        withinStartWindow: u,
+        diffMinutes: l
       } = (0, S.getEventTimeData)(t.toISOString(), null == n ? void 0 : n.toISOString());
-      return e.status !== h.GuildScheduledEventStatus.ACTIVE && l && u < 15
+      return e.status !== N.GuildScheduledEventStatus.ACTIVE && u && l < 15
     }), [i]);
-  return a
+  return d
 }

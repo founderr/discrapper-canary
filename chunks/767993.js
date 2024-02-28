@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return E
   }
 }), n("222007");
 var a = n("37983"),
@@ -18,11 +18,11 @@ var a = n("37983"),
   C = n("609793"),
   p = n("919163");
 
-function m(e) {
+function E(e) {
   let {
     onClose: t,
-    onConfirm: m,
-    onCancel: E,
+    onConfirm: E,
+    onCancel: m,
     channel: g,
     analyticsType: _,
     popoutText: S,
@@ -35,11 +35,11 @@ function m(e) {
     })
   }, [_, g]);
   let A = s.useCallback(() => {
-      null == m || m(), t()
-    }, [m, t]),
-    M = s.useCallback(() => {
       null == E || E(), t()
     }, [E, t]),
+    M = s.useCallback(() => {
+      null == m || m(), t()
+    }, [m, t]),
     I = s.useRef(null);
   return s.useEffect(() => {
     let e;

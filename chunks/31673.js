@@ -21,14 +21,14 @@ var l = n("37983"),
 function E(e) {
   let {
     channel: t
-  } = e, n = (0, d.useThreadNotificationSetting)(t), [E, g] = a.useState(!1), C = (0, s.useRedesignIconContext)().enabled;
+  } = e, n = (0, d.useThreadNotificationSetting)(t), [E, g] = a.useState(!1), S = (0, s.useRedesignIconContext)().enabled;
   a.useEffect(() => {
     let e = () => g(!0);
     return o.ComponentDispatch.subscribe(h.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
       o.ComponentDispatch.unsubscribe(h.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e)
     }
   }, []);
-  let S = m.default.Messages.NOTIFICATION_SETTINGS;
+  let C = m.default.Messages.NOTIFICATION_SETTINGS;
   return (0, l.jsx)(s.Popout, {
     shouldShow: E,
     animation: s.Popout.Animation.NONE,
@@ -49,10 +49,10 @@ function E(e) {
       return (0, l.jsx)(u.default.Icon, {
         ...e,
         onClick: () => g(e => !e),
-        tooltip: a ? null : S,
+        tooltip: a ? null : C,
         icon: n === f.ThreadMemberFlags.NO_MESSAGES ? r.default : i.default,
-        foreground: n !== f.ThreadMemberFlags.NO_MESSAGES || C ? null : p.strikethrough,
-        "aria-label": S,
+        foreground: n !== f.ThreadMemberFlags.NO_MESSAGES || S ? null : p.strikethrough,
+        "aria-label": C,
         selected: a
       })
     }

@@ -27,7 +27,7 @@ var i = n("37983"),
   v = n("49111"),
   T = n("719347"),
   N = n("543069");
-let L = (e, t) => {
+let y = (e, t) => {
     let n = e.attachments.map(e => {
       var n, i, a, l;
       let r = {
@@ -55,7 +55,7 @@ let L = (e, t) => {
       state: v.MessageStates.SENT
     })
   },
-  y = e => {
+  L = e => {
     let {
       message: t
     } = e, {
@@ -137,7 +137,7 @@ function w(e) {
   var t;
   let {
     flaggedContent: n
-  } = e, l = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), [u, c] = a.useState({}), [d, S] = a.useState(!0), m = n[0], A = L(m, u), g = (0, f.default)(A, {
+  } = e, l = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), [u, c] = a.useState({}), [d, S] = a.useState(!0), m = n[0], A = y(m, u), g = (0, f.default)(A, {
     hideSimpleEmbedContent: !1,
     allowList: !1,
     allowHeading: !1,
@@ -200,7 +200,7 @@ function w(e) {
         roleIcon: void 0,
         hideTimestamp: !1
       }),
-      childrenAccessories: (0, i.jsx)(y, {
+      childrenAccessories: (0, i.jsx)(L, {
         message: A
       }),
       childrenMessageContent: (0, E.default)({

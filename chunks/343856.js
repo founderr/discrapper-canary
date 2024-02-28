@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return m
   }
 });
 var i = n("37983");
@@ -16,7 +16,7 @@ var l = n("446674"),
   f = n("782340"),
   c = n("766646");
 
-function m(e) {
+function h(e) {
   let {
     color: t,
     className: n
@@ -53,7 +53,7 @@ function m(e) {
   })
 }
 
-function h(e, t) {
+function m(e, t) {
   let n = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser());
   return null == n || t.ownerId !== n.id || e.id === n.id || (null == t ? void 0 : t.isBroadcastChannel()) ? null : (0, i.jsx)(u.MenuItem, {
     id: "make-dm-owner",
@@ -68,7 +68,7 @@ function h(e, t) {
         cancelText: f.default.Messages.CANCEL,
         onConfirm: () => a.default.setDMOwner(t.id, e.id),
         ...n,
-        children: [(0, i.jsx)(m, {
+        children: [(0, i.jsx)(h, {
           color: r.default.unsafe_rawColors.PRIMARY_300.css
         }), (0, i.jsxs)("div", {
           className: c.fromToWrapper,

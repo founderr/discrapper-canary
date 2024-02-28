@@ -17,8 +17,8 @@ var a = n("884691"),
   h = n("793237"),
   C = n("162805"),
   p = n("299039"),
-  m = n("556118"),
-  E = n("777484"),
+  E = n("556118"),
+  m = n("777484"),
   g = n("894488"),
   _ = n("49111");
 
@@ -85,7 +85,7 @@ class A {
           id: n
         }
       } = this.props;
-    return null == t ? null : (0, m.getElementFromMessage)(t, n, e)
+    return null == t ? null : (0, E.getElementFromMessage)(t, n, e)
   }
   isScrolledToBottom() {
     let {
@@ -166,7 +166,7 @@ class A {
     if (!(0, i.isElement)(s) || null == l) return null;
     let {
       offsetHeight: r
-    } = s, o = (0, E.default)(s, l), u = o - t;
+    } = s, o = (0, m.default)(s, l), u = o - t;
     return null != n && (u = Math.max(-r, Math.min(n, u))), {
       id: e,
       offsetFromTop: u,
@@ -370,7 +370,7 @@ class A {
       s = null === (n = this.ref.current) || void 0 === n ? void 0 : n.getScrollerNode();
     if (null == s) return 0;
     let l = this.getScrollerState(),
-      i = (0, E.default)(e, s);
+      i = (0, m.default)(e, s);
     return "middle" === t ? Math.min(i - .5 * l.offsetHeight + .5 * e.offsetHeight + -8, i - a) : i - a
   }
   restoreScroll() {

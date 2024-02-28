@@ -13,52 +13,52 @@ n.r(t), n.d(t, {
     return c
   },
   questsRewardCodeFromServer: function() {
-    return E
+    return f
   },
   getRewardAssetUrl: function() {
-    return S
+    return E
   },
   getHeroStaticAssetUrl: function() {
     return _
   },
   getHeroAnimatedAssetUrl: function() {
-    return f
+    return S
   },
   getQuestBarStaticHeroAssetUrl: function() {
     return T
   },
   getQuestBarAnimatedHeroAssetUrl: function() {
-    return C
-  },
-  getGameTileAssetUrl: function() {
-    return A
-  },
-  getGameLogotypeAssetUrl: function() {
     return p
   },
-  getQuestUrl: function() {
-    return I
+  getGameTileAssetUrl: function() {
+    return C
   },
-  getQuestForTargetedContent: function() {
-    return R
-  },
-  getPlatformString: function() {
-    return g
-  },
-  calculatePercentComplete: function() {
-    return N
-  },
-  getContextualEntrypointHeading: function() {
-    return U
-  },
-  isDismissible: function() {
+  getGameLogotypeAssetUrl: function() {
     return h
   },
-  isDismissed: function() {
+  getQuestUrl: function() {
+    return g
+  },
+  getQuestForTargetedContent: function() {
+    return A
+  },
+  getPlatformString: function() {
     return m
   },
+  calculatePercentComplete: function() {
+    return I
+  },
+  getContextualEntrypointHeading: function() {
+    return y
+  },
+  isDismissible: function() {
+    return U
+  },
+  isDismissed: function() {
+    return R
+  },
   includesTarget: function() {
-    return O
+    return N
   }
 }), n("222007");
 var s = n("568734"),
@@ -134,7 +134,7 @@ function c(e) {
   }
 }
 
-function E(e) {
+function f(e) {
   return {
     userId: e.user_id,
     questId: e.quest_id,
@@ -143,21 +143,21 @@ function E(e) {
     claimedAt: e.claimed_at
   }
 }
-let S = e => "".concat(u).concat(e).concat("/reward.png"),
+let E = e => "".concat(u).concat(e).concat("/reward.png"),
   _ = e => "".concat(u).concat(e).concat("/hero.png"),
-  f = e => "".concat(u).concat(e).concat("/hero.webm"),
+  S = e => "".concat(u).concat(e).concat("/hero.webm"),
   T = e => "".concat(u).concat(e).concat("/quests_bar_hero.png"),
-  C = e => "".concat(u).concat(e).concat("/quests_bar_hero.webm"),
-  A = e => "".concat(u).concat(e).concat("/game_tile.png"),
-  p = (e, t) => "".concat(u).concat(e, "/").concat(t).concat("/game_logotype.png"),
-  I = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
+  p = e => "".concat(u).concat(e).concat("/quests_bar_hero.webm"),
+  C = e => "".concat(u).concat(e).concat("/game_tile.png"),
+  h = (e, t) => "".concat(u).concat(e, "/").concat(t).concat("/game_logotype.png"),
+  g = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
-function R(e, t) {
+function A(e, t) {
   for (let [n, s] of e)
     if (s.targetedContent.includes(t)) return s;
   return null
 }
-let g = e => {
+let m = e => {
   switch (e) {
     case i.QuestRewardCodePlatforms.XBOX:
       return a.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -172,7 +172,7 @@ let g = e => {
   }
 };
 
-function N(e) {
+function I(e) {
   if (null == e.userStatus) return 0;
   let {
     streamProgressSeconds: t,
@@ -185,11 +185,11 @@ function N(e) {
   return Math.min(t / 60 / s, 1)
 }
 
-function U(e) {
+function y(e) {
   var t, n;
   if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return a.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
   if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
-    let t = N(e);
+    let t = I(e);
     return t >= .75 ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE : t >= .45 && t <= .55 ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY : t > 0 ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED : a.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
   }
   return a.default.Messages.QUESTS_TITLE.format({
@@ -197,14 +197,14 @@ function U(e) {
   })
 }
 
-function h(e) {
+function U(e) {
   return e in r.DismissibleQuestContentFlags
 }
 
-function m(e, t) {
+function R(e, t) {
   return (0, s.hasFlag)(e.dismissedQuestContent, r.DismissibleQuestContentFlags[t])
 }
 
-function O(e, t) {
+function N(e, t) {
   return e.targetedContent.includes(t)
 }

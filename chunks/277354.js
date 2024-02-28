@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 });
 var l = n("37983"),
@@ -19,15 +19,15 @@ var l = n("37983"),
   p = n("782340"),
   E = n("139559");
 let g = (e, t) => h.default.getName(e.getGuildId(), e.id, t.user);
-var C = function(e) {
+var S = function(e) {
   var t, n;
   let {
     participants: h,
-    channel: C,
-    hasConnectPermission: S
-  } = e, _ = (0, d.useShowMemberVerificationGate)(C.guild_id), I = a.useCallback(() => {
-    _ ? (0, o.openMemberVerificationModal)(C.guild_id, () => r.default.selectVoiceChannel(C.id)) : r.default.selectVoiceChannel(C.id)
-  }, [C.id, C.guild_id, _]), T = h.filter(e => e.type === m.StageChannelParticipantTypes.VOICE), v = 4 === T.length ? 2 : 3, x = (0, s.useStateFromStoresArray)([u.default], () => T.map(e => u.default.getParticipant(C.id, e.id)).filter(f.isNotNullish), [C.id, T]);
+    channel: S,
+    hasConnectPermission: C
+  } = e, _ = (0, d.useShowMemberVerificationGate)(S.guild_id), I = a.useCallback(() => {
+    _ ? (0, o.openMemberVerificationModal)(S.guild_id, () => r.default.selectVoiceChannel(S.id)) : r.default.selectVoiceChannel(S.id)
+  }, [S.id, S.guild_id, _]), T = h.filter(e => e.type === m.StageChannelParticipantTypes.VOICE), v = 4 === T.length ? 2 : 3, x = (0, s.useStateFromStoresArray)([u.default], () => T.map(e => u.default.getParticipant(S.id, e.id)).filter(f.isNotNullish), [S.id, T]);
   return (0, l.jsxs)("div", {
     className: E.container,
     children: [(0, l.jsx)("div", {
@@ -37,7 +37,7 @@ var C = function(e) {
       },
       children: x.slice(0, 5).map(e => (0, l.jsx)(c.default, {
         participant: e,
-        channel: C,
+        channel: S,
         className: E.tile,
         paused: !0,
         inCall: !0,
@@ -48,13 +48,13 @@ var C = function(e) {
     }), (0, l.jsx)(i.Heading, {
       className: E.channelName,
       variant: "heading-xxl/semibold",
-      children: C.name
+      children: S.name
     }), (0, l.jsx)("div", {
       className: E.participantsRow,
       children: (0, l.jsx)(i.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: (t = C, 0 === (n = T).length ? p.default.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? p.default.Messages.CURRENTLY_IN_STAGE_1.format({
+        children: (t = S, 0 === (n = T).length ? p.default.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? p.default.Messages.CURRENTLY_IN_STAGE_1.format({
           a: g(t, n[0])
         }) : 2 === n.length ? p.default.Messages.CURRENTLY_IN_STAGE_2.format({
           a: g(t, n[0]),
@@ -66,12 +66,12 @@ var C = function(e) {
         }) : void 0)
       })
     }), (0, l.jsx)(i.Button, {
-      disabled: !S,
+      disabled: !C,
       className: E.joinButton,
-      color: S ? i.Button.Colors.GREEN : i.Button.Colors.PRIMARY,
+      color: C ? i.Button.Colors.GREEN : i.Button.Colors.PRIMARY,
       onClick: I,
       size: i.Button.Sizes.MEDIUM,
-      children: S ? p.default.Messages.STAGE_CHANNEL_JOIN : p.default.Messages.CHANNEL_LOCKED_SHORT
+      children: C ? p.default.Messages.STAGE_CHANNEL_JOIN : p.default.Messages.CHANNEL_LOCKED_SHORT
     })]
   })
 }

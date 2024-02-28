@@ -17,8 +17,8 @@ var l, a, s = n("37983"),
   p = n("661917"),
   E = n("85427"),
   g = n("620103"),
-  C = n("297446"),
-  S = n("782340"),
+  S = n("297446"),
+  C = n("782340"),
   _ = n("956630");
 let I = {
   singleSpeaker: 424,
@@ -28,7 +28,7 @@ let I = {
 (a = l || (l = {}))[a.SELECTED = 0] = "SELECTED", a[a.SPEAKER = 1] = "SPEAKER", a[a.AUDIENCE = 2] = "AUDIENCE";
 let T = (e, t) => {
     let n = Math.floor(e / t - 8),
-      l = Math.floor(n / C.SPEAKER_TILE_ASPECT_RATIO);
+      l = Math.floor(n / S.SPEAKER_TILE_ASPECT_RATIO);
     return {
       speakerTileWidth: n,
       speakerTileHeight: l
@@ -54,14 +54,14 @@ var A = (0, u.default)(e => {
     selectedParticipantId: o.default.getSelectedParticipantId(l.id),
     largeStream: o.default.getStageStreamSize(l.id),
     chatOpen: o.default.getChatOpen(l.id)
-  }), [l.id]), R = (0, c.useActualStageSpeakerCount)(l.id), j = (0, c.useStageParticipantsCount)(l.id, f.StageChannelParticipantNamedIndex.AUDIENCE), L = (0, r.useStateFromStores)([d.default], () => null != I ? d.default.getParticipant(l.id, I) : null), O = (0, c.useStageParticipants)(l.id, f.StageChannelParticipantNamedIndex.SPEAKER), y = O.filter(N), P = null != O.find(e => e.type === f.StageChannelParticipantTypes.STREAM), b = x(a), D = v(a, M), U = {
+  }), [l.id]), R = (0, c.useActualStageSpeakerCount)(l.id), j = (0, c.useStageParticipantsCount)(l.id, f.StageChannelParticipantNamedIndex.AUDIENCE), L = (0, r.useStateFromStores)([d.default], () => null != I ? d.default.getParticipant(l.id, I) : null), y = (0, c.useStageParticipants)(l.id, f.StageChannelParticipantNamedIndex.SPEAKER), O = y.filter(N), P = null != y.find(e => e.type === f.StageChannelParticipantTypes.STREAM), b = x(a), D = v(a, M), U = {
     [f.StageChannelParticipantNamedIndex.SPEAKER]: D,
     [f.StageChannelParticipantNamedIndex.AUDIENCE]: b,
     [f.StageChannelParticipantNamedIndex.SELECTED]: 1
   }, w = (0, h.useThrottleDurationForChannel)(l.id), [F, k] = (0, h.useStageChannelParticipantsListThrottled)(l.id, U, w), B = [Math.max(null !== (t = F[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = F[1]) && void 0 !== n ? n : 1, 1), F[2]], {
     speakerTileWidth: V,
-    speakerTileHeight: H
-  } = T(a, D), G = A ? a - 32 : Math.min(a - 64, 3 * V + 8), W = e => e === F.length - 1 || 0 === j && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
+    speakerTileHeight: G
+  } = T(a, D), H = A ? a - 32 : Math.min(a - 64, 3 * V + 8), W = e => e === F.length - 1 || 0 === j && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
   return (0, s.jsx)(p.default, {
     sections: B,
     renderSection: e => {
@@ -70,17 +70,17 @@ var A = (0, u.default)(e => {
       } = e;
       if (1 === t) return 0 === R ? null : (0, s.jsx)(g.default, {
         participantCount: R,
-        label: S.default.Messages.SPEAKER_LABEL,
+        label: C.default.Messages.SPEAKER_LABEL,
         className: _.header,
         onClick: () => z(!Y),
         collapsed: Y,
-        speakers: y,
+        speakers: O,
         channel: l,
         isStreamLive: P
       }, "speaker-header-".concat(t));
       if (2 === t) return 0 === j ? null : (0, s.jsx)(g.default, {
         participantCount: j,
-        label: S.default.Messages.AUDIENCE_LABEL,
+        label: C.default.Messages.AUDIENCE_LABEL,
         className: _.header,
         onClick: () => Z(!K),
         collapsed: K,
@@ -100,10 +100,10 @@ var A = (0, u.default)(e => {
           if (0 === a.length || null == a[0]) return null;
           return (0, s.jsx)("div", {
             className: _.focusedRow,
-            children: (0, s.jsx)(C.default, {
+            children: (0, s.jsx)(S.default, {
               channel: l,
               participant: a[0],
-              width: G
+              width: H
             })
           }, "selected-participant");
         case 1:
@@ -129,7 +129,7 @@ var A = (0, u.default)(e => {
     },
     rowHeight: e => {
       let t = null == k[e][0];
-      return t ? 0 : 0 === e ? G / C.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? Y ? 0 : H : K ? 0 : 98
+      return t ? 0 : 0 === e ? H / S.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? Y ? 0 : G : K ? 0 : 98
     },
     renderFooter: e => {
       let {

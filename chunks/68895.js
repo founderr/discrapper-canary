@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CommunicationDisabledBanner: function() {
-    return E
+    return m
   }
 }), n("222007");
 var a = n("37983");
@@ -18,27 +18,27 @@ var s = n("446674"),
   h = n("919398"),
   C = n("903639"),
   p = n("782340"),
-  m = n("660953");
+  E = n("660953");
 
-function E(e) {
+function m(e) {
   let {
     guild: t,
     disabledUntil: n
-  } = e, [E, g] = (0, f.useCommunicationDisabledNoticeStore)(t.id), _ = (0, s.useStateFromStores)([o.default, r.default], () => o.default.getMember(t.id, r.default.getId()), [t.id]);
+  } = e, [m, g] = (0, f.useCommunicationDisabledNoticeStore)(t.id), _ = (0, s.useStateFromStores)([o.default, r.default], () => o.default.getMember(t.id, r.default.getId()), [t.id]);
   return (0, c.useCommunicationDisabledCountdownCleanup)(_), (0, a.jsxs)("div", {
-    children: [E ? (0, a.jsx)(h.default, {
+    children: [m ? (0, a.jsx)(h.default, {
       onClose: () => g(t.id),
       guildName: t.name
     }) : null, (0, a.jsx)(i.MessageNoticeBanner, {
       bannerIcon: (0, a.jsx)(d.default, {
-        className: m.bannerIcon
+        className: E.bannerIcon
       }),
       bannerHeader: p.default.Messages.GUILD_COMMUNICATION_DISABLED_NOTICE_HEADER,
       bannerSubtext: p.default.Messages.GUILD_COMMUNICATION_DISABLED_CHAT_NOTICE_DESCRIPTION.format({
         link: C.GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK
       }),
-      containerStyles: m.bannerContainer,
-      headerStyles: m.bannerHeader,
+      containerStyles: E.bannerContainer,
+      headerStyles: E.bannerHeader,
       children: (0, a.jsx)(l.Text, {
         variant: "text-sm/semibold",
         children: (0, a.jsx)(u.default, {

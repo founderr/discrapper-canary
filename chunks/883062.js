@@ -20,11 +20,11 @@ class i {
     }
   }
   static deriveMemberUsers(e, t) {
-    var n, i, r, d;
-    let u = new Set([null === (n = t.author) || void 0 === n ? void 0 : n.id, null === (i = t.interaction) || void 0 === i ? void 0 : i.user.id, ...null !== (d = null === (r = t.mentions) || void 0 === r ? void 0 : r.map(e => e.id)) && void 0 !== d ? d : []]),
+    var n, i, r, u;
+    let d = new Set([null === (n = t.author) || void 0 === n ? void 0 : n.id, null === (i = t.interaction) || void 0 === i ? void 0 : i.user.id, ...null !== (u = null === (r = t.mentions) || void 0 === r ? void 0 : r.map(e => e.id)) && void 0 !== u ? u : []]),
       o = [],
       c = [];
-    for (let t of u) {
+    for (let t of d) {
       if (null == t) continue;
       let n = l.default.getUser(t),
         i = a.default.getTrueMember(null != e ? e : s.EMPTY_STRING_GUILD_ID, t);

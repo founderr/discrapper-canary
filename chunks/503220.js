@@ -19,8 +19,8 @@ var l = n("37983"),
   p = n("604656"),
   E = n("861370"),
   g = n("565298"),
-  C = n("144491"),
-  S = n("945330"),
+  S = n("144491"),
+  C = n("945330"),
   _ = n("758710"),
   I = n("433487"),
   T = n("664336"),
@@ -73,13 +73,13 @@ function j(e) {
     channel: t,
     closePopout: n,
     onSelect: a
-  } = e, g = (0, u.default)(t, "Sidebar Overflow"), S = (0, d.default)(t), I = (0, h.default)(t), T = (0, m.default)(t), x = (0, i.default)(t), N = (0, o.default)(t), R = (0, f.default)(t.id), j = (0, c.default)(t), L = (0, r.default)(t), O = (0, E.default)({
+  } = e, g = (0, u.default)(t, "Sidebar Overflow"), C = (0, d.default)(t), I = (0, h.default)(t), T = (0, m.default)(t), x = (0, i.default)(t), N = (0, o.default)(t), R = (0, f.default)(t.id), j = (0, c.default)(t), L = (0, r.default)(t), y = (0, E.default)({
     id: t.id,
     label: M.default.Messages.COPY_ID_THREAD
-  }), y = (0, p.default)(t);
+  }), O = (0, p.default)(t);
 
   function P() {
-    (0, C.transitionToChannel)(t.id)
+    (0, S.transitionToChannel)(t.id)
   }
   return (0, l.jsxs)(s.Menu, {
     navId: "thread-context",
@@ -95,7 +95,7 @@ function j(e) {
     }), (0, l.jsxs)(s.MenuGroup, {
       children: [I, T]
     }), (0, l.jsxs)(s.MenuGroup, {
-      children: [j, S, R]
+      children: [j, C, R]
     }), (0, l.jsxs)(s.MenuGroup, {
       children: [(0, l.jsx)(s.MenuItem, {
         id: "search",
@@ -117,9 +117,9 @@ function j(e) {
         }
       })]
     }), (0, l.jsxs)(s.MenuGroup, {
-      children: [y, x, N, L]
+      children: [O, x, N, L]
     }), (0, l.jsx)(s.MenuGroup, {
-      children: O
+      children: y
     })]
   })
 }
@@ -135,7 +135,7 @@ function L(e) {
     }), (0, l.jsx)(R, {
       channel: t
     }), (0, l.jsx)(T.default.Icon, {
-      icon: S.default,
+      icon: C.default,
       tooltip: M.default.Messages.CLOSE,
       onClick: () => (0, N.closeThreadSidebar)((0, g.getGuildIdForGenericRedirect)(t), null != n ? n : t.parent_id)
     })]

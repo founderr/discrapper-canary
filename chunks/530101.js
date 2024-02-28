@@ -1,69 +1,69 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return E
   }
 });
 var a = n("37983"),
-  l = n("884691"),
-  i = n("611221"),
-  u = n("446674"),
-  r = n("77078"),
-  s = n("185014"),
+  i = n("884691"),
+  l = n("611221"),
+  s = n("446674"),
+  u = n("77078"),
+  r = n("185014"),
   d = n("886484"),
   o = n("300322"),
-  f = n("549990"),
-  c = n("782340");
+  c = n("549990"),
+  f = n("782340");
 
-function _(e, t) {
-  let _ = e.guild_id,
-    E = l.useMemo(() => ({
-      guildId: _,
+function E(e, t) {
+  let E = e.guild_id,
+    m = i.useMemo(() => ({
+      guildId: E,
       entity: e,
-      entityType: i.GuildFeedItemTypes.FORUM_POST
-    }), [_, e]),
-    T = (0, u.useStateFromStores)([s.default], () => s.default.getIsItemFeatured(E), [E]),
-    S = (0, o.useIsThreadModerator)(e),
-    h = (0, f.useCanGuildFeedFeatureChannel)(e);
-  return S && h ? T ? (0, a.jsx)(r.MenuItem, {
+      entityType: l.GuildFeedItemTypes.FORUM_POST
+    }), [E, e]),
+    M = (0, s.useStateFromStores)([r.default], () => r.default.getIsItemFeatured(m), [m]),
+    g = (0, o.useIsThreadModerator)(e),
+    p = (0, c.useCanGuildFeedFeatureChannel)(e);
+  return g && p ? M ? (0, a.jsx)(u.MenuItem, {
     id: "guild-feed-unfeature",
-    label: c.default.Messages.GUILD_FEED_UNFEATURE_FORUM_POST,
-    action: () => (0, r.openModalLazy)(async () => {
+    label: f.default.Messages.GUILD_FEED_UNFEATURE_FORUM_POST,
+    action: () => (0, u.openModalLazy)(async () => {
       let {
         UnfeatureItemConfirmationModal: e
       } = await n.el("969715").then(n.bind(n, "969715"));
       return t => (0, a.jsx)(e, {
-        featureableItem: E,
-        header: c.default.Messages.GUILD_FEED_UNFEATURE_FORUM_POST_MODAL_HEADER,
-        body: c.default.Messages.GUILD_FEED_UNFEATURED_FORUM_POST_MODAL_BODY,
+        featureableItem: m,
+        header: f.default.Messages.GUILD_FEED_UNFEATURE_FORUM_POST_MODAL_HEADER,
+        body: f.default.Messages.GUILD_FEED_UNFEATURED_FORUM_POST_MODAL_BODY,
         ...t
       })
     })
-  }) : (0, a.jsx)(r.MenuItem, {
+  }) : (0, a.jsx)(u.MenuItem, {
     id: "guild-feed-feature",
-    label: c.default.Messages.GUILD_FEED_FEATURE_FORUM_POST,
-    children: (0, d.getFeatureItemsTimes)().map(l => {
+    label: f.default.Messages.GUILD_FEED_FEATURE_FORUM_POST,
+    children: (0, d.getFeatureItemsTimes)().map(i => {
       let {
-        value: i,
-        timePeriod: u
-      } = l;
-      return (0, a.jsx)(r.MenuItem, {
-        id: "".concat(i),
-        label: (0, d.createFeatureItemsTimeLabel)(u),
-        action: () => (0, r.openModalLazy)(async () => {
+        value: l,
+        timePeriod: s
+      } = i;
+      return (0, a.jsx)(u.MenuItem, {
+        id: "".concat(l),
+        label: (0, d.createFeatureItemsTimeLabel)(s),
+        action: () => (0, u.openModalLazy)(async () => {
           let {
-            FeatureForumPostConfirmationModal: l
+            FeatureForumPostConfirmationModal: i
           } = await n.el("969715").then(n.bind(n, "969715"));
-          return n => (0, a.jsx)(l, {
+          return n => (0, a.jsx)(i, {
             thread: e,
-            guildId: _,
-            expiresSeconds: i,
-            timePeriod: u,
+            guildId: E,
+            expiresSeconds: l,
+            timePeriod: s,
             options: t,
             ...n
           })
         })
-      }, i)
+      }, l)
     })
   }) : null
 }

@@ -22,8 +22,8 @@ function h(e) {
     senderId: h,
     warningType: C,
     header: p,
-    description: m,
-    onDismiss: E,
+    description: E,
+    onDismiss: m,
     primaryButtonText: g,
     secondaryButtonText: _,
     primaryButtonColor: S,
@@ -37,14 +37,14 @@ function h(e) {
     })
   }, []);
   let I = s.useCallback(() => {
-    null == E || E(), (0, u.trackCtaEvent)({
+    null == m || m(), (0, u.trackCtaEvent)({
       channelId: t,
       warningId: n,
       senderId: h,
       warningType: C,
       cta: u.CtaEventTypes.USER_BANNER_DISMISS
     })
-  }, [E, t, n, h, C]);
+  }, [m, t, n, h, C]);
   return (0, a.jsxs)("div", {
     className: c.strangerDangerBanner,
     children: [(0, a.jsxs)("div", {
@@ -61,7 +61,7 @@ function h(e) {
         }), (0, a.jsx)(i.Text, {
           variant: "text-sm/normal",
           color: "text-primary",
-          children: m
+          children: E
         })]
       })]
     }), (0, a.jsxs)("div", {
