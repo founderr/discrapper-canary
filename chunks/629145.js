@@ -48,7 +48,13 @@ function H(e) {
   let {
     className: r,
     user: o
-  } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, I.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, m = null != d.current && d.current.scrollWidth > d.current.clientWidth, g = !o.isClaimed(), N = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || g, p = N ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+  } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, I.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [m, g] = n.useState(!1);
+  n.useEffect(() => {
+    g(null != d.current && d.current.scrollWidth > d.current.clientWidth)
+  }, [o.username]);
+  let N = !o.isClaimed(),
+    p = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || N,
+    C = p ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, a.jsxs)("div", {
     className: i(G.field, r),
     children: [(0, a.jsx)("div", {
@@ -94,10 +100,10 @@ function H(e) {
         })
       })
     }), (0, a.jsx)(c.Tooltip, {
-      text: p,
+      text: C,
       children: e => (0, a.jsx)(c.Button, {
         ...e,
-        disabled: N,
+        disabled: p,
         size: c.Button.Sizes.SMALL,
         className: G.fieldButton,
         color: c.Button.Colors.PRIMARY,
@@ -129,30 +135,35 @@ function H(e) {
 function w(e) {
   var t, s;
   let {
-    user: n,
-    className: l
-  } = e, r = (0, _.useGuildAutomodProfileQuarantineErrors)(), o = null !== (s = null == r ? void 0 : null === (t = r.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, d = v.default.getGlobalName(n);
-  return (0, a.jsxs)("div", {
-    className: i(G.field, l),
+    user: l,
+    className: r
+  } = e, o = (0, _.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = v.default.getGlobalName(l), E = n.useRef(null), [T, f] = n.useState(!1);
+  return n.useEffect(() => {
+    f(null != E.current && E.current.scrollWidth > E.current.clientWidth)
+  }, [S]), (0, a.jsxs)("div", {
+    className: i(G.field, r),
     children: [(0, a.jsx)("div", {
       className: G.constrainedRow,
       children: (0, a.jsxs)("div", {
+        className: G.usernameRow,
         children: [(0, a.jsx)(c.FormTitle, {
           className: G.fieldTitle,
           children: F.default.Messages.DISPLAY_NAME
         }), (0, a.jsx)("div", {
+          className: G.usernameInnerRow,
+          ref: E,
           children: (0, a.jsx)(c.Text, {
             tag: "span",
             color: "header-primary",
             variant: "text-md/normal",
-            children: null == d ? F.default.Messages.USER_SETTINGS_NO_DISPLAYNAME_PLACEHOLDER : d
+            children: null == S ? F.default.Messages.USER_SETTINGS_NO_DISPLAYNAME_PLACEHOLDER : S
           })
         })]
       })
-    }), null != o && (0, a.jsx)("div", {
+    }), null != d && (0, a.jsx)("div", {
       className: G.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
-        text: o,
+        text: d,
         "aria-label": !1,
         children: e => (0, a.jsx)(M.default, {
           ...e,
@@ -165,7 +176,7 @@ function w(e) {
       color: c.Button.Colors.PRIMARY,
       "aria-label": F.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_DISPLAYNAME_A11Y_LABEL,
       onClick: z,
-      children: F.default.Messages.EDIT
+      children: T ? F.default.Messages.DISAPPROVAL : F.default.Messages.EDIT
     })]
   })
 }
