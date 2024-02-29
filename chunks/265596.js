@@ -11,6 +11,10 @@ class i extends a.default.Store {
   getFeed(e) {
     return s.get(e)
   }
+  getFeedRequestId(e) {
+    var t;
+    return null === (t = this.getFeed(e)) || void 0 === t ? void 0 : t.request_id
+  }
 }
 i.displayName = "ContentInventoryStore";
 var l = new i(r.default, {
