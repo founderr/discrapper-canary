@@ -12,19 +12,29 @@ let a = (0, i.default)({
   id: "2024-02_navi_bar",
   label: "Mobile Redesign - Nav Experiment: You Bar",
   defaultConfig: {
-    showYouBar: !1
+    showYouBar: !1,
+    showMessagesButton: !1
   },
   treatments: [{
     id: 0,
     label: "Control",
     config: {
-      showYouBar: !1
+      showYouBar: !1,
+      showMessagesButton: !1
     }
   }, {
     id: 1,
     label: "You Bar (2c)",
     config: {
-      showYouBar: !0
+      showYouBar: !0,
+      showMessagesButton: !1
+    }
+  }, {
+    id: 2,
+    label: "You Bar (2c) with messages button",
+    config: {
+      showYouBar: !0,
+      showMessagesButton: !0
     }
   }]
 });

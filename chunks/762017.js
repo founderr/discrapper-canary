@@ -318,7 +318,7 @@ let o = {
     neverLoadBeforeConnectionOpen: !0
   },
   InappropriateConversationsManager: {
-    actions: ["VIBING_WUMPUS_PLAY_MUSIC", "VIBING_WUMPUS_STOP_MUSIC"],
+    actions: ["VIBING_WUMPUS_PLAY_MUSIC", "VIBING_WUMPUS_STOP_MUSIC", "VIBING_WUMPUS_PAUSE_MUSIC"],
     inlineRequire: () => E("874200").default,
     neverLoadBeforeConnectionOpen: !0
   },

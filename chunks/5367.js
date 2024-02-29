@@ -13,7 +13,7 @@ var l = n("446674"),
   u = n("49111");
 
 function d(e) {
-  let t = (0, r.useIsMemberVerificationManualApproval)(null != e ? e : u.EMPTY_STRING_GUILD_ID),
+  let t = (0, r.useIsMemberVerificationManualApproval)(null != e ? e : u.EMPTY_STRING_SNOWFLAKE_ID),
     n = (0, l.useStateFromStores)([o.default, a.default, i.default], () => {
       let t = o.default.getRequest(e),
         n = a.default.getCurrentUser();

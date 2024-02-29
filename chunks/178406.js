@@ -355,11 +355,11 @@ let R = new T(n.default, {
       elasticSearchCursor: {
         before: (0, o.createMemberSearchCursor)({
           joinedAt: null == a ? void 0 : null === (t = a.member) || void 0 === t ? void 0 : t.joined_at,
-          userId: null !== (s = null == a ? void 0 : null === (r = a.member) || void 0 === r ? void 0 : r.user.id) && void 0 !== s ? s : c.EMPTY_STRING_USER_ID
+          userId: null !== (s = null == a ? void 0 : null === (r = a.member) || void 0 === r ? void 0 : r.user.id) && void 0 !== s ? s : c.EMPTY_STRING_SNOWFLAKE_ID
         }),
         after: (0, o.createMemberSearchCursor)({
           joinedAt: null == l ? void 0 : null === (i = l.member) || void 0 === i ? void 0 : i.joined_at,
-          userId: null !== (u = null == l ? void 0 : null === (n = l.member) || void 0 === n ? void 0 : n.user.id) && void 0 !== u ? u : c.EMPTY_STRING_USER_ID
+          userId: null !== (u = null == l ? void 0 : null === (n = l.member) || void 0 === n ? void 0 : n.user.id) && void 0 !== u ? u : c.EMPTY_STRING_SNOWFLAKE_ID
         })
       }
     }, !1);

@@ -27,7 +27,7 @@ class S extends t.default {
         enableHangStatus: t,
         setDefaultStatus: o
       } = I.HangStatusExperiment.getCurrentConfig({
-        guildId: null != E ? E : T.EMPTY_STRING_GUILD_ID,
+        guildId: null != E ? E : T.EMPTY_STRING_SNOWFLAKE_ID,
         location: "HangStatusManager"
       }, {
         autoTrackExposure: !0

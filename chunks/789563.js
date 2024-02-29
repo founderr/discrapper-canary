@@ -471,7 +471,7 @@ class eo extends E.default {
     return D["".concat(t)]
   }
   getGuildExperimentDescriptor(e, t) {
-    let n = null != t ? t : S.EMPTY_STRING_GUILD_ID,
+    let n = null != t ? t : S.EMPTY_STRING_SNOWFLAKE_ID,
       i = b[e];
     if (M && null != i) return i;
     let r = "".concat(n, ":").concat(e);

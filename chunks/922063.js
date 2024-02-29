@@ -13,6 +13,7 @@ e.exports = {
   itemTypeTitleForTallerCard: "itemTypeTitleForTallerCard__90049",
   logo: "logo_b80583",
   page: "page_be1421",
+  pageWithShopBannerHidden: "pageWithShopBannerHidden_b387a1",
   pageWrapper: "pageWrapper__582b9",
   pageWrapperBackgroundPrimary: "pageWrapperBackgroundPrimary__74f14",
   pageWrapperFullscreen: "pageWrapperFullscreen__7f748",

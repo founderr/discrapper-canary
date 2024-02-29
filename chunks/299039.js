@@ -56,5 +56,8 @@ var o = {
   },
   castUserIdAsReadStateChannelId: function(e) {
     return e
+  },
+  castSnowflakeAsUserId: function(e) {
+    return e
   }
 }

@@ -304,6 +304,9 @@ class ea extends a.default.Store {
   getDMFromUserId(e) {
     if (null != e) return P[e]
   }
+  getMutableDMsByUserIds() {
+    return P
+  }
   getDMUserIds() {
     return m.default.keys(P)
   }

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useVoiceActivityNotificationSettingsExperiment: function() {
-    return s
+    return r
   },
   hasVoiceChannelActivityNotifsEnabled: function() {
-    return r
+    return u
   }
 });
 var a = n("862205"),
@@ -30,7 +30,7 @@ let l = (0, a.createExperiment)({
       }
     }]
   }),
-  u = (0, a.createExperiment)({
+  d = (0, a.createExperiment)({
     kind: "guild",
     id: "2023-11_voice_activity_notification_guild",
     label: "General Voice Channel Notifications for Guild",
@@ -46,13 +46,13 @@ let l = (0, a.createExperiment)({
     }]
   });
 
-function s(e) {
+function r(e) {
   var t;
   let {
     voiceChannelActivityNotifsEnabled: n
-  } = u.useExperiment({
+  } = d.useExperiment({
     location: "useVoiceActivityNotificationSettingsExperiment",
-    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.EMPTY_STRING_GUILD_ID
+    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.EMPTY_STRING_SNOWFLAKE_ID
   }, {
     disable: (null == e ? void 0 : e.type) !== i.ChannelTypes.GUILD_VOICE,
     autoTrackExposure: !1
@@ -67,12 +67,12 @@ function s(e) {
   return (null == e ? void 0 : e.type) === i.ChannelTypes.GUILD_VOICE && n && a
 }
 
-function r(e) {
+function u(e) {
   var t;
   let {
     voiceChannelActivityNotifsEnabled: n
-  } = u.getCurrentConfig({
-    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.EMPTY_STRING_GUILD_ID,
+  } = d.getCurrentConfig({
+    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.EMPTY_STRING_SNOWFLAKE_ID,
     location: "hasVoiceChannelActivityNotifsEnabled"
   });
   return n

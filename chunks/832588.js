@@ -46,6 +46,7 @@ function o(e) {
   } = e, o = d.default.getGuildScheduledEvent(t);
   if (null == o) return;
   let _ = s ? null != n ? n : (0, i.getNextRecurrenceIdInEvent)(o) : null,
-    y = E(o.id, _);
-  null == _ ? (l(t, null, u, a.GuildScheduledEventUserResponses.INTERESTED), null == c || c()) : null != y ? (l(t, _, u, a.GuildScheduledEventUserResponses.UNINTERESTED), null == c || c()) : r(o, _)
+    y = E(o.id),
+    R = E(o.id, _);
+  null == _ ? (l(t, null, u, null != y ? a.GuildScheduledEventUserResponses.UNINTERESTED : a.GuildScheduledEventUserResponses.INTERESTED), null == c || c()) : null != R ? (l(t, _, u, null != y ? a.GuildScheduledEventUserResponses.INTERESTED : a.GuildScheduledEventUserResponses.UNINTERESTED), null == c || c()) : r(o, _)
 }(u = l || (l = {}))[u.SERIES = 0] = "SERIES", u[u.RECURRENCE = 1] = "RECURRENCE"

@@ -2,40 +2,41 @@
 let r, i, l, u;
 n.r(t), n.d(t, {
   default: function() {
-    return G
+    return B
   }
 }), n("222007"), n("424973"), n("808653");
 var a = n("446674"),
   o = n("913144"),
   s = n("76393"),
   d = n("161454"),
-  _ = n("374014"),
-  E = n("223913"),
+  E = n("374014"),
+  _ = n("223913"),
   c = n("537429"),
-  I = n("271938"),
-  S = n("42203"),
-  T = n("305961"),
-  f = n("42887"),
-  p = n("957255"),
-  N = n("945956"),
-  A = n("18494"),
-  R = n("800762"),
-  C = n("49111"),
-  L = n("706530");
-let O = null,
-  h = {},
-  P = null;
+  I = n("756898"),
+  S = n("271938"),
+  T = n("42203"),
+  f = n("305961"),
+  p = n("42887"),
+  N = n("957255"),
+  A = n("945956"),
+  R = n("18494"),
+  C = n("800762"),
+  L = n("49111"),
+  O = n("706530");
+let h = null,
+  P = {},
+  g = null;
 
-function g() {
-  r = new Map, i = {}, l = {}, u = {}, h = {}
+function m() {
+  r = new Map, i = {}, l = {}, u = {}, P = {}
 }
-g();
+m();
 
-function D(e) {
+function y(e) {
   r.delete(e)
 }
 
-function m() {
+function D() {
   let e = [];
   for (let t in i) {
     let n = i[t];
@@ -44,7 +45,7 @@ function m() {
   return e
 }
 
-function y(e) {
+function v(e) {
   let {
     streamKey: t,
     region: n,
@@ -52,8 +53,8 @@ function y(e) {
     paused: u
   } = e;
   r.set(t, {
-    ...(0, _.decodeStreamKey)(t),
-    state: u ? C.ApplicationStreamStates.PAUSED : C.ApplicationStreamStates.ACTIVE
+    ...(0, E.decodeStreamKey)(t),
+    state: u ? L.ApplicationStreamStates.PAUSED : L.ApplicationStreamStates.ACTIVE
   }), l[t] = {
     streamKey: t,
     region: n,
@@ -61,48 +62,48 @@ function y(e) {
   }
 }
 
-function v(e, t) {
-  let n = S.default.getBasicChannel(t);
-  return e === L.StreamTypes.CALL || null != n && p.default.canBasicChannel(C.BasicPermissions.VIEW_CHANNEL, n)
+function U(e, t) {
+  let n = T.default.getBasicChannel(t);
+  return e === O.StreamTypes.CALL || null != n && N.default.canBasicChannel(L.BasicPermissions.VIEW_CHANNEL, n)
 }
 
-function U(e) {
-  if (v(e.streamType, e.channelId)) return !0;
-  let t = S.default.getBasicChannel(e.channelId);
-  return null != t && (0, E.canWatchStream)(t, R.default, T.default, p.default, s.default)[0]
+function M(e) {
+  if (U(e.streamType, e.channelId)) return !0;
+  let t = T.default.getBasicChannel(e.channelId);
+  return null != t && (0, _.canWatchStream)(t, C.default, f.default, N.default, s.default)[0]
 }
-class M extends a.default.Store {
+class G extends a.default.Store {
   initialize() {
-    this.syncWith([p.default], () => !0), this.waitFor(d.default, p.default)
+    this.syncWith([N.default], () => !0), this.waitFor(d.default, N.default)
   }
   isSelfStreamHidden(e) {
     var t;
-    return null !== (t = h[e]) && void 0 !== t && t
+    return null !== (t = P[e]) && void 0 !== t && t
   }
   getLastActiveStream() {
     var e;
-    return (0, c.default)(f.default) ? null !== (e = Array.from(r.values()).pop()) && void 0 !== e ? e : null : null
+    return (0, c.default)(p.default) ? null !== (e = Array.from(r.values()).pop()) && void 0 !== e ? e : null : null
   }
   getAllActiveStreams() {
-    return (0, c.default)(f.default) ? Array.from(r.values()) : []
+    return (0, c.default)(p.default) ? Array.from(r.values()) : []
   }
   getAllActiveStreamsForChannel(e) {
-    return (0, c.default)(f.default) ? Array.from(r.values()).filter(t => t.channelId === e) : []
+    return (0, c.default)(p.default) ? Array.from(r.values()).filter(t => t.channelId === e) : []
   }
   getActiveStreamForStreamKey(e) {
     var t;
-    return (0, c.default)(f.default) ? null !== (t = r.get(e)) && void 0 !== t ? t : null : null
+    return (0, c.default)(p.default) ? null !== (t = r.get(e)) && void 0 !== t ? t : null : null
   }
   getActiveStreamForApplicationStream(e) {
     var t;
-    if (!(0, c.default)(f.default) || null == e) return null;
-    let n = (0, _.encodeStreamKey)(e);
+    if (!(0, c.default)(p.default) || null == e) return null;
+    let n = (0, E.encodeStreamKey)(e);
     return null !== (t = this.getActiveStreamForStreamKey(n)) && void 0 !== t ? t : null
   }
   getCurrentUserActiveStream() {
-    let e = A.default.getVoiceChannelId(),
-      t = S.default.getChannel(e);
-    return null == t ? null : this.getActiveStreamForUser(I.default.getId(), t.getGuildId())
+    let e = R.default.getVoiceChannelId(),
+      t = T.default.getChannel(e);
+    return null == t ? null : this.getActiveStreamForUser(S.default.getId(), t.getGuildId())
   }
   getActiveStreamForUser(e, t) {
     var n;
@@ -111,11 +112,11 @@ class M extends a.default.Store {
   }
   getStreamerActiveStreamMetadata() {
     var e;
-    let t = A.default.getVoiceChannelId(),
-      n = S.default.getChannel(t);
+    let t = R.default.getVoiceChannelId(),
+      n = T.default.getChannel(t);
     if (null == n) return null;
-    let r = this.getActiveStreamForUser(I.default.getId(), n.getGuildId());
-    return null == r ? null : null !== (e = u[(0, _.encodeStreamKey)(r)]) && void 0 !== e ? e : null
+    let r = this.getActiveStreamForUser(S.default.getId(), n.getGuildId());
+    return null == r ? null : null !== (e = u[(0, E.encodeStreamKey)(r)]) && void 0 !== e ? e : null
   }
   getStreamerActiveStreamMetadataForStream(e) {
     var t;
@@ -123,38 +124,38 @@ class M extends a.default.Store {
   }
   getAnyStreamForUser(e) {
     var t;
-    if (!(0, c.default)(f.default)) return null;
+    if (!(0, c.default)(p.default)) return null;
     let n = i[e];
-    return null == n ? null : null !== (t = Object.values(n).find(e => U(e))) && void 0 !== t ? t : null
+    return null == n ? null : null !== (t = Object.values(n).find(e => M(e))) && void 0 !== t ? t : null
   }
   getStreamForUser(e, t) {
     var n;
-    if (!(0, c.default)(f.default)) return null;
-    let r = null === (n = i[e]) || void 0 === n ? void 0 : n[null != t ? t : C.NULL_STRING_GUILD_ID];
-    return null != r && U(r) ? r : null
+    if (!(0, c.default)(p.default)) return null;
+    let r = null === (n = i[e]) || void 0 === n ? void 0 : n[null != t ? t : L.NULL_STRING_GUILD_ID];
+    return null != r && M(r) ? r : null
   }
   getRTCStream(e) {
     var t;
-    return (0, c.default)(f.default) ? null !== (t = l[e]) && void 0 !== t ? t : null : null
+    return (0, c.default)(p.default) ? null !== (t = l[e]) && void 0 !== t ? t : null : null
   }
   getAllApplicationStreams() {
-    return (0, c.default)(f.default) ? m().filter(e => null != e && v(e.streamType, e.channelId)) : []
+    return (0, c.default)(p.default) ? D().filter(e => null != e && U(e.streamType, e.channelId)) : []
   }
   getAllApplicationStreamsForChannel(e) {
-    return (0, c.default)(f.default) ? m().filter(t => null != t && t.channelId === e && v(t.streamType, t.channelId)) : []
+    return (0, c.default)(p.default) ? D().filter(t => null != t && t.channelId === e && U(t.streamType, t.channelId)) : []
   }
   getViewerIds(e) {
-    if (!(0, c.default)(f.default)) return [];
+    if (!(0, c.default)(p.default)) return [];
     let t = null;
-    t = "string" == typeof e ? e : (0, _.encodeStreamKey)(e);
+    t = "string" == typeof e ? e : (0, E.encodeStreamKey)(e);
     let n = null != t ? l[t] : null;
     return null != n ? n.viewerIds : []
   }
   getCurrentAppIntent() {
-    return P
+    return g
   }
   getState() {
-    return (0, c.default)(f.default) ? {
+    return (0, c.default)(p.default) ? {
       activeStreams: Array.from(r.entries()),
       streamsByUserAndGuild: i,
       rtcStreams: l,
@@ -167,8 +168,8 @@ class M extends a.default.Store {
     }
   }
 }
-M.displayName = "ApplicationStreamingStore";
-var G = new M(o.default, {
+G.displayName = "ApplicationStreamingStore";
+var B = new G(o.default, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       applicationStreamState: t
@@ -190,16 +191,16 @@ var G = new M(o.default, {
       if (a && null != l) {
         var o, s;
         return null == i[(o = {
-          streamType: null != r ? L.StreamTypes.GUILD : L.StreamTypes.CALL,
+          streamType: null != r ? O.StreamTypes.GUILD : O.StreamTypes.CALL,
           ownerId: n,
           guildId: r,
           channelId: l
-        }).ownerId] && (i[o.ownerId] = {}), i[o.ownerId][null !== (s = o.guildId) && void 0 !== s ? s : C.NULL_STRING_GUILD_ID] = o, !0
+        }).ownerId] && (i[o.ownerId] = {}), i[o.ownerId][null !== (s = o.guildId) && void 0 !== s ? s : L.NULL_STRING_GUILD_ID] = o, !0
       } {
-        let t = I.default.getSessionId();
-        return n === I.default.getId() && u !== t && null != N.default.getChannelId() ? e : function(e, t) {
+        let t = S.default.getSessionId();
+        return n === S.default.getId() && u !== t && null != A.default.getChannelId() ? e : function(e, t) {
           var n;
-          let r = null != t ? t : C.NULL_STRING_GUILD_ID;
+          let r = null != t ? t : L.NULL_STRING_GUILD_ID;
           return (null === (n = i[e]) || void 0 === n ? void 0 : n[r]) != null && (delete i[e][r], !0)
         }(n, r) || e
       }
@@ -208,35 +209,37 @@ var G = new M(o.default, {
   STREAM_WATCH: function(e) {
     let {
       streamKey: t
-    } = e, n = (0, _.decodeStreamKey)(t);
+    } = e, n = (0, E.decodeStreamKey)(t);
     r.delete(t), r.set(t, {
       ...n,
-      state: C.ApplicationStreamStates.CONNECTING
-    }), n.ownerId === I.default.getId() && (h[n.channelId] = !1)
+      state: L.ApplicationStreamStates.CONNECTING
+    }), n.ownerId === S.default.getId() && (P[n.channelId] = !1)
   },
   STREAM_START: function(e) {
+    var t;
     let {
-      streamType: t,
-      guildId: n,
-      channelId: i,
-      pid: l,
-      sourceName: a
-    } = e, o = (0, _.encodeStreamKey)({
-      streamType: t,
-      guildId: n,
-      channelId: i,
-      ownerId: I.default.getId()
-    }), s = null != l ? d.default.getGameForPID(l) : null;
-    u[o] = {
-      id: null == s ? void 0 : s.id,
-      pid: l,
-      sourceName: a
-    }, r.delete(o), r.set(o, {
-      streamType: t,
-      guildId: n,
-      channelId: i,
-      ownerId: I.default.getId(),
-      state: C.ApplicationStreamStates.CONNECTING
+      streamType: n,
+      guildId: i,
+      channelId: l,
+      pid: a,
+      sourceName: o,
+      sourceId: s
+    } = e, _ = (0, E.encodeStreamKey)({
+      streamType: n,
+      guildId: i,
+      channelId: l,
+      ownerId: S.default.getId()
+    }), c = null !== (t = null != a ? d.default.getGameForPID(a) : null != s ? d.default.getRunningGames().find(e => (0, I.default)(s, e.windowHandle)) : null) && void 0 !== t ? t : null;
+    u[_] = {
+      id: null == c ? void 0 : c.id,
+      pid: a,
+      sourceName: o
+    }, r.delete(_), r.set(_, {
+      streamType: n,
+      guildId: i,
+      channelId: l,
+      ownerId: S.default.getId(),
+      state: L.ApplicationStreamStates.CONNECTING
     })
   },
   STREAM_STOP: function(e) {
@@ -245,8 +248,8 @@ var G = new M(o.default, {
     } = e;
     u[t] = null
   },
-  STREAM_CREATE: y,
-  STREAM_UPDATE: y,
+  STREAM_CREATE: v,
+  STREAM_UPDATE: v,
   STREAM_TIMED_OUT: function(e) {
     let {
       streamKey: t
@@ -254,7 +257,7 @@ var G = new M(o.default, {
     if (null == n) return !1;
     r.set(t, {
       ...n,
-      state: C.ApplicationStreamStates.FAILED
+      state: L.ApplicationStreamStates.FAILED
     })
   },
   STREAM_DELETE: function(e) {
@@ -266,43 +269,43 @@ var G = new M(o.default, {
     delete l[t];
     let a = r.get(t);
     if (null == a) return !1;
-    let o = C.ApplicationStreamStates.ENDED;
-    if (i) o = C.ApplicationStreamStates.RECONNECTING;
-    else if (u === C.ApplicationStreamDeleteReasons.UNAUTHORIZED) o = C.ApplicationStreamStates.FAILED;
-    else if (u === C.ApplicationStreamDeleteReasons.SAFETY_GUILD_RATE_LIMITED) {
+    let o = L.ApplicationStreamStates.ENDED;
+    if (i) o = L.ApplicationStreamStates.RECONNECTING;
+    else if (u === L.ApplicationStreamDeleteReasons.UNAUTHORIZED) o = L.ApplicationStreamStates.FAILED;
+    else if (u === L.ApplicationStreamDeleteReasons.SAFETY_GUILD_RATE_LIMITED) {
       let {
         guildId: e
-      } = (0, _.decodeStreamKey)(t);
+      } = (0, E.decodeStreamKey)(t);
       n.el("772545").then(n.bind(n, "772545")).then(t => {
         let {
           default: n
         } = t;
         n(e)
-      }), o = C.ApplicationStreamStates.ENDED
+      }), o = L.ApplicationStreamStates.ENDED
     }
     r.set(t, {
       ...a,
       state: o
-    }), o === C.ApplicationStreamStates.ENDED && O !== t && D(t)
+    }), o === L.ApplicationStreamStates.ENDED && h !== t && y(t)
   },
   STREAM_CLOSE: function(e) {
     let {
       streamKey: t
     } = e;
-    D(t)
+    y(t)
   },
   STREAM_UPDATE_SELF_HIDDEN: function(e) {
     let {
       channelId: t,
       selfStreamHidden: n
-    } = e, r = (0, _.isStreamKey)(O);
-    r && (null == O ? void 0 : O.includes(I.default.getId())) && !1 === h[t] && !0 === n && (O = null), h[t] = n
+    } = e, r = (0, E.isStreamKey)(h);
+    r && (null == h ? void 0 : h.includes(S.default.getId())) && !1 === P[t] && !0 === n && (h = null), P[t] = n
   },
   SET_STREAM_APP_INTENT: function(e) {
     let {
       intent: t
     } = e;
-    P = t
+    g = t
   },
   RTC_CONNECTION_STATE: function(e) {
     let {
@@ -311,14 +314,14 @@ var G = new M(o.default, {
     } = e;
     if (null == t) return !1;
     let i = r.get(t);
-    if (null == i || i.state === C.ApplicationStreamStates.ENDED) return !1;
+    if (null == i || i.state === L.ApplicationStreamStates.ENDED) return !1;
     let l = i.state;
     switch (n) {
-      case C.RTCConnectionStates.DISCONNECTED:
-        l = C.ApplicationStreamStates.RECONNECTING;
+      case L.RTCConnectionStates.DISCONNECTED:
+        l = L.ApplicationStreamStates.RECONNECTING;
         break;
-      case C.RTCConnectionStates.RTC_CONNECTED:
-        l = C.ApplicationStreamStates.ACTIVE
+      case L.RTCConnectionStates.RTC_CONNECTED:
+        l = L.ApplicationStreamStates.ACTIVE
     }
     if (l === i.state) return !1;
     r.set(t, {
@@ -331,13 +334,13 @@ var G = new M(o.default, {
       id: t,
       channelId: n
     } = e;
-    if (O = t, Array.from(r.values()).forEach(e => {
-        (0, _.encodeStreamKey)(e) !== O && e.state === C.ApplicationStreamStates.ENDED && D((0, _.encodeStreamKey)(e))
+    if (h = t, Array.from(r.values()).forEach(e => {
+        (0, E.encodeStreamKey)(e) !== h && e.state === L.ApplicationStreamStates.ENDED && y((0, E.encodeStreamKey)(e))
       }), null == t) return;
-    let i = (0, _.isStreamKey)(t);
-    i && t.includes(I.default.getId()) && (h[n] = !1)
+    let i = (0, E.isStreamKey)(t);
+    i && t.includes(S.default.getId()) && (P[n] = !1)
   },
-  CONNECTION_OPEN: g,
-  CONNECTION_CLOSED: g,
-  LOGOUT: g
+  CONNECTION_OPEN: m,
+  CONNECTION_CLOSED: m,
+  LOGOUT: m
 })

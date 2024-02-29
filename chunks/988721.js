@@ -361,7 +361,10 @@ let q = new j(d.default, {
         let n = a.sections[t];
         r(null != n, "Bot has no matching index section"), r(null != n.descriptor.application, "Bot's index section has no application info");
         let i = n.descriptor.application;
-        i.bot = e.user, n.descriptor = (0, v.getApplicationCommandSection)(i), o = !0
+        i.bot = e.user, n.descriptor = {
+          ...n.descriptor,
+          ...(0, v.getApplicationCommandSection)(i)
+        }, o = !0
       }
     }), o
   },

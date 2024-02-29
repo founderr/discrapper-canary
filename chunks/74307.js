@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   TextArea: function() {
-    return T
+    return g
   }
 }), n("424973");
 var i = n("37983"),
@@ -12,15 +12,16 @@ var i = n("37983"),
   l = n("718776"),
   u = n("516826"),
   c = n("741662"),
-  d = n("324584"),
-  f = n("782340"),
-  E = n("430594"),
-  p = n("182893"),
-  h = n("356410");
-let _ = (0, o.v4)(),
-  S = (0, o.v4)(),
-  m = (0, o.v4)();
-class T extends r.Component {
+  d = n("577776"),
+  f = n("324584"),
+  E = n("782340"),
+  p = n("430594"),
+  h = n("182893"),
+  _ = n("356410");
+let S = (0, o.v4)(),
+  m = (0, o.v4)(),
+  T = (0, o.v4)();
+class g extends r.Component {
   getPaddingRight() {
     let {
       maxLength: e
@@ -57,8 +58,8 @@ class T extends r.Component {
         maxLength: n
       } = this.props;
       return (0, i.jsxs)("div", {
-        className: a(E.maxLength, {
-          [E.errorOverflow]: this.hasError()
+        className: a(p.maxLength, {
+          [p.errorOverflow]: this.hasError()
         }),
         "aria-hidden": "true",
         children: [null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0, " ", null != n && "/ ".concat(n)]
@@ -70,8 +71,8 @@ class T extends r.Component {
     if (this.props.showCharacterCount || !1 === this.props.showRemainingCharacterCount) return null;
     let e = this.getCharsLeftLength();
     return null == e ? null : (0, i.jsx)("div", {
-      className: a(E.maxLength, {
-        [E.errorOverflow]: e < 0
+      className: a(p.maxLength, {
+        [p.errorOverflow]: e < 0
       }),
       "aria-hidden": "true",
       children: e
@@ -85,18 +86,20 @@ class T extends r.Component {
       error: e,
       maxLength: t,
       minLength: n
-    } = this.props, i = this.getIsOverflowing() ? f.default.Messages.MAXIMUM_LENGTH_ERROR.format({
+    } = this.props, i = this.getIsOverflowing() ? E.default.Messages.MAXIMUM_LENGTH_ERROR.format({
       maxLength: t
-    }) : null, r = this.getIsUnderflowing() ? f.default.Messages.MINIMUM_LENGTH_ERROR.format({
+    }) : null, r = this.getIsUnderflowing() ? E.default.Messages.MINIMUM_LENGTH_ERROR.format({
       minLength: n
     }) : null;
     return null != e && e.length < 1 || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != i ? i : r
   }
   renderErrorMessage() {
     let e = this.getErrorMessage();
-    return null == e ? null : (0, i.jsx)("div", {
-      id: _,
-      className: E.errorMessage,
+    return null == e ? null : (0, i.jsx)(d.Text, {
+      id: S,
+      variant: "text-xs/normal",
+      color: "text-danger",
+      className: p.errorMessage,
       children: e
     })
   }
@@ -108,8 +111,8 @@ class T extends r.Component {
       placeholder: s,
       autoFocus: o,
       minLength: u,
-      maxLength: _,
-      allowOverflow: T,
+      maxLength: d,
+      allowOverflow: S,
       spellCheck: g,
       resizeable: I,
       className: C,
@@ -120,22 +123,22 @@ class T extends r.Component {
       required: O,
       onInvalid: D,
       inputRef: y
-    } = this.props, P = N ? d.TextAreaAutosize : "textarea", L = this.hasError(), b = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, M = this.getAriaDescribedBy();
+    } = this.props, P = N ? f.TextAreaAutosize : "textarea", L = this.hasError(), b = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, M = this.getAriaDescribedBy();
     return (0, i.jsxs)("div", {
-      className: a(p.inputWrapper, {
-        [E.flex]: R
+      className: a(h.inputWrapper, {
+        [p.flex]: R
       }),
       children: [(0, i.jsxs)("div", {
-        className: a(E.inputMaxLength, {
-          [E.flex]: R
+        className: a(p.inputMaxLength, {
+          [p.flex]: R
         }),
         children: [(0, i.jsx)(l.FocusRing, {
           children: (0, i.jsx)(P, {
             type: "text",
-            className: a(p.inputDefault, E.textArea, h.scrollbarDefault, C, {
-              [p.error]: L,
-              [p.disabled]: n,
-              [E.resizeable]: I
+            className: a(h.inputDefault, p.textArea, _.scrollbarDefault, C, {
+              [h.error]: L,
+              [h.disabled]: n,
+              [p.resizeable]: I
             }),
             "aria-labelledby": b,
             "aria-describedby": M,
@@ -149,7 +152,7 @@ class T extends r.Component {
             value: r,
             autoFocus: o,
             minLength: u,
-            maxLength: T ? void 0 : _,
+            maxLength: S ? void 0 : d,
             spellCheck: g,
             required: O,
             onChange: this.onChange,
@@ -161,14 +164,14 @@ class T extends r.Component {
             ref: y
           })
         }), null != u && (0, i.jsx)(c.HiddenVisually, {
-          id: S,
-          children: f.default.Messages.MINIMUM_LENGTH.format({
+          id: m,
+          children: E.default.Messages.MINIMUM_LENGTH.format({
             minLength: u
           })
-        }), null != _ && (0, i.jsx)(c.HiddenVisually, {
-          id: m,
-          children: f.default.Messages.MAXIMUM_LENGTH.format({
-            maxLength: _
+        }), null != d && (0, i.jsx)(c.HiddenVisually, {
+          id: T,
+          children: E.default.Messages.MAXIMUM_LENGTH.format({
+            maxLength: d
           })
         }), this.renderCharacterCount(), this.renderMaxLength()]
       }), this.renderErrorMessage()]
@@ -183,7 +186,7 @@ class T extends r.Component {
         minLength: n,
         error: i
       } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-      return null != s && r.push(s), null != i ? r.push(i) : (null != t && r.push(m), null != n && r.push(S)), r.length > 0 ? r.join(" ") : void 0
+      return null != s && r.push(s), null != i ? r.push(S) : (null != t && r.push(T), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
     }, this.onChange = e => {
       let {
         onChange: t,
@@ -214,7 +217,7 @@ class T extends r.Component {
     }
   }
 }
-T.contextType = u.FormContext, T.defaultProps = {
+g.contextType = u.FormContext, g.defaultProps = {
   name: "",
   disabled: !1,
   placeholder: "",

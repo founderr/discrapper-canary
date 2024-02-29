@@ -10,7 +10,7 @@ var i = n("943314"),
 
 function s(e) {
   let t = a.default.getCurrentConfig({
-      guildId: null != e ? e : l.EMPTY_STRING_GUILD_ID,
+      guildId: null != e ? e : l.EMPTY_STRING_SNOWFLAKE_ID,
       location: "3fde52_1"
     }),
     n = i.default.getCurrentConfig({

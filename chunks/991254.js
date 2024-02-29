@@ -41,8 +41,8 @@ var u, i, r = n("884691"),
   s = n("299285"),
   c = n("305961"),
   S = n("957255"),
-  d = n("10514"),
-  E = n("521012"),
+  E = n("10514"),
+  d = n("521012"),
   f = n("437712"),
   _ = n("552712"),
   T = n("602960"),
@@ -117,7 +117,7 @@ let N = function(t, e) {
   O = [];
 
 function F(t, e) {
-  let n = (0, l.useStateFromStores)([E.default], () => E.default.getSubscriptions()),
+  let n = (0, l.useStateFromStores)([d.default], () => d.default.getSubscriptions()),
     {
       subscriptionGroupListing: u,
       guildEntitlements: i,
@@ -149,7 +149,7 @@ function F(t, e) {
         activeEntitlement: null
       }
     }, [o, s, e]),
-    d = r.useMemo(() => {
+    E = r.useMemo(() => {
       if (null == n) return null;
       let t = null == c ? void 0 : c.subscription_plans[0].id;
       for (let e of Object.values(n))
@@ -159,7 +159,7 @@ function F(t, e) {
         } return null
     }, [c, n]);
   return {
-    activeSubscription: d,
+    activeSubscription: E,
     activeSubscriptionListing: c,
     activeEntitlement: S,
     subscriptionGroupListing: u
@@ -168,7 +168,7 @@ function F(t, e) {
 
 function h(t) {
   var e;
-  let n = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : P.EMPTY_STRING_GUILD_ID,
+  let n = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : P.EMPTY_STRING_SNOWFLAKE_ID,
     u = (0, l.useStateFromStores)([S.default], () => S.default.can(P.Permissions.ADMINISTRATOR, t)),
     {
       entitlementsLoaded: i
@@ -191,7 +191,7 @@ function h(t) {
   return i ? c.filter(t => null != t.endsAt && t.endsAt.getTime() > Math.max(null != a ? a : 0, Date.now() - 2592e6)) : []
 }
 let m = t => {
-    let [e, n] = r.useState(!1), u = r.useMemo(() => t.map(C.getApplicationSubscriptionPlanId), [t]), i = (0, l.useStateFromStoresArray)([d.default], () => u.filter(t => null == d.default.get(t)), [u]);
+    let [e, n] = r.useState(!1), u = r.useMemo(() => t.map(C.getApplicationSubscriptionPlanId), [t]), i = (0, l.useStateFromStoresArray)([E.default], () => u.filter(t => null == E.default.get(t)), [u]);
     return r.useEffect(() => {
       i.length > 0 && (n(!0), Promise.all(i.map(t => (0, I.fetchSubscriptionListingForPlan)(t))).catch(() => {}).then(() => {
         n(!1)

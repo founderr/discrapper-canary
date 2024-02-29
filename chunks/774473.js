@@ -16,7 +16,7 @@ var l = n("884691"),
 function c(e, t) {
   var n;
   let c = (0, i.default)([r.default], () => r.default.getCurrentUser()),
-    f = null !== (n = null == e ? void 0 : e.guild_id) && void 0 !== n ? n : u.EMPTY_STRING_GUILD_ID,
+    f = null !== (n = null == e ? void 0 : e.guild_id) && void 0 !== n ? n : u.EMPTY_STRING_SNOWFLAKE_ID,
     m = (0, i.default)([s.default], () => s.default.getFlattenedGuildIds()),
     p = (0, i.default)([a.default], () => null == e || null == e.guild_id || a.default.can(d.Permissions.USE_EXTERNAL_SOUNDS, e)),
     h = l.useMemo(() => {

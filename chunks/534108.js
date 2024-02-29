@@ -22,8 +22,8 @@ var l = n("37983"),
   C = n("697218"),
   S = n("800762"),
   T = n("476765"),
-  I = n("461380"),
-  v = n("93393"),
+  v = n("461380"),
+  I = n("93393"),
   _ = n("153769"),
   N = n("671434"),
   A = n("229915"),
@@ -67,7 +67,7 @@ function V(e) {
             className: G.headerIcon
           });
         case O.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-          return (0, l.jsx)(v.default, {
+          return (0, l.jsx)(I.default, {
             className: G.headerIcon
           });
         case O.SoundboardSoundGridSectionType.FREQUENTLY_USED:
@@ -109,9 +109,9 @@ function V(e) {
             return F.default.Messages.SEARCH_RESULTS_SECTION_LABEL
         }
       }()
-    }), (0, l.jsx)(I.default, {
+    }), (0, l.jsx)(v.default, {
       className: G.headerIcon,
-      direction: n ? I.default.Directions.RIGHT : I.default.Directions.DOWN
+      direction: n ? v.default.Directions.RIGHT : v.default.Directions.DOWN
     })]
   })
 }
@@ -175,8 +175,8 @@ function Y(e) {
     onClose: o,
     onSelect: c,
     suppressPlaySound: m = !1,
-    shouldShowUpsell: I = !0,
-    gridNotice: v,
+    shouldShowUpsell: v = !0,
+    gridNotice: I,
     soundButtonOverlay: _,
     listPadding: N,
     renderHeader: A,
@@ -185,7 +185,7 @@ function Y(e) {
     analyticsLocations: b
   } = (0, f.default)(), [Y, z] = i.useState(null), Z = (0, r.useStateFromStores)([C.default], () => C.default.getCurrentUser()), J = (0, r.useStateFromStores)([S.default], () => {
     var e;
-    return S.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : w.EMPTY_STRING_USER_ID)
+    return S.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : w.EMPTY_STRING_SNOWFLAKE_ID)
   }), q = (null == J ? void 0 : J.selfDeaf) || (null == J ? void 0 : J.mute) || (null == J ? void 0 : J.suppress), X = (0, h.useExpressionPickerStore)(e => e.searchQuery), Q = (0, T.useUID)(), {
     categories: $
   } = (0, L.default)(a, void 0, P), [ee, et] = i.useState([]), en = (0, L.useSearchCategories)($, ee, X), el = g.SoundboardPickerCollapsedSections.useSetting(), ei = i.useMemo(() => new Set(el), [el]), ea = null == a, es = y.default.canUseCustomCallSounds(Z), er = i.useCallback(e => {
@@ -194,12 +194,12 @@ function Y(e) {
   }, [ei]), eo = i.useCallback((e, t) => {
     if (!m && (0, R.canUseSoundboardSound)(Z, e, a, !1)) {
       var n;
-      (0, R.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : w.EMPTY_STRING_CHANNEL_ID, t)
+      (0, R.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : w.EMPTY_STRING_SNOWFLAKE_ID, t)
     } else {
       if ((0, R.canUseSoundboardSound)(Z, e, a)) return;
-      I && z(e)
+      v && z(e)
     }
-  }, [m, Z, a, I]), eu = i.useCallback(e => {
+  }, [m, Z, a, v]), eu = i.useCallback(e => {
     switch (e.item.type) {
       case O.SoundboardSoundItemType.SOUND:
         return null == c || c(e.item.sound), eo(e.item.sound, b);
@@ -287,7 +287,7 @@ function Y(e) {
       gridNavigatorId: Q,
       renderEmptySearchState: K,
       renderInspector: eE,
-      gridNotice: v,
+      gridNotice: I,
       renderHeader: A
     })]
   })

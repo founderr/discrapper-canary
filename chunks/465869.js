@@ -28,9 +28,9 @@ let f = e => {
     let n = null == e ? void 0 : e.id,
       d = (0, i.useStateFromStoresArray)([o.default], () => {
         var e;
-        return null !== (e = o.default.getMonetizationRestrictions(null != n ? n : l.EMPTY_STRING_GUILD_ID)) && void 0 !== e ? e : []
+        return null !== (e = o.default.getMonetizationRestrictions(null != n ? n : l.EMPTY_STRING_SNOWFLAKE_ID)) && void 0 !== e ? e : []
       }),
-      u = (0, i.useStateFromStores)([o.default], () => o.default.getMonetizationRestrictionsFetchState(null != n ? n : l.EMPTY_STRING_GUILD_ID) === o.FetchState.FETCHING);
+      u = (0, i.useStateFromStores)([o.default], () => o.default.getMonetizationRestrictionsFetchState(null != n ? n : l.EMPTY_STRING_SNOWFLAKE_ID) === o.FetchState.FETCHING);
     return {
       restrictions: d,
       restrictionsLoading: u

@@ -94,6 +94,9 @@ class g extends s.default.PersistedStore {
     }
     return null !== (n = null !== (t = this.getGameByExecutable(r)) && void 0 !== t ? t : this.getGameByExecutable(s)) && void 0 !== n ? n : i
   }
+  getGameById(e) {
+    return f[e]
+  }
   shouldReport(e) {
     let t = null != this.getGameByName(e),
       n = null != h[e];

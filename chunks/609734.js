@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return I
   }
 });
 var l = n("37983");
@@ -23,18 +23,18 @@ var i = n("414456"),
   C = n("613676"),
   S = n("49111"),
   T = n("782340"),
-  I = n("796440");
+  v = n("796440");
 
-function v(e) {
+function I(e) {
   var t;
   let {
     application: n,
     className: i
-  } = e, v = c.default.getChannel(f.default.getChannelId()), {
+  } = e, I = c.default.getChannel(f.default.getChannelId()), {
     appsInGDMEnabled: _,
     availableApplications: N
   } = (0, d.usePrivateChannelIntegrationState)({
-    channelId: null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : S.EMPTY_STRING_CHANNEL_ID
+    channelId: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : S.EMPTY_STRING_SNOWFLAKE_ID
   });
   if (null == n || !(0, C.canInstallApplication)(n.id, n.customInstallUrl, n.installParams)) return null;
   let A = _ && null != N.find(e => e.id === (null == n ? void 0 : n.id));
@@ -68,7 +68,7 @@ function v(e) {
       A ? (0, u.openOAuth2Modal)({
         clientId: n.id,
         scopes: [S.OAuth2Scopes.APPLICATIONS_COMMANDS],
-        channelId: v.id,
+        channelId: I.id,
         disableGuildSelect: !0
       }) : (0, C.installApplication)({
         applicationId: n.id,
@@ -76,9 +76,9 @@ function v(e) {
         installParams: n.installParams
       })
     },
-    className: a(I.applicationInstallButton, i),
+    className: a(v.applicationInstallButton, i),
     children: (0, l.jsxs)("div", {
-      className: I.applicationInstallButtonContent,
+      className: v.applicationInstallButtonContent,
       children: [(0, l.jsx)(h.default, {
         width: 16,
         height: 16
@@ -86,10 +86,10 @@ function v(e) {
         size: 4,
         horizontal: !0
       }), (0, l.jsx)("span", {
-        className: I.applicationInstallButtonText,
+        className: v.applicationInstallButtonText,
         children: A ? T.default.Messages.ADD : T.default.Messages.APPLICATION_ADD_BUTTON
       }), null == n.customInstallUrl || g.default.isDiscordUrl(n.customInstallUrl) ? null : (0, l.jsx)(p.default, {
-        className: I.launchIcon,
+        className: v.launchIcon,
         width: 16,
         height: 16
       })]

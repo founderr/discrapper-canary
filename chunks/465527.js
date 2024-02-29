@@ -37,8 +37,8 @@ var u = n("872717"),
   s = n("552712"),
   c = n("167726"),
   S = n("745279"),
-  d = n("449008"),
-  E = n("224400"),
+  E = n("449008"),
+  d = n("224400"),
   f = n("271560"),
   _ = n("850068"),
   T = n("49111");
@@ -141,13 +141,9 @@ async function N(t, e, n) {
     expectedCurrency: f,
     analyticsLoadId: I,
     isGift: A,
-    giftStyle: p,
+    giftInfoOptions: p,
     subscriptionPlanId: C,
-    loadId: N,
-    recipientId: R,
-    customMessage: U,
-    emojiConfetti: L,
-    soundEffect: M
+    loadId: N
   } = {
     ...P,
     ...n
@@ -159,7 +155,7 @@ async function N(t, e, n) {
       skuId: e
     })
   });
-  let O = c.default.inTestModeForApplication(t) || o.default.inDevModeForApplication(t);
+  let R = c.default.inTestModeForApplication(t) || o.default.inDevModeForApplication(t);
   try {
     let t = {
       gift: A,
@@ -167,17 +163,13 @@ async function N(t, e, n) {
       gateway_checkout_context: await (0, S.createGatewayCheckoutContext)(a),
       load_id: N
     };
-    if (O) t.test_mode = !0;
+    if (R) t.test_mode = !0;
     else {
       if (null != a && (t.payment_source_id = a.id, t.payment_source_token = await (0, _.createPaymentSourceToken)(a), T.ADYEN_PAYMENT_SOURCES.has(a.type))) {
         let e = await (0, _.popupBridgeState)(a.type);
         t.return_url = u.default.getAPIBaseURL() + T.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(a.type, null != e ? e : "", "success")
       }
-      null != s && (t.expected_amount = s), null != f && (t.expected_currency = f), null != p && (t.gift_style = p), null != R && (t.recipient_id = R), null != R && (t.custom_message = U, ((null == L ? void 0 : L.id) != null || (null == L ? void 0 : L.surrogates) != null || (null == M ? void 0 : M.soundId) != null) && (t.gift_info_options = {
-        emoji_id: null == L ? void 0 : L.id,
-        emoji_name: null == L ? void 0 : L.surrogates,
-        sound_id: null == M ? void 0 : M.soundId
-      })), t.purchase_token = (0, E.getPurchaseToken)()
+      null != s && (t.expected_amount = s), null != f && (t.expected_currency = f), t.gift_info_options = p, t.purchase_token = (0, d.getPurchaseToken)()
     }
     let n = await u.default.post({
       url: T.Endpoints.STORE_SKU_PURCHASE(e),
@@ -190,7 +182,7 @@ async function N(t, e, n) {
     return i.default.dispatch({
       type: "SKU_PURCHASE_SUCCESS",
       skuId: e,
-      libraryApplications: null != n.body.library_applications ? n.body.library_applications.filter(d.isNotNullish) : [],
+      libraryApplications: null != n.body.library_applications ? n.body.library_applications.filter(E.isNotNullish) : [],
       entitlements: n.body.entitlements,
       giftCode: n.body.gift_code
     }), {
@@ -216,7 +208,7 @@ async function N(t, e, n) {
 async function R() {
   try {
     let t = {
-        purchase_token: (0, E.getPurchaseToken)()
+        purchase_token: (0, d.getPurchaseToken)()
       },
       e = await u.default.post({
         url: T.Endpoints.STORE_EMAIL_RESEND_PAYMENT_VERIFICATION,

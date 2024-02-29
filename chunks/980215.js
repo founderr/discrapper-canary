@@ -26,7 +26,7 @@ function o(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "1e9ccc_1",
-    r = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : i.EMPTY_STRING_GUILD_ID,
+    r = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : i.EMPTY_STRING_SNOWFLAKE_ID,
     u = a.default.useExperiment({
       guildId: r,
       location: l
@@ -64,7 +64,7 @@ function d(e, t, n) {
 function f(e, t) {
   var n;
   let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    r = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : i.EMPTY_STRING_GUILD_ID,
+    r = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : i.EMPTY_STRING_SNOWFLAKE_ID,
     u = a.default.getCurrentConfig({
       guildId: r,
       location: "1e9ccc_2"

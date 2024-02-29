@@ -1,24 +1,24 @@
-"use strict";
-l.r(t), l.d(t, {
-  default: function() {
-    return u
-  }
-}), l("424973"), l("222007");
-var n = l("627445"),
-  a = l.n(n),
-  s = l("773179"),
-  r = l.n(s),
-  i = l("353927");
+    "use strict";
+    t.r(a), t.d(a, {
+      default: function() {
+        return r
+      }
+    }), t("424973"), t("222007");
+    var s = t("627445"),
+      d = t.n(s),
+      n = t("773179"),
+      i = t.n(n),
+      c = t("353927");
 
-function u(e, t, l) {
-  let n = window.DiscordNative;
-  a(null != n, "Can't get desktop sources outside of native app"), t = null != t ? t : [i.DesktopSources.WINDOW, i.DesktopSources.SCREEN], l = null != l ? l : {
-    width: 150,
-    height: 150
-  };
-  let s = [];
-  return t.includes(i.DesktopSources.SCREEN) && e.supports(i.Features.SCREEN_PREVIEWS) && (s.push(e.getScreenPreviews(l.width, l.height)), t = t.filter(e => e !== i.DesktopSources.SCREEN)), t.includes(i.DesktopSources.WINDOW) && e.supports(i.Features.WINDOW_PREVIEWS) && (s.push(e.getWindowPreviews(l.width, l.height)), t = t.filter(e => e !== i.DesktopSources.WINDOW)), 0 !== t.length && s.push(n.desktopCapture.getDesktopCaptureSources({
-    types: t,
-    thumbnailSize: l
-  })), Promise.all(s).then(e => r.flatten(e))
-}
+    function r(e, a, t) {
+      let s = window.DiscordNative;
+      d(null != s, "Can't get desktop sources outside of native app"), a = null != a ? a : [c.DesktopSources.WINDOW, c.DesktopSources.SCREEN], t = null != t ? t : {
+        width: 150,
+        height: 150
+      };
+      let n = [];
+      return a.includes(c.DesktopSources.SCREEN) && e.supports(c.Features.SCREEN_PREVIEWS) && (n.push(e.getScreenPreviews(t.width, t.height)), a = a.filter(e => e !== c.DesktopSources.SCREEN)), a.includes(c.DesktopSources.WINDOW) && e.supports(c.Features.WINDOW_PREVIEWS) && (n.push(e.getWindowPreviews(t.width, t.height)), a = a.filter(e => e !== c.DesktopSources.WINDOW)), 0 !== a.length && n.push(s.desktopCapture.getDesktopCaptureSources({
+        types: a,
+        thumbnailSize: t
+      })), Promise.all(n).then(e => i.flatten(e))
+    }

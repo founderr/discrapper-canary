@@ -43,33 +43,35 @@ class h extends i.PureComponent {
       (0, s.closeModal)(p, this.modalContext)
     }, this.onZoom = (e, t) => {
       let {
-        zoomThumbnailPlaceholder: n
+        zoomThumbnailPlaceholder: n,
+        trigger: i
       } = t;
       e.preventDefault();
       let {
-        alt: i,
-        src: r,
-        original: o,
-        width: d,
-        height: c,
-        animated: h,
-        children: E,
-        renderLinkComponent: g,
-        isWindowFocused: C,
-        shouldHideMediaOptions: S = !1
-      } = this.props, T = {
-        alt: i,
-        src: r,
-        original: null != o ? o : r,
-        width: d,
-        height: c,
-        animated: h,
-        children: E,
+        alt: r,
+        src: o,
+        original: d,
+        width: c,
+        height: h,
+        animated: E,
+        children: g,
+        renderLinkComponent: C,
+        isWindowFocused: S,
+        shouldHideMediaOptions: T = !1
+      } = this.props, v = {
+        alt: r,
+        src: o,
+        original: null != d ? d : o,
+        width: c,
+        height: h,
+        animated: E,
+        children: g,
         zoomThumbnailPlaceholder: n,
-        renderLinkComponent: g,
-        onContextMenu: S ? e => {
+        renderLinkComponent: C,
+        onContextMenu: T ? e => {
           e.stopPropagation(), e.preventDefault()
-        } : void 0
+        } : void 0,
+        trigger: i
       };
       (0, a.isElement)(e.currentTarget) && e.currentTarget.blur(), (0, s.openModal)(e => (0, l.jsx)(s.ModalRoot, {
         className: m.modal,
@@ -77,11 +79,11 @@ class h extends i.PureComponent {
         size: s.ModalSize.DYNAMIC,
         "aria-label": f.default.Messages.IMAGE,
         children: (0, l.jsx)(u.ImageModal, {
-          ...T,
+          ...v,
           className: m.image,
-          shouldAnimate: C,
+          shouldAnimate: S,
           onClose: this.onCloseImage,
-          shouldHideMediaOptions: S
+          shouldHideMediaOptions: T
         })
       }), {
         modalKey: p

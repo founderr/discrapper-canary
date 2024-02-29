@@ -1,26 +1,26 @@
-"use strict";
-a.r(t), a.d(t, {
-  CASH_APP_PAY_CONTAINER: function() {
-    return r
-  },
-  default: function() {
-    return l
-  }
-});
-var n = a("37983");
-a("884691"), a("771042");
-let r = "cash-app-pay-container";
+    "use strict";
+    t.r(a), t.d(a, {
+      CASH_APP_PAY_CONTAINER: function() {
+        return d
+      },
+      default: function() {
+        return i
+      }
+    });
+    var s = t("37983");
+    t("884691"), t("771042");
+    let d = "cash-app-pay-container";
 
-function s() {
-  return (0, n.jsx)(n.Fragment, {
-    children: (0, n.jsx)("div", {
-      id: r
-    })
-  })
-}
+    function n() {
+      return (0, s.jsx)(s.Fragment, {
+        children: (0, s.jsx)("div", {
+          id: d
+        })
+      })
+    }
 
-function l() {
-  return (0, n.jsx)(n.Fragment, {
-    children: (0, n.jsx)(s, {})
-  })
-}
+    function i() {
+      return (0, s.jsx)(s.Fragment, {
+        children: (0, s.jsx)(n, {})
+      })
+    }

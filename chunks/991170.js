@@ -210,7 +210,7 @@ var G = {
     } else s = null != s ? s : {}, n = r;
     if (null == n) return g;
     let d = {
-      userId: T.EMPTY_STRING_USER_ID,
+      userId: T.EMPTY_STRING_SNOWFLAKE_ID,
       nick: "",
       guildId: n.id,
       guildMemberAvatar: null,
@@ -223,7 +223,7 @@ var G = {
       communicationDisabledUntil: null
     };
     return P({
-      userId: T.EMPTY_STRING_USER_ID,
+      userId: T.EMPTY_STRING_SNOWFLAKE_ID,
       member: d,
       guild: n,
       overwrites: s,

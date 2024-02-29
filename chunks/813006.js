@@ -82,7 +82,7 @@ i = class extends r.default {
     return this.hasFeature(u.GuildFeatures.COMMUNITY)
   }
   hasVerificationGate() {
-    return this.hasFeature(u.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) && this.hasFeature(u.GuildFeatures.COMMUNITY)
+    return this.hasFeature(u.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) && (this.hasFeature(u.GuildFeatures.COMMUNITY) || this.hasFeature(u.GuildFeatures.CLAN))
   }
   hasCommunityInfoSubheader() {
     return this.hasFeature(u.GuildFeatures.COMMUNITY) && this.hasFeature(u.GuildFeatures.DISCOVERABLE)

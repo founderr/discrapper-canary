@@ -52,7 +52,7 @@ function o(e) {
       let {
         enableFastMonetizationOnboardingForGuild: t
       } = i.CreatorMonetizationRavenOnboardingGuildExperiment.useExperiment({
-        guildId: null != e ? e : r.EMPTY_STRING_GUILD_ID,
+        guildId: null != e ? e : r.EMPTY_STRING_SNOWFLAKE_ID,
         location: "e3bb71_3"
       }, {
         autoTrackExposure: !0
@@ -83,7 +83,7 @@ function l(e) {
     let {
       enableFastMonetizationOnboardingForGuild: t
     } = i.CreatorMonetizationRavenOnboardingGuildExperiment.getCurrentConfig({
-      guildId: null != e ? e : r.EMPTY_STRING_GUILD_ID,
+      guildId: null != e ? e : r.EMPTY_STRING_SNOWFLAKE_ID,
       location: "e3bb71_5"
     }), {
       enableFastMonetizationOnboardingForUser: n
@@ -105,7 +105,7 @@ function u(e) {
   let {
     enableWaitlist: t
   } = i.CreatorMonetizationOnboardingWaitlistExperiment.useExperiment({
-    guildId: null != e ? e : r.EMPTY_STRING_GUILD_ID,
+    guildId: null != e ? e : r.EMPTY_STRING_SNOWFLAKE_ID,
     location: "e3bb71_9"
   }, {
     autoTrackExposure: !1
@@ -117,7 +117,7 @@ function c(e) {
   let {
     enableWaitlist: t
   } = i.CreatorMonetizationOnboardingWaitlistExperiment.getCurrentConfig({
-    guildId: null != e ? e : r.EMPTY_STRING_GUILD_ID,
+    guildId: null != e ? e : r.EMPTY_STRING_SNOWFLAKE_ID,
     location: "e3bb71_10"
   });
   return t

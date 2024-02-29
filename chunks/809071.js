@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   updateSubscriptionInvoicePreview: function() {
-    return _
+    return E
   },
   useSubscriptionInvoicePreview: function() {
     return R
@@ -21,15 +21,15 @@ var n = r("884691"),
   a = r("521012"),
   f = r("719923"),
   o = r("49111");
-async function E(e) {
+async function _(e) {
   let {
     items: t,
     paymentSourceId: r,
     trialId: n,
     code: i,
     applyEntitlements: a = !1,
-    currency: E,
-    renewal: _,
+    currency: _,
+    renewal: E,
     metadata: c
   } = e;
   t = (0, f.coerceExistingItemsToNewItemInterval)(t);
@@ -48,8 +48,8 @@ async function E(e) {
     trial_id: n,
     code: i,
     apply_entitlements: a,
-    currency: E,
-    renewal: _,
+    currency: _,
+    renewal: E,
     metadata: c
   };
   try {
@@ -63,15 +63,15 @@ async function E(e) {
     throw new u.BillingError(e)
   }
 }
-async function _(e) {
+async function E(e) {
   let {
     subscriptionId: t,
     items: r,
     paymentSourceId: n,
     renewal: i,
     currency: a,
-    applyEntitlements: E = !1,
-    analyticsLocations: _,
+    applyEntitlements: _ = !1,
+    analyticsLocations: E,
     analyticsLocation: c,
     userDiscountOfferId: d
   } = e;
@@ -89,16 +89,16 @@ async function _(e) {
     }),
     payment_source_id: n,
     renewal: i,
-    apply_entitlements: E,
+    apply_entitlements: _,
     currency: a,
-    userDiscountOfferId: d
+    user_discount_offer_id: d
   };
   try {
     let e = await l.default.patch({
       url: o.Endpoints.BILLING_SUBSCRIPTION_PREVIEW(t),
       query: {
         location: c,
-        location_stack: _
+        location_stack: E
       },
       body: R,
       oldFormErrors: !0
@@ -150,7 +150,7 @@ function R(e) {
     } = e;
     e = r
   }
-  let t = (0, n.useCallback)(() => "subscriptionId" in e ? _(e) : "items" in e ? E(e) : null, [JSON.stringify(e)]);
+  let t = (0, n.useCallback)(() => "subscriptionId" in e ? E(e) : "items" in e ? _(e) : null, [JSON.stringify(e)]);
   return d(e, t)
 }
 

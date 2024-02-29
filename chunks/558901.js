@@ -26,7 +26,7 @@ function h(e) {
     editorHeight: l
   }), E = (0, c.default)(), g = (0, a.useStateFromStores)([u.default, r.default, o.default], () => {
     var e;
-    return u.default.isComboing(r.default.getId(), null !== (e = o.default.getChannelId()) && void 0 !== e ? e : m.EMPTY_STRING_CHANNEL_ID)
+    return u.default.isComboing(r.default.getId(), null !== (e = o.default.getChannelId()) && void 0 !== e ? e : m.EMPTY_STRING_SNOWFLAKE_ID)
   }), C = null !== (t = null == h ? void 0 : h.left) && void 0 !== t ? t : 0, S = (null !== (n = null == h ? void 0 : h.top) && void 0 !== n ? n : 0) - 16, T = i.useMemo(() => .05 > Math.random(), [0 === d.length]);
   return i.useEffect(() => {
     0 !== d.length && d !== f.current && g && (E.fire(C, S, T ? {

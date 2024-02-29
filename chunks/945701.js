@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return I
   }
 }), n("222007");
 var l = n("37983"),
@@ -22,10 +22,10 @@ var l = n("37983"),
   C = n("782340"),
   S = n("789215");
 let T = (0, p.createChannelRecord)({
-    id: g.ONE_STRING_CHANNEL_ID,
+    id: "1",
     type: g.ChannelTypes.DM
   }),
-  I = i.forwardRef(function(e, t) {
+  v = i.forwardRef(function(e, t) {
     let {
       replyPlaceholder: n,
       replyHeaderText: a,
@@ -33,9 +33,9 @@ let T = (0, p.createChannelRecord)({
       showPopout: m,
       children: p,
       hide: h
-    } = e, [g, I] = i.useState(""), [v, _] = i.useState((0, c.toRichValue)("")), N = (0, u.default)();
+    } = e, [g, v] = i.useState(""), [I, _] = i.useState((0, c.toRichValue)("")), N = (0, u.default)();
     return i.useEffect(() => {
-      I(""), _((0, c.toRichValue)(""))
+      v(""), _((0, c.toRichValue)(""))
     }, [m]), (0, l.jsx)(o.Popout, {
       align: "right",
       position: "bottom",
@@ -59,11 +59,11 @@ let T = (0, p.createChannelRecord)({
               maxCharacterCount: E.MAX_CHAR_COUNT,
               channel: T,
               onChange: (e, t, n) => {
-                I(t), _(n)
+                v(t), _(n)
               },
               type: d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT,
               textValue: g,
-              richValue: v,
+              richValue: I,
               onSubmit: e => {
                 let {
                   value: t
@@ -87,22 +87,22 @@ let T = (0, p.createChannelRecord)({
       children: () => p
     })
   });
-var v = e => {
+var I = e => {
   let {
     onInteraction: t,
     replyHeaderText: n,
     replyPlaceholder: a,
     showReact: d = !0,
     showReply: c = !0
-  } = e, f = (0, u.default)(), [p, v] = i.useState(!1), [_, N] = i.useState(!1), A = i.useRef(null), x = i.useRef(null);
+  } = e, f = (0, u.default)(), [p, I] = i.useState(!1), [_, N] = i.useState(!1), A = i.useRef(null), x = i.useRef(null);
 
   function y(e) {
     var t, n;
-    null != e.target && (!(null == A ? void 0 : null === (t = A.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && v(!1), !(null == x ? void 0 : null === (n = x.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && N(!1))
+    null != e.target && (!(null == A ? void 0 : null === (t = A.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && I(!1), !(null == x ? void 0 : null === (n = x.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && N(!1))
   }
   return i.useEffect(() => {
     let e = e => {
-      "Escape" === e.key && (N(!1), v(!1))
+      "Escape" === e.key && (N(!1), I(!1))
     };
     return document.addEventListener("keydown", e), document.addEventListener("mousedown", y), () => {
       document.removeEventListener("keydown", e), document.removeEventListener("mousedown", y)
@@ -119,17 +119,17 @@ var v = e => {
           className: "theme-".concat(f),
           ref: A,
           children: (0, l.jsx)(m.ReactionPicker, {
-            messageId: g.EMPTY_STRING_MESSAGE_ID,
+            messageId: g.EMPTY_STRING_SNOWFLAKE_ID,
             channel: T,
             closePopout: () => {
-              v(!1)
+              I(!1)
             },
             onSelectEmoji: e => {
               null != e && (t({
                 interactionType: E.AtomicReactorInteractionTypes.ReactSubmit,
                 emoji: e,
                 reply: null
-              }), v(!1))
+              }), I(!1))
             }
           })
         }),
@@ -146,12 +146,12 @@ var v = e => {
                   interactionType: E.AtomicReactorInteractionTypes.ReactBegin,
                   emoji: null,
                   reply: null
-                }), v(!0), N(!1)
+                }), I(!0), N(!1)
               }
             })
           })
         })
-      }), c && (0, l.jsx)(I, {
+      }), c && (0, l.jsx)(v, {
         hide: () => N(!1),
         ref: x,
         replyHeaderText: n,

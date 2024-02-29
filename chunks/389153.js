@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return C
   },
   buildApplicationCommands: function() {
-    return I
+    return S
   },
   isSnowflake: function() {
-    return S
+    return I
   },
   getMatchingGroupCommands: function() {
     return A
@@ -143,7 +143,7 @@ function C(e) {
   }
 }
 
-function I(e, t) {
+function S(e, t) {
   return d.flatMap(e, e => (a(null != e.id, "Missing command id"), function e(t) {
     var n, s;
     let {
@@ -210,7 +210,7 @@ function I(e, t) {
   })))
 }
 
-function S(e) {
+function I(e) {
   return y.ID_REGEX.test(e.trim())
 }
 
@@ -332,7 +332,7 @@ function w(e) {
 function L(e, t, n) {
   let s = v.default.useExperiment(t, n).userAppsTreatment === m.UserAppsTreatment.ALLOWED,
     i = E.default.useExperiment({
-      guildId: null != e ? e : y.EMPTY_STRING_GUILD_ID,
+      guildId: null != e ? e : y.EMPTY_STRING_SNOWFLAKE_ID,
       ...t
     }, n).userAppsTreatment === m.UserAppsTreatment.ALLOWED;
   return s && (null == e || i)
@@ -341,7 +341,7 @@ function L(e, t, n) {
 function U(e, t, n) {
   let s = v.default.getCurrentConfig(t, n).userAppsTreatment === m.UserAppsTreatment.ALLOWED,
     i = E.default.getCurrentConfig({
-      guildId: null != e ? e : y.EMPTY_STRING_GUILD_ID,
+      guildId: null != e ? e : y.EMPTY_STRING_SNOWFLAKE_ID,
       ...t
     }, n).userAppsTreatment === m.UserAppsTreatment.ALLOWED;
   return s && (i || null == e)

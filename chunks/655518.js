@@ -1,9 +1,9 @@
-    "use strict";
-    n.r(e), n.d(e, {
-      default: function() {
-        return r
-      }
-    }), n("781738");
-    var r = {
-      escape: t => t.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&")
-    }
+"use strict";
+n.r(t), n.d(t, {
+  default: function() {
+    return r
+  }
+}), n("781738");
+var r = {
+  escape: e => e.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&")
+}

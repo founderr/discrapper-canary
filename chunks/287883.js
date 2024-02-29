@@ -14,7 +14,7 @@ function r(e, t) {
   let {
     enabled: n
   } = s.GuildProductsExperiment.useExperiment({
-    guildId: null != e ? e : i.EMPTY_STRING_GUILD_ID,
+    guildId: null != e ? e : i.EMPTY_STRING_SNOWFLAKE_ID,
     location: t
   });
   return n
@@ -24,7 +24,7 @@ function a(e, t) {
   let {
     enabled: n
   } = s.GuildProductsExperiment.getCurrentConfig({
-    guildId: null != e ? e : i.EMPTY_STRING_GUILD_ID,
+    guildId: null != e ? e : i.EMPTY_STRING_SNOWFLAKE_ID,
     location: t
   });
   return n

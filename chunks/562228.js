@@ -15,17 +15,20 @@ n.r(t), n.d(t, {
   useCanPostImagePolls: function() {
     return _
   },
-  isAnswerFilled: function() {
+  isPollCreationEmpty: function() {
     return f
   },
-  isIncompleteAnswer: function() {
+  isAnswerFilled: function() {
     return g
   },
-  createPollServerDataFromCreateRequest: function() {
+  isIncompleteAnswer: function() {
     return S
   },
-  getTotalVotes: function() {
+  createPollServerDataFromCreateRequest: function() {
     return h
+  },
+  getTotalVotes: function() {
+    return m
   }
 }), n("781738"), n("222007"), n("808653");
 var a = n("748820"),
@@ -81,15 +84,26 @@ function _() {
   return !1
 }
 
-function f(e, t) {
-  return t === l.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? null != e.image : null != e.text && e.text.length > 0
+function f(e, t, n) {
+  return 0 === e.length && null == t.find(e => g(e, n))
 }
 
 function g(e, t) {
-  return t === l.PollLayoutTypes.DEFAULT && null != e.image && (null == e.text || 0 === e.text.length)
+  if (t === l.PollLayoutTypes.IMAGE_ONLY_ANSWERS) return null != e.image;
+  {
+    var n;
+    let t = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
+    return null != t && t.length > 0
+  }
 }
 
-function S(e) {
+function S(e, t) {
+  var n;
+  let a = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
+  return t === l.PollLayoutTypes.DEFAULT && null != e.image && (null == a || 0 === a.length)
+}
+
+function h(e) {
   var t, n;
   if (null == e) return;
   let a = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {
@@ -116,7 +130,7 @@ function S(e) {
   }
 }
 
-function h(e) {
+function m(e) {
   return e.reduce((e, t) => {
     var n, a;
     return e + (null !== (a = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== a ? a : 0)

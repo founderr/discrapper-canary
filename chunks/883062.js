@@ -27,7 +27,7 @@ class i {
     for (let t of d) {
       if (null == t) continue;
       let n = l.default.getUser(t),
-        i = a.default.getTrueMember(null != e ? e : s.EMPTY_STRING_GUILD_ID, t);
+        i = a.default.getTrueMember(null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID, t);
       null != n && c.push(n), null != i && o.push(i)
     }
     return [o, c]

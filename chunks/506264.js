@@ -1,2 +1,2 @@
-var Symbol = n("626849").Symbol;
+var Symbol = r("626849").Symbol;
 e.exports = Symbol

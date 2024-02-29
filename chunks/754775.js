@@ -25,7 +25,7 @@ var a = n("37983"),
       pulseSpeakingIndicator: m = !1,
       speaking: S = !1,
       ...g
-    } = e, _ = null != p ? p : n, T = (0, l.default)(_, s.default.unsafe_rawColors.PRIMARY_800.css), v = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, I = (0, c.default)(null != C ? C : h.EMPTY_STRING_USER_ID), A = null == I ? void 0 : I.getBannerURL({
+    } = e, _ = null != p ? p : n, T = (0, l.default)(_, s.default.unsafe_rawColors.PRIMARY_800.css), v = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, I = (0, c.default)(null != C ? C : h.EMPTY_STRING_SNOWFLAKE_ID), A = null == I ? void 0 : I.getBannerURL({
       size: 1024,
       canAnimate: f.GifAutoPlay.getSetting()
     });

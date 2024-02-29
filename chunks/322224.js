@@ -198,13 +198,13 @@ var u = n("872717"),
     async updateRsvp(e, t, n, u, l) {
       let r = (0, o.getExistingRsvp)(e, t);
       if (null != r) try {
-        await this.deleteRsvpForGuildEvent(e, t, n), null != r && null != t && (null == l || l())
+        await this.deleteRsvpForGuildEvent(e, t, n), null == l || l()
       } catch (e) {
-        null != r && null != t && (null == l || l(e))
+        null == l || l(e)
       } else try {
-        await this.createRsvpForGuildEvent(e, t, n, u), u === _.GuildScheduledEventUserResponses.INTERESTED && (null == l || l())
+        await this.createRsvpForGuildEvent(e, t, n, u), null == l || l()
       } catch (e) {
-        u === _.GuildScheduledEventUserResponses.INTERESTED && (null == l || l(e))
+        null == l || l(e)
       }
     },
     async fetchUsersForGuildEvent(e, t, n) {
