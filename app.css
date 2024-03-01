@@ -85213,6 +85213,14 @@ html .tabBadge__002b3 {
     position: relative
 }
 
+.newBadge_b2f114 {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: var(--white-500);
+    color: var(--black-500)
+}
+
 .snowflake__3643b {
     color: var(--white-500);
     font-size: 16px;
