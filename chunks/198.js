@@ -6,12 +6,12 @@ n.r(t), n.d(t, {
 });
 var l = n("37983"),
   i = n("884691"),
-  a = n("77078"),
-  s = n("812204"),
-  r = n("685665"),
-  o = n("649844"),
-  u = n("551305"),
-  d = n("978679"),
+  a = n("855643"),
+  s = n("77078"),
+  r = n("812204"),
+  o = n("685665"),
+  u = n("649844"),
+  d = n("551305"),
   c = n("158998"),
   f = n("49111"),
   m = n("646718"),
@@ -23,9 +23,12 @@ var l = n("37983"),
       channel: n
     } = e, {
       analyticsLocations: i
-    } = (0, r.default)(s.default.GIFT_BUTTON), E = (0, c.useDirectMessageRecipient)(n);
+    } = (0, o.default)(r.default.GIFT_BUTTON), E = (0, c.useDirectMessageRecipient)(n), {
+      Component: g,
+      events: C
+    } = (0, a.useGiftLottie)();
     if (t) return null;
-    let g = () => (0, o.default)({
+    let S = () => (0, u.default)({
       isGift: !0,
       giftRecipient: null === E ? void 0 : E,
       initialPlanId: null,
@@ -38,16 +41,19 @@ var l = n("37983"),
         objectType: f.AnalyticsObjectTypes.GIFT
       }
     });
-    return (0, l.jsx)(a.Tooltip, {
+    return (0, l.jsx)(s.Tooltip, {
       text: p.default.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
-      children: e => (0, l.jsx)(u.default, {
+      children: e => (0, l.jsx)(d.default, {
         ...e,
         innerClassName: h.button,
         isActive: !1,
         "aria-label": p.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
         "aria-haspopup": "dialog",
-        onClick: g,
-        children: (0, l.jsx)(d.default, {})
+        onClick: S,
+        ...C,
+        children: (0, l.jsx)(g, {
+          color: "currentColor"
+        })
       })
     })
   })

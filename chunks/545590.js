@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return v
   }
 });
 var l = n("37983");
@@ -24,14 +24,18 @@ var i = n("446674"),
   S = n("782340"),
   T = n("44492");
 
-function I(e) {
+function v(e) {
   let {
     user: t,
     guildId: n
   } = e, a = (0, i.useStateFromStores)([p.default], () => {
     var e;
     return null === (e = p.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
-  }), s = null != a && (0, m.canInstallApplication)(a.id, a.customInstallUrl, a.installParams), {
+  }), s = null != a && (0, m.canInstallApplication)({
+    customInstallUrl: a.customInstallUrl,
+    installParams: a.installParams,
+    integrationTypesConfig: a.integrationTypesConfig
+  }), {
     botUpgradeable: o,
     subscriptionGroupListing: u
   } = (0, h.default)({
@@ -52,7 +56,7 @@ function I(e) {
         app: a,
         listing: u,
         guildId: n
-      }) : (0, l.jsx)(v, {
+      }) : (0, l.jsx)(I, {
         guildId: n,
         listing: u
       }))]
@@ -60,7 +64,7 @@ function I(e) {
   }) : null
 }
 
-function v(e) {
+function I(e) {
   let {
     listing: t,
     guildId: n
