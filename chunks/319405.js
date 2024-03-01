@@ -47,15 +47,16 @@ class d extends t.default {
         streamKey: E,
         applicationId: t
       } = e;
-      window.clearTimeout(this.sendHeartbeatTimeoutIds.get(E));
+      this.terminateHeartbeat(E);
       let o = () => {
-        (null != n.default.getRTCStream(E) || n.default.getViewerIds(E).length > 0) && (0, S.sendHeartbeat)({
+        var e;
+        null != n.default.getRTCStream(E) && n.default.getViewerIds(E).length > 0 && (null === (e = c()) || void 0 === e ? void 0 : e.config.applicationId) === t && (0, S.sendHeartbeat)({
           questId: _,
           streamKey: E,
           applicationId: t
         });
-        let e = this.calculateHeartbeatDurationMs(t);
-        this.sendHeartbeatTimeoutIds.set(E, window.setTimeout(o, e))
+        let r = this.calculateHeartbeatDurationMs(_);
+        this.sendHeartbeatTimeoutIds.set(E, window.setTimeout(o, r))
       };
       o()
     }, this.calculateHeartbeatDurationMs = e => {
@@ -95,44 +96,46 @@ class d extends t.default {
         streamKey: _,
         viewerIds: E
       } = e, t = c();
-      if (null != t) {
-        if (0 === E.length) {
-          this.sendHeartbeatTimeoutIds.has(_) && ((0, S.sendHeartbeat)({
-            questId: t.id,
-            streamKey: _,
-            applicationId: t.config.applicationId
-          }), this.terminateHeartbeat(_));
-          return
-        }
-        this.initiateHeartbeat({
-          streamKey: _,
-          applicationId: t.config.applicationId,
-          questId: t.id
-        })
+      if (null == t) {
+        this.terminateHeartbeat(_);
+        return
       }
+      if (0 === E.length) {
+        this.sendHeartbeatTimeoutIds.has(_) && ((0, S.sendHeartbeat)({
+          questId: t.id,
+          streamKey: _,
+          applicationId: t.config.applicationId
+        }), this.terminateHeartbeat(_));
+        return
+      }
+      this.initiateHeartbeat({
+        streamKey: _,
+        applicationId: t.config.applicationId,
+        questId: t.id
+      })
     }, this.handleStreamStart = e => {
       var _;
       let {
         streamType: E,
         guildId: t,
         channelId: a
-      } = e, s = c();
-      if (null == s) return;
-      (0, T.trackQuestEvent)(s.id, l.AnalyticEvents.QUEST_STREAMING_STARTED, {
-        media_session_id: I.default.getMediaSessionId(),
-        channel_type: null === (_ = i.default.getChannel(a)) || void 0 === _ ? void 0 : _.type,
-        guild_id: t
-      });
-      let S = (0, o.encodeStreamKey)({
+      } = e, s = (0, o.encodeStreamKey)({
         streamType: E,
         guildId: t,
         channelId: a,
         ownerId: r.default.getId()
-      });
-      0 !== n.default.getViewerIds(S).length && this.initiateHeartbeat({
-        streamKey: S,
-        applicationId: s.config.applicationId,
-        questId: s.id
+      }), S = c();
+      if (null == S) {
+        this.terminateHeartbeat(s);
+        return
+      }(0, T.trackQuestEvent)(S.id, l.AnalyticEvents.QUEST_STREAMING_STARTED, {
+        media_session_id: I.default.getMediaSessionId(),
+        channel_type: null === (_ = i.default.getChannel(a)) || void 0 === _ ? void 0 : _.type,
+        guild_id: t
+      }), 0 !== n.default.getViewerIds(s).length && this.initiateHeartbeat({
+        streamKey: s,
+        applicationId: S.config.applicationId,
+        questId: S.id
       })
     }, this.handleStreamClose = e => {
       let {
