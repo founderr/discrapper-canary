@@ -36,7 +36,11 @@ function I(e) {
   } = (0, d.usePrivateChannelIntegrationState)({
     channelId: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : S.EMPTY_STRING_SNOWFLAKE_ID
   });
-  if (null == n || !(0, C.canInstallApplication)(n.id, n.customInstallUrl, n.installParams)) return null;
+  if (null == n || !(0, C.canInstallApplication)({
+      customInstallUrl: n.customInstallUrl,
+      installParams: n.installParams,
+      integrationTypesConfig: n.integrationTypesConfig
+    })) return null;
   let A = _ && null != N.find(e => e.id === (null == n ? void 0 : n.id));
   return (0, l.jsx)(s.Button, {
     color: s.Button.Colors.PRIMARY,
@@ -73,7 +77,8 @@ function I(e) {
       }) : (0, C.installApplication)({
         applicationId: n.id,
         customInstallUrl: n.customInstallUrl,
-        installParams: n.installParams
+        installParams: n.installParams,
+        integrationTypesConfig: n.integrationTypesConfig
       })
     },
     className: a(v.applicationInstallButton, i),
