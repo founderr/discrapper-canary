@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return C
   },
   buildApplicationCommands: function() {
-    return S
+    return I
   },
   isSnowflake: function() {
-    return I
+    return S
   },
   getMatchingGroupCommands: function() {
     return A
@@ -143,7 +143,7 @@ function C(e) {
   }
 }
 
-function S(e, t) {
+function I(e, t) {
   return d.flatMap(e, e => (a(null != e.id, "Missing command id"), function e(t) {
     var n, s;
     let {
@@ -210,7 +210,7 @@ function S(e, t) {
   })))
 }
 
-function I(e) {
+function S(e) {
   return y.ID_REGEX.test(e.trim())
 }
 

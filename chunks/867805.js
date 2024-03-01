@@ -105,9 +105,9 @@ class C {
     }
   }
 }
-let S = n("838426");
-for (let e in S) {
-  let t = S[e],
+let I = n("838426");
+for (let e in I) {
+  let t = I[e],
     n = t.map(e => {
       let t = new C(e),
         n = t.surrogates,
@@ -137,7 +137,7 @@ for (let e in S) {
   u[e] = a.default.filterUnsupportedEmojis(n)
 }
 
-function I(e) {
+function S(e) {
   let t = _[e];
   return null != t ? {
     type: "emoji",
@@ -168,12 +168,12 @@ function O(e, t) {
       else if (N.test(t)) {
         s += t;
         continue
-      } else i.push(I(s)), s = ""
+      } else i.push(S(s)), s = ""
     } else if (t === D) {
       s = t;
       continue
     }
-    let n = I(t);
+    let n = S(t);
     if (i.length > 0) {
       let e = i[i.length - 1];
       if ("text" === n.type && "text" === e.type) {
@@ -183,7 +183,7 @@ function O(e, t) {
     }
     i.push(n)
   }
-  return null != s && "" !== s && i.push(I(s)), i
+  return null != s && "" !== s && i.push(S(s)), i
 }
 
 function P(e) {

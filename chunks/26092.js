@@ -24,14 +24,14 @@ let u = d.FormStates.CLOSED,
   y = null,
   T = null,
   C = [],
-  S = null,
-  I = null;
+  I = null,
+  S = null;
 
 function A(e) {
   var t, n, s, i, r, a;
   let l = o.default.getCurrentUser();
   if (null == l) return D();
-  f = null !== (t = e.section) && void 0 !== t ? t : f, S = null !== (n = e.section) && void 0 !== n ? n : f, null != e.subsection && null != f && (_[f] = e.subsection), null != e.scrollPosition && null != f && (c[f] = e.scrollPosition), E = !!e.openWithoutBackstack, u = d.FormStates.OPEN, g = {}, h = {
+  f = null !== (t = e.section) && void 0 !== t ? t : f, I = null !== (n = e.section) && void 0 !== n ? n : f, null != e.subsection && null != f && (_[f] = e.subsection), null != e.scrollPosition && null != f && (c[f] = e.scrollPosition), E = !!e.openWithoutBackstack, u = d.FormStates.OPEN, g = {}, h = {
     ...m = {
       [d.UserSettingsSections.ACCOUNT]: {
         userId: l.id,
@@ -44,11 +44,11 @@ function A(e) {
         claimed: l.isClaimed()
       }
     }
-  }, y = null !== (s = e.onClose) && void 0 !== s ? s : null, T = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null, C = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], I = null !== (a = e.impressionSource) && void 0 !== a ? a : null
+  }, y = null !== (s = e.onClose) && void 0 !== s ? s : null, T = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null, C = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], S = null !== (a = e.impressionSource) && void 0 !== a ? a : null
 }
 
 function D() {
-  u = d.FormStates.CLOSED, v = !1, m = null, S = null, h = null, l = null, f = null, _ = {}, c = {}, y = null, T = null, C = [], I = null
+  u = d.FormStates.CLOSED, v = !1, m = null, I = null, h = null, l = null, f = null, _ = {}, c = {}, y = null, T = null, C = [], S = null
 }
 
 function N() {
@@ -91,8 +91,8 @@ class O extends r.default.Store {
       openWithoutBackstack: E,
       analyticsLocation: T,
       analyticsLocations: C,
-      initialSection: S,
-      impressionSource: I
+      initialSection: I,
+      impressionSource: S
     }
   }
   get onClose() {

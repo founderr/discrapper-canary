@@ -41,11 +41,11 @@ let C = e => {
         return 0
     }
   },
-  S = e => (0, u.default)(e) ? 1 : 0;
+  I = e => (0, u.default)(e) ? 1 : 0;
 
-function I(e, t) {
+function S(e, t) {
   var n, s, i, r, a;
-  return n = e, C(t) - C(n) || (s = e, S(t) - S(s)) || (i = e, (null !== (r = t.created_at) && void 0 !== r ? r : 0) - (null !== (a = i.created_at) && void 0 !== a ? a : 0))
+  return n = e, C(t) - C(n) || (s = e, I(t) - I(s)) || (i = e, (null !== (r = t.created_at) && void 0 !== r ? r : 0) - (null !== (a = i.created_at) && void 0 !== a ? a : 0))
 }
 
 function A(e) {
@@ -82,7 +82,7 @@ function N(e) {
     timestamp: Date.now()
   };
   else {
-    let e = a.length > 1 ? [...a].sort(I) : a,
+    let e = a.length > 1 ? [...a].sort(S) : a,
       n = o[t];
     a = null != n && i(n.activities, e) ? n.activities : e, o[t] = {
       status: s,
@@ -116,7 +116,7 @@ function O(e) {
     timestamp: Date.now()
   };
   else {
-    let e = r.length > 1 ? [...r].sort(I) : r;
+    let e = r.length > 1 ? [...r].sort(S) : r;
     o[t] = {
       status: s,
       clientStatus: i,

@@ -118,7 +118,7 @@ async function C(e, t) {
     of s) v[e] = t
 }
 
-function S(e, t) {
+function I(e, t) {
   let n = 0,
     s = e.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
   if (s.length > 0)
@@ -131,7 +131,7 @@ function S(e, t) {
   return n === e.length
 }
 
-function I(e, t, n, s) {
+function S(e, t, n, s) {
   let i = !1;
   for (let r = 0; r < e.length; r++) {
     let a = e[r];
@@ -157,13 +157,13 @@ async function A(e, t) {
   let s = [],
     i = t.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
   i.length > 0 && await C(e, i);
-  let r = S(t, s);
+  let r = I(t, s);
   if (r) return a.default.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
     applicationId: e
   }), s;
   let o = await T(e),
-    d = I(t, s, o, n);
+    d = S(t, s, o, n);
   return d ? E(e).then(() => A(e, t, n - 1)) : (a.default.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
     applicationId: e
@@ -172,8 +172,8 @@ async function A(e, t) {
 
 function D(e, t) {
   let n = [],
-    s = S(t, n);
+    s = I(t, n);
   if (s) return n;
   let i = o.default.getApplicationAssets(e);
-  return null == i ? n : (I(t, n, i), n)
+  return null == i ? n : (S(t, n, i), n)
 }

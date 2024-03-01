@@ -34,8 +34,8 @@ let E = {
   y = new Map,
   T = new Map,
   C = new Map,
-  S = new Map,
-  I = !1,
+  I = new Map,
+  S = !1,
   A = new Map,
   D = new Map,
   N = new Map,
@@ -76,16 +76,16 @@ function w(e) {
       url: g,
       userIds: new Set(f)
     },
-    I = o.default.getId(),
+    S = o.default.getId(),
     A = y.get(p.applicationId);
-  f.some(e => e === I) && null != A && (y.set(A.applicationId, {
+  f.some(e => e === S) && null != A && (y.set(A.applicationId, {
     ...A,
     ...p
   }), r.default.dispatch({
     type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
     channelId: i,
     instanceId: l
-  })), null != A && i === A.channelId && !f.some(e => e === I) && Array.from(A.userIds).some(e => e === I) && (S.get(i) === a ? S.delete(i) : y.delete(a));
+  })), null != A && i === A.channelId && !f.some(e => e === S) && Array.from(A.userIds).some(e => e === S) && (I.get(i) === a ? I.delete(i) : y.delete(a));
   let D = null !== (t = C.get(i)) && void 0 !== t ? t : [],
     N = D.filter(e => e.applicationId !== a),
     O = M(s),
@@ -113,7 +113,7 @@ function L(e) {
 }
 
 function U() {
-  I = !1
+  S = !1
 }
 
 function G(e, t) {
@@ -169,7 +169,7 @@ class F extends i.default.PersistedStore {
     return null == n ? null : Date.now() - n
   }
   isLaunchingActivity() {
-    return I
+    return S
   }
   getShelfActivities(e) {
     var t;
@@ -323,7 +323,7 @@ let H = new F(r.default, {
     }
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function() {
-    I = !0
+    S = !0
   },
   EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: function(e) {
     let {
@@ -331,12 +331,12 @@ let H = new F(r.default, {
     } = e;
     E.everLaunchedActivities.add(t),
       function() {
-        I = !1
+        S = !1
       }()
   },
   EMBEDDED_ACTIVITY_LAUNCH_FAIL: function() {
     (function() {
-      I = !1
+      S = !1
     })()
   },
   EMBEDDED_ACTIVITY_OPEN: function(e) {
@@ -509,10 +509,10 @@ let H = new F(r.default, {
       applicationId: n,
       isRejoiningFromCurrentSession: s
     } = e;
-    s && S.set(t, n)
+    s && I.set(t, n)
   },
   CONNECTION_INTERRUPTED: function(e) {
-    e.code === v.RPCCloseCodes.CLOSE_ABNORMAL && (s = void 0, y.clear(), I = !1, R = h.ActivityPanelModes.DISCONNECTED)
+    e.code === v.RPCCloseCodes.CLOSE_ABNORMAL && (s = void 0, y.clear(), S = !1, R = h.ActivityPanelModes.DISCONNECTED)
   }
 });
 var B = H

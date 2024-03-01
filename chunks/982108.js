@@ -30,8 +30,8 @@ let E = "message_requests",
   y = !1,
   T = !0,
   C = !1,
-  S = {},
-  I = {};
+  I = {},
+  S = {};
 
 function A(e) {
   if (null == e) return null;
@@ -50,16 +50,16 @@ function N(e) {
   let t = !1;
   C && (C = !1, t = !0);
   let n = A(_.default.getChannelId());
-  return null != n && n in S && (delete S[n], t = !0), t && e ? e : !e
+  return null != n && n in I && (delete I[n], t = !0), t && e ? e : !e
 }
 
 function O() {
   let e = !1;
-  for (let t in S) {
-    let n = S[t];
+  for (let t in I) {
+    let n = I[t];
     if (n.type === a.SidebarType.VIEW_THREAD || n.type === a.SidebarType.VIEW_CHANNEL) {
       let s = u.default.getChannel(n.channelId);
-      (null == s || !l.default.can(v.Permissions.VIEW_CHANNEL, s)) && (delete S[t], e = !0)
+      (null == s || !l.default.can(v.Permissions.VIEW_CHANNEL, s)) && (delete I[t], e = !0)
     }
   }
   return e
@@ -73,7 +73,7 @@ class b extends i.default.PersistedStore {
   initialize(e) {
     if (null != e) {
       var t, n, s, i, r;
-      p = null !== (t = e.isMembersOpen) && void 0 !== t && t, y = null !== (n = e.isSummariesOpen) && void 0 !== n && n, T = null === (s = e.isProfileOpen) || void 0 === s || s, S = null !== (i = e.sidebars) && void 0 !== i ? i : {}, I = null !== (r = e.guildSidebars) && void 0 !== r ? r : {}
+      p = null !== (t = e.isMembersOpen) && void 0 !== t && t, y = null !== (n = e.isSummariesOpen) && void 0 !== n && n, T = null === (s = e.isProfileOpen) || void 0 === s || s, I = null !== (i = e.sidebars) && void 0 !== i ? i : {}, S = null !== (r = e.guildSidebars) && void 0 !== r ? r : {}
     }
     this.syncWith([f.default], P), this.syncWith([l.default], O)
   }
@@ -82,33 +82,33 @@ class b extends i.default.PersistedStore {
       isMembersOpen: p,
       isSummariesOpen: y,
       isProfileOpen: T,
-      sidebars: S,
-      guildSidebars: I
+      sidebars: I,
+      guildSidebars: S
     }
   }
   getSection(e, t) {
     if (C) return m.ChannelSections.SEARCH;
     let n = A(e);
-    return null != n && null != S[n] ? m.ChannelSections.SIDEBAR_CHAT : t && T ? m.ChannelSections.PROFILE : y ? m.ChannelSections.SUMMARIES : p ? m.ChannelSections.MEMBERS : m.ChannelSections.NONE
+    return null != n && null != I[n] ? m.ChannelSections.SIDEBAR_CHAT : t && T ? m.ChannelSections.PROFILE : y ? m.ChannelSections.SUMMARIES : p ? m.ChannelSections.MEMBERS : m.ChannelSections.NONE
   }
   getSidebarState(e) {
     let t = A(e);
-    return null == t ? void 0 : S[t]
+    return null == t ? void 0 : I[t]
   }
   getGuildSidebarState(e) {
-    return null == e ? void 0 : I[e]
+    return null == e ? void 0 : S[e]
   }
   getCurrentSidebarChannelId(e) {
     let t = A(e);
     if (null == t || C) return null;
-    let n = S[t];
+    let n = I[t];
     return null == n ? null : n.type === a.SidebarType.VIEW_THREAD || n.type === a.SidebarType.VIEW_CHANNEL ? n.channelId : null
   }
   getCurrentSidebarMessageId(e) {
     var t;
     let n = A(e);
     if (null == n || C) return null;
-    let s = S[n];
+    let s = I[n];
     return null == s ? null : s.type === a.SidebarType.VIEW_THREAD || s.type === a.SidebarType.VIEW_CHANNEL ? null === (t = s.details) || void 0 === t ? void 0 : t.initialMessageId : null
   }
 }
@@ -132,7 +132,7 @@ var V = new b(r.default, {
     } = e;
     C = !1;
     let r = A(n);
-    return null != r && (S[r] = {
+    return null != r && (I[r] = {
       type: t,
       channelId: s,
       details: i
@@ -147,7 +147,7 @@ var V = new b(r.default, {
     } = e;
     C = !1;
     let r = A(s);
-    return null != r && (I[n] = {
+    return null != r && (S[n] = {
       type: t,
       baseChannelId: r,
       guildId: n,
@@ -162,7 +162,7 @@ var V = new b(r.default, {
     } = e;
     C = !1;
     let i = A(t);
-    null != i && (S[i] = {
+    null != i && (I[i] = {
       type: a.SidebarType.CREATE_THREAD,
       parentChannelId: t,
       parentMessageId: n,
@@ -173,23 +173,23 @@ var V = new b(r.default, {
     let {
       baseChannelId: t
     } = e, n = A(t);
-    null != n && delete S[n]
+    null != n && delete I[n]
   },
   SIDEBAR_CLOSE_GUILD: function(e) {
     let {
       guildId: t
     } = e;
-    return null != I[t] && (delete I[t], !0)
+    return null != S[t] && (delete S[t], !0)
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    if (t.id in S) return delete S[t.id], !0;
+    if (t.id in I) return delete I[t.id], !0;
     let n = !1;
-    for (let e in S) {
-      let s = S[e];
-      null != s && s.type === a.SidebarType.VIEW_CHANNEL && s.channelId === t.id && (delete S[e], n = !0)
+    for (let e in I) {
+      let s = I[e];
+      null != s && s.type === a.SidebarType.VIEW_CHANNEL && s.channelId === t.id && (delete I[e], n = !0)
     }
     return n
   },
@@ -202,8 +202,8 @@ var V = new b(r.default, {
       channel: n
     } = e;
     if (n.ownerId === (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
-    let s = S[n.parent_id];
-    null != s && s.type === a.SidebarType.CREATE_THREAD && s.parentMessageId === d.default.castChannelIdAsMessageId(n.id) && (S[n.parent_id] = {
+    let s = I[n.parent_id];
+    null != s && s.type === a.SidebarType.CREATE_THREAD && s.parentMessageId === d.default.castChannelIdAsMessageId(n.id) && (I[n.parent_id] = {
       type: a.SidebarType.VIEW_THREAD,
       channelId: n.id
     })
@@ -211,8 +211,8 @@ var V = new b(r.default, {
   THREAD_DELETE: function(e) {
     let {
       channel: t
-    } = e, n = S[t.parent_id];
+    } = e, n = I[t.parent_id];
     if (null == n || n.type !== a.SidebarType.VIEW_THREAD || n.channelId !== t.id) return !1;
-    delete S[t.parent_id]
+    delete I[t.parent_id]
   }
 })

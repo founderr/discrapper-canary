@@ -24,9 +24,9 @@ let m = 1 * f.default.Millis.MINUTE,
   y = 0,
   T = null,
   C = new Set,
-  S = {};
+  I = {};
 
-function I(e, t, n) {
+function S(e, t, n) {
   return a.default.get({
     url: "".concat("https://api.twitch.tv/helix").concat(e),
     query: t,
@@ -37,16 +37,16 @@ function I(e, t, n) {
   })
 }
 async function A(e, t) {
-  let n = S[e];
+  let n = I[e];
   if (null != n) return n;
   let {
     body: {
       data: s
     }
-  } = await I("/games", {
+  } = await S("/games", {
     id: e
   }, t), i = s[0].name;
-  return S[e] = i, i
+  return I[e] = i, i
 }
 let D = new class e {
   start() {
@@ -67,7 +67,7 @@ let D = new class e {
         body: {
           data: o
         }
-      } = await I("/streams", {
+      } = await S("/streams", {
         user_id: e.id,
         first: 1
       }, t), d = o[0];

@@ -24,8 +24,8 @@ var s = n("917351"),
   y = n("374363"),
   T = n("26989"),
   C = n("778689"),
-  S = n("305961"),
-  I = n("677099"),
+  I = n("305961"),
+  S = n("677099"),
   A = n("697218"),
   D = n("315102"),
   N = n("718517"),
@@ -258,7 +258,7 @@ class ee {
       null != t && (i.each(t.usableEmojis, n), i.each(t.emoticons, s))
     };
     for (let e in r(this.guildId), this.newlyAddedEmoji) null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e].sort((e, t) => V.default.compare(t.id, e.id)).slice(0, 3) : this.newlyAddedEmoji[e] = [];
-    I.default.getFlattenedGuildIds().forEach(e => {
+    S.default.getFlattenedGuildIds().forEach(e => {
       e !== this.guildId && r(e)
     }), this.escapedEmoticonNames = t.join("|")
   }
@@ -348,7 +348,7 @@ function ed(e) {
 }
 class eu extends d.default.PersistedStore {
   initialize(e) {
-    this.waitFor(f.default, C.default, T.default, S.default, p.default, v.default, w.default, A.default), null != e && (B = e), this.syncWith([y.default], ea)
+    this.waitFor(f.default, C.default, T.default, I.default, p.default, v.default, w.default, A.default), null != e && (B = e), this.syncWith([y.default], ea)
   }
   getState() {
     return B

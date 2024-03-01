@@ -24,12 +24,12 @@ let v = {},
   y = {},
   T = {},
   C = {},
-  S = null,
-  I = {};
+  I = null,
+  S = {};
 
 function A() {
-  for (let e in v = {}, T = {}, E = {}, p = {}, y = {}, S = f.default.getChannelId(), I) clearTimeout(I[e]);
-  I = {}, c.default.forEachGuild(e => {
+  for (let e in v = {}, T = {}, E = {}, p = {}, y = {}, I = f.default.getChannelId(), S) clearTimeout(S[e]);
+  S = {}, c.default.forEachGuild(e => {
     N(e)
   }), O()
 }
@@ -86,7 +86,7 @@ function b(e, t) {
     let e = Date.now();
     null != s.joinedAt && (s.joinedAt instanceof Date ? e = s.joinedAt.getTime() : "string" == typeof s.joinedAt && (e = new Date(s.joinedAt).getTime())), i = _.default.fromTimestamp(e)
   }
-  for (let n in p[e][t]) t === S ? l.default.isNewForumThread(n, t, s) && C[e][t]++ : _.default.compare(n, i) > 0 && !l.default.hasOpenedThread(n) && C[e][t]++
+  for (let n in p[e][t]) t === I ? l.default.isNewForumThread(n, t, s) && C[e][t]++ : _.default.compare(n, i) > 0 && !l.default.hasOpenedThread(n) && C[e][t]++
 }
 
 function V(e, t, n) {
@@ -181,9 +181,9 @@ function w() {
 }
 
 function L() {
-  let e = S;
-  if ((S = f.default.getChannelId()) === e) return !1;
-  P(e), P(S)
+  let e = I;
+  if ((I = f.default.getChannelId()) === e) return !1;
+  P(e), P(I)
 }
 
 function U(e) {
@@ -201,7 +201,7 @@ function U(e) {
 
 function G(e, t) {
   F(e.id), t && function(e) {
-    I[e.id] = setTimeout(() => {
+    S[e.id] = setTimeout(() => {
       let t = d.default.getChannel(e.id);
       null != t && a.default.dispatch({
         type: "THREAD_UPDATE",
@@ -212,7 +212,7 @@ function G(e, t) {
 }
 
 function F(e) {
-  e in I && (clearTimeout(I[e]), delete I[e])
+  e in S && (clearTimeout(S[e]), delete S[e])
 }
 
 function H(e, t, n, s) {

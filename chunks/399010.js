@@ -25,8 +25,8 @@ var r = n("446674"),
   y = n("778588"),
   T = n("260320"),
   C = n("697218"),
-  S = n("800762"),
-  I = n("10514"),
+  I = n("800762"),
+  S = n("10514"),
   A = n("521012"),
   D = n("224400"),
   N = n("390946"),
@@ -772,7 +772,7 @@ L(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : E.ChannelLoader.loadGu
       suppress: e.suppress,
       selfStream: e.self_stream || !1,
       requestToSpeakTimestamp: null !== (t = e.request_to_speak_timestamp) && void 0 !== t ? t : null,
-      oldChannelId: S.default.getUserVoiceChannelId(e.guild_id, e.user_id)
+      oldChannelId: I.default.getUserVoiceChannelId(e.guild_id, e.user_id)
     }]
   })
 }), w(["LOBBY_VOICE_STATE_UPDATE"], e => {
@@ -925,7 +925,7 @@ L(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : E.ChannelLoader.loadGu
     entitlement: e
   })
 }), w(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-  y.default.hasLayers() && (n("850068").fetchPaymentSources(), d.fetchSubscriptionPlansBySKUs(I.default.getFetchedSKUIDs()))
+  y.default.hasLayers() && (n("850068").fetchPaymentSources(), d.fetchSubscriptionPlansBySKUs(S.default.getFetchedSKUIDs()))
 }), w(["USER_SUBSCRIPTIONS_UPDATE"], () => {
   u.fetchCurrentUser(), y.default.hasLayers() && n("850068").fetchSubscriptions()
 }), w(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], e => {

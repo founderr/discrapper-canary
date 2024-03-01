@@ -69,7 +69,7 @@ let _ = e => {
       className: f.botTagVerified
     })
   })), t = i === u.BotTagTypes.AI ? f.botTagAI : n ? f.botTagInvert : f.botTagRegular;
-  let S = e => (0, s.jsxs)("span", {
+  let I = e => (0, s.jsxs)("span", {
     ...e,
     className: r(_, t, m ? f.rem : f.px, {
       [f.botTagOP]: y,
@@ -85,16 +85,16 @@ let _ = e => {
       return (0, s.jsx)(a.Tooltip, {
         text: l.default.Messages.REMIXING_DOWNLOAD_APP,
         position: "top",
-        children: e => S(e)
+        children: e => I(e)
       });
     case u.BotTagTypes.ORIGINAL_POSTER:
       return (0, s.jsx)(a.Tooltip, {
         text: l.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
         position: "top",
-        children: e => S(e)
+        children: e => I(e)
       });
     default:
-      return S()
+      return I()
   }
 };
 _.Types = u.BotTagTypes;
