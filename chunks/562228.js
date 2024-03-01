@@ -107,19 +107,19 @@ function h(e) {
   var t, n;
   if (null == e) return;
   let a = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {
-    var n, a, l;
-    let s = null === (n = e.poll_media) || void 0 === n ? void 0 : n.emoji,
-      i = {
+    var n, a;
+    let l = null === (n = e.poll_media) || void 0 === n ? void 0 : n.emoji,
+      s = {
         ...e.poll_media,
-        emoji: null != s ? {
-          id: null !== (a = s.id) && void 0 !== a ? a : null,
-          name: null !== (l = s.name) && void 0 !== l ? l : ""
+        emoji: null != l ? {
+          id: l.id,
+          name: null !== (a = l.name) && void 0 !== a ? a : ""
         } : void 0
       };
     return {
       ...e,
       answer_id: t + 1,
-      poll_media: i
+      poll_media: s
     }
   });
   let l = (null == e ? void 0 : e.duration) != null ? (n = e.duration, new Date(Date.now() + n * i.default.Millis.HOUR).toISOString()) : "0";
