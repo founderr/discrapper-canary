@@ -37,25 +37,23 @@ function o() {
 
 function u(e) {
   let {
-    sync_id: t,
-    metadata: n
+    sync_id: t
   } = e;
   if (null == t) return;
-  let l = (0, s.getSpotifyResourceType)(null == n ? void 0 : n.type);
-  if (null == l) return;
-  let i = a.default.isProtocolRegistered() ? s.SpotifyEndpoints.PLAYER_OPEN(l, t) : s.SpotifyEndpoints.WEB_OPEN(l, t);
-  window.open(i)
+  let n = s.SpotifyResourceTypes.TRACK,
+    l = a.default.isProtocolRegistered() ? s.SpotifyEndpoints.PLAYER_OPEN(n, t) : s.SpotifyEndpoints.WEB_OPEN(n, t);
+  window.open(l)
 }
 
 function d(e, t) {
-  r(e, t, t => {
-    var n;
+  r(e, t, e => {
     let {
-      album_id: l
-    } = t, i = (0, s.getSpotifyResourceType)(null === (n = e.metadata) || void 0 === n ? void 0 : n.type) === s.SpotifyResourceTypes.EPISODE;
+      album_id: t
+    } = e;
+    if (null == t) throw Error("no album id in metadata");
     return {
-      resourceType: i ? s.SpotifyResourceTypes.SHOW : s.SpotifyResourceTypes.ALBUM,
-      resourceId: l
+      resourceType: s.SpotifyResourceTypes.ALBUM,
+      resourceId: t
     }
   })
 }

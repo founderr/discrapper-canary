@@ -22,7 +22,7 @@ function o(e) {
   async function d(e, t, n) {
     try {
       let l = await (0, i.getMetadata)(e, t);
-      if (l.button_urls.length <= n) return;
+      if (null == l || !Array.isArray(l.button_urls)) return;
       let r = l.button_urls[n];
       if ("string" != typeof r) return;
       let o = s.default.safeParseWithQuery(r);
