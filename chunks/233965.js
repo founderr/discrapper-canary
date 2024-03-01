@@ -37,7 +37,7 @@ function o(e, t) {
 
 function d(e, t, n) {
   var o;
-  if ("" === e) {
+  if ("" === e || null == t) {
     c(n);
     return
   }
