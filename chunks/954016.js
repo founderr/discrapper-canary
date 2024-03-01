@@ -116,6 +116,9 @@ n.r(t), n.d(t, {
   },
   SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES: function() {
     return ei
+  },
+  PRIVATE_APPS_HELP_ARTICLE: function() {
+    return er
   }
 }), n("222007");
 var i, r, s, a, o, l, u, c, d, f, E, p, h, _, S, m, T, g, I, C, v = n("798609"),
@@ -174,4 +177,5 @@ let et = {
     has_csp_exception: !1,
     displays_advertisements: !1
   },
-  ei = [A.ChannelTypes.GUILD_TEXT, A.ChannelTypes.DM, A.ChannelTypes.GROUP_DM]
+  ei = [A.ChannelTypes.GUILD_TEXT, A.ChannelTypes.DM, A.ChannelTypes.GROUP_DM],
+  er = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"

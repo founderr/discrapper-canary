@@ -50,8 +50,8 @@ var a = n("759843"),
   c = n("599417"),
   s = n("299285"),
   E = n("191145"),
-  I = n("752598"),
-  p = n("653047"),
+  p = n("752598"),
+  I = n("653047"),
   f = n("271938"),
   A = n("42203"),
   _ = n("18494"),
@@ -102,7 +102,7 @@ async function L(t) {
         if (a) return !1;
         let i = (0, h.isActivitiesInTextEnabled)(n, "EmbeddedActivitiesActionCreators#isActivityInTextStart");
         return !!((null == n ? void 0 : n.type) === m.ChannelTypes.GUILD_TEXT && i || null != n && n.isPrivate() && i && null == _.default.getVoiceChannelId()) || !1
-      }(t, u.applicationId) ? await (0, I.executePrimaryEntryPointInteraction)({
+      }(t, u.applicationId) ? await (0, p.executePrimaryEntryPointInteraction)({
         applicationId: u.applicationId,
         channelId: t,
         guildId: r
@@ -124,7 +124,8 @@ async function L(t) {
         retries: 3,
         oldFormErrors: !0
       }), l.default.dispatch({
-        type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS"
+        type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS",
+        applicationId: u.applicationId
       })
   } catch (e) {
     l.default.dispatch({
@@ -180,7 +181,7 @@ async function M() {
         },
         oldFormErrors: !0
       }),
-      e = t.body.map(t => p.default.createFromServer(t));
+      e = t.body.map(t => I.default.createFromServer(t));
     l.default.dispatch({
       type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS",
       items: e
@@ -279,7 +280,7 @@ async function b(t) {
       applications: c
     }), {
       activityConfigs: o,
-      applications: c.map(t => p.default.createFromServer(t))
+      applications: c.map(t => I.default.createFromServer(t))
     }
   } catch (t) {
     return l.default.dispatch({

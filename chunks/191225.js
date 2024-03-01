@@ -24,6 +24,7 @@ var i = n("446674"),
   v = n("49111");
 let E = {
     seenActivities: new Set,
+    everLaunchedActivities: new Set,
     seenNewActivities: {},
     seenUpdatedActivities: {},
     shouldShowNewActivityIndicator: !1,
@@ -120,19 +121,21 @@ function G(e, t) {
 }
 class F extends i.default.PersistedStore {
   initialize(e) {
-    var t;
-    let n = new Map;
+    var t, n;
+    let s = new Map;
     Array.isArray(null == e ? void 0 : e.usersHavePlayedByApp) && (null == e || e.usersHavePlayedByApp.forEach(e => {
       if (Array.isArray(e)) {
-        let [t, s] = e;
-        "string" == typeof t && Array.isArray(s) && n.set(t, new Set(s))
+        let [t, n] = e;
+        "string" == typeof t && Array.isArray(n) && s.set(t, new Set(n))
       }
     }));
-    let s = new Set(null !== (t = null == e ? void 0 : e.seenActivities) && void 0 !== t ? t : []);
+    let i = new Set(null !== (t = null == e ? void 0 : e.seenActivities) && void 0 !== t ? t : []),
+      r = new Set(null !== (n = null == e ? void 0 : e.everLaunchedActivities) && void 0 !== n ? n : []);
     null != e && (E = {
       ...e,
-      seenActivities: s,
-      usersHavePlayedByApp: n
+      seenActivities: i,
+      everLaunchedActivities: r,
+      usersHavePlayedByApp: s
     })
   }
   getState() {
@@ -231,6 +234,9 @@ class F extends i.default.PersistedStore {
           }return n
     }
   }
+  hasActivityEverBeenLaunched(e) {
+    return E.everLaunchedActivities.has(e)
+  }
 }
 F.displayName = "EmbeddedActivitiesStore", F.persistKey = "EmbeddedActivities", F.migrations = [e => ({
   ...e,
@@ -251,6 +257,13 @@ F.displayName = "EmbeddedActivitiesStore", F.persistKey = "EmbeddedActivities", 
     seenActivities: n,
     seenNewActivities: {},
     seenUpdatedActivities: {}
+  }
+}, e => {
+  var t;
+  let n = new Set(null !== (t = e.everLaunchedActivities) && void 0 !== t ? t : []);
+  return {
+    ...e,
+    everLaunchedActivities: n
   }
 }];
 let H = new F(r.default, {
@@ -312,8 +325,20 @@ let H = new F(r.default, {
   EMBEDDED_ACTIVITY_LAUNCH_START: function() {
     I = !0
   },
-  EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: U,
-  EMBEDDED_ACTIVITY_LAUNCH_FAIL: U,
+  EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: function(e) {
+    let {
+      applicationId: t
+    } = e;
+    E.everLaunchedActivities.add(t),
+      function() {
+        I = !1
+      }()
+  },
+  EMBEDDED_ACTIVITY_LAUNCH_FAIL: function() {
+    (function() {
+      I = !1
+    })()
+  },
   EMBEDDED_ACTIVITY_OPEN: function(e) {
     var t, n;
     let {
