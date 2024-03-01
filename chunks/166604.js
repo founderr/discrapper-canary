@@ -12,7 +12,7 @@ n.r(t), n.d(t, {
 });
 var s, i, r = n("718517"),
   a = n("588025");
-(s = i || (i = {})).ACTIVITY_PANEL = "quests_bar_activity_panel", s.QUESTS_MANAGER = "quests_manager", s.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory", s.USE_QUESTS = "use_quests";
+(s = i || (i = {})).ACTIVITY_PANEL = "quests_bar_activity_panel", s.QUESTS_MANAGER = "quests_manager", s.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory", s.USE_QUESTS = "use_quests", s.STREAM_SOURCE_SELECT = "stream_source_select";
 let u = {
     [a.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE]: 1,
     [a.QuestContent.QUEST_BAR]: 2,
