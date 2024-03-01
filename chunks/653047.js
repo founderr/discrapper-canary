@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
   default: function() {
     return i
   }
-}), n("702976"), n("222007");
+}), n("702976");
 var i, r = n("266088"),
   s = n("666038"),
   a = n("315102"),
@@ -49,13 +49,7 @@ i = class e extends s.default {
       maxParticipants: t.max_participants,
       tags: t.tags,
       embeddedActivityConfig: t.embedded_activity_config,
-      roleConnectionsVerificationUrl: t.role_connections_verification_url,
-      integrationTypesConfig: null != t.integration_types_config ? Object.fromEntries(Object.entries(t.integration_types_config).map(e => {
-        let [t, n] = e;
-        return [t, {
-          oauth2InstallParams: n.oauth2_install_params
-        }]
-      })) : null
+      roleConnectionsVerificationUrl: t.role_connections_verification_url
     })
   }
   getIconURL(e) {
@@ -91,11 +85,6 @@ i = class e extends s.default {
     var e, t;
     return null !== (t = null !== (e = this.maxParticipants) && void 0 !== e ? e : c[this.id]) && void 0 !== t ? t : 0
   }
-  supportsIntegrationTypes() {
-    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    let i = this.integrationTypesConfig;
-    return null != i && t.every(e => e in i)
-  }
   get destinationSkuId() {
     return null != this.storeListingSkuId ? this.storeListingSkuId : this.primarySkuId
   }
@@ -108,6 +97,6 @@ i = class e extends s.default {
   }
   constructor(e) {
     var t, n, i, s;
-    super(), this.id = e.id, this.name = e.name, this.icon = e.icon || null, this.splash = e.splash || null, this.overlay = e.overlay || !1, this.overlayWarn = e.overlayWarn || !1, this.overlayCompatibilityHook = e.overlayCompatibilityHook || !1, this.overlayMethods = null !== (t = e.overlayMethods) && void 0 !== t ? t : r.ApplicationOverlayMethodFlags.DEFAULT, this.hook = null === (n = e.hook) || void 0 === n || n, this.aliases = e.aliases || [], this.publishers = e.publishers || [], this.developers = e.developers || [], this.primarySkuId = e.primarySkuId, this.storeListingSkuId = e.storeListingSkuId, this.guildId = e.guildId || null, this.guild = e.guild || null, this.thirdPartySkus = e.thirdPartySkus || [], this.executables = (e.executables || []).map(d), this.hashes = e.hashes || [], this.description = e.description || null, this.eulaId = e.eulaId || null, this.slug = e.slug || null, this.bot = e.bot || null, this.coverImage = e.coverImage || null, this.flags = null !== (i = e.flags) && void 0 !== i ? i : 0, this.tags = null !== (s = e.tags) && void 0 !== s ? s : [], this.maxParticipants = e.maxParticipants, this.embeddedActivityConfig = e.embedded_activity_config, this.type = e.type, this.team = e.team, this.roleConnectionsVerificationUrl = e.roleConnectionsVerificationUrl, this.integrationTypesConfig = e.integrationTypesConfig
+    super(), this.id = e.id, this.name = e.name, this.icon = e.icon || null, this.splash = e.splash || null, this.overlay = e.overlay || !1, this.overlayWarn = e.overlayWarn || !1, this.overlayCompatibilityHook = e.overlayCompatibilityHook || !1, this.overlayMethods = null !== (t = e.overlayMethods) && void 0 !== t ? t : r.ApplicationOverlayMethodFlags.DEFAULT, this.hook = null === (n = e.hook) || void 0 === n || n, this.aliases = e.aliases || [], this.publishers = e.publishers || [], this.developers = e.developers || [], this.primarySkuId = e.primarySkuId, this.storeListingSkuId = e.storeListingSkuId, this.guildId = e.guildId || null, this.guild = e.guild || null, this.thirdPartySkus = e.thirdPartySkus || [], this.executables = (e.executables || []).map(d), this.hashes = e.hashes || [], this.description = e.description || null, this.eulaId = e.eulaId || null, this.slug = e.slug || null, this.bot = e.bot || null, this.coverImage = e.coverImage || null, this.flags = null !== (i = e.flags) && void 0 !== i ? i : 0, this.tags = null !== (s = e.tags) && void 0 !== s ? s : [], this.maxParticipants = e.maxParticipants, this.embeddedActivityConfig = e.embedded_activity_config, this.type = e.type, this.team = e.team, this.roleConnectionsVerificationUrl = e.roleConnectionsVerificationUrl
   }
 }

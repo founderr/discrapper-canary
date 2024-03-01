@@ -44,38 +44,38 @@ async function u(e) {
   let {
     authorize: t,
     clientId: n,
-    scopes: s,
-    responseType: i,
-    redirectUri: a,
-    codeChallenge: d,
-    codeChallengeMethod: u,
-    state: l,
-    permissions: f,
-    guildId: _,
-    channelId: c,
-    integrationType: g
-  } = e, m = await r.default.post({
+    scopes: i,
+    responseType: a,
+    redirectUri: d,
+    codeChallenge: u,
+    codeChallengeMethod: l,
+    state: f,
+    permissions: _,
+    guildId: c,
+    channelId: g,
+    userInstall: m
+  } = e, h = await r.default.post({
     url: o.Endpoints.OAUTH2_AUTHORIZE,
     query: {
       client_id: n,
-      response_type: i,
-      redirect_uri: a,
-      code_challenge: d,
-      code_challenge_method: u,
-      scope: s.join(" "),
-      state: l
+      response_type: a,
+      redirect_uri: d,
+      code_challenge: u,
+      code_challenge_method: l,
+      scope: i.join(" "),
+      state: f
     },
     body: {
-      guild_id: _,
-      webhook_channel_id: null != _ && null != c ? c : void 0,
-      channel_id: null == _ && null != c ? c : void 0,
-      permissions: f,
+      guild_id: c,
+      webhook_channel_id: null != c && null != g ? g : void 0,
+      channel_id: null == c && null != g ? g : void 0,
+      permissions: _,
       authorize: t,
-      integration_type: g
+      integration_type: m ? s.ApplicationIntegrationType.USER_INSTALL : s.ApplicationIntegrationType.GUILD_INSTALL
     },
     oldFormErrors: !0
   });
-  return m.body
+  return h.body
 }
 async function l(e) {
   let {

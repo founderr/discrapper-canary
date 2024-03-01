@@ -31,11 +31,7 @@ function v(e) {
   } = e, a = (0, i.useStateFromStores)([p.default], () => {
     var e;
     return null === (e = p.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
-  }), s = null != a && (0, m.canInstallApplication)({
-    customInstallUrl: a.customInstallUrl,
-    installParams: a.installParams,
-    integrationTypesConfig: a.integrationTypesConfig
-  }), {
+  }), s = null != a && (0, m.canInstallApplication)(a.id, a.customInstallUrl, a.installParams), {
     botUpgradeable: o,
     subscriptionGroupListing: u
   } = (0, h.default)({

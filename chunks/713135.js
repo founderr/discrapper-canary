@@ -15,8 +15,8 @@ var i = n("917351"),
   d = n("455079"),
   a = n("677099");
 let S = new Set,
-  c = new Set,
-  I = {},
+  I = new Set,
+  c = {},
   s = {},
   f = {},
   N = {},
@@ -25,25 +25,25 @@ let S = new Set,
   p = !1;
 
 function R() {
-  S.clear(), c.clear(), I = {}, s = {}, f = {}, N = {}, A = {}, U = !1
+  S.clear(), I.clear(), c = {}, s = {}, f = {}, N = {}, A = {}, U = !1
 }
 
 function D(e) {
   let {
     userId: t
   } = e;
-  c.add(t)
+  I.add(t)
 }
 
 function G(e) {
   let {
     userId: t
   } = e;
-  c.delete(t)
+  I.delete(t)
 }
 
 function C(e) {
-  c.delete(e.userId), f[e.userId] = r(e.mutualFriends).map(e => ({
+  I.delete(e.userId), f[e.userId] = r(e.mutualFriends).map(e => ({
     key: e.id,
     user: new _.default(e),
     status: T.default.getStatus(e.id)
@@ -66,7 +66,7 @@ function P(e) {
 }
 
 function g(e) {
-  var t, n, i, r, o, _, l, T, d, c, f, U, p, R, D, G, C;
+  var t, n, i, r, o, _, l, T, d, I, f, U, p, R, D, G, C;
   if (S.delete(e.user.id), null != e.mutual_guilds) {
     let t = {};
     e.mutual_guilds.forEach(e => {
@@ -89,13 +89,13 @@ function g(e) {
   }
   let O = null !== (d = e.premium_since) && void 0 !== d ? d : null,
     P = e.application;
-  if (I[e.user.id] = {
+  if (c[e.user.id] = {
       userId: e.user.id,
       banner: null === (t = e.user_profile) || void 0 === t ? void 0 : t.banner,
       accentColor: null === (n = e.user_profile) || void 0 === n ? void 0 : n.accent_color,
       themeColors: null === (i = e.user_profile) || void 0 === i ? void 0 : i.theme_colors,
       popoutAnimationParticleType: null === (r = e.user_profile) || void 0 === r ? void 0 : r.popout_animation_particle_type,
-      bio: null !== (c = null === (o = e.user_profile) || void 0 === o ? void 0 : o.bio) && void 0 !== c ? c : "",
+      bio: null !== (I = null === (o = e.user_profile) || void 0 === o ? void 0 : o.bio) && void 0 !== I ? I : "",
       profileEffectId: null === (l = e.user_profile) || void 0 === l ? void 0 : null === (_ = l.profile_effect) || void 0 === _ ? void 0 : _.id,
       pronouns: null !== (f = null === (T = e.user_profile) || void 0 === T ? void 0 : T.pronouns) && void 0 !== f ? f : "",
       connectedAccounts: null !== (U = e.connected_accounts.filter(e => u.default.isSupported(e.type))) && void 0 !== U ? U : [],
@@ -111,7 +111,6 @@ function g(e) {
         primarySkuId: P.primary_sku_id,
         customInstallUrl: P.custom_install_url,
         installParams: P.install_params,
-        integrationTypesConfig: P.integration_types_config,
         flags: P.flags,
         popularApplicationCommandIds: P.popular_application_command_ids
       } : null,
@@ -147,7 +146,7 @@ function L(e) {
   let {
     userId: n
   } = e;
-  I[n] = null !== (t = I[n]) && void 0 !== t ? t : {
+  c[n] = null !== (t = c[n]) && void 0 !== t ? t : {
     connectedAccounts: [],
     applicationRoleConnections: [],
     premiumSince: null,
@@ -168,7 +167,7 @@ function m(e) {
   U = !0
 }
 
-function y(e) {
+function h(e) {
   U = !1, null != e.guild_id ? ! function(e) {
     let {
       userId: t,
@@ -204,9 +203,9 @@ function y(e) {
       popout_animation_particle_type: o,
       theme_colors: _,
       profileEffectId: l
-    } = e, E = I[t];
+    } = e, E = c[t];
     if (null == E) return !1;
-    I[t] = {
+    c[t] = {
       ...E,
       accentColor: n,
       banner: i,
@@ -219,7 +218,7 @@ function y(e) {
   }(e)
 }
 
-function h(e) {
+function y(e) {
   U = !1
 }
 
@@ -231,12 +230,12 @@ function M(e) {
   let {
     user: t
   } = e;
-  if (S.has(t.id) || null == I[t.id]) return !1;
-  I[t.id].lastFetched = 0
+  if (S.has(t.id) || null == c[t.id]) return !1;
+  c[t.id].lastFetched = 0
 }
 
 function b() {
-  S.clear(), I = {}, s = {}
+  S.clear(), c = {}, s = {}
 }
 class B extends d.default {
   initialize() {
@@ -246,13 +245,13 @@ class B extends d.default {
     return S.has(e)
   }
   isFetchingFriends(e) {
-    return c.has(e)
+    return I.has(e)
   }
   get isSubmitting() {
     return U
   }
   getUserProfile(e) {
-    return I[e]
+    return c[e]
   }
   getGuildMemberProfile(e, t) {
     var n;
@@ -276,7 +275,7 @@ class B extends d.default {
       version: B.LATEST_SNAPSHOT_VERSION,
       data: [{
         userId: e,
-        profile: I[e]
+        profile: c[e]
       }]
     }
   }
@@ -287,8 +286,8 @@ class B extends d.default {
       USER_PROFILE_FETCH_FAILURE: L,
       USER_PROFILE_FETCH_SUCCESS: g,
       USER_PROFILE_UPDATE_START: m,
-      USER_PROFILE_UPDATE_SUCCESS: y,
-      USER_PROFILE_UPDATE_FAILURE: h,
+      USER_PROFILE_UPDATE_SUCCESS: h,
+      USER_PROFILE_UPDATE_FAILURE: y,
       USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: F,
       MUTUAL_FRIENDS_FETCH_START: D,
       MUTUAL_FRIENDS_FETCH_SUCCESS: C,
@@ -307,7 +306,7 @@ class B extends d.default {
           userId: t,
           profile: n
         } = e;
-        I[t] = n
+        c[t] = n
       })
     }
   }
