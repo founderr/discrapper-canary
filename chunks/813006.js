@@ -13,6 +13,23 @@ var i, r = n("666038"),
   c = n("958706"),
   d = n("646718");
 i = class extends r.default {
+  merge(e) {
+    let {
+      features: t
+    } = e;
+    if (null != t) {
+      let n = new Set(t);
+      if (n.size === this.features.size) {
+        let t = !1;
+        for (let e of n)
+          if (!this.features.has(e)) {
+            t = !0;
+            break
+          }! t && (e.features = this.features)
+      }
+    }
+    return super.merge.call(this, e)
+  }
   getSafetyAlertsChannelId() {
     var e;
     return null !== (e = this.safetyAlertsChannelId) && void 0 !== e ? e : this.publicUpdatesChannelId
@@ -102,7 +119,7 @@ i = class extends r.default {
   constructor(e) {
     var t, n;
     super();
-    let i = new Set(Array.from(e.features || []));
+    let i = e.features instanceof Set ? e.features : new Set(Array.from(e.features || []));
     this.id = e.id, this.name = e.name || "", this.description = e.description || null, this.ownerId = e.ownerId || null, this.icon = e.icon || null, this.splash = e.splash || null, this.banner = e.banner || null, this.homeHeader = e.homeHeader || null, this.features = i, this.preferredLocale = e.preferredLocale || "en-US", this.roles = e.roles || {}, this.afkChannelId = e.afkChannelId || null, this.afkTimeout = e.afkTimeout, this.systemChannelId = e.systemChannelId || null, this.verificationLevel = e.verificationLevel || u.VerificationLevels.NONE, this.joinedAt = e.joinedAt instanceof Date ? e.joinedAt : new Date(e.joinedAt), this.defaultMessageNotifications = e.defaultMessageNotifications || u.UserNotificationSettings.ALL_MESSAGES, this.mfaLevel = e.mfaLevel || u.MFALevels.NONE, this.application_id = e.application_id || null, this.explicitContentFilter = e.explicitContentFilter || u.GuildExplicitContentFilterTypes.DISABLED, this.vanityURLCode = e.vanityURLCode || void 0, this.premiumTier = e.premiumTier || u.BoostedGuildTiers.NONE, this.premiumSubscriberCount = e.premiumSubscriberCount || 0, this.premiumProgressBarEnabled = e.premiumProgressBarEnabled || !1, this.systemChannelFlags = e.systemChannelFlags, this.discoverySplash = e.discoverySplash || null, this.rulesChannelId = e.rulesChannelId || null, this.safetyAlertsChannelId = e.safetyAlertsChannelId || null, this.publicUpdatesChannelId = e.publicUpdatesChannelId || null, this.maxStageVideoChannelUsers = e.maxStageVideoChannelUsers || -1, this.maxVideoChannelUsers = e.maxVideoChannelUsers || -1, this.maxMembers = e.maxMembers || -1, this.nsfwLevel = null !== (t = e.nsfwLevel) && void 0 !== t ? t : u.GuildNSFWContentLevel.DEFAULT, this.hubType = e.hubType, this.latestOnboardingQuestionId = null !== (n = e.latestOnboardingQuestionId) && void 0 !== n ? n : null
   }
 }
