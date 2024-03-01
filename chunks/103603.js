@@ -1,172 +1,172 @@
 "use strict";
-n.r(e), n.d(e, {
+E.r(_), E.d(_, {
   fit: function() {
-    return o
-  },
-  zoomFit: function() {
-    return c
-  },
-  getRatio: function() {
-    return d
-  },
-  getCoverRatio: function() {
-    return f
-  },
-  makeCssUrlString: function() {
-    return _
-  },
-  getPalette: function() {
-    return E
-  },
-  getPaletteForAvatar: function() {
-    return A
-  },
-  readFileAsBase64: function() {
     return I
   },
-  dataUriFileSize: function() {
+  zoomFit: function() {
+    return s
+  },
+  getRatio: function() {
     return T
   },
+  getCoverRatio: function() {
+    return S
+  },
+  makeCssUrlString: function() {
+    return N
+  },
+  getPalette: function() {
+    return A
+  },
+  getPaletteForAvatar: function() {
+    return R
+  },
+  readFileAsBase64: function() {
+    return u
+  },
+  dataUriFileSize: function() {
+    return L
+  },
   dataUrlToFile: function() {
-    return m
+    return C
   },
   dataUrlToBlob: function() {
-    return g
+    return D
   },
   isPNGAnimated: function() {
-    return R
+    return c
   }
-}), n("424973"), n("101997"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102");
-var i = n("627445"),
-  r = n.n(i),
-  a = n("917351"),
-  s = n.n(a),
-  l = n("48648"),
-  u = n.n(l);
+}), E("424973"), E("101997"), E("311790"), E("477657"), E("811875"), E("90301"), E("652153"), E("28797"), E("817884"), E("597349"), E("667536"), E("690341"), E("70102");
+var t = E("627445"),
+  o = E.n(t),
+  n = E("917351"),
+  r = E.n(n),
+  i = E("48648"),
+  a = E.n(i);
 
-function o(t) {
+function I(e) {
   let {
-    width: e,
-    height: n,
-    maxWidth: i,
-    maxHeight: r,
-    minWidth: a = 0,
-    minHeight: s = 0
-  } = t;
-  if (e !== i || n !== r) {
-    let t = e > i ? i / e : 1;
-    e = Math.max(Math.round(e * t), a), n = Math.max(Math.round(n * t), s);
-    let l = n > r ? r / n : 1;
-    e = Math.max(Math.round(e * l), a), n = Math.max(Math.round(n * l), s)
+    width: _,
+    height: E,
+    maxWidth: t,
+    maxHeight: o,
+    minWidth: n = 0,
+    minHeight: r = 0
+  } = e;
+  if (_ !== t || E !== o) {
+    let e = _ > t ? t / _ : 1;
+    _ = Math.max(Math.round(_ * e), n), E = Math.max(Math.round(E * e), r);
+    let i = E > o ? o / E : 1;
+    _ = Math.max(Math.round(_ * i), n), E = Math.max(Math.round(E * i), r)
   }
   return {
-    width: e,
-    height: n
+    width: _,
+    height: E
   }
 }
 
-function c(t, e) {
-  let n = Math.min(Math.round(.65 * window.innerHeight), 2e3),
-    i = Math.min(Math.round(.75 * window.innerWidth), 2e3);
-  return o({
-    width: t,
-    height: e,
-    maxWidth: i,
-    maxHeight: n
+function s(e, _) {
+  let E = Math.min(Math.round(.65 * window.innerHeight), 2e3),
+    t = Math.min(Math.round(.75 * window.innerWidth), 2e3);
+  return I({
+    width: e,
+    height: _,
+    maxWidth: t,
+    maxHeight: E
   })
 }
 
-function d(t) {
+function T(e) {
   let {
-    width: e,
-    height: n,
-    maxWidth: i,
-    maxHeight: r
-  } = t, a = 1;
-  e > i && (a = i / e), e = Math.round(e * a);
-  let s = 1;
-  return (n = Math.round(n * a)) > r && (s = r / n), Math.min(a * s, 1)
+    width: _,
+    height: E,
+    maxWidth: t,
+    maxHeight: o
+  } = e, n = 1;
+  _ > t && (n = t / _), _ = Math.round(_ * n);
+  let r = 1;
+  return (E = Math.round(E * n)) > o && (r = o / E), Math.min(n * r, 1)
 }
 
-function f(t) {
+function S(e) {
   let {
-    width: e,
-    height: n,
-    maxWidth: i,
-    maxHeight: r
-  } = t;
-  return e === n ? 1 : Math.min(Math.max(i / e, r / n), 1)
+    width: _,
+    height: E,
+    maxWidth: t,
+    maxHeight: o
+  } = e;
+  return _ === E ? 1 : Math.min(Math.max(t / _, o / E), 1)
 }
 
-function _(t) {
-  return null == t || "" === t ? "none" : "url(".concat(t, ")")
+function N(e) {
+  return null == e || "" === e ? "none" : "url(".concat(e, ")")
 }
-let h = [
+let O = [
   [0, 0, 0]
 ];
 
-function E(t, e, n) {
-  let i = document.createElement("canvas"),
-    r = i.getContext("2d");
-  if (null == r) return h;
-  let a = i.width = 0 === t.width ? 128 : t.width,
-    s = i.height = 0 === t.height ? 128 : t.height;
-  r.drawImage(t, 0, 0, a, s);
-  let l = r.getImageData(0, 0, a, s).data,
-    o = function(t, e, n) {
-      let i = [];
-      for (let r = 0, a, s, l, u, o; r < e; r += n) s = t[(a = 4 * r) + 0], l = t[a + 1], u = t[a + 2], (void 0 === (o = t[a + 3]) || o >= 125) && !(s > 250 && l > 250 && u > 250) && i.push([s, l, u]);
-      return i
-    }(l, a * s, n),
-    c = u(o, e);
-  return "boolean" == typeof c ? h : c.palette()
+function A(e, _, E) {
+  let t = document.createElement("canvas"),
+    o = t.getContext("2d");
+  if (null == o) return O;
+  let n = t.width = 0 === e.width ? 128 : e.width,
+    r = t.height = 0 === e.height ? 128 : e.height;
+  o.drawImage(e, 0, 0, n, r);
+  let i = o.getImageData(0, 0, n, r).data,
+    I = function(e, _, E) {
+      let t = [];
+      for (let o = 0, n, r, i, a, I; o < _; o += E) r = e[(n = 4 * o) + 0], i = e[n + 1], a = e[n + 2], (void 0 === (I = e[n + 3]) || I >= 125) && !(r > 250 && i > 250 && a > 250) && t.push([r, i, a]);
+      return t
+    }(i, n * r, E),
+    s = a(I, _);
+  return "boolean" == typeof s ? O : s.palette()
 }
-let A = t => "number" == typeof t ? null : p(t),
-  p = s.memoize(t => new Promise((e, n) => {
-    let i = new Image;
-    i.crossOrigin = "Anonymous", i.onerror = t => {
-      n(t), i.onerror = i.onload = null, i = null
-    }, i.onload = () => {
-      e(E(i, 5, 10)), i.onerror = i.onload = null, i = null
-    }, i.src = t
+let R = e => "number" == typeof e ? null : l(e),
+  l = r.memoize(e => new Promise((_, E) => {
+    let t = new Image;
+    t.crossOrigin = "Anonymous", t.onerror = e => {
+      E(e), t.onerror = t.onload = null, t = null
+    }, t.onload = () => {
+      _(A(t, 5, 10)), t.onerror = t.onload = null, t = null
+    }, t.src = e
   }));
 
-function I(t) {
-  return new Promise((e, n) => {
-    let i = new FileReader;
-    i.readAsDataURL(t), i.onload = () => {
-      r("string" == typeof i.result, "Result must be a string"), e(i.result)
-    }, i.onerror = t => n(t)
+function u(e) {
+  return new Promise((_, E) => {
+    let t = new FileReader;
+    t.readAsDataURL(e), t.onload = () => {
+      o("string" == typeof t.result, "Result must be a string"), _(t.result)
+    }, t.onerror = e => E(e)
   })
 }
 
-function T(t) {
-  let e = t.split(";base64,");
-  return r(2 === e.length, "Input data is not a valid image."), atob(e[1]).length
+function L(e) {
+  let _ = e.split(";base64,");
+  return o(2 === _.length, "Input data is not a valid image."), atob(_[1]).length
 }
-async function m(t, e, n) {
-  let i = g(t),
-    r = await i.arrayBuffer();
-  return new File([r], e, {
-    type: n
+async function C(e, _, E) {
+  let t = D(e),
+    o = await t.arrayBuffer();
+  return new File([o], _, {
+    type: E
   })
 }
 
-function g(t) {
-  let e;
-  e = t.split(",")[0].indexOf("base64") >= 0 ? atob(t.split(",")[1]) : btoa(t.split(",")[1]);
-  let n = t.split(",")[0].split(":")[1].split(";")[0],
-    i = new Uint8Array(e.length);
-  for (var r = 0; r < e.length; r++) i[r] = e.charCodeAt(r);
-  return new Blob([i], {
-    type: n
+function D(e) {
+  let _;
+  _ = e.split(",")[0].indexOf("base64") >= 0 ? atob(e.split(",")[1]) : btoa(e.split(",")[1]);
+  let E = e.split(",")[0].split(":")[1].split(";")[0],
+    t = new Uint8Array(_.length);
+  for (var o = 0; o < _.length; o++) t[o] = _.charCodeAt(o);
+  return new Blob([t], {
+    type: E
   })
 }
-async function R(t) {
-  var e;
-  let n = null === (e = t.type) || void 0 === e ? void 0 : e.split(";")[0];
-  if ("image/png" !== n) throw Error("File is not a PNG");
-  let i = await t.text(),
-    r = i.indexOf("IDAT");
-  return !!(r > 0) && -1 !== i.substring(0, r).indexOf("acTL") || !1
+async function c(e) {
+  var _;
+  let E = null === (_ = e.type) || void 0 === _ ? void 0 : _.split(";")[0];
+  if ("image/png" !== E) throw Error("File is not a PNG");
+  let t = await e.text(),
+    o = t.indexOf("IDAT");
+  return !!(o > 0) && -1 !== t.substring(0, o).indexOf("acTL") || !1
 }

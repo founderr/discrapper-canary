@@ -16,14 +16,14 @@ let s = 0,
   c = null,
   S = null;
 
-function d(t) {
+function E(t) {
   let {
     error: e
   } = t, n = e instanceof a.default ? e : new a.default(e);
   o.default.isConnected() && n.code === a.default.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (s = 1)
 }
 
-function E() {
+function d() {
   s = 0, c = null, S = null
 }
 class f extends r.default.Store {
@@ -39,22 +39,22 @@ class f extends r.default.Store {
 }
 f.displayName = "PurchaseTokenAuthStore";
 var _ = new f(l.default, {
-  SKU_PURCHASE_FAIL: d,
-  PREMIUM_PAYMENT_SUBSCRIBE_FAIL: d,
+  SKU_PURCHASE_FAIL: E,
+  PREMIUM_PAYMENT_SUBSCRIBE_FAIL: E,
   USER_PAYMENT_CLIENT_ADD: function(t) {
     s = 2, c = t.purchaseTokenHash, S = t.expiresAt
   },
-  BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: E,
-  BILLING_SUBSCRIPTION_UPDATE_START: E,
-  PAYMENT_AUTHENTICATION_CLEAR_ERROR: E,
-  PREMIUM_PAYMENT_ERROR_CLEAR: E,
-  PREMIUM_PAYMENT_MODAL_CLOSE: E,
-  PREMIUM_PAYMENT_MODAL_OPEN: E,
-  PREMIUM_PAYMENT_SUBSCRIBE_START: E,
-  PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: E,
-  PREMIUM_PAYMENT_UPDATE_SUCCESS: E,
-  SKU_PURCHASE_MODAL_CLOSE: E,
-  SKU_PURCHASE_MODAL_OPEN: E,
-  SKU_PURCHASE_START: E,
-  SKU_PURCHASE_SUCCESS: E
+  BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: d,
+  BILLING_SUBSCRIPTION_UPDATE_START: d,
+  PAYMENT_AUTHENTICATION_CLEAR_ERROR: d,
+  PREMIUM_PAYMENT_ERROR_CLEAR: d,
+  PREMIUM_PAYMENT_MODAL_CLOSE: d,
+  PREMIUM_PAYMENT_MODAL_OPEN: d,
+  PREMIUM_PAYMENT_SUBSCRIBE_START: d,
+  PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: d,
+  PREMIUM_PAYMENT_UPDATE_SUCCESS: d,
+  SKU_PURCHASE_MODAL_CLOSE: d,
+  SKU_PURCHASE_MODAL_OPEN: d,
+  SKU_PURCHASE_START: d,
+  SKU_PURCHASE_SUCCESS: d
 })

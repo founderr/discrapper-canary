@@ -1,22 +1,22 @@
 "use strict";
-s.r(t), s.d(t, {
+E.r(_), E.d(_, {
   default: function() {
     return i
   }
-}), s("222007");
-var a = s("95410"),
-  n = s("689988");
-let l = "formGuidelinesStorageKey";
-class r extends n.default {
+}), E("222007");
+var t = E("95410"),
+  o = E("689988");
+let n = "formGuidelinesStorageKey";
+class r extends o.default {
   _initialize() {
-    let e = a.default.get(l);
+    let e = t.default.get(n);
     null != e && (this.seenForumGuidelines = new Set(e))
   }
   _terminate() {
-    a.default.set(l, this.seenForumGuidelines)
+    t.default.set(n, this.seenForumGuidelines)
   }
   markAsSeen(e) {
-    this.seenForumGuidelines.add(e), a.default.set(l, this.seenForumGuidelines)
+    this.seenForumGuidelines.add(e), t.default.set(n, this.seenForumGuidelines)
   }
   hasSeen(e) {
     return this.seenForumGuidelines.has(e)

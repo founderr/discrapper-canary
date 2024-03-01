@@ -24,12 +24,12 @@ var s = n("917351"),
   y = n("205817"),
   T = n("41642"),
   C = n("518916"),
-  I = n("571420"),
-  S = n("399010"),
+  S = n("571420"),
+  I = n("399010"),
   A = n("49111"),
   D = n("397336");
 let N = window.DiscordNative;
-C.socket.dispatcher.getDispatchHandler = S.default;
+C.socket.dispatcher.getDispatchHandler = I.default;
 let O = new d.default("ConnectionStore"),
   P = 0,
   b = null,
@@ -168,7 +168,7 @@ var F = new G(a.default, {
     })
   },
   APP_STATE_UPDATE: function(e) {
-    return e.state === A.AppStates.ACTIVE && (I.setIsPaused(!1), f.default.isAuthenticated() && C.socket.resetBackoff("App state is active")), !1
+    return e.state === A.AppStates.ACTIVE && (S.setIsPaused(!1), f.default.isAuthenticated() && C.socket.resetBackoff("App state is active")), !1
   },
   GUILD_MEMBERS_REQUEST: function(e) {
     return C.socket.isSessionEstablished() && ("userIds" in e ? i(e.userIds).chunk(100).forEach(t => {

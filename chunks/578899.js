@@ -1,11 +1,11 @@
 "use strict";
-a.r(t), a.d(t, {
+t.r(n), t.d(n, {
   SimpleDeadchatPromptExperiment: function() {
     return i
   }
 });
-var n = a("862205");
-let i = (0, n.createExperiment)({
+var l = t("862205");
+let i = (0, l.createExperiment)({
   kind: "guild",
   id: "2023-08_deadchat_simple_prompt_guild",
   label: "Simple deadchat prompt",

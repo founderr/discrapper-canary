@@ -1,10 +1,10 @@
 "use strict";
 var r = n("859514"),
-  i = n("868822"),
-  o = n("727204"),
-  a = n("379792"),
-  s = n("952643"),
-  c = n("585034");
+  o = n("868822"),
+  u = n("727204"),
+  c = n("379792"),
+  a = n("952643"),
+  i = n("585034");
 r({
   target: "Promise",
   stat: !0,
@@ -12,30 +12,30 @@ r({
 }, {
   allSettled: function(e) {
     var t = this,
-      n = a.f(t),
+      n = c.f(t),
       r = n.resolve,
-      u = n.reject,
-      d = s(function() {
-        var n = o(t.resolve),
-          a = [],
-          s = 0,
-          u = 1;
-        c(e, function(e) {
-          var o = s++,
-            c = !1;
-          u++, i(n, t, e).then(function(e) {
-            !c && (c = !0, a[o] = {
+      s = n.reject,
+      l = a(function() {
+        var n = u(t.resolve),
+          c = [],
+          a = 0,
+          s = 1;
+        i(e, function(e) {
+          var u = a++,
+            i = !1;
+          s++, o(n, t, e).then(function(e) {
+            !i && (i = !0, c[u] = {
               status: "fulfilled",
               value: e
-            }, --u || r(a))
+            }, --s || r(c))
           }, function(e) {
-            !c && (c = !0, a[o] = {
+            !i && (i = !0, c[u] = {
               status: "rejected",
               reason: e
-            }, --u || r(a))
+            }, --s || r(c))
           })
-        }), --u || r(a)
+        }), --s || r(c)
       });
-    return d.error && u(d.value), n.promise
+    return l.error && s(l.value), n.promise
   }
 })

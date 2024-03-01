@@ -24,10 +24,10 @@ var l = n("37983"),
     let {
       disabled: n,
       type: a
-    } = e, [S, T] = i.useState(!1), I = (0, o.useStateFromStores)([c.default], () => {
+    } = e, [S, T] = i.useState(!1), v = (0, o.useStateFromStores)([c.default], () => {
       var e, t;
       return S && Object.values(null !== (t = null === (e = c.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
-    }), [v, _, N] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), A = i.useRef(0), x = i.useCallback(() => {
+    }), [I, _, N] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), A = i.useRef(0), x = i.useCallback(() => {
       T(!0), clearTimeout(A.current), A.current = setTimeout(() => {
         T(!1)
       }, 1500)
@@ -42,9 +42,9 @@ var l = n("37983"),
       (0, d.toggleExpressionPicker)(E.ExpressionPickerViewType.GIF, a)
     }, [a]);
     if (n) return null;
-    let O = v === E.ExpressionPickerViewType.GIF && _ === a;
+    let O = I === E.ExpressionPickerViewType.GIF && _ === a;
     return (0, l.jsx)(u.Tooltip, {
-      text: I ? g.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
+      text: v ? g.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
       forceOpen: !0,
       children: e => (0, l.jsx)("div", {
         ref: t,

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return I
+    return S
   }
 }), n("222007");
 var s, i, r = n("917351"),
@@ -151,7 +151,7 @@ C.displayName = "DraftStore", C.persistKey = "DraftStore", C.migrations = [e => 
   for (let t in e) s[t] = e[t];
   return n
 }];
-var I = new C(d.default, {
+var S = new C(d.default, {
   CONNECTION_OPEN: function() {
     let e = f.default.getId();
     return !(e in h) && (h[e] = {}), y(), !1

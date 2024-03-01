@@ -36,8 +36,8 @@ function m(e) {
     isActive: C = !1,
     tooltipPosition: S = "top",
     shouldShowTooltip: T = !0,
-    forceTooltipOpen: I = !1,
-    buttonRef: v,
+    forceTooltipOpen: v = !1,
+    buttonRef: I,
     grow: _,
     "aria-label": N
   } = e;
@@ -47,14 +47,14 @@ function m(e) {
       text: t,
       "aria-label": N,
       shouldShow: T,
-      forceOpen: I,
+      forceOpen: v,
       children: e => {
         let {
           onClick: t,
           onContextMenu: u,
           onMouseEnter: S,
           onMouseLeave: T,
-          ...I
+          ...v
         } = e;
         return (0, l.jsx)(s.Button, {
           look: s.Button.Looks.BLANK,
@@ -86,10 +86,10 @@ function m(e) {
             [f.active]: C
           }, c),
           wrapperClassName: m,
-          buttonRef: v,
+          buttonRef: I,
           grow: _,
           "aria-label": N,
-          ...I,
+          ...v,
           children: (0, l.jsx)(h, {
             className: a(f.controlIcon, p, {
               [f.themeable]: E,
@@ -126,8 +126,8 @@ function h(e) {
     onContextMenu: E,
     iconClassName: a(h, f.centerIcon),
     className: a(null == E ? i : f.staticButton, f.centerButton, p[S])
-  }), I = null;
-  return null != E && (I = (0, l.jsxs)("div", {
+  }), v = null;
+  return null != E && (v = (0, l.jsxs)("div", {
     className: a(i, f.contextMenuContainer),
     children: [(0, l.jsx)(o.default, {
       mask: o.MaskIDs.CHANNEL_CALL_CONTROL_BUTTON,
@@ -150,7 +150,7 @@ function h(e) {
       })
     })]
   })), (0, l.jsxs)(l.Fragment, {
-    children: [I, (0, l.jsx)("div", {
+    children: [v, (0, l.jsx)("div", {
       className: a({
         [f.unmasked]: null != E
       }, null != E ? i : null),

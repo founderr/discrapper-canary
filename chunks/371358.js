@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return C
   },
   fetchMonetizationRestrictions: function() {
-    return I
+    return S
   }
 }), n("222007");
 var s = n("398183"),
@@ -169,7 +169,7 @@ async function C(e) {
     includeArchivedListings: !0
   }), a
 }
-async function I(e) {
+async function S(e) {
   let {
     signal: t
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = !1;

@@ -22,8 +22,8 @@ var l = n("37983"),
   C = n("413709"),
   S = n("873218"),
   T = n("250832"),
-  I = n("22248"),
-  v = n("28236"),
+  v = n("22248"),
+  I = n("28236"),
   _ = n("306160"),
   N = n("794818"),
   A = n("844659"),
@@ -146,7 +146,7 @@ let k = {
     }, n.key)
   },
   soundboard: {
-    react: e => (0, l.jsx)(v.default, {
+    react: e => (0, l.jsx)(I.default, {
       channelId: e.channelId,
       soundId: e.soundId,
       jumbo: e.jumboable
@@ -261,7 +261,7 @@ let k = {
     }, n.key)
   },
   message: {
-    react: (e, t, n) => (0, l.jsx)(I.default, {}, n.key)
+    react: (e, t, n) => (0, l.jsx)(v.default, {}, n.key)
   }
 };
 

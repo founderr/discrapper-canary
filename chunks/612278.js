@@ -1,27 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   useFirstForumPostMessage: function() {
-    return x
+    return v
   },
   useMostRecentForumMessage: function() {
-    return A
+    return I
   },
   preloadForumThreads: function() {
-    return T
+    return C
   }
 }), n("222007");
-var l = n("917351"),
-  a = n.n(l),
-  i = n("446674"),
-  s = n("872717"),
+var a = n("917351"),
+  i = n.n(a),
+  l = n("446674"),
+  d = n("872717"),
   r = n("913144"),
   u = n("42203"),
-  o = n("299039"),
-  d = n("670902"),
+  s = n("299039"),
+  o = n("670902"),
   c = n("349778"),
   f = n("430475"),
-  m = n("324261"),
-  g = n("49111");
+  g = n("324261"),
+  p = n("49111");
 class _ {
   get(e) {
     return !this._set.hasOwnProperty(e) && (this._set[e] = this._defaultValueFunc()), this._set[e]
@@ -30,16 +30,16 @@ class _ {
     delete this._set[e]
   }
   hasNext() {
-    return !a.isEmpty(this._set)
+    return !i.isEmpty(this._set)
   }
   next() {
-    return o.default.keys(this._set)[0]
+    return s.default.keys(this._set)[0]
   }
   constructor(e) {
     this._set = {}, this._defaultValueFunc = e
   }
 }
-let h = new class e {
+let m = new class e {
     request(e, t) {
       this.requested.get(e).add(t)
     }
@@ -48,7 +48,7 @@ let h = new class e {
     }
     finishRequesting(e, t) {
       let n = this.requested.get(e);
-      t.forEach(e => n.delete(e)), h.compact(e)
+      t.forEach(e => n.delete(e)), m.compact(e)
     }
     getRequested(e) {
       return this.requested.get(e)
@@ -69,101 +69,101 @@ let h = new class e {
       this.requested = new _(() => new Set)
     }
   },
-  p = null;
+  E = null;
 
-function E(e, t) {
+function h(e, t) {
   let n = (0, c.isForumActivityExperimentEnabled)(e);
   if (n) {
     let {
       loaded: e,
       message: n
-    } = m.default.getMessageState(t);
+    } = g.default.getMessageState(t);
     return !e && null == n
   }
   return !1
 }
 
-function M(e, t) {
+function S(e, t) {
   return !e && null == t
 }
 
-function x(e) {
+function v(e) {
   var t, n;
   let {
-    loaded: l,
-    firstMessage: a
-  } = (0, i.useStateFromStoresObject)([f.default], () => f.default.getMessage(e.id)), s = (0, i.useStateFromStores)([u.default], () => u.default.getChannel(e.parent_id));
-  if (null != s && (t = l, n = a, !t && null == n)) v(s, e.id);
+    loaded: a,
+    firstMessage: i
+  } = (0, l.useStateFromStoresObject)([f.default], () => f.default.getMessage(e.id)), d = (0, l.useStateFromStores)([u.default], () => u.default.getChannel(e.parent_id));
+  if (null != d && (t = a, n = i, !t && null == n)) A(d, e.id);
   return {
-    loaded: l,
-    firstMessage: a
+    loaded: a,
+    firstMessage: i
   }
+}
+
+function I(e, t) {
+  let {
+    loaded: n,
+    message: a
+  } = (0, l.useStateFromStoresObject)([g.default], () => g.default.getMessageState(t.id));
+  return null != e && h(t.guild_id, t.id) && A(e, t.id), {
+    loaded: n,
+    mostRecentMessage: a
+  }
+}
+
+function y(e, t) {
+  let n = !1;
+  t.forEach(t => {
+    var a, i;
+    let {
+      loaded: l,
+      firstMessage: d
+    } = f.default.getMessage(t);
+    if (a = l, i = d, !a && null == i || h(e.guild_id, t)) m.request(e.id, t), n = !0
+  }), n && null == E && (E = setTimeout(T, 0))
+}
+
+function C(e) {
+  y(e, (0, o.computeThreadIdsSnapshot)(e.id).slice(0, 10))
 }
 
 function A(e, t) {
-  let {
-    loaded: n,
-    message: l
-  } = (0, i.useStateFromStoresObject)([m.default], () => m.default.getMessageState(t.id));
-  return null != e && E(t.guild_id, t.id) && v(e, t.id), {
-    loaded: n,
-    mostRecentMessage: l
-  }
+  if (m.hasRequested(e.id, t)) return;
+  let n = (0, o.computeThreadIdsSnapshot)(e.id),
+    a = n.findIndex(e => e === t),
+    i = n.slice(a, a + 5).filter(t => !m.hasRequested(e.id, t));
+  y(e, i)
 }
-
-function S(e, t) {
-  let n = !1;
-  t.forEach(t => {
-    var l, a;
-    let {
-      loaded: i,
-      firstMessage: s
-    } = f.default.getMessage(t);
-    if (l = i, a = s, !l && null == a || E(e.guild_id, t)) h.request(e.id, t), n = !0
-  }), n && null == p && (p = setTimeout(C, 0))
-}
-
-function T(e) {
-  S(e, (0, d.computeThreadIdsSnapshot)(e.id).slice(0, 10))
-}
-
-function v(e, t) {
-  if (h.hasRequested(e.id, t)) return;
-  let n = (0, d.computeThreadIdsSnapshot)(e.id),
-    l = n.findIndex(e => e === t),
-    a = n.slice(l, l + 5).filter(t => !h.hasRequested(e.id, t));
-  S(e, a)
-}
-async function C() {
+async function T() {
   try {
-    for (; h.hasNext();) await I(h.next())
+    for (; m.hasNext();) await D(m.next())
   } finally {
-    p = null
+    E = null
   }
 }
-async function I(e) {
-  let t = h.getNextBatch(e, 10);
+async function D(e) {
+  let t = m.getNextBatch(e, 10);
   try {
     var n;
     if (0 === t.length) return;
-    let l = null === (n = u.default.getChannel(e)) || void 0 === n ? void 0 : n.guild_id;
-    if (null == l) return;
+    let a = null === (n = u.default.getChannel(e)) || void 0 === n ? void 0 : n.guild_id;
+    if (null == a) return;
     let {
       body: {
-        threads: a
+        threads: i
       }
-    } = await s.default.post({
-      url: g.Endpoints.FORUM_POSTS(e),
+    } = await d.default.post({
+      url: p.Endpoints.FORUM_POSTS(e),
       body: {
         thread_ids: t
       }
     });
     r.default.dispatch({
       type: "LOAD_FORUM_POSTS",
-      guildId: l,
-      threads: a
+      guildId: a,
+      threads: i
     })
   } catch (e) {} finally {
-    h.finishRequesting(e, t)
+    m.finishRequesting(e, t)
   }
 }

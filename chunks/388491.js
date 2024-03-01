@@ -1,123 +1,123 @@
 "use strict";
-l.r(t), l.d(t, {
+r.r(t), r.d(t, {
   useProfileThemeValues: function() {
-    return h
-  },
-  getProfileTheme: function() {
     return E
   },
-  getValueInColorGradientByPercentage: function() {
-    return R
-  },
-  useAvatarBorderColor: function() {
-    return _
-  },
-  calculateButtonColor: function() {
-    return O
-  },
-  useMessageInputBorderColor: function() {
+  getProfileTheme: function() {
     return T
   },
+  getValueInColorGradientByPercentage: function() {
+    return A
+  },
+  useAvatarBorderColor: function() {
+    return m
+  },
+  calculateButtonColor: function() {
+    return p
+  },
+  useMessageInputBorderColor: function() {
+    return v
+  },
   useDividerColor: function() {
-    return C
+    return I
   }
-}), l("222007");
-var r = l("884691"),
-  n = l("917351"),
-  o = l("509043"),
-  u = l("65597"),
-  a = l("669491"),
-  i = l("819855"),
-  s = l("206230"),
-  c = l("449918"),
-  f = l("172182"),
-  d = l("49111");
+}), r("222007");
+var n = r("884691"),
+  u = r("917351"),
+  o = r("509043"),
+  l = r("65597"),
+  i = r("669491"),
+  a = r("819855"),
+  s = r("206230"),
+  c = r("449918"),
+  f = r("172182"),
+  d = r("49111");
 
-function h(e) {
-  let t = (0, u.default)([s.default], () => s.default.saturation);
-  return (0, r.useMemo)(() => null == e ? null : {
-    overlaySyncedWithUserTheme: a.default.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({
+function E(e) {
+  let t = (0, l.default)([s.default], () => s.default.saturation);
+  return (0, n.useMemo)(() => null == e ? null : {
+    overlaySyncedWithUserTheme: i.default.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    overlay: a.default.colors.PROFILE_GRADIENT_OVERLAY.resolve({
+    overlay: i.default.colors.PROFILE_GRADIENT_OVERLAY.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    sectionBox: a.default.colors.PROFILE_GRADIENT_SECTION_BOX.resolve({
+    sectionBox: i.default.colors.PROFILE_GRADIENT_SECTION_BOX.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    messageInputBorder: a.default.colors.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER.resolve({
+    messageInputBorder: i.default.colors.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    dividerOpacity: e === a.default.themes.DARK ? .24 : .12,
-    noteBackgroundColor: a.default.colors.PROFILE_GRADIENT_NOTE_BACKGROUND.resolve({
+    dividerOpacity: e === i.default.themes.DARK ? .24 : .12,
+    noteBackgroundColor: i.default.colors.PROFILE_GRADIENT_NOTE_BACKGROUND.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    profileBodyBackgroundHover: a.default.colors.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER.resolve({
+    profileBodyBackgroundHover: i.default.colors.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    rolePillBackgroundColor: a.default.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve({
+    rolePillBackgroundColor: i.default.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    rolePillBorderColor: a.default.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER.resolve({
+    rolePillBorderColor: i.default.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    icon: a.default.colors.INTERACTIVE_NORMAL.resolve({
+    icon: i.default.colors.INTERACTIVE_NORMAL.resolve({
       theme: e,
       saturation: t
     }).hsl()
   }, [e, t])
 }
 
-function E(e) {
+function T(e) {
   if (null == e) return null;
   let t = (0, o.getDarkness)(e);
   return t > .5 ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT
 }
 
-function R(e, t, l) {
-  let r = l / 100,
-    n = 1 - r;
-  return [Math.round(e[0] * n + t[0] * r), Math.round(e[1] * n + t[1] * r), Math.round(e[2] * n + t[2] * r)]
+function A(e, t, r) {
+  let n = r / 100,
+    u = 1 - n;
+  return [Math.round(e[0] * u + t[0] * n), Math.round(e[1] * u + t[1] * n), Math.round(e[2] * u + t[2] * n)]
 }
 
-function I(e, t) {
-  let l = (0, o.int2rgbArray)(e);
+function R(e, t) {
+  let r = (0, o.int2rgbArray)(e);
   if (null == t) return 0;
-  let r = f.default.parseString(t);
-  if (null == r) return 0;
-  let n = [r.red, r.green, r.blue],
-    u = [l[0], l[1], l[2]],
-    a = r.alpha,
-    [i, s, c] = n.map((e, t) => Math.floor(a * e + (1 - a) * u[t]));
-  return (0, o.rgb2int)("rgba(".concat(i, ", ").concat(s, ", ").concat(c, ")"))
+  let n = f.default.parseString(t);
+  if (null == n) return 0;
+  let u = [n.red, n.green, n.blue],
+    l = [r[0], r[1], r[2]],
+    i = n.alpha,
+    [a, s, c] = u.map((e, t) => Math.floor(i * e + (1 - i) * l[t]));
+  return (0, o.rgb2int)("rgba(".concat(a, ", ").concat(s, ", ").concat(c, ")"))
 }
 
-function _(e, t, l) {
-  let r = h(e);
-  return null == r || null == t ? null : I(t, l ? r.overlaySyncedWithUserTheme : r.overlay)
+function m(e, t, r) {
+  let n = E(e);
+  return null == n || null == t ? null : R(t, r ? n.overlaySyncedWithUserTheme : n.overlay)
 }
-let O = (0, n.memoize)(e => {
-  let t = (0, i.getContrastingColor)(e, {
+let p = (0, u.memoize)(e => {
+  let t = (0, a.getContrastingColor)(e, {
     base: "#ffffff",
-    contrastRatio: i.WCAGContrastRatios.HighContrastText
+    contrastRatio: a.WCAGContrastRatios.HighContrastText
   });
   return (0, o.hex2int)(t)
 }, e => e);
 
-function T(e, t) {
-  let l = h(e);
-  return null != l && null != t ? I(t, null == l ? void 0 : l.messageInputBorder) : null
+function v(e, t) {
+  let r = E(e);
+  return null != r && null != t ? R(t, null == r ? void 0 : r.messageInputBorder) : null
 }
 
-function C(e, t) {
-  let l = (0, c.useColorValue)(d.Color.WHITE_500).hex;
-  return (0, i.isThemeDark)(e) ? (0, o.hex2int)(l) : null != t ? O(t) : null
+function I(e, t) {
+  let r = (0, c.useColorValue)(d.Color.WHITE_500).hex;
+  return (0, a.isThemeDark)(e) ? (0, o.hex2int)(r) : null != t ? p(t) : null
 }

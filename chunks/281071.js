@@ -1,17 +1,17 @@
 "use strict";
 
-function r(e) {
-  let t = document.body;
-  if (null == t) throw Error("[Utils] ClipboardUtils.copy(): assert failed: document.body != null");
-  let n = document.createRange(),
-    r = window.getSelection(),
-    i = document.createElement("textarea");
-  i.value = e, i.contentEditable = "true", i.style.visibility = "none", t.appendChild(i), n.selectNodeContents(i), null == r || r.removeAllRanges(), null == r || r.addRange(n), i.focus(), i.setSelectionRange(0, e.length);
-  let s = document.execCommand("copy");
-  return t.removeChild(i), s
+function t(e) {
+  let _ = document.body;
+  if (null == _) throw Error("[Utils] ClipboardUtils.copy(): assert failed: document.body != null");
+  let E = document.createRange(),
+    t = window.getSelection(),
+    o = document.createElement("textarea");
+  o.value = e, o.contentEditable = "true", o.style.visibility = "none", _.appendChild(o), E.selectNodeContents(o), null == t || t.removeAllRanges(), null == t || t.addRange(E), o.focus(), o.setSelectionRange(0, e.length);
+  let n = document.execCommand("copy");
+  return _.removeChild(o), n
 }
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   copy: function() {
-    return r
+    return t
   }
-}), n("70102")
+}), E("70102")

@@ -1,7 +1,7 @@
 "use strict";
-var s, o;
+var i, r;
 n.r(t), n.d(t, {
   CollectiblesItemType: function() {
-    return s
+    return i
   }
-}), (o = s || (s = {}))[o.NONE = 100] = "NONE", o[o.AVATAR_DECORATION = 0] = "AVATAR_DECORATION", o[o.PROFILE_EFFECT = 1] = "PROFILE_EFFECT"
+}), (r = i || (i = {}))[r.NONE = 100] = "NONE", r[r.AVATAR_DECORATION = 0] = "AVATAR_DECORATION", r[r.PROFILE_EFFECT = 1] = "PROFILE_EFFECT"

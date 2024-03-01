@@ -32,8 +32,8 @@ var i = n("271841"),
   C = n("957255"),
   S = n("501536"),
   T = n("655518"),
-  I = n("200294"),
-  v = n("851745"),
+  v = n("200294"),
+  I = n("851745"),
   _ = n("406291"),
   N = n("317041"),
   A = n("782340"),
@@ -62,16 +62,16 @@ function R() {
 function M(e) {
   return d.isInIndexExperiment({
     location: e
-  }) ? v.MAX_COMMAND_AUTOCOMPLETE_RESULTS : v.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY
+  }) ? I.MAX_COMMAND_AUTOCOMPLETE_RESULTS : I.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY
 }
 let L = {
   sentinel: _.COMMAND_SENTINEL,
   stores: [m.default, f.default, u.default, C.default],
-  matches: (e, t, n, l, i) => i.commands !== v.CommandMode.DISABLED && null == m.default.getActiveCommand(e.id) && (l || i.commands !== v.CommandMode.OLD_BUILT_INS),
+  matches: (e, t, n, l, i) => i.commands !== I.CommandMode.DISABLED && null == m.default.getActiveCommand(e.id) && (l || i.commands !== I.CommandMode.OLD_BUILT_INS),
   queryResults(e, t, n, l, i) {
-    if (0 === n.length && l.commands !== v.CommandMode.OLD_BUILT_INS) return y;
+    if (0 === n.length && l.commands !== I.CommandMode.OLD_BUILT_INS) return y;
     let a = M("CommandAutocompletes");
-    if (l.commands === v.CommandMode.OLD_BUILT_INS) {
+    if (l.commands === I.CommandMode.OLD_BUILT_INS) {
       let l = (0, o.getBuiltInCommands)(s.ApplicationCommandType.CHAT, !1, !1),
         i = RegExp("^".concat(T.default.escape(n)), "i"),
         r = (0, h.getMatchingGroupCommands)(l, i, {
@@ -97,7 +97,7 @@ let L = {
         text: r.text
       }, {
         limit: a,
-        placeholderCount: v.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
+        placeholderCount: I.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
         scoreMethod: c.ScoreMethod.COMMAND_OR_APPLICATION,
         allowFetch: i
       });
@@ -129,7 +129,7 @@ let L = {
       onHover: o,
       onClick: u
     } = e, c = (0, g.getCommandQuery)(a, s);
-    if (r.commands !== v.CommandMode.OLD_BUILT_INS && !d.isInIndexExperiment({
+    if (r.commands !== I.CommandMode.OLD_BUILT_INS && !d.isInIndexExperiment({
         location: "CommandAutocompletes"
       })) return (0, l.jsx)(E.default, {
       channel: a,
@@ -138,8 +138,8 @@ let L = {
       onHover: o,
       onClick: u
     });
-    let f = r.commands === v.CommandMode.OLD_BUILT_INS;
-    return (0, I.renderAutocompleteGroup)({
+    let f = r.commands === I.CommandMode.OLD_BUILT_INS;
+    return (0, v.renderAutocompleteGroup)({
       query: c.text,
       selectedIndex: n,
       autocompletes: t,
@@ -192,7 +192,7 @@ let L = {
       section: d
     } = t[n];
     if (u.inputType === p.ApplicationCommandInputType.PLACEHOLDER) return null;
-    if (i.commands === v.CommandMode.OLD_BUILT_INS) i.insertText(function(e) {
+    if (i.commands === I.CommandMode.OLD_BUILT_INS) i.insertText(function(e) {
       return "".concat(_.COMMAND_SENTINEL).concat(e.name)
     }(u));
     else {
@@ -206,7 +206,7 @@ let L = {
       })
     }
     return {
-      type: v.AutocompleteSelectionTypes.COMMAND
+      type: I.AutocompleteSelectionTypes.COMMAND
     }
   }
 };

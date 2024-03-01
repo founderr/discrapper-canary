@@ -1,35 +1,35 @@
 "use strict";
 var r = n("503486"),
-  i = n("718530"),
-  o = n("125359"),
-  a = n("210506"),
-  s = n("602178"),
-  c = n("174669"),
-  u = n("459149"),
-  d = n("719756"),
-  l = n("140925"),
+  o = n("718530"),
+  u = n("125359"),
+  c = n("210506"),
+  a = n("602178"),
+  i = n("174669"),
+  s = n("459149"),
+  l = n("719756"),
+  f = n("140925"),
   p = n("693523"),
-  _ = i && i.prototype,
-  E = c("species"),
-  h = !1,
-  m = o(r.PromiseRejectionEvent),
-  f = a("Promise", function() {
-    var e = s(i),
-      t = e !== String(i);
-    if (!t && 66 === p || l && !(_.catch && _.finally)) return !0;
+  d = o && o.prototype,
+  m = i("species"),
+  y = !1,
+  h = u(r.PromiseRejectionEvent),
+  v = c("Promise", function() {
+    var e = a(o),
+      t = e !== String(o);
+    if (!t && 66 === p || f && !(d.catch && d.finally)) return !0;
     if (!p || p < 51 || !/native code/.test(e)) {
-      var n = new i(function(e) {
+      var n = new o(function(e) {
           e(1)
         }),
         r = function(e) {
           e(function() {}, function() {})
         };
-      if ((n.constructor = {})[E] = r, !(h = n.then(function() {}) instanceof r)) return !0
+      if ((n.constructor = {})[m] = r, !(y = n.then(function() {}) instanceof r)) return !0
     }
-    return !t && (u || d) && !m
+    return !t && (s || l) && !h
   });
 e.exports = {
-  CONSTRUCTOR: f,
-  REJECTION_EVENT: m,
-  SUBCLASSING: h
+  CONSTRUCTOR: v,
+  REJECTION_EVENT: h,
+  SUBCLASSING: y
 }

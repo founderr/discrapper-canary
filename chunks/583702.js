@@ -26,8 +26,8 @@ var s, i = n("917351"),
   y = n("278163"),
   T = n("599110"),
   C = n("104478"),
-  I = n("374014"),
-  S = n("933034"),
+  S = n("374014"),
+  I = n("933034"),
   A = n("196383"),
   D = n("49111"),
   N = n("353927");
@@ -147,13 +147,13 @@ s = class extends d.default {
               windows: l,
               activity: f,
               ...E,
-              ...(0, S.default)(null == h ? void 0 : h.desktopSource)
+              ...(0, I.default)(null == h ? void 0 : h.desktopSource)
             })
           })
         })
       }
     }), this.on(u.RTCConnectionEvent.Video, (t, n, s, i, r) => {
-      let a = (0, I.decodeStreamKey)(this._streamKey);
+      let a = (0, S.decodeStreamKey)(this._streamKey);
       a.guildId === t && a.channelId === n && a.ownerId === s && (null != this.getMediaSessionId() && !e && (this._trackVideoStartStats(), e = !0), this._updateVideoStreamId(i, r))
     }), this.on(u.RTCConnectionEvent.VideoSourceQualityChanged, (e, t, n, s, i, r) => {
       o.default.wait(() => o.default.dispatch({
@@ -248,7 +248,7 @@ s = class extends d.default {
   }
   _getExtraConnectionOptions() {
     return {
-      streamUserId: (0, I.decodeStreamKey)(this._streamKey).ownerId
+      streamUserId: (0, S.decodeStreamKey)(this._streamKey).ownerId
     }
   }
   constructor({
@@ -260,7 +260,7 @@ s = class extends d.default {
     isStreamer: a,
     parentMediaSessionId: d
   }) {
-    let u = (0, I.decodeStreamKey)(t),
+    let u = (0, S.decodeStreamKey)(t),
       {
         guildId: l,
         channelId: f
@@ -278,7 +278,7 @@ s = class extends d.default {
         guildId: n,
         channelId: s,
         ownerId: i
-      } = (0, I.decodeStreamKey)(this._streamKey);
+      } = (0, S.decodeStreamKey)(this._streamKey);
       o.default.wait(() => o.default.dispatch({
         type: "RTC_CONNECTION_VIDEO",
         guildId: n,

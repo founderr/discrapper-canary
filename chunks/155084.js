@@ -1,58 +1,58 @@
 "use strict";
-n.r(e), n.d(e, {
+E.r(_), E.d(_, {
   default: function() {
-    return o
+    return I
   }
-}), n("222007"), n("424973");
-var i = n("615361"),
-  r = n("872717"),
-  a = n("773336"),
-  s = n("827032"),
-  l = n("49111");
-let u = new Set(["darwin", "linux", "win32", "ios", "android"]);
-var o = new class t {
-  increment(t) {
-    let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+}), E("222007"), E("424973");
+var t = E("615361"),
+  o = E("872717"),
+  n = E("773336"),
+  r = E("827032"),
+  i = E("49111");
+let a = new Set(["darwin", "linux", "win32", "ios", "android"]);
+var I = new class e {
+  increment(e) {
+    let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       {
-        name: n,
-        tags: r
-      } = t,
-      l = {
-        name: n,
-        tags: (0, s.getGlobalTagsArray)()
+        name: E,
+        tags: o
+      } = e,
+      i = {
+        name: E,
+        tags: (0, r.getGlobalTagsArray)()
       };
-    null != r && r.forEach(t => {
-      l.tags.push(t)
+    null != o && o.forEach(e => {
+      i.tags.push(e)
     });
-    let o = function() {
-      if ((0, a.isWeb)()) return "web";
+    let I = function() {
+      if ((0, n.isWeb)()) return "web";
       {
-        let t = (0, a.getPlatformName)();
-        return u.has(t) ? t : null
+        let e = (0, n.getPlatformName)();
+        return a.has(e) ? e : null
       }
     }();
-    null != o && l.tags.push("platform:".concat(o));
-    let c = function() {
-      let t = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
-      return i.ReleaseChannelsSets.ALL.has(t) ? t : null
+    null != I && i.tags.push("platform:".concat(I));
+    let s = function() {
+      let e = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
+      return t.ReleaseChannelsSets.ALL.has(e) ? e : null
     }();
-    null != c && l.tags.push("release_channel:".concat(c)), this._metrics.push(l), (e || this._metrics.length >= 100) && this._flush()
+    null != s && i.tags.push("release_channel:".concat(s)), this._metrics.push(i), (_ || this._metrics.length >= 100) && this._flush()
   }
   _flush() {
     if (this._metrics.length > 0) {
-      let t = [...this._metrics];
-      r.default.post({
-        url: l.Endpoints.METRICS,
+      let e = [...this._metrics];
+      o.default.post({
+        url: i.Endpoints.METRICS,
         body: {
-          metrics: t,
+          metrics: e,
           client_info: {
-            built_at: "1709146001935",
-            build_number: "269656"
+            built_at: "1709253565804",
+            build_number: "271298"
           }
         },
         retries: 1
-      }).catch(e => {
-        this._metrics.length + t.length < 100 && (this._metrics = [...this._metrics, ...t])
+      }).catch(_ => {
+        this._metrics.length + e.length < 100 && (this._metrics = [...this._metrics, ...e])
       })
     }
     this._metrics = []

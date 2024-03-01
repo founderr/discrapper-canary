@@ -1,66 +1,66 @@
 "use strict";
-var n = i("145661"),
-  r = i("868822"),
-  a = i("64980"),
-  s = i("78117"),
-  o = i("664144"),
-  l = i("418855"),
-  u = i("125359"),
-  c = i("551544"),
-  h = i("969708"),
-  f = i("113806"),
-  d = i("998270"),
-  m = i("590455"),
-  v = i("474172"),
-  p = i("47361"),
-  g = i("87078"),
-  x = i("622279"),
-  I = i("174669")("replace"),
-  w = Math.max,
-  y = Math.min,
-  b = a([].concat),
-  A = a([].push),
-  F = a("".indexOf),
-  k = a("".slice),
-  E = "$0" === "a".replace(/./, "$0"),
-  C = !!/./ [I] && "" === /./ [I]("a", "$0");
-s("replace", function(t, e, i) {
-  var a = C ? "$" : "$0";
-  return [function(t, i) {
-    var n = m(this),
-      a = c(t) ? void 0 : p(t, I);
-    return a ? r(a, t, n, i) : r(e, d(n), t, i)
-  }, function(t, r) {
-    var s = l(this),
-      o = d(t);
-    if ("string" == typeof r && -1 === F(r, a) && -1 === F(r, "$<")) {
-      var c = i(e, s, o, r);
-      if (c.done) return c.value
+var e = n("145661"),
+  i = n("868822"),
+  u = n("64980"),
+  o = n("78117"),
+  c = n("664144"),
+  a = n("418855"),
+  s = n("125359"),
+  f = n("551544"),
+  l = n("969708"),
+  p = n("113806"),
+  v = n("998270"),
+  x = n("590455"),
+  h = n("474172"),
+  d = n("47361"),
+  g = n("87078"),
+  y = n("622279"),
+  E = n("174669")("replace"),
+  b = Math.max,
+  I = Math.min,
+  R = u([].concat),
+  k = u([].push),
+  m = u("".indexOf),
+  S = u("".slice),
+  $ = "$0" === "a".replace(/./, "$0"),
+  A = !!/./ [E] && "" === /./ [E]("a", "$0");
+o("replace", function(t, r, n) {
+  var u = A ? "$" : "$0";
+  return [function(t, n) {
+    var e = x(this),
+      u = f(t) ? void 0 : d(t, E);
+    return u ? i(u, t, e, n) : i(r, v(e), t, n)
+  }, function(t, i) {
+    var o = a(this),
+      c = v(t);
+    if ("string" == typeof i && -1 === m(i, u) && -1 === m(i, "$<")) {
+      var f = n(r, o, c, i);
+      if (f.done) return f.value
     }
-    var m = u(r);
-    !m && (r = d(r));
-    var p = s.global;
-    p && (q = s.unicode, s.lastIndex = 0);
-    for (var I = []; null !== (R = x(s, o));) {
+    var x = s(i);
+    !x && (i = v(i));
+    var d = o.global;
+    d && (w = o.unicode, o.lastIndex = 0);
+    for (var E = []; null !== (O = y(o, c));) {
       ;
-      if (A(I, R), !p) break;
-      "" === d(R[0]) && (s.lastIndex = v(o, f(s.lastIndex), q))
+      if (k(E, O), !d) break;
+      "" === v(O[0]) && (o.lastIndex = h(c, p(o.lastIndex), w))
     }
-    for (var E = "", C = 0, _ = 0; _ < I.length; _++) {
-      for (var T, q, R, O, $ = d((R = I[_])[0]), S = w(y(h(R.index), o.length), 0), D = [], M = 1; M < R.length; M++) {
+    for (var $ = "", A = 0, T = 0; T < E.length; T++) {
+      for (var C, w, O, _, j = v((O = E[T])[0]), M = b(I(l(O.index), c.length), 0), N = [], U = 1; U < O.length; U++) {
         ;
-        A(D, void 0 === (T = R[M]) ? T : String(T))
+        k(N, void 0 === (C = O[U]) ? C : String(C))
       }
-      var P = R.groups;
-      if (m) {
-        var W = b([$], D, S, o);
-        void 0 !== P && A(W, P), O = d(n(r, void 0, W))
-      } else O = g($, o, S, D, P, r);
-      S >= C && (E += k(o, C, S) + O, C = S + $.length)
+      var z = O.groups;
+      if (x) {
+        var K = R([j], N, M, c);
+        void 0 !== z && k(K, z), _ = v(e(i, void 0, K))
+      } else _ = g(j, c, M, N, z, i);
+      M >= A && ($ += S(c, A, M) + _, A = M + j.length)
     }
-    return E + k(o, C)
+    return $ + S(c, A)
   }]
-}, !!o(function() {
+}, !!c(function() {
   var t = /./;
   return t.exec = function() {
     var t = [];
@@ -68,4 +68,4 @@ s("replace", function(t, e, i) {
       a: "7"
     }, t
   }, "7" !== "".replace(t, "$<a>")
-}) || !E || C)
+}) || !$ || A)

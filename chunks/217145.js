@@ -1,11 +1,11 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   isIFrameModalUserEnabled: function() {
-    return u
+    return l
   }
 });
-var n = l("862205");
-let a = (0, n.createExperiment)({
+var r = n("862205");
+let i = (0, r.createExperiment)({
   kind: "user",
   id: "2023-07_iframe_modal",
   label: "iFrame Modal",
@@ -21,8 +21,8 @@ let a = (0, n.createExperiment)({
   }]
 });
 
-function u() {
-  return a.getCurrentConfig({
+function l() {
+  return i.getCurrentConfig({
     location: "5c0a70_1"
   }, {
     autoTrackExposure: !0

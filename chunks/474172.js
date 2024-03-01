@@ -1,5 +1,5 @@
 "use strict";
-var n = i("696397").charAt;
-t.exports = function(t, e, i) {
-  return e + (i ? n(t, e).length : 1)
+var e = n("696397").charAt;
+t.exports = function(t, r, n) {
+  return r + (n ? e(t, r).length : 1)
 }

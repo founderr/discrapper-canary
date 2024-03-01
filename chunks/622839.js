@@ -15,8 +15,8 @@ let o = "no_payment_source",
   s = null,
   c = null,
   S = null,
-  d = null,
   E = null,
+  d = null,
   f = {},
   _ = null,
   T = !1,
@@ -55,10 +55,10 @@ class L extends r.default.Store {
     return S
   }
   get analyticsLocation() {
-    return d
+    return E
   }
   get promotionId() {
-    return E
+    return d
   }
   get isIAP() {
     return p
@@ -76,7 +76,7 @@ class L extends r.default.Store {
 L.displayName = "SKUPaymentModalStore";
 var M = new L(l.default, {
   SKU_PURCHASE_MODAL_OPEN: function(t) {
-    U(), s = t.skuId, S = t.applicationId, p = t.isIAP, d = t.analyticsLocation, N = t.context, P = t.isGift, C = !0, A = !1, u = t.resolve, i = t.reject, I = null, _ = null, E = t.promotionId
+    U(), s = t.skuId, S = t.applicationId, p = t.isIAP, E = t.analyticsLocation, N = t.context, P = t.isGift, C = !0, A = !1, u = t.resolve, i = t.reject, I = null, _ = null, d = t.promotionId
   },
   SKU_PURCHASE_MODAL_CLOSE: function(t) {
     let {

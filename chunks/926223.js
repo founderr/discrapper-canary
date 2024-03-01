@@ -13,8 +13,8 @@ let l = "",
   s = null,
   c = !1,
   S = null,
-  d = "",
   E = "",
+  d = "",
   f = "",
   _ = "",
   T = "",
@@ -28,11 +28,11 @@ let l = "",
   U = null;
 
 function L() {
-  s = null, l = "", a = null, o = "", c = !1, S = null, d = "US", E = "", f = "", _ = "", T = "", I = "", A = "", p = "", C = !1, P = null, N = null, R = null, U = null
+  s = null, l = "", a = null, o = "", c = !1, S = null, E = "US", d = "", f = "", _ = "", T = "", I = "", A = "", p = "", C = !1, P = null, N = null, R = null, U = null
 }
 
 function M(t) {
-  E = t.name, d = t.country, _ = t.line1, T = t.line2, I = t.city, A = t.postalCode, p = t.state, f = t.email
+  d = t.name, E = t.country, _ = t.line1, T = t.line2, I = t.city, A = t.postalCode, p = t.state, f = t.email
 }
 
 function O() {
@@ -72,7 +72,7 @@ class h extends u.default.Store {
   }
   getCreditCardInfo() {
     return {
-      name: E
+      name: d
     }
   }
   get isCardInfoValid() {
@@ -80,9 +80,9 @@ class h extends u.default.Store {
   }
   getBillingAddressInfo() {
     return {
-      name: E,
+      name: d,
       email: f,
-      country: d,
+      country: E,
       line1: _,
       line2: T,
       city: I,
@@ -118,14 +118,14 @@ var m = new h(i.default, {
       info: e,
       isValid: n
     } = t;
-    E = e.name, c = n
+    d = e.name, c = n
   },
   NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: function(t) {
     let {
       info: e,
       isValid: n
     } = t;
-    null != e.name && "" !== e.name && (E = e.name), d = e.country, E = e.name, _ = e.line1, T = e.line2, I = e.city, A = e.postalCode, p = e.state, f = e.email, C = n
+    null != e.name && "" !== e.name && (d = e.name), E = e.country, d = e.name, _ = e.line1, T = e.line2, I = e.city, A = e.postalCode, p = e.state, f = e.email, C = n
   },
   BRAINTREE_TOKENIZE_PAYPAL_START: function() {
     l = "", a = null
@@ -136,7 +136,7 @@ var m = new h(i.default, {
       nonce: n,
       billingAddress: u
     } = t;
-    l = e, a = n, M(u), C = d.length > 0
+    l = e, a = n, M(u), C = E.length > 0
   },
   BRAINTREE_TOKENIZE_VENMO_START: function() {
     o = "", a = null

@@ -20,8 +20,8 @@ var a, o, d = n("917351"),
   y = n("271938"),
   T = n("47319"),
   C = n("603699"),
-  I = n("824563"),
-  S = n("280168"),
+  S = n("824563"),
+  I = n("280168"),
   A = n("800762"),
   D = n("599110"),
   N = n("550368"),
@@ -85,7 +85,7 @@ function et(e) {
 }
 
 function en(e) {
-  return I.default.findActivity(e, e => null != e.party && null != e.party.id && (0, b.isSpotifyParty)(e.party.id))
+  return S.default.findActivity(e, e => null != e.party && null != e.party.id && (0, b.isSpotifyParty)(e.party.id))
 }
 let es = new Set([WebSocket.CONNECTING, WebSocket.OPEN]);
 class ei {
@@ -370,7 +370,7 @@ function eg(e, t) {
 }
 class em extends f.default.Store {
   initialize() {
-    this.waitFor(T.default, S.default), this.syncWith([I.default], () => (function() {
+    this.waitFor(T.default, I.default), this.syncWith([S.default], () => (function() {
       if (null == i) return !1;
       let e = ee();
       if (null == e) return !1;

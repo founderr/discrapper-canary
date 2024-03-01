@@ -25,7 +25,7 @@ let m = {},
   T = () => O.emitChange(),
   C = a.debounce(T, 150);
 
-function I(e) {
+function S(e) {
   let t = v[e];
   null != t && !t.closed && (m[e] = {
     x: t.screenX,
@@ -36,9 +36,9 @@ function I(e) {
   })
 }
 
-function S(e) {
+function I(e) {
   let t = v[e];
-  null != t && (!t.closed && I(e), t.close(), ! function(e) {
+  null != t && (!t.closed && S(e), t.close(), ! function(e) {
     let t = v[e];
     i(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", T), t.removeEventListener("blur", T), t.removeEventListener("resize", C);
     let n = E[e];
@@ -77,7 +77,7 @@ function A(e) {
         i(null != r, "No render target for popout!"), E[e] = r, r.render(n(e))
       }(s), y.delete(s), O.emitChange()));
     case g.PopoutEventTypes.UNLOADED:
-      return S(n.key)
+      return I(n.key)
   }
 }
 
@@ -121,7 +121,7 @@ class N extends d.default.PersistedStore {
     return m
   }
   unmountWindow(e) {
-    return S(e)
+    return I(e)
   }
 }
 N.displayName = "PopoutWindowStore", N.persistKey = "PopoutWindowStore";
@@ -171,7 +171,7 @@ let O = new N(u.default, {
     let {
       key: t
     } = e, n = v[t];
-    null != n && !n.closed && (I(t), n.close())
+    null != n && !n.closed && (S(t), n.close())
   },
   POPOUT_WINDOW_SET_ALWAYS_ON_TOP: function(e) {
     let {

@@ -1,21 +1,21 @@
 "use strict";
-n.r(e), n.d(e, {
+E.r(_), E.d(_, {
   default: function() {
-    return r
+    return o
   }
 });
-var i = n("773336");
-async function r(t, e) {
+var t = E("773336");
+async function o(e, _) {
   let {
-    default: r
-  } = await n.el("572544").then(n.bind(n, "572544")), a = r(t, {
-    skipExtensionCheck: e,
+    default: o
+  } = await E.el("572544").then(E.bind(E, "572544")), n = o(e, {
+    skipExtensionCheck: _,
     analyticsLocations: []
   });
-  if (null != a) a(null);
-  else if (i.isPlatformEmbedded) window.open(t);
+  if (null != n) n(null);
+  else if (t.isPlatformEmbedded) window.open(e);
   else {
-    let e = document.createElement("a");
-    e.href = t, e.target = "_blank", e.rel = "noreferrer noopener", e.click()
+    let _ = document.createElement("a");
+    _.href = e, _.target = "_blank", _.rel = "noreferrer noopener", _.click()
   }
 }

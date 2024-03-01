@@ -29,8 +29,8 @@ l = class extends a.Component {
       autoMute: C,
       responsive: S,
       mediaLayoutType: T,
-      mimeType: I,
-      renderOverlayContent: v,
+      mimeType: v,
+      renderOverlayContent: I,
       renderLinkComponent: _,
       onClick: N,
       onPlay: A,
@@ -76,13 +76,13 @@ l = class extends a.Component {
           fileSize: null == t ? void 0 : (0, s.sizeString)(t),
           playable: p,
           renderLinkComponent: _,
-          renderOverlayContent: v,
+          renderOverlayContent: I,
           onClick: N,
           onPlay: A,
           onEnded: x,
           onVolumeChange: y,
           onMute: O,
-          mimeType: I,
+          mimeType: v,
           downloadable: h
         })
       }

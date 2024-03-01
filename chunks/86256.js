@@ -1,32 +1,32 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
-    return u
+    return r
   }
-}), t("222007");
-var a = t("436443"),
-  r = t("917351"),
-  l = t.n(r),
-  i = t("347647");
-a.default.registerLanguage("ansi", i.default);
-var u = {
-  highlight(e, n, t) {
+}), n("222007");
+var l = n("436443"),
+  i = n("917351"),
+  a = n.n(i),
+  s = n("347647");
+l.default.registerLanguage("ansi", s.default);
+var r = {
+  highlight(e, t, n) {
     if (! function(e) {
-        if (e.indexOf(c) >= 0) return !1;
-        let n = 0,
-          t = e.split("\n");
-        for (let e of t) {
+        if (e.indexOf(o) >= 0) return !1;
+        let t = 0,
+          n = e.split("\n");
+        for (let e of n) {
           if (e.length > 1e3) return !1;
-          null == e.match(/^\s*[/][/]/) && null != e.match(/[^/]/) && (n = 0);
-          let t = e.match(/[/]/g);
-          if (null != t && (n += t.length) > 30) return !1
+          null == e.match(/^\s*[/][/]/) && null != e.match(/[^/]/) && (t = 0);
+          let n = e.match(/[/]/g);
+          if (null != n && (t += n.length) > 30) return !1
         }
         return !0
-      }(n)) return null;
+      }(t)) return null;
     Date.now();
-    let r = a.default.highlight(e, n, t);
-    return Date.now(), r
+    let i = l.default.highlight(e, t, n);
+    return Date.now(), i
   },
-  hasLanguage: e => null != a.default.getLanguage(e)
+  hasLanguage: e => null != l.default.getLanguage(e)
 };
-let c = l.repeat("/", 15)
+let o = a.repeat("/", 15)

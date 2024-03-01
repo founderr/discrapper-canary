@@ -1,147 +1,147 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   addMessageReminders: function() {
-    return f
+    return p
   },
   updateReminderDueAt: function() {
-    return E
-  },
-  toggleMessageReminders: function() {
-    return h
-  },
-  completeMessageReminders: function() {
     return _
   },
+  toggleMessageReminders: function() {
+    return m
+  },
+  completeMessageReminders: function() {
+    return E
+  },
   cleanupMessageReminders: function() {
-    return S
+    return h
   },
   fetchAndUpdateSavedMessages: function() {
-    return v
+    return I
   }
 });
-var n = a("872717"),
-  s = a("913144"),
-  r = a("679653"),
-  u = a("42203"),
-  l = a("305961"),
-  d = a("27618"),
-  i = a("697218"),
-  c = a("599110"),
-  o = a("520899"),
-  m = a("988864"),
-  g = a("49111");
+var a = n("872717"),
+  i = n("913144"),
+  l = n("679653"),
+  d = n("42203"),
+  r = n("305961"),
+  u = n("27618"),
+  s = n("697218"),
+  o = n("599110"),
+  c = n("520899"),
+  f = n("988864"),
+  g = n("49111");
 
-function f(e, t) {
-  c.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
+function p(e, t) {
+  o.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "adding",
-    rating: "".concat(o.default.getMessageReminders().length)
-  }), M([{
+    rating: "".concat(c.default.getMessageReminders().length)
+  }), v([{
     messageId: e.id,
     channelId: e.channel_id,
     savedAt: new Date,
     dueAt: t,
     ... function(e) {
-      let t = u.default.getChannel(e.channel_id);
+      let t = d.default.getChannel(e.channel_id);
       if (null == t) return null;
-      let a = l.default.getGuild(t.guild_id),
-        n = "",
-        s = (0, r.computeChannelName)(t, i.default, d.default, !0);
-      if (t.isPrivate()) n = s;
+      let n = r.default.getGuild(t.guild_id),
+        a = "",
+        i = (0, l.computeChannelName)(t, s.default, u.default, !0);
+      if (t.isPrivate()) a = i;
       else if (t.isThread()) {
-        let e = u.default.getChannel(t.parent_id);
+        let e = d.default.getChannel(t.parent_id);
         if (null == e) return null;
-        let a = (0, r.computeChannelName)(e, i.default, d.default, !0);
-        n = "".concat(a, " > ").concat(s)
-      } else n = s;
-      let c = "".concat(e.content.length > 0 ? e.content : "".concat(e.attachments.length, " attachments"));
+        let n = (0, l.computeChannelName)(e, s.default, u.default, !0);
+        a = "".concat(n, " > ").concat(i)
+      } else a = i;
+      let o = "".concat(e.content.length > 0 ? e.content : "".concat(e.attachments.length, " attachments"));
       return {
         authorSummary: e.author.username,
         authorId: e.author.id,
-        channelSummary: n,
-        messageSummary: c.length > 200 ? "".concat(c.slice(0, 197), "...") : c,
-        guildId: null == a ? void 0 : a.id
+        channelSummary: a,
+        messageSummary: o.length > 200 ? "".concat(o.slice(0, 197), "...") : o,
+        guildId: null == n ? void 0 : n.id
       }
     }(e)
   }], [])
 }
 
-function E(e, t) {
-  c.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
+function _(e, t) {
+  o.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "updating_due_at",
-    rating: "".concat(o.default.getMessageReminders().length)
+    rating: "".concat(c.default.getMessageReminders().length)
   });
-  let a = o.default.getMessageReminders(),
-    n = a.find(t => t.messageId === e);
-  null != n && M([{
-    ...n,
+  let n = c.default.getMessageReminders(),
+    a = n.find(t => t.messageId === e);
+  null != a && v([{
+    ...a,
     savedAt: new Date,
     dueAt: t
-  }], [n])
+  }], [a])
 }
 
-function h(e, t) {
-  c.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
+function m(e, t) {
+  o.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
     skipped: t,
     reason: "updating within the list",
-    rating: "".concat(o.default.getMessageReminders().length)
-  }), s.default.dispatch({
+    rating: "".concat(c.default.getMessageReminders().length)
+  }), i.default.dispatch({
     type: "MESSAGE_REMINDER_TOGGLE",
     messageId: e,
     complete: t
   })
 }
 
-function _(e) {
-  c.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
+function E(e) {
+  o.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "complete and clear immediately",
-    rating: "".concat(o.default.getMessageReminders().length)
+    rating: "".concat(c.default.getMessageReminders().length)
   });
-  let t = o.default.getMessageReminders();
-  M([], t.filter(t => t.messageId === e))
+  let t = c.default.getMessageReminders();
+  v([], t.filter(t => t.messageId === e))
 }
 
-function S() {
-  c.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
+function h() {
+  o.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "clearing",
-    rating: "".concat(o.default.getMessageReminders().length)
+    rating: "".concat(c.default.getMessageReminders().length)
   });
-  let e = o.default.getMessageReminders();
-  e.some(e => e.complete) && M([], e.filter(e => e.complete))
+  let e = c.default.getMessageReminders();
+  e.some(e => e.complete) && v([], e.filter(e => e.complete))
 }
 
-function I(e) {
-  c.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
+function S(e) {
+  o.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "updated_from_server",
-    rating: "".concat(o.default.getMessageReminders().length)
-  }), s.default.dispatch({
+    rating: "".concat(c.default.getMessageReminders().length)
+  }), i.default.dispatch({
     type: "SAVED_MESSAGES_UPDATE",
     messages: e
   })
 }
 
-function M(e, t) {
-  (0 !== e.length || 0 !== t.length) && n.default.post({
+function v(e, t) {
+  (0 !== e.length || 0 !== t.length) && a.default.post({
     url: g.Endpoints.SAVED_MESSAGES,
     body: {
-      added: e.map(m.savedMessageToServer),
-      removed: t.map(m.savedMessageToServer)
+      added: e.map(f.savedMessageToServer),
+      removed: t.map(f.savedMessageToServer)
     }
   }).then(e => {
-    I(e.body.saved_messages.map(m.savedMessageToClient))
+    S(e.body.saved_messages.map(f.savedMessageToClient))
   })
 }
 
-function v() {
-  return o.default.recentlyFetched() ? Promise.resolve() : n.default.get({
+function I() {
+  return c.default.recentlyFetched() ? Promise.resolve() : a.default.get({
     url: g.Endpoints.SAVED_MESSAGES
   }).then(e => {
     let t = e.body.saved_messages,
-      a = t.map(m.savedMessageToClient);
-    I(a)
+      n = t.map(f.savedMessageToClient);
+    S(n)
   })
 }

@@ -36,8 +36,8 @@ let T = Object.freeze({
     textWidgetOpacity: y.OpacityBounds.LOWER
   }),
   C = null,
-  I = {},
-  S = null,
+  S = {},
+  I = null,
   A = new Set,
   D = !1,
   N = null,
@@ -47,8 +47,8 @@ let T = Object.freeze({
   V = !1;
 
 function R(e) {
-  let t = I[e];
-  return null == t && (t = I[e] = {
+  let t = S[e];
+  return null == t && (t = S[e] = {
     ...T
   }), t
 }
@@ -141,13 +141,13 @@ class F extends s.default.PersistedStore {
           ...T
         }
       }), __OVERLAY__ && (m.isPlatformEmbedded && h.default.requireModule("discord_overlay2"), A.delete((0, v.getPID)())), null != e) {
-      I = e;
+      S = e;
       let t = l.default.getId();
       null != t && (null == (k = R(t)).textChatNotifications && (k.textChatNotifications = T.textChatNotifications), null == k.textWidgetOpacity && (k.textWidgetOpacity = T.textWidgetOpacity))
     }
   }
   getState() {
-    return I
+    return S
   }
   isUILocked(e) {
     return !A.has(e)
@@ -181,7 +181,7 @@ class F extends s.default.PersistedStore {
     return k.selectedChannelId
   }
   getSelectedCallId() {
-    return S
+    return I
   }
   getDisplayUserMode() {
     return k.displayUserMode
@@ -250,10 +250,10 @@ F.displayName = "OverlayStore", F.persistKey = "OverlayStoreV2", F.migrations = 
 }];
 var H = new F(r.default, {
   LOGOUT: function(e) {
-    !e.isSwitchingAccount && (I = {})
+    !e.isSwitchingAccount && (S = {})
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function(e) {
-    e.userId in I && delete I[e.userId]
+    e.userId in S && delete S[e.userId]
   },
   CONNECTION_CLOSED: function() {
     A.clear()
@@ -326,10 +326,10 @@ var H = new F(r.default, {
     let {
       callId: t
     } = e;
-    S = t
+    I = t
   },
   CALL_DELETE: function() {
-    S = null
+    I = null
   },
   LAYOUT_CREATE: function() {},
   OVERLAY_SET_DISPLAY_NAME_MODE: function(e) {

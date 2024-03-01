@@ -1,38 +1,38 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return i
+    return a
   }
 });
-var r = n("37983");
-n("884691");
-var l = n("469563"),
-  a = n("470131"),
-  s = n("75196"),
-  i = (0, l.replaceIcon)(function(e) {
+var n = l("37983");
+l("884691");
+var r = l("469563"),
+  s = l("470131"),
+  i = l("75196"),
+  a = (0, r.replaceIcon)(function(e) {
     let {
       width: t = 6,
-      height: n = 11,
-      color: l = "currentColor",
-      foreground: a,
-      ...i
+      height: l = 11,
+      color: r = "currentColor",
+      foreground: s,
+      ...a
     } = e;
-    return (0, r.jsx)("svg", {
-      ...(0, s.default)(i),
+    return (0, n.jsx)("svg", {
+      ...(0, i.default)(a),
       width: t,
-      height: n,
+      height: l,
       viewBox: "0 0 6 11",
-      children: (0, r.jsxs)("g", {
-        fill: l,
+      children: (0, n.jsxs)("g", {
+        fill: r,
         fillRule: "evenodd",
-        className: a,
-        children: [(0, r.jsx)("path", {
+        className: s,
+        children: [(0, n.jsx)("path", {
           d: "M2 4.42007V6.79007L3 7.79007L4 6.79007V4.42007L3.01 3.42007L2 4.42007Z"
-        }), (0, r.jsx)("path", {
+        }), (0, n.jsx)("path", {
           d: "M3 0.590088L0 3.59009V7.59009L3 10.5901L6 7.59009V3.59009L3 0.590088ZM5 7.21009L3 9.21009L1 7.21009V4.00009L3 2.00009L5 4.00009V7.21009Z"
         })]
       })
     })
-  }, a.BoostTier2SimpleIcon, void 0, {
+  }, s.BoostTier2SimpleIcon, void 0, {
     size: 11
   })

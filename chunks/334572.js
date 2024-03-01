@@ -1,11 +1,11 @@
 "use strict";
 
-function l(e, t) {
-  let [, n] = e, [, l] = t;
-  return n === l
+function i(e, t) {
+  let [, r] = e, [, i] = t;
+  return r === i
 }
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   isVersionEqual: function() {
-    return l
+    return i
   }
-}), n("222007")
+}), r("222007")

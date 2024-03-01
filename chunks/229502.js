@@ -29,9 +29,9 @@ var l, i, a = n("917351"),
   C = n("397485"),
   S = n("626334"),
   T = n("49111"),
-  I = n("846325");
+  v = n("846325");
 
-function v(e) {
+function I(e) {
   let t = new AbortController,
     n = (0, a.throttle)(n => {
       m.default.getVoiceChannelId() !== e && t.abort()
@@ -47,7 +47,7 @@ function _(e, t, n) {
   let {
     abortController: i,
     onRequestProgress: a
-  } = v(e), r = null !== (l = E.default.getState().animationType) && void 0 !== l ? l : S.VoiceChannelEffectAnimationType.BASIC, u = {
+  } = I(e), r = null !== (l = E.default.getState().animationType) && void 0 !== l ? l : S.VoiceChannelEffectAnimationType.BASIC, u = {
     animation_type: r,
     animation_id: (0, C.sampleAnimationId)(r, C.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
   };
@@ -67,13 +67,13 @@ function N(e, t, n, l) {
     {
       abortController: o,
       onRequestProgress: u
-    } = v(e),
+    } = I(e),
     m = {
       sound_id: t.soundId,
       emoji_id: t.emojiId,
       emoji_name: null !== (a = t.emojiName) && void 0 !== a ? a : null == r ? void 0 : r.name
     };
-  t.guildId !== I.DEFAULT_SOUND_GUILD_ID && (m.source_guild_id = t.guildId), s.default.post({
+  t.guildId !== v.DEFAULT_SOUND_GUILD_ID && (m.source_guild_id = t.guildId), s.default.post({
     url: T.Endpoints.SEND_SOUNDBOARD_SOUND(e),
     body: m,
     signal: o.signal,

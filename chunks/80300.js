@@ -1,51 +1,51 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   backgroundImagePreloader: function() {
-    return c
+    return u
   }
-}), n("424973");
-var l = n("37983"),
-  a = n("884691"),
-  r = n("310013"),
-  s = n.n(r),
-  i = n("407063");
-let u = /url\(['"](.*)['"]\)/,
-  o = e => {
+}), l("424973");
+var n = l("37983"),
+  r = l("884691"),
+  s = l("310013"),
+  i = l.n(s),
+  a = l("407063");
+let o = /url\(['"](.*)['"]\)/,
+  c = e => {
     if (null == e || "" === e || "none" === e) return null;
-    let t = e.match(u);
+    let t = e.match(o);
     return null != t ? t[1] : e
   };
 
-function c(e) {
-  class t extends a.Component {
+function u(e) {
+  class t extends r.Component {
     componentDidUpdate(e, t) {
       if (t === this.state) return;
       let {
-        cached: n,
-        loaded: l
+        cached: l,
+        loaded: n
       } = this.state, {
-        style: a
-      } = this.props, r = null != a ? o(a.backgroundImage) : null;
-      null == r && r !== n ? this.setState({
+        style: r
+      } = this.props, s = null != r ? c(r.backgroundImage) : null;
+      null == s && s !== l ? this.setState({
         loaded: !0,
-        cached: r
-      }) : this.cachedURLs.indexOf(r) >= 0 ? this.setState({
+        cached: s
+      }) : this.cachedURLs.indexOf(s) >= 0 ? this.setState({
         loaded: !0,
-        cached: r
-      }) : null != r && r !== n && !0 === l && this.setState({
+        cached: s
+      }) : null != s && s !== l && !0 === n && this.setState({
         loaded: !1
-      }, () => this.preloadURL(r))
+      }, () => this.preloadURL(s))
     }
     preloadURL(e) {
-      this.canceller && this.canceller(), this.canceller = (0, i.loadImage)(e, t => {
+      this.canceller && this.canceller(), this.canceller = (0, a.loadImage)(e, t => {
         this.canceller && (this.canceller = null), !t && (this.cachedURLs.push(e), this.setState({
           cached: e,
           loaded: !0
         }));
         let {
-          onBackgroundImageLoad: n
+          onBackgroundImageLoad: l
         } = this.props;
-        n && n(t, e)
+        l && l(t, e)
       })
     }
     componentWillUnmount() {
@@ -54,34 +54,34 @@ function c(e) {
     render() {
       let {
         style: t,
-        onBackgroundImageLoad: n,
-        ...a
+        onBackgroundImageLoad: l,
+        ...r
       } = this.props, {
-        loaded: r,
-        cached: s
+        loaded: s,
+        cached: i
       } = this.state;
-      if (!r && null != t) {
-        var i;
+      if (!s && null != t) {
+        var a;
         t = {
           ...t,
-          backgroundImage: null == (i = s) || "" === i || "none" === i ? "none" : "url(".concat(i, ")")
+          backgroundImage: null == (a = i) || "" === a || "none" === a ? "none" : "url(".concat(a, ")")
         }
       }
-      return (0, l.jsx)(e, {
+      return (0, n.jsx)(e, {
         style: t,
-        ...a
+        ...r
       })
     }
     constructor(e) {
       super(e), this.cachedURLs = [], this.canceller = null;
       let {
         style: t
-      } = e, n = null != t ? o(t.backgroundImage) : null;
-      this.cachedURLs = [n], this.state = {
-        cached: n,
+      } = e, l = null != t ? c(t.backgroundImage) : null;
+      this.cachedURLs = [l], this.state = {
+        cached: l,
         loaded: !0
       }
     }
   }
-  return s(t, e), t
+  return i(t, e), t
 }

@@ -10,10 +10,10 @@ n.r(e), n.d(e, {
     return S
   },
   changePaymentSource: function() {
-    return d
+    return E
   },
   clearError: function() {
-    return E
+    return d
   }
 });
 var u = n("627445"),
@@ -65,11 +65,11 @@ async function c(t, e, n, u, s, c) {
   try {
     let S = (0, l.getPremiumPlanItem)(t);
     i(S, "Expected existing premium plan");
-    let d = (0, l.getItemsWithUpsertedPremiumPlanId)(t, S.planId);
+    let E = (0, l.getItemsWithUpsertedPremiumPlanId)(t, S.planId);
     await a.updateSubscription(t, {
       status: o.SubscriptionStatusTypes.ACTIVE,
       paymentSource: u,
-      items: d,
+      items: E,
       currency: n
     }, e, s, c), r.default.dispatch({
       type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
@@ -93,7 +93,7 @@ async function S(t, e, n, u) {
     }), t
   }
 }
-async function d(t, e, n, u, i) {
+async function E(t, e, n, u, i) {
   try {
     await a.changePaymentSource(t, e, n, u, i), r.default.dispatch({
       type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
@@ -106,7 +106,7 @@ async function d(t, e, n, u, i) {
   }
 }
 
-function E() {
+function d() {
   r.default.dispatch({
     type: "PREMIUM_PAYMENT_ERROR_CLEAR"
   })

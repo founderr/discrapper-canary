@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return W
   },
   clearClipsSession: function() {
-    return B
+    return K
   },
   clearNewClipIds: function() {
-    return K
+    return B
   },
   loadClipsDirectory: function() {
     return J
@@ -373,13 +373,13 @@ async function W(e, t) {
   }))
 }
 
-function B() {
+function K() {
   d.default.dispatch({
     type: "CLIPS_CLEAR_CLIPS_SESSION"
   })
 }
 
-function K() {
+function B() {
   d.default.dispatch({
     type: "CLIPS_CLEAR_NEW_CLIP_IDS"
   })

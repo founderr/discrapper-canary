@@ -23,8 +23,8 @@ let E = new Map,
   y = new Set,
   T = 0,
   C = 0,
-  I = new Set,
-  S = new Map,
+  S = new Set,
+  I = new Map,
   A = !1;
 
 function D(e) {
@@ -54,7 +54,7 @@ class P extends o.default.Store {
   getOverlaySerializedState() {
     return {
       soundboardSounds: Object.fromEntries(E),
-      favoritedSoundIds: Array.from(I),
+      favoritedSoundIds: Array.from(S),
       localSoundboardMutes: Array.from(y)
     }
   }
@@ -89,17 +89,17 @@ class P extends o.default.Store {
     return 2 === T
   }
   isUserPlayingSounds(e) {
-    let t = S.get(e);
+    let t = I.get(e);
     return null != t && t > 0
   }
   isPlayingSound(e) {
     return null != p.get(e)
   }
   isFavoriteSound(e) {
-    return I.has(e)
+    return S.has(e)
   }
   getFavorites() {
-    return I
+    return S
   }
   isLocalSoundboardMuted(e) {
     return y.has(e)
@@ -114,7 +114,7 @@ class P extends o.default.Store {
 P.displayName = "SoundboardStore";
 var b = new P(d.default, {
   LOGOUT: function() {
-    E.clear(), p.clear(), S.clear(), A = !1, C = 0, T = 0
+    E.clear(), p.clear(), I.clear(), A = !1, C = 0, T = 0
   },
   GUILD_SOUNDBOARD_FETCH: function() {
     C = 1
@@ -133,16 +133,16 @@ var b = new P(d.default, {
     let {
       soundId: i,
       userId: r
-    } = e, a = (null !== (n = p.get(i)) && void 0 !== n ? n : 0) + 1, o = (null !== (s = S.get(r)) && void 0 !== s ? s : 0) + 1;
-    p.set(i, a), S.set(r, o), r !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (A = !0)
+    } = e, a = (null !== (n = p.get(i)) && void 0 !== n ? n : 0) + 1, o = (null !== (s = I.get(r)) && void 0 !== s ? s : 0) + 1;
+    p.set(i, a), I.set(r, o), r !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (A = !0)
   },
   GUILD_SOUNDBOARD_SOUND_PLAY_END: function(e) {
     var t, n;
     let {
       soundId: s,
       userId: i
-    } = e, r = (null !== (t = p.get(s)) && void 0 !== t ? t : 0) - 1, a = (null !== (n = S.get(i)) && void 0 !== n ? n : 0) - 1;
-    r <= 0 ? p.delete(s) : p.set(s, r), a <= 0 ? S.delete(i) : S.set(i, a)
+    } = e, r = (null !== (t = p.get(s)) && void 0 !== t ? t : 0) - 1, a = (null !== (n = I.get(i)) && void 0 !== n ? n : 0) - 1;
+    r <= 0 ? p.delete(s) : p.set(s, r), a <= 0 ? I.delete(i) : I.set(i, a)
   },
   USER_SOUNDBOARD_SET_VOLUME: function(e) {
     let {
@@ -151,7 +151,7 @@ var b = new P(d.default, {
     N(t)
   },
   VOICE_CHANNEL_SELECT: function() {
-    p.clear(), S.clear()
+    p.clear(), I.clear()
   },
   USER_SETTINGS_PROTO_UPDATE: function(e) {
     let {
@@ -162,7 +162,7 @@ var b = new P(d.default, {
     } = t;
     if (n === v.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
       var i, r;
-      I = new Set(null !== (r = null == s ? void 0 : null === (i = s.favoriteSoundboardSounds) || void 0 === i ? void 0 : i.soundIds) && void 0 !== r ? r : [])
+      S = new Set(null !== (r = null == s ? void 0 : null === (i = s.favoriteSoundboardSounds) || void 0 === i ? void 0 : i.soundIds) && void 0 !== r ? r : [])
     } else n === v.UserSettingsTypes.PRELOADED_USER_SETTINGS && O(s)
   },
   SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function() {
@@ -202,7 +202,7 @@ var b = new P(d.default, {
     let {
       soundboardStoreState: t
     } = e;
-    E = new Map(g.default.entries(t.soundboardSounds)), I = new Set(t.favoritedSoundIds), y = new Set(t.localSoundboardMutes)
+    E = new Map(g.default.entries(t.soundboardSounds)), S = new Set(t.favoritedSoundIds), y = new Set(t.localSoundboardMutes)
   },
   GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(e) {
     let {

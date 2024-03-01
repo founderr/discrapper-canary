@@ -1,109 +1,109 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return _
   }
 }), n("222007"), n("702976");
-var i = n("872717"),
-  r = n("819855"),
-  l = n("913144"),
-  s = n("679428"),
-  a = n("282109"),
-  o = n("568734"),
-  u = n("34676"),
-  c = n("299039"),
-  d = n("49111"),
-  f = n("397336"),
-  h = n("782340"),
-  E = {
+var a = n("872717"),
+  l = n("819855"),
+  i = n("913144"),
+  d = n("679428"),
+  s = n("282109"),
+  r = n("568734"),
+  o = n("34676"),
+  u = n("299039"),
+  f = n("49111"),
+  g = n("397336"),
+  c = n("782340"),
+  _ = {
     open(e) {
-      l.default.dispatch({
+      i.default.dispatch({
         type: "NOTIFICATION_SETTINGS_MODAL_OPEN",
         guildId: e
       })
     },
     close() {
-      l.default.dispatch({
+      i.default.dispatch({
         type: "NOTIFICATION_SETTINGS_MODAL_CLOSE"
       })
     },
-    updateGuildNotificationSettings(e, t, n, i) {
-      let r = (0, u.getCurrentGuildSettings)(e);
-      s.default.saveUserGuildSettings(e, t), l.default.dispatch({
+    updateGuildNotificationSettings(e, t, n, a) {
+      let l = (0, o.getCurrentGuildSettings)(e);
+      d.default.saveUserGuildSettings(e, t), i.default.dispatch({
         type: "USER_GUILD_SETTINGS_GUILD_UPDATE",
         guildId: e,
         settings: t
-      }), (0, u.trackGuildNotificationSettingsUpdate)(e, t, r, n, i)
+      }), (0, o.trackGuildNotificationSettingsUpdate)(e, t, l, n, a)
     },
-    updateGuildAndChannelNotificationSettings(e, t, n, i) {
-      let r = c.default.keys(t.channel_overrides),
-        a = (0, u.getCurrentGuildSettings)(e),
-        o = (0, u.getManyCurrentChannelSettings)(e, r);
-      s.default.saveUserGuildSettings(e, t), l.default.dispatch({
+    updateGuildAndChannelNotificationSettings(e, t, n, a) {
+      let l = u.default.keys(t.channel_overrides),
+        s = (0, o.getCurrentGuildSettings)(e),
+        r = (0, o.getManyCurrentChannelSettings)(e, l);
+      d.default.saveUserGuildSettings(e, t), i.default.dispatch({
         type: "USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE",
         guildId: e,
         settings: t
-      }), (0, u.trackGuildNotificationSettingsUpdate)(e, t, a, n, i), c.default.keys(t.channel_overrides).forEach(r => {
-        let l = o.get(r);
-        (0, u.trackChannelNotificationSettingsUpdate)(e, r, t.channel_overrides[r], l, n, i)
+      }), (0, o.trackGuildNotificationSettingsUpdate)(e, t, s, n, a), u.default.keys(t.channel_overrides).forEach(l => {
+        let i = r.get(l);
+        (0, o.trackChannelNotificationSettingsUpdate)(e, l, t.channel_overrides[l], i, n, a)
       })
     },
     updateGuildNotificationSettingsBulk(e, t, n) {
-      let i = c.default.keys(e),
-        r = (0, u.getManyCurrentGuildSettings)(i);
-      s.default.saveUserGuildSettingsBulk(e), c.default.entries(e).forEach(e => {
-        let [i, s] = e, a = r.get(i);
-        l.default.dispatch({
+      let a = u.default.keys(e),
+        l = (0, o.getManyCurrentGuildSettings)(a);
+      d.default.saveUserGuildSettingsBulk(e), u.default.entries(e).forEach(e => {
+        let [a, d] = e, s = l.get(a);
+        i.default.dispatch({
           type: "USER_GUILD_SETTINGS_GUILD_UPDATE",
-          guildId: i,
-          settings: s
-        }), (0, u.trackGuildNotificationSettingsUpdate)(i, s, a, t, n)
+          guildId: a,
+          settings: d
+        }), (0, o.trackGuildNotificationSettingsUpdate)(a, d, s, t, n)
       })
     },
-    updateChannelOverrideSettings(e, t, n, i, a) {
-      let o = (0, u.getCurrentChannelSettings)(e, t);
-      s.default.saveUserGuildSettings(e, {
+    updateChannelOverrideSettings(e, t, n, a, s) {
+      let r = (0, o.getCurrentChannelSettings)(e, t);
+      d.default.saveUserGuildSettings(e, {
         channel_overrides: {
           [t]: n
         }
-      }), l.default.dispatch({
+      }), i.default.dispatch({
         type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE",
         guildId: e,
         channelId: t,
         settings: n
-      }), r.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_CHANNEL_SETTINGS_UPDATED), (0, u.trackChannelNotificationSettingsUpdate)(e, t, n, o, i, a)
+      }), l.AccessibilityAnnouncer.announce(c.default.Messages.A11Y_ANNOUNCEMENT_CHANNEL_SETTINGS_UPDATED), (0, o.trackChannelNotificationSettingsUpdate)(e, t, n, r, a, s)
     },
-    updateChannelOverrideSettingsBulk(e, t, n, i) {
-      let r = c.default.keys(t),
-        a = (0, u.getManyCurrentChannelSettings)(e, r);
-      s.default.saveUserGuildSettings(e, {
+    updateChannelOverrideSettingsBulk(e, t, n, a) {
+      let l = u.default.keys(t),
+        s = (0, o.getManyCurrentChannelSettings)(e, l);
+      d.default.saveUserGuildSettings(e, {
         channel_overrides: t
-      }), l.default.dispatch({
+      }), i.default.dispatch({
         type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK",
         guildId: e,
         overrides: t
-      }), c.default.keys(t).forEach(r => (0, u.trackChannelNotificationSettingsUpdate)(e, r, t[r], a.get(r), n, i))
+      }), u.default.keys(t).forEach(l => (0, o.trackChannelNotificationSettingsUpdate)(e, l, t[l], s.get(l), n, a))
     },
     setForumThreadsCreated(e, t) {
-      let n = t ? f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON : f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF,
-        i = t ? f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF : f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON,
-        r = a.default.getChannelFlags(e);
+      let n = t ? g.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON : g.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF,
+        a = t ? g.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF : g.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON,
+        l = s.default.getChannelFlags(e);
       this.updateChannelOverrideSettings(e.guild_id, e.id, {
-        flags: r & ~i | n
-      }, u.NotificationLabel.forumThreadsCreated(t))
+        flags: l & ~a | n
+      }, o.NotificationLabel.forumThreadsCreated(t))
     },
     async setAccountFlag(e, t) {
-      let n = a.default.accountNotificationSettings.flags,
-        r = (0, o.setFlag)(n, e, t);
-      await i.default.patch({
-        url: d.Endpoints.ACCOUNT_NOTIFICATION_SETTINGS,
+      let n = s.default.accountNotificationSettings.flags,
+        l = (0, r.setFlag)(n, e, t);
+      await a.default.patch({
+        url: f.Endpoints.ACCOUNT_NOTIFICATION_SETTINGS,
         body: {
-          flags: r
+          flags: l
         }
-      }), await l.default.dispatch({
+      }), await i.default.dispatch({
         type: "NOTIFICATION_SETTINGS_UPDATE",
         settings: {
-          flags: r
+          flags: l
         }
       })
     }

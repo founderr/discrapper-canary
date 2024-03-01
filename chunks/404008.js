@@ -10,16 +10,16 @@ n.r(t), n.d(t, {
     return g
   },
   permissionOverwritesForAnnouncement: function() {
-    return D
+    return m
   },
   isChannelFull: function() {
-    return m
+    return y
   },
   sanitizeGuildTextChannelName: function() {
     return l.default
   },
   getBitrateLimit: function() {
-    return y
+    return D
   },
   computeSummarizedVoiceUsers: function() {
     return v
@@ -48,8 +48,8 @@ var r = n("316693"),
   o = n("808422"),
   s = n("233069"),
   d = n("42203"),
-  _ = n("923959"),
-  E = n("957255"),
+  E = n("923959"),
+  _ = n("957255"),
   c = n("18494"),
   I = n("316133"),
   S = n("991170"),
@@ -103,7 +103,7 @@ function g(e, t) {
   return O(e, t, i.PermissionOverwriteType.ROLE)
 }
 
-function D(e) {
+function m(e) {
   return [{
     id: e,
     type: i.PermissionOverwriteType.ROLE,
@@ -112,22 +112,22 @@ function D(e) {
   }]
 }
 
-function m(e, t, n) {
+function y(e, t, n) {
   var r, i;
   let l = e.getGuildId(),
     a = n.getGuild(l),
     o = null !== (r = null == a ? void 0 : a.maxVideoChannelUsers) && void 0 !== r ? r : -1,
     s = null !== (i = null == a ? void 0 : a.maxStageVideoChannelUsers) && void 0 !== i ? i : -1,
     d = I.default.countVoiceStatesForChannel(e.id),
-    _ = I.default.getVoiceStatesForChannel(e),
-    c = E.default.can(f.Permissions.MOVE_MEMBERS, e) && E.default.can(f.Permissions.CONNECT, e),
+    E = I.default.getVoiceStatesForChannel(e),
+    c = _.default.can(f.Permissions.MOVE_MEMBERS, e) && _.default.can(f.Permissions.CONNECT, e),
     S = !1;
-  S = e.type === C ? null != l && (t.hasVideo(e.id) || (0, u.hasStream)(_)) && s > 0 && d >= s : null != l && t.hasVideo(e.id) && o > 0 && d >= o + (c ? 1 : 0);
+  S = e.type === C ? null != l && (t.hasVideo(e.id) || (0, u.hasStream)(E)) && s > 0 && d >= s : null != l && t.hasVideo(e.id) && o > 0 && d >= o + (c ? 1 : 0);
   let T = e.userLimit > 0 && d >= e.userLimit;
   return S || T && !c
 }
 
-function y(e, t) {
+function D(e, t) {
   return t.isGuildStageVoice() ? f.BITRATE_DEFAULT : null == e ? f.BITRATE_MAX : Math.max(e.hasFeature(f.GuildFeatures.VIP_REGIONS) ? p.BoostedGuildFeatures[f.BoostedGuildTiers.TIER_3].limits.bitrate : f.BITRATE_MAX, p.BoostedGuildFeatures[e.premiumTier].limits.bitrate)
 }
 
@@ -193,8 +193,8 @@ function U(e) {
 function M(e) {
   if (null == e) return "text";
   let t = e.isMediaChannel();
-  if (e.type === f.ChannelTypes.GUILD_VOICE) return E.default.can(f.Permissions.CONNECT, e) ? "voice" : "voice-locked";
-  if (e.type === f.ChannelTypes.GUILD_STAGE_VOICE) return E.default.can(f.Permissions.CONNECT, e) ? "stage" : "stage-locked";
+  if (e.type === f.ChannelTypes.GUILD_VOICE) return _.default.can(f.Permissions.CONNECT, e) ? "voice" : "voice-locked";
+  if (e.type === f.ChannelTypes.GUILD_STAGE_VOICE) return _.default.can(f.Permissions.CONNECT, e) ? "stage" : "stage-locked";
   if (s.THREAD_CHANNEL_TYPES.has(e.type)) return e.isForumPost() ? "post" : "thread";
   else if (e.type === f.ChannelTypes.GUILD_FORUM) return t ? "media" : "forum";
   else if (e.type === f.ChannelTypes.GUILD_MEDIA) return "media";
@@ -206,7 +206,7 @@ function G(e) {
   let n = d.default.getChannel(c.default.getLastSelectedChannelId());
   if (null != n && n.getGuildId() === e && n.type === f.ChannelTypes.GUILD_TEXT) t = n.id;
   else {
-    let n = _.default.getDefaultChannel(e);
+    let n = E.default.getDefaultChannel(e);
     t = null != n ? n.id : null
   }
   return f.Routes.CHANNEL(e, t)
@@ -221,8 +221,8 @@ function w(e, t, n, r) {
   let l = e.getGuildId(),
     u = (0, a.canUseMediaPostEmbed)(l, t);
   if (null != t && u) {
-    var o, s, d, _;
-    o = l, s = t.id, d = e.id, _ = T.default.castChannelIdAsMessageId(e.id), i = null == o || null == s || null == d ? B(o, s, _) : "".concat(location.protocol, "//").concat(location.host).concat(f.Routes.CHANNEL_THREAD_VIEW(o, s, d, _))
+    var o, s, d, E;
+    o = l, s = t.id, d = e.id, E = T.default.castChannelIdAsMessageId(e.id), i = null == o || null == s || null == d ? B(o, s, E) : "".concat(location.protocol, "//").concat(location.host).concat(f.Routes.CHANNEL_THREAD_VIEW(o, s, d, E))
   } else i = null != r ? r : B(l, e.id, n);
   return i
 }

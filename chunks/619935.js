@@ -1,15 +1,15 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(e), n.d(e, {
   useBlockedPaymentsConfig: function() {
-    return i
+    return a
   },
   default: function() {
-    return l
+    return o
   }
 });
-var a = r("862205"),
-  n = r("15733");
-let u = (0, a.createExperiment)({
+var u = n("862205"),
+  i = n("15733");
+let r = (0, u.createExperiment)({
     kind: "user",
     id: "2022-03_block_russian_purchases",
     label: "Block purchases based on country",
@@ -24,7 +24,7 @@ let u = (0, a.createExperiment)({
       }
     }]
   }),
-  s = (0, a.createExperiment)({
+  l = (0, u.createExperiment)({
     kind: "user",
     id: "2022-03_block_russian_purchases_desktop",
     label: "Block purchases based on country (desktop specific flags)",
@@ -40,22 +40,22 @@ let u = (0, a.createExperiment)({
     }]
   });
 
-function i() {
+function a() {
   let {
-    paymentsBlocked: e
-  } = u.useExperiment({
+    paymentsBlocked: t
+  } = r.useExperiment({
     location: "c519a9_1"
   }, {
     autoTrackExposure: !1
   }), {
-    checkPaymentSource: t
-  } = s.useExperiment({
+    checkPaymentSource: e
+  } = l.useExperiment({
     location: "c519a9_2"
   }, {
     autoTrackExposure: !1
   }), {
-    defaultBillingCountryCode: r
-  } = (0, n.default)();
-  return e || t && "RU" === r
+    defaultBillingCountryCode: n
+  } = (0, i.default)();
+  return t || e && "RU" === n
 }
-var l = u
+var o = r

@@ -1,10 +1,10 @@
 "use strict";
-var i, r;
-n.r(e), n.d(e, {
+var t, o;
+E.r(_), E.d(_, {
   ReleaseChannelsSets: function() {
-    return a
+    return n
   }
-}), n("222007"), (r = i || (i = {})).STABLE = "stable", r.BETA = "beta", r.ALPHA = "alpha", r.PTB = "ptb", r.CANARY = "canary", r.STAGING = "staging", r.DEVELOPMENT = "development";
-let a = {
+}), E("222007"), (o = t || (t = {})).STABLE = "stable", o.BETA = "beta", o.ALPHA = "alpha", o.PTB = "ptb", o.CANARY = "canary", o.STAGING = "staging", o.DEVELOPMENT = "development";
+let n = {
   ALL: new Set(["alpha", "beta", "canary", "development", "ptb", "stable", "staging"])
 }

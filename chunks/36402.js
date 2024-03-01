@@ -1,56 +1,56 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return o
   }
 });
 var l = n("446674"),
-  u = n("913144");
-let r = {},
-  i = {};
-class a extends l.default.Store {
+  i = n("913144");
+let a = {},
+  s = {};
+class r extends l.default.Store {
   getRoleMemberCount(e) {
-    return null != e ? r[e] : null
+    return null != e ? a[e] : null
   }
   shouldFetch(e) {
     if (null == e) return !1;
-    let t = i[e];
+    let t = s[e];
     return null == t || Date.now() - t > 12e4
   }
 }
-a.displayName = "GuildRoleMemberCountStore";
-var d = new a(u.default, {
+r.displayName = "GuildRoleMemberCountStore";
+var o = new r(i.default, {
   GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
       roleMemberCount: n
     } = e;
-    r[t] = n, i[t] = Date.now()
+    a[t] = n, s[t] = Date.now()
   },
   GUILD_ROLE_MEMBER_COUNT_UPDATE: function(e) {
     let {
       guildId: t,
       roleId: n,
       count: l
-    } = e, u = r[t];
-    if (null == u) return !1;
-    u[n] = l
+    } = e, i = a[t];
+    if (null == i) return !1;
+    i[n] = l
   },
   GUILD_ROLE_MEMBER_BULK_ADD: function(e) {
     let {
       guildId: t,
       roleId: n,
       added: l
-    } = e, u = r[t];
-    if (null == u || null == u[n]) return !1;
-    let i = Object.keys(l).length;
-    u[n] += i
+    } = e, i = a[t];
+    if (null == i || null == i[n]) return !1;
+    let s = Object.keys(l).length;
+    i[n] += s
   },
   GUILD_ROLE_MEMBER_ADD: function(e) {
     let {
       guildId: t,
       roleId: n
-    } = e, l = r[t];
+    } = e, l = a[t];
     if (null == l || null == l[n]) return !1;
     l[n] = l[n] + 1
   },
@@ -58,7 +58,7 @@ var d = new a(u.default, {
     let {
       guildId: t,
       roleId: n
-    } = e, l = r[t];
+    } = e, l = a[t];
     if (null == l || null == l[n]) return !1;
     l[n] = Math.max(l[n] - 1, 0)
   },
@@ -67,12 +67,12 @@ var d = new a(u.default, {
       guildId: t,
       role: n
     } = e;
-    null == r[t] && (r[t] = {}), r[t][n.id] = 0
+    null == a[t] && (a[t] = {}), a[t][n.id] = 0
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    delete r[t.id], delete i[t.id]
+    delete a[t.id], delete s[t.id]
   }
 })

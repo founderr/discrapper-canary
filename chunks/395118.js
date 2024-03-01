@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   AnalyticsFeedTypes: function() {
-    return s
-  },
-  ForceFlushType: function() {
     return i
   },
+  ForceFlushType: function() {
+    return n
+  },
   AnalyticsFeedItemSeenManager: function() {
-    return c
+    return o
   }
-}), n("424973"), n("222007");
-var s, i, a, l, r = n("627445"),
-  u = n.n(r),
-  d = n("913144");
-(a = s || (s = {})).GUILD_HOME = "guild_home", a.FORUM_CHANNEL = "forum_channel", (l = i || (i = {}))[l.IMMEDIATE = 0] = "IMMEDIATE", l[l.IMMEDIATE_WITH_COOLDOWN = 1] = "IMMEDIATE_WITH_COOLDOWN", l[l.IMMEDIATE_WITH_DELAY = 2] = "IMMEDIATE_WITH_DELAY";
-class o {
+}), s("424973"), s("222007");
+var i, n, a, d, l = s("627445"),
+  u = s.n(l),
+  r = s("913144");
+(a = i || (i = {})).GUILD_HOME = "guild_home", a.FORUM_CHANNEL = "forum_channel", (d = n || (n = {}))[d.IMMEDIATE = 0] = "IMMEDIATE", d[d.IMMEDIATE_WITH_COOLDOWN = 1] = "IMMEDIATE_WITH_COOLDOWN", d[d.IMMEDIATE_WITH_DELAY = 2] = "IMMEDIATE_WITH_DELAY";
+class h {
   maybeMarkSeen(e) {
     let t = this.seenIntervals[this.seenIntervals.length - 1];
     return (null == t || null != t.endTimeMillis) && (this.seenIntervals.push({
@@ -31,28 +31,28 @@ class o {
   }
   computeSeenTimeDestructive(e) {
     let t = 0,
-      n = [];
-    for (let s of this.seenIntervals) {
-      if (null != s.endTimeMillis) {
-        t += s.endTimeMillis - s.startTimeMillis;
+      s = [];
+    for (let i of this.seenIntervals) {
+      if (null != i.endTimeMillis) {
+        t += i.endTimeMillis - i.startTimeMillis;
         continue
       }
       if (e) {
         let e = Date.now();
-        t += e - s.startTimeMillis, n.push({
+        t += e - i.startTimeMillis, s.push({
           startTimeMillis: e
         });
         continue
       }
-      n.push(s)
+      s.push(i)
     }
-    return u(n.length < 2, "there should only be a single left over data"), this.seenIntervals = n, Math.round(t)
+    return u(s.length < 2, "there should only be a single left over data"), this.seenIntervals = s, Math.round(t)
   }
   constructor() {
     this.seenIntervals = []
   }
 }
-class c {
+class o {
   maybeFlushSeenItems(e) {
     if (null == e && Date.now() - this._lastFlushTimeMillis < 6e4 || 1 === e && Date.now() - this._lastFlushTimeMillis < 3e3) return Promise.resolve();
     let t = this.createFlushSeenItemsFunction(e);
@@ -67,44 +67,44 @@ class c {
   constructor({
     id: e,
     windowId: t,
-    isPaused: n
+    isPaused: s
   }) {
     this.initialize = () => {
       var e;
-      d.default.subscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen), d.default.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen), d.default.subscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush), d.default.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate), d.default.subscribe("DRAWER_OPEN", this.handleDrawerOpen), d.default.subscribe("DRAWER_CLOSE", this.handleDrawerClose), d.default.subscribe("WINDOW_FOCUS", this.handleWindowFocus), null === (e = this.onInitialize) || void 0 === e || e.call(this)
+      r.default.subscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen), r.default.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen), r.default.subscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush), r.default.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate), r.default.subscribe("DRAWER_OPEN", this.handleDrawerOpen), r.default.subscribe("DRAWER_CLOSE", this.handleDrawerClose), r.default.subscribe("WINDOW_FOCUS", this.handleWindowFocus), null === (e = this.onInitialize) || void 0 === e || e.call(this)
     }, this.terminate = () => {
       var e;
-      d.default.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen), d.default.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen), d.default.unsubscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush), d.default.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate), d.default.unsubscribe("DRAWER_OPEN", this.handleDrawerOpen), d.default.unsubscribe("DRAWER_CLOSE", this.handleDrawerClose), d.default.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus), null === (e = this.onTerminate) || void 0 === e || e.call(this), this.maybeFlushSeenItems(0)
+      r.default.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen), r.default.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen), r.default.unsubscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush), r.default.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate), r.default.unsubscribe("DRAWER_OPEN", this.handleDrawerOpen), r.default.unsubscribe("DRAWER_CLOSE", this.handleDrawerClose), r.default.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus), null === (e = this.onTerminate) || void 0 === e || e.call(this), this.maybeFlushSeenItems(0)
     }, this.handleFeedItemFlush = e => {
       let {
         id: t,
-        force: n
+        force: s
       } = e;
-      this._id === t && this.maybeFlushSeenItems(n)
+      this._id === t && this.maybeFlushSeenItems(s)
     }, this.handleFeedItemSeen = e => {
       var t;
-      let n = e.id,
-        s = e.timestampMillis,
-        i = e.feedItemId;
-      if (n !== this._id) return;
+      let s = e.id,
+        i = e.timestampMillis,
+        n = e.feedItemId;
+      if (s !== this._id) return;
       if (this._paused) {
-        this._pausedFeedItemIds.add(i);
+        this._pausedFeedItemIds.add(n);
         return
       }
-      let a = this.getTrackedFeedItem(i),
-        l = a.maybeMarkSeen(s);
-      null === (t = this.onFeedItemSeen) || void 0 === t || t.call(this, i, l)
+      let a = this.getTrackedFeedItem(n),
+        d = a.maybeMarkSeen(i);
+      null === (t = this.onFeedItemSeen) || void 0 === t || t.call(this, n, d)
     }, this.handleFeedItemUnseen = e => {
       var t;
-      let n = e.id,
-        s = e.timestampMillis,
-        i = e.feedItemId;
-      if (n !== this._id) return;
-      this._paused && this._pausedFeedItemIds.delete(i);
-      let a = this.getTrackedFeedItem(i),
-        l = a.maybeMarkUnseen(s);
-      null === (t = this.onFeedItemUnseen) || void 0 === t || t.call(this, i, l), this.maybeFlushSeenItems()
-    }, this.getTrackedFeedItem = e => (null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new o), this.trackedFeedItems[e]), this.getVisibleFeedItemIds = () => {
+      let s = e.id,
+        i = e.timestampMillis,
+        n = e.feedItemId;
+      if (s !== this._id) return;
+      this._paused && this._pausedFeedItemIds.delete(n);
+      let a = this.getTrackedFeedItem(n),
+        d = a.maybeMarkUnseen(i);
+      null === (t = this.onFeedItemUnseen) || void 0 === t || t.call(this, n, d), this.maybeFlushSeenItems()
+    }, this.getTrackedFeedItem = e => (null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new h), this.trackedFeedItems[e]), this.getVisibleFeedItemIds = () => {
       let e = Object.keys(this.trackedFeedItems);
       return new Set(e.filter(e => {
         var t;
@@ -145,6 +145,6 @@ class c {
       this._isReactNavigationFocused = e, this._isReactNavigationFocused && !t ? this.resume() : this.pause()
     }, this.handleWindowFocus = e => {
       this._windowId === e.windowId && (e.focused ? this.resume() : this.pause())
-    }, this.trackedFeedItems = {}, this._id = e, this._windowId = t, this._pausedFeedItemIds = new Set, this._paused = null != n && n, this._isReactNavigationFocused = !0, this._lastFlushTimeMillis = Date.now()
+    }, this.trackedFeedItems = {}, this._id = e, this._windowId = t, this._pausedFeedItemIds = new Set, this._paused = null != s && s, this._isReactNavigationFocused = !0, this._lastFlushTimeMillis = Date.now()
   }
 }

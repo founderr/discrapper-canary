@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return T
   },
   validateOption: function() {
-    return I
+    return v
   },
   findTextOptions: function() {
-    return v
+    return I
   }
 }), n("424973"), n("222007");
 var l = n("798609"),
@@ -133,7 +133,7 @@ function T(e, t, n, l, a) {
   return i.updateOptionValidationStates(n, r), r
 }
 
-function I(e, t, n, l, r) {
+function v(e, t, n, l, r) {
   var o;
   let [u] = l, d = a.default.getActiveCommand(n), c = null == d ? void 0 : null === (o = d.options) || void 0 === o ? void 0 : o.find(e => e.name === u.optionName);
   if (null == c) return;
@@ -152,7 +152,7 @@ function I(e, t, n, l, r) {
   }), m
 }
 
-function v(e, t) {
+function I(e, t) {
   if (null == t.options || 0 === t.options.length) return [];
   let n = f.EditorUtils.richValue(e),
     l = [],

@@ -1,16 +1,16 @@
 "use strict";
-var e = r("859514"),
-  u = r("116180"),
-  i = r("308274"),
-  a = r("109024"),
-  o = r("53489"),
-  c = r("359529"),
-  f = 1 !== [].unshift(0);
+var e = n("859514"),
+  i = n("116180"),
+  o = n("308274"),
+  u = n("109024"),
+  a = n("53489"),
+  f = n("359529"),
+  c = 1 !== [].unshift(0);
 e({
   target: "Array",
   proto: !0,
   arity: 1,
-  forced: f || ! function() {
+  forced: c || ! function() {
     try {
       Object.defineProperty([], "length", {
         writable: !1
@@ -21,17 +21,17 @@ e({
   }()
 }, {
   unshift: function(t) {
-    var n = u(this),
-      r = i(n),
+    var r = i(this),
+      n = o(r),
       e = arguments.length;
     if (e) {
-      c(r + e);
-      for (var f = r; f--;) {
-        var s = f + e;
-        f in n ? n[s] = n[f] : o(n, s)
+      f(n + e);
+      for (var c = n; c--;) {
+        var s = c + e;
+        c in r ? r[s] = r[c] : a(r, s)
       }
-      for (var l = 0; l < e; l++) n[l] = arguments[l]
+      for (var l = 0; l < e; l++) r[l] = arguments[l]
     }
-    return a(n, r + e)
+    return u(r, n + e)
   }
 })

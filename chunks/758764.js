@@ -13,12 +13,12 @@ var u = n("446674"),
   s = n("520713"),
   c = n("49111"),
   S = n("782340");
-let d = !1,
-  E = null,
+let E = !1,
+  d = null,
   f = null;
 
 function _() {
-  d = !1, f = null
+  E = !1, f = null
 }
 
 function T(t) {
@@ -28,8 +28,8 @@ function T(t) {
     code: n,
     paymentId: u
   } = e;
-  if (n !== a.default.ErrorCodes.AUTHENTICATION_REQUIRED) return d = !1, !1;
-  !d && (d = !0, E = u, I(u))
+  if (n !== a.default.ErrorCodes.AUTHENTICATION_REQUIRED) return E = !1, !1;
+  !E && (E = !0, d = u, I(u))
 }
 async function I(t) {
   if (null == t) return;
@@ -54,18 +54,18 @@ function A(t) {
   let {
     payment: e
   } = t;
-  if (!d || e.id !== E || ![c.PaymentStatusTypes.COMPLETED, c.PaymentStatusTypes.CANCELED].includes(e.status)) return !1;
-  d = !1, f = null, E = null, i.default.wait(r.clearError), i.default.wait(l.clearPurchaseError)
+  if (!E || e.id !== d || ![c.PaymentStatusTypes.COMPLETED, c.PaymentStatusTypes.CANCELED].includes(e.status)) return !1;
+  E = !1, f = null, d = null, i.default.wait(r.clearError), i.default.wait(l.clearPurchaseError)
 }
 class p extends u.default.Store {
   get isAwaitingAuthentication() {
-    return d
+    return E
   }
   get error() {
     return f
   }
   get awaitingPaymentId() {
-    return E
+    return d
   }
 }
 p.displayName = "PaymentAuthenticationStore";
@@ -91,7 +91,7 @@ var C = new p(i.default, {
     let {
       error: e
     } = t;
-    f = e, d = !1
+    f = e, E = !1
   },
   PAYMENT_UPDATE: A,
   BILLING_PAYMENT_FETCH_SUCCESS: A

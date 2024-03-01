@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return _
   }
 }), n("424973");
-var r = n("917351"),
-  i = n.n(r),
-  s = n("446674"),
-  o = n("913144"),
+var i = n("917351"),
+  s = n.n(i),
+  r = n("446674"),
+  l = n("913144"),
   a = n("80507"),
-  l = n("374363"),
+  o = n("374363"),
   u = n("718517"),
   c = n("364685"),
   d = n("397336");
@@ -17,7 +17,7 @@ let f = {
   pendingUsages: []
 };
 u.default.Millis.DAY;
-let E = new a.default({
+let h = new a.default({
     computeBonus: () => 100,
     computeWeight: e => {
       let t = 0;
@@ -27,25 +27,25 @@ let E = new a.default({
     afterCompute: () => {},
     numFrequentlyItems: 20
   }),
-  h = () => {
-    c.default.isLoaded && E.compute()
+  E = () => {
+    c.default.isLoaded && h.compute()
   },
-  _ = () => {
-    h()
+  p = () => {
+    E()
   };
 
-function p() {
+function C() {
   var e;
-  let t = null === (e = l.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
+  let t = null === (e = o.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
   if (null == t) return !1;
-  E.overwriteHistory(i.mapValues(t, e => ({
+  h.overwriteHistory(s.mapValues(t, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), f.pendingUsages)
 }
-class S extends s.default.PersistedStore {
+class v extends r.default.PersistedStore {
   initialize(e) {
-    this.waitFor(c.default), null != e && (f = e), this.syncWith([c.default], _), this.syncWith([l.default], p)
+    this.waitFor(c.default), null != e && (f = e), this.syncWith([c.default], p), this.syncWith([o.default], C)
   }
   getState() {
     return f
@@ -54,21 +54,21 @@ class S extends s.default.PersistedStore {
     return f.pendingUsages.length > 0
   }
   get stickerFrecencyWithoutFetchingLatest() {
-    return E
+    return h
   }
 }
-S.displayName = "StickersPersistedStore", S.persistKey = "StickersPersistedStoreV2";
-var C = new S(o.default, {
+v.displayName = "StickersPersistedStore", v.persistKey = "StickersPersistedStoreV2";
+var _ = new v(l.default, {
   STICKER_TRACK_USAGE: e => {
     let {
       stickerIds: t
     } = e;
     null == t || t.forEach(e => {
-      E.track(e), f.pendingUsages.push({
+      h.track(e), f.pendingUsages.push({
         key: e,
         timestamp: Date.now()
       })
-    }), h()
+    }), E()
   },
   USER_SETTINGS_PROTO_UPDATE: function(e) {
     let {

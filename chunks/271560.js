@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getStoreListingLocation: function() {
-    return S
+    return I
   },
   getApplicationStoreListingLocation: function() {
     return A
@@ -49,9 +49,9 @@ var s = n("917351"),
   T = n("49111"),
   C = n("782340");
 d.shim();
-let I = !u.isMobile && !u.isTablet && -1 !== (0, h.getChromeVersion)();
+let S = !u.isMobile && !u.isTablet && -1 !== (0, h.getChromeVersion)();
 
-function S(e, t) {
+function I(e, t) {
   let {
     analyticsSource: n,
     analyticsProperties: s,
@@ -100,7 +100,7 @@ function D(e, t, n, s) {
     default:
       s = "webp"
   }
-  "webp" === s && !I && (s = "png");
+  "webp" === s && !S && (s = "png");
   let o = "string" == typeof t ? t : t.id,
     d = (i = "https:", "https:");
   return r = null != a ? "".concat(d, "//").concat(a, "/app-assets/").concat(e, "/store/").concat(o, ".").concat(s) : "".concat(d).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(T.Endpoints.STORE_ASSET(e, o, s)), null != n && (r += "?size=".concat((0, _.getBestMediaProxySize)(n * (0, _.getDevicePixelRatio)()))), r

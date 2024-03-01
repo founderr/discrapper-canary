@@ -1,86 +1,86 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(e), n.d(e, {
   fetchUserEntitlementsForApplication: function() {
-    return i
+    return a
   },
   fetchUserEntitlements: function() {
-    return l
+    return o
   },
   fetchGiftableEntitlements: function() {
-    return o
+    return s
   }
 });
-var a = r("872717"),
-  n = r("913144"),
-  u = r("271560"),
-  s = r("49111");
+var u = n("872717"),
+  i = n("913144"),
+  r = n("271560"),
+  l = n("49111");
 
-function i(e) {
-  let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return n.default.wait(() => {
-    n.default.dispatch({
+function a(t) {
+  let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+  return i.default.wait(() => {
+    i.default.dispatch({
       type: "ENTITLEMENT_FETCH_APPLICATION_START",
-      applicationId: e
+      applicationId: t
     })
-  }), a.default.get({
-    url: s.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
+  }), u.default.get({
+    url: l.Endpoints.ENTITLEMENTS_FOR_APPLICATION(t),
     oldFormErrors: !0,
     query: {
-      exclude_consumed: t
+      exclude_consumed: e
     }
-  }).then(t => (n.default.dispatch({
+  }).then(e => (i.default.dispatch({
     type: "ENTITLEMENT_FETCH_APPLICATION_SUCCESS",
-    applicationId: e,
-    entitlements: t.body
-  }), t.body)).catch(() => {
-    n.default.dispatch({
+    applicationId: t,
+    entitlements: e.body
+  }), e.body)).catch(() => {
+    i.default.dispatch({
       type: "ENTITLEMENT_FETCH_APPLICATION_FAIL",
-      applicationId: e
+      applicationId: t
     })
   })
 }
-async function l(e) {
+async function o(t) {
   let {
-    withSku: t = !1,
-    withApplication: r = !1,
-    entitlementType: u
-  } = e;
-  n.default.dispatch({
+    withSku: e = !1,
+    withApplication: n = !1,
+    entitlementType: r
+  } = t;
+  i.default.dispatch({
     type: "ENTITLEMENTS_FETCH_FOR_USER_START"
   });
   try {
-    let e = await a.default.get({
-      url: s.Endpoints.ENTITLEMENTS_FOR_USER,
+    let t = await u.default.get({
+      url: l.Endpoints.ENTITLEMENTS_FOR_USER,
       query: {
-        with_sku: t,
-        with_application: r,
-        entitlement_type: u
+        with_sku: e,
+        with_application: n,
+        entitlement_type: r
       }
     });
-    n.default.dispatch({
+    i.default.dispatch({
       type: "ENTITLEMENTS_FETCH_FOR_USER_SUCCESS",
-      entitlements: e.body
+      entitlements: t.body
     })
-  } catch (e) {
-    n.default.dispatch({
+  } catch (t) {
+    i.default.dispatch({
       type: "ENTITLEMENTS_FETCH_FOR_USER_FAIL"
     })
   }
 }
-async function o() {
-  n.default.dispatch({
+async function s() {
+  i.default.dispatch({
     type: "ENTITLEMENTS_GIFTABLE_FETCH"
   });
   try {
-    let e = await (0, u.httpGetWithCountryCodeQuery)({
-      url: s.Endpoints.ENTITLEMENTS_GIFTABLE
+    let t = await (0, r.httpGetWithCountryCodeQuery)({
+      url: l.Endpoints.ENTITLEMENTS_GIFTABLE
     });
-    n.default.dispatch({
+    i.default.dispatch({
       type: "ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS",
-      entitlements: e.body
+      entitlements: t.body
     })
-  } catch (e) {
-    n.default.dispatch({
+  } catch (t) {
+    i.default.dispatch({
       type: "ENTITLEMENTS_GIFTABLE_FETCH_FAIL"
     })
   }

@@ -23,8 +23,8 @@ var s, i = n("627445"),
   y = n("313915"),
   T = n("599110"),
   C = n("922932"),
-  I = n("718517"),
-  S = n("773336"),
+  S = n("718517"),
+  I = n("773336"),
   A = n("286235"),
   D = n("41642"),
   N = n("265912"),
@@ -40,9 +40,9 @@ let L = new v.default("GatewaySocket"),
   U = new P.default;
 
 function G() {}
-let F = 30 * I.default.Millis.SECOND,
-  H = 3 * I.default.Millis.MINUTE,
-  B = 1 * I.default.Millis.MINUTE;
+let F = 30 * S.default.Millis.SECOND,
+  H = 3 * S.default.Millis.MINUTE,
+  B = 1 * S.default.Millis.MINUTE;
 
 function x(e) {
   return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength
@@ -239,7 +239,7 @@ s = class extends R.default {
     }
   }
   _tryDetectInvalidIOSToken(e, t, n) {
-    (0, S.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && f.default.get({
+    (0, I.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && f.default.get({
       url: w.Endpoints.ME,
       headers: {
         authorization: this.token

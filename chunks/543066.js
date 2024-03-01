@@ -1,5 +1,5 @@
-var r = n("60297"),
-  o = n("346173");
+var n = r("60297"),
+  u = r("346173");
 e.exports = function(e) {
-  return "symbol" == typeof e || o(e) && "[object Symbol]" == r(e)
+  return "symbol" == typeof e || u(e) && "[object Symbol]" == n(e)
 }

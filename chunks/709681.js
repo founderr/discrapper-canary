@@ -2,27 +2,27 @@
 let s;
 n.r(t), n.d(t, {
   createSoundForPack: function() {
-    return r
+    return o
   },
   createSound: function() {
-    return a
+    return d
   },
   playSound: function() {
     return c
   }
 });
-var u = n("870696"),
-  o = n("319291"),
-  i = n("102985");
+var i = n("870696"),
+  u = n("319291"),
+  a = n("102985");
 
-function r(e, t) {
+function o(e, t) {
   var n;
   let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-    u = (0, o.default)(t);
-  return a(null !== (n = u[e]) && void 0 !== n ? n : e, e, s)
+    i = (0, u.default)(t);
+  return d(null !== (n = i[e]) && void 0 !== n ? n : e, e, s)
 }
 
-function a(e, t) {
+function d(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
   return new s(e, t, n)
 }
@@ -31,9 +31,9 @@ function c(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
     s = arguments.length > 2 ? arguments[2] : void 0;
-  if (i.default.disableSounds) return;
-  let r = (0, o.default)(u.default.getSoundpack()),
-    c = a(null !== (t = r[e]) && void 0 !== t ? t : e, e, n);
+  if (a.default.disableSounds) return;
+  let o = (0, u.default)(i.default.getSoundpack()),
+    c = d(null !== (t = o[e]) && void 0 !== t ? t : e, e, n);
   return null != s ? c.playWithListener().then(e => {
     e && s()
   }) : c.play(), c

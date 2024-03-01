@@ -4,24 +4,24 @@ n.r(t), n.d(t, {
     return r.default
   },
   APIError: function() {
-    return s.default
+    return i.default
   },
   BillingError: function() {
-    return o.default
-  },
-  AppliedGuildBoostError: function() {
-    return a.default
-  },
-  UploadVoiceDebugLogsError: function() {
     return l.default
   },
+  AppliedGuildBoostError: function() {
+    return u.default
+  },
+  UploadVoiceDebugLogsError: function() {
+    return a.default
+  },
   UploadErrorCodes: function() {
-    return l.UploadErrorCodes
+    return a.UploadErrorCodes
   }
 });
 var r = n("333805"),
-  s = n("599417"),
-  o = n("736978");
+  i = n("599417"),
+  l = n("736978");
 n("852766"), n("846071");
-var a = n("54545"),
-  l = n("927367")
+var u = n("54545"),
+  a = n("927367")

@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return s
+    return n
   }
 });
-var r = n("446674"),
-  i = n("76393");
+var t = E("446674"),
+  o = E("76393");
 
-function s() {
-  return (0, r.useStateFromStores)([i.default], () => null != i.default.getRemoteSessionId() || null != i.default.getAwaitingRemoteSessionInfo())
+function n() {
+  return (0, t.useStateFromStores)([o.default], () => null != o.default.getRemoteSessionId() || null != o.default.getAwaitingRemoteSessionInfo())
 }

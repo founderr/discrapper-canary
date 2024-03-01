@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 }), n("222007");
-var r = n("884691");
+var i = n("884691");
 
-function i(e) {
-  let [t, n] = (0, r.useState)(!1), i = (0, r.useRef)(e.current);
-  return (0, r.useEffect)(() => {
-    i.current = e.current
-  }, [e]), (0, r.useEffect)(() => {
-    let e = i.current;
+function s(e) {
+  let [t, n] = (0, i.useState)(!1), s = (0, i.useRef)(e.current);
+  return (0, i.useEffect)(() => {
+    s.current = e.current
+  }, [e]), (0, i.useEffect)(() => {
+    let e = s.current;
     if (null == e) return;
     let t = () => n(!0),
-      r = () => n(!1);
-    return e.addEventListener("mouseenter", t), e.addEventListener("mouseleave", r), () => {
-      e.removeEventListener("mouseenter", t), e.removeEventListener("mouseleave", r)
+      i = () => n(!1);
+    return e.addEventListener("mouseenter", t), e.addEventListener("mouseleave", i), () => {
+      e.removeEventListener("mouseenter", t), e.removeEventListener("mouseleave", i)
     }
-  }, [i]), t
+  }, [s]), t
 }

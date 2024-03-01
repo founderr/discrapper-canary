@@ -1,4 +1,4 @@
-var a = n("354069");
+var r = n("354069");
 e.exports = function(e, t) {
-  return a(e, t)
+  return r(e, t)
 }

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return l
+    return t
   }
 });
-var l = {
+var t = {
   HANDSHAKE: 0,
   FRAME: 1,
   CLOSE: 2,

@@ -12,8 +12,8 @@ var n = r("637612"),
   a = r("49111");
 let f = null,
   o = {},
-  E = [],
-  _ = new Set,
+  _ = [],
+  E = new Set,
   c = !1,
   d = new Set,
   R = new Set,
@@ -52,16 +52,16 @@ class F extends i.default.Store {
     return this.checkAndFetchReferralsRemaining(), f
   }
   getSentUserIds() {
-    return this.checkAndFetchReferralsRemaining(), null == E ? [] : E
+    return this.checkAndFetchReferralsRemaining(), null == _ ? [] : _
   }
   isFetchingReferralsRemaining() {
     return c
   }
   isFetchingRecipientEligibility(e) {
-    return _.has(e)
+    return E.has(e)
   }
   getRecipientEligibility(e) {
-    return void 0 === o[e] && !_.has(e) && (0, s.checkRecipientEligibility)(e), o[e]
+    return void 0 === o[e] && !E.has(e) && (0, s.checkRecipientEligibility)(e), o[e]
   }
   getRelevantUserTrialOffer(e) {
     return I[e]
@@ -77,7 +77,7 @@ var h = new F(l.default, {
       userTrialOfferId: t,
       recipientId: r
     } = e;
-    if (!c && (0, s.fetchReferralsRemaining)(), !_.has(r) && (0, s.checkRecipientEligibility)(r), !d.has(t)) {
+    if (!c && (0, s.fetchReferralsRemaining)(), !E.has(r) && (0, s.checkRecipientEligibility)(r), !d.has(t)) {
       var n;
       n = t, d.add(n), l.default.wait(() => (0, s.resolveReferralTrialOffer)(t).catch(a.NOOP_NULL))
     }
@@ -91,7 +91,7 @@ var h = new F(l.default, {
       referrals_remaining: t,
       sent_user_ids: r
     } = e;
-    c = !1, f = t, E = r
+    c = !1, f = t, _ = r
   },
   BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
     let {} = e;
@@ -101,26 +101,26 @@ var h = new F(l.default, {
     let {
       recipientId: t
     } = e;
-    _.add(t)
+    E.add(t)
   },
   BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: function(e) {
     let {
       recipientId: t,
       is_eligible: r
     } = e;
-    o[t] = r, _.delete(t)
+    o[t] = r, E.delete(t)
   },
   BILLING_CREATE_REFERRAL_PREVIEW_FAIL: function(e) {
     let {
       recipientId: t
     } = e;
-    o[t] = !1, _.delete(t)
+    o[t] = !1, E.delete(t)
   },
   BILLING_CREATE_REFERRAL_SUCCESS: function(e) {
     let {
       userTrialOffer: t
     } = e;
-    (0, s.fetchReferralsRemaining)(), I[t.id] = t, E = [...E, t.user_id]
+    (0, s.fetchReferralsRemaining)(), I[t.id] = t, _ = [..._, t.user_id]
   },
   BILLING_REFERRAL_RESOLVE_SUCCESS: function(e) {
     let {
@@ -143,6 +143,6 @@ var h = new F(l.default, {
   },
   LOAD_MESSAGES_AROUND_SUCCESS: A,
   LOGOUT: function() {
-    f = null, o = {}, E = [], _ = new Set, c = !1, d = new Set, R = new Set, I = {}, L = 0, S = null
+    f = null, o = {}, _ = [], E = new Set, c = !1, d = new Set, R = new Set, I = {}, L = 0, S = null
   }
 })

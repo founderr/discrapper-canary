@@ -1,84 +1,84 @@
 "use strict";
 n.r(t), n.d(t, {
   accountDetailsInit: function() {
-    return A
+    return c
   },
   accountDetailsClose: function() {
-    return I
+    return s
   },
   disableAccount: function() {
-    return R
+    return f
   },
   saveAccountRequest: function() {
     return N
   },
   saveAccountChanges: function() {
-    return p
+    return A
   },
   getHarvestStatus: function() {
-    return S
-  },
-  requestHarvest: function() {
-    return T
-  },
-  setPendingAvatar: function() {
-    return C
-  },
-  setPendingGlobalNameName: function() {
-    return m
-  },
-  setPendingAvatarDecoration: function() {
-    return h
-  },
-  setPendingProfileEffectId: function() {
-    return L
-  },
-  clearErrors: function() {
-    return D
-  },
-  resetPendingAccountChanges: function() {
-    return O
-  },
-  resetAllPending: function() {
     return U
   },
-  resetAndCloseUserProfileForm: function() {
+  requestHarvest: function() {
+    return p
+  },
+  setPendingAvatar: function() {
+    return R
+  },
+  setPendingGlobalNameName: function() {
+    return D
+  },
+  setPendingAvatarDecoration: function() {
+    return G
+  },
+  setPendingProfileEffectId: function() {
+    return C
+  },
+  clearErrors: function() {
+    return O
+  },
+  resetPendingAccountChanges: function() {
+    return P
+  },
+  resetAllPending: function() {
     return g
   },
+  resetAndCloseUserProfileForm: function() {
+    return v
+  },
   setDisableSubmit: function() {
-    return P
+    return L
   }
 });
-var r = n("872717"),
-  s = n("95410"),
-  o = n("819855"),
-  a = n("913144"),
-  l = n("393414"),
-  u = n("599110"),
-  i = n("315102"),
-  d = n("730622"),
-  c = n("437822"),
-  _ = n("49111"),
-  E = n("191349"),
-  f = n("782340");
+var i = n("872717"),
+  r = n("95410"),
+  u = n("819855"),
+  o = n("913144"),
+  _ = n("393414"),
+  l = n("599110"),
+  E = n("315102"),
+  T = n("730622"),
+  d = n("437822"),
+  a = n("49111"),
+  S = n("191349"),
+  I = n("782340");
 
-function A() {
-  a.default.dispatch({
+function c() {
+  o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_INIT"
   })
 }
 
-function I() {
-  a.default.dispatch({
+function s() {
+  o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_CLOSE"
   })
 }
 
-function R(e, t) {
-  let n = t ? f.default.Messages.DELETE_ACCOUNT : f.default.Messages.DISABLE_ACCOUNT,
-    s = t ? _.Endpoints.DELETE_ACCOUNT : _.Endpoints.DISABLE_ACCOUNT;
-  return (0, d.default)(t => r.default.post({
-    url: s,
+function f(e, t) {
+  let n = t ? I.default.Messages.DELETE_ACCOUNT : I.default.Messages.DISABLE_ACCOUNT,
+    r = t ? a.Endpoints.DELETE_ACCOUNT : a.Endpoints.DISABLE_ACCOUNT;
+  return (0, T.default)(t => i.default.post({
+    url: r,
     body: {
       password: e,
       ...t
@@ -90,157 +90,157 @@ function R(e, t) {
     },
     checkEnabled: !1
   }).then(() => {
-    c.default.logoutInternal(), (0, l.transitionTo)(_.Routes.DEFAULT_LOGGED_OUT)
+    d.default.logoutInternal(), (0, _.transitionTo)(a.Routes.DEFAULT_LOGGED_OUT)
   })
 }
 async function N(e) {
-  let t = await r.default.patch({
-      url: _.Endpoints.ME,
+  let t = await i.default.patch({
+      url: a.Endpoints.ME,
       oldFormErrors: !0,
       body: e
     }),
     n = t.body;
   if (n.token) {
     let t = n.token;
-    delete n.token, a.default.dispatch({
+    delete n.token, o.default.dispatch({
       type: "UPDATE_TOKEN",
       token: t,
       userId: n.id
-    }), (null == e ? void 0 : e.password) != null && (null == e ? void 0 : e.new_password) != null && a.default.dispatch({
+    }), (null == e ? void 0 : e.password) != null && (null == e ? void 0 : e.new_password) != null && o.default.dispatch({
       type: "PASSWORD_UPDATED",
       userId: n.id
     })
   }
-  return a.default.dispatch({
+  return o.default.dispatch({
     type: "CURRENT_USER_UPDATE",
     user: n
   }), t
 }
 
-function p(e) {
+function A(e) {
   let {
     username: t,
     discriminator: n,
-    email: r,
-    emailToken: o,
-    password: l,
-    avatar: c,
-    avatarDecoration: A,
-    newPassword: I,
-    globalName: R
+    email: i,
+    emailToken: u,
+    password: _,
+    avatar: d,
+    avatarDecoration: c,
+    newPassword: s,
+    globalName: f
   } = e;
-  return a.default.dispatch({
+  return o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SUBMIT"
-  }), (0, d.default)(e => {
-    let a = {
+  }), (0, T.default)(e => {
+    let o = {
       username: t,
-      email: r,
-      email_token: o,
-      password: l,
-      avatar: c,
+      email: i,
+      email_token: u,
+      password: _,
+      avatar: d,
       discriminator: n,
-      global_name: R,
-      new_password: I,
+      global_name: f,
+      new_password: s,
       ...e
     };
-    null === A && (a.avatar_decoration_id = null), null != A && (a.avatar_decoration_id = A.id, a.avatar_decoration_sku_id = A.skuId);
-    let u = s.default.get(_.DEVICE_TOKEN),
-      i = (0, E.getDevicePushProvider)();
-    null != i && null != u && (a.push_provider = i, a.push_token = u);
-    let d = s.default.get(_.DEVICE_VOIP_TOKEN);
-    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != d && (a.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, a.push_voip_token = d), N(a)
+    null === c && (o.avatar_decoration_id = null), null != c && (o.avatar_decoration_id = c.id, o.avatar_decoration_sku_id = c.skuId);
+    let l = r.default.get(a.DEVICE_TOKEN),
+      E = (0, S.getDevicePushProvider)();
+    null != E && null != l && (o.push_provider = E, o.push_token = l);
+    let T = r.default.get(a.DEVICE_VOIP_TOKEN);
+    return null != S.DEVICE_PUSH_VOIP_PROVIDER && null != T && (o.push_voip_provider = S.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = T), N(o)
   }, {
     checkEnabled: !1,
     modalProps: {
-      title: f.default.Messages.TWO_FA_CHANGE_ACCOUNT
+      title: I.default.Messages.TWO_FA_CHANGE_ACCOUNT
     },
     hooks: {
-      onEarlyClose: () => a.default.dispatch({
+      onEarlyClose: () => o.default.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE",
         errors: {}
       })
     }
   }).then(e => {
     let t = e.body;
-    return u.default.track(_.AnalyticEvents.USER_AVATAR_UPDATED, {
-      animated: (0, i.isAnimatedIconHash)(t.avatar)
-    }), a.default.dispatch({
+    return l.default.track(a.AnalyticEvents.USER_AVATAR_UPDATED, {
+      animated: (0, E.isAnimatedIconHash)(t.avatar)
+    }), o.default.dispatch({
       type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS"
     }), e
-  }, e => (a.default.dispatch({
+  }, e => (o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE",
     errors: e.body
   }), e))
 }
 
-function S() {
-  return r.default.get({
-    url: _.Endpoints.USER_HARVEST,
+function U() {
+  return i.default.get({
+    url: a.Endpoints.USER_HARVEST,
     oldFormErrors: !0
   })
 }
 
-function T() {
-  return r.default.post({
-    url: _.Endpoints.USER_HARVEST,
+function p() {
+  return i.default.post({
+    url: a.Endpoints.USER_HARVEST,
     oldFormErrors: !0
   })
 }
 
-function C(e) {
-  a.default.dispatch({
+function R(e) {
+  o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
     avatar: e
-  }), null == e ? o.AccessibilityAnnouncer.announce(f.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : o.AccessibilityAnnouncer.announce(f.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
+  }), null == e ? u.AccessibilityAnnouncer.announce(I.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : u.AccessibilityAnnouncer.announce(I.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
 }
 
-function m(e) {
-  a.default.dispatch({
+function D(e) {
+  o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
     globalName: e
   })
 }
 
-function h(e) {
-  a.default.dispatch({
+function G(e) {
+  o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
     avatarDecoration: e
   })
 }
 
-function L(e) {
-  a.default.dispatch({
+function C(e) {
+  o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID",
     profileEffectId: e
   })
 }
 
-function D() {
-  a.default.dispatch({
+function O() {
+  o.default.dispatch({
     type: "USER_SETTINGS_CLEAR_ERRORS"
   })
 }
 
-function O() {
-  a.default.dispatch({
+function P() {
+  o.default.dispatch({
     type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
   })
 }
 
-function U() {
-  a.default.dispatch({
+function g() {
+  o.default.dispatch({
     type: "USER_SETTINGS_RESET_ALL_PENDING"
   })
 }
 
-function g() {
-  a.default.dispatch({
+function v() {
+  o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
   })
 }
 
-function P(e) {
-  a.default.dispatch({
+function L(e) {
+  o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
     disable: e
   })

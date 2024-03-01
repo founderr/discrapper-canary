@@ -5,27 +5,27 @@ n.r(t), n.d(t, {
   }
 }), n("702976"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
 var i = n("872717"),
-  r = n("913144"),
-  l = n("568734"),
-  s = n("299285"),
+  s = n("913144"),
+  r = n("568734"),
+  l = n("299285"),
   a = n("49111"),
   o = {
     async createApplication(e) {
       let {
         name: t,
         guildId: n,
-        type: l,
-        teamId: s
+        type: r,
+        teamId: l
       } = e, o = await i.default.post({
         url: a.Endpoints.APPLICATIONS,
         body: {
           name: t,
-          type: l,
+          type: r,
           guild_id: n,
-          team_id: s
+          team_id: l
         }
       }), u = o.body;
-      return null != n && null != l && r.default.dispatch({
+      return null != n && null != r && s.default.dispatch({
         type: "APPLICATION_FETCH_SUCCESS",
         application: u
       }), u
@@ -34,45 +34,45 @@ var i = n("872717"),
       let {
         includeTeam: t,
         ...n
-      } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, l = await i.default.get({
+      } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, r = await i.default.get({
         url: a.Endpoints.GUILD_APPLICATIONS(e),
         query: {
           ...n,
           include_team: t
         }
-      }), s = l.body;
-      return r.default.dispatch({
+      }), l = r.body;
+      return s.default.dispatch({
         type: "APPLICATIONS_FETCH_SUCCESS",
-        applications: s
-      }), s
+        applications: l
+      }), l
     },
     async transferApplication(e) {
       let {
         applicationId: t,
         teamId: n
-      } = e, l = await i.default.post({
+      } = e, r = await i.default.post({
         url: a.Endpoints.APPLICATION_OWNER_TRANSFER(t),
         body: {
           team_id: n
         }
-      }), s = l.body;
-      return r.default.dispatch({
+      }), l = r.body;
+      return s.default.dispatch({
         type: "APPLICATION_FETCH_SUCCESS",
-        application: s
-      }), s
+        application: l
+      }), l
     },
     async fetchApplications(e) {
       let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = e;
       if (!t && (n = e.filter(e => {
           var t, n;
-          let i = s.default.getApplication(e),
-            r = (0, l.hasFlag)(null !== (n = null == i ? void 0 : i.flags) && void 0 !== n ? n : 0, a.ApplicationFlags.EMBEDDED),
-            o = r && (null == i ? void 0 : null === (t = i.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null;
-          return !(null != i && !o) && !s.default.isFetchingApplication(e) && !s.default.didFetchingApplicationFail(e) && e.length > 0
+          let i = l.default.getApplication(e),
+            s = (0, r.hasFlag)(null !== (n = null == i ? void 0 : i.flags) && void 0 !== n ? n : 0, a.ApplicationFlags.EMBEDDED),
+            o = s && (null == i ? void 0 : null === (t = i.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null;
+          return !(null != i && !o) && !l.default.isFetchingApplication(e) && !l.default.didFetchingApplicationFail(e) && e.length > 0
         })), n.length > 0) {
         let e;
-        r.default.dispatch({
+        s.default.dispatch({
           type: "APPLICATIONS_FETCH",
           applicationIds: n
         });
@@ -83,12 +83,12 @@ var i = n("872717"),
             oldFormErrors: !0
           })
         } catch (e) {
-          throw r.default.dispatch({
+          throw s.default.dispatch({
             type: "APPLICATIONS_FETCH_FAIL",
             applicationIds: n
           }), e
         }
-        r.default.dispatch({
+        s.default.dispatch({
           type: "APPLICATIONS_FETCH_SUCCESS",
           applications: e.body
         })
@@ -96,7 +96,7 @@ var i = n("872717"),
     },
     fetchApplication(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      return r.default.dispatch({
+      return s.default.dispatch({
         type: "APPLICATION_FETCH",
         applicationId: e
       }), i.default.get({
@@ -105,10 +105,10 @@ var i = n("872717"),
           with_guild: t
         },
         oldFormErrors: !0
-      }).then(e => (r.default.dispatch({
+      }).then(e => (s.default.dispatch({
         type: "APPLICATION_FETCH_SUCCESS",
         application: e.body
-      }), e.body)).catch(t => (r.default.dispatch({
+      }), e.body)).catch(t => (s.default.dispatch({
         type: "APPLICATION_FETCH_FAIL",
         applicationId: e
       }), Promise.reject(t)))

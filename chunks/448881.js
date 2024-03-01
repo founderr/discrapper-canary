@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return C
   },
   resetQuestDismissibilityStatus: function() {
-    return h
+    return g
   }
 });
 var s = n("872717"),
@@ -244,7 +244,7 @@ async function C(e) {
     })
   }
 }
-async function h(e) {
+async function g(e) {
   try {
     let t = await s.default.delete({
       url: o.Endpoints.QUESTS_PREVIEW_DISMISSIBILITY(e),

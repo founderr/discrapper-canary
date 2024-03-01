@@ -1,38 +1,38 @@
 "use strict";
-var n, r, a = i("868822"),
-  s = i("64980"),
-  o = i("998270"),
-  l = i("383252"),
-  u = i("854745"),
-  c = i("17758"),
-  h = i("148066"),
-  f = i("515011").get,
-  d = i("297403"),
-  m = i("34810"),
-  v = c("native-string-replace", String.prototype.replace),
-  p = RegExp.prototype.exec,
-  g = p,
-  x = s("".charAt),
-  I = s("".indexOf),
-  w = s("".replace),
-  y = s("".slice);
-var b = (r = /b*/g, a(p, n = /a/, "a"), a(p, r, "a"), 0 !== n.lastIndex || 0 !== r.lastIndex),
-  A = u.BROKEN_CARET,
-  F = void 0 !== /()??/.exec("")[1];
-(b || F || A || d || m) && (g = function(t) {
-  var e, i, n, r, s, u, c, d = f(this),
-    m = o(t),
-    k = d.raw;
-  if (k) return k.lastIndex = this.lastIndex, e = a(g, k, m), this.lastIndex = k.lastIndex, e;
-  var E = d.groups,
-    C = A && this.sticky,
-    _ = a(l, this),
-    T = this.source,
-    q = 0,
-    R = m;
-  if (C && (-1 === I(_ = w(_, "y", ""), "g") && (_ += "g"), R = y(m, this.lastIndex), this.lastIndex > 0 && (!this.multiline || this.multiline && "\n" !== x(m, this.lastIndex - 1)) && (T = "(?: " + T + ")", R = " " + R, q++), i = RegExp("^(?:" + T + ")", _)), F && (i = RegExp("^" + T + "$(?!\\s)", _)), b && (n = this.lastIndex), r = a(p, C ? i : this, R), C ? r ? (r.input = y(r.input, q), r[0] = y(r[0], q), r.index = this.lastIndex, this.lastIndex += r[0].length) : this.lastIndex = 0 : b && r && (this.lastIndex = this.global ? r.index + r[0].length : n), F && r && r.length > 1 && a(v, r[0], i, function() {
-      for (s = 1; s < arguments.length - 2; s++) void 0 === arguments[s] && (r[s] = void 0)
-    }), r && E)
-    for (s = 0, r.groups = u = h(null); s < E.length; s++) u[(c = E[s])[0]] = r[c[1]];
-  return r
+var e, i, u = n("868822"),
+  o = n("64980"),
+  c = n("998270"),
+  a = n("383252"),
+  s = n("854745"),
+  f = n("17758"),
+  l = n("148066"),
+  p = n("515011").get,
+  v = n("297403"),
+  x = n("34810"),
+  h = f("native-string-replace", String.prototype.replace),
+  d = RegExp.prototype.exec,
+  g = d,
+  y = o("".charAt),
+  E = o("".indexOf),
+  b = o("".replace),
+  I = o("".slice);
+var R = (i = /b*/g, u(d, e = /a/, "a"), u(d, i, "a"), 0 !== e.lastIndex || 0 !== i.lastIndex),
+  k = s.BROKEN_CARET,
+  m = void 0 !== /()??/.exec("")[1];
+(R || m || k || v || x) && (g = function(t) {
+  var r, n, e, i, o, s, f, v = p(this),
+    x = c(t),
+    S = v.raw;
+  if (S) return S.lastIndex = this.lastIndex, r = u(g, S, x), this.lastIndex = S.lastIndex, r;
+  var $ = v.groups,
+    A = k && this.sticky,
+    T = u(a, this),
+    C = this.source,
+    w = 0,
+    O = x;
+  if (A && (-1 === E(T = b(T, "y", ""), "g") && (T += "g"), O = I(x, this.lastIndex), this.lastIndex > 0 && (!this.multiline || this.multiline && "\n" !== y(x, this.lastIndex - 1)) && (C = "(?: " + C + ")", O = " " + O, w++), n = RegExp("^(?:" + C + ")", T)), m && (n = RegExp("^" + C + "$(?!\\s)", T)), R && (e = this.lastIndex), i = u(d, A ? n : this, O), A ? i ? (i.input = I(i.input, w), i[0] = I(i[0], w), i.index = this.lastIndex, this.lastIndex += i[0].length) : this.lastIndex = 0 : R && i && (this.lastIndex = this.global ? i.index + i[0].length : e), m && i && i.length > 1 && u(h, i[0], n, function() {
+      for (o = 1; o < arguments.length - 2; o++) void 0 === arguments[o] && (i[o] = void 0)
+    }), i && $)
+    for (o = 0, i.groups = s = l(null); o < $.length; o++) s[(f = $[o])[0]] = i[f[1]];
+  return i
 }), t.exports = g

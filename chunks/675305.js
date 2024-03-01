@@ -1,79 +1,79 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
-    return o
+    return d
   }
-}), n("222007");
-var i = n("446674"),
-  l = n("913144");
-let u = {},
-  a = {},
-  r = new Set;
-class d extends i.default.Store {
+}), t("222007");
+var l = t("446674"),
+  i = t("913144");
+let r = {},
+  o = {},
+  u = new Set;
+class a extends l.default.Store {
   getCompletedActions(e) {
-    return null == e ? null : a[e]
+    return null == e ? null : o[e]
   }
-  hasCompletedActionForChannel(e, t) {
-    let n = this.getCompletedActions(e);
-    return null != n && null != n[t]
+  hasCompletedActionForChannel(e, n) {
+    let t = this.getCompletedActions(e);
+    return null != t && null != t[n]
   }
   getState(e) {
     return null == e ? {} : {
-      completedActions: a[e],
-      loading: r.has(e)
+      completedActions: o[e],
+      loading: u.has(e)
     }
   }
 }
-d.displayName = "GuildOnboardingMemberActionStore";
-var o = new d(l.default, {
+a.displayName = "GuildOnboardingMemberActionStore";
+var d = new a(i.default, {
   GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function(e) {
     let {
-      guildId: t
+      guildId: n
     } = e;
-    r.add(t)
+    u.add(n)
   },
   GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: function(e) {
     let {
-      memberActions: t,
-      guildId: n
+      memberActions: n,
+      guildId: t
     } = e;
-    if (null == t) {
-      a[n] = u;
+    if (null == n) {
+      o[t] = r;
       return
     }
-    a[n] = t, r.delete(n)
+    o[t] = n, u.delete(t)
   },
   GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: function(e) {
     let {
-      guildId: t
+      guildId: n
     } = e;
-    r.delete(t)
+    u.delete(n)
   },
   GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: function(e) {
     let {
-      guildId: t
+      guildId: n
     } = e;
-    if (null == a[t]) return !1;
-    delete a[t]
+    if (null == o[n]) return !1;
+    delete o[n]
   },
   COMPLETE_NEW_MEMBER_ACTION: function(e) {
     let {
-      guildId: t,
-      channelId: n
+      guildId: n,
+      channelId: t
     } = e;
-    a = {
-      ...a,
-      [t]: {
-        ...a[t],
-        [n]: !0
+    o = {
+      ...o,
+      [n]: {
+        ...o[n],
+        [t]: !0
       }
     }
   },
   GUILD_DELETE: function(e) {
     let {
-      guild: t
+      guild: n
     } = e;
-    if (null == a[t.id]) return !1;
-    delete a[t.id]
+    if (null == o[n.id]) return !1;
+    delete o[n.id]
   }
 })

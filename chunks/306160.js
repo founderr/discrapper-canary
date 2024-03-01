@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   SUPPORTS_COPY: function() {
-    return o
+    return r
   },
   copy: function() {
-    return a
+    return i
   }
-}), n("70102");
-var r = n("281071"),
-  i = n("773336"),
-  s = n("50885");
-let o = (() => {
-  if (i.isPlatformEmbedded) return null != s.default.copy;
+}), E("70102");
+var t = E("281071"),
+  o = E("773336"),
+  n = E("50885");
+let r = (() => {
+  if (o.isPlatformEmbedded) return null != n.default.copy;
   try {
     return document.queryCommandEnabled("copy") || document.queryCommandSupported("copy")
   } catch (e) {
@@ -19,6 +19,6 @@ let o = (() => {
   }
 })();
 
-function a(e) {
-  return !!o && (i.isPlatformEmbedded ? (s.default.copy(e), !0) : r.copy(e))
+function i(e) {
+  return !!r && (o.isPlatformEmbedded ? (n.default.copy(e), !0) : t.copy(e))
 }

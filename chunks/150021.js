@@ -1,61 +1,61 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   setDiversityColor: function() {
-    return I
+    return C
   },
   fetchEmoji: function() {
-    return y
+    return S
   },
   uploadEmoji: function() {
     return T
   },
   deleteEmoji: function() {
-    return k
+    return v
   },
   updateEmoji: function() {
-    return C
+    return I
   },
   favoriteEmoji: function() {
-    return M
+    return N
   },
   unfavoriteEmoji: function() {
-    return v
+    return A
   }
-}), i("424973");
-var r = i("917351"),
-  n = i.n(r),
-  a = i("872717"),
-  s = i("750028"),
-  u = i("913144"),
-  o = i("599417"),
-  c = i("385976"),
-  l = i("867805"),
-  d = i("619443"),
-  E = i("872173"),
-  _ = i("341542"),
-  f = i("404118"),
-  S = i("49111"),
-  p = i("397336"),
-  m = i("782340");
+}), n("424973");
+var l = n("917351"),
+  i = n.n(l),
+  a = n("872717"),
+  s = n("750028"),
+  r = n("913144"),
+  o = n("599417"),
+  u = n("385976"),
+  d = n("867805"),
+  c = n("619443"),
+  f = n("872173"),
+  m = n("341542"),
+  p = n("404118"),
+  h = n("49111"),
+  E = n("397336"),
+  g = n("782340");
 
-function I(e) {
-  E.PreloadedUserSettingsActionCreators.updateAsync("textAndImages", t => {
+function C(e) {
+  f.PreloadedUserSettingsActionCreators.updateAsync("textAndImages", t => {
     t.diversitySurrogate = s.StringValue.create(), t.diversitySurrogate.value = e
-  }, p.UserSettingsDelay.FREQUENT_USER_ACTION)
+  }, E.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
-function y(e) {
-  u.default.dispatch({
+function S(e) {
+  r.default.dispatch({
     type: "EMOJI_FETCH",
     guildId: e
   }), a.default.get({
-    url: S.Endpoints.GUILD_EMOJIS(e),
+    url: h.Endpoints.GUILD_EMOJIS(e),
     oldFormErrors: !0
-  }).then(t => u.default.dispatch({
+  }).then(t => r.default.dispatch({
     type: "EMOJI_FETCH_SUCCESS",
     guildId: e,
     emojis: t.body
-  }), () => u.default.dispatch({
+  }), () => r.default.dispatch({
     type: "EMOJI_FETCH_FAILURE",
     guildId: e
   }))
@@ -64,53 +64,53 @@ function y(e) {
 function T(e) {
   let {
     guildId: t,
-    image: i,
-    name: r,
-    roles: n
+    image: n,
+    name: l,
+    roles: i
   } = e;
-  return u.default.dispatch({
+  return r.default.dispatch({
     type: "EMOJI_UPLOAD_START",
     guildId: t
   }), a.default.post({
-    url: S.Endpoints.GUILD_EMOJIS(t),
+    url: h.Endpoints.GUILD_EMOJIS(t),
     body: {
-      image: i,
-      name: r,
-      roles: n
+      image: n,
+      name: l,
+      roles: i
     },
     oldFormErrors: !0
-  }).then(() => u.default.dispatch({
+  }).then(() => r.default.dispatch({
     type: "EMOJI_UPLOAD_STOP",
     guildId: t
-  }), e => (u.default.dispatch({
+  }), e => (r.default.dispatch({
     type: "EMOJI_UPLOAD_STOP",
     guildId: t
   }), Promise.reject(e)))
 }
 
-function k(e, t) {
-  return u.default.dispatch({
+function v(e, t) {
+  return r.default.dispatch({
     type: "EMOJI_DELETE",
     guildId: e,
     emojiId: t
   }), a.default.delete({
-    url: S.Endpoints.GUILD_EMOJI(e, t),
+    url: h.Endpoints.GUILD_EMOJI(e, t),
     oldFormErrors: !0
   })
 }
-async function C(e) {
+async function I(e) {
   let {
     guildId: t,
-    emojiId: i,
-    name: r,
-    roles: n
+    emojiId: n,
+    name: l,
+    roles: i
   } = e;
   try {
     return await a.default.patch({
-      url: S.Endpoints.GUILD_EMOJI(t, i),
+      url: h.Endpoints.GUILD_EMOJI(t, n),
       body: {
-        name: r,
-        roles: n
+        name: l,
+        roles: i
       },
       oldFormErrors: !0
     })
@@ -119,32 +119,32 @@ async function C(e) {
   }
 }
 
-function A(e) {
-  return _.default.totalUnavailableGuilds > 0 || !d.default.isConnected() ? e : e.filter(e => {
+function _(e) {
+  return m.default.totalUnavailableGuilds > 0 || !c.default.isConnected() ? e : e.filter(e => {
     var t;
-    let i = null !== (t = c.default.getCustomEmojiById(e)) && void 0 !== t ? t : l.default.getByName(e);
-    return null != i
+    let n = null !== (t = u.default.getCustomEmojiById(e)) && void 0 !== t ? t : d.default.getByName(e);
+    return null != n
   })
 }
 
-function M(e) {
+function N(e) {
   var t;
   (function(e) {
-    null != e && E.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = A(t.emojis), n.size(t.emojis) >= p.MAX_FAVORITES) ? (f.default.show({
-      title: m.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-      body: m.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
-        count: p.MAX_FAVORITES
+    null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = _(t.emojis), i.size(t.emojis) >= E.MAX_FAVORITES) ? (p.default.show({
+      title: g.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+      body: g.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
+        count: E.MAX_FAVORITES
       })
-    }), !1) : !t.emojis.includes(e) && void t.emojis.push(e), p.UserSettingsDelay.INFREQUENT_USER_ACTION)
+    }), !1) : !t.emojis.includes(e) && void t.emojis.push(e), E.UserSettingsDelay.INFREQUENT_USER_ACTION)
   })(null !== (t = e.id) && void 0 !== t ? t : e.name)
 }
 
-function v(e) {
+function A(e) {
   var t;
   (function(e) {
-    null != e && E.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => {
+    null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => {
       if (!t.emojis.includes(e)) return !1;
-      t.emojis = t.emojis.filter(t => e !== t), t.emojis = A(t.emojis)
-    }, p.UserSettingsDelay.INFREQUENT_USER_ACTION)
+      t.emojis = t.emojis.filter(t => e !== t), t.emojis = _(t.emojis)
+    }, E.UserSettingsDelay.INFREQUENT_USER_ACTION)
   })(null !== (t = e.id) && void 0 !== t ? t : e.name)
 }

@@ -52,11 +52,11 @@ function m(e) {
     T = !1,
     C = !1;
   !s.isPhoneVerified() && !s.isStaff() && (p = n.verificationLevel >= l.VerificationLevels.LOW && !s.verified, y = n.verificationLevel >= l.VerificationLevels.VERY_HIGH, T = n.verificationLevel >= l.VerificationLevels.MEDIUM && m > 0, C = n.verificationLevel >= l.VerificationLevels.HIGH && v > 0);
-  let I = [];
-  C && I.push(v), T && I.push(m), I.length > 0 && (t = setTimeout(() => i.default.dispatch({
+  let S = [];
+  C && S.push(v), T && S.push(m), S.length > 0 && (t = setTimeout(() => i.default.dispatch({
     type: "GUILD_VERIFICATION_CHECK",
     guildId: e
-  }), Math.max(...I))), g[e] = {
+  }), Math.max(...S))), g[e] = {
     notClaimed: E,
     notEmailVerified: p,
     notPhoneVerified: y,

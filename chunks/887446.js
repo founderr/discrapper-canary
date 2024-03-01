@@ -1,5 +1,5 @@
 "use strict";
-let i, r, s, l;
+let i, s, r, l;
 n.r(t), n.d(t, {
   default: function() {
     return C
@@ -20,14 +20,14 @@ function h(e) {
 }
 
 function E(e) {
-  null != s && s.guildId === e ? (r = s, s = void 0) : r = h(e)
+  null != r && r.guildId === e ? (s = r, r = void 0) : s = h(e)
 }
 class p extends o.default.Store {
   getSavedScrollPosition(e) {
     return f[e]
   }
   getHomeSessionId(e) {
-    return null != r && r.guildId === e ? r.sessionId : null != s && s.guildId === e ? s.sessionId : void 0
+    return null != s && s.guildId === e ? s.sessionId : null != r && r.guildId === e ? r.sessionId : void 0
   }
   getHomeSessionSource(e) {
     return null != l && l.guildId === e ? l.source : d.GuildHomeLandingSource.ORGANIC
@@ -57,11 +57,11 @@ var C = new p(u.default, {
       channelId: n
     } = e;
     if (null == t || null == n || !(0, c.isStaticChannelRoute)(n) || !(0, c.isGuildHomeChannel)(n)) {
-      i = void 0, r = void 0, s = void 0, l = void 0;
+      i = void 0, s = void 0, r = void 0, l = void 0;
       return
     }
     let a = (0, c.buildGuildStaticChannelId)(n, t);
-    if (i === a || null != r && r.guildId === t) return !1;
+    if (i === a || null != s && s.guildId === t) return !1;
     E(t), i = a, null != l && l.guildId !== t && (l = void 0)
   },
   CHANNEL_PRELOAD: function(e) {
@@ -70,11 +70,11 @@ var C = new p(u.default, {
       channelId: n
     } = e;
     if (null == t || null == n || !(0, c.isStaticChannelRoute)(n) || !(0, c.isGuildHomeChannel)(n)) {
-      s = void 0;
+      r = void 0;
       return
     }
-    if (null != s && s.guildId === t) return !1;
-    s = h(t)
+    if (null != r && r.guildId === t) return !1;
+    r = h(t)
   },
   GUILD_HOME_SET_SOURCE: function(e) {
     let {
@@ -90,10 +90,10 @@ var C = new p(u.default, {
     let {
       guildId: t
     } = e;
-    if (null != r && r.guildId === t) return !1;
+    if (null != s && s.guildId === t) return !1;
     E(t)
   },
   LOGOUT: function() {
-    r = void 0, s = void 0, l = void 0
+    s = void 0, r = void 0, l = void 0
   }
 })

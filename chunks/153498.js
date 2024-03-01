@@ -1,23 +1,23 @@
 "use strict";
 
-function r(e) {
+function n(e) {
   let {} = e;
   return !1
 }
 
-function s(e, t) {
+function r(e, t) {
   return !1
 }
 
-function o(e) {
+function d(e) {
+  return !1
+}
+
+function o() {
   return !1
 }
 
 function a() {
-  return !1
-}
-
-function l() {
   return !1
 }
 
@@ -30,34 +30,34 @@ function i(e, t) {
   return !1
 }
 
-function d() {
+function s() {
   return !1
 }
+
+function E(e) {}
 
 function c(e) {}
 
 function _(e) {}
 
-function E(e) {}
-
-function f(e) {
+function p(e) {
   return !1
 }
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   navigateToChannel: function() {
-    return r
+    return n
   },
   navigateToMemberVerification: function() {
-    return s
+    return r
   },
   navigateToRootTab: function() {
-    return o
+    return d
   },
   resetToAuthRoute: function() {
-    return a
+    return o
   },
   resetToPanelsUI: function() {
-    return l
+    return a
   },
   pushModal: function() {
     return u
@@ -66,18 +66,18 @@ n.r(t), n.d(t, {
     return i
   },
   popAllModals: function() {
-    return d
+    return s
   },
   coerceChannelRoute: function() {
-    return c
-  },
-  coerceGuildsRoute: function() {
-    return _
-  },
-  coerceModalRoute: function() {
     return E
   },
+  coerceGuildsRoute: function() {
+    return c
+  },
+  coerceModalRoute: function() {
+    return _
+  },
   useIsModalOpen: function() {
-    return f
+    return p
   }
 })

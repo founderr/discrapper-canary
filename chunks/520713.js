@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
     return d
   },
   getStripe: function() {
-    return _
+    return E
   },
   parseStripePaymentMethod: function() {
-    return E
+    return _
   },
   authenticatePaymentIntentForPaymentId: function() {
     return c
@@ -41,15 +41,15 @@ let s = e => {
     return r.setMonth(r.getMonth() - 1), r.setMonth(r.getMonth() + 1, 1), r > i
   };
 
-function _() {
+function E() {
   return null != r ? Promise.resolve(r) : (0, u.loadStripe)(o.PaymentSettings.STRIPE.KEY).then(e => (r = e, e))
 }
 
-function E(e) {
+function _(e) {
   var t, n, r, i, l, u, a, o;
   let {
     billing_details: s
-  } = e, d = null !== (t = s.address) && void 0 !== t ? t : {}, _ = {
+  } = e, d = null !== (t = s.address) && void 0 !== t ? t : {}, E = {
     name: null !== (n = s.name) && void 0 !== n ? n : "",
     line1: null !== (r = d.line1) && void 0 !== r ? r : "",
     line2: null !== (i = d.line2) && void 0 !== i ? i : "",
@@ -60,7 +60,7 @@ function E(e) {
   };
   return {
     token: e.id,
-    billingAddressInfo: _
+    billingAddressInfo: E
   }
 }
 async function c(e) {
@@ -72,7 +72,7 @@ async function c(e) {
       {
         stripe_payment_intent_client_secret: n
       } = t.body,
-      r = await _();
+      r = await E();
     if (null == r) return {
       error: "unable to load stripe"
     };

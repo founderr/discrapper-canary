@@ -23,8 +23,8 @@ var l, i, a = n("37983"),
   C = n("985677"),
   S = n("429928"),
   T = n("36539"),
-  I = n("502651"),
-  v = n("419830"),
+  v = n("502651"),
+  I = n("419830"),
   _ = n("808742"),
   N = n("342845"),
   A = n("239380"),
@@ -93,10 +93,10 @@ class W extends s.PureComponent {
     return (0, R.getClass)(G, e, this.props.type, t)
   }
   isStreamerOnTypeProfile() {
-    return (0, I.default)(this.activity) && ("Profile" === this.props.type || "ProfileV2" === this.props.type)
+    return (0, v.default)(this.activity) && ("Profile" === this.props.type || "ProfileV2" === this.props.type)
   }
   isStreamerOnTypeActivityFeed() {
-    return (0, I.default)(this.activity) && "ActivityFeed" === this.props.type
+    return (0, v.default)(this.activity) && "ActivityFeed" === this.props.type
   }
   renderHeader(e) {
     let t;
@@ -145,7 +145,7 @@ class W extends s.PureComponent {
         server: l.name
       })
     }(null == u ? void 0 : u.type) === k.ActivityTypes.HANG_STATUS && (t = F.default.Messages.STATUS_LEAD_IN_JUST);
-    let m = (0, v.getChannelIconComponent)(i, l);
+    let m = (0, I.getChannelIconComponent)(i, l);
     return null != i && (t = i.name), (0, a.jsxs)("div", {
       className: G.headerContainer,
       children: [null != i && null !== m ? (0, a.jsx)(m, {
@@ -187,7 +187,7 @@ class W extends s.PureComponent {
       application_id: c
     } = e;
     if (null == d || null == d.large_image && null == d.small_image) return null;
-    (0, I.default)(e) && (i = B[u]);
+    (0, v.default)(e) && (i = B[u]);
     let m = (0, S.default)(e),
       p = null != d.large_image ? (0, a.jsx)("img", {
         alt: null !== (t = d.large_text) && void 0 !== t ? t : "",
@@ -343,7 +343,7 @@ class W extends s.PureComponent {
         s = null === (o = e.assets) || void 0 === o ? void 0 : o.small_text
       }
     }
-    return null == s || 0 === s.length ? null : ((0, I.default)(e) && (s = F.default.Messages.STREAMER_PLAYING.format({
+    return null == s || 0 === s.length ? null : ((0, v.default)(e) && (s = F.default.Messages.STREAMER_PLAYING.format({
       game: s
     })), null != t) ? (0, a.jsx)(f.Clickable, {
       onClick: t,
@@ -352,7 +352,7 @@ class W extends s.PureComponent {
       children: s
     }) : (0, a.jsx)("div", {
       title: null != r ? r : void 0,
-      className: (0, I.default)(e) || (0, S.default)(e) ? G.detailsWrap : G.details,
+      className: (0, v.default)(e) || (0, S.default)(e) ? G.detailsWrap : G.details,
       children: s
     })
   }
@@ -446,10 +446,10 @@ class W extends s.PureComponent {
       g = this.renderTimePlayed(r),
       C = null != n ? n() : null,
       S = this.renderTimeBar(r),
-      I = ![e, p, h, E, g, S, C].some(e => null != e);
+      v = ![e, p, h, E, g, S, C].some(e => null != e);
     return (0, a.jsxs)("div", {
       className: o(this.getTypeClass("activity"), l),
-      children: [this.renderHeader(I), (0, a.jsxs)("div", {
+      children: [this.renderHeader(v), (0, a.jsxs)("div", {
         className: o(m ? G.bodyAlignCenter : G.bodyNormal, s && !u && !f && G.wrap),
         children: [(0, a.jsxs)("div", {
           className: G.activityDetails,

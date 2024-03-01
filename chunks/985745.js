@@ -1,16 +1,16 @@
-var i = n("390493");
+var r = n("390493");
 n("860677"), n("854508"), ! function(e, t) {
   "use strict";
   if (!e.setImmediate) {
-    var n, r = 1,
-      a = {},
-      s = !1,
-      l = e.document,
-      o = Object.getPrototypeOf && Object.getPrototypeOf(e);
-    o = o && o.setTimeout ? o : e, "[object process]" === ({}).toString.call(e.process) ? function() {
+    var n, a = 1,
+      o = {},
+      i = !1,
+      s = e.document,
+      u = Object.getPrototypeOf && Object.getPrototypeOf(e);
+    u = u && u.setTimeout ? u : e, "[object process]" === ({}).toString.call(e.process) ? function() {
       n = function(e) {
-        i.nextTick(function() {
-          d(e)
+        r.nextTick(function() {
+          c(e)
         })
       }
     }() : function() {
@@ -23,52 +23,52 @@ n("860677"), n("854508"), ! function(e, t) {
       }
     }() ? function() {
       var t = "setImmediate$" + Math.random() + "$",
-        i = function(n) {
-          n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && d(+n.data.slice(t.length))
+        r = function(n) {
+          n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && c(+n.data.slice(t.length))
         };
-      e.addEventListener ? e.addEventListener("message", i, !1) : e.attachEvent("onmessage", i), n = function(n) {
+      e.addEventListener ? e.addEventListener("message", r, !1) : e.attachEvent("onmessage", r), n = function(n) {
         e.postMessage(t + n, "*")
       }
     }() : e.MessageChannel ? function() {
       var e = new MessageChannel;
       e.port1.onmessage = function(e) {
-        d(e.data)
+        c(e.data)
       }, n = function(t) {
         e.port2.postMessage(t)
       }
-    }() : l && "onreadystatechange" in l.createElement("script") ? function() {
-      var e = l.documentElement;
+    }() : s && "onreadystatechange" in s.createElement("script") ? function() {
+      var e = s.documentElement;
       n = function(t) {
-        var n = l.createElement("script");
+        var n = s.createElement("script");
         n.onreadystatechange = function() {
-          d(t), n.onreadystatechange = null, e.removeChild(n), n = null
+          c(t), n.onreadystatechange = null, e.removeChild(n), n = null
         }, e.appendChild(n)
       }
     }() : function() {
       n = function(e) {
-        setTimeout(d, 0, e)
+        setTimeout(c, 0, e)
       }
-    }(), o.setImmediate = function(e) {
+    }(), u.setImmediate = function(e) {
       "function" != typeof e && (e = Function("" + e));
-      for (var t = Array(arguments.length - 1), i = 0; i < t.length; i++) t[i] = arguments[i + 1];
-      var s = {
+      for (var t = Array(arguments.length - 1), r = 0; r < t.length; r++) t[r] = arguments[r + 1];
+      var i = {
         callback: e,
         args: t
       };
-      return a[r] = s, n(r), r++
-    }, o.clearImmediate = c
+      return o[a] = i, n(a), a++
+    }, u.clearImmediate = l
+  }
+
+  function l(e) {
+    delete o[e]
   }
 
   function c(e) {
-    delete a[e]
-  }
-
-  function d(e) {
-    if (s) setTimeout(d, 0, e);
+    if (i) setTimeout(c, 0, e);
     else {
-      var t = a[e];
+      var t = o[e];
       if (t) {
-        s = !0;
+        i = !0;
         try {
           ! function(e) {
             var t = e.callback,
@@ -91,7 +91,7 @@ n("860677"), n("854508"), ! function(e, t) {
             }
           }(t)
         } finally {
-          c(e), s = !1
+          l(e), i = !1
         }
       }
     }

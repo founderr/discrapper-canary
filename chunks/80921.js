@@ -25,20 +25,20 @@ var l = n("37983"),
       } = e,
       [g, C] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default),
       S = i.useContext(u.default),
-      [T, I] = i.useState(!1),
-      v = g === p.ExpressionPickerViewType.STICKER,
+      [T, v] = i.useState(!1),
+      I = g === p.ExpressionPickerViewType.STICKER,
       _ = i.useCallback(() => {
         (0, d.toggleExpressionPicker)(p.ExpressionPickerViewType.STICKER, m)
       }, [m]);
     i.useEffect(() => {
       let e = () => {
           requestAnimationFrame(() => {
-            I(!0)
+            v(!0)
           })
         },
         t = () => {
           requestAnimationFrame(() => {
-            I(!1)
+            v(!1)
           })
         };
       return S.addListener("sticker-suggestions-shown", e), S.addListener("sticker-suggestions-hidden", t), () => {
@@ -56,12 +56,12 @@ var l = n("37983"),
       children: (0, l.jsx)(c.default, {
         innerClassName: s(E.button, E.stickerButton, {
           [E.stickerButtonWithNotification]: !1,
-          [E.stickerButtonTilted]: T && !v
+          [E.stickerButtonTilted]: T && !I
         }),
         onClick: _,
-        isActive: v,
+        isActive: I,
         "aria-label": h.default.Messages.STICKER_BUTTON_LABEL,
-        "aria-expanded": v,
+        "aria-expanded": I,
         "aria-haspopup": "dialog",
         "aria-controls": C,
         sparkle: !1,

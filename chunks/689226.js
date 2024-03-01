@@ -1,50 +1,50 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   getRoleIconData: function() {
-    return d
+    return T
   },
   replaceRoleIconSourceSize: function() {
-    return f
+    return S
   },
   isRoleIconAssetUrl: function() {
-    return h
+    return O
   },
   canGuildUseRoleIcons: function() {
-    return _
+    return A
   }
-}), n("781738");
-var r = n("867805"),
-  i = n("407063"),
-  s = n("315102"),
-  o = n("773336"),
-  a = n("49111");
-let l = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/role-icons"),
-  u = "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT),
-  c = (0, o.isAndroid)(),
-  d = (e, t) => {
+}), E("781738");
+var t = E("867805"),
+  o = E("407063"),
+  n = E("315102"),
+  r = E("773336"),
+  i = E("49111");
+let a = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/role-icons"),
+  I = "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT),
+  s = (0, r.isAndroid)(),
+  T = (e, _) => {
     if (null == e) return null;
-    let n = null != e.unicodeEmoji ? r.default.getByName(r.default.convertSurrogateToName(e.unicodeEmoji, !1)) : void 0;
+    let E = null != e.unicodeEmoji ? t.default.getByName(t.default.convertSurrogateToName(e.unicodeEmoji, !1)) : void 0;
     return {
-      customIconSrc: E(e, t),
-      unicodeEmoji: null != n ? n : void 0
+      customIconSrc: N(e, _),
+      unicodeEmoji: null != E ? E : void 0
     }
   },
-  f = (e, t) => e.replace(/size=[0-9]+/g, "size=".concat((0, i.getBestMediaProxySize)(t * (0, i.getDevicePixelRatio)()))),
-  E = (e, t) => {
+  S = (e, _) => e.replace(/size=[0-9]+/g, "size=".concat((0, o.getBestMediaProxySize)(_ * (0, o.getDevicePixelRatio)()))),
+  N = (e, _) => {
     let {
-      id: n,
-      icon: r
+      id: E,
+      icon: t
     } = e;
-    if (null == r) return;
-    if (r.startsWith("data:")) return r;
-    let o = s.SUPPORTS_WEBP ? "webp" : "png",
-      d = "",
-      f = "quality=lossless";
-    return (null != t && (d = "size=" + (0, i.getBestMediaProxySize)(t * (0, i.getDevicePixelRatio)()), f = c ? "" : "&" + f), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(l, "/").concat(n, "/").concat(r, ".").concat(o, "?").concat(d).concat(f) : "".concat(u).concat(a.Endpoints.ROLE_ICON(n, r), "?").concat(d)
+    if (null == t) return;
+    if (t.startsWith("data:")) return t;
+    let r = n.SUPPORTS_WEBP ? "webp" : "png",
+      T = "",
+      S = "quality=lossless";
+    return (null != _ && (T = "size=" + (0, o.getBestMediaProxySize)(_ * (0, o.getDevicePixelRatio)()), S = s ? "" : "&" + S), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(a, "/").concat(E, "/").concat(t, ".").concat(r, "?").concat(T).concat(S) : "".concat(I).concat(i.Endpoints.ROLE_ICON(E, t), "?").concat(T)
   },
-  h = e => e.startsWith(l) || e.startsWith("".concat(u, "/roles")) && e.includes("/icons/"),
-  _ = (e, t) => {
-    var n;
-    let r = (null == t ? void 0 : null === (n = t.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null;
-    return r || e.features.has(a.GuildFeatures.ROLE_ICONS)
+  O = e => e.startsWith(a) || e.startsWith("".concat(I, "/roles")) && e.includes("/icons/"),
+  A = (e, _) => {
+    var E;
+    let t = (null == _ ? void 0 : null === (E = _.tags) || void 0 === E ? void 0 : E.subscription_listing_id) != null;
+    return t || e.features.has(i.GuildFeatures.ROLE_ICONS)
   }

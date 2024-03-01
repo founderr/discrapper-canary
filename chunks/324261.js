@@ -1,41 +1,41 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return E
   }
 });
-var l = n("446674"),
-  a = n("913144"),
-  i = n("692038"),
-  s = n("42203"),
+var a = n("446674"),
+  i = n("913144"),
+  l = n("692038"),
+  d = n("42203"),
   r = n("697218"),
   u = n("449008"),
-  o = n("299039");
-let d = {};
+  s = n("299039");
+let o = {};
 
 function c(e) {
   var t;
-  let n = s.default.getChannel(null == e ? void 0 : e.channel_id);
+  let n = d.default.getChannel(null == e ? void 0 : e.channel_id);
   if (null == n || !n.isForumPost()) return !1;
-  let l = d[n.id];
-  return o.default.compare(null == e ? void 0 : e.id, null == l ? void 0 : null === (t = l.message) || void 0 === t ? void 0 : t.id) > -1
+  let a = o[n.id];
+  return s.default.compare(null == e ? void 0 : e.id, null == a ? void 0 : null === (t = a.message) || void 0 === t ? void 0 : t.id) > -1
 }
 
 function f(e, t) {
-  let n = null == t ? null : (0, i.createMessageRecord)(t);
-  return d[e] = {
+  let n = null == t ? null : (0, l.createMessageRecord)(t);
+  return o[e] = {
     loaded: !0,
     message: n
   }, !0
 }
 
-function m(e) {
-  return d[e]
+function g(e) {
+  return o[e]
 }
 
-function g(e) {
+function p(e) {
   var t;
-  return null === (t = d[e]) || void 0 === t ? void 0 : t.message
+  return null === (t = o[e]) || void 0 === t ? void 0 : t.message
 }
 
 function _(e) {
@@ -47,43 +47,43 @@ function _(e) {
     f(e.channel_id, e)
   })
 }
-class h extends l.default.Store {
+class m extends a.default.Store {
   initialize() {
-    this.waitFor(s.default, r.default)
+    this.waitFor(d.default, r.default)
   }
   getMessageState(e) {
-    return !(e in d) && (d[e] = {
+    return !(e in o) && (o[e] = {
       loaded: !1,
       message: null
-    }), d[e]
+    }), o[e]
   }
 }
-h.displayName = "ForumPostRecentMessageStore";
-var p = new h(a.default, {
+m.displayName = "ForumPostRecentMessageStore";
+var E = new m(i.default, {
   CONNECTION_OPEN: function() {
-    d = {}
+    o = {}
   },
   MESSAGE_CREATE: function(e) {
     if (e.isPushNotification || !c(e.message)) return !1;
-    e.message.channel_id === o.default.castMessageIdAsChannelId(e.message.id) ? f(e.message.channel_id, null) : f(e.message.channel_id, e.message)
+    e.message.channel_id === s.default.castMessageIdAsChannelId(e.message.id) ? f(e.message.channel_id, null) : f(e.message.channel_id, e.message)
   },
   MESSAGE_UPDATE: function(e) {
     if (!c(e.message) || e.message.channel_id === e.message.id) return !1;
     ! function(e, t) {
       let n = function(e) {
-          return d[e]
+          return o[e]
         }(e),
-        l = g(e);
-      null != n && null != l && (d[e] = {
+        a = p(e);
+      null != n && null != a && (o[e] = {
         ...n,
-        message: (0, i.updateMessageRecord)(l, t)
+        message: (0, l.updateMessageRecord)(a, t)
       })
     }(e.message.channel_id, e.message)
   },
   MESSAGE_DELETE: function(e) {
     return function(e, t) {
-      let n = g(e);
-      return (null == n ? void 0 : n.id) === t && (delete d[e], !0)
+      let n = p(e);
+      return (null == n ? void 0 : n.id) === t && (delete o[e], !0)
     }(e.channelId, e.id)
   },
   LOAD_FORUM_POSTS: function(e) {

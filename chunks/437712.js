@@ -13,8 +13,8 @@ var u = n("917351"),
   s = n("964889"),
   c = n("552712");
 let S = {},
-  d = {},
   E = {},
+  d = {},
   f = {},
   _ = !1,
   T = !1,
@@ -23,11 +23,11 @@ let S = {},
   p = {};
 
 function C(t) {
-  S[t.id] = a.default.createFromServer(t), null == E[t.sku_id] && (E[t.sku_id] = new Set), null == f[t.application_id] && (f[t.application_id] = new Set), null != t.subscription_id && (null == p[t.subscription_id] && (p[t.subscription_id] = new Set), p[t.subscription_id].add(t.id)), f[t.application_id].add(t.id), E[t.sku_id].add(t.id)
+  S[t.id] = a.default.createFromServer(t), null == d[t.sku_id] && (d[t.sku_id] = new Set), null == f[t.application_id] && (f[t.application_id] = new Set), null != t.subscription_id && (null == p[t.subscription_id] && (p[t.subscription_id] = new Set), p[t.subscription_id].add(t.id)), f[t.application_id].add(t.id), d[t.sku_id].add(t.id)
 }
 
 function P(t) {
-  d[t.id] = a.default.createFromServer(t)
+  E[t.id] = a.default.createFromServer(t)
 }
 
 function N(t) {
@@ -41,7 +41,7 @@ class R extends r.default.Store {
     return S[t]
   }
   getGiftable() {
-    return i.values(d)
+    return i.values(E)
   }
   getForApplication(t) {
     let e = f[t];
@@ -51,7 +51,7 @@ class R extends r.default.Store {
     return n
   }
   getForSku(t) {
-    let e = E[t];
+    let e = d[t];
     if (null == e) return null;
     let n = new Set;
     for (let t of e) n.add(S[t]);
@@ -84,7 +84,7 @@ class R extends r.default.Store {
   }
   isEntitledToSku(t, e, n) {
     let u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-      i = E[e];
+      i = d[e];
     if (null != i)
       for (let e of i) {
         let n = S[e];
@@ -118,7 +118,7 @@ var U = new R(l.default, {
     let {
       entitlements: e
     } = t;
-    d = {}, e.forEach(P)
+    E = {}, e.forEach(P)
   },
   SKU_PURCHASE_SUCCESS: function(t) {
     let {
@@ -141,7 +141,7 @@ var U = new R(l.default, {
       delete S[t.id];
       let e = f[t.application_id];
       null != e && e.delete(t.id);
-      let n = E[t.sku_id];
+      let n = d[t.sku_id];
       if (null != n && n.delete(t.id), null != t.subscription_id) {
         let e = p[t.subscription_id];
         null != e && e.delete(t.id)
@@ -149,7 +149,7 @@ var U = new R(l.default, {
     }(t.entitlement)
   },
   LOGOUT: function() {
-    S = {}, E = {}, f = {}, _ = !1, T = !1, I = new Set, A = new Set
+    S = {}, d = {}, f = {}, _ = !1, T = !1, I = new Set, A = new Set
   },
   ENTITLEMENTS_FETCH_FOR_USER_START: function() {
     _ = !0

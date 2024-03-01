@@ -1,59 +1,59 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 });
-var s = n("37983");
+var r = n("37983");
 n("884691");
 var i = n("414456"),
-  a = n.n(i),
-  l = n("77078"),
-  r = n("451914"),
-  u = n("548122");
-let d = Object.freeze({
-    SIZE_10: u.size10,
-    SIZE_12: u.size12,
-    SIZE_14: u.size14,
-    SIZE_16: u.size16,
-    SIZE_20: u.size20,
-    SIZE_24: u.size24,
-    SIZE_32: u.size32
+  l = n.n(i),
+  a = n("77078"),
+  u = n("451914"),
+  s = n("548122");
+let o = Object.freeze({
+    SIZE_10: s.size10,
+    SIZE_12: s.size12,
+    SIZE_14: s.size14,
+    SIZE_16: s.size16,
+    SIZE_20: s.size20,
+    SIZE_24: s.size24,
+    SIZE_32: s.size32
   }),
-  o = e => {
+  c = e => {
     let {
       id: t,
       muted: n = !1,
-      className: i = r.wrapper,
-      size: u = d.SIZE_14,
-      selectable: o = !1,
-      children: c,
-      color: h,
-      onClick: f,
-      onContextMenu: E,
+      className: i = u.wrapper,
+      size: s = o.SIZE_14,
+      selectable: c = !1,
+      children: d,
+      color: f,
+      onClick: E,
+      onContextMenu: _,
       style: I,
-      title: _,
-      uppercase: m
+      title: T,
+      uppercase: M
     } = e;
-    return (0, s.jsx)(l.H, {
-      role: null != f ? "button" : void 0,
-      onClick: f,
-      onContextMenu: E,
+    return (0, r.jsx)(a.H, {
+      role: null != E ? "button" : void 0,
+      onClick: E,
+      onContextMenu: _,
       id: t,
-      className: a(i, {
-        [r.base]: !0,
-        [u]: !0,
-        [r.selectable]: o,
-        [r.muted]: n,
-        [r.uppercase]: m
+      className: l(i, {
+        [u.base]: !0,
+        [s]: !0,
+        [u.selectable]: c,
+        [u.muted]: n,
+        [u.uppercase]: M
       }),
-      title: _,
-      style: null != h ? {
+      title: T,
+      style: null != f ? {
         ...I,
-        color: h
+        color: f
       } : I,
-      children: c
+      children: d
     })
   };
-o.Sizes = d;
-var c = o
+c.Sizes = o;
+var d = c

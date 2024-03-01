@@ -1,67 +1,67 @@
 "use strict";
 n.r(t), n.d(t, {
   generateAttemptId: function() {
-    return u
+    return d
   },
   parseDynamicLink: function() {
-    return i
+    return u
   },
   default: function() {
-    return d
+    return l
   }
 }), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
-var r = n("383536"),
-  s = n.n(r),
-  o = n("748820"),
+var s = n("383536"),
+  i = n.n(s),
+  r = n("748820"),
   a = n("530334");
-let l = "https://discordapp.page.link";
+let o = "https://discordapp.page.link";
 
-function u() {
-  return (0, o.v4)()
+function d() {
+  return (0, r.v4)()
 }
 
-function i(e) {
-  if (!e.startsWith(l)) return null;
+function u(e) {
+  if (!e.startsWith(o)) return null;
   try {
     var t;
     let n = new URL(e),
-      r = n.searchParams,
-      s = r.get("link");
-    if (null == s) return null;
-    let o = decodeURIComponent(s),
-      a = new URL(o).searchParams,
-      l = {
-        utmSource: null !== (t = r.get("utm_source")) && void 0 !== t ? t : void 0
+      s = n.searchParams,
+      i = s.get("link");
+    if (null == i) return null;
+    let r = decodeURIComponent(i),
+      a = new URL(r).searchParams,
+      o = {
+        utmSource: null !== (t = s.get("utm_source")) && void 0 !== t ? t : void 0
       };
-    for (let [e, t] of a.entries()) l[e] = t;
-    return l
+    for (let [e, t] of a.entries()) o[e] = t;
+    return o
   } catch {
     return null
   }
 }
 
-function d(e, t) {
+function l(e, t) {
   let {
     utmSource: n,
-    androidFallbackLink: r,
-    iosFallbackLink: o,
-    ...u
-  } = t, i = new URL(e);
-  for (let e in u) {
-    let t = u[e];
-    null != t && i.searchParams.set(e, t)
+    androidFallbackLink: s,
+    iosFallbackLink: r,
+    ...d
+  } = t, u = new URL(e);
+  for (let e in d) {
+    let t = d[e];
+    null != t && u.searchParams.set(e, t)
   }
-  let d = encodeURIComponent(i.toString()),
-    c = encodeURIComponent((0, a.default)()),
+  let l = encodeURIComponent(u.toString()),
+    f = encodeURIComponent((0, a.default)()),
     _ = ! function() {
       var e, t;
       let n = RegExp("(".concat("WebView|(iPhone|iPod|iPad)(?!.*Safari/)", ")"), "ig"),
-        r = (null == s ? void 0 : null === (e = s.ua) || void 0 === e ? void 0 : e.match(n)) != null,
-        o = (null == s ? void 0 : s.name) === "Safari" && !r;
-      return (null == s ? void 0 : null === (t = s.os) || void 0 === t ? void 0 : t.family) !== "iOS" || o
+        s = (null == i ? void 0 : null === (e = i.ua) || void 0 === e ? void 0 : e.match(n)) != null,
+        r = (null == i ? void 0 : i.name) === "Safari" && !s;
+      return (null == i ? void 0 : null === (t = i.os) || void 0 === t ? void 0 : t.family) !== "iOS" || r
     }() ? 0 : 1,
-    E = null != r ? encodeURIComponent(r) : null,
-    f = null != o ? encodeURIComponent(o) : null,
-    A = "".concat(l, "/?link=").concat(d, "&utm_source=").concat(n, "&apn=").concat("com.discord", "&isi=").concat(985746746, "&ibi=").concat("com.hammerandchisel.discord", "&sd=").concat(c, "&efr=").concat(_);
-  return null != E && (A += "&afl=".concat(E)), null != f && (A += "&ifl=".concat(f)), A
+    c = null != s ? encodeURIComponent(s) : null,
+    g = null != r ? encodeURIComponent(r) : null,
+    m = "".concat(o, "/?link=").concat(l, "&utm_source=").concat(n, "&apn=").concat("com.discord", "&isi=").concat(985746746, "&ibi=").concat("com.hammerandchisel.discord", "&sd=").concat(f, "&efr=").concat(_);
+  return null != c && (m += "&afl=".concat(c)), null != g && (m += "&ifl=".concat(g)), m
 }

@@ -1,36 +1,36 @@
 "use strict";
-t.r(a), t.d(a, {
+n.r(t), n.d(t, {
   WindowLaunchIcon: function() {
-    return r
+    return s
   }
 });
-var s = t("37983");
-t("884691");
-var n = t("669491"),
-  l = t("82169");
-let r = e => {
+var l = n("37983");
+n("884691");
+var i = n("669491"),
+  a = n("82169");
+let s = e => {
   let {
-    width: a = 24,
-    height: t = 24,
-    color: r = n.default.colors.INTERACTIVE_NORMAL,
-    colorClass: o = "",
-    ...i
+    width: t = 24,
+    height: n = 24,
+    color: s = i.default.colors.INTERACTIVE_NORMAL,
+    colorClass: r = "",
+    ...o
   } = e;
-  return (0, s.jsxs)("svg", {
-    ...(0, l.default)(i),
+  return (0, l.jsxs)("svg", {
+    ...(0, a.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
-    width: a,
-    height: t,
+    width: t,
+    height: n,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: [(0, s.jsx)("path", {
-      fill: "string" == typeof r ? r : r.css,
+    children: [(0, l.jsx)("path", {
+      fill: "string" == typeof s ? s : s.css,
       d: "M15 2a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V4.41l-4.3 4.3a1 1 0 1 1-1.4-1.42L19.58 3H16a1 1 0 0 1-1-1Z",
-      className: o
-    }), (0, s.jsx)("path", {
-      fill: "string" == typeof r ? r : r.css,
+      className: r
+    }), (0, l.jsx)("path", {
+      fill: "string" == typeof s ? s : s.css,
       d: "M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-6a1 1 0 1 0-2 0v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6a1 1 0 1 0 0-2H5Z",
-      className: o
+      className: r
     })]
   })
 }

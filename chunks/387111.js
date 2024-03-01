@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return s
   },
   useName: function() {
-    return _
+    return E
   },
   default: function() {
-    return E
+    return _
   }
 });
 var r = n("446674"),
@@ -32,11 +32,11 @@ function d(e, t, n) {
   return null == n ? o.default.Messages.UNKNOWN_USER : null !== (r = s(e, t, n)) && void 0 !== r ? r : a.default.getName(n)
 }
 
-function _(e, t, n) {
+function E(e, t, n) {
   return (0, r.useStateFromStores)([l.default, i.default, u.default], () => d(e, t, n))
 }
-var E = {
+var _ = {
   getNickname: s,
   getName: d,
-  useName: _
+  useName: E
 }
