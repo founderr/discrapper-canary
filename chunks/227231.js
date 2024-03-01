@@ -49,10 +49,10 @@ n.r(t), n.d(t, {
     return y
   },
   getContextualEntrypointHeading: function() {
-    return U
+    return R
   },
   isDismissible: function() {
-    return R
+    return U
   },
   isDismissed: function() {
     return N
@@ -189,7 +189,7 @@ function y(e) {
   return Math.min(t / 60 / s, 1)
 }
 
-function U(e) {
+function R(e) {
   var t, n;
   if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return u.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
   if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
@@ -201,7 +201,7 @@ function U(e) {
   })
 }
 
-function R(e) {
+function U(e) {
   return e in a.DismissibleQuestContentFlags
 }
 
