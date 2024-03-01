@@ -1,48 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
   playGiftSound: function() {
-    return l
+    return r
   },
   WebAudioSound: function() {
-    return _
+    return f
   }
 }), n("70102");
 var s = n("917351"),
-  i = n.n(s),
-  u = n("804998"),
+  u = n.n(s),
   a = n("520497"),
-  o = n("812809"),
-  d = n("42887"),
-  c = n("773336");
-let r = "default",
-  p = r;
+  i = n("812809"),
+  o = n("42887"),
+  d = n("773336");
+let c = "default",
+  p = c;
 
-function l(e, t) {
+function r(e, t) {
   let n = new Audio((0, a.default)(e));
-  n.volume = (0, o.default)(t), n.play()
+  n.volume = (0, i.default)(t), n.play()
 }
 
-function f() {
+function l() {
   null != window.navigator.mediaDevices && window.navigator.mediaDevices.enumerateDevices().then(e => {
-    let t = d.default.getOutputDevices(),
-      n = i(t).sortBy(e => e.index).findIndex(e => e.id === d.default.getOutputDeviceId()),
-      s = t[d.default.getOutputDeviceId()],
-      u = e.filter(e => "audiooutput" === e.kind && "communications" !== e.deviceId),
-      a = u[n];
-    null != s && (null == a || a.label !== s.name) && (a = u.find(e => e.label === s.name)), p = null != a ? a.deviceId : r
+    let t = o.default.getOutputDevices(),
+      n = u(t).sortBy(e => e.index).findIndex(e => e.id === o.default.getOutputDeviceId()),
+      s = t[o.default.getOutputDeviceId()],
+      a = e.filter(e => "audiooutput" === e.kind && "communications" !== e.deviceId),
+      i = a[n];
+    null != s && (null == i || i.label !== s.name) && (i = a.find(e => e.label === s.name)), p = null != i ? i.deviceId : c
   }).catch(() => {
-    p = r
+    p = c
   })
 }
-c.isPlatformEmbedded && (d.default.addChangeListener(f), f());
-class _ {
+d.isPlatformEmbedded && (o.default.addChangeListener(l), l());
+class f {
   get volume() {
     return this._volume
   }
   set volume(e) {
-    this._volume = e, this._ensureAudio().then(() => {
-      null != this._gainNode && (this._gainNode.gain.value = e)
-    })
+    this._volume = e, this._ensureAudio().then(t => t.volume = e)
   }
   loop() {
     this._ensureAudio().then(e => {
@@ -79,13 +76,7 @@ class _ {
     return this._audio = null !== (e = this._audio) && void 0 !== e ? e : new Promise((e, t) => {
       let s = new Audio;
       s.src = n("89400")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), s.onloadeddata = () => {
-        c.isPlatformEmbedded && s.setSinkId(p);
-        let t = (0, u.getOrCreateAudioContext)();
-        this._track = new MediaElementAudioSourceNode(t, {
-          mediaElement: s
-        });
-        let n = Math.min(d.default.getOutputVolume() / 100 * this._volume, 1);
-        this._gainNode = new GainNode(t), this._gainNode.gain.value = n, this._track.connect(this._gainNode).connect(t.destination), e(s)
+        s.volume = Math.min(o.default.getOutputVolume() / 100 * this._volume, 1), d.isPlatformEmbedded && s.setSinkId(p), e(s)
       }, s.onerror = () => t(Error("could not play audio")), s.onended = () => this._destroyAudio(), s.load()
     }), this._audio
   }
