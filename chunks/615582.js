@@ -2,7 +2,7 @@
 let i, r, o;
 n.r(t), n.d(t, {
   AnalyticsActionHandlers: function() {
-    return E
+    return S
   },
   analyticsTrackingStoreMaker: function() {
     return h
@@ -15,8 +15,8 @@ var s, l = n("391679"),
   d = n("976255");
 let _ = 1500,
   f = null !== (s = window.requestIdleCallback) && void 0 !== s ? s : e => setImmediate(() => e()),
-  S = new c.default,
-  E = {
+  E = new c.default,
+  S = {
     handleConnectionOpen: () => {},
     handleConnectionClosed: () => {},
     handleFingerprint: () => {},
@@ -81,17 +81,17 @@ let _ = 1500,
         retries: 3
       })
     }
-    E.handleConnectionOpen = function(e) {
+    S.handleConnectionOpen = function(e) {
       let {
         analyticsToken: t,
         user: n
       } = e;
       return null != t && (i = t), null != n.id && (r = n.id), I(), !1
-    }, E.handleConnectionClosed = function() {
+    }, S.handleConnectionClosed = function() {
       return T(), i = null, r = null, !1
-    }, E.handleFingerprint = function() {
+    }, S.handleFingerprint = function() {
       return T(), !1
-    }, E.handleTrack = function(e) {
+    }, S.handleTrack = function(e) {
       let {
         event: t,
         properties: n,
@@ -115,7 +115,7 @@ let _ = 1500,
             let t = e.fingerprint || s();
             return null != t ? (0, l.extractId)(t) : null
           }(u);
-        null != c && (u.properties.client_uuid = S.generate(c)), g.push(u), g.length > 1e4 && (g = g.slice(-1e4)), i ? T() : I()
+        null != c && (u.properties.client_uuid = E.generate(c)), g.push(u), g.length > 1e4 && (g = g.slice(-1e4)), i ? T() : I()
       }), !1
     };
     class A extends a.default.Store {

@@ -26,7 +26,7 @@ function _(e) {
     ..._
   } = e, {
     reducedMotion: f
-  } = s.useContext(u.AccessibilityPreferencesContext), S = f.enabled ? function(e) {
+  } = s.useContext(u.AccessibilityPreferencesContext), E = f.enabled ? function(e) {
     switch (e) {
       case "wanderingCubes":
       case "chasingDots":
@@ -35,8 +35,8 @@ function _(e) {
         return e
     }
   }(t) : t;
-  if (l = null != l ? l : c.default.Messages.LOADING, "spinningCircle" === S || "spinningCircleSimple" === S) return (0, o.jsx)("div", {
-    className: a(d.spinner, d[S], i, {
+  if (l = null != l ? l : c.default.Messages.LOADING, "spinningCircle" === E || "spinningCircleSimple" === E) return (0, o.jsx)("div", {
+    className: a(d.spinner, d[E], i, {
       [d.stopAnimation]: !n
     }),
     role: "img",
@@ -47,7 +47,7 @@ function _(e) {
       children: (0, o.jsxs)("svg", {
         className: d.circular,
         viewBox: "25 25 50 50",
-        children: ["spinningCircle" === S && (0, o.jsxs)(o.Fragment, {
+        children: ["spinningCircle" === E && (0, o.jsxs)(o.Fragment, {
           children: [(0, o.jsx)("circle", {
             className: a(d.path, d.path3, r),
             cx: "50",
@@ -68,7 +68,7 @@ function _(e) {
       })
     })
   });
-  let E = a(d.item, r);
+  let S = a(d.item, r);
   return (0, o.jsx)("span", {
     className: a(d.spinner, i, {
       [d.stopAnimation]: !n
@@ -77,13 +77,13 @@ function _(e) {
     "aria-label": l,
     ..._,
     children: (0, o.jsxs)("span", {
-      className: a(d.inner, d[S]),
+      className: a(d.inner, d[E]),
       children: [(0, o.jsx)("span", {
-        className: E
+        className: S
       }), (0, o.jsx)("span", {
-        className: E
-      }), "pulsingEllipsis" === S || "lowMotion" === S ? (0, o.jsx)("span", {
-        className: E
+        className: S
+      }), "pulsingEllipsis" === E || "lowMotion" === E ? (0, o.jsx)("span", {
+        className: S
       }) : null]
     })
   })

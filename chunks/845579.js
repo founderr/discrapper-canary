@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return f
   },
   ExpressionSuggestionsEnabled: function() {
-    return S
+    return E
   },
   IncludeStickersInAutocomplete: function() {
-    return E
+    return S
   },
   RenderSpoilers: function() {
     return g
@@ -157,7 +157,7 @@ n.r(t), n.d(t, {
     return ef
   },
   TimezoneOffset: function() {
-    return eS
+    return eE
   },
   DeveloperMode: function() {
     return eh
@@ -217,13 +217,13 @@ let _ = (0, l.defineProtoSetting)("textAndImages", "useLegacyChatInput", e => {
   }, e => o.BoolValue.create({
     value: e
   })),
-  S = (0, l.defineProtoSetting)("textAndImages", "expressionSuggestionsEnabled", e => {
+  E = (0, l.defineProtoSetting)("textAndImages", "expressionSuggestionsEnabled", e => {
     var t;
     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
   }, e => o.BoolValue.create({
     value: e
   })),
-  E = (0, l.defineProtoSetting)("textAndImages", "includeStickersInAutocomplete", e => {
+  S = (0, l.defineProtoSetting)("textAndImages", "includeStickersInAutocomplete", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => o.BoolValue.create({
@@ -481,15 +481,15 @@ let Q = (0, l.defineProtoSetting)("textAndImages", "dmSpamFilterV2", e => null !
   }, e => o.BoolValue.create({
     value: e
   })), "text", "renderReactions"),
-  eS = (0, l.defineProtoSetting)("localization", "timezoneOffset", e => {
+  eE = (0, l.defineProtoSetting)("localization", "timezoneOffset", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : null
   }, e => o.Int32Value.create({
     value: null != e ? e : 0
   }));
 (0, l.defineProtoSetting)("appearance", "mobileRedesignDisabled", e => null != e && e, e => e);
-let eE = new Set([s.ChannelListLayoutTypes.COZY, s.ChannelListLayoutTypes.COMPACT]);
-(0, l.defineProtoSetting)("appearance", "channelListLayout", e => null != e && eE.has(e.value) ? e.value : s.ChannelListLayoutTypes.COZY, e => o.StringValue.create({
+let eS = new Set([s.ChannelListLayoutTypes.COZY, s.ChannelListLayoutTypes.COMPACT]);
+(0, l.defineProtoSetting)("appearance", "channelListLayout", e => null != e && eS.has(e.value) ? e.value : s.ChannelListLayoutTypes.COZY, e => o.StringValue.create({
   value: e
 }));
 let eg = new Set([s.MessagePreviewTypes.ALL, s.MessagePreviewTypes.UNREADS, s.MessagePreviewTypes.NONE]);

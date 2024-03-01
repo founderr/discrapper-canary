@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return f
   },
   openModalLazy: function() {
-    return S
+    return E
   },
   openModal: function() {
-    return E
+    return S
   },
   closeModal: function() {
     return g
@@ -64,7 +64,7 @@ let f = (0, o.default)(e => ({
   [l.DEFAULT_MODAL_CONTEXT]: [],
   [l.POPOUT_MODAL_CONTEXT]: []
 }));
-async function S(e) {
+async function E(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     {
       contextKey: n = d(),
@@ -73,19 +73,19 @@ async function S(e) {
     o = null != t.modalKey ? t.modalKey : r(),
     s = !1,
     l = setTimeout(() => {
-      s = !0, E(u, {
+      s = !0, S(u, {
         ...i,
         modalKey: o
       }, n)
     }, 300),
     a = await e();
-  return clearTimeout(l), s ? N(o, n) && h(o, a, i.onCloseRequest, i.onCloseCallback, n) : E(a, {
+  return clearTimeout(l), s ? N(o, n) && h(o, a, i.onCloseRequest, i.onCloseCallback, n) : S(a, {
     ...i,
     modalKey: o
   }, n), o
 }
 
-function E(e) {
+function S(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d(),
     {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return E
   }
 }), n("424973");
 var i = n("122717"),
@@ -34,7 +34,7 @@ i.inject.ApplyAnimatedValues(function(e, t, n) {
 function f(e, t, n) {
   return void 0 !== t && void 0 != n ? l.random(t, n) : e
 }
-var S = {
+var E = {
   ...i,
   Easing: o,
   accelerate: function(e) {
@@ -53,12 +53,12 @@ var S = {
       reverse: c,
       invert: d,
       callback: _,
-      type: S = "spring",
-      shouldLoop: E,
+      type: E = "spring",
+      shouldLoop: S,
       durationMin: g,
       durationMax: h,
       ...m
-    } = n, p = t._value, I = f(n.duration, g, h), T = f(n.toValue, o, s), v = i[S](t, {
+    } = n, p = t._value, I = f(n.duration, g, h), T = f(n.toValue, o, s), v = i[E](t, {
       ...m,
       toValue: T,
       tension: l,
@@ -67,7 +67,7 @@ var S = {
     }), A = v;
     if (c || d) {
       let e = f(n.duration, g, h);
-      r = i[S](t, {
+      r = i[E](t, {
         ...m,
         toValue: c ? p : -T,
         tension: l,
@@ -76,7 +76,7 @@ var S = {
       }), A = i.sequence([v, r])
     }
     u ? A.start(() => {
-      (!E || E && E()) && (_ ? _(e.bind(null, t, n)) : e(t, n))
+      (!S || S && S()) && (_ ? _(e.bind(null, t, n)) : e(t, n))
     }) : A.start(_)
   },
   interpolate: function(e) {

@@ -14,10 +14,10 @@ n.r(t), n.d(t, {
     return p.ImpressionGroups
   },
   ImpressionNames: function() {
-    return E.ImpressionNames
+    return S.ImpressionNames
   },
   NetworkActionNames: function() {
-    return E.NetworkActionNames
+    return S.NetworkActionNames
   },
   getCampaignParams: function() {
     return O
@@ -37,8 +37,8 @@ var o, s = n("714617"),
   d = n.n(c),
   _ = n("429030"),
   f = n("95410"),
-  S = n("444095"),
-  E = n("33112"),
+  E = n("444095"),
+  S = n("33112"),
   g = n("375492"),
   h = n("612481"),
   m = n("615582"),
@@ -181,10 +181,10 @@ if (null == i) try {
       else if (/iPad/.test(e)) return "iPad";
       else return ""
     }(), e.system_locale = (0, _.getSystemLocale)(), e
-  }(), f.default.set(I, e)), t = f.default.get(T), null == t && (t = L(), f.default.set(T, t)), n = S.default.get(T), null == n && (n = function(e, t) {
+  }(), f.default.set(I, e)), t = f.default.get(T), null == t && (t = L(), f.default.set(T, t)), n = E.default.get(T), null == n && (n = function(e, t) {
     let n = {};
     return Object.keys(e).map(i => n["".concat(i).concat(t)] = e[i]), n
-  }(L(), "_current"), S.default.set(T, n)), i = {
+  }(L(), "_current"), E.default.set(T, n)), i = {
     ...e,
     ... function() {
       var e, t;
@@ -215,7 +215,7 @@ D(function() {
   let i = {},
     r = window.GLOBAL_ENV.RELEASE_CHANNEL;
   r && (i.release_channel = r.split("-")[0]);
-  let o = parseInt((n = "271373", "271373"), 10);
+  let o = parseInt((n = "271455", "271455"), 10);
   !isNaN(o) && (i.client_build_number = o);
   let s = null == N ? void 0 : null === (e = (t = N.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
   return !isNaN(s) && (i.native_build_number = s), i.client_event_source = function() {

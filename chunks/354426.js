@@ -28,8 +28,8 @@ function a(e) {
     listHeaderHeight: d,
     chunkSize: _ = 256,
     paddingTop: f = 0,
-    paddingBottom: S = 0,
-    getScrollerState: E,
+    paddingBottom: E = 0,
+    getScrollerState: S,
     getAnchorId: g
   } = e, h = (0, o.default)(), m = (0, i.useRef)(l), [p] = (0, i.useState)(() => new r.default), {
     dirty: I,
@@ -38,13 +38,13 @@ function a(e) {
     forceUpdateOnChunkChange: A
   } = (0, s.default)({
     chunkSize: _,
-    getScrollerState: E,
+    getScrollerState: S,
     forceUpdate: h
   }), {
     items: N
   } = m.current, C = null, {
     scrollTop: R
-  } = E();
+  } = S();
   for (let e of N) {
     if (0 === R) break;
     if ("footer" === e.type || "header" === e.type || null == e.anchorId) continue;
@@ -68,11 +68,11 @@ function a(e) {
       rowHeight: a,
       footerHeight: u,
       listHeaderHeight: d,
-      paddingBottom: S,
+      paddingBottom: E,
       paddingTop: f,
       sections: t,
       getAnchorId: g
-    }), p.compute(Math.max(0, T * _), v * _)), [I, T, v, n, a, u, d, S, f, t, p, _, g]);
+    }), p.compute(Math.max(0, T * _), v * _)), [I, T, v, n, a, u, d, E, f, t, p, _, g]);
   return (0, i.useLayoutEffect)(() => void(m.current = L)), {
     ...L,
     listComputer: p,
