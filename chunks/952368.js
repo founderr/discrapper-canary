@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   IMAGE_GIF_RE: function() {
-    return I
+    return v
   },
   default: function() {
     return a
@@ -21,8 +21,8 @@ var l, i, a, s, r = n("37983"),
   C = n("594098"),
   S = n("719347"),
   T = n("49111");
-let I = /\.gif($|\?|#)/i,
-  v = /\.png($|\?|#)/i;
+let v = /\.gif($|\?|#)/i,
+  I = /\.png($|\?|#)/i;
 (s = i || (i = {})).LOAD = "LOAD", s.PRELOAD = "PRELOAD", s.CLICK = "CLICK", (l = class e extends o.Component {
   static isAnimated(e) {
     let {
@@ -30,13 +30,13 @@ let I = /\.gif($|\?|#)/i,
       original: n,
       animated: l
     } = e;
-    return l || I.test(null != n && "" !== n ? n : t)
+    return l || v.test(null != n && "" !== n ? n : t)
   }
   static isSrcPNG(e) {
     let {
       src: t
     } = e;
-    return v.test(t)
+    return I.test(t)
   }
   componentDidMount() {
     let {
@@ -143,8 +143,8 @@ let I = /\.gif($|\?|#)/i,
       height: E,
       minWidth: g,
       minHeight: S,
-      maxWidth: I,
-      maxHeight: v,
+      maxWidth: v,
+      maxHeight: I,
       onClick: _,
       renderAccessory: N,
       tabIndex: A,
@@ -156,7 +156,7 @@ let I = /\.gif($|\?|#)/i,
       readyState: M,
       hasMouseOver: L,
       hasFocus: P
-    } = this.state, b = null != l, j = this.getRatio(), U = (0, u.clamp)(Math.round(h * j), null != g ? g : 0, null != I ? I : 1 / 0), D = (0, u.clamp)(Math.round(E * j), null != S ? S : 0, null != v ? v : 1 / 0), k = {
+    } = this.state, b = null != l, j = this.getRatio(), U = (0, u.clamp)(Math.round(h * j), null != g ? g : 0, null != v ? v : 1 / 0), D = (0, u.clamp)(Math.round(E * j), null != S ? S : 0, null != I ? I : 1 / 0), k = {
       alt: t,
       readyState: M,
       onContextMenu: null != a ? a : void 0,

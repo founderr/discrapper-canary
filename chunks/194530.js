@@ -1,16 +1,16 @@
 "use strict";
 r.r(t), r.d(t, {
   queueMicroTask: function() {
-    return a
+    return o
   }
 }), r("424973");
-var n, u = [],
-  a = function(e) {
+var n, i = [],
+  o = function(e) {
     if (!n) {
       var t = 0,
         r = document.createTextNode("");
       new MutationObserver(function() {
-        return u.splice(0).forEach(function(e) {
+        return i.splice(0).forEach(function(e) {
           return e()
         })
       }).observe(r, {
@@ -19,5 +19,5 @@ var n, u = [],
         r.textContent = "".concat(t ? t-- : t++)
       }
     }
-    u.push(e), n()
+    i.push(e), n()
   }

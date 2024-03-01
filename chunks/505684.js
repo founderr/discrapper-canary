@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ObscuredDisplayContext: function() {
-    return v
+    return I
   },
   default: function() {
     return N
@@ -78,7 +78,7 @@ let C = e => {
         return (0, m.assertNever)(t)
     }
   },
-  I = e => {
+  v = e => {
     let {
       obscureReason: t,
       isVisible: n,
@@ -101,7 +101,7 @@ let C = e => {
       })
     })
   },
-  v = s.createContext(!1);
+  I = s.createContext(!1);
 class _ extends s.PureComponent {
   renderWithTooltip(e) {
     return (0, a.jsx)(c.Tooltip, {
@@ -131,7 +131,7 @@ class _ extends s.PureComponent {
       obscurityControlClassName: u
     } = this.props, {
       visible: d
-    } = this.state, m = (0, a.jsx)(v.Consumer, {
+    } = this.state, m = (0, a.jsx)(I.Consumer, {
       children: m => {
         let p = m || d || !i;
         return [f.ObscureReason.EXPLICIT_CONTENT, f.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(s) && !t ? (0, a.jsxs)("div", {
@@ -151,7 +151,7 @@ class _ extends s.PureComponent {
             "aria-hidden": !p,
             className: g.spoilerInnerContainer,
             children: e(!p)
-          }), (0, a.jsx)(I, {
+          }), (0, a.jsx)(v, {
             obscureReason: s,
             isVisible: d,
             handleToggleObscurity: this.handleToggleObscurity,
@@ -192,7 +192,7 @@ class _ extends s.PureComponent {
     } = this.props, {
       visible: r
     } = this.state;
-    return (0, a.jsx)(v.Consumer, {
+    return (0, a.jsx)(I.Consumer, {
       children: u => {
         let d = u || r;
         return [f.ObscureReason.EXPLICIT_CONTENT, f.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(s) ? (0, a.jsxs)("div", {
@@ -211,7 +211,7 @@ class _ extends s.PureComponent {
             "aria-hidden": !d,
             className: g.spoilerInnerContainer,
             children: e(!d)
-          }), (0, a.jsx)(I, {
+          }), (0, a.jsx)(v, {
             obscureReason: s,
             isVisible: r,
             handleToggleObscurity: this.handleToggleObscurity,
@@ -245,7 +245,7 @@ class _ extends s.PureComponent {
       className: n
     } = this.props, {
       visible: l
-    } = this.state, i = (0, a.jsx)(v.Consumer, {
+    } = this.state, i = (0, a.jsx)(I.Consumer, {
       children: i => {
         let r = i || l,
           u = s.Children.toArray(e(r)),

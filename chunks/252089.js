@@ -1,7 +1,7 @@
 "use strict";
-var n, u;
+var n, i;
 r.r(t), r.d(t, {
   ResizeObserverBoxOptions: function() {
     return n
   }
-}), (u = n || (n = {})).BORDER_BOX = "border-box", u.CONTENT_BOX = "content-box", u.DEVICE_PIXEL_CONTENT_BOX = "device-pixel-content-box"
+}), (i = n || (n = {})).BORDER_BOX = "border-box", i.CONTENT_BOX = "content-box", i.DEVICE_PIXEL_CONTENT_BOX = "device-pixel-content-box"

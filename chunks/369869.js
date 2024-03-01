@@ -42,15 +42,15 @@ function T(e) {
     bio: i,
     hidePersonalInformation: c,
     isUsingGuildBio: T,
-    lastSection: I = !1,
-    animateOnHover: v = !1,
+    lastSection: v = !1,
+    animateOnHover: I = !1,
     isHovering: _ = !1,
     lineClamp: N
   } = e, {
     location: A
   } = (0, o.useAnalyticsContext)(), x = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), y = f.default.canUsePremiumGuildMemberProfile(x);
   return c || null == i || "" === i ? null : (0, l.jsxs)(p.default, {
-    lastSection: I,
+    lastSection: v,
     children: [(0, l.jsxs)(r.Heading, {
       variant: "eyebrow",
       className: C.title,
@@ -89,7 +89,7 @@ function T(e) {
       })]
     }), (0, l.jsx)(m.default, {
       userBio: i,
-      animateOnHover: v,
+      animateOnHover: I,
       isHovering: _,
       lineClamp: N
     })]

@@ -61,14 +61,14 @@ async function h(e) {
   });
   if (!b) return !1;
   let U = (0, I.default)(y),
-    R = S.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(P.type);
+    V = S.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(P.type);
   if (U) {
     let e = await (0, A.default)({
       channelId: y,
       bypassChangeModal: null != i
     });
     if (!e) return !1
-  } else if (!(0, o.isActivitiesInTextEnabled)(P, "handleStartEmbeddedActivity") || !R) return !1;
+  } else if (!(0, o.isActivitiesInTextEnabled)(P, "handleStartEmbeddedActivity") || !V) return !1;
   return f.startEmbeddedActivity(y, t.application.id, L), (0, C.default)(D, y), (0, T.default)({
     type: N.AnalyticsGameOpenTypes.LAUNCH,
     userId: m.id,

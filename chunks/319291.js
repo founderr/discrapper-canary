@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return a
   }
 });
 var s = n("157246");
-let i = {
+let u = {
   [s.Soundpacks.CLASSIC]: {
     discodo: "discodo",
     message1: "message1",
@@ -52,6 +52,6 @@ let i = {
   }
 };
 
-function u(e) {
-  return i[e]
+function a(e) {
+  return u[e]
 }

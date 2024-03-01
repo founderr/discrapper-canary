@@ -2,12 +2,12 @@
 r("781738"), r("222007"), Object.defineProperty(t, "__esModule", {
   value: !0
 });
-for (var n = "undefined" != typeof window && /Mac|iPod|iPhone|iPad/.test(window.navigator.platform), u = {
+for (var n = "undefined" != typeof window && /Mac|iPod|iPhone|iPad/.test(window.navigator.platform), i = {
     alt: "altKey",
     control: "ctrlKey",
     meta: "metaKey",
     shift: "shiftKey"
-  }, a = {
+  }, o = {
     add: "+",
     break: "pause",
     cmd: "meta",
@@ -29,7 +29,7 @@ for (var n = "undefined" != typeof window && /Mac|iPod|iPhone|iPad/.test(window.
     up: "arrowup",
     win: "meta",
     windows: "meta"
-  }, o = {
+  }, a = {
     backspace: 8,
     tab: 9,
     enter: 13,
@@ -64,44 +64,44 @@ for (var n = "undefined" != typeof window && /Mac|iPod|iPhone|iPad/.test(window.
     "\\": 220,
     "]": 221,
     "'": 222
-  }, i = 1; i < 20; i++) o["f" + i] = 111 + i;
+  }, u = 1; u < 20; u++) a["f" + u] = 111 + u;
 
 function s(e, t, r) {
   t && !("byKey" in t) && (r = t, t = null), !Array.isArray(e) && (e = [e]);
   var n = e.map(function(e) {
       return l(e, t)
     }),
-    u = function(e) {
+    i = function(e) {
       return n.some(function(t) {
         return c(t, e)
       })
     };
-  return null == r ? u : u(r)
+  return null == r ? i : i(r)
 }
 
 function l(e, t) {
   var r = t && t.byKey,
     n = {},
-    a = (e = e.replace("++", "+add")).split("+"),
-    o = a.length;
-  for (var i in u) n[u[i]] = !1;
+    o = (e = e.replace("++", "+add")).split("+"),
+    a = o.length;
+  for (var u in i) n[i[u]] = !1;
   var s = !0,
     l = !1,
     c = void 0;
   try {
-    for (var D, h = a[Symbol.iterator](); !(s = (D = h.next()).done); s = !0) {
-      var v = D.value,
-        p = v.endsWith("?") && v.length > 1;
-      p && (v = v.slice(0, -1));
-      var C = d(v),
-        g = u[C];
-      (1 === o || !g) && (r ? n.key = C : n.which = f(v)), g && (n[g] = !p || null)
+    for (var h, p = o[Symbol.iterator](); !(s = (h = p.next()).done); s = !0) {
+      var v = h.value,
+        D = v.endsWith("?") && v.length > 1;
+      D && (v = v.slice(0, -1));
+      var g = f(v),
+        C = i[g];
+      (1 === a || !C) && (r ? n.key = g : n.which = d(v)), C && (n[C] = !D || null)
     }
   } catch (e) {
     l = !0, c = e
   } finally {
     try {
-      !s && h.return && h.return()
+      !s && p.return && p.return()
     } finally {
       if (l) throw c
     }
@@ -112,20 +112,20 @@ function l(e, t) {
 function c(e, t) {
   for (var r in e) {
     var n = e[r],
-      u = void 0;
+      i = void 0;
     if (null != n) {
-      if ((null != (u = "key" === r && null != t.key ? t.key.toLowerCase() : "which" === r ? 91 === n && 93 === t.which ? 91 : t.which : t[r]) || !1 !== n) && u !== n) return !1
+      if ((null != (i = "key" === r && null != t.key ? t.key.toLowerCase() : "which" === r ? 91 === n && 93 === t.which ? 91 : t.which : t[r]) || !1 !== n) && i !== n) return !1
     }
   }
   return !0
 }
 
-function f(e) {
-  return o[e = d(e)] || e.toUpperCase().charCodeAt(0)
+function d(e) {
+  return a[e = f(e)] || e.toUpperCase().charCodeAt(0)
 }
 
-function d(e) {
-  return e = a[e = e.toLowerCase()] || e
+function f(e) {
+  return e = o[e = e.toLowerCase()] || e
 }
 t.default = s, t.isHotkey = s, t.isCodeHotkey = function(e, t) {
   return s(e, t)
@@ -133,4 +133,4 @@ t.default = s, t.isHotkey = s, t.isCodeHotkey = function(e, t) {
   return s(e, {
     byKey: !0
   }, t)
-}, t.parseHotkey = l, t.compareHotkey = c, t.toKeyCode = f, t.toKeyName = d
+}, t.parseHotkey = l, t.compareHotkey = c, t.toKeyCode = d, t.toKeyName = f

@@ -20,9 +20,9 @@ var a = n("446674"),
   r = n("845579");
 n("373469");
 var s = n("271938"),
-  i = n("42203");
+  l = n("42203");
 n("18494");
-var l = n("101125"),
+var i = n("101125"),
   u = n("9759");
 
 function o() {
@@ -34,7 +34,7 @@ function o() {
     }, {
       autoTrackExposure: !1
     }),
-    n = (0, a.useStateFromStores)([l.default], () => l.default.getBroadcast());
+    n = (0, a.useStateFromStores)([i.default], () => i.default.getBroadcast());
   return t && (null == n ? void 0 : n.userId) === e ? n : null
 }
 
@@ -45,7 +45,7 @@ function d() {
 
 function c(e) {
   let t = o(),
-    n = (0, a.useStateFromStores)([i.default], () => i.default.getChannel(e));
+    n = (0, a.useStateFromStores)([l.default], () => l.default.getChannel(e));
   return null != t && null != n && n.ownerId === t.userId && n.isBroadcastChannel()
 }
 
@@ -58,9 +58,9 @@ function f(e) {
     }, {
       autoTrackExposure: !1
     }),
-    a = l.default.getBroadcast();
+    a = i.default.getBroadcast();
   if (!n || null == a || a.userId !== t) return !1;
-  let r = i.default.getChannel(e);
+  let r = l.default.getChannel(e);
   return null != r && r.ownerId === a.userId && r.isBroadcastChannel()
 }
 

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useStageParticipants: function() {
-    return l
+    return i
   },
   useStageParticipantsCount: function() {
     return u
@@ -16,9 +16,9 @@ n.r(t), n.d(t, {
 var a = n("446674"),
   r = n("334572"),
   s = n("488464"),
-  i = n("998716");
+  l = n("998716");
 
-function l(e, t) {
+function i(e, t) {
   let [n] = (0, a.useStateFromStores)([s.default], () => [s.default.getMutableParticipants(e, t), s.default.getParticipantsVersion(e)], [e, t], r.isVersionEqual);
   return n
 }
@@ -37,8 +37,8 @@ function o(e) {
 
 function d(e) {
   return (0, a.useStateFromStores)([s.default], () => {
-    let t = s.default.getMutableParticipants(e, i.StageChannelParticipantNamedIndex.SPEAKER),
-      n = t.filter(e => e.type === i.StageChannelParticipantTypes.VOICE);
+    let t = s.default.getMutableParticipants(e, l.StageChannelParticipantNamedIndex.SPEAKER),
+      n = t.filter(e => e.type === l.StageChannelParticipantTypes.VOICE);
     return n.length
   }, [e])
 }

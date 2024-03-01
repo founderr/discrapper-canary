@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return I
   }
 });
 var l = n("37983"),
@@ -41,7 +41,7 @@ function T(e) {
   })
 }
 
-function I(e, t, n, i) {
+function v(e, t, n, i) {
   return (0, l.jsx)(o.Tooltip, {
     text: function(e) {
       switch (e.categoryInfo.type) {
@@ -122,7 +122,7 @@ function I(e, t, n, i) {
   })
 }
 
-function v(e) {
+function I(e) {
   let {
     soundboardListRef: t,
     categories: n,
@@ -135,7 +135,7 @@ function v(e) {
     store: d.SoundboardPickerStore,
     categories: n,
     listPadding: a,
-    renderCategoryListItem: I,
+    renderCategoryListItem: v,
     rowCount: n.length,
     categoryHeight: 40
   })

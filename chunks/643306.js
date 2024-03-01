@@ -23,8 +23,8 @@ var i = n("414456"),
   C = n("42203"),
   S = n("26989"),
   T = n("305961"),
-  I = n("697218"),
-  v = n("145131"),
+  v = n("697218"),
+  I = n("145131"),
   _ = n("666897"),
   N = n("826684"),
   A = n("782340"),
@@ -83,16 +83,16 @@ function R(e) {
         u = null == i ? a.roles[a.getEveryoneRoleId()] : a.roles[i],
         m = r(o).filter(e => {
           if ("@everyone" === p || e.roles.includes(i)) {
-            let t = I.default.getUser(e.userId);
+            let t = v.default.getUser(e.userId);
             return null != t
           }
           return !1
         }).sortBy(e => {
           var t;
-          let n = I.default.getUser(e.userId);
+          let n = v.default.getUser(e.userId);
           return (null != n ? null !== (t = e.nick) && void 0 !== t ? t : n.username : "").toLocaleLowerCase()
         }).map(e => {
-          let i = I.default.getUser(e.userId);
+          let i = v.default.getUser(e.userId);
           return (0, l.jsx)(d.Popout, {
             preload: () => (0, E.default)(i.id, i.getAvatarURL(t.guild_id, 80), {
               guildId: t.guild_id,
@@ -138,7 +138,7 @@ function R(e) {
             }
           }, i.id)
         }).value();
-      return (0, l.jsx)(v.default, {
+      return (0, l.jsx)(I.default, {
         className: y.rolePopout,
         ...e,
         children: (0, l.jsxs)(d.Scroller, {

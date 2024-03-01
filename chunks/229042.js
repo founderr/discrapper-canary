@@ -1,13 +1,13 @@
 r("70102");
 var n = r("478098"),
-  u = r("952133");
+  i = r("952133");
 e.exports = function(e, t, r) {
-  var a = !0,
-    o = !0;
+  var o = !0,
+    a = !0;
   if ("function" != typeof e) throw TypeError("Expected a function");
-  return u(r) && (a = "leading" in r ? !!r.leading : a, o = "trailing" in r ? !!r.trailing : o), n(e, t, {
-    leading: a,
+  return i(r) && (o = "leading" in r ? !!r.leading : o, a = "trailing" in r ? !!r.trailing : a), n(e, t, {
+    leading: o,
     maxWait: t,
-    trailing: o
+    trailing: a
   })
 }

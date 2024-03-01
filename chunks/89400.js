@@ -70,17 +70,17 @@ var s = {
   "./vibing_wumpus.mp3": "653225"
 };
 
-function i(e) {
-  return n(u(e))
+function u(e) {
+  return n(a(e))
 }
 
-function u(e) {
+function a(e) {
   if (!n.o(s, e)) {
     var t = Error("Cannot find module '" + e + "'");
     throw t.code = "MODULE_NOT_FOUND", t
   }
   return s[e]
 }
-i.id = '"89400"', i.keys = function() {
+u.id = '"89400"', u.keys = function() {
   return Object.keys(s)
-}, i.resolve = u, e.exports = i
+}, u.resolve = a, e.exports = u

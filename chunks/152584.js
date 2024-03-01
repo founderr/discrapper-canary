@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   accountDetailsInit: function() {
-    return c
+    return I
   },
   accountDetailsClose: function() {
     return s
@@ -60,9 +60,9 @@ var i = n("872717"),
   d = n("437822"),
   a = n("49111"),
   S = n("191349"),
-  I = n("782340");
+  c = n("782340");
 
-function c() {
+function I() {
   o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_INIT"
   })
@@ -75,7 +75,7 @@ function s() {
 }
 
 function f(e, t) {
-  let n = t ? I.default.Messages.DELETE_ACCOUNT : I.default.Messages.DISABLE_ACCOUNT,
+  let n = t ? c.default.Messages.DELETE_ACCOUNT : c.default.Messages.DISABLE_ACCOUNT,
     r = t ? a.Endpoints.DELETE_ACCOUNT : a.Endpoints.DISABLE_ACCOUNT;
   return (0, T.default)(t => i.default.post({
     url: r,
@@ -125,7 +125,7 @@ function A(e) {
     emailToken: u,
     password: _,
     avatar: d,
-    avatarDecoration: c,
+    avatarDecoration: I,
     newPassword: s,
     globalName: f
   } = e;
@@ -143,7 +143,7 @@ function A(e) {
       new_password: s,
       ...e
     };
-    null === c && (o.avatar_decoration_id = null), null != c && (o.avatar_decoration_id = c.id, o.avatar_decoration_sku_id = c.skuId);
+    null === I && (o.avatar_decoration_id = null), null != I && (o.avatar_decoration_id = I.id, o.avatar_decoration_sku_id = I.skuId);
     let l = r.default.get(a.DEVICE_TOKEN),
       E = (0, S.getDevicePushProvider)();
     null != E && null != l && (o.push_provider = E, o.push_token = l);
@@ -152,7 +152,7 @@ function A(e) {
   }, {
     checkEnabled: !1,
     modalProps: {
-      title: I.default.Messages.TWO_FA_CHANGE_ACCOUNT
+      title: c.default.Messages.TWO_FA_CHANGE_ACCOUNT
     },
     hooks: {
       onEarlyClose: () => o.default.dispatch({
@@ -191,7 +191,7 @@ function R(e) {
   o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
     avatar: e
-  }), null == e ? u.AccessibilityAnnouncer.announce(I.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : u.AccessibilityAnnouncer.announce(I.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
+  }), null == e ? u.AccessibilityAnnouncer.announce(c.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : u.AccessibilityAnnouncer.announce(c.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
 }
 
 function D(e) {

@@ -5,30 +5,30 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("913144"),
-  i = n("504385"),
-  u = n("439141"),
-  a = n("533222"),
+  u = n("504385"),
+  a = n("439141"),
+  i = n("533222"),
   o = n("42887"),
   d = n("599110"),
   c = n("709681"),
-  r = n("12307"),
-  p = n("49111"),
+  p = n("12307"),
+  r = n("49111"),
   l = n("353927");
 
 function f() {
   (0, c.playSound)("mention3")
 }
 
-function _(e, t, n, s, i) {
+function _(e, t, n, s, u) {
   if (t === n) return;
-  let u = e[t],
+  let a = e[t],
     o = e[n];
-  d.default.track(p.AnalyticEvents.MEDIA_DEVICE_CHANGED, {
-    device_from_name: a.default.getCertifiedDeviceName(t, null != u ? u.name : ""),
-    device_to_name: a.default.getCertifiedDeviceName(n, null != o ? o.name : ""),
+  d.default.track(r.AnalyticEvents.MEDIA_DEVICE_CHANGED, {
+    device_from_name: i.default.getCertifiedDeviceName(t, null != a ? a.name : ""),
+    device_to_name: i.default.getCertifiedDeviceName(n, null != o ? o.name : ""),
     device_type: s,
-    device_is_certified: a.default.isCertified(n),
-    location: i
+    device_is_certified: i.default.isCertified(n),
+    location: u
   })
 }
 let m = {
@@ -93,15 +93,15 @@ var A = {
   },
   setDisableLocalVideo(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.MediaEngineContextTypes.DEFAULT,
-      i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
-      u = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      u = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
+      a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     !g() && s.default.dispatch({
       type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
       context: n,
       userId: e,
       videoToggleState: t,
-      persist: i,
-      isAutomatic: u
+      persist: u,
+      isAutomatic: a
     })
   },
   setLocalVolume(e, t) {
@@ -110,14 +110,14 @@ var A = {
       type: "AUDIO_SET_LOCAL_VOLUME",
       context: n,
       userId: e,
-      volume: (0, i.snapVolumeToDefault)(t, n)
+      volume: (0, u.snapVolumeToDefault)(t, n)
     })
   },
   setLocalPan(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.MediaEngineContextTypes.DEFAULT;
+    let u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.MediaEngineContextTypes.DEFAULT;
     s.default.dispatch({
       type: "AUDIO_SET_LOCAL_PAN",
-      context: i,
+      context: u,
       userId: e,
       left: t,
       right: n
@@ -287,13 +287,13 @@ var A = {
     })
   },
   setVideoEnabled(e) {
-    (0, u.applyInitialVideoBackgroundOption)(), s.default.dispatch({
+    (0, a.applyInitialVideoBackgroundOption)(), s.default.dispatch({
       type: "MEDIA_ENGINE_SET_VIDEO_ENABLED",
       enabled: e
     })
   },
   setGoLiveSource(e) {
-    (null == e ? void 0 : e.qualityOptions) != null && (0, r.trackStreamSettingsUpdate)(e.qualityOptions.preset, e.qualityOptions.resolution, e.qualityOptions.frameRate), s.default.dispatch({
+    (null == e ? void 0 : e.qualityOptions) != null && (0, p.trackStreamSettingsUpdate)(e.qualityOptions.preset, e.qualityOptions.resolution, e.qualityOptions.frameRate), s.default.dispatch({
       type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE",
       settings: e
     })

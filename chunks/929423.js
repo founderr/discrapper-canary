@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return S
   },
   setPendingProfileEffectId: function() {
-    return I
+    return c
   },
   setPendingBanner: function() {
-    return c
+    return I
   },
   setPendingBio: function() {
     return s
@@ -138,14 +138,14 @@ function S(e) {
   })
 }
 
-function I(e) {
+function c(e) {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID",
     profileEffectId: e
   })
 }
 
-function c(e) {
+function I(e) {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER",
     banner: e

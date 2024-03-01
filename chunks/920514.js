@@ -28,8 +28,8 @@ var i = n("414456"),
       hasTabWrapper: C,
       diversitySurrogate: S,
       isBurstReaction: T,
-      onBurstReactionToggle: I,
-      renderHeader: v
+      onBurstReactionToggle: v,
+      renderHeader: I
     } = e, _ = (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(u.default, {
         emojiListRef: m,
@@ -45,7 +45,7 @@ var i = n("414456"),
         className: f.burstToggle,
         children: (0, l.jsx)(s.default, {
           checked: T,
-          onClick: I
+          onClick: v
         })
       }) : null, n === c.EmojiIntention.COMMUNITY_CONTENT_ONLY ? null : null != t ? t : (0, l.jsx)(o.default, {
         searchBarRef: g,
@@ -56,6 +56,6 @@ var i = n("414456"),
     });
     return (0, l.jsx)("div", {
       className: a(f.header, i),
-      children: null != v ? v(_) : _
+      children: null != I ? I(_) : _
     })
   }

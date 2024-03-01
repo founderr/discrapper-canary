@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   Soundpacks: function() {
-    return i
+    return u
   },
   getSoundpackOptionsAprilFools2023: function() {
-    return a
+    return i
   }
 });
-var s, i, u = n("782340");
+var s, u, a = n("782340");
 
-function a() {
+function i() {
   return [{
     value: "classic",
-    label: u.default.Messages.SOUNDPACK_CLASSIC_LABEL
+    label: a.default.Messages.SOUNDPACK_CLASSIC_LABEL
   }, {
     value: "detune",
-    label: u.default.Messages.SOUNDPACK_DETUNE_LABEL
+    label: a.default.Messages.SOUNDPACK_DETUNE_LABEL
   }]
-}(s = i || (i = {})).CLASSIC = "classic", s.DETUNE = "detune"
+}(s = u || (u = {})).CLASSIC = "classic", s.DETUNE = "detune"

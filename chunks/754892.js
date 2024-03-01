@@ -1,15 +1,15 @@
 var Symbol = r("506264"),
   n = Object.prototype,
-  u = n.hasOwnProperty,
-  a = n.toString,
-  o = Symbol ? Symbol.toStringTag : void 0;
+  i = n.hasOwnProperty,
+  o = n.toString,
+  a = Symbol ? Symbol.toStringTag : void 0;
 e.exports = function(e) {
-  var t = u.call(e, o),
-    r = e[o];
+  var t = i.call(e, a),
+    r = e[a];
   try {
-    e[o] = void 0;
+    e[a] = void 0;
     var n = !0
   } catch (e) {}
-  var i = a.call(e);
-  return n && (t ? e[o] = r : delete e[o]), i
+  var u = o.call(e);
+  return n && (t ? e[a] = r : delete e[a]), u
 }

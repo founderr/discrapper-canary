@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useIsWindowFocused: function() {
-    return a
+    return o
   }
 });
 var i = n("884691"),
@@ -9,7 +9,7 @@ var i = n("884691"),
   r = n("244201"),
   l = n("471671");
 
-function a() {
+function o() {
   let {
     windowId: e
   } = i.useContext(r.default);

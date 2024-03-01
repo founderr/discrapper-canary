@@ -21,8 +21,8 @@ var l, i = n("37983"),
   C = n("966724"),
   S = n("383018"),
   T = n("605250"),
-  I = n("585722"),
-  v = n("378765"),
+  v = n("585722"),
+  I = n("378765"),
   _ = n("254490"),
   N = n("850391"),
   A = n("149022"),
@@ -172,7 +172,7 @@ l = class extends a.Component {
       fontSize: C,
       useSlate: S,
       spellcheckEnabled: T,
-      useNewSlashCommands: I,
+      useNewSlashCommands: v,
       canOnlyUseTextCommands: _,
       className: x,
       id: R,
@@ -217,7 +217,7 @@ l = class extends a.Component {
         [P.textAreaCustomGift]: g === N.ChatInputTypes.CUSTOM_GIFT
       }),
       spellcheckEnabled: T,
-      useNewSlashCommands: I,
+      useNewSlashCommands: v,
       disableAutoFocus: p.isMobile || null !== (n = g.disableAutoFocus) && void 0 !== n && n,
       disableEnterToSubmit: null !== (l = null === (e = g.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== l && l,
       "aria-controls": null !== (a = G.id) && void 0 !== a ? a : void 0,
@@ -241,10 +241,10 @@ l = class extends a.Component {
       value: d ? "" : o
     });
     return (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(v.ComponentAction, {
+      children: [(0, i.jsx)(I.ComponentAction, {
         event: M.ComponentActions.INSERT_TEXT,
         handler: this.handleInsertText
-      }), (0, i.jsx)(v.ComponentAction, {
+      }), (0, i.jsx)(I.ComponentAction, {
         event: M.ComponentActions.CLEAR_TEXT,
         handler: this.handleClearText
       }), H]
@@ -414,7 +414,7 @@ l = class extends a.Component {
           u = null,
           d = S.default.getActiveOption(t.id);
         null != (u = (null == d ? void 0 : d.type) === g.ApplicationCommandOptionType.ATTACHMENT ? d : null === (a = r.options) || void 0 === a ? void 0 : a.find(e => {
-          if (e.type === g.ApplicationCommandOptionType.ATTACHMENT) return null == I.default.getUpload(t.id, e.name, o)
+          if (e.type === g.ApplicationCommandOptionType.ATTACHMENT) return null == v.default.getUpload(t.id, e.name, o)
         })) && E.default.setFile({
           channelId: t.id,
           id: u.name,

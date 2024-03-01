@@ -58,7 +58,7 @@ class h extends i.PureComponent {
         renderLinkComponent: C,
         isWindowFocused: S,
         shouldHideMediaOptions: T = !1
-      } = this.props, I = {
+      } = this.props, v = {
         alt: r,
         src: o,
         original: null != d ? d : o,
@@ -79,7 +79,7 @@ class h extends i.PureComponent {
         size: s.ModalSize.DYNAMIC,
         "aria-label": f.default.Messages.IMAGE,
         children: (0, l.jsx)(u.ImageModal, {
-          ...I,
+          ...v,
           className: m.image,
           shouldAnimate: S,
           onClose: this.onCloseImage,

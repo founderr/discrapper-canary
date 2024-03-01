@@ -98,9 +98,9 @@ function g(e) {
       optionStates: C,
       onOptionClick: S,
       section: T,
-      isSelectable: I = !0
+      isSelectable: v = !0
     } = e,
-    v = i.useMemo(() => {
+    I = i.useMemo(() => {
       var e;
       return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find(e => e.name === d)
     }, [d, u]),
@@ -108,7 +108,7 @@ function g(e) {
   r = null != _ && (null === (t = _.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = _.lastValidationResult.error) && void 0 !== n ? n : "" : null;
   let N = g && null != T ? (0, c.getIconComponent)(T) : null;
   return (0, l.jsxs)("div", {
-    className: s(p.wrapper, I ? null : p.disabled),
+    className: s(p.wrapper, v ? null : p.disabled),
     children: [null != N ? (0, l.jsx)(N, {
       className: p.image,
       channel: m,
@@ -129,7 +129,7 @@ function g(e) {
         }) : null]
       }), (0, l.jsx)(o.AutocompleteRowSubheading, {
         className: s(p.description, null != r ? p.error : null),
-        children: null !== (a = null != r ? r : null == v ? void 0 : v.displayDescription) && void 0 !== a ? a : u.displayDescription
+        children: null !== (a = null != r ? r : null == I ? void 0 : I.displayDescription) && void 0 !== a ? a : u.displayDescription
       })]
     }), (0, l.jsx)(o.AutocompleteRowContentSecondary, {
       className: p.source,

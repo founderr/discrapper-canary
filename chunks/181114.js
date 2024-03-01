@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 });
 var i, s, r = n("37983"),
   l = n("884691"),
-  a = n("414456"),
-  o = n.n(a),
+  o = n("414456"),
+  a = n.n(o),
   u = n("458960"),
   c = n("77078"),
   d = n("252744"),
@@ -24,7 +24,7 @@ let E = {
     default: h.shineDefault,
     small: h.shineSmall
   },
-  p = {
+  v = {
     default: h.shineInnerDefault,
     small: h.shineInnerSmall
   };
@@ -38,7 +38,7 @@ class C extends l.PureComponent {
     } = this.props;
     return (0, r.jsx)(u.default.div, {
       ...i,
-      className: o(h.shineContainer, e, {
+      className: a(h.shineContainer, e, {
         [h.shinePaused]: n
       }),
       children: (0, r.jsx)(f.default, {
@@ -46,7 +46,7 @@ class C extends l.PureComponent {
         justify: f.default.Justify.CENTER,
         className: E[t],
         children: (0, r.jsx)("div", {
-          className: p[t]
+          className: v[t]
         })
       })
     })
@@ -55,31 +55,31 @@ class C extends l.PureComponent {
 C.defaultProps = {
   shineSize: "default"
 };
-let v = e => {
+let p = e => {
   let {
     children: t,
     className: n,
     disabled: i,
     submitting: s,
-    pauseAnimation: a,
+    pauseAnimation: o,
     shineSize: u = "default",
     shinePaused: f,
     buttonShineClassName: E,
-    onlyShineOnHover: p,
-    ...v
-  } = e, _ = l.createRef(), S = (0, d.default)(_), I = !i && !s && !0 !== a && (!p || S);
+    onlyShineOnHover: v,
+    ...p
+  } = e, _ = l.createRef(), S = (0, d.default)(_), I = !i && !s && !0 !== o && (!v || S);
   return (0, r.jsxs)(c.Button, {
     buttonRef: _,
-    ...v,
-    className: o(h.shinyButton, n),
+    ...p,
+    className: a(h.shinyButton, n),
     disabled: i,
     submitting: s,
     children: [t, I ? (0, r.jsx)(C, {
       shinePaused: f,
-      className: o(h.buttonShine, p ? h.onlyShineOnHover : void 0, E),
+      className: a(h.buttonShine, v ? h.onlyShineOnHover : void 0, E),
       shineSize: u
     }) : null]
   })
 };
-v.ShineSizes = s;
-var _ = v
+p.ShineSizes = s;
+var _ = p

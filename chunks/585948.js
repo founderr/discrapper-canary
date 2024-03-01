@@ -28,7 +28,7 @@ let o = e => {
     getRowProps: C,
     gridContainerProps: S,
     handleGridContainerKeyDown: T,
-    isUsingKeyboardNavigation: I
+    isUsingKeyboardNavigation: v
   } = (0, r.useExpressionPickerGridKeyboardNavigation)({
     columnCounts: t,
     gridNavigatorId: d,
@@ -54,6 +54,6 @@ let o = e => {
     getRowProps: C,
     gridContainerProps: S,
     handleGridContainerKeyDown: T,
-    isUsingKeyboardNavigation: I
+    isUsingKeyboardNavigation: v
   }
 }

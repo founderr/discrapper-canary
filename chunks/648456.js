@@ -37,8 +37,8 @@ var n, l = i("627445"),
   M = i("803353"),
   b = i("420444"),
   U = i("954016"),
-  R = i("49111"),
-  V = i("782340");
+  V = i("49111"),
+  R = i("782340");
 let F = {},
   Y = {};
 
@@ -70,7 +70,7 @@ async function B(e) {
     I = await (0, _.default)();
   Y[i] = e => {
     var t, a, r;
-    F[i] = e, S.default.track(R.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
+    F[i] = e, S.default.track(V.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
       channel_id: l.id,
       guild_id: l.getGuildId(),
       media_session_id: e.mediaSessionIds[0],
@@ -87,7 +87,7 @@ async function B(e) {
       shelf_sorted_rank: c > 0 ? c : null,
       activity_user_session_id: e.activityUserSessionId,
       channel_type: l.type
-    }), S.default.track(R.AnalyticEvents.ACTIVITY_IFRAME_MOUNT, {
+    }), S.default.track(V.AnalyticEvents.ACTIVITY_IFRAME_MOUNT, {
       location_stack: n,
       channel_id: l.id,
       channel_type: l.type,
@@ -119,7 +119,7 @@ async function G(e) {
       releasePhase: f
     } = w(c),
     E = await (0, _.default)();
-  S.default.track(R.AnalyticEvents.ACTIVITY_SESSION_LEFT, {
+  S.default.track(V.AnalyticEvents.ACTIVITY_SESSION_LEFT, {
     channel_id: u.id,
     guild_id: u.getGuildId(),
     media_session_id: a.mediaSessionIds[0],
@@ -134,7 +134,7 @@ async function G(e) {
     activity_user_session_id: a.activityUserSessionId,
     channel_type: u.type,
     media_session_ids: a.mediaSessionIds
-  }), S.default.track(R.AnalyticEvents.ACTIVITY_IFRAME_UNMOUNT, {
+  }), S.default.track(V.AnalyticEvents.ACTIVITY_IFRAME_UNMOUNT, {
     channel_id: u.id,
     guild_id: u.getGuildId(),
     application_id: l,
@@ -231,28 +231,28 @@ n = class extends s.default {
         guildId: i
       } = e;
       if (null == i) return;
-      let n = V.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC;
+      let n = R.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC;
       switch (t.code) {
-        case R.AbortCodes.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
-          n = V.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_ACCESS;
+        case V.AbortCodes.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
+          n = R.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_ACCESS;
           break;
-        case R.AbortCodes.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
-          n = V.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_PREMIUM;
+        case V.AbortCodes.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
+          n = R.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_PREMIUM;
           break;
-        case R.AbortCodes.INVALID_ACTIVITY_LAUNCH_CONCURRENT_ACTIVITIES:
-          n = V.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_CONCURRENT;
+        case V.AbortCodes.INVALID_ACTIVITY_LAUNCH_CONCURRENT_ACTIVITIES:
+          n = R.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_CONCURRENT;
           break;
-        case R.AbortCodes.INVALID_PERMISSIONS:
-          n = V.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
+        case V.AbortCodes.INVALID_PERMISSIONS:
+          n = R.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
           break;
-        case R.AbortCodes.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
-          n = V.default.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL;
+        case V.AbortCodes.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
+          n = R.default.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL;
           break;
-        case R.AbortCodes.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
-          n = V.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
+        case V.AbortCodes.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
+          n = R.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
           break;
-        case R.AbortCodes.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
-          n = V.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE
+        case V.AbortCodes.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
+          n = R.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE
       }
       this.showLaunchErrorModal(n)
     }, this.superHandleRPCDisconnect = e => {
@@ -269,7 +269,7 @@ n = class extends s.default {
           channelId: t,
           applicationId: n
         });
-        t.code !== R.RPCCloseCodes.CLOSE_NORMAL && this.showErrorModal(t, n)
+        t.code !== V.RPCCloseCodes.CLOSE_NORMAL && this.showErrorModal(t, n)
       }
     }, this.handleDeferredOpen = async e => {
       var t, i, n;
@@ -285,11 +285,11 @@ n = class extends s.default {
       let f = await o.default.fetchApplication(u),
         _ = (0, g.getIsActivitiesEnabledForCurrentPlatform)(d);
       if (!_) {
-        this.showLaunchErrorModal(V.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS);
+        this.showLaunchErrorModal(R.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS);
         return
       }
       if (!(0, M.default)(null == f ? void 0 : null === (t = f.embedded_activity_config) || void 0 === t ? void 0 : t.supported_platforms)) {
-        this.showLaunchErrorModal(V.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS);
+        this.showLaunchErrorModal(R.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS);
         return
       }
       let I = null == s ? void 0 : s.applicationId;

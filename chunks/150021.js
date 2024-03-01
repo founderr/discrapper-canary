@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return T
   },
   deleteEmoji: function() {
-    return I
+    return v
   },
   updateEmoji: function() {
-    return v
+    return I
   },
   favoriteEmoji: function() {
     return N
@@ -88,7 +88,7 @@ function T(e) {
   }), Promise.reject(e)))
 }
 
-function I(e, t) {
+function v(e, t) {
   return r.default.dispatch({
     type: "EMOJI_DELETE",
     guildId: e,
@@ -98,7 +98,7 @@ function I(e, t) {
     oldFormErrors: !0
   })
 }
-async function v(e) {
+async function I(e) {
   let {
     guildId: t,
     emojiId: n,

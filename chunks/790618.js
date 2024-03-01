@@ -1,5 +1,5 @@
 "use strict";
-let i, r, u, o, _, l, E, T, d, a, S, I, c, s;
+let i, r, u, o, _, l, E, T, d, a, S, c, I, s;
 n.r(t), n.d(t, {
   default: function() {
     return m
@@ -34,7 +34,7 @@ function g() {
 }
 
 function v() {
-  S = void 0, I = void 0, c = void 0, s = void 0, a = void 0
+  S = void 0, c = void 0, I = void 0, s = void 0, a = void 0
 }
 class L extends N.default.Store {
   getFormState() {
@@ -93,10 +93,10 @@ class L extends N.default.Store {
     return S
   }
   getTryItOutAvatarDecoration() {
-    return I
+    return c
   }
   getTryItOutProfileEffectId() {
-    return c
+    return I
   }
   getTryItOutBanner() {
     return s
@@ -105,8 +105,8 @@ class L extends N.default.Store {
     return {
       tryItOutThemeColors: a,
       tryItOutAvatar: S,
-      tryItOutAvatarDecoration: I,
-      tryItOutProfileEffectId: c,
+      tryItOutAvatarDecoration: c,
+      tryItOutProfileEffectId: I,
       tryItOutBanner: s
     }
   }
@@ -159,7 +159,7 @@ var m = new L(A.default, {
     let {
       item: t
     } = e;
-    (null == t ? void 0 : t.type) === f.CollectiblesItemType.PROFILE_EFFECT ? (I = null, c = null == t ? void 0 : t.id) : (c = null, I = t)
+    (null == t ? void 0 : t.type) === f.CollectiblesItemType.PROFILE_EFFECT ? (c = null, I = null == t ? void 0 : t.id) : (I = null, c = t)
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function(e) {
     let {
@@ -207,13 +207,13 @@ var m = new L(A.default, {
     let {
       avatarDecoration: t
     } = e;
-    I = t
+    c = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: function(e) {
     let {
       profileEffectId: t
     } = e;
-    c = t
+    I = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: function(e) {
     let {

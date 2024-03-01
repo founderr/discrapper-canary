@@ -1,25 +1,25 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return d
   },
   useGetOrFetchApplication: function() {
-    return s
+    return u
   }
 });
-var n = i("884691"),
-  l = i("446674"),
-  a = i("233736"),
-  u = i("651057"),
-  r = i("299285");
+var s = n("884691"),
+  i = n("446674"),
+  r = n("233736"),
+  a = n("651057"),
+  o = n("299285");
 
 function d(e) {
-  let t = n.useRef([]);
-  return n.useEffect(() => {
-    !(0, a.areArraysShallowEqual)(e, t.current) && (u.default.fetchApplications(e, !1), t.current = e)
-  }, [e]), (0, l.useStateFromStoresArray)([r.default], () => e.map(e => r.default.getApplication(e)))
+  let t = s.useRef([]);
+  return s.useEffect(() => {
+    !(0, r.areArraysShallowEqual)(e, t.current) && (a.default.fetchApplications(e, !1), t.current = e)
+  }, [e]), (0, i.useStateFromStoresArray)([o.default], () => e.map(e => o.default.getApplication(e)))
 }
 
-function s(e) {
+function u(e) {
   return d(null != e ? [e] : [])[0]
 }

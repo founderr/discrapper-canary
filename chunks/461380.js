@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return v
   }
 });
 var i = n("37983");
@@ -9,8 +9,8 @@ n("884691");
 var s = n("414456"),
   r = n.n(s),
   l = n("384737"),
-  a = n("448052"),
-  o = n("748802"),
+  o = n("448052"),
+  a = n("748802"),
   u = n("260792"),
   c = n("77078"),
   d = n("75196"),
@@ -27,9 +27,9 @@ let h = {
       width: n = 24,
       height: s = 24,
       color: E = "currentColor",
-      transition: p = f.transition,
+      transition: v = f.transition,
       className: C,
-      foreground: v,
+      foreground: p,
       expanded: _,
       ...S
     } = e, {
@@ -39,8 +39,8 @@ let h = {
       let e = {
         [h.UP]: u.ChevronSmallUpIcon,
         [h.DOWN]: l.ChevronSmallDownIcon,
-        [h.LEFT]: a.ChevronSmallLeftIcon,
-        [h.RIGHT]: o.ChevronSmallRightIcon
+        [h.LEFT]: o.ChevronSmallLeftIcon,
+        [h.RIGHT]: a.ChevronSmallRightIcon
       } [N];
       return (0, i.jsx)(e, {
         ...S,
@@ -48,17 +48,17 @@ let h = {
         width: n,
         height: s,
         color: E,
-        colorClass: v
+        colorClass: p
       })
     }
     return (0, i.jsx)("svg", {
-      className: r(C, p, N),
+      className: r(C, v, N),
       width: n,
       height: s,
       viewBox: "0 0 24 24",
       ...(0, d.default)(S),
       children: (0, i.jsx)("path", {
-        className: v,
+        className: p,
         fill: "none",
         stroke: E,
         strokeWidth: "2",
@@ -70,4 +70,4 @@ let h = {
     })
   };
 E.Directions = h;
-var p = E
+var v = E
