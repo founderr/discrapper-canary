@@ -21,7 +21,7 @@ function c(e, t, n, c) {
     C = a.default.getRTCConnectionId(),
     S = null === (f = l.default.getCurrentGameForAnalytics()) || void 0 === f ? void 0 : f.name,
     T = E !== n.guildId && n.guildId !== o.DEFAULT_SOUND_GUILD_ID;
-  let v = (m = n, p = T, m.guildId === o.DEFAULT_SOUND_GUILD_ID ? "default" : p ? "custom-external" : "custom");
+  let I = (m = n, p = T, m.guildId === o.DEFAULT_SOUND_GUILD_ID ? "default" : p ? "custom-external" : "custom");
   r.default.track(u.AnalyticEvents.PREMIUM_FEATURE_USAGE, {
     feature_name: d.AnalyticsPremiumFeatureNames.SOUNDBOARD_PLAY,
     feature_tier: T ? d.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD : d.AnalyticsPremiumFeatureTiers.FREE,
@@ -32,7 +32,7 @@ function c(e, t, n, c) {
     in_overlay: t,
     application_name: S,
     emoji_count: null != n.emojiId || null != n.emojiName ? 1 : 0,
-    feature_selection: v,
+    feature_selection: I,
     feature_selection_id: n.soundId,
     sound_type: c,
     is_broadcast: null != h && h.isBroadcastChannel()

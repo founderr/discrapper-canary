@@ -25,8 +25,8 @@ var l = n("37983"),
   C = n("83800"),
   S = n("916429"),
   T = n("939563"),
-  v = n("385887"),
-  I = n("395364"),
+  I = n("385887"),
+  v = n("395364"),
   _ = n("681426");
 
 function N(e) {
@@ -119,11 +119,11 @@ var A = i.forwardRef(function(e, t) {
   }, [p, h, C, S]);
   let {
     x: T,
-    y: I
+    y: v
   } = i.useMemo(() => {
     var e, t, n, l;
     let i = null === (e = a.current) || void 0 === e ? void 0 : e.getSlateEditor();
-    if ((null == i ? void 0 : i.selection) == null || v.RangeUtils.isCollapsed(i.selection) || !c) return {
+    if ((null == i ? void 0 : i.selection) == null || I.RangeUtils.isCollapsed(i.selection) || !c) return {
       x: null,
       y: null
     };
@@ -146,17 +146,17 @@ var A = i.forwardRef(function(e, t) {
       C = g ? E.x : Math.min(f.x, p.x),
       S = g ? E.x + E.width : Math.max(f.x, p.x),
       T = null !== (l = null === (n = s.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== l ? l : 0,
-      I = Math.max(T, Math.min(p.y, f.y));
+      v = Math.max(T, Math.min(p.y, f.y));
     return {
       x: C + (S - C) / 2,
-      y: I
+      y: v
     }
   }, [s, c, a]), [A, x] = i.useState(0), [y, R] = i.useState(0);
   if (i.useLayoutEffect(() => {
-      if (null == T || null == I || null == d.current) return;
+      if (null == T || null == v || null == d.current) return;
       let e = d.current.getBoundingClientRect();
       R(e.width / 2), x(e.height + 12)
-    }, [T, I]), null == T || null == I) return null;
+    }, [T, v]), null == T || null == v) return null;
   let M = null === (n = a.current) || void 0 === n ? void 0 : n.getSlateEditor();
   return null == M ? null : (0, l.jsx)(E.default, {
     children: (0, l.jsxs)("div", {
@@ -164,7 +164,7 @@ var A = i.forwardRef(function(e, t) {
       ref: d,
       className: _.toolbar,
       style: {
-        top: I - A,
+        top: v - A,
         left: T - y
       },
       onMouseDown: e => {
@@ -190,7 +190,7 @@ function x(e) {
     children: i
   } = e, a = !1;
   if ((null == t ? void 0 : t.selection) != null) {
-    let [e, l] = v.RangeUtils.edges(t.selection);
+    let [e, l] = I.RangeUtils.edges(t.selection);
     a = null != (0, S.parseSelectedSyntax)(t, e, l).before[n]
   }
   return (0, l.jsx)(o.Button, {
@@ -212,7 +212,7 @@ function y(e) {
     blockType: t,
     slateEditor: n,
     children: i
-  } = e, a = null != n ? v.EditorUtils.getCurrentBlock(n) : null, s = null != a && v.NodeUtils.isType(a[0], t);
+  } = e, a = null != n ? I.EditorUtils.getCurrentBlock(n) : null, s = null != a && I.NodeUtils.isType(a[0], t);
   return (0, l.jsx)(o.Button, {
     className: _.button,
     innerClassName: _.buttonInner,
@@ -231,14 +231,14 @@ function O(e) {
   var t;
   let {
     slateEditor: n
-  } = e, [l, a] = null !== (t = v.EditorUtils.getSelectedVoid(n)) && void 0 !== t ? t : [null, null], s = i.useCallback(e => {
+  } = e, [l, a] = null !== (t = I.EditorUtils.getSelectedVoid(n)) && void 0 !== t ? t : [null, null], s = i.useCallback(e => {
     if ((null == n ? void 0 : n.selection) == null || null == a) return;
     let t = n.selection;
     C.HistoryUtils.withSingleEntry(n, () => {
       T.SlateTransforms.voidToText(n, e, a), T.SlateTransforms.select(n, t)
     })
   }, [n, a]);
-  return null == l ? null : (0, I.default)(l, {
+  return null == l ? null : (0, v.default)(l, {
     replace: s
   })
 }

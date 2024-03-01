@@ -22,8 +22,8 @@ var l = n("37983"),
   C = n("685665"),
   S = n("384997"),
   T = n("385976"),
-  v = n("575226"),
-  I = n("305781"),
+  I = n("575226"),
+  v = n("305781"),
   _ = n("986632"),
   N = n("538282"),
   A = n("246511"),
@@ -102,7 +102,7 @@ let ee = (0, k.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
             pickerIntention: n,
             category: e.category,
             subCategory: e.subCategory,
-            newlyAddedHighlight: e.subCategory === J.EmojiSubCategory.NEWLY_ADDED_EMOJI && v.default.isNewerThanLastSeen(o, e.emoji.id)
+            newlyAddedHighlight: e.subCategory === J.EmojiSubCategory.NEWLY_ADDED_EMOJI && I.default.isNewerThanLastSeen(o, e.emoji.id)
           }), a(e.emoji, !l.shiftKey, c)
         }
       }
@@ -112,7 +112,7 @@ let ee = (0, k.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
       getRowProps: g,
       gridContainerProps: C,
       handleGridContainerKeyDown: S,
-      isUsingKeyboardNavigation: I
+      isUsingKeyboardNavigation: v
     } = (0, x.useExpressionPickerGridKeyboardNavigation)({
       columnCounts: l,
       gridNavigatorId: J.GRID_NAVIGATOR_ID,
@@ -138,7 +138,7 @@ let ee = (0, k.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
       getRowProps: g,
       gridContainerProps: C,
       handleGridContainerKeyDown: S,
-      isUsingKeyboardNavigation: I
+      isUsingKeyboardNavigation: v
     }
   },
   ea = (e, t) => {
@@ -188,10 +188,10 @@ var ed = i.memo(i.forwardRef(function(e, t) {
       shouldHidePickerActions: eC = !1,
       messageId: eS,
       renderHeader: eT,
-      listHeaderClassName: ev
+      listHeaderClassName: eI
     } = e,
     {
-      onFocus: eI,
+      onFocus: ev,
       onKeyDown: e_,
       autoFocus: eN = !0,
       accessory: eA
@@ -260,7 +260,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
   (0, M.useMaybeFetchPremiumLikelihood)(L.default);
   let e3 = i.useCallback(() => {
       let e = e4.length > 0 ? e4[0].id : null;
-      (0, I.updateNewlyAddedLastSeen)(ej, e), e8()
+      (0, v.updateNewlyAddedLastSeen)(ej, e), e8()
     }, [e8, e4, ej]),
     e6 = (0, K.useEmojiSelectHandler)({
       pickerIntention: o,
@@ -290,7 +290,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
           category: e.category,
           subCategory: e.subCategory,
           position: e.columnIndex + 1,
-          newlyAddedHighlight: e.subCategory === J.EmojiSubCategory.NEWLY_ADDED_EMOJI && v.default.isNewerThanLastSeen(ej, e.emoji.id),
+          newlyAddedHighlight: e.subCategory === J.EmojiSubCategory.NEWLY_ADDED_EMOJI && I.default.isNewerThanLastSeen(ej, e.emoji.id),
           isBurstReaction: eU
         })
       },
@@ -366,7 +366,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
         null == tt || tt(e), null == e_ || e_(e)
       },
       searchBarRef: eb,
-      onFocus: eI,
+      onFocus: ev,
       autoFocus: eN,
       accessory: eA,
       headerClassName: ep,
@@ -435,7 +435,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
               channelGuildId: ej,
               messageId: eS,
               isBurstReaction: eU,
-              listHeaderClassName: ev
+              listHeaderClassName: eI
             }) : null
           })]
         }), (0, l.jsx)(W.EmojiPickerInspector, {

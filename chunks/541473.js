@@ -1,5 +1,5 @@
 "use strict";
-i.r(e), i.d(e, {
+i.r(t), i.d(t, {
   default: function() {
     return c
   }
@@ -12,35 +12,35 @@ var n = i("203288"),
   d = i("18494"),
   s = i("800762");
 class o extends Error {}
-async function c(t) {
+async function c(e) {
   let {
-    channelId: e,
+    channelId: t,
     timeoutMs: i = 1e4,
     bypassChangeModal: c = !1
-  } = t, f = u.default.getChannel(e);
+  } = e, f = u.default.getChannel(t);
   if (null == f) return !1;
   let _ = await l.default.handleVoiceConnect({
     bypassGuildIdCheck: !0,
     bypassChangeModal: c,
     channel: f,
-    connected: s.default.isInChannel(e),
-    needSubscriptionToAccess: (0, a.getChannelRoleSubscriptionStatus)(e, u.default, n.default, r.default).needSubscriptionToAccess
+    connected: s.default.isInChannel(t),
+    needSubscriptionToAccess: (0, a.getChannelRoleSubscriptionStatus)(t, u.default, n.default, r.default).needSubscriptionToAccess
   });
   if (!_) return !1;
-  let E = new Promise((t, n) => {
+  let E = new Promise((e, n) => {
     let l = setTimeout(() => {
       n(new o("Joining voice channel has timed out."))
     }, i);
     d.default.addConditionalChangeListener(() => {
       let i = d.default.getVoiceChannelId();
-      return i !== e || (clearTimeout(l), t(), !1)
+      return i !== t || (clearTimeout(l), e(), !1)
     })
   });
   try {
     await E
-  } catch (t) {
-    if (t instanceof o) return !1;
-    throw t
+  } catch (e) {
+    if (e instanceof o) return !1;
+    throw e
   }
   return !0
 }

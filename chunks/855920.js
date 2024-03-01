@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return T
   },
   MessageCustomEmoji: function() {
-    return v
+    return I
   }
 }), n("222007");
 var l = n("37983"),
@@ -43,7 +43,7 @@ let T = e => {
       ...h.EXPRESSION_TOOLTIP_PROPS,
       position: i,
       onTooltipShow: () => {
-        a && I({
+        a && v({
           emojiNode: n,
           isCustomEmoji: !1
         })
@@ -70,13 +70,13 @@ let T = e => {
       children: f
     }) : f()
   },
-  v = e => {
+  I = e => {
     let {
       node: t,
       isInteracting: n,
       tooltipPosition: a = h.EXPRESSION_TOOLTIP_PROPS.position,
       enableClick: d = !0
-    } = e, [C, T] = i.useState(String(Date.now())), [v, _] = i.useState(!1), {
+    } = e, [C, T] = i.useState(String(Date.now())), [I, _] = i.useState(!1), {
       enabled: N
     } = f.NitroBadgeOnEmojiHoverExperiment.useExperiment({
       location: "MessageCustomEmoji"
@@ -96,7 +96,7 @@ let T = e => {
       ...h.EXPRESSION_TOOLTIP_PROPS,
       position: a,
       onTooltipShow: () => {
-        _(!0), d && (I({
+        _(!0), d && (v({
           emojiNode: t,
           isCustomEmoji: !0,
           nonce: x
@@ -113,7 +113,7 @@ let T = e => {
           _(!1), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
-          v && (m.default.track(E.AnalyticEvents.CLOSE_POPOUT, {
+          I && (m.default.track(E.AnalyticEvents.CLOSE_POPOUT, {
             nonce: x
           }), _(!1))
         },
@@ -145,7 +145,7 @@ let T = e => {
       children: y
     }) : y()
   },
-  I = e => {
+  v = e => {
     let {
       emojiNode: t,
       isCustomEmoji: n,

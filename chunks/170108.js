@@ -1,5 +1,5 @@
 "use strict";
-i.r(e), i.d(e, {
+i.r(t), i.d(t, {
   default: function() {
     return d
   }
@@ -10,12 +10,12 @@ var n = i("599110"),
   u = i("49111");
 let r = [a.SpotifyActionTypes.USER_ACTIVITY_SYNC, a.SpotifyActionTypes.EMBED_SYNC];
 
-function d(t, e, i, a) {
+function d(e, t, i, a) {
   n.default.track(u.AnalyticEvents.SPOTIFY_BUTTON_CLICKED, {
-    type: t,
+    type: e,
     source: a,
     is_premium: (0, l.isSpotifyPremium)(),
-    party_id: r.includes(t) && (null == i ? void 0 : i.party) != null ? i.party.id : null,
-    other_user_id: e.id
+    party_id: r.includes(e) && (null == i ? void 0 : i.party) != null ? i.party.id : null,
+    other_user_id: t.id
   })
 }

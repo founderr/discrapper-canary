@@ -14,8 +14,8 @@ var a = n("522632"),
   c = n("86878"),
   s = n("546463"),
   E = n("686470"),
-  I = n("535974"),
-  p = n("568734"),
+  p = n("535974"),
+  I = n("568734"),
   f = n("269180"),
   A = n("773336"),
   _ = n("260365"),
@@ -53,19 +53,19 @@ function S(t, e, n) {
     s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
   if (d) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, r.startEmbeddedActivity)(n, t, s), Promise.resolve());
   if (c.default.isConnected(t)) return Promise.resolve();
-  let p = null;
+  let I = null;
   if (null == e) {
     let n = E.default.getActiveLibraryApplication(t);
     e = null != n ? n.branchId : t
   }
-  if (I.default.isLaunchable(t, e)) {
+  if (p.default.isLaunchable(t, e)) {
     var A;
-    let n = I.default.getState(t, e),
+    let n = p.default.getState(t, e),
       l = E.default.getActiveLaunchOptionId(t, e);
     if (null == n) throw Error("Missing dispatch game when launching");
     let r = E.default.getLibraryApplication(t, e);
     if (null == r) throw Error("Missing library application when launching");
-    p = (A = t, i.default.post({
+    I = (A = t, i.default.post({
       url: y.Endpoints.OAUTH2_AUTHORIZE,
       query: {
         client_id: A,
@@ -92,17 +92,17 @@ function S(t, e, n) {
     })).then(t => f.default.launchDispatchApplication(n, t, o.default.locale, r.getBranchName(), l))
   } else {
     let e = u.default.getApplication(t);
-    p = null != e ? f.default.launch(e) : f.default.launchGame(t)
+    I = null != e ? f.default.launch(e) : f.default.launchGame(t)
   }
   let _ = Error("game not found");
-  return null != p ? (l.default.dispatch({
+  return null != I ? (l.default.dispatch({
     type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE",
     applicationId: t,
     branchId: e
   }), l.default.dispatch({
     type: "GAME_LAUNCH_START",
     applicationId: t
-  }), p.then(e => {
+  }), I.then(e => {
     l.default.dispatch({
       type: "GAME_LAUNCH_SUCCESS",
       applicationId: t,
@@ -132,7 +132,7 @@ var m = {
     if (null != n) {
       let t = E.default.getActiveLibraryApplication(n.id);
       if (null != t) {
-        let e = p.toggleFlag(t.getFlags(), y.LibraryApplicationFlags.OVERLAY_DISABLED);
+        let e = I.toggleFlag(t.getFlags(), y.LibraryApplicationFlags.OVERLAY_DISABLED);
         T.updateFlags(t.id, t.branchId, e);
         return
       }

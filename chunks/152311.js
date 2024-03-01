@@ -1,5 +1,5 @@
 "use strict";
-i.r(e), i.d(e, {
+i.r(t), i.d(t, {
   default: function() {
     return a
   }
@@ -7,6 +7,6 @@ i.r(e), i.d(e, {
 var n = i("871388"),
   l = i("49111");
 
-function a(t) {
-  return (0, n.default)(t, l.ActivityFlags.EMBEDDED)
+function a(e) {
+  return (0, n.default)(e, l.ActivityFlags.EMBEDDED)
 }

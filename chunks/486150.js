@@ -1,5 +1,5 @@
 "use strict";
-i.r(e), i.d(e, {
+i.r(t), i.d(t, {
   default: function() {
     return s
   }
@@ -11,18 +11,18 @@ var l = i("77078"),
   u = i("884385"),
   r = i("170108"),
   d = i("922174");
-async function s(t, e, s) {
+async function s(e, t, s) {
   let {
     hasSpotifyAccount: o,
     activity: c,
     user: f
-  } = t;
-  (0, d.default)(o) && null != c && null != c.sync_id && (await (0, u.ensureSpotifyPlayable)(), await (0, u.ensureSpotifyPremium)().catch(t => ((0, l.openModalLazy)(async () => {
+  } = e;
+  (0, d.default)(o) && null != c && null != c.sync_id && (await (0, u.ensureSpotifyPlayable)(), await (0, u.ensureSpotifyPremium)().catch(e => ((0, l.openModalLazy)(async () => {
     let {
-      default: t
+      default: e
     } = await i.el("775195").then(i.bind(i, "775195"));
-    return e => (0, n.jsx)(t, {
-      ...e
+    return t => (0, n.jsx)(e, {
+      ...t
     })
-  }), Promise.reject(t))), a.sync(c, f.id), (0, r.default)(e, f, c, s))
+  }), Promise.reject(e))), a.sync(c, f.id), (0, r.default)(t, f, c, s))
 }

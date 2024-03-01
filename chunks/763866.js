@@ -22,8 +22,8 @@ var l = n("37983"),
   C = n("648149"),
   S = n("915712"),
   T = n("261523"),
-  v = n("369869"),
-  I = n("545590"),
+  I = n("369869"),
+  v = n("545590"),
   _ = n("316095"),
   N = n("802279"),
   A = n("577172"),
@@ -117,10 +117,10 @@ function D(e) {
         }),
         onScroll: er,
         ref: ei,
-        children: [(0, l.jsx)(I.default, {
+        children: [(0, l.jsx)(v.default, {
           user: w,
           guildId: null == G ? void 0 : G.id
-        }), (0, l.jsx)(v.default, {
+        }), (0, l.jsx)(I.default, {
           isUsingGuildBio: null !== (n = null == F ? void 0 : F.isUsingGuildMemberBio()) && void 0 !== n && n,
           bio: null == F ? void 0 : F.bio,
           guild: G,

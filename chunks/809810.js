@@ -14,12 +14,12 @@ let c = {},
   s = {},
   E = {};
 
-function I(t) {
+function p(t) {
   delete c[t];
   let e = E[t];
   null != e && delete s[e], delete E[t]
 }
-class p extends l.default.Store {
+class I extends l.default.Store {
   getInteraction(t) {
     let e = s[t.id];
     return null != e ? c[e] : null
@@ -43,8 +43,8 @@ class p extends l.default.Store {
     return a
   }
 }
-p.displayName = "InteractionStore";
-var f = new p(r.default, {
+I.displayName = "InteractionStore";
+var f = new I(r.default, {
   LOGOUT: function() {
     c = {}, s = {}, E = {}
   },
@@ -86,7 +86,7 @@ var f = new p(r.default, {
     if (null == n) return !1;
     let a = c[n];
     if (null == a) return !1;
-    null === (e = a.onSuccess) || void 0 === e || e.call(a), I(n)
+    null === (e = a.onSuccess) || void 0 === e || e.call(a), p(n)
   },
   INTERACTION_FAILURE: function(t) {
     var e;
@@ -98,7 +98,7 @@ var f = new p(r.default, {
     if (null == n) return !1;
     let l = c[n];
     if (null == l) return !1;
-    null === (e = l.onFailure) || void 0 === e || e.call(l, a, i), l.data.interactionType === u.InteractionTypes.APPLICATION_COMMAND ? I(n) : c[n] = {
+    null === (e = l.onFailure) || void 0 === e || e.call(l, a, i), l.data.interactionType === u.InteractionTypes.APPLICATION_COMMAND ? p(n) : c[n] = {
       ...l,
       state: o.InteractionState.FAILED,
       errorCode: a,
@@ -114,7 +114,7 @@ var f = new p(r.default, {
       var n;
       let t = c[e.nonce];
       if (null == t) return !1;
-      null === (n = t.onSuccess) || void 0 === n || n.call(t), I(e.nonce)
+      null === (n = t.onSuccess) || void 0 === n || n.call(t), p(e.nonce)
     }
   },
   CHANNEL_SELECT: function(t) {
@@ -122,7 +122,7 @@ var f = new p(r.default, {
       channelId: e
     } = t, n = d.default.getChannel(e);
     if (null == n) return !1;
-    for (let [t, e] of Object.entries(c)) e.state === o.InteractionState.FAILED && I(t)
+    for (let [t, e] of Object.entries(c)) e.state === o.InteractionState.FAILED && p(t)
   },
   INTERACTION_IFRAME_MODAL_CREATE: function(t) {
     let {

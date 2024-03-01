@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return T
   },
   fetchIntegrationApplicationIdsForMyGuilds: function() {
-    return v
+    return I
   }
 }), n("222007");
 var l = n("981980"),
@@ -277,7 +277,7 @@ async function T() {
     }
   }
 }
-async function v() {
+async function I() {
   let e = Date.now(),
     t = f.default.getFetchState(),
     n = f.default.getLastFetchTimeMs(),

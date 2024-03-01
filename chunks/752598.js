@@ -30,8 +30,8 @@ var a, i, l = n("872717"),
   c = n("271938"),
   s = n("299039"),
   E = n("274800"),
-  I = n("809810"),
-  p = n("3765"),
+  p = n("809810"),
+  I = n("3765"),
   f = n("606981"),
   A = n("49111");
 
@@ -46,25 +46,25 @@ let T = async t => {
     customId: i,
     indices: r,
     applicationId: u,
-    channelId: p,
+    channelId: I,
     guildId: f,
     localState: _
   } = t, T = s.default.fromTimestamp(Date.now());
-  if (!I.default.canQueueInteraction(n, T)) return;
-  await o.default.unarchiveThreadIfNecessary(p), (0, E.addQueued)(T, {
+  if (!p.default.canQueueInteraction(n, T)) return;
+  await o.default.unarchiveThreadIfNecessary(I), (0, E.addQueued)(T, {
     messageId: n,
     data: {
       interactionType: d.InteractionTypes.MESSAGE_COMPONENT,
       customId: i,
       indices: r
     },
-    onFailure: (t, e) => y(p, t, e)
+    onFailure: (t, e) => y(I, t, e)
   }), null != _ && (0, E.queueInteractionComponentState)(n, T, _, r);
   let C = {
     type: d.InteractionTypes.MESSAGE_COMPONENT,
     nonce: T,
     guild_id: f,
-    channel_id: p,
+    channel_id: I,
     message_flags: a,
     message_id: n,
     application_id: u,
@@ -88,7 +88,7 @@ let T = async t => {
     body: C,
     timeout: 3e3
   }, t => {
-    h(T, p, f, t)
+    h(T, I, f, t)
   })
 }, C = async t => {
   let {
@@ -143,8 +143,8 @@ let N = (t, e) => {
   let l = t.state === A.MessageStates.SEND_FAILED && (null == (n = t.id) || "" === n || Number.isNaN(n) ? Date.now() : s.default.extractTimestamp(n) + 3e3) < Date.now(),
     r = (null == e ? void 0 : e.data.interactionType) === d.InteractionTypes.APPLICATION_COMMAND,
     u = t.isCommandType();
-  if (r && a === p.InteractionState.QUEUED || u && t.state === A.MessageStates.SENDING && null != e) return 0;
-  if (r && a === p.InteractionState.CREATED || t.hasFlag(A.MessageFlags.LOADING) && !i) return 1;
+  if (r && a === I.InteractionState.QUEUED || u && t.state === A.MessageStates.SENDING && null != e) return 0;
+  if (r && a === I.InteractionState.CREATED || t.hasFlag(A.MessageFlags.LOADING) && !i) return 1;
   if (null != t.interaction && t.hasFlag(A.MessageFlags.LOADING) && i) return 3;
   else if (null != t.interaction && !t.hasFlag(A.MessageFlags.LOADING) && l) return 3;
   else if (u && t.state === A.MessageStates.SEND_FAILED) return 2

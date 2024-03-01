@@ -1,5 +1,5 @@
 "use strict";
-i.r(e), i.d(e, {
+i.r(t), i.d(t, {
   default: function() {
     return f
   }
@@ -11,29 +11,29 @@ var n = i("446674"),
 let r = {},
   d = {};
 
-function s(t, e, i) {
+function s(e, t, i) {
   var n;
   let {
     applicationId: s
   } = i, o = null !== (n = r[s]) && void 0 !== n ? n : {};
-  if (o[e] = t, r[s] = o, !__OVERLAY__ && t === u.ActivityActionStates.FAILED) {
+  if (o[t] = e, r[s] = o, !__OVERLAY__ && e === u.ActivityActionStates.FAILED) {
     null != d[s] && d[s].stop();
-    let t = new l.Timeout;
-    t.start(12e4, () => a.default.dispatch({
+    let e = new l.Timeout;
+    e.start(12e4, () => a.default.dispatch({
       type: "ACTIVITY_LAUNCH_FAIL",
       applicationId: s,
-      activityType: e
-    })), d[s] = t
+      activityType: t
+    })), d[s] = e
   }
 }
 
-function o(t) {
-  return s(u.ActivityActionStates.COMPLETE, u.ActivityActionTypes.JOIN, t)
+function o(e) {
+  return s(u.ActivityActionStates.COMPLETE, u.ActivityActionTypes.JOIN, e)
 }
 class c extends n.default.Store {
-  getState(t, e) {
-    let i = r[t];
-    return null == i ? void 0 : i[e]
+  getState(e, t) {
+    let i = r[e];
+    return null == i ? void 0 : i[t]
   }
   getStates() {
     return r
@@ -41,23 +41,23 @@ class c extends n.default.Store {
 }
 c.displayName = "ActivityLauncherStore";
 var f = new c(a.default, {
-  OVERLAY_INITIALIZE: function(t) {
+  OVERLAY_INITIALIZE: function(e) {
     let {
-      activityLauncherStates: e
-    } = t;
+      activityLauncherStates: t
+    } = e;
     r = {
-      ...e
+      ...t
     }
   },
-  ACTIVITY_JOIN_LOADING: t => s(u.ActivityActionStates.LOADING, u.ActivityActionTypes.JOIN, t),
-  ACTIVITY_JOIN_FAILED: t => s(u.ActivityActionStates.FAILED, u.ActivityActionTypes.JOIN, t),
+  ACTIVITY_JOIN_LOADING: e => s(u.ActivityActionStates.LOADING, u.ActivityActionTypes.JOIN, e),
+  ACTIVITY_JOIN_FAILED: e => s(u.ActivityActionStates.FAILED, u.ActivityActionTypes.JOIN, e),
   ACTIVITY_JOIN: o,
   EMBEDDED_ACTIVITY_CLOSE: o,
-  ACTIVITY_LAUNCH_FAIL: function(t) {
+  ACTIVITY_LAUNCH_FAIL: function(e) {
     let {
-      applicationId: e,
+      applicationId: t,
       activityType: i
-    } = t, n = r[e];
+    } = e, n = r[t];
     if (null == n || n[i] !== u.ActivityActionStates.FAILED) return !1;
     delete n[i]
   }

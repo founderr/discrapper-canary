@@ -1,5 +1,5 @@
 "use strict";
-i.r(e), i.d(e, {
+i.r(t), i.d(t, {
   maybeJoinEmbeddedActivity: function() {
     return C
   }
@@ -19,8 +19,8 @@ var n = i("404118"),
   I = i("126939"),
   A = i("501260"),
   T = i("782340");
-async function C(t) {
-  var e;
+async function C(e) {
+  var t;
   let {
     channelId: i,
     applicationId: C,
@@ -28,12 +28,12 @@ async function C(t) {
     inputApplication: S,
     analyticsLocations: N,
     embeddedActivitiesManager: p
-  } = t, y = _.default.getEmbeddedActivitiesForChannel(i), h = y.find(t => t.applicationId === C && (null == v || t.instanceId === v)), D = S;
+  } = e, h = _.default.getEmbeddedActivitiesForChannel(i), y = h.find(e => e.applicationId === C && (null == v || e.instanceId === v)), D = S;
   if (null == D) {
-    let t = await l.default.fetchApplication(C);
-    D = r.default.createFromServer(t)
+    let e = await l.default.fetchApplication(C);
+    D = r.default.createFromServer(e)
   }
-  if (null == h || null == D) return;
+  if (null == y || null == D) return;
   let O = c.default.getCurrentUser(),
     L = d.default.getChannel(i),
     g = (0, A.default)({
@@ -49,13 +49,13 @@ async function C(t) {
     }),
     m = _.default.getSelfEmbeddedActivityForChannel(i),
     P = null == m ? void 0 : m.applicationId,
-    M = null != P && null !== (e = a.default.getApplication(P)) && void 0 !== e ? e : void 0;
-  ! function(t) {
+    M = null != P && null !== (t = a.default.getApplication(P)) && void 0 !== t ? t : void 0;
+  ! function(e) {
     let {
-      embeddedActivityJoinability: e,
+      embeddedActivityJoinability: t,
       handleCanJoin: i
-    } = t;
-    switch (e) {
+    } = e;
+    switch (t) {
       case A.EmbeddedActivityJoinability.CAN_JOIN:
         null == i || i();
         break;
@@ -95,9 +95,9 @@ async function C(t) {
     }
   }({
     embeddedActivityJoinability: g,
-    handleCanJoin: async function t() {
-      null != h && await (0, E.default)({
-        applicationId: h.applicationId,
+    handleCanJoin: async function e() {
+      null != y && await (0, E.default)({
+        applicationId: y.applicationId,
         currentEmbeddedApplication: M,
         activityChannelId: i,
         locationObject: {},

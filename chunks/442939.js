@@ -1,5 +1,5 @@
 "use strict";
-i.r(e), i.d(e, {
+i.r(t), i.d(t, {
   default: function() {
     return d
   },
@@ -13,13 +13,13 @@ var n = i("884691"),
   u = i("651057"),
   r = i("299285");
 
-function d(t) {
-  let e = n.useRef([]);
+function d(e) {
+  let t = n.useRef([]);
   return n.useEffect(() => {
-    !(0, a.areArraysShallowEqual)(t, e.current) && (u.default.fetchApplications(t, !1), e.current = t)
-  }, [t]), (0, l.useStateFromStoresArray)([r.default], () => t.map(t => r.default.getApplication(t)))
+    !(0, a.areArraysShallowEqual)(e, t.current) && (u.default.fetchApplications(e, !1), t.current = e)
+  }, [e]), (0, l.useStateFromStoresArray)([r.default], () => e.map(e => r.default.getApplication(e)))
 }
 
-function s(t) {
-  return d(null != t ? [t] : [])[0]
+function s(e) {
+  return d(null != e ? [e] : [])[0]
 }

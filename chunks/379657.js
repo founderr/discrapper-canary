@@ -31,7 +31,7 @@ function E(e) {
   });
   let {
     commands: S
-  } = r.useCommandsForApplication(E, t, n), T = i.useMemo(() => null == S ? void 0 : S.filter(e => !0 !== e.nsfw), [S]), v = i.useCallback(e => {
+  } = r.useCommandsForApplication(E, t, n), T = i.useMemo(() => null == S ? void 0 : S.filter(e => !0 !== e.nsfw), [S]), I = i.useCallback(e => {
     null == C || C(), d.default.track(f.AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, {
       application_id: t,
       command_id: e,
@@ -51,7 +51,7 @@ function E(e) {
           commandId: e.id,
           commandName: e.displayName,
           commandDescription: e.displayDescription,
-          onClick: v,
+          onClick: I,
           guildId: g,
           channelId: E.id
         })

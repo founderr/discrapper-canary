@@ -35,7 +35,7 @@ let g = [],
 
 function T() {
   var e, t;
-  if (!v()) return;
+  if (!I()) return;
   let n = null === (e = d.default.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
   S.overwriteHistory((t = null != n ? n : {}, i.mapValues(t, e => ({
     ...e,
@@ -43,13 +43,13 @@ function T() {
   }))), g)
 }
 
-function v() {
+function I() {
   return (0, f.recentlyHeardExperiment)({
     location: "soundboard_event_store",
     autoTrackExposure: !1
   }).canSeeFrequentlyPlayed
 }
-class I extends r.default.PersistedStore {
+class v extends r.default.PersistedStore {
   initialize(e) {
     this.waitFor(c.default, m.default), (null == e ? void 0 : e.recentlyHeardCache) != null && C.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (g = e.playedEventsPendingFlush), this.syncWith([d.default], T)
   }
@@ -72,14 +72,14 @@ class I extends r.default.PersistedStore {
     return S.frequently
   }
 }
-I.displayName = "SoundboardEventStore", I.persistKey = "SoundboardEventStore";
-var _ = new I(o.default, {
+v.displayName = "SoundboardEventStore", v.persistKey = "SoundboardEventStore";
+var _ = new v(o.default, {
   GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: function(e) {
     let {
       sound: t,
       trigger: n
     } = e;
-    if (!v()) return;
+    if (!I()) return;
     let l = t.soundId.toString();
     n === p.LocalSoundTrigger.SOUNDBOARD && function(e) {
       S.track(e), g.push({
@@ -120,6 +120,6 @@ var _ = new I(o.default, {
       },
       wasSaved: n
     } = e;
-    v() && t === E.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS && n && (g = [])
+    I() && t === E.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS && n && (g = [])
   }
 })

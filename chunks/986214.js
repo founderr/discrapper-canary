@@ -1,7 +1,7 @@
 "use strict";
-i.r(e), i.d(e, {
+i.r(t), i.d(t, {
   default: function() {
-    return y
+    return h
   }
 });
 var n = i("404118"),
@@ -24,24 +24,24 @@ var n = i("404118"),
   S = i("954016"),
   N = i("49111"),
   p = i("782340");
-async function y(t) {
+async function h(e) {
   let {
-    activityItem: e,
+    activityItem: t,
     currentEmbeddedApplication: i,
-    locationObject: y,
-    channelId: h,
+    locationObject: h,
+    channelId: y,
     guildId: D,
     embeddedActivitiesManager: O,
     analyticsLocations: L
-  } = t, g = u.default.getGuild(D), m = d.default.getCurrentUser();
-  if (null == g && !(0, v.isPrivateChannelWithEnabledActivities)(h) || null == m || null == e || null == e.application) return !1;
-  if (null == h) return s.ComponentDispatch.dispatch(N.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
-    applicationId: e.application.id
+  } = e, g = u.default.getGuild(D), m = d.default.getCurrentUser();
+  if (null == g && !(0, v.isPrivateChannelWithEnabledActivities)(y) || null == m || null == t || null == t.application) return !1;
+  if (null == y) return s.ComponentDispatch.dispatch(N.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
+    applicationId: t.application.id
   }), !1;
-  let P = a.default.getChannel(h);
+  let P = a.default.getChannel(y);
   if (null == P) return !1;
-  let M = null != h ? (0, E.getEmbeddedActivityLaunchability)({
-    channelId: h,
+  let M = null != y ? (0, E.getEmbeddedActivityLaunchability)({
+    channelId: y,
     ChannelStore: a.default,
     GuildStore: u.default,
     PermissionStore: r.default
@@ -52,28 +52,28 @@ async function y(t) {
     hideActionSheet: !1
   }), !1;
   let b = await (0, _.confirmActivityLaunchChecks)({
-    applicationId: e.application.id,
-    application: e.application,
+    applicationId: t.application.id,
+    application: t.application,
     channel: P,
     currentEmbeddedApplication: i,
     embeddedActivitiesManager: O,
     user: m
   });
   if (!b) return !1;
-  let U = (0, I.default)(h),
+  let U = (0, I.default)(y),
     R = S.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(P.type);
   if (U) {
-    let t = await (0, A.default)({
-      channelId: h,
+    let e = await (0, A.default)({
+      channelId: y,
       bypassChangeModal: null != i
     });
-    if (!t) return !1
+    if (!e) return !1
   } else if (!(0, o.isActivitiesInTextEnabled)(P, "handleStartEmbeddedActivity") || !R) return !1;
-  return f.startEmbeddedActivity(h, e.application.id, L), (0, C.default)(D, h), (0, T.default)({
+  return f.startEmbeddedActivity(y, t.application.id, L), (0, C.default)(D, y), (0, T.default)({
     type: N.AnalyticsGameOpenTypes.LAUNCH,
     userId: m.id,
-    applicationId: e.application.id,
-    locationObject: y,
+    applicationId: t.application.id,
+    locationObject: h,
     analyticsLocations: L
-  }), c.markActivityUsed(e.application.id), !0
+  }), c.markActivityUsed(t.application.id), !0
 }

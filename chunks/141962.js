@@ -1,5 +1,5 @@
 "use strict";
-i.r(e), i.d(e, {
+i.r(t), i.d(t, {
   default: function() {
     return c
   }
@@ -13,44 +13,44 @@ var l = i("77078"),
   d = i("648456"),
   s = i("782340");
 class o extends d.default {
-  showErrorModal(t) {
+  showErrorModal(e) {
     let {
-      code: e,
+      code: t,
       message: i
-    } = t;
-    (0, l.openModalLazy)(async () => t => (0, n.jsx)(u.default, {
+    } = e;
+    (0, l.openModalLazy)(async () => e => (0, n.jsx)(u.default, {
       title: s.default.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
-        code: e
+        code: t
       }),
       body: i,
-      ...t
-    }))
-  }
-  showLaunchErrorModal(t) {
-    (0, l.openModalLazy)(async () => e => (0, n.jsx)(u.default, {
-      title: s.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-      body: t,
       ...e
     }))
   }
-  leaveActivity(t) {
+  showLaunchErrorModal(e) {
+    (0, l.openModalLazy)(async () => t => (0, n.jsx)(u.default, {
+      title: s.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+      body: e,
+      ...t
+    }))
+  }
+  leaveActivity(e) {
     let {
-      channelId: e,
+      channelId: t,
       applicationId: i
-    } = t;
+    } = e;
     a.default.wait(() => (0, r.stopEmbeddedActivity)({
-      channelId: e,
+      channelId: t,
       applicationId: i
     }))
   }
-  constructor(...t) {
-    super(...t), this.handleRPCDisconnect = t => {
+  constructor(...e) {
+    super(...e), this.handleRPCDisconnect = e => {
       let {
-        reason: e,
+        reason: t,
         application: i
-      } = t;
+      } = e;
       this.superHandleRPCDisconnect({
-        reason: e,
+        reason: t,
         application: i
       })
     }
