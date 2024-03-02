@@ -22,8 +22,8 @@ var l = n("37983"),
   C = n("105571"),
   S = n("634114"),
   T = n("49111"),
-  v = n("13030"),
-  I = n("942838"),
+  I = n("13030"),
+  v = n("942838"),
   _ = i.memo(function(e) {
     let {
       positionTargetRef: t,
@@ -41,7 +41,7 @@ var l = n("37983"),
       let {
         target: n
       } = e;
-      if ((0, r.isElement)(n) && null != n.closest("." + v.CHAT_INPUT_BUTTON_CLASSNAME)) return;
+      if ((0, r.isElement)(n) && null != n.closest("." + I.CHAT_INPUT_BUTTON_CLASSNAME)) return;
       for (;
         (0, r.isElement)(n);) {
         if (n === A.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
@@ -62,7 +62,7 @@ var l = n("37983"),
     return (0, l.jsx)(c.default, {
       section: T.AnalyticsSections.EXPRESSION_PICKER,
       children: (0, l.jsx)(m.AppReferencePositionLayer, {
-        className: I.positionLayer,
+        className: v.positionLayer,
         reference: t,
         position: "top",
         align: "left",
@@ -73,17 +73,17 @@ var l = n("37983"),
             isPositioned: t
           } = e;
           return (0, l.jsx)("section", {
-            className: s(I.positionContainer),
+            className: s(v.positionContainer),
             ref: N,
             role: "dialog",
             "aria-label": "Application Launcher",
             children: t ? (0, l.jsxs)("div", {
-              className: I.drawerSizingWrapper,
+              className: v.drawerSizingWrapper,
               ref: A,
               children: [(0, l.jsx)("div", {
-                className: I.resizeHandle
+                className: v.resizeHandle
               }), (0, l.jsxs)("div", {
-                className: I.contentWrapper,
+                className: v.contentWrapper,
                 children: [(0, l.jsx)(S.default, {
                   channel: n,
                   isAppDetailPresent: null != b

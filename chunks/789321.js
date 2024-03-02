@@ -25,8 +25,8 @@ var l = n("37983"),
   C = n("491232"),
   S = n("845962"),
   T = n("697218"),
-  v = n("945330"),
-  I = n("719923"),
+  I = n("945330"),
+  v = n("719923"),
   _ = n("627601"),
   N = n("994428"),
   A = n("782340"),
@@ -41,7 +41,7 @@ function O(e) {
     className: x.closeButton,
     onClick: t,
     "aria-label": A.default.Messages.DISMISS,
-    children: (0, l.jsx)(v.default, {
+    children: (0, l.jsx)(I.default, {
       className: x.closeIcon,
       width: 18,
       height: 18
@@ -85,7 +85,7 @@ var P = e => {
     displayProfile: a,
     onClose: p,
     onDismiss: h,
-    isInSidebar: v = !1,
+    isInSidebar: I = !1,
     canShowAvatarDecorationUpsell: y = !1,
     canShowProfileEffectUpsell: P = !1,
     upsellSource: b
@@ -96,7 +96,7 @@ var P = e => {
     height: k
   } = (0, d.default)(), w = i.useMemo(() => ({
     top: "-".concat((null != k ? k : R) + 6, "px")
-  }), [k]), F = (0, o.default)([T.default], () => T.default.getCurrentUser()), G = I.default.canUseCollectibles(F), {
+  }), [k]), F = (0, o.default)([T.default], () => T.default.getCurrentUser()), G = v.default.canUseCollectibles(F), {
     setUpsellSource: B,
     reset: H
   } = (0, _.useUserPopoutCollectiblesUpsellStore)();
@@ -141,7 +141,7 @@ var P = e => {
     style: w,
     className: s(x.containerWrapper, {
       [x.animation]: !U,
-      [x.inSidebar]: v
+      [x.inSidebar]: I
     }),
     ref: D,
     children: (0, l.jsxs)("div", {

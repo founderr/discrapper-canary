@@ -22,13 +22,13 @@ var l = n("37983"),
   C = n("994428"),
   S = n("782340"),
   T = n("577827");
-let v = {
+let I = {
   tension: 750,
   mass: 2.5,
   friction: 70
 };
 
-function I(e) {
+function v(e) {
   let {
     tooltipText: t,
     headingText: n,
@@ -67,7 +67,7 @@ function _(e) {
     j = O ? S.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
   return (0, l.jsxs)(c.TooltipContainer, {
     position: "top",
-    text: (0, l.jsx)(I, {
+    text: (0, l.jsx)(v, {
       textColor: "always-white",
       tooltipText: b,
       headingText: j
@@ -87,7 +87,7 @@ function _(e) {
           to: {
             rotate: t ? "0deg" : "360deg"
           },
-          config: v
+          config: I
         }), null == n || n(), R(!1)
       },
       id: a,

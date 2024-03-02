@@ -26,7 +26,7 @@ let p = i.forwardRef(function(e, t) {
   } = (0, u.useExpressionPickerStore)(e => ({
     searchQuery: e.searchQuery,
     isSearchSuggestion: e.isSearchSuggestion
-  }), a.default), T = o.StickerPickerStore.useStore(e => e.searchPlaceholder), v = o.StickerPickerStore.useStore(e => e.inspectedExpressionPosition, a.default), I = i.useCallback(e => {
+  }), a.default), T = o.StickerPickerStore.useStore(e => e.searchPlaceholder), I = o.StickerPickerStore.useStore(e => e.inspectedExpressionPosition, a.default), v = i.useCallback(e => {
     var t;
     o.StickerPickerStore.setActiveCategoryIndex("" === e ? 0 : c.INACTIVE_CATEGORY_INDEX), o.StickerPickerStore.setInspectedExpressionPosition(0, 0), o.StickerPickerStore.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0)
   }, [p]), _ = i.useCallback(() => {
@@ -53,7 +53,7 @@ let p = i.forwardRef(function(e, t) {
       placeholder: null != T ? T : E ? f.default.Messages.SEARCH_FOR_STICKERS : f.default.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
       onClear: _,
       onKeyDown: n,
-      onQueryChange: I,
+      onQueryChange: v,
       className: m.searchBar,
       preventEscapePropagation: !1,
       useKeyboardNavigation: !1,
@@ -61,7 +61,7 @@ let p = i.forwardRef(function(e, t) {
         "aria-haspopup": "grid",
         "aria-controls": c.GRID_NAVIGATOR_ID,
         "aria-expanded": !0,
-        "aria-activedescendant": (0, s.makeGridId)(c.GRID_NAVIGATOR_ID, v.columnIndex, v.rowIndex)
+        "aria-activedescendant": (0, s.makeGridId)(c.GRID_NAVIGATOR_ID, I.columnIndex, I.rowIndex)
       }
     })
   })

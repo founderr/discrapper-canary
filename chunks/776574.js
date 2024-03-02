@@ -22,8 +22,8 @@ var l = n("37983"),
   C = n("760120"),
   S = n("632550"),
   T = n("235541"),
-  v = n("919163");
-class I extends i.PureComponent {
+  I = n("919163");
+class v extends i.PureComponent {
   componentDidMount() {
     this.props.editor.events.addListener("onChange", this.handleOnChange)
   }
@@ -313,7 +313,7 @@ class I extends i.PureComponent {
         value: [...this.state.initialValue],
         children: (0, l.jsx)(r.Editable, {
           ...S,
-          className: s(v.markup, T.editor, t),
+          className: s(I.markup, T.editor, t),
           decorate: this.decorate,
           renderElement: this.renderElement,
           renderLeaf: this.renderLeaf,
@@ -345,4 +345,4 @@ class I extends i.PureComponent {
     }
   }
 }
-var _ = I
+var _ = v

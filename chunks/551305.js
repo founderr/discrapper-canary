@@ -54,8 +54,8 @@ var E = s.memo(function(e) {
     isActive: C,
     onMouseEnter: S,
     onMouseLeave: T,
-    onFocus: v,
-    onBlur: I,
+    onFocus: I,
+    onBlur: v,
     pulse: _,
     sparkle: N,
     notification: A,
@@ -100,8 +100,8 @@ var E = s.memo(function(e) {
     onClick: g,
     onMouseEnter: S,
     onMouseLeave: T,
-    onFocus: v,
-    onBlur: I,
+    onFocus: I,
+    onBlur: v,
     focusProps: {
       offset: {
         top: 4,

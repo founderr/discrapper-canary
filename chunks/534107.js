@@ -32,7 +32,7 @@ function T(e) {
   return t ? i : Math.max(0, Math.round(n / l * i))
 }
 
-function v(e) {
+function I(e) {
   var t, n, l, i, a;
   let {
     context: s,
@@ -45,7 +45,7 @@ function v(e) {
   if (0 !== f) t = s, n = 6 * d * r, l = (o / 2 - f / 2) * r, i = f * r, a = 1 * r, t.moveTo(n, l + a), t.lineTo(n, l + i - a), t.arc(n + a, l + i - a, a, Math.PI, 0, !0), t.lineTo(n + 2 * a, l + a), t.arc(n + a, l + a, a, 0, Math.PI, !0), t.closePath()
 }
 
-function I(e, t, n) {
+function v(e, t, n) {
   let [l, a] = i.useState(e), [s, r] = i.useState(e);
   return i.useLayoutEffect(() => {
     a(s), r(e)
@@ -121,11 +121,11 @@ function N(e) {
       a = (0, o.useToken)(r.default.unsafe_rawColors.BRAND_430).hex(),
       s = (0, o.useToken)(r.default.unsafe_rawColors.WHITE_500).hex(),
       u = t ? a : n,
-      [d, c] = I(u, t, e),
+      [d, c] = v(u, t, e),
       f = t ? s : e ? i : l,
-      [m, p] = I(f, t, e),
+      [m, p] = v(f, t, e),
       h = e ? u : l,
-      [E, g] = I(h, t, e);
+      [E, g] = v(h, t, e);
     return {
       lastBackgroundFillColor: d,
       backgroundFillColor: c,
@@ -173,7 +173,7 @@ function N(e) {
       i.clearRect(0, 0, l.width, l.height), i.beginPath();
       let [o, u] = _(k, w, n, U.current);
       s = s || u, i.fillStyle = o;
-      for (let e = 0; e < P.length; e++) v({
+      for (let e = 0; e < P.length; e++) I({
         context: i,
         devicePixelRatio: D,
         canvasHeight: r,
@@ -189,7 +189,7 @@ function N(e) {
       for (let e = 0; e < a.length; e++) {
         let t = a[e],
           n = Math.max(t.getCurrentValue(), P[e] - .1);
-        i.beginPath(), i.fillStyle = t.isReset ? d : f, v({
+        i.beginPath(), i.fillStyle = t.isReset ? d : f, I({
           context: i,
           devicePixelRatio: D,
           canvasHeight: r,

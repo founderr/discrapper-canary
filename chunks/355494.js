@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return v
   }
 });
 var l = n("37983"),
@@ -46,7 +46,7 @@ let C = (0, c.cssValueToNumber)(a.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION
       graphic: n
     }
   },
-  v = i.memo(function(e) {
+  I = i.memo(function(e) {
     let {
       stickersGrid: t
     } = e, n = r.StickerPickerStore.useStore(e => e.inspectedExpressionPosition), a = i.useMemo(() => {
@@ -82,4 +82,4 @@ let C = (0, c.cssValueToNumber)(a.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION
       titleSecondary: (0, p.isStandardSticker)(a) || (0, p.isGuildSticker)(a) ? u : null
     })
   });
-var I = v
+var v = I

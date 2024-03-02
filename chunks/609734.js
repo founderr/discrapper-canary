@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return v
   }
 });
 var l = n("37983");
@@ -23,18 +23,18 @@ var i = n("414456"),
   C = n("613676"),
   S = n("49111"),
   T = n("782340"),
-  v = n("796440");
+  I = n("796440");
 
-function I(e) {
+function v(e) {
   var t;
   let {
     application: n,
     className: i
-  } = e, I = c.default.getChannel(f.default.getChannelId()), {
+  } = e, v = c.default.getChannel(f.default.getChannelId()), {
     appsInGDMEnabled: _,
     availableApplications: N
   } = (0, d.usePrivateChannelIntegrationState)({
-    channelId: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : S.EMPTY_STRING_SNOWFLAKE_ID
+    channelId: null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : S.EMPTY_STRING_SNOWFLAKE_ID
   });
   if (null == n || !(0, C.canInstallApplication)({
       customInstallUrl: n.customInstallUrl,
@@ -72,7 +72,7 @@ function I(e) {
       A ? (0, u.openOAuth2Modal)({
         clientId: n.id,
         scopes: [S.OAuth2Scopes.APPLICATIONS_COMMANDS],
-        channelId: I.id,
+        channelId: v.id,
         disableGuildSelect: !0
       }) : (0, C.installApplication)({
         applicationId: n.id,
@@ -81,9 +81,9 @@ function I(e) {
         integrationTypesConfig: n.integrationTypesConfig
       })
     },
-    className: a(v.applicationInstallButton, i),
+    className: a(I.applicationInstallButton, i),
     children: (0, l.jsxs)("div", {
-      className: v.applicationInstallButtonContent,
+      className: I.applicationInstallButtonContent,
       children: [(0, l.jsx)(h.default, {
         width: 16,
         height: 16
@@ -91,10 +91,10 @@ function I(e) {
         size: 4,
         horizontal: !0
       }), (0, l.jsx)("span", {
-        className: v.applicationInstallButtonText,
+        className: I.applicationInstallButtonText,
         children: A ? T.default.Messages.ADD : T.default.Messages.APPLICATION_ADD_BUTTON
       }), null == n.customInstallUrl || g.default.isDiscordUrl(n.customInstallUrl) ? null : (0, l.jsx)(p.default, {
-        className: v.launchIcon,
+        className: I.launchIcon,
         width: 16,
         height: 16
       })]

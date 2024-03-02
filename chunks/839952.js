@@ -74,7 +74,7 @@ function T(e) {
   })
 }
 
-function v(e) {
+function I(e) {
   let {
     attachment: t
   } = e, n = "".concat(t.filename, " (").concat((0, d.formatKbSize)(t.size), ")");
@@ -111,7 +111,7 @@ function v(e) {
   })
 }
 
-function I(e) {
+function v(e) {
   let {
     language: t,
     setLanguage: n
@@ -221,9 +221,9 @@ function N(e) {
         })]
       }) : null, (0, l.jsx)("div", {
         className: g.footerGap
-      }), (0, l.jsx)(v, {
-        attachment: n
       }), (0, l.jsx)(I, {
+        attachment: n
+      }), (0, l.jsx)(v, {
         language: u,
         setLanguage: c
       })]
@@ -262,9 +262,9 @@ function A(e) {
         variant: "text-sm/normal",
         children: [(0, l.jsx)("div", {
           className: g.footerGap
-        }), (0, l.jsx)(v, {
-          attachment: r
         }), (0, l.jsx)(I, {
+          attachment: r
+        }), (0, l.jsx)(v, {
           language: u,
           setLanguage: c
         })]
