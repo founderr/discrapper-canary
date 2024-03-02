@@ -1948,6 +1948,7 @@
     cursor: pointer;
     align-items: center;
     padding: 8px;
+    gap: 8px;
     background: var(--background-tertiary)
 }
 
@@ -1974,13 +1975,11 @@
 }
 
 .leftIcon_f180e1 {
-    margin-right: 8px;
     padding: 8px;
     color: var(--interactive-normal)
 }
 
 .rightIcon__53ec6 {
-    margin-left: auto;
     color: var(--interactive-normal)
 }
 
