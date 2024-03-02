@@ -334,7 +334,7 @@ function es(e) {
       if (null == eF || null != eC || null != eD) return;
       eF === _.ApplicationIntegrationType.USER_INSTALL && (eR(null), eM(null));
       let e = ej.filter(e => !G.ValidScopes.includes(e));
-      0 === ej.length ? eN(Error("No scopes were provided.")) : e.length > 0 ? eN(Error("Invalid scope: ".concat(e[0]))) : (0, U.containsDisallowedPermission)(null != eW ? eW : R.default.NONE) ? eN(Error("Invalid permission(s) provided.")) : eJ()
+      0 === ej.length ? eN(Error("No scopes were provided.")) : e.length > 0 ? eN(Error("Invalid scope: ".concat(e[0]))) : (0, U.containsDisallowedPermission)(eW) ? eN(Error("Invalid permission(s) provided.")) : eJ()
     }, [eJ, ej, eW, eF, eC, eD]), eD instanceof Error) return {
     body: (0, r.jsx)(z.OAuth2Error, {
       message: eD.message
@@ -390,12 +390,12 @@ function es(e) {
       }), ej.includes(X.OAuth2Scopes.BOT) && !c.default.equals(eW, R.default.NONE) && (h = 2), e$.length > 1 && (l = 0), e1 = e8 && null == eG || e9 && null == ek;
       break;
     case 2:
-      if (null == eC || null == eU) return {
+      if (null == eC) return {
         body: (0, r.jsx)(E.Spinner, {})
       };
       d = (0, r.jsx)(x.default, {
         application: eC.application,
-        permissions: null != eW ? eW : R.default.NONE,
+        permissions: eW,
         deniedPermissions: ew,
         onPermissionsChange: (e, t) => {
           eL(n => e ? c.default.remove(n, t) : c.default.add(n, t))
@@ -435,11 +435,11 @@ function es(e) {
       color: m.Button.Colors.PRIMARY,
       onClick: () => eQ(!1),
       children: Z.default.Messages.CANCEL
-    }), null != h && 0 !== eS ? (0, r.jsx)(m.Button, {
+    }), 0 !== eS ? null != h ? (0, r.jsx)(m.Button, {
       onClick: () => eA(h),
       disabled: e1,
       children: Z.default.Messages.CONTINUE
-    }) : 0 !== eS ? (0, r.jsx)(m.Button, {
+    }) : (0, r.jsx)(m.Button, {
       onClick: () => eQ(!0),
       disabled: e1,
       submitting: eO,
