@@ -255,7 +255,7 @@ function H(e) {
   })
 }
 
-function B(e) {
+function x(e) {
   let {
     channelId: t,
     messages: n
@@ -267,7 +267,7 @@ function B(e) {
   return !!r && G(n)
 }
 
-function x(e) {
+function B(e) {
   let {
     messages: t
   } = e;
@@ -367,17 +367,17 @@ function q(e) {
 class X extends d.default {
   constructor(...e) {
     super(...e), this.actions = {
-      LOAD_MESSAGES_SUCCESS: B,
+      LOAD_MESSAGES_SUCCESS: x,
       LOAD_FORUM_POSTS: Y,
       LOAD_THREADS_SUCCESS: j,
       LOAD_ARCHIVED_THREADS_SUCCESS: j,
       MESSAGE_CREATE: H,
       MESSAGE_UPDATE: F,
       LOGOUT: O,
-      SEARCH_FINISH: x,
-      MOD_VIEW_SEARCH_FINISH: x,
+      SEARCH_FINISH: B,
+      MOD_VIEW_SEARCH_FINISH: B,
       CHANNEL_SELECT: K,
-      LOAD_PINNED_MESSAGES_SUCCESS: x,
+      LOAD_PINNED_MESSAGES_SUCCESS: B,
       USER_SETTINGS_PROTO_UPDATE: W,
       CHANNEL_RTC_UPDATE_CHAT_OPEN: z
     }

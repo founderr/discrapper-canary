@@ -42,9 +42,9 @@ let L = new v.default("GatewaySocket"),
 function G() {}
 let F = 30 * I.default.Millis.SECOND,
   H = 3 * I.default.Millis.MINUTE,
-  B = 1 * I.default.Millis.MINUTE;
+  x = 1 * I.default.Millis.MINUTE;
 
-function x(e) {
+function B(e) {
   return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength
 }
 let Y = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
@@ -156,7 +156,7 @@ s = class extends R.default {
           case R.Opcode.DISPATCH:
             this._handleDispatch(a, r, "READY" === r ? {
               compressed_byte_size: t,
-              uncompressed_byte_size: x(e),
+              uncompressed_byte_size: B(e),
               compression_algorithm: this.compressionHandler.getAlgorithm(),
               packing_algorithm: U.getName(),
               unpack_duration_ms: o
@@ -173,7 +173,7 @@ s = class extends R.default {
         }
       }), t => {
         let s = t.data;
-        null != t.raw_length ? n += t.raw_length : n += x(s), e.feed(s)
+        null != t.raw_length ? n += t.raw_length : n += B(s), e.feed(s)
       }),
       onError: () => {
         this.setResumeUrl(null), C.default.flushDNSCache(), this._handleClose(!1, 0, "An error with the websocket occurred")
@@ -403,7 +403,7 @@ s = class extends R.default {
     0 === this.dispatchExceptionBackoff._fails ? (L.verbose("Triggering fast reconnect"), this.dispatchExceptionBackoff.fail(() => {}), setTimeout(() => this._connect(), 0)) : this.dispatchExceptionBackoff.fail(() => this._connect()), s && (this.didForceClearGuildHashes = !0, _.default.dispatch({
       type: "CLEAR_CACHES",
       reason: "Socket reset during ".concat(t)
-    })), clearTimeout(this.dispatchSuccessTimer), this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * B)
+    })), clearTimeout(this.dispatchSuccessTimer), this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * x)
   }
   resetSocketOnDispatchError(e) {
     let t = null != e.error.message && e.error.message.indexOf("Guild data was missing from store") >= 0;
@@ -446,7 +446,7 @@ s = class extends R.default {
     L.verbose("Connection has reset backoff".concat(null != e && "" !== e ? " for reason: " + e : "")), this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0, this.nextReconnectIsImmediate = !0, this.willReconnect() ? this._connect() : t && this.connectionState !== D.default.SESSION_ESTABLISHED && this._handleClose(!0, 0, e)
   }
   constructor() {
-    super(), this.dispatchExceptionBackoff = new o.default(1e3, B), this.dispatchSuccessTimer = 0, this.didForceClearGuildHashes = !1, this.identifyUncompressedByteSize = 0, this.identifyCompressedByteSize = 0, this.analytics = {}, this.identifyCount = 0, this.resumeUrl = null, this.iosGoingAwayEventCount = 0, this.send = (e, t, n) => {
+    super(), this.dispatchExceptionBackoff = new o.default(1e3, x), this.dispatchSuccessTimer = 0, this.didForceClearGuildHashes = !1, this.identifyUncompressedByteSize = 0, this.identifyCompressedByteSize = 0, this.analytics = {}, this.identifyCount = 0, this.resumeUrl = null, this.iosGoingAwayEventCount = 0, this.send = (e, t, n) => {
       y.default.isLoggingGatewayEvents && L.verboseDangerously("~>", e, t);
       let s = U.pack({
         op: e,

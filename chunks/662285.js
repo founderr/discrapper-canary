@@ -39,12 +39,12 @@ let R = h.default.get(V.PlatformTypes.SPOTIFY),
   F = 1 * O.default.Millis.MINUTE,
   H = 3 * O.default.Millis.SECOND;
 (o = a || (a = {})).PLAYER_STATE_CHANGED = "PLAYER_STATE_CHANGED", o.DEVICE_STATE_CHANGED = "DEVICE_STATE_CHANGED";
-let B = {
+let x = {
     MESSAGE: "message",
     PING: "ping",
     PONG: "pong"
   },
-  x = {
+  B = {
     SINGLE: "single"
   },
   Y = new E.default("Spotify"),
@@ -109,7 +109,7 @@ class ei {
   ping() {
     var e;
     this.connected && (null === (e = this.socket) || void 0 === e || e.send(JSON.stringify({
-      type: B.PING
+      type: x.PING
     })))
   }
   handleOpen() {
@@ -126,7 +126,7 @@ class ei {
       payloads: i
     } = JSON.parse(t);
     switch (n) {
-      case B.MESSAGE:
+      case x.MESSAGE:
         if ("string" == typeof s && s.startsWith(k)) this.connectionId = decodeURIComponent(s.split(k)[1]), (0, P.subscribePlayerStateNotifications)(this.accountId, this.accessToken, this.connectionId);
         else if (Array.isArray(i)) {
           for (let {
@@ -136,7 +136,7 @@ class ei {
             if (null != e)
               for (let t of e) this.handleEvent(t)
         }
-      case B.PONG:
+      case x.PONG:
     }
   }
   handleClose() {

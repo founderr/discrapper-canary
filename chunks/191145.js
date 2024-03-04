@@ -73,7 +73,7 @@ function F(e) {
         let e = n.toArray().find(e => e.type === I.ParticipantTypes.USER && e.id !== t && !e.ringing);
         s = null !== (a = null == e ? void 0 : e.id) && void 0 !== a ? a : t
       }
-      let [o] = B(e);
+      let [o] = x(e);
       if (o !== I.ParticipantSelectionTypes.AUTO && o !== I.ParticipantSelectionTypes.NONE) {
         let e = n.getParticipant(o);
         (null == e || e.type === I.ParticipantTypes.STREAM && null == c.default.getActiveStreamForStreamKey(e.id)) && (o = I.ParticipantSelectionTypes.NONE)
@@ -88,14 +88,14 @@ function H(e) {
   return F(t => t.updateParticipant(e), t)
 }
 
-function B(e) {
+function x(e) {
   var t;
   let n = h.default.getChannel(e),
     s = (null == n ? void 0 : n.isDM()) ? I.ParticipantSelectionTypes.AUTO : I.ParticipantSelectionTypes.NONE;
   return null !== (t = P[e]) && void 0 !== t ? t : [s, I.ParticipantSelectionTypes.NONE]
 }
 
-function x(e) {
+function B(e) {
   let t = P[e];
   if (null == t) return !1;
   let [n] = P[e];
@@ -111,7 +111,7 @@ function Y(e) {
   });
   let t = b[e],
     n = performance.now(),
-    s = x(e);
+    s = B(e);
   if (t.lastUpdate > 0) {
     let e = n - t.lastUpdate;
     t[s ? "focusDurationMs" : "gridDurationMs"] += e
@@ -121,9 +121,9 @@ function Y(e) {
 
 function j(e, t) {
   Y(e);
-  let n = x(e);
+  let n = B(e);
   null == t ? delete P[e] : P[e] = t;
-  let s = x(e);
+  let s = B(e);
   n !== s && b[e].toggleCount++
 }
 
@@ -244,7 +244,7 @@ class et extends o.default.Store {
     return null !== (t = M[e]) && void 0 !== t && t
   }
   getSelectedParticipantId(e) {
-    let [t, n] = B(e);
+    let [t, n] = x(e);
     return t === I.ParticipantSelectionTypes.NONE ? null : t !== I.ParticipantSelectionTypes.AUTO ? t : n === I.ParticipantSelectionTypes.NONE || n === I.ParticipantSelectionTypes.AUTO ? null : n
   }
   getSelectedParticipant(e) {
@@ -356,7 +356,7 @@ var en = new et(d.default, {
     i && s.toArray(C.ChannelRTCParticipantsIndexes.STREAM).forEach(e => {
       (0, I.isStreamParticipant)(e) && s.updateParticipant(e.user.id)
     });
-    let [, r] = B(t);
+    let [, r] = x(t);
     if (j(t, [null != n ? n : I.ParticipantSelectionTypes.NONE, r]), (0, _.isStreamKey)(n)) {
       try {
         let {
@@ -413,7 +413,7 @@ var en = new et(d.default, {
       selfStreamHidden: n
     } = e, s = g.default.getId();
     if (n) {
-      let [e] = B(t), n = (0, _.isStreamKey)(e);
+      let [e] = x(t), n = (0, _.isStreamKey)(e);
       n && e.includes(s) && j(t, null)
     }
     H(s, [t])

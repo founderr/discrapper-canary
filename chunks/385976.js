@@ -42,10 +42,10 @@ var s = n("917351"),
   G = n("115279"),
   F = n("397336");
 let H = [G.EmojiCategories.TOP_GUILD_EMOJI.toString(), G.EmojiCategories.FAVORITES.toString(), G.EmojiCategories.RECENT.toString(), G.EmojiCategories.CUSTOM.toString()].concat(k.default.getCategories()),
-  B = {
+  x = {
     pendingUsages: []
   };
-class x {
+class B {
   getEmoji(e) {
     return this.build(), this._emojiMap[e]
   }
@@ -306,7 +306,7 @@ function er(e, t) {
   let n = A.default.getCurrentUser();
   if (null == n) return;
   let s = (0, E.canUseRoleSubscriptionIAP)(e);
-  z[e] = new x(e, n.id, t, s)
+  z[e] = new B(e, n.id, t, s)
 }
 
 function ea() {
@@ -319,14 +319,14 @@ function ea() {
   et.overwriteHistory(i.mapValues(d, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
-  })), B.pendingUsages), i.isEmpty(d) && i.isEmpty(B.pendingUsages) && y.default.hasLoaded(F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (et.track("thumbsup"), et.track("thumbsup"), et.track("eyes"), et.track("eyes"), et.track("laughing"), et.track("laughing"), et.track("watermelon"), et.track("fork_and_knife"), et.track("yum"), et.track("weary"), et.track("tired_face"), et.track("poop"), et.track("100"))
+  })), x.pendingUsages), i.isEmpty(d) && i.isEmpty(x.pendingUsages) && y.default.hasLoaded(F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (et.track("thumbsup"), et.track("thumbsup"), et.track("eyes"), et.track("eyes"), et.track("laughing"), et.track("laughing"), et.track("watermelon"), et.track("fork_and_knife"), et.track("yum"), et.track("weary"), et.track("tired_face"), et.track("poop"), et.track("100"))
 }
 
 function eo(e) {
   for (let s of e) {
     var t, n;
     let e = null !== (n = null !== (t = s.id) && void 0 !== t ? t : s.uniqueName) && void 0 !== n ? n : s.name;
-    null != e && (et.track(e), B.pendingUsages.push({
+    null != e && (et.track(e), x.pendingUsages.push({
       key: e,
       timestamp: Date.now()
     }))
@@ -348,16 +348,16 @@ function ed(e) {
 }
 class eu extends d.default.PersistedStore {
   initialize(e) {
-    this.waitFor(f.default, C.default, T.default, I.default, p.default, v.default, w.default, A.default), null != e && (B = e), this.syncWith([y.default], ea)
+    this.waitFor(f.default, C.default, T.default, I.default, p.default, v.default, w.default, A.default), null != e && (x = e), this.syncWith([y.default], ea)
   }
   getState() {
-    return B
+    return x
   }
   get loadState() {
     return K
   }
   hasPendingUsage() {
-    return B.pendingUsages.length > 0
+    return x.pendingUsages.length > 0
   }
   get categories() {
     return W
@@ -551,7 +551,7 @@ var el = new eu(u.default, {
       wasSaved: n
     } = e;
     if (g.default.setEmojiLocale(p.default.locale), t !== F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-    B.pendingUsages = []
+    x.pendingUsages = []
   },
   GUILD_ROLE_CREATE: ed,
   GUILD_ROLE_UPDATE: ed,

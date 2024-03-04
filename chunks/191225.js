@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return p
   },
   default: function() {
-    return B
+    return x
   }
 }), n("222007"), n("424973"), n("581081");
 var i = n("446674"),
@@ -515,4 +515,4 @@ let H = new F(r.default, {
     e.code === v.RPCCloseCodes.CLOSE_ABNORMAL && (s = void 0, y.clear(), S = !1, R = h.ActivityPanelModes.DISCONNECTED)
   }
 });
-var B = H
+var x = H

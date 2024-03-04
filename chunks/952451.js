@@ -186,7 +186,7 @@ function H(e, t) {
   return !1
 }
 
-function B(e) {
+function x(e) {
   let {
     guilds: t
   } = e;
@@ -200,7 +200,7 @@ function B(e) {
   }
 }
 
-function x(e) {
+function B(e) {
   let {
     guilds: t,
     readState: n
@@ -498,8 +498,8 @@ class eg extends v.default {
   }
   constructor() {
     super({
-      CONNECTION_OPEN: x,
-      OVERLAY_INITIALIZE: B,
+      CONNECTION_OPEN: B,
+      OVERLAY_INITIALIZE: x,
       CACHE_LOADED_LAZY: () => this.loadCache(),
       GUILD_CREATE: j,
       GUILD_DELETE: K,

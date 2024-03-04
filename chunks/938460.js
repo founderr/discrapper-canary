@@ -11,8 +11,8 @@
       i = t("660078"),
       r = t("268491"),
       o = t("373469"),
-      l = t("271938"),
-      f = t("374014"),
+      f = t("271938"),
+      l = t("374014"),
       u = t("16916"),
       p = t("49111"),
       b = t("353927");
@@ -140,7 +140,7 @@
             sourceId: n,
             audioSourceId: i,
             sound: r
-          } = e, o = l.default.getId(), u = (0, f.encodeStreamKey)({
+          } = e, o = f.default.getId(), u = (0, l.encodeStreamKey)({
             streamType: a,
             guildId: t,
             channelId: s,

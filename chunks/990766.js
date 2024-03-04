@@ -37,10 +37,10 @@ n.r(t), n.d(t, {
     return H
   },
   createBroadcastChannelOrStartStream: function() {
-    return B
+    return x
   },
   joinPrivateChannelAndWatchStream: function() {
-    return x
+    return B
   }
 });
 var s = n("627445"),
@@ -223,7 +223,7 @@ function H() {
   null != t && M((0, u.encodeStreamKey)(t), e)
 }
 
-function B(e) {
+function x(e) {
   let {
     channelId: t,
     pid: n,
@@ -244,7 +244,7 @@ function B(e) {
   }))
 }
 
-function x(e, t) {
+function B(e, t) {
   let n = c.default.getId(),
     s = (0, u.decodeStreamKey)(t),
     i = h.default.getVoiceChannelId();
