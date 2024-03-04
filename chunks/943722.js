@@ -127,7 +127,7 @@ var y = e => {
     children: [b, (0, l.jsx)(x, {
       text: k,
       className: s
-    }), null != n && n.some(d.default) ? (0, l.jsx)(v.default, {
+    }), null != n && n.some(e => (0, d.default)(e, j)) ? (0, l.jsx)(v.default, {
       width: 16,
       height: 16,
       className: N.icon
