@@ -63,7 +63,8 @@ i = class {
       }).enabled && l.default.track(h.AnalyticEvents.RPC_COMMAND_SENT, {
         command: i,
         scope: "object" == typeof r.scope ? JSON.stringify(r.scope) : r.scope,
-        application_id: e.application.id
+        application_id: e.application.id,
+        socket_scope: e.authorization.scopes.toString()
       }), n(r)
     }).then(e => new Promise(async (n, i) => {
       if (null != e.validation) {
