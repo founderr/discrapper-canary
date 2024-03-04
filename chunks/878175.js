@@ -1,7 +1,7 @@
     "use strict";
     t.r(a), t.d(a, {
       default: function() {
-        return f
+        return l
       }
     }), t("222007");
     var s = t("316272"),
@@ -29,4 +29,4 @@
         super(...e), this._tracker = new i.default
       }
     }
-    var f = new o
+    var l = new o
