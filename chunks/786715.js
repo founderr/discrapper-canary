@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   LocalWeekParser: function() {
-    return h
+    return m
   }
 }), n("222007"), n("70102"), n("426094"), n("854508");
 var r = n("232985"),
@@ -50,7 +50,7 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var h = function(e) {
+var m = function(e) {
   ! function(e, t) {
     if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
     e.prototype = Object.create(t && t.prototype, {
@@ -61,7 +61,7 @@ var h = function(e) {
       }
     }), t && c(e, t)
   }(_, e);
-  var t, n, r, h, m, y = (t = _, n = function() {
+  var t, n, r, m, h, y = (t = _, n = function() {
     if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ("function" == typeof Proxy) return !0;
     try {
@@ -88,7 +88,7 @@ var h = function(e) {
     for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
     return p(d(e = y.call.apply(y, [this].concat(n))), "priority", 100), p(d(e), "incompatibleTokens", ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "i", "t", "T"]), e
   }
-  return r = _, h = [{
+  return r = _, m = [{
     key: "parse",
     value: function(e, t, n) {
       switch (t) {
@@ -112,5 +112,5 @@ var h = function(e) {
     value: function(e, t, n, r) {
       return (0, s.default)((0, i.default)(e, n, r), r)
     }
-  }], l(r.prototype, h), m && l(r, m), _
+  }], l(r.prototype, m), h && l(r, h), _
 }(r.Parser)

@@ -8,29 +8,29 @@ var t = E("913144"),
   o = E("689988"),
   n = E("271938"),
   r = E("366679"),
-  i = E("42203"),
-  a = E("18494"),
+  a = E("42203"),
+  i = E("18494"),
   I = E("123647"),
-  s = E("49111");
+  T = E("49111");
 
-function T() {
+function s() {
   ! function() {
-    let e = a.default.getVoiceChannelId(),
+    let e = i.default.getVoiceChannelId(),
       _ = r.default.bitrate;
     if (null == e) return;
-    let E = i.default.getChannel(e);
+    let E = a.default.getChannel(e);
     if (null != E) _ !== E.bitrate && t.default.dispatch({
       type: "SET_CHANNEL_BITRATE",
       bitrate: E.bitrate
     })
   }(), ! function() {
     var e;
-    let _ = a.default.getVoiceChannelId(),
+    let _ = i.default.getVoiceChannelId(),
       E = I.default.mode;
     if (null == _) return;
-    let o = i.default.getChannel(_);
+    let o = a.default.getChannel(_);
     if (null == o) return;
-    let n = null !== (e = o.videoQualityMode) && void 0 !== e ? e : s.VideoQualityMode.AUTO;
+    let n = null !== (e = o.videoQualityMode) && void 0 !== e ? e : T.VideoQualityMode.AUTO;
     E !== n && t.default.dispatch({
       type: "SET_CHANNEL_VIDEO_QUALITY_MODE",
       mode: n
@@ -42,7 +42,7 @@ function S(e) {
   let {
     channels: _
   } = e;
-  for (let e of _) a.default.getVoiceChannelId() === e.id && T()
+  for (let e of _) i.default.getVoiceChannelId() === e.id && s()
 }
 
 function N(e) {
@@ -50,7 +50,7 @@ function N(e) {
     voiceStates: _
   } = e;
   _.forEach(e => {
-    n.default.getSessionId() === e.sessionId && T()
+    n.default.getSessionId() === e.sessionId && s()
   })
 }
 class O extends o.default {

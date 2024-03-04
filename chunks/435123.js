@@ -1,10 +1,10 @@
 "use strict";
 E.r(_), E.d(_, {
   shouldFetchGuildFeed: function() {
-    return i
+    return a
   },
   default: function() {
-    return a
+    return i
   }
 });
 var t = E("884691"),
@@ -12,7 +12,7 @@ var t = E("884691"),
   n = E("713810"),
   r = E("185014");
 
-function i(e, _) {
+function a(e, _) {
   let E = r.default.getLastFetchedMillis(e);
   if (!_ && null != E && Date.now() - E < 72e5) return !1;
   let {
@@ -21,14 +21,14 @@ function i(e, _) {
   return t === r.LoadingStatus.NONE && !0
 }
 
-function a(e) {
+function i(e) {
   let {
     guildId: _,
     highlightedItemData: E
   } = e, {
-    loading: a,
+    loading: i,
     error: I
-  } = (0, o.useStateFromStores)([r.default], () => r.default.getFetchStatus(_), [_]), s = t.useCallback(e => {
+  } = (0, o.useStateFromStores)([r.default], () => r.default.getFetchStatus(_), [_]), T = t.useCallback(e => {
     let {
       force: t,
       flushSeenItems: o
@@ -45,9 +45,9 @@ function a(e) {
         console.error(e)
       }
     }
-    i(_, null != t && t) && r()
-  }, [_, E]), T = t.useCallback(() => {
-    i(_, !0) && e();
+    a(_, null != t && t) && r()
+  }, [_, E]), s = t.useCallback(() => {
+    a(_, !0) && e();
     async function e() {
       try {
         await (0, n.fetchGuildFeed)({
@@ -60,13 +60,13 @@ function a(e) {
     }
   }, [_]);
   return t.useEffect(() => {
-    s({
+    T({
       force: null != E
     })
-  }, [s, E]), {
-    fetchFresh: s,
-    fetchPage: T,
-    loading: a,
+  }, [T, E]), {
+    fetchFresh: T,
+    fetchPage: s,
+    loading: i,
     error: I
   }
 }

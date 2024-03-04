@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   setActiveCommand: function() {
-    return f
+    return _
   },
   setPreferredCommandId: function() {
     return h
@@ -16,59 +16,59 @@ n.r(t), n.d(t, {
     return m
   },
   querySearchManager: function() {
-    return A
-  },
-  performAutocomplete: function() {
-    return T
-  },
-  fetchCommand: function() {
     return p
   },
-  fetchCommands: function() {
+  performAutocomplete: function() {
     return S
   },
+  fetchCommand: function() {
+    return v
+  },
+  fetchCommands: function() {
+    return T
+  },
   fetchCommandsForApplication: function() {
-    return M
+    return I
   },
   updateRegistry: function() {
-    return N
+    return C
   }
 }), n("222007");
 var i = n("627445"),
-  a = n.n(i),
-  l = n("872717"),
-  s = n("913144"),
-  r = n("798609"),
-  u = n("271938"),
-  d = n("299039"),
-  o = n("246598"),
+  s = n.n(i),
+  r = n("872717"),
+  a = n("913144"),
+  o = n("798609"),
+  l = n("271938"),
+  u = n("299039"),
+  d = n("246598"),
   c = n("524768"),
-  _ = n("49111");
+  f = n("49111");
 
-function f(e) {
+function _(e) {
   let {
     channelId: t,
     command: n,
     section: i,
-    location: l,
-    initialValues: r,
-    triggerSection: u,
-    queryLength: d
+    location: r,
+    initialValues: o,
+    triggerSection: l,
+    queryLength: u
   } = e;
-  null != n && a(n.inputType !== c.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder"), s.default.dispatch({
+  null != n && s(n.inputType !== c.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder"), a.default.dispatch({
     type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
     channelId: t,
     command: n,
     section: i,
-    initialValues: r,
-    location: l,
-    triggerSection: u,
-    queryLength: d
+    initialValues: o,
+    location: r,
+    triggerSection: l,
+    queryLength: u
   })
 }
 
 function h(e, t) {
-  s.default.dispatch({
+  a.default.dispatch({
     type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND",
     channelId: e,
     commandId: t
@@ -76,7 +76,7 @@ function h(e, t) {
 }
 
 function E(e, t) {
-  s.default.dispatch({
+  a.default.dispatch({
     type: "APPLICATION_COMMAND_UPDATE_OPTIONS",
     channelId: e,
     changedOptionStates: t
@@ -94,59 +94,59 @@ function g(e, t) {
 }
 
 function m(e, t, n, i) {
-  return l.default.put({
+  return r.default.put({
     body: {
       permissions: i
     },
-    url: _.Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
+    url: f.Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
   })
 }
-let A = (e, t, n, i, a) => {
-  s.default.dispatch({
+let p = (e, t, n, i, s) => {
+  a.default.dispatch({
     type: "APPLICATION_COMMAND_SEARCH_STORE_QUERY",
     context: e,
     query: t,
     limit: n,
     commandType: i,
-    applicationId: a
+    applicationId: s
   })
 };
 
-function T(e, t, n) {
+function S(e, t, n) {
   var i;
-  a(null != t.autocomplete, "Missing autocomplete context");
+  s(null != t.autocomplete, "Missing autocomplete context");
   let {
     query: c,
-    name: f
-  } = t.autocomplete, h = d.default.fromTimestamp(Date.now());
-  s.default.dispatch({
+    name: _
+  } = t.autocomplete, h = u.default.fromTimestamp(Date.now());
+  a.default.dispatch({
     type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST",
     nonce: h,
     channelId: t.channel.id,
     query: c,
-    name: f
-  }), null == o.default.getAutocompleteChoices(t.channel.id, f, c) && l.default.post({
-    url: _.Endpoints.INTERACTIONS,
+    name: _
+  }), null == d.default.getAutocompleteChoices(t.channel.id, _, c) && r.default.post({
+    url: f.Endpoints.INTERACTIONS,
     body: {
-      type: r.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
+      type: o.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
       application_id: e.applicationId,
       guild_id: null === (i = t.guild) || void 0 === i ? void 0 : i.id,
       channel_id: t.channel.id,
-      session_id: u.default.getSessionId(),
+      session_id: l.default.getSessionId(),
       data: n,
       nonce: h
     },
     timeout: 3e3
   }).catch(() => {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "INTERACTION_FAILURE",
       nonce: h
     })
   })
 }
 
-function p(e, t, n) {
-  s.default.dispatch({
+function v(e, t, n) {
+  a.default.dispatch({
     type: "APPLICATION_COMMAND_FETCH",
     channelId: t,
     commandId: n,
@@ -154,8 +154,8 @@ function p(e, t, n) {
   })
 }
 
-function S(e, t, n) {
-  s.default.dispatch({
+function T(e, t, n) {
+  a.default.dispatch({
     type: "APPLICATION_COMMANDS_FETCH",
     channelId: t,
     commandIds: n,
@@ -163,13 +163,13 @@ function S(e, t, n) {
   })
 }
 
-function M(e) {
+function I(e) {
   let {
     guildId: t,
     channelId: n,
     applicationId: i
   } = e;
-  s.default.dispatch({
+  a.default.dispatch({
     type: "APPLICATION_COMMANDS_FETCH_FOR_APPLICATION",
     channelId: n,
     guildId: t,
@@ -177,8 +177,8 @@ function M(e) {
   })
 }
 
-function N(e, t, n) {
-  s.default.dispatch({
+function C(e, t, n) {
+  a.default.dispatch({
     type: "APPLICATION_COMMAND_REGISTRY_UPDATE",
     applications: t,
     commands: e,

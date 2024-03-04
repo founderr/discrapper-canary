@@ -1,4 +1,4 @@
-var r = s("690516");
-t.exports = function() {
+var r = n("690516");
+e.exports = function() {
   return r.Date.now()
 }

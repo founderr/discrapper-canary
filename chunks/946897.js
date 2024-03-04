@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return u
   }
 });
-var l = n("404828"),
-  r = n.n(l),
-  a = n("862205");
-let i = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
-  u = (0, a.createExperiment)({
+var i = n("404828"),
+  s = n.n(i),
+  r = n("862205");
+let a = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
+  o = (0, r.createExperiment)({
     kind: "user",
     id: "2023-11_attachment_link_markup",
     label: "Attachment Link Config User Experiment",
@@ -29,15 +29,15 @@ let i = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com
       }
     }]
   }),
-  o = {
-    order: r.defaultRules.url.order - .5,
+  l = {
+    order: s.defaultRules.url.order - .5,
     requiredFirstCharacters: ["h"],
     match(e) {
-      let t = i.exec(e);
+      let t = a.exec(e);
       if (null !== t) {
         let {
           enabled: e
-        } = u.getCurrentConfig({
+        } = o.getCurrentConfig({
           location: "markup"
         });
         if (!e) return null
@@ -45,20 +45,20 @@ let i = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com
       return t
     },
     parse(e, t, n) {
-      var l;
-      let r = e[0],
-        a = e[1];
+      var i;
+      let s = e[0],
+        r = e[1];
       return {
         type: "attachmentLink",
         content: [{
           type: "text",
-          content: l = a
+          content: i = r
         }],
-        attachmentUrl: r,
-        attachmentName: l
+        attachmentUrl: s,
+        attachmentName: i
       }
     }
   };
-var s = {
-  attachmentLink: o
+var u = {
+  attachmentLink: l
 }

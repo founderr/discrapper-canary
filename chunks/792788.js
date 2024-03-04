@@ -1,7 +1,7 @@
 "use strict";
 A.r(N), A.d(N, {
   default: function() {
-    return E
+    return e
   }
 });
 var O = A("160679"),
@@ -15,4 +15,4 @@ let _ = new T.default({
 _.addListener("locale", I => {
   document.cookie = "locale=".concat(I, ";path=/")
 });
-var E = _
+var e = _

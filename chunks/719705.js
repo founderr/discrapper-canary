@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   useSeparator: function() {
-    return a
+    return i
   }
 });
 var r = n("240849");
 
-function a(e) {
+function i(e) {
   let t, n = (0, r.filterDOMProps)(e, {
     labelable: !0
   });

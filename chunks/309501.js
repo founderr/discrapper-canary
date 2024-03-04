@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return i
   }
 });
 var r = n("54493");
 
-function a(e, t, n) {
+function i(e, t, n) {
   return (t = (0, r.default)(t)) in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,

@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   showTakeoverModal: function() {
-    return i
+    return a
   }
 });
 var t = E("37983");
@@ -10,7 +10,7 @@ var o = E("77078"),
   n = E("892974"),
   r = E("761771");
 
-function i(e) {
+function a(e) {
   (0, r.isEligibleForInappropriateConversationWarning)({
     location: "takeover-modal"
   }) && (0, o.openModalLazy)(async () => {

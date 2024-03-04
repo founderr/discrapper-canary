@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var s = n("792788");
+var i = n("792788");
 
-function i() {
-  return s.default.Messages.DynamicLinks.IOS_APP_PREVIEW_DESCRIPTION
+function s() {
+  return i.default.Messages.DynamicLinks.IOS_APP_PREVIEW_DESCRIPTION
 }

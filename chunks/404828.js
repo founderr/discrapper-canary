@@ -44,8 +44,8 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       var l = function(t, i) {
           var s = [];
           for (n = i = i || n; t;) {
-            for (var u = null, c = null, d = null, f = -1e5, p = 1e5, h = [a.get(t.charCodeAt(0)), o], m = 0; m < h.length; m++) {
-              var y = h[m];
+            for (var u = null, c = null, d = null, f = -1e5, p = 1e5, m = [a.get(t.charCodeAt(0)), o], h = 0; h < m.length; h++) {
+              var y = m[h];
               if (null != y)
                 for (var _ = 0; _ < y.length; _++) {
                   var g = y[_],
@@ -72,13 +72,13 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
         };
       return l.rules = e, c.rules = e, c
     },
-    h = function(e) {
+    m = function(e) {
       var t = function(t, n) {
         return n.inline ? e.exec(t) : null
       };
       return t.regex = e, t
     },
-    m = function(e) {
+    h = function(e) {
       var t = function(t, n) {
         return n.inline ? null : e.exec(t)
       };
@@ -152,17 +152,17 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
         content: S(t, e[1], n)
       }
     },
-    x = function() {
+    O = function() {
       return {}
     },
-    O = "(?:[*+-]|\\d+\\.)",
-    E = "( *)(" + O + ") +",
+    x = "(?:[*+-]|\\d+\\.)",
+    E = "( *)(" + x + ") +",
     P = RegExp("^" + E),
-    j = RegExp(E + "[^\\n]*(?:\\n(?!\\1" + O + " )[^\\n]*)*(\n|$)", "gm"),
+    j = RegExp(E + "[^\\n]*(?:\\n(?!\\1" + x + " )[^\\n]*)*(\n|$)", "gm"),
     C = /\n{2,}$/,
     H = /^ (?= *`)|(` *) $/g,
     F = / *\n+$/,
-    A = RegExp("^( *)(" + O + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + O + " )\\n*|\\s*\n*$)"),
+    A = RegExp("^( *)(" + x + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + x + " )\\n*|\\s*\n*$)"),
     I = /(?:^|\n)( *)$/;
   var N = (e = /^ *\| *| *\| *$/g, t = / *$/, n = /^ *-+: *$/, r = /^ *:-+: *$/, a = /^ *:-+ *$/, o = function(e) {
       if (n.test(e)) return "right";
@@ -184,15 +184,15 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       parseTable: (s = function(t) {
         return function(n, r, a) {
           a.inline = !0;
-          var s, u, l, c, d, f, p, h = i(n[1], r, a, t);
-          var m = (s = n[2], u = 0, l = 0, t && (s = s.replace(e, "")), s.trim().split("|").map(o));
+          var s, u, l, c, d, f, p, m = i(n[1], r, a, t);
+          var h = (s = n[2], u = 0, l = 0, t && (s = s.replace(e, "")), s.trim().split("|").map(o));
           var y = (c = n[3], d = r, f = a, p = t, c.trim().split("\n").map(function(e) {
             return i(e, d, f, p)
           }));
           return a.inline = !1, {
             type: "table",
-            header: h,
-            align: m,
+            header: m,
+            align: h,
             cells: y
           }
         }
@@ -247,7 +247,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       heading: {
         order: K++,
-        match: m(/^ *(#{1,6})([^\n]+?)#* *(?:\n *)+\n/),
+        match: h(/^ *(#{1,6})([^\n]+?)#* *(?:\n *)+\n/),
         parse: function(e, t, n) {
           return {
             level: e[1].length,
@@ -265,14 +265,14 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       nptable: {
         order: K++,
-        match: m(N.NPTABLE_REGEX),
+        match: h(N.NPTABLE_REGEX),
         parse: N.parseNpTable,
         react: null,
         html: null
       },
       lheading: {
         order: K++,
-        match: m(/^([^\n]+)\n *(=|-){3,} *(?:\n *)+\n/),
+        match: h(/^([^\n]+)\n *(=|-){3,} *(?:\n *)+\n/),
         parse: function(e, t, n) {
           return {
             type: "heading",
@@ -285,8 +285,8 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       hr: {
         order: K++,
-        match: m(/^( *[-*_]){3,} *(?:\n *)+\n/),
-        parse: x,
+        match: h(/^( *[-*_]){3,} *(?:\n *)+\n/),
+        parse: O,
         react: function(e, t, n) {
           return g("hr", n.key, b)
         },
@@ -296,7 +296,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       codeBlock: {
         order: K++,
-        match: m(/^(?:    [^\n]+\n*)+(?:\n *)+\n/),
+        match: h(/^(?:    [^\n]+\n*)+(?:\n *)+\n/),
         parse: function(e, t, n) {
           return {
             lang: void 0,
@@ -322,7 +322,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       fence: {
         order: K++,
-        match: m(/^ *(`{3,}|~{3,}) *(?:(\S+) *)?\n([\s\S]+?)\n?\1 *(?:\n *)+\n/),
+        match: h(/^ *(`{3,}|~{3,}) *(?:(\S+) *)?\n([\s\S]+?)\n?\1 *(?:\n *)+\n/),
         parse: function(e, t, n) {
           return {
             type: "codeBlock",
@@ -335,7 +335,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       blockQuote: {
         order: K++,
-        match: m(/^( *>[^\n]+(\n[^\n]+)*\n*)+\n{2,}/),
+        match: h(/^( *>[^\n]+(\n[^\n]+)*\n*)+\n{2,}/),
         parse: function(e, t, n) {
           return {
             content: t(e[0].replace(/^ *> ?/gm, ""), n)
@@ -376,8 +376,8 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
               var f = n.inline,
                 p = n._list;
               n._list = !0, d ? (n.inline = !1, a = l.replace(F, "\n\n")) : (n.inline = !0, a = l.replace(F, ""));
-              var h = t(a, n);
-              return n.inline = f, n._list = p, h
+              var m = t(a, n);
+              return n.inline = f, n._list = p, m
             })
           }
         },
@@ -402,7 +402,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       def: {
         order: K++,
-        match: m(/^ *\[([^\]]+)\]: *<?([^\s>]*)>?(?: +["(]([^\n]+)[")])? *\n(?: *\n)*/),
+        match: h(/^ *\[([^\]]+)\]: *<?([^\s>]*)>?(?: +["(]([^\n]+)[")])? *\n(?: *\n)*/),
         parse: function(e, t, n) {
           var r = e[1].replace(/\s+/g, " ").toLowerCase(),
             a = e[2],
@@ -427,7 +427,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       table: {
         order: K++,
-        match: m(N.TABLE_REGEX),
+        match: h(N.TABLE_REGEX),
         parse: N.parseTable,
         react: function(e, t, n) {
           var r = function(t) {
@@ -488,8 +488,8 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       newline: {
         order: K++,
         requiredFirstCharacters: ["\n"],
-        match: m(/^(?:\n *)*\n/),
-        parse: x,
+        match: h(/^(?:\n *)*\n/),
+        parse: O,
         react: function(e, t, n) {
           return "\n"
         },
@@ -499,7 +499,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       paragraph: {
         order: K++,
-        match: m(/^((?:[^\n]|\n(?! *\n))+)(?:\n *)+\n/),
+        match: h(/^((?:[^\n]|\n(?! *\n))+)(?:\n *)+\n/),
         parse: Y,
         react: function(e, t, n) {
           return g("div", n.key, {
@@ -516,7 +516,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       escape: {
         order: K++,
         requiredFirstCharacters: ["\\"],
-        match: h(/^\\([^0-9A-Za-z\s])/),
+        match: m(/^\\([^0-9A-Za-z\s])/),
         parse: function(e, t, n) {
           return {
             type: "text",
@@ -546,7 +546,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       autolink: {
         order: K++,
         requiredFirstCharacters: ["<"],
-        match: h(/^<([^: >]+:\/[^ >]+)>/),
+        match: m(/^<([^: >]+:\/[^ >]+)>/),
         parse: function(e, t, n) {
           return {
             type: "link",
@@ -562,7 +562,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       mailto: {
         order: K++,
-        match: h(/^<([^ >]+@[^ >]+)>/),
+        match: m(/^<([^ >]+@[^ >]+)>/),
         parse: function(e, t, n) {
           var r = e[1],
             a = e[1];
@@ -581,7 +581,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       url: {
         order: K++,
         requiredFirstCharacters: ["h"],
-        match: h(/^(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/),
+        match: m(/^(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/),
         parse: function(e, t, n) {
           return {
             type: "link",
@@ -599,7 +599,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       link: {
         order: K++,
         requiredFirstCharacters: ["["],
-        match: h(RegExp("^\\[(" + R + ")\\]\\(" + z + "\\)")),
+        match: m(RegExp("^\\[(" + R + ")\\]\\(" + z + "\\)")),
         parse: function(e, t, n) {
           return {
             content: t(e[1], n),
@@ -624,7 +624,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       image: {
         order: K++,
-        match: h(RegExp("^!\\[(" + R + ")\\]\\(" + z + "\\)")),
+        match: m(RegExp("^!\\[(" + R + ")\\]\\(" + z + "\\)")),
         parse: function(e, t, n) {
           return {
             alt: e[1],
@@ -649,7 +649,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       reflink: {
         order: K++,
-        match: h(RegExp("^\\[(" + R + ")\\]\\s*\\[([^\\]]*)\\]")),
+        match: m(RegExp("^\\[(" + R + ")\\]\\s*\\[([^\\]]*)\\]")),
         parse: function(e, t, n) {
           return B(e, n, {
             type: "link",
@@ -661,7 +661,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       refimage: {
         order: K++,
-        match: h(RegExp("^!\\[(" + R + ")\\]\\s*\\[([^\\]]*)\\]")),
+        match: m(RegExp("^!\\[(" + R + ")\\]\\s*\\[([^\\]]*)\\]")),
         parse: function(e, t, n) {
           return B(e, n, {
             type: "image",
@@ -673,7 +673,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       em: {
         order: K,
-        match: h(RegExp((U ? "^\\b_((?:_[_(]|\\\\[\\s\\S]|(?<!_)\\B_\\B|[^\\\\_])+?)_(?![(])\\b" : "^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b") + "|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)")),
+        match: m(RegExp((U ? "^\\b_((?:_[_(]|\\\\[\\s\\S]|(?<!_)\\B_\\B|[^\\\\_])+?)_(?![(])\\b" : "^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b") + "|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)")),
         quality: function(e) {
           return e[0].length + .2
         },
@@ -694,7 +694,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       strong: {
         order: K,
         requiredFirstCharacters: ["*"],
-        match: h(/^\*\*((?:\\[\s\S]|[^\\])+?)\*\*(?!\*)/),
+        match: m(/^\*\*((?:\\[\s\S]|[^\\])+?)\*\*(?!\*)/),
         quality: function(e) {
           return e[0].length + .1
         },
@@ -711,7 +711,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       u: {
         order: K++,
         requiredFirstCharacters: ["_"],
-        match: h(/^__((?:\\[\s\S]|[^\\])+?)__(?!_)/),
+        match: m(/^__((?:\\[\s\S]|[^\\])+?)__(?!_)/),
         quality: function(e) {
           return e[0].length
         },
@@ -728,7 +728,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       del: {
         order: K++,
         requiredFirstCharacters: ["~"],
-        match: h(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~]|\s(?!~~))+?)~~/),
+        match: m(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~]|\s(?!~~))+?)~~/),
         parse: Y,
         react: function(e, t, n) {
           return g("del", n.key, {
@@ -742,7 +742,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       inlineCode: {
         order: K++,
         requiredFirstCharacters: ["`"],
-        match: h(/^(`+)([\s\S]*?[^`])\1(?!`)/),
+        match: m(/^(`+)([\s\S]*?[^`])\1(?!`)/),
         parse: function(e, t, n) {
           return {
             content: e[2].replace(H, "$1")
@@ -761,7 +761,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
         order: K++,
         requiredFirstCharacters: [" "],
         match: y(/^ {2,}\n/),
-        parse: x,
+        parse: O,
         react: function(e, t, n) {
           return g("br", n.key, b)
         },
@@ -813,8 +813,8 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
     defaultRules: V,
     parserFor: p,
     outputFor: J,
-    inlineRegex: h,
-    blockRegex: m,
+    inlineRegex: m,
+    blockRegex: h,
     anyScopeRegex: y,
     parseInline: S,
     parseBlock: function(e, t, n) {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useGuildEligibleForRoleSubscriptions: function() {
-    return s
+    return r
   },
   isGuildEligibleForRoleSubscriptions: function() {
     return a
@@ -13,29 +13,29 @@ n.r(t), n.d(t, {
     return u
   },
   isGuildEligibleForTierTemplates: function() {
-    return c
+    return d
   },
   useGuildEligibleForTierTemplates: function() {
-    return d
+    return c
   },
   useShowCreatorPortalLinkForTierTemplates: function() {
     return f
   },
   isUserEligibleForTierTemplates: function() {
-    return E
+    return _
   },
   useUserEligibleForTierTemplates: function() {
-    return p
+    return h
   }
 }), n("7331");
 var i = n("858560"),
-  r = n("49111");
+  s = n("49111");
 
-function s(e) {
+function r(e) {
   let {
     enableRoleSubscriptionsForGuild: t
   } = i.GuildRoleSubscriptionsExperiment.useExperiment({
-    guildId: null != e ? e : r.EMPTY_STRING_SNOWFLAKE_ID,
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: "504714_1"
   }, {
     autoTrackExposure: !0
@@ -53,7 +53,7 @@ function a(e) {
   let {
     enableRoleSubscriptionsForGuild: t
   } = i.GuildRoleSubscriptionsExperiment.getCurrentConfig({
-    guildId: null != e ? e : r.EMPTY_STRING_SNOWFLAKE_ID,
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: "504714_3"
   }), {
     enableRoleSubscriptionsForUser: n
@@ -67,18 +67,18 @@ function a(e) {
 
 function o(e) {
   return i.GuildRoleSubscriptionMaxTiersExperiment.useExperiment({
-    guildId: null != e ? e : r.EMPTY_STRING_SNOWFLAKE_ID,
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: "504714_7"
   })
 }
-let l = [r.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED, r.GuildFeatures.CREATOR_MONETIZABLE, r.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL],
+let l = [s.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED, s.GuildFeatures.CREATOR_MONETIZABLE, s.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL],
   u = e => null != e && l.some(t => e.hasFeature(t));
 
-function c(e) {
+function d(e) {
   let {
     enabled: t
   } = i.GuildRoleSubscriptionsTierTemplatesExperiment.getCurrentConfig({
-    guildId: null != e ? e : r.EMPTY_STRING_SNOWFLAKE_ID,
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: "504714_9"
   }, {
     autoTrackExposure: !1
@@ -86,11 +86,11 @@ function c(e) {
   return t
 }
 
-function d(e) {
+function c(e) {
   let {
     enabled: t
   } = i.GuildRoleSubscriptionsTierTemplatesExperiment.useExperiment({
-    guildId: null != e ? e : r.EMPTY_STRING_SNOWFLAKE_ID,
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: "504714_10"
   }, {
     autoTrackExposure: !1
@@ -102,7 +102,7 @@ function f(e) {
   let {
     showCreatorPortalLink: t
   } = i.GuildRoleSubscriptionsTierTemplatesExperiment.useExperiment({
-    guildId: null != e ? e : r.EMPTY_STRING_SNOWFLAKE_ID,
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: "504714_11"
   }, {
     autoTrackExposure: !1
@@ -110,7 +110,7 @@ function f(e) {
   return t
 }
 
-function E() {
+function _() {
   let {
     enabled: e
   } = i.GuildRoleSubscriptionsTierTemplatesUserExperiment.getCurrentConfig({
@@ -121,7 +121,7 @@ function E() {
   return e
 }
 
-function p() {
+function h() {
   let {
     enabled: e
   } = i.GuildRoleSubscriptionsTierTemplatesUserExperiment.useExperiment({

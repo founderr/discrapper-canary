@@ -53,17 +53,17 @@ var t = E("917351"),
   o = E.n(t),
   n = E("316693"),
   r = E("446674"),
-  i = E("296892"),
-  a = E("889014"),
+  a = E("296892"),
+  i = E("889014"),
   I = E("913491"),
-  s = E("233069"),
-  T = E("271938"),
+  T = E("233069"),
+  s = E("271938"),
   S = E("42203"),
   N = E("957255"),
   O = E("299039"),
   A = E("401690"),
   R = E("49111");
-let l = (0, i.default)({
+let l = (0, a.default)({
   id: "2022-07_voice_in_threads",
   label: "Voice in Threads",
   kind: "guild",
@@ -105,7 +105,7 @@ function D(e) {
 }
 
 function c(e, _, E) {
-  return !(__OVERLAY__ || !e || !s.THREADED_CHANNEL_TYPES.has(_.type) || null != E && (E.hasFlag(R.MessageFlags.HAS_THREAD) || (0, I.default)(E))) && !0
+  return !(__OVERLAY__ || !e || !T.THREADED_CHANNEL_TYPES.has(_.type) || null != E && (E.hasFlag(R.MessageFlags.HAS_THREAD) || (0, I.default)(E))) && !0
 }
 
 function d(e) {
@@ -123,10 +123,10 @@ function U(e) {
       t = A.default.getActiveUnjoinedThreadsForParent(e.guild_id, e.id),
       n = o(E).some(e => N.default.can(R.Permissions.VIEW_CHANNEL, e.channel)),
       r = o(_).some(e => !(e.channel.id in E) && N.default.can(R.Permissions.VIEW_CHANNEL, e.channel)),
-      i = o(t).some(e => N.default.can(R.Permissions.VIEW_CHANNEL, e));
+      a = o(t).some(e => N.default.can(R.Permissions.VIEW_CHANNEL, e));
     return {
-      hasActiveThreads: n || r || i,
-      hasMoreActiveThreads: i || r
+      hasActiveThreads: n || r || a,
+      hasMoreActiveThreads: a || r
     }
   })
 }
@@ -134,7 +134,7 @@ function U(e) {
 function M(e) {
   let _ = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(null == e ? void 0 : e.parent_id)),
     E = (0, r.useStateFromStores)([N.default], () => null != _ && N.default.can(R.Permissions.MANAGE_THREADS, _), [_]),
-    t = (0, r.useStateFromStores)([T.default], () => T.default.getId());
+    t = (0, r.useStateFromStores)([s.default], () => s.default.getId());
   return !!(null != e && null != _ && e.isThread()) && (!!E || !e.isLockedThread() && (e.ownerId === t || !1))
 }
 
@@ -186,7 +186,7 @@ function f(e) {
 }
 
 function H(e) {
-  let _ = (0, a.default)(),
+  let _ = (0, i.default)(),
     E = (0, r.useStateFromStores)([N.default], () => N.default.can(R.Permissions.CONNECT, e)),
     t = p(e),
     o = l.useExperiment({

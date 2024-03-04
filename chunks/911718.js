@@ -34,8 +34,8 @@ var u = function() {
     return e.__proto__
   } : null),
   p = {},
-  h = "undefined" != typeof Uint8Array && f ? f(Uint8Array) : void 0,
-  m = {
+  m = "undefined" != typeof Uint8Array && f ? f(Uint8Array) : void 0,
+  h = {
     "%AggregateError%": "undefined" == typeof AggregateError ? void 0 : AggregateError,
     "%Array%": Array,
     "%ArrayBuffer%": "undefined" == typeof ArrayBuffer ? void 0 : ArrayBuffer,
@@ -92,7 +92,7 @@ var u = function() {
     "%Symbol%": c ? Symbol : void 0,
     "%SyntaxError%": r,
     "%ThrowTypeError%": l,
-    "%TypedArray%": h,
+    "%TypedArray%": m,
     "%TypeError%": o,
     "%Uint8Array%": "undefined" == typeof Uint8Array ? void 0 : Uint8Array,
     "%Uint8ClampedArray%": "undefined" == typeof Uint8ClampedArray ? void 0 : Uint8ClampedArray,
@@ -107,7 +107,7 @@ if (f) try {
   null.error
 } catch (e) {
   var y = f(f(e));
-  m["%Error.prototype%"] = y
+  h["%Error.prototype%"] = y
 }
 var _ = function e(t) {
     var n;
@@ -121,7 +121,7 @@ var _ = function e(t) {
       var a = e("%AsyncGenerator%");
       a && f && (n = f(a.prototype))
     }
-    return m[t] = n, n
+    return h[t] = n, n
   },
   g = {
     "%ArrayBufferPrototype%": ["ArrayBuffer", "prototype"],
@@ -195,10 +195,10 @@ var _ = function e(t) {
       a[a.length] = n ? k(r, S, "$1") : t || e
     }), a
   },
-  x = function(e, t) {
+  O = function(e, t) {
     var n, a = e;
-    if (b(g, a) && (a = "%" + (n = g[a])[0] + "%"), b(m, a)) {
-      var i = m[a];
+    if (b(g, a) && (a = "%" + (n = g[a])[0] + "%"), b(h, a)) {
+      var i = h[a];
       if (i === p && (i = _(a)), void 0 === i && !t) throw new o("intrinsic " + e + " exists, but is not available. Please file an issue!");
       return {
         alias: n,
@@ -214,28 +214,28 @@ e.exports = function(e, t) {
   if (null === D(/^%?[^%]*%?$/, e)) throw new r("`%` may not be present anywhere but at the beginning and end of the intrinsic name");
   var n = Y(e),
     a = n.length > 0 ? n[0] : "",
-    i = x("%" + a + "%", t),
+    i = O("%" + a + "%", t),
     u = i.name,
     l = i.value,
     c = !1,
     d = i.alias;
   d && (a = d[0], w(n, M([0, 1], d)));
   for (var f = 1, p = !0; f < n.length; f += 1) {
-    var h = n[f],
-      y = L(h, 0, 1),
-      _ = L(h, -1);
+    var m = n[f],
+      y = L(m, 0, 1),
+      _ = L(m, -1);
     if (('"' === y || "'" === y || "`" === y || '"' === _ || "'" === _ || "`" === _) && y !== _) throw new r("property names with quotes must have matching quotes");
-    if (("constructor" === h || !p) && (c = !0), a += "." + h, b(m, u = "%" + a + "%")) l = m[u];
+    if (("constructor" === m || !p) && (c = !0), a += "." + m, b(h, u = "%" + a + "%")) l = h[u];
     else if (null != l) {
-      if (!(h in l)) {
+      if (!(m in l)) {
         if (!t) throw new o("base intrinsic for " + e + " exists, but the property is not available.");
         return
       }
       if (s && f + 1 >= n.length) {
-        var g = s(l, h);
-        l = (p = !!g) && "get" in g && !("originalValue" in g.get) ? g.get : l[h]
-      } else p = b(l, h), l = l[h];
-      p && !c && (m[u] = l)
+        var g = s(l, m);
+        l = (p = !!g) && "get" in g && !("originalValue" in g.get) ? g.get : l[m]
+      } else p = b(l, m), l = l[m];
+      p && !c && (h[u] = l)
     }
   }
   return l

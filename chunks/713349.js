@@ -4,10 +4,10 @@ E.r(_), E.d(_, {
     return t
   },
   FrecencyUserSettings: function() {
-    return a
+    return i
   },
   FavoriteGIFs: function() {
-    return s
+    return T
   },
   FavoriteGIF: function() {
     return S
@@ -46,7 +46,7 @@ E.r(_), E.d(_, {
 var t, o, n = E("849266"),
   r = E("959714");
 (o = t || (t = {}))[o.NONE = 0] = "NONE", o[o.IMAGE = 1] = "IMAGE", o[o.VIDEO = 2] = "VIDEO";
-class i extends n.MessageType {
+class a extends n.MessageType {
   create(e) {
     let _ = {};
     return globalThis.Object.defineProperty(_, n.MESSAGE_TYPE, {
@@ -56,15 +56,15 @@ class i extends n.MessageType {
   }
   internalBinaryRead(e, _, E, t) {
     let o = null != t ? t : this.create(),
-      i = e.pos + _;
-    for (; e.pos < i;) {
+      a = e.pos + _;
+    for (; e.pos < a;) {
       let [_, t] = e.tag();
       switch (_) {
         case 1:
           o.versions = r.Versions.internalBinaryRead(e, e.uint32(), E, o.versions);
           break;
         case 2:
-          o.favoriteGifs = s.internalBinaryRead(e, e.uint32(), E, o.favoriteGifs);
+          o.favoriteGifs = T.internalBinaryRead(e, e.uint32(), E, o.favoriteGifs);
           break;
         case 3:
           o.favoriteStickers = O.internalBinaryRead(e, e.uint32(), E, o.favoriteStickers);
@@ -97,16 +97,16 @@ class i extends n.MessageType {
           o.guildAndChannelFrecency = f.internalBinaryRead(e, e.uint32(), E, o.guildAndChannelFrecency);
           break;
         default:
-          let i = E.readUnknownField;
-          if ("throw" === i) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-          let a = e.skip(t);
-          !1 !== i && (!0 === i ? n.UnknownFieldHandler.onRead : i)(this.typeName, o, _, t, a)
+          let a = E.readUnknownField;
+          if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
+          let i = e.skip(t);
+          !1 !== a && (!0 === a ? n.UnknownFieldHandler.onRead : a)(this.typeName, o, _, t, i)
       }
     }
     return o
   }
   internalBinaryWrite(e, _, E) {
-    e.versions && r.Versions.internalBinaryWrite(e.versions, _.tag(1, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteGifs && s.internalBinaryWrite(e.favoriteGifs, _.tag(2, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteStickers && O.internalBinaryWrite(e.favoriteStickers, _.tag(3, n.WireType.LengthDelimited).fork(), E).join(), e.stickerFrecency && R.internalBinaryWrite(e.stickerFrecency, _.tag(4, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteEmojis && u.internalBinaryWrite(e.favoriteEmojis, _.tag(5, n.WireType.LengthDelimited).fork(), E).join(), e.emojiFrecency && C.internalBinaryWrite(e.emojiFrecency, _.tag(6, n.WireType.LengthDelimited).fork(), E).join(), e.applicationCommandFrecency && c.internalBinaryWrite(e.applicationCommandFrecency, _.tag(7, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteSoundboardSounds && h.internalBinaryWrite(e.favoriteSoundboardSounds, _.tag(8, n.WireType.LengthDelimited).fork(), E).join(), e.applicationFrecency && y.internalBinaryWrite(e.applicationFrecency, _.tag(9, n.WireType.LengthDelimited).fork(), E).join(), e.heardSoundFrecency && m.internalBinaryWrite(e.heardSoundFrecency, _.tag(10, n.WireType.LengthDelimited).fork(), E).join(), e.playedSoundFrecency && p.internalBinaryWrite(e.playedSoundFrecency, _.tag(11, n.WireType.LengthDelimited).fork(), E).join(), e.guildAndChannelFrecency && f.internalBinaryWrite(e.guildAndChannelFrecency, _.tag(12, n.WireType.LengthDelimited).fork(), E).join();
+    e.versions && r.Versions.internalBinaryWrite(e.versions, _.tag(1, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteGifs && T.internalBinaryWrite(e.favoriteGifs, _.tag(2, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteStickers && O.internalBinaryWrite(e.favoriteStickers, _.tag(3, n.WireType.LengthDelimited).fork(), E).join(), e.stickerFrecency && R.internalBinaryWrite(e.stickerFrecency, _.tag(4, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteEmojis && u.internalBinaryWrite(e.favoriteEmojis, _.tag(5, n.WireType.LengthDelimited).fork(), E).join(), e.emojiFrecency && C.internalBinaryWrite(e.emojiFrecency, _.tag(6, n.WireType.LengthDelimited).fork(), E).join(), e.applicationCommandFrecency && c.internalBinaryWrite(e.applicationCommandFrecency, _.tag(7, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteSoundboardSounds && h.internalBinaryWrite(e.favoriteSoundboardSounds, _.tag(8, n.WireType.LengthDelimited).fork(), E).join(), e.applicationFrecency && y.internalBinaryWrite(e.applicationFrecency, _.tag(9, n.WireType.LengthDelimited).fork(), E).join(), e.heardSoundFrecency && m.internalBinaryWrite(e.heardSoundFrecency, _.tag(10, n.WireType.LengthDelimited).fork(), E).join(), e.playedSoundFrecency && p.internalBinaryWrite(e.playedSoundFrecency, _.tag(11, n.WireType.LengthDelimited).fork(), E).join(), e.guildAndChannelFrecency && f.internalBinaryWrite(e.guildAndChannelFrecency, _.tag(12, n.WireType.LengthDelimited).fork(), E).join();
     let t = E.writeUnknownFields;
     return !1 !== t && (!0 == t ? n.UnknownFieldHandler.onWrite : t)(this.typeName, e, _), _
   }
@@ -120,7 +120,7 @@ class i extends n.MessageType {
       no: 2,
       name: "favorite_gifs",
       kind: "message",
-      T: () => s
+      T: () => T
     }, {
       no: 3,
       name: "favorite_stickers",
@@ -174,7 +174,7 @@ class i extends n.MessageType {
     }])
   }
 }
-let a = new i;
+let i = new a;
 class I extends n.MessageType {
   create(e) {
     let _ = {
@@ -201,8 +201,8 @@ class I extends n.MessageType {
         default:
           let r = E.readUnknownField;
           if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-          let i = e.skip(t);
-          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+          let a = e.skip(t);
+          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -250,8 +250,8 @@ class I extends n.MessageType {
     }])
   }
 }
-let s = new I;
-class T extends n.MessageType {
+let T = new I;
+class s extends n.MessageType {
   create(e) {
     let _ = {
       format: 0,
@@ -289,8 +289,8 @@ class T extends n.MessageType {
         default:
           let r = E.readUnknownField;
           if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-          let i = e.skip(t);
-          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+          let a = e.skip(t);
+          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -329,7 +329,7 @@ class T extends n.MessageType {
     }])
   }
 }
-let S = new T;
+let S = new s;
 class N extends n.MessageType {
   create(e) {
     let _ = {
@@ -352,8 +352,8 @@ class N extends n.MessageType {
       } else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let i = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+        let a = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -397,8 +397,8 @@ class A extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let i = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+        let a = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -460,8 +460,8 @@ class l extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let i = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+        let a = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -501,8 +501,8 @@ class L extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let i = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+        let a = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -564,8 +564,8 @@ class D extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let i = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+        let a = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -644,8 +644,8 @@ class d extends n.MessageType {
         default:
           let r = E.readUnknownField;
           if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-          let i = e.skip(t);
-          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+          let a = e.skip(t);
+          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -708,8 +708,8 @@ class M extends n.MessageType {
       } else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let i = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+        let a = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -753,8 +753,8 @@ class P extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let i = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+        let a = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -816,8 +816,8 @@ class G extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let i = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+        let a = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -879,8 +879,8 @@ class g extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let i = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+        let a = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -942,8 +942,8 @@ class B extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let i = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
+        let a = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
       }
     }
     return o

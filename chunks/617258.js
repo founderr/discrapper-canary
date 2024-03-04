@@ -13,10 +13,10 @@ E.r(u), E.d(u, {
     return o
   },
   stripDiacritics: function() {
-    return n
+    return r
   },
   normalize: function() {
-    return r
+    return n
   }
 }), E("222007"), E("781738");
 let C = /[\u0300-\u036f]/g,
@@ -43,8 +43,8 @@ function o(D) {
   let u = parseInt(D, 10);
   return isNaN(u) ? 0 : u
 }
-let n = null == String.prototype.normalize ? D => D : D => D.normalize("NFD").replace(C, "").normalize("NFC"),
-  r = null == String.prototype.normalize ? D => D : function(D) {
+let r = null == String.prototype.normalize ? D => D : D => D.normalize("NFD").replace(C, "").normalize("NFC"),
+  n = null == String.prototype.normalize ? D => D : function(D) {
     let u = E("525217"),
       C = "";
     return [...D.normalize("NFD")].forEach(D => {

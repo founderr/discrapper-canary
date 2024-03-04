@@ -1,10 +1,10 @@
 "use strict";
 var r;
 n("222007"), n("70102"), e.exports.timeout = function(e, t) {
-  var n, a = new r;
+  var n, i = new r;
   return Promise.race([e, new Promise(function(e, r) {
     n = setTimeout(function() {
-      r(a)
+      r(i)
     }, t)
   })]).then(function(e) {
     return clearTimeout(n), e

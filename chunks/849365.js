@@ -4,20 +4,20 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var s = n("605250"),
-  i = n("802493"),
+var i = n("605250"),
+  s = n("802493"),
   r = n("791109");
-let a = new s.default("KvCacheVersion");
+let a = new i.default("KvCacheVersion");
 var o = new class e {
   async okAsync(e) {
-    let t = await i.default.cache(e).get(r.VERSION_TO_SKIP_READING_THE_DATABASE_KEY);
+    let t = await s.default.cache(e).get(r.VERSION_TO_SKIP_READING_THE_DATABASE_KEY);
     return null == t ? null : t === r.VERSION_TO_SKIP_READING_THE_DATABASE
   }
   canUseGuildVersions() {
     return this.hasSuccessfullyConnected ? Promise.resolve(!0) : this.doesDatabaseVersionMatchJsConstants()
   }
   async doesDatabaseVersionMatchJsConstants() {
-    let e = i.default.forceResyncVersion();
+    let e = s.default.forceResyncVersion();
     if (null == e) return !1;
     let t = await e.get(r.VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY),
       n = null == t ? void 0 : t.version;
@@ -30,7 +30,7 @@ var o = new class e {
     this.hasSuccessfullyConnected = !0
   }
   handleWrite(e) {
-    this.hasSuccessfullyConnected = !0, i.default.cacheTransaction(e).put(r.HELLO_KEY, "\uD83D\uDC4B"), i.default.cacheTransaction(e).put(r.VERSION_TO_SKIP_READING_THE_DATABASE_KEY, r.VERSION_TO_SKIP_READING_THE_DATABASE), i.default.forceResyncVersionTransaction(e).put(r.VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY, {
+    this.hasSuccessfullyConnected = !0, s.default.cacheTransaction(e).put(r.HELLO_KEY, "\uD83D\uDC4B"), s.default.cacheTransaction(e).put(r.VERSION_TO_SKIP_READING_THE_DATABASE_KEY, r.VERSION_TO_SKIP_READING_THE_DATABASE), s.default.forceResyncVersionTransaction(e).put(r.VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY, {
       version: r.VERSION_TO_FORCE_RESYNCING_ALL_DATA
     })
   }

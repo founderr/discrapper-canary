@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return r
   },
   copy: function() {
-    return i
+    return a
   }
 }), E("70102");
 var t = E("281071"),
@@ -19,6 +19,6 @@ let r = (() => {
   }
 })();
 
-function i(e) {
+function a(e) {
   return !!r && (o.isPlatformEmbedded ? (n.default.copy(e), !0) : t.copy(e))
 }

@@ -14,8 +14,8 @@
       l = t("316272"),
       f = t("830210"),
       u = t("289180"),
-      p = t("289656"),
-      b = t("727284"),
+      b = t("289656"),
+      p = t("727284"),
       h = t("42203"),
       j = t("42887"),
       m = t("18494"),
@@ -36,7 +36,7 @@
       constructor(...e) {
         super(...e), this.callbackActions = {
           [E.ThumbarButtonName.VIDEO]: () => {
-            j.default.isVideoEnabled() ? r.default.setVideoEnabled(!1) : (0, b.default)(() => r.default.setVideoEnabled(!0), g.AppContext.APP)
+            j.default.isVideoEnabled() ? r.default.setVideoEnabled(!1) : (0, p.default)(() => r.default.setVideoEnabled(!0), g.AppContext.APP)
           },
           [E.ThumbarButtonName.MUTE]: () => r.default.toggleSelfMute(),
           [E.ThumbarButtonName.DEAFEN]: () => r.default.toggleSelfDeaf(),
@@ -66,7 +66,7 @@
               reachedLimit: void 0,
               limit: void 0
             },
-            o = (0, p.getVideoButtonLabel)({
+            o = (0, b.getVideoButtonLabel)({
               enabled: s,
               join: !1,
               channel: n,

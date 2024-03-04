@@ -1,6 +1,6 @@
 "use strict";
-var r = s("911718")("%Object%"),
-  i = s("732123");
-t.exports = function(t) {
-  return i(t), r(t)
+var r = n("911718")("%Object%"),
+  i = n("732123");
+e.exports = function(e) {
+  return i(e), r(e)
 }

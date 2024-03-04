@@ -7,14 +7,14 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var s = n("60705"),
-  i = n("49111");
+var i = n("60705"),
+  s = n("49111");
 
 function r(e, t) {
   let {
     enabled: n
-  } = s.GuildProductsExperiment.useExperiment({
-    guildId: null != e ? e : i.EMPTY_STRING_SNOWFLAKE_ID,
+  } = i.GuildProductsExperiment.useExperiment({
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: t
   });
   return n
@@ -23,8 +23,8 @@ function r(e, t) {
 function a(e, t) {
   let {
     enabled: n
-  } = s.GuildProductsExperiment.getCurrentConfig({
-    guildId: null != e ? e : i.EMPTY_STRING_SNOWFLAKE_ID,
+  } = i.GuildProductsExperiment.getCurrentConfig({
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: t
   });
   return n

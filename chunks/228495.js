@@ -8,11 +8,11 @@ var t = E("913144"),
   o = E("776156"),
   n = E("689988"),
   r = E("915639"),
-  i = E("299039"),
-  a = E("34966"),
+  a = E("299039"),
+  i = E("34966"),
   I = E("473006"),
-  s = E("788434");
-class T extends n.default {
+  T = E("788434");
+class s extends n.default {
   constructor(...e) {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: e => this.handleConnectionOpen(e)
@@ -20,7 +20,7 @@ class T extends n.default {
       let _ = await o.default.fetchChangelogConfig(),
         E = _.body,
         n = (0, I.getClientVersionForChangelog)(),
-        T = function(e, _) {
+        s = function(e, _) {
           let E = 0,
             t = null;
           for (var [o, {
@@ -31,19 +31,19 @@ class T extends n.default {
       if (t.default.dispatch({
           type: "CHANGE_LOG_SET_CONFIG",
           config: _.body,
-          latestChangelogId: T
-        }), null == T || !0 !== E[T].show_on_startup) return;
-      let S = a.default.lastSeenChangelogId(),
-        N = a.default.lastSeenChangelogDate();
-      if (null != S && 0 >= i.default.compare(T, S)) return;
-      let O = await o.default.fetchChangelog(T, r.default.locale);
+          latestChangelogId: s
+        }), null == s || !0 !== E[s].show_on_startup) return;
+      let S = i.default.lastSeenChangelogId(),
+        N = i.default.lastSeenChangelogDate();
+      if (null != S && 0 >= a.default.compare(s, S)) return;
+      let O = await o.default.fetchChangelog(s, r.default.locale);
       if (null != O) {
-        if (null == N || null == a.default.lastSeenChangelogDate()) {
-          o.default.markChangelogAsSeen(T, O.date);
+        if (null == N || null == i.default.lastSeenChangelogDate()) {
+          o.default.markChangelogAsSeen(s, O.date);
           return
-        }!a.default.isLocked() && new Date(O.date) > new Date(N) && (0, s.openChangelog)()
+        }!i.default.isLocked() && new Date(O.date) > new Date(N) && (0, T.openChangelog)()
       }
     }
   }
 }
-var S = new T
+var S = new s

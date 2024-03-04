@@ -10,15 +10,15 @@ e = n.nmd(e), n("424973"), r = function() {
     d = 7,
     f = 35,
     p = 125,
-    h = 0,
     m = 0,
+    h = 0,
     y = 0,
     IdleDeadline = {
       get didTimeout() {
         return !1
       },
       timeRemaining: function() {
-        var e = d - (Date.now() - m);
+        var e = d - (Date.now() - h);
         return e < 0 ? 0 : e
       }
     },
@@ -47,18 +47,18 @@ e = n.nmd(e), n("424973"), r = function() {
   }
 
   function M() {
-    !c && (t = p - (Date.now() - m), e = Date.now(), c = !0, f && t < f && (t = f), t > 9 ? r = setTimeout(b, t) : (t = 0, b()))
+    !c && (t = p - (Date.now() - h), e = Date.now(), c = !0, f && t < f && (t = f), t > 9 ? r = setTimeout(b, t) : (t = 0, b()))
   }
 
   function w() {
     var n, a, o, i = d > 9 ? 9 : 1;
-    if (m = Date.now(), c = !1, r = null, l > 2 || m - t - 50 < e)
+    if (h = Date.now(), c = !1, r = null, l > 2 || h - t - 50 < e)
       for (a = 0, o = u.length; a < o && IdleDeadline.timeRemaining() > i; a++) n = u.shift(), y++, n && n(IdleDeadline);
     u.length ? M() : l = 0
   }
 
   function k(e) {
-    return h++, u.push(e), M(), h
+    return m++, u.push(e), M(), m
   }
 
   function L(e) {

@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return p
   },
   reference: function() {
-    return h
+    return m
   },
   variationPlacements: function() {
-    return m
+    return h
   },
   placements: function() {
     return y
@@ -57,8 +57,8 @@ var r = "top",
   d = "clippingParents",
   f = "viewport",
   p = "popper",
-  h = "reference",
-  m = u.reduce(function(e, t) {
+  m = "reference",
+  h = u.reduce(function(e, t) {
     return e.concat([t + "-" + l, t + "-" + c])
   }, []),
   y = [].concat(u, [s]).reduce(function(e, t) {

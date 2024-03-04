@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   useConnectDragSource: function() {
-    return a
+    return i
   },
   useConnectDragPreview: function() {
-    return i
+    return o
   }
 });
 var r = n("884691");
 
-function a(e) {
+function i(e) {
   return (0, r.useMemo)(function() {
     return e.hooks.dragSource()
   }, [e])
 }
 
-function i(e) {
+function o(e) {
   return (0, r.useMemo)(function() {
     return e.hooks.dragPreview()
   }, [e])
