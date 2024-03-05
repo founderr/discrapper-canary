@@ -10,7 +10,7 @@
         return u
       },
       getMobileDownloadLink: function() {
-        return p
+        return b
       }
     });
     var s = t("597755"),
@@ -45,7 +45,7 @@
       return o(e, !1, e === r ? "tar.gz" : null)
     }
 
-    function p(e, a, t) {
+    function b(e, a, t) {
       let s = null != t ? t.toString() : null;
       switch (a) {
         case "iOS":
