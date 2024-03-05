@@ -528,6 +528,13 @@ function X(e) {
           }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE.format();
         case R.SubscriptionStatusTypes.UNPAID:
           return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAYMENT.format();
+        case R.SubscriptionStatusTypes.PAUSE_PENDING:
+          return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE.format({
+            price: r,
+            pauseDate: i.currentPeriodEnd
+          }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE.format({
+            pauseDate: i.currentPeriodEnd
+          });
         default:
           return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({
             price: r
@@ -546,6 +553,13 @@ function X(e) {
           }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE.format();
         case R.SubscriptionStatusTypes.UNPAID:
           return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAYMENT.format();
+        case R.SubscriptionStatusTypes.CANCELED:
+          return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE.format({
+            price: r,
+            pauseDate: i.currentPeriodEnd
+          }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE.format({
+            pauseDate: i.currentPeriodEnd
+          });
         default:
           return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({
             price: r
@@ -573,6 +587,15 @@ function X(e) {
         case R.SubscriptionStatusTypes.UNPAID:
           return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAYMENT.format({
             num: h
+          });
+        case R.SubscriptionStatusTypes.PAUSE_PENDING:
+          return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE.format({
+            price: r,
+            num: h,
+            pauseDate: i.currentPeriodEnd
+          }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE.format({
+            num: h,
+            pauseDate: i.currentPeriodEnd
           });
         default:
           return o ? L.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
@@ -1191,7 +1214,21 @@ var eL = Object.freeze({
     if (e.status === R.SubscriptionStatusTypes.CANCELED) return L.default.Messages.PREMIUM_SETTINGS_CANCELLED_INFO.format({
       endDate: t.subscriptionPeriodStart
     });
-    if (e.status === R.SubscriptionStatusTypes.PAST_DUE) {
+    if (e.status === R.SubscriptionStatusTypes.PAUSE_PENDING) return L.default.Messages.PREMIUM_SETTINGS_PAUSE_PENDING_INFO.format({
+      pauseDate: e.currentPeriodEnd,
+      resumeDate: e.pauseEndsAt
+    });
+    if (e.status === R.SubscriptionStatusTypes.PAUSED) return null == e.pauseEndsAt ? n ? L.default.Messages.PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN.format({
+      planName: L.default.Messages.PREMIUM,
+      price: i
+    }) : L.default.Messages.PREMIUM_SETTINGS_PAUSED_INFO : n ? L.default.Messages.PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN.format({
+      planName: L.default.Messages.PREMIUM,
+      resumeDate: e.pauseEndsAt,
+      price: i
+    }) : L.default.Messages.PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO.format({
+      resumeDate: e.pauseEndsAt
+    });
+    else if (e.status === R.SubscriptionStatusTypes.PAST_DUE) {
       var s, r;
       let t = ea(e),
         n = d(e.currentPeriodStart).add(t, "days");
@@ -1203,8 +1240,7 @@ var eL = Object.freeze({
         endDate: d(e.currentPeriodStart).add(t, "days"),
         price: i
       })
-    }
-    return e.status === R.SubscriptionStatusTypes.ACCOUNT_HOLD ? e.isPurchasedViaGoogle && !(0, I.isAndroid)() ? L.default.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
+    } else return e.status === R.SubscriptionStatusTypes.ACCOUNT_HOLD ? e.isPurchasedViaGoogle && !(0, I.isAndroid)() ? L.default.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
       endDate: d(e.currentPeriodStart).add(D.MAX_ACCOUNT_HOLD_DAYS, "days"),
       paymentGatewayName: P.PaymentGatewayToFriendlyName[e.paymentGateway],
       paymentSourceLink: ev(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")
@@ -1235,7 +1271,7 @@ var eL = Object.freeze({
     let {
       planId: n
     } = e;
-    if (e.status === R.SubscriptionStatusTypes.CANCELED) return n;
+    if (e.status === R.SubscriptionStatusTypes.CANCELED || e.status === R.SubscriptionStatusTypes.PAUSE_PENDING) return n;
     l(null != t, "Expected invoicePreview");
     let i = t.invoiceItems.find(e => {
       let {
@@ -1249,7 +1285,7 @@ var eL = Object.freeze({
     let {
       status: n
     } = e;
-    if (e.status === R.SubscriptionStatusTypes.CANCELED) return n;
+    if (e.status === R.SubscriptionStatusTypes.CANCELED || e.status === R.SubscriptionStatusTypes.PAUSE_PENDING) return n;
     l(null != t, "Expected invoicePreview");
     let i = t.invoiceItems.find(e => {
       let {

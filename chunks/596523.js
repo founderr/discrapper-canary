@@ -6,14 +6,17 @@ n.r(e), n.d(e, {
   resubscribe: function() {
     return c
   },
-  changeSubscriptionCurrency: function() {
+  resume: function() {
     return S
   },
-  changePaymentSource: function() {
+  changeSubscriptionCurrency: function() {
     return E
   },
-  clearError: function() {
+  changePaymentSource: function() {
     return d
+  },
+  clearError: function() {
+    return f
   }
 });
 var u = n("627445"),
@@ -81,7 +84,16 @@ async function c(t, e, n, u, s, c) {
     }), t
   }
 }
-async function S(t, e, n, u) {
+async function S(t, e, n) {
+  try {
+    await a.updateSubscription(t, {
+      status: o.SubscriptionStatusTypes.ACTIVE
+    }, e, n)
+  } catch (t) {
+    throw t
+  }
+}
+async function E(t, e, n, u) {
   try {
     await a.changeSubscriptionCurrency(t, e, n, u), r.default.dispatch({
       type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
@@ -93,7 +105,7 @@ async function S(t, e, n, u) {
     }), t
   }
 }
-async function E(t, e, n, u, i) {
+async function d(t, e, n, u, i) {
   try {
     await a.changePaymentSource(t, e, n, u, i), r.default.dispatch({
       type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
@@ -106,7 +118,7 @@ async function E(t, e, n, u, i) {
   }
 }
 
-function d() {
+function f() {
   r.default.dispatch({
     type: "PREMIUM_PAYMENT_ERROR_CLEAR"
   })
