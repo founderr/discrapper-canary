@@ -284,7 +284,6 @@ function p(e) {
         let s = JSON.parse(n);
         return i({
           duration: e,
-          thumbnail: t,
           clipStats: s
         })
       }, e => {
@@ -300,7 +299,6 @@ function p(e) {
         let i = JSON.parse(n);
         return s({
           duration: e,
-          thumbnail: t,
           clipStats: i
         })
       }, e => {
