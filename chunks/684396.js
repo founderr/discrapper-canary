@@ -55,7 +55,8 @@ let f = {
       getProps: e => ({
         emoji: e,
         key: e.id || e.uniqueName || e.name,
-        sentinel: o.EMOJI_SENTINEL
+        sentinel: o.EMOJI_SENTINEL,
+        isLocked: !1
       }),
       getQuery: e => "".concat(o.REACTION_START_SENTINEL).concat(e),
       key: "reactions"

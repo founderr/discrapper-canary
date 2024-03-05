@@ -350,7 +350,7 @@ j.Generic = class e extends b {
     })
   }
   constructor(...e) {
-    super(...e), this.layoutClass = s(R.autocompleteRowVertical, R.autocompleteRowVerticalSmall)
+    super(...e), this.layoutClass = s(R.autocompleteRowVertical, R.autocompleteRowVerticalSmall, this.props.isLocked ? R.premiumEmoji : null)
   }
 }, j.GIFIntegration = class e extends b {
   renderContent() {

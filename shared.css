@@ -12925,6 +12925,10 @@ html.decorate-links .lowSaturationUnderline__95e71 {
     font-size: 20px
 }
 
+.premiumEmoji__2dbd7 {
+    background-color: hsl(var(--premium-tier-2-purple-hsl)/.2)
+}
+
 .descriptionDiscriminator__158a4 {
     opacity: .6
 }
