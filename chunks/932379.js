@@ -6,7 +6,6 @@ e.exports = {
   buttonIcon: "buttonIcon__0dd53",
   buttonInner: "buttonInner__49063",
   description: "description_eb851a",
-  footer: "footer__386cd",
   heroImage: "heroImage__51d03",
   safetyTips: "safetyTips_cf2252",
   textContainer: "textContainer__5b062"
