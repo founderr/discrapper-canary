@@ -9,8 +9,8 @@ var a = n("917351"),
   l = n("267363"),
   d = n("863636"),
   r = n("401690"),
-  u = n("923959"),
-  s = n("660478"),
+  s = n("923959"),
+  u = n("660478"),
   o = n("599110"),
   c = n("299039"),
   f = n("49111"),
@@ -18,8 +18,8 @@ var a = n("917351"),
 
 function p(e, t, n) {
   let a = i.flatMap(e, e => {
-    let t = u.default.getSelectableChannelIds(e),
-      n = u.default.getVocalChannelIds(e),
+    let t = s.default.getSelectableChannelIds(e),
+      n = s.default.getVocalChannelIds(e),
       a = [...t, ...n],
       i = r.default.getActiveJoinedThreadsForGuild(e);
     for (let e of t) {
@@ -31,13 +31,13 @@ function p(e, t, n) {
   }).map(e => ({
     channelId: e,
     readStateType: g.ReadStateTypes.CHANNEL,
-    messageId: s.default.lastMessageId(e)
+    messageId: u.default.lastMessageId(e)
   }));
   return e.forEach(e => {
     a.push({
       channelId: c.default.castGuildIdAsReadStateChannelId(e),
       readStateType: g.ReadStateTypes.GUILD_EVENT,
-      messageId: s.default.lastMessageId(e, g.ReadStateTypes.GUILD_EVENT)
+      messageId: u.default.lastMessageId(e, g.ReadStateTypes.GUILD_EVENT)
     }), a.push({
       channelId: c.default.castGuildIdAsReadStateChannelId(e),
       readStateType: g.ReadStateTypes.GUILD_ONBOARDING_QUESTION,

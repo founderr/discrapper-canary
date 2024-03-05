@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   isEligibleForInappropriateConversationWarning: function() {
-    return u
+    return _
   },
   useIsEligibleForInappropriateConversationWarning: function() {
-    return d
+    return r
   }
 });
-var l = n("862205");
-let a = (0, l.createExperiment)({
+var a = n("862205");
+let l = (0, a.createExperiment)({
     kind: "user",
     id: "2024-01_inappropriate_conversation_warning",
     label: "Inappropriate Conversation Warning",
@@ -23,7 +23,7 @@ let a = (0, l.createExperiment)({
       }
     }]
   }),
-  i = (0, l.createExperiment)({
+  i = (0, a.createExperiment)({
     kind: "user",
     id: "2024-01_inappropriate_conversation_warning_staff_bypass",
     label: "Inappropriate Conversation Warning Staff Bypass",
@@ -39,42 +39,42 @@ let a = (0, l.createExperiment)({
     }]
   });
 
-function u(e) {
+function _(e) {
   let {
     location: t,
     autoTrackExposure: n = !1
   } = e, {
-    enabled: l
-  } = a.getCurrentConfig({
+    enabled: a
+  } = l.getCurrentConfig({
     location: t
   }, {
     autoTrackExposure: n
   }), {
-    enabled: u
+    enabled: _
   } = i.getCurrentConfig({
     location: t
   }, {
     autoTrackExposure: n
   });
-  return l || u
+  return a || _
 }
 
-function d(e) {
+function r(e) {
   let {
     location: t,
     autoTrackExposure: n = !1
   } = e, {
-    enabled: l
-  } = a.useExperiment({
+    enabled: a
+  } = l.useExperiment({
     location: t
   }, {
     autoTrackExposure: n
   }), {
-    enabled: u
+    enabled: _
   } = i.useExperiment({
     location: t
   }, {
     autoTrackExposure: n
   });
-  return l || u
+  return a || _
 }

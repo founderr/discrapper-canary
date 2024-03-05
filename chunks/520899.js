@@ -9,8 +9,8 @@ var a = n("446674"),
   l = n("718517");
 let d = [],
   r = new Set,
-  u = 0;
-class s extends a.default.Store {
+  s = 0;
+class u extends a.default.Store {
   initialize() {
     setInterval(() => {
       this.emitChange()
@@ -27,7 +27,7 @@ class s extends a.default.Store {
     return d.filter(e => null == e.dueAt || new Date > e.dueAt).length
   }
   recentlyFetched() {
-    return new Date().getTime() - u < 1 * l.default.Millis.MINUTE
+    return new Date().getTime() - s < 1 * l.default.Millis.MINUTE
   }
   hasSentNotification(e) {
     return r.has(e)
@@ -38,13 +38,13 @@ class s extends a.default.Store {
     }
   }
 }
-s.displayName = "MessageRemindersStore";
-var o = new s(i.default, {
+u.displayName = "MessageRemindersStore";
+var o = new u(i.default, {
   SAVED_MESSAGES_UPDATE: function(e) {
     let {
       messages: t
     } = e;
-    u = new Date().getTime(), d = t.map(e => ({
+    s = new Date().getTime(), d = t.map(e => ({
       ...e,
       complete: !1
     })), t.forEach(e => {

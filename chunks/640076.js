@@ -22,8 +22,8 @@ var l = n("37983"),
   C = n("685665"),
   S = n("986632"),
   T = n("538282"),
-  I = n("246511"),
-  v = n("45961"),
+  v = n("246511"),
+  I = n("45961"),
   _ = n("515059"),
   N = n("139321"),
   A = n("635956"),
@@ -71,7 +71,7 @@ let Y = (0, P.cssValueToNumber)(m.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       getEmojiRowProps: g,
       isScrolling: C,
       isUsingKeyboardNavigation: T,
-      allowAnimatedEmoji: v,
+      allowAnimatedEmoji: I,
       channelGuildId: A,
       messageId: x,
       isBurstReaction: y,
@@ -105,7 +105,7 @@ let Y = (0, P.cssValueToNumber)(m.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         visibleRowIndex: n
       } = e, l = e.type === k.EmojiGridItemTypes.EMOJI ? e.emoji.allNamesString : e.name;
       K.current !== B.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(K.current), K.current = window.requestAnimationFrame(() => {
-        S.EmojiPickerStore.setInspectedExpressionPosition(t, n, I.InspectedExpressionChangeSource.MOUSE_EVENT), S.EmojiPickerStore.setSearchPlaceholder(l), K.current = B.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
+        S.EmojiPickerStore.setInspectedExpressionPosition(t, n, v.InspectedExpressionChangeSource.MOUSE_EVENT), S.EmojiPickerStore.setSearchPlaceholder(l), K.current = B.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
       })
     }, []), ea = (0, c.useStateFromStores)([N.HotspotStore], () => N.HotspotStore.hasHotspot(N.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), es = i.useMemo(() => o.memoize((e, t) => {
       let n = a[e],
@@ -121,7 +121,7 @@ let Y = (0, P.cssValueToNumber)(m.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         isScrolling: C,
         isUsingKeyboardNavigation: T,
         rowIndex: e,
-        allowAnimatedEmoji: v,
+        allowAnimatedEmoji: I,
         showEmojiFavoriteTooltip: ea,
         channelGuildId: A,
         category: i.sectionId,
@@ -130,7 +130,7 @@ let Y = (0, P.cssValueToNumber)(m.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         isBurstReaction: y,
         inNitroLockedSection: i.isNitroLocked
       }, e)
-    }), [a, m, r, ee, ei, u, h, g, C, T, v, ea, A, x, y]);
+    }), [a, m, r, ee, ei, u, h, g, C, T, I, ea, A, x, y]);
     i.useEffect(() => () => {
       var e, t;
       return null === (t = es.cache) || void 0 === t ? void 0 : null === (e = t.clear) || void 0 === e ? void 0 : e.call(t)
@@ -253,7 +253,7 @@ let Y = (0, P.cssValueToNumber)(m.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       sectionDescriptors: o,
       rowCountBySection: f,
       collapsedSections: m,
-      setCollapsedSections: I,
+      setCollapsedSections: v,
       getEmojiItemProps: _,
       getEmojiRowProps: N,
       rowCount: P,
@@ -297,7 +297,7 @@ let Y = (0, P.cssValueToNumber)(m.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       onEmojiSelect: r,
       searchQuery: H,
       sectionDescriptors: o,
-      setCollapsedSections: I,
+      setCollapsedSections: v,
       getEmojiItemProps: _,
       getEmojiRowProps: N,
       isScrolling: F,
@@ -310,13 +310,13 @@ let Y = (0, P.cssValueToNumber)(m.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       activeSectionIndex: X,
       upsellGlowOpacity: el,
       enableNitroUpsell: eo
-    }), eg = (0, v.useShowUpsellForScrollPosition)({
+    }), eg = (0, I.useShowUpsellForScrollPosition)({
       listRef: a,
       searchQuery: H,
       setShowUpsell: ee,
       setUpsellGlowOpacity: ei,
       emojiSectionDescriptors: o
-    }), eC = (0, v.useSynchronizedActiveCategoryIndexForScrollPosition)({
+    }), eC = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
       activeCategoryIndex: G,
       isScrolling: F,
       listRef: a,
@@ -327,7 +327,7 @@ let Y = (0, P.cssValueToNumber)(m.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       searchQuery: H,
       disableForSearch: !1
     });
-    (0, v.useSynchronizedScrollPositionForActiveCategoryIndex)({
+    (0, I.useSynchronizedScrollPositionForActiveCategoryIndex)({
       searchQuery: H,
       activeCategoryIndex: G,
       listRef: a

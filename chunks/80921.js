@@ -20,7 +20,7 @@ var l = n("37983"),
     let {
       disabled: n,
       type: a
-    } = e, [h, E] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default), g = i.useContext(u.default), [C, S] = i.useState(!1), T = h === f.ExpressionPickerViewType.STICKER, I = i.useCallback(() => {
+    } = e, [h, E] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default), g = i.useContext(u.default), [C, S] = i.useState(!1), T = h === f.ExpressionPickerViewType.STICKER, v = i.useCallback(() => {
       (0, d.toggleExpressionPicker)(f.ExpressionPickerViewType.STICKER, a)
     }, [a]);
     i.useEffect(() => {
@@ -39,7 +39,7 @@ var l = n("37983"),
       }
     }, [g]);
     let {
-      Component: v,
+      Component: I,
       events: _
     } = (0, o.useStickerLottie)();
     return n ? null : (0, l.jsx)("div", {
@@ -50,7 +50,7 @@ var l = n("37983"),
           [p.stickerButtonTilted]: C && !T
         }),
         ..._,
-        onClick: I,
+        onClick: v,
         isActive: T,
         "aria-label": m.default.Messages.STICKER_BUTTON_LABEL,
         "aria-expanded": T,
@@ -58,7 +58,7 @@ var l = n("37983"),
         "aria-controls": E,
         sparkle: !1,
         notification: null,
-        children: (0, l.jsx)(v, {
+        children: (0, l.jsx)(I, {
           color: "currentColor"
         })
       })

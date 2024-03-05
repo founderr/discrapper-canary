@@ -22,8 +22,8 @@ var l = n("37983"),
   C = n("956597"),
   S = n("635956"),
   T = n("599110"),
-  I = n("402671"),
-  v = n("719923"),
+  v = n("402671"),
+  I = n("719923"),
   _ = n("788506"),
   N = n("115279"),
   A = n("49111"),
@@ -60,14 +60,14 @@ var l = n("37983"),
         T.default.track(A.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
           type: e,
           is_animated: t.animated,
-          is_external: !I.default.isInternalEmojiForGuildId(t, null == b ? void 0 : b.getGuildId()),
+          is_external: !v.default.isInternalEmojiForGuildId(t, null == b ? void 0 : b.getGuildId()),
           has_search_query: null != z && "" !== z,
           location: {
             ...D,
             object: A.AnalyticsObjects.EMOJI
           },
           location_stack: Z,
-          sku_id: v.default.getSkuIdForPremiumType(Y)
+          sku_id: I.default.getSkuIdForPremiumType(Y)
         })
       }
     }, [W, Y, j, b, D, Z, U, z]), (0, l.jsxs)("div", {
@@ -86,7 +86,7 @@ var l = n("37983"),
           trialOffer: H,
           discountOffer: V,
           children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
-            planName: (0, v.getTierDisplayName)(y.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+            planName: (0, I.getTierDisplayName)(y.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
             onClick: G
           }) : O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
             onClick: G
@@ -102,7 +102,7 @@ var l = n("37983"),
           }), (0, l.jsx)("div", {
             className: R.premiumPromoDescription,
             children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
-              planName: (0, v.getTierDisplayName)(y.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+              planName: (0, I.getTierDisplayName)(y.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
               onClick: G
             }) : O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
               onClick: G

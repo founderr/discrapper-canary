@@ -33,8 +33,8 @@ var S = s.forwardRef(function(e, t) {
     actions: r,
     handleEditModal: S,
     keyboardModeEnabled: T,
-    onKeyDown: I,
-    draftType: v,
+    onKeyDown: v,
+    draftType: I,
     size: _ = 1
   } = e, {
     onFocus: N,
@@ -52,13 +52,13 @@ var S = s.forwardRef(function(e, t) {
         if (T) {
           switch (e.which) {
             case h.KeyboardKeys.D:
-              e.preventDefault(), c.default.remove(l, n, v);
+              e.preventDefault(), c.default.remove(l, n, I);
               return;
             case h.KeyboardKeys.E:
               null != S && (e.preventDefault(), S(e));
               return;
             case h.KeyboardKeys.BACKSPACE:
-              e.ctrlKey ? (e.preventDefault(), c.default.clearAll(l, v)) : (e.preventDefault(), c.default.remove(l, n, v));
+              e.ctrlKey ? (e.preventDefault(), c.default.clearAll(l, I)) : (e.preventDefault(), c.default.remove(l, n, I));
               return;
             case h.KeyboardKeys.ARROW_UP:
               let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
@@ -67,7 +67,7 @@ var S = s.forwardRef(function(e, t) {
                 atEnd: !0
               })
           }
-          null == I || I(e)
+          null == v || v(e)
         }
       },
       className: o(g.upload, i, {

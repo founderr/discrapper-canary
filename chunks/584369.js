@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return d
   },
   default: function() {
-    return s
+    return u
   }
 });
 var a = n("446674"),
@@ -21,7 +21,7 @@ let d = 360,
       y: 0
     }
   };
-class u extends a.default.DeviceSettingsStore {
+class s extends a.default.DeviceSettingsStore {
   initialize(e) {
     r = null != e ? e : r, i.default.actionLogger.persist = l.default.isDeveloper
   }
@@ -45,8 +45,8 @@ class u extends a.default.DeviceSettingsStore {
     return r.devWidgetPosition
   }
 }
-u.displayName = "DevToolsSettingsStore", u.persistKey = "DevToolsSettingsStore";
-var s = new u(i.default, {
+s.displayName = "DevToolsSettingsStore", s.persistKey = "DevToolsSettingsStore";
+var u = new s(i.default, {
   DEV_TOOLS_SETTINGS_UPDATE: function(e) {
     l.default.isDeveloper && (r = {
       ...r,

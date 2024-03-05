@@ -1,15 +1,15 @@
 "use strict";
-s.r(t), s.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return y
+    return S
   }
-}), s("781738"), s("222007");
-var r = s("446674"),
-  n = s("713349"),
-  l = s("913144"),
-  i = s("240292"),
-  a = s("49111"),
-  o = s("782340");
+}), r("781738"), r("222007");
+var s = r("446674"),
+  n = r("713349"),
+  l = r("913144"),
+  i = r("240292"),
+  a = r("49111"),
+  o = r("782340");
 let u = {
     MP4: "mp4",
     TINYMP4: "tinymp4",
@@ -29,8 +29,8 @@ let u = {
   d = u.MP4,
   h = null,
   f = "",
-  p = "",
-  m = [],
+  m = "",
+  p = [],
   I = [],
   g = [],
   _ = [];
@@ -38,7 +38,7 @@ let u = {
 function E(e) {
   return e.replace(/^https?:/, "")
 }
-class R extends r.default.Store {
+class R extends s.default.Store {
   getAnalyticsID() {
     return h
   }
@@ -46,10 +46,10 @@ class R extends r.default.Store {
     return f
   }
   getResultQuery() {
-    return p
+    return m
   }
   getResultItems() {
-    return m
+    return p
   }
   getTrendingCategories() {
     return I
@@ -65,28 +65,28 @@ class R extends r.default.Store {
   }
 }
 R.displayName = "GIFPickerViewStore";
-var y = new R(l.default, {
+var S = new R(l.default, {
   GIF_PICKER_INITIALIZE: function(e) {
     h = e.analyticsID
   },
   GIF_PICKER_QUERY: function(e) {
-    "" === (f = e.query) && (p = "", m = [], g = [])
+    "" === (f = e.query) && (m = "", p = [], g = [])
   },
   GIF_PICKER_QUERY_SUCCESS: function(e) {
-    if (null != e.query && f === p) return !1;
-    null != e.query && (p = e.query), m = e.items.map(e => {
+    if (null != e.query && f === m) return !1;
+    null != e.query && (m = e.query), p = e.items.map(e => {
       let {
         width: t,
-        height: s,
-        src: r,
+        height: r,
+        src: s,
         gif_src: l,
         url: i,
         id: a
       } = e;
       return {
         width: t,
-        height: s,
-        src: E(r),
+        height: r,
+        src: E(s),
         gifSrc: E(l),
         url: i,
         id: a,
@@ -117,18 +117,18 @@ var y = new R(l.default, {
       query: t
     } = e;
     if (null == t) return !1;
-    p = t, m = []
+    m = t, p = []
   },
   GIF_PICKER_TRENDING_FETCH_SUCCESS: function(e) {
     let t = e.trendingCategories,
-      s = null != e.trendingGIFPreview ? [{
+      r = null != e.trendingGIFPreview ? [{
         type: a.GIFPickerResultTypes.TRENDING_GIFS,
         icon: i.default,
         name: o.default.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS,
         src: E(e.trendingGIFPreview.src),
         format: n.GIFType.IMAGE
       }] : [];
-    I = [...s, ...t.map(e => ({
+    I = [...r, ...t.map(e => ({
       ...e,
       src: E(e.src),
       type: a.GIFPickerResultTypes.TRENDING_CATEGORY,

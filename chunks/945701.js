@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ReplyInput: function() {
-    return v
+    return I
   },
   ReactionPickerButton: function() {
     return N
@@ -31,7 +31,7 @@ let T = (0, p.createChannelRecord)({
     id: "1",
     type: g.ChannelTypes.DM
   }),
-  I = i.forwardRef(function(e, t) {
+  v = i.forwardRef(function(e, t) {
     let {
       placeholder: n,
       headerText: i,
@@ -55,7 +55,7 @@ let T = (0, p.createChannelRecord)({
               variant: "text-xs/bold",
               className: S.replyHeader,
               children: null != i ? i : C.default.Messages.CHAT
-            }), (0, l.jsx)(v, {
+            }), (0, l.jsx)(I, {
               onEnter: e => {
                 a(e), c()
               },
@@ -67,7 +67,7 @@ let T = (0, p.createChannelRecord)({
       children: () => d
     })
   }),
-  v = e => {
+  I = e => {
     let {
       placeholder: t,
       onEnter: n
@@ -183,7 +183,7 @@ var A = e => {
             reply: null
           }), f(!1)
         }
-      }), d && (0, l.jsx)(I, {
+      }), d && (0, l.jsx)(v, {
         hide: () => f(!1),
         ref: m,
         headerText: n,

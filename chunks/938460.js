@@ -14,8 +14,8 @@
       l = t("271938"),
       f = t("374014"),
       u = t("16916"),
-      b = t("49111"),
-      p = t("353927");
+      p = t("49111"),
+      b = t("353927");
     class h {
       _onGameDetectionUpdate(e) {
         this.applications = e.map(e => {
@@ -85,7 +85,7 @@
                   resolution: t.resolution,
                   frameRate: t.fps
                 },
-                context: p.MediaEngineContextTypes.STREAM
+                context: b.MediaEngineContextTypes.STREAM
               })
             } else {
               var s;
@@ -99,7 +99,7 @@
                   resolution: t.resolution,
                   frameRate: t.fps
                 },
-                context: p.MediaEngineContextTypes.STREAM
+                context: b.MediaEngineContextTypes.STREAM
               })
             }
             break;
@@ -167,12 +167,12 @@
             videoState: a,
             context: t
           } = e;
-          t === p.MediaEngineContextTypes.STREAM && this._onCapturePaused(a === b.MediaEngineVideoStates.PAUSED)
+          t === b.MediaEngineContextTypes.STREAM && this._onCapturePaused(a === p.MediaEngineVideoStates.PAUSED)
         }), s.default.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", e => {
           let {
             settings: a
           } = e;
-          (null == a ? void 0 : a.context) === p.MediaEngineContextTypes.STREAM && (null == a ? void 0 : a.desktopSettings) == null && (null == a ? void 0 : a.cameraSettings) == null && this._onCaptureEnded()
+          (null == a ? void 0 : a.context) === b.MediaEngineContextTypes.STREAM && (null == a ? void 0 : a.desktopSettings) == null && (null == a ? void 0 : a.cameraSettings) == null && this._onCaptureEnded()
         })
       }
     }

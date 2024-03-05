@@ -22,8 +22,8 @@ var l = n("37983"),
   C = n("534107"),
   S = n("49111"),
   T = n("782340"),
-  I = n("722552");
-let v = i.lazy(() => n.el("403130").then(n.bind(n, "403130")));
+  v = n("722552");
+let I = i.lazy(() => n.el("403130").then(n.bind(n, "403130")));
 
 function _(e) {
   let {
@@ -33,7 +33,7 @@ function _(e) {
   } = e, a = null == n ? "--:--" : t ? (0, c.convertSecondsToClockFormat)(Math.ceil(n - i)) : (0, c.convertSecondsToClockFormat)(Math.ceil(n));
   return (0, l.jsx)(o.Text, {
     variant: "text-sm/normal",
-    className: I.duration,
+    className: v.duration,
     tabularNumbers: !0,
     children: a
   })
@@ -146,9 +146,9 @@ var N = i.memo(function(e) {
   let ep = W ? m.default : p.default,
     eh = W ? T.default.Messages.PAUSE : T.default.Messages.PLAY;
   x = "Safari" === platform.name ? (0, l.jsx)(i.Suspense, {
-    children: (0, l.jsx)(v, {
+    children: (0, l.jsx)(I, {
       ref: w,
-      className: I.audioElement,
+      className: v.audioElement,
       src: y,
       preload: X,
       playing: W && !z,
@@ -160,7 +160,7 @@ var N = i.memo(function(e) {
     })
   }) : (0, l.jsx)(d.default, {
     ref: w,
-    className: I.audioElement,
+    className: v.audioElement,
     controls: !1,
     preload: X,
     onEnded: es,
@@ -178,30 +178,30 @@ var N = i.memo(function(e) {
       enabled: eg
     } = (0, o.useRedesignIconContext)();
   return (0, l.jsxs)("div", {
-    className: s(I.container, {
-      [I.playing]: W
+    className: s(v.container, {
+      [v.playing]: W
     }),
     onMouseEnter: el,
     children: [(0, l.jsx)("div", {
-      className: I.rippleContainer,
+      className: v.rippleContainer,
       children: (0, l.jsx)("div", {
-        className: s(I.ripple, {
-          [I.reducedMotion]: eE
+        className: s(v.ripple, {
+          [v.reducedMotion]: eE
         })
       })
     }), (0, l.jsx)(o.Clickable, {
-      className: I.playButtonContainer,
+      className: v.playButtonContainer,
       onClick: en,
       "aria-label": eh,
       children: (0, l.jsx)(ep, {
-        className: s(I.playIcon, {
-          [I.oldPlayIconSpacing]: !eg && !W
+        className: s(v.playIcon, {
+          [v.oldPlayIconSpacing]: !eg && !W
         }),
         width: 18,
         height: 18
       })
     }), (0, l.jsx)(C.default, {
-      className: I.waveform,
+      className: v.waveform,
       waveform: L,
       currentTime: F,
       duration: null != B ? B : 1,
@@ -215,9 +215,9 @@ var N = i.memo(function(e) {
       currentTime: F,
       duration: B
     }), (0, l.jsx)(f.default, {
-      className: I.volumeButton,
-      iconClassName: I.volumeButtonIcon,
-      sliderWrapperClassName: I.volumeSlider,
+      className: v.volumeButton,
+      iconClassName: v.volumeButtonIcon,
+      sliderWrapperClassName: v.volumeSlider,
       muted: V,
       value: (0, g.amplitudeToPerceptual)($, 1),
       minValue: 0,

@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return T
   },
   useSpotifySyncAction: function() {
-    return I
+    return v
   },
   useSpotifyJoinAction: function() {
-    return v
+    return I
   }
 }), n("222007");
 var l = n("884691"),
@@ -77,7 +77,7 @@ function T(e, t, n) {
   }
 }
 
-function I(e, t, n, i) {
+function v(e, t, n, i) {
   let a = null != i ? i : u.default.getName(t),
     s = S(e, t),
     {
@@ -103,7 +103,7 @@ function I(e, t, n, i) {
   }
 }
 
-function v(e, t, n) {
+function I(e, t, n) {
   let i = S(e, t),
     {
       notPlayable: a,

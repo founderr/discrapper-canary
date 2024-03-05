@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return d
   },
   IncidentAlertModeratorPermissions: function() {
-    return o
+    return s
   }
 });
 var l = n("316693"),
@@ -37,4 +37,4 @@ let u = 2,
     value: 24,
     label: r.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_24_HOURS
   }],
-  o = l.default.combine(i.Permissions.ADMINISTRATOR, i.Permissions.MANAGE_GUILD, i.Permissions.BAN_MEMBERS, i.Permissions.KICK_MEMBERS, i.Permissions.MODERATE_MEMBERS)
+  s = l.default.combine(i.Permissions.ADMINISTRATOR, i.Permissions.MANAGE_GUILD, i.Permissions.BAN_MEMBERS, i.Permissions.KICK_MEMBERS, i.Permissions.MODERATE_MEMBERS)

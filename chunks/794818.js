@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return T
   },
   trackSearchClosed: function() {
-    return I
+    return v
   },
   trackSearchStarted: function() {
-    return v
+    return I
   },
   trackTagSearchStarted: function() {
     return _
@@ -177,13 +177,13 @@ function T(e, t) {
   })
 }
 
-function I(e) {
+function v(e) {
   m.default.track(p.AnalyticEvents.SEARCH_CLOSED, {
     load_id: e
   })
 }
 
-function v(e, t) {
+function I(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   m.default.track(p.AnalyticEvents.SEARCH_STARTED, {
     search_type: p.SearchTypes.GUILD_DISCOVERY,

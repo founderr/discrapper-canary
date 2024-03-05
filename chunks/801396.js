@@ -22,8 +22,8 @@ var l = n("37983"),
   C = n("595086"),
   S = n("427459"),
   T = n("49111"),
-  I = n("944305"),
-  v = n("782340"),
+  v = n("944305"),
+  I = n("782340"),
   _ = n("754334"),
   N = e => {
     let {
@@ -57,7 +57,7 @@ var l = n("37983"),
         color: "interactive-normal",
         className: _.body,
         variant: "text-sm/normal",
-        children: v.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_DESCRIPTION.format({
+        children: I.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_DESCRIPTION.format({
           count: (0, S.getTotalStickerCountForTier)(T.BoostedGuildTiers.TIER_1)
         })
       }), (0, l.jsx)(o.Button, {
@@ -68,10 +68,10 @@ var l = n("37983"),
             analyticsLocations: y,
             analyticsSourceLocation: x,
             guild: O,
-            perks: (0, I.guildBoostingPerks)()
+            perks: (0, v.guildBoostingPerks)()
           })
         },
-        children: v.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_CTA
+        children: I.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_CTA
       })]
     }) : (0, l.jsxs)("div", {
       className: s(_.upsell, t),
@@ -83,14 +83,14 @@ var l = n("37983"),
         color: "interactive-normal",
         className: _.body,
         variant: "text-sm/normal",
-        children: v.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_DESCRIPTION
+        children: I.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_DESCRIPTION
       }), (0, l.jsx)(o.Button, {
         look: o.Button.Looks.LINK,
         color: o.Button.Colors.LINK,
         onClick: () => {
           (0, f.closeExpressionPicker)(), p.default.open(n, T.GuildSettingsSections.STICKERS, x)
         },
-        children: v.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_CTA
+        children: I.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_CTA
       })]
     }) : null
   }

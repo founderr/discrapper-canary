@@ -1,7 +1,7 @@
     "use strict";
     t.r(a), t.d(a, {
       default: function() {
-        return p
+        return b
       }
     }), t("222007");
     var s = t("37983");
@@ -15,7 +15,7 @@
       l = t("701909"),
       f = t("49111"),
       u = t("782340");
-    class b extends o.default {
+    class p extends o.default {
       _initialize() {
         i.default.subscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission)
       }
@@ -41,4 +41,4 @@
         }
       }
     }
-    var p = new b
+    var b = new p

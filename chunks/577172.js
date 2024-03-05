@@ -22,9 +22,9 @@ var l = n("37983"),
   C = n("779585"),
   S = n("900143"),
   T = n("923337");
-let I = [T, p, g, E, C, h, S];
+let v = [T, p, g, E, C, h, S];
 
-function v(e) {
+function I(e) {
   let {
     userId: t
   } = e, [n, a] = i.useState(!1);
@@ -43,7 +43,7 @@ function v(e) {
         }),
         src: function() {
           let e = parseInt(t.slice(-6), 10);
-          return I[e % I.length]
+          return v[e % v.length]
         }()
       }), (0, l.jsxs)(o.Text, {
         variant: "text-sm/normal",
@@ -65,7 +65,7 @@ function _(e) {
   return (0, l.jsxs)(c.default, {
     className: m.section,
     lastSection: !0,
-    children: [s && i ? (0, l.jsx)(v, {
+    children: [s && i ? (0, l.jsx)(I, {
       userId: t.id
     }) : null, i ? (0, l.jsx)(u.default, {
       className: m.messageInputContainer,

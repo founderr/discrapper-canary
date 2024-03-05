@@ -9,8 +9,8 @@ var a = n("446674"),
   l = n("692038"),
   d = n("42203"),
   r = n("697218"),
-  u = n("449008"),
-  s = n("299039");
+  s = n("449008"),
+  u = n("299039");
 let o = {};
 
 function c(e) {
@@ -18,7 +18,7 @@ function c(e) {
   let n = d.default.getChannel(null == e ? void 0 : e.channel_id);
   if (null == n || !n.isForumPost()) return !1;
   let a = o[n.id];
-  return s.default.compare(null == e ? void 0 : e.id, null == a ? void 0 : null === (t = a.message) || void 0 === t ? void 0 : t.id) > -1
+  return u.default.compare(null == e ? void 0 : e.id, null == a ? void 0 : null === (t = a.message) || void 0 === t ? void 0 : t.id) > -1
 }
 
 function f(e, t) {
@@ -43,7 +43,7 @@ function _(e) {
     threads: t,
     mostRecentMessages: n
   } = e;
-  t.forEach(e => f(e.id, null)), null == n || n.filter(u.isNotNullish).forEach(e => {
+  t.forEach(e => f(e.id, null)), null == n || n.filter(s.isNotNullish).forEach(e => {
     f(e.channel_id, e)
   })
 }
@@ -65,7 +65,7 @@ var E = new m(i.default, {
   },
   MESSAGE_CREATE: function(e) {
     if (e.isPushNotification || !c(e.message)) return !1;
-    e.message.channel_id === s.default.castMessageIdAsChannelId(e.message.id) ? f(e.message.channel_id, null) : f(e.message.channel_id, e.message)
+    e.message.channel_id === u.default.castMessageIdAsChannelId(e.message.id) ? f(e.message.channel_id, null) : f(e.message.channel_id, e.message)
   },
   MESSAGE_UPDATE: function(e) {
     if (!c(e.message) || e.message.channel_id === e.message.id) return !1;

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ImageModal: function() {
-    return v
+    return I
   },
   VideoModal: function() {
     return _
@@ -43,7 +43,7 @@ function T(e) {
     })
   })
 }
-let I = e => {
+let v = e => {
   let {
     children: t,
     hasMediaControls: n,
@@ -80,7 +80,7 @@ let I = e => {
   })
 };
 
-function v(e) {
+function I(e) {
   let {
     src: t,
     original: n,
@@ -92,7 +92,7 @@ function v(e) {
     responsive: m,
     renderLinkComponent: h,
     maxWidth: E,
-    maxHeight: v,
+    maxHeight: I,
     shouldAnimate: _,
     onClose: N,
     shouldHideMediaOptions: A = !1,
@@ -114,7 +114,7 @@ function v(e) {
     className: S.wrapper,
     children: [M ? (0, l.jsx)(T, {
       onClose: N
-    }) : null, (0, l.jsx)(I, {
+    }) : null, (0, l.jsx)(v, {
       isObscured: x,
       src: t,
       children: e => (0, l.jsx)(p.default, {
@@ -155,14 +155,14 @@ function _(e) {
   } = e, {
     width: p,
     height: E
-  } = (0, f.zoomFit)(n, i), g = r.isMobile && null != a, v = u ? e => {
+  } = (0, f.zoomFit)(n, i), g = r.isMobile && null != a, I = u ? e => {
     e.stopPropagation(), e.preventDefault()
   } : c.onContextMenu;
   return (0, l.jsxs)("div", {
     className: s(S.wrapper, S.videoWrapper),
     children: [g ? (0, l.jsx)(T, {
       onClose: a
-    }) : null, (0, l.jsx)(I, {
+    }) : null, (0, l.jsx)(v, {
       hasMediaControls: !0,
       isObscured: d,
       src: t,
@@ -178,7 +178,7 @@ function _(e) {
         onVolumeChange: m.setVolume,
         onMute: m.setMuted,
         autoPlay: !e,
-        onContextMenu: v,
+        onContextMenu: I,
         ...c
       }, t)
     }), !u && o({

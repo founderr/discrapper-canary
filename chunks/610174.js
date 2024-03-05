@@ -13,7 +13,7 @@ var l = n("316693"),
   u = n("305961"),
   a = n("957255"),
   d = n("421127");
-let o = (0, r.createExperiment)({
+let s = (0, r.createExperiment)({
     kind: "guild",
     id: "2023-04_guild_alert_mode",
     label: "Guild Alert Mode",
@@ -37,7 +37,7 @@ let o = (0, r.createExperiment)({
       }
     }]
   }),
-  s = (0, r.createExperiment)({
+  o = (0, r.createExperiment)({
     kind: "guild",
     id: "2023-08_guild_alert_mode_friend_server",
     label: "Guild Alert Mode (friend servers only)",
@@ -65,14 +65,14 @@ let o = (0, r.createExperiment)({
 function c(e) {
   let t = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(e)),
     n = (0, i.useStateFromStores)([a.default], () => null != t && l.default.hasAny(a.default.computePermissions(t), d.IncidentAlertModeratorPermissions)),
-    r = o.useExperiment({
+    r = s.useExperiment({
       guildId: e,
       location: "c3fae3_1"
     }, {
       disable: !n,
       autoTrackExposure: !0
     }),
-    c = s.useExperiment({
+    c = o.useExperiment({
       guildId: e,
       location: "c3fae3_2"
     }, {
@@ -88,14 +88,14 @@ function c(e) {
 function f(e) {
   let t = u.default.getGuild(e),
     n = null != t && l.default.hasAny(a.default.computePermissions(t), d.IncidentAlertModeratorPermissions),
-    i = o.getCurrentConfig({
+    i = s.getCurrentConfig({
       guildId: e,
       location: "c3fae3_3"
     }, {
       disable: !n,
       autoTrackExposure: !0
     }),
-    r = s.getCurrentConfig({
+    r = o.getCurrentConfig({
       guildId: e,
       location: "c3fae3_4"
     }, {

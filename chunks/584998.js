@@ -22,8 +22,8 @@ var l = n("37983"),
   C = n("118094"),
   S = n("402318"),
   T = n("976818"),
-  I = n("49111"),
-  v = n("200521"),
+  v = n("49111"),
+  I = n("200521"),
   _ = n("714997");
 
 function N(e) {
@@ -40,7 +40,7 @@ function N(e) {
       channel: c,
       rating: n
     })
-  }, P = d.default.can(I.Permissions.MANAGE_MESSAGES, c);
+  }, P = d.default.can(v.Permissions.MANAGE_MESSAGES, c);
   return (0, l.jsxs)(s.Clickable, {
     className: _.container,
     onClick: x,
@@ -104,14 +104,14 @@ function N(e) {
     }), y && !M && (0, l.jsxs)("div", {
       className: _.feedbackContainer,
       children: [(0, l.jsx)(s.Clickable, {
-        onClick: e => L(e, v.FeedbackRating.GOOD),
+        onClick: e => L(e, I.FeedbackRating.GOOD),
         children: (0, l.jsx)(p.default, {
           className: _.thumbIcon,
           width: 12,
           height: 12
         })
       }), (0, l.jsx)(s.Clickable, {
-        onClick: e => L(e, v.FeedbackRating.BAD),
+        onClick: e => L(e, I.FeedbackRating.BAD),
         children: (0, l.jsx)(m.default, {
           className: _.thumbIcon,
           width: 12,

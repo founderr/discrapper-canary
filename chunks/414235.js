@@ -31,11 +31,11 @@ let p = i.forwardRef(function(e, t) {
     height: E,
     className: g,
     initialAnimation: C
-  } = e, S = i.useRef(null), T = i.useRef(null), I = i.useId(), v = i.useContext(o.AccessibilityPreferencesContext).reducedMotion.enabled, _ = i.useRef(C), {
+  } = e, S = i.useRef(null), T = i.useRef(null), v = i.useId(), I = i.useContext(o.AccessibilityPreferencesContext).reducedMotion.enabled, _ = i.useRef(C), {
     enabled: N
   } = d.default.useExperiment({
     location: "LottieIcon web entry point"
-  }), A = v || !N, x = i.useCallback(e => {
+  }), A = I || !N, x = i.useCallback(e => {
     if (null != S.current && e === a.PlayerEvents.Ready) {
       let e = 0;
       if (null != T.current) {
@@ -69,7 +69,7 @@ let p = i.forwardRef(function(e, t) {
     height: E
   } : (0, u.getIconSize)(p);
   return (0, l.jsx)(a.DotLottiePlayer, {
-    id: I,
+    id: v,
     className: r(f.lottieIcon, g),
     style: {
       "--__lottieIconColor": null != n && "string" == typeof n ? n : null == n ? void 0 : n.css,
@@ -82,5 +82,5 @@ let p = i.forwardRef(function(e, t) {
     loop: !1,
     keepLastFrame: !0,
     onEvent: x
-  }, A ? "".concat(I, "-disabled") : "".concat(I, "-enabled"))
+  }, A ? "".concat(v, "-disabled") : "".concat(v, "-enabled"))
 })

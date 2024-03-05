@@ -37,8 +37,8 @@ function p(e) {
     isActive: C = !1,
     tooltipPosition: S = "top",
     shouldShowTooltip: T = !0,
-    forceTooltipOpen: I = !1,
-    buttonRef: v,
+    forceTooltipOpen: v = !1,
+    buttonRef: I,
     grow: _,
     "aria-label": N
   } = e;
@@ -48,14 +48,14 @@ function p(e) {
       text: t,
       "aria-label": N,
       shouldShow: T,
-      forceOpen: I,
+      forceOpen: v,
       children: e => {
         let {
           onClick: t,
           onContextMenu: d,
           onMouseEnter: S,
           onMouseLeave: T,
-          ...I
+          ...v
         } = e;
         return (0, l.jsx)(s.Button, {
           look: s.Button.Looks.BLANK,
@@ -87,10 +87,10 @@ function p(e) {
             [m.active]: C
           }, c),
           wrapperClassName: f,
-          buttonRef: v,
+          buttonRef: I,
           grow: _,
           "aria-label": N,
-          ...I,
+          ...v,
           children: (0, l.jsx)(h, {
             className: a(m.controlIcon, p, {
               [m.themeable]: E,
@@ -122,20 +122,20 @@ function E(e) {
     onPopoutClick: g,
     popoutOpen: C = !1,
     ...S
-  } = e, T = (0, c.default)(t, n), I = (0, r.default)("(max-width: 456px)"), v = (0, l.jsx)(p, {
+  } = e, T = (0, c.default)(t, n), v = (0, r.default)("(max-width: 456px)"), I = (0, l.jsx)(p, {
     ...S,
     grow: !1,
     onContextMenu: g,
     iconClassName: a(E, m.centerIcon),
-    className: a(I ? i : null, m.staticButton, m.centerButton, h[T])
+    className: a(v ? i : null, m.staticButton, m.centerButton, h[T])
   });
-  return I ? v : (0, l.jsxs)("div", {
+  return v ? I : (0, l.jsxs)("div", {
     className: a(i, m.contextMenuContainer),
     children: [(0, l.jsx)(u.default, {
       mask: null == g ? null : u.MaskIDs.CHANNEL_CALL_CONTROL_BUTTON,
       width: 56,
       height: 56,
-      children: v
+      children: I
     }), null != g ? (0, l.jsx)(d.default, {
       children: (0, l.jsx)(s.Clickable, {
         "aria-label": f.default.Messages.MORE_OPTIONS,
