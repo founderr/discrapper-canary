@@ -1,5 +1,6 @@
 "use strict";
 e.exports = {
+  blackSummary: "blackSummary__85da0",
   categoryLogo: "categoryLogo__1444c",
   discordIcon: "discordIcon_f03762",
   discordLogo: "discordLogo_efcf47",
