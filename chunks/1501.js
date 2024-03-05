@@ -7,8 +7,8 @@
     var s = t("147369"),
       d = t("803182"),
       n = t("619443"),
-      i = t("21121"),
-      c = t("99317"),
+      c = t("21121"),
+      i = t("99317"),
       r = t("693051"),
       o = t("607542"),
       l = t("153498"),
@@ -29,9 +29,9 @@
           var t, s, n;
           let {
             pathname: p
-          } = e, b = (0, r.getRootNavigationRef)(), j = (0, i.isInMainTabsExperiment)(), {
+          } = e, b = (0, r.getRootNavigationRef)(), j = (0, c.isInMainTabsExperiment)(), {
             showYouBar: m
-          } = (0, c.getNavYouBarExperiment)({
+          } = (0, i.getNavYouBarExperiment)({
             location: "convertRouteToNavigation"
           });
           if (null == b || !b.isReady()) return;
