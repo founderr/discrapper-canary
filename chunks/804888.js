@@ -24,5 +24,5 @@ function a() {
 }
 
 function o(e) {
-  return a() && null != e.match(r) ? [!0, e.substring(s.length).trim()] : [!1, e]
+  return null == e ? [!1, ""] : a() && null != e.match(r) ? [!0, e.substring(s.length).trim()] : [!1, e]
 }
