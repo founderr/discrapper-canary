@@ -11,8 +11,8 @@ var a = n("37983");
 n("884691");
 var r = n("414456"),
   s = n.n(r),
-  l = n("77078"),
-  i = n("145131"),
+  i = n("77078"),
+  l = n("145131"),
   u = n("668458");
 
 function o(e) {
@@ -31,11 +31,11 @@ function d(e) {
     noArt: h = !1,
     selected: E = !1
   } = e;
-  return (0, a.jsxs)(i.default, {
+  return (0, a.jsxs)(l.default, {
     className: c,
-    justify: i.default.Justify.CENTER,
-    align: i.default.Align.CENTER,
-    direction: i.default.Direction.VERTICAL,
+    justify: l.default.Justify.CENTER,
+    align: l.default.Align.CENTER,
+    direction: l.default.Direction.VERTICAL,
     style: {
       padding: 4
     },
@@ -44,21 +44,21 @@ function d(e) {
       style: {
         backgroundImage: "url(".concat(f, ")")
       }
-    }), null != r ? (0, a.jsx)(l.Text, {
+    }), null != r ? (0, a.jsx)(i.Text, {
       color: "none",
       variant: "text-md/semibold",
       className: u.header,
       children: r
-    }) : null, null != o ? (0, a.jsx)(l.Text, {
+    }) : null, null != o ? (0, a.jsx)(i.Text, {
       color: "none",
       className: u.description,
       variant: "text-sm/medium",
       children: o
-    }) : null, E || null == n ? null : (0, a.jsx)(l.Button, {
+    }) : null, E || null == n ? null : (0, a.jsx)(i.Button, {
       className: u.outerButton,
-      size: l.Button.Sizes.NONE,
-      color: l.Button.Colors.WHITE,
-      look: l.Button.Looks.BLANK,
+      size: i.Button.Sizes.NONE,
+      color: i.Button.Colors.WHITE,
+      look: i.Button.Looks.BLANK,
       innerClassName: u.button,
       onClick: e => {
         e.stopPropagation(), null == t || t(e)

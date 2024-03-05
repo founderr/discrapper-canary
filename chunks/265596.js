@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 }), n("222007");
 var a = n("446674"),
   r = n("913144");
 let s = new Map;
-class l extends a.default.Store {
+class i extends a.default.Store {
   getFeed(e) {
     return s.get(e)
   }
@@ -16,8 +16,8 @@ class l extends a.default.Store {
     return null === (t = this.getFeed(e)) || void 0 === t ? void 0 : t.request_id
   }
 }
-l.displayName = "ContentInventoryStore";
-var i = new l(r.default, {
+i.displayName = "ContentInventoryStore";
+var l = new i(r.default, {
   CONNECTION_OPEN: function() {
     s.clear()
   },

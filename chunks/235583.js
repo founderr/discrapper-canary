@@ -1,10 +1,10 @@
 "use strict";
 r.r(t), r.d(t, {
   ResizeObserverSize: function() {
-    return i
+    return u
   }
 });
 var n = r("26098"),
-  i = function(e, t) {
+  u = function(e, t) {
     this.inlineSize = e, this.blockSize = t, (0, n.freeze)(this)
   }

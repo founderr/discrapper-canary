@@ -1,5 +1,5 @@
 var n = r("905577"),
-  i = r("890022");
+  u = r("890022");
 e.exports = function(e, t) {
-  return t.length < 2 ? e : n(e, i(t, 0, -1))
+  return t.length < 2 ? e : n(e, u(t, 0, -1))
 }

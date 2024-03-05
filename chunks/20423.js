@@ -1,13 +1,13 @@
     "use strict";
     t.r(a), t("860677");
-    var s, d, n, c, i, r = t("37983");
+    var s, d, n, i, c, r = t("37983");
     t("320777"), t("884691");
     var o = t("288661"),
       l = t("627445"),
       f = t.n(l),
       u = t("521143"),
-      b = t("938460"),
-      p = t("156820"),
+      p = t("938460"),
+      b = t("156820"),
       h = t("878175"),
       j = t("864088"),
       m = t("13616"),
@@ -46,7 +46,7 @@
         })
       });
       let e = null === (d = (n = N.default.remoteApp).getVersion) || void 0 === d ? void 0 : d.call(n),
-        a = null === (c = (i = N.default.remoteApp).getBuildNumber) || void 0 === c ? void 0 : c.call(i),
+        a = null === (i = (c = N.default.remoteApp).getBuildNumber) || void 0 === i ? void 0 : i.call(c),
         t = {};
       null != N.default.remoteApp.getModuleVersions && (t = N.default.remoteApp.getModuleVersions()), E.default.setExtra({
         hostVersion: e,
@@ -71,5 +71,5 @@
           (0, R.hidden)(window)
         })
       }
-      h.default.initialize(), b.default.init(), _.default.init(), j.default.init(), P.default.init(), p.default.initialize(), I.default.initialize(), O.default.initialize(), m.initialize(), G(u.default.App)
+      h.default.initialize(), p.default.init(), _.default.init(), j.default.init(), P.default.init(), b.default.initialize(), I.default.initialize(), O.default.initialize(), m.initialize(), G(u.default.App)
     }
