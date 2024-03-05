@@ -55799,6 +55799,19 @@ html .progress__4ef76 {
     align-self: center
 }
 
+.coachmarkArt__3085c {
+    background-image: url(/assets/e279224b03a3fcfe70b8.png);
+    align-self: center;
+    width: 240px;
+    height: 147px;
+    top: -76px;
+    left: calc(50% - 120px)
+}
+
+.coachmarkHeader_d9cce2 {
+    margin-top: 56px
+}
+
 .coachmark__59aa4 {
     text-align: center
 }
