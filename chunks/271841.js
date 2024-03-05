@@ -50,7 +50,6 @@ let f = {
     PRIMARY: _.colorPrimary,
     LINK: _.colorLink,
     WHITE: _.colorWhite,
-    BLACK: _.colorBlack,
     TRANSPARENT: _.colorTransparent,
     BRAND_NEW: _.colorBrandNew,
     CUSTOM: ""
