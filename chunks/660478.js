@@ -598,7 +598,7 @@ class eO {
           return null != K.default.getGuild(e.channelId);
         case er.ReadStateTypes.NOTIFICATION_CENTER:
           var t;
-          return F.default.castUserIdAsReadStateChannelId(null === (t = $.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.channelId;
+          return F.default.cast(null === (t = $.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.channelId;
         default:
           return !0
       }
@@ -945,7 +945,7 @@ class eX extends d.default.Store {
           break;
         case er.ReadStateTypes.NOTIFICATION_CENTER:
           var s;
-          let r = F.default.castUserIdAsReadStateChannelId(null === (s = $.default.getCurrentUser()) || void 0 === s ? void 0 : s.id);
+          let r = F.default.cast(null === (s = $.default.getCurrentUser()) || void 0 === s ? void 0 : s.id);
           r === n.channelId && t.push(n.serialize(e));
           break;
         default:

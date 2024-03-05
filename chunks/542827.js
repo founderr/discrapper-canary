@@ -35,11 +35,11 @@ function p(e, t, n) {
   }));
   return e.forEach(e => {
     a.push({
-      channelId: c.default.castGuildIdAsReadStateChannelId(e),
+      channelId: c.default.cast(e),
       readStateType: g.ReadStateTypes.GUILD_EVENT,
       messageId: u.default.lastMessageId(e, g.ReadStateTypes.GUILD_EVENT)
     }), a.push({
-      channelId: c.default.castGuildIdAsReadStateChannelId(e),
+      channelId: c.default.cast(e),
       readStateType: g.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
       messageId: d.default.ackIdForGuild(e)
     })
