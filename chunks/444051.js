@@ -285,5 +285,6 @@ e.exports = Object.freeze({
   SERVER_DRAWER_ACTIVITY_PLAYING: "playing **!!{activity}!!**",
   SERVER_DRAWER_ACTIVITY_STREAMING: "streaming **!!{activity}!!**",
   SERVER_DRAWER_ACTIVITY_STREAMING_SCREEN: "sharing screen",
+  PACKAGES: "Packages",
   CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity"
 })
