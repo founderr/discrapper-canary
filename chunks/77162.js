@@ -15,10 +15,10 @@ var r = i("37983"),
   o = i("997289"),
   f = i("246511"),
   S = i("151185"),
-  h = i("599110"),
-  m = i("866353"),
-  E = i("161585"),
-  p = i("24373"),
+  m = i("599110"),
+  h = i("866353"),
+  p = i("161585"),
+  E = i("24373"),
   I = i("41170"),
   k = i("591522"),
   C = i("49111"),
@@ -67,7 +67,7 @@ let y = (0, u.cssValueToNumber)(g.stickerPickerPreviewDimensions),
       children: F.map(e => {
         var o;
         let y = e.visibleRowIndex === (null == L ? void 0 : L.rowIndex) && e.columnIndex === (null == L ? void 0 : L.columnIndex),
-          _ = e.type === E.StickerGridItemTypes.STICKER && j && y,
+          _ = e.type === p.StickerGridItemTypes.STICKER && j && y,
           R = (0, a.throttle)(() => {
             (null == x ? void 0 : x.current) !== !0 && (null == A ? void 0 : A.current) !== !0 && !y && (null == P || P(e))
           }, 250),
@@ -78,7 +78,7 @@ let y = (0, u.cssValueToNumber)(g.stickerPickerPreviewDimensions),
             ...V
           } = null !== (o = null == u ? void 0 : u(e.columnIndex, U)) && void 0 !== o ? o : {};
         switch (e.type) {
-          case E.StickerGridItemTypes.CREATE_STICKER:
+          case p.StickerGridItemTypes.CREATE_STICKER:
             return (0, r.jsx)("div", {
               ...V,
               children: (0, r.jsxs)(c.Clickable, {
@@ -91,7 +91,7 @@ let y = (0, u.cssValueToNumber)(g.stickerPickerPreviewDimensions),
                 onFocus: null != b ? b : R,
                 onMouseMove: R,
                 onClick: () => {
-                  e.type === E.StickerGridItemTypes.CREATE_STICKER && (h.default.track(C.AnalyticEvents.OPEN_MODAL, {
+                  e.type === p.StickerGridItemTypes.CREATE_STICKER && (m.default.track(C.AnalyticEvents.OPEN_MODAL, {
                     type: C.AnalyticsSections.CREATE_STICKER_MODAL,
                     location: H
                   }), (0, c.openModalLazy)(async () => {
@@ -119,8 +119,8 @@ let y = (0, u.cssValueToNumber)(g.stickerPickerPreviewDimensions),
                 })]
               })
             }, e.guild_id);
-          case E.StickerGridItemTypes.STICKER: {
-            let a = t && null != K && (0, p.isStandardSticker)(e.sticker) && !K.has(e.sticker.pack_id);
+          case p.StickerGridItemTypes.STICKER: {
+            let a = t && null != K && (0, E.isStandardSticker)(e.sticker) && !K.has(e.sticker.pack_id);
             return (0, n.createElement)("div", {
               ...V,
               key: e.sticker.id
@@ -158,7 +158,7 @@ let y = (0, u.cssValueToNumber)(g.stickerPickerPreviewDimensions),
                   className: l(g.stickerNode, {
                     [g.stickerNodeDimmed]: j && !y && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
                     [g.stickerNodeHidden]: _,
-                    [g.stickerUnsendable]: D && !(0, m.isSendableSticker)(e.sticker, G, O)
+                    [g.stickerUnsendable]: D && !(0, h.isSendableSticker)(e.sticker, G, O)
                   }),
                   disableAnimation: !y && !s,
                   enlargeOnInteraction: j,
