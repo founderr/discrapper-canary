@@ -11,8 +11,8 @@ var O = A("78349"),
   E = A("49671"),
   V = A("605250"),
   t = A("915639"),
-  i = A("449008"),
-  n = A("851234"),
+  n = A("449008"),
+  i = A("851234"),
   R = A("648610");
 let G = new V.default("Spellchecker"),
   r = null === E.default || void 0 === E.default ? void 0 : E.default.spellCheck;
@@ -75,7 +75,7 @@ class S {
     let [N, A] = t.default.locale.split("-");
     this.regionPreference = A;
     let O = this.getAvailableLanguages(I);
-    this.languageDetector = new n.default(N, A => {
+    this.languageDetector = new i.default(N, A => {
       let T = "".concat(A, "-").concat(this.regionPreference);
       if (-1 !== I.indexOf(T)) this.setLocale(T);
       else {
@@ -97,7 +97,7 @@ let o = _.debounce((I, N) => {
 async function s() {
   var I, N;
   let A = null !== (I = await r.getAvailableDictionaries()) && void 0 !== I ? I : [],
-    O = A.map(a).filter(i.isNotNullish),
+    O = A.map(a).filter(n.isNotNullish),
     T = new S(O);
   return N = T, null != document.body && document.body.addEventListener("beforeinput", I => o(N, I.target), !0), T
 }

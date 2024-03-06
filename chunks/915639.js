@@ -1,7 +1,7 @@
 "use strict";
 A.r(N), A.d(N, {
   default: function() {
-    return i
+    return n
   }
 });
 var O = A("446674"),
@@ -24,7 +24,7 @@ class t extends O.default.Store {
   }
 }
 t.displayName = "LocaleStore";
-var i = new t(T.default, {
+var n = new t(T.default, {
   OVERLAY_INITIALIZE: V,
   CACHE_LOADED: V,
   CONNECTION_OPEN: V,

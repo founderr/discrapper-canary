@@ -5,7 +5,7 @@ A.r(N), A.d(N, {
     return t
   },
   updateLocaleLoadingStatus: function() {
-    return i
+    return n
   }
 }), A("424973"), A("222007"), A("860677");
 var _ = A("913144"),
@@ -15,10 +15,10 @@ O = A("792788").default;
 let V = !1;
 
 function t(I) {
-  T = E.default.loadPromise, O && O.setLocale(I), E.default.setLocale(I), i(I)
+  T = E.default.loadPromise, O && O.setLocale(I), E.default.setLocale(I), n(I)
 }
 
-function i(I) {
+function n(I) {
   let N = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   if (V && E.default.loadPromise === T) return;
   V = !0, N ? (0, e.setLocaleHack)(I) : _.default.dispatch({

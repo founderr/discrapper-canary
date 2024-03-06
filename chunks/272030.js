@@ -4,10 +4,10 @@ A.r(N), A.d(N, {
     return t
   },
   openContextMenu: function() {
-    return i
+    return n
   },
   openContextMenuLazy: function() {
-    return n
+    return i
   }
 }), A("506083");
 var O = A("913144"),
@@ -38,8 +38,8 @@ function t(I) {
   }
 }
 
-function i(I, N, A, O) {
-  var t, i, n;
+function n(I, N, A, O) {
+  var t, n, i;
   if (I.stopPropagation(), null != I.currentTarget.contains && !I.currentTarget.contains(I.target)) return;
   let R = 0,
     G = 0;
@@ -56,10 +56,10 @@ function i(I, N, A, O) {
   let r = {
     render: N,
     renderLazy: O,
-    target: null !== (i = I.target) && void 0 !== i ? i : I.currentTarget,
+    target: null !== (n = I.target) && void 0 !== n ? n : I.currentTarget,
     rect: new DOMRect(R, G, 0, 0),
     config: {
-      context: __OVERLAY__ ? E.AppContext.OVERLAY : null !== (n = (0, T.getCurrentlyInteractingAppContext)()) && void 0 !== n ? n : E.AppContext.APP,
+      context: __OVERLAY__ ? E.AppContext.OVERLAY : null !== (i = (0, T.getCurrentlyInteractingAppContext)()) && void 0 !== i ? i : E.AppContext.APP,
       ...A
     }
   };
@@ -70,6 +70,6 @@ function i(I, N, A, O) {
   } else I.preventDefault(), V(r)
 }
 
-function n(I, N, A) {
-  i(I, void 0, A, N)
+function i(I, N, A) {
+  n(I, void 0, A, N)
 }
