@@ -1,26 +1,26 @@
 "use strict";
 t.r(x), t.d(x, {
   default: function() {
-    return b
+    return I
   }
 }), t("222007"), t("70102"), t("843762"), t("424973");
 var s = t("37983"),
   a = t("884691"),
   o = t("414456"),
   y = t.n(o),
-  d = t("817736"),
-  k = t.n(d),
-  r = t("118810"),
-  e = t("446674"),
-  p = t("407063"),
-  n = t("845579"),
-  m = t("901165"),
+  k = t("817736"),
+  d = t.n(k),
+  p = t("118810"),
+  r = t("446674"),
+  e = t("407063"),
+  m = t("845579"),
+  n = t("901165"),
   c = t("62843"),
   l = t("315102"),
   f = t("402671"),
-  _ = t("866190"),
-  u = t("115279");
-class h extends a.PureComponent {
+  h = t("866190"),
+  _ = t("115279");
+class u extends a.PureComponent {
   componentWillUnmount() {
     var i;
     null === (i = this.cancelLoadImage) || void 0 === i || i.call(this)
@@ -34,18 +34,18 @@ class h extends a.PureComponent {
         animated: a,
         shouldAnimate: o,
         isFocused: y,
-        isInteracting: d,
-        size: k = "default"
+        isInteracting: k,
+        size: d = "default"
       } = i,
       {
-        hover: r
+        hover: p
       } = this.state;
     if (null != x) return x;
     if (null != t) {
-      let i = u.EMOJI_SIZE_MAP[k];
+      let i = _.EMOJI_SIZE_MAP[d];
       return l.default.getEmojiURL({
         id: t,
-        animated: y && !0 === a && (!0 === o || r || !0 === d),
+        animated: y && !0 === a && (!0 === o || p || !0 === k),
         size: i
       })
     }
@@ -57,13 +57,13 @@ class h extends a.PureComponent {
     let {
       emojiName: t,
       animated: o,
-      className: d,
-      size: k = "default",
-      alt: r,
-      shouldAnimate: e,
-      isFocused: p,
-      emojiId: n,
-      autoplay: m,
+      className: k,
+      size: d = "default",
+      alt: p,
+      shouldAnimate: r,
+      isFocused: e,
+      emojiId: m,
+      autoplay: n,
       isInteracting: c,
       ...l
     } = this.props, f = this.getSrc();
@@ -77,16 +77,16 @@ class h extends a.PureComponent {
       ...l,
       key: this.key,
       src: f,
-      alt: null !== (i = null != r ? r : t) && void 0 !== i ? i : void 0,
+      alt: null !== (i = null != p ? p : t) && void 0 !== i ? i : void 0,
       draggable: !1,
       ...x,
-      className: y("emoji", d, {
-        jumboable: "jumbo" === k
+      className: y("emoji", k, {
+        jumboable: "jumbo" === d
       }),
       onError: this.onError,
       "data-type": "emoji",
-      ...null != n && "" !== n ? {
-        "data-id": n
+      ...null != m && "" !== m ? {
+        "data-id": m
       } : {
         "data-name": t
       }
@@ -97,7 +97,7 @@ class h extends a.PureComponent {
       hover: !1
     }, this.key = void 0, this.onError = () => {
       let i = this.getSrc();
-      null != i && (this.cancelLoadImage = (0, p.loadImage)(i, i => {
+      null != i && (this.cancelLoadImage = (0, e.loadImage)(i, i => {
         !i && (this.key = Date.now(), this.forceUpdate())
       }))
     }, this.onMouseEnter = i => {
@@ -119,10 +119,10 @@ class h extends a.PureComponent {
     }
   }
 }
-h.defaultProps = {
+u.defaultProps = {
   isInteracting: !1
 };
-let I = function(i) {
+let b = function(i) {
   if (null == window.IntersectionObserver) return function(x) {
     return (0, s.jsx)(i, {
       ...x,
@@ -153,12 +153,12 @@ let I = function(i) {
     });
 
   function y(i) {
-    let x = k.findDOMNode(i);
-    (0, r.isElement)(x) && (t.push([x, i]), o.observe(x))
+    let x = d.findDOMNode(i);
+    (0, p.isElement)(x) && (t.push([x, i]), o.observe(x))
   }
 
-  function d(i) {
-    let s = k.findDOMNode(i);
+  function k(i) {
+    let s = d.findDOMNode(i);
     o.unobserve(s);
     let a = t.findIndex(x => {
       let [t, s] = x;
@@ -175,10 +175,10 @@ let I = function(i) {
     componentDidUpdate(i) {
       let x = this.shouldAutoplay(i),
         t = this.shouldAutoplay(this.props);
-      t !== x && (t ? y(this) : d(this))
+      t !== x && (t ? y(this) : k(this))
     }
     componentWillUnmount() {
-      this.shouldAutoplay(this.props) && d(this)
+      this.shouldAutoplay(this.props) && k(this)
     }
     render() {
       let t = x.indexOf(this),
@@ -196,16 +196,16 @@ let I = function(i) {
       })
     }
   }
-}(h);
+}(u);
 
-function b(i) {
-  let x = n.AnimateEmoji.useSetting(),
+function I(i) {
+  let x = m.AnimateEmoji.useSetting(),
     t = {
       autoplay: null == i.autoplay ? x : i.autoplay,
       allowAnimatedEmoji: x
     },
-    a = __OVERLAY__ ? (0, e.useStateFromStores)([m.default], () => m.default.isInstanceFocused()) : (0, _.useIsWindowFocused)();
-  return (0, s.jsx)(I, {
+    a = __OVERLAY__ ? (0, r.useStateFromStores)([n.default], () => n.default.isInstanceFocused()) : (0, h.useIsWindowFocused)();
+  return (0, s.jsx)(b, {
     ...i,
     ...t,
     isFocused: a
