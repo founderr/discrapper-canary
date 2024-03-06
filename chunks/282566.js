@@ -67,7 +67,7 @@ var l = n("37983"),
             object: A.AnalyticsObjects.EMOJI
           },
           location_stack: Z,
-          sku_id: I.default.getSkuIdForPremiumType(Y)
+          sku_id: (0, I.castPremiumSubscriptionAsSkuId)(I.default.getSkuIdForPremiumType(Y))
         })
       }
     }, [W, Y, j, b, D, Z, U, z]), (0, l.jsxs)("div", {

@@ -7,7 +7,7 @@ i.r(t), i.d(t, {
     return E
   },
   useMaybeFetchPremiumLikelihood: function() {
-    return p
+    return I
   }
 });
 var r = i("884691"),
@@ -18,11 +18,12 @@ var r = i("884691"),
   u = i("697218"),
   c = i("10514"),
   d = i("764364"),
-  o = i("676572"),
-  f = i("646718"),
-  S = i("49111");
+  o = i("719923"),
+  f = i("676572"),
+  S = i("646718"),
+  m = i("49111");
 let h = "nonSubscriber";
-async function m() {
+async function p() {
   try {
     l.default.dispatch({
       type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH"
@@ -30,15 +31,15 @@ async function m() {
     let {
       body: e
     } = await s.default.get({
-      url: S.Endpoints.USER_PREMIUM_LIKELIHOOD
+      url: m.Endpoints.USER_PREMIUM_LIKELIHOOD
     });
     l.default.dispatch({
       type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_SUCCESS",
       premiumLikelihood: function(e) {
         return {
           [h]: e.non_subscriber,
-          [f.PremiumSubscriptionSKUs.TIER_0]: e[f.PremiumSubscriptionSKUs.TIER_0],
-          [f.PremiumSubscriptionSKUs.TIER_2]: e[f.PremiumSubscriptionSKUs.TIER_2]
+          [S.PremiumSubscriptionSKUs.TIER_0]: e[S.PremiumSubscriptionSKUs.TIER_0],
+          [S.PremiumSubscriptionSKUs.TIER_2]: e[S.PremiumSubscriptionSKUs.TIER_2]
         }
       }(e)
     })
@@ -59,11 +60,11 @@ function E(e) {
     location: "443cca_1"
   }, {
     autoTrackExposure: !1
-  }), r = o.default.shouldFetchPremiumLikelihood(), n = u.default.getCurrentUser();
-  I(n, r, t, i)
+  }), r = f.default.shouldFetchPremiumLikelihood(), n = u.default.getCurrentUser();
+  k(n, r, t, i)
 }
 
-function p(e) {
+function I(e) {
   let {
     enabled: t,
     useExpectedValue: i
@@ -71,12 +72,12 @@ function p(e) {
     location: "443cca_2"
   }, {
     autoTrackExposure: !1
-  }), s = (0, n.default)([o.default], () => o.default.shouldFetchPremiumLikelihood()), l = (0, n.default)([u.default], () => u.default.getCurrentUser());
+  }), s = (0, n.default)([f.default], () => f.default.shouldFetchPremiumLikelihood()), l = (0, n.default)([u.default], () => u.default.getCurrentUser());
   r.useEffect(() => {
-    I(l, s, t, i)
+    k(l, s, t, i)
   }, [l, s, t, i])
 }
 
-function I(e, t, i, r) {
-  null != e && !(0, d.isPremium)(e) && i && (t && m(), r && (!c.default.isLoadedForSKU(f.PremiumSubscriptionSKUs.TIER_0) && !c.default.isFetchingForSKU(f.PremiumSubscriptionSKUs.TIER_0) && (0, a.fetchSubscriptionPlansForSKU)(f.PremiumSubscriptionSKUs.TIER_0), !c.default.isLoadedForSKU(f.PremiumSubscriptionSKUs.TIER_2) && !c.default.isFetchingForSKU(f.PremiumSubscriptionSKUs.TIER_2) && (0, a.fetchSubscriptionPlansForSKU)(f.PremiumSubscriptionSKUs.TIER_2)))
+function k(e, t, i, r) {
+  null != e && !(0, d.isPremium)(e) && i && (t && p(), r && (!c.default.isLoadedForSKU((0, o.castPremiumSubscriptionAsSkuId)(S.PremiumSubscriptionSKUs.TIER_0)) && !c.default.isFetchingForSKU((0, o.castPremiumSubscriptionAsSkuId)(S.PremiumSubscriptionSKUs.TIER_0)) && (0, a.fetchSubscriptionPlansForSKU)((0, o.castPremiumSubscriptionAsSkuId)(S.PremiumSubscriptionSKUs.TIER_0)), !c.default.isLoadedForSKU((0, o.castPremiumSubscriptionAsSkuId)(S.PremiumSubscriptionSKUs.TIER_2)) && !c.default.isFetchingForSKU((0, o.castPremiumSubscriptionAsSkuId)(S.PremiumSubscriptionSKUs.TIER_2)) && (0, a.fetchSubscriptionPlansForSKU)((0, o.castPremiumSubscriptionAsSkuId)(S.PremiumSubscriptionSKUs.TIER_2))))
 }

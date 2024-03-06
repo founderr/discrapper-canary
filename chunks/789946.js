@@ -44,8 +44,8 @@ function L(e) {
     onSubscribeClick: j,
     onSecondaryClick: F,
     secondaryCTA: B,
-    subscribeButtonText: w,
-    showNewBadge: k = !1,
+    subscribeButtonText: k,
+    showNewBadge: w = !1,
     enableArtBoxShadow: H = !0,
     subscriptionTier: G = C.PremiumSubscriptionSKUs.TIER_2,
     isLoading: K = !1,
@@ -74,7 +74,7 @@ function L(e) {
       source: g,
       location: h,
       location_stack: q,
-      sku_id: G
+      sku_id: (0, f.castPremiumSubscriptionAsSkuId)(G)
     }))
   }, [z, G, K]);
   let en = H ? a(P.artContainer, P.artContainerBoxShadow, U) : a(P.artContainer, U),
@@ -89,7 +89,7 @@ function L(e) {
     transitionState: D,
     children: [(0, r.jsxs)("div", {
       className: en,
-      children: [er, k ? (0, r.jsx)("img", {
+      children: [er, w ? (0, r.jsx)("img", {
         className: P.sparkleBadge,
         alt: "",
         src: R
@@ -174,7 +174,7 @@ function L(e) {
             onClick: () => {
               null == j || j(), y()
             },
-            buttonText: null != w ? w : t
+            buttonText: null != k ? k : t
           })
         })()]
       }), !V && !ee && (0, r.jsx)(s.Button, {

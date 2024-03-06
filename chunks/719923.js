@@ -138,8 +138,11 @@ n.r(t), n.d(t, {
   getPremiumSkuIdForSubscription: function() {
     return eP
   },
-  default: function() {
+  castPremiumSubscriptionAsSkuId: function() {
     return eL
+  },
+  default: function() {
+    return eM
   }
 }), n("70102"), n("222007"), n("843762"), n("808653"), n("424973");
 var i, s, r, a, o = n("627445"),
@@ -733,7 +736,7 @@ function ee(e) {
 }
 
 function et(e) {
-  let t = p.default.getPlanIdsForSkus([D.PremiumSubscriptionSKUs.GUILD]);
+  let t = p.default.getPlanIdsForSkus([eL(D.PremiumSubscriptionSKUs.GUILD)]);
   l(null != t, "Missing guildSubscriptionPlanIds");
   let n = e.find(e => {
     let {
@@ -871,7 +874,7 @@ function eh(e, t, n, i) {
       }
     }), t
   }
-  let a = p.default.getForSkuAndInterval(D.PremiumSubscriptionSKUs.GUILD, r.interval, r.intervalCount);
+  let a = p.default.getForSkuAndInterval(eL(D.PremiumSubscriptionSKUs.GUILD), r.interval, r.intervalCount);
   if (null == a) {
     let t = Error("Unsupported plan");
     throw (0, v.captureBillingException)(t, {
@@ -1142,7 +1145,11 @@ function eP(e) {
     n = null != t ? $(t.planId) : null;
   return n
 }
-var eL = Object.freeze({
+
+function eL(e) {
+  return e
+}
+var eM = Object.freeze({
   isNewUser: e => null != e && Date.now() - e.createdAt.getTime() < 2592e6,
   isPremiumAtLeast: A.isPremiumAtLeast,
   isPremium: A.isPremium,
@@ -1337,6 +1344,7 @@ var eL = Object.freeze({
         return O.Gradients.PREMIUM_TIER_2
     }
   },
+  castPremiumSubscriptionAsSkuId: eL,
   canUseAnimatedEmojis: function(e) {
     return (0, f.canUserUse)(f.ANIMATED_EMOJIS, e)
   },
