@@ -14,8 +14,8 @@ var t = E("689988"),
   a = E("628454"),
   i = E("271938"),
   I = E("42203"),
-  T = E("42887"),
-  s = E("945956"),
+  s = E("42887"),
+  T = E("945956"),
   S = E("850296"),
   N = E("49111"),
   O = E("180524");
@@ -24,7 +24,7 @@ let A = null;
 function R() {
   o.default.requestPermission(O.NativePermissionTypes.AUDIO).then(e => {
     e && (0, S.default)(!0)
-  }), T.default.getMode() === N.InputModes.PUSH_TO_TALK && o.default.requestPermission(O.NativePermissionTypes.INPUT_MONITORING)
+  }), s.default.getMode() === N.InputModes.PUSH_TO_TALK && o.default.requestPermission(O.NativePermissionTypes.INPUT_MONITORING)
 }
 
 function l(e, _) {
@@ -52,7 +52,7 @@ class u extends t.default {
       } = e;
       if (null == E) return;
       let t = i.default.getId() === _;
-      if (!t || null == s.default.getRTCConnectionId() || A === E) return;
+      if (!t || null == T.default.getRTCConnectionId() || A === E) return;
       let o = l(_, E);
       if (o) {
         A = E, R();

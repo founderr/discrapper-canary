@@ -10,7 +10,7 @@ E.r(_), E.d(_, {
     return I
   },
   useStateFromStoresArray: function() {
-    return T
+    return s
   }
 }), E("70102"), E("222007");
 var t = E("884691"),
@@ -43,11 +43,11 @@ function i(e, _, E) {
   }(0, t.useLayoutEffect)(() => {
     i.getStateFromStores = _, i.prevDeps = E, i.state = I
   });
-  let [, T] = (0, t.useState)(null);
+  let [, s] = (0, t.useState)(null);
   return (0, t.useLayoutEffect)(() => {
     let _ = () => {
       let e = i.getStateFromStores();
-      !a(i.state, e) && (i.state = e, T({}))
+      !a(i.state, e) && (i.state = e, s({}))
     };
     _();
     let E = new n.default(e, _);
@@ -59,6 +59,6 @@ function I(e, _, E) {
   return i(e, _, E, o.default)
 }
 
-function T(e, _, E) {
+function s(e, _, E) {
   return i(e, _, E, o.areArraysShallowEqual)
 }

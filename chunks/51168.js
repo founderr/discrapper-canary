@@ -11,12 +11,12 @@ var t = E("37983"),
   a = E("629109"),
   i = E("363658"),
   I = E("135230"),
-  T = E("622785"),
-  s = E("49111"),
+  s = E("622785"),
+  T = E("49111"),
   S = E("782340");
 
 function N() {
-  let e = (0, n.useStateFromStores)([T.default], () => T.default.shouldShowWarning(), []),
+  let e = (0, n.useStateFromStores)([s.default], () => s.default.shouldShowWarning(), []),
     _ = o.useRef(null);
 
   function E() {
@@ -33,7 +33,7 @@ function N() {
     cancelText: S.default.Messages.VAD_PERMISSION_OKAY,
     confirmText: S.default.Messages.VAD_PERMISSION_ENABLE_PTT,
     onConfirm: () => {
-      a.default.setMode(s.InputModes.PUSH_TO_TALK), N()
+      a.default.setMode(T.InputModes.PUSH_TO_TALK), N()
     },
     ...e
   })) : E(), () => {

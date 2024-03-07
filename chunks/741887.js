@@ -11,8 +11,8 @@ var t = E("913144"),
   a = E("799895"),
   i = E("979268"),
   I = E("520899"),
-  T = E("49111");
-class s extends o.default {
+  s = E("49111");
+class T extends o.default {
   constructor(...e) {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
@@ -34,7 +34,7 @@ class s extends o.default {
             omitViewTracking: !0,
             tag: e.messageId,
             onClick() {
-              (0, n.transitionTo)(T.Routes.CHANNEL(e.guildId, e.channelId, e.messageId))
+              (0, n.transitionTo)(s.Routes.CHANNEL(e.guildId, e.channelId, e.messageId))
             }
           }), t.default.dispatch({
             type: "MESSAGE_REMINDER_NOTIFIED",
@@ -47,4 +47,4 @@ class s extends o.default {
     }
   }
 }
-var S = new s
+var S = new T

@@ -11,8 +11,8 @@ E.r(_), E.d(_, {
 var n, r, a = E("171718"),
   i = E("446674"),
   I = E("913144"),
-  T = E("746574"),
-  s = E("995802"),
+  s = E("746574"),
+  T = E("995802"),
   S = E("583374");
 (r = n || (n = {}))[r.INVALID = 0] = "INVALID", r[r.VALIDATING = 1] = "VALIDATING", r[r.VALID = 2] = "VALID";
 let N = [],
@@ -76,7 +76,7 @@ class l extends i.default.PersistedStore {
     })
   }
   get canUseMultiAccountNotifications() {
-    return this.getCanUseMultiAccountMobile() && s.MultiAccountMobileNotificationsExperiment.getCurrentConfig({
+    return this.getCanUseMultiAccountMobile() && T.MultiAccountMobileNotificationsExperiment.getCurrentConfig({
       location: "09e468_1"
     }, {
       autoTrackExposure: !1
@@ -146,7 +146,7 @@ var u = new l(I.default, {
       from: _,
       to: E
     } = e;
-    N = (0, T.moveItemFromTo)(N, _, E)
+    N = (0, s.moveItemFromTo)(N, _, E)
   },
   CURRENT_USER_UPDATE: function(e) {
     let {

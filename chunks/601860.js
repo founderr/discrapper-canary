@@ -22,7 +22,7 @@ function I() {
   }
   return null != e ? e : ""
 }
-class T {
+class s {
   getMessages() {
     return this._parsedMessages
   }
@@ -34,7 +34,7 @@ class T {
     }, this._parsedMessages = {}, this._getParsedMessages = e
   }
 }
-class s extends T {
+class T extends s {
   refresh(e) {
     this._context = e, this._refresh(e, this._parsedMessages)
   }
@@ -51,7 +51,7 @@ class s extends T {
     }
   }
 }
-class S extends T {
+class S extends s {
   refresh(e) {
     Object.assign(this._context, e), Object.keys(this._parsedMessages).forEach(e => {
       delete this._parsedMessages[e]
@@ -194,6 +194,6 @@ t = class extends o.EventEmitter {
       if ("locale" === e) this.emit(e, this._chosenLocale)
     }, this.initialLanguageLoad = new Promise((e, _) => {
       this.resolveLanguageLoaded = e
-    }), Intl.__addLocaleData && Intl.__addLocaleData(E("169123")), this._languages = t(), this._provider = null != window.Proxy ? new S(this._getParsedMessages) : new s(this._getParsedMessages), this.Messages = this._provider.getMessages(), this._getMessages = _, this.setLocale(e || this.getDefaultLocale()), this.on("newListener", this._handleNewListener)
+    }), Intl.__addLocaleData && Intl.__addLocaleData(E("169123")), this._languages = t(), this._provider = null != window.Proxy ? new S(this._getParsedMessages) : new T(this._getParsedMessages), this.Messages = this._provider.getMessages(), this._getMessages = _, this.setLocale(e || this.getDefaultLocale()), this.on("newListener", this._handleNewListener)
   }
 }

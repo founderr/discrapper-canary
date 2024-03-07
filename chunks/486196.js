@@ -56,7 +56,7 @@ o = class {
       retryAfter: n,
       errors: i,
       status: I,
-      captchaFields: T
+      captchaFields: s
     } = function(e, _) {
       if ("string" == typeof e) return {
         message: e,
@@ -94,6 +94,6 @@ o = class {
         status: e.status
       }
     }(e, _);
-    this.message = null != t ? t : E, this.code = null != o ? o : -1, this.retryAfter = n, this.errors = i, this.status = I, this.captchaFields = null != T ? T : {}
+    this.message = null != t ? t : E, this.code = null != o ? o : -1, this.retryAfter = n, this.errors = i, this.status = I, this.captchaFields = null != s ? s : {}
   }
 }
