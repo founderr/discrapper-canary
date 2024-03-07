@@ -24,7 +24,7 @@ function _(e) {
     r = null === (t = l.default.getDefaultChannel(e)) || void 0 === t ? void 0 : t.id;
   if (n === f.StaticChannelRoute.GUILD_ONBOARDING && !i.default.shouldShowOnboarding(e) || n === f.StaticChannelRoute.GUILD_HOME && !(0, s.canSeeOnboardingHome)(e)) return r;
   let a = o.default.getChannel(n);
-  return null == a || a.isGuildVocal() ? r : n
+  return null == a ? r : n
 }
 
 function h(e, t) {
