@@ -11,8 +11,8 @@ var t = E("920842"),
   a = E("590401"),
   i = E("718517"),
   I = E("773336");
-let T = 1 * i.default.Millis.SECOND,
-  s = 30 * i.default.Millis.SECOND,
+let s = 1 * i.default.Millis.SECOND,
+  T = 30 * i.default.Millis.SECOND,
   S = new n.default("RTCLatencyTestManager");
 class N extends o.default {
   _terminate() {
@@ -26,13 +26,13 @@ class N extends o.default {
       if (a.default.shouldPerformLatencyTest(_)) {
         let E = r.default.getMediaEngine();
         E.rankRtcRegions(e).then(e => {
-          S.verbose("RTC region latency test completed: ", e), (0, t.completeRTCLatencyTest)(e, _)
+          S.verbose("RTC region latency test completed, ranked regions are: ", e), (0, t.completeRTCLatencyTest)(e, _)
         }).catch(e => S.warn(e))
-      } else S.verbose("RTC cached preferred region is ".concat(a.default.getPreferredRegion()))
+      } else S.verbose("RTC cached ranked preferred regions are ".concat(a.default.getPreferredRegions()))
     }, this._fetchAndScheduleRefetch = () => {
       (0, t.fetchRTCLatencyTestRegions)().then(e => this._handleTestRegionsResponse(e.body)).catch(e => S.warn(e)), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 360 * i.default.Millis.MINUTE)
     }, this._handleConnectionOpen = () => {
-      I.isPlatformEmbedded && !__OVERLAY__ && (null != this.refetchTimeout && clearTimeout(this.refetchTimeout), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, Math.floor(T + Math.random() * s)))
+      I.isPlatformEmbedded && !__OVERLAY__ && (null != this.refetchTimeout && clearTimeout(this.refetchTimeout), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, Math.floor(s + Math.random() * T)))
     }
   }
 }
