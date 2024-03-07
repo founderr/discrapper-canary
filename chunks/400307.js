@@ -440,7 +440,7 @@ function ed(e) {
             children: ee.default.Messages.NITRO_MARKETING_JUST_THE_BASICS
           }), (0, d.jsx)("div", {
             className: m({
-              [et.listItemsBasic]: P
+              [et.listItems]: P
             }),
             children: (0, d.jsx)(ec, {})
           })]
@@ -646,15 +646,10 @@ function em(e) {
             }),
             variant: "heading-xxl/extrabold",
             children: ee.default.Messages.NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD
-          }), (0, d.jsx)("div", {
-            className: m({
-              [et.listItems]: N
-            }),
-            children: (0, d.jsx)(ef, {
-              featureSet: a,
-              isModal: u,
-              isGift: o
-            })
+          }), (0, d.jsx)(ef, {
+            featureSet: a,
+            isModal: u,
+            isGift: o
           })]
         }), N && (0, d.jsx)(Y.default, {
           isStacked: N,
