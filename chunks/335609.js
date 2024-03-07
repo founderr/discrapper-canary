@@ -1,13 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
 var l = n("627445"),
   i = n.n(l),
   a = n("113149"),
-  s = class e {
+  s = n("695412"),
+  r = class e {
     getCanvas() {
       return this.canvas
     }
@@ -33,7 +34,7 @@ var l = n("627445"),
         weight: 300,
         size: a.DEFAULT_FONT_SIZE,
         family: "serif",
-        truncate: !1
+        truncate: s.TextTruncationMethod.None
       }, this.canvas = e, this.assetMap = t
     }
   }
