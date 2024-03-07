@@ -206,6 +206,9 @@ n.r(t), n.d(t, {
   },
   DISCOUNT_DURATION_FALLBACK: function() {
     return ex
+  },
+  DISCOUNT_PERCENTAGE_FALLBACK: function() {
+    return eB
   }
 }), n("222007");
 var i, s, r, a, o, l, u, d, c, f, _, h, E, g, m, p, S, v, T, I, C, A, y, N, R, O, D, P, L, M, b, U, w, k, V, G, F = n("49111"),
@@ -577,4 +580,5 @@ let eU = new Set(["PL", "TR"]),
   eV = [8, 9, 11, 10],
   eG = eV.concat(ew),
   eF = 190,
-  ex = 3
+  ex = 3,
+  eB = 30
