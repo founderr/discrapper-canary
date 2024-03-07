@@ -17,8 +17,8 @@ var l, i, a = n("37983"),
   h = n("685665"),
   E = n("462274"),
   g = n("335031"),
-  C = n("252063"),
-  S = n("38766"),
+  S = n("252063"),
+  C = n("38766"),
   T = n("845579"),
   v = n("271938"),
   I = n("42203"),
@@ -175,7 +175,7 @@ function J(e) {
   }), eu = null != eo, ed = (0, d.useStateFromStores)([D.default], () => D.default.getUserProfile(i.id)), ec = I.default.getChannel(N.default.getChannelId()), {
     appsInGDMEnabled: ef,
     availableApplications: em
-  } = (0, C.usePrivateChannelIntegrationState)({
+  } = (0, S.usePrivateChannelIntegrationState)({
     channelId: null !== (n = null == ec ? void 0 : ec.id) && void 0 !== n ? n : B.EMPTY_STRING_SNOWFLAKE_ID
   }), ep = null == ed ? void 0 : ed.application, eh = ef && null != em.find(e => e.id === (null == ep ? void 0 : ep.id));
   (0, s.useEffect)(() => {
@@ -194,7 +194,7 @@ function J(e) {
     let t = new Image;
     t.src = e
   }, [en, Q, m, r, er]);
-  let eE = (0, S.default)({
+  let eE = (0, C.default)({
     analyticsLocation: {
       page: B.AnalyticsPages.USER_POPOUT,
       section: B.AnalyticsSections.PROFILE_POPOUT

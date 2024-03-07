@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return C
   }
 });
 var l = n("37983");
@@ -20,7 +20,7 @@ var i = n("77078"),
   h = n("794818"),
   E = n("844659"),
   g = n("49111");
-async function C(e, t, n) {
+async function S(e, t, n) {
   if (null == t) return;
   if (r.default.trackDiscordLinkClicked({
       guildId: e,
@@ -42,12 +42,12 @@ async function C(e, t, n) {
   }(0, u.default)(g.Routes.CHANNEL(e, t, n))
 }
 
-function S(e) {
+function C(e) {
   return {
     react(t, s, r) {
       let o = c.default.getChannel(t.channelId),
         u = r.noStyleAndInteraction ? void 0 : n => {
-          e.shouldStopPropagation && (null == n || n.stopPropagation()), C(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, i.closeAllModals)()
+          e.shouldStopPropagation && (null == n || n.stopPropagation()), S(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, i.closeAllModals)()
         },
         d = r.noStyleAndInteraction || null == t.channelId || null == o && null == t.originalLink ? g.NOOP : e => {
           (0, a.openContextMenuLazy)(e, async () => {

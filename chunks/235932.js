@@ -24,7 +24,7 @@ let h = async e => {
     reaction: t,
     altText: n,
     ...l
-  } = e, i = await C(l);
+  } = e, i = await S(l);
   (0, d.sendReaction)({
     file: i,
     altText: n,
@@ -36,7 +36,7 @@ let h = async e => {
     reply: t,
     altText: n,
     ...l
-  } = e, i = await C(l);
+  } = e, i = await S(l);
   (0, d.sendReply)({
     file: i,
     altText: n,
@@ -54,7 +54,7 @@ let h = async e => {
   } = (0, f.getProfileInfo)(a, "black"), r = "dark" === s, d = (0, f.getActivityPlatform)(l), {
     assets: c,
     application_id: p
-  } = l, h = (0, o.getAssetImage)(p, null == c ? void 0 : c.large_image, 64), E = null == i ? void 0 : i.getIconURL(64), g = null != d ? r ? d.icon.darkPNG : d.icon.lightPNG : l.type === m.ActivityTypes.PLAYING ? r ? n("944857") : n("248073") : null, C = l.type === m.ActivityTypes.HANG_STATUS && (null === (t = l.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, u.getEmojiUrl)({
+  } = l, h = (0, o.getAssetImage)(p, null == c ? void 0 : c.large_image, 64), E = null == i ? void 0 : i.getIconURL(64), g = null != d ? r ? d.icon.darkPNG : d.icon.lightPNG : l.type === m.ActivityTypes.PLAYING ? r ? n("944857") : n("248073") : null, S = l.type === m.ActivityTypes.HANG_STATUS && (null === (t = l.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, u.getEmojiUrl)({
     id: l.emoji.id,
     name: l.emoji.name,
     animated: !1
@@ -69,11 +69,11 @@ let h = async e => {
     ...null != E && {
       ApplicationImage: E
     },
-    ...null != C && {
-      HangStatus: C
+    ...null != S && {
+      HangStatus: S
     }
   }
-}, C = async e => {
+}, S = async e => {
   let {
     user: t,
     activity: n,
@@ -105,7 +105,7 @@ let h = async e => {
       fileType: "png"
     }
   })
-}, S = (e, t) => {
+}, C = (e, t) => {
   e.setColor("dark" === t ? "white" : "black"), e.drawPath(c.ACTIVITY_IMAGE_FALLBACK_PATH, {
     x: c.padding,
     y: c.padding
@@ -142,7 +142,7 @@ let h = async e => {
   }, {
     w: c.activitySize,
     h: c.activitySize
-  }, 8) : S(e, r);
+  }, 8) : C(e, r);
   let o = c.activitySize + c.padding + c.imagePadding;
   e.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 16,
@@ -228,7 +228,7 @@ let h = async e => {
   }, {
     w: c.activitySize,
     h: c.activitySize
-  }, 8) : S(e, r);
+  }, 8) : C(e, r);
   let o = c.activitySize + c.padding + c.imagePadding;
   e.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 14,
@@ -331,7 +331,7 @@ let h = async e => {
   }, {
     w: c.activitySize,
     h: c.activitySize
-  }, 8) : S(e, r);
+  }, 8) : C(e, r);
   let o = c.activitySize + c.padding + c.imagePadding;
   e.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 16,

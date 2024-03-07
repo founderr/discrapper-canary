@@ -22,8 +22,8 @@ var l = n("37983"),
   h = n("505684"),
   E = n("462579"),
   g = n("867544"),
-  C = n("987772"),
-  S = n("228220"),
+  S = n("987772"),
+  C = n("228220"),
   T = n("956089"),
   v = n("58608"),
   I = n("103603"),
@@ -277,7 +277,7 @@ function b(e) {
         }),
         tooltip: x.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
         onClick: j,
-        children: (0, l.jsx)(C.default, {
+        children: (0, l.jsx)(S.default, {
           className: s({
             [y.actionBarIcon]: L
           })
@@ -289,7 +289,7 @@ function b(e) {
         tooltip: M ? x.default.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : x.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
         onClick: () => u.default.remove(t, a.id, n),
         dangerous: !0,
-        children: (0, l.jsx)(S.default, {
+        children: (0, l.jsx)(C.default, {
           className: s({
             [y.actionBarIcon]: L
           })

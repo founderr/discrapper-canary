@@ -30,8 +30,8 @@ var l = n("37983"),
   _ = n("830837"),
   N = n("132755"),
   A = n("73034"),
-  y = n("58608"),
-  x = n("719347"),
+  x = n("58608"),
+  y = n("719347"),
   O = n("49111"),
   R = n("782340"),
   M = n("273818"),
@@ -250,7 +250,7 @@ function F(e) {
 w.defaultProps = {
   disabled: !1
 };
-class B extends i.Component {
+class G extends i.Component {
   pop() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     this.setState({
@@ -311,7 +311,7 @@ class B extends i.Component {
     }
   }
 }
-let G = (0, c.createExperiment)({
+let B = (0, c.createExperiment)({
   kind: "user",
   id: "2024-03_media_play_metrics",
   label: "Media play metrics User Experiment",
@@ -473,7 +473,7 @@ class H {
       }
     }, this.onLoadedMetadata = e => {
       this.metadata.fileDurationSec = e.currentTarget.duration
-    }, this.metadata = e, this.analyticsEnabled = G.getCurrentConfig({
+    }, this.metadata = e, this.analyticsEnabled = B.getCurrentConfig({
       location: "media_player"
     }).enabled
   }
@@ -599,7 +599,7 @@ class V extends i.PureComponent {
       playing: r,
       fullscreen: o
     } = this.state, u = this.getWidth(), d = this.getHeight();
-    return n ? (0, l.jsx)(y.default, {
+    return n ? (0, l.jsx)(x.default, {
       className: M.video,
       controls: !1,
       height: d,
@@ -609,14 +609,14 @@ class V extends i.PureComponent {
       mediaLayoutType: s,
       playsInline: !0,
       autoPlay: r
-    }) : (0, l.jsx)(y.default, {
+    }) : (0, l.jsx)(x.default, {
       className: M.video,
       controls: !1,
       playsInline: !0,
       autoPlay: r,
       height: d,
       responsive: a && !o,
-      mediaLayoutType: o ? x.MediaLayoutType.STATIC : s,
+      mediaLayoutType: o ? y.MediaLayoutType.STATIC : s,
       onClick: this.handleVideoClick,
       onEnded: this.handleEnded,
       onError: i,
@@ -727,7 +727,7 @@ class V extends i.PureComponent {
     }) : null
   }
   renderPlayPausePop() {
-    return (0, l.jsx)(B, {
+    return (0, l.jsx)(G, {
       ref: this.playPausePopRef
     })
   }
@@ -767,7 +767,7 @@ class V extends i.PureComponent {
       let t = this.getWidth();
       return (0, l.jsxs)("div", {
         className: s(p, {
-          [M.wrapperMediaMosaic]: u === x.MediaLayoutType.MOSAIC
+          [M.wrapperMediaMosaic]: u === y.MediaLayoutType.MOSAIC
         }),
         style: o ? void 0 : {
           width: t,
@@ -785,7 +785,7 @@ class V extends i.PureComponent {
     }
     return (0, l.jsxs)("div", {
       className: s(p, M.newMosaicStyle, a, {
-        [M.wrapperMediaMosaic]: u === x.MediaLayoutType.MOSAIC
+        [M.wrapperMediaMosaic]: u === y.MediaLayoutType.MOSAIC
       }),
       "data-fullscreen": c,
       onMouseEnter: this.handleMouseEnter,

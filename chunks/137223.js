@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   SearchBarIcon: function() {
-    return C
+    return S
   },
   default: function() {
     return T
@@ -28,7 +28,7 @@ let g = Object.freeze({
   LARGE: E.large
 });
 (i = l || (l = {})).MEMBER = "MEMBER", i.ROLE = "ROLE", i.CHANNEL = "CHANNEL", i.GUILD = "GUILD", i.USER = "USER";
-let C = e => {
+let S = e => {
   let {
     hasContent: t,
     onClear: n,
@@ -68,7 +68,7 @@ let C = e => {
     })
   })
 };
-class S extends s.Component {
+class C extends s.Component {
   componentDidUpdate(e) {
     let {
       focusAfterReady: t,
@@ -163,7 +163,7 @@ class S extends s.Component {
       maxHeight: f,
       tags: p,
       onActivate: g,
-      className: S,
+      className: C,
       inputProps: T,
       focusAfterReady: v
     } = this.props, I = null != t && t.length > 0, _ = !1, N = [];
@@ -205,7 +205,7 @@ class S extends s.Component {
       ringTarget: this.containerRef,
       children: (0, a.jsx)("div", {
         ref: this.containerRef,
-        className: o(S, E.container, r, (0, m.getThemeClass)(l), {
+        className: o(C, E.container, r, (0, m.getThemeClass)(l), {
           [E.disabled]: i
         }),
         children: (0, a.jsxs)(u.ScrollerThin, {
@@ -231,7 +231,7 @@ class S extends s.Component {
             onMouseDown: g,
             ...this.defaultInputProps,
             ...T
-          }), null != s ? (0, a.jsx)(C, {
+          }), null != s ? (0, a.jsx)(S, {
             size: r,
             themeOverride: l,
             hasContent: I,
@@ -296,7 +296,7 @@ class S extends s.Component {
     }
   }
 }
-S.Sizes = g, S.defaultProps = {
+C.Sizes = g, C.defaultProps = {
   size: g.SMALL,
   query: "",
   sections: [],
@@ -309,4 +309,4 @@ S.Sizes = g, S.defaultProps = {
   preventEscapePropagation: !0,
   useKeyboardNavigation: !0
 };
-var T = S
+var T = C

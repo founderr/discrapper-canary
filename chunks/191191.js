@@ -19,8 +19,8 @@ var l = n("37983"),
   h = n("945956"),
   E = n("305122"),
   g = n("235004"),
-  C = n("534108"),
-  S = n("673431");
+  S = n("534108"),
+  C = n("673431");
 
 function T(e) {
   let {
@@ -53,11 +53,11 @@ function T(e) {
     E.maybeFetchSoundboardSounds(), p.FrecencyUserSettingsActionCreators.loadIfNecessary(), (0, m.setSearchQuery)("")
   }, []), (0, l.jsx)(b, {
     children: (0, l.jsx)("div", {
-      className: s(S.picker, {
-        [S.fetching]: L,
-        [S.autoWidth]: x
+      className: s(C.picker, {
+        [C.fetching]: L,
+        [C.autoWidth]: x
       }),
-      children: L ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsx)(C.default, {
+      children: L ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsx)(S.default, {
         guildId: t,
         channel: n,
         onClose: T,

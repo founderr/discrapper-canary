@@ -52,11 +52,11 @@ let m = {
         query: h,
         options: E,
         onHover: g,
-        onClick: C
+        onClick: S
       } = e,
-      S = a.map((e, t) => (0, l.jsx)(s.default.User, {
+      C = a.map((e, t) => (0, l.jsx)(s.default.User, {
         guildId: p.guild_id,
-        onClick: C,
+        onClick: S,
         onHover: g,
         selected: m === t,
         index: t,
@@ -66,7 +66,7 @@ let m = {
         hidePersonalInformation: E.hidePersonalInformation
       }, e.user.id)),
       T = r.map((e, t) => (0, l.jsx)(s.default.Generic, {
-        onClick: C,
+        onClick: S,
         onHover: g,
         selected: m === t + a.length,
         index: a.length + t,
@@ -75,7 +75,7 @@ let m = {
         "aria-label": e.text
       }, e.text)),
       v = o.map((e, t) => (0, l.jsx)(s.default.Role, {
-        onClick: C,
+        onClick: S,
         onHover: g,
         selected: m === t + a.length + r.length,
         index: a.length + r.length + t,
@@ -89,7 +89,7 @@ let m = {
         titleWithoutQuery: n,
         query: h,
         getQuery: e => "".concat(c.MENTION_SENTINEL).concat(e)
-      }), S, a.length > 0 && r.length > 0 ? (0, l.jsx)(s.default.Divider, {}) : null, T, a.length > 0 && o.length > 0 || r.length > 0 && o.length > 0 ? (0, l.jsx)(s.default.Divider, {}) : null, v]
+      }), C, a.length > 0 && r.length > 0 ? (0, l.jsx)(s.default.Divider, {}) : null, T, a.length > 0 && o.length > 0 || r.length > 0 && o.length > 0 ? (0, l.jsx)(s.default.Divider, {}) : null, v]
     }, "mentions")
   },
   onSelect(e) {

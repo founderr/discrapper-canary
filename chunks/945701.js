@@ -25,8 +25,8 @@ var l = n("37983"),
   h = n("882641"),
   E = n("964261"),
   g = n("49111"),
-  C = n("782340"),
-  S = n("789215");
+  S = n("782340"),
+  C = n("789215");
 let T = (0, p.createChannelRecord)({
     id: "1",
     type: g.ChannelTypes.DM
@@ -46,20 +46,20 @@ let T = (0, p.createChannelRecord)({
       shouldShow: r,
       disablePointerEvents: !1,
       renderPopout: () => (0, l.jsx)("div", {
-        className: s([S.reply, "theme-".concat(f)]),
+        className: s([C.reply, "theme-".concat(f)]),
         ref: t,
         children: (0, l.jsx)(o.FocusLock, {
           containerRef: t,
           children: (0, l.jsxs)("div", {
             children: [(0, l.jsx)(o.Text, {
               variant: "text-xs/bold",
-              className: S.replyHeader,
-              children: null != i ? i : C.default.Messages.CHAT
+              className: C.replyHeader,
+              children: null != i ? i : S.default.Messages.CHAT
             }), (0, l.jsx)(I, {
               onEnter: e => {
                 a(e), c()
               },
-              placeholder: null != n ? n : C.default.Messages.CHAT
+              placeholder: null != n ? n : S.default.Messages.CHAT
             })]
           })
         })
@@ -74,7 +74,7 @@ let T = (0, p.createChannelRecord)({
     } = e, [a, s] = i.useState(""), [r, o] = i.useState((0, c.toRichValue)(""));
     return (0, l.jsx)(f.default, {
       placeholder: t,
-      className: S.replyInput,
+      className: C.replyInput,
       showRemainingCharsAfterCount: -1,
       allowNewLines: !1,
       maxCharacterCount: E.MAX_CHAR_COUNT,
@@ -142,10 +142,10 @@ let T = (0, p.createChannelRecord)({
         })
       }),
       children: () => (0, l.jsx)(o.Tooltip, {
-        text: C.default.Messages.ADD_REACTION,
+        text: S.default.Messages.ADD_REACTION,
         children: e => (0, l.jsx)("div", {
           ...e,
-          className: S.reaction,
+          className: C.reaction,
           children: (0, l.jsx)(h.default, {
             active: !1,
             tabIndex: 0,
@@ -167,7 +167,7 @@ var A = e => {
   } = e, [c, f] = i.useState(!1), m = i.useRef(null);
   return _(() => f(!1), m), (0, l.jsx)(l.Fragment, {
     children: (0, l.jsxs)("div", {
-      className: S.reactions,
+      className: C.reactions,
       children: [u && (0, l.jsx)(N, {
         onSelectEmoji: e => {
           null != e && t({
@@ -197,10 +197,10 @@ var A = e => {
           })
         },
         children: (0, l.jsx)(o.Tooltip, {
-          text: C.default.Messages.MESSAGE_ACTION_REPLY,
+          text: S.default.Messages.MESSAGE_ACTION_REPLY,
           children: e => (0, l.jsx)("button", {
             ...e,
-            className: s(S.reaction, S.emojiButton),
+            className: s(C.reaction, C.emojiButton),
             onClick: () => {
               t({
                 interactionType: E.AtomicReactorInteractionTypes.ReplyBegin,

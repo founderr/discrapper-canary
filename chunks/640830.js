@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return g
   },
   getOptionValues: function() {
-    return C
+    return S
   },
   optionToValues: function() {
-    return S
+    return C
   },
   validateOptionValues: function() {
     return T
@@ -67,7 +67,7 @@ function g(e) {
   return n
 }
 
-function C(e, t) {
+function S(e, t) {
   let n = {};
   if (null == t.options) return {};
   let l = h(e),
@@ -77,13 +77,13 @@ function C(e, t) {
     for (let t of a)
       if (f.NodeUtils.isType(t, "applicationCommandOption")) {
         let l = i[t.optionName];
-        null != l && (n[t.optionName] = S(e, l, t))
+        null != l && (n[t.optionName] = C(e, l, t))
       }
   }
   return n
 }
 
-function S(e, t, n) {
+function C(e, t, n) {
   let i = o.default.getCurrentlySelectedChannelId(),
     a = n.children.map(n => {
       if (t.type === l.ApplicationCommandOptionType.ATTACHMENT) {
@@ -137,7 +137,7 @@ function v(e, t, n, l, r) {
   var o;
   let [u] = l, d = a.default.getActiveCommand(n), c = null == d ? void 0 : null === (o = d.options) || void 0 === o ? void 0 : o.find(e => e.name === u.optionName);
   if (null == c) return;
-  let f = S(e, c, u),
+  let f = C(e, c, u),
     m = s.validateOptionContent({
       option: c,
       content: f,

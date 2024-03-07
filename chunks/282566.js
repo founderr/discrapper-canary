@@ -19,8 +19,8 @@ var l = n("37983"),
   h = n("843647"),
   E = n("154889"),
   g = n("917247"),
-  C = n("956597"),
-  S = n("635956"),
+  S = n("956597"),
+  C = n("635956"),
   T = n("599110"),
   v = n("402671"),
   I = n("719923"),
@@ -79,7 +79,7 @@ var l = n("37983"),
         onClick: P,
         children: O.default.Messages.CLOSE
       }), W ? (0, l.jsx)(o.Spinner, {}) : (0, l.jsxs)(l.Fragment, {
-        children: [K ? (0, l.jsx)(C.default, {
+        children: [K ? (0, l.jsx)(S.default, {
           type: y.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
           subscriptionTier: null !== (M = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== M ? M : y.PremiumSubscriptionSKUs.TIER_2,
           onClose: P,
@@ -108,7 +108,7 @@ var l = n("37983"),
               onClick: G
             })
           })]
-        }), !K && (0, l.jsx)(S.default, {
+        }), !K && (0, l.jsx)(C.default, {
           subscriptionTier: q ? y.PremiumSubscriptionSKUs.TIER_0 : y.PremiumSubscriptionSKUs.TIER_2,
           submitting: w,
           premiumModalAnalyticsLocation: {

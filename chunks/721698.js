@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return g
   },
   getSimilarApplications: function() {
-    return C
+    return S
   },
   search: function() {
-    return S
+    return C
   },
   getCollections: function() {
     return T
@@ -117,7 +117,7 @@ async function g() {
     categories: n.body
   })
 }
-async function C(e) {
+async function S(e) {
   var t;
   let {
     applicationId: n,
@@ -171,7 +171,7 @@ async function C(e) {
     }
   }
 }
-async function S(e) {
+async function C(e) {
   var t;
   let {
     query: n,

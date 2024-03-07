@@ -25,8 +25,8 @@ function h(e) {
     content: h,
     stickers: E,
     uploads: g,
-    channel: C,
-    restrictMentions: S = !0,
+    channel: S,
+    restrictMentions: C = !0,
     respectCooldown: T = !0
   } = e, v = f.default.canUseIncreasedMessageLength(u.default.getCurrentUser());
   return new Promise(e => (function(e) {
@@ -36,14 +36,14 @@ function h(e) {
       type: h,
       content: E,
       stickers: g,
-      uploads: C,
-      channel: S,
+      uploads: S,
+      channel: C,
       restrictMentions: T,
       respectCooldown: v,
       userCanUsePremiumMessageLength: I,
       resolve: _
     } = e;
-    if (0 === E.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == g || 0 === g.length) && (null == C || 0 === C.length)) {
+    if (0 === E.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == g || 0 === g.length) && (null == S || 0 === S.length)) {
       _({
         valid: !1,
         failureReason: m.MessageRestrictionTypes.EMPTY_MESSAGE
@@ -52,7 +52,7 @@ function h(e) {
     }
     let N = I ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
     if (E.length > N) {
-      if (I || null == S) {
+      if (I || null == C) {
         ;
         n = E.length, u = N, (0, i.openModal)(e => (0, l.jsx)(s.default, {
           title: p.default.Messages.MESSAGE_TOO_LONG_HEADER,
@@ -68,7 +68,7 @@ function h(e) {
         })
       } else a.default.dispatch({
         type: "MESSAGE_LENGTH_UPSELL",
-        channel: S,
+        channel: C,
         content: E
       });
       _({
@@ -77,8 +77,8 @@ function h(e) {
       });
       return
     }
-    if (null != S) {
-      if (null != S.getGuildId() && v && o.default.getSlowmodeCooldownGuess(S.id) > 0) {
+    if (null != C) {
+      if (null != C.getGuildId() && v && o.default.getSlowmodeCooldownGuess(C.id) > 0) {
         _({
           valid: !1,
           failureReason: m.MessageRestrictionTypes.SLOWMODE_COOLDOWN
@@ -92,11 +92,11 @@ function h(e) {
             animation: n
           }
           of c.RESTRICTIONS) {
-          let l = e(E, S, T);
+          let l = e(E, C, T);
           if (!1 !== l) {
             f({
               analyticsType: t,
-              channel: S,
+              channel: C,
               onCancel: () => _({
                 valid: !1,
                 failureReason: m.MessageRestrictionTypes.SHOUTING_CANCELLED
@@ -134,8 +134,8 @@ function h(e) {
     content: h,
     stickers: E,
     uploads: g,
-    channel: C,
-    restrictMentions: S,
+    channel: S,
+    restrictMentions: C,
     respectCooldown: T,
     userCanUsePremiumMessageLength: v,
     resolve: e

@@ -23,13 +23,13 @@ var l = n("37983"),
       fileName: h,
       focusProps: E,
       onClick: g,
-      ...C
-    } = e, S = i.useMemo(() => a.designConfig.getDefaultLinkInterceptor(t), [t]), T = i.useCallback(e => {
+      ...S
+    } = e, C = i.useMemo(() => a.designConfig.getDefaultLinkInterceptor(t), [t]), T = i.useCallback(e => {
       r.default.track(u.AnalyticEvents.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
         attachment_type: null == p ? void 0 : p[0],
         attachment_subtype: null == p ? void 0 : p[1]
-      }), null == g || g(), null == S || S(e)
-    }, [S, p, g]);
+      }), null == g || g(), null == C || C(e)
+    }, [C, p, g]);
     return null != h ? (0, l.jsx)(s.Anchor, {
       href: t,
       onClick: T,
@@ -38,7 +38,7 @@ var l = n("37983"),
       className: n,
       "aria-label": d.default.Messages.DOWNLOAD,
       focusProps: E,
-      ...C,
+      ...S,
       children: h
     }) : (0, l.jsx)(s.Anchor, {
       href: t,
@@ -48,7 +48,7 @@ var l = n("37983"),
       className: n,
       "aria-label": d.default.Messages.DOWNLOAD,
       focusProps: E,
-      ...C,
+      ...S,
       children: (0, l.jsx)(o.default, {
         className: c
       })

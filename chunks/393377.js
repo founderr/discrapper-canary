@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 }), n("222007");
 var l = n("37983"),
@@ -20,12 +20,12 @@ var l = n("37983"),
   E = n("825455"),
   g = n("602416");
 
-function C(e) {
+function S(e) {
   let {
     channelId: t,
     option: n,
     keyboardModeEnabled: a
-  } = e, C = i.useRef(null), [S, T] = i.useState(!1), v = f.default.getUpload(t, n.name, c.DraftType.SlashCommand), I = i.useRef(null), _ = i.useCallback(() => {
+  } = e, S = i.useRef(null), [C, T] = i.useState(!1), v = f.default.getUpload(t, n.name, c.DraftType.SlashCommand), I = i.useRef(null), _ = i.useCallback(() => {
     T(!0)
   }, []), N = i.useCallback(() => {
     T(!1)
@@ -74,24 +74,24 @@ function C(e) {
     onKeyDown: e => {
       if (e.which === h.KeyboardKeys.ENTER) {
         var t;
-        e.preventDefault(), null === (t = C.current) || void 0 === t || t.activateUploadDialogue()
+        e.preventDefault(), null === (t = S.current) || void 0 === t || t.activateUploadDialogue()
       }
     },
     className: s(E.emptyOption, {
-      [E.emptyOptionActive]: S
+      [E.emptyOptionActive]: C
     }),
     draftType: c.DraftType.SlashCommand,
     ref: I,
     children: [(0, l.jsx)("span", {
       className: s(E.optionName, {
-        [E.optionNameActive]: S
+        [E.optionNameActive]: C
       }),
       children: n.name
     }), (0, l.jsx)(r.Clickable, {
       className: E.clickContainer,
       onClick: () => {
         var e;
-        return null === (e = C.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+        return null === (e = S.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
       },
       children: (0, l.jsxs)("div", {
         className: E.commandOptionContainer,
@@ -104,7 +104,7 @@ function C(e) {
           variant: "text-sm/normal",
           children: "Drag and drop or click to upload file"
         }), (0, l.jsx)(u.default, {
-          ref: C,
+          ref: S,
           onChange: e => {
             var l, i;
             if (null != t && (null === (i = e.currentTarget) || void 0 === i ? void 0 : null === (l = i.files) || void 0 === l ? void 0 : l[0]) != null) {

@@ -34,8 +34,8 @@ l = class extends a.Component {
       renderLinkComponent: _,
       onClick: N,
       onPlay: A,
-      onEnded: y,
-      onVolumeChange: x,
+      onEnded: x,
+      onVolumeChange: y,
       onMute: O,
       alt: R = d.default.Messages.VIDEO,
       ...M
@@ -80,8 +80,8 @@ l = class extends a.Component {
           renderOverlayContent: I,
           onClick: N,
           onPlay: A,
-          onEnded: y,
-          onVolumeChange: x,
+          onEnded: x,
+          onVolumeChange: y,
           onMute: O,
           mimeType: v,
           downloadable: h

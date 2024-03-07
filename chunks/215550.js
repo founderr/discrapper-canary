@@ -19,7 +19,7 @@ var l = n("37983"),
   h = n("65063");
 let E = o.memoize(e => "".concat(e * p.EmojiSprites.NonDiversityPerRow, "px ").concat(e * Math.ceil(d.default.numNonDiversitySprites / p.EmojiSprites.NonDiversityPerRow), "px")),
   g = o.memoize(e => "".concat(e * p.EmojiSprites.DiversityPerRow, "px ").concat(e * Math.ceil(d.default.numDiversitySprites / p.EmojiSprites.DiversityPerRow), "px")),
-  C = (e, t, l) => {
+  S = (e, t, l) => {
     let i, a, s;
     if (!e.useSpriteSheet) return;
     let r = null != e.index ? e.index : 0;
@@ -34,7 +34,7 @@ let E = o.memoize(e => "".concat(e * p.EmojiSprites.NonDiversityPerRow, "px ").c
       width: l
     }
   },
-  S = i.memo(function(e) {
+  C = i.memo(function(e) {
     let {
       emoji: t,
       size: n,
@@ -62,7 +62,7 @@ let E = o.memoize(e => "".concat(e * p.EmojiSprites.NonDiversityPerRow, "px ").c
         className: s(h.emojiSpriteImage, {
           [h.lockedEmoji]: d
         }),
-        style: C(t, a, n),
+        style: S(t, a, n),
         children: (0, l.jsx)(u.HiddenVisually, {
           children: o
         })
@@ -79,4 +79,4 @@ let E = o.memoize(e => "".concat(e * p.EmojiSprites.NonDiversityPerRow, "px ").c
       }) : null]
     })
   });
-var T = S
+var T = C

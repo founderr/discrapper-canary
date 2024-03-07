@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   setDiversityColor: function() {
-    return C
+    return S
   },
   fetchEmoji: function() {
-    return S
+    return C
   },
   uploadEmoji: function() {
     return T
@@ -38,13 +38,13 @@ var l = n("917351"),
   E = n("397336"),
   g = n("782340");
 
-function C(e) {
+function S(e) {
   f.PreloadedUserSettingsActionCreators.updateAsync("textAndImages", t => {
     t.diversitySurrogate = s.StringValue.create(), t.diversitySurrogate.value = e
   }, E.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
-function S(e) {
+function C(e) {
   r.default.dispatch({
     type: "EMOJI_FETCH",
     guildId: e

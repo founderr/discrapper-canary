@@ -23,8 +23,8 @@ var l = n("37983"),
         disabled: a,
         type: m
       } = e,
-      [g, C] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default),
-      S = i.useContext(u.default),
+      [g, S] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default),
+      C = i.useContext(u.default),
       [T, v] = i.useState(!1),
       I = g === p.ExpressionPickerViewType.STICKER,
       _ = i.useCallback(() => {
@@ -41,10 +41,10 @@ var l = n("37983"),
             v(!1)
           })
         };
-      return S.addListener("sticker-suggestions-shown", e), S.addListener("sticker-suggestions-hidden", t), () => {
-        S.removeListener("sticker-suggestions-shown", e), S.removeListener("sticker-suggestions-hidden", t)
+      return C.addListener("sticker-suggestions-shown", e), C.addListener("sticker-suggestions-hidden", t), () => {
+        C.removeListener("sticker-suggestions-shown", e), C.removeListener("sticker-suggestions-hidden", t)
       }
-    }, [S]);
+    }, [C]);
     let N = (0, o.useRedesignIconContext)().enabled;
     return a ? null : (n = (0, l.jsx)(f.default, {
       className: N ? "" : E.stickerIcon,
@@ -63,7 +63,7 @@ var l = n("37983"),
         "aria-label": h.default.Messages.STICKER_BUTTON_LABEL,
         "aria-expanded": I,
         "aria-haspopup": "dialog",
-        "aria-controls": C,
+        "aria-controls": S,
         sparkle: !1,
         notification: null,
         children: n

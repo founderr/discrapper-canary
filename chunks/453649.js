@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useGetVoiceChannelInfoForVoiceActivitySection: function() {
-    return S
+    return C
   },
   default: function() {
     return T
@@ -23,9 +23,9 @@ var i = n("446674"),
   h = n("49111"),
   E = n("782340"),
   g = n("862939"),
-  C = n("463147");
+  S = n("463147");
 
-function S(e, t) {
+function C(e, t) {
   let n = (0, i.useStateFromStores)([c.default], () => {
       var n;
       return null !== (n = c.default.getVoiceState(t, e)) && void 0 !== n ? n : c.default.getVoiceStateForUser(e)
@@ -53,21 +53,21 @@ function T(e) {
       className: g.title,
       children: E.default.Messages.PROFILE_IN_VOICE_CALL
     }), (0, l.jsxs)("div", {
-      className: C.voiceDisplayContainer,
+      className: S.voiceDisplayContainer,
       children: [(0, l.jsxs)("div", {
-        className: C.iconContainer,
+        className: S.iconContainer,
         children: [(0, l.jsx)(f.default, {
           size: f.default.Sizes.SMALL,
           active: !0,
           guild: t
         }), (0, l.jsx)("div", {
-          className: C.speakerIconContainer,
+          className: S.speakerIconContainer,
           children: (0, l.jsx)(m.default, {
-            className: C.speakerIcon
+            className: S.speakerIcon
           })
         })]
       }), (0, l.jsxs)("div", {
-        className: C.voiceChannelInfo,
+        className: S.voiceChannelInfo,
         children: [(0, l.jsx)(a.Text, {
           variant: "text-sm/semibold",
           children: n.name

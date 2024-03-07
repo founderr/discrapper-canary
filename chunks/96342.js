@@ -158,13 +158,13 @@ let g = {
       type: "inlineObject"
     }
   },
-  C = new Set(["*", "_", "\\"]),
-  S = {},
+  S = new Set(["*", "_", "\\"]),
+  C = {},
   T = {};
 for (let e in c.default.RULES) {
   if (!(e in g)) throw Error("Slate: Unknown markdown rule: ".concat(e, ".  If you have just added a new markdown rule ") + "then you probably need to add it to this file so that the rich chat box understands it.");
   let t = g[e];
-  "skip" !== t.type && (S[e] = v(c.default.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (T[e] = v("text" === e ? f.default : c.default.RULES[e]))
+  "skip" !== t.type && (C[e] = v(c.default.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (T[e] = v("text" === e ? f.default : c.default.RULES[e]))
 }
 
 function v(e) {
@@ -219,7 +219,7 @@ let I = {
       }
     }
   },
-  _ = (0, m.default)([S, I]),
+  _ = (0, m.default)([C, I]),
   N = (0, m.default)([T, I]),
   A = o.astParserFor(_),
   x = o.astParserFor(N),
@@ -470,7 +470,7 @@ function U(e, t) {
 
 function D(e, t, n, l) {
   for (; n < l;)
-    if (C.has(t[n])) n = b(e, t, t[n], n, "syntaxBefore"), n = U(t, n);
+    if (S.has(t[n])) n = b(e, t, t[n], n, "syntaxBefore"), n = U(t, n);
     else break;
   return n
 }

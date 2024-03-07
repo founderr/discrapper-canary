@@ -21,7 +21,7 @@ var l, i, a = n("37983"),
   E = n("782340"),
   g = n("731574");
 (i = l || (l = {})).TEXT = "text", i.ATTACHMENT = "attachment", i.EMBED = "embed";
-let C = e => {
+let S = e => {
     let {
       className: t
     } = e;
@@ -30,7 +30,7 @@ let C = e => {
       children: E.default.Messages.SPOILER
     })
   },
-  S = e => {
+  C = e => {
     let {
       className: t,
       isSingleMosaicItem: n,
@@ -60,16 +60,16 @@ let C = e => {
     } = e;
     switch (t) {
       case f.ObscureReason.SPOILER:
-        return (0, a.jsx)(C, {
+        return (0, a.jsx)(S, {
           className: n
         });
       case f.ObscureReason.EXPLICIT_CONTENT:
-        return (0, a.jsx)(S, {
+        return (0, a.jsx)(C, {
           isSingleMosaicItem: l,
           className: n
         });
       case f.ObscureReason.POTENTIAL_EXPLICIT_CONTENT:
-        return (0, a.jsx)(S, {
+        return (0, a.jsx)(C, {
           isSingleMosaicItem: l,
           className: n,
           obscureOnly: !0

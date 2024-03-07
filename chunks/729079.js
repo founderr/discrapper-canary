@@ -19,8 +19,8 @@ var l = n("37983"),
   h = n("851745"),
   E = n("406291"),
   g = n("49111"),
-  C = n("782340"),
-  S = n("804330");
+  S = n("782340"),
+  C = n("804330");
 let T = {
   results: {
     command: null,
@@ -78,7 +78,7 @@ let I = {
     } = v(s, o, u);
     if (null == E || 0 === T.length) return null;
     if (n) return (0, l.jsx)(r.Spinner, {
-      className: S.spinner,
+      className: C.spinner,
       type: r.Spinner.Type.SPINNING_CIRCLE
     });
     if (null != t) {
@@ -88,7 +88,7 @@ let I = {
           if (t.type === g.ChannelTextAreaIntegrationTypes.GIF) {
             var i, s, r;
             return e = !0, (0, l.jsx)(m.default.GIFIntegration, {
-              className: S.horizontalAutocomplete,
+              className: C.horizontalAutocomplete,
               onClick: f,
               onHover: c,
               selected: a === n,
@@ -101,7 +101,7 @@ let I = {
           }
         }),
         r = u.commands === h.CommandMode.OLD_BUILT_INS ? E : null !== (_ = null === (I = d.default.getActiveCommand(s.id)) || void 0 === I ? void 0 : I.integrationTitle) && void 0 !== _ ? _ : E,
-        o = T.length > 0 && null != r ? C.default.Messages.CONTENT_MATCHING.format({
+        o = T.length > 0 && null != r ? S.default.Messages.CONTENT_MATCHING.format({
           query: T,
           command: r
         }) : null != r ? r : E;
@@ -109,7 +109,7 @@ let I = {
         children: [(0, l.jsx)(m.default.Title, {
           title: o
         }), e ? (0, l.jsx)(p.default, {
-          className: S.horizontalAutocompletes,
+          className: C.horizontalAutocompletes,
           children: n
         }) : n]
       }, "gifs")

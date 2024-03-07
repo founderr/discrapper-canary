@@ -23,8 +23,8 @@ let E = i.forwardRef(function(e, t) {
     gridNavigatorId: a,
     isFullRow: E,
     onKeyDown: g,
-    onFocus: C,
-    autoFocus: S,
+    onFocus: S,
+    autoFocus: C,
     className: T,
     defaultSearchPlaceholder: v
   } = e, I = i.useRef(null), _ = (0, c.useExpressionPickerStore)(e => e.searchQuery), [N, A] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), x = i.useCallback(e => {
@@ -39,7 +39,7 @@ let E = i.forwardRef(function(e, t) {
       return null === (e = I.current) || void 0 === e ? void 0 : e.focus()
     }
   })), (0, l.jsx)(u.default, {
-    autoFocus: S,
+    autoFocus: C,
     query: _,
     ref: I,
     size: u.default.Sizes.MEDIUM,
@@ -55,7 +55,7 @@ let E = i.forwardRef(function(e, t) {
       }
       g(e)
     },
-    onFocus: C,
+    onFocus: S,
     onQueryChange: x,
     className: s(T, {
       [h.searchBarFullRow]: E

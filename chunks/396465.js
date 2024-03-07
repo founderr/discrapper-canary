@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 });
 var l = n("37983"),
@@ -20,18 +20,18 @@ var l = n("37983"),
   E = n("782340"),
   g = n("847948");
 
-function C(e) {
+function S(e) {
   let {
     query: t,
     onHover: n,
-    onClick: C,
-    channel: S,
+    onClick: S,
+    channel: C,
     selectedIndex: T
   } = e, v = i.useRef(null), {
     commands: I,
     sections: _,
     scrollDown: N
-  } = d.useQuery(S, {
+  } = d.useQuery(C, {
     commandType: a.ApplicationCommandType.CHAT,
     text: t
   }, {
@@ -48,15 +48,15 @@ function C(e) {
     return (0, l.jsx)(o.default.NewCommand, {
       index: e,
       command: i,
-      channel: S,
+      channel: C,
       className: g.itemWrapper,
       selected: T === e,
       showImage: !0,
       section: s,
-      onClick: C,
+      onClick: S,
       onHover: n
     }, a)
-  }, [S, I, _, C, n, T]);
+  }, [C, I, _, S, n, T]);
   return null == I || 0 === I.length ? null : (0, l.jsxs)(l.Fragment, {
     children: [(0, s.renderHeader)({
       titleWithQuery: E.default.Messages.COMMANDS_MATCHING,

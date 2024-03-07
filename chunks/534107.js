@@ -19,8 +19,8 @@ var l = n("37983"),
   h = n("290819");
 let E = p.VOICE_RECORDING_MIN_DURATION_MILLIS / 1e3,
   g = 6,
-  C = 2,
-  S = [0, 0, 0, 0, 0];
+  S = 2,
+  C = [0, 0, 0, 0, 0];
 
 function T(e) {
   let {
@@ -41,7 +41,7 @@ function v(e) {
     segmentValue: u,
     segmentIndex: d,
     constrainMin: c
-  } = e, f = c ? (24 - C) * u + C : 24 * u;
+  } = e, f = c ? (24 - S) * u + S : 24 * u;
   if (0 !== f) t = s, n = 6 * d * r, l = (o / 2 - f / 2) * r, i = f * r, a = 1 * r, t.moveTo(n, l + a), t.lineTo(n, l + i - a), t.arc(n + a, l + i - a, a, Math.PI, 0, !0), t.lineTo(n + 2 * a, l + a), t.arc(n + a, l + a, a, 0, Math.PI, !0), t.closePath()
 }
 
@@ -66,7 +66,7 @@ function N(e) {
     waveform: n,
     currentTime: a,
     duration: c,
-    played: C,
+    played: S,
     playing: N,
     onDrag: A,
     onDragStart: x,
@@ -104,10 +104,10 @@ function N(e) {
             }
             return (0, f.default)(e, t)
           }
-        }(null != n ? n : [], l)) && void 0 !== e ? e : S
+        }(null != n ? n : [], l)) && void 0 !== e ? e : C
       }, [n, l]);
     return a
-  }(n, R), b = i.useRef(C), j = i.useRef(N), U = i.useRef(null), D = window.devicePixelRatio, {
+  }(n, R), b = i.useRef(S), j = i.useRef(N), U = i.useRef(null), D = window.devicePixelRatio, {
     lastBackgroundFillColor: k,
     backgroundFillColor: w,
     lastActiveFillColor: F,
@@ -134,10 +134,10 @@ function N(e) {
       lastInactiveFillColor: E,
       inactiveFillColor: g
     }
-  }(C, N);
+  }(S, N);
   i.useEffect(() => {
     let e = T({
-      showAll: !C,
+      showAll: !S,
       currentTime: a,
       duration: c,
       numSegments: P.length
@@ -147,7 +147,7 @@ function N(e) {
     let e = L.current;
     if (null == e) return;
     let t = T({
-      showAll: !C,
+      showAll: !S,
       currentTime: a,
       duration: c,
       numSegments: P.length
@@ -160,7 +160,7 @@ function N(e) {
       }
       l.reset()
     }
-  }, [P, a, c, C]), i.useEffect(() => {
+  }, [P, a, c, S]), i.useEffect(() => {
     let e = null;
     return e = requestAnimationFrame(function t(n) {
       let l = O.current,
@@ -168,7 +168,7 @@ function N(e) {
         a = L.current;
       if (null == l || null == i || null == a) return;
       let s = !1;
-      (b.current !== C || j.current !== N) && (b.current = C, j.current = N, U.current = n), null != U.current && n > U.current + 200 && (U.current = null);
+      (b.current !== S || j.current !== N) && (b.current = S, j.current = N, U.current = n), null != U.current && n > U.current + 200 && (U.current = null);
       let r = l.height / D;
       i.clearRect(0, 0, l.width, l.height), i.beginPath();
       let [o, u] = _(k, w, n, U.current);
@@ -202,7 +202,7 @@ function N(e) {
     }), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [O, D, P, R, a, c, C, N, k, w, F, G, B, H]);
+  }, [O, D, P, R, a, c, S, N, k, w, F, G, B, H]);
   let [, V] = (0, d.default)({
     ref: O,
     onDrag: A,

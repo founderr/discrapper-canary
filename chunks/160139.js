@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return y
   }
 });
 var a = n("37983");
@@ -28,10 +28,10 @@ var r = n("414456"),
   I = n("804392");
 let A = e => T.default.close(e),
   M = e => T.default.minimize(e),
-  x = (e, t) => {
+  N = (e, t) => {
     (0, g.isMac)() && !t.altKey ? T.default.fullscreen(e) : T.default.maximize(e)
   },
-  N = e => {
+  R = e => {
     let {
       windowKey: t,
       themeOverride: n,
@@ -52,7 +52,7 @@ let A = e => T.default.close(e),
         children: (0, a.jsx)(h.default, {})
       }), (0, a.jsx)(l.Clickable, {
         className: I.winButtonMinMax,
-        onClick: e => x(t, e),
+        onClick: e => N(t, e),
         "aria-label": v.default.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
         tabIndex: -1,
         children: (0, a.jsx)(p.default, {})
@@ -65,7 +65,7 @@ let A = e => T.default.close(e),
       })]
     })
   },
-  R = e => {
+  x = e => {
     let {
       focused: t,
       windowKey: n,
@@ -101,7 +101,7 @@ let A = e => T.default.close(e),
           })
         }), (0, a.jsx)(l.Clickable, {
           className: I.macButtonMaximize,
-          onClick: e => x(n, e),
+          onClick: e => N(n, e),
           "aria-label": v.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
           tabIndex: -1,
           children: (0, a.jsx)(C.default, {
@@ -117,7 +117,7 @@ let A = e => T.default.close(e),
     })
   };
 
-function L(e) {
+function y(e) {
   let {
     focused: t,
     type: n,
@@ -128,13 +128,13 @@ function L(e) {
   if (f) return null;
   switch (n) {
     case g.PlatformTypes.WINDOWS:
-      return (0, a.jsx)(N, {
+      return (0, a.jsx)(R, {
         windowKey: r,
         themeOverride: l,
         hasOpenLayer: h
       });
     case g.PlatformTypes.OSX:
-      return (0, a.jsx)(R, {
+      return (0, a.jsx)(x, {
         focused: t,
         windowKey: r,
         frame: s,

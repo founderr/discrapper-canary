@@ -18,8 +18,8 @@ var l, i = n("37983"),
   h = n("295426"),
   E = n("81594"),
   g = n("798609"),
-  C = n("966724"),
-  S = n("383018"),
+  S = n("966724"),
+  C = n("383018"),
   T = n("605250"),
   v = n("585722"),
   I = n("378765"),
@@ -169,8 +169,8 @@ l = class extends a.Component {
       onSubmit: h,
       channel: E,
       type: g,
-      fontSize: C,
-      useSlate: S,
+      fontSize: S,
+      useSlate: C,
       spellcheckEnabled: T,
       useNewSlashCommands: v,
       canOnlyUseTextCommands: _,
@@ -188,7 +188,7 @@ l = class extends a.Component {
     } = this.state, B = {
       channel: E,
       className: r(x, P.textArea, {
-        [P.textAreaSlate]: S,
+        [P.textAreaSlate]: C,
         [P.textAreaDisabled]: d || F
       }),
       id: R,
@@ -211,7 +211,7 @@ l = class extends a.Component {
       onResize: m,
       onKeyDown: f,
       onSubmit: h,
-      textAreaPaddingClassName: r(j[C], {
+      textAreaPaddingClassName: r(j[S], {
         [P.textAreaWithoutAttachmentButton]: g !== N.ChatInputTypes.NORMAL && g !== N.ChatInputTypes.OVERLAY && g !== N.ChatInputTypes.THREAD_CREATION && g !== N.ChatInputTypes.SIDEBAR,
         [P.textAreaForPostCreation]: g === N.ChatInputTypes.CREATE_FORUM_POST,
         [P.textAreaCustomGift]: g === N.ChatInputTypes.CUSTOM_GIFT
@@ -228,7 +228,7 @@ l = class extends a.Component {
       "aria-describedby": D,
       "aria-labelledby": k,
       "aria-autocomplete": "list"
-    }, H = S ? (0, i.jsx)(O.default, {
+    }, H = C ? (0, i.jsx)(O.default, {
       ref: this.ref,
       ...B,
       type: g,
@@ -405,14 +405,14 @@ l = class extends a.Component {
         }
       })), 0 !== r.length && (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), ((e, n) => {
         var l, a;
-        let r = S.default.getActiveCommand(t.id);
+        let r = C.default.getActiveCommand(t.id);
         if (null == r) return i(e, t, s.drafts.type, {
           requireConfirm: !0,
           showLargeMessageDialog: void 0
         });
         let o = null !== (l = s.drafts.commandType) && void 0 !== l ? l : s.drafts.type,
           u = null,
-          d = S.default.getActiveOption(t.id);
+          d = C.default.getActiveOption(t.id);
         null != (u = (null == d ? void 0 : d.type) === g.ApplicationCommandOptionType.ATTACHMENT ? d : null === (a = r.options) || void 0 === a ? void 0 : a.find(e => {
           if (e.type === g.ApplicationCommandOptionType.ATTACHMENT) return null == v.default.getUpload(t.id, e.name, o)
         })) && E.default.setFile({
@@ -421,7 +421,7 @@ l = class extends a.Component {
           draftType: o,
           file: {
             id: u.name,
-            platform: C.UploadPlatform.WEB,
+            platform: S.UploadPlatform.WEB,
             file: e[0]
           }
         })

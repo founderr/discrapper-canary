@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return g
   },
   makeDiscoverableGuild: function() {
-    return C
+    return S
   },
   trackDiscoveryViewed: function() {
-    return S
+    return C
   },
   trackDiscoveryExited: function() {
     return T
@@ -127,7 +127,7 @@ async function g(e) {
     })
 }
 
-function C(e) {
+function S(e) {
   return {
     id: e.id,
     name: e.name,
@@ -149,7 +149,7 @@ function C(e) {
   }
 }
 
-function S(e) {
+function C(e) {
   let {
     loadId: t,
     gamesYouPlayGuilds: n,
@@ -248,7 +248,7 @@ async function x(e) {
       }),
       i = null === (n = l.body) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : t[0];
     if (null == i) return i;
-    return C(i)
+    return S(i)
   } catch (e) {
     return null
   }

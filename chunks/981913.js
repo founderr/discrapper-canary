@@ -33,8 +33,8 @@ function m(e) {
     iconComponent: h,
     themeable: E = !1,
     disabled: g = !1,
-    isActive: C = !1,
-    tooltipPosition: S = "top",
+    isActive: S = !1,
+    tooltipPosition: C = "top",
     shouldShowTooltip: T = !0,
     forceTooltipOpen: v = !1,
     buttonRef: I,
@@ -43,7 +43,7 @@ function m(e) {
   } = e;
   return (0, l.jsx)(u.default, {
     children: (0, l.jsx)(s.Tooltip, {
-      position: S,
+      position: C,
       text: t,
       "aria-label": N,
       shouldShow: T,
@@ -52,7 +52,7 @@ function m(e) {
         let {
           onClick: t,
           onContextMenu: u,
-          onMouseEnter: S,
+          onMouseEnter: C,
           onMouseLeave: T,
           ...v
         } = e;
@@ -66,7 +66,7 @@ function m(e) {
             null == t || t(), null == n || n(e)
           },
           onMouseEnter: e => {
-            null == S || S(), null == r || r(e)
+            null == C || C(), null == r || r(e)
           },
           onMouseLeave: e => {
             null == T || T(), null == o || o(e)
@@ -75,7 +75,7 @@ function m(e) {
             null == u || u(), null == d || d(e)
           },
           onFocus: e => {
-            null == S || S(), null == r || r(e)
+            null == C || C(), null == r || r(e)
           },
           onBlur: e => {
             null == T || T(), null == o || o(e)
@@ -83,7 +83,7 @@ function m(e) {
           disabled: g,
           innerClassName: f.lineHeightReset,
           className: a({
-            [f.active]: C
+            [f.active]: S
           }, c),
           wrapperClassName: m,
           buttonRef: I,
@@ -93,7 +93,7 @@ function m(e) {
           children: (0, l.jsx)(h, {
             className: a(f.controlIcon, p, {
               [f.themeable]: E,
-              [f.active]: C
+              [f.active]: S
             })
           })
         })
@@ -119,13 +119,13 @@ function h(e) {
     iconClassName: h,
     onPopoutClick: E,
     popoutOpen: g = !1,
-    ...C
-  } = e, S = (0, d.default)(t, n), T = (0, l.jsx)(m, {
-    ...C,
+    ...S
+  } = e, C = (0, d.default)(t, n), T = (0, l.jsx)(m, {
+    ...S,
     grow: !1,
     onContextMenu: E,
     iconClassName: a(h, f.centerIcon),
-    className: a(null == E ? i : f.staticButton, f.centerButton, p[S])
+    className: a(null == E ? i : f.staticButton, f.centerButton, p[C])
   }), v = null;
   return null != E && (v = (0, l.jsxs)("div", {
     className: a(i, f.contextMenuContainer),
@@ -139,7 +139,7 @@ function h(e) {
         "aria-label": c.default.Messages.MORE_OPTIONS,
         onClick: E,
         onContextMenu: E,
-        className: a(f.contextMenuNub, p[S], {
+        className: a(f.contextMenuNub, p[C], {
           [f.active]: g
         }),
         children: (0, l.jsx)(r.default, {

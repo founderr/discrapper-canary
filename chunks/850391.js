@@ -333,7 +333,7 @@ let r = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  C = {
+  S = {
     analyticsName: "rules_input",
     drafts: {
       type: s.DraftType.ChannelMessage
@@ -347,7 +347,7 @@ let r = {
     },
     showCharacterCount: !0
   },
-  S = {
+  C = {
     analyticsName: "forum_channel_guidelines",
     drafts: {
       type: s.DraftType.ChannelMessage
@@ -391,9 +391,9 @@ let r = {
     THREAD_CREATION: m,
     PROFILE_BIO_INPUT: E,
     CUSTOM_GIFT: g,
-    RULES_INPUT: C,
+    RULES_INPUT: S,
     CREATE_FORUM_POST: p,
     CREATE_POLL: h,
-    FORUM_CHANNEL_GUIDELINES: S,
+    FORUM_CHANNEL_GUIDELINES: C,
     ATOMIC_REACTOR_REPLY_INPUT: T
   }

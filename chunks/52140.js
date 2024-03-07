@@ -19,8 +19,8 @@ var l = n("37983"),
   h = n("666897"),
   E = n("505684"),
   g = n("36694"),
-  C = n("413709"),
-  S = n("873218"),
+  S = n("413709"),
+  C = n("873218"),
   T = n("250832"),
   v = n("22248"),
   I = n("28236"),
@@ -54,7 +54,7 @@ function D(e) {
     children: n ? (0, l.jsx)(g.default, {
       width: 16,
       height: 16
-    }) : (0, l.jsx)(C.default, {
+    }) : (0, l.jsx)(S.default, {
       width: 16,
       height: 16
     })
@@ -255,7 +255,7 @@ let k = {
     }
   },
   channel: {
-    react: (e, t, n) => (0, l.jsx)(S.default, {
+    react: (e, t, n) => (0, l.jsx)(C.default, {
       iconType: e.iconType,
       children: (0, A.smartOutput)(e, t, n)
     }, n.key)

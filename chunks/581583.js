@@ -22,8 +22,8 @@ var l = n("37983"),
   h = n("272030"),
   E = n("851387"),
   g = n("737960"),
-  C = n("206230"),
-  S = n("454273"),
+  S = n("206230"),
+  C = n("454273"),
   T = n("339023"),
   v = n("405645"),
   I = n("592407"),
@@ -86,7 +86,7 @@ let F = i.forwardRef(function(e, t) {
   let {
     canRemove: E,
     className: g,
-    role: S,
+    role: C,
     onRemove: I,
     guildId: _,
     disableBorderColor: N,
@@ -94,22 +94,22 @@ let F = i.forwardRef(function(e, t) {
   } = e, {
     tabIndex: x,
     ...y
-  } = (0, d.useListItem)(S.id), R = (0, v.useRoleIcon)({
-    roleId: S.id,
+  } = (0, d.useListItem)(C.id), R = (0, v.useRoleIcon)({
+    roleId: C.id,
     size: 16,
     guildId: _
-  }), M = (0, f.useStateFromStores)([C.default], () => C.default.roleStyle), P = (null === (a = S.tags) || void 0 === a ? void 0 : a.guild_connections) === null, b = i.useCallback(e => {
+  }), M = (0, f.useStateFromStores)([S.default], () => S.default.roleStyle), P = (null === (a = C.tags) || void 0 === a ? void 0 : a.guild_connections) === null, b = i.useCallback(e => {
     (0, h.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("443070").then(n.bind(n, "443070"));
       return t => (0, l.jsx)(e, {
         ...t,
-        id: S.id,
+        id: C.id,
         label: U.default.Messages.COPY_ID_ROLE
       })
     })
-  }, [S.id]), j = (0, p.useToken)(m.default.unsafe_rawColors.PRIMARY_300).hsl(), k = null !== (r = S.colorString) && void 0 !== r ? r : j, w = null !== (o = (0, c.hex2rgb)(k, .6)) && void 0 !== o ? o : void 0, F = m.default.unsafe_rawColors.WHITE_500.css, G = (0, c.hex2int)(k);
+  }, [C.id]), j = (0, p.useToken)(m.default.unsafe_rawColors.PRIMARY_300).hsl(), k = null !== (r = C.colorString) && void 0 !== r ? r : j, w = null !== (o = (0, c.hex2rgb)(k, .6)) && void 0 !== o ? o : void 0, F = m.default.unsafe_rawColors.WHITE_500.css, G = (0, c.hex2int)(k);
   null != G && .3 > (0, c.getDarkness)(G) && (F = m.default.unsafe_rawColors.PRIMARY_630.css), u = P ? (0, l.jsx)(T.default, {
     className: D.roleFlowerStar,
     iconClassName: E ? D.roleVerifiedIcon : void 0,
@@ -137,7 +137,7 @@ let F = i.forwardRef(function(e, t) {
       style: B,
       onContextMenu: b,
       onMouseDown: A,
-      "aria-label": S.name,
+      "aria-label": C.name,
       tabIndex: x,
       ...y,
       children: [(0, l.jsxs)(p.Clickable, {
@@ -149,7 +149,7 @@ let F = i.forwardRef(function(e, t) {
         },
         "aria-hidden": !E,
         "aria-label": U.default.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
-          roleName: S.name
+          roleName: C.name
         }),
         children: [u, E ? (0, l.jsx)(O.default, {
           color: F,
@@ -166,7 +166,7 @@ let F = i.forwardRef(function(e, t) {
         children: (0, l.jsx)(p.Text, {
           variant: "text-xs/medium",
           className: D.roleNameOverflow,
-          children: S.name
+          children: C.name
         })
       })]
     })
@@ -208,7 +208,7 @@ function B(e) {
     user: n,
     handleAddRole: i,
     roleClassName: a
-  } = e, r = (0, d.useListItem)("overflow-add-roles-".concat(n.id)), o = (0, f.useStateFromStores)([C.default], () => C.default.roleStyle), u = N.default.getHighestRole(t), c = _.default.getMember(t.id, n.id), m = e => (0, S.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && N.default.isRoleHigher(t, u, e) && (null == c || -1 === c.roles.indexOf(e.id));
+  } = e, r = (0, d.useListItem)("overflow-add-roles-".concat(n.id)), o = (0, f.useStateFromStores)([S.default], () => S.default.roleStyle), u = N.default.getHighestRole(t), c = _.default.getMember(t.id, n.id), m = e => (0, C.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && N.default.isRoleHigher(t, u, e) && (null == c || -1 === c.roles.indexOf(e.id));
   return (0, l.jsx)(p.Popout, {
     renderPopout: e => {
       let {
@@ -252,7 +252,7 @@ function H(e) {
     readOnly: p,
     roleClassName: h,
     disableBorderColor: g
-  } = e, C = i.useRef({}), S = i.useCallback(e => {
+  } = e, S = i.useRef({}), C = i.useCallback(e => {
     var t;
     let l = r.filter(t => t !== e.id);
     (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? E.default.unassignGuildRoleConnection(a.id, e.id) : I.default.updateMemberRoles(a.id, n.id, l, [], [e.id])
@@ -275,7 +275,7 @@ function H(e) {
       n = f - 30 - 4;
     for (let l = 0; l < x.length; l++) {
       let i = x[l],
-        a = C.current[i.id];
+        a = S.current[i.id];
       if (null == a) continue;
       let s = a.offsetWidth;
       if ((t += s + 4) > n) break;
@@ -301,10 +301,10 @@ function H(e) {
         className: h,
         role: e,
         canRemove: R && P.default.isRoleHigher(a, O.id, M, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && n.id === O.id,
-        onRemove: () => S(e),
+        onRemove: () => C(e),
         ref: t => {
           var n, l;
-          return n = e.id, void(null != (l = t) ? C.current[n] = l : delete C.current[n])
+          return n = e.id, void(null != (l = t) ? S.current[n] = l : delete S.current[n])
         },
         guildId: a.id,
         disableBorderColor: g

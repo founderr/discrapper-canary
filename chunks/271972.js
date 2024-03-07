@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return S
+    return C
   }
 });
 var l, i, a = n("37983"),
@@ -21,17 +21,17 @@ var l, i, a = n("37983"),
   E = n("782340"),
   g = n("831594");
 
-function C(e) {
+function S(e) {
   e.stopPropagation()
 }(l = i || (i = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM", l[l.CLIP = 2] = "CLIP";
-var S = s.forwardRef(function(e, t) {
+var C = s.forwardRef(function(e, t) {
   let {
     id: n,
     channelId: l,
     className: i,
     children: s,
     actions: r,
-    handleEditModal: S,
+    handleEditModal: C,
     keyboardModeEnabled: T,
     onKeyDown: v,
     draftType: I,
@@ -55,7 +55,7 @@ var S = s.forwardRef(function(e, t) {
               e.preventDefault(), c.default.remove(l, n, I);
               return;
             case h.KeyboardKeys.E:
-              null != S && (e.preventDefault(), S(e));
+              null != C && (e.preventDefault(), C(e));
               return;
             case h.KeyboardKeys.BACKSPACE:
               e.ctrlKey ? (e.preventDefault(), c.default.clearAll(l, I)) : (e.preventDefault(), c.default.remove(l, n, I));
@@ -82,7 +82,7 @@ var S = s.forwardRef(function(e, t) {
             className: o(g.actionBar, {
               [g.smallActionBar]: O
             }),
-            onContextMenu: C,
+            onContextMenu: S,
             "aria-label": E.default.Messages.ATTACHMENT_UTILITIES,
             children: (0, a.jsx)(f.default, {
               className: o({

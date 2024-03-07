@@ -19,8 +19,8 @@ var l = n("37983"),
   h = n("991254"),
   E = n("129408"),
   g = n("713536"),
-  C = n("449809"),
-  S = n("49111"),
+  S = n("449809"),
+  C = n("49111"),
   T = n("782340"),
   v = e => {
     var t;
@@ -72,7 +72,7 @@ var l = n("37983"),
       let e = () => {
         (0, f.openApplicationSubscriptionPaymentModal)({
           activeSubscription: k,
-          analyticsSubscriptionType: S.SubscriptionTypes.APPLICATION,
+          analyticsSubscriptionType: C.SubscriptionTypes.APPLICATION,
           analyticsLocations: D,
           analyticsLocation: _,
           renderHeader: (e, t, n) => (0, l.jsx)(g.PurchaseHeader, {
@@ -91,7 +91,7 @@ var l = n("37983"),
           forcesTransitionToGuild: x
         })
       };
-      !W && B ? (0, C.confirmNoSharedServerSubscribeWarningModal)({
+      !W && B ? (0, S.confirmNoSharedServerSubscribeWarningModal)({
         application: b,
         onConfirm: e,
         onCancel: () => {}

@@ -28,8 +28,8 @@ let f = e => {
     primaryDisabled: h,
     primarySubmitting: E,
     onPrimary: g,
-    secondaryText: C,
-    onSecondary: S
+    secondaryText: S,
+    onSecondary: C
   } = e;
   return (0, a.jsxs)(s.ModalFooter, {
     justify: r.default.Justify.BETWEEN,
@@ -60,11 +60,11 @@ let f = e => {
           className: c.primaryIcon
         }), m]
       })
-    })(), null == C ? null : (0, a.jsx)(s.Button, {
+    })(), null == S ? null : (0, a.jsx)(s.Button, {
       color: s.Button.Colors.PRIMARY,
       look: s.Button.Looks.LINK,
-      onClick: S,
-      children: C
+      onClick: C,
+      children: S
     }), (0, a.jsx)(u.default, {}), null == t ? null : (0, a.jsx)(s.Button, {
       className: c.back,
       color: s.Button.Colors.PRIMARY,

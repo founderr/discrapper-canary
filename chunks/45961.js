@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return g
   },
   useExpressionGrid: function() {
-    return C
+    return S
   },
   useKeyboardNavigation: function() {
-    return S
+    return C
   }
 }), n("222007"), n("424973");
 var l = n("884691"),
@@ -202,8 +202,8 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       autoFocusElement: !1,
       useVirtualFocus: !0
     }), {
-      gridContainerProps: C,
-      handleGridContainerKeyDown: S
+      gridContainerProps: S,
+      handleGridContainerKeyDown: C
     } = l.useMemo(() => {
       let e = g();
       return {
@@ -220,13 +220,13 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       gridDispatch: p,
       getItemProps: h,
       getRowProps: E,
-      gridContainerProps: C,
-      handleGridContainerKeyDown: S,
+      gridContainerProps: S,
+      handleGridContainerKeyDown: C,
       isUsingKeyboardNavigation: u
     }
   };
 
-function C(e) {
+function S(e) {
   let {
     categories: t,
     collapsedCategories: n,
@@ -280,7 +280,7 @@ function C(e) {
   }, [t, n, i, r, s, a])
 }
 
-function S(e) {
+function C(e) {
   let {
     columnCounts: t,
     expressionsGrid: n,

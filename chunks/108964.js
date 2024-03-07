@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   createHeaderResult: function() {
-    return u
+    return i
   }
 });
 var l = s("375822");
 
-function u(e) {
+function i(e) {
   return {
     type: l.AutocompleterResultTypes.HEADER,
     record: new l.HeaderRecord(e),

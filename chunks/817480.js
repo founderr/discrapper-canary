@@ -55,8 +55,8 @@ class h extends i.PureComponent {
         height: h,
         animated: E,
         children: g,
-        renderLinkComponent: C,
-        isWindowFocused: S,
+        renderLinkComponent: S,
+        isWindowFocused: C,
         shouldHideMediaOptions: T = !1
       } = this.props, v = {
         alt: r,
@@ -67,7 +67,7 @@ class h extends i.PureComponent {
         animated: E,
         children: g,
         zoomThumbnailPlaceholder: n,
-        renderLinkComponent: C,
+        renderLinkComponent: S,
         onContextMenu: T ? e => {
           e.stopPropagation(), e.preventDefault()
         } : void 0,
@@ -81,7 +81,7 @@ class h extends i.PureComponent {
         children: (0, l.jsx)(u.ImageModal, {
           ...v,
           className: m.image,
-          shouldAnimate: S,
+          shouldAnimate: C,
           onClose: this.onCloseImage,
           shouldHideMediaOptions: T
         })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 }), n("222007");
 var l = n("37983"),
@@ -20,7 +20,7 @@ var l = n("37983"),
   E = n("782340"),
   g = n("165555");
 
-function C(e, t, n) {
+function S(e, t, n) {
   let {
     attributes: i,
     children: a,
@@ -52,7 +52,7 @@ function C(e, t, n) {
         children: a
       });
     case "applicationCommandOption":
-      return (0, l.jsx)(S, {
+      return (0, l.jsx)(C, {
         attributes: i,
         channelId: n,
         element: s,
@@ -62,14 +62,14 @@ function C(e, t, n) {
       return null
   }
 }
-let S = e => {
+let C = e => {
   let t, {
       channelId: n,
       element: a,
       attributes: m,
-      children: C
+      children: S
     } = e,
-    S = (0, r.useSelected)(),
+    C = (0, r.useSelected)(),
     T = (0, r.useFocused)(),
     v = (0, r.useSlateStatic)(),
     {
@@ -86,8 +86,8 @@ let S = e => {
     A = a.children[a.children.length - 1],
     x = null != A && h.TextUtils.isText(A) && A.text.endsWith("\n"),
     y = s(g.inlineElement, g.optionPill, {
-      [g.selectedPill]: T && S,
-      [g.erroredPill]: (!T || !S) && _
+      [g.selectedPill]: T && C,
+      [g.erroredPill]: (!T || !C) && _
     }),
     O = i.useCallback(() => {
       !h.EditorUtils.isVoid(v, a) && p.SlateTransforms.selectCommandOption(v, a.optionName, !0)
@@ -95,14 +95,14 @@ let S = e => {
   return t = I === u.ApplicationCommandOptionType.ATTACHMENT ? (null == N ? void 0 : N.filename) != null ? (0, l.jsxs)("span", {
     className: s(g.optionPillValue, g.attachmentFilename),
     contentEditable: !1,
-    children: [N.filename, C]
+    children: [N.filename, S]
   }) : (0, l.jsxs)("span", {
     className: s(g.optionPillValue, g.readonlyPillValue),
     contentEditable: !1,
-    children: [E.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, C]
+    children: [E.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, S]
   }) : (0, l.jsxs)("span", {
     className: g.optionPillValue,
-    children: [C, x ? (0, l.jsx)("span", {
+    children: [S, x ? (0, l.jsx)("span", {
       className: g.newLine,
       contentEditable: !1
     }) : null]
