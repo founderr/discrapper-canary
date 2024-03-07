@@ -4,6 +4,7 @@ e.exports = {
   footer: "footer_c689c6",
   productCard: "productCard_eabca8",
   productList: "productList_bce430",
+  subDetailsModal: "subDetailsModal__7eb23",
   tabs: "tabs__88df8",
   wrapper: "wrapper__2f460"
 }
