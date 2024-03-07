@@ -18,10 +18,10 @@ var o = E("669491"),
       foregroundColor: r = o.default.unsafe_rawColors.RED_400.css,
       foreground: i,
       background: I,
-      ...T
+      ...s
     } = e;
     return (0, t.jsxs)("svg", {
-      ...(0, a.default)(T),
+      ...(0, a.default)(s),
       width: _,
       height: E,
       viewBox: "0 0 24 24",

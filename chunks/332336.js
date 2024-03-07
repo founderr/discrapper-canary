@@ -11,8 +11,8 @@ var t = E("913144"),
   a = E("178406");
 let i = {},
   I = {},
-  T = null;
-async function s(e, _) {
+  s = null;
+async function T(e, _) {
   null == i[e] && (i[e] = new Set), i[e].add(_), null == I[e] && (I[e] = Date.now()), N(e) && await S(e)
 }
 
@@ -53,7 +53,7 @@ function O(e) {
 }
 class A extends o.default {
   handleInitialize() {
-    null == T && null == T && (T = setInterval(() => {
+    null == s && null == s && (s = setInterval(() => {
       r.default.forEachKey(i, e => {
         N(e) && S(e)
       })
@@ -61,11 +61,11 @@ class A extends o.default {
   }
   handleGuildMemberUpdate(e, _) {
     let E = a.default.isInitialized(e);
-    if (E) return s(e, _)
+    if (E) return T(e, _)
   }
   handleGuildMemberRemove(e, _) {
     let E = a.default.isInitialized(e);
-    if (E) return s(e, _)
+    if (E) return T(e, _)
   }
   handleGuildDelete(e) {
     let _ = e.guild.id,

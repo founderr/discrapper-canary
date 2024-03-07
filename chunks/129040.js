@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   GUEST_INVITE_KEY: function() {
-    return T
+    return s
   },
   default: function() {
     return S
@@ -14,14 +14,14 @@ var t = E("444095"),
   a = E("271938"),
   i = E("773336"),
   I = E("49111");
-let T = "guestInviteToAccept";
-class s extends r.default {
+let s = "guestInviteToAccept";
+class T extends r.default {
   constructor(...e) {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: () => this.handleConnectionOpen()
     }, this.handleConnectionOpen = async () => {
       if ((0, i.isWeb)()) {
-        let e = t.default.get(T);
+        let e = t.default.get(s);
         if (null != e && "string" == typeof e && a.default.isAuthenticated()) {
           let {
             invite: _
@@ -31,10 +31,10 @@ class s extends r.default {
             invite: _,
             code: e,
             context: I.AppContext.APP
-          }), t.default.remove(T))
+          }), t.default.remove(s))
         }
       }
     }
   }
 }
-var S = new s
+var S = new T

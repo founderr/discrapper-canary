@@ -11,8 +11,8 @@ var t = E("913144"),
   a = E("299039"),
   i = E("34966"),
   I = E("473006"),
-  T = E("788434");
-class s extends n.default {
+  s = E("788434");
+class T extends n.default {
   constructor(...e) {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: e => this.handleConnectionOpen(e)
@@ -20,7 +20,7 @@ class s extends n.default {
       let _ = await o.default.fetchChangelogConfig(),
         E = _.body,
         n = (0, I.getClientVersionForChangelog)(),
-        s = function(e, _) {
+        T = function(e, _) {
           let E = 0,
             t = null;
           for (var [o, {
@@ -31,19 +31,19 @@ class s extends n.default {
       if (t.default.dispatch({
           type: "CHANGE_LOG_SET_CONFIG",
           config: _.body,
-          latestChangelogId: s
-        }), null == s || !0 !== E[s].show_on_startup) return;
+          latestChangelogId: T
+        }), null == T || !0 !== E[T].show_on_startup) return;
       let S = i.default.lastSeenChangelogId(),
         N = i.default.lastSeenChangelogDate();
-      if (null != S && 0 >= a.default.compare(s, S)) return;
-      let O = await o.default.fetchChangelog(s, r.default.locale);
+      if (null != S && 0 >= a.default.compare(T, S)) return;
+      let O = await o.default.fetchChangelog(T, r.default.locale);
       if (null != O) {
         if (null == N || null == i.default.lastSeenChangelogDate()) {
-          o.default.markChangelogAsSeen(s, O.date);
+          o.default.markChangelogAsSeen(T, O.date);
           return
-        }!i.default.isLocked() && new Date(O.date) > new Date(N) && (0, T.openChangelog)()
+        }!i.default.isLocked() && new Date(O.date) > new Date(N) && (0, s.openChangelog)()
       }
     }
   }
 }
-var S = new s
+var S = new T

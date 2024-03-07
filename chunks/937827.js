@@ -11,8 +11,8 @@ var t = E("920842"),
   a = E("590401"),
   i = E("718517"),
   I = E("773336");
-let T = 1 * i.default.Millis.SECOND,
-  s = 30 * i.default.Millis.SECOND,
+let s = 1 * i.default.Millis.SECOND,
+  T = 30 * i.default.Millis.SECOND,
   S = new n.default("RTCLatencyTestManager");
 class N extends o.default {
   _terminate() {
@@ -32,7 +32,7 @@ class N extends o.default {
     }, this._fetchAndScheduleRefetch = () => {
       (0, t.fetchRTCLatencyTestRegions)().then(e => this._handleTestRegionsResponse(e.body)).catch(e => S.warn(e)), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 360 * i.default.Millis.MINUTE)
     }, this._handleConnectionOpen = () => {
-      I.isPlatformEmbedded && !__OVERLAY__ && (null != this.refetchTimeout && clearTimeout(this.refetchTimeout), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, Math.floor(T + Math.random() * s)))
+      I.isPlatformEmbedded && !__OVERLAY__ && (null != this.refetchTimeout && clearTimeout(this.refetchTimeout), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, Math.floor(s + Math.random() * T)))
     }
   }
 }
