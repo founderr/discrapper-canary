@@ -9,6 +9,7 @@ e.exports = {
   mutualFriendsDivider: "mutualFriendsDivider_c21dfe",
   mutualFriendsList: "mutualFriendsList__632b5",
   mutualGuildsList: "mutualGuildsList__6e961",
+  profileMutuals: "profileMutuals_dd092a",
   profilePanel: "profilePanel__12596",
   profilePanelConnections: "profilePanelConnections__3c232"
 }
