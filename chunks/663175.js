@@ -30,6 +30,7 @@ l = class extends a.PureComponent {
       src: e,
       fileName: n,
       fileSize: (0, s.sizeString)(t),
+      fileSizeBytes: t,
       type: r.default.Types.AUDIO,
       className: l,
       playable: a,
