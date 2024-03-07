@@ -17,6 +17,7 @@ e.exports = {
   noChat: "noChat_fed339",
   parentChannelName: "parentChannelName__7d78b",
   status: "status__2a4a6",
+  subtitleContainer: "subtitleContainer_f754d4",
   threadSidebarFloating: "threadSidebarFloating_b980c7",
   threadSidebarOpen: "threadSidebarOpen_fa231d",
   title: "title_b7d661",
