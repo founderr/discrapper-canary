@@ -28,7 +28,7 @@ function i(e) {
   } = e, {
     loading: i,
     error: I
-  } = (0, o.useStateFromStores)([r.default], () => r.default.getFetchStatus(_), [_]), s = t.useCallback(e => {
+  } = (0, o.useStateFromStores)([r.default], () => r.default.getFetchStatus(_), [_]), T = t.useCallback(e => {
     let {
       force: t,
       flushSeenItems: o
@@ -46,7 +46,7 @@ function i(e) {
       }
     }
     a(_, null != t && t) && r()
-  }, [_, E]), T = t.useCallback(() => {
+  }, [_, E]), s = t.useCallback(() => {
     a(_, !0) && e();
     async function e() {
       try {
@@ -60,12 +60,12 @@ function i(e) {
     }
   }, [_]);
   return t.useEffect(() => {
-    s({
+    T({
       force: null != E
     })
-  }, [s, E]), {
-    fetchFresh: s,
-    fetchPage: T,
+  }, [T, E]), {
+    fetchFresh: T,
+    fetchPage: s,
     loading: i,
     error: I
   }

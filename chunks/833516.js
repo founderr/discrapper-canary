@@ -21,7 +21,7 @@ function f(e) {
 function o(e) {
   let t = (0, i.useStateFromStores)([s.default], () => s.default.getUserTrialOffer(e)),
     [r, o] = n.useState(f(t)),
-    _ = (0, i.useStateFromStores)([u.default], () => (0, a.isPremium)(u.default.getCurrentUser()));
+    c = (0, i.useStateFromStores)([u.default], () => (0, a.isPremium)(u.default.getCurrentUser()));
   return n.useEffect(() => {
     if (null != t && null != t.expires_at) {
       let e = new l.Timeout,
@@ -33,5 +33,5 @@ function o(e) {
         };
       return n(), () => e.stop()
     }
-  }, [r, t]), r || _ ? null : t
+  }, [r, t]), r || c ? null : t
 }

@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return s
+    return T
   }
 });
 var t = E("102053"),
@@ -18,4 +18,4 @@ class I extends o.default {
     clearInterval(this.intervalID)
   }
 }
-var s = new I
+var T = new I

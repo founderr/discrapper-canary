@@ -12,7 +12,7 @@ var t = E("37983"),
     return null != E && E.forwardRef ? function(e, _) {
       return E => {
         let a = "FluxContainer(".concat(i(E), ")");
-        class s extends o.Component {
+        class T extends o.Component {
           componentDidMount() {
             this.listener.attach(a)
           }
@@ -37,17 +37,17 @@ var t = E("37983"),
             })
           }
         }
-        s.displayName = a;
-        let T = o.forwardRef((e, _) => (0, t.jsx)(s, {
+        T.displayName = a;
+        let s = o.forwardRef((e, _) => (0, t.jsx)(T, {
           childProps: e,
           forwardedConnectStoresRef: _
         }));
-        return T.displayName = "ForwardRef(".concat(a, ")"), T
+        return s.displayName = "ForwardRef(".concat(a, ")"), s
       }
     }(e, _) : function(e, _) {
       return E => {
         let a = "FluxContainer(".concat(i(E), ")");
-        class s extends o.Component {
+        class T extends o.Component {
           componentDidMount() {
             this.listener.attach(a)
           }
@@ -68,7 +68,7 @@ var t = E("37983"),
             })
           }
         }
-        return s.displayName = a, s
+        return T.displayName = a, T
       }
     }(e, _)
   };

@@ -17,11 +17,11 @@ function a(e) {
     impressionProperties: a,
     disableTrack: i,
     ...I
-  } = e, s = a;
-  return "function" == typeof s && (s = s(I)), (0, r.default)({
+  } = e, T = a;
+  return "function" == typeof T && (T = T(I)), (0, r.default)({
     type: n.ImpressionTypes.PAGE,
     name: E,
-    properties: s
+    properties: T
   }, {
     disableTrack: i
   }, [null === (_ = I.location) || void 0 === _ ? void 0 : _.pathname]), (0, t.jsx)(o.Route, {

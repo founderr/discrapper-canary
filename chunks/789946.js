@@ -34,8 +34,8 @@ function L(e) {
     analyticsSource: g,
     analyticsLocation: h,
     body: x,
-    context: N,
-    glowUp: v,
+    context: v,
+    glowUp: N,
     modalClassName: A,
     artContainerClassName: U,
     bodyClassName: b,
@@ -106,11 +106,11 @@ function L(e) {
             type: O,
             subscriptionTier: null !== (l = null == Y ? void 0 : null === (n = Y.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== l ? l : C.PremiumSubscriptionSKUs.TIER_2,
             headingText: L,
-            context: N,
+            context: v,
             analyticsLocationObject: h,
             discountOffer: X,
             trialOffer: Y,
-            children: v
+            children: N
           })
         }) : (0, r.jsxs)(r.Fragment, {
           children: [(0, r.jsx)(s.Heading, {

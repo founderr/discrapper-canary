@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return T
+    return s
   }
 }), E("808653");
 var t = E("446674"),
@@ -20,7 +20,7 @@ function I(e) {
   } = e;
   a = _.id
 }
-class s extends t.default.PersistedStore {
+class T extends t.default.PersistedStore {
   initialize(e) {
     null != e && (n = e)
   }
@@ -39,8 +39,8 @@ class s extends t.default.PersistedStore {
     return n
   }
 }
-s.displayName = "LoginRequiredActionStore", s.persistKey = "LoginRequiredActionStore";
-var T = new s(o.default, {
+T.displayName = "LoginRequiredActionStore", T.persistKey = "LoginRequiredActionStore";
+var s = new T(o.default, {
   LOGIN_ATTEMPTED: function(e) {
     let {
       required_actions: _,

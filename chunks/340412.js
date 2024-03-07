@@ -18,18 +18,18 @@ let f = {
   },
   o = f;
 
-function _() {
+function c() {
   o.userTrialOffers = {}, o.userDiscountOffers = {}, o.userOffersLastFetchedAtDate = void 0
 }
-let E = () => !0;
+let _ = () => !0;
 
-function c() {
+function E() {
   let e = s.default.getPremiumTypeSubscription();
   return null != e && (o.userTrialOffers = {}, o.userDiscountOffers = {}, !0)
 }
 class d extends n.default.PersistedStore {
   initialize(e) {
-    o = null != e ? e : f, this.waitFor(l.default), this.syncWith([l.default], E), this.syncWith([s.default], c)
+    o = null != e ? e : f, this.waitFor(l.default), this.syncWith([l.default], _), this.syncWith([s.default], E)
   }
   getUserTrialOffer(e) {
     if (null !== e) return o.userTrialOffers[e]
@@ -74,7 +74,7 @@ class d extends n.default.PersistedStore {
     return o
   }
   forceReset() {
-    _()
+    c()
   }
 }
 d.displayName = "UserOfferStore", d.persistKey = "UserOfferStore", d.migrations = [e => {
@@ -89,7 +89,7 @@ var R = new d(i.default, {
     let {
       userTrialOffer: t
     } = e;
-    null != t ? o.userTrialOffers[t.trial_id] = t : _(), o.userOffersLastFetchedAtDate = Date.now()
+    null != t ? o.userTrialOffers[t.trial_id] = t : c(), o.userOffersLastFetchedAtDate = Date.now()
   },
   BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: function(e) {
     let {
@@ -103,7 +103,7 @@ var R = new d(i.default, {
       userDiscount: r,
       userDiscountOffer: n
     } = e;
-    null == t && null == r && null == n && _(), null != t ? (o.userTrialOffers[t.trial_id] = t, o.userDiscountOffers = {}) : null != r ? (o.userDiscountOffers[r.discount_id] = r, o.userTrialOffers = {}) : null != n && (o.userDiscountOffers[n.discount_id] = n, o.userTrialOffers = {}), o.userOffersLastFetchedAtDate = Date.now()
+    null == t && null == r && null == n && c(), null != t ? (o.userTrialOffers[t.trial_id] = t, o.userDiscountOffers = {}) : null != r ? (o.userDiscountOffers[r.discount_id] = r, o.userTrialOffers = {}) : null != n && (o.userDiscountOffers[n.discount_id] = n, o.userTrialOffers = {}), o.userOffersLastFetchedAtDate = Date.now()
   },
   BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: function(e) {
     let {
@@ -113,5 +113,5 @@ var R = new d(i.default, {
     } = e;
     null != t ? o.userTrialOffers[t.trial_id] = t : o.userTrialOffers = {}, null != r ? o.userDiscountOffers[r.discount_id] = r : null != n ? o.userDiscountOffers[n.discount_id] = n : o.userDiscountOffers = {}, o.userOffersLastFetchedAtDate = Date.now()
   },
-  LOGOUT: _
+  LOGOUT: c
 })

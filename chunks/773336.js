@@ -14,10 +14,10 @@ E.r(_), E.d(_, {
     return I
   },
   isLinux: function() {
-    return s
+    return T
   },
   isDesktop: function() {
-    return T
+    return s
   },
   isWeb: function() {
     return S
@@ -59,12 +59,12 @@ function I() {
   return "darwin" === a
 }
 
-function s() {
+function T() {
   return "linux" === a
 }
 
-function T() {
-  return i() || I() || s()
+function s() {
+  return i() || I() || T()
 }
 
 function S() {
@@ -89,7 +89,7 @@ function R() {
 }
 
 function l() {
-  return i() ? "WINDOWS" : I() ? "OSX" : s() ? "LINUX" : "WEB"
+  return i() ? "WINDOWS" : I() ? "OSX" : T() ? "LINUX" : "WEB"
 }
 
 function u() {

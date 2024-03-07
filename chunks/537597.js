@@ -16,8 +16,8 @@ function I(e) {
   let {
     channelId: _,
     warningId: I,
-    senderId: s,
-    warningType: T
+    senderId: T,
+    warningType: s
   } = e;
   if (!!(0, i.isEligibleForInappropriateConversationWarning)({
       location: "takeover-modal"
@@ -28,8 +28,8 @@ function I(e) {
     return E => (0, t.jsx)(e, {
       channelId: _,
       warningId: I,
-      senderId: s,
-      warningType: T,
+      senderId: T,
+      warningType: s,
       modalProps: E
     })
   }, {
@@ -37,9 +37,9 @@ function I(e) {
     onCloseCallback: () => {
       (0, r.dismissChannelSafetyWarnings)(_, [I]), (0, a.trackCtaEvent)({
         channelId: _,
-        senderId: s,
+        senderId: T,
         warningId: I,
-        warningType: T,
+        warningType: s,
         cta: a.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS,
         isNudgeWarning: !1
       })

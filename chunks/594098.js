@@ -70,8 +70,8 @@ function P(e) {
       mediaLayoutType: g,
       limitResponsiveWidth: h = !0,
       accessory: x,
-      zoomable: N,
-      original: v,
+      zoomable: v,
+      original: N,
       children: A,
       renderAccessory: U,
       onClick: b,
@@ -113,7 +113,7 @@ function P(e) {
       focusTarget: this._clickableRef,
       children: (0, i.jsxs)("div", {
         className: s(C.imageWrapper, {
-          [C.imageZoom]: N,
+          [C.imageZoom]: v,
           [C.imageWrapperBackground]: r !== T.ImageReadyStates.READY,
           [C.clickable]: null != b
         }, t),
@@ -131,12 +131,12 @@ function P(e) {
           } : e
         }(F, h, y, g),
         ...j,
-        children: [null != v && (0, i.jsx)("a", {
+        children: [null != N && (0, i.jsx)("a", {
           tabIndex: -1,
           onClick: b,
           "aria-hidden": !0,
           className: C.originalLink,
-          href: v,
+          href: N,
           ref: this._containerRef,
           "data-role": "img",
           "data-safe-src": l

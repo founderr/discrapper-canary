@@ -12,8 +12,8 @@ let {
   link: a,
   strong: i,
   u: I,
-  br: s,
-  em: T,
+  br: T,
+  em: s,
   image: S,
   text: N
 } = t.defaultRules;
@@ -30,8 +30,8 @@ var O = {
   },
   strong: i,
   u: I,
-  br: s,
-  em: T,
+  br: T,
+  em: s,
   image: S,
   hook: {
     order: N.order,

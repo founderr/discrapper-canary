@@ -11,8 +11,8 @@ var t = E("446674"),
   a = E("234222");
 let i = {},
   I = {},
-  s = null,
   T = null,
+  s = null,
   S = null,
   N = "lastChangeLogId",
   O = "lastChangeLogDate",
@@ -35,7 +35,7 @@ class u extends t.default.Store {
     return null !== (t = null === (E = i[e]) || void 0 === E ? void 0 : E[_]) && void 0 !== t ? t : null
   }
   latestChangelogId() {
-    return s
+    return T
   }
   getChangelogLoadStatus(e, _) {
     var E, t;
@@ -48,7 +48,7 @@ class u extends t.default.Store {
     return S
   }
   overrideId() {
-    return T
+    return s
   }
   lastSeenChangelogId() {
     return A
@@ -89,7 +89,7 @@ var L = new u(n.default, {
       config: _,
       latestChangelogId: E
     } = e;
-    s = E, S = _
+    T = E, S = _
   },
   CHANGE_LOG_FETCH_SUCCESS: function(e) {
     let {
@@ -117,7 +117,7 @@ var L = new u(n.default, {
     let {
       id: _
     } = e;
-    T = _
+    s = _
   },
   CHANGE_LOG_MARK_SEEN: function(e) {
     let {

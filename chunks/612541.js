@@ -9,8 +9,8 @@ var r = E("450911"),
   a = E("267363"),
   i = E("990766"),
   I = E("689988"),
-  s = E("161454"),
-  T = E("374014"),
+  T = E("161454"),
+  s = E("374014"),
   S = E("845579"),
   N = E("271938"),
   O = E("42203"),
@@ -25,7 +25,7 @@ var r = E("450911"),
 let d = [];
 class U extends I.default {
   handleRunningGamesChange() {
-    let e = s.default.getVisibleGame();
+    let e = T.default.getVisibleGame();
     if (null == e) return;
     let {
       canBroadcast: _
@@ -37,7 +37,7 @@ class U extends I.default {
     if (!_ || null != E || !S.BroadcastAutoBroadcast.getSetting() || !o || !n) return;
     let r = null != d.find(_ => _.pid === e.pid);
     if (r) return;
-    d = s.default.getRunningGames();
+    d = T.default.getRunningGames();
     let a = (0, C.getCanStartBroadcast)();
     if (!a) return;
     let I = R.default.getVoiceChannelId();
@@ -57,7 +57,7 @@ class U extends I.default {
       streamKey: _
     } = e;
     if (null == t) return;
-    let E = (0, T.decodeStreamKey)(_),
+    let E = (0, s.decodeStreamKey)(_),
       {
         ownerId: r,
         channelId: a
@@ -66,8 +66,8 @@ class U extends I.default {
     let i = N.default.getId();
     if (r !== i) return;
     let I = O.default.getChannel(a),
-      s = null != I && I.isBroadcastChannel();
-    null != I && r === I.ownerId && s && (t = null, o = null, n = null, (0, u.stopBroadcast)())
+      T = null != I && I.isBroadcastChannel();
+    null != I && r === I.ownerId && T && (t = null, o = null, n = null, (0, u.stopBroadcast)())
   }
   handleStartBroadcastStream(e) {
     let {

@@ -11,9 +11,9 @@ var t = E("913144"),
   a = E("42203"),
   i = E("18494"),
   I = E("123647"),
-  s = E("49111");
+  T = E("49111");
 
-function T() {
+function s() {
   ! function() {
     let e = i.default.getVoiceChannelId(),
       _ = r.default.bitrate;
@@ -30,7 +30,7 @@ function T() {
     if (null == _) return;
     let o = a.default.getChannel(_);
     if (null == o) return;
-    let n = null !== (e = o.videoQualityMode) && void 0 !== e ? e : s.VideoQualityMode.AUTO;
+    let n = null !== (e = o.videoQualityMode) && void 0 !== e ? e : T.VideoQualityMode.AUTO;
     E !== n && t.default.dispatch({
       type: "SET_CHANNEL_VIDEO_QUALITY_MODE",
       mode: n
@@ -42,7 +42,7 @@ function S(e) {
   let {
     channels: _
   } = e;
-  for (let e of _) i.default.getVoiceChannelId() === e.id && T()
+  for (let e of _) i.default.getVoiceChannelId() === e.id && s()
 }
 
 function N(e) {
@@ -50,7 +50,7 @@ function N(e) {
     voiceStates: _
   } = e;
   _.forEach(e => {
-    n.default.getSessionId() === e.sessionId && T()
+    n.default.getSessionId() === e.sessionId && s()
   })
 }
 class O extends o.default {

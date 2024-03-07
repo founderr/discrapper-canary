@@ -12,8 +12,8 @@ var o = E("77078"),
   a = E("582415"),
   i = E("643130"),
   I = E("292687"),
-  s = E("271938"),
-  T = E("42203"),
+  T = E("271938"),
+  s = E("42203"),
   S = E("824563"),
   N = E("945956"),
   O = E("205817"),
@@ -51,7 +51,7 @@ class u extends A.default {
       let {
         streamKey: n,
         canShowFeedback: i
-      } = e, I = (0, r.decodeStreamKey)(n), T = (0, a.getStreamerApplication)(I, S.default), N = null !== (_ = O.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, A = {
+      } = e, I = (0, r.decodeStreamKey)(n), s = (0, a.getStreamerApplication)(I, S.default), N = null !== (_ = O.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, A = {
         media_session_id: O.default.getMediaSessionId(n),
         rtc_connection_id: O.default.getRtcConnectionId(n),
         stream_region: O.default.getRegion(n),
@@ -65,8 +65,8 @@ class u extends A.default {
           } = await E.el("363787").then(E.bind(E, "363787"));
           return _ => (0, t.jsx)(e, {
             stream: I,
-            streamApplication: T,
-            isStreamer: I.ownerId === s.default.getId(),
+            streamApplication: s,
+            isStreamer: I.ownerId === T.default.getId(),
             ..._,
             analyticsData: A
           })
@@ -92,11 +92,11 @@ class u extends A.default {
         applicationId: _,
         channelId: r,
         showFeedback: a
-      } = e, i = n.default.getApplication(_), s = T.default.getChannel(r), S = {
+      } = e, i = n.default.getApplication(_), T = s.default.getChannel(r), S = {
         rtc_connection_id: N.default.getRTCConnectionId(),
         media_session_id: N.default.getMediaSessionId()
       }, O = I.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT), A = O ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT;
-      null != i && null != s && a && this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY, () => {
+      null != i && null != T && a && this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY, () => {
         (0, o.openModalLazy)(async () => {
           let {
             default: e
@@ -104,7 +104,7 @@ class u extends A.default {
           return _ => (0, t.jsx)(e, {
             ..._,
             activityApplication: i,
-            channel: s,
+            channel: T,
             analyticsData: S
           })
         }, {

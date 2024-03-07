@@ -14,7 +14,7 @@ var a = E("139514"),
   i = E("312016");
 let I = new Set;
 
-function s(e) {
+function T(e) {
   let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   if (_ && !I.has(e.channel_id)) return;
   let E = (0, i.default)(e.content);
@@ -38,7 +38,7 @@ function s(e) {
     else throw Error("Unknown coded link type: ".concat(_))
   })
 }
-class T extends t.default {
+class s extends t.default {
   handleConnectionOpen() {
     I.clear()
   }
@@ -52,37 +52,37 @@ class T extends t.default {
     let {
       message: _
     } = e;
-    return s(_, !0)
+    return T(_, !0)
   }
   handleLoadMessages(e) {
     let {
       channelId: _,
       messages: E
     } = e;
-    I.add(_), E.forEach(e => s(e, !0))
+    I.add(_), E.forEach(e => T(e, !0))
   }
   handleLoadRecentMentions(e) {
     let {
       messages: _
     } = e;
-    _.forEach(e => s(e))
+    _.forEach(e => T(e))
   }
   handleLoadPinnedMessages(e) {
     let {
       messages: _
     } = e;
-    _.forEach(e => s(e))
+    _.forEach(e => T(e))
   }
   handleSearchFinish(e) {
     e.messages.forEach(e => {
-      e.forEach(e => s(e))
+      e.forEach(e => T(e))
     })
   }
   handleGuildFeedFetchSuccess(e) {
     let {
       data: _
     } = e;
-    (0, o.getMessagesFromGuildFeedFetch)(_).forEach(e => s(e))
+    (0, o.getMessagesFromGuildFeedFetch)(_).forEach(e => T(e))
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -106,4 +106,4 @@ class T extends t.default {
     }
   }
 }
-var S = new T
+var S = new s

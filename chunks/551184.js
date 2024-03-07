@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return T
+    return s
   }
 });
 var t = E("37983"),
@@ -15,7 +15,7 @@ let I = {
   MEDIUM: i.sizeMedium,
   LARGE: i.sizeLarge
 };
-class s extends o.PureComponent {
+class T extends o.PureComponent {
   calculateScroll() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._scroller;
     if (null == e) return;
@@ -76,9 +76,9 @@ class s extends o.PureComponent {
     }
   }
 }
-s.Header = a.ModalHeader, s.Footer = a.ModalFooter, s.Content = a.ModalContent, s.ListContent = a.ModalListContent, s.CloseButton = a.ModalCloseButton, s.Sizes = I, s.defaultProps = {
+T.Header = a.ModalHeader, T.Footer = a.ModalFooter, T.Content = a.ModalContent, T.ListContent = a.ModalListContent, T.CloseButton = a.ModalCloseButton, T.Sizes = I, T.defaultProps = {
   fullscreenOnMobile: !0,
   size: I.SMALL,
   tag: "div"
 };
-var T = s
+var s = T

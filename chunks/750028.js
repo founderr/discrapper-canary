@@ -7,7 +7,7 @@ E.r(_), E.d(_, {
     return I
   },
   Int32Value: function() {
-    return T
+    return s
   },
   UInt32Value: function() {
     return N
@@ -204,7 +204,7 @@ class i extends t.MessageType {
   }
 }
 let I = new i;
-class s extends t.MessageType {
+class T extends t.MessageType {
   internalJsonWrite(e, _) {
     return this.refJsonWriter.scalar(5, e.value, "value", !1, !0)
   }
@@ -249,7 +249,7 @@ class s extends t.MessageType {
     }])
   }
 }
-let T = new s;
+let s = new T;
 class S extends t.MessageType {
   internalJsonWrite(e, _) {
     return this.refJsonWriter.scalar(13, e.value, "value", !1, !0)

@@ -4,7 +4,7 @@
         return d
       },
       default: function() {
-        return c
+        return i
       }
     });
     var s = t("37983");
@@ -19,7 +19,7 @@
       })
     }
 
-    function c() {
+    function i() {
       return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsx)(n, {})
       })
