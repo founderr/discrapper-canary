@@ -12827,7 +12827,8 @@ html.decorate-links .lowSaturationUnderline__95e71 {
 }
 
 .autocompleteRowContentPrimary__533b6 {
-    flex: 0 2 auto;
+    flex-shrink: 1;
+    flex-grow: 0;
     overflow: hidden;
     min-width: 10ch
 }
@@ -12849,7 +12850,10 @@ html.decorate-links .lowSaturationUnderline__95e71 {
 }
 
 .autocompleteRowContentSecondary__6f0be {
-    flex: 1 1 auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 10ch;
+    min-width: 10ch;
     margin-left: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
