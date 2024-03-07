@@ -6178,6 +6178,7 @@ e.exports = Object.freeze({
   TERMS_AGREEMENT_DESCRIPTION_1: "We announced updates to the policies below. The changes are now in effect. To agree, just keep using Discord.",
   TERMS_AGREEMENT_DESCRIPTION_2: "We encourage you to read the updated documents in full, as they apply to your use of Discord. We’ve explained some of the most important changes in our blog post.",
   TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION: "We announced our annual updates to our policies last month, which are now in effect. Check out our [blog post](https://discord.com/blog/important-policy-updates) for a summary of these changes, and read the full policies below.",
+  TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION: "By clicking Agree, you acknowledge that you agree to Discord’s Terms of Service and have read our Privacy Policy.",
   COMMUNITY_GUIDELINES: "[Community Guidelines]({url})",
   BLOG_POST: "[Our blog post]({url})",
   SEARCH_FILTER_CONTEXT_MENU_FROM: "From a specific person",
