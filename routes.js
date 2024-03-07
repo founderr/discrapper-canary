@@ -1567,7 +1567,8 @@
                     ADD_SAFETY_WARNING: _ => "/channels/".concat(_, "/add-safety-warning"),
                     MY_CONTENT_INVENTORY: "/content-inventory/users/@me",
                     USER_LOOTBOX_DATA: "/users/@me/lootboxes",
-                    USER_LOOTBOX_OPEN_ITEM: "/users/@me/lootboxes/open"
+                    USER_LOOTBOX_OPEN_ITEM: "/users/@me/lootboxes/open",
+                    USER_LOOTBOX_REDEEM_PRIZE: "/users/@me/lootboxes/redeem-prize"
                 }),
                 a5 = Object.freeze({
                     INDEX: "/",
