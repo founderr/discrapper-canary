@@ -4,17 +4,17 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var l = n("37983"),
-  i = n("884691"),
+var i = n("37983"),
+  l = n("884691"),
   a = n("599110");
 
 function s(e) {
   var t;
-  let n = i.forwardRef((t, n) => (0, l.jsx)(a.AnalyticsContext.Consumer, {
-    children: i => (0, l.jsx)(e, {
+  let n = l.forwardRef((t, n) => (0, i.jsx)(a.AnalyticsContext.Consumer, {
+    children: l => (0, i.jsx)(e, {
       ...t,
       ref: n,
-      analyticsContext: i
+      analyticsContext: l
     })
   }));
   return n.displayName = "withAnalyticsContext(".concat(null !== (t = e.displayName) && void 0 !== t ? t : e.name, ")"), n

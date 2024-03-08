@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
     return u
   }
 }), n("222007"), n("70102"), n("424973");
-var l = n("436443");
+var i = n("436443");
 n("86256");
-let i = l.default.listLanguages(),
+let l = i.default.listLanguages(),
   a = {};
-for (let e of i) {
+for (let e of l) {
   e = e.toLowerCase();
-  let t = l.default.getLanguage(e);
+  let t = i.default.getLanguage(e);
   if (null == t) continue;
   let n = t.aliases;
   if (a[e] = e, null != n)
@@ -34,10 +34,10 @@ function o(e) {
 function u(e) {
   let t;
   let n = [],
-    l = /\\|```/g;
-  for (; null != (t = l.exec(e));) {
+    i = /\\|```/g;
+  for (; null != (t = i.exec(e));) {
     if ("\\" === t[0]) {
-      l.lastIndex += 1;
+      i.lastIndex += 1;
       continue
     }
     n.push(t.index)

@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
-var l = n("866227"),
-  i = n.n(l),
+var i = n("866227"),
+  l = n.n(i),
   a = n("446674"),
   s = n("913144"),
   r = n("299039");
@@ -34,8 +34,8 @@ class f extends a.default.PersistedStore {
     if (null == n) return !0;
     if (r.default.compare(t, n.id) > 0) return !0;
     {
-      let e = i(n.lastSeen),
-        t = i().isBefore(e.add(2, "weeks"));
+      let e = l(n.lastSeen),
+        t = l().isBefore(e.add(2, "weeks"));
       return t && !n.acknowledged
     }
   }
@@ -44,9 +44,9 @@ f.displayName = "NewlyAddedEmojiStore", f.persistKey = "NewlyAddedEmojiStore", f
   let t = e.lastSeenNewlyAddedEmojiIds,
     n = {};
   for (let e in t) {
-    let l = t[e];
+    let i = t[e];
     n[e] = {
-      id: l,
+      id: i,
       lastSeen: Date.now(),
       acknowledged: !1
     }
@@ -55,7 +55,7 @@ f.displayName = "NewlyAddedEmojiStore", f.persistKey = "NewlyAddedEmojiStore", f
     lastSeenNewlyAddedEmojiIds: n
   }
 }];
-var m = new f(s.default, {
+var p = new f(s.default, {
   LOGOUT: function() {
     u = o, d = {}
   },
@@ -63,14 +63,14 @@ var m = new f(s.default, {
     var t;
     let {
       guildId: n,
-      emojiId: l
-    } = e, i = null !== (t = d[n]) && void 0 !== t ? t : u.lastSeenNewlyAddedEmojiIds[n];
-    null == i || 0 > r.default.compare(i.id, l) ? d[n] = {
-      id: l,
+      emojiId: i
+    } = e, l = null !== (t = d[n]) && void 0 !== t ? t : u.lastSeenNewlyAddedEmojiIds[n];
+    null == l || 0 > r.default.compare(l.id, i) ? d[n] = {
+      id: i,
       lastSeen: Date.now(),
       acknowledged: !0
     } : d[n] = {
-      ...i,
+      ...l,
       acknowledged: !0
     }
   },
@@ -78,10 +78,10 @@ var m = new f(s.default, {
     var t;
     let {
       guildId: n,
-      emojiId: l
-    } = e, i = null !== (t = d[n]) && void 0 !== t ? t : u.lastSeenNewlyAddedEmojiIds[n];
-    (null == i || 0 > r.default.compare(i.id, l)) && (d[n] = {
-      id: l,
+      emojiId: i
+    } = e, l = null !== (t = d[n]) && void 0 !== t ? t : u.lastSeenNewlyAddedEmojiIds[n];
+    (null == l || 0 > r.default.compare(l.id, i)) && (d[n] = {
+      id: i,
       lastSeen: Date.now(),
       acknowledged: !1
     })

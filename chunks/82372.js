@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   showAppLauncherPopup: function() {
-    return i
+    return l
   },
   dismissAppLauncherPopup: function() {
     return a
@@ -13,29 +13,29 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var l = n("913144");
+var i = n("913144");
 
-function i() {
-  l.default.dispatch({
+function l() {
+  i.default.dispatch({
     type: "APP_LAUNCHER_SHOW_POPUP"
   })
 }
 
 function a() {
-  l.default.dispatch({
+  i.default.dispatch({
     type: "APP_LAUNCHER_DISMISS_POPUP"
   })
 }
 
 function s(e) {
-  l.default.dispatch({
+  i.default.dispatch({
     type: "APP_LAUNCHER_SHOW_APP_DETAIL",
     appDetail: e
   })
 }
 
 function r() {
-  l.default.dispatch({
+  i.default.dispatch({
     type: "APP_LAUNCHER_DISMISS_APP_DETAIL"
   })
 }

@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var l = n("37983"),
-  i = n("884691"),
+var i = n("37983"),
+  l = n("884691"),
   a = n("862337"),
   s = n("782340");
 
@@ -14,7 +14,7 @@ function r(e) {
 }
 
 function o(e) {
-  return class extends i.PureComponent {
+  return class extends l.PureComponent {
     componentDidMount() {
       this._interval.start(1e3, () => this.setState(this.getUpdatedTime()))
     }
@@ -51,18 +51,18 @@ function o(e) {
         timestamps: t,
         ...n
       } = this.props, {
-        hours: i,
+        hours: l,
         minutes: a,
         seconds: r
       } = this.state, o = {
-        hours: this.renderTime(i, !0),
+        hours: this.renderTime(l, !0),
         minutes: this.renderTime(a),
         seconds: this.renderTime(r)
       };
-      return null != t.end ? (0, l.jsx)(e, {
+      return null != t.end ? (0, i.jsx)(e, {
         ...n,
         message: s.default.Messages.USER_ACTIVITY_TIMESTAMP_END.format(o)
-      }) : null != t.start ? (0, l.jsx)(e, {
+      }) : null != t.start ? (0, i.jsx)(e, {
         ...n,
         message: s.default.Messages.USER_ACTIVITY_TIMESTAMP_START.format(o)
       }) : null

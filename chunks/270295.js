@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("414456"),
-  a = n.n(i),
+var l = n("414456"),
+  a = n.n(l),
   s = n("77078"),
   r = n("181114"),
   o = n("915675"),
@@ -17,19 +17,19 @@ function d(e) {
   let {
     children: t,
     className: n,
-    size: i = s.Button.Sizes.MEDIUM,
+    size: l = s.Button.Sizes.MEDIUM,
     onlyShineOnHover: d = !1,
     ...c
   } = e;
-  return (0, l.jsx)(r.default, {
+  return (0, i.jsx)(r.default, {
     ...c,
     color: s.Button.Colors.CUSTOM,
-    size: i,
+    size: l,
     className: a(u.button, n),
     onlyShineOnHover: d,
-    children: (0, l.jsxs)("div", {
+    children: (0, i.jsxs)("div", {
       className: u.buttonContents,
-      children: [(0, l.jsx)(o.default, {
+      children: [(0, i.jsx)(o.default, {
         className: u.icon
       }), t]
     })

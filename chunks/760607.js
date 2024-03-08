@@ -13,10 +13,10 @@ var s = n("75196"),
       height: n = 16,
       color: r = "currentColor",
       foreground: l,
-      ...o
+      ...a
     } = e;
     return (0, i.jsx)("svg", {
-      ...(0, s.default)(o),
+      ...(0, s.default)(a),
       width: t,
       height: n,
       viewBox: "0 0 16 15.2",

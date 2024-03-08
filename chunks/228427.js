@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var i = n("37983");
@@ -9,7 +9,7 @@ n("884691");
 var s = n("469563"),
   r = n("287083"),
   l = n("75196"),
-  o = (0, s.replaceIcon)(function(e) {
+  a = (0, s.replaceIcon)(function(e) {
     let {
       width: t = 32,
       height: n = 32,

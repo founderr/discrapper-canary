@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("414456"),
-  a = n.n(i),
+var l = n("414456"),
+  a = n.n(l),
   s = n("77078"),
   r = n("484815");
 
@@ -15,12 +15,12 @@ function o(e) {
   let {
     children: t,
     className: n,
-    size: i = s.Button.Sizes.SMALL,
+    size: l = s.Button.Sizes.SMALL,
     ...o
   } = e;
-  return (0, l.jsx)(s.Button, {
+  return (0, i.jsx)(s.Button, {
     ...o,
-    size: i,
+    size: l,
     className: a(r.button, n),
     children: t
   })

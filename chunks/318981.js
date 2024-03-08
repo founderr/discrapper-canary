@@ -4,15 +4,15 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var l = n("446674"),
-  i = n("913144"),
+var i = n("446674"),
+  l = n("913144"),
   a = n("49111");
 let s = {},
   r = {
     integration: "",
     query: ""
   };
-class o extends l.default.Store {
+class o extends i.default.Store {
   getResults(e, t) {
     if (null == e || null == t) return null;
     let n = s[e];
@@ -23,14 +23,14 @@ class o extends l.default.Store {
   }
 }
 o.displayName = "IntegrationQueryStore";
-var u = new o(i.default, {
+var u = new o(l.default, {
   INTEGRATION_QUERY: function(e) {
     var t;
     let {
       integration: n,
-      query: l
+      query: i
     } = e;
-    s[n] = null !== (t = s[n]) && void 0 !== t ? t : {}, s[n][l] = {
+    s[n] = null !== (t = s[n]) && void 0 !== t ? t : {}, s[n][i] = {
       loading: !0,
       results: []
     }
@@ -39,11 +39,11 @@ var u = new o(i.default, {
     let {
       integration: t,
       query: n,
-      results: l
+      results: i
     } = e;
     s[t][n] = {
       loading: !1,
-      results: l.map(e => ({
+      results: i.map(e => ({
         type: a.ChannelTextAreaIntegrations[t].type,
         meta: e
       }))

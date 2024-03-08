@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var l = n("862205");
-let i = (0, l.createExperiment)({
+var i = n("862205");
+let l = (0, i.createExperiment)({
   kind: "user",
   id: "2024-01_expanded_gift_entry_points_profile_panel",
   label: "Expanded Gift Entry Points - Profile Panel",
@@ -29,4 +29,4 @@ let i = (0, l.createExperiment)({
     }
   }]
 });
-var a = i
+var a = l

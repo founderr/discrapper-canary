@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return f
   },
   parseBioReactWithoutScrolling: function() {
-    return m
+    return p
   }
 });
-var l = n("917351"),
-  i = n.n(l),
+var i = n("917351"),
+  l = n.n(i),
   a = n("693566"),
   s = n.n(a);
 n("404828");
@@ -24,7 +24,7 @@ new s({
   max: 2e3
 });
 let f = r.reactParserFor(c),
-  m = r.reactParserFor((0, d.default)([i.omit(c, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]), {
+  p = r.reactParserFor((0, d.default)([l.omit(c, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]), {
     emoji: {
       react: () => null
     }

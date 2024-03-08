@@ -1,5 +1,5 @@
 "use strict";
-var l, i;
+var i, l;
 n.r(t), n.d(t, {
   VOICE_RECORDING_MIN_DURATION_MILLIS: function() {
     return a
@@ -7,6 +7,6 @@ n.r(t), n.d(t, {
   WAVEFORM_WAVE_MAX_VALUE: function() {
     return s
   }
-}), (i = l || (l = {}))[i.SENDING = 0] = "SENDING", i[i.CANCELLING = 1] = "CANCELLING", i[i.LOCKING = 2] = "LOCKING", i[i.LOCKED = 3] = "LOCKED";
+}), (l = i || (i = {}))[l.SENDING = 0] = "SENDING", l[l.CANCELLING = 1] = "CANCELLING", l[l.LOCKING = 2] = "LOCKING", l[l.LOCKED = 3] = "LOCKED";
 let a = 500,
   s = 255

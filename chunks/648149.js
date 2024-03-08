@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("77078"),
+var l = n("77078"),
   a = n("566471");
 
 function s(e) {
@@ -14,9 +14,9 @@ function s(e) {
     user: t,
     nickname: n
   } = e, s = null != n;
-  return (0, l.jsx)(i.Avatar, {
+  return (0, i.jsx)(l.Avatar, {
     src: t.getAvatarURL(void 0, s ? 16 : 24),
-    size: s ? i.AvatarSizes.SIZE_16 : i.AvatarSizes.SIZE_24,
+    size: s ? l.AvatarSizes.SIZE_16 : l.AvatarSizes.SIZE_24,
     className: s ? a.miniAvatar : a.largeAvatar,
     "aria-hidden": !0
   })

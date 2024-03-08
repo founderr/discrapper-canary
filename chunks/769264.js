@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return f
   }
 }), n("222007");
-var l = n("446674"),
-  i = n("95410"),
+var i = n("446674"),
+  l = n("95410"),
   a = n("913144"),
   s = n("749866");
 let r = "SpellcheckStore",
@@ -13,14 +13,14 @@ let r = "SpellcheckStore",
   u = new Set;
 
 function d() {
-  i.default.set(r, {
+  l.default.set(r, {
     enabled: o,
     learnedWords: u
   })
 }
-class c extends l.default.Store {
+class c extends i.default.Store {
   initialize() {
-    let e = i.default.get(r);
+    let e = l.default.get(r);
     null != e && (o = e.enabled, u = new Set(e.learnedWords), (0, s.setEnabled)(o), (0, s.setLearnedWords)(u))
   }
   isEnabled() {

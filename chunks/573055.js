@@ -10,9 +10,9 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("272030");
+var l = n("272030");
 
 function a() {
   let e;
@@ -27,11 +27,11 @@ function s(e) {
   let t = a(),
     s = e.target;
   if ((null == s ? void 0 : s.tagName) === "TEXTAREA" || (null == s ? void 0 : s.tagName) === "INPUT") {
-    if ((null == s ? void 0 : s.type) !== "checkbox") return (0, i.openContextMenuLazy)(e, async () => {
+    if ((null == s ? void 0 : s.type) !== "checkbox") return (0, l.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("604288").then(n.bind(n, "604288"));
-      return n => (0, l.jsx)(e, {
+      return n => (0, i.jsx)(e, {
         ...n,
         text: t
       })
@@ -44,30 +44,30 @@ function s(e) {
   } else {
     let a, s, r, o = e.target;
     for (; null != o;) "src" in o && null != o.src && (s = o.src), "href" in o && null != o.href && (a = o.href, r = o.textContent), o = null == o ? void 0 : o.parentNode;
-    if (null != s) return (0, i.openContextMenuLazy)(e, async () => {
+    if (null != s) return (0, l.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("467592").then(n.bind(n, "467592"));
-      return t => (0, l.jsx)(e, {
+      return t => (0, i.jsx)(e, {
         ...t,
         src: null != s ? s : ""
       })
     });
-    if (null != a) return (0, i.openContextMenuLazy)(e, async () => {
+    if (null != a) return (0, l.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("399758").then(n.bind(n, "399758"));
-      return t => (0, l.jsx)(e, {
+      return t => (0, i.jsx)(e, {
         ...t,
         href: a,
         textContent: r
       })
     });
-    else if (null != t && "" !== t) return (0, i.openContextMenuLazy)(e, async () => {
+    else if (null != t && "" !== t) return (0, l.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("622618").then(n.bind(n, "622618"));
-      return n => (0, l.jsx)(e, {
+      return n => (0, i.jsx)(e, {
         ...n,
         text: t
       })
@@ -83,8 +83,8 @@ function r(e) {
   else if ((null == n ? void 0 : n.closest) != null && (null == n ? void 0 : n.closest("[contenteditable=true]")) != null) t = !0;
   else if (null != a() && "" !== a()) t = !0;
   else {
-    let n, l, i = e.target;
-    for (; null != i;) "src" in i && null != i.src && (l = i.src), "href" in i && null != i.href && (n = i.href), i = null == i ? void 0 : i.parentNode;
-    (null != n || null != l) && (t = !0)
+    let n, i, l = e.target;
+    for (; null != l;) "src" in l && null != l.src && (i = l.src), "href" in l && null != l.href && (n = l.href), l = null == l ? void 0 : l.parentNode;
+    (null != n || null != i) && (t = !0)
   }!t && e.preventDefault()
 }

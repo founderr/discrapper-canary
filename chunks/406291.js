@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   MENTION_SENTINEL: function() {
-    return l
+    return i
   },
   CHANNEL_SENTINEL: function() {
-    return i
+    return l
   },
   EMOJI_SENTINEL: function() {
     return a
@@ -19,8 +19,8 @@ n.r(t), n.d(t, {
     return o
   }
 });
-let l = "@",
-  i = "#",
+let i = "@",
+  l = "#",
   a = ":",
   s = "+:",
   r = ":",

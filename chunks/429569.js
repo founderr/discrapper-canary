@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var l = n("862205");
-let i = (0, l.createExperiment)({
+var i = n("862205");
+let l = (0, i.createExperiment)({
   kind: "user",
   id: "2024-02_nitro_custom_emoji_perk_roadblock",
   label: "Nitro Custom Emoji Perk Roadblock",
@@ -20,4 +20,4 @@ let i = (0, l.createExperiment)({
     }
   }]
 });
-var a = i
+var a = l

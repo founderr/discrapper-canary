@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   setDiversityColor: function() {
-    return S
+    return y
   },
   fetchEmoji: function() {
-    return C
+    return g
   },
   uploadEmoji: function() {
-    return T
+    return S
   },
   deleteEmoji: function() {
-    return v
+    return C
   },
   updateEmoji: function() {
     return I
   },
   favoriteEmoji: function() {
-    return N
+    return _
   },
   unfavoriteEmoji: function() {
-    return A
+    return v
   }
 }), n("424973");
-var l = n("917351"),
-  i = n.n(l),
+var i = n("917351"),
+  l = n.n(i),
   a = n("872717"),
   s = n("750028"),
   r = n("913144"),
@@ -32,19 +32,19 @@ var l = n("917351"),
   d = n("867805"),
   c = n("619443"),
   f = n("872173"),
-  m = n("341542"),
-  p = n("404118"),
+  p = n("341542"),
+  m = n("404118"),
   h = n("49111"),
-  E = n("397336"),
-  g = n("782340");
+  x = n("397336"),
+  E = n("782340");
 
-function S(e) {
+function y(e) {
   f.PreloadedUserSettingsActionCreators.updateAsync("textAndImages", t => {
     t.diversitySurrogate = s.StringValue.create(), t.diversitySurrogate.value = e
-  }, E.UserSettingsDelay.FREQUENT_USER_ACTION)
+  }, x.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
-function C(e) {
+function g(e) {
   r.default.dispatch({
     type: "EMOJI_FETCH",
     guildId: e
@@ -61,12 +61,12 @@ function C(e) {
   }))
 }
 
-function T(e) {
+function S(e) {
   let {
     guildId: t,
     image: n,
-    name: l,
-    roles: i
+    name: i,
+    roles: l
   } = e;
   return r.default.dispatch({
     type: "EMOJI_UPLOAD_START",
@@ -75,8 +75,8 @@ function T(e) {
     url: h.Endpoints.GUILD_EMOJIS(t),
     body: {
       image: n,
-      name: l,
-      roles: i
+      name: i,
+      roles: l
     },
     oldFormErrors: !0
   }).then(() => r.default.dispatch({
@@ -88,7 +88,7 @@ function T(e) {
   }), Promise.reject(e)))
 }
 
-function v(e, t) {
+function C(e, t) {
   return r.default.dispatch({
     type: "EMOJI_DELETE",
     guildId: e,
@@ -102,15 +102,15 @@ async function I(e) {
   let {
     guildId: t,
     emojiId: n,
-    name: l,
-    roles: i
+    name: i,
+    roles: l
   } = e;
   try {
     return await a.default.patch({
       url: h.Endpoints.GUILD_EMOJI(t, n),
       body: {
-        name: l,
-        roles: i
+        name: i,
+        roles: l
       },
       oldFormErrors: !0
     })
@@ -119,32 +119,32 @@ async function I(e) {
   }
 }
 
-function _(e) {
-  return m.default.totalUnavailableGuilds > 0 || !c.default.isConnected() ? e : e.filter(e => {
+function T(e) {
+  return p.default.totalUnavailableGuilds > 0 || !c.default.isConnected() ? e : e.filter(e => {
     var t;
     let n = null !== (t = u.default.getCustomEmojiById(e)) && void 0 !== t ? t : d.default.getByName(e);
     return null != n
   })
 }
 
-function N(e) {
+function _(e) {
   var t;
   (function(e) {
-    null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = _(t.emojis), i.size(t.emojis) >= E.MAX_FAVORITES) ? (p.default.show({
-      title: g.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-      body: g.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
-        count: E.MAX_FAVORITES
+    null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = T(t.emojis), l.size(t.emojis) >= x.MAX_FAVORITES) ? (m.default.show({
+      title: E.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+      body: E.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
+        count: x.MAX_FAVORITES
       })
-    }), !1) : !t.emojis.includes(e) && void t.emojis.push(e), E.UserSettingsDelay.INFREQUENT_USER_ACTION)
+    }), !1) : !t.emojis.includes(e) && void t.emojis.push(e), x.UserSettingsDelay.INFREQUENT_USER_ACTION)
   })(null !== (t = e.id) && void 0 !== t ? t : e.name)
 }
 
-function A(e) {
+function v(e) {
   var t;
   (function(e) {
     null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => {
       if (!t.emojis.includes(e)) return !1;
-      t.emojis = t.emojis.filter(t => e !== t), t.emojis = _(t.emojis)
-    }, E.UserSettingsDelay.INFREQUENT_USER_ACTION)
+      t.emojis = t.emojis.filter(t => e !== t), t.emojis = T(t.emojis)
+    }, x.UserSettingsDelay.INFREQUENT_USER_ACTION)
   })(null !== (t = e.id) && void 0 !== t ? t : e.name)
 }

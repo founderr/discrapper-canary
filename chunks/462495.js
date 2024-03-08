@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return E
   }
 }), n("222007"), n("860677");
-var l = n("446674"),
-  i = n("913144"),
+var i = n("446674"),
+  l = n("913144"),
   a = n("377253");
 let s = Object.freeze([]),
   r = {},
@@ -16,11 +16,11 @@ let s = Object.freeze([]),
 
 function f(e, t) {}
 
-function m() {
+function p() {
   c = {}
 }
 
-function p(e, t) {
+function m(e, t) {
   let n = r[e];
   return null != n && (r[e] = n.filter(e => e.id !== t), delete o[t], delete u[t], n.length !== r[e].length)
 }
@@ -32,13 +32,13 @@ function h(e, t) {
     ...e,
     ...t
   } : e);
-  let l = u[t.id];
-  null != l && null != d[l.id] && (d[l.id] = {
-    ...d[l.id],
+  let i = u[t.id];
+  null != i && null != d[i.id] && (d[i.id] = {
+    ...d[i.id],
     ...t
   })
 }
-class E extends l.default.Store {
+class x extends i.default.Store {
   initialize() {
     this.waitFor(a.default)
   }
@@ -56,8 +56,8 @@ class E extends l.default.Store {
     if (null != e) return c[e]
   }
 }
-E.displayName = "UploadStore";
-var g = new E(i.default, {
+x.displayName = "UploadStore";
+var E = new x(l.default, {
   CONNECTION_OPEN: function() {
     c = {}
   },
@@ -68,18 +68,18 @@ var g = new E(i.default, {
     var t;
     let {
       channelId: n,
-      file: l,
-      uploader: i,
+      file: i,
+      uploader: l,
       message: a
     } = e;
-    if (i._aborted || i._errored) return;
+    if (l._aborted || l._errored) return;
     let c = null !== (t = r[n]) && void 0 !== t ? t : s;
-    o[l.id] = i, r[n] = [...c, l], u[l.id] = a;
+    o[i.id] = l, r[n] = [...c, i], u[i.id] = a;
     let {
       items: f
-    } = l;
+    } = i;
     null != f && (d[a.id] = {
-      ...l,
+      ...i,
       items: f
     }), a.nonce
   },
@@ -102,14 +102,14 @@ var g = new E(i.default, {
       channelId: t,
       file: n
     } = e;
-    return p(t, n.id)
+    return m(t, n.id)
   },
   UPLOAD_FAIL: function(e) {
     let {
       channelId: t,
       file: n
     } = e;
-    return p(t, n.id)
+    return m(t, n.id)
   },
   UPLOAD_CANCEL_REQUEST: function(e) {
     let {
@@ -125,16 +125,16 @@ var g = new E(i.default, {
     let {
       file: t,
       itemId: n
-    } = e, l = o[t.id];
-    if (null == l) return !1;
-    setImmediate(() => l.cancelItem(n))
+    } = e, i = o[t.id];
+    if (null == i) return !1;
+    setImmediate(() => i.cancelItem(n))
   },
   UPLOAD_FILE_UPDATE: function(e) {
     let {
       channelId: t,
       file: n
-    } = e, l = u[n.id];
-    null != l && l.nonce, h(t, n)
+    } = e, i = u[n.id];
+    null != i && i.nonce, h(t, n)
   },
   UPLOAD_RESTORE_FAILED_UPLOAD: function(e) {
     let {

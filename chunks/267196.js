@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var l = n("862205");
-let i = (0, l.createExperiment)({
+var i = n("862205");
+let l = (0, i.createExperiment)({
   kind: "user",
   id: "2024-02_activity_react_reply",
   label: "Activity React Reply",
@@ -22,7 +22,7 @@ let i = (0, l.createExperiment)({
 });
 var a = function() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-    t = i.useExperiment({
+    t = l.useExperiment({
       location: "useIsEligibleForActivityReactReply"
     }, {
       autoTrackExposure: e

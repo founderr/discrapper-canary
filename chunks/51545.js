@@ -27,7 +27,7 @@ function u() {
     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
     autoSessionTracking: !1,
     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-    release: "discord_web-699a6c8a65da67566aba40807277d241fb82e6a4",
+    release: "discord_web-34a723c07161557439a58c86702f929cd000b73f",
     beforeSend: e => {
       var t, n;
       return !(null != (t = e).exception && null != t.exception.values && t.exception.values.every(e => null == e.stacktrace || null != e.stacktrace.frames && 1 === e.stacktrace.frames.length) && "canary" !== window.GLOBAL_ENV.RELEASE_CHANNEL || s.some(e => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0)) && !i() && !("Aborted" === (n = e).message || "cancel captcha" === n.message) && l() ? e : null
@@ -45,7 +45,7 @@ function u() {
     })],
     ignoreErrors: ["EADDRINUSE", "BetterDiscord", "EnhancedDiscord", "Powercord", "RecipeWebview", "jQuery", "localStorage", "has already been declared", "Cannot call hover while not dragging.", "Cannot call beginDrag while dragging.", "getHostNode", "setupCSS", "on missing remote object", "ChunkLoadError", "Cannot find module 'discord_utils'", "Failed to setup Krisp module", "Error invoking remote method 'DISCORD_NATIVE_MODULES_INSTALL': Error: Module updater is not available!", "Non-Error promise rejection captured with keys:", "Request has been terminated", "Cannot resolve a Slate point from DOM point", "Failed to fetch", "no suitable image found", "ResizeObserver loop limit exceeded", "ResizeObserver loop completed with undelivered notifications.", "The play() request was interrupted", "could not play audio", "notosans-400-normalitalic"],
     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
-  }), a.setTag("buildNumber", (e = "273426", "273426")), a.setTag("builtAt", String("1709864830053"));
+  }), a.setTag("buildNumber", (e = "273515", "273515")), a.setTag("builtAt", String("1709920941881"));
   let t = window.GLOBAL_ENV.SENTRY_TAGS;
   if (null != t && "object" == typeof t)
     for (let e in t) a.setTag(e, t[e]);

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   FIRST_BLOCK_PATH: function() {
-    return l
+    return i
   },
   FIRST_TEXT_PATH: function() {
-    return i
+    return l
   },
   FIRST_TEXT_POINT: function() {
     return a
@@ -16,8 +16,8 @@ n.r(t), n.d(t, {
     return r
   }
 });
-let l = [0],
-  i = [0, 0],
+let i = [0],
+  l = [0, 0],
   a = {
     path: [0, 0],
     offset: 0

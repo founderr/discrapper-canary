@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var l = n("446674"),
-  i = n("913144");
+var i = n("446674"),
+  l = n("913144");
 let a = [],
   s = null;
-class r extends l.default.Store {
+class r extends i.default.Store {
   getLastFetchTimeMs() {
     return s
   }
@@ -17,7 +17,7 @@ class r extends l.default.Store {
   }
 }
 r.displayName = "ApplicationDirectoryCategoriesStore";
-var o = new r(i.default, {
+var o = new r(l.default, {
   APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: function(e) {
     let {
       categories: t

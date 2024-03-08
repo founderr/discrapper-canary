@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("77078"),
+var l = n("77078"),
   a = n("599110"),
   s = n("49111");
 
@@ -25,11 +25,11 @@ function r(e) {
   }), a.default.track(s.AnalyticEvents.OPEN_MODAL, {
     type: s.AnalyticsSections.STICKER_PACK_VIEW_ALL,
     location: u
-  }), (0, i.openModalLazy)(async () => {
+  }), (0, l.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("656137").then(n.bind(n, "656137"));
-    return n => (0, l.jsx)(e, {
+    return n => (0, i.jsx)(e, {
       stickerPack: t,
       ...n
     })

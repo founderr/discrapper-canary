@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return r
   }
 }), n("222007");
-var l = n("83800"),
-  i = n("939563"),
+var i = n("83800"),
+  l = n("939563"),
   a = n("385887");
 let s = ["applicationCommand"];
 
@@ -28,11 +28,11 @@ function r(e) {
       n(a.join(" "));
       return
     }
-    l.HistoryUtils.withSingleEntry(e, () => {
+    i.HistoryUtils.withSingleEntry(e, () => {
       let t = !1;
-      for (let l of a) t && i.SlateTransforms.splitNodes(e, {
+      for (let i of a) t && l.SlateTransforms.splitNodes(e, {
         always: !0
-      }), n(l), t = !0
+      }), n(i), t = !0
     })
   }, e
 }

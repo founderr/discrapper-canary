@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   INACTIVE_CATEGORY_INDEX: function() {
-    return i
+    return l
   },
   EmojiPickerStore: function() {
     return r
@@ -16,8 +16,8 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var l = n("308503");
-let i = -1,
+var i = n("308503");
+let l = -1,
   a = Object.freeze({
     inspectedExpressionPosition: {
       rowIndex: 0,
@@ -28,16 +28,16 @@ let i = -1,
   });
 
 function s() {
-  let e = (0, l.default)(e => a);
+  let e = (0, i.default)(e => a);
   return {
     useStore: e,
     getState: () => e.getState(),
-    setInspectedExpressionPosition: (t, n, l) => {
+    setInspectedExpressionPosition: (t, n, i) => {
       e.setState({
         inspectedExpressionPosition: {
           rowIndex: n,
           columnIndex: t,
-          source: l
+          source: i
         }
       })
     },

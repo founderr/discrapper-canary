@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("414456"),
-  a = n.n(i),
+var l = n("414456"),
+  a = n.n(l),
   s = n("227422"),
   r = n("476263"),
   o = n("547620"),
@@ -22,16 +22,16 @@ let c = {
   },
   f = e => {
     let t, {
-      game: i,
+      game: l,
       guild: f,
-      skuId: m,
-      pid: p,
+      skuId: p,
+      pid: m,
       className: h,
-      guildClassName: E,
-      size: g = c.MEDIUM,
-      ...S
+      guildClassName: x,
+      size: E = c.MEDIUM,
+      ...y
     } = e;
-    if (null != m && (t = function(e) {
+    if (null != p && (t = function(e) {
         if (null == e) return null;
         switch (e) {
           case u.PremiumSubscriptionSKUs.GUILD:
@@ -46,7 +46,7 @@ let c = {
           default:
             return null
         }
-      }(m)), null != i && null == t && (t = i.getIconURL(function(e) {
+      }(p)), null != l && null == t && (t = l.getIconURL(function(e) {
         switch (e) {
           case c.XXSMALL:
             return 16;
@@ -61,7 +61,7 @@ let c = {
           default:
             return 80
         }
-      }(g))), null == (t = (0, s.default)(p, t)) && null != f) {
+      }(E))), null == (t = (0, s.default)(m, t)) && null != f) {
       let e = function(e) {
         switch (e) {
           case c.XSMALL:
@@ -74,22 +74,22 @@ let c = {
           case c.MEDIUM:
             return r.default.Sizes.MEDIUM
         }
-      }(g);
-      return (0, l.jsx)(r.default, {
-        className: a(d.gameIcon, E, h),
+      }(E);
+      return (0, i.jsx)(r.default, {
+        className: a(d.gameIcon, x, h),
         guild: f,
         size: e
       })
     }
-    return null == t ? (0, l.jsx)(o.default, {
-      className: a(d.gameIcon, g, h)
-    }) : (0, l.jsx)("div", {
-      ...S,
-      className: a(d.gameIcon, g, h),
+    return null == t ? (0, i.jsx)(o.default, {
+      className: a(d.gameIcon, E, h)
+    }) : (0, i.jsx)("div", {
+      ...y,
+      className: a(d.gameIcon, E, h),
       style: {
         backgroundImage: "url('".concat(t, "')")
       }
     })
   };
 f.Sizes = c;
-var m = f
+var p = f

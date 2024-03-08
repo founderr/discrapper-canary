@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return r
   }
 }), n("222007");
-var l = n("884691"),
-  i = n("721698"),
+var i = n("884691"),
+  l = n("721698"),
   a = n("718517"),
   s = n("482626");
 
@@ -13,9 +13,9 @@ function r(e) {
   let {
     sectionId: t,
     commandsByActiveSection: n
-  } = e, [r, o] = l.useState(s.CommandListSortOrder.ALPHABETICAL), u = l.useMemo(() => {
-    var e, l;
-    return null !== (l = null === (e = n.find(e => e.section.id === t)) || void 0 === e ? void 0 : e.data) && void 0 !== l ? l : []
+  } = e, [r, o] = i.useState(s.CommandListSortOrder.ALPHABETICAL), u = i.useMemo(() => {
+    var e, i;
+    return null !== (i = null === (e = n.find(e => e.section.id === t)) || void 0 === e ? void 0 : e.data) && void 0 !== i ? i : []
   }, [n, t]), {
     popularSortedCommands: d,
     canSort: c
@@ -23,7 +23,7 @@ function r(e) {
     let {
       alphabeticalSortedCommands: t
     } = e;
-    return l.useMemo(() => {
+    return i.useMemo(() => {
       if (t.length <= 1) return {
         popularSortedCommands: t,
         canSort: !1
@@ -35,11 +35,11 @@ function r(e) {
         }));
       return e ? (n.sort((e, t) => {
         let n = e.command.global_popularity_rank,
-          l = t.command.global_popularity_rank;
-        if (null != n && null != l) {
-          if (n !== l) return n - l
+          i = t.command.global_popularity_rank;
+        if (null != n && null != i) {
+          if (n !== i) return n - i
         } else if (null != n) return -1;
-        else if (null != l) return 1;
+        else if (null != i) return 1;
         return e.alphabeticalSortIndex - t.alphabeticalSortIndex
       }), {
         popularSortedCommands: n.map(e => {
@@ -57,11 +57,11 @@ function r(e) {
   }({
     alphabeticalSortedCommands: u
   });
-  l.useEffect(() => {
-    i.getApplication(t, {
+  i.useEffect(() => {
+    l.getApplication(t, {
       dontRefetchMs: a.default.Millis.DAY
     })
-  }, [t]), l.useEffect(() => {
+  }, [t]), i.useEffect(() => {
     c && o(s.CommandListSortOrder.POPULAR)
   }, [c]);
   let f = u;

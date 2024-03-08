@@ -13,11 +13,11 @@ let l = e => {
     width: t = 24,
     height: n = 24,
     color: l = s.default.colors.INTERACTIVE_NORMAL,
-    colorClass: o = "",
-    ...a
+    colorClass: a = "",
+    ...o
   } = e;
   return (0, i.jsx)("svg", {
-    ...(0, r.default)(a),
+    ...(0, r.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: n,
@@ -26,7 +26,7 @@ let l = e => {
     children: (0, i.jsx)("path", {
       fill: "string" == typeof l ? l : l.css,
       d: "M13 6a1 1 0 1 0-2 0v5H6a1 1 0 1 0 0 2h5v5a1 1 0 1 0 2 0v-5h5a1 1 0 1 0 0-2h-5V6Z",
-      className: o
+      className: a
     })
   })
 }
