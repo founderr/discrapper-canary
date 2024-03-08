@@ -6395,6 +6395,7 @@ e.exports = Object.freeze({
   GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION: "Your free {numUnappliedGuildBoostSlots, plural, =1 {Boost} other {Boosts}} {numUnappliedGuildBoostSlots, plural, =1 {is} other {are}} waiting",
   GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING: "Just waiting here until you choose a server to give {numUnappliedGuildBoostSlots, plural, =1 {it} other {them}} to!",
   GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION: "Just waiting here until you choose a server to give {numUnappliedGuildBoostSlots, plural, =1 {it} other {them}} to! Learn more about your Nitro Perks $[here](learnMoreHook).",
+  GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2: "Just waiting here until you **choose a server to give {numUnappliedGuildBoostSlots, plural, =1 {it} other {them}} to!** Learn more about your Nitro Perks $[here](learnMoreHook).",
   GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Cancel Boost",
   GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST: "Uncancel Boost",
   GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER: "Boost any server",
