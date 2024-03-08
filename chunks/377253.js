@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return B
   }
 }), n("222007"), n("702976"), n("424973"), n("860677");
 var i = n("917351"),
@@ -34,9 +34,10 @@ var E = n("432173"),
   D = n("697218"),
   P = n("49111");
 let L = new Set,
-  M = new u.default("MessageStore");
+  M = new u.default("MessageStore"),
+  b = !1;
 
-function b() {
+function U() {
   o.default.forEach(e => {
     o.default.commit(e.mutate({
       ready: !1,
@@ -45,7 +46,7 @@ function b() {
   }), L.clear()
 }
 
-function U() {
+function w() {
   o.default.forEach(e => {
     let {
       channelId: t
@@ -54,15 +55,15 @@ function U() {
   })
 }
 
-function w() {
+function k() {
   o.default.forEach(e => {
     o.default.commit(e.reset(e.map(e => e.set("blocked", N.default.isBlocked(e.author.id)))))
   })
 }
 
-function k(e) {}
+function V(e) {}
 
-function V(e) {
+function G(e) {
   let {
     type: t,
     channelId: n,
@@ -76,7 +77,7 @@ function V(e) {
   l = l.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(r, u, e.colors, a) : n.removeReaction(r, u, a)), o.default.commit(l)
 }
 
-function G(e) {
+function F(e) {
   let {
     type: t,
     messageData: n
@@ -89,7 +90,7 @@ function G(e) {
     return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(c.isNotAutomodEmbed).length) > 0 && (e = e.set("embeds", [])), "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, m.addFlag)(e.flags, P.MessageFlags.EPHEMERAL))), e
   }), o.default.commit(a)
 }
-class F extends r.default.Store {
+class x extends r.default.Store {
   initialize() {
     this.waitFor(D.default, v.default, T.default, C.default, g.default, R.default, O.default, A.default, N.default, I.default), this.syncWith([f.default], () => {})
   }
@@ -147,9 +148,12 @@ class F extends r.default.Store {
     let t = D.default.getCurrentUser();
     return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
   }
+  hasCurrentUserSentMessageSinceAppStart() {
+    return b
+  }
 }
-F.displayName = "MessageStore";
-var x = new F(a.default, {
+x.displayName = "MessageStore";
+var B = new x(a.default, {
   BACKGROUND_SYNC_CHANNEL_MESSAGES: function(e) {
     let {
       changesByChannelId: t
@@ -165,8 +169,8 @@ var x = new F(a.default, {
       n.mergeDelta(t[e].new_messages, t[e].modified_messages, t[e].deleted_message_ids)
     }
   },
-  CONNECTION_OPEN: b,
-  OVERLAY_INITIALIZE: b,
+  CONNECTION_OPEN: U,
+  OVERLAY_INITIALIZE: U,
   CACHE_LOADED: function(e) {
     for (let [t, n] of p.default.entries(e.messages)) {
       let e = o.default.getOrCreate(t).addCachedMessages(n, !0);
@@ -270,8 +274,8 @@ var x = new F(a.default, {
     let r = s.get(n, !0);
     s = (null == r ? void 0 : r.isPoll()) === !0 ? s.remove(n) : s.update(n, e => ((e = e.set("state", P.MessageStates.SEND_FAILED)).isCommandType() && (e = (e = e.set("interactionError", null != i ? i : "")).set("flags", (0, m.addFlag)(e.flags, P.MessageFlags.EPHEMERAL))), e)), o.default.commit(s)
   },
-  MESSAGE_SEND_FAILED_AUTOMOD: G,
-  MESSAGE_EDIT_FAILED_AUTOMOD: G,
+  MESSAGE_SEND_FAILED_AUTOMOD: F,
+  MESSAGE_EDIT_FAILED_AUTOMOD: F,
   MESSAGE_UPDATE: function(e) {
     let t = e.message.id,
       n = e.message.channel_id,
@@ -342,14 +346,14 @@ var x = new F(a.default, {
       hasMoreBefore: !1
     }), o.default.commit(n)
   },
-  CHANNEL_DELETE: U,
-  THREAD_DELETE: U,
-  GUILD_DELETE: U,
-  RELATIONSHIP_ADD: w,
-  RELATIONSHIP_REMOVE: w,
-  GUILD_MEMBERS_CHUNK: k,
-  THREAD_MEMBER_LIST_UPDATE: k,
-  MESSAGE_REACTION_ADD: V,
+  CHANNEL_DELETE: w,
+  THREAD_DELETE: w,
+  GUILD_DELETE: w,
+  RELATIONSHIP_ADD: k,
+  RELATIONSHIP_REMOVE: k,
+  GUILD_MEMBERS_CHUNK: V,
+  THREAD_MEMBER_LIST_UPDATE: V,
+  MESSAGE_REACTION_ADD: G,
   MESSAGE_REACTION_ADD_MANY: function(e) {
     let {
       channelId: t,
@@ -362,7 +366,7 @@ var x = new F(a.default, {
       return e.addReactionBatch(i, null === (t = D.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     }), o.default.commit(s)
   },
-  MESSAGE_REACTION_REMOVE: V,
+  MESSAGE_REACTION_REMOVE: G,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
     let {
       channelId: t,
@@ -402,5 +406,11 @@ var x = new F(a.default, {
       if (null == n) return;
       e = (e = e.remove(i)).merge([n]), L.delete(i), o.default.commit(e)
     }
+  },
+  LOCAL_MESSAGE_CREATE: function(e) {
+    let {
+      message: t
+    } = e, n = D.default.getCurrentUser();
+    null != t && null != t.author && null != n && t.author.id === n.id && (b = !0)
   }
 })
