@@ -319,6 +319,18 @@ let l = [{
     },
     enabled: !0
   }, {
+    type: o.PlatformTypes.ROBLOX,
+    name: "Roblox",
+    icon: {
+      lightPNG: n("740311"),
+      darkPNG: n("665042"),
+      whitePNG: n("640513"),
+      lightSVG: n("331944"),
+      darkSVG: n("531010"),
+      whiteSVG: n("213876")
+    },
+    enabled: !1
+  }, {
     type: o.PlatformTypes.PAYPAL,
     name: "PayPal",
     icon: {
