@@ -126202,6 +126202,8 @@ div.nagbar_c731ff {
     --brand-860-hsl: 235 calc(var(--saturation-factor, 1) * 46.9%) 9.6%;
     --brand-900: hsl(var(--brand-900-hsl) / 1);
     --brand-900-hsl: 233 calc(var(--saturation-factor, 1) * 50%) 3.1%;
+    --bungie: hsl(var(--bungie-hsl) / 1);
+    --bungie-hsl: 197 calc(var(--saturation-factor, 1) * 100%) 44.5%;
     --crunchyroll: hsl(var(--crunchyroll-hsl) / 1);
     --crunchyroll-hsl: 29 calc(var(--saturation-factor, 1) * 93%) 55.5%;
     --discord-8th-bday-blue: hsl(var(--discord-8th-bday-blue-hsl) / 1);
