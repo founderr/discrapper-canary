@@ -1752,6 +1752,6 @@ var tg = i = new tE(S.default, {
     let {
       settings: t
     } = e;
-    !1 === t.decoupledClipsEnabled && (a = null, eT.setClipsSource(null))
+    !1 === t.decoupledClipsEnabled && (a = null, eT.setClipsSource(null)), !1 === t.decoupledClipsEnabled && (a = null, eT.setClipsSource(null))
   }
 })
