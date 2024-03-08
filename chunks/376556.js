@@ -74,7 +74,7 @@ let l = [{
       darkSVG: n("353652"),
       whiteSVG: n("946613")
     },
-    enabled: !1
+    enabled: !0
   }, {
     type: o.PlatformTypes.SKYPE,
     name: "Skype",

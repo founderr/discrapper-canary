@@ -46,8 +46,8 @@ var u = new class e {
         body: {
           metrics: e,
           client_info: {
-            built_at: "1709920941881",
-            build_number: "273515"
+            built_at: "1709926370720",
+            build_number: "273560"
           }
         },
         retries: 1

@@ -104,8 +104,8 @@ var i = n("37983"),
       autoCompletePosition: e1,
       children: e3,
       disableThemedBackground: e7 = !1,
-      emojiPickerCloseOnModalOuterClick: e2,
-      parentModalKey: e6
+      emojiPickerCloseOnModalOuterClick: e6,
+      parentModalKey: e2
     } = e;
     u(null != eL, "chat input type must be set");
     let {
@@ -563,16 +563,16 @@ var i = n("37983"),
           onSelectSticker: tA,
           onSelectSound: tO,
           channel: eR,
-          closeOnModalOuterClick: e2,
-          parentModalKey: e6,
+          closeOnModalOuterClick: e6,
+          parentModalKey: e2,
           position: "top",
           align: "right",
           positionLayerClassName: eo.expressionPickerPositionLayer
         }), tB ? (0, i.jsx)(C.default, {
           positionTargetRef: e4,
           channel: eR,
-          closeOnModalOuterClick: e2,
-          parentModalKey: e6
+          closeOnModalOuterClick: e6,
+          parentModalKey: e2
         }) : null]
       })
     })

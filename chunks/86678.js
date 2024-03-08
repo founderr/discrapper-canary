@@ -209,7 +209,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     eD = P.default.getCurrentUser(),
     ew = (0, U.isPremium)(eD);
   l.useImperativeHandle(t, () => ({
-    onPickerOpen: e6
+    onPickerOpen: e2
   }));
   let {
     location: eF
@@ -251,17 +251,17 @@ var ed = l.memo(l.forwardRef(function(e, t) {
   }), {
     newlyAddedEmojis: e7
   } = (0, F.default)(eP, o), {
-    trackOnPickerOpen: e2
+    trackOnPickerOpen: e6
   } = (0, w.useTrackEmojiPickerOpened)({
     intention: o,
     isBurstReaction: ej,
     analyticsObject: eH
   });
   (0, M.useMaybeFetchPremiumLikelihood)(R.default);
-  let e6 = l.useCallback(() => {
+  let e2 = l.useCallback(() => {
       let e = e7.length > 0 ? e7[0].id : null;
-      (0, I.updateNewlyAddedLastSeen)(eP, e), e2()
-    }, [e2, e7, eP]),
+      (0, I.updateNewlyAddedLastSeen)(eP, e), e6()
+    }, [e6, e7, eP]),
     e8 = (0, K.useEmojiSelectHandler)({
       pickerIntention: o,
       selectedChannel: u,
