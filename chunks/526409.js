@@ -78,7 +78,7 @@ let E = e => {
     let o = await E(r);
     if (null != o) {
       let e = (0, c.toReactionEmoji)(n);
-      (0, d.addReaction)(r, o.id, e)
+      await (0, d.addReaction)(r, o.id, e)
     }
   }, C = async e => {
     let {
@@ -91,5 +91,5 @@ let E = e => {
     g(t, o, r, s), await E(o);
     let d = m.default.getChannel(o),
       c = u.default.parse(d, n);
-    a.default.sendMessage(o, c)
+    await a.default.sendMessage(o, c)
   }
