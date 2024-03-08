@@ -63,6 +63,19 @@ let l = [{
     },
     enabled: !0
   }, {
+    type: o.PlatformTypes.BUNGIE,
+    name: "Bungie.net",
+    color: r.default.unsafe_rawColors.BUNGIE.css,
+    icon: {
+      lightPNG: n("879477"),
+      darkPNG: n("36180"),
+      whitePNG: n("191120"),
+      lightSVG: n("790262"),
+      darkSVG: n("353652"),
+      whiteSVG: n("946613")
+    },
+    enabled: !1
+  }, {
     type: o.PlatformTypes.SKYPE,
     name: "Skype",
     color: r.default.unsafe_rawColors.SKYPE.css,
