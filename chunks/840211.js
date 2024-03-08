@@ -220,8 +220,8 @@ var v = l.memo(function(e) {
     disable: g
   }), N = (0, E.useMutualGuilds)(l), [A, O] = (0, x.useMutualFriends)(l);
   if (!v || g) return null;
-  let k = (null == O || 0 === O.length) && 0 === N.length;
-  return A && k ? null : (0, i.jsxs)("div", {
+  let M = (null == O || 0 === O.length) && 0 === N.length;
+  return A && M ? null : (0, i.jsxs)("div", {
     className: s(C.mainContainer, o),
     children: [S && (0, i.jsx)(_, {
       user: l,

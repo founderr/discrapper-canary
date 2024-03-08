@@ -13,13 +13,13 @@ n.r(t), n.d(t, {
     return O
   },
   RoleMention: function() {
-    return k
-  },
-  ChannelMention: function() {
     return M
   },
-  SoundboardMention: function() {
+  ChannelMention: function() {
     return R
+  },
+  SoundboardMention: function() {
+    return k
   },
   StaticRouteMention: function() {
     return L
@@ -142,7 +142,7 @@ function O(e) {
   return c
 }
 
-function k(e) {
+function M(e) {
   let {
     id: t,
     guildId: n
@@ -161,7 +161,7 @@ function k(e) {
   })
 }
 
-function M(e) {
+function R(e) {
   let {
     id: t
   } = e, n = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(t)), a = I.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
@@ -177,7 +177,7 @@ function M(e) {
   })
 }
 
-function R(e) {
+function k(e) {
   var t;
   let {
     id: n

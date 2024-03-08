@@ -35,9 +35,9 @@ function d(e) {
     rowHeight: N,
     sectionHeaderHeight: A,
     sectionFooterHeight: O,
-    itemNodeWidth: k,
-    listPaddingRight: M,
-    itemNodeMargin: R,
+    itemNodeWidth: M,
+    listPaddingRight: R,
+    itemNodeMargin: k,
     listPadding: L,
     gridNavigatorId: b,
     gridNotice: P,
@@ -56,9 +56,9 @@ function d(e) {
     categories: t,
     collapsedCategories: n,
     gridWidth: H,
-    listPaddingRight: M,
-    itemNodeWidth: k,
-    itemNodeMargin: R
+    listPaddingRight: R,
+    itemNodeWidth: M,
+    itemNodeMargin: k
   }), {
     getItemProps: Z,
     getRowProps: J,

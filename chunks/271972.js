@@ -42,7 +42,7 @@ var g = s.forwardRef(function(e, t) {
   } = (0, u.useListItem)(n), {
     handleFocus: N,
     handleBlur: A
-  } = (0, m.useFocusInside)(_), O = 0 === T, k = null != r;
+  } = (0, m.useFocusInside)(_), O = 0 === T, M = null != r;
   return (0, a.jsx)(d.FocusRing, {
     children: (0, a.jsx)("li", {
       ...v,
@@ -76,7 +76,7 @@ var g = s.forwardRef(function(e, t) {
       ref: t,
       children: (0, a.jsxs)("div", {
         className: E.uploadContainer,
-        children: [s, k ? (0, a.jsx)("div", {
+        children: [s, M ? (0, a.jsx)("div", {
           className: E.actionBarContainer,
           children: (0, a.jsx)("div", {
             className: o(E.actionBar, {

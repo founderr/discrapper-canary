@@ -53,7 +53,7 @@ function I(e) {
     onClose: I,
     onSelect: A,
     appContext: M = g.AppContext.APP
-  } = e, R = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS), N = null !== (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, x = v(n, r, l), O = (0, o.default)(N, M), y = (0, u.default)(N, M, g.NOOP_NULL), L = null == N ? (0, a.jsx)(s.MenuItem, {
+  } = e, R = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS), N = null !== (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, O = v(n, r, l), x = (0, o.default)(N, M), y = (0, u.default)(N, M, g.NOOP_NULL), L = null == N ? (0, a.jsx)(s.MenuItem, {
     id: "share-your-screen",
     label: T.default.Messages.SHARE_YOUR_SCREEN,
     icon: E.default,
@@ -62,7 +62,7 @@ function I(e) {
     children: [S.isPlatformEmbedded ? (0, a.jsx)(s.MenuItem, {
       id: "stream-settings",
       label: T.default.Messages.SCREENSHARE_STREAM_QUALITY,
-      children: O
+      children: x
     }) : null, h ? y : null, R ? (0, a.jsx)(s.MenuItem, {
       id: "change-windows",
       label: T.default.Messages.SCREENSHARE_CHANGE_WINDOWS,
@@ -83,7 +83,7 @@ function I(e) {
       onClose: I,
       "aria-label": null != N ? T.default.Messages.STOP_STREAMING : T.default.Messages.SHARE_YOUR_SCREEN,
       children: [(0, a.jsx)(s.MenuGroup, {
-        children: x.map(e => {
+        children: O.map(e => {
           let {
             stream: t,
             username: n

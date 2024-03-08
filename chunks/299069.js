@@ -33,12 +33,12 @@ function _(e) {
     closePopout: _,
     sound: v,
     channel: N
-  } = e, A = (0, d.default)(), [O, k] = l.useState(!1), {
-    location: M
-  } = (0, u.useAnalyticsContext)(), R = l.useMemo(() => ({
-    ...M,
+  } = e, A = (0, d.default)(), [O, M] = l.useState(!1), {
+    location: R
+  } = (0, u.useAnalyticsContext)(), k = l.useMemo(() => ({
+    ...R,
     section: g.AnalyticsSections.SOUNDBOARD_SOUND_PICKER
-  }), [M]), {
+  }), [R]), {
     analyticsLocations: L
   } = (0, f.default)(c.default.PREMIUM_UPSELL), {
     previewSound: b
@@ -52,13 +52,13 @@ function _(e) {
       type: S.PremiumUpsellTypes.SOUND_PICKER_SOUND_CLICKED,
       is_external: !0,
       location: {
-        ...R,
+        ...k,
         object: g.AnalyticsObjects.SOUNDBOARD_SOUND
       },
       location_stack: L,
       sku_id: x.default.getSkuIdForPremiumType(S.PremiumTypes.TIER_2)
     })
-  }, [L, R]);
+  }, [L, k]);
   let U = l.useCallback(() => {
     h.default.track(g.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
       location_section: g.AnalyticsSections.SOUNDBOARD_SOUND_PICKER_UPSELL
@@ -102,10 +102,10 @@ function _(e) {
         size: o.Button.Sizes.SMALL,
         color: o.Button.Colors.GREEN,
         onClick: () => {
-          k(!0)
+          M(!0)
         },
         onSubscribeModalClose: e => {
-          k(!1), e && a()
+          M(!1), e && a()
         }
       })]
     })]

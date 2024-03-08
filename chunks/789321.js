@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_COLLECTIBLES_UPSELL_HEIGHT: function() {
-    return k
+    return M
   },
   default: function() {
     return L
@@ -48,15 +48,15 @@ function O(e) {
     })
   })
 }
-let k = 76,
-  M = e => (0, i.jsx)(u.Text, {
+let M = 76,
+  R = e => (0, i.jsx)(u.Text, {
     variant: "text-sm/normal",
     color: "text-normal",
     tag: "span",
     className: N.ctaLink,
     children: e
   }),
-  R = e => {
+  k = e => {
     let {
       user: t,
       onClick: n
@@ -95,7 +95,7 @@ var L = e => {
     ref: U,
     height: D
   } = (0, d.default)(), w = l.useMemo(() => ({
-    top: "-".concat((null != D ? D : k) + 6, "px")
+    top: "-".concat((null != D ? D : M) + 6, "px")
   }), [D]), F = (0, o.default)([S.default], () => S.default.getCurrentUser()), B = I.default.canUseCollectibles(F), {
     setUpsellSource: G,
     reset: H
@@ -121,21 +121,21 @@ var L = e => {
     }, [h]);
   if (!A && !L) return null;
   let Z = (0, r.match)([A, L]).with([!0, !0], () => K && W && B ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
-    openShop: M
+    openShop: R
   }) : K && W ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
-    openShop: M
+    openShop: R
   }) : v.default.Messages.COMBINED_COLLECTIBLES_SOCIAL_UPSELL.format({
-    openShop: M
+    openShop: R
   })).with([!0, !1], () => K && B ? v.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
-    openShop: M
+    openShop: R
   }) : v.default.Messages.AVATAR_DECORATIONS_SOCIAL_UPSELL.format({
-    openShop: M
+    openShop: R
   })).with([!1, !0], () => W && B ? v.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
-    openShop: M
+    openShop: R
   }) : (W && v.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NON_NITRO.format({
-    openShop: M
+    openShop: R
   }), v.default.Messages.PROFILE_EFFECTS_SOCIAL_UPSELL.format({
-    openShop: M
+    openShop: R
   }))).otherwise(() => null);
   return (0, i.jsx)("div", {
     style: w,
@@ -146,7 +146,7 @@ var L = e => {
     ref: U,
     children: (0, i.jsxs)("div", {
       className: N.container,
-      children: [A && (0, i.jsx)(R, {
+      children: [A && (0, i.jsx)(k, {
         user: n,
         onClick: Y
       }), (0, i.jsx)(u.Clickable, {

@@ -30,14 +30,14 @@ var i = n("37983"),
   N = n("13030"),
   A = n("782340"),
   O = n("11693");
-let k = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
-  M = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
-  R = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
+let M = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
+  R = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
+  k = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
   L = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
   b = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
   P = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-  j = [k, k, k, k],
-  U = (M + R) * 2 + k,
+  j = [M, M, M, M],
+  U = (R + k) * 2 + M,
   D = b + 2 * P,
   w = e => {
     let {
@@ -51,8 +51,8 @@ let k = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
       let f;
       let g = (null === (u = n[0]) || void 0 === u ? void 0 : u.type) === I.StickerCategoryTypes.FAVORITE,
         S = g ? 1 : 0,
-        k = (null === (c = n[S]) || void 0 === c ? void 0 : c.type) === I.StickerCategoryTypes.RECENT,
-        R = n.length > 0,
+        M = (null === (c = n[S]) || void 0 === c ? void 0 : c.type) === I.StickerCategoryTypes.RECENT,
+        k = n.length > 0,
         b = n.length;
       if (0 === a && g) return (0, i.jsx)("div", {
         role: "listitem",
@@ -61,7 +61,7 @@ let k = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
         children: (0, i.jsx)(o.Clickable, {
           "aria-label": A.default.Messages.CATEGORY_FAVORITE,
           className: s(O.stickerCategory, O.stickerCategoryGeneric, {
-            [O.stickerCategoryGenericDisabled]: R && !g,
+            [O.stickerCategoryGenericDisabled]: k && !g,
             [O.stickerCategoryGenericSelected]: !E && g && 0 === t
           }),
           onClick: r,
@@ -72,15 +72,15 @@ let k = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
           })
         })
       }, "favorites");
-      if (a === S && k) return (0, i.jsx)("div", {
+      if (a === S && M) return (0, i.jsx)("div", {
         role: "listitem",
         "aria-setsize": b,
         "aria-posinset": a,
         children: (0, i.jsx)(o.Clickable, {
           "aria-label": A.default.Messages.STICKER_PICKER_CATEGORIES_RECENT,
           className: s(O.stickerCategory, O.stickerCategoryGeneric, {
-            [O.stickerCategoryGenericDisabled]: R && !k,
-            [O.stickerCategoryGenericSelected]: !E && k && t === S
+            [O.stickerCategoryGenericDisabled]: k && !M,
+            [O.stickerCategoryGenericSelected]: !E && M && t === S
           }),
           onClick: r,
           children: (0, i.jsx)(h.default, {
@@ -107,7 +107,7 @@ let k = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
         let e = C.default.getStickerPack(j.id);
         null != e && (F = e.name, B = (0, i.jsx)(_.default, {
           disableAnimation: !P || E,
-          size: M,
+          size: R,
           sticker: (0, T.getStickerPackPreviewSticker)(e)
         }))
       }
@@ -142,11 +142,11 @@ let k = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
           className: O.guildCategorySeparator
         }, "separator") : null]
       }, j.id)
-    }, [t, p, E, n]), S = l.useCallback((e, t) => t ? U : 0, []), k = l.useCallback((e, t) => {
+    }, [t, p, E, n]), S = l.useCallback((e, t) => t ? U : 0, []), M = l.useCallback((e, t) => {
       let i = n[t],
         l = n[t + 1],
         a = null != l && i.type === I.StickerCategoryTypes.GUILD && l.type !== I.StickerCategoryTypes.GUILD;
-      return M + (a ? D : R)
+      return R + (a ? D : k)
     }, [n]), P = l.useCallback(e => {
       var t;
       let n = null === (t = a.current) || void 0 === t ? void 0 : t.getListDimensions();
@@ -157,7 +157,7 @@ let k = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
     return {
       getScrollOffsetForIndex: S,
       renderCategoryListItem: g,
-      rowHeight: k,
+      rowHeight: M,
       onScroll: P
     }
   };
@@ -176,7 +176,7 @@ var F = e => {
       i = (null === (e = f[0]) || void 0 === e ? void 0 : e.type) === I.StickerCategoryTypes.RECENT,
       l = (null === (t = f[0]) || void 0 === t ? void 0 : t.type) === I.StickerCategoryTypes.FAVORITE,
       a = n + (i ? 1 : 0) + (l ? 1 : 0),
-      s = a * (M + R) - R + D,
+      s = a * (R + k) - k + D,
       r = null != f.find(e => e.type === I.StickerCategoryTypes.PACK);
     return {
       firstStandardStickerCategoryIndex: a + 1,

@@ -92,17 +92,17 @@ function C(e) {
     return e
   }, [N]), {
     canSeeRecentlyHeard: O,
-    canSeeFrequentlyPlayed: k
+    canSeeFrequentlyPlayed: M
   } = (0, f.useRecentlyHeardExperiment)({
     location: "soundboard-useSoundGrid",
     autoTrackExposure: !0
-  }), M = function() {
+  }), R = function() {
     i.useEffect(() => {
       s.FrecencyUserSettingsActionCreators.loadIfNecessary()
     }, []);
     let e = (0, l.useStateFromStores)([p.default], () => p.default.frecentlyPlayedSounds);
     return e
-  }(), R = (0, l.useStateFromStoresArray)([p.default], () => p.default.recentlyHeardSoundIds);
+  }(), k = (0, l.useStateFromStoresArray)([p.default], () => p.default.recentlyHeardSoundIds);
   return i.useMemo(() => {
     let e = [];
     return n ? (S(e, E), {
@@ -119,14 +119,14 @@ function C(e) {
       sections: e,
       guildIds: T,
       allSounds: E,
-      potentialSoundIdsForSection: R,
+      potentialSoundIdsForSection: k,
       sectionType: h.SoundboardSoundGridSectionType.RECENTLY_HEARD,
       sortById: !1
-    }), k && g({
+    }), M && g({
       sections: e,
       guildIds: T,
       allSounds: E,
-      potentialSoundIdsForSection: M.map(e => e.soundId),
+      potentialSoundIdsForSection: R.map(e => e.soundId),
       sectionType: h.SoundboardSoundGridSectionType.FREQUENTLY_USED,
       sortById: !1
     }), ! function(e, t, n, i, l) {
@@ -167,7 +167,7 @@ function C(e) {
       categories: e,
       isFetching: I
     })
-  }, [T, E, C, R, M, k, O, N, A, t, v, _, n, I])
+  }, [T, E, C, k, R, M, O, N, A, t, v, _, n, I])
 }
 
 function I(e, t, n) {
