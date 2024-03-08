@@ -4,9 +4,9 @@ n.r(e), n.d(e, {
     return r
   }
 });
-var u = n("65597"),
-  i = n("271938");
+var i = n("65597"),
+  u = n("271938");
 
 function r() {
-  return (0, u.default)([i.default], () => i.default.isAuthenticated())
+  return (0, i.default)([u.default], () => u.default.isAuthenticated())
 }

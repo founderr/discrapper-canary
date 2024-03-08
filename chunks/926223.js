@@ -4,8 +4,8 @@ n.r(e), n.d(e, {
     return m
   }
 });
-var u = n("446674"),
-  i = n("913144"),
+var i = n("446674"),
+  u = n("913144"),
   r = n("520713");
 let l = "",
   a = null,
@@ -45,7 +45,7 @@ function F(t) {
   } = t;
   P = e
 }
-class h extends u.default.Store {
+class h extends i.default.Store {
   get stripePaymentMethod() {
     return s
   }
@@ -98,7 +98,7 @@ class h extends u.default.Store {
   }
 }
 h.displayName = "NewPaymentSourceStore";
-var m = new h(i.default, {
+var m = new h(u.default, {
   NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: function(t) {
     let {
       stripePaymentMethod: e
@@ -134,9 +134,9 @@ var m = new h(i.default, {
     let {
       email: e,
       nonce: n,
-      billingAddress: u
+      billingAddress: i
     } = t;
-    l = e, a = n, M(u), C = E.length > 0
+    l = e, a = n, M(i), C = E.length > 0
   },
   BRAINTREE_TOKENIZE_VENMO_START: function() {
     o = "", a = null
