@@ -64368,6 +64368,17 @@ html .invoiceCancelRow_c1bfe7 {
     }
 }
 
+.repositioned__384fe .image__88ebc {
+    height: 30px;
+    width: 40px
+}
+
+.repositioned__384fe .buttons_c518ae {
+    position: relative;
+    top: 0;
+    right: 0
+}
+
 .image__88ebc,
 .details__695f1 {
     position: relative
@@ -64503,6 +64514,11 @@ html .invoiceCancelRow_c1bfe7 {
 .toolsButton_cea0b4 {
     position: relative;
     margin-left: 16px
+}
+
+.linkButton__91a92 {
+    position: relative;
+    padding: 0 2px
 }
 
 .externalButton__64cae {
