@@ -9685,7 +9685,7 @@ e.exports = Object.freeze({
   MOBILE_CUSTOM_GIFT_PLAN_SELECTION_BODY: "Warning: gift may cause uncontrollable happiness!",
   MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2: "Choose from {monthlyPrice}/month or {yearlyPrice}/year",
   MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Your recipient will receive:",
-  MOBILE_CUSTOM_GIFT_TITLE: "Gift a Nitro membership",
+  MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "Gift a {nitroTierName} membership",
   MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Gift duration",
   MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH: "Gift {count, plural, one {# month} other {# months}} of {nitroTierName}",
   MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR: "Gift {count, plural, one {# year} other {# years}} of {nitroTierName}",
