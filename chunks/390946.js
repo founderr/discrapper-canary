@@ -105,7 +105,7 @@ function N(e, t, n) {
       var a, l, u;
       t.id in e.guildVersions && e.guildChannels.has(t.id) && (T[t.id] = {
         properties: S.toServer(t),
-        roles: t.roles,
+        roles: m.default.getRoles(t.id),
         emojis: null !== (l = null === (a = i[t.id]) || void 0 === a ? void 0 : a.rawEmojis) && void 0 !== l ? l : null,
         stickers: null !== (u = s.get(t.id)) && void 0 !== u ? u : null,
         readStates: r
@@ -138,7 +138,7 @@ function O(e, t) {
   let r = m.default.getGuild(e.id),
     a = M(e, null == r ? void 0 : {
       properties: S.toServer(r),
-      roles: r.roles,
+      roles: m.default.getRoles(r.id),
       emojis: null !== (i = null === (n = h.default.getGuilds()[r.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
       stickers: null !== (s = E.default.getRawStickersByGuild().get(r.id)) && void 0 !== s ? s : null,
       readStates: {}

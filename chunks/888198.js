@@ -173,7 +173,7 @@ let b = e => {
           id: s
         };
         let r = U(n),
-          a = null != r ? r.roles[s] : null;
+          a = null != r ? c.default.getRole(r.id, s) : null;
         return null == a ? {
           type: "text",
           content: "@".concat(R.default.Messages.DELETED_ROLE_PLACEHOLDER)

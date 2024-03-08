@@ -41,7 +41,7 @@ function T(e, t) {
   if (!t.hasFeature(m.GuildFeatures.CREATOR_MONETIZABLE) && !t.hasFeature(m.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
   let n = f.default.isViewingServerShop(t.id);
   for (let i of Object.keys(e.permissionOverwrites)) {
-    let s = t.getRole(i);
+    let s = E.default.getRole(t.id, i);
     if (!v({
         guildId: t.id,
         role: s,
@@ -50,11 +50,11 @@ function T(e, t) {
     let r = e.permissionOverwrites[i];
     if ((0, c.isChannelAccessGrantedBy)(e, r)) return !0
   }
-  let s = t.getRole(t.getEveryoneRoleId()),
+  let s = E.default.getRole(t.id, t.getEveryoneRoleId()),
     r = null != s && !i.default.has(s.permissions, m.Permissions.VIEW_CHANNEL),
     a = (0, c.isChannelAccessDeniedBy)(e, e.permissionOverwrites[t.id]);
   if (r && !a) {
-    for (let e of Object.values(t.roles))
+    for (let e of Object.values(E.default.getRoles(t.id)))
       if (v({
           guildId: t.id,
           role: e,

@@ -23,14 +23,14 @@ async function p(e) {
   let {
     guildId: t,
     channelId: n
-  } = e, p = _.default.getGuild(t);
+  } = e, p = _.default.getGuild(t), S = _.default.getRoles(t);
   if (null == p && t !== g.ME) return !1;
   if (null == n) return !0;
   if ((0, m.isStaticChannelRoute)(n)) switch (n) {
     case m.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
-      return (0, d.areRoleSubscriptionsVisibleInGuild)(t);
+      return (0, d.areRoleSubscriptionsVisibleInGuild)(t, S);
     case m.StaticChannelRoute.GUILD_SHOP:
-      return (0, s.isGuildShopVisibleInGuild)(p);
+      return (0, s.isGuildShopVisibleInGuild)(p, S);
     case m.StaticChannelRoute.MEMBER_APPLICATIONS:
       return (0, a.canReviewGuildMemberApplications)(t);
     case m.StaticChannelRoute.GUILD_HOME:
@@ -46,6 +46,6 @@ async function p(e) {
     default:
       (0, h.assertNever)(n)
   }
-  let S = f.default.getChannel(n);
-  return (null != S || (await c.default.loadThread(n), null != (S = f.default.getChannel(n)))) && ((0, E.canViewChannel)(S) || i.default.isChannelGatedAndVisible(t, n))
+  let v = f.default.getChannel(n);
+  return (null != v || (await c.default.loadThread(n), null != (v = f.default.getChannel(n)))) && ((0, E.canViewChannel)(v) || i.default.isChannelGatedAndVisible(t, n))
 }

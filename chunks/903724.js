@@ -29,8 +29,8 @@ function c(e) {
   return !!u || !1
 }
 
-function f(e) {
-  return !!c(e) || (0, u.computeHasRoleSubscriptionsInGuild)(e)
+function f(e, t) {
+  return !!c(e) || (0, u.computeHasRoleSubscriptionsInGuild)(e, t)
 }
 
 function _(e) {

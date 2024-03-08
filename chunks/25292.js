@@ -524,7 +524,7 @@ var el = {
     if (g < f && l) {
       let e = n.getGuildId(),
         t = O.default.getGuild(e);
-      null != t && (o(t.roles).filter(t => {
+      null != t && (o(O.default.getRoles(t.id)).filter(t => {
         let {
           mentionable: n,
           name: s,
@@ -559,7 +559,7 @@ var el = {
     })) : [], c = u.length, f = t.toLowerCase(), _ = [];
     if (c < j.MAX_AUTOCOMPLETE_RESULTS && a) {
       let e = O.default.getGuild(n);
-      null != e && (o(e.roles).filter(e => {
+      null != e && (o(O.default.getRoles(e.id)).filter(e => {
         let {
           mentionable: t,
           name: s,
@@ -771,14 +771,13 @@ var el = {
     return !i && e === n
   },
   hasSameRoleAsUsername(e, t) {
-    var n;
     if (!t.isPomelo()) return !1;
-    let i = O.default.getGuild(e.getGuildId()),
-      s = null !== (n = null == i ? void 0 : i.roles) && void 0 !== n ? n : {};
+    let n = O.default.getGuild(e.getGuildId()),
+      i = null != n ? O.default.getRoles(n.id) : {};
     for (let {
         name: e
       }
-      of Object.values(s))
+      of Object.values(i))
       if (t.username.startsWith(e.toLowerCase())) return !0;
     return !1
   }
