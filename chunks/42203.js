@@ -389,7 +389,7 @@ var el = new ea(o.default, {
   },
   CONNECTION_OPEN: function(e) {
     let t = N;
-    for (let n of (P = {}, y = {}, N = {}, D = {}, M = {}, V = {}, w = {}, k = Date.now(), O = e.initialPrivateChannels, e.initialPrivateChannels.forEach(z), e.guilds)) "partial" === n.dataMode && (C.fileOnly("Restoring guild channels for ".concat(n.id, " #:").concat(eo(n.id))), s.forEach(t[n.id], X)), Q(n);
+    for (let n of (P = {}, y = {}, N = {}, D = {}, M = {}, V = {}, w = {}, k = Date.now(), O = e.initialPrivateChannels, e.initialPrivateChannels.forEach(z), e.guilds)) "partial" === n.dataMode && (s.forEach(t[n.id], X), C.fileOnly("Restoring guild channels for ".concat(n.id, " #:").concat(eo(n.id)))), Q(n);
     er()
   },
   GUILD_CREATE: function(e) {
