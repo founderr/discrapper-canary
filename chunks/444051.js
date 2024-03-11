@@ -301,5 +301,8 @@ e.exports = Object.freeze({
   PACKAGES_UNIQUE_PACKAGES_OPENED: "Packages Received",
   PACKAGES_GLOBAL_PACKAGES_OPENED: "Total Packages Opened",
   PACKAGES_OPENED_OUT_OF: "{count, number} / {total, number}",
+  PACKAGES_ENTRYPOINT_TITLE: "Your mail has arrived!",
+  PACKAGES_ENTRYPOINT_DESCRIPTION: "See what you got...",
+  PACKAGES_ENTRYPOINT_CLOSE: "Didn't ask",
   CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity"
 })
