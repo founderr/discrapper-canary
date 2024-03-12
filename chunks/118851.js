@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   resolvePlaintextInlineVoid: function() {
-    return C
+    return T
   },
   resolveApplicationCommandOption: function() {
-    return T
+    return A
   }
 }), n("222007");
 var i = n("679653"),
   l = n("980215"),
   a = n("385976"),
   o = n("867805"),
-  r = n("401690"),
-  s = n("42203"),
+  s = n("401690"),
+  r = n("42203"),
   u = n("923959"),
   d = n("26989"),
   c = n("305961"),
@@ -22,16 +22,16 @@ var i = n("679653"),
   _ = n("149022"),
   I = n("680894");
 
-function C(e, t, n, p) {
+function T(e, t, n, p) {
   let {
     allowUsers: _ = !0,
-    allowRoles: C = !0
+    allowRoles: T = !0
   } = null != p ? p : {};
   switch (e[0]) {
     case "@":
       return function(e, t, n, i, a) {
-        let [o, r] = e.slice(1).split("#", 2), u = null != t ? c.default.getGuild(t) : null, p = (0, l.getClydeExperimentEnabled)(u);
-        if (a && null == r && null != u) {
+        let [o, s] = e.slice(1).split("#", 2), u = null != t ? c.default.getGuild(t) : null, p = (0, l.getClydeExperimentEnabled)(u);
+        if (a && null == s && null != u) {
           for (let e of Object.values(c.default.getRoles(u.id)))
             if (o === e.name) return {
               type: "roleMention",
@@ -42,11 +42,11 @@ function C(e, t, n, p) {
             }
         }
         if (i) {
-          let e = null != n ? s.default.getChannel(n) : null;
+          let e = null != n ? r.default.getChannel(n) : null;
           if (null != e) {
             if (e.isPrivate()) {
               for (let t of e.recipients)
-                if (A(o, r, t)) return {
+                if (E(o, s, t)) return {
                   type: "userMention",
                   userId: t,
                   children: [{
@@ -59,14 +59,14 @@ function C(e, t, n, p) {
                   userId: t
                 }
                 of e)
-                if (A(o, r, t)) return {
+                if (E(o, s, t)) return {
                   type: "userMention",
                   userId: t,
                   children: [{
                     text: ""
                   }]
                 };
-              if (p && A(o, r, I.CLYDE_AI_USER_ID)) return {
+              if (p && E(o, s, I.CLYDE_AI_USER_ID)) return {
                 type: "userMention",
                 userId: I.CLYDE_AI_USER_ID,
                 children: [{
@@ -77,7 +77,7 @@ function C(e, t, n, p) {
           }
         }
         return null
-      }(e, t, n, _, C);
+      }(e, t, n, _, T);
     case ":":
       return function(e, t) {
         let n = o.default.EMOJI_NAME_RE.exec(e);
@@ -130,7 +130,7 @@ function C(e, t, n, p) {
               }]
             }
         }
-        let a = r.default.getActiveJoinedThreadsForGuild(t);
+        let a = s.default.getActiveJoinedThreadsForGuild(t);
         for (let e of m.default.keys(a))
           for (let t of m.default.keys(a[e])) {
             let {
@@ -150,12 +150,12 @@ function C(e, t, n, p) {
   return null
 }
 
-function T(e, t, n, i) {
-  let l = C(e, t, n, i);
+function A(e, t, n, i) {
+  let l = T(e, t, n, i);
   return null == l ? null : (0, _.voidToOptionValue)(l)
 }
 
-function A(e, t, n) {
+function E(e, t, n) {
   let i = p.default.getUser(n);
   return null != i && (n === I.CLYDE_AI_USER_ID && "clyde" === e.toLowerCase() || i.username === e && i.discriminator === (null != t ? t : "0"))
 }

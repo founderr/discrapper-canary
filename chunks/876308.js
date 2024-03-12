@@ -43,9 +43,9 @@ var _ = l.memo(function(e) {
   let N, {
       src: A,
       volume: O = 1,
-      onVolumeChange: M,
-      onMute: k,
-      waveform: R,
+      onVolumeChange: R,
+      onMute: M,
+      waveform: k,
       durationSecs: L,
       onVolumeShow: b,
       onVolumeHide: P,
@@ -89,11 +89,11 @@ var _ = l.memo(function(e) {
     }, [D]),
     eo = l.useCallback(e => {
       let t = (0, E.perceptualToAmplitude)(e, 1);
-      K(0 === t), ee(t), null == M || M(t)
-    }, [M]),
+      K(0 === t), ee(t), null == R || R(t)
+    }, [R]),
     eu = l.useCallback(() => {
-      K(!V), null == k || k(!V)
-    }, [V, k]),
+      K(!V), null == M || M(!V)
+    }, [V, M]),
     ed = l.useCallback(() => {
       Z(!0)
     }, []),
@@ -202,7 +202,7 @@ var _ = l.memo(function(e) {
       })
     }), (0, i.jsx)(y.default, {
       className: C.waveform,
-      waveform: R,
+      waveform: k,
       currentTime: F,
       duration: null != G ? G : 1,
       playing: W,

@@ -18,8 +18,8 @@ n.r(t), n.d(t, {
   }
 }), n("781738"), n("222007"), n("627445");
 var o = n("798609"),
-  r = n("841362"),
-  s = n("655518");
+  s = n("841362"),
+  r = n("655518");
 
 function u(e) {
   return null == e ? [] : e.filter((t, n) => "text" !== t.type || (n > 0 && n < e.length - 1 ? "" !== t.text : "" !== t.text.trim()))
@@ -62,8 +62,8 @@ function p(e, t) {
     let {
       group: t,
       decimal: o
-    } = null !== (n = r.numberParts[e]) && void 0 !== n ? n : r.numberParts["en-US"];
-    i = RegExp(s.default.escape(t), "g"), l = RegExp(s.default.escape(o), "g")
+    } = null !== (n = s.numberParts[e]) && void 0 !== n ? n : s.numberParts["en-US"];
+    i = RegExp(r.default.escape(t), "g"), l = RegExp(r.default.escape(o), "g")
   }
   return t.replace(i, "").replace(l, ".")
 }

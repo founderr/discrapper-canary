@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getIconComponent: function() {
-    return r
+    return s
   },
   pxToRem: function() {
-    return s
+    return r
   },
   getCommandQuery: function() {
     return u
@@ -14,9 +14,9 @@ var i = n("524768"),
   l = n("991630"),
   a = n("943161"),
   o = n("317041");
-let r = e => e.type === i.ApplicationCommandSectionType.BUILT_IN ? a.default : l.default;
+let s = e => e.type === i.ApplicationCommandSectionType.BUILT_IN ? a.default : l.default;
 
-function s(e) {
+function r(e) {
   return "".concat(e / 16, "rem")
 }
 

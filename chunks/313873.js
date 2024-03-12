@@ -31,9 +31,9 @@ var i, l, a = n("37983"),
   N = n("118033"),
   A = n("315102"),
   O = n("568734"),
-  M = n("474293"),
-  k = n("339521"),
-  R = n("145131"),
+  R = n("474293"),
+  M = n("339521"),
+  k = n("145131"),
   L = n("953109"),
   b = n("98292"),
   P = n("280174"),
@@ -90,7 +90,7 @@ class W extends s.PureComponent {
     } : e
   }
   getTypeClass(e, t) {
-    return (0, M.getClass)(B, e, this.props.type, t)
+    return (0, R.getClass)(B, e, this.props.type, t)
   }
   isStreamerOnTypeProfile() {
     return (0, C.default)(this.activity) && ("Profile" === this.props.type || "ProfileV2" === this.props.type)
@@ -151,7 +151,7 @@ class W extends s.PureComponent {
       children: [null != l && null !== p ? (0, a.jsx)(p, {
         className: o(B.icon)
       }) : null, (0, a.jsx)(f.Heading, {
-        className: (0, M.getClass)(B, "headerText", e ? "EmptyBody" : "Normal"),
+        className: (0, R.getClass)(B, "headerText", e ? "EmptyBody" : "Normal"),
         variant: "heading-deprecated-12/semibold",
         color: "ProfileV2" === r ? "header-primary" : void 0,
         children: (0, a.jsx)(b.default, {
@@ -310,7 +310,7 @@ class W extends s.PureComponent {
     }) : (0, N.isStageActivity)(e) && (u = e.name)), null == u) ? null : (0, a.jsx)(f.Text, {
       title: o,
       variant: "text-sm/semibold",
-      className: (0, M.getClass)(B, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"),
+      className: (0, R.getClass)(B, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"),
       children: u
     })
   }
@@ -383,7 +383,7 @@ class W extends s.PureComponent {
       start: n,
       end: i
     } = t;
-    return null == n || null == i ? null : (0, a.jsx)(k.default, {
+    return null == n || null == i ? null : (0, a.jsx)(M.default, {
       start: n,
       end: i,
       className: this.getTypeClass("timeBar"),
@@ -453,8 +453,8 @@ class W extends s.PureComponent {
         className: o(p ? B.bodyAlignCenter : B.bodyNormal, s && !u && !f && B.wrap),
         children: [(0, a.jsxs)("div", {
           className: B.activityDetails,
-          children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(R.default.Child, {
-            className: o((0, M.getClass)(B, "content", p ? "GameImage" : null != e ? "Images" : "NoImages", t)),
+          children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(k.default.Child, {
+            className: o((0, R.getClass)(B, "content", p ? "GameImage" : null != e ? "Images" : "NoImages", t)),
             children: [m, h, x, E, u || f ? null : g, c ? y : null]
           })]
         }), d ? y : null]

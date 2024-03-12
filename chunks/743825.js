@@ -29,9 +29,9 @@ var i, l = n("37983"),
   N = n("296141"),
   A = n("606013"),
   O = n("32647"),
-  M = n("970153"),
-  k = n("49111"),
-  R = n("782340"),
+  R = n("970153"),
+  M = n("49111"),
+  k = n("782340"),
   L = n("350583");
 new S.default("ChannelEditor.tsx");
 let b = function() {
@@ -54,7 +54,7 @@ i = class extends a.Component {
     if (this.fixFocus(e), this.props.useSlate !== e.useSlate) {
       var t, n;
       let e;
-      e = this.props.useSlate ? this.props.textValue : (0, M.toTextValue)(this.props.richValue, {
+      e = this.props.useSlate ? this.props.textValue : (0, R.toTextValue)(this.props.richValue, {
         mode: "plain"
       }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, v.toRichValue)(e))
     } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
@@ -155,7 +155,7 @@ i = class extends a.Component {
       placeholder: t,
       isPreviewing: n
     } = this.props;
-    return e && !n ? R.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
+    return e && !n ? k.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
   }
   render() {
     var e, t, n, i, a, s;
@@ -175,8 +175,8 @@ i = class extends a.Component {
       useNewSlashCommands: C,
       canOnlyUseTextCommands: T,
       className: N,
-      id: M,
-      required: R,
+      id: R,
+      required: k,
       maxCharacterCount: b,
       allowNewLines: j,
       "aria-describedby": U,
@@ -191,9 +191,9 @@ i = class extends a.Component {
         [L.textAreaSlate]: g,
         [L.textAreaDisabled]: d || F
       }),
-      id: M,
+      id: R,
       placeholder: this.getPlaceholder(),
-      required: R,
+      required: k,
       accessibilityLabel: w,
       disabled: d || !1,
       submitting: F,
@@ -242,10 +242,10 @@ i = class extends a.Component {
     });
     return (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(I.ComponentAction, {
-        event: k.ComponentActions.INSERT_TEXT,
+        event: M.ComponentActions.INSERT_TEXT,
         handler: this.handleInsertText
       }), (0, l.jsx)(I.ComponentAction, {
-        event: k.ComponentActions.CLEAR_TEXT,
+        event: M.ComponentActions.CLEAR_TEXT,
         handler: this.handleClearText
       }), H]
     })

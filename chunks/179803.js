@@ -36,10 +36,10 @@ function h(e, t) {
     h = null != _ ? i().diff(_, "days") : null,
     C = T.indexOf(t);
   if (-1 === C) return !1;
-  let A = null == h || h > p[C];
-  if (!A) return !1;
-  let g = T.find(e => !(0, l.isDismissibleContentDismissed)(e)) === t;
+  let g = null == h || h > p[C];
   if (!g) return !1;
+  let A = T.find(e => !(0, l.isDismissibleContentDismissed)(e)) === t;
+  if (!A) return !1;
   let {
     showLifecycleUpsells: I
   } = E.default.getCurrentConfig({

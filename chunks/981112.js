@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var i, l = n("811022"),
   a = n("994440"),
   o = n("282928"),
-  r = n("142852"),
-  s = n("402752"),
+  s = n("142852"),
+  r = n("402752"),
   u = n("572868"),
   d = n("49111"),
   c = n("894488"),
@@ -53,7 +53,7 @@ i = class extends u.default {
   }
   async compressAndCheckFileSize() {
     var e, t;
-    let n = (0, r.getUploadTarget)(null === (t = this.files[0]) || void 0 === t ? void 0 : null === (e = t.item) || void 0 === e ? void 0 : e.target);
+    let n = (0, s.getUploadTarget)(null === (t = this.files[0]) || void 0 === t ? void 0 : null === (e = t.item) || void 0 === e ? void 0 : e.target);
     return this.files.length > n.getMaxAttachmentsCount() ? (f.log("Too many attachments for ".concat(this.id)), this._handleError({
       code: d.AbortCodes.TOO_MANY_ATTACHMENTS
     }), !1) : !(this._fileSize() > n.getMaxTotalAttachmentSize()) || (this._handleError({
@@ -105,7 +105,7 @@ i = class extends u.default {
   _recomputeProgressByFile() {
     let e = {};
     return this.files.forEach(t => {
-      e[t.id] = (0, s.calculateProgress)(t.loaded, t.currentSize)
+      e[t.id] = (0, r.calculateProgress)(t.loaded, t.currentSize)
     }), e
   }
   cancel() {

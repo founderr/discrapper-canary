@@ -73,12 +73,12 @@ function _(e) {
     onDragEnd: A
   } = e, {
     ref: O,
-    width: M
-  } = (0, u.default)(), k = l.useMemo(() => {
+    width: R
+  } = (0, u.default)(), M = l.useMemo(() => {
     var e;
     let t;
     return Math.floor(((t = (e = c) <= x ? 40 : e >= 45 ? 294 : (Math.min(e, 45) - x) / (45 - x) * 254 + 40) + 4) / E) * E - 4
-  }, [c]), R = l.useRef(), L = function(e, t) {
+  }, [c]), k = l.useRef(), L = function(e, t) {
     let n = l.useMemo(() => (function(e) {
         let t;
         if (null == e) return;
@@ -107,7 +107,7 @@ function _(e) {
         }(null != n ? n : [], i)) && void 0 !== e ? e : g
       }, [n, i]);
     return a
-  }(n, M), b = l.useRef(y), P = l.useRef(_), j = l.useRef(null), U = window.devicePixelRatio, {
+  }(n, R), b = l.useRef(y), P = l.useRef(_), j = l.useRef(null), U = window.devicePixelRatio, {
     lastBackgroundFillColor: D,
     backgroundFillColor: w,
     lastActiveFillColor: F,
@@ -142,9 +142,9 @@ function _(e) {
       duration: c,
       numSegments: L.length
     });
-    R.current = L.map((t, n) => new p.default(n < e ? t : 0))
+    k.current = L.map((t, n) => new p.default(n < e ? t : 0))
   }, [L]), l.useEffect(() => {
-    let e = R.current;
+    let e = k.current;
     if (null == e) return;
     let t = S({
       showAll: !y,
@@ -165,7 +165,7 @@ function _(e) {
     return e = requestAnimationFrame(function t(n) {
       let i = O.current,
         l = null == i ? void 0 : i.getContext("2d"),
-        a = R.current;
+        a = k.current;
       if (null == i || null == l || null == a) return;
       let s = !1;
       (b.current !== y || P.current !== _) && (b.current = y, P.current = _, j.current = n), null != j.current && n > j.current + 200 && (j.current = null);
@@ -202,7 +202,7 @@ function _(e) {
     }), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [O, U, L, M, a, c, y, _, D, w, F, B, G, H]);
+  }, [O, U, L, R, a, c, y, _, D, w, F, B, G, H]);
   let [, V] = (0, d.default)({
     ref: O,
     onDrag: v,
@@ -213,10 +213,10 @@ function _(e) {
     onMouseDown: V,
     className: s(h.canvas, t),
     style: {
-      width: k
+      width: M
     },
     ref: O,
     height: 32 * window.devicePixelRatio,
-    width: (null != M ? M : 0) * window.devicePixelRatio
+    width: (null != R ? R : 0) * window.devicePixelRatio
   })
 }

@@ -31,9 +31,9 @@ var l = n("414456"),
   N = n("774713"),
   A = n("510788"),
   O = n("756731"),
-  M = n("762806"),
-  k = n("438278"),
-  R = n("898481"),
+  R = n("762806"),
+  M = n("438278"),
+  k = n("898481"),
   L = n("49111"),
   b = n("279453"),
   P = (0, c.default)(e => {
@@ -78,7 +78,7 @@ var l = n("414456"),
       platform: f.default.get(L.PlatformTypes.PLAYSTATION)
     }, "ConnectPlatformActivityButton")];
     else if (Y) {
-      let e = (0, i.jsx)(M.default, {
+      let e = (0, i.jsx)(R.default, {
           activity: n,
           user: l,
           color: D,
@@ -107,7 +107,7 @@ var l = n("414456"),
         isProfile: K
       }, e.channelId)])
     } else if (W) {
-      let e = (0, i.jsx)(R.default, {
+      let e = (0, i.jsx)(k.default, {
         isCurrentUser: V.id === l.id,
         color: D,
         look: w,
@@ -122,7 +122,7 @@ var l = n("414456"),
       }, "hang-status-button");
       t = [e]
     } else {
-      let e = (0, i.jsx)(k.default, {
+      let e = (0, i.jsx)(M.default, {
           activity: n,
           color: D,
           look: w

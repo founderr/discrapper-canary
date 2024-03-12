@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   parse: function() {
-    return k
+    return M
   }
 }), n("222007"), n("70102"), n("781738"), n("424973");
 var i = n("627445"),
@@ -229,9 +229,9 @@ let I = {
     updateAgeOnGet: !0
   },
   O = new s(A),
-  M = new s(A);
+  R = new s(A);
 
-function k(e, t) {
+function M(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     l = x.findBackticks(e);
@@ -256,7 +256,7 @@ function k(e, t) {
       if ("" !== c) {
         let e = function(e, t, n) {
           let i = [],
-            l = n ? M : O,
+            l = n ? R : O,
             a = l.get(e);
           if (null != a) return a;
           let s = e.replace(/\r\n/g, " \n").replace(/[\r\f]/g, " ").replace(/\t/g, " ") + "\n\n",
@@ -272,7 +272,7 @@ function k(e, t) {
                 guildId: t
               })
             };
-          R(i, s, r, 0, []);
+          k(i, s, r, 0, []);
           let o = function(e) {
             if (0 === (e = e.filter(e => e.text.length > 0)).length) return e;
             let t = [e[0]];
@@ -299,7 +299,7 @@ function k(e, t) {
   return r
 }
 
-function R(e, t, n, i, a) {
+function k(e, t, n, i, a) {
   let {
     content: s,
     type: r,
@@ -416,7 +416,7 @@ function L(e, t, n, i, l) {
     attributes: l,
     data: null
   }) : (!(n instanceof Array) && (n = [n]), n.forEach(n => {
-    i = R(e, t, n, i, l)
+    i = k(e, t, n, i, l)
   })), j(t, i)
 }
 

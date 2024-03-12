@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return C
   },
   optimisticallyUpdateQuestProgress: function() {
-    return A
+    return g
   }
 });
 var s = n("872717"),
@@ -265,7 +265,7 @@ async function C(e) {
   }
 }
 
-function A(e) {
+function g(e) {
   i.default.dispatch({
     type: "QUESTS_OPTIMISTIC_PROGRESS_UPDATE",
     userStatus: e

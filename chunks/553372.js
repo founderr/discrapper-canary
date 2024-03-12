@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   SecondaryActionButton: function() {
-    return k
+    return M
   },
   PreviewButton: function() {
-    return R
+    return k
   },
   default: function() {
     return L
@@ -36,9 +36,9 @@ var i = n("37983"),
   N = n("796864"),
   A = n("172858"),
   O = n("782340"),
-  M = n("802501");
+  R = n("802501");
 
-function k(e) {
+function M(e) {
   let {
     disabled: t = !1,
     onClick: n,
@@ -52,8 +52,8 @@ function k(e) {
     children: e => (0, i.jsx)(c.Clickable, {
       ...e,
       "aria-label": l,
-      className: s(M.secondaryButton, {
-        [M.buttonDisabled]: t
+      className: s(R.secondaryButton, {
+        [R.buttonDisabled]: t
       }),
       onClick: n,
       children: a
@@ -61,14 +61,14 @@ function k(e) {
   })
 }
 
-function R(e) {
+function k(e) {
   let {
     sound: t,
     previewSound: n,
     disabled: l = !1,
     tooltipPosition: a = "top"
   } = e;
-  return (0, i.jsx)(k, {
+  return (0, i.jsx)(M, {
     tooltipPosition: a,
     disabled: l,
     onClick: function(e) {
@@ -79,7 +79,7 @@ function R(e) {
       soundName: t.name
     }),
     children: (0, i.jsx)(S.default, {
-      className: M.secondaryIcon
+      className: R.secondaryIcon
     })
   })
 }
@@ -138,7 +138,7 @@ var L = l.forwardRef(function(e, t) {
   }
 
   function em() {
-    return (0, i.jsx)(k, {
+    return (0, i.jsx)(M, {
       disabled: !D && !U,
       onClick: ep,
       text: O.default.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
@@ -146,28 +146,28 @@ var L = l.forwardRef(function(e, t) {
         soundName: L.name
       }),
       children: er ? (0, i.jsx)(E.default, {
-        className: s(M.secondaryIcon, M.favoriteIconFavorite),
+        className: s(R.secondaryIcon, R.favoriteIconFavorite),
         color: d.default.unsafe_rawColors.GOLD.css
       }) : (0, i.jsx)(x.default, {
-        className: M.secondaryIcon
+        className: R.secondaryIcon
       })
     })
   }
-  let eh = R({
+  let eh = k({
       sound: L,
       previewSound: Q,
       disabled: ec
     }),
     ex = () => (0, i.jsxs)("div", {
-      className: M.buttonOverlay,
+      className: R.buttonOverlay,
       children: [(0, i.jsx)("div", {
         className: s({
-          [M.buttonOverlayBackground]: !F
+          [R.buttonOverlayBackground]: !F
         })
       }), (0, i.jsxs)("div", {
-        className: M.buttonOverlayActions,
+        className: R.buttonOverlayActions,
         children: [ef && eh, !F && !ec && (0, i.jsx)(y.default, {
-          className: M.playIcon
+          className: R.playIcon
         }), ef && em()]
       })]
     });
@@ -178,7 +178,7 @@ var L = l.forwardRef(function(e, t) {
     }), () => e.stop()
   }, [es]), (0, i.jsxs)("li", {
     ref: t,
-    className: M.soundButtonWrapper,
+    className: R.soundButtonWrapper,
     onMouseEnter: B,
     children: [(0, i.jsxs)(c.ClickableContainer, {
       ...K,
@@ -191,14 +191,14 @@ var L = l.forwardRef(function(e, t) {
         emojiName: L.emojiName,
         soundName: L.name
       }),
-      className: s(P, M.soundButton, {
-        [M.playing]: $,
-        [M.hoverActiveBackground]: F,
-        [M.soundButtonInteractive]: D,
-        [M.buttonDisabled]: !D && !U,
-        [M.premiumDisabled]: ec && !U,
-        [M.buttonDisabledSecondaryActionsEnabled]: !D && U,
-        [M.focused]: D && j
+      className: s(P, R.soundButton, {
+        [R.playing]: $,
+        [R.hoverActiveBackground]: F,
+        [R.soundButtonInteractive]: D,
+        [R.buttonDisabled]: !D && !U,
+        [R.premiumDisabled]: ec && !U,
+        [R.buttonDisabledSecondaryActionsEnabled]: !D && U,
+        [R.focused]: D && j
       }),
       onClick: function() {
         if (es && !ei && (el.current = Math.min(el.current + .01, .1), Math.random() < el.current && ee(en.x, en.y, void 0, void 0, {
@@ -211,18 +211,18 @@ var L = l.forwardRef(function(e, t) {
       },
       onContextMenu: w && !ec ? q : void 0,
       children: [(0, i.jsxs)("div", {
-        className: M.soundInfo,
+        className: R.soundInfo,
         "aria-hidden": !0,
         ref: et,
         children: [ed && (0, i.jsx)(f.default, {
           emojiId: z,
           emojiName: Z,
-          className: M.emoji
+          className: R.emoji
         }), (0, i.jsx)(c.Text, {
           variant: "text-xs/medium",
           color: D ? "header-primary" : "text-muted",
-          className: s(M.soundName, {
-            [M.hasEmoji]: ed
+          className: s(R.soundName, {
+            [R.hasEmoji]: ed
           }),
           children: Y
         })]
@@ -230,15 +230,15 @@ var L = l.forwardRef(function(e, t) {
         switch (V) {
           case T.SoundButtonOverlay.ADD:
             return (0, i.jsxs)("div", {
-              className: M.addButtonOverlay,
+              className: R.addButtonOverlay,
               children: [(0, i.jsx)("div", {
-                className: M.buttonOverlayBackground
+                className: R.buttonOverlayBackground
               }), (0, i.jsxs)("div", {
-                className: M.buttonOverlayActions,
+                className: R.buttonOverlayActions,
                 children: [eh, (0, i.jsxs)("div", {
-                  className: M.addButton,
+                  className: R.addButton,
                   children: [(0, i.jsx)(g.default, {
-                    className: M.plusSign
+                    className: R.plusSign
                   }), (0, i.jsx)(c.Text, {
                     variant: "text-xs/medium",
                     color: "header-primary",
@@ -255,7 +255,7 @@ var L = l.forwardRef(function(e, t) {
     }), !L.available && (0, i.jsx)(c.Tooltip, {
       text: O.default.Messages.SOUNDBOARD_SOUND_DISABLED_PREMIUM_TIER_LOST,
       children: e => (0, i.jsx)("div", {
-        className: M.unavailableTooltip,
+        className: R.unavailableTooltip,
         ...e
       })
     })]

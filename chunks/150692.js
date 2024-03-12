@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return E
   }
 }), n("222007");
 var i = n("37983");
@@ -9,8 +9,8 @@ n("884691");
 var l = n("917351"),
   a = n.n(l),
   o = n("77078"),
-  r = n("450911"),
-  s = n("819689"),
+  s = n("450911"),
+  r = n("819689"),
   u = n("798609"),
   d = n("679653"),
   c = n("27618"),
@@ -20,7 +20,7 @@ var l = n("917351"),
   _ = n("49111"),
   I = n("782340");
 
-function C(e) {
+function T(e) {
   switch (e) {
     case _.ChannelTextAreaIntegrations.GIF.title:
     case _.ChannelTextAreaIntegrations.TENOR.title:
@@ -29,7 +29,7 @@ function C(e) {
       return ""
   }
 }
-let T = [...a(_.ChannelTextAreaIntegrations).values().map(e => ({
+let A = [...a(_.ChannelTextAreaIntegrations).values().map(e => ({
   id: e.commandId,
   name: e.command,
   displayName: e.command,
@@ -37,10 +37,10 @@ let T = [...a(_.ChannelTextAreaIntegrations).values().map(e => ({
   inputType: f.ApplicationCommandInputType.BUILT_IN_INTEGRATION,
   applicationId: m.BuiltInSectionId.BUILT_IN,
   get description() {
-    return C(e.title)
+    return T(e.title)
   },
   get displayDescription() {
-    return C(e.title)
+    return T(e.title)
   },
   options: e.type === _.ChannelTextAreaIntegrationTypes.GIF ? [{
     name: "query",
@@ -96,11 +96,11 @@ let T = [...a(_.ChannelTextAreaIntegrations).values().map(e => ({
     }), m = I.default.Messages.LEAVE_GROUP_DM_BODY.format({
       name: u
     }), _ = null !== (l = null === (n = e.find(e => "silent" === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== l && l;
-    async function C() {
+    async function T() {
       try {
-        await r.default.closePrivateChannel(a.id, void 0, _)
+        await s.default.closePrivateChannel(a.id, void 0, _)
       } catch (e) {
-        s.default.sendBotMessage(a.id, I.default.Messages.LEAVE_GROUP_DM_ERROR)
+        r.default.sendBotMessage(a.id, I.default.Messages.LEAVE_GROUP_DM_ERROR)
       }
     }
     a.isManaged() && (f = I.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
@@ -111,7 +111,7 @@ let T = [...a(_.ChannelTextAreaIntegrations).values().map(e => ({
       header: f,
       confirmText: I.default.Messages.LEAVE_GROUP_DM,
       cancelText: I.default.Messages.CANCEL,
-      onConfirm: C,
+      onConfirm: T,
       ...e,
       children: (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
@@ -120,4 +120,4 @@ let T = [...a(_.ChannelTextAreaIntegrations).values().map(e => ({
     }))
   }
 }];
-var A = T
+var E = A
