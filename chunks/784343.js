@@ -707,7 +707,7 @@ i = class e extends l.default {
       reconnectInterval: this.reconnectInterval,
       userChannelIds: this.ids
     };
-    return (0, h.supportsFeature)(p.NativeFeatures.VIDEO_EFFECTS) && this.context === p.MediaEngineContextTypes.STREAM && (e.enableVideoEffects = !0), e
+    return (0, h.supportsFeature)(p.NativeFeatures.VIDEO_EFFECTS) && this.context === p.MediaEngineContextTypes.STREAM && (e.enableVideoEffects = !0), this.experimentFlags.has(m.ExperimentFlags.MUTE_BEFORE_PROCESSING) && (e.muteBeforeProcessing = !0), this.experimentFlags.has(m.ExperimentFlags.PTT_BEFORE_PROCESSING) && (e.pttBeforeProcessing = !0), this.experimentFlags.has(m.ExperimentFlags.SKIP_ENCODE) && (e.skipEncode = !0), e
   }
   setStream(e) {
     throw Error("Method not implemented.")
