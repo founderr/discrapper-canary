@@ -6661,6 +6661,7 @@ e.exports = Object.freeze({
   PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW: "Try {planName} for {duration} on us. Then !!{price}!!.",
   PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION: "Your **free trial ends {remainingTime, plural, =0 {today} one {in # day} other {in # days}}**. After that, you’ll be charged !!{price}!!.",
   PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "free trial activated",
+  PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL: "Enjoy {duration} on us",
   INCLUDED: "Included",
   NOT_INCLUDED: "Not included",
   MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO: "Up to 4K source resolution and up to 60fps screen share.",
