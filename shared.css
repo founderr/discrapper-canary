@@ -17418,6 +17418,13 @@ html.disable-forced-colors * {
     padding-bottom: 16px
 }
 
+.back__97daf {
+    width: auto;
+    min-width: auto;
+    padding: 2px 4px;
+    margin-right: auto
+}
+
 .spinner_caad3a {
     border-radius: 4px;
     background-color: var(--modal-background);
@@ -17482,13 +17489,6 @@ html.disable-forced-colors * {
     height: 1px;
     margin: 24px 0;
     background-color: var(--background-modifier-accent)
-}
-
-.back__97daf {
-    width: auto;
-    min-width: auto;
-    padding: 2px 4px;
-    margin-right: auto
 }
 
 .actionGroup__50213 {
