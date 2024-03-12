@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return M
   },
   ChannelMention: function() {
-    return R
+    return k
   },
   SoundboardMention: function() {
-    return k
+    return R
   },
   StaticRouteMention: function() {
     return L
@@ -161,7 +161,7 @@ function M(e) {
   })
 }
 
-function R(e) {
+function k(e) {
   let {
     id: t
   } = e, n = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(t)), a = I.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
@@ -177,7 +177,7 @@ function R(e) {
   })
 }
 
-function k(e) {
+function R(e) {
   var t;
   let {
     id: n

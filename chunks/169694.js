@@ -106,7 +106,7 @@ function A(e, t, n, d) {
             } = e, {
               command: m,
               commandText: h
-            } = k(t), E = n.activeCommand;
+            } = R(t), E = n.activeCommand;
             if (!r || u && (null == E ? void 0 : E.inputType) !== o.ApplicationCommandInputType.BUILT_IN_TEXT && (null == E ? void 0 : E.inputType) !== o.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return null != m && O(t, a.id, E, !0), null;
             if (null != m) {
               if (S.EditorUtils.isEditorEmpty(t) || null == E) return O(t, a.id, E, !1), null;
@@ -176,7 +176,7 @@ function A(e, t, n, d) {
                     o = m.length > 0 ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === N.length ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(T.COMMAND_SENTINEL).concat(d.displayName), N.unshift({
                       text: o
                     });
-                    let R = {
+                    let k = {
                       type: "applicationCommand",
                       children: N,
                       command: {
@@ -186,18 +186,18 @@ function A(e, t, n, d) {
                       }
                     };
                     S.EditorUtils.withoutNormalizing(e, () => {
-                      for (let [, t] of(g.SlateTransforms.insertNodes(e, [R], {
+                      for (let [, t] of(g.SlateTransforms.insertNodes(e, [k], {
                           at: C.FIRST_BLOCK_PATH
                         }), S.EditorUtils.blocks(e).reverse())) S.PathUtils.isAfter(t, C.FIRST_BLOCK_PATH) && g.SlateTransforms.removeNodes(e, {
                         at: t,
                         voids: !0
                       })
                     });
-                    let k = null;
-                    return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), k = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), k = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && M(e, d), k
+                    let R = null;
+                    return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), R = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), R = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && M(e, d), R
                   }(t, a, n),
                   i = x.getOptionValues(t, E);
-                return R({
+                return k({
                   guildId: a.guild_id,
                   channelId: a.id,
                   command: E,
@@ -294,7 +294,7 @@ function A(e, t, n, d) {
                   mode: "lowest"
                 }),
                 i = null !== (I = null == n ? void 0 : n[0].optionName) && void 0 !== I ? I : null;
-              return R({
+              return k({
                 guildId: a.guild_id,
                 channelId: a.id,
                 command: E,
@@ -381,7 +381,7 @@ function M(e, t) {
   }), !0)
 }
 
-function R(e) {
+function k(e) {
   let {
     guildId: t,
     channelId: n,
@@ -417,7 +417,7 @@ function R(e) {
   h && l.updateOptionStates(n, p)
 }
 
-function k(e) {
+function R(e) {
   let t = x.getCommandBlock(e);
   if (null == t) return {
     command: null,
@@ -441,7 +441,7 @@ function L(e, t) {
   let {
     command: l,
     commandText: a
-  } = k(e);
+  } = R(e);
   !(null == l || null == a || a.endsWith(" ")) && S.PointUtils.equals(i, {
     path: C.FIRST_TEXT_PATH,
     offset: l.displayName.length + 1

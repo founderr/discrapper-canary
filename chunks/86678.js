@@ -31,8 +31,8 @@ var i = n("37983"),
   A = n("802894"),
   O = n("592407"),
   M = n("139321"),
-  R = n("716849"),
-  k = n("552917"),
+  k = n("716849"),
+  R = n("552917"),
   L = n("845579"),
   b = n("923959"),
   P = n("697218"),
@@ -199,8 +199,8 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     eN = (0, d.useStateFromStores)([b.default], () => null != f ? b.default.getDefaultChannel(f) : null, [f]),
     [eA, eO] = l.useState(null),
     eM = l.useRef(""),
-    eR = (0, _.useExpressionPickerStore)(e => e.searchQuery),
-    ek = l.useRef(null),
+    ek = (0, _.useExpressionPickerStore)(e => e.searchQuery),
+    eR = l.useRef(null),
     eL = l.useRef(null),
     eb = l.useRef(null);
   null == u && null != eN && (u = eN);
@@ -227,10 +227,10 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     diversitySurrogate: eY
   } = (0, d.useStateFromStoresObject)([S.default], () => ({
     diversitySurrogate: S.default.diversitySurrogate
-  })), ez = (0, w.useEmojiSearchResults)(eR, u, o), eZ = null == ez ? 0 : ez.locked.length + ez.unlocked.length, eJ = L.EmojiPickerCollapsedSections.useSetting(), eq = l.useMemo(() => new Set(eJ), [eJ]), eX = l.useCallback(e => {
+  })), ez = (0, w.useEmojiSearchResults)(ek, u, o), eZ = null == ez ? 0 : ez.locked.length + ez.unlocked.length, eJ = L.EmojiPickerCollapsedSections.useSetting(), eq = l.useMemo(() => new Set(eJ), [eJ]), eX = l.useCallback(e => {
     L.EmojiPickerCollapsedSections.updateSetting(Array.from(e))
   }, []), eQ = (0, N.useExpressionPickerGridWidth)({
-    gridWrapperRef: ek,
+    gridWrapperRef: eR,
     containerWidth: ed,
     listPaddingLeft: et,
     listScrollbarWidth: 8
@@ -257,7 +257,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     isBurstReaction: ej,
     analyticsObject: eH
   });
-  (0, R.useMaybeFetchPremiumLikelihood)(k.default);
+  (0, k.useMaybeFetchPremiumLikelihood)(R.default);
   let e2 = l.useCallback(() => {
       let e = e7.length > 0 ? e7[0].id : null;
       (0, I.updateNewlyAddedLastSeen)(eP, e), e6()
@@ -269,13 +269,13 @@ var ed = l.memo(l.forwardRef(function(e, t) {
       onSelectEmoji: ei,
       setUpsellConfigs: eO,
       emojiSelectAnalytics: e => {
-        "" !== eR ? (0, w.trackEmojiSearchSelect)({
+        "" !== ek ? (0, w.trackEmojiSearchSelect)({
           emoji: e.emoji,
           location: {
             ...eK,
             object: q.AnalyticsObjects.EMOJI
           },
-          searchQuery: eR,
+          searchQuery: ek,
           intention: o
         }) : (0, w.trackEmojiSelect)({
           emoji: e.emoji,
@@ -336,13 +336,13 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     } = T.EmojiPickerStore.getState().inspectedExpressionPosition;
     (null === (e = e1[n]) || void 0 === e ? void 0 : e[t]) == null && 0 !== t && T.EmojiPickerStore.setInspectedExpressionPosition(0, 0)
   }, [e1]), l.useEffect(() => {
-    if ("" === eM.current && "" !== eR && (0, w.trackEmojiSearchStart)(eK, o), 0 === eZ && "" !== eR) er(eK, eR);
-    else if ("" !== eR && eM.current !== eR) {
+    if ("" === eM.current && "" !== ek && (0, w.trackEmojiSearchStart)(eK, o), 0 === eZ && "" !== ek) er(eK, ek);
+    else if ("" !== ek && eM.current !== ek) {
       var e;
-      eo(eZ, null !== (e = null == ez ? void 0 : ez.locked.length) && void 0 !== e ? e : 0, eK, eR, o)
+      eo(eZ, null !== (e = null == ez ? void 0 : ez.locked.length) && void 0 !== e ? e : 0, eK, ek, o)
     }
-    eM.current = eR
-  }, [eR, eK, eZ, ez, o]);
+    eM.current = ek
+  }, [ek, eK, eZ, ez, o]);
   let ti = null != eE ? eE : O ? "div" : p.Dialog,
     tl = null != eQ;
   (null == eA ? void 0 : eA.type) === K.EmojiUpsellType.PREMIUM ? r = (0, i.jsx)(Z.default, {
@@ -393,7 +393,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
         onScroll: en,
         children: [O ? ta : null, (0, i.jsxs)("div", {
           className: $.bodyWrapper,
-          ref: ek,
+          ref: eR,
           children: [(0, i.jsx)(z.default, {
             channel: u,
             closePopout: m

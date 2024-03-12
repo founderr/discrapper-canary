@@ -58,7 +58,7 @@ function T(e) {
     checked: t,
     onClick: n,
     id: a = "burst-reaction-toggle-button"
-  } = e, x = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), T = m.default.getCurrentUser(), _ = null != T && !(0, E.isPremium)(T), v = _ ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [N, A] = (0, p.useSelectedDismissibleContent)(v), [O, M] = l.useState(!1), [R, k] = (0, r.useSpring)(() => ({})), L = (0, r.animated)(d.SuperReactionIcon);
+  } = e, x = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), T = m.default.getCurrentUser(), _ = null != T && !(0, E.isPremium)(T), v = _ ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [N, A] = (0, p.useSelectedDismissibleContent)(v), [O, M] = l.useState(!1), [k, R] = (0, r.useSpring)(() => ({})), L = (0, r.animated)(d.SuperReactionIcon);
   l.useEffect(() => {
     let e = N === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
     e && (A(y.ContentDismissActionType.DISMISS), setTimeout(() => M(e), 200))
@@ -80,7 +80,7 @@ function T(e) {
       className: S.visuallyHidden,
       checked: t,
       onChange: function() {
-        k({
+        R({
           from: {
             rotate: t ? "360deg" : "0deg"
           },
@@ -101,7 +101,7 @@ function T(e) {
         className: S.shine,
         shinePaused: x
       }) : null, (0, i.jsx)(L, {
-        style: x ? void 0 : R,
+        style: x ? void 0 : k,
         width: 20,
         height: 20,
         color: t ? "white" : void 0,

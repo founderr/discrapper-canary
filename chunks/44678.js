@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return _
   },
   fetchClaimedOutboundPromotionCodes: function() {
-    return T
+    return I
   },
   claimOutboundPromotion: function() {
-    return I
+    return T
   },
   getOutboundPromotionRedemptionUrl: function() {
     return C
@@ -79,7 +79,7 @@ function E(e) {
     promotion: m(e.promotion)
   }
 }
-async function T() {
+async function I() {
   let e = await r.default.get({
       url: d.Endpoints.CLAIMED_OUTBOUND_PROMOTION_CODES,
       query: {
@@ -90,7 +90,7 @@ async function T() {
     t = e.body;
   return t.map(E)
 }
-async function I(e) {
+async function T(e) {
   let t = await r.default.post({
       url: d.Endpoints.CLAIM_OUTBOUND_PROMOTION_CODE(e)
     }),

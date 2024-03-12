@@ -31,8 +31,8 @@ var i = n("37983"),
   A = n("561845"),
   O = n("217513"),
   M = n("641055"),
-  R = n("430312"),
-  k = n("763866"),
+  k = n("430312"),
+  R = n("763866"),
   L = n("789321"),
   b = n("627601"),
   P = n("935409"),
@@ -156,7 +156,7 @@ function G(e) {
         style: er.shouldShow ? {
           marginTop: L.DEFAULT_COLLECTIBLES_UPSELL_HEIGHT
         } : void 0,
-        children: (0, i.jsxs)(R.default, {
+        children: (0, i.jsxs)(k.default, {
           user: t,
           guildId: n,
           profileType: U.UserProfileTypes.POPOUT,
@@ -180,10 +180,10 @@ function G(e) {
               onClose: _,
               ...er
             }) : void 0
-          }), (0, i.jsxs)(R.default.Inner, {
+          }), (0, i.jsxs)(k.default.Inner, {
             children: [(0, i.jsx)(M.default, {
               onTooltipClose: _
-            }), (0, i.jsx)(k.default, {
+            }), (0, i.jsx)(R.default, {
               activity: Q,
               customStatusActivity: $,
               displayProfile: W,

@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return M
   },
   updateCustomJoinSound: function() {
-    return R
+    return k
   },
   trackCustomCallSoundExternallyDeleted: function() {
     return L
@@ -97,7 +97,7 @@ function O(e) {
 
 function M(e, t) {
   (0, r.updateUserGuildSettings)(e, n => {
-    n.joinSound = void 0, k({
+    n.joinSound = void 0, R({
       guildId: e,
       changeType: y.AnalyticsChangeType.REMOVED,
       soundType: y.AnalyticsSoundType.ENTRY,
@@ -106,7 +106,7 @@ function M(e, t) {
   }, r.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function R(e, t, n) {
+function k(e, t, n) {
   (0, r.updateUserGuildSettings)(e, i => {
     let l = t.guildId === C.DEFAULT_SOUND_GUILD_ID,
       a = l ? y.AnalyticsSoundSource.DEFAULT : y.AnalyticsSoundSource.CUSTOM,
@@ -114,7 +114,7 @@ function R(e, t, n) {
     i.joinSound = {
       soundId: t.soundId,
       guildId: l ? C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID : t.guildId
-    }, k({
+    }, R({
       guildId: e,
       changeType: s,
       soundSource: a,
@@ -124,7 +124,7 @@ function R(e, t, n) {
   }, r.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function k(e) {
+function R(e) {
   let {
     guildId: t,
     changeType: n,

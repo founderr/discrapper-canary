@@ -63,10 +63,10 @@ var x = s.memo(function(e) {
     "aria-expanded": A,
     "aria-haspopup": O,
     "aria-controls": M
-  } = e, R = (0, u.useTransition)(null != x, {
+  } = e, k = (0, u.useTransition)(null != x, {
     ...h,
     keys: e => e ? "children" : "icon"
-  }), k = e => {
+  }), R = e => {
     let {
       component: t
     } = e;
@@ -108,20 +108,20 @@ var x = s.memo(function(e) {
         bottom: 4
       }
     },
-    children: [R((e, t, n) => {
+    children: [k((e, t, n) => {
       let {
         key: i
       } = n;
       return t ? (0, a.jsx)(u.animated.div, {
         style: e,
         className: o(m.buttonWrapper, l),
-        children: k({
+        children: R({
           component: x
         })
       }, i) : null != r ? (0, a.jsx)(u.animated.div, {
         style: e,
         className: o(m.buttonWrapper, l),
-        children: k({
+        children: R({
           component: (0, a.jsx)(r, {
             className: o(m.icon, s, {
               [m.pulseIcon]: T

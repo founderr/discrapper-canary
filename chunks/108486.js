@@ -34,8 +34,8 @@ var i = n("37983"),
   A = n("49111"),
   O = n("994428"),
   M = n("646718"),
-  R = n("782340"),
-  k = n("240497"),
+  k = n("782340"),
+  R = n("240497"),
   L = n("350583");
 let b = [{
     box: "#FFD89E",
@@ -162,7 +162,7 @@ var G = l.memo(function(e) {
       })
     },
     V = (0, i.jsxs)("div", {
-      className: k.container,
+      className: R.container,
       onMouseEnter: () => {
         !o && c(!0)
       },
@@ -176,7 +176,7 @@ var G = l.memo(function(e) {
         isDM: G
       }), (0, i.jsx)(S.default, {
         innerClassName: L.button,
-        "aria-label": R.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+        "aria-label": k.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
         isActive: !1,
         onClick: () => {
           c(!1), (0, m.markDismissibleContentAsDismissed)(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023, {
@@ -184,7 +184,7 @@ var G = l.memo(function(e) {
           }), H()
         },
         children: (0, i.jsx)("div", {
-          className: k.noPointerEvents,
+          className: R.noPointerEvents,
           children: (0, i.jsx)(B, {
             hovered: o,
             isContentDismissed: !w
@@ -193,7 +193,7 @@ var G = l.memo(function(e) {
       })]
     });
   return w ? V : (0, i.jsx)(u.TooltipContainer, {
-    className: k.container,
+    className: R.container,
     text: (0, d.getSeasonalGiftingBody)(G),
     children: V
   })

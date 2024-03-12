@@ -34,8 +34,8 @@ var i = n("37983"),
   A = n("145131"),
   O = n("476765"),
   M = n("945330"),
-  R = n("907566"),
-  k = n("151185"),
+  k = n("907566"),
+  R = n("151185"),
   L = n("483093"),
   b = n("991170"),
   P = n("487311"),
@@ -64,7 +64,7 @@ function F(e) {
     }), (0, i.jsxs)(A.default, {
       className: D.overflowRolesPopoutHeader,
       align: A.default.Align.CENTER,
-      children: [(0, i.jsx)(R.default, {
+      children: [(0, i.jsx)(k.default, {
         color: p.default.unsafe_rawColors.PRIMARY_400.css,
         className: D.overflowRolesPopoutHeaderIcon
       }), (0, i.jsx)("div", {
@@ -99,7 +99,7 @@ let B = l.forwardRef(function(e, t) {
     roleId: g.id,
     size: 16,
     guildId: T
-  }), R = (0, f.useStateFromStores)([y.default], () => y.default.roleStyle), k = (null === (a = g.tags) || void 0 === a ? void 0 : a.guild_connections) === null, b = l.useCallback(e => {
+  }), k = (0, f.useStateFromStores)([y.default], () => y.default.roleStyle), R = (null === (a = g.tags) || void 0 === a ? void 0 : a.guild_connections) === null, b = l.useCallback(e => {
     (0, h.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -111,12 +111,12 @@ let B = l.forwardRef(function(e, t) {
       })
     })
   }, [g.id]), P = (0, m.useToken)(p.default.unsafe_rawColors.PRIMARY_300).hsl(), j = null !== (r = g.colorString) && void 0 !== r ? r : P, w = null !== (o = (0, c.hex2rgb)(j, .6)) && void 0 !== o ? o : void 0, F = p.default.unsafe_rawColors.WHITE_500.css, B = (0, c.hex2int)(j);
-  null != B && .3 > (0, c.getDarkness)(B) && (F = p.default.unsafe_rawColors.PRIMARY_630.css), u = k ? (0, i.jsx)(S.default, {
+  null != B && .3 > (0, c.getDarkness)(B) && (F = p.default.unsafe_rawColors.PRIMARY_630.css), u = R ? (0, i.jsx)(S.default, {
     className: D.roleFlowerStar,
     iconClassName: x ? D.roleVerifiedIcon : void 0,
     color: j,
     size: 14
-  }) : "dot" === R ? (0, i.jsx)(m.RoleDot, {
+  }) : "dot" === k ? (0, i.jsx)(m.RoleDot, {
     className: D.roleDot,
     color: j,
     background: !1,
@@ -232,7 +232,7 @@ function H(e) {
         "aria-label": U.default.Messages.GUILD_SETTINGS_MEMBERS_ADD_ROLE,
         type: "button",
         ...r,
-        children: (0, i.jsx)(k.default, {
+        children: (0, i.jsx)(R.default, {
           className: D.addButtonIcon,
           "aria-hidden": !0
         })
@@ -267,7 +267,7 @@ function V(e) {
       return l && !a ? 1 : !l && a ? -1 : 0
     });
     return null != T ? e.slice(0, T) : e
-  }, [O, T, r]), R = r.length - M.length;
+  }, [O, T, r]), k = r.length - M.length;
   l.useLayoutEffect(() => {
     if (c) return;
     if ("number" != typeof p) throw Error("Unexpected null width");
@@ -284,10 +284,10 @@ function V(e) {
     }
     A(t => e < M.length ? e : t)
   }, [c, p, M]);
-  let k = N.default.getCurrentUser();
-  o(null != k, "MemberRolesList: currentUser cannot be undefined");
+  let R = N.default.getCurrentUser();
+  o(null != R, "MemberRolesList: currentUser cannot be undefined");
   let L = !h && v.default.can(j.Permissions.MANAGE_ROLES, a),
-    P = b.default.getHighestRole(a, k.id),
+    P = b.default.getHighestRole(a, R.id),
     F = l.useMemo(() => "roles-".concat((0, u.v4)()), []),
     V = (0, d.default)({
       id: F,
@@ -301,7 +301,7 @@ function V(e) {
       return (0, i.jsx)(B, {
         className: E,
         role: e,
-        canRemove: L && b.default.isRoleHigher(a, k.id, P, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && n.id === k.id,
+        canRemove: L && b.default.isRoleHigher(a, R.id, P, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && n.id === R.id,
         onRemove: () => S(e),
         ref: t => {
           var n, i;
@@ -311,9 +311,9 @@ function V(e) {
         disableBorderColor: y
       }, e.id)
     });
-  return null != T && 0 !== R ? t = (0, i.jsx)(G, {
+  return null != T && 0 !== k ? t = (0, i.jsx)(G, {
     ...e,
-    numRolesHidden: R
+    numRolesHidden: k
   }) : L && (t = (0, i.jsx)(H, {
     ...e,
     handleAddRole: C

@@ -90,8 +90,8 @@ function O(e) {
     M = l.useCallback(() => {
       g.dismissAppDetail()
     }, []),
-    R = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-    k = (0, p.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != R ? R : ""),
+    k = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
+    R = (0, p.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != k ? k : ""),
     L = (0, f.getIconComponent)(u),
     b = l.useMemo(() => {
       var e, t;
@@ -103,7 +103,7 @@ function O(e) {
     children: [(0, i.jsx)("div", {
       className: v.headerWhenSideCard,
       style: {
-        backgroundColor: k
+        backgroundColor: R
       },
       children: (0, i.jsx)(r.Clickable, {
         "aria-label": _.default.Messages.CLOSE,

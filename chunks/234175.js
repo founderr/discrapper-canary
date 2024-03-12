@@ -31,13 +31,13 @@ var i = n("37983"),
   A = n("782340"),
   O = n("11693");
 let M = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
-  R = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
-  k = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
+  k = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
+  R = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
   L = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
   b = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
   P = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
   j = [M, M, M, M],
-  U = (R + k) * 2 + M,
+  U = (k + R) * 2 + M,
   D = b + 2 * P,
   w = e => {
     let {
@@ -52,7 +52,7 @@ let M = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
       let g = (null === (u = n[0]) || void 0 === u ? void 0 : u.type) === I.StickerCategoryTypes.FAVORITE,
         S = g ? 1 : 0,
         M = (null === (c = n[S]) || void 0 === c ? void 0 : c.type) === I.StickerCategoryTypes.RECENT,
-        k = n.length > 0,
+        R = n.length > 0,
         b = n.length;
       if (0 === a && g) return (0, i.jsx)("div", {
         role: "listitem",
@@ -61,7 +61,7 @@ let M = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
         children: (0, i.jsx)(o.Clickable, {
           "aria-label": A.default.Messages.CATEGORY_FAVORITE,
           className: s(O.stickerCategory, O.stickerCategoryGeneric, {
-            [O.stickerCategoryGenericDisabled]: k && !g,
+            [O.stickerCategoryGenericDisabled]: R && !g,
             [O.stickerCategoryGenericSelected]: !E && g && 0 === t
           }),
           onClick: r,
@@ -79,7 +79,7 @@ let M = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
         children: (0, i.jsx)(o.Clickable, {
           "aria-label": A.default.Messages.STICKER_PICKER_CATEGORIES_RECENT,
           className: s(O.stickerCategory, O.stickerCategoryGeneric, {
-            [O.stickerCategoryGenericDisabled]: k && !M,
+            [O.stickerCategoryGenericDisabled]: R && !M,
             [O.stickerCategoryGenericSelected]: !E && M && t === S
           }),
           onClick: r,
@@ -107,7 +107,7 @@ let M = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
         let e = C.default.getStickerPack(j.id);
         null != e && (F = e.name, B = (0, i.jsx)(_.default, {
           disableAnimation: !P || E,
-          size: R,
+          size: k,
           sticker: (0, T.getStickerPackPreviewSticker)(e)
         }))
       }
@@ -146,7 +146,7 @@ let M = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
       let i = n[t],
         l = n[t + 1],
         a = null != l && i.type === I.StickerCategoryTypes.GUILD && l.type !== I.StickerCategoryTypes.GUILD;
-      return R + (a ? D : k)
+      return k + (a ? D : R)
     }, [n]), P = l.useCallback(e => {
       var t;
       let n = null === (t = a.current) || void 0 === t ? void 0 : t.getListDimensions();
@@ -176,7 +176,7 @@ var F = e => {
       i = (null === (e = f[0]) || void 0 === e ? void 0 : e.type) === I.StickerCategoryTypes.RECENT,
       l = (null === (t = f[0]) || void 0 === t ? void 0 : t.type) === I.StickerCategoryTypes.FAVORITE,
       a = n + (i ? 1 : 0) + (l ? 1 : 0),
-      s = a * (R + k) - k + D,
+      s = a * (k + R) - R + D,
       r = null != f.find(e => e.type === I.StickerCategoryTypes.PACK);
     return {
       firstStandardStickerCategoryIndex: a + 1,

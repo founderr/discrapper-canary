@@ -32,8 +32,8 @@ var i, l, a = n("37983"),
   A = n("315102"),
   O = n("568734"),
   M = n("474293"),
-  R = n("339521"),
-  k = n("145131"),
+  k = n("339521"),
+  R = n("145131"),
   L = n("953109"),
   b = n("98292"),
   P = n("280174"),
@@ -383,7 +383,7 @@ class W extends s.PureComponent {
       start: n,
       end: i
     } = t;
-    return null == n || null == i ? null : (0, a.jsx)(R.default, {
+    return null == n || null == i ? null : (0, a.jsx)(k.default, {
       start: n,
       end: i,
       className: this.getTypeClass("timeBar"),
@@ -453,7 +453,7 @@ class W extends s.PureComponent {
         className: o(p ? B.bodyAlignCenter : B.bodyNormal, s && !u && !f && B.wrap),
         children: [(0, a.jsxs)("div", {
           className: B.activityDetails,
-          children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(k.default.Child, {
+          children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(R.default.Child, {
             className: o((0, M.getClass)(B, "content", p ? "GameImage" : null != e ? "Images" : "NoImages", t)),
             children: [m, h, x, E, u || f ? null : g, c ? y : null]
           })]

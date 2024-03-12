@@ -32,7 +32,7 @@ function Selection(e) {
     isSelected: o = !1,
     tabIndex: r,
     children: f
-  } = e, [h, p] = a.useState(g.ICONS_BY_ID[t].name), E = t === c.PremiumAppIconIds.PIRATE, T = (0, u.useRadioItem)({
+  } = e, [h, p] = a.useState(g.ICONS_BY_ID[t].name), E = t === c.PremiumAppIconIds.PIRATE, v = (0, u.useRadioItem)({
     label: h,
     isSelected: o
   });
@@ -43,8 +43,8 @@ function Selection(e) {
       className: _.appIconSelectionContainer,
       children: [(0, i.jsx)(u.Clickable, {
         ...e,
-        ...T,
-        tabIndex: null != r ? r : T.tabIndex,
+        ...v,
+        tabIndex: null != r ? r : v.tabIndex,
         className: s(_.appIconSelection, {
           [_.selected]: o
         }, n),

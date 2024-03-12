@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return O
   },
   getLimit: function() {
-    return R
+    return k
   },
   default: function() {
     return L
@@ -59,18 +59,18 @@ function M() {
   })
 }
 
-function R(e) {
+function k(e) {
   return d.isInIndexExperiment({
     location: e
   }) ? I.MAX_COMMAND_AUTOCOMPLETE_RESULTS : I.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY
 }
-let k = {
+let R = {
   sentinel: T.COMMAND_SENTINEL,
   stores: [p.default, f.default, u.default, y.default],
   matches: (e, t, n, i, l) => l.commands !== I.CommandMode.DISABLED && null == p.default.getActiveCommand(e.id) && (i || l.commands !== I.CommandMode.OLD_BUILT_INS),
   queryResults(e, t, n, i, l) {
     if (0 === n.length && i.commands !== I.CommandMode.OLD_BUILT_INS) return A;
-    let a = R("CommandAutocompletes");
+    let a = k("CommandAutocompletes");
     if (i.commands === I.CommandMode.OLD_BUILT_INS) {
       let i = (0, o.getBuiltInCommands)(s.ApplicationCommandType.CHAT, !1, !1),
         l = RegExp("^".concat(S.default.escape(n)), "i"),
@@ -210,4 +210,4 @@ let k = {
     }
   }
 };
-var L = k
+var L = R

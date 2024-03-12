@@ -24,12 +24,12 @@ function p(e) {
     className: t,
     disabled: n,
     renderCTAButtons: p
-  } = e, [S, E] = (0, l.useStateFromStoresArray)([c.default], () => [c.default.getCurrentDesktopIcon(), c.default.isEditorOpen]), T = a.useRef(null);
-  (0, u.default)(T, m.AppearanceScrollPositions.CUSTOM_APP_ICONS);
-  let v = (0, d.useUID)(),
+  } = e, [S, E] = (0, l.useStateFromStoresArray)([c.default], () => [c.default.getCurrentDesktopIcon(), c.default.isEditorOpen]), v = a.useRef(null);
+  (0, u.default)(v, m.AppearanceScrollPositions.CUSTOM_APP_ICONS);
+  let T = (0, d.useUID)(),
     N = (0, s.useRadioGroup)({
       orientation: "horizontal",
-      labelledBy: v
+      labelledBy: T
     }),
     I = e => {
       o.default.dispatch({
@@ -38,7 +38,7 @@ function p(e) {
       })
     };
   return (0, i.jsx)("div", {
-    ref: T,
+    ref: v,
     children: (0, i.jsx)("div", {
       ...N,
       className: _.container,

@@ -31,8 +31,8 @@ var i = n("37983"),
   A = n("845579"),
   O = n("697218"),
   M = n("124299"),
-  R = n("600785"),
-  k = n("599110"),
+  k = n("600785"),
+  R = n("599110"),
   L = n("764364"),
   b = n("159885"),
   P = n("429569"),
@@ -77,7 +77,7 @@ let z = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       messageId: A,
       isBurstReaction: O,
       listHeaderClassName: M,
-      activeSectionIndex: R,
+      activeSectionIndex: k,
       upsellGlowOpacity: L,
       enableNitroUpsell: b
     } = e, P = (0, x.useAnalyticsContext)(), K = l.useRef(H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), W = l.useMemo(() => "" !== n ? f.default.convert.toCodePoint(n) : "", [n]), et = l.useCallback(e => {
@@ -94,7 +94,7 @@ let z = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         i = new Set(t),
         l = t.has(e);
-      l ? i.delete(e) : i.add(e), null != n && k.default.track(H.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+      l ? i.delete(e) : i.add(e), null != n && R.default.track(H.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
         location: P.location,
         tab: V.ExpressionPickerViewType.EMOJI,
         collapsed: !l,
@@ -157,7 +157,7 @@ let z = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           }) : null,
           d = null == l ? void 0 : l.toString();
         null != a && (d = (0, j.getStringForEmojiCategory)(a, null == l ? void 0 : l.toString()));
-        let c = R === e,
+        let c = k === e,
           f = n.isNitroLocked,
           m = b && f && !c,
           h = b && f && c;
@@ -171,7 +171,7 @@ let z = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           onClick: () => ei(o, l),
           children: d
         }, o)
-      }), [p, t, ei, M, R, b]),
+      }), [p, t, ei, M, k, b]),
       eo = l.useCallback((e, n) => {
         let l = p[e],
           a = en(e),
@@ -314,7 +314,7 @@ let z = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       }, [eE, ey, eo]),
       eS = o.length > 0;
     return l.useEffect(() => {
-      $ && k.default.track(H.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      $ && R.default.track(H.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         type: K.PremiumUpsellTypes.EMOJI_PICKER_FLOATING_UPSELL,
         location: J,
         location_stack: q
@@ -349,7 +349,7 @@ let z = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           opacity: es.opacity
         },
         className: Y.upsellContainer,
-        children: [(0, i.jsx)(R.default, {
+        children: [(0, i.jsx)(k.default, {
           width: 16,
           height: 16,
           className: Y.upsellLock

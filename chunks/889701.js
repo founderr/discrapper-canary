@@ -31,8 +31,8 @@ var i = n("37983"),
   A = n("178207"),
   O = n("256860"),
   M = n("364685"),
-  R = n("161585"),
-  k = n("585948"),
+  k = n("161585"),
+  R = n("585948"),
   L = n("234175"),
   b = n("451300"),
   P = n("668333"),
@@ -78,7 +78,7 @@ let G = (0, _.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       onPickerOpen: eb
     }));
     let er = (0, O.useFilteredStickerPackCategories)(u),
-      eo = 0 === er.filter(e => e.type !== R.StickerCategoryTypes.EMPTY_GUILD_UPSELL).length,
+      eo = 0 === er.filter(e => e.type !== k.StickerCategoryTypes.EMPTY_GUILD_UPSELL).length,
       eu = (0, x.useExpressionPickerGridWidth)({
         gridWrapperRef: ee,
         containerWidth: s,
@@ -99,7 +99,7 @@ let G = (0, _.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       } = null != ep ? ep : {},
       eg = eE.length + ey.length,
       eS = l.useCallback(e => {
-        "" === el ? (0, A.trackStickerSelect)(e) : (0, A.trackStickerSearchSelect)(e, el, eg), _(e.sticker, R.StickerSelectLocation.STICKER_PICKER)
+        "" === el ? (0, A.trackStickerSelect)(e) : (0, A.trackStickerSearchSelect)(e, el, eg), _(e.sticker, k.StickerSelectLocation.STICKER_PICKER)
       }, [_, el, eg]),
       eC = null != eu && eu > G,
       {
@@ -122,7 +122,7 @@ let G = (0, _.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           location: l
         } = t;
         switch (e.type) {
-          case R.StickerGridItemTypes.CREATE_STICKER:
+          case k.StickerGridItemTypes.CREATE_STICKER:
             T.default.track(F.AnalyticEvents.OPEN_MODAL, {
               type: F.AnalyticsSections.CREATE_STICKER_MODAL,
               location: z
@@ -136,17 +136,17 @@ let G = (0, _.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
               })
             });
             break;
-          case R.StickerGridItemTypes.STICKER:
+          case k.StickerGridItemTypes.STICKER:
             null != e.sticker && (0, N.isSendableSticker)(e.sticker, ef, u) && eS(e)
         }
       }, [z, ef, u, eS]),
       {
         getItemProps: eO,
         getRowProps: eM,
-        gridContainerProps: eR,
-        handleGridContainerKeyDown: ek,
+        gridContainerProps: ek,
+        handleGridContainerKeyDown: eR,
         isUsingKeyboardNavigation: eL
-      } = (0, k.useKeyboardNavigation)({
+      } = (0, R.useKeyboardNavigation)({
         columnCounts: eN,
         stickersListRef: et,
         stickersGrid: e_,
@@ -192,7 +192,7 @@ let G = (0, _.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         className: B.header,
         children: (0, i.jsx)(j.default, {
           ref: en,
-          onKeyDown: ek,
+          onKeyDown: eR,
           stickersListRef: et,
           channel: u
         })
@@ -204,7 +204,7 @@ let G = (0, _.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           ref: ee,
           className: B.listWrapper,
           id: w.GRID_NAVIGATOR_ID,
-          ...eR,
+          ...ek,
           children: null != eu ? (0, i.jsx)(P.default, {
             ref: et,
             collapsedStickersCategories: ec,

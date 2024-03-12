@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var s = n("446674"),
   i = n("913144"),
   r = n("599110"),
   a = n("773336"),
-  u = n("49111");
-let l = {
-    desktopType: a.isPlatformEmbedded ? u.DesktopNotificationTypes.ALL : u.DesktopNotificationTypes.NEVER,
+  l = n("49111");
+let u = {
+    desktopType: a.isPlatformEmbedded ? l.DesktopNotificationTypes.ALL : l.DesktopNotificationTypes.NEVER,
     disableAllSounds: !1,
     disabledSounds: [],
-    ttsType: u.TTSNotificationTypes.NEVER,
+    ttsType: l.TTSNotificationTypes.NEVER,
     disableUnreadBadge: !1,
     taskbarFlash: !0,
     notifyMessagesInSelectedChannel: !1
   },
-  o = l;
+  o = u;
 
 function d(e, t) {
   !__OVERLAY__ && r.default.track(e, t)
@@ -28,14 +28,14 @@ function c(e) {
   let {
     desktopType: t
   } = e;
-  o.desktopType = t, d(u.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
-    notifications_enabled: t === u.DesktopNotificationTypes.ALL
+  o.desktopType = t, d(l.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
+    notifications_enabled: t === l.DesktopNotificationTypes.ALL
   })
 }
-class f extends s.default.DeviceSettingsStore {
+class E extends s.default.DeviceSettingsStore {
   initialize(e) {
     o = {
-      ...l,
+      ...u,
       ...e
     }
   }
@@ -67,13 +67,13 @@ class f extends s.default.DeviceSettingsStore {
     return o.disableAllSounds || -1 !== o.disabledSounds.indexOf(e)
   }
 }
-f.displayName = "NotificationSettingsStore", f.persistKey = "notifications", f.migrations = [e => {
+E.displayName = "NotificationSettingsStore", E.persistKey = "notifications", E.migrations = [e => {
   let t = {
     ...e
   };
-  return t.disabledSounds = t.disabledSounds || [], t.disableUnreadBadge = t.disableUnreadBadge || !1, t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash, t.ttsType = t.ttsType || u.TTSNotificationTypes.NEVER, null == t.desktopType && (t.desktopType = a.isPlatformEmbedded ? u.DesktopNotificationTypes.ALL : u.DesktopNotificationTypes.NEVER), t
+  return t.disabledSounds = t.disabledSounds || [], t.disableUnreadBadge = t.disableUnreadBadge || !1, t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash, t.ttsType = t.ttsType || l.TTSNotificationTypes.NEVER, null == t.desktopType && (t.desktopType = a.isPlatformEmbedded ? l.DesktopNotificationTypes.ALL : l.DesktopNotificationTypes.NEVER), t
 }];
-var E = new f(i.default, {
+var f = new E(i.default, {
   NOTIFICATIONS_SET_DESKTOP_TYPE: c,
   NOTIFICATIONS_SET_TTS_TYPE: function(e) {
     let {
@@ -95,13 +95,13 @@ var E = new f(i.default, {
       enabled: t,
       source: n
     } = e;
-    d(u.AnalyticEvents.ENABLE_NOTIFICATIONS, {
-      enabled: t === u.NotificationPermissionTypes.ENABLED,
+    d(l.AnalyticEvents.ENABLE_NOTIFICATIONS, {
+      enabled: t === l.NotificationPermissionTypes.ENABLED,
       source: n
-    }), t === u.NotificationPermissionTypes.BLOCKED ? c({
-      desktopType: u.DesktopNotificationTypes.NEVER
-    }) : t === u.NotificationPermissionTypes.ENABLED && c({
-      desktopType: u.DesktopNotificationTypes.ALL
+    }), t === l.NotificationPermissionTypes.BLOCKED ? c({
+      desktopType: l.DesktopNotificationTypes.NEVER
+    }) : t === l.NotificationPermissionTypes.ENABLED && c({
+      desktopType: l.DesktopNotificationTypes.ALL
     })
   },
   NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE: function(e) {

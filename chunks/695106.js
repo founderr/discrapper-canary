@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return k
   }
 }), n("222007"), n("843762");
 var i = n("37983"),
@@ -123,7 +123,7 @@ let _ = (0, y.uid)(),
       })
     })
   };
-var R = e => {
+var k = e => {
   let {
     searchBarRef: t,
     selectedSurrogate: n,

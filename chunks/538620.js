@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return E
   },
   default: function() {
-    return T
+    return I
   }
 });
 var r = n("872717"),
@@ -79,7 +79,7 @@ async function E() {
     })
   }
 }
-var T = {
+var I = {
   fetchActiveOutboundPromotions: _,
   dismissOutboundPromotionNotice: function() {
     l.default.dispatch({

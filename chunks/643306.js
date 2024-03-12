@@ -53,9 +53,9 @@ function M(e) {
     channelId: s,
     roleName: m,
     guildId: M,
-    children: R,
-    inlinePreview: k = !1
-  } = e, L = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), b = null != t && 0 !== t && !k, P = b && "dot" === L, j = e => (0, i.jsxs)(T.default, {
+    children: k,
+    inlinePreview: R = !1
+  } = e, L = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), b = null != t && 0 !== t && !R, P = b && "dot" === L, j = e => (0, i.jsxs)(T.default, {
     className: a(A.roleMention),
     color: "username" === L && b ? t : null,
     ...e,
@@ -64,7 +64,7 @@ function M(e) {
       className: N.roleDot,
       background: !1,
       tooltip: !1
-    }), R]
+    }), k]
   }), {
     enabled: U
   } = O.getCurrentConfig({
@@ -72,7 +72,7 @@ function M(e) {
   }, {
     autoTrackExposure: !1
   });
-  return !U || k || null == s || null == M || null == l && "@everyone" !== m ? j() : (0, i.jsx)(d.Popout, {
+  return !U || R || null == s || null == M || null == l && "@everyone" !== m ? j() : (0, i.jsx)(d.Popout, {
     preload: async () => {
       null != l && await (0, h.requestMembersForRole)(M, l)
     },

@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return M
   },
   updateUserSoundboardVolume: function() {
-    return R
+    return k
   },
   muteCustomJoinSound: function() {
-    return k
+    return R
   }
 }), n("222007"), n("424973");
 var i = n("917351"),
@@ -177,14 +177,14 @@ function M(e, t) {
   })
 }
 
-function R(e) {
+function k(e) {
   s.default.dispatch({
     type: "USER_SOUNDBOARD_SET_VOLUME",
     volume: e
   })
 }
 
-function k(e) {
+function R(e) {
   s.default.dispatch({
     type: "SOUNDBOARD_MUTE_JOIN_SOUND",
     channelId: e

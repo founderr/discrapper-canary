@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return O
   }
 });
 var r = n("37983"),
@@ -17,25 +17,25 @@ var r = n("37983"),
   m = n("688771"),
   _ = n("154889"),
   E = n("917247"),
-  T = n("956597"),
-  I = n("635956"),
+  I = n("956597"),
+  T = n("635956"),
   C = n("646718"),
   p = n("49111"),
   S = n("782340"),
   P = n("758542"),
   R = n("393828");
 
-function L(e) {
+function O(e) {
   var t, n, l;
   let {
-    title: L,
-    type: O,
+    title: O,
+    type: L,
     guildBoostProps: M,
     analyticsSource: g,
     analyticsLocation: h,
     body: x,
-    context: v,
-    glowUp: N,
+    context: N,
+    glowUp: v,
     modalClassName: A,
     artContainerClassName: U,
     bodyClassName: b,
@@ -44,9 +44,9 @@ function L(e) {
     onSubscribeClick: j,
     onSecondaryClick: F,
     secondaryCTA: B,
-    subscribeButtonText: k,
-    showNewBadge: w = !1,
-    enableArtBoxShadow: H = !0,
+    subscribeButtonText: H,
+    showNewBadge: k = !1,
+    enableArtBoxShadow: w = !0,
     subscriptionTier: G = C.PremiumSubscriptionSKUs.TIER_2,
     isLoading: K = !1,
     hideBackButton: V,
@@ -61,23 +61,23 @@ function L(e) {
     location: "PremiumUpsellModal"
   }, {
     autoTrackExposure: !1
-  }), ee = Q && O === C.PremiumUpsellTypes.STREAM_QUALITY_UPSELL, et = ee && m.GradientVariants.includes($);
+  }), ee = Q && L === C.PremiumUpsellTypes.STREAM_QUALITY_UPSELL, et = ee && m.GradientVariants.includes($);
   i.useEffect(() => {
     !K && (z ? d.default.track(p.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
-      type: "".concat(O, " - Tier ").concat(M.boostedGuildTier),
+      type: "".concat(L, " - Tier ").concat(M.boostedGuildTier),
       guild_id: M.guild.id,
       channel_id: M.channelId,
       location: h,
       location_stack: q
     }) : d.default.track(p.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: O,
+      type: L,
       source: g,
       location: h,
       location_stack: q,
       sku_id: (0, f.castPremiumSubscriptionAsSkuId)(G)
     }))
   }, [z, G, K]);
-  let en = H ? a(P.artContainer, P.artContainerBoxShadow, U) : a(P.artContainer, U),
+  let en = w ? a(P.artContainer, P.artContainerBoxShadow, U) : a(P.artContainer, U),
     er = null;
   return er = "artURL" in W ? (0, r.jsx)("img", {
     className: P.art,
@@ -85,11 +85,11 @@ function L(e) {
     src: W.artURL
   }) : W.artElement, (0, r.jsxs)(s.ModalRoot, {
     className: a(P.root, A),
-    "aria-label": L,
+    "aria-label": O,
     transitionState: D,
     children: [(0, r.jsxs)("div", {
       className: en,
-      children: [er, w ? (0, r.jsx)("img", {
+      children: [er, k ? (0, r.jsx)("img", {
         className: P.sparkleBadge,
         alt: "",
         src: R
@@ -101,16 +101,16 @@ function L(e) {
       className: P.content,
       children: K ? (0, r.jsx)(s.Spinner, {}) : (0, r.jsx)(r.Fragment, {
         children: J ? (0, r.jsx)(r.Fragment, {
-          children: (0, r.jsx)(T.default, {
+          children: (0, r.jsx)(I.default, {
             onClose: y,
-            type: O,
+            type: L,
             subscriptionTier: null !== (l = null == Y ? void 0 : null === (n = Y.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== l ? l : C.PremiumSubscriptionSKUs.TIER_2,
-            headingText: L,
-            context: v,
+            headingText: O,
+            context: N,
             analyticsLocationObject: h,
             discountOffer: X,
             trialOffer: Y,
-            children: N
+            children: v
           })
         }) : (0, r.jsxs)(r.Fragment, {
           children: [(0, r.jsx)(s.Heading, {
@@ -118,7 +118,7 @@ function L(e) {
               [P.enhancedHeader]: ee
             }),
             variant: "heading-xl/semibold",
-            children: L
+            children: O
           }), (0, r.jsx)(s.Text, {
             variant: "text-md/normal",
             className: a(b),
@@ -162,7 +162,7 @@ function L(e) {
               percent: X.discount.amount
             }))
           }
-          return (0, r.jsx)(I.default, {
+          return (0, r.jsx)(T.default, {
             className: a({
               [P.getNitroCTA]: et
             }),
@@ -174,7 +174,7 @@ function L(e) {
             onClick: () => {
               null == j || j(), y()
             },
-            buttonText: null != k ? k : t
+            buttonText: null != H ? H : t
           })
         })()]
       }), !V && !ee && (0, r.jsx)(s.Button, {

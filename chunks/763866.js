@@ -31,8 +31,8 @@ var i = n("37983"),
   A = n("316095"),
   O = n("802279"),
   M = n("577172"),
-  R = n("465215"),
-  k = n("301998"),
+  k = n("465215"),
+  R = n("301998"),
   L = n("379657"),
   b = n("853780"),
   P = n("574191"),
@@ -143,7 +143,7 @@ function B(e) {
           bio: null == V ? void 0 : V.bio,
           guild: K,
           hidePersonalInformation: $
-        }), (0, i.jsx)(R.default, {
+        }), (0, i.jsx)(k.default, {
           userId: H.id,
           guild: K,
           guildMember: W
@@ -182,7 +182,7 @@ function B(e) {
         }), null != ee && void 0 !== Y && (0, i.jsx)(b.default, {
           channelId: Y,
           applicationId: ee.id
-        }), (0, i.jsx)(k.default, {
+        }), (0, i.jsx)(R.default, {
           user: H,
           setNote: Z,
           autoFocus: !J,

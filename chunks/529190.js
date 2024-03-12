@@ -34,8 +34,8 @@ var i = n("37983"),
   A = n("317041"),
   O = n("49111"),
   M = n("782340"),
-  R = n("847948"),
-  k = n("327769");
+  k = n("847948"),
+  R = n("327769");
 let L = 56,
   b = [8, 8, 0, 8],
   P = o.debounce(() => {
@@ -150,7 +150,7 @@ var j = l.forwardRef(function(e, t) {
           padding: 0
         });
       return (0, i.jsx)(h.default, {
-        className: R.categoryHeader,
+        className: k.categoryHeader,
         icon: a,
         children: t.name
       }, e)
@@ -164,15 +164,15 @@ var j = l.forwardRef(function(e, t) {
       return (0, i.jsxs)("ul", {
         role: "group",
         "aria-label": l.name,
-        className: s(R.categorySection, {
-          [R.categorySectionLast]: n
+        className: s(k.categorySection, {
+          [k.categorySectionLast]: n
         }),
         children: [t, 0 === a.length && (0, i.jsx)(u.default, {
           message: M.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
             applicationName: l.name
           }),
-          noResultsImageURL: k,
-          className: R.noSearchResults
+          noResultsImageURL: R,
+          className: k.noSearchResults
         })]
       }, e)
     }, [V, K]),
@@ -187,7 +187,7 @@ var j = l.forwardRef(function(e, t) {
         index: e,
         command: s,
         channel: n,
-        className: R.itemWrapper,
+        className: k.itemWrapper,
         selected: j === e,
         showImage: a.section.id !== s.applicationId,
         section: o,
@@ -202,11 +202,11 @@ var j = l.forwardRef(function(e, t) {
     (0, f.dismissChannelEditorPopup)()
   }, []), (0, i.jsxs)(x.default, {
     id: ea,
-    className: R.outerWrapper,
-    innerClassName: R.wrapper,
+    className: k.outerWrapper,
+    innerClassName: k.wrapper,
     onMouseDown: U,
     children: [(0, i.jsx)(_.default, {
-      className: R.rail,
+      className: k.rail,
       channel: n,
       sections: H,
       filteredSectionId: z,
@@ -215,7 +215,7 @@ var j = l.forwardRef(function(e, t) {
       applicationCommandListRef: w
     }), (0, i.jsx)(E.default, {
       role: "listbox",
-      className: R.list,
+      className: k.list,
       listPadding: b,
       onScroll: X,
       renderRow: el,

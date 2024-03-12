@@ -42,8 +42,8 @@ var A = function(e) {
     isTyping: A = !1,
     nick: O,
     user: M,
-    currentUser: R,
-    activities: k,
+    currentUser: k,
+    activities: R,
     applicationStream: L,
     status: b,
     shouldAnimateStatus: P = !1,
@@ -138,7 +138,7 @@ var A = function(e) {
     }),
     avatar: ((e, t) => {
       let n = P ? o.AnimatedAvatar : o.Avatar,
-        l = (0, u.default)(k) ? C.StatusTypes.STREAMING : b;
+        l = (0, u.default)(R) ? C.StatusTypes.STREAMING : b;
       return l = t ? void 0 : l, (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(n, {
           ...es,
@@ -153,19 +153,19 @@ var A = function(e) {
           typingIndicatorRef: er
         }), (0, i.jsx)(c.default, {
           confettiSpawnRef: en,
-          shouldFire: A && null != R && e.id !== R.id,
+          shouldFire: A && null != k && e.id !== k.id,
           confettiLocation: T.ConfettiLocation.MEMBER_USER
         })]
       })
     })(M, ef),
     subText: (() => {
-      let e = null != k ? k.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null,
+      let e = null != R ? R.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null,
         t = null != e && null != M && (0, d.default)(e, M, D);
       return (0, i.jsx)(S.default, {
         className: v.activity,
         textClassName: v.activityText,
         emojiClassName: v.activityEmoji,
-        activities: k,
+        activities: R,
         applicationStream: L,
         animate: ee,
         hideEmoji: !t,

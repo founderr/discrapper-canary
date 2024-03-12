@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return E
   },
   SparkleStar: function() {
-    return T
+    return I
   }
 });
 var r = n("37983");
@@ -128,22 +128,22 @@ function E(e) {
           [c.rimGlowVerticalTier0]: t === u.PremiumTypes.TIER_0,
           [c.rimGlowVerticalTier2]: t === u.PremiumTypes.TIER_2
         })
-      }), (0, r.jsx)(T, {
+      }), (0, r.jsx)(I, {
         foreground: c.buttonSparkleStar1
       })]
-    }), (0, r.jsx)(T, {
+    }), (0, r.jsx)(I, {
       foreground: c.buttonSparkleStar2
-    }), (0, r.jsx)(T, {
+    }), (0, r.jsx)(I, {
       foreground: c.buttonSparkleStar3
-    }), (0, r.jsx)(T, {
+    }), (0, r.jsx)(I, {
       foreground: c.buttonSparkleStar4
-    }), (0, r.jsx)(T, {
+    }), (0, r.jsx)(I, {
       foreground: c.buttonSparkleStar5
     })]
   })
 }
 
-function T(e) {
+function I(e) {
   let {
     width: t = 14,
     height: n = 13,
