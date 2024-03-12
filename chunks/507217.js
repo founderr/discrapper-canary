@@ -15,23 +15,8 @@ n.r(t), n.d(t, {
   updateApplicationGuildCommandPermissions: function() {
     return m
   },
-  querySearchManager: function() {
-    return p
-  },
   performAutocomplete: function() {
-    return S
-  },
-  fetchCommand: function() {
-    return v
-  },
-  fetchCommands: function() {
-    return T
-  },
-  fetchCommandsForApplication: function() {
-    return I
-  },
-  updateRegistry: function() {
-    return C
+    return p
   }
 }), n("222007");
 var i = n("627445"),
@@ -101,18 +86,8 @@ function m(e, t, n, i) {
     url: f.Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
   })
 }
-let p = (e, t, n, i, s) => {
-  a.default.dispatch({
-    type: "APPLICATION_COMMAND_SEARCH_STORE_QUERY",
-    context: e,
-    query: t,
-    limit: n,
-    commandType: i,
-    applicationId: s
-  })
-};
 
-function S(e, t, n) {
+function p(e, t, n) {
   var i;
   s(null != t.autocomplete, "Missing autocomplete context");
   let {
@@ -142,46 +117,5 @@ function S(e, t, n) {
       type: "INTERACTION_FAILURE",
       nonce: h
     })
-  })
-}
-
-function v(e, t, n) {
-  a.default.dispatch({
-    type: "APPLICATION_COMMAND_FETCH",
-    channelId: t,
-    commandId: n,
-    guildId: e
-  })
-}
-
-function T(e, t, n) {
-  a.default.dispatch({
-    type: "APPLICATION_COMMANDS_FETCH",
-    channelId: t,
-    commandIds: n,
-    guildId: e
-  })
-}
-
-function I(e) {
-  let {
-    guildId: t,
-    channelId: n,
-    applicationId: i
-  } = e;
-  a.default.dispatch({
-    type: "APPLICATION_COMMANDS_FETCH_FOR_APPLICATION",
-    channelId: n,
-    guildId: t,
-    applicationId: i
-  })
-}
-
-function C(e, t, n) {
-  a.default.dispatch({
-    type: "APPLICATION_COMMAND_REGISTRY_UPDATE",
-    applications: t,
-    commands: e,
-    channelId: n
   })
 }
