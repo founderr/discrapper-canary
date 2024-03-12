@@ -89,7 +89,7 @@ function P(e) {
         minHeight: M
       }),
       B = 0 !== F.width ? F.width / F.height : 1;
-    null != l && r !== I.ImageReadyStates.ERROR ? e = A({
+    "" !== l && r !== I.ImageReadyStates.ERROR ? e = A({
       src: l,
       size: F,
       alt: c,
