@@ -12,6 +12,7 @@ let i = new class e {
   setSelectedStream(e) {}
   setMirrored(e) {}
   setPipAspectRatio(e, t) {}
+  updateSourceTrackingView() {}
   addOnPipModeChangedListener(e) {}
   isEnabled() {
     return !1
