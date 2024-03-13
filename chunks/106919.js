@@ -10,6 +10,7 @@ let i = new class e {
   }
   setEnabled(e) {}
   setSelectedStream(e) {}
+  setFocusedStream(e) {}
   setMirrored(e) {}
   setPipAspectRatio(e, t) {}
   updateSourceTrackingView() {}
