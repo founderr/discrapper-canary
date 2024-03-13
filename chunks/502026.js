@@ -8,12 +8,12 @@ var i = n("37983");
 n("884691");
 var s = n("414456"),
   r = n.n(s),
-  a = n("773179"),
+  a = n("331545"),
   o = n.n(a),
   l = n("669491"),
   u = n("619974"),
   d = n("323805");
-let c = Object.fromEntries(Object.keys(l.default.colors).map(e => [o.kebabCase(e), e])),
+let c = Object.fromEntries(Object.keys(l.default.colors).map(e => [o(e), e])),
   Text = e => {
     let t, {
         variant: n,

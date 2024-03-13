@@ -10,7 +10,7 @@ E.r(_), E.d(_, {
     return o
   }
 }), E("222007"), E("70102");
-var t, o, n = E("773179"),
+var t, o, n = E("229042"),
   r = E.n(n),
   a = E("102053"),
   i = E("95410"),
@@ -154,7 +154,7 @@ let s = {
           persistKey: E
         } = this.getClass();
         this.persist(), e._writePromises.delete(E), e._writeResolvers.delete(E), _()
-      }, this.throttledCallback = r.throttle(e => this.callback(e), this.getClass().throttleDelay, {
+      }, this.throttledCallback = r(e => this.callback(e), this.getClass().throttleDelay, {
         leading: !1
       }), "string" != typeof this.getClass().persistKey) throw Error("".concat(this.getClass().name, " initialized without a `persistKey`. Add one so we know where to save your stuff!"));
     if ("function" != typeof this.initialize) throw Error("".concat(this.getClass().name, " initialized without an `initialize` method. Add one that accepts the initial cached state."));
