@@ -47279,8 +47279,8 @@ html .progress__4ef76 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -69385,7 +69385,7 @@ html .invoiceCancelRow_c1bfe7 {
 
 @keyframes glowEffect_a3ec8f {
     0% {
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0)
+        box-shadow: var(--elevation-medium)
     }
 
     50% {
@@ -69393,12 +69393,38 @@ html .invoiceCancelRow_c1bfe7 {
     }
 
     to {
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0)
+        box-shadow: var(--elevation-medium)
     }
 }
 
 .glowingCardContainer__7d35d {
-    animation: glowEffect_a3ec8f 3s ease-out 2s 1 forwards
+    animation: glowEffect_a3ec8f 3s ease-out 2s 1 forwards;
+    border-radius: 4px
+}
+
+.glowingCardContainer__7d35d:hover:after,
+.glowingCardContainer__7d35d:hover:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none
+}
+
+.glowingCardContainer__7d35d:hover:after {
+    z-index: 29;
+    border: 1px solid var(--premium-tier-2-purple-for-gradients);
+    -webkit-mask: linear-gradient(20deg, #000, rgba(0, 0, 0, 0));
+    mask: linear-gradient(20deg, #000, rgba(0, 0, 0, 0))
+}
+
+.glowingCardContainer__7d35d:hover:before {
+    z-index: 29;
+    border: 1px solid var(--premium-tier-2-purple-for-gradients-2)
 }
 
 .toggleSwitch__7657a {
@@ -69753,10 +69779,9 @@ html .invoiceCancelRow_c1bfe7 {
 
 .gemProgressCircle__1a3f7 {
     width: 80%;
-    min-width: 180px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px
+    margin-bottom: 15px
 }
 
 @keyframes gemGlow__6989d {
@@ -85191,8 +85216,8 @@ html .tabBadge__002b3 {
 
 .bodyText__923f7 {
     color: var(--interactive-normal);
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: 500;
     margin-bottom: 16px
 }
@@ -85239,8 +85264,8 @@ html .tabBadge__002b3 {
 }
 
 .trialCheckboxLabel__0297c {
-    font-size: .875rem;
-    line-height: 1.125rem
+    font-size: 14px;
+    line-height: 18px
 }
 
 .loader_acb69b {
