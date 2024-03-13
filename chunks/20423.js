@@ -3,8 +3,8 @@
     var s, d, n, c, i, r = t("37983");
     t("320777"), t("884691");
     var o = t("288661"),
-      f = t("627445"),
-      l = t.n(f),
+      l = t("627445"),
+      f = t.n(l),
       u = t("521143"),
       b = t("938460"),
       p = t("156820"),
@@ -31,7 +31,7 @@
       y = t("718517");
     let M = 5 * y.default.Millis.MINUTE,
       k = document.getElementById("app-mount");
-    l(null != k, "Could not find app-mount"), k.className = __OVERLAY__ ? "" : D.appMount;
+    f(null != k, "Could not find app-mount"), k.className = __OVERLAY__ ? "" : D.appMount;
     let x = (0, o.createRoot)(k),
       U = e => x.render((0, r.jsx)(C.default, {
         children: (0, r.jsx)(N.default, {

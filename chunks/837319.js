@@ -1,7 +1,7 @@
     "use strict";
     t.r(a), t.d(a, {
       default: function() {
-        return l
+        return f
       }
     });
     var s = t("37983"),
@@ -11,7 +11,7 @@
       i = t("474557"),
       r = t("793932"),
       o = t("125047");
-    class f extends d.Component {
+    class l extends d.Component {
       render() {
         return (0, s.jsx)("div", {
           className: c(r.app, o.vertical),
@@ -19,4 +19,4 @@
         })
       }
     }
-    var l = f
+    var f = l
