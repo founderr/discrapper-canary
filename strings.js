@@ -918,6 +918,8 @@ e.exports = Object.freeze({
   EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE: "You're about to test {activityName} for the first time.",
   EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE: "This app is not made by Discord. Only test apps from developers you trust.",
   EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE: "Learn more about private apps.",
+  APPLICATION_ICON_A11Y_LABEL: "App icon for {applicationName}",
+  APPLICATION_ICON_NO_NAME_A11Y_LABEL: "App icon",
   APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH: "$[](userHook) started an activity",
   APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED: "$[](userHook) started an **$[activity](activityHook)**",
   APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_MOBILE_CANNOT_LAUNCH: "[!!{username}!!](usernameOnClick) started an activity",

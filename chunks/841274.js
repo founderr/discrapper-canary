@@ -1,6 +1,7 @@
 "use strict";
 e.exports = {
   contentExpanded: "contentExpanded_ffeded",
+  contentInteractable: "contentInteractable__902a8",
   cta: "cta_f68ce1",
   ctaClaimReward: "ctaClaimReward_e4b6be",
   ctaWrapper: "ctaWrapper__85e96",
