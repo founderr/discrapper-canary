@@ -76671,7 +76671,8 @@ input::-webkit-inner-spin-button {
     width: 28px
 }
 
-.questProgressBar__991b3 {
+.questProgressBar__991b3,
+.questProgressHint__16d7e {
     flex: 1 1 auto
 }
 
