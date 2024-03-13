@@ -11828,7 +11828,10 @@ html.decorate-links .lowSaturationUnderline__95e71 {
 
 .constrainedObscureContent__2b3c7 {
     min-width: 146px;
-    min-height: 212px
+    min-height: 212px;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 .explicitContentWarning__3f1a4 {
