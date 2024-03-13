@@ -335,6 +335,11 @@ let o = {
     actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED"],
     inlineRequire: () => E("389295").default,
     neverLoadBeforeConnectionOpen: !0
+  },
+  RunningGameHeartbeatManager: {
+    actions: ["RUNNING_GAMES_CHANGE", "LOGOUT", "CONNECTION_CLOSED", "POST_CONNECTION_OPEN"],
+    inlineRequire: () => E("34226").default,
+    neverLoadBeforeConnectionOpen: !0
   }
 };
 (0, t.initialize)(o)

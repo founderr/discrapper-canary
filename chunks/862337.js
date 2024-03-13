@@ -52,6 +52,9 @@ class r {
   stop() {
     null != this._ref && (clearInterval(this._ref), this._ref = null)
   }
+  isStarted() {
+    return null != this._ref
+  }
 }
 
 function a(e) {
