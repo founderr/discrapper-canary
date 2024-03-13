@@ -33,8 +33,8 @@ var u = new class e {
     }();
     null != u && o.tags.push("platform:".concat(u));
     let d = function() {
-      let e = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
-      return i.ReleaseChannelsSets.ALL.has(e) ? e : null
+      let e = window.GLOBAL_ENV.RELEASE_CHANNEL;
+      return null != e && i.ReleaseChannelsSets.ALL.has(e) ? e : null
     }();
     null != d && o.tags.push("release_channel:".concat(d)), this._metrics.push(o), (t || this._metrics.length >= 100) && this._flush()
   }
@@ -46,8 +46,8 @@ var u = new class e {
         body: {
           metrics: e,
           client_info: {
-            built_at: "1710310416177",
-            build_number: "274697"
+            built_at: "1710347968366",
+            build_number: "274737"
           }
         },
         retries: 1
