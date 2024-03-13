@@ -37,11 +37,11 @@ var i = n("37983"),
   M = n("273818"),
   k = n("125047");
 let L = "-:--",
-  b = {
+  P = {
     friction: 14,
     tension: 200
   },
-  P = {
+  b = {
     VIDEO: "VIDEO",
     AUDIO: "AUDIO"
   },
@@ -102,7 +102,7 @@ class w extends l.Component {
     } = this.state;
     t ? u.default.spring(n, {
       toValue: e,
-      ...b
+      ...P
     }).start() : n.setValue(e)
   }
   getAnimatedStyle() {
@@ -171,7 +171,7 @@ class w extends l.Component {
       type: h
     } = this.props;
     return (0, i.jsxs)(u.default.div, {
-      className: h === P.VIDEO ? M.videoControls : M.audioControls,
+      className: h === b.VIDEO ? M.videoControls : M.audioControls,
       onClick: e => e.stopPropagation(),
       onDoubleClick: e => e.stopPropagation(),
       style: this.getAnimatedStyle(),
@@ -305,7 +305,7 @@ class B extends l.Component {
         duration: 200
       })]), u.default.spring(t, {
         toValue: 1.5,
-        ...b,
+        ...P,
         friction: 80
       })]).start()
     }
@@ -352,7 +352,7 @@ class H {
       connection_type: p.default.getType(),
       effective_connection_speed: p.default.getEffectiveConnectionSpeed(),
       service_provider: p.default.getServiceProvider()
-    }), this.playTimeSec = 0, this.playWallTimeMs = 0, this.firstPlayWaitingMs = 0, this.stallCount = 0, this.stallMs = 0, this.seekCount = 0, this.seekWaitingMs = 0, this.playbackStartTime = void 0, this.lastPlayingTime = void 0
+    }), this.playTimeSec = 0, this.playWallTimeMs = 0, this.firstPlayWaitingMs = 0, this.stallCount = 0, this.stallMs = 0, this.seekCount = 0, this.seekWaitingMs = 0, this.playbackStartTime = void 0, this.lastPlayingTime = void 0, this.moveToState("not_started")
   }
   updatePlayTime(e) {
     var t, n;
@@ -471,6 +471,8 @@ class H {
         default:
           this.assertUnreachable(this.currentState)
       }
+    }, this.onDragStart = e => {
+      null != e && (this.lastPlayingTime = e)
     }, this.onLoadedMetadata = e => {
       this.metadata.fileDurationSec = e.currentTarget.duration
     }, this.metadata = e, this.analyticsEnabled = G.getCurrentConfig({
@@ -674,12 +676,12 @@ class V extends l.PureComponent {
         dragging: g
       }
     } = this, C = this.getWidth();
-    return d || n || t === P.AUDIO ? (0, i.jsx)(w, {
+    return d || n || t === b.AUDIO ? (0, i.jsx)(w, {
       buffers: r,
       currentTime: o,
       duration: u,
       volume: (0, x.amplitudeToPerceptual)(y, 1),
-      hide: t === P.VIDEO && c,
+      hide: t === b.VIDEO && c,
       muted: p,
       autoPlay: n,
       onDrag: this.handleDrag,
@@ -696,7 +698,7 @@ class V extends l.PureComponent {
       ref: this.controlsRef,
       width: h ? window.screen.width : C,
       disabled: !l,
-      children: t === P.VIDEO ? (0, i.jsx)(f.default, {
+      children: t === b.VIDEO ? (0, i.jsx)(f.default, {
         "aria-label": R.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
         className: M.videoButton,
         guestWindow: window,
@@ -717,7 +719,7 @@ class V extends l.PureComponent {
       playable: a,
       mimeType: s
     } = this.props;
-    return null == e || null == t ? null : l === P.AUDIO ? (0, i.jsx)(F, {
+    return null == e || null == t ? null : l === b.AUDIO ? (0, i.jsx)(F, {
       fileName: e,
       fileSize: t,
       src: n,
@@ -739,7 +741,7 @@ class V extends l.PureComponent {
     } = this.props, {
       fullscreen: i
     } = this.state, l = this.getWidth();
-    return i ? j : t === P.AUDIO ? {
+    return i ? j : t === b.AUDIO ? {
       width: void 0,
       height: "auto"
     } : e ? void 0 : {
@@ -763,7 +765,7 @@ class V extends l.PureComponent {
       hideControls: f,
       playing: p
     } = this.state, m = M.wrapperPaused;
-    if (t === P.AUDIO ? m = M.wrapperAudio : f ? m = M.wrapperControlsHidden : p && (m = M.wrapperPlaying), l && t === P.VIDEO) {
+    if (t === b.AUDIO ? m = M.wrapperAudio : f ? m = M.wrapperControlsHidden : p && (m = M.wrapperPlaying), l && t === b.VIDEO) {
       let t = this.getWidth();
       return (0, i.jsxs)("div", {
         className: s(m, {
@@ -793,7 +795,7 @@ class V extends l.PureComponent {
       onMouseMove: p ? this.handleMouseMove : void 0,
       onKeyDown: this.handleKeyDown,
       style: this.getMediaStyle(),
-      children: [this.renderMetadata(), t === P.AUDIO ? this.renderAudio() : this.renderVideo(), this.renderControls(), t === P.VIDEO ? this.renderPlayPausePop() : null, null != d ? (0, i.jsx)("div", {
+      children: [this.renderMetadata(), t === b.AUDIO ? this.renderAudio() : this.renderVideo(), this.renderControls(), t === b.VIDEO ? this.renderPlayPausePop() : null, null != d ? (0, i.jsx)("div", {
         className: s({
           [M.overlayContentHidden]: p || c
         }),
@@ -955,9 +957,10 @@ class V extends l.PureComponent {
         hideControls: !1
       }))
     }, this.handleDragStart = e => {
+      var t, n;
       this.setState({
         dragging: e
-      })
+      }), this._analytics.onDragStart(null !== (n = null === (t = this.mediaRef.current) || void 0 === t ? void 0 : t.currentTime) && void 0 !== n ? n : null)
     }, this.handleDragEnd = () => {
       this.setState({
         dragging: null
@@ -1002,7 +1005,7 @@ class V extends l.PureComponent {
     }
   }
 }
-V.Types = P, V.defaultProps = {
+V.Types = b, V.defaultProps = {
   width: 400,
   height: 300,
   forceExternal: !1,
