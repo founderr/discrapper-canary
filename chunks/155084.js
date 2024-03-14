@@ -1,18 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 }), n("222007"), n("424973");
 var i, s, r = n("615361"),
   a = n("872717"),
   o = n("773336"),
-  l = n("82087"),
-  u = n("827032"),
-  d = n("49111");
-let c = new Set(["darwin", "linux", "win32", "ios", "android"]);
+  l = n("968027"),
+  u = n("82087"),
+  d = n("827032"),
+  c = n("49111");
+let f = new Set(["darwin", "linux", "win32", "ios", "android"]);
 (s = i || (i = {})).COUNT = "count", s.DISTRIBUTION = "distribution";
-var f = new class e {
+var _ = new class e {
   _getMetricWithDefaults(e, t) {
     let {
       name: n,
@@ -20,7 +21,7 @@ var f = new class e {
     } = e, s = {
       name: n,
       type: t,
-      tags: (0, u.getGlobalTagsArray)()
+      tags: (0, d.getGlobalTagsArray)()
     };
     null != i && i.forEach(e => {
       s.tags.push(e)
@@ -29,15 +30,15 @@ var f = new class e {
       if ((0, o.isWeb)()) return "web";
       {
         let e = (0, o.getPlatformName)();
-        return c.has(e) ? e : null
+        return f.has(e) ? e : null
       }
     }();
     null != a && s.tags.push("platform:".concat(a));
-    let l = function() {
-      let e = window.GLOBAL_ENV.RELEASE_CHANNEL;
+    let u = function() {
+      let e = l.CurrentReleaseChannel;
       return null != e && r.ReleaseChannelsSets.ALL.has(e) ? e : null
     }();
-    return null != l && s.tags.push("release_channel:".concat(l)), s
+    return null != u && s.tags.push("release_channel:".concat(u)), s
   }
   increment(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -56,12 +57,12 @@ var f = new class e {
     if (this._metrics.length > 0) {
       let e = [...this._metrics];
       a.default.post({
-        url: (0, l.isMetricsEndpointV2Enabled)("monitoring-agent") ? d.Endpoints.METRICS_V2 : d.Endpoints.METRICS,
+        url: (0, u.isMetricsEndpointV2Enabled)("monitoring-agent") ? c.Endpoints.METRICS_V2 : c.Endpoints.METRICS,
         body: {
           metrics: e,
           client_info: {
-            built_at: "1710437488365",
-            build_number: "275154"
+            built_at: "1710460340151",
+            build_number: "275416"
           }
         },
         retries: 1
