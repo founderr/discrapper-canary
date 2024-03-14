@@ -14,19 +14,7 @@ let o = (0, t.createExperiment)({
   },
   treatments: [{
     id: 1,
-    label: "Staff Test",
-    config: {
-      enabled: !0
-    }
-  }, {
-    id: 2,
-    label: "Show feed by affinity",
-    config: {
-      enabled: !0
-    }
-  }, {
-    id: 3,
-    label: "Show feed by heuristics",
+    label: "Show feed",
     config: {
       enabled: !0
     }
