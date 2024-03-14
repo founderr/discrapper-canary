@@ -1,20 +1,15 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   default: function() {
-    return o
+    return u
   }
 });
-var n = i("255397"),
-  l = i("292687"),
-  a = i("974889"),
-  u = i("393414"),
-  r = i("191225"),
-  d = i("420444"),
-  s = i("49111");
+var n = i("292687"),
+  l = i("974889"),
+  a = i("393414"),
+  r = i("49111");
 
-function o(e, t) {
-  let i = l.default.getWindowOpen(s.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-  i ? (0, a.default)(s.PopoutWindowKeys.CHANNEL_CALL_POPOUT) : (0, u.transitionTo)(s.Routes.CHANNEL(e, t));
-  let o = r.default.getSelfEmbeddedActivityForChannel(t);
-  null != o && (0, d.default)(t) && n.default.selectParticipant(t, o.applicationId)
+function u(t, e) {
+  let i = n.default.getWindowOpen(r.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+  i ? (0, l.default)(r.PopoutWindowKeys.CHANNEL_CALL_POPOUT) : (0, a.transitionTo)(r.Routes.CHANNEL(t, e))
 }
