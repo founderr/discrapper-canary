@@ -332,7 +332,7 @@ let o = {
     neverLoadBeforeConnectionOpen: !0
   },
   ContentInventoryManager: {
-    actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED"],
+    actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED", "IDLE"],
     inlineRequire: () => E("389295").default,
     neverLoadBeforeConnectionOpen: !0
   },
