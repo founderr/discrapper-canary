@@ -28,7 +28,7 @@ var t = E("689988"),
   D = E("706530");
 let c = 12 * S.default.Millis.HOUR,
   d = 1 * S.default.Millis.MINUTE,
-  U = 30 * S.default.Millis.SECOND,
+  U = 1 * S.default.Millis.SECOND,
   M = 5 * S.default.Millis.SECOND,
   h = 1 * S.default.Millis.SECOND,
   P = e => (0, n.encodeStreamKey)({
@@ -135,8 +135,8 @@ class y extends t.default {
       if (null == _ || null == _.config || null == _.userStatus) return d;
       let {
         streamProgressSeconds: E
-      } = _.userStatus, t = 60 * _.config.streamDurationRequirementMinutes;
-      return t - E <= .1 * t ? U : d
+      } = _.userStatus, t = 60 * _.config.streamDurationRequirementMinutes, o = (t - E) * S.default.Millis.SECOND;
+      return o <= d ? o + U : d
     }, this.terminateHeartbeat = e => {
       let {
         streamKey: _,
