@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return P
   },
   getExtensions: function() {
-    return M
+    return L
   }
 }), n("222007"), n("834022"), n("70102"), n("424973"), n("808653"), n("700225");
 var i, s, r, a, o = n("798680"),
@@ -415,7 +415,7 @@ function P(e) {
   return !(t.split(" ").length < 3) || (S.error("Incorrect c-line: ".concat(t)), !1)
 }
 
-function M(e) {
+function L(e) {
   return [...new Set(e.split(/\r\n/).filter(e => e.startsWith("a=extmap:")))].map(e => {
     let t = e.split(" "),
       n = t[0].split("/");

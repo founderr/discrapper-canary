@@ -74,10 +74,10 @@ function C(e) {
     maxVisibleItems: C = 5,
     itemToString: A = T,
     showScrollbar: y = !1
-  } = e, [N, R] = s.useState(""), [O] = s.useState(!0), [D, P] = s.useState(null), M = s.useId(), L = s.useRef(null);
+  } = e, [N, R] = s.useState(""), [O] = s.useState(!0), [D, P] = s.useState(null), L = s.useId(), M = s.useRef(null);
   s.useLayoutEffect(() => {
     let e = document.querySelector("[".concat(m, '="').concat(D, '"]')),
-      t = L.current;
+      t = M.current;
     null != t && null != e && t.scrollIntoViewNode({
       node: e,
       padding: 12
@@ -87,14 +87,14 @@ function C(e) {
     U = 0 === b.length,
     w = s.useId(),
     k = s.useCallback(() => new Promise(e => {
-      let t = L.current;
+      let t = M.current;
       if (null == t) return e();
       t.scrollToTop({
         callback: () => requestAnimationFrame(() => e())
       })
     }), []),
     V = s.useCallback(() => new Promise(e => {
-      let t = L.current;
+      let t = M.current;
       if (null == t) return e();
       t.scrollToTop({
         callback: () => requestAnimationFrame(() => e())
@@ -103,7 +103,7 @@ function C(e) {
     G = s.useCallback((e, t) => {
       P(t);
       let n = document.querySelector(e),
-        i = L.current;
+        i = M.current;
       null != i && null != n && i.scrollIntoViewNode({
         node: n
       })
@@ -131,8 +131,8 @@ function C(e) {
           role: "combobox",
           "aria-label": p,
           "aria-expanded": O,
-          "aria-controls": O ? M : void 0,
-          "aria-owns": M,
+          "aria-controls": O ? L : void 0,
+          "aria-owns": L,
           "aria-haspopup": "listbox",
           className: a(g.combobox, u),
           children: [(0, i.jsx)(_.default, {
@@ -175,8 +175,8 @@ function C(e) {
                   maxHeight: 46 * C
                 },
                 "aria-multiselectable": S,
-                id: M,
-                ref: L,
+                id: L,
+                ref: M,
                 className: a(g.list, h, {
                   [g.scroller]: y
                 }),

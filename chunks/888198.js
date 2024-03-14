@@ -32,9 +32,9 @@ var i = n("917351"),
 let O = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
   D = /^$|\n *$/,
   P = /^ *>>> ?/,
-  M = /^ *> ?/gm;
+  L = /^ *> ?/gm;
 
-function L(e) {
+function M(e) {
   let t = (0, p.punycodeLink)(e[1]);
   if (null == t) return {
     type: "text",
@@ -83,7 +83,7 @@ let b = e => {
       parse(e, t, n) {
         let i = e[0],
           s = !!P.exec(i),
-          r = i.replace(s ? P : M, ""),
+          r = i.replace(s ? P : L, ""),
           a = n.inQuote || !1,
           o = n.inline || !1;
         n.inQuote = !0, !s && (n.inline = !0);
@@ -100,7 +100,7 @@ let b = e => {
     link: p.default,
     autolink: {
       ...a.defaultRules.autolink,
-      parse: L
+      parse: M
     },
     url: {
       ...a.defaultRules.url,
@@ -123,7 +123,7 @@ let b = e => {
         }
         return n
       },
-      parse: L
+      parse: M
     },
     strong: a.defaultRules.strong,
     em: a.defaultRules.em,

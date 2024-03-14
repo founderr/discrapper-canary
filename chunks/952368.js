@@ -154,14 +154,14 @@ let _ = /\.gif($|\?|#)/i,
       limitResponsiveWidth: N,
       useFullWidth: A,
       placeholder: O,
-      placeholderVersion: R
+      placeholderVersion: M
     } = this.props, {
-      readyState: M,
+      readyState: R,
       hasMouseOver: k,
       hasFocus: L
     } = this.state, P = null != i, b = this.getRatio(), j = (0, u.clamp)(Math.round(h * b), null != E ? E : 0, null != g ? g : 1 / 0), U = (0, u.clamp)(Math.round(x * b), null != y ? y : 0, null != S ? S : 1 / 0), D = {
       alt: t,
-      readyState: M,
+      readyState: R,
       onContextMenu: null != a ? a : void 0,
       zoomable: P,
       className: d,
@@ -176,7 +176,7 @@ let _ = /\.gif($|\?|#)/i,
       height: U,
       src: "",
       placeholder: O,
-      placeholderVersion: R,
+      placeholderVersion: M,
       children: null != f ? e => {
         let {
           src: t,
@@ -196,7 +196,7 @@ let _ = /\.gif($|\?|#)/i,
       onBlur: this.onBlur
     };
     if (1 === D.width && 1 === D.height) return null;
-    switch ((P || null != I) && (D.onClick = this.onClick), l && (D.original = null != o && "" !== o ? o : D.src), M) {
+    switch ((P || null != I) && (D.onClick = this.onClick), l && (D.original = null != o && "" !== o ? o : D.src), R) {
       case T.ImageReadyStates.LOADING:
         null != n && (D.src = n);
         break;

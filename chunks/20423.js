@@ -6,8 +6,8 @@
       f = t("627445"),
       l = t.n(f),
       u = t("521143"),
-      p = t("938460"),
-      b = t("156820"),
+      b = t("938460"),
+      p = t("156820"),
       h = t("878175"),
       j = t("13616"),
       m = t("436948"),
@@ -70,5 +70,5 @@
           (0, v.hidden)(window)
         })
       }
-      h.default.initialize(), p.default.init(), m.default.init(), L.default.init(), b.default.initialize(), g.default.initialize(), T.default.initialize(), j.initialize(), U(u.default.App)
+      h.default.initialize(), b.default.init(), m.default.init(), L.default.init(), p.default.initialize(), g.default.initialize(), T.default.initialize(), j.initialize(), U(u.default.App)
     }

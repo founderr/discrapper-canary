@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return L
   }
 }), n("222007");
 var s = n("917351"),
@@ -122,7 +122,7 @@ class P extends a.default.Store {
   }
 }
 P.displayName = "GuildSubscriptionsStore";
-var M = new P(o.default, {
+var L = new P(o.default, {
   CONNECTION_OPEN: N,
   CONNECTION_RESUMED: N,
   CONNECTION_CLOSED: function() {

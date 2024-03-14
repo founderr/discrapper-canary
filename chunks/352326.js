@@ -29,8 +29,8 @@ let I = [T.DispatchErrorCodes.AUTHENTICATION_FAILED, T.DispatchErrorCodes.NOT_EN
   O = null,
   D = !1,
   P = new Map,
-  M = !1,
-  L = null;
+  L = !1,
+  M = null;
 
 function b() {
   let e = {
@@ -56,7 +56,7 @@ function U() {
       let e = h.default.getToken(),
         t = h.default.getId();
       if (null == e) throw Error("missing user token");
-      M = !m.default.setCurrentTask(r, a, s, t, e)
+      L = !m.default.setCurrentTask(r, a, s, t, e)
     }
   }
 }
@@ -107,7 +107,7 @@ function x() {
 function B() {
   for (let e of _.default.getRunningDiscordApplicationIds()) f.cancel(e, e);
   let e = _.default.getVisibleGame();
-  return !N && null != e && e.pid !== L && f.pause(), L = null == e ? null : e.pid, !1
+  return !N && null != e && e.pid !== M && f.pause(), M = null == e ? null : e.pid, !1
 }
 class H extends u.default.Store {
   initialize() {
@@ -141,7 +141,7 @@ class H extends u.default.Store {
     return w(e, t)
   }
   isCorruptInstallation() {
-    return M
+    return L
   }
 }
 H.displayName = "DispatchManagerStore";

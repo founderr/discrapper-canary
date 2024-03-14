@@ -43,10 +43,10 @@ n.r(t), n.d(t, {
     return P
   },
   trackForumPostLinkCopied: function() {
-    return M
+    return L
   },
   trackForumOnboardingClicked: function() {
-    return L
+    return M
   },
   trackForumUpsellModalClicked: function() {
     return b
@@ -343,7 +343,7 @@ function P(e) {
   })
 }
 
-function M(e) {
+function L(e) {
   let {
     postId: t,
     location: n
@@ -354,7 +354,7 @@ function M(e) {
   })
 }
 
-function L(e) {
+function M(e) {
   let {
     onboardingCTA: t
   } = e;

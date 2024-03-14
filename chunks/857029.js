@@ -96,7 +96,7 @@ function d(e) {
             null != e ? (D(e), y(!1)) : requestAnimationFrame(() => y(!0))
           })
         }, [t, _, D]),
-        M = i.useCallback(function() {
+        L = i.useCallback(function() {
           let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
             [n, i] = null != h ? h(d, c) : [d, c];
           if ((n !== d || i !== c) && (E({
@@ -110,9 +110,9 @@ function d(e) {
           let r = u(l(t, n, i));
           null != r && (R(!0), D(r))
         }, [E, d, c, h, t, D]),
-        [L, b] = i.useState(!1);
+        [M, b] = i.useState(!1);
       i.useEffect(() => {
-        if (!L || !I) return;
+        if (!M || !I) return;
         b(!1);
         let e = u(l(t, d, c));
         if (null != e) {
@@ -122,7 +122,7 @@ function d(e) {
         C(!1);
         let n = u(l(t));
         null != n && D(n)
-      }, [t, L, I, D, d, c]);
+      }, [t, M, I, D, d, c]);
       let U = i.useCallback(e => {
         v.current && null == e && b(!0)
       }, []);
@@ -134,7 +134,7 @@ function d(e) {
       let w = i.useCallback(e => {
           if (!v.current) return;
           if (!S && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
-            e.preventDefault(), e.stopPropagation(), M();
+            e.preventDefault(), e.stopPropagation(), L();
             return
           }
           let t = function(e) {
@@ -178,8 +178,8 @@ function d(e) {
                 type: t
               }), null != f ? f(d, c, e) : null != T && T.click()
           }
-        }, [M, E, p, T, f, d, c]),
-        k = i.useCallback(e => e.currentTarget !== e.target ? (!I && (C(!0), R(!0)), !1) : I ? (M(!1), !1) : void(g && null != T ? P(d, c) : M(!0)), [I, g, T, M, P, d, c]),
+        }, [L, E, p, T, f, d, c]),
+        k = i.useCallback(e => e.currentTarget !== e.target ? (!I && (C(!0), R(!0)), !1) : I ? (L(!1), !1) : void(g && null != T ? P(d, c) : L(!0)), [I, g, T, L, P, d, c]),
         V = i.useCallback(e => {
           if (e.target !== e.currentTarget) {
             if (e.currentTarget.contains(e.relatedTarget)) return !1;

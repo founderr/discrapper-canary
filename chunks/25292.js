@@ -35,8 +35,8 @@ var s = n("448105"),
   O = n("305961"),
   D = n("377253"),
   P = n("957255"),
-  M = n("824563"),
-  L = n("27618"),
+  L = n("824563"),
+  M = n("27618"),
   b = n("18494"),
   U = n("162771"),
   w = n("697218"),
@@ -190,7 +190,7 @@ var el = {
     } = e;
     return er({
       query: t,
-      members: L.default.getFriendIDs().map(e => w.default.getUser(e)).filter(V.isNotNullish),
+      members: M.default.getFriendIDs().map(e => w.default.getUser(e)).filter(V.isNotNullish),
       limit: n,
       filter: s
     })
@@ -227,7 +227,7 @@ var el = {
         var t;
         return {
           userId: e,
-          nick: null !== (t = L.default.getNickname(e)) && void 0 !== t ? t : null
+          nick: null !== (t = M.default.getNickname(e)) && void 0 !== t ? t : null
         }
       });
       let e = w.default.getCurrentUser();
@@ -366,7 +366,7 @@ var el = {
             type: (0, C.isGuildVocalChannelType)(e.type) ? W.AutocompleterResultTypes.VOICE_CHANNEL : W.AutocompleterResultTypes.TEXT_CHANNEL,
             record: e,
             score: et(l, _[e.id]),
-            comparator: (0, u.computeChannelName)(e, w.default, L.default),
+            comparator: (0, u.computeChannelName)(e, w.default, M.default),
             sortable: s
           })
         }
@@ -414,14 +414,14 @@ var el = {
     }, c = o(y.default.getMutablePrivateChannels()).values().value(), f = [];
     for (let e of c) {
       if (!e.isMultiUserDM() || !s(e)) continue;
-      let t = (0, u.computeChannelName)(e, w.default, L.default).toLocaleLowerCase(),
+      let t = (0, u.computeChannelName)(e, w.default, M.default).toLocaleLowerCase(),
         n = (0, H.stripDiacritics)((0, H.normalize)(t)),
         a = ei(n, d, i);
       a > 0 && f.push({
         type: W.AutocompleterResultTypes.GROUP_DM,
         record: e,
         score: et(a, r[e.id]),
-        comparator: (0, u.computeChannelName)(e, w.default, L.default),
+        comparator: (0, u.computeChannelName)(e, w.default, M.default),
         sortable: n
       })
     }
@@ -518,7 +518,7 @@ var el = {
         score: i,
         comparator: s,
         nick: R.default.getNick(n.guild_id, t.id),
-        status: M.default.getStatus(t.id)
+        status: L.default.getStatus(t.id)
       }
     }) : [], g = E.length, m = t.toLowerCase(), p = [];
     if (g < f && l) {
@@ -555,7 +555,7 @@ var el = {
       query: t
     }).map(e => ({
       ...e,
-      status: M.default.getStatus(e.record.id)
+      status: L.default.getStatus(e.record.id)
     })) : [], c = u.length, f = t.toLowerCase(), _ = [];
     if (c < j.MAX_AUTOCOMPLETE_RESULTS && a) {
       let e = O.default.getGuild(n);

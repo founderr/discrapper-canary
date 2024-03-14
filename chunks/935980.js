@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return O
   },
   Select: function() {
-    return M
+    return L
   },
   SingleSelect: function() {
     return b
@@ -140,7 +140,7 @@ function P(e) {
   return e.map(e => D(e)).join(", ")
 }
 
-function M(e) {
+function L(e) {
   let {
     options: t,
     placeholder: n = T.default.Messages.SELECT,
@@ -156,7 +156,7 @@ function M(e) {
     renderOptionLabel: N = D,
     renderOptionValue: R = P,
     popoutClassName: O,
-    popoutPosition: M = "bottom",
+    popoutPosition: L = "bottom",
     popoutLayerContext: b,
     optionClassName: U,
     closeOnSelect: w,
@@ -206,7 +206,7 @@ function M(e) {
         position: s,
         updatePosition: r
       } = e;
-      return (0, i.jsx)(L, {
+      return (0, i.jsx)(M, {
         className: O,
         closeOnSelect: w,
         maxVisibleItems: u,
@@ -223,7 +223,7 @@ function M(e) {
         popoutPosition: s
       })
     },
-    position: M,
+    position: L,
     layerContext: b,
     children: (e, t) => {
       let {
@@ -285,7 +285,7 @@ function M(e) {
   })
 }
 
-function L(e) {
+function M(e) {
   let {
     className: t,
     onSelect: n,
@@ -335,7 +335,7 @@ function L(e) {
         serialize: m
       }, null !== (n = e.key) && void 0 !== n ? n : t)
     }),
-    M = f.length <= h ? c.AdvancedScrollerNone : c.AdvancedScrollerThin;
+    L = f.length <= h ? c.AdvancedScrollerNone : c.AdvancedScrollerThin;
   return (0, i.jsx)(o.ListNavigatorProvider, {
     navigator: R,
     children: (0, i.jsx)(o.ListNavigatorContainer, {
@@ -345,7 +345,7 @@ function L(e) {
           ...s
         } = e;
         return (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(M, {
+          children: [(0, i.jsx)(L, {
             className: a(I.popout, t, {
               [I.popoutPositionTop]: "top" === T
             }),
@@ -411,7 +411,7 @@ function b(e) {
     value: t,
     onChange: n
   });
-  return (0, i.jsx)(M, {
+  return (0, i.jsx)(L, {
     ...s,
     ...r
   })

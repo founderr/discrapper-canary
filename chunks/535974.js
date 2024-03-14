@@ -33,11 +33,11 @@ let T = {},
   D = [],
   P = !1;
 
-function M(e) {
+function L(e) {
   return e.type === S.LocalDispatchApplicationStates.INSTALLING || e.type === S.LocalDispatchApplicationStates.UPDATING || e.type === S.LocalDispatchApplicationStates.REPAIRING ? e.networkProgress : null
 }
 
-function L(e) {
+function M(e) {
   return e.type === S.LocalDispatchApplicationStates.INSTALLING || e.type === S.LocalDispatchApplicationStates.UPDATING || e.type === S.LocalDispatchApplicationStates.REPAIRING ? e.diskProgress : null
 }
 
@@ -264,9 +264,9 @@ var F = new G(o.default, {
             }
             throw Error("Invalid Dispatch State. state=".concat(e.state.type))
           }(i[e][t]), null != T[d]) {
-          let e = V(n, d, M);
+          let e = V(n, d, L);
           e > 0 && U(A += e);
-          let i = V(n, d, L);
+          let i = V(n, d, M);
           i > 0 && k(y += i);
           let r = V(n, d, b);
           if (r > 0 && w(N += r), s === t) {

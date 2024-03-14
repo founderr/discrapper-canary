@@ -92,11 +92,11 @@ function C(e) {
     return e
   }, [N]), {
     canSeeRecentlyHeard: O,
-    canSeeFrequentlyPlayed: R
+    canSeeFrequentlyPlayed: M
   } = (0, f.useRecentlyHeardExperiment)({
     location: "soundboard-useSoundGrid",
     autoTrackExposure: !0
-  }), M = function() {
+  }), R = function() {
     i.useEffect(() => {
       s.FrecencyUserSettingsActionCreators.loadIfNecessary()
     }, []);
@@ -122,11 +122,11 @@ function C(e) {
       potentialSoundIdsForSection: k,
       sectionType: h.SoundboardSoundGridSectionType.RECENTLY_HEARD,
       sortById: !1
-    }), R && g({
+    }), M && g({
       sections: e,
       guildIds: T,
       allSounds: E,
-      potentialSoundIdsForSection: M.map(e => e.soundId),
+      potentialSoundIdsForSection: R.map(e => e.soundId),
       sectionType: h.SoundboardSoundGridSectionType.FREQUENTLY_USED,
       sortById: !1
     }), ! function(e, t, n, i, l) {
@@ -167,7 +167,7 @@ function C(e) {
       categories: e,
       isFetching: I
     })
-  }, [T, E, C, k, M, R, O, N, A, t, v, _, n, I])
+  }, [T, E, C, k, R, M, O, N, A, t, v, _, n, I])
 }
 
 function I(e, t, n) {

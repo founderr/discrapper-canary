@@ -33,9 +33,9 @@ function T(e) {
       guild: N,
       theme: A,
       onClose: O,
-      className: R
+      className: M
     } = e,
-    M = (0, d.default)(N, _, v),
+    R = (0, d.default)(N, _, v),
     [k, L] = l.useState(new Set),
     P = (0, r.useStateFromStores)([m.default], () => m.default.getUserProfile(_)),
     b = null !== (t = null == P ? void 0 : P.connectedAccounts) && void 0 !== t ? t : [],
@@ -43,7 +43,7 @@ function T(e) {
     U = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation),
     D = (0, r.useStateFromStores)([c.default], () => c.default.locale);
   if (l.useEffect(() => {
-      (null == N ? void 0 : N.id) != null && (null == M ? void 0 : M.id) != null && u.default.fetchGuildRoleConnectionsEligibility(N.id, M.id).then(e => {
+      (null == N ? void 0 : N.id) != null && (null == R ? void 0 : R.id) != null && u.default.fetchGuildRoleConnectionsEligibility(N.id, R.id).then(e => {
         let t = new Set;
         for (let n of e)
           for (let {
@@ -52,7 +52,7 @@ function T(e) {
             of n) t.add(e);
         L(t)
       })
-    }, [null == N ? void 0 : N.id, null == M ? void 0 : M.id]), U || null == M) return null;
+    }, [null == N ? void 0 : N.id, null == R ? void 0 : R.id]), U || null == R) return null;
   let w = Array.from(k).map(e => {
     let t = b.find(t => t.type === e);
     return null == t ? null : (0, i.jsx)(h.ConnectedUserAccount, {
@@ -68,7 +68,7 @@ function T(e) {
       className: I.title,
       children: S.default.Messages.CONNECTIONS
     }), (0, i.jsxs)("div", {
-      className: s(C.connectionsContainer, R),
+      className: s(C.connectionsContainer, M),
       children: [w, (0, i.jsxs)(o.Clickable, {
         onClick: function() {
           (0, x.openUserProfileModal)({
@@ -99,7 +99,7 @@ function T(e) {
       className: I.title,
       children: S.default.Messages.APPS
     }), (0, i.jsx)("div", {
-      className: s(C.connectionsContainer, R),
+      className: s(C.connectionsContainer, M),
       children: j.map(e => (0, i.jsx)(h.ConnectedApplicationUserRoleAccount, {
         applicationRoleConnection: e,
         locale: D

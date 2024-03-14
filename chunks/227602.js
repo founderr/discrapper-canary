@@ -42,8 +42,8 @@ let R = new E.default("KeybindsStore"),
   },
   D = {},
   P = {},
-  M = 0,
-  L = !0,
+  L = 0,
+  M = !0,
   b = {},
   U = !1,
   w = [C.GlobalKeybindActions.PUSH_TO_TALK, C.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK, C.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
@@ -54,7 +54,7 @@ function k() {
   } = g.default.getCurrentConfig({
     location: "KeybindsStore"
   }), t = c.find(P, e => O.action === e.action && e.enabled && e.shortcut.length > 0);
-  null == t && !__OVERLAY__ && !U && L && e && (x(O), U = !0)
+  null == t && !__OVERLAY__ && !U && M && e && (x(O), U = !0)
 }
 
 function V() {
@@ -82,7 +82,7 @@ function F(e) {
 }
 
 function x(e) {
-  if (!L || __OVERLAY__) return;
+  if (!M || __OVERLAY__) return;
   let {
     shortcut: t,
     action: n,
@@ -116,7 +116,7 @@ function x(e) {
 
 function B(e) {
   let t = {
-    id: M.toString(),
+    id: L.toString(),
     enabled: !0,
     action: C.GlobalKeybindActions.UNASSIGNED,
     shortcut: [],
@@ -127,7 +127,7 @@ function B(e) {
   return P = {
     ...P,
     [t.id]: t
-  }, M += 1, t
+  }, L += 1, t
 }
 
 function H(e) {
@@ -325,22 +325,22 @@ var q = new z(_.default, {
     let {
       enable: t
     } = e;
-    L = t, t ? (h.default.enable(), c.forEach(P, x), k()) : (h.default.disable(), c.forEach(P, e => F(e.id)), V())
+    M = t, t ? (h.default.enable(), c.forEach(P, x), k()) : (h.default.disable(), c.forEach(P, e => F(e.id)), V())
   },
   KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: function(e) {
     let {
       keybinds: t
     } = e;
-    b = t, D = {}, M = 0;
+    b = t, D = {}, L = 0;
     let n = Object.values(P).filter(e => w.includes(e.action) && e.managed);
     n.length !== w.length && K(), c.forEach(P, e => {
-      M = Math.max(parseInt(e.id, 10), M) + 1;
+      L = Math.max(parseInt(e.id, 10), L) + 1;
       try {
         x(e)
       } catch (t) {
         R.error("Failed to register keybind", e, t)
       }
-    }), L = !0, null == i && (i = g.default.subscribe({
+    }), M = !0, null == i && (i = g.default.subscribe({
       location: "KeybindsStore"
     }, G))
   }

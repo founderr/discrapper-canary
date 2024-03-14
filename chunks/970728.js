@@ -35,8 +35,8 @@ var i = n("597755"),
   O = n("393414"),
   D = n("716214"),
   P = n("233069"),
-  M = n("271938"),
-  L = n("42203"),
+  L = n("271938"),
+  M = n("42203"),
   b = n("923959"),
   U = n("26989"),
   w = n("305961"),
@@ -88,7 +88,7 @@ function ee(e) {
     var i, s;
     if ((null == n ? void 0 : n.targetType) === X.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE) return z.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
     if ((null == n ? void 0 : n.targetType) == null && !P.GUILD_VOCAL_CHANNEL_TYPES.has(t.type) && ((0, m.canSeeGuildHome)(e) || (0, v.canSeeOnboardingHome)(e))) return z.StaticChannelRoute.GUILD_HOME;
-    let r = L.default.getChannel(t.id);
+    let r = M.default.getChannel(t.id);
     return G.default.can(K.Permissions.VIEW_CHANNEL, r) ? t.id : null !== (s = null === (i = b.default.getDefaultChannel(e, !0, K.Permissions.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== s ? s : t.id
   }(t, i, s), {
     targetUserId: l,
@@ -128,9 +128,9 @@ function ee(e) {
 }
 let et = function(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-    L.default.addConditionalChangeListener(() => {
+    M.default.addConditionalChangeListener(() => {
       var i;
-      let s = L.default.getChannel(e),
+      let s = M.default.getChannel(e),
         r = F.default.getCurrentUser();
       return null == s || null == r || (!s.nsfw || !!r.nsfwAllowed) && ((null == t ? void 0 : t.guildScheduledEvent) != null ? (! function(e) {
         let {
@@ -326,7 +326,7 @@ var ei = {
       context: a,
       callback: o,
       skipOnboarding: l
-    } = e, c = (0, A.parseExtraDataFromInviteKey)(r), _ = c.baseCode, h = M.default.getSessionId();
+    } = e, c = (0, A.parseExtraDataFromInviteKey)(r), _ = c.baseCode, h = L.default.getSessionId();
     let E = (i = a, s = c, {
         ...i,
         invite_guild_scheduled_event_id: s.guildScheduledEventId

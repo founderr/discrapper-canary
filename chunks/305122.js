@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return O
   },
   reportSoundFinishedPlaying: function() {
-    return R
+    return M
   },
   updateUserSoundboardVolume: function() {
-    return M
+    return R
   },
   muteCustomJoinSound: function() {
     return k
@@ -169,7 +169,7 @@ function O(e, t) {
   })
 }
 
-function R(e, t) {
+function M(e, t) {
   s.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_END",
     soundId: e,
@@ -177,7 +177,7 @@ function R(e, t) {
   })
 }
 
-function M(e) {
+function R(e) {
   s.default.dispatch({
     type: "USER_SOUNDBOARD_SET_VOLUME",
     volume: e

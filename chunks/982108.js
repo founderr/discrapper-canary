@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return N
   },
   default: function() {
-    return M
+    return L
   }
 });
 var i = n("394846"),
@@ -113,7 +113,7 @@ class P extends s.default.PersistedStore {
   }
 }
 P.displayName = "ChannelSectionStore", P.persistKey = "ChannelSectionStore2";
-var M = new P(r.default, {
+var L = new P(r.default, {
   CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
     v && (v = R(v)), S = R(S)
   },

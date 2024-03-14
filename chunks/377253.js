@@ -33,8 +33,8 @@ var E = n("432173"),
   O = n("162771"),
   D = n("697218"),
   P = n("49111");
-let M = new Set,
-  L = new u.default("MessageStore"),
+let L = new Set,
+  M = new u.default("MessageStore"),
   b = !1;
 
 function U() {
@@ -43,7 +43,7 @@ function U() {
       ready: !1,
       loadingMore: !1
     }))
-  }), M.clear()
+  }), L.clear()
 }
 
 function w() {
@@ -163,7 +163,7 @@ var B = new x(a.default, {
       if (null == n) continue;
       let i = n.cached || true;
       if (!i) {
-        L.log("Skipping background message sync for ".concat(e, " cached:").concat(n.cached, " ") + "ready:".concat(n.ready, " hasMoreAfter:").concat(n.hasMoreAfter, " ") + "isConnected:".concat(!1));
+        M.log("Skipping background message sync for ".concat(e, " cached:").concat(n.cached, " ") + "ready:".concat(n.ready, " hasMoreAfter:").concat(n.hasMoreAfter, " ") + "isConnected:".concat(!1));
         continue
       }
       n.mergeDelta(t[e].new_messages, t[e].modified_messages, t[e].deleted_message_ids)
@@ -241,7 +241,7 @@ var B = new x(a.default, {
       truncateBottom: n,
       truncateTop: i
     } = e;
-    L.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
+    M.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
     let s = o.default.getOrCreate(t);
     s = s.truncate(n, i), o.default.commit(s)
   },
@@ -249,7 +249,7 @@ var B = new x(a.default, {
     let {
       channelId: t
     } = e;
-    L.log("Clearing messages for ".concat(t)), o.default.clear(t), M.clear()
+    M.log("Clearing messages for ".concat(t)), o.default.clear(t), L.clear()
   },
   MESSAGE_CREATE: function(e) {
     let {
@@ -258,11 +258,11 @@ var B = new x(a.default, {
       isPushNotification: i
     } = e, s = o.default.getOrCreate(t);
     if (i) {
-      L.log("Inserting message tapped on from a push notification", n.id, n.channel_id), o.default.commit(s.receivePushNotification(n));
+      M.log("Inserting message tapped on from a push notification", n.id, n.channel_id), o.default.commit(s.receivePushNotification(n));
       return
     }
     if (!s.ready) return !1;
-    null != n.nonce && n.state !== P.MessageStates.SENDING && M.has(n.nonce) && (s = s.remove(n.nonce), M.delete(n.nonce)), s = s.receiveMessage(n, T.default.isAtBottom(t)), o.default.commit(s)
+    null != n.nonce && n.state !== P.MessageStates.SENDING && L.has(n.nonce) && (s = s.remove(n.nonce), L.delete(n.nonce)), s = s.receiveMessage(n, T.default.isAtBottom(t)), o.default.commit(s)
   },
   MESSAGE_SEND_FAILED: function(e) {
     let {
@@ -305,7 +305,7 @@ var B = new x(a.default, {
         revealedMessageId: null
       })
     }
-    i = i.remove(t), o.default.commit(i), M.delete(t)
+    i = i.remove(t), o.default.commit(i), L.delete(t)
   },
   MESSAGE_DELETE_BULK: function(e) {
     let {
@@ -324,7 +324,7 @@ var B = new x(a.default, {
       })
     }
     o.default.commit(r), t.forEach(e => {
-      M.delete(e)
+      L.delete(e)
     })
   },
   MESSAGE_REVEAL: function(e) {
@@ -387,24 +387,24 @@ var B = new x(a.default, {
   LOGOUT: function() {
     o.default.forEach(e => {
       o.default.clear(e.channelId)
-    }), M.clear()
+    }), L.clear()
   },
   UPLOAD_START: function(e) {
     let {
       message: t
     } = e;
-    null != t.nonce && M.add(t.nonce)
+    null != t.nonce && L.add(t.nonce)
   },
   UPLOAD_FAIL: function(e) {
     let {
       channelId: t,
       messageRecord: n
     } = e, i = null == n ? void 0 : n.nonce;
-    if (null != i && M.has(i)) {
+    if (null != i && L.has(i)) {
       let e = o.default.getOrCreate(t),
         n = e.get(i);
       if (null == n) return;
-      e = (e = e.remove(i)).merge([n]), M.delete(i), o.default.commit(e)
+      e = (e = e.remove(i)).merge([n]), L.delete(i), o.default.commit(e)
     }
   },
   LOCAL_MESSAGE_CREATE: function(e) {

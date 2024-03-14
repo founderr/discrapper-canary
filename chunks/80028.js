@@ -67,10 +67,10 @@ n.r(t), n.d(t, {
     return P
   },
   CLIP_NAME_TEMPLATE: function() {
-    return M
+    return L
   },
   MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: function() {
-    return L
+    return M
   },
   CLIPS_RUNNING_GAME_CHANGE_CLIPS_INIT_DELAY: function() {
     return b
@@ -115,8 +115,8 @@ let _ = "alt+c",
   O = 640,
   D = 360,
   P = 100,
-  M = e => "Clip - ".concat(new Date(e).toLocaleString()),
-  L = 15,
+  L = e => "Clip - ".concat(new Date(e).toLocaleString()),
+  M = 15,
   b = 3e4,
   U = 30,
   w = 10,

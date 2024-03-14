@@ -78,8 +78,8 @@ function m(e) {
   let {
     ref: D,
     width: P = 0,
-    height: M = 0
-  } = (0, u.default)(I), L = {
+    height: L = 0
+  } = (0, u.default)(I), M = {
     ...h,
     ...S.springConfig,
     ...y.enabled ? {
@@ -88,8 +88,8 @@ function m(e) {
   }, b = (0, r.useSpring)({
     immediate: null == C,
     width: null !== (t = S.width) && void 0 !== t ? t : P,
-    height: M,
-    config: L
+    height: L,
+    config: M
   }), U = (0, r.useTransition)(I, {
     immediate: null == C,
     value: 0,
@@ -102,7 +102,7 @@ function m(e) {
     leave: {
       value: -1
     },
-    config: L,
+    config: M,
     onRest: (e, t) => {
       let {
         item: n

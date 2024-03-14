@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return m
   },
   default: function() {
-    return L
+    return M
   }
 }), n("222007");
 var s = n("917351"),
@@ -60,7 +60,7 @@ function D(e) {
   A = A.filter(t => t !== e)
 }
 let P = [];
-class M extends o.default.Store {
+class L extends o.default.Store {
   initialize() {
     this.waitFor(f.default, g.default, _.default)
   }
@@ -80,8 +80,8 @@ class M extends o.default.Store {
     return I === e && C === t && (0, h.areSetsEqual)(i, n) ? A : P
   }
 }
-M.displayName = "ArchivedThreadsStore";
-var L = new M(l.default, {
+L.displayName = "ArchivedThreadsStore";
+var M = new L(l.default, {
   CONNECTION_OPEN: N,
   THREAD_DELETE: function(e) {
     let {

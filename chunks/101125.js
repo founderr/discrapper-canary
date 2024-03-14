@@ -31,8 +31,8 @@ let N = !1,
   O = y.StatusTypes.UNKNOWN,
   D = 0,
   P = [],
-  M = !1,
-  L = !0,
+  L = !1,
+  M = !0,
   b = Object.freeze([]),
   U = [];
 
@@ -60,7 +60,7 @@ function k(e) {
 
 function V() {
   var e;
-  if (D = null !== (e = v.default.getIdleSince()) && void 0 !== e ? e : 0, M = v.default.isAFK(), L) R = O, G();
+  if (D = null !== (e = v.default.getIdleSince()) && void 0 !== e ? e : 0, L = v.default.isAFK(), M) R = O, G();
   else if (N) R = y.StatusTypes.INVISIBLE;
   else {
     let e = h.StatusSetting.getSetting();
@@ -68,7 +68,7 @@ function V() {
   }
   R === y.StatusTypes.ONLINE && D > 0 && (R = y.StatusTypes.IDLE);
   let t = !1,
-    n = L || R === y.StatusTypes.INVISIBLE ? [] : I.default.getActivities().filter(k);
+    n = M || R === y.StatusTypes.INVISIBLE ? [] : I.default.getActivities().filter(k);
   !a(P, n) && (P = n, t = !0);
   let i = A.default.getRemoteActivities();
   if (b !== i && (b = i, t = !0), t) {
@@ -83,7 +83,7 @@ function G() {
 }
 
 function F() {
-  L = !1, O = y.StatusTypes.UNKNOWN, V(), C.default.setCurrentUserOnConnectionOpen(R, U)
+  M = !1, O = y.StatusTypes.UNKNOWN, V(), C.default.setCurrentUserOnConnectionOpen(R, U)
 }
 class x extends u.default.Store {
   initialize() {
@@ -94,7 +94,7 @@ class x extends u.default.Store {
       status: R,
       since: D,
       activities: P,
-      afk: M,
+      afk: L,
       broadcast: s
     }
   }
@@ -144,7 +144,7 @@ var B = new x(d.default, {
   LIBRARY_FETCH_SUCCESS: V,
   LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: V,
   LOGOUT: function() {
-    L = !0, O = R, V()
+    M = !0, O = R, V()
   },
   EMBEDDED_ACTIVITY_CLOSE: V,
   EMBEDDED_ACTIVITY_OPEN: V,

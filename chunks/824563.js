@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return M
   }
 }), n("222007"), n("424973");
 var i = n("714617"),
@@ -136,7 +136,7 @@ function D(e, t) {
 function P(e) {
   for (let t of c.default.keys(g)) D(e, t)
 }
-class M extends o.default.Store {
+class L extends o.default.Store {
   initialize() {
     this.waitFor(f.default, d.default)
   }
@@ -209,8 +209,8 @@ class M extends o.default.Store {
     }
   }
 }
-M.displayName = "PresenceStore";
-var L = new M(l.default, {
+L.displayName = "PresenceStore";
+var M = new L(l.default, {
   CONNECTION_OPEN: function() {
     return !0
   },

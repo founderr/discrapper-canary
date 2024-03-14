@@ -31,8 +31,8 @@ var i, s, r = n("552442"),
 n("222920");
 var D = n("901946"),
   P = n("42203"),
-  M = n("42887"),
-  L = n("661919"),
+  L = n("42887"),
+  M = n("661919"),
   b = n("590401"),
   U = n("599110"),
   w = n("35468"),
@@ -105,7 +105,7 @@ s = class extends _.default {
   sendSpeaking(e, t) {
     let n = this._socket;
     if (null != n) {
-      let i = M.default.getPacketDelay();
+      let i = L.default.getPacketDelay();
       n.speaking(e, i, t)
     }
   }
@@ -219,7 +219,7 @@ s = class extends _.default {
   }
   _chooseExperiments(e) {
     let t = [];
-    if (this._recordingEnabled && t.push("connection_log"), M.default.supports(X.Features.FIXED_KEYFRAME_INTERVAL) && t.push("fixed_keyframe_interval"), 0 !== this._supportedBandwidthEstimationExperiments.length) {
+    if (this._recordingEnabled && t.push("connection_log"), L.default.supports(X.Features.FIXED_KEYFRAME_INTERVAL) && t.push("fixed_keyframe_interval"), 0 !== this._supportedBandwidthEstimationExperiments.length) {
       let {
         enabled: e,
         fullname: n
@@ -240,9 +240,9 @@ s = class extends _.default {
       userId: this.userId,
       sessionId: this.sessionId,
       token: i,
-      maxSecureFramesVersion: M.default.getSupportedSecureFramesProtocolVersion(this.guildId),
-      video: M.default.supports(X.Features.VIDEO),
-      streamParameters: M.default.getVideoStreamParameters(this.context)
+      maxSecureFramesVersion: L.default.getSupportedSecureFramesProtocolVersion(this.guildId),
+      video: L.default.supports(X.Features.VIDEO),
+      streamParameters: L.default.getVideoStreamParameters(this.context)
     }), this.setState(q.RTCConnectionStates.AUTHENTICATING)
   }
   _handleDisconnect(e, t, n, i) {
@@ -275,7 +275,7 @@ s = class extends _.default {
               participant_type: "sender",
               guild_region: b.default.getRegion(this.hostname),
               hostname: this.hostname,
-              hardware_enabled: M.default.getHardwareH264(),
+              hardware_enabled: L.default.getHardwareH264(),
               ...t,
               ...e.getNetworkStats(),
               ...e.getCodecUsageStats("sender", this.userId),
@@ -297,7 +297,7 @@ s = class extends _.default {
             participant_type: "receiver",
             guild_region: b.default.getRegion(this.hostname),
             hostname: this.hostname,
-            hardware_enabled: M.default.getHardwareH264(),
+            hardware_enabled: L.default.getHardwareH264(),
             ...s,
             ...e.getNetworkStats(),
             ...e.getCodecUsageStats("receiver", t)
@@ -305,7 +305,7 @@ s = class extends _.default {
         })
       }
       let t = b.default.shouldIncludePreferredRegion() ? b.default.getPreferredRegion() : null,
-        n = M.default.getSettings(),
+        n = L.default.getSettings(),
         s = P.default.getChannel(this.channelId);
       U.default.track(q.AnalyticEvents.VOICE_DISCONNECT, {
         ...this._getAnalyticsProperties(),
@@ -333,7 +333,7 @@ s = class extends _.default {
         ping_bad_count: this._pingBadCount,
         ping_timeout: this._pingTimeouts.length,
         input_detected: this._inputDetected,
-        no_input_detected_notice: M.default.getNoInputDetectedNotice(),
+        no_input_detected_notice: L.default.getNoInputDetectedNotice(),
         audio_input_mode: n.mode,
         automatic_audio_input_sensitivity_enabled: n.modeOptions.autoThreshold,
         audio_input_sensitivity: n.modeOptions.threshold,
@@ -352,7 +352,7 @@ s = class extends _.default {
         parent_media_session_id: this.parentMediaSessionId
       });
       let r = this.getMediaSessionId();
-      M.default.getMediaEngine().getCodecSurvey().then(e => {
+      L.default.getMediaEngine().getCodecSurvey().then(e => {
         let t = JSON.parse(e);
         if (null == t || null == t.available_video_encoders || null == t.available_video_decoders) throw Error("codec survey is not available");
         U.default.track(q.AnalyticEvents.VOICE_CODEC_DETECTED, {
@@ -386,7 +386,7 @@ s = class extends _.default {
       quality: 100,
       active: !1
     });
-    let l = M.default.getMediaEngine(),
+    let l = L.default.getMediaEngine(),
       u = l.connect(this.context, {
         userId: this.userId,
         channelId: this.trueChannelId,
@@ -398,10 +398,10 @@ s = class extends _.default {
         modes: i,
         experiments: this._selectedExperiments,
         streamParameters: r,
-        qosEnabled: M.default.getQoS(),
+        qosEnabled: L.default.getQoS(),
         ...this._getExtraConnectionOptions()
       });
-    if (u.setUseElectronVideo(l.supports(X.Features.ELECTRON_VIDEO)), M.default.supports(X.Features.IMAGE_QUALITY_MEASUREMENT)) {
+    if (u.setUseElectronVideo(l.supports(X.Features.ELECTRON_VIDEO)), L.default.supports(X.Features.IMAGE_QUALITY_MEASUREMENT)) {
       let {
         enabled: e,
         measurement: t
@@ -415,7 +415,7 @@ s = class extends _.default {
       e && u.setVideoQualityMeasurement(t + n)
     }
     let d = ["unk"];
-    if (M.default.supports(X.Features.AMD_EXPERIMENTAL_RATE_CONTROL) && d.push("amdRelaxRc"), this.context === X.MediaEngineContextTypes.STREAM) {
+    if (L.default.supports(X.Features.AMD_EXPERIMENTAL_RATE_CONTROL) && d.push("amdRelaxRc"), this.context === X.MediaEngineContextTypes.STREAM) {
       let {
         nvMediumVbvSizeMs: e
       } = y.default.getCurrentConfig({
@@ -534,8 +534,8 @@ s = class extends _.default {
           cloudflare_best_region: e,
           connect_time: (0, E.now)() - (this._connected ? this._connectStartTime : this._createdTime),
           connect_count: this._connectCount,
-          audio_subsystem: M.default.getMediaEngine().getAudioSubsystem(),
-          audio_layer: M.default.getMediaEngine().getAudioLayer(),
+          audio_subsystem: L.default.getMediaEngine().getAudioSubsystem(),
+          audio_layer: L.default.getMediaEngine().getAudioLayer(),
           media_session_id: this.getMediaSessionId(),
           ...this.stateHistory.getVoiceConnectionSuccessStats()
         }), null === (i = this._localMediaSinkWantsManager) || void 0 === i || i.setConnection(u), this._connectCompletedTime = (0, E.now)(), this._connected = !0, this._connecting = !1, this._encountered_socket_failure = !1
@@ -646,7 +646,7 @@ s = class extends _.default {
     }
   }
   _handleControlPing(e) {
-    !M.default.supports(X.Features.NATIVE_PING) && this._handlePing(e)
+    !L.default.supports(X.Features.NATIVE_PING) && this._handlePing(e)
   }
   _handlePing(e) {
     if (void 0 !== e) {
@@ -695,7 +695,7 @@ s = class extends _.default {
         participant_type: "receiver",
         guild_region: b.default.getRegion(this.hostname),
         hostname: this.hostname,
-        hardware_enabled: M.default.getHardwareH264(),
+        hardware_enabled: L.default.getHardwareH264(),
         ...t,
         ...s.getNetworkStats(),
         ...s.getCodecUsageStats("receiver", e)
@@ -838,18 +838,18 @@ s = class extends _.default {
   }
   getInputDeviceName() {
     var e;
-    let t = M.default.getInputDeviceId(),
-      n = null === (e = M.default.getInputDevices()[t]) || void 0 === e ? void 0 : e.name;
+    let t = L.default.getInputDeviceId(),
+      n = null === (e = L.default.getInputDevices()[t]) || void 0 === e ? void 0 : e.name;
     return n
   }
   getOutputDeviceName() {
     var e;
-    let t = M.default.getOutputDeviceId(),
-      n = null === (e = M.default.getOutputDevices()[t]) || void 0 === e ? void 0 : e.name;
+    let t = L.default.getOutputDeviceId(),
+      n = null === (e = L.default.getOutputDevices()[t]) || void 0 === e ? void 0 : e.name;
     return n
   }
   getGoLiveSource() {
-    return M.default.getGoLiveSource()
+    return L.default.getGoLiveSource()
   }
   constructor({
     userId: e,
@@ -913,7 +913,7 @@ s = class extends _.default {
           channel_type: t
         })
       }, this.context = s, this.logger = new S.default("RTCConnection(".concat(null !== (o = null != r ? r : n) && void 0 !== o ? o : i, ", ").concat(this.context, ")")), this.userId = e, this.sessionId = t, this.guildId = n, this._channelId = i, this.channelIds = new Set([i]), this.rtcServerId = r, this.parentMediaSessionId = a, this._endpoint = null, this.hostname = null, this.port = null, this.token = null, this.voiceVersion = null, this.rtcWorkerVersion = null, this.state = q.RTCConnectionStates.AWAITING_ENDPOINT, this.stateHistory = new x.StateHistory(this.state), this._socket = null, this._backoff = new f.default(1e3, 1e4), this._destroyed = !1, this._pings = [], this._pingBadCount = 0, this._pingTimeouts = [], this._mediaSessionId = null, this._voiceQuality = null, this._voiceQualityPeriodicStatsInterval = null, this._voiceQualityPeriodicStatsSequenceId = 0, this._noiseCancellationError = 0, this._voiceDuration = null, this._videoQuality = null, this._videoHealthManager = null, this._sentVideo = !1, this._outboundLossRate = null, this._createdTime = (0, E.now)(), this._connectStartTime = 0, this._connectCompletedTime = 0, this._rtcConnectionId = (0, c.v4)(), this._connectCount = 0, this._connected = !1, this._connecting = !1, this._encountered_socket_failure = !1, this._inputDetected = !1, this._selectedExperiments = [], s === X.MediaEngineContextTypes.DEFAULT) {
-      let t = M.default.supports(X.Features.FIRST_FRAME_CALLBACK) && M.default.supports(X.Features.REMOTE_USER_MULTI_STREAM),
+      let t = L.default.supports(X.Features.FIRST_FRAME_CALLBACK) && L.default.supports(X.Features.REMOTE_USER_MULTI_STREAM),
         n = (null === (l = P.default.getChannel(this.channelId)) || void 0 === l ? void 0 : l.type) === q.ChannelTypes.GUILD_STAGE_VOICE;
       this._localMediaSinkWantsManager = new H.default(e, n, t), this._localMediaSinkWantsManager.on(H.RTCMediaSinkWantsManagerEvent.Update, e => {
         if (this.state === q.RTCConnectionStates.RTC_CONNECTED && null != this._socket) {
@@ -925,7 +925,7 @@ s = class extends _.default {
         null === (i = this._connection) || void 0 === i || i.createUser(e, t, n)
       })
     }
-    this._remoteVideoSinkWants = H.DEFAULT_WANTS_FULL, L.default.shouldRecordNextConnection() ? (this._recordingEnabled = !0, p.setShouldRecordNextConnection(!1)) : this._recordingEnabled = !1, this._soundshareStats = new Y.default, w.default.addOnlineCallback(this._handleNetworkOnline), w.default.addOfflineCallback(this._handleNetworkOffline), (0, k.isDesktop)() && (this.powerMonitorListener = V.default.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, M.default.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
+    this._remoteVideoSinkWants = H.DEFAULT_WANTS_FULL, M.default.shouldRecordNextConnection() ? (this._recordingEnabled = !0, p.setShouldRecordNextConnection(!1)) : this._recordingEnabled = !1, this._soundshareStats = new Y.default, w.default.addOnlineCallback(this._handleNetworkOnline), w.default.addOfflineCallback(this._handleNetworkOffline), (0, k.isDesktop)() && (this.powerMonitorListener = V.default.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, L.default.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
       this._supportedBandwidthEstimationExperiments = e
     })
   }

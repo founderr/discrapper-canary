@@ -30,8 +30,8 @@ var i = n("37983"),
   N = n("200197"),
   A = n("538282"),
   O = n("241488"),
-  R = n("292936"),
-  M = n("791234"),
+  M = n("292936"),
+  R = n("791234"),
   k = n("267567"),
   L = n("217535"),
   P = n("558901"),
@@ -75,8 +75,8 @@ var i = n("37983"),
       id: eN,
       required: eA,
       disabled: eO,
-      placeholder: eR,
-      accessibilityLabel: eM,
+      placeholder: eM,
+      accessibilityLabel: eR,
       channel: ek,
       type: eL,
       focused: eP,
@@ -215,7 +215,7 @@ var i = n("37983"),
         o(!0);
         let g = null !== (E = null === (x = b.default.getStickerPreview(s, t.drafts.type)) || void 0 === x ? void 0 : x.map(e => e.id)) && void 0 !== E ? E : [],
           S = null !== (y = V.default.getUploads(s, t.drafts.type)) && void 0 !== y ? y : [];
-        if (null == d && !f && !p && (0, M.shouldShowAddMediaToOriginalPostModal)(S, s)) {
+        if (null == d && !f && !p && (0, R.shouldShowAddMediaToOriginalPostModal)(S, s)) {
           o(!1), (0, m.openModalLazy)(async () => {
             let {
               default: e
@@ -324,12 +324,12 @@ var i = n("37983"),
         let t = eS.current;
         null != e && null != t && t.insertSound(e), (0, A.closeExpressionPicker)()
       }, [eS])),
-      tR = l.useCallback(() => {
+      tM = l.useCallback(() => {
         var e;
         return null == tt ? void 0 : null === (e = tt.current) || void 0 === e ? void 0 : e.hide()
       }, []),
       {
-        editorHeight: tM,
+        editorHeight: tR,
         handleResize: tk
       } = function(e) {
         let [t, n] = l.useState(0), i = l.useCallback(t => {
@@ -411,7 +411,7 @@ var i = n("37983"),
       }(ek, eL, eI, tI),
       tZ = (0, _.useShouldShowPTONotice)(ek),
       tJ = null != tn || null != eD || tZ,
-      tq = !!(null === (eu = eL.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
+      tq = !!(null === (eu = eL.emojis) || void 0 === eu ? void 0 : eu.button) && tR <= 44;
     return (0, i.jsx)(N.EventEmitterProvider, {
       value: tE,
       children: (0, i.jsxs)(e8, {
@@ -440,7 +440,7 @@ var i = n("37983"),
             pendingReply: eD
           }), (0, i.jsxs)("div", {
             ref: te,
-            onScroll: tR,
+            onScroll: tM,
             className: s(e_, {
               [eo.scrollableContainer]: !0,
               [eo.themedBackground]: !e7,
@@ -472,9 +472,9 @@ var i = n("37983"),
                   textValue: eC,
                   richValue: eI,
                   disabled: ts,
-                  placeholder: eR,
+                  placeholder: eM,
                   required: eA,
-                  accessibilityLabel: eM,
+                  accessibilityLabel: eR,
                   isPreviewing: (tl || ta) && tu,
                   channel: ek,
                   type: eL,
@@ -533,12 +533,12 @@ var i = n("37983"),
             onSendMessage: tS,
             onSendSticker: tA,
             onVisibilityChange: tD,
-            editorHeight: tM,
+            editorHeight: tR,
             setValue: (e, t) => null == ew ? void 0 : ew(null, e, t),
             position: e1
           }), (0, i.jsx)(P.default, {
             textValue: eC,
-            editorHeight: tM
+            editorHeight: tR
           }), tW ? (0, i.jsx)(en.default, {
             type: eL,
             textValue: eC,
@@ -547,7 +547,7 @@ var i = n("37983"),
             }),
             maxCharacterCount: eZ,
             showRemainingCharsAfterCount: eJ
-          }) : null, tz ? (0, i.jsx)(R.default, {
+          }) : null, tz ? (0, i.jsx)(M.default, {
             editorRef: e9,
             channel: ek,
             isEditorFocused: eP,

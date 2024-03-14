@@ -33,7 +33,7 @@ var r = n("446674"),
   O = n("509065"),
   D = n("518916");
 let P = new d.default("ConnectionStore"),
-  M = new O.default(D.socket, (e, t) => {
+  L = new O.default(D.socket, (e, t) => {
     var n;
     e = null != e ? e : {
       type: "CHANNEL_UPDATES",
@@ -48,7 +48,7 @@ let P = new d.default("ConnectionStore"),
       });
     return e.channels.push(null != r ? r : i), e
   }, e => "CHANNEL_UPDATE" !== e),
-  L = new O.default(D.socket, (e, t) => ((e = null == e ? {
+  M = new O.default(D.socket, (e, t) => ((e = null == e ? {
     type: "SOUNDBOARD_SOUNDS_RECEIVED",
     updates: []
   } : e).updates.push({
@@ -444,7 +444,7 @@ k(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : p.ChannelLoader.loadGu
     channels: e.channels
   })
 }), k(["CHANNEL_UPDATE"], e => p.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  M.add(e)
+  L.add(e)
 }), k(["THREAD_CREATE", "THREAD_UPDATE", "THREAD_DELETE"], e => p.ChannelLoader.loadGuildIds([e.guild_id]), (e, t) => {
   let {
     newly_created: n,
@@ -506,7 +506,7 @@ k(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : p.ChannelLoader.loadGu
     }))
   })
 }), w(["SOUNDBOARD_SOUNDS"], e => {
-  L.add(e)
+  M.add(e)
 }), w(["CHANNEL_RECIPIENT_ADD", "CHANNEL_RECIPIENT_REMOVE"], (e, t) => {
   let n = p.default.getBasicChannel(e.channel_id);
   G({

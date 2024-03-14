@@ -55,10 +55,10 @@ function P(e, t) {
   }
 }
 
-function M() {
+function L() {
   R.stop()
 }
-class L extends r.default.Store {
+class M extends r.default.Store {
   initialize() {
     this.syncWith([f.default], D), this.waitFor(_.default, f.default, c.default)
   }
@@ -81,8 +81,8 @@ class L extends r.default.Store {
     return T[e]
   }
 }
-L.displayName = "ApplicationBuildStore";
-var b = new L(o.default, {
+M.displayName = "ApplicationBuildStore";
+var b = new M(o.default, {
   CONNECTION_OPEN: function() {
     return O(y), D()
   },
@@ -174,8 +174,8 @@ var b = new L(o.default, {
   APPLICATION_BRANCHES_FETCH_FAIL: function() {
     O(N)
   },
-  CONNECTION_CLOSED: M,
-  LOGOUT: M,
+  CONNECTION_CLOSED: L,
+  LOGOUT: L,
   SKU_PURCHASE_SUCCESS: function(e) {
     let {
       entitlements: t

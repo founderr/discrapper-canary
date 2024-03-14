@@ -118,8 +118,8 @@ class p extends a.PureComponent {
       getAriaValueText: O,
       barClassName: D,
       grabberClassName: P,
-      grabberStyles: M = {},
-      markerPosition: L = 0,
+      grabberStyles: L = {},
+      markerPosition: M = 0,
       "aria-hidden": b,
       "aria-label": U,
       "aria-labelledby": w,
@@ -134,8 +134,8 @@ class p extends a.PureComponent {
         return (0, r.jsx)("div", {
           className: l(E.mark, {
             [E.defaultValue]: i,
-            [E.markAbove]: 0 === L,
-            [E.markBelow]: 1 === L
+            [E.markAbove]: 0 === M,
+            [E.markBelow]: 1 === M
           }),
           style: {
             left: "".concat(e, "%")
@@ -201,7 +201,7 @@ class p extends a.PureComponent {
               ...e,
               className: l(E.grabber, P),
               style: {
-                ...M,
+                ...L,
                 left: G
               },
               onMouseDown: this.handleMouseDown,

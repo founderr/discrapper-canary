@@ -44,8 +44,8 @@ var s = n("917351"),
   O = n("49111"),
   D = n("6791");
 let P = new _.default("RunningGameStore"),
-  M = "RunningGameStore",
-  L = [{
+  L = "RunningGameStore",
+  M = [{
     executables: [{
       os: "win32",
       name: "obs/obs.exe"
@@ -152,7 +152,7 @@ function Q(e, t) {
 }
 
 function Z(e) {
-  return L.some(t => t.name === e.name && !0 === t.streamerTool)
+  return M.some(t => t.name === e.name && !0 === t.streamerTool)
 }
 
 function J() {
@@ -233,7 +233,7 @@ function en(e) {
 }
 
 function ei() {
-  u.default.set(M, H)
+  u.default.set(L, H)
 }
 
 function es(e) {
@@ -330,7 +330,7 @@ function el() {
       allowHook: null !== (o = e.hook) && void 0 !== o ? o : c.DEFAULT_OVERLAY_OPTIONS.allowHook,
       supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay
     }
-  } [...n, ...L].forEach(n => {
+  } [...n, ...M].forEach(n => {
     var i;
     let s = null != n.executables ? null === (i = n.executables) || void 0 === i ? void 0 : i.filter(e => {
         let {
@@ -366,7 +366,7 @@ function el() {
         return null
       }
       return "0" === t ? null : t
-    }(e.pid, e.windowHandle), null == L.find(t => {
+    }(e.pid, e.windowHandle), null == M.find(t => {
       let {
         name: n
       } = t;
@@ -382,7 +382,7 @@ function el() {
 class eu extends l.default.Store {
   initialize() {
     var e, t, n, i;
-    let s = null !== (e = u.default.get(M)) && void 0 !== e ? e : {
+    let s = null !== (e = u.default.get(L)) && void 0 !== e ? e : {
       gamesSeen: [],
       gameOverrides: {},
       enableOverlay: {},

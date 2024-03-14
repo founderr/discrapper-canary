@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return D
   },
   watchStream: function() {
-    return M
+    return L
   },
   toggleSelfStreamHidden: function() {
-    return L
+    return M
   },
   watchStreamAndTransitionToStream: function() {
     return b
@@ -96,7 +96,7 @@ function P(e, t) {
   return !i && (0, p.isChannelFull)(n, m.default, E.default)
 }
 
-function M(e, t) {
+function L(e, t) {
   let n = null != l.default.getRemoteSessionId();
   if (n) return;
   let {
@@ -118,7 +118,7 @@ function M(e, t) {
   }), !a && (null == t || !t.noFocus) && A.default.selectParticipant(e.channelId, r)
 }
 
-function L(e, t) {
+function M(e, t) {
   o.default.dispatch({
     type: "STREAM_UPDATE_SELF_HIDDEN",
     channelId: e,
@@ -132,7 +132,7 @@ function b(e, t) {
     channelId: i
   } = e;
   if (null != n && P(n, i)) return;
-  M(e, t);
+  L(e, t);
   let s = c.default.getWindowOpen(N.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     r = g.default.getVoiceChannelId();
   (!s || r !== i) && (0, d.default)(e)

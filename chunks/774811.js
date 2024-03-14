@@ -33,10 +33,10 @@ var i = n("37983"),
   D = n("782340"),
   P = n("800836");
 
-function M(e) {
+function L(e) {
   return e.label
 }
-let L = s.forwardRef(function(e, t) {
+let M = s.forwardRef(function(e, t) {
     let {
       options: n,
       value: r,
@@ -49,14 +49,14 @@ let L = s.forwardRef(function(e, t) {
       placeholder: T = D.default.Messages.SELECT,
       wrapperClassName: y,
       className: N,
-      isDisabled: L = !1,
+      isDisabled: M = !1,
       maxVisibleItems: b = 7,
       look: w = O.SelectLooks.FILLED,
       autoFocus: k = !1,
       popoutPosition: V = "bottom",
       filter: x = !0,
       debounceTime: B,
-      renderOptionLabel: H = M,
+      renderOptionLabel: H = L,
       onSearchChange: Y,
       renderOptionPrefix: j = () => null,
       renderOptionSuffix: W = () => null,
@@ -148,8 +148,8 @@ let L = s.forwardRef(function(e, t) {
       let n = Array.isArray(t) ? t : [t];
       return n.map(t => "object" == typeof t && (null == t || "value" in t) ? t : e.find(e => e.value === t)).filter(Boolean)
     })(ep, r), [ep, r]), eI = s.useMemo(() => eT.map(e => e.value), [eT]), eC = eT[eT.length - 1], eA = (0, I.default)(eC), ey = s.useId(), eN = s.useId(), eR = s.useId(), eO = s.useCallback(e => {
-      ed !== e && !L && (ec(e), e ? null == m || m() : null == p || p())
-    }, [L, p, m, ed]), eD = s.useCallback(e => {
+      ed !== e && !M && (ec(e), e ? null == m || m() : null == p || p())
+    }, [M, p, m, ed]), eD = s.useCallback(e => {
       ed && !e && eO(!1)
     }, [eO, ed]), eP = (0, v.useIsVisible)(eD);
     s.useImperativeHandle(t, () => ({
@@ -157,14 +157,14 @@ let L = s.forwardRef(function(e, t) {
         eO(!1)
       }
     }));
-    let eM = s.useCallback((e, t) => {
+    let eL = s.useCallback((e, t) => {
         let n = document.querySelector(e),
           i = eg.current;
         eu(t), null != i && null != n && i.scrollIntoViewNode({
           node: n
         })
       }, []),
-      eL = s.useCallback(() => new Promise(e => {
+      eM = s.useCallback(() => new Promise(e => {
         let t = eg.current;
         if (null == t) return e();
         t.scrollToTop({
@@ -181,12 +181,12 @@ let L = s.forwardRef(function(e, t) {
       eU = (0, u.default)({
         id: eN,
         defaultFocused: null != eC ? String(eC.value) : void 0,
-        scrollToStart: eL,
+        scrollToStart: eM,
         scrollToEnd: eb,
         isEnabled: ed,
         wrap: !0,
         useVirtualFocus: !0,
-        setFocus: eM,
+        setFocus: eL,
         disableClickOnSpace: !0
       }),
       ew = (0, I.default)(eU),
@@ -333,7 +333,7 @@ let L = s.forwardRef(function(e, t) {
               focusTarget: eo,
               offset: 4,
               children: (0, i.jsx)("div", {
-                onClick: L ? void 0 : e => {
+                onClick: M ? void 0 : e => {
                   e.stopPropagation(), e.preventDefault(), e_(""), eO(!0)
                 },
                 onMouseDown: e => {
@@ -345,7 +345,7 @@ let L = s.forwardRef(function(e, t) {
                 className: a(P.select, P.searchable, N, {
                   [P.open]: r,
                   [P.lookFilled]: w === O.SelectLooks.FILLED,
-                  [P.disabled]: L,
+                  [P.disabled]: M,
                   [P.multi]: h,
                   [P.selectPositionTop]: "top" === o
                 }),
@@ -359,7 +359,7 @@ let L = s.forwardRef(function(e, t) {
                     loading: eS,
                     renderOptionPrefix: j,
                     renderOptionSuffix: W,
-                    isDisabled: L,
+                    isDisabled: M,
                     isEditing: eh,
                     inputRef: eo,
                     "aria-describedby": null != K ? K : ei,
@@ -428,7 +428,7 @@ let L = s.forwardRef(function(e, t) {
       })
     })
   }),
-  b = L;
+  b = M;
 
 function U(e) {
   let {

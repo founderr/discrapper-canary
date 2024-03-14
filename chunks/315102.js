@@ -239,7 +239,7 @@ function P(e) {
   return t = (null != r ? "".concat(location.protocol, "//").concat(r, "/home-headers/").concat(n, "/").concat(i, ".png") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_HOME_HEADER(n, i)) + "?size=".concat(s)
 }
 
-function M(e) {
+function L(e) {
   let t, {
     id: n,
     splash: i,
@@ -251,7 +251,7 @@ function M(e) {
   return t = (null != r ? "".concat(location.protocol, "//").concat(r, "/discovery-splashes/").concat(n, "/").concat(i, ".jpg") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_DISCOVERY_SPLASH(n, i)) + "?size=".concat(s)
 }
 
-function L(e) {
+function M(e) {
   let {
     id: t,
     icon: n,
@@ -422,14 +422,14 @@ var H = {
     let i = I(e, t, n);
     return B(i)
   },
-  getGuildIconURL: L,
+  getGuildIconURL: M,
   getGuildSplashURL: O,
   getGuildSplashSource: function(e) {
     return B(O(e))
   },
-  getGuildDiscoverySplashURL: M,
+  getGuildDiscoverySplashURL: L,
   getGuildDiscoverySplashSource: function(e) {
-    return B(M(e))
+    return B(L(e))
   },
   getGuildBannerURL: D,
   getGuildHomeHeaderURL: P,
@@ -472,7 +472,7 @@ var H = {
     return B(t)
   },
   getGuildIconSource(e) {
-    let t = L(e);
+    let t = M(e);
     return B(t)
   },
   getGuildTemplateIconSource(e) {

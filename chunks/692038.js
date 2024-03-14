@@ -43,7 +43,7 @@ function v(e) {
   let {
     reactions: I,
     interactionData: R
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, O = null !== (s = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== s ? s : [], D = null !== (o = e.mention_roles) && void 0 !== o ? o : [], P = null !== (h = e.mention_channels) && void 0 !== h ? h : [], M = e.message_reference, L = new Date(e.timestamp), b = e.type === p.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, O = null !== (s = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== s ? s : [], D = null !== (o = e.mention_roles) && void 0 !== o ? o : [], P = null !== (h = e.mention_channels) && void 0 !== h ? h : [], L = e.message_reference, M = new Date(e.timestamp), b = e.type === p.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
   let U = null == (v = e).author ? S : null != v.webhook_id ? new d.default(v.author) : null !== (T = _.default.getUser(v.author.id)) && void 0 !== T ? T : new d.default(v.author),
     w = null == e ? void 0 : e.gift_info,
     k = null != e.interaction ? l.default.createFromServer(e.interaction) : null,
@@ -55,13 +55,13 @@ function v(e) {
     author: U,
     webhookId: e.webhook_id,
     blocked: f.default.isBlocked(U.id) || null != V && f.default.isBlocked(V),
-    timestamp: L,
+    timestamp: M,
     editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
     mentionEveryone: e.mention_everyone,
     mentions: O,
     mentionRoles: D,
     mentionChannels: P,
-    messageReference: M,
+    messageReference: L,
     mentioned: (0, g.isMentioned)({
       userId: c.default.getId(),
       channelId: e.channel_id,
@@ -75,7 +75,7 @@ function v(e) {
     giftCodes: (0, E.isGiftCodeEmbed)(e) ? (0, E.findGiftCodes)((null == e ? void 0 : e.embeds[0]).url) : (0, E.findGiftCodes)(e.content),
     content: F,
     referralTrialOfferId: G,
-    call: A(e.call, L),
+    call: A(e.call, M),
     reactions: N(null != I ? I : e.reactions, e.poll),
     interaction: k,
     interactionData: null != R ? R : e.interaction_data,

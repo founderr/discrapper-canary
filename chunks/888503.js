@@ -41,8 +41,8 @@ var A = function(e) {
     lostPermissionTooltipText: N,
     isTyping: A = !1,
     nick: O,
-    user: R,
-    currentUser: M,
+    user: M,
+    currentUser: R,
     activities: k,
     applicationStream: L,
     status: P,
@@ -65,12 +65,12 @@ var A = function(e) {
     id: q,
     tabIndex: X,
     itemProps: Q
-  } = e, $ = g.default.useName(R), [ee, et] = l.useState(!1), [en, ei] = l.useState(null), {
+  } = e, $ = g.default.useName(M), [ee, et] = l.useState(!1), [en, ei] = l.useState(null), {
     avatarDecorationSrc: el,
     avatarSrc: ea,
     eventHandlers: es
   } = (0, f.default)({
-    user: R,
+    user: M,
     size: o.AvatarSizes.SIZE_32,
     animateOnHover: !(t || ee),
     guildId: w
@@ -95,18 +95,18 @@ var A = function(e) {
       })
     })
   }), ed = () => {
-    let e = (null == R ? void 0 : R.isClyde()) ? I.BotTagTypes.AI : I.BotTagTypes.BOT;
-    return null != R && R.bot ? (0, i.jsx)(p.default, {
+    let e = (null == M ? void 0 : M.isClyde()) ? I.BotTagTypes.AI : I.BotTagTypes.BOT;
+    return null != M && M.bot ? (0, i.jsx)(p.default, {
       className: v.botTag,
       type: e,
-      verified: R.isVerifiedBot()
+      verified: M.isVerifiedBot()
     }) : null
   }, ec = () => (0, i.jsx)(o.NameWithRole, {
     roleName: a,
     color: null != n ? n : void 0,
     name: null != O ? O : $
   }), ef = P === C.StatusTypes.OFFLINE;
-  return null == R ? (0, i.jsx)(m.default, {
+  return null == M ? (0, i.jsx)(m.default, {
     avatarSize: o.AvatarSizes.SIZE_32,
     className: v.placeholder
   }) : (0, i.jsx)(E.default, {
@@ -153,14 +153,14 @@ var A = function(e) {
           typingIndicatorRef: er
         }), (0, i.jsx)(c.default, {
           confettiSpawnRef: en,
-          shouldFire: A && null != M && e.id !== M.id,
+          shouldFire: A && null != R && e.id !== R.id,
           confettiLocation: T.ConfettiLocation.MEMBER_USER
         })]
       })
-    })(R, ef),
+    })(M, ef),
     subText: (() => {
       let e = null != k ? k.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null,
-        t = null != e && null != R && (0, d.default)(e, R, D);
+        t = null != e && null != M && (0, d.default)(e, M, D);
       return (0, i.jsx)(S.default, {
         className: v.activity,
         textClassName: v.activityText,
@@ -170,7 +170,7 @@ var A = function(e) {
         animate: ee,
         hideEmoji: !t,
         hideTooltip: !0,
-        user: R
+        user: M
       })
     })(),
     decorators: (0, i.jsxs)(i.Fragment, {

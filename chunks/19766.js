@@ -195,15 +195,15 @@ let P = new class e {
   }
 };
 
-function M() {
+function L() {
   P.reset()
 }
-let L = [];
+let M = [];
 
 function b() {
   let e = _.default.getAllApplicationStreams(),
-    t = L.concat(e);
-  L = e, t.forEach(e => {
+    t = M.concat(e);
+  M = e, t.forEach(e => {
     P.forEach(null, t => t.rebuildMember(e.ownerId))
   })
 }
@@ -232,8 +232,8 @@ class w extends d.default.Store {
 }
 w.displayName = "ChannelMemberStore";
 var k = new w(c.default, {
-  CONNECTION_OPEN: M,
-  OVERLAY_INITIALIZE: M,
+  CONNECTION_OPEN: L,
+  OVERLAY_INITIALIZE: L,
   GUILD_MEMBER_LIST_UPDATE: function(e) {
     let t = P.get(e.guildId, e.id);
     e.ops.forEach(e => {

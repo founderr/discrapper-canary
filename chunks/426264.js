@@ -38,8 +38,8 @@ function E(e) {
     subMenuIconClassName: O,
     dontCloseOnActionIfHoldingShiftKey: D,
     dontCloseOnAction: P,
-    iconProps: M,
-    sparkle: L
+    iconProps: L,
+    sparkle: M
   } = e, b = s.useContext(u.OnMenuSelectContext), U = s.useRef(null), w = s.useCallback(e => {
     if (null == C) return !1;
     !(e.shiftKey && D) && !P && A(), e.persist(), null == b || b(), requestAnimationFrame(() => C(e))
@@ -60,8 +60,8 @@ function E(e) {
     children: [E && null != r && (0, i.jsx)("div", {
       className: h.iconContainerLeft,
       children: (0, i.jsx)(r, {
-        ...M,
-        className: a(h.icon, null == M ? void 0 : M.className),
+        ...L,
+        className: a(h.icon, null == L ? void 0 : L.className),
         isFocused: T
       })
     }), (0, i.jsxs)("div", {
@@ -76,8 +76,8 @@ function E(e) {
     }), !E && null != r && (0, i.jsx)("div", {
       className: h.iconContainer,
       children: (0, i.jsx)(r, {
-        ...M,
-        className: a(h.icon, null == M ? void 0 : M.className),
+        ...L,
+        className: a(h.icon, null == L ? void 0 : L.className),
         isFocused: T
       })
     }), null != g && (0, i.jsx)("div", {
@@ -91,7 +91,7 @@ function E(e) {
       className: h.iconContainer,
       children: [(0, i.jsx)(f.default, {
         className: a(h.caret, O)
-      }), L && (0, i.jsx)(c.default, {
+      }), M && (0, i.jsx)(c.default, {
         className: h.sparkles
       })]
     })]
