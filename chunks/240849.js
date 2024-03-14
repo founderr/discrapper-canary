@@ -25,13 +25,13 @@ n.r(t), n.d(t, {
     return S
   },
   openLink: function() {
-    return j
+    return L
   },
   getSyntheticLinkProps: function() {
     return N
   },
   shouldClientNavigate: function() {
-    return L
+    return j
   },
   useRouter: function() {
     return O
@@ -322,7 +322,7 @@ let I = (0, i.createContext)({
         let n = document.createElement("a");
         n.href = e.getAttribute("data-href"), e.hasAttribute("data-target") && (n.target = e.getAttribute("data-target")), e.hasAttribute("data-rel") && (n.rel = e.getAttribute("data-rel")), e.hasAttribute("data-download") && (n.download = e.getAttribute("data-download")), e.hasAttribute("data-ping") && (n.ping = e.getAttribute("data-ping")), e.hasAttribute("data-referrer-policy") && (n.referrerPolicy = e.getAttribute("data-referrer-policy")), e.appendChild(n), t(n), e.removeChild(n)
       }
-    }(e, e => j(e, t))
+    }(e, e => L(e, t))
   }
 });
 
@@ -330,12 +330,12 @@ function O() {
   return (0, i.useContext)(I)
 }
 
-function L(e, t) {
+function j(e, t) {
   let n = e.getAttribute("target");
   return (!n || "_self" === n) && e.origin === location.origin && !e.hasAttribute("download") && !t.metaKey && !t.ctrlKey && !t.altKey && !t.shiftKey
 }
 
-function j(e, t) {
+function L(e, t) {
   var n, r;
   let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
     {
@@ -359,9 +359,9 @@ function j(e, t) {
     bubbles: !0,
     cancelable: !0
   });
-  j.isOpening = i, S(e), e.dispatchEvent(u), j.isOpening = !1
+  L.isOpening = i, S(e), e.dispatchEvent(u), L.isOpening = !1
 }
-j.isOpening = !1;
+L.isOpening = !1;
 
 function N(e) {
   return {

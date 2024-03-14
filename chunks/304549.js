@@ -44,8 +44,8 @@ function c(e, t, n) {
       padding: O,
       paddingVertical: D,
       paddingHorizontal: P,
-      fade: L = !1,
-      className: M,
+      fade: M = !1,
+      className: L,
       style: b,
       ...U
     } = n, w = r.useRef(null), k = r.useRef(null), [V, G] = r.useState(!1), {
@@ -55,7 +55,7 @@ function c(e, t, n) {
     } = (0, u.useCachedScrollerState)();
     (0, u.usePaddingFixes)({
       scrollerRef: F,
-      className: M,
+      className: L,
       specs: a,
       orientation: "vertical",
       dir: E
@@ -108,9 +108,9 @@ function c(e, t, n) {
     return (0, i.jsx)("div", {
       ref: F,
       onScroll: ee,
-      className: o(M, {
+      className: o(L, {
         [e]: !0,
-        [t]: L,
+        [t]: M,
         [d.scrolling]: V
       }),
       style: (0, u.getMergedOrientationStyles)(b),

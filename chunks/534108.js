@@ -34,8 +34,8 @@ var i = n("37983"),
   M = n("262439"),
   k = n("557585"),
   L = n("553372"),
-  b = n("122557"),
-  P = n("478477"),
+  P = n("122557"),
+  b = n("478477"),
   j = n("181021"),
   U = n("299069"),
   D = n("569717"),
@@ -156,7 +156,7 @@ function W(e) {
             buttonOverlay: f
           });
         case O.SoundboardSoundItemType.ADD_SOUND:
-          return (0, l.createElement)(b.default, {
+          return (0, l.createElement)(P.default, {
             ...u(t),
             key: i,
             guild: e.item.guild,
@@ -182,7 +182,7 @@ function Y(e) {
     renderHeader: v,
     defaultSoundsOnly: L = !1
   } = e, {
-    analyticsLocations: b
+    analyticsLocations: P
   } = (0, f.default)(), [Y, z] = l.useState(null), Z = (0, r.useStateFromStores)([y.default], () => y.default.getCurrentUser()), J = (0, r.useStateFromStores)([g.default], () => {
     var e;
     return g.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : w.EMPTY_STRING_SNOWFLAKE_ID)
@@ -202,11 +202,11 @@ function Y(e) {
   }, [p, Z, a, C]), eu = l.useCallback(e => {
     switch (e.item.type) {
       case O.SoundboardSoundItemType.SOUND:
-        return null == c || c(e.item.sound), eo(e.item.sound, b);
+        return null == c || c(e.item.sound), eo(e.item.sound, P);
       case O.SoundboardSoundItemType.ADD_SOUND:
         return (0, D.default)(e.item.guild.id)
     }
-  }, [b, eo, c]), ed = l.useCallback((e, t, n, l, s) => (0, i.jsx)(W, {
+  }, [P, eo, c]), ed = l.useCallback((e, t, n, l, s) => (0, i.jsx)(W, {
     descriptors: e,
     rowIndex: n.rowIndex,
     isUsingKeyboardNavigation: n.isUsingKeyboardNavigation,
@@ -219,10 +219,10 @@ function Y(e) {
       channel: a,
       interactive: ea ? es : !q,
       forceSecondaryActions: ea,
-      analyticsLocations: b
+      analyticsLocations: P
     },
     buttonOverlay: T
-  }, "row-".concat(t["aria-rowindex"])), [eu, a, q, p, b, ea, es, T]), ec = l.useCallback((e, t) => {
+  }, "row-".concat(t["aria-rowindex"])), [eu, a, q, p, P, ea, es, T]), ec = l.useCallback((e, t) => {
     let n = "".concat(e.key);
     return (0, i.jsx)(V, {
       categoryInfo: e.categoryInfo,
@@ -247,7 +247,7 @@ function Y(e) {
     children: (0, i.jsx)(N.default, {
       className: B.settingsIcon
     })
-  }), [ep]), eh = l.useCallback(e => (0, i.jsx)(P.default, {
+  }), [ep]), eh = l.useCallback(e => (0, i.jsx)(b.default, {
     soundboardListRef: e,
     categories: $,
     listPadding: _

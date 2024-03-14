@@ -45,8 +45,8 @@ var r = n("775586"),
   R = n("37337"),
   I = n("220391"),
   O = n("247645"),
-  L = n("490832"),
-  j = n("495480"),
+  j = n("490832"),
+  L = n("495480"),
   N = n("362561"),
   F = n("240849"),
   B = n("564341"),
@@ -91,8 +91,8 @@ H = {
   "sv-SE": R.default,
   "tr-TR": I.default,
   "uk-UA": O.default,
-  "zh-CN": L.default,
-  "zh-TW": j.default
+  "zh-CN": j.default,
+  "zh-TW": L.default
 };
 let q = new WeakMap;
 

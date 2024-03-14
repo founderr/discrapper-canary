@@ -34,8 +34,8 @@ var i = n("37983"),
   M = n("161585"),
   k = n("585948"),
   L = n("234175"),
-  b = n("451300"),
-  P = n("668333"),
+  P = n("451300"),
+  b = n("668333"),
   j = n("313790"),
   U = n("908408"),
   D = n("641680"),
@@ -75,7 +75,7 @@ let G = (0, _.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       [el, ea] = (0, h.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], r.default),
       es = l.useRef("");
     l.useImperativeHandle(t, () => ({
-      onPickerOpen: eb
+      onPickerOpen: eP
     }));
     let er = (0, O.useFilteredStickerPackCategories)(u),
       eo = 0 === er.filter(e => e.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL).length,
@@ -156,7 +156,7 @@ let G = (0, _.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         gridNavigatorId: w.GRID_NAVIGATOR_ID
       });
     l.useEffect(() => m.StickerPickerStore.resetStoreState, []);
-    let eb = () => {
+    let eP = () => {
       let e = u.getGuildId(),
         t = [];
       if (null !== e) {
@@ -182,7 +182,7 @@ let G = (0, _.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       var e;
       null === (e = en.current) || void 0 === e || e.focus()
     }, []);
-    let eP = l.useCallback(() => {
+    let eb = l.useCallback(() => {
       Y(), T.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
         location_section: F.AnalyticsSections.STICKER_PICKER_UPSELL
       }), (0, E.navigateToPremiumMarketingPage)()
@@ -196,7 +196,7 @@ let G = (0, _.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           stickersListRef: et,
           channel: u
         })
-      }), eo ? (0, i.jsx)(b.default, {
+      }), eo ? (0, i.jsx)(P.default, {
         className: B.emptyState,
         onClose: Y
       }) : (0, i.jsxs)(i.Fragment, {
@@ -205,7 +205,7 @@ let G = (0, _.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           className: B.listWrapper,
           id: w.GRID_NAVIGATOR_ID,
           ...eM,
-          children: null != eu ? (0, i.jsx)(P.default, {
+          children: null != eu ? (0, i.jsx)(b.default, {
             ref: et,
             collapsedStickersCategories: ec,
             filteredStickers: ep,
@@ -226,7 +226,7 @@ let G = (0, _.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           channel: u
         })]
       }), ei && (0, i.jsx)(U.StickersPremiumUpsell, {
-        onLearnMore: eP
+        onLearnMore: eb
       })]
     })
   });

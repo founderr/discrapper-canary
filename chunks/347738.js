@@ -30,8 +30,8 @@ let R = {},
   M = {},
   k = {},
   L = [],
-  b = {},
-  P = {
+  P = {},
+  b = {
     status: "ok",
     lastRequest: null,
     lastResponse: null
@@ -103,13 +103,13 @@ class w extends c.default.PersistedStore {
     return L
   }
   channelAffinitiesById(e) {
-    return null == e ? b : b[e]
+    return null == e ? P : P[e]
   }
   channelAffinitiesStatus() {
-    return P
+    return b
   }
   shouldFetchChannelAffinities() {
-    return !("fetching" === P.status || null != P.lastResponse && Date.now() - P.lastResponse < 30 * T.default.Millis.SECOND) && !0
+    return !("fetching" === b.status || null != b.lastResponse && Date.now() - b.lastResponse < 30 * T.default.Millis.SECOND) && !0
   }
   defaultChannelIds(e) {
     let {
@@ -253,8 +253,8 @@ let F = new w(f.default, {
     null != n ? k[t.id] = n : delete k[t.id]
   },
   REQUEST_CHANNEL_AFFINITIES() {
-    P = {
-      ...P,
+    b = {
+      ...b,
       status: "fetching",
       lastRequest: Date.now()
     }
@@ -266,15 +266,15 @@ let F = new w(f.default, {
       error: i
     } = e;
     if (null != i) {
-      L = [], b = {}, P = {
-        ...P,
+      L = [], P = {}, b = {
+        ...b,
         status: "error",
         lastResponse: Date.now()
       };
       return
     }
-    L = null != n ? n : [], b = null !== (t = null == n ? void 0 : n.reduce((e, t) => (e[t.channel_id] = t.affinity, e), {})) && void 0 !== t ? t : {}, P = {
-      ...P,
+    L = null != n ? n : [], P = null !== (t = null == n ? void 0 : n.reduce((e, t) => (e[t.channel_id] = t.affinity, e), {})) && void 0 !== t ? t : {}, b = {
+      ...b,
       status: "ok",
       lastResponse: Date.now()
     }

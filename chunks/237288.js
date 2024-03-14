@@ -5,13 +5,13 @@ n.r(e), n.d(e, {
   }
 });
 var i = n("884691"),
-  u = n("446674"),
-  r = n("850068"),
+  r = n("446674"),
+  u = n("850068"),
   l = n("521012");
 
 function a() {
-  let t = (0, u.useStateFromStores)([l.default], () => l.default.hasFetchedSubscriptions());
+  let t = (0, r.useStateFromStores)([l.default], () => l.default.hasFetchedSubscriptions());
   return i.useEffect(() => {
-    !t && (0, r.fetchSubscriptions)()
+    !t && (0, u.fetchSubscriptions)()
   }, [t]), t
 }

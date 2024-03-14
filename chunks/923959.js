@@ -38,7 +38,7 @@ let C = "SELECTABLE",
   O = {},
   D = null,
   P = {},
-  L = {
+  M = {
     comparator: -1,
     channel: (0, f.createChannelRecord)({
       id: T.NULL_STRING_CHANNEL_ID,
@@ -46,7 +46,7 @@ let C = "SELECTABLE",
       name: I.default.Messages.UNCATEGORIZED
     })
   },
-  M = w(T.NULL_STRING_GUILD_ID),
+  L = w(T.NULL_STRING_GUILD_ID),
   b = [],
   U = {};
 
@@ -55,7 +55,7 @@ function w(e) {
     id: e,
     [C]: [],
     [A]: [],
-    [T.ChannelTypes.GUILD_CATEGORY]: [L],
+    [T.ChannelTypes.GUILD_CATEGORY]: [M],
     count: 0
   }
 }
@@ -205,7 +205,7 @@ class W extends a.default.Store {
   getChannels(e) {
     var t;
     let n;
-    return null != e ? (null == (n = N[t = e]) && (n = G(t)), n) : M
+    return null != e ? (null == (n = N[t = e]) && (n = G(t)), n) : L
   }
   getFirstChannelOfType(e, t, n) {
     let i = this.getChannels(e)[n],

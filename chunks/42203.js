@@ -35,8 +35,8 @@ let C = new _.default("ChannelStore"),
   O = null,
   D = {},
   P = {},
-  L = 0,
-  M = {},
+  M = 0,
+  L = {},
   b = {},
   U = new Set,
   w = {},
@@ -139,7 +139,7 @@ function K(e) {
 }
 
 function z(e) {
-  R[e.id] = e, e.type === I.ChannelTypes.DM && (P[e.getRecipientId()] = e.id), L += 1
+  R[e.id] = e, e.type === I.ChannelTypes.DM && (P[e.getRecipientId()] = e.id), M += 1
 }
 
 function q(e) {
@@ -159,7 +159,7 @@ function X(e) {
     id: i,
     guild_id: s
   } = e;
-  y[i] = e, N[s] = null !== (t = N[s]) && void 0 !== t ? t : {}, N[s][i] = e, M[s] = (null !== (n = M[s]) && void 0 !== n ? n : 0) + 1
+  y[i] = e, N[s] = null !== (t = N[s]) && void 0 !== t ? t : {}, N[s][i] = e, L[s] = (null !== (n = L[s]) && void 0 !== n ? n : 0) + 1
 }
 
 function Q(e) {
@@ -208,10 +208,10 @@ function ee(e) {
   if (null == e) return;
   let t = e.guild_id;
   e.id in R && delete R[e.id], e.id in y && delete y[e.id], e.id in D && delete D[e.id], null != t && null != N[t] && e.id in N[t] && delete N[t][e.id], ! function(e) {
-    if (null == e.guild_id || g.THREAD_CHANNEL_TYPES.has(e.type))(0, g.isPrivate)(e.type) && (L += 1);
+    if (null == e.guild_id || g.THREAD_CHANNEL_TYPES.has(e.type))(0, g.isPrivate)(e.type) && (M += 1);
     else {
       var t;
-      M[e.guild_id] = (null !== (t = M[e.guild_id]) && void 0 !== t ? t : 0) + 1
+      L[e.guild_id] = (null !== (t = L[e.guild_id]) && void 0 !== t ? t : 0) + 1
     }
   }(e)
 }
@@ -311,11 +311,11 @@ class ea extends a.default.Store {
     return p.default.keys(P)
   }
   getPrivateChannelsVersion() {
-    return L
+    return M
   }
   getGuildChannelsVersion(e) {
     var t;
-    return null !== (t = M[e]) && void 0 !== t ? t : 0
+    return null !== (t = L[e]) && void 0 !== t ? t : 0
   }
   getAllThreadsForParent(e) {
     return s.values(D).filter(t => t.parent_id === e)
@@ -345,7 +345,7 @@ var el = new ea(o.default, {
     let {
       guilds: t
     } = e, n = N;
-    y = {}, N = {}, M = {}, t.forEach(e => {
+    y = {}, N = {}, L = {}, t.forEach(e => {
       if ("unavailable" === e.data_mode) C.fileOnly("Restoring guild channels b/c unavailable in bg sync, for ".concat(e.id, " #:").concat(eo(e.id))), s.forEach(n[e.id], X);
       else if ("partial" === e.data_mode) {
         var t, i;
@@ -389,7 +389,7 @@ var el = new ea(o.default, {
   },
   CONNECTION_OPEN: function(e) {
     let t = N;
-    for (let n of (P = {}, y = {}, N = {}, D = {}, M = {}, V = {}, w = {}, k = Date.now(), O = e.initialPrivateChannels, e.initialPrivateChannels.forEach(z), e.guilds)) "partial" === n.dataMode && (s.forEach(t[n.id], X), C.fileOnly("Restoring guild channels for ".concat(n.id, " #:").concat(eo(n.id)))), Q(n);
+    for (let n of (P = {}, y = {}, N = {}, D = {}, L = {}, V = {}, w = {}, k = Date.now(), O = e.initialPrivateChannels, e.initialPrivateChannels.forEach(z), e.guilds)) "partial" === n.dataMode && (s.forEach(t[n.id], X), C.fileOnly("Restoring guild channels for ".concat(n.id, " #:").concat(eo(n.id)))), Q(n);
     er()
   },
   GUILD_CREATE: function(e) {
@@ -419,7 +419,7 @@ var el = new ea(o.default, {
   LOAD_MESSAGES_SUCCESS: en,
   LOAD_THREADS_SUCCESS: $,
   LOGOUT: function() {
-    C.fileOnly("initializeClear()"), P = {}, y = {}, N = {}, M = {}, R = {}, V = {}, D = {}, U = new Set, w = {}, k = Date.now()
+    C.fileOnly("initializeClear()"), P = {}, y = {}, N = {}, L = {}, R = {}, V = {}, D = {}, U = new Set, w = {}, k = Date.now()
   },
   OVERLAY_INITIALIZE: Z,
   SEARCH_FINISH: ei,

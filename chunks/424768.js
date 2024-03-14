@@ -36,8 +36,8 @@ var r = n("194215"),
   R = n("315530"),
   I = n("651509"),
   O = n("143540"),
-  L = n("891224"),
-  j = n("820959"),
+  j = n("891224"),
+  L = n("820959"),
   N = n("240849"),
   F = n("884691"),
   B = n("444324"),
@@ -89,8 +89,8 @@ function q(e, t, n) {
         T()
       }
     }),
-    L = (0, V.useNumberFormatter)(v),
-    j = (0, F.useMemo)(() => L.resolvedOptions(), [L]),
+    j = (0, V.useNumberFormatter)(v),
+    L = (0, F.useMemo)(() => j.resolvedOptions(), [j]),
     q = (0, V.useNumberFormatter)({
       ...v,
       currencySign: void 0
@@ -128,7 +128,7 @@ function q(e, t, n) {
     onScroll: Q,
     isDisabled: ee
   }, n);
-  let et = j.maximumFractionDigits > 0,
+  let et = L.maximumFractionDigits > 0,
     en = isNaN(t.minValue) || t.minValue < 0,
     er = "numeric";
   (0, N.isIPhone)() ? en ? er = "text" : et && (er = "decimal"): (0, N.isAndroid)() && (en ? er = "numeric" : et && (er = "decimal"));
@@ -272,6 +272,6 @@ H = {
   "sv-SE": R.default,
   "tr-TR": I.default,
   "uk-UA": O.default,
-  "zh-CN": L.default,
-  "zh-TW": j.default
+  "zh-CN": j.default,
+  "zh-TW": L.default
 }

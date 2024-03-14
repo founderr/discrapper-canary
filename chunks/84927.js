@@ -1,5 +1,5 @@
-var n = /\s/;
+var r = /\s/;
 e.exports = function(e) {
-  for (var t = e.length; t-- && n.test(e.charAt(t)););
+  for (var t = e.length; t-- && r.test(e.charAt(t)););
   return t
 }

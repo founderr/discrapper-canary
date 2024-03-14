@@ -1,7 +1,7 @@
     "use strict";
     t.r(a), t.d(a, {
       default: function() {
-        return p
+        return b
       }
     }), t("222007");
     var s = t("37983");
@@ -12,10 +12,10 @@
       i = t("913144"),
       r = t("135230"),
       o = t("316272"),
-      l = t("701909"),
-      f = t("49111"),
+      f = t("701909"),
+      l = t("49111"),
       u = t("782340");
-    class b extends o.default {
+    class p extends o.default {
       _initialize() {
         i.default.subscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission)
       }
@@ -27,13 +27,13 @@
           let {
             kind: a,
             granted: t
-          } = e, d = "Firefox" === n.name ? f.HelpdeskArticles.ENABLE_MIC_FIREFOX : f.HelpdeskArticles.ENABLE_MIC_CHROME;
+          } = e, d = "Firefox" === n.name ? l.HelpdeskArticles.ENABLE_MIC_FIREFOX : l.HelpdeskArticles.ENABLE_MIC_CHROME;
           if (!t) {
             let e = "audio" !== a;
             (0, c.openModal)(a => (0, s.jsx)(r.default, {
               title: e ? u.default.Messages.NO_CAMERA_TITLE : u.default.Messages.NO_MIC_TITLE,
               body: e ? u.default.Messages.NO_CAMERA_BODY : u.default.Messages.NO_MIC_BODY,
-              onConfirm: () => window.open(l.default.getArticleURL(d), "_blank"),
+              onConfirm: () => window.open(f.default.getArticleURL(d), "_blank"),
               confirmText: u.default.Messages.HELP_DESK,
               ...a
             }))
@@ -41,4 +41,4 @@
         }
       }
     }
-    var p = new b
+    var b = new p

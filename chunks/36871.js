@@ -52,8 +52,8 @@ function c(e) {
     T = (0, i.usePopper)(m || g, b, D),
     S = T.state,
     Y = T.styles,
-    O = T.forceUpdate,
-    x = T.update,
+    x = T.forceUpdate,
+    O = T.update,
     E = r.useMemo(function() {
       return {
         ref: M,
@@ -65,9 +65,9 @@ function c(e) {
           style: Y.arrow,
           ref: L
         },
-        forceUpdate: O || s,
-        update: x || u
+        forceUpdate: x || s,
+        update: O || u
       }
-    }, [M, L, n, S, Y, x, O]);
+    }, [M, L, n, S, Y, O, x]);
   return (0, o.unwrapArray)(_)(E)
 }

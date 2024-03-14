@@ -31,10 +31,10 @@ n.r(t), n.d(t, {
     return R
   },
   setTryItOutBanner: function() {
-    return D
+    return G
   },
   setTryItOutThemeColors: function() {
-    return G
+    return D
   }
 });
 var i = n("872717"),
@@ -156,14 +156,14 @@ function R(e) {
   }), a(d.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
 }
 
-function D(e) {
+function G(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
     banner: e
   }), a(d.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
 }
 
-function G(e) {
+function D(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
     themeColors: e

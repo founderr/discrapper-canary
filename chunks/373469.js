@@ -45,7 +45,7 @@ function P() {
   return e
 }
 
-function L(e) {
+function M(e) {
   let {
     streamKey: t,
     region: n,
@@ -62,13 +62,13 @@ function L(e) {
   }
 }
 
-function M(e, t) {
+function L(e, t) {
   let n = g.default.getBasicChannel(t);
   return e === A.StreamTypes.CALL || null != n && S.default.canBasicChannel(C.BasicPermissions.VIEW_CHANNEL, n)
 }
 
 function b(e) {
-  if (M(e.streamType, e.channelId)) return !0;
+  if (L(e.streamType, e.channelId)) return !0;
   let t = g.default.getBasicChannel(e.channelId);
   return null != t && (0, f.canWatchStream)(t, I.default, m.default, S.default, u.default)[0]
 }
@@ -139,10 +139,10 @@ class U extends o.default.Store {
     return (0, _.default)(p.default) ? null !== (t = r[e]) && void 0 !== t ? t : null : null
   }
   getAllApplicationStreams() {
-    return (0, _.default)(p.default) ? P().filter(e => null != e && M(e.streamType, e.channelId)) : []
+    return (0, _.default)(p.default) ? P().filter(e => null != e && L(e.streamType, e.channelId)) : []
   }
   getAllApplicationStreamsForChannel(e) {
-    return (0, _.default)(p.default) ? P().filter(t => null != t && t.channelId === e && M(t.streamType, t.channelId)) : []
+    return (0, _.default)(p.default) ? P().filter(t => null != t && t.channelId === e && L(t.streamType, t.channelId)) : []
   }
   getViewerIds(e) {
     if (!(0, _.default)(p.default)) return [];
@@ -248,8 +248,8 @@ var w = new U(l.default, {
     } = e;
     a[t] = null
   },
-  STREAM_CREATE: L,
-  STREAM_UPDATE: L,
+  STREAM_CREATE: M,
+  STREAM_UPDATE: M,
   STREAM_TIMED_OUT: function(e) {
     let {
       streamKey: t

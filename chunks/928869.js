@@ -38,10 +38,10 @@ var r = n("195548"),
           T = (0, i.default)(p),
           S = T ? "y" === y ? T.clientHeight || 0 : T.clientWidth || 0 : 0,
           Y = b[w],
-          O = S - M[_] - b[k],
-          x = S / 2 - M[_] / 2 + (L / 2 - D / 2),
-          E = (0, u.within)(Y, x, O);
-        n.modifiersData[o] = ((t = {})[y] = E, t.centerOffset = E - x, t)
+          x = S - M[_] - b[k],
+          O = S / 2 - M[_] / 2 + (L / 2 - D / 2),
+          E = (0, u.within)(Y, O, x);
+        n.modifiersData[o] = ((t = {})[y] = E, t.centerOffset = E - O, t)
       }
     },
     effect: function(e) {

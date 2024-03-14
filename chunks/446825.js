@@ -132,7 +132,7 @@ function m(e, t) {
     case "hex":
       return n >>> 1;
     case "base64":
-      return O(e).length;
+      return x(e).length;
     default:
       if (a) return r ? -1 : S(e).length;
       t = ("" + t).toLowerCase(), a = !0
@@ -325,7 +325,7 @@ s.isBuffer = function(e) {
 };
 
 function v(e, t, n, r) {
-  return x(Y(t), e, n, r)
+  return O(Y(t), e, n, r)
 }
 s.prototype.write = function(e, t, n, r) {
   if (void 0 === t) r = "utf8", n = this.length, t = 0;
@@ -355,25 +355,25 @@ s.prototype.write = function(e, t, n, r) {
     case "utf8":
     case "utf-8":
       ;
-      return a = this, o = e, i = t, s = n, x(S(o, a.length - i), a, i, s);
+      return a = this, o = e, i = t, s = n, O(S(o, a.length - i), a, i, s);
     case "ascii":
       ;
-      return u = this, l = e, c = t, d = n, x(Y(l), u, c, d);
+      return u = this, l = e, c = t, d = n, O(Y(l), u, c, d);
     case "latin1":
     case "binary":
       return function(e, t, n, r) {
         var a, o, i, s;
-        return a = e, o = t, i = n, s = r, x(Y(o), a, i, s)
+        return a = e, o = t, i = n, s = r, O(Y(o), a, i, s)
       }(this, e, t, n);
     case "base64":
       ;
-      return f = this, p = e, m = t, h = n, x(O(p), f, m, h);
+      return f = this, p = e, m = t, h = n, O(x(p), f, m, h);
     case "ucs2":
     case "ucs-2":
     case "utf16le":
     case "utf-16le":
       ;
-      return y = this, _ = e, g = t, v = n, x(function(e, t) {
+      return y = this, _ = e, g = t, v = n, O(function(e, t) {
         for (var n, r, a, o = [], i = 0; i < e.length && !((t -= 2) < 0); ++i) r = (n = e.charCodeAt(i)) >> 8, a = n % 256, o.push(a), o.push(r);
         return o
       }(_, y.length - g), y, g, v);
@@ -638,7 +638,7 @@ function Y(e) {
   return t
 }
 
-function O(e) {
+function x(e) {
   return r.toByteArray(function(e) {
     if ((e = (e = e.split("=")[0]).trim().replace(T, "")).length < 2) return "";
     for (; e.length % 4 != 0;) e += "=";
@@ -646,7 +646,7 @@ function O(e) {
   }(e))
 }
 
-function x(e, t, n, r) {
+function O(e, t, n, r) {
   for (var a = 0; a < r && !(a + n >= t.length) && !(a >= e.length); ++a) t[a + n] = e[a];
   return a
 }

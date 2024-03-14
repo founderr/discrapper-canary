@@ -34,8 +34,8 @@ var i = n("37983"),
   M = n("47677"),
   k = n("49111"),
   L = n("724210"),
-  b = n("782340"),
-  P = n("356410");
+  P = n("782340"),
+  b = n("356410");
 n("312336");
 var j = n("919163");
 
@@ -96,7 +96,7 @@ let D = {
   codeBlock: {
     react(e, t, l) {
       let a = () => (0, i.jsx)("code", {
-        className: s(P.scrollbarGhostHairline, "hljs"),
+        className: s(b.scrollbarGhostHairline, "hljs"),
         children: (0, v.smartOutput)(e, t, l)
       });
       return (0, i.jsx)("pre", {
@@ -116,7 +116,7 @@ let D = {
               {
                 let n = t.highlight(e.lang, e.content, !0);
                 return null == n ? a() : (0, i.jsx)("code", {
-                  className: s(P.scrollbarGhostHairline, "hljs", n.language),
+                  className: s(b.scrollbarGhostHairline, "hljs", n.language),
                   dangerouslySetInnerHTML: {
                     __html: n.value
                   }
@@ -179,13 +179,13 @@ let D = {
       switch (e.channelId) {
         case L.StaticChannelId.GUILD_HOME:
         case L.StaticChannelId.SERVER_GUIDE:
-          a = b.default.Messages.SERVER_GUIDE;
+          a = P.default.Messages.SERVER_GUIDE;
           break;
         case L.StaticChannelId.CHANNEL_BROWSER:
-          a = b.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
+          a = P.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
           break;
         case L.StaticChannelId.CUSTOMIZE_COMMUNITY:
-          a = b.default.Messages.CHANNELS_AND_ROLES
+          a = P.default.Messages.CHANNELS_AND_ROLES
       }
       return (0, i.jsx)(o.Tooltip, {
         text: a,

@@ -36,8 +36,8 @@ var r = n("783575"),
   R = n("941741"),
   I = n("481425"),
   O = n("906689"),
-  L = n("212869"),
-  j = n("555016"),
+  j = n("212869"),
+  L = n("555016"),
   N = n("240849"),
   F = n("564341"),
   B = {};
@@ -91,6 +91,6 @@ B = {
   "sv-SE": R.default,
   "tr-TR": I.default,
   "uk-UA": O.default,
-  "zh-CN": L.default,
-  "zh-TW": j.default
+  "zh-CN": j.default,
+  "zh-TW": L.default
 }

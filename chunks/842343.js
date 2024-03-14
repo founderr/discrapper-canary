@@ -32,10 +32,10 @@ var i = n("37983"),
     } = e, O = (0, p.useUID)(), R = (0, o.useStateFromStores)([c.default], () => {
       var e;
       return null !== (e = c.default.getGuild(_.guild_id)) && void 0 !== e ? e : null
-    }, [_.guild_id]), M = l.useRef(), [k, L, b] = (0, g.default)({
+    }, [_.guild_id]), M = l.useRef(), [k, L, P] = (0, g.default)({
       ...e,
       guild: R
-    }, t, M), P = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, j = (0, f.getAutocompleteRowId)(k.selectedIndex);
+    }, t, M), b = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, j = (0, f.getAutocompleteRowId)(k.selectedIndex);
     (0, d.useChannelEditorPopup)(O, k.isVisible, j), x.default.trackExposure({
       location: "6e9811_1"
     });
@@ -78,7 +78,7 @@ var i = n("37983"),
       innerClassName: S.autocompleteInner,
       onMouseDown: e => e.preventDefault(),
       children: (0, i.jsx)(r.ListNavigatorProvider, {
-        navigator: b,
+        navigator: P,
         children: (0, i.jsx)(r.ListNavigatorContainer, {
           children: e => {
             let {
@@ -104,7 +104,7 @@ var i = n("37983"),
         })
       })
     });
-    return null != D ? (0, i.jsx)(P, {
+    return null != D ? (0, i.jsx)(b, {
       children: (0, i.jsx)(u.ReferencePositionLayer, {
         reference: () => D,
         positionKey: w,

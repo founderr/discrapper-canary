@@ -36,12 +36,12 @@ var i = n("37983"),
     let {
       onLearnMore: k,
       onClose: L,
-      channel: b,
-      emojiDescriptor: P,
+      channel: P,
+      emojiDescriptor: b,
       pickerIntention: j,
       analyticsLocation: U
     } = e, D = (0, u.default)(), [w, F] = l.useState(!1), B = () => {
-      (0, T.trackPremiumSettingsPaneOpened)(b), (0, p.navigateToPremiumMarketingPage)(), k()
+      (0, T.trackPremiumSettingsPaneOpened)(P), (0, p.navigateToPremiumMarketingPage)(), k()
     }, G = (0, r.isThemeLight)(D) ? n("602291") : n("609708"), H = (0, E.usePremiumTrialOffer)(), V = (0, x.usePremiumDiscountOffer)(), K = null != H || null != V, {
       isLoading: W,
       suggestedPremiumType: Y
@@ -55,12 +55,12 @@ var i = n("37983"),
     return l.useEffect(() => {
       if (!W) {
         let e;
-        e = j === N.EmojiIntention.REACTION ? A.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : P.subCategory === _.EmojiSubCategory.TOP_GUILD_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : P.subCategory === _.EmojiSubCategory.NEWLY_ADDED_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : A.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
-        let t = P.emoji;
+        e = j === N.EmojiIntention.REACTION ? A.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : b.subCategory === _.EmojiSubCategory.TOP_GUILD_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : b.subCategory === _.EmojiSubCategory.NEWLY_ADDED_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : A.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
+        let t = b.emoji;
         S.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
           type: e,
           is_animated: t.animated,
-          is_external: !C.default.isInternalEmojiForGuildId(t, null == b ? void 0 : b.getGuildId()),
+          is_external: !C.default.isInternalEmojiForGuildId(t, null == P ? void 0 : P.getGuildId()),
           has_search_query: null != z && "" !== z,
           location: {
             ...U,
@@ -70,7 +70,7 @@ var i = n("37983"),
           sku_id: (0, I.castPremiumSubscriptionAsSkuId)(I.default.getSkuIdForPremiumType(Y))
         })
       }
-    }, [W, Y, P, b, U, Z, j, z]), (0, i.jsxs)("div", {
+    }, [W, Y, b, P, U, Z, j, z]), (0, i.jsxs)("div", {
       className: s(R.premiumPromo, {
         [R.unifyTrialUpsell]: K
       }),

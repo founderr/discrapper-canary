@@ -144,10 +144,10 @@ var _ = {
     }
     return !1
   },
-  O = function(e) {
+  x = function(e) {
     return Array.isArray(e) ? e.join("") : e
   },
-  x = function(e, t) {
+  O = function(e, t) {
     return Array.isArray(e) ? e.reduce(function(e, n) {
       return ! function(e, t) {
         for (var n = Object.keys(e), r = 0; r < n.length; r += 1)
@@ -204,7 +204,7 @@ var _ = {
             })["data-rh"] = !0, o = H(n, r), [a.createElement(_.TITLE, o, e)]
           }, toString: function() {
             var r, a, o, i, s, u;
-            return r = e, a = t.title, o = t.titleAttributes, i = n, s = C(o), u = O(a), s ? "<" + r + ' data-rh="true" ' + s + ">" + j(u, i) + "</" + r + ">" : "<" + r + ' data-rh="true">' + j(u, i) + "</" + r + ">"
+            return r = e, a = t.title, o = t.titleAttributes, i = n, s = C(o), u = x(a), s ? "<" + r + ' data-rh="true" ' + s + ">" + j(u, i) + "</" + r + ">" : "<" + r + ' data-rh="true">' + j(u, i) + "</" + r + ">"
           }
         };
       case "bodyAttributes":
@@ -256,7 +256,7 @@ var _ = {
         }
       };
     if (e.prioritizeSeoTags) {
-      var p, m, h, y, M, w, k, L = (m = (p = e).linkTags, h = p.scriptTags, y = p.encode, M = x(p.metaTags, b), w = x(m, g), k = x(h, v), {
+      var p, m, h, y, M, w, k, L = (m = (p = e).linkTags, h = p.scriptTags, y = p.encode, M = O(p.metaTags, b), w = O(m, g), k = O(h, v), {
         priorityMethods: {
           toComponent: function() {
             return [].concat(F(_.META, M.priority), F(_.LINK, w.priority), F(_.SCRIPT, k.priority))
@@ -392,7 +392,7 @@ var U = function(e, t) {
       d = e.styleTags,
       f = e.title,
       p = e.titleAttributes;
-    K(_.BODY, e.bodyAttributes), K(_.HTML, o), n = f, r = p, void 0 !== n && document.title !== n && (document.title = O(n)), K(_.TITLE, r);
+    K(_.BODY, e.bodyAttributes), K(_.HTML, o), n = f, r = p, void 0 !== n && document.title !== n && (document.title = x(n)), K(_.TITLE, r);
     var m = {
         baseTag: U(_.BASE, a),
         linkTags: U(_.LINK, i),

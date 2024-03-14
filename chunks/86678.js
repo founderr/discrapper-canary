@@ -34,8 +34,8 @@ var i = n("37983"),
   M = n("716849"),
   k = n("552917"),
   L = n("845579"),
-  b = n("923959"),
-  P = n("697218"),
+  P = n("923959"),
+  b = n("697218"),
   j = n("599110"),
   U = n("764364"),
   D = n("159885"),
@@ -196,17 +196,17 @@ var ed = l.memo(l.forwardRef(function(e, t) {
       autoFocus: e_ = !0,
       accessory: ev
     } = ex,
-    eN = (0, d.useStateFromStores)([b.default], () => null != f ? b.default.getDefaultChannel(f) : null, [f]),
+    eN = (0, d.useStateFromStores)([P.default], () => null != f ? P.default.getDefaultChannel(f) : null, [f]),
     [eA, eO] = l.useState(null),
     eR = l.useRef(""),
     eM = (0, _.useExpressionPickerStore)(e => e.searchQuery),
     ek = l.useRef(null),
     eL = l.useRef(null),
-    eb = l.useRef(null);
+    eP = l.useRef(null);
   null == u && null != eN && (u = eN);
-  let eP = null !== (a = null !== (n = null == u ? void 0 : u.getGuildId()) && void 0 !== n ? n : f) && void 0 !== a ? a : null,
+  let eb = null !== (a = null !== (n = null == u ? void 0 : u.getGuildId()) && void 0 !== n ? n : f) && void 0 !== a ? a : null,
     [ej, eU] = l.useState(!1),
-    eD = P.default.getCurrentUser(),
+    eD = b.default.getCurrentUser(),
     ew = (0, U.isPremium)(eD);
   l.useImperativeHandle(t, () => ({
     onPickerOpen: e2
@@ -250,7 +250,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     emojiSpriteSize: v
   }), {
     newlyAddedEmojis: e7
-  } = (0, F.default)(eP, o), {
+  } = (0, F.default)(eb, o), {
     trackOnPickerOpen: e6
   } = (0, w.useTrackEmojiPickerOpened)({
     intention: o,
@@ -260,8 +260,8 @@ var ed = l.memo(l.forwardRef(function(e, t) {
   (0, M.useMaybeFetchPremiumLikelihood)(k.default);
   let e2 = l.useCallback(() => {
       let e = e7.length > 0 ? e7[0].id : null;
-      (0, I.updateNewlyAddedLastSeen)(eP, e), e6()
-    }, [e6, e7, eP]),
+      (0, I.updateNewlyAddedLastSeen)(eb, e), e6()
+    }, [e6, e7, eb]),
     e8 = (0, K.useEmojiSelectHandler)({
       pickerIntention: o,
       selectedChannel: u,
@@ -290,7 +290,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
           category: e.category,
           subCategory: e.subCategory,
           position: e.columnIndex + 1,
-          newlyAddedHighlight: e.subCategory === J.EmojiSubCategory.NEWLY_ADDED_EMOJI && C.default.isNewerThanLastSeen(eP, e.emoji.id),
+          newlyAddedHighlight: e.subCategory === J.EmojiSubCategory.NEWLY_ADDED_EMOJI && C.default.isNewerThanLastSeen(eb, e.emoji.id),
           isBurstReaction: ej
         })
       },
@@ -320,15 +320,15 @@ var ed = l.memo(l.forwardRef(function(e, t) {
       onSelectEmoji: ei,
       emojiGrid: e1,
       emojiList: eL,
-      channelGuildId: eP,
+      channelGuildId: eb,
       isBurstReaction: ej
     });
-  ea(ed, eL), es(ed, eY, eb, e_), l.useEffect(() => {
+  ea(ed, eL), es(ed, eY, eP, e_), l.useEffect(() => {
     !ef && (0, _.setSearchQuery)("")
   }, [ef]), l.useEffect(() => (j.default.track(q.AnalyticEvents.OPEN_POPOUT, {
     type: null != eV ? eV : "Emoji Picker",
-    guild_id: eP
-  }), T.EmojiPickerStore.resetStoreState), [eV, eP]), l.useEffect(() => () => (0, R.hideHotspot)(R.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), l.useLayoutEffect(() => {
+    guild_id: eb
+  }), T.EmojiPickerStore.resetStoreState), [eV, eb]), l.useEffect(() => () => (0, R.hideHotspot)(R.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), l.useLayoutEffect(() => {
     var e;
     let {
       columnIndex: t,
@@ -365,7 +365,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
       onKeyDown: e => {
         null == tt || tt(e), null == eT || eT(e)
       },
-      searchBarRef: eb,
+      searchBarRef: eP,
       onFocus: eI,
       autoFocus: e_,
       accessory: ev,
@@ -377,7 +377,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
       renderHeader: eS
     }),
     ts = [];
-  o === Q.EmojiIntention.REACTION && ts.push(c.DismissibleContent.SUPER_REACTIONS_NITRO_MARKETING), !S.default.hasFavoriteEmojis(eP) && ts.push(c.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
+  o === Q.EmojiIntention.REACTION && ts.push(c.DismissibleContent.SUPER_REACTIONS_NITRO_MARKETING), !S.default.hasFavoriteEmojis(eb) && ts.push(c.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
   let tr = (0, i.jsx)(h.default, {
     ...eK,
     children: (0, i.jsxs)(ti, {
@@ -432,7 +432,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
               rowCountBySection: e$,
               sectionDescriptors: e0,
               setCollapsedSections: eX,
-              channelGuildId: eP,
+              channelGuildId: eb,
               messageId: eg,
               isBurstReaction: ej,
               listHeaderClassName: eC
@@ -441,7 +441,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
         }), (0, i.jsx)(W.EmojiPickerInspector, {
           emojiGrid: e1,
           className: $.inspector,
-          guildId: eP,
+          guildId: eb,
           pickerIntention: o,
           channel: u
         }), r]

@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return L
   },
   default: function() {
-    return P
+    return b
   }
 }), n("222007");
 var i = n("884691"),
@@ -138,8 +138,8 @@ function O(e) {
       a(null)
     }
   }, [e, o]), i.useEffect(() => {
-    if (l !== e && null != l && b.stopPolling(e), o && null != l) return (t || null != e && l !== e) && b.fetchSummaries(e), b.startPolling(e), () => {
-      null != l && b.stopPolling(e)
+    if (l !== e && null != l && P.stopPolling(e), o && null != l) return (t || null != e && l !== e) && P.fetchSummaries(e), P.startPolling(e), () => {
+      null != l && P.stopPolling(e)
     }
   }, [e, t, l, o])
 }
@@ -231,11 +231,11 @@ async function L(e) {
     throw new d.APIError(e)
   }
 }
-let b = {
+let P = {
   startPolling: function(e) {
     let t = A(e, 1);
     t - 1 == 0 && (S[e] = setInterval(async () => {
-      await b.fetchSummaries(e)
+      await P.fetchSummaries(e)
     }, x.SUMMARY_POLL_INTERVAL))
   },
   stopPolling: function(e) {
@@ -270,4 +270,4 @@ let b = {
   },
   deleteSummary: L
 };
-var P = b
+var b = P

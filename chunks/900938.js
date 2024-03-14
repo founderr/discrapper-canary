@@ -25,8 +25,8 @@ var c = n("917351"),
   O = n("970700"),
   D = n("49111"),
   P = n("447621"),
-  L = n("69741");
-let M = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled"],
+  M = n("69741");
+let L = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled"],
   b = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
   U = !1,
   w = D.FormStates.CLOSED,
@@ -184,7 +184,7 @@ class es extends E.default.Store {
     return null != o ? o.id : null
   }
   showPublicSuccessModal() {
-    return !m.default.get(L.PUBLIC_SUCCESS_MODAL_SEEN_KEY)
+    return !m.default.get(M.PUBLIC_SUCCESS_MODAL_SEEN_KEY)
   }
   getGuild() {
     return o
@@ -242,13 +242,13 @@ var er = new es(p.default, __OVERLAY__ ? {} : {
   GUILD_SETTINGS_CLOSE: ee,
   GUILD_SETTINGS_UPDATE: function(e) {
     if (null == o) return !1;
-    M.forEach(t => {
+    L.forEach(t => {
       null != o && e.hasOwnProperty(t) && (o = o.set(t, e[t]))
     }), ! function() {
       if (null == o) return;
       let e = o.toJS(),
         t = a.toJS(),
-        n = M.some(n => e[n] !== t[n]);
+        n = L.some(n => e[n] !== t[n]);
       !n && (o = a)
     }()
   },
@@ -361,9 +361,9 @@ var er = new es(p.default, __OVERLAY__ ? {} : {
       if (null == e) return !1;
       let t = a = e,
         n = o.toJS();
-      M.forEach(e => {
+      L.forEach(e => {
         if (!b.has(e)) {
-          if ("rulesChannelId" !== e && "publicUpdatesChannelId" !== e || n[e] !== L.CREATE_NEW_CHANNEL_VALUE) {
+          if ("rulesChannelId" !== e && "publicUpdatesChannelId" !== e || n[e] !== M.CREATE_NEW_CHANNEL_VALUE) {
             if ("features" === e) {
               t.set(e, new Set(n[e]));
               return

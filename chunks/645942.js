@@ -1,4 +1,4 @@
-var n = r("626849");
+var r = n("626849");
 e.exports = function() {
-  return n.Date.now()
+  return r.Date.now()
 }

@@ -49,11 +49,11 @@ function s(e) {
     t = (0, r.snapValueToStep)(t, i, o, f), C(a(M.current, e, t))
   }
 
-  function L(e) {
+  function j(e) {
     return l.format(e)
   }
 
-  function j(e) {
+  function L(e) {
     let t = e * (d - s) + s;
     return (0, r.clamp)(Math.round((t - s) / f) * f + s, s, d)
   }
@@ -62,7 +62,7 @@ function s(e) {
     getThumbValue: e => y[e],
     setThumbValue: O,
     setThumbPercent: function(e, t) {
-      O(e, j(t))
+      O(e, L(t))
     },
     isThumbDragging: e => w[e],
     setThumbDragging: function(e, t) {
@@ -74,11 +74,11 @@ function s(e) {
     setFocusedThumb: _,
     getThumbPercent: e => T(y[e]),
     getValuePercent: T,
-    getThumbValueLabel: e => L(y[e]),
-    getFormattedValue: L,
+    getThumbValueLabel: e => j(y[e]),
+    getFormattedValue: j,
     getThumbMinValue: A,
     getThumbMaxValue: R,
-    getPercentValue: j,
+    getPercentValue: L,
     isThumbEditable: I,
     setThumbEditable: function(e, t) {
       k.current[e] = t

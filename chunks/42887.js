@@ -27,8 +27,8 @@ var o, l, u = n("627445"),
   O = n("161454"),
   D = n("933034"),
   P = n("746800"),
-  L = n("301108"),
-  M = n("584687"),
+  M = n("301108"),
+  L = n("584687"),
   b = n("705500"),
   U = n("797323"),
   w = n("238847"),
@@ -142,8 +142,8 @@ let eI = (0, g.initializeMediaEngine)((0, g.determineMediaEngine)()),
   eP = {
     [eg.DEFAULT_DEVICE_ID]: ts(em.default.Messages.NO_VIDEO_DEVICES)
   },
-  eL = !1,
   eM = !1,
+  eL = !1,
   eb = !1,
   eU = !1,
   ew = !1,
@@ -201,7 +201,7 @@ function e4(e) {
 function e6(e) {
   let t = e2(e.context),
     n = !ey || t.mute || t.deaf;
-  e.context === eg.MediaEngineContextTypes.DEFAULT && (n = n || eL || eM || eb || !z.default.didHavePermission(eh.NativePermissionTypes.AUDIO)), e.setSelfMute(n), e.setSelfDeaf(t.deaf), e.context === eg.MediaEngineContextTypes.DEFAULT && e.setNativeMute(n)
+  e.context === eg.MediaEngineContextTypes.DEFAULT && (n = n || eM || eL || eb || !z.default.didHavePermission(eh.NativePermissionTypes.AUDIO)), e.setSelfMute(n), e.setSelfDeaf(t.deaf), e.context === eg.MediaEngineContextTypes.DEFAULT && e.setNativeMute(n)
 }
 
 function e9() {
@@ -516,7 +516,7 @@ class tg extends E.default.Store {
         muteBeforeProcessing: a,
         pttBeforeProcessing: o,
         skipEncode: l
-      } = L.default.getCurrentConfig({
+      } = M.default.getCurrentConfig({
         location: "setupMediaEngine"
       }, {
         autoTrackExposure: !0
@@ -837,7 +837,7 @@ class tg extends E.default.Store {
     return ey
   }
   isMute() {
-    return this.isSelfMute() || eL
+    return this.isSelfMute() || eM
   }
   isDeaf() {
     return this.isSelfDeaf() || eU
@@ -847,7 +847,7 @@ class tg extends E.default.Store {
   }
   isSelfMutedTemporarily() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eg.MediaEngineContextTypes.DEFAULT;
-    return e === eg.MediaEngineContextTypes.DEFAULT && eM
+    return e === eg.MediaEngineContextTypes.DEFAULT && eL
   }
   isSelfMute() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eg.MediaEngineContextTypes.DEFAULT;
@@ -1136,7 +1136,7 @@ var tm = i = new tg(S.default, {
     } = e;
     return t.reduce((e, t) => {
       if (s === t.sessionId) {
-        eL = t.mute || t.suppress, eU = t.deaf, eI.eachConnection(e6);
+        eM = t.mute || t.suppress, eU = t.deaf, eI.eachConnection(e6);
         let e = null != t.guildId && null != t.channelId && null != eK && eK !== t.channelId,
           n = !e && ew;
         return e9(n), eK = t.channelId, !0
@@ -1145,7 +1145,7 @@ var tm = i = new tg(S.default, {
     }, !1)
   },
   CONNECTION_OPEN: function(e) {
-    s = e.sessionId, eL = !1, eU = !1, (0, q.shouldReadWriteAudioSettings)() && to()
+    s = e.sessionId, eM = !1, eU = !1, (0, q.shouldReadWriteAudioSettings)() && to()
   },
   CONNECTION_CLOSED: function() {
     s = null
@@ -1181,7 +1181,7 @@ var tm = i = new tg(S.default, {
     let {
       mute: t
     } = e;
-    eM = t, eI.eachConnection(e6)
+    eL = t, eI.eachConnection(e6)
   },
   AUDIO_TOGGLE_SELF_MUTE: function(e) {
     let {
@@ -1702,7 +1702,7 @@ var tm = i = new tg(S.default, {
       quality: s
     } = e, {
       enableDecoupledGameClipping: r
-    } = M.default.getCurrentConfig({
+    } = L.default.getCurrentConfig({
       location: "handleClipsInit"
     }, {
       autoTrackExposure: !0

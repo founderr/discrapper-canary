@@ -47,8 +47,8 @@ var _ = l.memo(function(e) {
       onMute: M,
       waveform: k,
       durationSecs: L,
-      onVolumeShow: b,
-      onVolumeHide: P,
+      onVolumeShow: P,
+      onVolumeHide: b,
       onPlay: j,
       onPause: U,
       onError: D
@@ -225,8 +225,8 @@ var _ = l.memo(function(e) {
       currentWindow: window,
       onValueChange: eo,
       onToggleMute: eu,
-      onVolumeShow: b,
-      onVolumeHide: P
+      onVolumeShow: P,
+      onVolumeHide: b
     }), N]
   })
 })

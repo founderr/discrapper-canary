@@ -2,7 +2,7 @@
 let r, i;
 n.r(t), n.d(t, {
   createCalendar: function() {
-    return ej
+    return eL
   },
   isSameDay: function() {
     return h
@@ -353,7 +353,7 @@ function A(e, t) {
   if (e.calendar.identifier === t.identifier) return e;
   let n = t.fromJulianDay(e.calendar.toJulianDay(e)),
     r = e.copy();
-  return r.calendar = t, r.era = n.era, r.year = n.year, r.month = n.month, r.day = n.day, j(r), r
+  return r.calendar = t, r.era = n.era, r.year = n.year, r.month = n.month, r.day = n.day, L(r), r
 }
 
 function R(e, t) {
@@ -364,7 +364,7 @@ function R(e, t) {
       e.hour += t.hours || 0, e.minute += t.minutes || 0, e.second += t.seconds || 0, e.millisecond += t.milliseconds || 0;
       return n = e, n.second += Math.floor(n.millisecond / 1e3), n.millisecond = B(n.millisecond, 1e3), n.minute += Math.floor(n.second / 60), n.second = B(n.second, 60), n.hour += Math.floor(n.minute / 60), n.minute = B(n.minute, 60), r = Math.floor(n.hour / 24), n.hour = B(n.hour, 24), r
     }(n, t) : 0;
-  I(n, t.years || 0), n.calendar.balanceYearMonth && n.calendar.balanceYearMonth(n, e), n.month += t.months || 0, O(n), L(n), n.day += 7 * (t.weeks || 0), n.day += t.days || 0, n.day += r,
+  I(n, t.years || 0), n.calendar.balanceYearMonth && n.calendar.balanceYearMonth(n, e), n.month += t.months || 0, O(n), j(n), n.day += 7 * (t.weeks || 0), n.day += t.days || 0, n.day += r,
     function(e) {
       for (; e.day < 1;) e.month--, O(e), e.day += e.calendar.getDaysInMonth(e);
       for (; e.day > e.calendar.getDaysInMonth(e);) e.day -= e.calendar.getDaysInMonth(e), e.month++, O(e)
@@ -391,12 +391,12 @@ function O(e) {
   for (; e.month > (t = e.calendar.getMonthsInYear(e));) e.month -= t, I(e, 1)
 }
 
-function L(e) {
+function j(e) {
   e.month = Math.max(1, Math.min(e.calendar.getMonthsInYear(e), e.month)), e.day = Math.max(1, Math.min(e.calendar.getDaysInMonth(e), e.day))
 }
 
-function j(e) {
-  e.calendar.constrainDate && e.calendar.constrainDate(e), e.year = Math.max(1, Math.min(e.calendar.getYearsInEra(e), e.year)), L(e)
+function L(e) {
+  e.calendar.constrainDate && e.calendar.constrainDate(e), e.year = Math.max(1, Math.min(e.calendar.getYearsInEra(e), e.year)), j(e)
 }
 
 function N(e, t) {
@@ -409,7 +409,7 @@ function N(e, t) {
 
 function F(e, t) {
   let n = e.copy();
-  return null != t.era && (n.era = t.era), null != t.year && (n.year = t.year), null != t.month && (n.month = t.month), null != t.day && (n.day = t.day), j(n), n
+  return null != t.era && (n.era = t.era), null != t.year && (n.year = t.year), null != t.month && (n.month = t.month), null != t.day && (n.day = t.day), L(n), n
 }
 
 function B(e, t) {
@@ -424,7 +424,7 @@ function z(e, t, n, r) {
       let t = e.calendar.getEras(),
         o = t.indexOf(e.era);
       if (o < 0) throw Error("Invalid era: " + e.era);
-      o = K(o, n, 0, t.length - 1, null == r ? void 0 : r.round), i.era = t[o], j(i);
+      o = K(o, n, 0, t.length - 1, null == r ? void 0 : r.round), i.era = t[o], L(i);
       break
     }
     case "year":
@@ -440,7 +440,7 @@ function z(e, t, n, r) {
     default:
       throw Error("Unsupported field " + t)
   }
-  return e.calendar.balanceDate && e.calendar.balanceDate(i), j(i), i
+  return e.calendar.balanceDate && e.calendar.balanceDate(i), L(i), i
 }
 
 function K(e, t, n, r) {
@@ -499,7 +499,7 @@ class q {
       value: void 0
     });
     let [t, n, r, i, s] = U(e);
-    this.calendar = t, this.era = n, this.year = r, this.month = i, this.day = s, j(this)
+    this.calendar = t, this.era = n, this.year = r, this.month = i, this.day = s, L(this)
   }
 }
 var G = new WeakMap;
@@ -579,7 +579,7 @@ class W {
       value: void 0
     });
     let [t, n, r, i, s] = U(e);
-    this.calendar = t, this.era = n, this.year = r, this.month = i, this.day = s, this.hour = e.shift() || 0, this.minute = e.shift() || 0, this.second = e.shift() || 0, this.millisecond = e.shift() || 0, j(this)
+    this.calendar = t, this.era = n, this.year = r, this.month = i, this.day = s, this.hour = e.shift() || 0, this.minute = e.shift() || 0, this.second = e.shift() || 0, this.millisecond = e.shift() || 0, L(this)
   }
 }
 let Z = [
@@ -1063,7 +1063,7 @@ class eO extends eI {
     super(...e), this.identifier = "ethioaa"
   }
 }
-class eL extends eI {
+class ej extends eI {
   fromJulianDay(e) {
     let [t, n, r] = eT(1824665, e), i = "CE";
     return t <= 0 && (i = "BCE", t = 1 - t), new q(this, i, t, n, r)
@@ -1093,7 +1093,7 @@ class eL extends eI {
   }
 }
 
-function ej(e) {
+function eL(e) {
   switch (e) {
     case "buddhist":
       return new en;
@@ -1102,7 +1102,7 @@ function ej(e) {
     case "ethioaa":
       return new eO;
     case "coptic":
-      return new eL;
+      return new ej;
     case "hebrew":
       return new eC;
     case "indian":

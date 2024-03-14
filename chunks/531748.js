@@ -311,8 +311,8 @@ class E extends a.default {
         keyframes: O,
         passthroughCount: D,
         cryptorSuccessCount: P,
-        cryptorFailureCount: L,
-        cryptorDuration: M,
+        cryptorFailureCount: M,
+        cryptorDuration: L,
         cryptorAttempts: b
       } = e.aggregatedProperties;
     return {
@@ -337,8 +337,8 @@ class E extends a.default {
       num_keyframes: O,
       cryptor_passthrough_count: D,
       cryptor_success_count: P,
-      cryptor_failure_count: L,
-      cryptor_duration: M,
+      cryptor_failure_count: M,
+      cryptor_duration: L,
       cryptor_attempts: b
     }
   }

@@ -153,7 +153,7 @@ function A(e) {
       label: e,
       status: (0, _.humanizeStatus)(t, n)
     }) : e
-  }(v, I, C), P = R.size * g.DECORATION_TO_AVATAR_RATIO, L = function(e, t, n, i) {
+  }(v, I, C), P = R.size * g.DECORATION_TO_AVATAR_RATIO, M = function(e, t, n, i) {
     if (null == e) return null;
     if (i) switch (t) {
       case h.AvatarSizes.SIZE_16:
@@ -210,7 +210,7 @@ function A(e) {
         return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_120
     }
     return null
-  }(I, n, C, A), M = null != y && (0, i.jsx)("svg", {
+  }(I, n, C, A), L = null != y && (0, i.jsx)("svg", {
     width: P + N,
     height: P,
     viewBox: "0 0 ".concat(P + N, " ").concat(P),
@@ -221,7 +221,7 @@ function A(e) {
       y: 0,
       width: P,
       height: P,
-      mask: null != L ? "url(#".concat(L, ")") : void 0,
+      mask: null != M ? "url(#".concat(M, ")") : void 0,
       children: (0, i.jsx)("div", {
         className: p.avatarStack,
         children: (0, i.jsx)("img", {
@@ -245,7 +245,7 @@ function A(e) {
     onMouseLeave: null != c ? c : void 0,
     "aria-label": D,
     "aria-hidden": T,
-    children: [t, M]
+    children: [t, L]
   }) : (0, i.jsxs)("div", {
     className: a(p.wrapper, E),
     style: O,
@@ -255,7 +255,7 @@ function A(e) {
     role: "img",
     "aria-label": D,
     "aria-hidden": T,
-    children: [t, M]
+    children: [t, L]
   })
 }
 
@@ -291,7 +291,7 @@ function N(e) {
     statusBackdropColor: v,
     "aria-hidden": C = !1,
     "aria-label": N
-  } = e, R = n !== E.StatusTypes.UNKNOWN ? n : null, O = (0, h.getAvatarSpecs)(s), D = null != R ? Math.ceil((O.status * h.TYPING_WIDTH_RATIO - O.status) / 2) : 0, P = O.size + D, L = (0, d.useStatusFillColor)(R, r);
+  } = e, R = n !== E.StatusTypes.UNKNOWN ? n : null, O = (0, h.getAvatarSpecs)(s), D = null != R ? Math.ceil((O.status * h.TYPING_WIDTH_RATIO - O.status) / 2) : 0, P = O.size + D, M = (0, d.useStatusFillColor)(R, r);
   return (0, i.jsx)(A, {
     ...e,
     ariaLabel: N,
@@ -387,7 +387,7 @@ function N(e) {
           children: [null != v && I(v, o, O, R), (0, i.jsx)("rect", {
             ...e,
             ...T(O, R, o, l),
-            fill: L,
+            fill: M,
             mask: "url(#".concat((0, d.getStatusMask)(R, o, l), ")"),
             className: p.pointerEvents
           }), l ? (0, i.jsx)(u.Dots, {
@@ -418,8 +418,8 @@ function R(e) {
     statusTooltip: O = !1,
     statusBackdropColor: D,
     "aria-hidden": P = !1,
-    "aria-label": L
-  } = e, M = (0, d.useStatusFillColor)(N, R), b = s.useId(), U = s.useId(), [w] = s.useState(() => ({
+    "aria-label": M
+  } = e, L = (0, d.useStatusFillColor)(N, R), b = s.useId(), U = s.useId(), [w] = s.useState(() => ({
     fill: r,
     ...C({
       size: m,
@@ -428,14 +428,14 @@ function R(e) {
       isTyping: !1
     })
   })), k = s.useMemo(() => ({
-    fill: M,
+    fill: L,
     ...C({
       size: m,
       status: N,
       isMobile: l,
       isTyping: f
     })
-  }), [M, m, N, l, f]), {
+  }), [L, m, N, l, f]), {
     avatarCutoutX: V,
     avatarCutoutY: G,
     avatarCutoutWidth: F,
@@ -451,7 +451,7 @@ function R(e) {
   }), j = (0, h.getAvatarSize)(m), W = (0, h.getAvatarSpecs)(m), K = W.status * h.TYPING_WIDTH_RATIO, z = W.status * h.MOBILE_HEIGHT_RATIO, q = null != N ? (W.status * h.TYPING_WIDTH_RATIO - W.status) / 2 : 0, X = W.size - W.status - q - W.offset, Q = W.size - z - W.offset, Z = W.size + Math.ceil(q);
   return (0, i.jsx)(A, {
     ...e,
-    ariaLabel: L,
+    ariaLabel: M,
     ariaHidden: P,
     typingOffset: q,
     specs: W,

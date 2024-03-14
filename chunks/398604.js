@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return P
   },
   isGuildEventEnded: function() {
-    return L
+    return M
   },
   default: function() {
     return b
@@ -142,10 +142,10 @@ function P(e) {
   return !c.GuildScheduledEventStatusDone.has(e.status)
 }
 
-function L(e) {
+function M(e) {
   return null != e && c.GuildScheduledEventStatusDone.has(e.status)
 }
-class M extends r.default.Store {
+class L extends r.default.Store {
   getGuildScheduledEvent(e) {
     var t;
     return null == e ? null : null !== (t = h.get(e)) && void 0 !== t ? t : null
@@ -205,8 +205,8 @@ class M extends r.default.Store {
     return null !== (i = null === (n = p[e]) || void 0 === n ? void 0 : n[s]) && void 0 !== i ? i : {}
   }
 }
-M.displayName = "GuildScheduledEventStore";
-var b = new M(o.default, {
+L.displayName = "GuildScheduledEventStore";
+var b = new L(o.default, {
   CONNECTION_OPEN: function(e) {
     let {
       guilds: t

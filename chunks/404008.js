@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return P
   },
   computeSummarizedVoiceUsers: function() {
-    return L
+    return M
   },
   channelTypeString: function() {
-    return M
+    return L
   },
   getMentionIconType: function() {
     return b
@@ -131,7 +131,7 @@ function P(e, t) {
   return t.isGuildStageVoice() ? m.BITRATE_DEFAULT : null == e ? m.BITRATE_MAX : Math.max(e.hasFeature(m.GuildFeatures.VIP_REGIONS) ? p.BoostedGuildFeatures[m.BoostedGuildTiers.TIER_3].limits.bitrate : m.BITRATE_MAX, p.BoostedGuildFeatures[e.premiumTier].limits.bitrate)
 }
 
-function L(e) {
+function M(e) {
   let {
     channels: t,
     selectedChannelId: n,
@@ -160,7 +160,7 @@ function L(e) {
   return r.map(e => e.user)
 }
 
-function M(e) {
+function L(e) {
   let {
     type: t
   } = e;

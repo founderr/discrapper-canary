@@ -167,14 +167,14 @@ function P(e) {
   t.id !== f.default.getId() && I(t)
 }
 
-function L(e) {
+function M(e) {
   let {
     user: t
   } = e;
   I(t)
 }
 
-function M(e) {
+function L(e) {
   let {
     user: t
   } = e;
@@ -650,11 +650,11 @@ class ey extends _.default {
     super({
       CONNECTION_OPEN: N,
       CONNECTION_OPEN_SUPPLEMENTAL: R,
-      UPDATE_CLIENT_PREMIUM_TYPE: M,
+      UPDATE_CLIENT_PREMIUM_TYPE: L,
       OVERLAY_INITIALIZE: D,
       CACHE_LOADED: e => this.handleLoadCache(e),
       USER_UPDATE: P,
-      CURRENT_USER_UPDATE: L,
+      CURRENT_USER_UPDATE: M,
       PRESENCE_UPDATES: z,
       SEARCH_FINISH: w,
       MOD_VIEW_SEARCH_FINISH: w,

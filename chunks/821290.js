@@ -85,14 +85,14 @@ function p(e) {
       }
     }),
     [I, O] = (0, o.useState)(e.autoFocus || !1),
-    L = (0, o.useMemo)(() => {
+    j = (0, o.useMemo)(() => {
       let e = {
         ...g
       };
       return e.days ? e.days-- : e.days = -1, A.add(e)
     }, [A, g]),
-    [j, N] = (0, o.useState)(S.identifier);
-  if (S.identifier !== j) {
+    [L, N] = (0, o.useState)(S.identifier);
+  if (S.identifier !== L) {
     let e = (0, r.toCalendar)(P, S);
     R(a(e, g, p, b, m)), T(e), N(S.identifier)
   }
@@ -104,7 +104,7 @@ function p(e) {
   function B(t) {
     !e.isDisabled && !e.isReadOnly && (t = f(t = l(t, b, m), A, x)) && (t = (0, r.toCalendar)(t, (null == k ? void 0 : k.calendar) || new r.GregorianCalendar), k && "hour" in k ? E(k.set(t)) : E(t))
   }
-  s(P, b, m) ? T(l(P, b, m)) : 0 > P.compare(A) ? R(u(P, g, p, b, m)) : P.compare(L) > 0 && R(c(P, g, p, b, m));
+  s(P, b, m) ? T(l(P, b, m)) : 0 > P.compare(A) ? R(u(P, g, p, b, m)) : P.compare(j) > 0 && R(c(P, g, p, b, m));
   let z = (0, o.useMemo)(() => !!_ && (!!(x && x(_)) || s(_, b, m)), [_, x, b, m]),
     K = e.isInvalid || "invalid" === e.validationState || z,
     V = (0, o.useMemo)(() => "visible" === w ? g : h(g), [w, g]);
@@ -115,7 +115,7 @@ function p(e) {
     setValue: B,
     visibleRange: {
       start: A,
-      end: L
+      end: j
     },
     minValue: b,
     maxValue: m,
@@ -158,7 +158,7 @@ function p(e) {
       g.days ? F(A) : g.weeks ? F((0, r.startOfWeek)(P, p)) : (g.months || g.years) && F((0, r.startOfMonth)(P))
     },
     focusSectionEnd() {
-      g.days ? F(L) : g.weeks ? F((0, r.endOfWeek)(P, p)) : (g.months || g.years) && F((0, r.endOfMonth)(P))
+      g.days ? F(j) : g.weeks ? F((0, r.endOfWeek)(P, p)) : (g.months || g.years) && F((0, r.endOfMonth)(P))
     },
     focusNextSection(e) {
       if (!e && !g.days) {
@@ -196,7 +196,7 @@ function p(e) {
     },
     isCellFocused: e => I && P && (0, r.isSameDay)(e, P),
     isCellDisabled(t) {
-      return e.isDisabled || 0 > t.compare(A) || t.compare(L) > 0 || this.isInvalid(t, b, m)
+      return e.isDisabled || 0 > t.compare(A) || t.compare(j) > 0 || this.isInvalid(t, b, m)
     },
     isCellUnavailable: t => e.isDateUnavailable && e.isDateUnavailable(t),
     isPreviousVisibleRangeInvalid() {
@@ -206,10 +206,10 @@ function p(e) {
       return (0, r.isSameDay)(e, A) || this.isInvalid(e, b, m)
     },
     isNextVisibleRangeInvalid() {
-      let e = L.add({
+      let e = j.add({
         days: 1
       });
-      return (0, r.isSameDay)(e, L) || this.isInvalid(e, b, m)
+      return (0, r.isSameDay)(e, j) || this.isInvalid(e, b, m)
     },
     getDatesInWeek(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : A,
@@ -284,10 +284,10 @@ function v(e) {
     },
     [I, O] = (0, o.useState)(A.visibleRange);
   (!(0, r.isEqualDay)(A.visibleRange.start, I.start) || !(0, r.isEqualDay)(A.visibleRange.end, I.end)) && (R(k), O(A.visibleRange));
-  let L = e => {
+  let j = e => {
       e ? (E(e), R(e)) : (E(null), R(null))
     },
-    j = k ? g(k, A.focusedDate) : w && g(w.start, w.end),
+    L = k ? g(k, A.focusedDate) : w && g(w.start, w.end),
     N = t => {
       if (!e.isReadOnly) {
         if (t = f(t = l(t, P, T), A.visibleRange.start, e.isDateUnavailable)) {
@@ -296,8 +296,8 @@ function v(e) {
             S({
               start: b(e.start, null == w ? void 0 : w.start),
               end: b(e.end, null == w ? void 0 : w.end)
-            }), L(null)
-          } else L(t)
+            }), j(null)
+          } else j(t)
         }
       }
     },
@@ -312,8 +312,8 @@ function v(e) {
     value: w,
     setValue: S,
     anchorDate: k,
-    setAnchorDate: L,
-    highlightedRange: j,
+    setAnchorDate: j,
+    highlightedRange: L,
     validationState: V ? "invalid" : null,
     isValueInvalid: V,
     selectFocusedDate() {
@@ -323,7 +323,7 @@ function v(e) {
     highlightDate(e) {
       k && A.setFocusedDate(e)
     },
-    isSelected: e => j && e.compare(j.start) >= 0 && 0 >= e.compare(j.end) && !A.isCellDisabled(e) && !A.isCellUnavailable(e),
+    isSelected: e => L && e.compare(L.start) >= 0 && 0 >= e.compare(L.end) && !A.isCellDisabled(e) && !A.isCellUnavailable(e),
     isInvalid(e) {
       var t, n;
       return A.isInvalid(e) || s(e, null === (t = M.current) || void 0 === t ? void 0 : t.start, null === (n = M.current) || void 0 === n ? void 0 : n.end)

@@ -32,8 +32,8 @@ let y = new d.default("ChannelRTCStore"),
   O = {},
   D = {},
   P = {},
-  L = {},
   M = {},
+  L = {},
   b = {},
   U = {},
   w = {},
@@ -53,7 +53,7 @@ function F(e) {
       let t = G(e);
       if (0 === t.size()) return;
       let n = ee(e) || W(t) ? A.ChannelModes.VIDEO : A.ChannelModes.VOICE;
-      n === A.ChannelModes.VOICE ? (delete L[e], delete M[e]) : L[e] = n
+      n === A.ChannelModes.VOICE ? (delete M[e], delete L[e]) : M[e] = n
     }(n), function(e) {
       let t = h.default.getId(),
         n = G(e);
@@ -132,7 +132,7 @@ function W(e) {
 }
 
 function K(e) {
-  delete O[e], delete D[e], delete L[e], delete M[e]
+  delete O[e], delete D[e], delete M[e], delete L[e]
 }
 
 function z() {
@@ -261,7 +261,7 @@ class et extends o.default.Store {
   }
   getMode(e) {
     var t;
-    return null !== (t = L[e]) && void 0 !== t ? t : ee(e) ? A.ChannelModes.VIDEO : A.ChannelModes.VOICE
+    return null !== (t = M[e]) && void 0 !== t ? t : ee(e) ? A.ChannelModes.VIDEO : A.ChannelModes.VOICE
   }
   getLayout(e) {
     var t, n;
@@ -269,7 +269,7 @@ class et extends o.default.Store {
     if (__OVERLAY__) return A.ChannelLayouts.NORMAL;
     let s = g.default.getChannel(e),
       r = ee(e) || (null == s ? void 0 : s.isBroadcastChannel());
-    return null !== (n = null === (t = M[e]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : r ? A.ChannelLayouts.NO_CHAT : A.ChannelLayouts.NORMAL
+    return null !== (n = null === (t = L[e]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : r ? A.ChannelLayouts.NO_CHAT : A.ChannelLayouts.NORMAL
   }
   getChatOpen(e) {
     var t;
@@ -277,7 +277,7 @@ class et extends o.default.Store {
   }
   isFullscreenInContext() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : A.AppContext.APP;
-    return Object.values(M).some(t => t[e] === A.ChannelLayouts.FULL_SCREEN)
+    return Object.values(L).some(t => t[e] === A.ChannelLayouts.FULL_SCREEN)
   }
   getStageStreamSize(e) {
     return k[e]
@@ -328,11 +328,11 @@ var en = new et(l.default, {
       let e = t.originChannelId;
       if (null != e) {
         var n, i;
-        return M[t.id] = {
-          [A.AppContext.APP]: null !== (i = null === (n = M[e]) || void 0 === n ? void 0 : n[A.AppContext.APP]) && void 0 !== i ? i : A.ChannelLayouts.NORMAL
+        return L[t.id] = {
+          [A.AppContext.APP]: null !== (i = null === (n = L[e]) || void 0 === n ? void 0 : n[A.AppContext.APP]) && void 0 !== i ? i : A.ChannelLayouts.NORMAL
         }, !0
       }
-      t.isBroadcastChannel() && (M[t.id] = {
+      t.isBroadcastChannel() && (L[t.id] = {
         [A.AppContext.APP]: A.ChannelLayouts.NO_CHAT
       })
     }
@@ -374,8 +374,8 @@ var en = new et(l.default, {
       layout: n,
       appContext: i
     } = e;
-    M[t] = {
-      ...M[t],
+    L[t] = {
+      ...L[t],
       [i]: n
     }
   },

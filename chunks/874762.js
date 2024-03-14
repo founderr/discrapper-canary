@@ -14,11 +14,11 @@
       i = t("90915"),
       r = t("759843"),
       o = t("817792"),
-      l = t("815157"),
-      f = t("391679"),
+      f = t("815157"),
+      l = t("391679"),
       u = t("446674"),
-      b = t("95410"),
-      p = t("795137"),
+      p = t("95410"),
+      b = t("795137"),
       h = t("837319"),
       j = t("73749"),
       m = t("269936"),
@@ -29,8 +29,8 @@
       T = t("271938"),
       O = t("599110"),
       R = t("98013"),
-      w = t("924822"),
-      v = t("773336"),
+      v = t("924822"),
+      w = t("773336"),
       A = t("50885"),
       S = t("49111"),
       N = t("492397"),
@@ -148,11 +148,11 @@
           migrationStatus: t,
           skipsSettingDefaultPageTitle: d
         } = this.props;
-        return e = t === E.MigrationStatus.IN_PROGRESS ? null : C.IS_APP_COMPATIBLE_BROWSER ? v.isPlatformEmbedded ? (0, s.jsxs)(i.Switch, {
+        return e = t === E.MigrationStatus.IN_PROGRESS ? null : C.IS_APP_COMPATIBLE_BROWSER ? w.isPlatformEmbedded ? (0, s.jsxs)(i.Switch, {
           children: [(0, s.jsx)(i.Route, {
             exact: !0,
             path: S.Routes.INDEX,
-            render: () => (0, s.jsx)(p.default, {})
+            render: () => (0, s.jsx)(b.default, {})
           }), (0, s.jsx)(j.default, {
             exact: !0,
             path: S.Routes.APPS,
@@ -176,7 +176,7 @@
           children: [(0, s.jsx)(j.default, {
             exact: !0,
             path: S.Routes.INDEX,
-            render: () => (0, s.jsx)(p.default, {})
+            render: () => (0, s.jsx)(b.default, {})
           }), (0, s.jsx)(i.Route, {
             path: Q([S.Routes.LOGIN, S.Routes.LOGIN_HANDOFF, S.Routes.REGISTER, S.Routes.BILLING_PREFIX, S.Routes.BILLING_PROMOTION_REDEMPTION(":code"), S.Routes.INVITE(":inviteCode"), S.Routes.INVITE_LOGIN(":inviteCode"), S.Routes.GIFT_CODE(":giftCode"), S.Routes.GIFT_CODE_LOGIN(":giftCode"), S.Routes.GUILD_TEMPLATE(":guildTemplateCode"), S.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), S.Routes.DISABLE_EMAIL_NOTIFICATIONS, S.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, S.Routes.RESET, S.Routes.REPORT, S.Routes.REPORT_SECOND_LOOK], N.CONFERENCE_MODE_ENABLED),
             component: H
@@ -252,15 +252,15 @@
             render: () => {
               var e, a;
               let t = null === (e = O.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
-                d = (0, w.getOpenAppFromEmailDestinations)(null !== (a = window.location.search) && void 0 !== a ? a : "");
+                d = (0, v.getOpenAppFromEmailDestinations)(null !== (a = window.location.search) && void 0 !== a ? a : "");
               if ("iOS" !== t && "Android" !== t) return (0, s.jsx)(i.Redirect, {
                 to: null != d.desktop ? "".concat(d.desktop.pathname).concat(d.desktop.search) : S.Routes.APP
               });
               {
                 let e = (0, R.getMobileDownloadLink)("app_open_from_email", t, d.mobile),
-                  a = (0, l.parseDynamicLink)(e);
+                  a = (0, f.parseDynamicLink)(e);
                 null != a && O.default.track(S.AnalyticEvents.DEEP_LINK_CLICKED, {
-                  fingerprint: (0, f.maybeExtractId)(a.fingerprint),
+                  fingerprint: (0, l.maybeExtractId)(a.fingerprint),
                   attempt_id: a.attemptId,
                   source: a.utmSource,
                   destination: null != d.mobile ? d.mobile.toString() : null
@@ -294,7 +294,7 @@
           })
         }), (0, s.jsxs)(_.default, {
           skipsSettingDefaultPageTitle: d,
-          children: [e, v.isPlatformEmbedded && (t === E.MigrationStatus.NOT_STARTED || t === E.MigrationStatus.IN_PROGRESS) && !0 !== b.default.get(o.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, s.jsx)(g.default, {}) : null]
+          children: [e, w.isPlatformEmbedded && (t === E.MigrationStatus.NOT_STARTED || t === E.MigrationStatus.IN_PROGRESS) && !0 !== p.default.get(o.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, s.jsx)(g.default, {}) : null]
         })
       }
     }

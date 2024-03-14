@@ -47,8 +47,8 @@ function v(e) {
   null == R && (R = !0);
   let k = null !== (n = E.metadata) && void 0 !== n ? n : {},
     L = R ? (0, m.getCreatedAtDate)(k[I.MetadataFields.CREATED_AT], N) : null,
-    b = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
-    P = T.default.Messages.CONNECTION_VERIFIED;
+    P = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
+    b = T.default.Messages.CONNECTION_VERIFIED;
   if (R) switch (E.type) {
     case C.PlatformTypes.REDDIT:
       l = (0, h.generateRedditMetadataItems)(k);
@@ -59,7 +59,7 @@ function v(e) {
     case C.PlatformTypes.TWITTER: {
       l = (0, h.generateTwitterMetadataItems)(k);
       let e = "1" === k[I.MetadataFields.TWITTER_VERIFIED];
-      e && (a = b, P = T.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
+      e && (a = P, b = T.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
       break
     }
     case C.PlatformTypes.PAYPAL:
@@ -100,7 +100,7 @@ function v(e) {
       color: null != a ? a : D,
       forcedIconColor: w,
       size: 16,
-      tooltipText: P
+      tooltipText: b
     }) : null;
   return (0, i.jsxs)("div", {
     className: s(_.connectedAccountContainer, null != l && l.length > 0 || null != L ? _.connectedAccountContainerWithMetadata : null, O),

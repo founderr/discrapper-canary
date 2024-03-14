@@ -8,8 +8,8 @@ n.r(e), n.d(e, {
   }
 });
 var i = n("862205"),
-  u = n("15733");
-let r = (0, i.createExperiment)({
+  r = n("15733");
+let u = (0, i.createExperiment)({
     kind: "user",
     id: "2022-03_block_russian_purchases",
     label: "Block purchases based on country",
@@ -43,7 +43,7 @@ let r = (0, i.createExperiment)({
 function a() {
   let {
     paymentsBlocked: t
-  } = r.useExperiment({
+  } = u.useExperiment({
     location: "c519a9_1"
   }, {
     autoTrackExposure: !1
@@ -55,7 +55,7 @@ function a() {
     autoTrackExposure: !1
   }), {
     defaultBillingCountryCode: n
-  } = (0, u.default)();
+  } = (0, r.default)();
   return t || e && "RU" === n
 }
-var o = r
+var o = u

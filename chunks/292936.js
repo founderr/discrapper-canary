@@ -32,11 +32,11 @@ var i, l, a = n("37983"),
   M = n("171209"),
   k = n("49111"),
   L = n("782340"),
-  b = n("279197");
-let P = (0, c.cssValueToNumber)(f.default.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
+  P = n("279197");
+let b = (0, c.cssValueToNumber)(f.default.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
   j = (0, c.cssValueToNumber)(f.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
   U = (0, c.cssValueToNumber)(f.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN),
-  D = 2 * j + U + 2 * P,
+  D = 2 * j + U + 2 * b,
   w = () => Promise.resolve();
 
 function F(e) {
@@ -55,8 +55,8 @@ function F(e) {
   return (0, a.jsxs)(p.Clickable, {
     ...f,
     tabIndex: n ? -1 : c,
-    className: o(b.suggestedExpression, {
-      [b.suggestedExpressionFocused]: t
+    className: o(P.suggestedExpression, {
+      [P.suggestedExpressionFocused]: t
     }),
     focusProps: {
       enabled: !1
@@ -67,15 +67,15 @@ function F(e) {
       mask: A.default.Masks.STICKER_ROUNDED_RECT,
       width: j + 4,
       height: j + 4,
-      className: b.mask,
+      className: P.mask,
       children: (0, a.jsx)("div", {
-        className: b.maskBackground
+        className: P.maskBackground
       })
     }), (0, a.jsx)(I.default, {
       maskAsset: !0,
       size: j,
       sticker: s,
-      className: b.sticker
+      className: P.sticker
     }), i !== y.StickerSendability.SENDABLE && (0, a.jsx)(T.default, {
       size: 14
     })]
@@ -90,7 +90,7 @@ var B = s.memo(function(e) {
     onSelectSticker: r,
     stickerIconVisible: c = !1,
     submitButtonVisible: f = !1
-  } = e, I = s.useContext(x.default), [T, A] = s.useState(null), [P, j] = s.useState(!1), [U, B] = s.useState(null), G = (0, E.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, P, i), {
+  } = e, I = s.useContext(x.default), [T, A] = s.useState(null), [b, j] = s.useState(!1), [U, B] = s.useState(null), G = (0, E.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, b, i), {
     analyticsLocations: Q,
     AnalyticsLocationProvider: $
   } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
@@ -127,7 +127,7 @@ var B = s.memo(function(e) {
     })
   }, [l]);
   let el = X.length > 0,
-    ea = en && !G && !z && !P && !J && el,
+    ea = en && !G && !z && !b && !J && el,
     {
       stickersNavigator: es
     } = function(e) {
@@ -213,10 +213,10 @@ var B = s.memo(function(e) {
     children: (0, a.jsxs)(p.Clickable, {
       tabIndex: ed ? -1 : 0,
       "aria-hidden": ed,
-      className: o(b.container, {
-        [b.hidden]: ed,
-        [b.submitButtonOffset]: f,
-        [b.stickerIconOffset]: c
+      className: o(P.container, {
+        [P.hidden]: ed,
+        [P.submitButtonOffset]: f,
+        [P.stickerIconOffset]: c
       }),
       innerRef: H,
       style: {
@@ -237,7 +237,7 @@ var B = s.memo(function(e) {
                 ...i
               } = e;
               return (0, a.jsx)("div", {
-                className: b.stickerResults,
+                className: P.stickerResults,
                 ref: e => {
                   t.current = e
                 },
@@ -267,13 +267,13 @@ var B = s.memo(function(e) {
             }
           })
         }), (0, a.jsxs)("div", {
-          className: b.bottomInformationTextContainer,
+          className: P.bottomInformationTextContainer,
           children: [(0, a.jsx)("div", {
-            className: b.textDivider
+            className: P.textDivider
           }), (0, a.jsxs)("div", {
-            className: b.bottomInformationLayout,
+            className: P.bottomInformationLayout,
             children: [(0, a.jsx)(p.Text, {
-              className: b.descriptionText,
+              className: P.descriptionText,
               style: {
                 maxWidth: D
               },
@@ -283,7 +283,7 @@ var B = s.memo(function(e) {
               }) : L.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_SHORT_NAV_PROMPT.format({
                 upHook: (e, t) => (0, a.jsx)(p.KeyCombo, {
                   shortcut: "up",
-                  className: b.keybind
+                  className: P.keybind
                 }, t)
               })
             }), (0, a.jsx)(p.Clickable, {
@@ -299,14 +299,14 @@ var B = s.memo(function(e) {
                 text: L.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_DISABLE,
                 children: e => (0, a.jsx)(N.default, {
                   ...e,
-                  className: b.closeIcon
+                  className: P.closeIcon
                 })
               })
             })]
           })]
         })]
       }), (0, a.jsx)("div", {
-        className: b.containerBackground
+        className: P.containerBackground
       })]
     })
   })

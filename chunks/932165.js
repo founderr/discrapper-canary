@@ -308,8 +308,8 @@ function p(e) {
     ("touch" === e.pointerType || "pen" === e.pointerType || "virtual" === e.pointerType || "keyboard" === e.pointerType && C && h() || "mouse" === e.pointerType && R.current) && (C ? I(e) : E && x(e))
   }), w["data-key"] = n, O.preventFocusOnPress = l;
   let {
-    pressProps: L,
-    isPressed: j
+    pressProps: j,
+    isPressed: L
   } = (0, a.usePress)(O), N = D ? e => {
     "mouse" === P.current && (e.stopPropagation(), e.preventDefault(), I(e))
   } : void 0, {
@@ -323,14 +323,14 @@ function p(e) {
     !s.openLink.isOpening && e.preventDefault()
   } : void 0;
   return {
-    itemProps: (0, s.mergeProps)(w, E || M ? L : {}, T ? F : {}, {
+    itemProps: (0, s.mergeProps)(w, E || M ? j : {}, T ? F : {}, {
       onDoubleClick: N,
       onDragStartCapture: e => {
         "touch" === P.current && A.current && e.preventDefault()
       },
       onClick: B
     }),
-    isPressed: j,
+    isPressed: L,
     isSelected: t.isSelected(n),
     isFocused: t.isFocused && t.focusedKey === n,
     isDisabled: p,
