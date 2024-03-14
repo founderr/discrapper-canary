@@ -46,10 +46,10 @@ n.r(t), n.d(t, {
     return P
   },
   trackForumOnboardingClicked: function() {
-    return L
+    return M
   },
   trackForumUpsellModalClicked: function() {
-    return M
+    return L
   },
   trackForumAddMediaToOriginalPostClicked: function() {
     return b
@@ -353,7 +353,7 @@ function P(e) {
   })
 }
 
-function L(e) {
+function M(e) {
   let {
     onboardingCTA: t
   } = e;
@@ -362,7 +362,7 @@ function L(e) {
   })
 }
 
-function M(e) {
+function L(e) {
   let {
     forumDemoId: t
   } = e;
@@ -412,10 +412,6 @@ function G(e) {
     ...(0, s.collectChannelAnalyticsMetadata)(e),
     ...(0, r.collectThreadMetadata)(e, !0),
     ...(0, s.getChannelOpenedMetadata)(e.id),
-    channel_id: e.id,
-    guild_id: e.guild_id,
-    parent_id: e.parent_id,
-    parent_channel_type: e.parentChannelThreadType,
     channel_view: "Split View",
     platform: (0, u.getPlatform)()
   })
