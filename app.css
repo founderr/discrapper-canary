@@ -36821,6 +36821,7 @@ html .progress__4ef76 {
 }
 
 .userName__1291b {
+    color: var(--channels-default);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
