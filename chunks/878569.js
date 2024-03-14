@@ -19,7 +19,7 @@ var i = n("506838"),
   s = n("590456"),
   r = n("320399");
 let o = e => t => {
-    if (t.hasBanner && t.isPremium || t.hasProfileEffect) return e.premiumUserWithBanner;
+    if (t.hasBanner || t.hasProfileEffect) return e.premiumUserWithBanner;
     if (t.isPremium) {
       var n;
       return null !== (n = e.premiumUserWithoutBanner) && void 0 !== n ? n : e.default
