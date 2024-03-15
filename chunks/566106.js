@@ -50,6 +50,7 @@ var i, s, r, a = n("910997"),
   getNumFastUdpReconnects() {
     return null
   }
+  wasRemoteDisconnected() {}
   setRemoteVideoSinkWants(e) {
     this.remoteVideoSinkWants = e, this.updateVideoQuality(g.MEDIA_SINK_WANTS_PROPERTIES)
   }
