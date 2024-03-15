@@ -4,6 +4,7 @@ e.exports = {
   cardContainerNarrowWidth: "cardContainerNarrowWidth_f10ffd",
   centerAlignSection: "centerAlignSection_e8acae",
   centerAlignSubtitle: "centerAlignSubtitle_f111db",
+  confettiCanvas: "confettiCanvas_e46a8e",
   container: "container__5980c",
   fullWidth: "fullWidth__2b90a",
   heading: "heading__41621",
