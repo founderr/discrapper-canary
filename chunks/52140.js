@@ -30,8 +30,8 @@ var i = n("37983"),
   N = n("657057"),
   A = n("886125"),
   O = n("180161"),
-  M = n("781423"),
-  R = n("47677"),
+  R = n("781423"),
+  M = n("47677"),
   k = n("49111"),
   L = n("724210"),
   P = n("782340"),
@@ -268,7 +268,7 @@ let D = {
 function w(e) {
   return {
     ...D,
-    link: (0, R.default)(e),
+    link: (0, M.default)(e),
     emoji: function(e) {
       let {
         emojiTooltipPosition: t = "top",
@@ -318,7 +318,7 @@ function w(e) {
       }
     }(e),
     channelMention: (0, O.default)(e),
-    commandMention: (0, M.default)(e),
+    commandMention: (0, R.default)(e),
     attachmentLink: (0, A.default)(e)
   }
 }

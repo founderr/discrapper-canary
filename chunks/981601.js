@@ -30,8 +30,8 @@ var i = n("37983"),
   N = n("713135"),
   A = n("561845"),
   O = n("217513"),
-  M = n("641055"),
-  R = n("430312"),
+  R = n("641055"),
+  M = n("430312"),
   k = n("763866"),
   L = n("789321"),
   P = n("627601"),
@@ -42,18 +42,18 @@ var i = n("37983"),
   w = n("450484"),
   F = n("154477");
 
-function B(e) {
+function G(e) {
   e.stopPropagation()
 }
 
-function G(e) {
+function B(e) {
   let {
     user: t,
     guildId: n,
     channelId: a,
     setNote: s,
     closePopout: _,
-    setPopoutRef: G,
+    setPopoutRef: B,
     disableUserProfileLink: H = __OVERLAY__,
     analyticsParams: V = {}
   } = e, K = l.useRef(null), W = (0, O.default)(t.id, n), Y = (0, d.default)(K), z = (0, r.useStateFromStores)([N.default], () => {
@@ -100,8 +100,8 @@ function G(e) {
   (0, c.default)(() => eu(!0), er.shouldShow ? 250 : null);
   let ed = (0, y.useGetOrFetchApplication)(null == Q ? void 0 : Q.application_id);
   return l.useEffect(() => {
-    null == G || G(null == K ? void 0 : K.current)
-  }, [K, G]), l.useEffect(() => {
+    null == B || B(null == K ? void 0 : K.current)
+  }, [K, B]), l.useEffect(() => {
     if (!ei)((null == Q ? void 0 : Q.application_id) == null || null != ed) && (null == n || (null == q ? void 0 : q.fullProfileLoadedTimestamp) != null) && (function() {
       var e;
       let i, l, s;
@@ -151,12 +151,12 @@ function G(e) {
       children: (0, i.jsx)(o.Dialog, {
         ref: K,
         "aria-label": t.username,
-        onClick: B,
-        onContextMenu: B,
+        onClick: G,
+        onContextMenu: G,
         style: er.shouldShow ? {
           marginTop: L.DEFAULT_COLLECTIBLES_UPSELL_HEIGHT
         } : void 0,
-        children: (0, i.jsxs)(R.default, {
+        children: (0, i.jsxs)(M.default, {
           user: t,
           guildId: n,
           profileType: U.UserProfileTypes.POPOUT,
@@ -180,8 +180,8 @@ function G(e) {
               onClose: _,
               ...er
             }) : void 0
-          }), (0, i.jsxs)(R.default.Inner, {
-            children: [(0, i.jsx)(M.default, {
+          }), (0, i.jsxs)(M.default.Inner, {
+            children: [(0, i.jsx)(R.default, {
               onTooltipClose: _
             }), (0, i.jsx)(k.default, {
               activity: Q,
@@ -208,7 +208,7 @@ var H = l.memo(function(e) {
     user: n,
     ...l
   } = e, a = (0, r.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), o = null != n ? n : a;
-  return s(null != o, "Unexpected missing user"), (0, i.jsx)(G, {
+  return s(null != o, "Unexpected missing user"), (0, i.jsx)(B, {
     user: o,
     ...l
   })

@@ -30,8 +30,8 @@ var i = n("37983"),
   N = n("355263"),
   A = n("317041"),
   O = n("49111"),
-  M = n("782340"),
-  R = n("847948"),
+  R = n("782340"),
+  M = n("847948"),
   k = n("327769");
 let L = [8, 8, 0, 8],
   P = o.debounce(() => {
@@ -41,12 +41,12 @@ var b = l.forwardRef(function(e, t) {
   let {
     channel: n,
     canOnlyUseTextCommands: a
-  } = e, r = l.useRef(!1), o = l.useRef(0), [b, U] = l.useState(0), D = l.useRef(null), [w, F] = l.useState(!1), B = p.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
+  } = e, r = l.useRef(!1), o = l.useRef(0), [b, U] = l.useState(0), D = l.useRef(null), [w, F] = l.useState(!1), G = p.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
   l.useEffect(() => {
     (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
   }, []);
   let {
-    sectionDescriptors: G,
+    sectionDescriptors: B,
     activeSections: H,
     commandsByActiveSection: V,
     hasMoreAfter: K,
@@ -63,13 +63,13 @@ var b = l.forwardRef(function(e, t) {
     limit: A.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
   }), J = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
-    activeCategoryIndex: B,
+    activeCategoryIndex: G,
     isScrolling: r,
     listRef: D,
     onActiveCategoryIndexChange: e => {
       let t = H[e];
       if (null != t) {
-        let e = G.findIndex(e => e.id === t.id);
+        let e = B.findIndex(e => e.id === t.id);
         p.ApplicationCommandDiscoveryPickerStore.setActiveCategoryIndex(e)
       }
     },
@@ -120,7 +120,7 @@ var b = l.forwardRef(function(e, t) {
       for (let e of V)
         if (t = n, b < (n += e.data.length)) {
           let n = e.data[b - t],
-            i = G.find(e => e.id === n.applicationId);
+            i = B.find(e => e.id === n.applicationId);
           ee(n, i, (0, T.getCommandTriggerSection)(e.section));
           break
         } return !0
@@ -132,7 +132,7 @@ var b = l.forwardRef(function(e, t) {
         i = null == b ? 0 : b + e;
       return i >= n ? i = n - 1 : i < 0 && (i = 0), U(i), F(!0), !0
     }
-  }), [W.length, V, K, G, ee, b]);
+  }), [W.length, V, K, B, ee, b]);
   let et = l.useCallback(e => {
       let t = H[e];
       if (null == t) return null;
@@ -145,7 +145,7 @@ var b = l.forwardRef(function(e, t) {
           padding: 0
         });
       return (0, i.jsx)(h.default, {
-        className: R.categoryHeader,
+        className: M.categoryHeader,
         icon: a,
         children: t.name
       }, e)
@@ -159,15 +159,15 @@ var b = l.forwardRef(function(e, t) {
       return (0, i.jsxs)("ul", {
         role: "group",
         "aria-label": l.name,
-        className: s(R.categorySection, {
-          [R.categorySectionLast]: n
+        className: s(M.categorySection, {
+          [M.categorySectionLast]: n
         }),
         children: [t, 0 === a.length && (0, i.jsx)(u.default, {
-          message: M.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
+          message: R.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
             applicationName: l.name
           }),
           noResultsImageURL: k,
-          className: R.noSearchResults
+          className: M.noSearchResults
         })]
       }, e)
     }, [H, V]),
@@ -177,12 +177,12 @@ var b = l.forwardRef(function(e, t) {
         s = a.data[t.sectionRowIndex],
         r = "".concat(a.section.id, ":").concat(null !== (l = null == s ? void 0 : s.id) && void 0 !== l ? l : e);
       if (null == s || a.section.id !== s.applicationId && a.section.id !== A.BuiltInSectionId.FRECENCY || s.inputType === I.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(v.default, {}, r);
-      let o = G.find(e => e.id === s.applicationId);
+      let o = B.find(e => e.id === s.applicationId);
       return (0, i.jsx)(x.default.NewCommand, {
         index: e,
         command: s,
         channel: n,
-        className: R.itemWrapper,
+        className: M.itemWrapper,
         selected: b === e,
         showImage: a.section.id !== s.applicationId,
         section: o,
@@ -191,26 +191,26 @@ var b = l.forwardRef(function(e, t) {
           U(null), F(!1)
         }
       }, r)
-    }, [n, V, ee, G, b]),
+    }, [n, V, ee, B, b]),
     el = (0, y.useUID)();
   return (0, f.useChannelEditorPopup)(el, !0, (0, x.getAutocompleteRowId)(b)), l.useEffect(() => () => {
     (0, f.dismissChannelEditorPopup)()
   }, []), (0, i.jsxs)(x.default, {
     id: el,
-    className: R.outerWrapper,
-    innerClassName: R.wrapper,
+    className: M.outerWrapper,
+    innerClassName: M.wrapper,
     onMouseDown: j,
     children: [(0, i.jsx)(_.default, {
-      className: R.rail,
+      className: M.rail,
       channel: n,
-      sections: G,
+      sections: B,
       filteredSectionId: Y,
-      activeCategoryIndex: B,
+      activeCategoryIndex: G,
       onSectionClick: $,
       applicationCommandListRef: D
     }), (0, i.jsx)(E.default, {
       role: "listbox",
-      className: R.list,
+      className: M.list,
       listPadding: L,
       onScroll: q,
       renderRow: ei,

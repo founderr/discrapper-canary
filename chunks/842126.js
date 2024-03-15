@@ -35,8 +35,8 @@ var i = n("37983"),
       getEmojiRowProps: N,
       isScrolling: A,
       isUsingKeyboardNavigation: O,
-      rowIndex: M,
-      allowAnimatedEmoji: R,
+      rowIndex: R,
+      allowAnimatedEmoji: M,
       showEmojiFavoriteTooltip: k,
       channelGuildId: L,
       category: P,
@@ -50,8 +50,8 @@ var i = n("37983"),
       location: "EmojiPicker"
     }, {
       autoTrackExposure: !1
-    }), F = c.EmojiPickerStore.getState(), [B, G] = l.useState(F.inspectedExpressionPosition), [H, V] = (0, o.default)(null, 300), K = l.useRef(null);
-    l.useEffect(() => c.EmojiPickerStore.useStore.subscribe(e => G(e), e => e.inspectedExpressionPosition), []), l.useEffect(() => {
+    }), F = c.EmojiPickerStore.getState(), [G, B] = l.useState(F.inspectedExpressionPosition), [H, V] = (0, o.default)(null, 300), K = l.useRef(null);
+    l.useEffect(() => c.EmojiPickerStore.useStore.subscribe(e => B(e), e => e.inspectedExpressionPosition), []), l.useEffect(() => {
       p.FrecencyUserSettingsActionCreators.loadIfNecessary()
     }, []);
     let W = n === g.EmojiSize.LARGE,
@@ -63,7 +63,7 @@ var i = n("37983"),
             let {
               visibleRowIndex: n,
               columnIndex: o
-            } = e, u = B.rowIndex === n && B.columnIndex === o, d = t => {
+            } = e, u = G.rowIndex === n && G.columnIndex === o, d = t => {
               t.stopPropagation(), !A.current && !O.current && (a(e, {
                 isFinalSelection: !0,
                 toggleFavorite: !1
@@ -81,7 +81,7 @@ var i = n("37983"),
                 tabIndex: p,
                 onFocus: h,
                 ...x
-              } = null !== (e = v(o, M)) && void 0 !== e ? e : {};
+              } = null !== (e = v(o, R)) && void 0 !== e ? e : {};
               return (0, l.createElement)("li", {
                 ...x,
                 key: t
@@ -117,16 +117,16 @@ var i = n("37983"),
             let {
               columnIndex: l,
               visibleRowIndex: s
-            } = e, r = B.rowIndex === s && B.columnIndex === l;
+            } = e, r = G.rowIndex === s && G.columnIndex === l;
             return (0, i.jsx)(y.default, {
-              rowIndex: M,
+              rowIndex: R,
               descriptor: e,
               emojiItemKey: t,
               isInspected: r,
               isScrolling: A,
               isUsingKeyboardNavigation: O,
               surrogateCodePoint: _,
-              allowAnimatedEmoji: R,
+              allowAnimatedEmoji: M,
               selectedItemClassName: b,
               onSelect: a,
               onInspect: T,
@@ -146,7 +146,7 @@ var i = n("37983"),
         }
       },
       Z = e => (0, i.jsx)("ul", {
-        ...N(M),
+        ...N(R),
         className: s(I.emojiListRow, {
           [I.emojiListRowLargeSize]: W,
           [I.emojiListRowMediumSize]: Y

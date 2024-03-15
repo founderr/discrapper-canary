@@ -30,8 +30,8 @@ var i = n("37983"),
   N = n("368121"),
   A = n("719923"),
   O = n("389480"),
-  M = n("78581"),
-  R = n("262439"),
+  R = n("78581"),
+  M = n("262439"),
   k = n("557585"),
   L = n("553372"),
   P = n("122557"),
@@ -41,8 +41,8 @@ var i = n("37983"),
   D = n("569717"),
   w = n("49111"),
   F = n("782340"),
-  B = n("851289");
-let G = [8, 0, 8, 8];
+  G = n("851289");
+let B = [8, 0, 8, 8];
 
 function H(e) {
   return 0 === e ? 16 : 32
@@ -56,23 +56,23 @@ function V(e) {
     index: a
   } = e;
   return (0, i.jsxs)(u.Clickable, {
-    className: s(B.sectionHeader, {
-      [B.notFirstSectionHeader]: 0 !== a
+    className: s(G.sectionHeader, {
+      [G.notFirstSectionHeader]: 0 !== a
     }),
     onClick: l,
     children: [function() {
       switch (t.type) {
         case O.SoundboardSoundGridSectionType.FAVORITES:
           return (0, i.jsx)(_.default, {
-            className: B.headerIcon
+            className: G.headerIcon
           });
         case O.SoundboardSoundGridSectionType.RECENTLY_HEARD:
           return (0, i.jsx)(I.default, {
-            className: B.headerIcon
+            className: G.headerIcon
           });
         case O.SoundboardSoundGridSectionType.FREQUENTLY_USED:
           return (0, i.jsx)(o.AnalyticsIcon, {
-            className: B.headerIcon
+            className: G.headerIcon
           });
         case O.SoundboardSoundGridSectionType.GUILD:
           return (0, i.jsx)(p.default, {
@@ -82,17 +82,17 @@ function V(e) {
           });
         case O.SoundboardSoundGridSectionType.DEFAULTS:
           return (0, i.jsx)(T.default, {
-            className: B.headerIcon
+            className: G.headerIcon
           });
         case O.SoundboardSoundGridSectionType.SEARCH:
           return (0, i.jsx)(v.default, {
-            className: B.headerIcon
+            className: G.headerIcon
           })
       }
     }(), (0, i.jsx)(u.Heading, {
       variant: "eyebrow",
       color: "none",
-      className: B.sectionTitle,
+      className: G.sectionTitle,
       children: function() {
         switch (t.type) {
           case O.SoundboardSoundGridSectionType.FAVORITES:
@@ -110,7 +110,7 @@ function V(e) {
         }
       }()
     }), (0, i.jsx)(C.default, {
-      className: B.headerIcon,
+      className: G.headerIcon,
       direction: n ? C.default.Directions.RIGHT : C.default.Directions.DOWN
     })]
   })
@@ -137,7 +137,7 @@ function W(e) {
   } = e, p = m.SoundboardPickerStore.useStore(e => e.inspectedExpressionPosition);
   return (0, i.jsx)("ul", {
     ...o,
-    className: B.soundRow,
+    className: G.soundRow,
     children: t.map((e, t) => {
       let i = "item-".concat(t),
         o = s && p.rowIndex === a && p.columnIndex === t;
@@ -192,11 +192,11 @@ function Y(e) {
     let t = !el.has(e);
     t ? el.add(e) : el.delete(e), E.SoundboardPickerCollapsedSections.updateSetting(Array.from(el))
   }, [el]), eo = l.useCallback((e, t) => {
-    if (!p && (0, M.canUseSoundboardSound)(Z, e, a, !1)) {
+    if (!p && (0, R.canUseSoundboardSound)(Z, e, a, !1)) {
       var n;
-      (0, M.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : w.EMPTY_STRING_SNOWFLAKE_ID, t)
+      (0, R.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : w.EMPTY_STRING_SNOWFLAKE_ID, t)
     } else {
-      if ((0, M.canUseSoundboardSound)(Z, e, a)) return;
+      if ((0, R.canUseSoundboardSound)(Z, e, a)) return;
       C && z(e)
     }
   }, [p, Z, a, C]), eu = l.useCallback(e => {
@@ -230,7 +230,7 @@ function Y(e) {
       collapsed: el.has(n),
       index: t
     }, "header-".concat(n))
-  }, [el, er]), ef = l.useCallback(e => et((0, R.default)(e, $, Z, a)), [a, Z, $]), ep = l.useCallback(e => {
+  }, [el, er]), ef = l.useCallback(e => et((0, M.default)(e, $, Z, a)), [a, Z, $]), ep = l.useCallback(e => {
     (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -241,11 +241,11 @@ function Y(e) {
     })
   }, []), em = l.useCallback(() => (0, i.jsx)(u.Clickable, {
     tabIndex: 0,
-    className: B.settingsClickArea,
+    className: G.settingsClickArea,
     onClick: ep,
     "aria-label": F.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME,
     children: (0, i.jsx)(N.default, {
-      className: B.settingsIcon
+      className: G.settingsIcon
     })
   }), [ep]), eh = l.useCallback(e => (0, i.jsx)(b.default, {
     soundboardListRef: e,
@@ -282,7 +282,7 @@ function Y(e) {
       renderHeaderAccessories: em,
       rowHeight: 48,
       sectionHeaderHeight: H,
-      listPadding: G,
+      listPadding: B,
       itemNodeWidth: 150,
       gridNavigatorId: Q,
       renderEmptySearchState: K,

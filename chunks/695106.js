@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return M
   }
 }), n("222007"), n("843762");
 var i = n("37983"),
@@ -75,7 +75,7 @@ let _ = (0, y.uid)(),
       })
     })
   },
-  M = e => {
+  R = e => {
     let {
       id: t,
       selectedSurrogate: n,
@@ -123,7 +123,7 @@ let _ = (0, y.uid)(),
       })
     })
   };
-var R = e => {
+var M = e => {
   let {
     searchBarRef: t,
     selectedSurrogate: n,
@@ -154,7 +154,7 @@ var R = e => {
       onKeyDown: e => {
         e.keyCode === C.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != c.current && c.current.focus())
       },
-      children: (0, i.jsx)(M, {
+      children: (0, i.jsx)(R, {
         id: _,
         hasTabWrapper: s,
         selectedSurrogate: n,
