@@ -20,7 +20,8 @@ var i = n("872717"),
         shareActivity: r,
         token: a = null,
         duration: o = 0,
-        closed: l = !1
+        closed: l = !1,
+        exePath: u = null
       } = e;
       s.default.wait(() => s.default.dispatch({
         type: "ACTIVITY_UPDATE_START",
@@ -35,7 +36,8 @@ var i = n("872717"),
           duration: o,
           share_activity: r,
           distributor: n,
-          closed: l
+          closed: l,
+          exePath: u
         },
         retries: 1,
         oldFormErrors: !0
