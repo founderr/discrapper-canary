@@ -47342,8 +47342,8 @@ html .progress__4ef76 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -119917,6 +119917,13 @@ html .invoiceCancelRow_a8669b {
 .headerButton_fe8970:disabled,
 .headerButton_fe8970[aria-disabled=true] {
     background-color: var(--primary-700)
+}
+
+.headerEasterEgg_d26151 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    --custom-user-premium-guild-subscription-easter-egg-size: 120px
 }
 
 .buttonIcon__3ae1d {
