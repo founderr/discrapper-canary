@@ -21,7 +21,7 @@ function d(e) {
     installParams: n,
     integrationTypesConfig: i
   } = e;
-  return null != t || null != n || null != i && Object.values(i).some(e => null != e && null != e.oauth2_install_params) && (0, a.isInUserAppExperiment)(null, {
+  return null != t || null != n || null != i && Object.values(i).some(e => null != e && null != e.oauth2_install_params) && (0, a.isUserInUserAppExperiment)({
     location: "canInstallApplication"
   })
 }
@@ -49,7 +49,7 @@ function c(e) {
     });
     return
   }
-  if (null != c && Object.values(c).some(e => null != e && null != e.oauth2_install_params) && (0, a.isInUserAppExperiment)(null, {
+  if (null != c && Object.values(c).some(e => null != e && null != e.oauth2_install_params) && (0, a.isUserInUserAppExperiment)({
       location: "installApplication"
     })) {
     r.default.track(u.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
