@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   confirmExternalAppLaunchAlert: function() {
     return a
   }
@@ -8,20 +8,20 @@ var n = i("37983");
 i("884691");
 var l = i("77078");
 
-function a(e) {
+function a(t) {
   let {
-    application: t,
+    application: e,
     onConfirm: a,
-    onCancel: u
-  } = e;
+    onCancel: r
+  } = t;
   return (0, l.openModalLazy)(async () => {
     let {
-      default: e
+      default: t
     } = await i.el("285281").then(i.bind(i, "285281"));
-    return i => (0, n.jsx)(e, {
-      application: t,
+    return i => (0, n.jsx)(t, {
+      application: e,
       onConfirm: a,
-      onCancel: u,
+      onCancel: r,
       ...i
     })
   }), Promise.resolve()

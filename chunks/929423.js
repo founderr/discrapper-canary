@@ -49,10 +49,10 @@ n.r(t), n.d(t, {
     return R
   },
   clearErrors: function() {
-    return G
+    return D
   },
   setDisableSubmit: function() {
-    return D
+    return G
   }
 }), n("70102");
 var i = n("872717"),
@@ -198,13 +198,13 @@ function R() {
   })
 }
 
-function G() {
+function D() {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS"
   })
 }
 
-function D(e) {
+function G(e) {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT",
     disable: e

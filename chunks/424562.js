@@ -17,17 +17,17 @@ function U() {
 }
 
 function p() {
-  R(), G(), N = {}, f = s.FormStates.OPEN
+  R(), D(), N = {}, f = s.FormStates.OPEN
 }
 
 function R() {
   i = void 0, E = void 0, r = void 0
 }
 
-function G() {
+function D() {
   o = void 0, _ = void 0, l = void 0, T = void 0, u = void 0
 }
-class D extends c.default.Store {
+class G extends c.default.Store {
   getFormState() {
     return f
   }
@@ -89,8 +89,8 @@ class D extends c.default.Store {
     return A
   }
 }
-D.displayName = "GuildIdentitySettingsStore";
-var C = new D(I.default, {
+G.displayName = "GuildIdentitySettingsStore";
+var C = new G(I.default, {
   GUILD_IDENTITY_SETTINGS_INIT: function(e) {
     d = e.guild, f = s.FormStates.OPEN, N = {}, a = e.source, S = e.analyticsLocations
   },
@@ -161,7 +161,7 @@ var C = new D(I.default, {
     T = t
   },
   GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: R,
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: G,
+  GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: D,
   GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: p,
   GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: p,
   GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function() {

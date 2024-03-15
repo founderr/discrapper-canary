@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   maybeJoinEmbeddedActivity: function() {
     return C
   }
@@ -7,8 +7,8 @@ i.r(t), i.d(t, {
 var n = i("404118"),
   l = i("651057"),
   a = i("299285"),
-  u = i("645999"),
-  r = i("653047"),
+  r = i("645999"),
+  u = i("653047"),
   d = i("42203"),
   s = i("305961"),
   o = i("957255"),
@@ -19,8 +19,8 @@ var n = i("404118"),
   I = i("126939"),
   A = i("501260"),
   T = i("782340");
-async function C(e) {
-  var t;
+async function C(t) {
+  var e;
   let {
     channelId: i,
     applicationId: C,
@@ -28,10 +28,10 @@ async function C(e) {
     inputApplication: S,
     analyticsLocations: N,
     embeddedActivitiesManager: p
-  } = e, y = _.default.getEmbeddedActivitiesForChannel(i), h = y.find(e => e.applicationId === C && (null == v || e.instanceId === v)), D = S;
+  } = t, y = _.default.getEmbeddedActivitiesForChannel(i), h = y.find(t => t.applicationId === C && (null == v || t.instanceId === v)), D = S;
   if (null == D) {
-    let e = await l.default.fetchApplication(C);
-    D = r.default.createFromServer(e)
+    let t = await l.default.fetchApplication(C);
+    D = u.default.createFromServer(t)
   }
   if (null == h || null == D) return;
   let O = c.default.getCurrentUser(),
@@ -49,18 +49,18 @@ async function C(e) {
     }),
     m = _.default.getSelfEmbeddedActivityForChannel(i),
     P = null == m ? void 0 : m.applicationId,
-    M = null != P && null !== (t = a.default.getApplication(P)) && void 0 !== t ? t : void 0;
-  ! function(e) {
+    M = null != P && null !== (e = a.default.getApplication(P)) && void 0 !== e ? e : void 0;
+  ! function(t) {
     let {
-      embeddedActivityJoinability: t,
+      embeddedActivityJoinability: e,
       handleCanJoin: i
-    } = e;
-    switch (t) {
+    } = t;
+    switch (e) {
       case A.EmbeddedActivityJoinability.CAN_JOIN:
         null == i || i();
         break;
       case A.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-        (0, u.showActivitiesInvalidPermissionsAlert)();
+        (0, r.showActivitiesInvalidPermissionsAlert)();
         break;
       case A.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
         n.default.show({
@@ -95,7 +95,7 @@ async function C(e) {
     }
   }({
     embeddedActivityJoinability: g,
-    handleCanJoin: async function e() {
+    handleCanJoin: async function t() {
       null != h && await (0, E.default)({
         applicationId: h.applicationId,
         currentEmbeddedApplication: M,

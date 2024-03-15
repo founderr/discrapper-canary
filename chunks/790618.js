@@ -11,9 +11,9 @@ var f = n("265586"),
   U = n("49111");
 let p = U.FormStates.CLOSED,
   R = {},
-  G = !1;
+  D = !1;
 
-function D() {
+function G() {
   p = U.FormStates.OPEN, R = {}
 }
 
@@ -21,11 +21,11 @@ function C() {
   p = U.FormStates.CLOSED, R = {}
 }
 
-function P() {
-  O(), g(), R = {}
+function O() {
+  P(), g(), R = {}
 }
 
-function O() {
+function P() {
   i = void 0, r = void 0, u = void 0, o = void 0
 }
 
@@ -111,23 +111,23 @@ class L extends N.default.Store {
     }
   }
   getIsDisableSubmit() {
-    return G
+    return D
   }
 }
 L.displayName = "UserSettingsAccountStore";
 var m = new L(A.default, {
-  USER_SETTINGS_ACCOUNT_INIT: D,
-  USER_SETTINGS_MODAL_INIT: D,
-  USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: D,
+  USER_SETTINGS_ACCOUNT_INIT: G,
+  USER_SETTINGS_MODAL_INIT: G,
+  USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: G,
   USER_SETTINGS_MODAL_SET_SECTION: function(e) {
     let {
       section: t
     } = e;
-    return t === U.UserSettingsSections.ACCOUNT && D()
+    return t === U.UserSettingsSections.ACCOUNT && G()
   },
   USER_SETTINGS_ACCOUNT_CLOSE: C,
   USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
-    P(), v(), C()
+    O(), v(), C()
   },
   USER_SETTINGS_ACCOUNT_SUBMIT: function() {
     p = U.FormStates.SUBMITTING, R = {}
@@ -230,9 +230,9 @@ var m = new L(A.default, {
   USER_SETTINGS_CLEAR_ERRORS: function() {
     R = {}
   },
-  USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: O,
+  USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: P,
   USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: g,
-  USER_SETTINGS_RESET_ALL_PENDING: P,
+  USER_SETTINGS_RESET_ALL_PENDING: O,
   USER_SETTINGS_RESET_ALL_TRY_IT_OUT: v,
   USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function() {
     u = void 0
@@ -244,6 +244,6 @@ var m = new L(A.default, {
     let {
       disable: t
     } = e;
-    G = t
+    D = t
   }
 })
