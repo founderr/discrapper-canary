@@ -26936,11 +26936,18 @@ html .progress__4ef76 {
     flex-direction: row;
     margin-top: 10px;
     justify-content: space-around;
-    align-items: center
+    align-items: center;
+    width: 100%
 }
 
 .questControlsTitle_f61d46 {
     margin-right: 10px
+}
+
+@media(max-width:960px) {
+    .questControls__9f18c {
+        display: none
+    }
 }
 
 .questsCard_a68cbc {
@@ -47367,8 +47374,8 @@ html .progress__4ef76 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
