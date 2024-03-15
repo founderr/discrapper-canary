@@ -191,7 +191,7 @@ class h extends a.Component {
       children: u,
       fillParent: c
     } = this.props;
-    return (0, r.jsx)(d.default, {
+    return (0, r.jsx)(d.TransitionGroup, {
       component: "div",
       className: l(f.transitionGroup, t),
       children: (0, r.jsx)(_, {

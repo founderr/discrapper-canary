@@ -79,7 +79,7 @@ class h extends l.PureComponent {
       backgroundKey: t,
       layout: n
     } = this.props, l = "".concat(n, "-").concat(null != t ? t : "");
-    return (0, a.jsx)(d.default, {
+    return (0, a.jsx)(d.TransitionGroup, {
       className: p.videoBackground,
       component: "div",
       children: (0, a.jsx)(m, {
