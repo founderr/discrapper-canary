@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
 var i, s, r = n("37983"),
   a = n("884691"),
   o = n("862337");
-(s = i || (i = {})).SVG = "svg", s.CANVAS = "canvas", s.HYBRID = "hybrid";
+(s = i || (i = {})).SVG = "svg", s.CANVAS = "canvas";
 class l extends a.Component {
   componentDidMount() {
     (null == this.props.versionKey || !(this.props.versionKey < 0)) && this.loadAnimation()
