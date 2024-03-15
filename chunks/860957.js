@@ -15,8 +15,8 @@ var r, a, o = n("992830"),
   c = n("823411"),
   f = n("640583"),
   _ = n("539405"),
-  h = n("987317"),
-  E = n("49671"),
+  E = n("987317"),
+  h = n("49671"),
   g = n("6193"),
   m = n("121338"),
   p = n("605250"),
@@ -24,8 +24,8 @@ var r, a, o = n("992830"),
   v = n("32128"),
   T = n("127080"),
   I = n("116949"),
-  C = n("271938"),
-  A = n("546463"),
+  A = n("271938"),
+  C = n("546463"),
   y = n("505507"),
   N = n("703370"),
   R = n("599110"),
@@ -46,9 +46,9 @@ let U = {},
   B = null,
   H = null,
   Y = "",
-  j = new Set,
-  W = !1,
-  K = new Set(["CONNECTION_OPEN", "CONNECTION_RESUMED", "CONNECTION_CLOSED", "WINDOW_INIT", "WINDOW_FULLSCREEN_CHANGE", "WINDOW_FOCUS", "WINDOW_RESIZED", "WINDOW_HIDDEN", "CHANNEL_SELECT", "DELAYED_CHANNEL_SELECT", "DELAYED_SELECT_FLUSH", "LOAD_MESSAGES_SUCCESS", "LOAD_MESSAGES_FAILURE", "LOAD_MESSAGES", "MESSAGE_START_EDIT", "MESSAGE_UPDATE_EDIT", "MESSAGE_END_EDIT", "APP_VIEW_SET_HOME_LINK", "APPLICATION_STORE_LOCATION_CHANGE", "LOGIN", "LOGIN_SUCCESS", "LOGIN_FAILURE", "LOGIN_MFA_STEP", "LOGIN_MFA", "LOGIN_MFA_FAILURE", "LOGIN_MFA_SMS", "LOGIN_MFA_SMS_REQUEST_SUCCESS", "LOGIN_MFA_SMS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_RESET", "FINGERPRINT", "REGISTER", "REGISTER_SUCCESS", "REGISTER_FAILURE", "VERIFY_FAILURE", "VERIFY_SUCCESS", "START_SESSION", "FORGOT_PASSWORD_SENT", "UPDATE_TOKEN", "SET_CONSENT_REQUIRED", "CONTEXT_MENU_OPEN", "CONTEXT_MENU_CLOSE", "MODAL_PUSH", "MODAL_POP", "MODAL_UPDATE", "MODAL_POP_ALL", "GUILD_SETTINGS_OPEN", "USER_SETTINGS_MODAL_OPEN", "CHANNEL_SETTINGS_OPEN", "NOTIFICATION_SETTINGS_MODAL_OPEN", "EMAIL_VERIFICATION_MODAL_OPEN", "MENTION_MODAL_OPEN", "QUICKSWITCHER_SHOW", "SEARCH_MODAL_OPEN", "IFE_EXPERIMENT_SEARCH_MODAL_OPEN", "INTERACTION_MODAL_CREATE", "INTERACTION_IFRAME_MODAL_CREATE", "GUILD_SETTINGS_CLOSE", "USER_SETTINGS_MODAL_CLOSE", "CHANNEL_SETTINGS_CLOSE", "NOTIFICATION_SETTINGS_MODAL_CLOSE", "EMAIL_VERIFICATION_MODAL_CLOSE", "MENTION_MODAL_CLOSE", "QUICKSWITCHER_HIDE", "SEARCH_MODAL_CLOSE", "IFE_EXPERIMENT_SEARCH_MODAL_CLOSE", "QUICKSWITCHER_SHOW", "QUICKSWITCHER_HIDE", "QUICKSWITCHER_SWITCH_TO", "QUICKSWITCHER_SEARCH", "QUICKSWITCHER_SELECT", "UPDATE_CHANNEL_DIMENSIONS", "UPDATE_CHANNEL_LIST_DIMENSIONS", "UPDATE_GUILD_LIST_DIMENSIONS", "TRACK", "CHANNEL_SETTINGS_OPEN", "CHANNEL_SETTINGS_INIT", "CHANNEL_SETTINGS_CLOSE", "GUILD_SETTINGS_INIT", "GUILD_SETTINGS_OPEN", "GUILD_SETTINGS_CLOSE", "TUTORIAL_INDICATOR_SHOW", "TUTORIAL_INDICATOR_HIDE", "TUTORIAL_INDICATOR_SUPPRESS_ALL", "USER_SETTINGS_ACCOUNT_INIT", "USER_SETTINGS_ACCOUNT_CLOSE", "NOTICE_SHOW", "NOTICE_DISMISS", "NOTICE_DISABLE", "SEARCH_EDITOR_STATE_CHANGE", "SEARCH_EDITOR_STATE_CLEAR", "SEARCH_START", "SEARCH_FINISH", "MOD_VIEW_SEARCH_FINISH", "SEARCH_INDEXING", "SEARCH_CLEAR", "SEARCH_ENSURE_SEARCH_STATE", "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", "SEARCH_CLEAR_HISTORY", "SEARCH_SET_SHOW_BLOCKED_RESULTS", "LAYOUT_CREATE", "EXPERIMENT_REGISTER_LEGACY", "POPOUT_WINDOW_OPEN", "POPOUT_WINDOW_CLOSE", "POPOUT_WINDOW_SET_ALWAYS_ON_TOP", "TYPING_START_LOCAL", "TYPING_STOP_LOCAL", "SPOTIFY_SET_ACTIVE_DEVICE", "LOAD_INVITE_SUGGESTIONS", "INVITE_SUGGESTIONS_SEARCH", "IMPERSONATE_UPDATE", "IMPERSONATE_STOP", "CREATE_PENDING_REPLY", "CREATE_SHALLOW_PENDING_REPLY", "DELETE_PENDING_REPLY", "USER_SETTINGS_PROTO_UPDATE_EDIT_INFO", "GUILD_FEED_FETCH_SUCCESS", "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS", "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", "APPLICATION_COMMAND_EXECUTE_BAD_VERSION", "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST", "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE", "APPLICATION_COMMAND_SET_ACTIVE_COMMAND", "APPLICATION_COMMAND_SET_PREFERRED_COMMAND", "APPLICATION_COMMAND_UPDATE_OPTIONS", "APPLICATION_COMMAND_UPDATE_CHANNEL_STATE", "APPLICATION_COMMAND_USED", "DCF_HANDLE_DC_SHOWN", "DCF_HANDLE_DC_DISMISSED"]),
+  K = new Set,
+  j = !1,
+  W = new Set(["CONNECTION_OPEN", "CONNECTION_RESUMED", "CONNECTION_CLOSED", "WINDOW_INIT", "WINDOW_FULLSCREEN_CHANGE", "WINDOW_FOCUS", "WINDOW_RESIZED", "WINDOW_HIDDEN", "CHANNEL_SELECT", "DELAYED_CHANNEL_SELECT", "DELAYED_SELECT_FLUSH", "LOAD_MESSAGES_SUCCESS", "LOAD_MESSAGES_FAILURE", "LOAD_MESSAGES", "MESSAGE_START_EDIT", "MESSAGE_UPDATE_EDIT", "MESSAGE_END_EDIT", "APP_VIEW_SET_HOME_LINK", "APPLICATION_STORE_LOCATION_CHANGE", "LOGIN", "LOGIN_SUCCESS", "LOGIN_FAILURE", "LOGIN_MFA_STEP", "LOGIN_MFA", "LOGIN_MFA_FAILURE", "LOGIN_MFA_SMS", "LOGIN_MFA_SMS_REQUEST_SUCCESS", "LOGIN_MFA_SMS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_RESET", "FINGERPRINT", "REGISTER", "REGISTER_SUCCESS", "REGISTER_FAILURE", "VERIFY_FAILURE", "VERIFY_SUCCESS", "START_SESSION", "FORGOT_PASSWORD_SENT", "UPDATE_TOKEN", "SET_CONSENT_REQUIRED", "CONTEXT_MENU_OPEN", "CONTEXT_MENU_CLOSE", "MODAL_PUSH", "MODAL_POP", "MODAL_UPDATE", "MODAL_POP_ALL", "GUILD_SETTINGS_OPEN", "USER_SETTINGS_MODAL_OPEN", "CHANNEL_SETTINGS_OPEN", "NOTIFICATION_SETTINGS_MODAL_OPEN", "EMAIL_VERIFICATION_MODAL_OPEN", "MENTION_MODAL_OPEN", "QUICKSWITCHER_SHOW", "SEARCH_MODAL_OPEN", "IFE_EXPERIMENT_SEARCH_MODAL_OPEN", "INTERACTION_MODAL_CREATE", "INTERACTION_IFRAME_MODAL_CREATE", "GUILD_SETTINGS_CLOSE", "USER_SETTINGS_MODAL_CLOSE", "CHANNEL_SETTINGS_CLOSE", "NOTIFICATION_SETTINGS_MODAL_CLOSE", "EMAIL_VERIFICATION_MODAL_CLOSE", "MENTION_MODAL_CLOSE", "QUICKSWITCHER_HIDE", "SEARCH_MODAL_CLOSE", "IFE_EXPERIMENT_SEARCH_MODAL_CLOSE", "QUICKSWITCHER_SHOW", "QUICKSWITCHER_HIDE", "QUICKSWITCHER_SWITCH_TO", "QUICKSWITCHER_SEARCH", "QUICKSWITCHER_SELECT", "UPDATE_CHANNEL_DIMENSIONS", "UPDATE_CHANNEL_LIST_DIMENSIONS", "UPDATE_GUILD_LIST_DIMENSIONS", "TRACK", "CHANNEL_SETTINGS_OPEN", "CHANNEL_SETTINGS_INIT", "CHANNEL_SETTINGS_CLOSE", "GUILD_SETTINGS_INIT", "GUILD_SETTINGS_OPEN", "GUILD_SETTINGS_CLOSE", "TUTORIAL_INDICATOR_SHOW", "TUTORIAL_INDICATOR_HIDE", "TUTORIAL_INDICATOR_SUPPRESS_ALL", "USER_SETTINGS_ACCOUNT_INIT", "USER_SETTINGS_ACCOUNT_CLOSE", "NOTICE_SHOW", "NOTICE_DISMISS", "NOTICE_DISABLE", "SEARCH_EDITOR_STATE_CHANGE", "SEARCH_EDITOR_STATE_CLEAR", "SEARCH_START", "SEARCH_FINISH", "MOD_VIEW_SEARCH_FINISH", "SEARCH_INDEXING", "SEARCH_CLEAR", "SEARCH_ENSURE_SEARCH_STATE", "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", "SEARCH_CLEAR_HISTORY", "SEARCH_SET_SHOW_BLOCKED_RESULTS", "LAYOUT_CREATE", "EXPERIMENT_REGISTER_LEGACY", "POPOUT_WINDOW_OPEN", "POPOUT_WINDOW_CLOSE", "POPOUT_WINDOW_SET_ALWAYS_ON_TOP", "TYPING_START_LOCAL", "TYPING_STOP_LOCAL", "SPOTIFY_SET_ACTIVE_DEVICE", "LOAD_INVITE_SUGGESTIONS", "INVITE_SUGGESTIONS_SEARCH", "IMPERSONATE_UPDATE", "IMPERSONATE_STOP", "CREATE_PENDING_REPLY", "CREATE_SHALLOW_PENDING_REPLY", "DELETE_PENDING_REPLY", "USER_SETTINGS_PROTO_UPDATE_EDIT_INFO", "GUILD_FEED_FETCH_SUCCESS", "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS", "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", "APPLICATION_COMMAND_EXECUTE_BAD_VERSION", "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST", "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE", "APPLICATION_COMMAND_SET_ACTIVE_COMMAND", "APPLICATION_COMMAND_SET_PREFERRED_COMMAND", "APPLICATION_COMMAND_UPDATE_OPTIONS", "APPLICATION_COMMAND_UPDATE_CHANNEL_STATE", "APPLICATION_COMMAND_USED", "DCF_HANDLE_DC_SHOWN", "DCF_HANDLE_DC_DISMISSED"]),
   z = new Set,
   q = new p.default("OverlayBridgeStore"),
   X = "none",
@@ -79,13 +79,13 @@ function J(e, t) {
     if (null == t ? w.delete(e) : w.set(e, t), null == t || "CRASHED" === t) {
       var s;
       B = null;
-      let e = null === E.default || void 0 === E.default ? void 0 : null === (s = E.default.fileManager) || void 0 === s ? void 0 : s.uploadDiscordHookCrashes;
+      let e = null === h.default || void 0 === h.default ? void 0 : null === (s = h.default.fileManager) || void 0 === s ? void 0 : s.uploadDiscordHookCrashes;
       null != e && e().then(e => {
         if (Array.isArray(e) && 0 !== e.length)
           for (let l of (q.log("transitionOverlayPIDStatus: Uploaded minidumps", e), e)) {
             var t, n, i, s, r, a, o;
             if (null == l) continue;
-            let e = null != l.processName ? A.default.getGameByExecutable(l.processName) : null;
+            let e = null != l.processName ? C.default.getGameByExecutable(l.processName) : null;
             R.default.track(M.AnalyticEvents.OVERLAY_HOOK_CRASHED, {
               process_name: null == l ? void 0 : l.processName,
               game_name: null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : null,
@@ -99,7 +99,7 @@ function J(e, t) {
           }
       })
     }
-    j.delete(e), q.info("pid=".concat(e, " status transition ").concat(null != i ? i : "DISCONNECTED", " -> ").concat(null != t ? t : "DISCONNECTED"), w), k = Array.from(w.values()).some(e => "READY" === e)
+    K.delete(e), q.info("pid=".concat(e, " status transition ").concat(null != i ? i : "DISCONNECTED", " -> ").concat(null != t ? t : "DISCONNECTED"), w), k = Array.from(w.values()).some(e => "READY" === e)
   }
 }
 async function $(e) {
@@ -107,11 +107,11 @@ async function $(e) {
     if (w.size > 0) {
       X = "reconcile.getOverlayURL";
       let t = await es();
-      X = "reconcile.createHostProcess", e.createHostProcess(t, eh, ef)
+      X = "reconcile.createHostProcess", e.createHostProcess(t, eE, ef)
     } else X = "reconcile.destroyHostProcess", e.destroyHostProcess()
   } else if (F) {
     let t = await es();
-    e.createHostProcess(t, eh, ef)
+    e.createHostProcess(t, eE, ef)
   } else e.destroyHostProcess()
 }
 async function ee(e) {
@@ -223,16 +223,16 @@ async function ea(e) {
   var t, n, i, s, r, a, o;
   try {
     let t = await es() + "&oop=true&pid=".concat(e);
-    await (null === E.default || void 0 === E.default ? void 0 : null === (s = E.default.globalOverlay) || void 0 === s ? void 0 : null === (i = s.openWindow) || void 0 === i ? void 0 : i.call(s, t))
+    await (null === h.default || void 0 === h.default ? void 0 : null === (s = h.default.globalOverlay) || void 0 === s ? void 0 : null === (i = s.openWindow) || void 0 === i ? void 0 : i.call(s, t))
   } catch (e) {
-    q.log("globalOverlay: Failed to open overlay: ".concat(e), e), null === E.default || void 0 === E.default || null === (a = E.default.window) || void 0 === a || a.close(null === E.default || void 0 === E.default ? void 0 : null === (r = E.default.globalOverlay) || void 0 === r ? void 0 : r.WINDOW_KEY)
+    q.log("globalOverlay: Failed to open overlay: ".concat(e), e), null === h.default || void 0 === h.default || null === (a = h.default.window) || void 0 === a || a.close(null === h.default || void 0 === h.default ? void 0 : null === (r = h.default.globalOverlay) || void 0 === r ? void 0 : r.WINDOW_KEY)
   }
-  return H = e, null !== (o = await (null === E.default || void 0 === E.default ? void 0 : null === (n = E.default.window) || void 0 === n ? void 0 : n.getNativeHandle(null === E.default || void 0 === E.default ? void 0 : null === (t = E.default.globalOverlay) || void 0 === t ? void 0 : t.WINDOW_KEY))) && void 0 !== o ? o : ""
+  return H = e, null !== (o = await (null === h.default || void 0 === h.default ? void 0 : null === (n = h.default.window) || void 0 === n ? void 0 : n.getNativeHandle(null === h.default || void 0 === h.default ? void 0 : null === (t = h.default.globalOverlay) || void 0 === t ? void 0 : t.WINDOW_KEY))) && void 0 !== o ? o : ""
 }
 
 function eo() {
   var e, t;
-  null === E.default || void 0 === E.default || null === (t = E.default.window) || void 0 === t || t.close(null === E.default || void 0 === E.default ? void 0 : null === (e = E.default.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), H = null
+  null === h.default || void 0 === h.default || null === (t = h.default.window) || void 0 === t || t.close(null === h.default || void 0 === h.default ? void 0 : null === (e = h.default.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), H = null
 }
 
 function el(e) {
@@ -244,11 +244,11 @@ let eu = (() => {
   async function t() {
     if (!b.OVERLAY_SUPPORTED || !(0, L.supportsOutOfProcess)()) throw q.error("Attempted to load out of process overlay on an unsupported platform."), Error("Out of Process Overlay is not supported on this platform.");
     try {
-      var e;
+      var e, t;
       let {
-        OutOfProcess: t
+        OutOfProcess: n
       } = await er();
-      return null == t || null === (e = t.init) || void 0 === e || e.call(t), t.setClickZoneCallback(eS), t.setHostWindowCallbacks(ea, eo, el), t.setFocusCallback(ef), t.setSuccessfullyShownCallback(e_), t
+      return null == n || null === (e = n.init) || void 0 === e || e.call(n), n.setClickZoneCallback(eS), n.setHostWindowCallbacks(ea, eo, el), n.setFocusCallback(ef), null === (t = n.setSuccessfullyShownCallback) || void 0 === t || t.call(n, e_), n
     } catch (e) {
       throw q.error("failed loading out of process overlay", e), e
     }
@@ -287,10 +287,10 @@ function e_(e) {
   _.default.successfullyShown(e)
 }
 
-function eh(e, t, n) {
+function eE(e, t, n) {
   var i;
   let s = null === (i = S.default.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
-    r = A.default.getGameByName(s),
+    r = C.default.getGameByName(s),
     a = {
       game_name: s,
       game_id: null == r ? null : r.id,
@@ -303,9 +303,9 @@ function eh(e, t, n) {
   }), R.default.track(M.AnalyticEvents.OVERLAY_HOOK_RESULT, a), q.info("Overlay connection to ".concat(e, " ").concat(t ? "succeeded" : "failed"), a), t ? J(e, "CONNECTED", "CONNECTING") : J(e, "CONNECT_FAILED", "CONNECTING")
 }
 
-function eE() {
-  let e = C.default.getToken(),
-    t = C.default.getId();
+function eh() {
+  let e = A.default.getToken(),
+    t = A.default.getId();
   null != e && m.send({
     type: M.OverlayEventTypes.DISPATCH,
     pid: null,
@@ -356,7 +356,7 @@ async function ev(e) {
 }
 
 function eT(e) {
-  return !(W || !k || K.has(e.type)) && ("USER_SETTINGS_PROTO_UPDATE" === e.type && (e = {
+  return !(j || !k || W.has(e.type)) && ("USER_SETTINGS_PROTO_UPDATE" === e.type && (e = {
     ...e,
     settings: {
       type: e.settings.type,
@@ -378,14 +378,14 @@ function eI() {
   }), V.clear())
 }
 
-function eC(e) {
+function eA(e) {
   return null != e && (0, O.constantTimeCompare)(e, Y)
 }
 
-function eA(e) {
+function eC(e) {
   switch (0, e.type) {
     case M.OverlayEventTypes.CONNECT:
-      let t = C.default.getToken();
+      let t = A.default.getToken();
       if (null == t) break;
       (0, f.createLayout)(L.OVERLAY_LAYOUT_ID, y.default.getDefaultLayout(L.OVERLAY_LAYOUT_ID)), Promise.all([(0, T.default)(t, e.pid), l.default.PersistedStore.getAllStates()]).then(t => {
         let [n, i] = t, {
@@ -408,7 +408,7 @@ function eA(e) {
     case M.OverlayEventTypes.DISPATCH:
       if (null != e.payloads) {
         var n;
-        n = e.payloads, W = !0, n.forEach(e => u.default.dispatch(e)), W = !1
+        n = e.payloads, j = !0, n.forEach(e => u.default.dispatch(e)), j = !1
       }
       break;
     case M.OverlayEventTypes.LOG_MESSAGES:
@@ -417,10 +417,10 @@ function eA(e) {
 }
 class ey extends l.default.Store {
   initialize() {
-    !(!b.OVERLAY_SUPPORTED || __OVERLAY__) && (G.add(b.OverlayMethod.Hook), this.waitFor(S.default, C.default), m.setReceiveCommandHandler(eA, eC), C.default.addChangeListener(eE), ec(v.OverlayStoredSettings.enabled), u.default.addInterceptor(eT))
+    !(!b.OVERLAY_SUPPORTED || __OVERLAY__) && (G.add(b.OverlayMethod.Hook), this.waitFor(S.default, A.default), m.setReceiveCommandHandler(eC, eA), A.default.addChangeListener(eh), ec(v.OverlayStoredSettings.enabled), u.default.addInterceptor(eT))
   }
   isInputLocked(e) {
-    return !j.has(e)
+    return !K.has(e)
   }
   isSupported() {
     return b.OVERLAY_SUPPORTED
@@ -500,7 +500,7 @@ let eN = new ey(u.default, __OVERLAY__ ? {
       pid: n
     } = e, i = w.get(n);
     if (t || "READY" === i || "CRASHED" === i) {
-      if (t ? j.delete(n) : j.add(n), z.clear(), null != ep && (clearTimeout(ep), ep = null, t)) return;
+      if (t ? K.delete(n) : K.add(n), z.clear(), null != ep && (clearTimeout(ep), ep = null, t)) return;
       t ? em(t) : ep = setTimeout(() => {
         em(t), ep = null
       }, 100)
@@ -521,7 +521,7 @@ let eN = new ey(u.default, __OVERLAY__ ? {
     } = e, n = crypto.getRandomValues(new Uint8Array(8));
     Y = btoa(String.fromCharCode(...n));
     let s = new URLSearchParams;
-    s.append("build_id", "dfb3ea1c9a685c67afeb4d2995d232621ba2c452"), s.append("rpc", String(t)), s.append("rpc_auth_token", Y), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(s.toString())
+    s.append("build_id", "f83d8ab159e790824f5e6462485eecdcfc2fd303"), s.append("rpc", String(t)), s.append("rpc_auth_token", Y), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(s.toString())
   },
   OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
     let {
@@ -529,7 +529,7 @@ let eN = new ey(u.default, __OVERLAY__ ? {
       ring: n
     } = e;
     setImmediate(() => {
-      h.default.selectPrivateChannel(t), d.default.call(t, !1, !!n)
+      E.default.selectPrivateChannel(t), d.default.call(t, !1, !!n)
     })
   },
   OVERLAY_JOIN_GAME: function(e) {
@@ -578,7 +578,7 @@ let eN = new ey(u.default, __OVERLAY__ ? {
     let i = null !== (n = null === (t = U[e.previousAssociatedGamePID]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : b.OverlayMethod.Disabled;
     if (i !== b.OverlayMethod.OutOfProcess) return;
     let s = w.get(e.previousAssociatedGamePID);
-    null != s && (w.delete(e.previousAssociatedGamePID), w.set(e.associatedGamePID, s)), j.delete(e.previousAssociatedGamePID), H = e.associatedGamePID
+    null != s && (w.delete(e.previousAssociatedGamePID), w.set(e.associatedGamePID, s)), K.delete(e.previousAssociatedGamePID), H = e.associatedGamePID
   },
   OVERLAY_NOTIFY_READY_TO_SHOW: function(e) {
     eu().then(t => {
