@@ -62,7 +62,7 @@ let d = 10,
   h = 10,
   g = 500;
 Object.freeze([]), Object.freeze([]);
-let m = 200;
+let m = 10;
 
 function p(e) {
   if (null != e.choices) return a.default.Messages.COMMAND_VALIDATION_CHOICE_ERROR;

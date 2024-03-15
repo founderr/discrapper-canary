@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return I
   },
   canRetryInteractionData: function() {
-    return C
+    return A
   }
 }), n("222007");
 var i, s, r = n("872717"),
@@ -31,8 +31,8 @@ var i, s, r = n("872717"),
   c = n("299039"),
   f = n("274800"),
   _ = n("809810"),
-  h = n("3765"),
-  E = n("606981"),
+  E = n("3765"),
+  h = n("606981"),
   g = n("49111");
 
 function m(e) {
@@ -46,25 +46,25 @@ let p = async e => {
     customId: s,
     indices: a,
     applicationId: o,
-    channelId: h,
-    guildId: E,
+    channelId: E,
+    guildId: h,
     localState: m
   } = e, p = c.default.fromTimestamp(Date.now());
   if (!_.default.canQueueInteraction(n, p)) return;
-  await u.default.unarchiveThreadIfNecessary(h), (0, f.addQueued)(p, {
+  await u.default.unarchiveThreadIfNecessary(E), (0, f.addQueued)(p, {
     messageId: n,
     data: {
       interactionType: l.InteractionTypes.MESSAGE_COMPONENT,
       customId: s,
       indices: a
     },
-    onFailure: (e, t) => v(h, e, t)
+    onFailure: (e, t) => v(E, e, t)
   }), null != m && (0, f.queueInteractionComponentState)(n, p, m, a);
   let S = {
     type: l.InteractionTypes.MESSAGE_COMPONENT,
     nonce: p,
-    guild_id: E,
-    channel_id: h,
+    guild_id: h,
+    channel_id: E,
     message_flags: i,
     message_id: n,
     application_id: o,
@@ -88,7 +88,7 @@ let p = async e => {
     body: S,
     timeout: 3e3
   }, e => {
-    T(p, h, E, e)
+    T(p, E, h, e)
   })
 }, S = async e => {
   let {
@@ -121,7 +121,7 @@ let p = async e => {
       var s;
       if (i.status >= 400 && i.status < 500 && i.body) {
         if (i.body.code === g.AbortCodes.INVALID_FORM_BODY && i.body.errors) {
-          let s = (0, E.getFirstSkemaError)(i.body.errors);
+          let s = (0, h.getFirstSkemaError)(i.body.errors);
           null != s && ("INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" === s.code || "INTERACTION_APPLICATION_COMMAND_INVALID" === s.code) && a.default.dispatch({
             type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION",
             channelId: t,
@@ -135,7 +135,7 @@ let p = async e => {
     }(0, f.setFailed)(e)
   }
 };
-(s = i || (i = {}))[s.SENDING = 0] = "SENDING", s[s.CREATED = 1] = "CREATED", s[s.FAILED = 2] = "FAILED", s[s.TIMED_OUT = 3] = "TIMED_OUT";
+(s = i || (i = {}))[s.SENDING = 0] = "SENDING", s[s.CREATED = 1] = "CREATED", s[s.FAILED = 2] = "FAILED", s[s.TIMED_OUT = 3] = "TIMED_OUT", s[s.EPHEMERAL_SUCCESS = 4] = "EPHEMERAL_SUCCESS";
 let I = (e, t) => {
   var n;
   let i = null == t ? void 0 : t.state,
@@ -143,14 +143,15 @@ let I = (e, t) => {
   let r = e.state === g.MessageStates.SEND_FAILED && (null == (n = e.id) || "" === n || Number.isNaN(n) ? Date.now() : c.default.extractTimestamp(n) + 3e3) < Date.now(),
     a = (null == t ? void 0 : t.data.interactionType) === l.InteractionTypes.APPLICATION_COMMAND,
     o = e.isCommandType();
-  if (a && i === h.InteractionState.QUEUED || o && e.state === g.MessageStates.SENDING && null != t) return 0;
-  if (a && i === h.InteractionState.CREATED || e.hasFlag(g.MessageFlags.LOADING) && !s) return 1;
+  if (a && i === E.InteractionState.QUEUED || o && e.state === g.MessageStates.SENDING && null != t) return 0;
+  if (a && i === E.InteractionState.CREATED || e.hasFlag(g.MessageFlags.LOADING) && !s) return 1;
   if (null != e.interaction && e.hasFlag(g.MessageFlags.LOADING) && s) return 3;
   else if (null != e.interaction && !e.hasFlag(g.MessageFlags.LOADING) && r) return 3;
-  else if (o && e.state === g.MessageStates.SEND_FAILED) return 2
+  else if (o && e.state === g.MessageStates.SEND_FAILED) return 2;
+  else if (null != e.interaction && e.hasFlag(g.MessageFlags.EPHEMERAL)) return 4
 };
 
-function C(e) {
+function A(e) {
   let t = e.options;
   for (;
     (null == t ? void 0 : t.length) === 1 && (t[0].type === l.ApplicationCommandOptionType.SUB_COMMAND_GROUP || t[0].type === l.ApplicationCommandOptionType.SUB_COMMAND);) t = t[0].options;
