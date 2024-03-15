@@ -46,23 +46,27 @@ let _ = s.memo(function(e) {
       analyticsLocation: i
     }), null == n || n()
   }, [i, n, t.id]);
-  return null == u || 0 === u.length ? null : (0, a.jsxs)(d.Clickable, {
-    onClick: f,
-    className: o(T.avatarAndTextContainer, T.serverContainer),
-    children: [(0, a.jsx)("div", {
-      className: T.avatars,
-      children: (0, a.jsx)(p.default, {
-        maxGuilds: l,
-        guilds: u,
-        size: h.default.Sizes.SMOL,
-        hideOverflowCount: !0
-      })
-    }), (0, a.jsx)(d.Text, {
-      className: T.itemizedListText,
-      variant: "text-sm/normal",
-      color: "interactive-normal",
-      children: c
-    })]
+  return null == u || 0 === u.length ? null : (0, a.jsx)(d.Tooltip, {
+    text: I.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
+    children: e => (0, a.jsxs)(d.Clickable, {
+      ...e,
+      onClick: f,
+      className: o(T.avatarAndTextContainer, T.serverContainer),
+      children: [(0, a.jsx)("div", {
+        className: T.avatars,
+        children: (0, a.jsx)(p.default, {
+          maxGuilds: l,
+          guilds: u,
+          size: h.default.Sizes.SMOL,
+          hideOverflowCount: !0
+        })
+      }), (0, a.jsx)(d.Text, {
+        className: T.itemizedListText,
+        variant: "text-sm/normal",
+        color: "interactive-normal",
+        children: c
+      })]
+    })
   })
 });
 (l = i || (i = {}))[l.NOT_CHECKED = 0] = "NOT_CHECKED", l[l.NOT_OVERFLOWING = 1] = "NOT_OVERFLOWING", l[l.OVERFLOWING_LARGE_ONLY = 2] = "OVERFLOWING_LARGE_ONLY", l[l.OVERFLOWING_ALL = 3] = "OVERFLOWING_ALL";
@@ -136,23 +140,27 @@ let v = s.memo(function(e) {
     return n ? 0 === c.length ? null : (0, a.jsx)("div", {
       className: o(!m && T.hideElement),
       ref: p,
-      children: (0, a.jsxs)(d.Clickable, {
-        onClick: _,
-        className: o(T.avatarAndTextContainer, T.friendsContainer),
-        children: [(0, a.jsx)("div", {
-          className: T.avatars,
-          children: (0, a.jsx)(f.default, {
-            maxUsers: u,
-            users: c,
-            size: d.AvatarSizes.SIZE_16,
-            hideOverflowCount: !0
-          })
-        }), (0, a.jsx)(d.Text, {
-          className: T.itemizedListText,
-          variant: "text-sm/normal",
-          color: "interactive-normal",
-          children: N
-        })]
+      children: (0, a.jsx)(d.Tooltip, {
+        text: I.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
+        children: e => (0, a.jsxs)(d.Clickable, {
+          ...e,
+          onClick: _,
+          className: o(T.avatarAndTextContainer, T.friendsContainer),
+          children: [(0, a.jsx)("div", {
+            className: T.avatars,
+            children: (0, a.jsx)(f.default, {
+              maxUsers: u,
+              users: c,
+              size: d.AvatarSizes.SIZE_16,
+              hideOverflowCount: !0
+            })
+          }), (0, a.jsx)(d.Text, {
+            className: T.itemizedListText,
+            variant: "text-sm/normal",
+            color: "interactive-normal",
+            children: N
+          })]
+        })
       })
     }) : (0, a.jsx)("div", {
       className: T.skeleton
@@ -208,43 +216,51 @@ let v = s.memo(function(e) {
     return l ? (0, a.jsxs)("div", {
       className: o(T.compactItemContainer, !_ && T.hideElement),
       ref: g,
-      children: [M && (0, a.jsxs)(d.Clickable, {
-        onClick: R(C.UserProfileSections.MUTUAL_FRIENDS),
-        className: o(T.avatarAndTextContainer, T.friendsContainer),
-        children: [(0, a.jsx)("div", {
-          className: T.avatars,
-          children: (0, a.jsx)(f.default, {
-            maxUsers: c,
-            users: m,
-            size: d.AvatarSizes.SIZE_16,
-            hideOverflowCount: !0
-          })
-        }), (0, a.jsx)(d.Text, {
-          className: T.itemizedListText,
-          variant: "text-sm/normal",
-          color: "interactive-normal",
-          children: E
-        })]
+      children: [M && (0, a.jsx)(d.Tooltip, {
+        text: I.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
+        children: e => (0, a.jsxs)(d.Clickable, {
+          ...e,
+          onClick: R(C.UserProfileSections.MUTUAL_FRIENDS),
+          className: o(T.avatarAndTextContainer, T.friendsContainer),
+          children: [(0, a.jsx)("div", {
+            className: T.avatars,
+            children: (0, a.jsx)(f.default, {
+              maxUsers: c,
+              users: m,
+              size: d.AvatarSizes.SIZE_16,
+              hideOverflowCount: !0
+            })
+          }), (0, a.jsx)(d.Text, {
+            className: T.itemizedListText,
+            variant: "text-sm/normal",
+            color: "interactive-normal",
+            children: E
+          })]
+        })
       }), M && k && (0, a.jsx)("div", {
         "aria-hidden": "true",
         className: T.dotSpacer
-      }), k && (0, a.jsxs)(d.Clickable, {
-        onClick: R(C.UserProfileSections.MUTUAL_GUILDS),
-        className: o(T.avatarAndTextContainer, T.serverContainer),
-        children: [!N && (0, a.jsx)("div", {
-          className: T.avatars,
-          children: (0, a.jsx)(p.default, {
-            maxGuilds: c,
-            guilds: x,
-            size: h.default.Sizes.SMOL,
-            hideOverflowCount: !0
-          })
-        }), (0, a.jsx)(d.Text, {
-          className: T.itemizedListText,
-          variant: "text-sm/normal",
-          color: "interactive-normal",
-          children: y
-        })]
+      }), k && (0, a.jsx)(d.Tooltip, {
+        text: I.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
+        children: e => (0, a.jsxs)(d.Clickable, {
+          ...e,
+          onClick: R(C.UserProfileSections.MUTUAL_GUILDS),
+          className: o(T.avatarAndTextContainer, T.serverContainer),
+          children: [!N && (0, a.jsx)("div", {
+            className: T.avatars,
+            children: (0, a.jsx)(p.default, {
+              maxGuilds: c,
+              guilds: x,
+              size: h.default.Sizes.SMOL,
+              hideOverflowCount: !0
+            })
+          }), (0, a.jsx)(d.Text, {
+            className: T.itemizedListText,
+            variant: "text-sm/normal",
+            color: "interactive-normal",
+            children: y
+          })]
+        })
       })]
     }) : (0, a.jsx)("div", {
       className: T.skeleton

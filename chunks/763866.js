@@ -34,8 +34,8 @@ var i = n("37983"),
   M = n("465215"),
   k = n("301998"),
   L = n("379657"),
-  P = n("853780"),
-  b = n("574191"),
+  b = n("853780"),
+  P = n("574191"),
   j = n("491250"),
   U = n("453649"),
   D = n("49111"),
@@ -142,7 +142,8 @@ function G(e) {
           hidePersonalInformation: $
         }), eh && (0, i.jsx)(S.default, {
           className: w.profileMutuals,
-          user: H
+          user: H,
+          onClose: z
         }), (0, i.jsx)(M.default, {
           userId: H.id,
           guild: K,
@@ -168,7 +169,7 @@ function G(e) {
         }) : null, (0, i.jsx)(_.default, {
           user: H,
           guildId: null == K ? void 0 : K.id
-        }), (0, i.jsx)(b.default, {
+        }), (0, i.jsx)(P.default, {
           user: H,
           guild: K,
           guildMember: W,
@@ -179,7 +180,7 @@ function G(e) {
           guild: K,
           onClose: z,
           theme: er
-        }), null != ee && void 0 !== Y && (0, i.jsx)(P.default, {
+        }), null != ee && void 0 !== Y && (0, i.jsx)(b.default, {
           channelId: Y,
           applicationId: ee.id
         }), (0, i.jsx)(k.default, {
