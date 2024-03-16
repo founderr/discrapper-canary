@@ -19,8 +19,8 @@ var i, s, r = n("913144"),
   c = n("599110"),
   f = n("773336"),
   _ = n("50885"),
-  h = n("688225"),
-  E = n("49111");
+  E = n("688225"),
+  h = n("49111");
 let g = {
   development: [0, 0, 0, 0],
   canary: [1, 0, 30, 10],
@@ -40,7 +40,7 @@ async function p() {
   return function(e) {
     if (null == e.setFlags) return;
     let t = 0,
-      n = h.default.getCurrentConfig({
+      n = E.default.getCurrentConfig({
         location: "edd7d3_1"
       }, {
         autoTrackExposure: !1
@@ -59,7 +59,7 @@ function S(e, t) {
       f = null;
     return new Promise(i => {
       let u = (e, n) => {
-          c.default.track(E.AnalyticEvents.HOOK_RESULT, {
+          c.default.track(h.AnalyticEvents.HOOK_RESULT, {
             game_name: s,
             game_id: null == d ? null : d.id,
             success: n,
@@ -68,14 +68,14 @@ function S(e, t) {
           }), null != f && (clearTimeout(f), f = null), n ? i() : i(e = null != e ? e : "Unknown hook error")
         },
         _ = l.default.getOverlayOptionsForPID(e),
-        h = {
+        E = {
           ...o.DEFAULT_OVERLAY_OPTIONS,
           ..._,
           elevate: l.default.shouldElevateProcessForPID(e)
         };
-      null == h.allowHook || h.allowHook ? (f = setTimeout(() => {
+      null == E.allowHook || E.allowHook ? (f = setTimeout(() => {
         n.cancelAttachToProcess(e), u("Timed out waiting for hook response", !1)
-      }, 12e4), n.attachToProcess(e, h, u), r.default.wait(() => a.default.clearElevatedProcess())) : i("Hook is disabled for this game")
+      }, 12e4), n.attachToProcess(e, E, u), r.default.wait(() => a.default.clearElevatedProcess())) : i("Hook is disabled for this game")
     })
   })
 }

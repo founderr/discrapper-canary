@@ -8,8 +8,8 @@ var n = i("37983");
 i("884691");
 var l = i("77078"),
   a = i("913144"),
-  r = i("135230"),
-  u = i("550766"),
+  u = i("135230"),
+  r = i("550766"),
   d = i("648456"),
   s = i("782340");
 class o extends d.default {
@@ -18,7 +18,7 @@ class o extends d.default {
       code: e,
       message: i
     } = t;
-    (0, l.openModalLazy)(async () => t => (0, n.jsx)(r.default, {
+    (0, l.openModalLazy)(async () => t => (0, n.jsx)(u.default, {
       title: s.default.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
         code: e
       }),
@@ -27,7 +27,7 @@ class o extends d.default {
     }))
   }
   showLaunchErrorModal(t) {
-    (0, l.openModalLazy)(async () => e => (0, n.jsx)(r.default, {
+    (0, l.openModalLazy)(async () => e => (0, n.jsx)(u.default, {
       title: s.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
       body: t,
       ...e
@@ -38,7 +38,7 @@ class o extends d.default {
       channelId: e,
       applicationId: i
     } = t;
-    a.default.wait(() => (0, u.stopEmbeddedActivity)({
+    a.default.wait(() => (0, r.stopEmbeddedActivity)({
       channelId: e,
       applicationId: i
     }))

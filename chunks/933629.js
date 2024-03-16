@@ -77,8 +77,8 @@ var i, l, a = n("37983"),
   M = n("888673"),
   k = n("839952"),
   L = n("476765"),
-  P = n("62843"),
-  b = n("461380"),
+  b = n("62843"),
+  P = n("461380"),
   j = n("171710"),
   U = n("945330"),
   D = n("909004"),
@@ -256,7 +256,7 @@ let ei = e => {
       type: t = 0,
       onClick: n
     } = e;
-    return (0, a.jsx)(P.MessagesInteractionContext.Consumer, {
+    return (0, a.jsx)(b.MessagesInteractionContext.Consumer, {
       children: e => e.disableInteractions ? null : (0, a.jsxs)("div", {
         className: z.jumpToPresentBar,
         children: [(0, a.jsx)(p.FocusRing, {
@@ -291,7 +291,7 @@ let ei = e => {
                 default:
                   return (0, F.assertNever)(e)
               }
-            }(t), (0, a.jsx)(b.default, {
+            }(t), (0, a.jsx)(P.default, {
               className: z.barButtonIcon
             })]
           })
@@ -308,7 +308,7 @@ let ei = e => {
       onClick: t,
       loading: n
     } = e;
-    return (0, a.jsx)(P.MessagesInteractionContext.Consumer, {
+    return (0, a.jsx)(b.MessagesInteractionContext.Consumer, {
       children: e => e.disableInteractions ? null : (0, a.jsxs)(p.Clickable, {
         className: z.messagesErrorBar,
         onClick: t,
@@ -356,7 +356,7 @@ function ea(e) {
     (0, h.ack)(n)
   }, [n]), {
     disableInteractions: u
-  } = s.useContext(P.MessagesInteractionContext);
+  } = s.useContext(b.MessagesInteractionContext);
   return u ? null : (0, a.jsxs)("div", {
     className: o(z.newMessagesBar, {
       [z.disableInteractions]: u
@@ -397,7 +397,7 @@ function es(e) {
     scrollManager: u
   } = e, {
     disableInteractions: x
-  } = s.useContext(P.MessagesInteractionContext), [E, _] = s.useState(null), v = s.useRef(null), [N, R] = s.useState(null), M = s.useRef(null), k = (0, f.useStateFromStoresArray)([I.default], () => {
+  } = s.useContext(b.MessagesInteractionContext), [E, _] = s.useState(null), v = s.useRef(null), [N, R] = s.useState(null), M = s.useRef(null), k = (0, f.useStateFromStoresArray)([I.default], () => {
     var e;
     return null !== (e = I.default.summaries(l.id)) && void 0 !== e ? e : []
   }, [l]), L = (0, g.default)(k);
@@ -557,10 +557,10 @@ function es(e) {
             variant: "text-sm/medium",
             className: o(z.newTopicsBarCompact, z.newTopicsBarText),
             children: es
-          }), (0, a.jsx)(b.default, {
+          }), (0, a.jsx)(P.default, {
             width: 16,
             height: 16,
-            direction: b.default.Directions.DOWN,
+            direction: P.default.Directions.DOWN,
             className: z.newTopicsBarCaret
           })]
         })
@@ -626,7 +626,7 @@ function eo(e) {
     scrollManager: r
   } = e, {
     disableInteractions: u
-  } = s.useContext(P.MessagesInteractionContext), [h, x] = s.useState(null), E = s.useRef(null), [_, v] = s.useState(null), N = s.useRef(null), A = (0, f.useStateFromStoresArray)([I.default], () => {
+  } = s.useContext(b.MessagesInteractionContext), [h, x] = s.useState(null), E = s.useRef(null), [_, v] = s.useState(null), N = s.useRef(null), A = (0, f.useStateFromStoresArray)([I.default], () => {
     var e;
     return null !== (e = I.default.summaries(l.id)) && void 0 !== e ? e : []
   }, [l]), R = (0, g.default)(A);
@@ -779,10 +779,10 @@ function eo(e) {
             className: z.topicsPillTextTitle,
             variant: "text-sm/medium",
             children: el
-          }), (0, a.jsx)(b.default, {
+          }), (0, a.jsx)(P.default, {
             width: 16,
             height: 16,
-            direction: b.default.Directions.DOWN,
+            direction: P.default.Directions.DOWN,
             className: z.topicsPillDropdownCaret
           })]
         })
@@ -794,10 +794,10 @@ function eo(e) {
           className: o(z.topicsPillCaret, z.topicsCaretLeft, {
             [z.topicsPillCaretDisabled]: null == G
           }),
-          children: (0, a.jsx)(b.default, {
+          children: (0, a.jsx)(P.default, {
             width: 16,
             height: 16,
-            direction: b.default.Directions.UP
+            direction: P.default.Directions.UP
           })
         }), (0, a.jsx)(p.Clickable, {
           "aria-label": Y.default.Messages.SUMMARY_PILL_PREVIOUS,
@@ -805,10 +805,10 @@ function eo(e) {
           className: o(z.topicsPillCaret, z.topicsCaretRight, {
             [z.topicsPillCaretDisabled]: null == j
           }),
-          children: (0, a.jsx)(b.default, {
+          children: (0, a.jsx)(P.default, {
             width: 16,
             height: 16,
-            direction: b.default.Directions.DOWN
+            direction: P.default.Directions.DOWN
           })
         })]
       })]

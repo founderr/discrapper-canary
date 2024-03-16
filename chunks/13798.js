@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return p
   },
   toBrowserEvents: function() {
-    return C
+    return A
   },
   toCombo: function() {
-    return A
+    return C
   },
   toString: function() {
     return y
@@ -31,9 +31,9 @@ let c = (0, u.isLinux)() ? d.LinuxKeyToCode : (0, u.isMac)() ? d.MacosKeyToCode 
   f = a.invert(d.LinuxKeyToCode);
 f["223"] = "`", Object.freeze(f);
 let _ = Object.freeze(a.invert(d.MacosKeyToCode)),
-  h = a.invert(d.WindowsKeyToCode);
-h["223"] = "`", Object.freeze(h);
-let E = a.invert(null != c ? c : {});
+  E = a.invert(d.WindowsKeyToCode);
+E["223"] = "`", Object.freeze(E);
+let h = a.invert(null != c ? c : {});
 
 function g() {
   if ((0, u.isLinux)()) return d.KeyboardEnvs.LINUX;
@@ -50,11 +50,11 @@ function m(e) {
     case d.KeyboardEnvs.MACOS:
       return _["" + t];
     case d.KeyboardEnvs.WINDOWS:
-      return h["" + t];
+      return E["" + t];
     case d.KeyboardEnvs.BROWSER:
       return s(t);
     default:
-      return E["" + t]
+      return h["" + t]
   }
 }
 
@@ -83,7 +83,7 @@ function p(e) {
     default:
       throw Error("Unrecognized DeviceType ".concat(n, "."))
   }
-}!(0, u.isMac)() && (E["223"] = "`"), Object.freeze(E);
+}!(0, u.isMac)() && (h["223"] = "`"), Object.freeze(h);
 let S = [
     ["META", "⌘"],
     ["RIGHT META", "RIGHT ⌘"],
@@ -120,7 +120,7 @@ let S = [
   },
   I = /shift|meta|ctrl|alt$/;
 
-function C(e) {
+function A(e) {
   let t = {
     keyCode: 0,
     metaKey: !1,
@@ -145,7 +145,7 @@ function C(e) {
   }, [])
 }
 
-function A(e) {
+function C(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g(),
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.KeyboardDeviceTypes.KEYBOARD_KEY,
     i = e.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, o.default.modKey).split("+").map(e => e.trim().replace("plus", "+"));

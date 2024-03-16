@@ -58,7 +58,7 @@ var i = n("37983"),
     }), [L, k, N, A]), (0, d.useFocusLock)(_), l.useEffect(() => {
       (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
     }, [R, O]);
-    let P = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
+    let b = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
     return (0, i.jsx)(c.default, {
       section: S.AnalyticsSections.EXPRESSION_PICKER,
       children: (0, i.jsx)(p.AppReferencePositionLayer, {
@@ -86,11 +86,11 @@ var i = n("37983"),
                 className: I.contentWrapper,
                 children: [(0, i.jsx)(g.default, {
                   channel: n,
-                  isAppDetailPresent: null != P
-                }), null != P ? (0, i.jsx)(y.default, {
+                  isAppDetailPresent: null != b
+                }), null != b ? (0, i.jsx)(y.default, {
                   channel: n,
-                  appDetail: P
-                }, P.id) : null]
+                  appDetail: b
+                }, b.id) : null]
               })]
             }) : null
           })

@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return _
   },
   getGuildRoleSubscriptionGroupListing: function() {
-    return h
+    return E
   },
   getGuildRoleSubscriptionGroupForSubscriptionPlan: function() {
-    return E
+    return h
   },
   deleteGuildRoleSubscriptionListing: function() {
     return g
@@ -142,7 +142,7 @@ let o = async (e, t) => {
   } catch (e) {
     throw new s.APIError(e)
   }
-}, h = async function(e, t) {
+}, E = async function(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   try {
     let s = await i.default.get({
@@ -156,7 +156,7 @@ let o = async (e, t) => {
   } catch (e) {
     throw new s.APIError(e)
   }
-}, E = async e => {
+}, h = async e => {
   try {
     let t = await i.default.get({
       url: r.Endpoints.SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING(e)

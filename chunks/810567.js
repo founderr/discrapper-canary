@@ -15,21 +15,21 @@ var i = n("37983"),
   c = n("229915"),
   f = n("782340"),
   _ = n("706381");
-let h = Object.freeze({
+let E = Object.freeze({
     SMALL: _.small,
     MEDIUM: _.medium,
     LARGE: _.large
   }),
-  E = e => {
+  h = e => {
     let {
       hasContent: t,
       onClear: n,
       className: r,
       isLoading: l,
-      size: E = h.SMALL
+      size: h = E.SMALL
     } = e;
     return (0, i.jsx)(o.Clickable, {
-      className: a(r, _.iconLayout, E, {
+      className: a(r, _.iconLayout, h, {
         [_.pointer]: t
       }),
       onClick: e => {
@@ -61,7 +61,7 @@ let h = Object.freeze({
       })
     })
   };
-E.Sizes = h;
+h.Sizes = E;
 class g extends s.PureComponent {
   focus() {
     let {
@@ -86,7 +86,7 @@ class g extends s.PureComponent {
       onKeyDown: u,
       onKeyUp: d,
       onKeyPress: c,
-      isLoading: h,
+      isLoading: E,
       size: g,
       disabled: m,
       onChange: p,
@@ -94,8 +94,8 @@ class g extends s.PureComponent {
       onFocus: v,
       autoComplete: T,
       inputProps: I,
-      hideSearchIcon: C,
-      "aria-label": A = f.default.Messages.SEARCH,
+      hideSearchIcon: A,
+      "aria-label": C = f.default.Messages.SEARCH,
       ...y
     } = this.props;
     return (0, i.jsx)(l.FocusRing, {
@@ -123,14 +123,14 @@ class g extends s.PureComponent {
             disabled: m,
             autoFocus: t,
             autoComplete: T,
-            "aria-label": A,
+            "aria-label": C,
             ref: this.inputRef
-          }), !C && (0, i.jsx)(E, {
+          }), !A && (0, i.jsx)(h, {
             size: g,
             hasContent: e.length > 0,
             onClear: n,
             className: o,
-            isLoading: h
+            isLoading: E
           })]
         })
       })
@@ -145,8 +145,8 @@ class g extends s.PureComponent {
     }
   }
 }
-g.Sizes = h, g.defaultProps = {
-  size: h.SMALL,
+g.Sizes = E, g.defaultProps = {
+  size: E.SMALL,
   isLoading: !1,
   disabled: !1
 };

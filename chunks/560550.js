@@ -14,8 +14,8 @@ var i, s = n("383536"),
   c = n("760014"),
   f = n("588446"),
   _ = n("779791"),
-  h = n("353927"),
-  E = n("53452");
+  E = n("353927"),
+  h = n("53452");
 
 function g(e) {
   return e.split("-")[0]
@@ -24,7 +24,7 @@ function g(e) {
 function m(e, t, n, s) {
   let o = "".concat(null != r.name && "" !== r.name ? r.name : "unknown", " ").concat(null != r.version && "" !== r.version ? r.version : "unknown"),
     l = new a.default("Connection(".concat(e, ")"));
-  return E.BROWSER_SUPPORTS_UNIFIED_PLAN ? (l.info("Using Unified Plan (".concat(o, ")")), new _.default(e, t, n, s)) : (l.info("Using Plan B (".concat(o, ")")), new i(e, t, n, s))
+  return h.BROWSER_SUPPORTS_UNIFIED_PLAN ? (l.info("Using Unified Plan (".concat(o, ")")), new _.default(e, t, n, s)) : (l.info("Using Plan B (".concat(o, ")")), new i(e, t, n, s))
 }
 i = class extends l.default {
   destroy() {
@@ -70,8 +70,8 @@ i = class extends l.default {
     }), s.direction = null != this.input.stream ? f.Directions.SENDRECV : f.Directions.SENDONLY, this.fpc = s;
     let r = new c.default(this.voiceBitrate);
     r.on("addtrack", (e, t) => this.createOutput(g(e), t)), r.on("removetrack", (e, t) => this.destroyOutput(g(e), t)), r.once("connected", () => {
-      this.input.reset(), this.setConnectionState(h.ConnectionStates.CONNECTED), this.on(o.BaseConnectionEvent.Stats, this.handleStats), this.input.on(d.InputEvent.VoiceActivity, this.handleVoiceActivity)
-    }), r.on("connecting", () => this.setConnectionState(h.ConnectionStates.DTLS_CONNECTING)), r.on("checking", () => this.setConnectionState(h.ConnectionStates.ICE_CHECKING)), r.on("failed", () => this.setConnectionState(h.ConnectionStates.NO_ROUTE)), r.on("disconnected", () => this.setConnectionState(h.ConnectionStates.DISCONNECTED)), r.on("closed", () => this.setConnectionState(h.ConnectionStates.DISCONNECTED)), r.on("offer", e => {
+      this.input.reset(), this.setConnectionState(E.ConnectionStates.CONNECTED), this.on(o.BaseConnectionEvent.Stats, this.handleStats), this.input.on(d.InputEvent.VoiceActivity, this.handleVoiceActivity)
+    }), r.on("connecting", () => this.setConnectionState(E.ConnectionStates.DTLS_CONNECTING)), r.on("checking", () => this.setConnectionState(E.ConnectionStates.ICE_CHECKING)), r.on("failed", () => this.setConnectionState(E.ConnectionStates.NO_ROUTE)), r.on("disconnected", () => this.setConnectionState(E.ConnectionStates.DISCONNECTED)), r.on("closed", () => this.setConnectionState(E.ConnectionStates.DISCONNECTED)), r.on("offer", e => {
       let {
         sdp: t
       } = e, {

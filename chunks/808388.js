@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return _
   },
   useUserEligibleForTierTemplates: function() {
-    return h
+    return E
   }
 }), n("7331");
 var i = n("858560"),
@@ -121,7 +121,7 @@ function _() {
   return e
 }
 
-function h() {
+function E() {
   let {
     enabled: e
   } = i.GuildRoleSubscriptionsTierTemplatesUserExperiment.useExperiment({

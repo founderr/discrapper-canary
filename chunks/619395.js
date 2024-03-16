@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return _
   },
   isEmptyOverwrite: function() {
-    return h
+    return E
   },
   useCanUpdateStageChannelModerators: function() {
-    return E
+    return h
   },
   useCanModerateRequestToSpeak: function() {
     return g
@@ -39,7 +39,7 @@ function _(e, t, n) {
   }
 }
 
-function h(e) {
+function E(e) {
   let {
     allow: t,
     deny: n
@@ -47,7 +47,7 @@ function h(e) {
   return i.default.equals(t, u.default.NONE) && i.default.equals(n, u.default.NONE)
 }
 
-function E(e) {
+function h(e) {
   return (0, s.useStateFromStores)([l.default, o.default, a.default], () => {
     let t = a.default.getChannel(e),
       n = o.default.getGuild(null == t ? void 0 : t.getGuildId());

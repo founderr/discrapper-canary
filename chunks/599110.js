@@ -42,8 +42,8 @@ var i = n("884691"),
   c = n("872507"),
   f = n("286235"),
   _ = n("49111"),
-  h = n("727538"),
-  E = n("782340");
+  E = n("727538"),
+  h = n("782340");
 let g = i.createContext({
     location: {}
   }),
@@ -245,8 +245,8 @@ function I(e) {
     location_object_type: e.objectType
   }
 }
-let C = () => h.AccessibilityFeatureFlags.NONE,
-  A = (0, s.trackMaker)({
+let A = () => E.AccessibilityFeatureFlags.NONE,
+  C = (0, s.trackMaker)({
     analyticEventConfigs: T,
     dispatcher: r.default,
     TRACK_ACTION_NAME: "TRACK"
@@ -288,7 +288,7 @@ function N(e) {
       }
     }
   }
-  a.client_performance_cpu = c.default.getCurrentCPUUsagePercent(), a.client_performance_memory = c.default.getCurrentMemoryUsageKB(), a.cpu_core_count = c.default.getCPUCoreCount(), a.accessibility_features = C(), a.rendered_locale = E.default.getLocale(), a.uptime_app = Math.floor((performance.now() - p) / 1e3);
+  a.client_performance_cpu = c.default.getCurrentCPUUsagePercent(), a.client_performance_memory = c.default.getCurrentMemoryUsageKB(), a.cpu_core_count = c.default.getCPUCoreCount(), a.accessibility_features = A(), a.rendered_locale = h.default.getLocale(), a.uptime_app = Math.floor((performance.now() - p) / 1e3);
   let o = c.default.getProcessUptime();
   null != o && (a.uptime_process_renderer = Math.floor(o));
   let {
@@ -325,7 +325,7 @@ var P = {
   ...s.default,
   getCampaignParams: s.getCampaignParams,
   setSystemAccessibilityFeatures: function(e) {
-    C = e
+    A = e
   },
   expandEventProperties: N,
   track: function(e, t) {
@@ -335,7 +335,7 @@ var P = {
         message: "".concat(e)
       }), null != n.throttlePercent && Math.random() > n.throttlePercent) return Promise.resolve();
     let i = N(t);
-    return R(e, i, n.logEventProperties), A(e, i, {
+    return R(e, i, n.logEventProperties), C(e, i, {
       flush: n.flush,
       fingerprint: n.fingerprint
     })

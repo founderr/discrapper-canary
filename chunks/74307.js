@@ -15,8 +15,8 @@ var i = n("37983"),
   c = n("577776"),
   f = n("324584"),
   _ = n("782340"),
-  h = n("430594"),
-  E = n("182893"),
+  E = n("430594"),
+  h = n("182893"),
   g = n("356410");
 let m = (0, o.v4)(),
   p = (0, o.v4)(),
@@ -61,8 +61,8 @@ class v extends s.Component {
         maxLength: n
       } = this.props;
       return (0, i.jsxs)("div", {
-        className: a(h.maxLength, {
-          [h.errorOverflow]: this.hasError()
+        className: a(E.maxLength, {
+          [E.errorOverflow]: this.hasError()
         }),
         "aria-hidden": "true",
         children: [null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0, " ", null != n && "/ ".concat(n)]
@@ -74,8 +74,8 @@ class v extends s.Component {
     if (this.props.showCharacterCount || !1 === this.props.showRemainingCharacterCount) return null;
     let e = this.getCharsLeftLength();
     return null == e ? null : (0, i.jsx)("div", {
-      className: a(h.maxLength, {
-        [h.errorOverflow]: e < 0
+      className: a(E.maxLength, {
+        [E.errorOverflow]: e < 0
       }),
       "aria-hidden": "true",
       children: e
@@ -102,7 +102,7 @@ class v extends s.Component {
       id: m,
       variant: "text-xs/normal",
       color: "text-danger",
-      className: h.errorMessage,
+      className: E.errorMessage,
       children: e
     })
   }
@@ -119,8 +119,8 @@ class v extends s.Component {
       spellCheck: v,
       resizeable: T,
       className: I,
-      id: C,
-      rows: A,
+      id: A,
+      rows: C,
       flex: y,
       autosize: N,
       required: R,
@@ -128,20 +128,20 @@ class v extends s.Component {
       inputRef: D
     } = this.props, P = N ? f.TextAreaAutosize : "textarea", L = this.hasError(), M = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, b = this.getAriaDescribedBy();
     return (0, i.jsxs)("div", {
-      className: a(E.inputWrapper, {
-        [h.flex]: y
+      className: a(h.inputWrapper, {
+        [E.flex]: y
       }),
       children: [(0, i.jsxs)("div", {
-        className: a(h.inputMaxLength, {
-          [h.flex]: y
+        className: a(E.inputMaxLength, {
+          [E.flex]: y
         }),
         children: [(0, i.jsx)(l.FocusRing, {
           children: (0, i.jsx)(P, {
             type: "text",
-            className: a(E.inputDefault, h.textArea, g.scrollbarDefault, I, {
-              [E.error]: L,
-              [E.disabled]: n,
-              [h.resizeable]: T
+            className: a(h.inputDefault, E.textArea, g.scrollbarDefault, I, {
+              [h.error]: L,
+              [h.disabled]: n,
+              [E.resizeable]: T
             }),
             "aria-labelledby": M,
             "aria-describedby": b,
@@ -149,7 +149,7 @@ class v extends s.Component {
             style: {
               paddingRight: this.getPaddingRight()
             },
-            id: C,
+            id: A,
             disabled: n,
             placeholder: r,
             value: s,
@@ -163,7 +163,7 @@ class v extends s.Component {
             onFocus: this.onFocus,
             onKeyDown: this.onKeyDown,
             onInvalid: O,
-            rows: A,
+            rows: C,
             ref: D
           })
         }), null != u && (0, i.jsx)(d.HiddenVisually, {

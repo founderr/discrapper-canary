@@ -32,7 +32,7 @@ function d(e) {
     }(d)]: n
   };
   null != f && (_[f] = n);
-  let h = s.useCallback(e => r(t, e), [r, t]);
+  let E = s.useCallback(e => r(t, e), [r, t]);
   return (0, i.jsx)(o.Clickable, {
     className: a(function(e) {
       switch (e) {
@@ -43,7 +43,7 @@ function d(e) {
           return u.pillItem
       }
     }(d), c, _),
-    onClick: h,
+    onClick: E,
     children: (0, i.jsx)(l.Text, {
       variant: "text-sm/medium",
       color: "none",

@@ -22,8 +22,8 @@ let c = Object.fromEntries(Object.keys(l.default.colors).map(e => [o(e), e])),
         className: o,
         lineClamp: f,
         color: _,
-        tabularNumbers: h = !1,
-        scaleFontToUserSetting: E = !1,
+        tabularNumbers: E = !1,
+        scaleFontToUserSetting: h = !1,
         ...g
       } = e,
       m = "",
@@ -51,8 +51,8 @@ let c = Object.fromEntries(Object.keys(l.default.colors).map(e => [o(e), e])),
       className: r({
         [u.defaultColor]: void 0 === _,
         [u.selectable]: a,
-        [u.tabularNumbers]: h,
-        [d.fontScaling]: E
+        [u.tabularNumbers]: E,
+        [d.fontScaling]: h
       }, m, d[n], o),
       ...g,
       style: Object.values(v).filter(Boolean).length > 0 ? v : void 0,

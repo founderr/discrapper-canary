@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return h
+    return E
   }
 });
 var i, s, r = n("37983"),
@@ -24,7 +24,7 @@ let _ = a.forwardRef(function(e, t) {
     LayerComponent: a,
     isVisible: o,
     onClose: _
-  } = e, h = function() {
+  } = e, E = function() {
     let e = (0, d.useToken)(d.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({
         opacity: .25
       }),
@@ -34,7 +34,7 @@ let _ = a.forwardRef(function(e, t) {
       DARK: t,
       BLUR: t
     }
-  }(), E = h[n], g = (0, d.useToken)(d.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({
+  }(), h = E[n], g = (0, d.useToken)(d.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({
     opacity: 0
   }), m = {
     background: g,
@@ -46,7 +46,7 @@ let _ = a.forwardRef(function(e, t) {
     },
     from: m,
     enter: {
-      background: E,
+      background: h,
       backdropFilter: "blur(".concat("BLUR" === n ? 8 : 0, "px)")
     },
     leave: m
@@ -72,4 +72,4 @@ let _ = a.forwardRef(function(e, t) {
     }) : null)
   })
 });
-var h = _
+var E = _

@@ -14,8 +14,8 @@ var i, s = n("917351"),
   c = n("686470"),
   f = n("645672"),
   _ = n("718517"),
-  h = n("964889"),
-  E = n("773336"),
+  E = n("964889"),
+  h = n("773336"),
   g = n("602043"),
   m = n("352326"),
   p = n("98328"),
@@ -24,8 +24,8 @@ let v = 1 * _.default.Millis.MINUTE;
 (i || (i = {})).DISPATCH_APPLICATION_PROGRESS = "dispatch_application_progress";
 let T = {},
   I = "file://",
-  C = !1,
-  A = 0,
+  A = !1,
+  C = 0,
   y = 0,
   N = 0,
   R = [],
@@ -80,33 +80,33 @@ class G extends a.default.Store {
     this.waitFor(d.default)
   }
   getState(e, t) {
-    let n = (0, h.getComboId)(e, t);
+    let n = (0, E.getComboId)(e, t);
     return T[n]
   }
   isUpToDate(e, t) {
-    let n = T[(0, h.getComboId)(e, t)];
+    let n = T[(0, E.getComboId)(e, t)];
     return null != n && n.type === S.LocalDispatchApplicationStates.UP_TO_DATE
   }
   shouldPatch(e, t) {
-    let n = T[(0, h.getComboId)(e, t)];
+    let n = T[(0, E.getComboId)(e, t)];
     return null != n && !0 === n.shouldPatch
   }
   isInstalled(e, t) {
-    let n = T[(0, h.getComboId)(e, t)];
+    let n = T[(0, E.getComboId)(e, t)];
     return null != n ? n.type !== S.LocalDispatchApplicationStates.UNINSTALLING : p.default.shouldBeInstalled(e, t)
   }
   supportsCloudSync(e, t) {
     null == t && (t = e);
-    let n = T[(0, h.getComboId)(e, t)];
+    let n = T[(0, E.getComboId)(e, t)];
     return null != n && null != n.storage && !!n.storage.sync
   }
   isLaunchable(e, t) {
     if (!(0, g.isSupportedPlatform)()) return !1;
-    let n = T[(0, h.getComboId)(e, t)];
+    let n = T[(0, E.getComboId)(e, t)];
     return null != n && n.type === S.LocalDispatchApplicationStates.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length
   }
   getDefaultLaunchOption(e, t) {
-    let n = T[(0, h.getComboId)(e, t)];
+    let n = T[(0, E.getComboId)(e, t)];
     if (null == n) return null;
     let {
       defaultLaunchOptionId: i,
@@ -115,7 +115,7 @@ class G extends a.default.Store {
     return null == i || null == s ? null : s[i]
   }
   getLaunchOptions(e, t) {
-    let n = T[(0, h.getComboId)(e, t)];
+    let n = T[(0, E.getComboId)(e, t)];
     return null == n || null == n.launchOptions ? [] : Object.values(n.launchOptions)
   }
   getHistoricalTotalBytesRead() {
@@ -129,27 +129,27 @@ class G extends a.default.Store {
   }
   whenInitialized(e) {
     this.addConditionalChangeListener(() => {
-      if (C) return setImmediate(e), !1
+      if (A) return setImmediate(e), !1
     })
   }
 }
 G.displayName = "DispatchApplicationStore";
 var F = new G(o.default, {
   CONNECTION_OPEN: function() {
-    C = !1
+    A = !1
   },
   DISPATCH_APPLICATION_STATE_UPDATE: function(e) {
     let {
       state: t
     } = e;
-    C = !0;
+    A = !0;
     let n = {},
       i = t.applications,
       s = null != t.currentTask ? t.currentTask.branchId : null,
       a = !1;
     for (let e in i)
       for (let t in i[e]) {
-        let d = (0, h.getComboId)(e, t);
+        let d = (0, E.getComboId)(e, t);
         if (n[d] = function(e) {
             let {
               build_id: t,
@@ -162,7 +162,7 @@ var F = new G(o.default, {
               launch_options: d,
               storage: c,
               install_path: _,
-              installed_size: h,
+              installed_size: E,
               repairing: g
             } = e, {
               should_patch: m
@@ -189,7 +189,7 @@ var F = new G(o.default, {
                           name: s,
                           working_dir: r
                         } = n, a = l.default.fileManager.join(e, i);
-                        (0, E.isMac)() && !a.startsWith(I) && (a = "".concat(I).concat(a)), t = null != r ? l.default.fileManager.join(e, r) : l.default.fileManager.dirname(a), v[s] = {
+                        (0, h.isMac)() && !a.startsWith(I) && (a = "".concat(I).concat(a)), t = null != r ? l.default.fileManager.join(e, r) : l.default.fileManager.dirname(a), v[s] = {
                           ...n,
                           id: s,
                           fullExecutablePath: a,
@@ -223,7 +223,7 @@ var F = new G(o.default, {
                   targetBuildId: n,
                   targetManifestIds: s,
                   installPath: _,
-                  installedSize: h,
+                  installedSize: E,
                   launchOptions: v,
                   defaultLaunchOptionId: T,
                   shouldPatch: m,
@@ -238,7 +238,7 @@ var F = new G(o.default, {
                   network_progress: d,
                   reader_progress: c,
                   progress: f,
-                  total: E,
+                  total: h,
                   paused: p
                 } = e.state, v = l.type;
                 return {
@@ -251,12 +251,12 @@ var F = new G(o.default, {
                   targetBuildId: n,
                   targetManifestIds: s,
                   installPath: _,
-                  installedSize: h,
+                  installedSize: E,
                   diskProgress: u,
                   networkProgress: d,
                   readerProgress: c,
                   progress: f,
-                  total: E,
+                  total: h,
                   paused: p,
                   shouldPatch: m
                 }
@@ -265,7 +265,7 @@ var F = new G(o.default, {
             throw Error("Invalid Dispatch State. state=".concat(e.state.type))
           }(i[e][t]), null != T[d]) {
           let e = V(n, d, L);
-          e > 0 && U(A += e);
+          e > 0 && U(C += e);
           let i = V(n, d, M);
           i > 0 && k(y += i);
           let r = V(n, d, b);
@@ -277,7 +277,7 @@ var F = new G(o.default, {
               case S.DispatchApplicationStages.VERIFYING:
               case S.DispatchApplicationStages.REPAIRING:
               case S.DispatchApplicationStages.POST_INSTALL_SCRIPTS:
-                u.default.setProgress("dispatch_application_progress", (0, h.calculateProgressPercentage)(e.progress, e.total) / 100), a = !0
+                u.default.setProgress("dispatch_application_progress", (0, E.calculateProgressPercentage)(e.progress, e.total) / 100), a = !0
             }
           }
         }

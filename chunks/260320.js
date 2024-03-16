@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   default: function() {
-    return h
+    return E
   }
 }), n("424973");
 var i = n("917351"),
@@ -69,7 +69,7 @@ class _ extends r.default.Store {
   }
 }
 _.displayName = "LobbyStore";
-var h = new _(a.default, {
+var E = new _(a.default, {
   CONNECTION_OPEN: function() {
     u = {}
   },

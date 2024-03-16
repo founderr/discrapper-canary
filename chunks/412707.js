@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return _
   },
   getPreviousView: function() {
-    return h
+    return E
   },
   getCurrentView: function() {
-    return E
+    return h
   },
   setEntrypoint: function() {
     return g
@@ -41,7 +41,7 @@ let f = (0, l.default)(() => ({
   })),
   _ = f;
 
-function h() {
+function E() {
   let {
     location: {
       state: e
@@ -50,7 +50,7 @@ function h() {
   return null == e ? void 0 : e.previousView
 }
 
-function E() {
+function h() {
   var e, t;
   let {
     location: {

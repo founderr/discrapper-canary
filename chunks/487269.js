@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getTimestampString: function() {
-    return E.default
+    return h.default
   },
   trackThreadBrowserTab: function() {
     return p
@@ -30,8 +30,8 @@ var i = n("866227"),
   c = n("568734"),
   f = n("34676"),
   _ = n("299039"),
-  h = n("755624"),
-  E = n("319126"),
+  E = n("755624"),
+  h = n("319126"),
   g = n("648564"),
   m = n("49111");
 
@@ -66,21 +66,21 @@ function T(e, t) {
       if ((0, c.hasFlag)(e, g.ThreadMemberFlags.NO_MESSAGES)) return f.MessageNotificationSettings[m.UserNotificationSettings.NO_MESSAGES];
       return f.MessageNotificationSettings[m.UserNotificationSettings.NULL]
     },
-    E = null !== (n = h.default.flags(e.id)) && void 0 !== n ? n : 0,
-    p = _(E),
-    S = h.default.isMuted(e.id),
-    v = (0, f.muteConfigToTimestamp)(h.default.getMuteConfig(e.id)),
+    h = null !== (n = E.default.flags(e.id)) && void 0 !== n ? n : 0,
+    p = _(h),
+    S = E.default.isMuted(e.id),
+    v = (0, f.muteConfigToTimestamp)(E.default.getMuteConfig(e.id)),
     {
       can_send_message: T,
       ...I
     } = s,
-    C = {
+    A = {
       ...I,
       channel_id: e.id,
       guild_id: r,
       parent_id: a,
       channel_type: e.type,
-      has_interacted_with_thread: (E & g.ThreadMemberFlags.HAS_INTERACTED) != 0,
+      has_interacted_with_thread: (h & g.ThreadMemberFlags.HAS_INTERACTED) != 0,
       parent_is_muted: u.default.isGuildOrCategoryOrChannelMuted(r, a),
       old_thread_notification_setting: p,
       new_thread_notification_setting: null != t.flags ? _(t.flags) : p,
@@ -90,7 +90,7 @@ function T(e, t) {
       old_thread_muted_until: v,
       new_thread_muted_until: null != t.mute_config ? (0, f.muteConfigToTimestamp)(t.mute_config) : v
     };
-  d.default.track(m.AnalyticEvents.THREAD_NOTIFICATION_SETTINGS_UPDATED, C)
+  d.default.track(m.AnalyticEvents.THREAD_NOTIFICATION_SETTINGS_UPDATED, A)
 }
 n("782340");
 let I = e => {

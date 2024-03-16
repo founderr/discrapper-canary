@@ -100,7 +100,7 @@ function _(e) {
   }
   return i.optionStates = s, !0
 }
-class h extends i.default.Store {
+class E extends i.default.Store {
   initialize() {
     r.default.addChangeListener(() => {
       let e = a.default.getChannelId();
@@ -152,8 +152,8 @@ class h extends i.default.Store {
     }
   }
 }
-h.displayName = "ApplicationCommandStore";
-let E = new h(s.default, {
+E.displayName = "ApplicationCommandStore";
+let h = new E(s.default, {
   CONNECTION_OPEN: u,
   CHANNEL_SELECT: u,
   LOGOUT: u,
@@ -186,4 +186,4 @@ let E = new h(s.default, {
     return o || l || u
   }
 });
-var g = E
+var g = h

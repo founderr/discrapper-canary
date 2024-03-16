@@ -12,7 +12,7 @@ function a(t) {
   let {
     application: e,
     onConfirm: a,
-    onCancel: r
+    onCancel: u
   } = t;
   return (0, l.openModalLazy)(async () => {
     let {
@@ -21,7 +21,7 @@ function a(t) {
     return i => (0, n.jsx)(t, {
       application: e,
       onConfirm: a,
-      onCancel: r,
+      onCancel: u,
       ...i
     })
   }), Promise.resolve()

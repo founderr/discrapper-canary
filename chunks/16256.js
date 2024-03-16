@@ -27,14 +27,14 @@ let c = {
       className: r,
       onDismiss: f,
       backgroundColor: _ = c.RED,
-      icon: h = u.default,
-      iconClassName: E
+      icon: E = u.default,
+      iconClassName: h
     } = e;
     return (0, i.jsxs)("div", {
       className: a(d.error, r, _),
       ref: t,
-      children: [(0, i.jsx)(h, {
-        className: a(d.icon, E)
+      children: [(0, i.jsx)(E, {
+        className: a(d.icon, h)
       }), (0, i.jsx)("div", {
         role: n,
         className: d.text,

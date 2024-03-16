@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return _
   },
   setPreferredCommandId: function() {
-    return h
+    return E
   },
   updateOptionStates: function() {
-    return E
+    return h
   },
   updateOptionValidationStates: function() {
     return g
@@ -52,7 +52,7 @@ function _(e) {
   })
 }
 
-function h(e, t) {
+function E(e, t) {
   a.default.dispatch({
     type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND",
     channelId: e,
@@ -60,7 +60,7 @@ function h(e, t) {
   })
 }
 
-function E(e, t) {
+function h(e, t) {
   a.default.dispatch({
     type: "APPLICATION_COMMAND_UPDATE_OPTIONS",
     channelId: e,
@@ -75,7 +75,7 @@ function g(e, t) {
       lastValidationResult: n
     }]
   }));
-  E(e, n)
+  h(e, n)
 }
 
 function m(e, t, n, i) {
@@ -93,10 +93,10 @@ function p(e, t, n) {
   let {
     query: c,
     name: _
-  } = t.autocomplete, h = u.default.fromTimestamp(Date.now());
+  } = t.autocomplete, E = u.default.fromTimestamp(Date.now());
   a.default.dispatch({
     type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST",
-    nonce: h,
+    nonce: E,
     channelId: t.channel.id,
     query: c,
     name: _
@@ -109,13 +109,13 @@ function p(e, t, n) {
       channel_id: t.channel.id,
       session_id: l.default.getSessionId(),
       data: n,
-      nonce: h
+      nonce: E
     },
     timeout: 3e3
   }).catch(() => {
     a.default.dispatch({
       type: "INTERACTION_FAILURE",
-      nonce: h
+      nonce: E
     })
   })
 }

@@ -31,13 +31,13 @@ n.r(t), n.d(t, {
     return Y
   },
   getStep: function() {
-    return j
+    return K
   },
   getHeaderText: function() {
-    return W
+    return j
   },
   getButtonText: function() {
-    return K
+    return W
   },
   getBodyText: function() {
     return z
@@ -64,8 +64,8 @@ var i, s, r = n("506838"),
   c = n("697218"),
   f = n("599110"),
   _ = n("449008"),
-  h = n("773336"),
-  E = n("719923"),
+  E = n("773336"),
+  h = n("719923"),
   g = n("655518"),
   m = n("271560"),
   p = n("49111"),
@@ -73,8 +73,8 @@ var i, s, r = n("506838"),
   v = n("782340");
 let T = g.default.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
   I = ["discordapp.com/gifts", "discord.com/gifts"].map(e => g.default.escape(e)),
-  C = [T, ...I].join("|"),
-  A = RegExp("(?: |^|https?://)(?:".concat(C, ")/([a-z0-9-]+)"), "gi"),
+  A = [T, ...I].join("|"),
+  C = RegExp("(?: |^|https?://)(?:".concat(A, ")/([a-z0-9-]+)"), "gi"),
   y = ["discord.com/billing/promotions", "promos.discord.gg"].map(e => g.default.escape(e)),
   N = [...y].join("|"),
   R = RegExp("(?: |^|https?://)(?:".concat(N, ")/([a-z0-9-]+)"), "gi"),
@@ -111,7 +111,7 @@ let F = e => (null == e ? void 0 : e.type) === p.MessageTypes.CUSTOM_GIFT && (nu
     let t;
     if (null == e) return [];
     let n = new Set;
-    for (; null != (t = A.exec(e)) && n.size < 3;) n.add(G(t[1]));
+    for (; null != (t = C.exec(e)) && n.size < 3;) n.add(G(t[1]));
     for (; null != (t = R.exec(e)) && n.size < 3;) n.add(G(t[1]));
     return Array.from(n)
   };
@@ -119,7 +119,7 @@ let F = e => (null == e ? void 0 : e.type) === p.MessageTypes.CUSTOM_GIFT && (nu
 function B() {
   let e, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
     n = window.GLOBAL_ENV.GIFT_CODE_HOST;
-  return null == n || (0, h.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)
+  return null == n || (0, E.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)
 }
 async function H(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -160,11 +160,11 @@ function Y(e, t) {
   })
 }
 
-function j(e, t, n, i, s, r, a) {
+function K(e, t, n, i, s, r, a) {
   return null == n && (i || s || null == e) ? !a || r || i || s ? i && (t.isSubscription || null != e) ? p.GiftCodeModalStates.SUCCESS : p.GiftCodeModalStates.CONFIRM : p.GiftCodeModalStates.OPEN : p.GiftCodeModalStates.ERROR
 }
 
-function W(e, t, n) {
+function j(e, t, n) {
   switch (e) {
     case p.GiftCodeModalStates.ERROR:
       return v.default.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
@@ -180,7 +180,7 @@ function W(e, t, n) {
   }
 }
 
-function K(e, t, n) {
+function W(e, t, n) {
   switch (e) {
     case p.GiftCodeModalStates.ERROR:
       return v.default.Messages.GIFT_CONFIRMATION_BUTTON_FAIL;
@@ -274,7 +274,7 @@ function q(e, t, n, i, s) {
         return v.default.Messages.GIFT_CONFIRMATION_BODY_INVALID;
       case p.AbortCodes.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
         return v.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_MISMATCH.format({
-          planName: (0, E.isPremiumExactly)(t, S.PremiumTypes.TIER_2) ? v.default.Messages.PREMIUM_TIER_2 : v.default.Messages.PREMIUM_TIER_1
+          planName: (0, h.isPremiumExactly)(t, S.PremiumTypes.TIER_2) ? v.default.Messages.PREMIUM_TIER_2 : v.default.Messages.PREMIUM_TIER_1
         });
       case p.AbortCodes.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
         return v.default.Messages.GIFT_CONFIRMATION_BODY_ERROR_SUBSCRIPTION_MANAGED;

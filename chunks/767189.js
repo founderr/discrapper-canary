@@ -53,8 +53,8 @@ let c = s.throttle(e => {
     screenshakeEnabledLocations: c,
     confettiEnabled: f,
     confettiSize: _,
-    confettiCount: h,
-    confettiEnabledLocations: E
+    confettiCount: E,
+    confettiEnabledLocations: h
   } = e;
   r.default.track(o.AnalyticEvents.POGGERMODE_SETTINGS_UPDATED, {
     enabled: t,
@@ -65,8 +65,8 @@ let c = s.throttle(e => {
     screenshake_enabled_locations: d(c, l),
     confetti_enabled: f,
     confetti_size: _,
-    confetti_count: h,
-    confetti_enabled_locations: d(E, u)
+    confetti_count: E,
+    confetti_enabled_locations: d(h, u)
   })
 }, 5e3);
 var f = c

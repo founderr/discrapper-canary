@@ -28,7 +28,7 @@ function _(e, t) {
   return c.request(e, t), !1
 }
 
-function h(e, t) {
+function E(e, t) {
   return t.forEach(t => {
     let {
       author: n,
@@ -38,12 +38,12 @@ function h(e, t) {
   }), !1
 }
 
-function E(e) {
+function h(e) {
   let {
     channelId: t,
     messages: n
   } = e, i = u.default.getChannel(t);
-  return null != i && null != i.guild_id && h(i.guild_id, n)
+  return null != i && null != i.guild_id && E(i.guild_id, n)
 }
 
 function g(e) {
@@ -51,7 +51,7 @@ function g(e) {
     guildId: t,
     messages: n
   } = e;
-  return null != t && h(t, s.flatten(n))
+  return null != t && E(t, s.flatten(n))
 }
 class m extends r.default.Store {
   initialize() {
@@ -80,16 +80,16 @@ var p = new m(a.default, {
   },
   SEARCH_FINISH: g,
   MOD_VIEW_SEARCH_FINISH: g,
-  LOCAL_MESSAGES_LOADED: E,
-  LOAD_MESSAGES_SUCCESS: E,
-  LOAD_MESSAGES_AROUND_SUCCESS: E,
-  LOAD_PINNED_MESSAGES_SUCCESS: E,
-  LOAD_RECENT_MENTIONS_SUCCESS: E,
+  LOCAL_MESSAGES_LOADED: h,
+  LOAD_MESSAGES_SUCCESS: h,
+  LOAD_MESSAGES_AROUND_SUCCESS: h,
+  LOAD_PINNED_MESSAGES_SUCCESS: h,
+  LOAD_RECENT_MENTIONS_SUCCESS: h,
   GUILD_FEED_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
       data: n
     } = e, i = (0, l.getMessagesFromGuildFeedFetch)(n);
-    return h(t, i)
+    return E(t, i)
   }
 })

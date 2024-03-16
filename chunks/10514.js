@@ -15,8 +15,8 @@ let d = {},
   c = {},
   f = new Set,
   _ = new Set,
-  h = {},
-  E = {};
+  E = {},
+  h = {};
 
 function g(e) {
   let t = e.skuId;
@@ -25,9 +25,9 @@ function g(e) {
   if (null != n) {
     var i;
     let t = new Set(Object.keys(n.paymentSourcePrices));
-    h[e.id] = t;
-    let s = Array.from(null !== (i = E[e.skuId]) && void 0 !== i ? i : new Set);
-    E[e.skuId] = new Set([...s, ...Array.from(t)])
+    E[e.id] = t;
+    let s = Array.from(null !== (i = h[e.skuId]) && void 0 !== i ? i : new Set);
+    h[e.skuId] = new Set([...s, ...Array.from(t)])
   }
   let s = c[t];
   null != s ? s.add(e.id) : c[t] = new Set([e.id])
@@ -54,7 +54,7 @@ function p(e) {
 m();
 
 function S() {
-  (0, a.clearObject)(d), (0, a.clearObject)(c), f.clear(), _.clear(), (0, a.clearObject)(h), (0, a.clearObject)(E), m()
+  (0, a.clearObject)(d), (0, a.clearObject)(c), f.clear(), _.clear(), (0, a.clearObject)(E), (0, a.clearObject)(h), m()
 }
 let v = [u.SubscriptionIntervalTypes.DAY, u.SubscriptionIntervalTypes.MONTH, u.SubscriptionIntervalTypes.YEAR];
 class T extends i.default.Store {
@@ -107,14 +107,14 @@ class T extends i.default.Store {
     _.add(e)
   }
   getPaymentSourcesForPlanId(e) {
-    return h.hasOwnProperty(e) ? h[e] : null
+    return E.hasOwnProperty(e) ? E[e] : null
   }
   getPaymentSourceIds() {
     let e = new Set;
-    return Object.values(h).forEach(t => t.forEach(t => e.add(t))), e
+    return Object.values(E).forEach(t => t.forEach(t => e.add(t))), e
   }
   hasPaymentSourceForSKUId(e, t) {
-    return u.PremiumSubscriptionSKUs.NONE === t || null != E[t] && E[t].has(e)
+    return u.PremiumSubscriptionSKUs.NONE === t || null != h[t] && h[t].has(e)
   }
   hasPaymentSourceForSKUIds(e, t) {
     let n = t.every(t => this.hasPaymentSourceForSKUId(e, t));
@@ -134,7 +134,7 @@ var I = new T(s.default, {
       skuId: t,
       subscriptionPlans: n
     } = e;
-    c[t] = new Set, E[t] = new Set, n.forEach(p), f.delete(t), _.delete(t)
+    c[t] = new Set, h[t] = new Set, n.forEach(p), f.delete(t), _.delete(t)
   },
   SUBSCRIPTION_PLANS_FETCH_FAILURE: function(e) {
     let {

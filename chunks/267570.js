@@ -18,8 +18,8 @@ var i = n("37983"),
   c = n("831588"),
   f = n("439932"),
   _ = n("49111"),
-  h = n("289382"),
-  E = n("782340"),
+  E = n("289382"),
+  h = n("782340"),
   g = n("720016");
 
 function m(e) {
@@ -27,11 +27,11 @@ function m(e) {
     children: t,
     wrapperClassName: n,
     embedded: r
-  } = e, [o, m] = s.useState(h.WaveStates.INITIAL), p = s.useCallback(e => {
+  } = e, [o, m] = s.useState(E.WaveStates.INITIAL), p = s.useCallback(e => {
     m(t => Math.max(t, e))
   }, []);
   return (0, u.usePageTitle)({
-    location: E.default.Messages.OAUTH2_TITLE
+    location: h.default.Messages.OAUTH2_TITLE
   }), (0, i.jsx)(l.ThemeContextProvider, {
     theme: _.ThemeTypes.DARK,
     children: (0, i.jsx)(d.default, {

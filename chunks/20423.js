@@ -1,10 +1,10 @@
     "use strict";
     t.r(a), t("860677");
-    var s, d, n, c, i, r = t("37983");
+    var s, d, n, i, c, r = t("37983");
     t("320777"), t("884691");
     var o = t("288661"),
-      l = t("627445"),
-      f = t.n(l),
+      f = t("627445"),
+      l = t.n(f),
       u = t("521143"),
       p = t("938460"),
       b = t("156820"),
@@ -31,7 +31,7 @@
       y = t("718517");
     let M = 5 * y.default.Millis.MINUTE,
       k = document.getElementById("app-mount");
-    f(null != k, "Could not find app-mount"), k.className = __OVERLAY__ ? "" : D.appMount;
+    l(null != k, "Could not find app-mount"), k.className = __OVERLAY__ ? "" : D.appMount;
     let x = (0, o.createRoot)(k),
       U = e => x.render((0, r.jsx)(C.default, {
         children: (0, r.jsx)(N.default, {
@@ -45,7 +45,7 @@
         })
       });
       let e = null === (d = (n = S.default.remoteApp).getVersion) || void 0 === d ? void 0 : d.call(n),
-        a = null === (c = (i = S.default.remoteApp).getBuildNumber) || void 0 === c ? void 0 : c.call(i),
+        a = null === (i = (c = S.default.remoteApp).getBuildNumber) || void 0 === i ? void 0 : i.call(c),
         t = {};
       null != S.default.remoteApp.getModuleVersions && (t = S.default.remoteApp.getModuleVersions()), _.default.setExtra({
         hostVersion: e,

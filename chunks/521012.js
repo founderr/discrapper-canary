@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   authenticatedUserFilter: function() {
-    return A
+    return C
   },
   default: function() {
     return R
@@ -18,8 +18,8 @@ var i = n("446674"),
 let c = null,
   f = null,
   _ = null,
-  h = null,
   E = null,
+  h = null,
   g = !1,
   m = !1,
   p = null,
@@ -34,19 +34,19 @@ function T(e) {
   if (-1 === i) return [n, ...t];
   {
     let e = [...t];
-    return C(n) && n.status !== d.SubscriptionStatusTypes.ENDED ? e[i] = n : e.splice(i, 1), e
+    return A(n) && n.status !== d.SubscriptionStatusTypes.ENDED ? e[i] = n : e.splice(i, 1), e
   }
 }
 
 function I() {
-  c = null, f = null, _ = null, h = null, E = null, g = !1, m = !1, p = null, S = !1
-}
-
-function C(e) {
-  return e.status !== d.SubscriptionStatusTypes.UNPAID
+  c = null, f = null, _ = null, E = null, h = null, g = !1, m = !1, p = null, S = !1
 }
 
 function A(e) {
+  return e.status !== d.SubscriptionStatusTypes.UNPAID
+}
+
+function C(e) {
   let t = l.default.getId();
   return e.userId === t
 }
@@ -57,7 +57,7 @@ function y(e, t) {
   if (null == i) return null;
   for (let n in i) {
     let s = i[n];
-    if (!A(s)) {
+    if (!C(s)) {
       if (!m) {
         let e = l.default.getId();
         v.log("user id mismatch between logged in user and SubscriptionStore user"), (0, u.captureBillingMessage)("user id mismatch between logged in user and SubscriptionStore user", {
@@ -101,10 +101,10 @@ class N extends i.default.Store {
     return null !== (t = null == c ? void 0 : c[e]) && void 0 !== t ? t : void 0
   }
   getActiveGuildSubscriptions() {
-    return h
+    return E
   }
   getActiveApplicationSubscriptions() {
-    return E
+    return h
   }
   getSubscriptionForPlanIds(e) {
     var t;
@@ -138,8 +138,8 @@ var R = new N(s.default, {
         return
       }
       let t = o.SubscriptionRecord.createFromServer(e);
-      n[t.id] = t, C(t) && (i[t.id] = t, t.type === d.SubscriptionTypes.GUILD && t.status !== d.SubscriptionStatusTypes.ENDED && s.push(t), t.type === d.SubscriptionTypes.APPLICATION && t.status !== d.SubscriptionStatusTypes.ENDED && r.push(t))
-    }), c = n, f = i, h = s, E = r
+      n[t.id] = t, A(t) && (i[t.id] = t, t.type === d.SubscriptionTypes.GUILD && t.status !== d.SubscriptionStatusTypes.ENDED && s.push(t), t.type === d.SubscriptionTypes.APPLICATION && t.status !== d.SubscriptionStatusTypes.ENDED && r.push(t))
+    }), c = n, f = i, E = s, h = r
   },
   BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function(e) {
     let {
@@ -148,14 +148,14 @@ var R = new N(s.default, {
     c = {
       ...c,
       [n.id]: n
-    }, C(n) && (f = {
+    }, A(n) && (f = {
       ...f,
       [n.id]: n
-    }), null != h && n.type === d.SubscriptionTypes.GUILD && (h = T({
-      activeSubscriptions: h,
-      record: n
-    })), null != E && n.type === d.SubscriptionTypes.APPLICATION && (h = T({
+    }), null != E && n.type === d.SubscriptionTypes.GUILD && (E = T({
       activeSubscriptions: E,
+      record: n
+    })), null != h && n.type === d.SubscriptionTypes.APPLICATION && (E = T({
+      activeSubscriptions: h,
       record: n
     }))
   },

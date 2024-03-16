@@ -8,8 +8,8 @@ var n = i("37983");
 i("884691");
 var l = i("77078"),
   a = i("987317"),
-  r = i("76393"),
-  u = i("393414"),
+  u = i("76393"),
+  r = i("393414"),
   d = i("755624"),
   s = i("263024"),
   o = i("271938"),
@@ -29,9 +29,9 @@ var l = i("77078"),
         bypassGuildIdCheck: S = !1
       } = t;
       e.isThread() && (await s.default.unarchiveThreadIfNecessary(e.id), !d.default.hasJoined(e.id) && await s.default.joinThread(e, "Join Voice"));
-      let N = r.default.getRemoteSessionId(),
-        p = f.default.getVoiceStateForSession(o.default.getId(), N),
-        y = (null == p ? void 0 : p.channelId) === e.id,
+      let p = u.default.getRemoteSessionId(),
+        N = f.default.getVoiceStateForSession(o.default.getId(), p),
+        y = (null == N ? void 0 : N.channelId) === e.id,
         h = y || c.default.getChannelId() === f.default.getCurrentClientVoiceChannelId(e.guild_id);
       return !v && !T && (0, _.shouldShowVoiceChannelChangeConfirmation)(e) ? new Promise(t => {
         (0, l.openModalLazy)(async () => {
@@ -55,7 +55,7 @@ var l = i("77078"),
         let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
           i = t.getGuildId();
         if (null == i && !e) throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");
-        (0, u.transitionTo)(E.Routes.CHANNEL(i, t.id))
+        (0, r.transitionTo)(E.Routes.CHANNEL(i, t.id))
       }(e, S), !0)
     }
   }

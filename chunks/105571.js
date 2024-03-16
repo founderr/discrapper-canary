@@ -93,7 +93,7 @@ function O(e) {
     M = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
     k = (0, p.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != M ? M : ""),
     L = (0, f.getIconComponent)(u),
-    P = l.useMemo(() => {
+    b = l.useMemo(() => {
       var e, t;
       return (0, m.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
     }, [null === (n = u.application) || void 0 === n ? void 0 : n.description]);
@@ -132,7 +132,7 @@ function O(e) {
           className: s(v.appDescription, N.markup),
           variant: "text-sm/medium",
           lineClamp: 3,
-          children: P
+          children: b
         })]
       }), (0, i.jsx)(C.default, {
         commands: I,

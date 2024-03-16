@@ -15,8 +15,8 @@ var i = n("917351"),
   c = n("271938"),
   f = n("950104"),
   _ = n("42203"),
-  h = n("260320"),
-  E = n("42887"),
+  E = n("260320"),
+  h = n("42887"),
   g = n("945956"),
   m = n("590401"),
   p = n("18494"),
@@ -24,12 +24,12 @@ var i = n("917351"),
   v = n("205817"),
   T = n("41642"),
   I = n("518916"),
-  C = n("571420"),
-  A = n("399010"),
+  A = n("571420"),
+  C = n("399010"),
   y = n("49111"),
   N = n("397336");
 let R = window.DiscordNative;
-I.socket.dispatcher.getDispatchHandler = A.default;
+I.socket.dispatcher.getDispatchHandler = C.default;
 let O = new l.default("ConnectionStore"),
   D = 0,
   P = null,
@@ -73,7 +73,7 @@ function V(e) {
 }
 class G extends r.default.Store {
   initialize() {
-    this.waitFor(c.default, p.default, _.default, f.default, h.default, d.default), this.syncWith([E.default], U), this.syncWith([S.default], w)
+    this.waitFor(c.default, p.default, _.default, f.default, E.default, d.default), this.syncWith([h.default], U), this.syncWith([S.default], w)
   }
   getSocket() {
     return I.socket
@@ -168,7 +168,7 @@ var F = new G(a.default, {
     })
   },
   APP_STATE_UPDATE: function(e) {
-    return e.state === y.AppStates.ACTIVE && (C.setIsPaused(!1), c.default.isAuthenticated() && I.socket.resetBackoff("App state is active")), !1
+    return e.state === y.AppStates.ACTIVE && (A.setIsPaused(!1), c.default.isAuthenticated() && I.socket.resetBackoff("App state is active")), !1
   },
   GUILD_MEMBERS_REQUEST: function(e) {
     return I.socket.isSessionEstablished() && ("userIds" in e ? s(e.userIds).chunk(100).forEach(t => {

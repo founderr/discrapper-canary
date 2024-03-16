@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 }), n("222007");
 var s = n("446674"),
@@ -15,7 +15,7 @@ var s = n("446674"),
 let c = "BlockedDomainStore",
   f = "BlockedDomainRevision",
   _ = null;
-class h extends s.default.Store {
+class E extends s.default.Store {
   initialize() {
     i = null, r.default.get(c) && (r.default.remove(f), r.default.remove(c))
   }
@@ -44,8 +44,8 @@ class h extends s.default.Store {
     }), a) : null
   }
 }
-h.displayName = "BlockedDomainStore";
-var E = new h(a.default, {
+E.displayName = "BlockedDomainStore";
+var h = new E(a.default, {
   BLOCKED_DOMAIN_LIST_FETCHED: function(e) {
     let {
       list: t,

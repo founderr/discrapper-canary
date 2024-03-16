@@ -11,8 +11,8 @@ var i, s, r, a, o = n("37983"),
   c = n("627445"),
   f = n.n(c),
   _ = n("509043"),
-  h = n("669491"),
-  E = n("718776"),
+  E = n("669491"),
+  h = n("718776"),
   g = n("36694"),
   m = n("49111"),
   p = n("139368");
@@ -40,7 +40,7 @@ class T extends l.PureComponent {
     if (!1 === t) return s;
     if (s = {
         ...s
-      }, i === h.default.unsafe_rawColors.BRAND_500.css) switch (n) {
+      }, i === E.default.unsafe_rawColors.BRAND_500.css) switch (n) {
       case "default":
         s.borderColor = "var(--control-brand-foreground)";
         break;
@@ -72,7 +72,7 @@ class T extends l.PureComponent {
       type: t,
       color: n
     } = this.props;
-    return e ? "inverted" === t || "row" === t ? h.default.unsafe_rawColors.WHITE_500.css : n : h.default.unsafe_rawColors.TRANSPARENT.css
+    return e ? "inverted" === t || "row" === t ? E.default.unsafe_rawColors.WHITE_500.css : n : E.default.unsafe_rawColors.TRANSPARENT.css
   }
   render() {
     let {
@@ -88,7 +88,7 @@ class T extends l.PureComponent {
       reverse: c,
       checkboxColor: f,
       displayOnly: _,
-      type: h,
+      type: E,
       onClick: S
     } = this.props, T = null != l ? (0, o.jsx)("div", {
       className: d(p.label, e ? p.labelDisabled : p.labelClickable, c ? p.labelReversed : p.labelForward),
@@ -99,10 +99,10 @@ class T extends l.PureComponent {
     }) : null, I = this.props.disabled ? p.inputDisabled : this.props.readOnly ? p.inputReadonly : p.inputDefault;
     return (0, o.jsxs)(_ ? "span" : "label", {
       className: d(e ? p.checkboxWrapperDisabled : p.checkboxWrapper, v[s], r, {
-        [p.row]: "row" === h,
+        [p.row]: "row" === E,
         [p.checked]: n
       }),
-      children: [c ? T : null, !_ && (0, o.jsx)(E.FocusRing, {
+      children: [c ? T : null, !_ && (0, o.jsx)(h.FocusRing, {
         children: (0, o.jsx)("input", {
           className: d(a, I),
           type: "checkbox",
@@ -149,7 +149,7 @@ T.Types = i, T.Shapes = S, T.Aligns = s, T.defaultProps = {
   displayOnly: !1,
   value: !1,
   type: "default",
-  color: h.default.unsafe_rawColors.BRAND_500.css,
+  color: E.default.unsafe_rawColors.BRAND_500.css,
   shape: S.BOX,
   align: "center",
   onChange: m.NOOP,

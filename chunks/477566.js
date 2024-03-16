@@ -22,8 +22,8 @@ var s = n("551042"),
         onCloseCallback: c,
         secondaryConfirmText: f,
         onConfirmSecondary: _,
-        className: h,
-        titleClassName: E
+        className: E,
+        titleClassName: h
       } = e;
       (0, s.openModal)(e => (0, i.jsx)(r.default, {
         ...e,
@@ -36,8 +36,8 @@ var s = n("551042"),
         onCancel: d,
         secondaryConfirmText: f,
         onConfirmSecondary: _,
-        className: h,
-        titleClassName: E
+        className: E,
+        titleClassName: h
       }), {
         onCloseCallback: c
       })

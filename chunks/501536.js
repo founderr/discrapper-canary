@@ -46,7 +46,7 @@ function k(e) {
   return "autocomplete-".concat(e, "-title")
 }
 let L = l.createContext(null);
-class P extends l.PureComponent {
+class b extends l.PureComponent {
   isSelectable() {
     return this.selectable
   }
@@ -113,7 +113,7 @@ class P extends l.PureComponent {
     }
   }
 }
-class b extends l.PureComponent {
+class P extends l.PureComponent {
   render() {
     let {
       children: e,
@@ -137,7 +137,7 @@ class b extends l.PureComponent {
     }) : null
   }
 }
-b.Generic = class e extends P {
+P.Generic = class e extends b {
   renderContent() {
     let {
       text: e,
@@ -153,7 +153,7 @@ b.Generic = class e extends P {
       }) : null]
     })
   }
-}, b.Loading = function(e) {
+}, P.Loading = function(e) {
   let t = l.useMemo(() => o.random(60, 120), []);
   return (0, i.jsx)("div", {
     className: R.base,
@@ -171,7 +171,7 @@ b.Generic = class e extends P {
       })
     })
   })
-}, b.Title = function(e) {
+}, P.Title = function(e) {
   let {
     title: t,
     className: n,
@@ -186,7 +186,7 @@ b.Generic = class e extends P {
       children: [t, a]
     })
   })
-}, b.Divider = class e extends P {
+}, P.Divider = class e extends b {
   renderContent() {
     let {
       className: e
@@ -198,7 +198,7 @@ b.Generic = class e extends P {
   constructor(...e) {
     super(...e), this.layoutClass = R.dividerContainer, this.selectable = !1
   }
-}, b.User = class e extends P {
+}, P.User = class e extends b {
   renderContent() {
     let {
       user: e,
@@ -233,7 +233,7 @@ b.Generic = class e extends P {
       })]
     })
   }
-}, b.Role = class e extends P {
+}, P.Role = class e extends b {
   renderContent() {
     let {
       role: e,
@@ -260,7 +260,7 @@ b.Generic = class e extends P {
       })]
     })
   }
-}, b.Channel = class e extends P {
+}, P.Channel = class e extends b {
   renderContent() {
     let {
       channel: e,
@@ -280,7 +280,7 @@ b.Generic = class e extends P {
       }) : null]
     })
   }
-}, b.Command = class e extends P {
+}, P.Command = class e extends b {
   renderContent() {
     let {
       command: e
@@ -300,7 +300,7 @@ b.Generic = class e extends P {
       })]
     })
   }
-}, b.NewCommand = class e extends P {
+}, P.NewCommand = class e extends b {
   isSelectable() {
     return this.props.command.inputType !== f.ApplicationCommandInputType.PLACEHOLDER
   }
@@ -323,7 +323,7 @@ b.Generic = class e extends P {
       isSelectable: r
     })
   }
-}, b.Emoji = class e extends P {
+}, P.Emoji = class e extends b {
   renderContent() {
     let {
       emoji: e,
@@ -352,7 +352,7 @@ b.Generic = class e extends P {
   constructor(...e) {
     super(...e), this.layoutClass = s(R.autocompleteRowVertical, R.autocompleteRowVerticalSmall, this.props.isLocked ? R.premiumEmoji : null)
   }
-}, b.GIFIntegration = class e extends P {
+}, P.GIFIntegration = class e extends b {
   renderContent() {
     let {
       width: e,
@@ -369,7 +369,7 @@ b.Generic = class e extends P {
   constructor(...e) {
     super(...e), this.layoutClass = R.autocompleteRowHorizontal
   }
-}, b.Sticker = class e extends P {
+}, P.Sticker = class e extends b {
   renderContent() {
     var e, t;
     let n;
@@ -401,11 +401,11 @@ b.Generic = class e extends P {
   constructor(...e) {
     super(...e), this.layoutClass = s(R.autocompleteRowVertical, R.autocompleteRowVerticalSmall)
   }
-}, b.EmojiUpsell = class e extends P {
+}, P.EmojiUpsell = class e extends b {
   renderContent() {
     return (0, i.jsx)(E.default, {
       emojis: this.props.emojis
     })
   }
 };
-var j = b
+var j = P

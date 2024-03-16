@@ -15,8 +15,8 @@ var i = n("714617"),
   c = n("718517"),
   f = n("47319"),
   _ = n("102985"),
-  h = n("49111");
-let E = 1 * c.default.Millis.MINUTE,
+  E = n("49111");
+let h = 1 * c.default.Millis.MINUTE,
   g = e => "https://youtube.com/watch?v=".concat(e),
   m = 5 * c.default.Millis.MINUTE,
   p = /live_user_(.*)-\{width\}/,
@@ -24,9 +24,9 @@ let E = 1 * c.default.Millis.MINUTE,
   v = 0,
   T = null,
   I = new Set,
-  C = {};
+  A = {};
 
-function A(e, t, n) {
+function C(e, t, n) {
   return a.default.get({
     url: "".concat("https://api.twitch.tv/helix").concat(e),
     query: t,
@@ -37,16 +37,16 @@ function A(e, t, n) {
   })
 }
 async function y(e, t) {
-  let n = C[e];
+  let n = A[e];
   if (null != n) return n;
   let {
     body: {
       data: i
     }
-  } = await A("/games", {
+  } = await C("/games", {
     id: e
   }, t), s = i[0].name;
-  return C[e] = s, s
+  return A[e] = s, s
 }
 let N = new class e {
   start() {
@@ -67,7 +67,7 @@ let N = new class e {
         body: {
           data: o
         }
-      } = await A("/streams", {
+      } = await C("/streams", {
         user_id: e.id,
         first: 1
       }, t), l = o[0];
@@ -76,9 +76,9 @@ let N = new class e {
         thumbnail_url: c,
         game_id: f,
         title: _
-      } = l, E = {
-        large_image: null != c && null !== (i = (0, d.getAssetFromImageURL)(h.PlatformTypes.TWITCH, c)) && void 0 !== i ? i : void 0
-      }, g = await y(f, t), m = u.default.get(h.PlatformTypes.TWITCH);
+      } = l, h = {
+        large_image: null != c && null !== (i = (0, d.getAssetFromImageURL)(E.PlatformTypes.TWITCH, c)) && void 0 !== i ? i : void 0
+      }, g = await y(f, t), m = u.default.get(E.PlatformTypes.TWITCH);
       let S = null !== (r = c, s = null === (a = p.exec(r)) || void 0 === a ? void 0 : a[1]) && void 0 !== s ? s : e.name;
       return {
         url: null === (n = m.getPlatformUserUrl) || void 0 === n ? void 0 : n.call(m, {
@@ -86,7 +86,7 @@ let N = new class e {
           name: S
         }),
         name: m.name,
-        assets: E,
+        assets: h,
         details: _,
         state: g
       }
@@ -124,11 +124,11 @@ let N = new class e {
           thumbnails: o
         }
       } = i[0], l = {
-        large_image: null !== (n = (0, d.getAssetFromImageURL)(h.PlatformTypes.YOUTUBE, o.high.url)) && void 0 !== n ? n : void 0
+        large_image: null !== (n = (0, d.getAssetFromImageURL)(E.PlatformTypes.YOUTUBE, o.high.url)) && void 0 !== n ? n : void 0
       };
       return T = {
         url: g(s),
-        name: u.default.get(h.PlatformTypes.YOUTUBE).name,
+        name: u.default.get(E.PlatformTypes.YOUTUBE).name,
         details: r,
         assets: l
       }
@@ -142,10 +142,10 @@ let N = new class e {
     let e = f.default.getAccounts();
     if (null == e) return;
     null != this._nextCheck && clearTimeout(this._nextCheck);
-    let t = [h.PlatformTypes.TWITCH],
+    let t = [E.PlatformTypes.TWITCH],
       n = Date.now();
-    v <= n && (t.push(h.PlatformTypes.YOUTUBE), v = n + m);
-    let i = e.filter(e => t.includes(e.type)).map(e => e.type === h.PlatformTypes.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e));
+    v <= n && (t.push(E.PlatformTypes.YOUTUBE), v = n + m);
+    let i = e.filter(e => t.includes(e.type)).map(e => e.type === E.PlatformTypes.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e));
     Promise.allSettled(i).then(e => {
       if (this._started) {
         var t;
@@ -159,7 +159,7 @@ let N = new class e {
     })
   }
   _scheduleCheck() {
-    this._started && (this._nextCheck = setTimeout(() => this._check(), E))
+    this._started && (this._nextCheck = setTimeout(() => this._check(), h))
   }
   constructor() {
     this._started = !1

@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("144747"),
   E = n("983782"),
   p = n("659500"),
-  C = n("452453"),
-  m = n("49111");
+  m = n("452453"),
+  C = n("49111");
 let S = e => {
   let {
     children: t,
@@ -28,7 +28,7 @@ let S = e => {
     position: f,
     align: h,
     impressionName: p,
-    impressionProperties: C
+    impressionProperties: m
   } = e, S = r.useRef(null);
   r.useEffect(() => {
     var e, t;
@@ -54,18 +54,18 @@ let S = e => {
   }), (0, c.default)({
     type: i.ImpressionTypes.MENU,
     name: p,
-    properties: C
+    properties: m
   });
   let _ = (0, d.useWindowDispatch)(),
-    T = r.useCallback(() => {
-      _.dispatch(m.ComponentActions.POPOUT_SHOW)
-    }, [_]),
     v = r.useCallback(() => {
-      _.dispatch(m.ComponentActions.POPOUT_HIDE)
+      _.dispatch(C.ComponentActions.POPOUT_SHOW)
+    }, [_]),
+    T = r.useCallback(() => {
+      _.dispatch(C.ComponentActions.POPOUT_HIDE)
     }, [_]);
   return (0, a.jsx)(E.AppReferencePositionLayer, {
-    onMount: T,
-    onUnmount: v,
+    onMount: v,
+    onUnmount: T,
     reference: () => o,
     position: null != f ? f : "right",
     align: null != h ? h : "top",
@@ -81,7 +81,7 @@ class g extends r.PureComponent {
       renderLazy: e,
       renderWindow: t
     } = this.props;
-    if (t.addEventListener("resize", this.closeResize, !0), p.ComponentDispatch.subscribe(m.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e) {
+    if (t.addEventListener("resize", this.closeResize, !0), p.ComponentDispatch.subscribe(C.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e) {
       let t = setTimeout(() => {
         this.setState({
           render: () => (0, a.jsx)(u.MenuSpinner, {})
@@ -107,7 +107,7 @@ class g extends r.PureComponent {
     let {
       renderWindow: e
     } = this.props;
-    e.removeEventListener("resize", this.closeResize, !0), p.ComponentDispatch.unsubscribe(m.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu)
+    e.removeEventListener("resize", this.closeResize, !0), p.ComponentDispatch.unsubscribe(C.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu)
   }
   render() {
     var e;
@@ -132,7 +132,7 @@ class g extends r.PureComponent {
           position: r
         } = e;
         return u({
-          className: C.ContextMenuClassName,
+          className: m.ContextMenuClassName,
           position: r,
           theme: s,
           onHeightUpdate: a,

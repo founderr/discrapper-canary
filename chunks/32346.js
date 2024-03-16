@@ -2,7 +2,7 @@
 let i, s, r;
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 }), n("222007");
 var a = n("917351"),
@@ -45,7 +45,7 @@ class _ extends l.default.PersistedStore {
   }
 }
 _.displayName = "HangStatusStore", _.persistKey = "HangStatusStore";
-var h = new _(u.default, {
+var E = new _(u.default, {
   LOGOUT: function() {
     c = f()
   },

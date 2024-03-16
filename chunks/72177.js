@@ -2,7 +2,7 @@
 let i, s, r;
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return A
   }
 });
 var a = n("748820"),
@@ -13,8 +13,8 @@ var a = n("748820"),
   c = n("697796"),
   f = n("766274"),
   _ = n("922932"),
-  h = n("773336"),
-  E = n("197881");
+  E = n("773336"),
+  h = n("197881");
 let g = "BrowserHandoffStore",
   m = !1,
   p = new u.Timeout;
@@ -32,10 +32,10 @@ function T() {
 }
 class I extends o.default.Store {
   initialize() {
-    !1 !== l.default.get(g) && (m = h.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
+    !1 !== l.default.get(g) && (m = E.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
   }
   isHandoffAvailable() {
-    return !E.ProcessArgs.isDisallowPopupsSet() && m
+    return !h.ProcessArgs.isDisallowPopupsSet() && m
   }
   get user() {
     return r
@@ -45,7 +45,7 @@ class I extends o.default.Store {
   }
 }
 I.displayName = "BrowserHandoffStore";
-var C = new I(d.default, {
+var A = new I(d.default, {
   RPC_SERVER_READY: function(e) {
     i = "".concat(location.protocol, "//").concat(location.host, "/handoff?rpc=").concat(e.port), S()
   },

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _
   },
   Dots: function() {
-    return h
+    return E
   }
 }), n("222007");
 var i = n("37983"),
@@ -74,13 +74,13 @@ let _ = s.memo(function(e) {
           })) : await new Promise(e => setTimeout(e, 1e3))
         }
       }
-    })), h = (6 * t + t / 4 * 2) / 2;
+    })), E = (6 * t + t / 4 * 2) / 2;
     return (0, i.jsx)(i.Fragment, {
       children: [0, 1, 2].map(e => {
         let s = .25 * e,
           u = t + e * (t * a);
         return (0, i.jsx)(o.animated.circle, {
-          cx: n ? n.to([0, 1], [h, u]) : u,
+          cx: n ? n.to([0, 1], [E, u]) : u,
           cy: t,
           r: _.dotCycle.to(e => f(e - s)).to([0, .4, .8, 1], [.8 * t, .8 * t, t, t]).to(e => l.current ? e : t),
           fill: r,
@@ -91,24 +91,24 @@ let _ = s.memo(function(e) {
       })
     })
   }),
-  h = s.memo(s.forwardRef(function(e, t) {
+  E = s.memo(s.forwardRef(function(e, t) {
     let {
       dotRadius: n,
       x: s,
       y: r,
       hide: c = !1,
       themed: f = !1,
-      className: h
-    } = e, E = (0, o.useTransition)(c, {
+      className: E
+    } = e, h = (0, o.useTransition)(c, {
       ...d,
       key: e => e ? "true" : "false",
       immediate: !u()
     });
-    return E((e, u, d) => {
+    return h((e, u, d) => {
       let {
         dotPosition: c
       } = e, {
-        key: E
+        key: h
       } = d;
       return u ? null : (0, i.jsx)("svg", {
         ref: t,
@@ -116,7 +116,7 @@ let _ = s.memo(function(e) {
         y: r,
         width: 6 * n + n / 2 * 2,
         height: 2 * n,
-        className: a(h, l.dots, f ? l.themed : null),
+        className: a(E, l.dots, f ? l.themed : null),
         children: (0, i.jsx)(o.animated.g, {
           style: {
             opacity: c.to(e => Math.min(1, Math.max(e, 0)))
@@ -126,6 +126,6 @@ let _ = s.memo(function(e) {
             dotPosition: c
           })
         })
-      }, E)
+      }, h)
     })
   }))

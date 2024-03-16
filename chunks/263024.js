@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return C
   }
 }), n("702976");
 var i = n("843117"),
@@ -15,8 +15,8 @@ var i = n("843117"),
   c = n("271938"),
   f = n("42203"),
   _ = n("957255"),
-  h = n("449008"),
-  E = n("821343"),
+  E = n("449008"),
+  h = n("821343"),
   g = n("755624"),
   m = n("487269"),
   p = n("25932"),
@@ -37,7 +37,7 @@ function I(e, t) {
   }), t))
 }
 
-function C(e, t) {
+function A(e, t) {
   r.default.dispatch({
     type: "THREAD_MEMBER_LOCAL_UPDATE",
     id: e.id,
@@ -46,7 +46,7 @@ function C(e, t) {
     isJoining: t
   })
 }
-var A = {
+var C = {
   archiveThread(e, t) {
     let n = {
       archived: !0
@@ -102,7 +102,7 @@ var A = {
     invitable: t
   }),
   async joinThread(e, t) {
-    e.isForumPost() && C(e, !0);
+    e.isForumPost() && A(e, !0);
     try {
       return await s.default.post({
         url: S.Endpoints.THREAD_MEMBER(e.id),
@@ -122,7 +122,7 @@ var A = {
         title: T.default.Messages.ERROR,
         body: T.default.Messages.ERROR_OCCURRED_TRY_AGAIN
       });
-      e.isForumPost() && C(e, !1)
+      e.isForumPost() && A(e, !1)
     }
   },
   async addMember(e, t, n) {
@@ -147,7 +147,7 @@ var A = {
       })
     }
   },
-  leaveThread: (e, t) => (e.isForumPost() && C(e, !1), s.default.delete({
+  leaveThread: (e, t) => (e.isForumPost() && A(e, !1), s.default.delete({
     url: S.Endpoints.THREAD_MEMBER(e.id),
     query: {
       location: t
@@ -264,7 +264,7 @@ var A = {
     })
   },
   loadArchivedThreads(e, t, n, a, o) {
-    !E.default.isLoading(t, n, a) && (r.default.dispatch({
+    !h.default.isLoading(t, n, a) && (r.default.dispatch({
       type: "LOAD_ARCHIVED_THREADS",
       channelId: t,
       sortOrder: n,
@@ -275,7 +275,7 @@ var A = {
         archived: !0,
         sort_by: "last_message_time",
         sort_order: "desc",
-        limit: E.PAGE_SIZE,
+        limit: h.PAGE_SIZE,
         tag: a.size > 0 ? Array.from(a).join(",") : void 0,
         tag_setting: i.ThreadSearchTagSetting.MATCH_SOME,
         offset: o
@@ -307,7 +307,7 @@ var A = {
         firstMessages: d,
         mostRecentMessages: c,
         members: (null != l ? l : []).map(e => (0, p.default)(e)),
-        owners: s.map(e => e.owner).filter(h.isNotNullish),
+        owners: s.map(e => e.owner).filter(E.isNotNullish),
         hasMore: u
       })
     }, () => {

@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return I
   },
   updateImpersonatedRoles: function() {
-    return C
+    return A
   },
   updateImpersonatedData: function() {
-    return A
+    return C
   }
 }), n("222007");
 var i = n("913144"),
@@ -30,8 +30,8 @@ var i = n("913144"),
   c = n("18494"),
   f = n("282109"),
   _ = n("599110"),
-  h = n("38654"),
-  E = n("507950"),
+  E = n("38654"),
+  h = n("507950"),
   g = n("49111"),
   m = n("724210");
 
@@ -39,7 +39,7 @@ function p(e, t) {
   _.default.track(g.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
     num_roles: Object.keys(t.roles).length,
     ...(0, s.collectGuildAnalyticsMetadata)(e),
-    is_viewing_as_member: t.type === E.ImpersonateType.NEW_MEMBER
+    is_viewing_as_member: t.type === h.ImpersonateType.NEW_MEMBER
   }), i.default.dispatch({
     type: "IMPERSONATE_UPDATE",
     guildId: e,
@@ -48,11 +48,11 @@ function p(e, t) {
 }
 
 function S(e, t) {
-  let n = h.default.getData(e);
+  let n = E.default.getData(e);
   null != n && n.type === t.type && (_.default.track(g.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
     num_roles: Object.keys(n.roles).length,
     ...(0, s.collectGuildAnalyticsMetadata)(e),
-    is_viewing_as_member: n.type === E.ImpersonateType.NEW_MEMBER
+    is_viewing_as_member: n.type === h.ImpersonateType.NEW_MEMBER
   }), i.default.dispatch({
     type: "IMPERSONATE_UPDATE",
     guildId: e,
@@ -83,12 +83,12 @@ function T(e) {
 function I(e, t, n) {
   let i = new Set(f.default.getOptedInChannels(e));
   t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), S(e, {
-    type: E.ImpersonateType.NEW_MEMBER,
+    type: h.ImpersonateType.NEW_MEMBER,
     optInChannels: i
   })
 }
 
-function C(e, t) {
+function A(e, t) {
   let n = u.default.getRoles(e);
   ! function(e, t) {
     let n = [...o.default.getSelectableChannelIds(e), ...o.default.getVocalChannelIds(e)],
@@ -104,14 +104,14 @@ function C(e, t) {
   }(e, t);
   let i = {};
   t.forEach(e => i[e] = n[e]), S(e, {
-    type: E.ImpersonateType.NEW_MEMBER,
+    type: h.ImpersonateType.NEW_MEMBER,
     roles: i
   })
 }
 
-function A(e, t) {
+function C(e, t) {
   S(e, {
-    type: E.ImpersonateType.NEW_MEMBER,
+    type: h.ImpersonateType.NEW_MEMBER,
     ...t
   })
 }

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _
   },
   useName: function() {
-    return h
+    return E
   },
   humanizeStatus: function() {
     return g
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return I
   },
   default: function() {
-    return C
+    return A
   }
 }), n("70102");
 var i = n("446674"),
@@ -58,7 +58,7 @@ function _(e) {
   return n && i.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && "0" === e.discriminator && (i = l(i)), i
 }
 
-function h(e) {
+function E(e) {
   var t;
   let n = (0, i.useStateFromStores)([s.default], () => s.default.hidePersonalInformation);
   if (null == e) return;
@@ -66,7 +66,7 @@ function h(e) {
   return n && r.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && "0" === e.discriminator && (r = l(r)), r
 }
 
-function E(e) {
+function h(e) {
   if (null != e) {
     if (c(e.globalName)) return e.globalName;
     else if (c(e.global_name)) return e.global_name;
@@ -142,9 +142,9 @@ function I(e) {
     if (null != e) return e.isPrivate() && e.isDM() ? r.default.getUser(e.getRecipientId()) : null
   })
 }
-var C = {
+var A = {
   getName: _,
-  useName: h,
+  useName: E,
   getUserTag: T,
   useUserTag: function(e, t) {
     let n = {
@@ -158,11 +158,11 @@ var C = {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null == e) return "???";
-    let i = E(e),
+    let i = h(e),
       s = n ? T(e) : null !== (t = e.username) && void 0 !== t ? t : "???";
     return i === s ? i : null != i ? "".concat(i, " (").concat(s, ")") : s
   },
-  getGlobalName: E,
+  getGlobalName: h,
   humanizeStatus: g,
   useDirectMessageRecipient: I
 }

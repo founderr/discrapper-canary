@@ -23,11 +23,11 @@ function l(e) {
     c = i.getCurrentUser(),
     f = !1;
   if (null != c) {
-    var _, h;
-    f = null !== (h = null === (_ = l.getMember(e, c.id)) || void 0 === _ ? void 0 : _.isPending) && void 0 !== h && h
+    var _, E;
+    f = null !== (E = null === (_ = l.getMember(e, c.id)) || void 0 === _ ? void 0 : _.isPending) && void 0 !== E && E
   }
-  let E = f || d;
-  return E && !!(null == u ? void 0 : u.hasVerificationGate())
+  let h = f || d;
+  return h && !!(null == u ? void 0 : u.hasVerificationGate())
 }
 
 function u(e) {

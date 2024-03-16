@@ -21,8 +21,8 @@ var i = n("627445"),
   c = n("239448"),
   f = n("977801"),
   _ = n("512244"),
-  h = n("917219"),
-  E = n("49111");
+  E = n("917219"),
+  h = n("49111");
 async function g(e) {
   let t = await fetch(e),
     n = await t.blob();
@@ -43,7 +43,7 @@ async function p(e, t, n) {
   var i, a;
   let l, d = !1;
   if (null == n) return m(e, t, r.FilterSettingsGraph.NONE);
-  if (n === h.BLUR_BACKGROUND_OPTION) return m(e, t, r.FilterSettingsGraph.BACKGROUND_BLUR);
+  if (n === E.BLUR_BACKGROUND_OPTION) return m(e, t, r.FilterSettingsGraph.BACKGROUND_BLUR);
   if ("string" == typeof n || "number" == typeof n) {
     ;
     let e = (0, f.default)()[n];
@@ -54,7 +54,7 @@ async function p(e, t, n) {
       userId: n.user_id,
       assetId: n.id,
       assetHash: e,
-      size: h.BACKGROUND_REPLACEMENT_SIZE.width
+      size: E.BACKGROUND_REPLACEMENT_SIZE.width
     })
   }
   if (null != l) try {
@@ -63,12 +63,12 @@ async function p(e, t, n) {
         let n = new Image;
         n.crossOrigin = "anonymous", n.onload = () => {
           let t = document.createElement("canvas");
-          t.width = h.BACKGROUND_REPLACEMENT_SIZE.width, t.height = h.BACKGROUND_REPLACEMENT_SIZE.height;
+          t.width = E.BACKGROUND_REPLACEMENT_SIZE.width, t.height = E.BACKGROUND_REPLACEMENT_SIZE.height;
           let i = t.getContext("2d");
           s(null != i, "Canvas context is missing");
           let r = n.height / n.width,
-            a = h.BACKGROUND_REPLACEMENT_SIZE.height,
-            o = h.BACKGROUND_REPLACEMENT_SIZE.height / r,
+            a = E.BACKGROUND_REPLACEMENT_SIZE.height,
+            o = E.BACKGROUND_REPLACEMENT_SIZE.height / r,
             l = (t.width - o) / 2,
             u = (t.height - a) / 2;
           i.drawImage(n, l, u, o, a);
@@ -113,5 +113,5 @@ function T() {
   let t = (0, l.getLastUsedVideoBackgroundOption)(e);
   (0, _.default)() && !d.default.hasBeenApplied && null != t && S(t, {
     track: !1
-  }).catch(E.NOOP)
+  }).catch(h.NOOP)
 }

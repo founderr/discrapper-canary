@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
 var i = n("872717"),
@@ -15,7 +15,7 @@ var i = n("872717"),
   c = n("49111"),
   f = n("191349"),
   _ = n("782340"),
-  h = {
+  E = {
     open() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
@@ -86,8 +86,8 @@ var i = n("872717"),
         username: n,
         email: a,
         emailToken: o,
-        password: h,
-        avatar: E,
+        password: E,
+        avatar: h,
         newPassword: g,
         discriminator: m
       } = e, {
@@ -98,8 +98,8 @@ var i = n("872717"),
             username: n,
             email: a,
             email_token: o,
-            password: h,
-            avatar: E,
+            password: E,
+            avatar: h,
             new_password: g,
             ...e,
             discriminator: null != m && "" !== m ? m : void 0
@@ -140,7 +140,7 @@ var i = n("872717"),
           type: "USER_PASSWORD_UPDATE",
           user: t,
           newPassword: g
-        }), null != h && null != g && r.default.dispatch({
+        }), null != E && null != g && r.default.dispatch({
           type: "PASSWORD_UPDATED",
           userId: t.id
         }), p ? this.close() : this.submitComplete(), e

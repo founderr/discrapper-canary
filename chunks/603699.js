@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return A
   }
 });
 var i = n("446674"),
@@ -15,8 +15,8 @@ var i = n("446674"),
   c = n("49111"),
   f = n("353927");
 let _ = Date.now(),
-  h = !1,
   E = !1,
+  h = !1,
   g = !1,
   m = !1,
   p = !1;
@@ -26,17 +26,17 @@ function S() {
 }
 
 function v() {
-  Date.now() - _ > c.IDLE_DURATION || S() ? h || s.default.dispatch({
+  Date.now() - _ > c.IDLE_DURATION || S() ? E || s.default.dispatch({
     type: "IDLE",
     idle: !0,
     idleSince: _
-  }) : h && s.default.dispatch({
+  }) : E && s.default.dispatch({
     type: "IDLE",
     idle: !1
-  }), Date.now() - _ > Math.min(o.AfkTimeout.getSetting() * l.default.Millis.SECOND, c.IDLE_DURATION) || S() ? E || s.default.dispatch({
+  }), Date.now() - _ > Math.min(o.AfkTimeout.getSetting() * l.default.Millis.SECOND, c.IDLE_DURATION) || S() ? h || s.default.dispatch({
     type: "AFK",
     afk: !0
-  }) : E && s.default.dispatch({
+  }) : h && s.default.dispatch({
     type: "AFK",
     afk: !1
   })
@@ -71,22 +71,22 @@ function T(e) {
 }
 class I extends i.default.Store {
   isIdle() {
-    return h
-  }
-  isAFK() {
     return E
   }
+  isAFK() {
+    return h
+  }
   getIdleSince() {
-    return h ? _ : null
+    return E ? _ : null
   }
 }
 I.displayName = "IdleStore";
-var C = new I(s.default, {
+var A = new I(s.default, {
   IDLE: function(e) {
-    h = e.idle
+    E = e.idle
   },
   AFK: function(e) {
-    E = e.afk
+    h = e.afk
   },
   SPEAKING: function(e) {
     let {

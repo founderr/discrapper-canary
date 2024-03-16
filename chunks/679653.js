@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return _
   },
   unescapeChannelName: function() {
-    return h
+    return E
   },
   default: function() {
-    return E
+    return h
   }
 }), n("222007"), n("781738");
 var i = n("446674"),
@@ -31,9 +31,9 @@ function f(e, t, n) {
     case d.ChannelTypes.DM:
       let [f] = e.recipients.map(t.getUser).filter(l.isNotNullish);
       if (null == f) return "???";
-      let h = n.getNickname(f.id),
-        E = null !== (i = null != h ? h : u.default.getName(f)) && void 0 !== i ? i : "???";
-      return a ? "@".concat(E) : E;
+      let E = n.getNickname(f.id),
+        h = null !== (i = null != E ? E : u.default.getName(f)) && void 0 !== i ? i : "???";
+      return a ? "@".concat(h) : h;
     case d.ChannelTypes.GROUP_DM:
       let g = (0, s.getIsBroadcastingGDM)(e.id);
       if ("" !== e.name) return e.name;
@@ -77,11 +77,11 @@ function _(e) {
   return e.replace(/\\/g, "\\\\").replace(/"/g, '\\"')
 }
 
-function h(e) {
+function E(e) {
   return e.replace(/\\"/g, '"').replace(/\\\\/g, "\\")
 }
 
-function E(e) {
+function h(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   return (0, i.useStateFromStores)([o.default, r.default, a.default], () => null == e ? null : f(e, o.default, a.default, t))
 }

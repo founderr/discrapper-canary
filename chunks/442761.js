@@ -34,8 +34,8 @@ class f extends a.Component {
       spacing: c,
       onShiftClick: f,
       positionKey: _,
-      preload: h,
-      disablePointerEvents: E,
+      preload: E,
+      disablePointerEvents: h,
       ignoreModalClicks: g,
       closeOnScroll: m,
       useMouseEnter: p,
@@ -44,7 +44,7 @@ class f extends a.Component {
     } = this.props;
     return (0, r.jsx)(l.BasePopout, {
       ref: this.ref,
-      preload: h,
+      preload: E,
       position: n,
       align: null != a ? a : function(e) {
         switch (e) {
@@ -70,7 +70,7 @@ class f extends a.Component {
       onRequestClose: s,
       onShiftClick: f,
       positionKey: _,
-      disablePointerEvents: E,
+      disablePointerEvents: h,
       ignoreModalClicks: g,
       closeOnScroll: m,
       useMouseEnter: p,
@@ -125,14 +125,14 @@ function _(e) {
     if (!c.current) {
       c.current = !0;
       let e = setTimeout(() => {
-          g(() => h), l(e => e + 1)
+          g(() => E), l(e => e + 1)
         }, 300),
         n = await t();
       g(() => n), l(e => e + 1), clearTimeout(e)
     }
   }
 
-  function h() {
+  function E() {
     var e, t, n, s;
     let a = null === (s = i.current) || void 0 === s ? void 0 : null === (n = s.ref) || void 0 === n ? void 0 : null === (t = n.current) || void 0 === t ? void 0 : null === (e = t.domElementRef) || void 0 === e ? void 0 : e.current,
       l = Math.max(100, null == a ? 100 : a.offsetWidth - 20);
@@ -144,7 +144,7 @@ function _(e) {
       children: (0, r.jsx)(o.Spinner, {})
     })
   }
-  let [E, g] = a.useState(() => u);
+  let [h, g] = a.useState(() => u);
   return a.useEffect(() => {
     c.current ? t().then(e => {
       g(() => e), l(e => e + 1)
@@ -152,7 +152,7 @@ function _(e) {
   }, [t]), (0, r.jsx)(f, {
     ref: i,
     ...n,
-    renderPopout: E
+    renderPopout: h
   })
 }
 f.Animation = i, f.defaultProps = {

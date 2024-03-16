@@ -40,8 +40,8 @@ var i = n("37983"),
   M = n("646718"),
   k = n("782340"),
   L = n("291809");
-let P = d.AvatarSizes.SIZE_80,
-  b = (0, c.getDecorationSizeForAvatarSize)(P);
+let b = d.AvatarSizes.SIZE_80,
+  P = (0, c.getDecorationSizeForAvatarSize)(b);
 
 function j(e) {
   let {
@@ -94,7 +94,7 @@ function D(e) {
   } = (0, I.default)({
     user: t,
     guildId: f,
-    size: P,
+    size: b,
     animateOnHover: C
   }), K = (0, i.jsx)("div", {
     className: L.avatarHoverTarget,
@@ -102,7 +102,7 @@ function D(e) {
     children: (0, i.jsx)(U, {
       src: null != a ? a : H,
       avatarDecoration: B,
-      size: P,
+      size: b,
       "aria-label": t.username,
       status: F ? R.StatusTypes.UNKNOWN : u,
       statusBackdropColor: null != v && w && !F ? (0, d.getStatusBackdropColor)(v) : void 0,
@@ -138,7 +138,7 @@ function D(e) {
       },
       children: [K, !G && function() {
         let e = null != B,
-          t = e ? b : (0, d.getAvatarSize)(P);
+          t = e ? P : (0, d.getAvatarSize)(b);
         return (0, i.jsx)(E.default, {
           mask: null == u || u === R.StatusTypes.UNKNOWN || F ? E.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, c]).with([!0, !0], () => E.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => E.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => E.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => E.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
           className: e ? L.avatarDecorationHint : L.avatarHint,

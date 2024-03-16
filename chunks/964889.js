@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return _
   },
   isUserEntitledToLibraryApplication: function() {
-    return h
+    return E
   }
 }), n("222007"), n("808653");
 var i = n("845579"),
@@ -73,6 +73,6 @@ function _(e) {
   })
 }
 
-function h(e) {
+function E(e) {
   return !!e.isDiscordApplication() && e.isEntitled(s.default.getCurrentUser(), r.default)
 }

@@ -15,8 +15,8 @@ var i = n("37983"),
   c = n("227645"),
   f = n("718776"),
   _ = n("516826"),
-  h = n("741662"),
-  E = n("433600"),
+  E = n("741662"),
+  h = n("433600"),
   g = n("442761"),
   m = n("242670"),
   p = n("577776"),
@@ -24,8 +24,8 @@ var i = n("37983"),
   v = n("811425"),
   T = n("31695"),
   I = n("561744"),
-  C = n("837899"),
-  A = n("425190"),
+  A = n("837899"),
+  C = n("425190"),
   y = n("36694"),
   N = n("578706"),
   R = n("945330"),
@@ -42,8 +42,8 @@ let M = s.forwardRef(function(e, t) {
       value: r,
       onChange: l,
       clearable: d = !1,
-      multi: h = !1,
-      closeOnSelect: E = !0,
+      multi: E = !1,
+      closeOnSelect: h = !0,
       onOpen: m,
       onClose: p,
       placeholder: T = D.default.Messages.SELECT,
@@ -58,9 +58,9 @@ let M = s.forwardRef(function(e, t) {
       debounceTime: B,
       renderOptionLabel: H = L,
       onSearchChange: Y,
-      renderOptionPrefix: j = () => null,
-      renderOptionSuffix: W = () => null,
-      "aria-describedby": K,
+      renderOptionPrefix: K = () => null,
+      renderOptionSuffix: j = () => null,
+      "aria-describedby": W,
       "aria-invalid": z,
       "aria-labelledby": q,
       "aria-required": X,
@@ -78,7 +78,7 @@ let M = s.forwardRef(function(e, t) {
     } = (0, _.useFormContext)(), {
       ref: er,
       width: ea
-    } = (0, S.default)(), eo = s.useRef(null), [el, eu] = s.useState(null), [ed, ec] = s.useState(!1), [ef, e_] = s.useState(null), [eh, eE] = s.useState(!1), eg = s.useRef(null), em = s.useRef(null), {
+    } = (0, S.default)(), eo = s.useRef(null), [el, eu] = s.useState(null), [ed, ec] = s.useState(!1), [ef, e_] = s.useState(null), [eE, eh] = s.useState(!1), eg = s.useRef(null), em = s.useRef(null), {
       options: ep,
       loading: eS,
       onQueryChange: ev
@@ -147,7 +147,7 @@ let M = s.forwardRef(function(e, t) {
       if (null == t) return [];
       let n = Array.isArray(t) ? t : [t];
       return n.map(t => "object" == typeof t && (null == t || "value" in t) ? t : e.find(e => e.value === t)).filter(Boolean)
-    })(ep, r), [ep, r]), eI = s.useMemo(() => eT.map(e => e.value), [eT]), eC = eT[eT.length - 1], eA = (0, I.default)(eC), ey = s.useId(), eN = s.useId(), eR = s.useId(), eO = s.useCallback(e => {
+    })(ep, r), [ep, r]), eI = s.useMemo(() => eT.map(e => e.value), [eT]), eA = eT[eT.length - 1], eC = (0, I.default)(eA), ey = s.useId(), eN = s.useId(), eR = s.useId(), eO = s.useCallback(e => {
       ed !== e && !M && (ec(e), e ? null == m || m() : null == p || p())
     }, [M, p, m, ed]), eD = s.useCallback(e => {
       ed && !e && eO(!1)
@@ -180,7 +180,7 @@ let M = s.forwardRef(function(e, t) {
       }), []),
       eU = (0, u.default)({
         id: eN,
-        defaultFocused: null != eC ? String(eC.value) : void 0,
+        defaultFocused: null != eA ? String(eA.value) : void 0,
         scrollToStart: eM,
         scrollToEnd: eb,
         isEnabled: ed,
@@ -193,7 +193,7 @@ let M = s.forwardRef(function(e, t) {
       ek = (0, I.default)(ep);
     s.useEffect(() => {
       let e = ek.current,
-        t = eA.current;
+        t = eC.current;
       ed && null != t && !eS && requestAnimationFrame(() => {
         let n = eg.current,
           i = e.indexOf(t);
@@ -216,24 +216,24 @@ let M = s.forwardRef(function(e, t) {
         }
         eu(null !== (t = e.focusedItemId()) && void 0 !== t ? t : null)
       } else {
-        let t = eA.current,
+        let t = eC.current,
           n = null != t ? String(t.value) : null;
         e.setFocus(n), eu(null)
       }
     }, [ed, eS]), s.useLayoutEffect(() => {
-      !ed && (h ? e_("") : null != eC && e_(eC.label))
-    }, [h, eC, ed]), s.useLayoutEffect(() => {
-      h && e_("")
-    }, [h, eT.length]);
+      !ed && (E ? e_("") : null != eA && e_(eA.label))
+    }, [E, eA, ed]), s.useLayoutEffect(() => {
+      E && e_("")
+    }, [E, eT.length]);
     let eV = s.useCallback(function(e) {
       let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
       if (null == e) {
-        l(h ? [] : void 0);
+        l(E ? [] : void 0);
         return
       }
       let i = "function" == typeof n,
         s = i ? ep.find(t => t.value === e) : e;
-      if (h) {
+      if (E) {
         let n = null != r ? r : [],
           o = n.some(t => (i ? t.value : t) === e);
         if (o ? l(n.filter(t => (i ? t.value : t) !== e)) : l([...n, s]), t) {
@@ -241,8 +241,8 @@ let M = s.forwardRef(function(e, t) {
           null === (a = eo.current) || void 0 === a || a.focus()
         }
       } else l(s);
-      eu(null), (!h || E) && eO(!1), eE(!1)
-    }, [n, ep, h, E, l, r, eO]);
+      eu(null), (!E || h) && eO(!1), eh(!1)
+    }, [n, ep, E, h, l, r, eO]);
     s.useLayoutEffect(() => {
       if (k) {
         var e;
@@ -263,15 +263,15 @@ let M = s.forwardRef(function(e, t) {
         }
       }, [eO, ed]),
       ex = ep;
-    eh && null != ef && !1 !== x && (ex = "function" == typeof x ? x(ep, ef) : (0, o.matchSorter)(ep, ef, {
+    eE && null != ef && !1 !== x && (ex = "function" == typeof x ? x(ep, ef) : (0, o.matchSorter)(ep, ef, {
       keys: ["label"]
     })), s.useEffect(() => {
       let e = eg.current;
       null == e || e.scrollToTop()
     }, [ef]), s.useEffect(() => {
-      !eS && eh && null !== ef && requestAnimationFrame(() => eU.focusFirstVisibleItem())
-    }, [eS, eh, ef]);
-    let eB = h ? F : G;
+      !eS && eE && null !== ef && requestAnimationFrame(() => eU.focusFirstVisibleItem())
+    }, [eS, eE, ef]);
+    let eB = E ? F : G;
     return (0, i.jsx)(u.ListNavigatorProvider, {
       navigator: eU,
       children: (0, i.jsx)(g.Popout, {
@@ -288,7 +288,7 @@ let M = s.forwardRef(function(e, t) {
           } = e;
           return (0, i.jsx)(U, {
             loading: eS,
-            multi: h,
+            multi: E,
             listRef: eg,
             listId: ey,
             maxVisibleItems: b,
@@ -296,14 +296,14 @@ let M = s.forwardRef(function(e, t) {
             selectedValues: eI,
             closePopout: t,
             onSelect: eV,
-            closeOnSelect: E,
+            closeOnSelect: h,
             options: ex,
             activeDescendant: el,
             renderOptionLabel: H,
             updatePosition: s,
             popoutPosition: n,
-            renderOptionPrefix: j,
-            renderOptionSuffix: W
+            renderOptionPrefix: K,
+            renderOptionSuffix: j
           })
         },
         position: V,
@@ -314,7 +314,7 @@ let M = s.forwardRef(function(e, t) {
           } = e, {
             isShown: r,
             position: o
-          } = t, l = r ? A.default : C.default, {
+          } = t, l = r ? C.default : A.default, {
             ref: u,
             onKeyDown: _
           } = eU.containerProps;
@@ -326,7 +326,7 @@ let M = s.forwardRef(function(e, t) {
             },
             onBlur: e => {
               var t, n, i;
-              !((null === (t = em.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (null === (i = eg.current) || void 0 === i ? void 0 : null === (n = i.getScrollerNode()) || void 0 === n ? void 0 : n.contains(e.relatedTarget))) && (!h && null != eC && e_(eC.label), eE(!1), eO(!1), null == J || J(e))
+              !((null === (t = em.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (null === (i = eg.current) || void 0 === i ? void 0 : null === (n = i.getScrollerNode()) || void 0 === n ? void 0 : n.contains(e.relatedTarget))) && (!E && null != eA && e_(eA.label), eh(!1), eO(!1), null == J || J(e))
             },
             children: [(0, i.jsx)(f.FocusRing, {
               ringTarget: er,
@@ -346,23 +346,23 @@ let M = s.forwardRef(function(e, t) {
                   [P.open]: r,
                   [P.lookFilled]: w === O.SelectLooks.FILLED,
                   [P.disabled]: M,
-                  [P.multi]: h,
+                  [P.multi]: E,
                   [P.selectPositionTop]: "top" === o
                 }),
                 children: (0, i.jsx)("div", {
                   className: a(P.value, {
-                    [P.multi]: h
+                    [P.multi]: E
                   }),
                   children: (0, i.jsx)(eB, {
                     query: ef,
                     selectedOptions: eT,
                     loading: eS,
-                    renderOptionPrefix: j,
-                    renderOptionSuffix: W,
+                    renderOptionPrefix: K,
+                    renderOptionSuffix: j,
                     isDisabled: M,
-                    isEditing: eh,
+                    isEditing: eE,
                     inputRef: eo,
-                    "aria-describedby": null != K ? K : ei,
+                    "aria-describedby": null != W ? W : ei,
                     "aria-required": X,
                     "aria-invalid": null != z ? z : null != es,
                     "aria-labelledby": null != q ? q : en,
@@ -375,7 +375,7 @@ let M = s.forwardRef(function(e, t) {
                       null === (e = eo.current) || void 0 === e || e.setSelectionRange(0, null !== (t = null == ef ? void 0 : ef.length) && void 0 !== t ? t : 0)
                     },
                     onChange: e => {
-                      ev(e), null == Y || Y(e), e_(e), eO(!0), eE(!0)
+                      ev(e), null == Y || Y(e), e_(e), eO(!0), eh(!0)
                     },
                     onKeyDown: e => {
                       var t;
@@ -396,7 +396,7 @@ let M = s.forwardRef(function(e, t) {
               })
             }), (0, i.jsxs)("div", {
               className: a(P.icons, {
-                [P.multi]: h,
+                [P.multi]: E,
                 [P.iconsContainer]: !Z
               }),
               ref: ee,
@@ -441,17 +441,17 @@ function U(e) {
     activeDescendant: c,
     listRef: f,
     listId: _,
-    renderOptionLabel: h,
+    renderOptionLabel: E,
     updatePosition: g,
     loading: S = !1,
     multi: v,
     popoutPosition: I,
-    closeOnSelect: C,
-    renderOptionPrefix: A = () => null,
+    closeOnSelect: A,
+    renderOptionPrefix: C = () => null,
     renderOptionSuffix: y = () => null
   } = e, N = s.useRef(null), R = s.useCallback(e => {
-    t(e), C && n()
-  }, [C, n, t]);
+    t(e), A && n()
+  }, [A, n, t]);
   return ((0, T.default)(g), S) ? (0, i.jsx)("div", {
     "aria-busy": !0,
     className: a(P.popout, P.loading, {
@@ -483,7 +483,7 @@ function U(e) {
         onKeyDown: n,
         ...s
       } = e;
-      return (0, i.jsx)(E.ListAuto, {
+      return (0, i.jsx)(h.ListAuto, {
         className: a(P.popout, P.searchableSelect, {
           [P.noScrollbar]: o.length <= d,
           [P.popoutPositionTop]: "top" === I
@@ -510,7 +510,7 @@ function U(e) {
           var t;
           let {
             row: n
-          } = e, s = o[n], a = h(s);
+          } = e, s = o[n], a = E(s);
           return (0, i.jsx)(Option, {
             multi: v,
             "aria-posinset": n,
@@ -520,7 +520,7 @@ function U(e) {
             value: s.value,
             label: a,
             onSelect: R,
-            prefix: A(s, {
+            prefix: C(s, {
               inPill: !1,
               inDropdown: !0
             }),
@@ -599,7 +599,7 @@ function Option(e) {
     isFocused: d,
     multi: f,
     ..._
-  } = e, h = (0, u.useListItem)(String(t));
+  } = e, E = (0, u.useListItem)(String(t));
   return (0, i.jsxs)(c.Clickable, {
     tag: "li",
     style: {
@@ -613,10 +613,10 @@ function Option(e) {
       [P.multi]: f
     }),
     onClick: () => o(t),
-    ...h,
+    ...E,
     ..._,
     "aria-selected": l,
-    id: h["data-list-item-id"],
+    id: E["data-list-item-id"],
     role: "option",
     children: [(0, i.jsxs)("div", {
       className: P.content,
@@ -694,8 +694,8 @@ function F(e) {
     isDisabled: c,
     inputRef: f,
     renderOptionPrefix: _,
-    renderOptionSuffix: h,
-    inputClassNames: E,
+    renderOptionSuffix: E,
+    inputClassNames: h,
     ...g
   } = e, m = Math.max(n.length, (null != t ? t : "").length), p = s.useRef(null), {
     focusPreviousItem: S,
@@ -757,7 +757,7 @@ function F(e) {
       listRef: p,
       selectedOptions: r,
       renderOptionPrefix: _,
-      renderOptionSuffix: h,
+      renderOptionSuffix: E,
       selectValue: o,
       focusNextItem: v,
       focusPreviousItem: S
@@ -765,7 +765,7 @@ function F(e) {
       style: {
         minWidth: "".concat(m, "ch")
       },
-      className: a(P.multi, E),
+      className: a(P.multi, h),
       query: t,
       placeholder: n,
       selectValue: o,
@@ -793,8 +793,8 @@ function x(e) {
     isDisabled: c,
     listboxId: f,
     activeDescendant: _,
-    navigatorId: h,
-    onChange: E,
+    navigatorId: E,
+    onChange: h,
     onFocus: g,
     setInputRef: m,
     isEditing: p,
@@ -802,7 +802,7 @@ function x(e) {
     placeholder: v,
     loading: T,
     style: I,
-    className: C
+    className: A
   } = e;
   return (0, i.jsx)("input", {
     role: "combobox",
@@ -818,14 +818,14 @@ function x(e) {
     "aria-required": o,
     "aria-busy": T,
     style: null != I ? I : {},
-    "aria-activedescendant": null != _ ? (0, u.createListItemId)(h, _) : "",
+    "aria-activedescendant": null != _ ? (0, u.createListItemId)(E, _) : "",
     disabled: c,
     value: null != t ? t : "",
     onChange: e => {
-      E(e.target.value)
+      h(e.target.value)
     },
     onFocus: g,
-    className: a(P.searchInput, C, {
+    className: a(P.searchInput, A, {
       [P.editing]: p,
       [P.disabled]: c
     }),
@@ -868,7 +868,7 @@ function B(e) {
       }), " ", null != u && (0, i.jsx)("div", {
         className: P.suffix,
         children: u
-      }), (0, i.jsx)(h.HiddenVisually, {
+      }), (0, i.jsx)(E.HiddenVisually, {
         children: D.default.Messages.REMOVE
       }), (0, i.jsx)(R.default, {
         className: P.deleteOptionIcon,

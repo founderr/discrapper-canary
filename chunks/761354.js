@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return L
   },
   default: function() {
-    return P
+    return b
   }
 }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
 var i = n("37983"),
@@ -214,7 +214,7 @@ function L(e) {
   })
 }
 
-function P(e) {
+function b(e) {
   let {
     channelId: t,
     draftType: n,
@@ -228,11 +228,11 @@ function P(e) {
   } = e, M = null != R;
   C = M ? v.AttachmentListItemSizes.CLIP : C;
   let k = C === v.AttachmentListItemSizes.SMALL,
-    P = (0, r.useStateFromStores)([m.default], () => {
+    b = (0, r.useStateFromStores)([m.default], () => {
       var e;
       return null === (e = m.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
     }),
-    b = e => {
+    P = e => {
       e.stopPropagation(), (0, o.openModal)(e => (0, i.jsx)(d.default, {
         ...e,
         draftType: n,
@@ -276,7 +276,7 @@ function P(e) {
           [A.action]: k
         }),
         tooltip: N.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
-        onClick: b,
+        onClick: P,
         children: (0, i.jsx)(y.default, {
           className: s({
             [A.actionBarIcon]: k
@@ -299,7 +299,7 @@ function P(e) {
     draftType: n,
     id: a.id,
     channelId: t,
-    handleEditModal: b,
+    handleEditModal: P,
     keyboardModeEnabled: c,
     size: C,
     className: s({
@@ -322,7 +322,7 @@ function P(e) {
         participantIds: R.users,
         applicationId: R.applicationId,
         title: R.name,
-        guildId: P
+        guildId: b
       }), (0, i.jsx)(S.TextBadge, {
         color: p.default.BG_BRAND,
         className: A.clipsBadge,

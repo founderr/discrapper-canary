@@ -15,9 +15,9 @@ var i = n("446674"),
 let c = !1,
   f = null,
   _ = !1,
-  h = {};
+  E = {};
 
-function E(e) {
+function h(e) {
   var t;
   let n = u.default.getCurrentUser();
   if (null == n) return !1;
@@ -26,14 +26,14 @@ function E(e) {
 }
 
 function g() {
-  f !== l.default.getVoiceChannelId() && (_ = !1), E() && (_ = !0), f = l.default.getVoiceChannelId()
+  f !== l.default.getVoiceChannelId() && (_ = !1), h() && (_ = !0), f = l.default.getVoiceChannelId()
 }
 class m extends i.default.Store {
   initialize() {
     this.waitFor(a.default, l.default, o.default), this.syncWith([l.default, o.default], g)
   }
   get videoFilterAssets() {
-    return h
+    return E
   }
   get hasBeenApplied() {
     return c
@@ -48,7 +48,7 @@ var p = new m(r.default, {
     let {
       assets: t
     } = e;
-    h = t.reduce((e, t) => ({
+    E = t.reduce((e, t) => ({
       ...e,
       [t.id]: t
     }), {})
@@ -57,8 +57,8 @@ var p = new m(r.default, {
     let {
       videoFilterAsset: t
     } = e;
-    h = {
-      ...h,
+    E = {
+      ...E,
       [t.id]: t
     }
   },
@@ -66,15 +66,15 @@ var p = new m(r.default, {
     let {
       videoFilterAsset: t
     } = e;
-    h = {
-      ...h
-    }, delete h[t.id]
+    E = {
+      ...E
+    }, delete E[t.id]
   },
   VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function(e) {
     let {
       backgroundOption: t
     } = e;
-    E(t) && (_ = !0)
+    h(t) && (_ = !0)
   },
   MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function(e) {
     let {

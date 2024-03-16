@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchCurrentUser: function() {
-    return h
+    return E
   },
   acceptAgreements: function() {
-    return E
+    return h
   },
   setFlag: function() {
     return g
@@ -31,7 +31,7 @@ var i = n("627445"),
   f = n("49111");
 let _ = new a.default("UserProfileModalActionCreators");
 
-function h() {
+function E() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     {
       withAnalyticsToken: t = !1
@@ -49,7 +49,7 @@ function h() {
   }), new u.default(e.body)))
 }
 
-function E() {
+function h() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   return c.default.patch({

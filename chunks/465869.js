@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return _
   },
   useIsMonetizationReapplicationDisabled: function() {
-    return h
+    return E
   }
 });
 var i = n("884691"),
@@ -65,7 +65,7 @@ let c = e => {
       restrictionsLoading: r
     }
   },
-  h = e => {
+  E = e => {
     let t = (0, s.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
       {
         restrictions: n,

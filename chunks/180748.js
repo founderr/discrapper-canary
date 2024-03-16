@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return _
   },
   disableKeyboardMode: function() {
-    return h
+    return E
   },
   toggleDesaturateUserColors: function() {
-    return E
+    return h
   },
   toggleDarkSidebar: function() {
     return g
@@ -40,10 +40,10 @@ n.r(t), n.d(t, {
     return I
   },
   systemPrefersContrastChanged: function() {
-    return C
+    return A
   },
   setAlwaysShowLinkDecorations: function() {
-    return A
+    return C
   },
   setRoleStyle: function() {
     return y
@@ -93,7 +93,7 @@ function _() {
   })
 }
 
-function h() {
+function E() {
   i.default.dispatch({
     type: "ACCESSIBILITY_KEYBOARD_MODE_DISABLE"
   }), r.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
@@ -101,7 +101,7 @@ function h() {
   })
 }
 
-function E() {
+function h() {
   i.default.dispatch({
     type: "ACCESSIBILITY_DESATURATE_ROLES_TOGGLE"
   })
@@ -171,14 +171,14 @@ function I(e, t) {
   })
 }
 
-function C(e) {
+function A(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED",
     systemPrefersContrast: e
   })
 }
 
-function A(e) {
+function C(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS",
     alwaysShowLinkDecorations: e

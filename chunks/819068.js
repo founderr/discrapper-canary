@@ -23,10 +23,10 @@ n.r(t), n.d(t, {
     return _
   },
   getRPCAuthToken: function() {
-    return h
+    return E
   },
   validResolution: function() {
-    return E
+    return h
   },
   setOutOfProcessSupport: function() {
     return g
@@ -66,12 +66,12 @@ function _(e) {
   p() && (i = e)
 }
 
-function h() {
+function E() {
   let e = new URLSearchParams(window.location.search);
   return e.get("rpc_auth_token")
 }
 
-function E(e) {
+function h(e) {
   return !r.isPlatformEmbedded || e.width >= l.width && e.height >= l.height
 }
 

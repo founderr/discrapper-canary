@@ -22,8 +22,8 @@ var i, s, r = n("37983"),
   c = n("907002"),
   f = n("394846"),
   _ = n("118810"),
-  h = n("862337"),
-  E = n("413197"),
+  E = n("862337"),
+  h = n("413197"),
   g = n("120590"),
   m = n("206230"),
   p = n("983782"),
@@ -59,11 +59,11 @@ let v = Object.freeze({}),
       tooltipContentClassName: d,
       spacing: f = 8,
       animationStyle: _,
-      disableTooltipPointerEvents: h = !1,
-      allowOverflow: E = !1
+      disableTooltipPointerEvents: E = !1,
+      allowOverflow: h = !1
     } = e, g = "".concat("string" == typeof a ? a : "", ":").concat(i);
     return (0, r.jsx)(p.AppReferencePositionLayer, {
-      disablePointerEvents: h,
+      disablePointerEvents: E,
       reference: t,
       position: i,
       autoInvert: !0,
@@ -79,7 +79,7 @@ let v = Object.freeze({}),
         return (0, r.jsxs)(c.animated.div, {
           onClick: o,
           className: l(S.tooltip, T[null != t ? t : i], T[s], {
-            [S.tooltipDisablePointerEvents]: h
+            [S.tooltipDisablePointerEvents]: E
           }, u),
           style: _,
           children: [(0, r.jsx)("div", {
@@ -94,7 +94,7 @@ let v = Object.freeze({}),
             }(null != t ? t : i, n, f)
           }), (0, r.jsx)("div", {
             className: l(S.tooltipContent, {
-              [S.tooltipContentAllowOverflow]: E
+              [S.tooltipContentAllowOverflow]: h
             }, d),
             children: a
           })]
@@ -102,11 +102,11 @@ let v = Object.freeze({}),
       }
     })
   },
-  C = {
+  A = {
     scale: .95,
     opacity: 0
   },
-  A = {
+  C = {
     scale: 1,
     opacity: 0
   },
@@ -122,12 +122,12 @@ let v = Object.freeze({}),
       ...s
     } = e, {
       reducedMotion: o
-    } = a.useContext(E.AccessibilityPreferencesContext), l = (0, c.useTransition)(t, {
+    } = a.useContext(h.AccessibilityPreferencesContext), l = (0, c.useTransition)(t, {
       keys: e => e ? "tooltip" : "empty",
       config: g.TOOLTIP_SPRING_CONFIG,
-      from: o.enabled ? A : C,
+      from: o.enabled ? C : A,
       enter: y,
-      leave: o.enabled ? A : C,
+      leave: o.enabled ? C : A,
       onRest: n
     });
     return l((e, t) => t ? (0, r.jsx)(I, {
@@ -195,9 +195,9 @@ class R extends a.Component {
       allowOverflow: d,
       clickableOnMobile: c,
       hideOnClick: _
-    } = this.props, h = (f.isMobile || f.isTablet) && !0 === c && _, E = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement, g = null;
-    return g = e instanceof Function ? E ? e() : null : e, (0, r.jsx)(N, {
-      disableTooltipPointerEvents: !1 !== l && !h || !0 === l,
+    } = this.props, E = (f.isMobile || f.isTablet) && !0 === c && _, h = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement, g = null;
+    return g = e instanceof Function ? h ? e() : null : e, (0, r.jsx)(N, {
+      disableTooltipPointerEvents: !1 !== l && !E || !0 === l,
       targetElementRef: this.domElementRef,
       tooltipClassName: a,
       tooltipContentClassName: o,
@@ -205,9 +205,9 @@ class R extends a.Component {
       position: n,
       color: i,
       spacing: s,
-      isVisible: E,
+      isVisible: h,
       onAnimationRest: u,
-      onNonAccessibleClick: h ? this.handleClick : void 0,
+      onNonAccessibleClick: E ? this.handleClick : void 0,
       allowOverflow: d,
       children: g
     })
@@ -237,7 +237,7 @@ class R extends a.Component {
     }
   }
   constructor(...e) {
-    super(...e), this.showTimeout = new h.Timeout, this.domElementRef = a.createRef(), this.hasDomElement = !1, this.state = {
+    super(...e), this.showTimeout = new E.Timeout, this.domElementRef = a.createRef(), this.hasDomElement = !1, this.state = {
       shouldShowTooltip: !1
     }, this.handleMouseEnter = () => {
       !((f.isMobile || f.isTablet) && !0 === this.props.clickableOnMobile) && this.show()

@@ -12,8 +12,8 @@ var o = n("446674"),
   c = n("374014"),
   f = n("223913"),
   _ = n("537429"),
-  h = n("756898"),
-  E = n("271938"),
+  E = n("756898"),
+  h = n("271938"),
   g = n("42203"),
   m = n("305961"),
   p = n("42887"),
@@ -21,8 +21,8 @@ var o = n("446674"),
   v = n("945956"),
   T = n("18494"),
   I = n("800762"),
-  C = n("49111"),
-  A = n("706530");
+  A = n("49111"),
+  C = n("706530");
 let y = null,
   N = {},
   R = null;
@@ -54,7 +54,7 @@ function L(e) {
   } = e;
   i.set(t, {
     ...(0, c.decodeStreamKey)(t),
-    state: a ? C.ApplicationStreamStates.PAUSED : C.ApplicationStreamStates.ACTIVE
+    state: a ? A.ApplicationStreamStates.PAUSED : A.ApplicationStreamStates.ACTIVE
   }), r[t] = {
     streamKey: t,
     region: n,
@@ -64,7 +64,7 @@ function L(e) {
 
 function M(e, t) {
   let n = g.default.getBasicChannel(t);
-  return e === A.StreamTypes.CALL || null != n && S.default.canBasicChannel(C.BasicPermissions.VIEW_CHANNEL, n)
+  return e === C.StreamTypes.CALL || null != n && S.default.canBasicChannel(A.BasicPermissions.VIEW_CHANNEL, n)
 }
 
 function b(e) {
@@ -103,7 +103,7 @@ class U extends o.default.Store {
   getCurrentUserActiveStream() {
     let e = T.default.getVoiceChannelId(),
       t = g.default.getChannel(e);
-    return null == t ? null : this.getActiveStreamForUser(E.default.getId(), t.getGuildId())
+    return null == t ? null : this.getActiveStreamForUser(h.default.getId(), t.getGuildId())
   }
   getActiveStreamForUser(e, t) {
     var n;
@@ -115,7 +115,7 @@ class U extends o.default.Store {
     let t = T.default.getVoiceChannelId(),
       n = g.default.getChannel(t);
     if (null == n) return null;
-    let i = this.getActiveStreamForUser(E.default.getId(), n.getGuildId());
+    let i = this.getActiveStreamForUser(h.default.getId(), n.getGuildId());
     return null == i ? null : null !== (e = a[(0, c.encodeStreamKey)(i)]) && void 0 !== e ? e : null
   }
   getStreamerActiveStreamMetadataForStream(e) {
@@ -131,7 +131,7 @@ class U extends o.default.Store {
   getStreamForUser(e, t) {
     var n;
     if (!(0, _.default)(p.default)) return null;
-    let i = null === (n = s[e]) || void 0 === n ? void 0 : n[null != t ? t : C.NULL_STRING_GUILD_ID];
+    let i = null === (n = s[e]) || void 0 === n ? void 0 : n[null != t ? t : A.NULL_STRING_GUILD_ID];
     return null != i && b(i) ? i : null
   }
   getRTCStream(e) {
@@ -191,16 +191,16 @@ var w = new U(l.default, {
       if (o && null != r) {
         var l, u;
         return null == s[(l = {
-          streamType: null != i ? A.StreamTypes.GUILD : A.StreamTypes.CALL,
+          streamType: null != i ? C.StreamTypes.GUILD : C.StreamTypes.CALL,
           ownerId: n,
           guildId: i,
           channelId: r
-        }).ownerId] && (s[l.ownerId] = {}), s[l.ownerId][null !== (u = l.guildId) && void 0 !== u ? u : C.NULL_STRING_GUILD_ID] = l, !0
+        }).ownerId] && (s[l.ownerId] = {}), s[l.ownerId][null !== (u = l.guildId) && void 0 !== u ? u : A.NULL_STRING_GUILD_ID] = l, !0
       } {
-        let t = E.default.getSessionId();
-        return n === E.default.getId() && a !== t && null != v.default.getChannelId() ? e : function(e, t) {
+        let t = h.default.getSessionId();
+        return n === h.default.getId() && a !== t && null != v.default.getChannelId() ? e : function(e, t) {
           var n;
-          let i = null != t ? t : C.NULL_STRING_GUILD_ID;
+          let i = null != t ? t : A.NULL_STRING_GUILD_ID;
           return (null === (n = s[e]) || void 0 === n ? void 0 : n[i]) != null && (delete s[e][i], !0)
         }(n, i) || e
       }
@@ -212,8 +212,8 @@ var w = new U(l.default, {
     } = e, n = (0, c.decodeStreamKey)(t);
     i.delete(t), i.set(t, {
       ...n,
-      state: C.ApplicationStreamStates.CONNECTING
-    }), n.ownerId === E.default.getId() && (N[n.channelId] = !1)
+      state: A.ApplicationStreamStates.CONNECTING
+    }), n.ownerId === h.default.getId() && (N[n.channelId] = !1)
   },
   STREAM_START: function(e) {
     var t;
@@ -228,8 +228,8 @@ var w = new U(l.default, {
       streamType: n,
       guildId: s,
       channelId: r,
-      ownerId: E.default.getId()
-    }), _ = null !== (t = null != o ? d.default.getGameForPID(o) : null != u ? d.default.getRunningGames().find(e => (0, h.default)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
+      ownerId: h.default.getId()
+    }), _ = null !== (t = null != o ? d.default.getGameForPID(o) : null != u ? d.default.getRunningGames().find(e => (0, E.default)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
     a[f] = {
       id: null == _ ? void 0 : _.id,
       pid: o,
@@ -238,8 +238,8 @@ var w = new U(l.default, {
       streamType: n,
       guildId: s,
       channelId: r,
-      ownerId: E.default.getId(),
-      state: C.ApplicationStreamStates.CONNECTING
+      ownerId: h.default.getId(),
+      state: A.ApplicationStreamStates.CONNECTING
     })
   },
   STREAM_STOP: function(e) {
@@ -257,7 +257,7 @@ var w = new U(l.default, {
     if (null == n) return !1;
     i.set(t, {
       ...n,
-      state: C.ApplicationStreamStates.FAILED
+      state: A.ApplicationStreamStates.FAILED
     })
   },
   STREAM_DELETE: function(e) {
@@ -269,10 +269,10 @@ var w = new U(l.default, {
     delete r[t];
     let o = i.get(t);
     if (null == o) return !1;
-    let l = C.ApplicationStreamStates.ENDED;
-    if (s) l = C.ApplicationStreamStates.RECONNECTING;
-    else if (a === C.ApplicationStreamDeleteReasons.UNAUTHORIZED) l = C.ApplicationStreamStates.FAILED;
-    else if (a === C.ApplicationStreamDeleteReasons.SAFETY_GUILD_RATE_LIMITED) {
+    let l = A.ApplicationStreamStates.ENDED;
+    if (s) l = A.ApplicationStreamStates.RECONNECTING;
+    else if (a === A.ApplicationStreamDeleteReasons.UNAUTHORIZED) l = A.ApplicationStreamStates.FAILED;
+    else if (a === A.ApplicationStreamDeleteReasons.SAFETY_GUILD_RATE_LIMITED) {
       let {
         guildId: e
       } = (0, c.decodeStreamKey)(t);
@@ -281,12 +281,12 @@ var w = new U(l.default, {
           default: n
         } = t;
         n(e)
-      }), l = C.ApplicationStreamStates.ENDED
+      }), l = A.ApplicationStreamStates.ENDED
     }
     i.set(t, {
       ...o,
       state: l
-    }), l === C.ApplicationStreamStates.ENDED && y !== t && D(t)
+    }), l === A.ApplicationStreamStates.ENDED && y !== t && D(t)
   },
   STREAM_CLOSE: function(e) {
     let {
@@ -299,7 +299,7 @@ var w = new U(l.default, {
       channelId: t,
       selfStreamHidden: n
     } = e, i = (0, c.isStreamKey)(y);
-    i && (null == y ? void 0 : y.includes(E.default.getId())) && !1 === N[t] && !0 === n && (y = null), N[t] = n
+    i && (null == y ? void 0 : y.includes(h.default.getId())) && !1 === N[t] && !0 === n && (y = null), N[t] = n
   },
   SET_STREAM_APP_INTENT: function(e) {
     let {
@@ -314,14 +314,14 @@ var w = new U(l.default, {
     } = e;
     if (null == t) return !1;
     let s = i.get(t);
-    if (null == s || s.state === C.ApplicationStreamStates.ENDED) return !1;
+    if (null == s || s.state === A.ApplicationStreamStates.ENDED) return !1;
     let r = s.state;
     switch (n) {
-      case C.RTCConnectionStates.DISCONNECTED:
-        r = C.ApplicationStreamStates.RECONNECTING;
+      case A.RTCConnectionStates.DISCONNECTED:
+        r = A.ApplicationStreamStates.RECONNECTING;
         break;
-      case C.RTCConnectionStates.RTC_CONNECTED:
-        r = C.ApplicationStreamStates.ACTIVE
+      case A.RTCConnectionStates.RTC_CONNECTED:
+        r = A.ApplicationStreamStates.ACTIVE
     }
     if (r === s.state) return !1;
     i.set(t, {
@@ -335,10 +335,10 @@ var w = new U(l.default, {
       channelId: n
     } = e;
     if (y = t, Array.from(i.values()).forEach(e => {
-        (0, c.encodeStreamKey)(e) !== y && e.state === C.ApplicationStreamStates.ENDED && D((0, c.encodeStreamKey)(e))
+        (0, c.encodeStreamKey)(e) !== y && e.state === A.ApplicationStreamStates.ENDED && D((0, c.encodeStreamKey)(e))
       }), null == t) return;
     let s = (0, c.isStreamKey)(t);
-    s && t.includes(E.default.getId()) && (N[n] = !1)
+    s && t.includes(h.default.getId()) && (N[n] = !1)
   },
   CONNECTION_OPEN: O,
   CONNECTION_CLOSED: O,

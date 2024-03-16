@@ -31,7 +31,7 @@ async function f(e, t, f) {
     (0, a.transitionTo)(e);
     return
   }
-  let h = function(e) {
+  let E = function(e) {
     if (null == e.channelId) return e;
     let t = l.default.getChannel(e.channelId);
     if (null == t) return e;
@@ -41,9 +41,9 @@ async function f(e, t, f) {
       guildId: null != n ? n : c.ME
     }
   }(_);
-  if (null == h.channelId) {
-    (0, o.transitionToGuild)(h.guildId);
+  if (null == E.channelId) {
+    (0, o.transitionToGuild)(E.guildId);
     return
   }
-  null != h.threadId ? (0, a.transitionTo)(c.Routes.CHANNEL_THREAD_VIEW(h.guildId, h.channelId, h.threadId, h.messageId), t, f) : (0, a.transitionTo)(c.Routes.CHANNEL(h.guildId, h.channelId, h.messageId), t, f)
+  null != E.threadId ? (0, a.transitionTo)(c.Routes.CHANNEL_THREAD_VIEW(E.guildId, E.channelId, E.threadId, E.messageId), t, f) : (0, a.transitionTo)(c.Routes.CHANNEL(E.guildId, E.channelId, E.messageId), t, f)
 }

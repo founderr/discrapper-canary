@@ -15,8 +15,8 @@ var i = n("714617"),
   c = n("225772"),
   f = n("161454"),
   _ = n("32346"),
-  h = n("925880"),
-  E = n("662285"),
+  E = n("925880"),
+  h = n("662285"),
   g = n("845579"),
   m = n("374363"),
   p = n("373469"),
@@ -24,13 +24,13 @@ var i = n("714617"),
   v = n("49111"),
   T = n("782340");
 let I = [],
-  C = {};
+  A = {};
 
-function A() {
+function C() {
   let e = [],
     t = g.CustomStatusSetting.getSetting();
   null != t && ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, c.getActivityFromCustomStatus)(t));
-  let n = h.default.getActivities();
+  let n = E.default.getActivities();
   e.push(...n);
   let i = S.default.getStream();
   null != i && e.push({
@@ -39,7 +39,7 @@ function A() {
   });
   let r = new Set,
     o = new Set;
-  a.forEach(C, t => {
+  a.forEach(A, t => {
     null != t.application_id && (r.add(t.name), o.add(t.application_id), e.push(t))
   }), u.default.getSelfEmbeddedActivities().forEach(t => {
     var n;
@@ -57,9 +57,9 @@ function A() {
   });
   let l = f.default.getVisibleGame(),
     m = null != l && null != l.name && r.has(l.name),
-    A = null != l && l.isLauncher,
+    C = null != l && l.isLauncher,
     y = p.default.getCurrentUserActiveStream();
-  null != l && null != l.name && !(m || A && !(null != y)) && e.push({
+  null != l && null != l.name && !(m || C && !(null != y)) && e.push({
     type: v.ActivityTypes.PLAYING,
     name: l.name,
     application_id: l.id,
@@ -67,7 +67,7 @@ function A() {
       start: l.start
     }
   });
-  let N = E.default.getActivity();
+  let N = h.default.getActivity();
   null != N && e.push({
     type: v.ActivityTypes.LISTENING,
     ...N
@@ -86,7 +86,7 @@ function A() {
 }
 class y extends o.default.Store {
   initialize() {
-    this.waitFor(f.default, u.default, S.default, p.default, E.default, m.default, _.default), this.syncWith([h.default, _.default], () => A())
+    this.waitFor(f.default, u.default, S.default, p.default, h.default, m.default, _.default), this.syncWith([E.default, _.default], () => C())
   }
   getActivities() {
     return I
@@ -104,7 +104,7 @@ class y extends o.default.Store {
     return I.find(e)
   }
   getApplicationActivities() {
-    return C
+    return A
   }
 }
 y.displayName = "LocalActivityStore";
@@ -113,37 +113,37 @@ var N = new y(l.default, {
     let {
       localActivities: t
     } = e;
-    C = {
+    A = {
       ...t
-    }, A()
+    }, C()
   },
   START_SESSION: function() {
-    C = {}, A()
+    A = {}, C()
   },
   LOCAL_ACTIVITY_UPDATE: function(e) {
     let {
       socketId: t,
       activity: n
     } = e;
-    if (s(C[t], n)) return !1;
-    null != n ? C[t] = n : delete C[t], A()
+    if (s(A[t], n)) return !1;
+    null != n ? A[t] = n : delete A[t], C()
   },
   RPC_APP_DISCONNECTED: function(e) {
     let {
       socketId: t
     } = e;
-    delete C[t], A()
+    delete A[t], C()
   },
-  RUNNING_GAMES_CHANGE: A,
-  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: A,
-  SPOTIFY_PLAYER_STATE: A,
-  SPOTIFY_PLAYER_PLAY: A,
-  STREAMING_UPDATE: A,
-  USER_CONNECTIONS_UPDATE: A,
-  STREAM_START: A,
-  STREAM_STOP: A,
-  USER_SETTINGS_PROTO_UPDATE: A,
-  EMBEDDED_ACTIVITY_OPEN: A,
-  EMBEDDED_ACTIVITY_CLOSE: A,
-  UPDATE_HANG_STATUS: A
+  RUNNING_GAMES_CHANGE: C,
+  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: C,
+  SPOTIFY_PLAYER_STATE: C,
+  SPOTIFY_PLAYER_PLAY: C,
+  STREAMING_UPDATE: C,
+  USER_CONNECTIONS_UPDATE: C,
+  STREAM_START: C,
+  STREAM_STOP: C,
+  USER_SETTINGS_PROTO_UPDATE: C,
+  EMBEDDED_ACTIVITY_OPEN: C,
+  EMBEDDED_ACTIVITY_CLOSE: C,
+  UPDATE_HANG_STATUS: C
 })

@@ -15,15 +15,15 @@ let d = new Set([u.PlatformTypes.CONTACTS]),
   c = !0,
   f = [],
   _ = [],
-  h = {},
   E = {},
+  h = {},
   g = {},
   m = e => {
     f = e.filter(e => !d.has(e.type) && a.default.isSupported(e.type)), _ = e.filter(e => d.has(e.type)), c = !1
   };
 class p extends i.default.Store {
   isJoining(e) {
-    return h[e] || !1
+    return E[e] || !1
   }
   joinErrorMessage(e) {
     return g[e]
@@ -44,7 +44,7 @@ class p extends i.default.Store {
     return _.find(t => t.type === e)
   }
   isSuggestedAccountType(e) {
-    return E[e] || !1
+    return h[e] || !1
   }
 }
 p.displayName = "ConnectedAccountsStore";
@@ -66,7 +66,7 @@ var S = new p(s.default, {
     } else r.default.fetch()
   },
   USER_CONNECTIONS_INTEGRATION_JOINING: function(e) {
-    h[e.integrationId] = e.joining
+    E[e.integrationId] = e.joining
   },
   USER_CONNECTION_UPDATE: function(e) {
     let {

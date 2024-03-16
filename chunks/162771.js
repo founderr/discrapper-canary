@@ -17,14 +17,14 @@ let d = null,
   f = {};
 
 function _() {
-  null != d && null == l.default.getGuild(d) && null == r.default.getRequest(d) && (d = null), null != c && null == l.default.getGuild(c) && null == r.default.getRequest(c) && (c = null), h(d)
-}
-
-function h(e) {
-  null != e && (f[e] = Date.now())
+  null != d && null == l.default.getGuild(d) && null == r.default.getRequest(d) && (d = null), null != c && null == l.default.getGuild(c) && null == r.default.getRequest(c) && (c = null), E(d)
 }
 
 function E(e) {
+  null != e && (f[e] = Date.now())
+}
+
+function h(e) {
   let t = !1;
   return delete f[e], c === e && (c = null, t = !0), d === e && (Object.values(l.default.getGuilds()).find(t => t.id !== e), d = null, (0, a.replaceWith)(u.Routes.ME), t = !0), t
 }
@@ -61,14 +61,14 @@ var m = new g(s.default, {
       guildId: t
     } = e;
     if (d === t) return !1;
-    h(d), h(t), null != t && (c = t), d = t
+    E(d), E(t), null != t && (c = t), d = t
   },
   GUILD_MEMBER_REMOVE: function(e) {
     let {
       guildId: t,
       user: n
     } = e;
-    return n.id === o.default.getId() && E(t)
+    return n.id === o.default.getId() && h(t)
   },
   GUILD_DELETE: function(e) {
     let {
@@ -77,7 +77,7 @@ var m = new g(s.default, {
         unavailable: n
       }
     } = e;
-    return !0 !== n && E(t)
+    return !0 !== n && h(t)
   },
   LOGOUT: function() {
     d = null, c = null

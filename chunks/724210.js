@@ -29,10 +29,10 @@ n.r(t), n.d(t, {
     return s
   },
   StaticChannelIds: function() {
-    return h
+    return E
   },
   FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID: function() {
-    return E
+    return h
   }
 }), n("222007"), (r = i || (i = {})).ROLE_SUBSCRIPTIONS = "role-subscriptions", r.GUILD_SHOP = "shop", r.MEMBER_APPLICATIONS = "member-applications", r.GUILD_HOME = "@home", r.CHANNEL_BROWSER = "channel-browser", r.GUILD_ONBOARDING = "onboarding", r.CUSTOMIZE_COMMUNITY = "customize-community", r.MEMBER_SAFETY = "member-safety";
 let o = new Set(Object.values(i));
@@ -66,5 +66,5 @@ let c = Object.freeze({
   f = 1024,
   _ = 4096;
 (a = s || (s = {})).GUILD_HOME = "home", a.SERVER_GUIDE = "guide", a.CHANNEL_BROWSER = "browse", a.CUSTOMIZE_COMMUNITY = "customize";
-let h = new Set(Object.values(s)),
-  E = "131"
+let E = new Set(Object.values(s)),
+  h = "131"

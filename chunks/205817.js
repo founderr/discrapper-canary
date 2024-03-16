@@ -14,8 +14,8 @@ var r = n("627445"),
   c = n("913144"),
   f = n("161454"),
   _ = n("583702"),
-  h = n("374014"),
-  E = n("582415"),
+  E = n("374014"),
+  h = n("582415"),
   g = n("537429"),
   m = n("773336"),
   p = n("373469"),
@@ -23,14 +23,14 @@ var r = n("627445"),
   v = n("42203"),
   T = n("42887"),
   I = n("824563"),
-  C = n("945956"),
-  A = n("49111"),
+  A = n("945956"),
+  C = n("49111"),
   y = n("353927");
 let N = {},
   R = {},
   O = {},
   D = {},
-  P = A.StreamLayouts.THEATRE,
+  P = C.StreamLayouts.THEATRE,
   L = {},
   M = [];
 
@@ -102,10 +102,10 @@ class k extends u.default.Store {
     }(e.rtp.inbound[t]))
   }
   getQuality() {
-    if (!(0, g.default)(T.default)) return A.RTCConnectionQuality.UNKNOWN;
+    if (!(0, g.default)(T.default)) return C.RTCConnectionQuality.UNKNOWN;
     let e = this.getActiveStreamKey(),
       t = null != e ? L[e] : null;
-    return null != t ? t.quality : A.RTCConnectionQuality.UNKNOWN
+    return null != t ? t.quality : C.RTCConnectionQuality.UNKNOWN
   }
   getMediaSessionId(e) {
     if (null == e) return null;
@@ -163,7 +163,7 @@ var V = new k(c.default, !T.default.isSupported() || __OVERLAY__ ? {} : {
       appContext: s,
       pid: r,
       sourceId: a
-    } = e, o = (0, h.encodeStreamKey)({
+    } = e, o = (0, E.encodeStreamKey)({
       streamType: t,
       guildId: n,
       channelId: i,
@@ -207,8 +207,8 @@ var V = new k(c.default, !T.default.isSupported() || __OVERLAY__ ? {} : {
     if (null == l && null != n) {
       var u, c, f;
       null == O[t] && (R[t] = null);
-      let e = (0, h.decodeStreamKey)(t);
-      null == R[t] && null == D[t] && (R[t] = (0, E.getStreamerApplication)(e, I.default));
+      let e = (0, E.decodeStreamKey)(t);
+      null == R[t] && null == D[t] && (R[t] = (0, h.getStreamerApplication)(e, I.default));
       let s = v.default.getChannel(e.channelId),
         d = null != s && s.isBroadcastChannel(),
         g = new _.StreamRTCAnalyticsContext({
@@ -236,7 +236,7 @@ var V = new k(c.default, !T.default.isSupported() || __OVERLAY__ ? {} : {
         initialLayout: P,
         analyticsContext: f,
         isStreamer: null != R[u],
-        parentMediaSessionId: C.default.getMediaSessionId()
+        parentMediaSessionId: A.default.getMediaSessionId()
       }), L[t] = l
     }
     M = [], T.default.getMediaEngine().on(d.MediaEngineEvent.ConnectionStats, U)

@@ -73,10 +73,10 @@ n.r(t), n.d(t, {
     return _.Checkbox
   },
   Collapsible: function() {
-    return h.Collapsible
+    return E.Collapsible
   },
   Clickable: function() {
-    return E.Clickable
+    return h.Clickable
   },
   ClickableContainer: function() {
     return g.ClickableContainer
@@ -112,19 +112,19 @@ n.r(t), n.d(t, {
     return I.DnDKeyboardHelpBar
   },
   DnDProvider: function() {
-    return C.DnDProvider
+    return A.DnDProvider
   },
   isInDndMode: function() {
-    return A.isInDndMode
+    return C.isInDndMode
   },
   useDndStore: function() {
-    return A.useDndStore
+    return C.useDndStore
   },
   useDndMode: function() {
-    return A.useDndMode
+    return C.useDndMode
   },
   toggleDndMode: function() {
-    return A.toggleDndMode
+    return C.toggleDndMode
   },
   FocusBlock: function() {
     return y.FocusBlock
@@ -226,34 +226,34 @@ n.r(t), n.d(t, {
     return Y.HiddenVisually
   },
   KeyCombo: function() {
-    return j.KeyCombo
+    return K.KeyCombo
   },
   PRETTY_KEYS: function() {
-    return j.PRETTY_KEYS
+    return K.PRETTY_KEYS
   },
   Layer: function() {
-    return W.Layer
+    return j.Layer
   },
   LayerContainer: function() {
-    return W.LayerContainer
+    return j.LayerContainer
   },
   LayerProvider: function() {
-    return W.LayerProvider
+    return j.LayerProvider
   },
   LayerClassName: function() {
-    return W.LayerClassName
+    return j.LayerClassName
   },
   createLayer: function() {
-    return W.createLayer
+    return j.createLayer
   },
   getParentLayerContainer: function() {
-    return W.getParentLayerContainer
+    return j.getParentLayerContainer
   },
   ReferencePositionLayer: function() {
-    return K.ReferencePositionLayer
+    return W.ReferencePositionLayer
   },
   referencePortalAwareContains: function() {
-    return K.referencePortalAwareContains
+    return W.referencePortalAwareContains
   },
   createListScroller: function() {
     return z.createListScroller
@@ -427,10 +427,10 @@ n.r(t), n.d(t, {
     return e_.StackedProgress
   },
   BasePopout: function() {
-    return eh.BasePopout
+    return eE.BasePopout
   },
   LoadingPopout: function() {
-    return eE.LoadingPopout
+    return eh.LoadingPopout
   },
   Popout: function() {
     return eg.Popout
@@ -478,19 +478,19 @@ n.r(t), n.d(t, {
     return eI.useResizeObserverSubscription
   },
   AdvancedScrollerAuto: function() {
-    return eC.AdvancedScrollerAuto
+    return eA.AdvancedScrollerAuto
   },
   AdvancedScrollerNone: function() {
-    return eC.AdvancedScrollerNone
+    return eA.AdvancedScrollerNone
   },
   AdvancedScrollerThin: function() {
-    return eC.AdvancedScrollerThin
+    return eA.AdvancedScrollerThin
   },
   AdvancedScroller: function() {
-    return eC.AdvancedScrollerThin
+    return eA.AdvancedScrollerThin
   },
   createAdvancedScroller: function() {
-    return eA.createAdvancedScroller
+    return eC.createAdvancedScroller
   },
   createManagedReactiveScroller: function() {
     return ey.createManagedReactiveScroller
@@ -607,19 +607,19 @@ n.r(t), n.d(t, {
     return eY.TextArea
   },
   TextAreaAutosize: function() {
-    return ej.TextAreaAutosize
+    return eK.TextAreaAutosize
   },
   TextInput: function() {
-    return eW.TextInput
+    return ej.TextInput
   },
   InputError: function() {
-    return eW.InputError
+    return ej.InputError
   },
   TextInputProps: function() {
-    return eW.TextInputProps
+    return ej.TextInputProps
   },
   TimeInput: function() {
-    return eK.TimeInput
+    return eW.TimeInput
   },
   Toast: function() {
     return ez.Toast
@@ -720,8 +720,8 @@ var i = n("539826"),
   c = n("271841"),
   f = n("659397"),
   _ = n("685698"),
-  h = n("262448"),
-  E = n("227645"),
+  E = n("262448"),
+  h = n("227645"),
   g = n("456189"),
   m = n("960486"),
   p = n("923237"),
@@ -729,8 +729,8 @@ var i = n("539826"),
   v = n("130969"),
   T = n("709749"),
   I = n("990749"),
-  C = n("187641"),
-  A = n("57406"),
+  A = n("187641"),
+  C = n("57406"),
   y = n("633661"),
   N = n("690977"),
   R = n("311720"),
@@ -750,9 +750,9 @@ var i = n("539826"),
   B = n("605451"),
   H = n("860226"),
   Y = n("741662"),
-  j = n("533979"),
-  W = n("228256"),
-  K = n("222163"),
+  K = n("533979"),
+  j = n("228256"),
+  W = n("222163"),
   z = n("73643"),
   q = n("433600"),
   X = n("304549"),
@@ -774,8 +774,8 @@ var i = n("539826"),
   ec = n("184456"),
   ef = n("852566"),
   e_ = n("443083"),
-  eh = n("533785"),
-  eE = n("678904"),
+  eE = n("533785"),
+  eh = n("678904"),
   eg = n("442761"),
   em = n("276335"),
   ep = n("694982"),
@@ -783,8 +783,8 @@ var i = n("539826"),
   ev = n("552241"),
   eT = n("236532"),
   eI = n("462977"),
-  eC = n("446662"),
-  eA = n("858850"),
+  eA = n("446662"),
+  eC = n("858850"),
   ey = n("211009"),
   eN = n("256023"),
   eR = n("617657"),
@@ -804,9 +804,9 @@ var i = n("539826"),
   eB = n("914907"),
   eH = n("577776"),
   eY = n("74307"),
-  ej = n("324584"),
-  eW = n("240353"),
-  eK = n("161814"),
+  eK = n("324584"),
+  ej = n("240353"),
+  eW = n("161814"),
   ez = n("35672"),
   eq = n("325236"),
   eX = n("159350"),

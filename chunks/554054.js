@@ -18,9 +18,9 @@ var i = n("37983"),
   c = n("331756"),
   f = n("289382"),
   _ = n("261145");
-let h = (0, u.cssValueToNumber)(o.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
+let E = (0, u.cssValueToNumber)(o.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
 
-function E(e, t) {
+function h(e, t) {
   let {
     innerWidth: n,
     innerHeight: i
@@ -56,7 +56,7 @@ function g(e) {
         let {
           naturalWidth: t,
           naturalHeight: n
-        } = e, i = E(t, n);
+        } = e, i = h(t, n);
         return null != i ? i : e
       })
     }
@@ -70,7 +70,7 @@ function g(e) {
         } = e, {
           naturalWidth: n,
           naturalHeight: i
-        } = t, s = E(n, i);
+        } = t, s = h(n, i);
         null != s && u(s)
       },
       src: t,
@@ -89,7 +89,7 @@ class m extends s.PureComponent {
     window.removeEventListener("resize", this.handleResize)
   }
   calculateShowWaveAnimation() {
-    return window.innerWidth > h
+    return window.innerWidth > E
   }
   renderSplashArt() {
     let {
@@ -170,7 +170,7 @@ class m extends s.PureComponent {
       let {
         naturalWidth: e,
         naturalHeight: t
-      } = this.state, n = E(e, t), i = this.calculateShowWaveAnimation();
+      } = this.state, n = h(e, t), i = this.calculateShowWaveAnimation();
       null != n ? this.setState({
         ...n,
         showWaveAnimation: i
@@ -183,7 +183,7 @@ class m extends s.PureComponent {
       } = e, {
         naturalWidth: n,
         naturalHeight: i
-      } = t, s = E(n, i);
+      } = t, s = h(n, i);
       null != s && this.setState(s), this.setState({
         splashLoaded: !0
       }), window.removeEventListener("resize", this.handleResize), window.addEventListener("resize", this.handleResize)

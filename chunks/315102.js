@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   DEFAULT_AVATARS: function() {
-    return E
+    return h
   },
   SUPPORTS_WEBP: function() {
     return g
@@ -14,10 +14,10 @@ n.r(t), n.d(t, {
     return I
   },
   getGuildMemberAvatarURLSimple: function() {
-    return C
+    return A
   },
   getGuildMemberAvatarURL: function() {
-    return A
+    return C
   },
   getUserBannerURL: function() {
     return y
@@ -54,9 +54,9 @@ var s = n("552442"),
   c = n("299039"),
   f = n("49111"),
   _ = n("680894"),
-  h = n("363577");
+  E = n("363577");
 i = n("523096").default;
-let E = i.DEFAULT_AVATARS;
+let h = i.DEFAULT_AVATARS;
 i.DEFAULT_GROUP_DM_AVATARS;
 let g = i.canUseWebp(),
   m = (0, d.isAndroid)();
@@ -77,8 +77,8 @@ function p(e) {
   u && F(r) && (f = "mp4");
   let _ = window.GLOBAL_ENV.CDN_HOST;
   if (null != _ ? ("jpg" === f && (f = g ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(_, "/").concat(i, "/").concat(s, "/").concat(r, ".").concat(f)) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(s, r, f), "mp4" === f) return t;
-  let h = {};
-  return null != o && (h.size = (0, l.getBestMediaProxySize)(o * (0, l.getDevicePixelRatio)())), null != d && (h.keep_aspect_ratio = d), t + "?".concat(a.stringify(h))
+  let E = {};
+  return null != o && (E.size = (0, l.getBestMediaProxySize)(o * (0, l.getDevicePixelRatio)())), null != d && (E.keep_aspect_ratio = d), t + "?".concat(a.stringify(E))
 }
 
 function S(e) {
@@ -92,9 +92,9 @@ function S(e) {
 }
 
 function v(e, t) {
-  if (null == e && null == t) return E[0];
+  if (null == e && null == t) return h[0];
   let n = (0, u.parseInteger)(t, 0);
-  return n > 0 ? E[n % 5] : null != e ? E[r(e).shiftRight(22).mod(6).toJSNumber()] : E[0]
+  return n > 0 ? h[n % 5] : null != e ? h[r(e).shiftRight(22).mod(6).toJSNumber()] : h[0]
 }
 
 function T(e) {
@@ -107,7 +107,7 @@ function T(e) {
   if (r && t !== _.CLYDE_AI_USER_ID) {
     let e = i.BOT_AVATARS[n];
     if (e) return e;
-    if (null == n && "0000" === s) return E[0]
+    if (null == n && "0000" === s) return h[0]
   }
   return p({
     endpoint: f.Endpoints.AVATAR,
@@ -128,7 +128,7 @@ function I(e) {
   return null !== (t = T(e, n, i, s)) && void 0 !== t ? t : v(e.id, e.discriminator)
 }
 
-function C(e) {
+function A(e) {
   let t, {
       guildId: n,
       userId: i,
@@ -145,13 +145,13 @@ function C(e) {
   }))
 }
 
-function A(e) {
+function C(e) {
   let {
     userId: t,
     avatar: n,
     guildId: i
   } = e, s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return null == n ? null : C({
+  return null == n ? null : A({
     userId: t,
     avatar: n,
     guildId: i,
@@ -310,7 +310,7 @@ function U(e) {
     let e = T(s, !1, i);
     if (null != e) return e
   }
-  if (a) return h
+  if (a) return E
 }
 
 function w(e) {
@@ -404,11 +404,11 @@ function B(e) {
 var H = {
   getUserAvatarURL: I,
   getDefaultAvatarURL: v,
-  getGuildMemberAvatarURL: A,
-  getGuildMemberAvatarURLSimple: C,
+  getGuildMemberAvatarURL: C,
+  getGuildMemberAvatarURLSimple: A,
   getGuildMemberAvatarSource: function(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-      i = A(e, n);
+      i = C(e, n);
     return null != i ? B(i) : t.getAvatarSource(e.guildId, n)
   },
   getGuildMemberBannerURL: R,

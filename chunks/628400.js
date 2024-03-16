@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return _
   },
   Table: function() {
-    return h
+    return E
   }
 });
 var i = n("37983"),
@@ -70,7 +70,7 @@ function _(e) {
   })
 }
 
-function h(e) {
+function E(e) {
   let {
     title: t,
     header: n,

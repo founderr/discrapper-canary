@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   InputError: function() {
-    return E
+    return h
   },
   TextInput: function() {
     return g
@@ -18,12 +18,12 @@ var i = n("37983"),
   c = n("634634"),
   f = n("782340"),
   _ = n("182893");
-let h = {
+let E = {
   DEFAULT: _.inputDefault,
   MINI: _.inputMini
 };
 
-function E(e) {
+function h(e) {
   let {
     error: t
   } = e, n = (0, o.useTransition)(t, {
@@ -89,7 +89,7 @@ class g extends s.Component {
       editable: d,
       inputRef: c,
       prefixElement: f,
-      focusProps: h,
+      focusProps: E,
       ...g
     } = this.props, m = null !== (t = g["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
     return (0, i.jsxs)("div", {
@@ -98,7 +98,7 @@ class g extends s.Component {
         className: _.inputPrefix,
         children: r
       }) : null, (0, i.jsx)(l.FocusRing, {
-        ...h,
+        ...E,
         children: (0, i.jsx)("input", {
           className: a(u, s, {
             [_.error]: this.hasError(),
@@ -114,7 +114,7 @@ class g extends s.Component {
           onFocus: this.onFocus,
           ref: c
         })
-      }), (0, i.jsx)(E, {
+      }), (0, i.jsx)(h, {
         error: this.getError()
       })]
     })
@@ -162,9 +162,9 @@ class g extends s.Component {
     }
   }
 }
-g.Sizes = h, g.contextType = u.FormContext, g.defaultProps = {
+g.Sizes = E, g.contextType = u.FormContext, g.defaultProps = {
   name: "",
-  size: h.DEFAULT,
+  size: E.DEFAULT,
   disabled: !1,
   type: "text",
   placeholder: "",

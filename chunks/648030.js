@@ -14,8 +14,8 @@ var i, s = n("627445"),
   c = n("861309"),
   f = n("694352"),
   _ = n("846678"),
-  h = n("492249"),
-  E = n("49111");
+  E = n("492249"),
+  h = n("49111");
 let g = "RPC_STORE_WAIT",
   m = [];
 i = class {
@@ -32,15 +32,15 @@ i = class {
         environment: "production"
       }
     };
-    if (e.transport === h.TransportTypes.IPC) {
+    if (e.transport === E.TransportTypes.IPC) {
       let n = this.getCurrentUser();
       if (null == n) {
-        e.close(E.RPCCloseCodes.CLOSE_NORMAL, "User logged out");
+        e.close(h.RPCCloseCodes.CLOSE_NORMAL, "User logged out");
         return
       }
       t.user = (0, f.default)(n)
     }
-    this.dispatch(e, null, E.RPCCommands.DISPATCH, E.RPCEvents.READY, t)
+    this.dispatch(e, null, h.RPCCommands.DISPATCH, h.RPCEvents.READY, t)
   }
   handleDisconnect(e, t) {
     this.removeSubscriptions(e), this.sockets.delete(e), this.onDisconnect(e, t)
@@ -48,19 +48,19 @@ i = class {
   handleRequest(e, t) {
     new Promise(n => {
       if (null == t.nonce || "" === t.nonce) throw new c.default({
-        errorCode: E.RPCErrors.INVALID_PAYLOAD
+        errorCode: h.RPCErrors.INVALID_PAYLOAD
       }, "Payload requires a nonce");
       let i = t.cmd,
         s = this.commands[i];
       if (null == s) throw new c.default({
-        errorCode: E.RPCErrors.INVALID_COMMAND
+        errorCode: h.RPCErrors.INVALID_COMMAND
       }, "Invalid command: ".concat(t.cmd));
       if (!(0, _.default)(e.authorization.scopes, s.scope)) throw new c.default({
-        errorCode: E.RPCErrors.INVALID_PERMISSIONS
+        errorCode: h.RPCErrors.INVALID_PERMISSIONS
       }, "Not authenticated or invalid scope");
       d.ExperimentRPCServerAnalyticsKillswitch.getCurrentConfig({
         location: "RPCServer"
-      }).enabled && l.default.track(E.AnalyticEvents.RPC_COMMAND_SENT, {
+      }).enabled && l.default.track(h.AnalyticEvents.RPC_COMMAND_SENT, {
         command: i,
         scope: "object" == typeof s.scope ? JSON.stringify(s.scope) : s.scope,
         application_id: e.application.id,
@@ -74,7 +74,7 @@ i = class {
         }, t => {
           if (null != t) {
             i(new c.default({
-              errorCode: E.RPCErrors.INVALID_PAYLOAD
+              errorCode: h.RPCErrors.INVALID_PAYLOAD
             }, t.message));
             return
           }
@@ -108,7 +108,7 @@ i = class {
   }
   dispatch(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.RPCCommands.DISPATCH,
+      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : h.RPCCommands.DISPATCH,
       i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
       s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
     e.send({
@@ -120,14 +120,14 @@ i = class {
   }
   error(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.RPCCommands.DISPATCH,
-      i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : E.RPCErrors.UNKNOWN_ERROR,
+      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : h.RPCCommands.DISPATCH,
+      i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h.RPCErrors.UNKNOWN_ERROR,
       s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "Unknown Error";
-    l.default.track(E.AnalyticEvents.RPC_SERVER_ERROR_CAUGHT, {
+    l.default.track(h.AnalyticEvents.RPC_SERVER_ERROR_CAUGHT, {
       command: n,
       code: i,
       message: s
-    }), this.dispatch(e, t, n, E.RPCEvents.ERROR, {
+    }), this.dispatch(e, t, n, h.RPCEvents.ERROR, {
       code: i,
       message: s
     })
@@ -140,7 +140,7 @@ i = class {
   }
   addSubscription(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-      s = this.dispatch.bind(this, e, null, E.RPCCommands.DISPATCH, t);
+      s = this.dispatch.bind(this, e, null, h.RPCCommands.DISPATCH, t);
     null == this.getSubscription(e, t, n) && this.subscriptions.push({
       update: i,
       dispatch: s,
@@ -164,7 +164,7 @@ i = class {
     if (!(null != i && "" !== i && (s = i, m.includes(s) || (m.unshift(s), m.splice(50), 0)))) this.subscriptions.forEach(i => {
       var s, r, a;
       if (i.evt === e) {
-        if (("function" != typeof t || t(i)) && ("object" != typeof t || (r = t, a = null !== (s = i.args) && void 0 !== s ? s : {}, o.isEqual(r, o.pick(a, Object.keys(r)))))) this.dispatch(i.socket, null, E.RPCCommands.DISPATCH, i.evt, n)
+        if (("function" != typeof t || t(i)) && ("object" != typeof t || (r = t, a = null !== (s = i.args) && void 0 !== s ? s : {}, o.isEqual(r, o.pick(a, Object.keys(r)))))) this.dispatch(i.socket, null, h.RPCCommands.DISPATCH, i.evt, n)
       }
     })
   }

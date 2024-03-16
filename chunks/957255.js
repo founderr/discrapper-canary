@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return K
+    return W
   }
 }), n("222007");
 var i = n("917351"),
@@ -15,8 +15,8 @@ var i = n("917351"),
   c = n("834052"),
   f = n("755624"),
   _ = n("526311"),
-  h = n("233069"),
-  E = n("813006"),
+  E = n("233069"),
+  h = n("813006"),
   g = n("766274"),
   m = n("845078"),
   p = n("991170"),
@@ -24,8 +24,8 @@ var i = n("917351"),
   v = n("926787"),
   T = n("26989"),
   I = n("305961"),
-  C = n("697218"),
-  A = n("49111"),
+  A = n("697218"),
+  C = n("49111"),
   y = n("562980");
 let N = {},
   R = {},
@@ -36,7 +36,7 @@ function P(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     n = N[e];
   if (null != n) return n;
-  let i = C.default.getCurrentUser();
+  let i = A.default.getCurrentUser();
   if (null == i) return p.default.NONE;
   let s = I.default.getGuild(e);
   return null == s ? p.default.NONE : N[e] = p.default.computePermissions({
@@ -49,7 +49,7 @@ function P(e) {
 function L(e) {
   var t;
   let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    i = C.default.getCurrentUser();
+    i = A.default.getCurrentUser();
   if (null == i) return p.default.NONE;
   let r = S.default.getChannel(e);
   if (null == r) return p.default.NONE;
@@ -93,7 +93,7 @@ function V(e) {
   let {
     user: n
   } = e;
-  if (n.id !== (null === (t = C.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
+  if (n.id !== (null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
   U()
 }
 
@@ -125,7 +125,7 @@ function B(e) {
     instance: t
   } = e, n = S.default.getChannel(t.channel_id);
   if (null == n) return !1;
-  let i = C.default.getCurrentUser(),
+  let i = A.default.getCurrentUser(),
     s = p.default.computePermissions({
       user: i,
       context: n
@@ -147,15 +147,15 @@ function H(e) {
 
 function Y(e, t, n, i) {
   let s = p.default.NONE;
-  if (e instanceof h.ChannelRecordBase) {
-    if (h.THREAD_CHANNEL_TYPES.has(e.type)) {
+  if (e instanceof E.ChannelRecordBase) {
+    if (E.THREAD_CHANNEL_TYPES.has(e.type)) {
       let s = S.default.getChannel(e.parent_id);
       return null == s ? p.default.NONE : p.default.applyThreadPermissions(e, Y(s, t, n, i), f.default.hasJoined(e.id))
     }
     s = M(e.id)
-  } else e instanceof E.default && (s = P(e.id));
+  } else e instanceof h.default && (s = P(e.id));
   return void 0 !== t || void 0 !== n || void 0 !== i ? p.default.computePermissions({
-    user: C.default.getCurrentUser(),
+    user: A.default.getCurrentUser(),
     context: e,
     overwrites: t,
     roles: n,
@@ -163,31 +163,31 @@ function Y(e, t, n, i) {
     excludeGuildPermissions: i
   }) : s
 }
-class j extends a.default.Store {
+class K extends a.default.Store {
   initialize() {
-    this.waitFor(C.default, I.default, S.default, T.default, v.default, f.default, c.default, u.default)
+    this.waitFor(A.default, I.default, S.default, T.default, v.default, f.default, c.default, u.default)
   }
   getChannelPermissions(e) {
-    return h.THREAD_CHANNEL_TYPES.has(e.type) ? L(e.id) : M(e.id)
+    return E.THREAD_CHANNEL_TYPES.has(e.type) ? L(e.id) : M(e.id)
   }
   getGuildPermissions(e) {
     return P(e.id)
   }
   getGuildPermissionProps(e) {
-    let t = C.default.getCurrentUser();
+    let t = A.default.getCurrentUser();
     return {
-      canManageGuild: this.can(A.Permissions.MANAGE_GUILD, e),
-      canManageChannels: this.can(A.Permissions.MANAGE_CHANNELS, e),
-      canManageRoles: this.can(A.Permissions.MANAGE_ROLES, e),
-      canManageBans: this.can(A.Permissions.BAN_MEMBERS, e),
-      canManageNicknames: this.can(A.Permissions.MANAGE_NICKNAMES, e),
-      canManageGuildExpressions: this.can(A.Permissions.MANAGE_GUILD_EXPRESSIONS, e) || this.can(A.Permissions.CREATE_GUILD_EXPRESSIONS, e),
-      canViewAuditLog: this.can(A.Permissions.VIEW_AUDIT_LOG, e),
-      canViewAuditLogV2: this.can(A.Permissions.VIEW_AUDIT_LOG, e),
-      canManageWebhooks: this.can(A.Permissions.MANAGE_WEBHOOKS, e),
-      canViewGuildAnalytics: this.can(A.Permissions.VIEW_GUILD_ANALYTICS, e),
+      canManageGuild: this.can(C.Permissions.MANAGE_GUILD, e),
+      canManageChannels: this.can(C.Permissions.MANAGE_CHANNELS, e),
+      canManageRoles: this.can(C.Permissions.MANAGE_ROLES, e),
+      canManageBans: this.can(C.Permissions.BAN_MEMBERS, e),
+      canManageNicknames: this.can(C.Permissions.MANAGE_NICKNAMES, e),
+      canManageGuildExpressions: this.can(C.Permissions.MANAGE_GUILD_EXPRESSIONS, e) || this.can(C.Permissions.CREATE_GUILD_EXPRESSIONS, e),
+      canViewAuditLog: this.can(C.Permissions.VIEW_AUDIT_LOG, e),
+      canViewAuditLogV2: this.can(C.Permissions.VIEW_AUDIT_LOG, e),
+      canManageWebhooks: this.can(C.Permissions.MANAGE_WEBHOOKS, e),
+      canViewGuildAnalytics: this.can(C.Permissions.VIEW_GUILD_ANALYTICS, e),
       canAccessMembersPage: this.canAccessMemberSafetyPage(e),
-      isGuildAdmin: this.can(A.Permissions.ADMINISTRATOR, e),
+      isGuildAdmin: this.can(C.Permissions.ADMINISTRATOR, e),
       isOwner: null != t && e.isOwner(t),
       isOwnerWithRequiredMfaLevel: null != t && e.isOwnerWithRequiredMfaLevel(t),
       guild: e
@@ -218,24 +218,24 @@ class j extends a.default.Store {
   canManageUser(e, t, n) {
     let i = t instanceof g.default ? t.id : t;
     if (n.isOwner(i)) return !1;
-    let s = C.default.getCurrentUser();
+    let s = A.default.getCurrentUser();
     if (!this.can(e, n)) return !1;
     let r = null != s ? p.default.getHighestRole(n, s.id) : void 0,
       a = p.default.getHighestRole(n, i);
     return null != s && p.default.isRoleHigher(n, s.id, r, a)
   }
   getHighestRole(e) {
-    let t = C.default.getCurrentUser();
+    let t = A.default.getCurrentUser();
     return null != t ? p.default.getHighestRole(e, t.id) : null
   }
   isRoleHigher(e, t, n) {
-    let i = C.default.getCurrentUser(),
+    let i = A.default.getCurrentUser(),
       s = u.default.isViewingRoles(e.id);
     return p.default.isRoleHigher(e, s ? void 0 : null == i ? void 0 : i.id, t, n)
   }
   canImpersonateRole(e, t) {
     let n = this.getHighestRole(e),
-      i = this.can(A.Permissions.MANAGE_GUILD, e) && this.can(A.Permissions.MANAGE_ROLES, e),
+      i = this.can(C.Permissions.MANAGE_GUILD, e) && this.can(C.Permissions.MANAGE_ROLES, e),
       s = this.isRoleHigher(e, n, t);
     return i && (s || t.id === (null == n ? void 0 : n.id))
   }
@@ -248,18 +248,18 @@ class j extends a.default.Store {
   }
 }
 
-function W() {
+function j() {
   R = {}, N = {}, O = {}, D = 0
 }
-j.displayName = "PermissionStore";
-var K = new j(o.default, {
+K.displayName = "PermissionStore";
+var W = new K(o.default, {
   BACKGROUND_SYNC: w,
   CONNECTION_OPEN: w,
   OVERLAY_INITIALIZE: w,
   CACHE_LOADED: w,
   CACHE_LOADED_LAZY: w,
   CONNECTION_CLOSED: function() {
-    W()
+    j()
   },
   GUILD_CREATE: k,
   GUILD_UPDATE: k,
@@ -274,7 +274,7 @@ var K = new j(o.default, {
       }
     } = e, n = S.default.getChannel(t);
     if (null == n || n.isPrivate()) return !1;
-    let i = C.default.getCurrentUser(),
+    let i = A.default.getCurrentUser(),
       s = p.default.computePermissions({
         user: i,
         context: n
@@ -297,7 +297,7 @@ var K = new j(o.default, {
       of t) {
       let t = S.default.getChannel(e);
       if (null == t || t.isPrivate()) continue;
-      let i = C.default.getCurrentUser(),
+      let i = A.default.getCurrentUser(),
         s = p.default.computePermissions({
           user: i,
           context: t
@@ -322,7 +322,7 @@ var K = new j(o.default, {
   },
   THREAD_MEMBER_UPDATE: function(e) {
     var t;
-    return (null === (t = C.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (b(e.guildId), !0)
+    return (null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (b(e.guildId), !0)
   },
   THREAD_MEMBERS_UPDATE: function(e) {
     return !!(0, _.doesThreadMembersActionAffectMe)(e) && (b(e.guildId), !0)
@@ -336,7 +336,7 @@ var K = new j(o.default, {
   GUILD_ROLE_CREATE: x,
   GUILD_ROLE_UPDATE: x,
   GUILD_ROLE_DELETE: x,
-  LOGOUT: W,
+  LOGOUT: j,
   STAGE_INSTANCE_CREATE: B,
   STAGE_INSTANCE_UPDATE: B,
   STAGE_INSTANCE_DELETE: B,

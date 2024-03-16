@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   transformNativeFile: function() {
-    return h
+    return E
   },
   makeFile: function() {
-    return E
+    return h
   },
   classifyFile: function() {
     return m
@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return I
   },
   getMaxRequestSize: function() {
-    return C
+    return A
   }
 }), n("222007");
 var i = n("477850"),
@@ -40,11 +40,11 @@ var i = n("477850"),
   f = n("49111"),
   _ = n("646718");
 
-function h(e, t) {
-  return e instanceof File ? e : E(e.data, e.filename, t)
+function E(e, t) {
+  return e instanceof File ? e : h(e.data, e.filename, t)
 }
 
-function E(e, t, i) {
+function h(e, t, i) {
   let s = n("637139");
   if (null == t && (t = "unknown", "type" in e)) {
     let n = s.extension(e.type);
@@ -137,10 +137,10 @@ function I(e) {
     let t = 0;
     for (let n of e) t += n.size;
     return t
-  }(e) > C()
+  }(e) > A()
 }
 
-function C() {
+function A() {
   let e = d.default.getCurrentUser();
   return null != e && e.isStaff() ? 524288e3 : 524288e3
 }

@@ -20,8 +20,8 @@ function u(e) {
     title: c,
     icon: f,
     disabled: _,
-    htmlFor: h,
-    tag: E = "h5",
+    htmlFor: E,
+    tag: h = "h5",
     ...g
   } = e, m = s.useId(), p = null !== (t = g.titleId) && void 0 !== t ? t : m;
   return null != c ? (0, i.jsx)("div", {
@@ -30,9 +30,9 @@ function u(e) {
       component: (0, i.jsxs)("div", {
         className: l.sectionTitle,
         children: [f, null != c ? (0, i.jsx)(o.FormTitle, {
-          tag: E,
+          tag: h,
           id: p,
-          htmlFor: h,
+          htmlFor: E,
           disabled: _,
           className: d,
           children: c

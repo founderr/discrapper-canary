@@ -27,8 +27,8 @@ function c(e, t, n) {
     });
   return (0, s.forwardRef)(function(n, _) {
     let {
-      onScroll: h,
-      dir: E = "ltr",
+      onScroll: E,
+      dir: h = "ltr",
       sections: g,
       columns: m,
       getItemKey: p,
@@ -36,8 +36,8 @@ function c(e, t, n) {
       getSectionHeight: v,
       chunkSize: T,
       renderSection: I,
-      renderItem: C,
-      getSectionProps: A,
+      renderItem: A,
+      getSectionProps: C,
       itemGutter: y,
       removeEdgeItemGutters: N,
       sectionGutter: R,
@@ -58,14 +58,14 @@ function c(e, t, n) {
       className: M,
       specs: a,
       orientation: "vertical",
-      dir: E
+      dir: h
     });
     let {
       forceUpdateOnChunkChange: H,
       coordsMap: Y,
-      gridData: j,
-      visibleSections: W,
-      totalHeight: K,
+      gridData: K,
+      visibleSections: j,
+      totalHeight: W,
       forceUpdate: z,
       masonryComputer: q
     } = (0, u.useVirtualizedMasonryState)({
@@ -82,7 +82,7 @@ function c(e, t, n) {
       paddingVertical: D,
       paddingHorizontal: P,
       getScrollerState: B,
-      dir: E
+      dir: h
     }), X = (0, s.useCallback)(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
       e > x.current.dirty && (x.current.dirty = e, 2 === e ? z() : H(1))
@@ -103,8 +103,8 @@ function c(e, t, n) {
     let ee = (0, s.useCallback)(e => {
       X(1), null == w.current ? G(!0) : clearTimeout(w.current), w.current = setTimeout(() => {
         w.current = null, G(!1)
-      }, 200), null != h && h(e)
-    }, [h, X]);
+      }, 200), null != E && E(e)
+    }, [E, X]);
     return (0, i.jsx)("div", {
       ref: F,
       onScroll: ee,
@@ -119,27 +119,27 @@ function c(e, t, n) {
         containerRef: k,
         children: (0, i.jsx)("div", {
           style: {
-            height: K
+            height: W
           },
           className: d.content,
           ref: k,
-          children: Object.keys(W).map(e => {
+          children: Object.keys(j).map(e => {
             let t = (0, u.getMasonryListSectionIndex)(e),
               n = Y[e],
-              s = W[e],
+              s = j[e],
               r = Y[(0, u.getMasonryListSectionHeaderKey)(t)],
-              a = null == A ? void 0 : A(t);
+              a = null == C ? void 0 : C(t);
             return null != n && null != s ? (0, i.jsxs)("div", {
               style: n,
               ...a,
               children: [null != I && null != r && I(t, r, e), s.map(e => {
                 let [t, n, i] = e, s = Y[t];
-                return null != s ? C(n, i, s, t, j) : null
+                return null != s ? A(n, i, s, t, K) : null
               })]
             }, e) : null
           })
         })
-      }), [W, C, I, Y, K, A, j])
+      }), [j, A, I, Y, W, C, K])
     })
   })
 }

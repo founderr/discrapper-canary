@@ -34,7 +34,7 @@ function u(e) {
       n && (0, o.registerActiveSink)(t)
     }
   }, [n]);
-  let h = s.useCallback(() => {
+  let E = s.useCallback(() => {
     var e, t, n, i;
     let {
       width: s,
@@ -50,9 +50,9 @@ function u(e) {
   }, [u]);
   s.useLayoutEffect(() => {
     let e = f.current;
-    if (null != e) return e.addEventListener("resize", h), () => e.removeEventListener("resize", h)
-  }, [h]);
-  let E = s.useCallback(() => {
+    if (null != e) return e.addEventListener("resize", E), () => e.removeEventListener("resize", E)
+  }, [E]);
+  let h = s.useCallback(() => {
       null == r || r()
     }, [r]),
     g = s.useCallback(e => {
@@ -63,7 +63,7 @@ function u(e) {
     ref: f,
     autoPlay: !0,
     onPause: g,
-    onCanPlayThrough: E,
+    onCanPlayThrough: h,
     muted: !0,
     ...c
   })

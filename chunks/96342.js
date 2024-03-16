@@ -315,7 +315,7 @@ function k(e, t, n, i, a) {
     case "emoji":
     case "customEmoji": {
       let l = t.substring(i);
-      if (!l.startsWith(o[0]) && (i = U(e, t, i, t.length), l = t.substring(i)), l.startsWith(o[0])) return b({
+      if (!l.startsWith(o[0]) && (i = U(e, t, i, t.length), l = t.substring(i)), l.startsWith(o[0])) return P({
         result: e,
         sourceText: t,
         text: o[0],
@@ -336,7 +336,7 @@ function k(e, t, n, i, a) {
         text: a,
         id: s
       } = n;
-      if (null != a) return l(a === o[0], "Slate: text mentions must exactly match the regex match"), b({
+      if (null != a) return l(a === o[0], "Slate: text mentions must exactly match the regex match"), P({
         result: e,
         sourceText: t,
         text: a,
@@ -346,7 +346,7 @@ function k(e, t, n, i, a) {
           text: a
         }
       });
-      return b({
+      return P({
         result: e,
         sourceText: t,
         text: o[0],
@@ -362,7 +362,7 @@ function k(e, t, n, i, a) {
           location: "c70cbb_1"
         }, {
           autoTrackExposure: !1
-        }).enabled) return b({
+        }).enabled) return P({
         result: e,
         sourceText: t,
         text: o[0],
@@ -400,7 +400,7 @@ function k(e, t, n, i, a) {
         if ("inlineStyle" === l.type) return l;
         throw Error("Slate: rule must be an inlineStyle")
       }(t, r, i, o);
-      return i = P(e, t, n, i, "syntaxBefore"), a.push(r), i = L(e, t, null != s ? s : "", i, a), a.pop(), i = P(e, t, l, i, "syntaxAfter"), j(t, i)
+      return i = b(e, t, n, i, "syntaxBefore"), a.push(r), i = L(e, t, null != s ? s : "", i, a), a.pop(), i = b(e, t, l, i, "syntaxAfter"), j(t, i)
     }
     default:
       throw Error("Slate: Unknown rule type: ".concat(r))
@@ -408,7 +408,7 @@ function k(e, t, n, i, a) {
 }
 
 function L(e, t, n, i, l) {
-  return "string" == typeof n ? i = b({
+  return "string" == typeof n ? i = P({
     result: e,
     sourceText: t,
     text: n,
@@ -420,7 +420,7 @@ function L(e, t, n, i, l) {
   })), j(t, i)
 }
 
-function P(e, t, n, i, a) {
+function b(e, t, n, i, a) {
   if (n.length > 0) {
     let s = t.indexOf(n, i),
       r = t.substring(i, s + n.length);
@@ -434,7 +434,7 @@ function P(e, t, n, i, a) {
   return i
 }
 
-function b(e) {
+function P(e) {
   let {
     result: t,
     sourceText: n,
@@ -470,7 +470,7 @@ function j(e, t) {
 
 function U(e, t, n, i) {
   for (; n < i;)
-    if (y.has(t[n])) n = P(e, t, t[n], n, "syntaxBefore"), n = j(t, n);
+    if (y.has(t[n])) n = b(e, t, t[n], n, "syntaxBefore"), n = j(t, n);
     else break;
   return n
 }

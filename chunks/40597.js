@@ -2,7 +2,7 @@
 let i, s;
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 }), n("70102");
 var r = n("446674"),
@@ -19,7 +19,7 @@ let d = null,
     return a.default.getAPIBaseURL() + u.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(u.PaymentGateways.BRAINTREE, i)
   },
   open: e => {
-    s = e, window.open(e), h.emitChange()
+    s = e, window.open(e), E.emitChange()
   }
 });
 class _ extends r.default.Store {
@@ -37,7 +37,7 @@ class _ extends r.default.Store {
   }
 }
 _.displayName = "BraintreeStore";
-let h = new _(o.default, {
+let E = new _(o.default, {
   BRAINTREE_CREATE_CLIENT_SUCCESS: function(e) {
     let {
       client: t
@@ -84,4 +84,4 @@ let h = new _(o.default, {
     f = null
   }
 });
-var E = h
+var h = E

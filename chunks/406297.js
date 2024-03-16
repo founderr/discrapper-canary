@@ -69,6 +69,6 @@ function l(e) {
   if (null == f) return !1;
   let _ = r.default.getGuild(f);
   if (null == _) return !1;
-  let h = s.default.getMember(f, t);
-  return null != h && l.some(e => h.roles.includes(e))
+  let E = s.default.getMember(f, t);
+  return null != E && l.some(e => E.roles.includes(e))
 }

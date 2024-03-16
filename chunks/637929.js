@@ -34,8 +34,8 @@ let u = null,
   c = null,
   f = null,
   _ = {},
-  h = {},
   E = {},
+  h = {},
   g = {};
 class m extends i.default.Store {
   getGlobalStats() {
@@ -55,9 +55,9 @@ class m extends i.default.Store {
       approx_seconds_since_last_role_mention: t(c),
       approx_seconds_since_last_everyone_mention: t(f),
       approx_seconds_since_last_guild_notification: null == e ? null : t(_[e]),
-      approx_seconds_since_last_guild_mention: null == e ? null : t(h[e]),
+      approx_seconds_since_last_guild_mention: null == e ? null : t(E[e]),
       approx_seconds_since_last_guild_role_mention: null == e ? null : t(g[e]),
-      approx_seconds_since_last_guild_everyone_mention: null == e ? null : t(E[e])
+      approx_seconds_since_last_guild_everyone_mention: null == e ? null : t(h[e])
     }
   }
 }
@@ -65,9 +65,9 @@ var p = new m(s.default, {
   CONNECTION_OPEN: function() {
     let e = e => null != e && Date.now() - e < 6e4;
     for (let t in !e(u) && (u = null), !e(d) && (d = null), !e(c) && (c = null), !e(f) && (f = null), _) !e(_[t]) && delete _[t];
-    for (let t in h) !e(h[t]) && delete h[t];
+    for (let t in E) !e(E[t]) && delete E[t];
     for (let t in g) !e(g[t]) && delete g[t];
-    for (let t in E) !e(E[t]) && delete E[t]
+    for (let t in h) !e(h[t]) && delete h[t]
   },
   MESSAGE_NOTIFICATION_SHOWN: function(e) {
     let {
@@ -76,6 +76,6 @@ var p = new m(s.default, {
       roleMentioned: i,
       everyoneMentioned: s
     } = e, r = Date.now();
-    u = r, null != t && (_[t] = r), n && (d = r, null != t && (h[t] = r)), i && (c = r, null != t && (g[t] = r)), s && (f = r, null != t && (E[t] = r))
+    u = r, null != t && (_[t] = r), n && (d = r, null != t && (E[t] = r)), i && (c = r, null != t && (g[t] = r)), s && (f = r, null != t && (h[t] = r))
   }
 })

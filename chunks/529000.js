@@ -15,8 +15,8 @@ var i = n("37983"),
   c = n("718776"),
   f = n("145131"),
   _ = n("36694"),
-  h = n("49111"),
-  E = n("750692"),
+  E = n("49111"),
+  h = n("750692"),
   g = n("890957");
 let m = l.memoize(e => {
   let t = !1;
@@ -45,8 +45,8 @@ class p extends s.PureComponent {
         left: 4
       },
       children: (0, i.jsxs)(f.default, {
-        className: a(E.selectableItem, s, {
-          [E.selected]: t
+        className: a(h.selectableItem, s, {
+          [h.selected]: t
         }),
         onClick: this.handleClick,
         onKeyUp: this.handleKeyUp,
@@ -59,7 +59,7 @@ class p extends s.PureComponent {
         tabIndex: 0,
         children: [(0, i.jsx)(f.default, {
           align: f.default.Align.CENTER,
-          className: E.selectableItemLabel,
+          className: h.selectableItemLabel,
           shrink: 1,
           children: r
         }), t && (0, i.jsx)(f.default, {
@@ -78,7 +78,7 @@ class p extends s.PureComponent {
     super(...e), this.state = {
       color: m(this.props.color)
     }, this.handleKeyUp = e => {
-      if (e.which === h.KeyboardKeys.ENTER || e.which === h.KeyboardKeys.SPACE) {
+      if (e.which === E.KeyboardKeys.ENTER || e.which === E.KeyboardKeys.SPACE) {
         let {
           onClick: e,
           ...t

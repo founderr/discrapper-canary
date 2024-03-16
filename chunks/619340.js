@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
 var i = n("759843"),
@@ -27,7 +27,7 @@ function _(e, t) {
     oldFormErrors: !0
   })
 }
-var h = {
+var E = {
   fetch: () => r.default.get({
     url: c.Endpoints.CONNECTIONS,
     oldFormErrors: !0

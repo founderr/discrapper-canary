@@ -88,9 +88,9 @@ var L = e => {
     isInSidebar: C = !1,
     canShowAvatarDecorationUpsell: A = !1,
     canShowProfileEffectUpsell: L = !1,
-    upsellSource: P
+    upsellSource: b
   } = e, {
-    analyticsLocations: b
+    analyticsLocations: P
   } = (0, p.default)(f.default.COLLECTIBLES_USER_POPOUT_UPSELL), j = (0, o.default)([c.default], () => c.default.useReducedMotion), {
     ref: U,
     height: D
@@ -100,9 +100,9 @@ var L = e => {
     setUpsellSource: B,
     reset: H
   } = (0, T.useUserPopoutCollectiblesUpsellStore)();
-  l.useEffect(() => (B(P), () => {
+  l.useEffect(() => (B(b), () => {
     H()
-  }), [B, P, H]);
+  }), [B, b, H]);
   let V = (0, o.default)([g.default], () => g.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
     [K, W] = (0, o.useStateFromStoresArray)([E.default], () => {
       var e;
@@ -111,11 +111,11 @@ var L = e => {
     Y = l.useCallback(() => {
       var e, t, i, l;
       null == h || h(_.ContentDismissActionType.PRIMARY), null == m || m(), (0, x.openCollectiblesShop)({
-        analyticsLocations: b,
+        analyticsLocations: P,
         analyticsSource: f.default.COLLECTIBLES_USER_POPOUT_UPSELL,
         initialProductSkuId: K ? null !== (i = null == V ? void 0 : V.skuId) && void 0 !== i ? i : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId : null !== (l = null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId) && void 0 !== l ? l : null == V ? void 0 : V.skuId
       })
-    }, [h, m, b, null == V ? void 0 : V.skuId, null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId, K]),
+    }, [h, m, P, null == V ? void 0 : V.skuId, null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId, K]),
     z = l.useCallback(() => {
       null == h || h(_.ContentDismissActionType.DISMISS)
     }, [h]);

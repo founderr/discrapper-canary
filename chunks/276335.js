@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PopoutCSSAnimator: function() {
-    return h
+    return E
   }
 }), n("222007");
 var i, s, r = n("37983"),
@@ -26,22 +26,22 @@ let f = Object.freeze({
     window_center: c.animatorCenter
   });
 
-function h(e) {
+function E(e) {
   let {
     position: t,
     type: n,
     children: i
   } = e, {
     reducedMotion: s
-  } = a.useContext(d.AccessibilityPreferencesContext), o = s.enabled ? 3 : n, [h, E] = a.useState(null != t), [g] = a.useState(() => new u.Timeout);
+  } = a.useContext(d.AccessibilityPreferencesContext), o = s.enabled ? 3 : n, [E, h] = a.useState(null != t), [g] = a.useState(() => new u.Timeout);
   return a.useEffect(() => () => g.stop(), [g]), a.useEffect(() => {
-    null != t && g.start(10, () => E(!0))
+    null != t && g.start(10, () => h(!0))
   }, [t, g]), (0, r.jsx)("div", {
     className: l(null != t ? _[t] : null, {
       [f[o]]: null != t,
-      [c.didRender]: h
+      [c.didRender]: E
     }),
     children: i
   })
 }
-h.Types = i
+E.Types = i

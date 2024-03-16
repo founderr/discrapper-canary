@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return N
   },
   default: function() {
-    return K
+    return W
   }
 }), n("222007"), n("808653");
 var i = n("345570"),
@@ -21,8 +21,8 @@ var i = n("345570"),
   c = n("271938"),
   f = n("982108"),
   _ = n("42203"),
-  h = n("377253"),
-  E = n("18494"),
+  E = n("377253"),
+  h = n("18494"),
   g = n("162771"),
   m = n("299039"),
   p = n("660464"),
@@ -30,8 +30,8 @@ var i = n("345570"),
   v = n("457971"),
   T = n("447435"),
   I = n("574933"),
-  C = n("49111"),
-  A = n("397336");
+  A = n("49111"),
+  C = n("397336");
 let y = 3e3,
   N = 800,
   R = {};
@@ -108,7 +108,7 @@ function M(e, t) {
       timeout: setTimeout(() => {
         ! function(e) {
           if (P(e, T.TimeoutCancelSource.TIMEOUT)) {
-            let t = h.default.getMessage(e.channel_id, e.id),
+            let t = E.default.getMessage(e.channel_id, e.id),
               {
                 attachmentIds: n,
                 embedIds: i
@@ -191,14 +191,14 @@ function w(e) {
   } = e;
   if (!(0, v.isEligibleForExplicitMediaRedaction)() || null == o.channel_id || null == o.id || (null === (t = o.author) || void 0 === t ? void 0 : t.id) === c.default.getId() || null == o.embeds && null == o.attachments || (null === (n = o.embeds) || void 0 === n ? void 0 : n.length) === 0 && (null === (i = o.attachments) || void 0 === i ? void 0 : i.length) === 0) return !1;
   if (!(0, p.hasUnscannedAttachmentsOrEmbedsForTimeout)(o)) {
-    let e = null !== (a = null !== (r = h.default.getMessage(o.channel_id, o.id)) && void 0 !== r ? r : I.default.getMessage(o.id, o.channel_id)) && void 0 !== a ? a : null === (s = d.default.getMessage(o.channel_id, o.id)) || void 0 === s ? void 0 : s.message;
+    let e = null !== (a = null !== (r = E.default.getMessage(o.channel_id, o.id)) && void 0 !== r ? r : I.default.getMessage(o.id, o.channel_id)) && void 0 !== a ? a : null === (s = d.default.getMessage(o.channel_id, o.id)) || void 0 === s ? void 0 : s.message;
     null != e && !(0, p.hasUnscannedAttachmentsOrEmbedsForTimeout)((0, u.updateMessageRecord)(e, o)) && P(e, T.TimeoutCancelSource.UPDATE)
   }
-  let l = E.default.getChannelId(),
+  let l = h.default.getChannelId(),
     _ = f.default.getCurrentSidebarChannelId(l),
     g = o.channel_id === l || o.channel_id === _;
   if (!g) return !1;
-  let m = h.default.getMessage(o.channel_id, o.id);
+  let m = E.default.getMessage(o.channel_id, o.id);
   return null != m && U([m], {
     isMessageUpdate: !0
   })
@@ -213,15 +213,15 @@ function k(e) {
     isPushNotification: a
   } = e;
   if (!(0, v.isEligibleForExplicitMediaRedaction)() || r || a || null == i || (null === (t = s.author) || void 0 === t ? void 0 : t.id) === c.default.getId()) return !1;
-  let o = E.default.getChannelId(),
+  let o = h.default.getChannelId(),
     l = f.default.getCurrentSidebarChannelId(o),
     u = i === o || i === l,
     d = _.default.getChannel(i);
   if (!u) return !1;
-  let h = null === (n = null == d ? void 0 : d.isPrivate()) || void 0 === n || n,
+  let E = null === (n = null == d ? void 0 : d.isPrivate()) || void 0 === n || n,
     g = (null == d ? void 0 : d.memberCount) == null || (null == d ? void 0 : d.memberCount) > 100;
   return U([s], {
-    jitter: h && g
+    jitter: E && g
   })
 }
 
@@ -231,7 +231,7 @@ function V(e) {
     messages: n
   } = e;
   if (!(0, v.isEligibleForExplicitMediaRedaction)() || null == t || null == n) return !1;
-  let i = E.default.getChannelId(),
+  let i = h.default.getChannelId(),
     s = f.default.getCurrentSidebarChannelId(i),
     r = t === i || t === s;
   return !!r && U(n)
@@ -276,8 +276,8 @@ function B(e) {
     channelId: t
   } = e;
   if (null == t || !(0, v.isEligibleForExplicitMediaRedaction)()) return !1;
-  let n = t === E.default.getChannelId();
-  return !!n && j(t)
+  let n = t === h.default.getChannelId();
+  return !!n && K(t)
 }
 
 function H(e) {
@@ -285,9 +285,9 @@ function H(e) {
     settings: t,
     local: n
   } = e;
-  if (!(0, v.isEligibleForExplicitMediaRedaction)() || !n || t.type !== A.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
-  let i = E.default.getChannelId();
-  return null != i && j(i)
+  if (!(0, v.isEligibleForExplicitMediaRedaction)() || !n || t.type !== C.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
+  let i = h.default.getChannelId();
+  return null != i && K(i)
 }
 
 function Y(e) {
@@ -295,11 +295,11 @@ function Y(e) {
     channelId: t,
     chatOpen: n
   } = e;
-  return !!(0, v.isEligibleForExplicitMediaRedaction)() && !!n && j(t)
+  return !!(0, v.isEligibleForExplicitMediaRedaction)() && !!n && K(t)
 }
 
-function j(e) {
-  let t = h.default.getMessages(e);
+function K(e) {
+  let t = E.default.getMessages(e);
   return 0 !== t.length && function(e) {
     let {
       messagesPendingScan: t,
@@ -307,7 +307,7 @@ function j(e) {
     } = function(e) {
       let t = e.filter(e => (0, p.hasAttachmentsOrEmbeds)(e) && (0, T.shouldRedactExplicitContent)(e)),
         n = e.map(e => {
-          if (C.MessageTypesWithLazyLoadedReferences.has(e.type) && null != e.messageReference) {
+          if (A.MessageTypesWithLazyLoadedReferences.has(e.type) && null != e.messageReference) {
             let t = d.default.getMessageByReference(e.messageReference);
             if (t.state === d.ReferencedMessageState.LOADED && null != t.message && (0, p.hasAttachmentsOrEmbeds)(t.message) && (0, T.shouldRedactExplicitContent)(t.message)) return t.message
           }
@@ -334,7 +334,7 @@ function j(e) {
     }), !!(t.length > 0) && (M(t), !0)
   }(t)
 }
-class W extends l.default {
+class j extends l.default {
   constructor(...e) {
     super(...e), this.actions = {
       LOAD_MESSAGES_SUCCESS: V,
@@ -353,4 +353,4 @@ class W extends l.default {
     }
   }
 }
-var K = new W
+var W = new j

@@ -22,7 +22,7 @@ var l = n("693051"),
   f = n("18108");
 (s = i || (i = {}))[s.EXISTING_USERS = 0] = "EXISTING_USERS", s[s.NEW_USERS = 1] = "NEW_USERS";
 let _ = "tabs-v2-experiment-key",
-  h = (0, r.default)((e, t) => ({
+  E = (0, r.default)((e, t) => ({
     _experimentCacheInitialized: !1,
     _experimentEnabled: !1,
     getExperimentEnabled() {
@@ -47,10 +47,10 @@ let _ = "tabs-v2-experiment-key",
     }
   }));
 
-function E() {
+function h() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, u.isMobileRedesignDisabled)(),
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : h.getState().getExperimentEnabled(),
+    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.getState().getExperimentEnabled(),
     i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (0, c.isTabsUIEnabledManually)(),
     s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : (0, o.isRedesignToggleIgnored)();
   if (!(0, d.isMainTabsExperimentPlatformSupported)()) return !1;
@@ -66,14 +66,14 @@ function g() {
 }
 
 function m() {
-  return E()
+  return h()
 }
 
 function p() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = (0, u.useMobileRedesignDisabled)(),
-    n = h(e => e.getExperimentEnabled()),
+    n = E(e => e.getExperimentEnabled()),
     i = (0, c.useIsTabsUIEnabledManually)(),
     s = (0, o.useRedesignToggleIgnored)();
-  return E(t, e, n, i, s)
+  return h(t, e, n, i, s)
 }

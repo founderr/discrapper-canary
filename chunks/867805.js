@@ -18,8 +18,8 @@ let l = null,
   c = {},
   f = {},
   _ = [],
-  h = 0,
   E = 0,
+  h = 0,
   g = {
     "1f3fb": 0,
     "1f3fc": 1,
@@ -105,14 +105,14 @@ class I {
     }
   }
 }
-let C = n("838426");
-for (let e in C) {
-  let t = C[e],
+let A = n("838426");
+for (let e in A) {
+  let t = A[e],
     n = t.map(e => {
       let t = new I(e),
         n = t.surrogates,
         i = t.uniqueName;
-      if (t.setSpriteSheetIndex(t.hasDiversity ? h++ : E++), f[n] = i, 0 > n.indexOf("‍")) {
+      if (t.setSpriteSheetIndex(t.hasDiversity ? E++ : h++), f[n] = i, 0 > n.indexOf("‍")) {
         let e = n.replace("️", "");
         e !== n && (f[e] = i)
       }
@@ -137,7 +137,7 @@ for (let e in C) {
   u[e] = a.default.filterUnsupportedEmojis(n)
 }
 
-function A(e) {
+function C(e) {
   let t = f[e];
   return null != t ? {
     type: "emoji",
@@ -168,12 +168,12 @@ function O(e, t) {
       else if (R.test(t)) {
         i += t;
         continue
-      } else s.push(A(i)), i = ""
+      } else s.push(C(i)), i = ""
     } else if (t === N) {
       i = t;
       continue
     }
-    let n = A(t);
+    let n = C(t);
     if (s.length > 0) {
       let e = s[s.length - 1];
       if ("text" === n.type && "text" === e.type) {
@@ -183,7 +183,7 @@ function O(e, t) {
     }
     s.push(n)
   }
-  return null != i && "" !== i && s.push(A(i)), s
+  return null != i && "" !== i && s.push(C(i)), s
 }
 
 function D(e) {
@@ -233,8 +233,8 @@ var P = {
   },
   forEach: e => s.each(_, e),
   all: () => _,
-  numDiversitySprites: h,
-  numNonDiversitySprites: E,
+  numDiversitySprites: E,
+  numNonDiversitySprites: h,
   EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
   EMOJI_NAME_AND_DIVERSITY_RE: p,
   EMOJI_SHORTCUT_RE: /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,

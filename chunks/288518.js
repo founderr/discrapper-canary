@@ -32,14 +32,14 @@ function _(e) {
   }), l = !0
 }
 
-function h(e) {
+function E(e) {
   let {
     channelId: t
   } = e;
   o.add(t)
 }
 
-function E(e) {
+function h(e) {
   let {
     channel: t
   } = e;
@@ -111,11 +111,11 @@ class v extends r.default {
       CONNECTION_OPEN_SUPPLEMENTAL: _,
       CACHE_LOADED_LAZY: () => this.loadCache(),
       OVERLAY_INITIALIZE: p,
-      CHANNEL_CREATE: E,
+      CHANNEL_CREATE: h,
       CHANNEL_UPDATES: g,
       CHANNEL_DELETE: m,
       SET_LOCATION_METADATA: S,
-      MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
+      MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: E
     })
   }
 }

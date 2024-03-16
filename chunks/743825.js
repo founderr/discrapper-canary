@@ -34,10 +34,10 @@ var i, l = n("37983"),
   k = n("782340"),
   L = n("350583");
 new S.default("ChannelEditor.tsx");
-let P = function() {
+let b = function() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n]
   },
-  b = {
+  P = {
     12: L.fontSize12Padding,
     14: L.fontSize14Padding,
     15: L.fontSize15Padding,
@@ -177,7 +177,7 @@ i = class extends a.Component {
       className: N,
       id: R,
       required: k,
-      maxCharacterCount: P,
+      maxCharacterCount: b,
       allowNewLines: j,
       "aria-describedby": U,
       "aria-labelledby": D,
@@ -211,7 +211,7 @@ i = class extends a.Component {
       onResize: p,
       onKeyDown: f,
       onSubmit: h,
-      textAreaPaddingClassName: r(b[y], {
+      textAreaPaddingClassName: r(P[y], {
         [L.textAreaWithoutAttachmentButton]: E !== _.ChatInputTypes.NORMAL && E !== _.ChatInputTypes.OVERLAY && E !== _.ChatInputTypes.THREAD_CREATION && E !== _.ChatInputTypes.SIDEBAR,
         [L.textAreaForPostCreation]: E === _.ChatInputTypes.CREATE_FORUM_POST,
         [L.textAreaCustomGift]: E === _.ChatInputTypes.CUSTOM_GIFT
@@ -224,7 +224,7 @@ i = class extends a.Component {
       "aria-haspopup": "listbox",
       "aria-expanded": null !== G.id || void 0,
       "aria-activedescendant": null !== (s = G.activeDescendant) && void 0 !== s ? s : void 0,
-      "aria-invalid": o.length > P,
+      "aria-invalid": o.length > b,
       "aria-describedby": U,
       "aria-labelledby": D,
       "aria-autocomplete": "list"
@@ -389,7 +389,7 @@ i = class extends a.Component {
           files: []
         }
       }(e.clipboardData, s.uploadLongMessages ? null != i ? i : a : null);
-      return P("onPaste", [...e.clipboardData.items].map(e => {
+      return b("onPaste", [...e.clipboardData.items].map(e => {
         if ("file" !== e.kind) return {
           kind: e.kind,
           type: e.type

@@ -34,8 +34,8 @@ var i = n("37983"),
   M = n("430312"),
   k = n("763866"),
   L = n("789321"),
-  P = n("627601"),
-  b = n("935409"),
+  b = n("627601"),
+  P = n("935409"),
   j = n("849674"),
   U = n("590456"),
   D = n("49111"),
@@ -93,7 +93,7 @@ function B(e) {
   let es = (0, A.default)(t.id, n),
     er = (0, j.useShouldShowUserPopoutCollectiblesUpsell)({
       popoutUser: t,
-      source: P.UserPopoutUpsellSource.USER_POPOUT,
+      source: b.UserPopoutUpsellSource.USER_POPOUT,
       guildId: n
     }),
     [eo, eu] = l.useState(!1);
@@ -162,7 +162,7 @@ function B(e) {
           profileType: U.UserProfileTypes.POPOUT,
           className: er.shouldShow ? F.hasCollectiblesUpsell : void 0,
           showOutOfBoundaryComponents: eo,
-          children: [(0, i.jsx)(b.default, {
+          children: [(0, i.jsx)(P.default, {
             user: t,
             displayProfile: W,
             guildId: n,
@@ -175,7 +175,7 @@ function B(e) {
             isHovering: Y,
             upsell: er.shouldShow ? (0, i.jsx)(L.default, {
               user: t,
-              upsellSource: P.UserPopoutUpsellSource.USER_POPOUT,
+              upsellSource: b.UserPopoutUpsellSource.USER_POPOUT,
               displayProfile: W,
               onClose: _,
               ...er

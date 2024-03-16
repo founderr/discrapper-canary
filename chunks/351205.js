@@ -21,7 +21,7 @@ function c(e) {
     onGuildChange: c,
     guilds: f,
     disabled: _ = !1
-  } = e, h = f.filter(e => s.default.has(e.permissions, l.Permissions.MANAGE_GUILD)).map(e => ({
+  } = e, E = f.filter(e => s.default.has(e.permissions, l.Permissions.MANAGE_GUILD)).map(e => ({
     value: e.id,
     label: e.name
   }));
@@ -39,7 +39,7 @@ function c(e) {
       className: d.select,
       maxVisibleItems: 5,
       placeholder: u.default.Messages.OAUTH2_ADD_TO_GUILD_PLACEHOLDER,
-      options: h,
+      options: E,
       select: c,
       isDisabled: _,
       isSelected: e => e === n,

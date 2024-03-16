@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _
   },
   Toast: function() {
-    return h
+    return E
   }
 });
 var i = n("37983"),
@@ -36,7 +36,7 @@ function _(e, t) {
     }
   }
 }
-let h = s.memo(function(e) {
+let E = s.memo(function(e) {
   let {
     message: t,
     type: n,

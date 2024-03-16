@@ -20,8 +20,8 @@ let f = e => {
       type: s = u.BotTagTypes.BOT,
       className: f,
       verified: _,
-      hideIcon: h = !1,
-      useRemSizes: E = !1,
+      hideIcon: E = !1,
+      useRemSizes: h = !1,
       children: g = []
     } = e,
     m = null,
@@ -69,13 +69,13 @@ let f = e => {
       className: c.botTagVerified
     })
   })), t = s === u.BotTagTypes.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular;
-  let C = e => (0, i.jsxs)("span", {
+  let A = e => (0, i.jsxs)("span", {
     ...e,
-    className: r(f, t, E ? c.rem : c.px, {
+    className: r(f, t, h ? c.rem : c.px, {
       [c.botTagOP]: v,
       [c.botTagRemix]: T
     }),
-    children: [h ? null : I, g, (0, i.jsx)("span", {
+    children: [E ? null : I, g, (0, i.jsx)("span", {
       className: c.botText,
       children: m
     })]
@@ -85,16 +85,16 @@ let f = e => {
       return (0, i.jsx)(a.Tooltip, {
         text: d.default.Messages.REMIXING_DOWNLOAD_APP,
         position: "top",
-        children: e => C(e)
+        children: e => A(e)
       });
     case u.BotTagTypes.ORIGINAL_POSTER:
       return (0, i.jsx)(a.Tooltip, {
         text: d.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
         position: "top",
-        children: e => C(e)
+        children: e => A(e)
       });
     default:
-      return C()
+      return A()
   }
 };
 f.Types = u.BotTagTypes;

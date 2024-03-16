@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
 var i = n("917219"),
@@ -15,7 +15,7 @@ var i = n("917219"),
   c = n("462641"),
   f = n("95937"),
   _ = n("929461"),
-  h = () => ({
+  E = () => ({
     [i.DefaultVideoBackground.OPTION_1]: {
       id: i.DefaultVideoBackground.OPTION_1,
       source: l,

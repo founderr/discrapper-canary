@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return I
   },
   default: function() {
-    return C
+    return A
   }
 });
 var i = n("560528"),
@@ -18,8 +18,8 @@ var i = n("560528"),
   c = n("181815"),
   f = n("521089"),
   _ = n("366942"),
-  h = n("125707"),
-  E = n("785744"),
+  E = n("125707"),
+  h = n("785744"),
   g = n("297384"),
   m = n("573220"),
   p = n("265284"),
@@ -31,9 +31,9 @@ function I() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   return e ? T : s
 }
-var C = {
+var A = {
   DEFAULT_AVATARS: [r, a, o, l, u, d],
-  DEFAULT_GROUP_DM_AVATARS: [c, f, _, h, E, g, m, p],
+  DEFAULT_GROUP_DM_AVATARS: [c, f, _, E, h, g, m, p],
   BOT_AVATARS: {
     clyde: v
   },

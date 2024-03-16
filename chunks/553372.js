@@ -87,8 +87,8 @@ var L = l.forwardRef(function(e, t) {
   var n, a, S;
   let {
     sound: L,
-    channel: P,
-    className: b,
+    channel: b,
+    className: P,
     focused: j,
     forceSecondaryActions: U = !1,
     interactive: D = !0,
@@ -104,11 +104,11 @@ var L = l.forwardRef(function(e, t) {
     name: Y,
     emojiId: z,
     emojiName: Z
-  } = L, J = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, N.useSoundButtonContextMenu)(L, null == P ? void 0 : P.guild_id), {
+  } = L, J = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, N.useSoundButtonContextMenu)(L, null == b ? void 0 : b.guild_id), {
     playSoundboardSound: X,
     previewSound: Q,
     isPlayingSound: $
-  } = (0, v.default)(L, null !== (n = null == P ? void 0 : P.id) && void 0 !== n ? n : null), {
+  } = (0, v.default)(L, null !== (n = null == b ? void 0 : b.id) && void 0 !== n ? n : null), {
     createMultipleConfettiAt: ee
   } = l.useContext(m.ConfettiCannonContext), et = l.useRef(null);
   let en = (a = L.soundId, S = et.current, l.useMemo(() => {
@@ -130,7 +130,7 @@ var L = l.forwardRef(function(e, t) {
     eo = "sound-".concat(L.soundId),
     eu = (0, r.useListItem)(eo),
     ed = null != z || null != Z,
-    ec = !(0, _.canUseSoundboardSound)(J, L, P),
+    ec = !(0, _.canUseSoundboardSound)(J, L, b),
     ef = U || w && !ec;
 
   function ep(e) {
@@ -191,7 +191,7 @@ var L = l.forwardRef(function(e, t) {
         emojiName: L.emojiName,
         soundName: L.name
       }),
-      className: s(b, R.soundButton, {
+      className: s(P, R.soundButton, {
         [R.playing]: $,
         [R.hoverActiveBackground]: F,
         [R.soundButtonInteractive]: D,

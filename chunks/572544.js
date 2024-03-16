@@ -15,8 +15,8 @@ var i = n("746379"),
   c = n("139514"),
   f = n("312016"),
   _ = n("374021"),
-  h = n("398604"),
-  E = n("468560"),
+  E = n("398604"),
+  h = n("468560"),
   g = n("361572"),
   m = n("537325"),
   p = n("835174"),
@@ -24,8 +24,8 @@ var i = n("746379"),
   v = n("337543"),
   T = n("18494"),
   I = n("162771"),
-  C = n("677099"),
-  A = n("599110"),
+  A = n("677099"),
+  C = n("599110"),
   y = n("253981");
 n("545158");
 var N = n("49111");
@@ -51,7 +51,7 @@ async function O(e) {
     await R(n, e.code);
     return
   }
-  let i = C.default.getFlattenedGuildIds(),
+  let i = A.default.getFlattenedGuildIds(),
     s = null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id,
     r = null != s && i.includes(s);
   r ? o.default.transitionToInviteSync(n) : await R(n, e.code)
@@ -74,7 +74,7 @@ function P(e) {
     let {
       code: s
     } = i, a = null !== (t = I.default.getGuildId()) && void 0 !== t ? t : void 0;
-    return A.default.track(N.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+    return C.default.track(N.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
       application_id: s,
       device_platform: r.isMobile ? "mobile_web" : "desktop_web",
       guild_id: a,
@@ -108,9 +108,9 @@ function P(e) {
   let {
     path: o,
     hostname: v = "",
-    host: C,
+    host: A,
     query: R
-  } = s.parse(e), P = y.default.isDiscordHostname(v) || y.default.isDiscordLocalhost(C, v);
+  } = s.parse(e), P = y.default.isDiscordHostname(v) || y.default.isDiscordLocalhost(A, v);
   if (P && (null == o ? void 0 : o.startsWith("/application-directory"))) {
     let [, , e, t] = o.split("/"), i = null != e && (0, u.isSnowflake)(e) ? e : void 0;
     return s => {
@@ -121,7 +121,7 @@ function P(e) {
       } = n("750947"), {
         ApplicationDirectoryViews: l
       } = n("412707"), u = null !== (a = I.default.getGuildId()) && void 0 !== a ? a : void 0, c = l.HOME;
-      return "search" === e && (c = l.SEARCH), null != i && (c = l.APPLICATION, A.default.track(N.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+      return "search" === e && (c = l.SEARCH), null != i && (c = l.APPLICATION, C.default.track(N.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
         application_id: i,
         device_platform: r.isMobile ? "mobile_web" : "desktop_web",
         guild_id: u,
@@ -134,7 +134,7 @@ function P(e) {
           view: c,
           applicationId: i,
           guildId: u,
-          applicationSection: (0, E.default)(o, t),
+          applicationSection: (0, h.default)(o, t),
           entrypoint: {
             name: d.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_URL
           }
@@ -160,7 +160,7 @@ function P(e) {
     null == e || e.preventDefault();
     let t = I.default.getGuildId();
     null != L.guildId && "" !== L.guildId && L.guildId !== t && (0, m.default)(N.Routes.CHANNEL(L.guildId));
-    let n = h.default.getGuildScheduledEvent(L.guildEventId);
+    let n = E.default.getGuildScheduledEvent(L.guildEventId);
     return null != n && (0, _.openGuildEventDetails)({
       eventId: n.id
     }), !0

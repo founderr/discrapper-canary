@@ -23,8 +23,8 @@ function f(e) {
     onSelect: o,
     calendarClassName: f,
     autoFocus: _,
-    onClickOutside: h
-  } = e, E = s.useCallback((e, t) => {
+    onClickOutside: E
+  } = e, h = s.useCallback((e, t) => {
     null == o || o(a(e), t)
   }, [o]), g = s.useMemo(() => t.toDate(), [t]), m = s.useMemo(() => null == r ? void 0 : r.toDate(), [r]), p = s.useMemo(() => null == n ? void 0 : n.toDate(), [n]), S = (0, u.useStateFromStores)([d.default], () => d.default.locale), v = s.useRef(null), T = s.useCallback(e => {
     let t = e.currentTarget;
@@ -41,7 +41,7 @@ function f(e) {
     children: (0, i.jsx)(l, {
       calendarClassName: f,
       selected: g,
-      onChange: E,
+      onChange: h,
       autoFocus: _,
       fixedHeight: !0,
       inline: !0,
@@ -49,7 +49,7 @@ function f(e) {
       maxDate: m,
       minDate: p,
       onKeyDown: T,
-      onClickOutside: h
+      onClickOutside: E
     })
   })
 }

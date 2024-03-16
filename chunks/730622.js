@@ -29,7 +29,7 @@ function l(e) {
     null == l || l();
     return
   }
-  let d = i(h, c, a);
+  let d = i(E, c, a);
 
   function c() {
     null == l || l()
@@ -43,8 +43,8 @@ function l(e) {
     s(d), r(e)
   }
 
-  function h(e) {
-    return o(d, h, c, {
+  function E(e) {
+    return o(d, E, c, {
       ...a,
       isLoading: !0
     }), u({
@@ -52,16 +52,16 @@ function l(e) {
       resolve: f,
       reject: _,
       code: e,
-      mfaCodeHandler: E,
+      mfaCodeHandler: h,
       isModalOpen: !0
     })
   }
 
-  function E(e) {
+  function h(e) {
     let {
       res: t
     } = e;
-    o(d, h, c, {
+    o(d, E, c, {
       ...a,
       error: t.body.message
     })

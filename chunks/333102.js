@@ -28,14 +28,14 @@ function d(e, t) {
       children: c,
       className: f,
       onResize: _,
-      contentClassName: h,
-      onScroll: E,
+      contentClassName: E,
+      onScroll: h,
       dir: g = "ltr",
       fade: m = !1,
       customTheme: p = !1,
       style: S,
       ...v
-    } = t, T = s.useRef(null), I = s.useRef(null), [C, A] = s.useState(!1), {
+    } = t, T = s.useRef(null), I = s.useRef(null), [A, C] = s.useState(!1), {
       scrollerRef: y,
       getScrollerState: N
     } = (0, l.useUncachedScrollerState)(), R = (0, l.useScrollSpring)(y);
@@ -46,10 +46,10 @@ function d(e, t) {
       ...(0, l.getAnimatedScrollHelpers)(y, N, R)
     }), [y, N, R]);
     let O = s.useCallback(e => {
-      null == T.current ? A(!0) : clearTimeout(T.current), T.current = setTimeout(() => {
-        T.current = null, A(!1)
-      }, 200), null != E && E(e)
-    }, [E]);
+      null == T.current ? C(!0) : clearTimeout(T.current), T.current = setTimeout(() => {
+        T.current = null, C(!1)
+      }, 200), null != h && h(e)
+    }, [h]);
     return s.useEffect(() => () => clearTimeout(T.current), []), (0, l.useResizeObserverSubscription)({
       ref: y,
       key: "container",
@@ -69,7 +69,7 @@ function d(e, t) {
         [u.customTheme]: p,
         [e]: !0,
         [u.managedReactiveScroller]: !0,
-        [u.scrolling]: C && m
+        [u.scrolling]: A && m
       }),
       style: S,
       dir: g,
@@ -79,8 +79,8 @@ function d(e, t) {
         containerRef: I,
         children: (0, i.jsxs)("div", {
           ref: I,
-          className: a(h, u.content),
-          children: [c, C && (0, i.jsx)("div", {
+          className: a(E, u.content),
+          children: [c, A && (0, i.jsx)("div", {
             className: u.pointerCover
           })]
         })

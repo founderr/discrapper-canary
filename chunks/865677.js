@@ -34,8 +34,8 @@ var i = n("37983"),
   M = n("612696"),
   k = n("126808"),
   L = n("871388"),
-  P = n("407908"),
-  b = n("141962"),
+  b = n("407908"),
+  P = n("141962"),
   j = n("295999"),
   U = n("954016"),
   D = n("49111"),
@@ -100,7 +100,7 @@ function F(e) {
       messageId: null,
       intent: U.ActivityIntent.PLAY,
       embedded: (0, L.default)(t, D.ActivityFlags.EMBEDDED)
-    }), (0, P.default)({
+    }), (0, b.default)({
       type: D.AnalyticsGameOpenTypes.JOIN,
       userId: e.id,
       applicationId: t.application_id,
@@ -117,7 +117,7 @@ function F(e) {
         currentEmbeddedApplication: n,
         activityChannelId: X,
         locationObject: el.location,
-        embeddedActivitiesManager: b.default,
+        embeddedActivitiesManager: P.default,
         analyticsLocations: W
       })
     }

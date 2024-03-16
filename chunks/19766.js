@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EVERYONE_ID: function() {
-    return A
+    return C
   },
   EVERYONE_CHANNEL_ID: function() {
     return y
@@ -22,8 +22,8 @@ var i, s, r = n("917351"),
   c = n("913144"),
   f = n("991170"),
   _ = n("373469"),
-  h = n("271938"),
-  E = n("42203"),
+  E = n("271938"),
+  h = n("42203"),
   g = n("525065"),
   m = n("26989"),
   p = n("305961"),
@@ -31,8 +31,8 @@ var i, s, r = n("917351"),
   v = n("101125"),
   T = n("697218"),
   I = n("49111"),
-  C = n("782340");
-let A = "everyone",
+  A = n("782340");
+let C = "everyone",
   y = 0;
 
 function N(e, t, n, i) {
@@ -44,11 +44,11 @@ function N(e, t, n, i) {
         type: "GROUP", key: t, id: t, get title() {
           switch (t) {
             case I.StatusTypes.ONLINE:
-              return C.default.Messages.STATUS_ONLINE;
+              return A.default.Messages.STATUS_ONLINE;
             case I.StatusTypes.OFFLINE:
-              return C.default.Messages.STATUS_OFFLINE;
+              return A.default.Messages.STATUS_OFFLINE;
             default:
-              return C.default.Messages.STATUS_UNKNOWN
+              return A.default.Messages.STATUS_UNKNOWN
           }
         }, count: n, index: i
       };
@@ -62,7 +62,7 @@ function N(e, t, n, i) {
 }
 
 function R(e, t, n) {
-  let i = n === h.default.getId(),
+  let i = n === E.default.getId(),
     s = S.default.isMobileOnline(n),
     r = i ? v.default.getStatus() : S.default.getStatus(n, e),
     a = i ? v.default.getActivities() : S.default.getActivities(n, e),
@@ -81,9 +81,9 @@ function R(e, t, n) {
 }
 
 function O(e) {
-  let t = E.default.getChannel(e);
-  return null == t ? A : null == t.memberListId ? function(e) {
-    return f.default.canEveryone(I.Permissions.VIEW_CHANNEL, e) ? A : l.v3(a(e.permissionOverwrites).reduce((e, t) => {
+  let t = h.default.getChannel(e);
+  return null == t ? C : null == t.memberListId ? function(e) {
+    return f.default.canEveryone(I.Permissions.VIEW_CHANNEL, e) ? C : l.v3(a(e.permissionOverwrites).reduce((e, t) => {
       let {
         id: n,
         allow: i,
@@ -209,12 +209,12 @@ function b() {
 }
 
 function U() {
-  let e = h.default.getId();
+  let e = E.default.getId();
   P.forEach(null, t => t.rebuildMember(e))
 }
 class w extends d.default.Store {
   initialize() {
-    this.waitFor(T.default, p.default, E.default, m.default, S.default, v.default, h.default, g.default, _.default), this.syncWith([v.default], U), this.syncWith([_.default], b)
+    this.waitFor(T.default, p.default, h.default, m.default, S.default, v.default, E.default, g.default, _.default), this.syncWith([v.default], U), this.syncWith([_.default], b)
   }
   getProps(e, t) {
     let n = P.get(e, O(t));

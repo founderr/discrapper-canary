@@ -12,9 +12,9 @@ function l(t) {
     applicationId: i,
     activityConfigs: l,
     applications: a
-  } = t, r = null !== (e = null == a ? void 0 : a.find(t => t.id === i)) && void 0 !== e ? e : n.default.getApplication(i), u = l.find(t => t.application_id === i);
-  return null == u || null == r ? null : {
-    activity: u,
-    application: r
+  } = t, u = null !== (e = null == a ? void 0 : a.find(t => t.id === i)) && void 0 !== e ? e : n.default.getApplication(i), r = l.find(t => t.application_id === i);
+  return null == r || null == u ? null : {
+    activity: r,
+    application: u
   }
 }

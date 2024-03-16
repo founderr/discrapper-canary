@@ -16,8 +16,8 @@ var s, r, a = n("759843"),
   c = n("448993"),
   f = n("307439"),
   _ = n("605250"),
-  h = n("21121"),
-  E = n("393414"),
+  E = n("21121"),
+  h = n("393414"),
   g = n("271938"),
   m = n("350522"),
   p = n("840707"),
@@ -25,9 +25,9 @@ var s, r, a = n("759843"),
   v = n("49111"),
   T = n("191349");
 let I = new _.default("AuthenticationActionCreators"),
-  C = null;
+  A = null;
 
-function A(e) {
+function C(e) {
   let t = {
     type: "LOGOUT",
     ...e
@@ -40,9 +40,9 @@ function A(e) {
 
 function y() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.Routes.DEFAULT_LOGGED_OUT;
-  A();
-  let t = (0, h.getRootNavigationRefIfInExperiment)();
-  null != e && (null != t ? (S.default.popAll(), t.navigate("auth")) : (0, E.transitionTo)(e))
+  C();
+  let t = (0, E.getRootNavigationRefIfInExperiment)();
+  null != e && (null != t ? (S.default.popAll(), t.navigate("auth")) : (0, h.transitionTo)(e))
 }(r = s || (s = {})).MFA = "MFA", r.SUCCESS = "SUCCESS";
 var N = {
   startSession(e) {
@@ -224,7 +224,7 @@ var N = {
     })
   },
   logoutInternal(e) {
-    A(e)
+    C(e)
   },
   logout() {
     var e;
@@ -257,7 +257,7 @@ var N = {
     I.log("Switching accounts", {
       wasLoggedIn: null != n,
       tokenHasChanged: e !== n
-    }), A({
+    }), C({
       isSwitchingAccount: !0
     });
     let i = this.loginToken(e, !0).then(() => {
@@ -266,7 +266,7 @@ var N = {
         isCorrectToken: e === t
       })
     });
-    return t && (0, E.transitionTo)(v.Routes.ME), i
+    return t && (0, h.transitionTo)(v.Routes.ME), i
   },
   verifySSOToken() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.Routes.DEFAULT_LOGGED_OUT;
@@ -478,12 +478,12 @@ var N = {
       withGuildExperiments: e
     })
   },
-  getLocationMetadata: () => null != C ? C : (clearTimeout(i), i = setTimeout(() => {
+  getLocationMetadata: () => null != A ? A : (clearTimeout(i), i = setTimeout(() => {
     d.default.dispatch({
       type: "SET_CONSENT_REQUIRED",
       consentRequired: !0
     })
-  }, 5e3), C = l.default.get({
+  }, 5e3), A = l.default.get({
     url: v.Endpoints.AUTH_LOCATION_METADATA,
     retries: 2,
     oldFormErrors: !0
@@ -499,7 +499,7 @@ var N = {
     if (d.default.dispatch({
         type: "SET_LOCATION_METADATA",
         countryCode: null !== (a = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== a ? a : void 0
-      }), C = null, (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null) {
+      }), A = null, (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null) {
       let t = e.body.promotional_email_opt_in;
       (0, f.setPromoEmailConsentState)({
         required: t.required,
@@ -511,7 +511,7 @@ var N = {
     clearTimeout(i), d.default.dispatch({
       type: "SET_CONSENT_REQUIRED",
       consentRequired: !0
-    }), C = null
+    }), A = null
   })),
   closeSuspendedUser() {
     d.default.dispatch({

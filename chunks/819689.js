@@ -15,8 +15,8 @@ var i = n("506838"),
   c = n("802493"),
   f = n("595525"),
   _ = n("219788"),
-  h = n("139514"),
-  E = n("312016"),
+  E = n("139514"),
+  h = n("312016"),
   g = n("605250"),
   m = n("447435"),
   p = n("619443"),
@@ -24,8 +24,8 @@ var i = n("506838"),
   v = n("600798"),
   T = n("569808"),
   I = n("9294"),
-  C = n("52393"),
-  A = n("143291"),
+  A = n("52393"),
+  C = n("143291"),
   y = n("379534"),
   N = n("40566"),
   R = n("994918"),
@@ -47,9 +47,9 @@ var k = n("256572"),
   H = n("271938"),
   Y = n("42203");
 n("836417");
-var j = n("337543"),
-  W = n("377253"),
-  K = n("957255"),
+var K = n("337543"),
+  j = n("377253"),
+  W = n("957255"),
   z = n("824563"),
   q = n("660478"),
   X = n("18494"),
@@ -71,7 +71,7 @@ var j = n("337543"),
 let ec = new g.default("MessageActionCreators"),
   ef = new g.default("MessageQueue"),
   e_ = !1;
-class eh {
+class eE {
   markComplete() {
     this.completed = !0
   }
@@ -80,7 +80,7 @@ class eh {
   }
 }
 
-function eE(e) {
+function eh(e) {
   let {
     inviteKey: t,
     channelId: n,
@@ -93,7 +93,7 @@ function eE(e) {
     let e = null;
     l.isMultiUserDM() ? e = eo.LoggingInviteTypes.GDM_INVITE : !l.isPrivate() && (e = eo.LoggingInviteTypes.SERVER_INVITE);
     let n = {},
-      c = j.default.getInvite(t);
+      c = K.default.getInvite(t);
     if (null != c && c.state === eo.InviteStates.RESOLVED && null != c.channel) {
       var u;
       let t = c.channel;
@@ -119,7 +119,7 @@ function eE(e) {
     }, d.default.trackWithMetadata(eo.AnalyticEvents.INVITE_SENT, n)
   } else {
     let e = {},
-      n = j.default.getInvite(t);
+      n = K.default.getInvite(t);
     null != n && n.state === eo.InviteStates.RESOLVED && null != n.inviter && (e.invite_inviter_id = n.inviter.id, e = {
       ...e,
       location: s,
@@ -256,7 +256,7 @@ let eg = {
       let n = {
         present: !0
       };
-      W.default.hasPresent(e) ? o.default.dispatch({
+      j.default.hasPresent(e) ? o.default.dispatch({
         type: "LOAD_MESSAGES_SUCCESS_CACHED",
         jump: n,
         channelId: e,
@@ -326,7 +326,7 @@ let eg = {
         isPreload: d,
         skipLocalFetch: c,
         truncate: f
-      } = e, _ = Y.default.getChannel(t), h = p.default.isConnectedOrOverlay(), E = Date.now();
+      } = e, _ = Y.default.getChannel(t), E = p.default.isConnectedOrOverlay(), h = Date.now();
       if (null != _ && _.type === eo.ChannelTypes.GUILD_STORE) return !1;
       if (t === el.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return;
       if (ec.log("Fetching messages for ".concat(t, " between ").concat(n, " and ").concat(i, ". jump=").concat(JSON.stringify(a))), em._tryFetchMessagesCached({
@@ -349,7 +349,7 @@ let eg = {
         type: "LOAD_MESSAGES"
       });
       let v = null == g ? void 0 : g.messageId,
-        T = new eh;
+        T = new eE;
       return !c && this.fetchLocalMessages(t, n, i, s, T), r.default.get({
         url: eo.Endpoints.MESSAGES(t),
         query: {
@@ -392,7 +392,7 @@ let eg = {
           hasMoreAfter: _,
           limit: s,
           jump: a,
-          isStale: !h || p.default.lastTimeConnectedChanged() >= E,
+          isStale: !E || p.default.lastTimeConnectedChanged() >= h,
           truncate: f
         })
       }), !0), () => (ec.log("Failed to fetch messages for ".concat(t)), o.default.dispatch({
@@ -461,7 +461,7 @@ let eg = {
         jump: r,
         focus: a,
         truncate: l
-      } = e, u = W.default.getMessages(t);
+      } = e, u = j.default.getMessages(t);
       if (u.cached || !u.ready) return !1;
       if ((null == r ? void 0 : r.messageId) != null || (null == a ? void 0 : a.messageId) != null) {
         if ((null == r ? void 0 : r.messageId) != null && u.has(r.messageId, !1)) return o.default.dispatch({
@@ -516,15 +516,15 @@ let eg = {
       let r = await (0, U.default)(e);
       if (null != r) return em.sendMessage(r, t, i, s);
       let a = () => em._sendMessage(e, t, s),
-        o = A.LocalMessageBackgroundSendingExperiment.getCurrentConfig({
+        o = C.LocalMessageBackgroundSendingExperiment.getCurrentConfig({
           location: "8e1e29_1"
         }).enableBackgroundSending ? y.default.backgroundify(a, void 0) : a,
         l = null !== (n = s.nonce) && void 0 !== n ? n : (0, O.createNonce)();
       return (s = {
         ...s,
         nonce: l
-      }, N.default.recordMessageSendAttempt(e, l), W.default.isReady(e)) ? o() : i && e !== el.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ? (ef.info("Waiting for channel ".concat(e, " to be ready before sending.")), new Promise((t, n) => {
-        W.default.whenReady(e, () => {
+      }, N.default.recordMessageSendAttempt(e, l), j.default.isReady(e)) ? o() : i && e !== el.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ? (ef.info("Waiting for channel ".concat(e, " to be ready before sending.")), new Promise((t, n) => {
+        j.default.whenReady(e, () => {
           ef.info("Channel ".concat(e, " is ready for sending now.")), o().then(t, n)
         })
       })) : o()
@@ -547,7 +547,7 @@ let eg = {
       }
     },
     sendInvite: (e, t, n, i) => em._sendMessage(e, {
-      content: (0, C.default)(t),
+      content: (0, A.default)(t),
       tts: !1,
       validNonShortcutEmojis: [],
       invalidEmojis: []
@@ -633,12 +633,12 @@ let eg = {
           suggestedInvite: p,
           stickerIds: S,
           messageReference: I,
-          allowedMentions: C,
-          poll: A
+          allowedMentions: A,
+          poll: C
         } = n,
         y = null !== (i = n.flags) && void 0 !== i ? i : 0,
         [P, k] = (0, G.default)(l);
-      if (P && (l = k, y = (0, et.addFlag)(y, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == g && null == S && null == A) return Promise.resolve();
+      if (P && (l = k, y = (0, et.addFlag)(y, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == g && null == S && null == C) return Promise.resolve();
       let F = null != I ? eo.MessageTypes.REPLY : eo.MessageTypes.DEFAULT,
         x = null !== (r = n.nonce) && void 0 !== r ? r : (0, O.createNonce)();
       if (!1 !== n.eagerDispatch) {
@@ -648,10 +648,10 @@ let eg = {
           tts: _,
           type: F,
           messageReference: I,
-          allowedMentions: C,
+          allowedMentions: A,
           flags: 0 !== y ? y : void 0,
           nonce: x,
-          poll: (0, b.createPollServerDataFromCreateRequest)(A)
+          poll: (0, b.createPollServerDataFromCreateRequest)(C)
         });
         (0, L.updateComboOnMessageSend)(e, t.id), null != S && (t.sticker_items = S.map(e => V.default.getStickerById(e)).filter(e => null != e)), em.receiveMessage(e, t, !0, n)
       }
@@ -659,7 +659,7 @@ let eg = {
         let t, n;
         e_ = !0;
         let i = J.default.getCurrentUser();
-        c.some(e => e.animated) && !es.default.canUseAnimatedEmojis(i) ? (t = ed.default.Messages.INVALID_ANIMATED_EMOJI_BODY_UPGRADE, n = "INVALID_ANIMATED_EMOJI_BODY") : K.default.canWithPartialContext(eo.Permissions.USE_EXTERNAL_EMOJIS, {
+        c.some(e => e.animated) && !es.default.canUseAnimatedEmojis(i) ? (t = ed.default.Messages.INVALID_ANIMATED_EMOJI_BODY_UPGRADE, n = "INVALID_ANIMATED_EMOJI_BODY") : W.default.canWithPartialContext(eo.Permissions.USE_EXTERNAL_EMOJIS, {
           channelId: e
         }) ? (t = ed.default.Messages.INVALID_EXTERNAL_EMOJI_BODY_UPGRADE, n = "INVALID_EXTERNAL_EMOJI_BODY_UPGRADE") : (t = ed.default.Messages.INVALID_EXTERNAL_EMOJI_BODY, n = "INVALID_EXTERNAL_EMOJI_BODY"), em.sendBotMessage(e, t, n)
       }
@@ -671,7 +671,7 @@ let eg = {
           nonce: x,
           tts: _,
           message_reference: I,
-          allowed_mentions: C,
+          allowed_mentions: A,
           flags: y
         }
       };
@@ -688,7 +688,7 @@ let eg = {
           null != n.party && null != n.party.id && (t.party_id = n.party.id), B.message.application_id = n.application_id, B.message.activity = t
         }
       }
-      return null != A && (B.message.poll = A), null != S && (B.message.sticker_ids = S), M.default.isEnabled() && (B.message.has_poggermode_enabled = !0), new Promise((t, i) => {
+      return null != C && (B.message.poll = C), null != S && (B.message.sticker_ids = S), M.default.isEnabled() && (B.message.has_poggermode_enabled = !0), new Promise((t, i) => {
         let r = Date.now(),
           a = u.default.length,
           c = Math.floor(1e4 * Math.random());
@@ -699,7 +699,7 @@ let eg = {
               duration: c,
               queueSize: a
             },
-            poll: A
+            poll: C
           }), N.default.recordMessageSendApiResponse(x), o.default.dispatch({
             type: "SLOWMODE_RESET_COOLDOWN",
             slowmodeType: Z.SlowmodeType.SendMessage,
@@ -725,12 +725,12 @@ let eg = {
               suggested: a = null,
               overrideProperties: o = {}
             } = e;
-            (0, E.default)(t).forEach(e => {
+            (0, h.default)(t).forEach(e => {
               let {
                 type: t,
                 code: l
               } = e;
-              if (t === h.CodedLinkType.INVITE) eE({
+              if (t === E.CodedLinkType.INVITE) eh({
                 inviteKey: l,
                 channelId: n,
                 messageId: i,
@@ -738,7 +738,7 @@ let eg = {
                 suggested: a,
                 overrideProperties: o
               });
-              else if (t === h.CodedLinkType.TEMPLATE) {
+              else if (t === E.CodedLinkType.TEMPLATE) {
                 let e = T.default.getGuildTemplate(l);
                 if (null == e || e.state === eu.GuildTemplateStates.RESOLVING) return;
                 d.default.trackWithMetadata(eo.AnalyticEvents.GUILD_TEMPLATE_LINK_SENT, {
@@ -747,21 +747,21 @@ let eg = {
                   guild_template_description: e.description,
                   guild_template_guild_id: e.sourceGuildId
                 })
-              } else if (t === h.CodedLinkType.BUILD_OVERRIDE);
-              else if (t === h.CodedLinkType.MANUAL_BUILD_OVERRIDE);
-              else if (t === h.CodedLinkType.EVENT);
-              else if (t === h.CodedLinkType.CHANNEL_LINK);
-              else if (t === h.CodedLinkType.APP_DIRECTORY_PROFILE) $.default.track(eo.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, {
+              } else if (t === E.CodedLinkType.BUILD_OVERRIDE);
+              else if (t === E.CodedLinkType.MANUAL_BUILD_OVERRIDE);
+              else if (t === E.CodedLinkType.EVENT);
+              else if (t === E.CodedLinkType.CHANNEL_LINK);
+              else if (t === E.CodedLinkType.APP_DIRECTORY_PROFILE) $.default.track(eo.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, {
                 application_id: l,
                 device_platform: s.isMobile ? "mobile_web" : "desktop_web",
                 guild_id: Q.default.getGuildId(),
                 channel_id: X.default.getChannelId()
               });
-              else if (t === h.CodedLinkType.ACTIVITY_BOOKMARK);
-              else if (t === h.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
-              else if (t === h.CodedLinkType.GUILD_PRODUCT);
-              else if (t === h.CodedLinkType.SERVER_SHOP);
-              else if (t === h.CodedLinkType.QUESTS_EMBED) {
+              else if (t === E.CodedLinkType.ACTIVITY_BOOKMARK);
+              else if (t === E.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
+              else if (t === E.CodedLinkType.GUILD_PRODUCT);
+              else if (t === E.CodedLinkType.SERVER_SHOP);
+              else if (t === E.CodedLinkType.QUESTS_EMBED) {
                 var u;
                 (0, w.trackQuestEvent)(l, eo.AnalyticEvents.QUEST_LINK_SHARED, {
                   guild_id: Q.default.getGuildId(),
@@ -817,7 +817,7 @@ let eg = {
                 }
               }) : u.body.code === eo.AbortCodes.POGGERMODE_TEMPORARILY_DISABLED ? o.default.dispatch({
                 type: "POGGERMODE_TEMPORARILY_DISABLED"
-              }) : null != A || em.sendClydeError(e, u.body.code)
+              }) : null != C || em.sendClydeError(e, u.body.code)
             }
             t ? em.deleteMessage(e, x, !0) : (o.default.dispatch({
               type: "MESSAGE_SEND_FAILED",
@@ -861,7 +861,7 @@ let eg = {
       } = n;
       await F.default.unarchiveThreadIfNecessary(e);
       let s = function(e, t) {
-          let n = W.default.getMessage(e, t);
+          let n = j.default.getMessage(e, t);
           if (null == n || n.type !== eo.MessageTypes.REPLY) return;
           let i = k.default.getMessageByReference(n.messageReference);
           if (i.state === k.ReferencedMessageState.LOADED) {
@@ -937,7 +937,7 @@ let eg = {
       }).then(() => {
         i()
       }));
-      let s = W.default.getMessage(e, t);
+      let s = j.default.getMessage(e, t);
       (null == s ? void 0 : s.type) === eo.MessageTypes.GUILD_INVITE_REMINDER && (0, P.trackGuildInviteNotificationDismissed)()
     },
     dismissAutomatedMessage(e) {
@@ -966,6 +966,6 @@ let eg = {
         confirmText: ed.default.Messages.OKAY
       })
     }),
-    trackInvite: eE
+    trackInvite: eh
   };
 var ep = em

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return b
+    return P
   }
 });
 var i = n("37983");
@@ -35,14 +35,14 @@ var l = n("414456"),
   M = n("438278"),
   k = n("898481"),
   L = n("49111"),
-  P = n("279453"),
-  b = (0, c.default)(e => {
+  b = n("279453"),
+  P = (0, c.default)(e => {
     let t, {
         activity: n,
         user: l,
         applicationStream: s,
         className: c,
-        guildId: b,
+        guildId: P,
         channelId: j,
         source: U,
         color: D = d.Button.Colors.WHITE,
@@ -83,7 +83,7 @@ var l = n("414456"),
           user: l,
           color: D,
           look: w,
-          guildId: b,
+          guildId: P,
           channelId: j,
           source: U
         }, "spotify-activity-sync-button"),
@@ -92,7 +92,7 @@ var l = n("414456"),
           user: l,
           color: D,
           look: w,
-          guildId: b,
+          guildId: P,
           channelId: j,
           source: U
         }, "spotify-activity-play-button");
@@ -157,7 +157,7 @@ var l = n("414456"),
       align: Z,
       direction: J,
       wrap: Q ? E.default.Wrap.WRAP : E.default.Wrap.NO_WRAP,
-      className: a(c, P.buttonsWrapper, Q ? P.vertical : P.horizontal),
+      className: a(c, b.buttonsWrapper, Q ? b.vertical : b.horizontal),
       onClick: function(e) {
         (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == G || G())
       },

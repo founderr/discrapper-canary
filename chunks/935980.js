@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useSingleSelectState: function() {
-    return C
+    return A
   },
   useMultiSelectState: function() {
-    return A
+    return C
   },
   useVariableSelect: function() {
     return y
@@ -36,8 +36,8 @@ var i = n("37983"),
   c = n("446662"),
   f = n("77078"),
   _ = n("731898"),
-  h = n("811425"),
-  E = n("31695"),
+  E = n("811425"),
+  h = n("31695"),
   g = n("837899"),
   m = n("425190"),
   p = n("578706"),
@@ -46,7 +46,7 @@ var i = n("37983"),
   T = n("782340"),
   I = n("800836");
 
-function C(e) {
+function A(e) {
   let {
     value: t,
     onChange: n,
@@ -60,7 +60,7 @@ function C(e) {
   }
 }
 
-function A(e) {
+function C(e) {
   let {
     value: t,
     onChange: n,
@@ -148,10 +148,10 @@ function L(e) {
     isDisabled: o = !1,
     maxVisibleItems: u = 7,
     autoFocus: c = !1,
-    popoutWidth: E,
+    popoutWidth: h,
     clearable: p = !1,
-    look: C = v.SelectLooks.FILLED,
-    onClose: A,
+    look: A = v.SelectLooks.FILLED,
+    onClose: C,
     onOpen: y,
     renderOptionLabel: N = D,
     renderOptionValue: R = P,
@@ -167,18 +167,18 @@ function L(e) {
     hideIcon: x = !1,
     "aria-label": B,
     "aria-labelledby": H
-  } = e, [Y, j] = s.useState(!1), {
-    ref: W,
-    width: K,
+  } = e, [Y, K] = s.useState(!1), {
+    ref: j,
+    width: W,
     height: z
   } = (0, _.default)(), q = s.useCallback(e => {
-    Y !== e && !o && (j(e), e ? null == y || y() : null == A || A())
-  }, [o, A, y, Y]), X = s.useCallback(e => {
+    Y !== e && !o && (K(e), e ? null == y || y() : null == C || C())
+  }, [o, C, y, Y]), X = s.useCallback(e => {
     Y && !e && q(!1)
-  }, [q, Y]), Q = (0, h.useIsVisible)(X), Z = s.useCallback(e => {
+  }, [q, Y]), Q = (0, E.useIsVisible)(X), Z = s.useCallback(e => {
     if (k(e), w) {
       var t;
-      null === (t = W.current) || void 0 === t || t.focus()
+      null === (t = j.current) || void 0 === t || t.focus()
     }
   }, [k, w]), J = s.useCallback(e => {
     e.stopPropagation(), null == F || F()
@@ -186,7 +186,7 @@ function L(e) {
   s.useLayoutEffect(() => {
     if (c) {
       var e;
-      null === (e = W.current) || void 0 === e || e.focus()
+      null === (e = j.current) || void 0 === e || e.focus()
     }
   }, [c]);
   let ee = (0, f.useRedesignIconContext)().enabled;
@@ -210,7 +210,7 @@ function L(e) {
         className: O,
         closeOnSelect: w,
         maxVisibleItems: u,
-        width: null != E ? E : K,
+        width: null != h ? h : W,
         isSelected: V,
         closePopout: n,
         buttonHeight: null != z ? z : 0,
@@ -233,12 +233,12 @@ function L(e) {
       } = e, {
         isShown: c,
         position: f
-      } = t, _ = c ? m.default : g.default, h = ee ? 18 : 24;
+      } = t, _ = c ? m.default : g.default, E = ee ? 18 : 24;
       return (0, i.jsxs)(l.Clickable, {
         role: "button",
         "aria-disabled": o,
         innerRef: e => {
-          W.current = e, Q.current = e
+          j.current = e, Q.current = e
         },
         onClick: o ? void 0 : e => {
           s(e), q(!Y)
@@ -251,7 +251,7 @@ function L(e) {
           [I.open]: c,
           [I.disabled]: o,
           [I.selectPositionTop]: "top" === f,
-          [I.lookFilled]: C === v.SelectLooks.FILLED
+          [I.lookFilled]: A === v.SelectLooks.FILLED
         }),
         "aria-haspopup": "listbox",
         "aria-expanded": c,
@@ -276,8 +276,8 @@ function L(e) {
               className: I.clear
             })
           }) : null, x ? null : (0, i.jsx)(_, {
-            width: h,
-            height: h
+            width: E,
+            height: E
           })]
         })]
       })
@@ -294,14 +294,14 @@ function M(e) {
     isSelected: d,
     options: f,
     width: _,
-    maxVisibleItems: h,
+    maxVisibleItems: E,
     renderOptionLabel: g,
     serialize: m,
     optionClassName: p,
     buttonHeight: S,
     updatePosition: v,
     popoutPosition: T
-  } = e, [C, A] = s.useState(0), y = s.useRef(null), N = s.useId(), R = (0, o.default)({
+  } = e, [A, C] = s.useState(0), y = s.useRef(null), N = s.useId(), R = (0, o.default)({
     id: N,
     async scrollToEnd() {},
     async scrollToStart() {},
@@ -313,13 +313,13 @@ function M(e) {
     null === (e = O.current) || void 0 === e || e.focus()
   }, []), s.useEffect(() => {
     S > 0 && v()
-  }, [S, v]), (0, E.default)(v), s.useLayoutEffect(() => {
+  }, [S, v]), (0, h.default)(v), s.useLayoutEffect(() => {
     var e, t;
     let n = null === (t = y.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
-    null != n && A(n)
-  }, [h]), s.useEffect(() => {
+    null != n && C(n)
+  }, [E]), s.useEffect(() => {
     v()
-  }, [v, C]);
+  }, [v, A]);
   let D = s.useCallback(e => {
       n(e), l && r()
     }, [r, n, l]),
@@ -335,7 +335,7 @@ function M(e) {
         serialize: m
       }, null !== (n = e.key) && void 0 !== n ? n : t)
     }),
-    L = f.length <= h ? c.AdvancedScrollerNone : c.AdvancedScrollerThin;
+    L = f.length <= E ? c.AdvancedScrollerNone : c.AdvancedScrollerThin;
   return (0, i.jsx)(o.ListNavigatorProvider, {
     navigator: R,
     children: (0, i.jsx)(o.ListNavigatorContainer, {
@@ -351,7 +351,7 @@ function M(e) {
             }),
             style: {
               width: _,
-              maxHeight: C
+              maxHeight: A
             },
             ref: e => {
               var t;
@@ -365,7 +365,7 @@ function M(e) {
             "aria-hidden": !0,
             ref: y,
             className: I.measurement,
-            children: P.slice(0, h)
+            children: P.slice(0, E)
           })]
         })
       }
@@ -407,7 +407,7 @@ function b(e) {
     value: t,
     onChange: n,
     ...s
-  } = e, r = C({
+  } = e, r = A({
     value: t,
     onChange: n
   });

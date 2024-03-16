@@ -34,7 +34,7 @@ function r(e, t, n, r) {
   }
   let _ = Object.values(u).find(e => "succeeded" === e.state);
   if (void 0 === _) return null;
-  let h = [];
+  let E = [];
   for (let e of f) {
     let t = d[e.codecId];
     if (null == t) continue;
@@ -48,7 +48,7 @@ function r(e, t, n, r) {
       bytesSent: e.bytesSent,
       packetsSent: e.packetsSent
     };
-    if ("audio" === e.kind) h.push({
+    if ("audio" === e.kind) E.push({
       ...r,
       type: "audio"
     });
@@ -58,7 +58,7 @@ function r(e, t, n, r) {
         width: e.frameWidth,
         height: e.frameHeight
       } : void 0;
-      h.push({
+      E.push({
         ...r,
         framesEncoded: e.framesEncoded,
         keyFramesEncoded: e.keyFramesEncoded,
@@ -75,7 +75,7 @@ function r(e, t, n, r) {
       })
     }
   }
-  let E = {};
+  let h = {};
   for (let e of c) {
     let a = d[e.codecId];
     if (null == a) continue;
@@ -95,19 +95,19 @@ function r(e, t, n, r) {
     };
     if ("audio" === e.kind) {
       let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round(1e3 * e.jitterBufferDelay / e.jitterBufferEmittedCount) : 0;
-      null == E[o] && (E[o] = []), E[o].push({
+      null == h[o] && (h[o] = []), h[o].push({
         ...l,
         audioLevel: e.audioLevel,
         jitter: 1e3 * e.jitter,
         jitterBuffer: t
       })
     } else if ("video" === e.kind) {
-      null == E[o] && (E[o] = []);
+      null == h[o] && (h[o] = []);
       let t = null !== e.frameWidth ? {
         width: e.frameWidth,
         height: e.frameHeight
       } : void 0;
-      E[o].push({
+      h[o].push({
         ...l,
         resolution: t,
         framesDecoded: e.framesDecoded,
@@ -133,8 +133,8 @@ function r(e, t, n, r) {
       ping: g
     },
     rtp: {
-      inbound: E,
-      outbound: h
+      inbound: h,
+      outbound: E
     }
   }
 }

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _
   },
   default: function() {
-    return h
+    return E
   }
 });
 var i = n("37983");
@@ -37,7 +37,7 @@ async function _(e) {
   if (null != l) return null != o ? o.location.href = l : window.open(l), l
 }
 
-function h(e, t, r) {
+function E(e, t, r) {
   if (e === f.PlatformTypes.LEAGUE_OF_LEGENDS && (e = f.PlatformTypes.RIOT_GAMES), e === f.PlatformTypes.CRUNCHYROLL) {
     a.showModal([null != t ? t : "unknown"]);
     return

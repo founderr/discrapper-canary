@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return c
   },
   default: function() {
-    return h
+    return E
   }
 });
 var i = n("446674"),
@@ -58,7 +58,7 @@ class _ extends i.default.Store {
   }
 }
 _.displayName = "UserGuildJoinRequestStore";
-var h = new _(s.default, {
+var E = new _(s.default, {
   CONNECTION_OPEN: function(e) {
     let {
       guildJoinRequests: t

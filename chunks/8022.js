@@ -22,8 +22,8 @@ function c(e) {
     renderSubmenu: f
   } = e, {
     focusIndex: _,
-    isUsingKeyboardNavigation: h,
-    ...E
+    isUsingKeyboardNavigation: E,
+    ...h
   } = c, g = s.useRef(null), m = s.useRef(null), p = s.useRef(null);
   return s.useLayoutEffect(() => {
     var e;
@@ -45,7 +45,7 @@ function c(e) {
         className: d.submenuPaddingContainer,
         children: (0, i.jsx)("div", {
           className: a(d.submenu, t),
-          ...E,
+          ...h,
           ref: p,
           children: (0, i.jsx)(u.ScrollerThin, {
             className: d.scroller,

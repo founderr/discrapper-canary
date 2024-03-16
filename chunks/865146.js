@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return _
   },
   EPSSourceRecord: function() {
-    return h
+    return E
   },
   IdealSourceRecord: function() {
-    return E
+    return h
   },
   PaysafeSourceRecord: function() {
     return g
@@ -43,10 +43,10 @@ n.r(t), n.d(t, {
     return I
   },
   BancontactSourceRecord: function() {
-    return C
+    return A
   },
   CashAppSourceRecord: function() {
-    return A
+    return C
   },
   AppleSourceRecord: function() {
     return y
@@ -119,7 +119,7 @@ i = class extends s.default {
           bank: e.bank
         });
       case l.PaymentSourceTypes.EPS:
-        return new h({
+        return new E({
           ...i,
           bank: e.bank
         });
@@ -148,16 +148,16 @@ i = class extends s.default {
           ...i
         });
       case l.PaymentSourceTypes.BANCONTACT:
-        return new C({
+        return new A({
           ...i
         });
       case l.PaymentSourceTypes.IDEAL:
-        return new E({
+        return new h({
           ...i,
           bank: e.bank
         });
       case l.PaymentSourceTypes.CASH_APP:
-        return new A({
+        return new C({
           ...i,
           username: e.username
         });
@@ -194,13 +194,13 @@ i = class extends s.default {
       case l.PaymentSourceTypes.GOPAY_WALLET:
         return new I(e);
       case l.PaymentSourceTypes.BANCONTACT:
-        return new C(e);
-      case l.PaymentSourceTypes.EPS:
-        return new h(e);
-      case l.PaymentSourceTypes.IDEAL:
-        return new E(e);
-      case l.PaymentSourceTypes.CASH_APP:
         return new A(e);
+      case l.PaymentSourceTypes.EPS:
+        return new E(e);
+      case l.PaymentSourceTypes.IDEAL:
+        return new h(e);
+      case l.PaymentSourceTypes.CASH_APP:
+        return new C(e);
       default:
         (0, o.assertNever)(t)
     }
@@ -255,13 +255,13 @@ class _ extends i {
     this.email = e.email || "", this.bank = e.bank
   }
 }
-class h extends i {
+class E extends i {
   constructor(e) {
     if (super(e), e.type !== l.PaymentSourceTypes.EPS) throw Error("Cannot instantiate EPSSourceRecord with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.EPS));
     this.bank = e.bank
   }
 }
-class E extends i {
+class h extends i {
   constructor(e) {
     if (super(e), e.type !== l.PaymentSourceTypes.IDEAL) throw Error("Cannot instantiate IdealSourceRecord with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.IDEAL));
     this.bank = e.bank
@@ -303,12 +303,12 @@ class I extends i {
     if (super(e), e.type !== l.PaymentSourceTypes.GOPAY_WALLET) throw Error("Cannot instantiate GoPayWalletSourceRecord with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.GOPAY_WALLET))
   }
 }
-class C extends i {
+class A extends i {
   constructor(e) {
     if (super(e), e.type !== l.PaymentSourceTypes.BANCONTACT) throw Error("Cannot instantiate BancontactSourceRecord with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.BANCONTACT))
   }
 }
-class A extends i {
+class C extends i {
   constructor(e) {
     if (super(e), e.type !== l.PaymentSourceTypes.CASH_APP) throw Error("Cannot instantiate Cashapp with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.CASH_APP));
     this.username = e.username || ""

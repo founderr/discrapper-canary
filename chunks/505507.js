@@ -12,8 +12,8 @@ var r, a, o = n("917351"),
   c = n("95410"),
   f = n("913144"),
   _ = n("684849"),
-  h = n("611310"),
-  E = n("80687"),
+  E = n("611310"),
+  h = n("80687"),
   g = n("49111");
 (a = r || (r = {})).REQUIRED = "REQUIRED", a.OPTIONAL = "OPTIONAL", a.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT";
 let m = "migrated",
@@ -156,7 +156,7 @@ class T extends d.default.PersistedStore {
     }(e.layouts), s = function(e) {
       let t = {};
       return l.forEach(e, (e, n) => {
-        t[n] = new h.default(e)
+        t[n] = new E.default(e)
       }), t
     }(e.widgets)) : (i = {}, s = {});
     let t = !1,
@@ -171,7 +171,7 @@ class T extends d.default.PersistedStore {
         if (null != n) continue;
         o = t = !0;
         let i = (0, u.v4)();
-        n = new h.default({
+        n = new E.default({
           ...this.getWidgetDefaultSettings(e),
           type: e,
           id: i,
@@ -371,9 +371,9 @@ var I = new T(f.default, {
           ...e,
           zIndex: t
         };
-      "" === o.id && (o.id = (0, u.v4)()), null != n && (o.pinned = n.pinned, -1 !== n.anchor.left && (o.anchor = (0, E.getAnchorPercentageFromLayoutSize)(n.anchor, r)), -1 !== n.size.width && (o.size = (0, E.getSizePercentageFromSize)(n.size, r))), s = {
+      "" === o.id && (o.id = (0, u.v4)()), null != n && (o.pinned = n.pinned, -1 !== n.anchor.left && (o.anchor = (0, h.getAnchorPercentageFromLayoutSize)(n.anchor, r)), -1 !== n.size.width && (o.size = (0, h.getSizePercentageFromSize)(n.size, r))), s = {
         ...s,
-        [o.id]: new h.default(o)
+        [o.id]: new E.default(o)
       }, a.push(o.id)
     }), i = {
       ...i,
@@ -477,7 +477,7 @@ var I = new T(f.default, {
       widgetConfigs: t
     } = e;
     t.forEach(e => {
-      let t = new h.default(e),
+      let t = new E.default(e),
         n = i[t.layoutId];
       if (null == n) throw Error("LayoutStore - handleAddWidget: Invalid layoutId");
       t = t.set("zIndex", n.widgets.length), s = {

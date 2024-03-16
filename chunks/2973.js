@@ -16,7 +16,7 @@ let r = !1,
   f = new Map,
   _ = new Map;
 
-function h(e, t) {
+function E(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
     updateProgress: !1
   };
@@ -37,7 +37,7 @@ function h(e, t) {
   }
 }
 
-function E(e, t) {
+function h(e, t) {
   let n = new Map(f);
   n.set(e, t), f = n;
   let i = a.get(e),
@@ -49,7 +49,7 @@ function E(e, t) {
         claimedAt: t.claimedAt
       }
     };
-    h(e, n)
+    E(e, n)
   }
 }
 
@@ -118,7 +118,7 @@ var v = new S(s.default, {
       streamKey: n,
       userStatus: i
     } = e;
-    h(t, {
+    E(t, {
       userStatus: i
     }, {
       updateProgress: !0
@@ -145,7 +145,7 @@ var v = new S(s.default, {
     let {
       enrolledQuestUserStatus: t
     } = e;
-    h(t.questId, {
+    E(t.questId, {
       userStatus: t
     }), m(t.questId)
   },
@@ -166,7 +166,7 @@ var v = new S(s.default, {
       questId: t,
       rewardCode: n
     } = e, i = new Set(d);
-    i.delete(t), d = i, E(t, n)
+    i.delete(t), d = i, h(t, n)
   },
   QUESTS_FETCH_REWARD_CODE_FAILURE: function(e) {
     let {
@@ -185,7 +185,7 @@ var v = new S(s.default, {
       questId: t,
       rewardCode: n
     } = e, i = new Set(u);
-    i.delete(t), u = i, E(t, n)
+    i.delete(t), u = i, h(t, n)
   },
   QUESTS_CLAIM_REWARD_CODE_FAILURE: function(e) {
     let {
@@ -203,7 +203,7 @@ var v = new S(s.default, {
     let {
       dismissedQuestUserStatus: t
     } = e;
-    h(t.questId, {
+    E(t.questId, {
       userStatus: t
     }), p(t.questId)
   },
@@ -229,7 +229,7 @@ var v = new S(s.default, {
     let {
       previewQuestUserStatus: t
     } = e;
-    h(t.questId, {
+    E(t.questId, {
       userStatus: t
     }), null == t.claimedAt && (f = new Map(f)).delete(t.questId)
   },
@@ -237,7 +237,7 @@ var v = new S(s.default, {
     let {
       userStatus: t
     } = e;
-    h(t.questId, {
+    E(t.questId, {
       userStatus: t
     }, {
       updateProgress: !0
