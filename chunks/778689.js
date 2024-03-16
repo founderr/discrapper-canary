@@ -19,6 +19,9 @@ class r extends i.Store {
   handleCacheLoaded(e) {
     this.guildIds = new Set(e.guilds.map(e => e.id))
   }
+  handleCacheLoadedLazy(e) {
+    for (let t of e.guilds) this.guildIds.add(t.id)
+  }
   handleGuildCreate(e) {
     this.guildIds.add(e.guild.id)
   }
@@ -27,8 +30,8 @@ class r extends i.Store {
   }
   constructor() {
     super(s.default, {
-      CACHE_LOADED_LAZY: e => this.handleCacheLoaded(e),
       CACHE_LOADED: e => this.handleCacheLoaded(e),
+      CACHE_LOADED_LAZY: e => this.handleCacheLoadedLazy(e),
       CONNECTION_OPEN: e => this.handleConnectionOpen(e),
       GUILD_CREATE: e => this.handleGuildCreate(e),
       GUILD_DELETE: e => this.handleGuildDelete(e)
