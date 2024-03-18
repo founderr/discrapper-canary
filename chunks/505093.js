@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   setUseSystemTheme: function() {
-    return a
+    return i
   }
 });
-var i = n("913144");
+var a = n("913144");
 
-function a(e) {
-  i.default.dispatch({
+function i(e) {
+  a.default.dispatch({
     type: "UNSYNCED_USER_SETTINGS_UPDATE",
     settings: {
       useSystemTheme: e
