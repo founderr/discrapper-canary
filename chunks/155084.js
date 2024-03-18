@@ -46,11 +46,12 @@ var _ = new class e {
     this._metrics.push(n), (t || this._metrics.length >= 100) && this._flush()
   }
   distribution(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-      i = {
-        ...this._getMetricWithDefaults(e, "distribution"),
-        value: t
-      };
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    if (!(0, u.isMetricsEndpointV2Enabled)("distribution-metric")) return;
+    let i = {
+      ...this._getMetricWithDefaults(e, "distribution"),
+      value: t
+    };
     this._metrics.push(i), (n || this._metrics.length >= 100) && this._flush()
   }
   _flush() {
@@ -61,8 +62,8 @@ var _ = new class e {
         body: {
           metrics: e,
           client_info: {
-            built_at: "1710800967378",
-            build_number: "276288"
+            built_at: "1710801743729",
+            build_number: "276303"
           }
         },
         retries: 1
