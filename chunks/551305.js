@@ -62,8 +62,8 @@ var x = s.memo(function(e) {
     "aria-label": N,
     "aria-expanded": A,
     "aria-haspopup": O,
-    "aria-controls": M
-  } = e, R = (0, u.useTransition)(null != x, {
+    "aria-controls": R
+  } = e, M = (0, u.useTransition)(null != x, {
     ...h,
     keys: e => e ? "children" : "icon"
   }), k = e => {
@@ -89,7 +89,7 @@ var x = s.memo(function(e) {
     "aria-label": N,
     "aria-expanded": A,
     "aria-haspopup": O,
-    "aria-controls": M,
+    "aria-controls": R,
     disabled: n,
     className: o(t, {
       [m.active]: y
@@ -108,7 +108,7 @@ var x = s.memo(function(e) {
         bottom: 4
       }
     },
-    children: [R((e, t, n) => {
+    children: [M((e, t, n) => {
       let {
         key: i
       } = n;

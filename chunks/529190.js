@@ -30,8 +30,8 @@ var i = n("37983"),
   N = n("355263"),
   A = n("317041"),
   O = n("49111"),
-  M = n("782340"),
-  R = n("847948"),
+  R = n("782340"),
+  M = n("847948"),
   k = n("327769");
 let L = [8, 8, 0, 8],
   b = o.debounce(() => {
@@ -145,7 +145,7 @@ var P = l.forwardRef(function(e, t) {
           padding: 0
         });
       return (0, i.jsx)(h.default, {
-        className: R.categoryHeader,
+        className: M.categoryHeader,
         icon: a,
         children: t.name
       }, e)
@@ -159,15 +159,15 @@ var P = l.forwardRef(function(e, t) {
       return (0, i.jsxs)("ul", {
         role: "group",
         "aria-label": l.name,
-        className: s(R.categorySection, {
-          [R.categorySectionLast]: n
+        className: s(M.categorySection, {
+          [M.categorySectionLast]: n
         }),
         children: [t, 0 === a.length && (0, i.jsx)(u.default, {
-          message: M.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
+          message: R.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
             applicationName: l.name
           }),
           noResultsImageURL: k,
-          className: R.noSearchResults
+          className: M.noSearchResults
         })]
       }, e)
     }, [H, V]),
@@ -182,7 +182,7 @@ var P = l.forwardRef(function(e, t) {
         index: e,
         command: s,
         channel: n,
-        className: R.itemWrapper,
+        className: M.itemWrapper,
         selected: P === e,
         showImage: a.section.id !== s.applicationId,
         section: o,
@@ -197,11 +197,11 @@ var P = l.forwardRef(function(e, t) {
     (0, f.dismissChannelEditorPopup)()
   }, []), (0, i.jsxs)(x.default, {
     id: el,
-    className: R.outerWrapper,
-    innerClassName: R.wrapper,
+    className: M.outerWrapper,
+    innerClassName: M.wrapper,
     onMouseDown: j,
     children: [(0, i.jsx)(_.default, {
-      className: R.rail,
+      className: M.rail,
       channel: n,
       sections: B,
       filteredSectionId: Y,
@@ -210,7 +210,7 @@ var P = l.forwardRef(function(e, t) {
       applicationCommandListRef: D
     }), (0, i.jsx)(E.default, {
       role: "listbox",
-      className: R.list,
+      className: M.list,
       listPadding: L,
       onScroll: q,
       renderRow: ei,

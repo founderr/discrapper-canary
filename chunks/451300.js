@@ -46,15 +46,15 @@ function _(e) {
     })
   }, [N]);
   let O = (0, f.usePremiumTrialOffer)(),
-    M = (0, c.usePremiumDiscountOffer)(),
-    R = null != O || null != M,
+    R = (0, c.usePremiumDiscountOffer)(),
+    M = null != O || null != R,
     k = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === C.PremiumSubscriptionSKUs.TIER_0;
   return (0, i.jsxs)("div", {
     className: s(T.emptyState, _, {
-      [T.unifyTrialUpsell]: R
+      [T.unifyTrialUpsell]: M
     }),
-    children: [R ? (0, i.jsx)(p.default, {
-      discountOffer: M,
+    children: [M ? (0, i.jsx)(p.default, {
+      discountOffer: R,
       trialOffer: O,
       onClose: v,
       type: C.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
@@ -78,9 +78,9 @@ function _(e) {
           size: 80
         }, null == e ? void 0 : e.id))
       })]
-    }), !R && (0, i.jsx)(y.default, {
+    }), !M && (0, i.jsx)(y.default, {
       analyticsSection: S.AnalyticsSections.EXPRESSION_PICKER,
-      buttonText: R ? k ? I.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : I.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
+      buttonText: M ? k ? I.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : I.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
     })]
   })
 }

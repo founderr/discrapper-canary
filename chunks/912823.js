@@ -30,8 +30,8 @@ var i = n("37983"),
   N = n("923582"),
   A = n("80921"),
   O = n("954016"),
-  M = n("646718"),
-  R = n("350583");
+  R = n("646718"),
+  M = n("350583");
 
 function k(e) {
   let {
@@ -84,7 +84,7 @@ var L = l.memo(function(e) {
     location: "dc120b_4"
   }, {
     autoTrackExposure: !1
-  }), J = y.default.getCurrentUser(), q = null !== (p = (0, s.useStateFromStores)([f.default], () => Z && g.default.isPremiumExactly(J, M.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
+  }), J = y.default.getCurrentUser(), q = null !== (p = (0, s.useStateFromStores)([f.default], () => Z && g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
     if (!D.isDM() || void 0 === D.recipients || D.recipients.length > 1 || !Z) return !1;
     let e = D.recipients[0],
       t = f.default.getSentUserIds();
@@ -102,7 +102,7 @@ var L = l.memo(function(e) {
     return [Z && l && a, a]
   }), ee = (0, u.useActivitiesInTextButtonVisibility)(D.id, "ChannelTextAreaButtons");
   if (!a.isMobile) {
-    if (D.isDM() && (null === (T = j.gifts) || void 0 === T ? void 0 : T.button) != null && null == K && (g.default.isPremiumExactly(J, M.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
+    if (D.isDM() && (null === (T = j.gifts) || void 0 === T ? void 0 : T.button) != null && null == K && (g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
         location: "dc120b_5"
       }), Q && z.push((0, i.jsx)(_.default, {
         disabled: U,
@@ -140,7 +140,7 @@ var L = l.memo(function(e) {
     onClick: w,
     disabled: U || 0 === V.length && F && !H
   }, "submit")), 0 === z.length) ? null : (0, i.jsx)("div", {
-    className: R.buttons,
+    className: M.buttons,
     children: z
   })
 })

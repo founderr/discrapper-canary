@@ -173,7 +173,7 @@ function A(e, t, n, d) {
                     o = m.length > 0 ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === N.length ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(T.COMMAND_SENTINEL).concat(d.displayName), N.unshift({
                       text: o
                     });
-                    let R = {
+                    let M = {
                       type: "applicationCommand",
                       children: N,
                       command: {
@@ -183,7 +183,7 @@ function A(e, t, n, d) {
                       }
                     };
                     S.EditorUtils.withoutNormalizing(e, () => {
-                      for (let [, t] of(g.SlateTransforms.insertNodes(e, [R], {
+                      for (let [, t] of(g.SlateTransforms.insertNodes(e, [M], {
                           at: C.FIRST_BLOCK_PATH
                         }), S.EditorUtils.blocks(e).reverse())) S.PathUtils.isAfter(t, C.FIRST_BLOCK_PATH) && g.SlateTransforms.removeNodes(e, {
                         at: t,
@@ -191,10 +191,10 @@ function A(e, t, n, d) {
                       })
                     });
                     let k = null;
-                    return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), k = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), k = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && M(e, d), k
+                    return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), k = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), k = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && R(e, d), k
                   }(t, a, n),
                   i = x.getOptionValues(t, E);
-                return R({
+                return M({
                   guildId: a.guild_id,
                   channelId: a.id,
                   command: E,
@@ -284,14 +284,14 @@ function A(e, t, n, d) {
                     }
                   })
                 }), !0)
-              }(t, E) && M(t, E);
+              }(t, E) && R(t, E);
               let e = x.getOptionValues(t, E),
                 n = S.EditorUtils.above(t, {
                   match: e => S.EditorUtils.isInline(t, e) && "applicationCommandOption" === e.type,
                   mode: "lowest"
                 }),
                 i = null !== (I = null == n ? void 0 : n[0].optionName) && void 0 !== I ? I : null;
-              return R({
+              return M({
                 guildId: a.guild_id,
                 channelId: a.id,
                 command: E,
@@ -349,7 +349,7 @@ function O(e, t, n, i) {
   })
 }
 
-function M(e, t) {
+function R(e, t) {
   if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || v.has(t.options[0].type) || x.getOptionNames(e).length > 0) return !1;
   let n = x.getCommandBlock(e);
   if (null == n) return !1;
@@ -378,7 +378,7 @@ function M(e, t) {
   }), !0)
 }
 
-function R(e) {
+function M(e) {
   let {
     guildId: t,
     channelId: n,

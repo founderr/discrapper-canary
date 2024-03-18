@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return M
   }
 }), n("222007");
 var i = n("37983"),
@@ -30,9 +30,9 @@ var i = n("37983"),
   N = n("958706"),
   A = n("646718"),
   O = n("782340"),
-  M = n("187971"),
-  R = e => {
-    var t, a, R;
+  R = n("187971"),
+  M = e => {
+    var t, a, M;
     let {
       onLearnMore: k,
       onClose: L,
@@ -71,17 +71,17 @@ var i = n("37983"),
         })
       }
     }, [W, Y, P, b, U, Z, j, z]), (0, i.jsxs)("div", {
-      className: s(M.premiumPromo, {
-        [M.unifyTrialUpsell]: K
+      className: s(R.premiumPromo, {
+        [R.unifyTrialUpsell]: K
       }),
       children: [(0, i.jsx)(o.Clickable, {
-        className: M.premiumPromoClose,
+        className: R.premiumPromoClose,
         onClick: L,
         children: O.default.Messages.CLOSE
       }), W ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsxs)(i.Fragment, {
         children: [K ? (0, i.jsx)(y.default, {
           type: A.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-          subscriptionTier: null !== (R = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== R ? R : A.PremiumSubscriptionSKUs.TIER_2,
+          subscriptionTier: null !== (M = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== M ? M : A.PremiumSubscriptionSKUs.TIER_2,
           onClose: L,
           trialOffer: H,
           discountOffer: V,
@@ -94,13 +94,13 @@ var i = n("37983"),
         }) : (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)("img", {
             alt: "",
-            className: M.premiumPromoImage,
+            className: R.premiumPromoImage,
             src: B
           }), (0, i.jsx)("div", {
-            className: M.premiumPromoTitle,
+            className: R.premiumPromoTitle,
             children: O.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
           }), (0, i.jsx)("div", {
-            className: M.premiumPromoDescription,
+            className: R.premiumPromoDescription,
             children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
               planName: (0, I.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
               onClick: G

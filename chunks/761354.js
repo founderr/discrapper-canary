@@ -34,7 +34,7 @@ var i = n("37983"),
   A = n("483099");
 let O = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
 
-function M(e) {
+function R(e) {
   let {
     alt: t,
     spoiler: n,
@@ -69,7 +69,7 @@ function M(e) {
   })
 }
 
-function R(e) {
+function M(e) {
   let {
     file: t,
     alt: n,
@@ -131,7 +131,7 @@ function R(e) {
     children: (0, i.jsx)(o.Clickable, {
       onClick: x,
       className: A.clickableMedia,
-      children: (0, i.jsx)(M, {
+      children: (0, i.jsx)(R, {
         size: r,
         alt: n,
         spoiler: a,
@@ -159,7 +159,7 @@ function k(e) {
   }, [t]), (0, i.jsx)("div", {
     onMouseEnter: o,
     className: A.mediaContainer,
-    children: (0, i.jsx)(M, {
+    children: (0, i.jsx)(R, {
       size: r,
       alt: n,
       spoiler: a,
@@ -185,7 +185,7 @@ function L(e) {
     size: a = v.AttachmentListItemSizes.MEDIUM,
     onMouseEnter: r
   } = e, [o, u] = l.useState(!1), d = a === v.AttachmentListItemSizes.SMALL;
-  return n.isImage && n.item.platform === c.UploadPlatform.WEB ? (0, i.jsx)(R, {
+  return n.isImage && n.item.platform === c.UploadPlatform.WEB ? (0, i.jsx)(M, {
     file: n.item.file,
     alt: n.description,
     spoiler: n.spoiler,
@@ -224,9 +224,9 @@ function b(e) {
     size: C = v.AttachmentListItemSizes.MEDIUM,
     canEdit: I = !0,
     hideFileName: O = !1,
-    clip: M
-  } = e, R = null != M;
-  C = R ? v.AttachmentListItemSizes.CLIP : C;
+    clip: R
+  } = e, M = null != R;
+  C = M ? v.AttachmentListItemSizes.CLIP : C;
   let k = C === v.AttachmentListItemSizes.SMALL,
     b = (0, r.useStateFromStores)([m.default], () => {
       var e;
@@ -258,7 +258,7 @@ function b(e) {
         className: s({
           [A.action]: k
         }),
-        tooltip: R ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : N.default.Messages.ATTACHMENT_UTILITIES_SPOILER,
+        tooltip: M ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : N.default.Messages.ATTACHMENT_UTILITIES_SPOILER,
         onClick: () => u.default.update(t, a.id, n, {
           spoiler: !a.spoiler
         }),
@@ -271,7 +271,7 @@ function b(e) {
             [A.actionBarIcon]: k
           })
         })
-      }) : null, I && !R ? (0, i.jsx)(_.default, {
+      }) : null, I && !M ? (0, i.jsx)(_.default, {
         className: s({
           [A.action]: k
         }),
@@ -286,7 +286,7 @@ function b(e) {
         className: s({
           [A.action]: k
         }),
-        tooltip: R ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : N.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
+        tooltip: M ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : N.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
         onClick: () => u.default.remove(t, a.id, n),
         dangerous: !0,
         children: (0, i.jsx)(g.default, {
@@ -308,20 +308,20 @@ function b(e) {
     children: [(0, i.jsx)(L, {
       upload: a,
       size: C
-    }), !O && !R && (0, i.jsx)("div", {
+    }), !O && !M && (0, i.jsx)("div", {
       className: A.filenameContainer,
       children: (0, i.jsx)(o.Text, {
         className: A.filename,
         variant: "text-sm/normal",
         children: null != h ? h : a.filename
       })
-    }), R && (0, i.jsxs)(i.Fragment, {
+    }), M && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(f.default, {
         className: A.clipsFooter,
-        createdAt: T.default.extractTimestamp(M.id),
-        participantIds: M.users,
-        applicationId: M.applicationId,
-        title: M.name,
+        createdAt: T.default.extractTimestamp(R.id),
+        participantIds: R.users,
+        applicationId: R.applicationId,
+        title: R.name,
         guildId: b
       }), (0, i.jsx)(S.TextBadge, {
         color: p.default.BG_BRAND,
