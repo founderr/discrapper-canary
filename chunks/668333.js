@@ -30,8 +30,8 @@ var i = n("37983"),
   N = n("159885"),
   A = n("570759"),
   O = n("866353"),
-  R = n("364685"),
-  M = n("161585"),
+  M = n("364685"),
+  R = n("161585"),
   k = n("24373"),
   L = n("41170"),
   b = n("801396"),
@@ -93,9 +93,9 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         columnIndex: n,
         gridSectionIndex: i
       } = e;
-      m.StickerPickerStore.setActiveCategoryIndex(i), m.StickerPickerStore.setInspectedExpressionPosition(n, t, x.InspectedExpressionChangeSource.MOUSE_EVENT), e.type === M.StickerGridItemTypes.STICKER && m.StickerPickerStore.setSearchPlaceholder(e.sticker.name)
+      m.StickerPickerStore.setActiveCategoryIndex(i), m.StickerPickerStore.setInspectedExpressionPosition(n, t, x.InspectedExpressionChangeSource.MOUSE_EVENT), e.type === R.StickerGridItemTypes.STICKER && m.StickerPickerStore.setSearchPlaceholder(e.sticker.name)
     }, []), u = l.useCallback(e => {
-      if (e.type !== M.StickerGridItemTypes.STICKER) return;
+      if (e.type !== R.StickerGridItemTypes.STICKER) return;
       let {
         packId: l,
         sticker: o,
@@ -105,7 +105,7 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         object: "" === r ? D.AnalyticsObjects.STICKER_PICKER_VIEW_ALL : D.AnalyticsObjects.STICKER_SEARCH_VIEW_ALL
       };
       if (null != o && !(0, O.isSendableSticker)(o, i, n)) {
-        let e = R.default.getStickerPack(l);
+        let e = M.default.getStickerPack(l);
         null != e && (v.default.track(D.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
           sticker_id: o.id,
           sticker_pack_id: l,
@@ -120,7 +120,7 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         a === O.StickerSendability.SENDABLE_WITH_PREMIUM && (0, A.setShowPremiumUpsell)(!0), t && O.StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
         return
       }
-      u === M.StickerGridItemTypes.STICKER && null != o && t(e)
+      u === R.StickerGridItemTypes.STICKER && null != o && t(e)
     }, [a.location, r, i, n, s, t]);
     return {
       handleStickerInspect: o,
@@ -206,7 +206,7 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         })
       }
       switch (n.type) {
-        case M.StickerCategoryTypes.FAVORITE:
+        case R.StickerCategoryTypes.FAVORITE:
           return (0, i.jsx)(y.default, {
             className: G.packHeader,
             "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
@@ -222,7 +222,7 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             }),
             children: n.name
           }, "header-".concat(n.id));
-        case M.StickerCategoryTypes.RECENT:
+        case R.StickerCategoryTypes.RECENT:
           return (0, i.jsx)(y.default, {
             className: G.packHeader,
             "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
@@ -235,8 +235,8 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             }),
             children: n.name
           }, "header-".concat(n.id));
-        case M.StickerCategoryTypes.GUILD:
-        case M.StickerCategoryTypes.EMPTY_GUILD_UPSELL: {
+        case R.StickerCategoryTypes.GUILD:
+        case R.StickerCategoryTypes.EMPTY_GUILD_UPSELL: {
           let e = S.default.getGuild(n.id);
           if (null == e) return null;
           return (0, i.jsx)(y.default, {
@@ -254,8 +254,8 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             children: e.name
           }, "h".concat(e.id))
         }
-        case M.StickerCategoryTypes.PACK: {
-          let e = R.default.getStickerPack(n.id);
+        case R.StickerCategoryTypes.PACK: {
+          let e = M.default.getStickerPack(n.id);
           if (null == e) return null;
           return (0, i.jsx)(y.default, {
             className: G.packHeader,
@@ -287,7 +287,7 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
     }, [I]), en = l.useCallback(e => {
       let n = E[e],
         l = t.has(n.id);
-      return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != I || l ? null : (0, i.jsx)(b.default, {
+      return n.type !== R.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != I || l ? null : (0, i.jsx)(b.default, {
         className: G.emptyGuildUpsell,
         guildId: n.id,
         channel: A,
@@ -297,7 +297,7 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
     }, [E, t, I, A, K]), ei = l.useCallback(e => {
       let n = E[e],
         i = t.has(n.id);
-      return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || i ? 0 : es
+      return n.type !== R.StickerCategoryTypes.EMPTY_GUILD_UPSELL || i ? 0 : es
     }, [E, t]);
     return {
       renderRow: z,
@@ -323,9 +323,9 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       stickersCategories: T,
       stickersGrid: _,
       channel: v
-    } = e, N = l.useRef(!1), A = l.useRef(null), [O, M] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
+    } = e, N = l.useRef(!1), A = l.useRef(null), [O, R] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
       AnalyticsLocationProvider: k
-    } = (0, f.default)(c.default.STICKER_PICKER), L = (0, h.useExpressionPickerStore)(e => e.searchQuery), b = (0, s.useStateFromStores)([R.default], () => R.default.getPremiumPacks()), j = l.useMemo(() => new Set(b.map(e => e.id)), [b]), {
+    } = (0, f.default)(c.default.STICKER_PICKER), L = (0, h.useExpressionPickerStore)(e => e.searchQuery), b = (0, s.useStateFromStores)([M.default], () => M.default.getPremiumPacks()), j = l.useMemo(() => new Set(b.map(e => e.id)), [b]), {
       renderRow: U,
       renderSection: D,
       renderSectionFooter: w,
@@ -343,7 +343,7 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       getStickerItemProps: d,
       getStickerRowProps: p,
       gutterWidth: x,
-      inspectedStickerPosition: M,
+      inspectedStickerPosition: R,
       filteredStickers: o,
       ownedStickerPacks: j,
       channel: v

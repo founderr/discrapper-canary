@@ -36,8 +36,8 @@ function S(e) {
     autoWidth: N = !1,
     soundButtonOverlay: A,
     listPadding: O,
-    renderHeader: R,
-    defaultSoundsOnly: M
+    renderHeader: M,
+    defaultSoundsOnly: R
   } = e, k = (0, o.useStateFromStores)([E.default], () => E.default.isFetchingSounds() || E.default.isFetchingDefaultSounds()), L = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
     AnalyticsLocationProvider: b
   } = (0, c.default)(d.default.SOUNDBOARD_POPOUT);
@@ -68,8 +68,8 @@ function S(e) {
         gridNotice: v,
         soundButtonOverlay: A,
         listPadding: O,
-        renderHeader: R,
-        defaultSoundsOnly: M
+        renderHeader: M,
+        defaultSoundsOnly: R
       })
     })
   })

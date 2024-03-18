@@ -43,8 +43,8 @@ var i = n("37983"),
       }, [a]),
       {
         Component: O,
-        events: R,
-        play: M
+        events: M,
+        play: R
       } = (0, u.useGifLottie)();
     if (n) return null;
     let k = I === x.ExpressionPickerViewType.GIF && T === a;
@@ -57,10 +57,10 @@ var i = n("37983"),
         ...e,
         children: (0, i.jsx)(p.default, {
           innerClassName: y.button,
-          onMouseEnter: R.onMouseEnter,
-          onMouseLeave: R.onMouseLeave,
+          onMouseEnter: M.onMouseEnter,
+          onMouseLeave: M.onMouseLeave,
           onClick: () => {
-            A(), M()
+            A(), R()
           },
           isActive: k,
           pulse: g,

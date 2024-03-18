@@ -87,11 +87,11 @@ function O(e) {
       bot: null === (t = u.application) || void 0 === t ? void 0 : t.bot,
       botIconFirst: !0
     }),
-    R = l.useCallback(() => {
+    M = l.useCallback(() => {
       g.dismissAppDetail()
     }, []),
-    M = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-    k = (0, p.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != M ? M : ""),
+    R = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
+    k = (0, p.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != R ? R : ""),
     L = (0, f.getIconComponent)(u),
     b = l.useMemo(() => {
       var e, t;
@@ -107,7 +107,7 @@ function O(e) {
       },
       children: (0, i.jsx)(r.Clickable, {
         "aria-label": _.default.Messages.CLOSE,
-        onClick: R,
+        onClick: M,
         className: v.headerCloseButton,
         children: (0, i.jsx)(h.default, {})
       })

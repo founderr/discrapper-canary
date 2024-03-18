@@ -43,15 +43,15 @@ let T = (e, t) => "".concat(e, ":").concat(t),
         inNitroLockedSection: A,
         ...O
       } = e,
-      R = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
+      M = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
       {
-        enabled: M
+        enabled: R
       } = g.default.useExperiment({
         location: "Emoji Picker List"
       }, {
         autoTrackExposure: p
       }),
-      k = p && M && !A;
+      k = p && R && !A;
     return (0, i.jsx)(o.FocusRing, {
       children: (0, i.jsx)("button", {
         ...O,
@@ -60,7 +60,7 @@ let T = (e, t) => "".concat(e, ":").concat(t),
           [I.emojiItemMedium]: d,
           [I.emojiItemSelected]: c,
           [null != N ? N : ""]: c,
-          [I.emojiItemDisabled]: p && !M,
+          [I.emojiItemDisabled]: p && !R,
           [I.showPulse]: h
         }),
         "data-type": m.PickerContextMenuDataTypes.EMOJI,
@@ -68,9 +68,9 @@ let T = (e, t) => "".concat(e, ":").concat(t),
         "data-name": l.name,
         ref: t,
         children: (0, i.jsx)(S.default, {
-          "aria-label": (n = l.allNamesString, ((null == R ? void 0 : R.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
+          "aria-label": (n = l.allNamesString, ((null == M ? void 0 : M.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
             names: n,
-            guildName: R.name
+            guildName: M.name
           })), a) ? C.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
             names: n
           }) : n),
@@ -101,8 +101,8 @@ function v(e) {
     surrogateCodePoint: N,
     selectedItemClassName: A,
     getEmojiItemProps: O,
-    isMediumSize: R,
-    isLargeSize: M,
+    isMediumSize: M,
+    isLargeSize: R,
     pulseItemKey: k,
     allowAnimatedEmoji: L,
     setPulseItemKey: b,
@@ -152,8 +152,8 @@ function v(e) {
       ref: r,
       emoji: V,
       isFavorite: B.isFavoriteEmojiWithoutFetchingLatest(V),
-      isLargeSize: M,
-      isMediumSize: R,
+      isLargeSize: R,
+      isMediumSize: M,
       isInspected: s,
       isDisabled: W,
       showPulse: k === a,

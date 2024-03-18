@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getAutocompleteRowId: function() {
-    return M
+    return R
   },
   getAutocompleteTitleId: function() {
     return k
@@ -36,9 +36,9 @@ var i = n("37983"),
   N = n("548775"),
   A = n("49111"),
   O = n("782340"),
-  R = n("723199");
+  M = n("723199");
 
-function M(e) {
+function R(e) {
   return null != e ? "autocomplete-".concat(e) : null
 }
 
@@ -65,8 +65,8 @@ class b extends l.PureComponent {
     } = this, o = this.isSelectable();
     return (0, i.jsx)(d.Clickable, {
       ...e,
-      className: s(R.clickable, l, n),
-      id: null !== (t = M(a)) && void 0 !== t ? t : void 0,
+      className: s(M.clickable, l, n),
+      id: null !== (t = R(a)) && void 0 !== t ? t : void 0,
       onClick: o ? this.handleClick : void 0,
       onMouseMove: o ? () => {
         this.setState({
@@ -80,7 +80,7 @@ class b extends l.PureComponent {
       "aria-disabled": !o,
       "aria-selected": o && r,
       children: (0, i.jsx)("div", {
-        className: R.base,
+        className: M.base,
         children: this.renderContent()
       })
     })
@@ -95,7 +95,7 @@ class b extends l.PureComponent {
     }) : this.renderClickable()
   }
   constructor(e) {
-    super(e), this.selectable = !0, this.layoutClass = R.autocompleteRowVertical, this.handleMouseEnter = () => {
+    super(e), this.selectable = !0, this.layoutClass = M.autocompleteRowVertical, this.handleMouseEnter = () => {
       let {
         onHover: e,
         index: t,
@@ -127,9 +127,9 @@ class P extends l.PureComponent {
         id: null != a ? a : ""
       },
       children: (0, i.jsx)("div", {
-        className: s(R.autocomplete, t),
+        className: s(M.autocomplete, t),
         children: (0, i.jsx)("div", {
-          className: s(R.autocompleteInner, n),
+          className: s(M.autocompleteInner, n),
           ...r,
           children: e
         })
@@ -156,13 +156,13 @@ P.Generic = class e extends b {
 }, P.Loading = function(e) {
   let t = l.useMemo(() => o.random(60, 120), []);
   return (0, i.jsx)("div", {
-    className: R.base,
+    className: M.base,
     "aria-busy": !0,
     children: (0, i.jsx)(_.AutocompleteRowContent, {
       children: (0, i.jsx)(_.AutocompleteRowContentPrimary, {
         children: (0, i.jsx)(_.AutocompleteRowHeading, {
           children: (0, i.jsx)("div", {
-            className: R.autocompletePlaceholder,
+            className: M.autocompletePlaceholder,
             style: {
               width: t
             }
@@ -178,10 +178,10 @@ P.Generic = class e extends b {
     children: a
   } = e, r = l.useContext(L);
   return (0, i.jsx)("div", {
-    className: R.base,
+    className: M.base,
     children: (0, i.jsxs)(d.Heading, {
       id: k(r.id),
-      className: s(R.contentTitle, n),
+      className: s(M.contentTitle, n),
       variant: "heading-deprecated-12/semibold",
       children: [t, a]
     })
@@ -192,11 +192,11 @@ P.Generic = class e extends b {
       className: e
     } = this.props;
     return (0, i.jsx)("div", {
-      className: s(e, R.divider)
+      className: s(e, M.divider)
     })
   }
   constructor(...e) {
-    super(...e), this.layoutClass = R.dividerContainer, this.selectable = !1
+    super(...e), this.layoutClass = M.dividerContainer, this.selectable = !1
   }
 }, P.User = class e extends b {
   renderContent() {
@@ -221,13 +221,13 @@ P.Generic = class e extends b {
         })
       }), (0, i.jsxs)(_.AutocompleteRowContentSecondary, {
         children: [(0, i.jsx)("span", {
-          className: R.descriptionUsername,
+          className: M.descriptionUsername,
           children: T.default.getUserTag(e, {
             mode: "username",
             identifiable: l ? "never" : "always"
           })
         }), l || e.isPomelo() ? null : (0, i.jsxs)("span", {
-          className: R.descriptionDiscriminator,
+          className: M.descriptionDiscriminator,
           children: ["#", e.discriminator]
         })]
       })]
@@ -247,7 +247,7 @@ P.Generic = class e extends b {
       children: [(0, i.jsx)(_.AutocompleteRowContentPrimary, {
         children: (0, i.jsxs)(_.AutocompleteRowHeading, {
           children: [l && (0, i.jsx)(d.RoleDot, {
-            className: R.roleDot,
+            className: M.roleDot,
             color: n,
             tooltip: !1
           }), (0, i.jsxs)("span", {
@@ -269,7 +269,7 @@ P.Generic = class e extends b {
     return (0, i.jsxs)(_.AutocompleteRowContent, {
       children: [null != n && (0, i.jsx)(_.AutocompleteRowIcon, {
         children: (0, i.jsx)(n, {
-          className: R.icon
+          className: M.icon
         })
       }), (0, i.jsx)(_.AutocompleteRowContentPrimary, {
         children: (0, i.jsx)(_.AutocompleteRowHeading, {
@@ -288,8 +288,8 @@ P.Generic = class e extends b {
     return (0, i.jsxs)(_.AutocompleteRowContent, {
       children: [(0, i.jsx)(_.AutocompleteRowIcon, {
         children: (0, i.jsx)(N.default, {
-          className: R.icon,
-          foreground: R.iconForeground
+          className: M.icon,
+          foreground: M.iconForeground
         })
       }), (0, i.jsx)(_.AutocompleteRowContentPrimary, {
         children: (0, i.jsx)(_.AutocompleteRowHeading, {
@@ -331,10 +331,10 @@ P.Generic = class e extends b {
       guild: n
     } = this.props, l = null != e.url && "" !== e.url ? (0, i.jsx)("img", {
       alt: "",
-      className: R.emojiImage,
+      className: M.emojiImage,
       src: e.url
     }) : (0, i.jsx)("span", {
-      className: R.emojiRaw,
+      className: M.emojiRaw,
       children: e.surrogates
     }), a = null != n ? (0, i.jsx)(_.AutocompleteRowContentSecondary, {
       children: n.name
@@ -350,7 +350,7 @@ P.Generic = class e extends b {
     })
   }
   constructor(...e) {
-    super(...e), this.layoutClass = s(R.autocompleteRowVertical, R.autocompleteRowVerticalSmall, this.props.isLocked ? R.premiumEmoji : null)
+    super(...e), this.layoutClass = s(M.autocompleteRowVertical, M.autocompleteRowVerticalSmall, this.props.isLocked ? M.premiumEmoji : null)
   }
 }, P.GIFIntegration = class e extends b {
   renderContent() {
@@ -367,7 +367,7 @@ P.Generic = class e extends b {
     })
   }
   constructor(...e) {
-    super(...e), this.layoutClass = R.autocompleteRowHorizontal
+    super(...e), this.layoutClass = M.autocompleteRowHorizontal
   }
 }, P.Sticker = class e extends b {
   renderContent() {
@@ -386,7 +386,7 @@ P.Generic = class e extends b {
         children: a(r, o || !0 === s)
       }), (0, i.jsxs)(_.AutocompleteRowContentPrimary, {
         children: [(0, i.jsx)(_.AutocompleteRowHeading, {
-          className: R.stickerName,
+          className: M.stickerName,
           children: r.name
         }), null != l && (0, i.jsx)(_.AutocompleteRowSubheading, {
           children: O.default.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({
@@ -399,7 +399,7 @@ P.Generic = class e extends b {
     })
   }
   constructor(...e) {
-    super(...e), this.layoutClass = s(R.autocompleteRowVertical, R.autocompleteRowVerticalSmall)
+    super(...e), this.layoutClass = s(M.autocompleteRowVertical, M.autocompleteRowVerticalSmall)
   }
 }, P.EmojiUpsell = class e extends b {
   renderContent() {

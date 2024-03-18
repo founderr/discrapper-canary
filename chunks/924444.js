@@ -100,8 +100,8 @@ function I(e) {
     ...A
   } = e, {
     width: O,
-    height: R
-  } = (0, f.zoomFit)(s, o), M = r.isMobile && null != _;
+    height: M
+  } = (0, f.zoomFit)(s, o), R = r.isMobile && null != _;
   l.useEffect(() => {
     if (null != _) return c.ComponentDispatch.subscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, _), () => {
       c.ComponentDispatch.unsubscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, _)
@@ -112,7 +112,7 @@ function I(e) {
   } : A.onContextMenu;
   return (0, i.jsxs)("div", {
     className: g.wrapper,
-    children: [M ? (0, i.jsx)(S, {
+    children: [R ? (0, i.jsx)(S, {
       onClose: _
     }) : null, (0, i.jsx)(C, {
       isObscured: N,
@@ -124,7 +124,7 @@ function I(e) {
         width: s,
         height: o,
         maxWidth: O,
-        maxHeight: R,
+        maxHeight: M,
         children: d,
         animated: !e && u,
         autoPlay: !e,

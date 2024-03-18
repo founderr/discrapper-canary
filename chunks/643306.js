@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return M
   }
 });
 var i = n("37983");
@@ -46,14 +46,14 @@ let O = (0, m.createExperiment)({
   }]
 });
 
-function R(e) {
+function M(e) {
   let {
     roleColor: t,
     roleId: l,
     channelId: s,
     roleName: m,
-    guildId: R,
-    children: M,
+    guildId: M,
+    children: R,
     inlinePreview: k = !1
   } = e, L = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), b = null != t && 0 !== t && !k, P = b && "dot" === L, j = e => (0, i.jsxs)(T.default, {
     className: a(A.roleMention),
@@ -64,7 +64,7 @@ function R(e) {
       className: N.roleDot,
       background: !1,
       tooltip: !1
-    }), M]
+    }), R]
   }), {
     enabled: U
   } = O.getCurrentConfig({
@@ -72,15 +72,15 @@ function R(e) {
   }, {
     autoTrackExposure: !1
   });
-  return !U || k || null == s || null == R || null == l && "@everyone" !== m ? j() : (0, i.jsx)(d.Popout, {
+  return !U || k || null == s || null == M || null == l && "@everyone" !== m ? j() : (0, i.jsx)(d.Popout, {
     preload: async () => {
-      null != l && await (0, h.requestMembersForRole)(R, l)
+      null != l && await (0, h.requestMembersForRole)(M, l)
     },
     renderPopout: e => {
       let t = y.default.getChannel(s),
-        a = S.default.getGuild(R),
+        a = S.default.getGuild(M),
         o = g.default.getMembers(a.id),
-        u = S.default.getRole(R, null != l ? l : a.getEveryoneRoleId()),
+        u = S.default.getRole(M, null != l ? l : a.getEveryoneRoleId()),
         p = r(o).filter(e => {
           if ("@everyone" === m || e.roles.includes(l)) {
             let t = C.default.getUser(e.userId);

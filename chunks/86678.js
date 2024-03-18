@@ -30,8 +30,8 @@ var i = n("37983"),
   N = n("45961"),
   A = n("802894"),
   O = n("592407"),
-  R = n("139321"),
-  M = n("716849"),
+  M = n("139321"),
+  R = n("716849"),
   k = n("552917"),
   L = n("845579"),
   b = n("923959"),
@@ -198,8 +198,8 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     } = ex,
     eN = (0, d.useStateFromStores)([b.default], () => null != f ? b.default.getDefaultChannel(f) : null, [f]),
     [eA, eO] = l.useState(null),
-    eR = l.useRef(""),
-    eM = (0, _.useExpressionPickerStore)(e => e.searchQuery),
+    eM = l.useRef(""),
+    eR = (0, _.useExpressionPickerStore)(e => e.searchQuery),
     ek = l.useRef(null),
     eL = l.useRef(null),
     eb = l.useRef(null);
@@ -227,7 +227,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     diversitySurrogate: eY
   } = (0, d.useStateFromStoresObject)([S.default], () => ({
     diversitySurrogate: S.default.diversitySurrogate
-  })), ez = (0, w.useEmojiSearchResults)(eM, u, o), eZ = null == ez ? 0 : ez.locked.length + ez.unlocked.length, eJ = L.EmojiPickerCollapsedSections.useSetting(), eq = l.useMemo(() => new Set(eJ), [eJ]), eX = l.useCallback(e => {
+  })), ez = (0, w.useEmojiSearchResults)(eR, u, o), eZ = null == ez ? 0 : ez.locked.length + ez.unlocked.length, eJ = L.EmojiPickerCollapsedSections.useSetting(), eq = l.useMemo(() => new Set(eJ), [eJ]), eX = l.useCallback(e => {
     L.EmojiPickerCollapsedSections.updateSetting(Array.from(e))
   }, []), eQ = (0, N.useExpressionPickerGridWidth)({
     gridWrapperRef: ek,
@@ -257,7 +257,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     isBurstReaction: ej,
     analyticsObject: eH
   });
-  (0, M.useMaybeFetchPremiumLikelihood)(k.default);
+  (0, R.useMaybeFetchPremiumLikelihood)(k.default);
   let e2 = l.useCallback(() => {
       let e = e7.length > 0 ? e7[0].id : null;
       (0, I.updateNewlyAddedLastSeen)(eP, e), e6()
@@ -269,13 +269,13 @@ var ed = l.memo(l.forwardRef(function(e, t) {
       onSelectEmoji: ei,
       setUpsellConfigs: eO,
       emojiSelectAnalytics: e => {
-        "" !== eM ? (0, w.trackEmojiSearchSelect)({
+        "" !== eR ? (0, w.trackEmojiSearchSelect)({
           emoji: e.emoji,
           location: {
             ...eK,
             object: q.AnalyticsObjects.EMOJI
           },
-          searchQuery: eM,
+          searchQuery: eR,
           intention: o
         }) : (0, w.trackEmojiSelect)({
           emoji: e.emoji,
@@ -328,7 +328,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
   }, [ef]), l.useEffect(() => (j.default.track(q.AnalyticEvents.OPEN_POPOUT, {
     type: null != eV ? eV : "Emoji Picker",
     guild_id: eP
-  }), T.EmojiPickerStore.resetStoreState), [eV, eP]), l.useEffect(() => () => (0, R.hideHotspot)(R.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), l.useLayoutEffect(() => {
+  }), T.EmojiPickerStore.resetStoreState), [eV, eP]), l.useEffect(() => () => (0, M.hideHotspot)(M.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), l.useLayoutEffect(() => {
     var e;
     let {
       columnIndex: t,
@@ -336,13 +336,13 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     } = T.EmojiPickerStore.getState().inspectedExpressionPosition;
     (null === (e = e1[n]) || void 0 === e ? void 0 : e[t]) == null && 0 !== t && T.EmojiPickerStore.setInspectedExpressionPosition(0, 0)
   }, [e1]), l.useEffect(() => {
-    if ("" === eR.current && "" !== eM && (0, w.trackEmojiSearchStart)(eK, o), 0 === eZ && "" !== eM) er(eK, eM);
-    else if ("" !== eM && eR.current !== eM) {
+    if ("" === eM.current && "" !== eR && (0, w.trackEmojiSearchStart)(eK, o), 0 === eZ && "" !== eR) er(eK, eR);
+    else if ("" !== eR && eM.current !== eR) {
       var e;
-      eo(eZ, null !== (e = null == ez ? void 0 : ez.locked.length) && void 0 !== e ? e : 0, eK, eM, o)
+      eo(eZ, null !== (e = null == ez ? void 0 : ez.locked.length) && void 0 !== e ? e : 0, eK, eR, o)
     }
-    eR.current = eM
-  }, [eM, eK, eZ, ez, o]);
+    eM.current = eR
+  }, [eR, eK, eZ, ez, o]);
   let ti = null != eE ? eE : O ? "div" : p.Dialog,
     tl = null != eQ;
   (null == eA ? void 0 : eA.type) === K.EmojiUpsellType.PREMIUM ? r = (0, i.jsx)(Z.default, {

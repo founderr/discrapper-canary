@@ -1,11 +1,11 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return s
+    return n
   }
 });
 var r = i("862205");
-let n = (0, r.createExperiment)({
+let u = (0, r.createExperiment)({
   kind: "user",
   id: "2022-12_premium_targeted_upsells",
   label: "Premium Targeted Upsells",
@@ -30,4 +30,4 @@ let n = (0, r.createExperiment)({
     }
   }]
 });
-var s = n
+var n = u

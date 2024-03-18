@@ -35,8 +35,8 @@ var i = n("37983"),
       getEmojiRowProps: N,
       isScrolling: A,
       isUsingKeyboardNavigation: O,
-      rowIndex: R,
-      allowAnimatedEmoji: M,
+      rowIndex: M,
+      allowAnimatedEmoji: R,
       showEmojiFavoriteTooltip: k,
       channelGuildId: L,
       category: b,
@@ -81,7 +81,7 @@ var i = n("37983"),
                 tabIndex: p,
                 onFocus: h,
                 ...x
-              } = null !== (e = v(o, R)) && void 0 !== e ? e : {};
+              } = null !== (e = v(o, M)) && void 0 !== e ? e : {};
               return (0, l.createElement)("li", {
                 ...x,
                 key: t
@@ -119,14 +119,14 @@ var i = n("37983"),
               visibleRowIndex: s
             } = e, r = G.rowIndex === s && G.columnIndex === l;
             return (0, i.jsx)(y.default, {
-              rowIndex: R,
+              rowIndex: M,
               descriptor: e,
               emojiItemKey: t,
               isInspected: r,
               isScrolling: A,
               isUsingKeyboardNavigation: O,
               surrogateCodePoint: _,
-              allowAnimatedEmoji: M,
+              allowAnimatedEmoji: R,
               selectedItemClassName: P,
               onSelect: a,
               onInspect: T,
@@ -146,7 +146,7 @@ var i = n("37983"),
         }
       },
       Z = e => (0, i.jsx)("ul", {
-        ...N(R),
+        ...N(M),
         className: s(I.emojiListRow, {
           [I.emojiListRowLargeSize]: W,
           [I.emojiListRowMediumSize]: Y
