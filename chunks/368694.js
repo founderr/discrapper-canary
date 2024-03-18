@@ -21,7 +21,8 @@ class f extends i.default.Store {
     this.waitFor(o.default, a.default), Object.defineProperties(this, {
       isDeveloper: {
         configurable: !1,
-        get: () => d
+        get: () => d,
+        set: () => {}
       }
     }), c(), setTimeout(() => Object.freeze(this))
   }
