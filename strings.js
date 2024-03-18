@@ -16851,7 +16851,6 @@ e.exports = Object.freeze({
   QUEST: "{questName} Quest",
   QUESTS_SEE_CODE: "See Code",
   QUESTS_CLAIM_REWARD: "Claim Reward",
-  QUESTS_CLAIM_YOUR_REWARD: "Claim Your Reward",
   QUESTS_ACCEPT: "Accept Quest",
   QUESTS_COMPLETE_TOOLTIP: "Hit claim to get your reward code!",
   QUESTS_ACCEPT_TOOLTIP: "Accept the Quest and complete the task to unlock the reward",
