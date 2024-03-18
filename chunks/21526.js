@@ -9,23 +9,26 @@ r.r(t), r.d(t, {
   productDetailsOpened: function() {
     return _
   },
-  fetchCollectiblesCategories: function() {
+  productDetailsClosed: function() {
     return d
   },
-  fetchCollectiblesPurchases: function() {
+  fetchCollectiblesCategories: function() {
     return I
   },
-  fetchCollectiblesProduct: function() {
+  fetchCollectiblesPurchases: function() {
     return A
+  },
+  fetchCollectiblesProduct: function() {
+    return L
   },
   claimPremiumCollectiblesProduct: function() {
     return S
   },
   validateCollectiblesRecipient: function() {
-    return L
+    return T
   },
   setCollectiblesCategoryItemsViewed: function() {
-    return T
+    return p
   }
 });
 var u = r("872717"),
@@ -58,7 +61,13 @@ let a = e => {
       item: e
     })
   },
-  d = async e => {
+  d = e => {
+    n.default.dispatch({
+      type: "COLLECTIBLES_PRODUCT_DETAILS_CLOSE",
+      item: e
+    })
+  },
+  I = async e => {
     n.default.dispatch({
       type: "COLLECTIBLES_CATEGORIES_FETCH"
     });
@@ -79,7 +88,7 @@ let a = e => {
         error: e
       }), new s.APIError(e)
     }
-  }, I = async () => {
+  }, A = async () => {
     n.default.dispatch({
       type: "COLLECTIBLES_PURCHASES_FETCH"
     });
@@ -95,7 +104,7 @@ let a = e => {
         error: e
       }), new s.APIError(e)
     }
-  }, A = async (e, t) => {
+  }, L = async (e, t) => {
     n.default.dispatch({
       type: "COLLECTIBLES_PRODUCT_FETCH"
     });
@@ -141,7 +150,7 @@ let a = e => {
         error: t
       }), new s.APIError(t)
     }
-  }, L = async (e, t) => {
+  }, T = async (e, t) => {
     try {
       let r = await u.default.get({
         url: o.Endpoints.COLLECTIBLES_VALID_GIFT_RECIPIENT,
@@ -154,7 +163,7 @@ let a = e => {
     } catch (e) {
       throw new s.APIError(e)
     }
-  }, T = e => {
+  }, p = e => {
     n.default.dispatch({
       type: "COLLECTIBLES_CATEGORY_ITEMS_VIEWED",
       ...e
