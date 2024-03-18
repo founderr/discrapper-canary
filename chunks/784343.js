@@ -233,7 +233,8 @@ i = class e extends E.default {
     return null != this.conn.fastUdpReconnect ? this.numFastUdpReconnects : null
   }
   wasRemoteDisconnected() {
-    this.conn.wasRemoteDisconnected()
+    var e, t;
+    null === (e = (t = this.conn).wasRemoteDisconnected) || void 0 === e || e.call(t)
   }
   setLocalVideoDisabled(e, t) {
     this.disabledLocalVideos[e] = t, this.emit(m.BaseConnectionEvent.LocalVideoDisabled, e, t)
