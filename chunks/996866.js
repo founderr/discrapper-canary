@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return C
   },
   useSpotifyJoinAction: function() {
-    return I
+    return _
   }
 }), n("222007");
 var i = n("884691"),
@@ -103,7 +103,7 @@ function C(e, t, n, l) {
   }
 }
 
-function I(e, t, n) {
+function _(e, t, n) {
   let l = g(e, t),
     {
       notPlayable: a,

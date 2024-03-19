@@ -26,8 +26,8 @@ var i = n("37983"),
   g = n("697218"),
   S = n("551305"),
   C = n("978679"),
-  I = n("953957"),
-  _ = n("762974"),
+  _ = n("953957"),
+  I = n("762974"),
   T = n("718517"),
   v = n("299039"),
   N = n("158998"),
@@ -37,7 +37,7 @@ var i = n("37983"),
   M = n("782340"),
   k = n("240497"),
   L = n("350583");
-let b = [{
+let P = [{
     box: "#FFD89E",
     ribbon: "#FF7476"
   }, {
@@ -59,7 +59,7 @@ let b = [{
     box: "#DB6D6D",
     ribbon: "#67DA9C"
   }],
-  P = [{
+  b = [{
     box: "#EABB75",
     ribbon: "#E4595C"
   }, {
@@ -83,8 +83,8 @@ let b = [{
   }],
   j = 1 / 300,
   U = T.default.Millis.DAYS_30,
-  D = (0, a.animated)(I.default),
-  w = (0, a.animated)(_.default),
+  D = (0, a.animated)(_.default),
+  w = (0, a.animated)(I.default),
   F = (0, a.animated)(C.default);
 
 function G(e) {
@@ -93,8 +93,8 @@ function G(e) {
     hovered: n,
     isContentDismissed: s,
     boxColors: r = {
-      dark: b,
-      light: P
+      dark: P,
+      light: b
     }
   } = e, u = (0, c.default)(), [d, f] = function(e) {
     let [t, n] = l.useState(!1), [i, a] = l.useState(Math.floor(7 * Math.random()));
@@ -136,15 +136,15 @@ var B = l.memo(function(e) {
     channel: n
   } = e, {
     analyticsLocations: a
-  } = (0, p.default)(f.default.GIFT_BUTTON), [o, c] = l.useState(!1), C = (0, s.useStateFromStores)([y.default], () => !(null === y.default || void 0 === y.default ? void 0 : y.default.hasLayers())), I = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), _ = null != I ? v.default.age(I.id) : 0, T = !t && C && _ >= U, {
-    enabled: b
+  } = (0, p.default)(f.default.GIFT_BUTTON), [o, c] = l.useState(!1), C = (0, s.useStateFromStores)([y.default], () => !(null === y.default || void 0 === y.default ? void 0 : y.default.hasLayers())), _ = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), I = null != _ ? v.default.age(_.id) : 0, T = !t && C && I >= U, {
+    enabled: P
   } = E.SeasonalGiftingMarketingExperiment.useExperiment({
     location: "ChannelPremiumGiftButton"
   }, {
     autoTrackExposure: T
-  }), P = [];
-  b && T && P.push(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-  let [j, D] = (0, h.useSelectedDismissibleContent)(P), w = null != j, F = (0, N.useDirectMessageRecipient)(n), B = null != F;
+  }), b = [];
+  P && T && b.push(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
+  let [j, D] = (0, h.useSelectedDismissibleContent)(b), w = null != j, F = (0, N.useDirectMessageRecipient)(n), B = null != F;
   if (t) return null;
   let H = () => {
       (0, x.default)({

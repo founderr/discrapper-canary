@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   computeThreadIdsSnapshot: function() {
-    return x
+    return B
   },
   default: function() {
     return H
@@ -58,12 +58,12 @@ function b() {
   var e;
   let t = m.default.getChannelId();
   if (null == t || !(null === (e = p.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return U(), !1;
-  B({
+  x({
     refreshThreadIds: !0
   })
 }
 
-function x(e) {
+function B(e) {
   let t = p.default.getChannel(e);
   return null == t ? [] : Object.values(u.default.getThreadsForParent(t.guild_id, t.id)).map(e => {
     let {
@@ -73,7 +73,7 @@ function x(e) {
   }).sort(P(g))
 }
 
-function B(e) {
+function x(e) {
   var t;
   let n = p.default.getChannel(C);
   if (null == n) return;
@@ -110,11 +110,11 @@ class F extends s.default.Store {
     let i = e !== C,
       l = !(0, _.areSetsEqual)(n, N),
       a = t !== g;
-    return C = e, N = n, g = t, i ? B({
+    return C = e, N = n, g = t, i ? x({
       refreshThreadIds: !0
-    }) : a ? B({
+    }) : a ? x({
       sortThreadIds: !0
-    }) : l && B(), O
+    }) : l && x(), O
   }
   getCurrentThreadIds() {
     return O
@@ -146,7 +146,7 @@ var H = new F(r.default, {
       guildId: n
     } = e;
     if (null == C || n !== (null === (t = p.default.getChannel(C)) || void 0 === t ? void 0 : t.guild_id)) return !1;
-    B({
+    x({
       refreshThreadIds: !0
     })
   },
@@ -165,12 +165,12 @@ var H = new F(r.default, {
     if (null == t.parent_id || t.parent_id !== C) return !1;
     let n = (0, T.isForumPostPinned)(t.id),
       i = R.has(t.id);
-    if (n && !i) R.add(t.id), B({
+    if (n && !i) R.add(t.id), x({
       sortThreadIds: !0
     });
     else {
       if (n || !i) return !1;
-      R.delete(t.id), B({
+      R.delete(t.id), x({
         sortThreadIds: !0
       })
     }
@@ -180,7 +180,7 @@ var H = new F(r.default, {
       channel: t
     } = e;
     if (null == t.parent_id || t.parent_id !== C) return !1;
-    D.add(t.id), B({
+    D.add(t.id), x({
       sortThreadIds: !0
     })
   },
@@ -189,7 +189,7 @@ var H = new F(r.default, {
       channelId: t
     } = e;
     if (null == t || t !== C) return !1;
-    B({
+    x({
       refreshThreadIds: !0
     })
   },

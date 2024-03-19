@@ -49,13 +49,13 @@ var f = function(e) {
     renderCategoryListItem: g,
     rowCountBySection: S,
     renderSection: C
-  } = e, I = u.useStore(e => e.activeCategoryIndex);
+  } = e, _ = u.useStore(e => e.activeCategoryIndex);
   c({
-    activeIndex: I,
+    activeIndex: _,
     categoryListRef: t,
     getScrollOffsetForIndex: x
   });
-  let _ = l.useCallback(e => {
+  let I = l.useCallback(e => {
       let {
         searchQuery: t
       } = o.useExpressionPickerStore.getState();
@@ -65,7 +65,7 @@ var f = function(e) {
         null === (i = n.current) || void 0 === i || i.scrollToSectionTop(e)
       }
     }, [n, u]),
-    T = l.useCallback(e => g(a[e], e, () => _(e), I === e), [I, a, _, g]),
+    T = l.useCallback(e => g(a[e], e, () => I(e), _ === e), [_, a, I, g]),
     v = l.useMemo(() => "function" == typeof E ? e => E(a[e], e) : E, [a, E]);
   return (0, i.jsxs)("div", {
     className: s(d.wrapper, p),
@@ -79,6 +79,6 @@ var f = function(e) {
       hideScrollbar: !0,
       rowCountBySection: S,
       renderSection: C
-    }), null == f ? void 0 : f(_)]
+    }), null == f ? void 0 : f(I)]
   })
 }

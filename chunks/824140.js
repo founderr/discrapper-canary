@@ -29,8 +29,8 @@ var i = n("37983"),
   g = n("867544"),
   S = n("128259"),
   C = n("49111"),
-  I = n("214509"),
-  _ = n("782340"),
+  _ = n("214509"),
+  I = n("782340"),
   T = n("561372");
 
 function v(e) {
@@ -46,9 +46,9 @@ function v(e) {
   } = e;
   null == R && (R = !0);
   let k = null !== (n = E.metadata) && void 0 !== n ? n : {},
-    L = R ? (0, m.getCreatedAtDate)(k[I.MetadataFields.CREATED_AT], N) : null,
-    b = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
-    P = _.default.Messages.CONNECTION_VERIFIED;
+    L = R ? (0, m.getCreatedAtDate)(k[_.MetadataFields.CREATED_AT], N) : null,
+    P = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
+    b = I.default.Messages.CONNECTION_VERIFIED;
   if (R) switch (E.type) {
     case C.PlatformTypes.REDDIT:
       l = (0, h.generateRedditMetadataItems)(k);
@@ -58,8 +58,8 @@ function v(e) {
       break;
     case C.PlatformTypes.TWITTER: {
       l = (0, h.generateTwitterMetadataItems)(k);
-      let e = "1" === k[I.MetadataFields.TWITTER_VERIFIED];
-      e && (a = b, P = _.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
+      let e = "1" === k[_.MetadataFields.TWITTER_VERIFIED];
+      e && (a = P, b = I.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
       break
     }
     case C.PlatformTypes.PAYPAL:
@@ -100,7 +100,7 @@ function v(e) {
       color: null != a ? a : D,
       forcedIconColor: w,
       size: 16,
-      tooltipText: P
+      tooltipText: b
     }) : null;
   return (0, i.jsxs)("div", {
     className: s(T.connectedAccountContainer, null != l && l.length > 0 || null != L ? T.connectedAccountContainerWithMetadata : null, O),
@@ -110,7 +110,7 @@ function v(e) {
         text: null == j ? void 0 : j.name,
         children: e => (0, i.jsx)("img", {
           ...e,
-          alt: _.default.Messages.IMG_ALT_LOGO.format({
+          alt: I.default.Messages.IMG_ALT_LOGO.format({
             name: null == j ? void 0 : j.name
           }),
           className: T.connectedAccountIcon,
@@ -137,7 +137,7 @@ function v(e) {
         }), null != L ? (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
-          children: _.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
+          children: I.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
             date: L
           })
         }) : null]
@@ -187,7 +187,7 @@ function N(e) {
         children: (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: _.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
+          children: I.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
             applicationHook: () => (0, i.jsxs)("div", {
               className: T.connectedAccountPoweredByText,
               children: [null != t.application.bot ? (0, i.jsx)(d.default, {

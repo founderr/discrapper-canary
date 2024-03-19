@@ -27,8 +27,8 @@ var i = n("37983"),
     let n, {
         listing: a,
         guildId: C,
-        groupListingId: I,
-        analyticsLocation: _,
+        groupListingId: _,
+        analyticsLocation: I,
         showBenefitsFirst: T,
         onComplete: v,
         forcesTransitionToGuild: N
@@ -39,11 +39,11 @@ var i = n("37983"),
       M = (null == a ? void 0 : a.published) === !0,
       k = null == A ? void 0 : A.sku_id,
       L = (0, r.useStateFromStores)([m.default], () => null != R ? m.default.get(R) : null),
-      b = (0, h.useApplication)(O),
-      P = (0, h.useSubscriptionListingsForGroup)(I, {
+      P = (0, h.useApplication)(O),
+      b = (0, h.useSubscriptionListingsForGroup)(_, {
         includeSoftDeleted: !0
       }),
-      j = P.map(e => e.subscription_plans[0].id),
+      j = b.map(e => e.subscription_plans[0].id),
       {
         analyticsLocations: U
       } = (0, d.default)(),
@@ -59,7 +59,7 @@ var i = n("37983"),
       K = null == w || j.length > 1,
       W = null != C || F.length > 0,
       Y = B && H,
-      z = null != L && null != b && V && K && (W || B) && !Y;
+      z = null != L && null != P && V && K && (W || B) && !Y;
     V ? W ? Y && null != L && (n = S.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
       tierName: L.name
     })) : n = S.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = S.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, l.useEffect(() => {
@@ -68,13 +68,13 @@ var i = n("37983"),
       })
     }, [M, k, G]);
     let Z = l.useCallback(() => {
-      s(null != a, "No subscription listing"), s(null != b, "No application"), s(null != A, "No subscription plan"), s(M, "Cannot purchase this unpublished plan");
+      s(null != a, "No subscription listing"), s(null != P, "No application"), s(null != A, "No subscription plan"), s(M, "Cannot purchase this unpublished plan");
       let e = () => {
         (0, f.openApplicationSubscriptionPaymentModal)({
           activeSubscription: D,
           analyticsSubscriptionType: g.SubscriptionTypes.APPLICATION,
           analyticsLocations: U,
-          analyticsLocation: _,
+          analyticsLocation: I,
           renderHeader: (e, t, n) => (0, i.jsx)(E.PurchaseHeader, {
             step: n,
             onClose: () => t(!1)
@@ -85,18 +85,18 @@ var i = n("37983"),
           eligibleApplicationSubscriptionGuilds: F,
           planGroup: j,
           listing: a,
-          application: b,
+          application: P,
           showBenefitsFirst: T,
           onComplete: v,
           forcesTransitionToGuild: N
         })
       };
       !W && B ? (0, y.confirmNoSharedServerSubscribeWarningModal)({
-        application: b,
+        application: P,
         onConfirm: e,
         onCancel: () => {}
       }) : e()
-    }, [M, a, A, j, b, C, W, B, U, _, D, T, F, v, N]);
+    }, [M, a, A, j, P, C, W, B, U, I, D, T, F, v, N]);
     return {
       openModal: Z,
       canOpenModal: z,

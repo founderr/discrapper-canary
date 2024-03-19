@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return C
   },
   updateVisibleMessages: function() {
-    return I
+    return _
   },
   setSummaryFeedback: function() {
-    return _
+    return I
   },
   deleteSummary: function() {
     return N
@@ -112,7 +112,7 @@ function C(e, t) {
   })
 }
 
-function I(e, t) {
+function _(e, t) {
   o.default.dispatch({
     type: "UPDATE_VISIBLE_MESSAGES",
     topVisibleMessage: null != e ? e : null,
@@ -120,7 +120,7 @@ function I(e, t) {
   })
 }
 
-function _(e, t) {
+function I(e, t) {
   o.default.dispatch({
     type: "SET_SUMMARY_FEEDBACK",
     summary: e,
@@ -208,8 +208,8 @@ async function N(e) {
   }
 }
 var A = {
-  setSummaryFeedback: _,
-  updateVisibleMessages: I,
+  setSummaryFeedback: I,
+  updateVisibleMessages: _,
   setSelectedSummary: C,
   setHighlightedSummary: g,
   fetchSummaries: y,

@@ -23,8 +23,8 @@ var i = n("37983"),
   g = n("755604"),
   S = n("664610"),
   C = n("688893"),
-  I = n("684607"),
-  _ = n("803322"),
+  _ = n("684607"),
+  I = n("803322"),
   T = n("127875"),
   v = n("169694"),
   N = n("100576"),
@@ -38,8 +38,8 @@ var i = n("37983"),
       type: a,
       channel: k,
       className: L,
-      id: b,
-      disabled: P,
+      id: P,
+      disabled: b,
       submitting: j,
       placeholder: U,
       required: D,
@@ -72,7 +72,7 @@ var i = n("37983"),
       "aria-describedby": ed,
       "aria-labelledby": ec,
       "aria-autocomplete": ef
-    } = e, ep = l.useRef(null), em = l.useRef(null), eh = l.useRef(!0), ex = l.useRef(!0), eE = P || j, ey = l.useCallback((e, t, n) => {
+    } = e, ep = l.useRef(null), em = l.useRef(null), eh = l.useRef(!0), ex = l.useRef(!0), eE = b || j, ey = l.useCallback((e, t, n) => {
       var i;
       let {
         value: l,
@@ -122,18 +122,18 @@ var i = n("37983"),
       onChangeStart: eg,
       onChangeEnd: eS,
       updateState: ey
-    }), eI = l.useCallback((e, t) => {
+    }), e_ = l.useCallback((e, t) => {
       let n = p.getOptionValues(eC, e),
         i = p.validateOptionValues(e, k.guild_id, k.id, n, t);
       return {
         values: n,
         results: i
       }
-    }, [k.guild_id, k.id, eC]), e_ = l.useCallback(() => {
+    }, [k.guild_id, k.id, eC]), eI = l.useCallback(() => {
       let e;
       let t = $ ? u.default.getActiveCommand(k.id) : null;
       if (null != t && null != t.options) {
-        let l = eI(t, !1);
+        let l = e_(t, !1);
         e = l.values;
         let a = p.getOptionNames(eC),
           s = a.filter(e => !l.results[e].success).map(e => {
@@ -160,12 +160,12 @@ var i = n("37983"),
         mode: "raw",
         ignoreTrailingEmptyNodes: !0
       }), t, e)
-    }, [k.id, eC, Z, eI, $]);
-    (0, C.default)(t, eC, k, e_), (0, T.default)(eC, ep, B);
+    }, [k.id, eC, Z, e_, $]);
+    (0, C.default)(t, eC, k, eI), (0, T.default)(eC, ep, B);
     let {
       handleKeyDown: eT,
       handleKeyUp: ev
-    } = (0, I.default)({
+    } = (0, _.default)({
       editor: eC,
       channel: k,
       disableEnterToSubmit: en,
@@ -174,13 +174,13 @@ var i = n("37983"),
       onTab: Y,
       onEnter: z,
       allowNewLines: ei,
-      submit: e_,
+      submit: eI,
       hideAutocomplete: q,
       moveSelection: X
     }), {
       handlePaste: eN,
       handleGlobalPaste: eA
-    } = (0, _.default)(eC, eE, G), eO = l.useCallback(e => {
+    } = (0, I.default)(eC, eE, G), eO = l.useCallback(e => {
       null == J || J()
     }, [J]), eR = l.useCallback(e => {
       e !== em.current ? ex.current && (null == F || F(null, (0, x.toTextValue)(e, {
@@ -195,10 +195,10 @@ var i = n("37983"),
       let e = () => {
         var e;
         let t = null !== (e = u.default.getActiveCommand(k.id)) && void 0 !== e ? e : null;
-        null !== t && null != t.options && eI(t, !0)
+        null !== t && null != t.options && e_(t, !0)
       };
       return d.default.addChangeListener(e), () => d.default.removeChangeListener(e)
-    }, [k, eC, eI]);
+    }, [k, eC, e_]);
     let eM = l.useCallback((e, t) => (0, g.default)(e, t), []),
       ek = l.useCallback(e => (0, A.default)(eC, e, k.id), [k.id, eC]),
       eL = l.useCallback(e => (0, O.default)(e), []);
@@ -210,7 +210,7 @@ var i = n("37983"),
         ref: ep,
         className: s(L, M.slateContainer),
         children: (0, i.jsx)(h.default, {
-          id: b,
+          id: P,
           editor: eC,
           channelId: k.id,
           guildId: k.guild_id,
@@ -219,7 +219,7 @@ var i = n("37983"),
           readOnly: eE,
           spellCheck: Q,
           autoFocus: !et,
-          canFocus: !P,
+          canFocus: !b,
           onChange: eR,
           onFocus: H,
           onBlur: V,

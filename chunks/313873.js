@@ -24,8 +24,8 @@ var i, l, a = n("37983"),
   g = n("429928"),
   S = n("36539"),
   C = n("502651"),
-  I = n("419830"),
-  _ = n("808742"),
+  _ = n("419830"),
+  I = n("808742"),
   T = n("342845"),
   v = n("239380"),
   N = n("118033"),
@@ -35,8 +35,8 @@ var i, l, a = n("37983"),
   M = n("339521"),
   k = n("145131"),
   L = n("953109"),
-  b = n("98292"),
-  P = n("280174"),
+  P = n("98292"),
+  b = n("280174"),
   j = n("963422"),
   U = n("587974"),
   D = n("49111"),
@@ -145,7 +145,7 @@ class W extends s.PureComponent {
         server: i.name
       })
     }(null == u ? void 0 : u.type) === D.ActivityTypes.HANG_STATUS && (t = F.default.Messages.STATUS_LEAD_IN_JUST);
-    let p = (0, I.getChannelIconComponent)(l, i);
+    let p = (0, _.getChannelIconComponent)(l, i);
     return null != l && (t = l.name), (0, a.jsxs)("div", {
       className: G.headerContainer,
       children: [null != l && null !== p ? (0, a.jsx)(p, {
@@ -154,7 +154,7 @@ class W extends s.PureComponent {
         className: (0, R.getClass)(G, "headerText", e ? "EmptyBody" : "Normal"),
         variant: "heading-deprecated-12/semibold",
         color: "ProfileV2" === r ? "header-primary" : void 0,
-        children: (0, a.jsx)(b.default, {
+        children: (0, a.jsx)(P.default, {
           children: t
         })
       }), null == s ? void 0 : s()]
@@ -300,7 +300,7 @@ class W extends s.PureComponent {
     let r = (0, y.default)(e),
       o = e.name,
       u = o;
-    return (s === D.ActivityTypes.HANG_STATUS ? u = (0, _.getHangStatusText)(e) : r && null != n ? u = (0, a.jsx)("span", {
+    return (s === D.ActivityTypes.HANG_STATUS ? u = (0, I.getHangStatusText)(e) : r && null != n ? u = (0, a.jsx)("span", {
       className: G.activityName,
       children: u
     }) : !r && (o = l, u = l, (0, g.default)(e) && null != e.sync_id && null != l ? u = (0, a.jsx)(f.Anchor, {
@@ -366,9 +366,9 @@ class W extends s.PureComponent {
     } = e;
     return null == n ? null : (0, E.default)(e) ? (0, a.jsx)(V, {
       timestamps: n
-    }) : (0, a.jsx)(P.default, {
+    }) : (0, a.jsx)(b.default, {
       start: n.start,
-      location: P.default.Locations.USER_ACTIVITY,
+      location: b.default.Locations.USER_ACTIVITY,
       className: G.playTime,
       isApplicationStreaming: null != t
     })

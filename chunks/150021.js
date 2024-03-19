@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return C
   },
   updateEmoji: function() {
-    return I
+    return _
   },
   favoriteEmoji: function() {
     return T
@@ -98,7 +98,7 @@ function C(e, t) {
     oldFormErrors: !0
   })
 }
-async function I(e) {
+async function _(e) {
   let {
     guildId: t,
     emojiId: n,
@@ -119,7 +119,7 @@ async function I(e) {
   }
 }
 
-function _(e) {
+function I(e) {
   return p.default.totalUnavailableGuilds > 0 || !c.default.isConnected() ? e : e.filter(e => {
     var t;
     let n = null !== (t = u.default.getCustomEmojiById(e)) && void 0 !== t ? t : d.default.getByName(e);
@@ -130,7 +130,7 @@ function _(e) {
 function T(e) {
   var t;
   (function(e) {
-    null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = _(t.emojis), l.size(t.emojis) >= x.MAX_FAVORITES) ? (m.default.show({
+    null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = I(t.emojis), l.size(t.emojis) >= x.MAX_FAVORITES) ? (m.default.show({
       title: E.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
       body: E.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
         count: x.MAX_FAVORITES
@@ -144,7 +144,7 @@ function v(e) {
   (function(e) {
     null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => {
       if (!t.emojis.includes(e)) return !1;
-      t.emojis = t.emojis.filter(t => e !== t), t.emojis = _(t.emojis)
+      t.emojis = t.emojis.filter(t => e !== t), t.emojis = I(t.emojis)
     }, x.UserSettingsDelay.INFREQUENT_USER_ACTION)
   })(null !== (t = e.id) && void 0 !== t ? t : e.name)
 }

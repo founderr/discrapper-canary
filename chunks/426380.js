@@ -40,14 +40,14 @@ function x(e) {
     showBenefitsFirst: g,
     eligibleApplicationSubscriptionGuilds: S,
     onComplete: C,
-    forcesTransitionToGuild: I
+    forcesTransitionToGuild: _
   } = e;
   (0, s.openModalLazy)(async () => {
     let {
       PaymentContextProvider: e
     } = await n.el("642906").then(n.bind(n, "642906")), s = (await n.el("526257").then(n.bind(n, "526257"))).default, {
       getApplicationSubscriptionPaymentSteps: h
-    } = await n.el("999043").then(n.bind(n, "999043")), _ = h({
+    } = await n.el("999043").then(n.bind(n, "999043")), I = h({
       guildId: p,
       application: y,
       listing: E,
@@ -57,7 +57,7 @@ function x(e) {
     return n => (0, i.jsx)(e, {
       applicationId: y.id,
       activeSubscription: l,
-      stepConfigs: _,
+      stepConfigs: I,
       skuIDs: [f],
       children: (0, i.jsx)(m.GiftContextProvider, {
         children: (0, i.jsx)(s, {
@@ -74,7 +74,7 @@ function x(e) {
           applicationId: y.id,
           guildId: null != p ? p : void 0,
           onComplete: C,
-          forcesTransitionToGuild: I
+          forcesTransitionToGuild: _
         })
       })
     })

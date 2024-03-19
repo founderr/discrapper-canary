@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return L
   },
   CommandMention: function() {
-    return b
+    return P
   },
   Timestamp: function() {
-    return P
+    return b
   }
 });
 var i = n("37983");
@@ -51,8 +51,8 @@ var l = n("446674"),
   g = n("387111"),
   S = n("158998"),
   C = n("680894"),
-  I = n("782340"),
-  _ = n("918841"),
+  _ = n("782340"),
+  I = n("918841"),
   T = n("919163");
 
 function v(e) {
@@ -113,17 +113,17 @@ function O(e) {
     let e = u || o.isPomelo() ? null : "#".concat(o.discriminator);
     return (0, i.jsx)(a.Tooltip, {
       text: (0, i.jsxs)("div", {
-        className: _.userTooltip,
+        className: I.userTooltip,
         children: [(0, i.jsx)(r.default, {
           user: o,
           animate: !0,
           size: a.AvatarSizes.SIZE_16,
-          className: _.avatar
+          className: I.avatar
         }), S.default.getUserTag(o, {
           mode: "username",
           identifiable: u ? "never" : "always"
         }), (0, i.jsx)("span", {
-          className: _.discriminator,
+          className: I.discriminator,
           children: e
         })]
       }),
@@ -164,10 +164,10 @@ function R(e) {
 function M(e) {
   let {
     id: t
-  } = e, n = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(t)), a = I.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
+  } = e, n = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(t)), a = _.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
   if (null != n) {
     var o;
-    a = (0, d.canViewChannel)(n) ? n.name : I.default.Messages.NO_ACCESS, s = (0, d.canViewChannel)(n) ? null !== (o = (0, y.getMentionIconType)(n)) && void 0 !== o ? o : "text" : "locked", r = (0, c.isChannelTypeMentionable)(n.type)
+    a = (0, d.canViewChannel)(n) ? n.name : _.default.Messages.NO_ACCESS, s = (0, d.canViewChannel)(n) ? null !== (o = (0, y.getMentionIconType)(n)) && void 0 !== o ? o : "text" : "locked", r = (0, c.isChannelTypeMentionable)(n.type)
   }
   return r ? (0, i.jsx)(E.default, {
     iconType: s,
@@ -191,10 +191,10 @@ function L(e) {
   let {
     id: t
   } = e, n = {
-    home: I.default.Messages.SERVER_GUIDE,
-    guide: I.default.Messages.SERVER_GUIDE,
-    browse: I.default.Messages.CHANNEL_BROWSER_TITLE,
-    customize: I.default.Messages.CHANNELS_AND_ROLES
+    home: _.default.Messages.SERVER_GUIDE,
+    guide: _.default.Messages.SERVER_GUIDE,
+    browse: _.default.Messages.CHANNEL_BROWSER_TITLE,
+    customize: _.default.Messages.CHANNELS_AND_ROLES
   };
   return (0, i.jsx)(E.default, {
     iconType: t,
@@ -202,7 +202,7 @@ function L(e) {
   })
 }
 
-function b(e) {
+function P(e) {
   let {
     text: t,
     id: n
@@ -212,7 +212,7 @@ function b(e) {
   })
 }
 
-function P(e) {
+function b(e) {
   let {
     timestamp: t
   } = e;

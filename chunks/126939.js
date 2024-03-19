@@ -4,7 +4,7 @@ i.r(e), i.d(e, {
     return a
   },
   getIsActivitiesEnabledForCurrentPlatform: function() {
-    return u
+    return r
   }
 });
 var n = i("394846");
@@ -17,6 +17,6 @@ function a(t) {
   return l()
 }
 
-function u(t) {
+function r(t) {
   return l()
 }

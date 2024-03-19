@@ -7,18 +7,18 @@ i.r(e), i.d(e, {
 var n = i("913144"),
   l = i("448993"),
   a = i("651057"),
-  u = i("299285"),
-  r = i("653047"),
+  r = i("299285"),
+  u = i("653047"),
   d = i("568734"),
   s = i("191225"),
   o = i("213765"),
   c = i("370507"),
-  f = i("772926"),
+  E = i("772926"),
   _ = i("49111");
-async function E(t, e) {
+async function f(t, e) {
   try {
     var i;
-    return null !== (i = u.default.getApplication(t)) && void 0 !== i ? i : r.default.createFromServer(await a.default.fetchApplication(t))
+    return null !== (i = r.default.getApplication(t)) && void 0 !== i ? i : u.default.createFromServer(await a.default.fetchApplication(t))
   } catch (i) {
     n.default.dispatch({
       type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
@@ -55,10 +55,10 @@ async function A(t) {
     user: l
   } = t;
   if (null == l.nsfwAllowed) {
-    var a, u;
-    let t = null != e ? e : await E(i, n.getGuildId());
+    var a, r;
+    let t = null != e ? e : await f(i, n.getGuildId());
     if (null == t) return !1;
-    let l = null !== (u = null === (a = t.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) && void 0 !== u && u;
+    let l = null !== (r = null === (a = t.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) && void 0 !== r && r;
     if (l) {
       let e = await new Promise(e => {
         (0, o.confirmActivityAgeGateAlert)({
@@ -77,9 +77,9 @@ async function T(t) {
     application: e,
     applicationId: i,
     channel: n
-  } = t, l = null != e ? e : await E(i, n.getGuildId());
+  } = t, l = null != e ? e : await f(i, n.getGuildId());
   return null != l && (!!((0, d.hasFlag)(l.flags, _.ApplicationFlags.EMBEDDED_RELEASED) || s.default.hasActivityEverBeenLaunched(i)) || new Promise(t => {
-    (0, f.confirmExternalAppLaunchAlert)({
+    (0, E.confirmExternalAppLaunchAlert)({
       application: l,
       onConfirm: () => t(!0),
       onCancel: () => t(!1)

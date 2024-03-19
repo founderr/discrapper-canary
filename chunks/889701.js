@@ -23,8 +23,8 @@ var i = n("37983"),
   g = n("552917"),
   S = n("917247"),
   C = n("845579"),
-  I = n("697218"),
-  _ = n("599110"),
+  _ = n("697218"),
+  I = n("599110"),
   T = n("159885"),
   v = n("570759"),
   N = n("866353"),
@@ -34,8 +34,8 @@ var i = n("37983"),
   M = n("161585"),
   k = n("585948"),
   L = n("234175"),
-  b = n("451300"),
-  P = n("668333"),
+  P = n("451300"),
+  b = n("668333"),
   j = n("313790"),
   U = n("908408"),
   D = n("641680"),
@@ -75,7 +75,7 @@ let B = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       [el, ea] = (0, h.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], r.default),
       es = l.useRef("");
     l.useImperativeHandle(t, () => ({
-      onPickerOpen: eb
+      onPickerOpen: eP
     }));
     let er = (0, O.useFilteredStickerPackCategories)(u),
       eo = 0 === er.filter(e => e.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL).length,
@@ -88,7 +88,7 @@ let B = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       }),
       ed = C.StickerPickerCollapsedSections.useSetting(),
       ec = l.useMemo(() => new Set(ed), [ed]),
-      ef = (0, o.useStateFromStores)([I.default], () => I.default.getCurrentUser()),
+      ef = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
       ep = l.useMemo(() => (0, D.getFilteredStickers)(el, ef, u), [el, ef, u]),
       em = (0, O.useFavoriteStickers)(),
       eh = (0, O.useLatestFrecentStickers)(),
@@ -103,8 +103,8 @@ let B = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       }, [T, el, eg]),
       eC = null != eu && eu > B,
       {
-        rowCount: eI,
-        rowCountBySection: e_,
+        rowCount: e_,
+        rowCountBySection: eI,
         stickersGrid: eT,
         gutterWidth: ev,
         columnCounts: eN
@@ -123,7 +123,7 @@ let B = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         } = t;
         switch (e.type) {
           case M.StickerGridItemTypes.CREATE_STICKER:
-            _.default.track(F.AnalyticEvents.OPEN_MODAL, {
+            I.default.track(F.AnalyticEvents.OPEN_MODAL, {
               type: F.AnalyticsSections.CREATE_STICKER_MODAL,
               location: z
             }), (0, d.openModalLazy)(async () => {
@@ -156,7 +156,7 @@ let B = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         gridNavigatorId: w.GRID_NAVIGATOR_ID
       });
     l.useEffect(() => m.StickerPickerStore.resetStoreState, []);
-    let eb = () => {
+    let eP = () => {
       let e = u.getGuildId(),
         t = [];
       if (null !== e) {
@@ -182,8 +182,8 @@ let B = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       var e;
       null === (e = en.current) || void 0 === e || e.focus()
     }, []);
-    let eP = l.useCallback(() => {
-      Y(), _.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+    let eb = l.useCallback(() => {
+      Y(), I.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
         location_section: F.AnalyticsSections.STICKER_PICKER_UPSELL
       }), (0, E.navigateToPremiumMarketingPage)()
     }, [Y]);
@@ -196,7 +196,7 @@ let B = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           stickersListRef: et,
           channel: u
         })
-      }), eo ? (0, i.jsx)(b.default, {
+      }), eo ? (0, i.jsx)(P.default, {
         className: G.emptyState,
         onClose: Y
       }) : (0, i.jsxs)(i.Fragment, {
@@ -205,7 +205,7 @@ let B = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           className: G.listWrapper,
           id: w.GRID_NAVIGATOR_ID,
           ...eM,
-          children: null != eu ? (0, i.jsx)(P.default, {
+          children: null != eu ? (0, i.jsx)(b.default, {
             ref: et,
             collapsedStickersCategories: ec,
             filteredStickers: ep,
@@ -215,8 +215,8 @@ let B = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             gutterWidth: ev,
             isUsingKeyboardNavigation: eL,
             onSelectSticker: eS,
-            rowCount: eI,
-            rowCountBySection: e_,
+            rowCount: e_,
+            rowCountBySection: eI,
             stickersCategories: er,
             stickersGrid: eT,
             channel: u
@@ -226,7 +226,7 @@ let B = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           channel: u
         })]
       }), ei && (0, i.jsx)(U.StickersPremiumUpsell, {
-        onLearnMore: eP
+        onLearnMore: eb
       })]
     })
   });

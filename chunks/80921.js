@@ -39,8 +39,8 @@ var i = n("37983"),
       }
     }, [E]);
     let {
-      Component: I,
-      events: _,
+      Component: _,
+      events: I,
       play: T
     } = (0, o.useStickerLottie)();
     return n ? null : (0, i.jsx)("div", {
@@ -50,7 +50,7 @@ var i = n("37983"),
         innerClassName: s(m.button, m.stickerButton, {
           [m.stickerButtonTilted]: y && !S
         }),
-        ..._,
+        ...I,
         onClick: () => {
           C(), T()
         },
@@ -61,7 +61,7 @@ var i = n("37983"),
         "aria-controls": x,
         sparkle: !1,
         notification: null,
-        children: (0, i.jsx)(I, {
+        children: (0, i.jsx)(_, {
           color: "currentColor"
         })
       })

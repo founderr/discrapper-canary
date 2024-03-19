@@ -29,8 +29,8 @@ var i = n("37983"),
   g = n("151185"),
   S = n("368121"),
   C = n("305122"),
-  I = n("235004"),
-  _ = n("389480"),
+  _ = n("235004"),
+  I = n("389480"),
   T = n("78581"),
   v = n("23106"),
   N = n("796864"),
@@ -87,8 +87,8 @@ var L = l.forwardRef(function(e, t) {
   var n, a, S;
   let {
     sound: L,
-    channel: b,
-    className: P,
+    channel: P,
+    className: b,
     focused: j,
     forceSecondaryActions: U = !1,
     interactive: D = !0,
@@ -97,18 +97,18 @@ var L = l.forwardRef(function(e, t) {
     onMouseEnter: G,
     onSelectItem: B,
     analyticsLocations: H,
-    buttonOverlay: V = _.SoundButtonOverlay.PLAY,
+    buttonOverlay: V = I.SoundButtonOverlay.PLAY,
     ...K
   } = e, {
     soundId: W,
     name: Y,
     emojiId: z,
     emojiName: Z
-  } = L, J = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, N.useSoundButtonContextMenu)(L, null == b ? void 0 : b.guild_id), {
+  } = L, J = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, N.useSoundButtonContextMenu)(L, null == P ? void 0 : P.guild_id), {
     playSoundboardSound: X,
     previewSound: Q,
     isPlayingSound: $
-  } = (0, v.default)(L, null !== (n = null == b ? void 0 : b.id) && void 0 !== n ? n : null), {
+  } = (0, v.default)(L, null !== (n = null == P ? void 0 : P.id) && void 0 !== n ? n : null), {
     createMultipleConfettiAt: ee
   } = l.useContext(m.ConfettiCannonContext), et = l.useRef(null);
   let en = (a = L.soundId, S = et.current, l.useMemo(() => {
@@ -126,11 +126,11 @@ var L = l.forwardRef(function(e, t) {
     el = l.useRef(.01),
     ea = l.useRef(new u.Interval),
     es = "1" === L.soundId,
-    er = (0, o.useStateFromStores)([I.default], () => I.default.isFavoriteSound(W), [W]),
+    er = (0, o.useStateFromStores)([_.default], () => _.default.isFavoriteSound(W), [W]),
     eo = "sound-".concat(L.soundId),
     eu = (0, r.useListItem)(eo),
     ed = null != z || null != Z,
-    ec = !(0, T.canUseSoundboardSound)(J, L, b),
+    ec = !(0, T.canUseSoundboardSound)(J, L, P),
     ef = U || w && !ec;
 
   function ep(e) {
@@ -191,7 +191,7 @@ var L = l.forwardRef(function(e, t) {
         emojiName: L.emojiName,
         soundName: L.name
       }),
-      className: s(P, R.soundButton, {
+      className: s(b, R.soundButton, {
         [R.playing]: $,
         [R.hoverActiveBackground]: F,
         [R.soundButtonInteractive]: D,
@@ -228,7 +228,7 @@ var L = l.forwardRef(function(e, t) {
         })]
       }), function() {
         switch (V) {
-          case _.SoundButtonOverlay.ADD:
+          case I.SoundButtonOverlay.ADD:
             return (0, i.jsxs)("div", {
               className: R.addButtonOverlay,
               children: [(0, i.jsx)("div", {
@@ -247,7 +247,7 @@ var L = l.forwardRef(function(e, t) {
                 }), ef && em()]
               })]
             });
-          case _.SoundButtonOverlay.PLAY:
+          case I.SoundButtonOverlay.PLAY:
           default:
             return ex()
         }

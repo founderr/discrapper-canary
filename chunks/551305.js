@@ -55,8 +55,8 @@ var x = s.memo(function(e) {
     onMouseEnter: g,
     onMouseLeave: S,
     onFocus: C,
-    onBlur: I,
-    pulse: _,
+    onBlur: _,
+    pulse: I,
     sparkle: T,
     notification: v,
     "aria-label": N,
@@ -95,13 +95,13 @@ var x = s.memo(function(e) {
       [m.active]: y
     }),
     innerClassName: o(m.button, i, {
-      [m.pulseButton]: _
+      [m.pulseButton]: I
     }),
     onClick: E,
     onMouseEnter: g,
     onMouseLeave: S,
     onFocus: C,
-    onBlur: I,
+    onBlur: _,
     focusProps: {
       offset: {
         top: 4,
@@ -124,7 +124,7 @@ var x = s.memo(function(e) {
         children: k({
           component: (0, a.jsx)(r, {
             className: o(m.icon, s, {
-              [m.pulseIcon]: _
+              [m.pulseIcon]: I
             })
           })
         })

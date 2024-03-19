@@ -4,7 +4,7 @@ i.r(e), i.d(e, {
     return a
   },
   isPrivateChannelWithEnabledActivities: function() {
-    return u
+    return r
   }
 });
 var n = i("65597"),
@@ -17,7 +17,7 @@ function a(t) {
   return a
 }
 
-function u(t) {
+function r(t) {
   var e;
   if (null == t) return !1;
   let i = l.default.getChannel(t),

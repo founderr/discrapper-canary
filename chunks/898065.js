@@ -7,10 +7,10 @@ i.r(e), i.d(e, {
     return a
   },
   markActivityUsed: function() {
-    return u
+    return r
   },
   updateFilter: function() {
-    return r
+    return u
   }
 });
 var n = i("913144");
@@ -28,7 +28,7 @@ function a(t) {
   })
 }
 
-function u(t) {
+function r(t) {
   n.default.dispatch({
     type: "DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED",
     applicationId: t,
@@ -36,7 +36,7 @@ function u(t) {
   })
 }
 
-function r(t) {
+function u(t) {
   n.default.dispatch({
     type: "DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER",
     filter: t

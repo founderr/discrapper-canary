@@ -29,8 +29,8 @@ var i, l, a, s, r, o, u = n("884691"),
   g = n("538282"),
   S = n("817963"),
   C = n("923959"),
-  I = n("305961"),
-  _ = n("162771"),
+  _ = n("305961"),
+  I = n("162771"),
   T = n("677099"),
   v = n("697218"),
   N = n("402671"),
@@ -40,8 +40,8 @@ var i, l, a, s, r, o, u = n("884691"),
   M = n("255214"),
   k = n("352046"),
   L = n("115279"),
-  b = n("958706"),
-  P = n("782340");
+  P = n("958706"),
+  b = n("782340");
 (s = i || (i = {}))[s.EMOJI = 0] = "EMOJI", s[s.CREATE_EMOJI = 1] = "CREATE_EMOJI", (r = l || (l = {}))[r.SECTION_HEADING = 0] = "SECTION_HEADING", r[r.SECTION_ROW = 1] = "SECTION_ROW";
 let j = e => {
   let {
@@ -53,7 +53,7 @@ let j = e => {
     gridWidth: s,
     emojiPaddingHorizontal: r,
     emojiSpriteSize: o
-  } = e, d = (0, p.useStateFromStores)([h.default], () => h.default.categories), m = (0, p.useStateFromStores)([I.default], () => I.default.getGuild(null == t ? void 0 : t.getGuildId()), [t]), y = null == t ? null : t.getGuildId(), g = (0, p.useStateFromStores)([h.default], () => h.default.getDisambiguatedEmojiContext(y), [y]), j = (0, R.useFavoriteEmojis)(y), U = (0, R.useFrequentlyUsedEmojis)(y), {
+  } = e, d = (0, p.useStateFromStores)([h.default], () => h.default.categories), m = (0, p.useStateFromStores)([_.default], () => _.default.getGuild(null == t ? void 0 : t.getGuildId()), [t]), y = null == t ? null : t.getGuildId(), g = (0, p.useStateFromStores)([h.default], () => h.default.getDisambiguatedEmojiContext(y), [y]), j = (0, R.useFavoriteEmojis)(y), U = (0, R.useFrequentlyUsedEmojis)(y), {
     topEmojis: D,
     newlyAddedEmojis: w
   } = (0, k.default)(y, l), F = (0, p.useStateFromStoresArray)([T.default], () => T.default.getFlattenedGuildIds(), []), {
@@ -91,16 +91,16 @@ let j = e => {
             }),
             E = f.concat(m),
             S = s.guild,
-            C = _.default.getGuildId(),
-            I = s.sectionId === L.EmojiCategoryTypes.TOP_GUILD_EMOJI,
-            T = !I && null != S && C === S.id && E.length < S.getMaxEmojiSlots(),
-            v = I && E.length < g && !Y,
-            A = null != S && I && Y && z === O.EmojiPickerUploadTreatment.WITH_TOP_LIST && W[S.id].length < S.getMaxEmojiSlots(),
+            C = I.default.getGuildId(),
+            _ = s.sectionId === L.EmojiCategoryTypes.TOP_GUILD_EMOJI,
+            T = !_ && null != S && C === S.id && E.length < S.getMaxEmojiSlots(),
+            v = _ && E.length < g && !Y,
+            A = null != S && _ && Y && z === O.EmojiPickerUploadTreatment.WITH_TOP_LIST && W[S.id].length < S.getMaxEmojiSlots(),
             M = i && G && null != S && (T || v || A);
           M && A && E.length === g && E.shift();
           let k = Y && M && !d,
-            b = M ? E.length + 1 : E.length,
-            j = Math.ceil(b / g),
+            P = M ? E.length + 1 : E.length,
+            j = Math.ceil(P / g),
             U = [];
           for (let e = 0; e < j; e++) {
             let t = 0 === e,
@@ -123,7 +123,7 @@ let j = e => {
             if (k && t && !d && (l = [{
                 type: 1,
                 guildId: S.id,
-                name: P.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
+                name: b.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                 size: o,
                 rowIndex: y,
                 columnIndex: 0,
@@ -134,7 +134,7 @@ let j = e => {
                 t.push({
                   type: 1,
                   guildId: S.id,
-                  name: P.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
+                  name: b.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                   size: o,
                   rowIndex: e,
                   columnIndex: t.length,
@@ -173,9 +173,9 @@ let j = e => {
                 emoji: e,
                 channel: null != t ? t : C.default.getDefaultChannel(n),
                 intention: l
-              }) !== b.EmojiDisabledReasons.DISALLOW_EXTERNAL);
+              }) !== P.EmojiDisabledReasons.DISALLOW_EXTERNAL);
               if (0 === a.length) return;
-              let s = I.default.getGuild(n),
+              let s = _.default.getGuild(n),
                 r = !H && N.default.isEmojiCategoryNitroLocked({
                   categoryEmojis: a,
                   channel: t,
@@ -190,7 +190,7 @@ let j = e => {
                 isNitroLocked: r
               })
             };
-            if (null != m && n(m.id), (0, b.isExternalEmojiAllowedForIntention)(l))
+            if (null != m && n(m.id), (0, P.isExternalEmojiAllowedForIntention)(l))
               for (let e of F)(null == m || m.id !== e) && n(e)
           } else if (e === L.EmojiCategories.TOP_GUILD_EMOJI) {
         if (null != m) {
@@ -201,7 +201,7 @@ let j = e => {
             newlyAddedEmojis: w
           });
           if (t.length > 0) {
-            let n = I.default.getGuild(m.id);
+            let n = _.default.getGuild(m.id);
             S(t, {
               categoryId: e,
               guild: n,
@@ -286,15 +286,15 @@ let U = e => {
             r.isFavoriteEmojiWithoutFetchingLatest(u) || null != d ? (0, m.unfavoriteEmoji)(u) : (null == s || s(e), (0, m.favoriteEmoji)(u));
             return
           }
-          if (d === b.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE) return;
-          if (d === b.EmojiDisabledReasons.PREMIUM_LOCKED) {
+          if (d === P.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE) return;
+          if (d === P.EmojiDisabledReasons.PREMIUM_LOCKED) {
             l({
               type: 0,
               emojiDescriptor: e
             });
             return
           }
-          if (d === b.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED && u.type === x.EmojiTypes.GUILD) {
+          if (d === P.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED && u.type === x.EmojiTypes.GUILD) {
             l({
               type: 1,
               guildId: u.guildId,
@@ -302,7 +302,7 @@ let U = e => {
             });
             return
           }
-          if (d === b.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE) return;
+          if (d === P.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE) return;
           null == a || a(e), i(u, o.isFinalSelection, o.isBurst)
         }
       }

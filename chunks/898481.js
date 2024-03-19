@@ -30,8 +30,8 @@ function S(e) {
     look: S,
     applicationStream: C
   } = e, {
-    activeStream: I,
-    watchingOtherStream: _
+    activeStream: _,
+    watchingOtherStream: I
   } = (0, l.useStateFromStoresObject)([c.default], () => ({
     activeStream: c.default.getActiveStreamForApplicationStream(C),
     watchingOtherStream: null != C && c.default.getAllActiveStreamsForChannel(C.channelId).filter(e => {
@@ -40,7 +40,7 @@ function S(e) {
       } = e;
       return t !== C.ownerId
     }).length > 0
-  })), T = (0, l.useStateFromStores)([f.default], () => f.default.getChannel(null == C ? void 0 : C.channelId)), [v, N] = (0, d.useCanWatchStream)(T), A = (0, u.useWindowDispatch)(), O = null != I && null != C && I.state !== E.ApplicationStreamStates.ENDED && I.ownerId === C.ownerId, R = e => {
+  })), T = (0, l.useStateFromStores)([f.default], () => f.default.getChannel(null == C ? void 0 : C.channelId)), [v, N] = (0, d.useCanWatchStream)(T), A = (0, u.useWindowDispatch)(), O = null != _ && null != C && _.state !== E.ApplicationStreamStates.ENDED && _.ownerId === C.ownerId, R = e => {
     null != C && (r.default.selectVoiceChannel(C.channelId), !O && (0, o.watchStreamAndTransitionToStream)(C, {
       forceMultiple: e
     }), A.dispatch(E.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(E.ComponentActions.MODAL_CLOSE), s.default.popAll())
@@ -61,7 +61,7 @@ function S(e) {
       children: [(0, i.jsx)(m.default, {
         className: g.streamIcon
       }), M]
-    }, "play"), _ && !O ? (0, i.jsx)(a.Tooltip, {
+    }, "play"), I && !O ? (0, i.jsx)(a.Tooltip, {
       text: y.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
       children: e => (0, i.jsx)(x.default, {
         ...e,

@@ -23,8 +23,8 @@ var i = n("37983"),
   g = n("414868"),
   S = n("49111"),
   C = n("994428"),
-  I = n("13030"),
-  _ = n("782340"),
+  _ = n("13030"),
+  I = n("782340"),
   T = n("868387");
 
 function v(e) {
@@ -68,10 +68,10 @@ function v(e) {
     return null
   };
   return t ? null : (0, i.jsx)(u.Tooltip, {
-    text: _.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
+    text: I.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
     children: e => (0, i.jsxs)("div", {
       ...e,
-      className: s(I.CHAT_INPUT_BUTTON_CLASSNAME, T.buttonContainer),
+      className: s(_.CHAT_INPUT_BUTTON_CLASSNAME, T.buttonContainer),
       ref: v,
       children: [(0, i.jsx)(m.default, {
         onClick: k,

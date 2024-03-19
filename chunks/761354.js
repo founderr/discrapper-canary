@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return L
   },
   default: function() {
-    return b
+    return P
   }
 }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
 var i = n("37983"),
@@ -26,8 +26,8 @@ var i = n("37983"),
   g = n("228220"),
   S = n("956089"),
   C = n("58608"),
-  I = n("103603"),
-  _ = n("299039"),
+  _ = n("103603"),
+  I = n("299039"),
   T = n("9560"),
   v = n("271972"),
   N = n("782340"),
@@ -89,7 +89,7 @@ function M(e) {
       let {
         width: e,
         height: t
-      } = (0, I.zoomFit)(n.width, n.height);
+      } = (0, _.zoomFit)(n.width, n.height);
       p({
         width: e,
         height: t
@@ -214,7 +214,7 @@ function L(e) {
   })
 }
 
-function b(e) {
+function P(e) {
   let {
     channelId: t,
     draftType: n,
@@ -222,17 +222,17 @@ function b(e) {
     keyboardModeEnabled: c,
     label: h,
     size: C = v.AttachmentListItemSizes.MEDIUM,
-    canEdit: I = !0,
+    canEdit: _ = !0,
     hideFileName: O = !1,
     clip: R
   } = e, M = null != R;
   C = M ? v.AttachmentListItemSizes.CLIP : C;
   let k = C === v.AttachmentListItemSizes.SMALL,
-    b = (0, r.useStateFromStores)([m.default], () => {
+    P = (0, r.useStateFromStores)([m.default], () => {
       var e;
       return null === (e = m.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
     }),
-    P = e => {
+    b = e => {
       e.stopPropagation(), (0, o.openModal)(e => (0, i.jsx)(d.default, {
         ...e,
         draftType: n,
@@ -254,7 +254,7 @@ function b(e) {
     };
   return (0, i.jsxs)(v.default, {
     actions: (0, i.jsxs)(l.Fragment, {
-      children: [I ? (0, i.jsx)(T.default, {
+      children: [_ ? (0, i.jsx)(T.default, {
         className: s({
           [A.action]: k
         }),
@@ -271,12 +271,12 @@ function b(e) {
             [A.actionBarIcon]: k
           })
         })
-      }) : null, I && !M ? (0, i.jsx)(T.default, {
+      }) : null, _ && !M ? (0, i.jsx)(T.default, {
         className: s({
           [A.action]: k
         }),
         tooltip: N.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
-        onClick: P,
+        onClick: b,
         children: (0, i.jsx)(y.default, {
           className: s({
             [A.actionBarIcon]: k
@@ -299,7 +299,7 @@ function b(e) {
     draftType: n,
     id: a.id,
     channelId: t,
-    handleEditModal: P,
+    handleEditModal: b,
     keyboardModeEnabled: c,
     size: C,
     className: s({
@@ -318,11 +318,11 @@ function b(e) {
     }), M && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(f.default, {
         className: A.clipsFooter,
-        createdAt: _.default.extractTimestamp(R.id),
+        createdAt: I.default.extractTimestamp(R.id),
         participantIds: R.users,
         applicationId: R.applicationId,
         title: R.name,
-        guildId: b
+        guildId: P
       }), (0, i.jsx)(S.TextBadge, {
         color: p.default.BG_BRAND,
         className: A.clipsBadge,

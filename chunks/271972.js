@@ -34,15 +34,15 @@ var g = s.forwardRef(function(e, t) {
     handleEditModal: g,
     keyboardModeEnabled: S,
     onKeyDown: C,
-    draftType: I,
-    size: _ = 1
+    draftType: _,
+    size: I = 1
   } = e, {
     onFocus: T,
     ...v
   } = (0, u.useListItem)(n), {
     handleFocus: N,
     handleBlur: A
-  } = (0, m.useFocusInside)(T), O = 0 === _, R = null != r;
+  } = (0, m.useFocusInside)(T), O = 0 === I, R = null != r;
   return (0, a.jsx)(d.FocusRing, {
     children: (0, a.jsx)("li", {
       ...v,
@@ -52,13 +52,13 @@ var g = s.forwardRef(function(e, t) {
         if (S) {
           switch (e.which) {
             case h.KeyboardKeys.D:
-              e.preventDefault(), c.default.remove(i, n, I);
+              e.preventDefault(), c.default.remove(i, n, _);
               return;
             case h.KeyboardKeys.E:
               null != g && (e.preventDefault(), g(e));
               return;
             case h.KeyboardKeys.BACKSPACE:
-              e.ctrlKey ? (e.preventDefault(), c.default.clearAll(i, I)) : (e.preventDefault(), c.default.remove(i, n, I));
+              e.ctrlKey ? (e.preventDefault(), c.default.clearAll(i, _)) : (e.preventDefault(), c.default.remove(i, n, _));
               return;
             case h.KeyboardKeys.ARROW_UP:
               let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
@@ -71,7 +71,7 @@ var g = s.forwardRef(function(e, t) {
         }
       },
       className: o(E.upload, l, {
-        [E.sizeClip]: 2 === _
+        [E.sizeClip]: 2 === I
       }),
       ref: t,
       children: (0, a.jsxs)("div", {

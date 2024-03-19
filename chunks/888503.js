@@ -26,8 +26,8 @@ var i = n("37983"),
   g = n("158998"),
   S = n("943722"),
   C = n("49111"),
-  I = n("988268"),
-  _ = n("39141"),
+  _ = n("988268"),
+  I = n("39141"),
   T = n("782340"),
   v = n("591665");
 let N = (0, y.cssValueToNumber)(r.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
@@ -45,8 +45,8 @@ var A = function(e) {
     currentUser: M,
     activities: k,
     applicationStream: L,
-    status: b,
-    shouldAnimateStatus: P = !1,
+    status: P,
+    shouldAnimateStatus: b = !1,
     isMobile: j,
     premiumSince: U,
     channel: D,
@@ -95,7 +95,7 @@ var A = function(e) {
       })
     })
   }), ed = () => {
-    let e = (null == R ? void 0 : R.isClyde()) ? I.BotTagTypes.AI : I.BotTagTypes.BOT;
+    let e = (null == R ? void 0 : R.isClyde()) ? _.BotTagTypes.AI : _.BotTagTypes.BOT;
     return null != R && R.bot ? (0, i.jsx)(p.default, {
       className: v.botTag,
       type: e,
@@ -105,7 +105,7 @@ var A = function(e) {
     roleName: a,
     color: null != n ? n : void 0,
     name: null != O ? O : $
-  }), ef = b === C.StatusTypes.OFFLINE;
+  }), ef = P === C.StatusTypes.OFFLINE;
   return null == R ? (0, i.jsx)(m.default, {
     avatarSize: o.AvatarSizes.SIZE_32,
     className: v.placeholder
@@ -137,8 +137,8 @@ var A = function(e) {
       })
     }),
     avatar: ((e, t) => {
-      let n = P ? o.AnimatedAvatar : o.Avatar,
-        l = (0, u.default)(k) ? C.StatusTypes.STREAMING : b;
+      let n = b ? o.AnimatedAvatar : o.Avatar,
+        l = (0, u.default)(k) ? C.StatusTypes.STREAMING : P;
       return l = t ? void 0 : l, (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(n, {
           ...es,
@@ -154,7 +154,7 @@ var A = function(e) {
         }), (0, i.jsx)(c.default, {
           confettiSpawnRef: en,
           shouldFire: A && null != M && e.id !== M.id,
-          confettiLocation: _.ConfettiLocation.MEMBER_USER
+          confettiLocation: I.ConfettiLocation.MEMBER_USER
         })]
       })
     })(R, ef),
