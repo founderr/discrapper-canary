@@ -4,9 +4,9 @@
         return o
       }
     });
-    var d = t("37983");
+    var s = t("37983");
     t("884691");
-    var s = t("90915"),
+    var d = t("90915"),
       n = t("446674"),
       i = t("271938"),
       c = t("760190"),
@@ -22,9 +22,9 @@
           hasLoadedExperiments: a,
           token: t
         } = e;
-        return null != t ? (0, d.jsx)(s.Redirect, {
+        return null != t ? (0, s.jsx)(d.Redirect, {
           to: r.Routes.APP
-        }) : a ? (0, d.jsx)(s.Redirect, {
+        }) : a ? (0, s.jsx)(d.Redirect, {
           to: r.Routes.DEFAULT_LOGGED_OUT
         }) : null
       })

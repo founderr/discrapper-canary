@@ -4,8 +4,8 @@
         return u
       }
     });
-    var d = t("884691"),
-      s = t("817792"),
+    var s = t("884691"),
+      d = t("817792"),
       n = t("95410"),
       i = t("49671"),
       c = t("599110"),
@@ -19,8 +19,8 @@
     }
 
     function u() {
-      return d.useEffect(() => {
-        window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== n.default.get(s.DOMAIN_MIGRATION_SUCCESS_KEY) && r.default.supportsFeature(f.NativeFeatures.USER_DATA_CACHE) && (o.migrate(), i.default.userDataCache.getCached().then(e => {
+      return s.useEffect(() => {
+        window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== n.default.get(d.DOMAIN_MIGRATION_SUCCESS_KEY) && r.default.supportsFeature(f.NativeFeatures.USER_DATA_CACHE) && (o.migrate(), i.default.userDataCache.getCached().then(e => {
           if (null == e) {
             o.failMigration(), c.default.track(f.AnalyticEvents.DOMAIN_MIGRATED, {
               success: !1,
@@ -32,10 +32,10 @@
           }
           let a = Object.keys(e),
             t = 0 !== a.length,
-            d = null != e.token,
+            s = null != e.token,
             r = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
             u = null == r || null == l(r) || l(r) <= l(n.default.get("RTCRegionStore"));
-          t && d && !u && (n.default.clear(), a.forEach(a => {
+          t && s && !u && (n.default.clear(), a.forEach(a => {
             let t = e[a];
             try {
               n.default.set(a, JSON.parse(t))
@@ -46,7 +46,7 @@
             has_data: t
           }, {
             flush: !0
-          }), n.default.set(s.DOMAIN_MIGRATION_SUCCESS_KEY, !0), i.default.userDataCache.deleteCache(), o.finishMigration()
+          }), n.default.set(d.DOMAIN_MIGRATION_SUCCESS_KEY, !0), i.default.userDataCache.deleteCache(), o.finishMigration()
         }))
       }, []), null
     }
