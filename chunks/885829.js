@@ -48,8 +48,8 @@ async function C(t) {
       GuildStore: s.default
     }),
     g = _.default.getSelfEmbeddedActivityForChannel(i),
-    m = null == g ? void 0 : g.applicationId,
-    R = null != m && null !== (e = a.default.getApplication(m)) && void 0 !== e ? e : void 0;
+    R = null == g ? void 0 : g.applicationId,
+    m = null != R && null !== (e = a.default.getApplication(R)) && void 0 !== e ? e : void 0;
   ! function(t) {
     let {
       embeddedActivityJoinability: e,
@@ -98,7 +98,7 @@ async function C(t) {
     handleCanJoin: async function t() {
       null != p && await (0, f.default)({
         applicationId: p.applicationId,
-        currentEmbeddedApplication: R,
+        currentEmbeddedApplication: m,
         activityChannelId: i,
         locationObject: {},
         embeddedActivitiesManager: O,

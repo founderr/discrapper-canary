@@ -33,8 +33,8 @@ var n, l = i("627445"),
   L = i("986214"),
   P = i("126939"),
   g = i("837707"),
-  m = i("334368"),
-  R = i("803353"),
+  R = i("334368"),
+  m = i("803353"),
   M = i("420444"),
   U = i("954016"),
   V = i("49111"),
@@ -44,7 +44,7 @@ let F = {},
 
 function w(t) {
   var e;
-  let i = null == t ? void 0 : null === (e = t.activity) || void 0 === e ? void 0 : e.client_platform_config[(0, m.default)((0, v.getOS)())].release_phase;
+  let i = null == t ? void 0 : null === (e = t.activity) || void 0 === e ? void 0 : e.client_platform_config[(0, R.default)((0, v.getOS)())].release_phase;
   return {
     releasePhase: i
   }
@@ -288,7 +288,7 @@ n = class extends s.default {
         this.showLaunchErrorModal(b.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS);
         return
       }
-      if (!(0, R.default)(null == E ? void 0 : null === (e = E.embedded_activity_config) || void 0 === e ? void 0 : e.supported_platforms)) {
+      if (!(0, m.default)(null == E ? void 0 : null === (e = E.embedded_activity_config) || void 0 === e ? void 0 : e.supported_platforms)) {
         this.showLaunchErrorModal(b.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS);
         return
       }

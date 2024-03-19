@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return y
   }
 }), n("222007");
 var a = n("37983"),
@@ -22,8 +22,8 @@ var a = n("37983"),
   S = n("90404"),
   g = n("599110"),
   _ = n("286235"),
-  v = n("50885"),
-  T = n("49111"),
+  T = n("50885"),
+  v = n("49111"),
   I = n("782340"),
   A = n("966585");
 
@@ -56,7 +56,7 @@ let R = i.throttle(() => {
 }, 100, {
   trailing: !1
 });
-class y extends r.PureComponent {
+class N extends r.PureComponent {
   componentDidCatch(e, t) {
     this.triggerSoftCrash(e, t)
   }
@@ -69,14 +69,14 @@ class y extends r.PureComponent {
     let a = _.default.captureCrash(e, {
       extra: t
     });
-    g.default.track(T.AnalyticEvents.APP_CRASHED, {
+    g.default.track(v.AnalyticEvents.APP_CRASHED, {
       path: n.pathname,
       extra: t,
       error_message: e.message,
       error_stack: e.stack,
       sentry_issue_id: a,
       uses_client_mods: (0, p.usesClientMods)()
-    }), R(), v.default.cleanupDisplaySleep()
+    }), R(), T.default.cleanupDisplaySleep()
   }
   _handleSubmitReport() {
     location.reload(!0)
@@ -128,4 +128,4 @@ class y extends r.PureComponent {
     }, this.discordErrorsSet = !1
   }
 }
-var N = y
+var y = N
