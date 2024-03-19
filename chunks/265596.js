@@ -1,13 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return u
   }
 }), n("222007");
 var a = n("446674"),
   r = n("913144");
-let s = new Map;
-class i extends a.default.Store {
+let s = new Map,
+  i = !1;
+class l extends a.default.Store {
   getFeed(e) {
     return s.get(e)
   }
@@ -15,11 +16,14 @@ class i extends a.default.Store {
     var t;
     return null === (t = this.getFeed(e)) || void 0 === t ? void 0 : t.request_id
   }
+  get hidden() {
+    return i
+  }
 }
-i.displayName = "ContentInventoryStore";
-var l = new i(r.default, {
+l.displayName = "ContentInventoryStore";
+var u = new l(r.default, {
   CONNECTION_OPEN: function() {
-    s.clear()
+    s.clear(), i = !1
   },
   CONTENT_INVENTORY_SET_FEED: function(e) {
     let {
@@ -27,5 +31,8 @@ var l = new i(r.default, {
       feed: n
     } = e;
     s.set(t, n)
+  },
+  CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: function() {
+    i = !i
   }
 })
