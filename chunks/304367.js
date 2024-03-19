@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
 class l {
   async loadRemoteImage(e, t) {
     let n = new Image;
-    n.src = t, n.crossOrigin = "anonymous", await n.decode(), this.assets[e] = n
+    return n.src = t, n.crossOrigin = "anonymous", await n.decode(), this.assets[e] = n, Promise.resolve()
   }
   get(e) {
     return this.assets[e]
