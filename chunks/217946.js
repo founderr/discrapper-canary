@@ -30,19 +30,19 @@ function T(e, t, n, i, l) {
   let {
     context: a,
     commandType: u,
-    allowNsfw: p,
-    computedPermissions: T,
-    userId: A,
-    roleIds: E,
-    isImpersonating: g,
-    hasBaseAccessPermissions: M
+    allowNsfw: T,
+    computedPermissions: A,
+    userId: E,
+    roleIds: g,
+    isImpersonating: M,
+    hasBaseAccessPermissions: O
   } = t;
   if (e.type !== u) return 2;
-  if (e.nsfw && !p) return 1;
-  let O = (0, m.computeCommandContextType)(a, l);
+  if (e.nsfw && !T) return 1;
+  let S = (0, m.computeCommandContextType)(a, l);
   if (null != e.contexts) {
-    if (!e.contexts.includes(O)) return 4
-  } else if (!1 === e.dmPermission && O === r.InteractionContextType.BOT_DM || O === r.InteractionContextType.PRIVATE_CHANNEL) return 4;
+    if (!e.contexts.includes(S)) return 4
+  } else if (e.inputType === p.ApplicationCommandInputType.BOT && (!1 === e.dmPermission && S === r.InteractionContextType.BOT_DM || S === r.InteractionContextType.PRIVATE_CHANNEL)) return 4;
   if (null != e.predicate && a instanceof d.ChannelRecordBase) {
     let t = c.default.getGuild(a.guild_id);
     if (!e.predicate({
@@ -51,12 +51,12 @@ function T(e, t, n, i, l) {
       })) return 3
   }
   if (e.applicationId === _.BuiltInSectionId.BUILT_IN) return 0;
-  let S = (0, m.getContextGuildId)(a);
-  if (null == S || s.default.has(T, I.Permissions.ADMINISTRATOR)) return 0;
-  if (!M) return 5;
+  let h = (0, m.getContextGuildId)(a);
+  if (null == h || s.default.has(A, I.Permissions.ADMINISTRATOR)) return 0;
+  if (!O) return 5;
   if (a instanceof d.ChannelRecordBase) {
     o(void 0 !== i, "missing applicationAllowedForChannel");
-    let t = C(e.permissions, a, S);
+    let t = C(e.permissions, a, h);
     if (function(e) {
         return !1 === e
       }(t) || ! function(e) {
@@ -65,14 +65,14 @@ function T(e, t, n, i, l) {
         return !1 === e
       }(i)) return 6
   }
-  let h = N(e.permissions, S, A, E, g);
+  let y = N(e.permissions, h, E, g, M);
   return function(e) {
     return !0 === e
-  }(h) ? 0 : function(e) {
+  }(y) ? 0 : function(e) {
     return !1 === e
-  }(h) ? 7 : function(e) {
+  }(y) ? 7 : function(e) {
     return !1 === e
-  }(n) || null != e.defaultMemberPermissions && !(!s.default.equals(e.defaultMemberPermissions, f.DISABLED_BY_DEFAULT_PERMISSION_FLAG) && s.default.has(T, e.defaultMemberPermissions)) ? 7 : 0
+  }(n) || null != e.defaultMemberPermissions && !(!s.default.equals(e.defaultMemberPermissions, f.DISABLED_BY_DEFAULT_PERMISSION_FLAG) && s.default.has(A, e.defaultMemberPermissions)) ? 7 : 0
 }
 
 function A(e) {
