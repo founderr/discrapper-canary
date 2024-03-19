@@ -77292,7 +77292,7 @@ input::-webkit-inner-spin-button {
 }
 
 .contentWrapperExpanded__0ed2e:after {
-    box-shadow: 0 0 10px currentColor
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, .2), 0 -2px 4px rgba(0, 0, 0, .3)
 }
 
 .contentWrapperAccepted__6d410 {
