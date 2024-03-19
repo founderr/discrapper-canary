@@ -49,9 +49,11 @@ class h extends l.PureComponent {
     super(...e), this.noteRef = l.createRef(), this.handleBlur = e => {
       let t = e.currentTarget.value,
         {
-          note: n
+          note: n,
+          userId: i,
+          onUpdate: l
         } = this.props;
-      n !== t && u.default.updateNote(this.props.userId, t)
+      n !== t && (null == l || l(), u.default.updateNote(i, t))
     }, this.handleKeyPress = e => {
       if (13 === e.which) {
         if (e.shiftKey) {
