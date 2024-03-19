@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 }), n("222007");
 var i = n("37983"),
@@ -25,7 +25,7 @@ var i = n("37983"),
   C = n("722552");
 let _ = l.lazy(() => n.el("403130").then(n.bind(n, "403130")));
 
-function I(e) {
+function T(e) {
   let {
     played: t,
     duration: n,
@@ -38,8 +38,8 @@ function I(e) {
     children: a
   })
 }
-var T = l.memo(function(e) {
-  var t, n, a, c, T, v;
+var I = l.memo(function(e) {
+  var t, n, a, c, I, v;
   let N, {
       src: A,
       volume: O = 1,
@@ -55,7 +55,7 @@ var T = l.memo(function(e) {
     } = e,
     w = l.useRef(null),
     [F, G] = l.useState(0),
-    [B, H] = l.useState(L),
+    [H, B] = l.useState(L),
     [V, K] = l.useState(!1),
     [W, Y] = l.useState(!1),
     [z, Z] = l.useState(!1),
@@ -71,7 +71,7 @@ var T = l.memo(function(e) {
     }, []),
     el = l.useCallback(e => {
       let t = e.currentTarget.duration;
-      !isNaN(t) && H(t)
+      !isNaN(t) && B(t)
     }, []),
     ea = l.useCallback(() => {
       Y(!1), null == et.current && (et.current = setTimeout(() => {
@@ -98,14 +98,14 @@ var T = l.memo(function(e) {
       Z(!0)
     }, []),
     ec = l.useCallback(() => {
-      Z(!1), F === B && ea()
-    }, [F, B, ea]),
+      Z(!1), F === H && ea()
+    }, [F, H, ea]),
     ef = l.useCallback(e => {
       let t = w.current;
-      if (null == B || null == t) return;
-      let n = e * B;
+      if (null == H || null == t) return;
+      let n = e * H;
       G(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
-    }, [B]);
+    }, [H]);
   l.useEffect(() => {
     !J && W && q(!0)
   }, [W, J]);
@@ -129,8 +129,8 @@ var T = l.memo(function(e) {
     }(), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [t, n, a]), c = A, T = W, v = Y, l.useEffect(() => {
-    if (T) return h.ComponentDispatch.dispatch(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
+  }, [t, n, a]), c = A, I = W, v = Y, l.useEffect(() => {
+    if (I) return h.ComponentDispatch.dispatch(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
       src: c
     }), h.ComponentDispatch.subscribe(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
       h.ComponentDispatch.unsubscribe(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
@@ -142,7 +142,7 @@ var T = l.memo(function(e) {
       } = e;
       c !== t && v(!1)
     }
-  }, [c, T, v]);
+  }, [c, I, v]);
   let em = W ? p.default : m.default,
     eh = W ? S.default.Messages.PAUSE : S.default.Messages.PLAY;
   N = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
@@ -204,16 +204,16 @@ var T = l.memo(function(e) {
       className: C.waveform,
       waveform: k,
       currentTime: F,
-      duration: null != B ? B : 1,
+      duration: null != H ? H : 1,
       playing: W,
       played: J,
       onDrag: ef,
       onDragStart: ed,
       onDragEnd: ec
-    }), (0, i.jsx)(I, {
+    }), (0, i.jsx)(T, {
       played: J,
       currentTime: F,
-      duration: B
+      duration: H
     }), (0, i.jsx)(f.default, {
       className: C.volumeButton,
       iconClassName: C.volumeButtonIcon,

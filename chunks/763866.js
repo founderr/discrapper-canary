@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return H
+    return B
   }
 }), n("222007");
 var i = n("37983"),
@@ -24,8 +24,8 @@ var i = n("37983"),
   S = n("906889"),
   C = n("840211"),
   _ = n("779479"),
-  I = n("10532"),
-  T = n("648149"),
+  T = n("10532"),
+  I = n("648149"),
   v = n("915712"),
   N = n("261523"),
   A = n("369869"),
@@ -42,12 +42,12 @@ var i = n("37983"),
   w = n("453649"),
   F = n("49111"),
   G = n("838133"),
-  B = n("787678");
+  H = n("787678");
 
-function H(e) {
+function B(e) {
   var t, n, a;
   let {
-    activity: H,
+    activity: B,
     customStatusActivity: V,
     user: K,
     displayProfile: W,
@@ -63,7 +63,7 @@ function H(e) {
   } = e, et = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), en = (0, r.useStateFromStores)([y.default], () => {
     var e;
     return null === (e = y.default.getUserProfile(K.id)) || void 0 === e ? void 0 : e.application
-  }), ei = (0, r.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(K.id)), el = (0, w.useGetVoiceChannelInfoForVoiceActivitySection)(K.id, null == Y ? void 0 : Y.id), ea = (null == H ? void 0 : H.type) === F.ActivityTypes.HANG_STATUS, es = !ei && null != el && !ea, {
+  }), ei = (0, r.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(K.id)), el = (0, w.useGetVoiceChannelInfoForVoiceActivitySection)(K.id, null == Y ? void 0 : Y.id), ea = (null == B ? void 0 : B.type) === F.ActivityTypes.HANG_STATUS, es = !ei && null != el && !ea, {
     showVoiceActivityInProfile: er
   } = g.VoiceActivityProfileExperiment.useExperiment({
     location: "user popout"
@@ -118,7 +118,7 @@ function H(e) {
       user: K,
       nickname: eg,
       pronouns: null == W ? void 0 : W.pronouns,
-      usernameIcon: K.hasAvatarForGuild(null == Y ? void 0 : Y.id) && (0, i.jsx)(T.default, {
+      usernameIcon: K.hasAvatarForGuild(null == Y ? void 0 : Y.id) && (0, i.jsx)(I.default, {
         user: K,
         nickname: eg
       }),
@@ -127,7 +127,7 @@ function H(e) {
       children: [(0, i.jsx)(M.default, {
         className: G.customStatusSection,
         customStatusActivity: V
-      }), (0, i.jsx)(I.default, {
+      }), (0, i.jsx)(T.default, {
         className: G.divider
       }), (0, i.jsxs)(o.AdvancedScroller, {
         className: s(G.scroller, {
@@ -156,9 +156,9 @@ function H(e) {
         }), er && es && (0, i.jsx)(w.default, {
           voiceChannel: el.voiceChannel,
           voiceGuild: el.voiceGuild,
-          color: B.buttonColor
+          color: H.buttonColor
         }), (0, i.jsx)(v.default, {
-          activity: H,
+          activity: B,
           user: K,
           guild: Y,
           channelId: Z,

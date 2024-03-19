@@ -34,7 +34,7 @@ function C(e) {
     shrinkToSize: s,
     isTryItOutFlow: C,
     size: _ = 0
-  } = e, I = (0, h.default)(t.id, n), T = (0, m.default)(I).map(e => ({
+  } = e, T = (0, h.default)(t.id, n), I = (0, m.default)(T).map(e => ({
     ...e,
     src: (0, x.getBadgeAsset)(e.icon)
   })), {
@@ -47,7 +47,7 @@ function C(e) {
     role: "group",
     children: (0, a.jsx)(c.default, {})
   });
-  C && null == T.find(e => "premium" === e.id) && T.push({
+  C && null == I.find(e => "premium" === e.id) && I.push({
     id: "premium",
     icon: S,
     src: S,
@@ -55,12 +55,12 @@ function C(e) {
       date: new Date
     })
   });
-  let O = null != l && null != s && T.length > l ? s : _;
+  let O = null != l && null != s && I.length > l ? s : _;
   return (0, a.jsx)("div", {
-    className: r(i, T.length > 0 ? g.containerWithContent : g.container),
+    className: r(i, I.length > 0 ? g.containerWithContent : g.container),
     "aria-label": y.default.Messages.PROFILE_USER_BADGES,
     role: "group",
-    children: T.map(e => (0, a.jsx)(o.Tooltip, {
+    children: I.map(e => (0, a.jsx)(o.Tooltip, {
       position: "top",
       text: e.description,
       spacing: 12,

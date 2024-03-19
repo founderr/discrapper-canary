@@ -24,8 +24,8 @@ var i = n("37983"),
   S = n("305961"),
   C = n("697218"),
   _ = n("124299"),
-  I = n("841811"),
-  T = n("290581"),
+  T = n("841811"),
+  I = n("290581"),
   v = n("599110"),
   N = n("159885"),
   A = n("570759"),
@@ -42,8 +42,8 @@ var i = n("37983"),
   w = n("13030"),
   F = n("782340"),
   G = n("502876"),
-  B = n("327769");
-let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+  H = n("327769");
+let B = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
   V = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
   K = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
   W = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
@@ -145,7 +145,7 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       channel: A
     } = e, O = (0, d.useAnalyticsContext)(), b = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
       handleStickerInspect: U,
-      handleSelect: B
+      handleSelect: H
     } = eu({
       onSelectSticker: a,
       channel: A,
@@ -162,18 +162,18 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         isScrolling: m,
         isUsingKeyboardNavigation: h,
         onInspect: U,
-        onSelect: B,
+        onSelect: H,
         rowIndex: e,
         stickerClassName: G.sticker,
         stickerDescriptors: t,
-        stickerSize: n > H ? X : Q,
+        stickerSize: n > B ? X : Q,
         preferAnimation: n <= V,
         ownedStickerPacks: N,
         isDisplayingIndividualStickers: !0,
         channel: A,
         currentUser: b
       }, e) : null
-    }, [x, r, u, c, f, m, h, U, B, n, N, A, b]), Z = l.useCallback((e, t) => (0, i.jsx)("div", {
+    }, [x, r, u, c, f, m, h, U, H, n, N, A, b]), Z = l.useCallback((e, t) => (0, i.jsx)("div", {
       children: t
     }, e), []), $ = l.useCallback(function(e) {
       let {
@@ -212,7 +212,7 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
               categoryName: n.name
             }),
-            icon: (0, i.jsx)(T.default, {
+            icon: (0, i.jsx)(I.default, {
               height: 16,
               width: 16
             }),
@@ -228,7 +228,7 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
               categoryName: n.name
             }),
-            icon: (0, i.jsx)(I.default, {}),
+            icon: (0, i.jsx)(T.default, {}),
             isCollapsed: t.has(n.id),
             onClick: () => $(n.id, {
               isStickerPack: !1
@@ -320,8 +320,8 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       onSelectSticker: g,
       rowCount: S,
       rowCountBySection: C,
-      stickersCategories: I,
-      stickersGrid: T,
+      stickersCategories: T,
+      stickersGrid: I,
       channel: v
     } = e, N = l.useRef(!1), A = l.useRef(null), [O, M] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
       AnalyticsLocationProvider: k
@@ -335,8 +335,8 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
     } = ed({
       collapsedStickersCategories: n,
       gridWidth: r,
-      stickersCategories: I,
-      stickersGrid: T,
+      stickersCategories: T,
+      stickersGrid: I,
       isScrolling: N,
       isUsingKeyboardNavigation: y,
       onSelectSticker: g,
@@ -401,7 +401,7 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         children: [null != o && 0 === o.sendable.length && 0 === o.sendableWithPremium.length ? (0, i.jsx)(u.default, {
           message: F.default.Messages.NO_STICKER_SEARCH_RESULTS_WITH_SUGGESTIONS,
           className: G.noSearchResultsContainer,
-          noResultsImageURL: B,
+          noResultsImageURL: H,
           suggestions: (0, i.jsx)(eo, {
             onSuggestionClick: e => (0, h.setSearchQuery)(e, !0)
           })
@@ -415,13 +415,13 @@ let H = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           renderSectionFooter: w,
           rowCount: S,
           rowCountBySection: C,
-          rowHeight: r > H ? en : ei,
+          rowHeight: r > B ? en : ei,
           sectionHeaderHeight: W,
           sectionFooterHeight: V,
           stickyHeaders: !0,
           ref: A
         }), (0, i.jsx)(b.default, {
-          stickersGrid: T
+          stickersGrid: I
         })]
       })
     })

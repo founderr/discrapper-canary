@@ -30,8 +30,8 @@ var i = n("37983"),
   S = n("368121"),
   C = n("305122"),
   _ = n("235004"),
-  I = n("389480"),
-  T = n("78581"),
+  T = n("389480"),
+  I = n("78581"),
   v = n("23106"),
   N = n("796864"),
   A = n("172858"),
@@ -95,9 +95,9 @@ var L = l.forwardRef(function(e, t) {
     enableSecondaryActions: w = !1,
     suppressPlaySound: F,
     onMouseEnter: G,
-    onSelectItem: B,
-    analyticsLocations: H,
-    buttonOverlay: V = I.SoundButtonOverlay.PLAY,
+    onSelectItem: H,
+    analyticsLocations: B,
+    buttonOverlay: V = T.SoundButtonOverlay.PLAY,
     ...K
   } = e, {
     soundId: W,
@@ -130,7 +130,7 @@ var L = l.forwardRef(function(e, t) {
     eo = "sound-".concat(L.soundId),
     eu = (0, r.useListItem)(eo),
     ed = null != z || null != Z,
-    ec = !(0, T.canUseSoundboardSound)(J, L, P),
+    ec = !(0, I.canUseSoundboardSound)(J, L, P),
     ef = U || w && !ec;
 
   function ep(e) {
@@ -203,11 +203,11 @@ var L = l.forwardRef(function(e, t) {
       onClick: function() {
         if (es && !ei && (el.current = Math.min(el.current + .01, .1), Math.random() < el.current && ee(en.x, en.y, void 0, void 0, {
             sprite: A.DUCK_CONFETTI_SPRITE
-          })), null != B) {
-          B();
+          })), null != H) {
+          H();
           return
         }
-        F || X(H)
+        F || X(B)
       },
       onContextMenu: w && !ec ? q : void 0,
       children: [(0, i.jsxs)("div", {
@@ -228,7 +228,7 @@ var L = l.forwardRef(function(e, t) {
         })]
       }), function() {
         switch (V) {
-          case I.SoundButtonOverlay.ADD:
+          case T.SoundButtonOverlay.ADD:
             return (0, i.jsxs)("div", {
               className: R.addButtonOverlay,
               children: [(0, i.jsx)("div", {
@@ -247,7 +247,7 @@ var L = l.forwardRef(function(e, t) {
                 }), ef && em()]
               })]
             });
-          case I.SoundButtonOverlay.PLAY:
+          case T.SoundButtonOverlay.PLAY:
           default:
             return ex()
         }

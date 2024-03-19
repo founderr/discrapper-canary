@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _
   },
   VideoModal: function() {
-    return I
+    return T
   }
 }), n("222007");
 var i = n("37983"),
@@ -93,27 +93,27 @@ function _(e) {
     renderLinkComponent: h,
     maxWidth: x,
     maxHeight: _,
-    shouldAnimate: I,
-    onClose: T,
+    shouldAnimate: T,
+    onClose: I,
     shouldHideMediaOptions: v = !1,
     obscure: N = !1,
     ...A
   } = e, {
     width: O,
     height: R
-  } = (0, f.zoomFit)(s, o), M = r.isMobile && null != T;
+  } = (0, f.zoomFit)(s, o), M = r.isMobile && null != I;
   l.useEffect(() => {
-    if (null != T) return c.ComponentDispatch.subscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, T), () => {
-      c.ComponentDispatch.unsubscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, T)
+    if (null != I) return c.ComponentDispatch.subscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, I), () => {
+      c.ComponentDispatch.unsubscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, I)
     }
-  }, [T]);
+  }, [I]);
   let k = v ? e => {
     e.stopPropagation(), e.preventDefault()
   } : A.onContextMenu;
   return (0, i.jsxs)("div", {
     className: g.wrapper,
     children: [M ? (0, i.jsx)(S, {
-      onClose: T
+      onClose: I
     }) : null, (0, i.jsx)(C, {
       isObscured: N,
       src: t,
@@ -142,7 +142,7 @@ function _(e) {
   })
 }
 
-function I(e) {
+function T(e) {
   let {
     src: t,
     width: n,

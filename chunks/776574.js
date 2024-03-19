@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 }), n("222007"), n("781738");
 var i = n("37983"),
@@ -346,4 +346,4 @@ class _ extends l.PureComponent {
     }
   }
 }
-var I = _
+var T = _

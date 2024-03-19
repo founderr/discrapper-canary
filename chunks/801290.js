@@ -22,9 +22,9 @@ var t = E("917351"),
   u = E("872173"),
   L = E("353927");
 let C = e => "AudioContextSettingsMigrated:".concat(e),
-  D = e => e === L.MediaEngineContextTypes.STREAM ? n.AudioSettingsDefaultVolumes.STREAM : n.AudioSettingsDefaultVolumes.USER;
+  c = e => e === L.MediaEngineContextTypes.STREAM ? n.AudioSettingsDefaultVolumes.STREAM : n.AudioSettingsDefaultVolumes.USER;
 
-function c() {
+function D() {
   (0, A.shouldReadWriteAudioSettings)() && ! function() {
     let e = a.default.get(C(S.default.getId()));
     !e && u.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
@@ -37,7 +37,7 @@ function c() {
           a = {};
         for (let [e, _] of Object.entries(t.localMutes)) a[e] = {
           muted: _,
-          volume: D(E),
+          volume: c(E),
           modifiedAt: r,
           soundboardMuted: !1
         };
@@ -77,10 +77,10 @@ function M() {
         let S = e[T];
         if (S[_] = null !== (o = S[_]) && void 0 !== o ? o : (n = E, r.AudioContextSetting.create({
             muted: !1,
-            volume: D(n)
+            volume: c(n)
           })), t(S[_]), S[_].modifiedAt = String(Date.now()), s) {
           ;
-          a = S, i = _, I = E, a[i].volume !== D(I) || a[i].muted || a[i].soundboardMuted || delete a[i]
+          a = S, i = _, I = E, a[i].volume !== c(I) || a[i].muted || a[i].soundboardMuted || delete a[i]
         }
         return ! function(e) {
           let _ = O.default.entries(e),
@@ -157,7 +157,7 @@ function m(e) {
 class G extends i.default {
   constructor(...e) {
     super(...e), this.actions = {
-      POST_CONNECTION_OPEN: c,
+      POST_CONNECTION_OPEN: D,
       AUDIO_SET_LOCAL_VOLUME: h,
       AUDIO_TOGGLE_LOCAL_MUTE: P,
       AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: m

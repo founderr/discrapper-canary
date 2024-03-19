@@ -167,8 +167,8 @@ function l(e, _, E) {
 let u = l.bind(null, "get"),
   L = l.bind(null, "post"),
   C = l.bind(null, "put"),
-  D = l.bind(null, "patch"),
-  c = l.bind(null, "del");
+  c = l.bind(null, "patch"),
+  D = l.bind(null, "del");
 if (E.g.isServerRendering) {
   let e = (e, _) => Promise.resolve({
     ok: !0,
@@ -177,14 +177,14 @@ if (E.g.isServerRendering) {
     body: null,
     text: ""
   });
-  u = e, L = e, C = e, D = e, c = e
+  u = e, L = e, C = e, c = e, D = e
 }
 var d = {
   get: u,
   post: L,
   put: C,
-  patch: D,
-  delete: c,
+  patch: c,
+  delete: D,
   V6OrEarlierAPIError: a.default,
   V8APIError: i.default,
   getAPIBaseURL() {

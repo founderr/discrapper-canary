@@ -25,8 +25,8 @@ var g = n("541926"),
   S = n("926970"),
   C = n("755107"),
   _ = n("518542"),
-  I = n("269149"),
-  T = n("566819");
+  T = n("269149"),
+  I = n("566819");
 
 function v(e) {
   let t = i.useContext(s.default),
@@ -34,8 +34,8 @@ function v(e) {
     [v] = i.useState(() => {
       let i = (0, a.createEditor)();
       return i.children = (0, d.toRichValue)(""), i.selection = {
-          anchor: T.FIRST_TEXT_POINT,
-          focus: T.FIRST_TEXT_POINT
+          anchor: I.FIRST_TEXT_POINT,
+          focus: I.FIRST_TEXT_POINT
         },
         function(e) {
           var t, n, i;
@@ -46,7 +46,7 @@ function v(e) {
             canUseCommands: o,
             canOnlyUseTextCommands: u,
             windowContext: d,
-            previewMarkdown: T,
+            previewMarkdown: I,
             forTests: v,
             onChangeStart: N,
             onChangeEnd: A,
@@ -54,9 +54,9 @@ function v(e) {
           } = e, R = a, {
             onChange: M
           } = R;
-          R.chatInputType = s, R.windowContext = d, R.previewMarkdown = T, R.composition = null, R.events = new l.EventEmitter, R.isMac = "MacIntel" === navigator.platform, R.onChange = () => {
+          R.chatInputType = s, R.windowContext = d, R.previewMarkdown = I, R.composition = null, R.events = new l.EventEmitter, R.isMac = "MacIntel" === navigator.platform, R.onChange = () => {
             R.events.emit("onChange"), M()
-          }, R = (0, S.withReact)(R, !0 === v), R = (0, g.default)(R), R = (0, y.default)(R), (null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) && (R = (0, c.default)(R, r, !0 === o, !0 === u)), R = (0, E.default)(R, r.guild_id, r.id), !(null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (R = (0, f.default)(R)), !(null === (i = s.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (R = (0, p.default)(R)), v && (R = (0, _.default)(R)), R = (0, x.default)(R), R = (0, m.default)(R), R = (0, C.default)(R), R = (0, I.default)(R, N, A), R = (0, h.default)(R, e => {
+          }, R = (0, S.withReact)(R, !0 === v), R = (0, g.default)(R), R = (0, y.default)(R), (null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) && (R = (0, c.default)(R, r, !0 === o, !0 === u)), R = (0, E.default)(R, r.guild_id, r.id), !(null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (R = (0, f.default)(R)), !(null === (i = s.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (R = (0, p.default)(R)), v && (R = (0, _.default)(R)), R = (0, x.default)(R), R = (0, m.default)(R), R = (0, C.default)(R), R = (0, T.default)(R, N, A), R = (0, h.default)(R, e => {
             let {
               newValue: t,
               newSelection: n

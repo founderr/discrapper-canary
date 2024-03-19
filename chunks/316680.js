@@ -47,8 +47,8 @@ class m extends l.PureComponent {
       hovered: S,
       focused: C,
       dragging: _
-    } = this.state, I = u.default;
-    return m || E === h ? I = d.default : E < x / 2 && (I = c.default), (0, i.jsxs)("div", {
+    } = this.state, T = u.default;
+    return m || E === h ? T = d.default : E < x / 2 && (T = c.default), (0, i.jsxs)("div", {
       className: s(t, p.container),
       onMouseEnter: () => {
         clearTimeout(this._hoverTimeout), this.setState({
@@ -99,7 +99,7 @@ class m extends l.PureComponent {
         size: r.Button.Sizes.NONE,
         look: r.Button.Looks.BLANK,
         onClick: this.handleToggleMute,
-        children: (0, i.jsx)(I, {
+        children: (0, i.jsx)(T, {
           className: e
         })
       })]

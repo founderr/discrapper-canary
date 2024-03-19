@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var i = n("37983"),
@@ -24,12 +24,12 @@ var i = n("37983"),
   S = n("49111"),
   C = n("646718"),
   _ = n("782340"),
-  I = n("192465");
+  T = n("192465");
 
-function T(e) {
+function I(e) {
   var t, n, a;
   let {
-    className: T,
+    className: I,
     onClose: v
   } = e;
   (0, h.useFetchStickerPacks)();
@@ -50,8 +50,8 @@ function T(e) {
     M = null != O || null != R,
     k = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === C.PremiumSubscriptionSKUs.TIER_0;
   return (0, i.jsxs)("div", {
-    className: s(I.emptyState, T, {
-      [I.unifyTrialUpsell]: M
+    className: s(T.emptyState, I, {
+      [T.unifyTrialUpsell]: M
     }),
     children: [M ? (0, i.jsx)(p.default, {
       discountOffer: R,
@@ -62,19 +62,19 @@ function T(e) {
       children: _.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
     }) : (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(o.Heading, {
-        className: I.header,
+        className: T.header,
         variant: "heading-xl/semibold",
         children: _.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_TITLE
       }), (0, i.jsx)(o.Text, {
-        className: I.subtitle,
+        className: T.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
         children: _.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
       }), (0, i.jsx)("div", {
-        className: I.stickersRow,
+        className: T.stickersRow,
         children: A.filter(e => null != e).map(e => (0, i.jsx)(E.default, {
           sticker: e,
-          className: I.sticker,
+          className: T.sticker,
           size: 80
         }, null == e ? void 0 : e.id))
       })]

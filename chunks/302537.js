@@ -22,8 +22,8 @@ var t = E("37983"),
   u = E("471671"),
   L = E("439932"),
   C = E("779601"),
-  D = E("69927"),
-  c = E("983689"),
+  c = E("69927"),
+  D = E("983689"),
   d = E("628922"),
   U = E("49111");
 E("597323");
@@ -33,7 +33,7 @@ var h = o.memo(function(e) {
     children: _,
     skipsSettingDefaultPageTitle: n
   } = e;
-  (0, D.usePageTitleManager)({
+  (0, c.usePageTitleManager)({
     skipsSettingDefaultPageTitle: n
   });
   let {
@@ -55,7 +55,7 @@ var h = o.memo(function(e) {
         alwaysShowLinkDecorations: T
       } = o.useContext(S.AccessibilityPreferencesContext), {
         fontScale: O,
-        fontScaleClass: D,
+        fontScaleClass: c,
         keyboardModeEnabled: U,
         saturation: h,
         desaturateUserColors: P,
@@ -81,7 +81,7 @@ var h = o.memo(function(e) {
           systemForcedColors: r
         }
       }), p = (0, i.useLocation)(), g = o.useMemo(() => M.has(p.pathname), [p.pathname]);
-      (0, c.default)(window, g);
+      (0, D.default)(window, g);
       let y = (0, d.default)(window, __OVERLAY__ || n),
         B = (0, s.useStateFromStores)([A.default], () => A.default.sidebarWidth),
         f = (0, S.useRedesignIconContext)().enabled;
@@ -102,7 +102,7 @@ var h = o.memo(function(e) {
           "disable-forced-colors": !m && "active" === G,
           "enable-forced-colors": m,
           "show-redesigned-icons": f
-        }, (0, L.getThemeClass)(E), (0, C.default)(), D)
+        }, (0, L.getThemeClass)(E), (0, C.default)(), c)
       })
     }(U), function() {
       let [e, _] = o.useState([]);

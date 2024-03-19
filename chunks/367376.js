@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 }), n("222007");
 var i = n("917351"),
@@ -59,17 +59,17 @@ let c = {
       width: 14
     }
   })]), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading"),
-  I = {
+  T = {
     text: r.default.RULES.text
   };
-var T = {
+var I = {
   combineAndInjectMentionRule: d,
   createReactRules: s.default,
   defaultReactRuleOptions: c,
   defaultRules: f,
   guildEventRules: g,
   notifCenterV2MessagePreviewRules: _,
-  lockscreenWidgetMessageRules: I,
+  lockscreenWidgetMessageRules: T,
   astParserFor: a.astParserFor,
   reactParserFor: a.reactParserFor,
   parse: a.reactParserFor(f),

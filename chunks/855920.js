@@ -84,7 +84,7 @@ let S = e => {
       isInteracting: n,
       tooltipPosition: a = h.EXPRESSION_TOOLTIP_PROPS.position,
       enableClick: d = !0
-    } = e, [y, S] = l.useState(String(Date.now())), [C, I] = l.useState(!1), [T, v] = l.useState(!1), {
+    } = e, [y, S] = l.useState(String(Date.now())), [C, T] = l.useState(!1), [I, v] = l.useState(!1), {
       enabled: N
     } = f.NitroBadgeOnEmojiHoverExperiment.useExperiment({
       location: "MessageCustomEmoji"
@@ -103,9 +103,9 @@ let S = e => {
       "aria-label": t.name,
       ...h.EXPRESSION_TOOLTIP_PROPS,
       position: a,
-      shouldShow: !T,
+      shouldShow: !I,
       onTooltipShow: () => {
-        I(!0), d && (_({
+        T(!0), d && (_({
           emojiNode: t,
           isCustomEmoji: !0,
           nonce: O
@@ -119,12 +119,12 @@ let S = e => {
         },
         onClick: t => {
           var n;
-          I(!1), v(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
+          T(!1), v(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
           C && (p.default.track(x.AnalyticEvents.CLOSE_POPOUT, {
             nonce: O
-          }), I(!1))
+          }), T(!1))
         },
         tag: "span",
         className: s(g.emojiContainer, {
@@ -139,7 +139,7 @@ let S = e => {
       onRequestClose: () => {
         p.default.track(x.AnalyticEvents.CLOSE_POPOUT, {
           nonce: O
-        }), I(!1), v(!1)
+        }), T(!1), v(!1)
       },
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,

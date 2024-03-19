@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return H
+    return B
   }
 }), n("222007");
 var i = n("37983"),
@@ -24,8 +24,8 @@ var i = n("37983"),
   S = n("305961"),
   C = n("824563"),
   _ = n("27618"),
-  I = n("697218"),
-  T = n("599110"),
+  T = n("697218"),
+  I = n("599110"),
   v = n("756507"),
   N = n("713135"),
   A = n("561845"),
@@ -46,15 +46,15 @@ function G(e) {
   e.stopPropagation()
 }
 
-function B(e) {
+function H(e) {
   let {
     user: t,
     guildId: n,
     channelId: a,
     setNote: s,
-    closePopout: I,
-    setPopoutRef: B,
-    disableUserProfileLink: H = __OVERLAY__,
+    closePopout: T,
+    setPopoutRef: H,
+    disableUserProfileLink: B = __OVERLAY__,
     analyticsParams: V = {}
   } = e, K = l.useRef(null), W = (0, O.default)(t.id, n), Y = (0, d.default)(K), z = (0, r.useStateFromStores)([N.default], () => {
     var e;
@@ -106,8 +106,8 @@ function B(e) {
   (0, c.default)(() => eu(!0), er.shouldShow ? 250 : null);
   let ed = (0, E.useGetOrFetchApplication)(null == Q ? void 0 : Q.application_id);
   return l.useEffect(() => {
-    null == B || B(null == K ? void 0 : K.current)
-  }, [K, B]), l.useEffect(() => {
+    null == H || H(null == K ? void 0 : K.current)
+  }, [K, H]), l.useEffect(() => {
     if (!ei)((null == Q ? void 0 : Q.application_id) == null || null != ed) && (null == n || (null == J ? void 0 : J.fullProfileLoadedTimestamp) != null) && (function() {
       var e;
       let i, l, s;
@@ -124,7 +124,7 @@ function B(e) {
           other_application_id: null == z ? void 0 : z.id,
           other_application_name: t.toString()
         } : {};
-      T.default.track(D.AnalyticEvents.OPEN_POPOUT, {
+      I.default.track(D.AnalyticEvents.OPEN_POPOUT, {
         type: "Profile Popout",
         guild_id: n,
         channel_id: a,
@@ -173,22 +173,22 @@ function B(e) {
             displayProfile: W,
             guildId: n,
             channelId: a,
-            onClose: () => null == I ? void 0 : I(),
+            onClose: () => null == T ? void 0 : T(),
             isMobile: et,
             isStreaming: (0, m.default)(Q),
             status: ee,
-            disableUserProfileLink: H,
+            disableUserProfileLink: B,
             isHovering: Y,
             upsell: er.shouldShow ? (0, i.jsx)(L.default, {
               user: t,
               upsellSource: P.UserPopoutUpsellSource.USER_POPOUT,
               displayProfile: W,
-              onClose: I,
+              onClose: T,
               ...er
             }) : void 0
           }), (0, i.jsxs)(M.default.Inner, {
             children: [(0, i.jsx)(R.default, {
-              onTooltipClose: I
+              onTooltipClose: T
             }), (0, i.jsx)(k.default, {
               activity: Q,
               customStatusActivity: $,
@@ -197,7 +197,7 @@ function B(e) {
               guild: Z,
               guildMember: J,
               channelId: a,
-              onClose: I,
+              onClose: T,
               setNote: s,
               canDM: es,
               analyticsParams: V
@@ -208,13 +208,13 @@ function B(e) {
     })
   })
 }
-var H = l.memo(function(e) {
+var B = l.memo(function(e) {
   let {
     userId: t,
     user: n,
     ...l
-  } = e, a = (0, r.useStateFromStores)([I.default], () => I.default.getUser(t), [t]), o = null != n ? n : a;
-  return s(null != o, "Unexpected missing user"), (0, i.jsx)(B, {
+  } = e, a = (0, r.useStateFromStores)([T.default], () => T.default.getUser(t), [t]), o = null != n ? n : a;
+  return s(null != o, "Unexpected missing user"), (0, i.jsx)(H, {
     user: o,
     ...l
   })

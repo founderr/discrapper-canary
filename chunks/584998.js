@@ -24,14 +24,14 @@ var i = n("37983"),
   S = n("976818"),
   C = n("49111"),
   _ = n("200521"),
-  I = n("714997");
+  T = n("714997");
 
-function T(e) {
+function I(e) {
   let {
     summary: t,
     channel: c,
     members: S,
-    guildId: T,
+    guildId: I,
     unread: v,
     onClick: N
   } = e, [A, O] = l.useState(!1), R = (0, u.getTimestampString)(x.default.extractTimestamp(t.startId)), M = (0, a.useStateFromStores)([E.default], () => E.default.summaryFeedback(t)), k = (e, n) => {
@@ -42,7 +42,7 @@ function T(e) {
     })
   }, L = d.default.can(C.Permissions.MANAGE_MESSAGES, c);
   return (0, i.jsxs)(s.Clickable, {
-    className: I.container,
+    className: T.container,
     onClick: N,
     onContextMenu: e => {
       L && (0, r.openContextMenuLazy)(e, async () => {
@@ -60,13 +60,13 @@ function T(e) {
     children: [(0, i.jsx)(h.default, {
       hovered: A,
       unread: v,
-      className: I.unreadPill
+      className: T.unreadPill
     }), (0, i.jsx)("div", {
-      className: I.rowHeader,
+      className: T.rowHeader,
       children: (0, i.jsxs)("div", {
-        className: I.rowHeaderLeft,
+        className: T.rowHeaderLeft,
         children: [(0, i.jsx)(s.Text, {
-          className: I.timestamp,
+          className: T.timestamp,
           color: "interactive-normal",
           variant: "text-xs/normal",
           children: R
@@ -74,13 +74,13 @@ function T(e) {
           height: 4,
           width: 4,
           "aria-hidden": "true",
-          className: I.dot
+          className: T.dot
         }), (0, i.jsx)(f.default, {
           height: 12,
           width: 12,
-          className: I.icon
+          className: T.icon
         }), (0, i.jsx)(s.Text, {
-          className: I.count,
+          className: T.count,
           color: "interactive-normal",
           variant: "text-xs/normal",
           children: t.count
@@ -89,7 +89,7 @@ function T(e) {
             height: 4,
             width: 4,
             "aria-hidden": "true",
-            className: I.dot
+            className: T.dot
           }), (0, i.jsx)(g.default, {
             partySize: {
               knownSize: S.length,
@@ -97,23 +97,23 @@ function T(e) {
             },
             maxAvatarsShown: 3,
             members: S,
-            guildId: T
+            guildId: I
           })]
         })]
       })
     }), A && !M && (0, i.jsxs)("div", {
-      className: I.feedbackContainer,
+      className: T.feedbackContainer,
       children: [(0, i.jsx)(s.Clickable, {
         onClick: e => k(e, _.FeedbackRating.GOOD),
         children: (0, i.jsx)(m.default, {
-          className: I.thumbIcon,
+          className: T.thumbIcon,
           width: 12,
           height: 12
         })
       }), (0, i.jsx)(s.Clickable, {
         onClick: e => k(e, _.FeedbackRating.BAD),
         children: (0, i.jsx)(p.default, {
-          className: I.thumbIcon,
+          className: T.thumbIcon,
           width: 12,
           height: 12
         })
@@ -121,12 +121,12 @@ function T(e) {
     }), (0, i.jsx)(s.Text, {
       color: "header-primary",
       variant: "text-sm/semibold",
-      className: I.title,
+      className: T.title,
       children: t.topic
     }), (0, i.jsx)(s.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
-      className: I.subtitle,
+      className: T.subtitle,
       children: t.summShort
     })]
   })
@@ -146,7 +146,7 @@ function v(e) {
     children: t.map((e, t) => {
       var l;
       let a = null !== (l = n[t]) && void 0 !== l ? l : [];
-      return (0, i.jsx)(T, {
+      return (0, i.jsx)(I, {
         summary: e,
         channel: s,
         members: a,

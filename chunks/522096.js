@@ -29,8 +29,8 @@ function d(e) {
     renderSectionHeader: S,
     renderSectionFooter: C,
     renderInspector: _,
-    renderEmptySearchState: I,
-    renderCategoryList: T,
+    renderEmptySearchState: T,
+    renderCategoryList: I,
     renderHeaderAccessories: v,
     rowHeight: N,
     sectionHeaderHeight: A,
@@ -42,7 +42,7 @@ function d(e) {
     gridNavigatorId: P,
     gridNotice: b,
     renderHeader: j
-  } = e, U = l.useRef(null), D = l.useRef(null), w = l.useRef(null), F = 0 === t.length, G = (0, a.useExpressionPickerStore)(e => e.searchQuery), B = c.useStore(e => e.inspectedExpressionPosition), H = (0, s.useExpressionPickerGridWidth)({
+  } = e, U = l.useRef(null), D = l.useRef(null), w = l.useRef(null), F = 0 === t.length, G = (0, a.useExpressionPickerStore)(e => e.searchQuery), H = c.useStore(e => e.inspectedExpressionPosition), B = (0, s.useExpressionPickerGridWidth)({
     gridWrapperRef: U,
     containerWidth: d,
     showingEmptyState: F
@@ -55,7 +55,7 @@ function d(e) {
   } = (0, s.useExpressionGrid)({
     categories: t,
     collapsedCategories: n,
-    gridWidth: H,
+    gridWidth: B,
     listPaddingRight: M,
     itemNodeWidth: R,
     itemNodeMargin: k
@@ -81,8 +81,8 @@ function d(e) {
     }, t => Z(e, t), t => c.setInspectedExpressionPosition(t, e))
   }, [V, Z, J, z, Q, y, c]), ee = l.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = l.useCallback(e => null == S ? void 0 : S(t[e], e), [t, S]), en = l.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), ei = l.useCallback(() => {
     var e;
-    return null == _ ? void 0 : _(null == V ? void 0 : null === (e = V[B.rowIndex]) || void 0 === e ? void 0 : e[B.columnIndex])
-  }, [V, B.columnIndex, B.rowIndex, _]);
+    return null == _ ? void 0 : _(null == V ? void 0 : null === (e = V[H.rowIndex]) || void 0 === e ? void 0 : e[H.columnIndex])
+  }, [V, H.columnIndex, H.rowIndex, _]);
   l.useEffect(() => {
     p(G)
   }, [p, G]), l.useEffect(() => c.resetStoreState, [c.resetStoreState]), l.useLayoutEffect(() => {
@@ -106,7 +106,7 @@ function d(e) {
       className: u.header,
       children: [" ", el, " "]
     }), F && null != E ? E(u.emptyState) : (0, i.jsxs)(i.Fragment, {
-      children: [T(D), null != b && (0, i.jsx)("div", {
+      children: [I(D), null != b && (0, i.jsx)("div", {
         className: u.gridNoticeWrapper,
         children: b
       }), (0, i.jsx)("div", {
@@ -114,7 +114,7 @@ function d(e) {
         className: u.listWrapper,
         id: P,
         ...q,
-        children: null != H ? (0, i.jsx)(r.default, {
+        children: null != B ? (0, i.jsx)(r.default, {
           ref: D,
           store: c,
           hasSearchResults: m,
@@ -124,7 +124,7 @@ function d(e) {
           renderSectionHeader: null != S ? et : void 0,
           renderSectionFooter: null != C ? en : void 0,
           renderInspector: null != _ ? ei : void 0,
-          renderEmptySearchState: I,
+          renderEmptySearchState: T,
           rowCount: K,
           rowCountBySection: W,
           rowHeight: N,

@@ -24,8 +24,8 @@ var i = n("37983"),
   S = n("256860"),
   C = n("364685"),
   _ = n("161585"),
-  I = n("24373"),
-  T = n("41170"),
+  T = n("24373"),
+  I = n("41170"),
   v = n("49111"),
   N = n("13030"),
   A = n("782340"),
@@ -105,10 +105,10 @@ let R = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
         }))
       } else if (w) {
         let e = C.default.getStickerPack(j.id);
-        null != e && (F = e.name, G = (0, i.jsx)(T.default, {
+        null != e && (F = e.name, G = (0, i.jsx)(I.default, {
           disableAnimation: !b || E,
           size: M,
-          sticker: (0, I.getStickerPackPreviewSticker)(e)
+          sticker: (0, T.getStickerPackPreviewSticker)(e)
         }))
       }
       return (0, i.jsxs)(l.Fragment, {
@@ -191,14 +191,14 @@ var F = e => {
   let {
     renderCategoryListItem: g,
     rowHeight: C,
-    onScroll: I
+    onScroll: T
   } = w({
     activeIndex: d,
     stickerPickerCategories: f,
     categoryListRef: a,
     firstStandardStickerCategoryOffsetTop: h,
     setShouldRenderShortcut: u
-  }), T = l.useCallback(e => {
+  }), I = l.useCallback(e => {
     var t;
     e(m), null === (t = a.current) || void 0 === t || t.scrollTo(h)
   }, [m, h]);
@@ -208,7 +208,7 @@ var F = e => {
     expressionsListRef: t,
     store: c.StickerPickerStore,
     listPadding: j,
-    onScroll: I,
+    onScroll: T,
     renderCategoryListItem: g,
     rowCount: f.length,
     categories: f,
@@ -217,7 +217,7 @@ var F = e => {
       className: s(O.standardStickerShortcut, {
         [O.invisibleShortcut]: !r
       }),
-      onClick: () => T(e),
+      onClick: () => I(e),
       children: (0, i.jsx)(E.default, {
         height: 24,
         width: 24

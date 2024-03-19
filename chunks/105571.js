@@ -24,8 +24,8 @@ var i = n("37983"),
   S = n("476606"),
   C = n("540843"),
   _ = n("49111"),
-  I = n("317041"),
-  T = n("782340"),
+  T = n("317041"),
+  I = n("782340"),
   v = n("23429"),
   N = n("919163");
 
@@ -70,7 +70,7 @@ function O(e) {
     commandType: o.ApplicationCommandType.CHAT
   }, {
     placeholderCount: 0,
-    limit: I.DISCOVERY_COMMANDS_QUERY_LIMIT,
+    limit: T.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
   }), {
     commands: _
@@ -106,7 +106,7 @@ function O(e) {
         backgroundColor: k
       },
       children: (0, i.jsx)(r.Clickable, {
-        "aria-label": T.default.Messages.CLOSE,
+        "aria-label": I.default.Messages.CLOSE,
         onClick: R,
         className: v.headerCloseButton,
         children: (0, i.jsx)(h.default, {})

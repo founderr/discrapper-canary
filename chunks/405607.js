@@ -55,7 +55,7 @@ var f = function(e) {
     categoryListRef: t,
     getScrollOffsetForIndex: x
   });
-  let I = l.useCallback(e => {
+  let T = l.useCallback(e => {
       let {
         searchQuery: t
       } = o.useExpressionPickerStore.getState();
@@ -65,7 +65,7 @@ var f = function(e) {
         null === (i = n.current) || void 0 === i || i.scrollToSectionTop(e)
       }
     }, [n, u]),
-    T = l.useCallback(e => g(a[e], e, () => I(e), _ === e), [_, a, I, g]),
+    I = l.useCallback(e => g(a[e], e, () => T(e), _ === e), [_, a, T, g]),
     v = l.useMemo(() => "function" == typeof E ? e => E(a[e], e) : E, [a, E]);
   return (0, i.jsxs)("div", {
     className: s(d.wrapper, p),
@@ -73,12 +73,12 @@ var f = function(e) {
       listPadding: m,
       onScroll: y,
       ref: t,
-      renderRow: T,
+      renderRow: I,
       rowCount: h,
       rowHeight: v,
       hideScrollbar: !0,
       rowCountBySection: S,
       renderSection: C
-    }), null == f ? void 0 : f(I)]
+    }), null == f ? void 0 : f(T)]
   })
 }

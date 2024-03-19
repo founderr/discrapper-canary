@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return _
   },
   setSummaryFeedback: function() {
-    return I
+    return T
   },
   deleteSummary: function() {
     return N
@@ -120,14 +120,14 @@ function _(e, t) {
   })
 }
 
-function I(e, t) {
+function T(e, t) {
   o.default.dispatch({
     type: "SET_SUMMARY_FEEDBACK",
     summary: e,
     rating: t
   })
 }
-async function T() {
+async function I() {
   var e;
   let t, n;
   if (!m.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -208,7 +208,7 @@ async function N(e) {
   }
 }
 var A = {
-  setSummaryFeedback: I,
+  setSummaryFeedback: T,
   updateVisibleMessages: _,
   setSelectedSummary: C,
   setHighlightedSummary: g,
@@ -226,7 +226,7 @@ var A = {
         t && e();
         async function e() {
           try {
-            await T()
+            await I()
           } catch (e) {}
           await v(n.split(","))
         }

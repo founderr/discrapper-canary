@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return i
   },
   RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY: function() {
-    return l
+    return a
   }
 });
 let i = "(max-width: 485px)",
-  l = "(max-height: 450px)"
+  a = "(max-height: 450px)"

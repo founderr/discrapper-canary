@@ -22,8 +22,8 @@ var t = E("37983"),
   u = E("635956"),
   L = E("891653"),
   C = E("697218"),
-  D = E("381546"),
-  c = E("599110"),
+  c = E("381546"),
+  D = E("599110"),
   d = E("719923"),
   U = E("32531"),
   M = E("714657"),
@@ -58,7 +58,7 @@ let B = () => (0, t.jsx)("div", {
         onClick: () => {
           null != _ && _(G.ContentDismissActionType.DISMISS), E(m.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, U.closeEditor)()
         },
-        children: (0, t.jsx)(D.default, {
+        children: (0, t.jsx)(c.default, {
           className: y.closeCircle
         })
       }), (0, t.jsx)(s.Heading, {
@@ -151,7 +151,7 @@ function b(e) {
     shouldEditorAnimate: M.default.isCoachmark && !O.default.useReducedMotion
   })), l = (0, h.useTrackClientThemePreviewEvent)();
   o.useEffect(() => l(m.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [l]), o.useEffect(() => {
-    a && c.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    a && D.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: p.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
       location_stack: E
     })

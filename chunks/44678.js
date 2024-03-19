@@ -16,19 +16,19 @@ n.r(t), n.d(t, {
     return T
   },
   getOutboundPromotionRedemptionUrl: function() {
-    return C
-  },
-  shouldShowOutboundPromotionNotice: function() {
     return p
   },
-  shouldShowOutboundPromotionOnPlatform: function() {
+  shouldShowOutboundPromotionNotice: function() {
     return S
   },
-  isOutboundPromotionRedeemableByTrialUsers: function() {
+  shouldShowOutboundPromotionOnPlatform: function() {
     return P
   },
-  isTrialUserEligibleToSeeOutboundPromotion: function() {
+  isOutboundPromotionRedeemableByTrialUsers: function() {
     return R
+  },
+  isTrialUserEligibleToSeeOutboundPromotion: function() {
+    return C
   }
 }), n("702976"), n("781738");
 var r = n("872717"),
@@ -98,11 +98,11 @@ async function T(e) {
   return E(n)
 }
 
-function C(e, t) {
+function p(e, t) {
   return null != t.outboundRedemptionUrlFormat ? t.outboundRedemptionUrlFormat.replace("{code}", encodeURIComponent(e)) : t.outboundRedemptionPageLink
 }
 
-function p() {
+function S() {
   let e = u.default.lastSeenOutboundPromotionStartDate,
     t = u.default.outboundPromotions,
     n = u.default.consumedInboundPromotionId,
@@ -122,7 +122,7 @@ function p() {
     l = u.default.lastDismissedOutboundPromotionStartDate,
     o = a.default.getPremiumTypeSubscription(),
     d = (null == o ? void 0 : o.trialId) != null,
-    f = d ? i.filter(e => P(e)) : i;
+    f = d ? i.filter(e => R(e)) : i;
   return 0 !== f.length && (null == l || f.some(e => {
     let {
       startDate: t
@@ -131,14 +131,14 @@ function p() {
   }))
 }
 
-function S(e) {
+function P(e) {
   return !(0, o.isIOS)() || !(0, s.hasFlag)(e.flags, c.PromotionFlags.IS_BLOCKED_IOS)
 }
 
-function P(e) {
+function R(e) {
   return (0, s.hasFlag)(e.flags, c.PromotionFlags.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS)
 }
 
-function R(e, t) {
-  return null != t[e.id] || P(e)
+function C(e, t) {
+  return null != t[e.id] || R(e)
 }

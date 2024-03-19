@@ -52,8 +52,8 @@ var l = n("446674"),
   S = n("158998"),
   C = n("680894"),
   _ = n("782340"),
-  I = n("918841"),
-  T = n("919163");
+  T = n("918841"),
+  I = n("919163");
 
 function v(e) {
   let {
@@ -113,17 +113,17 @@ function O(e) {
     let e = u || o.isPomelo() ? null : "#".concat(o.discriminator);
     return (0, i.jsx)(a.Tooltip, {
       text: (0, i.jsxs)("div", {
-        className: I.userTooltip,
+        className: T.userTooltip,
         children: [(0, i.jsx)(r.default, {
           user: o,
           animate: !0,
           size: a.AvatarSizes.SIZE_16,
-          className: I.avatar
+          className: T.avatar
         }), S.default.getUserTag(o, {
           mode: "username",
           identifiable: u ? "never" : "always"
         }), (0, i.jsx)("span", {
-          className: I.discriminator,
+          className: T.discriminator,
           children: e
         })]
       }),
@@ -217,7 +217,7 @@ function b(e) {
     timestamp: t
   } = e;
   return (0, i.jsx)("span", {
-    className: T.timestamp,
+    className: I.timestamp,
     children: t.formatted
   })
 }

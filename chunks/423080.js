@@ -27,8 +27,8 @@ var i = n("37983"),
   S = n("998716"),
   C = n("170183"),
   _ = n("689275"),
-  I = n("373469"),
-  T = n("546463"),
+  T = n("373469"),
+  I = n("546463"),
   v = n("923959"),
   N = n("824563"),
   A = n("282109"),
@@ -45,8 +45,8 @@ var i = n("37983"),
   w = n("811305"),
   F = n("159885"),
   G = n("471374"),
-  B = n("49111"),
-  H = n("782340"),
+  H = n("49111"),
+  B = n("782340"),
   V = n("379333"),
   K = n("716175");
 let W = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE),
@@ -74,7 +74,7 @@ function Z(e) {
     variant: "text-xs/normal",
     color: "text-muted",
     className: n,
-    children: H.default.Messages.FORM_LABEL_MUTED
+    children: B.default.Messages.FORM_LABEL_MUTED
   }) : (0, i.jsx)(y.default, {
     muteConfig: t,
     className: n
@@ -90,7 +90,7 @@ function J(e) {
         let {
           channel: t
         } = e;
-        return t.type === B.ChannelTypes.GUILD_VOICE
+        return t.type === H.ChannelTypes.GUILD_VOICE
       }).map(e => {
         let {
           channel: t
@@ -122,7 +122,7 @@ function J(e) {
     let e = 0;
     for (let t of h) e += g.default.getParticipantCount(t, S.StageChannelParticipantNamedIndex.AUDIENCE);
     return e
-  }), k = (0, u.useStateFromStoresArray)([I.default], () => I.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([N.default, T.default], () => E.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != T.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(L.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), J = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([O.default], () => k.map(e => O.default.getUser(e)), [k]), X = z(j.default, E.filter(e => !k.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
+  }), k = (0, u.useStateFromStoresArray)([T.default], () => T.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), B = (0, u.useStateFromStoresArray)([N.default, I.default], () => E.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != I.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(L.default, B, d), W = F ? B.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), J = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([O.default], () => k.map(e => O.default.getUser(e)), [k]), X = z(j.default, E.filter(e => !k.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
   let Q = (t = d, n = y, a = M, 0 === n.length ? null : (0, i.jsxs)("div", {
       className: V.row,
       children: [(0, i.jsx)(U.default, {
@@ -176,13 +176,13 @@ function q(e) {
     children: function(e) {
       switch (e) {
         case m.GuildJoinRequestApplicationStatuses.SUBMITTED:
-          return H.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_PENDING;
+          return B.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_PENDING;
         case m.GuildJoinRequestApplicationStatuses.REJECTED:
-          return H.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_REJECTED;
+          return B.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_REJECTED;
         case m.GuildJoinRequestApplicationStatuses.APPROVED:
-          return H.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_APPROVED;
+          return B.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_APPROVED;
         default:
-          return H.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_STARTED
+          return B.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_STARTED
       }
     }(t)
   })
@@ -218,12 +218,12 @@ function X(e) {
       className: V.invitesDisabledTooltip,
       color: "header-secondary",
       variant: "text-sm/medium",
-      children: H.default.Messages.INVITES_DISABLED_TOOLTIP
+      children: B.default.Messages.INVITES_DISABLED_TOOLTIP
     }) : null, d ? (0, i.jsx)(c.Text, {
       className: V.viewAsRolesWarning,
       color: "text-normal",
       variant: "text-xs/normal",
-      children: H.default.Messages.VIEW_AS_ROLES_MENTIONS_WARNING
+      children: B.default.Messages.VIEW_AS_ROLES_MENTIONS_WARNING
     }) : null != r ? r : o]
   })
 }

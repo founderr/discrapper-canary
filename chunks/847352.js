@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
 var i = n("37983"),
@@ -24,16 +24,16 @@ var i = n("37983"),
   S = n("49111"),
   C = n("13030"),
   _ = n("942838"),
-  I = l.memo(function(e) {
+  T = l.memo(function(e) {
     let {
       positionTargetRef: t,
       channel: n,
       closeOnModalOuterClick: a = !1,
-      parentModalKey: I
-    } = e, T = l.useRef(null), v = l.useRef(null), {
+      parentModalKey: T
+    } = e, I = l.useRef(null), v = l.useRef(null), {
       renderWindow: N,
       windowDispatch: A
-    } = l.useContext(f.default), O = null != I, R = (0, u.useIsModalAtTop)(null != I ? I : ""), M = () => {
+    } = l.useContext(f.default), O = null != T, R = (0, u.useIsModalAtTop)(null != T ? T : ""), M = () => {
       x.dismissAppLauncherPopup()
     }, k = l.useCallback(e => {
       var t;
@@ -55,7 +55,7 @@ var i = n("37983"),
     }, []);
     l.useLayoutEffect(() => (N.addEventListener("mousedown", k), N.addEventListener("contextmenu", k), A.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
       N.removeEventListener("mousedown", k), N.removeEventListener("contextmenu", k), A.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
-    }), [L, k, N, A]), (0, d.useFocusLock)(T), l.useEffect(() => {
+    }), [L, k, N, A]), (0, d.useFocusLock)(I), l.useEffect(() => {
       (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
     }, [R, O]);
     let P = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
@@ -74,7 +74,7 @@ var i = n("37983"),
           } = e;
           return (0, i.jsx)("section", {
             className: s(_.positionContainer),
-            ref: T,
+            ref: I,
             role: "dialog",
             "aria-label": "Application Launcher",
             children: t ? (0, i.jsxs)("div", {

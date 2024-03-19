@@ -155,7 +155,7 @@ function _(e) {
   })
 }
 
-function I(e) {
+function T(e) {
   return (0, i.jsx)(o.Tooltip, {
     text: x.default.Messages.PREVIEW_WHOLE_FILE,
     children: t => (0, i.jsx)(o.Clickable, {
@@ -172,7 +172,7 @@ function I(e) {
   })
 }
 
-function T(e) {
+function I(e) {
   var t;
   let {
     attachment: n,
@@ -183,8 +183,8 @@ function T(e) {
     setLanguage: c,
     bytesLeft: f,
     className: p
-  } = e, m = null == l ? void 0 : l.split("\n"), h = null !== (t = null == m ? void 0 : m.length) && void 0 !== t ? t : 0, y = a ? 100 : 6, T = 0 === f, v = "";
-  T && a && h > y ? v = "\n..." : !T && (v = "..."), "" !== v && (T ? v += " " + x.default.Messages.PREVIEW_LINES_LEFT.format({
+  } = e, m = null == l ? void 0 : l.split("\n"), h = null !== (t = null == m ? void 0 : m.length) && void 0 !== t ? t : 0, y = a ? 100 : 6, I = 0 === f, v = "";
+  I && a && h > y ? v = "\n..." : !I && (v = "..."), "" !== v && (I ? v += " " + x.default.Messages.PREVIEW_LINES_LEFT.format({
     lines: h - y
   }) : v += " " + x.default.Messages.PREVIEW_BYTES_LEFT.format({
     formattedBytes: (0, d.formatKbSize)(f)
@@ -211,9 +211,9 @@ function T(e) {
         children: [(0, i.jsx)(S, {
           expanded: a,
           setExpanded: r,
-          isWholeFile: T,
+          isWholeFile: I,
           numLines: h
-        }), (0, i.jsx)(I, {
+        }), (0, i.jsx)(T, {
           language: u,
           fileContents: l,
           bytesLeft: f,
@@ -328,7 +328,7 @@ var N = l.memo(function(e) {
     onClick: a,
     onContextMenu: r,
     className: n
-  }) : (0, i.jsx)(T, {
+  }) : (0, i.jsx)(I, {
     attachment: t,
     fileContents: p,
     bytesLeft: m,

@@ -27,8 +27,8 @@ var i = n("37983"),
   S = n("697218"),
   C = n("945330"),
   _ = n("719923"),
-  I = n("627601"),
-  T = n("994428"),
+  T = n("627601"),
+  I = n("994428"),
   v = n("782340"),
   N = n("154477"),
   A = n("604689");
@@ -97,12 +97,12 @@ var L = e => {
   } = (0, d.default)(), w = l.useMemo(() => ({
     top: "-".concat((null != D ? D : R) + 6, "px")
   }), [D]), F = (0, o.default)([S.default], () => S.default.getCurrentUser()), G = _.default.canUseCollectibles(F), {
-    setUpsellSource: B,
-    reset: H
-  } = (0, I.useUserPopoutCollectiblesUpsellStore)();
-  l.useEffect(() => (B(P), () => {
-    H()
-  }), [B, P, H]);
+    setUpsellSource: H,
+    reset: B
+  } = (0, T.useUserPopoutCollectiblesUpsellStore)();
+  l.useEffect(() => (H(P), () => {
+    B()
+  }), [H, P, B]);
   let V = (0, o.default)([g.default], () => g.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
     [K, W] = (0, o.useStateFromStoresArray)([E.default], () => {
       var e;
@@ -110,14 +110,14 @@ var L = e => {
     }),
     Y = l.useCallback(() => {
       var e, t, i, l;
-      null == h || h(T.ContentDismissActionType.PRIMARY), null == m || m(), (0, x.openCollectiblesShop)({
+      null == h || h(I.ContentDismissActionType.PRIMARY), null == m || m(), (0, x.openCollectiblesShop)({
         analyticsLocations: b,
         analyticsSource: f.default.COLLECTIBLES_USER_POPOUT_UPSELL,
         initialProductSkuId: K ? null !== (i = null == V ? void 0 : V.skuId) && void 0 !== i ? i : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId : null !== (l = null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId) && void 0 !== l ? l : null == V ? void 0 : V.skuId
       })
     }, [h, m, b, null == V ? void 0 : V.skuId, null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId, K]),
     z = l.useCallback(() => {
-      null == h || h(T.ContentDismissActionType.DISMISS)
+      null == h || h(I.ContentDismissActionType.DISMISS)
     }, [h]);
   if (!A && !L) return null;
   let Z = (0, r.match)([A, L]).with([!0, !0], () => K && W && G ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({

@@ -49,8 +49,8 @@ function _(e) {
     placeholderVersion: E,
     placeholderStyle: I,
     children: T
-  } = e, C = t === u.ImageReadyStates.LOADING, [p] = i.useState(() => Date.now()), [S] = i.useState(C), [P, R] = i.useState(!1), O = i.useMemo(() => {
-    if (S && 1 === E && null != _) {
+  } = e, p = t === u.ImageReadyStates.LOADING, [S] = i.useState(() => Date.now()), [P] = i.useState(p), [R, C] = i.useState(!1), O = i.useMemo(() => {
+    if (P && 1 === E && null != _) {
       let e = Uint8Array.from(atob(_), e => e.charCodeAt(0)),
         t = (0, o.thumbHashToRGBA)(e, {
           detail: 1,
@@ -59,24 +59,24 @@ function _(e) {
         n = (0, a.rgbaToDataURL)(t.w, t.h, t.rgba);
       return n
     }
-  }, [S, _, E]);
+  }, [P, _, E]);
   i.useEffect(() => {
     let e = setTimeout(() => {
-      R(!0)
+      C(!0)
     }, 2e3);
     return () => {
       clearTimeout(e)
     }
-  }, [S]);
-  let L = t === u.ImageReadyStates.READY && Date.now() - p < 200,
-    M = (0, l.useTransition)(C && null != O, L ? f : d),
-    g = (0, l.useTransition)(C && P, m);
+  }, [P]);
+  let M = t === u.ImageReadyStates.READY && Date.now() - S < 200,
+    g = (0, l.useTransition)(p && null != O, M ? f : d),
+    h = (0, l.useTransition)(p && R, m);
   return (0, r.jsxs)("div", {
     className: c.loadingOverlay,
     style: {
       aspectRatio: n
     },
-    children: [T, M((e, t) => t && (0, r.jsx)(l.animated.img, {
+    children: [T, g((e, t) => t && (0, r.jsx)(l.animated.img, {
       style: {
         ...I,
         ...e
@@ -84,7 +84,7 @@ function _(e) {
       className: c.imagePlaceholder,
       src: O,
       alt: ""
-    })), g((e, t) => t && (0, r.jsx)(l.animated.div, {
+    })), h((e, t) => t && (0, r.jsx)(l.animated.div, {
       style: e,
       className: c.imageLoadingOverlay,
       children: (0, r.jsx)(s.Spinner, {

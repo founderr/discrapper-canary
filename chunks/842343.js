@@ -23,16 +23,16 @@ var i = n("37983"),
   g = n("497858"),
   S = n("892149"),
   C = l.forwardRef(function(e, t) {
-    var n, a, C, _, I;
+    var n, a, C, _, T;
     let {
-      channel: T,
+      channel: I,
       type: v,
       editorHeight: N,
       onVisibilityChange: A
     } = e, O = (0, p.useUID)(), R = (0, o.useStateFromStores)([c.default], () => {
       var e;
-      return null !== (e = c.default.getGuild(T.guild_id)) && void 0 !== e ? e : null
-    }, [T.guild_id]), M = l.useRef(), [k, L, P] = (0, g.default)({
+      return null !== (e = c.default.getGuild(I.guild_id)) && void 0 !== e ? e : null
+    }, [I.guild_id]), M = l.useRef(), [k, L, P] = (0, g.default)({
       ...e,
       guild: R
     }, t, M), b = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, j = (0, f.getAutocompleteRowId)(k.selectedIndex);
@@ -57,7 +57,7 @@ var i = n("37983"),
     let F = null !== (a = k.query.typeInfo.renderResults({
       results: k.query.results,
       selectedIndex: k.selectedIndex,
-      channel: T,
+      channel: I,
       guild: R,
       query: k.query.queryText,
       options: k.query.options,
@@ -70,9 +70,9 @@ var i = n("37983"),
         [S.autocompletePopout]: null != D,
         [S.bottom]: null == D && "bottom" === e.position
       },
-      B = 490;
-    null != D && (B = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (_ = k.query) || void 0 === _ ? void 0 : _.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
-    let H = (0, i.jsx)(f.default, {
+      H = 490;
+    null != D && (H = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (_ = k.query) || void 0 === _ ? void 0 : _.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), H = Math.min(window.innerHeight - 175, H);
+    let B = (0, i.jsx)(f.default, {
       id: O,
       className: s(S.autocomplete, G),
       innerClassName: S.autocompleteInner,
@@ -94,7 +94,7 @@ var i = n("37983"),
               ...n,
               className: S.scroller,
               style: {
-                maxHeight: B
+                maxHeight: H
               },
               role: "listbox",
               "aria-labelledby": (0, f.getAutocompleteTitleId)(O),
@@ -108,12 +108,12 @@ var i = n("37983"),
       children: (0, i.jsx)(u.ReferencePositionLayer, {
         reference: () => D,
         positionKey: w,
-        position: null !== (I = e.position) && void 0 !== I ? I : "top",
+        position: null !== (T = e.position) && void 0 !== T ? T : "top",
         align: "left",
         spacing: 8,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
-        children: () => H
+        children: () => B
       })
-    }) : H
+    }) : B
   })

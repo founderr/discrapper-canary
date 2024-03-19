@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return T
   },
   isColorDark: function() {
-    return C
+    return p
   }
 });
 var r = n("37983");
@@ -81,7 +81,7 @@ function T(e, t) {
   return "" === e ? null : null != e ? e : t
 }
 
-function C(e) {
+function p(e) {
   let t = null != e ? (0, i.getDarkness)(e) : 1;
   return t > .25
 }

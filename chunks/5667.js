@@ -46,7 +46,7 @@ function m(e) {
   o.useEffect(() => {
     null == y || y()
   }, []);
-  let I = null != u;
+  let T = null != u;
   return (0, r.jsxs)("div", {
     className: d(t, p.upsellTooltipWrapper, p[C]),
     children: [g, null == n ? null : (0, r.jsx)(c.Heading, {
@@ -58,12 +58,12 @@ function m(e) {
       className: d(a, p.content),
       variant: "text-sm/normal",
       children: l
-    }), null != s || I ? (0, r.jsxs)("div", {
+    }), null != s || T ? (0, r.jsxs)("div", {
       className: d(p.upsellButtonsContainer, {
         [p.upsellButtonsAdjacent]: 0 === _,
         [p.upsellButtonsStacked]: 1 === _
       }),
-      children: [I ? (0, r.jsx)(c.Button, {
+      children: [T ? (0, r.jsx)(c.Button, {
         ...E,
         onClick: () => {
           null == h || h(), null == S || S(f.ContentDismissActionType.SECONDARY)
@@ -71,7 +71,7 @@ function m(e) {
         children: u
       }) : null, null == s ? null : (0, r.jsx)(c.Button, {
         className: d({
-          [p.fullWidth]: !I
+          [p.fullWidth]: !T
         }, x.className),
         color: x.color,
         look: x.look,

@@ -12,10 +12,10 @@ u = class e extends i.default {
       products: r,
       logo: u,
       mobile_bg: i,
-      ...s
+      ...E
     } = t;
     return new e({
-      ...super.fromServer(s),
+      ...super.fromServer(E),
       products: r.reduce((e, t) => {
         let r = n.default.fromServer(t);
         return 0 === r.items.length ? e : (e.push(r), e)

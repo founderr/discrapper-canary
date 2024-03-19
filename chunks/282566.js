@@ -24,8 +24,8 @@ var i = n("37983"),
   S = n("599110"),
   C = n("402671"),
   _ = n("719923"),
-  I = n("788506"),
-  T = n("115279"),
+  T = n("788506"),
+  I = n("115279"),
   v = n("49111"),
   N = n("958706"),
   A = n("646718"),
@@ -41,8 +41,8 @@ var i = n("37983"),
       pickerIntention: j,
       analyticsLocation: U
     } = e, D = (0, u.default)(), [w, F] = l.useState(!1), G = () => {
-      (0, I.trackPremiumSettingsPaneOpened)(P), (0, p.navigateToPremiumMarketingPage)(), k()
-    }, B = (0, r.isThemeLight)(D) ? n("602291") : n("609708"), H = (0, E.usePremiumTrialOffer)(), V = (0, x.usePremiumDiscountOffer)(), K = null != H || null != V, {
+      (0, T.trackPremiumSettingsPaneOpened)(P), (0, p.navigateToPremiumMarketingPage)(), k()
+    }, H = (0, r.isThemeLight)(D) ? n("602291") : n("609708"), B = (0, E.usePremiumTrialOffer)(), V = (0, x.usePremiumDiscountOffer)(), K = null != B || null != V, {
       isLoading: W,
       suggestedPremiumType: Y
     } = (0, h.default)({
@@ -51,11 +51,11 @@ var i = n("37983"),
       location: "emoji_picker"
     }), z = (0, f.useExpressionPickerStore)(e => e.searchQuery), {
       analyticsLocations: Z
-    } = (0, c.default)(d.default.EMOJI_PICKER), J = null == H ? void 0 : null === (t = H.subscription_trial) || void 0 === t ? void 0 : t.sku_id, q = null != J ? J === A.PremiumSubscriptionSKUs.TIER_0 : Y === A.PremiumTypes.TIER_0;
+    } = (0, c.default)(d.default.EMOJI_PICKER), J = null == B ? void 0 : null === (t = B.subscription_trial) || void 0 === t ? void 0 : t.sku_id, q = null != J ? J === A.PremiumSubscriptionSKUs.TIER_0 : Y === A.PremiumTypes.TIER_0;
     return l.useEffect(() => {
       if (!W) {
         let e;
-        e = j === N.EmojiIntention.REACTION ? A.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : b.subCategory === T.EmojiSubCategory.TOP_GUILD_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : b.subCategory === T.EmojiSubCategory.NEWLY_ADDED_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : A.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
+        e = j === N.EmojiIntention.REACTION ? A.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : b.subCategory === I.EmojiSubCategory.TOP_GUILD_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : b.subCategory === I.EmojiSubCategory.NEWLY_ADDED_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : A.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
         let t = b.emoji;
         S.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
           type: e,
@@ -81,9 +81,9 @@ var i = n("37983"),
       }), W ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsxs)(i.Fragment, {
         children: [K ? (0, i.jsx)(y.default, {
           type: A.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-          subscriptionTier: null !== (M = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== M ? M : A.PremiumSubscriptionSKUs.TIER_2,
+          subscriptionTier: null !== (M = null == B ? void 0 : null === (a = B.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== M ? M : A.PremiumSubscriptionSKUs.TIER_2,
           onClose: L,
-          trialOffer: H,
+          trialOffer: B,
           discountOffer: V,
           children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
             planName: (0, _.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
@@ -95,7 +95,7 @@ var i = n("37983"),
           children: [(0, i.jsx)("img", {
             alt: "",
             className: R.premiumPromoImage,
-            src: B
+            src: H
           }), (0, i.jsx)("div", {
             className: R.premiumPromoTitle,
             children: O.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL

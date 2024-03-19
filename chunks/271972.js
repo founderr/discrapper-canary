@@ -35,14 +35,14 @@ var g = s.forwardRef(function(e, t) {
     keyboardModeEnabled: S,
     onKeyDown: C,
     draftType: _,
-    size: I = 1
+    size: T = 1
   } = e, {
-    onFocus: T,
+    onFocus: I,
     ...v
   } = (0, u.useListItem)(n), {
     handleFocus: N,
     handleBlur: A
-  } = (0, m.useFocusInside)(T), O = 0 === I, R = null != r;
+  } = (0, m.useFocusInside)(I), O = 0 === T, R = null != r;
   return (0, a.jsx)(d.FocusRing, {
     children: (0, a.jsx)("li", {
       ...v,
@@ -71,7 +71,7 @@ var g = s.forwardRef(function(e, t) {
         }
       },
       className: o(E.upload, l, {
-        [E.sizeClip]: 2 === I
+        [E.sizeClip]: 2 === T
       }),
       ref: t,
       children: (0, a.jsxs)("div", {

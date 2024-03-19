@@ -28,10 +28,10 @@ let L = R && u || "Chrome" === a.name && 47 > parseFloat(a.version) || "Firefox"
     leading: !0
   });
 
-function D() {
+function c() {
   O.default.flashFrame(!1)
 }
-R && (window.addEventListener("focus", D), O.default.on("MAIN_WINDOW_FOCUS", D));
+R && (window.addEventListener("focus", c), O.default.on("MAIN_WINDOW_FOCUS", c));
 let Notification = window.Notification;
 if (l) {
   let e = {};
@@ -59,7 +59,7 @@ if (l) {
   }).permission = "granted", t._id = 0, Notification = t
 }
 
-function c() {
+function D() {
   return null != Notification && "granted" === Notification.permission
 }
 
@@ -69,13 +69,13 @@ function d(e) {
 }
 
 function U(e) {
-  return s.default.disableNotifications && null == e.overrideStreamerMode || !c() || S.isPlatformEmbedded && !O.default.shouldDisplayNotifications()
+  return s.default.disableNotifications && null == e.overrideStreamerMode || !D() || S.isPlatformEmbedded && !O.default.shouldDisplayNotifications()
 }
 var M = {
-  hasPermission: c,
+  hasPermission: D,
   requestPermission: function(e) {
     null != Notification && Notification.requestPermission(() => {
-      null != e && e(c())
+      null != e && e(D())
     })
   },
   showNotification: function(e, _, E, t, o) {

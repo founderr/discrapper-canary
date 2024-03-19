@@ -67,8 +67,8 @@ var i, l, a = n("37983"),
   S = n("298878"),
   C = n("793237"),
   _ = n("347738"),
-  I = n("584998"),
-  T = n("845579"),
+  T = n("584998"),
+  I = n("845579"),
   v = n("324929"),
   N = n("876308"),
   A = n("660478"),
@@ -85,8 +85,8 @@ var i, l, a = n("37983"),
   w = n("599110"),
   F = n("449008"),
   G = n("874276"),
-  B = n("299039"),
-  H = n("49111"),
+  H = n("299039"),
+  B = n("49111"),
   V = n("894282"),
   K = n("995307"),
   W = n("719347"),
@@ -177,7 +177,7 @@ function ee(e) {
     disableAltTextDisplay: u = !1,
     mediaLayoutType: d,
     imageContainerStyle: c
-  } = e, f = d === W.MediaLayoutType.MOSAIC, m = !u && T.ViewImageDescriptions.getSetting() && null != t && "" !== t && !0 !== n, h = e => {
+  } = e, f = d === W.MediaLayoutType.MOSAIC, m = !u && I.ViewImageDescriptions.getSetting() && null != t && "" !== t && !0 !== n, h = e => {
     let {
       altText: t
     } = e;
@@ -348,7 +348,7 @@ function ea(e) {
       context: "Mark As Read"
     }) : m.default.jumpToMessage({
       channelId: n,
-      messageId: B.default.castChannelIdAsMessageId(n),
+      messageId: H.default.castChannelIdAsMessageId(n),
       offset: 1,
       context: "Mark As Read"
     })
@@ -397,12 +397,12 @@ function es(e) {
     scrollManager: u
   } = e, {
     disableInteractions: x
-  } = s.useContext(P.MessagesInteractionContext), [E, T] = s.useState(null), v = s.useRef(null), [N, R] = s.useState(null), M = s.useRef(null), k = (0, f.useStateFromStoresArray)([_.default], () => {
+  } = s.useContext(P.MessagesInteractionContext), [E, I] = s.useState(null), v = s.useRef(null), [N, R] = s.useState(null), M = s.useRef(null), k = (0, f.useStateFromStoresArray)([_.default], () => {
     var e;
     return null !== (e = _.default.summaries(l.id)) && void 0 !== e ? e : []
   }, [l]), L = (0, g.default)(k);
   s.useEffect(() => {
-    !d.isEqual(L, k) && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+    !d.isEqual(L, k) && w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: k.length,
       message_counts: k.map(e => e.count),
       start_message_ids: k.map(e => e.startId),
@@ -428,8 +428,8 @@ function es(e) {
   null == W && null == E && (null == k ? void 0 : k.length) >= 1 && (W = null === (i = k[0]) || void 0 === i ? void 0 : i.topic);
   let Z = s.useMemo(() => d.debounce(e => {
       var t;
-      T(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
-    }, 64), [T]),
+      I(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
+    }, 64), [I]),
     J = s.useMemo(() => d.throttle(() => {
       (0, C.setHighlightedSummary)(null)
     }, 1200, {
@@ -440,7 +440,7 @@ function es(e) {
     }, [Z, J]),
     [X, Q] = s.useState(!1),
     $ = s.useCallback(() => {
-      w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+      w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !X,
         num_summaries: k.length,
         message_counts: k.map(e => e.count),
@@ -462,7 +462,7 @@ function es(e) {
           u.addAutomaticAnchorCallback(q, !1)
         }, 100)
       };
-      u.removeAutomaticAnchorCallback(q), u.addScrollCompleteCallback(i), w.default.track(H.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+      u.removeAutomaticAnchorCallback(q), u.addScrollCompleteCallback(i), w.default.track(B.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: l.guild_id,
@@ -493,7 +493,7 @@ function es(e) {
   }, [N, X]);
   let en = s.useCallback(e => {
     var t;
-    !((0, c.isElement)(e.target) && (null === (t = v.current) || void 0 === t ? void 0 : t.contains(e.target))) && (X && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    !((0, c.isElement)(e.target) && (null === (t = v.current) || void 0 === t ? void 0 : t.contains(e.target))) && (X && w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: k.length,
       message_counts: k.map(e => e.count),
@@ -512,7 +512,7 @@ function es(e) {
   }, [l.id]), s.useEffect(() => (document.addEventListener("mousedown", en), () => {
     document.removeEventListener("mousedown", en)
   }), [en]);
-  let ei = s.useMemo(() => (0, a.jsx)(I.default, {
+  let ei = s.useMemo(() => (0, a.jsx)(T.default, {
       channel: l,
       summaries: k,
       summariesMembers: G,
@@ -528,7 +528,7 @@ function es(e) {
         context: "Mark As Read"
       }) : m.default.jumpToMessage({
         channelId: l.id,
-        messageId: B.default.castChannelIdAsMessageId(l.id),
+        messageId: H.default.castChannelIdAsMessageId(l.id),
         offset: 1,
         context: "Mark As Read"
       })
@@ -628,12 +628,12 @@ function eo(e) {
     scrollManager: r
   } = e, {
     disableInteractions: u
-  } = s.useContext(P.MessagesInteractionContext), [h, x] = s.useState(null), E = s.useRef(null), [T, v] = s.useState(null), N = s.useRef(null), A = (0, f.useStateFromStoresArray)([_.default], () => {
+  } = s.useContext(P.MessagesInteractionContext), [h, x] = s.useState(null), E = s.useRef(null), [I, v] = s.useState(null), N = s.useRef(null), A = (0, f.useStateFromStoresArray)([_.default], () => {
     var e;
     return null !== (e = _.default.summaries(l.id)) && void 0 !== e ? e : []
   }, [l]), R = (0, g.default)(A);
   s.useEffect(() => {
-    !d.isEqual(R, A) && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+    !d.isEqual(R, A) && w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: A.length,
       message_counts: A.map(e => e.count),
       start_message_ids: A.map(e => e.startId),
@@ -659,7 +659,7 @@ function eo(e) {
   null == L && null == h && (null == A ? void 0 : A.length) >= 1 && (L = null === (i = A[0]) || void 0 === i ? void 0 : i.topic);
   let j = s.useMemo(() => d.get(A, k - 1), [k, A]),
     G = s.useMemo(() => d.get(A, k + 1), [k, A]),
-    B = s.useMemo(() => d.debounce(e => {
+    H = s.useMemo(() => d.debounce(e => {
       var t;
       x(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
     }, 64), [x]),
@@ -669,11 +669,11 @@ function eo(e) {
       trailing: !1
     }), []),
     W = s.useCallback(e => {
-      V(), B(e)
-    }, [B, V]),
+      V(), H(e)
+    }, [H, V]),
     [Z, J] = s.useState(!1),
     q = s.useCallback(() => {
-      w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+      w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !Z,
         num_summaries: A.length,
         message_counts: A.map(e => e.count),
@@ -695,7 +695,7 @@ function eo(e) {
           r.addAutomaticAnchorCallback(W, !1)
         }, 100)
       };
-      r.removeAutomaticAnchorCallback(W), r.addScrollCompleteCallback(i), w.default.track(H.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+      r.removeAutomaticAnchorCallback(W), r.addScrollCompleteCallback(i), w.default.track(B.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: l.guild_id,
@@ -723,16 +723,16 @@ function eo(e) {
       null != n && v(n)
     }, []);
   s.useEffect(() => {
-    if (null != T && Z) {
+    if (null != I && Z) {
       var e;
       null === (e = N.current) || void 0 === e || e.scrollTo({
-        top: T
+        top: I
       })
     }
-  }, [T, Z]);
+  }, [I, Z]);
   let et = s.useCallback(e => {
     var t;
-    !((0, c.isElement)(e.target) && (null === (t = E.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    !((0, c.isElement)(e.target) && (null === (t = E.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: A.length,
       message_counts: A.map(e => e.count),
@@ -751,7 +751,7 @@ function eo(e) {
   }, [l.id]), s.useEffect(() => (document.addEventListener("mousedown", et), () => {
     document.removeEventListener("mousedown", et)
   }), [et]);
-  let en = s.useMemo(() => (0, a.jsx)(I.default, {
+  let en = s.useMemo(() => (0, a.jsx)(T.default, {
       channel: l,
       summaries: A,
       summariesMembers: M,

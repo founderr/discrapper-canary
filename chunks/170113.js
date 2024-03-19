@@ -27,8 +27,8 @@ var i = n("37983"),
   S = n("392284"),
   C = n("468482"),
   _ = n("316680"),
-  I = n("830837"),
-  T = n("132755"),
+  T = n("830837"),
+  I = n("132755"),
   v = n("73034"),
   N = n("58608"),
   A = n("719347"),
@@ -132,7 +132,7 @@ class w extends l.Component {
       onClick: l,
       tabIndex: s ? -1 : 0,
       "aria-label": R.default.Messages.PAUSE,
-      children: (0, i.jsx)(I.default, {
+      children: (0, i.jsx)(T.default, {
         className: M.controlIcon
       }, "pause")
     }) : null != t && t === n ? (0, i.jsx)(d.Clickable, {
@@ -148,7 +148,7 @@ class w extends l.Component {
       onClick: a,
       tabIndex: s ? -1 : 0,
       "aria-label": R.default.Messages.PLAY,
-      children: (0, i.jsx)(T.default, {
+      children: (0, i.jsx)(I.default, {
         className: M.controlIcon
       }, "play")
     })
@@ -278,7 +278,7 @@ class G extends l.Component {
   render() {
     let {
       play: e
-    } = this.state, t = e ? T.default : I.default;
+    } = this.state, t = e ? I.default : T.default;
     return (0, i.jsx)(u.default.div, {
       className: M.playPausePop,
       style: this.getAnimatedStyle(),
@@ -311,7 +311,7 @@ class G extends l.Component {
     }
   }
 }
-let B = (0, c.createExperiment)({
+let H = (0, c.createExperiment)({
   kind: "user",
   id: "2024-03_media_play_metrics",
   label: "Media play metrics User Experiment",
@@ -326,7 +326,7 @@ let B = (0, c.createExperiment)({
     }
   }]
 });
-class H {
+class B {
   moveToState(e) {
     this.stateTime = performance.now(), this.currentState = e
   }
@@ -475,7 +475,7 @@ class H {
       null != e && (this.lastPlayingTime = e)
     }, this.onLoadedMetadata = e => {
       this.metadata.fileDurationSec = e.currentTarget.duration
-    }, this.metadata = e, this.analyticsEnabled = B.getCurrentConfig({
+    }, this.metadata = e, this.analyticsEnabled = H.getCurrentConfig({
       location: "media_player"
     }).enabled
   }
@@ -975,7 +975,7 @@ class V extends l.PureComponent {
         let n = (e.which - O.KeyboardKeys.DIGIT_0) / 10;
         t.currentTime = t.duration * n, this.setPlay(!0)
       }
-    }, this._analytics = new H({
+    }, this._analytics = new B({
       src: e.src,
       mimeType: null === (n = e.mimeType) || void 0 === n ? void 0 : n.join("/"),
       fileSize: e.fileSizeBytes

@@ -24,8 +24,8 @@ var i = n("37983"),
   S = n("385976"),
   C = n("575226"),
   _ = n("305781"),
-  I = n("986632"),
-  T = n("538282"),
+  T = n("986632"),
+  I = n("538282"),
   v = n("246511"),
   N = n("45961"),
   A = n("802894"),
@@ -42,8 +42,8 @@ var i = n("37983"),
   w = n("788506"),
   F = n("352046"),
   G = n("260211"),
-  B = n("964611"),
-  H = n("420489"),
+  H = n("964611"),
+  B = n("420489"),
   V = n("920514"),
   K = n("83017"),
   W = n("729873"),
@@ -59,7 +59,7 @@ let ee = (0, D.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
   et = (0, D.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
   en = e => e.stopPropagation(),
   ei = (e, t) => {
-    I.EmojiPickerStore.setInspectedExpressionPosition(e, t, v.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
+    T.EmojiPickerStore.setInspectedExpressionPosition(e, t, v.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
   },
   el = e => {
     let {
@@ -121,7 +121,7 @@ let ee = (0, D.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
       onGridNavigatorItemSelect: p,
       onGridNavigatorPositionChange: ei
     });
-    return l.useEffect(() => I.EmojiPickerStore.useStore.subscribe(e => {
+    return l.useEffect(() => T.EmojiPickerStore.useStore.subscribe(e => {
       if (null == e) return;
       let {
         columnIndex: t,
@@ -149,7 +149,7 @@ let ee = (0, D.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
         null === (e = t.current) || void 0 === e || e.scrollToSectionTop(n), i(null)
       }
     }, [t, n]), l.useEffect(() => {
-      i(I.EmojiPickerStore.getState().activeCategoryIndex)
+      i(T.EmojiPickerStore.getState().activeCategoryIndex)
     }, [e])
   },
   es = (e, t, n, i) => {
@@ -192,14 +192,14 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     } = e,
     {
       onFocus: e_,
-      onKeyDown: eI,
-      autoFocus: eT = !0,
+      onKeyDown: eT,
+      autoFocus: eI = !0,
       accessory: ev
     } = ex,
     eN = (0, d.useStateFromStores)([P.default], () => null != f ? P.default.getDefaultChannel(f) : null, [f]),
     [eA, eO] = l.useState(null),
     eR = l.useRef(""),
-    eM = (0, T.useExpressionPickerStore)(e => e.searchQuery),
+    eM = (0, I.useExpressionPickerStore)(e => e.searchQuery),
     ek = l.useRef(null),
     eL = l.useRef(null),
     eP = l.useRef(null);
@@ -215,13 +215,13 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     location: eF
   } = (0, x.useAnalyticsContext)(), {
     page: eG,
-    section: eB,
-    object: eH,
+    section: eH,
+    object: eB,
     openPopoutType: eV
   } = eh, eK = l.useMemo(() => ({
     ...eF,
-    section: null != eB ? eB : q.AnalyticsSections.EMOJI_PICKER_POPOUT
-  }), [eF, eB]), {
+    section: null != eH ? eH : q.AnalyticsSections.EMOJI_PICKER_POPOUT
+  }), [eF, eH]), {
     AnalyticsLocationProvider: eW
   } = (0, y.default)(E.default.EMOJI_PICKER), {
     diversitySurrogate: eY
@@ -255,7 +255,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
   } = (0, w.useTrackEmojiPickerOpened)({
     intention: o,
     isBurstReaction: ej,
-    analyticsObject: eH
+    analyticsObject: eB
   });
   (0, M.useMaybeFetchPremiumLikelihood)(k.default);
   let e2 = l.useCallback(() => {
@@ -281,7 +281,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
           emoji: e.emoji,
           location: {
             ...eK,
-            object: null != eH ? eH : q.AnalyticsObjects.EMOJI,
+            object: null != eB ? eB : q.AnalyticsObjects.EMOJI,
             ...null != eG && {
               page: eG
             }
@@ -323,18 +323,18 @@ var ed = l.memo(l.forwardRef(function(e, t) {
       channelGuildId: eb,
       isBurstReaction: ej
     });
-  ea(ed, eL), es(ed, eY, eP, eT), l.useEffect(() => {
-    !ef && (0, T.setSearchQuery)("")
+  ea(ed, eL), es(ed, eY, eP, eI), l.useEffect(() => {
+    !ef && (0, I.setSearchQuery)("")
   }, [ef]), l.useEffect(() => (j.default.track(q.AnalyticEvents.OPEN_POPOUT, {
     type: null != eV ? eV : "Emoji Picker",
     guild_id: eb
-  }), I.EmojiPickerStore.resetStoreState), [eV, eb]), l.useEffect(() => () => (0, R.hideHotspot)(R.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), l.useLayoutEffect(() => {
+  }), T.EmojiPickerStore.resetStoreState), [eV, eb]), l.useEffect(() => () => (0, R.hideHotspot)(R.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), l.useLayoutEffect(() => {
     var e;
     let {
       columnIndex: t,
       rowIndex: n
-    } = I.EmojiPickerStore.getState().inspectedExpressionPosition;
-    (null === (e = e1[n]) || void 0 === e ? void 0 : e[t]) == null && 0 !== t && I.EmojiPickerStore.setInspectedExpressionPosition(0, 0)
+    } = T.EmojiPickerStore.getState().inspectedExpressionPosition;
+    (null === (e = e1[n]) || void 0 === e ? void 0 : e[t]) == null && 0 !== t && T.EmojiPickerStore.setInspectedExpressionPosition(0, 0)
   }, [e1]), l.useEffect(() => {
     if ("" === eR.current && "" !== eM && (0, w.trackEmojiSearchStart)(eK, o), 0 === eZ && "" !== eM) er(eK, eM);
     else if ("" !== eM && eR.current !== eM) {
@@ -363,11 +363,11 @@ var ed = l.memo(l.forwardRef(function(e, t) {
       pickerIntention: o,
       emojiListRef: eL,
       onKeyDown: e => {
-        null == tt || tt(e), null == eI || eI(e)
+        null == tt || tt(e), null == eT || eT(e)
       },
       searchBarRef: eP,
       onFocus: e_,
-      autoFocus: eT,
+      autoFocus: eI,
       accessory: ev,
       headerClassName: em,
       hasTabWrapper: O,
@@ -404,7 +404,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
                 visibleContent: t,
                 markAsDismissed: n
               } = e;
-              if (t === c.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP) return (0, i.jsx)(H.default, {
+              if (t === c.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP) return (0, i.jsx)(B.default, {
                 markAsDismissed: () => n(X.ContentDismissActionType.UNKNOWN)
               })
             }
@@ -445,7 +445,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
           pickerIntention: o,
           channel: u
         }), r]
-      }), ey ? null : (0, i.jsx)(B.default, {
+      }), ey ? null : (0, i.jsx)(H.default, {
         className: $.categoryList,
         emojiListRef: eL,
         sectionDescriptors: e0,

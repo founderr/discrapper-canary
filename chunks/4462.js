@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return _
   },
   trackUserProfileBadgePressed: function() {
-    return I
+    return T
   }
 }), n("424973");
 var i = n("716241"),
@@ -144,7 +144,7 @@ let x = e => {
       voice_channel_id: d
     })
   },
-  I = e => {
+  T = e => {
     let {
       userId: t,
       guildId: n,

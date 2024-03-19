@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 }), n("222007");
 var i = n("37983"),
@@ -24,13 +24,13 @@ var i = n("37983"),
   S = n("49111"),
   C = n("782340"),
   _ = n("348473"),
-  I = e => {
+  T = e => {
     let {
       emojiDescriptors: t,
       emojiSize: n,
       onSelect: a,
-      onInspect: I,
-      surrogateCodePoint: T,
+      onInspect: T,
+      surrogateCodePoint: I,
       getEmojiItemProps: v,
       getEmojiRowProps: N,
       isScrolling: A,
@@ -50,8 +50,8 @@ var i = n("37983"),
       location: "EmojiPicker"
     }, {
       autoTrackExposure: !1
-    }), F = c.EmojiPickerStore.getState(), [G, B] = l.useState(F.inspectedExpressionPosition), [H, V] = (0, o.default)(null, 300), K = l.useRef(null);
-    l.useEffect(() => c.EmojiPickerStore.useStore.subscribe(e => B(e), e => e.inspectedExpressionPosition), []), l.useEffect(() => {
+    }), F = c.EmojiPickerStore.getState(), [G, H] = l.useState(F.inspectedExpressionPosition), [B, V] = (0, o.default)(null, 300), K = l.useRef(null);
+    l.useEffect(() => c.EmojiPickerStore.useStore.subscribe(e => H(e), e => e.inspectedExpressionPosition), []), l.useEffect(() => {
       p.FrecencyUserSettingsActionCreators.loadIfNecessary()
     }, []);
     let W = n === g.EmojiSize.LARGE,
@@ -69,7 +69,7 @@ var i = n("37983"),
                 toggleFavorite: !1
               }), f.default.open(e.guildId, S.GuildSettingsSections.EMOJI, S.AnalyticsSections.EMOJI_PICKER_POPOUT))
             }, c = () => {
-              !A.current && !O.current && I(e)
+              !A.current && !O.current && T(e)
             };
             return function() {
               var e;
@@ -94,7 +94,7 @@ var i = n("37983"),
                     [_.emojiItemMedium]: Y,
                     [_.emojiItemSelected]: u,
                     [null != b ? b : ""]: u,
-                    [_.showPulse]: H === t
+                    [_.showPulse]: B === t
                   }),
                   onFocus: null != h ? h : c,
                   onMouseOver: c,
@@ -125,16 +125,16 @@ var i = n("37983"),
               isInspected: r,
               isScrolling: A,
               isUsingKeyboardNavigation: O,
-              surrogateCodePoint: T,
+              surrogateCodePoint: I,
               allowAnimatedEmoji: M,
               selectedItemClassName: b,
               onSelect: a,
-              onInspect: I,
+              onInspect: T,
               channelGuildId: L,
               getEmojiItemProps: v,
               isMediumSize: Y,
               isLargeSize: W,
-              pulseItemKey: H,
+              pulseItemKey: B,
               setPulseItemKey: V,
               showEmojiFavoriteTooltip: k,
               messageId: j,

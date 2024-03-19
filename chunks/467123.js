@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return _
   },
   hasOpenPlainTextCodeBlock: function() {
-    return I
+    return T
   }
 }), n("222007"), n("70102"), n("424973"), n("781738");
 var i = n("436443"),
@@ -208,7 +208,7 @@ function _(e, t) {
   return n % 2 != 0
 }
 
-function I(e) {
+function T(e) {
   if (null == e.selection) return !1;
   let t = c.RangeUtils.start(e.selection);
   return _(e, t)

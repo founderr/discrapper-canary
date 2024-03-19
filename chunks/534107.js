@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 }), n("101997"), n("222007");
 var i = n("37983"),
@@ -52,7 +52,7 @@ function _(e, t, n) {
   }, [e, t, n]), [i, s]
 }
 
-function I(e, t, n, i) {
+function T(e, t, n, i) {
   if (null == i) return [t, !1];
   let l = Math.min((n - i) / 200, 1);
   if (1 === l) return [t, !1];
@@ -60,14 +60,14 @@ function I(e, t, n, i) {
   return [a, !0]
 }
 
-function T(e) {
+function I(e) {
   let {
     className: t,
     waveform: n,
     currentTime: a,
     duration: c,
     played: y,
-    playing: T,
+    playing: I,
     onDrag: v,
     onDragStart: N,
     onDragEnd: A
@@ -107,13 +107,13 @@ function T(e) {
         }(null != n ? n : [], i)) && void 0 !== e ? e : g
       }, [n, i]);
     return a
-  }(n, R), P = l.useRef(y), b = l.useRef(T), j = l.useRef(null), U = window.devicePixelRatio, {
+  }(n, R), P = l.useRef(y), b = l.useRef(I), j = l.useRef(null), U = window.devicePixelRatio, {
     lastBackgroundFillColor: D,
     backgroundFillColor: w,
     lastActiveFillColor: F,
     activeFillColor: G,
-    lastInactiveFillColor: B,
-    inactiveFillColor: H
+    lastInactiveFillColor: H,
+    inactiveFillColor: B
   } = function(e, t) {
     let n = (0, o.useToken)(r.default.colors.INTERACTIVE_MUTED).hex(),
       i = (0, o.useToken)(r.default.colors.INTERACTIVE_NORMAL).hex(),
@@ -134,7 +134,7 @@ function T(e) {
       lastInactiveFillColor: x,
       inactiveFillColor: E
     }
-  }(y, T);
+  }(y, I);
   l.useEffect(() => {
     let e = S({
       showAll: !y,
@@ -168,10 +168,10 @@ function T(e) {
         a = k.current;
       if (null == i || null == l || null == a) return;
       let s = !1;
-      (P.current !== y || b.current !== T) && (P.current = y, b.current = T, j.current = n), null != j.current && n > j.current + 200 && (j.current = null);
+      (P.current !== y || b.current !== I) && (P.current = y, b.current = I, j.current = n), null != j.current && n > j.current + 200 && (j.current = null);
       let r = i.height / U;
       l.clearRect(0, 0, i.width, i.height), l.beginPath();
-      let [o, u] = I(D, w, n, j.current);
+      let [o, u] = T(D, w, n, j.current);
       s = s || u, l.fillStyle = o;
       for (let e = 0; e < L.length; e++) C({
         context: l,
@@ -182,9 +182,9 @@ function T(e) {
         constrainMin: !0
       });
       l.fill();
-      let [d, c] = I(B, H, n, j.current);
+      let [d, c] = T(H, B, n, j.current);
       s = s || c;
-      let [f, p] = I(F, G, n, j.current);
+      let [f, p] = T(F, G, n, j.current);
       s = s || p;
       for (let e = 0; e < a.length; e++) {
         let t = a[e],
@@ -202,7 +202,7 @@ function T(e) {
     }), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [O, U, L, R, a, c, y, T, D, w, F, G, B, H]);
+  }, [O, U, L, R, a, c, y, I, D, w, F, G, H, B]);
   let [, V] = (0, d.default)({
     ref: O,
     onDrag: v,

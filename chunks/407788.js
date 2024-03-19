@@ -6,8 +6,8 @@ r.r(t), r.d(t, {
 }), r("808653"), r("794252"), r("424973");
 var u, n = r("506838"),
   i = r("265586"),
-  s = r("797647"),
-  E = r("730297"),
+  E = r("797647"),
+  s = r("730297"),
   l = r("792382"),
   c = r("806410"),
   o = r("49111");
@@ -32,14 +32,14 @@ u = class e extends l.default {
         return e[t] = {
           countryPrices: {
             countryCode: u.country_prices.country_code,
-            prices: u.country_prices.prices.map(e => (0, s.getPriceFromServer)(e, !0))
+            prices: u.country_prices.prices.map(e => (0, E.getPriceFromServer)(e, !0))
           },
           paymentSourcePrices: {}
         }, e
       }, {}),
       items: _.items.reduce((e, t) => (0, n.match)(t).with({
         type: i.CollectiblesItemType.AVATAR_DECORATION
-      }, t => (e.push(E.default.fromServer(t)), e)).with({
+      }, t => (e.push(s.default.fromServer(t)), e)).with({
         type: i.CollectiblesItemType.PROFILE_EFFECT
       }, t => (e.push(c.default.fromServer(t)), e)).otherwise(() => e), [])
     })

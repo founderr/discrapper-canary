@@ -24,7 +24,7 @@ let c = l.forwardRef(function(e, t) {
   } = e, E = l.useRef(null), [y, g] = (0, u.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], a.default), S = n.useStore(e => e.searchPlaceholder), C = n.useStore(e => e.inspectedExpressionPosition, a.default), _ = l.useCallback(e => {
     var t;
     n.setActiveCategoryIndex("" === e ? 0 : o.INACTIVE_CATEGORY_INDEX), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = m.current) || void 0 === t || t.scrollTo(0)
-  }, [m, n]), I = l.useCallback(() => {
+  }, [m, n]), T = l.useCallback(() => {
     (0, u.setSearchQuery)("")
   }, []);
   return l.useImperativeHandle(t, () => ({
@@ -46,7 +46,7 @@ let c = l.forwardRef(function(e, t) {
       ref: E,
       size: r.default.Sizes.MEDIUM,
       placeholder: null != S ? S : c || null == x ? h : x,
-      onClear: I,
+      onClear: T,
       onKeyDown: f,
       onQueryChange: _,
       className: d.searchBar,

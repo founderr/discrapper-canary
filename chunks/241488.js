@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return H
   }
 }), n("222007");
 var i = n("37983"),
@@ -24,8 +24,8 @@ var i = n("37983"),
   S = n("873622"),
   C = n("277855"),
   _ = n("191191"),
-  I = n("256860"),
-  T = n("364685"),
+  T = n("256860"),
+  I = n("364685"),
   v = n("889701"),
   N = n("168973"),
   A = n("983782"),
@@ -113,15 +113,15 @@ let w = k.MIN_EXPRESSION_PICKER_WIDTH + P.EmojiSize.MEDIUM,
       handleDrawerResizeHandleMouseDown: E
     }
   };
-var B = l.memo(function(e) {
+var H = l.memo(function(e) {
   var t, n, a;
   let {
     positionTargetRef: r,
     hideGifFavorites: o,
     includeCreateEmojiButton: m,
     onSelectGIF: N,
-    onSelectEmoji: B,
-    onSelectSticker: H,
+    onSelectEmoji: H,
+    onSelectSticker: B,
     onSelectSound: V,
     channel: K,
     type: W,
@@ -137,10 +137,10 @@ var B = l.memo(function(e) {
     positionContainerRef: X,
     drawerRef: ee,
     orientation: et
-  }), el = (0, M.useExpressionPickerStore)(e => e.activeView), ea = (0, I.useHasSendableSticker)(K), {
+  }), el = (0, M.useExpressionPickerStore)(e => e.activeView), ea = (0, T.useHasSendableSticker)(K), {
     renderWindow: es,
     windowDispatch: er
-  } = l.useContext(E.default), eo = (0, c.useStateFromStores)([T.default], () => !T.default.hasLoadedStickerPacks), eu = (0, C.useSoundmojiExperiment)("expression_picker"), ed = null != q, ec = (0, f.useIsModalAtTop)(null != q ? q : ""), ef = l.useCallback(e => {
+  } = l.useContext(E.default), eo = (0, c.useStateFromStores)([I.default], () => !I.default.hasLoadedStickerPacks), eu = (0, C.useSoundmojiExperiment)("expression_picker"), ed = null != q, ec = (0, f.useIsModalAtTop)(null != q ? q : ""), ef = l.useCallback(e => {
     var t;
     if (!ed && (0, f.hasAnyModalOpen)() || ed && !(ec && J)) return;
     let {
@@ -179,7 +179,7 @@ var B = l.memo(function(e) {
     }
   });
   let em = (null === (t = W.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile && null != N,
-    eh = (null === (n = W.stickers) || void 0 === n ? void 0 : n.allowSending) && null != H,
+    eh = (null === (n = W.stickers) || void 0 === n ? void 0 : n.allowSending) && null != B,
     ex = !(null === (a = W.expressionPicker) || void 0 === a ? void 0 : a.onlyEmojis) && (em || eh),
     eE = "left" === z ? "right" : "left",
     ey = null != Z ? Z : "left" === z ? D.positionLayerDefaultAlignLeft : D.positionLayerDefaultAlignRight;
@@ -262,7 +262,7 @@ var B = l.memo(function(e) {
                 isLoading: eo,
                 channel: K,
                 containerWidth: en,
-                onSelectSticker: H,
+                onSelectSticker: B,
                 closePopout: ep,
                 ref: e => {
                   $.current = e
@@ -280,7 +280,7 @@ var B = l.memo(function(e) {
                 emojiSize: null != en && en < w ? P.EmojiSize.MEDIUM : P.EmojiSize.LARGE,
                 pickerIntention: b.EmojiIntention.CHAT,
                 closePopout: ep,
-                onSelectEmoji: B,
+                onSelectEmoji: H,
                 ref: e => {
                   $.current = e
                 }

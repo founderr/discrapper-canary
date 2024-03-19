@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var s = n("414456"),
-  r = n.n(s),
+var r = n("414456"),
+  s = n.n(r),
   l = n("79798"),
   a = n("988268"),
   o = n("293005"),
@@ -18,23 +18,23 @@ var s = n("414456"),
     let {
       name: t,
       discriminator: n,
-      invertBotTagColor: s,
+      invertBotTagColor: r,
       nameColor: a,
       className: u,
       botType: c,
       usernameClass: d,
       discriminatorClass: f,
       botClass: h,
-      botVerified: v = !1,
-      style: E,
+      botVerified: E = !1,
+      style: v,
       useRemSizes: C = !1,
       usernameIcon: p
     } = e;
     return (0, i.jsxs)("div", {
-      className: r(u, o.nameTag),
-      style: E,
+      className: s(u, o.nameTag),
+      style: v,
       children: [(0, i.jsxs)("span", {
-        className: r(o.username, d),
+        className: s(o.username, d),
         style: null != a ? {
           color: a
         } : void 0,
@@ -44,9 +44,9 @@ var s = n("414456"),
         children: ["#", n]
       }) : null, null != c ? (0, i.jsx)(l.default, {
         type: c,
-        invertColor: s,
-        className: r(h, o.bot),
-        verified: v,
+        invertColor: r,
+        className: s(h, o.bot),
+        verified: E,
         useRemSizes: C
       }) : null]
     })

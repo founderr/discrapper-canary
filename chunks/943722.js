@@ -27,8 +27,8 @@ var i = n("37983"),
   S = n("824563"),
   C = n("800762"),
   _ = n("137783"),
-  I = n("49111"),
-  T = n("73276");
+  T = n("49111"),
+  I = n("73276");
 
 function v(e) {
   let {
@@ -37,7 +37,7 @@ function v(e) {
     animate: l = !0,
     hideTooltip: a
   } = e, r = x.AnimateEmoji.useSetting(), d = null != t.id ? ":".concat(t.name, ":") : f.default.translateSurrogatesToInlineEmoji(t.name), c = {
-    className: s(T.emoji, n),
+    className: s(I.emoji, n),
     emojiId: t.id,
     emojiName: t.name,
     autoplay: !0,
@@ -78,7 +78,7 @@ let N = e => {
         ref: a,
         children: n
       }), (0, i.jsx)("div", {
-        className: s(T.textRuler, t),
+        className: s(I.textRuler, t),
         ref: r,
         "aria-hidden": !0,
         children: n
@@ -98,7 +98,7 @@ var A = e => {
     hideTooltip: f = !1,
     hideEmoji: x = !1,
     user: A
-  } = e, O = null != n ? n.find(e => e.type === I.ActivityTypes.CUSTOM_STATUS) : null, R = (0, r.useStateFromStores)([E.default], () => E.default.getId() === (null == A ? void 0 : A.id)), M = (0, r.useStateFromStores)([m.default], () => R ? m.default.getHangStatusActivity() : null != n ? n.find(e => e.type === I.ActivityTypes.HANG_STATUS) : null), k = (0, r.useStateFromStores)([C.default, y.default], () => {
+  } = e, O = null != n ? n.find(e => e.type === T.ActivityTypes.CUSTOM_STATUS) : null, R = (0, r.useStateFromStores)([E.default], () => E.default.getId() === (null == A ? void 0 : A.id)), M = (0, r.useStateFromStores)([m.default], () => R ? m.default.getHangStatusActivity() : null != n ? n.find(e => e.type === T.ActivityTypes.HANG_STATUS) : null), k = (0, r.useStateFromStores)([C.default, y.default], () => {
     var e;
     return null != M && null != A ? y.default.getChannel(null === (e = C.default.getVoiceStateForUser(A.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), {
@@ -108,7 +108,7 @@ var A = e => {
     location: "ActivityStatus"
   }, {
     autoTrackExposure: !1
-  }), P = null, b = L && null != M && g.default.can(I.Permissions.CONNECT, k);
+  }), P = null, b = L && null != M && g.default.can(T.Permissions.CONNECT, k);
   b ? P = (0, i.jsx)(h.default, {
     className: o,
     hangStatusActivity: M
@@ -119,7 +119,7 @@ var A = e => {
     className: o
   }));
   let j = (0, r.useStateFromStores)([S.default], () => null != A ? S.default.getStatus(A.id) : null),
-    U = null !== j && [I.StatusTypes.OFFLINE, I.StatusTypes.INVISIBLE].includes(j),
+    U = null !== j && [T.StatusTypes.OFFLINE, T.StatusTypes.INVISIBLE].includes(j),
     D = null === (t = (0, c.default)(n, l, void 0, b)) || void 0 === t ? void 0 : t.activityText,
     w = null != D && D.length > 0;
   return U || null == P && !w ? null : (0, i.jsxs)("div", {
@@ -130,7 +130,7 @@ var A = e => {
     }), null != n && n.some(e => (0, d.default)(e, b)) ? (0, i.jsx)(_.default, {
       width: 16,
       height: 16,
-      className: T.icon
+      className: I.icon
     }) : null]
   })
 }

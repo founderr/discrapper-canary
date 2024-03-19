@@ -41,20 +41,20 @@ function h(e) {
       restrictMentions: S,
       respectCooldown: C,
       userCanUsePremiumMessageLength: _,
-      resolve: I
+      resolve: T
     } = e;
     if (0 === x.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == E || 0 === E.length) && (null == y || 0 === y.length)) {
-      I({
+      T({
         valid: !1,
         failureReason: p.MessageRestrictionTypes.EMPTY_MESSAGE
       });
       return
     }
-    let T = _ ? p.MAX_MESSAGE_LENGTH_PREMIUM : p.MAX_MESSAGE_LENGTH;
-    if (x.length > T) {
+    let I = _ ? p.MAX_MESSAGE_LENGTH_PREMIUM : p.MAX_MESSAGE_LENGTH;
+    if (x.length > I) {
       if (_ || null == g) {
         ;
-        n = x.length, u = T, (0, l.openModal)(e => (0, i.jsx)(s.default, {
+        n = x.length, u = I, (0, l.openModal)(e => (0, i.jsx)(s.default, {
           title: m.default.Messages.MESSAGE_TOO_LONG_HEADER,
           body: m.default.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
             currentLength: n,
@@ -71,7 +71,7 @@ function h(e) {
         channel: g,
         content: x
       });
-      I({
+      T({
         valid: !1,
         failureReason: p.MessageRestrictionTypes.MESSAGE_TOO_LONG
       });
@@ -79,7 +79,7 @@ function h(e) {
     }
     if (null != g) {
       if (null != g.getGuildId() && C && o.default.getSlowmodeCooldownGuess(g.id) > 0) {
-        I({
+        T({
           valid: !1,
           failureReason: p.MessageRestrictionTypes.SLOWMODE_COOLDOWN
         });
@@ -97,11 +97,11 @@ function h(e) {
             f({
               analyticsType: t,
               channel: g,
-              onCancel: () => I({
+              onCancel: () => T({
                 valid: !1,
                 failureReason: p.MessageRestrictionTypes.SHOUTING_CANCELLED
               }),
-              onConfirm: () => I({
+              onConfirm: () => T({
                 valid: !0
               }),
               popoutText: i,
@@ -119,13 +119,13 @@ function h(e) {
         ...e
       }), {
         onCloseRequest: p.NOOP
-      }), I({
+      }), T({
         valid: !1,
         failureReason: p.MessageRestrictionTypes.RATE_LIMITED
       });
       return
     }
-    I({
+    T({
       valid: !0
     })
   })({

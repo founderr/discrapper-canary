@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 }), n("222007");
 var i = n("37983"),
@@ -25,19 +25,19 @@ var i = n("37983"),
   C = n("715392"),
   _ = n("862939");
 
-function I(e) {
+function T(e) {
   var t, n;
-  let a, I, {
-      userId: T,
+  let a, T, {
+      userId: I,
       channelId: v,
       guild: N,
       theme: A,
       onClose: O,
       className: R
     } = e,
-    M = (0, d.default)(N, T, v),
+    M = (0, d.default)(N, I, v),
     [k, L] = l.useState(new Set),
-    P = (0, r.useStateFromStores)([m.default], () => m.default.getUserProfile(T)),
+    P = (0, r.useStateFromStores)([m.default], () => m.default.getUserProfile(I)),
     b = null !== (t = null == P ? void 0 : P.connectedAccounts) && void 0 !== t ? t : [],
     j = null !== (n = null == P ? void 0 : P.applicationRoleConnections) && void 0 !== n ? n : [],
     U = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation),
@@ -59,7 +59,7 @@ function I(e) {
       connectedAccount: t,
       theme: A,
       locale: D,
-      userId: T
+      userId: I
     }, "".concat(t.type, ":").concat(t.id))
   }).filter(e => null != e);
   return (w.length > 0 && (a = (0, i.jsxs)(i.Fragment, {
@@ -72,7 +72,7 @@ function I(e) {
       children: [w, (0, i.jsxs)(o.Clickable, {
         onClick: function() {
           (0, x.openUserProfileModal)({
-            userId: T,
+            userId: I,
             guildId: null == N ? void 0 : N.id,
             channelId: v,
             section: y.UserProfileSections.USER_INFO_CONNECTIONS,
@@ -93,7 +93,7 @@ function I(e) {
         })]
       })]
     })]
-  })), j.length > 0 && (I = (0, i.jsxs)(i.Fragment, {
+  })), j.length > 0 && (T = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(o.Heading, {
       variant: "eyebrow",
       className: _.title,
@@ -105,7 +105,7 @@ function I(e) {
         locale: D
       }, e.application.id))
     })]
-  })), null == a && null == I) ? null : (0, i.jsxs)(E.default, {
-    children: [I, a]
+  })), null == a && null == T) ? null : (0, i.jsxs)(E.default, {
+    children: [T, a]
   })
 }

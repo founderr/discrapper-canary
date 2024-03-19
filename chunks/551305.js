@@ -56,8 +56,8 @@ var x = s.memo(function(e) {
     onMouseLeave: S,
     onFocus: C,
     onBlur: _,
-    pulse: I,
-    sparkle: T,
+    pulse: T,
+    sparkle: I,
     notification: v,
     "aria-label": N,
     "aria-expanded": A,
@@ -95,7 +95,7 @@ var x = s.memo(function(e) {
       [m.active]: y
     }),
     innerClassName: o(m.button, i, {
-      [m.pulseButton]: I
+      [m.pulseButton]: T
     }),
     onClick: E,
     onMouseEnter: g,
@@ -124,12 +124,12 @@ var x = s.memo(function(e) {
         children: k({
           component: (0, a.jsx)(r, {
             className: o(m.icon, s, {
-              [m.pulseIcon]: I
+              [m.pulseIcon]: T
             })
           })
         })
       }, i) : void 0
-    }), T && (0, a.jsxs)("div", {
+    }), I && (0, a.jsxs)("div", {
       className: m.sparkleContainer,
       children: [(0, a.jsx)(f.default, {
         className: m.sparkleStar

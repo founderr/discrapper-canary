@@ -28,10 +28,10 @@ E.r(_), E.d(_, {
     return C
   },
   mutateUserChannelSettingsInternal: function() {
-    return D
+    return c
   },
   runMigrations: function() {
-    return c
+    return D
   },
   serializeUsageHistory: function() {
     return d
@@ -92,14 +92,14 @@ function L(e, _, E) {
 
 function C(e, _, E, t) {
   var o, n, r;
-  return o = e, n = _, r = e => D(e, E, t), null == o.guilds && (o.guilds = a.AllGuildSettings.create()), L(o.guilds, n, r)
+  return o = e, n = _, r = e => c(e, E, t), null == o.guilds && (o.guilds = a.AllGuildSettings.create()), L(o.guilds, n, r)
 }
 
-function D(e, _, E) {
+function c(e, _, E) {
   return !(_ in e.channels) && (e.channels[_] = a.ChannelSettings.create()), E(e.channels[_])
 }
 
-function c(e, _) {
+function D(e, _) {
   null == e.versions && (e.versions = i.Versions.create());
   let E = 0;
   for (let e of _) {

@@ -7,15 +7,15 @@ r.r(t), r.d(t, {
 });
 var n = r("446674"),
   i = r("913144");
-let s = [],
-  E = s,
+let E = [],
+  s = E,
   l = null,
   c = e => {
-    E = s, l = null
+    s = E, l = null
   };
 class o extends n.default.Store {
   get analyticsLocations() {
-    return E
+    return s
   }
   get analyticsSource() {
     return l
@@ -25,7 +25,7 @@ class o extends n.default.Store {
   }
   getAnalytics() {
     return {
-      analyticsLocations: E,
+      analyticsLocations: s,
       analyticsSource: l
     }
   }
@@ -34,7 +34,7 @@ o.displayName = "CollectiblesShopStore";
 var a = new o(i.default, {
   COLLECTIBLES_SHOP_OPEN: e => {
     var t, r;
-    E = null !== (t = e.analyticsLocations) && void 0 !== t ? t : s, l = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, u = e.initialProductSkuId
+    s = null !== (t = e.analyticsLocations) && void 0 !== t ? t : E, l = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, u = e.initialProductSkuId
   },
   COLLECTIBLES_SHOP_CLOSE: c,
   COLLECTIBLES_PRODUCT_DETAILS_OPEN: e => {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
 var i = n("37983"),
@@ -25,17 +25,17 @@ var i = n("37983"),
   C = n("782340"),
   _ = n("925063");
 
-function I(e) {
+function T(e) {
   let {
     user: t,
     autoFocus: n = !1,
     className: a,
     inputClassName: r,
-    onSend: I
-  } = e, T = l.useRef(null), v = (0, u.useStateFromStores)([E.default], () => E.default.isBlocked(t.id)), N = l.useCallback(e => {
+    onSend: T
+  } = e, I = l.useRef(null), v = (0, u.useStateFromStores)([E.default], () => E.default.isBlocked(t.id)), N = l.useCallback(e => {
     if ("Enter" === e.key) {
-      e.preventDefault(), o(null != T.current, "Keypress on Input when not mounted");
-      let n = T.current.value.trim();
+      e.preventDefault(), o(null != I.current, "Keypress on Input when not mounted");
+      let n = I.current.value.trim();
       return (0, g.applyChatRestrictions)({
         type: m.ChatInputTypes.NORMAL,
         content: n,
@@ -47,17 +47,17 @@ function I(e) {
         i && (c.default.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
           let t = x.default.getChannel(e);
           o(null != t, "Newly created PrivateChannel is null"), p.default.sendMessage(t.id, h.default.parse(t, n)), (0, f.popLayer)()
-        }), null == I || I())
+        }), null == T || T())
       }), !0
     }
     e.which === S.KeyboardKeys.SPACE && e.stopPropagation()
-  }, [t, I]), A = v ? C.default.Messages.QUICK_DM_BLOCKED : C.default.Messages.QUICK_DM_USER.format({
+  }, [t, T]), A = v ? C.default.Messages.QUICK_DM_BLOCKED : C.default.Messages.QUICK_DM_USER.format({
     name: y.default.getName(t)
   });
   return (0, i.jsx)(d.TextInput, {
     className: a,
     inputClassName: s(r, _.input),
-    inputRef: T,
+    inputRef: I,
     autoFocus: n,
     placeholder: A,
     "aria-label": A,
