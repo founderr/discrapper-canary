@@ -36,8 +36,8 @@ var i = n("37983"),
   S = n("153043"),
   C = n("256941"),
   I = n("270295"),
-  T = n("626301"),
-  _ = n("505233"),
+  _ = n("626301"),
+  T = n("505233"),
   v = n("635956"),
   N = n("393414"),
   A = n("324929"),
@@ -253,7 +253,7 @@ let Z = () => {
     U && (X = !0, et = !0, ee = !1, Q = !1);
     let {
       enabled: en
-    } = _.NitroBadgeOnEmojiHoverExperiment.useExperiment({
+    } = T.NitroBadgeOnEmojiHoverExperiment.useExperiment({
       location: "CustomGuildEmojiPopout"
     }, {
       autoTrackExposure: !0
@@ -297,7 +297,7 @@ let Z = () => {
           O(), D.default.track(V.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
             location_page: ei.page,
             location_section: ei.section
-          }), (0, T.navigateToPremiumMarketingPage)()
+          }), (0, _.navigateToPremiumMarketingPage)()
         }
       }),
       ec = ee && ea && !er && (X && el || !X),

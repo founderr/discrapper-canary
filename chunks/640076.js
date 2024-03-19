@@ -24,8 +24,8 @@ var i = n("37983"),
   S = n("538282"),
   C = n("246511"),
   I = n("45961"),
-  T = n("515059"),
-  _ = n("139321"),
+  _ = n("515059"),
+  T = n("139321"),
   v = n("454655"),
   N = n("635956"),
   A = n("845579"),
@@ -108,7 +108,7 @@ let z = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       K.current !== H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(K.current), K.current = window.requestAnimationFrame(() => {
         g.EmojiPickerStore.setInspectedExpressionPosition(t, n, C.InspectedExpressionChangeSource.MOUSE_EVENT), g.EmojiPickerStore.setSearchPlaceholder(i), K.current = H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
       })
-    }, []), ea = (0, c.useStateFromStores)([_.HotspotStore], () => _.HotspotStore.hasHotspot(_.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), es = l.useMemo(() => o.memoize((e, t) => {
+    }, []), ea = (0, c.useStateFromStores)([T.HotspotStore], () => T.HotspotStore.hasHotspot(T.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), es = l.useMemo(() => o.memoize((e, t) => {
       let n = a[e],
         l = p[t.sectionIndex];
       return (0, i.jsx)(G.default, {
@@ -161,7 +161,7 @@ let z = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           f = n.isNitroLocked,
           m = b && f && !c,
           h = b && f && c;
-        return (0, i.jsx)(T.default, {
+        return (0, i.jsx)(_.default, {
           className: s(Y.header, R, {
             [Y.inactiveNitroHeader]: m,
             [Y.activeNitroHeader]: h
@@ -231,8 +231,8 @@ let z = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       rowCountBySection: f,
       collapsedSections: p,
       setCollapsedSections: C,
-      getEmojiItemProps: T,
-      getEmojiRowProps: _,
+      getEmojiItemProps: _,
+      getEmojiRowProps: T,
       rowCount: v,
       isUsingKeyboardNavigation: b,
       channelGuildId: j,
@@ -275,8 +275,8 @@ let z = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       searchQuery: B,
       sectionDescriptors: o,
       setCollapsedSections: C,
-      getEmojiItemProps: T,
-      getEmojiRowProps: _,
+      getEmojiItemProps: _,
+      getEmojiRowProps: T,
       isScrolling: F,
       isUsingKeyboardNavigation: b,
       allowAnimatedEmoji: V,

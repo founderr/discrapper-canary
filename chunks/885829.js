@@ -26,8 +26,8 @@ async function C(t) {
     applicationId: C,
     instanceId: v,
     inputApplication: S,
-    analyticsLocations: p,
-    embeddedActivitiesManager: N
+    analyticsLocations: N,
+    embeddedActivitiesManager: p
   } = t, y = _.default.getEmbeddedActivitiesForChannel(i), h = y.find(t => t.applicationId === C && (null == v || t.instanceId === v)), D = S;
   if (null == D) {
     let t = await l.default.fetchApplication(C);
@@ -101,8 +101,8 @@ async function C(t) {
         currentEmbeddedApplication: M,
         activityChannelId: i,
         locationObject: {},
-        embeddedActivitiesManager: N,
-        analyticsLocations: p
+        embeddedActivitiesManager: p,
+        analyticsLocations: N
       })
     }
   })

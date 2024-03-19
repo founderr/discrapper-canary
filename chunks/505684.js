@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return I
   },
   default: function() {
-    return _
+    return T
   }
 }), n("222007");
 var i, l, a = n("37983"),
@@ -102,7 +102,7 @@ let y = e => {
     })
   },
   I = s.createContext(!1);
-class T extends s.PureComponent {
+class _ extends s.PureComponent {
   renderWithTooltip(e) {
     return (0, a.jsx)(c.Tooltip, {
       position: "left",
@@ -354,5 +354,5 @@ class T extends s.PureComponent {
     }
   }
 }
-T.Types = i, T.Reasons = f.ObscureReason;
-var _ = T
+_.Types = i, _.Reasons = f.ObscureReason;
+var T = _

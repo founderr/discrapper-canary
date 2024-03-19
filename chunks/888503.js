@@ -27,8 +27,8 @@ var i = n("37983"),
   S = n("943722"),
   C = n("49111"),
   I = n("988268"),
-  T = n("39141"),
-  _ = n("782340"),
+  _ = n("39141"),
+  T = n("782340"),
   v = n("591665");
 let N = (0, y.cssValueToNumber)(r.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 var A = function(e) {
@@ -77,13 +77,13 @@ var A = function(e) {
   }), er = e => {
     ei(e)
   }, eo = () => null != r && r && null == N ? (0, i.jsx)(o.Tooltip, {
-    text: null != y ? y : _.default.Messages.GUILD_OWNER,
+    text: null != y ? y : T.default.Messages.GUILD_OWNER,
     children: e => (0, i.jsx)(h.default, {
       ...e,
       className: v.ownerIcon
     })
   }) : null, eu = () => null == U ? null : (0, i.jsx)(o.Tooltip, {
-    text: _.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
+    text: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
       date: U
     }),
     children: e => (0, i.jsx)(o.Clickable, {
@@ -154,7 +154,7 @@ var A = function(e) {
         }), (0, i.jsx)(c.default, {
           confettiSpawnRef: en,
           shouldFire: A && null != M && e.id !== M.id,
-          confettiLocation: T.ConfettiLocation.MEMBER_USER
+          confettiLocation: _.ConfettiLocation.MEMBER_USER
         })]
       })
     })(R, ef),

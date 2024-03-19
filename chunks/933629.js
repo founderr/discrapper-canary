@@ -67,8 +67,8 @@ var i, l, a = n("37983"),
   S = n("298878"),
   C = n("793237"),
   I = n("347738"),
-  T = n("584998"),
-  _ = n("845579"),
+  _ = n("584998"),
+  T = n("845579"),
   v = n("324929"),
   N = n("876308"),
   A = n("660478"),
@@ -177,7 +177,7 @@ function ee(e) {
     disableAltTextDisplay: u = !1,
     mediaLayoutType: d,
     imageContainerStyle: c
-  } = e, f = d === W.MediaLayoutType.MOSAIC, m = !u && _.ViewImageDescriptions.getSetting() && null != t && "" !== t && !0 !== n, h = e => {
+  } = e, f = d === W.MediaLayoutType.MOSAIC, m = !u && T.ViewImageDescriptions.getSetting() && null != t && "" !== t && !0 !== n, h = e => {
     let {
       altText: t
     } = e;
@@ -397,7 +397,7 @@ function es(e) {
     scrollManager: u
   } = e, {
     disableInteractions: x
-  } = s.useContext(b.MessagesInteractionContext), [E, _] = s.useState(null), v = s.useRef(null), [N, R] = s.useState(null), M = s.useRef(null), k = (0, f.useStateFromStoresArray)([I.default], () => {
+  } = s.useContext(b.MessagesInteractionContext), [E, T] = s.useState(null), v = s.useRef(null), [N, R] = s.useState(null), M = s.useRef(null), k = (0, f.useStateFromStoresArray)([I.default], () => {
     var e;
     return null !== (e = I.default.summaries(l.id)) && void 0 !== e ? e : []
   }, [l]), L = (0, g.default)(k);
@@ -428,8 +428,8 @@ function es(e) {
   null == W && null == E && (null == k ? void 0 : k.length) >= 1 && (W = null === (i = k[0]) || void 0 === i ? void 0 : i.topic);
   let Z = s.useMemo(() => d.debounce(e => {
       var t;
-      _(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
-    }, 64), [_]),
+      T(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
+    }, 64), [T]),
     J = s.useMemo(() => d.throttle(() => {
       (0, C.setHighlightedSummary)(null)
     }, 1200, {
@@ -512,7 +512,7 @@ function es(e) {
   }, [l.id]), s.useEffect(() => (document.addEventListener("mousedown", en), () => {
     document.removeEventListener("mousedown", en)
   }), [en]);
-  let ei = s.useMemo(() => (0, a.jsx)(T.default, {
+  let ei = s.useMemo(() => (0, a.jsx)(_.default, {
       channel: l,
       summaries: k,
       summariesMembers: G,
@@ -628,7 +628,7 @@ function eo(e) {
     scrollManager: r
   } = e, {
     disableInteractions: u
-  } = s.useContext(b.MessagesInteractionContext), [h, x] = s.useState(null), E = s.useRef(null), [_, v] = s.useState(null), N = s.useRef(null), A = (0, f.useStateFromStoresArray)([I.default], () => {
+  } = s.useContext(b.MessagesInteractionContext), [h, x] = s.useState(null), E = s.useRef(null), [T, v] = s.useState(null), N = s.useRef(null), A = (0, f.useStateFromStoresArray)([I.default], () => {
     var e;
     return null !== (e = I.default.summaries(l.id)) && void 0 !== e ? e : []
   }, [l]), R = (0, g.default)(A);
@@ -723,13 +723,13 @@ function eo(e) {
       null != n && v(n)
     }, []);
   s.useEffect(() => {
-    if (null != _ && Z) {
+    if (null != T && Z) {
       var e;
       null === (e = N.current) || void 0 === e || e.scrollTo({
-        top: _
+        top: T
       })
     }
-  }, [_, Z]);
+  }, [T, Z]);
   let et = s.useCallback(e => {
     var t;
     !((0, c.isElement)(e.target) && (null === (t = E.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
@@ -751,7 +751,7 @@ function eo(e) {
   }, [l.id]), s.useEffect(() => (document.addEventListener("mousedown", et), () => {
     document.removeEventListener("mousedown", et)
   }), [et]);
-  let en = s.useMemo(() => (0, a.jsx)(T.default, {
+  let en = s.useMemo(() => (0, a.jsx)(_.default, {
       channel: l,
       summaries: A,
       summariesMembers: M,

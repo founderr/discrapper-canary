@@ -27,7 +27,7 @@ let x = l.forwardRef(function(e, t) {
     autoFocus: g,
     className: S,
     defaultSearchPlaceholder: C
-  } = e, I = l.useRef(null), T = (0, c.useExpressionPickerStore)(e => e.searchQuery), [_, v] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), N = l.useCallback(e => {
+  } = e, I = l.useRef(null), _ = (0, c.useExpressionPickerStore)(e => e.searchQuery), [T, v] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), N = l.useCallback(e => {
     var t;
     d.EmojiPickerStore.setActiveCategoryIndex("" === e ? 0 : f.INACTIVE_CATEGORY_INDEX), d.EmojiPickerStore.setInspectedExpressionPosition(0, 0), d.EmojiPickerStore.setSearchPlaceholder(null), (0, c.setSearchQuery)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0)
   }, [n]), A = l.useCallback(() => {
@@ -40,7 +40,7 @@ let x = l.forwardRef(function(e, t) {
     }
   })), (0, i.jsx)(u.default, {
     autoFocus: g,
-    query: T,
+    query: _,
     ref: I,
     size: u.default.Sizes.MEDIUM,
     placeholder: null != v ? v : C,
@@ -67,7 +67,7 @@ let x = l.forwardRef(function(e, t) {
       "aria-haspopup": "grid",
       "aria-controls": a,
       "aria-expanded": !0,
-      "aria-activedescendant": (0, o.makeGridId)(a, _.columnIndex, _.rowIndex)
+      "aria-activedescendant": (0, o.makeGridId)(a, T.columnIndex, T.rowIndex)
     }
   })
 });

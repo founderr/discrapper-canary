@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return i
   },
   useForumPostMediaThumbnail: function() {
-    return T
+    return _
   },
   useForumPostMediaProperties: function() {
-    return _
+    return T
   },
   useFindFirstMediaProperties: function() {
     return v
@@ -136,9 +136,9 @@ function I(e, t) {
   }).filter(p.isNotNullish) : []
 }
 
-function T(e, t) {
+function _(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    i = _(e, n);
+    i = T(e, n);
   return a.useMemo(() => {
     if (null == t) return [];
     if (!t.isMediaChannel()) return i;
@@ -149,7 +149,7 @@ function T(e, t) {
   }, [t, i])
 }
 
-function _(e, t) {
+function T(e, t) {
   let n = C(e),
     i = I(e, t);
   return [...n, ...i]

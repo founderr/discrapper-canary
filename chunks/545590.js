@@ -52,7 +52,7 @@ function C(e) {
       children: [(0, i.jsx)(x.default, {
         application: a,
         className: S.button
-      }), o && (d ? (0, i.jsx)(T, {
+      }), o && (d ? (0, i.jsx)(_, {
         app: a,
         listing: null != u ? u : void 0,
         guildId: n
@@ -93,7 +93,7 @@ function I(e) {
   })
 }
 
-function T(e) {
+function _(e) {
   let {
     app: t,
     listing: l,

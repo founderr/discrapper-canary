@@ -82,7 +82,7 @@ function g(e, t, n, i) {
         };
         if (I(e, o, l, a)) continue;
         let s = (0, r.resolvePlaintextInlineVoid)(m[0], n, i);
-        null != s && T(i, t[0], s) ? E.push({
+        null != s && _(i, t[0], s) ? E.push({
           index: m.index,
           length: m[0].length,
           node: s
@@ -249,7 +249,7 @@ function C(e, t, n, i) {
       default:
         continue
     }
-    if (!T(n, t[0], s)) continue;
+    if (!_(n, t[0], s)) continue;
     let o = (0, u.getPointFromPosition)(e, l, i.serializedChildren, r.start),
       d = (0, u.getPointFromPosition)(e, l, i.serializedChildren, r.start + r.text.length);
     c.SlateTransforms.textToVoid(e, s, {
@@ -278,7 +278,7 @@ function I(e, t, n, i) {
   return !1
 }
 
-function T(e, t, n) {
+function _(e, t, n) {
   if ("applicationCommandOption" !== t.type) return !0;
   switch (t.optionType) {
     case a.ApplicationCommandOptionType.CHANNEL:

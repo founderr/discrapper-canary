@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return _
   }
 }), n("222007");
 var i = n("37983"),
@@ -53,7 +53,7 @@ function I(e) {
   })
 }
 
-function T(e) {
+function _(e) {
   let {
     user: t,
     setNote: n,

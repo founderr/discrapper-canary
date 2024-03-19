@@ -24,8 +24,8 @@ var i = n("37983"),
   S = n("215550"),
   C = n("782340"),
   I = n("348473");
-let T = (e, t) => "".concat(e, ":").concat(t),
-  _ = l.forwardRef(function(e, t) {
+let _ = (e, t) => "".concat(e, ":").concat(t),
+  T = l.forwardRef(function(e, t) {
     let n, {
         emoji: l,
         isFavorite: a,
@@ -36,8 +36,8 @@ let T = (e, t) => "".concat(e, ":").concat(t),
         showPulse: h,
         columnIndex: x,
         rowIndex: y,
-        size: T,
-        surrogateCodePoint: _,
+        size: _,
+        surrogateCodePoint: T,
         allowAnimatedEmoji: v,
         selectedItemClassName: N,
         inNitroLockedSection: A,
@@ -77,8 +77,8 @@ let T = (e, t) => "".concat(e, ":").concat(t),
           columnIndex: x,
           rowIndex: y,
           emoji: l,
-          size: T,
-          surrogateCodePoint: _,
+          size: _,
+          surrogateCodePoint: T,
           allowAnimatedEmoji: v,
           isLocked: k
         })
@@ -148,7 +148,7 @@ function v(e) {
       ...d,
       key: a,
       ref: H
-    }, w !== T(Y, f) && (0, i.jsx)(_, {
+    }, w !== _(Y, f) && (0, i.jsx)(T, {
       ref: r,
       emoji: V,
       isFavorite: B.isFavoriteEmojiWithoutFetchingLatest(V),
@@ -166,7 +166,7 @@ function v(e) {
         if (null != H.current && null != U && null != P && !e.shiftKey && null != V.name && j && !G && L) {
           let e = null == V.id ? p.default.convertNameToSurrogate(V.name) : V.name,
             t = H.current.getBoundingClientRect();
-          t.x = U.x + (Y + 1) * K, F(T(Y, f)), (0, x.addReactionPickerAnimation)(P, e, V.id, t)
+          t.x = U.x + (Y + 1) * K, F(_(Y, f)), (0, x.addReactionPickerAnimation)(P, e, V.id, t)
         }
         z(e)
       },

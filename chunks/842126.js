@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return _
   }
 }), n("222007");
 var i = n("37983"),
@@ -24,13 +24,13 @@ var i = n("37983"),
   S = n("49111"),
   C = n("782340"),
   I = n("348473"),
-  T = e => {
+  _ = e => {
     let {
       emojiDescriptors: t,
       emojiSize: n,
       onSelect: a,
-      onInspect: T,
-      surrogateCodePoint: _,
+      onInspect: _,
+      surrogateCodePoint: T,
       getEmojiItemProps: v,
       getEmojiRowProps: N,
       isScrolling: A,
@@ -69,7 +69,7 @@ var i = n("37983"),
                 toggleFavorite: !1
               }), f.default.open(e.guildId, S.GuildSettingsSections.EMOJI, S.AnalyticsSections.EMOJI_PICKER_POPOUT))
             }, c = () => {
-              !A.current && !O.current && T(e)
+              !A.current && !O.current && _(e)
             };
             return function() {
               var e;
@@ -125,11 +125,11 @@ var i = n("37983"),
               isInspected: r,
               isScrolling: A,
               isUsingKeyboardNavigation: O,
-              surrogateCodePoint: _,
+              surrogateCodePoint: T,
               allowAnimatedEmoji: M,
               selectedItemClassName: P,
               onSelect: a,
-              onInspect: T,
+              onInspect: _,
               channelGuildId: L,
               getEmojiItemProps: v,
               isMediumSize: Y,

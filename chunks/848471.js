@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ToolbarButtons: function() {
-    return _
+    return T
   },
   default: function() {
     return v
@@ -27,9 +27,9 @@ var i = n("37983"),
   S = n("939563"),
   C = n("385887"),
   I = n("395364"),
-  T = n("681426");
+  _ = n("681426");
 
-function _(e) {
+function T(e) {
   var t;
   let {
     editorRef: n,
@@ -38,44 +38,44 @@ function _(e) {
     dividerClassName: r
   } = e, o = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor();
   return null == o ? null : (0, i.jsxs)("div", {
-    className: T.buttons,
+    className: _.buttons,
     children: [(0, i.jsx)(N, {
       slateEditor: o,
       markdownSyntax: "bold",
       children: (0, i.jsx)(c.default, {
-        className: s(T.icon, a)
+        className: s(_.icon, a)
       })
     }), (0, i.jsx)(N, {
       slateEditor: o,
       markdownSyntax: "italics",
       children: (0, i.jsx)(p.default, {
-        className: s(T.icon, a)
+        className: s(_.icon, a)
       })
     }), (0, i.jsx)(N, {
       slateEditor: o,
       markdownSyntax: "strikethrough",
       children: (0, i.jsx)(h.default, {
-        className: s(T.icon, a)
+        className: s(_.icon, a)
       })
     }), (0, i.jsx)("div", {
-      className: s(T.divider, r)
+      className: s(_.divider, r)
     }), !(null == l ? void 0 : l.disableBlockQuotes) && (0, i.jsx)(A, {
       slateEditor: o,
       blockType: "blockQuote",
       children: (0, i.jsx)(d.default, {
-        className: s(T.icon, a)
+        className: s(_.icon, a)
       })
     }), (0, i.jsx)(N, {
       slateEditor: o,
       markdownSyntax: "inlineCode",
       children: (0, i.jsx)(f.default, {
-        className: s(T.icon, a)
+        className: s(_.icon, a)
       })
     }), (0, i.jsx)(N, {
       slateEditor: o,
       markdownSyntax: "spoiler",
       children: (0, i.jsx)(m.default, {
-        className: s(T.icon, a)
+        className: s(_.icon, a)
       })
     })]
   })
@@ -162,7 +162,7 @@ var v = l.forwardRef(function(e, t) {
     children: (0, i.jsxs)("div", {
       id: "slate-toolbar",
       ref: d,
-      className: T.toolbar,
+      className: _.toolbar,
       style: {
         top: I - v,
         left: S - A
@@ -175,7 +175,7 @@ var v = l.forwardRef(function(e, t) {
       },
       children: [(0, i.jsx)(O, {
         slateEditor: M
-      }), (0, i.jsx)(_, {
+      }), (0, i.jsx)(T, {
         editorRef: a,
         options: o
       })]
@@ -194,10 +194,10 @@ function N(e) {
     a = null != (0, g.parseSelectedSyntax)(t, e, i).before[n]
   }
   return (0, i.jsx)(o.Button, {
-    className: T.button,
-    innerClassName: T.buttonInner,
-    color: a ? T.active : T.inactive,
-    hover: T.hover,
+    className: _.button,
+    innerClassName: _.buttonInner,
+    color: a ? _.active : _.inactive,
+    hover: _.hover,
     look: o.Button.Looks.FILLED,
     size: o.Button.Sizes.NONE,
     onClick: () => {
@@ -214,10 +214,10 @@ function A(e) {
     children: l
   } = e, a = null != n ? C.EditorUtils.getCurrentBlock(n) : null, s = null != a && C.NodeUtils.isType(a[0], t);
   return (0, i.jsx)(o.Button, {
-    className: T.button,
-    innerClassName: T.buttonInner,
-    color: s ? T.active : T.inactive,
-    hover: T.hover,
+    className: _.button,
+    innerClassName: _.buttonInner,
+    color: s ? _.active : _.inactive,
+    hover: _.hover,
     look: o.Button.Looks.FILLED,
     size: o.Button.Sizes.NONE,
     onClick: () => {

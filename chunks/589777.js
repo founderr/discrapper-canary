@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return L
   },
   getBuiltInCommands: function() {
-    return B
+    return x
   }
 }), n("222007"), n("70102");
 var i = n("627445"),
@@ -663,7 +663,7 @@ let D = n("150692").default,
     }
   }],
   b = P.filter(e => ["gif", "tenor", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"].includes(e.name)),
-  B = (e, t, n) => {
+  x = (e, t, n) => {
     let i = t ? P : b;
     return i = i.filter(t => t.type === e && (!n || t.inputType === O.ApplicationCommandInputType.BUILT_IN_TEXT || t.inputType === O.ApplicationCommandInputType.BUILT_IN_INTEGRATION))
   }

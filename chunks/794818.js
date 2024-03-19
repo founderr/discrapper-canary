@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return I
   },
   trackTagSearchStarted: function() {
-    return T
+    return _
   },
   trackSearchResultsViewed: function() {
-    return _
+    return T
   },
   trackGuildJoinClicked: function() {
     return v
@@ -193,7 +193,7 @@ function I(e, t) {
   })
 }
 
-function T(e, t, n, i) {
+function _(e, t, n, i) {
   p.default.track(m.AnalyticEvents.SEARCH_STARTED, {
     search_type: m.SearchTypes.GUILD_DISCOVERY_TAG,
     load_id: e,
@@ -206,7 +206,7 @@ function T(e, t, n, i) {
   })
 }
 
-function _(e) {
+function T(e) {
   let {
     loadId: t,
     searchId: n,

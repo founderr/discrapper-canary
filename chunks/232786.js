@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return _
   }
 });
 var i = n("37983"),
@@ -24,14 +24,14 @@ var i = n("37983"),
   S = n("646718"),
   C = n("782340"),
   I = n("230537"),
-  T = function(e) {
+  _ = function(e) {
     let {
       bodyCopy: t = C.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_BODY,
       className: n,
       onDismiss: a,
-      onCtaClick: T
+      onCtaClick: _
     } = e, {
-      location: _
+      location: T
     } = (0, u.useAnalyticsContext)(), {
       analyticsLocations: v
     } = (0, d.default)(), {
@@ -46,12 +46,12 @@ var i = n("37983"),
         subscriptionTier: y.default.getSkuIdForPremiumType(A),
         analyticsLocations: v,
         analyticsObject: {
-          ..._,
+          ...T,
           object: g.AnalyticsObjects.BUTTON_CTA,
           objectType: g.AnalyticsObjectTypes.TIER_2
         }
-      }), null == T || T()
-    }, [v, _, T, A]), M = A === S.PremiumTypes.TIER_0;
+      }), null == _ || _()
+    }, [v, T, _, A]), M = A === S.PremiumTypes.TIER_0;
     return (0, i.jsx)("div", {
       className: s(I.wrapper, n),
       children: N ? (0, i.jsx)(o.Spinner, {
@@ -60,7 +60,7 @@ var i = n("37983"),
         onChange: e => {
           e && !O.current && (E.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
             type: S.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
-            location: _,
+            location: T,
             location_stack: v,
             sku_id: y.default.getSkuIdForPremiumType(A)
           }), O.current = !0)

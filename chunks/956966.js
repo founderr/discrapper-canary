@@ -4,8 +4,8 @@
         return O
       }
     }), t("222007");
-    var s = t("714617"),
-      d = t.n(s),
+    var d = t("714617"),
+      s = t.n(d),
       n = t("917351"),
       i = t.n(n),
       c = t("913144"),
@@ -31,7 +31,7 @@
         this.isSupported && (c.default.unsubscribe("AUDIO_SET_MODE", this.handleViewUpdate), c.default.unsubscribe("VOICE_CHANNEL_SELECT", this.handleViewUpdate), c.default.unsubscribe("START_SESSION", this.handleViewUpdate), c.default.unsubscribe("CONNECTION_OPEN", this.handleViewUpdate), c.default.unsubscribe("CONNECTION_CLOSED", this.handleViewUpdate), c.default.unsubscribe("CALL_CREATE", this.handleViewUpdate), c.default.unsubscribe("CALL_UPDATE", this.handleViewUpdate), c.default.unsubscribe("CALL_DELETE", this.handleViewUpdate), c.default.unsubscribe("CHANNEL_DELETE", this.handleViewUpdate), c.default.unsubscribe("VOICE_STATE_UPDATES", this.handleViewUpdate), c.default.unsubscribe("AUDIO_TOGGLE_SELF_MUTE", this.handleViewUpdate), c.default.unsubscribe("AUDIO_TOGGLE_SELF_DEAF", this.handleViewUpdate), c.default.unsubscribe("AUDIO_TOGGLE_LOCAL_MUTE", this.handleViewUpdate), c.default.unsubscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleViewUpdate))
       }
       setThumbarButtons(e) {
-        !d(this.prevButtons, e) && (this.prevButtons = e, E.default.setThumbarButtons(e))
+        !s(this.prevButtons, e) && (this.prevButtons = e, E.default.setThumbarButtons(e))
       }
       constructor(...e) {
         super(...e), this.callbackActions = {
@@ -55,8 +55,8 @@
           }
           let a = j.default.isSelfMute(),
             t = j.default.isSelfDeaf(),
-            s = j.default.isVideoEnabled(),
-            d = j.default.isVideoAvailable(),
+            d = j.default.isVideoEnabled(),
+            s = j.default.isVideoAvailable(),
             n = h.default.getChannel(e),
             i = null == n || (0, u.getVideoPermission)(n),
             {
@@ -67,19 +67,19 @@
               limit: void 0
             },
             o = (0, p.getVideoButtonLabel)({
-              enabled: s,
+              enabled: d,
               join: !1,
               channel: n,
-              cameraUnavailable: !d,
+              cameraUnavailable: !s,
               hasPermission: i,
               channelLimit: r,
               channelLimitReached: c
             });
           this.setThumbarButtons([{
             name: E.ThumbarButtonName.VIDEO,
-            active: !s,
+            active: !d,
             tooltip: o,
-            flags: d ? [] : ["disabled"]
+            flags: s ? [] : ["disabled"]
           }, {
             name: E.ThumbarButtonName.MUTE,
             active: a,

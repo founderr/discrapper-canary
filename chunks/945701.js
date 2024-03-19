@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return I
   },
   ReactionPickerButton: function() {
-    return _
+    return T
   },
   default: function() {
     return v
@@ -105,7 +105,7 @@ let S = (0, m.createChannelRecord)({
       disabled: !1
     })
   },
-  T = (e, t) => {
+  _ = (e, t) => {
     l.useEffect(() => {
       let n = t => {
           "Escape" === t.key && e()
@@ -119,12 +119,12 @@ let S = (0, m.createChannelRecord)({
       }
     }, [e, t])
   },
-  _ = e => {
+  T = e => {
     let {
       onSelectEmoji: t,
       onClick: n
     } = e, a = (0, u.default)(), [s, r] = l.useState(!1), d = l.useRef(null);
-    return T(() => r(!1), d), (0, i.jsx)(o.Popout, {
+    return _(() => r(!1), d), (0, i.jsx)(o.Popout, {
       align: "right",
       position: "top",
       shouldShow: s,
@@ -167,10 +167,10 @@ var v = e => {
     showReact: u = !0,
     showReply: d = !0
   } = e, [c, f] = l.useState(!1), p = l.useRef(null);
-  return T(() => f(!1), p), (0, i.jsx)(i.Fragment, {
+  return _(() => f(!1), p), (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)("div", {
       className: g.reactions,
-      children: [u && (0, i.jsx)(_, {
+      children: [u && (0, i.jsx)(T, {
         onSelectEmoji: e => {
           null != e && t({
             interactionType: x.AtomicReactorInteractionTypes.ReactSubmit,

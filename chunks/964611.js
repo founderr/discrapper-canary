@@ -24,8 +24,8 @@ var i = n("37983"),
   S = n("599110"),
   C = n("159885"),
   I = n("429569"),
-  T = n("788506"),
-  _ = n("675280"),
+  _ = n("788506"),
+  T = n("675280"),
   v = n("917764"),
   N = n("83017"),
   A = n("115279"),
@@ -65,7 +65,7 @@ function K(e) {
     autoTrackExposure: m
   }), N = (0, i.jsxs)(f.Clickable, {
     ...h,
-    "aria-label": (0, T.getAriaIdForEmojiCategory)(o, g),
+    "aria-label": (0, _.getAriaIdForEmojiCategory)(o, g),
     className: s({
       [k.categoryItemGuildCategory]: null != g,
       [k.categoryItemDefaultCategory]: null == g,
@@ -84,7 +84,7 @@ function K(e) {
       isSelected: y,
       shouldAnimate: !p && c,
       isLocked: C && m
-    }) : null, null == g && null != x ? (0, i.jsx)(_.default, {
+    }) : null, null == g && null != x ? (0, i.jsx)(T.default, {
       categoryId: x,
       className: k.categoryIcon,
       height: P,
@@ -113,7 +113,7 @@ var W = e => {
   } = e, c = h.EmojiPickerStore.useStore(e => e.activeCategoryIndex), E = (0, N.useCategorySelectHandler)({
     sectionDescriptors: a,
     emojiListRef: n
-  }), S = (0, p.useAnalyticsContext)(), C = (0, T.useEmojiCategories)(r, u), I = l.useRef(null), _ = (0, d.useStateFromStores)([y.default], () => y.default.isFocused()), v = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion, []), O = (0, T.useCategoryNitroLockedStates)(r, u, C), R = l.useMemo(() => o.memoize((e, t) => {
+  }), S = (0, p.useAnalyticsContext)(), C = (0, _.useEmojiCategories)(r, u), I = l.useRef(null), T = (0, d.useStateFromStores)([y.default], () => y.default.isFocused()), v = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion, []), O = (0, _.useCategoryNitroLockedStates)(r, u, C), R = l.useMemo(() => o.memoize((e, t) => {
     let n = C[t];
     if (null == n) return;
     let l = O[t];
@@ -124,11 +124,11 @@ var W = e => {
       category: n,
       categoryIndex: t,
       handleCategorySelect: E,
-      isWindowFocused: _,
+      isWindowFocused: T,
       useReducedMotion: v,
       isNitroLocked: l
     }, t)
-  }), [c, S, C, E, _, v, O]), L = l.useMemo(() => [8, 8, 0, 8], []), U = l.useCallback((e, t) => {
+  }), [c, S, C, E, T, v, O]), L = l.useMemo(() => [8, 8, 0, 8], []), U = l.useCallback((e, t) => {
     let n = C[t];
     if (n.type === A.EmojiCategoryTypes.RECENT) return G;
     if (n.type === A.EmojiCategoryTypes.GUILD) {

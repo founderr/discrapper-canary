@@ -30,8 +30,8 @@ var i = n("37983"),
   S = n("50885"),
   C = n("713135"),
   I = n("106435"),
-  T = n("289918"),
-  _ = n("878569"),
+  _ = n("289918"),
+  T = n("878569"),
   v = n("590006"),
   N = n("430312"),
   A = n("401642"),
@@ -84,7 +84,7 @@ function D(e) {
     disableUserProfileLink: x,
     profileType: S,
     animateOnHover: C,
-    hasProfileEffect: T
+    hasProfileEffect: _
   } = e, {
     profileTheme: v
   } = l.useContext(N.UserProfileContext), j = l.useContext(y.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), w = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, M.PremiumTypes.TIER_2), F = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), G = x || t.isClyde(), {
@@ -110,7 +110,7 @@ function D(e) {
       statusTooltip: !0
     })
   }), W = (0, r.match)(S).with(O.UserProfileTypes.POPOUT, () => {
-    let e = (0, _.buildGetPremiumUserBannerStyles)({
+    let e = (0, T.buildGetPremiumUserBannerStyles)({
       premiumUserWithBanner: L.avatarPositionPremiumBanner,
       premiumUserWithoutBanner: L.avatarPositionPremiumNoBanner,
       default: L.avatarPositionNormal
@@ -118,7 +118,7 @@ function D(e) {
     return e({
       isPremium: w,
       hasBanner: o,
-      hasProfileEffect: T
+      hasProfileEffect: _
     })
   }).with(O.UserProfileTypes.POMELO_POPOUT, () => L.avatarPositionPomelo).with(O.UserProfileTypes.PANEL, () => L.avatarPositionPanel).exhaustive();
   return (0, i.jsx)(i.Fragment, {
@@ -173,7 +173,7 @@ function w(e) {
     upsell: p
   } = e;
   return (0, i.jsxs)(i.Fragment, {
-    children: [p, (0, i.jsx)(T.default, {
+    children: [p, (0, i.jsx)(_.default, {
       user: t,
       displayProfile: n,
       onClose: s,

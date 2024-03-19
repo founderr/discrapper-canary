@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return T
   }
 }), n("101997"), n("222007");
 var i = n("37983"),
@@ -52,7 +52,7 @@ function I(e, t, n) {
   }, [e, t, n]), [i, s]
 }
 
-function T(e, t, n, i) {
+function _(e, t, n, i) {
   if (null == i) return [t, !1];
   let l = Math.min((n - i) / 200, 1);
   if (1 === l) return [t, !1];
@@ -60,14 +60,14 @@ function T(e, t, n, i) {
   return [a, !0]
 }
 
-function _(e) {
+function T(e) {
   let {
     className: t,
     waveform: n,
     currentTime: a,
     duration: c,
     played: y,
-    playing: _,
+    playing: T,
     onDrag: v,
     onDragStart: N,
     onDragEnd: A
@@ -107,7 +107,7 @@ function _(e) {
         }(null != n ? n : [], i)) && void 0 !== e ? e : g
       }, [n, i]);
     return a
-  }(n, R), b = l.useRef(y), P = l.useRef(_), j = l.useRef(null), U = window.devicePixelRatio, {
+  }(n, R), b = l.useRef(y), P = l.useRef(T), j = l.useRef(null), U = window.devicePixelRatio, {
     lastBackgroundFillColor: D,
     backgroundFillColor: w,
     lastActiveFillColor: F,
@@ -134,7 +134,7 @@ function _(e) {
       lastInactiveFillColor: x,
       inactiveFillColor: E
     }
-  }(y, _);
+  }(y, T);
   l.useEffect(() => {
     let e = S({
       showAll: !y,
@@ -168,10 +168,10 @@ function _(e) {
         a = k.current;
       if (null == i || null == l || null == a) return;
       let s = !1;
-      (b.current !== y || P.current !== _) && (b.current = y, P.current = _, j.current = n), null != j.current && n > j.current + 200 && (j.current = null);
+      (b.current !== y || P.current !== T) && (b.current = y, P.current = T, j.current = n), null != j.current && n > j.current + 200 && (j.current = null);
       let r = i.height / U;
       l.clearRect(0, 0, i.width, i.height), l.beginPath();
-      let [o, u] = T(D, w, n, j.current);
+      let [o, u] = _(D, w, n, j.current);
       s = s || u, l.fillStyle = o;
       for (let e = 0; e < L.length; e++) C({
         context: l,
@@ -182,9 +182,9 @@ function _(e) {
         constrainMin: !0
       });
       l.fill();
-      let [d, c] = T(B, H, n, j.current);
+      let [d, c] = _(B, H, n, j.current);
       s = s || c;
-      let [f, p] = T(F, G, n, j.current);
+      let [f, p] = _(F, G, n, j.current);
       s = s || p;
       for (let e = 0; e < a.length; e++) {
         let t = a[e],
@@ -202,7 +202,7 @@ function _(e) {
     }), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [O, U, L, R, a, c, y, _, D, w, F, G, B, H]);
+  }, [O, U, L, R, a, c, y, T, D, w, F, G, B, H]);
   let [, V] = (0, d.default)({
     ref: O,
     onDrag: v,

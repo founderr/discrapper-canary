@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return T
   }
 });
 var i = n("37983"),
@@ -25,7 +25,7 @@ var i = n("37983"),
   C = n("782340"),
   I = n("936369");
 
-function T() {
+function _() {
   (0, o.openModalLazy)(async () => {
     let {
       default: e
@@ -37,12 +37,12 @@ function T() {
   })
 }
 
-function _(e) {
+function T(e) {
   var t;
   let {
     className: n,
     iconOnly: a,
-    remaining: _
+    remaining: T
   } = e, v = (0, r.useStateFromStores)([h.default, m.default], () => {
     let e = m.default.getChannel(h.default.getChannelId());
     return (null == e ? void 0 : e.isPrivate()) ? g.AnalyticsPages.DM_CHANNEL : g.AnalyticsPages.GUILD_CHANNEL
@@ -58,18 +58,18 @@ function _(e) {
       },
       location_stack: N
     })
-  }, [v, N]), (M || R) && _ < 0) ? (0, i.jsx)(p.default, {
+  }, [v, N]), (M || R) && T < 0) ? (0, i.jsx)(p.default, {
     type: S.PremiumUpsellTypes.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
     subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
-    context: _,
+    context: T,
     discountOffer: A,
     trialOffer: O,
     children: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-      onLearnMore: T
+      onLearnMore: _
     })
   }) : a ? (0, i.jsx)(o.Clickable, {
     className: I.iconOnly,
-    onClick: () => T(),
+    onClick: () => _(),
     children: (0, i.jsx)(o.Tooltip, {
       text: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
       position: "top",
@@ -87,7 +87,7 @@ function _(e) {
       className: I.text,
       variant: "text-sm/normal",
       children: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-        onLearnMore: T
+        onLearnMore: _
       })
     })]
   })

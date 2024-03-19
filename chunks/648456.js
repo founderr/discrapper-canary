@@ -24,8 +24,8 @@ var n, l = i("627445"),
   C = i("18494"),
   v = i("697218"),
   S = i("599110"),
-  p = i("773336"),
-  N = i("289732"),
+  N = i("773336"),
+  p = i("289732"),
   y = i("550766"),
   h = i("191225"),
   D = i("602718"),
@@ -44,7 +44,7 @@ let F = {},
 
 function w(t) {
   var e;
-  let i = null == t ? void 0 : null === (e = t.activity) || void 0 === e ? void 0 : e.client_platform_config[(0, P.default)((0, p.getOS)())].release_phase;
+  let i = null == t ? void 0 : null === (e = t.activity) || void 0 === e ? void 0 : e.client_platform_config[(0, P.default)((0, N.getOS)())].release_phase;
   return {
     releasePhase: i
   }
@@ -57,7 +57,7 @@ async function B(t) {
   } = t, l = A.default.getChannel(e), a = null == l ? void 0 : l.getGuildId(), u = v.default.getCurrentUser();
   if (null == l || null == u) return;
   let r = h.default.getShelfActivities(a),
-    d = N.default.getState().shelfOrder,
+    d = p.default.getState().shelfOrder,
     s = 0 === h.default.getEmbeddedActivitiesForChannel(e).filter(t => t.applicationId === i).length,
     o = (0, D.default)({
       applicationId: i,
@@ -301,33 +301,33 @@ n = class extends s.default {
         } = await (0, y.fetchShelf)({
           guildId: T
         }),
-        p = (0, D.default)({
+        N = (0, D.default)({
           applicationId: u,
           activityConfigs: v,
           applications: S
         });
-      if (null == p) {
+      if (null == N) {
         let t = await (0, y.fetchShelf)({
           guildId: T,
           force: !0
         });
-        p = (0, D.default)({
+        N = (0, D.default)({
           applicationId: u,
           activityConfigs: t.activityConfigs,
           applications: t.applications
         })
       }
-      let N = h.default.getEmbeddedActivitiesForChannel(a).find(t => t.applicationId === u),
-        m = null !== (n = null == N ? void 0 : N.userIds.size) && void 0 !== n ? n : 0;
+      let p = h.default.getEmbeddedActivitiesForChannel(a).find(t => t.applicationId === u),
+        m = null !== (n = null == p ? void 0 : p.userIds.size) && void 0 !== n ? n : 0;
       m > 0 ? (0, O.maybeJoinEmbeddedActivity)({
         channelId: a,
         applicationId: u,
-        instanceId: null == N ? void 0 : N.instanceId,
+        instanceId: null == p ? void 0 : p.instanceId,
         inputApplication: null,
         analyticsLocations: r,
         embeddedActivitiesManager: this
       }) : await (0, L.default)({
-        activityItem: p,
+        activityItem: N,
         currentEmbeddedApplication: l,
         channelId: a,
         guildId: T,

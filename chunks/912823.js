@@ -24,8 +24,8 @@ var i = n("37983"),
   S = n("998206"),
   C = n("35385"),
   I = n("695369"),
-  T = n("198"),
-  _ = n("315814"),
+  _ = n("198"),
+  T = n("315814"),
   v = n("108486"),
   N = n("923582"),
   A = n("80921"),
@@ -53,13 +53,13 @@ function k(e) {
   return r ? (0, i.jsx)(v.default, {
     disabled: t,
     channel: n
-  }) : (0, i.jsx)(T.default, {
+  }) : (0, i.jsx)(_.default, {
     disabled: t,
     channel: n
   })
 }
 var L = l.memo(function(e) {
-  var t, n, l, p, T, v, L, b, P;
+  var t, n, l, p, _, v, L, b, P;
   let {
     type: j,
     disabled: U,
@@ -102,9 +102,9 @@ var L = l.memo(function(e) {
     return [Z && l && a, a]
   }), ee = (0, u.useActivitiesInTextButtonVisibility)(D.id, "ChannelTextAreaButtons");
   if (!a.isMobile) {
-    if (D.isDM() && (null === (T = j.gifts) || void 0 === T ? void 0 : T.button) != null && null == K && (g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
+    if (D.isDM() && (null === (_ = j.gifts) || void 0 === _ ? void 0 : _.button) != null && null == K && (g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
         location: "dc120b_5"
-      }), Q && z.push((0, i.jsx)(_.default, {
+      }), Q && z.push((0, i.jsx)(T.default, {
         disabled: U,
         referralsRemaining: q,
         channel: D,
