@@ -1,15 +1,15 @@
 "use strict";
 
-function a() {
+function i() {
   return {
     logsUploaded: new Date().toISOString(),
     releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-    buildNumber: "276698",
-    versionHash: "4fbf078939dbe04590a6d6097e51cc96be640afd"
+    buildNumber: "276713",
+    versionHash: "4bafcf5efb43d2936431018bd444e3d92d36cb67"
   }
 }
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return i
   }
 })
