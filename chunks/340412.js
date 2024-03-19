@@ -113,5 +113,8 @@ var R = new d(i.default, {
     } = e;
     null != t ? o.userTrialOffers[t.trial_id] = t : o.userTrialOffers = {}, null != r ? o.userDiscountOffers[r.discount_id] = r : null != n ? o.userDiscountOffers[n.discount_id] = n : o.userDiscountOffers = {}, o.userOffersLastFetchedAtDate = Date.now()
   },
+  BILLING_USER_OFFER_FETCH_FAIL: function() {
+    c(), o.userOffersLastFetchedAtDate = Date.now()
+  },
   LOGOUT: c
 })
