@@ -10,10 +10,10 @@ r.r(t), r.d(t, {
     return T
   },
   useGetSubscriptionInvoice: function() {
-    return p
+    return A
   },
   getItemUnitPriceWithDiscount: function() {
-    return A
+    return p
   }
 }), r("222007");
 var n = r("884691"),
@@ -131,7 +131,7 @@ async function I(e) {
       },
       oldFormErrors: !0
     });
-    return e.body
+    return f.default.createInvoiceFromServer(e.body)
   } catch (e) {
     throw new a.BillingError(e)
   }
@@ -187,12 +187,12 @@ function T(e) {
   return S(e, t)
 }
 
-function p(e) {
+function A(e) {
   let t = (0, n.useCallback)(() => L(e), [JSON.stringify(e)]);
   return S(e, t)
 }
 
-function A(e) {
+function p(e) {
   let t = e.subscriptionPlanPrice;
   return e.discounts.forEach(r => {
     let n = r.amount / e.quantity;

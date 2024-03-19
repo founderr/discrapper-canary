@@ -47399,8 +47399,8 @@ html .progress__4ef76 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -65597,6 +65597,10 @@ html .progress__4ef76 {
 
 .subscriptionAddedInvoiceItem__5877e {
     color: var(--text-positive)
+}
+
+.purchaseDetailsHeaderText_f1f816 {
+    margin-bottom: 8px
 }
 
 .upsellFooter__9e85b {
