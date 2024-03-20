@@ -28,16 +28,16 @@ n.r(t), n.d(t, {
     return p
   },
   getQuestBarAnimatedHeroAssetUrl: function() {
-    return h
-  },
-  getGameTileAssetUrl: function() {
     return C
   },
+  getGameTileAssetUrl: function() {
+    return h
+  },
   getGameLogotypeAssetUrl: function() {
-    return g
+    return A
   },
   getQuestUrl: function() {
-    return A
+    return g
   },
   getQuestForTargetedContent: function() {
     return I
@@ -49,10 +49,10 @@ n.r(t), n.d(t, {
     return N
   },
   getContextualEntrypointHeading: function() {
-    return U
+    return y
   },
   isDismissible: function() {
-    return y
+    return U
   },
   isDismissed: function() {
     return R
@@ -61,7 +61,7 @@ n.r(t), n.d(t, {
     return L
   },
   captureQuestsException: function() {
-    return O
+    return b
   }
 }), n("222007");
 var s = n("568734"),
@@ -151,10 +151,10 @@ let S = e => "".concat(l).concat(e).concat("/reward.png"),
   _ = e => "".concat(l).concat(e).concat("/hero.png"),
   T = e => "".concat(l).concat(e).concat("/hero.webm"),
   p = e => "".concat(l).concat(e).concat("/quests_bar_hero.png"),
-  h = e => "".concat(l).concat(e).concat("/quests_bar_hero.webm"),
-  C = e => "".concat(l).concat(e).concat("/game_tile.png"),
-  g = (e, t) => "".concat(l).concat(e, "/").concat(t).concat("/game_logotype.png"),
-  A = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
+  C = e => "".concat(l).concat(e).concat("/quests_bar_hero.webm"),
+  h = e => "".concat(l).concat(e).concat("/game_tile.png"),
+  A = (e, t) => "".concat(l).concat(e, "/").concat(t).concat("/game_logotype.png"),
+  g = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
 function I(e, t) {
   for (let [n, s] of e)
@@ -189,7 +189,7 @@ function N(e) {
   return Math.min(t / 60 / s, 1)
 }
 
-function U(e) {
+function y(e) {
   var t, n;
   if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return u.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
   if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
@@ -201,19 +201,21 @@ function U(e) {
   })
 }
 
-function y(e) {
-  return e in a.DismissibleQuestContentFlags
+function U(e) {
+  return Object.keys(a.DismissibleQuestContentFlags).includes(r.QuestContent[e])
 }
 
 function R(e, t) {
-  return (0, s.hasFlag)(e.dismissedQuestContent, a.DismissibleQuestContentFlags[t])
+  if (!U(t)) return !1;
+  let n = r.QuestContent[t];
+  return (0, s.hasFlag)(e.dismissedQuestContent, a.DismissibleQuestContentFlags[n])
 }
 
 function L(e, t) {
   return e.targetedContent.includes(t)
 }
 
-function O(e, t) {
+function b(e, t) {
   i.default.captureException(e, {
     ...t,
     tags: {

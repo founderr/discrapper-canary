@@ -25,13 +25,13 @@ n.r(t), n.d(t, {
     return p
   },
   resetQuestPreviewStatus: function() {
-    return h
-  },
-  resetQuestDismissibilityStatus: function() {
     return C
   },
+  resetQuestDismissibilityStatus: function() {
+    return h
+  },
   optimisticallyUpdateQuestProgress: function() {
-    return g
+    return A
   }
 });
 var s = n("872717"),
@@ -178,8 +178,9 @@ async function S(e) {
   }
 }
 async function _(e, t) {
-  let n = u.default.isDismissingContent(e);
-  if (!n) {
+  let n = u.default.isDismissingContent(e),
+    a = (0, l.isDismissible)(t);
+  if (!n && a) {
     i.default.dispatch({
       type: "QUESTS_DISMISS_CONTENT_BEGIN",
       questId: e,
@@ -228,7 +229,7 @@ async function p(e) {
     })
   }
 }
-async function h(e) {
+async function C(e) {
   try {
     let t = await s.default.delete({
       url: o.Endpoints.QUESTS_PREVIEW_STATUS(e),
@@ -246,7 +247,7 @@ async function h(e) {
     })
   }
 }
-async function C(e) {
+async function h(e) {
   try {
     let t = await s.default.delete({
       url: o.Endpoints.QUESTS_PREVIEW_DISMISSIBILITY(e),
@@ -265,7 +266,7 @@ async function C(e) {
   }
 }
 
-function g(e) {
+function A(e) {
   i.default.dispatch({
     type: "QUESTS_OPTIMISTIC_PROGRESS_UPDATE",
     userStatus: e
