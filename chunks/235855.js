@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
-  default: function() {
-    return c
+  VisibilitySensor: function() {
+    return u
   }
 }), n("222007"), n("70102");
 var i = n("884691"),
@@ -50,7 +50,7 @@ class u extends i.Component {
     } = e;
     t ? a.has(t) ? this.elementId = a.get(t) || "" : a.set(t, (0, r.v4)()) : this.elementId = l;
     let u = this.getVisibilityObserverId();
-    !o.has(u) && o.set(u, new s.default({
+    !o.has(u) && o.set(u, new s.VisibilityObserver({
       root: t,
       rootMargin: n,
       threshold: i
@@ -63,5 +63,4 @@ u.defaultProps = {
   root: null,
   rootMargin: "0px 0px 0px 0px",
   threshold: [0, Number.MIN_VALUE]
-};
-var c = u
+}

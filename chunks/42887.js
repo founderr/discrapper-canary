@@ -1763,6 +1763,6 @@ var tm = i = new tg(S.default, {
     let {
       settings: t
     } = e;
-    !1 === t.decoupledClipsEnabled && (a = null, eI.setClipsSource(null)), !1 === t.decoupledClipsEnabled && (a = null, eI.setClipsSource(null))
+    !1 === t.decoupledClipsEnabled && (a = null, eI.setClipsSource(null))
   }
 })
