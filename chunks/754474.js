@@ -25,20 +25,20 @@ var r = n("414456"),
       usernameClass: d,
       discriminatorClass: f,
       botClass: h,
-      botVerified: E = !1,
-      style: v,
+      botVerified: v = !1,
+      style: p,
       useRemSizes: C = !1,
-      usernameIcon: p
+      usernameIcon: E
     } = e;
     return (0, i.jsxs)("div", {
       className: s(u, o.nameTag),
-      style: v,
+      style: p,
       children: [(0, i.jsxs)("span", {
         className: s(o.username, d),
         style: null != a ? {
           color: a
         } : void 0,
-        children: [p, t]
+        children: [E, t]
       }), null != n ? (0, i.jsxs)("span", {
         className: null != f ? f : void 0,
         children: ["#", n]
@@ -46,7 +46,7 @@ var r = n("414456"),
         type: c,
         invertColor: r,
         className: s(h, o.bot),
-        verified: E,
+        verified: v,
         useRemSizes: C
       }) : null]
     })
