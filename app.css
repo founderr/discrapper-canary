@@ -26891,6 +26891,27 @@ html .progress__4ef76 {
     background: var(--background-secondary)
 }
 
+.partnerBranding__33e49 {
+    align-items: center;
+    display: flex;
+    flex: 0 1 auto
+}
+
+.partnerBrandingGameTile_ca002a {
+    display: block;
+    flex: 0 0 auto;
+    margin-right: 8px
+}
+
+.partnerBrandingLogotype__3153f {
+    display: block;
+    height: auto;
+    flex: 0 0 auto;
+    max-height: 24px;
+    max-width: 80px;
+    width: auto
+}
+
 .promotedTag__28b7f {
     display: block;
     isolation: isolate;
@@ -26958,23 +26979,7 @@ html .progress__4ef76 {
     align-items: center
 }
 
-.img__4f1c2 {
-    width: 100%
-}
-
-.questIcon__3a4c1 {
-    margin-right: 8px;
-    height: 100%;
-    max-width: 34px;
-    border-radius: 4px;
-    pointer-events: none
-}
-
-.questLogotype__50770 {
-    align-self: center;
-    max-height: 24px;
-    max-width: 120px;
-    pointer-events: none;
+.partnerBranding__66df7 {
     margin-right: 12px
 }
 
@@ -47496,8 +47501,8 @@ html .progress__4ef76 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -76938,29 +76943,6 @@ input::-webkit-inner-spin-button {
     .nowPlayingColumn_f5023f {
         display: none
     }
-}
-
-.partnerBranding__33e49 {
-    align-items: center;
-    display: flex;
-    flex: 0 1 auto
-}
-
-.partnerBrandingGameTile_ca002a {
-    display: block;
-    flex: 0 0 auto;
-    height: 24px;
-    margin-right: 8px;
-    width: 24px
-}
-
-.partnerBrandingLogotype__3153f {
-    display: block;
-    height: auto;
-    flex: 0 0 auto;
-    max-height: 24px;
-    max-width: 80px;
-    width: auto
 }
 
 .contentCollapsed__80f0d {
