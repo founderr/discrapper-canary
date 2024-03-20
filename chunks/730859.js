@@ -57,10 +57,13 @@ function m(e) {
     children: function() {
       let e = o(r).take(a).map(e => {
           let t = f.default.getName(e);
-          return y ? (0, i.jsx)(u.Avatar, {
-            src: e.getAvatarURL(m, 24),
-            "aria-label": t,
-            size: x
+          return y ? (0, i.jsx)("div", {
+            className: p.avatar,
+            children: (0, i.jsx)(u.Avatar, {
+              src: e.getAvatarURL(m, 24),
+              "aria-label": t,
+              size: x
+            })
           }) : (0, i.jsx)(u.TooltipContainer, {
             text: t,
             className: p.avatar,
