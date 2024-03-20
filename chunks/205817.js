@@ -179,7 +179,8 @@ var V = new k(c.default, !T.default.isSupported() || __OVERLAY__ ? {} : {
       null != e && (R[o] = {
         name: e.name,
         id: e.id,
-        exe: e.exeName
+        exe: e.exeName,
+        distributor: e.distributor
       })
     }
   },
