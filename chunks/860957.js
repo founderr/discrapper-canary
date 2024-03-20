@@ -40,7 +40,7 @@ let U = {},
   w = new Map,
   k = !1,
   V = new Set,
-  G = new Set,
+  G = !1,
   F = !1,
   x = !1,
   B = null,
@@ -109,7 +109,7 @@ async function $(e) {
       let t = await es();
       X = "reconcile.createHostProcess", e.createHostProcess(t, eE, ef)
     } else X = "reconcile.destroyHostProcess", e.destroyHostProcess()
-  } else if (F) {
+  } else if (G) {
     let t = await es();
     e.createHostProcess(t, eE, ef)
   } else e.destroyHostProcess()
@@ -158,7 +158,7 @@ async function en(e) {
       q.error("Failed to deconstruct tracked game ".concat(t), e)
     }
   }
-  if (null == e || !F) {
+  if (null == e || !G) {
     q.verbose("updateIntendedOverlayPIDs: Removing all.", U, e);
     let t = Object.keys(U);
     for (let e of t) await n(Number(e));
@@ -262,16 +262,17 @@ function ed() {
     removed: []
   })
 }
-let ec = Z("setOverlayEnabled", async e => {
-  if (!b.OVERLAY_SUPPORTED || F === e) return;
-  F = e, v.OverlayStoredSettings.update({
-    enabled: e
+let ec = Z("setOverlayEnabled", async (e, t) => {
+  if (!b.OVERLAY_SUPPORTED || G === e && F === t) return;
+  G = e, F = t, v.OverlayStoredSettings.update({
+    enabled: e,
+    legacyEnabled: t
   }), eN.emitChange();
-  let t = await er(),
+  let n = await er(),
     {
-      OutOfProcess: n
-    } = t;
-  (0, L.setOutOfProcessSupport)(null != n), F ? (await $(t), ed()) : (await en(void 0), await $(t))
+      OutOfProcess: i
+    } = n;
+  (0, L.setOutOfProcessSupport)(null != i), await en(void 0), await $(n), G && ed()
 });
 
 function ef(e) {
@@ -417,7 +418,7 @@ function eC(e) {
 }
 class ey extends l.default.Store {
   initialize() {
-    !(!b.OVERLAY_SUPPORTED || __OVERLAY__) && (G.add(b.OverlayMethod.Hook), this.waitFor(S.default, A.default), m.setReceiveCommandHandler(eC, eA), A.default.addChangeListener(eh), ec(v.OverlayStoredSettings.enabled), u.default.addInterceptor(eT))
+    !(!b.OVERLAY_SUPPORTED || __OVERLAY__) && (this.waitFor(S.default, A.default), m.setReceiveCommandHandler(eC, eA), A.default.addChangeListener(eh), ec(v.OverlayStoredSettings.enabled, v.OverlayStoredSettings.legacyEnabled), u.default.addInterceptor(eT))
   }
   isInputLocked(e) {
     return !K.has(e)
@@ -425,10 +426,10 @@ class ey extends l.default.Store {
   isSupported() {
     return b.OVERLAY_SUPPORTED
   }
-  isMethodSupported(e) {
-    return b.OVERLAY_SUPPORTED && G.has(e)
-  }
   get enabled() {
+    return G
+  }
+  get legacyEnabled() {
     return F
   }
   getFocusedPID() {
@@ -481,9 +482,10 @@ let eN = new ey(u.default, __OVERLAY__ ? {
   },
   OVERLAY_SET_ENABLED: function(e) {
     let {
-      enabled: t
+      enabled: t,
+      legacyEnabled: n
     } = e;
-    return ec(t), !1
+    return ec(t, n), !1
   },
   OVERLAY_FOCUSED: function(e) {
     let {
@@ -521,7 +523,7 @@ let eN = new ey(u.default, __OVERLAY__ ? {
     } = e, n = crypto.getRandomValues(new Uint8Array(8));
     Y = btoa(String.fromCharCode(...n));
     let s = new URLSearchParams;
-    s.append("build_id", "495cfee40a25903750d477e25a30d927a73e8a70"), s.append("rpc", String(t)), s.append("rpc_auth_token", Y), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(s.toString())
+    s.append("build_id", "d1d170d24989c62a2c14a0831f398174a7cdbabb"), s.append("rpc", String(t)), s.append("rpc_auth_token", Y), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(s.toString())
   },
   OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
     let {
