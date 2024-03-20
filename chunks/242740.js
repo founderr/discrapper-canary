@@ -24,8 +24,8 @@ var l = i("77078"),
         connected: I,
         needSubscriptionToAccess: A,
         locked: T = !1,
-        routeDirectlyToChannel: C = !1,
-        bypassChangeModal: S,
+        routeDirectlyToChannel: S = !1,
+        bypassChangeModal: C,
         bypassGuildIdCheck: N = !1
       } = t;
       e.isThread() && (await s.default.unarchiveThreadIfNecessary(e.id), !d.default.hasJoined(e.id) && await s.default.joinThread(e, "Join Voice"));
@@ -33,7 +33,7 @@ var l = i("77078"),
         O = E.default.getVoiceStateForSession(o.default.getId(), v),
         D = (null == O ? void 0 : O.channelId) === e.id,
         p = D || c.default.getChannelId() === E.default.getCurrentClientVoiceChannelId(e.guild_id);
-      return !S && !T && (0, _.shouldShowVoiceChannelChangeConfirmation)(e) ? new Promise(t => {
+      return !C && !T && (0, _.shouldShowVoiceChannelChangeConfirmation)(e) ? new Promise(t => {
         (0, l.openModalLazy)(async () => {
           let {
             default: l
@@ -44,14 +44,14 @@ var l = i("77078"),
               channel: e,
               connected: I,
               needSubscriptionToAccess: A,
-              routeDirectlyToChannel: C,
+              routeDirectlyToChannel: S,
               locked: T,
               bypassChangeModal: !0
             })),
             ...i
           })
         })
-      }) : (!T && !I && a.default.selectVoiceChannel(e.id), !__OVERLAY__ && (I || p || A || C) && ! function(t) {
+      }) : (!T && !I && a.default.selectVoiceChannel(e.id), !__OVERLAY__ && (I || p || A || S) && ! function(t) {
         let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
           i = t.getGuildId();
         if (null == i && !e) throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");

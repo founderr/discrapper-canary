@@ -1,7 +1,7 @@
 "use strict";
 i.r(e), i.d(e, {
   confirmActivityLaunchChecks: function() {
-    return C
+    return S
   }
 }), i("702976");
 var n = i("913144"),
@@ -86,7 +86,7 @@ async function T(t) {
     })
   }))
 }
-async function C(t) {
+async function S(t) {
   let e = await I(t);
   if (!e) return !1;
   let i = await A(t);

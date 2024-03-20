@@ -17,13 +17,13 @@ var r = n("414456"),
   f = n("782340"),
   h = n("168540");
 
-function v(e) {
+function E(e) {
   if (e.isSystemUser()) return c.BotTypes.SYSTEM_DM;
   if (e.isClyde()) return c.BotTypes.AI;
   if (e.bot) return c.BotTypes.BOT;
   return null
 }
-let p = e => {
+let v = e => {
   let {
     primary: t,
     secondary: n,
@@ -32,8 +32,8 @@ let p = e => {
     discriminatorClass: o,
     className: c,
     usernameClass: d,
-    color: v,
-    botClass: p,
+    color: E,
+    botClass: v,
     showStreamerModeTooltip: C
   } = e;
   return (0, i.jsxs)("div", {
@@ -45,8 +45,8 @@ let p = e => {
       children: e => (0, i.jsx)("span", {
         ...e,
         className: s(h.username, d),
-        style: null != v ? {
-          color: v
+        style: null != E ? {
+          color: E
         } : void 0,
         children: t
       })
@@ -55,7 +55,7 @@ let p = e => {
       children: n
     }) : void 0, null != r && (0, i.jsx)(u.default, {
       type: r,
-      className: s(h.infoSpacing, p),
+      className: s(h.infoSpacing, v),
       verified: l
     })]
   })
@@ -70,26 +70,26 @@ var C = e => {
     overrideDiscriminator: u,
     forcePomelo: f,
     ...h
-  } = e, C = (0, l.useStateFromStores)([o.default], () => o.default.hidePersonalInformation), E = C || t || n.isNonUserBot(), m = n.toString(), _ = d.default.getName(n), g = s ? m : null != r ? r : _, N = n.isPomelo() || f;
-  if (N || g !== m) {
-    let e = g === m && N && s ? d.default.getUserTag(n, {
+  } = e, C = (0, l.useStateFromStores)([o.default], () => o.default.hidePersonalInformation), p = C || t || n.isNonUserBot(), _ = n.toString(), I = d.default.getName(n), m = s ? _ : null != r ? r : I, N = n.isPomelo() || f;
+  if (N || m !== _) {
+    let e = m === _ && N && s ? d.default.getUserTag(n, {
         forcePomelo: f
-      }) : g,
-      t = a && e !== "@".concat(m) ? d.default.getUserTag(n) : void 0;
-    return (0, i.jsx)(p, {
+      }) : m,
+      t = a && e !== "@".concat(_) ? d.default.getUserTag(n) : void 0;
+    return (0, i.jsx)(v, {
       primary: e,
       secondary: t,
       botVerified: n.isVerifiedBot(),
-      botType: v(n),
-      showStreamerModeTooltip: C && e !== _,
+      botType: E(n),
+      showStreamerModeTooltip: C && e !== I,
       ...h
     })
   }
   return (0, i.jsx)(c.default, {
-    name: g,
-    botType: v(n),
+    name: m,
+    botType: E(n),
     botVerified: n.isVerifiedBot(),
-    discriminator: E || g !== m ? null : null != u ? u : n.discriminator,
+    discriminator: p || m !== _ ? null : null != u ? u : n.discriminator,
     ...h
   })
 }

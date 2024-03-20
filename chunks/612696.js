@@ -24,8 +24,8 @@ function d(t) {
     RelationshipStore: I,
     SelectedChannelStore: A,
     VoiceStateStore: T,
-    PermissionStore: C
-  } = t, S = E.getChannel(s), N = (0, l.getIsActivitiesEnabledForCurrentPlatform)(S);
+    PermissionStore: S
+  } = t, C = E.getChannel(s), N = (0, l.getIsActivitiesEnabledForCurrentPlatform)(C);
   if (null == e) return !1;
   if (c) return (0, a.default)({
     userId: e.id,
@@ -36,7 +36,7 @@ function d(t) {
     isActivitiesEnabledForCurrentPlatform: N,
     ChannelStore: E,
     VoiceStateStore: T,
-    PermissionStore: C,
+    PermissionStore: S,
     GuildStore: _
   }) === a.EmbeddedActivityJoinability.CAN_JOIN;
   if (!(0, n.isDesktop)()) return !1;
