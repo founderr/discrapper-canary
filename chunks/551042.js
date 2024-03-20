@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return g
   },
   updateModal: function() {
-    return h
+    return m
   },
   hasAnyModalOpenSelector: function() {
-    return m
+    return h
   },
   hasAnyModalOpen: function() {
     return p
@@ -79,7 +79,7 @@ async function E(e) {
       }, n)
     }, 300),
     a = await e();
-  return clearTimeout(l), s ? N(o, n) && h(o, a, i.onCloseRequest, i.onCloseCallback, n) : S(a, {
+  return clearTimeout(l), s ? N(o, n) && m(o, a, i.onCloseRequest, i.onCloseCallback, n) : S(a, {
     ...i,
     modalKey: o
   }, n), o
@@ -139,7 +139,7 @@ function g(e) {
   }), null != i && null != i.onCloseCallback && i.onCloseCallback()
 }
 
-function h(e, t, n, i) {
+function m(e, t, n, i) {
   let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : d();
   f.setState(o => void 0 === o[r] ? o : {
     ...o,
@@ -152,7 +152,7 @@ function h(e, t, n, i) {
   })
 }
 
-function m(e) {
+function h(e) {
   for (let t of c) {
     let n = e[t];
     if (null != n && n.length > 0) return !0
@@ -161,12 +161,12 @@ function m(e) {
 }
 
 function p() {
-  return m(f.getState())
+  return h(f.getState())
 }
 
 function I() {
   let e = f();
-  return m(e)
+  return h(e)
 }
 
 function T(e) {

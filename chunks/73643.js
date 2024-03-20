@@ -30,8 +30,8 @@ function _(e, t, n, o) {
     let {
       className: S,
       onScroll: g,
-      onResize: h = null,
-      onContentResize: m = null,
+      onResize: m = null,
+      onContentResize: h = null,
       dir: p = "ltr",
       sections: I,
       sectionHeight: T,
@@ -92,9 +92,9 @@ function _(e, t, n, o) {
       chunkSize: F,
       getScrollerState: $,
       getAnchorId: M
-    }), el = (0, c.useScrollSpring)(J), ea = r.useRef(h), eu = r.useRef(m);
+    }), el = (0, c.useScrollSpring)(J), ea = r.useRef(m), eu = r.useRef(h);
     r.useLayoutEffect(() => {
-      ea.current = h, eu.current = m
+      ea.current = m, eu.current = h
     });
     let ec = r.useCallback(function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;

@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return g
   },
   UseThreadSidebar: function() {
-    return h
+    return m
   },
   FocusMode: function() {
-    return m
+    return h
   },
   FocusModeExpiresAtSetting: function() {
     return p
@@ -163,7 +163,7 @@ n.r(t), n.d(t, {
     return eS
   },
   DeveloperMode: function() {
-    return em
+    return eh
   },
   ClientThemeSettings: function() {
     return ep
@@ -238,7 +238,7 @@ let _ = (0, l.defineProtoSetting)("textAndImages", "useLegacyChatInput", e => {
   }, e => o.StringValue.create({
     value: e
   })),
-  h = (0, l.defineProtoSetting)("textAndImages", "useThreadSidebar", e => {
+  m = (0, l.defineProtoSetting)("textAndImages", "useThreadSidebar", e => {
     var t;
     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
   }, e => o.BoolValue.create({
@@ -250,7 +250,7 @@ let _ = (0, l.defineProtoSetting)("textAndImages", "useLegacyChatInput", e => {
 }, e => o.BoolValue.create({
   value: e
 }));
-let m = (0, l.defineProtoSetting)("notifications", "quietMode", e => {
+let h = (0, l.defineProtoSetting)("notifications", "quietMode", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => o.BoolValue.create({
@@ -496,11 +496,11 @@ let eg = new Set([s.ChannelListLayoutTypes.COZY, s.ChannelListLayoutTypes.COMPAC
 (0, l.defineProtoSetting)("appearance", "channelListLayout", e => null != e && eg.has(e.value) ? e.value : s.ChannelListLayoutTypes.COZY, e => o.StringValue.create({
   value: e
 }));
-let eh = new Set([s.MessagePreviewTypes.ALL, s.MessagePreviewTypes.UNREADS, s.MessagePreviewTypes.NONE]);
-(0, l.defineProtoSetting)("appearance", "messagePreviews", e => null != e && eh.has(e.value) ? e.value : s.MessagePreviewTypes.ALL, e => o.StringValue.create({
+let em = new Set([s.MessagePreviewTypes.ALL, s.MessagePreviewTypes.UNREADS, s.MessagePreviewTypes.NONE]);
+(0, l.defineProtoSetting)("appearance", "messagePreviews", e => null != e && em.has(e.value) ? e.value : s.MessagePreviewTypes.ALL, e => o.StringValue.create({
   value: e
 }));
-let em = (0, l.wrapSettingWithSelectiveSyncing)((0, l.defineProtoSetting)("appearance", "developerMode", e => null != e && e, e => e), "appearance", "developerMode"),
+let eh = (0, l.wrapSettingWithSelectiveSyncing)((0, l.defineProtoSetting)("appearance", "developerMode", e => null != e && e, e => e), "appearance", "developerMode"),
   ep = (0, l.defineProtoSetting)("appearance", "clientThemeSettings", e => {
     var t;
     return {

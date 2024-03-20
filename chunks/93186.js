@@ -21,8 +21,8 @@ function u(e, t, n) {
       orientation: E = "vertical",
       fade: S = !1,
       customTheme: g = !1,
-      paddingFix: h = !0,
-      style: m,
+      paddingFix: m = !0,
+      style: h,
       ...p
     } = u, {
       scrollerRef: I,
@@ -34,7 +34,7 @@ function u(e, t, n) {
       ...(0, a.getAnimatedScrollHelpers)(I, T, v, E)
     }), [I, T, E, v]);
     let A = (0, a.usePaddingFixes)({
-      paddingFix: h,
+      paddingFix: m,
       orientation: E,
       dir: f,
       className: _,
@@ -48,7 +48,7 @@ function u(e, t, n) {
         [t]: S,
         [n]: g
       }),
-      style: (0, a.getMergedOrientationStyles)(m, E),
+      style: (0, a.getMergedOrientationStyles)(h, E),
       dir: f,
       ...p,
       children: (0, i.jsxs)(l.FocusRingScope, {

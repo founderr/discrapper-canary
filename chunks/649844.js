@@ -36,11 +36,11 @@ function v(e) {
     postSuccessGuild: x,
     openInvoiceId: A,
     applicationId: y,
-    referralTrialOfferId: w,
-    giftRecipient: b,
-    returnRef: L,
-    subscription: P
-  } = null != e ? e : {}, V = !1, O = (0, r.v4)(), j = u.default.getCurrentUser(), U = (0, f.isPremiumExactly)(j, E.PremiumTypes.TIER_2);
+    referralTrialOfferId: b,
+    giftRecipient: w,
+    returnRef: V,
+    subscription: L
+  } = null != e ? e : {}, P = !1, O = (0, r.v4)(), j = u.default.getCurrentUser(), U = (0, f.isPremiumExactly)(j, E.PremiumTypes.TIER_2);
   (0, s.openModalLazy)(async () => {
     let {
       default: e
@@ -57,14 +57,14 @@ function v(e) {
         skuId: (0, f.castPremiumSubscriptionAsSkuId)(M),
         isGift: T,
         giftMessage: S,
-        giftRecipient: b,
+        giftRecipient: w,
         initialPlanId: t,
         followupSKUInfo: v,
         onClose: (e, t) => {
           r(), null == C || C(e), e && (null == _ || _(), !T && null != t && t === E.PremiumSubscriptionSKUs.TIER_2 && !U && d.ComponentDispatch.dispatch(h.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
         },
         onComplete: () => {
-          V = !0, null == p || p(), !T && (0, o.setCanPlayWowMoment)(!0)
+          P = !0, null == p || p(), !T && (0, o.setCanPlayWowMoment)(!0)
         },
         onSubscriptionConfirmation: _,
         analyticsLocations: I,
@@ -76,15 +76,15 @@ function v(e) {
         planGroup: E.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
         openInvoiceId: A,
         applicationId: y,
-        referralTrialOfferId: w,
-        returnRef: L,
-        subscription: P
+        referralTrialOfferId: b,
+        returnRef: V,
+        subscription: L
       })
     }
   }, {
     modalKey: "payment-modal",
     onCloseCallback: () => {
-      !V && c.default.track(h.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+      !P && c.default.track(h.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
         load_id: O,
         payment_type: h.PurchaseTypeToAnalyticsPaymentType[h.PurchaseTypes.SUBSCRIPTION],
         location: null != N ? N : m,
@@ -94,7 +94,7 @@ function v(e) {
         eligible_for_trial: null != R,
         application_id: y,
         location_stack: I
-      }), (0, l.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == C || C(V), V && (null == _ || _())
+      }), (0, l.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == C || C(P), P && (null == _ || _())
     }
   })
 }
