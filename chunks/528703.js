@@ -28,7 +28,7 @@ let d = "https://www.youtube.com/embed/".concat(u.LOOTBOX_VIDEO_ID, "?autoplay=1
 
 function U() {
   let [e, _] = o.useState(!1), {
-    allowOpeningLootboxes: E
+    showMainEntrypoints: E
   } = A.default.useExperiment({
     location: "lootbox_entrypoint"
   }), n = !(0, O.useIsDismissibleContentDismissed)(s.DismissibleContent.LOOTBOXES_ENTRYPOINT), u = e => {
