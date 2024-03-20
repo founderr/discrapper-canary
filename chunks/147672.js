@@ -8,10 +8,10 @@ var i = n("884691"),
   l = n("446674"),
   a = n("890537"),
   s = n("757457"),
-  r = n("820081");
+  r = n("755815");
 
 function o(e) {
-  let t = (0, r.useIsUserRecentGamesEnabled)(e),
+  let t = (0, r.useIsUserRecentGamesFetchEnabled)(e),
     n = i.useRef(new AbortController),
     {
       recentGames: o,
