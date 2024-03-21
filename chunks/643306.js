@@ -109,7 +109,8 @@ function k(e) {
                 ...n,
                 userId: e.userId,
                 guildId: a.id,
-                channelId: t.id
+                channelId: t.id,
+                roleId: u.id
               }),
               spacing: 14,
               children: (s, r) => {
