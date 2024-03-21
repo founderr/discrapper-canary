@@ -19,8 +19,8 @@ var i = n("917351"),
   u = n("679653"),
   d = n("379881"),
   c = n("106682"),
-  f = n("233069"),
-  _ = n("991170"),
+  _ = n("233069"),
+  f = n("991170"),
   E = n("271938"),
   h = n("42203"),
   g = n("26989"),
@@ -40,7 +40,7 @@ let A = "SELECTABLE",
   P = {},
   L = {
     comparator: -1,
-    channel: (0, f.createChannelRecord)({
+    channel: (0, _.createChannelRecord)({
       id: T.NULL_STRING_CHANNEL_ID,
       type: T.ChannelTypes.GUILD_CATEGORY,
       name: I.default.Messages.UNCATEGORIZED
@@ -106,8 +106,8 @@ function G(e) {
       s.forEach(n, n => {
         var i;
         let s = n.channel;
-        if (e.count += 1, f.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(s.type) && !p.default.can(T.Permissions.VIEW_CHANNEL, s) && !l.default.isChannelGated(s.guild_id, s.id) && s.id !== D) return;
-        let r = (i = s.type, (0, f.isGuildSelectableChannelType)(i) ? A : (0, f.isGuildVocalChannelType)(i) ? C : i);
+        if (e.count += 1, _.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(s.type) && !p.default.can(T.Permissions.VIEW_CHANNEL, s) && !l.default.isChannelGated(s.guild_id, s.id) && s.id !== D) return;
+        let r = (i = s.type, (0, _.isGuildSelectableChannelType)(i) ? A : (0, _.isGuildVocalChannelType)(i) ? C : i);
         s.type === T.ChannelTypes.GUILD_DIRECTORY && (null == P[t] && (P[t] = []), P[t].push(n)), null != e[r] && e[r].push(n)
       })
     }(n), (t = n)[A].sort(k), t[C].sort(k), t[T.ChannelTypes.GUILD_CATEGORY].sort(k),
@@ -177,7 +177,7 @@ function B(e) {
 }
 
 function H(e, t) {
-  return r.default.hasAny(_.default.computePermissions({
+  return r.hasAny(f.computePermissions({
     user: e,
     context: t,
     checkElevated: !1

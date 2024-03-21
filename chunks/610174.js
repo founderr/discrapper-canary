@@ -64,7 +64,7 @@ let o = (0, r.createExperiment)({
 
 function c(e) {
   let t = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(e)),
-    n = (0, i.useStateFromStores)([a.default], () => null != t && l.default.hasAny(a.default.computePermissions(t), d.IncidentAlertModeratorPermissions)),
+    n = (0, i.useStateFromStores)([a.default], () => null != t && l.hasAny(a.default.computePermissions(t), d.IncidentAlertModeratorPermissions)),
     r = o.useExperiment({
       guildId: e,
       location: "c3fae3_1"
@@ -87,7 +87,7 @@ function c(e) {
 
 function f(e) {
   let t = u.default.getGuild(e),
-    n = null != t && l.default.hasAny(a.default.computePermissions(t), d.IncidentAlertModeratorPermissions),
+    n = null != t && l.hasAny(a.default.computePermissions(t), d.IncidentAlertModeratorPermissions),
     i = o.getCurrentConfig({
       guildId: e,
       location: "c3fae3_3"

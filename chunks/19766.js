@@ -20,8 +20,8 @@ var i, s, r = n("917351"),
   u = n("316693"),
   d = n("446674"),
   c = n("913144"),
-  f = n("991170"),
-  _ = n("373469"),
+  _ = n("991170"),
+  f = n("373469"),
   E = n("271938"),
   h = n("42203"),
   g = n("525065"),
@@ -66,7 +66,7 @@ function R(e, t, n) {
     s = S.default.isMobileOnline(n),
     r = i ? v.default.getStatus() : S.default.getStatus(n, e),
     a = i ? v.default.getActivities() : S.default.getActivities(n, e),
-    o = _.default.getStreamForUser(n, e),
+    o = f.default.getStreamForUser(n, e),
     l = T.default.getUser(n);
   return null == l ? null : {
     type: "MEMBER",
@@ -83,13 +83,13 @@ function R(e, t, n) {
 function O(e) {
   let t = h.default.getChannel(e);
   return null == t ? C : null == t.memberListId ? function(e) {
-    return f.default.canEveryone(I.Permissions.VIEW_CHANNEL, e) ? C : l.v3(a(e.permissionOverwrites).reduce((e, t) => {
+    return _.canEveryone(I.Permissions.VIEW_CHANNEL, e) ? C : l.v3(a(e.permissionOverwrites).reduce((e, t) => {
       let {
         id: n,
         allow: i,
         deny: s
       } = t;
-      return u.default.has(i, I.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : u.default.has(s, I.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
+      return u.has(i, I.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : u.has(s, I.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
     }, []).sort().join(",")).toString()
   }(t) : t.memberListId
 }(s = i || (i = {})).GROUP = "GROUP", s.MEMBER = "MEMBER", s.CONTENT_INVENTORY = "CONTENT_INVENTORY", s.CONTENT_INVENTORY_GROUP = "CONTENT_INVENTORY_GROUP", s.HIDDEN_CONTENT_INVENTORY = "HIDDEN_CONTENT_INVENTORY";
@@ -97,7 +97,7 @@ class D {
   updateOwnerId() {
     let e = p.default.getGuild(this.guildId);
     if (null == e) return !1;
-    let t = f.default.getGuildVisualOwnerId(e);
+    let t = _.getGuildVisualOwnerId(e);
     return this.ownerId !== t && (this.ownerId = t, !0)
   }
   setGroups(e) {
@@ -201,7 +201,7 @@ function L() {
 let M = [];
 
 function b() {
-  let e = _.default.getAllApplicationStreams(),
+  let e = f.default.getAllApplicationStreams(),
     t = M.concat(e);
   M = e, t.forEach(e => {
     P.forEach(null, t => t.rebuildMember(e.ownerId))
@@ -214,7 +214,7 @@ function U() {
 }
 class w extends d.default.Store {
   initialize() {
-    this.waitFor(T.default, p.default, h.default, m.default, S.default, v.default, E.default, g.default, _.default), this.syncWith([v.default], U), this.syncWith([_.default], b)
+    this.waitFor(T.default, p.default, h.default, m.default, S.default, v.default, E.default, g.default, f.default), this.syncWith([v.default], U), this.syncWith([f.default], b)
   }
   getProps(e, t) {
     let n = P.get(e, O(t));

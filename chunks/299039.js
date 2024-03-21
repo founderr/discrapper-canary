@@ -16,19 +16,19 @@ function a(e) {
 }
 var o = {
   age: function(e) {
-    return r.default.age(e)
+    return r.age(e)
   },
   extractTimestamp: function(e) {
-    return r.default.extractTimestamp(e)
+    return r.extractTimestamp(e)
   },
   compare: function(e, t) {
-    return r.default.compare(e, t)
+    return r.compare(e, t)
   },
   atPreviousMillisecond: function(e) {
-    return r.default.atPreviousMillisecond(e)
+    return r.atPreviousMillisecond(e)
   },
   fromTimestamp: function(e) {
-    return r.default.fromTimestamp(e)
+    return r.fromTimestamp(e)
   },
   keys: function(e) {
     return Object.keys(e)

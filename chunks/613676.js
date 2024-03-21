@@ -78,6 +78,6 @@ function c(e) {
     channelId: p,
     disableGuildSelect: m,
     scopes: d.scopes,
-    permissions: null != d.permissions ? l.default.deserialize(d.permissions) : void 0
+    permissions: null != d.permissions ? l.deserialize(d.permissions) : void 0
   }))
 }

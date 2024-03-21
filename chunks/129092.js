@@ -193,7 +193,7 @@ function m(e) {
 }
 
 function M(e) {
-  return e.type === o.ChannelTypes.GUILD_TEXT && !s.default.canEveryoneRole(o.Permissions.SEND_MESSAGES, e) && s.default.canEveryoneRole(o.Permissions.VIEW_CHANNEL, e)
+  return e.type === o.ChannelTypes.GUILD_TEXT && !s.canEveryoneRole(o.Permissions.SEND_MESSAGES, e) && s.canEveryoneRole(o.Permissions.VIEW_CHANNEL, e)
 }
 
 function C(e) {
@@ -202,7 +202,7 @@ function C(e) {
     case o.ChannelTypes.GUILD_ANNOUNCEMENT:
     case o.ChannelTypes.GUILD_FORUM:
     case o.ChannelTypes.GUILD_MEDIA:
-      return s.default.canEveryoneRole(o.Permissions.VIEW_CHANNEL, e);
+      return s.canEveryoneRole(o.Permissions.VIEW_CHANNEL, e);
     default:
       return !1
   }

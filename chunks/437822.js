@@ -14,8 +14,8 @@ var s, r, a = n("759843"),
   u = n("95410"),
   d = n("913144"),
   c = n("448993"),
-  f = n("307439"),
-  _ = n("605250"),
+  _ = n("307439"),
+  f = n("605250"),
   E = n("21121"),
   h = n("393414"),
   g = n("271938"),
@@ -24,7 +24,7 @@ var s, r, a = n("759843"),
   S = n("772017"),
   v = n("49111"),
   T = n("191349");
-let I = new _.default("AuthenticationActionCreators"),
+let I = new f.default("AuthenticationActionCreators"),
   A = null;
 
 function C(e) {
@@ -70,7 +70,7 @@ var N = {
       source: o,
       giftCodeSKUId: l,
       invite: u,
-      isMultiAccount: f
+      isMultiAccount: _
     } = e;
     d.default.dispatch({
       type: "LOGIN",
@@ -92,10 +92,10 @@ var N = {
         event: a.NetworkActionNames.USER_LOGIN,
         properties: {
           invite_code: null == u ? void 0 : u.code,
-          is_multi_account: f
+          is_multi_account: _
         }
       },
-      ...f ? {
+      ..._ ? {
         headers: {
           authorization: ""
         }
@@ -125,7 +125,7 @@ var N = {
         webauthn: i,
         totp: u,
         backup: a
-      }) : f ? this.switchAccountToken(r) : d.default.dispatch({
+      }) : _ ? this.switchAccountToken(r) : d.default.dispatch({
         type: "LOGIN_SUCCESS",
         token: r
       })
@@ -244,7 +244,7 @@ var N = {
       },
       ...null != n && {
         headers: {
-          authorization: null !== (e = o.default.getToken(n)) && void 0 !== e ? e : ""
+          authorization: null !== (e = o.getToken(n)) && void 0 !== e ? e : ""
         }
       }
     }).finally(() => {
@@ -501,7 +501,7 @@ var N = {
         countryCode: null !== (a = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== a ? a : void 0
       }), A = null, (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null) {
       let t = e.body.promotional_email_opt_in;
-      (0, f.setPromoEmailConsentState)({
+      (0, _.setPromoEmailConsentState)({
         required: t.required,
         checked: t.pre_checked,
         preChecked: t.pre_checked

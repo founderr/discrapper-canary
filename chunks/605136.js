@@ -18,7 +18,7 @@ var i = n("316693"),
   r = n("299039");
 
 function a(e) {
-  e.permissions = i.default.deserialize(e.permissions)
+  e.permissions = i.deserialize(e.permissions)
 }
 
 function o(e) {
@@ -26,7 +26,7 @@ function o(e) {
   return {
     id: e.id,
     name: e.name,
-    permissions: i.default.deserialize(e.permissions),
+    permissions: i.deserialize(e.permissions),
     mentionable: e.mentionable,
     position: e.position,
     originalPosition: e.position,

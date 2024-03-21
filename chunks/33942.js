@@ -29,8 +29,8 @@ var i, s, r = n("37983"),
   u = n("90915"),
   d = n("746379"),
   c = n.n(d),
-  f = n("891189"),
-  _ = n("316693"),
+  _ = n("891189"),
+  f = n("316693"),
   E = n("446674"),
   h = n("271841"),
   g = n("551042"),
@@ -153,8 +153,8 @@ function es(e) {
       channelId: eu,
       integrationType: ed,
       disableGuildSelect: ec = !1,
-      showLogout: ef = !1,
-      cancelCompletesFlow: e_ = !0,
+      showLogout: e_ = !1,
+      cancelCompletesFlow: ef = !0,
       isTrustedName: eE = !1,
       isEmbeddedFlow: eh = !1,
       inApp: eg = !1,
@@ -175,7 +175,7 @@ function es(e) {
     eM = null == eC ? void 0 : eC.guilds,
     [eb, eU] = a.useState(null != el ? el : null),
     [ew, ek] = a.useState(null != eu ? eu : null),
-    [eV, eG] = a.useState(b.default.NONE),
+    [eV, eG] = a.useState(b.NONE),
     eF = a.useMemo(() => (null == eC ? void 0 : eC.user) != null ? new P.default(eC.user) : null, [null == eC ? void 0 : eC.user]),
     ex = a.useMemo(() => null == eM ? void 0 : eM.find(e => e.id === eb), [eM, eb]),
     [eB, eH] = a.useState(null),
@@ -205,8 +205,8 @@ function es(e) {
     }, [null == eW ? void 0 : eW.scopes, ea, eY]),
     eX = a.useMemo(() => {
       var e;
-      let t = eY ? _.default.deserialize(null !== (e = null == eW ? void 0 : eW.permissions) && void 0 !== e ? e : 0) : eo;
-      return null != t ? t : b.default.NONE
+      let t = eY ? f.deserialize(null !== (e = null == eW ? void 0 : eW.permissions) && void 0 !== e ? e : 0) : eo;
+      return null != t ? t : b.NONE
     }, [null == eW ? void 0 : eW.permissions, eo, eY]),
     eQ = (0, E.useStateFromStores)([T.default], () => T.default.getCurrentEmbeddedActivity()),
     eZ = (0, E.useStateFromStoresObject)([v.default, T.default], () => {
@@ -230,7 +230,7 @@ function es(e) {
         ep(e);
         return
       }
-      if (!e && !e_) {
+      if (!e && !ef) {
         null != em && (em({
           application: null == eC ? void 0 : eC.application,
           guild: ex
@@ -253,9 +253,9 @@ function es(e) {
           codeChallengeMethod: en,
           state: ei,
           integrationType: eB,
-          permissions: _.default.remove(eX, eV),
-          guildId: eB === f.ApplicationIntegrationType.GUILD_INSTALL && null != eb ? eb : void 0,
-          channelId: eB === f.ApplicationIntegrationType.GUILD_INSTALL && null != ew ? ew : void 0
+          permissions: f.remove(eX, eV),
+          guildId: eB === _.ApplicationIntegrationType.GUILD_INSTALL && null != eb ? eb : void 0,
+          channelId: eB === _.ApplicationIntegrationType.GUILD_INSTALL && null != ew ? ew : void 0
         });
         if (null != em) em({
           application: null == eC ? void 0 : eC.application,
@@ -278,7 +278,7 @@ function es(e) {
         let e = t.body;
         (null == e ? void 0 : e.message) != null && "" !== e.message ? eD(Error(e.message)) : eD(e), eR(1), eL(!1)
       }
-    }, [ep, e_, em, null == eC ? void 0 : eC.application, ex, eS, N, ez, R, z, et, en, ei, eX, eV, eb, eB, ew]),
+    }, [ep, ef, em, null == eC ? void 0 : eC.application, ex, eS, N, ez, R, z, et, en, ei, eX, eV, eb, eB, ew]),
     e0 = a.useRef(!1),
     e1 = a.useCallback(async () => {
       if (!L.default.isAuthenticated()) {
@@ -296,7 +296,7 @@ function es(e) {
             codeChallenge: et,
             codeChallengeMethod: en,
             state: ei,
-            userInstall: eB === f.ApplicationIntegrationType.USER_INSTALL
+            userInstall: eB === _.ApplicationIntegrationType.USER_INSTALL
           });
           ey((0, V.convertOAuth2Authorization)(e)), es === x.OAuth2Prompts.NONE && e.authorized && e$(!0), (0, I.trackWithMetadata)(Q.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
             application_id: e.application.id
@@ -332,12 +332,12 @@ function es(e) {
       if (null == eN && (!eY || null != eK) && eA) {
         if (null != er) {
           var e;
-          eH(null !== (e = er.integration_type) && void 0 !== e ? e : f.ApplicationIntegrationType.GUILD_INSTALL), eR(1)
-        } else e2.length > 1 ? eR(0) : (1 === e2.length ? eH(e2[0]) : eI && null != ed ? eH(ed) : eH(f.ApplicationIntegrationType.GUILD_INSTALL), eR(1))
+          eH(null !== (e = er.integration_type) && void 0 !== e ? e : _.ApplicationIntegrationType.GUILD_INSTALL), eR(1)
+        } else e2.length > 1 ? eR(0) : (1 === e2.length ? eH(e2[0]) : eI && null != ed ? eH(ed) : eH(_.ApplicationIntegrationType.GUILD_INSTALL), eR(1))
       }
     }, [er, e2, eK, eI, eY, ed, eN, eA]), a.useEffect(() => {
       if (null == eB || null != eC || null != eO) return;
-      eB === f.ApplicationIntegrationType.USER_INSTALL && (eU(null), ek(null));
+      eB === _.ApplicationIntegrationType.USER_INSTALL && (eU(null), ek(null));
       let e = ez.filter(e => !F.ValidScopes.includes(e));
       0 === ez.length ? eD(Error("No scopes were provided.")) : e.length > 0 ? eD(Error("Invalid scope: ".concat(e[0]))) : (0, G.containsDisallowedPermission)(eX) ? eD(Error("Invalid permission(s) provided.")) : e1()
     }, [e1, ez, eX, eB, eC, eO]), eO instanceof Error) return {
@@ -372,8 +372,8 @@ function es(e) {
       };
       let e8 = null == eO || eO instanceof Error ? {} : eO,
         e7 = null == eM ? void 0 : eM.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
-        e5 = eB === f.ApplicationIntegrationType.GUILD_INSTALL && ez.includes(Q.OAuth2Scopes.WEBHOOK_INCOMING),
-        te = e5 || eB === f.ApplicationIntegrationType.GUILD_INSTALL && (ez.includes(Q.OAuth2Scopes.BOT) || ez.includes(Q.OAuth2Scopes.APPLICATIONS_COMMANDS));
+        e5 = eB === _.ApplicationIntegrationType.GUILD_INSTALL && ez.includes(Q.OAuth2Scopes.WEBHOOK_INCOMING),
+        te = e5 || eB === _.ApplicationIntegrationType.GUILD_INSTALL && (ez.includes(Q.OAuth2Scopes.BOT) || ez.includes(Q.OAuth2Scopes.APPLICATIONS_COMMANDS));
       l = (0, r.jsxs)(r.Fragment, {
         children: [(0, r.jsx)(H.default, {
           application: eC.application,
@@ -394,7 +394,7 @@ function es(e) {
           selectedGuildId: eb,
           onChannelChange: ek
         }) : null]
-      }), ez.includes(Q.OAuth2Scopes.BOT) && !_.default.equals(eX, b.default.NONE) && (g = 2), e2.length > 1 && (d = 0), e3 = te && null == ex || e5 && null == ew;
+      }), ez.includes(Q.OAuth2Scopes.BOT) && !f.equals(eX, b.NONE) && (g = 2), e2.length > 1 && (d = 0), e3 = te && null == ex || e5 && null == ew;
       break;
     case 2:
       if (null == eC) return {
@@ -405,7 +405,7 @@ function es(e) {
         permissions: eX,
         deniedPermissions: eV,
         onPermissionsChange: (e, t) => {
-          eG(n => e ? _.default.remove(n, t) : _.default.add(n, t))
+          eG(n => e ? f.remove(n, t) : f.add(n, t))
         },
         guild: ex
       }), d = 1
@@ -427,7 +427,7 @@ function es(e) {
     application: eC.application,
     bot: eC.bot,
     accountScopes: eq,
-    showLogout: ef || !1,
+    showLogout: e_ || !1,
     location: ev,
     isTrustedName: eE
   })), e9 && (A = (0, r.jsxs)("div", {

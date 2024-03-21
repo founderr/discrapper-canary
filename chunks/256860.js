@@ -183,7 +183,7 @@ let v = e => {
           id: t.id,
           name: t.name,
           stickers: []
-        }), null != a && !S.default.can({
+        }), null != a && !S.can({
           permission: C.Permissions.USE_EXTERNAL_EMOJIS,
           user: a,
           context: e

@@ -16,8 +16,8 @@ var i = n("759843"),
   u = n("248967"),
   d = n("21121"),
   c = n("693051"),
-  f = n("153498"),
-  _ = n("934306"),
+  _ = n("153498"),
+  f = n("934306"),
   E = n("258158"),
   h = n("393414"),
   g = n("239380"),
@@ -64,15 +64,15 @@ async function w(e) {
     {
       source: d,
       loadId: c,
-      lurkLocation: f
+      lurkLocation: _
     } = u,
-    _ = null !== (t = u.lurker) && void 0 !== t && t,
+    f = null !== (t = u.lurker) && void 0 !== t && t,
     g = C.default.getCurrentUser();
   if (null !== (i = null == g ? void 0 : g.hasFlag(P.UserFlags.QUARANTINED)) && void 0 !== i && i) return (0, E.default)(), new Promise((e, t) => t(Error()));
   a.default.wait(() => a.default.dispatch({
     type: "GUILD_JOIN",
     guildId: e,
-    lurker: _,
+    lurker: f,
     source: d,
     loadId: c
   }));
@@ -83,10 +83,10 @@ async function w(e) {
       o = await r.default.put({
         url: P.Endpoints.GUILD_JOIN(e),
         query: {
-          lurker: _,
-          session_id: _ ? m.default.getSessionId() : null,
+          lurker: f,
+          session_id: f ? m.default.getSessionId() : null,
           recommendation_load_id: c,
-          location: _ && null != f ? f : null
+          location: f && null != _ ? _ : null
         },
         context: {
           source: d
@@ -107,7 +107,7 @@ async function w(e) {
         type: "ONLINE_GUILD_MEMBER_COUNT_UPDATE",
         guildId: o.body.id,
         count: o.body.approximate_presence_count
-      }), !_) {
+      }), !f) {
       let {
         default: t
       } = await n.el("937692").then(n.bind(n, "937692"));
@@ -123,7 +123,7 @@ async function w(e) {
         t = R.default.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff());
       t ? M(P.MAX_USER_GUILDS_PREMIUM) : M(P.MAX_USER_GUILDS)
     }
-    throw (null === (o = t.body) || void 0 === o ? void 0 : o.code) === P.AbortCodes.GUILD_AT_CAPACITY && U(), _ && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === P.AbortCodes.UNKNOWN_GUILD && b(e), t
+    throw (null === (o = t.body) || void 0 === o ? void 0 : o.code) === P.AbortCodes.GUILD_AT_CAPACITY && U(), f && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === P.AbortCodes.UNKNOWN_GUILD && b(e), t
   }
 }
 
@@ -139,7 +139,7 @@ var V = {
   async transitionToGuildSync(e, t, n, i) {
     var s, r;
     let a = await k(e);
-    let o = (s = a.id, null != (r = n) ? r : !(0, d.isInMainTabsExperiment)() || (0, _.isOnNewPanels)() ? (0, g.getChannelIdForGuildTransition)(s) : void 0),
+    let o = (s = a.id, null != (r = n) ? r : !(0, d.isInMainTabsExperiment)() || (0, f.isOnNewPanels)() ? (0, g.getChannelIdForGuildTransition)(s) : void 0),
       l = t;
     (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) && null == t.welcomeModalChannelId && (l = {
       ...t,
@@ -247,7 +247,7 @@ var V = {
     let i = {
       name: null != t && "" !== t ? t : L.default.Messages.NEW_ROLE,
       color: null != n ? n : 0,
-      permissions: N.default.NONE
+      permissions: N.NONE
     };
     try {
       let t = await r.default.post({
@@ -256,7 +256,7 @@ var V = {
           body: i
         }),
         n = t.body;
-      return n.permissions = s.default.deserialize(n.permissions), a.default.dispatch({
+      return n.permissions = s.deserialize(n.permissions), a.default.dispatch({
         type: "GUILD_SETTINGS_ROLE_SELECT",
         roleId: t.body.id,
         role: n
@@ -415,12 +415,12 @@ var V = {
     })
   },
   nsfwReturnToSafety(e) {
-    if ((0, d.isInMainTabsExperiment)() && !(0, _.isOnNewPanels)()) {
+    if ((0, d.isInMainTabsExperiment)() && !(0, f.isOnNewPanels)()) {
       let e = (0, c.getRootNavigationRef)();
       if ((null == e ? void 0 : e.isReady()) !== !0) return;
-      let t = (0, f.coerceModalRoute)(e.getCurrentRoute());
+      let t = (0, _.coerceModalRoute)(e.getCurrentRoute());
       for (null != t && e.goBack();;) {
-        let t = (0, f.coerceChannelRoute)(e.getCurrentRoute());
+        let t = (0, _.coerceChannelRoute)(e.getCurrentRoute());
         if (null == t) break;
         let n = p.default.getChannel(t.params.channelId);
         if (null == n || !n.isNSFW()) break;
