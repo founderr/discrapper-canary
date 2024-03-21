@@ -21,13 +21,13 @@ function c(e) {
   return d(e) && !a.has(e.id) && (a.add(e.id), t = !0), !d(e) && a.has(e.id) && (a.delete(e.id), t = !0), !d(e) && o.has(e.id) && (o.delete(e.id), t = !0), t
 }
 
-function f(e) {
+function _(e) {
   var t;
   null != e && (u = null !== (t = (0, i.getCountryCodeByAlpha2)(e)) && void 0 !== t ? t : (0, i.getDefaultCountryCode)())
 }
 
-function _(e) {
-  "CONNECTION_OPEN" === e.type && f(e.countryCode), a.clear(), o.clear(), Object.values(s.default.getMutablePrivateChannels()).forEach(e => {
+function f(e) {
+  "CONNECTION_OPEN" === e.type && _(e.countryCode), a.clear(), o.clear(), Object.values(s.default.getMutablePrivateChannels()).forEach(e => {
     c(e)
   }), l = !0
 }
@@ -71,7 +71,7 @@ function S(e) {
   let {
     countryCode: t
   } = e;
-  f(t)
+  _(t)
 }
 class v extends r.default {
   initialize() {
@@ -107,8 +107,8 @@ class v extends r.default {
   }
   constructor() {
     super({
-      CONNECTION_OPEN: _,
-      CONNECTION_OPEN_SUPPLEMENTAL: _,
+      CONNECTION_OPEN: f,
+      CONNECTION_OPEN_SUPPLEMENTAL: f,
       CACHE_LOADED_LAZY: () => this.loadCache(),
       OVERLAY_INITIALIZE: p,
       CHANNEL_CREATE: h,

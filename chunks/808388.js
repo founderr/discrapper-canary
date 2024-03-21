@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return c
   },
   useShowCreatorPortalLinkForTierTemplates: function() {
-    return f
+    return _
   },
   isUserEligibleForTierTemplates: function() {
-    return _
+    return f
   },
   useUserEligibleForTierTemplates: function() {
     return E
@@ -98,7 +98,7 @@ function c(e) {
   return t
 }
 
-function f(e) {
+function _(e) {
   let {
     showCreatorPortalLink: t
   } = i.GuildRoleSubscriptionsTierTemplatesExperiment.useExperiment({
@@ -110,7 +110,7 @@ function f(e) {
   return t
 }
 
-function _() {
+function f() {
   let {
     enabled: e
   } = i.GuildRoleSubscriptionsTierTemplatesUserExperiment.getCurrentConfig({

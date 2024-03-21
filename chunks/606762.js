@@ -17,8 +17,8 @@ n.r(t), n.d(t, {
   }
 });
 var i, s, r, a, o, l, u, d, c = n("79112"),
-  f = n("428171"),
-  _ = n("852040"),
+  _ = n("428171"),
+  f = n("852040"),
   E = n("701909"),
   h = n("49111"),
   g = n("782340");
@@ -102,7 +102,7 @@ function S(e, t, n, i) {
           case h.ChannelTypes.GUILD_CATEGORY:
             return n ? g.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_CATEGORY : g.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_CATEGORY;
           case h.ChannelTypes.GUILD_FORUM:
-            return (null == i ? void 0 : i.createPostsDisabled) && !e.isMediaChannel() ? f.default.getForumChannelPermissionText() : g.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_TEXT;
+            return (null == i ? void 0 : i.createPostsDisabled) && !e.isMediaChannel() ? _.default.getForumChannelPermissionText() : g.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_TEXT;
           case h.ChannelTypes.GUILD_MEDIA:
             return g.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_TEXT;
           case h.ChannelTypes.GUILD_ANNOUNCEMENT:
@@ -110,7 +110,7 @@ function S(e, t, n, i) {
               articleURL: E.default.getArticleURL(h.HelpdeskArticles.ANNOUNCEMENT_CHANNELS)
             });
           case h.ChannelTypes.GUILD_VOICE:
-            return _.default.getTextInVoiceSendMessageChannelPermissionText(null == i ? void 0 : i.sendMessagesDisabled);
+            return f.default.getTextInVoiceSendMessageChannelPermissionText(null == i ? void 0 : i.sendMessagesDisabled);
           default:
             return g.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_TEXT
         }
@@ -179,7 +179,7 @@ function S(e, t, n, i) {
           case h.ChannelTypes.GUILD_CATEGORY:
             return g.default.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION_CATEGORY;
           case h.ChannelTypes.GUILD_VOICE:
-            return _.default.getTextInVoiceReadMessageHistoryChannelPermissionText(null == i ? void 0 : i.readMessageHistoryDisabled);
+            return f.default.getTextInVoiceReadMessageHistoryChannelPermissionText(null == i ? void 0 : i.readMessageHistoryDisabled);
           case h.ChannelTypes.GUILD_FORUM:
           case h.ChannelTypes.GUILD_MEDIA:
             return g.default.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION_FORUM_CHANNEL;

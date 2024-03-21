@@ -13,8 +13,8 @@ var i = n("446674"),
   u = n("233069"),
   d = n("271938"),
   c = n("42203"),
-  f = n("923959"),
-  _ = n("505507"),
+  _ = n("923959"),
+  f = n("505507"),
   E = n("162771"),
   h = n("773336"),
   g = n("50885"),
@@ -111,11 +111,11 @@ function G(e) {
             });
             break;
           case "GUILD_CREATE":
-            let f = e => (0, u.createChannelRecord)(e),
-              _ = e.guild;
-            _.channels = null !== (s = null === (n = _.channels) || void 0 === n ? void 0 : n.map(f)) && void 0 !== s ? s : null, _.threads = null === (i = _.threads) || void 0 === i ? void 0 : i.map(f), null != _.channelUpdates && (_.channelUpdates.writes = null === (a = _.channelUpdates.writes) || void 0 === a ? void 0 : a.map(f)), r.default.dispatch({
+            let _ = e => (0, u.createChannelRecord)(e),
+              f = e.guild;
+            f.channels = null !== (s = null === (n = f.channels) || void 0 === n ? void 0 : n.map(_)) && void 0 !== s ? s : null, f.threads = null === (i = f.threads) || void 0 === i ? void 0 : i.map(_), null != f.channelUpdates && (f.channelUpdates.writes = null === (a = f.channelUpdates.writes) || void 0 === a ? void 0 : a.map(_)), r.default.dispatch({
               type: "GUILD_CREATE",
-              guild: _
+              guild: f
             });
             break;
           case "USER_SETTINGS_PROTO_UPDATE":
@@ -164,10 +164,10 @@ class F extends i.default.PersistedStore {
     return I === e
   }
   isPinned(e) {
-    let t = _.default.getLayout(m.OVERLAY_LAYOUT_ID);
+    let t = f.default.getLayout(m.OVERLAY_LAYOUT_ID);
     if (null != t) {
       let n = t.widgets.find(t => {
-        let n = _.default.getWidget(t);
+        let n = f.default.getWidget(t);
         return null != n && n.type === e && !!n.pinned || !1
       });
       return null != n
@@ -303,8 +303,8 @@ var x = new F(r.default, {
   OVERLAY_READY: function() {
     let e = b.selectedGuildId,
       t = b.selectedChannelId;
-    if (null != e && (!f.default.hasChannels(e) || null != t && !f.default.hasSelectableChannel(e, t)) && (e = null, t = null), null != t && null == c.default.getChannel(t) && (e = null, t = null), null == e && null == t && (e = E.default.getGuildId()), null != e && null == t) {
-      let n = f.default.getDefaultChannel(e);
+    if (null != e && (!_.default.hasChannels(e) || null != t && !_.default.hasSelectableChannel(e, t)) && (e = null, t = null), null != t && null == c.default.getChannel(t) && (e = null, t = null), null == e && null == t && (e = E.default.getGuildId()), null != e && null == t) {
+      let n = _.default.getDefaultChannel(e);
       null != n && (t = n.id)
     }
     b.selectedGuildId = e, b.selectedChannelId = t

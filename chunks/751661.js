@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   openStageChannelSettings: function() {
-    return _
+    return f
   },
   openEndGuildEventConfirmationModal: function() {
     return E
@@ -35,9 +35,9 @@ var s = n("551042"),
   u = n("534471"),
   d = n("151642"),
   c = n("49111"),
-  f = n("625611");
+  _ = n("625611");
 
-function _(e, t) {
+function f(e, t) {
   (0, s.openModalLazy)(async () => {
     let {
       default: t
@@ -47,7 +47,7 @@ function _(e, t) {
       channel: e
     })
   }, {
-    contextKey: t === c.AppContext.POPOUT ? f.POPOUT_MODAL_CONTEXT : f.DEFAULT_MODAL_CONTEXT
+    contextKey: t === c.AppContext.POPOUT ? _.POPOUT_MODAL_CONTEXT : _.DEFAULT_MODAL_CONTEXT
   })
 }
 
@@ -61,7 +61,7 @@ function E(e, t) {
       channel: e
     })
   }, {
-    contextKey: t === c.AppContext.POPOUT ? f.POPOUT_MODAL_CONTEXT : f.DEFAULT_MODAL_CONTEXT
+    contextKey: t === c.AppContext.POPOUT ? _.POPOUT_MODAL_CONTEXT : _.DEFAULT_MODAL_CONTEXT
   })
 }
 
@@ -90,7 +90,7 @@ function m(e, t) {
       channel: e
     })
   }, {
-    contextKey: t === c.AppContext.POPOUT ? f.POPOUT_MODAL_CONTEXT : f.DEFAULT_MODAL_CONTEXT
+    contextKey: t === c.AppContext.POPOUT ? _.POPOUT_MODAL_CONTEXT : _.DEFAULT_MODAL_CONTEXT
   })
 }
 
@@ -108,7 +108,7 @@ function S(e, t) {
     let t = a.default.getId(),
       r = o.default.isModerator(t, e.id),
       u = l.default.isLive(e.id);
-    r && !u ? _(e) : r && u && function(e) {
+    r && !u ? f(e) : r && u && function(e) {
       (0, s.openModalLazy)(async () => {
         let {
           default: t

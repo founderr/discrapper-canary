@@ -13,9 +13,9 @@ var i = n("917351"),
   u = n("271938");
 let d = {},
   c = new o.default,
-  f = new Set;
+  _ = new Set;
 
-function _(e) {
+function f(e) {
   d = s(d).reject(t => t.guildId === e).keyBy("threadId").value()
 }
 
@@ -38,12 +38,12 @@ function h(e) {
 function g(e) {
   let t = d[e];
   if (c.clearTimer(e), !0 === t.muted) {
-    (f = new Set(f)).add(e);
+    (_ = new Set(_)).add(e);
     let n = c.setTimer(e, t.muteConfig, () => {
-      d[e].muted = !1, (f = new Set(f)).delete(e), S.emitChange()
+      d[e].muted = !1, (_ = new Set(_)).delete(e), S.emitChange()
     });
-    n && (d[e].muted = !1, (f = new Set(f)).delete(e))
-  } else(f = new Set(f)).delete(e)
+    n && (d[e].muted = !1, (_ = new Set(_)).delete(e))
+  } else(_ = new Set(_)).delete(e)
 }
 
 function m(e) {
@@ -82,16 +82,16 @@ class p extends r.default.Store {
     return null === (t = d[e]) || void 0 === t ? void 0 : t.muteConfig
   }
   getMutedThreads() {
-    return f
+    return _
   }
   isMuted(e) {
-    return f.has(e)
+    return _.has(e)
   }
 }
 p.displayName = "JoinedThreadsStore";
 let S = new p(a.default, {
   CONNECTION_OPEN: function(e) {
-    c.reset(), f = new Set, d = {}, e.guilds.forEach(e => {
+    c.reset(), _ = new Set, d = {}, e.guilds.forEach(e => {
       E(e)
     })
   },
@@ -108,13 +108,13 @@ let S = new p(a.default, {
     let {
       guild: t
     } = e;
-    _(t.id), E(t)
+    f(t.id), E(t)
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    _(t.id)
+    f(t.id)
   },
   THREAD_CREATE: function(e) {
     let {

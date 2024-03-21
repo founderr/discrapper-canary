@@ -13,8 +13,8 @@ var i = n("37983"),
   u = n("242670"),
   d = n("945330"),
   c = n("229915"),
-  f = n("782340"),
-  _ = n("523634");
+  _ = n("782340"),
+  f = n("523634");
 let E = s.forwardRef(function(e, t) {
   var n, r, E;
   let {
@@ -22,7 +22,7 @@ let E = s.forwardRef(function(e, t) {
     onChange: g,
     loading: m = !1,
     disabled: p = !1,
-    placeholder: S = f.default.Messages.SEARCH,
+    placeholder: S = _.default.Messages.SEARCH,
     "aria-label": v
   } = e, T = s.useRef(null), I = s.useRef(null);
   s.useImperativeHandle(t, () => ({
@@ -37,14 +37,14 @@ let E = s.forwardRef(function(e, t) {
     activate: () => !1
   }), []);
   let A = (n = h, r = m, E = g, r ? (0, i.jsx)("div", {
-    className: _.iconContainer,
+    className: f.iconContainer,
     children: (0, i.jsx)(u.Spinner, {
       type: u.Spinner.Type.SPINNING_CIRCLE,
-      className: a(_.icon)
+      className: a(f.icon)
     })
   }) : n.length > 0 ? (0, i.jsx)(o.Clickable, {
-    "aria-label": f.default.Messages.SEARCH_CLEAR,
-    className: a(_.iconContainer, _.iconClickable),
+    "aria-label": _.default.Messages.SEARCH_CLEAR,
+    className: a(f.iconContainer, f.iconClickable),
     onClick: e => {
       e.stopPropagation(), E("")
     },
@@ -62,16 +62,16 @@ let E = s.forwardRef(function(e, t) {
     children: (0, i.jsx)(d.default, {
       width: 18,
       height: 18,
-      className: _.icon,
-      "aria-label": f.default.Messages.CLOSE
+      className: f.icon,
+      "aria-label": _.default.Messages.CLOSE
     })
   }) : (0, i.jsx)("div", {
-    className: _.iconContainer,
+    className: f.iconContainer,
     children: (0, i.jsx)(c.default, {
       width: 18,
       height: 18,
-      className: _.icon,
-      "aria-label": f.default.Messages.SEARCH
+      className: f.icon,
+      "aria-label": _.default.Messages.SEARCH
     })
   }));
   return (0, i.jsx)(l.FocusRing, {
@@ -84,13 +84,13 @@ let E = s.forwardRef(function(e, t) {
       right: 4
     },
     children: (0, i.jsxs)("div", {
-      className: _.container,
+      className: f.container,
       ref: T,
       children: [(0, i.jsx)("input", {
         role: "searchbox",
         "aria-busy": m,
         ref: I,
-        className: _.input,
+        className: f.input,
         value: h,
         onChange: e => g(e.currentTarget.value),
         "aria-label": v,

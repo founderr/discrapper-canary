@@ -16,8 +16,8 @@ var i = n("37983"),
   u = n("159885"),
   d = n("725484"),
   c = n("331756"),
-  f = n("289382"),
-  _ = n("261145");
+  _ = n("289382"),
+  f = n("261145");
 let E = (0, u.cssValueToNumber)(o.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
 
 function h(e, t) {
@@ -63,7 +63,7 @@ function g(e) {
     return window.addEventListener("resize", e), () => window.removeEventListener("reslize", e)
   }, []), (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.default, {
-      className: a(_.rightSplit),
+      className: a(f.rightSplit),
       onLoad: function(e) {
         let {
           currentTarget: t
@@ -77,8 +77,8 @@ function g(e) {
       width: r,
       height: o
     }), (0, i.jsx)("div", {
-      className: a(_.leftSplit, {
-        [_.nonEmbeddedLeftSplit]: !0
+      className: a(f.leftSplit, {
+        [f.nonEmbeddedLeftSplit]: !0
       }),
       children: n
     })]
@@ -100,8 +100,8 @@ class m extends s.PureComponent {
       height: s
     } = this.state;
     return null != e ? (0, i.jsx)(l.default, {
-      className: a(_.rightSplit, {
-        [_.embedded]: t
+      className: a(f.rightSplit, {
+        [f.embedded]: t
       }),
       src: e,
       width: n,
@@ -124,7 +124,7 @@ class m extends s.PureComponent {
       updateWaveState: t,
       hideFallback: !r
     }) : (0, i.jsx)("div", {
-      className: _.mobileWave
+      className: f.mobileWave
     })
   }
   renderContent() {
@@ -139,12 +139,12 @@ class m extends s.PureComponent {
     } = this.state;
     return (0, i.jsxs)(s.Fragment, {
       children: [this.renderWave(), (0, i.jsxs)("div", {
-        className: a(_.leftSplit, {
-          [_.nonEmbeddedLeftSplit]: o
+        className: a(f.leftSplit, {
+          [f.nonEmbeddedLeftSplit]: o
         }),
         children: [n ? (0, i.jsx)(d.default, {
-          show: !l || t === f.WaveStates.ENTERED && t !== f.WaveStates.FILLING,
-          className: a(_.logo, r)
+          show: !l || t === _.WaveStates.ENTERED && t !== _.WaveStates.FILLING,
+          className: a(f.logo, r)
         }) : null, e]
       })]
     })
@@ -154,7 +154,7 @@ class m extends s.PureComponent {
       className: e
     } = this.props;
     return (0, i.jsxs)("div", {
-      className: a(e, _.wrapper),
+      className: a(e, f.wrapper),
       children: [this.renderSplashArt(), this.renderContent()]
     })
   }

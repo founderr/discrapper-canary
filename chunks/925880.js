@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 }), n("424973"), n("222007");
 var i = n("714617"),
@@ -29,4 +29,4 @@ class c extends r.default.Store {
   }
 }
 c.displayName = "FirstPartyRichPresenceStore";
-var f = new c(a.default)
+var _ = new c(a.default)

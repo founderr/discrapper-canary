@@ -13,8 +13,8 @@ var i = n("102053"),
   u = n("867805"),
   d = n("267567"),
   c = n("778689"),
-  f = n("305961"),
-  _ = n("718517"),
+  _ = n("305961"),
+  f = n("718517"),
   E = n("161585"),
   h = n("24373");
 let g = 2,
@@ -28,7 +28,7 @@ let g = 2,
   C = (e, t) => {
     A = new Map(A.set(e, t))
   },
-  y = _.default.Millis.HOUR,
+  y = f.default.Millis.HOUR,
   N = async () => {
     if (0 !== g) return;
     let e = a.default.database();
@@ -96,7 +96,7 @@ let g = 2,
     }(t || n) && e.stickers.forEach(e => R(e))
   }, P = () => {
     A.forEach((e, t) => {
-      let n = f.default.getGuild(t);
+      let n = _.default.getGuild(t);
       null != n && e.forEach(e => O(e, n))
     }), v.forEach(e => {
       e.stickers.forEach(e => O(e))
@@ -104,12 +104,12 @@ let g = 2,
   };
 
 function L(e) {
-  let t = f.default.getGuild(e.id);
+  let t = _.default.getGuild(e.id);
   null != t && null != e.stickers && (e.stickers.forEach(e => R(e, !0, t)), C(t.id, e.stickers))
 }
 class M extends s.default.Store {
   initialize() {
-    this.waitFor(a.default, c.default, f.default)
+    this.waitFor(a.default, c.default, _.default)
   }
   get isLoaded() {
     return 0 !== g
@@ -242,7 +242,7 @@ var b = new M(r.default, {
     } = e;
     for (let [e, n] of t)
       if (c.default.isMember(e) && !A.has(e)) {
-        let t = f.default.getGuild(e);
+        let t = _.default.getGuild(e);
         for (let e of n) R(e, !0, t);
         C(e, n)
       }

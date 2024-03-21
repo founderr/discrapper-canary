@@ -13,8 +13,8 @@ var i = n("759843"),
   u = n("81732"),
   d = n("479756"),
   c = n("38654"),
-  f = n("267567"),
-  _ = n("271938"),
+  _ = n("267567"),
+  f = n("271938"),
   E = n("26989"),
   h = n("305961"),
   g = n("730622"),
@@ -161,8 +161,8 @@ let T = new o.default("GuildSettingsActionCreators"),
         banner: l,
         homeHeader: d,
         afkChannelId: c,
-        afkTimeout: f,
-        systemChannelId: _,
+        afkTimeout: _,
+        systemChannelId: f,
         verificationLevel: E,
         defaultMessageNotifications: h,
         explicitContentFilter: g,
@@ -184,8 +184,8 @@ let T = new o.default("GuildSettingsActionCreators"),
         features: m,
         preferred_locale: v,
         afk_channel_id: c,
-        afk_timeout: f,
-        system_channel_id: _,
+        afk_timeout: _,
+        system_channel_id: f,
         verification_level: E,
         default_message_notifications: h,
         explicit_content_filter: g,
@@ -289,13 +289,13 @@ let T = new o.default("GuildSettingsActionCreators"),
       await s.default.delete({
         url: S.Endpoints.GUILD_LEAVE(e),
         body: {
-          lurking: f.default.isLurking(e) || E.default.isCurrentUserGuest(e)
+          lurking: _.default.isLurking(e) || E.default.isCurrentUserGuest(e)
         },
         oldFormErrors: !0
       }), I.close()
     },
     async updateMemberRoles(e, t, n, i, a) {
-      if (c.default.isFullServerPreview(e) && t === _.default.getId()) {
+      if (c.default.isFullServerPreview(e) && t === f.default.getId()) {
         (0, d.updateImpersonatedRoles)(e, n);
         return
       }

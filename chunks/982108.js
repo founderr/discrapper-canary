@@ -19,8 +19,8 @@ var i = n("394846"),
   u = n("42203"),
   d = n("957255"),
   c = n("744983"),
-  f = n("18494"),
-  _ = n("162771"),
+  _ = n("18494"),
+  f = n("162771"),
   E = n("697218"),
   h = n("49111"),
   g = n("724210"),
@@ -36,7 +36,7 @@ let p = "message_requests",
 function y(e) {
   if (null == e) return null;
   if ((0, g.isStaticChannelRoute)(e)) {
-    let t = _.default.getGuildId();
+    let t = f.default.getGuildId();
     return null == t ? null : (0, g.buildGuildStaticChannelId)(e, t)
   }
   return e
@@ -49,7 +49,7 @@ function N(e) {
 function R(e) {
   let t = !1;
   I && (I = !1, t = !0);
-  let n = y(f.default.getChannelId());
+  let n = y(_.default.getChannelId());
   return null != n && n in A && (delete A[n], t = !0), t && e ? e : !e
 }
 

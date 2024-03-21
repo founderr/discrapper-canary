@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   MAX_PROMPT_TITLE_LENGTH: function() {
-    return f
+    return _
   },
   MAX_PROMPT_OPTION_TITLE_LENGTH: function() {
-    return _
+    return f
   },
   MAX_PROMPT_OPTION_DESCRIPTION_LENGTH: function() {
     return E
@@ -61,8 +61,8 @@ n.r(t), n.d(t, {
 var i, s, r, a, o, l, u = n("714617"),
   d = n.n(u),
   c = n("782340");
-let f = 100,
-  _ = 50,
+let _ = 100,
+  f = 50,
   E = 100,
   h = 15,
   g = 12,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 }), n("222007");
 var i, s, r = n("917351"),
@@ -30,7 +30,7 @@ class c extends o.default.Store {
   }
 }
 c.displayName = "ApplicationAssetsStore";
-var f = new c(l.default, {
+var _ = new c(l.default, {
   APPLICATION_ASSETS_FETCH: function(e) {
     let {
       applicationId: t

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 }), n("222007"), n("808653");
 var i = n("446674"),
@@ -35,7 +35,7 @@ class c extends i.default.Store {
   }
 }
 c.displayName = "VideoStreamStore";
-var f = new c(s.default, {
+var _ = new c(s.default, {
   CONNECTION_OPEN: function(e) {
     let {
       user: t,

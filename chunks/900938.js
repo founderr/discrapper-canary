@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("808653");
 var c = n("917351"),
-  f = n.n(c),
-  _ = n("866227"),
-  E = n.n(_),
+  _ = n.n(c),
+  f = n("866227"),
+  E = n.n(f),
   h = n("446674"),
   g = n("872717"),
   m = n("95410"),
@@ -166,7 +166,7 @@ class es extends h.default.Store {
     return W
   }
   hasChanges() {
-    return !f.isEqual(o, a) || !f.isEqual(W, j)
+    return !_.isEqual(o, a) || !_.isEqual(W, j)
   }
   isOpen() {
     return U
@@ -394,20 +394,20 @@ var er = new es(p.default, __OVERLAY__ ? {} : {
   GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: function(e) {
     var t, n, i, s, r, a, l, u, d, c;
     let {
-      guildId: f,
-      metadata: _
+      guildId: _,
+      metadata: f
     } = e;
-    null != o && f === o.id && (!1 === K && (K = !0), W = j = {
-      primaryCategoryId: null !== (t = _.primaryCategoryId) && void 0 !== t ? t : P.DEFAULT_DISCOVERY_CATEGORY_ID,
-      secondaryCategoryIds: null !== (n = _.secondaryCategoryIds) && void 0 !== n ? n : [],
-      keywords: null !== (i = _.keywords) && void 0 !== i ? i : [],
-      emojiDiscoverabilityEnabled: null !== (s = _.emojiDiscoverabilityEnabled) && void 0 !== s ? s : P.DEFAULT_EMOJI_DISCOVERABILITY_SETTING,
-      partnerActionedTimestamp: null !== (r = _.partnerActionedTimestamp) && void 0 !== r ? r : null,
-      partnerApplicationTimestamp: null !== (a = _.partnerApplicationTimestamp) && void 0 !== a ? a : null,
-      isPublished: null !== (l = _.isPublished) && void 0 !== l && l,
-      reasonsToJoin: null !== (u = _.reasonsToJoin) && void 0 !== u ? u : [],
-      socialLinks: null !== (d = _.socialLinks) && void 0 !== d ? d : [],
-      about: null !== (c = _.about) && void 0 !== c ? c : ""
+    null != o && _ === o.id && (!1 === K && (K = !0), W = j = {
+      primaryCategoryId: null !== (t = f.primaryCategoryId) && void 0 !== t ? t : P.DEFAULT_DISCOVERY_CATEGORY_ID,
+      secondaryCategoryIds: null !== (n = f.secondaryCategoryIds) && void 0 !== n ? n : [],
+      keywords: null !== (i = f.keywords) && void 0 !== i ? i : [],
+      emojiDiscoverabilityEnabled: null !== (s = f.emojiDiscoverabilityEnabled) && void 0 !== s ? s : P.DEFAULT_EMOJI_DISCOVERABILITY_SETTING,
+      partnerActionedTimestamp: null !== (r = f.partnerActionedTimestamp) && void 0 !== r ? r : null,
+      partnerApplicationTimestamp: null !== (a = f.partnerApplicationTimestamp) && void 0 !== a ? a : null,
+      isPublished: null !== (l = f.isPublished) && void 0 !== l && l,
+      reasonsToJoin: null !== (u = f.reasonsToJoin) && void 0 !== u ? u : [],
+      socialLinks: null !== (d = f.socialLinks) && void 0 !== d ? d : [],
+      about: null !== (c = f.about) && void 0 !== c ? c : ""
     }, k = {})
   },
   GUILD_DISCOVERY_METADATA_FETCH_FAIL: function() {

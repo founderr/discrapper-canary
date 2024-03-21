@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 });
 var i = n("37983"),
@@ -15,14 +15,14 @@ var i = n("37983"),
 n("4828");
 var c = n("413713");
 
-function f(e) {
+function _(e) {
   let {
     value: t = a().local(),
     minDate: n,
     maxDate: r,
     onSelect: o,
-    calendarClassName: f,
-    autoFocus: _,
+    calendarClassName: _,
+    autoFocus: f,
     onClickOutside: E
   } = e, h = s.useCallback((e, t) => {
     null == o || o(a(e), t)
@@ -39,10 +39,10 @@ function f(e) {
     ref: v,
     className: c.calendarPicker,
     children: (0, i.jsx)(l, {
-      calendarClassName: f,
+      calendarClassName: _,
       selected: g,
       onChange: h,
-      autoFocus: _,
+      autoFocus: f,
       fixedHeight: !0,
       inline: !0,
       locale: S,

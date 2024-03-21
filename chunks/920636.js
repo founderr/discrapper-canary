@@ -20,8 +20,8 @@ class d extends s.PureComponent {
       children: r,
       error: d,
       isLoading: c,
-      maxLength: f,
-      transitionState: _,
+      maxLength: _,
+      transitionState: f,
       helpMessage: E,
       retryPrompt: h,
       retrySuccessMessage: g
@@ -55,7 +55,7 @@ class d extends s.PureComponent {
       })
     }) : null;
     return (0, i.jsx)(o.ModalRoot, {
-      transitionState: _,
+      transitionState: f,
       children: (0, i.jsxs)("form", {
         onSubmit: this.handleSubmit,
         children: [(0, i.jsx)(o.ModalHeader, {
@@ -77,7 +77,7 @@ class d extends s.PureComponent {
               inputRef: this.setRef,
               onChange: this.handleCodeChange,
               placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
-              maxLength: null != f ? f : 10,
+              maxLength: null != _ ? _ : 10,
               value: m,
               autoComplete: "one-time-code",
               autoFocus: !0

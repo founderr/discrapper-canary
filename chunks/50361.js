@@ -7,7 +7,7 @@
         return n
       },
       finishMigration: function() {
-        return i
+        return c
       }
     });
     var s = t("913144");
@@ -24,6 +24,6 @@
       })
     }
 
-    function i() {
+    function c() {
       window.location.reload()
     }

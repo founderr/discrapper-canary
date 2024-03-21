@@ -70,8 +70,8 @@ var i = n("872717"),
         location: l
       } = e, c = o.default.getChannel(t);
       if (null == c) return Promise.resolve(null);
-      let f = a.default.parse(c, null != s ? s : "");
-      return u.default.sendMessage(c.id, f, !1, {
+      let _ = a.default.parse(c, null != s ? s : "");
+      return u.default.sendMessage(c.id, _, !1, {
         activityAction: {
           type: n,
           activity: i

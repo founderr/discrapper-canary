@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DnDKeyboardHelpBar: function() {
-    return _
+    return f
   }
 });
 var i = n("37983"),
@@ -13,9 +13,9 @@ var i = n("37983"),
   u = n("206230"),
   d = n("57406"),
   c = n("782340"),
-  f = n("725599");
+  _ = n("725599");
 
-function _() {
+function f() {
   let e = [{
       keybinds: ["Spacebar", "Enter"],
       name: c.default.Messages.DND_OPERATION_LABEL_DROP
@@ -28,7 +28,7 @@ function _() {
     }],
     t = (0, a.useStateFromStores)([u.default], () => u.default.useReducedMotion),
     n = (0, d.useDndMode)(),
-    _ = (0, r.useTransition)(n, {
+    f = (0, r.useTransition)(n, {
       enter: {
         from: {
           opacity: 0,
@@ -45,10 +45,10 @@ function _() {
       },
       config: r.config.stiff
     });
-  return _((t, n) => n ? (0, i.jsx)("div", {
-    className: f.positioner,
+  return f((t, n) => n ? (0, i.jsx)("div", {
+    className: _.positioner,
     children: (0, i.jsx)(r.animated.div, {
-      className: f.container,
+      className: _.container,
       style: t,
       children: e.map((t, n) => {
         let {
@@ -58,13 +58,13 @@ function _() {
         return (0, i.jsxs)(s.Fragment, {
           children: [(0, i.jsx)(l.Text, {
             variant: "text-md/semibold",
-            className: f.bindName,
+            className: _.bindName,
             children: a
           }), r.map(e => (0, i.jsx)(o.KeyCombo, {
             shortcut: e,
-            className: f.shortcut
+            className: _.shortcut
           }, e)), n < e.length - 1 ? (0, i.jsx)("span", {
-            className: f.separator
+            className: _.separator
           }) : null]
         }, a)
       })

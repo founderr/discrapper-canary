@@ -49,8 +49,8 @@ var i = n("759843"),
   u = n("819689"),
   d = n("599417"),
   c = n("299285"),
-  f = n("191145"),
-  _ = n("752598"),
+  _ = n("191145"),
+  f = n("752598"),
   E = n("653047"),
   h = n("271938"),
   g = n("42203"),
@@ -102,7 +102,7 @@ async function O(e) {
         if (i) return !1;
         let s = (0, T.isActivitiesInTextEnabled)(n, "EmbeddedActivitiesActionCreators#isActivityInTextStart");
         return !!((null == n ? void 0 : n.type) === y.ChannelTypes.GUILD_TEXT && s || null != n && n.isPrivate() && s && null == m.default.getVoiceChannelId()) || !1
-      }(e, o.applicationId) ? await (0, _.executePrimaryEntryPointInteraction)({
+      }(e, o.applicationId) ? await (0, f.executePrimaryEntryPointInteraction)({
         applicationId: o.applicationId,
         channelId: e,
         guildId: a
@@ -154,7 +154,7 @@ function D(e) {
     applicationId: i,
     showFeedback: s
   });
-  let a = f.default.getSelectedParticipantId(n),
+  let a = _.default.getSelectedParticipantId(n),
     l = null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
     u = I.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === i);
   null != u && null != l && "" !== l && a === i && o.default.selectParticipant(n, null)

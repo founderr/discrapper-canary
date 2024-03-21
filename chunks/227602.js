@@ -16,8 +16,8 @@ var s = n("800648"),
   u = n.n(l),
   d = n("917351"),
   c = n.n(d),
-  f = n("446674"),
-  _ = n("913144"),
+  _ = n("446674"),
+  f = n("913144"),
   E = n("485328"),
   h = n("605250"),
   g = n("999819"),
@@ -214,7 +214,7 @@ E.default.setGetKeybindList(() => {
   });
   return t && e.push((0, T.toString)(O.shortcut)), e
 });
-class z extends f.default.DeviceSettingsStore {
+class z extends _.default.DeviceSettingsStore {
   initialize(e) {
     !__OVERLAY__ && this.waitFor(m.default, I.default), P = null != e ? e : {}
   }
@@ -298,7 +298,7 @@ z.displayName = "KeybindsStore", z.persistKey = "keybinds", z.migrations = [func
   ...e,
   [n]: t
 }, {})];
-var q = new z(_.default, {
+var q = new z(f.default, {
   CONNECTION_OPEN: W,
   AUDIO_SET_MODE: W,
   OVERLAY_SET_ENABLED: W,

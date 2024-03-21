@@ -16,7 +16,7 @@ function l(e) {
     onChange: n,
     hideValue: l,
     disabled: u = !1
-  } = e, d = s.useRef(null), c = s.useMemo(() => new a.TimeOptions, []), [f, _] = s.useState("");
+  } = e, d = s.useRef(null), c = s.useMemo(() => new a.TimeOptions, []), [_, f] = s.useState("");
 
   function E(e) {
     null != t && n((0, a.timeAtSpecificDay)(t, c.selectValue(e)))
@@ -24,14 +24,14 @@ function l(e) {
   return (0, i.jsx)(r.SearchableSelect, {
     ref: d,
     className: o.select,
-    options: c.getOptions(f),
+    options: c.getOptions(_),
     value: l ? void 0 : c.lookupByValue(t),
     onChange: E,
     isDisabled: u,
-    onSearchChange: _,
+    onSearchChange: f,
     onKeyDown: function(e) {
       if ("Enter" === e.key) {
-        let e = (0, a.convertToTimeOfADay)(t, f);
+        let e = (0, a.convertToTimeOfADay)(t, _);
         if (null != e) {
           var n;
           E(e), null === (n = d.current) || void 0 === n || n.close()

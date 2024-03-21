@@ -13,8 +13,8 @@ var i = n("917351"),
   u = n("718517"),
   d = n("299039"),
   c = n("648747"),
-  f = n("471706"),
-  _ = n("653138");
+  _ = n("471706"),
+  f = n("653138");
 let E = {},
   h = {},
   g = {},
@@ -46,7 +46,7 @@ function S(e) {
   let {
     guildId: d,
     updates: c
-  } = e, f = null !== (r = null !== (s = c.onboardingPromptsSeen) && void 0 !== s ? s : null === (t = E[d]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== r ? r : {}, _ = null !== (o = null !== (a = c.onboardingResponsesSeen) && void 0 !== a ? a : null === (n = E[d]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== o ? o : {}, h = p(null !== (u = null !== (l = c.prompts) && void 0 !== l ? l : null === (i = E[d]) || void 0 === i ? void 0 : i.prompts) && void 0 !== u ? u : [], f, _);
+  } = e, _ = null !== (r = null !== (s = c.onboardingPromptsSeen) && void 0 !== s ? s : null === (t = E[d]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== r ? r : {}, f = null !== (o = null !== (a = c.onboardingResponsesSeen) && void 0 !== a ? a : null === (n = E[d]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== o ? o : {}, h = p(null !== (u = null !== (l = c.prompts) && void 0 !== l ? l : null === (i = E[d]) || void 0 === i ? void 0 : i.prompts) && void 0 !== u ? u : [], _, f);
   E[d] = {
     ...E[d],
     ...c,
@@ -73,7 +73,7 @@ let T = [],
   A = [];
 class C extends r.default.Store {
   initialize() {
-    this.waitFor(l.default, f.default, o.default)
+    this.waitFor(l.default, _.default, o.default)
   }
   getOnboardingPromptsForOnboarding(e) {
     var t, n;
@@ -140,7 +140,7 @@ class C extends r.default.Store {
   }
   isAdvancedMode(e) {
     var t;
-    return null != e && (null === (t = E[e]) || void 0 === t ? void 0 : t.mode) === _.GuildOnboardingMode.ONBOARDING_ADVANCED
+    return null != e && (null === (t = E[e]) || void 0 === t ? void 0 : t.mode) === f.GuildOnboardingMode.ONBOARDING_ADVANCED
   }
 }
 C.displayName = "GuildOnboardingPromptsStore";
@@ -164,14 +164,14 @@ var y = new C(a.default, {
       belowRequirements: u
     } = e;
     m = !1;
-    let d = f.default.getOnboardingStatus(t) === f.GuildOnboardingStatus.READY,
-      _ = p(n, a, o);
+    let d = _.default.getOnboardingStatus(t) === _.GuildOnboardingStatus.READY,
+      f = p(n, a, o);
     E[t] = {
       enabled: s,
       mode: l,
       belowRequirements: u,
-      prompts: _,
-      onboardingPrompts: _.filter(e => e.inOnboarding),
+      prompts: f,
+      onboardingPrompts: f.filter(e => e.inOnboarding),
       defaultChannelIds: i.filter(e => (0, c.canChannelBeDefault)(t, e)),
       responses: d ? [] : r,
       onboardingPromptsSeen: a,

@@ -39,15 +39,15 @@ function c(e) {
   } = e, c = d(n);
   if ((null == i ? void 0 : i.id) === (null === (t = c.activeCommand) || void 0 === t ? void 0 : t.id)) return !1;
   c.activeCommand = i, c.activeCommandSection = s, c.activeOptionName = null, c.preferredCommandId = null, c.initialValues = null != r ? r : {};
-  let f = {};
+  let _ = {};
   return (null == i ? void 0 : i.options) != null && i.options.forEach(e => {
-    f[e.name] = {
+    _[e.name] = {
       isActive: !1,
       hasValue: !1,
       lastValidationResult: null,
       optionValue: null
     }
-  }), c.optionStates = f, null != i && (0, o.trackCommandSelected)({
+  }), c.optionStates = _, null != i && (0, o.trackCommandSelected)({
     command: i,
     location: a,
     triggerSection: l,
@@ -55,7 +55,7 @@ function c(e) {
   }), !0
 }
 
-function f(e) {
+function _(e) {
   var t, n;
   let {
     channelId: i,
@@ -64,7 +64,7 @@ function f(e) {
   return s !== r.preferredCommandId && (null !== r.preferredCommandId || s !== (null !== (n = null === (t = r.activeCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null)) && (r.activeCommand = null, r.activeOptionName = null, r.preferredCommandId = s, r.optionStates = {}, !0)
 }
 
-function _(e) {
+function f(e) {
   let {
     channelId: t,
     changedOptionStates: n
@@ -158,8 +158,8 @@ let h = new E(s.default, {
   CHANNEL_SELECT: u,
   LOGOUT: u,
   APPLICATION_COMMAND_SET_ACTIVE_COMMAND: c,
-  APPLICATION_COMMAND_SET_PREFERRED_COMMAND: f,
-  APPLICATION_COMMAND_UPDATE_OPTIONS: _,
+  APPLICATION_COMMAND_SET_PREFERRED_COMMAND: _,
+  APPLICATION_COMMAND_UPDATE_OPTIONS: f,
   APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function(e) {
     let {
       channelId: t,
@@ -174,11 +174,11 @@ let h = new E(s.default, {
       command: i,
       section: s,
       location: r
-    }), l = f({
+    }), l = _({
       type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND",
       channelId: t,
       commandId: n
-    }), u = _({
+    }), u = f({
       type: "APPLICATION_COMMAND_UPDATE_OPTIONS",
       channelId: t,
       changedOptionStates: a

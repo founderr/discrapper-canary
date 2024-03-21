@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return c
   },
   TableBody: function() {
-    return f
+    return _
   },
   TableHeader: function() {
-    return _
+    return f
   },
   Table: function() {
     return E
@@ -56,14 +56,14 @@ function c(e) {
   })
 }
 
-function f(e) {
+function _(e) {
   return (0, i.jsx)(r.TableBody, {
     ...e,
     className: l.body
   })
 }
 
-function _(e) {
+function f(e) {
   return (0, i.jsx)(r.TableHeader, {
     ...e,
     className: l.header

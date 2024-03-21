@@ -11,11 +11,11 @@ var a = n("446674"),
   u = n("845579"),
   d = n("374363"),
   c = n("686470");
-let f = {
+let _ = {
     applicationId: null,
     originURL: null
   },
-  _ = f,
+  f = _,
   E = new Set,
   h = !1;
 
@@ -24,13 +24,13 @@ function g() {
 }
 
 function m() {
-  i = null, s = null, E = new Set, _.applicationId = null, _.originURL = null, g()
+  i = null, s = null, E = new Set, f.applicationId = null, f.originURL = null, g()
 }
 class p extends a.default.PersistedStore {
   initialize(e) {
-    i = (_ = {
-      ...null != e ? e : f
-    }).applicationId, s = _.originURL, this.waitFor(d.default, l.default), this.syncWith([d.default, l.default], () => !0), c.default.whenInitialized(() => {
+    i = (f = {
+      ...null != e ? e : _
+    }).applicationId, s = f.originURL, this.waitFor(d.default, l.default), this.syncWith([d.default, l.default], () => !0), c.default.whenInitialized(() => {
       h = !0
     })
   }
@@ -44,7 +44,7 @@ class p extends a.default.PersistedStore {
     return u.DeveloperMode.getSetting() && this.inTestModeForApplication(e)
   }
   getState() {
-    return _
+    return f
   }
   get isTestMode() {
     return null != i
@@ -83,7 +83,7 @@ var S = new p(o.default, {
       applicationId: t,
       originURL: n
     } = e;
-    i = t, s = n, E.delete(t), r = null, _.applicationId = t, _.originURL = n
+    i = t, s = n, E.delete(t), r = null, f.applicationId = t, f.originURL = n
   },
   DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: function(e) {
     let {

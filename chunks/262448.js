@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Collapsible: function() {
-    return f
+    return _
   }
 }), n("222007");
 var i = n("37983"),
@@ -14,13 +14,13 @@ var i = n("37983"),
   d = n("206230"),
   c = n("716806");
 
-function f(e) {
+function _(e) {
   let {
     children: t,
     className: n,
     collapsibleContent: r,
-    isExpanded: f
-  } = e, [_, E] = s.useState(!1), h = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), [g, m] = s.useState(!0), [p, S] = s.useState(!1), v = null != f ? f : _, {
+    isExpanded: _
+  } = e, [f, E] = s.useState(!1), h = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), [g, m] = s.useState(!0), [p, S] = s.useState(!1), v = null != _ ? _ : f, {
     ref: T,
     height: I = 0
   } = (0, u.default)(), {
@@ -32,8 +32,8 @@ function f(e) {
     config: o.config.stiff,
     onRest: () => S(!0)
   }), N = s.useCallback(() => {
-    E(!_)
-  }, [_, E]);
+    E(!f)
+  }, [f, E]);
   return s.useLayoutEffect(() => {
     let e = setTimeout(() => {
       m(!1)

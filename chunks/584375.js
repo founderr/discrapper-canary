@@ -25,12 +25,12 @@ let a = e => {
     let d = i.default.parseString(o);
     if (null == d) return null;
     let c = (0, s.rawRgbToHsl)(d.red, d.blue, d.green),
-      f = null !== (t = (0, s.getAccessibleColor)({
+      _ = null !== (t = (0, s.getAccessibleColor)({
         colors: [(0, s.getColorLightnessAdjusted)(d, .6, !0), l],
         ratio: 3,
         saturationFactor: a
       })) && void 0 !== t ? t : d,
-      _ = null !== (n = (0, s.getAccessibleColor)({
+      f = null !== (n = (0, s.getAccessibleColor)({
         colors: [(0, s.getColorLightnessAdjusted)(d, .6, !1), u],
         ratio: 5,
         saturationFactor: a
@@ -49,7 +49,7 @@ let a = e => {
       LIGHT: {
         accentColor: null == E ? void 0 : E.toHexString(),
         backgroundColor: (0, s.getSaturatedColorHex)({
-          colorRGB: f,
+          colorRGB: _,
           saturationFactor: a
         }),
         highlightColor: null == d ? void 0 : d.toHexString(),
@@ -58,7 +58,7 @@ let a = e => {
       DARK: {
         accentColor: null == h ? void 0 : h.toHexString(),
         backgroundColor: (0, s.getSaturatedColorHex)({
-          colorRGB: _,
+          colorRGB: f,
           saturationFactor: a
         }),
         highlightColor: null == d ? void 0 : d.toHexString(),

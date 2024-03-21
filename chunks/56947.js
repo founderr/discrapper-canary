@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return d
   },
   areClipsEnabled: function() {
-    return f
+    return _
   },
   useEnableClips: function() {
-    return _
+    return f
   },
   useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock: function() {
     return E
@@ -89,7 +89,7 @@ let d = (0, i.createExperiment)({
     }]
   });
 
-function f() {
+function _() {
   if (!(0, l.default)(a.default)) return !1;
   let {
     enableClips: e
@@ -119,7 +119,7 @@ function f() {
   return e || t || n || i
 }
 
-function _() {
+function f() {
   let e = (0, l.default)(a.default),
     {
       enableClips: t

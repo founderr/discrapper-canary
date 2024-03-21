@@ -34,8 +34,8 @@ var i = n("37983"),
   u = n("311720"),
   d = n("442761"),
   c = n("446662"),
-  f = n("77078"),
-  _ = n("731898"),
+  _ = n("77078"),
+  f = n("731898"),
   E = n("811425"),
   h = n("31695"),
   g = n("837899"),
@@ -171,7 +171,7 @@ function L(e) {
     ref: j,
     width: W,
     height: z
-  } = (0, _.default)(), q = s.useCallback(e => {
+  } = (0, f.default)(), q = s.useCallback(e => {
     Y !== e && !o && (K(e), e ? null == y || y() : null == C || C())
   }, [o, C, y, Y]), X = s.useCallback(e => {
     Y && !e && q(!1)
@@ -189,7 +189,7 @@ function L(e) {
       null === (e = j.current) || void 0 === e || e.focus()
     }
   }, [c]);
-  let ee = (0, f.useRedesignIconContext)().enabled;
+  let ee = (0, _.useRedesignIconContext)().enabled;
   return (0, i.jsx)(d.Popout, {
     spacing: 0,
     animation: d.Popout.Animation.NONE,
@@ -232,8 +232,8 @@ function L(e) {
         ...d
       } = e, {
         isShown: c,
-        position: f
-      } = t, _ = c ? m.default : g.default, E = ee ? 18 : 24;
+        position: _
+      } = t, f = c ? m.default : g.default, E = ee ? 18 : 24;
       return (0, i.jsxs)(l.Clickable, {
         role: "button",
         "aria-disabled": o,
@@ -250,7 +250,7 @@ function L(e) {
         className: a(I.select, r, {
           [I.open]: c,
           [I.disabled]: o,
-          [I.selectPositionTop]: "top" === f,
+          [I.selectPositionTop]: "top" === _,
           [I.lookFilled]: A === v.SelectLooks.FILLED
         }),
         "aria-haspopup": "listbox",
@@ -275,7 +275,7 @@ function L(e) {
               height: 16,
               className: I.clear
             })
-          }) : null, x ? null : (0, i.jsx)(_, {
+          }) : null, x ? null : (0, i.jsx)(f, {
             width: E,
             height: E
           })]
@@ -292,8 +292,8 @@ function M(e) {
     closePopout: r,
     closeOnSelect: l = !0,
     isSelected: d,
-    options: f,
-    width: _,
+    options: _,
+    width: f,
     maxVisibleItems: E,
     renderOptionLabel: g,
     serialize: m,
@@ -323,7 +323,7 @@ function M(e) {
   let D = s.useCallback(e => {
       n(e), l && r()
     }, [r, n, l]),
-    P = f.map((e, t) => {
+    P = _.map((e, t) => {
       var n;
       return (0, i.jsx)(Option, {
         isSelected: d(e.value),
@@ -335,7 +335,7 @@ function M(e) {
         serialize: m
       }, null !== (n = e.key) && void 0 !== n ? n : t)
     }),
-    L = f.length <= E ? c.AdvancedScrollerNone : c.AdvancedScrollerThin;
+    L = _.length <= E ? c.AdvancedScrollerNone : c.AdvancedScrollerThin;
   return (0, i.jsx)(o.ListNavigatorProvider, {
     navigator: R,
     children: (0, i.jsx)(o.ListNavigatorContainer, {
@@ -350,7 +350,7 @@ function M(e) {
               [I.popoutPositionTop]: "top" === T
             }),
             style: {
-              width: _,
+              width: f,
               maxHeight: A
             },
             ref: e => {
@@ -382,14 +382,14 @@ function Option(e) {
     isSelected: u,
     isDisabled: d,
     serialize: c
-  } = e, f = (0, o.useListItem)(c(n));
+  } = e, _ = (0, o.useListItem)(c(n));
   return (0, i.jsxs)(l.Clickable, {
     focusProps: {
       enabled: !1
     },
     className: a(I.option, t),
     onClick: () => !d && r(n),
-    ...f,
+    ..._,
     "aria-selected": u,
     "aria-disabled": d,
     role: "option",

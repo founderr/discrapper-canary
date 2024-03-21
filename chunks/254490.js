@@ -37,8 +37,8 @@ var i = n("477850"),
   u = n("305961"),
   d = n("697218"),
   c = n("719923"),
-  f = n("49111"),
-  _ = n("646718");
+  _ = n("49111"),
+  f = n("646718");
 
 function E(e, t) {
   return e instanceof File ? e : h(e.data, e.filename, t)
@@ -123,7 +123,7 @@ function v(e) {
   let n = c.default.getUserMaxFileSize(t);
   if (null == e) return n;
   let i = u.default.getGuild(e),
-    s = null != i ? _.BoostedGuildFeatures[i.premiumTier].limits.fileSize : f.MAX_ATTACHMENT_SIZE;
+    s = null != i ? f.BoostedGuildFeatures[i.premiumTier].limits.fileSize : _.MAX_ATTACHMENT_SIZE;
   return Math.max(s, n)
 }
 

@@ -16,8 +16,8 @@ var u = n("697218"),
   d = n("299039"),
   c = n("159885");
 n("158998");
-var f = n("360191"),
-  _ = n("342176"),
+var _ = n("360191"),
+  f = n("342176"),
   E = n("49111"),
   h = n("782340");
 let g = {
@@ -85,7 +85,7 @@ function I(e, t, n) {
 function A(e) {
   var t;
   if (!(0, r.isGuildEventEnded)(e)) return;
-  let n = t => t.type === f.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id,
+  let n = t => t.type === _.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id,
     i = e.name,
     s = null === (t = l.default.getGuild(e.guild_id)) || void 0 === t ? void 0 : t.name;
   g.notifCenterItems = g.notifCenterItems.map(e => n(e) ? {
@@ -166,7 +166,7 @@ var y = new C(s.default, {
         if (n !== E.RelationshipTypes.PENDING_INCOMING || null == i || null == s) return null;
         let r = u.default.getUser(i.id);
         if (null == r) return null;
-        let a = (0, _.incomingFriendRequestLocalItem)(r, s);
+        let a = (0, f.incomingFriendRequestLocalItem)(r, s);
         t.push(a)
       }), e.guilds.forEach(e => {
         e.guild_scheduled_events.forEach(e => {
@@ -239,10 +239,10 @@ var y = new C(s.default, {
       if (null == n) return null;
       let i = u.default.getUser(t.id);
       if (null == i) return null;
-      g.notifCenterLocalItems = [...g.notifCenterLocalItems, (0, _.incomingFriendRequestLocalItem)(i, n)]
+      g.notifCenterLocalItems = [...g.notifCenterLocalItems, (0, f.incomingFriendRequestLocalItem)(i, n)]
     }
     e.relationship.type === E.RelationshipTypes.FRIEND && (g.notifCenterLocalItems = g.notifCenterLocalItems.map(t => {
-      if (I(t, f.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, e.relationship.user.id)) {
+      if (I(t, _.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, e.relationship.user.id)) {
         var n;
         let i = u.default.getUser(e.relationship.user.id);
         return {
@@ -250,7 +250,7 @@ var y = new C(s.default, {
           acked: !0,
           forceUnacked: !1,
           local_id: "incoming_friend_requests_accepted_".concat(e.relationship.user.id, "_").concat(t.id),
-          type: f.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
+          type: _.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
           body: h.default.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST_ACCEPTED.format({
             username: "**".concat(null !== (n = null == i ? void 0 : i.globalName) && void 0 !== n ? n : e.relationship.user.username, "**")
           })
@@ -260,7 +260,7 @@ var y = new C(s.default, {
     }))
   },
   RELATIONSHIP_REMOVE: function(e) {
-    g.notifCenterLocalItems = g.notifCenterLocalItems.filter(t => !(I(t, f.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, e.relationship.id) || I(t, f.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)) && !0)
+    g.notifCenterLocalItems = g.notifCenterLocalItems.filter(t => !(I(t, _.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, e.relationship.id) || I(t, _.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)) && !0)
   },
   NOTIFICATION_CENTER_ITEM_COMPLETED: function(e) {
     let {
@@ -284,7 +284,7 @@ var y = new C(s.default, {
       newBuild: t
     } = e;
     if (null !== t) {
-      let e = (0, _.mobileNativeUpdateAvailableLocalItem)(t);
+      let e = (0, f.mobileNativeUpdateAvailableLocalItem)(t);
       void 0 === g.notifCenterLocalItems.find(t => t.local_id === e.local_id) && (g.notifCenterLocalItems = [...g.notifCenterLocalItems.filter(t => t.kind !== e.kind), e])
     }
   }

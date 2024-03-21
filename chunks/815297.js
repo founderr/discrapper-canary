@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return c
   },
   default: function() {
-    return f
+    return _
   },
   createBotMessage: function() {
-    return _
+    return f
   }
 }), n("702976"), n("424973");
 var i = n("627445"),
@@ -44,21 +44,21 @@ function c(e) {
   }
 }
 
-function f(e) {
+function _(e) {
   let {
     channelId: t,
     content: n,
     tts: i = !1,
     type: l = u.MessageTypes.DEFAULT,
-    messageReference: f,
-    allowedMentions: _,
+    messageReference: _,
+    allowedMentions: f,
     author: E,
     flags: h,
     nonce: g,
     poll: m
   } = e, p = [];
-  if (l === u.MessageTypes.REPLY && (s(null != f, "Replies must have a message reference"), null == _ || _.replied_user)) {
-    let e = r.default.getMessageByReference(f);
+  if (l === u.MessageTypes.REPLY && (s(null != _, "Replies must have a message reference"), null == f || f.replied_user)) {
+    let e = r.default.getMessageByReference(_);
     (null == e ? void 0 : e.state) === r.ReferencedMessageState.LOADED && p.push(c(e.message.author))
   }
   return null == E && (E = o.default.getCurrentUser()), E instanceof a.default && (E = c(E)), s(null != E, "createMessage: author cannot be undefined"), {
@@ -77,14 +77,14 @@ function f(e) {
     timestamp: new Date().toISOString(),
     state: u.MessageStates.SENDING,
     tts: i,
-    message_reference: f,
+    message_reference: _,
     flags: h,
     nonce: g,
     poll: m
   }
 }
 
-function _(e) {
+function f(e) {
   let {
     messageId: t,
     channelId: n,

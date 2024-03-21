@@ -13,8 +13,8 @@ var i = n("10371"),
   u = n("58539"),
   d = n("697930"),
   c = n("891600"),
-  f = n("790217"),
-  _ = n("593251"),
+  _ = n("790217"),
+  f = n("593251"),
   E = n("130285");
 let {
   Themes: h
@@ -23,9 +23,9 @@ let {
   RawColors: m
 } = u._private, {
   Shadows: p
-} = f._private, {
-  Spacing: S
 } = _._private, {
+  Spacing: S
+} = f._private, {
   Modules: v
 } = d._private, T = l(m, e => s(e)), I = {
   themes: h,

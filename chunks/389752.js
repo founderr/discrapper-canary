@@ -28,8 +28,8 @@ function c(e) {
     navId: t,
     itemCount: n,
     focusedIndex: c = 0,
-    onSelect: f,
-    setFocus: _,
+    onSelect: _,
+    setFocus: f,
     getNewFocusIndex: E,
     maintainFocusPosition: h = !0,
     includeSetSizes: g = !0,
@@ -57,8 +57,8 @@ function c(e) {
         navId: t,
         itemCount: n,
         focusedIndex: c,
-        onSelect: f,
-        setFocus: _ = d,
+        onSelect: _,
+        setFocus: f = d,
         getNewFocusIndex: E,
         dispatch: h,
         maintainFocusPosition: g,
@@ -82,8 +82,8 @@ function c(e) {
       }));
       i.useEffect(() => () => R.clean(), [R]);
       let O = i.useCallback((e, t) => {
-          C.current && _(e, t)
-        }, [_]),
+          C.current && f(e, t)
+        }, [f]),
         [D, P] = i.useState(!0);
       i.useEffect(() => {
         if (D && !p) {
@@ -136,13 +136,13 @@ function c(e) {
               if ((null == (i = s) ? void 0 : i.ownerDocument.activeElement) !== i || e.repeat) return;
               if (e.preventDefault(), e.stopPropagation(), h({
                   type: n
-                }), null != f) {
-                f(c);
+                }), null != _) {
+                _(c);
                 return
               }
               null == s || s.click()
           }
-        }, [v, t, h, c, L, f]),
+        }, [v, t, h, c, L, _]),
         b = i.useCallback(() => {
           y || N(!0)
         }, [y]),
@@ -196,8 +196,8 @@ function c(e) {
       itemCount: A,
       focusedIndex: C,
       dispatch: y,
-      onSelect: f,
-      setFocus: _,
+      onSelect: _,
+      setFocus: f,
       getNewFocusIndex: E,
       maintainFocusPosition: h,
       includeSetSizes: g,

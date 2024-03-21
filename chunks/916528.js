@@ -19,8 +19,8 @@ function c(e) {
     color: n = "default",
     isFocused: r = !1,
     disabled: c = !1,
-    keepItemStyles: f = !1,
-    menuItemProps: _,
+    keepItemStyles: _ = !1,
+    menuItemProps: f,
     action: E,
     dontCloseOnActionIfHoldingShiftKey: h,
     dontCloseOnAction: g,
@@ -33,7 +33,7 @@ function c(e) {
       if (null == E) return !1;
       !(e.shiftKey && h) && !g && m(), e.persist(), requestAnimationFrame(() => E(e))
     }, [E, m, h, g]),
-    v = f ? a(d.item, u.MENU_ITEM_COLORS[n], {
+    v = _ ? a(d.item, u.MENU_ITEM_COLORS[n], {
       [d.focused]: r
     }) : d.customItem;
   return (0, i.jsx)(o.Clickable, {
@@ -41,7 +41,7 @@ function c(e) {
     className: v,
     onClick: c ? void 0 : S,
     "aria-disabled": c,
-    ..._,
+    ...f,
     children: t({
       color: n,
       disabled: c,

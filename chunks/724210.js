@@ -20,10 +20,10 @@ n.r(t), n.d(t, {
     return c
   },
   MAX_CHANNEL_TOPIC_LENGTH: function() {
-    return f
+    return _
   },
   MAX_FORUM_CHANNEL_TOPIC_LENGTH: function() {
-    return _
+    return f
   },
   StaticChannelId: function() {
     return s
@@ -63,8 +63,8 @@ let c = Object.freeze({
     IS_BROADCASTING: 16384,
     HIDE_MEDIA_DOWNLOAD_OPTIONS: 32768
   }),
-  f = 1024,
-  _ = 4096;
+  _ = 1024,
+  f = 4096;
 (a = s || (s = {})).GUILD_HOME = "home", a.SERVER_GUIDE = "guide", a.CHANNEL_BROWSER = "browse", a.CUSTOMIZE_COMMUNITY = "customize";
 let E = new Set(Object.values(s)),
   h = "131"

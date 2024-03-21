@@ -13,8 +13,8 @@ var i = n("203288"),
   u = n("290886"),
   d = n("903724"),
   c = n("120252"),
-  f = n("42203"),
-  _ = n("305961"),
+  _ = n("42203"),
+  f = n("305961"),
   E = n("449008"),
   h = n("361572"),
   g = n("49111"),
@@ -23,7 +23,7 @@ async function p(e) {
   let {
     guildId: t,
     channelId: n
-  } = e, p = _.default.getGuild(t), S = _.default.getRoles(t);
+  } = e, p = f.default.getGuild(t), S = f.default.getRoles(t);
   if (null == p && t !== g.ME) return !1;
   if (null == n) return !0;
   if ((0, m.isStaticChannelRoute)(n)) switch (n) {
@@ -46,6 +46,6 @@ async function p(e) {
     default:
       (0, E.assertNever)(n)
   }
-  let v = f.default.getChannel(n);
-  return (null != v || (await c.default.loadThread(n), null != (v = f.default.getChannel(n)))) && ((0, h.canViewChannel)(v) || i.default.isChannelGatedAndVisible(t, n))
+  let v = _.default.getChannel(n);
+  return (null != v || (await c.default.loadThread(n), null != (v = _.default.getChannel(n)))) && ((0, h.canViewChannel)(v) || i.default.isChannelGatedAndVisible(t, n))
 }

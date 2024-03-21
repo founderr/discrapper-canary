@@ -28,8 +28,8 @@ var i = n("627445"),
   u = n("766274"),
   d = n("697218"),
   c = n("840707"),
-  f = n("49111");
-let _ = new a.default("UserProfileModalActionCreators");
+  _ = n("49111");
+let f = new a.default("UserProfileModalActionCreators");
 
 function E() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -37,7 +37,7 @@ function E() {
       withAnalyticsToken: t = !1
     } = e;
   return o.default.get({
-    url: f.Endpoints.ME,
+    url: _.Endpoints.ME,
     query: {
       with_analytics_token: t
     },
@@ -53,7 +53,7 @@ function h() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   return c.default.patch({
-    url: f.Endpoints.USER_AGREEMENTS,
+    url: _.Endpoints.USER_AGREEMENTS,
     trackedActionData: {
       event: r.NetworkActionNames.USER_ACCEPT_AGREEMENTS
     },
@@ -70,7 +70,7 @@ function g(e, t) {
   s(null != n, "setFlag: user cannot be undefined");
   let i = t ? n.flags | e : n.flags & ~e;
   return o.default.patch({
-    url: f.Endpoints.ME,
+    url: _.Endpoints.ME,
     oldFormErrors: !0,
     body: {
       flags: i
@@ -81,7 +81,7 @@ function g(e, t) {
 function m(e) {
   let t = d.default.getUser(e);
   return null != t ? Promise.resolve(t) : o.default.get({
-    url: f.Endpoints.USER(e),
+    url: _.Endpoints.USER(e),
     oldFormErrors: !0
   }).then(t => (l.default.dispatch({
     type: "USER_UPDATE",
@@ -102,7 +102,7 @@ async function p(e) {
   });
   try {
     let u = await o.default.get({
-      url: f.Endpoints.USER_PROFILE(e),
+      url: _.Endpoints.USER_PROFILE(e),
       query: {
         friend_token: t,
         with_mutual_guilds: n,
@@ -124,7 +124,7 @@ async function p(e) {
       guildMember: u.body.guild_member
     }), u.body
   } catch (t) {
-    throw null != t && (null == t ? void 0 : t.body) != null && _.warn("fetchProfile error: ".concat(t.body.code, " - ").concat(t.body.message)), l.default.dispatch({
+    throw null != t && (null == t ? void 0 : t.body) != null && f.warn("fetchProfile error: ".concat(t.body.code, " - ").concat(t.body.message)), l.default.dispatch({
       type: "USER_PROFILE_FETCH_FAILURE",
       userId: e
     }), t
@@ -137,7 +137,7 @@ async function S(e, t) {
   });
   try {
     let n = await o.default.get({
-      url: f.Endpoints.USER_RELATIONSHIPS(e),
+      url: _.Endpoints.USER_RELATIONSHIPS(e),
       oldFormErrors: !0,
       signal: t
     });
@@ -147,7 +147,7 @@ async function S(e, t) {
       mutualFriends: n.body
     })
   } catch (t) {
-    throw (null == t ? void 0 : t.body) != null && _.warn("fetchMutualFriends error: ".concat(t.body.code, " - ").concat(t.body.message)), l.default.dispatch({
+    throw (null == t ? void 0 : t.body) != null && f.warn("fetchMutualFriends error: ".concat(t.body.code, " - ").concat(t.body.message)), l.default.dispatch({
       type: "MUTUAL_FRIENDS_FETCH_FAILURE",
       userId: e
     }), t

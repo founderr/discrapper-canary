@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return c
   },
   createWidgets: function() {
-    return f
+    return _
   }
 });
 var i = n("913144"),
@@ -76,10 +76,10 @@ function d(e) {
 }
 
 function c(e) {
-  f([e])
+  _([e])
 }
 
-function f(e) {
+function _(e) {
   i.default.dispatch({
     type: "LAYOUT_CREATE_WIDGETS",
     widgetConfigs: e

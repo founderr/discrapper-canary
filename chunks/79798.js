@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 });
 var i = n("37983");
@@ -14,12 +14,12 @@ var s = n("414456"),
   u = n("988268"),
   d = n("782340"),
   c = n("639670");
-let f = e => {
+let _ = e => {
   let t, {
       invertColor: n = !1,
       type: s = u.BotTagTypes.BOT,
-      className: f,
-      verified: _,
+      className: _,
+      verified: f,
       hideIcon: E = !1,
       useRemSizes: h = !1,
       children: g = []
@@ -36,7 +36,7 @@ let f = e => {
   switch (s) {
     case u.BotTagTypes.SYSTEM_DM:
     case u.BotTagTypes.OFFICIAL:
-      _ = !0, p = d.default.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP, m = d.default.Messages.SYSTEM_DM_TAG_SYSTEM;
+      f = !0, p = d.default.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP, m = d.default.Messages.SYSTEM_DM_TAG_SYSTEM;
       break;
     case u.BotTagTypes.SERVER:
       m = d.default.Messages.BOT_TAG_SERVER;
@@ -48,10 +48,10 @@ let f = e => {
       m = d.default.Messages.STAFF_BADGE_TOOLTIP;
       break;
     case u.BotTagTypes.AI:
-      _ = !0, p = d.default.Messages.AI_GENERATED_TOOLTIP, m = d.default.Messages.AI_TAG;
+      f = !0, p = d.default.Messages.AI_GENERATED_TOOLTIP, m = d.default.Messages.AI_TAG;
       break;
     case u.BotTagTypes.REMIX:
-      _ = !1, m = d.default.Messages.REMIXING_TAG;
+      f = !1, m = d.default.Messages.REMIXING_TAG;
       break;
     case u.BotTagTypes.BOT:
     default:
@@ -60,7 +60,7 @@ let f = e => {
   let v = s === u.BotTagTypes.ORIGINAL_POSTER,
     T = s === u.BotTagTypes.REMIX,
     I = null;
-  _ && (I = (0, i.jsx)(a.Tooltip, {
+  f && (I = (0, i.jsx)(a.Tooltip, {
     text: p,
     align: "center",
     position: "top",
@@ -71,7 +71,7 @@ let f = e => {
   })), t = s === u.BotTagTypes.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular;
   let A = e => (0, i.jsxs)("span", {
     ...e,
-    className: r(f, t, h ? c.rem : c.px, {
+    className: r(_, t, h ? c.rem : c.px, {
       [c.botTagOP]: v,
       [c.botTagRemix]: T
     }),
@@ -97,5 +97,5 @@ let f = e => {
       return A()
   }
 };
-f.Types = u.BotTagTypes;
-var _ = f
+_.Types = u.BotTagTypes;
+var f = _

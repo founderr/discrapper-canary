@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return c
   },
   isWithinInterval: function() {
-    return f
+    return _
   },
   dateFormat: function() {
-    return _
+    return f
   },
   calendarFormat: function() {
     return E
@@ -43,11 +43,11 @@ function c(e, t) {
   return Math.abs(+e - +t) <= o && e.getDate() === t.getDate()
 }
 
-function f(e, t, n) {
+function _(e, t, n) {
   return Math.abs(e.valueOf() - t.valueOf()) < n
 }
 
-function _(e, t) {
+function f(e, t) {
   let n = h(e).locale(),
     i = "".concat(n, ":").concat(t),
     s = l[i];
@@ -59,7 +59,7 @@ function E(e) {
   let n = s.localeData(),
     i = s(),
     r = d(g(e), i.toDate());
-  return r < -1 ? _(e, "L LT") : (t = r < 0 ? "lastDay" : r < 1 ? "sameDay" : r < 2 ? "nextDay" : "sameElse", _(e, n.calendar(t, h(e), i)))
+  return r < -1 ? f(e, "L LT") : (t = r < 0 ? "lastDay" : r < 1 ? "sameDay" : r < 2 ? "nextDay" : "sameElse", f(e, n.calendar(t, h(e), i)))
 }
 
 function h(e) {
@@ -75,7 +75,7 @@ function m(e) {
   let n = s.localeData(),
     i = new Date,
     r = d(e, i);
-  return "sameElse" == (t = r < -1 ? "sameElse" : r < 0 ? "lastDay" : r < 1 ? "sameDay" : r < 2 ? "nextDay" : "sameElse") ? _(e, "LLL") : _(e, n.calendar(t, s(e), s(i)))
+  return "sameElse" == (t = r < -1 ? "sameElse" : r < 0 ? "lastDay" : r < 1 ? "sameDay" : r < 2 ? "nextDay" : "sameElse") ? f(e, "LLL") : f(e, n.calendar(t, s(e), s(i)))
 }
 a.default.addChangeListener(() => {
   l = Object.create(null)

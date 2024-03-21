@@ -12,8 +12,8 @@ var i, s = n("627445"),
   u = n("718517"),
   d = n("843158"),
   c = n("861309"),
-  f = n("694352"),
-  _ = n("846678"),
+  _ = n("694352"),
+  f = n("846678"),
   E = n("492249"),
   h = n("49111");
 let g = "RPC_STORE_WAIT",
@@ -38,7 +38,7 @@ i = class {
         e.close(h.RPCCloseCodes.CLOSE_NORMAL, "User logged out");
         return
       }
-      t.user = (0, f.default)(n)
+      t.user = (0, _.default)(n)
     }
     this.dispatch(e, null, h.RPCCommands.DISPATCH, h.RPCEvents.READY, t)
   }
@@ -55,7 +55,7 @@ i = class {
       if (null == s) throw new c.default({
         errorCode: h.RPCErrors.INVALID_COMMAND
       }, "Invalid command: ".concat(t.cmd));
-      if (!(0, _.default)(e.authorization.scopes, s.scope)) throw new c.default({
+      if (!(0, f.default)(e.authorization.scopes, s.scope)) throw new c.default({
         errorCode: h.RPCErrors.INVALID_PERMISSIONS
       }, "Not authenticated or invalid scope");
       d.ExperimentRPCServerAnalyticsKillswitch.getCurrentConfig({

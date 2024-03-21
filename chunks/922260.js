@@ -19,17 +19,17 @@ function d(e) {
     isFocused: r,
     showDefaultFocus: d = !1,
     menuItemProps: c,
-    children: f
-  } = e, _ = s.useRef(null);
+    children: _
+  } = e, f = s.useRef(null);
   return s.useLayoutEffect(() => {
     if (!r) return;
-    let e = _.current;
+    let e = f.current;
     if (null == e) return;
-    (0, o.ensureItemVisible)(_);
+    (0, o.ensureItemVisible)(f);
     let t = e.querySelector('[tabindex="0"]');
     null == t || t.focus()
   }, [r]), (0, i.jsx)("div", {
-    ref: _,
+    ref: f,
     className: a(u.item, l.MENU_ITEM_COLORS[t], {
       [u.disabled]: n,
       [u.focused]: d && r,
@@ -37,6 +37,6 @@ function d(e) {
     }),
     "aria-disabled": n,
     ...c,
-    children: f
+    children: _
   })
 }

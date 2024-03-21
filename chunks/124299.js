@@ -17,8 +17,8 @@ let u = s.memo(s.forwardRef((e, t) => {
     listPadding: u = [0, 0, 0, 0],
     renderRow: d,
     renderSection: c,
-    renderSectionHeader: f,
-    renderSectionFooter: _,
+    renderSectionHeader: _,
+    renderSectionFooter: f,
     renderListHeader: E,
     rowCount: h,
     rowCountBySection: g,
@@ -250,7 +250,7 @@ let u = s.memo(s.forwardRef((e, t) => {
           m = 0,
           p = o + E,
           S = p >= O && o <= e;
-        for (null != f && (I || S) && r.push(f(s)), !S && !I && (n += E); l + E + h < u - g;) {
+        for (null != _ && (I || S) && r.push(_(s)), !S && !I && (n += E); l + E + h < u - g;) {
           let i = k(s, m, t),
             a = o + l + E,
             u = a + i;
@@ -265,14 +265,14 @@ let u = s.memo(s.forwardRef((e, t) => {
         let v = o + E + l,
           T = v + h,
           A = T >= O && v <= e;
-        null != _ && A && r.push(_(s)), null != c ? i.push(c(s, r)) : i = [...i, ...r]
+        null != f && A && r.push(f(s)), null != c ? i.push(c(s, r)) : i = [...i, ...r]
       } else break
     }
     return {
       visibleItems: i,
       listOffset: n
     }
-  }, [k, G, V, F, u, d, c, _, f, O, K, I, E, w, P]), X = s.useMemo(() => {
+  }, [k, G, V, F, u, d, c, f, _, O, K, I, E, w, P]), X = s.useMemo(() => {
     var e, t, n;
     return {
       top: q,

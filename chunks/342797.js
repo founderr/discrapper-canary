@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return c
   },
   logResumeAnalytics: function() {
-    return f
+    return _
   }
 }), n("424973");
 var i = n("102053");
@@ -25,7 +25,7 @@ var s = n("410912"),
 
 function l(e, t, n, r, l) {
   var u, d, c;
-  let f = function(e) {
+  let _ = function(e) {
     let {
       _trace: t
     } = e, n = {};
@@ -45,10 +45,10 @@ function l(e, t, n, r, l) {
     } catch (e) {}
     return n
   }(t);
-  null != r && i.default.addDetail("payload_size(kb)", Math.round(r.uncompressed_byte_size / 1024)), i.default.addDetail("server_time(ms)", null !== (u = f.identify_total_server_duration_ms) && void 0 !== u ? u : 0);
-  let _ = {
+  null != r && i.default.addDetail("payload_size(kb)", Math.round(r.uncompressed_byte_size / 1024)), i.default.addDetail("server_time(ms)", null !== (u = _.identify_total_server_duration_ms) && void 0 !== u ? u : 0);
+  let f = {
     ...r,
-    ...f,
+    ..._,
     ... function(e) {
       let {
         guilds: t
@@ -77,7 +77,7 @@ function l(e, t, n, r, l) {
     had_cache_at_startup: null !== (d = e.analytics.hadCacheAtStartup) && void 0 !== d && d,
     used_cache_at_startup: null !== (c = e.analytics.usedCacheAtStartup) && void 0 !== c && c
   };
-  s.default.attachReadyPayloadProperties(_), a.default.track(o.AnalyticEvents.READY_PAYLOAD_RECEIVED, _, {
+  s.default.attachReadyPayloadProperties(f), a.default.track(o.AnalyticEvents.READY_PAYLOAD_RECEIVED, f, {
     logEventProperties: !0
   })
 }
@@ -112,8 +112,8 @@ function d(e) {
       user_guild_settings: u,
       user_settings: d,
       user_settings_proto: c,
-      experiments: f,
-      guild_experiments: _,
+      experiments: _,
+      guild_experiments: f,
       relationships: E,
       users: h,
       ...g
@@ -144,7 +144,7 @@ function d(e) {
     read_states_size: JSON.stringify(o).length,
     private_channels_size: JSON.stringify(l).length,
     user_settings_size: JSON.stringify(null != d ? d : "").length + (null != c ? c : "").length,
-    experiments_size: JSON.stringify(null != f ? f : []).length + JSON.stringify(null != _ ? _ : []).length,
+    experiments_size: JSON.stringify(null != _ ? _ : []).length + JSON.stringify(null != f ? f : []).length,
     user_guild_settings_size: JSON.stringify(u).length,
     relationships_size: JSON.stringify(E).length,
     remaining_data_size: JSON.stringify(null != g ? g : {}).length,
@@ -175,7 +175,7 @@ function c(e) {
   }
 }
 
-function f(e) {
+function _(e) {
   var t;
   !(!(null === (t = r.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && .5 > Math.random()) && a.default.track(o.AnalyticEvents.CONNECTION_RESUMED, {
     connect_time_ms: e.connectTime,

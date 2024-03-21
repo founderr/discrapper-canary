@@ -13,8 +13,8 @@ var i = n("913144"),
   u = n("42887"),
   d = n("945956"),
   c = n("18494"),
-  f = n("697218");
-let _ = (e, t) => ({
+  _ = n("697218");
+let f = (e, t) => ({
     channel_id: e.id,
     channel_type: e.type,
     guild_id: e.getGuildId(),
@@ -25,7 +25,7 @@ let _ = (e, t) => ({
   }),
   E = () => {
     var e;
-    let t = (0, r.getLastUsedVideoBackgroundOption)(f.default.getCurrentUser());
+    let t = (0, r.getLastUsedVideoBackgroundOption)(_.default.getCurrentUser());
     return {
       video_device_name: null === (e = u.default.getVideoDevices()[u.default.getVideoDeviceId()]) || void 0 === e ? void 0 : e.name,
       video_hardware_scaling_enabled: u.default.getHardwareH264(),
@@ -38,7 +38,7 @@ function h(e, t, n, s) {
   let r = c.default.getVoiceChannelId(),
     o = l.default.getChannel(r);
   if (null == t && null != r && null != o) {
-    let t = _(o, s);
+    let t = f(o, s);
     if (e(), a.default.hasUsedBackgroundInCall) {
       let e = {
         ...t,

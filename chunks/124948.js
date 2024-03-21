@@ -20,11 +20,11 @@ let c = new o.default(d.default.isMember, (e, t) => {
   })
 });
 
-function f() {
+function _() {
   c.reset()
 }
 
-function _(e, t) {
+function f(e, t) {
   return c.request(e, t), !1
 }
 
@@ -34,7 +34,7 @@ function E(e, t) {
       author: n,
       mentions: i
     } = t;
-    null != n && _(e, n.id), null == i || i.forEach(t => _(e, t.id))
+    null != n && f(e, n.id), null == i || i.forEach(t => f(e, t.id))
   }), !1
 }
 
@@ -58,13 +58,13 @@ class m extends r.default.Store {
     this.waitFor(u.default, d.default)
   }
   requestMember(e, t) {
-    _(e, t)
+    f(e, t)
   }
 }
 m.displayName = "GuildMemberRequesterStore";
 var p = new m(a.default, {
-  CONNECTION_CLOSED: f,
-  CONNECTION_OPEN: f,
+  CONNECTION_CLOSED: _,
+  CONNECTION_OPEN: _,
   CONNECTION_RESUMED: function() {
     return c.requestUnacknowledged(), !1
   },

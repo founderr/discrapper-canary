@@ -13,12 +13,12 @@ var s = n("446674"),
 let u = new Set,
   d = new Set,
   c = new Map,
-  f = new Map,
-  _ = new Map;
+  _ = new Map,
+  f = new Map;
 
 function E(e) {
-  c.set(e.id, o.default.createFromServer(e)), !f.has(e.application_id) && f.set(e.application_id, new Set);
-  let t = f.get(e.application_id);
+  c.set(e.id, o.default.createFromServer(e)), !_.has(e.application_id) && _.set(e.application_id, new Set);
+  let t = _.get(e.application_id);
   t.add(e.id)
 }
 
@@ -45,7 +45,7 @@ function p(e) {
 }
 
 function S() {
-  u = new Set, d = new Set, c = new Map, f = new Map, _ = new Map
+  u = new Set, d = new Set, c = new Map, _ = new Map, f = new Map
 }
 
 function v() {
@@ -60,7 +60,7 @@ class T extends s.Store {
     return c.get(e)
   }
   getForApplication(e) {
-    let t = f.get(e);
+    let t = _.get(e);
     return null == t ? [] : Array.from(t).map(e => c.get(e))
   }
   isFetching(e) {
@@ -114,7 +114,7 @@ var I = new T(r.default, {
       skus: n
     } = e;
     for (let e of n) h(e);
-    null != t && _.set(t, new Set(n.map(e => e.id)))
+    null != t && f.set(t, new Set(n.map(e => e.id)))
   },
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: p,
   APPLICATION_STORE_CLEAR_DATA: S,

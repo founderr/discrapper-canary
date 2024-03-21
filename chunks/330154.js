@@ -13,8 +13,8 @@ var s = n("671725"),
   u = n.n(l),
   d = n("446674"),
   c = n("913144"),
-  f = n("517763"),
-  _ = n("91366");
+  _ = n("517763"),
+  f = n("91366");
 let E = {},
   h = {},
   g = {},
@@ -30,7 +30,7 @@ class T extends d.default.Store {
       targetUserId: s,
       targetApplicationId: r
     } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return i === _.InviteTargetTypes.STREAM && null != s ? null === (t = h[e]) || void 0 === t ? void 0 : t[s] : i === _.InviteTargetTypes.EMBEDDED_APPLICATION && null != r ? null === (n = g[e]) || void 0 === n ? void 0 : n[r] : E[e]
+    return i === f.InviteTargetTypes.STREAM && null != s ? null === (t = h[e]) || void 0 === t ? void 0 : t[s] : i === f.InviteTargetTypes.EMBEDDED_APPLICATION && null != r ? null === (n = g[e]) || void 0 === n ? void 0 : n[r] : E[e]
   }
   getFriendInvite() {
     return i
@@ -55,7 +55,7 @@ var I = new T(c.default, {
   },
   FRIEND_INVITE_CREATE_SUCCESS: function(e) {
     var t;
-    m[e.invite.code] = f.default.createFromServer(e.invite), i = null !== (t = r(o(u(Object.values(m), "createdAt")))) && void 0 !== t ? t : null, v = !1
+    m[e.invite.code] = _.default.createFromServer(e.invite), i = null !== (t = r(o(u(Object.values(m), "createdAt")))) && void 0 !== t ? t : null, v = !1
   },
   FRIEND_INVITE_CREATE_FAILURE: function() {
     v = !1
@@ -70,8 +70,8 @@ var I = new T(c.default, {
     let {
       channelId: t,
       invite: n
-    } = e, i = f.default.createFromServer(n);
-    i.targetType === _.InviteTargetTypes.STREAM && null != i.targetUser ? (null == h[t] && (h[t] = {}), h[t][String(i.targetUser.id)] = i) : i.targetType === _.InviteTargetTypes.EMBEDDED_APPLICATION && null != i.targetApplication ? (null == g[t] && (g[t] = {}), g[t][i.targetApplication.id] = i) : E[t] = i
+    } = e, i = _.default.createFromServer(n);
+    i.targetType === f.InviteTargetTypes.STREAM && null != i.targetUser ? (null == h[t] && (h[t] = {}), h[t][String(i.targetUser.id)] = i) : i.targetType === f.InviteTargetTypes.EMBEDDED_APPLICATION && null != i.targetApplication ? (null == g[t] && (g[t] = {}), g[t][i.targetApplication.id] = i) : E[t] = i
   },
   INSTANT_INVITE_CREATE_FAILURE: function(e) {
     let {
@@ -97,7 +97,7 @@ var I = new T(c.default, {
   FRIEND_INVITES_FETCH_RESPONSE: function(e) {
     var t;
     m = {}, e.invites.forEach(e => {
-      m[e.code] = f.default.createFromServer(e)
+      m[e.code] = _.default.createFromServer(e)
     }), i = null !== (t = r(o(u(Object.values(m), "createdAt")))) && void 0 !== t ? t : null, p = !1
   },
   INSTANT_INVITE_CLEAR: function(e) {

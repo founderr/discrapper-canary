@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return c
   },
   SUB_COMMAND_KEY_SEPARATOR: function() {
-    return f
+    return _
   },
   APPLICATION_COMMAND_PERMISSIONS_LIMIT: function() {
-    return _
+    return f
   },
   MAX_SUBCOMMAND_LEVEL: function() {
     return E
@@ -56,8 +56,8 @@ let o = "True",
 (i = s || (s = {})).BUILT_IN = "-1", i.FRECENCY = "-2";
 let d = 10,
   c = 5,
-  f = "\x00",
-  _ = 100,
+  _ = "\x00",
+  f = 100,
   E = 3,
   h = 10,
   g = 500;

@@ -14,7 +14,7 @@ var s = n("446674"),
 let d = {},
   c = (0, o.isWindows)() ? "".concat(a.default.process.env.LOCALAPPDATA, "\\DiscordGames") : (0, o.isMac)() ? "/Applications/DiscordGames" : "/tmp";
 
-function f(e, t) {
+function _(e, t) {
   var n;
   d = {
     ...d,
@@ -25,7 +25,7 @@ function f(e, t) {
   }
 }
 
-function _(e) {
+function f(e) {
   let {
     applicationId: t,
     branchId: n,
@@ -50,7 +50,7 @@ function E(e) {
 
 function h(e) {
   if (i.installationPaths.has(e.path)) return !1;
-  f(e.path, e.metadata);
+  _(e.path, e.metadata);
   let t = new Set(i.installationPaths);
   t.add(e.path), i.installationPaths = t
 }
@@ -98,7 +98,7 @@ class g extends s.default.PersistedStore {
 }
 g.displayName = "InstallationManagerStore", g.persistKey = "InstallationManagerStore";
 var m = new g(r.default, {
-  DISPATCH_APPLICATION_INSTALL: _,
+  DISPATCH_APPLICATION_INSTALL: f,
   DISPATCH_APPLICATION_UNINSTALL: E,
   DISPATCH_APPLICATION_CANCEL: function(e) {
     let {
@@ -147,7 +147,7 @@ var m = new g(r.default, {
     let {
       metadataPayload: t
     } = e;
-    for (let e in t) f(e, t[e])
+    for (let e in t) _(e, t[e])
   },
-  DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: _
+  DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: f
 })

@@ -13,8 +13,8 @@ var i = n("705909"),
   u = n("794897"),
   d = n("818697"),
   c = n("280468");
-let f = new s.default("Messages");
-class _ {
+let _ = new s.default("Messages");
+class f {
   static computeUsersAndMembers(e) {
     (0, c.requireSortedDescending)(e);
     let t = new Map,
@@ -33,7 +33,7 @@ class _ {
     if (this.connectionId = null, this.users = [], this.members = [], this.messages = [], e.length > 0) {
       var t;
       let n = null === (t = e[0]) || void 0 === t ? void 0 : t.connectionId,
-        [i, s] = _.computeUsersAndMembers(e);
+        [i, s] = f.computeUsersAndMembers(e);
       e.length > 0 && e.every(e => e.connectionId === n) && (this.connectionId = n), this.users = i, this.members = s, this.messages = e.map(e => e.message)
     }
   }
@@ -42,15 +42,15 @@ var E = new class e {
   async startupLoad(e, t, n, i) {
     let s = o.default.messages(e),
       r = await s.getLatest(t, n, i);
-    return new _(r)
+    return new f(r)
   }
   async load(e, t, n) {
     let i = a.default.getBasicChannel(t);
-    if (null == t || null == i || !(0, d.isReadableChannel)(i)) return new _([]);
+    if (null == t || null == i || !(0, d.isReadableChannel)(i)) return new f([]);
     {
       let s = o.default.messages(e),
         r = await s.getLatest(i.guild_id, t, n);
-      return new _(r)
+      return new f(r)
     }
   }
   handleMessageCreate(e, t) {
@@ -99,7 +99,7 @@ var E = new class e {
   }
   async updateOne(e, t, n, i) {
     if (null == n.id) {
-      f.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
+      _.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
       return
     }
     let s = o.default.messages(i.database),

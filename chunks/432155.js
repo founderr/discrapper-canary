@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return c
   },
   EMOJIS_EVERYWHERE: function() {
-    return f
+    return _
   },
   STICKERS_EVERYWHERE: function() {
-    return _
+    return f
   },
   SOUNDBOARD_EVERYWHERE: function() {
     return E
@@ -109,8 +109,8 @@ class d extends r.default {
   }
 }
 let c = new d("animatedEmojis"),
-  f = new d("emojisEverywhere"),
-  _ = new d("stickersEverywhere"),
+  _ = new d("emojisEverywhere"),
+  f = new d("stickersEverywhere"),
   E = new d("soundboardEverywhere"),
   h = new d("customCallSounds"),
   g = new d("animatedAvatar"),
@@ -135,9 +135,9 @@ let M = new d("increasedGuildLimit"),
   U = new d("increasedVideoUploadQuality"),
   w = new d("uploadLargeFiles"),
   k = Object.freeze({
-    [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [c, f, _, S, L, U, w, I]),
-    [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [c, f, g, m, S, C, N, O, U, w, I]),
-    [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [c, f, _, E, h, g, m, p, S, v, A, C, y, N, R, O, D, P, L, M, b, U, w, I, T])
+    [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [c, _, f, S, L, U, w, I]),
+    [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [c, _, g, m, S, C, N, O, U, w, I]),
+    [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [c, _, f, E, h, g, m, p, S, v, A, C, y, N, R, O, D, P, L, M, b, U, w, I, T])
   });
 
 function V(e, t) {

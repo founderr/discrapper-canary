@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return c
   },
   fetchBranchesForApplication: function() {
-    return f
+    return _
   }
 }), n("222007");
 var i = n("917351"),
@@ -43,7 +43,7 @@ async function c() {
     }), []
   }
 }
-async function f(e) {
+async function _(e) {
   try {
     let t = await r.default.get({
         url: d.Endpoints.OWNED_APPLICATION_BRANCHES(e),

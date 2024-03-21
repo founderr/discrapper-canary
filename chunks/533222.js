@@ -13,9 +13,9 @@ var i = n("917351"),
 let u = "CertifiedDeviceStore",
   d = {},
   c = {},
-  f = 0;
+  _ = 0;
 
-function _(e, t, n) {
+function f(e, t, n) {
   let i = c[e];
   return null != i ? n(i) : t
 }
@@ -47,25 +47,25 @@ class h extends r.default.Store {
     return s.find(c, t => t.type === e)
   }
   isHardwareMute(e) {
-    return _(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.hardwareMute)
+    return f(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.hardwareMute)
   }
   hasEchoCancellation(e) {
-    return _(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.echoCancellation)
+    return f(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.echoCancellation)
   }
   hasNoiseSuppression(e) {
-    return _(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.noiseSuppression)
+    return f(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.noiseSuppression)
   }
   hasAutomaticGainControl(e) {
-    return _(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.automaticGainControl)
+    return f(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.automaticGainControl)
   }
   getVendor(e) {
-    return _(e, null, e => e.vendor)
+    return f(e, null, e => e.vendor)
   }
   getModel(e) {
-    return _(e, null, e => e.model)
+    return f(e, null, e => e.model)
   }
   getRevision() {
-    return f
+    return _
   }
 }
 h.displayName = "CertifiedDeviceStore";
@@ -75,6 +75,6 @@ var g = new h(o.default, {
       applicationId: t,
       devices: n
     } = e;
-    E(t, n), a.default.set(u, d), f++
+    E(t, n), a.default.set(u, d), _++
   }
 })

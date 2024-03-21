@@ -13,8 +13,8 @@ var s = n("446674"),
   u = n("605136"),
   d = n("299039"),
   c = n("271938"),
-  f = n("49111"),
-  _ = n("695838");
+  _ = n("49111"),
+  f = n("695838");
 let E = {},
   h = {},
   g = !1,
@@ -38,7 +38,7 @@ function S(e) {
 let v = Object.freeze({});
 class T extends s.default.Store {
   getGuild(e) {
-    if (null != e) return e === f.FAVORITES ? _.FAVORITES_GUILD_RECORD : h[e]
+    if (null != e) return e === _.FAVORITES ? f.FAVORITES_GUILD_RECORD : h[e]
   }
   getGuilds() {
     return h

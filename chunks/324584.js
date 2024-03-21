@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   TextAreaAutosize: function() {
-    return f
+    return _
   }
 });
 var s = n("37983"),
@@ -13,7 +13,7 @@ var s = n("37983"),
   u = n("718776"),
   d = n("356410");
 let c = ["letter-spacing", "line-height", "padding-top", "padding-bottom", "font-family", "font-weight", "font-size", "text-transform", "width", "padding-left", "padding-right", "border-width", "box-sizing"];
-class f extends r.PureComponent {
+class _ extends r.PureComponent {
   componentDidMount() {
     Promise.resolve().then(() => this.calculateSize())
   }
@@ -130,7 +130,7 @@ class f extends r.PureComponent {
     }
   }
 }
-f.defaultProps = {
+_.defaultProps = {
   autoFocus: !1,
   disabled: !1,
   autoCorrect: "off"

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   AnimatedDots: function() {
-    return _
+    return f
   },
   Dots: function() {
     return E
@@ -47,11 +47,11 @@ let d = {
     reset: !0
   };
 
-function f(e) {
+function _(e) {
   let t = e % 2;
   return t > 1 ? 1 - (t - 1) : t
 }
-let _ = s.memo(function(e) {
+let f = s.memo(function(e) {
     let {
       dotRadius: t,
       dotPosition: n,
@@ -59,7 +59,7 @@ let _ = s.memo(function(e) {
       spacing: a = 2.5
     } = e, l = s.useRef(u()), d = s.useRef(!0);
     s.useEffect(() => () => void(d.current = !1), []);
-    let [_] = (0, o.useSpring)(() => ({
+    let [f] = (0, o.useSpring)(() => ({
       ...c,
       to: async e => {
         let t = 2.8;
@@ -82,10 +82,10 @@ let _ = s.memo(function(e) {
         return (0, i.jsx)(o.animated.circle, {
           cx: n ? n.to([0, 1], [E, u]) : u,
           cy: t,
-          r: _.dotCycle.to(e => f(e - s)).to([0, .4, .8, 1], [.8 * t, .8 * t, t, t]).to(e => l.current ? e : t),
+          r: f.dotCycle.to(e => _(e - s)).to([0, .4, .8, 1], [.8 * t, .8 * t, t, t]).to(e => l.current ? e : t),
           fill: r,
           style: {
-            opacity: _.dotCycle.to(e => f(e - s)).to([0, .4, .8, 1], [.3, .3, 1, 1]).to(e => l.current ? e : 1)
+            opacity: f.dotCycle.to(e => _(e - s)).to([0, .4, .8, 1], [.3, .3, 1, 1]).to(e => l.current ? e : 1)
           }
         }, e)
       })
@@ -97,7 +97,7 @@ let _ = s.memo(function(e) {
       x: s,
       y: r,
       hide: c = !1,
-      themed: f = !1,
+      themed: _ = !1,
       className: E
     } = e, h = (0, o.useTransition)(c, {
       ...d,
@@ -116,12 +116,12 @@ let _ = s.memo(function(e) {
         y: r,
         width: 6 * n + n / 2 * 2,
         height: 2 * n,
-        className: a(E, l.dots, f ? l.themed : null),
+        className: a(E, l.dots, _ ? l.themed : null),
         children: (0, i.jsx)(o.animated.g, {
           style: {
             opacity: c.to(e => Math.min(1, Math.max(e, 0)))
           },
-          children: (0, i.jsx)(_, {
+          children: (0, i.jsx)(f, {
             dotRadius: n,
             dotPosition: c
           })

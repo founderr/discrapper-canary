@@ -23,10 +23,10 @@ n.r(t), n.d(t, {
     return c
   },
   NUM_RECENTLY_HEARD_SOUNDS: function() {
-    return f
+    return _
   },
   NUM_FREQUENTLY_USED_SOUNDS: function() {
-    return _
+    return f
   }
 }), n("222007");
 let r = 32,
@@ -41,5 +41,5 @@ let l = {
   u = "ctrl+`",
   d = [],
   c = "0",
-  f = 6,
-  _ = 6
+  _ = 6,
+  f = 6

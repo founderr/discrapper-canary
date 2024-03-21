@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return c
   },
   getComboScore: function() {
-    return f
+    return _
   }
 }), n("222007"), n("808653");
 var i = n("39141"),
@@ -70,7 +70,7 @@ let r = function(e, t) {
     flair: !0
   };
 
-function f(e) {
+function _(e) {
   var t;
   return e.value * (null !== (t = e.multiplier) && void 0 !== t ? t : 1)
 }

@@ -13,8 +13,8 @@ var i = n("872717"),
   u = n("645672"),
   d = n("718517"),
   c = n("49111");
-let f = 10 * d.default.Millis.MINUTE,
-  _ = 10 * d.default.Millis.MINUTE,
+let _ = 10 * d.default.Millis.MINUTE,
+  f = 10 * d.default.Millis.MINUTE,
   E = 1 * d.default.Millis.MINUTE,
   h = {};
 async function g(e, t) {
@@ -60,7 +60,7 @@ async function g(e, t) {
     });
     else {
       var s, o;
-      s = e, null == h[o = t] && (h[o] = new r.Timeout), h[o].start(f + Math.random() * _, () => {
+      s = e, null == h[o = t] && (h[o] = new r.Timeout), h[o].start(_ + Math.random() * f, () => {
         let e = l.default.getLibraryApplication(s, o);
         null != e && g(s, o)
       })

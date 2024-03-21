@@ -19,8 +19,8 @@ var i = n("627445"),
   u = n("154867"),
   d = n("870879"),
   c = n("239448"),
-  f = n("977801"),
-  _ = n("512244"),
+  _ = n("977801"),
+  f = n("512244"),
   E = n("917219"),
   h = n("49111");
 async function g(e) {
@@ -46,7 +46,7 @@ async function p(e, t, n) {
   if (n === E.BLUR_BACKGROUND_OPTION) return m(e, t, r.FilterSettingsGraph.BACKGROUND_BLUR);
   if ("string" == typeof n || "number" == typeof n) {
     ;
-    let e = (0, f.default)()[n];
+    let e = (0, _.default)()[n];
     d = null !== (i = e.isVideo) && void 0 !== i && i, l = e.source
   } else {
     let e = n.asset;
@@ -111,7 +111,7 @@ function T() {
   let e = a.default.getCurrentUser();
   if (null == e) return;
   let t = (0, l.getLastUsedVideoBackgroundOption)(e);
-  (0, _.default)() && !d.default.hasBeenApplied && null != t && S(t, {
+  (0, f.default)() && !d.default.hasBeenApplied && null != t && S(t, {
     track: !1
   }).catch(h.NOOP)
 }

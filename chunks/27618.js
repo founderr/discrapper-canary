@@ -13,8 +13,8 @@ var i = n("917351"),
   u = n("49111");
 let d = {},
   c = {},
-  f = {},
-  _ = 0,
+  _ = {},
+  f = 0,
   E = 0,
   h = 0,
   g = 0;
@@ -25,7 +25,7 @@ function m() {
   let {
     [u.RelationshipTypes.PENDING_INCOMING]: t = 0, [u.RelationshipTypes.PENDING_OUTGOING]: n = 0, [u.RelationshipTypes.FRIEND]: i = 0
   } = s.countBy(Object.values(d), e => e);
-  _ = t, E = n, h = i
+  f = t, E = n, h = i
 }
 class p extends r.default.Store {
   initialize() {
@@ -38,7 +38,7 @@ class p extends r.default.Store {
     return d[e] === u.RelationshipTypes.BLOCKED
   }
   getPendingCount() {
-    return _
+    return f
   }
   getOutgoingCount() {
     return E
@@ -61,10 +61,10 @@ class p extends r.default.Store {
     return t
   }
   getSince(e) {
-    return f[e]
+    return _[e]
   }
   getSinces() {
-    return f
+    return _
   }
   getFriendIDs() {
     return o.default.keys(d).filter(e => d[e] === u.RelationshipTypes.FRIEND)
@@ -73,8 +73,8 @@ class p extends r.default.Store {
 p.displayName = "RelationshipStore";
 var S = new p(a.default, {
   CONNECTION_OPEN: function(e) {
-    d = {}, c = {}, f = {}, e.relationships.forEach(e => {
-      d[e.id] = e.type, null != e.nickname && (c[e.id] = e.nickname), null != e.since && (f[e.id] = e.since)
+    d = {}, c = {}, _ = {}, e.relationships.forEach(e => {
+      d[e.id] = e.type, null != e.nickname && (c[e.id] = e.nickname), null != e.since && (_[e.id] = e.since)
     }), m()
   },
   OVERLAY_INITIALIZE: function(e) {
@@ -90,8 +90,8 @@ var S = new p(a.default, {
     }, null != e.relationship.nickname && (c = {
       ...c,
       [e.relationship.id]: e.relationship.nickname
-    }), null != e.relationship.since && (f = {
-      ...f,
+    }), null != e.relationship.since && (_ = {
+      ..._,
       [e.relationship.id]: e.relationship.since
     }), m(), e.relationship.type === u.RelationshipTypes.FRIEND && t === u.RelationshipTypes.PENDING_OUTGOING && a.default.dispatch({
       type: "FRIEND_REQUEST_ACCEPTED",
@@ -103,12 +103,12 @@ var S = new p(a.default, {
       ...d
     }, delete d[e.relationship.id], null != c[e.relationship.id] && (c = {
       ...c
-    }, delete c[e.relationship.id]), null != f[e.relationship.id] && (f = {
-      ...f
-    }, delete f[e.relationship.id]), m()
+    }, delete c[e.relationship.id]), null != _[e.relationship.id] && (_ = {
+      ..._
+    }, delete _[e.relationship.id]), m()
   },
   RELATIONSHIP_UPDATE: function(e) {
-    null == e.relationship.since ? delete f[e.relationship.id] : f[e.relationship.id] = e.relationship.since, null == e.relationship.nickname ? delete c[e.relationship.id] : c[e.relationship.id] = e.relationship.nickname
+    null == e.relationship.since ? delete _[e.relationship.id] : _[e.relationship.id] = e.relationship.since, null == e.relationship.nickname ? delete c[e.relationship.id] : c[e.relationship.id] = e.relationship.nickname
   },
   RELATIONSHIP_PENDING_INCOMING_REMOVED: function(e) {
     d = {

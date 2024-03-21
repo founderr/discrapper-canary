@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 }), n("222007");
 var i = n("102053"),
@@ -114,7 +114,7 @@ class c {
     }
   }
 }
-var f = new class e extends c {
+var _ = new class e extends c {
   setTTICallback(e) {
     r = () => {
       !0 === e() && (r = () => !1)

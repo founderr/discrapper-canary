@@ -13,8 +13,8 @@ var i = n("917351"),
   u = n("913144"),
   d = n("80507"),
   c = n("802493"),
-  f = n("595525"),
-  _ = n("629538"),
+  _ = n("595525"),
+  f = n("629538"),
   E = n("39616"),
   h = n("828674"),
   g = n("153043"),
@@ -113,7 +113,7 @@ async function $() {
   let e = c.default.database();
   if (null == e) return;
   j = 2;
-  let t = await (0, f.tryLoadOrResetCacheGatewayAsync)("EmojiStore.loadSavedEmojis", () => o.default.timeAsync("\uD83D\uDCBE", "loadSavedEmojis", () => _.default.getAsync(e)));
+  let t = await (0, _.tryLoadOrResetCacheGatewayAsync)("EmojiStore.loadSavedEmojis", () => o.default.timeAsync("\uD83D\uDCBE", "loadSavedEmojis", () => f.default.getAsync(e)));
   null != t && u.default.dispatch({
     type: "CACHED_EMOJIS_LOADED",
     emojis: t

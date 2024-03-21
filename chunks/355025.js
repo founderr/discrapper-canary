@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return c
   },
   getBuildOverride: function() {
-    return f
+    return _
   },
   getBuildOverrideMeta: function() {
-    return _
+    return f
   },
   probablyHasBuildOverride: function() {
     return E
@@ -39,7 +39,7 @@ function c(e) {
   return "".concat(location.protocol, "//").concat(location.host).concat(e)
 }
 
-function f() {
+function _() {
   let e = o.default.safeParseWithQuery(c("/__development/build_overrides"));
   return null == e ? Promise.resolve(null) : (e.search = null, d && (e.query.version = d), r.default.get({
     url: s.format(e),
@@ -47,7 +47,7 @@ function f() {
   }).then(e => e.body || null, () => null))
 }
 
-function _(e) {
+function f(e) {
   if (S(e)) return Promise.resolve(function(e) {
     let t = e.match(p);
     if (null == t || 2 !== t.length) return null;

@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return c
   },
   visibilityChange: function() {
-    return f
+    return _
   },
   init: function() {
-    return _
+    return f
   },
   unload: function() {
     return E
@@ -65,7 +65,7 @@ function c(e) {
   })
 }
 
-function f(e) {
+function _(e) {
   let t = (0, a.getWindowId)(e);
   s.default.dispatch({
     type: "WINDOW_VISIBILITY_CHANGE",
@@ -74,7 +74,7 @@ function f(e) {
   })
 }
 
-function _(e) {
+function f(e) {
   let t = (0, a.getWindowId)(e),
     n = e.document;
   s.default.dispatch({

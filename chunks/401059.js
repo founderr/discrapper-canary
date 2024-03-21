@@ -13,9 +13,9 @@ var i = n("483366"),
   u = n("289382");
 let d = 7.5,
   c = (0, a.cssValueToNumber)(r.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-  f = 1 / 60;
+  _ = 1 / 60;
 
-function _(e, t, n, i) {
+function f(e, t, n, i) {
   return t * (n / i) + e
 }
 
@@ -33,7 +33,7 @@ var h = class e {
     this.points = []
   }
   update(e) {
-    0 !== this.points.length && (this.points.forEach(t => t.update(Math.min(e, f))), !this.hasEntered && this.points[0].x > c && (this.hasEntered = !0, this.updateWaveState(u.WaveStates.ENTERED)), this.isFilling && this.points[0].x > this.points[0].targetX && (this.isFilling = !1, this.updateWaveState(u.WaveStates.FILLED)))
+    0 !== this.points.length && (this.points.forEach(t => t.update(Math.min(e, _))), !this.hasEntered && this.points[0].x > c && (this.hasEntered = !0, this.updateWaveState(u.WaveStates.ENTERED)), this.isFilling && this.points[0].x > this.points[0].targetX && (this.isFilling = !1, this.updateWaveState(u.WaveStates.FILLED)))
   }
   render(e) {
     if (0 === this.points.length) return;

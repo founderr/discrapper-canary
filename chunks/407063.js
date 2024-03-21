@@ -25,8 +25,8 @@ var i = n("917351"),
   u = n("35468"),
   d = n("547630"),
   c = n("49111");
-let f = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
-  _ = new a({
+let _ = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
+  f = new a({
     max: 1e3
   });
 
@@ -55,7 +55,7 @@ function h(e, t, n) {
     callbacks: i,
     url: s
   } = t;
-  if (e) _.del(s);
+  if (e) f.del(s);
   else {
     let {
       width: e,
@@ -66,18 +66,18 @@ function h(e, t, n) {
       loaded: !0,
       width: e,
       height: i
-    }, _.set(s, t)
+    }, f.set(s, t)
   }
   null != i && i.forEach(n => n(e, t))
 }
 
 function g(e) {
-  let t = _.get(e);
+  let t = f.get(e);
   return null != t && t.loaded
 }
 
 function m(e, t) {
-  let n = _.get(e);
+  let n = f.get(e);
   if (null != n && n.loaded) return null != t && u.default.awaitOnline().then(() => {
     null != n && null != n.callbacks && n.callbacks.forEach(t => {
       null != n ? t(!1, n) : t(!0, {
@@ -91,7 +91,7 @@ function m(e, t) {
     return null == n && (n = {
       url: e,
       loaded: !1
-    }, _.set(e, n), E(n)), null != t && (i = t.bind(null), null == n.callbacks && (n.callbacks = new Set), n.callbacks.add(i)), () => {
+    }, f.set(e, n), E(n)), null != t && (i = t.bind(null), null == n.callbacks && (n.callbacks = new Set), n.callbacks.add(i)), () => {
       null != i && null != n && (null != n.callbacks && n.callbacks.delete(i), null != n.backoff && n.backoff.cancel())
     }
   }
@@ -99,7 +99,7 @@ function m(e, t) {
 
 function p(e) {
   var t;
-  return null !== (t = f.find(t => e <= t)) && void 0 !== t ? t : f[f.length - 1]
+  return null !== (t = _.find(t => e <= t)) && void 0 !== t ? t : _[_.length - 1]
 }
 
 function S(e) {
@@ -112,10 +112,10 @@ function S(e) {
     ratio: l = 1,
     format: u = null,
     quality: c = null
-  } = e, f = n, _ = i;
-  l < 1 && (f = Math.round(n * l), _ = Math.round(i * l)), null != r && (f = Math.min(f, r)), null != a && (_ = Math.min(_, a));
+  } = e, _ = n, f = i;
+  l < 1 && (_ = Math.round(n * l), f = Math.round(i * l)), null != r && (_ = Math.min(_, r)), null != a && (f = Math.min(f, a));
   let E = (0, d.default)();
-  return f *= E,
+  return _ *= E,
     function(e) {
       let {
         src: t,
@@ -134,8 +134,8 @@ function S(e) {
       src: t,
       sourceWidth: n,
       sourceHeight: i,
-      targetWidth: f,
-      targetHeight: _ *= E,
+      targetWidth: _,
+      targetHeight: f *= E,
       format: u,
       quality: c
     })

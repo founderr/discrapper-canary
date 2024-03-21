@@ -23,7 +23,7 @@ class c {
   }
 }
 
-function f(e) {
+function _(e) {
   let {
     type: t,
     messageId: n,
@@ -36,7 +36,7 @@ function f(e) {
     null != e && (a.users[i] = e)
   } else delete a.users[i]
 }
-class _ extends i.default.Store {
+class f extends i.default.Store {
   getReactions(e, t, n, i, s) {
     let o = c.ensure(t, n, s);
     if (!o.fetched) {
@@ -54,13 +54,13 @@ class _ extends i.default.Store {
     return o.users
   }
 }
-_.displayName = "MessageReactionsStore";
-var E = new _(s.default, {
+f.displayName = "MessageReactionsStore";
+var E = new f(s.default, {
   CONNECTION_OPEN: function() {
     d = {}
   },
-  MESSAGE_REACTION_ADD: f,
-  MESSAGE_REACTION_REMOVE: f,
+  MESSAGE_REACTION_ADD: _,
+  MESSAGE_REACTION_REMOVE: _,
   MESSAGE_REACTION_ADD_USERS: function(e) {
     let {
       messageId: t,

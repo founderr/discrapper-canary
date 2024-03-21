@@ -13,8 +13,8 @@ var i = n("627445"),
   u = n("913144"),
   d = n("605250"),
   c = n("773336"),
-  f = n("50885"),
-  _ = n("563680"),
+  _ = n("50885"),
+  f = n("563680"),
   E = n("49111");
 let h = {},
   g = {},
@@ -63,7 +63,7 @@ function y(e) {
           return
         }
         let i = t.document;
-        (0, _.subscribeDocumentToFullScreenChange)(i, T), t.addEventListener("focus", T), t.addEventListener("blur", T), t.addEventListener("resize", I), ! function(e, t) {
+        (0, f.subscribeDocumentToFullScreenChange)(i, T), t.addEventListener("focus", T), t.addEventListener("blur", T), t.addEventListener("resize", I), ! function(e, t) {
           let n = t.document,
             i = document.querySelectorAll('link[rel="stylesheet"]'),
             r = "".concat(window.location.protocol, "//").concat(window.location.host);
@@ -132,23 +132,23 @@ let O = new R(u.default, {
       features: n,
       render: i
     } = e;
-    if (c.isPlatformEmbedded && !f.default.supportsFeature(E.NativeFeatures.POPOUT_WINDOWS)) throw Error("Popout windows not supported on this native module version!");
+    if (c.isPlatformEmbedded && !_.default.supportsFeature(E.NativeFeatures.POPOUT_WINDOWS)) throw Error("Popout windows not supported on this native module version!");
     let s = m[t];
-    if (null != s && !s.closed) return c.isPlatformEmbedded ? f.default.focus(t) : s.focus(), !1;
+    if (null != s && !s.closed) return c.isPlatformEmbedded ? _.default.focus(t) : s.focus(), !1;
     let {
       defaultWidth: r,
       defaultHeight: a,
       defaultAlwaysOnTop: o = !1,
       ...l
-    } = n, u = l, d = o, _ = h[t];
-    if (null != _) {
+    } = n, u = l, d = o, f = h[t];
+    if (null != f) {
       let {
         width: e,
         height: t,
         x: n,
         y: i,
         alwaysOnTop: s
-      } = _;
+      } = f;
       d = null != s ? s : o, u = {
         width: null != e && 0 !== e ? e : r,
         height: null != t && 0 !== t ? t : a,
@@ -165,7 +165,7 @@ let O = new R(u.default, {
       }
       return t
     }(u));
-    p.windowKey = t, null == p || p.focus(), m[t] = p, S[t] = i, c.isPlatformEmbedded && (f.default.setAlwaysOnTop(t, d), g[t] = d, f.default.isAlwaysOnTop(t).then(e => g[t] = e)), v.add(t)
+    p.windowKey = t, null == p || p.focus(), m[t] = p, S[t] = i, c.isPlatformEmbedded && (_.default.setAlwaysOnTop(t, d), g[t] = d, _.default.isAlwaysOnTop(t).then(e => g[t] = e)), v.add(t)
   },
   POPOUT_WINDOW_CLOSE: function(e) {
     let {
@@ -178,7 +178,7 @@ let O = new R(u.default, {
       key: t,
       alwaysOnTop: n
     } = e;
-    c.isPlatformEmbedded && (f.default.setAlwaysOnTop(t, n), g[t] = n, f.default.isAlwaysOnTop(t).then(e => g[t] = e))
+    c.isPlatformEmbedded && (_.default.setAlwaysOnTop(t, n), g[t] = n, _.default.isAlwaysOnTop(t).then(e => g[t] = e))
   },
   LOGOUT: N
 });

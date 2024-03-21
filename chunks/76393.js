@@ -13,8 +13,8 @@ let o = null,
   u = new Set,
   d = {},
   c = {},
-  f = new Set,
-  _ = Object.freeze({});
+  _ = new Set,
+  f = Object.freeze({});
 class E extends i.default.DeviceSettingsStore {
   initialize(e) {
     null != e && (c = e.lastSelectedDeviceByPlatform), this.waitFor(r.default, a.default)
@@ -26,7 +26,7 @@ class E extends i.default.DeviceSettingsStore {
   }
   getDevicesForPlatform(e) {
     var t;
-    return null !== (t = d[e]) && void 0 !== t ? t : _
+    return null !== (t = d[e]) && void 0 !== t ? t : f
   }
   getLastSelectedDeviceByPlatform(e) {
     return c[e]
@@ -36,7 +36,7 @@ class E extends i.default.DeviceSettingsStore {
     return null === (n = d[e]) || void 0 === n ? void 0 : n[t]
   }
   getFetchingDevices(e) {
-    return f.has(e)
+    return _.has(e)
   }
   getPendingDeviceCommands() {
     return u
@@ -80,14 +80,14 @@ var h = new E(s.default, {
     let {
       platform: t
     } = e;
-    f.add(t)
+    _.add(t)
   },
   GAME_CONSOLE_FETCH_DEVICES_SUCCESS: function(e) {
     let {
       platform: t,
       devices: n
     } = e;
-    f.delete(t);
+    _.delete(t);
     let i = d[t] = {},
       s = {};
     for (let e of n) i[e.id] = e, c[t] === e.id && (s[t] = e.id);
@@ -97,7 +97,7 @@ var h = new E(s.default, {
     let {
       platform: t
     } = e;
-    f.delete(t)
+    _.delete(t)
   },
   GAME_CONSOLE_SELECT_DEVICE: function(e) {
     let {

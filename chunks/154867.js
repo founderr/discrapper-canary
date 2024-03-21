@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchVideoFilterAssets: function() {
-    return f
+    return _
   },
   uploadVideoFilterAsset: function() {
-    return _
+    return f
   },
   deleteVideoFilterAsset: function() {
     return E
@@ -31,14 +31,14 @@ var i = n("872717"),
   u = n("239448"),
   d = n("284231"),
   c = n("49111");
-async function f() {
+async function _() {
   let e = await i.default.get(c.Endpoints.VIDEO_FILTER_ASSETS);
   return s.default.dispatch({
     type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS",
     assets: e.body
   }), e
 }
-async function _(e, t, n) {
+async function f(e, t, n) {
   try {
     let r = await i.default.post({
       url: c.Endpoints.VIDEO_FILTER_ASSETS,

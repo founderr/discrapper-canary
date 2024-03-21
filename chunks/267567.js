@@ -13,9 +13,9 @@ var i = n("446674"),
 let u = [],
   d = {},
   c = null,
-  f = null;
+  _ = null;
 
-function _(e) {
+function f(e) {
   let t = u.indexOf(e);
   if (t > -1) {
     let n = [...u];
@@ -50,7 +50,7 @@ class h extends i.default.Store {
     return !!(!n && i)
   }
   getLurkingSource() {
-    return f
+    return _
   }
   getLoadId(e) {
     return null != e ? d[e] : null
@@ -77,18 +77,18 @@ var g = new h(s.default, {
       var a, o;
       switch (E(t), a = t, null != (o = r) && (d[a] = o), i) {
         case l.JoinGuildSources.MOBILE_GUILD_DISCOVERY:
-          f = {
+          _ = {
             type: l.JoinGuildSources.MOBILE_GUILD_DISCOVERY
           };
           break;
         case l.JoinGuildSources.DIRECTORY_ENTRY:
-          f = {
+          _ = {
             type: l.JoinGuildSources.DIRECTORY_ENTRY,
             directoryChannelId: s
           };
           break;
         default:
-          f = null
+          _ = null
       }
       return !0
     }
@@ -99,28 +99,28 @@ var g = new h(s.default, {
       ignoredGuildIds: t
     } = e, n = function(e) {
       let t = new Set([...null != e ? e : []]);
-      return [...u].reduce((e, n) => t.has(n) ? e : _(n) || e, !1)
+      return [...u].reduce((e, n) => t.has(n) ? e : f(n) || e, !1)
     }(t);
-    return n && (c = null, f = null), n
+    return n && (c = null, _ = null), n
   },
   GUILD_STOP_LURKING_FAILURE: function(e) {
     let {
       lurkingGuildId: t,
       lurkingSource: n
     } = e;
-    return E(t), f = n, !0
+    return E(t), _ = n, !0
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e, n = null == t.joined_at;
-    return !!(!n && u.includes(t.id)) && (_(t.id), c = null, f = null, !0)
+    return !!(!n && u.includes(t.id)) && (f(t.id), c = null, _ = null, !0)
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    return !!u.includes(t.id) && (_(t.id), c = null, f = null, !0)
+    return !!u.includes(t.id) && (f(t.id), c = null, _ = null, !0)
   },
   GUILD_MEMBER_ADD: function(e) {
     var t;
@@ -129,6 +129,6 @@ var g = new h(s.default, {
       joinedAt: i,
       user: s
     } = e, r = s.id === (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
-    return !!(r && null != i && u.includes(n)) && (_(n), c = null, f = null, !0)
+    return !!(r && null != i && u.includes(n)) && (f(n), c = null, _ = null, !0)
   }
 })

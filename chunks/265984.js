@@ -16,8 +16,8 @@ var i = n("37983"),
   u = n("731898"),
   d = n("634634"),
   c = n("685665"),
-  f = n("542489"),
-  _ = n("561744");
+  _ = n("542489"),
+  f = n("561744");
 let E = {
   mass: 1,
   tension: 300,
@@ -61,7 +61,7 @@ function m(e) {
     {
       reducedMotion: y
     } = s.useContext(l.AccessibilityPreferencesContext),
-    N = s.useContext(f.default),
+    N = s.useContext(_.default),
     R = v[I].impressionName,
     O = {
       ...v[I].impressionProperties,
@@ -109,7 +109,7 @@ function m(e) {
       } = t;
       n === I && null != S.onSlideReady && S.onSlideReady(n)
     }
-  }), w = (0, _.default)(C), {
+  }), w = (0, f.default)(C), {
     width: k,
     centered: V = !0
   } = S, G = o.isMobile ? "100%" : b.width.to(e => Math.round(e)), F = o.isMobile ? "100%" : b.height.to(e => Math.round(e)), x = o.isMobile ? {} : V ? {

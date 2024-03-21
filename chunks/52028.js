@@ -13,8 +13,8 @@ var i = n("714617"),
   u = n("191225"),
   d = n("299285"),
   c = n("225772"),
-  f = n("161454"),
-  _ = n("32346"),
+  _ = n("161454"),
+  f = n("32346"),
   E = n("925880"),
   h = n("662285"),
   g = n("845579"),
@@ -55,7 +55,7 @@ function C() {
       flags: v.ActivityFlags.EMBEDDED
     })
   });
-  let l = f.default.getVisibleGame(),
+  let l = _.default.getVisibleGame(),
     m = null != l && null != l.name && r.has(l.name),
     C = null != l && l.isLauncher,
     y = p.default.getCurrentUserActiveStream();
@@ -72,9 +72,9 @@ function C() {
     type: v.ActivityTypes.LISTENING,
     ...N
   });
-  let R = _.default.getCurrentHangStatus();
+  let R = f.default.getCurrentHangStatus();
   if (null != R) {
-    let t = _.default.getCustomHangStatus();
+    let t = f.default.getCustomHangStatus();
     e.push({
       type: v.ActivityTypes.HANG_STATUS,
       name: "Hang Status",
@@ -86,7 +86,7 @@ function C() {
 }
 class y extends o.default.Store {
   initialize() {
-    this.waitFor(f.default, u.default, S.default, p.default, h.default, m.default, _.default), this.syncWith([E.default, _.default], () => C())
+    this.waitFor(_.default, u.default, S.default, p.default, h.default, m.default, f.default), this.syncWith([E.default, f.default], () => C())
   }
   getActivities() {
     return I

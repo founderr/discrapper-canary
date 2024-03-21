@@ -23,6 +23,6 @@ function a(e, t) {
     d = r(t.record);
   if (u !== d) return u - d;
   let c = null !== (a = null !== (s = e.sortable) && void 0 !== s ? s : null === (n = e.comparator) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && void 0 !== a ? a : "",
-    f = null !== (l = null !== (o = e.sortable) && void 0 !== o ? o : null === (i = t.comparator) || void 0 === i ? void 0 : i.toLocaleLowerCase()) && void 0 !== l ? l : "";
-  return c < f ? -1 : c > f ? 1 : 0
+    _ = null !== (l = null !== (o = e.sortable) && void 0 !== o ? o : null === (i = t.comparator) || void 0 === i ? void 0 : i.toLocaleLowerCase()) && void 0 !== l ? l : "";
+  return c < _ ? -1 : c > _ ? 1 : 0
 }

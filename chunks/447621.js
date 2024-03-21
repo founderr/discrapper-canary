@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return c
   },
   DEFAULT_EMOJI_DISCOVERABILITY_SETTING: function() {
-    return f
+    return _
   },
   DISCOVERY_ALL_CATEGORIES_ID: function() {
-    return _
+    return f
   },
   DISCORD_HUB_ID: function() {
     return E
@@ -46,8 +46,8 @@ n.r(t), n.d(t, {
 var i, s, r, a, o, l, u = n("782340");
 let d = 0,
   c = 13,
-  f = !0,
-  _ = -1,
+  _ = !0,
+  f = -1,
   E = -2,
   h = 1e3,
   g = [{

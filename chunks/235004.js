@@ -11,8 +11,8 @@ var i, s, r = n("917351"),
   u = n("845579"),
   d = n("374363"),
   c = n("697218"),
-  f = n("599110"),
-  _ = n("829536"),
+  _ = n("599110"),
+  f = n("829536"),
   E = n("299039"),
   h = n("846325"),
   g = n("49111"),
@@ -34,8 +34,8 @@ function N(e) {
   null != n && null != i && -1 !== i ? (n[i] = t, p.set(t.guildId, [...n])) : null != n && (null == n || n.push(t), p.set(t.guildId, [...n]))
 }
 let R = a.debounce(e => {
-  f.default.track(g.AnalyticEvents.UPDATE_SOUNDBOARD_SETTINGS, {
-    volume: Math.round((0, _.amplitudeToPerceptual)(e))
+  _.default.track(g.AnalyticEvents.UPDATE_SOUNDBOARD_SETTINGS, {
+    volume: Math.round((0, f.amplitudeToPerceptual)(e))
   }), u.SoundboardSettings.updateSetting({
     volume: e
   })

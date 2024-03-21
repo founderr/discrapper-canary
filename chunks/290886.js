@@ -16,8 +16,8 @@ var i = n("917351"),
   u = n("305961"),
   d = n("698882"),
   c = n("233706"),
-  f = n("284683"),
-  _ = n("363176"),
+  _ = n("284683"),
+  f = n("363176"),
   E = n("49111"),
   h = n("724210");
 
@@ -39,7 +39,7 @@ function g(e) {
 
 function m(e) {
   let t = (0, r.default)([u.default], () => u.default.getGuild(e)),
-    n = (0, f.default)(t),
+    n = (0, _.default)(t),
     {
       homeSettingsEnabled: i
     } = c.default.useExperiment({
@@ -49,7 +49,7 @@ function m(e) {
       autoTrackExposure: !1
     }),
     d = (0, r.default)([o.default], () => o.default.isFullServerPreview(e)),
-    m = (0, _.default)(e),
+    m = (0, f.default)(e),
     p = (0, r.default)([l.default], () => l.default.getMutableGuildChannelsForGuild(e));
   if (null == t || __OVERLAY__ || e === E.ME || e === E.FAVORITES) return !1;
   if (d) return g(t);

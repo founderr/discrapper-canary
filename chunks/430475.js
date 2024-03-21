@@ -33,7 +33,7 @@ function c(e, t) {
   }
 }
 
-function f(e) {
+function _(e) {
   let {
     type: t,
     channelId: n,
@@ -45,13 +45,13 @@ function f(e) {
   } = e, d = u[n];
   if (null == d || null == d.firstMessage || i !== d.firstMessage.id) return !1;
   let c = o.default.getCurrentUser(),
-    f = null != c && c.id === s;
-  if (a && !f) return !1;
+    _ = null != c && c.id === s;
+  if (a && !_) return !1;
   u[n] = {
     ...d
-  }, "MESSAGE_REACTION_ADD" === t ? u[n].firstMessage = d.firstMessage.addReaction(r, f, e.colors, l) : u[n].firstMessage = d.firstMessage.removeReaction(r, f, l)
+  }, "MESSAGE_REACTION_ADD" === t ? u[n].firstMessage = d.firstMessage.addReaction(r, _, e.colors, l) : u[n].firstMessage = d.firstMessage.removeReaction(r, _, l)
 }
-class _ extends i.default.Store {
+class f extends i.default.Store {
   initialize() {
     this.waitFor(a.default, o.default)
   }
@@ -66,8 +66,8 @@ class _ extends i.default.Store {
     }), u[e]
   }
 }
-_.displayName = "ForumPostMessagesStore";
-var E = new _(s.default, {
+f.displayName = "ForumPostMessagesStore";
+var E = new f(s.default, {
   CONNECTION_OPEN: function() {
     u = {}
   },
@@ -99,8 +99,8 @@ var E = new _(s.default, {
       firstMessage: null
     }
   },
-  MESSAGE_REACTION_ADD: f,
-  MESSAGE_REACTION_REMOVE: f,
+  MESSAGE_REACTION_ADD: _,
+  MESSAGE_REACTION_REMOVE: _,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
     let {
       channelId: t,

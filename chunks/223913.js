@@ -23,10 +23,10 @@ var i, s, r = n("446674"),
   u = n("305961"),
   d = n("957255"),
   c = n("800762"),
-  f = n("404008"),
-  _ = n("49111"),
+  _ = n("404008"),
+  f = n("49111"),
   E = n("782340");
-let h = (e, t) => (0, o.isPrivate)(e.type) || t.canBasicChannel(_.BasicPermissions.CONNECT | _.BasicPermissions.VIEW_CHANNEL, e);
+let h = (e, t) => (0, o.isPrivate)(e.type) || t.canBasicChannel(f.BasicPermissions.CONNECT | f.BasicPermissions.VIEW_CHANNEL, e);
 
 function g(e, t, n) {
   var i;
@@ -34,7 +34,7 @@ function g(e, t, n) {
   if (e.isPrivate()) return !0;
   let r = t.getGuild(e.getGuildId()),
     a = null !== (i = null == r ? void 0 : r.maxStageVideoChannelUsers) && void 0 !== i ? i : 0;
-  return (!e.isGuildStageVoice() || !(a <= 0)) && (!s || !!h(e, n)) && !!n.can(_.Permissions.STREAM, e) && null != r && r.afkChannelId !== e.id && !0
+  return (!e.isGuildStageVoice() || !(a <= 0)) && (!s || !!h(e, n)) && !!n.can(f.Permissions.STREAM, e) && null != r && r.afkChannelId !== e.id && !0
 }
 
 function m(e) {
@@ -54,7 +54,7 @@ function p(e, t, n, i, s) {
   let r;
   if (null == e) return [!1, 2];
   let a = t.isInChannel(e.id),
-    l = e instanceof o.ChannelRecordBase && (0, f.isChannelFull)(e, t, n),
+    l = e instanceof o.ChannelRecordBase && (0, _.isChannelFull)(e, t, n),
     u = h(e, i),
     d = null != s.getAwaitingRemoteSessionInfo() || null != s.getRemoteSessionId();
   d ? r = 0 : u || a ? l && !a && (r = 1) : r = 2;

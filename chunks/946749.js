@@ -13,28 +13,28 @@ var s = n("917351"),
   u = n("49111");
 let d = "GameLibraryViewStore",
   c = u.TableSortDirections.ASCENDING,
-  f = u.GameTableListKeys.LAST_PLAYED,
-  _ = !1,
+  _ = u.GameTableListKeys.LAST_PLAYED,
+  f = !1,
   E = r.debounce(() => {
-    _ = !1, g.emitChange()
+    f = !1, g.emitChange()
   }, 200);
 class h extends a.default.Store {
   initialize() {
     var e;
     let t = null !== (e = o.default.get(d)) && void 0 !== e ? e : {};
-    null != t.sortDirection && null != t.sortKey && (c = t.sortDirection, f = t.sortKey)
+    null != t.sortDirection && null != t.sortKey && (c = t.sortDirection, _ = t.sortKey)
   }
   get sortDirection() {
     return c
   }
   get sortKey() {
-    return f
+    return _
   }
   get activeRowKey() {
     return i
   }
   get isNavigatingByKeyboard() {
-    return _
+    return f
   }
 }
 h.displayName = "GameLibraryViewStore";
@@ -44,9 +44,9 @@ let g = new h(l.default, {
       direction: t,
       key: n
     } = e;
-    c = t, f = n, o.default.set(d, {
+    c = t, _ = n, o.default.set(d, {
       sortDirection: c,
-      sortKey: f
+      sortKey: _
     })
   },
   LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: function(e) {
@@ -54,7 +54,7 @@ let g = new h(l.default, {
       key: t,
       isKeyboardEvent: n
     } = e;
-    n && (_ = !0, E()), i = t
+    n && (f = !0, E()), i = t
   }
 });
 var m = g

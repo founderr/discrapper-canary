@@ -17,10 +17,10 @@ n.r(t), n.d(t, {
     return d
   },
   getPID: function() {
-    return f
+    return _
   },
   setPID: function() {
-    return _
+    return f
   },
   getRPCAuthToken: function() {
     return E
@@ -53,7 +53,7 @@ let a = 2,
   d = -2,
   c = !1;
 
-function f() {
+function _() {
   var e;
   if (void 0 !== i) return i;
   let t = new URLSearchParams(window.location.search),
@@ -62,7 +62,7 @@ function f() {
   return isNaN(s) && (s = -1), i = s
 }
 
-function _(e) {
+function f(e) {
   p() && (i = e)
 }
 

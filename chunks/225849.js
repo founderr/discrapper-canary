@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var i = n("884691"),
-  a = n("446674"),
+var a = n("884691"),
+  i = n("446674"),
   s = n("79112"),
   l = n("206230"),
   o = n("26092"),
@@ -20,16 +20,16 @@ let d = Object.freeze({
   [r.UserSettingsScrollPositions.AppearanceScrollPositions.CUSTOM_APP_ICONS]: u.UserSettingsSections.APPEARANCE
 });
 var c = (e, t) => {
-  let n = (0, a.useStateFromStores)([l.default], () => l.default.useReducedMotion),
-    r = (0, a.useStateFromStores)([o.default], () => o.default.getScrollPosition());
-  (0, i.useEffect)(() => {
-    let i = e.current;
-    if (null == i || t !== r) return;
-    let a = requestAnimationFrame(() => {
-      i.scrollIntoView({
+  let n = (0, i.useStateFromStores)([l.default], () => l.default.useReducedMotion),
+    r = (0, i.useStateFromStores)([o.default], () => o.default.getScrollPosition());
+  (0, a.useEffect)(() => {
+    let a = e.current;
+    if (null == a || t !== r) return;
+    let i = requestAnimationFrame(() => {
+      a.scrollIntoView({
         behavior: n ? "auto" : "smooth"
       }), s.default.clearScrollPosition(d[t])
     });
-    return () => cancelAnimationFrame(a)
+    return () => cancelAnimationFrame(i)
   }, [e, t, r, n])
 }

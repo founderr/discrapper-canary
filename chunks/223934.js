@@ -14,8 +14,8 @@ var s = n("913365"),
   u = n("568734"),
   d = n("8222"),
   c = n("49111"),
-  f = n("52904"),
-  _ = n("782340"),
+  _ = n("52904"),
+  f = n("782340"),
   E = n("768416");
 
 function h(e) {
@@ -39,7 +39,7 @@ function h(e) {
       className: E.headerIcons,
       children: [(0, i.jsx)(s.Avatar, {
         src: T,
-        size: f.AvatarSizes.SIZE_80,
+        size: _.AvatarSizes.SIZE_80,
         "aria-label": h.name
       }), (0, i.jsxs)("div", {
         className: E.ellipseGroup,
@@ -52,14 +52,14 @@ function h(e) {
         })]
       }), (0, i.jsx)(s.Avatar, {
         src: I,
-        size: f.AvatarSizes.SIZE_80,
+        size: _.AvatarSizes.SIZE_80,
         "aria-label": n.username
       })]
     }), !v && (0, i.jsx)(a.Text, {
       variant: "text-md/medium",
       color: "header-secondary",
       className: E.label,
-      children: _.default.Messages.OAUTH2_THIRD_PARTY_APPLICATION
+      children: f.default.Messages.OAUTH2_THIRD_PARTY_APPLICATION
     }), (0, i.jsxs)(a.Text, {
       variant: "text-lg/bold",
       color: "header-primary",
@@ -71,18 +71,18 @@ function h(e) {
       variant: "text-md/normal",
       color: "header-secondary",
       className: E.label,
-      children: _.default.Messages.OAUTH2_REQUESTS_ACCOUNT_ACCESS
+      children: f.default.Messages.OAUTH2_REQUESTS_ACCOUNT_ACCESS
     }) : (0, i.jsx)(a.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: E.label,
-      children: _.default.Messages.OAUTH2_CONNECT_TO_DISCORD
+      children: f.default.Messages.OAUTH2_CONNECT_TO_DISCORD
     }), p ? (0, i.jsx)("div", {
       className: E.currentUser,
       children: (0, i.jsxs)(a.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        children: [_.default.Messages.OAUTH2_SIGNED_IN_AS.format({
+        children: [f.default.Messages.OAUTH2_SIGNED_IN_AS.format({
           userHook: () => (0, i.jsxs)(a.Text, {
             className: E.currentUserTag,
             variant: "text-sm/normal",
@@ -96,7 +96,7 @@ function h(e) {
           tag: "a",
           className: E.logoutLink,
           onClick: () => (0, d.logoutWithRedirect)(S),
-          children: _.default.Messages.OAUTH2_LOGOUT
+          children: f.default.Messages.OAUTH2_LOGOUT
         })]
       })
     }) : null]

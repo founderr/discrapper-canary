@@ -25,8 +25,8 @@ var s = n("917351"),
   u = n("95410"),
   d = n("913144"),
   c = n("115718"),
-  f = n("376556"),
-  _ = n("605250"),
+  _ = n("376556"),
+  f = n("605250"),
   E = n("630915"),
   h = n("756898"),
   g = n("32128"),
@@ -43,7 +43,7 @@ var s = n("917351"),
   R = n("373807"),
   O = n("49111"),
   D = n("6791");
-let P = new _.default("RunningGameStore"),
+let P = new f.default("RunningGameStore"),
   L = "RunningGameStore",
   M = [{
     executables: [{
@@ -118,7 +118,7 @@ let P = new _.default("RunningGameStore"),
       os: "linux",
       name: "spotify"
     }],
-    name: f.default.get(O.PlatformTypes.SPOTIFY).name
+    name: _.default.get(O.PlatformTypes.SPOTIFY).name
   }],
   b = !0,
   U = new Set,

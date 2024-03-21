@@ -16,8 +16,8 @@ var i = n("446674"),
   u = n("745279"),
   d = n("49111");
 let c = null,
-  f = null,
   _ = null,
+  f = null,
   E = null,
   h = null,
   g = !1,
@@ -39,7 +39,7 @@ function T(e) {
 }
 
 function I() {
-  c = null, f = null, _ = null, E = null, h = null, g = !1, m = !1, p = null, S = !1
+  c = null, _ = null, f = null, E = null, h = null, g = !1, m = !1, p = null, S = !1
 }
 
 function A(e) {
@@ -53,7 +53,7 @@ function C(e) {
 
 function y(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    i = n ? f : c;
+    i = n ? _ : c;
   if (null == i) return null;
   for (let n in i) {
     let s = i[n];
@@ -94,7 +94,7 @@ class N extends i.default.Store {
   }
   getSubscriptions() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? f : c
+    return e ? _ : c
   }
   getSubscriptionById(e) {
     var t;
@@ -110,11 +110,11 @@ class N extends i.default.Store {
     var t;
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
       i = new Set(e),
-      s = n ? f : c;
+      s = n ? _ : c;
     return null == s ? null : null !== (t = Object.values(s).find(e => e.items.some(e => i.has(e.planId)))) && void 0 !== t ? t : null
   }
   getMostRecentPremiumTypeSubscription() {
-    return _
+    return f
   }
   getPreviousPremiumTypeSubscription() {
     return p
@@ -139,7 +139,7 @@ var R = new N(s.default, {
       }
       let t = o.SubscriptionRecord.createFromServer(e);
       n[t.id] = t, A(t) && (i[t.id] = t, t.type === d.SubscriptionTypes.GUILD && t.status !== d.SubscriptionStatusTypes.ENDED && s.push(t), t.type === d.SubscriptionTypes.APPLICATION && t.status !== d.SubscriptionStatusTypes.ENDED && r.push(t))
-    }), c = n, f = i, E = s, h = r
+    }), c = n, _ = i, E = s, h = r
   },
   BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function(e) {
     let {
@@ -148,8 +148,8 @@ var R = new N(s.default, {
     c = {
       ...c,
       [n.id]: n
-    }, A(n) && (f = {
-      ...f,
+    }, A(n) && (_ = {
+      ..._,
       [n.id]: n
     }), null != E && n.type === d.SubscriptionTypes.GUILD && (E = T({
       activeSubscriptions: E,
@@ -176,7 +176,7 @@ var R = new N(s.default, {
         return
       }
       let n = o.SubscriptionRecord.createFromServer(t);
-      _ = n
+      f = n
     }
   },
   BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: function(e) {

@@ -19,9 +19,9 @@ var l = n("693051"),
   u = n("139404"),
   d = n("61796"),
   c = n("264325"),
-  f = n("18108");
+  _ = n("18108");
 (s = i || (i = {}))[s.EXISTING_USERS = 0] = "EXISTING_USERS", s[s.NEW_USERS = 1] = "NEW_USERS";
-let _ = "tabs-v2-experiment-key",
+let f = "tabs-v2-experiment-key",
   E = (0, r.default)((e, t) => ({
     _experimentCacheInitialized: !1,
     _experimentEnabled: !1,
@@ -37,12 +37,12 @@ let _ = "tabs-v2-experiment-key",
     setExperimentEnabled: t => {
       e({
         _experimentEnabled: t
-      }), a.default.set(_, t)
+      }), a.default.set(f, t)
     },
     setInitialized: () => {
       e(e => e._experimentCacheInitialized ? e : {
         _experimentCacheInitialized: !0,
-        _experimentEnabled: !0 === a.default.get(_)
+        _experimentEnabled: !0 === a.default.get(f)
       })
     }
   }));
@@ -55,10 +55,10 @@ function h() {
     s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : (0, o.isRedesignToggleIgnored)();
   if (!(0, d.isMainTabsExperimentPlatformSupported)()) return !1;
   if (!s) {
-    if (!t && e) return (0, f.updateIsInTabsUI)(!1), !1;
-    if (i) return (0, f.updateIsInTabsUI)(!0), !0
+    if (!t && e) return (0, _.updateIsInTabsUI)(!1), !1;
+    if (i) return (0, _.updateIsInTabsUI)(!0), !0
   }
-  return !t && (0, f.updateIsInTabsUI)(n), n
+  return !t && (0, _.updateIsInTabsUI)(n), n
 }
 
 function g() {

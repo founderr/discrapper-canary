@@ -13,7 +13,7 @@ var i = n("872717"),
   u = n("337543"),
   d = n("697218"),
   c = n("49111");
-let f = async (e, t) => {
+let _ = async (e, t) => {
   let n = null != t ? t : u.default.getInviteKeyForGuildId(e),
     r = d.default.getCurrentUser(),
     a = !l.default.isMember(e, null == r ? void 0 : r.id);
@@ -46,7 +46,7 @@ let f = async (e, t) => {
       guildId: e
     })
   }
-}, _ = async (e, t) => {
+}, f = async (e, t) => {
   let n = await i.default.patch({
       url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
       body: {
@@ -124,8 +124,8 @@ let f = async (e, t) => {
   }
 };
 var m = {
-  fetchVerificationForm: f,
-  updateVerificationForm: _,
+  fetchVerificationForm: _,
+  updateVerificationForm: f,
   updateVerificationFormDescription: E,
   enableVerificationForm: h,
   submitVerificationForm: g

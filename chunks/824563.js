@@ -13,8 +13,8 @@ var i = n("714617"),
   u = n("309570"),
   d = n("32346"),
   c = n("299039"),
-  f = n("271938"),
-  _ = n("697218"),
+  _ = n("271938"),
+  f = n("697218"),
   E = n("49111");
 let h = Object.freeze([]),
   g = {},
@@ -69,7 +69,7 @@ function R(e) {
     clientStatus: r,
     activities: a
   } = e;
-  if (n === f.default.getId()) return !1;
+  if (n === _.default.getId()) return !1;
   let o = g[n];
   if (null == o) {
     if (i === E.StatusTypes.OFFLINE) return !1;
@@ -103,7 +103,7 @@ function O(e) {
     activities: r,
     timestamp: a
   } = e;
-  if (n === f.default.getId()) return;
+  if (n === _.default.getId()) return;
   let o = g[n];
   if (null == o) {
     if (i === E.StatusTypes.OFFLINE) return;
@@ -127,7 +127,7 @@ function O(e) {
 }
 
 function D(e, t) {
-  if (t === f.default.getId()) return !1;
+  if (t === _.default.getId()) return !1;
   let n = g[t];
   if (null == n || null == n[e]) return !1;
   delete n[e], 0 === Object.keys(n).length && delete g[t], y(t)
@@ -138,16 +138,16 @@ function P(e) {
 }
 class L extends o.default.Store {
   initialize() {
-    this.waitFor(f.default, d.default)
+    this.waitFor(_.default, d.default)
   }
   setCurrentUserOnConnectionOpen(e, t) {
-    m[f.default.getId()] = e, p[f.default.getId()] = t
+    m[_.default.getId()] = e, p[_.default.getId()] = t
   }
   getStatus(e) {
     var t, n;
     let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
       s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.StatusTypes.OFFLINE,
-      r = _.default.getUser(e);
+      r = f.default.getUser(e);
     if (null != r && r.hasFlag(E.UserFlags.BOT_HTTP_INTERACTIONS) && (s = E.StatusTypes.UNKNOWN), null == r ? void 0 : r.isClyde()) return E.StatusTypes.ONLINE;
     if (null == i) return null !== (t = m[e]) && void 0 !== t ? t : s;
     let a = T(e, i);
@@ -218,7 +218,7 @@ var M = new L(l.default, {
     let {
       guilds: t,
       presences: n
-    } = e, i = f.default.getId();
+    } = e, i = _.default.getId();
     g = {}, v = {}, m = {
       [i]: m[i]
     }, p = {
@@ -380,7 +380,7 @@ var M = new L(l.default, {
     })
   },
   SELF_PRESENCE_STORE_UPDATE: function(e) {
-    let t = f.default.getId();
+    let t = _.default.getId();
     if (m[t] === e.status && p[t] === e.activities) return !1;
     m[t] = e.status, p[t] = e.activities, delete v[t]
   }

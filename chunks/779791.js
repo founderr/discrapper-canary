@@ -11,8 +11,8 @@ var i, s, r = n("383536"),
   u = n("566106"),
   d = n("62684"),
   c = n("588446"),
-  f = n("353927"),
-  _ = n("53452");
+  _ = n("353927"),
+  f = n("53452");
 let E = null === (i = a.name) || void 0 === i ? void 0 : i.toLowerCase().includes("firefox");
 
 function h(e, t) {
@@ -261,7 +261,7 @@ s = class extends u.default {
     await e.setRemoteDescription(t), (this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) && (this.negotiationNeeded = !0, this.logger.info("Renegotiating: Streams left unassigned after negotiation - renegotiate")), this.negotiating = !1, this.negotiationNeeded && this.handleNegotiationNeeded()
   }
   setConnected() {
-    this.input.reset(), this.setConnectionState(f.ConnectionStates.CONNECTED), this.on(l.BaseConnectionEvent.Stats, this.handleStats), this.input.on(d.InputEvent.VoiceActivity, this.handleVoiceActivity)
+    this.input.reset(), this.setConnectionState(_.ConnectionStates.CONNECTED), this.on(l.BaseConnectionEvent.Stats, this.handleStats), this.input.on(d.InputEvent.VoiceActivity, this.handleVoiceActivity)
   }
   async handleNegotiationNeeded() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -290,14 +290,14 @@ s = class extends u.default {
           this.setConnected();
           break;
         case "connecting":
-          "connected" === this.iceConnectionState ? this.setConnectionState(f.ConnectionStates.DTLS_CONNECTING) : this.setConnectionState(f.ConnectionStates.ICE_CHECKING);
+          "connected" === this.iceConnectionState ? this.setConnectionState(_.ConnectionStates.DTLS_CONNECTING) : this.setConnectionState(_.ConnectionStates.ICE_CHECKING);
           break;
         case "failed":
-          this.setConnectionState(f.ConnectionStates.NO_ROUTE);
+          this.setConnectionState(_.ConnectionStates.NO_ROUTE);
           break;
         case "disconnected":
         case "closed":
-          this.setConnectionState(f.ConnectionStates.DISCONNECTED)
+          this.setConnectionState(_.ConnectionStates.DISCONNECTED)
       }
     }, this.handleIceConnectionStateChange = () => {
       let e = this.iceConnectionState;
@@ -306,14 +306,14 @@ s = class extends u.default {
           this.setConnected();
           break;
         case "checking":
-          this.setConnectionState(f.ConnectionStates.ICE_CHECKING);
+          this.setConnectionState(_.ConnectionStates.ICE_CHECKING);
           break;
         case "failed":
-          this.setConnectionState(f.ConnectionStates.NO_ROUTE);
+          this.setConnectionState(_.ConnectionStates.NO_ROUTE);
           break;
         case "disconnected":
         case "closed":
-          this.setConnectionState(f.ConnectionStates.DISCONNECTED)
+          this.setConnectionState(_.ConnectionStates.DISCONNECTED)
       }
     }, this.handleSignalingStateChange = () => {
       let e = this.signalingState;
@@ -337,12 +337,12 @@ s = class extends u.default {
           (null === (t = this.users.get(e)) || void 0 === t ? void 0 : t.videoSSRC) == null && this.destroyOutput(e, n)
         }
       }
-    }, this.logger = new o.default("UnifiedConnection(".concat(e, ")")), this.videoSupported = _.BROWSER_SUPPORTS_VIDEO;
+    }, this.logger = new o.default("UnifiedConnection(".concat(e, ")")), this.videoSupported = f.BROWSER_SUPPORTS_VIDEO;
     let s = this.pc = new RTCPeerConnection({
       bundlePolicy: "max-bundle",
       sdpSemantics: "unified-plan"
     });
-    _.BROWSER_SUPPORTS_CONNECTION_STATE ? (s.onconnectionstatechange = this.handlePeerConnectionStateChange, s.oniceconnectionstatechange = this.handlePeerConnectionStateChange) : s.oniceconnectionstatechange = this.handleIceConnectionStateChange, s.onsignalingstatechange = this.handleSignalingStateChange, s.onicegatheringstatechange = this.handleIceGatheringStateChange, s.ontrack = this.handleTrack, s.addTransceiver("audio", {
+    f.BROWSER_SUPPORTS_CONNECTION_STATE ? (s.onconnectionstatechange = this.handlePeerConnectionStateChange, s.oniceconnectionstatechange = this.handlePeerConnectionStateChange) : s.oniceconnectionstatechange = this.handleIceConnectionStateChange, s.onsignalingstatechange = this.handleSignalingStateChange, s.onicegatheringstatechange = this.handleIceGatheringStateChange, s.ontrack = this.handleTrack, s.addTransceiver("audio", {
       direction: "recvonly",
       sendEncodings: [{
         maxBitrate: this.voiceBitrate

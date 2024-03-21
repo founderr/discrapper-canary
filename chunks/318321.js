@@ -31,8 +31,8 @@ var i = n("335710"),
   u = n("474643"),
   d = n("957255"),
   c = n("585722"),
-  f = n("299039"),
-  _ = n("430475"),
+  _ = n("299039"),
+  f = n("430475"),
   E = n("446480"),
   h = n("589641"),
   g = n("369814"),
@@ -79,7 +79,7 @@ function y(e) {
   let {
     loaded: t,
     firstMessage: n
-  } = _.default.getMessage(e);
+  } = f.default.getMessage(e);
   return t ? n : null
 }
 
@@ -108,9 +108,9 @@ function N(e) {
 function R(e) {
   var t, n, i, s, u, d, c;
   let {
-    channelId: _,
+    channelId: f,
     sessionId: E
-  } = e, g = l.default.getChannel(_);
+  } = e, g = l.default.getChannel(f);
   if (null == g || !g.isForumPost()) return null;
   let m = l.default.getChannel(g.parent_id);
   return null != m && m.isForumLikeChannel() ? {
@@ -118,14 +118,14 @@ function R(e) {
       channelId: m.id,
       sessionId: E
     }),
-    thread_approximate_member_count: a.default.getMemberCount(_),
-    thread_approximate_message_count: o.default.getCount(_),
+    thread_approximate_member_count: a.default.getMemberCount(f),
+    thread_approximate_message_count: o.default.getCount(f),
     thread_archived: (null === (t = g.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,
     thread_locked: null !== (d = null === (n = g.threadMetadata) || void 0 === n ? void 0 : n.locked) && void 0 !== d && d,
     thread_auto_archive_duration_minutes: null !== (c = null === (i = g.threadMetadata) || void 0 === i ? void 0 : i.autoArchiveDuration) && void 0 !== c ? c : 0,
-    thread_approximate_creation_date: f.default.extractTimestamp(_),
+    thread_approximate_creation_date: _.default.extractTimestamp(f),
     forum_post_id: g.id,
-    forum_post_first_message_id: f.default.castChannelIdAsMessageId(g.id),
+    forum_post_first_message_id: _.default.castChannelIdAsMessageId(g.id),
     forum_post_num_reactions: function(e) {
       let t = y(e);
       return null == t ? 0 : t.reactions.reduce((e, t) => e + t.count, 0)

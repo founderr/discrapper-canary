@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   getApplicationResolution: function() {
-    return f
+    return _
   },
   ApplicationStreamFPS: function() {
     return s
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return r
   },
   getApplicationFramerate: function() {
-    return _
+    return f
   },
   ApplicationStreamPresetValues: function() {
     return E
@@ -41,7 +41,7 @@ var i, s, r, a, o, l, u = n("49111"),
   d = n("646718"),
   c = n("782340");
 
-function f(e) {
+function _(e) {
   switch (e) {
     case 480:
       return 480;
@@ -56,7 +56,7 @@ function f(e) {
   }
 }
 
-function _(e) {
+function f(e) {
   switch (e) {
     case 5:
       return 5;

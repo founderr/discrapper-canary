@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   },
   useNullableMessageAuthor: function() {
-    return _
+    return f
   },
   getMessageAuthor: function() {
     return E
@@ -26,19 +26,19 @@ var i = n("627445"),
   d = n("697218"),
   c = n("158998");
 
-function f(e) {
-  let t = _(e);
+function _(e) {
+  let t = f(e);
   return s(null != t, "Result cannot be null because the message is not null"), t
 }
 
-function _(e) {
+function f(e) {
   var t;
   let n = (0, r.useStateFromStores)([a.default], () => null == e ? null : a.default.getChannel(e.channel_id)),
     i = null == e ? void 0 : null === (t = e.author) || void 0 === t ? void 0 : t.id,
     s = null == n ? void 0 : n.guild_id,
-    f = (0, r.useStateFromStores)([o.default], () => null == s || null == i ? null : o.default.getMember(s, i)),
-    _ = (0, r.useStateFromStores)([d.default], () => d.default.getUser(i), [i]),
-    E = c.default.useName((null == e ? void 0 : e.author.bot) ? null == e ? void 0 : e.author : _),
+    _ = (0, r.useStateFromStores)([o.default], () => null == s || null == i ? null : o.default.getMember(s, i)),
+    f = (0, r.useStateFromStores)([d.default], () => d.default.getUser(i), [i]),
+    E = c.default.useName((null == e ? void 0 : e.author.bot) ? null == e ? void 0 : e.author : f),
     {
       guild: h,
       guildRoles: g
@@ -57,7 +57,7 @@ function _(e) {
     guild: h,
     guildRoles: g,
     userName: E,
-    member: f,
+    member: _,
     friendNickname: p
   })
 }
@@ -82,16 +82,16 @@ function h(e, t) {
         guildRoles: t
       }
     }, [i]),
-    f = (0, r.useStateFromStores)([u.default], () => null != n && (null == t ? void 0 : t.isPrivate()) ? u.default.getNickname(n) : null),
-    _ = c.default.useName(e);
+    _ = (0, r.useStateFromStores)([u.default], () => null != n && (null == t ? void 0 : t.isPrivate()) ? u.default.getNickname(n) : null),
+    f = c.default.useName(e);
   return m({
     user: e,
     channel: t,
     guild: a,
     guildRoles: d,
     member: s,
-    userName: _,
-    friendNickname: f
+    userName: f,
+    friendNickname: _
   })
 }
 
@@ -122,18 +122,18 @@ function m(e) {
     member: l,
     userName: u,
     friendNickname: d
-  } = e, f = null == s ? "???" : null != u ? u : c.default.getName(s);
+  } = e, _ = null == s ? "???" : null != u ? u : c.default.getName(s);
   return (null == s ? void 0 : s.id) == null || null == r ? {
-    nick: f,
+    nick: _,
     colorString: void 0
   } : (null == a ? void 0 : a.id) == null ? {
-    nick: null != d ? d : f,
+    nick: null != d ? d : _,
     colorString: void 0
   } : null == l ? {
-    nick: f,
+    nick: _,
     colorString: void 0
   } : {
-    nick: null !== (n = l.nick) && void 0 !== n ? n : f,
+    nick: null !== (n = l.nick) && void 0 !== n ? n : _,
     colorString: null !== (i = l.colorString) && void 0 !== i ? i : void 0,
     colorRoleName: null != l.colorRoleId && null != a ? null == o ? void 0 : null === (t = o[l.colorRoleId]) || void 0 === t ? void 0 : t.name : void 0,
     iconRoleId: l.iconRoleId,

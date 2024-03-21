@@ -16,8 +16,8 @@ var i = n("37983"),
   u = n("880317"),
   d = n("311720"),
   c = n("670914"),
-  f = n("242670"),
-  _ = n("180748"),
+  _ = n("242670"),
+  f = n("180748"),
   E = n("206230"),
   h = n("155823"),
   g = n("107728"),
@@ -30,7 +30,7 @@ function S(e) {
     navId: n,
     variant: r = "flexible",
     hideScroller: o = !1,
-    className: f,
+    className: _,
     children: S,
     onClose: v,
     onSelect: I
@@ -119,7 +119,7 @@ function S(e) {
       closeMenu: v
     });
   s.useEffect(() => {
-    R.isUsingKeyboardNavigation ? !E.default.keyboardModeEnabled && (0, _.enableKeyboardMode)() : E.default.keyboardModeEnabled && (0, _.disableKeyboardMode)()
+    R.isUsingKeyboardNavigation ? !E.default.keyboardModeEnabled && (0, f.enableKeyboardMode)() : E.default.keyboardModeEnabled && (0, f.disableKeyboardMode)()
   }, [R.isUsingKeyboardNavigation]);
   let O = s.useRef(null);
   (0, d.useFocusLock)(O);
@@ -127,7 +127,7 @@ function S(e) {
   return (0, i.jsx)(g.OnMenuSelectContext.Provider, {
     value: I,
     children: (0, i.jsx)("div", {
-      className: a(p.menu, p[r], f),
+      className: a(p.menu, p[r], _),
       ...R.getContainerProps(),
       ref: O,
       "aria-label": e["aria-label"],
@@ -166,8 +166,8 @@ function S(e) {
                   childRowHeight: o,
                   onChildrenScroll: u,
                   listClassName: c,
-                  subMenuClassName: f
-                } = l, _ = null != t, E = [...s, l.key], h = n.isFocused(E), g = (0, i.jsx)(m.Item, {
+                  subMenuClassName: _
+                } = l, f = null != t, E = [...s, l.key], h = n.isFocused(E), g = (0, i.jsx)(m.Item, {
                   ...l.props,
                   label: l.label,
                   hasSubmenu: null != t,
@@ -175,7 +175,7 @@ function S(e) {
                   menuItemProps: {
                     ...n.getItemProps({
                       path: E,
-                      hasSubmenu: _
+                      hasSubmenu: f
                     }),
                     ...null != t ? {
                       "aria-haspopup": !0
@@ -183,7 +183,7 @@ function S(e) {
                   },
                   onClose: r
                 }, l.key);
-                _ ? null != o ? d.push((0, i.jsx)(m.SubmenuListItem, {
+                f ? null != o ? d.push((0, i.jsx)(m.SubmenuListItem, {
                   ...l.props,
                   parentItem: g,
                   isFocused: h,
@@ -196,7 +196,7 @@ function S(e) {
                   listClassName: c
                 }, "".concat(l.key, "-submenu"))) : d.push((0, i.jsx)(m.SubmenuItem, {
                   ...l.props,
-                  subMenuClassName: f,
+                  subMenuClassName: _,
                   parentItem: g,
                   isFocused: h,
                   menuSubmenuProps: n.getSubmenuProps({
@@ -279,7 +279,7 @@ function S(e) {
 function v() {
   return (0, i.jsx)("div", {
     className: a(p.menu, p.loader, p.flexible),
-    children: (0, i.jsx)(f.Spinner, {})
+    children: (0, i.jsx)(_.Spinner, {})
   })
 }
 

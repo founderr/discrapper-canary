@@ -16,8 +16,8 @@ var i = n("917351"),
   u = n("595525"),
   d = n("860255"),
   c = n("846527"),
-  f = n("1544"),
-  _ = n("605250"),
+  _ = n("1544"),
+  f = n("605250"),
   E = n("379881"),
   h = n("560208"),
   g = n("233069"),
@@ -27,7 +27,7 @@ var i = n("917351"),
   v = n("305961"),
   T = n("697218"),
   I = n("49111");
-let A = new _.default("ChannelStore"),
+let A = new f.default("ChannelStore"),
   C = {},
   y = {},
   N = {},
@@ -104,7 +104,7 @@ function B(e, t, n) {
     return
   }
   let [a, o] = s;
-  for (let n of ((0, f.default)(a), 0 !== t && (F += 1), U.add(e), c.default.restored(e), r.default.mark("❗", "loaded guild channels (guild: ".concat(e, ")"), o), a)) !Object.hasOwn(y, n.id) && X((0, g.castChannelRecord)(n));
+  for (let n of ((0, _.default)(a), 0 !== t && (F += 1), U.add(e), c.default.restored(e), r.default.mark("❗", "loaded guild channels (guild: ".concat(e, ")"), o), a)) !Object.hasOwn(y, n.id) && X((0, g.castChannelRecord)(n));
   A.verbose("hydration complete (guild: ".concat(e, ", channels: ").concat(a.length, ", guilds_loaded: ").concat(F, ")"))
 }
 
@@ -360,7 +360,7 @@ var eo = new er(o.default, {
       initialGuildChannels: i
     } = e;
     for (let e of [n, i])
-      for (let t of e) W((0, f.deserializeChannel)((0, g.castChannelRecord)(t)));
+      for (let t of e) W((0, _.deserializeChannel)((0, g.castChannelRecord)(t)));
     let s = null === (t = i[0]) || void 0 === t ? void 0 : t.guild_id;
     null != s && (A.fileOnly("Early cache contained full guild channels for ".concat(s)), U.add(s))
   },
@@ -416,7 +416,7 @@ var eo = new er(o.default, {
         channels: n
       }
       of e.channels)
-      for (let e of (A.fileOnly("Lazy loaded guild channels for ".concat(t)), (0, f.default)(n), U.add(t), c.default.restored(t), n)) !Object.hasOwn(y, e.id) && X((0, g.castChannelRecord)(e));
+      for (let e of (A.fileOnly("Lazy loaded guild channels for ".concat(t)), (0, _.default)(n), U.add(t), c.default.restored(t), n)) !Object.hasOwn(y, e.id) && X((0, g.castChannelRecord)(e));
     return !1
   },
   LOAD_MESSAGES_AROUND_SUCCESS: et,
@@ -426,7 +426,7 @@ var eo = new er(o.default, {
     A.fileOnly("initializeClear()"), P = {}, y = {}, N = {}, M = {}, R = {}, V = {}, D = {}, U = new Set, w = {}, k = Date.now()
   },
   OVERLAY_INITIALIZE: function(e) {
-    for (let t of (e.guilds.length, e.channels)) W((0, f.deserializeChannel)((0, g.castChannelRecord)(t)))
+    for (let t of (e.guilds.length, e.channels)) W((0, _.deserializeChannel)((0, g.castChannelRecord)(t)))
   },
   SEARCH_FINISH: en,
   MOD_VIEW_SEARCH_FINISH: en,

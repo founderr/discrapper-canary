@@ -13,8 +13,8 @@ var s = n("917351"),
   u = n("390933"),
   d = n("25932"),
   c = n("42203"),
-  f = n("305961"),
-  _ = n("49111");
+  _ = n("305961"),
+  f = n("49111");
 let E = {},
   h = !1;
 
@@ -41,7 +41,7 @@ function g(e) {
 }
 
 function m(e) {
-  return e === _.SearchTypes.DMS ? _.SearchTypes.DMS : e === _.FAVORITES ? _.SearchTypes.FAVORITES : null != f.default.getGuild(e) ? _.SearchTypes.GUILD : null != c.default.getChannel(e) ? _.SearchTypes.CHANNEL : null
+  return e === f.SearchTypes.DMS ? f.SearchTypes.DMS : e === f.FAVORITES ? f.SearchTypes.FAVORITES : null != _.default.getGuild(e) ? f.SearchTypes.GUILD : null != c.default.getChannel(e) ? f.SearchTypes.CHANNEL : null
 }
 
 function p(e, t) {
@@ -82,7 +82,7 @@ function y(e) {
 }
 class N extends a.default.Store {
   initialize() {
-    this.waitFor(f.default, c.default);
+    this.waitFor(_.default, c.default);
     let e = o.default.get(S);
     if ((null == e ? void 0 : e.history) != null) {
       var t;
@@ -191,14 +191,14 @@ var R = new N(l.default, {
       query: a
     } = e, o = g(s);
     null != o.searchFetcher && (o.searchFetcher.cancel(), o.searchFetcher = null);
-    let f = o.searchType,
-      E = new u.default(s, f, a);
+    let _ = o.searchType,
+      E = new u.default(s, _, a);
     o.searchFetcher = E, o.isSearching = !0, o.rawResults = null, o.analyticsId = null, o.query = r.omit(a, "type"), o.offset = null !== (n = a.offset) && void 0 !== n ? n : 0, o.showBlockedResults = !1, A({
       type: "SEARCH_ADD_HISTORY",
       searchId: s,
       query: i
     });
-    let h = s === _.FAVORITES ? null === (t = c.default.getChannel(s)) || void 0 === t ? void 0 : t.guild_id : f === _.SearchTypes.GUILD ? s : null;
+    let h = s === f.FAVORITES ? null === (t = c.default.getChannel(s)) || void 0 === t ? void 0 : t.guild_id : _ === f.SearchTypes.GUILD ? s : null;
     E.fetch(e => {
       var t, n;
       l.default.dispatch({

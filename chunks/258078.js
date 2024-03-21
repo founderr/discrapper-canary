@@ -43,8 +43,8 @@ let l = Object.freeze({
       tag: o = "div",
       selectable: d = !1,
       strong: c = !1,
-      children: f,
-      style: _,
+      children: _,
+      style: f,
       "aria-label": E,
       ...h
     } = e;
@@ -54,9 +54,9 @@ let l = Object.freeze({
         [a.selectable]: d,
         [a.strong]: c
       }),
-      style: _,
+      style: f,
       ...h,
-      children: f
+      children: _
     })
   };
 d.Colors = l, d.Sizes = u;

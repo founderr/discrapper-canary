@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var i = n("862205");
-let a = (0, i.createExperiment)({
+var a = n("862205");
+let i = (0, a.createExperiment)({
   kind: "user",
   id: "2024-03_packages",
   label: "Packages",
@@ -29,4 +29,4 @@ let a = (0, i.createExperiment)({
     }
   }]
 });
-var s = a
+var s = i

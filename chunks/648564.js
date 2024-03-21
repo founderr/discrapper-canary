@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return c
   },
   MAX_THREAD_MEMBERS_PREVIEW: function() {
-    return f
+    return _
   },
   MAX_THREAD_UNREAD_MESSAGE_COUNT: function() {
-    return _
+    return f
   },
   ThreadMemberFlags: function() {
     return E
@@ -39,8 +39,8 @@ var i, s, r, a, o = n("49111"),
 let u = 4320,
   d = 50,
   c = 1e5,
-  f = 50,
-  _ = 25,
+  _ = 50,
+  f = 25,
   E = {
     HAS_INTERACTED: 1,
     ALL_MESSAGES: 2,

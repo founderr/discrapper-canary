@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   setActiveCommand: function() {
-    return _
+    return f
   },
   setPreferredCommandId: function() {
     return E
@@ -28,9 +28,9 @@ var i = n("627445"),
   u = n("299039"),
   d = n("246598"),
   c = n("524768"),
-  f = n("49111");
+  _ = n("49111");
 
-function _(e) {
+function f(e) {
   let {
     channelId: t,
     command: n,
@@ -83,7 +83,7 @@ function m(e, t, n, i) {
     body: {
       permissions: i
     },
-    url: f.Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
+    url: _.Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
   })
 }
 
@@ -92,16 +92,16 @@ function p(e, t, n) {
   s(null != t.autocomplete, "Missing autocomplete context");
   let {
     query: c,
-    name: _
+    name: f
   } = t.autocomplete, E = u.default.fromTimestamp(Date.now());
   a.default.dispatch({
     type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST",
     nonce: E,
     channelId: t.channel.id,
     query: c,
-    name: _
-  }), null == d.default.getAutocompleteChoices(t.channel.id, _, c) && r.default.post({
-    url: f.Endpoints.INTERACTIONS,
+    name: f
+  }), null == d.default.getAutocompleteChoices(t.channel.id, f, c) && r.default.post({
+    url: _.Endpoints.INTERACTIONS,
     body: {
       type: o.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
       application_id: e.applicationId,

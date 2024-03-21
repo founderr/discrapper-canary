@@ -25,8 +25,8 @@ var i = n("917351"),
   u = n("766274"),
   d = n("568734"),
   c = n("449008"),
-  f = n("271938"),
-  _ = n("455079"),
+  _ = n("271938"),
+  f = n("455079"),
   E = n("49111"),
   h = n("646718");
 let g = {},
@@ -60,13 +60,13 @@ function v(e) {
 }
 
 function T(e) {
-  return e.id !== f.default.getId()
+  return e.id !== _.default.getId()
 }
 
 function I(e) {
   let t, n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     i = g[e.id],
-    s = void 0 !== e.id && e.id === f.default.getId();
+    s = void 0 !== e.id && e.id === _.default.getId();
   if (null == i) void 0 !== (t = (i = new u.default(e)).premiumType) && s && (i.premiumType = A((0, l.isStaffEnv)(i), i.premiumType));
   else if (n) {
     var r;
@@ -123,7 +123,7 @@ function N(e) {
       null != n && S(n, e.id, t.avatar)
     })
   });
-  let s = g[f.default.getId()];
+  let s = g[_.default.getId()];
   null != s && (g[p] = new u.default({
     id: p,
     username: "Wumpus",
@@ -164,7 +164,7 @@ function P(e) {
   let {
     user: t
   } = e;
-  t.id !== f.default.getId() && I(t)
+  t.id !== _.default.getId() && I(t)
 }
 
 function L(e) {
@@ -284,8 +284,8 @@ function Y(e) {
     message: t
   } = e;
   if (C(t, !0), null != t.flags && d.hasFlag(t.flags, E.MessageFlags.URGENT)) {
-    let e = g[f.default.getId()];
-    return null != e && (g[f.default.getId()] = e.set("flags", d.setFlag(e.flags, E.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !0)), !0)
+    let e = g[_.default.getId()];
+    return null != e && (g[_.default.getId()] = e.set("flags", d.setFlag(e.flags, E.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !0)), !0)
   }
   return !1
 }
@@ -425,7 +425,7 @@ function es(e) {
       },
       avatar: o
     } = e;
-    n !== f.default.getId() && I({
+    n !== _.default.getId() && I({
       id: n,
       username: i,
       avatar: s,
@@ -479,14 +479,14 @@ function ec(e) {
   return I(e.member.user)
 }
 
-function ef(e) {
+function e_(e) {
   let {
     giftCode: t
   } = e;
   return null != t.user && I(t.user)
 }
 
-function e_(e) {
+function ef(e) {
   let {
     appliedBoosts: t
   } = e;
@@ -583,16 +583,16 @@ function eA(e) {
 function eC(e) {
   let {
     members: t
-  } = e, n = f.default.getId();
+  } = e, n = _.default.getId();
   return t.reduce((e, t) => {
     if (t.member.user.id === n) return e;
     let i = I(t.member.user);
     return i || e
   }, !1)
 }
-class ey extends _.default {
+class ey extends f.default {
   initialize() {
-    this.waitFor(f.default)
+    this.waitFor(_.default)
   }
   takeSnapshot() {
     let e = this.getCurrentUser();
@@ -645,7 +645,7 @@ class ey extends _.default {
     return t && n.sort((e, t) => e.username > t.username ? 1 : e.username < t.username ? -1 : 0), n
   }
   getCurrentUser() {
-    return g[f.default.getId()]
+    return g[_.default.getId()]
   }
   constructor() {
     super({
@@ -691,8 +691,8 @@ class ey extends _.default {
       LOBBY_CREATE: ed,
       LOBBY_MEMBER_CONNECT: ec,
       LOBBY_MEMBER_UPDATE: ec,
-      GIFT_CODE_RESOLVE_SUCCESS: ef,
-      GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: e_,
+      GIFT_CODE_RESOLVE_SUCCESS: e_,
+      GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: ef,
       GUILD_FEED_FETCH_SUCCESS: k,
       LOAD_THREADS_SUCCESS: V,
       LOAD_ARCHIVED_THREADS_SUCCESS: V,

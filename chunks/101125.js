@@ -12,8 +12,8 @@ var r = n("714617"),
   u = n("446674"),
   d = n("913144"),
   c = n("429928"),
-  f = n("837374"),
-  _ = n("662285"),
+  _ = n("837374"),
+  f = n("662285"),
   E = n("845579"),
   h = n("374363"),
   g = n("233069"),
@@ -43,7 +43,7 @@ function w(e) {
 function k(e) {
   switch (e.type) {
     case y.ActivityTypes.LISTENING:
-      if ((0, c.default)(e)) return _.default.shouldShowActivity();
+      if ((0, c.default)(e)) return f.default.shouldShowActivity();
       if (null != e.application_id) return w(e.application_id);
       return !1;
     case y.ActivityTypes.PLAYING:
@@ -155,7 +155,7 @@ var B = new x(d.default, {
     return N = !1, V()
   },
   BROADCAST_START: function(e) {
-    i = e.broadcast, s = (0, f.broadcastToServer)(e.broadcast)
+    i = e.broadcast, s = (0, _.broadcastToServer)(e.broadcast)
   },
   BROADCAST_STOP: G,
   CHANNEL_DELETE: function(e) {

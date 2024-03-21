@@ -13,8 +13,8 @@ var i = n("917351"),
   u = n("692038"),
   d = n("299039"),
   c = n("35013"),
-  f = n("49111");
-let _ = new l.default("ChannelMessages");
+  _ = n("49111");
+let f = new l.default("ChannelMessages");
 
 function E(e, t) {
   let n = e.get(t.id);
@@ -80,12 +80,12 @@ class h {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     0 === this.length && (this._wasAtEdge = t);
     let n = this._messages.length + e.length;
-    if (n > f.MAX_MESSAGE_CACHE_SIZE) {
-      if (this._wasAtEdge = !1, e.length > f.MAX_MESSAGE_CACHE_SIZE) {
-        this._isCacheBefore ? this._messages = e.slice(e.length - f.MAX_MESSAGE_CACHE_SIZE) : this._messages = e.slice(0, f.MAX_MESSAGE_CACHE_SIZE), this._map = {}, this._messages.forEach(e => this._map[e.id] = e);
+    if (n > _.MAX_MESSAGE_CACHE_SIZE) {
+      if (this._wasAtEdge = !1, e.length > _.MAX_MESSAGE_CACHE_SIZE) {
+        this._isCacheBefore ? this._messages = e.slice(e.length - _.MAX_MESSAGE_CACHE_SIZE) : this._messages = e.slice(0, _.MAX_MESSAGE_CACHE_SIZE), this._map = {}, this._messages.forEach(e => this._map[e.id] = e);
         return
       }
-      let t = f.MAX_MESSAGE_CACHE_SIZE - e.length;
+      let t = _.MAX_MESSAGE_CACHE_SIZE - e.length;
       this._isCacheBefore ? this._messages = this._messages.slice(Math.max(this._messages.length - t, 0)) : this._messages = this._messages.slice(0, t)
     }
     this._messages = this._isCacheBefore ? [...this._messages, ...e] : [...e, ...this._messages], this._map = {}, this._messages.forEach(e => this._map[e.id] = e)
@@ -353,7 +353,7 @@ class g {
     }, !0)
   }
   truncate(e, t) {
-    return this.length <= f.MAX_LOADED_MESSAGES ? this : e ? this.truncateBottom(f.TRUNCATED_MESSAGE_VIEW_SIZE) : t ? this.truncateTop(f.TRUNCATED_MESSAGE_VIEW_SIZE) : this
+    return this.length <= _.MAX_LOADED_MESSAGES ? this : e ? this.truncateBottom(_.TRUNCATED_MESSAGE_VIEW_SIZE) : t ? this.truncateTop(_.TRUNCATED_MESSAGE_VIEW_SIZE) : this
   }
   receiveMessage(e) {
     var t, n;
@@ -371,7 +371,7 @@ class g {
           autoTrackExposure: !1
         }).enabled ? (0, u.createMessageRecord)(e) : E(this, e),
         n = this.merge([t]);
-      return i ? n.truncateTop(f.TRUNCATED_MESSAGE_VIEW_SIZE, !1) : this.length > f.MAX_LOADED_MESSAGES ? n.truncateBottom(f.TRUNCATED_MESSAGE_VIEW_SIZE, !1) : n
+      return i ? n.truncateTop(_.TRUNCATED_MESSAGE_VIEW_SIZE, !1) : this.length > _.MAX_LOADED_MESSAGES ? n.truncateBottom(_.TRUNCATED_MESSAGE_VIEW_SIZE, !1) : n
     }
     return this
   }
@@ -411,8 +411,8 @@ class g {
       R = null;
     if ((v || T) && null == I && this.ready) R = this.merge(N, v, !0);
     else {
-      let e = this._array.filter(e => e.state === f.MessageStates.SENDING);
-      R = this.reset(N), !(e.length > 0) || v || T || (null == I ? void 0 : I.messageId) != null || (null == I ? void 0 : I.offset) != null ? _.info("loadComplete: resetting state for channelId=".concat(this.channelId, ", sending.length=").concat(e.length)) : (_.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)), R = R.merge(e))
+      let e = this._array.filter(e => e.state === _.MessageStates.SENDING);
+      R = this.reset(N), !(e.length > 0) || v || T || (null == I ? void 0 : I.messageId) != null || (null == I ? void 0 : I.offset) != null ? f.info("loadComplete: resetting state for channelId=".concat(this.channelId, ", sending.length=").concat(e.length)) : (f.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)), R = R.merge(e))
     }
     return R = R.mutate({
       ready: !0,

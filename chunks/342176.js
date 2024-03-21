@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return c
   },
   mobileNativeUpdateAvailableLocalItem: function() {
-    return f
+    return _
   },
   isMentionItem: function() {
-    return _
+    return f
   },
   inNotificationCenterEnabled: function() {
     return E
@@ -52,7 +52,7 @@ function c(e, t) {
   }
 }
 
-function f(e) {
+function _(e) {
   let t = s.default.fromTimestamp(new Date().getTime());
   return {
     acked: !1,
@@ -65,7 +65,7 @@ function f(e) {
     deeplink: e.urls.install.toString()
   }
 }
-let _ = e => e.type === a.NotificationCenterItems.RECENT_MENTION || e.type === a.NotificationCenterItems.REPLY_MENTION;
+let f = e => e.type === a.NotificationCenterItems.RECENT_MENTION || e.type === a.NotificationCenterItems.REPLY_MENTION;
 
 function E() {
   return (0, r.inDesktopNotificationCenterExperiment)()

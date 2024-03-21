@@ -111,7 +111,7 @@ function c(e, t, n) {
   return i = "string" == typeof i ? 0 : i, a = "string" == typeof a ? 0 : a, l(e, n.width, n.height, i, a)
 }
 
-function f(e, t, n) {
+function _(e, t, n) {
   let {
     top: i,
     left: s
@@ -122,18 +122,18 @@ function f(e, t, n) {
     x: 0,
     y: 0
   }, {
-    width: f,
-    height: _
+    width: _,
+    height: f
   } = t, E = u(d(l({
     top: i + c,
     left: s + r,
     bottom: null,
     right: null
-  }, n.width, n.height, "number" == typeof f ? f : 0, "number" == typeof _ ? _ : 0)));
+  }, n.width, n.height, "number" == typeof _ ? _ : 0, "number" == typeof f ? f : 0)));
   return [a(E, n), o(t, n)]
 }
 
-function _(e, t, n) {
+function f(e, t, n) {
   let {
     top: i,
     right: s
@@ -144,14 +144,14 @@ function _(e, t, n) {
     x: 0,
     y: 0
   }, {
-    width: f,
-    height: _
+    width: _,
+    height: f
   } = t, E = u(d(l({
     top: i + c,
     left: null,
     bottom: null,
     right: s - r
-  }, n.width, n.height, "number" == typeof f ? f : 0, "number" == typeof _ ? _ : 0)));
+  }, n.width, n.height, "number" == typeof _ ? _ : 0, "number" == typeof f ? f : 0)));
   return [a(E, n), o(t, n)]
 }
 n.r(t), n.d(t, {
@@ -180,9 +180,9 @@ n.r(t), n.d(t, {
     return c
   },
   getLeftWidgetSpecs: function() {
-    return f
+    return _
   },
   getRightWidgetSpecs: function() {
-    return _
+    return f
   }
 }), n("70102")

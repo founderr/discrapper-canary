@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 }), n("222007"), n("424973");
 var i, s, r = n("615361"),
@@ -11,9 +11,9 @@ var i, s, r = n("615361"),
   u = n("82087"),
   d = n("827032"),
   c = n("49111");
-let f = new Set(["darwin", "linux", "win32", "ios", "android"]);
+let _ = new Set(["darwin", "linux", "win32", "ios", "android"]);
 (s = i || (i = {})).COUNT = "count", s.DISTRIBUTION = "distribution";
-var _ = new class e {
+var f = new class e {
   _getMetricWithDefaults(e, t) {
     let {
       name: n,
@@ -30,7 +30,7 @@ var _ = new class e {
       if ((0, o.isWeb)()) return "web";
       {
         let e = (0, o.getPlatformName)();
-        return f.has(e) ? e : null
+        return _.has(e) ? e : null
       }
     }();
     null != a && s.tags.push("platform:".concat(a));
@@ -62,8 +62,8 @@ var _ = new class e {
         body: {
           metrics: e,
           client_info: {
-            built_at: "1710983894211",
-            build_number: "277314"
+            built_at: "1711042420537",
+            build_number: "277429"
           }
         },
         retries: 1

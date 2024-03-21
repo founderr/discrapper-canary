@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ThemeSelectionGroupType: function() {
-    return i
+    return a
   },
   trackClientThemeUpdated: function() {
     return H
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return W
   }
 }), n("794252"), n("222007");
-var i, a, s = n("37983"),
+var a, i, s = n("37983"),
   l = n("884691"),
   o = n("414456"),
   r = n.n(o),
@@ -44,7 +44,7 @@ var i, a, s = n("37983"),
   G = n("843455"),
   U = n("782340"),
   j = n("845797");
-(a = i || (i = {})).EDITOR = "EDITOR", a.SETTINGS = "SETTINGS";
+(i = a || (a = {})).EDITOR = "EDITOR", i.SETTINGS = "SETTINGS";
 let k = Object.freeze({
     EDITOR: x.UserSettingsDelay.SLOW_USER_ACTION,
     SETTINGS: x.UserSettingsDelay.INFREQUENT_USER_ACTION
@@ -54,24 +54,24 @@ let k = Object.freeze({
     let {
       isPersisted: t,
       themeName: n,
-      analyticsLocations: i
+      analyticsLocations: a
     } = e;
     A.default.track(R.AnalyticEvents.CLIENT_THEME_UPDATED, {
       feature_name: D.AnalyticsPremiumFeatureNames.CLIENT_THEME,
       theme_name: n,
       is_persisted: t,
-      location_stack: i
+      location_stack: a
     })
   },
   B = e => {
     let {
       type: t,
       isPreview: n,
-      isCoachmark: i
-    } = e, a = (0, u.match)({
+      isCoachmark: a
+    } = e, i = (0, u.match)({
       type: t,
       isPreview: n,
-      isCoachmark: i
+      isCoachmark: a
     }).with({
       type: "EDITOR",
       isCoachmark: !0,
@@ -83,9 +83,9 @@ let k = Object.freeze({
     return (0, s.jsxs)("div", {
       className: j.title,
       children: [(0, s.jsx)(g.Heading, {
-        "aria-label": a,
+        "aria-label": i,
         variant: "text-md/medium",
-        children: a
+        children: i
       }), (0, s.jsx)(v.default, {
         className: j.premiumIcon
       })]
@@ -94,14 +94,14 @@ let k = Object.freeze({
   V = e => {
     var t, n;
     let {
-      type: i,
-      isPreview: a,
+      type: a,
+      isPreview: i,
       isCoachmark: l
     } = e, o = (null === (n = (0, S.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
-    if (o && a) return null;
+    if (o && i) return null;
     let r = (0, u.match)({
-      type: i,
-      isPreview: a,
+      type: a,
+      isPreview: i,
       isCoachmark: l
     }).with({
       type: "EDITOR",
@@ -128,9 +128,9 @@ let k = Object.freeze({
     let {
       type: t,
       children: n
-    } = e, i = (0, M.useUID)(), a = (0, g.useRadioGroup)({
+    } = e, a = (0, M.useUID)(), i = (0, g.useRadioGroup)({
       orientation: "horizontal",
-      labelledBy: i
+      labelledBy: a
     }), o = l.useMemo(() => ({
       type: t,
       delay: k[t]
@@ -138,7 +138,7 @@ let k = Object.freeze({
     return (0, s.jsx)(F.Provider, {
       value: o,
       children: (0, s.jsx)("div", {
-        ...a,
+        ...i,
         className: j.container,
         children: n
       })
@@ -150,11 +150,11 @@ K.Basic = e => {
   } = e, {
     delay: n
   } = l.useContext(F), {
-    analyticsLocations: i
-  } = (0, p.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [a, o, u] = (0, d.useStateFromStoresArray)([I.default, y.default, b.default], () => [I.default.theme, null == b.default.gradientPreset, y.default.useSystemTheme === L.SystemThemeState.ON]), c = e => {
+    analyticsLocations: a
+  } = (0, p.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [i, o, u] = (0, d.useStateFromStoresArray)([I.default, y.default, b.default], () => [I.default.theme, null == b.default.gradientPreset, y.default.useSystemTheme === L.SystemThemeState.ON]), c = e => {
     (0, O.resetBackgroundGradientPreset)(), H({
       isPersisted: !0,
-      analyticsLocations: i,
+      analyticsLocations: a,
       themeName: "default ".concat(e)
     }), (0, m.saveClientTheme)({
       theme: e
@@ -164,11 +164,11 @@ K.Basic = e => {
     className: r(j.presets, t),
     children: [(0, s.jsx)(P.DefaultThemeSelection, {
       theme: G.ThemeTypes.LIGHT,
-      isSelected: o && !u && (0, f.isThemeLight)(a),
+      isSelected: o && !u && (0, f.isThemeLight)(i),
       onSelect: () => c(G.ThemeTypes.LIGHT)
     }), (0, s.jsx)(P.DefaultThemeSelection, {
       theme: G.ThemeTypes.DARK,
-      isSelected: o && !u && (0, f.isThemeDark)(a),
+      isSelected: o && !u && (0, f.isThemeDark)(i),
       onSelect: () => c(G.ThemeTypes.DARK)
     }), (0, s.jsx)(P.DefaultThemeSelection, {
       theme: "system",
@@ -177,9 +177,9 @@ K.Basic = e => {
     })]
   })
 }, K.Gradient = e => {
-  var t, i;
+  var t, a;
   let {
-    className: a,
+    className: i,
     renderCTAButtons: o,
     disabled: r = !1
   } = e, {
@@ -190,7 +190,7 @@ K.Basic = e => {
   } = (0, p.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [v, I, y] = (0, d.useStateFromStoresArray)([b.default], () => {
     var e;
     return [b.default.isPreview, b.default.isCoachmark, null === (e = b.default.gradientPreset) || void 0 === e ? void 0 : e.id]
-  }), [M, A] = l.useState(!1), [R, x] = l.useState(-1), G = (0, d.useStateFromStores)([h.default], () => h.default.useReducedMotion), k = (null === (i = (0, S.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
+  }), [M, A] = l.useState(!1), [R, x] = l.useState(-1), G = (0, d.useStateFromStores)([h.default], () => h.default.useReducedMotion), k = (null === (a = (0, S.usePremiumTrialOffer)()) || void 0 === a ? void 0 : null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
   l.useEffect(() => {
     (R === w.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || y === c.BackgroundGradientPresetId.EASTER_EGG) && A(!0)
   }, [R, u, y]);
@@ -215,7 +215,7 @@ K.Basic = e => {
     }
   };
   return (0, s.jsxs)("section", {
-    className: a,
+    className: i,
     children: ["EDITOR" === u && v && k ? (0, s.jsx)(T.default, {
       type: D.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
       subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2,

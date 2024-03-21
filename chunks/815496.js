@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return c
   },
   getQuestStatus: function() {
-    return f
+    return _
   },
   getContentProperties: function() {
     return E
@@ -31,12 +31,12 @@ function c(e) {
   return null !== (t = d.find(t => l.QuestContent[t] === e)) && void 0 !== t ? t : ""
 }
 
-function f(e) {
+function _(e) {
   var t, n, i;
   return null == e ? null : (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? "COMPLETED_CLAIMED" : (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null ? "COMPLETED" : (null === (i = e.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null ? "ENROLLED" : "NONE"
 }
 
-function _(e) {
+function f(e) {
   return {
     quest_id: e.id,
     game_id: e.config.applicationId,
@@ -56,13 +56,13 @@ function h(e, t, n) {
   if (null != i) {
     if (i.preview) {
       r.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", t, {
-        ..._(i),
+        ...f(i),
         ...n
       });
       return
     }
     a.default.track(t, {
-      ..._(i),
+      ...f(i),
       ...n
     })
   }

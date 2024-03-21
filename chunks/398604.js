@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   StaticGuildEventIndexes: function() {
-    return f
+    return _
   },
   scheduledEventSort: function() {
-    return _
+    return f
   },
   isGuildScheduledEventActive: function() {
     return D
@@ -28,19 +28,19 @@ var i = n("917351"),
   u = n("26989"),
   d = n("299039"),
   c = n("745049");
-let f = {
+let _ = {
   EVENT: "event",
   EVENT_ACTIVE: "active",
   EVENT_UPCOMING: "event-upcoming",
-  GUILD_EVENT: e => "".concat(e, "-").concat(f.EVENT),
-  GUILD_EVENT_ACTIVE: e => "".concat(e, "-").concat(f.EVENT_ACTIVE),
-  GUILD_EVENT_UPCOMING: e => "".concat(e, "-").concat(f.EVENT_UPCOMING),
-  CHANNEL_EVENT: e => "".concat(e, "-").concat(f.EVENT),
-  CHANNEL_EVENT_ACTIVE: e => "".concat(e, "-").concat(f.EVENT_ACTIVE),
-  CHANNEL_EVENT_UPCOMING: e => "".concat(e, "-").concat(f.EVENT_UPCOMING)
+  GUILD_EVENT: e => "".concat(e, "-").concat(_.EVENT),
+  GUILD_EVENT_ACTIVE: e => "".concat(e, "-").concat(_.EVENT_ACTIVE),
+  GUILD_EVENT_UPCOMING: e => "".concat(e, "-").concat(_.EVENT_UPCOMING),
+  CHANNEL_EVENT: e => "".concat(e, "-").concat(_.EVENT),
+  CHANNEL_EVENT_ACTIVE: e => "".concat(e, "-").concat(_.EVENT_ACTIVE),
+  CHANNEL_EVENT_UPCOMING: e => "".concat(e, "-").concat(_.EVENT_UPCOMING)
 };
 
-function _(e) {
+function f(e) {
   let {
     id: t,
     scheduled_start_time: n
@@ -53,8 +53,8 @@ let E = new a.default(e => {
       entity_id: n,
       channel_id: i
     } = e, s = [t];
-    return null != n && s.push(n), s.push(f.GUILD_EVENT(t)), null != i && s.push(f.CHANNEL_EVENT(i)), D(e) && (s.push(f.EVENT_ACTIVE), s.push(f.GUILD_EVENT_ACTIVE(t)), null != i && s.push(f.CHANNEL_EVENT_ACTIVE(i))), P(e) && (s.push(f.EVENT_UPCOMING), s.push(f.GUILD_EVENT_UPCOMING(t)), null != i && s.push(f.CHANNEL_EVENT_UPCOMING(i))), s
-  }, _),
+    return null != n && s.push(n), s.push(_.GUILD_EVENT(t)), null != i && s.push(_.CHANNEL_EVENT(i)), D(e) && (s.push(_.EVENT_ACTIVE), s.push(_.GUILD_EVENT_ACTIVE(t)), null != i && s.push(_.CHANNEL_EVENT_ACTIVE(i))), P(e) && (s.push(_.EVENT_UPCOMING), s.push(_.GUILD_EVENT_UPCOMING(t)), null != i && s.push(_.CHANNEL_EVENT_UPCOMING(i))), s
+  }, f),
   h = 0,
   g = [],
   m = "SERIES",
@@ -110,7 +110,7 @@ function y(e, t, n) {
 }
 
 function N(e, t) {
-  E.values(f.GUILD_EVENT(e)).forEach(e => T(e.id, t))
+  E.values(_.GUILD_EVENT(e)).forEach(e => T(e.id, t))
 }
 
 function R(e) {
@@ -195,7 +195,7 @@ class M extends r.default.Store {
   }
   getActiveEventByChannel(e) {
     if (null == e) return;
-    let t = this.getGuildScheduledEventsByIndex(f.CHANNEL_EVENT_ACTIVE(e));
+    let t = this.getGuildScheduledEventsByIndex(_.CHANNEL_EVENT_ACTIVE(e));
     return t[0]
   }
   getUsersForGuildEvent(e, t) {
@@ -235,7 +235,7 @@ var b = new M(o.default, {
     let {
       guildId: t,
       guildScheduledEvents: n
-    } = e, i = E.values(f.GUILD_EVENT(t), !0).map(e => e.id), r = n.map(e => e.id);
+    } = e, i = E.values(_.GUILD_EVENT(t), !0).map(e => e.id), r = n.map(e => e.id);
     for (let e of (s.difference(i, r).forEach(e => {
         T(e)
       }), n)) v(e);

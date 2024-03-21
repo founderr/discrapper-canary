@@ -13,9 +13,9 @@ var i = n("913144"),
   u = n("709681"),
   d = n("12307"),
   c = n("49111"),
-  f = n("353927");
+  _ = n("353927");
 
-function _() {
+function f() {
   (0, u.playSound)("mention3")
 }
 
@@ -46,7 +46,7 @@ var S = {
   enable: g,
   toggleSelfMute() {
     let {
-      context: e = f.MediaEngineContextTypes.DEFAULT,
+      context: e = _.MediaEngineContextTypes.DEFAULT,
       syncRemote: t = !0,
       usedKeybind: n = !1
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -73,7 +73,7 @@ var S = {
   },
   toggleSelfDeaf() {
     let {
-      context: e = f.MediaEngineContextTypes.DEFAULT,
+      context: e = _.MediaEngineContextTypes.DEFAULT,
       syncRemote: t = !0
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     !m() && i.default.dispatch({
@@ -83,7 +83,7 @@ var S = {
     })
   },
   toggleLocalMute(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.MediaEngineContextTypes.DEFAULT;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.MediaEngineContextTypes.DEFAULT;
     !m() && i.default.dispatch({
       type: "AUDIO_TOGGLE_LOCAL_MUTE",
       context: t,
@@ -91,7 +91,7 @@ var S = {
     })
   },
   toggleLocalSoundboardMute(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.MediaEngineContextTypes.DEFAULT;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.MediaEngineContextTypes.DEFAULT;
     i.default.dispatch({
       type: "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE",
       context: t,
@@ -99,7 +99,7 @@ var S = {
     })
   },
   setDisableLocalVideo(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.MediaEngineContextTypes.DEFAULT,
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.MediaEngineContextTypes.DEFAULT,
       s = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
       r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     !m() && i.default.dispatch({
@@ -112,7 +112,7 @@ var S = {
     })
   },
   setLocalVolume(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.MediaEngineContextTypes.DEFAULT;
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.MediaEngineContextTypes.DEFAULT;
     i.default.dispatch({
       type: "AUDIO_SET_LOCAL_VOLUME",
       context: n,
@@ -121,7 +121,7 @@ var S = {
     })
   },
   setLocalPan(e, t, n) {
-    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : f.MediaEngineContextTypes.DEFAULT;
+    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : _.MediaEngineContextTypes.DEFAULT;
     i.default.dispatch({
       type: "AUDIO_SET_LOCAL_PAN",
       context: s,
@@ -132,7 +132,7 @@ var S = {
   },
   setMode(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.MediaEngineContextTypes.DEFAULT;
+      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.MediaEngineContextTypes.DEFAULT;
     !m() && i.default.dispatch({
       type: "AUDIO_SET_MODE",
       context: n,
@@ -165,7 +165,7 @@ var S = {
       i.default.dispatch({
         type: "AUDIO_SET_INPUT_DEVICE",
         id: e
-      }), _()
+      }), f()
     }
   },
   setOutputDevice(e, t) {
@@ -178,7 +178,7 @@ var S = {
       i.default.dispatch({
         type: "AUDIO_SET_OUTPUT_DEVICE",
         id: e
-      }), _()
+      }), f()
     }
   },
   setVideoDevice(e, t) {

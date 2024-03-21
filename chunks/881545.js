@@ -21,31 +21,31 @@ function o(e) {
   i.useLayoutEffect(() => {
     c.current = u
   }, [u]);
-  let [f, _] = i.useReducer(s.default, {
+  let [_, f] = i.useReducer(s.default, {
     items: n,
     focusPath: o,
     focusIndex: -1
-  }), E = i.useMemo(() => (0, a.throttle)(_, 30), [_]);
+  }), E = i.useMemo(() => (0, a.throttle)(f, 30), [f]);
   i.useEffect(() => {
-    _({
+    f({
       type: s.MenuActionType.UPDATE_ITEMS,
       items: n
     })
   }, [n]);
   let {
     focusPath: h
-  } = f, [g, m] = i.useState(!1), [p, S] = i.useState(!1), [{
+  } = _, [g, m] = i.useState(!1), [p, S] = i.useState(!1), [{
     onItemFocusMemoizer: v,
     onItemMouseEnterMemoizer: T
   }] = i.useState(() => ({
     onItemFocusMemoizer: new a.HandlerMemoizer(e => () => {
-      m(!0), _({
+      m(!0), f({
         type: s.MenuActionType.SET_FOCUS_PATH,
         path: e.split("--")
       })
     }),
     onItemMouseEnterMemoizer: new a.HandlerMemoizer(e => () => {
-      S(!1), _({
+      S(!1), f({
         type: s.MenuActionType.SET_FOCUS_PATH,
         path: e.split("--")
       })
@@ -78,7 +78,7 @@ function o(e) {
         });
         return;
       case r.ActionType.SELECT_FOCUSED_ITEM:
-        var i, s, o, u, f;
+        var i, s, o, u, _;
         if (e.repeat) return;
         if (e.target.tabIndex >= 0) return;
         if (e.preventDefault(), e.stopPropagation(), S(!1), E({
@@ -87,8 +87,8 @@ function o(e) {
           l(h);
           return
         }
-        let _ = null !== (i = e.target.ownerDocument) && void 0 !== i ? i : document;
-        let g = (u = _, f = (s = t, null != (o = h) ? "".concat((0, a.makeId)(s, o.join("--"))) : s), u.getElementById(f));
+        let f = null !== (i = e.target.ownerDocument) && void 0 !== i ? i : document;
+        let g = (u = f, _ = (s = t, null != (o = h) ? "".concat((0, a.makeId)(s, o.join("--"))) : s), u.getElementById(_));
         null == g || g.click()
     }
   }, [E, t, h, l, d]), A = i.useCallback(() => {
@@ -96,7 +96,7 @@ function o(e) {
   }, [g]), C = i.useCallback(e => {
     e.target !== e.currentTarget && !e.currentTarget.contains(e.relatedTarget) && g && m(!1)
   }, [g]), y = i.useCallback(() => {
-    _({
+    f({
       type: s.MenuActionType.SET_FOCUS_PATH,
       path: []
     }), m(!1)
@@ -117,10 +117,10 @@ function o(e) {
       role: "menu",
       tabIndex: -1,
       "aria-activedescendant": N(n) ? (0, a.makeId)(t, h.join("--")) : void 0,
-      focusIndex: f.focusIndex,
+      focusIndex: _.focusIndex,
       isUsingKeyboardNavigation: p
     }
-  }, [t, h, N, f.focusIndex, p]), D = i.useCallback(e => {
+  }, [t, h, N, _.focusIndex, p]), D = i.useCallback(e => {
     let {
       path: n,
       hasSubmenu: i = !1,

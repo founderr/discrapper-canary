@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 }), n("222007");
 var i = n("627445"),
@@ -52,7 +52,7 @@ class c extends r.default.Store {
   }
 }
 c.displayName = "WindowStore";
-let f = new c(a.default, {
+let _ = new c(a.default, {
   WINDOW_INIT: function(e) {
     s(!u.has(e.windowId), "Window initialized multiple times");
     let {
@@ -112,7 +112,7 @@ n.el("599110").then(n.bind(n, "599110")).then(e => {
     addExtraAnalyticsDecorator: t
   } = e;
   t(e => {
-    e.client_app_state = f.isFocused() ? "focused" : "unfocused"
+    e.client_app_state = _.isFocused() ? "focused" : "unfocused"
   })
 });
-var _ = f
+var f = _

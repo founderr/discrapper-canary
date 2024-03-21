@@ -14,8 +14,8 @@ var r = n("446674"),
   u = n("327037"),
   d = n("605250"),
   c = n("875978"),
-  f = n("25932"),
-  _ = n("410912"),
+  _ = n("25932"),
+  f = n("410912"),
   E = n("116949"),
   h = n("233069"),
   g = n("522308"),
@@ -105,10 +105,10 @@ function F(e, t, n) {
     premium_since: u,
     pending: d,
     joined_at: c,
-    communication_disabled_until: f,
-    unusual_dm_activity_until: _
+    communication_disabled_until: _,
+    unusual_dm_activity_until: f
   } = n, E = S.default.getMember(e, t.id);
-  (!(null != E && E.nick === r && E.avatar === a && s.isEqual(E.roles, i) && s.isEqual(E.avatarDecoration, o)) || E.premiumSince !== u || E.isPending !== d || E.joinedAt !== c || E.communicationDisabledUntil !== f || E.flags !== l || E.unusualDMActivityUntil !== _) && G({
+  (!(null != E && E.nick === r && E.avatar === a && s.isEqual(E.roles, i) && s.isEqual(E.avatarDecoration, o)) || E.premiumSince !== u || E.isPending !== d || E.joinedAt !== c || E.communicationDisabledUntil !== _ || E.flags !== l || E.unusualDMActivityUntil !== f) && G({
     type: "GUILD_MEMBER_ADD",
     guildId: e,
     user: t,
@@ -119,8 +119,8 @@ function F(e, t, n) {
     premiumSince: u,
     isPending: d,
     joinedAt: c,
-    communicationDisabledUntil: f,
-    unusualDMActivityUntil: _,
+    communicationDisabledUntil: _,
+    unusualDMActivityUntil: f,
     flags: l
   })
 }
@@ -179,7 +179,7 @@ function Y(e) {
   })
 }
 k(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : p.ChannelLoader.loadGuildIds([e.id]), e => {
-  _.default.initialGuild.measure(() => {
+  f.default.initialGuild.measure(() => {
     r.default.Emitter.batched(() => {
       let t = R.hydrateInitialGuild(e, D.socket.identifyStartTime);
       null != I.default.getCurrentUser() && (G({
@@ -208,10 +208,10 @@ k(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : p.ChannelLoader.loadGu
     })
   })
 }), w(["READY_SUPPLEMENTAL"], e => {
-  _.default.readySupplemental.measure(() => {
+  f.default.readySupplemental.measure(() => {
     r.default.Emitter.batched(() => {
       var t, n;
-      e = _.default.hydrateReadySupplemental.measure(() => R.hydrateReadySupplementalPayload(e, D.socket.identifyStartTime));
+      e = f.default.hydrateReadySupplemental.measure(() => R.hydrateReadySupplementalPayload(e, D.socket.identifyStartTime));
       let i = e => e.map(e => ({
           user: e.user,
           status: e.status,
@@ -226,7 +226,7 @@ k(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : p.ChannelLoader.loadGu
       let r = e.presences ? i(e.presences) : [],
         a = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map(e => (0, h.createChannelRecordFromServer)(e)),
         o = null !== (n = e.game_invites) && void 0 !== n ? n : [];
-      _.default.dispatchReadySupplemental.measure(() => {
+      f.default.dispatchReadySupplemental.measure(() => {
         G({
           type: "CONNECTION_OPEN_SUPPLEMENTAL",
           guilds: s,
@@ -283,9 +283,9 @@ k(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : p.ChannelLoader.loadGu
     });
     return
   }
-  _.default.ready.measure(() => {
+  f.default.ready.measure(() => {
     r.default.Emitter.batched(() => {
-      e = _.default.hydrateReady.measure(() => R.hydrateReadyPayloadPrioritized(e, D.socket.identifyStartTime, n));
+      e = f.default.hydrateReady.measure(() => R.hydrateReadyPayloadPrioritized(e, D.socket.identifyStartTime, n));
       let t = e.private_channels.map(e => (0, h.createChannelRecordFromServer)(e)),
         i = e.guilds.filter(e => !0 === e.unavailable && !0 !== e.geo_restricted).map(e => e.id),
         s = e.guilds.filter(e => !0 !== e.unavailable),
@@ -294,7 +294,7 @@ k(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : p.ChannelLoader.loadGu
         e.presences = []
       });
       let a = null == e.user_settings_proto ? void 0 : (0, E.b64ToPreloadedUserSettingsProto)(e.user_settings_proto);
-      _.default.dispatchReady.measure(() => {
+      f.default.dispatchReady.measure(() => {
         var n;
         G({
           type: "CONNECTION_OPEN",
@@ -464,7 +464,7 @@ k(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : p.ChannelLoader.loadGu
       return null != t && (e.nsfw = t.nsfw, e.parentChannelThreadType = t.type), (0, h.createChannelRecordFromServer)(e)
     }),
     mostRecentMessages: e.most_recent_messages,
-    members: e.members ? s.map(e.members, f.default) : void 0,
+    members: e.members ? s.map(e.members, _.default) : void 0,
     channelIds: e.channel_ids
   })
 }), w(["THREAD_MEMBER_UPDATE"], e => {

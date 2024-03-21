@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 });
 var i = n("446674"),
@@ -40,7 +40,7 @@ class c extends i.default.Store {
   }
 }
 c.displayName = "PendingReplyStore";
-var f = new c(s.default, {
+var _ = new c(s.default, {
   CREATE_PENDING_REPLY: function(e) {
     let {
       channel: t,

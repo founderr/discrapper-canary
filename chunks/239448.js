@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return c
   },
   getEffectAnalyticsType: function() {
-    return _
+    return f
   },
   getEffectDetailAnalyticsName: function() {
     return E
@@ -44,11 +44,11 @@ function c(e) {
   return "number" == typeof e && e in l.DefaultVideoBackground
 }
 
-function f(e) {
+function _(e) {
   return c(e) ? l.ANIMATED_DEFAULT_VIDEO_BACKGROUNDS.includes(e) : !!d(e) && ((0, o.isAnimatedIconHash)(e.asset) || (0, o.isVideoAssetHash)(e.asset))
 }
 
-function _(e) {
+function f(e) {
   return null != e ? "Video Background" : "None"
 }
 
@@ -85,7 +85,7 @@ function h(e, t, n) {
     c = (0, i.getVoiceStateMetadata)(o, l, !0);
   a.default.track(u.AnalyticEvents.VIDEO_EFFECT_UPDATED, {
     location: t,
-    effect_type: _(e),
+    effect_type: f(e),
     effect_detail: E(e),
     effect_state: n,
     channel_id: l,
@@ -95,13 +95,13 @@ function h(e, t, n) {
     video_stream_count: c.video_stream_count,
     media_session_id: r.default.getMediaSessionId(),
     rtc_connection_id: r.default.getRTCConnectionId(),
-    is_animated: f(e)
+    is_animated: _(e)
   })
 }
 
 function g(e, t, n) {
   a.default.track(u.AnalyticEvents.VIDEO_BACKGROUND_ADDED, {
-    is_animated: f(e),
+    is_animated: _(e),
     is_video: t,
     is_from_tenor: n
   })
@@ -109,7 +109,7 @@ function g(e, t, n) {
 
 function m(e) {
   a.default.track(u.AnalyticEvents.VIDEO_BACKGROUND_DELETED, {
-    is_animated: f(e)
+    is_animated: _(e)
   })
 }
 

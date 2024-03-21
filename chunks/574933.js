@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 }), n("808653");
 var i = n("446674"),
@@ -24,7 +24,7 @@ function d(e) {
 function c() {
   l = {}
 }
-class f extends i.default.Store {
+class _ extends i.default.Store {
   getMessage(e, t) {
     return l[u({
       id: e,
@@ -32,8 +32,8 @@ class f extends i.default.Store {
     })]
   }
 }
-f.displayName = "SearchMessageStore";
-var _ = new f(s.default, {
+_.displayName = "SearchMessageStore";
+var f = new _(s.default, {
   SEARCH_FINISH: d,
   MOD_VIEW_SEARCH_FINISH: d,
   MESSAGE_UPDATE: function(e) {

@@ -20,8 +20,8 @@ var s = n("551042"),
         onConfirm: u,
         onCancel: d,
         onCloseCallback: c,
-        secondaryConfirmText: f,
-        onConfirmSecondary: _,
+        secondaryConfirmText: _,
+        onConfirmSecondary: f,
         className: E,
         titleClassName: h
       } = e;
@@ -34,8 +34,8 @@ var s = n("551042"),
         cancelText: l,
         onConfirm: u,
         onCancel: d,
-        secondaryConfirmText: f,
-        onConfirmSecondary: _,
+        secondaryConfirmText: _,
+        onConfirmSecondary: f,
         className: E,
         titleClassName: h
       }), {

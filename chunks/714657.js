@@ -12,8 +12,8 @@ var r = n("35092"),
   u = n("737292"),
   d = n("161778"),
   c = n("233069"),
-  f = n("42203"),
-  _ = n("697218"),
+  _ = n("42203"),
+  f = n("697218"),
   E = n("719923"),
   h = n("158998"),
   g = n("253539"),
@@ -30,7 +30,7 @@ function I() {
   S && (i = void 0), v = !1, p = !1
 }
 let A = () => {
-    S = !E.default.canUseClientThemes(_.default.getCurrentUser())
+    S = !E.default.canUseClientThemes(f.default.getCurrentUser())
   },
   C = () => {
     var e, t;
@@ -39,7 +39,7 @@ let A = () => {
   };
 class y extends r.default.PersistedStore {
   initialize(e) {
-    null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? m.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(_.default, d.default, f.default, u.default), this.syncWith([_.default], A), this.syncWith([u.default], C)
+    null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? m.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(f.default, d.default, _.default, u.default), this.syncWith([f.default], A), this.syncWith([u.default], C)
   }
   getState() {
     return S ? {} : {
@@ -110,9 +110,9 @@ var N = new y(o.default, {
     let {
       channelId: t,
       guildId: n
-    } = e, i = _.default.getCurrentUser();
+    } = e, i = f.default.getCurrentUser();
     if (null == t || null == n || (0, l.isDismissibleContentDismissed)(a.DismissibleContent.CLIENT_THEMES_COACHMARK) || !(0, h.ageEligibleForPremiumUpsell)(i)) return;
-    let s = f.default.getChannel(t);
+    let s = _.default.getChannel(t);
     null != s && (0, c.isGuildTextChannelType)(s.type) && (v = !0, function() {
       p = !0
     }())
