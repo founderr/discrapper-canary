@@ -21,11 +21,11 @@ function C() {
   p = U.FormStates.CLOSED, R = {}
 }
 
-function O() {
-  P(), g(), R = {}
+function P() {
+  O(), g(), R = {}
 }
 
-function P() {
+function O() {
   i = void 0, r = void 0, u = void 0, o = void 0
 }
 
@@ -127,7 +127,7 @@ var m = new L(A.default, {
   },
   USER_SETTINGS_ACCOUNT_CLOSE: C,
   USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
-    O(), v(), C()
+    P(), v(), C()
   },
   USER_SETTINGS_ACCOUNT_SUBMIT: function() {
     p = U.FormStates.SUBMITTING, R = {}
@@ -230,9 +230,9 @@ var m = new L(A.default, {
   USER_SETTINGS_CLEAR_ERRORS: function() {
     R = {}
   },
-  USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: P,
+  USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: O,
   USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: g,
-  USER_SETTINGS_RESET_ALL_PENDING: O,
+  USER_SETTINGS_RESET_ALL_PENDING: P,
   USER_SETTINGS_RESET_ALL_TRY_IT_OUT: v,
   USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function() {
     u = void 0

@@ -23,8 +23,8 @@ var i = n("77078"),
   g = n("562228"),
   S = n("529805"),
   C = n("685841"),
-  _ = n("804888"),
-  T = n("474643"),
+  T = n("804888"),
+  _ = n("474643"),
   I = n("585722"),
   v = n("568734"),
   N = n("305515"),
@@ -53,7 +53,7 @@ async function R(e) {
   null != k && (U.content = null == k ? void 0 : k.content);
   let D = C.default.getPendingReply(f);
   null != D && (U.type = A.MessageTypes.REPLY, U.message_reference = L.messageReference, U.allowed_mentions = L.allowedMentions, (0, S.deletePendingReply)(f));
-  let [w, F] = (0, _.default)(U.content);
+  let [w, F] = (0, T.default)(U.content);
   w && (U.content = F, U.flags = (0, v.addFlag)(null !== (t = U.flags) && void 0 !== t ? t : 0, A.MessageFlags.SUPPRESS_NOTIFICATIONS));
   let G = null !== (n = L.nonce) && void 0 !== n ? n : (0, E.createNonce)(),
     H = (0, E.default)({
@@ -121,7 +121,7 @@ async function R(e) {
     }, t)) : (0, o.openUploadError)({
       title: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
       help: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-    }), "" !== U.content && "" === T.default.getDraft(f, M) && a.default.saveDraft(f, U.content, M), 0 === I.default.getUploadCount(f, M) && r.default.setUploads({
+    }), "" !== U.content && "" === _.default.getDraft(f, M) && a.default.saveDraft(f, U.content, M), 0 === I.default.getUploadCount(f, M) && r.default.setUploads({
       channelId: f,
       uploads: R,
       draftType: M
@@ -218,7 +218,7 @@ var M = {
             })
           }
         })
-      }), "" !== h.content && "" === T.default.getDraft(n, u) && a.default.saveDraft(n, h.content, u)
+      }), "" !== h.content && "" === _.default.getDraft(n, u) && a.default.saveDraft(n, h.content, u)
     }), x.on("complete", e => {
       l.default.dispatch({
         type: "UPLOAD_COMPLETE",
@@ -233,12 +233,12 @@ var M = {
         type: "UPLOAD_CANCEL_REQUEST",
         file: e
       }), null != e.draftContent && null != e.channelId) {
-      let t = T.default.getDraft(e.channelId, T.DraftType.ChannelMessage);
+      let t = _.default.getDraft(e.channelId, _.DraftType.ChannelMessage);
       "" === t && l.default.dispatch({
         type: "DRAFT_SAVE",
         channelId: e.channelId,
         draft: e.draftContent,
-        draftType: T.DraftType.ChannelMessage
+        draftType: _.DraftType.ChannelMessage
       })
     }
   }

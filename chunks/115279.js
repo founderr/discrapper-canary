@@ -35,10 +35,10 @@ n.r(t), n.d(t, {
     return S
   },
   GIF_PICKER_TAB_ID: function() {
-    return v
+    return T
   },
   EMOJI_SIZE_MAP: function() {
-    return T
+    return v
   },
   EMOJI_ROW_SIZE: function() {
     return I
@@ -53,8 +53,8 @@ let h = "emoji-picker-tab-panel",
   m = "soundboard-picker-tab-panel",
   p = "soundboard-picker-tab",
   S = "gif-picker-tab-panel",
-  v = "gif-picker-tab",
-  T = {
+  T = "gif-picker-tab",
+  v = {
     reaction: 32,
     default: 44,
     jumbo: 96

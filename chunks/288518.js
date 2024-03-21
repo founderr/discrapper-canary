@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return v
   }
 }), n("222007");
 var i = n("988415"),
@@ -73,17 +73,17 @@ function S(e) {
   } = e;
   _(t)
 }
-class v extends r.default {
+class T extends r.default {
   initialize() {
     this.waitFor(s.default)
   }
   loadCache() {
-    let e = this.readSnapshot(v.LATEST_SNAPSHOT_VERSION);
+    let e = this.readSnapshot(T.LATEST_SNAPSHOT_VERSION);
     null != e && (a = new Set(e))
   }
   takeSnapshot() {
     return {
-      version: v.LATEST_SNAPSHOT_VERSION,
+      version: T.LATEST_SNAPSHOT_VERSION,
       data: Array.from(a)
     }
   }
@@ -119,5 +119,5 @@ class v extends r.default {
     })
   }
 }
-v.displayName = "MessageRequestStore", v.LATEST_SNAPSHOT_VERSION = 1;
-var T = new v
+T.displayName = "MessageRequestStore", T.LATEST_SNAPSHOT_VERSION = 1;
+var v = new T

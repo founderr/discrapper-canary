@@ -21,8 +21,8 @@ let u = l.FormStates.CLOSED,
   m = !1,
   p = !1,
   S = null,
-  v = null,
   T = null,
+  v = null,
   I = [],
   A = null,
   C = null;
@@ -44,11 +44,11 @@ function y(e) {
         claimed: d.isClaimed()
       }
     }
-  }, v = null !== (i = e.onClose) && void 0 !== i ? i : null, T = null !== (s = e.analyticsLocation) && void 0 !== s ? s : null, I = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], C = null !== (a = e.impressionSource) && void 0 !== a ? a : null
+  }, T = null !== (i = e.onClose) && void 0 !== i ? i : null, v = null !== (s = e.analyticsLocation) && void 0 !== s ? s : null, I = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], C = null !== (a = e.impressionSource) && void 0 !== a ? a : null
 }
 
 function N() {
-  u = l.FormStates.CLOSED, m = !1, h = null, A = null, g = null, d = null, c = null, _ = {}, f = {}, v = null, T = null, I = [], C = null
+  u = l.FormStates.CLOSED, m = !1, h = null, A = null, g = null, d = null, c = null, _ = {}, f = {}, T = null, v = null, I = [], C = null
 }
 
 function R() {
@@ -89,14 +89,14 @@ class O extends r.default.Store {
       errors: E,
       hasChanges: this.hasChanges(),
       openWithoutBackstack: p,
-      analyticsLocation: T,
+      analyticsLocation: v,
       analyticsLocations: I,
       initialSection: A,
       impressionSource: C
     }
   }
   get onClose() {
-    return v
+    return T
   }
 }
 O.displayName = "UserSettingsModalStore";
@@ -117,7 +117,7 @@ var D = new O(a.default, {
   },
   USER_SETTINGS_MODAL_SET_SECTION: function(e) {
     var t;
-    d = c, c = e.section, T = null, I = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (_[c] = e.subsection)
+    d = c, c = e.section, v = null, I = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (_[c] = e.subsection)
   },
   USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
     let {

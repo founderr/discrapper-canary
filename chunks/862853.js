@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return S
   },
   removeCandidateContent: function() {
-    return v
+    return T
   },
   isContentShown: function() {
-    return T
+    return v
   },
   useIsContentShown: function() {
     return I
@@ -88,13 +88,13 @@ let a = new r.TaskRunner,
       return t ? c(i, e) : p(_(i, e))
     })
   },
-  v = (e, t) => {
+  T = (e, t) => {
     l.setState(n => {
       let i = u(n);
       return t ? p(d(f(i, e), e)) : d(f(i, e), e)
     })
   },
-  T = e => l.getState().currentlyShown.has(e),
+  v = e => l.getState().currentlyShown.has(e),
   I = e => l(t => t.currentlyShown.has(e)),
   A = e => l(t => e.some(e => t.currentlyShown.has(e))),
   C = () => {

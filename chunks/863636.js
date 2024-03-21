@@ -54,7 +54,7 @@ function S(e) {
   }
 }
 
-function v(e, t) {
+function T(e, t) {
   if (null == h[e]) return;
   let n = {};
   Object.keys(h[e]).forEach(i => {
@@ -68,7 +68,7 @@ function v(e, t) {
     responses: i
   }
 }
-let T = [],
+let v = [],
   I = [],
   A = [];
 class C extends r.default.Store {
@@ -77,11 +77,11 @@ class C extends r.default.Store {
   }
   getOnboardingPromptsForOnboarding(e) {
     var t, n;
-    return null !== (n = null === (t = E[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : T
+    return null !== (n = null === (t = E[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : v
   }
   getOnboardingPrompts(e) {
     var t, n;
-    return null !== (n = null === (t = E[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : T
+    return null !== (n = null === (t = E[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : v
   }
   getOnboardingResponses(e) {
     var t, n, i;
@@ -101,7 +101,7 @@ class C extends r.default.Store {
   getEnabledOnboardingPrompts(e) {
     var t, n;
     let i = E[e];
-    return o.default.isFullServerPreview(e) ? null !== (t = null == i ? void 0 : i.prompts) && void 0 !== t ? t : T : null != i && i.enabled ? null !== (n = i.prompts) && void 0 !== n ? n : T : T
+    return o.default.isFullServerPreview(e) ? null !== (t = null == i ? void 0 : i.prompts) && void 0 !== t ? t : v : null != i && i.enabled ? null !== (n = i.prompts) && void 0 !== n ? n : v : v
   }
   getDefaultChannelIds(e) {
     var t, n;
@@ -176,7 +176,7 @@ var y = new C(a.default, {
       responses: d ? [] : r,
       onboardingPromptsSeen: a,
       onboardingResponsesSeen: o
-    }, !d && v(t, r), g[t] = Date.now()
+    }, !d && T(t, r), g[t] = Date.now()
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function() {
     m = !1
@@ -199,7 +199,7 @@ var y = new C(a.default, {
       prompts_seen: i,
       options_seen: s
     } = e;
-    v(t, n);
+    T(t, n);
     let r = E[t];
     if (null == r) return !1;
     let a = p(r.prompts, i, s);

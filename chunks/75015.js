@@ -28,16 +28,16 @@ r.r(t), r.d(t, {
     return I
   },
   HOME_HEADER_MAX_HEIGHT: function() {
-    return A
+    return T
   },
   BANNER_ASPECT_RATIO: function() {
-    return L
+    return A
   },
   GUILD_BANNER_ASPECT_RATIO: function() {
-    return S
+    return L
   },
   SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
-    return T
+    return S
   },
   HOME_HEADER_ASPECT_RATIO: function() {
     return p
@@ -74,14 +74,14 @@ let l = 568,
   _ = 2400,
   d = 960,
   I = 2400,
-  A = 600,
-  L = 17 / 6,
-  S = 16 / 9,
-  T = 2.5,
+  T = 600,
+  A = 17 / 6,
+  L = 16 / 9,
+  S = 2.5,
   p = 4,
-  O = l / L,
-  f = l / S,
-  R = l / T,
+  O = l / A,
+  f = l / L,
+  R = l / S,
   y = l / p,
   h = s.BACKGROUND_REPLACEMENT_SIZE.width / s.BACKGROUND_REPLACEMENT_SIZE.height,
   m = l / h;

@@ -22,8 +22,8 @@ var i, l = n("37983"),
   g = n("383018"),
   S = n("605250"),
   C = n("585722"),
-  _ = n("378765"),
-  T = n("254490"),
+  T = n("378765"),
+  _ = n("254490"),
   I = n("850391"),
   v = n("149022"),
   N = n("296141"),
@@ -173,7 +173,7 @@ i = class extends a.Component {
       useSlate: g,
       spellcheckEnabled: S,
       useNewSlashCommands: C,
-      canOnlyUseTextCommands: T,
+      canOnlyUseTextCommands: _,
       className: N,
       id: R,
       required: k,
@@ -234,17 +234,17 @@ i = class extends a.Component {
       type: E,
       value: d ? (0, v.toRichValue)("") : u,
       canUseCommands: null === (t = E.commands) || void 0 === t ? void 0 : t.enabled,
-      canOnlyUseTextCommands: T
+      canOnlyUseTextCommands: _
     }) : (0, l.jsx)(A.default, {
       ref: this.ref,
       ...H,
       value: d ? "" : o
     });
     return (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(_.ComponentAction, {
+      children: [(0, l.jsx)(T.ComponentAction, {
         event: M.ComponentActions.INSERT_TEXT,
         handler: this.handleInsertText
-      }), (0, l.jsx)(_.ComponentAction, {
+      }), (0, l.jsx)(T.ComponentAction, {
         event: M.ComponentActions.CLEAR_TEXT,
         handler: this.handleClearText
       }), B]
@@ -366,7 +366,7 @@ i = class extends a.Component {
                 }
               }(n)) && void 0 !== s ? s : t.name;
             return {
-              files: [(0, T.makeFile)(t, l, t.type)]
+              files: [(0, _.makeFile)(t, l, t.type)]
             }
           }
           return {
@@ -380,7 +380,7 @@ i = class extends a.Component {
               type: "text/plain"
             });
             return {
-              files: [(0, T.makeFile)(e, "message.txt")],
+              files: [(0, _.makeFile)(e, "message.txt")],
               convertedStringToFile: !0
             }
           }

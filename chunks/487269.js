@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return S
   },
   trackActiveThreadsPopoutOpened: function() {
-    return v
+    return T
   },
   trackThreadNotificationSettingsUpdated: function() {
-    return T
+    return v
   },
   useLastMessageTimestamp: function() {
     return I
@@ -47,13 +47,13 @@ function S() {
   })
 }
 
-function v() {
+function T() {
   d.default.track(m.AnalyticEvents.OPEN_POPOUT, {
     type: "Active Threads Popout"
   })
 }
 
-function T(e, t) {
+function v(e, t) {
   var n, i;
   let s = (0, o.collectThreadMetadata)(e);
   if (null == s) return;
@@ -69,9 +69,9 @@ function T(e, t) {
     h = null !== (n = E.default.flags(e.id)) && void 0 !== n ? n : 0,
     p = f(h),
     S = E.default.isMuted(e.id),
-    v = (0, _.muteConfigToTimestamp)(E.default.getMuteConfig(e.id)),
+    T = (0, _.muteConfigToTimestamp)(E.default.getMuteConfig(e.id)),
     {
-      can_send_message: T,
+      can_send_message: v,
       ...I
     } = s,
     A = {
@@ -87,8 +87,8 @@ function T(e, t) {
       parent_notification_setting: l.channel_message_notification_settings,
       old_thread_is_muted: S,
       new_thread_is_muted: null !== (i = t.muted) && void 0 !== i ? i : S,
-      old_thread_muted_until: v,
-      new_thread_muted_until: null != t.mute_config ? (0, _.muteConfigToTimestamp)(t.mute_config) : v
+      old_thread_muted_until: T,
+      new_thread_muted_until: null != t.mute_config ? (0, _.muteConfigToTimestamp)(t.mute_config) : T
     };
   d.default.track(m.AnalyticEvents.THREAD_NOTIFICATION_SETTINGS_UPDATED, A)
 }

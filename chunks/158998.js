@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return S
   },
   getUserTag: function() {
-    return T
+    return v
   },
   useDirectMessageRecipient: function() {
     return I
@@ -119,7 +119,7 @@ function S(e) {
   })
 }
 
-function v(e, t, n) {
+function T(e, t, n) {
   if (null == e) return o.default.Messages.UNKNOWN_USER;
   if (!c(e.username)) return "???";
   let i = n;
@@ -128,13 +128,13 @@ function v(e, t, n) {
   return "never" !== t.decoration ? u(s) : s
 }
 
-function T(e, t) {
+function v(e, t) {
   let n = {
       ...d,
       ...t
     },
     i = "auto" !== n.identifiable || s.default.hidePersonalInformation;
-  return v(e, n, i)
+  return T(e, n, i)
 }
 
 function I(e) {
@@ -145,21 +145,21 @@ function I(e) {
 var A = {
   getName: f,
   useName: E,
-  getUserTag: T,
+  getUserTag: v,
   useUserTag: function(e, t) {
     let n = {
         ...d,
         ...t
       },
       r = (0, i.useStateFromStores)([s.default], () => s.default.hidePersonalInformation);
-    return v(e, n, r)
+    return T(e, n, r)
   },
   getFormattedName: function(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null == e) return "???";
     let i = h(e),
-      s = n ? T(e) : null !== (t = e.username) && void 0 !== t ? t : "???";
+      s = n ? v(e) : null !== (t = e.username) && void 0 !== t ? t : "???";
     return i === s ? i : null != i ? "".concat(i, " (").concat(s, ")") : s
   },
   getGlobalName: h,

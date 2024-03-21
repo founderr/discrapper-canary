@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return S
   },
   requestMarkDismissibleContentAsShown: function() {
-    return v
+    return T
   },
   markDismissibleContentAsDismissed: function() {
-    return T
+    return v
   }
 }), n("222007");
 var i = n("446674"),
@@ -40,7 +40,7 @@ function S(e) {
   return (0, i.useStateFromStores)([o.default], () => p(e))
 }
 
-function v(e, t, n) {
+function T(e, t, n) {
   if ((0, E.isContentShown)(e) || _.default.hasUserHitDCCap(e)) return;
   let i = function(e) {
     let t = f.CONTENT_TYPES_WITH_BYPASS_HOLDOUT.has(e),
@@ -70,7 +70,7 @@ function v(e, t, n) {
     }
   })
 }
-async function T(e) {
+async function v(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   ((0, E.isContentShown)(e) || t.forceTrack) && function(e, t) {
     var n;

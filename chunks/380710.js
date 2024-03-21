@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return p
   },
   getChannelCoverageForOnboarding: function() {
-    return v
+    return T
   },
   useChannelCoverageForOnboarding: function() {
-    return T
+    return v
   },
   isChattableChannelId: function() {
     return I
@@ -93,7 +93,7 @@ function S(e, t, n) {
   return [a, o]
 }
 
-function v(e, t, n) {
+function T(e, t, n) {
   let i = a.default.getChannels(e);
   return S(t, n, i[0, a.GUILD_SELECTABLE_CHANNELS_KEY].map(e => {
     let {
@@ -103,7 +103,7 @@ function v(e, t, n) {
   }))
 }
 
-function T(e, t, n) {
+function v(e, t, n) {
   let s = (0, i.useStateFromStores)([a.default], () => a.default.getChannels(e));
   return S(t, n, s[0, a.GUILD_SELECTABLE_CHANNELS_KEY].map(e => {
     let {

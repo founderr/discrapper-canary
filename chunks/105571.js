@@ -23,8 +23,8 @@ var i = n("37983"),
   g = n("82372"),
   S = n("476606"),
   C = n("540843"),
-  _ = n("49111"),
-  T = n("317041"),
+  T = n("49111"),
+  _ = n("317041"),
   I = n("782340"),
   v = n("23429"),
   N = n("919163");
@@ -40,7 +40,7 @@ function A(e) {
       command: n,
       section: a,
       location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
-    }), y.ComponentDispatch.dispatch(_.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+    }), y.ComponentDispatch.dispatch(T.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: t.id
     })
   }, [t, n, a]);
@@ -70,10 +70,10 @@ function O(e) {
     commandType: o.ApplicationCommandType.CHAT
   }, {
     placeholderCount: 0,
-    limit: T.DISCOVERY_COMMANDS_QUERY_LIMIT,
+    limit: _.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
   }), {
-    commands: _
+    commands: T
   } = (0, S.default)({
     sectionId: u.id,
     commandsByActiveSection: y
@@ -135,7 +135,7 @@ function O(e) {
           children: P
         })]
       }), (0, i.jsx)(C.default, {
-        commands: _,
+        commands: T,
         channel: a
       }), (0, i.jsxs)("div", {
         className: v.commandListHeader,
@@ -148,7 +148,7 @@ function O(e) {
           children: ["Popular", (0, i.jsx)(x.default, {})]
         })]
       }), (0, i.jsx)("ul", {
-        children: _.map(e => (0, i.jsx)(A, {
+        children: T.map(e => (0, i.jsx)(A, {
           channel: a,
           command: e,
           section: u

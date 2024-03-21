@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return S
   },
   applyBackgroundOptionPreview: function() {
-    return v
+    return T
   },
   applyInitialVideoBackgroundOption: function() {
-    return T
+    return v
   }
 }), n("332822"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
 var i = n("627445"),
@@ -96,7 +96,7 @@ async function S(e, t) {
     type: r.FilterTargetType.INPUT_DEVICE
   }, e), n && (0, c.trackBackgroundOptionUpdated)(e, i, "Enabled")
 }
-async function v(e, t, n) {
+async function T(e, t, n) {
   let {
     track: i = !0,
     location: s
@@ -107,7 +107,7 @@ async function v(e, t, n) {
   }, e), i && (0, c.trackBackgroundOptionUpdated)(e, s, "Preview")
 }
 
-function T() {
+function v() {
   let e = a.default.getCurrentUser();
   if (null == e) return;
   let t = (0, l.getLastUsedVideoBackgroundOption)(e);

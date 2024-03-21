@@ -26,8 +26,8 @@ var i = n("37983"),
   g = n("672724"),
   S = n("392284"),
   C = n("468482"),
-  _ = n("316680"),
-  T = n("830837"),
+  T = n("316680"),
+  _ = n("830837"),
   I = n("132755"),
   v = n("73034"),
   N = n("58608"),
@@ -132,7 +132,7 @@ class w extends l.Component {
       onClick: l,
       tabIndex: s ? -1 : 0,
       "aria-label": R.default.Messages.PAUSE,
-      children: (0, i.jsx)(T.default, {
+      children: (0, i.jsx)(_.default, {
         className: M.controlIcon
       }, "pause")
     }) : null != t && t === n ? (0, i.jsx)(d.Clickable, {
@@ -188,7 +188,7 @@ class w extends l.Component {
         ref: this.setDurationRef
       }), (0, i.jsx)("div", {
         className: k.flex,
-        children: (0, i.jsx)(_.default, {
+        children: (0, i.jsx)(T.default, {
           ref: this.setVolumeButtonRef,
           muted: a,
           value: m,
@@ -278,7 +278,7 @@ class G extends l.Component {
   render() {
     let {
       play: e
-    } = this.state, t = e ? I.default : T.default;
+    } = this.state, t = e ? I.default : _.default;
     return (0, i.jsx)(u.default.div, {
       className: M.playPausePop,
       style: this.getAnimatedStyle(),

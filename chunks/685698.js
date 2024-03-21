@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Checkbox: function() {
-    return T
+    return v
   }
 }), n("222007");
 var i, s, r, a, o = n("37983"),
@@ -22,11 +22,11 @@ let S = {
     ROUND: p.round,
     SMALL_BOX: p.smallBox
   },
-  v = {
+  T = {
     top: p.alignTop,
     center: p.alignCenter
   };
-class T extends l.PureComponent {
+class v extends l.PureComponent {
   getInputMode() {
     return this.props.disabled ? "disabled" : this.props.readOnly ? "readonly" : "default"
   }
@@ -90,7 +90,7 @@ class T extends l.PureComponent {
       displayOnly: f,
       type: E,
       onClick: S
-    } = this.props, T = null != l ? (0, o.jsx)("div", {
+    } = this.props, v = null != l ? (0, o.jsx)("div", {
       className: d(p.label, e ? p.labelDisabled : p.labelClickable, c ? p.labelReversed : p.labelForward),
       style: {
         lineHeight: "".concat(u, "px")
@@ -98,11 +98,11 @@ class T extends l.PureComponent {
       children: l
     }) : null, I = this.props.disabled ? p.inputDisabled : this.props.readOnly ? p.inputReadonly : p.inputDefault;
     return (0, o.jsxs)(f ? "span" : "label", {
-      className: d(e ? p.checkboxWrapperDisabled : p.checkboxWrapper, v[s], r, {
+      className: d(e ? p.checkboxWrapperDisabled : p.checkboxWrapper, T[s], r, {
         [p.row]: "row" === E,
         [p.checked]: n
       }),
-      children: [c ? T : null, !f && (0, o.jsx)(h.FocusRing, {
+      children: [c ? v : null, !f && (0, o.jsx)(h.FocusRing, {
         children: (0, o.jsx)("input", {
           className: d(a, I),
           type: "checkbox",
@@ -130,7 +130,7 @@ class T extends l.PureComponent {
           color: this.getColor(),
           "aria-hidden": !0
         })
-      }), c ? null : T]
+      }), c ? null : v]
     })
   }
   constructor(...e) {
@@ -142,7 +142,7 @@ class T extends l.PureComponent {
     }
   }
 }
-T.Types = i, T.Shapes = S, T.Aligns = s, T.defaultProps = {
+v.Types = i, v.Shapes = S, v.Aligns = s, v.defaultProps = {
   size: 24,
   disabled: !1,
   readOnly: !1,

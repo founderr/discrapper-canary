@@ -26,8 +26,8 @@ var i = n("37983"),
   g = n("158998"),
   S = n("943722"),
   C = n("49111"),
-  _ = n("988268"),
-  T = n("39141"),
+  T = n("988268"),
+  _ = n("39141"),
   I = n("782340"),
   v = n("591665");
 let N = (0, y.cssValueToNumber)(r.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
@@ -60,8 +60,8 @@ var A = function(e) {
     onFocus: W,
     "aria-controls": Y,
     "aria-expanded": z,
-    "aria-posinset": Z,
-    "aria-setsize": J,
+    "aria-posinset": J,
+    "aria-setsize": Z,
     id: q,
     tabIndex: X,
     itemProps: Q
@@ -95,7 +95,7 @@ var A = function(e) {
       })
     })
   }), ed = () => {
-    let e = (null == R ? void 0 : R.isClyde()) ? _.BotTagTypes.AI : _.BotTagTypes.BOT;
+    let e = (null == R ? void 0 : R.isClyde()) ? T.BotTagTypes.AI : T.BotTagTypes.BOT;
     return null != R && R.bot ? (0, i.jsx)(p.default, {
       className: v.botTag,
       type: e,
@@ -154,7 +154,7 @@ var A = function(e) {
         }), (0, i.jsx)(c.default, {
           confettiSpawnRef: en,
           shouldFire: A && null != M && e.id !== M.id,
-          confettiLocation: T.ConfettiLocation.MEMBER_USER
+          confettiLocation: _.ConfettiLocation.MEMBER_USER
         })]
       })
     })(R, ef),
@@ -178,8 +178,8 @@ var A = function(e) {
     }),
     "aria-controls": Y,
     "aria-expanded": z,
-    "aria-setsize": J,
-    "aria-posinset": Z,
+    "aria-setsize": Z,
+    "aria-posinset": J,
     id: q,
     tabIndex: X,
     onFocus: W,

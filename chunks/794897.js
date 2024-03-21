@@ -99,7 +99,7 @@ class p extends a.default {
       CACHE_LOADED_LAZY: () => this.loadCache(),
       CHANNEL_DELETE: A,
       CHANNEL_UPDATES: I,
-      CONNECTION_OPEN_SUPPLEMENTAL: v,
+      CONNECTION_OPEN_SUPPLEMENTAL: T,
       GUILD_DELETE: N,
       LOGIN_SUCCESS: R,
       THREAD_DELETE: y,
@@ -113,11 +113,11 @@ function S() {
   null != e && p.recordChannel(e)
 }
 
-function v() {
+function T() {
   p.dropUnreachableChannels(), p.replaceLru((0, f.withFallbacks)(h, 1250))
 }
 
-function T(e) {
+function v(e) {
   let t = e.id,
     n = (0, _.isReadableChannel)(e),
     i = r.default.getChannelId();
@@ -125,7 +125,7 @@ function T(e) {
 }
 
 function I(e) {
-  for (let t of e.channels) T(t)
+  for (let t of e.channels) v(t)
 }
 
 function A(e) {
@@ -133,7 +133,7 @@ function A(e) {
 }
 
 function C(e) {
-  T(e.channel)
+  v(e.channel)
 }
 
 function y(e) {

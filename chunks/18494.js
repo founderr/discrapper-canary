@@ -18,8 +18,8 @@ var d = n("917351"),
   m = n("393414"),
   p = n("233069"),
   S = n("449008"),
-  v = n("271938"),
-  T = n("42203"),
+  T = n("271938"),
+  v = n("42203"),
   I = n("923959"),
   A = n("305961"),
   C = n("42887"),
@@ -45,7 +45,7 @@ function U() {
     selectedChannelIds: D,
     mostRecentSelectedTextChannelIds: L,
     knownThreadIds: c(D).values().concat(c.values(L)).filter(S.isNotNullish).uniq().filter(e => {
-      let t = T.default.getBasicChannel(e);
+      let t = v.default.getBasicChannel(e);
       return M.has(e) || null != t && p.THREAD_CHANNEL_TYPES.has(t.type)
     }).value()
   })
@@ -60,14 +60,14 @@ function w(e) {
 
 function k(e, t) {
   if (null == e || null == t || L[e] === t) return !1;
-  let n = T.default.getChannel(t),
+  let n = v.default.getChannel(t),
     i = null != n && (0, p.isGuildTextChannelType)(n.type),
     s = (null == n ? void 0 : n.getGuildId()) === e;
   return !!i && !!s && (L[e] = t, !0)
 }
 
 function V(e) {
-  let t = T.default.getMutableBasicGuildChannelsForGuild(e),
+  let t = v.default.getMutableBasicGuildChannelsForGuild(e),
     n = c.find(t, e => e.type === N.ChannelTypes.GUILD_VOICE);
   return null == n ? void 0 : n.id
 }
@@ -76,9 +76,9 @@ function G() {
   let e = !1,
     t = A.default.getGuilds();
   return c.each(D, (t, n) => {
-    (null == t || !T.default.hasChannel(t) && t !== r && !M.has(t) && !(0, R.isGuildHomeChannel)(t)) && (delete D[n], delete P[n], e = !0)
+    (null == t || !v.default.hasChannel(t) && t !== r && !M.has(t) && !(0, R.isGuildHomeChannel)(t)) && (delete D[n], delete P[n], e = !0)
   }), c.each(L, (t, n) => {
-    (null == t || !T.default.hasChannel(t) && !M.has(t)) && (delete L[n], e = !0)
+    (null == t || !v.default.hasChannel(t) && !M.has(t)) && (delete L[n], e = !0)
   }), c.each(t, e => {
     let t = D[e.id];
     null == L[e.id] && k(e.id, t)
@@ -121,7 +121,7 @@ class B extends _.default.Store {
         null: null
       })
     }
-    this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(A.default, T.default, y.default, I.default, C.default)
+    this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(A.default, v.default, y.default, I.default, C.default)
   }
   getChannelId(e) {
     var t, n;
@@ -152,7 +152,7 @@ class B extends _.default.Store {
 B.displayName = "SelectedChannelStore";
 var H = new B(E.default, {
   CONNECTION_OPEN: function(e) {
-    i = e.sessionId, null != o && null == T.default.getChannel(o) && (o = null);
+    i = e.sessionId, null != o && null == v.default.getChannel(o) && (o = null);
     let t = G();
     t && U()
   },
@@ -214,7 +214,7 @@ var H = new B(E.default, {
       channelId: t
     } = e;
     if (null == t) {
-      let e = T.default.getChannel(o),
+      let e = v.default.getChannel(o),
         t = null == e ? void 0 : e.guild_id;
       null != t && t !== y.default.getGuildId() && D[t] === o && (D[t] = w(t))
     }
@@ -228,15 +228,15 @@ var H = new B(E.default, {
       var n, s, r;
       if (t.sessionId === i) {
         clearInterval(u);
-        let e = null === (n = T.default.getChannel(o)) || void 0 === n ? void 0 : n.getGuildId();
+        let e = null === (n = v.default.getChannel(o)) || void 0 === n ? void 0 : n.getGuildId();
         t.guildId !== e && null == t.channelId || (o = t.channelId), l = Date.now(), null != o && (u = setInterval(() => {
           l = Date.now(), U()
         }, 6e4)), U()
       } else {
-        if (t.userId !== v.default.getId()) return e;
+        if (t.userId !== T.default.getId()) return e;
         clearInterval(u), u = void 0, l = 0;
-        let n = null === (s = T.default.getChannel(o)) || void 0 === s ? void 0 : s.getGuildId(),
-          i = null === (r = T.default.getChannel(t.channelId)) || void 0 === r ? void 0 : r.getGuildId();
+        let n = null === (s = v.default.getChannel(o)) || void 0 === s ? void 0 : s.getGuildId(),
+          i = null === (r = v.default.getChannel(t.channelId)) || void 0 === r ? void 0 : r.getGuildId();
         null != n && i === n && (o = null), U()
       }
       return !0

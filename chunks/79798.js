@@ -57,8 +57,8 @@ let _ = e => {
     default:
       m = S ? d.default.Messages.APP_TAG : d.default.Messages.BOT_TAG_BOT
   }
-  let v = s === u.BotTagTypes.ORIGINAL_POSTER,
-    T = s === u.BotTagTypes.REMIX,
+  let T = s === u.BotTagTypes.ORIGINAL_POSTER,
+    v = s === u.BotTagTypes.REMIX,
     I = null;
   f && (I = (0, i.jsx)(a.Tooltip, {
     text: p,
@@ -72,8 +72,8 @@ let _ = e => {
   let A = e => (0, i.jsxs)("span", {
     ...e,
     className: r(_, t, h ? c.rem : c.px, {
-      [c.botTagOP]: v,
-      [c.botTagRemix]: T
+      [c.botTagOP]: T,
+      [c.botTagRemix]: v
     }),
     children: [E ? null : I, g, (0, i.jsx)("span", {
       className: c.botText,

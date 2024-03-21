@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return S
   },
   MenuSpinner: function() {
-    return v
+    return T
   }
 }), n("881410"), n("808653"), n("424973"), n("222007"), n("70102");
 var i = n("37983"),
@@ -32,7 +32,7 @@ function S(e) {
     hideScroller: o = !1,
     className: _,
     children: S,
-    onClose: v,
+    onClose: T,
     onSelect: I
   } = e, A = function e(t) {
     return (function e(t) {
@@ -116,7 +116,7 @@ function S(e) {
       navId: n,
       items: y.current,
       initialFocusPath: E.default.keyboardModeEnabled && null != N ? [N] : [],
-      closeMenu: v
+      closeMenu: T
     });
   s.useEffect(() => {
     R.isUsingKeyboardNavigation ? !E.default.keyboardModeEnabled && (0, f.enableKeyboardMode)() : E.default.keyboardModeEnabled && (0, f.disableKeyboardMode)()
@@ -135,13 +135,13 @@ function S(e) {
         className: p.scroller,
         children: [0 === A.length && (0, i.jsx)(m.Item, {
           disabled: !0,
-          label: () => (0, i.jsx)(T, {}),
+          label: () => (0, i.jsx)(v, {}),
           menuItemProps: R.getItemProps({
             path: ["empty"]
           }),
           isFocused: !1,
           onFocus: () => {},
-          onClose: v
+          onClose: T
         }), A.length > 0 && function e(t, n, s, r) {
           let a = 0,
             o = [];
@@ -270,20 +270,20 @@ function S(e) {
             }
             return t
           }, [])
-        }(A, R, [], v)]
+        }(A, R, [], T)]
       })
     })
   })
 }
 
-function v() {
+function T() {
   return (0, i.jsx)("div", {
     className: a(p.menu, p.loader, p.flexible),
     children: (0, i.jsx)(_.Spinner, {})
   })
 }
 
-function T() {
+function v() {
   let e = "♫ (つ｡◕‿‿◕｡)つ ♪",
     [t, n] = s.useState(e);
   return s.useEffect(() => {

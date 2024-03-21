@@ -42,8 +42,8 @@ var i = n("37983"),
   m = n("425190"),
   p = n("578706"),
   S = n("945330"),
-  v = n("178814"),
-  T = n("782340"),
+  T = n("178814"),
+  v = n("782340"),
   I = n("800836");
 
 function A(e) {
@@ -143,14 +143,14 @@ function P(e) {
 function L(e) {
   let {
     options: t,
-    placeholder: n = T.default.Messages.SELECT,
+    placeholder: n = v.default.Messages.SELECT,
     className: r,
     isDisabled: o = !1,
     maxVisibleItems: u = 7,
     autoFocus: c = !1,
     popoutWidth: h,
     clearable: p = !1,
-    look: A = v.SelectLooks.FILLED,
+    look: A = T.SelectLooks.FILLED,
     onClose: C,
     onOpen: y,
     renderOptionLabel: N = D,
@@ -251,7 +251,7 @@ function L(e) {
           [I.open]: c,
           [I.disabled]: o,
           [I.selectPositionTop]: "top" === _,
-          [I.lookFilled]: A === v.SelectLooks.FILLED
+          [I.lookFilled]: A === T.SelectLooks.FILLED
         }),
         "aria-haspopup": "listbox",
         "aria-expanded": c,
@@ -269,7 +269,7 @@ function L(e) {
             role: "button",
             "aria-disabled": o,
             onClick: J,
-            "aria-label": T.default.Messages.CLEAR,
+            "aria-label": v.default.Messages.CLEAR,
             children: (0, i.jsx)(S.default, {
               width: 16,
               height: 16,
@@ -299,8 +299,8 @@ function M(e) {
     serialize: m,
     optionClassName: p,
     buttonHeight: S,
-    updatePosition: v,
-    popoutPosition: T
+    updatePosition: T,
+    popoutPosition: v
   } = e, [A, C] = s.useState(0), y = s.useRef(null), N = s.useId(), R = (0, o.default)({
     id: N,
     async scrollToEnd() {},
@@ -312,14 +312,14 @@ function M(e) {
     var e;
     null === (e = O.current) || void 0 === e || e.focus()
   }, []), s.useEffect(() => {
-    S > 0 && v()
-  }, [S, v]), (0, h.default)(v), s.useLayoutEffect(() => {
+    S > 0 && T()
+  }, [S, T]), (0, h.default)(T), s.useLayoutEffect(() => {
     var e, t;
     let n = null === (t = y.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
     null != n && C(n)
   }, [E]), s.useEffect(() => {
-    v()
-  }, [v, A]);
+    T()
+  }, [T, A]);
   let D = s.useCallback(e => {
       n(e), l && r()
     }, [r, n, l]),
@@ -347,7 +347,7 @@ function M(e) {
         return (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(L, {
             className: a(I.popout, t, {
-              [I.popoutPositionTop]: "top" === T
+              [I.popoutPositionTop]: "top" === v
             }),
             style: {
               width: f,

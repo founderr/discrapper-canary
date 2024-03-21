@@ -37,8 +37,8 @@ var i, s, r = n("37983"),
   m = n("670914"),
   p = n("242670"),
   S = n("437822"),
-  v = n("84460"),
-  T = n("191225"),
+  T = n("84460"),
+  v = n("191225"),
   I = n("716241"),
   A = n("148217"),
   C = n("970254"),
@@ -162,11 +162,11 @@ function es(e) {
       callbackWithoutPost: ep,
       onClose: eS
     } = e,
-    ev = (0, u.useLocation)(),
-    eT = C.default.useExperiment({
+    eT = (0, u.useLocation)(),
+    ev = C.default.useExperiment({
       location: "auth web"
     }),
-    eI = eT.userAppsTreatment === C.UserAppsTreatment.ALLOWED,
+    eI = ev.userAppsTreatment === C.UserAppsTreatment.ALLOWED,
     eA = (0, E.useStateFromStores)([M.default], () => M.default.hasLoadedExperiments),
     [eC, ey] = a.useState(null),
     [eN, eR] = a.useState(null),
@@ -208,14 +208,14 @@ function es(e) {
       let t = eY ? f.deserialize(null !== (e = null == eW ? void 0 : eW.permissions) && void 0 !== e ? e : 0) : eo;
       return null != t ? t : b.NONE
     }, [null == eW ? void 0 : eW.permissions, eo, eY]),
-    eQ = (0, E.useStateFromStores)([T.default], () => T.default.getCurrentEmbeddedActivity()),
-    eZ = (0, E.useStateFromStoresObject)([v.default, T.default], () => {
+    eQ = (0, E.useStateFromStores)([v.default], () => v.default.getCurrentEmbeddedActivity()),
+    eZ = (0, E.useStateFromStoresObject)([T.default, v.default], () => {
       let e;
-      let t = v.default.getIsEnabled();
+      let t = T.default.getIsEnabled();
       if (null != eQ) {
-        if (e = T.default.getShelfActivities(eQ.guildId).find(e => e.application_id === eQ.applicationId), t && void 0 === e) {
+        if (e = v.default.getShelfActivities(eQ.guildId).find(e => e.application_id === eQ.applicationId), t && void 0 === e) {
           var n;
-          e = null === (n = v.default.getDeveloperShelfItems().find(e => e.id === eQ.applicationId)) || void 0 === n ? void 0 : n.embeddedActivityConfig
+          e = null === (n = T.default.getDeveloperShelfItems().find(e => e.id === eQ.applicationId)) || void 0 === n ? void 0 : n.embeddedActivityConfig
         }
         if (null != e) return {
           ...Z.DEFAULT_EMBEDDED_ACTIVITY_CONFIG,
@@ -282,7 +282,7 @@ function es(e) {
     e0 = a.useRef(!1),
     e1 = a.useCallback(async () => {
       if (!L.default.isAuthenticated()) {
-        (0, k.logoutWithRedirect)(ev);
+        (0, k.logoutWithRedirect)(eT);
         return
       }
       if (!e0.current) {
@@ -307,7 +307,7 @@ function es(e) {
             body: t
           } = n;
           if (401 === e) {
-            (0, k.logoutWithRedirect)(ev);
+            (0, k.logoutWithRedirect)(eT);
             return
           }
           eD(Error(null != t.message ? t.message : "".concat(Object.keys(t)[0], ": ").concat(Object.values(t)[0])))
@@ -315,7 +315,7 @@ function es(e) {
           e0.current = !1
         }
       }
-    }, [ev, er, N, ez, R, z, et, en, ei, eB, es, e$]),
+    }, [eT, er, N, ez, R, z, et, en, ei, eB, es, e$]),
     e2 = a.useMemo(() => {
       var e;
       if (null == eK || !eY) return [];
@@ -428,7 +428,7 @@ function es(e) {
     bot: eC.bot,
     accountScopes: eq,
     showLogout: e_ || !1,
-    location: ev,
+    location: eT,
     isTrustedName: eE
   })), e9 && (A = (0, r.jsxs)("div", {
     className: $.footer,

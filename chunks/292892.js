@@ -40,13 +40,13 @@ i = class extends s.default {
       S = f && a.default.getSettings().decoupledClipsEnabled && (null === (n = l.default.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && p;
     i = (0, g.setFlag)(i, m.VoiceFlags.CLIPS_ENABLED, h || S);
     let {
-      enableViewerClipping: v
+      enableViewerClipping: T
     } = d.default.getCurrentConfig({
       location: "computeVoiceFlags"
     }, {
       autoTrackExposure: !1
-    }), T = v && f && a.default.getSettings().viewerClipsEnabled;
-    return i = (0, g.setFlag)(i, m.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS, T)
+    }), v = T && f && a.default.getSettings().viewerClipsEnabled;
+    return i = (0, g.setFlag)(i, m.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS, v)
   }
   getInitialState() {
     return {

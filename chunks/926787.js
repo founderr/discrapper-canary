@@ -45,8 +45,8 @@ let g = {
   },
   p = "",
   S = !1,
-  v = "unset",
-  T = null,
+  T = "unset",
+  v = null,
   I = h.DISCOVERY_ALL_CATEGORIES_ID,
   A = h.DISCOVERY_ALL_CATEGORIES_ID,
   C = null,
@@ -77,13 +77,13 @@ class O extends u.default.Store {
     this.waitFor(_.default)
   }
   isFetching() {
-    return S || null == T || null == f.default.lastFetched
+    return S || null == v || null == f.default.lastFetched
   }
   isFetchingSearch() {
-    return "fetching" === v
+    return "fetching" === T
   }
   hasSearchError() {
-    return "failed" === v
+    return "failed" === T
   }
   getDiscoverableGuilds() {
     return m
@@ -139,7 +139,7 @@ var D = new O(d.default, {
       offset: s,
       limit: r
     } = e;
-    S = !1, T = Date.now(), N = (0, c.makeAnalyticsID)();
+    S = !1, v = Date.now(), N = (0, c.makeAnalyticsID)();
     let a = l.map(t, R);
     m = {
       ...m,
@@ -183,7 +183,7 @@ var D = new O(d.default, {
       categoryId: t,
       guilds: n
     } = e;
-    S = !1, T = Date.now();
+    S = !1, v = Date.now();
     let i = l.map(n, R);
     m = {
       ...m,
@@ -214,7 +214,7 @@ var D = new O(d.default, {
       query: i,
       categoryId: s
     } = e;
-    a("search" === n, "This action only supports search it seems"), v = "fetching", m = {
+    a("search" === n, "This action only supports search it seems"), T = "fetching", m = {
       ...m,
       [n]: {
         ...m[n],
@@ -257,7 +257,7 @@ var D = new O(d.default, {
           }
         }
       }
-    }, p = l, v = "succeeded"
+    }, p = l, T = "succeeded"
   },
   GUILD_DISCOVERY_SEARCH_FETCH_FAILURE: function(e) {
     var t;
@@ -266,7 +266,7 @@ var D = new O(d.default, {
       query: i,
       categoryId: s
     } = e;
-    a("search" === n, "This action only supports search it seems"), v = "failed", m = {
+    a("search" === n, "This action only supports search it seems"), T = "failed", m = {
       ...m,
       [n]: {
         ...m[n],

@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return S
   },
   navigateToStage: function() {
-    return v
+    return T
   }
 });
 var i = n("851387"),
@@ -63,10 +63,10 @@ function S(e) {
     s = _.default.getVoiceChannelId();
   if (!i && s !== e.id && (0, a.shouldShowVoiceChannelChangeConfirmation)(e) && f.showChannelChangeConfirmationAlert(e, () => S(e, t, n, !0))) return;
   let r = p(e, t);
-  r && v(e, s, n)
+  r && T(e, s, n)
 }
 
-function v(e, t) {
+function T(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
   f.navigateToStage(e, t, n)
 }

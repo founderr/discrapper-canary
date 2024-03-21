@@ -43,13 +43,13 @@ let f = {
       innerRef: p
     } = e, {
       reducedMotion: S
-    } = s.useContext(u.AccessibilityPreferencesContext), v = s.useRef(null), [T, I] = s.useState(!1), A = (0, c.useToken)(l.default.unsafe_rawColors.PRIMARY_400).spring(), C = (0, c.useToken)(l.default.unsafe_rawColors.GREEN_360).spring(), {
+    } = s.useContext(u.AccessibilityPreferencesContext), T = s.useRef(null), [v, I] = s.useState(!1), A = (0, c.useToken)(l.default.unsafe_rawColors.PRIMARY_400).spring(), C = (0, c.useToken)(l.default.unsafe_rawColors.GREEN_360).spring(), {
       state: y,
       opacity: N
     } = (0, o.useSpring)({
       config: f,
       opacity: h ? .3 : 1,
-      state: T ? r ? .7 : .3 : r ? 1 : 0
+      state: v ? r ? .7 : .3 : r ? 1 : 0
     });
     return (0, i.jsx)(d.FocusRing, {
       ...m,
@@ -127,7 +127,7 @@ let f = {
           id: t,
           type: "checkbox",
           ref: e => {
-            v.current = e, null != p && (p.current = e)
+            T.current = e, null != p && (p.current = e)
           },
           className: _.input,
           tabIndex: h ? -1 : 0,
@@ -136,7 +136,7 @@ let f = {
           },
           onKeyUp: function(e) {
             var t;
-            if (!h && !!T && !e.repeat) I(!1), "Enter" === e.key && (null === (t = v.current) || void 0 === t || t.click())
+            if (!h && !!v && !e.repeat) I(!1), "Enter" === e.key && (null === (t = T.current) || void 0 === t || t.click())
           },
           onChange: function(e) {
             I(!1), null == n || n(e.currentTarget.checked, e)

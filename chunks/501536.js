@@ -29,8 +29,8 @@ var i = n("37983"),
   g = n("24373"),
   S = n("305961"),
   C = n("27618"),
-  _ = n("697218"),
-  T = n("158998"),
+  T = n("697218"),
+  _ = n("158998"),
   I = n("563911"),
   v = n("346955"),
   N = n("548775"),
@@ -217,12 +217,12 @@ b.Generic = class e extends P {
         })
       }), (0, i.jsx)(I.AutocompleteRowContentPrimary, {
         children: (0, i.jsx)(I.AutocompleteRowHeading, {
-          children: null != t ? t : T.default.getName(e)
+          children: null != t ? t : _.default.getName(e)
         })
       }), (0, i.jsxs)(I.AutocompleteRowContentSecondary, {
         children: [(0, i.jsx)("span", {
           className: R.descriptionUsername,
-          children: T.default.getUserTag(e, {
+          children: _.default.getUserTag(e, {
             mode: "username",
             identifiable: l ? "never" : "always"
           })
@@ -273,7 +273,7 @@ b.Generic = class e extends P {
         })
       }), (0, i.jsx)(I.AutocompleteRowContentPrimary, {
         children: (0, i.jsx)(I.AutocompleteRowHeading, {
-          children: (0, h.computeChannelName)(e, _.default, C.default)
+          children: (0, h.computeChannelName)(e, T.default, C.default)
         })
       }), null != t ? (0, i.jsx)(I.AutocompleteRowContentSecondary, {
         children: t.name

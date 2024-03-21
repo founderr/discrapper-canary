@@ -108,12 +108,12 @@ let S = [
     ["TAB", "⇥"],
     ["SPACE", "␣"]
   ],
-  v = e => {
+  T = e => {
     for (let [t, n] of S)
       if (t === e.toUpperCase()) return n;
     return e
   },
-  T = e => {
+  v = e => {
     for (let [t, n] of S)
       if (n === e.toUpperCase()) return t.toLowerCase();
     return e
@@ -150,7 +150,7 @@ function C(e) {
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.KeyboardDeviceTypes.KEYBOARD_KEY,
     i = e.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, o.default.modKey).split("+").map(e => e.trim().replace("plus", "+"));
   return i.reduce((e, i) => {
-    let s = T(i),
+    let s = v(i),
       r = p(s, t, n);
     return null != r && e.push([n, r, t]), e
   }, [])
@@ -170,7 +170,7 @@ function y(e) {
     }).filter(l.isNotNullish);
   if (!t) return i.join("+");
   {
-    let e = -1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? i.map(v) : i;
+    let e = -1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? i.map(T) : i;
     return e.join(" + ").toUpperCase()
   }
 }

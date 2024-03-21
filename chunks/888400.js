@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return S
   },
   unitsAsStrings: function() {
-    return v
+    return T
   }
 });
 var i = n("866227"),
@@ -113,7 +113,7 @@ function S(e, t) {
   }), i
 }
 
-function v(e, t) {
+function T(e, t) {
   return e.days > 0 ? t.days.format({
     days: e.days,
     hours: e.hours

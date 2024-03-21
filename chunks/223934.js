@@ -27,8 +27,8 @@ function h(e) {
     accountScopes: m,
     showLogout: p,
     location: S,
-    isTrustedName: v
-  } = e, T = l.default.getApplicationIconURL({
+    isTrustedName: T
+  } = e, v = l.default.getApplicationIconURL({
     id: h.id,
     icon: h.icon
   }), I = l.default.getUserAvatarURL(n);
@@ -38,7 +38,7 @@ function h(e) {
     children: [(0, i.jsxs)("div", {
       className: E.headerIcons,
       children: [(0, i.jsx)(s.Avatar, {
-        src: T,
+        src: v,
         size: _.AvatarSizes.SIZE_80,
         "aria-label": h.name
       }), (0, i.jsxs)("div", {
@@ -55,7 +55,7 @@ function h(e) {
         size: _.AvatarSizes.SIZE_80,
         "aria-label": n.username
       })]
-    }), !v && (0, i.jsx)(a.Text, {
+    }), !T && (0, i.jsx)(a.Text, {
       variant: "text-md/medium",
       color: "header-secondary",
       className: E.label,

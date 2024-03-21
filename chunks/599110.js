@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return g
   },
   addExtraAnalyticsDecorator: function() {
-    return v
+    return T
   },
   AnalyticEventConfigs: function() {
-    return T
+    return v
   },
   expandLocation: function() {
     return I
@@ -51,10 +51,10 @@ let g = i.createContext({
   p = performance.now(),
   S = [];
 
-function v(e) {
+function T(e) {
   S.push(e)
 }
-let T = {
+let v = {
   [f.AnalyticEvents.APP_OPENED]: {
     throttlePeriod: 3e5,
     throttleKeys: () => []
@@ -247,7 +247,7 @@ function I(e) {
 }
 let A = () => E.AccessibilityFeatureFlags.NONE,
   C = (0, s.trackMaker)({
-    analyticEventConfigs: T,
+    analyticEventConfigs: v,
     dispatcher: r.default,
     TRACK_ACTION_NAME: "TRACK"
   });
@@ -305,7 +305,7 @@ function R(e, t) {
   u.default.isLoggingAnalyticsEvents && console.info("AnalyticsUtils.track(...):", e, t), n ? o.report("Analytics", e, t) : o.report("Analytics", e)
 }
 let O = (0, s.trackMaker)({
-  analyticEventConfigs: T,
+  analyticEventConfigs: v,
   dispatcher: r.default,
   TRACK_ACTION_NAME: "TRACK"
 });

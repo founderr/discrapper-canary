@@ -21,8 +21,8 @@ var i = n("37983"),
   m = n("242670"),
   p = n("577776"),
   S = n("731898"),
-  v = n("811425"),
-  T = n("31695"),
+  T = n("811425"),
+  v = n("31695"),
   I = n("561744"),
   A = n("837899"),
   C = n("425190"),
@@ -46,7 +46,7 @@ let M = s.forwardRef(function(e, t) {
       closeOnSelect: h = !0,
       onOpen: m,
       onClose: p,
-      placeholder: T = D.default.Messages.SELECT,
+      placeholder: v = D.default.Messages.SELECT,
       wrapperClassName: y,
       className: N,
       isDisabled: M = !1,
@@ -81,7 +81,7 @@ let M = s.forwardRef(function(e, t) {
     } = (0, S.default)(), eo = s.useRef(null), [el, eu] = s.useState(null), [ed, ec] = s.useState(!1), [e_, ef] = s.useState(null), [eE, eh] = s.useState(!1), eg = s.useRef(null), em = s.useRef(null), {
       options: ep,
       loading: eS,
-      onQueryChange: ev
+      onQueryChange: eT
     } = function(e) {
       let {
         active: t,
@@ -143,15 +143,15 @@ let M = s.forwardRef(function(e, t) {
       active: ed,
       loadableOptions: n,
       debounceTime: B
-    }), eT = s.useMemo(() => (function(e, t) {
+    }), ev = s.useMemo(() => (function(e, t) {
       if (null == t) return [];
       let n = Array.isArray(t) ? t : [t];
       return n.map(t => "object" == typeof t && (null == t || "value" in t) ? t : e.find(e => e.value === t)).filter(Boolean)
-    })(ep, r), [ep, r]), eI = s.useMemo(() => eT.map(e => e.value), [eT]), eA = eT[eT.length - 1], eC = (0, I.default)(eA), ey = s.useId(), eN = s.useId(), eR = s.useId(), eO = s.useCallback(e => {
+    })(ep, r), [ep, r]), eI = s.useMemo(() => ev.map(e => e.value), [ev]), eA = ev[ev.length - 1], eC = (0, I.default)(eA), ey = s.useId(), eN = s.useId(), eR = s.useId(), eO = s.useCallback(e => {
       ed !== e && !M && (ec(e), e ? null == m || m() : null == p || p())
     }, [M, p, m, ed]), eD = s.useCallback(e => {
       ed && !e && eO(!1)
-    }, [eO, ed]), eP = (0, v.useIsVisible)(eD);
+    }, [eO, ed]), eP = (0, T.useIsVisible)(eD);
     s.useImperativeHandle(t, () => ({
       close() {
         eO(!1)
@@ -224,7 +224,7 @@ let M = s.forwardRef(function(e, t) {
       !ed && (E ? ef("") : null != eA && ef(eA.label))
     }, [E, eA, ed]), s.useLayoutEffect(() => {
       E && ef("")
-    }, [E, eT.length]);
+    }, [E, ev.length]);
     let eV = s.useCallback(function(e) {
       let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
       if (null == e) {
@@ -355,7 +355,7 @@ let M = s.forwardRef(function(e, t) {
                   }),
                   children: (0, i.jsx)(eB, {
                     query: e_,
-                    selectedOptions: eT,
+                    selectedOptions: ev,
                     loading: eS,
                     renderOptionPrefix: K,
                     renderOptionSuffix: j,
@@ -375,14 +375,14 @@ let M = s.forwardRef(function(e, t) {
                       null === (e = eo.current) || void 0 === e || e.setSelectionRange(0, null !== (t = null == e_ ? void 0 : e_.length) && void 0 !== t ? t : 0)
                     },
                     onChange: e => {
-                      ev(e), null == Y || Y(e), ef(e), eO(!0), eh(!0)
+                      eT(e), null == Y || Y(e), ef(e), eO(!0), eh(!0)
                     },
                     onKeyDown: e => {
                       var t;
                       null === (t = $.onKeyDown) || void 0 === t || t.call($, e), f(e), eF(e)
                     },
                     activeDescendant: el,
-                    placeholder: T,
+                    placeholder: v,
                     inputId: eR,
                     listboxId: ey,
                     navigatorId: eN,
@@ -400,7 +400,7 @@ let M = s.forwardRef(function(e, t) {
                 [P.iconsContainer]: !Z
               }),
               ref: ee,
-              children: [d && (null != e_ && "" !== e_ || eT.length > 0) ? (0, i.jsx)(c.Clickable, {
+              children: [d && (null != e_ && "" !== e_ || ev.length > 0) ? (0, i.jsx)(c.Clickable, {
                 "aria-label": D.default.Messages.CLEAR,
                 "aria-controls": eR,
                 onClick: eG,
@@ -444,7 +444,7 @@ function U(e) {
     renderOptionLabel: E,
     updatePosition: g,
     loading: S = !1,
-    multi: v,
+    multi: T,
     popoutPosition: I,
     closeOnSelect: A,
     renderOptionPrefix: C = () => null,
@@ -452,7 +452,7 @@ function U(e) {
   } = e, N = s.useRef(null), R = s.useCallback(e => {
     t(e), A && n()
   }, [A, n, t]);
-  return ((0, T.default)(g), S) ? (0, i.jsx)("div", {
+  return ((0, v.default)(g), S) ? (0, i.jsx)("div", {
     "aria-busy": !0,
     className: a(P.popout, P.loading, {
       [P.popoutPositionTop]: "top" === I
@@ -501,7 +501,7 @@ function U(e) {
         ...s,
         role: void 0,
         innerRole: "listbox",
-        innerAriaMultiselectable: v,
+        innerAriaMultiselectable: T,
         innerId: f,
         rowHeight: 44,
         sections: [o.length],
@@ -512,7 +512,7 @@ function U(e) {
             row: n
           } = e, s = o[n], a = E(s);
           return (0, i.jsx)(Option, {
-            multi: v,
+            multi: T,
             "aria-posinset": n,
             "aria-setsize": o.length,
             isSelected: r.includes(s.value),
@@ -699,8 +699,8 @@ function F(e) {
     ...g
   } = e, m = Math.max(n.length, (null != t ? t : "").length), p = s.useRef(null), {
     focusPreviousItem: S,
-    focusNextItem: v,
-    focusLastItem: T
+    focusNextItem: T,
+    focusLastItem: v
   } = function(e, t, n) {
     let i = s.useMemo(() => (0, l.createFocusManager)({
         getFocusableElements() {
@@ -759,7 +759,7 @@ function F(e) {
       renderOptionPrefix: f,
       renderOptionSuffix: E,
       selectValue: o,
-      focusNextItem: v,
+      focusNextItem: T,
       focusPreviousItem: S
     }), (0, i.jsx)(x, {
       style: {
@@ -774,7 +774,7 @@ function F(e) {
       isDisabled: c,
       inputRef: _,
       onKeyDown: e => {
-        ["ArrowLeft", "Backspace"].includes(e.key) && ("" === t || null == t) && r.length > 0 ? T() : u(e)
+        ["ArrowLeft", "Backspace"].includes(e.key) && ("" === t || null == t) && r.length > 0 ? v() : u(e)
       },
       ...g
     })]
@@ -799,8 +799,8 @@ function x(e) {
     setInputRef: m,
     isEditing: p,
     onKeyDown: S,
-    placeholder: v,
-    loading: T,
+    placeholder: T,
+    loading: v,
     style: I,
     className: A
   } = e;
@@ -816,7 +816,7 @@ function x(e) {
     "aria-disabled": c,
     "aria-controls": _,
     "aria-required": o,
-    "aria-busy": T,
+    "aria-busy": v,
     style: null != I ? I : {},
     "aria-activedescendant": null != f ? (0, u.createListItemId)(E, f) : "",
     disabled: c,
@@ -830,7 +830,7 @@ function x(e) {
       [P.disabled]: c
     }),
     onKeyDown: S,
-    placeholder: "" !== (null != t ? t : "").trim() ? void 0 : v,
+    placeholder: "" !== (null != t ? t : "").trim() ? void 0 : T,
     ref: m
   })
 }

@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return S
   },
   interpolateColor: function() {
-    return v
+    return T
   }
 }), n("424973");
 var i = n("509043");
@@ -269,7 +269,7 @@ function S(e) {
   return null === (t = E(s.hue, s.saturation * i, s.lightness)) || void 0 === t ? void 0 : t.toHexString()
 }
 
-function v(e, t, n) {
+function T(e, t, n) {
   let i = parseInt(e.substring(1, 3), 16),
     s = parseInt(e.substring(3, 5), 16),
     r = parseInt(e.substring(5, 7), 16),

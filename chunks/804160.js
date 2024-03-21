@@ -10,10 +10,10 @@ r.r(t), r.d(t, {
     return A
   },
   useIsMakingRequest: function() {
-    return w
+    return P
   },
   useIsStillIndexing: function() {
-    return P
+    return w
   },
   default: function() {
     return q
@@ -295,7 +295,7 @@ async function G(e) {
   await U(d)
 }
 
-function w(e) {
+function P(e) {
   return p(t => {
     var r;
     let n = I(e);
@@ -303,7 +303,7 @@ function w(e) {
   })
 }
 
-function P(e) {
+function w(e) {
   return p(t => {
     var r;
     let n = I(e);

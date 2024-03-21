@@ -28,12 +28,12 @@ var i = n("37983"),
       channel: S,
       isResending: C
     } = e, {
-      enabled: _
+      enabled: T
     } = c.default.useExperiment({
       location: "ec41f5_1"
     }, {
       autoTrackExposure: !0
-    }), T = _ ? y.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : C ? y.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : y.default.Messages.SHARE_NITRO_TOOLTIP, I = _ ? y.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [v, N] = l.useState(!1), [A, O] = l.useState(!1), R = (0, r.default)(null, () => O(!1)), {
+    }), _ = T ? y.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : C ? y.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : y.default.Messages.SHARE_NITRO_TOOLTIP, I = T ? y.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [v, N] = l.useState(!1), [A, O] = l.useState(!1), R = (0, r.default)(null, () => O(!1)), {
       analyticsLocations: M
     } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), k = S.isDM() && void 0 !== S.recipients ? S.recipients[0] : null, L = (0, o.default)();
     return t ? null : (0, i.jsxs)("div", {
@@ -46,9 +46,9 @@ var i = n("37983"),
         onClose: () => O(!1),
         isResending: C
       }), (0, i.jsx)(a.Tooltip, {
-        text: T,
+        text: _,
         shouldShow: !A,
-        "aria-label": null != I ? I : T,
+        "aria-label": null != I ? I : _,
         children: e => (0, i.jsx)("div", {
           onMouseEnter: () => {
             !A && !v && (N(!0), h.default.track(x.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
@@ -64,7 +64,7 @@ var i = n("37983"),
             ...e,
             innerClassName: g.button,
             isActive: A,
-            "aria-label": null != I ? I : T,
+            "aria-label": null != I ? I : _,
             "aria-haspopup": "dialog",
             onClick: () => {
               O(e => !e), h.default.track(x.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
@@ -77,7 +77,7 @@ var i = n("37983"),
               referralsRemaining: n,
               hovered: v,
               isResending: C,
-              shouldShowBirthdayUX: _,
+              shouldShowBirthdayUX: T,
               isLightTheme: (0, s.isThemeLight)(L)
             })
           })

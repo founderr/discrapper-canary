@@ -23,8 +23,8 @@ var i, s = n("917351"),
   m = n("42203"),
   p = n("42887"),
   S = n("985365"),
-  v = n("945956"),
-  T = n("590401"),
+  T = n("945956"),
+  v = n("590401"),
   I = n("278163"),
   A = n("599110"),
   C = n("104478"),
@@ -110,7 +110,7 @@ i = class extends l.default {
             m = this.getRTCConnectionId(),
             p = this.getGoLiveSource();
           (0, I.getSystemAnalyticsInfo)().then(S => {
-            var v, T, I;
+            var T, v, I;
             let C = null;
             if (null != S) {
               let {
@@ -129,7 +129,7 @@ i = class extends l.default {
               }
             }
             let y = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != s ? s : 0) + (null != r ? r : 0) + (null != o ? o : 0) + (null != h ? h : 0) + (null != _ ? _ : 0),
-              N = (null == p ? void 0 : null === (v = p.desktopSource) || void 0 === v ? void 0 : v.sourcePid) != null ? E.default.getGameForPID(p.desktopSource.sourcePid) : null,
+              N = (null == p ? void 0 : null === (T = p.desktopSource) || void 0 === T ? void 0 : T.sourcePid) != null ? E.default.getGameForPID(p.desktopSource.sourcePid) : null,
               {
                 gameName: D,
                 gameId: P,
@@ -155,7 +155,7 @@ i = class extends l.default {
               screens: u,
               windows: d,
               activity: c,
-              soundshare_session: null !== (I = null == p ? void 0 : null === (T = p.desktopSource) || void 0 === T ? void 0 : T.soundshareSession) && void 0 !== I ? I : void 0,
+              soundshare_session: null !== (I = null == p ? void 0 : null === (v = p.desktopSource) || void 0 === v ? void 0 : v.soundshareSession) && void 0 !== I ? I : void 0,
               share_game_name: D,
               share_game_id: P,
               share_game_exe: L,
@@ -190,7 +190,7 @@ i = class extends l.default {
     } = this.analyticsContext, {
       ownerId: r,
       guildId: a
-    } = this._streamContext, o = T.default.getRegion(v.default.getHostname()), l = h.BroadcastAutoBroadcast.getSetting(), {
+    } = this._streamContext, o = v.default.getRegion(T.default.getHostname()), l = h.BroadcastAutoBroadcast.getSetting(), {
       gameName: u,
       gameId: d,
       exe: c,

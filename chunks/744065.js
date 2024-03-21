@@ -24,7 +24,7 @@ function u(e, t) {
       onScroll: g,
       style: m,
       ...p
-    } = r, S = s.useRef(null), v = (0, l.usePaddingFixes)({
+    } = r, S = s.useRef(null), T = (0, l.usePaddingFixes)({
       paddingFix: E,
       orientation: f,
       dir: _,
@@ -45,7 +45,7 @@ function u(e, t) {
       ...p,
       children: (0, i.jsxs)(o.FocusRingScope, {
         containerRef: S,
-        children: [d, v]
+        children: [d, T]
       })
     })
   })

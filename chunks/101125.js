@@ -20,8 +20,8 @@ var r = n("714617"),
   m = n("964889"),
   p = n("271938"),
   S = n("546463"),
-  v = n("603699"),
-  T = n("686470"),
+  T = n("603699"),
+  v = n("686470"),
   I = n("52028"),
   A = n("824563"),
   C = n("235660"),
@@ -37,7 +37,7 @@ let N = !1,
   U = [];
 
 function w(e) {
-  return (0, m.shouldShareApplicationActivity)(e, T.default)
+  return (0, m.shouldShareApplicationActivity)(e, v.default)
 }
 
 function k(e) {
@@ -60,7 +60,7 @@ function k(e) {
 
 function V() {
   var e;
-  if (D = null !== (e = v.default.getIdleSince()) && void 0 !== e ? e : 0, L = v.default.isAFK(), M) R = O, G();
+  if (D = null !== (e = T.default.getIdleSince()) && void 0 !== e ? e : 0, L = T.default.isAFK(), M) R = O, G();
   else if (N) R = y.StatusTypes.INVISIBLE;
   else {
     let e = E.StatusSetting.getSetting();
@@ -87,7 +87,7 @@ function F() {
 }
 class x extends u.default.Store {
   initialize() {
-    this.waitFor(v.default, h.default, I.default, C.default, T.default, S.default), this.syncWith([I.default], V)
+    this.waitFor(T.default, h.default, I.default, C.default, v.default, S.default), this.syncWith([I.default], V)
   }
   getLocalPresence() {
     return {

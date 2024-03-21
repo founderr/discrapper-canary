@@ -44,11 +44,11 @@ function m(e) {
   let {
     contentDisplay: p,
     ...S
-  } = e, v = {}, {
-    analyticsLocations: T
+  } = e, T = {}, {
+    analyticsLocations: v
   } = (0, c.default)();
   s.Children.forEach(S.children, (e, t) => {
-    v[e.props.id] = {
+    T[e.props.id] = {
       children: e.props.children,
       impressionName: e.props.impressionName,
       impressionProperties: e.props.impressionProperties,
@@ -57,15 +57,15 @@ function m(e) {
   });
   let I = S.activeSlide,
     A = (0, d.default)(S.activeSlide);
-  let C = (g = null != A ? v[A] : null, m = v[I], null == g ? null : g.index > m.index ? "backwards" : g.index < m.index ? "forwards" : null),
+  let C = (g = null != A ? T[A] : null, m = T[I], null == g ? null : g.index > m.index ? "backwards" : g.index < m.index ? "forwards" : null),
     {
       reducedMotion: y
     } = s.useContext(l.AccessibilityPreferencesContext),
     N = s.useContext(_.default),
-    R = v[I].impressionName,
+    R = T[I].impressionName,
     O = {
-      ...v[I].impressionProperties,
-      location_stack: T
+      ...T[I].impressionProperties,
+      location_stack: v
     };
   N({
     type: a.ImpressionTypes.MODAL,
@@ -147,7 +147,7 @@ function m(e) {
             right: e.value.to(h("right", w))
           }
         },
-        children: v[t].children
+        children: T[t].children
       }, s)
     })
   })

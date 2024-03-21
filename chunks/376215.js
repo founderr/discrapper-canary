@@ -23,8 +23,8 @@ var i = n("37983"),
   g = n("378765"),
   S = n("393377"),
   C = n("761354"),
-  _ = n("49111"),
-  T = n("986548"),
+  T = n("49111"),
+  _ = n("986548"),
   I = n("356410");
 let v = [];
 
@@ -66,7 +66,7 @@ function N(e) {
     N.focusFirstVisibleItem()
   }, [N]);
   return ((0, g.useComponentAction)({
-    event: _.ComponentActions.FOCUS_ATTACHMENT_AREA,
+    event: T.ComponentActions.FOCUS_ATTACHMENT_AREA,
     handler: b
   }), l.useEffect(() => {
     if (O) {
@@ -89,7 +89,7 @@ function N(e) {
           return (0, i.jsx)("ul", {
             ref: l,
             ...r,
-            className: s(T.channelAttachmentArea, I.scrollbarGhost),
+            className: s(_.channelAttachmentArea, I.scrollbarGhost),
             children: O ? k.map(e => (0, i.jsx)(S.default, {
               channelId: t,
               keyboardModeEnabled: a,

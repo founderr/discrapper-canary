@@ -65,13 +65,13 @@ function S(e) {
   return !1
 }
 
-function v(e) {
+function T(e) {
   let {
     guildId: t
   } = e;
   return !!_.has(t) && m(t)
 }
-class T extends s.default.Store {
+class v extends s.default.Store {
   initialize() {
     this.waitFor(o.default)
   }
@@ -103,8 +103,8 @@ class T extends s.default.Store {
     return this.buildRoles(e), null !== (t = h.get(e)) && void 0 !== t && t
   }
 }
-T.displayName = "SubscriptionRoleStore";
-var I = new T(r.default, {
+v.displayName = "SubscriptionRoleStore";
+var I = new v(r.default, {
   CONNECTION_OPEN: p,
   LOGOUT: p,
   GUILD_CREATE: S,
@@ -119,9 +119,9 @@ var I = new T(r.default, {
     n.delete(t), g = n
   },
   GUILD_UPDATE: S,
-  GUILD_ROLE_CREATE: v,
-  GUILD_ROLE_UPDATE: v,
-  GUILD_ROLE_DELETE: v,
+  GUILD_ROLE_CREATE: T,
+  GUILD_ROLE_UPDATE: T,
+  GUILD_ROLE_DELETE: T,
   GUILD_MEMBER_UPDATE: function(e) {
     let {
       guildId: t,

@@ -35,8 +35,8 @@ function o(e) {
   let {
     focusPath: h
   } = _, [g, m] = i.useState(!1), [p, S] = i.useState(!1), [{
-    onItemFocusMemoizer: v,
-    onItemMouseEnterMemoizer: T
+    onItemFocusMemoizer: T,
+    onItemMouseEnterMemoizer: v
   }] = i.useState(() => ({
     onItemFocusMemoizer: new a.HandlerMemoizer(e => () => {
       m(!0), f({
@@ -134,10 +134,10 @@ function o(e) {
       role: s,
       id: (0, a.makeId)(t, r),
       tabIndex: -1,
-      onFocus: v.get(r),
-      onMouseEnter: T.get(r)
+      onFocus: T.get(r),
+      onMouseEnter: v.get(r)
     }
-  }, [t, N, v, T]), P = i.useMemo(() => ({
+  }, [t, N, T, v]), P = i.useMemo(() => ({
     dispatch: E,
     getContainerProps: R,
     getSubmenuProps: O,

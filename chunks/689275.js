@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return T
   }
 }), n("222007");
 var i = n("917351"),
@@ -97,7 +97,7 @@ class S extends r.default.Store {
   }
 }
 S.displayName = "ActiveThreadsStore";
-var v = new S(a.default, {
+var T = new S(a.default, {
   CONNECTION_OPEN: function(e) {
     d = {}, c.clear(), e.guilds.forEach(e => {
       E(e)

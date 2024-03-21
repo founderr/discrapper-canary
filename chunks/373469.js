@@ -18,8 +18,8 @@ var o = n("446674"),
   m = n("305961"),
   p = n("42887"),
   S = n("957255"),
-  v = n("945956"),
-  T = n("18494"),
+  T = n("945956"),
+  v = n("18494"),
   I = n("800762"),
   A = n("49111"),
   C = n("706530");
@@ -101,7 +101,7 @@ class U extends o.default.Store {
     return null !== (t = this.getActiveStreamForStreamKey(n)) && void 0 !== t ? t : null
   }
   getCurrentUserActiveStream() {
-    let e = T.default.getVoiceChannelId(),
+    let e = v.default.getVoiceChannelId(),
       t = g.default.getChannel(e);
     return null == t ? null : this.getActiveStreamForUser(h.default.getId(), t.getGuildId())
   }
@@ -112,7 +112,7 @@ class U extends o.default.Store {
   }
   getStreamerActiveStreamMetadata() {
     var e;
-    let t = T.default.getVoiceChannelId(),
+    let t = v.default.getVoiceChannelId(),
       n = g.default.getChannel(t);
     if (null == n) return null;
     let i = this.getActiveStreamForUser(h.default.getId(), n.getGuildId());
@@ -198,7 +198,7 @@ var w = new U(l.default, {
         }).ownerId] && (s[l.ownerId] = {}), s[l.ownerId][null !== (u = l.guildId) && void 0 !== u ? u : A.NULL_STRING_GUILD_ID] = l, !0
       } {
         let t = h.default.getSessionId();
-        return n === h.default.getId() && a !== t && null != v.default.getChannelId() ? e : function(e, t) {
+        return n === h.default.getId() && a !== t && null != T.default.getChannelId() ? e : function(e, t) {
           var n;
           let i = null != t ? t : A.NULL_STRING_GUILD_ID;
           return (null === (n = s[e]) || void 0 === n ? void 0 : n[i]) != null && (delete s[e][i], !0)

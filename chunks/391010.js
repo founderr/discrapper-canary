@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return m
   },
   getStatusValues: function() {
-    return v
+    return T
   },
   renderStatusMask: function() {
-    return T
+    return v
   },
   AnimatedStatus: function() {
     return I
@@ -85,7 +85,7 @@ function S(e, t, n) {
   return "".concat(.5625 * e + n, "px ").concat(.75 * e + t, "px")
 }
 
-function v(e) {
+function T(e) {
   let {
     size: t,
     status: n,
@@ -155,7 +155,7 @@ function v(e) {
   }
 }
 
-function T(e, t, n) {
+function v(e, t, n) {
   var s;
   let {
     bgRadius: r,
@@ -172,7 +172,7 @@ function T(e, t, n) {
     polygonOrigin: m,
     dotY: p,
     dotX: S,
-    dotRadius: v
+    dotRadius: T
   } = e;
   return (0, i.jsxs)("mask", {
     id: n,
@@ -203,7 +203,7 @@ function T(e, t, n) {
       fill: "black",
       cx: S,
       cy: p,
-      r: v
+      r: T
     })]
   })
 }
@@ -216,7 +216,7 @@ function I(e) {
     color: l,
     className: u,
     style: d
-  } = e, g = s.useId(), m = t === c.StatusTypes.ONLINE && n, p = s.useMemo(() => v({
+  } = e, g = s.useId(), m = t === c.StatusTypes.ONLINE && n, p = s.useMemo(() => T({
     size: r,
     status: t,
     isMobile: m
@@ -235,7 +235,7 @@ function I(e) {
     viewBox: "0 0 ".concat(r, " ").concat(C),
     className: a(f.mask, u),
     style: d,
-    children: [T(S, r, g), (0, i.jsx)(o.animated.rect, {
+    children: [v(S, r, g), (0, i.jsx)(o.animated.rect, {
       x: 0,
       y: 0,
       width: r,

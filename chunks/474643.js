@@ -57,14 +57,14 @@ function S(e, t) {
   delete s[t], a.isEmpty(s) && delete i[e]
 }
 
-function v() {
+function T() {
   let e = c.default.getId();
   if (null == e || f.default.totalUnavailableGuilds > 0) return;
   let t = m(e);
   for (let e in t) null == _.default.getChannel(e) && delete t[e]
 }
 
-function T(e) {
+function v(e) {
   let {
     channel: {
       id: t
@@ -154,7 +154,7 @@ I.displayName = "DraftStore", I.persistKey = "DraftStore", I.migrations = [e => 
 var A = new I(l.default, {
   CONNECTION_OPEN: function() {
     let e = c.default.getId();
-    return !(e in g) && (g[e] = {}), v(), !1
+    return !(e in g) && (g[e] = {}), T(), !1
   },
   LOGOUT: function(e) {
     !e.isSwitchingAccount && (g = {})
@@ -163,10 +163,10 @@ var A = new I(l.default, {
     e.userId in g && delete g[e.userId]
   },
   GUILD_DELETE: function() {
-    return v(), !1
+    return T(), !1
   },
-  CHANNEL_DELETE: T,
-  THREAD_DELETE: T,
+  CHANNEL_DELETE: v,
+  THREAD_DELETE: v,
   THREAD_CREATE: function(e) {
     let {
       channel: t

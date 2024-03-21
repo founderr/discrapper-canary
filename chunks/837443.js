@@ -107,8 +107,8 @@ class p extends a.PureComponent {
       stickToMarkers: m,
       className: p,
       children: S,
-      barStyles: v,
-      fillStyles: T,
+      barStyles: T,
+      fillStyles: v,
       mini: I,
       hideBubble: A,
       defaultValue: C,
@@ -182,11 +182,11 @@ class p extends a.PureComponent {
           children: F
         }), (0, r.jsx)("div", {
           className: l(h.bar, D),
-          style: v,
+          style: T,
           children: (0, r.jsx)("div", {
             className: h.barFill,
             style: {
-              ...T,
+              ...v,
               width: G
             }
           })

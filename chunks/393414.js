@@ -11,10 +11,10 @@ n.r(t), n.d(t, {
     return S
   },
   replaceWith: function() {
-    return v
+    return T
   },
   getHistory: function() {
-    return T
+    return v
   },
   getLastRouteChangeSource: function() {
     return I
@@ -80,11 +80,11 @@ function S() {
   return null != s && u.ChannelBackNavigationSources.has(s)
 }
 
-function v(e, t, n) {
+function T(e, t, n) {
   !g(e, "replace") && (c.log("Replacing route with ".concat(e)), "string" == typeof e ? i.replace(e, t) : i.replace(e), s = n)
 }
 
-function T() {
+function v() {
   return i
 }
 

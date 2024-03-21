@@ -41,12 +41,12 @@ function m(e) {
     asset: g,
     markAsDismissed: S,
     caretPosition: C = "caretTopCenter",
-    buttonLayout: _ = 0
+    buttonLayout: T = 0
   } = e;
   o.useEffect(() => {
     null == y || y()
   }, []);
-  let T = null != u;
+  let _ = null != u;
   return (0, r.jsxs)("div", {
     className: d(t, p.upsellTooltipWrapper, p[C]),
     children: [g, null == n ? null : (0, r.jsx)(c.Heading, {
@@ -58,12 +58,12 @@ function m(e) {
       className: d(a, p.content),
       variant: "text-sm/normal",
       children: l
-    }), null != s || T ? (0, r.jsxs)("div", {
+    }), null != s || _ ? (0, r.jsxs)("div", {
       className: d(p.upsellButtonsContainer, {
-        [p.upsellButtonsAdjacent]: 0 === _,
-        [p.upsellButtonsStacked]: 1 === _
+        [p.upsellButtonsAdjacent]: 0 === T,
+        [p.upsellButtonsStacked]: 1 === T
       }),
-      children: [T ? (0, r.jsx)(c.Button, {
+      children: [_ ? (0, r.jsx)(c.Button, {
         ...E,
         onClick: () => {
           null == h || h(), null == S || S(f.ContentDismissActionType.SECONDARY)
@@ -71,7 +71,7 @@ function m(e) {
         children: u
       }) : null, null == s ? null : (0, r.jsx)(c.Button, {
         className: d({
-          [p.fullWidth]: !T
+          [p.fullWidth]: !_
         }, x.className),
         color: x.color,
         look: x.look,

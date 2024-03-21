@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return S
   },
   WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: function() {
-    return v
+    return T
   },
   OSX_HARDWARE_AUTO_ENABLE_GPU_REGEX: function() {
-    return T
+    return v
   },
   MIN_CLIP_DURATION_SECONDS: function() {
     return I
@@ -104,8 +104,8 @@ let f = "alt+c",
   m = 3,
   p = 1,
   S = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-  v = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
-  T = /(Apple M[12].*)/,
+  T = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
+  v = /(Apple M[12].*)/,
   I = .1,
   A = 25,
   C = 0,

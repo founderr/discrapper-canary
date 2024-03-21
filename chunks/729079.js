@@ -37,7 +37,7 @@ function C(e, t, n) {
     query: t.trim()
   }
 }
-let _ = {
+let T = {
   stores: [d.default, f.default],
   matches(e, t, n, i, l) {
     var a;
@@ -82,7 +82,7 @@ let _ = {
       type: r.Spinner.Type.SPINNING_CIRCLE
     });
     if (null != t) {
-      var _, T;
+      var T, _;
       let e = !1,
         n = t.map((t, n) => {
           if (t.type === E.ChannelTextAreaIntegrationTypes.GIF) {
@@ -100,7 +100,7 @@ let _ = {
             }, "".concat(t.meta.url).concat(t.meta.src))
           }
         }),
-        r = u.commands === h.CommandMode.OLD_BUILT_INS ? x : null !== (T = null === (_ = d.default.getActiveCommand(s.id)) || void 0 === _ ? void 0 : _.integrationTitle) && void 0 !== T ? T : x,
+        r = u.commands === h.CommandMode.OLD_BUILT_INS ? x : null !== (_ = null === (T = d.default.getActiveCommand(s.id)) || void 0 === T ? void 0 : T.integrationTitle) && void 0 !== _ ? _ : x,
         o = S.length > 0 && null != r ? y.default.Messages.CONTENT_MATCHING.format({
           query: S,
           command: r
@@ -152,7 +152,7 @@ let _ = {
   }
 };
 
-function T(e) {
+function _(e) {
   return e.meta.url
 }
-var I = _
+var I = T

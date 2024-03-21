@@ -23,8 +23,8 @@ var i = n("37983"),
   g = n("429569"),
   S = n("215550"),
   C = n("782340"),
-  _ = n("348473");
-let T = (e, t) => "".concat(e, ":").concat(t),
+  T = n("348473");
+let _ = (e, t) => "".concat(e, ":").concat(t),
   I = l.forwardRef(function(e, t) {
     let n, {
         emoji: l,
@@ -36,7 +36,7 @@ let T = (e, t) => "".concat(e, ":").concat(t),
         showPulse: h,
         columnIndex: x,
         rowIndex: y,
-        size: T,
+        size: _,
         surrogateCodePoint: I,
         allowAnimatedEmoji: v,
         selectedItemClassName: N,
@@ -55,13 +55,13 @@ let T = (e, t) => "".concat(e, ":").concat(t),
     return (0, i.jsx)(o.FocusRing, {
       children: (0, i.jsx)("button", {
         ...O,
-        className: s(_.emojiItem, {
-          [_.emojiItemLarge]: u,
-          [_.emojiItemMedium]: d,
-          [_.emojiItemSelected]: c,
+        className: s(T.emojiItem, {
+          [T.emojiItemLarge]: u,
+          [T.emojiItemMedium]: d,
+          [T.emojiItemSelected]: c,
           [null != N ? N : ""]: c,
-          [_.emojiItemDisabled]: p && !M,
-          [_.showPulse]: h
+          [T.emojiItemDisabled]: p && !M,
+          [T.showPulse]: h
         }),
         "data-type": m.PickerContextMenuDataTypes.EMOJI,
         "data-id": l.id,
@@ -77,7 +77,7 @@ let T = (e, t) => "".concat(e, ":").concat(t),
           columnIndex: x,
           rowIndex: y,
           emoji: l,
-          size: T,
+          size: _,
           surrogateCodePoint: I,
           allowAnimatedEmoji: v,
           isLocked: k
@@ -96,7 +96,7 @@ function v(e) {
     onInspect: E,
     onSelect: g,
     isScrolling: S,
-    isUsingKeyboardNavigation: _,
+    isUsingKeyboardNavigation: T,
     showEmojiFavoriteTooltip: v,
     surrogateCodePoint: N,
     selectedItemClassName: A,
@@ -116,15 +116,15 @@ function v(e) {
     isDisabled: W,
     columnIndex: Y
   } = t, z = e => {
-    if (e.stopPropagation(), S.current || _.current) return;
+    if (e.stopPropagation(), S.current || T.current) return;
     let n = e.altKey;
     n && !c.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(V) && P(a), (0, h.hideHotspot)(h.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), g(t, {
       isFinalSelection: !e.shiftKey,
       toggleFavorite: n
     })
-  }, Z = () => {
-    !S.current && !_.current && E(t)
-  }, J = e => {
+  }, J = () => {
+    !S.current && !T.current && E(t)
+  }, Z = e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -148,7 +148,7 @@ function v(e) {
       ...d,
       key: a,
       ref: B
-    }, w !== T(Y, f) && (0, i.jsx)(I, {
+    }, w !== _(Y, f) && (0, i.jsx)(I, {
       ref: r,
       emoji: V,
       isFavorite: H.isFavoriteEmojiWithoutFetchingLatest(V),
@@ -158,19 +158,19 @@ function v(e) {
       isDisabled: W,
       showPulse: k === a,
       allowAnimatedEmoji: L,
-      onFocus: null != u ? u : Z,
-      onMouseMove: Z,
+      onFocus: null != u ? u : J,
+      onMouseMove: J,
       onMouseEnter: t,
       onMouseLeave: n,
       onClick: e => {
         if (null != B.current && null != U && null != b && !e.shiftKey && null != V.name && j && !G && L) {
           let e = null == V.id ? p.default.convertNameToSurrogate(V.name) : V.name,
             t = B.current.getBoundingClientRect();
-          t.x = U.x + (Y + 1) * K, F(T(Y, f)), (0, x.addReactionPickerAnimation)(b, e, V.id, t)
+          t.x = U.x + (Y + 1) * K, F(_(Y, f)), (0, x.addReactionPickerAnimation)(b, e, V.id, t)
         }
         z(e)
       },
-      onContextMenu: J,
+      onContextMenu: Z,
       tabIndex: o,
       columnIndex: Y,
       rowIndex: f,

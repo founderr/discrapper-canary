@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return s
+    return u
   }
 });
 var r = i("862205");
@@ -30,4 +30,4 @@ let n = (0, r.createExperiment)({
     }
   }]
 });
-var s = n
+var u = n

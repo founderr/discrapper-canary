@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return S
   },
   WebAudioAPISound: function() {
-    return v
+    return T
   }
 }), n("222007"), n("70102");
 var i, s, r = n("917351"),
@@ -98,7 +98,7 @@ class S {
     this.name = e, this._volume = n
   }
 }
-class v {
+class T {
   get volume() {
     return this._volume
   }

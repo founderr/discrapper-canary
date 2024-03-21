@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   trackClientThemeUpdated: function() {
-    return H
+    return F
   },
   default: function() {
     return W
@@ -49,8 +49,8 @@ let k = Object.freeze({
     EDITOR: x.UserSettingsDelay.SLOW_USER_ACTION,
     SETTINGS: x.UserSettingsDelay.INFREQUENT_USER_ACTION
   }),
-  F = l.createContext({}),
-  H = e => {
+  H = l.createContext({}),
+  F = e => {
     let {
       isPersisted: t,
       themeName: n,
@@ -135,7 +135,7 @@ let k = Object.freeze({
       type: t,
       delay: k[t]
     }), [t]);
-    return (0, s.jsx)(F.Provider, {
+    return (0, s.jsx)(H.Provider, {
       value: o,
       children: (0, s.jsx)("div", {
         ...a,
@@ -149,10 +149,10 @@ K.Basic = e => {
     className: t
   } = e, {
     delay: n
-  } = l.useContext(F), {
+  } = l.useContext(H), {
     analyticsLocations: i
   } = (0, p.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [a, o, u] = (0, d.useStateFromStoresArray)([I.default, y.default, b.default], () => [I.default.theme, null == b.default.gradientPreset, y.default.useSystemTheme === L.SystemThemeState.ON]), c = e => {
-    (0, O.resetBackgroundGradientPreset)(), H({
+    (0, O.resetBackgroundGradientPreset)(), F({
       isPersisted: !0,
       analyticsLocations: i,
       themeName: "default ".concat(e)
@@ -185,7 +185,7 @@ K.Basic = e => {
   } = e, {
     type: u,
     delay: f
-  } = l.useContext(F), {
+  } = l.useContext(H), {
     analyticsLocations: g
   } = (0, p.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [v, I, y] = (0, d.useStateFromStoresArray)([b.default], () => {
     var e;
@@ -195,7 +195,7 @@ K.Basic = e => {
     (R === w.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || y === c.BackgroundGradientPresetId.EASTER_EGG) && A(!0)
   }, [R, u, y]);
   let K = (e, t) => {
-    if ((0, O.updateBackgroundGradientPreset)(e.id), H({
+    if ((0, O.updateBackgroundGradientPreset)(e.id), F({
         isPersisted: !v,
         analyticsLocations: g,
         themeName: c.BackgroundGradientPresetId[e.id]

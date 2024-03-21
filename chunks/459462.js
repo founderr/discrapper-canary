@@ -27,10 +27,10 @@ function f(e) {
     title: m,
     style: p,
     focusProps: S,
-    ...v
+    ...T
   } = e;
   null != t && null == n && (n = d.designConfig.getDefaultLinkInterceptor(t));
-  let T = s.useContext(o.BlockInteractionsContext),
+  let v = s.useContext(o.BlockInteractionsContext),
     I = {
       className: a(_.anchor, {
         [_.anchorUnderlineOnHover]: g
@@ -42,9 +42,9 @@ function f(e) {
       title: null != m ? m : void 0,
       style: null != p ? p : void 0
     };
-  return (null != t && !(0, c.isSafeRedirect)(t) && (I.rel = "noreferrer noopener", I.target = "_blank"), T && delete I.href, null != n) ? (0, i.jsx)(l.Clickable, {
+  return (null != t && !(0, c.isSafeRedirect)(t) && (I.rel = "noreferrer noopener", I.target = "_blank"), v && delete I.href, null != n) ? (0, i.jsx)(l.Clickable, {
     tag: "a",
-    ...v,
+    ...T,
     ...I,
     onClick: n,
     focusProps: S,
@@ -52,7 +52,7 @@ function f(e) {
   }) : (0, i.jsx)(u.FocusRing, {
     ...S,
     children: (0, i.jsx)("a", {
-      ...v,
+      ...T,
       ...I,
       children: f
     })

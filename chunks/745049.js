@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return S
   },
   GUILD_EVENT_MAX_DESCRIPTION_LENGTH: function() {
-    return v
+    return T
   },
   MAX_EVENT_LOCATION_LENGTH: function() {
-    return T
+    return v
   },
   ANALYTICS_GUILD_EVENTS_MODAL_NAME: function() {
     return I
@@ -64,8 +64,8 @@ n.r(t), n.d(t, {
 var i, s, r, a, o, l, u, d, c, _, f, E, h, g, m = n("718517"),
   p = n("49111");
 let S = 100,
-  v = 1e3,
-  T = 100,
+  T = 1e3,
+  v = 100,
   I = "Guild Events Modal",
   A = "-1";
 (d = i || (i = {}))[d.SCHEDULED = 1] = "SCHEDULED", d[d.ACTIVE = 2] = "ACTIVE", d[d.COMPLETED = 3] = "COMPLETED", d[d.CANCELED = 4] = "CANCELED";

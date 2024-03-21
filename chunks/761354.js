@@ -26,8 +26,8 @@ var i = n("37983"),
   g = n("228220"),
   S = n("956089"),
   C = n("58608"),
-  _ = n("103603"),
-  T = n("299039"),
+  T = n("103603"),
+  _ = n("299039"),
   I = n("9560"),
   v = n("271972"),
   N = n("782340"),
@@ -89,7 +89,7 @@ function M(e) {
       let {
         width: e,
         height: t
-      } = (0, _.zoomFit)(n.width, n.height);
+      } = (0, T.zoomFit)(n.width, n.height);
       p({
         width: e,
         height: t
@@ -222,7 +222,7 @@ function P(e) {
     keyboardModeEnabled: c,
     label: h,
     size: C = v.AttachmentListItemSizes.MEDIUM,
-    canEdit: _ = !0,
+    canEdit: T = !0,
     hideFileName: O = !1,
     clip: R
   } = e, M = null != R;
@@ -254,7 +254,7 @@ function P(e) {
     };
   return (0, i.jsxs)(v.default, {
     actions: (0, i.jsxs)(l.Fragment, {
-      children: [_ ? (0, i.jsx)(I.default, {
+      children: [T ? (0, i.jsx)(I.default, {
         className: s({
           [A.action]: k
         }),
@@ -271,7 +271,7 @@ function P(e) {
             [A.actionBarIcon]: k
           })
         })
-      }) : null, _ && !M ? (0, i.jsx)(I.default, {
+      }) : null, T && !M ? (0, i.jsx)(I.default, {
         className: s({
           [A.action]: k
         }),
@@ -318,7 +318,7 @@ function P(e) {
     }), M && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(f.default, {
         className: A.clipsFooter,
-        createdAt: T.default.extractTimestamp(R.id),
+        createdAt: _.default.extractTimestamp(R.id),
         participantIds: R.users,
         applicationId: R.applicationId,
         title: R.name,

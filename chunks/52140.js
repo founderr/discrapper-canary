@@ -23,8 +23,8 @@ var i = n("37983"),
   g = n("873218"),
   S = n("250832"),
   C = n("22248"),
-  _ = n("28236"),
-  T = n("306160"),
+  T = n("28236"),
+  _ = n("306160"),
   I = n("794818"),
   v = n("844659"),
   N = n("657057"),
@@ -46,7 +46,7 @@ function U(e) {
   return (0, i.jsx)(o.Clickable, {
     onClick: () => {
       try {
-        (0, T.copy)(t), a(!0)
+        (0, _.copy)(t), a(!0)
       } catch (e) {
         a(!1)
       }
@@ -102,7 +102,7 @@ let D = {
       return (0, i.jsx)("pre", {
         children: (0, i.jsxs)("div", {
           className: j.codeContainer,
-          children: [T.SUPPORTS_COPY ? (0, i.jsx)("div", {
+          children: [_.SUPPORTS_COPY ? (0, i.jsx)("div", {
             className: j.codeActions,
             children: (0, i.jsx)(U, {
               text: e.content
@@ -146,7 +146,7 @@ let D = {
     }, n.key)
   },
   soundboard: {
-    react: e => (0, i.jsx)(_.default, {
+    react: e => (0, i.jsx)(T.default, {
       channelId: e.channelId,
       soundId: e.soundId,
       jumbo: e.jumboable

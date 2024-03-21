@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   getDirection: function() {
-    return T
+    return v
   },
   generateSessionDescription: function() {
     return y
@@ -39,9 +39,9 @@ var i, s, r, a, o = n("798680"),
   p = n("53452");
 let S = new g.default("SDP");
 (r = i || (i = {})).AUDIO = "a", r.VIDEO = "v", (a = s || (s = {})).SENDRECV = "sendrecv", a.SENDONLY = "sendonly", a.RECVONLY = "recvonly", a.INACTIVE = "inactive";
-let v = "UDP/TLS/RTP/SAVPF";
+let T = "UDP/TLS/RTP/SAVPF";
 
-function T(e) {
+function v(e) {
   switch (e) {
     case "recvonly":
       return "sendonly";
@@ -128,7 +128,7 @@ function C(e) {
     fmtp: [],
     payloads: o,
     port: 0,
-    protocol: v,
+    protocol: T,
     rtp: [{
       codec: "NULL",
       payload: o,
@@ -140,7 +140,7 @@ function C(e) {
   let {
     media: [g]
   } = h.parse(r);
-  if (g.type = n, g.protocol = v, g.payloads = o, g.setup = i, g.mid = t, g.rtcpMux = "rtcp-mux", g.direction = s, g.ssrcs = d, d.length > 0 && (null != _ && (g.ssrcGroups = l(d, 4).map(e => {
+  if (g.type = n, g.protocol = T, g.payloads = o, g.setup = i, g.mid = t, g.rtcpMux = "rtcp-mux", g.direction = s, g.ssrcs = d, d.length > 0 && (null != _ && (g.ssrcGroups = l(d, 4).map(e => {
       let t = e[0].id;
       return {
         semantics: "FID",

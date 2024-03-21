@@ -21,8 +21,8 @@ var i = n("917351"),
   m = n("270926"),
   p = n("647374"),
   S = n("693078"),
-  v = n("290689"),
-  T = n("839462"),
+  T = n("290689"),
+  v = n("839462"),
   I = n("646630"),
   A = n("788554"),
   C = n("49111"),
@@ -129,7 +129,7 @@ let b = e => {
     em: a.defaultRules.em,
     u: a.defaultRules.u,
     br: a.defaultRules.br,
-    text: v.default,
+    text: T.default,
     inlineCode: {
       ...a.defaultRules.inlineCode,
       parse(e, t, n) {
@@ -141,7 +141,7 @@ let b = e => {
       }
     },
     emoticon: {
-      order: v.default.order,
+      order: T.default.order,
       requiredFirstCharacters: ["\xaf"],
       match: e => /^(¯\\_\(ツ\)_\/¯)/.exec(e),
       parse: e => ({
@@ -163,7 +163,7 @@ let b = e => {
       }
     },
     roleMention: {
-      order: v.default.order,
+      order: T.default.order,
       requiredFirstCharacters: ["<"],
       match: e => /^<@&(\d+)>/.exec(e),
       parse(e, t, n) {
@@ -193,7 +193,7 @@ let b = e => {
       }
     },
     mention: {
-      order: v.default.order,
+      order: T.default.order,
       requiredFirstCharacters: ["<", "@"],
       match(e, t) {
         let n = /^<@!?(\d+)>|^(@(?:everyone|here|Clyde))/.exec(e);
@@ -257,7 +257,7 @@ let b = e => {
       }
     },
     emoji: {
-      order: v.default.order,
+      order: T.default.order,
       requiredFirstCharacters: [":"],
       match(e) {
         let t = l.default.EMOJI_NAME_RE.exec(e);
@@ -272,7 +272,7 @@ let b = e => {
       }
     },
     soundboard: {
-      order: v.default.order,
+      order: T.default.order,
       requiredFirstCharacters: ["<"],
       match: e => /^<sound:(\d+)>/.exec(e),
       parse(e, t, n) {
@@ -290,7 +290,7 @@ let b = e => {
       }
     },
     customEmoji: {
-      order: v.default.order,
+      order: T.default.order,
       requiredFirstCharacters: ["<"],
       match: e => /^<a?:(\w+):(\d+)>/.exec(e),
       parse: e => ({
@@ -299,7 +299,7 @@ let b = e => {
       })
     },
     timestamp: {
-      order: v.default.order - 1,
+      order: T.default.order - 1,
       requiredFirstCharacters: ["<"],
       match: e => I.TIMESTAMP_REGEX.exec(e),
       parse(e) {
@@ -317,7 +317,7 @@ let b = e => {
       parse: a.defaultRules.u.parse
     },
     spoiler: {
-      order: v.default.order,
+      order: T.default.order,
       requiredFirstCharacters: ["|"],
       match: e => C.MARKDOWN_SPOILER_REGEXP.exec(e),
       parse: (e, t, n) => ({
@@ -326,7 +326,7 @@ let b = e => {
       })
     },
     staticRouteLink: {
-      order: v.default.order,
+      order: T.default.order,
       requiredFirstCharacters: ["<"],
       match: e => C.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e),
       parse(e, t, n) {
@@ -350,7 +350,7 @@ let b = e => {
     heading: m.default,
     list: S.default
   },
-  k = (0, A.default)([w, T.default]),
+  k = (0, A.default)([w, v.default]),
   V = s.omit(k, ["inlineCode", "codeBlock", "br", "blockQuote"]),
   G = s.omit(k, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink"]),
   F = s.omit(k, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink"]),

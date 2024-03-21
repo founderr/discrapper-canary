@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   NO_ACTIVITIES: function() {
-    return T
+    return v
   },
   default: function() {
     return K
@@ -24,7 +24,7 @@ var s = n("446674"),
   m = n("420444"),
   p = n("272505"),
   S = n("49111");
-let v = {
+let T = {
     seenActivities: new Set,
     everLaunchedActivities: new Set,
     seenNewActivities: {},
@@ -32,7 +32,7 @@ let v = {
     shouldShowNewActivityIndicator: !1,
     usersHavePlayedByApp: new Map
   },
-  T = [],
+  v = [],
   I = new Map,
   A = new Map,
   C = new Map,
@@ -67,9 +67,9 @@ function V(e) {
     p = null != m && u.default.canBasicChannel(S.BasicPermissions.CONNECT, m) || (null == m ? void 0 : m.type) === S.ChannelTypes.DM || (null == m ? void 0 : m.type) === S.ChannelTypes.GROUP_DM;
   if (function(e, t) {
       var n;
-      v.usersHavePlayedByApp.set(e, new Set([...null !== (n = v.usersHavePlayedByApp.get(e)) && void 0 !== n ? n : [], ...t]))
+      T.usersHavePlayedByApp.set(e, new Set([...null !== (n = T.usersHavePlayedByApp.get(e)) && void 0 !== n ? n : [], ...t]))
     }(a, c), !p) return;
-  let T = {
+  let v = {
       activitySessionId: null != f ? f : d,
       applicationId: a,
       channelId: s,
@@ -79,10 +79,10 @@ function V(e) {
       userIds: new Set(c)
     },
     N = o.default.getId(),
-    R = I.get(T.applicationId);
+    R = I.get(v.applicationId);
   if (c.some(e => e === N) && null != R && (I.set(R.applicationId, {
       ...R,
-      ...T
+      ...v
     }), r.default.dispatch({
       type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
       channelId: s,
@@ -103,7 +103,7 @@ function V(e) {
     P = k(i),
     L = null !== (n = A.get(P)) && void 0 !== n ? n : [],
     M = L.filter(e => !(e.applicationId === a && e.channelId === s));
-  0 !== c.length && (D.push(T), M.push(T)), C.set(s, D), A.set(P, M)
+  0 !== c.length && (D.push(v), M.push(v)), C.set(s, D), A.set(P, M)
 }
 
 function G(e) {
@@ -166,7 +166,7 @@ class H extends s.default.PersistedStore {
     }));
     let s = new Set(null !== (t = null == e ? void 0 : e.seenActivities) && void 0 !== t ? t : []),
       r = new Set(null !== (n = null == e ? void 0 : e.everLaunchedActivities) && void 0 !== n ? n : []);
-    null != e && (v = {
+    null != e && (T = {
       ...e,
       seenActivities: s,
       everLaunchedActivities: r,
@@ -174,7 +174,7 @@ class H extends s.default.PersistedStore {
     })
   }
   getState() {
-    return v
+    return T
   }
   getSelfEmbeddedActivityForChannel(e) {
     var t;
@@ -190,11 +190,11 @@ class H extends s.default.PersistedStore {
   }
   getEmbeddedActivitiesForGuild(e) {
     var t;
-    return null !== (t = A.get(e)) && void 0 !== t ? t : T
+    return null !== (t = A.get(e)) && void 0 !== t ? t : v
   }
   getEmbeddedActivitiesForChannel(e) {
     var t;
-    return null !== (t = C.get(e)) && void 0 !== t ? t : T
+    return null !== (t = C.get(e)) && void 0 !== t ? t : v
   }
   getEmbeddedActivitiesByChannel() {
     return C
@@ -242,7 +242,7 @@ class H extends s.default.PersistedStore {
   }
   getUsersHavePlayedByApp(e) {
     var t;
-    return [...null !== (t = v.usersHavePlayedByApp.get(e)) && void 0 !== t ? t : []]
+    return [...null !== (t = T.usersHavePlayedByApp.get(e)) && void 0 !== t ? t : []]
   }
   getConnectedActivityChannelId() {
     return i
@@ -270,7 +270,7 @@ class H extends s.default.PersistedStore {
     }
   }
   hasActivityEverBeenLaunched(e) {
-    return v.everLaunchedActivities.has(e)
+    return T.everLaunchedActivities.has(e)
   }
 }
 H.displayName = "EmbeddedActivitiesStore", H.persistKey = "EmbeddedActivities", H.migrations = [e => ({
@@ -364,7 +364,7 @@ let Y = new H(r.default, {
     let {
       applicationId: t
     } = e;
-    v.everLaunchedActivities.add(t),
+    T.everLaunchedActivities.add(t),
       function() {
         N = !1
       }()
@@ -469,17 +469,17 @@ let Y = new H(r.default, {
       t.forEach(e => {
         let t = e.application_id,
           i = e.client_platform_config[(0, g.default)((0, f.getOS)())];
-        if (!v.seenActivities.has(t) && (v.shouldShowNewActivityIndicator = !0, v.seenActivities.add(t)), null == i.label_until) return;
+        if (!T.seenActivities.has(t) && (T.shouldShowNewActivityIndicator = !0, T.seenActivities.add(t)), null == i.label_until) return;
         let s = new Date(i.label_until).getTime();
         if (s < n) return;
-        let r = v.seenNewActivities[t],
-          o = Object.hasOwn(v.seenNewActivities, t),
+        let r = T.seenNewActivities[t],
+          o = Object.hasOwn(T.seenNewActivities, t),
           l = new Date(r).getTime() < s;
-        i.label_type === a.EmbeddedActivityLabelTypes.NEW && (!o || l) && (v.shouldShowNewActivityIndicator = !0, v.seenNewActivities[t] = i.label_until);
-        let u = v.seenUpdatedActivities[t],
-          d = Object.hasOwn(v.seenUpdatedActivities, t),
+        i.label_type === a.EmbeddedActivityLabelTypes.NEW && (!o || l) && (T.shouldShowNewActivityIndicator = !0, T.seenNewActivities[t] = i.label_until);
+        let u = T.seenUpdatedActivities[t],
+          d = Object.hasOwn(T.seenUpdatedActivities, t),
           c = new Date(u).getTime() < s;
-        i.label_type === a.EmbeddedActivityLabelTypes.UPDATED && (!d || c) && (v.shouldShowNewActivityIndicator = !0, v.seenUpdatedActivities[t] = i.label_until)
+        i.label_type === a.EmbeddedActivityLabelTypes.UPDATED && (!d || c) && (T.shouldShowNewActivityIndicator = !0, T.seenUpdatedActivities[t] = i.label_until)
       })
     }({
       activities: n,
@@ -499,7 +499,7 @@ let Y = new H(r.default, {
     })
   },
   EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR: () => {
-    v.shouldShowNewActivityIndicator = !1
+    T.shouldShowNewActivityIndicator = !1
   },
   EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE: function(e) {
     let {

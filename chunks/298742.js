@@ -21,7 +21,7 @@ let o = s.forwardRef(function(e, t) {
     title: h,
     error: g,
     ...m
-  } = e, p = s.useId(), S = s.useId(), v = null !== (n = m.titleId) && void 0 !== n ? n : p, T = null != g ? null !== (o = m.errorId) && void 0 !== o ? o : S : void 0;
+  } = e, p = s.useId(), S = s.useId(), T = null !== (n = m.titleId) && void 0 !== n ? n : p, v = null != g ? null !== (o = m.errorId) && void 0 !== o ? o : S : void 0;
   return (0, i.jsxs)("div", {
     ref: t,
     className: null != d ? d : void 0,
@@ -32,13 +32,13 @@ let o = s.forwardRef(function(e, t) {
       required: f,
       error: g,
       className: c,
-      id: v,
-      errorId: T,
+      id: T,
+      errorId: v,
       ...m,
       children: h
     }) : null, (0, i.jsx)(r.FormContextProvider, {
-      titleId: v,
-      errorId: T,
+      titleId: T,
+      errorId: v,
       error: null != g ? g : void 0,
       children: l
     })]

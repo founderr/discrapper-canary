@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   buildCommand: function() {
-    return T
+    return v
   },
   buildApplicationCommands: function() {
     return I
@@ -72,9 +72,9 @@ var i = n("552442"),
   m = n("696415"),
   p = n("317041"),
   S = n("49111"),
-  v = n("843455");
+  T = n("843455");
 
-function T(e) {
+function v(e) {
   var t, n, i;
   let s, {
     rootCommand: r,
@@ -159,14 +159,14 @@ function I(e, t) {
       useKeyedPermissions: l
     } = t;
     if (r.hasOwnProperty("id")) {
-      if (null == r.options || 0 === r.options.length) return [T({
+      if (null == r.options || 0 === r.options.length) return [v({
         rootCommand: s,
         command: r,
         applicationId: a,
         subCommandPath: o,
         useKeyedPermissions: l
       })]
-    } else if (r.type !== d.ApplicationCommandOptionType.SUB_COMMAND && r.type !== d.ApplicationCommandOptionType.SUB_COMMAND_GROUP && (null == r.options || 0 === r.options.length)) return [T({
+    } else if (r.type !== d.ApplicationCommandOptionType.SUB_COMMAND && r.type !== d.ApplicationCommandOptionType.SUB_COMMAND_GROUP && (null == r.options || 0 === r.options.length)) return [v({
       rootCommand: s,
       command: r,
       applicationId: a,
@@ -188,7 +188,7 @@ function I(e, t) {
       useKeyedPermissions: l
     }));
     let _ = r.options.filter(e => e.type === d.ApplicationCommandOptionType.SUB_COMMAND);
-    for (let e = 0; e < _.length; e++) u.push(T({
+    for (let e = 0; e < _.length; e++) u.push(v({
       rootCommand: s,
       command: _[e],
       applicationId: a,
@@ -199,7 +199,7 @@ function I(e, t) {
       }]),
       useKeyedPermissions: l
     }));
-    return 0 === c.length && 0 === _.length && u.push(T({
+    return 0 === c.length && 0 === _.length && u.push(v({
       rootCommand: s,
       command: r,
       applicationId: a,
@@ -258,7 +258,7 @@ function R(e, t, n, i) {
   }, {
     autoTrackExposure: !1
   }) || t.getIntegrations(i.id).length > 0);
-  return i.isArchivedLockedThread() ? e.can(u.combine(v.Permissions.USE_APPLICATION_COMMANDS, v.Permissions.MANAGE_THREADS), i) : !!(0, f.isReadableType)(i.type) && e.can(u.combine(v.Permissions.USE_APPLICATION_COMMANDS, v.Permissions.SEND_MESSAGES), i)
+  return i.isArchivedLockedThread() ? e.can(u.combine(T.Permissions.USE_APPLICATION_COMMANDS, T.Permissions.MANAGE_THREADS), i) : !!(0, f.isReadableType)(i.type) && e.can(u.combine(T.Permissions.USE_APPLICATION_COMMANDS, T.Permissions.SEND_MESSAGES), i)
 }
 let O = u.deserialize(0);
 
@@ -271,7 +271,7 @@ function D(e) {
     commandLevelPermissions: r,
     defaultMemberPermissions: a
   } = e;
-  if (n.ownerId === i.userId || t.can(v.Permissions.ADMINISTRATOR, n)) return !0;
+  if (n.ownerId === i.userId || t.can(T.Permissions.ADMINISTRATOR, n)) return !0;
   let o = n.id;
   if (null != r) {
     let e = P(i, o, r);

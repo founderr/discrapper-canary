@@ -29,8 +29,8 @@ var i = n("37983"),
   g = n("151185"),
   S = n("368121"),
   C = n("305122"),
-  _ = n("235004"),
-  T = n("389480"),
+  T = n("235004"),
+  _ = n("389480"),
   I = n("78581"),
   v = n("23106"),
   N = n("796864"),
@@ -97,14 +97,14 @@ var L = l.forwardRef(function(e, t) {
     onMouseEnter: G,
     onSelectItem: H,
     analyticsLocations: B,
-    buttonOverlay: V = T.SoundButtonOverlay.PLAY,
+    buttonOverlay: V = _.SoundButtonOverlay.PLAY,
     ...K
   } = e, {
     soundId: W,
     name: Y,
     emojiId: z,
-    emojiName: Z
-  } = L, J = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, N.useSoundButtonContextMenu)(L, null == P ? void 0 : P.guild_id), {
+    emojiName: J
+  } = L, Z = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, N.useSoundButtonContextMenu)(L, null == P ? void 0 : P.guild_id), {
     playSoundboardSound: X,
     previewSound: Q,
     isPlayingSound: $
@@ -126,11 +126,11 @@ var L = l.forwardRef(function(e, t) {
     el = l.useRef(.01),
     ea = l.useRef(new u.Interval),
     es = "1" === L.soundId,
-    er = (0, o.useStateFromStores)([_.default], () => _.default.isFavoriteSound(W), [W]),
+    er = (0, o.useStateFromStores)([T.default], () => T.default.isFavoriteSound(W), [W]),
     eo = "sound-".concat(L.soundId),
     eu = (0, r.useListItem)(eo),
-    ed = null != z || null != Z,
-    ec = !(0, I.canUseSoundboardSound)(J, L, P),
+    ed = null != z || null != J,
+    ec = !(0, I.canUseSoundboardSound)(Z, L, P),
     ef = U || w && !ec;
 
   function ep(e) {
@@ -216,7 +216,7 @@ var L = l.forwardRef(function(e, t) {
         ref: et,
         children: [ed && (0, i.jsx)(f.default, {
           emojiId: z,
-          emojiName: Z,
+          emojiName: J,
           className: R.emoji
         }), (0, i.jsx)(c.Text, {
           variant: "text-xs/medium",
@@ -228,7 +228,7 @@ var L = l.forwardRef(function(e, t) {
         })]
       }), function() {
         switch (V) {
-          case T.SoundButtonOverlay.ADD:
+          case _.SoundButtonOverlay.ADD:
             return (0, i.jsxs)("div", {
               className: R.addButtonOverlay,
               children: [(0, i.jsx)("div", {
@@ -247,7 +247,7 @@ var L = l.forwardRef(function(e, t) {
                 }), ef && em()]
               })]
             });
-          case T.SoundButtonOverlay.PLAY:
+          case _.SoundButtonOverlay.PLAY:
           default:
             return ex()
         }

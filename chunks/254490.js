@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return S
   },
   maxFileSize: function() {
-    return v
+    return T
   },
   anyFileTooLarge: function() {
-    return T
+    return v
   },
   uploadSumTooLarge: function() {
     return I
@@ -113,7 +113,7 @@ function S(e) {
   return s.filesize(e)
 }
 
-function v(e) {
+function T(e) {
   let t = d.default.getCurrentUser();
   o.default.trackExposure({
     location: "de18ec_1"
@@ -127,8 +127,8 @@ function v(e) {
   return Math.max(s, n)
 }
 
-function T(e, t) {
-  let n = v(t);
+function v(e, t) {
+  let n = T(t);
   return Array.from(e).some(e => e.size > n)
 }
 

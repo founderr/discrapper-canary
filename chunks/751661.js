@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return S
   },
   showChannelChangeConfirmationAlert: function() {
-    return v
+    return T
   }
 });
 var i = n("37983");
@@ -122,7 +122,7 @@ function S(e, t) {
   }(e)
 }
 
-function v(e, t) {
+function T(e, t) {
   return (0, s.openModalLazy)(async () => {
     let {
       default: s

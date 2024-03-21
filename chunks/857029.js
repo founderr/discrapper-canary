@@ -35,10 +35,10 @@ function d(e) {
     onDispatch: m,
     autoFocusElement: p = !0,
     useVirtualFocus: S = !1
-  } = e, v = i.useCallback((e, t) => {
+  } = e, T = i.useCallback((e, t) => {
     let n = (0, s.default)(e, t);
     return null != m && m(e, n, t), n
-  }, [m]), [T, I] = i.useReducer(v, {
+  }, [m]), [v, I] = i.useReducer(T, {
     focusedX: d,
     focusedY: c,
     columnCounts: n
@@ -46,7 +46,7 @@ function d(e) {
     columnCounts: A,
     focusedX: C,
     focusedY: y
-  } = T, [N] = i.useState(() => (0, a.throttle)(I, 16));
+  } = v, [N] = i.useState(() => (0, a.throttle)(I, 16));
   return i.useEffect(() => {
       I({
         type: s.GridActionType.UPDATE_COLUMN_COUNTS,
@@ -67,9 +67,9 @@ function d(e) {
         enabled: m,
         autoFocusElement: p,
         useVirtualFocus: S
-      } = e, v = i.useRef();
-      v.current = m;
-      let T = u(l(t, d, c)),
+      } = e, T = i.useRef();
+      T.current = m;
+      let v = u(l(t, d, c)),
         [I, A] = i.useState(!1),
         [C, y] = i.useState(!1),
         [N, R] = i.useState(!1),
@@ -85,7 +85,7 @@ function d(e) {
         }));
       i.useEffect(() => () => O.clean(), [O]);
       let D = i.useCallback(e => {
-          if (!v.current || !p) return !1;
+          if (!T.current || !p) return !1;
           e.focus()
         }, [p]),
         P = i.useCallback((e, n) => {
@@ -124,15 +124,15 @@ function d(e) {
         null != n && D(n)
       }, [t, M, I, D, d, c]);
       let U = i.useCallback(e => {
-        v.current && null == e && b(!0)
+        T.current && null == e && b(!0)
       }, []);
       i.useEffect(() => {
-        I && C && null != T && (D(T), y(!1))
-      }, [C, T]), i.useEffect(() => {
+        I && C && null != v && (D(v), y(!1))
+      }, [C, v]), i.useEffect(() => {
         I && (!N && P(d, c), R(!1))
       }, [d, c]);
       let w = i.useCallback(e => {
-          if (!v.current) return;
+          if (!T.current) return;
           if (!S && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
             e.preventDefault(), e.stopPropagation(), L();
             return
@@ -173,13 +173,13 @@ function d(e) {
               return;
             case r.ActionType.SELECT_FOCUSED_ITEM:
               var s;
-              if (p && (null == (s = T) ? void 0 : s.ownerDocument.activeElement) !== s || e.repeat) return;
+              if (p && (null == (s = v) ? void 0 : s.ownerDocument.activeElement) !== s || e.repeat) return;
               e.preventDefault(), e.stopPropagation(), h({
                 type: t
-              }), null != _ ? _(d, c, e) : null != T && T.click()
+              }), null != _ ? _(d, c, e) : null != v && v.click()
           }
-        }, [L, h, p, T, _, d, c]),
-        k = i.useCallback(e => e.currentTarget !== e.target ? (!I && (A(!0), R(!0)), !1) : I ? (L(!1), !1) : void(g && null != T ? P(d, c) : L(!0)), [I, g, T, L, P, d, c]),
+        }, [L, h, p, v, _, d, c]),
+        k = i.useCallback(e => e.currentTarget !== e.target ? (!I && (A(!0), R(!0)), !1) : I ? (L(!1), !1) : void(g && null != v ? P(d, c) : L(!0)), [I, g, v, L, P, d, c]),
         V = i.useCallback(e => {
           if (e.target !== e.currentTarget) {
             if (e.currentTarget.contains(e.relatedTarget)) return !1;

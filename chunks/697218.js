@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return p
   },
   transformUser: function() {
-    return v
+    return T
   },
   mergeUser: function() {
     return I
@@ -40,7 +40,7 @@ function S(e, t, n) {
   return s && m++, s
 }
 
-function v(e) {
+function T(e) {
   let t = e.mfa_enabled;
   null != t && (e.mfaEnabled = t, delete e.mfa_enabled);
   let n = (0, l.getPremiumTypeFromRawValue)(e.premium_type);
@@ -59,7 +59,7 @@ function v(e) {
   return void 0 !== d && (e.globalName = d, delete e.global_name), e
 }
 
-function T(e) {
+function v(e) {
   return e.id !== _.default.getId()
 }
 
@@ -70,7 +70,7 @@ function I(e) {
   if (null == i) void 0 !== (t = (i = new u.default(e)).premiumType) && s && (i.premiumType = A((0, l.isStaffEnv)(i), i.premiumType));
   else if (n) {
     var r;
-    let n = v(e);
+    let n = T(e);
     void 0 !== (t = null !== (r = n.premium_type) && void 0 !== r ? r : n.premiumType) && s && (0, l.isStaffEnvRawData)(n) && (n = function(e) {
       var t;
       let n = null !== (t = e.premium_type) && void 0 !== t ? t : e.premiumType,
@@ -91,17 +91,17 @@ function A(e, t) {
 
 function C(e, t) {
   var n, i, s, r, a;
-  if (null != e.author && "SENDING" !== e.state && T(e.author) && I(e.author, t), null === (n = e.mentions) || void 0 === n || n.forEach(e => {
-      T(e) && I(e, t)
-    }), (null === (i = e.interaction) || void 0 === i ? void 0 : i.user) != null && T(null === (s = e.interaction) || void 0 === s ? void 0 : s.user) && I(e.interaction.user, t), null === (r = e.attachments) || void 0 === r || r.forEach(e => {
+  if (null != e.author && "SENDING" !== e.state && v(e.author) && I(e.author, t), null === (n = e.mentions) || void 0 === n || n.forEach(e => {
+      v(e) && I(e, t)
+    }), (null === (i = e.interaction) || void 0 === i ? void 0 : i.user) != null && v(null === (s = e.interaction) || void 0 === s ? void 0 : s.user) && I(e.interaction.user, t), null === (r = e.attachments) || void 0 === r || r.forEach(e => {
       var n;
       null === (n = e.clip_participants) || void 0 === n || n.forEach(e => {
-        T(e) && I(e, t)
+        v(e) && I(e, t)
       })
     }), (null === (a = e.resolved) || void 0 === a ? void 0 : a.users) != null)
     for (let n in e.resolved.users) {
       let i = e.resolved.users[n];
-      T(i) && I(i, t)
+      v(i) && I(i, t)
     }
 }
 
@@ -546,14 +546,14 @@ function eS(e) {
   return t.reduce((e, t) => I(t) || e, !1)
 }
 
-function ev(e) {
+function eT(e) {
   let {
     users: t
   } = e;
   return t.reduce((e, t) => I(t) || e, !1)
 }
 
-function eT(e) {
+function ev(e) {
   let {
     users: t
   } = e;
@@ -710,8 +710,8 @@ class ey extends f.default {
       FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eS,
       FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eI,
       FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eA,
-      FAMILY_CENTER_REQUEST_LINK_SUCCESS: ev,
-      FRIEND_FINDER_PYMK_LOADED: eT,
+      FAMILY_CENTER_REQUEST_LINK_SUCCESS: eT,
+      FRIEND_FINDER_PYMK_LOADED: ev,
       MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eC
     })
   }

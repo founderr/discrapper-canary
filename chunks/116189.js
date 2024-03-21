@@ -39,13 +39,13 @@ let g = {
     displayName: "",
     value: ""
   })),
-  _ = {
+  T = {
     results: {
       choices: [],
       isError: !0
     }
   },
-  T = a.debounce(d.default, h.AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+  _ = a.debounce(d.default, h.AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
     leading: !0,
     trailing: !0
   }),
@@ -64,7 +64,7 @@ let g = {
         if (l) {
           let l = u.default.getActiveCommand(e.id),
             a = i.getCommandOptionValues();
-          T({
+          _({
             command: l,
             optionValues: a,
             context: {
@@ -78,7 +78,7 @@ let g = {
           })
         }
         let a = o.default.getLastErrored(e.id);
-        if (a) return _;
+        if (a) return T;
         let r = o.default.getAutocompleteChoices(e.id, s.name, n);
         return null == r ? S : {
           results: {

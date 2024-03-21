@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   generateEmptyPollAnswer: function() {
-    return v
+    return T
   },
   filterOutUUID: function() {
-    return T
+    return v
   },
   hasNonVoteReactions: function() {
     return I
@@ -52,7 +52,7 @@ var i = n("917351"),
   p = n("49111"),
   S = n("782340");
 
-function v() {
+function T() {
   return {
     text: void 0,
     image: void 0,
@@ -62,7 +62,7 @@ function v() {
   }
 }
 
-function T(e) {
+function v(e) {
   return e.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, "")
 }
 

@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return S
   },
   LANGUAGE_OPTIONS: function() {
-    return v
+    return T
   },
   DISCOVERY_PARTICIPATOR_REQUIREMENT: function() {
-    return T
+    return v
   },
   DISCOVERY_COMMUNICATOR_REQUIREMENT: function() {
     return I
@@ -114,11 +114,11 @@ function S() {
   }).filter(e => !p.includes(e.value))
 }
 S();
-let v = u.default.getLanguages().filter(e => !p.includes(e.code)).map(e => "en-US" === e.code ? {
+let T = u.default.getLanguages().filter(e => !p.includes(e.code)).map(e => "en-US" === e.code ? {
     ...e,
     name: u.default.Messages.en
   } : e),
-  T = 40,
+  v = 40,
   I = 20;
 (s = o || (o = {})).GAME_RECOMMENDATIONS = "Game Recommendations", s.SERVER_RECOMMENDATIONS = "Server Recommendations", (r = l || (l = {}))[r.Activity = 0] = "Activity", r[r.Discover = 1] = "Discover", r[r.Education = 2] = "Education", r[r.Music = 3] = "Music", r[r.Science = 4] = "Science", r[r.Stage = 5] = "Stage", r[r.Television = 6] = "Television";
 let A = {

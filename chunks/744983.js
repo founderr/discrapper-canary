@@ -51,8 +51,8 @@ function p(e, t) {
   return null == i ? n : t(i)
 }
 let S = "SearchStore",
-  v = !1,
-  T = {},
+  T = !1,
+  v = {},
   I = null;
 
 function A(e) {
@@ -62,9 +62,9 @@ function A(e) {
     query: i
   } = e;
   if ("string" != typeof i || "" === (i = i.trim())) return;
-  let s = T[n] = null !== (t = T[n]) && void 0 !== t ? t : [],
+  let s = v[n] = null !== (t = v[n]) && void 0 !== t ? t : [],
     r = s.indexOf(i); - 1 !== r ? (s.splice(r, 1), s.unshift(i)) : null != s[0] && "" !== s[0] && i.startsWith(s[0]) ? s[0] = i : r < 0 && s.unshift(i), s.length > 5 && s.splice(5, s.length), o.default.set(S, {
-    history: T
+    history: v
   })
 }
 
@@ -88,9 +88,9 @@ class N extends a.default.Store {
       var t;
       Object.keys(t = e.history).forEach(e => {
         Array.isArray(t[e]) && (t[e] = t[e].filter(e => "string" == typeof e && e.trim())), (!Array.isArray(t[e]) || 0 === t[e].length) && delete t[e]
-      }), T = t
+      }), v = t
     }
-    v = !!o.default.get("tokenized")
+    T = !!o.default.get("tokenized")
   }
   isOpen() {
     return h
@@ -106,7 +106,7 @@ class N extends a.default.Store {
     return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e))
   }
   isTokenized() {
-    return v
+    return T
   }
   getSearchType(e) {
     return p(null != e ? e : I, e => e.searchType)
@@ -146,7 +146,7 @@ class N extends a.default.Store {
     return p(e, e => e.editorState)
   }
   getHistory(e) {
-    return T[e]
+    return v[e]
   }
   getOffset(e) {
     var t;
@@ -292,8 +292,8 @@ var R = new N(l.default, {
     let {
       searchId: t
     } = e;
-    null == t ? (o.default.remove(S), T = {}) : (delete T[t], o.default.set(S, {
-      history: T
+    null == t ? (o.default.remove(S), v = {}) : (delete v[t], o.default.set(S, {
+      history: v
     }))
   },
   SEARCH_REMOVE_HISTORY: function(e) {
@@ -301,13 +301,13 @@ var R = new N(l.default, {
       searchId: t,
       query: n
     } = e;
-    null != T[t] && (T[t] = T[t].filter(e => e !== n), o.default.set(S, {
-      history: T
+    null != v[t] && (v[t] = v[t].filter(e => e !== n), o.default.set(S, {
+      history: v
     }))
   },
   SEARCH_ADD_HISTORY: A,
   LOGOUT: function() {
-    o.default.remove(S), T = {}
+    o.default.remove(S), v = {}
   },
   CONNECTION_OPEN: function() {
     Object.keys(E).forEach(e => {

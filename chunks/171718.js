@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
     return S
   },
   getToken: function() {
-    return v
+    return T
   },
   setToken: function() {
-    return T
+    return v
   },
   hideToken: function() {
     return I
@@ -86,11 +86,11 @@ function S() {
   })), h = !0
 }
 
-function v(e) {
+function T(e) {
   return (S(), null != e) ? _[e] : i
 }
 
-function T(e, t) {
+function v(e, t) {
   if (null == e) {
     C(t);
     return

@@ -24,8 +24,8 @@ var s = n("414456"),
       confirmColor: m,
       confirmText: p = _.default.Messages.OKAY,
       secondaryConfirmText: S,
-      onCancel: v,
-      onClose: T,
+      onCancel: T,
+      onClose: v,
       onConfirm: I,
       onConfirmSecondary: A,
       title: C,
@@ -37,7 +37,7 @@ var s = n("414456"),
       size: a.Button.Sizes.XLARGE,
       color: a.Button.Colors.PRIMARY,
       onClick: () => {
-        null == T || T(), null == v || v()
+        null == v || v(), null == T || T()
       },
       className: f.secondaryButton,
       children: h
@@ -50,7 +50,7 @@ var s = n("414456"),
       children: p
     })), null != S && "" !== S && (s = (0, i.jsx)(o.Clickable, {
       onClick: () => {
-        null == T || T(), null == A || A()
+        null == v || v(), null == A || A()
       },
       className: f.minorContainer,
       children: (0, i.jsx)(d.Text, {
@@ -64,7 +64,7 @@ var s = n("414456"),
       "aria-label": C,
       children: (0, i.jsxs)("form", {
         onSubmit: e => {
-          null != e && e.preventDefault(), null == T || T(), null == I || I()
+          null != e && e.preventDefault(), null == v || v(), null == I || I()
         },
         className: f.form,
         children: [(0, i.jsx)(u.ModalContent, {

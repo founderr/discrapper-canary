@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   BasePopout: function() {
-    return T
+    return v
   }
 }), n("222007"), n("70102");
 var i = n("37983"),
@@ -21,8 +21,8 @@ var i = n("37983"),
   m = n("983782"),
   p = n("678904"),
   S = n("49111");
-let v = new Set(["Spacebar", " ", "Enter"]);
-class T extends s.Component {
+let T = new Set(["Spacebar", " ", "Enter"]);
+class v extends s.Component {
   shouldShowPopout(e, t) {
     return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout
   }
@@ -207,7 +207,7 @@ class T extends s.Component {
         }
       }
     }, this.handleKeyboardPreload = e => {
-      v.has(e.key) && this.handlePreload()
+      T.has(e.key) && this.handlePreload()
     }, this.handleDocumentMouseDown = e => {
       let {
         ignoreModalClicks: t
@@ -225,9 +225,9 @@ class T extends s.Component {
     }
   }
 }
-T.defaultProps = {
+v.defaultProps = {
   autoInvert: !1,
   nudgeAlignIntoViewport: !1,
   spacing: 0,
   loadingComponent: (0, i.jsx)(p.LoadingPopout, {})
-}, T.contextType = g.default
+}, v.contextType = g.default

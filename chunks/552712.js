@@ -48,13 +48,13 @@ function S() {
   u = new Set, d = new Set, c = new Map, _ = new Map, f = new Map
 }
 
-function v() {
+function T() {
   if (i === a.default.locale) return !1;
   i = a.default.locale, S()
 }
-class T extends s.Store {
+class v extends s.Store {
   initialize() {
-    this.waitFor(a.default, l.default), this.syncWith([a.default], v), i = a.default.locale
+    this.waitFor(a.default, l.default), this.syncWith([a.default], T), i = a.default.locale
   }
   get(e) {
     return c.get(e)
@@ -73,8 +73,8 @@ class T extends s.Store {
     return d.has(e)
   }
 }
-T.displayName = "SKUStore";
-var I = new T(r.default, {
+v.displayName = "SKUStore";
+var I = new v(r.default, {
   STORE_LISTINGS_FETCH_SUCCESS: m,
   APPLICATION_STORE_DIRECTORY_FETCH_SUCCESS: m,
   STORE_LISTING_FETCH_SUCCESS: function(e) {

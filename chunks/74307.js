@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   TextArea: function() {
-    return v
+    return T
   }
 }), n("424973");
 var i = n("37983"),
@@ -21,7 +21,7 @@ var i = n("37983"),
 let m = (0, o.v4)(),
   p = (0, o.v4)(),
   S = (0, o.v4)();
-class v extends s.Component {
+class T extends s.Component {
   getPaddingRight() {
     let {
       maxLength: e,
@@ -116,8 +116,8 @@ class v extends s.Component {
       minLength: u,
       maxLength: c,
       allowOverflow: m,
-      spellCheck: v,
-      resizeable: T,
+      spellCheck: T,
+      resizeable: v,
       className: I,
       id: A,
       rows: C,
@@ -141,7 +141,7 @@ class v extends s.Component {
             className: a(h.inputDefault, E.textArea, g.scrollbarDefault, I, {
               [h.error]: L,
               [h.disabled]: n,
-              [E.resizeable]: T
+              [E.resizeable]: v
             }),
             "aria-labelledby": M,
             "aria-describedby": b,
@@ -156,7 +156,7 @@ class v extends s.Component {
             autoFocus: o,
             minLength: u,
             maxLength: m ? void 0 : c,
-            spellCheck: v,
+            spellCheck: T,
             required: R,
             onChange: this.onChange,
             onBlur: this.onBlur,
@@ -220,7 +220,7 @@ class v extends s.Component {
     }
   }
 }
-v.contextType = u.FormContext, v.defaultProps = {
+T.contextType = u.FormContext, T.defaultProps = {
   name: "",
   disabled: !1,
   placeholder: "",

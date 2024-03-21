@@ -40,7 +40,7 @@ class _ extends a.Component {
       closeOnScroll: m,
       useMouseEnter: p,
       renderPopout: S,
-      layerContext: v
+      layerContext: T
     } = this.props;
     return (0, r.jsx)(l.BasePopout, {
       ref: this.ref,
@@ -74,7 +74,7 @@ class _ extends a.Component {
       ignoreModalClicks: g,
       closeOnScroll: m,
       useMouseEnter: p,
-      layerContext: v,
+      layerContext: T,
       children: e
     })
   }

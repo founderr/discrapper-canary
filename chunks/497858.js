@@ -22,7 +22,7 @@ var i = n("884691"),
   y = n("958706");
 
 function g(e, t, n) {
-  var g, S, C, _, T, I, v;
+  var g, S, C, T, _, I, v;
   let {
     channel: N,
     type: A
@@ -61,7 +61,7 @@ function g(e, t, n) {
     navigator: w,
     activeCommand: U,
     activeCommandOption: D,
-    canMentionUsers: null !== (T = null === (S = A.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== T && T,
+    canMentionUsers: null !== (_ = null === (S = A.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== _ && _,
     canMentionEveryone: b,
     canMentionClyde: L,
     hidePersonalInformation: j,
@@ -90,5 +90,5 @@ function g(e, t, n) {
         for (let n of t) n.removeChangeListener(e)
       }
     }
-  }, [H, null === (_ = O.query) || void 0 === _ ? void 0 : _.typeInfo]), [O, H, w]
+  }, [H, null === (T = O.query) || void 0 === T ? void 0 : T.typeInfo]), [O, H, w]
 }

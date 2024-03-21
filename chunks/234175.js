@@ -23,8 +23,8 @@ var i = n("37983"),
   g = n("159885"),
   S = n("256860"),
   C = n("364685"),
-  _ = n("161585"),
-  T = n("24373"),
+  T = n("161585"),
+  _ = n("24373"),
   I = n("41170"),
   v = n("49111"),
   N = n("13030"),
@@ -49,9 +49,9 @@ let R = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
     } = e, p = (0, u.useAnalyticsContext)(), E = (0, f.useExpressionPickerStore)(e => "" !== e.searchQuery), g = l.useCallback((e, a, r) => {
       var u, c;
       let f;
-      let g = (null === (u = n[0]) || void 0 === u ? void 0 : u.type) === _.StickerCategoryTypes.FAVORITE,
+      let g = (null === (u = n[0]) || void 0 === u ? void 0 : u.type) === T.StickerCategoryTypes.FAVORITE,
         S = g ? 1 : 0,
-        R = (null === (c = n[S]) || void 0 === c ? void 0 : c.type) === _.StickerCategoryTypes.RECENT,
+        R = (null === (c = n[S]) || void 0 === c ? void 0 : c.type) === T.StickerCategoryTypes.RECENT,
         k = n.length > 0,
         P = n.length;
       if (0 === a && g) return (0, i.jsx)("div", {
@@ -93,11 +93,11 @@ let R = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
       let b = t === a,
         j = n[a],
         U = n[a + 1],
-        D = null != U && j.type === _.StickerCategoryTypes.GUILD && U.type !== _.StickerCategoryTypes.GUILD,
-        w = j.type === _.StickerCategoryTypes.PACK,
+        D = null != U && j.type === T.StickerCategoryTypes.GUILD && U.type !== T.StickerCategoryTypes.GUILD,
+        w = j.type === T.StickerCategoryTypes.PACK,
         F = "",
         G = null;
-      if (j.type === _.StickerCategoryTypes.GUILD || j.type === _.StickerCategoryTypes.EMPTY_GUILD_UPSELL) {
+      if (j.type === T.StickerCategoryTypes.GUILD || j.type === T.StickerCategoryTypes.EMPTY_GUILD_UPSELL) {
         let e = m.default.getGuild(j.id);
         null != e && (f = e.id, F = e.name, G = (0, i.jsx)(d.default, {
           guild: e,
@@ -108,7 +108,7 @@ let R = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
         null != e && (F = e.name, G = (0, i.jsx)(I.default, {
           disableAnimation: !b || E,
           size: M,
-          sticker: (0, T.getStickerPackPreviewSticker)(e)
+          sticker: (0, _.getStickerPackPreviewSticker)(e)
         }))
       }
       return (0, i.jsxs)(l.Fragment, {
@@ -128,7 +128,7 @@ let R = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
                 [O.firstPartyCategorySelected]: !E && b && w
               }),
               onClick: () => {
-                j.type === _.StickerCategoryTypes.PACK && y.default.track(v.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                j.type === T.StickerCategoryTypes.PACK && y.default.track(v.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                   location: null == p ? void 0 : p.location,
                   tab: N.ExpressionPickerViewType.STICKER,
                   sticker_pack_id: j.id,
@@ -145,7 +145,7 @@ let R = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
     }, [t, p, E, n]), S = l.useCallback((e, t) => t ? U : 0, []), R = l.useCallback((e, t) => {
       let i = n[t],
         l = n[t + 1],
-        a = null != l && i.type === _.StickerCategoryTypes.GUILD && l.type !== _.StickerCategoryTypes.GUILD;
+        a = null != l && i.type === T.StickerCategoryTypes.GUILD && l.type !== T.StickerCategoryTypes.GUILD;
       return M + (a ? D : k)
     }, [n]), b = l.useCallback(e => {
       var t;
@@ -172,12 +172,12 @@ var F = e => {
     hasFirstPartyStickerPacks: y
   } = l.useMemo(() => {
     var e, t;
-    let n = f.filter(e => e.type === _.StickerCategoryTypes.GUILD).length,
-      i = (null === (e = f[0]) || void 0 === e ? void 0 : e.type) === _.StickerCategoryTypes.RECENT,
-      l = (null === (t = f[0]) || void 0 === t ? void 0 : t.type) === _.StickerCategoryTypes.FAVORITE,
+    let n = f.filter(e => e.type === T.StickerCategoryTypes.GUILD).length,
+      i = (null === (e = f[0]) || void 0 === e ? void 0 : e.type) === T.StickerCategoryTypes.RECENT,
+      l = (null === (t = f[0]) || void 0 === t ? void 0 : t.type) === T.StickerCategoryTypes.FAVORITE,
       a = n + (i ? 1 : 0) + (l ? 1 : 0),
       s = a * (M + k) - k + D,
-      r = null != f.find(e => e.type === _.StickerCategoryTypes.PACK);
+      r = null != f.find(e => e.type === T.StickerCategoryTypes.PACK);
     return {
       firstStandardStickerCategoryIndex: a + 1,
       firstStandardStickerCategoryOffsetTop: s,
@@ -191,7 +191,7 @@ var F = e => {
   let {
     renderCategoryListItem: g,
     rowHeight: C,
-    onScroll: T
+    onScroll: _
   } = w({
     activeIndex: d,
     stickerPickerCategories: f,
@@ -208,7 +208,7 @@ var F = e => {
     expressionsListRef: t,
     store: c.StickerPickerStore,
     listPadding: j,
-    onScroll: T,
+    onScroll: _,
     renderCategoryListItem: g,
     rowCount: f.length,
     categories: f,

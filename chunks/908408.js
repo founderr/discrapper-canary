@@ -23,8 +23,8 @@ var i = n("37983"),
   g = n("646718"),
   S = n("782340"),
   C = n("350327"),
-  _ = n("481927");
-let T = () => (0, x.setShowPremiumUpsell)(!1),
+  T = n("481927");
+let _ = () => (0, x.setShowPremiumUpsell)(!1),
   I = e => {
     var t, n, a;
     let {
@@ -50,7 +50,7 @@ let T = () => (0, x.setShowPremiumUpsell)(!1),
       children: [O ? (0, i.jsx)(f.default, {
         trialOffer: v,
         discountOffer: N,
-        onClose: T,
+        onClose: _,
         type: g.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
         subscriptionTier: null !== (a = null == v ? void 0 : null === (n = v.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : g.PremiumSubscriptionSKUs.TIER_2,
         children: A ? S.default.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
@@ -62,7 +62,7 @@ let T = () => (0, x.setShowPremiumUpsell)(!1),
       }) : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("img", {
           className: C.upsellImage,
-          src: _,
+          src: T,
           alt: S.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
         }), (0, i.jsx)(r.Text, {
           className: C.upsellTitle,
@@ -81,7 +81,7 @@ let T = () => (0, x.setShowPremiumUpsell)(!1),
         buttonText: O ? A ? S.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : S.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
       }), (0, i.jsx)(r.Clickable, {
         className: C.upsellClose,
-        onClick: T,
+        onClick: _,
         children: (0, i.jsx)(p.default, {})
       })]
     })

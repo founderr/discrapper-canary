@@ -24,8 +24,8 @@ var l = n("627445"),
   g = n("697218"),
   S = n("666897"),
   C = n("387111"),
-  _ = n("158998"),
-  T = n("680894");
+  T = n("158998"),
+  _ = n("680894");
 
 function I(e) {
   let {
@@ -47,7 +47,7 @@ function I(e) {
         guildId: R
       })
     })
-  }, k = _.default.useName(A), L = (0, r.useStateFromStores)([h.default, x.default, y.default], () => C.default.getNickname(R, I, A)), P = E.default.getGuild(R), b = (0, f.useClydeEnabled)(P, O), j = b && l === T.CLYDE_AI_USER_ID ? T.CLYDE_AI_MENTION_COLOR : null, U = e => (0, i.jsx)(S.default, {
+  }, k = T.default.useName(A), L = (0, r.useStateFromStores)([h.default, x.default, y.default], () => C.default.getNickname(R, I, A)), P = E.default.getGuild(R), b = (0, f.useClydeEnabled)(P, O), j = b && l === _.CLYDE_AI_USER_ID ? _.CLYDE_AI_MENTION_COLOR : null, U = e => (0, i.jsx)(S.default, {
     className: t,
     onContextMenu: M,
     color: j,

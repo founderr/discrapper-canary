@@ -43,8 +43,8 @@ function S(e) {
     hidePersonalInformation: c,
     isUsingGuildBio: S,
     lastSection: C = !1,
-    animateOnHover: _ = !1,
-    isHovering: T = !1,
+    animateOnHover: T = !1,
+    isHovering: _ = !1,
     lineClamp: I
   } = e, {
     location: v
@@ -89,8 +89,8 @@ function S(e) {
       })]
     }), (0, i.jsx)(p.default, {
       userBio: l,
-      animateOnHover: _,
-      isHovering: T,
+      animateOnHover: T,
+      isHovering: _,
       lineClamp: I
     })]
   })

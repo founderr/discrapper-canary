@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return _
   }
 });
 var i = n("37983"),
@@ -23,15 +23,15 @@ var i = n("37983"),
   g = n("718422"),
   S = n("49111"),
   C = n("782340"),
-  _ = n("925063");
+  T = n("925063");
 
-function T(e) {
+function _(e) {
   let {
     user: t,
     autoFocus: n = !1,
     className: a,
     inputClassName: r,
-    onSend: T
+    onSend: _
   } = e, I = l.useRef(null), v = (0, u.useStateFromStores)([E.default], () => E.default.isBlocked(t.id)), N = l.useCallback(e => {
     if ("Enter" === e.key) {
       e.preventDefault(), o(null != I.current, "Keypress on Input when not mounted");
@@ -47,16 +47,16 @@ function T(e) {
         i && (c.default.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
           let t = x.default.getChannel(e);
           o(null != t, "Newly created PrivateChannel is null"), p.default.sendMessage(t.id, h.default.parse(t, n)), (0, f.popLayer)()
-        }), null == T || T())
+        }), null == _ || _())
       }), !0
     }
     e.which === S.KeyboardKeys.SPACE && e.stopPropagation()
-  }, [t, T]), A = v ? C.default.Messages.QUICK_DM_BLOCKED : C.default.Messages.QUICK_DM_USER.format({
+  }, [t, _]), A = v ? C.default.Messages.QUICK_DM_BLOCKED : C.default.Messages.QUICK_DM_USER.format({
     name: y.default.getName(t)
   });
   return (0, i.jsx)(d.TextInput, {
     className: a,
-    inputClassName: s(r, _.input),
+    inputClassName: s(r, T.input),
     inputRef: I,
     autoFocus: n,
     placeholder: A,

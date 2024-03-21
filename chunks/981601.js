@@ -23,8 +23,8 @@ var i = n("37983"),
   g = n("26989"),
   S = n("305961"),
   C = n("824563"),
-  _ = n("27618"),
-  T = n("697218"),
+  T = n("27618"),
+  _ = n("697218"),
   I = n("599110"),
   v = n("756507"),
   N = n("713135"),
@@ -52,14 +52,14 @@ function H(e) {
     guildId: n,
     channelId: a,
     messageId: s,
-    roleId: T,
+    roleId: _,
     setNote: H,
     closePopout: B,
     setPopoutRef: V,
     disableUserProfileLink: K = __OVERLAY__,
     analyticsParams: W = {},
     newAnalyticsLocations: Y = []
-  } = e, z = l.useRef(null), Z = (0, O.default)(t.id, n), J = (0, d.default)(z), q = (0, r.useStateFromStores)([N.default], () => {
+  } = e, z = l.useRef(null), J = (0, O.default)(t.id, n), Z = (0, d.default)(z), q = (0, r.useStateFromStores)([N.default], () => {
     var e;
     return null === (e = N.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
   }), X = (0, r.useStateFromStores)([S.default], () => null != n ? S.default.getGuild(n) : null), Q = (0, r.useStateFromStores)([g.default], () => null != n ? g.default.getMember(n, t.id) : null), $ = t.isNonUserBot(), {
@@ -71,7 +71,7 @@ function H(e) {
     guildId: n,
     channelId: a,
     messageId: s,
-    roleId: T
+    roleId: _
   }, null == Q || null != Q.fullProfileLoadedTimestamp), {
     activity: et,
     customStatusActivity: en,
@@ -122,8 +122,8 @@ function H(e) {
       let o = null != Q ? {
           has_nickname: !!(null == Q ? void 0 : Q.nick),
           has_guild_member_avatar: !!(null == Q ? void 0 : Q.avatar),
-          has_guild_member_banner: !!(null == Z ? void 0 : Z.isUsingGuildMemberBanner()),
-          has_guild_member_bio: !!(null == Z ? void 0 : Z.isUsingGuildMemberBio())
+          has_guild_member_banner: !!(null == J ? void 0 : J.isUsingGuildMemberBanner()),
+          has_guild_member_bio: !!(null == J ? void 0 : J.isUsingGuildMemberBio())
         } : {},
         u = null != q ? {
           other_application_id: null == q ? void 0 : q.id,
@@ -137,7 +137,7 @@ function H(e) {
         application_id: null != et ? et.application_id : void 0,
         application_name: null != et ? et.name : void 0,
         sku_id: null != s ? s.primarySkuId : null,
-        is_friend: _.default.isFriend(t.id),
+        is_friend: T.default.isFriend(t.id),
         has_images: !!(null !== (e = null == l ? void 0 : l.large_image) && void 0 !== e ? e : null == l ? void 0 : l.small_image),
         party_max: null != i && null != i.size ? i.size[1] : void 0,
         party_id: null != i ? i.id : void 0,
@@ -147,10 +147,10 @@ function H(e) {
         is_streaming: ea,
         has_custom_status: null != en,
         has_avatar_decoration: null != t.avatarDecoration,
-        has_profile_effect: (null == Z ? void 0 : Z.profileEffectId) != null,
-        profile_has_nitro_customization: null != Z && (null == Z ? void 0 : Z.hasPremiumCustomization()),
-        profile_has_theme_color_customized: null != Z && Z.hasThemeColors(),
-        profile_has_theme_animation: (null == Z ? void 0 : Z.popoutAnimationParticleType) != null,
+        has_profile_effect: (null == J ? void 0 : J.profileEffectId) != null,
+        profile_has_nitro_customization: null != J && (null == J ? void 0 : J.hasPremiumCustomization()),
+        profile_has_theme_color_customized: null != J && J.hasThemeColors(),
+        profile_has_theme_animation: (null == J ? void 0 : J.popoutAnimationParticleType) != null,
         ...o,
         ...u,
         ...W
@@ -175,7 +175,7 @@ function H(e) {
           showOutOfBoundaryComponents: ec,
           children: [(0, i.jsx)(b.default, {
             user: t,
-            displayProfile: Z,
+            displayProfile: J,
             guildId: n,
             channelId: a,
             onClose: () => null == B ? void 0 : B(),
@@ -183,11 +183,11 @@ function H(e) {
             isStreaming: (0, m.default)(et),
             status: ei,
             disableUserProfileLink: K,
-            isHovering: J,
+            isHovering: Z,
             upsell: ed.shouldShow ? (0, i.jsx)(L.default, {
               user: t,
               upsellSource: P.UserPopoutUpsellSource.USER_POPOUT,
-              displayProfile: Z,
+              displayProfile: J,
               onClose: B,
               ...ed
             }) : void 0
@@ -197,7 +197,7 @@ function H(e) {
             }), (0, i.jsx)(k.default, {
               activity: et,
               customStatusActivity: en,
-              displayProfile: Z,
+              displayProfile: J,
               user: t,
               guild: X,
               guildMember: Q,
@@ -218,7 +218,7 @@ var B = l.memo(function(e) {
     userId: t,
     user: n,
     ...l
-  } = e, a = (0, r.useStateFromStores)([T.default], () => T.default.getUser(t), [t]), o = null != n ? n : a;
+  } = e, a = (0, r.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), o = null != n ? n : a;
   return s(null != o, "Unexpected missing user"), (0, i.jsx)(H, {
     user: o,
     ...l

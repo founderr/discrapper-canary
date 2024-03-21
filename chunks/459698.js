@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MessageStandardEmojiPopout: function() {
-    return J
+    return Z
   },
   GuildDetails: function() {
     return q
@@ -35,8 +35,8 @@ var i = n("37983"),
   g = n("865453"),
   S = n("153043"),
   C = n("256941"),
-  _ = n("270295"),
-  T = n("626301"),
+  T = n("270295"),
+  _ = n("626301"),
   I = n("505233"),
   v = n("635956"),
   N = n("393414"),
@@ -61,14 +61,14 @@ var i = n("37983"),
   W = n("646718"),
   Y = n("782340"),
   z = n("325417");
-let Z = () => {
+let J = () => {
     let e = (0, o.useStateFromStores)([R.default], () => R.default.getGuildId());
     return {
       page: null != e ? V.AnalyticsPages.GUILD_CHANNEL : V.AnalyticsPages.DM_CHANNEL,
       section: V.AnalyticsSections.EMOJI_UPSELL_POPOUT
     }
   },
-  J = e => {
+  Z = e => {
     let {
       node: t
     } = e;
@@ -249,7 +249,7 @@ let Z = () => {
       guildEmoji: P,
       demoMode: U = !1,
       nonce: w
-    } = e, F = (0, o.useStateFromStores)([M.default], () => M.default.getCurrentUser()), J = (0, o.useStateFromStores)([R.default], () => R.default.getGuildId()), X = G.default.isPremium(F), Q = null != J && (J === (null == E ? void 0 : E.id) || J === (null == N ? void 0 : N.id)), ee = null != N, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
+    } = e, F = (0, o.useStateFromStores)([M.default], () => M.default.getCurrentUser()), Z = (0, o.useStateFromStores)([R.default], () => R.default.getGuildId()), X = G.default.isPremium(F), Q = null != Z && (Z === (null == E ? void 0 : E.id) || Z === (null == N ? void 0 : N.id)), ee = null != N, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
     U && (X = !0, et = !0, ee = !1, Q = !1);
     let {
       enabled: en
@@ -257,7 +257,7 @@ let Z = () => {
       location: "CustomGuildEmojiPopout"
     }, {
       autoTrackExposure: !0
-    }), ei = Z(), {
+    }), ei = J(), {
       isRoleSubscriptionEmoji: el,
       isUnusableRoleSubscriptionEmoji: ea,
       userIsRoleSubscriber: es
@@ -267,9 +267,9 @@ let Z = () => {
       userIsRoleSubscriber: !1
     } : {
       isRoleSubscriptionEmoji: S.isPurchasableRoleSubscriptionEmoji(P),
-      isUnusableRoleSubscriptionEmoji: S.isUnusableRoleSubscriptionEmoji(P, null != J ? J : void 0),
+      isUnusableRoleSubscriptionEmoji: S.isUnusableRoleSubscriptionEmoji(P, null != Z ? Z : void 0),
       userIsRoleSubscriber: C.default.getUserSubscriptionRoles(P.guildId).size > 0
-    }, [P, J]), er = !!ea && (0, x.shouldHideGuildPurchaseEntryPoints)(null == P ? void 0 : P.guildId), {
+    }, [P, Z]), er = !!ea && (0, x.shouldHideGuildPurchaseEntryPoints)(null == P ? void 0 : P.guildId), {
       analyticsLocations: eo
     } = (0, m.default)(p.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
     (0, h.default)({
@@ -297,7 +297,7 @@ let Z = () => {
           O(), D.default.track(V.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
             location_page: ei.page,
             location_section: ei.section
-          }), (0, T.navigateToPremiumMarketingPage)()
+          }), (0, _.navigateToPremiumMarketingPage)()
         }
       }),
       ec = ee && ea && !er && (X && el || !X),
@@ -373,7 +373,7 @@ let Z = () => {
             fullWidth: !0,
             onClick: e,
             children: ed.text
-          }) : void 0, ec && (0, i.jsx)(_.default, {
+          }) : void 0, ec && (0, i.jsx)(T.default, {
             className: z.ctaButton,
             size: d.Button.Sizes.SMALL,
             fullWidth: !0,

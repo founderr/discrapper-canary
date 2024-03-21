@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return S
   },
   trackForumTagFilterClicked: function() {
-    return v
+    return T
   },
   trackForumCreateNewPostClick: function() {
-    return T
+    return v
   },
   trackForumCreateNewPostKeybindUsed: function() {
     return I
@@ -141,7 +141,7 @@ function S(e) {
   })
 }
 
-function v(e) {
+function T(e) {
   let {
     guildId: t,
     channelId: n,
@@ -163,7 +163,7 @@ function v(e) {
   })
 }
 
-function T(e) {
+function v(e) {
   let {
     guildId: t,
     channelId: n
