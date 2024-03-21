@@ -143,8 +143,11 @@ var R = new N(l.default, {
     let {
       user: t,
       sessionId: n
-    } = e;
-    h = {}, g = {}, p = {}, m = {}, i = t.id, s = n
+    } = e, r = null != i && i !== t.id;
+    return r && (h = {}, g = {}, p = {}, m = {}), i = t.id, s = n, r
+  },
+  CONNECTION_OPEN_SUPPLEMENTAL: function() {
+    h = {}, g = {}, p = {}, m = {}
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
