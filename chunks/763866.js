@@ -53,8 +53,8 @@ function B(e) {
     displayProfile: W,
     guild: Y,
     guildMember: z,
-    channelId: Z,
-    onClose: J,
+    channelId: J,
+    onClose: Z,
     setNote: q = !1,
     canDM: X,
     hideNote: Q = !1,
@@ -69,7 +69,7 @@ function B(e) {
     location: "user popout"
   }, {
     autoTrackExposure: es
-  }), eo = (0, r.useStateFromStores)([p.default], () => p.default.getChannel(Z)), {
+  }), eo = (0, r.useStateFromStores)([p.default], () => p.default.getChannel(J)), {
     profileTheme: eu
   } = (0, S.default)(K, W), ed = l.useRef(null), [ec, ef] = l.useState(!0), ep = l.useCallback(() => {
     let {
@@ -105,7 +105,7 @@ function B(e) {
     className: G.usernameSection,
     lastSection: !0
   });
-  let eg = null !== (t = h.default.getNickname(null == Y ? void 0 : Y.id, Z, K)) && void 0 !== t ? t : x.default.getName(K),
+  let eg = null !== (t = h.default.getNickname(null == Y ? void 0 : Y.id, J, K)) && void 0 !== t ? t : x.default.getName(K),
     eS = {
       location: {
         page: F.AnalyticsPages.USER_POPOUT,
@@ -146,7 +146,7 @@ function B(e) {
         }), eE && (0, i.jsx)(C.default, {
           className: G.profileMutuals,
           user: K,
-          onClose: J
+          onClose: Z
         }), (0, i.jsx)(L.default, {
           userId: K.id,
           guild: Y,
@@ -161,15 +161,15 @@ function B(e) {
           activity: B,
           user: K,
           guild: Y,
-          channelId: Z,
-          onClose: J,
+          channelId: J,
+          onClose: Z,
           analyticsParams: (null == ee ? void 0 : ee.location) != null ? ee : eS
         }), (null == en ? void 0 : en.popularApplicationCommandIds) != null && null != eo ? (0, i.jsx)(b.default, {
           applicationId: en.id,
           commandIds: en.popularApplicationCommandIds,
           channel: eo,
           guildId: null == Y ? void 0 : Y.id,
-          onClick: J
+          onClick: Z
         }) : null, (0, i.jsx)(N.default, {
           user: K,
           guildId: null == Y ? void 0 : Y.id
@@ -180,12 +180,12 @@ function B(e) {
           showBorder: null !== (a = null == W ? void 0 : W.canEditThemes) && void 0 !== a && a
         }), (0, i.jsx)(R.default, {
           userId: K.id,
-          channelId: Z,
+          channelId: J,
           guild: Y,
-          onClose: J,
+          onClose: Z,
           theme: eu
-        }), null != en && void 0 !== Z && (0, i.jsx)(j.default, {
-          channelId: Z,
+        }), null != en && void 0 !== J && (0, i.jsx)(j.default, {
+          channelId: J,
           applicationId: en.id
         }), !et && !Q && (0, i.jsx)(P.default, {
           user: K,
@@ -196,7 +196,7 @@ function B(e) {
           user: K,
           setNote: q,
           canDM: X,
-          onClose: J
+          onClose: Z
         })]
       })]
     })]

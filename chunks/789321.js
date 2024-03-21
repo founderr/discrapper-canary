@@ -120,7 +120,7 @@ var L = e => {
       null == h || h(I.ContentDismissActionType.DISMISS)
     }, [h]);
   if (!A && !L) return null;
-  let Z = (0, r.match)([A, L]).with([!0, !0], () => K && W && G ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+  let J = (0, r.match)([A, L]).with([!0, !0], () => K && W && G ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : K && W ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
     openShop: M
@@ -157,7 +157,7 @@ var L = e => {
           variant: "text-sm/normal",
           color: "text-normal",
           tag: "span",
-          children: Z
+          children: J
         })
       }), (0, i.jsx)("div", {
         className: N.buttons,
