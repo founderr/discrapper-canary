@@ -26841,6 +26841,18 @@ html .progress__4ef76 {
     transition: width.3s ease-in-out
 }
 
+.desktopTooltip__33fd1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 4px 0
+}
+
+.infoIcon_d5bdac {
+    color: var(--white-500);
+    margin-right: 4px
+}
+
 .outerContainer_b1a8db {
     padding: 16px;
     display: grid;
