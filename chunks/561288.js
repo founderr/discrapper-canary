@@ -24,7 +24,7 @@ var i = n("872717"),
         let t = a.default.isBlocked(s);
         if (t) return;
         let r = o.default.getUser(s);
-        i.default.get({
+        i.HTTP.get({
           url: _.Endpoints.CALL(e),
           oldFormErrors: !0
         }).then(e => {
@@ -55,7 +55,7 @@ var i = n("872717"),
     ring(e, t) {
       let n = r.default.getCall(e);
       if (null != n && null != n.messageId && !r.default.isCallUnavailable(e)) {
-        i.default.post({
+        i.HTTP.post({
           url: _.Endpoints.CALL_RING(e),
           body: {
             recipients: t
@@ -70,7 +70,7 @@ var i = n("872717"),
         recipients: t
       })
     },
-    stopRinging: (e, t) => i.default.post({
+    stopRinging: (e, t) => i.HTTP.post({
       url: _.Endpoints.CALL_STOP_RINGING(e),
       body: {
         recipients: t

@@ -65,7 +65,7 @@ function _(e) {
 }
 async function f(e) {
   try {
-    let t = await o.default.get({
+    let t = await o.HTTP.get({
         url: l.Endpoints.BILLING_STRIPE_PAYMENT_INTENTS(e),
         oldFormErrors: !0
       }),

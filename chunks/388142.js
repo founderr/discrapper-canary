@@ -24,7 +24,7 @@ var s = n("872717"),
   c = n("49111");
 
 function E(e) {
-  s.default.post({
+  s.HTTP.post({
     url: c.Endpoints.INITIATE_CHANNEL_PROMPTS,
     body: {
       guild_ids: e
@@ -34,7 +34,7 @@ function E(e) {
 
 function f(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT;
-  s.default.post({
+  s.HTTP.post({
     url: c.Endpoints.FORCE_SEND_PROMPT(e),
     body: {
       prompt_type: t
@@ -42,7 +42,7 @@ function f(e) {
   })
 }
 async function S(e, t, n) {
-  await s.default.post({
+  await s.HTTP.post({
     url: c.Endpoints.SEND_GAMING_STATS(t),
     body: {
       message_reference: {
@@ -54,7 +54,7 @@ async function S(e, t, n) {
   }), T(t)
 }
 async function _(e) {
-  let t = await s.default.patch({
+  let t = await s.HTTP.patch({
     url: c.Endpoints.UPDATE_GAMING_STATS(e.channel_id, e.id)
   });
   if (null != t.text && "" !== t.text) {

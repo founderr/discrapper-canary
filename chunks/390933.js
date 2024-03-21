@@ -57,7 +57,7 @@ i = class extends u {
   }
   makeRequest() {
     let e = this.getEndpoint();
-    return null == e ? null : r.default.get({
+    return null == e ? null : r.HTTP.get({
       url: e,
       query: s.stringify(this.query),
       oldFormErrors: !0
@@ -82,7 +82,7 @@ class d extends u {
   }
   makeRequest() {
     let e = this.getEndpoint();
-    return null == e ? null : r.default.post({
+    return null == e ? null : r.HTTP.post({
       url: e,
       body: this.payload,
       oldFormErrors: !0

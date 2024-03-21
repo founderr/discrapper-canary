@@ -14,8 +14,8 @@ var c = n("917351"),
   m = n("95410"),
   p = n("913144"),
   S = n("851387"),
-  v = n("233069"),
-  T = n("813006"),
+  T = n("233069"),
+  v = n("813006"),
   I = n("517763"),
   A = n("766274"),
   C = n("305961"),
@@ -94,7 +94,7 @@ function et(e) {
       location: "7f0c91_1"
     });
     !e && S.default.fetchGuildBans(o.id)
-  } else if (i === D.GuildSettingsSections.INSTANT_INVITES) g.default.get({
+  } else if (i === D.GuildSettingsSections.INSTANT_INVITES) g.HTTP.get({
     url: D.Endpoints.GUILD_INSTANT_INVITES(o.id),
     oldFormErrors: !0
   }).then(e => {
@@ -103,7 +103,7 @@ function et(e) {
       invites: e.body
     })
   });
-  else if (i === D.GuildSettingsSections.WIDGET) g.default.get({
+  else if (i === D.GuildSettingsSections.WIDGET) g.HTTP.get({
     url: D.Endpoints.GUILD_WIDGET(o.id),
     oldFormErrors: !0
   }).then(e => {
@@ -115,7 +115,7 @@ function et(e) {
   });
   else if (i === D.GuildSettingsSections.INTEGRATIONS || i === D.GuildSettingsSections.ROLES) {
     if (l = null, t !== e.section) return ei(e)
-  } else i === D.GuildSettingsSections.MEMBERS ? l = o.getEveryoneRoleId() : i === D.GuildSettingsSections.VANITY_URL ? g.default.get({
+  } else i === D.GuildSettingsSections.MEMBERS ? l = o.getEveryoneRoleId() : i === D.GuildSettingsSections.VANITY_URL ? g.HTTP.get({
     url: D.Endpoints.GUILD_VANITY_URL(o.id),
     oldFormErrors: !0
   }).then(e => {
@@ -145,8 +145,8 @@ function en(e) {
     temporary: e.temporary,
     revoked: e.revoked,
     inviter: null != e.inviter ? new A.default(e.inviter) : null,
-    channel: (0, v.createChannelRecordFromInvite)(e.channel),
-    guild: null != e.guild ? new T.default(e.guild) : null,
+    channel: (0, T.createChannelRecordFromInvite)(e.channel),
+    guild: null != e.guild ? new v.default(e.guild) : null,
     uses: e.uses,
     maxUses: e.max_uses,
     maxAge: e.max_age,

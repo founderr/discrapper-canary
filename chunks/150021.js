@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return C
   },
   updateEmoji: function() {
-    return _
+    return T
   },
   favoriteEmoji: function() {
     return I
@@ -48,7 +48,7 @@ function g(e) {
   r.default.dispatch({
     type: "EMOJI_FETCH",
     guildId: e
-  }), a.default.get({
+  }), a.HTTP.get({
     url: h.Endpoints.GUILD_EMOJIS(e),
     oldFormErrors: !0
   }).then(t => r.default.dispatch({
@@ -71,7 +71,7 @@ function S(e) {
   return r.default.dispatch({
     type: "EMOJI_UPLOAD_START",
     guildId: t
-  }), a.default.post({
+  }), a.HTTP.post({
     url: h.Endpoints.GUILD_EMOJIS(t),
     body: {
       image: n,
@@ -93,12 +93,12 @@ function C(e, t) {
     type: "EMOJI_DELETE",
     guildId: e,
     emojiId: t
-  }), a.default.delete({
+  }), a.HTTP.del({
     url: h.Endpoints.GUILD_EMOJI(e, t),
     oldFormErrors: !0
   })
 }
-async function _(e) {
+async function T(e) {
   let {
     guildId: t,
     emojiId: n,
@@ -106,7 +106,7 @@ async function _(e) {
     roles: l
   } = e;
   try {
-    return await a.default.patch({
+    return await a.HTTP.patch({
       url: h.Endpoints.GUILD_EMOJI(t, n),
       body: {
         name: i,
@@ -119,7 +119,7 @@ async function _(e) {
   }
 }
 
-function T(e) {
+function _(e) {
   return p.default.totalUnavailableGuilds > 0 || !c.default.isConnected() ? e : e.filter(e => {
     var t;
     let n = null !== (t = u.default.getCustomEmojiById(e)) && void 0 !== t ? t : d.default.getByName(e);
@@ -130,7 +130,7 @@ function T(e) {
 function I(e) {
   var t;
   (function(e) {
-    null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = T(t.emojis), l.size(t.emojis) >= x.MAX_FAVORITES) ? (m.default.show({
+    null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = _(t.emojis), l.size(t.emojis) >= x.MAX_FAVORITES) ? (m.default.show({
       title: E.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
       body: E.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
         count: x.MAX_FAVORITES
@@ -144,7 +144,7 @@ function v(e) {
   (function(e) {
     null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => {
       if (!t.emojis.includes(e)) return !1;
-      t.emojis = t.emojis.filter(t => e !== t), t.emojis = T(t.emojis)
+      t.emojis = t.emojis.filter(t => e !== t), t.emojis = _(t.emojis)
     }, x.UserSettingsDelay.INFREQUENT_USER_ACTION)
   })(null !== (t = e.id) && void 0 !== t ? t : e.name)
 }

@@ -32,7 +32,7 @@ var i = n("891189"),
   o = n("49111");
 
 function l(e) {
-  return r.default.post({
+  return r.HTTP.post({
     url: o.Endpoints.OAUTH2_WHITELIST_ACCEPT,
     query: {
       token: e
@@ -54,7 +54,7 @@ async function u(e) {
     guildId: _,
     channelId: f,
     integrationType: E
-  } = e, h = await r.default.post({
+  } = e, h = await r.HTTP.post({
     url: o.Endpoints.OAUTH2_AUTHORIZE,
     query: {
       client_id: n,
@@ -87,7 +87,7 @@ async function d(e) {
     codeChallengeMethod: u,
     state: d,
     userInstall: c
-  } = e, _ = await r.default.get({
+  } = e, _ = await r.HTTP.get({
     url: o.Endpoints.OAUTH2_AUTHORIZE,
     query: {
       client_id: t,
@@ -107,7 +107,7 @@ async function d(e) {
 async function c(e) {
   let {
     body: t
-  } = await r.default.get({
+  } = await r.HTTP.get({
     url: o.Endpoints.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
     query: {
       guild_id: e
@@ -121,7 +121,7 @@ function _(e) {
   a.default.logout((0, s.getLoginPath)(e.pathname + e.search, !1))
 }
 async function f(e) {
-  return await r.default.post({
+  return await r.HTTP.post({
     url: o.Endpoints.OAUTH2_DEVICE_VERIFY,
     body: {
       user_code: e
@@ -129,7 +129,7 @@ async function f(e) {
   })
 }
 async function E(e, t) {
-  return await r.default.post({
+  return await r.HTTP.post({
     url: o.Endpoints.OAUTH2_DEVICE_FINISH,
     body: {
       user_code: e,
@@ -138,7 +138,7 @@ async function E(e, t) {
   })
 }
 async function h(e, t, n) {
-  return await r.default.post({
+  return await r.HTTP.post({
     url: o.Endpoints.OAUTH2_DEVICE_FINISH,
     body: {
       user_code: e,

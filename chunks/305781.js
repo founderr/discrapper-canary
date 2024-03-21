@@ -18,7 +18,7 @@ function u(e) {
   r.default.dispatch({
     type: "TOP_EMOJIS_FETCH",
     guildId: e
-  }), n.default.get({
+  }), n.HTTP.get({
     url: o.Endpoints.TOP_EMOJIS_FOR_GUILD(e),
     oldFormErrors: !0
   }).then(t => r.default.dispatch({

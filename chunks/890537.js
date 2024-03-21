@@ -20,7 +20,7 @@ var d = {
         userId: e
       });
       try {
-        let n = await i.default.get({
+        let n = await i.HTTP.get({
             url: o.Endpoints.USER_RECENT_GAMES(e),
             signal: t
           }),

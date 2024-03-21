@@ -79,7 +79,7 @@ function g(e, t) {
 }
 
 function m(e, t, n, i) {
-  return r.default.put({
+  return r.HTTP.put({
     body: {
       permissions: i
     },
@@ -100,7 +100,7 @@ function p(e, t, n) {
     channelId: t.channel.id,
     query: c,
     name: f
-  }), null == d.default.getAutocompleteChoices(t.channel.id, f, c) && r.default.post({
+  }), null == d.default.getAutocompleteChoices(t.channel.id, f, c) && r.HTTP.post({
     url: _.Endpoints.INTERACTIONS,
     body: {
       type: o.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,

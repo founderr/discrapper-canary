@@ -59,7 +59,7 @@ async function _(e) {
     metadata: f
   };
   try {
-    let e = await s.default.post({
+    let e = await s.HTTP.post({
       url: m.Endpoints.BILLING_SUBSCRIPTIONS_PREVIEW,
       body: _,
       oldFormErrors: !0
@@ -100,7 +100,7 @@ async function E(e) {
     user_discount_offer_id: _
   };
   try {
-    let e = await s.default.patch({
+    let e = await s.HTTP.patch({
       url: m.Endpoints.BILLING_SUBSCRIPTION_PREVIEW(t),
       query: {
         location: f,
@@ -142,7 +142,7 @@ async function T(e) {
     preventFetch: n
   } = e;
   if (n) return null;
-  let r = await s.default.get({
+  let r = await s.HTTP.get({
     url: m.Endpoints.BILLING_SUBSCRIPTION_INVOICE(t),
     oldFormErrors: !0
   });

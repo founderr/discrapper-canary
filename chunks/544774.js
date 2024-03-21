@@ -12,7 +12,7 @@ async function r() {
     type: "USER_TENURE_REWARD_SYNC_START"
   });
   try {
-    let e = await t.default.post({
+    let e = await t.HTTP.post({
       url: n.Endpoints.TENURE_REWARD_SYNC
     });
     o.default.dispatch({

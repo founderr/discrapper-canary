@@ -19,7 +19,7 @@ let f = (() => {
       t = null,
       n = new i.default(5 * d.default.Millis.SECOND, 1 * d.default.Millis.MINUTE, !0),
       r = () => {
-        a.default.put({
+        a.HTTP.put({
           url: e,
           headers: {
             Authorization: s.getToken()
@@ -36,7 +36,7 @@ let f = (() => {
     return {
       set: n => {
         let i = null != t;
-        n !== i && (n ? t = setTimeout(r, 0) : (clearTimeout(t), t = null, a.default.delete({
+        n !== i && (n ? t = setTimeout(r, 0) : (clearTimeout(t), t = null, a.HTTP.del({
           url: e,
           headers: {
             Authorization: s.getToken()

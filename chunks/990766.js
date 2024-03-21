@@ -60,8 +60,8 @@ var i = n("627445"),
   m = n("800762"),
   p = n("404008"),
   S = n("718517"),
-  v = n("12307"),
-  T = n("840707"),
+  T = n("12307"),
+  v = n("840707"),
   I = n("561288"),
   A = n("450911"),
   C = n("255397"),
@@ -167,7 +167,7 @@ async function k(e, t, n) {
     streamKey: i
   });
   try {
-    let e = await a.default.get({
+    let e = await a.HTTP.get({
       url: N.Endpoints.STREAM_PREVIEW(i),
       query: {
         version: Date.now()
@@ -190,7 +190,7 @@ async function k(e, t, n) {
 }
 async function V(e) {
   try {
-    await T.default.post({
+    await v.default.post({
       url: N.Endpoints.STREAM_NOTIFY(e),
       oldFormErrors: !0,
       trackedActionData: {
@@ -201,14 +201,14 @@ async function V(e) {
 }
 
 function G(e) {
-  (0, v.trackStreamSettingsUpdate)(e.preset, e.resolution, e.frameRate), o.default.dispatch({
+  (0, T.trackStreamSettingsUpdate)(e.preset, e.resolution, e.frameRate), o.default.dispatch({
     type: "STREAM_UPDATE_SETTINGS",
     ...e
   })
 }
 
 function F(e, t) {
-  a.default.patch({
+  a.HTTP.patch({
     url: N.Endpoints.STREAM(e),
     body: {
       region: t

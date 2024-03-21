@@ -41,7 +41,7 @@ function c(e) {
 
 function _() {
   let e = o.default.safeParseWithQuery(c("/__development/build_overrides"));
-  return null == e ? Promise.resolve(null) : (e.search = null, d && (e.query.version = d), r.default.get({
+  return null == e ? Promise.resolve(null) : (e.search = null, d && (e.query.version = d), r.HTTP.get({
     url: s.format(e),
     oldFormErrors: !0
   }).then(e => e.body || null, () => null))
@@ -65,7 +65,7 @@ function f(e) {
     }
   }(e));
   let t = o.default.safeParseWithQuery(e);
-  return null == t ? Promise.resolve(null) : (t.search = null, t.query.meta = "true", d && (t.query.version = d), t.host = window.location.host, r.default.get({
+  return null == t ? Promise.resolve(null) : (t.search = null, t.query.meta = "true", d && (t.query.version = d), t.host = window.location.host, r.HTTP.get({
     url: s.format(t),
     oldFormErrors: !0
   }).then(e => e.body || null, () => null))
@@ -96,8 +96,8 @@ let p = RegExp("^dev://branch/([\\w-./]+)$", "i");
 function S(e) {
   return null != e && p.test(e)
 }
-let v = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
-  T = new Set(["/__development/link", "/__development/link/"]);
+let T = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
+  v = new Set(["/__development/link", "/__development/link/"]);
 
 function I(e) {
   if (S(e)) return {
@@ -105,7 +105,7 @@ function I(e) {
     url: e
   };
   let t = o.default.safeParseWithQuery(e);
-  if (null == t || !v.has(t.hostname) || !("s" in t.query) || !T.has(t.pathname)) return null;
+  if (null == t || !T.has(t.hostname) || !("s" in t.query) || !v.has(t.pathname)) return null;
   for (let e in t.query) "s" !== e && delete t.query[e];
   return {
     payload: t.query.s,

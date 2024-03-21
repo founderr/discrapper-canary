@@ -30,7 +30,7 @@ function E(e) {
       path: d.Routes.CHANNEL(":guildId", ":channelId", ":messageId"),
       exact: !0
     }),
-    h = s.default.get(d.Endpoints.CHANNEL(e)).then(t => {
+    h = s.HTTP.get(d.Endpoints.CHANNEL(e)).then(t => {
       let {
         body: i
       } = t;

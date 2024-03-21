@@ -28,7 +28,7 @@ async function o(t) {
   try {
     let {
       body: e
-    } = await a.default.get({
+    } = await a.HTTP.get({
       url: d.Endpoints.NOTE(t),
       oldFormErrors: !0
     });

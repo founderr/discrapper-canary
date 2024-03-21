@@ -16,7 +16,7 @@ var i = n("872717"),
         guildId: n,
         type: r,
         teamId: a
-      } = e, l = await i.default.post({
+      } = e, l = await i.HTTP.post({
         url: o.Endpoints.APPLICATIONS,
         body: {
           name: t,
@@ -34,7 +34,7 @@ var i = n("872717"),
       let {
         includeTeam: t,
         ...n
-      } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, r = await i.default.get({
+      } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, r = await i.HTTP.get({
         url: o.Endpoints.GUILD_APPLICATIONS(e),
         query: {
           ...n,
@@ -50,7 +50,7 @@ var i = n("872717"),
       let {
         applicationId: t,
         teamId: n
-      } = e, r = await i.default.post({
+      } = e, r = await i.HTTP.post({
         url: o.Endpoints.APPLICATION_OWNER_TRANSFER(t),
         body: {
           team_id: n
@@ -77,7 +77,7 @@ var i = n("872717"),
           applicationIds: n
         });
         try {
-          e = await i.default.get({
+          e = await i.HTTP.get({
             url: o.Endpoints.APPLICATIONS_PUBLIC,
             query: new URLSearchParams(n.map(e => ["application_ids", e])).toString(),
             oldFormErrors: !0
@@ -99,7 +99,7 @@ var i = n("872717"),
       return s.default.dispatch({
         type: "APPLICATION_FETCH",
         applicationId: e
-      }), i.default.get({
+      }), i.HTTP.get({
         url: o.Endpoints.APPLICATION_PUBLIC(e),
         query: {
           with_guild: t

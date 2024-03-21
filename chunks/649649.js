@@ -18,10 +18,10 @@ var i = n("917351"),
   s = n("872717"),
   l = n("49111");
 async function o() {
-  return (await s.default.get(l.Endpoints.NOTIFICATION_SNAPSHOTS)).body
+  return (await s.HTTP.get(l.Endpoints.NOTIFICATION_SNAPSHOTS)).body
 }
 async function r(e) {
-  return (await s.default.post({
+  return (await s.HTTP.post({
     url: l.Endpoints.NOTIFICATION_SNAPSHOTS,
     body: {
       label: e
@@ -29,10 +29,10 @@ async function r(e) {
   })).body
 }
 async function u(e) {
-  return (await s.default.post(l.Endpoints.RESTORE_NOTIFICATION_SNAPSHOT(e))).body
+  return (await s.HTTP.post(l.Endpoints.RESTORE_NOTIFICATION_SNAPSHOT(e))).body
 }
 async function d(e) {
-  return (await s.default.delete(l.Endpoints.NOTIFICATION_SNAPSHOT(e))).body
+  return (await s.HTTP.del(l.Endpoints.NOTIFICATION_SNAPSHOT(e))).body
 }
 async function c(e) {
   if (e.length > 0) {

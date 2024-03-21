@@ -15,7 +15,7 @@ let c = async e => {
   let t = null;
   try {
     var n;
-    let i = await a.default.get({
+    let i = await a.HTTP.get({
       url: d.Endpoints.EMOJI_SOURCE_DATA(e),
       oldFormErrors: !0,
       timeout: 5e3

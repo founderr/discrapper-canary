@@ -21,7 +21,7 @@ async function N() {
   T.verbose("Fetching blocked domain list");
   try {
     let e;
-    let _ = parseInt((await o.default.get("https://cdn.discordapp.com/bad-domains/current_revision.txt")).text),
+    let _ = parseInt((await o.HTTP.get("https://cdn.discordapp.com/bad-domains/current_revision.txt")).text),
       E = i.default.getCurrentRevision();
     if (T.verbose("Server revision: ".concat(_, ", Client revision: ").concat(E)), null === E || E !== _) {
       try {
@@ -30,7 +30,7 @@ async function N() {
           throw Error("Client revision number is " + e)
         }
         if (_ - E > 15) throw Error("Client revision number is more than ".concat(15, " behind the server revision number"));
-        let n = (await o.default.get({
+        let n = (await o.HTTP.get({
           url: s,
           query: {
             revision: E
@@ -55,7 +55,7 @@ async function N() {
           T.verbose("Slow network detected, not downloading full list");
           return
         }
-        T.verbose("Downloading the full bad domains file"), e = (await o.default.get({
+        T.verbose("Downloading the full bad domains file"), e = (await o.HTTP.get({
           url: "https://cdn.discordapp.com/bad-domains/updated_hashes.json"
         })).body
       }

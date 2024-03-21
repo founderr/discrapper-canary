@@ -23,7 +23,7 @@ function S(e) {
   (0, g.closeContextMenu)(), h.default.show(e)
 }
 
-function v(e, t, n) {
+function T(e, t, n) {
   let {
     status: i,
     body: s
@@ -62,7 +62,7 @@ function v(e, t, n) {
   }
   throw e
 }(s = i || (i = {}))[s.SHOW_ALWAYS = 0] = "SHOW_ALWAYS", s[s.SHOW_ONLY_IF_ACTION_NEEDED = 1] = "SHOW_ONLY_IF_ACTION_NEEDED";
-let T = {
+let v = {
   sendRequest(e) {
     let {
       discordTag: t,
@@ -70,7 +70,7 @@ let T = {
       captchaPayload: i,
       errorUxConfig: s = 0
     } = e, [a, o] = t.split("#");
-    return r.default.post({
+    return r.HTTP.post({
       url: m.Endpoints.USER_RELATIONSHIPS(),
       body: {
         username: a,
@@ -80,7 +80,7 @@ let T = {
       context: n,
       oldFormErrors: !0
     }).catch(e => {
-      v(e, s, t)
+      T(e, s, t)
     })
   },
   addRelationship(e, t) {
@@ -92,7 +92,7 @@ let T = {
       fromFriendSuggestion: o,
       captchaPayload: l
     } = e, u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, d = _.default.getUser(n);
-    return r.default.put({
+    return r.HTTP.put({
       url: m.Endpoints.USER_RELATIONSHIP(n),
       body: {
         type: s,
@@ -105,26 +105,26 @@ let T = {
     }).then(() => {
       null == t || t()
     }).catch(e => {
-      v(e, u, E.default.getUserTag(d))
+      T(e, u, E.default.getUserTag(d))
     })
   },
-  acceptFriendRequest: e => T.addRelationship(e, function() {
+  acceptFriendRequest: e => v.addRelationship(e, function() {
     a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST)
   }),
-  cancelFriendRequest: (e, t) => T.removeRelationship(e, t, function() {
+  cancelFriendRequest: (e, t) => v.removeRelationship(e, t, function() {
     a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST)
   }),
   removeFriend(e, t) {
-    T.removeRelationship(e, t, function() {
+    v.removeRelationship(e, t, function() {
       a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED)
     })
   },
   unblockUser(e, t) {
-    T.removeRelationship(e, t, function() {
+    v.removeRelationship(e, t, function() {
       a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED)
     })
   },
-  removeRelationship: (e, t, n) => r.default.delete({
+  removeRelationship: (e, t, n) => r.HTTP.del({
     url: m.Endpoints.USER_RELATIONSHIP(e),
     context: t,
     oldFormErrors: !0
@@ -133,14 +133,14 @@ let T = {
   }).catch(() => {
     a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
   }),
-  updateRelationship: (e, t) => r.default.patch({
+  updateRelationship: (e, t) => r.HTTP.patch({
     url: m.Endpoints.USER_RELATIONSHIP(e),
     body: {
       nickname: t
     }
   }),
   fetchRelationships() {
-    r.default.get({
+    r.HTTP.get({
       url: m.Endpoints.USER_RELATIONSHIPS(),
       oldFormErrors: !0
     }).then(e => o.default.dispatch({
@@ -153,7 +153,7 @@ let T = {
   confirmClearPendingRelationships(e) {
     (0, u.default)(e)
   },
-  clearPendingRelationships: () => r.default.delete({
+  clearPendingRelationships: () => r.HTTP.del({
     url: m.Endpoints.USER_RELATIONSHIPS(),
     query: {
       relationship_type: m.RelationshipTypes.PENDING_INCOMING
@@ -166,4 +166,4 @@ let T = {
     a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
   })
 };
-var I = T
+var I = v

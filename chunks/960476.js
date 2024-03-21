@@ -89,7 +89,7 @@ function v(e, t) {
 
 function F(e, t, r) {
   let s = Date.now();
-  y(t), i.default.get({
+  y(t), i.HTTP.get({
     url: _.Endpoints.GIFS_SEARCH,
     query: {
       q: e,
@@ -126,7 +126,7 @@ function C(e, t) {
 }
 
 function A(e) {
-  "" !== e && null != e && i.default.get({
+  "" !== e && null != e && i.HTTP.get({
     url: _.Endpoints.GIFS_SUGGEST,
     query: {
       q: e,
@@ -173,7 +173,7 @@ function x(e) {
     index_num: r,
     source_object: "GIF Picker",
     query: o
-  }), null != c && i.default.post({
+  }), null != c && i.HTTP.post({
     url: _.Endpoints.GIFS_SELECT,
     body: {
       id: c,
@@ -197,7 +197,7 @@ function N() {
 }
 
 function P() {
-  i.default.get({
+  i.HTTP.get({
     url: _.Endpoints.GIFS_TRENDING,
     query: {
       provider: "tenor",
@@ -222,7 +222,7 @@ function P() {
 
 function M(e) {
   let t = Date.now();
-  y(_.GIFPickerResultTypes.TRENDING_GIFS), i.default.get({
+  y(_.GIFPickerResultTypes.TRENDING_GIFS), i.HTTP.get({
     url: _.Endpoints.GIFS_TRENDING_GIFS,
     query: {
       media_format: f.default.getSelectedFormat(),

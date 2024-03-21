@@ -62,7 +62,7 @@ function _(e) {
   return e.attachments.some(p) || e.embeds.some(g)
 }
 async function E(e) {
-  let t = await n.default.post({
+  let t = await n.HTTP.post({
     url: o.Endpoints.ATTACHMENTS_REFRESH_URLS,
     body: {
       attachment_urls: [e]

@@ -14,7 +14,7 @@ var i = n("872717"),
       return s.default.isDispatching() ? Promise.resolve().then(() => e(t)) : (s.default.dispatch({
         type: "GUILD_TEMPLATE_RESOLVE",
         code: t
-      }), i.default.get({
+      }), i.HTTP.get({
         url: o.Endpoints.UNRESOLVED_GUILD_TEMPLATE(t),
         oldFormErrors: !0
       }).then(e => {
@@ -44,14 +44,14 @@ var i = n("872717"),
         code: t
       })))
     },
-    loadTemplatesForGuild: e => i.default.get({
+    loadTemplatesForGuild: e => i.HTTP.get({
       url: o.Endpoints.GUILD_TEMPLATES(e),
       oldFormErrors: !0
     }).then(e => (s.default.dispatch({
       type: "GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS",
       guildTemplates: e.body
     }), e)),
-    createGuildTemplate: (e, t, n) => i.default.post({
+    createGuildTemplate: (e, t, n) => i.HTTP.post({
       url: o.Endpoints.GUILD_TEMPLATES(e),
       body: {
         name: t,
@@ -65,7 +65,7 @@ var i = n("872717"),
         code: e.body.code
       })
     }),
-    syncGuildTemplate: (e, t) => i.default.put({
+    syncGuildTemplate: (e, t) => i.HTTP.put({
       url: o.Endpoints.GUILD_TEMPLATE(e, t),
       oldFormErrors: !0
     }).then(e => {
@@ -75,7 +75,7 @@ var i = n("872717"),
         code: t
       })
     }),
-    updateGuildTemplate: (e, t, n, r) => i.default.patch({
+    updateGuildTemplate: (e, t, n, r) => i.HTTP.patch({
       url: o.Endpoints.GUILD_TEMPLATE(e, t),
       body: {
         name: n,
@@ -89,7 +89,7 @@ var i = n("872717"),
         code: t
       })
     }),
-    deleteGuildTemplate: (e, t) => i.default.delete({
+    deleteGuildTemplate: (e, t) => i.HTTP.del({
       url: o.Endpoints.GUILD_TEMPLATE(e, t),
       oldFormErrors: !0
     }).then(() => {

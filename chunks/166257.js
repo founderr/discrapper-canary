@@ -63,7 +63,7 @@ function S(e, t, n) {
   return !0
 }
 
-function v(e, t, n, i, s) {
+function T(e, t, n, i, s) {
   var r, a;
   o.default.dispatch({
     type: e,
@@ -77,7 +77,7 @@ function v(e, t, n, i, s) {
   })
 }
 
-function T(e) {
+function v(e) {
   let {
     channelId: t,
     messageId: n,
@@ -100,11 +100,11 @@ async function I(e) {
     var i;
     let s = null !== (i = n.id) && void 0 !== i ? i : n.name;
     return m.Endpoints.POLL_ANSWER_VOTERS(e, t, s)
-  }(t, n, i) : T({
+  }(t, n, i) : v({
     channelId: t,
     messageId: n,
     emoji: i
-  }), c = await r.default.get({
+  }), c = await r.HTTP.get({
     url: d,
     query: {
       limit: s,
@@ -139,11 +139,11 @@ async function A(e, t, n) {
     return
   }
   let f = await O(n, o);
-  return v("MESSAGE_REACTION_ADD", e, t, n, {
+  return T("MESSAGE_REACTION_ADD", e, t, n, {
     burst: o,
     colors: f
-  }), await d.default.unarchiveThreadIfNecessary(e), r.default.put({
-    url: T({
+  }), await d.default.unarchiveThreadIfNecessary(e), r.HTTP.put({
+    url: v({
       channelId: e,
       messageId: t,
       emoji: n,
@@ -173,7 +173,7 @@ async function A(e, t, n) {
       isRetry: !0
     }), {
       isRetry: c
-    }) && (v("MESSAGE_REACTION_REMOVE", e, t, n, {
+    }) && (T("MESSAGE_REACTION_REMOVE", e, t, n, {
       burst: o
     }), o ? a.AccessibilityAnnouncer.announce(p.default.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({
       name: n.name
@@ -200,7 +200,7 @@ function C(e) {
 }
 async function y(e, t, n) {
   let i = null != n && !!n.isRetry;
-  await d.default.unarchiveThreadIfNecessary(e), r.default.delete({
+  await d.default.unarchiveThreadIfNecessary(e), r.HTTP.del({
     url: m.Endpoints.REMOVE_REACTIONS(e, t),
     oldFormErrors: !0
   }).catch(n => {
@@ -215,7 +215,7 @@ async function N(e, t, n, i) {
   let s = null != i && !!i.isRetry;
   await d.default.unarchiveThreadIfNecessary(e);
   let a = null === n.id ? n.name : "".concat(n.name, ":").concat(n.id);
-  r.default.delete({
+  r.HTTP.del({
     url: m.Endpoints.REMOVE_EMOJI_REACTIONS(e, t, a),
     oldFormErrors: !0
   }).catch(i => {
@@ -231,11 +231,11 @@ async function R(e, t, n, i) {
     o = arguments.length > 5 ? arguments[5] : void 0,
     l = null != o && !!o.burst,
     c = null != o && !!o.isRetry;
-  v("MESSAGE_REACTION_REMOVE", e, t, n, {
+  T("MESSAGE_REACTION_REMOVE", e, t, n, {
     userId: i,
     burst: l
-  }), await d.default.unarchiveThreadIfNecessary(e), r.default.delete({
-    url: T({
+  }), await d.default.unarchiveThreadIfNecessary(e), r.HTTP.del({
+    url: v({
       channelId: e,
       messageId: t,
       emoji: n,
@@ -262,7 +262,7 @@ async function R(e, t, n, i) {
         isRetry: c
       })) {
       let s = await O(n, l);
-      v("MESSAGE_REACTION_ADD", e, t, n, {
+      T("MESSAGE_REACTION_ADD", e, t, n, {
         userId: i,
         burst: l,
         colors: s

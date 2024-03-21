@@ -16,7 +16,7 @@ let d = null,
 (0, l.isDesktop)() && (window.popupBridge = {
   getReturnUrlPrefix: () => {
     if (null == i) throw Error("popupBridgeState is unset");
-    return a.default.getAPIBaseURL() + u.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(u.PaymentGateways.BRAINTREE, i)
+    return (0, a.getAPIBaseURL)() + u.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(u.PaymentGateways.BRAINTREE, i)
   },
   open: e => {
     s = e, window.open(e), E.emitChange()

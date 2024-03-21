@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return C
   },
   clearErrors: function() {
-    return O
+    return P
   },
   resetPendingAccountChanges: function() {
-    return P
+    return O
   },
   resetAllPending: function() {
     return g
@@ -77,7 +77,7 @@ function s() {
 function f(e, t) {
   let n = t ? c.default.Messages.DELETE_ACCOUNT : c.default.Messages.DISABLE_ACCOUNT,
     r = t ? a.Endpoints.DELETE_ACCOUNT : a.Endpoints.DISABLE_ACCOUNT;
-  return (0, T.default)(t => i.default.post({
+  return (0, T.default)(t => i.HTTP.post({
     url: r,
     body: {
       password: e,
@@ -94,7 +94,7 @@ function f(e, t) {
   })
 }
 async function N(e) {
-  let t = await i.default.patch({
+  let t = await i.HTTP.patch({
       url: a.Endpoints.ME,
       oldFormErrors: !0,
       body: e
@@ -174,14 +174,14 @@ function A(e) {
 }
 
 function U() {
-  return i.default.get({
+  return i.HTTP.get({
     url: a.Endpoints.USER_HARVEST,
     oldFormErrors: !0
   })
 }
 
 function p() {
-  return i.default.post({
+  return i.HTTP.post({
     url: a.Endpoints.USER_HARVEST,
     oldFormErrors: !0
   })
@@ -215,13 +215,13 @@ function C(e) {
   })
 }
 
-function O() {
+function P() {
   o.default.dispatch({
     type: "USER_SETTINGS_CLEAR_ERRORS"
   })
 }
 
-function P() {
+function O() {
   o.default.dispatch({
     type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
   })

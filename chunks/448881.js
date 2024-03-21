@@ -47,7 +47,7 @@ async function d() {
       type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
     });
     try {
-      let e = await s.default.get({
+      let e = await s.HTTP.get({
           url: o.Endpoints.QUESTS_CURRENT_QUESTS
         }),
         t = e.body.quests.map(e => (0, l.questWithUserStatusFromServer)(e)),
@@ -74,7 +74,7 @@ async function c(e) {
     terminal: a = !1
   } = e;
   try {
-    let e = await s.default.post({
+    let e = await s.HTTP.post({
       url: o.Endpoints.QUESTS_HEARTBEAT(t),
       body: {
         stream_key: n,
@@ -105,7 +105,7 @@ async function E(e, t) {
       questId: e
     });
     try {
-      let n = await s.default.post({
+      let n = await s.HTTP.post({
         url: o.Endpoints.QUESTS_ENROLL(e),
         body: {
           location: t.questContent
@@ -131,7 +131,7 @@ async function f(e, t, n) {
       questId: e
     });
     try {
-      let r = await s.default.post({
+      let r = await s.HTTP.post({
         url: o.Endpoints.QUESTS_REWARD_CODE(e),
         body: {
           platform: t,
@@ -160,7 +160,7 @@ async function S(e) {
       questId: e
     });
     try {
-      let t = await s.default.get({
+      let t = await s.HTTP.get({
         url: o.Endpoints.QUESTS_REWARD_CODE(e)
       });
       i.default.dispatch({
@@ -187,7 +187,7 @@ async function _(e, t) {
       content: t
     });
     try {
-      let n = await s.default.post({
+      let n = await s.HTTP.post({
         url: o.Endpoints.QUESTS_DISMISS_CONTENT(e, t),
         body: {}
       });
@@ -213,7 +213,7 @@ function T(e) {
 }
 async function p(e) {
   try {
-    let t = await s.default.post({
+    let t = await s.HTTP.post({
       url: o.Endpoints.QUESTS_PREVIEW_COMPLETE(e),
       body: {}
     });
@@ -231,7 +231,7 @@ async function p(e) {
 }
 async function C(e) {
   try {
-    let t = await s.default.delete({
+    let t = await s.HTTP.del({
       url: o.Endpoints.QUESTS_PREVIEW_STATUS(e),
       body: {}
     });
@@ -249,7 +249,7 @@ async function C(e) {
 }
 async function h(e) {
   try {
-    let t = await s.default.delete({
+    let t = await s.HTTP.del({
       url: o.Endpoints.QUESTS_PREVIEW_DISMISSIBILITY(e),
       body: {}
     });

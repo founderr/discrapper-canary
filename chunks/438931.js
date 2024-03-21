@@ -14,7 +14,7 @@ function a(e, t, n) {
     applicationId: e,
     branchId: t,
     flags: n
-  }), i.default.patch({
+  }), i.HTTP.patch({
     url: r.Endpoints.LIBRARY_APPLICATION_BRANCH(e, t),
     body: {
       flags: n

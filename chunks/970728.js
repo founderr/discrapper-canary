@@ -24,8 +24,8 @@ var i = n("597755"),
   m = n("677315"),
   p = n("233322"),
   S = n("157186"),
-  v = n("290886"),
-  T = n("374021"),
+  T = n("290886"),
+  v = n("374021"),
   I = n("398604"),
   A = n("704341"),
   C = n("9294"),
@@ -87,7 +87,7 @@ function ee(e) {
   } = i, o = function(e, t, n) {
     var i, s;
     if ((null == n ? void 0 : n.targetType) === X.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE) return z.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
-    if ((null == n ? void 0 : n.targetType) == null && !P.GUILD_VOCAL_CHANNEL_TYPES.has(t.type) && ((0, m.canSeeGuildHome)(e) || (0, v.canSeeOnboardingHome)(e))) return z.StaticChannelRoute.GUILD_HOME;
+    if ((null == n ? void 0 : n.targetType) == null && !P.GUILD_VOCAL_CHANNEL_TYPES.has(t.type) && ((0, m.canSeeGuildHome)(e) || (0, T.canSeeOnboardingHome)(e))) return z.StaticChannelRoute.GUILD_HOME;
     let r = M.default.getChannel(t.id);
     return G.default.can(W.Permissions.VIEW_CHANNEL, r) ? t.id : null !== (s = null === (i = b.default.getDefaultChannel(e, !0, W.Permissions.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== s ? s : t.id
   }(t, i, s), {
@@ -141,7 +141,7 @@ let et = function(e, t) {
           let e = {
             guildScheduledEventId: t.id
           };
-          null != n && (e.welcomeModalChannelId = n), (0, T.transitionToEventDetailsFromInvite)(t, e)
+          null != n && (e.welcomeModalChannelId = n), (0, v.transitionToEventDetailsFromInvite)(t, e)
         })
       }(t), !1) : (ee({
         guildId: null !== (i = s.getGuildId()) && void 0 !== i ? i : W.ME,
@@ -195,7 +195,7 @@ var ei = {
     try {
       let {
         body: i
-      } = await u.default.post({
+      } = await u.HTTP.post({
         url: W.Endpoints.INSTANT_INVITES(e),
         body: t,
         context: {
@@ -229,7 +229,7 @@ var ei = {
     await new Promise(e => d.default.wait(() => e(null)));
     let t = V.default.getFriendInvitesFetching();
     if (t) return null != J ? J.then(e => e.body) : Promise.reject(Error("Invalid friend invite fetch request"));
-    J = u.default.get({
+    J = u.HTTP.get({
       url: W.Endpoints.FRIEND_INVITES,
       context: {
         location: e
@@ -249,7 +249,7 @@ var ei = {
   },
   createFriendInvite: (e, t) => (d.default.dispatch({
     type: "FRIEND_INVITE_CREATE_REQUEST"
-  }), u.default.post({
+  }), u.HTTP.post({
     url: W.Endpoints.FRIEND_INVITES,
     body: null != e ? e : {},
     context: {
@@ -271,7 +271,7 @@ var ei = {
   })),
   revokeFriendInvites: () => (d.default.dispatch({
     type: "FRIEND_INVITE_REVOKE_REQUEST"
-  }), u.default.delete({
+  }), u.HTTP.del({
     url: W.Endpoints.FRIEND_INVITES,
     context: {
       location
@@ -285,7 +285,7 @@ var ei = {
       invites: t
     })
   })),
-  revokeFriendInvite: e => u.default.delete({
+  revokeFriendInvite: e => u.HTTP.del({
     url: W.Endpoints.INVITE(e)
   }),
   clearInviteFromStore(e) {
@@ -335,7 +335,7 @@ var ei = {
     return null !== (t = null == g ? void 0 : g.hasFlag(W.UserFlags.QUARANTINED)) && void 0 !== t && t ? ((0, N.default)(), new Promise((e, t) => t(Error()))) : (d.default.dispatch({
       type: "INVITE_ACCEPT",
       code: f
-    }), u.default.post({
+    }), u.HTTP.post({
       url: W.Endpoints.INVITE(f),
       context: h,
       oldFormErrors: !0,

@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return S
   },
   getAssetImage: function() {
-    return v
+    return T
   },
   getAssets: function() {
-    return T
+    return v
   },
   fetchAssetIds: function() {
     return y
@@ -57,7 +57,7 @@ let c = "https://i.scdn.co/image/",
 async function p(e) {
   let {
     body: t
-  } = await r.default.get({
+  } = await r.HTTP.get({
     url: d.Endpoints.APPLICATION_ASSETS(e),
     oldFormErrors: !0
   });
@@ -73,7 +73,7 @@ function S(e, t) {
   return n ? "".concat(e, ":").concat(n.toString()) : null
 }
 
-function v(e, t, n) {
+function T(e, t, n) {
   if (null != t && t.includes(":")) {
     let [e, i] = t.split(":");
     if (e === d.PlatformTypes.TWITCH) {
@@ -87,9 +87,9 @@ function v(e, t, n) {
   }
   if (null == e || null == t) return;
   let i = "number" == typeof n ? "?size=".concat((0, u.getBestMediaProxySize)(n)) : "";
-  return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/").concat(e, "/").concat(t, ".png").concat(i) : "".concat(r.default.getAPIBaseURL(), "/applications/").concat(e, "/app-assets/").concat(t, ".png").concat(i)
+  return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/").concat(e, "/").concat(t, ".png").concat(i) : "".concat((0, r.getAPIBaseURL)(), "/applications/").concat(e, "/app-assets/").concat(t, ".png").concat(i)
 }
-async function T(e) {
+async function v(e) {
   let t = await
 
   function(e) {
@@ -104,7 +104,7 @@ async function I(e, t) {
   if (0 === n.length) return;
   let {
     body: i
-  } = await r.default.post({
+  } = await r.HTTP.post({
     url: d.Endpoints.APPLICATION_EXTERNAL_ASSETS(e),
     body: {
       urls: n
@@ -162,7 +162,7 @@ async function y(e, t) {
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
     applicationId: e
   }), i;
-  let o = await T(e),
+  let o = await v(e),
     l = C(t, i, o, n);
   return l ? p(e).then(() => y(e, t, n - 1)) : (a.default.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",

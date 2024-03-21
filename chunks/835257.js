@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return r
   },
   getJoinSourceTypeLabel: function() {
-    return g
+    return T
   },
   getIntegrationLabel: function() {
-    return T
+    return g
   },
   useGetIntegrationIconString: function() {
     return S
@@ -51,7 +51,7 @@ function N(e, t) {
     C[e + t] = 3
   })(e, t, 3))
 }(a = r || (r = {}))[a.UNSPECIFIED = 0] = "UNSPECIFIED", a[a.BOT = 1] = "BOT", a[a.INTEGRATION = 2] = "INTEGRATION", a[a.DISCOVERY = 3] = "DISCOVERY", a[a.HUB = 4] = "HUB", a[a.INVITE = 5] = "INVITE", a[a.VANITY_URL = 6] = "VANITY_URL";
-let g = function(e) {
+let T = function(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   switch (e) {
@@ -75,7 +75,7 @@ let g = function(e) {
   }
 };
 (o = s || (s = {})).DISCORD = "discord", o.TWITCH = "twitch", o.YOUTUBE = "youtube", o.GUILD_SUBSCRIPTION = "guild_subscription";
-let T = e => {
+let g = e => {
     switch (e) {
       case "twitch":
         return v.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;
@@ -106,7 +106,7 @@ async function R(e, t) {
   if (0 === i.length) return [];
   m(n, 2);
   try {
-    let t = await u.default.post({
+    let t = await u.HTTP.post({
       url: E.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
       body: {
         user_ids: i

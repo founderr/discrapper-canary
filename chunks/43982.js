@@ -112,7 +112,7 @@ class g extends i.EventEmitter {
     })
   }
   requestOnce(e, t, n) {
-    return l.default.post({
+    return l.HTTP.post({
       url: "http://127.0.0.1:".concat(this.port, "/rpc?v=").concat(d.RPC_VERSION),
       body: {
         cmd: e,

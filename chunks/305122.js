@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return C
   },
   uploadSound: function() {
-    return _
+    return T
   },
   updateSound: function() {
-    return T
+    return _
   },
   deleteSound: function() {
     return I
@@ -50,7 +50,7 @@ var i = n("917351"),
   x = n("782340");
 let E = async e => {
   try {
-    let t = await a.default.get({
+    let t = await a.HTTP.get({
         url: m.Endpoints.SOUNDBOARD_DEFAULT_SOUNDS,
         query: {
           guild_ids: e
@@ -91,7 +91,7 @@ let E = async e => {
 }, C = () => __OVERLAY__ ? (s.default.dispatch({
   type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST"
 }), Promise.all([])) : Promise.all([g(), S()]);
-async function _(e) {
+async function T(e) {
   let {
     guildId: t,
     name: n,
@@ -99,7 +99,7 @@ async function _(e) {
     volume: l,
     emojiId: s,
     emojiName: r
-  } = e, o = await a.default.post({
+  } = e, o = await a.HTTP.post({
     url: m.Endpoints.GUILD_SOUNDBOARD_SOUNDS(t),
     body: {
       name: n,
@@ -111,7 +111,7 @@ async function _(e) {
   }), u = (0, c.soundboardSoundFromAPI)(o.body, t);
   return u
 }
-async function T(e) {
+async function _(e) {
   let {
     guildId: t,
     soundId: n,
@@ -119,7 +119,7 @@ async function T(e) {
     volume: l,
     emojiId: s,
     emojiName: r
-  } = e, o = await a.default.patch({
+  } = e, o = await a.HTTP.patch({
     url: m.Endpoints.GUILD_SOUNDBOARD_SOUND(t, n),
     body: {
       name: i,
@@ -131,7 +131,7 @@ async function T(e) {
   return u
 }
 async function I(e, t) {
-  await a.default.delete({
+  await a.HTTP.del({
     url: m.Endpoints.GUILD_SOUNDBOARD_SOUND(e, t),
     oldFormErrors: !0
   })

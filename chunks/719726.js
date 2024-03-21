@@ -40,10 +40,10 @@ n.r(t), n.d(t, {
     return S
   },
   getGuildRoleSubscriptionTrialEligibility: function() {
-    return v
+    return T
   },
   getGuildMonetizationRestrictions: function() {
-    return T
+    return v
   },
   fetchHighlightedCreatorGuildDetails: function() {
     return I
@@ -55,7 +55,7 @@ var i = n("872717"),
   a = n("843455");
 let o = async (e, t) => {
   try {
-    let n = await i.default.post({
+    let n = await i.HTTP.post({
       url: r.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e),
       body: t
     });
@@ -69,7 +69,7 @@ let o = async (e, t) => {
     ...o
   } = n;
   try {
-    let n = await i.default.post({
+    let n = await i.HTTP.post({
       url: r.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t),
       body: {
         ...o,
@@ -86,7 +86,7 @@ let o = async (e, t) => {
     ...l
   } = a;
   try {
-    let s = await i.default.patch({
+    let s = await i.HTTP.patch({
       url: r.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t, n),
       body: {
         ...l,
@@ -106,7 +106,7 @@ let o = async (e, t) => {
       country_code: t.countryCode
     };
   try {
-    let t = await i.default.get({
+    let t = await i.HTTP.get({
       url: r.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e),
       query: n
     });
@@ -115,13 +115,13 @@ let o = async (e, t) => {
     throw new s.APIError(e)
   }
 }, c = async e => {
-  let t = await i.default.get({
+  let t = await i.HTTP.get({
     url: r.Endpoints.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e)
   });
   return t.body
 }, _ = async (e, t) => {
   try {
-    let n = await i.default.patch({
+    let n = await i.HTTP.patch({
       url: r.Endpoints.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e),
       body: t
     });
@@ -131,7 +131,7 @@ let o = async (e, t) => {
   }
 }, f = async e => {
   try {
-    let t = await i.default.get({
+    let t = await i.HTTP.get({
       url: r.Endpoints.PRICE_TIERS,
       query: {
         price_tier_type: a.PriceTierTypes.GUILD_ROLE_SUBSCRIPTIONS,
@@ -145,7 +145,7 @@ let o = async (e, t) => {
 }, E = async function(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   try {
-    let s = await i.default.get({
+    let s = await i.HTTP.get({
       url: r.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e, t),
       query: {
         include_draft_listings: n.includeDraftListings,
@@ -158,7 +158,7 @@ let o = async (e, t) => {
   }
 }, h = async e => {
   try {
-    let t = await i.default.get({
+    let t = await i.HTTP.get({
       url: r.Endpoints.SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING(e)
     });
     return t.body
@@ -167,7 +167,7 @@ let o = async (e, t) => {
   }
 }, g = async (e, t, n) => {
   try {
-    await i.default.delete({
+    await i.HTTP.del({
       url: r.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t, n)
     })
   } catch (e) {
@@ -175,7 +175,7 @@ let o = async (e, t) => {
   }
 }, m = async (e, t, n) => {
   try {
-    let s = await i.default.post({
+    let s = await i.HTTP.post({
       url: r.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ARCHIVE(e, t, n)
     });
     return s.body
@@ -184,7 +184,7 @@ let o = async (e, t) => {
   }
 }, p = async e => {
   try {
-    let t = await i.default.get({
+    let t = await i.HTTP.get({
       url: r.Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIALS(e)
     });
     return t.body
@@ -193,7 +193,7 @@ let o = async (e, t) => {
   }
 }, S = async (e, t, n) => {
   try {
-    let s = await i.default.patch({
+    let s = await i.HTTP.patch({
       url: r.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL(e, t),
       body: n
     });
@@ -201,21 +201,21 @@ let o = async (e, t) => {
   } catch (e) {
     throw new s.APIError(e)
   }
-}, v = async (e, t, n) => {
+}, T = async (e, t, n) => {
   try {
-    let s = await i.default.get({
+    let s = await i.HTTP.get({
       url: r.Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY(e, t, n)
     });
     return s.body
   } catch (e) {
     throw new s.APIError(e)
   }
-}, T = async function(e) {
+}, v = async function(e) {
   let {
     signal: t
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   try {
-    let n = await i.default.get({
+    let n = await i.HTTP.get({
       url: r.Endpoints.CREATOR_MONETIZATION_RESTRICTIONS(e),
       signal: t
     });
@@ -226,7 +226,7 @@ let o = async (e, t) => {
 }, I = async e => {
   try {
     var t;
-    let n = await i.default.get({
+    let n = await i.HTTP.get({
       url: r.Endpoints.GUILD_DISCOVERY_SLUG(e)
     });
     return null !== (t = n.body) && void 0 !== t ? t : JSON.parse(n.text)

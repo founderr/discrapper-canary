@@ -39,7 +39,7 @@ let h = async e => {
     guildId: e
   });
   try {
-    let t = await l.default.get({
+    let t = await l.HTTP.get({
         url: S.Endpoints.GUILD_HOME_SETTINGS(e),
         oldFormErrors: !0
       }),
@@ -62,7 +62,7 @@ let h = async e => {
       guildId: e
     });
     try {
-      let t = await l.default.get({
+      let t = await l.HTTP.get({
           url: S.Endpoints.GUILD_MEMBER_ACTIONS(e),
           oldFormErrors: !0
         }),
@@ -132,7 +132,7 @@ let h = async e => {
       has_completed_all: l.reduce((e, n) => e && t.includes(n.channelId), !0)
     })
   }
-  l.default.post({
+  l.HTTP.post({
     url: S.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t)
   })
 };

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return C
   },
   preloadForumThreads: function() {
-    return T
+    return I
   }
 }), n("222007");
 var a = n("917351"),
@@ -111,7 +111,7 @@ function C(e, t) {
   }
 }
 
-function I(e, t) {
+function T(e, t) {
   let n = !1;
   t.forEach(t => {
     var a, i;
@@ -123,8 +123,8 @@ function I(e, t) {
   }), n && null == S && (S = setTimeout(N, 0))
 }
 
-function T(e) {
-  I(e, (0, o.computeThreadIdsSnapshot)(e.id).slice(0, 10))
+function I(e) {
+  T(e, (0, o.computeThreadIdsSnapshot)(e.id).slice(0, 10))
 }
 
 function v(e, t) {
@@ -132,7 +132,7 @@ function v(e, t) {
   let n = (0, o.computeThreadIdsSnapshot)(e.id),
     a = n.findIndex(e => e === t),
     i = n.slice(a, a + 5).filter(t => !p.hasRequested(e.id, t));
-  I(e, i)
+  T(e, i)
 }
 async function N() {
   try {
@@ -152,7 +152,7 @@ async function y(e) {
       body: {
         threads: i
       }
-    } = await r.default.post({
+    } = await r.HTTP.post({
       url: E.Endpoints.FORUM_POSTS(e),
       body: {
         thread_ids: t

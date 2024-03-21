@@ -25,7 +25,7 @@ async function g(e, t) {
     applicationId: e,
     branchId: t,
     locale: d
-  }), n && await (0, s.sleep)(Math.random() * E), i.default.get({
+  }), n && await (0, s.sleep)(Math.random() * E), i.HTTP.get({
     url: c.Endpoints.APPLICATION_LIVE_BUILD(e, t),
     query: {
       platform: (0, u.getBuildPlatform)(),

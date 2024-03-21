@@ -36,7 +36,7 @@ function E() {
     {
       withAnalyticsToken: t = !1
     } = e;
-  return o.default.get({
+  return o.HTTP.get({
     url: _.Endpoints.ME,
     query: {
       with_analytics_token: t
@@ -69,7 +69,7 @@ function g(e, t) {
   let n = d.default.getCurrentUser();
   s(null != n, "setFlag: user cannot be undefined");
   let i = t ? n.flags | e : n.flags & ~e;
-  return o.default.patch({
+  return o.HTTP.patch({
     url: _.Endpoints.ME,
     oldFormErrors: !0,
     body: {
@@ -80,7 +80,7 @@ function g(e, t) {
 
 function m(e) {
   let t = d.default.getUser(e);
-  return null != t ? Promise.resolve(t) : o.default.get({
+  return null != t ? Promise.resolve(t) : o.HTTP.get({
     url: _.Endpoints.USER(e),
     oldFormErrors: !0
   }).then(t => (l.default.dispatch({
@@ -101,7 +101,7 @@ async function p(e) {
     userId: e
   });
   try {
-    let u = await o.default.get({
+    let u = await o.HTTP.get({
       url: _.Endpoints.USER_PROFILE(e),
       query: {
         friend_token: t,
@@ -136,7 +136,7 @@ async function S(e, t) {
     userId: e
   });
   try {
-    let n = await o.default.get({
+    let n = await o.HTTP.get({
       url: _.Endpoints.USER_RELATIONSHIPS(e),
       oldFormErrors: !0,
       signal: t

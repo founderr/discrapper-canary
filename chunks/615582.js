@@ -75,7 +75,7 @@ let d = 1500,
             client_send_timestamp: t
           }
         }));
-      return u.default.post({
+      return u.HTTP.post({
         url: m,
         body: {
           token: i,

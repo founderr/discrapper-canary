@@ -24,9 +24,9 @@ var a = n("917351"),
   C = n("299039"),
   O = n("863636"),
   I = n("380710"),
-  A = n("843323"),
-  G = n("49111"),
-  T = n("657944"),
+  T = n("843323"),
+  A = n("49111"),
+  G = n("657944"),
   D = n("133335");
 
 function L(e) {
@@ -39,8 +39,8 @@ function L(e) {
     r = {};
   return (n.forEach(e => {
     s[e.id] = Date.now(), e.options.forEach(e => r[e.id] = Date.now())
-  }), t) ? i.default.post({
-    url: G.Endpoints.GUILD_ONBOARDING_RESPONSES(e),
+  }), t) ? i.HTTP.post({
+    url: A.Endpoints.GUILD_ONBOARDING_RESPONSES(e),
     body: {
       onboarding_responses: l.map(e => e.id),
       onboarding_prompts_seen: s,
@@ -54,8 +54,8 @@ function L(e) {
       prompts_seen: t.body.onboarding_prompts_seen,
       options_seen: t.body.onboarding_responses_seen
     })
-  }).catch(e => h.default.captureException(e)) : i.default.put({
-    url: G.Endpoints.GUILD_ONBOARDING_RESPONSES(e),
+  }).catch(e => h.default.captureException(e)) : i.HTTP.put({
+    url: A.Endpoints.GUILD_ONBOARDING_RESPONSES(e),
     body: {
       onboarding_responses: l.map(e => e.id),
       onboarding_prompts_seen: s,
@@ -109,9 +109,9 @@ var U = {
       [o, g] = (0, I.getChannelCoverageForOnboarding)(e, t, d),
       h = [...i, ...d],
       U = h.map(e => c.default.getChannel(e)).filter(S.isNotNullish),
-      v = (0, A.getFlattenedChannels)(e, new Set(h), U, !0).length,
+      v = (0, T.getFlattenedChannels)(e, new Set(h), U, !0).length,
       b = null == n ? [] : n.options.map(e => e.id);
-    if (E.default.track(G.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
+    if (E.default.track(A.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
         ...(0, r.collectGuildAnalyticsMetadata)(e),
         step: t.length - 1,
         options_selected: null == n ? 0 : a.filter(e => b.includes(e.id)).length,
@@ -133,7 +133,7 @@ var U = {
         let n = null !== (y = null === (F = _.default.getMember(e, t.id)) || void 0 === F ? void 0 : F.flags) && void 0 !== y ? y : 0;
         (0, u.updateImpersonatedData)(e, {
           memberOptions: {
-            flags: (0, N.setFlag)(n, T.GuildMemberFlags.COMPLETED_ONBOARDING, !0)
+            flags: (0, N.setFlag)(n, G.GuildMemberFlags.COMPLETED_ONBOARDING, !0)
           }
         })
       }
@@ -143,7 +143,7 @@ var U = {
     let n = new Set(t),
       a = O.default.getEnabled(e) ? O.default.getDefaultChannelIds(e) : [];
     a.forEach(e => n.add(e)), n.size > 0 && (0, g.bulkOptInChannels)(e, Array.from(n), !0, {
-      page: G.AnalyticsPages.GUILD_ONBOARDING
+      page: A.AnalyticsPages.GUILD_ONBOARDING
     })
   },
   finishOnboarding(e) {
@@ -165,7 +165,7 @@ var U = {
       var n, a;
       let l = null !== (a = null === (n = _.default.getMember(e, t.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== a ? a : 0;
       await (0, o.updateGuildSelfMember)(e, {
-        flags: (0, N.setFlag)(l, T.GuildMemberFlags.COMPLETED_ONBOARDING, !1)
+        flags: (0, N.setFlag)(l, G.GuildMemberFlags.COMPLETED_ONBOARDING, !1)
       })
     }
   }

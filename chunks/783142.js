@@ -64,7 +64,7 @@ async function S(e, t) {
       type: "USER_PROFILE_UPDATE_START",
       userId: d
     });
-    let n = await i.default.patch({
+    let n = await i.HTTP.patch({
       url: null != t ? T.Endpoints.GUILD_PROFILE(t, T.ME) : T.Endpoints.USER_PROFILE(T.ME),
       body: e
     });

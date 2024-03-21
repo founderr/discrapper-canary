@@ -26,8 +26,8 @@ var i, s, r, a, o = n("627445"),
   m = n("985365"),
   p = n("718517"),
   S = n("254490"),
-  v = n("231987"),
-  T = n("980134"),
+  T = n("231987"),
+  v = n("980134"),
   I = n("282928"),
   A = n("49111");
 let C = null;
@@ -36,7 +36,7 @@ let y = e => 0 === e.type,
   N = e => 1 === e.type,
   R = e => y(e) ? e.message.nonce : N(e) ? e.message.messageId : e.message.data.id,
   O = [1 * p.default.Millis.MINUTE, 5 * p.default.Millis.MINUTE];
-class D extends v.default {
+class D extends T.default {
   isFull() {
     return this.queue.length >= this.maxSize
   }
@@ -110,7 +110,7 @@ class D extends v.default {
     }));
     let c = this.createResponseHandler(e.nonce, t),
       _ = new AbortController;
-    if (this.startQueueMetricTimers(e.nonce), null != s && null != r && "" !== r) d.default.post({
+    if (this.startQueueMetricTimers(e.nonce), null != s && null != r && "" !== r) d.HTTP.post({
       url: A.Endpoints.MESSAGES(i),
       fields: Object.entries(l).map(e => {
         let [t, n] = e;
@@ -137,7 +137,7 @@ class D extends v.default {
         retries: 3,
         backoff: new u.default
       };
-      d.default.post({
+      d.HTTP.post({
         url: A.Endpoints.MESSAGES(i),
         body: l,
         context: n,
@@ -156,7 +156,7 @@ class D extends v.default {
       messageId: i,
       ...s
     } = e, r = new AbortController;
-    d.default.patch({
+    d.HTTP.patch({
       url: A.Endpoints.MESSAGE(n, i),
       body: s,
       retries: 1,
@@ -190,10 +190,10 @@ class D extends v.default {
       };
     if (null != u) {
       E.data.attachments = [], n = [];
-      E.data.attachments = u.map((e, t) => (l(e.status === I.CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message"), (0, T.getAttachmentPayload)(e, t)))
+      E.data.attachments = u.map((e, t) => (l(e.status === I.CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message"), (0, v.getAttachmentPayload)(e, t)))
     }
     let h = new AbortController;
-    d.default.post({
+    d.HTTP.post({
       url: A.Endpoints.INTERACTIONS,
       fields: [{
         name: "payload_json",

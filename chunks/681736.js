@@ -50,7 +50,7 @@ i = class extends s.default {
         body: i,
         signal: e
       },
-      d = "POST" === this._method ? l.default.post : l.default.patch;
+      d = "POST" === this._method ? l.HTTP.post : l.HTTP.patch;
     try {
       let e = await d(u);
       return this._handleComplete(e.body), e.body
