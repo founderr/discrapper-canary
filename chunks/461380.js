@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return v
   }
 });
 var i = n("37983");
@@ -21,21 +21,21 @@ let h = {
     DOWN: f.directionDown,
     LEFT: f.directionLeft
   },
-  v = e => {
+  E = e => {
     let {
       direction: t = h.DOWN,
       width: n = 24,
       height: r = 24,
-      color: v = "currentColor",
-      transition: p = f.transition,
+      color: E = "currentColor",
+      transition: v = f.transition,
       className: C,
-      foreground: E,
-      expanded: m,
-      ..._
+      foreground: p,
+      expanded: _,
+      ...I
     } = e, {
-      enabled: g
+      enabled: m
     } = (0, c.useRedesignIconContext)(), N = t;
-    if (!0 === m ? N = h.DOWN : !1 === m && (N = h.RIGHT), g) {
+    if (!0 === _ ? N = h.DOWN : !1 === _ && (N = h.RIGHT), m) {
       let e = {
         [h.UP]: u.ChevronSmallUpIcon,
         [h.DOWN]: l.ChevronSmallDownIcon,
@@ -43,24 +43,24 @@ let h = {
         [h.RIGHT]: o.ChevronSmallRightIcon
       } [N];
       return (0, i.jsx)(e, {
-        ..._,
+        ...I,
         className: C,
         width: n,
         height: r,
-        color: v,
-        colorClass: E
+        color: E,
+        colorClass: p
       })
     }
     return (0, i.jsx)("svg", {
-      className: s(C, p, N),
+      className: s(C, v, N),
       width: n,
       height: r,
       viewBox: "0 0 24 24",
-      ...(0, d.default)(_),
+      ...(0, d.default)(I),
       children: (0, i.jsx)("path", {
-        className: E,
+        className: p,
         fill: "none",
-        stroke: v,
+        stroke: E,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -69,5 +69,5 @@ let h = {
       })
     })
   };
-v.Directions = h;
-var p = v
+E.Directions = h;
+var v = E
