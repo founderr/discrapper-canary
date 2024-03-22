@@ -357,6 +357,23 @@ var N = {
       event: a.NetworkActionNames.USER_VERIFY_RESEND
     }
   }),
+  async loginWebAuthn(e) {
+    let {
+      ticket: t,
+      credential: n,
+      source: i,
+      giftCodeSKUId: s
+    } = e, r = await l.HTTP.post({
+      url: T.Endpoints.WEBAUTHN_CONDITIONAL_UI_LOGIN,
+      body: {
+        credential: n,
+        ticket: t,
+        source: i,
+        giftCodeSKUId: s
+      }
+    });
+    return r.body.token
+  },
   async resetPassword(e, t, n) {
     d.default.dispatch({
       type: "LOGIN"
