@@ -9,7 +9,7 @@ var i = n("75247"),
   r = n("605250"),
   a = n("778689");
 let o = new r.default("BasicChannelCacheStore");
-class l extends i.default {
+class l extends i.Store {
   hasChannel(e) {
     return this.channels.has(e)
   }
