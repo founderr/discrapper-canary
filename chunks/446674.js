@@ -10,7 +10,7 @@ E.r(_), E.d(_, {
     return t.default
   },
   useStateFromStores: function() {
-    return a.default
+    return a.useStateFromStores
   },
   useStateFromStoresObject: function() {
     return a.useStateFromStoresObject

@@ -91,19 +91,19 @@ var L = e => {
     upsellSource: P
   } = e, {
     analyticsLocations: b
-  } = (0, p.default)(f.default.COLLECTIBLES_USER_POPOUT_UPSELL), j = (0, o.default)([c.default], () => c.default.useReducedMotion), {
+  } = (0, p.default)(f.default.COLLECTIBLES_USER_POPOUT_UPSELL), j = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
     ref: U,
     height: D
   } = (0, d.default)(), w = l.useMemo(() => ({
     top: "-".concat((null != D ? D : R) + 6, "px")
-  }), [D]), F = (0, o.default)([S.default], () => S.default.getCurrentUser()), G = T.default.canUseCollectibles(F), {
+  }), [D]), F = (0, o.useStateFromStores)([S.default], () => S.default.getCurrentUser()), G = T.default.canUseCollectibles(F), {
     setUpsellSource: H,
     reset: B
   } = (0, _.useUserPopoutCollectiblesUpsellStore)();
   l.useEffect(() => (H(P), () => {
     B()
   }), [H, P, B]);
-  let V = (0, o.default)([g.default], () => g.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
+  let V = (0, o.useStateFromStores)([g.default], () => g.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
     [K, W] = (0, o.useStateFromStoresArray)([E.default], () => {
       var e;
       return [(0, y.isPremiumCollectiblesProduct)(E.default.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, y.isPremiumCollectiblesProduct)(E.default.getProduct(null == V ? void 0 : V.skuId))]
@@ -120,7 +120,7 @@ var L = e => {
       null == h || h(I.ContentDismissActionType.DISMISS)
     }, [h]);
   if (!A && !L) return null;
-  let J = (0, r.match)([A, L]).with([!0, !0], () => K && W && G ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+  let Z = (0, r.match)([A, L]).with([!0, !0], () => K && W && G ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : K && W ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
     openShop: M
@@ -157,7 +157,7 @@ var L = e => {
           variant: "text-sm/normal",
           color: "text-normal",
           tag: "span",
-          children: J
+          children: Z
         })
       }), (0, i.jsx)("div", {
         className: N.buttons,

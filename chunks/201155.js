@@ -9,7 +9,7 @@ var i = n("65597"),
   a = n("337026");
 
 function s(e) {
-  let t = (0, i.default)([l.default], () => l.default.getChannel(e)),
+  let t = (0, i.useStateFromStores)([l.default], () => l.default.getChannel(e)),
     {
       enabled: n
     } = a.default.useExperiment({

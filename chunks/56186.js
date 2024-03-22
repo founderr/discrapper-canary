@@ -40,7 +40,7 @@ function _(e) {
   })
 }
 var T = function() {
-  let e = (0, r.default)([l.default], () => l.default.useReducedMotion);
+  let e = (0, r.useStateFromStores)([l.default], () => l.default.useReducedMotion);
   return (0, i.jsxs)("div", {
     className: n.wrapper,
     children: [(0, i.jsx)(a.Heading, {

@@ -13,7 +13,7 @@ function s(e) {
   let {
     children: t,
     confettiLocation: n
-  } = e, s = (0, l.default)([a.default], () => a.default.isEnabled({
+  } = e, s = (0, l.useStateFromStores)([a.default], () => a.default.isEnabled({
     confettiLocation: n
   }));
   return s ? (0, i.jsx)(i.Fragment, {
