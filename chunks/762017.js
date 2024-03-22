@@ -101,6 +101,11 @@ let o = {
     inlineRequire: () => E("902801").default,
     neverLoadBeforeConnectionOpen: !0
   },
+  SignUpManager: {
+    actions: ["POST_CONNECTION_OPEN"],
+    inlineRequire: () => E("674487").default,
+    neverLoadBeforeConnectionOpen: !0
+  },
   GuildOnboardingManager: {
     actions: ["POST_CONNECTION_OPEN", "CHANNEL_SELECT", "GUILD_DELETE"],
     inlineRequire: () => E("999243").default,
