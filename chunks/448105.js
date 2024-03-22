@@ -1,13 +1,13 @@
-"use strict";
-e.exports = function(e, t) {
-  var n = t.length,
-    r = e.length;
-  if (r > n) return !1;
-  if (r === n) return e === t;
-  e: for (var i = 0, o = 0; i < r; i++) {
-    for (var s = e.charCodeAt(i); o < n;)
-      if (t.charCodeAt(o++) === s) continue e;
-    return !1
-  }
-  return !0
-}
+    "use strict";
+    t.exports = function(t, e) {
+      var n = e.length,
+        r = t.length;
+      if (r > n) return !1;
+      if (r === n) return t === e;
+      t: for (var o = 0, i = 0; o < r; o++) {
+        for (var u = t.charCodeAt(o); i < n;)
+          if (e.charCodeAt(i++) === u) continue t;
+        return !1
+      }
+      return !0
+    }

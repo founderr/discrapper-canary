@@ -1,67 +1,67 @@
-    "use strict";
-    t.r(a), t.d(a, {
-      makeDesktopDownloadURL: function() {
-        return o
-      },
-      getPlatformReadableName: function() {
-        return l
-      },
-      getCurrentPlatformDownloadURL: function() {
-        return u
-      },
-      getMobileDownloadLink: function() {
-        return p
-      }
-    });
-    var d = t("597755"),
-      s = t.n(d),
-      n = t("815157"),
-      c = t("271938"),
-      i = t("49111");
-    let r = "linux";
+"use strict";
+n.r(t), n.d(t, {
+  makeDesktopDownloadURL: function() {
+    return d
+  },
+  getPlatformReadableName: function() {
+    return c
+  },
+  getCurrentPlatformDownloadURL: function() {
+    return h
+  },
+  getMobileDownloadLink: function() {
+    return E
+  }
+});
+var i = n("597755"),
+  s = n.n(i),
+  l = n("815157"),
+  a = n("271938"),
+  u = n("49111");
+let r = "linux";
 
-    function o(e) {
-      let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        t = arguments.length > 2 ? arguments[2] : void 0;
-      return "".concat(i.DownloadLinks.DESKTOP).concat(a ? "/ptb" : "", "?platform=").concat(e).concat(null != t ? "&format=".concat(t) : "")
-    }
+function d(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    n = arguments.length > 2 ? arguments[2] : void 0;
+  return "".concat(u.DownloadLinks.DESKTOP).concat(t ? "/ptb" : "", "?platform=").concat(e).concat(null != n ? "&format=".concat(n) : "")
+}
 
-    function f() {
-      var e;
-      let a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = s.os) || void 0 === e ? void 0 : e.family;
-      return null == a ? "win" : -1 !== a.indexOf("Ubuntu") || -1 !== a.indexOf("Debian") || -1 !== a.indexOf("Fedora") || -1 !== a.indexOf("Red Hat") || -1 !== a.indexOf("SuSE") || -1 !== a.indexOf("Linux") ? r : -1 !== a.indexOf("OS X") ? "osx" : "win"
-    }
+function o() {
+  var e;
+  let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = s.os) || void 0 === e ? void 0 : e.family;
+  return null == t ? "win" : -1 !== t.indexOf("Ubuntu") || -1 !== t.indexOf("Debian") || -1 !== t.indexOf("Fedora") || -1 !== t.indexOf("Red Hat") || -1 !== t.indexOf("SuSE") || -1 !== t.indexOf("Linux") ? r : -1 !== t.indexOf("OS X") ? "osx" : "win"
+}
 
-    function l(e) {
-      return ({
-        win: "Windows",
-        osx: "Mac",
-        [r]: "Linux"
-      })[f(e)]
-    }
+function c(e) {
+  return ({
+    win: "Windows",
+    osx: "Mac",
+    [r]: "Linux"
+  })[o(e)]
+}
 
-    function u() {
-      let e = f();
-      return o(e, !1, e === r ? "tar.gz" : null)
-    }
+function h() {
+  let e = o();
+  return d(e, !1, e === r ? "tar.gz" : null)
+}
 
-    function p(e, a, t) {
-      let d = null != t ? t.toString() : null;
-      switch (a) {
-        case "iOS":
-          return (0, n.default)(null != d ? d : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
-            utmSource: e,
-            fingerprint: c.default.getFingerprint(),
-            attemptId: (0, n.generateAttemptId)()
-          });
-        case "Android":
-          return (0, n.default)(null != d ? d : "https://play.google.com/store/apps/details", {
-            utmSource: e,
-            id: "com.discord",
-            fingerprint: c.default.getFingerprint(),
-            attemptId: (0, n.generateAttemptId)()
-          });
-        default:
-          return null != d ? d : "https://www.discord.com"
-      }
-    }
+function E(e, t, n) {
+  let i = null != n ? n.toString() : null;
+  switch (t) {
+    case "iOS":
+      return (0, l.default)(null != i ? i : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
+        utmSource: e,
+        fingerprint: a.default.getFingerprint(),
+        attemptId: (0, l.generateAttemptId)()
+      });
+    case "Android":
+      return (0, l.default)(null != i ? i : "https://play.google.com/store/apps/details", {
+        utmSource: e,
+        id: "com.discord",
+        fingerprint: a.default.getFingerprint(),
+        attemptId: (0, l.generateAttemptId)()
+      });
+    default:
+      return null != i ? i : "https://www.discord.com"
+  }
+}

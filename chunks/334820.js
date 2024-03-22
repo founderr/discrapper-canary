@@ -1,0 +1,19 @@
+"use strict";
+a.r(t), a.d(t, {
+  usePurchasedProductsSort: function() {
+    return n
+  }
+}), a("222007"), a("424973");
+var s = a("884691"),
+  r = a("65597"),
+  l = a("775416");
+let n = e => {
+  let t = (0, r.useStateFromStores)([l.default], () => l.default.purchases),
+    a = (0, s.useMemo)(() => {
+      let a = [],
+        s = [];
+      for (let r of e.values()) void 0 !== t.get(r.skuId) ? a.push(r) : s.push(r);
+      return s.concat(a)
+    }, [e, t]);
+  return a
+}
