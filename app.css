@@ -18245,7 +18245,16 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 }
 
 .headerBanner__76f87 {
-    height: 126px
+    height: 126px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: var(--custom-background-static);
+    transition: all ease.2s
+}
+
+.headerBanner__76f87:hover {
+    background-image: var(--custom-background-animated, var(--custom-background-static))
 }
 
 .partnerBadge_fae14e {
