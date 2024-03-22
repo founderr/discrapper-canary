@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return x
   },
   autoMigrateToNewSystem: function() {
-    return G
+    return U
   },
   useSaveSettings: function() {
-    return U
+    return G
   },
   revertToOldSystem: function() {
     return B
@@ -128,7 +128,7 @@ function x(e, t) {
   })
 }
 
-function G() {
+function U() {
   let e = Object.values(p.default.getGuilds()),
     t = {};
   for (let a of e) {
@@ -145,7 +145,7 @@ function G() {
   })
 }
 
-function U(e) {
+function G(e) {
   let [t, n] = i.useState(!1), [a, s] = i.useState(!1), l = i.useCallback(async t => {
     if (a) throw Error("Already submitted notifications migration");
     n(!0);
