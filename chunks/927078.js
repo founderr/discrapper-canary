@@ -4,10 +4,10 @@ n.r(e), n.d(e, {
     return c
   },
   fetchEntitlementsForGuild: function() {
-    return d
+    return S
   },
   dismissApplicationSubscriptionExpirationNotice: function() {
-    return S
+    return d
   },
   fetchSubscriptionListingForPlan: function() {
     return E
@@ -83,7 +83,7 @@ async function c(t, e) {
     })
   }
 }
-async function d(t) {
+async function S(t) {
   i.default.dispatch({
     type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS",
     guildId: t
@@ -103,7 +103,7 @@ async function d(t) {
   }
 }
 
-function S(t) {
+function d(t) {
   i.default.dispatch({
     type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED",
     guildId: t

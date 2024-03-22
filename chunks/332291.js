@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var r = n("37983"),
   i = n("884691"),
-  l = n("414456"),
-  a = n.n(l),
+  a = n("414456"),
+  l = n.n(a),
   s = n("446674"),
   o = n("77078"),
   u = n("106435"),
@@ -20,7 +20,7 @@ function m() {
     t = e[0],
     {
       avatarSrc: n,
-      eventHandlers: l
+      eventHandlers: a
     } = (0, u.default)({
       user: t,
       size: o.AvatarSizes.SIZE_24,
@@ -39,9 +39,9 @@ function m() {
       src: n,
       "aria-label": t.username,
       size: o.AvatarSizes.SIZE_24,
-      ...l
+      ...a
     }), (0, r.jsx)(o.Text, {
-      className: a(f.text),
+      className: l(f.text),
       variant: "text-sm/normal",
       color: "always-white",
       children: _

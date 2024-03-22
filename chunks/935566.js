@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i
   },
   isBogoPromotionExperimentEnabled: function() {
-    return l
+    return a
   },
   default: function() {
-    return a
+    return l
   }
 });
 var r = n("862205");
@@ -26,7 +26,7 @@ let i = (0, r.createExperiment)({
       }
     }]
   }),
-  l = function() {
+  a = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return i.getCurrentConfig({
       location: "489551_2"
@@ -34,7 +34,7 @@ let i = (0, r.createExperiment)({
       autoTrackExposure: e
     })
   };
-var a = function() {
+var l = function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   return i.useExperiment({
     location: "489551_1"

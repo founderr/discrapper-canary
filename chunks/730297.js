@@ -7,10 +7,10 @@ r.r(t), r.d(t, {
     return a
   }
 });
-var a, l = r("265586"),
-  n = r("200410");
+var a, n = r("265586"),
+  l = r("200410");
 let i = e => e instanceof a;
-a = class e extends n.default {
+a = class e extends l.default {
   static fromServer(t) {
     return new e({
       ...super.fromServer(t),
@@ -18,6 +18,6 @@ a = class e extends n.default {
     })
   }
   constructor(e) {
-    super(e), this.type = l.CollectiblesItemType.AVATAR_DECORATION, this.asset = e.asset, this.label = e.label
+    super(e), this.type = n.CollectiblesItemType.AVATAR_DECORATION, this.asset = e.asset, this.label = e.label
   }
 }

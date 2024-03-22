@@ -12,13 +12,13 @@ var i = n("446674"),
   o = n("745279"),
   s = n("520713"),
   c = n("49111"),
-  d = n("782340");
-let S = !1,
+  S = n("782340");
+let d = !1,
   E = null,
   f = null;
 
 function _() {
-  S = !1, f = null
+  d = !1, f = null
 }
 
 function T(t) {
@@ -28,8 +28,8 @@ function T(t) {
     code: n,
     paymentId: i
   } = e;
-  if (n !== a.default.ErrorCodes.AUTHENTICATION_REQUIRED) return S = !1, !1;
-  !S && (S = !0, E = i, I(i))
+  if (n !== a.default.ErrorCodes.AUTHENTICATION_REQUIRED) return d = !1, !1;
+  !d && (d = !0, E = i, I(i))
 }
 async function I(t) {
   if (null == t) return;
@@ -39,7 +39,7 @@ async function I(t) {
   if (null != e) {
     r.default.dispatch({
       type: "PAYMENT_AUTHENTICATION_ERROR",
-      error: new a.default(d.default.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR)
+      error: new a.default(S.default.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR)
     });
     let t = Error(e);
     (0, o.captureBillingException)(t, {
@@ -54,12 +54,12 @@ function A(t) {
   let {
     payment: e
   } = t;
-  if (!S || e.id !== E || ![c.PaymentStatusTypes.COMPLETED, c.PaymentStatusTypes.CANCELED].includes(e.status)) return !1;
-  S = !1, f = null, E = null, r.default.wait(u.clearError), r.default.wait(l.clearPurchaseError)
+  if (!d || e.id !== E || ![c.PaymentStatusTypes.COMPLETED, c.PaymentStatusTypes.CANCELED].includes(e.status)) return !1;
+  d = !1, f = null, E = null, r.default.wait(u.clearError), r.default.wait(l.clearPurchaseError)
 }
 class p extends i.default.Store {
   get isAwaitingAuthentication() {
-    return S
+    return d
   }
   get error() {
     return f
@@ -91,7 +91,7 @@ var C = new p(r.default, {
     let {
       error: e
     } = t;
-    f = e, S = !1
+    f = e, d = !1
   },
   PAYMENT_UPDATE: A,
   BILLING_PAYMENT_FETCH_SUCCESS: A

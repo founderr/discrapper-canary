@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return o
+    return c
   }
 }), r("222007");
 var l = r("446674"),
@@ -27,7 +27,7 @@ function d() {
   let e = u.default.getPremiumTypeSubscription();
   return null != e && (_.userTrialOffers = {}, _.userDiscountOffers = {}, !0)
 }
-class c extends l.default.PersistedStore {
+class o extends l.default.PersistedStore {
   initialize(e) {
     _ = null != e ? e : a, this.waitFor(n.default), this.syncWith([n.default], R), this.syncWith([u.default], d)
   }
@@ -77,14 +77,14 @@ class c extends l.default.PersistedStore {
     E()
   }
 }
-c.displayName = "UserOfferStore", c.persistKey = "UserOfferStore", c.migrations = [e => {
+o.displayName = "UserOfferStore", o.persistKey = "UserOfferStore", o.migrations = [e => {
   let t = null == e ? void 0 : e.userDiscounts;
   if (null != t) return {
     ...e,
     userDiscountOffers: t
   }
 }];
-var o = new c(i.default, {
+var c = new o(i.default, {
   BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: function(e) {
     let {
       userTrialOffer: t

@@ -14,9 +14,9 @@ var i, r, u = n("446674"),
 (i = r || (r = {}))[i.UNKNOWN = 0] = "UNKNOWN", i[i.PENDING = 1] = "PENDING", i[i.SUCCESS = 2] = "SUCCESS", i[i.ERROR = 3] = "ERROR";
 let s = 0,
   c = null,
-  d = null;
+  S = null;
 
-function S(t) {
+function d(t) {
   let {
     error: e
   } = t, n = e instanceof a.default ? e : new a.default(e);
@@ -24,7 +24,7 @@ function S(t) {
 }
 
 function E() {
-  s = 0, c = null, d = null
+  s = 0, c = null, S = null
 }
 class f extends u.default.Store {
   get purchaseTokenAuthState() {
@@ -34,15 +34,15 @@ class f extends u.default.Store {
     return c
   }
   get expiresAt() {
-    return d
+    return S
   }
 }
 f.displayName = "PurchaseTokenAuthStore";
 var _ = new f(l.default, {
-  SKU_PURCHASE_FAIL: S,
-  PREMIUM_PAYMENT_SUBSCRIBE_FAIL: S,
+  SKU_PURCHASE_FAIL: d,
+  PREMIUM_PAYMENT_SUBSCRIBE_FAIL: d,
   USER_PAYMENT_CLIENT_ADD: function(t) {
-    s = 2, c = t.purchaseTokenHash, d = t.expiresAt
+    s = 2, c = t.purchaseTokenHash, S = t.expiresAt
   },
   BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: E,
   BILLING_SUBSCRIPTION_UPDATE_START: E,

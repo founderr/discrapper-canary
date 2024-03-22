@@ -12,8 +12,8 @@ let l = "",
   o = "",
   s = null,
   c = !1,
-  d = null,
-  S = "",
+  S = null,
+  d = "",
   E = "",
   f = "",
   _ = "",
@@ -28,11 +28,11 @@ let l = "",
   h = null;
 
 function U() {
-  s = null, l = "", a = null, o = "", c = !1, d = null, S = "US", E = "", f = "", _ = "", T = "", I = "", A = "", p = "", C = !1, P = null, N = null, R = null, h = null
+  s = null, l = "", a = null, o = "", c = !1, S = null, d = "US", E = "", f = "", _ = "", T = "", I = "", A = "", p = "", C = !1, P = null, N = null, R = null, h = null
 }
 
 function L(t) {
-  E = t.name, S = t.country, _ = t.line1, T = t.line2, I = t.city, A = t.postalCode, p = t.state, f = t.email
+  E = t.name, d = t.country, _ = t.line1, T = t.line2, I = t.city, A = t.postalCode, p = t.state, f = t.email
 }
 
 function m() {
@@ -65,7 +65,7 @@ class F extends i.default.Store {
     return N
   }
   get adyenPaymentData() {
-    return d
+    return S
   }
   get redirectedPaymentSourceId() {
     return h
@@ -82,7 +82,7 @@ class F extends i.default.Store {
     return {
       name: E,
       email: f,
-      country: S,
+      country: d,
       line1: _,
       line2: T,
       city: I,
@@ -125,7 +125,7 @@ var O = new F(r.default, {
       info: e,
       isValid: n
     } = t;
-    null != e.name && "" !== e.name && (E = e.name), S = e.country, E = e.name, _ = e.line1, T = e.line2, I = e.city, A = e.postalCode, p = e.state, f = e.email, C = n
+    null != e.name && "" !== e.name && (E = e.name), d = e.country, E = e.name, _ = e.line1, T = e.line2, I = e.city, A = e.postalCode, p = e.state, f = e.email, C = n
   },
   BRAINTREE_TOKENIZE_PAYPAL_START: function() {
     l = "", a = null
@@ -136,7 +136,7 @@ var O = new F(r.default, {
       nonce: n,
       billingAddress: i
     } = t;
-    l = e, a = n, L(i), C = S.length > 0
+    l = e, a = n, L(i), C = d.length > 0
   },
   BRAINTREE_TOKENIZE_VENMO_START: function() {
     o = "", a = null
@@ -152,7 +152,7 @@ var O = new F(r.default, {
     let {
       data: e
     } = t;
-    d = e
+    S = e
   },
   BILLING_PAYMENT_SOURCE_CREATE_START: m,
   MODAL_POP: m,

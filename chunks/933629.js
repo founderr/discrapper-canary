@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EXPRESSION_TOOLTIP_PROPS: function() {
-    return J
+    return Z
   },
   renderVideoComponent: function() {
     return X
@@ -92,11 +92,11 @@ var i, l, a = n("37983"),
   W = n("719347"),
   Y = n("782340"),
   z = n("464354");
-let J = {
+let Z = {
     delay: 300,
     position: "top"
   },
-  Z = e => t => {
+  J = e => t => {
     null == e || e(t), (0, G.setVolume)(t)
   },
   q = e => t => {
@@ -113,7 +113,7 @@ function X(e) {
     renderAdjacentContent: o,
     renderOverlayContent: u,
     ...d
-  } = e, c = Z(t), f = q(n);
+  } = e, c = J(t), f = q(n);
   return i = null == i ? G.getVolume : i, l = null == l ? G.getMuted : l, (0, a.jsxs)(s.Fragment, {
     children: [(0, a.jsx)(M.default, {
       ...d,
@@ -137,7 +137,7 @@ function Q(e) {
     onVolumeHide: r,
     renderAdjacentContent: o,
     ...u
-  } = e, d = Z(t), c = q(i);
+  } = e, d = J(t), c = q(i);
   return n = null == n ? G.getVolume : n, (0, a.jsxs)(s.Fragment, {
     children: [(0, a.jsx)(R.default, {
       ...u,
@@ -158,7 +158,7 @@ function $(e) {
     volume: n,
     onMute: i,
     ...l
-  } = e, s = Z(t), r = q(i);
+  } = e, s = J(t), r = q(i);
   return n = null == n ? G.getVolume : n, (0, a.jsx)(N.default, {
     ...l,
     onVolumeChange: s,
@@ -426,18 +426,18 @@ function es(e) {
     V = null !== (n = (0, f.useStateFromStores)([T.default], () => T.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
     W = null == k ? void 0 : null === (t = k[V]) || void 0 === t ? void 0 : t.topic;
   null == W && null == E && (null == k ? void 0 : k.length) >= 1 && (W = null === (i = k[0]) || void 0 === i ? void 0 : i.topic);
-  let J = s.useMemo(() => d.debounce(e => {
+  let Z = s.useMemo(() => d.debounce(e => {
       var t;
       I(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
     }, 64), [I]),
-    Z = s.useMemo(() => d.throttle(() => {
+    J = s.useMemo(() => d.throttle(() => {
       (0, C.setHighlightedSummary)(null)
     }, 1200, {
       trailing: !1
     }), []),
     q = s.useCallback(e => {
-      Z(), J(e)
-    }, [J, Z]),
+      J(), Z(e)
+    }, [Z, J]),
     [X, Q] = s.useState(!1),
     $ = s.useCallback(() => {
       w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
@@ -671,10 +671,10 @@ function eo(e) {
     W = s.useCallback(e => {
       V(), H(e)
     }, [H, V]),
-    [J, Z] = s.useState(!1),
+    [Z, J] = s.useState(!1),
     q = s.useCallback(() => {
       w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
-        topics_dropdown_open: !J,
+        topics_dropdown_open: !Z,
         num_summaries: A.length,
         message_counts: A.map(e => e.count),
         start_message_ids: A.map(e => e.startId),
@@ -683,8 +683,8 @@ function eo(e) {
         guild_id: l.guild_id,
         channel_id: l.id,
         channel_type: l.type
-      }), Z(!J)
-    }, [J, A, Z, l]),
+      }), J(!Z)
+    }, [Z, A, J, l]),
     X = s.useCallback(function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : K.SummariesTopicClickedSource.PILL_DROPDOWN,
         n = A[e];
@@ -718,21 +718,21 @@ function eo(e) {
     }, [k, X]),
     ee = s.useCallback(e => {
       var t;
-      Z(e);
+      J(e);
       let n = null === (t = N.current) || void 0 === t ? void 0 : t.scrollTop;
       null != n && v(n)
     }, []);
   s.useEffect(() => {
-    if (null != I && J) {
+    if (null != I && Z) {
       var e;
       null === (e = N.current) || void 0 === e || e.scrollTo({
         top: I
       })
     }
-  }, [I, J]);
+  }, [I, Z]);
   let et = s.useCallback(e => {
     var t;
-    !((0, c.isElement)(e.target) && (null === (t = E.current) || void 0 === t ? void 0 : t.contains(e.target))) && (J && w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    !((0, c.isElement)(e.target) && (null === (t = E.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: A.length,
       message_counts: A.map(e => e.count),
@@ -743,7 +743,7 @@ function eo(e) {
       channel_id: l.id,
       channel_type: l.type
     }), ee(!1))
-  }, [J, A, l, ee]);
+  }, [Z, A, l, ee]);
   s.useEffect(() => (r.addAutomaticAnchorCallback(W), () => {
     r.removeAutomaticAnchorCallback(W)
   }), [r, W]), s.useEffect(() => {
@@ -772,8 +772,8 @@ function eo(e) {
         onClick: q,
         children: (0, a.jsxs)("div", {
           className: o({
-            [z.topicsPillTextUnselected]: !J,
-            [z.topicsPillTextSelected]: J
+            [z.topicsPillTextUnselected]: !Z,
+            [z.topicsPillTextSelected]: Z
           }),
           children: [(0, a.jsx)(D.default, {
             className: z.topicsPillSummaryIcon,
@@ -816,7 +816,7 @@ function eo(e) {
           })
         })]
       })]
-    }), J && (0, a.jsxs)("div", {
+    }), Z && (0, a.jsxs)("div", {
       className: z.topicsDropdown,
       children: [(0, a.jsxs)("div", {
         className: z.topicsDropdownHeading,

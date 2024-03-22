@@ -40,8 +40,8 @@ var i, r, u = n("884691"),
   o = n("598981"),
   s = n("299285"),
   c = n("305961"),
-  d = n("957255"),
-  S = n("10514"),
+  S = n("957255"),
+  d = n("10514"),
   E = n("521012"),
   f = n("437712"),
   _ = n("552712"),
@@ -135,7 +135,7 @@ function F(t, e) {
     s = null == i ? void 0 : i.subscription_listings,
     {
       activeSubscriptionListing: c,
-      activeEntitlement: d
+      activeEntitlement: S
     } = u.useMemo(() => {
       if (null != s) {
         for (let t of o)
@@ -150,7 +150,7 @@ function F(t, e) {
         activeEntitlement: null
       }
     }, [o, s, e]),
-    S = u.useMemo(() => {
+    d = u.useMemo(() => {
       if (null == n) return null;
       let t = null == c ? void 0 : c.subscription_plans[0].id;
       for (let e of Object.values(n))
@@ -160,9 +160,9 @@ function F(t, e) {
         } return null
     }, [c, n]);
   return {
-    activeSubscription: S,
+    activeSubscription: d,
     activeSubscriptionListing: c,
-    activeEntitlement: d,
+    activeEntitlement: S,
     subscriptionGroupListing: i
   }
 }
@@ -170,7 +170,7 @@ function F(t, e) {
 function O(t) {
   var e;
   let n = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : N.EMPTY_STRING_SNOWFLAKE_ID,
-    i = (0, l.useStateFromStores)([d.default], () => d.default.can(N.Permissions.ADMINISTRATOR, t)),
+    i = (0, l.useStateFromStores)([S.default], () => S.default.can(N.Permissions.ADMINISTRATOR, t)),
     {
       entitlementsLoaded: r
     } = h({
@@ -192,7 +192,7 @@ function O(t) {
   return r ? c.filter(t => null != t.endsAt && t.endsAt.getTime() > Math.max(null != a ? a : 0, Date.now() - 2592e6)) : []
 }
 let g = t => {
-    let [e, n] = u.useState(!1), i = u.useMemo(() => t.map(P.getApplicationSubscriptionPlanId), [t]), r = (0, l.useStateFromStoresArray)([S.default], () => i.filter(t => null == S.default.get(t)), [i]);
+    let [e, n] = u.useState(!1), i = u.useMemo(() => t.map(P.getApplicationSubscriptionPlanId), [t]), r = (0, l.useStateFromStoresArray)([d.default], () => i.filter(t => null == d.default.get(t)), [i]);
     return u.useEffect(() => {
       r.length > 0 && (n(!0), Promise.all(r.map(t => (0, I.fetchSubscriptionListingForPlan)(t))).catch(() => {}).then(() => {
         n(!1)
@@ -247,10 +247,10 @@ function D(t) {
   } = C.otpSkusExperiment.useExperiment({
     location: "useApplicationSubscriptionListingsShown"
   }), {
-    subscriptionGroupListing: d
-  } = F(e, i), S = c ? (null == s ? void 0 : s.isMonetized) === !0 : null != d && (0, P.hasPayableSubscriptionPlan)(d);
+    subscriptionGroupListing: S
+  } = F(e, i), d = c ? (null == s ? void 0 : s.isMonetized) === !0 : null != S && (0, P.hasPayableSubscriptionPlan)(S);
   return {
-    applicationSubscriptionListingsShown: null != e && null != n && (null == i || l) && (!r || a) && u && S
+    applicationSubscriptionListingsShown: null != e && null != n && (null == i || l) && (!r || a) && u && d
   }
 }
 

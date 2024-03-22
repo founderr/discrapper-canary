@@ -4,8 +4,8 @@ r.r(t), r.d(t, {
     return a
   }
 });
-var a, l = r("666038");
-a = class e extends l.default {
+var a, n = r("666038");
+a = class e extends n.default {
   static fromServer(t) {
     let {
       sku_id: r,
