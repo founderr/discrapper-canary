@@ -88,23 +88,23 @@ function d(e) {
     }), S = null);
     let P = (null == y ? void 0 : y.type) === u.ChannelStreamTypes.MESSAGE ? d : y;
     (0, r.isNewGroupItem)(c, P, e) && (n = e.id);
-    let j = {
+    let b = {
       type: e.type === u.MessageTypes.THREAD_STARTER_MESSAGE ? u.ChannelStreamTypes.THREAD_STARTER_MESSAGE : u.ChannelStreamTypes.MESSAGE,
       content: e,
       groupId: n
     };
-    n === e.id && (d = j);
+    n === e.id && (d = b);
     let {
-      jumpSequenceId: b,
+      jumpSequenceId: j,
       jumpFlash: k,
       jumpTargetId: F
     } = f;
-    k && e.id === F && null != b && (j.flashKey = b), f.jumpTargetId === e.id && (j.jumpTarget = !0), null != m && e.id === m.startId && m.count > 1 && E.push({
+    k && e.id === F && null != j && (b.flashKey = j), f.jumpTargetId === e.id && (b.jumpTarget = !0), null != m && e.id === m.startId && m.count > 1 && E.push({
       type: u.ChannelStreamTypes.DIVIDER,
       content: m.topic,
       contentKey: m.startId,
       isSummaryDivider: !0
-    }), null !== R ? (R.content.push(j), j.jumpTarget && (R.hasJumpTarget = !0)) : E.push(j), e.isFirstMessageInForumPost(c) && E.push({
+    }), null !== R ? (R.content.push(b), b.jumpTarget && (R.hasJumpTarget = !0)) : E.push(b), e.isFirstMessageInForumPost(c) && E.push({
       type: u.ChannelStreamTypes.FORUM_POST_ACTION_BAR
     }), null != m && e.id === m.endId && m.count > 1 && E.push({
       type: u.ChannelStreamTypes.DIVIDER,

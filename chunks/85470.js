@@ -38,8 +38,8 @@ var x = function(e, t, n) {
     if (!x.current || n.target !== n.currentTarget) return;
     let D = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
       P = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
-      j = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
-      b = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
+      b = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
+      j = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
       k = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
       F = p.default.getMessage(t, e),
       H = c.default.getChannel(t);
@@ -50,7 +50,7 @@ var x = function(e, t, n) {
         D && (v(H) || F.canDeleteOwnMessage(U)) && (n.preventDefault(), (0, I.deleteMessage)(H, F, n));
         break;
       case "c":
-        ((0, S.isMac)() ? b : j) && E.SUPPORTS_COPY && (n.preventDefault(), (0, E.copy)(F.content));
+        ((0, S.isMac)() ? j : b) && E.SUPPORTS_COPY && (n.preventDefault(), (0, E.copy)(F.content));
         break;
       case "e":
         if (D) {

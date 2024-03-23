@@ -1,90 +1,90 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   fetchSubscriptionPlansOnNewPaymentSource: function() {
     return E
   },
   getCurrencies: function() {
-    return f
-  },
-  planHasCurrency: function() {
     return _
   },
+  planHasCurrency: function() {
+    return S
+  },
   useCurrencyWithPaymentSourceChange: function() {
-    return T
+    return I
   }
 }), n("222007");
-var i = n("884691"),
+var u = n("884691"),
   r = n("627445"),
-  u = n.n(r),
-  l = n("913144"),
-  a = n("775433"),
-  o = n("308592"),
-  s = n("10514"),
-  c = n("719923"),
-  S = n("49111"),
-  d = n("646718");
+  i = n.n(r),
+  a = n("913144"),
+  o = n("775433"),
+  s = n("308592"),
+  c = n("10514"),
+  l = n("719923"),
+  d = n("49111"),
+  f = n("646718");
 
-function E(t) {
-  let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...d.ACTIVE_PREMIUM_SKUS];
-  return null == t || s.default.hasPaymentSourceForSKUIds(t, e) ? Promise.resolve() : new Promise(t => {
-    l.default.wait(async () => {
-      await (0, a.fetchSubscriptionPlansBySKUs)(e), t()
+function E(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...f.ACTIVE_PREMIUM_SKUS];
+  return null == e || c.default.hasPaymentSourceForSKUIds(e, t) ? Promise.resolve() : new Promise(e => {
+    a.default.wait(async () => {
+      await (0, o.fetchSubscriptionPlansBySKUs)(t), e()
     })
   })
 }
 
-function f(t, e, n) {
-  let i, r = [],
-    l = [],
-    a = {
-      purchaseType: n ? S.PriceSetAssignmentPurchaseTypes.GIFT : S.PriceSetAssignmentPurchaseTypes.DEFAULT
+function _(e, t, n) {
+  let u, r = [],
+    a = [],
+    o = {
+      purchaseType: n ? d.PriceSetAssignmentPurchaseTypes.GIFT : d.PriceSetAssignmentPurchaseTypes.DEFAULT
     };
-  return u(i = "string" == typeof t ? s.default.get(t) : t, "subscription plan not loaded"), null != e && s.default.hasPaymentSourceForSKUId(e, i.skuId) && (a.paymentSourceId = e), (r = (l = (0, c.experimentalGetPrices)(i.id, a)).map(t => t.currency)).length < 1 && (r = [S.CurrencyCodes.USD]), r
+  return i(u = "string" == typeof e ? c.default.get(e) : e, "subscription plan not loaded"), null != t && c.default.hasPaymentSourceForSKUId(t, u.skuId) && (o.paymentSourceId = t), (r = (a = (0, l.experimentalGetPrices)(u.id, o)).map(e => e.currency)).length < 1 && (r = [d.CurrencyCodes.USD]), r
 }
 
-function _(t, e, n) {
-  let i = s.default.get(t);
-  u(null != i, "plan is undefined");
-  let r = f(i, n, !1);
-  return r.includes(e)
+function S(e, t, n) {
+  let u = c.default.get(e);
+  i(null != u, "plan is undefined");
+  let r = _(u, n, !1);
+  return r.includes(t)
 }
 
-function T(t, e, n, r, u) {
-  let [l, a] = i.useReducer((t, e) => ({
-    ...t,
-    ...e
+function I(e, t, n, r, i) {
+  let [a, o] = u.useReducer((e, t) => ({
+    ...e,
+    ...t
   }), null != n ? {
     paymentSourceId: n,
-    currency: t,
+    currency: e,
     loaded: !1
   } : {
-    currency: t,
+    currency: e,
     loaded: !1
-  }), c = (0, o.useSubscriptionPlansLoaded)(u);
-  i.useEffect(() => {
-    let t = async () => {
-      await E(n, u);
-      let t = [];
-      null != e && null != s.default.get(e) && (t = f(e, n, r)), t.length > 0 ? a({
+  }), l = (0, s.useSubscriptionPlansLoaded)(i);
+  u.useEffect(() => {
+    let e = async () => {
+      await E(n, i);
+      let e = [];
+      null != t && null != c.default.get(t) && (e = _(t, n, r)), e.length > 0 ? o({
         paymentSourceId: n,
-        currency: t[0],
+        currency: e[0],
         loaded: !0
-      }) : a({
+      }) : o({
         paymentSourceId: n,
         loaded: !1
       })
     };
-    t()
-  }, [n, JSON.stringify(u), e, r, c]);
-  let S = l.paymentSourceId !== n || null == e || !c || !0 !== l.loaded;
+    e()
+  }, [n, JSON.stringify(i), t, r, l]);
+  let d = a.paymentSourceId !== n || null == t || !l || !0 !== a.loaded;
   return {
-    hasFetchedSubscriptionPlans: c,
-    priceOptions: l,
-    setCurrency: t => {
-      a({
-        currency: t
+    hasFetchedSubscriptionPlans: l,
+    priceOptions: a,
+    setCurrency: e => {
+      o({
+        currency: e
       })
     },
-    currencyLoading: S
+    currencyLoading: d
   }
 }

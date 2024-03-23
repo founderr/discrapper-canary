@@ -4,47 +4,47 @@ n.r(t), n.d(t, {
     return E
   }
 }), n("881410"), n("222007"), n("424973");
-var a = n("917351"),
-  i = n.n(a),
-  l = n("267363"),
-  r = n("863636"),
-  s = n("401690"),
-  u = n("923959"),
-  d = n("660478"),
-  o = n("599110"),
+var i = n("917351"),
+  s = n.n(i),
+  a = n("267363"),
+  l = n("863636"),
+  u = n("401690"),
+  d = n("923959"),
+  o = n("660478"),
+  r = n("599110"),
   c = n("299039"),
-  _ = n("49111"),
-  f = n("133335");
+  f = n("49111"),
+  S = n("133335");
 
 function E(e, t, n) {
-  let a = i.flatMap(e, e => {
-    let t = u.default.getSelectableChannelIds(e),
-      n = u.default.getVocalChannelIds(e),
-      a = [...t, ...n],
-      i = s.default.getActiveJoinedThreadsForGuild(e);
+  let i = s.flatMap(e, e => {
+    let t = d.default.getSelectableChannelIds(e),
+      n = d.default.getVocalChannelIds(e),
+      i = [...t, ...n],
+      s = u.default.getActiveJoinedThreadsForGuild(e);
     for (let e of t) {
-      var l;
-      let t = null !== (l = i[e]) && void 0 !== l ? l : {};
-      for (let e in t) a.push(e)
+      var a;
+      let t = null !== (a = s[e]) && void 0 !== a ? a : {};
+      for (let e in t) i.push(e)
     }
-    return a
+    return i
   }).map(e => ({
     channelId: e,
-    readStateType: f.ReadStateTypes.CHANNEL,
-    messageId: d.default.lastMessageId(e)
+    readStateType: S.ReadStateTypes.CHANNEL,
+    messageId: o.default.lastMessageId(e)
   }));
   return e.forEach(e => {
-    a.push({
+    i.push({
       channelId: c.default.cast(e),
-      readStateType: f.ReadStateTypes.GUILD_EVENT,
-      messageId: d.default.lastMessageId(e, f.ReadStateTypes.GUILD_EVENT)
-    }), a.push({
+      readStateType: S.ReadStateTypes.GUILD_EVENT,
+      messageId: o.default.lastMessageId(e, S.ReadStateTypes.GUILD_EVENT)
+    }), i.push({
       channelId: c.default.cast(e),
-      readStateType: f.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
-      messageId: r.default.ackIdForGuild(e)
+      readStateType: S.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
+      messageId: l.default.ackIdForGuild(e)
     })
-  }), o.default.track(_.AnalyticEvents.MARK_AS_READ, {
+  }), r.default.track(f.AnalyticEvents.MARK_AS_READ, {
     source: t,
     type: "guild"
-  }), (0, l.bulkAck)(a, n)
+  }), (0, a.bulkAck)(i, n)
 }

@@ -1,56 +1,56 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchMemberCounts: function() {
-    return c
+    return E
   },
   requestMembersForRole: function() {
-    return p
+    return _
   }
 });
-var i = n("693566"),
-  l = n.n(i),
-  a = n("872717"),
-  s = n("913144"),
-  r = n("851387"),
-  o = n("36402"),
-  u = n("49111");
-async function d(e) {
+var l = n("693566"),
+  u = n.n(l),
+  i = n("872717"),
+  r = n("913144"),
+  d = n("851387"),
+  a = n("36402"),
+  s = n("49111");
+async function o(e) {
   try {
-    s.default.dispatch({
+    r.default.dispatch({
       type: "GUILD_ROLE_MEMBER_COUNT_FETCH_START",
       guildId: e
     });
-    let t = await a.HTTP.get({
-        url: u.Endpoints.GUILD_ROLE_MEMBER_COUNTS(e)
+    let t = await i.HTTP.get({
+        url: s.Endpoints.GUILD_ROLE_MEMBER_COUNTS(e)
       }),
       n = t.body;
-    s.default.dispatch({
+    r.default.dispatch({
       type: "GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS",
       guildId: e,
       roleMemberCount: n
     })
   } catch (t) {
-    s.default.dispatch({
+    r.default.dispatch({
       type: "GUILD_ROLE_MEMBER_COUNT_FETCH_FAILURE",
       guildId: e
     })
   }
 }
-async function c(e) {
-  o.default.shouldFetch(e) && await d(e)
+async function E(e) {
+  a.default.shouldFetch(e) && await o(e)
 }
-let f = new l({
+let c = new u({
   maxAge: 1e4
 });
 
-function p(e, t) {
+function _(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    i = "".concat(e, "-").concat(t);
-  if (!n || null == f.get(i)) {
-    var l, s;
-    return f.set(i, !0), l = e, s = t, a.HTTP.get({
-      url: u.Endpoints.GUILD_ROLE_MEMBER_IDS(l, s)
-    }).then(e => (r.default.requestMembersById(l, e.body, !1), e.body.length))
+    l = "".concat(e, "-").concat(t);
+  if (!n || null == c.get(l)) {
+    var u, r;
+    return c.set(l, !0), u = e, r = t, i.HTTP.get({
+      url: s.Endpoints.GUILD_ROLE_MEMBER_IDS(u, r)
+    }).then(e => (d.default.requestMembersById(u, e.body, !1), e.body.length))
   }
   return Promise.resolve(null)
 }

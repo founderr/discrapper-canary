@@ -1,15 +1,15 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   getClass: function() {
-    return r
+    return a
   }
-}), l("808653");
-var n = l("159885");
+}), n("808653");
+var l = n("159885");
 
-function r(e, t) {
-  for (var l = arguments.length, r = Array(l > 2 ? l - 2 : 0), s = 2; s < l; s++) r[s - 2] = arguments[s];
-  let i = r.reduce((e, t) => e + (0, n.upperCaseFirstChar)(t), ""),
-    a = "".concat(t).concat(i),
-    o = e[a];
-  if (null != o) return o
+function a(e, t) {
+  for (var n = arguments.length, a = Array(n > 2 ? n - 2 : 0), r = 2; r < n; r++) a[r - 2] = arguments[r];
+  let s = a.reduce((e, t) => e + (0, l.upperCaseFirstChar)(t), ""),
+    i = "".concat(t).concat(s),
+    u = e[i];
+  if (null != u) return u
 }

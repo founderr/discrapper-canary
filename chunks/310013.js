@@ -1,5 +1,5 @@
 "use strict";
-var i = {
+var l = {
     childContextTypes: !0,
     contextTypes: !0,
     defaultProps: !0,
@@ -9,7 +9,7 @@ var i = {
     propTypes: !0,
     type: !0
   },
-  r = {
+  a = {
     name: !0,
     length: !0,
     prototype: !0,
@@ -17,15 +17,15 @@ var i = {
     arguments: !0,
     arity: !0
   },
-  a = "function" == typeof Object.getOwnPropertySymbols;
-t.exports = function(t, e, n) {
-  if ("string" != typeof e) {
-    var s = Object.getOwnPropertyNames(e);
-    a && (s = s.concat(Object.getOwnPropertySymbols(e)));
-    for (var o = 0; o < s.length; ++o)
-      if (!i[s[o]] && !r[s[o]] && (!n || !n[s[o]])) try {
-        t[s[o]] = e[s[o]]
-      } catch (t) {}
+  r = "function" == typeof Object.getOwnPropertySymbols;
+e.exports = function(e, t, n) {
+  if ("string" != typeof t) {
+    var s = Object.getOwnPropertyNames(t);
+    r && (s = s.concat(Object.getOwnPropertySymbols(t)));
+    for (var i = 0; i < s.length; ++i)
+      if (!l[s[i]] && !a[s[i]] && (!n || !n[s[i]])) try {
+        e[s[i]] = t[s[i]]
+      } catch (e) {}
   }
-  return t
+  return e
 }

@@ -1,40 +1,40 @@
 "use strict";
 n.r(t), n.d(t, {
   NAGBAR_DISPLAY_MAX_HOURS: function() {
-    return u
+    return a
   },
   DEFAULT_LOCKDOWN_DURATION: function() {
-    return a
+    return r
   },
   getTimeframes: function() {
     return d
   },
   IncidentAlertModeratorPermissions: function() {
-    return o
+    return s
   }
 });
-var l = n("316693"),
-  i = n("843455"),
-  r = n("782340");
-let u = 2,
-  a = 2,
+var i = n("316693"),
+  l = n("843455"),
+  u = n("782340");
+let a = 2,
+  r = 2,
   d = () => [{
     value: 1,
-    label: r.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_1_HOUR
+    label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_1_HOUR
   }, {
     value: 2,
-    label: r.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_2_HOURS
+    label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_2_HOURS
   }, {
     value: 4,
-    label: r.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_4_HOURS
+    label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_4_HOURS
   }, {
     value: 6,
-    label: r.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_6_HOURS
+    label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_6_HOURS
   }, {
     value: 12,
-    label: r.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_12_HOURS
+    label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_12_HOURS
   }, {
     value: 24,
-    label: r.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_24_HOURS
+    label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_24_HOURS
   }],
-  o = l.combine(i.Permissions.ADMINISTRATOR, i.Permissions.MANAGE_GUILD, i.Permissions.BAN_MEMBERS, i.Permissions.KICK_MEMBERS, i.Permissions.MODERATE_MEMBERS)
+  s = i.combine(l.Permissions.ADMINISTRATOR, l.Permissions.MANAGE_GUILD, l.Permissions.BAN_MEMBERS, l.Permissions.KICK_MEMBERS, l.Permissions.MODERATE_MEMBERS)

@@ -1,99 +1,99 @@
 "use strict";
-let t, o, n, r;
-E.r(_), E.d(_, {
+let i, s, l, a;
+n.r(t), n.d(t, {
   default: function() {
-    return R
+    return _
   }
 });
-var a = E("748820"),
-  i = E("446674"),
-  I = E("913144"),
-  s = E("724210"),
-  T = E("515631");
-let S = {};
+var u = n("748820"),
+  r = n("446674"),
+  d = n("913144"),
+  o = n("724210"),
+  c = n("515631");
+let h = {};
 
-function N(e) {
+function E(e) {
   return {
     guildId: e,
-    sessionId: (0, a.v4)()
+    sessionId: (0, u.v4)()
   }
 }
 
-function O(e) {
-  null != n && n.guildId === e ? (o = n, n = void 0) : o = N(e)
+function f(e) {
+  null != l && l.guildId === e ? (s = l, l = void 0) : s = E(e)
 }
-class A extends i.default.Store {
+class I extends r.default.Store {
   getSavedScrollPosition(e) {
-    return S[e]
+    return h[e]
   }
   getHomeSessionId(e) {
-    return null != o && o.guildId === e ? o.sessionId : null != n && n.guildId === e ? n.sessionId : void 0
+    return null != s && s.guildId === e ? s.sessionId : null != l && l.guildId === e ? l.sessionId : void 0
   }
   getHomeSessionSource(e) {
-    return null != r && r.guildId === e ? r.source : T.GuildHomeLandingSource.ORGANIC
+    return null != a && a.guildId === e ? a.source : c.GuildHomeLandingSource.ORGANIC
   }
 }
-A.displayName = "GuildHomeStore";
-var R = new A(I.default, {
+I.displayName = "GuildHomeStore";
+var _ = new I(d.default, {
   CONNECTION_OPEN: function() {
-    S = {}
+    h = {}
   },
   GUILD_FEED_FETCH_FRESH_START: function(e) {
     let {
-      guildId: _
+      guildId: t
     } = e;
-    delete S[_]
+    delete h[t]
   },
   GUILD_HOME_SET_SCROLL_POSITION: function(e) {
     let {
-      guildId: _,
-      scrollPosition: E
+      guildId: t,
+      scrollPosition: n
     } = e;
-    S[_] = E
+    h[t] = n
   },
   CHANNEL_SELECT: function(e) {
     let {
-      guildId: _,
-      channelId: E
+      guildId: t,
+      channelId: n
     } = e;
-    if (null == _ || null == E || !(0, s.isStaticChannelRoute)(E) || !(0, s.isGuildHomeChannel)(E)) {
-      t = void 0, o = void 0, n = void 0, r = void 0;
+    if (null == t || null == n || !(0, o.isStaticChannelRoute)(n) || !(0, o.isGuildHomeChannel)(n)) {
+      i = void 0, s = void 0, l = void 0, a = void 0;
       return
     }
-    let a = (0, s.buildGuildStaticChannelId)(E, _);
-    if (t === a || null != o && o.guildId === _) return !1;
-    O(_), t = a, null != r && r.guildId !== _ && (r = void 0)
+    let u = (0, o.buildGuildStaticChannelId)(n, t);
+    if (i === u || null != s && s.guildId === t) return !1;
+    f(t), i = u, null != a && a.guildId !== t && (a = void 0)
   },
   CHANNEL_PRELOAD: function(e) {
     let {
-      guildId: _,
-      channelId: E
+      guildId: t,
+      channelId: n
     } = e;
-    if (null == _ || null == E || !(0, s.isStaticChannelRoute)(E) || !(0, s.isGuildHomeChannel)(E)) {
-      n = void 0;
+    if (null == t || null == n || !(0, o.isStaticChannelRoute)(n) || !(0, o.isGuildHomeChannel)(n)) {
+      l = void 0;
       return
     }
-    if (null != n && n.guildId === _) return !1;
-    n = N(_)
+    if (null != l && l.guildId === t) return !1;
+    l = E(t)
   },
   GUILD_HOME_SET_SOURCE: function(e) {
     let {
-      source: _,
-      guildId: E
+      source: t,
+      guildId: n
     } = e;
-    r = {
-      guildId: E,
-      source: _
+    a = {
+      guildId: n,
+      source: t
     }
   },
   GUILD_HOME_ENSURE_HOME_SESSION: function(e) {
     let {
-      guildId: _
+      guildId: t
     } = e;
-    if (null != o && o.guildId === _) return !1;
-    O(_)
+    if (null != s && s.guildId === t) return !1;
+    f(t)
   },
   LOGOUT: function() {
-    o = void 0, n = void 0, r = void 0
+    s = void 0, l = void 0, a = void 0
   }
 })

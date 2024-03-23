@@ -1,14 +1,14 @@
 "use strict";
 
-function i(t) {
-  if (null != t) {
-    if ("activitySessionId" in t) return t.activitySessionId;
-    if ("instanceId" in t) return t.instanceId;
-    if ("activity_id" in t) return t.activity_id
+function l(e) {
+  if (null != e) {
+    if ("activitySessionId" in e) return e.activitySessionId;
+    if ("instanceId" in e) return e.instanceId;
+    if ("activity_id" in e) return e.activity_id
   }
 }
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 })

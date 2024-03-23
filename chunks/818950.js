@@ -35,8 +35,8 @@ var s = n("37983"),
   O = n("31511"),
   D = n("120379"),
   P = n("221068"),
-  j = n("49111"),
-  b = n("782340"),
+  b = n("49111"),
+  j = n("782340"),
   k = n("430759");
 let F = a.memo(function(e) {
   var t, n;
@@ -88,7 +88,7 @@ let F = a.memo(function(e) {
     hasMoreAfter: m.hasMoreAfter
   });
   let V = (n = C, (0, o.useStateFromStores)([p.default], () => {
-      let e = _.default.can(j.Permissions.READ_MESSAGE_HISTORY, n);
+      let e = _.default.can(b.Permissions.READ_MESSAGE_HISTORY, n);
       return e ? null : p.default.getViewingRolesTimestamp(n.getGuildId())
     })),
     {
@@ -117,7 +117,7 @@ let F = a.memo(function(e) {
           null === (e = G.ref.current) || void 0 === e || e.scrollToBottom({
             animate: !f.default.useReducedMotion
           })
-        } else d.default.jumpToPresent(C.id, j.MAX_MESSAGES_PER_CHANNEL)
+        } else d.default.jumpToPresent(C.id, b.MAX_MESSAGES_PER_CHANNEL)
       }
     });
   ! function(e) {
@@ -138,13 +138,13 @@ let F = a.memo(function(e) {
         })
       }, [e]);
     (0, x.useComponentAction)({
-      event: j.ComponentActions.SCROLLTO_PRESENT,
+      event: b.ComponentActions.SCROLLTO_PRESENT,
       handler: t
     }), (0, x.useComponentAction)({
-      event: j.ComponentActions.SCROLL_PAGE_UP,
+      event: b.ComponentActions.SCROLL_PAGE_UP,
       handler: n
     }), (0, x.useComponentAction)({
-      event: j.ComponentActions.SCROLL_PAGE_DOWN,
+      event: b.ComponentActions.SCROLL_PAGE_DOWN,
       handler: s
     })
   }(G.ref);
@@ -175,7 +175,7 @@ let F = a.memo(function(e) {
         role: "group",
         children: [z, (0, s.jsxs)("ol", {
           className: k.scrollerInner,
-          "aria-label": b.default.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
+          "aria-label": j.default.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
             channelName: C.name
           }),
           ...q,
@@ -183,7 +183,7 @@ let F = a.memo(function(e) {
             className: k.navigationDescription,
             id: "messagesNavigationDescription",
             "aria-hidden": !0,
-            children: b.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
+            children: j.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
           }), w, (0, s.jsx)("div", {
             className: i({
               [k.scrollerSpacer]: !y,
@@ -214,7 +214,7 @@ var H = a.memo(function(e) {
         canManageMessages: s,
         permissionVersion: a
       } = (0, o.useStateFromStoresObject)([_.default], () => ({
-        canManageMessages: _.default.can(j.Permissions.MANAGE_MESSAGES, e),
+        canManageMessages: _.default.can(b.Permissions.MANAGE_MESSAGES, e),
         permissionVersion: null != t ? _.default.getGuildVersion(t) : null
       }), [e, t]);
     return {
@@ -255,7 +255,7 @@ var H = a.memo(function(e) {
       keyboardModeEnabled: a
     }
   }(), {
-    messages: b,
+    messages: j,
     channelStream: k,
     oldestUnreadMessageId: H,
     editingMessageId: U
@@ -273,7 +273,7 @@ var H = a.memo(function(e) {
       }, {
         autoTrackExposure: !1
       }),
-      r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(j.UserFlags.SPAMMER)) && void 0 !== n && n,
+      r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(b.UserFlags.SPAMMER)) && void 0 !== n && n,
       u = (0, c.useChannelSummariesExperiment)(e),
       d = (0, h.default)("use_topic_dividers_in_chat"),
       f = (0, o.useStateFromStoresArray)([m.default], () => {
@@ -308,7 +308,7 @@ var H = a.memo(function(e) {
       showNewMessagesBar: !0,
       channel: t,
       messageDisplayCompact: !i && (l || O),
-      messages: b,
+      messages: j,
       channelStream: k,
       permissionVersion: d,
       uploads: (0, o.useStateFromStores)([I.default], () => I.default.getFiles(t.id), [t]),

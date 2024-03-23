@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return l
   }
 }), n("222007");
-var i = n("884691"),
-  l = n("775560"),
-  a = n("862337");
+var r = n("884691"),
+  s = n("775560"),
+  i = n("862337");
 
-function s(e, t) {
-  let [n, s] = (0, i.useState)(e), r = (0, l.useLazyValue)(() => new a.Timeout);
-  (0, i.useEffect)(() => () => r.stop(), [r]);
-  let o = (0, i.useCallback)(n => {
-    s(n), n !== e && r.start(t, () => s(e))
-  }, [t, e, r]);
+function l(e, t) {
+  let [n, l] = (0, r.useState)(e), a = (0, s.useLazyValue)(() => new i.Timeout);
+  (0, r.useEffect)(() => () => a.stop(), [a]);
+  let o = (0, r.useCallback)(n => {
+    l(n), n !== e && a.start(t, () => l(e))
+  }, [t, e, a]);
   return [n, o]
 }

@@ -1,20 +1,20 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return u
+    return s
   }
 });
-var r = i("446674"),
-  n = i("913144");
-let s = {
+var u = n("446674"),
+  r = n("913144");
+let i = {
     premiumLikelihood: void 0,
     isFetching: !1,
     fetched: !1
   },
-  a = s;
-class l extends r.default.Store {
+  a = i;
+class o extends u.default.Store {
   initialize() {
-    a = s
+    a = i
   }
   getState() {
     return a
@@ -23,8 +23,8 @@ class l extends r.default.Store {
     return !a.isFetching && !a.fetched
   }
 }
-l.displayName = "UserPremiumLikelihoodStore";
-var u = new l(n.default, {
+o.displayName = "UserPremiumLikelihoodStore";
+var s = new o(r.default, {
   BILLING_USER_PREMIUM_LIKELIHOOD_FETCH: function() {
     a.isFetching = !0
   },

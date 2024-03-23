@@ -35,8 +35,8 @@ var s = n("37983"),
   O = n("351825"),
   D = n("738602"),
   P = n("430025"),
-  j = n("659500"),
-  b = n("773336"),
+  b = n("659500"),
+  j = n("773336"),
   k = n("412861"),
   F = n("335350"),
   H = n("79254"),
@@ -84,7 +84,7 @@ var s = n("37983"),
         null != t && "ETOOLARGE" === t.code ? (0, k.showUploadFileSizeExceededError)(Y, []) : (0, k.promptToUpload)(e, Y, X, {
           requireConfirm: !0,
           showLargeMessageDialog: n
-        }), j.ComponentDispatch.dispatchToLastSubscribed(G.ComponentActions.TEXTAREA_FOCUS)
+        }), b.ComponentDispatch.dispatchToLastSubscribed(G.ComponentActions.TEXTAREA_FOCUS)
       },
       eg = (0, r.useStateFromStores)([L.default], () => L.default.hasCurrentUserSentMessageSinceAppStart());
 
@@ -106,13 +106,13 @@ var s = n("37983"),
         var e;
         return null === (e = ee.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
       };
-      return j.ComponentDispatch.subscribe(G.ComponentActions.UPLOAD_FILE, e), () => {
-        j.ComponentDispatch.unsubscribe(G.ComponentActions.UPLOAD_FILE, e)
+      return b.ComponentDispatch.subscribe(G.ComponentActions.UPLOAD_FILE, e), () => {
+        b.ComponentDispatch.unsubscribe(G.ComponentActions.UPLOAD_FILE, e)
       }
     });
     let eT = (0, I.useCanStartPublicThread)(Y),
       eA = (0, I.useCanStartPrivateThread)(Y),
-      e_ = !N.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
+      e_ = !N.UseLegacyChatInput.useSetting() && !(0, j.isAndroidWeb)() && null != window.ResizeObserver,
       eM = (0, r.useStateFromStores)([y.default, M.default], () => (0, m.canUseApplicationCommands)(y.default, M.default, Q, Y)),
       eI = (0, _.useCanPostPollsInChannel)(null != Y ? Y : void 0),
       eN = (0, d.useRedesignIconContext)().enabled,

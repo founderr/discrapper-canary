@@ -1,6 +1,6 @@
 "use strict";
-e("918437")("Int16", function(t) {
-  return function(r, e, n) {
-    return t(this, r, e, n)
+r("918437")("Int16", function(t) {
+  return function(n, r, e) {
+    return t(this, n, r, e)
   }
 })

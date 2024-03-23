@@ -1,45 +1,45 @@
-n("70102"), n("424973"), t.parse = function(e, t) {
-  if ("string" != typeof e) throw TypeError("argument str must be a string");
-  var n = {},
-    a = e.split(o),
-    i = (t || {}).decode || r;
-  return a.forEach(function(e) {
-    var t = e.indexOf("=");
-    if (!(t < 0)) {
-      var r = e.substr(0, t).trim(),
-        a = e.substr(++t, e.length).trim();
-      '"' == a[0] && (a = a.slice(1, -1)), void 0 == n[r] && (n[r] = function(e, t) {
+r("70102"), r("424973"), n.parse = function(t, n) {
+  if ("string" != typeof t) throw TypeError("argument str must be a string");
+  var r = {},
+    i = t.split(a),
+    s = (n || {}).decode || e;
+  return i.forEach(function(t) {
+    var n = t.indexOf("=");
+    if (!(n < 0)) {
+      var e = t.substr(0, n).trim(),
+        i = t.substr(++n, t.length).trim();
+      '"' == i[0] && (i = i.slice(1, -1)), void 0 == r[e] && (r[e] = function(t, n) {
         try {
-          return t(e)
-        } catch (t) {
-          return e
+          return n(t)
+        } catch (n) {
+          return t
         }
-      }(a, i))
+      }(i, s))
     }
-  }), n
-}, t.serialize = function(e, t, n) {
-  var r = n || {},
-    o = r.encode || a;
-  if (!i.test(e)) throw TypeError("argument name is invalid");
-  var s = o(t);
-  if (s && !i.test(s)) throw TypeError("argument val is invalid");
-  var u = [e + "=" + s];
-  if (null != r.maxAge) {
-    var l = r.maxAge - 0;
+  }), r
+}, n.serialize = function(t, n, r) {
+  var e = r || {},
+    a = e.encode || i;
+  if (!s.test(t)) throw TypeError("argument name is invalid");
+  var o = a(n);
+  if (o && !s.test(o)) throw TypeError("argument val is invalid");
+  var u = [t + "=" + o];
+  if (null != e.maxAge) {
+    var l = e.maxAge - 0;
     if (isNaN(l)) throw Error("maxAge should be a Number");
     u.push("Max-Age=" + Math.floor(l))
   }
-  if (r.domain) {
-    if (!i.test(r.domain)) throw TypeError("option domain is invalid");
-    u.push("Domain=" + r.domain)
+  if (e.domain) {
+    if (!s.test(e.domain)) throw TypeError("option domain is invalid");
+    u.push("Domain=" + e.domain)
   }
-  if (r.path) {
-    if (!i.test(r.path)) throw TypeError("option path is invalid");
-    u.push("Path=" + r.path)
+  if (e.path) {
+    if (!s.test(e.path)) throw TypeError("option path is invalid");
+    u.push("Path=" + e.path)
   }
-  return r.expires && u.push("Expires=" + r.expires.toUTCString()), r.httpOnly && u.push("HttpOnly"), r.secure && u.push("Secure"), r.firstPartyOnly && u.push("First-Party-Only"), u.join("; ")
+  return e.expires && u.push("Expires=" + e.expires.toUTCString()), e.httpOnly && u.push("HttpOnly"), e.secure && u.push("Secure"), e.firstPartyOnly && u.push("First-Party-Only"), u.join("; ")
 };
-var r = decodeURIComponent,
-  a = encodeURIComponent,
-  o = /; */,
-  i = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/
+var e = decodeURIComponent,
+  i = encodeURIComponent,
+  a = /; */,
+  s = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/

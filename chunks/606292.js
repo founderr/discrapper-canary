@@ -1,41 +1,41 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   getDecorationSizeForAvatarSize: function() {
-    return a
+    return o
   },
   openAvatarDecorationModal: function() {
-    return s
+    return u
   }
 });
-var n = r("37983");
-r("884691");
-var u = r("77078"),
-  o = r("393414");
-r("103603");
-var l = r("573135"),
-  i = r("49111");
+var r = n("37983");
+n("884691");
+var l = n("77078"),
+  s = n("393414");
+n("103603");
+var a = n("573135"),
+  i = n("49111");
 
-function a(e) {
-  return "number" != typeof e ? (0, u.getAvatarSize)(e) * l.DECORATION_TO_AVATAR_RATIO : e * l.DECORATION_TO_AVATAR_RATIO
+function o(e) {
+  return "number" != typeof e ? (0, l.getAvatarSize)(e) * a.DECORATION_TO_AVATAR_RATIO : e * a.DECORATION_TO_AVATAR_RATIO
 }
-let s = e => {
+let u = e => {
   let {
     analyticsLocations: t,
-    initialSelectedDecoration: l,
-    isTryItOutFlow: a,
-    guild: s
+    initialSelectedDecoration: a,
+    isTryItOutFlow: o,
+    guild: u
   } = e;
-  (0, u.openModalLazy)(async () => {
-    (0, o.getHistory)().location.pathname === i.Routes.COLLECTIBLES_SHOP_FULLSCREEN && (0, o.transitionTo)(i.Routes.APP);
+  (0, l.openModalLazy)(async () => {
+    (0, s.getHistory)().location.pathname === i.Routes.COLLECTIBLES_SHOP_FULLSCREEN && (0, s.transitionTo)(i.Routes.APP);
     let {
       default: e
-    } = await r.el("791050").then(r.bind(r, "791050"));
-    return r => (0, n.jsx)(e, {
-      ...r,
+    } = await n.el("791050").then(n.bind(n, "791050"));
+    return n => (0, r.jsx)(e, {
+      ...n,
       analyticsLocations: t,
-      initialSelectedDecoration: l,
-      isTryItOutFlow: a,
-      guild: s
+      initialSelectedDecoration: a,
+      isTryItOutFlow: o,
+      guild: u
     })
   }, {})
 }

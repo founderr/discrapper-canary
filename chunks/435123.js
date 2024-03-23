@@ -1,72 +1,72 @@
 "use strict";
-E.r(_), E.d(_, {
+a.r(t), a.d(t, {
   shouldFetchGuildFeed: function() {
-    return a
+    return d
   },
   default: function() {
-    return i
+    return r
   }
 });
-var t = E("884691"),
-  o = E("446674"),
-  n = E("713810"),
-  r = E("185014");
+var l = a("884691"),
+  n = a("446674"),
+  s = a("713810"),
+  i = a("185014");
 
-function a(e, _) {
-  let E = r.default.getLastFetchedMillis(e);
-  if (!_ && null != E && Date.now() - E < 72e5) return !1;
+function d(e, t) {
+  let a = i.default.getLastFetchedMillis(e);
+  if (!t && null != a && Date.now() - a < 72e5) return !1;
   let {
-    loading: t
-  } = r.default.getFetchStatus(e);
-  return t === r.LoadingStatus.NONE && !0
+    loading: l
+  } = i.default.getFetchStatus(e);
+  return l === i.LoadingStatus.NONE && !0
 }
 
-function i(e) {
+function r(e) {
   let {
-    guildId: _,
-    highlightedItemData: E
+    guildId: t,
+    highlightedItemData: a
   } = e, {
-    loading: i,
-    error: I
-  } = (0, o.useStateFromStores)([r.default], () => r.default.getFetchStatus(_), [_]), s = t.useCallback(e => {
+    loading: r,
+    error: u
+  } = (0, n.useStateFromStores)([i.default], () => i.default.getFetchStatus(t), [t]), o = l.useCallback(e => {
     let {
-      force: t,
-      flushSeenItems: o
+      force: l,
+      flushSeenItems: n
     } = e;
-    async function r() {
+    async function i() {
       try {
-        await (0, n.fetchGuildFeed)({
-          guildId: _,
-          flushSeenItems: o,
+        await (0, s.fetchGuildFeed)({
+          guildId: t,
+          flushSeenItems: n,
           refresh: !0,
-          highlightedItemData: E
+          highlightedItemData: a
         })
       } catch (e) {
         console.error(e)
       }
     }
-    a(_, null != t && t) && r()
-  }, [_, E]), T = t.useCallback(() => {
-    a(_, !0) && e();
+    d(t, null != l && l) && i()
+  }, [t, a]), c = l.useCallback(() => {
+    d(t, !0) && e();
     async function e() {
       try {
-        await (0, n.fetchGuildFeed)({
-          guildId: _,
+        await (0, s.fetchGuildFeed)({
+          guildId: t,
           refresh: !1
         })
       } catch (e) {
         console.error(e)
       }
     }
-  }, [_]);
-  return t.useEffect(() => {
-    s({
-      force: null != E
+  }, [t]);
+  return l.useEffect(() => {
+    o({
+      force: null != a
     })
-  }, [s, E]), {
-    fetchFresh: s,
-    fetchPage: T,
-    loading: i,
-    error: I
+  }, [o, a]), {
+    fetchFresh: o,
+    fetchPage: c,
+    loading: r,
+    error: u
   }
 }

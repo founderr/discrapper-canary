@@ -1,38 +1,38 @@
 "use strict";
-E.r(_), E.d(_, {
+a.r(t), a.d(t, {
   fetchActiveChannels: function() {
-    return a
+    return d
   }
 });
-var t = E("872717"),
-  o = E("913144"),
-  n = E("599417"),
-  r = E("49111");
-async function a(e) {
-  let _ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-  o.default.dispatch({
+var l = a("872717"),
+  n = a("913144"),
+  s = a("599417"),
+  i = a("49111");
+async function d(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+  n.default.dispatch({
     type: "ACTIVE_CHANNELS_FETCH_START",
     guildId: e
   });
   try {
-    var E, a;
-    let n = await t.HTTP.get({
-        url: r.Endpoints.ACTIVE_CHANNELS(e),
+    var a, d;
+    let s = await l.HTTP.get({
+        url: i.Endpoints.ACTIVE_CHANNELS(e),
         query: {
-          channel_limit: _
+          channel_limit: t
         }
       }),
-      i = null !== (a = null === (E = n.body) || void 0 === E ? void 0 : E.channels) && void 0 !== a ? a : [];
-    return o.default.dispatch({
+      r = null !== (d = null === (a = s.body) || void 0 === a ? void 0 : a.channels) && void 0 !== d ? d : [];
+    return n.default.dispatch({
       type: "ACTIVE_CHANNELS_FETCH_SUCCESS",
       guildId: e,
-      channels: i
-    }), n
-  } catch (_) {
-    throw o.default.dispatch({
+      channels: r
+    }), s
+  } catch (t) {
+    throw n.default.dispatch({
       type: "ACTIVE_CHANNELS_FETCH_FAILURE",
       guildId: e,
-      error: new n.default(_)
-    }), _
+      error: new s.default(t)
+    }), t
   }
 }

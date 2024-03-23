@@ -36,7 +36,7 @@ var s = n("37983"),
   D = n("782340"),
   P = n("245150");
 
-function j(e, t, a, l) {
+function b(e, t, a, l) {
   (0, o.openModalLazy)(async () => {
     let {
       default: i
@@ -52,7 +52,7 @@ function j(e, t, a, l) {
     modalKey: u.activityInviteKey
   })
 }
-let b = /(.*)```(\w+)\n(.*)```(.*)/s;
+let j = /(.*)```(\w+)\n(.*)```(.*)/s;
 
 function k(e) {
   let {
@@ -156,7 +156,7 @@ function F(e) {
     let e = T,
       n = "txt",
       s = "",
-      a = T.match(b);
+      a = T.match(j);
     null != a && (s = a[1], n = a[2], e = a[3], s += a[4]), (0, N.promptToUpload)([(0, I.makeFile)(new Blob([e], {
       type: "text/plain"
     }), "message.".concat(n))], t, S), M.ComponentDispatch.dispatchToLastSubscribed(y.ComponentActions.CLEAR_TEXT), "" !== s && M.ComponentDispatch.dispatchToLastSubscribed(y.ComponentActions.INSERT_TEXT, {
@@ -220,7 +220,7 @@ function F(e) {
                 type: "Send Join Invite",
                 application_id: n.application_id,
                 location: y.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), j(n, t, y.ActivityActionTypes.JOIN, H))
+              }), b(n, t, y.ActivityActionTypes.JOIN, H))
             }
           }, "play");
         case L.AttachmentTypes.INVITE_TO_LISTEN:
@@ -232,7 +232,7 @@ function F(e) {
               return n = e.activity, void(_.default.track(y.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
                 location: y.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), j(n, t, y.ActivityActionTypes.LISTEN, H))
+              }), b(n, t, y.ActivityActionTypes.LISTEN, H))
             }
           }, "listen");
         case L.AttachmentTypes.INVITE_TO_WATCH:
@@ -244,7 +244,7 @@ function F(e) {
               return n = e.activity, void(_.default.track(y.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
                 location: y.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), j(n, t, y.ActivityActionTypes.WATCH, H))
+              }), b(n, t, y.ActivityActionTypes.WATCH, H))
             }
           }, "watch");
         case L.AttachmentTypes.CREATE_THREAD:

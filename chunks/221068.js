@@ -35,8 +35,8 @@ var s = n("37983"),
   O = n("718517"),
   D = n("299039"),
   P = n("154864"),
-  j = n("383667"),
-  b = n("459776"),
+  b = n("383667"),
+  j = n("459776"),
   k = n("921450"),
   F = n("366757"),
   H = n("699473"),
@@ -162,7 +162,7 @@ function $(e) {
       }
       if (null != ei && ei > e.content.timestamp.getTime() * O.default.Millis.SECOND) return;
       let l = N.default.can(Y.Permissions.CREATE_INSTANT_INVITE, y);
-      if ((0, j.default)(e.content, l)) return;
+      if ((0, b.default)(e.content, l)) return;
       e.type === Y.ChannelStreamTypes.MESSAGE && null == eT && (eT = e);
       let i = e.groupId === (null == eT ? void 0 : eT.groupId) ? eT.content.id : e.groupId,
         r = e.type === Y.ChannelStreamTypes.THREAD_STARTER_MESSAGE ? U.ThreadStarterChatMessage : U.default;
@@ -180,7 +180,7 @@ function $(e) {
   eA.push(...e_);
   let eM = en[en.length - 1];
   if (null != eo && es.forEach((e, t) => {
-      let n = 0 === t && (0, b.isNewGroupItem)(y, eM, new I.default({
+      let n = 0 === t && (0, j.isNewGroupItem)(y, eM, new I.default({
         type: Y.MessageTypes.DEFAULT,
         author: eo
       }));

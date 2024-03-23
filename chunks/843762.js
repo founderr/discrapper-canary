@@ -1,12 +1,12 @@
 "use strict";
-var n = e("859514"),
-  o = e("116180"),
-  i = e("308274"),
-  a = e("109024"),
-  u = e("53489"),
-  s = e("359529"),
+var e = r("859514"),
+  u = r("116180"),
+  i = r("308274"),
+  a = r("109024"),
+  o = r("53489"),
+  c = r("359529"),
   f = 1 !== [].unshift(0);
-n({
+e({
   target: "Array",
   proto: !0,
   arity: 1,
@@ -21,17 +21,17 @@ n({
   }()
 }, {
   unshift: function(t) {
-    var r = o(this),
-      e = i(r),
-      n = arguments.length;
-    if (n) {
-      s(e + n);
-      for (var f = e; f--;) {
-        var c = f + n;
-        f in r ? r[c] = r[f] : u(r, c)
+    var n = u(this),
+      r = i(n),
+      e = arguments.length;
+    if (e) {
+      c(r + e);
+      for (var f = r; f--;) {
+        var s = f + e;
+        f in n ? n[s] = n[f] : o(n, s)
       }
-      for (var l = 0; l < n; l++) r[l] = arguments[l]
+      for (var l = 0; l < e; l++) n[l] = arguments[l]
     }
-    return a(r, e + n)
+    return a(n, r + e)
   }
 })

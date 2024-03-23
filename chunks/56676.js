@@ -1,71 +1,71 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return T
+    return d
   }
-}), E("808653");
-var t = E("446674"),
-  o = E("913144");
-let n = {},
-  r = null,
+}), n("808653");
+var l = n("446674"),
+  s = n("913144");
+let r = {},
+  u = null,
   a = null;
 
-function i(e, _) {
-  null == _ ? e in n && delete n[e] : null != e && (n[e] = _)
+function i(e, t) {
+  null == t ? e in r && delete r[e] : null != e && (r[e] = t)
 }
 
-function I(e) {
+function o(e) {
   let {
-    user: _
+    user: t
   } = e;
-  a = _.id
+  a = t.id
 }
-class s extends t.default.PersistedStore {
+class c extends l.default.PersistedStore {
   initialize(e) {
-    null != e && (n = e)
+    null != e && (r = e)
   }
   requiredActions(e) {
-    var _;
-    return null !== (_ = n[e]) && void 0 !== _ ? _ : null
+    var t;
+    return null !== (t = r[e]) && void 0 !== t ? t : null
   }
-  requiredActionsIncludes(e, _) {
-    let E = this.requiredActions(e);
-    return null != E && _.reduce((e, _) => e || E.includes(_), !1)
+  requiredActionsIncludes(e, t) {
+    let n = this.requiredActions(e);
+    return null != n && t.reduce((e, t) => e || n.includes(t), !1)
   }
   wasLoginAttemptedInSession(e) {
-    return r === e
+    return u === e
   }
   getState() {
-    return n
+    return r
   }
 }
-s.displayName = "LoginRequiredActionStore", s.persistKey = "LoginRequiredActionStore";
-var T = new s(o.default, {
+c.displayName = "LoginRequiredActionStore", c.persistKey = "LoginRequiredActionStore";
+var d = new c(s.default, {
   LOGIN_ATTEMPTED: function(e) {
     let {
-      required_actions: _,
-      user_id: E
+      required_actions: t,
+      user_id: n
     } = e;
-    i(r = E, _)
+    i(u = n, t)
   },
-  CONNECTION_OPEN: I,
-  CURRENT_USER_UPDATE: I,
+  CONNECTION_OPEN: o,
+  CURRENT_USER_UPDATE: o,
   LOGOUT: function(e) {
     let {
-      isSwitchingAccount: _
+      isSwitchingAccount: t
     } = e;
-    !_ && null != a && i(a, null)
+    !t && null != a && i(a, null)
   },
   PASSWORD_UPDATED: function(e) {
     let {
-      userId: _
+      userId: t
     } = e;
-    i(_, null)
+    i(t, null)
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function(e) {
     let {
-      userId: _
+      userId: t
     } = e;
-    i(_, null)
+    i(t, null)
   }
 })

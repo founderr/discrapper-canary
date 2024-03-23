@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return a
+    return n
   }
-}), n("222007");
-var i = n("884691"),
-  l = n("760850");
+}), l("222007");
+var a = l("884691"),
+  s = l("760850");
 
-function a(e, t) {
-  let [n, a] = i.useState();
-  return i.useEffect(() => {
+function n(e, t) {
+  let [l, n] = a.useState();
+  return a.useEffect(() => {
     if (null == e || null != t) {
-      a(void 0);
+      n(void 0);
       return
-    }(0, l.default)().then(t => {
+    }(0, s.default)().then(t => {
       null != t && t.identifyGame(e, (e, t) => {
-        0 === e && null != t.icon && "" !== t.icon && null != t.name && "" !== t.name && a("data:image/png;base64,".concat(t.icon))
+        0 === e && null != t.icon && "" !== t.icon && null != t.name && "" !== t.name && n("data:image/png;base64,".concat(t.icon))
       })
     })
-  }, [e, t]), null != t ? t : n
+  }, [e, t]), null != t ? t : l
 }

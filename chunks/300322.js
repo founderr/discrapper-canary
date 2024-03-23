@@ -1,69 +1,69 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   VoiceInThreadsExperiment: function() {
-    return l
-  },
-  useCanStartPublicThread: function() {
-    return u
-  },
-  computeCanStartPublicThread: function() {
-    return L
-  },
-  useCanStartPrivateThread: function() {
     return C
   },
-  useCanStartThread: function() {
-    return c
+  useCanStartPublicThread: function() {
+    return v
   },
-  useCanViewThreadForMessage: function() {
-    return d
+  computeCanStartPublicThread: function() {
+    return S
   },
-  useHasActiveThreads: function() {
-    return U
-  },
-  useCanManageThread: function() {
-    return M
-  },
-  useCanUnarchiveThread: function() {
+  useCanStartPrivateThread: function() {
     return m
   },
+  useCanStartThread: function() {
+    return R
+  },
+  useCanViewThreadForMessage: function() {
+    return A
+  },
+  useHasActiveThreads: function() {
+    return N
+  },
+  useCanManageThread: function() {
+    return T
+  },
+  useCanUnarchiveThread: function() {
+    return O
+  },
   canUnarchiveThread: function() {
-    return G
+    return P
   },
   useIsActiveChannelOrUnarchivableThread: function() {
-    return p
-  },
-  getIsActiveChannelOrUnarchivableThread: function() {
-    return g
-  },
-  computeIsReadOnlyThread: function() {
     return y
   },
+  getIsActiveChannelOrUnarchivableThread: function() {
+    return x
+  },
+  computeIsReadOnlyThread: function() {
+    return b
+  },
   useIsThreadModerator: function() {
-    return f
+    return F
   },
   useCanJoinThreadVoice: function() {
-    return H
+    return w
   },
   useIsNonModInLockedThread: function() {
-    return v
+    return L
   }
 });
-var t = E("917351"),
-  o = E.n(t),
-  n = E("316693"),
-  r = E("446674"),
-  a = E("296892"),
-  i = E("889014"),
-  I = E("913491"),
-  s = E("233069"),
-  T = E("271938"),
-  S = E("42203"),
-  N = E("957255"),
-  O = E("299039"),
-  A = E("401690"),
-  R = E("49111");
-let l = (0, a.default)({
+var r = n("917351"),
+  i = n.n(r),
+  s = n("316693"),
+  o = n("446674"),
+  a = n("296892"),
+  l = n("889014"),
+  u = n("913491"),
+  d = n("233069"),
+  c = n("271938"),
+  f = n("42203"),
+  E = n("957255"),
+  h = n("299039"),
+  _ = n("401690"),
+  p = n("49111");
+let C = (0, a.default)({
   id: "2022-07_voice_in_threads",
   label: "Voice in Threads",
   kind: "guild",
@@ -79,126 +79,126 @@ let l = (0, a.default)({
   }]
 });
 
-function u(e, _) {
-  let E = (0, r.useStateFromStores)([N.default], () => {
-    let _ = e.isForumLikeChannel() ? R.Permissions.SEND_MESSAGES : n.combine(R.Permissions.CREATE_PUBLIC_THREADS, R.Permissions.READ_MESSAGE_HISTORY);
-    return N.default.can(_, e)
+function v(e, t) {
+  let n = (0, o.useStateFromStores)([E.default], () => {
+    let t = e.isForumLikeChannel() ? p.Permissions.SEND_MESSAGES : s.combine(p.Permissions.CREATE_PUBLIC_THREADS, p.Permissions.READ_MESSAGE_HISTORY);
+    return E.default.can(t, e)
   }, [e]);
-  return D(E, e, _)
+  return I(n, e, t)
 }
 
-function L(e, _) {
-  let E = e.isForumLikeChannel() ? R.Permissions.SEND_MESSAGES : n.combine(R.Permissions.CREATE_PUBLIC_THREADS, R.Permissions.READ_MESSAGE_HISTORY),
-    t = N.default.can(E, e);
-  return D(t, e, _)
+function S(e, t) {
+  let n = e.isForumLikeChannel() ? p.Permissions.SEND_MESSAGES : s.combine(p.Permissions.CREATE_PUBLIC_THREADS, p.Permissions.READ_MESSAGE_HISTORY),
+    r = E.default.can(n, e);
+  return I(r, e, t)
 }
 
-function C(e) {
-  let _ = (0, r.useStateFromStores)([N.default], () => N.default.can(n.combine(R.Permissions.CREATE_PRIVATE_THREADS), e), [e]);
-  return e.type === R.ChannelTypes.GUILD_TEXT && D(_, e)
+function m(e) {
+  let t = (0, o.useStateFromStores)([E.default], () => E.default.can(s.combine(p.Permissions.CREATE_PRIVATE_THREADS), e), [e]);
+  return e.type === p.ChannelTypes.GUILD_TEXT && I(t, e)
 }
 
-function c(e) {
-  let _ = u(e),
-    E = C(e);
-  return _ || E
+function R(e) {
+  let t = v(e),
+    n = m(e);
+  return t || n
 }
 
-function D(e, _, E) {
-  return !(__OVERLAY__ || !e || !s.THREADED_CHANNEL_TYPES.has(_.type) || null != E && (E.hasFlag(R.MessageFlags.HAS_THREAD) || (0, I.default)(E))) && !0
+function I(e, t, n) {
+  return !(__OVERLAY__ || !e || !d.THREADED_CHANNEL_TYPES.has(t.type) || null != n && (n.hasFlag(p.MessageFlags.HAS_THREAD) || (0, u.default)(n))) && !0
 }
 
-function d(e) {
-  let _ = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(O.default.castMessageIdAsChannelId(e.id)), [e]),
-    E = (0, r.useStateFromStores)([N.default], () => N.default.can(R.Permissions.VIEW_CHANNEL, _), [_]);
-  return function(e, _, E) {
-    return !!_.hasFlag(R.MessageFlags.HAS_THREAD) && null != E && !!e || !1
-  }(E, e, _)
+function A(e) {
+  let t = (0, o.useStateFromStores)([f.default], () => f.default.getChannel(h.default.castMessageIdAsChannelId(e.id)), [e]),
+    n = (0, o.useStateFromStores)([E.default], () => E.default.can(p.Permissions.VIEW_CHANNEL, t), [t]);
+  return function(e, t, n) {
+    return !!t.hasFlag(p.MessageFlags.HAS_THREAD) && null != n && !!e || !1
+  }(n, e, t)
 }
 
-function U(e) {
-  return (0, r.useStateFromStoresObject)([A.default, N.default], () => {
-    let _ = A.default.getActiveJoinedThreadsForParent(e.guild_id, e.id),
-      E = A.default.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id),
-      t = A.default.getActiveUnjoinedThreadsForParent(e.guild_id, e.id),
-      n = o(E).some(e => N.default.can(R.Permissions.VIEW_CHANNEL, e.channel)),
-      r = o(_).some(e => !(e.channel.id in E) && N.default.can(R.Permissions.VIEW_CHANNEL, e.channel)),
-      a = o(t).some(e => N.default.can(R.Permissions.VIEW_CHANNEL, e));
+function N(e) {
+  return (0, o.useStateFromStoresObject)([_.default, E.default], () => {
+    let t = _.default.getActiveJoinedThreadsForParent(e.guild_id, e.id),
+      n = _.default.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id),
+      r = _.default.getActiveUnjoinedThreadsForParent(e.guild_id, e.id),
+      s = i(n).some(e => E.default.can(p.Permissions.VIEW_CHANNEL, e.channel)),
+      o = i(t).some(e => !(e.channel.id in n) && E.default.can(p.Permissions.VIEW_CHANNEL, e.channel)),
+      a = i(r).some(e => E.default.can(p.Permissions.VIEW_CHANNEL, e));
     return {
-      hasActiveThreads: n || r || a,
-      hasMoreActiveThreads: a || r
+      hasActiveThreads: s || o || a,
+      hasMoreActiveThreads: a || o
     }
   })
 }
 
-function M(e) {
-  let _ = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(null == e ? void 0 : e.parent_id)),
-    E = (0, r.useStateFromStores)([N.default], () => null != _ && N.default.can(R.Permissions.MANAGE_THREADS, _), [_]),
-    t = (0, r.useStateFromStores)([T.default], () => T.default.getId());
-  return !!(null != e && null != _ && e.isThread()) && (!!E || !e.isLockedThread() && (e.ownerId === t || !1))
+function T(e) {
+  let t = (0, o.useStateFromStores)([f.default], () => f.default.getChannel(null == e ? void 0 : e.parent_id)),
+    n = (0, o.useStateFromStores)([E.default], () => null != t && E.default.can(p.Permissions.MANAGE_THREADS, t), [t]),
+    r = (0, o.useStateFromStores)([c.default], () => c.default.getId());
+  return !!(null != e && null != t && e.isThread()) && (!!n || !e.isLockedThread() && (e.ownerId === r || !1))
 }
 
-function h(e, _) {
-  return null != e && _.can(R.Permissions.SEND_MESSAGES_IN_THREADS, e)
+function g(e, t) {
+  return null != e && t.can(p.Permissions.SEND_MESSAGES_IN_THREADS, e)
 }
 
-function P(e, _, E) {
-  var t;
-  return !!(null != e && e.isThread()) && ((null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.locked) ? E : _)
+function M(e, t, n) {
+  var r;
+  return !!(null != e && e.isThread()) && ((null === (r = e.threadMetadata) || void 0 === r ? void 0 : r.locked) ? n : t)
 }
 
-function m(e) {
-  let _ = (0, r.useStateFromStores)([N.default], () => h(e, N.default)),
-    E = f(e);
-  return P(e, _, E)
+function O(e) {
+  let t = (0, o.useStateFromStores)([E.default], () => g(e, E.default)),
+    n = F(e);
+  return M(e, t, n)
 }
 
-function G(e) {
-  let _ = h(e, N.default),
-    E = function(e) {
-      return B(e, N.default)
+function P(e) {
+  let t = g(e, E.default),
+    n = function(e) {
+      return D(e, E.default)
     }(e);
-  return P(e, _, E)
-}
-
-function p(e) {
-  var _;
-  let E = (0, r.useStateFromStores)([N.default], () => null != e && N.default.can(R.Permissions.SEND_MESSAGES_IN_THREADS, e));
-  return null != e && (!e.isThread() || e.isActiveThread() || e.isArchivedThread() && (null === (_ = e.threadMetadata) || void 0 === _ ? void 0 : _.locked) !== !0 && E)
-}
-
-function g(e) {
-  var _;
-  return null != e && (!e.isThread() || e.isActiveThread() || e.isArchivedThread() && (null === (_ = e.threadMetadata) || void 0 === _ ? void 0 : _.locked) !== !0 && N.default.can(R.Permissions.SEND_MESSAGES_IN_THREADS, e))
+  return M(e, t, n)
 }
 
 function y(e) {
-  let _ = N.default.can(R.Permissions.MANAGE_THREADS, e);
-  return e.isArchivedLockedThread() && !_
+  var t;
+  let n = (0, o.useStateFromStores)([E.default], () => null != e && E.default.can(p.Permissions.SEND_MESSAGES_IN_THREADS, e));
+  return null != e && (!e.isThread() || e.isActiveThread() || e.isArchivedThread() && (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0 && n)
 }
 
-function B(e, _) {
-  return null != e && _.can(R.Permissions.MANAGE_THREADS, e)
+function x(e) {
+  var t;
+  return null != e && (!e.isThread() || e.isActiveThread() || e.isArchivedThread() && (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0 && E.default.can(p.Permissions.SEND_MESSAGES_IN_THREADS, e))
 }
 
-function f(e) {
-  return (0, r.useStateFromStores)([N.default], () => B(e, N.default))
+function b(e) {
+  let t = E.default.can(p.Permissions.MANAGE_THREADS, e);
+  return e.isArchivedLockedThread() && !t
 }
 
-function H(e) {
-  let _ = (0, i.default)(),
-    E = (0, r.useStateFromStores)([N.default], () => N.default.can(R.Permissions.CONNECT, e)),
-    t = p(e),
-    o = l.useExperiment({
+function D(e, t) {
+  return null != e && t.can(p.Permissions.MANAGE_THREADS, e)
+}
+
+function F(e) {
+  return (0, o.useStateFromStores)([E.default], () => D(e, E.default))
+}
+
+function w(e) {
+  let t = (0, l.default)(),
+    n = (0, o.useStateFromStores)([E.default], () => E.default.can(p.Permissions.CONNECT, e)),
+    r = y(e),
+    i = C.useExperiment({
       guildId: e.guild_id,
       location: "e791ea_1"
     }, {
       autoTrackExposure: !1
     }).enabled;
-  return !_ && e.isVocalThread() && o && E && t
+  return !t && e.isVocalThread() && i && n && r
 }
 
-function v(e) {
-  let _ = f(e);
-  return e.isLockedThread() && !_
+function L(e) {
+  let t = F(e);
+  return e.isLockedThread() && !t
 }

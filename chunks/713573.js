@@ -1,59 +1,59 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var i = n("37983");
 n("884691");
-var r = n("414456"),
-  s = n.n(r),
-  l = n("77078"),
-  a = n("451914"),
-  o = n("548122");
-let u = Object.freeze({
-    SIZE_10: o.size10,
-    SIZE_12: o.size12,
-    SIZE_14: o.size14,
-    SIZE_16: o.size16,
-    SIZE_20: o.size20,
-    SIZE_24: o.size24,
-    SIZE_32: o.size32
+var s = n("414456"),
+  l = n.n(s),
+  a = n("77078"),
+  u = n("451914"),
+  r = n("548122");
+let d = Object.freeze({
+    SIZE_10: r.size10,
+    SIZE_12: r.size12,
+    SIZE_14: r.size14,
+    SIZE_16: r.size16,
+    SIZE_20: r.size20,
+    SIZE_24: r.size24,
+    SIZE_32: r.size32
   }),
-  c = e => {
+  o = e => {
     let {
       id: t,
       muted: n = !1,
-      className: r = a.wrapper,
-      size: o = u.SIZE_14,
-      selectable: c = !1,
-      children: d,
-      color: f,
-      onClick: h,
-      onContextMenu: E,
-      style: v,
-      title: C,
-      uppercase: p
+      className: s = u.wrapper,
+      size: r = d.SIZE_14,
+      selectable: o = !1,
+      children: c,
+      color: h,
+      onClick: E,
+      onContextMenu: f,
+      style: I,
+      title: _,
+      uppercase: m
     } = e;
-    return (0, i.jsx)(l.H, {
-      role: null != h ? "button" : void 0,
-      onClick: h,
-      onContextMenu: E,
+    return (0, i.jsx)(a.H, {
+      role: null != E ? "button" : void 0,
+      onClick: E,
+      onContextMenu: f,
       id: t,
-      className: s(r, {
-        [a.base]: !0,
-        [o]: !0,
-        [a.selectable]: c,
-        [a.muted]: n,
-        [a.uppercase]: p
+      className: l(s, {
+        [u.base]: !0,
+        [r]: !0,
+        [u.selectable]: o,
+        [u.muted]: n,
+        [u.uppercase]: m
       }),
-      title: C,
-      style: null != f ? {
-        ...v,
-        color: f
-      } : v,
-      children: d
+      title: _,
+      style: null != h ? {
+        ...I,
+        color: h
+      } : I,
+      children: c
     })
   };
-c.Sizes = u;
-var d = c
+o.Sizes = d;
+var c = o

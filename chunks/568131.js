@@ -1,60 +1,60 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   fetchLibrary: function() {
-    return l
+    return c
   },
   createTestModeLibraryApplications: function() {
     return o
   },
   setActiveLaunchOptionId: function() {
-    return d
+    return l
   }
 });
-var s = n("872717"),
-  i = n("913144"),
-  r = n("370999"),
-  a = n("271560"),
-  u = n("49111");
-async function l() {
+var r = n("872717"),
+  a = n("913144"),
+  i = n("370999"),
+  u = n("271560"),
+  d = n("49111");
+async function c() {
   try {
-    let e = await (0, a.httpGetWithCountryCodeQuery)({
-      url: u.Endpoints.LIBRARY,
+    let t = await (0, u.httpGetWithCountryCodeQuery)({
+      url: d.Endpoints.LIBRARY,
       oldFormErrors: !0
     }, !1);
-    i.default.dispatch({
+    a.default.dispatch({
       type: "LIBRARY_FETCH_SUCCESS",
-      libraryApplications: e.body
+      libraryApplications: t.body
     })
-  } catch (e) {
-    i.default.dispatch({
+  } catch (t) {
+    a.default.dispatch({
       type: "LIBRARY_FETCH_FAIL",
-      error: e
+      error: t
     })
   }
 }
-async function o(e) {
-  let t = e.primarySkuId;
-  if (null == t) return;
-  let n = await s.HTTP.get({
-      url: u.Endpoints.APPLICATION_BRANCH_LIST(e.id),
+async function o(t) {
+  let e = t.primarySkuId;
+  if (null == e) return;
+  let n = await r.HTTP.get({
+      url: d.Endpoints.APPLICATION_BRANCH_LIST(t.id),
       oldFormErrors: !0
-    }).then(e => e.body),
-    a = n.map(n => r.default.createForTestMode({
-      id: e.id,
-      skuId: t,
+    }).then(t => t.body),
+    u = n.map(n => i.default.createForTestMode({
+      id: t.id,
+      skuId: e,
       branch: n
     }));
-  i.default.dispatch({
+  a.default.dispatch({
     type: "LIBRARY_APPLICATIONS_TEST_MODE_ENABLED",
-    libraryApplications: a
+    libraryApplications: u
   })
 }
 
-function d(e, t, n) {
-  i.default.dispatch({
+function l(t, e, n) {
+  a.default.dispatch({
     type: "LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE",
-    applicationId: e,
-    branchId: t,
+    applicationId: t,
+    branchId: e,
     launchOptionId: n
   })
 }

@@ -1,34 +1,34 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return a
+    return i
   }
 });
-var n = l("37983");
-l("884691");
-var r = l("469563"),
-  s = l("470131"),
-  i = l("75196"),
-  a = (0, r.replaceIcon)(function(e) {
+var r = n("37983");
+n("884691");
+var l = n("469563"),
+  s = n("470131"),
+  a = n("75196"),
+  i = (0, l.replaceIcon)(function(e) {
     let {
       width: t = 6,
-      height: l = 11,
-      color: r = "currentColor",
+      height: n = 11,
+      color: l = "currentColor",
       foreground: s,
-      ...a
+      ...i
     } = e;
-    return (0, n.jsx)("svg", {
-      ...(0, i.default)(a),
+    return (0, r.jsx)("svg", {
+      ...(0, a.default)(i),
       width: t,
-      height: l,
+      height: n,
       viewBox: "0 0 6 11",
-      children: (0, n.jsxs)("g", {
-        fill: r,
+      children: (0, r.jsxs)("g", {
+        fill: l,
         fillRule: "evenodd",
         className: s,
-        children: [(0, n.jsx)("path", {
+        children: [(0, r.jsx)("path", {
           d: "M2 4.42007V6.79007L3 7.79007L4 6.79007V4.42007L3.01 3.42007L2 4.42007Z"
-        }), (0, n.jsx)("path", {
+        }), (0, r.jsx)("path", {
           d: "M3 0.590088L0 3.59009V7.59009L3 10.5901L6 7.59009V3.59009L3 0.590088ZM5 7.21009L3 9.21009L1 7.21009V4.00009L3 2.00009L5 4.00009V7.21009Z"
         })]
       })

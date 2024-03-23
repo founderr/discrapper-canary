@@ -41,8 +41,8 @@ var s = n("37983"),
   O = n("85470"),
   D = n("969706"),
   P = n("39331"),
-  j = n("68480"),
-  b = n("115859"),
+  b = n("68480"),
+  j = n("115859"),
   k = n("922177"),
   F = n("789790"),
   H = n("227984"),
@@ -123,7 +123,7 @@ function X(e) {
     groupId: I
   } = e, N = r.type === W.MessageTypes.REPLY ? r.messageReference : void 0, {
     onFocus: L,
-    ...j
+    ...b
   } = (0, u.useListItem)(null !== (t = e.id) && void 0 !== t ? t : ""), {
     isFocused: k,
     handleFocus: F,
@@ -159,7 +159,7 @@ function X(e) {
       "aria-label": Z.default.Messages.JUMP,
       children: Z.default.Messages.JUMP
     }), (0, s.jsx)(_.default, {
-      ...j,
+      ...b,
       id: l,
       compact: T,
       className: i(A, {
@@ -185,7 +185,7 @@ function X(e) {
         repliedMessage: Q,
         roleIcon: eC
       }),
-      childrenAccessories: (0, b.default)({
+      childrenAccessories: (0, j.default)({
         channelMessageProps: e,
         hasSpoilerEmbeds: er,
         isInteracting: el,
@@ -281,13 +281,13 @@ var q = a.memo(function(e) {
       roleId: ey.iconRoleId
     }),
     eP = (0, y.getMessageAriaLabelledBy)(g, Q),
-    ej = (0, y.getMessageAriaDescribedBy)(g),
-    eb = (0, d.useStateFromStores)([h.default], () => h.default.getMessage(N), [N]),
-    ek = (0, j.default)({
+    eb = (0, y.getMessageAriaDescribedBy)(g),
+    ej = (0, d.useStateFromStores)([h.default], () => h.default.getMessage(N), [N]),
+    ek = (0, b.default)({
       message: g,
       channel: K
     }),
-    eF = null != eb;
+    eF = null != ej;
   l = g.type === W.MessageTypes.CUSTOM_GIFT ? "" : !eS && eF ? (0, k.default)(e, ev) : (0, U.default)(e, ev, eS);
   let eH = g.id === Q,
     eU = (0, s.jsx)(c.FocusRing, {
@@ -304,7 +304,7 @@ var q = a.memo(function(e) {
           "aria-setsize": -1,
           "aria-roledescription": Z.default.Messages.MESSAGE_A11Y_ROLE_DESCRIPTION,
           "aria-labelledby": eP,
-          "aria-describedby": ej,
+          "aria-describedby": eb,
           onFocus: eE,
           onBlur: eg,
           onContextMenu: eu,
@@ -336,7 +336,7 @@ var q = a.memo(function(e) {
             repliedMessage: el,
             roleIcon: eD
           }),
-          childrenAccessories: (0, b.default)({
+          childrenAccessories: (0, j.default)({
             channelMessageProps: e,
             hasSpoilerEmbeds: ex,
             handleContextMenu: eu,

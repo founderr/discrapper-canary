@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
-    return o
+    return c
   }
-}), n("222007"), n("424973");
-let i = {
+}), t("222007"), t("424973");
+let a = {
     1: "bold",
     4: "underline"
   },
-  l = {
+  r = {
     30: "black",
     31: "red",
     32: "green",
@@ -18,7 +18,7 @@ let i = {
     36: "cyan",
     37: "white"
   },
-  a = {
+  l = {
     40: "black",
     41: "red",
     42: "green",
@@ -28,41 +28,41 @@ let i = {
     46: "cyan",
     47: "white"
   },
-  s = /\x1B\[(\d+(?:[:;]\d+)*)m/,
-  r = new RegExp("(?=".concat(s.source, ")"));
+  i = /\x1B\[(\d+(?:[:;]\d+)*)m/,
+  u = new RegExp("(?=".concat(i.source, ")"));
 
-function o() {
-  let e = [...u("foreground", l, ["38", "39"], !0), ...u("background", a, ["48", "49"], !0), ...u("style", i, [], !1), {
+function c() {
+  let e = [...s("foreground", r, ["38", "39"], !0), ...s("background", l, ["48", "49"], !0), ...s("style", a, [], !1), {
     className: "ansi-control-sequence",
-    begin: s,
+    begin: i,
     starts: {
-      end: r,
+      end: u,
       endsParent: !0
     }
   }];
   return function(e) {
-    for (let t = 0; t < e.length; t++) e[t].contains = e.slice(t + 1)
+    for (let n = 0; n < e.length; n++) e[n].contains = e.slice(n + 1)
   }(e), {
     contains: [{
-      begin: r,
+      begin: u,
       contains: e
     }]
   }
 }
 
-function u(e, t, n, i) {
-  let l = ["0", ...n];
-  return i && l.push(...Object.keys(t)), Object.entries(t).map(t => {
-    var n, i, a, s;
-    let [o, u] = t;
-    return n = e, i = u, a = o, s = l, {
-      className: "ansi-".concat(n, "-").concat(i),
+function s(e, n, t, a) {
+  let r = ["0", ...t];
+  return a && r.push(...Object.keys(n)), Object.entries(n).map(n => {
+    var t, a, l, i;
+    let [c, s] = n;
+    return t = e, a = s, l = c, i = r, {
+      className: "ansi-".concat(t, "-").concat(a),
       endsParent: !0,
-      begin: r,
-      "on:begin": (e, t) => {
-        let n = e[1].split(";");
-        for (let e of (void 0 === t.data.isOn && (t.data.isOn = !1), n)) e === a ? t.data.isOn = !0 : s.includes(e) && (t.data.isOn = !1);
-        !t.data.isOn && t.ignoreMatch()
+      begin: u,
+      "on:begin": (e, n) => {
+        let t = e[1].split(";");
+        for (let e of (void 0 === n.data.isOn && (n.data.isOn = !1), t)) e === l ? n.data.isOn = !0 : i.includes(e) && (n.data.isOn = !1);
+        !n.data.isOn && n.ignoreMatch()
       }
     }
   })

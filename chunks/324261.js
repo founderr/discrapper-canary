@@ -1,97 +1,97 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return p
   }
 });
-var a = n("446674"),
+var l = n("446674"),
   i = n("913144"),
-  l = n("692038"),
-  r = n("42203"),
-  s = n("697218"),
+  a = n("692038"),
+  s = n("42203"),
+  r = n("697218"),
   u = n("449008"),
-  d = n("299039");
-let o = {};
+  o = n("299039");
+let d = {};
 
 function c(e) {
   var t;
-  let n = r.default.getChannel(null == e ? void 0 : e.channel_id);
+  let n = s.default.getChannel(null == e ? void 0 : e.channel_id);
   if (null == n || !n.isForumPost()) return !1;
-  let a = o[n.id];
-  return d.default.compare(null == e ? void 0 : e.id, null == a ? void 0 : null === (t = a.message) || void 0 === t ? void 0 : t.id) > -1
+  let l = d[n.id];
+  return o.default.compare(null == e ? void 0 : e.id, null == l ? void 0 : null === (t = l.message) || void 0 === t ? void 0 : t.id) > -1
 }
 
-function _(e, t) {
-  let n = null == t ? null : (0, l.createMessageRecord)(t);
-  return o[e] = {
+function f(e, t) {
+  let n = null == t ? null : (0, a.createMessageRecord)(t);
+  return d[e] = {
     loaded: !0,
     message: n
   }, !0
 }
 
-function f(e) {
-  return o[e]
-}
-
-function E(e) {
-  var t;
-  return null === (t = o[e]) || void 0 === t ? void 0 : t.message
+function m(e) {
+  return d[e]
 }
 
 function g(e) {
+  var t;
+  return null === (t = d[e]) || void 0 === t ? void 0 : t.message
+}
+
+function _(e) {
   let {
     threads: t,
     mostRecentMessages: n
   } = e;
-  t.forEach(e => _(e.id, null)), null == n || n.filter(u.isNotNullish).forEach(e => {
-    _(e.channel_id, e)
+  t.forEach(e => f(e.id, null)), null == n || n.filter(u.isNotNullish).forEach(e => {
+    f(e.channel_id, e)
   })
 }
-class p extends a.default.Store {
+class h extends l.default.Store {
   initialize() {
-    this.waitFor(r.default, s.default)
+    this.waitFor(s.default, r.default)
   }
   getMessageState(e) {
-    return !(e in o) && (o[e] = {
+    return !(e in d) && (d[e] = {
       loaded: !1,
       message: null
-    }), o[e]
+    }), d[e]
   }
 }
-p.displayName = "ForumPostRecentMessageStore";
-var S = new p(i.default, {
+h.displayName = "ForumPostRecentMessageStore";
+var p = new h(i.default, {
   CONNECTION_OPEN: function() {
-    o = {}
+    d = {}
   },
   MESSAGE_CREATE: function(e) {
     if (e.isPushNotification || !c(e.message)) return !1;
-    e.message.channel_id === d.default.castMessageIdAsChannelId(e.message.id) ? _(e.message.channel_id, null) : _(e.message.channel_id, e.message)
+    e.message.channel_id === o.default.castMessageIdAsChannelId(e.message.id) ? f(e.message.channel_id, null) : f(e.message.channel_id, e.message)
   },
   MESSAGE_UPDATE: function(e) {
     if (!c(e.message) || e.message.channel_id === e.message.id) return !1;
     ! function(e, t) {
       let n = function(e) {
-          return o[e]
+          return d[e]
         }(e),
-        a = E(e);
-      null != n && null != a && (o[e] = {
+        l = g(e);
+      null != n && null != l && (d[e] = {
         ...n,
-        message: (0, l.updateMessageRecord)(a, t)
+        message: (0, a.updateMessageRecord)(l, t)
       })
     }(e.message.channel_id, e.message)
   },
   MESSAGE_DELETE: function(e) {
     return function(e, t) {
-      let n = E(e);
-      return (null == n ? void 0 : n.id) === t && (delete o[e], !0)
+      let n = g(e);
+      return (null == n ? void 0 : n.id) === t && (delete d[e], !0)
     }(e.channelId, e.id)
   },
   LOAD_FORUM_POSTS: function(e) {
     let {
       threads: t
     } = e;
-    for (let e in t) _(e, t[e].most_recent_message)
+    for (let e in t) f(e, t[e].most_recent_message)
   },
-  LOAD_ARCHIVED_THREADS_SUCCESS: g,
-  LOAD_THREADS_SUCCESS: g
+  LOAD_ARCHIVED_THREADS_SUCCESS: _,
+  LOAD_THREADS_SUCCESS: _
 })

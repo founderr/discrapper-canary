@@ -1,95 +1,95 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return p
   }
 });
-var i = n("37983");
+var r = n("37983");
 n("884691");
-var r = n("414456"),
-  s = n.n(r),
-  l = n("446674"),
+var i = n("414456"),
+  s = n.n(i),
+  o = n("446674"),
   a = n("77078"),
-  o = n("102985"),
+  l = n("102985"),
   u = n("79798"),
-  c = n("754474"),
-  d = n("158998"),
+  d = n("754474"),
+  c = n("158998"),
   f = n("782340"),
-  h = n("168540");
+  E = n("168540");
 
-function E(e) {
-  if (e.isSystemUser()) return c.BotTypes.SYSTEM_DM;
-  if (e.isClyde()) return c.BotTypes.AI;
-  if (e.bot) return c.BotTypes.BOT;
+function h(e) {
+  if (e.isSystemUser()) return d.BotTypes.SYSTEM_DM;
+  if (e.isClyde()) return d.BotTypes.AI;
+  if (e.bot) return d.BotTypes.BOT;
   return null
 }
-let v = e => {
+let _ = e => {
   let {
     primary: t,
     secondary: n,
-    botType: r,
-    botVerified: l,
-    discriminatorClass: o,
-    className: c,
-    usernameClass: d,
-    color: E,
-    botClass: v,
-    showStreamerModeTooltip: C
+    botType: i,
+    botVerified: o,
+    discriminatorClass: l,
+    className: d,
+    usernameClass: c,
+    color: h,
+    botClass: _,
+    showStreamerModeTooltip: p
   } = e;
-  return (0, i.jsxs)("div", {
-    className: s(h.info, c),
-    children: [(0, i.jsx)(a.Tooltip, {
+  return (0, r.jsxs)("div", {
+    className: s(E.info, d),
+    children: [(0, r.jsx)(a.Tooltip, {
       text: f.default.Messages.STREAMER_MODE_ENABLED,
-      shouldShow: C,
-      "aria-label": !!C && void 0,
-      children: e => (0, i.jsx)("span", {
+      shouldShow: p,
+      "aria-label": !!p && void 0,
+      children: e => (0, r.jsx)("span", {
         ...e,
-        className: s(h.username, d),
-        style: null != E ? {
-          color: E
+        className: s(E.username, c),
+        style: null != h ? {
+          color: h
         } : void 0,
         children: t
       })
-    }), null != n ? (0, i.jsx)("span", {
-      className: s(h.infoSpacing, o),
+    }), null != n ? (0, r.jsx)("span", {
+      className: s(E.infoSpacing, l),
       children: n
-    }) : void 0, null != r && (0, i.jsx)(u.default, {
-      type: r,
-      className: s(h.infoSpacing, v),
-      verified: l
+    }) : void 0, null != i && (0, r.jsx)(u.default, {
+      type: i,
+      className: s(E.infoSpacing, _),
+      verified: o
     })]
   })
 };
-var C = e => {
+var p = e => {
   let {
     hideDiscriminator: t = !1,
     user: n,
-    nick: r,
+    nick: i,
     forceUsername: s,
     showAccountIdentifier: a,
     overrideDiscriminator: u,
     forcePomelo: f,
-    ...h
-  } = e, C = (0, l.useStateFromStores)([o.default], () => o.default.hidePersonalInformation), p = C || t || n.isNonUserBot(), _ = n.toString(), I = d.default.getName(n), m = s ? _ : null != r ? r : I, N = n.isPomelo() || f;
-  if (N || m !== _) {
-    let e = m === _ && N && s ? d.default.getUserTag(n, {
+    ...E
+  } = e, p = (0, o.useStateFromStores)([l.default], () => l.default.hidePersonalInformation), C = p || t || n.isNonUserBot(), v = n.toString(), S = c.default.getName(n), m = s ? v : null != i ? i : S, R = n.isPomelo() || f;
+  if (R || m !== v) {
+    let e = m === v && R && s ? c.default.getUserTag(n, {
         forcePomelo: f
       }) : m,
-      t = a && e !== "@".concat(_) ? d.default.getUserTag(n) : void 0;
-    return (0, i.jsx)(v, {
+      t = a && e !== "@".concat(v) ? c.default.getUserTag(n) : void 0;
+    return (0, r.jsx)(_, {
       primary: e,
       secondary: t,
       botVerified: n.isVerifiedBot(),
-      botType: E(n),
-      showStreamerModeTooltip: C && e !== I,
-      ...h
+      botType: h(n),
+      showStreamerModeTooltip: p && e !== S,
+      ...E
     })
   }
-  return (0, i.jsx)(c.default, {
+  return (0, r.jsx)(d.default, {
     name: m,
-    botType: E(n),
+    botType: h(n),
     botVerified: n.isVerifiedBot(),
-    discriminator: p || m !== _ ? null : null != u ? u : n.discriminator,
-    ...h
+    discriminator: C || m !== v ? null : null != u ? u : n.discriminator,
+    ...E
   })
 }

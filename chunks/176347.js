@@ -35,8 +35,8 @@ var s = n("37983"),
   O = n("998415"),
   D = n("228800"),
   P = n("681060"),
-  j = n("939563"),
-  b = n("538282"),
+  b = n("939563"),
+  j = n("538282"),
   k = n("956967"),
   F = n("952104"),
   H = n("509"),
@@ -409,7 +409,7 @@ class eO extends a.PureComponent {
     }, this.handleSetValue = e => {
       var t, n;
       let s = null === (t = this.editorRef) || void 0 === t ? void 0 : t.getSlateEditor();
-      null != s && (j.SlateTransforms.select(s, []), s.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
+      null != s && (b.SlateTransforms.select(s, []), s.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
     }, this.renderAttachButton = (e, t) => (0, s.jsx)(D.default, {
       className: t,
       channel: this.props.channel,
@@ -631,7 +631,7 @@ class eD extends a.PureComponent {
       let {
         activeView: t
       } = e;
-      (0, b.openExpressionPicker)(t, this.props.chatInputType)
+      (0, j.openExpressionPicker)(t, this.props.chatInputType)
     }, this.handleChatInteract = () => {
       var e;
       null === (e = this.dispatchGroupRef.current) || void 0 === e || e.bumpDispatchPriority()

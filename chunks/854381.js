@@ -1,32 +1,32 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return s
   }
 });
-var i = n("446674"),
+var u = n("446674"),
   r = n("10514"),
-  u = n("713518"),
-  l = n("646718"),
-  a = n("843455");
+  i = n("713518"),
+  a = n("646718"),
+  o = n("843455");
 
-function o(t) {
-  var e, n;
+function s(e) {
+  var t, n;
   let {
-    activeSubscription: o,
-    skuIDs: s,
-    paymentSourceId: c,
-    isGift: S
-  } = t;
-  s = s.filter(t => t !== l.PremiumSubscriptionSKUs.NONE);
-  let d = (0, i.useStateFromStores)([r.default], () => {
-      let t = r.default.getPlanIdsForSkus(s).filter(t => !S || l.PREMIUM_PLANS.has(t));
-      return t.length > 0 ? r.default.get(t[0]) : null
+    activeSubscription: s,
+    skuIDs: c,
+    paymentSourceId: l,
+    isGift: d
+  } = e;
+  c = c.filter(e => e !== a.PremiumSubscriptionSKUs.NONE);
+  let f = (0, u.useStateFromStores)([r.default], () => {
+      let e = r.default.getPlanIdsForSkus(c).filter(e => !d || a.PREMIUM_PLANS.has(e));
+      return e.length > 0 ? r.default.get(e[0]) : null
     }),
-    E = null == d ? [] : (0, u.getCurrencies)(d.id, c, S),
-    f = null !== (n = null !== (e = E.find(t => t === (null == o ? void 0 : o.currency))) && void 0 !== e ? e : E[0]) && void 0 !== n ? n : a.CurrencyCodes.USD;
+    E = null == f ? [] : (0, i.getCurrencies)(f.id, l, d),
+    _ = null !== (n = null !== (t = E.find(e => e === (null == s ? void 0 : s.currency))) && void 0 !== t ? t : E[0]) && void 0 !== n ? n : o.CurrencyCodes.USD;
   return {
-    ...(0, u.useCurrencyWithPaymentSourceChange)(f, null == d ? void 0 : d.id, c, S, s),
+    ...(0, i.useCurrencyWithPaymentSourceChange)(_, null == f ? void 0 : f.id, l, d, c),
     currencies: E
   }
 }

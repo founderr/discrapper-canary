@@ -1,78 +1,78 @@
 "use strict";
 n.r(t), n.d(t, {
   CTAType: function() {
-    return a
+    return s
   },
   default: function() {
-    return p
+    return E
   }
 });
-var i, a, s = n("37983");
+var r, s, i = n("37983");
 n("884691");
-var r = n("77078"),
-  l = n("145131"),
+var l = n("77078"),
+  a = n("145131"),
   o = n("181114"),
   u = n("376641"),
   c = n("782340"),
   d = n("30501");
-(i = a || (a = {}))[i.CONTINUE = 0] = "CONTINUE", i[i.UPGRADE = 1] = "UPGRADE", i[i.PURCHASE = 2] = "PURCHASE";
+(r = s || (s = {}))[r.CONTINUE = 0] = "CONTINUE", r[r.UPGRADE = 1] = "UPGRADE", r[r.PURCHASE = 2] = "PURCHASE";
 let f = e => {
   let {
     onBack: t,
     backText: n,
-    primaryIcon: i,
-    primaryCTA: a,
+    primaryIcon: r,
+    primaryCTA: s,
     primaryType: f,
-    primaryText: p,
-    primaryTooltip: h,
-    primaryDisabled: m,
-    primarySubmitting: S,
-    onPrimary: I,
-    secondaryText: g,
-    onSecondary: C
+    primaryText: E,
+    primaryTooltip: _,
+    primaryDisabled: C,
+    primarySubmitting: I,
+    onPrimary: p,
+    secondaryText: R,
+    onSecondary: h
   } = e;
-  return (0, s.jsxs)(r.ModalFooter, {
-    justify: l.default.Justify.BETWEEN,
-    align: l.default.Align.CENTER,
+  return (0, i.jsxs)(l.ModalFooter, {
+    justify: a.default.Justify.BETWEEN,
+    align: a.default.Align.CENTER,
     children: [(() => {
-      if (null == a || null == p) return null;
-      let e = 2 === a ? o.default : r.Button,
+      if (null == s || null == E) return null;
+      let e = 2 === s ? o.default : l.Button,
         t = {
           innerClassName: d.button,
           type: f,
-          disabled: m,
-          submitting: S,
-          color: 0 === a ? r.Button.Colors.BRAND : r.Button.Colors.GREEN,
-          onClick: I
+          disabled: C,
+          submitting: I,
+          color: 0 === s ? l.Button.Colors.BRAND : l.Button.Colors.GREEN,
+          onClick: p
         };
-      return null != h ? (0, s.jsx)(r.Tooltip, {
-        text: h,
-        children: n => (0, s.jsxs)(e, {
+      return null != _ ? (0, i.jsx)(l.Tooltip, {
+        text: _,
+        children: n => (0, i.jsxs)(e, {
           ...n,
           ...t,
-          children: [null == i ? null : (0, s.jsx)(i, {
+          children: [null == r ? null : (0, i.jsx)(r, {
             className: d.primaryIcon
-          }), p]
+          }), E]
         })
-      }) : (0, s.jsxs)(e, {
+      }) : (0, i.jsxs)(e, {
         ...t,
-        children: [null == i ? null : (0, s.jsx)(i, {
+        children: [null == r ? null : (0, i.jsx)(r, {
           className: d.primaryIcon
-        }), p]
+        }), E]
       })
-    })(), null == g ? null : (0, s.jsx)(r.Button, {
-      color: r.Button.Colors.PRIMARY,
-      look: r.Button.Looks.LINK,
-      onClick: C,
-      children: g
-    }), (0, s.jsx)(u.default, {}), null == t ? null : (0, s.jsx)(r.Button, {
+    })(), null == R ? null : (0, i.jsx)(l.Button, {
+      color: l.Button.Colors.PRIMARY,
+      look: l.Button.Looks.LINK,
+      onClick: h,
+      children: R
+    }), (0, i.jsx)(u.default, {}), null == t ? null : (0, i.jsx)(l.Button, {
       className: d.back,
-      color: r.Button.Colors.PRIMARY,
-      look: r.Button.Looks.LINK,
+      color: l.Button.Colors.PRIMARY,
+      look: l.Button.Looks.LINK,
       onClick: t,
       children: null != n ? n : c.default.Messages.BACK
     })]
   })
 };
-f.CTAType = a;
-var p = f
+f.CTAType = s;
+var E = f

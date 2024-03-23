@@ -1,183 +1,183 @@
 "use strict";
-let i, r, u, o, _, l, E, T, d, a, S, c, I, s;
+let s, o, a, r, l, i, E, _, u, T, d, S, N, c;
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return D
   }
 });
-var f = n("265586"),
-  N = n("446674"),
-  A = n("913144"),
-  U = n("49111");
-let p = U.FormStates.CLOSED,
-  R = {},
-  D = !1;
+var C = n("265586"),
+  A = n("446674"),
+  I = n("913144"),
+  f = n("49111");
+let R = f.FormStates.CLOSED,
+  U = {},
+  O = !1;
 
-function G() {
-  p = U.FormStates.OPEN, R = {}
+function m() {
+  R = f.FormStates.OPEN, U = {}
 }
 
-function C() {
-  p = U.FormStates.CLOSED, R = {}
+function p() {
+  R = f.FormStates.CLOSED, U = {}
 }
 
-function P() {
-  O(), g(), R = {}
+function M() {
+  h(), v(), U = {}
 }
 
-function O() {
-  i = void 0, r = void 0, u = void 0, o = void 0
-}
-
-function g() {
-  _ = void 0, l = void 0, E = void 0, T = void 0, d = void 0, o = void 0
+function h() {
+  s = void 0, o = void 0, a = void 0, r = void 0
 }
 
 function v() {
-  S = void 0, c = void 0, I = void 0, s = void 0, a = void 0
+  l = void 0, i = void 0, E = void 0, _ = void 0, u = void 0, r = void 0
 }
-class L extends N.default.Store {
+
+function g() {
+  d = void 0, S = void 0, N = void 0, c = void 0, T = void 0
+}
+class G extends A.default.Store {
   getFormState() {
-    return p
-  }
-  getErrors() {
     return R
   }
+  getErrors() {
+    return U
+  }
   showNotice() {
-    return void 0 !== i || void 0 !== _ || void 0 !== l || void 0 !== E || void 0 !== T || void 0 !== d || void 0 !== u || void 0 !== o || void 0 !== r
+    return void 0 !== s || void 0 !== l || void 0 !== i || void 0 !== E || void 0 !== _ || void 0 !== u || void 0 !== a || void 0 !== r || void 0 !== o
   }
   getPendingAvatar() {
-    return i
+    return s
   }
   getPendingGlobalName() {
-    return r
+    return o
   }
   getPendingBanner() {
-    return _
+    return l
   }
   getPendingBio() {
-    return l
+    return i
   }
   getPendingPronouns() {
     return E
   }
   getPendingAccentColor() {
-    return T
+    return _
   }
   getPendingThemeColors() {
-    return d
-  }
-  getPendingAvatarDecoration() {
     return u
   }
+  getPendingAvatarDecoration() {
+    return a
+  }
   getPendingProfileEffectId() {
-    return o
+    return r
   }
   getAllPending() {
     return {
-      pendingAvatar: i,
-      pendingBanner: _,
-      pendingBio: l,
+      pendingAvatar: s,
+      pendingBanner: l,
+      pendingBio: i,
       pendingPronouns: E,
-      pendingAccentColor: T,
-      pendingThemeColors: d,
-      pendingAvatarDecoration: u,
-      pendingProfileEffectId: o,
-      pendingGlobalName: r
+      pendingAccentColor: _,
+      pendingThemeColors: u,
+      pendingAvatarDecoration: a,
+      pendingProfileEffectId: r,
+      pendingGlobalName: o
     }
   }
   getTryItOutThemeColors() {
-    return a
+    return T
   }
   getTryItOutAvatar() {
-    return S
+    return d
   }
   getTryItOutAvatarDecoration() {
-    return c
+    return S
   }
   getTryItOutProfileEffectId() {
-    return I
+    return N
   }
   getTryItOutBanner() {
-    return s
+    return c
   }
   getAllTryItOut() {
     return {
-      tryItOutThemeColors: a,
-      tryItOutAvatar: S,
-      tryItOutAvatarDecoration: c,
-      tryItOutProfileEffectId: I,
-      tryItOutBanner: s
+      tryItOutThemeColors: T,
+      tryItOutAvatar: d,
+      tryItOutAvatarDecoration: S,
+      tryItOutProfileEffectId: N,
+      tryItOutBanner: c
     }
   }
   getIsDisableSubmit() {
-    return D
+    return O
   }
 }
-L.displayName = "UserSettingsAccountStore";
-var m = new L(A.default, {
-  USER_SETTINGS_ACCOUNT_INIT: G,
-  USER_SETTINGS_MODAL_INIT: G,
-  USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: G,
+G.displayName = "UserSettingsAccountStore";
+var D = new G(I.default, {
+  USER_SETTINGS_ACCOUNT_INIT: m,
+  USER_SETTINGS_MODAL_INIT: m,
+  USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: m,
   USER_SETTINGS_MODAL_SET_SECTION: function(e) {
     let {
       section: t
     } = e;
-    return t === U.UserSettingsSections.ACCOUNT && G()
+    return t === f.UserSettingsSections.ACCOUNT && m()
   },
-  USER_SETTINGS_ACCOUNT_CLOSE: C,
+  USER_SETTINGS_ACCOUNT_CLOSE: p,
   USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
-    P(), v(), C()
+    M(), g(), p()
   },
   USER_SETTINGS_ACCOUNT_SUBMIT: function() {
-    p = U.FormStates.SUBMITTING, R = {}
+    R = f.FormStates.SUBMITTING, U = {}
   },
   USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: function(e) {
     var t;
-    if (p !== U.FormStates.SUBMITTING) return !1;
-    p = U.FormStates.OPEN, R = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (R !== f.FormStates.SUBMITTING) return !1;
+    R = f.FormStates.OPEN, U = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function(e) {
     let {
       avatar: t
     } = e;
-    i = t, S = void 0
+    s = t, d = void 0
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: function(e) {
     let {
       globalName: t
     } = e;
-    r = t
+    o = t
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: function(e) {
     let {
       avatarDecoration: t
     } = e;
-    u = t
+    a = t
   },
   USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: function(e) {
     let {
       item: t
     } = e;
-    (null == t ? void 0 : t.type) === f.CollectiblesItemType.PROFILE_EFFECT ? (c = null, I = null == t ? void 0 : t.id) : (I = null, c = t)
+    (null == t ? void 0 : t.type) === C.CollectiblesItemType.PROFILE_EFFECT ? (S = null, N = null == t ? void 0 : t.id) : (N = null, S = t)
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function(e) {
     let {
       profileEffectId: t
     } = e;
-    o = t
+    r = t
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: function(e) {
     let {
       banner: t
     } = e;
-    _ = t
+    l = t
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: function(e) {
     let {
       bio: t
     } = e;
-    l = t
+    i = t
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: function(e) {
     let {
@@ -189,61 +189,61 @@ var m = new L(A.default, {
     let {
       color: t
     } = e;
-    T = t
+    _ = t
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS: function(e) {
     let {
       themeColors: t
     } = e;
-    d = t
+    u = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: function(e) {
     let {
       avatar: t
     } = e;
-    S = t
+    d = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: function(e) {
     let {
       avatarDecoration: t
     } = e;
-    c = t
+    S = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: function(e) {
     let {
       profileEffectId: t
     } = e;
-    I = t
+    N = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: function(e) {
     let {
       banner: t
     } = e;
-    s = t
+    c = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: function(e) {
     let {
       themeColors: t
     } = e;
-    a = t
+    T = t
   },
   USER_SETTINGS_CLEAR_ERRORS: function() {
-    R = {}
+    U = {}
   },
-  USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: O,
-  USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: g,
-  USER_SETTINGS_RESET_ALL_PENDING: P,
-  USER_SETTINGS_RESET_ALL_TRY_IT_OUT: v,
+  USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: h,
+  USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: v,
+  USER_SETTINGS_RESET_ALL_PENDING: M,
+  USER_SETTINGS_RESET_ALL_TRY_IT_OUT: g,
   USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function() {
-    u = void 0
+    a = void 0
   },
   LOGOUT: function() {
-    i = void 0
+    s = void 0
   },
   USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT: function(e) {
     let {
       disable: t
     } = e;
-    D = t
+    O = t
   }
 })

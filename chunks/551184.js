@@ -1,30 +1,30 @@
 "use strict";
-E.r(_), E.d(_, {
+l.r(t), l.d(t, {
   default: function() {
-    return T
+    return u
   }
 });
-var t = E("37983"),
-  o = E("884691"),
-  n = E("414456"),
-  r = E.n(n),
-  a = E("77078"),
-  i = E("98717");
-let I = {
-  SMALL: i.sizeSmall,
-  MEDIUM: i.sizeMedium,
-  LARGE: i.sizeLarge
+var s = l("37983"),
+  a = l("884691"),
+  n = l("414456"),
+  r = l.n(n),
+  i = l("77078"),
+  c = l("98717");
+let o = {
+  SMALL: c.sizeSmall,
+  MEDIUM: c.sizeMedium,
+  LARGE: c.sizeLarge
 };
-class s extends o.PureComponent {
+class d extends a.PureComponent {
   calculateScroll() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._scroller;
     if (null == e) return;
     let {
-      scrollTop: _
+      scrollTop: t
     } = e.getScrollerState(), {
-      hideSeparator: E
+      hideSeparator: l
     } = this.state;
-    0 !== _ || E ? _ > 0 && E && this.setState({
+    0 !== t || l ? t > 0 && l && this.setState({
       hideSeparator: !1
     }) : this.setState({
       hideSeparator: !0
@@ -37,28 +37,28 @@ class s extends o.PureComponent {
     let {
       hideSeparator: e
     } = this.state;
-    return o.Children.map(this.props.children, _ => o.isValidElement(_) ? _.type === a.ModalContent || _.type === a.ModalListContent ? o.cloneElement(_, {
+    return a.Children.map(this.props.children, t => a.isValidElement(t) ? t.type === i.ModalContent || t.type === i.ModalListContent ? a.cloneElement(t, {
       scrollerRef: this.setRef,
       onScroll: this.handleScroll,
       onResize: this.handleScroll
-    }) : _.type === a.ModalHeader && e ? o.cloneElement(_, {
+    }) : t.type === i.ModalHeader && e ? a.cloneElement(t, {
       separator: !1
-    }) : _ : _)
+    }) : t : t)
   }
   render() {
     let {
       className: e,
-      children: _,
-      tag: E,
-      size: o,
+      children: t,
+      tag: l,
+      size: a,
       fullscreenOnMobile: n,
-      ...a
+      ...i
     } = this.props;
-    return (0, t.jsx)(E, {
-      className: r(i.modal, e, o, {
-        [i.fullscreenOnMobile]: n
+    return (0, s.jsx)(l, {
+      className: r(c.modal, e, a, {
+        [c.fullscreenOnMobile]: n
       }),
-      ...a,
+      ...i,
       children: this.renderChildren()
     })
   }
@@ -68,17 +68,17 @@ class s extends o.PureComponent {
     }, this.handleScroll = e => {
       this.calculateScroll();
       let {
-        onScroll: _
+        onScroll: t
       } = this.props;
-      null == _ || _(e)
+      null == t || t(e)
     }, this.state = {
       hideSeparator: !1
     }
   }
 }
-s.Header = a.ModalHeader, s.Footer = a.ModalFooter, s.Content = a.ModalContent, s.ListContent = a.ModalListContent, s.CloseButton = a.ModalCloseButton, s.Sizes = I, s.defaultProps = {
+d.Header = i.ModalHeader, d.Footer = i.ModalFooter, d.Content = i.ModalContent, d.ListContent = i.ModalListContent, d.CloseButton = i.ModalCloseButton, d.Sizes = o, d.defaultProps = {
   fullscreenOnMobile: !0,
-  size: I.SMALL,
+  size: o.SMALL,
   tag: "div"
 };
-var T = s
+var u = d

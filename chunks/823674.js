@@ -35,8 +35,8 @@ var s = n("37983"),
   O = n("662255"),
   D = n("85175"),
   P = n("83900"),
-  j = n("993477"),
-  b = n("733160"),
+  b = n("993477"),
+  j = n("733160"),
   k = n("100300"),
   F = n("433487"),
   H = n("987772"),
@@ -183,7 +183,7 @@ function er(e) {
     } = (0, u.useStateFromStoresObject)([L.default], () => ({
       canAddNewReactions: I && L.default.can(et.Permissions.ADD_REACTIONS, t),
       canManageMessages: L.default.can(et.Permissions.MANAGE_MESSAGES, t)
-    }), [t, I]), O = (0, T.useCanReplyToMessage)(t, n), D = (0, A.useCanStartPublicThread)(t, n), P = (0, A.useCanViewThreadForMessage)(n), j = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), k = o.id === f, F = (y || n.canDeleteOwnMessage(f)) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
+    }), [t, I]), O = (0, T.useCanReplyToMessage)(t, n), D = (0, A.useCanStartPublicThread)(t, n), P = (0, A.useCanViewThreadForMessage)(n), b = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), j = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), k = o.id === f, F = (y || n.canDeleteOwnMessage(f)) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
     n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && y);
     let H = (0, K.canReportMessage)(n),
       U = (0, X.default)(n, t, y),
@@ -195,8 +195,8 @@ function er(e) {
         canChat: I,
         renderReactions: g,
         canAddNewReactions: R,
-        isLurking: j,
-        isGuest: b,
+        isLurking: b,
+        isGuest: j,
         isActiveChannelOrUnarchivableThread: h
       }),
       V = t.type === et.ChannelTypes.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(et.GuildFeatures.NEWS) && (k || y) && n.type === et.MessageTypes.DEFAULT,
@@ -286,7 +286,7 @@ function er(e) {
         channel: t,
         message: n,
         label: en.default.Messages.MARK_UNREAD,
-        icon: j.default,
+        icon: b.default,
         onClick: J.markMessageUnread
       }) : null, i ? ei({
         key: "pin",
@@ -343,7 +343,7 @@ function er(e) {
       channel: t,
       message: n,
       label: ep ? en.default.Messages.NEWS_CHANNEL_PUBLISHED : en.default.Messages.NEWS_CHANNEL_PUBLISH,
-      icon: b.default,
+      icon: j.default,
       onClick: J.publishMessage,
       disabled: ep
     }) : null, r && (ed || B) ? ei({

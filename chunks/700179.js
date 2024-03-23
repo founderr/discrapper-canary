@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   canToggleCommunicationDisableOnUser: function() {
-    return u
+    return d
   },
   default: function() {
-    return d
+    return s
   }
 }), n("222007");
-var i = n("446674"),
-  l = n("305961"),
-  a = n("957255"),
-  o = n("697218"),
-  s = n("991170"),
-  r = n("49111");
-
-function u(e, t) {
-  let [n, i, u] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.default, l.default, a.default], d = i.getGuild(e), c = n.getUser(t);
-  if (null == d || null == c || c.isNonUserBot()) return !1;
-  let p = d.isOwner(c) || s.can({
-    permission: r.Permissions.ADMINISTRATOR,
-    user: c,
-    context: d
-  });
-  return !p && u.canManageUser(r.Permissions.MODERATE_MEMBERS, c, d)
-}
+var l = n("446674"),
+  i = n("305961"),
+  u = n("957255"),
+  r = n("697218"),
+  o = n("991170"),
+  a = n("49111");
 
 function d(e, t) {
-  return (0, i.useStateFromStores)([o.default, l.default, a.default], () => u(e, t, [o.default, l.default, a.default]), [e, t])
+  let [n, l, d] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [r.default, i.default, u.default], s = l.getGuild(e), c = n.getUser(t);
+  if (null == s || null == c || c.isNonUserBot()) return !1;
+  let f = s.isOwner(c) || o.can({
+    permission: a.Permissions.ADMINISTRATOR,
+    user: c,
+    context: s
+  });
+  return !f && d.canManageUser(a.Permissions.MODERATE_MEMBERS, c, s)
+}
+
+function s(e, t) {
+  return (0, l.useStateFromStores)([r.default, i.default, u.default], () => d(e, t, [r.default, i.default, u.default]), [e, t])
 }

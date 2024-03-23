@@ -1,97 +1,97 @@
 "use strict";
 n.r(t), n.d(t, {
   registerFetchedSupplementals: function() {
-    return N
+    return p
   },
   JoinSourceType: function() {
-    return r
+    return s
   },
   getJoinSourceTypeLabel: function() {
-    return T
+    return F
   },
   getIntegrationLabel: function() {
-    return g
+    return N
   },
   useGetIntegrationIconString: function() {
-    return S
+    return g
   },
   fetchMemberSupplemental: function() {
-    return R
+    return v
   }
 }), n("424973");
-var i, r, s, l, a, o, u = n("872717"),
-  c = n("819855"),
-  d = n("841098"),
-  f = n("376556"),
-  h = n("572943"),
-  E = n("49111"),
-  v = n("782340");
-let C = {};
+var i, s, l, a, u, r, d = n("872717"),
+  o = n("819855"),
+  c = n("841098"),
+  h = n("376556"),
+  E = n("572943"),
+  f = n("49111"),
+  I = n("782340");
+let _ = {};
 
-function p(e, t) {
+function m(e, t) {
   return e + t
 }
 
-function _(e, t) {
+function T(e, t) {
   return t.map(t => e + t)
 }
 
-function I(e) {
+function M(e) {
   return e.split("-")[1]
-}(l = i || (i = {}))[l.FAILED = 0] = "FAILED", l[l.UNFETCHED = 1] = "UNFETCHED", l[l.PENDING = 2] = "PENDING", l[l.SUCCEEDED = 3] = "SUCCEEDED", l[l.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
+}(a = i || (i = {}))[a.FAILED = 0] = "FAILED", a[a.UNFETCHED = 1] = "UNFETCHED", a[a.PENDING = 2] = "PENDING", a[a.SUCCEEDED = 3] = "SUCCEEDED", a[a.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
 
-function m(e, t) {
+function S(e, t) {
   e.forEach(e => {
-    C[e] = t
+    _[e] = t
   })
 }
 
-function N(e, t) {
+function p(e, t) {
   t.forEach(t => (function(e, t, n) {
-    C[e + t] = 3
+    _[e + t] = 3
   })(e, t, 3))
-}(a = r || (r = {}))[a.UNSPECIFIED = 0] = "UNSPECIFIED", a[a.BOT = 1] = "BOT", a[a.INTEGRATION = 2] = "INTEGRATION", a[a.DISCOVERY = 3] = "DISCOVERY", a[a.HUB = 4] = "HUB", a[a.INVITE = 5] = "INVITE", a[a.VANITY_URL = 6] = "VANITY_URL";
-let T = function(e) {
+}(u = s || (s = {}))[u.UNSPECIFIED = 0] = "UNSPECIFIED", u[u.BOT = 1] = "BOT", u[u.INTEGRATION = 2] = "INTEGRATION", u[u.DISCOVERY = 3] = "DISCOVERY", u[u.HUB = 4] = "HUB", u[u.INVITE = 5] = "INVITE", u[u.VANITY_URL = 6] = "VANITY_URL";
+let F = function(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   switch (e) {
     case 1:
-      return v.default.Messages.MEMBER_SAFETY_JOIN_TYPE_BOT;
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_BOT;
     case 2:
-      return v.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION;
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION;
     case 3:
-      return v.default.Messages.MEMBER_SAFETY_JOIN_TYPE_DISCOVERY;
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_DISCOVERY;
     case 4:
-      return v.default.Messages.MEMBER_SAFETY_JOIN_TYPE_HUB;
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_HUB;
     case 5:
-      return v.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INVITE;
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INVITE;
     case 6:
-      if (null != t && !n) return v.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME.format({
+      if (null != t && !n) return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME.format({
         vanityUrl: t
       });
-      return v.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL;
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL;
     default:
-      return v.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN
   }
 };
-(o = s || (s = {})).DISCORD = "discord", o.TWITCH = "twitch", o.YOUTUBE = "youtube", o.GUILD_SUBSCRIPTION = "guild_subscription";
-let g = e => {
+(r = l || (l = {})).DISCORD = "discord", r.TWITCH = "twitch", r.YOUTUBE = "youtube", r.GUILD_SUBSCRIPTION = "guild_subscription";
+let N = e => {
     switch (e) {
       case "twitch":
-        return v.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;
+        return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;
       case "youtube":
-        return v.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_YOUTUBE;
+        return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_YOUTUBE;
       default:
-        return v.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION
+        return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION
     }
   },
-  S = e => {
-    let t = f.default.get((0, h.useLegacyPlatformType)(e)),
-      n = (0, d.default)();
-    return null != t && ["twitch", "youtube"].includes(e) ? "url('".concat((0, c.isThemeDark)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
+  g = e => {
+    let t = h.default.get((0, E.useLegacyPlatformType)(e)),
+      n = (0, c.default)();
+    return null != t && ["twitch", "youtube"].includes(e) ? "url('".concat((0, o.isThemeDark)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
   };
 
-function M(e) {
+function A(e) {
   return {
     userId: e.user_id,
     sourceInviteCode: e.source_invite_code,
@@ -100,33 +100,33 @@ function M(e) {
     integrationType: e.integration_type
   }
 }
-async function R(e, t) {
-  let n = _(e, t),
-    i = n.filter(e => C[e] <= 1).map(I);
+async function v(e, t) {
+  let n = T(e, t),
+    i = n.filter(e => _[e] <= 1).map(M);
   if (0 === i.length) return [];
-  m(n, 2);
+  S(n, 2);
   try {
-    let t = await u.HTTP.post({
-      url: E.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
+    let t = await d.HTTP.post({
+      url: f.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
       body: {
         user_ids: i
       }
     });
-    if (!Array.isArray(t.body)) return m(n, 0), [];
-    let r = t.body.map(M),
-      s = [];
-    r.forEach(e => {
+    if (!Array.isArray(t.body)) return S(n, 0), [];
+    let s = t.body.map(A),
+      l = [];
+    s.forEach(e => {
       let {
         userId: t
       } = e;
-      return s.push(t)
+      return l.push(t)
     });
-    let l = _(e, s),
-      a = i.filter(e => !s.includes(e)),
-      o = _(e, a);
-    return m(l, 3), m(o, 0), r
+    let a = T(e, l),
+      u = i.filter(e => !l.includes(e)),
+      r = T(e, u);
+    return S(a, 3), S(r, 0), s
   } catch (e) {
-    m(n, 0)
+    S(n, 0)
   }
   return []
 }

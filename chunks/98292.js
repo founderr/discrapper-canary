@@ -1,42 +1,42 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
-var i = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  s = n.n(a),
+var l = n("37983"),
+  a = n("884691"),
+  s = n("414456"),
+  i = n.n(s),
   r = n("77078"),
-  o = n("709945");
+  u = n("709945");
 
-function u(e) {
+function o(e) {
   let {
     children: t,
     "aria-label": n,
-    className: a,
-    position: u
-  } = e, d = l.useRef(null), c = null != n ? n : "string" == typeof t && t;
-  return (0, i.jsx)(r.Tooltip, {
-    position: null != u ? u : "top",
+    className: s,
+    position: o
+  } = e, d = a.useRef(null), c = null != n ? n : "string" == typeof t && t;
+  return (0, l.jsx)(r.Tooltip, {
+    position: null != o ? o : "top",
     delay: 500,
     text: t,
     "aria-label": c,
     children: n => {
       let {
-        onMouseEnter: l,
+        onMouseEnter: a,
         onMouseLeave: r
       } = n;
-      return (0, i.jsx)("div", {
-        className: s(a, o.overflow),
+      return (0, l.jsx)("div", {
+        className: i(s, u.overflow),
         ref: d,
         "aria-hidden": e["aria-hidden"],
         onMouseEnter: () => {
           let {
             current: e
           } = d;
-          null != e && e.offsetWidth < e.scrollWidth && (null == l || l())
+          null != e && e.offsetWidth < e.scrollWidth && (null == a || a())
         },
         onMouseLeave: r,
         children: t

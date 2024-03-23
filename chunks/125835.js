@@ -1,34 +1,34 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return o
   }
 });
-var l = n("37983");
+var r = n("37983");
 n("884691");
-var r = n("414456"),
-  a = n.n(r),
-  s = n("642032"),
-  o = n("625948");
+var s = n("414456"),
+  i = n.n(s),
+  l = n("642032"),
+  a = n("625948");
 
-function i(t) {
+function o(e) {
   let {
-    className: e,
+    className: t,
     children: n,
-    forceUseColor: r = !1,
-    hideStars: i
-  } = t;
-  return (0, l.jsxs)("span", {
-    className: a(o.container, e, {
-      [o.containerColored]: r
+    forceUseColor: s = !1,
+    hideStars: o
+  } = e;
+  return (0, r.jsxs)("span", {
+    className: i(a.container, t, {
+      [a.containerColored]: s
     }),
-    children: [n, i ? null : (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(s.default, {
-        foreground: o.sparkleStarTopRight
-      }), (0, l.jsx)(s.default, {
-        foreground: o.sparkleStarRight
-      }), (0, l.jsx)(s.default, {
-        foreground: o.sparkleStarBottomLeft
+    children: [n, o ? null : (0, r.jsxs)(r.Fragment, {
+      children: [(0, r.jsx)(l.default, {
+        foreground: a.sparkleStarTopRight
+      }), (0, r.jsx)(l.default, {
+        foreground: a.sparkleStarRight
+      }), (0, r.jsx)(l.default, {
+        foreground: a.sparkleStarBottomLeft
       })]
     })]
   })

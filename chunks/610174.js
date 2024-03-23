@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var l = n("316693"),
-  i = n("446674"),
-  r = n("862205"),
-  u = n("305961"),
-  a = n("957255"),
+var i = n("316693"),
+  l = n("446674"),
+  u = n("862205"),
+  a = n("305961"),
+  r = n("957255"),
   d = n("421127");
-let o = (0, r.createExperiment)({
+let s = (0, u.createExperiment)({
     kind: "guild",
     id: "2023-04_guild_alert_mode",
     label: "Guild Alert Mode",
@@ -37,7 +37,7 @@ let o = (0, r.createExperiment)({
       }
     }]
   }),
-  s = (0, r.createExperiment)({
+  o = (0, u.createExperiment)({
     kind: "guild",
     id: "2023-08_guild_alert_mode_friend_server",
     label: "Guild Alert Mode (friend servers only)",
@@ -63,16 +63,16 @@ let o = (0, r.createExperiment)({
   });
 
 function c(e) {
-  let t = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(e)),
-    n = (0, i.useStateFromStores)([a.default], () => null != t && l.hasAny(a.default.computePermissions(t), d.IncidentAlertModeratorPermissions)),
-    r = o.useExperiment({
+  let t = (0, l.useStateFromStores)([a.default], () => a.default.getGuild(e)),
+    n = (0, l.useStateFromStores)([r.default], () => null != t && i.hasAny(r.default.computePermissions(t), d.IncidentAlertModeratorPermissions)),
+    u = s.useExperiment({
       guildId: e,
       location: "c3fae3_1"
     }, {
       disable: !n,
       autoTrackExposure: !0
     }),
-    c = s.useExperiment({
+    c = o.useExperiment({
       guildId: e,
       location: "c3fae3_2"
     }, {
@@ -80,22 +80,22 @@ function c(e) {
       autoTrackExposure: !0
     });
   return {
-    showAlertMode: r.showAlertMode || c.showAlertMode,
-    alsoShowMemberSafety: r.alsoShowMemberSafety || c.alsoShowMemberSafety
+    showAlertMode: u.showAlertMode || c.showAlertMode,
+    alsoShowMemberSafety: u.alsoShowMemberSafety || c.alsoShowMemberSafety
   }
 }
 
 function f(e) {
-  let t = u.default.getGuild(e),
-    n = null != t && l.hasAny(a.default.computePermissions(t), d.IncidentAlertModeratorPermissions),
-    i = o.getCurrentConfig({
+  let t = a.default.getGuild(e),
+    n = null != t && i.hasAny(r.default.computePermissions(t), d.IncidentAlertModeratorPermissions),
+    l = s.getCurrentConfig({
       guildId: e,
       location: "c3fae3_3"
     }, {
       disable: !n,
       autoTrackExposure: !0
     }),
-    r = s.getCurrentConfig({
+    u = o.getCurrentConfig({
       guildId: e,
       location: "c3fae3_4"
     }, {
@@ -103,7 +103,7 @@ function f(e) {
       autoTrackExposure: !0
     });
   return {
-    showAlertMode: i.showAlertMode || r.showAlertMode,
-    alsoShowMemberSafety: i.alsoShowMemberSafety || r.alsoShowMemberSafety
+    showAlertMode: l.showAlertMode || u.showAlertMode,
+    alsoShowMemberSafety: l.alsoShowMemberSafety || u.alsoShowMemberSafety
   }
 }

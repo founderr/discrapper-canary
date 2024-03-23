@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var s = n("913144"),
-  i = {
-    updateChannelDimensions(e, t, n, i, r) {
-      s.default.wait(() => {
-        s.default.dispatch({
+var n = l("913144"),
+  s = {
+    updateChannelDimensions(e, t, l, s, u) {
+      n.default.wait(() => {
+        n.default.dispatch({
           type: "UPDATE_CHANNEL_DIMENSIONS",
           channelId: e,
           scrollTop: t,
-          scrollHeight: n,
-          offsetHeight: i
-        }), null != r && r()
+          scrollHeight: l,
+          offsetHeight: s
+        }), null != u && u()
       })
     },
     updateChannelListScroll(e, t) {
-      let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      s.default.dispatch({
+      let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      n.default.dispatch({
         type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
         guildId: e,
         scrollTop: t,
-        channelIds: n
+        channelIds: l
       })
     },
     channelListScrollTo(e, t) {
-      s.default.dispatch({
+      n.default.dispatch({
         type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
         guildId: e,
         scrollTo: t,
@@ -35,7 +35,7 @@ var s = n("913144"),
       })
     },
     clearChannelListScrollTo(e) {
-      s.default.dispatch({
+      n.default.dispatch({
         type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
         guildId: e,
         scrollTo: null,
@@ -46,7 +46,7 @@ var s = n("913144"),
       this.updateChannelDimensions(e, null, null, null, t)
     },
     updateGuildListScrollTo(e) {
-      s.default.dispatch({
+      n.default.dispatch({
         type: "UPDATE_GUILD_LIST_DIMENSIONS",
         scrollTop: e
       })

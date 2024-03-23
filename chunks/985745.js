@@ -1,99 +1,99 @@
-var r = n("390493");
-n("860677"), n("854508"), ! function(e, t) {
+var u = t("390493");
+t("860677"), t("854508"), ! function(e, n) {
   "use strict";
   if (!e.setImmediate) {
-    var n, a = 1,
+    var t, f = 1,
       o = {},
-      i = !1,
-      s = e.document,
-      u = Object.getPrototypeOf && Object.getPrototypeOf(e);
-    u = u && u.setTimeout ? u : e, "[object process]" === ({}).toString.call(e.process) ? function() {
-      n = function(e) {
-        r.nextTick(function() {
-          c(e)
+      r = !1,
+      a = e.document,
+      i = Object.getPrototypeOf && Object.getPrototypeOf(e);
+    i = i && i.setTimeout ? i : e, "[object process]" === ({}).toString.call(e.process) ? function() {
+      t = function(e) {
+        u.nextTick(function() {
+          s(e)
         })
       }
     }() : function() {
       if (e.postMessage && !e.importScripts) {
-        var t = !0,
-          n = e.onmessage;
+        var n = !0,
+          t = e.onmessage;
         return e.onmessage = function() {
-          t = !1
-        }, e.postMessage("", "*"), e.onmessage = n, t
+          n = !1
+        }, e.postMessage("", "*"), e.onmessage = t, n
       }
     }() ? function() {
-      var t = "setImmediate$" + Math.random() + "$",
-        r = function(n) {
-          n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && c(+n.data.slice(t.length))
+      var n = "setImmediate$" + Math.random() + "$",
+        u = function(t) {
+          t.source === e && "string" == typeof t.data && 0 === t.data.indexOf(n) && s(+t.data.slice(n.length))
         };
-      e.addEventListener ? e.addEventListener("message", r, !1) : e.attachEvent("onmessage", r), n = function(n) {
-        e.postMessage(t + n, "*")
+      e.addEventListener ? e.addEventListener("message", u, !1) : e.attachEvent("onmessage", u), t = function(t) {
+        e.postMessage(n + t, "*")
       }
     }() : e.MessageChannel ? function() {
       var e = new MessageChannel;
       e.port1.onmessage = function(e) {
-        c(e.data)
-      }, n = function(t) {
-        e.port2.postMessage(t)
+        s(e.data)
+      }, t = function(n) {
+        e.port2.postMessage(n)
       }
-    }() : s && "onreadystatechange" in s.createElement("script") ? function() {
-      var e = s.documentElement;
-      n = function(t) {
-        var n = s.createElement("script");
-        n.onreadystatechange = function() {
-          c(t), n.onreadystatechange = null, e.removeChild(n), n = null
-        }, e.appendChild(n)
+    }() : a && "onreadystatechange" in a.createElement("script") ? function() {
+      var e = a.documentElement;
+      t = function(n) {
+        var t = a.createElement("script");
+        t.onreadystatechange = function() {
+          s(n), t.onreadystatechange = null, e.removeChild(t), t = null
+        }, e.appendChild(t)
       }
     }() : function() {
-      n = function(e) {
-        setTimeout(c, 0, e)
+      t = function(e) {
+        setTimeout(s, 0, e)
       }
-    }(), u.setImmediate = function(e) {
+    }(), i.setImmediate = function(e) {
       "function" != typeof e && (e = Function("" + e));
-      for (var t = Array(arguments.length - 1), r = 0; r < t.length; r++) t[r] = arguments[r + 1];
-      var i = {
+      for (var n = Array(arguments.length - 1), u = 0; u < n.length; u++) n[u] = arguments[u + 1];
+      var r = {
         callback: e,
-        args: t
+        args: n
       };
-      return o[a] = i, n(a), a++
-    }, u.clearImmediate = l
-  }
-
-  function l(e) {
-    delete o[e]
+      return o[f] = r, t(f), f++
+    }, i.clearImmediate = c
   }
 
   function c(e) {
-    if (i) setTimeout(c, 0, e);
+    delete o[e]
+  }
+
+  function s(e) {
+    if (r) setTimeout(s, 0, e);
     else {
-      var t = o[e];
-      if (t) {
-        i = !0;
+      var n = o[e];
+      if (n) {
+        r = !0;
         try {
           ! function(e) {
-            var t = e.callback,
-              n = e.args;
-            switch (n.length) {
+            var n = e.callback,
+              t = e.args;
+            switch (t.length) {
               case 0:
-                t();
+                n();
                 break;
               case 1:
-                t(n[0]);
+                n(t[0]);
                 break;
               case 2:
-                t(n[0], n[1]);
+                n(t[0], t[1]);
                 break;
               case 3:
-                t(n[0], n[1], n[2]);
+                n(t[0], t[1], t[2]);
                 break;
               default:
-                t.apply(void 0, n)
+                n.apply(void 0, t)
             }
-          }(t)
+          }(n)
         } finally {
-          l(e), i = !1
+          c(e), r = !1
         }
       }
     }
   }
-}("undefined" == typeof self ? void 0 === n.g ? this : n.g : self)
+}("undefined" == typeof self ? void 0 === t.g ? this : t.g : self)
