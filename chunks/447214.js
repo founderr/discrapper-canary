@@ -36,6 +36,7 @@ var i, s = n("627445"),
   b = n("571420"),
   U = n("797785"),
   w = n("49111");
+n("863856");
 let k = new m.default("GatewaySocket"),
   V = new D.default;
 
@@ -75,7 +76,7 @@ i = class extends M.default {
       k.info("Skipping _connect because socket is paused");
       return
     }
-    this.connectionState = N.default.CONNECTING, this.nextReconnectIsImmediate = !1;
+    this.connectionState = N.default.CONNECTING, this.nextReconnectIsImmediate = !1, this.compressionHandler.recomputeAlgorithm();
     let i = this.compressionHandler.getAlgorithm(),
       s = V.getName(),
       r = this._getGatewayUrl(),
