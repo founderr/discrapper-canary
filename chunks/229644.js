@@ -146,7 +146,7 @@ let eE = e => {
       I = (0, j.default)(),
       m = (0, D.useTenureRewardBadgeDescription)(),
       p = s || null != E || null != h || S || I || null != m || null != u && Date.now() - u.createdAt.getTime() > 2592e6 || (0, el.hasPremiumSubscriptionToDisplay)(u, c);
-    return p && s ? (S ? n = (0, a.jsx)(y.default, {
+    return p ? (S ? n = (0, a.jsx)(y.default, {
       isNitroTab: !0
     }) : null != m ? n = (0, a.jsx)(G.default, {
       copy: m
