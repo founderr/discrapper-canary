@@ -1,148 +1,148 @@
 "use strict";
-r.r(t), r.d(t, {
+s.r(t), s.d(t, {
   useFreeBoostUserTenureReward: function() {
-    return D
+    return p
   },
   useFreeBoostTenureRewardEntitlement: function() {
-    return w
+    return g
   },
   useTenureRewardBadgeDescription: function() {
-    return F
+    return P
   },
   useShouldShowConfettiAndGlow: function() {
     return M
   },
   useClearTenureBadge: function() {
-    return U
+    return h
   },
   useFetchEntitlementsForTenureReward: function() {
-    return p
+    return L
   }
-}), r("222007");
-var n = r("884691"),
-  i = r("866227"),
-  s = r.n(i),
-  u = r("446674"),
-  l = r("151426"),
-  a = r("316718"),
-  o = r("10641"),
-  c = r("235145"),
-  d = r("384997"),
-  E = r("697218"),
-  _ = r("625634"),
-  R = r("437712"),
-  C = r("449008"),
-  f = r("764364"),
-  S = r("908309"),
-  T = r("53641"),
-  m = r("485426"),
-  N = r("646718"),
-  h = r("511143");
+}), s("222007");
+var a = s("884691"),
+  r = s("866227"),
+  i = s.n(r),
+  n = s("446674"),
+  l = s("151426"),
+  o = s("316718"),
+  u = s("10641"),
+  d = s("235145"),
+  c = s("384997"),
+  _ = s("697218"),
+  E = s("625634"),
+  T = s("437712"),
+  I = s("449008"),
+  f = s("764364"),
+  R = s("908309"),
+  S = s("53641"),
+  m = s("485426"),
+  N = s("646718"),
+  A = s("511143");
 
-function D() {
+function p() {
   let e = function() {
       var e;
-      let t = (0, u.useStateFromStoresObject)([T.default], () => T.default.getState());
-      if (null != t && t.fetchState === T.FetchState.FETCHED) return null !== (e = t.userTenureRewardStatusByRewardId[h.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== e ? e : t.userTenureRewardStatusByRewardId[h.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS]
+      let t = (0, n.useStateFromStoresObject)([S.default], () => S.default.getState());
+      if (null != t && t.fetchState === S.FetchState.FETCHED) return null !== (e = t.userTenureRewardStatusByRewardId[A.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== e ? e : t.userTenureRewardStatusByRewardId[A.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS]
     }(),
-    t = w(),
-    r = (0, u.useStateFromStores)([_.default], () => _.default.boostSlots),
-    i = n.useMemo(() => {
-      let e = Object.values(r);
+    t = g(),
+    s = (0, n.useStateFromStores)([E.default], () => E.default.boostSlots),
+    r = a.useMemo(() => {
+      let e = Object.values(s);
       return e.some(e => null == e.premiumGuildSubscription)
-    }, [r]),
+    }, [s]),
     l = null != t;
-  if (l && !1 === i) return {
-    nitroTenureStatus: h.NitroRewardStatus.REDEEMED,
+  if (l && !1 === r) return {
+    nitroTenureStatus: A.NitroRewardStatus.REDEEMED,
     tenureRewardSkuId: t.skuId,
     showNotification: !0
   };
   if (l) return {
-    nitroTenureStatus: h.NitroRewardStatus.REDEEMABLE,
+    nitroTenureStatus: A.NitroRewardStatus.REDEEMABLE,
     tenureRewardSkuId: t.skuId,
     showNotification: !0
   };
   if (!(null != e && (0, m.isUserTenureRewardStatusActive)(e))) return null;
   else {
     if (null == e.redeemable_at || null == e.next_tenure_reward_id) return null;
-    let t = s(e.redeemable_at).diff(s.utc(), "days");
+    let t = i(e.redeemable_at).diff(i.utc(), "days");
     if (t < 0) return null;
-    let r = e.next_tenure_reward_id === h.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH && t <= h.MAX_DAYS_LEFT_TO_SHOW_CARD_1_MONTH_VARIANT,
-      n = e.next_tenure_reward_id === h.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS && t <= h.MAX_DAYS_LEFT_TO_SHOW_CARD_3_MONTH_VARIANT;
+    let s = e.next_tenure_reward_id === A.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH && t <= A.MAX_DAYS_LEFT_TO_SHOW_CARD_1_MONTH_VARIANT,
+      a = e.next_tenure_reward_id === A.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS && t <= A.MAX_DAYS_LEFT_TO_SHOW_CARD_3_MONTH_VARIANT;
     return {
-      nitroTenureStatus: h.NitroRewardStatus.PENDING,
+      nitroTenureStatus: A.NitroRewardStatus.PENDING,
       tenureRewardSkuId: e.next_tenure_reward_id,
       redeemableInDays: 0 === t ? 1 : t,
-      showNotification: n || r
+      showNotification: a || s
     }
   }
 }
-let I = new Set;
+let C = new Set;
 
-function w() {
-  let e = (0, u.useStateFromStores)([R.default], () => {
+function g() {
+  let e = (0, n.useStateFromStores)([T.default], () => {
       var e;
-      return null !== (e = R.default.getForApplication(N.PREMIUM_SUBSCRIPTION_APPLICATION)) && void 0 !== e ? e : I
-    }, [], C.areSetsEqual),
+      return null !== (e = T.default.getForApplication(N.PREMIUM_SUBSCRIPTION_APPLICATION)) && void 0 !== e ? e : C
+    }, [], I.areSetsEqual),
     t = (0, m.getPremiumTier2Entitlement)(e);
   if (null == t) return;
-  let r = (0, m.getTenureRewardEntitlement)([h.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH, h.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS], e);
-  return r
+  let s = (0, m.getTenureRewardEntitlement)([A.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH, A.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS], e);
+  return s
 }
-let A = e => {
+let O = e => {
     switch (e) {
-      case h.NitroRewardStatus.PENDING:
+      case A.NitroRewardStatus.PENDING:
         return [l.DismissibleContent.TENURE_REWARD_PENDING];
-      case h.NitroRewardStatus.REDEEMABLE:
+      case A.NitroRewardStatus.REDEEMABLE:
         return [l.DismissibleContent.TENURE_REWARD_REDEEMABLE];
       default:
         return []
     }
   },
-  F = () => {
-    let e = D(),
+  P = () => {
+    let e = p(),
       t = null == e ? void 0 : e.nitroTenureStatus,
-      [r, i] = n.useState(A(t)),
-      s = (0, S.useUserEligibleForNitroTenureRewardCard)({
+      [s, r] = a.useState(O(t)),
+      i = (0, R.useUserEligibleForNitroTenureRewardCard)({
         location: "Home"
       });
-    n.useEffect(() => {
-      i(A(t))
+    a.useEffect(() => {
+      r(O(t))
     }, [t]);
-    let [u] = (0, d.useSelectedDismissibleContent)(r);
-    return s ? null != e && !0 === e.showNotification && (u === l.DismissibleContent.TENURE_REWARD_REDEEMABLE || u === l.DismissibleContent.TENURE_REWARD_PENDING) ? (0, m.getTenureRewardBadgeDescription)(e.nitroTenureStatus) : null : null
+    let [n] = (0, c.useSelectedDismissibleContent)(s);
+    return i ? null != e && !0 === e.showNotification && (n === l.DismissibleContent.TENURE_REWARD_REDEEMABLE || n === l.DismissibleContent.TENURE_REWARD_PENDING) ? (0, m.getTenureRewardBadgeDescription)(e.nitroTenureStatus) : null : null
   },
   M = () => {
     var e;
-    let t = null === (e = D()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-      r = (0, S.useUserEligibleForNitroTenureRewardCard)({
+    let t = null === (e = p()) || void 0 === e ? void 0 : e.nitroTenureStatus,
+      s = (0, R.useUserEligibleForNitroTenureRewardCard)({
         location: "Home"
       }),
-      [n] = (0, d.useSelectedDismissibleContent)([l.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI]);
-    return !!r && null != t && t === h.NitroRewardStatus.REDEEMABLE && n === l.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI
+      [a] = (0, c.useSelectedDismissibleContent)([l.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI]);
+    return !!s && null != t && t === A.NitroRewardStatus.REDEEMABLE && a === l.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI
   },
-  U = () => {
-    let e = D(),
+  h = () => {
+    let e = p(),
       t = null == e ? void 0 : e.nitroTenureStatus,
-      r = A(t),
-      [i] = (0, c.useGetDismissibleContent)(r);
-    n.useEffect(() => {
-      null != e && !0 === e.showNotification && (i === l.DismissibleContent.TENURE_REWARD_REDEEMABLE || i === l.DismissibleContent.TENURE_REWARD_PENDING) && (0, o.markDismissibleContentAsDismissed)(i)
-    }, [e, i])
+      s = O(t),
+      [r] = (0, d.useGetDismissibleContent)(s);
+    a.useEffect(() => {
+      null != e && !0 === e.showNotification && (r === l.DismissibleContent.TENURE_REWARD_REDEEMABLE || r === l.DismissibleContent.TENURE_REWARD_PENDING) && (0, u.markDismissibleContentAsDismissed)(r)
+    }, [e, r])
   };
 
-function p() {
+function L() {
   let {
     hasFetchedPremiumApplicationEntitlements: e,
     isFetchingPremiumApplicationEntitlements: t
-  } = (0, u.useStateFromStoresObject)([R.default], () => ({
-    hasFetchedPremiumApplicationEntitlements: R.default.isFetchedForApplication(N.PREMIUM_SUBSCRIPTION_APPLICATION),
-    isFetchingPremiumApplicationEntitlements: R.default.isFetchingForApplication(N.PREMIUM_SUBSCRIPTION_APPLICATION)
-  })), r = (0, u.useStateFromStores)([E.default], () => {
-    let e = E.default.getCurrentUser();
+  } = (0, n.useStateFromStoresObject)([T.default], () => ({
+    hasFetchedPremiumApplicationEntitlements: T.default.isFetchedForApplication(N.PREMIUM_SUBSCRIPTION_APPLICATION),
+    isFetchingPremiumApplicationEntitlements: T.default.isFetchingForApplication(N.PREMIUM_SUBSCRIPTION_APPLICATION)
+  })), s = (0, n.useStateFromStores)([_.default], () => {
+    let e = _.default.getCurrentUser();
     return null != e && (0, f.isPremiumExactly)(e, N.PremiumTypes.TIER_2)
-  }), i = n.useRef(!1);
-  n.useEffect(() => {
-    !1 === e && !1 === t && !0 === r && !1 === i.current && (a.fetchUserEntitlementsForApplication(N.PREMIUM_SUBSCRIPTION_APPLICATION), i.current = !0)
-  }, [e, t, r])
+  }), r = a.useRef(!1);
+  a.useEffect(() => {
+    !1 === e && !1 === t && !0 === s && !1 === r.current && (o.fetchUserEntitlementsForApplication(N.PREMIUM_SUBSCRIPTION_APPLICATION), r.current = !0)
+  }, [e, t, s])
 }

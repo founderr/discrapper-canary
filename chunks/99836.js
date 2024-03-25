@@ -10,21 +10,21 @@ var s = n("37983"),
   i = n.n(a),
   l = n("612039"),
   u = n("916187"),
-  c = n("154889"),
-  o = n("917247"),
+  o = n("154889"),
+  c = n("917247"),
   d = n("527866"),
   m = n("826795"),
   f = n("501768"),
   p = n("659632"),
   _ = n("635357"),
-  I = n("642906"),
-  S = n("85336"),
+  S = n("642906"),
+  I = n("85336"),
   E = n("310093"),
   P = n("367767"),
   T = n("176108"),
   N = n("298392"),
-  A = n("153727"),
-  C = n("39065"),
+  C = n("153727"),
+  A = n("39065"),
   h = n("650484"),
   v = n("646718"),
   g = n("843455"),
@@ -69,11 +69,11 @@ function y(e) {
       purchaseType: ea,
       setEntitlementsGranted: ei,
       startedPaymentFlowWithPaymentSourcesRef: el
-    } = (0, I.usePaymentContext)(),
+    } = (0, S.usePaymentContext)(),
     {
       isGift: eu,
-      giftMessage: ec,
-      giftRecipient: eo
+      giftMessage: eo,
+      giftRecipient: ec
     } = (0, _.useGiftContext)();
   i(null != et, "Step should be set");
   let ed = r.useRef(null),
@@ -81,10 +81,10 @@ function y(e) {
   (0, f.default)();
   let ep = null !== (n = null != O ? O : D) && void 0 !== n ? n : null,
     e_ = null != ep && (!es || (0, v.SubscriptionTrials)[ep].skus.includes(X)) ? ep : null,
-    eI = (0, o.usePremiumTrialOffer)(D),
-    eS = (0, c.usePremiumDiscountOffer)(),
+    eS = (0, c.usePremiumTrialOffer)(D),
+    eI = (0, o.usePremiumDiscountOffer)(),
     eE = {
-      user_trial_offer_id: null == eI ? void 0 : eI.id
+      user_trial_offer_id: null == eS ? void 0 : eS.id
     };
   r.useEffect(() => {
     null != V && null != ed.current && ed.current.scrollIntoView({
@@ -92,7 +92,7 @@ function y(e) {
     })
   }, [V]);
   let eP = r.useCallback((e, t) => {
-      k(e), null != t && ei(t), y(S.Step.CONFIRM, {
+      k(e), null != t && ei(t), y(I.Step.CONFIRM, {
         fulfillment: {
           subscription: e,
           entitlements: t
@@ -101,12 +101,12 @@ function y(e) {
     }, [y, k, ei]),
     eT = null != W ? Z[W] : null,
     eN = null != J && v.MULTI_MONTH_PLANS.has(J.id) && null != eT && !(0, u.isPaymentSourceEligibleForMultiMonthPlans)(eT) ? Error(x.default.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
-    eA = r.useRef(null),
-    [eC, eh] = r.useState(null),
-    ev = !eu && null != eI && null != X && (0, v.SubscriptionTrials)[eI.trial_id].skus.includes(X),
-    eg = null == eS ? void 0 : null === (t = eS.discount) || void 0 === t ? void 0 : t.plan_ids,
-    ex = !eu && null != eS && null != eg && null != J && eg.includes(J.id),
-    ey = eu && (0, p.shouldShowCustomGiftExperience)(eo),
+    eC = r.useRef(null),
+    [eA, eh] = r.useState(null),
+    ev = !eu && null != eS && null != X && (0, v.SubscriptionTrials)[eS.trial_id].skus.includes(X),
+    eg = null == eI ? void 0 : null === (t = eI.discount) || void 0 === t ? void 0 : t.plan_ids,
+    ex = !eu && null != eI && null != eg && null != J && eg.includes(J.id),
+    ey = eu && (0, p.shouldShowCustomGiftExperience)(ec),
     eO = null == U && null == F && ea === g.PurchaseTypes.SUBSCRIPTION,
     eM = (0, T.inOneStepSubscriptionCheckout)({
       isTrial: ev,
@@ -118,16 +118,16 @@ function y(e) {
     eL = eR || (eM ? eO && es : es),
     eb = r.useCallback(() => {
       if (eM) {
-        y(S.Step.SKU_SELECT);
+        y(I.Step.SKU_SELECT);
         return
       }
-      return eR ? y(S.Step.GIFT_CUSTOMIZATION) : y(S.Step.PLAN_SELECT)
+      return eR ? y(I.Step.GIFT_CUSTOMIZATION) : y(I.Step.PLAN_SELECT)
     }, [y, eM, eR]);
   return ea === g.PurchaseTypes.ONE_TIME ? a = (0, s.jsx)(N.default, {
     hasLegalTermsFlash: em,
-    legalTermsNodeRef: eA,
+    legalTermsNodeRef: eC,
     onPaymentSourceChange: e => Q(null != e ? e.id : null),
-    handlePaymentSourceAdd: () => y(S.Step.ADD_PAYMENT_STEPS)
+    handlePaymentSourceAdd: () => y(I.Step.ADD_PAYMENT_STEPS)
   }) : null == w || eu ? (i(null != J, "Expected plan to be selected"), a = (0, s.jsx)(d.default, {
     selectedPlanId: J.id,
     paymentSources: Z,
@@ -135,9 +135,9 @@ function y(e) {
     priceOptions: K,
     currencies: Y,
     onCurrencyChange: e => q(e),
-    handlePaymentSourceAdd: () => y(S.Step.ADD_PAYMENT_STEPS),
+    handlePaymentSourceAdd: () => y(I.Step.ADD_PAYMENT_STEPS),
     setHasAcceptedTerms: er,
-    legalTermsNodeRef: eA,
+    legalTermsNodeRef: eC,
     hasLegalTermsFlash: em,
     trialId: e_,
     trialFooterMessageOverride: M,
@@ -155,11 +155,11 @@ function y(e) {
       Q(null != e ? e.id : null)
     },
     onPaymentSourceAdd: () => {
-      y(S.Step.ADD_PAYMENT_STEPS)
+      y(I.Step.ADD_PAYMENT_STEPS)
     },
     planId: J.id,
     setHasAcceptedTerms: er,
-    legalTermsNodeRef: eA,
+    legalTermsNodeRef: eC,
     hasLegalTermsFlash: em,
     onInvoiceError: e => eh(e),
     planGroup: L,
@@ -170,21 +170,21 @@ function y(e) {
     handleClose: B
   })), (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(E.GiftNote, {
-      giftMessage: ec
-    }), !ey && (0, s.jsx)(A.default, {
+      giftMessage: eo
+    }), !ey && (0, s.jsx)(C.default, {
       isEligibleForTrial: ev
     }), (0, s.jsxs)(h.PaymentPortalBody, {
       children: [(0, s.jsx)(P.default, {}), a]
     }), (0, s.jsx)(h.PaymentPortalFooter, {
-      children: (0, s.jsx)(C.default, {
+      children: (0, s.jsx)(A.default, {
         premiumSubscription: null != w ? w : null,
         setPurchaseState: $,
         onBack: eb,
         onNext: eP,
         onPurchaseError: e => ee(e),
-        legalTermsNodeRef: eA,
+        legalTermsNodeRef: eC,
         flashLegalTerms: () => ef(!0),
-        invoiceError: eC,
+        invoiceError: eA,
         planError: eN,
         analyticsLocation: G,
         baseAnalyticsData: j,

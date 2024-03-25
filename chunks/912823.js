@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return O
   }
 }), n("222007"), n("424973");
 var i = n("37983"),
@@ -23,14 +23,14 @@ var i = n("37983"),
   g = n("35385"),
   S = n("695369"),
   C = n("198"),
-  T = n("315814"),
-  _ = n("108486"),
+  _ = n("315814"),
+  T = n("108486"),
   I = n("923582"),
   v = n("80921"),
-  N = n("646718"),
-  A = n("350583");
+  A = n("646718"),
+  N = n("350583");
 
-function O(e) {
+function R(e) {
   let {
     disabled: t,
     channel: n
@@ -47,7 +47,7 @@ function O(e) {
     })
   }, [s]);
   let r = a && s;
-  return r ? (0, i.jsx)(_.default, {
+  return r ? (0, i.jsx)(T.default, {
     disabled: t,
     channel: n
   }) : (0, i.jsx)(C.default, {
@@ -55,8 +55,8 @@ function O(e) {
     channel: n
   })
 }
-var R = l.memo(function(e) {
-  var t, n, l, f, C, _, R, M;
+var O = l.memo(function(e) {
+  var t, n, l, f, C, T, O, M;
   let {
     type: k,
     disabled: L,
@@ -81,7 +81,7 @@ var R = l.memo(function(e) {
     location: "dc120b_4"
   }, {
     autoTrackExposure: !1
-  }), W = E.default.getCurrentUser(), Y = null !== (f = (0, s.useStateFromStores)([c.default], () => K && y.default.isPremiumExactly(W, N.PremiumTypes.TIER_2) ? c.default.getReferralsRemaining() : 0)) && void 0 !== f ? f : 0, z = (0, s.useStateFromStores)([c.default], () => {
+  }), W = E.default.getCurrentUser(), Y = null !== (f = (0, s.useStateFromStores)([c.default], () => K && y.default.isPremiumExactly(W, A.PremiumTypes.TIER_2) ? c.default.getReferralsRemaining() : 0)) && void 0 !== f ? f : 0, z = (0, s.useStateFromStores)([c.default], () => {
     if (!P.isDM() || void 0 === P.recipients || P.recipients.length > 1 || !K) return !1;
     let e = P.recipients[0],
       t = c.default.getSentUserIds();
@@ -99,14 +99,14 @@ var R = l.memo(function(e) {
     return [K && l && a, a]
   });
   if (!a.isMobile) {
-    if (P.isDM() && (null === (C = k.gifts) || void 0 === C ? void 0 : C.button) != null && null == G && (y.default.isPremiumExactly(W, N.PremiumTypes.TIER_2) && J && m.default.trackExposure({
+    if (P.isDM() && (null === (C = k.gifts) || void 0 === C ? void 0 : C.button) != null && null == G && (y.default.isPremiumExactly(W, A.PremiumTypes.TIER_2) && J && m.default.trackExposure({
         location: "dc120b_5"
-      }), Z && V.push((0, i.jsx)(T.default, {
+      }), Z && V.push((0, i.jsx)(_.default, {
         disabled: L,
         referralsRemaining: Y,
         channel: P,
         isResending: z
-      }, "referral"))), (null === (_ = k.gifts) || void 0 === _ ? void 0 : _.button) != null && null == G && !B) {
+      }, "referral"))), (null === (T = k.gifts) || void 0 === T ? void 0 : T.button) != null && null == G && !B) {
       let {
         hideChannelGiftButton: e
       } = p.default.getCurrentConfig({
@@ -114,11 +114,11 @@ var R = l.memo(function(e) {
       }, {
         autoTrackExposure: P.isDM()
       }), t = P.isDM() && e;
-      !t && V.push((0, i.jsx)(O, {
+      !t && V.push((0, i.jsx)(R, {
         disabled: L,
         channel: P
       }, "gift"))
-    }(null === (R = k.gifs) || void 0 === R ? void 0 : R.button) != null && null == G && V.push((0, i.jsx)(S.default, {
+    }(null === (O = k.gifs) || void 0 === O ? void 0 : O.button) != null && null == G && V.push((0, i.jsx)(S.default, {
       disabled: L,
       type: k
     }, "gif")), (null === (M = k.stickers) || void 0 === M ? void 0 : M.button) != null && null == G && V.push((0, i.jsx)(v.default, {
@@ -133,7 +133,7 @@ var R = l.memo(function(e) {
     onClick: b,
     disabled: L || 0 === F.length && j && !w
   }, "submit")), 0 === V.length) ? null : (0, i.jsx)("div", {
-    className: A.buttons,
+    className: N.buttons,
     children: V
   })
 })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return A
   }
 }), s("222007");
 var a = s("37983"),
@@ -18,15 +18,15 @@ var a = s("37983"),
   T = s("554083"),
   I = s("907648"),
   f = s("326881"),
-  S = s("228967"),
-  R = s("49111"),
+  R = s("228967"),
+  S = s("49111"),
   m = s("390553"),
-  A = s("679324"),
-  N = () => {
+  N = s("679324"),
+  A = () => {
     let e = r.useRef(null),
       [t, s] = r.useState(!1),
       {
-        analyticsLocations: N
+        analyticsLocations: A
       } = (0, o.default)(l.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
       [p, C] = r.useState(!1);
     return (0, c.useFetchEntitlementsForTenureReward)(), (0, a.jsxs)(a.Fragment, {
@@ -36,7 +36,7 @@ var a = s("37983"),
         children: (0, a.jsx)("div", {
           className: m.container,
           children: (0, a.jsxs)(o.AnalyticsLocationProvider, {
-            value: N,
+            value: A,
             children: [(0, a.jsx)(T.default, {
               className: m.heroHeading
             }), (0, a.jsx)(_.default, {
@@ -48,7 +48,7 @@ var a = s("37983"),
               className: m.perksDiscoverability,
               noBackground: !0,
               leftAlignHeaders: !0,
-              showAllPerksButton: (0, a.jsx)(S.default, {
+              showAllPerksButton: (0, a.jsx)(R.default, {
                 setIsAllPerksVisible: s,
                 previousComponent: I.NitroLandingPages.HOME
               })
@@ -56,22 +56,22 @@ var a = s("37983"),
               className: m.giftNitro,
               location: l.default.PREMIUM_MARKETING_GIFT_SECTION,
               analyticsLocation: {
-                page: R.AnalyticsPages.NITRO_HOME,
-                section: R.AnalyticsSections.GIFT_BANNER
+                page: S.AnalyticsPages.NITRO_HOME,
+                section: S.AnalyticsSections.GIFT_BANNER
               }
             }), (0, a.jsx)("div", {
               className: m.footerSpacing
             }), (0, a.jsx)(i.VisibilitySensor, {
               onChange: e => {
-                e && !p && (d.default.track(R.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                  location_stack: N
+                e && !p && (d.default.track(S.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                  location_stack: A
                 }), C(!0))
               },
               children: (0, a.jsx)("div", {
                 className: m.bottomOfPageVisibilitySensor
               })
             }), (0, a.jsx)(u.default, {
-              src: A,
+              src: N,
               className: m.bottomIllustration,
               width: 112,
               height: 85,

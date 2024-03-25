@@ -11,28 +11,28 @@ var r = n("506838"),
   i = n("65597"),
   l = n("77078"),
   u = n("606292"),
-  c = n("688318"),
-  o = n("426188"),
+  o = n("688318"),
+  c = n("426188"),
   d = n("210721"),
   m = n("65324"),
   f = n("845962"),
   p = n("501768"),
   _ = n("635471"),
-  I = n("50885"),
-  S = n("635357"),
+  S = n("50885"),
+  I = n("635357"),
   E = n("782340"),
   P = n("285311"),
   T = n("93902");
-let N = I.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+let N = S.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
-function A(e) {
+function C(e) {
   let {
     avatarDecoration: t
   } = e, {
     avatarDecorationSrc: n,
     eventHandlers: r,
     avatarPlaceholderSrc: a
-  } = (0, c.default)({
+  } = (0, o.default)({
     avatarDecorationOverride: t,
     size: (0, u.getDecorationSizeForAvatarSize)(l.AvatarSizes.SIZE_152)
   });
@@ -49,7 +49,7 @@ function A(e) {
   })
 }
 
-function C(e) {
+function A(e) {
   let {
     id: t
   } = e, n = (0, i.useStateFromStores)([f.default], () => {
@@ -73,15 +73,15 @@ function h(e) {
     sku: t
   } = e, {
     selectedGiftStyle: n
-  } = (0, S.useGiftContext)(), {
+  } = (0, I.useGiftContext)(), {
     product: i
-  } = (0, o.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), l = null == i ? void 0 : i.items[0], u = (0, r.match)(l).with({
+  } = (0, c.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), l = null == i ? void 0 : i.items[0], u = (0, r.match)(l).with({
     type: a.CollectiblesItemType.AVATAR_DECORATION
-  }, e => (0, s.jsx)(A, {
+  }, e => (0, s.jsx)(C, {
     avatarDecoration: e
   })).with({
     type: a.CollectiblesItemType.PROFILE_EFFECT
-  }, e => (0, s.jsx)(C, {
+  }, e => (0, s.jsx)(A, {
     id: e.id
   })).otherwise(() => null);
   return null != n && null == u ? (0, s.jsx)("div", {
