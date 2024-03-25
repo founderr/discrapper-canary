@@ -20,25 +20,25 @@ var s = n("37983"),
   h = n("125047"),
   p = n("890957"),
   T = () => {
-    let [e, t] = a.useState(""), [l, T] = a.useState(""), [m, N] = a.useState(!1), [g, A] = a.useState(!1), [S, C] = a.useState(null), [v, O] = a.useState(null), R = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), L = R.code.split(" ")[0], x = async () => {
+    let [e, t] = a.useState(""), [l, T] = a.useState(""), [N, m] = a.useState(!1), [A, g] = a.useState(!1), [S, v] = a.useState(null), [O, C] = a.useState(null), R = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), L = R.code.split(" ")[0], D = async () => {
       try {
         await u.default.resendCode(e)
       } catch (e) {
-        O(e.body.message)
+        C(e.body.message)
       }
-    }, M = async () => {
-      N(!0);
+    }, x = async () => {
+      m(!0);
       try {
         let {
           token: t
         } = await u.default.verifyPhone(L + e, l);
-        C(null), O(null), A(!0), u.default.validatePhoneForSupport(t)
+        v(null), C(null), g(!0), u.default.validatePhoneForSupport(t)
       } catch (e) {
-        e.body.message ? (C(null), O(e.body.message)) : (C(e.body.phone), O(e.body.code))
+        e.body.message ? (v(null), C(e.body.message)) : (v(e.body.phone), C(e.body.code))
       } finally {
-        N(!1)
+        m(!1)
       }
-    }, D = (0, s.jsxs)(f.default, {
+    }, M = (0, s.jsxs)(f.default, {
       children: [(0, s.jsx)(f.Image, {
         src: n("229483")
       }), (0, s.jsxs)(f.Title, {
@@ -48,7 +48,7 @@ var s = n("37983"),
         })]
       })]
     });
-    return g ? D : (0, s.jsxs)(f.default, {
+    return A ? M : (0, s.jsxs)(f.default, {
       children: [(0, s.jsx)(f.Title, {
         children: I.default.Messages.ENTER_CODE
       }), (0, s.jsx)(f.SubTitle, {
@@ -72,16 +72,16 @@ var s = n("37983"),
           value: l,
           onChange: T,
           maxLength: _.PHONE_VERIFICATION_CODE_NUM_DIGITS,
-          error: v
+          error: O
         }), (0, s.jsx)(f.Button, {
           size: f.Button.Sizes.SMALL,
           look: f.Button.Looks.LINK,
-          onClick: x,
+          onClick: D,
           children: I.default.Messages.RESEND_CODE
         }), (0, s.jsx)(f.Button, {
           className: p.marginTop20,
-          onClick: M,
-          submitting: m,
+          onClick: x,
+          submitting: N,
           children: I.default.Messages.DONE
         })]
       })]

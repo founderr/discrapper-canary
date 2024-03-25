@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   LARGE_SERVER_MEMBER_THRESHOLD: function() {
-    return m
+    return N
   },
   isGroupInvite: function() {
-    return A
+    return g
   },
   isDirectInvite: function() {
     return S
   },
   isEnhancedCommunityInvite: function() {
-    return O
+    return C
   },
   InviteDestinationIcon: function() {
     return L
   },
   InviteMemberCounts: function() {
-    return x
+    return D
   },
   InviteJoinContext: function() {
-    return M
+    return x
   },
   InviteHeader: function() {
-    return D
+    return M
   }
 }), n("70102");
 var s = n("37983"),
@@ -41,8 +41,8 @@ var s = n("37983"),
   h = n("238055"),
   p = n("782340"),
   T = n("573905");
-let m = 100,
-  N = e => {
+let N = 100,
+  m = e => {
     var t, n;
     let s = {
       onlineCount: null !== (t = e.approximate_presence_count) && void 0 !== t ? t : 0,
@@ -50,25 +50,25 @@ let m = 100,
     };
     return 0 === s.memberCount && 0 === s.memberCount ? null : s
   },
-  g = e => e.target_type === _.InviteTargetTypes.STREAM && null != e.target_user,
-  A = e => {
+  A = e => e.target_type === _.InviteTargetTypes.STREAM && null != e.target_user,
+  g = e => {
     var t;
     return (null === (t = e.channel) || void 0 === t ? void 0 : t.type) === I.ChannelTypes.GROUP_DM
   },
   S = e => null == e.channel && null == e.guild && null != e.inviter,
-  C = e => {
+  v = e => {
     var t;
-    let n = N(e);
-    return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > m
+    let n = m(e);
+    return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > N
   },
-  v = e => e.state === I.InviteStates.ACCEPTED,
-  O = e => {
+  O = e => e.state === I.InviteStates.ACCEPTED,
+  C = e => {
     let {
       guild_scheduled_event: t
     } = e;
     return null != t || !1
   },
-  R = e => !O(e) && (!!S(e) || null != e.inviter && !v(e) && !C(e)),
+  R = e => !C(e) && (!!S(e) || null != e.inviter && !O(e) && !v(e)),
   L = e => {
     let {
       guild: t,
@@ -94,13 +94,13 @@ let m = 100,
     else return null
   };
 
-function x(e) {
+function D(e) {
   var t;
   let {
     invite: n,
     textClassName: a,
     className: l
-  } = e, r = N(n);
+  } = e, r = m(n);
   return null == r || R(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === h.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, s.jsx)(d.ActivityCount, {
     className: i(T.activityCount, l),
     online: r.onlineCount,
@@ -110,19 +110,19 @@ function x(e) {
   })
 }
 
-function M(e) {
+function x(e) {
   let {
     invite: t,
     showBigUserIcon: n
-  } = e, l = a.useMemo(() => n ? null : g(t) && null != t.target_user ? f.default.getUserAvatarURL(t.target_user) : R(t) && null != t.inviter ? f.default.getUserAvatarURL(t.inviter) : null, [t, n]), i = p.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN;
-  if (A(t)) {
+  } = e, l = a.useMemo(() => n ? null : A(t) && null != t.target_user ? f.default.getUserAvatarURL(t.target_user) : R(t) && null != t.inviter ? f.default.getUserAvatarURL(t.inviter) : null, [t, n]), i = p.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN;
+  if (g(t)) {
     var u, o;
     i = (null === (u = t.channel) || void 0 === u ? void 0 : u.name) != null && (null === (o = t.inviter) || void 0 === o ? void 0 : o.username) != null ? p.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM_BY_USER.format({
       username: t.inviter.username
     }) : p.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM
-  } else g(t) && null != t.target_user ? i = p.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
+  } else A(t) && null != t.target_user ? i = p.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
     username: t.target_user.username
-  }) : v(t) ? i = p.default.Messages.INSTANT_INVITE_YOU_ARE_ALREADY_A_MEMBER_OF : R(t) && null != t.inviter && (i = p.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_BY_USER.format({
+  }) : O(t) ? i = p.default.Messages.INSTANT_INVITE_YOU_ARE_ALREADY_A_MEMBER_OF : R(t) && null != t.inviter && (i = p.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_BY_USER.format({
     username: E.default.getFormattedName(t.inviter)
   }));
   return (0, s.jsxs)("div", {
@@ -140,7 +140,7 @@ function M(e) {
   })
 }
 
-function D(e) {
+function M(e) {
   let t, n, a, {
     user: l,
     guild: i,

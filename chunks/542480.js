@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983"),
   r = s("884691"),
-  n = s("77078"),
-  i = s("895530"),
+  i = s("77078"),
+  n = s("895530"),
   l = s("437825"),
   o = s("36694"),
   u = s("530311"),
@@ -96,7 +96,7 @@ let A = [{
     } = e;
     return (0, a.jsxs)("div", {
       className: N.row,
-      children: [(0, a.jsx)(n.Tooltip, {
+      children: [(0, a.jsx)(i.Tooltip, {
         text: r,
         children: e => (0, a.jsx)(t, {
           className: N.featureIcon,
@@ -124,17 +124,17 @@ class C extends r.PureComponent {
         feature: t,
         IconComponent: s,
         getText: r,
-        getTooltip: n
+        getTooltip: i
       } = e;
       return (0, a.jsx)(p, {
         IconComponent: s,
         text: r(),
-        tooltip: n()
+        tooltip: i()
       }, t)
     });
     return 0 === t.length ? null : (0, a.jsxs)("div", {
       className: N.features,
-      children: [(0, a.jsx)(i.default, {
+      children: [(0, a.jsx)(n.default, {
         children: m.default.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES
       }), t]
     })

@@ -43,8 +43,8 @@ var a, l, s, i, r = n("884691"),
   F = n("677099"),
   D = n("282109"),
   U = n("718517"),
-  k = n("449008"),
-  P = n("299039"),
+  P = n("449008"),
+  k = n("299039"),
   w = n("49111"),
   G = n("648564");
 (s = a || (a = {}))[s.Favorite = 0] = "Favorite", s[s.PrivateChannel = 1] = "PrivateChannel", s[s.Mentioned = 2] = "Mentioned", s[s.AllMessagesNotifications = 3] = "AllMessagesNotifications", s[s.GuildChannel = 4] = "GuildChannel", s[s.OldChannel = 5] = "OldChannel", s[s.NoNotifications = 6] = "NoNotifications", s[s.ReallyOldChannel = 7] = "ReallyOldChannel", (i = l || (l = {})).Loading = "loading", i.Loaded = "loaded", i.Done = "done";
@@ -84,7 +84,7 @@ class H extends o.EventEmitter {
         isFullyLoaded: t,
         hasLoadedAnything: t
       }
-    } else(0, k.assertNever)(e)
+    } else(0, P.assertNever)(e)
   }
   clearScrollToChannelIndex() {
     this.setState({
@@ -245,12 +245,12 @@ function V(e, t) {
   var n;
   let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     l = b.default.getMessages(e.channelId),
-    s = l.toArray().filter(t => P.default.compare(t.id, e.oldestReadMessageId) > 0 && 0 >= P.default.compare(t.id, e.newestUnreadMessageId)),
+    s = l.toArray().filter(t => k.default.compare(t.id, e.oldestReadMessageId) > 0 && 0 >= k.default.compare(t.id, e.newestUnreadMessageId)),
     i = s.length === e.messages.length && s.every((t, n) => e.messages[n] === t);
   if (i && a) return e;
   let r = null != l.getAfter(e.oldestReadMessageId) || (null === (n = s[0]) || void 0 === n ? void 0 : n.id) === e.oldestUnreadMessageId,
     o = s[s.length - 1],
-    u = P.default.compare(null == o ? void 0 : o.id, e.newestUnreadMessageId) >= 0 || s.length >= B;
+    u = k.default.compare(null == o ? void 0 : o.id, e.newestUnreadMessageId) >= 0 || s.length >= B;
   return {
     ...e,
     messages: s,
@@ -288,7 +288,7 @@ function Y() {
         })
       }), f.sortBy(t, e => e.sortOrder)
     }(e),
-    n = f.uniq(t.map(e => e.guildId)).filter(k.isNotNullish);
+    n = f.uniq(t.map(e => e.guildId)).filter(P.isNotNullish);
   return h.default.dispatch({
     type: "INBOX_OPEN",
     guildIds: n
@@ -314,13 +314,13 @@ function z(e, t, n, a) {
   if (null == i) {
     let e = O.default.getGuild(l.guild_id);
     if (null == e || null == e.joinedAt) return;
-    i = P.default.fromTimestamp(e.joinedAt.getTime())
+    i = k.default.fromTimestamp(e.joinedAt.getTime())
   }
   let r = j.default.getOldestUnreadMessageId(a),
     o = j.default.lastMessageId(a),
     u = j.default.getMentionCount(a),
     d = u > 0 || l.isPrivate();
-  if (null == o || P.default.compare(i, o) >= 0) return;
+  if (null == o || k.default.compare(i, o) >= 0) return;
   let c = {
     guildId: n,
     channelId: a,
@@ -340,7 +340,7 @@ function z(e, t, n, a) {
       if (a.isPrivate()) return 1;
       if (j.default.getMentionCount(t) > 0) return 2;
       if (null != n) {
-        let e = P.default.extractTimestamp(n);
+        let e = k.default.extractTimestamp(n);
         if (Date.now() - e > W) return 7;
         if (Date.now() - e > K) return 5
       }

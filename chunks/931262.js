@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return u
   }
 }), a("313619"), a("654714"), a("287168"), a("956660"), a("222007");
-var s, r, l = a("884691"),
+var l, s, r = a("884691"),
   n = a("90915"),
   i = a("54239"),
   o = a("393414"),
@@ -13,8 +13,8 @@ var s, r, l = a("884691"),
 function u() {
   let {
     search: e
-  } = (0, n.useLocation)(), t = (0, n.useParams)(), a = l.useMemo(() => new URLSearchParams(e), [e]), s = a.get("source"), r = null != s ? parseInt(s, 10) : null, u = l.useCallback(() => {
-    if (0 === r) {
+  } = (0, n.useLocation)(), t = (0, n.useParams)(), a = r.useMemo(() => new URLSearchParams(e), [e]), l = a.get("source"), s = null != l ? parseInt(l, 10) : null, u = r.useCallback(() => {
+    if (0 === s) {
       (0, o.back)(), (0, i.pushLayer)(c.Layers.USER_SETTINGS);
       return
     }
@@ -22,10 +22,10 @@ function u() {
       (0, o.back)();
       return
     }(0, o.transitionTo)(c.Routes.APP)
-  }, [r]);
+  }, [s]);
   return {
     onClose: u,
-    source: r,
+    source: s,
     ...t
   }
-}(r = s || (s = {}))[r.SETTINGS = 0] = "SETTINGS", r[r.CHANGELOG = 1] = "CHANGELOG", r[r.DM_LIST = 2] = "DM_LIST"
+}(s = l || (l = {}))[s.SETTINGS = 0] = "SETTINGS", s[s.CHANGELOG = 1] = "CHANGELOG", s[s.DM_LIST = 2] = "DM_LIST"

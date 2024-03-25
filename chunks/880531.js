@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   renderGuildProductPurchaseHeader: function() {
-    return d
+    return o
   }
 });
 var r = n("37983");
@@ -23,6 +23,6 @@ function s(e) {
     onClose: t
   })
 }
-let d = (e, t, n) => n === u.Step.CONFIRM ? null : (0, r.jsx)(s, {
+let o = (e, t, n) => n === u.Step.CONFIRM ? null : (0, r.jsx)(s, {
   onClose: () => t(!1)
 })

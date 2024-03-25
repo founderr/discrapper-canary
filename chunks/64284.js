@@ -23,7 +23,7 @@ var n = i("37983"),
     a.useEffect(() => () => {
       p.current = !0
     }, []);
-    let R = a.useCallback(async () => {
+    let M = a.useCallback(async () => {
       if (!h.current) {
         m(null);
         try {
@@ -48,7 +48,7 @@ var n = i("37983"),
         onChange: e => {
           x(e)
         },
-        onBlur: R,
+        onBlur: M,
         autosize: !0
       }), null != T && "" !== T ? (0, n.jsx)(s.Text, {
         className: E.errorText,

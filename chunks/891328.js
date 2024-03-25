@@ -11,20 +11,20 @@ var u = n("414456"),
   i = n("77078"),
   l = n("750482"),
   s = n("945330"),
-  d = n("880672");
+  o = n("880672");
 
-function o(e) {
+function d(e) {
   let {
     className: t,
     onClose: n
   } = e;
   return (0, r.jsx)(i.Clickable, {
-    className: a(d.closeButtonContainer, t),
+    className: a(o.closeButtonContainer, t),
     onClick: n,
     children: (0, r.jsx)(s.default, {
       width: 16,
       height: 16,
-      className: d.closeButtonIcon
+      className: o.closeButtonIcon
     })
   })
 }
@@ -36,15 +36,15 @@ function c(e) {
     className: u
   } = e;
   return (0, r.jsxs)(i.ModalHeader, {
-    className: a(d.header, u),
+    className: a(o.header, u),
     separator: !1,
     children: [(0, r.jsx)(l.default, {
-      className: d.headerImage,
+      className: o.headerImage,
       listing: t,
       imageSize: 500,
       alt: ""
-    }), (0, r.jsx)(o, {
-      className: d.closeButton,
+    }), (0, r.jsx)(d, {
+      className: o.closeButton,
       onClose: n
     })]
   })

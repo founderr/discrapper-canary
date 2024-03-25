@@ -26,7 +26,7 @@ var a = i("414456"),
       onEdit: m,
       onRemove: _,
       title: x
-    } = e, h = i.values, p = h.slice(0, 1), R = h.length - p.length;
+    } = e, h = i.values, p = h.slice(0, 1), M = h.length - p.length;
     return (0, n.jsxs)(u.default, {
       field: i,
       index: a,
@@ -38,17 +38,17 @@ var a = i("414456"),
       title: x,
       children: [(0, n.jsx)(d.TermsFieldBody, {
         className: l(f.fieldBackground, {
-          [f.withFooter]: 0 !== R
+          [f.withFooter]: 0 !== M
         }),
         terms: p,
         channelId: t
-      }), 0 !== R && (0, n.jsxs)(r.Clickable, {
+      }), 0 !== M && (0, n.jsxs)(r.Clickable, {
         className: l(f.fieldFooterContainer, f.clickable),
         onClick: m,
         children: [(0, n.jsx)(r.FormText, {
           className: f.clickable,
           children: c.default.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({
-            count: R
+            count: M
           })
         }), (0, n.jsx)(o.default, {
           className: f.termsFieldCaretIcon,

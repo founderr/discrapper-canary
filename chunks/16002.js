@@ -21,23 +21,23 @@ async function m(e, t) {
     channelId: m,
     editMetadata: h,
     analyticsLocations: E
-  } = t, C = i.default.getChannel(m);
-  if (null != C) try {
-    var v;
+  } = t, v = i.default.getChannel(m);
+  if (null != v) try {
+    var C;
     let t = await (0, c.exportClip)(e, h),
-      l = null !== (v = e.name) && void 0 !== v ? v : (0, f.CLIP_NAME_TEMPLATE)(o.default.extractTimestamp(e.id)),
+      l = null !== (C = e.name) && void 0 !== C ? C : (0, f.CLIP_NAME_TEMPLATE)(o.default.extractTimestamp(e.id)),
       a = (0, d.default)(l);
     (0, u.promptToUpload)([new File([t], "".concat("" !== a ? a : "clip", ".mp4"), {
       type: "video/mp4"
-    })], C, s.DraftType.ChannelMessage, {
+    })], v, s.DraftType.ChannelMessage, {
       filesMetadata: [{
         clip: e
       }]
     }), r.default.track(p.AnalyticEvents.CLIP_SHARED, {
       location_stack: E,
-      guild_id: C.guild_id,
-      channel_id: C.id,
-      channel_type: C.type,
+      guild_id: v.guild_id,
+      channel_id: v.id,
+      channel_type: v.type,
       application_id: e.applicationId,
       clip_id: e.id
     })

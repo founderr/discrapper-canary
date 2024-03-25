@@ -9,9 +9,9 @@ n("884691");
 var i = n("627445"),
   s = n.n(i),
   l = n("819855"),
-  u = n("77078"),
-  a = n("841098"),
-  o = n("360262"),
+  a = n("77078"),
+  o = n("841098"),
+  u = n("360262"),
   d = n("719923"),
   c = n("635357"),
   p = n("642906"),
@@ -24,7 +24,7 @@ function E(e) {
   let {
     handleStepChange: t,
     handleClose: n
-  } = e, i = (0, a.default)(), {
+  } = e, i = (0, o.default)(), {
     activeSubscription: E,
     selectedSkuId: _,
     setSelectedPlanId: x,
@@ -37,7 +37,7 @@ function E(e) {
     selectedSkuId: _,
     startedPaymentFlowWithPaymentSources: C.current
   });
-  return s(null != g, "Expected premium type"), (0, r.jsx)(o.default, {
+  return s(null != g, "Expected premium type"), (0, r.jsx)(u.default, {
     premiumType: g,
     titleText: S.default.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_TITLE,
     subtitleText: S.default.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_SUBTITLE.format({
@@ -45,7 +45,7 @@ function E(e) {
     }),
     footer: (0, r.jsxs)("div", {
       className: P.whatYouLoseButtonContainer,
-      children: [(0, r.jsx)(u.Button, {
+      children: [(0, r.jsx)(a.Button, {
         onClick: () => {
           if (y) {
             let e = (0, m.getDefaultPlanOneStepCheckout)(_, E);
@@ -53,9 +53,9 @@ function E(e) {
           } else t(f.Step.PLAN_SELECT)
         },
         children: S.default.Messages.CONTINUE
-      }), (0, r.jsx)(u.Button, {
-        look: u.Button.Looks.LINK,
-        color: (0, l.isThemeDark)(i) ? u.Button.Colors.WHITE : u.Button.Colors.PRIMARY,
+      }), (0, r.jsx)(a.Button, {
+        look: a.Button.Looks.LINK,
+        color: (0, l.isThemeDark)(i) ? a.Button.Colors.WHITE : a.Button.Colors.PRIMARY,
         onClick: n,
         children: S.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
       })]

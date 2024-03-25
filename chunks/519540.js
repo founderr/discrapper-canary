@@ -38,8 +38,8 @@ var a = n("37983"),
   F = n("64318"),
   D = n("49111"),
   U = n("782340"),
-  k = n("923624"),
-  P = n("126343");
+  P = n("923624"),
+  k = n("126343");
 let w = {
   offset: {
     left: 4,
@@ -57,13 +57,13 @@ function G(e) {
   }, []);
   let [i, r] = l.useState(!1), o = l.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), u = i ? s : o, d = u.filter(e => !(0, _.savedMessageHasMetadata)(e));
   return (0, T.useMessageRemindersLoader)(d), (0, a.jsxs)("div", {
-    className: k.container,
+    className: P.container,
     children: [(0, a.jsx)(F.default, {
       tab: f.InboxTab.TODOS,
       setTab: t,
       closePopout: n
     }), (0, a.jsxs)("div", {
-      className: k.headerText,
+      className: P.headerText,
       children: [(0, a.jsx)(h.Heading, {
         variant: "heading-lg/bold",
         children: i ? U.default.Messages.MESSAGE_REMINDERS_HEADER_ALL : U.default.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
@@ -112,14 +112,14 @@ function B(e) {
   })) : (t = "text-danger", B = U.default.Messages.MESSAGE_REMINDERS_OVERDUE.format({
     duration: d.duration(Date.now() - s.dueAt.getTime(), "millisecond").humanize()
   }))), (0, a.jsxs)("div", {
-    className: P.container,
+    className: k.container,
     children: [(0, a.jsxs)("div", {
-      className: k.messageHeader,
+      className: P.messageHeader,
       children: [(0, a.jsxs)("div", {
         children: [(0, a.jsxs)("div", {
-          className: k.messageInfo,
+          className: P.messageInfo,
           children: [null != F ? (0, a.jsx)(L.default, {
-            className: k.guildIcon,
+            className: P.guildIcon,
             guild: F,
             size: L.default.Sizes.SMALL,
             active: !0
@@ -136,7 +136,7 @@ function B(e) {
         }), null != s.notes && s.notes.length > 0 ? (0, a.jsxs)(h.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          className: k.notes,
+          className: P.notes,
           selectable: !0,
           children: [(0, a.jsx)(y.default, {
             width: 12,
@@ -151,7 +151,7 @@ function B(e) {
           children: B
         }) : null]
       }), (0, a.jsxs)("div", {
-        className: k.reminderActions,
+        className: P.reminderActions,
         children: [(0, a.jsx)(h.TooltipContainer, {
           text: U.default.Messages.MESSAGE_REMINDERS_SNOOZE,
           children: (0, a.jsx)(h.Clickable, {
@@ -164,7 +164,7 @@ function B(e) {
                 message: f
               })
             }),
-            className: k.clock,
+            className: P.clock,
             children: (0, a.jsx)(O.default, {})
           })
         }), (0, a.jsx)(h.Checkbox, {
@@ -176,19 +176,19 @@ function B(e) {
         })]
       })]
     }), (0, a.jsxs)("div", {
-      className: i(P.messageContainer, k.unloadedMessage, {
-        [k.disabledMessage]: r
+      className: i(k.messageContainer, P.unloadedMessage, {
+        [P.disabledMessage]: r
       }),
       children: [(0, a.jsx)(C.default, {
         message: f,
         channel: _,
-        className: P.message,
+        className: k.message,
         compact: M.MessageDisplayCompact.getSetting(),
         animateAvatar: !1,
         focusProps: w,
         trackAnnouncementViews: !0
       }, f.id), (0, a.jsxs)("div", {
-        className: k.actions,
+        className: P.actions,
         children: [null == u ? (0, a.jsx)(h.Button, {
           onClick: () => {
             m.default.fetchMessages({
@@ -203,7 +203,7 @@ function B(e) {
           },
           size: h.Button.Sizes.MIN,
           color: h.Button.Colors.TRANSPARENT,
-          className: k.loadButton,
+          className: P.loadButton,
           children: (0, a.jsx)(h.Text, {
             variant: "text-xs/normal",
             children: "Load"
@@ -214,7 +214,7 @@ function B(e) {
           },
           size: h.Button.Sizes.MIN,
           color: h.Button.Colors.TRANSPARENT,
-          className: k.loadButton,
+          className: P.loadButton,
           children: (0, a.jsx)(h.Text, {
             variant: "text-xs/normal",
             children: U.default.Messages.JUMP

@@ -90,7 +90,7 @@ var G = s.memo(function(e) {
     onSelectSticker: r,
     stickerIconVisible: c = !1,
     submitButtonVisible: f = !1
-  } = e, T = s.useContext(x.default), [_, A] = s.useState(null), [b, j] = s.useState(!1), [U, G] = s.useState(null), H = (0, E.useExpressionPickerStore)(e => null != e.activeView), B = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, b, i), {
+  } = e, T = s.useContext(x.default), [_, A] = s.useState(null), [b, j] = s.useState(!1), [U, G] = s.useState(null), H = (0, E.useExpressionPickerStore)(e => null != e.activeView), B = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, J] = s.useState(!1), [Z, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, b, i), {
     analyticsLocations: Q
   } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
     handleTextChange: $,
@@ -103,7 +103,7 @@ var G = s.memo(function(e) {
   });
   s.useEffect(() => {
     let e = e => {
-        Z(e)
+        J(e)
       },
       t = e => {
         let t = "" !== e && null != e;
@@ -126,7 +126,7 @@ var G = s.memo(function(e) {
     })
   }, [l]);
   let ei = X.length > 0,
-    el = et && !H && !z && !b && !J && ei,
+    el = et && !H && !z && !b && !Z && ei,
     {
       stickersNavigator: ea
     } = function(e) {

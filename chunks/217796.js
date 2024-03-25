@@ -10,8 +10,8 @@ var r = n("37983"),
   i = n.n(a),
   l = n("245187"),
   s = n("635357"),
-  d = n("642906"),
-  o = n("85336"),
+  o = n("642906"),
+  d = n("85336"),
   c = n("628738"),
   f = n("49111");
 
@@ -27,7 +27,7 @@ function P(e) {
     application: h,
     skusById: x,
     selectedSkuId: C
-  } = (0, d.usePaymentContext)(), {
+  } = (0, o.usePaymentContext)(), {
     isGift: m
   } = (0, s.useGiftContext)(), [v, T] = u.useState(!0);
   return (u.useEffect(() => {
@@ -38,14 +38,14 @@ function P(e) {
     i(null != C, "Expected selectedSkuId");
     let e = x[C];
     if (m && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
-      t(o.Step.GIFT_CUSTOMIZATION);
+      t(d.Step.GIFT_CUSTOMIZATION);
       return
     }
     if (0 === Object.keys(S).length) {
-      t(o.Step.ADD_PAYMENT_STEPS);
+      t(d.Step.ADD_PAYMENT_STEPS);
       return
     }
-    t(o.Step.REVIEW)
+    t(d.Step.REVIEW)
   }, [v, a, t, S, m, x, C]), v) ? (0, r.jsx)(c.default, {}) : a ? (0, r.jsx)(l.BlockedPaymentsContentModal, {
     onClose: n
   }) : null

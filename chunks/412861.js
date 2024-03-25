@@ -21,8 +21,8 @@ var a = l("255397"),
   m = l("719923"),
   h = l("834021"),
   E = l("49111"),
-  C = l("894488"),
-  v = l("646718"),
+  v = l("894488"),
+  C = l("646718"),
   _ = l("782340");
 
 function g(e, t) {
@@ -43,12 +43,12 @@ function g(e, t) {
       pre_compression_file_sizes: i,
       pre_compression_aggregate_file_size: r,
       num_attachments: d,
-      error_type: C.FileUploadErrorTypes.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
+      error_type: v.FileUploadErrorTypes.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
       attachment_mimetypes: f
     }), (0, s.openUploadError)({
       title: _.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
       help: (0, h.getErrorHelp)(l, a),
-      showPremiumUpsell: !(0, m.isPremiumExactly)(l, v.PremiumTypes.TIER_2),
+      showPremiumUpsell: !(0, m.isPremiumExactly)(l, C.PremiumTypes.TIER_2),
       fileSize: u
     });
     return
@@ -69,8 +69,8 @@ function L(e, t, l) {
   } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
   if (e.length < 1) return;
   if (null != o && o.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
-  let C = t.getGuildId();
-  if ((0, h.filesExceedUploadLimits)(e, C)) {
+  let v = t.getGuildId();
+  if ((0, h.filesExceedUploadLimits)(e, v)) {
     g(t, e);
     return
   }

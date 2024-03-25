@@ -26,7 +26,7 @@ var u = l("77078"),
     } = e, h = (0, c.default)(t.id), E = (0, f.default)(t.id, l), R = (0, d.default)({
       id: t.id,
       label: O.default.Messages.COPY_ID_USER
-    }), p = (0, s.default)(t.id), x = t.isNonUserBot();
+    }), p = (0, s.default)(t.id), v = t.isNonUserBot();
     return (0, n.jsx)(o.default, {
       context: r,
       object: M.AnalyticsObjects.CONTEXT_MENU,
@@ -36,9 +36,9 @@ var u = l("77078"),
         "aria-label": O.default.Messages.USER_ACTIONS_MENU_LABEL,
         onSelect: a,
         children: [(0, n.jsxs)(u.MenuGroup, {
-          children: [!x && h, !x && p]
+          children: [!v && h, !v && p]
         }), (0, n.jsx)(u.MenuGroup, {
-          children: !x && E
+          children: !v && E
         }), (0, n.jsx)(u.MenuGroup, {
           children: R
         })]

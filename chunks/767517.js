@@ -1,41 +1,41 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return o
+    return d
   }
 });
-var s = n("872717"),
-  a = n("913144"),
-  l = n("619443"),
-  i = n("239380"),
-  r = n("305961"),
-  u = n("49111"),
-  o = {
-    acceptGuildTemplate: (e, t, n) => (a.default.dispatch({
+var a = s("872717"),
+  l = s("913144"),
+  n = s("619443"),
+  r = s("239380"),
+  u = s("305961"),
+  E = s("49111"),
+  d = {
+    acceptGuildTemplate: (e, t, s) => (l.default.dispatch({
       type: "GUILD_TEMPLATE_ACCEPT",
       code: e
-    }), new Promise((o, d) => {
-      s.HTTP.post({
-        url: u.Endpoints.UNRESOLVED_GUILD_TEMPLATE(e),
+    }), new Promise((d, i) => {
+      a.HTTP.post({
+        url: E.Endpoints.UNRESOLVED_GUILD_TEMPLATE(e),
         body: {
           name: t,
-          icon: n
+          icon: s
         },
         oldFormErrors: !0
       }).then(t => {
-        let n = t.body;
-        a.default.dispatch({
+        let s = t.body;
+        l.default.dispatch({
           type: "GUILD_TEMPLATE_ACCEPT_SUCCESS",
           code: e,
-          guild: n
-        }), l.default.isConnected() ? r.default.addConditionalChangeListener(() => {
-          if (null != r.default.getGuild(n.id)) return (0, i.transitionToGuild)(n.id), o(n), !1
-        }) : ((0, i.transitionToGuild)(n.id), o(n))
+          guild: s
+        }), n.default.isConnected() ? u.default.addConditionalChangeListener(() => {
+          if (null != u.default.getGuild(s.id)) return (0, r.transitionToGuild)(s.id), d(s), !1
+        }) : ((0, r.transitionToGuild)(s.id), d(s))
       }, t => {
-        a.default.dispatch({
+        l.default.dispatch({
           type: "GUILD_TEMPLATE_ACCEPT_FAILURE",
           code: e
-        }), d(t.body)
+        }), i(t.body)
       })
     }))
   }

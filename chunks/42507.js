@@ -5,12 +5,12 @@ a.r(t), a.d(t, {
   }
 });
 var n = a("884691"),
-  l = a("446674"),
-  o = a("872173"),
+  o = a("446674"),
+  l = a("872173"),
   s = a("374363");
 
 function i() {
   return n.useEffect(() => {
-    o.FrecencyUserSettingsActionCreators.loadIfNecessary()
-  }, []), (0, l.useStateFromStores)([s.default], () => s.default.frecencyWithoutFetchingLatest)
+    l.FrecencyUserSettingsActionCreators.loadIfNecessary()
+  }, []), (0, o.useStateFromStores)([s.default], () => s.default.frecencyWithoutFetchingLatest)
 }

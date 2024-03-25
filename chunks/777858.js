@@ -23,15 +23,15 @@ function h(e) {
     location: t
   } = e, [h, p] = a.useState(!1), {
     verifySuccess: T,
-    verifyErrors: m,
-    redirectGuildId: N
+    verifyErrors: N,
+    redirectGuildId: m
   } = (0, l.useStateFromStores)([c.default], () => c.default.getState());
   a.useEffect(() => {
     let e = (0, r.default)(t);
     i.default.verify(e), (0, o.trackAppUIViewed)("verify_hub_email")
   }, [t]);
-  let g = () => {
-    (0, f.default)(N), p(!0)
+  let A = () => {
+    (0, f.default)(m), p(!0)
   };
   return h ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Title, {
@@ -42,7 +42,7 @@ function h(e) {
       children: _.default.Messages.APP_OPENED_BODY
     }), (0, s.jsx)(d.Button, {
       className: I.spacedButton,
-      onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(N)),
+      onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(m)),
       children: _.default.Messages.CONTINUE_TO_WEBAPP
     })]
   }) : T ? (0, s.jsxs)(d.default, {
@@ -53,10 +53,10 @@ function h(e) {
       className: I.title,
       children: _.default.Messages.VERIFICATION_VERIFIED
     }), (0, s.jsx)(d.Button, {
-      onClick: g,
+      onClick: A,
       children: _.default.Messages.VERIFICATION_OPEN_DISCORD
     })]
-  }) : null != m ? (0, s.jsxs)(d.default, {
+  }) : null != N ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
       className: I.image,
       src: n("768025")
@@ -67,7 +67,7 @@ function h(e) {
       className: I.subtitle,
       children: _.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
     }), (0, s.jsx)(d.Button, {
-      onClick: g,
+      onClick: A,
       children: _.default.Messages.VERIFICATION_OPEN_DISCORD
     })]
   }) : (0, s.jsxs)(d.default, {

@@ -4,10 +4,10 @@ a.r(t), a.d(t, {
     return c
   }
 });
-var s = a("37983");
+var l = a("37983");
 a("884691");
-var r = a("414456"),
-  l = a.n(r),
+var s = a("414456"),
+  r = a.n(s),
   n = a("77078"),
   i = a("153160"),
   o = a("468437"),
@@ -16,18 +16,18 @@ var r = a("414456"),
     let {
       price: {
         amount: a,
-        currency: r
+        currency: s
       },
       renderPrice: c,
       icon: u,
       className: d,
       variant: f = "heading-md/semibold",
       alwaysWhiteText: m = !0
-    } = e, p = (0, i.formatPrice)(a, r);
-    return (0, s.jsxs)(n.Heading, {
+    } = e, p = (0, i.formatPrice)(a, s);
+    return (0, l.jsxs)(n.Heading, {
       variant: f,
       color: m ? "always-white" : "none",
-      className: l(o.heading, d),
+      className: r(o.heading, d),
       children: [u, null !== (t = null == c ? void 0 : c(p)) && void 0 !== t ? t : p]
     })
   }

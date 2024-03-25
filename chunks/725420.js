@@ -34,7 +34,7 @@ function C(e) {
     transitionState: C,
     onClose: x,
     onSave: N
-  } = e, L = (0, I.useBroadcastingStoredSelectedTags)(), [B, w] = n.useState(L), [M, O] = n.useState(""), p = c.BroadcastAllowFriends.useSetting(), [y, U] = n.useState(null == p || p), b = c.BroadcastAutoBroadcast.useSetting(), [G, j] = n.useState(b), [F, k] = n.useState(!1), [P, H] = n.useState(!1), V = (0, E.useSelfBroadcast)(), Y = (0, _.default)(null == V ? void 0 : V.channelId), z = n.useMemo(() => p !== y || !(0, r.isEqual)(L, B) || b !== G, [p, y, L, B, b, G]), W = null != N, X = n.useMemo(() => y || Object.keys(B[m.RowType.USER]).length > 0 || Object.keys(B[m.RowType.GUILD]).length > 0, [y, B]), q = !X && null != V || !X && W || !z && !W, Q = n.useMemo(() => "@" === M.trim().charAt(0), [M]), J = (0, s.useStateFromStoresArray)([f.default], () => f.default.getGuildIds()), K = (0, I.useFilteredGuilds)(J), Z = n.useMemo(() => K.map(e => e.id), [K]), [$, ee] = (0, I.useBroadcastingPrivacyAudience)(Q, function(e) {
+  } = e, L = (0, I.useBroadcastingStoredSelectedTags)(), [B, w] = n.useState(L), [M, p] = n.useState(""), O = c.BroadcastAllowFriends.useSetting(), [y, U] = n.useState(null == O || O), b = c.BroadcastAutoBroadcast.useSetting(), [G, j] = n.useState(b), [F, k] = n.useState(!1), [P, H] = n.useState(!1), V = (0, E.useSelfBroadcast)(), Y = (0, _.default)(null == V ? void 0 : V.channelId), z = n.useMemo(() => O !== y || !(0, r.isEqual)(L, B) || b !== G, [O, y, L, B, b, G]), W = null != N, X = n.useMemo(() => y || Object.keys(B[m.RowType.USER]).length > 0 || Object.keys(B[m.RowType.GUILD]).length > 0, [y, B]), q = !X && null != V || !X && W || !z && !W, Q = n.useMemo(() => "@" === M.trim().charAt(0), [M]), J = (0, s.useStateFromStoresArray)([f.default], () => f.default.getGuildIds()), K = (0, I.useFilteredGuilds)(J), Z = n.useMemo(() => K.map(e => e.id), [K]), [$, ee] = (0, I.useBroadcastingPrivacyAudience)(Q, function(e) {
     var t;
     let a = (t = M.trim(), Q ? t.slice(1) : t),
       l = RegExp("".concat(T.default.escape(a)), "i");
@@ -59,7 +59,7 @@ function C(e) {
   }
 
   function ea(e) {
-    O(e)
+    p(e)
   }
 
   function el(e, t) {

@@ -21,8 +21,8 @@ let o = "no_payment_source",
   _ = null,
   T = !1,
   I = null,
-  A = !1,
   p = !1,
+  A = !1,
   C = !1,
   P = !1,
   N = null,
@@ -43,7 +43,7 @@ class U extends u.default.Store {
     return T
   }
   get forceConfirmationStepOnMount() {
-    return A
+    return p
   }
   get error() {
     return I
@@ -61,7 +61,7 @@ class U extends u.default.Store {
     return E
   }
   get isIAP() {
-    return p
+    return A
   }
   get giftCode() {
     return c
@@ -76,7 +76,7 @@ class U extends u.default.Store {
 U.displayName = "SKUPaymentModalStore";
 var L = new U(l.default, {
   SKU_PURCHASE_MODAL_OPEN: function(t) {
-    h(), s = t.skuId, S = t.applicationId, p = t.isIAP, d = t.analyticsLocation, N = t.context, P = t.isGift, C = !0, A = !1, i = t.resolve, r = t.reject, I = null, _ = null, E = t.promotionId
+    h(), s = t.skuId, S = t.applicationId, A = t.isIAP, d = t.analyticsLocation, N = t.context, P = t.isGift, C = !0, p = !1, i = t.resolve, r = t.reject, I = null, _ = null, E = t.promotionId
   },
   SKU_PURCHASE_MODAL_CLOSE: function(t) {
     let {
@@ -127,7 +127,7 @@ var L = new U(l.default, {
     T = !1, I = e
   },
   SKU_PURCHASE_SHOW_CONFIRMATION_STEP: function() {
-    A = !0
+    p = !0
   },
   SKU_PURCHASE_CLEAR_ERROR: function() {
     I = null

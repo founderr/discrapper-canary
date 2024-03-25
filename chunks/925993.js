@@ -44,7 +44,7 @@ let m = {
 var _ = function(e) {
   let {
     guild: t
-  } = e, l = r.default.can(f.Permissions.MANAGE_GUILD, t), _ = t.verificationLevel, x = _ === f.VerificationLevels.VERY_HIGH ? d.default : o.default, h = a.useMemo(() => T(_), [_]), p = m[_], R = (0, n.jsx)("div", {
+  } = e, l = r.default.can(f.Permissions.MANAGE_GUILD, t), _ = t.verificationLevel, x = _ === f.VerificationLevels.VERY_HIGH ? d.default : o.default, h = a.useMemo(() => T(_), [_]), p = m[_], M = (0, n.jsx)("div", {
     className: I.verificationLevelTitle,
     children: E.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {
@@ -58,9 +58,9 @@ var _ = function(e) {
         }, "hook")
       }
     })
-  }), M = _ === f.VerificationLevels.VERY_HIGH ? E.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : E.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
+  }), R = _ === f.VerificationLevels.VERY_HIGH ? E.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : E.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
   return (0, n.jsx)(c.default, {
-    title: R,
+    title: M,
     children: (0, n.jsxs)("div", {
       className: I.verificationContainer,
       children: [(0, n.jsx)(x, {
@@ -70,7 +70,7 @@ var _ = function(e) {
       }), (0, n.jsx)(s.Text, {
         className: I.guildVerificationText,
         variant: "text-sm/normal",
-        children: M
+        children: R
       }), l && (0, n.jsx)(s.Clickable, {
         className: I.iconInteractiveContainer,
         onClick: () => (0, s.openModalLazy)(async () => {

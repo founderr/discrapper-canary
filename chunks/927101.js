@@ -4,19 +4,19 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var a = n("884691"),
-  s = n("446674"),
-  l = n("913144"),
+var s = n("884691"),
+  a = n("446674"),
+  r = n("913144"),
   i = n("694787"),
-  r = n("770032");
+  l = n("770032");
 
 function o() {
-  let e = (0, s.useStateFromStoresObject)([r.default], () => ({
-    isLoading: r.default.getIsValidatingUsers(),
-    multiAccountUsers: r.default.getUsers()
+  let e = (0, a.useStateFromStoresObject)([l.default], () => ({
+    isLoading: l.default.getIsValidatingUsers(),
+    multiAccountUsers: l.default.getUsers()
   }));
-  return a.useEffect(() => {
-    l.default.wait(() => {
+  return s.useEffect(() => {
+    r.default.wait(() => {
       i.validateMultiAccountTokens()
     })
   }, []), e

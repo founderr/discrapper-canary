@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var u = n("37983");
 n("884691");
 var a = n("77078"),
-  s = n("272030"),
-  l = n("901582"),
+  l = n("272030"),
+  s = n("901582"),
   i = n("158534"),
   r = n("812204"),
   o = n("861370"),
@@ -25,12 +25,12 @@ var a = n("77078"),
       id: t.id,
       label: p.default.Messages.COPY_ID_USER
     }), M = (0, d.default)(t.id), h = t.isNonUserBot();
-    return (0, u.jsx)(l.default, {
+    return (0, u.jsx)(s.default, {
       context: n,
       object: f.AnalyticsObjects.CONTEXT_MENU,
       children: (0, u.jsxs)(a.Menu, {
         navId: "user-context",
-        onClose: s.closeContextMenu,
+        onClose: l.closeContextMenu,
         "aria-label": p.default.Messages.USER_ACTIONS_MENU_LABEL,
         onSelect: i,
         children: [(0, u.jsxs)(a.MenuGroup, {

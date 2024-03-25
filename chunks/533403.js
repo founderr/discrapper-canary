@@ -9,8 +9,8 @@ var i = l("37983"),
   n = l("414456"),
   s = l.n(n),
   r = l("77078"),
-  c = l("766274"),
-  o = l("368121"),
+  o = l("766274"),
+  c = l("368121"),
   d = l("107294"),
   u = l("633827");
 class f extends a.PureComponent {
@@ -34,7 +34,7 @@ class f extends a.PureComponent {
   renderIcon() {
     return this.props.icon ? (0, i.jsx)("div", {
       className: d.iconContainer,
-      children: (0, i.jsx)(o.default, {
+      children: (0, i.jsx)(c.default, {
         width: 16,
         height: 16,
         foreground: d.foreground,
@@ -56,15 +56,15 @@ class f extends a.PureComponent {
     super(...e), this.defaultRenderUser = (e, t, l, a) => {
       let {
         onClick: n,
-        size: o,
+        size: c,
         guildId: f
-      } = this.props, v = e instanceof c.default ? e : null != e ? e.user : null;
+      } = this.props, v = e instanceof o.default ? e : null != e ? e.user : null;
       return null == v ? (0, i.jsx)("div", {
         className: s(d.emptyUser, t)
       }, l) : (0, i.jsx)(r.Avatar, {
         tabIndex: 0,
-        src: v.getAvatarURL(f, (0, r.getAvatarSize)(o)),
-        size: o,
+        src: v.getAvatarURL(f, (0, r.getAvatarSize)(c)),
+        size: c,
         "aria-label": v.username,
         className: s(t, u.cursorPointer, d.avatarSize),
         onClick: e => null != n ? n(e, v, this._ref) : null

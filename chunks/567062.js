@@ -23,13 +23,13 @@ var n = i("37983"),
       isStuck: I,
       onExpand: T
     } = e, m = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [_, x] = a.useState(!0), [h, p] = a.useState(!1), {
-      ref: R,
-      height: M = 0
+      ref: M,
+      height: R = 0
     } = (0, u.default)(), {
       ref: F,
       height: v = 0
     } = (0, u.default)(), [N, S] = a.useState(l), C = (0, r.useSpring)({
-      height: N ? v + M : M,
+      height: N ? v + R : R,
       immediate: _ || m,
       config: {
         ...r.config.stiff,
@@ -69,7 +69,7 @@ var n = i("37983"),
         }),
         style: C,
         children: [(0, n.jsx)(d.Clickable, {
-          innerRef: R,
+          innerRef: M,
           onClick: I ? void 0 : T,
           className: s(E.innerHeader, {
             [E.toggled]: l && I

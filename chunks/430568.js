@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return v
   }
 }), n("222007"), n("70102"), n("843762"), n("424973");
 var i = n("37983"),
@@ -15,8 +15,8 @@ var i = n("37983"),
   d = n("407063"),
   f = n("845579"),
   p = n("901165"),
-  h = n("62843"),
-  m = n("315102"),
+  m = n("62843"),
+  h = n("315102"),
   S = n("402671"),
   I = n("866190"),
   g = n("115279");
@@ -43,7 +43,7 @@ class C extends a.PureComponent {
     if (null != t) return t;
     if (null != n) {
       let e = g.EMOJI_SIZE_MAP[o];
-      return m.default.getEmojiURL({
+      return h.default.getEmojiURL({
         id: n,
         animated: r && !0 === a && (!0 === s || u || !0 === l),
         size: e
@@ -64,8 +64,8 @@ class C extends a.PureComponent {
       isFocused: d,
       emojiId: f,
       autoplay: p,
-      isInteracting: h,
-      ...m
+      isInteracting: m,
+      ...h
     } = this.props, S = this.getSrc();
     return null == S || "" === S ? (0, i.jsx)("span", {
       className: r("emoji", "emoji-text"),
@@ -74,7 +74,7 @@ class C extends a.PureComponent {
       onMouseEnter: this.onMouseEnter,
       onMouseLeave: this.onMouseLeave
     }), (0, a.createElement)("img", {
-      ...m,
+      ...h,
       key: this.key,
       src: S,
       alt: null !== (e = null != u ? u : n) && void 0 !== e ? e : void 0,
@@ -122,7 +122,7 @@ class C extends a.PureComponent {
 C.defaultProps = {
   isInteracting: !1
 };
-let v = function(e) {
+let E = function(e) {
   if (null == window.IntersectionObserver) return function(t) {
     return (0, i.jsx)(e, {
       ...t,
@@ -187,7 +187,7 @@ let v = function(e) {
           allowAnimatedEmoji: s,
           ...r
         } = this.props;
-      return (0, i.jsx)(h.MessagesInteractionContext.Consumer, {
+      return (0, i.jsx)(m.MessagesInteractionContext.Consumer, {
         children: t => (0, i.jsx)(e, {
           ...r,
           autoplay: a || !1,
@@ -198,14 +198,14 @@ let v = function(e) {
   }
 }(C);
 
-function E(e) {
+function v(e) {
   let t = f.AnimateEmoji.useSetting(),
     n = {
       autoplay: null == e.autoplay ? t : e.autoplay,
       allowAnimatedEmoji: t
     },
     a = __OVERLAY__ ? (0, c.useStateFromStores)([p.default], () => p.default.isInstanceFocused()) : (0, I.useIsWindowFocused)();
-  return (0, i.jsx)(v, {
+  return (0, i.jsx)(E, {
     ...e,
     ...n,
     isFocused: a

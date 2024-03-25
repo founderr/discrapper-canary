@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var l = n("37983");
 n("884691");
 var a = n("77078"),
-  u = n("272030"),
-  i = n("54239"),
+  i = n("272030"),
+  u = n("54239"),
   r = n("158534"),
   o = n("812204"),
   d = n("861370"),
@@ -25,7 +25,7 @@ var a = n("77078"),
     });
     return (0, l.jsxs)(a.Menu, {
       navId: "channel-context",
-      onClose: u.closeContextMenu,
+      onClose: i.closeContextMenu,
       "aria-label": _.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
       onSelect: n,
       children: [(0, l.jsxs)(a.MenuGroup, {
@@ -33,7 +33,7 @@ var a = n("77078"),
           id: "jump-to-channel",
           label: _.default.Messages.JUMP_TO_CHANNEL,
           action: () => {
-            (0, s.transitionToGuild)(t.guild_id, t.id), (0, i.popLayer)()
+            (0, s.transitionToGuild)(t.guild_id, t.id), (0, u.popLayer)()
           }
         })]
       }), (0, l.jsx)(a.MenuGroup, {

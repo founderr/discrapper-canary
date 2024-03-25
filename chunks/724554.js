@@ -8,8 +8,8 @@ var s = n("37983");
 n("884691");
 var a = n("759843"),
   r = n("77078"),
-  l = n("428958"),
-  i = n("124969"),
+  i = n("428958"),
+  l = n("124969"),
   o = n("851460"),
   u = n("782340"),
   d = n("61585");
@@ -18,12 +18,12 @@ function c(e) {
   let {
     onDismiss: t
   } = e;
-  return (0, l.default)({
+  return (0, i.default)({
     type: a.ImpressionTypes.MODAL,
     name: a.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING
-  }), (0, s.jsxs)(i.default, {
+  }), (0, s.jsxs)(l.default, {
     className: d.chooseAccountAuthBox,
-    children: [(0, s.jsx)(i.Title, {
+    children: [(0, s.jsx)(l.Title, {
       children: u.default.Messages.SWITCH_ACCOUNTS_CHOOSE_ACCOUNT
     }), (0, s.jsx)(r.Text, {
       className: d.chooseAccountHelpText,

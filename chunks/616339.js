@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return S
+    return R
   }
 });
 var a = s("37983");
@@ -19,12 +19,12 @@ var r = s("414456"),
   T = s("646718"),
   I = s("782340"),
   f = s("635650"),
-  S = e => {
+  R = e => {
     var t, s;
     let {
       title: r,
-      titleClassName: S = "",
-      subtitle: R = "",
+      titleClassName: R = "",
+      subtitle: S = "",
       description: m = "",
       descriptionCta: N = "",
       isPremiumGetCta: A,
@@ -47,8 +47,8 @@ var r = s("414456"),
       children: [(0, a.jsx)(_.default, {
         title: r,
         cardVariantStyleInfo: L,
-        titleClassName: S,
-        subtitle: R,
+        titleClassName: R,
+        subtitle: S,
         description: m
       }), A && (0, a.jsx)(E.default, {
         subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,

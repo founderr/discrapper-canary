@@ -39,13 +39,13 @@ function I(e) {
   let h = null != t.guild ? new r.default(t.guild) : null,
     p = null != t.channel ? (0, i.createChannelRecordFromInvite)(t.channel) : null,
     T = null != t.target_application ? new l.default(t.target_application) : null,
-    m = I || null == t.inviter ? null : new u.default(t.inviter),
-    N = null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != h && h.hasFeature(c.GuildFeatures.COMMUNITY),
-    g = !N && null != m && (0, o.isGroupInvite)(t),
-    A = _(t),
+    N = I || null == t.inviter ? null : new u.default(t.inviter),
+    m = null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != h && h.hasFeature(c.GuildFeatures.COMMUNITY),
+    A = !m && null != N && (0, o.isGroupInvite)(t),
+    g = _(t),
     S = {
       invite: t,
-      user: m,
+      user: N,
       guild: h,
       channel: p,
       application: T
@@ -53,25 +53,25 @@ function I(e) {
   return (0, o.isEnhancedCommunityInvite)(t) ? (0, s.jsx)(d.default, {
     invite: t,
     channel: p,
-    isSubmitting: A,
+    isSubmitting: g,
     onAcceptInvite: n
   }) : (0, s.jsxs)("div", {
     className: E.container,
     children: [(0, s.jsx)(o.InviteDestinationIcon, {
       application: T,
       guild: h,
-      user: g || (0, o.isDirectInvite)(t) ? m : null
+      user: A || (0, o.isDirectInvite)(t) ? N : null
     }), (0, o.isDirectInvite)(t) ? null : (0, s.jsx)(o.InviteJoinContext, {
       ...S,
-      showBigUserIcon: g
+      showBigUserIcon: A
     }), (0, s.jsx)(o.InviteHeader, {
       ...S,
-      showBigUserIcon: g
+      showBigUserIcon: A
     }), (0, s.jsx)(o.InviteMemberCounts, {
       ...S
     }), (0, s.jsx)(a.Button, {
       onClick: n,
-      submitting: A,
+      submitting: g,
       className: E.acceptButton,
       children: f.default.Messages.INSTANT_INVITE_ACCEPT
     })]

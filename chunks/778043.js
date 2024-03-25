@@ -9,18 +9,18 @@ s.r(t), s.d(t, {
 });
 var a = s("43982"),
   r = s("393414"),
-  n = s("271938"),
-  i = s("773336"),
+  i = s("271938"),
+  n = s("773336"),
   l = s("49111");
-let o = i.isPlatformEmbedded ? l.NOOP : (e, t) => {
+let o = n.isPlatformEmbedded ? l.NOOP : (e, t) => {
     if (!(0, r.hasNavigated)()) return a.default.request(l.RPCCommands.DEEP_LINK, {
       type: e,
       params: t
     })
   },
-  u = i.isPlatformEmbedded ? l.NOOP : (e, t) => {
-    if (!n.default.isAuthenticated()) return o(e, {
+  u = n.isPlatformEmbedded ? l.NOOP : (e, t) => {
+    if (!i.default.isAuthenticated()) return o(e, {
       ...t || {},
-      fingerprint: n.default.getFingerprint()
+      fingerprint: i.default.getFingerprint()
     })
   }

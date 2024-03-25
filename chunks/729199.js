@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   r = s("884691"),
-  n = s("414456"),
-  i = s.n(n),
+  i = s("414456"),
+  n = s.n(i),
   l = s("730290"),
   o = s("446674"),
   u = s("77078"),
@@ -59,7 +59,7 @@ class P extends r.PureComponent {
       inChannel: t,
       isInGuild: s,
       isLurking: r,
-      isAuthenticated: n,
+      isAuthenticated: i,
       className: l,
       pageSize: o
     } = this.props;
@@ -69,7 +69,7 @@ class P extends r.PureComponent {
       _ = this.handleJoinOrView,
       E = u.Button.Looks.FILLED,
       T = u.Button.Colors.PRIMARY;
-    return n ? s ? (E = u.Button.Looks.OUTLINED, T = O.buttonColorInGuild, c = (0, a.jsxs)(m.default, {
+    return i ? s ? (E = u.Button.Looks.OUTLINED, T = O.buttonColorInGuild, c = (0, a.jsxs)(m.default, {
       align: m.default.Align.CENTER,
       children: [(0, a.jsx)("div", {
         children: g.default.Messages.JOINED_GUILD
@@ -77,7 +77,7 @@ class P extends r.PureComponent {
         className: O.joinedCheckmark
       })]
     })) : r && t && (c = g.default.Messages.JOIN_GUILD) : (c = g.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
-      className: i(l, o === p.PageSizes.SMALL ? O.inviteSmall : O.inviteLarge),
+      className: n(l, o === p.PageSizes.SMALL ? O.inviteSmall : O.inviteLarge),
       children: [(0, a.jsx)(S.default, {
         children: g.default.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
       }), (0, a.jsxs)("div", {

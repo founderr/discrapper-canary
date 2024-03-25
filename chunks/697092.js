@@ -4,10 +4,10 @@ s.r(t), s.d(t, {
     return f
   }
 }), s("70102");
-var a, r, n = s("37983");
+var a, r, i = s("37983");
 s("884691");
-var i = s("414456"),
-  l = s.n(i),
+var n = s("414456"),
+  l = s.n(n),
   o = s("446674"),
   u = s("77078"),
   d = s("87657"),
@@ -23,18 +23,18 @@ let T = o.default.connectStores([c.default], () => ({
       className: s,
       animate: a
     } = e;
-    return (0, n.jsxs)("div", {
+    return (0, i.jsxs)("div", {
       className: l(E.staffReviewHeader, s),
-      children: [(0, n.jsx)(d.default, {
+      children: [(0, i.jsx)(d.default, {
         size: u.AvatarSizes.SIZE_32,
         user: t,
         animate: a
-      }), (0, n.jsxs)("div", {
+      }), (0, i.jsxs)("div", {
         className: E.headerText,
-        children: [(0, n.jsx)("div", {
+        children: [(0, i.jsx)("div", {
           className: E.label,
           children: _.default.Messages.APPLICATION_STORE_STAFF_PICK
-        }), (0, n.jsx)("div", {
+        }), (0, i.jsx)("div", {
           className: E.username,
           children: t.username
         })]
@@ -52,12 +52,12 @@ let T = o.default.connectStores([c.default], () => ({
         user: e,
         content: a
       } = t.staffNotes;
-      return null == e ? null : (0, n.jsxs)("div", {
+      return null == e ? null : (0, i.jsxs)("div", {
         className: s,
-        children: [(0, n.jsx)(T, {
+        children: [(0, i.jsx)(T, {
           user: e,
           className: E.header
-        }), (0, n.jsx)("div", {
+        }), (0, i.jsx)("div", {
           className: E.notes,
           children: a
         })]

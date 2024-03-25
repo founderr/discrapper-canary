@@ -44,7 +44,7 @@ var d = n.forwardRef(function(e, t) {
     onDoneLoading: v,
     startTime: p = 0,
     endTime: h
-  } = e, x = n.useRef({}), [C, g] = n.useState([]), E = n.useRef(!1), N = n.useCallback(() => {
+  } = e, x = n.useRef({}), [C, g] = n.useState([]), E = n.useRef(!1), L = n.useCallback(() => {
     let e = x.current.main;
     if (null == e) return;
     let t = (0, r.round)(e.currentTime, 3),
@@ -57,13 +57,13 @@ var d = n.forwardRef(function(e, t) {
   }, [p, h]);
   (0, i.default)(() => {
     if (E.current) {
-      let e = N();
-      e && L()
+      let e = L();
+      e && N()
     }
   });
-  let L = n.useCallback(() => {
-      for (let e of (E.current = !0, N(), Object.values(x.current))) null != e && e.play()
-    }, [N]),
+  let N = n.useCallback(() => {
+      for (let e of (E.current = !0, L(), Object.values(x.current))) null != e && e.play()
+    }, [L]),
     I = n.useCallback(() => {
       for (let e of Object.values(x.current)) null != e && e.pause()
     }, []),
@@ -73,8 +73,8 @@ var d = n.forwardRef(function(e, t) {
     }, []),
     j = n.useCallback(() => {
       var e;
-      (null === (e = x.current.main) || void 0 === e ? void 0 : e.paused) ? L(): I()
-    }, [L, I]),
+      (null === (e = x.current.main) || void 0 === e ? void 0 : e.paused) ? N(): I()
+    }, [N, I]),
     T = n.useCallback(e => {
       x.current.main = e
     }, []),
@@ -87,7 +87,7 @@ var d = n.forwardRef(function(e, t) {
       x.current[t] = e
     }, []);
   return (n.useImperativeHandle(t, () => ({
-    play: L,
+    play: N,
     seek: M,
     pause: I,
     videoElement: x.current.main

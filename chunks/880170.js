@@ -22,8 +22,8 @@ var r = s("414456"),
     let s, r, {
         title: I,
         titleClassName: f,
-        perkImage: S,
-        isCarousel: R,
+        perkImage: R,
+        isCarousel: S,
         onCtaClick: m,
         perkComponent: N,
         subtitle: A = "",
@@ -58,12 +58,12 @@ var r = s("414456"),
         titleClassName: f,
         subtitle: A,
         subtitleClassName: g
-      }), null != S && (0, a.jsx)("img", {
-        src: S,
+      }), null != R && (0, a.jsx)("img", {
+        src: R,
         alt: "",
         className: i({
-          [c.cardImage]: !R,
-          [c.carouselCardImage]: R
+          [c.cardImage]: !S,
+          [c.carouselCardImage]: S
         })
       }), null != N && (0, a.jsx)(a.Fragment, {
         children: (0, a.jsxs)("div", {

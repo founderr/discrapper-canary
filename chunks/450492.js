@@ -4,9 +4,9 @@ a.r(t), a.d(t, {
     return C
   }
 });
-var s = a("37983"),
-  r = a("884691"),
-  l = a("77078"),
+var l = a("37983"),
+  s = a("884691"),
+  r = a("77078"),
   n = a("252744"),
   i = a("685665"),
   o = a("108486"),
@@ -72,23 +72,23 @@ var C = e => {
     disableCustomColor: b = !1
   } = e, {
     analyticsLocations: S
-  } = (0, i.default)(), x = r.useRef(null), T = (0, n.default)(x), {
+  } = (0, i.default)(), x = s.useRef(null), T = (0, n.default)(x), {
     buttonColors: v
   } = (0, d.default)(t.styles), L = null == v || b ? void 0 : {
     background: v.secondary.toHslString(),
     color: v.text.toHslString()
   }, I = b || (null == v ? void 0 : v.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
-  return (0, s.jsx)(l.Tooltip, {
+  return (0, l.jsx)(r.Tooltip, {
     text: m.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: h,
-    children: e => (0, s.jsx)(l.Button, {
+    children: e => (0, l.jsx)(r.Button, {
       ...e,
       buttonRef: x,
       style: L,
       className: p.giftButton,
-      color: b ? l.ButtonColors.BRAND : l.ButtonColors.CUSTOM,
-      look: l.Button.Looks.FILLED,
-      size: l.ButtonSizes.ICON,
+      color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
+      look: r.Button.Looks.FILLED,
+      size: r.ButtonSizes.ICON,
       innerClassName: p.giftButtonInner,
       "aria-label": m.default.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
@@ -102,12 +102,12 @@ var C = e => {
           } : void 0
         })
       },
-      children: E ? (0, s.jsx)(o.SeasonalGiftIcon, {
+      children: E ? (0, l.jsx)(o.SeasonalGiftIcon, {
         hovered: T,
         isContentDismissed: !0,
         themeOverride: I,
         boxColors: g
-      }) : (0, s.jsx)(u.default, {
+      }) : (0, l.jsx)(u.default, {
         width: 24,
         height: 24
       })

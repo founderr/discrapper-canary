@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return M
+    return R
   }
 }), i("222007");
 var n = i("37983"),
@@ -23,7 +23,7 @@ var n = i("37983"),
   h = i("854743"),
   p = i("108288");
 
-function R(e) {
+function M(e) {
   let {
     guild: t,
     isExpanded: l,
@@ -37,7 +37,7 @@ function R(e) {
     } catch {
       f(c)
     }
-  }, R = e => {
+  }, M = e => {
     e && s ? (0, o.openModalLazy)(async () => {
       let {
         ConfirmModal: t
@@ -54,7 +54,7 @@ function R(e) {
         })
       })
     }) : I(e)
-  }, M = () => {
+  }, R = () => {
     (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -97,7 +97,7 @@ function R(e) {
           onMouseDown: E,
           onMouseUp: E,
           onClick: e => {
-            E(e), M()
+            E(e), R()
           },
           children: (0, n.jsx)(o.Tooltip, {
             tooltipContentClassName: p.tooltip,
@@ -111,7 +111,7 @@ function R(e) {
           })
         }), (0, n.jsx)(_.default, {
           checked: c,
-          onChange: () => R(!c)
+          onChange: () => M(!c)
         })]
       }) : (0, n.jsx)(o.Button, {
         size: o.Button.Sizes.SMALL,
@@ -121,13 +121,13 @@ function R(e) {
   })
 }
 
-function M(e) {
+function R(e) {
   var t;
   let {
     guild: i
   } = e, [l, o] = a.useState(!1), [T, m] = a.useState(!1), _ = a.useRef(!1), x = a.useCallback(() => {
     _.current = !0
-  }, []), M = (0, E.useSubmittedGuildJoinRequestTotal)({
+  }, []), R = (0, E.useSubmittedGuildJoinRequestTotal)({
     guildId: i.id
   }), F = (0, r.useStateFromStores)([c.default], () => c.default.get(i.id)), v = null !== (t = null == F ? void 0 : F.formFields) && void 0 !== t ? t : [];
   return a.useEffect(() => {
@@ -135,7 +135,7 @@ function M(e) {
       m(!0)
     })
   }, [i.id]), (0, n.jsx)(d.default, {
-    renderHeader: (0, n.jsx)(R, {
+    renderHeader: (0, n.jsx)(M, {
       guild: i,
       isExpanded: l,
       emptyFormFields: (null == v ? void 0 : v.length) == null || (null == v ? void 0 : v.length) === 0,
@@ -147,7 +147,7 @@ function M(e) {
       className: s(h.itemBodyContainer, p.rulesScreeningItems),
       children: T && (0, n.jsx)(I.default, {
         guild: i,
-        submittedGuildJoinRequestsCount: M,
+        submittedGuildJoinRequestsCount: R,
         formFields: v,
         onFormFieldUpdate: x,
         hideVerificationLevelField: !0

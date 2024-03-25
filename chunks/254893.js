@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983"),
   r = s("884691"),
-  n = s("456015"),
-  i = s("982457"),
+  i = s("456015"),
+  n = s("982457"),
   l = s("154889"),
   o = s("917247"),
   u = s("157829"),
@@ -20,7 +20,7 @@ var a = s("37983"),
     return r.useEffect(() => {
       if (null != s || null != _) {
         let e = (0, u.shouldHitUserOfferEndPoints)("PremiumMarketing");
-        e ? (0, n.acknowledgeUserOffer)(s, _) : null != s && i.default.acknowledgeUserTrialOffer(s)
+        e ? (0, i.acknowledgeUserOffer)(s, _) : null != s && n.default.acknowledgeUserTrialOffer(s)
       }
     }, [s, _]), (0, a.jsx)(d.default, {
       isFullscreen: E

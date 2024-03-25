@@ -189,17 +189,17 @@ function D(e) {
       null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && s && !r && (null == f || f())
     }, [s, f, r]),
     U = [],
-    k = !0;
+    P = !0;
   null == n ? U = [(0, a.jsx)("div", {
     className: i(L.emptyPlaceholder, L.loadingPlaceholder),
     children: (0, a.jsx)(c.Spinner, {})
   }, "spinner")] : 0 === n.length ? U.push((0, a.jsx)(l.Fragment, {
     children: m(S.default.theme)
-  }, "empty-state")) : (k = !1, U = [], o.each(n, e => {
+  }, "empty-state")) : (P = !1, U = [], o.each(n, e => {
     U.push(...p(e))
   }));
-  let P = null;
-  null != n && n.length > 0 && null != f && (P = r ? (0, a.jsx)("div", {
+  let k = null;
+  null != n && n.length > 0 && null != f && (k = r ? (0, a.jsx)("div", {
     className: L.loadingMore,
     children: (0, a.jsx)(c.Spinner, {})
   }, "loading-more-after") : s ? (0, a.jsx)("div", {
@@ -216,7 +216,7 @@ function D(e) {
     children: m(S.default.theme)
   }));
   let w = null == g ? void 0 : g(),
-    G = k && null != w ? (0, a.jsx)("div", {
+    G = P && null != w ? (0, a.jsx)("div", {
       className: L.footer,
       children: (0, a.jsx)(C.default, {
         style: {
@@ -259,7 +259,7 @@ function D(e) {
               })
             }
           })
-        }), P]
+        }), k]
       }), G]
     })
   })
