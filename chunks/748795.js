@@ -1,5 +1,5 @@
 "use strict";
 var r = Function.prototype.call,
-  a = Object.prototype.hasOwnProperty,
+  i = Object.prototype.hasOwnProperty,
   o = n("459078");
-e.exports = o.call(r, a)
+e.exports = o.call(r, i)

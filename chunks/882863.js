@@ -75,7 +75,7 @@ function k(e) {
     if (null !== a(d)) _ = !0, C(L);
     else {
       var t = a(f);
-      null !== t && H(k, t.startTime - e)
+      null !== t && A(k, t.startTime - e)
     }
   }
 }
@@ -96,7 +96,7 @@ function L(e, n) {
     if (null !== m) var u = !0;
     else {
       var l = a(f);
-      null !== l && H(k, l.startTime - n), u = !1
+      null !== l && A(k, l.startTime - n), u = !1
     }
     return u
   } finally {
@@ -143,7 +143,7 @@ function C(e) {
   T = e, D || (D = !0, s())
 }
 
-function H(e, n) {
+function A(e, n) {
   S = v(function() {
     e(t.unstable_now())
   }, n)
@@ -218,7 +218,7 @@ t.unstable_IdlePriority = 5, t.unstable_ImmediatePriority = 1, t.unstable_LowPri
     startTime: o,
     expirationTime: s,
     sortIndex: -1
-  }, o > i ? (e.sortIndex = o, r(f, e), null === a(d) && e === a(f) && (g ? (b(S), S = -1) : g = !0, H(k, o - i))) : (e.sortIndex = s, r(d, e), _ || y || (_ = !0, C(L))), e
+  }, o > i ? (e.sortIndex = o, r(f, e), null === a(d) && e === a(f) && (g ? (b(S), S = -1) : g = !0, A(k, o - i))) : (e.sortIndex = s, r(d, e), _ || y || (_ = !0, C(L))), e
 }, t.unstable_shouldYield = O, t.unstable_wrapCallback = function(e) {
   var t = h;
   return function() {

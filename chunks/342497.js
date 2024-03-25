@@ -96,7 +96,7 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
           description: "whitespace"
         },
         C = /^[ \t\n\r]/,
-        H = {
+        A = {
           type: "class",
           value: "[ \\t\\n\\r]",
           description: "[ \\t\\n\\r]"
@@ -105,7 +105,7 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
           type: "other",
           description: "optionalWhitespace"
         },
-        A = /^[0-9]/,
+        H = /^[0-9]/,
         I = {
           type: "class",
           value: "[0-9]",
@@ -144,12 +144,12 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
           value: "\\#",
           description: '"\\\\#"'
         },
-        q = {
+        G = {
           type: "literal",
           value: "\\{",
           description: '"\\\\{"'
         },
-        G = {
+        q = {
           type: "literal",
           value: "\\}",
           description: '"\\\\}"'
@@ -373,8 +373,8 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
 
       function el() {
         var t, n;
-        if (en++, t = [], C.test(e.charAt(Q)) ? (n = e.charAt(Q), Q++) : (n = l, 0 === en && er(H)), n !== l)
-          for (; n !== l;) t.push(n), C.test(e.charAt(Q)) ? (n = e.charAt(Q), Q++) : (n = l, 0 === en && er(H));
+        if (en++, t = [], C.test(e.charAt(Q)) ? (n = e.charAt(Q), Q++) : (n = l, 0 === en && er(A)), n !== l)
+          for (; n !== l;) t.push(n), C.test(e.charAt(Q)) ? (n = e.charAt(Q), Q++) : (n = l, 0 === en && er(A));
         else t = l;
         return en--, t === l && (n = l, 0 === en && er(j)), t
       }
@@ -387,7 +387,7 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
 
       function ed() {
         var t;
-        return A.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(I)), t
+        return H.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(I)), t
       }
 
       function ef() {
@@ -410,7 +410,7 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
 
       function em() {
         var t, n, r, a, o, i, s, u;
-        if (U.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(K)), t === l && (t = Q, "\\\\" === e.substr(Q, 2) ? (n = "\\\\", Q += 2) : (n = l, 0 === en && er(V)), n !== l && (n = "\\"), (t = n) === l && (t = Q, "\\#" === e.substr(Q, 2) ? (n = "\\#", Q += 2) : (n = l, 0 === en && er(J)), n !== l && (n = "\\#"), (t = n) === l && (t = Q, "\\{" === e.substr(Q, 2) ? (n = "\\{", Q += 2) : (n = l, 0 === en && er(q)), n !== l && (n = "{"), (t = n) === l && (t = Q, "\\}" === e.substr(Q, 2) ? (n = "\\}", Q += 2) : (n = l, 0 === en && er(G)), n !== l && (n = "}"), (t = n) === l))))) {
+        if (U.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(K)), t === l && (t = Q, "\\\\" === e.substr(Q, 2) ? (n = "\\\\", Q += 2) : (n = l, 0 === en && er(V)), n !== l && (n = "\\"), (t = n) === l && (t = Q, "\\#" === e.substr(Q, 2) ? (n = "\\#", Q += 2) : (n = l, 0 === en && er(J)), n !== l && (n = "\\#"), (t = n) === l && (t = Q, "\\{" === e.substr(Q, 2) ? (n = "\\{", Q += 2) : (n = l, 0 === en && er(G)), n !== l && (n = "{"), (t = n) === l && (t = Q, "\\}" === e.substr(Q, 2) ? (n = "\\}", Q += 2) : (n = l, 0 === en && er(q)), n !== l && (n = "}"), (t = n) === l))))) {
           if (t = Q, "\\u" === e.substr(Q, 2) ? (n = "\\u", Q += 2) : (n = l, 0 === en && er($)), n !== l) {
             if (r = Q, a = Q, (o = ef()) !== l && (i = ef()) !== l && (s = ef()) !== l && (u = ef()) !== l ? a = o = [o, i, s, u] : (Q = a, a = l), a !== l && (a = e.substring(r, Q)), (r = a) !== l) t = n = String.fromCharCode(parseInt(r, 16));
             else Q = t, t = l

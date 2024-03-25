@@ -122,9 +122,9 @@ function v(e) {
       isFinalSelection: !e.shiftKey,
       toggleFavorite: n
     })
-  }, Z = () => {
+  }, J = () => {
     !S.current && !T.current && E(t)
-  }, J = e => {
+  }, Z = e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -158,8 +158,8 @@ function v(e) {
       isDisabled: W,
       showPulse: k === a,
       allowAnimatedEmoji: L,
-      onFocus: null != u ? u : Z,
-      onMouseMove: Z,
+      onFocus: null != u ? u : J,
+      onMouseMove: J,
       onMouseEnter: t,
       onMouseLeave: n,
       onClick: e => {
@@ -170,7 +170,7 @@ function v(e) {
         }
         z(e)
       },
-      onContextMenu: J,
+      onContextMenu: Z,
       tabIndex: o,
       columnIndex: Y,
       rowIndex: f,

@@ -50,7 +50,7 @@ var r = n("697309"),
         C = "function" == typeof L ? L(Object.assign({}, t.rects, {
           placement: t.placement
         })) : L,
-        H = "number" == typeof C ? {
+        A = "number" == typeof C ? {
           mainAxis: C,
           altAxis: C
         } : Object.assign({
@@ -58,7 +58,7 @@ var r = n("697309"),
           altAxis: 0
         }, C),
         F = t.modifiersData.offset ? t.modifiersData.offset[t.placement] : null,
-        A = {
+        H = {
           x: 0,
           y: 0
         };
@@ -73,22 +73,22 @@ var r = n("697309"),
             K = w ? -j[z] / 2 : 0,
             V = S === r.start ? P[z] : j[z],
             J = S === r.start ? -j[z] : -P[z],
-            q = t.elements.arrow,
-            G = w && q ? (0, u.default)(q) : {
+            G = t.elements.arrow,
+            q = w && G ? (0, u.default)(G) : {
               width: 0,
               height: 0
             },
             $ = t.modifiersData["arrow#persistent"] ? t.modifiersData["arrow#persistent"].padding : (0, f.default)(),
             Q = $[N],
             X = $[R],
-            Z = (0, s.within)(0, P[z], G[z]),
-            ee = Y ? P[z] / 2 - K - Z - Q - H.mainAxis : V - Z - Q - H.mainAxis,
-            et = Y ? -P[z] / 2 + K + Z + X + H.mainAxis : J + Z + X + H.mainAxis,
+            Z = (0, s.within)(0, P[z], q[z]),
+            ee = Y ? P[z] / 2 - K - Z - Q - A.mainAxis : V - Z - Q - A.mainAxis,
+            et = Y ? -P[z] / 2 + K + Z + X + A.mainAxis : J + Z + X + A.mainAxis,
             en = t.elements.arrow && (0, l.default)(t.elements.arrow),
             er = en ? "y" === x ? en.clientTop || 0 : en.clientLeft || 0 : 0,
             ea = null != (I = null == F ? void 0 : F[x]) ? I : 0,
             eo = (0, s.within)(w ? (0, p.min)(B, W + ee - ea - er) : B, W, w ? (0, p.max)(U, W + et - ea) : U);
-          E[x] = eo, A[x] = eo - W
+          E[x] = eo, H[x] = eo - W
         }
         if (void 0 !== y && y) {
           var ei, es = "x" === x ? r.top : r.left,
@@ -99,12 +99,12 @@ var r = n("697309"),
             ef = el - D[eu],
             ep = -1 !== [(0, r.top), (0, r.left)].indexOf(T),
             em = null != (ei = null == F ? void 0 : F[O]) ? ei : 0,
-            eh = ep ? ed : el - P[ec] - j[ec] - em + H.altAxis,
-            ey = ep ? el + P[ec] + j[ec] - em - H.altAxis : ef,
+            eh = ep ? ed : el - P[ec] - j[ec] - em + A.altAxis,
+            ey = ep ? el + P[ec] + j[ec] - em - A.altAxis : ef,
             e_ = w && ep ? (0, s.withinMaxClamp)(eh, el, ey) : (0, s.within)(w ? eh : ed, el, w ? ey : ef);
-          E[O] = e_, A[O] = e_ - el
+          E[O] = e_, H[O] = e_ - el
         }
-        t.modifiersData[m] = A
+        t.modifiersData[m] = H
       }
     },
     requiresIfExists: ["offset"]

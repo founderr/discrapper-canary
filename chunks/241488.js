@@ -127,8 +127,8 @@ var H = l.memo(function(e) {
     type: W,
     position: Y,
     align: z,
-    positionLayerClassName: Z,
-    closeOnModalOuterClick: J = !1,
+    positionLayerClassName: J,
+    closeOnModalOuterClick: Z = !1,
     parentModalKey: q
   } = e, X = l.useRef(null), Q = l.useRef(!1), $ = l.useRef(), ee = l.useRef(null), et = "left" === z ? x.ResizeOrientation.HORIZONTAL_RIGHT : x.ResizeOrientation.HORIZONTAL_LEFT, {
     drawerWidth: en,
@@ -142,7 +142,7 @@ var H = l.memo(function(e) {
     windowDispatch: er
   } = l.useContext(E.default), eo = (0, c.useStateFromStores)([I.default], () => !I.default.hasLoadedStickerPacks), eu = (0, C.useSoundmojiExperiment)("expression_picker"), ed = null != q, ec = (0, f.useIsModalAtTop)(null != q ? q : ""), ef = l.useCallback(e => {
     var t;
-    if (!ed && (0, f.hasAnyModalOpen)() || ed && !(ec && J)) return;
+    if (!ed && (0, f.hasAnyModalOpen)() || ed && !(ec && Z)) return;
     let {
       target: n
     } = e;
@@ -154,7 +154,7 @@ var H = l.memo(function(e) {
     }(0, M.closeExpressionPicker)();
     let i = null === (t = (0, R.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
     (null == i || "BODY" === i.tagName) && O.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.TEXTAREA_FOCUS)
-  }, [J, ec, ed]), ep = l.useCallback(() => {
+  }, [Z, ec, ed]), ep = l.useCallback(() => {
     (0, M.closeExpressionPicker)()
   }, []);
   l.useLayoutEffect(() => {
@@ -182,7 +182,7 @@ var H = l.memo(function(e) {
     eh = (null === (n = W.stickers) || void 0 === n ? void 0 : n.allowSending) && null != B,
     ex = !(null === (a = W.expressionPicker) || void 0 === a ? void 0 : a.onlyEmojis) && (em || eh),
     eE = "left" === z ? "right" : "left",
-    ey = null != Z ? Z : "left" === z ? D.positionLayerDefaultAlignLeft : D.positionLayerDefaultAlignRight;
+    ey = null != J ? J : "left" === z ? D.positionLayerDefaultAlignLeft : D.positionLayerDefaultAlignRight;
   return (0, i.jsx)(h.default, {
     section: L.AnalyticsSections.EXPRESSION_PICKER,
     children: (0, i.jsx)(A.AppReferencePositionLayer, {
