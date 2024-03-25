@@ -18,16 +18,16 @@ let c = {},
   E = {},
   C = 10 * a.default.Millis.MINUTE;
 
-function f(t) {
+function _(t) {
   return "guild:".concat(t)
 }
 
-function _(t) {
+function f(t) {
   return "guild:".concat(t, ":published")
 }
-let T = new i.default(t => {
-    let e = [f(t.guild_id)];
-    return t.published && e.push(_(t.guild_id)), e
+let T = new i.SecondaryIndexMap(t => {
+    let e = [_(t.guild_id)];
+    return t.published && e.push(f(t.guild_id)), e
   }, t => (function(t) {
     let e = o.default.extractTimestamp(t.id);
     return t.published ? -e : -e + 1e12
@@ -45,7 +45,7 @@ class U extends d.default.Store {
     let {
       publishedOnly: u
     } = e;
-    return null == t ? D : T.values(u ? _(t) : f(t))
+    return null == t ? D : T.values(u ? f(t) : _(t))
   }
   getGuildProductFetchState(t) {
     var e;
@@ -66,7 +66,7 @@ var F = new U(r.default, {
       guildId: e
     } = t;
     c[e] = 1;
-    let u = [...T.values(f(e))];
+    let u = [...T.values(_(e))];
     u.forEach(t => {
       T.delete(t.id)
     })
