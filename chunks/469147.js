@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return h
   }
 }), n("222007");
 var a = n("37983"),
@@ -14,22 +14,22 @@ var a = n("37983"),
   d = n("142833"),
   u = n("448993"),
   _ = n("813006"),
-  N = n("476263"),
-  E = n("466857"),
-  m = n("587974"),
-  f = n("315102"),
-  I = n("238055"),
+  E = n("476263"),
+  N = n("466857"),
+  I = n("587974"),
+  m = n("315102"),
+  f = n("238055"),
   C = n("782340"),
   T = n("69012"),
   S = n("529861");
 
-function h(e) {
+function g(e) {
   var t;
   let {
     guildInfo: n,
     onClick: s,
     submitting: l
-  } = e, i = null !== (t = f.default.getGuildIconURL({
+  } = e, i = null !== (t = m.default.getGuildIconURL({
     id: n.id,
     icon: n.icon,
     size: 40
@@ -37,15 +37,15 @@ function h(e) {
   return (0, a.jsxs)(c.Clickable, {
     className: T.clickableGuildInfoRow,
     onClick: s,
-    children: [(0, a.jsx)(m.default, {
-      mask: m.default.Masks.AVATAR_DEFAULT,
+    children: [(0, a.jsx)(I.default, {
+      mask: I.default.Masks.AVATAR_DEFAULT,
       width: 40,
       height: 40,
-      children: (0, a.jsx)(N.default, {
+      children: (0, a.jsx)(E.default, {
         className: T.guildIcon,
         iconSrc: i,
         guild: new _.default(n),
-        size: N.default.Sizes.MEDIUM
+        size: E.default.Sizes.MEDIUM
       })
     }), (0, a.jsx)(c.Text, {
       className: T.guildName,
@@ -60,24 +60,24 @@ function h(e) {
     })]
   })
 }
-var g = e => {
+var h = e => {
   let {
     setStep: t,
     email: n,
     guildsInfo: l,
     setGuildId: r,
     forceGuildScrollHeight: _
-  } = e, [N, m] = s.useState(null), [f, S] = s.useState(void 0), [g, p] = s.useState(null), x = e => async () => {
-    m(null), r(e), p(e);
+  } = e, [E, I] = s.useState(null), [m, S] = s.useState(void 0), [h, A] = s.useState(null), p = e => async () => {
+    I(null), r(e), A(e);
     try {
-      await d.default.sendVerificationEmail(n, !0, e), t(I.HubEmailConnectionSteps.VERIFY_PIN)
+      await d.default.sendVerificationEmail(n, !0, e), t(f.HubEmailConnectionSteps.VERIFY_PIN)
     } catch (e) {
-      m(new u.APIError(e))
+      I(new u.APIError(e))
     } finally {
-      p(null)
+      A(null)
     }
-  }, v = () => t(I.HubEmailConnectionSteps.SUBMIT_SCHOOL), A = l;
-  return null != f && "" !== f && (A = l.filter(e => o(f.toLowerCase(), e.name.toLowerCase()))), (0, a.jsxs)("div", {
+  }, x = () => t(f.HubEmailConnectionSteps.SUBMIT_SCHOOL), v = l;
+  return null != m && "" !== m && (v = l.filter(e => o(m.toLowerCase(), e.name.toLowerCase()))), (0, a.jsxs)("div", {
     className: T.container,
     children: [(0, a.jsx)(c.Heading, {
       className: i(T.centerText, T.header),
@@ -90,7 +90,7 @@ var g = e => {
         variant: "text-sm/normal",
         color: "header-secondary",
         children: C.default.Messages.HUB_EMAIL_CONNECTION_GUILD_SELECT_SUBHEADER.format({
-          onJoinWaitlist: v
+          onJoinWaitlist: x
         })
       })
     }), (0, a.jsxs)("div", {
@@ -99,7 +99,7 @@ var g = e => {
       }),
       children: [(0, a.jsxs)("div", {
         className: T.searchContainer,
-        children: [(0, a.jsx)(E.default, {
+        children: [(0, a.jsx)(N.default, {
           placeholder: C.default.Messages.SEARCH,
           className: T.searchBox,
           inputClassName: T.searchBoxInput,
@@ -109,21 +109,21 @@ var g = e => {
             S(e)
           },
           label: C.default.Messages.SEARCH,
-          searchTerm: f,
+          searchTerm: m,
           onClear: () => {
             S(void 0)
           }
         }), (0, a.jsx)(c.Text, {
           color: "text-danger",
           variant: "text-xs/normal",
-          children: null == N ? void 0 : N.getAnyErrorMessage()
+          children: null == E ? void 0 : E.getAnyErrorMessage()
         })]
-      }), A.length > 0 ? (0, a.jsx)(c.ScrollerThin, {
+      }), v.length > 0 ? (0, a.jsx)(c.ScrollerThin, {
         className: T.scroller,
-        children: A.map(e => void 0 === e ? null : (0, a.jsx)(h, {
+        children: v.map(e => void 0 === e ? null : (0, a.jsx)(g, {
           guildInfo: e,
-          onClick: x(e.id),
-          submitting: g === e.id
+          onClick: p(e.id),
+          submitting: h === e.id
         }, e.id))
       }) : (0, a.jsx)("div", {
         className: T.noResultsContainer,
@@ -139,7 +139,7 @@ var g = e => {
             className: T.centerText,
             variant: "text-md/normal",
             children: C.default.Messages.HUB_EMAIL_CONNECTION_GUILD_SELECT_NO_RESULTS_SUBHEADER.format({
-              onJoinWaitlist: v
+              onJoinWaitlist: x
             })
           })]
         })

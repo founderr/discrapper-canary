@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("70102");
 var s, a, l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  u = n.n(r),
+  r = n("884691"),
+  i = n("414456"),
+  u = n.n(i),
   o = n("446674"),
   d = n("913144"),
   c = n("437822"),
@@ -18,21 +18,21 @@ var s, a, l = n("37983"),
   h = n("970366"),
   p = n("271938"),
   T = n("476108"),
-  N = n("55411"),
-  m = n("686470"),
-  A = n("552712"),
-  g = n("124969"),
+  m = n("55411"),
+  N = n("686470"),
+  g = n("552712"),
+  A = n("124969"),
   S = n("659632"),
-  v = n("701909"),
-  O = n("158998"),
-  C = n("404432"),
+  C = n("701909"),
+  v = n("158998"),
+  O = n("404432"),
   R = n("291850"),
   L = n("860959"),
-  D = n("49111"),
-  x = n("782340"),
-  M = n("890957");
+  x = n("49111"),
+  M = n("782340"),
+  D = n("890957");
 o.default.initialize(), (a = s || (s = {})).REGISTER = "register", a.LOGIN = "login";
-class P extends i.PureComponent {
+class P extends r.PureComponent {
   componentDidMount() {
     let {
       authenticated: e,
@@ -78,15 +78,15 @@ class P extends i.PureComponent {
     } = this.props, {
       error: s
     } = this.state, a = null != s ? s.code : null;
-    return a === D.AbortCodes.INVALID_GIFT_SELF_REDEMPTION ? x.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : a === D.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === D.SKUProductLines.COLLECTIBLES ? x.default.Messages.GIFT_ERROR_OWNED : null != t || a === D.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED ? x.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({
-      libraryLink: D.Routes.APPLICATION_LIBRARY
-    }) : e.isClaimed || a === D.AbortCodes.INVALID_GIFT_REDEMPTION_EXHAUSTED ? x.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : a === D.AbortCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? x.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0
+    return a === x.AbortCodes.INVALID_GIFT_SELF_REDEMPTION ? M.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : a === x.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === x.SKUProductLines.COLLECTIBLES ? M.default.Messages.GIFT_ERROR_OWNED : null != t || a === x.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED ? M.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({
+      libraryLink: x.Routes.APPLICATION_LIBRARY
+    }) : e.isClaimed || a === x.AbortCodes.INVALID_GIFT_REDEMPTION_EXHAUSTED ? M.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : a === x.AbortCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? M.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0
   }
   renderSpinner(e) {
-    return (0, l.jsxs)(g.default, {
-      children: [(0, l.jsx)(g.Title, {
+    return (0, l.jsxs)(A.default, {
+      children: [(0, l.jsx)(A.Title, {
         children: e
-      }), (0, l.jsx)(g.AuthSpinner, {})]
+      }), (0, l.jsx)(A.AuthSpinner, {})]
     })
   }
   renderExpiredInvite() {
@@ -94,40 +94,40 @@ class P extends i.PureComponent {
       defaultRoute: e,
       transitionTo: t
     } = this.props;
-    return (0, l.jsxs)(g.default, {
-      children: [(0, l.jsx)(g.Image, {
+    return (0, l.jsxs)(A.default, {
+      children: [(0, l.jsx)(A.Image, {
         src: n("653240"),
-        className: M.marginBottom8
-      }), (0, l.jsx)(g.Title, {
-        className: u(M.marginTop8, M.marginBottom8),
-        children: x.default.Messages.GIFT_CODE_AUTH_INVALID_TITLE
-      }), (0, l.jsx)(g.SubTitle, {
-        children: x.default.Messages.GIFT_CODE_AUTH_INVALID_BODY
-      }), (0, l.jsx)(g.Button, {
-        className: u(M.marginTop40, M.marginBottom8),
+        className: D.marginBottom8
+      }), (0, l.jsx)(A.Title, {
+        className: u(D.marginTop8, D.marginBottom8),
+        children: M.default.Messages.GIFT_CODE_AUTH_INVALID_TITLE
+      }), (0, l.jsx)(A.SubTitle, {
+        children: M.default.Messages.GIFT_CODE_AUTH_INVALID_BODY
+      }), (0, l.jsx)(A.Button, {
+        className: u(D.marginTop40, D.marginBottom8),
         onClick: () => t(e),
-        children: x.default.Messages.CONTINUE_TO_WEBAPP
-      }), (0, l.jsx)(g.Button, {
-        onClick: () => window.open(v.default.getArticleURL(D.HelpdeskArticles.GIFTING), "_blank"),
-        look: g.Button.Looks.LINK,
-        color: g.Button.Colors.LINK,
-        children: x.default.Messages.GIFT_CODE_AUTH_INVALID_TIP
+        children: M.default.Messages.CONTINUE_TO_WEBAPP
+      }), (0, l.jsx)(A.Button, {
+        onClick: () => window.open(C.default.getArticleURL(x.HelpdeskArticles.GIFTING), "_blank"),
+        look: A.Button.Looks.LINK,
+        color: A.Button.Colors.LINK,
+        children: M.default.Messages.GIFT_CODE_AUTH_INVALID_TIP
       })]
     })
   }
   renderAppOpened() {
-    return (0, l.jsxs)(g.default, {
-      children: [(0, l.jsx)(g.Title, {
-        className: M.marginBottom8,
-        children: x.default.Messages.APP_OPENED_TITLE
-      }), (0, l.jsx)(g.SubTitle, {
-        children: x.default.Messages.APP_OPENED_BODY
-      }), (0, l.jsx)(g.Button, {
-        className: M.marginTop40,
+    return (0, l.jsxs)(A.default, {
+      children: [(0, l.jsx)(A.Title, {
+        className: D.marginBottom8,
+        children: M.default.Messages.APP_OPENED_TITLE
+      }), (0, l.jsx)(A.SubTitle, {
+        children: M.default.Messages.APP_OPENED_BODY
+      }), (0, l.jsx)(A.Button, {
+        className: D.marginTop40,
         onClick: () => this.setState({
           continueOnWeb: !0
         }),
-        children: x.default.Messages.GIFT_CODE_AUTH_CONTINUE_IN_BROWSER
+        children: M.default.Messages.GIFT_CODE_AUTH_CONTINUE_IN_BROWSER
       })]
     })
   }
@@ -135,48 +135,48 @@ class P extends i.PureComponent {
     let {
       sentVerification: t
     } = this.state;
-    return (0, l.jsxs)(g.default, {
-      children: [(0, l.jsx)(g.Image, {
+    return (0, l.jsxs)(A.default, {
+      children: [(0, l.jsx)(A.Image, {
         src: n("951536"),
-        className: M.marginBottom8
-      }), (0, l.jsx)(g.Title, {
-        children: x.default.Messages.GIFT_CODE_AUTH_VERIFICATION_TITLE.format({
+        className: D.marginBottom8
+      }), (0, l.jsx)(A.Title, {
+        children: M.default.Messages.GIFT_CODE_AUTH_VERIFICATION_TITLE.format({
           username: e.username
         })
-      }), (0, l.jsx)(g.SubTitle, {
-        className: M.marginTop20,
-        children: x.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_VERIFICATION_REQUIRED
-      }), (0, l.jsx)(g.Button, {
+      }), (0, l.jsx)(A.SubTitle, {
+        className: D.marginTop20,
+        children: M.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_VERIFICATION_REQUIRED
+      }), (0, l.jsx)(A.Button, {
         disabled: t,
-        className: M.marginTop40,
+        className: D.marginTop40,
         onClick: this.handleResendVerification,
-        children: t ? x.default.Messages.GIFT_CODE_AUTH_VERIFICATION_SENT : x.default.Messages.RESEND_VERIFICATION_EMAIL
-      }), (0, l.jsx)(g.Button, {
-        look: g.Button.Looks.LINK,
-        color: g.Button.Colors.LINK,
+        children: t ? M.default.Messages.GIFT_CODE_AUTH_VERIFICATION_SENT : M.default.Messages.RESEND_VERIFICATION_EMAIL
+      }), (0, l.jsx)(A.Button, {
+        look: A.Button.Looks.LINK,
+        color: A.Button.Colors.LINK,
         onClick: this.refreshUser,
-        className: M.marginTop8,
-        children: x.default.Messages.GIFT_CODE_AUTH_CHECK_VERIFICATION_AGAIN
+        className: D.marginTop8,
+        children: M.default.Messages.GIFT_CODE_AUTH_CHECK_VERIFICATION_AGAIN
       })]
     })
   }
   renderAuthenticated(e, t) {
     let n = this.getErrorMessage(e);
-    return (0, l.jsxs)(g.default, {
-      children: [(0, l.jsx)(C.default, {
+    return (0, l.jsxs)(A.default, {
+      children: [(0, l.jsx)(O.default, {
         giftCode: e
-      }), (0, l.jsx)(g.Button, {
+      }), (0, l.jsx)(A.Button, {
         disabled: null != n,
-        className: M.marginTop40,
+        className: D.marginTop40,
         onClick: this.handleAccept,
-        children: x.default.Messages.GIFT_CODE_AUTH_ACCEPT
-      }), null != n ? (0, l.jsx)(g.SubTitle, {
-        className: M.marginTop20,
+        children: M.default.Messages.GIFT_CODE_AUTH_ACCEPT
+      }), null != n ? (0, l.jsx)(A.SubTitle, {
+        className: D.marginTop20,
         children: n
-      }) : (0, l.jsx)(g.SubText, {
-        className: M.marginTop20,
-        children: x.default.Messages.GIFT_CODE_AUTH_LOGGED_IN_AS.format({
-          userTag: O.default.getUserTag(t),
+      }) : (0, l.jsx)(A.SubText, {
+        className: D.marginTop20,
+        children: M.default.Messages.GIFT_CODE_AUTH_LOGGED_IN_AS.format({
+          userTag: v.default.getUserTag(t),
           onLogoutClick: this.handleLogout
         })
       })]
@@ -189,31 +189,31 @@ class P extends i.PureComponent {
       authenticated: n,
       giftCode: s,
       isResolved: a,
-      isAccepting: i,
-      transitionTo: r,
+      isAccepting: r,
+      transitionTo: i,
       location: u
     } = this.props, {
       fetchingUser: o,
       continueOnWeb: d
     } = this.state;
-    if (e === D.NativeAppStates.OPEN && !d) return this.renderAppOpened();
-    if (e === D.NativeAppStates.OPENING) return this.renderSpinner(x.default.Messages.APP_OPENING);
-    if (i) return this.renderSpinner(x.default.Messages.GIFT_CODE_AUTH_ACCEPTING);
-    if (null == s) return a ? this.renderExpiredInvite() : this.renderSpinner(x.default.Messages.GIFT_CODE_AUTH_RESOLVING);
+    if (e === x.NativeAppStates.OPEN && !d) return this.renderAppOpened();
+    if (e === x.NativeAppStates.OPENING) return this.renderSpinner(M.default.Messages.APP_OPENING);
+    if (r) return this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_ACCEPTING);
+    if (null == s) return a ? this.renderExpiredInvite() : this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_RESOLVING);
     if (a) {
       if (n) {
         let e = this.state.currentUser;
-        return o || null == e ? this.renderSpinner(x.default.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e)
+        return o || null == e ? this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e)
       }
       return "login" === this.getMode() ? (0, l.jsx)(R.default, {
         giftCodeSKU: t,
         giftCode: s,
-        transitionTo: r,
+        transitionTo: i,
         location: u
       }) : (0, l.jsx)(L.default, {
         giftCodeSKU: t,
         giftCode: s,
-        transitionTo: r,
+        transitionTo: i,
         location: u
       })
     }
@@ -239,7 +239,7 @@ class P extends i.PureComponent {
       }))
     }, this.handleLogout = () => {
       let e = this.props.match.params.giftCode;
-      c.default.logout(D.Routes.GIFT_CODE_LOGIN(e))
+      c.default.logout(x.Routes.GIFT_CODE_LOGIN(e))
     }, this.handleResendVerification = () => {
       c.default.verifyResend(), this.setState({
         sentVerification: !0
@@ -256,7 +256,7 @@ class P extends i.PureComponent {
           error: null
         }), await f.default.redeemGiftCode({
           code: n
-        }), e(D.Routes.APP)
+        }), e(x.Routes.APP)
       } catch (e) {
         this.setState({
           error: e
@@ -267,24 +267,24 @@ class P extends i.PureComponent {
         transitionTo: e
       } = this.props, t = this.getCode();
       f.default.resolveGiftCode(t, !0, !0).then(n => {
-        null != n && null != n.giftCode.promotion && e(D.Routes.BILLING_PROMOTION_REDEMPTION(t))
+        null != n && null != n.giftCode.promotion && e(x.Routes.BILLING_PROMOTION_REDEMPTION(t))
       })
     }
   }
 }
-var U = o.default.connectStores([N.default, m.default, p.default, A.default, T.default, I.default], e => {
+var U = o.default.connectStores([m.default, N.default, p.default, g.default, T.default, I.default], e => {
   let t = e.match.params.giftCode,
-    n = N.default.get(t),
-    s = null != n ? A.default.get(n.skuId) : null;
+    n = m.default.get(t),
+    s = null != n ? g.default.get(n.skuId) : null;
   return {
     giftCode: n,
     sku: s,
-    libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, m.default) : null,
+    libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, N.default) : null,
     authenticated: p.default.isAuthenticated(),
     defaultRoute: T.default.defaultRoute,
-    isResolved: N.default.getIsResolved(t),
-    isAccepting: N.default.getIsAccepting(t),
-    libraryApplicationsFetched: m.default.fetched,
+    isResolved: m.default.getIsResolved(t),
+    isAccepting: m.default.getIsAccepting(t),
+    libraryApplicationsFetched: N.default.fetched,
     nativeAppState: I.default.getState(t)
   }
 })(P)

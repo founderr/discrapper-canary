@@ -8,8 +8,8 @@ var s = n("37983");
 n("884691");
 var a = n("414456"),
   r = n.n(a),
-  i = n("77078"),
-  l = n("145131"),
+  l = n("77078"),
+  i = n("145131"),
   o = n("124969"),
   u = n("803230"),
   d = n("890957");
@@ -20,14 +20,14 @@ function c(e) {
     onChange: n,
     subText: a,
     muted: c,
-    marginTopStyle: f
+    marginTopStyle: E
   } = e;
-  return (0, s.jsx)(l.default, {
-    className: null != f ? f : d.marginTop20,
-    align: l.default.Align.CENTER,
-    children: (0, s.jsx)(i.Checkbox, {
+  return (0, s.jsx)(i.default, {
+    className: null != E ? E : d.marginTop20,
+    align: i.default.Align.CENTER,
+    children: (0, s.jsx)(l.Checkbox, {
       value: t,
-      type: i.Checkbox.Types.INVERTED,
+      type: l.Checkbox.Types.INVERTED,
       onChange: (e, t) => n(t),
       className: u.checkbox,
       children: (0, s.jsx)(o.SubText, {

@@ -16,7 +16,7 @@ var a, l = n("872717"),
 let h = 1 * u.default.Millis.HOUR,
   E = 7 * u.default.Millis.DAY,
   m = 1 * u.default.Millis.DAY,
-  p = s.default.get("lastNonRequiredUpdateShown", Date.now()),
+  p = s.Storage.get("lastNonRequiredUpdateShown", Date.now()),
   S = new o.default("AutoUpdateManager");
 a = class {
   destroy() {
@@ -68,10 +68,10 @@ a = class {
         },
         oldFormErrors: !0
       }).then(e => {
-        if (null == e.body || "2e8c5bcf8d772b2a6cf1e45fdd4b4cd5eed7c7b2" === e.body.hash) return this._handleUpdateNotAvailable();
+        if (null == e.body || "42958d14a5444760a534877d1537c96fce42b417" === e.body.hash) return this._handleUpdateNotAvailable();
         if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
         let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? E : m;
-        if (Date.now() - p > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
+        if (Date.now() - p > t) return s.Storage.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
       }, () => this._handleUpdateError())
     }, this._handleUpdateNotAvailable = () => {
       i.default.dispatch({

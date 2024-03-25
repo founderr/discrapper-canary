@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return g
   }
 }), n("222007");
 var s = n("37983"),
   a = n("884691"),
   r = n("483366"),
-  i = n.n(r),
-  l = n("458960"),
+  l = n.n(r),
+  i = n("458960"),
   o = n("394846"),
   u = n("769846"),
   d = n("77078"),
   c = n("159885"),
-  f = n("26232");
-let E = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-  h = {
+  E = n("26232");
+let f = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+  _ = {
     START: 0,
     END: 1
   },
-  g = {
+  h = {
     friction: 10,
     tension: 130
   };
-var _ = function(e) {
+var g = function(e) {
   return class extends a.Component {
     componentDidMount() {
       !o.isMobile && (window.addEventListener("resize", this.handleResizeDebounced), this.handleResize())
@@ -32,18 +32,18 @@ var _ = function(e) {
       clearTimeout(this.timeout), window.removeEventListener("resize", this.handleResizeDebounced)
     }
     componentWillAppear(e) {
-      this.state.shouldAnimate ? this.animateTo(h.END, e) : e()
+      this.state.shouldAnimate ? this.animateTo(_.END, e) : e()
     }
     componentWillEnter(e) {
-      this.state.shouldAnimate ? (clearTimeout(this.timeout), this.timeout = setTimeout(() => this.animateTo(h.END, e), 40)) : e()
+      this.state.shouldAnimate ? (clearTimeout(this.timeout), this.timeout = setTimeout(() => this.animateTo(_.END, e), 40)) : e()
     }
     componentWillLeave(e) {
-      this.state.shouldAnimate ? this.animateTo(h.START, e) : e()
+      this.state.shouldAnimate ? this.animateTo(_.START, e) : e()
     }
     animateTo(e, t) {
-      l.default.spring(this.anim, {
+      i.default.spring(this.anim, {
         toValue: e,
-        ...g
+        ...h
       }).start(t)
     }
     getAnimatedStyle(e) {
@@ -66,13 +66,13 @@ var _ = function(e) {
     }
     render() {
       return (0, s.jsx)("div", {
-        className: f.wrapper,
+        className: E.wrapper,
         children: (0, s.jsx)(d.AccessibilityPreferencesContext.Consumer, {
           children: t => {
             let {
               reducedMotion: n
             } = t;
-            return (0, s.jsx)(l.default.div, {
+            return (0, s.jsx)(i.default.div, {
               style: this.getAnimatedStyle(n.enabled),
               children: (0, s.jsx)(e, {
                 ...this.props
@@ -83,14 +83,14 @@ var _ = function(e) {
       })
     }
     constructor(...e) {
-      super(...e), this.anim = new l.default.Value(h.START), this.state = {
+      super(...e), this.anim = new i.default.Value(_.START), this.state = {
         shouldAnimate: !o.isMobile
       }, this.handleResize = () => {
-        let e = window.innerWidth > E;
-        !this.state.shouldAnimate && e && this.anim.setValue(h.END), this.setState({
+        let e = window.innerWidth > f;
+        !this.state.shouldAnimate && e && this.anim.setValue(_.END), this.setState({
           shouldAnimate: e
         })
-      }, this.handleResizeDebounced = i(this.handleResize, 60)
+      }, this.handleResizeDebounced = l(this.handleResize, 60)
     }
   }
 }

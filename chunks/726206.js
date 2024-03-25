@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return N
   }
 }), n("222007");
 var s = n("37983"),
   a = n("884691"),
   l = n("414456"),
-  i = n.n(l),
-  r = n("446674"),
+  r = n.n(l),
+  i = n("446674"),
   u = n("437822"),
   o = n("457108"),
   d = n("724038"),
@@ -20,8 +20,8 @@ var s = n("37983"),
   h = n("782340"),
   p = n("180688"),
   T = n("890957");
-r.default.initialize();
-class N extends a.PureComponent {
+i.default.initialize();
+class m extends a.PureComponent {
   componentDidMount() {
     this.handleVerify(), (0, c.trackAppUIViewed)("verify_email")
   }
@@ -29,7 +29,7 @@ class N extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("768025"),
-        className: i(p.image, T.marginBottom20)
+        className: r(p.image, T.marginBottom20)
       }), (0, s.jsx)(E.Title, {
         className: T.marginBottom8,
         children: h.default.Messages.VERFICATION_EXPIRED
@@ -46,7 +46,7 @@ class N extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("176872"),
-        className: i(p.image, T.marginBottom20)
+        className: r(p.image, T.marginBottom20)
       }), (0, s.jsx)(E.Title, {
         className: T.marginBottom40,
         children: h.default.Messages.VERIFICATION_VERIFIED
@@ -60,7 +60,7 @@ class N extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("951536"),
-        className: i(p.image, T.marginBottom20)
+        className: r(p.image, T.marginBottom20)
       }), (0, s.jsx)(E.Title, {
         className: T.marginBottom8,
         children: h.default.Messages.VERIFICATION_VERIFYING
@@ -99,13 +99,13 @@ class N extends a.PureComponent {
     }
   }
 }
-N.defaultProps = {
+m.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var m = r.default.connectStores([f.default], () => ({
+var N = i.default.connectStores([f.default], () => ({
   verifyFailed: f.default.didVerifyFail(),
   verifyErrors: f.default.getVerifyErrors(),
   verifySucceeded: f.default.didVerifySucceed(),
   fingerprint: f.default.getFingerprint(),
   verifyingUserId: f.default.getVerifyingUserId()
-}))(N)
+}))(m)

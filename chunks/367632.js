@@ -14,14 +14,14 @@ a.r(t), a.d(t, {
   }
 }), a("424973");
 var n = a("759843"),
-  l = a("872717"),
-  o = a("147746");
+  o = a("872717"),
+  l = a("147746");
 a("18108"), a("773336");
 var s = a("840707"),
   r = a("49111"),
   i = a("782340");
 async function c() {
-  let e = await l.HTTP.get({
+  let e = await o.HTTP.get({
     url: r.Endpoints.BUG_REPORTS
   });
   return e.body
@@ -56,7 +56,7 @@ function d() {
   }]
 }
 async function m(e, t, a) {
-  var l, i;
+  var o, i;
   let c = [{
     name: "name",
     value: e.name
@@ -74,7 +74,7 @@ async function m(e, t, a) {
     name: "external_url",
     value: e.url
   });
-  let u = null === (l = e.feature) || void 0 === l ? void 0 : l.asana_inbox_id;
+  let u = null === (o = e.feature) || void 0 === o ? void 0 : o.asana_inbox_id;
   null != u && "" !== u && c.push({
     name: "asana_inbox_id",
     value: "".concat(u)
@@ -104,7 +104,7 @@ async function m(e, t, a) {
   }), c.push({
     name: "locale",
     value: t.locale
-  })), (0, o.uploadDebugLogFiles)(r.DebugLogCategory.WEB_APP);
+  })), (0, l.uploadDebugLogFiles)(r.DebugLogCategory.WEB_APP);
   try {
     return await s.default.post({
       url: r.Endpoints.BUG_REPORTS,

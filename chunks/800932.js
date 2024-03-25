@@ -1,173 +1,173 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return g
+    return O
   }
-}), s("222007");
-var a = s("37983"),
-  l = s("884691"),
-  n = s("414456"),
-  r = s.n(n),
-  u = s("917351"),
-  E = s.n(u),
-  d = s("509043"),
-  i = s("669491"),
-  _ = s("77078"),
-  L = s("437822"),
-  c = s("327037"),
-  o = s("68130"),
-  T = s("697218"),
-  M = s("461380"),
-  f = s("593195"),
-  C = s("368121"),
-  A = s("767517"),
-  I = s("5487"),
-  R = s("932180"),
-  S = s("473759"),
-  m = s("49111"),
-  D = s("782340"),
-  O = s("828999");
+}), n("222007");
+var s = n("37983"),
+  a = n("884691"),
+  l = n("414456"),
+  r = n.n(l),
+  i = n("917351"),
+  u = n.n(i),
+  o = n("509043"),
+  d = n("669491"),
+  c = n("77078"),
+  f = n("437822"),
+  E = n("327037"),
+  _ = n("68130"),
+  I = n("697218"),
+  h = n("461380"),
+  p = n("593195"),
+  T = n("368121"),
+  m = n("767517"),
+  N = n("5487"),
+  g = n("932180"),
+  A = n("473759"),
+  S = n("49111"),
+  C = n("782340"),
+  v = n("828999");
 
-function g(e) {
+function O(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    [s, n] = l.useState(""),
-    [r, u] = l.useState(null),
-    [E, d] = l.useState(null),
-    i = (0, I.default)(e.code);
-  l.useEffect(() => {
+    [n, l] = a.useState(""),
+    [r, i] = a.useState(null),
+    [u, o] = a.useState(null),
+    d = (0, N.default)(e.code);
+  a.useEffect(() => {
     (async function e() {
-      let e = T.default.getCurrentUser();
+      let e = I.default.getCurrentUser();
       if (null == e) try {
-        e = await (0, c.fetchCurrentUser)()
+        e = await (0, E.fetchCurrentUser)()
       } catch (e) {
-        L.default.verifySSOToken(null)
+        f.default.verifySSOToken(null)
       }
-      null != e && n(i.defaultName.format({
+      null != e && l(d.defaultName.format({
         username: e.username
       }))
     })()
-  }, [i.defaultName]);
-  (0, R.default)(e);
-  let M = (0, a.jsxs)(a.Fragment, {
-      children: [t ? (0, a.jsx)(S.default, {
+  }, [d.defaultName]);
+  (0, g.default)(e);
+  let h = (0, s.jsxs)(s.Fragment, {
+      children: [t ? (0, s.jsx)(A.default, {
         guildTemplate: e
-      }) : null, (0, a.jsx)("div", {
-        className: O.icon,
-        children: (0, a.jsx)(o.default, {
+      }) : null, (0, s.jsx)("div", {
+        className: v.icon,
+        children: (0, s.jsx)(_.default, {
           icon: r,
-          onChange: u
+          onChange: i
         })
-      }), (0, a.jsx)(_.FormItem, {
-        title: i.nameLabel,
-        children: (0, a.jsx)(_.TextInput, {
+      }), (0, s.jsx)(c.FormItem, {
+        title: d.nameLabel,
+        children: (0, s.jsx)(c.TextInput, {
           type: "text",
-          value: s,
+          value: n,
           maxLength: 100,
-          onChange: n,
-          error: null == E ? void 0 : E.name
+          onChange: l,
+          error: null == u ? void 0 : u.name
         })
-      }), (0, a.jsx)(_.Text, {
+      }), (0, s.jsx)(c.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        className: O.guidelines,
-        children: i.terms.format({
-          guidelinesURL: m.MarketingURLs.GUIDELINES
+        className: v.guidelines,
+        children: d.terms.format({
+          guidelinesURL: S.MarketingURLs.GUIDELINES
         })
       })]
     }),
-    f = e.serializedSourceGuild.roles.filter(e => "@everyone" !== e.name),
-    C = (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)("div", {
-        className: O.divider
-      }), (0, a.jsxs)(_.FormItem, {
-        className: O.previewSection,
-        title: D.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_HEADER,
-        children: [(0, a.jsx)(N, {
+    p = e.serializedSourceGuild.roles.filter(e => "@everyone" !== e.name),
+    T = (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)("div", {
+        className: v.divider
+      }), (0, s.jsxs)(c.FormItem, {
+        className: v.previewSection,
+        title: C.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_HEADER,
+        children: [(0, s.jsx)(R, {
           channels: e.serializedSourceGuild.channels
-        }), (0, a.jsxs)(_.Text, {
+        }), (0, s.jsxs)(c.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
-          className: O.protip,
-          children: [(0, a.jsxs)("span", {
-            className: O.protipText,
-            children: [D.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
-          }), " ", D.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_TIP]
+          className: v.protip,
+          children: [(0, s.jsxs)("span", {
+            className: v.protipText,
+            children: [C.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
+          }), " ", C.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_TIP]
         })]
-      }), f.length > 0 ? (0, a.jsx)(a.Fragment, {
-        children: (0, a.jsx)(_.FormItem, {
-          className: O.previewSection,
-          title: D.default.Messages.GUILD_TEMPLATE_MODAL_ROLES_HEADER2,
-          children: (0, a.jsx)(p, {
-            roles: f
+      }), p.length > 0 ? (0, s.jsx)(s.Fragment, {
+        children: (0, s.jsx)(c.FormItem, {
+          className: v.previewSection,
+          title: C.default.Messages.GUILD_TEMPLATE_MODAL_ROLES_HEADER2,
+          children: (0, s.jsx)(L, {
+            roles: p
           })
         })
       }) : null]
     });
   return {
-    form: M,
-    preview: C,
-    handleSubmit: () => A.default.acceptGuildTemplate(e.code, s, r).catch(e => d(e))
+    form: h,
+    preview: T,
+    handleSubmit: () => m.default.acceptGuildTemplate(e.code, n, r).catch(e => o(e))
   }
 }
 
-function N(e) {
+function R(e) {
   let {
     channels: t
-  } = e, s = E(t).sortBy(e => null == e.parent_id ? 1e4 * Number(e.id) : 1e4 * Number(e.parent_id) + e.id).map(e => {
+  } = e, n = u(t).sortBy(e => null == e.parent_id ? 1e4 * Number(e.id) : 1e4 * Number(e.parent_id) + e.id).map(e => {
     let t = function(e) {
       let {
         type: t
       } = e;
-      return t === m.ChannelTypes.GUILD_VOICE ? C.default : t === m.ChannelTypes.GUILD_CATEGORY ? M.default : f.default
+      return t === S.ChannelTypes.GUILD_VOICE ? T.default : t === S.ChannelTypes.GUILD_CATEGORY ? h.default : p.default
     }(e);
-    return (0, a.jsxs)("div", {
-      className: r(O.channel, {
-        [O.category]: e.type === m.ChannelTypes.GUILD_CATEGORY
+    return (0, s.jsxs)("div", {
+      className: r(v.channel, {
+        [v.category]: e.type === S.ChannelTypes.GUILD_CATEGORY
       }),
-      children: [(0, a.jsx)(t, {
-        className: O.channelIcon
-      }), (0, a.jsx)(_.Text, {
-        className: O.channelText,
+      children: [(0, s.jsx)(t, {
+        className: v.channelIcon
+      }), (0, s.jsx)(c.Text, {
+        className: v.channelText,
         variant: "text-sm/normal",
         children: e.name
       })]
     }, e.id)
   }).value();
-  return (0, a.jsx)("div", {
-    className: O.channelsWrapper,
-    children: s
+  return (0, s.jsx)("div", {
+    className: v.channelsWrapper,
+    children: n
   })
 }
-s("721247");
+n("721247");
 
-function p(e) {
+function L(e) {
   let {
     roles: t
-  } = e, s = t.slice().reverse().map(e => (0, a.jsx)(U, {
+  } = e, n = t.slice().reverse().map(e => (0, s.jsx)(x, {
     role: e
   }, e.id));
-  return (0, a.jsx)("ul", {
-    className: O.rolesWrapper,
-    children: s
+  return (0, s.jsx)("ul", {
+    className: v.rolesWrapper,
+    children: n
   })
 }
 
-function U(e) {
+function x(e) {
   var t;
   let {
-    role: s
-  } = e, l = null == s.color ? i.default.unsafe_rawColors.PRIMARY_300.css : (0, d.int2hex)(s.color);
-  return (0, a.jsxs)("li", {
-    className: O.role,
+    role: n
+  } = e, a = null == n.color ? d.default.unsafe_rawColors.PRIMARY_300.css : (0, o.int2hex)(n.color);
+  return (0, s.jsxs)("li", {
+    className: v.role,
     style: {
-      borderColor: null !== (t = (0, d.hex2rgb)(l, .6)) && void 0 !== t ? t : void 0
+      borderColor: null !== (t = (0, o.hex2rgb)(a, .6)) && void 0 !== t ? t : void 0
     },
-    children: [(0, a.jsx)(_.RoleCircle, {
-      className: O.roleCircle,
-      color: l
-    }), (0, a.jsx)("div", {
-      className: O.roleName,
-      children: s.name
+    children: [(0, s.jsx)(c.RoleCircle, {
+      className: v.roleCircle,
+      color: a
+    }), (0, s.jsx)("div", {
+      className: v.roleName,
+      children: n.name
     })]
   })
 }

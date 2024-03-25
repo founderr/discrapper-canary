@@ -63,7 +63,7 @@ let Y = {
     [H.UserProfileTypes.CANCEL_MODAL]: B.AnalyticsPages.USER_POPOUT
   };
 
-function J(e) {
+function Z(e) {
   let {
     type: t,
     shown: i,
@@ -132,7 +132,7 @@ function J(e) {
   })
 }
 
-function Z(e) {
+function J(e) {
   let {
     darkenOnHover: t,
     profileType: n,
@@ -226,7 +226,7 @@ function q(e) {
         backgroundImage: ec ? "url(".concat(ed, ")") : void 0,
         backgroundColor: 2 !== Y ? c.default.unsafe_rawColors.PRIMARY_800.css : eo
       },
-      children: [Q ? null == q ? (0, a.jsx)(Z, {
+      children: [Q ? null == q ? (0, a.jsx)(J, {
         darkenOnHover: P && R,
         profileType: v,
         profileLabel: K.default.Messages.EDIT_PROFILE,
@@ -249,7 +249,7 @@ function q(e) {
             guild: q
           })
         },
-        children: e => (0, a.jsx)(Z, {
+        children: e => (0, a.jsx)(J, {
           darkenOnHover: P && R,
           profileLabel: K.default.Messages.EDIT_PROFILE,
           icon: "pencil",
@@ -258,7 +258,7 @@ function q(e) {
         })
       }) : (() => {
         let e = L && ec && v !== H.UserProfileTypes.SETTINGS;
-        return e ? (0, a.jsx)(J, {
+        return e ? (0, a.jsx)(Z, {
           type: v,
           shown: void 0 === R ? et : R,
           onClick: () => {

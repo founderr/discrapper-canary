@@ -1,58 +1,58 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   submitDateOfBirth: function() {
     return u
   },
   preventUnderageRegistration: function() {
-    return d
+    return c
   },
   logoutUnderageNewUser: function() {
-    return c
+    return d
   }
 });
-var s = n("872717"),
-  a = n("913144"),
-  r = n("395724"),
-  i = n("599110"),
-  l = n("586391"),
-  o = n("49111");
+var n = a("872717"),
+  l = a("913144"),
+  r = a("395724"),
+  o = a("599110"),
+  s = a("586391"),
+  i = a("49111");
 
 function u(e, t) {
-  return (0, r.default)(e, t), i.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+  return (0, r.default)(e, t), o.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
     source: t,
-    action: l.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
-  }), s.HTTP.patch({
-    url: o.Endpoints.ME,
+    action: s.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
+  }), n.HTTP.patch({
+    url: i.Endpoints.ME,
     oldFormErrors: !0,
     body: {
       date_of_birth: e.format("YYYY-MM-DD")
     }
   }).then(e => {
-    let n = e.body;
-    a.default.dispatch({
+    let a = e.body;
+    l.default.dispatch({
       type: "CURRENT_USER_UPDATE",
-      user: n
-    }), i.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+      user: a
+    }), o.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
       source: t,
-      action: l.AgeGateAnalyticAction.AGE_GATE_SUCCESS
+      action: s.AgeGateAnalyticAction.AGE_GATE_SUCCESS
     })
   })
 }
 
-function d(e) {
-  a.default.dispatch({
+function c(e) {
+  l.default.dispatch({
     type: "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION"
-  }), i.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+  }), o.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
     source: e,
-    action: l.AgeGateAnalyticAction.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
+    action: s.AgeGateAnalyticAction.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
   })
 }
 
-function c(e) {
-  a.default.dispatch({
+function d(e) {
+  l.default.dispatch({
     type: "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER"
-  }), i.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+  }), o.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
     source: e,
-    action: l.AgeGateAnalyticAction.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
+    action: s.AgeGateAnalyticAction.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
   })
 }

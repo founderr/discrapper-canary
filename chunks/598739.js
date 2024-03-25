@@ -16,10 +16,10 @@ s.r(t), s.d(t, {
     return f
   },
   getFilteredPerksDiscoverabilityCards: function() {
-    return R
+    return S
   },
   usePerksDiscoverabilityStrings: function() {
-    return S
+    return R
   }
 }), s("424973");
 var a = s("446674"),
@@ -83,7 +83,7 @@ function I(e, t) {
   }
 }
 let f = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
-  R = (e, t, s, a, r) => {
+  S = (e, t, s, a, r) => {
     let n = [];
     switch (t) {
       case o.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY:
@@ -103,7 +103,7 @@ let f = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
     }
     return !a && (n = n.filter(e => !e.hideOnNarrowScreen)), n
   },
-  S = e => {
+  R = e => {
     let t = (0, a.useStateFromStores)([n.default], () => n.default.getPremiumTypeSubscription()),
       s = null != t ? l.default.getPremiumPlanItem(t) : null,
       r = null != s ? l.default.getSkuIdForPlan(s.planId) : null,

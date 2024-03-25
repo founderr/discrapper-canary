@@ -103,8 +103,8 @@ var L = l.forwardRef(function(e, t) {
     soundId: W,
     name: Y,
     emojiId: z,
-    emojiName: J
-  } = L, Z = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, N.useSoundButtonContextMenu)(L, null == P ? void 0 : P.guild_id), {
+    emojiName: Z
+  } = L, J = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, N.useSoundButtonContextMenu)(L, null == P ? void 0 : P.guild_id), {
     playSoundboardSound: X,
     previewSound: Q,
     isPlayingSound: $
@@ -129,8 +129,8 @@ var L = l.forwardRef(function(e, t) {
     er = (0, o.useStateFromStores)([T.default], () => T.default.isFavoriteSound(W), [W]),
     eo = "sound-".concat(L.soundId),
     eu = (0, r.useListItem)(eo),
-    ed = null != z || null != J,
-    ec = !(0, I.canUseSoundboardSound)(Z, L, P),
+    ed = null != z || null != Z,
+    ec = !(0, I.canUseSoundboardSound)(J, L, P),
     ef = U || w && !ec;
 
   function ep(e) {
@@ -216,7 +216,7 @@ var L = l.forwardRef(function(e, t) {
         ref: et,
         children: [ed && (0, i.jsx)(f.default, {
           emojiId: z,
-          emojiName: J,
+          emojiName: Z,
           className: R.emoji
         }), (0, i.jsx)(c.Text, {
           variant: "text-xs/medium",
