@@ -3,6 +3,9 @@ n.r(t), n.d(t, {
   UploadPlatform: function() {
     return r
   },
+  isResolvedUpload: function() {
+    return E
+  },
   default: function() {
     return o
   }
@@ -13,7 +16,10 @@ var i, s, r, a, o, l = n("44170"),
   c = n("748820"),
   _ = n("254490"),
   f = n("980134");
-(i = r || (r = {}))[i.REACT_NATIVE = 0] = "REACT_NATIVE", i[i.WEB = 1] = "WEB", (s = a || (a = {}))[s.FILE_ATTACHMENT = 0] = "FILE_ATTACHMENT", s[s.IMAGE_PICKER = 1] = "IMAGE_PICKER", o = class extends l.EventEmitter {
+
+function E(e) {
+  return void 0 !== e.isVideo && void 0 !== e.isImage
+}(i = r || (r = {}))[i.REACT_NATIVE = 0] = "REACT_NATIVE", i[i.WEB = 1] = "WEB", (s = a || (a = {}))[s.FILE_ATTACHMENT = 0] = "FILE_ATTACHMENT", s[s.IMAGE_PICKER = 1] = "IMAGE_PICKER", o = class extends l.EventEmitter {
   cancel() {}
   resetState() {
     return this
