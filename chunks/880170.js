@@ -7,10 +7,10 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var r = s("414456"),
-  n = s.n(r),
-  i = s("77078"),
+  i = s.n(r),
+  n = s("77078"),
   l = s("359499"),
-  o = s("598739"),
+  o = s("159764"),
   u = s("449881"),
   d = s("511143"),
   c = s("635650"),
@@ -22,8 +22,8 @@ var r = s("414456"),
     let s, r, {
         title: I,
         titleClassName: f,
-        perkImage: R,
-        isCarousel: S,
+        perkImage: S,
+        isCarousel: R,
         onCtaClick: m,
         perkComponent: N,
         subtitle: A = "",
@@ -31,7 +31,7 @@ var r = s("414456"),
         cardVariant: C,
         subtitleClassName: g
       } = e,
-      O = null != C ? o.CardVariantsInfo[C] : void 0,
+      O = (0, o.useCardVariantsInfo)(C),
       P = (0, l.useFreeBoostUserTenureReward)(),
       M = (null == P ? void 0 : P.nitroTenureStatus) === d.NitroRewardStatus.REDEEMABLE,
       h = null == P ? void 0 : P.nitroTenureStatus;
@@ -50,7 +50,7 @@ var r = s("414456"),
     }
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
-        className: n(c.cover, c.below)
+        className: i(c.cover, c.below)
       }), (0, a.jsx)(u.default, {
         title: I,
         shouldShowElement: e => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
@@ -58,12 +58,12 @@ var r = s("414456"),
         titleClassName: f,
         subtitle: A,
         subtitleClassName: g
-      }), null != R && (0, a.jsx)("img", {
-        src: R,
+      }), null != S && (0, a.jsx)("img", {
+        src: S,
         alt: "",
-        className: n({
-          [c.cardImage]: !S,
-          [c.carouselCardImage]: S
+        className: i({
+          [c.cardImage]: !R,
+          [c.carouselCardImage]: R
         })
       }), null != N && (0, a.jsx)(a.Fragment, {
         children: (0, a.jsxs)("div", {
@@ -71,7 +71,7 @@ var r = s("414456"),
           children: [(0, a.jsx)("div", {
             className: c.cardComponent,
             children: N
-          }), 0 !== p.length && null != m && (0, a.jsx)(i.Button, {
+          }), 0 !== p.length && null != m && (0, a.jsx)(n.Button, {
             disabled: !M,
             fullWidth: !0,
             onClick: m,

@@ -1,41 +1,37 @@
 "use strict";
 s.r(t), s.d(t, {
   getRewardingTenureTitle: function() {
-    return E
+    return _
   },
   getRewardingTenureSubtitle: function() {
-    return T
+    return E
   },
   getRewardingTenureDescription: function() {
-    return I
+    return T
   },
   getRewardingTenureCtaDescription: function() {
-    return f
-  },
-  CardVariantsInfo: function() {
-    return S
+    return I
   },
   getThemedImage: function() {
-    return m
+    return f
   },
   getFilteredPerksDiscoverabilityCards: function() {
-    return N
+    return S
   },
   usePerksDiscoverabilityStrings: function() {
-    return A
+    return R
   }
 }), s("424973");
 var a = s("446674"),
   r = s("819855"),
-  n = s("411691"),
-  i = s("521012"),
+  i = s("411691"),
+  n = s("521012"),
   l = s("719923"),
   o = s("907648"),
   u = s("646718"),
   d = s("511143"),
-  c = s("782340"),
-  _ = s("617487");
-let E = e => {
+  c = s("782340");
+let _ = e => {
     switch (e) {
       case d.NitroRewardStatus.PENDING:
         return c.default.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
@@ -47,7 +43,7 @@ let E = e => {
         return ""
     }
   },
-  T = (e, t) => {
+  E = (e, t) => {
     switch (e) {
       case d.NitroRewardStatus.PENDING:
         return t === d.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? c.default.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : c.default.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
@@ -59,7 +55,7 @@ let E = e => {
         return
     }
   },
-  I = e => {
+  T = e => {
     switch (e) {
       case d.NitroRewardStatus.PENDING:
         return c.default.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
@@ -72,7 +68,7 @@ let E = e => {
     }
   };
 
-function f(e, t) {
+function I(e, t) {
   switch (e) {
     case d.NitroRewardStatus.PENDING:
       return null != t ? c.default.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({
@@ -86,66 +82,33 @@ function f(e, t) {
       return ""
   }
 }
-let R = {
-    subtitle: {
-      onlyShowOnHover: !1
-    },
-    description: {
-      onlyShowOnHover: !0,
-      className: _.cardDescription
-    },
-    descriptionCta: {
-      onlyShowOnHover: !0
-    }
-  },
-  S = {
-    [o.CardVariants.DEFAULT]: R,
-    [o.CardVariants.REWARD]: {
-      subtitle: {
-        onlyShowOnHover: !0,
-        textVariant: "text-sm/semibold"
-      },
-      description: {
-        onlyShowOnHover: !0,
-        className: _.cardDescriptionTenureReward
-      },
-      descriptionCta: {
-        onlyShowOnHover: !1,
-        hideOnHoverComponent: !0,
-        className: _.descriptionCTATenureReward
-      },
-      cardContainer: {
-        className: _.glowingCardContainer
-      }
-    }
-  },
-  m = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
-  N = (e, t, s, a, r) => {
-    let i = [];
+let f = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
+  S = (e, t, s, a, r) => {
+    let n = [];
     switch (t) {
       case o.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY:
-        i = [e.profiles, e.clientThemes, e.serverBoosts];
+        n = [e.profiles, e.clientThemes, e.serverBoosts];
         break;
       case o.PerksDiscoverabilityCardSection.WHATS_NEW:
-        null != e.freeBoost && r && i.push(e.freeBoost), i.push(e.earlyAccess, s !== n.CollectiblesShopMarketingVariants.DEFAULT ? e.specialShopPerks : e.specialMemberPricing), (i.length < 3 && a || i.length < 3 && !a) && i.push(e.unlimitedSuperReactions);
+        null != e.freeBoost && r && n.push(e.freeBoost), n.push(e.earlyAccess, s !== i.CollectiblesShopMarketingVariants.DEFAULT ? e.specialShopPerks : e.specialMemberPricing), (n.length < 3 && a || n.length < 3 && !a) && n.push(e.unlimitedSuperReactions);
         break;
       case o.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW:
-        i = [e.customAppIcons, e.moreEmojiPower, e.customSoundsEverywhere, e.specialStickerAccess];
+        n = [e.customAppIcons, e.moreEmojiPower, e.customSoundsEverywhere, e.specialStickerAccess];
         break;
       case o.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW:
-        i = [e.earlyAccessSeeAllVariant, e.specialMemberPricingSeeAllVariant, e.largeUploads, e.hdVideo, e.superReactions];
+        n = [e.earlyAccessSeeAllVariant, e.specialMemberPricingSeeAllVariant, e.largeUploads, e.hdVideo, e.superReactions];
         break;
       case o.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW:
-        i = [e.entranceSoundsSeeAllVariation, e.badge]
+        n = [e.entranceSoundsSeeAllVariation, e.badge]
     }
-    return !a && (i = i.filter(e => !e.hideOnNarrowScreen)), i
+    return !a && (n = n.filter(e => !e.hideOnNarrowScreen)), n
   },
-  A = e => {
-    let t = (0, a.useStateFromStores)([i.default], () => i.default.getPremiumTypeSubscription()),
+  R = e => {
+    let t = (0, a.useStateFromStores)([n.default], () => n.default.getPremiumTypeSubscription()),
       s = null != t ? l.default.getPremiumPlanItem(t) : null,
       r = null != s ? l.default.getSkuIdForPlan(s.planId) : null,
-      n = r === u.PremiumSubscriptionSKUs.TIER_2;
-    if (e) return n ? {
+      i = r === u.PremiumSubscriptionSKUs.TIER_2;
+    if (e) return i ? {
       title: c.default.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
       subtitle: c.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
     } : {
