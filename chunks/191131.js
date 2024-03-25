@@ -11,8 +11,8 @@ var u = n("812204"),
   i = n("635357"),
   l = n("642906"),
   s = n("85336"),
-  d = n("385179"),
-  o = n("262683"),
+  o = n("385179"),
+  d = n("262683"),
   c = n("946359"),
   f = n("724269"),
   P = n("99836"),
@@ -29,7 +29,7 @@ let v = [{
   })
 }, {
   key: s.Step.ADD_PAYMENT_STEPS,
-  renderStep: e => (0, r.jsx)(o.PaymentModalAddPaymentStep, {
+  renderStep: e => (0, r.jsx)(d.PaymentModalAddPaymentStep, {
     ...e,
     onReturn: () => {
       let t = p.default.paymentSources;
@@ -61,26 +61,26 @@ function T(e) {
     guildProductContext: t,
     sourceAnalyticsLocations: n,
     applicationId: s,
-    ...o
+    ...d
   } = e, {
-    AnalyticsLocationProvider: c,
-    analyticsLocations: f
+    analyticsLocations: c
   } = (0, a.default)(n, u.default.GUILD_PRODUCT_PAYMENT_MODAL);
   return (0, r.jsx)(x.GuildProductPurchaseContextProvider, {
     ...t,
-    children: (0, r.jsx)(c, {
+    children: (0, r.jsx)(a.AnalyticsLocationProvider, {
+      value: c,
       children: (0, r.jsx)(l.PaymentContextProvider, {
         stepConfigs: v,
         applicationId: s,
-        skuIDs: [o.skuId],
+        skuIDs: [d.skuId],
         activeSubscription: null,
         purchaseType: m.PurchaseTypes.ONE_TIME,
         children: (0, r.jsx)(i.GiftContextProvider, {
-          children: (0, r.jsx)(d.PaymentModal, {
+          children: (0, r.jsx)(o.PaymentModal, {
             initialPlanId: null,
-            analyticsLocations: f,
+            analyticsLocations: c,
             renderHeader: C.renderGuildProductPurchaseHeader,
-            ...o
+            ...d
           })
         })
       })

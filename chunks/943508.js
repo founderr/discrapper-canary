@@ -37,14 +37,15 @@ var C = e => {
     channel: n,
     isInteracting: a
   } = e, [o, E] = l.useState(!0), [_, m] = l.useState(String(Date.now())), [N] = (0, f.useStickerForRenderableSticker)(t, a), {
-    AnalyticsLocationProvider: C
+    analyticsLocations: C
   } = (0, u.default)(r.default.STICKER_MESSAGE), h = (0, s.jsxs)("span", {
     className: p.stickerName,
     children: [(0, s.jsx)(c.default, {
       className: p.stickerIcon
     }), (null != N ? N : t).name]
   });
-  return (0, s.jsx)(C, {
+  return (0, s.jsx)(u.AnalyticsLocationProvider, {
+    value: C,
     children: (0, s.jsx)(i.Popout, {
       align: "center",
       animation: i.Popout.Animation.TRANSLATE,

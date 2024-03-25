@@ -123,11 +123,12 @@ var L = () => {
       return null != e && null !== (t = c.default.getStickersByGuildId(e.id)) && void 0 !== t ? t : []
     }, [e]),
     {
-      AnalyticsLocationProvider: s
+      analyticsLocations: s
     } = (0, r.default)(i.default.STICKERS);
   if (null == e) return null;
   let o = e.premiumTier !== f.BoostedGuildTiers.NONE || t.length > 0;
-  return (0, a.jsx)(s, {
+  return (0, a.jsx)(r.AnalyticsLocationProvider, {
+    value: s,
     children: (0, a.jsxs)(n.FormSection, {
       title: N.default.Messages.GUILD_SETTINGS_STICKERS,
       tag: n.FormTitleTags.H1,

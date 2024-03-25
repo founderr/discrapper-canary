@@ -138,9 +138,10 @@ function b(e) {
 
 function v(e) {
   let {
-    AnalyticsLocationProvider: t
+    analyticsLocations: t
   } = (0, r.default)(o.default.CONTEXT_MENU);
-  return (0, i.jsx)(t, {
+  return (0, i.jsx)(r.AnalyticsLocationProvider, {
+    value: t,
     children: (0, i.jsx)(b, {
       ...e
     })

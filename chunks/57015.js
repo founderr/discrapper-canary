@@ -39,11 +39,11 @@ var r = n("37983"),
       bottom: 0,
       left: 0,
       right: 0
-    }), [P, y] = i.useState(!1), [U, H] = i.useState(1), [v, w] = i.useState({
+    }), [P, y] = i.useState(!1), [U, v] = i.useState(1), [H, w] = i.useState({
       x: 0,
       y: 0
     }), [G, B] = i.useState(null), [x, b] = i.useState(!1), {
-      AnalyticsLocationProvider: V
+      analyticsLocations: V
     } = (0, u.default)(s.default.IMAGE_CROPPING_MODAL), j = i.useRef({
       x: 0,
       y: 0
@@ -108,10 +108,10 @@ var r = n("37983"),
           y: n
         } = j.current;
         if (!P || e.clientX === t && e.clientY === n) return;
-        let r = e.clientX - v.x,
-          i = e.clientY - v.y;
+        let r = e.clientX - H.x,
+          i = e.clientY - H.y;
         Y(r, i, g)
-      }, [g, P, v, Y]),
+      }, [g, P, H, Y]),
       K = () => {
         y(!1)
       },
@@ -143,7 +143,8 @@ var r = n("37983"),
       null != W.current && W.current()
     }, []), i.useEffect(() => {
       if (P) return window.addEventListener("mousemove", z), () => window.removeEventListener("mousemove", z)
-    }, [z, P]), (0, r.jsx)(V, {
+    }, [z, P]), (0, r.jsx)(u.AnalyticsLocationProvider, {
+      value: V,
       children: (0, r.jsxs)(l.ModalRoot, {
         onAnimationEnd: Z,
         transitionState: R,
@@ -221,7 +222,7 @@ var r = n("37983"),
                   x: i,
                   y: l
                 } = j.current;
-                (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(l, r.top, r.bottom)) && Y(i, l, r), H(e), L(r)
+                (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(l, r.top, r.bottom)) && Y(i, l, r), v(e), L(r)
               },
               disabled: x,
               equidistant: !0,

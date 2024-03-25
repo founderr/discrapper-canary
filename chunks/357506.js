@@ -328,12 +328,13 @@ function ep() {
   }, {
     autoTrackExposure: !1
   }), m = (0, _.default)() && null != c, E = (0, p.useStateFromStores)([D.default], () => null != D.default.getCurrentUserActiveStream()), {
-    AnalyticsLocationProvider: S
+    analyticsLocations: S
   } = (0, T.default)(N.default.OVERLAY), {
     showKeybindIndicators: v,
     dismissKeybindNotification: y
   } = (0, Q.useGetKeybindNotification)();
-  return (0, a.jsx)(S, {
+  return (0, a.jsx)(T.AnalyticsLocationProvider, {
+    value: S,
     children: (0, a.jsx)(g.RedesignIconContextProvider, {
       children: (0, a.jsx)(eh, {
         locked: e,

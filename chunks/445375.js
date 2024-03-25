@@ -56,9 +56,10 @@ function Z(e) {
     parentMessageId: n,
     location: l
   } = e, s = (0, r.useStateFromStores)([N.default], () => N.default.getChannel(t)), {
-    AnalyticsLocationProvider: i
+    analyticsLocations: i
   } = (0, p.default)(m.default.CREATE_THREAD);
-  return null == s ? null : (0, a.jsx)(i, {
+  return null == s ? null : (0, a.jsx)(p.AnalyticsLocationProvider, {
+    value: i,
     children: (0, a.jsx)(b.ComponentDispatchGroupProvider, {
       children: (0, a.jsxs)("section", {
         "aria-label": W.default.Messages.CREATE_THREAD,

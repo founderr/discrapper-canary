@@ -225,14 +225,15 @@ let B = l.forwardRef(function(e, t) {
   (0, x.default)(n, !1);
   let v = (0, N.default)(n, l),
     {
-      AnalyticsLocationProvider: A
+      analyticsLocations: A
     } = (0, C.default)(S.default.POPOUT_WINDOW),
     {
       clientThemesClassName: j,
       clientThemesCSS: y
     } = (0, _.default)();
   return null == n ? null : (0, a.jsx)(c.DnDProvider, {
-    children: (0, a.jsx)(A, {
+    children: (0, a.jsx)(C.AnalyticsLocationProvider, {
+      value: A,
       children: (0, a.jsx)(H, {
         ref: t,
         ...e,

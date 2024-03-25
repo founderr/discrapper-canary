@@ -51,9 +51,10 @@ function _(e) {
     headerColor: T,
     buttonProps: S
   } = e, {
-    AnalyticsLocationProvider: f
+    analyticsLocations: f
   } = (0, o.default)(r.default.GUILD_BOOSTING_UPSELL_BANNER);
-  return (0, a.jsx)(f, {
+  return (0, a.jsx)(o.AnalyticsLocationProvider, {
+    value: f,
     children: (0, a.jsxs)("div", {
       className: n(c.banner, _),
       children: [(0, a.jsx)("img", {

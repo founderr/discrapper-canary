@@ -217,10 +217,10 @@ function G() {
     })),
     s = (0, r.useStateFromStores)([f.default], () => f.default.hideInstantInvites),
     {
-      analyticsLocations: l,
-      AnalyticsLocationProvider: n
+      analyticsLocations: l
     } = (0, _.default)(c.default.VANITY_URL);
-  return (0, a.jsx)(n, {
+  return (0, a.jsx)(_.AnalyticsLocationProvider, {
+    value: l,
     children: (0, a.jsx)(v, {
       guild: e,
       ...t,

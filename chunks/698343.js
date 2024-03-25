@@ -23,9 +23,10 @@ var s = n("446674"),
 
 function I() {
   let {
-    AnalyticsLocationProvider: e
+    analyticsLocations: e
   } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([f.default], () => f.default.hasConsented(_.Consents.PERSONALIZATION)), n = t ? [] : [l.DismissibleContent.NOW_PLAYING_CONSENT_CARD], I = (0, E.useUID)();
-  return (0, a.jsx)(e, {
+  return (0, a.jsx)(u.AnalyticsLocationProvider, {
+    value: e,
     children: (0, a.jsx)(r.default, {
       section: _.AnalyticsSections.ACTIVE_NOW_COLUMN,
       children: (0, a.jsx)("aside", {

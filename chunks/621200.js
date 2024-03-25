@@ -61,7 +61,7 @@ function M() {
     y = U && null != M ? _.default.parse(void 0, M).content : M,
     B = A.default.canUsePremiumProfileCustomization(e),
     {
-      AnalyticsLocationProvider: F
+      analyticsLocations: F
     } = (0, T.default)(E.default.PROFILE),
     G = {
       user: e,
@@ -85,7 +85,8 @@ function M() {
   }), (0, S.useTriggerDebuggingAA)({
     location: k + " auto off",
     autoTrackExposure: !1
-  }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(F, {
+  }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(T.AnalyticsLocationProvider, {
+    value: F,
     children: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(f.default, {}), (0, a.jsx)(g.default, {
         profilePreview: (0, a.jsx)(m.default, {

@@ -39,7 +39,7 @@ function S(e) {
     renderHeader: R,
     defaultSoundsOnly: M
   } = e, k = (0, o.useStateFromStores)([E.default], () => E.default.isFetchingSounds() || E.default.isFetchingDefaultSounds()), L = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
-    AnalyticsLocationProvider: P
+    analyticsLocations: P
   } = (0, c.default)(d.default.SOUNDBOARD_POPOUT);
   return (0, f.default)({
     type: r.ImpressionTypes.POPOUT,
@@ -51,7 +51,8 @@ function S(e) {
     }
   }), l.useEffect(() => {
     x.maybeFetchSoundboardSounds(), m.FrecencyUserSettingsActionCreators.loadIfNecessary(), (0, p.setSearchQuery)("")
-  }, []), (0, i.jsx)(P, {
+  }, []), (0, i.jsx)(c.AnalyticsLocationProvider, {
+    value: P,
     children: (0, i.jsx)("div", {
       className: s(g.picker, {
         [g.fetching]: k,

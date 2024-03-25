@@ -100,11 +100,12 @@ function v(e) {
     isAuthenticated: t = !0,
     ...n
   } = e, {
-    AnalyticsLocationProvider: l
+    analyticsLocations: l
   } = (0, u.default)(o.default.HEADER_BAR), i = s(n.className, {
     [I.forumOrHome]: null != n.channelType && _.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === T.StaticChannelRoute.GUILD_HOME
   });
-  return (0, a.jsx)(l, {
+  return (0, a.jsx)(u.AnalyticsLocationProvider, {
+    value: l,
     children: t ? (0, a.jsx)(A, {
       ...n,
       className: i

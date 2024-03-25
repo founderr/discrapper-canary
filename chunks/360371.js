@@ -36,7 +36,7 @@ var s = a("37983"),
   U = a("782340"),
   j = a("754146");
 
-function V(e) {
+function L(e) {
   let {
     icon: t,
     onClick: a,
@@ -77,7 +77,7 @@ function V(e) {
   })
 }
 
-function L(e) {
+function V(e) {
   let {
     option: t,
     source: a,
@@ -126,7 +126,7 @@ function S(e) {
     loop: !0,
     playOnHover: !0,
     muted: !0
-  }) : (0, s.jsx)(L, {
+  }) : (0, s.jsx)(V, {
     isAnimated: A,
     option: (0, C.isCustomBackgroundOption)(t) ? t : void 0,
     source: n
@@ -201,7 +201,7 @@ function b(e) {
   return (0, s.jsxs)(i.TooltipContainer, {
     text: r,
     className: j.newBackgroundTooltipContainer,
-    children: [(0, s.jsxs)(V, {
+    children: [(0, s.jsxs)(L, {
       className: j.backgroundOptionBlurred,
       disabled: n,
       icon: A.default,
@@ -293,17 +293,18 @@ function z(e) {
     onAddBackgroundImage: r,
     smallerOptions: d
   } = e, E = n.useMemo(() => a.sort((e, t) => null == e.last_used || null == t.last_used ? x.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime()), [a]), _ = E.length >= 25, {
-    AnalyticsLocationProvider: A
+    analyticsLocations: A
   } = (0, O.default)(u.default.VIDEO_BACKGROUND_OPTIONS), p = Object.values((0, N.default)()), M = p.sort((e, t) => R.DEFAULT_VIDEO_BACKGROUND_SORT[e.id] - R.DEFAULT_VIDEO_BACKGROUND_SORT[t.id]);
-  return (0, s.jsx)(A, {
+  return (0, s.jsx)(O.AnalyticsLocationProvider, {
+    value: A,
     children: (0, s.jsxs)("div", {
       className: d ? j.backgroundOptionsSmall : j.backgroundOptionsLarge,
-      children: [(0, s.jsx)(V, {
+      children: [(0, s.jsx)(L, {
         selected: null == l,
         icon: f.default,
         onClick: () => o(null),
         text: U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_NONE
-      }), (0, s.jsx)(V, {
+      }), (0, s.jsx)(L, {
         className: j.backgroundOptionBlurred,
         selected: l === R.BLUR_BACKGROUND_OPTION,
         icon: g.default,

@@ -146,7 +146,7 @@ function P(e) {
     interactible: l,
     channel: i
   } = e, {
-    AnalyticsLocationProvider: r
+    analyticsLocations: r
   } = (0, I.default)(_.default.ACTIVITY_TILE), {
     id: u
   } = t, o = (0, m.default)(), d = (null == o ? void 0 : o.channelId) === i.id && o.applicationId === u, c = (0, p.default)(), [f] = (0, T.default)([u]), {
@@ -156,7 +156,8 @@ function P(e) {
     names: L,
     size: 1024
   }), S = !d;
-  return (0, s.jsx)(r, {
+  return (0, s.jsx)(I.AnalyticsLocationProvider, {
+    value: r,
     children: (0, s.jsx)("div", {
       className: j.container,
       children: (0, s.jsxs)(s.Fragment, {

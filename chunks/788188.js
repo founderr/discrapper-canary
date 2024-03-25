@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var r = s("90915"),
-  n = s("446674"),
-  i = s("77078"),
+  i = s("446674"),
+  n = s("77078"),
   l = s("901582"),
   o = s("86621"),
   u = s("984376"),
@@ -23,14 +23,14 @@ var r = s("90915"),
   S = s("646718"),
   m = s("782340"),
   N = s("571366");
-let A = n.default.connectStores([T.default], () => ({
+let A = i.default.connectStores([T.default], () => ({
   user: T.default.getCurrentUser()
 }))((0, u.default)((0, o.default)(e => {
   let {
-    AnalyticsLocationProvider: t
+    analyticsLocations: t
   } = (0, c.default)(d.default.HOME_PAGE_PREMIUM_TAB), {
     isAuthenticated: s,
-    user: n
+    user: i
   } = e;
   return s ? (0, a.jsxs)("div", {
     className: N.homeWrapperNormal,
@@ -46,11 +46,12 @@ let A = n.default.connectStores([T.default], () => ({
           children: m.default.Messages.PREMIUM
         })]
       })
-    }), (0, a.jsx)(t, {
-      children: null == n ? (0, a.jsx)(I.default, {
+    }), (0, a.jsx)(c.AnalyticsLocationProvider, {
+      value: t,
+      children: null == i ? (0, a.jsx)(I.default, {
         align: I.default.Align.CENTER,
         justify: I.default.Justify.CENTER,
-        children: (0, a.jsx)(i.Spinner, {
+        children: (0, a.jsx)(n.Spinner, {
           className: N.spinner
         })
       }) : (0, a.jsx)(E.default, {

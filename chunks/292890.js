@@ -29,8 +29,7 @@ function m(e) {
     title: M,
     description: C
   } = e, R = (0, a.useStateFromStores)([c.default], () => c.default.getCurrentUser()), {
-    AnalyticsLocationProvider: N,
-    analyticsLocations: A
+    analyticsLocations: N
   } = (0, o.default)(t, u.default.PROFILE_THEME_UPSELL_MODAL);
   n.useEffect(() => {
     d.default.track(E.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
@@ -38,11 +37,12 @@ function m(e) {
       location_stack: t
     })
   }, [t]);
-  let L = (0, _.default)({
+  let A = (0, _.default)({
     scrollPosition: p.ProfileCustomizationScrollPositions.TRY_IT_OUT,
-    analyticsLocations: A
+    analyticsLocations: N
   });
-  return (0, s.jsx)(N, {
+  return (0, s.jsx)(o.AnalyticsLocationProvider, {
+    value: N,
     children: (0, s.jsxs)(i.ModalRoot, {
       className: I.profileThemesUpsellModal,
       "aria-label": null != M ? M : S.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_BANNER_MODAL_TITLE,
@@ -77,7 +77,7 @@ function m(e) {
           buttonText: T.default.isPremium(R) ? S.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : S.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
         }), (0, s.jsx)(i.Button, {
           onClick: () => {
-            P(), L()
+            P(), A()
           },
           color: i.Button.Colors.PRIMARY,
           look: i.Button.Looks.LINK,

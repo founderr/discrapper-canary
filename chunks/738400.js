@@ -1,7 +1,7 @@
 "use strict";
 s.r(e), s.d(e, {
   default: function() {
-    return j
+    return R
   }
 }), s("222007"), s("70102");
 var n, i, l = s("37983"),
@@ -74,7 +74,7 @@ function E(t) {
   })
 }
 
-function R(t) {
+function P(t) {
   let {
     onClose: e
   } = t;
@@ -103,14 +103,14 @@ function R(t) {
   })
 }
 
-function j(t) {
+function R(t) {
   let e, {
       guildBoostSlotId: s,
       transitionState: n,
       onClose: i
     } = t,
     {
-      AnalyticsLocationProvider: u
+      analyticsLocations: u
     } = (0, C.default)(N.default.GUILD_BOOST_UNCANCELLATION_MODAL);
   a.useEffect(() => {
     !p.default.hasFetchedSubscriptions() && (0, I.fetchSubscriptions)()
@@ -130,14 +130,15 @@ function j(t) {
       });
       break;
     case 2:
-      e = (0, l.jsx)(R, {
+      e = (0, l.jsx)(P, {
         onClose: i
       });
       break;
     default:
       throw Error("Unexpected step: ".concat(d))
   }
-  return (0, l.jsx)(u, {
+  return (0, l.jsx)(C.AnalyticsLocationProvider, {
+    value: u,
     children: (0, l.jsx)(c.ModalRoot, {
       transitionState: n,
       children: e

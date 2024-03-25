@@ -450,9 +450,10 @@ function ee(e) {
 function et(e) {
   let t = (0, c.useStateFromStores)([B.default], () => B.default.getPremiumTypeSubscription()),
     {
-      AnalyticsLocationProvider: n
+      analyticsLocations: n
     } = (0, f.default)(_.default.GUILD_BOOST_PURCHASE_MODAL);
-  return (0, a.jsx)(n, {
+  return (0, a.jsx)(f.AnalyticsLocationProvider, {
+    value: n,
     children: (0, a.jsx)(T.PaymentContextProvider, {
       activeSubscription: t,
       stepConfigs: [],
