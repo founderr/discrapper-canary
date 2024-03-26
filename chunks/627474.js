@@ -58,9 +58,12 @@ var m = e => {
   } = e, g = r.useRef(null), O = (0, _.useShouldScrollToWhatsNew)(), P = (0, u.default)("perks-discoverability"), M = (0, d.useMarketingOptimizationExperiment)({
     autoTrackExposure: !1
   });
-  (0, _.useClearNewBadge)(), (0, c.useClearTenureBadge)();
-  let h = i === T.PerksDiscoverabilityCardSection.WHATS_NEW;
+  (0, _.useClearNewBadge)();
+  let h = i === T.PerksDiscoverabilityCardSection.WHATS_NEW,
+    L = (0, c.useClearTenureBadge)();
   r.useEffect(() => {
+    h && L()
+  }, [L, h]), r.useEffect(() => {
     let e = g.current;
     if (null == e || !O || !h) return;
     let t = requestAnimationFrame(() => {
@@ -70,18 +73,18 @@ var m = e => {
     });
     return () => cancelAnimationFrame(t)
   }, [g, O, h]);
-  let L = (0, I.usePerksDiscoverabilityStrings)(h),
-    x = (0, E.default)(),
-    v = (0, c.useFreeBoostUserTenureReward)(),
-    D = (0, I.getFilteredPerksDiscoverabilityCards)(x, i, P, C, null == v ? void 0 : v.showNotification),
-    U = D.some(e => null != e.pillText),
-    [b, j] = r.useState(null),
-    B = r.useRef(new l.Environment);
+  let x = (0, I.usePerksDiscoverabilityStrings)(h),
+    v = (0, E.default)(),
+    D = (0, c.useFreeBoostUserTenureReward)(),
+    U = (0, I.getFilteredPerksDiscoverabilityCards)(v, i, P, C, null == D ? void 0 : D.showNotification),
+    b = U.some(e => null != e.pillText),
+    [j, B] = r.useState(null),
+    G = r.useRef(new l.Environment);
   return (0, a.jsxs)(a.Fragment, {
-    children: [(null == x ? void 0 : null === (t = x.freeBoost) || void 0 === t ? void 0 : t.name) === E.PerksDiscoverabilityCardTypes.FREE_BOOST && (0, a.jsx)(l.ConfettiCanvas, {
-      ref: j,
+    children: [(null == v ? void 0 : null === (t = v.freeBoost) || void 0 === t ? void 0 : t.name) === E.PerksDiscoverabilityCardTypes.FREE_BOOST && (0, a.jsx)(l.ConfettiCanvas, {
+      ref: B,
       className: R.confettiCanvas,
-      environment: B.current
+      environment: G.current
     }), (0, a.jsxs)("div", {
       ref: g,
       className: n(R.section, {
@@ -91,7 +94,7 @@ var m = e => {
       children: [(0, a.jsx)(S, {
         showAllPerksButton: A,
         leftAlignHeaders: N,
-        title: L.title,
+        title: x.title,
         headerClassname: p
       }), !M && (0, a.jsx)(o.Text, {
         variant: "text-lg/normal",
@@ -100,11 +103,11 @@ var m = e => {
           [R.subtitle]: null == A || N,
           [R.subtitleWithButton]: null != A && !N,
           [R.fullWidth]: h || N,
-          [R.moreSubtitleMargin]: U,
+          [R.moreSubtitleMargin]: b,
           [R.leftAlignSubtitle]: N,
           [R.centerAlignSubtitle]: !N
         }),
-        children: L.subtitle
+        children: x.subtitle
       }), !N && null != A && (0, a.jsx)("div", {
         className: n(R.showAllPerksButtonCenter),
         children: A
@@ -113,8 +116,8 @@ var m = e => {
           [R.cardContainer]: C,
           [R.cardContainerNarrowWidth]: !C
         }),
-        children: D.map((e, t) => (0, a.jsx)(f.default, {
-          confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? b : void 0,
+        children: U.map((e, t) => (0, a.jsx)(f.default, {
+          confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? j : void 0,
           ...e,
           forceShadow: m
         }, "".concat(e.name, "_").concat(t)))
