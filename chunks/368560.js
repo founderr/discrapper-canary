@@ -1,51 +1,51 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return l
+    return s
   }
 });
-var r = a("37983");
+var l = a("37983");
 a("884691");
-var s = a("232482");
+var r = a("232482");
 
-function l() {
-  return (0, r.jsxs)("div", {
-    className: s.snowflakes,
-    children: [(0, r.jsx)("div", {
-      className: s.snowflake,
+function s() {
+  return (0, l.jsxs)("div", {
+    className: r.snowflakes,
+    children: [(0, l.jsx)("div", {
+      className: r.snowflake,
       children: "❅"
-    }), (0, r.jsx)("div", {
-      className: s.snowflake,
+    }), (0, l.jsx)("div", {
+      className: r.snowflake,
       children: "❅"
-    }), (0, r.jsx)("div", {
-      className: s.snowflake,
+    }), (0, l.jsx)("div", {
+      className: r.snowflake,
       children: "❅"
-    }), (0, r.jsx)("div", {
-      className: s.snowflake,
+    }), (0, l.jsx)("div", {
+      className: r.snowflake,
       children: "❅"
-    }), (0, r.jsx)("div", {
-      className: s.snowflake,
+    }), (0, l.jsx)("div", {
+      className: r.snowflake,
       children: "❅"
-    }), (0, r.jsx)("div", {
-      className: s.snowflake,
+    }), (0, l.jsx)("div", {
+      className: r.snowflake,
       children: "❅"
-    }), (0, r.jsx)("div", {
-      className: s.snowflake,
+    }), (0, l.jsx)("div", {
+      className: r.snowflake,
       children: "❅"
-    }), (0, r.jsx)("div", {
-      className: s.snowflake,
+    }), (0, l.jsx)("div", {
+      className: r.snowflake,
       children: "❅"
-    }), (0, r.jsx)("div", {
-      className: s.snowflake,
+    }), (0, l.jsx)("div", {
+      className: r.snowflake,
       children: "❅"
-    }), (0, r.jsx)("div", {
-      className: s.snowflake,
+    }), (0, l.jsx)("div", {
+      className: r.snowflake,
       children: "❅"
-    }), (0, r.jsx)("div", {
-      className: s.snowflake,
+    }), (0, l.jsx)("div", {
+      className: r.snowflake,
       children: "❅"
-    }), (0, r.jsx)("div", {
-      className: s.snowflake,
+    }), (0, l.jsx)("div", {
+      className: r.snowflake,
       children: "❅"
     })]
   })
