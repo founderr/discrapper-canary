@@ -11,7 +11,7 @@ var a = s("37983"),
   l = s("77078"),
   o = s("812204"),
   u = s("506885"),
-  d = s("981601"),
+  d = s("340906"),
   c = s("280174"),
   _ = s("533403"),
   E = s("158998"),
@@ -75,6 +75,7 @@ class S extends r.PureComponent {
       preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
       renderPopout: t => (0, a.jsx)(d.default, {
         ...t,
+        location: "ApplicationRecommendationActivity",
         userId: e.id,
         newAnalyticsLocations: [o.default.USERNAME]
       }),
@@ -131,6 +132,7 @@ class S extends r.PureComponent {
         preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => (0, a.jsx)(d.default, {
           ...t,
+          location: "ApplicationRecommendationActivity",
           userId: e.id,
           newAnalyticsLocations: [o.default.AVATAR]
         }),
