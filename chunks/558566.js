@@ -50,8 +50,8 @@ let h = {
     let w = r.useCallback(() => {
         k(!0)
       }, []),
-      K = A === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || A === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || A === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW,
-      W = (0, m.default)(),
+      W = A === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || A === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || A === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW,
+      K = (0, m.default)(),
       [V, Y] = (0, E.useGetDismissibleContent)(null != i && s || i === u.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI ? [i] : []);
     r.useEffect(() => () => {
       V === u.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI && y && (0, _.markDismissibleContentAsDismissed)(V)
@@ -111,8 +111,8 @@ let h = {
     }) : $ ? (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)("div", {
         className: n({
-          [M.noFlipCardContainer]: !K,
-          [M.noFlipCardContainerCarousel]: K,
+          [M.noFlipCardContainer]: !W,
+          [M.noFlipCardContainerCarousel]: W,
           [M.forceShadow]: R,
           [M.reducedMotion]: v
         }),
@@ -158,7 +158,7 @@ let h = {
         }), (0, a.jsx)("div", {
           className: M.flipCardFront,
           children: (0, a.jsx)(x, {
-            ...W.upcomingDropUntimed,
+            ...K.upcomingDropUntimed,
             pillText: ""
           })
         }), (0, a.jsx)("div", {
@@ -176,7 +176,7 @@ let h = {
         })]
       })
     }) : (0, a.jsx)(L, {
-      ...W.upcomingDropUntimed,
+      ...K.upcomingDropUntimed,
       forceShadow: R
     })
   });

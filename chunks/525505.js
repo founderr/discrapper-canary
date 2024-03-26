@@ -144,8 +144,8 @@ var H = e => {
     w = (0, m.useMarketingOptimizationExperiment)({
       autoTrackExposure: !1
     }),
-    K = (0, l.useStateFromStores)([f.default], () => f.default.hasFetchedSubscriptions()),
-    W = (0, T.useSubscriptionPlansLoaded)(),
+    W = (0, l.useStateFromStores)([f.default], () => f.default.hasFetchedSubscriptions()),
+    K = (0, T.useSubscriptionPlansLoaded)(),
     V = "PlanComparisonTable";
   (0, d.useTriggerDebuggingAA)({
     location: V + " auto on",
@@ -169,7 +169,7 @@ var H = e => {
     er = (0, R.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
     ei = (0, O.useGetPlanComparisonTableRows)(ea, er, ee, es),
     en = (0, C.useIsEligibleForBogoPromotion)();
-  if (!K || !W) return null;
+  if (!W || !K) return null;
   let el = {
     label: (0, a.jsx)(u.Heading, {
       className: x.textColor,

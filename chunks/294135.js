@@ -44,8 +44,8 @@ var a = s("37983"),
   H = s("83900"),
   F = s("216422"),
   w = s("547896"),
-  K = s("599110"),
-  W = s("306160"),
+  W = s("599110"),
+  K = s("306160"),
   V = s("568734"),
   Y = s("153160"),
   z = s("271560"),
@@ -117,7 +117,7 @@ class e_ extends r.PureComponent {
         loadDate: t
       }
     } = this.props;
-    null != t && K.default.track(eo.AnalyticEvents.STORE_LISTING_EXITED, {
+    null != t && W.default.track(eo.AnalyticEvents.STORE_LISTING_EXITED, {
       load_id: e,
       duration_ms: Date.now() - t
     })
@@ -135,7 +135,7 @@ class e_ extends r.PureComponent {
       images: 0,
       videos: 0
     });
-    K.default.track(eo.AnalyticEvents.STORE_LISTING_VIEWED, {
+    W.default.track(eo.AnalyticEvents.STORE_LISTING_VIEWED, {
       ...this._extraAnalyticsProperties,
       load_id: a.loadId,
       has_description: null != t.description && t.description.length > 0,
@@ -412,7 +412,7 @@ class e_ extends r.PureComponent {
       let {
         sku: a
       } = this.props;
-      null != a && K.default.track(eo.AnalyticEvents.STORE_LISTING_MEDIA_SCROLLED, {
+      null != a && W.default.track(eo.AnalyticEvents.STORE_LISTING_MEDIA_SCROLLED, {
         ...(0, C.default)(a),
         card_index: s,
         card_type: e.type === eo.CarouselMediaTypes.IMG ? "image" : "video"
@@ -422,7 +422,7 @@ class e_ extends r.PureComponent {
       let {
         location: t
       } = this.props;
-      (0, W.copy)((e = t.pathname, "".concat(location.protocol, "//").concat(location.host).concat(e))), this.setState({
+      (0, K.copy)((e = t.pathname, "".concat(location.protocol, "//").concat(location.host).concat(e))), this.setState({
         showLinkCopied: !0
       }, () => {
         this.showCopyLinkTextTimeout.start(1500, () => {

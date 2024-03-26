@@ -46,8 +46,8 @@ var n = s("65597"),
   H = s("198326"),
   F = s("761708"),
   w = s("174433"),
-  K = s("828015"),
-  W = s("62414"),
+  W = s("828015"),
+  K = s("62414"),
   V = s("613697"),
   Y = s("907511"),
   z = s("214523"),
@@ -189,13 +189,13 @@ var et = () => {
       description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
       descriptionCta: h.default.Messages.TAKE_ME_THERE,
       onCtaClick: eo,
-      perkImage: K
+      perkImage: W
     } : {
       name: "entranceSoundsSeeAllVariation",
       title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
       subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
       description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
-      perkImage: K
+      perkImage: W
     },
     profileEffects: es ? {
       name: "profileEffects",
@@ -333,7 +333,7 @@ var et = () => {
       name: "upcomingDropUntimed",
       title: h.default.Messages.NEW_DROP,
       pillText: h.default.Messages.COMING_SOON,
-      backgroundImage: W
+      backgroundImage: K
     },
     badge: {
       name: "badge",
