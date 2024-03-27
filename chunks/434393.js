@@ -100,7 +100,7 @@ var z = function(e) {
   }), {
     buttonColors: ea,
     backgroundColors: es
-  } = (0, O.default)(t.styles), el = (0, k.getFormattedPriceForCollectiblesProduct)(t, T), er = (0, k.isPremiumCollectiblesProduct)(t), en = (0, k.isFreeCollectiblesProduct)(t), [eo, ei, eu] = (0, i.useStateFromStoresArray)([_.default], () => [_.default.getPurchase(t.skuId), _.default.isClaiming === t.skuId, null != _.default.isClaiming && _.default.isClaiming !== t.skuId]), ec = l.useRef(null);
+  } = (0, O.default)(t.styles), el = (0, k.getFormattedPriceForCollectiblesProduct)(t, T, !1), er = (0, k.isPremiumCollectiblesProduct)(t), en = (0, k.isFreeCollectiblesProduct)(t), [eo, ei, eu] = (0, i.useStateFromStoresArray)([_.default], () => [_.default.getPurchase(t.skuId), _.default.isClaiming === t.skuId, null != _.default.isClaiming && _.default.isClaiming !== t.skuId]), ec = l.useRef(null);
   l.useEffect(() => {
     let {
       current: e
