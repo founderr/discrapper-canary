@@ -96,7 +96,7 @@ var O = e => {
       [S.outerContainerXs]: "xs" === R
     }),
     children: [(0, s.jsx)("img", {
-      src: (0, I.getRewardAssetUrl)(E.id),
+      src: (0, I.getRewardAssetUrl)(E),
       alt: "",
       className: l(S.questReward, S.gridImg, {
         [S.questRewardGiftInventory]: w && "lg" === R,

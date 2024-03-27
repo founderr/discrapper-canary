@@ -25,7 +25,7 @@ var l = n("414456"),
       children: [(0, a.jsx)("img", {
         alt: n.config.messages.rewardName,
         className: o.rewardTile,
-        src: (0, r.getRewardAssetUrl)(n.id)
+        src: (0, r.getRewardAssetUrl)(n)
       }), (0, a.jsx)(i.Text, {
         className: o.instructions,
         variant: "text-sm/normal",

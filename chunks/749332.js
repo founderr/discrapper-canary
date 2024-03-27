@@ -63,7 +63,7 @@ var M = e => {
     quest: l,
     location: o,
     size: _
-  } = e, T = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), M = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), O = a.useMemo(() => l.config.videoAssets.includes(o), [l, o]), R = a.useRef(null), L = (0, I.useIsQuestExpired)(l), v = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, P = (0, I.useQuestFormattedDate)(l.config.expiresAt, {
+  } = e, T = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), M = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), O = a.useMemo(() => (0, N.isAssetAnimated)(l.config.assets.hero), [l]), R = a.useRef(null), L = (0, I.useIsQuestExpired)(l), v = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, P = (0, I.useQuestFormattedDate)(l.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -72,9 +72,11 @@ var M = e => {
     month: "long",
     day: "numeric"
   });
-  return a.useEffect(() => {
+  a.useEffect(() => {
     null != R.current && (n ? R.current.play() : (R.current.pause(), R.current.currentTime = 0))
-  }, [n]), (0, s.jsxs)("div", {
+  }, [n]);
+  let x = (0, N.getHeroAssetUrl)(l);
+  return (0, s.jsxs)("div", {
     className: i(h.outerContainer, {
       [h.outerContainerGiftInventory]: o === m.QuestContent.QUEST_INVENTORY_CARD,
       [h.outerContainerEmbed]: o === m.QuestContent.QUESTS_EMBED
@@ -86,11 +88,11 @@ var M = e => {
       playsInline: !0,
       className: h.questSplash,
       controls: !1,
-      poster: (0, N.getHeroStaticAssetUrl)(l.id),
+      poster: x,
       ref: R,
       children: !M && O && (0, s.jsx)("source", {
-        src: (0, N.getHeroAnimatedAssetUrl)(l.id),
-        type: "video/webm"
+        src: x,
+        type: (0, N.getVideoAssetMimeType)(x)
       })
     }), (0, s.jsxs)("div", {
       className: h.header,

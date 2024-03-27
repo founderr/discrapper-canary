@@ -37,7 +37,7 @@ function R(e) {
     children: [(0, a.jsx)("img", {
       className: N.headingGameTile,
       alt: "",
-      src: (0, C.getGameTileAssetUrl)(n.id)
+      src: (0, C.getGameTileAssetUrl)(n)
     }), (0, a.jsxs)("div", {
       className: N.headingCopy,
       children: [(0, a.jsx)(o.Heading, {

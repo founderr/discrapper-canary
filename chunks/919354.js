@@ -40,7 +40,7 @@ var s = n("414456"),
         children: [(0, a.jsx)("img", {
           alt: S.config.messages.rewardName,
           className: f.questProgressRewardTile,
-          src: (0, o.getRewardAssetUrl)(S.id)
+          src: (0, o.getRewardAssetUrl)(S)
         }), m ? (0, a.jsx)(d.default, {
           className: f.questProgressBar,
           quest: S

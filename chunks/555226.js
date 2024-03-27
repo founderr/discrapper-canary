@@ -28,7 +28,7 @@ var E = function(e) {
     children: [(0, l.jsx)("img", {
       className: c.partnerBrandingGameTile,
       alt: "",
-      src: (0, u.getGameTileAssetUrl)(s.id),
+      src: (0, u.getGameTileAssetUrl)(s),
       style: {
         borderRadius: function(e) {
           switch (e) {
@@ -44,7 +44,7 @@ var E = function(e) {
     }), (0, l.jsx)("img", {
       className: c.partnerBrandingLogotype,
       alt: s.config.messages.gameTitle,
-      src: (0, u.getGameLogotypeAssetUrl)(s.id, (0, o.isThemeDark)(a) ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT)
+      src: (0, u.getGameLogotypeAssetUrl)(s, (0, o.isThemeDark)(a) ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT)
     })]
   })
 }

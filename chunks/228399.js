@@ -37,7 +37,7 @@ var a = n("37983"),
       }), (0, a.jsx)("img", {
         alt: n.config.messages.rewardName,
         className: E.questRewardTileAsset,
-        src: (0, d.getRewardAssetUrl)(n.id)
+        src: (0, d.getRewardAssetUrl)(n)
       })]
     })
   }

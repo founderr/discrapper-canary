@@ -38,7 +38,7 @@ let R = s.forwardRef(function(e, t) {
     onCtxMenuSelect: y,
     quest: D,
     useReducedMotion: x
-  } = e, b = (0, o.useStateFromStores)([_.default], () => _.default.isEnrolling(D.id), [D]), U = (0, h.useQuestFormattedDate)(D.config.expiresAt), G = (0, h.useQuestFormattedDate)(D.config.rewardCodeExpiresAt), j = s.useMemo(() => D.config.videoAssets.includes(C.QuestContent.QUEST_BAR), [D]), w = s.useCallback(() => {
+  } = e, b = (0, o.useStateFromStores)([_.default], () => _.default.isEnrolling(D.id), [D]), U = (0, h.useQuestFormattedDate)(D.config.expiresAt), G = (0, h.useQuestFormattedDate)(D.config.rewardCodeExpiresAt), j = s.useMemo(() => (0, S.isAssetAnimated)(D.config.assets.questBarHero), [D]), w = s.useCallback(() => {
     (0, E.enrollInQuest)(D.id, {
       questContent: C.QuestContent.QUEST_BAR,
       questContentCTA: f.QuestContentCTA.ACCEPT_QUEST
@@ -61,7 +61,7 @@ let R = s.forwardRef(function(e, t) {
     },
     delay: !x && v ? 300 : 0,
     immediate: x
-  }), B = (null === (n = D.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, H = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = v && L;
+  }), B = (null === (n = D.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, H = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = v && L, Y = (0, S.getQuestBarHeroAssetUrl)(D);
   return (0, a.jsx)(r.animated.div, {
     "aria-hidden": !V,
     className: i(R, N.contentExpanded, {
@@ -83,7 +83,7 @@ let R = s.forwardRef(function(e, t) {
           children: [(0, a.jsx)("img", {
             alt: D.config.messages.rewardName,
             className: N.questProgressRewardTile,
-            src: (0, S.getRewardAssetUrl)(D.id)
+            src: (0, S.getRewardAssetUrl)(D)
           }), (0, a.jsxs)("div", {
             className: N.questAcceptedContentCopy,
             children: [(0, a.jsx)(u.Heading, {
@@ -215,10 +215,10 @@ let R = s.forwardRef(function(e, t) {
           playsInline: !0,
           className: N.heroAsset,
           controls: !1,
-          poster: (0, S.getQuestBarStaticHeroAssetUrl)(D.id),
+          poster: j ? void 0 : Y,
           children: x || !j ? null : (0, a.jsx)("source", {
-            src: (0, S.getQuestBarAnimatedHeroAssetUrl)(D.id),
-            type: "video/webm"
+            src: Y,
+            type: (0, S.getVideoAssetMimeType)(Y)
           })
         }, x ? "static" : "animated")
       })]

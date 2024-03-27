@@ -42,7 +42,7 @@ function T(e) {
     style: i,
     className: A.rewardTile,
     children: [(0, a.jsx)("img", {
-      src: (0, _.getRewardAssetUrl)(s.id),
+      src: (0, _.getRewardAssetUrl)(s),
       alt: s.config.messages.rewardName,
       style: {
         border: "1px solid ".concat(s.config.colors.primary)

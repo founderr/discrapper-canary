@@ -19,7 +19,7 @@ var a = l("77078"),
       children: (0, n.jsxs)("div", {
         className: i.content,
         children: [(0, n.jsx)("img", {
-          src: (0, s.getGameTileAssetUrl)(t.id),
+          src: (0, s.getGameTileAssetUrl)(t),
           alt: "",
           className: i.gameTile
         }), (0, n.jsxs)("div", {

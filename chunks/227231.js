@@ -18,55 +18,55 @@ n.r(t), n.d(t, {
   getRewardAssetUrl: function() {
     return p
   },
-  getHeroStaticAssetUrl: function() {
+  getHeroAssetUrl: function() {
     return h
   },
-  getHeroAnimatedAssetUrl: function() {
+  getQuestBarHeroAssetUrl: function() {
     return x
   },
-  getQuestBarStaticHeroAssetUrl: function() {
+  getGameTileAssetUrl: function() {
     return E
   },
-  getQuestBarAnimatedHeroAssetUrl: function() {
+  getGameLogotypeAssetUrl: function() {
     return y
   },
-  getGameTileAssetUrl: function() {
+  getQuestUrl: function() {
     return g
   },
-  getGameLogotypeAssetUrl: function() {
+  getQuestForTargetedContent: function() {
     return S
   },
-  getQuestUrl: function() {
+  getPlatformString: function() {
     return C
   },
-  getQuestForTargetedContent: function() {
+  calculatePercentComplete: function() {
     return T
   },
-  getPlatformString: function() {
+  getContextualEntrypointHeading: function() {
     return _
   },
-  calculatePercentComplete: function() {
+  isDismissible: function() {
     return I
   },
-  getContextualEntrypointHeading: function() {
+  isDismissed: function() {
     return v
   },
-  isDismissible: function() {
+  includesTarget: function() {
     return A
   },
-  isDismissed: function() {
+  captureQuestsException: function() {
     return N
   },
-  includesTarget: function() {
+  getQuestsFromActivities: function() {
     return R
   },
-  captureQuestsException: function() {
+  isAssetAnimated: function() {
     return O
   },
-  getQuestsFromActivities: function() {
-    return M
+  getVideoAssetMimeType: function() {
+    return k
   }
-}), n("222007");
+}), n("222007"), n("70102");
 var i = n("568734"),
   l = n("286235"),
   a = n("588025"),
@@ -102,7 +102,7 @@ function c(e) {
 }
 
 function f(e) {
-  var t, n, i;
+  var t, n, i, l;
   return {
     id: e.id,
     preview: e.preview,
@@ -134,7 +134,13 @@ function f(e) {
       },
       rewardCodeExpiresAt: t.reward_code_expires_at,
       rewardCodePlatforms: t.reward_code_platforms.filter(e => a.QUEST_REWARD_CODE_PLATFORMS_SET.has(e)),
-      videoAssets: t.video_assets
+      assets: {
+        rewardTile: (l = t.assets).reward_tile,
+        hero: l.hero,
+        questBarHero: l.quest_bar_hero,
+        gameTile: l.game_tile,
+        logotype: l.logotype
+      }
     },
     userStatus: null == e.user_status ? null : c(e.user_status),
     targetedContent: e.targeted_content
@@ -150,21 +156,19 @@ function m(e) {
     claimedAt: e.claimed_at
   }
 }
-let p = e => "".concat(o).concat(e).concat("/reward.png"),
-  h = e => "".concat(o).concat(e).concat("/hero.png"),
-  x = e => "".concat(o).concat(e).concat("/hero.webm"),
-  E = e => "".concat(o).concat(e).concat("/quests_bar_hero.png"),
-  y = e => "".concat(o).concat(e).concat("/quests_bar_hero.webm"),
-  g = e => "".concat(o).concat(e).concat("/game_tile.png"),
-  S = (e, t) => "".concat(o).concat(e, "/").concat(t).concat("/game_logotype.png"),
-  C = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
+let p = e => "".concat(o).concat(e.id, "/").concat(e.config.assets.rewardTile),
+  h = e => "".concat(o).concat(e.id, "/").concat(e.config.assets.hero),
+  x = e => "".concat(o).concat(e.id, "/").concat(e.config.assets.questBarHero),
+  E = e => "".concat(o).concat(e.id, "/").concat(e.config.assets.gameTile),
+  y = (e, t) => "".concat(o).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype),
+  g = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
-function T(e, t) {
+function S(e, t) {
   for (let [n, i] of e)
     if (i.targetedContent.includes(t)) return i;
   return null
 }
-let _ = e => {
+let C = e => {
   switch (e) {
     case a.QuestRewardCodePlatforms.XBOX:
       return r.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -179,7 +183,7 @@ let _ = e => {
   }
 };
 
-function I(e) {
+function T(e) {
   if (null == e.userStatus) return 0;
   let {
     streamProgressSeconds: t,
@@ -192,11 +196,11 @@ function I(e) {
   return Math.min(t / 60 / i, 1)
 }
 
-function v(e) {
+function _(e) {
   var t, n;
   if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return r.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
   if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
-    let t = I(e);
+    let t = T(e);
     return t >= .75 ? r.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE : t >= .45 && t <= .55 ? r.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY : t > 0 ? r.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED : r.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
   }
   return r.default.Messages.QUESTS_TITLE.format({
@@ -204,21 +208,21 @@ function v(e) {
   })
 }
 
-function A(e) {
+function I(e) {
   return Object.keys(s.DismissibleQuestContentFlags).includes(a.QuestContent[e])
 }
 
-function N(e, t) {
-  if (!A(t)) return !1;
+function v(e, t) {
+  if (!I(t)) return !1;
   let n = a.QuestContent[t];
   return (0, i.hasFlag)(e.dismissedQuestContent, s.DismissibleQuestContentFlags[n])
 }
 
-function R(e, t) {
+function A(e, t) {
   return e.targetedContent.includes(t)
 }
 
-function O(e, t) {
+function N(e, t) {
   l.default.captureException(e, {
     ...t,
     tags: {
@@ -228,7 +232,7 @@ function O(e, t) {
   })
 }
 
-function M(e, t) {
+function R(e, t) {
   if (null == t || null == e) return null;
   for (let n of t) {
     if (null == n.application_id) continue;
@@ -236,4 +240,22 @@ function M(e, t) {
     if (null != t) return t
   }
   return null
+}
+
+function O(e) {
+  return e.endsWith(".webm") || e.endsWith(".mp4")
+}
+let M = /\.([a-zA-Z]+)$/;
+
+function k(e) {
+  var t, n;
+  let i = null === (n = M.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase();
+  switch (i) {
+    case "webm":
+      return "video/webm";
+    case "mp4":
+      return "video/mp4";
+    default:
+      throw Error("Unexpected file extension: ".concat(e))
+  }
 }

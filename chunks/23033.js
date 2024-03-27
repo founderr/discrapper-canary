@@ -103,7 +103,7 @@ var a = n("37983"),
             children: [(0, a.jsx)("img", {
               alt: b.config.messages.rewardName,
               className: y.rewardTile,
-              src: (0, I.getRewardAssetUrl)(b.id)
+              src: (0, I.getRewardAssetUrl)(b)
             }), (0, a.jsx)(x.default, {
               bgOpacity: .32,
               className: y.promotedTag
@@ -115,11 +115,11 @@ var a = n("37983"),
               children: [Y && D ? (0, a.jsx)("img", {
                 alt: b.config.messages.rewardName,
                 className: y.rewardTile,
-                src: (0, I.getRewardAssetUrl)(b.id)
+                src: (0, I.getRewardAssetUrl)(b)
               }) : (0, a.jsx)("img", {
                 className: y.gameTile,
                 alt: b.config.messages.gameTitle,
-                src: (0, I.getGameTileAssetUrl)(b.id)
+                src: (0, I.getGameTileAssetUrl)(b)
               }), (0, a.jsxs)("div", {
                 className: y.details,
                 children: [(0, a.jsxs)("div", {
