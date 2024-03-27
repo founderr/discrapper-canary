@@ -31,6 +31,6 @@ let l = {
   },
   [s.CollectiblesCategorySkuId.SHY]: {
     assetUrlOverride: a("776204"),
-    addGradient: !0
+    addGradient: !1
   }
 }
