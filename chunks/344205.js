@@ -42,7 +42,9 @@ function c(e) {
     },
     children: [null != c.iconSrc && (0, s.jsx)("img", {
       src: c.iconSrc,
-      alt: "shy"
+      className: u.countdownIcon,
+      alt: "",
+      "aria-hidden": !0
     }), (0, s.jsx)(n.Heading, {
       variant: "heading-md/medium",
       className: u.countdownLabel,
