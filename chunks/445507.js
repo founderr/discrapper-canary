@@ -77,11 +77,11 @@ let i = {
       key: "clan",
       icon: "compass",
       title: "Gaming Guilds",
-      description: "Small, organized servers of players with similar vibes, play styles, or skill levels who hang out and play regularly. Capped at 200 members max, prospective members will need to submit an application in order to join.",
+      description: "Become a Gaming Guild, where players with similar vibes or skill hang out and play regularly. You'll be discoverable among other guilds and approve member applications to join.",
       type: "clan"
     }, {
       key: "voice-hub",
-      icon: "gamepad",
+      icon: "microphone",
       title: "Gaming Voice Hub",
       description: "A hub that houses a large selection of voice channels dedicated to gaming, each holding up to 10 people. Join an existing channel or create your own and set the game you're playing, goals, or vibes.",
       type: "email"
