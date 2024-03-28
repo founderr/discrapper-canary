@@ -36,8 +36,8 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       analyticsType: A,
       ctaText: N,
       dismissText: v,
-      description: R,
-      learnMore: O,
+      description: O,
+      learnMore: R,
       title: L,
       videoPosterUrl: P,
       videoUrl: M,
@@ -73,8 +73,8 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
         type: A
       })
     }, [A]);
-    let x = (0, u.useAppContext)() === m.AppContext.POPOUT,
-      b = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
+    let b = (0, u.useAppContext)() === m.AppContext.POPOUT,
+      x = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
     return (0, l.jsx)(E.AnalyticsLocationProvider, {
       value: D,
       children: (0, l.jsx)("div", {
@@ -104,7 +104,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               className: p.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
-              children: [R, O ? (0, l.jsxs)(l.Fragment, {
+              children: [O, R ? (0, l.jsxs)(l.Fragment, {
                 children: [" ", (0, l.jsx)(o.Anchor, {
                   className: p.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",
@@ -123,19 +123,19 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,
                 onClick: null != y ? y : () => {
-                  n(S.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
-                    channel: b.isGuildVoice() ? b : void 0,
-                    guildId: b.guild_id,
+                  n(S.ContentDismissActionType.UNKNOWN), null != x && ((0, c.default)({
+                    channel: x.isGuildVoice() ? x : void 0,
+                    guildId: x.guild_id,
                     locationObject: {
                       page: m.AnalyticsPages.GUILD_CHANNEL,
                       section: m.AnalyticsSections.GUILD_CHANNEL_LIST,
                       object: m.AnalyticsObjects.ACTIVITIES_COACH_MARK,
                       objectType: m.AnalyticsObjectTypes.ACTIVITY
                     },
-                    openInPopout: x,
+                    openInPopout: b,
                     analyticsLocations: D
                   }), (0, d.fetchShelf)({
-                    guildId: b.guild_id
+                    guildId: x.guild_id
                   }))
                 },
                 children: N

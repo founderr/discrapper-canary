@@ -77,16 +77,16 @@ function N(e) {
     modalDismissibleContent: g,
     modalTopExtra: N,
     header: v,
-    headerClassName: R,
-    subHeader: O,
+    headerClassName: O,
+    subHeader: R,
     subHeaderExtra: L,
     featureCards: P,
     changeLogId: M,
     button: y
   } = e, {
     onClose: D,
-    transitionState: x
-  } = n, b = (0, h.useUID)(), U = P.length % 2 == 0, G = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [j, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(j), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
+    transitionState: b
+  } = n, x = (0, h.useUID)(), U = P.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
 
   function J() {
     let e = Date.now(),
@@ -96,8 +96,8 @@ function N(e) {
     return Z.current && (F(n += t), !X.current && H(a += t)), w(e), [n, a]
   }
   return s.useEffect(() => {
-    z.current = j, q.current = k, Q.current = B, Z.current = V, X.current = W
-  }, [j, k, B, V, W]), s.useEffect(() => () => {
+    z.current = G, q.current = k, Q.current = B, Z.current = V, X.current = W
+  }, [G, k, B, V, W]), s.useEffect(() => () => {
     let [e, t] = J();
     m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
       change_log_id: M,
@@ -121,8 +121,8 @@ function N(e) {
     }
   }, [g, M]), (0, a.jsxs)(o.ModalRoot, {
     className: i()(T.root, t),
-    transitionState: x,
-    "aria-labelledby": b,
+    transitionState: b,
+    "aria-labelledby": x,
     children: [(0, a.jsx)(o.ModalCloseButton, {
       className: T.closeButton,
       onClick: D
@@ -132,11 +132,11 @@ function N(e) {
       className: T.content,
       children: [(0, a.jsx)(o.Heading, {
         variant: "display-md",
-        className: i()(T.headerText, R),
+        className: i()(T.headerText, O),
         children: v
       }), "video" === l.type ? (0, a.jsx)(C.default, {
         className: i()(T.video, _),
-        autoPlay: !G,
+        autoPlay: !j,
         loop: !0,
         muted: !0,
         controls: !0,
@@ -182,7 +182,7 @@ function N(e) {
       }) : null, (0, a.jsx)(o.Heading, {
         variant: "heading-lg/extrabold",
         className: T.bodyText,
-        children: O
+        children: R
       }), null == L ? void 0 : L(), (0, a.jsx)("div", {
         className: i()(T.featureCardGroup, {
           [T.wideStyle]: U

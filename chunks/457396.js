@@ -30,22 +30,22 @@ let A = e => {
       selected: A,
       route: N,
       locationState: v,
-      ...R
+      ...O
     } = e,
-    O = (0, l.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
+    R = (0, l.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
     L = (0, l.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()),
     P = (0, s.useListItem)("nitro"),
     M = (0, E.usePremiumTrialOffer)(),
     y = (0, f.usePremiumDiscountOffer)(),
     D = (0, l.useStateFromStores)([o.default], () => o.default.isLocalizedPromoEnabled) && null == M,
-    x = (0, m.useIsEligibleForBogoPromotion)(),
-    b = (0, I.default)(),
+    b = (0, m.useIsEligibleForBogoPromotion)(),
+    x = (0, I.default)(),
     U = (0, _.useTenureRewardBadgeDescription)();
-  return A || null != M || null != y || x || b || null != U || null != O && Date.now() - O.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(O, L) ? (x ? n = (0, a.jsx)(h.default, {
+  return A || null != M || null != y || b || x || null != U || null != R && Date.now() - R.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(R, L) ? (b ? n = (0, a.jsx)(h.default, {
     isNitroTab: !0
   }) : null != U ? n = (0, a.jsx)(p.default, {
     copy: U
-  }) : b ? n = (0, a.jsx)(p.default, {}) : null != y ? n = (0, a.jsx)(S.PremiumDiscountOfferTabBadge, {
+  }) : x ? n = (0, a.jsx)(p.default, {}) : null != y ? n = (0, a.jsx)(S.PremiumDiscountOfferTabBadge, {
     userDiscount: y,
     isTabSelected: A,
     includesAmountOff: !1
@@ -60,7 +60,7 @@ let A = e => {
     icon: d.default,
     text: T.default.Messages.PREMIUM,
     locationState: v,
-    ...R,
+    ...O,
     ...P,
     className: t,
     children: n

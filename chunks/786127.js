@@ -16,7 +16,7 @@ t.default = function(e) {
     onRemove: u
   } = e, {
     label: f,
-    placeholder: E
+    placeholder: m
   } = t;
   return (0, a.jsx)(n.default, {
     field: t,
@@ -29,7 +29,7 @@ t.default = function(e) {
     title: f,
     children: (0, a.jsx)(l.TextInputFieldBody, {
       className: s.fieldBackground,
-      placeholder: E,
+      placeholder: m,
       disabled: !0
     })
   })

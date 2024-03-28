@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return f
   }
 }), n("47120");
-var r = n("470079"),
-  i = n("442837"),
+var i = n("470079"),
+  r = n("442837"),
   s = n("818083"),
   a = n("650774"),
   l = n("430824"),
@@ -32,20 +32,20 @@ let d = (0, s.createExperiment)({
 });
 
 function f(e) {
-  let t = (0, i.useStateFromStores)([l.default], () => l.default.getGuild(e)),
-    n = (0, i.useStateFromStores)([o.default], () => o.default.can(c.Permissions.ADMINISTRATOR, t)),
+  let t = (0, r.useStateFromStores)([l.default], () => l.default.getGuild(e)),
+    n = (0, r.useStateFromStores)([o.default], () => o.default.can(c.Permissions.ADMINISTRATOR, t)),
     s = null == t ? void 0 : t.hasFeature(c.GuildFeatures.COMMUNITY),
-    [f] = (0, i.useStateFromStoresArray)([a.default], () => [a.default.getMemberCount(e)], [e]),
+    [f] = (0, r.useStateFromStoresArray)([a.default], () => [a.default.getMemberCount(e)], [e]),
     p = (null != f ? f : 0) >= u.LOWERED_MINIMUM_SIZE && (null != f ? f : 0) < u.DEFAULT_MINIMUM_SIZE,
     _ = n && s && p;
-  r.useEffect(() => {
+  i.useEffect(() => {
     _ && d.trackExposure({
       guildId: e,
       location: "747eb3_1"
     })
   }, [e, _]);
   let {
-    enableLowerMemberCountReq: m
+    enableLowerMemberCountReq: E
   } = d.useExperiment({
     guildId: e,
     location: "747eb3_2"
@@ -53,5 +53,5 @@ function f(e) {
     autoTrackExposure: !1,
     disable: !_
   });
-  return m
+  return E
 }

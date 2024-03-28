@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return _
+    return p
   }
 });
 var i = l("735250");
@@ -15,7 +15,7 @@ var a = l("481060"),
   d = l("611527"),
   u = l("820305");
 
-function _() {
+function p() {
   let e = (0, r.useApplicationDirectoryHistory)(e => e.guildId);
   return (0, i.jsxs)("div", {
     className: d.container,

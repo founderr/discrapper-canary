@@ -1,52 +1,52 @@
 "use strict";
-i.r(t);
-var l = i("735250");
-i("470079");
-var a = i("803997"),
-  s = i.n(a),
-  n = i("153832"),
-  o = i("406658");
-let r = (0, n.v4)();
+n.r(t);
+var i = n("735250");
+n("470079");
+var r = n("803997"),
+  s = n.n(r),
+  a = n("153832"),
+  l = n("406658");
+let o = (0, a.v4)();
 t.default = e => {
   let {
     open: t,
-    className: i,
-    withHighlight: a = !1
+    className: n,
+    withHighlight: r = !1
   } = e;
-  return (0, l.jsxs)("svg", {
+  return (0, i.jsxs)("svg", {
     width: "18",
     height: "18",
-    className: s()(o.button, i, {
-      [o.open]: t,
-      [o.withHighlight]: a
+    className: s()(l.button, n, {
+      [l.open]: t,
+      [l.withHighlight]: r
     }),
-    children: [a && (0, l.jsx)("defs", {
-      children: (0, l.jsxs)("linearGradient", {
-        id: r,
+    children: [r && (0, i.jsx)("defs", {
+      children: (0, i.jsxs)("linearGradient", {
+        id: o,
         x1: "0",
         y1: "0",
         x2: "0",
         y2: "18",
         gradientUnits: "userSpaceOnUse",
-        children: [(0, l.jsx)("stop", {
+        children: [(0, i.jsx)("stop", {
           offset: "0",
           stopColor: "#B473F5"
-        }), (0, l.jsx)("stop", {
+        }), (0, i.jsx)("stop", {
           offset: "1",
           stopColor: "#E292AA"
         })]
       })
-    }), (0, l.jsxs)("g", {
+    }), (0, i.jsxs)("g", {
       fill: "none",
       fillRule: "evenodd",
-      children: [(0, l.jsx)("path", {
+      children: [(0, i.jsx)("path", {
         d: "M0 0h18v18H0"
-      }), (0, l.jsx)("path", {
-        stroke: a ? "url(#".concat(r, ")") : "currentColor",
+      }), (0, i.jsx)("path", {
+        stroke: r ? "url(#".concat(o, ")") : "currentColor",
         d: "M4.5 4.5l9 9",
         strokeLinecap: "round"
-      }), (0, l.jsx)("path", {
-        stroke: a ? "url(#".concat(r, ")") : "currentColor",
+      }), (0, i.jsx)("path", {
+        stroke: r ? "url(#".concat(o, ")") : "currentColor",
         d: "M13.5 4.5l-9 9",
         strokeLinecap: "round"
       })]

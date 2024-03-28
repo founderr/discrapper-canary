@@ -23,8 +23,8 @@ async function m(e) {
       guildId: A = h.ME,
       channelId: N,
       friendToken: v,
-      autoFocusNote: R,
-      analyticsLocation: O
+      autoFocusNote: O,
+      analyticsLocation: R
     } = e,
     L = c.default.getUser(T),
     P = E.default.getUserProfile(T);
@@ -33,15 +33,15 @@ async function m(e) {
   null != M && (S = M.party, I = M.assets, p = null != M.application_id ? o.default.getApplication(M.application_id) : null);
   let y = u.default.getStatus(T),
     D = u.default.isMobileOnline(T),
-    x = y;
-  y === h.StatusTypes.ONLINE && (x = D ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP), C = await (0, s.openModalLazy)(async () => {
+    b = y;
+  y === h.StatusTypes.ONLINE && (b = D ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP), C = await (0, s.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("99387"), n.e("59208")]).then(n.bind(n, "910364"));
     return t => (0, a.jsx)(e, {
       ...t,
       user: L,
-      autoFocusNote: R,
+      autoFocusNote: O,
       guildId: A,
       friendToken: v,
       initialSection: g,
@@ -61,10 +61,10 @@ async function m(e) {
     party_id: null == S ? void 0 : S.id,
     party_platform: (0, _.isSpotifyParty)(null == S ? void 0 : S.id) ? h.PlatformTypes.SPOTIFY : null,
     game_platform: (0, r.default)(M),
-    profile_user_status: x,
+    profile_user_status: b,
     profile_has_nitro_customization: (null == P ? void 0 : P.banner) != null,
     profile_has_profile_effect: (null == P ? void 0 : P.profileEffectId) != null,
-    ...null == O ? null : (0, f.expandLocation)(O)
+    ...null == R ? null : (0, f.expandLocation)(R)
   })
 }
 

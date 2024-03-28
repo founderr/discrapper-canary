@@ -17,7 +17,7 @@ t.default = function(e) {
     onEdit: u,
     onRemove: f
   } = e, {
-    label: E
+    label: m
   } = t;
   return (0, a.jsx)(r.default, {
     field: t,
@@ -27,7 +27,7 @@ t.default = function(e) {
     onDrop: c,
     onEdit: u,
     onRemove: f,
-    title: E,
+    title: m,
     children: (0, a.jsx)(s.MultipleChoiceFieldBody, {
       field: t,
       value: void 0,

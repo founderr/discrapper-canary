@@ -1,7 +1,7 @@
 "use strict";
-let r;
+let i;
 n.r(t), n("47120"), n("653041");
-var i, s = n("442837"),
+var r, s = n("442837"),
   a = n("570140");
 
 function l(e, t, n) {
@@ -17,17 +17,17 @@ let o = {
   },
   u = new Map,
   c = new Set;
-class d extends(i = s.default.PersistedStore) {
+class d extends(r = s.default.PersistedStore) {
   initialize() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o;
-    r = e
+    i = e
   }
   getState() {
-    return r
+    return i
   }
   shouldShowChannelNotice(e) {
     var t, n;
-    return !r.guildNoticeDismissed.includes(e) && (null !== (n = null === (t = u.get(e)) || void 0 === t ? void 0 : t.size) && void 0 !== n ? n : 0) > 0
+    return !i.guildNoticeDismissed.includes(e) && (null !== (n = null === (t = u.get(e)) || void 0 === t ? void 0 : t.size) && void 0 !== n ? n : 0) > 0
   }
   canShowOverviewTooltip(e, t) {
     var n;
@@ -49,15 +49,15 @@ l(d, "displayName", "CommandsMigrationStore"), l(d, "persistKey", "CommandsMigra
     let {
       guildId: t
     } = e;
-    r.guildNoticeDismissed.push(t)
+    i.guildNoticeDismissed.push(t)
   },
   COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED: function(e) {
     var t;
     let {
       guildId: n,
-      integrationId: r
+      integrationId: i
     } = e;
-    null === (t = u.get(n)) || void 0 === t || t.clear(), c.add(r)
+    null === (t = u.get(n)) || void 0 === t || t.clear(), c.add(i)
   },
   COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED: function(e) {
     let {

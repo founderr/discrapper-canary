@@ -8,8 +8,8 @@ var i = n("735250");
 n("470079");
 var s = n("557533"),
   a = n.n(s),
-  l = n("789978"),
-  r = n("777207"),
+  r = n("789978"),
+  l = n("777207"),
   o = n("655462");
 
 function c(e) {
@@ -21,7 +21,7 @@ function c(e) {
     selected: d,
     disabled: u
   } = e;
-  return (0, i.jsx)(l.FocusRing, {
+  return (0, i.jsx)(r.FocusRing, {
     children: (0, i.jsxs)("button", {
       type: "button",
       onClick: () => {
@@ -35,11 +35,11 @@ function c(e) {
         className: o.icon,
         children: c
       }), (0, i.jsxs)("div", {
-        children: [(0, i.jsx)(r.Text, {
+        children: [(0, i.jsx)(l.Text, {
           variant: "text-sm/semibold",
           color: "none",
           children: n
-        }), (0, i.jsx)(r.Text, {
+        }), (0, i.jsx)(l.Text, {
           variant: "text-xs/normal",
           color: "none",
           children: s

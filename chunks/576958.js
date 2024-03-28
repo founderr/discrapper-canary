@@ -19,9 +19,9 @@ function d(e) {
     className: l,
     listingClassName: s,
     title: d,
-    showViewAll: _,
-    onViewOne: m,
-    onViewAll: p
+    showViewAll: p,
+    onViewOne: _,
+    onViewAll: m
   } = e;
   return (0, i.jsxs)("div", {
     className: l,
@@ -30,10 +30,10 @@ function d(e) {
       children: [(0, i.jsx)(a.Heading, {
         variant: "heading-lg/semibold",
         children: d
-      }), _ ? (0, i.jsx)(a.Button, {
+      }), p ? (0, i.jsx)(a.Button, {
         look: a.Button.Looks.LINK,
         color: a.Button.Colors.LINK,
-        onClick: p,
+        onClick: m,
         children: c.default.Messages.APP_DIRECTORY_LISTING_VIEW_ALL_BUTTON
       }) : null]
     }) : null, (0, i.jsx)("ul", {
@@ -47,7 +47,7 @@ function d(e) {
             let {
               mutualGuilds: l
             } = t;
-            return m({
+            return _({
               application: e,
               mutualGuilds: l
             })

@@ -62,14 +62,14 @@ t.default = e => {
     avatarDecorationOverride: a,
     className: r
   } = e, f = (0, n.useStateFromStores)([h.default], () => h.default.getStatus(t.id)), {
-    category: A,
-    product: E,
+    category: E,
+    product: A,
     purchase: x
-  } = (0, c.default)(null == a ? void 0 : a.skuId), I = m.default.canUseCollectibles(t), _ = (0, u.isPremiumCollectiblesPurchase)(x), T = (0, u.isPremiumCollectiblesProduct)(E), b = !I && _;
-  return null != E && (null == x || b) ? (0, s.jsxs)("div", {
+  } = (0, c.default)(null == a ? void 0 : a.skuId), I = m.default.canUseCollectibles(t), _ = (0, u.isPremiumCollectiblesPurchase)(x), P = (0, u.isPremiumCollectiblesProduct)(A), b = !I && _;
+  return null != A && (null == x || b) ? (0, s.jsxs)("div", {
     className: l()(C.modalPreview, C.shopPreviewContainer, r),
     children: [(0, s.jsx)(d.default, {
-      asset: null == A ? void 0 : A.banner,
+      asset: null == E ? void 0 : E.banner,
       className: C.shopPreviewBanner,
       children: (0, s.jsx)(g.default, {
         user: t,
@@ -79,10 +79,10 @@ t.default = e => {
       className: C.shopPreviewTextContainer,
       children: [(0, s.jsx)(o.Text, {
         variant: "text-sm/semibold",
-        children: E.name
+        children: A.name
       }), (0, s.jsx)(o.Text, {
         variant: "text-sm/normal",
-        children: b ? p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([T, I]).with([!0, !0], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+        children: b ? p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([P, I]).with([!0, !0], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
       })]
     })]
   }) : (0, s.jsxs)("div", {

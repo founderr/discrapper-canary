@@ -4,13 +4,13 @@ s.r(t), s.d(t, {
     return h
   },
   getActiveAgoTimestamp: function() {
-    return m
+    return P
   },
   getFirstRouteFor: function() {
     return f
   },
   useChannelBrowserChannelCount: function() {
-    return P
+    return m
   },
   useChannelBrowserSections: function() {
     return p
@@ -24,22 +24,22 @@ var E = s("470079"),
   a = s.n(_),
   n = s("913527"),
   T = s.n(n),
-  A = s("442837"),
+  i = s("442837"),
   u = s("524437"),
-  i = s("45114"),
+  A = s("45114"),
   l = s("740504"),
   I = s("605236"),
-  L = s("931261"),
+  r = s("931261"),
   o = s("540126"),
-  r = s("671098"),
+  L = s("671098"),
   d = s("703656"),
   N = s("592125"),
   S = s("324067"),
   g = s("306680"),
   D = s("709054"),
-  G = s("981631"),
-  O = s("176505"),
-  c = s("443063"),
+  c = s("981631"),
+  G = s("176505"),
+  O = s("443063"),
   U = s("490897"),
   C = s("689938");
 
@@ -49,14 +49,14 @@ function M(e, t) {
 
 function R(e, t, s, _) {
   _ = _.toLowerCase();
-  let n = (0, L.useCanSeeOnboardingHome)(e),
-    T = E.useCallback((e, t) => !(n && e.channel.hasFlag(O.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== G.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || a()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [n]);
+  let n = (0, r.useCanSeeOnboardingHome)(e),
+    T = E.useCallback((e, t) => !(n && e.channel.hasFlag(G.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== c.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || a()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [n]);
   return E.useMemo(() => {
     let e = {
       null: [],
       _categories: []
     };
-    return s[G.ChannelTypes.GUILD_CATEGORY].forEach(s => {
+    return s[c.ChannelTypes.GUILD_CATEGORY].forEach(s => {
       let {
         channel: E
       } = s;
@@ -68,12 +68,12 @@ function R(e, t, s, _) {
 function f(e) {
   let t = e.getSections();
   if (t[o.SECTION_INDEX_COMMUNITY] > 0) switch (e.getCommunitySection().getRow(0)) {
-    case c.ChannelListCommunityRow.GUILD_HOME:
-      return O.StaticChannelRoute.GUILD_HOME;
-    case c.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
-      return O.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
-    case c.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS:
-      return O.StaticChannelRoute.MEMBER_APPLICATIONS
+    case O.ChannelListCommunityRow.GUILD_HOME:
+      return G.StaticChannelRoute.GUILD_HOME;
+    case O.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
+      return G.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
+    case O.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS:
+      return G.StaticChannelRoute.MEMBER_APPLICATIONS
   }
   for (let E = o.SECTION_INDEX_UNCATEGORIZED_CHANNELS; E < e.voiceChannelsSectionNumber; E++)
     if (t[E] > 0) {
@@ -85,16 +85,16 @@ function f(e) {
 
 function h(e, t) {
   let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-  (0, r.bulkClearRecents)(e, t), (0, i.bulkAck)(t.map(e => ({
+  (0, L.bulkClearRecents)(e, t), (0, A.bulkAck)(t.map(e => ({
     channelId: e,
     readStateType: U.ReadStateTypes.CHANNEL,
     messageId: g.default.lastMessageId(e)
-  }))), null != s && (0, d.transitionTo)(G.Routes.CHANNEL(e, s))
+  }))), null != s && (0, d.transitionTo)(c.Routes.CHANNEL(e, s))
 }
 
 function p(e, t, s, E) {
   let _ = (0, I.useIsDismissibleContentDismissed)(u.DismissibleContent.CHANNEL_BROWSER_NUX),
-    a = (0, A.useStateFromStoresObject)([N.default], () => {
+    a = (0, i.useStateFromStoresObject)([N.default], () => {
       let t = {},
         s = N.default.getMutableGuildChannelsForGuild(e);
       for (let e in s) {
@@ -121,9 +121,9 @@ function p(e, t, s, E) {
   }), n
 }
 
-function P(e) {
+function m(e) {
   var t, s;
-  let E = (0, A.useStateFromStores)([S.default], () => S.default.getCategories(e)),
+  let E = (0, i.useStateFromStores)([S.default], () => S.default.getCategories(e)),
     _ = E._categories.length,
     a = E._categories[E._categories.length - 1];
   if (null == a) return 0;
@@ -131,7 +131,7 @@ function P(e) {
   return null == n ? 0 : 0 === n.length ? a.index + 2 - _ : n[n.length - 1].index + 2 - _
 }
 
-function m(e) {
+function P(e) {
   var t;
   return C.default.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
     timeAgo: T()(D.default.extractTimestamp(null !== (t = g.default.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow()

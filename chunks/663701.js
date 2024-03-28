@@ -27,18 +27,18 @@ var a = n("735250"),
   A = n("243778"),
   N = n("922409"),
   v = n("899740"),
-  R = n("28476"),
-  O = n("880257"),
+  O = n("28476"),
+  R = n("880257"),
   L = n("631885"),
   P = n("457396"),
   M = n("51596"),
   y = n("905423"),
   D = n("155409"),
-  x = n("210887"),
-  b = n("695346"),
+  b = n("210887"),
+  x = n("695346"),
   U = n("283595"),
-  G = n("699516"),
-  j = n("923834"),
+  j = n("699516"),
+  G = n("923834"),
   w = n("55563"),
   k = n("774343"),
   F = n("517802"),
@@ -59,7 +59,7 @@ let ee = e => {
     let {
       selected: t,
       ...n
-    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([G.default], () => G.default.getPendingCount()), i = (0, p.default)(), {
+    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, p.default)(), {
       canViewBroadcasts: r
     } = S.default.useExperiment({
       location: "friends_tab_no_track"
@@ -121,7 +121,7 @@ let ee = e => {
       route: n,
       locationState: s,
       ...l
-    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([x.default], () => x.default.getState().theme), c = (0, C.useActivitiesWhatsNewCount)();
+    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([b.default], () => b.default.getState().theme), c = (0, C.useActivitiesWhatsNewCount)();
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: n,
@@ -144,7 +144,7 @@ let ee = e => {
     } = e, n = (0, v.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
       channelId: l
     } = (0, N.useMessageRequestSidebarState)();
-    if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
+    if (!(0, O.useShouldShowMessageRequestsRow)()) return null;
     let i = null == l ? void 0 : () => h.default.preload(X.ME, l);
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
@@ -161,7 +161,7 @@ let ee = e => {
   es = e => {
     let {
       selected: t
-    } = e, n = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = b.FamilyCenterEnabled.useSetting(), r = (0, O.default)(), [u, d] = s.useState(!0);
+    } = e, n = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = x.FamilyCenterEnabled.useSetting(), r = (0, R.default)(), [u, d] = s.useState(!0);
     return i && r ? (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: X.Routes.FAMILY_CENTER,
@@ -327,14 +327,14 @@ function eu() {
       }
       return !1
     }, [e]),
-    n = !b.DisableGamesTab.useSetting(),
+    n = !x.DisableGamesTab.useSetting(),
     {
       theme: s
-    } = (0, d.useStateFromStoresObject)([x.default], () => ({
-      theme: x.default.theme
+    } = (0, d.useStateFromStoresObject)([b.default], () => ({
+      theme: b.default.theme
     })),
     l = (0, d.useStateFromStores)([U.default], () => U.default.hasLibraryApplication()),
-    i = (0, d.useStateFromStores)([j.default], () => j.default.getCurrentPath());
+    i = (0, d.useStateFromStores)([G.default], () => G.default.getCurrentPath());
   return (0, a.jsx)(eo, {
     theme: s,
     showLibrary: n,

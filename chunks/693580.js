@@ -5,7 +5,7 @@ var E = s("735250"),
   a = s("525654"),
   n = s.n(a),
   T = s("748780"),
-  A = s("424996");
+  i = s("424996");
 
 function u(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function u(e, t, s) {
   }) : e[t] = s, e
 }
 
-function i(e) {
+function A(e) {
   let t = e => e.interpolate({
     inputRange: [0, 1],
     outputRange: ["0px", "1px"]
@@ -59,11 +59,11 @@ class l extends _.Component {
   }
   render() {
     return (0, E.jsxs)("div", {
-      className: A.searchIndexAnimation,
+      className: i.searchIndexAnimation,
       children: [(0, E.jsx)("div", {
-        className: A.searchIndexBackground
+        className: i.searchIndexBackground
       }), (0, E.jsxs)("svg", {
-        className: A.searchIndexForeground,
+        className: i.searchIndexForeground,
         width: "320",
         height: "280",
         children: [(0, E.jsx)("defs", {
@@ -82,8 +82,8 @@ class l extends _.Component {
               id: "search-index-foreground-mask-b",
               fill: "#fff",
               children: (0, E.jsx)(T.default.use, {
-                style: i(this.state),
-                className: A.mask,
+                style: A(this.state),
+                className: i.mask,
                 xlinkHref: "#search-index-foreground-mask-a"
               })
             }), (0, E.jsxs)("g", {
@@ -346,8 +346,8 @@ class l extends _.Component {
               })]
             })]
           }), (0, E.jsxs)(T.default.g, {
-            className: A.magnifyingGlass,
-            style: i(this.state),
+            className: i.magnifyingGlass,
+            style: A(this.state),
             children: [(0, E.jsx)("path", {
               fill: "#C9D2F0",
               d: "M89.8311 190.9259c-2.441-2.441-2.441-6.4 0-8.841l36.771-36.771 8.841 8.841-36.771 36.771c-2.441 2.441-6.4 2.441-8.841 0"

@@ -13,9 +13,9 @@ var i = l("735250"),
   o = l("463571"),
   d = l("744142"),
   u = l("132871"),
-  _ = l("147890"),
-  m = l("216547"),
-  p = l("57716"),
+  p = l("147890"),
+  _ = l("216547"),
+  m = l("57716"),
   f = l("981631"),
   h = l("686911");
 
@@ -27,7 +27,7 @@ function C(e) {
       title: C,
       application_directory_collection_items: g
     }
-  } = e, [I, A] = a.useState(300), [E, v] = a.useState(4), x = parseFloat(s.default.COLLECTION_LIST_CARD_GAP), R = (0, u.useApplicationDirectoryHistory)(e => e.guildId), T = (0, p.default)({
+  } = e, [I, A] = a.useState(300), [E, v] = a.useState(4), x = parseFloat(s.default.COLLECTION_LIST_CARD_GAP), R = (0, u.useApplicationDirectoryHistory)(e => e.guildId), T = (0, m.default)({
     collection: t
   });
   a.useEffect(() => {
@@ -49,7 +49,7 @@ function C(e) {
   let N = (0, r.useUID)();
   return (0, i.jsx)("div", {
     ref: T,
-    children: (0, i.jsx)(m.default, {
+    children: (0, i.jsx)(_.default, {
       header: C,
       headerId: N,
       tileWidth: I,
@@ -99,7 +99,7 @@ function C(e) {
                     application_id: s.id,
                     guild_id: R,
                     shown_mutual_guilds_count: t.length
-                  }), (0, _.goToApplication)({
+                  }), (0, p.goToApplication)({
                     applicationId: s.id
                   })
                 },

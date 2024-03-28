@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return b
   }
 }), n("47120");
 var a = n("735250"),
@@ -27,8 +27,8 @@ var a = n("735250"),
   A = n("358924"),
   N = n("292140"),
   v = n("525296"),
-  R = n("981631"),
-  O = n("674563"),
+  O = n("981631"),
+  R = n("674563"),
   L = n("689938"),
   P = n("103877");
 let M = 15 * I.default.Millis.MINUTE,
@@ -53,9 +53,9 @@ let M = 15 * I.default.Millis.MINUTE,
     } = t, _ = c.length, C = f.length, m = E.length, I = h.length > 0, p = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
-        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === O.ApplicationTypes.GAME
+        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === R.ApplicationTypes.GAME
       }).map(e => e.game.name);
-      S.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
+      S.default.track(O.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
         num_users: _,
         num_streams: C,
         num_activities: m,
@@ -94,7 +94,7 @@ let M = 15 * I.default.Millis.MINUTE,
   }),
   D = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
 
-function x() {
+function b() {
   let {
     nowPlayingCards: e,
     loaded: t,

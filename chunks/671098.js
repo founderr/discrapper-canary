@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   bulkClearRecents: function() {
-    return A
+    return i
   }
 });
 var E = s("835913"),
@@ -9,7 +9,7 @@ var E = s("835913"),
   a = s("675478"),
   n = s("626135"),
   T = s("981631");
-async function A(e, t) {
+async function i(e, t) {
   await (0, a.updateUserGuildSettings)(e, e => (e.guildRecentsDismissedAt = E.Timestamp.fromDate(new Date), !0), a.UserSettingsDelay.INFREQUENT_USER_ACTION), _.default.dispatch({
     type: "BULK_CLEAR_RECENTS",
     guildId: e,

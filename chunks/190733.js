@@ -13,22 +13,22 @@ t.default = a.forwardRef(function(e, t) {
     query: l,
     canShowCta: n = !1,
     onChange: u,
-    onSubmit: _,
-    className: m
-  } = e, [p, f] = a.useState(!1);
+    onSubmit: p,
+    className: _
+  } = e, [m, f] = a.useState(!1);
   return (0, i.jsx)(r.default, {
     ref: t,
-    className: s()(d.search, m),
+    className: s()(d.search, _),
     label: o.default.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER,
     placeholder: o.default.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER,
     searchTerm: l,
-    cta: n && p && l.length > 0 ? o.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null,
+    cta: n && m && l.length > 0 ? o.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null,
     onChange: u,
     onClear: () => u(""),
     onFocus: () => f(!0),
     onBlur: () => f(!1),
     onKeyPress: e => {
-      e.charCode === c.KeyboardKeys.ENTER && (null == _ || _())
+      e.charCode === c.KeyboardKeys.ENTER && (null == p || p())
     },
     autoFocus: !0
   })

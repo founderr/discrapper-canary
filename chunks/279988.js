@@ -16,35 +16,35 @@ t.default = function(e) {
     channelId: t,
     formField: i,
     index: l,
-    isDragEnabled: E,
-    isDropHovered: I,
-    onDrop: T,
-    onEdit: m,
-    onRemove: _,
-    title: x
-  } = e, h = i.values, p = h.slice(0, 1), M = h.length - p.length;
+    isDragEnabled: m,
+    isDropHovered: E,
+    onDrop: I,
+    onEdit: x,
+    onRemove: h,
+    title: T
+  } = e, M = i.values, F = M.slice(0, 1), _ = M.length - F.length;
   return (0, a.jsxs)(c.default, {
     field: i,
     index: l,
-    isDragEnabled: E,
-    isDropHovered: I,
-    onDrop: T,
-    onEdit: m,
-    onRemove: _,
-    title: x,
+    isDragEnabled: m,
+    isDropHovered: E,
+    onDrop: I,
+    onEdit: x,
+    onRemove: h,
+    title: T,
     children: [(0, a.jsx)(d.TermsFieldBody, {
       className: n()(f.fieldBackground, {
-        [f.withFooter]: 0 !== M
+        [f.withFooter]: 0 !== _
       }),
-      terms: p,
+      terms: F,
       channelId: t
-    }), 0 !== M && (0, a.jsxs)(r.Clickable, {
+    }), 0 !== _ && (0, a.jsxs)(r.Clickable, {
       className: n()(f.fieldFooterContainer, f.clickable),
-      onClick: m,
+      onClick: x,
       children: [(0, a.jsx)(r.FormText, {
         className: f.clickable,
         children: u.default.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({
-          count: M
+          count: _
         })
       }), (0, a.jsx)(o.default, {
         className: f.termsFieldCaretIcon,

@@ -13,9 +13,9 @@ var i = l("735250"),
   o = l("857192"),
   d = l("674588"),
   u = l("368862"),
-  _ = l("927356"),
-  m = l("125909"),
-  p = l("185156"),
+  p = l("927356"),
+  _ = l("125909"),
+  m = l("185156"),
   f = l("87528"),
   h = l("57348"),
   C = l("438463");
@@ -32,7 +32,7 @@ function g() {
     d.getCollections({
       includesInactive: e
     })
-  }, [e]), t === u.FetchState.ERROR) ? (0, i.jsx)(_.default, {}) : (0, i.jsx)(m.default, {
+  }, [e]), t === u.FetchState.ERROR) ? (0, i.jsx)(p.default, {}) : (0, i.jsx)(_.default, {
     loading: t === u.FetchState.FETCHING,
     children: null == l ? void 0 : l.map((e, t) => {
       let a;
@@ -49,7 +49,7 @@ function g() {
           });
           break;
         case r.ApplicationDirectoryCollectionType.GALLERY:
-          a = (0, i.jsx)(p.default, {
+          a = (0, i.jsx)(m.default, {
             collection: e
           });
           break;

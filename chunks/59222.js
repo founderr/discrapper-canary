@@ -71,18 +71,18 @@ t.default = e => {
     defaultLanguage: r,
     availableLanguages: c,
     isFetchingSearch: v,
-    scroller: R,
-    loadingGuildId: O,
+    scroller: O,
+    loadingGuildId: R,
     theme: L,
     currentCategoryId: P,
     currentCategoryName: M,
     onViewGuild: y,
     onGuildCardSeen: D,
-    placeholder: x,
-    onTagClick: b
+    placeholder: b,
+    onTagClick: x
   } = e, U = i().uniqueId("GuildDiscovery"), {
-    guilds: G,
-    loading: j,
+    guilds: j,
+    loading: G,
     total: w
   } = n, [k, F] = s.useState(!1), {
     tag: B
@@ -97,7 +97,7 @@ t.default = e => {
       }
     }), F(!1)
   }, K = () => {
-    null == R || R.scrollTo({
+    null == O || O.scrollTo({
       to: 0
     })
   };
@@ -140,7 +140,7 @@ t.default = e => {
       mostRecentQuery: l,
       isFetchingSearch: v,
       defaultLanguage: r,
-      placeholder: x,
+      placeholder: b,
       availableLanguages: c,
       isSearchPage: !0,
       currentCategoryId: P,
@@ -167,15 +167,15 @@ t.default = e => {
           return (0, a.jsxs)("section", {
             "aria-labelledby": U,
             children: [(0, a.jsx)(m.default, {
-              guilds: G,
-              loading: j,
+              guilds: j,
+              loading: G,
               loadingPlaceholderCount: T,
               onViewGuild: y,
-              loadingGuildId: O,
+              loadingGuildId: R,
               theme: L,
               analyticsContext: h.AnalyticsContexts.SEARCH,
               onGuildCardSeen: D,
-              onTagClick: b
+              onTagClick: x
             }), t]
           })
         }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CollectiblesShopButton: function() {
-    return b
+    return x
   }
 }), n("47120");
 var a = n("735250"),
@@ -27,8 +27,8 @@ var a = n("735250"),
   A = n("335131"),
   N = n("141594"),
   v = n("302800"),
-  R = n("981631"),
-  O = n("689938"),
+  O = n("981631"),
+  R = n("689938"),
   L = n("592761");
 let P = e => {
     let {
@@ -37,7 +37,7 @@ let P = e => {
     return (0, a.jsx)(T.TextBadge, {
       className: L.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
-      text: O.default.Messages.NEW
+      text: R.default.Messages.NEW
     })
   },
   M = e => {
@@ -54,9 +54,9 @@ let P = e => {
     } = (0, C.default)(c);
     return (0, a.jsx)(f.LinkButton, {
       selected: t,
-      route: R.Routes.COLLECTIBLES_SHOP,
+      route: O.Routes.COLLECTIBLES_SHOP,
       icon: p.default,
-      text: O.default.Messages.COLLECTIBLES_SHOP,
+      text: R.default.Messages.COLLECTIBLES_SHOP,
       locationState: n,
       ...d,
       ...u,
@@ -144,7 +144,7 @@ let P = e => {
       })
     })
   },
-  x = e => {
+  b = e => {
     let {
       selected: t,
       locationState: n,
@@ -179,7 +179,7 @@ let P = e => {
       })
     })
   },
-  b = e => {
+  x = e => {
     let {
       selected: t,
       locationState: n
@@ -189,7 +189,7 @@ let P = e => {
     } = (0, N.default)();
     if (null != s) switch (s.type) {
       case v.CollectiblesMarketingVariant.TOOLTIP:
-        return (0, a.jsx)(x, {
+        return (0, a.jsx)(b, {
           selected: t,
           locationState: n,
           onButtonClick: l,

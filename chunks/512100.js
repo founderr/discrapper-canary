@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   CardDetails: function() {
-    return h
+    return m
   }
 }), n("47120");
 var i = n("735250"),
   s = n("470079"),
   a = n("789978"),
-  l = n("727075"),
-  r = n("790472"),
+  r = n("727075"),
+  l = n("790472"),
   o = n("349361"),
   c = n("777207"),
   d = n("330711"),
   u = n("960016");
 
-function h(e) {
+function m(e) {
   let {
     benefits: t,
     description: n,
-    imgSrc: h,
+    imgSrc: m,
     title: f,
-    onClose: m,
+    onClose: h,
     tag: x
-  } = e, v = s.useRef(null), [p, g] = s.useState(!0), j = null != h ? {
-    "--custom-background-url": "url(".concat(h.toString(), ")")
+  } = e, v = s.useRef(null), [p, g] = s.useState(!0), j = null != m ? {
+    "--custom-background-url": "url(".concat(m.toString(), ")")
   } : void 0, C = () => {
     var e;
     (null === (e = v.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? g(!1) : g(!0)
@@ -41,10 +41,10 @@ function h(e) {
           children: x
         }), (0, i.jsx)(a.FocusRing, {
           children: (0, i.jsx)("button", {
-            onClick: m,
+            onClick: h,
             className: u.closeBtn,
             type: "button",
-            children: (0, i.jsx)(l.CloseSmallIcon, {
+            children: (0, i.jsx)(r.CloseSmallIcon, {
               height: 24,
               width: 24,
               color: "var(--white)"
@@ -53,10 +53,10 @@ function h(e) {
         })]
       }), (0, i.jsx)("div", {
         className: u.headerImage,
-        children: null != h ? (0, i.jsx)("img", {
-          src: h.toString(),
+        children: null != m ? (0, i.jsx)("img", {
+          src: m.toString(),
           alt: ""
-        }) : (0, i.jsx)(r.TicketIcon, {
+        }) : (0, i.jsx)(l.TicketIcon, {
           color: "white",
           height: 96,
           width: 96

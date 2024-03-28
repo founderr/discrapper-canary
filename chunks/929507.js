@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n("47120");
-var r = n("470079"),
-  i = n("399606"),
+var i = n("470079"),
+  r = n("399606"),
   s = n("544891"),
   a = n("570140"),
   l = n("367907"),
@@ -12,33 +12,33 @@ var r = n("470079"),
   f = n("997787"),
   p = n("981631");
 let _ = 1 * d.default.Millis.DAY,
-  m = new Map;
+  E = new Map;
 t.default = {
   useShouldShowChannelNotice(e) {
-    let t = (0, i.useStateFromStores)([o.default, u.default], () => {
+    let t = (0, r.useStateFromStores)([o.default, u.default], () => {
       let t = o.default.getGuild(e);
       return null != t && u.default.can(p.Permissions.ADMINISTRATOR, t)
     });
-    r.useEffect(() => {
+    i.useEffect(() => {
       t && ! function(e) {
         var t;
         let n = Date.now(),
-          r = null !== (t = m.get(e)) && void 0 !== t ? t : 0;
-        !(n < r + _) && (m.set(e, n), s.HTTP.post({
+          i = null !== (t = E.get(e)) && void 0 !== t ? t : 0;
+        !(n < i + _) && (E.set(e, n), s.HTTP.post({
           url: p.Endpoints.GUILD_MIGRATE_COMMAND_SCOPE(e)
         }).then(t => {
-          var n, r;
+          var n, i;
           a.default.dispatch({
             type: "COMMANDS_MIGRATION_UPDATE_SUCCESS",
             guildId: e,
-            integrationIdsWithAppCommands: null !== (r = null === (n = t.body) || void 0 === n ? void 0 : n.integration_ids_with_app_commands) && void 0 !== r ? r : []
+            integrationIdsWithAppCommands: null !== (i = null === (n = t.body) || void 0 === n ? void 0 : n.integration_ids_with_app_commands) && void 0 !== i ? i : []
           })
         }, () => {
-          m.set(e, r)
+          E.set(e, i)
         }))
       }(e)
     }, [e, t]);
-    let n = (0, i.useStateFromStores)([f.default], () => f.default.shouldShowChannelNotice(e));
+    let n = (0, r.useStateFromStores)([f.default], () => f.default.shouldShowChannelNotice(e));
     return t && n
   },
   dismissNotice(e) {

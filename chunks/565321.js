@@ -10,46 +10,46 @@ var a = i("735250"),
   c = i("484455"),
   u = i("592286"),
   f = i("689938"),
-  E = i("482249");
+  m = i("482249");
 t.default = function(e) {
   var t;
   let {
     guildId: i
-  } = e, I = (0, n.useStateFromStores)([d.default], () => d.default.get(i)), [T, m] = l.useState(null), [_, x] = l.useState(null !== (t = null == I ? void 0 : I.description) && void 0 !== t ? t : ""), h = l.useRef(!1), p = l.useRef(!1);
+  } = e, E = (0, n.useStateFromStores)([d.default], () => d.default.get(i)), [I, x] = l.useState(null), [h, T] = l.useState(null !== (t = null == E ? void 0 : E.description) && void 0 !== t ? t : ""), M = l.useRef(!1), F = l.useRef(!1);
   l.useEffect(() => () => {
-    p.current = !0
+    F.current = !0
   }, []);
-  let M = l.useCallback(async () => {
-    if (!h.current) {
-      m(null);
+  let _ = l.useCallback(async () => {
+    if (!M.current) {
+      x(null);
       try {
-        await o.default.updateVerificationFormDescription(i, _)
+        await o.default.updateVerificationFormDescription(i, h)
       } catch (e) {
-        if (p.current) return;
-        m(new r.APIError(e).getAnyErrorMessage())
+        if (F.current) return;
+        x(new r.APIError(e).getAnyErrorMessage())
       } finally {
-        if (p.current) return;
-        h.current = !1
+        if (F.current) return;
+        M.current = !1
       }
     }
-  }, [_, i]);
+  }, [h, i]);
   return (0, a.jsxs)(c.default, {
     title: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
     children: [(0, a.jsx)(s.TextArea, {
-      className: E.fieldBackground,
+      className: m.fieldBackground,
       maxLength: u.MAX_DESCRIPTION_LENGTH,
-      value: null != _ ? _ : "",
+      value: null != h ? h : "",
       placeholder: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
       onChange: e => {
-        x(e)
+        T(e)
       },
-      onBlur: M,
+      onBlur: _,
       autosize: !0
-    }), null != T && "" !== T ? (0, a.jsx)(s.Text, {
-      className: E.errorText,
+    }), null != I && "" !== I ? (0, a.jsx)(s.Text, {
+      className: m.errorText,
       variant: "text-xs/normal",
       color: "text-danger",
-      children: T
+      children: I
     }) : null]
   })
 }

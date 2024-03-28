@@ -7,13 +7,13 @@ s.r(t), s.d(t, {
     return T
   },
   resetWelcomeScreen: function() {
-    return A
+    return i
   },
   saveWelcomeScreen: function() {
     return l
   },
   updateSettings: function() {
-    return i
+    return A
   },
   welcomeScreenViewed: function() {
     return n
@@ -49,7 +49,7 @@ let n = function(e) {
         type: "WELCOME_SCREEN_FETCH_FAIL"
       })
     }
-  }, A = () => {
+  }, i = () => {
     _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_RESET"
     })
@@ -57,7 +57,7 @@ let n = function(e) {
     _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_CLEAR"
     })
-  }, i = e => {
+  }, A = e => {
     _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_UPDATE",
       settings: e

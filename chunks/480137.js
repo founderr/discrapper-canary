@@ -4,13 +4,13 @@ s.r(t), s.d(t, {
     return u
   },
   fetchNextLogPage: function() {
-    return i
+    return A
   },
   filterByAction: function() {
     return l
   },
   filterByTargetId: function() {
-    return L
+    return r
   },
   filterByUserId: function() {
     return I
@@ -25,17 +25,17 @@ function T() {
   return a.default.isLoading || a.default.isLoadingNextPage
 }
 
-function A(e, t) {
+function i(e, t) {
   let s = function(e) {
     let {
       before: t,
       userId: s,
       targetId: E,
       action: _
-    } = e, T = null == s ? a.default.userIdFilter : s, A = null == _ ? a.default.actionFilter : _, u = null == E ? a.default.targetIdFilter : E, i = {
+    } = e, T = null == s ? a.default.userIdFilter : s, i = null == _ ? a.default.actionFilter : _, u = null == E ? a.default.targetIdFilter : E, A = {
       limit: n.AUDIT_LOG_PAGE_LIMIT
     };
-    return null != t && (i.before = t), null != T && (i.user_id = T), null != A && (i.action_type = A), null != u && (i.target_id = u), i
+    return null != t && (A.before = t), null != T && (A.user_id = T), null != i && (A.action_type = i), null != u && (A.target_id = u), A
   }(t);
   return E.HTTP.get({
     url: n.Endpoints.GUILD_AUDIT_LOG(e),
@@ -47,7 +47,7 @@ function A(e, t) {
 function u(e, t, s, E) {
   if (!T() && null != e) return _.default.dispatch({
     type: "AUDIT_LOG_FETCH_START"
-  }), A(e, {
+  }), i(e, {
     userId: t,
     action: E,
     targetId: s
@@ -59,7 +59,7 @@ function u(e, t, s, E) {
       webhooks: a,
       guild_scheduled_events: n,
       auto_moderation_rules: T,
-      threads: A,
+      threads: i,
       application_commands: u
     } = e.body;
     _.default.dispatch({
@@ -70,7 +70,7 @@ function u(e, t, s, E) {
       webhooks: a,
       guildScheduledEvents: n,
       automodRules: T,
-      threads: A,
+      threads: i,
       applicationCommands: u
     })
   }, () => _.default.dispatch({
@@ -78,7 +78,7 @@ function u(e, t, s, E) {
   }))
 }
 
-function i(e) {
+function A(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   if (!a.default.hasOlderLogs || T() || null == e) return;
   let s = a.default.logs,
@@ -88,7 +88,7 @@ function i(e) {
     type: "AUDIT_LOG_FETCH_NEXT_PAGE_START",
     before: n,
     isGroupedFetch: t
-  }), A(e, {
+  }), i(e, {
     before: n
   }).then(e => {
     let {
@@ -98,7 +98,7 @@ function i(e) {
       webhooks: a,
       guild_scheduled_events: n,
       auto_moderation_rules: T,
-      threads: A,
+      threads: i,
       application_commands: u
     } = e.body;
     _.default.dispatch({
@@ -109,7 +109,7 @@ function i(e) {
       webhooks: a,
       guildScheduledEvents: n,
       automodRules: T,
-      threads: A,
+      threads: i,
       applicationCommands: u
     })
   }, () => _.default.dispatch({
@@ -131,7 +131,7 @@ function I(e, t) {
   }), u(t, e)
 }
 
-function L(e, t) {
+function r(e, t) {
   if (!T() && null != t) return _.default.dispatch({
     type: "AUDIT_LOG_FILTER_BY_TARGET",
     targetId: e

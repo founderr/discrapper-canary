@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return T
+    return N
   }
 }), l("47120");
 var s = l("735250"),
@@ -21,8 +21,8 @@ var s = l("735250"),
   E = l("626135"),
   p = l("74538"),
   v = l("934261"),
-  S = l("52268"),
-  P = l("981631"),
+  P = l("52268"),
+  S = l("981631"),
   I = l("474936"),
   x = l("689938"),
   A = l("627525");
@@ -71,7 +71,7 @@ function _(e) {
   })
 }
 
-function N(e) {
+function T(e) {
   let {
     user: t,
     guild: l,
@@ -86,15 +86,15 @@ function N(e) {
   } = (0, g.useGlobalOrGuildIdentityPendingProfileEffect)(l), [C, E] = a.useMemo(() => {
     let e = (0, d.groupProfileEffects)(r, n);
     return [e.purchased, e.shopPreviews]
-  }, [r, n]), [P, I] = a.useState(() => null != u ? u : void 0 !== m ? m : null == c ? null : null != c ? c : null), [N, T] = a.useMemo(() => {
+  }, [r, n]), [S, I] = a.useState(() => null != u ? u : void 0 !== m ? m : null == c ? null : null != c ? c : null), [T, N] = a.useMemo(() => {
     var e;
-    let t = C.find(e => (null == e ? void 0 : e.id) === P),
-      l = null != t || null === P;
-    return [null !== (e = null != t ? t : E.find(e => (null == e ? void 0 : e.id) === P)) && void 0 !== e ? e : null, l]
-  }, [P, C, E]), {
+    let t = C.find(e => (null == e ? void 0 : e.id) === S),
+      l = null != t || null === S;
+    return [null !== (e = null != t ? t : E.find(e => (null == e ? void 0 : e.id) === S)) && void 0 !== e ? e : null, l]
+  }, [S, C, E]), {
     product: R,
-    purchase: M
-  } = (0, f.default)(null == N ? void 0 : N.skuId), F = a.useRef(null), b = p.default.canUseCollectibles(t), j = P === (void 0 === m ? null != c ? c : null : m), y = a.useCallback(e => {
+    purchase: b
+  } = (0, f.default)(null == T ? void 0 : T.skuId), F = a.useRef(null), M = p.default.canUseCollectibles(t), j = S === (void 0 === m ? null != c ? c : null : m), O = a.useCallback(e => {
     I(e)
   }, [I]);
   return (0, s.jsxs)(s.Fragment, {
@@ -110,39 +110,39 @@ function N(e) {
       })]
     }), (0, s.jsxs)(i.ModalContent, {
       className: A.modalContent,
-      children: [(0, s.jsx)(S.default, {
+      children: [(0, s.jsx)(P.default, {
         user: t,
         guild: l,
-        pendingProfileEffect: P,
+        pendingProfileEffect: S,
         selectedProfileEffectRef: F,
-        onSelect: y,
+        onSelect: O,
         onClose: o
       }), (0, s.jsx)(v.default, {
         user: t,
-        canApplySelectedChange: T,
-        pendingProfileEffectRecord: N,
+        canApplySelectedChange: N,
+        pendingProfileEffectRecord: T,
         product: R,
-        purchase: M,
+        purchase: b,
         guild: l
       })]
     }), (0, s.jsx)(_, {
       user: t,
       onApply: () => {
-        (0, g.setNewPendingProfileEffectId)(P, c, l), o()
+        (0, g.setNewPendingProfileEffectId)(S, c, l), o()
       },
       onClose: o,
       product: R,
-      purchase: M,
-      canUseCollectibles: b,
-      selectedProfileEffectId: P,
-      selectedProfileEffectItem: N,
+      purchase: b,
+      canUseCollectibles: M,
+      selectedProfileEffectId: S,
+      selectedProfileEffectItem: T,
       disableApplyButton: j,
       analyticsLocations: h
     })]
   })
 }
 
-function T(e) {
+function N(e) {
   let {
     transitionState: t,
     analyticsLocations: l,
@@ -152,13 +152,13 @@ function T(e) {
   } = e, {
     isFetching: p,
     categories: v,
-    purchases: S
+    purchases: P
   } = (0, h.default)(), I = (0, n.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
     analyticsLocations: x
   } = (0, u.default)(l, o.default.EDIT_PROFILE_EFFECT_MODAL), _ = (0, g.useGlobalOrGuildIdentityProfileEffect)(I, f);
   return a.useEffect(() => {
-    E.default.track(P.AnalyticEvents.OPEN_MODAL, {
-      type: P.AnalyticsSections.PROFILE_EFFECT_CUSTOMIZATION,
+    E.default.track(S.AnalyticEvents.OPEN_MODAL, {
+      type: S.AnalyticsSections.PROFILE_EFFECT_CUSTOMIZATION,
       location_stack: x
     })
   }, [x]), a.useEffect(() => () => {
@@ -175,11 +175,11 @@ function T(e) {
       children: p ? (0, s.jsx)(i.Spinner, {
         className: A.spinner,
         type: i.Spinner.Type.SPINNING_CIRCLE
-      }) : (0, s.jsx)(N, {
+      }) : (0, s.jsx)(T, {
         user: I,
         guild: f,
         categories: v,
-        purchases: S,
+        purchases: P,
         initialSelectedProfileEffectId: d,
         currentSavedEffectId: _,
         onClose: m,

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return i
   }
 });
 var E = s("735250"),
@@ -10,24 +10,24 @@ var E = s("735250"),
   n = s("412899"),
   T = s("231338");
 
-function A(e) {
+function i(e) {
   var t;
   let {
     guildId: s,
-    role: A,
+    role: i,
     className: u,
-    canRemove: i = !1,
+    canRemove: A = !1,
     onRemove: l = T.NOOP
-  } = e, I = (0, a.useToken)(a.tokens.unsafe_rawColors.PRIMARY_300).hex(), L = null !== (t = null == A ? void 0 : A.colorString) && void 0 !== t ? t : I, o = _.useMemo(() => ({
-    backgroundColor: "".concat(L, "27")
-  }), [L]);
-  return null == A ? null : (0, E.jsx)(a.Clickable, {
+  } = e, I = (0, a.useToken)(a.tokens.unsafe_rawColors.PRIMARY_300).hex(), r = null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : I, o = _.useMemo(() => ({
+    backgroundColor: "".concat(r, "27")
+  }), [r]);
+  return null == i ? null : (0, E.jsx)(a.Clickable, {
     children: (0, E.jsx)(n.MemberRole, {
       className: u,
       style: o,
-      role: A,
+      role: i,
       guildId: s,
-      canRemove: i,
+      canRemove: A,
       onRemove: l
     })
   })

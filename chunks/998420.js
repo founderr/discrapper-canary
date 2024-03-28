@@ -4,8 +4,8 @@ var a = s("735250"),
   l = s("470079"),
   i = s("442837"),
   n = s("100527"),
-  r = s("906732"),
-  u = s("252618"),
+  u = s("906732"),
+  r = s("252618"),
   o = s("598077"),
   d = s("430824"),
   c = s("693546"),
@@ -13,36 +13,36 @@ var a = s("735250"),
   I = s("328977"),
   f = s("208257"),
   T = s("853486"),
-  R = s("689938"),
-  _ = s("325370");
+  _ = s("689938"),
+  S = s("325370");
 t.default = function(e) {
   let {
     guildId: t
   } = e, {
     analyticsLocations: s
-  } = (0, r.default)(n.default.GUILD_MEMBER_APPLICATION_REVIEW), S = (0, I.useSelectedGuildJoinRequest)({
+  } = (0, u.default)(n.default.GUILD_MEMBER_APPLICATION_REVIEW), R = (0, I.useSelectedGuildJoinRequest)({
     guildId: t
   }), {
     user: N
-  } = null != S ? S : {}, m = l.useMemo(() => null != N ? new o.default(N) : null, [N]), A = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]);
-  return (0, u.usePageTitle)({
-    subsection: R.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REQUIREMENTS,
-    location: null == A ? void 0 : A.name
+  } = null != R ? R : {}, A = l.useMemo(() => null != N ? new o.default(N) : null, [N]), M = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]);
+  return (0, r.usePageTitle)({
+    subsection: _.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REQUIREMENTS,
+    location: null == M ? void 0 : M.name
   }), l.useEffect(() => {
     E.default.fetchVerificationForm(t)
-  }, [t]), (0, a.jsxs)(r.AnalyticsLocationProvider, {
+  }, [t]), (0, a.jsxs)(u.AnalyticsLocationProvider, {
     value: s,
     children: [(0, a.jsx)("div", {
-      className: _.content,
+      className: S.content,
       children: (0, a.jsx)(f.default, {
         guildId: t
       })
-    }), null != S && null != A && null != m && (0, a.jsx)("section", {
-      className: _.sidebar,
+    }), null != R && null != M && null != A && (0, a.jsx)("section", {
+      className: S.sidebar,
       children: (0, a.jsx)(T.default, {
-        guild: A,
-        guildJoinRequest: S,
-        guildJoinRequestUser: m,
+        guild: M,
+        guildJoinRequest: R,
+        guildJoinRequestUser: A,
         onClose: () => c.default.setSelectedGuildJoinRequest(t, null)
       })
     })]

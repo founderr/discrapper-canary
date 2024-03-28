@@ -13,9 +13,9 @@ var i = l("735250"),
   o = l("794295"),
   d = l("410030"),
   u = l("726542"),
-  _ = l("757698"),
-  m = l("630641"),
-  p = l("626135"),
+  p = l("757698"),
+  _ = l("630641"),
+  m = l("626135"),
   f = l("463571"),
   h = l("887706"),
   C = l("214912"),
@@ -31,13 +31,13 @@ function x(e) {
     onClick: n,
     url: s,
     children: c
-  } = e, o = (0, d.default)(), m = u.default.getByUrl(s), p = (0, r.isThemeDark)(o) ? null == m ? void 0 : null === (t = m.icon) || void 0 === t ? void 0 : t.darkSVG : null == m ? void 0 : null === (l = m.icon) || void 0 === l ? void 0 : l.lightSVG;
+  } = e, o = (0, d.default)(), _ = u.default.getByUrl(s), m = (0, r.isThemeDark)(o) ? null == _ ? void 0 : null === (t = _.icon) || void 0 === t ? void 0 : t.darkSVG : null == _ ? void 0 : null === (l = _.icon) || void 0 === l ? void 0 : l.lightSVG;
   return (0, i.jsx)(R, {
-    icon: void 0 === p ? _.default : void 0,
-    imageSrc: p,
+    icon: void 0 === m ? p.default : void 0,
+    imageSrc: m,
     onClick: n,
     url: s,
-    type: null !== (a = null == m ? void 0 : m.name) && void 0 !== a ? a : "website",
+    type: null !== (a = null == _ ? void 0 : _.name) && void 0 !== a ? a : "website",
     children: c
   })
 }
@@ -51,19 +51,19 @@ function R(e) {
     type: r,
     children: d,
     onClick: u
-  } = e, _ = (0, h.default)(), m = null;
-  null != t ? m = (0, i.jsx)(t, {
+  } = e, p = (0, h.default)(), _ = null;
+  null != t ? _ = (0, i.jsx)(t, {
     className: E.listIcon,
     color: a,
     width: 20,
     height: 20
-  }) : null != l && (m = (0, i.jsx)("img", {
+  }) : null != l && (_ = (0, i.jsx)("img", {
     className: E.listImage,
     src: l,
     alt: ""
   }));
-  let p = (0, i.jsxs)(i.Fragment, {
-    children: [m, (0, i.jsx)(c.Text, {
+  let m = (0, i.jsxs)(i.Fragment, {
+    children: [_, (0, i.jsx)(c.Text, {
       className: E.listText,
       variant: "text-md/normal",
       selectable: !0,
@@ -74,9 +74,9 @@ function R(e) {
     href: n,
     className: s()(E.listItem, E.linkItem),
     onClick: () => (u(n, r), !1),
-    trusted: !_,
+    trusted: !p,
     useDefaultUnderlineStyles: !1,
-    children: p
+    children: m
   })
 }
 
@@ -97,7 +97,7 @@ function T(e) {
     }
   }, [r.directory_entry]);
   let j = (e, t) => {
-    p.default.track(I.AnalyticEvents.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
+    m.default.track(I.AnalyticEvents.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
       application_id: r.id,
       guild_id: o,
       type: t,
@@ -145,13 +145,13 @@ function T(e) {
       onClick: j,
       children: e.name
     }, t)), null != r.terms_of_service_url ? (0, i.jsx)(R, {
-      icon: _.default,
+      icon: p.default,
       onClick: j,
       url: r.terms_of_service_url,
       type: "tos",
       children: A.default.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
     }) : null, null != r.privacy_policy_url ? (0, i.jsx)(R, {
-      icon: m.default,
+      icon: _.default,
       onClick: j,
       url: r.privacy_policy_url,
       type: "policy",

@@ -9,9 +9,9 @@ var E = s("735250"),
   a = s("803997"),
   n = s.n(a),
   T = s("924826"),
-  A = s("481060"),
+  i = s("481060"),
   u = s("285952"),
-  i = s("153124"),
+  A = s("153124"),
   l = s("570832");
 class I extends _.PureComponent {
   render() {
@@ -40,7 +40,7 @@ class I extends _.PureComponent {
     })
   }
 }
-class L extends _.PureComponent {
+class r extends _.PureComponent {
   render() {
     let {
       selected: e,
@@ -49,7 +49,7 @@ class L extends _.PureComponent {
     } = this.props;
     return (0, E.jsx)(T.ListNavigatorItem, {
       id: s.key,
-      children: _ => (0, E.jsx)(A.Clickable, {
+      children: _ => (0, E.jsx)(i.Clickable, {
         focusProps: {
           enabled: !1
         },
@@ -90,17 +90,17 @@ function o(e) {
     className: I
   } = e, o = n()(l.quickSelectPopout, I, {
     [l.quickSelectPopoutScroll]: _
-  }), r = t.map(e => {
+  }), L = t.map(e => {
     let t = null != s && e.value === s.value,
       _ = t ? void 0 : u;
-    return (0, E.jsx)(L, {
+    return (0, E.jsx)(r, {
       className: l.quickSelectPopoutOption,
       renderOption: a,
       option: e,
       onChange: _,
       selected: t
     }, e.key || e.value)
-  }), d = (0, i.useUID)(), N = (0, T.default)({
+  }), d = (0, A.useUID)(), N = (0, T.default)({
     id: d,
     isEnabled: !0,
     wrap: !0,
@@ -110,17 +110,17 @@ function o(e) {
     ref: S,
     ...g
   } = N.containerProps;
-  return (0, A.useFocusLock)(S), (0, E.jsx)(T.ListNavigatorProvider, {
+  return (0, i.useFocusLock)(S), (0, E.jsx)(T.ListNavigatorProvider, {
     navigator: N,
     children: (0, E.jsx)("div", {
       ref: S,
       className: o,
       ...g,
       role: "listbox",
-      children: _ ? (0, E.jsx)(A.Scroller, {
+      children: _ ? (0, E.jsx)(i.Scroller, {
         className: l.quickSelectScroller,
-        children: r
-      }) : r
+        children: L
+      }) : L
     })
   })
 }

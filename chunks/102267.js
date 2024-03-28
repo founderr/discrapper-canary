@@ -27,50 +27,50 @@ var a = n("735250"),
   A = n("504762"),
   N = n("807152"),
   v = n("176505"),
-  R = n("689938"),
-  O = n("966815");
+  O = n("689938"),
+  R = n("966815");
 
 function L(e) {
   let {
     guildId: t
   } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), P = (0, f.default)(t), M = (0, I.default)(t), y = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), D = (0, S.useGroupListingsFetchContext)(), {
-    shouldHideGuildPurchaseEntryPoints: x,
-    restrictionsLoading: b
-  } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !D || y || b;
+    shouldHideGuildPurchaseEntryPoints: b,
+    restrictionsLoading: x
+  } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !D || y || x;
   (0, d.usePageTitle)({
-    subsection: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
+    subsection: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == n ? void 0 : n.name
   }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
-  let G = L && (null == n || !(P || M) || x && !b);
+  let j = L && (null == n || !(P || M) || b && !x);
   if (s.useEffect(() => {
       o.fetchSubscriptions()
     }, []), s.useEffect(() => {
-      G && !l.isMobile && (0, c.handleInaccessiblePage)(t, v.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
-    }, [t, G]), l.isMobile && G) {
+      j && !l.isMobile && (0, c.handleInaccessiblePage)(t, v.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
+    }, [t, j]), l.isMobile && j) {
     let e = null == n ? g.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : g.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
     return (0, a.jsx)(g.GuildRoleSubscriptionsOverviewErrorPage, {
       errorType: e
     })
   }
   return (0, a.jsxs)("div", {
-    className: O.container,
+    className: R.container,
     children: [(0, a.jsxs)(_.default, {
       toolbar: (0, a.jsx)(s.Fragment, {}),
-      className: O.headerBar,
+      className: R.headerBar,
       children: [(0, a.jsx)(_.default.Icon, {
         icon: p.default,
         "aria-hidden": !0
       }), (0, a.jsx)(_.default.Title, {
-        children: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+        children: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
       })]
     }), (0, a.jsx)("div", {
       id: N.OVERVIEW_NOTICE_ROOT
     }), (0, a.jsx)("div", {
-      className: O.content,
+      className: R.content,
       children: P ? (0, a.jsx)(r.ScrollerNone, {
-        className: O.scroller,
+        className: R.scroller,
         children: (0, a.jsx)("div", {
-          className: O.scrollerContent,
+          className: R.scrollerContent,
           children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(T.default, {
             guild: n
           })

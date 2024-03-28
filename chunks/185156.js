@@ -13,9 +13,9 @@ var i = l("735250"),
   o = l("481060"),
   d = l("731081"),
   u = l("626135"),
-  _ = l("463571"),
-  m = l("34674"),
-  p = l("132871"),
+  p = l("463571"),
+  _ = l("34674"),
+  m = l("132871"),
   f = l("147890"),
   h = l("409425"),
   C = l("57716"),
@@ -33,11 +33,11 @@ function E(e) {
     ctaLabel: c,
     ctaLink: d,
     applicationId: u
-  } = e, m = "936929561302675456" === u, p = null == u ? (0, i.jsx)(o.Button, {
+  } = e, _ = "936929561302675456" === u, m = null == u ? (0, i.jsx)(o.Button, {
     className: A.applicationCta,
     onClick: n,
     children: c
-  }) : (0, i.jsx)(_.default, {
+  }) : (0, i.jsx)(p.default, {
     href: g.Routes.APPLICATION_DIRECTORY_PROFILE(u),
     children: (0, i.jsx)(o.Button, {
       className: A.applicationCta,
@@ -60,13 +60,13 @@ function E(e) {
         }), (0, i.jsxs)(o.Heading, {
           className: A.applicationName,
           variant: "heading-xxl/medium",
-          children: [l, " ", m && (0, i.jsx)(h.default, {})]
+          children: [l, " ", _ && (0, i.jsx)(h.default, {})]
         }), (0, i.jsx)(o.Text, {
           className: A.applicationDescription,
           variant: "text-md/normal",
           lineClamp: 3,
           children: a
-        }), null == d ? p : (0, i.jsx)(o.Anchor, {
+        }), null == d ? m : (0, i.jsx)(o.Anchor, {
           onClick: n,
           href: d,
           className: s()((0, o.getButtonStyle)({
@@ -94,11 +94,11 @@ function v(e) {
       title: n,
       application_directory_collection_items: o
     }
-  } = e, _ = (0, C.default)({
+  } = e, p = (0, C.default)({
     collection: t
-  }), [h, v] = a.useState(), x = (0, p.useApplicationDirectoryHistory)(e => e.guildId);
+  }), [h, v] = a.useState(), x = (0, m.useApplicationDirectoryHistory)(e => e.guildId);
   return a.useEffect(() => {
-    let e = null == _ ? void 0 : _.current;
+    let e = null == p ? void 0 : p.current;
     if (null == e) return;
     let t = new ResizeObserver(() => {
       let t = document.body.offsetWidth < parseFloat(c.default.COLLECTION_GALLERY_MEDIA_BREAKPOINT) ? parseFloat(c.default.COLLECTION_GALLERY_COLUMN_CARD_HEIGHT) : parseFloat(c.default.COLLECTION_GALLERY_ROW_CARD_HEIGHT);
@@ -107,8 +107,8 @@ function v(e) {
     return t.observe(document.body), () => {
       t.disconnect()
     }
-  }, [_]), (0, i.jsx)("article", {
-    ref: _,
+  }, [p]), (0, i.jsx)("article", {
+    ref: p,
     className: s()({
       [A.collectionBottomMargin]: o.length <= 1
     }),
@@ -137,11 +137,11 @@ function v(e) {
           type: c,
           description: o,
           title: d,
-          call_to_action_label: _,
-          call_to_action_url: p
+          call_to_action_label: p,
+          call_to_action_url: m
         } = e;
         if (null == a) return;
-        let h = (0, m.getCollectionItemAssetUrl)({
+        let h = (0, _.getCollectionItemAssetUrl)({
           itemId: t,
           hash: a
         });
@@ -166,21 +166,21 @@ function v(e) {
             applicationId: s.id
           })
         }
-        if (c === r.ApplicationDirectoryCollectionItemType.LINK && null != d && null != p && null != _) return (0, i.jsx)(E, {
+        if (c === r.ApplicationDirectoryCollectionItemType.LINK && null != d && null != m && null != p) return (0, i.jsx)(E, {
           collectionTitle: n,
           title: d,
           description: o,
           handleClick: () => {
             u.default.track(g.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
               collection_id: l,
-              link: p,
+              link: m,
               guild_id: x,
               shown_mutual_guilds_count: void 0
             })
           },
           imageSrc: h,
-          ctaLabel: _,
-          ctaLink: p
+          ctaLabel: p,
+          ctaLink: m
         })
       }
     })

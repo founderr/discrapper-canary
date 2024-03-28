@@ -7,13 +7,13 @@ s.r(t), s.d(t, {
     return N
   },
   openMemberProfile: function() {
-    return L
+    return r
   },
   useContextMenuModerateRoles: function() {
     return o
   },
   useContextMenuModerateUser: function() {
-    return r
+    return L
   },
   useHighestRole: function() {
     return d
@@ -22,18 +22,18 @@ s.r(t), s.d(t, {
 var E, _, a = s("470079"),
   n = s("399606"),
   T = s("906732"),
-  A = s("171368"),
+  i = s("171368"),
   u = s("430824"),
-  i = s("594174"),
+  A = s("594174"),
   l = s("91047"),
   I = s("981631");
-let L = (e, t) => {
+let r = (e, t) => {
   let {
     guildId: s,
     userId: E,
     colorRoleId: _
   } = e;
-  (0, A.openUserProfileModal)({
+  (0, i.openUserProfileModal)({
     userId: E,
     guildId: s,
     sourceAnalyticsLocations: t,
@@ -51,7 +51,7 @@ function o(e, t, s) {
   } = (0, T.default)();
   return a.useCallback(_ => {
     if (null == e) return;
-    let a = i.default.getUser(e.userId);
+    let a = A.default.getUser(e.userId);
     null != a && (_.stopPropagation(), (0, l.openModerateRoleContextMenu)(_, {
       user: a,
       guildId: e.guildId,
@@ -61,13 +61,13 @@ function o(e, t, s) {
   }, [e, E, s, t])
 }
 
-function r(e, t, s) {
+function L(e, t, s) {
   let {
     analyticsLocations: E
   } = (0, T.default)();
   return a.useCallback(_ => {
     if (null == e) return;
-    let a = i.default.getUser(e.userId);
+    let a = A.default.getUser(e.userId);
     null != a && (_.stopPropagation(), (0, l.openModerateUserContextMenu)(_, {
       user: a,
       guildId: e.guildId,

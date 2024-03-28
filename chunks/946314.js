@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var r, i, s, a, l = n("442837"),
+var i, r, s, a, l = n("442837"),
   o = n("570140");
 let u = 1e3,
   c = 200,
@@ -29,12 +29,12 @@ class p extends(a = l.default.Store) {
     return d[e]
   }
 }
-s = "DiscoverGuildChecklistStore", (i = "displayName") in(r = p) ? Object.defineProperty(r, i, {
+s = "DiscoverGuildChecklistStore", (r = "displayName") in(i = p) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[i] = s, t.default = new p(o.default, {
+}) : i[r] = s, t.default = new p(o.default, {
   DISCOVER_CHECKLIST_FETCH_START: function(e) {
     f = !0
   },
@@ -45,9 +45,9 @@ s = "DiscoverGuildChecklistStore", (i = "displayName") in(r = p) ? Object.define
     var t;
     let {
       checklist: n,
-      guildId: r
+      guildId: i
     } = e;
-    f = !1, d[r] = {
+    f = !1, d[i] = {
       guildId: n.guild_id,
       safeEnvironment: n.safe_environment,
       healthy: n.healthy,

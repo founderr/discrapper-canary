@@ -11,8 +11,8 @@ var i = n("735250");
 n("470079");
 var s = n("628028"),
   a = n("220427"),
-  l = n("777207"),
-  r = n("330711"),
+  r = n("777207"),
+  l = n("330711"),
   o = n("381585");
 let c = {
   width: 12,
@@ -31,7 +31,7 @@ function d(e) {
       ...c,
       color: "var(--text-brand)"
     }),
-    text: "user" === t ? r.default.Messages.Storefront.USER_SUBSCRIPTION : r.default.Messages.Storefront.SERVER_SUBSCRIPTION
+    text: "user" === t ? l.default.Messages.Storefront.USER_SUBSCRIPTION : l.default.Messages.Storefront.SERVER_SUBSCRIPTION
   })
 }
 
@@ -42,7 +42,7 @@ function u(e) {
   } = e;
   return (0, i.jsxs)("div", {
     className: o.container,
-    children: [t, (0, i.jsx)(l.Text, {
+    children: [t, (0, i.jsx)(r.Text, {
       color: "interactive-normal",
       variant: "text-sm/medium",
       children: n

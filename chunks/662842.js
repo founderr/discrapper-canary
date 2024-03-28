@@ -25,18 +25,18 @@ var a, s, l = n("735250"),
   A = n("854698"),
   N = n("703656"),
   v = n("922482"),
-  R = n("565799"),
-  O = n("501655"),
+  O = n("565799"),
+  R = n("501655"),
   L = n("427679"),
   P = n("448206"),
   M = n("484459"),
   y = n("103575"),
   D = n("496675"),
-  x = n("594174"),
-  b = n("465670"),
+  b = n("594174"),
+  x = n("465670"),
   U = n("242315"),
-  G = n("662868"),
-  j = n("393112"),
+  j = n("662868"),
+  G = n("393112"),
   w = n("170039"),
   k = n("898140"),
   F = n("981631"),
@@ -59,7 +59,7 @@ function Y(e) {
     isEventNoticeHidden: S.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([D.default], () => D.default.can(F.Permissions.CONNECT, a)), Z = (0, P.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([x.default], () => x.default.getUser(X), [X]);
+  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([O.default], () => [...new Set(O.default.getMutableParticipants(K, R.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([O.default], () => null != K ? O.default.getParticipantCount(K, R.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([D.default], () => D.default.can(F.Permissions.CONNECT, a)), Z = (0, P.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([b.default], () => b.default.getUser(X), [X]);
   i.useEffect(() => {
     null != X && (0, f.getUser)(X)
   }, [X]);
@@ -180,7 +180,7 @@ function Y(e) {
           noticeType: 1,
           title: t.name,
           location: (0, I.guildEventDetailsParser)(e, !0),
-          locationIcon: (0, l.jsx)(j.default, {
+          locationIcon: (0, l.jsx)(G.default, {
             width: 16,
             height: 16,
             className: V.locationIcon
@@ -261,12 +261,12 @@ function Y(e) {
       onClick: er,
       className: V.close,
       "aria-label": H.default.Messages.DISMISS,
-      children: (0, l.jsx)(b.default, {
+      children: (0, l.jsx)(x.default, {
         className: V.closeIcon
       })
     }) : null, (0, l.jsxs)("div", {
       className: V.header,
-      children: [(0, l.jsx)(G.default, {
+      children: [(0, l.jsx)(j.default, {
         color: d.default.unsafe_rawColors.GREEN_230.css,
         width: 16,
         height: 16

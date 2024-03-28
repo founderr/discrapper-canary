@@ -31,18 +31,18 @@ var a, s, l = n("735250"),
   A = n("263704"),
   N = n("465670"),
   v = n("242315"),
-  R = n("393112"),
-  O = n("170039"),
+  O = n("393112"),
+  R = n("170039"),
   L = n("602623"),
   P = n("626135"),
   M = n("823379"),
   y = n("15274"),
   D = n("924301"),
-  x = n("504160"),
-  b = n("151864"),
+  b = n("504160"),
+  x = n("151864"),
   U = n("835184"),
-  G = n("780294"),
-  j = n("725436"),
+  j = n("780294"),
+  G = n("725436"),
   w = n("497656"),
   k = n("79874"),
   F = n("554747"),
@@ -130,7 +130,7 @@ function Q(e) {
     return t
   }), [n]), s = (0, u.getChannelIconComponent)(n);
   return (0, l.jsx)(q, {
-    onClickCloseIcon: () => (0, x.hideLiveChannelNotice)({
+    onClickCloseIcon: () => (0, b.hideLiveChannelNotice)({
       eventId: null == t ? void 0 : t.id
     }),
     heading: K.default.Messages.STAGE_CHANNEL_LIVE_NOW,
@@ -154,12 +154,12 @@ function Z(e) {
     guildEvent: t,
     noticeType: n
   } = e, a = (0, H.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([D.default], () => D.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
-  return !s && null == i && (0, x.markUpcomingEventNoticeAsSeen)(t.id), (0, l.jsxs)(o.Button, {
+  return !s && null == i && (0, b.markUpcomingEventNoticeAsSeen)(t.id), (0, l.jsxs)(o.Button, {
     fullWidth: !0,
     className: z.joinButton,
     innerClassName: z.rsvpButton,
     onClick: function() {
-      (0, V.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, x.hideUpcomingEventNotice)(t.id), 1e3)), P.default.track(W.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
+      (0, V.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, b.hideUpcomingEventNotice)(t.id), 1e3)), P.default.track(W.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
         guild_id: t.guild_id,
         notice_type: n
       })
@@ -184,7 +184,7 @@ function X(e) {
   let {
     guildEvent: n,
     noticeType: a
-  } = e, s = (0, B.getLocationFromEvent)(n), r = null != s ? (0, j.guildEventDetailsParser)(s, !0) : null, d = (0, B.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
+  } = e, s = (0, B.getLocationFromEvent)(n), r = null != s ? (0, G.guildEventDetailsParser)(s, !0) : null, d = (0, B.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
     startTime: f,
     endTime: E
   } = (0, k.default)(n.id), {
@@ -221,7 +221,7 @@ function X(e) {
           P.default.track(W.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: a,
             guild_id: n.guild_id
-          }), (0, x.hideUpcomingEventNotice)(n.id)
+          }), (0, b.hideUpcomingEventNotice)(n.id)
         },
         className: z.closeIcon,
         "aria-label": K.default.Messages.CLOSE,
@@ -248,7 +248,7 @@ function X(e) {
         width: 16,
         height: 16,
         className: z.stageIcon
-      }) : (0, l.jsx)(R.default, {
+      }) : (0, l.jsx)(O.default, {
         width: 16,
         height: 16,
         className: z.stageIcon
@@ -270,13 +270,13 @@ function J(e) {
     guildEvent: t
   } = e, n = (0, B.getLocationFromEvent)(t);
   return null == n ? null : (0, l.jsx)(q, {
-    onClickCloseIcon: () => (0, x.hideLiveChannelNotice)({
+    onClickCloseIcon: () => (0, b.hideLiveChannelNotice)({
       eventId: null == t ? void 0 : t.id
     }),
     heading: K.default.Messages.HAPPENING_NOW,
     topic: t.name,
-    location: (0, j.guildEventDetailsParser)(n, !0),
-    locationIcon: (0, l.jsx)(R.default, {
+    location: (0, G.guildEventDetailsParser)(n, !0),
+    locationIcon: (0, l.jsx)(O.default, {
       width: 16,
       height: 16,
       className: z.stageIcon
@@ -330,7 +330,7 @@ function et(e) {
     count: "".concat(s)
   });
   return (0, l.jsx)(q, {
-    onClickCloseIcon: () => (0, x.hideLiveChannelNotice)({
+    onClickCloseIcon: () => (0, b.hideLiveChannelNotice)({
       stageId: null == t ? void 0 : t.id
     }),
     heading: K.default.Messages.STAGE_CHANNEL_LIVE_NOW,
@@ -341,7 +341,7 @@ function et(e) {
       height: 14,
       className: z.stageIcon
     }),
-    locationIcon: (0, l.jsx)(O.default, {
+    locationIcon: (0, l.jsx)(R.default, {
       width: 16,
       height: 16,
       className: z.stageIcon
@@ -400,7 +400,7 @@ function en(e) {
     showRedesignedLiveChannelNotice: n
   } = (0, d.useChannelNoticeRedesignExperiment)(!0), a = (0, w.useActiveEventOrStageInstanceChannel)(t.id), s = (0, F.useGuildActiveEvent)(t.id), i = (0, F.useGuildUpcomingEventsNotice)(t.id), {
     canSeeUpcomingEventsNotices: o
-  } = G.default.useExperiment({
+  } = j.default.useExperiment({
     guildId: t.id,
     location: "Guild Channel Notice"
   }, {
@@ -408,11 +408,11 @@ function en(e) {
   }), u = (0, r.useStateFromStores)([m.default], () => m.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: f,
     isEventNoticeHidden: E
-  } = (0, r.useStateFromStoresObject)([b.default], () => ({
-    isStageNoticeHidden: b.default.isLiveChannelNoticeHidden({
+  } = (0, r.useStateFromStoresObject)([x.default], () => ({
+    isStageNoticeHidden: x.default.isLiveChannelNoticeHidden({
       stageId: null == u ? void 0 : u.id
     }),
-    isEventNoticeHidden: b.default.isLiveChannelNoticeHidden({
+    isEventNoticeHidden: x.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
   }), [u, s]), h = null, _ = null != u && null != a && !f;
@@ -437,7 +437,7 @@ function en(e) {
       upcomingEvent: e,
       noticeType: n
     } = i;
-    G.default.trackExposure({
+    j.default.trackExposure({
       guildId: t.id,
       location: "Guild Live Channel Notice"
     }), h = o ? (0, l.jsx)(X, {

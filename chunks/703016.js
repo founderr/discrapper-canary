@@ -23,18 +23,18 @@ var a = n("913527"),
   A = n("51144"),
   N = n("196051"),
   v = n("441729"),
-  R = n("653477"),
-  O = n("981631"),
+  O = n("653477"),
+  R = n("981631"),
   L = n("689938");
 let P = [],
   M = null,
   y = null,
   D = null,
-  x = /\|\|([\s\S]+?)\|\|/g;
+  b = /\|\|([\s\S]+?)\|\|/g;
 
-function b(e, t, n, a) {
+function x(e, t, n, a) {
   let l = C.default.getGuild(n),
-    i = e.replace(x, L.default.Messages.SPOILER).replace(/<@!?(\d+)>/g, (e, t) => {
+    i = e.replace(b, L.default.Messages.SPOILER).replace(/<@!?(\d+)>/g, (e, t) => {
       var a;
       let s = g.default.getUser(t);
       if (null == s) return e;
@@ -71,13 +71,13 @@ function U() {
   let n = D.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
   y = n.length > 0 ? n[0] : null
 }
-async function G(e, t, n, a, s) {
+async function j(e, t, n, a, s) {
   let l = i.createUtterance(e, n);
   null !== l && (null == y && U(), t ? await (0, N.stopSpeaking)() : null == M || M.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), M = l, i.speakUtterance(l, y))
 }
 
-function j(e, t, n, a, s) {
-  G(e, t, s, () => {
+function G(e, t, n, a, s) {
+  j(e, t, s, () => {
     (0, N.speakingMessage)(n, a)
   })
 }
@@ -90,7 +90,7 @@ function w(e) {
     onStart: s,
     onEnd: l
   } = e;
-  G(t, n, a, s, l)
+  j(t, n, a, s, l)
 }
 
 function k() {
@@ -102,8 +102,8 @@ function F(e) {
   let {
     message: s,
     channel: l
-  } = e, i = s.type === O.MessageTypes.REPLY ? u.default.getMessageByReference(s.messageReference) : null, r = (null == i ? void 0 : i.state) === u.ReferencedMessageState.LOADED ? null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.author : null, o = null != r ? null !== (n = _.default.getNick(l.guild_id, null == r ? void 0 : r.id)) && void 0 !== n ? n : A.default.getName(r) : null, d = l.getGuildId(), c = null !== (a = _.default.getNick(d, s.author.id)) && void 0 !== a ? a : A.default.getName(s.author);
-  return j(b(s.content, c, d, o), !0, l.id, s.id), !0
+  } = e, i = s.type === R.MessageTypes.REPLY ? u.default.getMessageByReference(s.messageReference) : null, r = (null == i ? void 0 : i.state) === u.ReferencedMessageState.LOADED ? null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.author : null, o = null != r ? null !== (n = _.default.getNick(l.guild_id, null == r ? void 0 : r.id)) && void 0 !== n ? n : A.default.getName(r) : null, d = l.getGuildId(), c = null !== (a = _.default.getNick(d, s.author.id)) && void 0 !== a ? a : A.default.getName(s.author);
+  return G(x(s.content, c, d, o), !0, l.id, s.id), !0
 }
 
 function B(e) {
@@ -121,16 +121,16 @@ function B(e) {
     v = o === g || o === N,
     L = c.EnableTTSCommand.getSetting() && u.tts && v,
     M = S.default.getTTSType(),
-    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (M === O.TTSNotificationTypes.ALL_CHANNELS || M === O.TTSNotificationTypes.SELECTED_CHANNEL && v);
+    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (M === R.TTSNotificationTypes.ALL_CHANNELS || M === R.TTSNotificationTypes.SELECTED_CHANNEL && v);
   if ((L || y) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !I.default.isBlocked(u.author.id))) {
     if (P.indexOf(u.id) >= 0) return !1;
     P.unshift(u.id) > 10 && P.pop();
     let e = C.getGuildId();
     if (null != e && T.default.getMutedChannels(e).has(o)) return !1;
     let t = null !== (i = null !== (l = _.default.getNick(e, null === (a = u.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : A.default.getName(u.author)) && void 0 !== i ? i : "",
-      n = u.type === O.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
+      n = u.type === R.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
       d = null != n ? null !== (r = _.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : A.default.getName(n) : null;
-    j(b(u.content, t, e, d), !1, C.id, u.id, R.MAX_TTS_LENGTH)
+    G(x(u.content, t, e, d), !1, C.id, u.id, O.MAX_TTS_LENGTH)
   }
   return !1
 }

@@ -13,9 +13,9 @@ var i = l("735250"),
   o = l("626135"),
   d = l("463571"),
   u = l("894653"),
-  _ = l("34674"),
-  m = l("132871"),
-  p = l("147890"),
+  p = l("34674"),
+  _ = l("132871"),
+  m = l("147890"),
   f = l("981631"),
   h = l("689938"),
   C = l("760434");
@@ -23,14 +23,14 @@ var i = l("735250"),
 function g(e) {
   let {
     className: t
-  } = e, l = (0, m.useApplicationDirectoryHistory)(e => e.guildId), n = (0, r.useStateFromStores)([u.default], () => u.default.getCategories()), g = a.useMemo(() => [(0, _.getAllCategory)(), ...n], [n]), I = (0, m.getCurrentView)(), A = e => {
+  } = e, l = (0, _.useApplicationDirectoryHistory)(e => e.guildId), n = (0, r.useStateFromStores)([u.default], () => u.default.getCategories()), g = a.useMemo(() => [(0, p.getAllCategory)(), ...n], [n]), I = (0, _.getCurrentView)(), A = e => {
     let t = g.find(t => t.id === e);
     o.default.track(f.AnalyticEvents.APP_DIRECTORY_CATEGORY_CLICKED, {
       category: t.name,
       category_id: t.id,
       current_page: null == I ? void 0 : I.type,
       guild_id: l
-    }), (0, p.goToCategory)({
+    }), (0, m.goToCategory)({
       categoryId: t.id
     })
   };
@@ -39,7 +39,7 @@ function g(e) {
     children: g.map(e => {
       let t = e.id,
         l = e.name,
-        a = (0, _.getCategoryIcon)(e),
+        a = (0, p.getCategoryIcon)(e),
         n = new URLSearchParams;
       return n.set("category_id", t.toString()), (0, i.jsx)(d.default, {
         href: "".concat(f.Routes.APPLICATION_DIRECTORY_SEARCH, "?").concat(n),

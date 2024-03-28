@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   getVerificationLevelText: function() {
-    return T
+    return I
   }
 });
 var a = i("735250"),
@@ -14,24 +14,24 @@ var a = i("735250"),
   c = i("185403"),
   u = i("484455"),
   f = i("981631"),
-  E = i("689938"),
-  I = i("482249");
+  m = i("689938"),
+  E = i("482249");
 
-function T(e) {
+function I(e) {
   switch (e) {
     case f.VerificationLevels.LOW:
-      return E.default.Messages.VERIFICATION_LEVEL_LOW;
+      return m.default.Messages.VERIFICATION_LEVEL_LOW;
     case f.VerificationLevels.MEDIUM:
-      return E.default.Messages.VERIFICATION_LEVEL_MEDIUM;
+      return m.default.Messages.VERIFICATION_LEVEL_MEDIUM;
     case f.VerificationLevels.HIGH:
-      return E.default.Messages.VERIFICATION_LEVEL_HIGH;
+      return m.default.Messages.VERIFICATION_LEVEL_HIGH;
     case f.VerificationLevels.VERY_HIGH:
-      return E.default.Messages.VERIFICATION_LEVEL_VERY_HIGH;
+      return m.default.Messages.VERIFICATION_LEVEL_VERY_HIGH;
     default:
       return ""
   }
 }
-let m = {
+let x = {
   [f.VerificationLevels.NONE]: "",
   [f.VerificationLevels.LOW]: n.default.unsafe_rawColors.GREEN_360.css,
   [f.VerificationLevels.MEDIUM]: n.default.unsafe_rawColors.YELLOW_300.css,
@@ -41,35 +41,35 @@ let m = {
 t.default = function(e) {
   let {
     guild: t
-  } = e, n = r.default.can(f.Permissions.MANAGE_GUILD, t), _ = t.verificationLevel, x = _ === f.VerificationLevels.VERY_HIGH ? d.default : o.default, h = l.useMemo(() => T(_), [_]), p = m[_], M = (0, a.jsx)("div", {
-    className: I.verificationLevelTitle,
-    children: E.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
+  } = e, n = r.default.can(f.Permissions.MANAGE_GUILD, t), h = t.verificationLevel, T = h === f.VerificationLevels.VERY_HIGH ? d.default : o.default, M = l.useMemo(() => I(h), [h]), F = x[h], _ = (0, a.jsx)("div", {
+    className: E.verificationLevelTitle,
+    children: m.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {
         return (0, a.jsx)(s.Text, {
-          className: I.verificationLevelHook,
+          className: E.verificationLevelHook,
           style: {
-            color: p
+            color: F
           },
           variant: "text-sm/semibold",
-          children: h
+          children: M
         }, "hook")
       }
     })
-  }), R = _ === f.VerificationLevels.VERY_HIGH ? E.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : E.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
+  }), v = h === f.VerificationLevels.VERY_HIGH ? m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
   return (0, a.jsx)(u.default, {
-    title: M,
+    title: _,
     children: (0, a.jsxs)("div", {
-      className: I.verificationContainer,
-      children: [(0, a.jsx)(x, {
+      className: E.verificationContainer,
+      children: [(0, a.jsx)(T, {
         width: 20,
         height: 20,
-        className: I.icon
+        className: E.icon
       }), (0, a.jsx)(s.Text, {
-        className: I.guildVerificationText,
+        className: E.guildVerificationText,
         variant: "text-sm/normal",
-        children: R
+        children: v
       }), n && (0, a.jsx)(s.Clickable, {
-        className: I.iconInteractiveContainer,
+        className: E.iconInteractiveContainer,
         onClick: () => (0, s.openModalLazy)(async () => {
           let {
             default: e
@@ -82,7 +82,7 @@ t.default = function(e) {
         children: (0, a.jsx)(c.default, {
           width: 20,
           height: 20,
-          className: I.iconInteractive
+          className: E.iconInteractive
         })
       })]
     })

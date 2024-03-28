@@ -14,12 +14,12 @@ var i, a, n = l("735250"),
   o = l("477690"),
   d = l("481060"),
   u = l("104259"),
-  _ = l("806519"),
-  m = l("768581"),
-  p = l("624138"),
+  p = l("806519"),
+  _ = l("768581"),
+  m = l("624138"),
   f = l("689938"),
   h = l("953514");
-(a = i || (i = {}))[a.SMALL = (0, p.cssValueToNumber)(o.default.GUILD_COUNT_SMALL_ICON_SIZE)] = "SMALL", a[a.LARGE = (0, p.cssValueToNumber)(o.default.GUILD_COUNT_LARGE_ICON_SIZE)] = "LARGE";
+(a = i || (i = {}))[a.SMALL = (0, m.cssValueToNumber)(o.default.GUILD_COUNT_SMALL_ICON_SIZE)] = "SMALL", a[a.LARGE = (0, m.cssValueToNumber)(o.default.GUILD_COUNT_LARGE_ICON_SIZE)] = "LARGE";
 let C = {
     [i.SMALL]: h.moreGuildsSmall,
     [i.LARGE]: h.moreGuildsLarge
@@ -34,7 +34,7 @@ function I(e) {
   let {
     application: r,
     mutualGuilds: o,
-    mutualGuildShownMax: p = 4,
+    mutualGuildShownMax: m = 4,
     className: I,
     textVariant: A = "text-sm/normal",
     compact: E,
@@ -46,12 +46,12 @@ function I(e) {
     let e = [],
       t = [];
     return null == o || o.forEach(l => {
-      e.length < p && null != l.icon ? e.push(l) : t.push(l)
-    }), e.length === p && t.length > 0 && (t.push(e[p - 1]), e = e.slice(0, p - 1)), {
+      e.length < m && null != l.icon ? e.push(l) : t.push(l)
+    }), e.length === m && t.length > 0 && (t.push(e[m - 1]), e = e.slice(0, m - 1)), {
       shownMutualGuilds: e,
       hiddenMutualGuilds: t
     }
-  }, [o, p]), y = P.length, j = function(e, t, l, i) {
+  }, [o, m]), y = P.length, j = function(e, t, l, i) {
     if (0 === t && 0 === e) return null;
     if (t > 0 && 0 === l) return f.default.Messages.APP_DIRECTORY_MUTUAL_GUILD_COUNT.format({
       mutualGuildCount: t
@@ -74,7 +74,7 @@ function I(e) {
       children: N.length > 0 ? (0, n.jsxs)(n.Fragment, {
         children: [N.map((e, t) => {
           let l = t === N.length - 1 && 0 === y,
-            i = m.default.getGuildIconURL({
+            i = _.default.getGuildIconURL({
               id: e.id,
               icon: e.icon,
               size: v,
@@ -92,11 +92,11 @@ function I(e) {
             });
           return l ? (0, n.jsx)(s.Fragment, {
             children: a
-          }, e.id) : (0, n.jsx)(_.default, {
+          }, e.id) : (0, n.jsx)(p.default, {
             className: h.iconMask,
             height: v,
             width: v,
-            mask: _.default.Masks.VOICE_USER_SUMMARY_ITEM,
+            mask: p.default.Masks.VOICE_USER_SUMMARY_ITEM,
             children: a
           }, e.id)
         }), y > 0 ? (0, n.jsx)(d.Tooltip, {

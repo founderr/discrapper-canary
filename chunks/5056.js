@@ -10,25 +10,25 @@ var a = i("735250"),
   c = i("246364"),
   u = i("700833"),
   f = i("689938"),
-  E = i("482249");
+  m = i("482249");
 
-function I(e) {
+function E(e) {
   let {
     onClick: t,
     text: i,
     icon: l
   } = e;
   return (0, a.jsx)("div", {
-    className: E.addFormFieldContainer,
+    className: m.addFormFieldContainer,
     children: (0, a.jsxs)(n.Clickable, {
-      className: E.addFormField,
+      className: m.addFormField,
       onClick: t,
       children: [(0, a.jsx)(l, {
-        className: E.icon,
+        className: m.icon,
         height: 16,
         width: 16
       }), (0, a.jsx)(n.FormText, {
-        className: E.addFormFieldText,
+        className: m.addFormFieldText,
         children: i
       })]
     })
@@ -37,67 +37,67 @@ function I(e) {
 t.default = function(e) {
   let {
     addFormField: t,
-    showManualApprovalWarning: T,
-    guild: m
-  } = e, _ = l.useCallback(e => {
-    (0, u.openEmptyFormFieldModal)(e, t, m)
-  }, [t, m]), x = l.useCallback(e => {
-    T ? (0, n.openModalLazy)(async () => {
+    showManualApprovalWarning: I,
+    guild: x
+  } = e, h = l.useCallback(e => {
+    (0, u.openEmptyFormFieldModal)(e, t, x)
+  }, [t, x]), T = l.useCallback(e => {
+    I ? (0, n.openModalLazy)(async () => {
       let {
         default: t
       } = await Promise.all([i.e("99387"), i.e("54845")]).then(i.bind(i, "199836"));
       return i => (0, a.jsx)(t, {
         ...i,
-        onSubmit: () => _(e)
+        onSubmit: () => h(e)
       })
-    }) : _(e)
-  }, [T, _]);
+    }) : h(e)
+  }, [I, h]);
   return (0, a.jsxs)("div", {
-    className: E.backgroundContainer,
+    className: m.backgroundContainer,
     children: [(0, a.jsx)("div", {
-      className: E.containerTopHat,
+      className: m.containerTopHat,
       children: (0, a.jsx)(n.Text, {
-        className: E.containerTopHatText,
+        className: m.containerTopHatText,
         variant: "text-xs/bold",
         color: "header-secondary",
         children: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_REQUIRED
       })
     }), (0, a.jsxs)("div", {
-      className: E.leftRailIconContainer,
+      className: m.leftRailIconContainer,
       children: [(0, a.jsx)("div", {
-        className: E.iconContainer,
+        className: m.iconContainer,
         children: (0, a.jsx)(o.default, {
           width: 18,
           height: 20,
-          className: E.icon
+          className: m.icon
         })
       }), (0, a.jsxs)(n.FormSection, {
         children: [(0, a.jsx)(n.FormTitle, {
           tag: "h3",
-          className: E.leftRailIconContainerTitle,
+          className: m.leftRailIconContainerTitle,
           children: f.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS
         }), (0, a.jsx)(n.FormText, {
-          className: E.leftRailIconContainerDescription,
+          className: m.leftRailIconContainerDescription,
           type: n.FormText.Types.DESCRIPTION,
           children: f.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS_DESCRIPTION
-        }), (0, a.jsx)(I, {
+        }), (0, a.jsx)(E, {
           formFieldType: c.VerificationFormFieldTypes.TEXT_INPUT,
           addFormField: t,
           icon: d.default,
           text: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
-          onClick: () => x(c.VerificationFormFieldTypes.TEXT_INPUT)
-        }), (0, a.jsx)(I, {
+          onClick: () => T(c.VerificationFormFieldTypes.TEXT_INPUT)
+        }), (0, a.jsx)(E, {
           formFieldType: c.VerificationFormFieldTypes.PARAGRAPH,
           addFormField: t,
           icon: r.default,
           text: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
-          onClick: () => x(c.VerificationFormFieldTypes.PARAGRAPH)
-        }), (0, a.jsx)(I, {
+          onClick: () => T(c.VerificationFormFieldTypes.PARAGRAPH)
+        }), (0, a.jsx)(E, {
           formFieldType: c.VerificationFormFieldTypes.MULTIPLE_CHOICE,
           addFormField: t,
           icon: s.default,
           text: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_MULTIPLE_CHOICE,
-          onClick: () => x(c.VerificationFormFieldTypes.MULTIPLE_CHOICE)
+          onClick: () => T(c.VerificationFormFieldTypes.MULTIPLE_CHOICE)
         })]
       })]
     })]

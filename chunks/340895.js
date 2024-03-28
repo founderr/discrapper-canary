@@ -27,7 +27,7 @@ function v(e) {
   p.delete(e), (T = new Set(T)).delete(e)
 }
 
-function R(e) {
+function O(e) {
   let {
     channelId: t,
     ringing: n
@@ -54,12 +54,12 @@ function R(e) {
   }
 }();
 
-function O() {
+function R() {
   N = h.default.getStatus() === _.StatusTypes.DND || d.FocusMode.getSetting()
 }
 class L extends(a = r.default.Store) {
   initialize() {
-    this.waitFor(E.default, h.default), this.syncWith([h.default], O), this.syncWith([c.default], O)
+    this.waitFor(E.default, h.default), this.syncWith([h.default], R), this.syncWith([c.default], R)
   }
   getIncomingCalls() {
     return N ? I : Array.from(p.values())
@@ -80,8 +80,8 @@ i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s
   configurable: !0,
   writable: !0
 }) : s[l] = i, t.default = new L(u.default, {
-  CALL_CREATE: R,
-  CALL_UPDATE: R,
+  CALL_CREATE: O,
+  CALL_UPDATE: O,
   CALL_DELETE: function(e) {
     let {
       channelId: t

@@ -5,19 +5,19 @@ s.r(t), s.d(t, {
   }
 });
 var E, _, a, n, T = s("442837"),
-  A = s("570140");
+  i = s("570140");
 let u = {},
-  i = {},
+  A = {},
   l = {},
   I = !1,
-  L = !1,
+  r = !1,
   o = !1;
 
-function r(e) {
+function L(e) {
   let {
     guild: t
   } = e.invite;
-  return (null == t ? void 0 : t.welcome_screen) != null && (i[t.id] = t.welcome_screen, !0)
+  return (null == t ? void 0 : t.welcome_screen) != null && (A[t.id] = t.welcome_screen, !0)
 }
 
 function d(e) {
@@ -25,14 +25,14 @@ function d(e) {
     welcomeScreen: t,
     guildId: s
   } = e;
-  i[s] = null != t ? t : u
+  A[s] = null != t ? t : u
 }
 class N extends(n = T.default.Store) {
   get(e) {
-    if (null != e) return i[e]
+    if (null != e) return A[e]
   }
   isFetching() {
-    return L
+    return r
   }
   hasError() {
     return o
@@ -43,7 +43,7 @@ class N extends(n = T.default.Store) {
   }
   isEmpty(e) {
     if (null == e) return !0;
-    let t = i[e];
+    let t = A[e];
     return null == t || 0 === t.welcome_channels.length
   }
 }
@@ -52,9 +52,9 @@ a = "WelcomeScreenStore", (_ = "displayName") in(E = N) ? Object.defineProperty(
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : E[_] = a, t.default = new N(A.default, {
-  INVITE_RESOLVE_SUCCESS: r,
-  INVITE_ACCEPT_SUCCESS: r,
+}) : E[_] = a, t.default = new N(i.default, {
+  INVITE_RESOLVE_SUCCESS: L,
+  INVITE_ACCEPT_SUCCESS: L,
   WELCOME_SCREEN_SUBMIT_SUCCESS: d,
   WELCOME_SCREEN_UPDATE: d,
   WELCOME_SCREEN_VIEW: function(e) {
@@ -76,17 +76,17 @@ a = "WelcomeScreenStore", (_ = "displayName") in(E = N) ? Object.defineProperty(
     l[t] = !1
   },
   WELCOME_SCREEN_FETCH_START: function() {
-    L = !0, o = !1
+    r = !0, o = !1
   },
   WELCOME_SCREEN_FETCH_SUCCESS: function(e) {
-    L = !1, o = !1;
+    r = !1, o = !1;
     let {
       welcomeScreen: t,
       guildId: s
     } = e;
-    i[s] = null != t ? t : u
+    A[s] = null != t ? t : u
   },
   WELCOME_SCREEN_FETCH_FAIL: function() {
-    L = !1, o = !0
+    r = !1, o = !0
   }
 })

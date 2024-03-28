@@ -13,9 +13,9 @@ var i = l("735250"),
   o = l("626135"),
   d = l("463571"),
   u = l("894653"),
-  _ = l("34674"),
-  m = l("132871"),
-  p = l("981631"),
+  p = l("34674"),
+  _ = l("132871"),
+  m = l("981631"),
   f = l("200415");
 
 function h(e) {
@@ -24,7 +24,7 @@ function h(e) {
     className: l,
     countsByCategory: n,
     onView: h
-  } = e, C = (0, m.useApplicationDirectoryHistory)(e => e.guildId), g = (0, r.useStateFromStores)([u.default], () => u.default.getCategories()), I = a.useMemo(() => [(0, _.getAllCategory)(), ...g], [g]), A = (0, m.getCurrentView)();
+  } = e, C = (0, _.useApplicationDirectoryHistory)(e => e.guildId), g = (0, r.useStateFromStores)([u.default], () => u.default.getCategories()), I = a.useMemo(() => [(0, p.getAllCategory)(), ...g], [g]), A = (0, _.getCurrentView)();
   return (0, i.jsx)(c.TabBar, {
     className: s()(f.container, l),
     selectedItem: t,
@@ -32,7 +32,7 @@ function h(e) {
     onItemSelect: e => {
       if (e === t) return;
       let l = I.find(t => t.id === e);
-      o.default.track(p.AnalyticEvents.APP_DIRECTORY_CATEGORY_CLICKED, {
+      o.default.track(m.AnalyticEvents.APP_DIRECTORY_CATEGORY_CLICKED, {
         category: l.name,
         category_id: l.id,
         current_page: null == A ? void 0 : A.type,
@@ -44,17 +44,17 @@ function h(e) {
       var l;
       let a = e.id,
         r = e.name,
-        o = (0, _.getCategoryIcon)(e),
+        o = (0, p.getCategoryIcon)(e),
         u = s()(f.category, {
           [f.activeCategory]: t === a
         }),
-        m = new URLSearchParams;
-      return m.set("category_id", a.toString()), (0, i.jsx)(c.TabBar.Item, {
+        _ = new URLSearchParams;
+      return _.set("category_id", a.toString()), (0, i.jsx)(c.TabBar.Item, {
         id: a,
         "aria-label": r,
         disableItemStyles: !0,
         children: (0, i.jsxs)(d.default, {
-          href: "".concat(p.Routes.APPLICATION_DIRECTORY_SEARCH, "?").concat(m),
+          href: "".concat(m.Routes.APPLICATION_DIRECTORY_SEARCH, "?").concat(_),
           className: u,
           children: [(0, i.jsx)(o, {
             className: f.icon,

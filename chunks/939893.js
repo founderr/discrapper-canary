@@ -10,10 +10,10 @@ var a = l("302454"),
   o = l("960904"),
   d = l("830121"),
   u = l("746878"),
-  _ = l("729035");
-let m = /^discord.gg\/[a-zA-Z0-9-]+/,
-  p = {
-    ..._.default.rules,
+  p = l("729035");
+let _ = /^discord.gg\/[a-zA-Z0-9-]+/,
+  m = {
+    ...p.default.rules,
     heading: {
       ...c.Rules.heading
     },
@@ -21,8 +21,8 @@ let m = /^discord.gg\/[a-zA-Z0-9-]+/,
       ...n().defaultRules.image
     },
     inviteLink: {
-      order: _.default.rules.link.order + 1,
-      match: (e, t) => t.inline ? m.exec(e) : null,
+      order: p.default.rules.link.order + 1,
+      match: (e, t) => t.inline ? _.exec(e) : null,
       parse: (e, t, l) => {
         let i = (0, d.findCodedLink)(e[0]);
         return null == i || i.type !== o.CodedLinkType.INVITE ? {
@@ -53,4 +53,4 @@ let m = /^discord.gg\/[a-zA-Z0-9-]+/,
       }, l.key)
     }
   };
-t.default = p
+t.default = m

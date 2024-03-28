@@ -23,8 +23,8 @@ var a = n("735250"),
   A = n("30513"),
   N = n("474936"),
   v = n("689938"),
-  R = n("54449"),
-  O = n("1006"),
+  O = n("54449"),
+  R = n("1006"),
   L = n("741160"),
   P = n("829972"),
   M = n("31932"),
@@ -36,11 +36,11 @@ function D(e) {
   }, T.GuildSettingsSubsections.DISPLAY)
 }
 
-function x(e, t) {
+function b(e, t) {
   t && _.default.open(e.id, T.GuildSettingsSections.DISCOVERY)
 }
 
-function b(e, t) {
+function x(e, t) {
   null != t && ((0, p.isTierUnlocked)(t, T.BoostedGuildTiers.TIER_1) ? _.default.open(t.id, T.GuildSettingsSections.OVERVIEW, {
     section: T.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH
   }, T.GuildSettingsSubsections.INVITE) : (0, f.default)({
@@ -83,7 +83,7 @@ t.default = s.memo(function(e) {
         page: T.AnalyticsPages.GUILD_CHANNEL
       }
     })
-  }, G = () => {
+  }, j = () => {
     I.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: N.PremiumUpsellTypes.INVITE_SPLASH_UPSELL,
       location: {
@@ -91,7 +91,7 @@ t.default = s.memo(function(e) {
       },
       location_stack: f
     })
-  }, j = (0, i.isThemeDark)(n) ? P : M, [w, k] = (0, c.useSelectedDismissibleContent)(t, g.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, G = (0, i.isThemeDark)(n) ? P : M, [w, k] = (0, c.useSelectedDismissibleContent)(t, g.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, a.jsx)(a.Fragment, {
     children: (() => {
       switch (w) {
@@ -102,8 +102,8 @@ t.default = s.memo(function(e) {
               header: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: j,
-                className: O.fullWidthImage
+                src: G,
+                className: R.fullWidthImage
               }),
               content: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
               buttonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
@@ -121,8 +121,8 @@ t.default = s.memo(function(e) {
               header: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: j,
-                className: O.fullWidthImage
+                src: G,
+                className: R.fullWidthImage
               }),
               content: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
               buttonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
@@ -144,8 +144,8 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_SERVER_DISCOVERY_TOOLTIP:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(d.default, {
-              onClick: () => x(s, !0),
-              onSecondaryClick: () => x(s),
+              onClick: () => b(s, !0),
+              onSecondaryClick: () => b(s),
               markAsDismissed: k
             }),
             renderGuildHeaderDropdownButton: r
@@ -165,18 +165,18 @@ t.default = s.memo(function(e) {
             t = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : v.default.Messages.LEARN_MORE;
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
-              onComponentMount: G,
+              onComponentMount: j,
               header: v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: L,
-                className: O.fullWidthImage
+                className: R.fullWidthImage
               }),
               content: e,
               buttonCTA: t,
               secondaryButtonCTA: v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
-              onSecondaryClick: () => b(f),
-              onClick: () => b(f, s),
+              onSecondaryClick: () => x(f),
+              onClick: () => x(f, s),
               markAsDismissed: k
             }),
             renderGuildHeaderDropdownButton: r
@@ -191,7 +191,7 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
-              className: R.tooltipOverrideColor,
+              className: O.tooltipOverrideColor,
               header: v.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
               content: v.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
               buttonCTA: v.default.Messages.GOT_IT,
@@ -210,7 +210,7 @@ t.default = s.memo(function(e) {
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: y,
-                className: O.fullWidthImage
+                className: R.fullWidthImage
               }),
               onClick: () => {
                 _.default.open(s.id, T.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), v.default.Messages.USE_SOUNDBOARD)

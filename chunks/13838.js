@@ -40,12 +40,12 @@ function v(e) {
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid nsfw channel id: ".concat(s.id))
 }
-let R = e => (0, I.default)(e).keys({
+let O = e => (0, I.default)(e).keys({
   lobby_id: e.string().allow(null),
   channel_id: e.string().allow(null)
 });
 
-function O(e) {
+function R(e) {
   let {
     args: {
       lobby_id: t,
@@ -224,15 +224,15 @@ let L = {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [A.OAuth2Scopes.RPC, A.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
-    validation: R,
-    handler: O
+    validation: O,
+    handler: R
   },
   [A.RPCEvents.SPEAKING_STOP]: {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [A.OAuth2Scopes.RPC, A.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
-    validation: R,
-    handler: O
+    validation: O,
+    handler: R
   },
   [A.RPCEvents.GUILD_CREATE]: {
     scope: A.OAuth2Scopes.RPC,

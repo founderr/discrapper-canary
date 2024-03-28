@@ -7,9 +7,9 @@ var i, a, n = l("735250"),
   o = l("699581"),
   d = l("374470"),
   u = l("481060"),
-  _ = l("112724"),
-  m = l("996753"),
-  p = l("674058");
+  p = l("112724"),
+  _ = l("996753"),
+  m = l("674058");
 
 function f(e, t, l) {
   return t in e ? Object.defineProperty(e, t, {
@@ -27,10 +27,10 @@ let h = e => {
   } = e;
   return (0, n.jsx)(u.Clickable, {
     "aria-hidden": !0,
-    className: c()(p.scrollerButton, l),
+    className: c()(m.scrollerButton, l),
     onClick: t,
-    children: (0, n.jsx)(m.default, {
-      className: p.scrollerButtonArrow,
+    children: (0, n.jsx)(_.default, {
+      className: m.scrollerButtonArrow,
       direction: i
     })
   })
@@ -103,7 +103,7 @@ class C extends s.Component {
     } = this.props, o = this.getMaxOffset();
     return (0, n.jsxs)("div", {
       children: [(0, n.jsxs)("div", {
-        className: c()(p.headerContainer, s),
+        className: c()(m.headerContainer, s),
         children: [(0, n.jsxs)("div", {
           children: [(0, n.jsx)(u.Heading, {
             id: i,
@@ -111,33 +111,33 @@ class C extends s.Component {
             children: l
           }), null == a ? null : (0, n.jsx)(u.Text, {
             variant: "text-sm/medium",
-            className: p.subheader,
+            className: m.subheader,
             children: a
           })]
         }), o > 0 ? (0, n.jsxs)("div", {
-          className: p.arrowsContainer,
+          className: m.arrowsContainer,
           children: [(0, n.jsx)(h, {
-            direction: m.default.Directions.LEFT,
+            direction: _.default.Directions.LEFT,
             onClick: this.prev,
-            className: c()(p.arrowLeft, {
-              [p.arrowDisabled]: 0 === e && 0 === t
+            className: c()(m.arrowLeft, {
+              [m.arrowDisabled]: 0 === e && 0 === t
             })
           }), (0, n.jsx)(h, {
-            direction: m.default.Directions.RIGHT,
+            direction: _.default.Directions.RIGHT,
             onClick: this.next,
-            className: c()(p.arrowRight, {
-              [p.arrowDisabled]: e === this.getMaxIndex() && 1 === t
+            className: c()(m.arrowRight, {
+              [m.arrowDisabled]: e === this.getMaxIndex() && 1 === t
             })
           })]
         }) : null]
       }), (0, n.jsx)("div", {
-        className: c()(p.scrollerContainer, r),
+        className: c()(m.scrollerContainer, r),
         children: (0, n.jsx)(u.AdvancedScrollerNone, {
           ref: this.advancedScrollerRef,
           orientation: "horizontal",
-          className: p.scroller,
+          className: m.scroller,
           children: (0, n.jsx)("div", {
-            className: p.scroller,
+            className: m.scroller,
             ref: e => {
               this.tileScrollerRef.current = e, this.setScrollerWidth()
             },
@@ -171,4 +171,4 @@ class C extends s.Component {
     })
   }
 }
-t.default = (0, _.default)(C)
+t.default = (0, p.default)(C)

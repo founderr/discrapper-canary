@@ -14,9 +14,9 @@ var a = l("803997"),
   o = l("601964"),
   d = l("940627"),
   u = l("346656"),
-  _ = l("964309"),
-  m = l("806519"),
-  p = l("768581"),
+  p = l("964309"),
+  _ = l("806519"),
+  m = l("768581"),
   f = l("981631"),
   h = l("689938"),
   C = l("324870"),
@@ -31,7 +31,7 @@ function A(e) {
   } = e, A = (0, r.default)(), E = new o.default({
     name: t.name,
     icon: t.icon
-  }), v = p.default.getGuildDiscoverySplashURL({
+  }), v = m.default.getGuildDiscoverySplashURL({
     id: t.id,
     splash: t.discovery_splash,
     size: 192 * (0, c.getDevicePixelRatio)()
@@ -42,7 +42,7 @@ function A(e) {
       case f.ThemeTypes.LIGHT:
         return I
     }
-  }(A), R = p.default.getGuildIconURL({
+  }(A), R = m.default.getGuildIconURL({
     id: t.id,
     icon: t.icon,
     size: 50
@@ -59,8 +59,8 @@ function A(e) {
         className: C.splashImage
       }), (0, i.jsx)("div", {
         className: C.guildIcon,
-        children: (0, i.jsx)(m.default, {
-          mask: m.default.Masks.AVATAR_DEFAULT,
+        children: (0, i.jsx)(_.default, {
+          mask: _.default.Masks.AVATAR_DEFAULT,
           width: 58,
           height: 58,
           children: (0, i.jsx)("div", {
@@ -97,7 +97,7 @@ function A(e) {
         className: C.memberInfo,
         children: (0, i.jsxs)("div", {
           className: C.memberCountWrapper,
-          children: [(0, i.jsx)(_.default, {
+          children: [(0, i.jsx)(p.default, {
             className: C.memberCountIcon,
             width: "16",
             height: "16"

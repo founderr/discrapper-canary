@@ -1,37 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   Banner: function() {
-    return r
+    return l
   }
 });
 var i = n("735250"),
   s = n("470079"),
   a = n("777207"),
-  l = n("764254");
+  r = n("764254");
 
-function r(e) {
+function l(e) {
   let {
     title: t,
     subtitle: n,
-    iconSrc: r,
+    iconSrc: l,
     backgroundSrc: o
   } = e, c = s.useMemo(() => {
-    let e = null != o ? o : r;
+    let e = null != o ? o : l;
     if (null != e) return {
       "--custom-background-url": "url(".concat(e.toString(), ")")
     }
-  }, [o, r]);
+  }, [o, l]);
   return (0, i.jsxs)("div", {
-    className: l.wrapper,
+    className: r.wrapper,
     children: [(0, i.jsx)("div", {
-      className: l.background,
+      className: r.background,
       style: c
     }), (0, i.jsxs)("div", {
-      className: l.content,
-      children: [null != r && (0, i.jsx)("div", {
-        className: l.icon,
+      className: r.content,
+      children: [null != l && (0, i.jsx)("div", {
+        className: r.icon,
         children: (0, i.jsx)("img", {
-          src: r.toString(),
+          src: l.toString(),
           alt: ""
         })
       }), (0, i.jsxs)("div", {
@@ -45,7 +45,7 @@ function r(e) {
         })]
       })]
     }), null != o ? (0, i.jsx)("div", {
-      className: l.image,
+      className: r.image,
       style: {
         backgroundImage: "url(".concat(o.toString(), ")")
       }

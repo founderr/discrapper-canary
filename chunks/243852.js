@@ -18,14 +18,14 @@ let g = "ActivityTrackingStore",
   A = 30 * m.default.Millis.MINUTE,
   N = 5 * m.default.Millis.MINUTE,
   v = null !== (a = u.Storage.get(g)) && void 0 !== a ? a : {},
-  R = {},
-  O = !1;
+  O = {},
+  R = !1;
 
 function L(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   t && P(e, !0);
-  let n = R[e.applicationId];
-  null != n && (n.stop(), delete R[e.applicationId]), delete v[e.applicationId], u.Storage.set(g, v)
+  let n = O[e.applicationId];
+  null != n && (n.stop(), delete O[e.applicationId]), delete v[e.applicationId], u.Storage.set(g, v)
 }
 
 function P(e) {
@@ -41,8 +41,8 @@ function P(e) {
     closed: t,
     exePath: e.exePath
   }), e.updatedAt = n, t && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(a / 1e3));
-  let s = R[e.applicationId];
-  null == s && (s = R[e.applicationId] = new d.Interval).start(A, () => P(e)), !t && (v[e.applicationId] = e, u.Storage.set(g, v))
+  let s = O[e.applicationId];
+  null == s && (s = O[e.applicationId] = new d.Interval).start(A, () => P(e)), !t && (v[e.applicationId] = e, u.Storage.set(g, v))
 }
 
 function M() {
@@ -68,7 +68,7 @@ function M() {
 
 function y() {
   for (let e of Object.keys(v)) L(v[e]);
-  O = !1
+  R = !1
 }
 class D extends(s = o.default.Store) {
   initialize() {
@@ -86,9 +86,9 @@ r = "ActivityTrackingStore", (i = "displayName") in(l = D) ? Object.defineProper
 }) : l[i] = r, new D(c.default, {
   RUNNING_GAMES_CHANGE: () => M(),
   CONNECTION_OPEN: function() {
-    if (O) return !1;
+    if (R) return !1;
     for (let e of Object.keys(v)) P(v[e]);
-    M(!1), O = !0
+    M(!1), R = !0
   },
   CONNECTION_CLOSED: function(e) {
     let {

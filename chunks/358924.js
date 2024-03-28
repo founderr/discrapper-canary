@@ -21,18 +21,18 @@ var a, s, l = n("735250"),
   A = n("513202"),
   N = n("906732"),
   v = n("812206"),
-  R = n("933557"),
-  O = n("102172"),
+  O = n("933557"),
+  R = n("102172"),
   L = n("871118"),
   P = n("849171"),
   M = n("314897"),
   y = n("592125"),
   D = n("594174"),
-  x = n("368874"),
-  b = n("366695"),
+  b = n("368874"),
+  x = n("366695"),
   U = n("366966"),
-  G = n("446753"),
-  j = n("619271"),
+  j = n("446753"),
+  G = n("619271"),
   w = n("395361"),
   k = n("639351"),
   F = n("632184"),
@@ -163,7 +163,7 @@ let en = e => {
     case "MULTIPLE":
       t = (0, l.jsx)("div", {
         className: q.multipleIconWrapper,
-        children: (0, l.jsx)(j.default, {
+        children: (0, l.jsx)(G.default, {
           className: o()(q.headerIcon, q.multipleIcon),
           color: d.default.unsafe_rawColors.PRIMARY_300.css
         })
@@ -225,7 +225,7 @@ let es = e => {
     ...a
   } = e;
   return (0, l.jsx)(c.FocusRing, {
-    children: (0, l.jsx)(G.default, {
+    children: (0, l.jsx)(j.default, {
       className: o()(n, q.wrapper),
       padded: !0,
       ...a,
@@ -237,7 +237,7 @@ es.Header = ea, es.Body = e => {
   let {
     children: t
   } = e;
-  return (0, l.jsx)(G.default, {
+  return (0, l.jsx)(j.default, {
     inset: !0,
     padded: !1,
     className: q.body,
@@ -262,7 +262,7 @@ es.Header = ea, es.Body = e => {
     partySize: u,
     members: d,
     onChannelContextMenu: f
-  } = e, E = i.useRef(null), h = (0, R.default)(s, !0);
+  } = e, E = i.useRef(null), h = (0, O.default)(s, !0);
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
       className: q.voiceSection,
@@ -402,7 +402,7 @@ es.Header = ea, es.Body = e => {
     } = a;
   if (null != f && (0, p.default)(a)) {
     var _;
-    t = (0, l.jsx)(x.default, {
+    t = (0, l.jsx)(b.default, {
       className: q.twitchSectionPreviewWrapper,
       aspectRatio: 16 / 9,
       children: (0, l.jsxs)(c.Clickable, {
@@ -449,7 +449,7 @@ es.Header = ea, es.Body = e => {
     applicationStream: i,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(i.channelId)), [f, E] = (0, O.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
+  } = e, d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(i.channelId)), [f, E] = (0, R.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
     onClick: f ? r : void 0,
     className: q.applicationStreamingPreviewWrapper,
     children: [(0, l.jsx)(L.default, {
@@ -459,7 +459,7 @@ es.Header = ea, es.Body = e => {
       className: q.applicationStreamingHoverWrapper,
       children: (0, l.jsx)("div", {
         className: q.applicationStreamingHoverText,
-        children: (0, O.getStreamCTAString)(E)
+        children: (0, R.getStreamCTAString)(E)
       })
     })]
   }), _ = null !== (n = null === (t = (0, T.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
@@ -506,9 +506,9 @@ es.Header = ea, es.Body = e => {
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
-      children: [(0, l.jsx)(b.default, {
+      children: [(0, l.jsx)(x.default, {
         game: S,
-        size: b.default.Sizes.XSMALL,
+        size: x.default.Sizes.XSMALL,
         className: q.embeddedActivityIcon
       }), (0, l.jsx)("div", {
         className: q.embeddedActivityName,

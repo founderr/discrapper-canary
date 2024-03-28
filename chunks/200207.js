@@ -8,8 +8,8 @@ var i = n("735250");
 n("470079");
 var s = n("557533"),
   a = n.n(s),
-  l = n("789978"),
-  r = n("368072"),
+  r = n("789978"),
+  l = n("368072"),
   o = n("777207"),
   c = n("431674"),
   d = n("956169");
@@ -20,23 +20,23 @@ function u(e) {
     description: n,
     headerImage: s,
     onDetails: u,
-    onPurchase: h,
+    onPurchase: m,
     PurchaseButton: f,
-    availabilityLabel: m
+    availabilityLabel: h
   } = e;
-  return (0, i.jsx)(l.FocusRing, {
+  return (0, i.jsx)(r.FocusRing, {
     children: (0, i.jsxs)("div", {
       className: a()(c.wrapper, d.hoverCard),
       tabIndex: 0,
       onClick: () => {
-        null != u ? u() : null != h && h()
+        null != u ? u() : null != m && m()
       },
       children: [(0, i.jsx)("div", {
         className: c.cardHeaderImg,
         style: null != s ? {
           backgroundImage: null != s ? "url(".concat(s.toString(), ")") : void 0
         } : void 0,
-        children: null == s && (0, i.jsx)(r.BadgeIcon, {
+        children: null == s && (0, i.jsx)(l.BadgeIcon, {
           color: "white",
           height: 128,
           width: 128
@@ -58,10 +58,10 @@ function u(e) {
         children: [(0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/normal",
-          children: m
+          children: h
         }), (0, i.jsx)(f, {
           onClick: e => {
-            e.stopPropagation(), null == h || h()
+            e.stopPropagation(), null == m || m()
           }
         })]
       })]

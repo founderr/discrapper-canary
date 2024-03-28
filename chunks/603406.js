@@ -13,9 +13,9 @@ var i = l("735250"),
   o = l("132871"),
   d = l("147890"),
   u = l("981631"),
-  _ = l("689938"),
-  m = l("266255"),
-  p = l("943935");
+  p = l("689938"),
+  _ = l("266255"),
+  m = l("943935");
 
 function f() {
   let e = (0, o.useApplicationDirectoryHistory)(e => e.guildId),
@@ -33,24 +33,24 @@ function f() {
       })
     }, [e, t]);
   return (0, i.jsxs)("div", {
-    className: m.container,
+    className: _.container,
     children: [(0, i.jsxs)("div", {
-      className: m.searchBarContainer,
+      className: _.searchBarContainer,
       children: [(0, i.jsx)(n.Heading, {
         variant: "display-lg",
-        className: m.heading,
-        children: _.default.Messages.APP_DIRECTORY_HERO_HEADING
+        className: _.heading,
+        children: p.default.Messages.APP_DIRECTORY_HERO_HEADING
       }), (0, i.jsx)(c.default, {
-        className: m.searchBar,
+        className: _.searchBar,
         query: t,
         onChange: l,
         onSubmit: f,
         canShowCta: !0
       })]
     }), (0, i.jsx)("img", {
-      src: p,
+      src: m,
       alt: "",
-      className: m.rightImage
+      className: _.rightImage
     })]
   })
 }

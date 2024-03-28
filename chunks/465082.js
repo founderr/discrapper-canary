@@ -13,9 +13,9 @@ var i = l("735250"),
   o = l("270144"),
   d = l("191741"),
   u = l("768581"),
-  _ = l("4461"),
-  m = l("924489"),
-  p = l("132871"),
+  p = l("4461"),
+  _ = l("924489"),
+  m = l("132871"),
   f = l("491576"),
   h = l("689938"),
   C = l("824976");
@@ -35,23 +35,23 @@ function g(e) {
     subheaderTextVariant: P = "text-sm/normal",
     mutualGuildShownMax: y,
     guildIconSize: j,
-    source: O
-  } = e, S = (0, p.useApplicationDirectoryHistory)(e => e.guildId), L = (0, r.useListItem)(g.id), D = u.default.getApplicationIconURL({
+    source: S
+  } = e, O = (0, m.useApplicationDirectoryHistory)(e => e.guildId), L = (0, r.useListItem)(g.id), D = u.default.getApplicationIconURL({
     id: g.id,
     icon: g.icon,
     size: 48
   }), {
     canInstall: M,
     install: b
-  } = (0, _.useInstallApplication)(g), Y = (0, f.default)({
+  } = (0, p.useInstallApplication)(g), k = (0, f.default)({
     application: g,
     showMutualGuilds: v
-  }), k = a.useCallback(e => {
-    e.stopPropagation(), b(O)
-  }, [b, O]), H = null === (t = g.categories) || void 0 === t ? void 0 : t[0], G = (null !== (n = null === (l = g.directory_entry) || void 0 === l ? void 0 : l.guild_count) && void 0 !== n ? n : 0) > 0 || Y.length > 0, F = (0, i.jsx)(m.default, {
+  }), Y = a.useCallback(e => {
+    e.stopPropagation(), b(S)
+  }, [b, S]), H = null === (t = g.categories) || void 0 === t ? void 0 : t[0], G = (null !== (n = null === (l = g.directory_entry) || void 0 === l ? void 0 : l.guild_count) && void 0 !== n ? n : 0) > 0 || k.length > 0, F = (0, i.jsx)(_.default, {
     application: g,
     textVariant: P,
-    mutualGuilds: Y,
+    mutualGuilds: k,
     mutualGuildShownMax: y,
     guildIconSize: j,
     compact: !0
@@ -60,7 +60,7 @@ function g(e) {
   } = (0, o.default)({
     applicationId: g.id,
     groupListingId: g.primary_sku_id,
-    guildId: S
+    guildId: O
   }), W = (0, i.jsxs)("article", {
     children: [(0, i.jsxs)("div", {
       className: C.topWrapper,
@@ -105,7 +105,7 @@ function g(e) {
         })]
       }), E ? (0, i.jsx)(c.Button, {
         size: c.Button.Sizes.SMALL,
-        onClick: k,
+        onClick: Y,
         disabled: !M,
         children: h.default.Messages.APP_DIRECTORY_LISTING_ADD_BUTTON
       }) : null]
@@ -120,7 +120,7 @@ function g(e) {
   return null != T ? (0, i.jsx)(c.Clickable, {
     tag: "li",
     onClick: () => T({
-      mutualGuilds: Y
+      mutualGuilds: k
     }),
     className: s()(I, C.listing, C.clickable),
     ...L,

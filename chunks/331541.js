@@ -27,18 +27,18 @@ var a = n("735250"),
   A = n("734934"),
   N = n("158238"),
   v = n("785717"),
-  R = n("318661"),
-  O = n("747074"),
+  O = n("318661"),
+  R = n("747074"),
   L = n("192133"),
   P = n("138394"),
   M = n("131640"),
   y = n("695346"),
   D = n("199902"),
-  x = n("293273"),
-  b = n("158776"),
+  b = n("293273"),
+  x = n("158776"),
   U = n("594174"),
-  G = n("881201"),
-  j = n("26290"),
+  j = n("881201"),
+  G = n("26290"),
   w = n("626135"),
   k = n("70956"),
   F = n("51144"),
@@ -153,7 +153,7 @@ function X(e) {
     onClose: o,
     onSelect: h,
     closePopout: D
-  } = e, x = (0, _.useAnalyticsContext)(), U = (0, R.default)(t.id, l), {
+  } = e, b = (0, _.useAnalyticsContext)(), U = (0, O.default)(t.id, l), {
     UserProfileAnalyticsProvider: k,
     trackUserProfileAction: B
   } = (0, v.useUserProfileAnalyticsProvider)({
@@ -161,10 +161,10 @@ function X(e) {
     newAnalyticsLocations: [I.default.ACCOUNT_PROFILE_POPOUT],
     userId: t.id,
     guildId: l
-  }), [X, J, $, ee] = (0, c.useStateFromStoresArray)([b.default], () => {
+  }), [X, J, $, ee] = (0, c.useStateFromStoresArray)([x.default], () => {
     var e;
     let n = t.id;
-    return "string" != typeof n ? [void 0, void 0, Y.StatusTypes.UNKNOWN, !1] : [null !== (e = b.default.findActivity(n, e => e.type !== Y.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, b.default.findActivity(t.id, e => e.type === Y.ActivityTypes.CUSTOM_STATUS), b.default.getStatus(n), b.default.isMobileOnline(n)]
+    return "string" != typeof n ? [void 0, void 0, Y.StatusTypes.UNKNOWN, !1] : [null !== (e = x.default.findActivity(n, e => e.type !== Y.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, x.default.findActivity(t.id, e => e.type === Y.ActivityTypes.CUSTOM_STATUS), x.default.getStatus(n), x.default.isMobileOnline(n)]
   }), et = function(e, t) {
     let n = g.ExpiringStatusExperiment.useExperiment({
         location: "account popout"
@@ -227,7 +227,7 @@ function X(e) {
             className: z.icon
           }), (0, a.jsxs)("div", {
             className: z.focusModeTitle,
-            children: [K.default.Messages.FOCUS_MODE_TITLE, (0, a.jsx)(j.TextBadge, {
+            children: [K.default.Messages.FOCUS_MODE_TITLE, (0, a.jsx)(G.TextBadge, {
               text: l ? K.default.Messages.FOCUS_MODE_BADGE_ON : o ? K.default.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : K.default.Messages.FOCUS_MODE_BADGE_OFF,
               color: l ? u.default.BRAND_500 : o ? u.default.RED_400 : u.default.PRIMARY_500
             })]
@@ -250,7 +250,7 @@ function X(e) {
         children: c
       }, "quiet-mode") : null]
     })
-  }($, x), {
+  }($, b), {
     ref: en
   } = (0, C.default)(), ea = (0, m.default)(en);
   s.useEffect(() => {
@@ -262,7 +262,7 @@ function X(e) {
       is_streaming: r,
       application_name: null != X ? X.name : void 0,
       profile_has_nitro_customization: (null == U ? void 0 : U.banner) != null,
-      location: x.location,
+      location: b.location,
       has_profile_effect: (null == U ? void 0 : U.profileEffectId) != null
     })
   }, []);
@@ -280,7 +280,7 @@ function X(e) {
       className: z.popoutContainer,
       children: (0, a.jsx)("div", {
         ref: en,
-        children: (0, a.jsxs)(O.default, {
+        children: (0, a.jsxs)(R.default, {
           user: t,
           profileType: W.UserProfileTypes.POPOUT,
           children: [(0, a.jsx)(M.default, {
@@ -293,7 +293,7 @@ function X(e) {
             disableUserProfileLink: __OVERLAY__,
             isHovering: ea,
             showPremiumBadgeUpsell: !1
-          }), (0, a.jsxs)(O.default.Inner, {
+          }), (0, a.jsxs)(R.default.Inner, {
             children: [(0, a.jsx)(L.default, {
               activity: X,
               customStatusActivity: J,
@@ -372,7 +372,7 @@ function X(e) {
                   focusedClassName: z.menuItemFocused,
                   subMenuIconClassName: z.subMenuIcon,
                   label: K.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-                  icon: G.default,
+                  icon: j.default,
                   showIconFirst: !0,
                   action: () => {
                     B({
@@ -399,7 +399,7 @@ function J(e) {
     guildId: l,
     onClose: i,
     onSelect: r
-  } = e, u = (0, c.useStateFromStores)([U.default], () => U.default.getUser(t), [t]), d = (0, c.useStateFromStores)([x.default], () => x.default.getCustomStatusActivity()), [f, E] = s.useState(!1), _ = null != u ? u : n, C = (0, c.useStateFromStores)([D.default], () => null != _ && null != D.default.getAnyStreamForUser(_.id));
+  } = e, u = (0, c.useStateFromStores)([U.default], () => U.default.getUser(t), [t]), d = (0, c.useStateFromStores)([b.default], () => b.default.getCustomStatusActivity()), [f, E] = s.useState(!1), _ = null != u ? u : n, C = (0, c.useStateFromStores)([D.default], () => null != _ && null != D.default.getAnyStreamForUser(_.id));
   return (s.useEffect(() => {
     null == u && e();
     async function e() {

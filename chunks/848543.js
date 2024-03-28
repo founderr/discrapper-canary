@@ -32,10 +32,10 @@ function p(e) {
   } = e, {
     mute: N,
     suppress: v
-  } = (0, E.default)(t), R = (0, l.useStateFromStores)([h.default], () => h.default.isDeaf()), O = N || v || R, [L, P] = s.useState(!1), M = t.getGuildId(), y = (0, _.useSoundBoardDismissContentTypes)({
-    isSoundboardButtonDisabled: O
-  }), [D, x] = (0, f.useGetDismissibleContent)(y), {
-    analyticsLocations: b
+  } = (0, E.default)(t), O = (0, l.useStateFromStores)([h.default], () => h.default.isDeaf()), R = N || v || O, [L, P] = s.useState(!1), M = t.getGuildId(), y = (0, _.useSoundBoardDismissContentTypes)({
+    isSoundboardButtonDisabled: R
+  }), [D, b] = (0, f.useGetDismissibleContent)(y), {
+    analyticsLocations: x
   } = (0, c.default)(d.default.SOUNDBOARD_BUTTON);
 
   function U(e) {
@@ -50,8 +50,8 @@ function p(e) {
     })
   }
   let {
-    Component: G,
-    play: j,
+    Component: j,
+    play: G,
     events: {
       onMouseEnter: w,
       onMouseLeave: k
@@ -70,7 +70,7 @@ function p(e) {
         onClose: n,
         gridNotice: D === i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(C.CustomCallSoundUpsell, {
           onClose: n,
-          markAsDismissed: x
+          markAsDismissed: b
         }),
         analyticsSource: "rtc panel"
       })
@@ -82,10 +82,10 @@ function p(e) {
         className: T,
         wrapperClassName: T,
         innerClassName: g,
-        disabled: O,
+        disabled: R,
         onClick: () => {
           var t, n;
-          null == n || n(), null != D && D !== i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && x(S.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), P(!L), j()
+          null == n || n(), null != D && D !== i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && b(S.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), P(!L), G()
         },
         onMouseEnter: e => {
           var t;
@@ -99,7 +99,7 @@ function p(e) {
         fullWidth: !0,
         size: o.Button.Sizes.SMALL,
         ...A,
-        children: (0, a.jsx)(G, {
+        children: (0, a.jsx)(j, {
           className: p,
           size: "sm",
           color: o.tokens.colors.INTERACTIVE_ACTIVE
@@ -108,12 +108,12 @@ function p(e) {
     })
   });
   return (0, a.jsx)(c.AnalyticsLocationProvider, {
-    value: b,
+    value: x,
     children: (0, a.jsx)(o.Tooltip, {
       text: function() {
         if (N) return I.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
         if (v) return I.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (R) return I.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        if (O) return I.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
         return I.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => F(e)

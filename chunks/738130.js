@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return Y
+    return k
   }
 });
 var i = l("735250"),
@@ -13,9 +13,9 @@ var i = l("735250"),
   o = l("873546"),
   d = l("481060"),
   u = l("425493"),
-  _ = l("612226"),
-  m = l("714338"),
-  p = l("782568"),
+  p = l("612226"),
+  _ = l("714338"),
+  m = l("782568"),
   f = l("252618"),
   h = l("434404"),
   C = l("703656"),
@@ -31,8 +31,8 @@ var i = l("735250"),
   P = l("981631"),
   y = l("420212"),
   j = l("689938"),
-  O = l("896759");
-let S = E.default.getArticleURL(P.HelpdeskArticles.APP_DIRECTORY_HEADER_LEARN_MORE);
+  S = l("896759");
+let O = E.default.getArticleURL(P.HelpdeskArticles.APP_DIRECTORY_HEADER_LEARN_MORE);
 
 function L(e) {
   let {
@@ -40,13 +40,13 @@ function L(e) {
   } = e, l = a.useRef(null);
   return (0, i.jsx)("div", {
     ref: l,
-    className: O.closeWrapper,
+    className: S.closeWrapper,
     children: (0, i.jsx)(d.FocusRingScope, {
       containerRef: l,
       children: (0, i.jsx)("div", {
-        className: s()(O.closeContent, o.isMobile ? O.closeContentMobile : O.closeContentNotMobile),
+        className: s()(S.closeContent, o.isMobile ? S.closeContentMobile : S.closeContentNotMobile),
         children: (0, i.jsx)(u.default, {
-          className: s()(O.closeIcon, o.isMobile ? O.__invalid_closeIconMobile : O.closeIconNotMobile),
+          className: s()(S.closeIcon, o.isMobile ? S.__invalid_closeIconMobile : S.closeIconNotMobile),
           closeAction: t,
           keybind: "ESC"
         })
@@ -69,22 +69,22 @@ function D(e) {
           cta: "directory-help-center",
           current_page: T.ApplicationDirectoryViews.HOME,
           guild_id: n
-        }), (0, p.default)(S)
+        }), (0, m.default)(O)
       },
       children: j.default.Messages.LEARN_MORE
     })]
   });
   return (0, i.jsx)("div", {
-    className: O.header,
+    className: S.header,
     children: null != t ? (0, i.jsx)(x.default, {
       href: P.Routes.APPLICATION_DIRECTORY,
       children: (0, i.jsx)(d.Clickable, {
         onClick: t,
-        className: s()(O.titleContainer, O.clickable),
+        className: s()(S.titleContainer, S.clickable),
         children: r
       })
     }) : (0, i.jsx)("div", {
-      className: O.titleContainer,
+      className: S.titleContainer,
       children: r
     })
   })
@@ -111,13 +111,13 @@ function M(e) {
       t = j.default.Messages.BACK
   }
   return (0, i.jsxs)(d.Clickable, {
-    className: O.back,
+    className: S.back,
     onClick: a,
     children: [(0, i.jsx)(I.default, {
       direction: I.default.Directions.LEFT,
-      className: O.backIcon
+      className: S.backIcon
     }), (0, i.jsx)(d.Heading, {
-      className: O.backHeader,
+      className: S.backHeader,
       variant: "heading-sm/semibold",
       children: t
     })]
@@ -140,45 +140,45 @@ let b = (0, r.debounce)(e => {
   })
 }, 200);
 
-function Y(e) {
+function k(e) {
   let {
     children: t
-  } = e, l = a.useRef(null), n = (0, R.default)(), r = (0, T.useApplicationDirectoryHistory)(e => e.guildId), u = (0, T.useApplicationDirectoryHistory)(e => e.entrypoint), p = (0, T.useApplicationDirectoryHistory)(e => e.trackedOpenedFromExternalEntrypoint), g = (0, T.getCurrentView)(), I = (0, T.getPreviousView)(), E = a.useRef(), x = (null == g ? void 0 : g.type) !== T.ApplicationDirectoryViews.HOME, S = (null == g ? void 0 : g.type) === T.ApplicationDirectoryViews.APPLICATION ? null == g ? void 0 : g.applicationId : void 0;
+  } = e, l = a.useRef(null), n = (0, R.default)(), r = (0, T.useApplicationDirectoryHistory)(e => e.guildId), u = (0, T.useApplicationDirectoryHistory)(e => e.entrypoint), m = (0, T.useApplicationDirectoryHistory)(e => e.trackedOpenedFromExternalEntrypoint), g = (0, T.getCurrentView)(), I = (0, T.getPreviousView)(), E = a.useRef(), x = (null == g ? void 0 : g.type) !== T.ApplicationDirectoryViews.HOME, O = (null == g ? void 0 : g.type) === T.ApplicationDirectoryViews.APPLICATION ? null == g ? void 0 : g.applicationId : void 0;
   (0, f.usePageTitle)({
     location: j.default.Messages.APP_DIRECTORY
   });
-  let Y = (null == g ? void 0 : g.type) !== T.ApplicationDirectoryViews.HOME && null != I;
+  let k = (null == g ? void 0 : g.type) !== T.ApplicationDirectoryViews.HOME && null != I;
   a.useEffect(() => {
-    !p && null == u && (A.default.track(P.AnalyticEvents.APP_DIRECTORY_OPENED, {
+    !m && null == u && (A.default.track(P.AnalyticEvents.APP_DIRECTORY_OPENED, {
       source: T.ApplicationDirectoryEntrypointNames.EXTERNAL
     }), (0, T.setTrackedOpenedFromExternalEntrypoint)(!0))
-  }, [u, p]), a.useEffect(() => {
-    if (n) return m.default.setLayout(_.default), m.default.enable(), () => m.default.disable()
+  }, [u, m]), a.useEffect(() => {
+    if (n) return _.default.setLayout(p.default), _.default.enable(), () => _.default.disable()
   }, [n]), a.useEffect(() => {
     v.getCategories()
   }, []), a.useEffect(() => {
     n && v.fetchIntegrationApplicationIdsForMyGuilds()
   }, [n]), a.useEffect(() => {
     E.current = (0, c.v4)()
-  }, [null == g ? void 0 : g.type, S]);
-  let k = a.useCallback(() => {
+  }, [null == g ? void 0 : g.type, O]);
+  let Y = a.useCallback(() => {
     var e, t;
     (0, C.transitionTo)(null !== (e = null == u ? void 0 : u.pathname) && void 0 !== e ? e : ""), null != u && u.name === T.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS && null != r && h.default.open(r, null !== (t = u.guildSettingsSection) && void 0 !== t ? t : void 0)
   }, [u, r]);
   return a.useEffect(() => {
     let e = e => {
-      e.key === y.KeyboardKeysUpdated.ESCAPE && (e.stopPropagation(), k())
+      e.key === y.KeyboardKeysUpdated.ESCAPE && (e.stopPropagation(), Y())
     };
     return document.addEventListener("keydown", e), () => {
       document.removeEventListener("keydown", e)
     }
-  }, [k]), (0, i.jsxs)(i.Fragment, {
+  }, [Y]), (0, i.jsxs)(i.Fragment, {
     children: [n ? (0, i.jsx)(L, {
-      onClose: k
+      onClose: Y
     }) : null, (0, i.jsx)(d.AdvancedScroller, {
-      className: s()(O.directoryContainer, {
-        [O.directoryContainerMobile]: o.isMobile,
-        [O.directoryContainerTablet]: o.isTablet
+      className: s()(S.directoryContainer, {
+        [S.directoryContainerMobile]: o.isMobile,
+        [S.directoryContainerTablet]: o.isTablet
       }),
       ref: l,
       onScroll: () => {
@@ -193,12 +193,12 @@ function Y(e) {
         })
       },
       children: (0, i.jsxs)("div", {
-        className: O.content,
+        className: S.content,
         children: [(0, i.jsx)(D, {
           onTitleClick: x ? N.goHome : void 0,
           showsLearnMoreCta: (null == g ? void 0 : g.type) === T.ApplicationDirectoryViews.HOME,
           guildId: r
-        }), Y && (0, i.jsx)(M, {
+        }), k && (0, i.jsx)(M, {
           view: I,
           onClick: () => {
             (0, C.back)()

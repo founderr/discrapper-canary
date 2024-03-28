@@ -84,11 +84,11 @@ async function S(e, t, n) {
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
   null == n || n(a.application, T);
-  let R = E.NONE;
+  let O = E.NONE;
   try {
-    R = l.deserialize(null != I ? I : 0)
+    O = l.deserialize(null != I ? I : 0)
   } catch (e) {}
-  return t(i, a, v, R, r, o, u, _, m, p, T, g, A)
+  return t(i, a, v, O, r, o, u, _, m, p, T, g, A)
 }
 
 function I(e, t) {

@@ -13,12 +13,12 @@ var i = l("735250"),
   o = l("974029"),
   d = l("158010"),
   u = l("284199"),
-  _ = l("63063"),
-  m = l("49012"),
-  p = l("981631"),
+  p = l("63063"),
+  _ = l("49012"),
+  m = l("981631"),
   f = l("689938"),
   h = l("601115");
-let C = _.default.getArticleURL(p.HelpdeskArticles.BOT_DATA_ACCESS);
+let C = p.default.getArticleURL(m.HelpdeskArticles.BOT_DATA_ACCESS);
 
 function g(e) {
   let {
@@ -59,17 +59,17 @@ function I(e) {
   } = e, {
     hasMessageContent: l,
     hasGuildPresences: n,
-    hasGuildMembers: _,
-    hasIntents: p
+    hasGuildMembers: p,
+    hasIntents: m
   } = (0, c.useBotDataAccess)({
     flags: null == t ? void 0 : t.flags
   }), I = a.useCallback(() => {
-    (null == t ? void 0 : t.privacy_policy_url) != null && (0, m.handleClick)({
+    (null == t ? void 0 : t.privacy_policy_url) != null && (0, _.handleClick)({
       href: t.privacy_policy_url
     })
   }, [null == t ? void 0 : t.privacy_policy_url]);
   return (0, i.jsxs)(i.Fragment, {
-    children: [p && (0, i.jsx)("div", {
+    children: [m && (0, i.jsx)("div", {
       className: h.intentsListHeading,
       children: (0, i.jsx)(r.Text, {
         variant: "text-md/normal",
@@ -77,7 +77,7 @@ function I(e) {
       })
     }), (0, i.jsxs)("div", {
       className: h.intentsContainer,
-      children: [p && (0, i.jsxs)("ul", {
+      children: [m && (0, i.jsxs)("ul", {
         className: h.intentsList,
         children: [l && (0, i.jsx)(g, {
           icon: o.default,
@@ -87,14 +87,14 @@ function I(e) {
           icon: u.default,
           heading: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_HEADING,
           body: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_BODY
-        }), _ && (0, i.jsx)(g, {
+        }), p && (0, i.jsx)(g, {
           icon: d.default,
           heading: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_HEADING,
           body: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_BODY
         })]
       }), (0, i.jsxs)("div", {
         className: s()({
-          [h.hasSeparator]: p
+          [h.hasSeparator]: m
         }),
         children: [(0, i.jsx)(r.Text, {
           variant: "text-sm/normal",

@@ -19,8 +19,8 @@ function r(e) {
     mutualGuildCount: o,
     ctaLabel: d,
     onCtaClick: u,
-    children: _
-  } = e, m = (0, i.jsx)(i.Fragment, {
+    children: p
+  } = e, _ = (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)("div", {
       className: s.topWrapper,
       children: [(0, i.jsx)("div", {
@@ -76,7 +76,7 @@ function r(e) {
           children: r
         }) : null, (0, i.jsx)("div", {
           className: s.children,
-          children: _
+          children: p
         })]
       })]
     })
@@ -84,7 +84,7 @@ function r(e) {
   return (0, i.jsx)(a.FocusRing, {
     children: (0, i.jsx)("div", {
       className: s.listing,
-      children: m
+      children: _
     })
   })
 }

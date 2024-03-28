@@ -10,94 +10,94 @@ var a = i("735250"),
   c = i("5056"),
   u = i("565321"),
   f = i("297619"),
-  E = i("456935"),
-  I = i("446945"),
-  T = i("243371"),
-  m = i("700833"),
-  _ = i("592286"),
-  x = i("981631"),
-  h = i("689938");
+  m = i("456935"),
+  E = i("446945"),
+  I = i("243371"),
+  x = i("700833"),
+  h = i("592286"),
+  T = i("981631"),
+  M = i("689938");
 t.default = function(e) {
   let {
     guild: t,
     submittedGuildJoinRequestsCount: i,
-    onFormFieldUpdate: p,
-    hideVerificationLevelField: M
-  } = e, R = t.hasFeature(x.GuildFeatures.CLAN), F = l.useRef(!1), [v, N] = l.useState(null), [S, g] = l.useState(e.formFields), C = l.useRef(e.formFields), A = l.useMemo(() => S.filter(d.isAutomaticApprovalFormField), [S]), L = l.useMemo(() => S.filter(d.isManualApprovalFormField), [S]), j = L.length, y = l.useMemo(() => S.length === _.MAX_FORM_ELEMENTS, [S]), O = l.useMemo(() => S.some(o.isTermsFormField), [S]), U = l.useMemo(() => S.some(e => !(0, o.isTermsFormField)(e)), [S]), D = j > 1, w = (0, r.useIsMemberVerificationManualApproval)(t.id), V = l.useCallback(() => {
-    (0, n.showToast)((0, n.createToast)(h.default.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE))
-  }, []), G = l.useCallback(async e => {
-    if (!F.current) {
-      F.current = !0;
+    onFormFieldUpdate: F,
+    hideVerificationLevelField: _
+  } = e, v = t.hasFeature(T.GuildFeatures.CLAN), R = l.useRef(!1), [p, C] = l.useState(null), [N, g] = l.useState(e.formFields), j = l.useRef(e.formFields), L = l.useMemo(() => N.filter(d.isAutomaticApprovalFormField), [N]), y = l.useMemo(() => N.filter(d.isManualApprovalFormField), [N]), A = y.length, S = l.useMemo(() => N.length === h.MAX_FORM_ELEMENTS, [N]), V = l.useMemo(() => N.some(o.isTermsFormField), [N]), w = l.useMemo(() => N.some(e => !(0, o.isTermsFormField)(e)), [N]), O = A > 1, P = (0, r.useIsMemberVerificationManualApproval)(t.id), D = l.useCallback(() => {
+    (0, n.showToast)((0, n.createToast)(M.default.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE))
+  }, []), b = l.useCallback(async e => {
+    if (!R.current) {
+      R.current = !0;
       try {
-        await s.default.updateVerificationForm(t.id, e), p(), g(e), C.current = e
+        await s.default.updateVerificationForm(t.id, e), F(), g(e), j.current = e
       } catch (e) {
-        throw g(C.current), e
+        throw g(j.current), e
       } finally {
-        null != v && N(null), F.current = !1
+        null != p && C(null), R.current = !1
       }
     }
-  }, [v, t.id, p]), P = l.useCallback(async e => {
-    let t = e.field_type === o.VerificationFormFieldTypes.TERMS ? [e, ...S] : [...S, e];
-    await G(t)
-  }, [S, G]), b = l.useCallback(async (e, t) => {
-    if (S[e] === t) return;
-    let i = [...S];
-    i[e] = t, await G(i)
-  }, [S, G]), B = l.useCallback(async (e, t, i) => {
-    let a = S.indexOf(e),
-      l = [...S];
+  }, [p, t.id, F]), B = l.useCallback(async e => {
+    let t = e.field_type === o.VerificationFormFieldTypes.TERMS ? [e, ...N] : [...N, e];
+    await b(t)
+  }, [N, b]), G = l.useCallback(async (e, t) => {
+    if (N[e] === t) return;
+    let i = [...N];
+    i[e] = t, await b(i)
+  }, [N, b]), H = l.useCallback(async (e, t, i) => {
+    let a = N.indexOf(e),
+      l = [...N];
     if (null != t && t !== a && (l.splice(a, 1), l.splice(t, 0, e), g(l)), i) try {
-      await G(l), null !== v && N(null)
+      await b(l), null !== p && C(null)
     } catch (e) {
-      V()
-    } else v !== t && N(t)
-  }, [v, S, G, V]), H = l.useCallback(async e => {
+      D()
+    } else p !== t && C(t)
+  }, [p, N, b, D]), U = l.useCallback(async e => {
     try {
-      await G([...S.slice(0, e), ...S.slice(e + 1)])
+      await b([...N.slice(0, e), ...N.slice(e + 1)])
     } catch (e) {
-      V()
+      D()
     }
-  }, [S, G, V]), k = (0, a.jsxs)(a.Fragment, {
-    children: [!M && (0, a.jsx)(E.default, {
+  }, [N, b, D]), k = (0, a.jsxs)(a.Fragment, {
+    children: [!_ && (0, a.jsx)(m.default, {
       guild: t
     }), (0, a.jsx)(u.default, {
       guildId: t.id
-    }), !O && !y && (0, a.jsx)(f.default, {
-      addFormField: P,
+    }), !V && !S && (0, a.jsx)(f.default, {
+      addFormField: B,
       guild: t
-    }), A.map(e => (0, m.getFormFieldBuilderComponent)({
-      dropHoveredIndex: v,
+    }), L.map(e => (0, x.getFormFieldBuilderComponent)({
+      dropHoveredIndex: p,
       formField: e,
       guild: t,
-      index: S.indexOf(e),
+      index: N.indexOf(e),
       isDragEnabled: !1,
       submittedGuildJoinRequestsCount: i,
-      removeFormField: H,
-      updateFormField: b,
-      updateFormFieldOrder: B
+      removeFormField: U,
+      updateFormField: G,
+      updateFormFieldOrder: H
     }))]
   });
-  return w ? (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(T.default, {
-      text: h.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_AUTOMATIC_APPROVAL_DIVIDER
-    }), k, (0, a.jsx)(T.default, {
-      text: h.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_DIVIDER
-    }), !U && (0, a.jsx)(c.default, {
-      addFormField: P,
-      showManualApprovalWarning: !R && !(j > 0),
+  return P ? (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(I.default, {
+      text: M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_AUTOMATIC_APPROVAL_DIVIDER
+    }), k, (0, a.jsx)(I.default, {
+      text: M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_DIVIDER
+    }), !w && (0, a.jsx)(c.default, {
+      addFormField: B,
+      showManualApprovalWarning: !v && !(A > 0),
       guild: t
-    }), L.map(e => (0, m.getFormFieldBuilderComponent)({
-      dropHoveredIndex: v,
+    }), y.map(e => (0, x.getFormFieldBuilderComponent)({
+      dropHoveredIndex: p,
       formField: e,
       guild: t,
-      index: S.indexOf(e),
-      isDragEnabled: D,
+      index: N.indexOf(e),
+      isDragEnabled: O,
       submittedGuildJoinRequestsCount: i,
-      removeFormField: H,
-      updateFormField: b,
-      updateFormFieldOrder: B
-    })), U && !y && (0, a.jsx)(I.default, {
-      addFormField: P,
+      removeFormField: U,
+      updateFormField: G,
+      updateFormFieldOrder: H
+    })), w && !S && (0, a.jsx)(E.default, {
+      addFormField: B,
       guild: t
     })]
   }) : k

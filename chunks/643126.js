@@ -34,7 +34,7 @@ let v = {
   HOST: 5,
   LISTENER: 4
 };
-class R extends s.PureComponent {
+class O extends s.PureComponent {
   isHost() {
     let {
       currentUser: e,
@@ -148,4 +148,4 @@ class R extends s.PureComponent {
     })
   }
 }
-t.default = R
+t.default = O

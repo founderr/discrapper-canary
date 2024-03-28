@@ -20,9 +20,9 @@ function o(e) {
     iconSrc: o,
     header: d,
     headerClassName: u,
-    subheaderVariant: _ = "text-sm/normal",
-    subheader: m,
-    children: p,
+    subheaderVariant: p = "text-sm/normal",
+    subheader: _,
+    children: m,
     animatesOnHover: f,
     ...h
   } = e, C = null != a, g = (0, i.jsxs)(i.Fragment, {
@@ -50,14 +50,14 @@ function o(e) {
             variant: "heading-md/medium",
             className: u,
             children: d
-          }), null != m && (0, i.jsx)(s.Text, {
+          }), null != _ && (0, i.jsx)(s.Text, {
             className: c.subheader,
             color: "header-secondary",
-            variant: _,
-            children: m
+            variant: p,
+            children: _
           })]
         })]
-      }), p]
+      }), m]
     })]
   }), I = n()(t, c.container, {
     [c.hasImage]: C

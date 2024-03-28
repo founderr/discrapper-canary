@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return O
   }
 });
 var a = n("735250"),
@@ -28,13 +28,13 @@ var a = n("735250"),
   N = n("689938"),
   v = n("569265");
 
-function R() {
+function O() {
   let e = s.useRef(null),
     t = (0, S.default)(),
     n = (0, I.useSpamMessageRequestCount)(),
     l = (0, _.useListHasSingleSpamMessageRequest)(),
-    R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
-    O = (0, c.default)("message-requests-spam-list"),
+    O = (0, d.useIsRejectAllMessageRequestsEnabled)(),
+    R = (0, c.default)("message-requests-spam-list"),
     {
       channelId: L
     } = (0, m.useMessageRequestSidebarState)(),
@@ -72,11 +72,11 @@ function R() {
         hasSingleMessageRequest: l
       }, d)
     }, [t, l, L]),
-    x = s.useCallback(() => (0, a.jsxs)(E.default, {
+    b = s.useCallback(() => (0, a.jsxs)(E.default, {
       className: v.sectionTitle,
       children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: n
-      }), R && n > 0 ? (0, a.jsxs)(a.Fragment, {
+      }), O && n > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.Text, {
           className: v.titleDivider,
           variant: "eyebrow",
@@ -93,11 +93,11 @@ function R() {
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, y, R]);
+    }, "message-requests-spam-title"), [n, y, O]);
   return 0 === t.length ? (0, a.jsx)(p.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
-    navigator: O,
+    navigator: R,
     children: (0, a.jsx)(r.ListNavigatorContainer, {
       children: n => {
         let {
@@ -117,7 +117,7 @@ function R() {
           paddingBottom: 24,
           sectionHeight: g.LIST_SECTION_HEIGHT,
           rowHeight: g.LIST_ROW_HEIGHT,
-          renderSection: x,
+          renderSection: b,
           renderRow: D,
           sections: [t.length],
           chunkSize: 30,

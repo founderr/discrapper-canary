@@ -11,9 +11,9 @@ var l = i("481060"),
   c = i("246364"),
   u = i("700833"),
   f = i("689938"),
-  E = i("757607");
+  m = i("757607");
 
-function I(e) {
+function E(e) {
   let {
     addFormField: t,
     onSelect: i,
@@ -21,7 +21,7 @@ function I(e) {
   } = e;
   return (0, a.jsx)(l.Menu, {
     navId: "add-questions",
-    className: E.menu,
+    className: m.menu,
     onClose: n.closeContextMenu,
     "aria-label": f.default.Messages.USER_ACTIONS_MENU_LABEL,
     onSelect: i,
@@ -50,7 +50,7 @@ t.default = function(e) {
     addFormField: t,
     guild: i
   } = e, s = e => {
-    (0, n.openContextMenu)(e, e => (0, a.jsx)(I, {
+    (0, n.openContextMenu)(e, e => (0, a.jsx)(E, {
       ...e,
       addFormField: t,
       guild: i
@@ -60,18 +60,18 @@ t.default = function(e) {
     })
   };
   return (0, a.jsx)("div", {
-    className: E.container,
+    className: m.container,
     children: (0, a.jsx)(l.Tooltip, {
       text: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_QUESTION_LIMIT,
       children: e => (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(l.Clickable, {
           ...e,
-          className: E.iconContainer,
+          className: m.iconContainer,
           onClick: s,
           children: (0, a.jsx)(o.default, {
             width: 18,
             height: 20,
-            className: E.icon
+            className: m.icon
           })
         }), (0, a.jsx)(l.Text, {
           color: "interactive-normal",

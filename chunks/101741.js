@@ -14,9 +14,9 @@ var a = l("209173"),
   o = l("147890"),
   d = l("491576"),
   u = l("112884"),
-  _ = l("639002"),
-  m = l("781627"),
-  p = l("981631"),
+  p = l("639002"),
+  _ = l("781627"),
+  m = l("981631"),
   f = l("689938"),
   h = l("550304");
 let C = new Map([
@@ -26,7 +26,7 @@ let C = new Map([
   ]),
   g = new Map,
   I = new Map([
-    [p.PlatformTypes.SPOTIFY, {
+    [m.PlatformTypes.SPOTIFY, {
       imageSrc: l("655130")
     }]
   ]);
@@ -47,15 +47,15 @@ function A(e) {
       guildIconSize: r.GuildIconSize.SMALL,
       compact: !0
     }) : null,
-    _ = null !== (l = null === (t = n.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== l ? l : 0,
-    p = _ > 0 ? f.default.Messages.APP_DIRECTORY_SHORT_GUILD_COUNT.format({
-      guildCount: _
+    p = null !== (l = null === (t = n.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== l ? l : 0,
+    m = p > 0 ? f.default.Messages.APP_DIRECTORY_SHORT_GUILD_COUNT.format({
+      guildCount: p
     }) : void 0;
-  return (0, i.jsx)(m.default, {
+  return (0, i.jsx)(_.default, {
     imageSrc: c.imageSrc,
     header: a.data.name,
     description: a.data.description,
-    secondaryInfo: p,
+    secondaryInfo: m,
     ctaLabel: f.default.Messages.APPLICATION_ADD_BUTTON,
     mutualGuildCount: u,
     onCtaClick: () => (0, o.goToApplication)({
@@ -68,7 +68,7 @@ function E(e) {
   let {
     result: t
   } = e, l = g.get(t.data.id);
-  return null == l ? null : (0, i.jsx)(m.default, {
+  return null == l ? null : (0, i.jsx)(_.default, {
     imageSrc: l.imageSrc,
     header: t.data.name,
     description: t.data.description,
@@ -82,13 +82,13 @@ function v(e) {
       guildId: o
     } = e,
     d = I.get(r.data.name);
-  return null == d ? null : (r.data.name === p.PlatformTypes.SPOTIFY && (t = f.default.Messages.APP_DIRECTORY_SPOTIFY_TITLE, l = f.default.Messages.APP_DIRECTORY_SPOTIFY_DESCRIPTION.format(), a = () => {
-    s.default.track(p.AnalyticEvents.APP_DIRECTORY_CTA_CLICKED, {
+  return null == d ? null : (r.data.name === m.PlatformTypes.SPOTIFY && (t = f.default.Messages.APP_DIRECTORY_SPOTIFY_TITLE, l = f.default.Messages.APP_DIRECTORY_SPOTIFY_DESCRIPTION.format(), a = () => {
+    s.default.track(m.AnalyticEvents.APP_DIRECTORY_CTA_CLICKED, {
       current_page: c.ApplicationDirectoryViews.SEARCH,
       cta: "spotify",
       guild_id: o
     }), (0, n.default)("https://support.discord.com/hc/en-us/articles/360000167212-Discord-Spotify-Connection")
-  }), null == t || null == l || null == a) ? null : (0, i.jsx)(m.default, {
+  }), null == t || null == l || null == a) ? null : (0, i.jsx)(_.default, {
     imageSrc: d.imageSrc,
     header: t,
     description: l,
@@ -120,7 +120,7 @@ function x(e) {
           result: e
         }, n)
       })
-    }), (0, i.jsx)(_.default, {
+    }), (0, i.jsx)(p.default, {
       guildId: l
     })]
   })
