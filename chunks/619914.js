@@ -23,6 +23,12 @@ let a = (0, s("818083").createExperiment)({
     config: {
       enabled: !0
     }
+  }, {
+    id: 4,
+    label: "Enabled",
+    config: {
+      enabled: !0
+    }
   }]
 });
 
