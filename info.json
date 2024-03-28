@@ -1,10 +1,8 @@
 {
   "buildNumber": "279030",
   "versionHash": "3f04d86f00f445e1d15f9bc950aa4c5b10195436",
-  "override": [
-    {
-      "id": "229353",
-      "name": "strings.js"
-    }
+  "strings": [
+    "../strings.js",
+    "444051"
   ]
 }
