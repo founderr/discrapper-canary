@@ -1,10 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   formatTimesForServer: function() {
-    return c
+    return f
   },
   getDayOptions: function() {
     return o
+  },
+  primetimeToString: function() {
+    return E
   }
 }), n("653041");
 var a = n("913527"),
@@ -63,6 +66,30 @@ let o = () => [{
     }
   },
   d = e => {
+    switch (e) {
+      case i.DayOptions.WEEKDAYS:
+        return r.default.Messages.CLAN_PRIMETIME_WEEKDAYS;
+      case i.DayOptions.WEEKENDS:
+        return r.default.Messages.CLAN_PRIMETIME_WEEKENDS;
+      case i.DayOptions.SUNDAY:
+        return r.default.Messages.CLAN_PRIMETIME_SUNDAY;
+      case i.DayOptions.MONDAY:
+        return r.default.Messages.CLAN_PRIMETIME_MONDAY;
+      case i.DayOptions.TUESDAY:
+        return r.default.Messages.CLAN_PRIMETIME_TUESDAY;
+      case i.DayOptions.WEDNESDAY:
+        return r.default.Messages.CLAN_PRIMETIME_WEDNESDAY;
+      case i.DayOptions.THURSDAY:
+        return r.default.Messages.CLAN_PRIMETIME_THURSDAY;
+      case i.DayOptions.FRIDAY:
+        return r.default.Messages.CLAN_PRIMETIME_FRIDAY;
+      case i.DayOptions.SATURDAY:
+        return r.default.Messages.CLAN_PRIMETIME_SATURDAY;
+      default:
+        return null
+    }
+  },
+  c = e => {
     if (null == e.day || null == e.time) return null;
     let t = s()(),
       n = t.clone().add(1, "day"),
@@ -73,16 +100,16 @@ let o = () => [{
     return e.day === i.DayOptions.WEEKDAYS ? o = a ? t.isAfter(r) ? l ? r.day(n.weekday()) : r.day(1) : r.day(t.weekday()) : e.time.day(1) : e.day === i.DayOptions.WEEKENDS ? a ? o = r.day(6) : t.isAfter(r) && (o = l ? r.day(6) : r.day(n.weekday())) : o = r.day(u(e.day)), t.isAfter(o) && (o = o.add(1, "week")), o
   };
 
-function c(e) {
+function f(e) {
   let t = [];
   return e.forEach(e => {
     if (null == e.day || null == e.time) return null;
     if (e.day === i.DayOptions.WEEKENDS) {
-      let n = d({
+      let n = c({
           day: i.DayOptions.SATURDAY,
           time: e.time
         }),
-        a = d({
+        a = c({
           day: i.DayOptions.SUNDAY,
           time: e.time
         });
@@ -96,14 +123,14 @@ function c(e) {
         days: [(0, l.convertJSDayToRRuleDay)(a.toDate().getUTCDay()).weekday]
       })
     } else if (e.day === i.DayOptions.WEEKDAYS) {
-      let n = d(e);
+      let n = c(e);
       null != n && t.push({
         scheduled_start_time: n.toISOString(),
         scheduled_end_time: n.clone().add(1, "hour").toISOString(),
         days: (0, l.getValidWeekdays)(n)
       })
     } else {
-      let n = d(e);
+      let n = c(e);
       null != n && t.push({
         scheduled_start_time: n.toISOString(),
         scheduled_end_time: n.clone().add(1, "hour").toISOString(),
@@ -111,4 +138,11 @@ function c(e) {
       })
     }
   }), t
+}
+
+function E(e) {
+  if (null == e.day || null == e.time) return null;
+  let t = d(e.day),
+    n = e.time.format("LT");
+  return "".concat(t, " ").concat(n)
 }

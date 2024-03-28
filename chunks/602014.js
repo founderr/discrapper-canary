@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanSetupIntro: function() {
-    return E
+    return _
   },
   ClanSetupIntroAnimation: function() {
-    return h
+    return C
   }
 });
 var a = n("735250"),
@@ -13,55 +13,65 @@ var a = n("735250"),
   i = n("442837"),
   r = n("481060"),
   o = n("425493"),
-  u = n("430824"),
-  d = n("308083"),
-  c = n("689938"),
-  f = n("653196");
-let E = e => {
+  u = n("607070"),
+  d = n("430824"),
+  c = n("620929"),
+  f = n("308083"),
+  E = n("689938"),
+  h = n("653196");
+let _ = e => {
     let {
       onClose: t,
       setPage: n
-    } = e;
+    } = e, s = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion);
     return (0, a.jsxs)("div", {
-      className: f.introContainer,
+      className: h.introContainer,
       children: [(0, a.jsx)(o.default, {
         closeAction: t,
         keybind: "ESC",
-        className: f.closeIconButton,
+        className: h.closeIconButton,
         variant: o.default.Variants.SOLID
       }), (0, a.jsx)(r.Heading, {
         variant: "heading-xxl/semibold",
-        className: f.header,
-        children: c.default.Messages.CLAN_SETUP_INTRO_TITLE
+        className: h.header,
+        children: E.default.Messages.CLAN_SETUP_INTRO_TITLE
       }), (0, a.jsx)(r.Text, {
         variant: "text-md/medium",
         color: "text-muted",
-        className: f.header,
-        children: c.default.Messages.CLAN_SETUP_INTRO_INFO
+        className: h.header,
+        children: E.default.Messages.CLAN_SETUP_INTRO_INFO
       }), (0, a.jsx)(r.Button, {
-        onClick: () => n(d.ClanSetupModalPages.ANIMATE),
-        children: c.default.Messages.CLAN_SETUP_INTRO_CTA
+        onClick: () => n(s ? f.ClanSetupModalPages.SETUP : f.ClanSetupModalPages.ANIMATE),
+        children: E.default.Messages.CLAN_SETUP_INTRO_CTA
       })]
     })
   },
-  h = e => {
+  C = e => {
     let {
       guildId: t,
       setPage: n
-    } = e, o = s.useRef(null), E = s.useRef(null), h = (0, i.useStateFromStores)([u.default], () => {
+    } = e, r = s.useRef(null), o = s.useRef(null), u = s.useRef(null), E = s.useRef(null), _ = (0, i.useStateFromStores)([d.default], () => {
       var e, n;
-      return null !== (n = null === (e = u.default.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : ""
+      return null !== (n = null === (e = d.default.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : ""
     });
     s.useEffect(() => {
       setTimeout(() => {
-        n(d.ClanSetupModalPages.SETUP)
-      }, 2e3)
+        n(f.ClanSetupModalPages.SETUP)
+      }, 3e3)
     });
-    let _ = (0, l.useSpring)({
-        ref: o,
-        config: {
-          duration: 500
+    let C = (0, l.useSpring)({
+        ref: r,
+        config: l.config.default,
+        from: {
+          top: "100%"
         },
+        to: {
+          top: "0%"
+        }
+      }),
+      m = (0, l.useSpring)({
+        ref: o,
+        config: l.config.default,
         from: {
           height: "20%"
         },
@@ -69,52 +79,40 @@ let E = e => {
           height: "100%"
         }
       }),
-      C = (0, l.useSpring)({
-        ref: E,
-        config: {
-          duration: 500
-        },
+      S = (0, l.useSpring)({
+        ref: u,
+        config: l.config.default,
         from: {
           opacity: 0
         },
         to: {
           opacity: 1
         }
+      }),
+      I = (0, l.useSpring)({
+        ref: E,
+        config: l.config.molasses,
+        from: {
+          width: "0%"
+        },
+        to: {
+          width: "100%"
+        }
       });
-    return (0, l.useChain)([o, E]), (0, a.jsx)(l.animated.div, {
-      className: f.animationContainer,
-      children: (0, a.jsxs)(l.animated.div, {
-        className: f.scrollContainer,
-        style: _,
-        children: [(0, a.jsxs)("div", {
-          className: f.scrollBg,
-          children: [(0, a.jsx)("div", {
-            className: f.scrollBgTop
-          }), (0, a.jsx)("div", {
-            className: f.scrollBgBottom
-          })]
-        }), (0, a.jsxs)(l.animated.div, {
-          className: f.overviewSidebarContent,
-          style: C,
-          children: [(0, a.jsx)(r.Heading, {
-            variant: "heading-lg/semibold",
-            color: "text-muted",
-            className: f.overviewText,
-            children: c.default.Messages.CLAN_SETUP_OVERVIEW_TITLE.format({
-              guildName: h
-            })
-          }), (0, a.jsx)(r.Text, {
-            variant: "text-sm/normal",
-            color: "text-muted",
-            className: f.overviewText,
-            children: c.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT
-          }), (0, a.jsx)(r.Text, {
-            variant: "text-sm/normal",
-            color: "text-muted",
-            className: f.overviewText,
-            children: c.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
-          })]
-        })]
-      })
+    return (0, l.useChain)([r, o, u, E], [0, .2, .5, .8], 3e3), (0, a.jsxs)("div", {
+      className: h.animationContainer,
+      children: [(0, a.jsx)(l.animated.div, {
+        style: I
+      }), (0, a.jsx)(l.animated.div, {
+        className: h.scrollContainer,
+        style: {
+          ...C,
+          ...m
+        },
+        children: (0, a.jsx)(c.default, {
+          guildName: _,
+          animatedTextStyle: S
+        })
+      })]
     })
   }
