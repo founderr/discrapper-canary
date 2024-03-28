@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a("47120"), a("627341");
+a.r(t), a("627341");
 var s = a("735250"),
   r = a("470079"),
   l = a("803997"),
@@ -10,21 +10,21 @@ var s = a("735250"),
   c = a("481060"),
   d = a("727637"),
   f = a("597688"),
-  h = a("574709"),
-  m = a("884697"),
+  h = a("884697"),
+  m = a("295177"),
   g = a("126900"),
   p = a("466111"),
   C = a("783014"),
   v = a("242411"),
   S = a("26290"),
-  A = a("74538"),
-  E = a("864106"),
+  E = a("74538"),
+  A = a("864106"),
   x = a("439959"),
   I = a("125988"),
   _ = a("689938"),
-  T = a("566253");
+  P = a("566253");
 let b = () => 80,
-  P = e => {
+  T = e => {
     let {
       children: t,
       className: a,
@@ -33,7 +33,7 @@ let b = () => 80,
       ...n
     } = e;
     return (0, s.jsx)(c.Clickable, {
-      className: i()(T.decorationGridItem, l ? T.selected : void 0, a),
+      className: i()(P.decorationGridItem, l ? P.selected : void 0, a),
       ...n,
       onClick: r,
       children: t
@@ -49,31 +49,34 @@ let b = () => 80,
       ...c
     } = e, g = (0, u.useStateFromStores)([f.default], () => {
       let e = f.default.getProduct(a.skuId);
-      return (0, m.isPremiumCollectiblesProduct)(e)
-    }), C = (0, u.useStateFromStores)([h.default], () => h.default.isItemViewed(a)), E = A.default.canUseCollectibles(t), b = i === x.Section.PREMIUM_PURCHASE && !E, [N, R] = r.useState(n);
-    r.useEffect(() => {
-      n && R(!0)
-    }, [n]);
-    let M = r.useRef(null),
-      w = (0, d.default)(null != l ? l : M),
-      {
-        avatarDecorationSrc: D
-      } = (0, I.default)({
-        user: t,
-        avatarDecorationOverride: a,
-        size: 80,
-        animateOnHover: !w
-      });
-    return (0, s.jsxs)(P, {
-      className: b ? T.decorationGridItemChurned : void 0,
-      innerRef: null != l ? l : M,
+      return (0, h.isPremiumCollectiblesProduct)(e)
+    }), C = (0, m.default)(a, n), A = E.default.canUseCollectibles(t), b = i === x.Section.PREMIUM_PURCHASE && !A, N = r.useRef(null), R = (0, d.default)(null != l ? l : N), {
+      avatarDecorationSrc: w
+    } = (0, I.default)({
+      user: t,
+      avatarDecorationOverride: a,
+      size: 80,
+      animateOnHover: !R
+    });
+    return (0, s.jsxs)(T, {
+      className: b ? P.decorationGridItemChurned : void 0,
+      innerRef: null != l ? l : N,
       isSelected: n,
       ...c,
       children: [(0, s.jsx)("img", {
-        className: T.presetDecorationImg,
-        src: D,
+        className: P.presetDecorationImg,
+        src: w,
         alt: a.label
-      }), i === x.Section.PURCHASE || i === x.Section.PREMIUM_PURCHASE && E ? null : C || n || N ? (0, s.jsx)(S.IconBadge, {
+      }), i === x.Section.PURCHASE || i === x.Section.PREMIUM_PURCHASE && A ? null : C ? (0, s.jsx)(S.PremiumBadge, {
+        className: P.newBadge,
+        text: (0, s.jsxs)("div", {
+          className: P.newBadgeText,
+          children: [(0, s.jsx)(v.default, {
+            width: 12,
+            height: 12
+          }), _.default.Messages.NEW]
+        })
+      }) : (0, s.jsx)(S.IconBadge, {
         icon: g ? () => (0, s.jsx)(p.default, {
           width: 14,
           height: 14
@@ -82,16 +85,7 @@ let b = () => 80,
           height: 12
         }),
         color: o.default.BACKGROUND_ACCENT,
-        className: T.iconBadge
-      }) : (0, s.jsx)(S.PremiumBadge, {
-        className: T.newBadge,
-        text: (0, s.jsxs)("div", {
-          className: T.newBadgeText,
-          children: [(0, s.jsx)(v.default, {
-            width: 12,
-            height: 12
-          }), _.default.Messages.NEW]
-        })
+        className: P.iconBadge
       })]
     })
   };
@@ -106,7 +100,7 @@ t.default = e => {
   } = e, u = (0, x.default)();
   return (0, s.jsx)(c.MasonryList, {
     fade: !0,
-    className: T.list,
+    className: P.list,
     columns: 3,
     sections: u.map(e => {
       let {
@@ -124,24 +118,24 @@ t.default = e => {
         section: m,
         items: p
       } = u[e];
-      return (0, n.match)(p[d]).with(x.NONE_ITEM, () => (0, s.jsxs)(P, {
+      return (0, n.match)(p[d]).with(x.NONE_ITEM, () => (0, s.jsxs)(T, {
         style: {
           ...f
         },
         isSelected: null === r,
         onSelect: () => i(null),
         children: [(0, s.jsx)(C.default, {
-          className: T.notAllowedIcon
+          className: P.notAllowedIcon
         }), (0, s.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "header-primary",
-          children: (0, E.hasGlobalDefaultAvatarDecoration)(t, a) ? _.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : _.default.Messages.NONE
+          children: (0, A.hasGlobalDefaultAvatarDecoration)(t, a) ? _.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : _.default.Messages.NONE
         })]
-      }, h)).with(x.SHOP_ITEM, () => (0, s.jsxs)(P, {
+      }, h)).with(x.SHOP_ITEM, () => (0, s.jsxs)(T, {
         style: f,
         onSelect: o,
         children: [(0, s.jsx)(g.default, {
-          className: T.shopIcon
+          className: P.shopIcon
         }), (0, s.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "header-primary",
@@ -167,7 +161,7 @@ t.default = e => {
         header: t
       } = u[e];
       return (0, s.jsx)("div", {
-        className: T.headings,
+        className: P.headings,
         children: (0, s.jsx)(c.HeadingLevel, {
           forceLevel: 5,
           children: (0, s.jsx)(c.Heading, {
