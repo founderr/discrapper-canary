@@ -19415,6 +19415,10 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     color: var(--white-500)
 }
 
+.storeBtn_aa1533 {
+    display: flex
+}
+
 .icon__05b65 {
     align-self: center;
     background-color: var(--background-floating);
