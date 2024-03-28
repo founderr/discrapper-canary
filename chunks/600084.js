@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return j
+    return D
   }
 });
 var a = n("735250"),
@@ -23,17 +23,19 @@ var a = n("735250"),
   S = n("7782"),
   _ = n("967128"),
   T = n("320781"),
-  I = n("753898"),
-  A = n("734386"),
-  v = n("184279"),
-  N = n("438306"),
-  x = n("544142"),
-  M = n("128557"),
-  R = n("981631"),
-  L = n("689938"),
-  y = n("794711");
+  I = n("269203"),
+  A = n("753898"),
+  v = n("734386"),
+  N = n("184279"),
+  x = n("438306"),
+  M = n("544142"),
+  R = n("128557"),
+  L = n("981631"),
+  y = n("176505"),
+  O = n("689938"),
+  j = n("794711");
 
-function O(e) {
+function P(e) {
   let {
     canManageRoles: t,
     channel: n
@@ -42,21 +44,21 @@ function O(e) {
   if (n.isForumPost()) return (0, a.jsx)(T.default, {
     channel: n
   });
-  if (m.THREAD_CHANNEL_TYPES.has(n.type)) return (0, a.jsx)(x.default, {
+  if (m.THREAD_CHANNEL_TYPES.has(n.type)) return (0, a.jsx)(M.default, {
     channel: n
   });
-  else if (i) return (0, a.jsx)(M.default, {
+  else if (i) return (0, a.jsx)(R.default, {
     channel: n
   });
-  else if (l) return (0, a.jsx)(A.default, {
+  else if (l) return (0, a.jsx)(v.default, {
     channel: n
   });
-  return (0, a.jsx)(N.default, {
+  return (0, a.jsx)(x.default, {
     channel: n
   })
 }
 
-function j(e) {
+function D(e) {
   var t;
   let {
     channel: n,
@@ -64,36 +66,36 @@ function j(e) {
   } = e, d = (0, o.default)(n), {
     type: m
   } = n, p = (0, s.useStateFromStores)([C.default], () => n.isPrivate() ? C.default.getUser(n.getRecipientId()) : null), T = g.default.useUserTag(p), {
-    canManageRoles: A,
-    canReadMessageHistory: N
+    canManageRoles: v,
+    canReadMessageHistory: x
   } = (0, s.useStateFromStoresObject)([E.default], () => ({
-    canManageRoles: E.default.can(R.Permissions.MANAGE_ROLES, n),
-    canReadMessageHistory: E.default.can(R.Permissions.READ_MESSAGE_HISTORY, n)
-  })), x = (0, s.useStateFromStores)([f.default], () => m === R.ChannelTypes.DM ? f.default.getMutualGuilds(n.getRecipientId()) : null, [n, m]), {
-    systemDMRedesignEnabled: M
+    canManageRoles: E.default.can(L.Permissions.MANAGE_ROLES, n),
+    canReadMessageHistory: E.default.can(L.Permissions.READ_MESSAGE_HISTORY, n)
+  })), M = (0, s.useStateFromStores)([f.default], () => m === L.ChannelTypes.DM ? f.default.getMutualGuilds(n.getRecipientId()) : null, [n, m]), {
+    systemDMRedesignEnabled: R
   } = c.default.useExperiment({
     location: "bf1a4f_1"
   }, {
     autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t
   });
   if (l.useEffect(() => {
-      m === R.ChannelTypes.DM && null == x && null != p && r.default.wait(() => (0, h.default)(n.getRecipientId(), p.getAvatarURL(null, 80), {
+      m === L.ChannelTypes.DM && null == M && null != p && r.default.wait(() => (0, h.default)(n.getRecipientId(), p.getAvatarURL(null, 80), {
         withMutualGuilds: !0
       }))
-    }, [x, m, n, p]), n.isSystemDM()) return M ? (0, a.jsx)(v.default, {
+    }, [M, m, n, p]), n.isSystemDM()) return R ? (0, a.jsx)(N.default, {
     channel: n
-  }) : (0, a.jsx)(I.default, {
+  }) : (0, a.jsx)(A.default, {
     channel: n,
-    children: L.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
+    children: O.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
   });
-  if (m === R.ChannelTypes.DM) return (0, a.jsxs)(I.default, {
+  if (m === L.ChannelTypes.DM) return (0, a.jsxs)(A.default, {
     channel: n,
     user: p,
     children: [null != p && (0, a.jsx)(i.Heading, {
       variant: "heading-xl/medium",
-      className: y.marginBottom20,
+      className: j.marginBottom20,
       children: T
-    }), L.default.Messages.BEGINNING_DM.format({
+    }), O.default.Messages.BEGINNING_DM.format({
       username: d
     }), (0, a.jsx)(S.default, {
       userId: n.getRecipientId(),
@@ -104,25 +106,27 @@ function j(e) {
   if (n.isMultiUserDM()) return n.isManaged() ? (0, a.jsxs)(_.default, {
     channelId: n.id,
     children: [(0, a.jsx)(_.EmptyMessageHeader, {
-      children: L.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
+      children: O.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: d
       })
     }), (0, a.jsx)(_.EmptyMessageBody, {
-      children: L.default.Messages.BEGINNING_GROUP_DM_MANAGED
+      children: O.default.Messages.BEGINNING_GROUP_DM_MANAGED
     })]
-  }) : (0, a.jsx)(I.default, {
+  }) : n.hasFlag(y.ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL) ? (0, a.jsx)(I.default, {
+    channel: n
+  }) : (0, a.jsx)(A.default, {
     channel: n,
-    children: L.default.Messages.BEGINNING_GROUP_DM.format({
+    children: O.default.Messages.BEGINNING_GROUP_DM.format({
       name: d
     })
   });
-  return N ? (0, a.jsx)(O, {
+  return x ? (0, a.jsx)(P, {
     channel: n,
-    canManageRoles: A
+    canManageRoles: v
   }) : (0, a.jsx)(_.default, {
     channelId: n.id,
     children: (0, a.jsx)(_.EmptyMessageBody, {
-      children: L.default.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({
+      children: O.default.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({
         channelName: d
       })
     })

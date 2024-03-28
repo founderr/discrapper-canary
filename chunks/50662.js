@@ -3,78 +3,69 @@ s.r(t), s.d(t, {
   default: function() {
     return h
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  i = s("913527"),
-  n = s.n(i),
-  r = s("442837"),
+});
+var a = s("735250");
+s("470079");
+var l = s("913527"),
+  i = s.n(l),
+  n = s("442837"),
   u = s("692547"),
-  o = s("481060"),
-  d = s("239091"),
-  c = s("171368"),
-  E = s("271383"),
-  I = s("594174"),
-  f = s("441674"),
-  T = s("696202"),
-  R = s("497309"),
+  r = s("481060"),
+  o = s("239091"),
+  d = s("171368"),
+  c = s("271383"),
+  E = s("594174"),
+  I = s("441674"),
+  f = s("696202"),
+  T = s("497309"),
   _ = s("808268"),
   S = s("709054"),
-  N = s("693546"),
-  m = s("246364"),
+  R = s("246364"),
+  N = s("360328"),
   A = s("981631"),
   M = s("689938"),
-  p = s("943963");
+  m = s("943963");
 
 function h(e) {
   var t;
   let {
-    guildJoinRequest: i,
+    guildJoinRequest: l,
     guild: h,
-    guildJoinRequestUser: x
-  } = e, [C, g] = l.useState(!1), {
-    createdAt: P,
-    actionedAt: j,
-    guildId: G,
-    userId: v
-  } = i, O = null === (t = i.actionedByUser) || void 0 === t ? void 0 : t.id, D = (0, r.useStateFromStores)([I.default], () => I.default.getUser(O)), L = (0, r.useStateFromStores)([E.default], () => null != O ? E.default.getMember(G, O) : null, [O, G]), b = l.useCallback(() => {
-    (0, o.showToast)((0, o.createToast)(M.default.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE))
-  }, []), F = async () => {
-    if (!C) {
-      g(!0);
-      try {
-        await N.default.updateGuildJoinRequest(G, v, m.GuildJoinRequestApplicationStatuses.APPROVED)
-      } catch {
-        b()
-      } finally {
-        g(!1)
-      }
-    }
-  }, V = M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING, B = (0, a.jsx)(R.default, {
+    guildJoinRequestUser: p
+  } = e, {
+    createdAt: C,
+    actionedAt: g,
+    guildId: x,
+    userId: G
+  } = l, {
+    approveRequest: P,
+    rejectRequest: j,
+    submitting: v
+  } = (0, N.useJoinRequestButtonActions)(x, G), O = null === (t = l.actionedByUser) || void 0 === t ? void 0 : t.id, D = (0, n.useStateFromStores)([E.default], () => E.default.getUser(O)), L = (0, n.useStateFromStores)([c.default], () => null != O ? c.default.getMember(x, O) : null, [O, x]), b = M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING, B = (0, a.jsx)(T.default, {
     width: 24,
     height: 24,
-    className: p.icon
+    className: m.icon
   });
-  i.applicationStatus === m.GuildJoinRequestApplicationStatuses.APPROVED ? (V = M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED, B = (0, a.jsx)(f.default, {
+  l.applicationStatus === R.GuildJoinRequestApplicationStatuses.APPROVED ? (b = M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED, B = (0, a.jsx)(I.default, {
     width: 24,
     height: 24,
-    className: p.iconApproved,
+    className: m.iconApproved,
     backgroundColor: u.default.unsafe_rawColors.WHITE_500.css
-  })) : i.applicationStatus === m.GuildJoinRequestApplicationStatuses.REJECTED && (V = M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED, B = (0, a.jsx)(T.default, {
+  })) : l.applicationStatus === R.GuildJoinRequestApplicationStatuses.REJECTED && (b = M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED, B = (0, a.jsx)(f.default, {
     width: 24,
     height: 24,
-    className: p.iconRejected,
+    className: m.iconRejected,
     backgroundColor: u.default.unsafe_rawColors.WHITE_500.css
   }));
-  let J = null != D && null != j ? M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
-    date: n()(S.default.extractTimestamp(j)).format("ll"),
+  let J = null != D && null != g ? M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
+    date: i()(S.default.extractTimestamp(g)).format("ll"),
     usernameHook: function() {
       var e;
-      return (0, a.jsx)(o.Clickable, {
-        className: p.actionedByUser,
-        onClick: () => (0, c.openUserProfileModal)({
+      return (0, a.jsx)(r.Clickable, {
+        className: m.actionedByUser,
+        onClick: () => (0, d.openUserProfileModal)({
           userId: D.id,
-          guildId: G,
+          guildId: x,
           analyticsLocation: {
             section: A.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
             object: A.AnalyticsObjects.ACTIONED_BY_USER
@@ -82,84 +73,72 @@ function h(e) {
         }),
         tag: "div",
         role: "link",
-        children: (0, a.jsx)(o.Text, {
+        children: (0, a.jsx)(r.Text, {
           variant: "text-xs/normal",
           color: "header-primary",
           children: null !== (e = null == L ? void 0 : L.nick) && void 0 !== e ? e : D.username
         })
       }, "username-hook")
     }
-  }) : n()(P).format("lll");
+  }) : i()(C).format("lll");
   return (0, a.jsxs)("div", {
-    className: p.container,
+    className: m.container,
     children: [(0, a.jsxs)("div", {
-      className: p.wrapper,
+      className: m.wrapper,
       children: [(0, a.jsxs)("div", {
-        className: p.inline,
+        className: m.inline,
         children: [B, (0, a.jsxs)("div", {
-          children: [(0, a.jsx)(o.Heading, {
+          children: [(0, a.jsx)(r.Heading, {
             variant: "heading-sm/semibold",
-            children: V
-          }), (0, a.jsx)(o.Text, {
-            className: p.headerSubtext,
+            children: b
+          }), (0, a.jsx)(r.Text, {
+            className: m.headerSubtext,
             variant: "text-xs/normal",
             color: "header-secondary",
             children: J
           })]
         })]
       }), (0, a.jsxs)("div", {
-        className: p.inline,
-        children: [i.applicationStatus === m.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsxs)("div", {
-          className: p.buttons,
-          children: [(0, a.jsx)(o.Button, {
-            color: o.Button.Colors.GREEN,
-            submitting: C,
-            onClick: () => F(),
+        className: m.inline,
+        children: [l.applicationStatus === R.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsxs)("div", {
+          className: m.buttons,
+          children: [(0, a.jsx)(r.Button, {
+            color: r.Button.Colors.GREEN,
+            submitting: v,
+            onClick: P,
             children: M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
-          }), (0, a.jsx)(o.Button, {
-            color: o.Button.Colors.RED,
-            onClick: () => {
-              (0, o.openModalLazy)(async () => {
-                let {
-                  default: e
-                } = await s.e("56496").then(s.bind(s, "113886"));
-                return t => (0, a.jsx)(e, {
-                  modalProps: t,
-                  guildId: G,
-                  userId: v,
-                  onError: b
-                })
-              })
-            },
-            disabled: C,
+          }), (0, a.jsx)(r.Button, {
+            color: r.Button.Colors.RED,
+            onClick: j,
+            disabled: v,
             children: M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
           })]
-        }), (0, a.jsx)(o.Clickable, {
+        }), (0, a.jsx)(r.Clickable, {
           onClick: e => {
-            (0, d.openContextMenuLazy)(e, async () => {
+            (0, o.openContextMenuLazy)(e, async () => {
               let {
                 default: e
               } = await s.e("84259").then(s.bind(s, "597409"));
               return t => (0, a.jsx)(e, {
                 ...t,
                 guild: h,
-                user: x
+                user: p
               })
             })
           },
-          className: p.overflow,
+          className: m.overflow,
           children: (0, a.jsx)(_.default, {
             width: 20,
             height: 20,
-            className: p.iconInteractive
+            className: m.iconInteractive
           })
         })]
       })]
-    }), i.applicationStatus === m.GuildJoinRequestApplicationStatuses.REJECTED && null != i.rejectionReason && (0, a.jsx)("div", {
-      className: p.rejectionReason,
-      children: (0, a.jsx)(o.Text, {
+    }), l.applicationStatus === R.GuildJoinRequestApplicationStatuses.REJECTED && null != l.rejectionReason && (0, a.jsx)("div", {
+      className: m.rejectionReason,
+      children: (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
-        children: i.rejectionReason
+        children: l.rejectionReason
       })
     })]
   })
