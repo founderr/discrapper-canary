@@ -1524,6 +1524,7 @@
                     BURST_CREDIT_BALANCE: "/users/@me/burst-credits",
                     SAVED_MESSAGES: "/saved-messages",
                     GET_REFERRALS_REMAINING: "/users/@me/referrals/eligibility",
+                    GET_REFERRAL_ELIGIBLE_USERS: "/users/@me/referrals/eligible-users",
                     CREATE_REFERRAL_PREVIEW: _ => "/users/@me/referrals/".concat(_, "/preview"),
                     CREATE_REFERRAL: _ => "/users/@me/referrals/".concat(_),
                     FAMILY_CENTER_TEEN_ACTIVITY: _ => "/family-center/".concat(_, "/activity"),
@@ -2612,7 +2613,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-934ebb1e3856c690f36159d1d4ea406fa3897ee0",
+                    release: "discord_web-2c26d2c5655c3bc8d4910dc41e1ef60747e09264",
                     beforeSend: _ => {
                         var E, e;
                         return !(null != (E = _).exception && null != E.exception.values && E.exception.values.every(_ => null == _.stacktrace || null != _.stacktrace.frames && 1 === _.stacktrace.frames.length) && "canary" !== window.GLOBAL_ENV.RELEASE_CHANNEL || a.some(_ => window.navigator.appVersion.toLowerCase().indexOf(_) >= 0)) && !R() && !("Aborted" === (e = _).message || "cancel captcha" === e.message) && t() ? _ : null
@@ -2630,7 +2631,7 @@
                     })],
                     ignoreErrors: ["EADDRINUSE", "BetterDiscord", "EnhancedDiscord", "Powercord", "RecipeWebview", "jQuery", "localStorage", "has already been declared", "Cannot call hover while not dragging.", "Cannot call beginDrag while dragging.", "getHostNode", "setupCSS", "on missing remote object", "ChunkLoadError", "Cannot find module 'discord_utils'", "Failed to setup Krisp module", "Error invoking remote method 'DISCORD_NATIVE_MODULES_INSTALL': Error: Module updater is not available!", "Non-Error promise rejection captured with keys:", "Request has been terminated", "Cannot resolve a Slate point from DOM point", "Failed to fetch", "no suitable image found", "ResizeObserver loop limit exceeded", "ResizeObserver loop completed with undelivered notifications.", "The play() request was interrupted", "could not play audio", "notosans-400-normalitalic"],
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
-                }), I.setTag("buildNumber", (_ = "279729", "279729")), I.setTag("builtAt", String("1711667397760"));
+                }), I.setTag("buildNumber", (_ = "279731", "279731")), I.setTag("builtAt", String("1711667666014"));
                 let E = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != E && "object" == typeof E)
                     for (let _ in E) I.setTag(_, E[_]);
