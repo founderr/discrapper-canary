@@ -25,7 +25,7 @@ var l = n("735250"),
   E = n("43267"),
   S = n("933557"),
   _ = n("853856"),
-  I = n("205765"),
+  I = n("93687"),
   N = n("276423"),
   T = n("878857"),
   A = n("204197"),
@@ -33,8 +33,8 @@ var l = n("735250"),
   v = n("158776"),
   x = n("306680"),
   R = n("111583"),
-  M = n("9156"),
-  O = n("594174"),
+  O = n("9156"),
+  M = n("594174"),
   y = n("467679"),
   D = n("514342"),
   b = n("28718"),
@@ -138,7 +138,7 @@ function z(e) {
     selected: c = !1,
     user: L,
     activities: R,
-    applicationStream: O,
+    applicationStream: M,
     isTyping: G,
     status: U,
     isMobile: P,
@@ -152,7 +152,7 @@ function z(e) {
     user: L,
     size: h.AvatarSizes.SIZE_32,
     animateOnHover: !(c || X)
-  }), en = (0, f.useStateFromStores)([M.default], () => M.default.isChannelMuted(r.getGuildId(), r.id)), el = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(r.id) > 0), ea = (0, S.default)(r), es = (0, f.useStateFromStores)([_.default], () => _.default.isFavorite(r.id)), {
+  }), en = (0, f.useStateFromStores)([O.default], () => O.default.isChannelMuted(r.getGuildId(), r.id)), el = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(r.id) > 0), ea = (0, S.default)(r), es = (0, f.useStateFromStores)([_.default], () => _.default.isFavorite(r.id)), {
     isFacepileEnabled: ei,
     isStatusIndicatorEnabled: er
   } = I.default.useExperiment({
@@ -248,7 +248,7 @@ function z(e) {
       }) : null != R ? (0, l.jsx)(w.default, {
         ...e,
         activities: R,
-        applicationStream: O,
+        applicationStream: M,
         animate: X,
         hideTooltip: !0,
         user: L
@@ -359,7 +359,7 @@ t.default = e => {
     channel: t,
     selected: n,
     ...a
-  } = e, s = (0, f.useStateFromStores)([O.default], () => O.default.getUser(t.getRecipientId())), i = null == s ? void 0 : s.id, r = (0, f.useStateFromStoresObject)([v.default, L.default], () => ({
+  } = e, s = (0, f.useStateFromStores)([M.default], () => M.default.getUser(t.getRecipientId())), i = null == s ? void 0 : s.id, r = (0, f.useStateFromStoresObject)([v.default, L.default], () => ({
     status: null != i ? v.default.getStatus(i) : null,
     activities: null != i ? v.default.getActivities(i) : null,
     applicationStream: null != i ? L.default.getAnyStreamForUser(i) : null,
