@@ -16,8 +16,8 @@ var l = a("803997"),
   d = a("466111"),
   f = a("74538"),
   m = a("884697"),
-  C = a("409116"),
-  p = a("981631"),
+  p = a("409116"),
+  C = a("981631"),
   g = a("689938"),
   h = a("951841");
 
@@ -29,25 +29,25 @@ function E(e) {
     disableTooltipPointerEvents: E,
     alwaysWhiteText: b = !0,
     nitroWheelColor: S
-  } = e, x = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), T = (0, n.useStateFromStores)([u.default], () => (0, o.isThemeDark)(u.default.theme)), v = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
+  } = e, x = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), T = (0, n.useStateFromStores)([u.default], () => (0, o.isThemeDark)(u.default.theme)), v = (0, m.extractPriceByPurchaseTypes)(t, C.PriceSetAssignmentPurchaseTypes.DEFAULT);
   if (null == v) return null;
   if (v.amount <= 0) return (0, s.jsx)("div", {
     className: r()(h.priceTagsContainer, a),
-    children: (0, s.jsx)(C.default, {
+    children: (0, s.jsx)(p.default, {
       alwaysWhiteText: b,
       price: v,
       className: l
     })
   });
-  let L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
+  let L = (0, m.extractPriceByPurchaseTypes)(t, C.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
     I = !f.default.canUseCollectibles(x);
   return (0, s.jsxs)("div", {
     className: r()(h.priceTagsContainer, a),
-    children: [(0, s.jsx)(C.default, {
+    children: [(0, s.jsx)(p.default, {
       alwaysWhiteText: b,
       price: v,
       className: r()([l, I ? void 0 : h.strikedPrice])
-    }), null != L && (0, s.jsx)(C.default, {
+    }), null != L && (0, s.jsx)(p.default, {
       price: L,
       alwaysWhiteText: b,
       renderPrice: I ? e => g.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({

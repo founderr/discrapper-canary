@@ -22,8 +22,8 @@ var a = n("735250"),
   g = n("240351"),
   A = n("792258"),
   N = n("657825"),
-  v = n("198952"),
-  O = n("329242"),
+  O = n("198952"),
+  v = n("329242"),
   R = n("895328"),
   L = n("292352"),
   P = n("981631"),
@@ -68,8 +68,8 @@ function b(e) {
     I(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i()(E, "No text for action type");
-  let v = E.sectionHeader(u),
-    O = s.useCallback(e => {
+  let O = E.sectionHeader(u),
+    v = s.useCallback(e => {
       let {
         row: t
       } = e, n = r[t];
@@ -86,14 +86,14 @@ function b(e) {
         className: y.sectionHeader,
         variant: "eyebrow",
         color: "header-secondary",
-        children: v
+        children: O
       }), void 0 !== E.sectionDescription ? (0, a.jsx)(o.Text, {
         className: y.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
         children: E.sectionDescription(null != l && l, T)
       }) : null]
-    }), [v, E, l, T]);
+    }), [O, E, l, T]);
   if (0 === r.length) return null;
   let P = r.slice(0, C);
   return (0, a.jsxs)("div", {
@@ -103,7 +103,7 @@ function b(e) {
       style: {
         maxHeight: 65 * P.length
       },
-      children: P.map((e, t) => O({
+      children: P.map((e, t) => v({
         row: t
       }))
     }), P.length !== u ? (0, a.jsx)(o.Clickable, {
@@ -151,12 +151,12 @@ let x = () => {
     } = e, l = (0, I.useTeenUserForId)(t);
     return void 0 === l ? null : (0, a.jsxs)("div", {
       className: y.accountRow,
-      children: [(0, a.jsx)(v.FamilyCenterAvatar, {
+      children: [(0, a.jsx)(O.FamilyCenterAvatar, {
         user: l,
         avatarSize: s
       }), (0, a.jsxs)("div", {
         className: y.headerText,
-        children: [(0, a.jsx)(O.default, {
+        children: [(0, a.jsx)(v.default, {
           user: l
         }), void 0 !== n ? (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",

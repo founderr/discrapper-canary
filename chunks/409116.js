@@ -19,11 +19,11 @@ t.default = e => {
     className: d,
     variant: f = "heading-md/semibold",
     alwaysWhiteText: m = !0
-  } = e, C = (0, o.formatPrice)(a, l);
+  } = e, p = (0, o.formatPrice)(a, l);
   return (0, s.jsxs)(n.Heading, {
     variant: f,
     color: m ? "always-white" : "none",
     className: r()(i.heading, d),
-    children: [c, null !== (t = null == u ? void 0 : u(C)) && void 0 !== t ? t : C]
+    children: [c, null !== (t = null == u ? void 0 : u(p)) && void 0 !== t ? t : p]
   })
 }

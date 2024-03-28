@@ -28,8 +28,8 @@ t.default = function(e) {
     onDismissed: g,
     onClick: A,
     cta: N,
-    ctaColor: v,
-    centerText: O
+    ctaColor: O,
+    centerText: v
   } = e;
   s.useEffect(() => {
     _(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -49,7 +49,7 @@ t.default = function(e) {
       }), null == A || A()
     },
     fullWidth: !0,
-    color: v,
+    color: O,
     children: N
   }));
   let L = null;
@@ -59,7 +59,7 @@ t.default = function(e) {
     className: i()(h.title, {
       [h.noImageTitle]: null == r
     }, {
-      [h.center]: O
+      [h.center]: v
     }),
     children: n
   }));
@@ -94,7 +94,7 @@ t.default = function(e) {
       className: h.message,
       children: [L, (0, a.jsx)(o.Text, {
         className: i()({
-          [h.center]: O
+          [h.center]: v
         }),
         variant: "text-sm/normal",
         color: "text-muted",

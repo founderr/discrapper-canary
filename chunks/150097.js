@@ -43,8 +43,8 @@ var d = n("569471"),
   v = n("352736"),
   x = n("51144"),
   R = n("981631"),
-  M = n("124368"),
-  O = n("689938");
+  O = n("124368"),
+  M = n("689938");
 
 function y(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -72,7 +72,7 @@ function D(e, t) {
   if (h.THREAD_CHANNEL_TYPES.has(s.type)) {
     if (d.default.isMuted(s.id)) return !1;
     let t = (0, c.computeThreadNotificationSetting)(s);
-    return t !== M.ThreadMemberFlags.NO_MESSAGES && (t === M.ThreadMemberFlags.ALL_MESSAGES || (0, o.isRawMessageMentioned)({
+    return t !== O.ThreadMemberFlags.NO_MESSAGES && (t === O.ThreadMemberFlags.ALL_MESSAGES || (0, o.isRawMessageMentioned)({
       rawMessage: e,
       userId: r.id,
       suppressEveryone: !1,
@@ -145,19 +145,19 @@ function P(e, t, n) {
   let f = t.content;
   if ((0, u.default)(t) && null == (f = v.default.stringify(t, e))) throw new a.default("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", t), Error("failed to stringify system message");
   let h = null !== (s = t.sticker_items) && void 0 !== s ? s : t.stickers;
-  return 0 === (i = null != t.activity && null != t.application ? t.activity.type === R.ActivityActionTypes.JOIN ? U(e, O.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, O.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_JOIN, O.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN).format({
+  return 0 === (i = null != t.activity && null != t.application ? t.activity.type === R.ActivityActionTypes.JOIN ? U(e, M.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, M.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_JOIN, M.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN).format({
     user: o,
     game: t.application.name
-  }) : t.activity.type === R.ActivityActionTypes.JOIN_REQUEST ? U(e, O.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, O.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, O.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST).format({
+  }) : t.activity.type === R.ActivityActionTypes.JOIN_REQUEST ? U(e, M.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, M.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, M.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST).format({
     user: o,
     game: t.application.name
-  }) : "" : null != t.activity && t.activity.type === R.ActivityActionTypes.LISTEN ? U(e, O.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_LISTEN, O.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_LISTEN, O.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_LISTEN).format({
+  }) : "" : null != t.activity && t.activity.type === R.ActivityActionTypes.LISTEN ? U(e, M.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_LISTEN, M.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_LISTEN, M.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_LISTEN).format({
     user: o
-  }) : null != h && h.length > 0 ? O.default.Messages.STICKER_NOTIFICATION_BODY.format({
+  }) : null != h && h.length > 0 ? M.default.Messages.STICKER_NOTIFICATION_BODY.format({
     stickerName: h[0].name
-  }) : t.type === R.MessageTypes.PREMIUM_REFERRAL ? O.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY_SHORT.format({
+  }) : t.type === R.MessageTypes.PREMIUM_REFERRAL ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY_SHORT.format({
     username: x.default.getName(n)
-  }) : null != t.poll ? O.default.Messages.POLL_SENT_NOTIFICATION.format({
+  }) : null != t.poll ? M.default.Messages.POLL_SENT_NOTIFICATION.format({
     question: t.poll.question.text
   }) : r.default.unparse(f, e.id, !0)).length && (i = function(e) {
     var t;
@@ -170,10 +170,10 @@ function P(e, t, n) {
         return "".concat(e.name, " ").concat(e.value)
       }
     }
-    if ((0, A.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, R.MessageFlags.IS_VOICE_MESSAGE)) return O.default.Messages.VOICE_MESSAGES_SENT_NOTIFICATION;
+    if ((0, A.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, R.MessageFlags.IS_VOICE_MESSAGE)) return M.default.Messages.VOICE_MESSAGES_SENT_NOTIFICATION;
     if (void 0 !== e.attachments && e.attachments.length > 0) {
       let t = e.attachments[0].filename;
-      return O.default.Messages.NOTIFICATION_BODY_ATTACHMENT.format({
+      return M.default.Messages.NOTIFICATION_BODY_ATTACHMENT.format({
         filename: t
       })
     }

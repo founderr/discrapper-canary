@@ -38,8 +38,8 @@ function x(e) {
     mediaState: C,
     mentionCount: x = 0,
     unread: R = !1,
-    defaultFolderName: M,
-    useCircleMask: O = !1,
+    defaultFolderName: O,
+    useCircleMask: M = !1,
     draggable: y = !1,
     sorting: D = !1,
     onDragStart: b,
@@ -74,7 +74,7 @@ function x(e) {
     K(e)
   }, []), Q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && G()
-  }, [G, d]), q = null != B && "" !== B ? B : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
+  }, [G, d]), q = null != B && "" !== B ? B : null != O && "" !== O ? O : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
     from: {
       height: 0
     },
@@ -108,7 +108,7 @@ function x(e) {
         children: Z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(m.default, {
           folderNode: t,
           expanded: d,
-          forceCircular: O,
+          forceCircular: M,
           sorting: D,
           mediaState: C,
           mentionCount: x,

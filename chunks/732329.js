@@ -11,8 +11,8 @@ var s = a("735250"),
   d = a("727637"),
   f = a("100527"),
   m = a("906732"),
-  C = a("1585"),
-  p = a("125988"),
+  p = a("1585"),
+  C = a("125988"),
   g = a("333867"),
   h = a("197115"),
   E = a("300284"),
@@ -39,7 +39,7 @@ var s = a("735250"),
   w = a("321664");
 let H = _.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
   U = u.AvatarSizes.SIZE_120,
-  W = (0, C.getDecorationSizeForAvatarSize)(U),
+  W = (0, p.getDecorationSizeForAvatarSize)(U),
   G = e => {
     let {
       children: t,
@@ -88,7 +88,7 @@ t.default = function(e) {
     avatarDecorationSrc: Q,
     eventHandlers: ee,
     avatarPlaceholderSrc: et
-  } = (0, p.default)({
+  } = (0, C.default)({
     user: $,
     avatarDecorationOverride: (null == J ? void 0 : J.type) === o.CollectiblesItemType.AVATAR_DECORATION ? J : void 0,
     size: W,
@@ -112,7 +112,7 @@ t.default = function(e) {
     }),
     ef = () => {
       if ((0, c.popLayer)(), ed(), (null == J ? void 0 : J.type) === o.CollectiblesItemType.AVATAR_DECORATION) {
-        (0, C.openAvatarDecorationModal)({
+        (0, p.openAvatarDecorationModal)({
           initialSelectedDecoration: J,
           analyticsLocations: z
         });
@@ -131,8 +131,8 @@ t.default = function(e) {
         returnRef: ec
       })
     },
-    eC = em(f.default.COLLECTIBLES_SHOP_CARD),
-    ep = em(f.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    ep = em(f.default.COLLECTIBLES_SHOP_CARD),
+    eC = em(f.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eg = () => (0, s.jsx)("div", {
       className: w.hoverUpsellContainer,
       children: (0, s.jsx)(h.default, {
@@ -168,7 +168,7 @@ t.default = function(e) {
         color: ea.text.toHslString()
       } : void 0,
       className: w.defaultPreviewButtonColor,
-      onClick: ep
+      onClick: eC
     }) : (0, s.jsx)(P.default, {
       product: t,
       returnRef: Y,
@@ -226,7 +226,7 @@ t.default = function(e) {
       innerRef: Y,
       className: w.shopCard,
       onBlur: () => Z(!1),
-      onClick: eC,
+      onClick: ep,
       style: eS,
       id: "shop-item-".concat(t.skuId),
       children: [er && (0, s.jsx)(u.Tooltip, {

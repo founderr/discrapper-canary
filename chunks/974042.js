@@ -132,21 +132,21 @@ class A {
   }
 }
 let N = !0,
-  v = !1,
-  O = m.FriendsSections.ONLINE,
+  O = !1,
+  v = m.FriendsSections.ONLINE,
   R = new A,
   L = !0,
   P = !1;
 
 function M() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  N && (e || O !== m.FriendsSections.ONLINE && O !== m.FriendsSections.ADD_FRIEND) && !v && (N = !1, v = !0, o.default.fetchRelationships())
+  N && (e || v !== m.FriendsSections.ONLINE && v !== m.FriendsSections.ADD_FRIEND) && !O && (N = !1, O = !0, o.default.fetchRelationships())
 }
 
 function y() {
-  if (N = !0, L ? v = !1 : M(), R = R.reset(), P) return;
+  if (N = !0, L ? O = !1 : M(), R = R.reset(), P) return;
   let e = R.getRelationshipCounts();
-  O = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
+  v = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
 }
 
 function D() {
@@ -164,8 +164,8 @@ class x extends(a = i.default.Store) {
   }
   getState() {
     return {
-      fetching: v,
-      section: O,
+      fetching: O,
+      section: v,
       pendingCount: _.default.getPendingCount(),
       rows: R
     }
@@ -176,7 +176,7 @@ S(x, "displayName", "FriendsStore"), t.default = new x(r.default, {
     y()
   },
   FRIENDS_SET_SECTION: function(e) {
-    O = e.section, M()
+    v = e.section, M()
   },
   CHANNEL_SELECT: function(e) {
     let {
@@ -185,10 +185,10 @@ S(x, "displayName", "FriendsStore"), t.default = new x(r.default, {
     return L = null != t, D(), !L
   },
   LOAD_RELATIONSHIPS_SUCCESS: function() {
-    v = !1
+    O = !1
   },
   LOAD_RELATIONSHIPS_FAILURE: function() {
-    N = !0, v = !0
+    N = !0, O = !0
   },
   DRAWER_SELECT_TAB: function(e) {
     let {
@@ -197,6 +197,6 @@ S(x, "displayName", "FriendsStore"), t.default = new x(r.default, {
     return L = t !== m.DrawerTabTypes.FRIENDS, D(), !L
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
-    O = e.section, P = !0
+    v = e.section, P = !0
   }
 })

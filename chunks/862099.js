@@ -30,8 +30,8 @@ var a, s, l = n("735250"),
   g = n("305878"),
   A = n("263704"),
   N = n("465670"),
-  v = n("242315"),
-  O = n("393112"),
+  O = n("242315"),
+  v = n("393112"),
   R = n("170039"),
   L = n("602623"),
   P = n("626135"),
@@ -248,7 +248,7 @@ function X(e) {
         width: 16,
         height: 16,
         className: z.stageIcon
-      }) : (0, l.jsx)(O.default, {
+      }) : (0, l.jsx)(v.default, {
         width: 16,
         height: 16,
         className: z.stageIcon
@@ -276,7 +276,7 @@ function J(e) {
     heading: K.default.Messages.HAPPENING_NOW,
     topic: t.name,
     location: (0, G.guildEventDetailsParser)(n, !0),
-    locationIcon: (0, l.jsx)(O.default, {
+    locationIcon: (0, l.jsx)(v.default, {
       width: 16,
       height: 16,
       className: z.stageIcon
@@ -336,7 +336,7 @@ function et(e) {
     heading: K.default.Messages.STAGE_CHANNEL_LIVE_NOW,
     location: n.name,
     details: i,
-    detailsIcon: (0, l.jsx)(v.default, {
+    detailsIcon: (0, l.jsx)(O.default, {
       width: 14,
       height: 14,
       className: z.stageIcon

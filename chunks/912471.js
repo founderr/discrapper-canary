@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   initSessionHeartbeatScheduler: function() {
-    return O
+    return v
   }
 }), n("411104");
 var a = n("433517"),
@@ -82,7 +82,7 @@ async function g() {
 let A = null,
   N = !0;
 
-function v() {
+function O() {
   if (N || null != A && A !== h.RTCConnectionStates.DISCONNECTED && A !== h.RTCConnectionStates.RTC_DISCONNECTED) try {
     p()
   } catch (e) {
@@ -92,10 +92,10 @@ function v() {
   }), (0, E.setSessionExtendingEnabled)(!1), T(), (0, l.drainClickstream)())
 }
 
-function O() {
+function v() {
   f.default.addBreadcrumb({
     message: "Initializing SessionHeartbeatScheduler"
-  }), o.default.addChangeListener(L), s.default.subscribe("WINDOW_FOCUS", P), s.default.subscribe("APP_STATE_UPDATE", M), s.default.subscribe("LOGIN_SUCCESS", R), v()
+  }), o.default.addChangeListener(L), s.default.subscribe("WINDOW_FOCUS", P), s.default.subscribe("APP_STATE_UPDATE", M), s.default.subscribe("LOGIN_SUCCESS", R), O()
 }
 
 function R() {
@@ -104,19 +104,19 @@ function R() {
 
 function L() {
   let e = o.default.getState();
-  A !== e && (A = e, v())
+  A !== e && (A = e, O())
 }
 
 function P(e) {
   let {
     focused: t
   } = e;
-  N = t, v()
+  N = t, O()
 }
 
 function M(e) {
   let {
     state: t
   } = e;
-  N = t === h.AppStates.ACTIVE, v()
+  N = t === h.AppStates.ACTIVE, O()
 }

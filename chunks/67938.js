@@ -16,8 +16,8 @@ var l = a("803997"),
   d = a("373008"),
   f = a("383416"),
   m = a("26213"),
-  C = a("249174"),
-  p = a("767247"),
+  p = a("249174"),
+  C = a("767247"),
   g = a("621881"),
   h = a("586755");
 
@@ -31,7 +31,7 @@ function E(e) {
     children: [(0, s.jsxs)("div", {
       className: c.noOverflow,
       children: [(0, s.jsx)("img", {
-        src: a ? C : m,
+        src: a ? p : m,
         className: c.shyGrid,
         alt: t.name,
         "aria-hidden": !0
@@ -46,7 +46,7 @@ function E(e) {
       className: r()(c.shyBannerImage, c.shyBannerLeft),
       alt: ""
     }), (0, s.jsx)("img", {
-      src: p,
+      src: C,
       className: c.shyBannerLogo,
       alt: t.name,
       "aria-hidden": !0

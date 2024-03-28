@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("153066"),
   A = n("335131"),
   N = n("141594"),
-  v = n("302800"),
-  O = n("981631"),
+  O = n("302800"),
+  v = n("981631"),
   R = n("689938"),
   L = n("592761");
 let P = e => {
@@ -54,7 +54,7 @@ let P = e => {
     } = (0, C.default)(c);
     return (0, a.jsx)(f.LinkButton, {
       selected: t,
-      route: O.Routes.COLLECTIBLES_SHOP,
+      route: v.Routes.COLLECTIBLES_SHOP,
       icon: p.default,
       text: R.default.Messages.COLLECTIBLES_SHOP,
       locationState: n,
@@ -188,14 +188,14 @@ let P = e => {
       dismissCollectiblesShopTabNewBadge: l
     } = (0, N.default)();
     if (null != s) switch (s.type) {
-      case v.CollectiblesMarketingVariant.TOOLTIP:
+      case O.CollectiblesMarketingVariant.TOOLTIP:
         return (0, a.jsx)(b, {
           selected: t,
           locationState: n,
           onButtonClick: l,
           displayOptions: s
         });
-      case v.CollectiblesMarketingVariant.COACHTIP:
+      case O.CollectiblesMarketingVariant.COACHTIP:
         return (0, a.jsx)(D, {
           selected: t,
           locationState: n,

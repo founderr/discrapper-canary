@@ -11,8 +11,8 @@ var s = a("735250"),
   d = a("663002"),
   f = a("481060"),
   m = a("37234"),
-  C = a("727637"),
-  p = a("100527"),
+  p = a("727637"),
+  C = a("100527"),
   g = a("906732"),
   h = a("1585"),
   E = a("125988"),
@@ -89,7 +89,7 @@ t.default = function(e) {
     isGiftEasterEggEnabled: k
   } = e, {
     analyticsLocations: q
-  } = (0, g.default)(p.default.COLLECTIBLES_SHOP_CARD), $ = l.useRef(null), J = (0, C.default)($), [Q, ee] = l.useState(!1), et = J || Q, ea = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [es] = t.items, {
+  } = (0, g.default)(C.default.COLLECTIBLES_SHOP_CARD), $ = l.useRef(null), J = (0, p.default)($), [Q, ee] = l.useState(!1), et = J || Q, ea = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [es] = t.items, {
     avatarDecorationSrc: el,
     eventHandlers: er,
     avatarPlaceholderSrc: en
@@ -100,7 +100,7 @@ t.default = function(e) {
     animateOnHover: !et
   }), {
     backgroundColors: eo
-  } = (0, D.default)(t.styles), ei = (0, j.getFormattedPriceForCollectiblesProduct)(t, N, !1), eu = (0, j.isPremiumCollectiblesProduct)(t), ec = (0, j.isFreeCollectiblesProduct)(t), [ed, ef, em] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), eC = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), ep = (0, u.useStateFromStores)([P.default], () => P.default.getIsProductNew(es.skuId)), {
+  } = (0, D.default)(t.styles), ei = (0, j.getFormattedPriceForCollectiblesProduct)(t, N, !1), eu = (0, j.isPremiumCollectiblesProduct)(t), ec = (0, j.isFreeCollectiblesProduct)(t), [ed, ef, em] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), ep = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), eC = (0, u.useStateFromStores)([P.default], () => P.default.getIsProductNew(es.skuId)), {
     hoverVariant: eg
   } = (0, F.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard");
   l.useEffect(() => {
@@ -138,8 +138,8 @@ t.default = function(e) {
         returnRef: eE
       })
     },
-    ex = eS(p.default.COLLECTIBLES_SHOP_CARD),
-    eT = eS(p.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    ex = eS(C.default.COLLECTIBLES_SHOP_CARD),
+    eT = eS(C.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     ev = () => (0, s.jsx)("div", {
       className: V.hoverUpsellContainer,
       children: (0, s.jsx)(S.default, {
@@ -212,7 +212,7 @@ t.default = function(e) {
         }), eI()]
       })
     },
-    eN = eC ? "0 0 15px 1px ".concat(c.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
+    eN = ep ? "0 0 15px 1px ".concat(c.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
   return (0, s.jsx)(f.FocusRing, {
     children: (0, s.jsxs)(f.Clickable, {
       innerRef: $,
@@ -220,7 +220,7 @@ t.default = function(e) {
       onBlur: () => ee(!1),
       onClick: ex,
       style: null != eo ? {
-        backgroundColor: eC ? "var(--background-floating)" : "var(--background-secondary)",
+        backgroundColor: ep ? "var(--background-floating)" : "var(--background-secondary)",
         borderColor: "var(--chat-border)",
         boxShadow: et ? eN : "none"
       } : void 0,
@@ -268,7 +268,7 @@ t.default = function(e) {
           [V.cardTextBlur]: (null == es ? void 0 : es.type) === i.CollectiblesItemType.PROFILE_EFFECT
         }),
         children: [(0, s.jsx)("div", {
-          className: n()(V.cardBackground, eC ? V.darkCardBackground : V.lightCardBackground, (null == es ? void 0 : es.type) === i.CollectiblesItemType.PROFILE_EFFECT ? V.cardLowOpacity : null)
+          className: n()(V.cardBackground, ep ? V.darkCardBackground : V.lightCardBackground, (null == es ? void 0 : es.type) === i.CollectiblesItemType.PROFILE_EFFECT ? V.cardLowOpacity : null)
         }), (0, s.jsx)(f.Text, {
           variant: "text-lg/bold",
           className: V.productName,
@@ -292,7 +292,7 @@ t.default = function(e) {
         category: a,
         className: V.limitedTimeBadge,
         display: "card"
-      }), ep && (0, s.jsx)(O.TextBadge, {
+      }), eC && (0, s.jsx)(O.TextBadge, {
         text: G.default.Messages.NEW,
         disableColor: !0,
         className: V.newBadge

@@ -38,25 +38,25 @@ t.default = () => {
     g = f.default.useIsRingtoneEligible(),
     A = f.default.useIsRingtoneDisabled(),
     N = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
-    v = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
-    O = s.useRef(!1),
+    O = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
+    v = s.useRef(!1),
     R = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
       if (g && !A) return (0, S.createSound)(c.default.ringtone, e);
-      if (v === I.Soundpacks.CLASSIC) {
+      if (O === I.Soundpacks.CLASSIC) {
         let t = 500 === i().random(1, 1e3) ? "call_ringing_beat" : "call_ringing";
         return (0, S.createSound)(t, e)
       }
-      return (0, S.createSoundForPack)("call_ringing", v)
-    }, [v, A, g]);
+      return (0, S.createSoundForPack)("call_ringing", O)
+    }, [O, A, g]);
   return s.useEffect(() => () => {
     R.stop()
   }, [R]), s.useEffect(() => {
     if (N || l) {
-      O.current && (R.stop(), O.current = !1);
+      v.current && (R.stop(), v.current = !1);
       return
     }
-    n && !O.current ? (R.loop(), O.current = !0) : !n && O.current && (R.stop(), O.current = !1)
+    n && !v.current ? (R.loop(), v.current = !0) : !n && v.current && (R.stop(), v.current = !1)
   }, [l, N, n, R]), (0, o.useTransition)(t, {
     keys: e => {
       var t;

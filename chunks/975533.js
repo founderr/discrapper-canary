@@ -22,8 +22,8 @@ var a = n("570140"),
   g = n("626135"),
   A = n("554174"),
   N = n("981631"),
-  v = n("65154");
-let O = {
+  O = n("65154");
+let v = {
   [N.GlobalKeybindActions.TOGGLE_PRIORITY_SPEAKER]: {
     onTrigger() {},
     keyEvents: {}
@@ -34,7 +34,7 @@ let O = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK]: {
     onTrigger(e, t) {
-      S.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (O[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
+      S.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (v[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
     },
     keyEvents: {
       keyup: !0,
@@ -44,7 +44,7 @@ let O = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: {
     onTrigger(e) {
-      S.default.getMode() === N.InputModes.PUSH_TO_TALK && (O[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), v.MediaEngineContextTypes.DEFAULT))
+      S.default.getMode() === N.InputModes.PUSH_TO_TALK && (v[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), O.MediaEngineContextTypes.DEFAULT))
     },
     keyEvents: {
       keyup: !0,
@@ -54,7 +54,7 @@ let O = {
   },
   [N.GlobalKeybindActions.PUSH_TO_MUTE]: {
     onTrigger(e) {
-      if (S.default.getMode() === N.InputModes.VOICE_ACTIVITY) !S.default.isSelfDeaf() && (O[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
+      if (S.default.getMode() === N.InputModes.VOICE_ACTIVITY) !S.default.isSelfDeaf() && (v[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
     },
     keyEvents: {
       keyup: !0,
@@ -225,7 +225,7 @@ class R extends u.default {
   _initialize() {
     a.default.wait(() => a.default.dispatch({
       type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS",
-      keybinds: O
+      keybinds: v
     }))
   }
   _terminate() {}

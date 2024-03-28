@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return g
   },
   useProductDetailsLinkableRoute: function() {
-    return C
+    return p
   }
 }), a("757143"), a("47120"), a("653041");
 var s = a("470079"),
@@ -18,7 +18,7 @@ var s = a("470079"),
 let d = "".concat("#").concat("itemSkuId", "="),
   f = new RegExp("^".concat(d, "(\\d+)$")),
   m = [c.Routes.COLLECTIBLES_SHOP, c.Routes.COLLECTIBLES_SHOP_FULLSCREEN],
-  C = e => {
+  p = e => {
     let t = (0, l.useLocation)();
     s.useEffect(() => {
       if (null != e && m.includes(t.pathname)) return window.location.replace("".concat(d).concat(e.skuId)), () => {
@@ -26,7 +26,7 @@ let d = "".concat("#").concat("itemSkuId", "="),
       }
     }, [])
   },
-  p = e => {
+  C = e => {
     let {
       categories: t,
       productSkuId: a,
@@ -64,12 +64,12 @@ let d = "".concat("#").concat("itemSkuId", "="),
       isFetchingCategories: a,
       isLayer: u,
       initialItemCardRef: d
-    } = e, m = s.useRef(null), C = (0, l.useLocation)(), g = C.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : C.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
+    } = e, m = s.useRef(null), p = (0, l.useLocation)(), g = p.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : p.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
       analyticsLocations: h
     } = (0, o.default)(g);
     s.useEffect(() => {
       if (u) return;
-      let e = f.exec(C.hash);
+      let e = f.exec(p.hash);
       if (null != e) {
         let t = e[1];
         m.current = t
@@ -82,7 +82,7 @@ let d = "".concat("#").concat("itemSkuId", "="),
       if (u && null != E && (e = E), !u && null != m.current && (e = m.current), null != e) {
         let a = [],
           s = setTimeout(() => {
-            let s = p({
+            let s = C({
               categories: t,
               productSkuId: e,
               analyticsLocations: h,

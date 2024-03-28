@@ -23,7 +23,7 @@ var a = n("735250"),
   A = n("689938"),
   N = n("374145");
 
-function v(e) {
+function O(e) {
   var t;
   let {
     quest: n
@@ -57,32 +57,32 @@ function v(e) {
 t.default = function(e) {
   var t, n, l;
   let {
-    quest: O
-  } = e, R = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(O.id), [O]), L = s.useCallback(e => {
+    quest: v
+  } = e, R = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(v.id), [v]), L = s.useCallback(e => {
     e.stopPropagation()
   }, []), P = s.useCallback(() => {
-    (0, f.enrollInQuest)(O.id, {
+    (0, f.enrollInQuest)(v.id, {
       questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.ACCEPT_QUEST
     })
-  }, [O]), M = s.useCallback(() => {
-    null != O && ((0, c.trackQuestContentClicked)({
-      questId: O.id,
+  }, [v]), M = s.useCallback(() => {
+    null != v && ((0, c.trackQuestContentClicked)({
+      questId: v.id,
       questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.TRACK_PROGRESS
     }), u.default.open(g.UserSettingsSections.INVENTORY))
-  }, [O]), y = s.useCallback(() => {
+  }, [v]), y = s.useCallback(() => {
     (0, c.trackQuestContentClicked)({
-      questId: O.id,
+      questId: v.id,
       questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.LEARN_MORE
     }), u.default.open(g.UserSettingsSections.INVENTORY)
-  }, [O]), D = (0, p.useHandleClaimQuestsReward)({
-    quest: O,
+  }, [v]), D = (0, p.useHandleClaimQuestsReward)({
+    quest: v,
     location: _.QuestContent.ACTIVITY_PANEL
-  }), b = (0, E.useIsQuestExpired)(O), x = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = O.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == O ? void 0 : O.userStatus) == null || (0, C.isDismissed)(O.userStatus, _.QuestContent.ACTIVITY_PANEL) || b || j ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
-    questId: O.id,
+  }), b = (0, E.useIsQuestExpired)(v), x = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = v.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = v.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  return (null == v ? void 0 : v.userStatus) == null || (0, C.isDismissed)(v.userStatus, _.QuestContent.ACTIVITY_PANEL) || b || j ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
+    questId: v.id,
     questContent: _.QuestContent.ACTIVITY_PANEL,
     children: e => {
       var t;
@@ -97,14 +97,14 @@ t.default = function(e) {
         onKeyPress: L,
         children: [(0, a.jsxs)("div", {
           className: N.utils,
-          children: [x ? (0, a.jsx)(v, {
-            quest: O
+          children: [x ? (0, a.jsx)(O, {
+            quest: v
           }) : (0, a.jsx)(S.default, {
             textOpacity: .5
           }), (0, a.jsx)(I.QuestsEntryContextMenuPopout, {
-            quest: O,
+            quest: v,
             questContent: _.QuestContent.ACTIVITY_PANEL,
-            shouldShowDisclosure: (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
+            shouldShowDisclosure: (null === (t = v.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
             children: e => (0, a.jsx)(o.Clickable, {
               ...e,
               className: N.__invalid_submenuWrapper,
@@ -115,21 +115,21 @@ t.default = function(e) {
             })
           })]
         }), !x && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(v, {
-            quest: O
+          children: [(0, a.jsx)(O, {
+            quest: v
           }), (0, a.jsx)(o.Text, {
             className: N.instructions,
             variant: "text-sm/normal",
             color: "text-normal",
             children: A.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-              gameTitle: O.config.messages.gameTitle,
-              questReward: O.config.messages.rewardNameWithArticle,
-              streamingDurationRequirement: O.config.streamDurationRequirementMinutes
+              gameTitle: v.config.messages.gameTitle,
+              questReward: v.config.messages.rewardNameWithArticle,
+              streamingDurationRequirement: v.config.streamDurationRequirementMinutes
             })
           })]
         }), x && !U && (0, a.jsx)(T.default, {
           className: N.rewardTileWithInstructions,
-          quest: O
+          quest: v
         }), (0, a.jsxs)("div", {
           className: N.ctas,
           children: [!x && (0, a.jsxs)(a.Fragment, {

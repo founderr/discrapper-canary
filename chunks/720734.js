@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("410575"),
   A = n("941129"),
   N = n("83200"),
-  v = n("634894"),
-  O = n("586902"),
+  O = n("634894"),
+  v = n("586902"),
   R = n("1585"),
   L = n("304761"),
   P = n("865427"),
@@ -80,8 +80,8 @@ var a = n("735250"),
   eg = n("86813"),
   eA = n("826026"),
   eN = n("937482"),
-  ev = n("87888"),
-  eO = n("976401"),
+  eO = n("87888"),
+  ev = n("976401"),
   eR = n("333454"),
   eL = n("864441"),
   eP = n("26290"),
@@ -260,7 +260,7 @@ class eY extends s.PureComponent {
             className: i()(eF.nameTag, {
               [eF.canCopy]: eD.SUPPORTS_COPY
             }),
-            children: r ? (0, a.jsx)(eO.default, {
+            children: r ? (0, a.jsx)(ev.default, {
               tooltipText: null,
               icon: d.isShown ? eg.default : eA.default,
               role: "switch",
@@ -613,7 +613,7 @@ function eW() {
       streaming: null != eC.default.findActivity(e => e.type === eG.ActivityTypes.STREAMING),
       status: eC.default.getStatus()
     })),
-    d = (0, O.default)({
+    d = (0, v.default)({
       userId: n
     }),
     c = eU.default.useUserTag(e, {
@@ -666,10 +666,10 @@ function eW() {
     en = (0, $.useCanSeeSafetyEducationReportingCoachmark)(),
     es = (0, ei.default)(e),
     el = "account";
-  (0, v.useTriggerDebuggingAA)({
+  (0, O.useTriggerDebuggingAA)({
     location: el + " auto on",
     autoTrackExposure: !0
-  }), (0, v.useTriggerDebuggingAA)({
+  }), (0, O.useTriggerDebuggingAA)({
     location: el + " auto off",
     autoTrackExposure: !1
   }), (0, J.useSafetyEducationAATriggerPoint)();
@@ -744,7 +744,7 @@ function eK(e) {
     onClick: s,
     onContextMenu: l
   } = e, i = (0, m.useRedesignIconContext)().enabled, r = null, o = eN.default, u = (0, C.useSettingsLottie)();
-  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(ev.default, {
+  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eO.default, {
     width: 9,
     height: 9,
     className: eF.hasBuildOverride,
@@ -753,7 +753,7 @@ function eK(e) {
     color: x.default.STATUS_DANGER,
     className: eF.hasBuildOverride,
     "aria-hidden": !0
-  })), (0, a.jsx)(eO.default, {
+  })), (0, a.jsx)(ev.default, {
     tooltipText: null != t ? ek.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
       webBuildOverride: t.id
     }) : ek.default.Messages.USER_SETTINGS,
@@ -784,7 +784,7 @@ function ez(e) {
     play: I,
     events: p
   } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), T = n || l ? c.MicrophoneDenyIcon : S;
-  return s.useEffect(() => () => I(), [C, I]), (0, a.jsx)(eO.default, {
+  return s.useEffect(() => () => I(), [C, I]), (0, a.jsx)(ev.default, {
     tooltipText: r,
     tooltipColor: o,
     tooltipForceOpen: u,
@@ -825,7 +825,7 @@ function eq(e) {
       onMouseLeave: _
     }
   } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = n ? d.HeadphonesDenyIcon : c;
-  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eO.default, {
+  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(ev.default, {
     tooltipText: (0, M.default)(t, n, l),
     onMouseEnter: E,
     onMouseLeave: _,

@@ -40,7 +40,7 @@ t.default = a.memo(function(e) {
     unread: I.some(e => d.default.hasUnread(e))
   })), R = a.useCallback(() => {
     r.default.toggleGuildFolderExpand(g)
-  }, [g]), M = a.useCallback(e => {
+  }, [g]), O = a.useCallback(e => {
     (0, i.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -64,6 +64,6 @@ t.default = a.memo(function(e) {
     mediaState: L,
     defaultFolderName: A,
     onExpandCollapse: R,
-    onContextMenu: M
+    onContextMenu: O
   })
 })

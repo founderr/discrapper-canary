@@ -31,8 +31,8 @@ var a = n("803997"),
   v = n("430824"),
   x = n("607744"),
   R = n("496675"),
-  M = n("306680"),
-  O = n("9156"),
+  O = n("306680"),
+  M = n("9156"),
   y = n("979651"),
   D = n("514342"),
   b = n("974029"),
@@ -283,10 +283,10 @@ function Z(e) {
     isFavoriteCategory: s,
     collapsed: r,
     voiceStates: o
-  } = e, u = (0, i.useStateFromStoresObject)([M.default], () => ({
-    unread: M.default.hasUnread(n.id),
-    mentionCount: M.default.getMentionCount(n.id)
-  })), d = (0, i.useStateFromStores)([O.default], () => O.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
+  } = e, u = (0, i.useStateFromStoresObject)([O.default], () => ({
+    unread: O.default.hasUnread(n.id),
+    mentionCount: O.default.getMentionCount(n.id)
+  })), d = (0, i.useStateFromStores)([M.default], () => M.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
     let e = L.default.getChannel(n.parent_id),
       l = x.default.getCheck(n.guild_id);
     return {
@@ -300,7 +300,7 @@ function Z(e) {
   }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), C = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), m = (0, S.useStageParticipantsCount)(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E
-  } = (0, p.default)(n.id), v = (0, i.useStateFromStores)([O.default], () => O.default.isFavorite(t.id, n.id)), y = (0, N.getStageHasMedia)(n.id), D = (0, U.default)({
+  } = (0, p.default)(n.id), v = (0, i.useStateFromStores)([M.default], () => M.default.isFavorite(t.id, n.id)), y = (0, N.getStageHasMedia)(n.id), D = (0, U.default)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: r,

@@ -28,7 +28,7 @@ let h = a.forwardRef(function(e, t) {
     onMouseEnter: A,
     onMouseLeave: L,
     onMouseDown: v
-  } = e, x = (0, r.useTreeItem)(n), [R, M] = a.useState(!1), O = "string" == typeof m && null == N ? m : N;
+  } = e, x = (0, r.useTreeItem)(n), [R, O] = a.useState(!1), M = "string" == typeof m && null == N ? m : N;
   return (0, l.jsxs)(d.ListItem, {
     children: [_ ? (0, l.jsx)("div", {
       className: f.pill,
@@ -48,17 +48,17 @@ let h = a.forwardRef(function(e, t) {
         children: (0, l.jsx)(o.Clickable, {
           innerRef: t,
           onMouseEnter: () => {
-            null == A || A(), M(!0)
+            null == A || A(), O(!0)
           },
           onMouseLeave: () => {
-            null == L || L(), M(!1)
+            null == L || L(), O(!1)
           },
           onMouseDown: v,
           className: i()(f.circleIconButton, I, {
             [f.selected]: p || R
           }),
           onClick: s,
-          "aria-label": O,
+          "aria-label": M,
           onContextMenu: h,
           focusProps: {
             enabled: !1

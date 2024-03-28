@@ -26,7 +26,7 @@ var a, s = n("735250"),
   A = n("689938"),
   N = n("80420");
 
-function v(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -34,7 +34,7 @@ function v(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let O = u().throttle(m.trackSearchResultsViewed, 1e3, {
+let v = u().throttle(m.trackSearchResultsViewed, 1e3, {
     leading: !1,
     trailing: !0
   }),
@@ -71,7 +71,7 @@ class L extends(a = l.PureComponent) {
     } = this.state, i = this.context;
     if (null == E.default.getSearchIndex() && f.createAlgoliaIndex(), C.ComponentDispatch.subscribe(g.ComponentActions.GLOBAL_CLIPBOARD_PASTE, this.focusInput), C.ComponentDispatch.subscribe(g.ComponentActions.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
       let r = n !== T.DISCOVERY_ALL_CATEGORIES_ID ? n : null;
-      O({
+      v({
         loadId: e,
         searchId: a,
         query: s,
@@ -95,7 +95,7 @@ class L extends(a = l.PureComponent) {
       query: u,
       isHandlingTagSearch: d
     } = this.state, c = this.context, f = e.isFetchingSearch && !a, E = l !== T.DISCOVERY_ALL_CATEGORIES_ID ? l : null;
-    (r || d) && f && (O({
+    (r || d) && f && (v({
       loadId: n,
       searchId: o,
       query: u,
@@ -195,7 +195,7 @@ class L extends(a = l.PureComponent) {
     })
   }
   constructor(e) {
-    super(e), v(this, "_searchRef", l.createRef()), v(this, "canSearch", e => e.trim().length >= 2 && !(0, S.searchQueryContainsBannedWord)(e)), v(this, "doSearch", (e, t, n, a) => {
+    super(e), O(this, "_searchRef", l.createRef()), O(this, "canSearch", e => e.trim().length >= 2 && !(0, S.searchQueryContainsBannedWord)(e)), O(this, "doSearch", (e, t, n, a) => {
       var s;
       let {
         defaultLanguage: l,
@@ -217,14 +217,14 @@ class L extends(a = l.PureComponent) {
         length: t,
         filters: u
       })
-    }), v(this, "handleSearchBlurred", e => {
+    }), O(this, "handleSearchBlurred", e => {
       let {
         onSearchBlur: t
       } = this.props;
       this.setState({
         inputFocused: !1
       }), null == t || t()
-    }), v(this, "handleSearchKeyPress", e => {
+    }), O(this, "handleSearchKeyPress", e => {
       let {
         query: t,
         queryHasChanged: n
@@ -235,18 +235,18 @@ class L extends(a = l.PureComponent) {
       this.canSearch(t) && n && e.charCode === g.KeyboardKeys.ENTER ? (m.trackSearchStarted(a, l), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === g.KeyboardKeys.ENTER && this.setState({
         isSearching: !1
       })
-    }), v(this, "handleQueryChanged", e => {
+    }), O(this, "handleQueryChanged", e => {
       this.setState({
         query: e,
         queryHasChanged: !0
       })
-    }), v(this, "handleQueryCleared", () => {
+    }), O(this, "handleQueryCleared", () => {
       this.setState({
         query: "",
         queryHasChanged: !0,
         isSearching: !1
       })
-    }), v(this, "handleLanguageChange", e => {
+    }), O(this, "handleLanguageChange", e => {
       let {
         mostRecentQuery: t,
         availableLanguages: n
@@ -256,19 +256,19 @@ class L extends(a = l.PureComponent) {
       }, () => {
         this.canSearch(t) && this.doSearch(0, 12)
       })
-    }), v(this, "handleCategoryChange", e => {
+    }), O(this, "handleCategoryChange", e => {
       let {
         mostRecentQuery: t
       } = this.props;
       f.selectCategory(e), this.canSearch(t) && this.doSearch(0, 12, e)
-    }), v(this, "handleFocus", () => {
+    }), O(this, "handleFocus", () => {
       let {
         onSearchFocus: e
       } = this.props;
       this.setState({
         inputFocused: !0
       }), null == e || e()
-    }), v(this, "focusInput", () => {
+    }), O(this, "focusInput", () => {
       var e;
       null === (e = this._searchRef.current) || void 0 === e || e.focus()
     }), this.state = {
@@ -292,4 +292,4 @@ function P(e) {
     countsByCategory: n
   })
 }
-v(L, "contextType", void 0), L.contextType = _.AnalyticsContext
+O(L, "contextType", void 0), L.contextType = _.AnalyticsContext

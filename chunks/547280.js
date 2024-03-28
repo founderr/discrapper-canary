@@ -1,48 +1,48 @@
 "use strict";
-t.r(e), t.d(e, {
+e.r(s), e.d(s, {
   completeSignUp: function() {
-    return m
+    return r
   },
   dismissSignUp: function() {
     return p
   }
 });
-var s = t("524437"),
-  n = t("570140"),
-  d = t("605236"),
-  a = t("626135"),
-  o = t("445507"),
-  c = t("981631"),
-  l = t("921944");
+var i = e("524437"),
+  n = e("570140"),
+  l = e("605236"),
+  a = e("626135"),
+  c = e("445507"),
+  o = e("981631"),
+  d = e("921944");
 
-function m(i) {
+function r(t) {
   let {
-    targetKey: e,
-    data: t,
-    completed: m
-  } = i;
-  null != t.selectedOptionKey && (!(0, d.isDismissibleContentDismissed)(s.DismissibleContent.GAME_ONE_USER_SIGNUPS) && a.default.track(c.AnalyticEvents.SIGNUP_COMPLETED, {
-    target_key: e,
-    selected_option_key: t.selectedOptionKey,
-    email: t.email,
-    guild_id: t.guildId,
-    metadata: (0, o.extractMetadata)(t),
-    completed: m
-  }), (0, d.markDismissibleContentAsDismissed)(s.DismissibleContent.GAME_ONE_USER_SIGNUPS, {
-    dismissAction: l.ContentDismissActionType.PRIMARY
+    targetKey: s,
+    data: e,
+    completed: r
+  } = t;
+  null != e.selectedOptionKey && (!(0, l.isDismissibleContentDismissed)(i.DismissibleContent.GAME_ONE_USER_SIGNUPS) && a.default.track(o.AnalyticEvents.SIGNUP_COMPLETED, {
+    target_key: s,
+    selected_option_key: e.selectedOptionKey,
+    email: e.email,
+    guild_id: e.guildId,
+    metadata: (0, c.extractMetadata)(e),
+    completed: r
+  }), (0, l.markDismissibleContentAsDismissed)(i.DismissibleContent.GAME_ONE_USER_SIGNUPS, {
+    dismissAction: d.ContentDismissActionType.PRIMARY
   }), n.default.dispatch({
     type: "COMPLETE_SIGN_UP",
-    email: t.email,
-    targetKey: e,
-    selectedOptionKey: t.selectedOptionKey
+    email: e.email,
+    targetKey: s,
+    selectedOptionKey: e.selectedOptionKey
   }))
 }
 
-function p(i) {
-  (0, d.markDismissibleContentAsDismissed)(s.DismissibleContent.GAME_ONE_USER_SIGNUPS, {
-    dismissAction: l.ContentDismissActionType.DISMISS
+function p(t) {
+  (0, l.markDismissibleContentAsDismissed)(i.DismissibleContent.GAME_ONE_USER_SIGNUPS, {
+    dismissAction: d.ContentDismissActionType.DISMISS
   }), n.default.dispatch({
     type: "DISMISS_SIGN_UP",
-    targetKey: i
+    targetKey: t
   })
 }

@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return N
   },
   PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY: function() {
-    return v
+    return O
   },
   default: function() {
-    return O
+    return v
   }
 }), n("47120");
 var a = n("735250"),
@@ -32,24 +32,24 @@ var a = n("735250"),
   g = n("815660"),
   A = n("689938");
 let N = "Email Verification",
-  v = "PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY";
+  O = "PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY";
 
-function O() {
+function v() {
   let {
     action: e,
     theme: t
   } = (0, i.useStateFromStoresObject)([m.default, C.default], () => ({
     action: m.default.getAction(),
     theme: C.default.theme
-  })), O = p.default.getVerificationTypes(e), [R, L] = s.useState(0), P = (0, f.default)(O);
+  })), v = p.default.getVerificationTypes(e), [R, L] = s.useState(0), P = (0, f.default)(v);
   (0, h.default)({
     type: l.ImpressionTypes.MODAL,
     name: l.ImpressionNames.USER_ACTION_REQUIRED,
     properties: {
-      verification_type: O[0],
-      verification_types: O
+      verification_type: v[0],
+      verification_types: v
     }
-  }, {}, [O.toString()]);
+  }, {}, [v.toString()]);
   let M = () => {
       (0, c.accountDetailsInit)(), (0, o.openModalLazy)(async () => {
         let {
@@ -80,7 +80,7 @@ function O() {
   return s.useEffect(() => (E.default.disable(), () => {
     E.default.enable()
   }), []), s.useEffect(() => {
-    (null == P ? void 0 : P[0]) === T.VerificationTypes.PHONE && (null == O ? void 0 : O[0]) === T.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
+    (null == P ? void 0 : P[0]) === T.VerificationTypes.PHONE && (null == v ? void 0 : v[0]) === T.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(n.bind(n, "468026"));
@@ -91,12 +91,12 @@ function O() {
         confirmText: A.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_CONFIRM
       })
     }, {
-      modalKey: v,
+      modalKey: O,
       Layer: I.default,
       onCloseCallback: M
     })
-  }, [O, P]), (0, a.jsx)(S.default, {
-    types: O,
+  }, [v, P]), (0, a.jsx)(S.default, {
+    types: v,
     captchaKey: R,
     onCaptchaVerify: e => {
       r.HTTP.post({

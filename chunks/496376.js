@@ -21,8 +21,8 @@ var a, s, l = n("735250"),
   A = n("689938"),
   N = n("653196");
 (s = a || (a = {}))[s.GAMES = 1] = "GAMES", s[s.PLAYSTYLE = 2] = "PLAYSTYLE", s[s.INTERESTS = 3] = "INTERESTS", s[s.DESCRIPTION = 4] = "DESCRIPTION", s[s.PRIMETIME = 5] = "PRIMETIME", s[s.CUSTOMIZE = 6] = "CUSTOMIZE";
-let v = [1, 2, 3, 4, 5, 6],
-  O = e => {
+let O = [1, 2, 3, 4, 5, 6],
+  v = e => {
     let {
       guildId: t,
       selectedGames: n,
@@ -114,7 +114,7 @@ let v = [1, 2, 3, 4, 5, 6],
       tag: c,
       primetime: f,
       handleSubmit: E
-    } = e, h = t === v.length, _ = i.useMemo(() => ({
+    } = e, h = t === O.length, _ = i.useMemo(() => ({
       1: {
         disableNextStep: 0 === a.size
       },
@@ -138,7 +138,7 @@ let v = [1, 2, 3, 4, 5, 6],
       className: N.footer,
       children: [(0, l.jsx)("div", {
         className: N.progressContainer,
-        children: v.map(e => (0, l.jsx)("div", {
+        children: O.map(e => (0, l.jsx)("div", {
           className: o()(N.progressStep, {
             [N.progressStepFilled]: e <= t
           })
@@ -159,7 +159,7 @@ let v = [1, 2, 3, 4, 5, 6],
           color: "text-muted",
           children: A.default.Messages.CLAN_SETUP_STEPS.format({
             currentStep: t,
-            totalSteps: v.length
+            totalSteps: O.length
           })
         }), (0, l.jsx)(d.Button, {
           look: d.Button.Looks.FILLED,
@@ -226,7 +226,7 @@ t.default = e => {
       className: N.mainContent,
       children: [(0, l.jsx)(d.Sequencer, {
         step: L,
-        steps: v,
+        steps: O,
         sideMargin: 24,
         verticalMargin: 24,
         className: N.sequencer,
@@ -281,7 +281,7 @@ t.default = e => {
         tag: E,
         handleSubmit: D
       })]
-    }), (0, l.jsx)(O, {
+    }), (0, l.jsx)(v, {
       guildId: t,
       selectedGames: a,
       gameDetails: M,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   NonChannelCategory: function() {
-    return O
+    return M
   },
   ReadonlyCategoryChannel: function() {
     return b
@@ -42,7 +42,7 @@ var l = n("735250"),
 function R(e) {
   e.stopPropagation()
 }
-let M = a.memo(function(e) {
+let O = a.memo(function(e) {
   let t, {
       channel: s,
       connectChannelDragSource: f,
@@ -50,8 +50,8 @@ let M = a.memo(function(e) {
       disableManageChannels: I,
       position: T,
       sortingPosition: A,
-      hideIcon: M,
-      children: O
+      hideIcon: O,
+      children: M
     } = e,
     y = (0, o.useStateFromStores)([m.default], () => m.default.isChannelMuted(s.getGuildId(), s.id)),
     D = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
@@ -128,7 +128,7 @@ let M = a.memo(function(e) {
             focusProps: {
               enabled: !1
             },
-            children: [M ? null : (0, l.jsx)(S.default, {
+            children: [O ? null : (0, l.jsx)(S.default, {
               className: x.icon
             }), (0, l.jsx)(N.default, {
               className: x.name,
@@ -173,12 +173,12 @@ let M = a.memo(function(e) {
             }) : null
           })]
         })
-      }), O]
+      }), M]
     });
   return null != E && null != f ? E(f(H)) : H
 });
-t.default = (0, f.makeChannelSortable)(M);
-let O = a.memo(function(e) {
+t.default = (0, f.makeChannelSortable)(O);
+let M = a.memo(function(e) {
     let {
       name: t,
       onDismiss: n,

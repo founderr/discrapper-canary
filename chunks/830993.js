@@ -58,7 +58,7 @@ function L(e) {
   });
   let x = null !== (t = null == g ? void 0 : g.filter(m.isNotNullish)) && void 0 !== t ? t : [],
     R = e => t => [N.ActivityTypes.PLAYING, N.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId) || t.type === N.ActivityTypes.LISTENING,
-    M = (0, s.useStateFromStores)([C.default], () => {
+    O = (0, s.useStateFromStores)([C.default], () => {
       let e = new Map;
       return x.forEach(t => {
         let n = C.default.findActivity(t.user.id, R(t));
@@ -71,7 +71,7 @@ function L(e) {
         }
       }), e
     }, [x, L], s.statesWillNeverBeEqual),
-    O = (0, s.useStateFromStores)([C.default], () => {
+    M = (0, s.useStateFromStores)([C.default], () => {
       let e = {};
       return x.forEach(t => {
         let n = C.default.findActivity(t.user.id, R(t));
@@ -86,11 +86,11 @@ function L(e) {
         }
       }), Object.values(e)
     }, [x], s.statesWillNeverBeEqual),
-    y = Array.from(M.values()).map(e => ({
+    y = Array.from(O.values()).map(e => ({
       members: x,
       activity: e.presenceActivity
     })),
-    D = [...y, ...O];
+    D = [...y, ...M];
   return 0 === D.length ? null : (0, l.jsxs)(i.Scroller, {
     className: A.container,
     children: [(0, l.jsx)(v, {
@@ -103,7 +103,7 @@ function L(e) {
       let {
         members: n,
         activity: a
-      } = e, s = a.application_id, i = null != s ? M.get(s) : void 0;
+      } = e, s = a.application_id, i = null != s ? O.get(s) : void 0;
       return (0, l.jsx)(E.default, {
         presenceActivity: a,
         embeddedApp: i,

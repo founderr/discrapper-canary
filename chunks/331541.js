@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("440051"),
   A = n("734934"),
   N = n("158238"),
-  v = n("785717"),
-  O = n("318661"),
+  O = n("785717"),
+  v = n("318661"),
   R = n("747074"),
   L = n("192133"),
   P = n("138394"),
@@ -153,10 +153,10 @@ function X(e) {
     onClose: o,
     onSelect: h,
     closePopout: D
-  } = e, b = (0, _.useAnalyticsContext)(), U = (0, O.default)(t.id, l), {
+  } = e, b = (0, _.useAnalyticsContext)(), U = (0, v.default)(t.id, l), {
     UserProfileAnalyticsProvider: k,
     trackUserProfileAction: B
-  } = (0, v.useUserProfileAnalyticsProvider)({
+  } = (0, O.useUserProfileAnalyticsProvider)({
     layout: "ACCOUNT_POPOUT",
     newAnalyticsLocations: [I.default.ACCOUNT_PROFILE_POPOUT],
     userId: t.id,

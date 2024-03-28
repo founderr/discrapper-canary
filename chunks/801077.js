@@ -22,8 +22,8 @@ var l, a, s, i, r = n("392711"),
   v = n("199902"),
   x = n("592125"),
   R = n("480294"),
-  M = n("831506"),
-  O = n("731290"),
+  O = n("831506"),
+  M = n("731290"),
   y = n("430824"),
   D = n("496675"),
   b = n("158776"),
@@ -105,7 +105,7 @@ function en(e, t, n) {
   for (let e of t) {
     let n = v.default.getAnyStreamForUser(e.id),
       l = x.default.getChannel(null == n ? void 0 : n.channelId);
-    if ((null == l ? void 0 : l.isNSFW()) && (!p || !O.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
+    if ((null == l ? void 0 : l.isNSFW()) && (!p || !M.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
     let r = X(e.id);
     if (null != n && F.push({
         stream: n,
@@ -143,7 +143,7 @@ function en(e, t, n) {
     let g = null != r ? $(r) : null;
     (null == g || g.id !== d.id) && (r = null);
     let b = [];
-    b = null != r && null != r.party && null != r.party.id ? Array.from(null !== (i = M.default.getParty(r.party.id)) && void 0 !== i ? i : []).reduce((e, t) => {
+    b = null != r && null != r.party && null != r.party.id ? Array.from(null !== (i = O.default.getParty(r.party.id)) && void 0 !== i ? i : []).reduce((e, t) => {
       let n = U.default.getUser(t);
       return null != n && e.push(n), e
     }, []) : t.filter(e => {
@@ -237,7 +237,7 @@ function es() {
 }
 class ei extends(l = u.default.Store) {
   initialize() {
-    this.syncWith([U.default, E.default, b.default, M.default, P.default, v.default, j.default, R.default, G.default], es), this.waitFor(_.default, y.default, E.default, U.default, G.default)
+    this.syncWith([U.default, E.default, b.default, O.default, P.default, v.default, j.default, R.default, G.default], es), this.waitFor(_.default, y.default, E.default, U.default, G.default)
   }
   get currentActivityParties() {
     return H

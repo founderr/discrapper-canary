@@ -25,8 +25,8 @@ var a, s = n("735250"),
   g = n("366966"),
   A = n("151011"),
   N = n("880008"),
-  v = n("466111"),
-  O = n("931003"),
+  O = n("466111"),
+  v = n("931003"),
   R = n("626135"),
   L = n("780570"),
   P = n("624138"),
@@ -86,7 +86,7 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
           children: e.libraryApplication.getBranchedName(e.application)
         }), e.libraryApplication.hasFlag(y.LibraryApplicationFlags.PREMIUM) ? (0, s.jsx)(f.Tooltip, {
           text: D.default.Messages.PREMIUM_GAME,
-          children: e => (0, s.jsx)(v.default, {
+          children: e => (0, s.jsx)(O.default, {
             className: b.nitroIcon,
             ...e
           })
@@ -144,7 +144,7 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
           }), (0, s.jsx)(w, {
             flag: y.LibraryApplicationFlags.OVERLAY_DISABLED,
             item: e,
-            icon: O.default,
+            icon: v.default,
             tooltip: D.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
           }), (0, s.jsx)(M.default, {
             className: r()(b.settingIcon, {

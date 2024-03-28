@@ -29,8 +29,8 @@ let A = e => {
   let t, n, {
       selected: A,
       route: N,
-      locationState: v,
-      ...O
+      locationState: O,
+      ...v
     } = e,
     R = (0, l.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
     L = (0, l.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()),
@@ -59,8 +59,8 @@ let A = e => {
     route: N,
     icon: d.default,
     text: T.default.Messages.PREMIUM,
-    locationState: v,
-    ...O,
+    locationState: O,
+    ...v,
     ...P,
     className: t,
     children: n

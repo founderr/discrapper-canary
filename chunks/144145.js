@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return v
   }
 }), n("653041"), n("47120");
 var a = n("735250"),
@@ -26,12 +26,12 @@ var a = n("735250"),
   g = n("346329"),
   A = n("981631"),
   N = n("689938");
-let v = d.default.get(A.PlatformTypes.XBOX).name;
+let O = d.default.get(A.PlatformTypes.XBOX).name;
 
-function O(e) {
+function v(e) {
   let {
     currentActivities: t
-  } = e, n = t.length > 1, O = function(e) {
+  } = e, n = t.length > 1, v = function(e) {
     let {
       currentActivities: t
     } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getAccounts().some(e => e.type === d.default.get(A.PlatformTypes.XBOX).type)), s = t.some(e => {
@@ -44,7 +44,7 @@ function O(e) {
       id: "xbox-connect",
       action: () => u.default.open(A.UserSettingsSections.CONNECTIONS),
       label: N.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
-        platform: v
+        platform: O
       })
     })
   }(e), R = function(e) {
@@ -137,5 +137,5 @@ function O(e) {
       })
     }(e, n))
   }
-  return [O, ...L]
+  return [v, ...L]
 }

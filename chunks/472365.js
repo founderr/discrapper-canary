@@ -30,8 +30,8 @@ var l = n("735250"),
   v = n("768581"),
   x = n("358085"),
   R = n("998502"),
-  M = n("379164"),
-  O = n("590965"),
+  O = n("379164"),
+  M = n("590965"),
   y = n("981631"),
   D = n("474936"),
   b = n("689938"),
@@ -123,7 +123,7 @@ function w(e) {
           children: b.default.Messages.INVITE_MODAL_ERROR_INVALID_BODY
         }), (0, l.jsx)(_.Button, {
           size: _.Button.Sizes.LARGE,
-          onClick: () => M.default.close(),
+          onClick: () => O.default.close(),
           color: _.Button.Colors.BRAND,
           children: b.default.Messages.INVITE_MODAL_ERROR_BUTTON_TEXT
         })]
@@ -144,7 +144,7 @@ function F(e) {
     invite: C,
     error: E,
     submitting: I
-  } = (0, r.useStateFromStoresObject)([O.default], () => O.default.getProps());
+  } = (0, r.useStateFromStoresObject)([M.default], () => M.default.getProps());
   a.useEffect(() => {
     !__OVERLAY__ && x.isPlatformEmbedded && ((0, x.isWindows)() ? R.default.minimize() : R.default.restore(), R.default.focus())
   }, []);
@@ -159,7 +159,7 @@ function F(e) {
   if (null == C.channel) return null;
 
   function A() {
-    null != C && M.default.acceptInvite(C)
+    null != C && O.default.acceptInvite(C)
   }
   let {
     guild: L,
@@ -248,7 +248,7 @@ function F(e) {
                   look: _.Button.Looks.LINK,
                   className: j.noThanksButton,
                   onClick: function() {
-                    M.default.close()
+                    O.default.close()
                   },
                   color: _.Button.Colors.TRANSPARENT,
                   children: b.default.Messages.INIVTE_MODAL_NO_THANKS

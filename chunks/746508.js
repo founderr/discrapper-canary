@@ -22,8 +22,8 @@ var a = n("735250"),
   g = n("2052"),
   A = n("40851"),
   N = n("317381"),
-  v = n("596040"),
-  O = n("588580"),
+  O = n("596040"),
+  v = n("588580"),
   R = n("374065"),
   L = n("451576"),
   P = n("938655"),
@@ -76,8 +76,8 @@ var a = n("735250"),
   eg = n("285952"),
   eA = n("762854"),
   eN = n("250183"),
-  ev = n("87128"),
-  eO = n("976401"),
+  eO = n("87128"),
+  ev = n("976401"),
   eR = n("333454"),
   eL = n("626135"),
   eP = n("63063"),
@@ -166,10 +166,10 @@ function eF() {
 function eB() {
   let e = (0, d.useStateFromStores)([J.default], () => J.default.isMuted()),
     t = e ? eU.default.Messages.STAGE_MUSIC_UNMUTE : eU.default.Messages.STAGE_MUSIC_MUTE;
-  return (0, a.jsx)(eO.default, {
+  return (0, a.jsx)(ev.default, {
     "aria-label": t,
     tooltipText: t,
-    icon: e ? ev.default : eN.default,
+    icon: e ? eO.default : eN.default,
     onClick: () => (0, Z.updateStageMusicMuted)(!e)
   })
 }
@@ -194,7 +194,7 @@ function eH(e) {
   }, [t, S]), p = u || n || c, {
     Component: T,
     play: g,
-    events: v
+    events: O
   } = (0, E.useVideoLottie)(r.enabled ? "disable" : "enable");
   return s.useEffect(() => () => g(), [r.enabled, g]), (0, a.jsx)(eu.VideoButtonWrapper, {
     onChange: I,
@@ -251,11 +251,11 @@ function eH(e) {
               },
               onMouseEnter: () => {
                 var t, n;
-                null === (t = e.onMouseEnter) || void 0 === t || t.call(e), null === (n = d.onMouseEnter) || void 0 === n || n.call(d), v.onMouseEnter()
+                null === (t = e.onMouseEnter) || void 0 === t || t.call(e), null === (n = d.onMouseEnter) || void 0 === n || n.call(d), O.onMouseEnter()
               },
               onMouseLeave: () => {
                 var t;
-                null === (t = e.onMouseLeave) || void 0 === t || t.call(e), v.onMouseLeave()
+                null === (t = e.onMouseLeave) || void 0 === t || t.call(e), O.onMouseLeave()
               },
               onContextMenu: t => {
                 var n;
@@ -292,7 +292,7 @@ function eV(e) {
     userInActivity: E
   } = (0, d.useStateFromStoresObject)([N.default], () => ({
     userInActivity: null != N.default.getSelfEmbeddedActivityForChannel(t.id)
-  })), h = (0, g.useAnalyticsContext)(), C = (0, O.useShowActivityIndicator)(), m = o !== R.EmbeddedActivityLaunchability.CAN_LAUNCH, {
+  })), h = (0, g.useAnalyticsContext)(), C = (0, v.useShowActivityIndicator)(), m = o !== R.EmbeddedActivityLaunchability.CAN_LAUNCH, {
     Component: S,
     events: I
   } = (0, c.useActivityLottie)();
@@ -354,14 +354,14 @@ function eY(e) {
   let T = null != I || p.length > 0,
     g = E ? eU.default.Messages.SHARE_YOUR_SCREEN : eU.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
     A = C || r || m,
-    v = null != I,
+    O = null != I,
     {
-      Component: O,
+      Component: v,
       events: R,
       play: L
-    } = (0, f.useScreenshareLottie)(v ? "disable" : "enable");
-  s.useEffect(() => () => L(), [L, v]);
-  let P = (0, a.jsx)(O, {
+    } = (0, f.useScreenshareLottie)(O ? "disable" : "enable");
+  s.useEffect(() => () => L(), [L, O]);
+  let P = (0, a.jsx)(v, {
     color: "currentColor",
     className: i()(ej.buttonIcon, {
       [ej.withText]: !A
@@ -471,7 +471,7 @@ class eW extends s.PureComponent {
         let {
           "aria-label": t
         } = e;
-        return (0, a.jsx)(eO.default, {
+        return (0, a.jsx)(ev.default, {
           "aria-label": t,
           tooltipText: null,
           disabled: !0,
@@ -655,7 +655,7 @@ function eK(e) {
     Component: r,
     events: o
   } = (0, h.useWaveformLottie)(l ? "disable" : "enable");
-  return s.useEffect(() => () => i(), [l, i]), (0, a.jsx)(eO.default, {
+  return s.useEffect(() => () => i(), [l, i]), (0, a.jsx)(ev.default, {
     ...t,
     onMouseEnter: () => {
       var e;
@@ -719,13 +719,13 @@ t.default = (0, T.default)(function(e) {
         }
       })) && void 0 !== e ? e : A) && void 0 !== t ? t : []
     }, [T, g, A]),
-    [O, R] = s.useState(!1);
+    [v, R] = s.useState(!1);
   s.useEffect(() => {
     (S || I) && R(!1)
   }, [S, I, R]);
   let {
     analyticsLocations: P
-  } = (0, D.default)(y.default.RTC_PANEL), M = (0, v.default)(null != u ? u : eb.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), x = (0, L.default)(null == o ? void 0 : o.id), U = (0, b.default)();
+  } = (0, D.default)(y.default.RTC_PANEL), M = (0, O.default)(null != u ? u : eb.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), x = (0, L.default)(null == o ? void 0 : o.id), U = (0, b.default)();
   return (0, a.jsx)(D.AnalyticsLocationProvider, {
     value: P,
     children: (0, a.jsxs)("div", {
@@ -749,7 +749,7 @@ t.default = (0, T.default)(function(e) {
         shouldShowVoicePanelIntroduction: E,
         isPrivateChannelWithEnabledActivities: x,
         isBroadcasting: U
-      }), !O && S && null != u ? (0, a.jsxs)("div", {
+      }), !v && S && null != u ? (0, a.jsxs)("div", {
         className: ej.viewAsRolesWarning,
         children: [(0, a.jsx)(_.Text, {
           variant: "text-sm/normal",

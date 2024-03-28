@@ -32,22 +32,22 @@ function I(e) {
     currentActivities: g,
     partiedMembers: A,
     applicationStreams: N,
-    guildContext: v
-  } = t, O = [], R = e => {
+    guildContext: O
+  } = t, v = [], R = e => {
     var t, n;
     let {
       length: s
-    } = O;
+    } = v;
     if (0 === s) {
-      O.push(e);
+      v.push(e);
       return
     }
-    let l = O[s - 1],
+    let l = v[s - 1],
       i = "".concat(null !== (t = null == e ? void 0 : e.key) && void 0 !== t ? t : ""),
       r = "".concat(null !== (n = null == l ? void 0 : l.key) && void 0 !== n ? n : "").startsWith("game") && i.startsWith("rich-presence");
-    O.push((0, a.jsx)(_.default.Separator, {
+    v.push((0, a.jsx)(_.default.Separator, {
       inset: r
-    }, "sep-".concat(i))), O.push(e)
+    }, "sep-".concat(i))), v.push(e)
   };
   for (let {
       activity: e
@@ -95,7 +95,7 @@ function I(e) {
       activity: i
     } = e;
     R((0, a.jsx)(_.default.ApplicationStreamingSection, {
-      guildId: null == v ? void 0 : v.id,
+      guildId: null == O ? void 0 : O.id,
       user: n,
       activity: i,
       applicationStream: t,
@@ -104,7 +104,7 @@ function I(e) {
       }
     }, "application-stream-".concat(t.ownerId)))
   }), g.forEach((e, t) => {
-    var n, s, l, f, h, C, p, N, O;
+    var n, s, l, f, h, C, p, N, v;
     let {
       activity: L,
       game: P,
@@ -139,7 +139,7 @@ function I(e) {
       let e = T.length > 0 && T[0].members.length > 1,
         n = M.length > 1;
       R((0, a.jsx)(_.default.TwitchSection, {
-        guildId: null == v ? void 0 : v.id,
+        guildId: null == O ? void 0 : O.id,
         activity: L,
         user: e || n ? y : null,
         getAssetImage: E.getAssetImage
@@ -162,8 +162,8 @@ function I(e) {
     }, "xbox-".concat(null !== (N = L.session_id) && void 0 !== N ? N : t)));
     null != I && R((0, a.jsx)(c.default, {
       quest: I
-    }, "quest-".concat(I.id, "-").concat(null !== (O = L.session_id) && void 0 !== O ? O : t)))
-  }), O.length > 0 ? (0, a.jsx)(_.default.Body, {
-    children: O
+    }, "quest-".concat(I.id, "-").concat(null !== (v = L.session_id) && void 0 !== v ? v : t)))
+  }), v.length > 0 ? (0, a.jsx)(_.default.Body, {
+    children: v
   }) : null
 }
