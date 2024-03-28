@@ -22,7 +22,7 @@ var a, s, l = n("735250"),
   N = n("653196");
 (s = a || (a = {}))[s.GAMES = 1] = "GAMES", s[s.PLAYSTYLE = 2] = "PLAYSTYLE", s[s.INTERESTS = 3] = "INTERESTS", s[s.DESCRIPTION = 4] = "DESCRIPTION", s[s.PRIMETIME = 5] = "PRIMETIME", s[s.CUSTOMIZE = 6] = "CUSTOMIZE";
 let v = [1, 2, 3, 4, 5, 6],
-  R = e => {
+  O = e => {
     let {
       guildId: t,
       selectedGames: n,
@@ -103,7 +103,7 @@ let v = [1, 2, 3, 4, 5, 6],
       })]
     })
   },
-  O = e => {
+  R = e => {
     let {
       currentStep: t,
       setCurrentStep: n,
@@ -112,8 +112,9 @@ let v = [1, 2, 3, 4, 5, 6],
       interests: r,
       description: u,
       tag: c,
-      handleSubmit: f
-    } = e, E = t === v.length, h = i.useMemo(() => ({
+      primetime: f,
+      handleSubmit: E
+    } = e, h = t === v.length, _ = i.useMemo(() => ({
       1: {
         disableNextStep: 0 === a.size
       },
@@ -127,12 +128,12 @@ let v = [1, 2, 3, 4, 5, 6],
         disableNextStep: 0 === u.length
       },
       5: {
-        disableNextStep: !1
+        disableNextStep: 0 === f.length
       },
       6: {
         disableNextStep: 0 === c.length
       }
-    }), [u.length, r.size, s, a.size, c.length]);
+    }), [u.length, r.size, s, f.length, a.size, c.length]);
     return (0, l.jsxs)("div", {
       className: N.footer,
       children: [(0, l.jsx)("div", {
@@ -165,14 +166,14 @@ let v = [1, 2, 3, 4, 5, 6],
           size: d.Button.Sizes.MEDIUM,
           color: d.Button.Colors.PRIMARY,
           onClick: () => {
-            if (E) {
-              f();
+            if (h) {
+              E();
               return
             }
             n(t + 1)
           },
-          disabled: h[t].disableNextStep,
-          children: E ? A.default.Messages.FINISH : A.default.Messages.PAGINATION_NEXT
+          disabled: _[t].disableNextStep,
+          children: h ? A.default.Messages.FINISH : A.default.Messages.PAGINATION_NEXT
         })]
       })]
     })
@@ -186,31 +187,33 @@ t.default = e => {
     playstyle: s,
     interests: r,
     description: o,
-    tag: E
+    tag: E,
+    primetime: g
   } = (0, u.useStateFromStoresObject)([_.default], () => {
     var e;
     return null !== (e = _.default.getState(t)) && void 0 !== e ? e : (0, _.newClanProgress)()
-  }), [g, L] = i.useState(1);
+  }), [L, P] = i.useState(1);
   i.useEffect(() => {
     c.default.getDetectableGames()
   }, []);
-  let P = (0, u.useStateFromStoresObject)([f.default], () => {
+  let M = (0, u.useStateFromStoresObject)([f.default], () => {
       let e = {};
       return Array.from(a).forEach(t => {
         let n = f.default.getDetectableGame(t);
         null != n && (e[t] = n)
       }), e
     }),
-    M = i.useCallback(e => h.updateClanSettings(t, e), [t]),
-    y = i.useCallback(() => {
+    y = i.useCallback(e => h.updateClanSettings(t, e), [t]),
+    D = i.useCallback(() => {
       h.convertGuildToClan(t, {
         selectedGames: a,
         playstyle: s,
         interests: r,
         description: o,
-        tag: E
+        tag: E,
+        primetime: g
       }), n()
-    }, [o, t, r, n, s, a, E]);
+    }, [o, t, r, n, s, g, a, E]);
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(d.Button, {
       className: N.closeButton,
@@ -222,7 +225,7 @@ t.default = e => {
     }), (0, l.jsxs)("div", {
       className: N.mainContent,
       children: [(0, l.jsx)(d.Sequencer, {
-        step: g,
+        step: L,
         steps: v,
         sideMargin: 24,
         verticalMargin: 24,
@@ -232,52 +235,56 @@ t.default = e => {
         children: (0, l.jsx)(d.ScrollerAuto, {
           className: N.scroller,
           children: (() => {
-            switch (g) {
+            switch (L) {
               case 1:
                 return (0, l.jsx)(m.default, {
-                  handleUpdate: M,
+                  handleUpdate: y,
                   selectedGames: a,
-                  gameDetails: P
+                  gameDetails: M
                 });
               case 2:
                 return (0, l.jsx)(I.default, {
-                  handleUpdate: M,
+                  handleUpdate: y,
                   playstyle: s
                 });
               case 3:
                 return (0, l.jsx)(S.default, {
-                  handleUpdate: M,
+                  handleUpdate: y,
                   interests: r
                 });
               case 4:
                 return (0, l.jsx)(C.default, {
-                  handleUpdate: M,
+                  handleUpdate: y,
                   description: o
                 });
               case 5:
-                return (0, l.jsx)(p.default, {});
+                return (0, l.jsx)(p.default, {
+                  handleUpdate: y,
+                  selectedTimes: g
+                });
               case 6:
                 return (0, l.jsx)(T.default, {
-                  handleUpdate: M,
+                  handleUpdate: y,
                   tag: E
                 })
             }
           })()
         })
-      }), (0, l.jsx)(O, {
-        currentStep: g,
-        setCurrentStep: L,
+      }), (0, l.jsx)(R, {
+        currentStep: L,
+        setCurrentStep: P,
         selectedGames: a,
         playstyle: s,
         interests: r,
         description: o,
+        primetime: g,
         tag: E,
-        handleSubmit: y
+        handleSubmit: D
       })]
-    }), (0, l.jsx)(R, {
+    }), (0, l.jsx)(O, {
       guildId: t,
       selectedGames: a,
-      gameDetails: P,
+      gameDetails: M,
       playstyle: s,
       interests: r
     })]
