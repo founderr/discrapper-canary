@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return R
+    return G
   }
 }), a("47120");
 var l, s, n = a("735250"),
@@ -12,52 +12,53 @@ var l, s, n = a("735250"),
   d = a.n(o),
   u = a("718017"),
   m = a("902190"),
-  x = a("149020"),
-  h = a("481060"),
-  p = a("442837"),
+  x = a("25752"),
+  h = a("149020"),
+  p = a("481060"),
+  N = a("442837"),
   j = a("607070"),
-  v = a("594174"),
-  k = a("153124"),
-  y = a("975667"),
-  C = a("626135"),
+  C = a("594174"),
+  v = a("153124"),
+  T = a("975667"),
+  E = a("626135"),
   g = a("792125"),
-  T = a("547280"),
-  f = a("678513"),
-  N = a("445507"),
-  S = a("981631"),
-  b = a("689938"),
-  E = a("720871");
-let I = (0, g.getThemeClass)(S.ThemeTypes.DARK);
+  k = a("547280"),
+  S = a("678513"),
+  f = a("445507"),
+  y = a("981631"),
+  I = a("689938"),
+  _ = a("720871");
+let M = (0, g.getThemeClass)(y.ThemeTypes.DARK);
 
-function M(e) {
+function P(e) {
   let {
     selectedOption: t,
     targetKey: a,
     data: l,
     handleGoToNextFormGroup: s
-  } = e, [i, c] = r.useState(""), [o, d] = r.useState(null), [u, m] = r.useState(null), [x, p] = r.useState(!1), [j, v] = r.useState(!1), k = r.useCallback(e => {
+  } = e, [i, c] = r.useState(""), [o, d] = r.useState(null), [u, m] = r.useState(null), [x, h] = r.useState(!1), [N, j] = r.useState(!1), C = r.useCallback(e => {
     let {
       value: t
     } = e;
     null != l.current && (l.current.playstyle = t, m(t), s(6))
-  }, [l, m, s]), y = r.useCallback(() => {
+  }, [l, m, s]), v = r.useCallback(() => {
     if (null != l.current) {
       let e = !x;
-      p(e), l.current.acknowledgeCap = e, e && j && s(8)
+      h(e), l.current.acknowledgeCap = e, e && N && s(8)
     }
-  }, [j, x, p, l, s]), C = r.useCallback(() => {
+  }, [N, x, h, l, s]), T = r.useCallback(() => {
     if (null != l.current) {
-      let e = !j;
-      v(e), l.current.acknowledgeScreen = e, e && x && s(8)
+      let e = !N;
+      j(e), l.current.acknowledgeScreen = e, e && x && s(8)
     }
-  }, [x, j, v, l, s]), g = r.useCallback(e => {
+  }, [x, N, j, l, s]), E = r.useCallback(e => {
     null != l.current && (l.current.email = e, c(e), d(null))
-  }, [l, d]), f = r.useCallback(() => {
+  }, [l, d]), g = r.useCallback(() => {
     if (null != t && null != l.current) {
       if (i.length < 3 || -1 === i.indexOf("@")) {
-        d(b.default.Messages.SIGNUP_EMAIL_ERROR);
+        d(I.default.Messages.SIGNUP_EMAIL_ERROR);
         return
-      }(0, T.completeSignUp)({
+      }(0, k.completeSignUp)({
         targetKey: a,
         data: l.current,
         completed: !0
@@ -65,116 +66,116 @@ function M(e) {
     }
   }, [a, i, t, d, l]);
   return null == t ? null : "email" === t.type ? (0, n.jsxs)("div", {
-    className: E.emailContainer,
-    children: [(0, n.jsx)(h.Text, {
+    className: _.emailContainer,
+    children: [(0, n.jsx)(p.Text, {
       variant: "text-lg/medium",
       color: "header-primary",
-      children: b.default.Messages.SIGNUP_EMAIL_PROMPT
+      children: I.default.Messages.SIGNUP_EMAIL_PROMPT
     }), (0, n.jsxs)("div", {
-      className: E.emailForm,
-      children: [(0, n.jsx)(h.TextInput, {
-        className: E.emailInput,
+      className: _.emailForm,
+      children: [(0, n.jsx)(p.TextInput, {
+        className: _.emailInput,
         value: i,
-        onChange: g,
-        placeholder: b.default.Messages.SIGNUP_EMAIL_PLACEHOLDER,
+        onChange: E,
+        placeholder: I.default.Messages.SIGNUP_EMAIL_PLACEHOLDER,
         error: o
-      }), (0, n.jsx)(h.Button, {
-        onClick: f,
-        children: (0, n.jsx)(h.Text, {
+      }), (0, n.jsx)(p.Button, {
+        onClick: g,
+        children: (0, n.jsx)(p.Text, {
           variant: "text-sm/medium",
           color: "interactive-active",
-          children: b.default.Messages.SIGNUP_COMPLETE_CTA
+          children: I.default.Messages.SIGNUP_COMPLETE_CTA
         })
       })]
     })]
   }) : "clan" === t.type ? (0, n.jsxs)("div", {
-    className: E.form,
+    className: _.form,
     children: [(0, n.jsxs)("div", {
-      className: E.formGroup,
+      className: _.formGroup,
       children: [(0, n.jsxs)("div", {
-        children: [(0, n.jsx)(h.Text, {
+        children: [(0, n.jsx)(p.Text, {
           variant: "text-lg/medium",
           color: "header-primary",
-          children: "What's your server's playstyle?"
-        }), (0, n.jsx)(h.Text, {
+          children: I.default.Messages.SIGNUP_CLAN_PLAYSTYLE_TITLE
+        }), (0, n.jsx)(p.Text, {
           variant: "text-md/normal",
           color: "text-muted",
-          children: "Let potential members know what kind of gaming you do."
+          children: I.default.Messages.SIGNUP_CLAN_PLAYSTYLE_DESCRIPTION
         })]
       }), (0, n.jsx)("div", {
-        className: E.options,
-        children: (0, N.getClanOptions)(b.default).map(e => (0, n.jsx)(P, {
+        className: _.options,
+        children: (0, f.getClanOptions)(I.default).map(e => (0, n.jsx)(L, {
           option: e,
           isSelected: e.value === u,
-          onOptionSelected: k
+          onOptionSelected: C
         }, e.value))
       })]
     }), (0, n.jsxs)("div", {
-      className: E.formGroup,
+      className: _.formGroup,
       children: [(0, n.jsxs)("div", {
-        children: [(0, n.jsx)(h.Text, {
+        children: [(0, n.jsx)(p.Text, {
           variant: "text-lg/medium",
           color: "header-primary",
-          children: "Here are some additional information about Clans."
-        }), (0, n.jsx)(h.Text, {
+          children: I.default.Messages.SIGNUP_CLAN_ACKNOWLEDGEMENTS_TITLE
+        }), (0, n.jsx)(p.Text, {
           variant: "text-md/normal",
           color: "text-muted",
-          children: "Select all the checkbox to acknowledge and continue."
+          children: I.default.Messages.SIGNUP_CLAN_ACKNOWLEDGEMENTS_DESCRIPTION
         })]
       }), (0, n.jsxs)("div", {
-        className: E.acknowledgements,
-        children: [(0, n.jsxs)(h.Clickable, {
-          className: E.acknowledgement,
-          onClick: y,
-          children: [(0, n.jsx)(h.Text, {
+        className: _.acknowledgements,
+        children: [(0, n.jsxs)(p.Clickable, {
+          className: _.acknowledgement,
+          onClick: v,
+          children: [(0, n.jsx)(p.Text, {
             variant: "text-md/normal",
             color: "interactive-active",
-            children: "Clans are capped to 200 members max."
+            children: I.default.Messages.SIGNUP_CLAN_ACKNOWLEDGEMENT_CAP
           }), (0, n.jsx)("div", {
-            className: E.checkboxWrapper,
-            children: (0, n.jsx)(h.Checkbox, {
+            className: _.checkboxWrapper,
+            children: (0, n.jsx)(p.Checkbox, {
               displayOnly: !0,
-              type: h.Checkbox.Types.INVERTED,
+              type: p.Checkbox.Types.INVERTED,
               value: x
             })
           })]
-        }), (0, n.jsxs)(h.Clickable, {
-          className: E.acknowledgement,
-          onClick: C,
-          children: [(0, n.jsx)(h.Text, {
+        }), (0, n.jsxs)(p.Clickable, {
+          className: _.acknowledgement,
+          onClick: T,
+          children: [(0, n.jsx)(p.Text, {
             variant: "text-md/normal",
             color: "interactive-active",
-            children: "New members must be approved by you in order to join."
+            children: I.default.Messages.SIGNUP_CLAN_ACKNOWLEDGEMENT_APPROVAL
           }), (0, n.jsx)("div", {
-            className: E.checkboxWrapper,
-            children: (0, n.jsx)(h.Checkbox, {
+            className: _.checkboxWrapper,
+            children: (0, n.jsx)(p.Checkbox, {
               displayOnly: !0,
-              type: h.Checkbox.Types.INVERTED,
-              value: j
+              type: p.Checkbox.Types.INVERTED,
+              value: N
             })
           })]
         })]
       })]
     }), (0, n.jsxs)("div", {
-      className: E.formGroup,
-      children: [(0, n.jsx)(h.Text, {
+      className: _.formGroup,
+      children: [(0, n.jsx)(p.Text, {
         variant: "text-lg/medium",
         color: "header-primary",
-        children: b.default.Messages.SIGNUP_EMAIL_PROMPT
+        children: I.default.Messages.SIGNUP_EMAIL_PROMPT
       }), (0, n.jsxs)("div", {
-        className: E.emailForm,
-        children: [(0, n.jsx)(h.TextInput, {
-          className: E.emailInput,
+        className: _.emailForm,
+        children: [(0, n.jsx)(p.TextInput, {
+          className: _.emailInput,
           value: i,
-          onChange: g,
-          placeholder: b.default.Messages.SIGNUP_EMAIL_PLACEHOLDER,
+          onChange: E,
+          placeholder: I.default.Messages.SIGNUP_EMAIL_PLACEHOLDER,
           error: o
-        }), (0, n.jsx)(h.Button, {
-          onClick: f,
-          children: (0, n.jsx)(h.Text, {
+        }), (0, n.jsx)(p.Button, {
+          onClick: g,
+          children: (0, n.jsx)(p.Text, {
             variant: "text-sm/medium",
             color: "interactive-active",
-            children: b.default.Messages.SIGNUP_COMPLETE_CTA
+            children: I.default.Messages.SIGNUP_COMPLETE_CTA
           })
         })]
       })]
@@ -189,42 +190,42 @@ function O(e) {
   switch (t) {
     case "compass":
       a = (0, n.jsx)(m.CompassIcon, {
-        className: E.icon
+        className: _.icon
       });
       break;
     case "gamepad":
-      a = (0, n.jsx)(y.default, {
-        className: E.icon
+      a = (0, n.jsx)(T.default, {
+        className: _.icon
       });
       break;
     case "controller":
-      a = (0, n.jsx)(x.GameControllerIcon, {
-        className: E.icon
+      a = (0, n.jsx)(h.GameControllerIcon, {
+        className: _.icon
       });
       break;
     default:
       a = null
   }
   return (0, n.jsx)("div", {
-    className: E.iconContainer,
+    className: _.iconContainer,
     children: a
   })
 }
 
-function P(e) {
+function L(e) {
   let {
     option: t,
     icon: a,
     isSelected: l,
     onOptionSelected: s
-  } = e, [i, o] = r.useState(!1), d = (0, h.useToken)(h.tokens.colors.BACKGROUND_TERTIARY).hsl({
+  } = e, [i, o] = r.useState(!1), d = (0, p.useToken)(p.tokens.colors.BACKGROUND_TERTIARY).hsl({
     opacity: i && !l ? .9 : .8
   }), u = r.useCallback(() => {
     s(t)
   }, [s, t]);
-  return (0, n.jsxs)(h.Clickable, {
-    className: c()(E.option, {
-      [E.selectedOption]: l
+  return (0, n.jsxs)(p.Clickable, {
+    className: c()(_.option, {
+      [_.selectedOption]: l
     }),
     onMouseEnter: () => o(!0),
     onMouseLeave: () => o(!1),
@@ -233,12 +234,12 @@ function P(e) {
     },
     onClick: u,
     children: [a, (0, n.jsxs)("div", {
-      className: E.optionContent,
-      children: [(0, n.jsx)(h.Text, {
+      className: _.optionContent,
+      children: [(0, n.jsx)(p.Text, {
         variant: "text-lg/medium",
         color: "header-primary",
         children: t.title
-      }), (0, n.jsx)(h.Text, {
+      }), (0, n.jsx)(p.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         children: t.description
@@ -247,13 +248,13 @@ function P(e) {
   })
 }
 
-function _(e) {
+function b(e) {
   let {
     option: t,
     selectedOption: a,
     setSelectedOption: l
   } = e, s = t.key === (null == a ? void 0 : a.key);
-  return (0, n.jsx)(P, {
+  return (0, n.jsx)(L, {
     option: t,
     icon: (0, n.jsx)(O, {
       iconName: t.icon
@@ -263,26 +264,26 @@ function _(e) {
   })
 }
 
-function L(e) {
+function A(e) {
   let {
     target: t,
     selectedOption: a,
     handleSetSelectedOption: l,
     data: s
-  } = e, i = (0, p.useStateFromStores)([j.default], () => j.default.useReducedMotion), [{
+  } = e, i = (0, N.useStateFromStores)([j.default], () => j.default.useReducedMotion), [{
     state: c
   }, o] = (0, u.useSpring)(() => ({
     state: 0
-  }), []), m = (0, p.useStateFromStores)([v.default], () => v.default.getCurrentUser()), x = c.to({
+  }), []), m = (0, N.useStateFromStores)([C.default], () => C.default.getCurrentUser()), h = c.to({
     range: [0, 1],
     output: [1, 0]
-  }), k = c.to({
+  }), v = c.to({
     range: [0, 1],
     output: [0, 1]
-  }), y = c.to({
+  }), T = c.to({
     range: [0, 10],
     output: [0, -700]
-  }), C = r.useCallback(e => {
+  }), E = r.useCallback(e => {
     l(e), o({
       state: "email" === e.type ? 2 : 3,
       immediate: i
@@ -295,48 +296,60 @@ function L(e) {
   }, [o, i]);
   return null == m ? null : (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(u.animated.div, {
-      className: E.header,
+      className: _.header,
       style: {
-        opacity: x
+        opacity: h
       },
-      children: [(0, n.jsx)(h.Heading, {
+      children: [(0, n.jsxs)("div", {
+        className: _.eyebrow,
+        children: [(0, n.jsx)(x.EnvelopeIcon, {
+          height: 12,
+          width: 12,
+          color: "currentColor"
+        }), (0, n.jsx)(p.Text, {
+          variant: "text-xs/semibold",
+          color: "none",
+          children: I.default.Messages.SIGNUP_NOTICE_EYEBROW
+        })]
+      }), (0, n.jsx)(p.Heading, {
         variant: "heading-xxl/medium",
         color: "header-primary",
         children: t.title
-      }), (0, n.jsx)(h.Text, {
+      }), (0, n.jsx)(p.Text, {
         variant: "text-md/normal",
         color: "always-white",
         children: t.subtitle
       })]
     }), (0, n.jsxs)(u.animated.div, {
-      className: E.question,
+      className: _.question,
       style: {
-        transform: y.to(e => "translateY(".concat(e, "px)"))
+        transform: T.to(e => "translateY(".concat(e, "px)")),
+        marginTop: t.questionMargin
       },
-      children: [(0, n.jsx)(h.Text, {
+      children: [(0, n.jsx)(p.Text, {
         variant: "text-lg/medium",
         color: "header-primary",
         children: t.question
       }), (0, n.jsx)("div", {
-        className: E.options,
+        className: _.options,
         children: (function(e, t) {
           let a = e.slice();
           return a.sort((e, a) => {
             let l = d().v3("".concat(e.key).concat(t));
             return l - d().v3("".concat(a.key).concat(t))
           }), a
-        })(t.options, m.id).map(e => (0, n.jsx)(_, {
+        })(t.options, m.id).map(e => (0, n.jsx)(b, {
           option: e,
           selectedOption: a,
-          setSelectedOption: C
+          setSelectedOption: E
         }, e.key))
       })]
     }), (0, n.jsx)(u.animated.div, {
       style: {
-        transform: y.to(e => "translateY(".concat(e, "px)")),
-        opacity: k
+        transform: T.to(e => "translateY(".concat(e, "px)")),
+        opacity: v
       },
-      children: (0, n.jsx)(M, {
+      children: (0, n.jsx)(P, {
         selectedOption: a,
         targetKey: t.key,
         data: s,
@@ -346,22 +359,22 @@ function L(e) {
   })
 }
 
-function R(e) {
+function G(e) {
   let {
     target: t,
     guildId: a,
     transitionState: l,
     onClose: s
-  } = e, i = (0, k.useUID)(), o = r.useRef({
+  } = e, i = (0, v.useUID)(), o = r.useRef({
     guildId: a
-  }), [d, u] = r.useState(null), m = (0, p.useStateFromStores)([f.default], () => f.default.hasCompletedTarget(t.key)) ? 1 : 0;
+  }), [d, u] = r.useState(null), m = (0, N.useStateFromStores)([S.default], () => S.default.hasCompletedTarget(t.key)) ? 1 : 0;
   r.useEffect(() => {
-    C.default.track(S.AnalyticEvents.SIGNUP_VIEWED, {
+    E.default.track(y.AnalyticEvents.SIGNUP_VIEWED, {
       target_key: t.key
     });
     let e = o.current;
     return () => {
-      (0, T.completeSignUp)({
+      (0, k.completeSignUp)({
         targetKey: t.key,
         data: e,
         completed: !1
@@ -371,11 +384,11 @@ function R(e) {
   let x = r.useCallback(e => {
       null != o.current && (o.current.selectedOptionKey = e.key, u(e))
     }, [u, o]),
-    j = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"),
-    v = null;
+    h = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"),
+    j = null;
   switch (m) {
     case 0:
-      v = (0, n.jsx)(L, {
+      j = (0, n.jsx)(A, {
         target: t,
         selectedOption: d,
         handleSetSelectedOption: x,
@@ -383,40 +396,40 @@ function R(e) {
       });
       break;
     case 1:
-      v = (0, n.jsxs)("div", {
-        className: E.completedContainer,
-        children: [(0, n.jsx)(h.Text, {
+      j = (0, n.jsxs)("div", {
+        className: _.completedContainer,
+        children: [(0, n.jsx)(p.Text, {
           variant: "text-lg/medium",
           color: "header-primary",
-          children: b.default.Messages.SIGNUP_COMPLETED_TITLE
-        }), (0, n.jsx)(h.Text, {
+          children: I.default.Messages.SIGNUP_COMPLETED_TITLE
+        }), (0, n.jsx)(p.Text, {
           variant: "text-md/normal",
           color: "text-muted",
-          children: b.default.Messages.SIGNUP_COMPLETED_DESCRIPTION
+          children: I.default.Messages.SIGNUP_COMPLETED_DESCRIPTION
         }), (0, n.jsx)("div", {
-          children: (0, n.jsx)(h.Button, {
+          children: (0, n.jsx)(p.Button, {
             onClick: s,
-            children: (0, n.jsx)(h.Text, {
+            children: (0, n.jsx)(p.Text, {
               variant: "text-sm/medium",
               color: "always-white",
-              children: b.default.Messages.DISMISS
+              children: I.default.Messages.CLOSE
             })
           })
         })]
       })
   }
-  return (0, n.jsx)(h.ThemeContextProvider, {
-    theme: S.ThemeTypes.DARK,
-    children: (0, n.jsxs)(h.ModalRoot, {
+  return (0, n.jsx)(p.ThemeContextProvider, {
+    theme: y.ThemeTypes.DARK,
+    children: (0, n.jsxs)(p.ModalRoot, {
       transitionState: l,
       "aria-labelledby": i,
-      size: h.ModalSize.LARGE,
-      className: c()(E.modal, I),
-      children: [(0, n.jsxs)(h.Scroller, {
-        className: E.content,
+      size: p.ModalSize.LARGE,
+      className: c()(_.modal, M),
+      children: [(0, n.jsxs)(p.Scroller, {
+        className: _.content,
         children: [(0, n.jsx)("div", {
           style: {
-            background: j,
+            background: h,
             position: "absolute",
             top: 0,
             left: 0,
@@ -425,18 +438,18 @@ function R(e) {
             zIndex: -1
           }
         }), (0, n.jsx)("div", {
-          className: E.contentInner,
-          children: (0, n.jsx)(h.Sequencer, {
+          className: _.contentInner,
+          children: (0, n.jsx)(p.Sequencer, {
             animationMotionType: "lift",
             fillParent: !0,
             step: m,
             steps: [0, 1],
-            children: v
+            children: j
           })
         })]
       }), (0, n.jsx)("div", {
-        className: E.closeButtonContainer,
-        children: (0, n.jsx)(h.ModalCloseButton, {
+        className: _.closeButtonContainer,
+        children: (0, n.jsx)(p.ModalCloseButton, {
           onClick: s
         })
       })]

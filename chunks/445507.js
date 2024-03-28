@@ -42,71 +42,74 @@ let i = {
     subtitle: "Get notified about new features we're building to help Valorant players connect and play together on Discord.",
     tooltipHeader: "Want a preview of new features for Valorant players?",
     question: "Which feature are you interested in the most?",
+    questionMargin: 150,
     backgroundAssetUrl: "https://cdn.discordapp.com/assets/signups/Valorant_Background.png",
     options: [{
       key: "clan",
       icon: "compass",
       title: "Gaming Guilds",
-      description: "Small, organized groups with similar vibes, play styles, or skill levels who hang out and play regularly.",
+      description: "Small, organized servers with similar vibes, play styles, or skill levels who hang out and play regularly.",
       type: "email"
     }, {
       key: "missions",
       icon: "gamepad",
       title: "Missions",
-      description: "Party up with players who are trying to achieve the same goal as you, like ranking up.",
+      description: "Join one-time groups of players trying to achieve the same goal as you, like ranking up or beating a raid boss.",
       type: "email"
     }, {
       key: "gamenight",
       icon: "controller",
       title: "Game Nights",
-      description: "Scheduled sessions with other players that match a specific criteria, like play style or skill level.",
+      description: "Get matched with other players on specific criteria like play style or skill and get invited to a scheduled gaming session.",
       type: "email"
     }]
   },
   r = {
     key: "valorant-admin",
     type: "guild",
-    title: "Preview new features for Valorant players on Discord",
-    subtitle: "Get notified about new features we're building to help Valorant players connect and play together on Discord.",
-    question: "Which feature are you interested in the most?",
+    title: "Want to recruit more Valorant players for your server?",
+    subtitle: "Your server is exclusively invited to sign up for future Discovery features.",
+    noticeHeader: "Want to recruit more people to play Valorant in your server?",
+    question: "Interested? Pick one to sign up for updates and early access:",
+    questionMargin: 110,
     backgroundAssetUrl: "https://cdn.discordapp.com/assets/signups/Valorant_Background.png",
     options: [{
       key: "clan",
       icon: "compass",
       title: "Gaming Guilds",
-      description: "Small, organized groups with similar vibes, play styles, or skill levels who hang out and play regularly.",
+      description: "Small, organized servers of players with similar vibes, play styles, or skill levels who hang out and play regularly. Capped at 200 members max, prospective members will need to submit an application in order to join.",
       type: "clan"
     }, {
-      key: "missions",
+      key: "voice-hub",
       icon: "gamepad",
-      title: "Missions",
-      description: "Party up with players who are trying to achieve the same goal as you, like ranking up.",
+      title: "Gaming Voice Hub",
+      description: "A hub that houses a large selection of voice channels dedicated to gaming, each holding up to 10 people. Join an existing channel or create your own and set the game you're playing, goals, or vibes.",
       type: "email"
     }, {
-      key: "gamenight",
+      key: "hub",
       icon: "controller",
-      title: "Game Nights",
-      description: "Scheduled sessions with other players that match a specific criteria, like play style or skill level.",
+      title: "Game Hub",
+      description: "Dedicated discovery pages for popular games. Admins can choose to have their server’s text channel activity displayed in the hubs so users can see the conversations happening across Discord for a specific game.",
       type: "email"
     }]
   };
 
 function o(e) {
   return [{
-    value: "social",
-    title: e.Messages.SIGNUP_CLAN_OPTION_SOCIAL_TITLE,
-    description: e.Messages.SIGNUP_CLAN_OPTION_SOCIAL_DESCRIPTION
+    value: "very-casual",
+    title: e.Messages.SIGNUP_CLAN_OPTION_VERY_CASUAL_TITLE,
+    description: e.Messages.SIGNUP_CLAN_OPTION_VERY_CASUAL_DESCRIPTION
   }, {
     value: "casual",
     title: e.Messages.SIGNUP_CLAN_OPTION_CASUAL_TITLE,
     description: e.Messages.SIGNUP_CLAN_OPTION_CASUAL_DESCRIPTION
   }, {
-    value: "competitive",
-    title: e.Messages.SIGNUP_CLAN_OPTION_COMPETITIVE_TITLE,
-    description: e.Messages.SIGNUP_CLAN_OPTION_COMPETITIVE_DESCRIPTION
+    value: "hardcore",
+    title: e.Messages.SIGNUP_CLAN_OPTION_HARDCORE_TITLE,
+    description: e.Messages.SIGNUP_CLAN_OPTION_HARDCORE_DESCRIPTION
   }, {
-    value: "creative",
-    title: e.Messages.SIGNUP_CLAN_OPTION_CREATIVE_TITLE,
-    description: e.Messages.SIGNUP_CLAN_OPTION_CREATIVE_DESCRIPTION
+    value: "very-hardcore",
+    title: e.Messages.SIGNUP_CLAN_OPTION_VERY_HARDCORE_TITLE,
+    description: e.Messages.SIGNUP_CLAN_OPTION_VERY_HARDCORE_DESCRIPTION
   }]
 }
