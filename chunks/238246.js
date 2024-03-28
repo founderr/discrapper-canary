@@ -52,7 +52,7 @@ class V extends(a = s.Component) {
     let {
       guestWindow: e
     } = this.props, t = e.document;
-    null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), (0, F.setupWindow)(e), e.addEventListener("blur", this.handleBlur), t.addEventListener("contextmenu", this.handleContextMenu, !0), e.addEventListener("beforeunload", this.warnPopoutClose)
+    null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, F.setupWindow)(e), e.addEventListener("blur", this.handleBlur), t.addEventListener("contextmenu", this.handleContextMenu, !0), e.addEventListener("beforeunload", this.warnPopoutClose)
   }
   componentDidUpdate(e) {
     let {
@@ -61,7 +61,7 @@ class V extends(a = s.Component) {
       locale: a,
       clientThemesCSS: l
     } = this.props;
-    e.title !== t && this.updateTitle(), e.fontScale !== n && this.updateFontScale(), e.locale !== a && this.updateLocale(), e.clientThemesCSS !== l && this.updateClientTheme(), e.saturation !== this.props.saturation && this.updateSaturationFactor()
+    e.title !== t && this.updateTitle(), e.fontScale !== n && this.updateFontScale(), e.locale !== a && this.updateLocale(), e.clientThemesCSS !== l && this.updateClientTheme(), e.saturation !== this.props.saturation && this.updateSaturationFactor(), (e.forcedColors !== this.props.forcedColors || e.systemForcedColors !== this.props.systemForcedColors) && this.updateForcedColors()
   }
   componentWillUnmount() {
     let {
@@ -113,6 +113,14 @@ class V extends(a = s.Component) {
     }
     let s = n.createElement("style");
     s.setAttribute(T.CLIENT_THEMES_DATA_ATTRIBUTE, "true"), s.textContent = e, a.appendChild(s)
+  }
+  updateForcedColors() {
+    let {
+      useForcedColors: e,
+      systemForcedColors: t,
+      guestWindow: n
+    } = this.props;
+    n.document.documentElement.classList.toggle("disable-forced-colors", !e && "active" === t)
   }
   render() {
     let {
@@ -218,27 +226,31 @@ let W = s.forwardRef(function(e, t) {
       keyboardModeEnabled: h,
       reducedMotionEnabled: m,
       fontScaleClass: E,
-      saturation: g
+      saturation: g,
+      systemForcedColors: I,
+      useForcedColors: A
     } = (0, c.useStateFromStoresObject)([p.default], () => ({
       fontScale: p.default.fontScale,
       keyboardModeEnabled: p.default.keyboardModeEnabled,
       reducedMotionEnabled: p.default.useReducedMotion,
       fontScaleClass: p.default.fontScaleClass,
-      saturation: p.default.saturation
+      saturation: p.default.saturation,
+      systemForcedColors: p.default.systemForcedColors,
+      useForcedColors: p.default.useForcedColors
     })),
-    I = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
+    v = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
   (0, N.default)(n, !1);
-  let A = (0, x.default)(n, a),
+  let M = (0, x.default)(n, a),
     {
-      analyticsLocations: v
+      analyticsLocations: y
     } = (0, _.default)(S.default.POPOUT_WINDOW),
     {
-      clientThemesClassName: M,
-      clientThemesCSS: y
+      clientThemesClassName: j,
+      clientThemesCSS: P
     } = (0, T.default)();
   return null == n ? null : (0, l.jsx)(f.DnDProvider, {
     children: (0, l.jsx)(_.AnalyticsLocationProvider, {
-      value: v,
+      value: y,
       children: (0, l.jsx)(V, {
         ref: t,
         ...e,
@@ -248,15 +260,17 @@ let W = s.forwardRef(function(e, t) {
         locale: i,
         theme: r,
         forcedColors: o,
+        useForcedColors: A,
+        systemForcedColors: I,
         fontScale: d,
         keyboardModeEnabled: h,
-        mouseModeEnabled: A,
+        mouseModeEnabled: M,
         reducedMotionEnabled: m,
-        connectedToEmbeddedActivity: I,
+        connectedToEmbeddedActivity: v,
         fontScaleClass: E,
         saturation: g,
-        clientThemesClassName: M,
-        clientThemesCSS: y
+        clientThemesClassName: j,
+        clientThemesCSS: P
       })
     })
   })
