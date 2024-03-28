@@ -30,9 +30,9 @@ function N(e) {
   let {
     channel: t,
     baseChannelId: n
-  } = e, N = (0, I.default)(t), O = (0, c.useListHasSingleMessageRequest)(), v = (0, c.useListHasSingleSpamMessageRequest)(), R = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), L = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), P = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), M = s.useCallback(() => {
-    _.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), R && O && (0, h.transitionToChannel)(t.id), L && v && (0, h.transitionToChannel)(t.id)
-  }, [t.id, L, v, R, O]), y = s.useCallback(() => {
+  } = e, N = (0, I.default)(t), R = (0, c.useListHasSingleMessageRequest)(), O = (0, c.useListHasSingleSpamMessageRequest)(), v = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), L = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), P = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), M = s.useCallback(() => {
+    _.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), v && R && (0, h.transitionToChannel)(t.id), L && O && (0, h.transitionToChannel)(t.id)
+  }, [t.id, L, O, v, R]), y = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(T.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), {
     markAsNotSpam: D
@@ -41,14 +41,14 @@ function N(e) {
     onError: y
   });
   if (null == t || !t.isDM()) return null;
-  let b = [(0, a.jsx)(S.default.Icon, {
+  let x = [(0, a.jsx)(S.default.Icon, {
     icon: m.default,
     tooltip: T.default.Messages.CLOSE,
     onClick: () => _.default.closeChannelSidebar(n)
   }, "close")];
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(S.default, {
-      toolbar: b,
+      toolbar: x,
       "aria-label": T.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
       children: (0, o.renderTitle)({
         channel: t,

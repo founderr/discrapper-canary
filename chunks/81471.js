@@ -26,22 +26,22 @@ let g = s.memo(function(e) {
     loaded: n,
     error: l,
     message: g
-  } = (0, C.useMessageRequestPreview)(t), A = (0, r.useStateFromStores)([E.default], () => null != g && E.default.isBlocked(g.author.id), [g]), N = (0, r.useStateFromStores)([f.default], () => f.default.can(m.Permissions.MANAGE_MESSAGES, t)), O = c.RenderSpoilers.useSetting(), {
-    content: v
+  } = (0, C.useMessageRequestPreview)(t), A = (0, r.useStateFromStores)([E.default], () => null != g && E.default.isBlocked(g.author.id), [g]), N = (0, r.useStateFromStores)([f.default], () => f.default.can(m.Permissions.MANAGE_MESSAGES, t)), R = c.RenderSpoilers.useSetting(), {
+    content: O
   } = s.useMemo(() => (null == g ? void 0 : g.content) != null && "" !== g.content ? (0, d.default)(g, {
     formatInline: !0,
     noStyleAndInteraction: !0
   }) : {
     content: null
-  }, [g]), R = null;
-  if (l) R = (0, a.jsx)(o.Text, {
+  }, [g]), v = null;
+  if (l) v = (0, a.jsx)(o.Text, {
     className: p.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
     children: I.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (n) {
-    if (null != g && A) R = (0, a.jsx)(o.Text, {
+    if (null != g && A) v = (0, a.jsx)(o.Text, {
       className: p.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
@@ -51,11 +51,11 @@ let g = s.memo(function(e) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, _.renderSingleLineMessage)(g, v, A, i()(p.messageContent, T.inlineFormat, T.__invalid_smallFontSize), {
+      } = (0, _.renderSingleLineMessage)(g, O, A, i()(p.messageContent, T.inlineFormat, T.__invalid_smallFontSize), {
         iconClass: p.messageContentIcon,
         iconSize: S.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
-      R = null != t ? (0, a.jsx)(o.Text, {
+      v = null != t ? (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         className: p.messageContent,
@@ -67,18 +67,18 @@ let g = s.memo(function(e) {
         className: p.messageReplacement,
         children: e
       })
-    } else R = (0, a.jsx)(o.Text, {
+    } else v = (0, a.jsx)(o.Text, {
       className: p.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
       children: I.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
-  } else R = null;
+  } else v = null;
   return (0, a.jsx)(h.ObscuredDisplayContext.Provider, {
-    value: (0, u.default)(O, N),
+    value: (0, u.default)(R, N),
     children: (0, a.jsx)(o.FocusBlock, {
       className: p.messageFocusBlock,
-      children: R
+      children: v
     })
   })
 });

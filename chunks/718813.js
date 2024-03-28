@@ -37,26 +37,26 @@ let N = (0, _.makeLazy)({
     webpackId: "989804",
     name: "UserSettings"
   }),
-  O = (0, _.makeLazy)({
+  R = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("33053"), n.e("85093"), n.e("78587")]).then(n.bind(n, "869779")),
     webpackId: "869779",
     name: "ChannelSettings"
   }),
-  v = (0, _.makeLazy)({
+  O = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("18249")]).then(n.bind(n, "838819")),
     webpackId: "838819",
     name: "CollectiblesShop"
   }),
-  R = (0, _.makeLazy)({
+  v = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("24267"), n.e("33053"), n.e("51238"), n.e("75475"), n.e("85093"), n.e("16114"), n.e("85552"), n.e("58227"), n.e("43502")]).then(n.bind(n, "994763")),
     webpackId: "994763",
     name: "GuildSettings"
   }),
   L = {
     [T.Layers.USER_SETTINGS]: () => (0, s.jsx)(N, {}),
-    [T.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(O, {}),
-    [T.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(R, {}),
-    [T.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(v, {})
+    [T.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(R, {}),
+    [T.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(v, {}),
+    [T.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(O, {})
   },
   P = "SHOWN",
   M = "HIDDEN",
@@ -68,7 +68,7 @@ let N = (0, _.makeLazy)({
 function D() {
   return l.useEffect(() => (h.default.enable(), h.default.enableTemp(E.SETTINGS_LAYERS_LAYOUT), () => h.default.disableTemp()), []), null
 }
-class b extends(a = l.PureComponent) {
+class x extends(a = l.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     return e.mode !== t.mode ? {
       animating: !0,
@@ -202,10 +202,10 @@ class b extends(a = l.PureComponent) {
     }
   }
 }
-A(b, "defaultProps", {
+A(x, "defaultProps", {
   baseLayer: !1
-}), A(b, "contextType", c.AccessibilityPreferencesContext);
-class x extends l.PureComponent {
+}), A(x, "contextType", c.AccessibilityPreferencesContext);
+class b extends l.PureComponent {
   componentDidMount() {
     I.ComponentDispatch.subscribe(T.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
   }
@@ -220,7 +220,7 @@ class x extends l.PureComponent {
     } = this.props, {
       length: a
     } = t, l = [];
-    return l.push((0, s.jsx)(b, {
+    return l.push((0, s.jsx)(x, {
       mode: 0 !== a || n ? M : P,
       baseLayer: !0,
       children: e
@@ -228,7 +228,7 @@ class x extends l.PureComponent {
   }
   renderComponent(e, t, n) {
     let a;
-    return a = "string" == typeof e ? L[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(b, {
+    return a = "string" == typeof e ? L[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(x, {
       mode: t === n - 1 ? P : M,
       children: [(0, s.jsx)(D, {}), a]
     }, "layer-".concat(t))
@@ -253,7 +253,7 @@ function U(e) {
   let t = (0, u.useStateFromStores)([C.default], () => C.default.darkSidebar) ? T.ThemeTypes.DARK : void 0,
     n = (0, u.useStateFromStores)([m.default], () => m.default.getLayers()),
     a = (0, S.useFullScreenLayerStore)(e => e.fullScreenLayers.length > 0);
-  return (0, s.jsx)(x, {
+  return (0, s.jsx)(b, {
     ...e,
     sidebarTheme: t,
     layers: n,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoverSearchResultPlaceholder: function() {
-    return v
+    return O
   }
 }), n("47120");
 var a = n("735250"),
@@ -26,24 +26,24 @@ var a = n("735250"),
   g = n("689938"),
   A = n("208596"),
   N = n("129512"),
-  O = n("330065");
-let v = () => (0, a.jsx)("div", {
+  R = n("330065");
+let O = () => (0, a.jsx)("div", {
   className: A.placeholder
 });
 t.default = e => {
   var t;
   let {
     guild: l,
-    theme: v,
-    onView: R,
+    theme: O,
+    onView: v,
     onTagClick: L
   } = e, {
     id: P,
     discoverySplash: M,
     icon: y,
     name: D,
-    description: b,
-    presenceCount: x,
+    description: x,
+    presenceCount: b,
     memberCount: U,
     keywords: j
   } = l, [G, w] = s.useState(!1), [k, F] = s.useState(!1), {
@@ -57,9 +57,9 @@ t.default = e => {
       case T.ThemeTypes.DARK:
         return N;
       case T.ThemeTypes.LIGHT:
-        return O
+        return R
     }
-  }(v), Y = null !== (t = _.default.getGuildIconURL({
+  }(O), Y = null !== (t = _.default.getGuildIconURL({
     id: P,
     icon: y,
     size: 32
@@ -83,7 +83,7 @@ t.default = e => {
       }
       F(!0);
       try {
-        null != R && await R(l.id)
+        null != v && await v(l.id)
       } finally {
         F(!1)
       }
@@ -166,7 +166,7 @@ t.default = e => {
           }), (0, a.jsx)(r.Text, {
             className: A.description,
             variant: "text-sm/normal",
-            children: b
+            children: x
           }), K && null != j && null != L && (0, a.jsx)(I.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: I.DiscoveryTagStyle.ALT,
@@ -175,13 +175,13 @@ t.default = e => {
             section: C.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
             className: A.memberInfo,
-            children: [null != x && (0, a.jsx)("div", {
+            children: [null != b && (0, a.jsx)("div", {
               className: A.memberCount,
               children: (0, a.jsx)(r.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
                 children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
-                  membersOnline: x
+                  membersOnline: b
                 })
               })
             }), null != U && (0, a.jsxs)(a.Fragment, {

@@ -23,9 +23,9 @@ t.default = function(e) {
     className: I
   } = e, [p, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
     T(!0), C && !m && !g && (null == S || S())
-  }, O = () => {
+  }, R = () => {
     T(!1)
-  }, v = (e, t) => {
+  }, O = (e, t) => {
     null != t && (A(!0), (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -52,9 +52,9 @@ t.default = function(e) {
           [f.active]: m || g,
           [f.firstItem]: 0 === t
         }),
-        onContextMenu: e => v(e, E),
+        onContextMenu: e => O(e, E),
         onMouseEnter: N,
-        onMouseLeave: O,
+        onMouseLeave: R,
         onClick: null != _ ? _ : void 0,
         style: {
           LIST_ROW_HEIGHT: c.LIST_ROW_HEIGHT,

@@ -22,9 +22,9 @@ var a = n("735250"),
   g = n("921944"),
   A = n("30513"),
   N = n("474936"),
-  O = n("689938"),
-  v = n("54449"),
-  R = n("1006"),
+  R = n("689938"),
+  O = n("54449"),
+  v = n("1006"),
   L = n("741160"),
   P = n("829972"),
   M = n("31932"),
@@ -36,11 +36,11 @@ function D(e) {
   }, T.GuildSettingsSubsections.DISPLAY)
 }
 
-function b(e, t) {
+function x(e, t) {
   t && _.default.open(e.id, T.GuildSettingsSections.DISCOVERY)
 }
 
-function x(e, t) {
+function b(e, t) {
   null != t && ((0, p.isTierUnlocked)(t, T.BoostedGuildTiers.TIER_1) ? _.default.open(t.id, T.GuildSettingsSections.OVERVIEW, {
     section: T.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH
   }, T.GuildSettingsSubsections.INVITE) : (0, f.default)({
@@ -99,15 +99,15 @@ t.default = s.memo(function(e) {
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
               onComponentMount: A,
-              header: O.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
+              header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: G,
-                className: R.fullWidthImage
+                className: v.fullWidthImage
               }),
-              content: O.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
-              buttonCTA: O.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
-              secondaryButtonCTA: O.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
+              content: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
+              buttonCTA: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
+              secondaryButtonCTA: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
               onSecondaryClick: () => D(),
               onClick: () => D(s),
               markAsDismissed: k
@@ -118,15 +118,15 @@ t.default = s.memo(function(e) {
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
               onComponentMount: A,
-              header: O.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
+              header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: G,
-                className: R.fullWidthImage
+                className: v.fullWidthImage
               }),
-              content: O.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
-              buttonCTA: O.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
-              secondaryButtonCTA: O.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
+              content: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
+              buttonCTA: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
+              secondaryButtonCTA: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
               onSecondaryClick: () => D(),
               onClick: () => D(s),
               markAsDismissed: k
@@ -144,8 +144,8 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_SERVER_DISCOVERY_TOOLTIP:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(d.default, {
-              onClick: () => b(s, !0),
-              onSecondaryClick: () => b(s),
+              onClick: () => x(s, !0),
+              onSecondaryClick: () => x(s),
               markAsDismissed: k
             }),
             renderGuildHeaderDropdownButton: r
@@ -159,24 +159,24 @@ t.default = s.memo(function(e) {
             renderGuildHeaderDropdownButton: r
           });
         case l.DismissibleContent.GUILD_HEADER_INVITE_SPLASH:
-          let e = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? O.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : O.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
+          let e = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
               boostCount: (0, p.getNumberOfAppliedBoostsNeededForTier)(s, T.BoostedGuildTiers.TIER_1)
             }),
-            t = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? O.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : O.default.Messages.LEARN_MORE;
+            t = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : R.default.Messages.LEARN_MORE;
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
               onComponentMount: j,
-              header: O.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
+              header: R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: L,
-                className: R.fullWidthImage
+                className: v.fullWidthImage
               }),
               content: e,
               buttonCTA: t,
-              secondaryButtonCTA: O.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
-              onSecondaryClick: () => x(f),
-              onClick: () => x(f, s),
+              secondaryButtonCTA: R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
+              onSecondaryClick: () => b(f),
+              onClick: () => b(f, s),
               markAsDismissed: k
             }),
             renderGuildHeaderDropdownButton: r
@@ -191,10 +191,10 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
-              className: v.tooltipOverrideColor,
-              header: O.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
-              content: O.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
-              buttonCTA: O.default.Messages.GOT_IT,
+              className: O.tooltipOverrideColor,
+              header: R.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
+              content: R.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
+              buttonCTA: R.default.Messages.GOT_IT,
               onClick: () => k(g.ContentDismissActionType.UNKNOWN),
               markAsDismissed: k
             }),
@@ -203,17 +203,17 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_SOUNDBOARD_PERMISSION:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
-              header: O.default.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
-              content: O.default.Messages.SOUNDBOARD_TOOLTIP_BODY,
-              buttonCTA: O.default.Messages.CHECK_IT_OUT,
-              secondaryButtonCTA: O.default.Messages.NO_THANKS,
+              header: R.default.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
+              content: R.default.Messages.SOUNDBOARD_TOOLTIP_BODY,
+              buttonCTA: R.default.Messages.CHECK_IT_OUT,
+              secondaryButtonCTA: R.default.Messages.NO_THANKS,
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: y,
-                className: R.fullWidthImage
+                className: v.fullWidthImage
               }),
               onClick: () => {
-                _.default.open(s.id, T.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), O.default.Messages.USE_SOUNDBOARD)
+                _.default.open(s.id, T.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), R.default.Messages.USE_SOUNDBOARD)
               },
               markAsDismissed: k
             }),

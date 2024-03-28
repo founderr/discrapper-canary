@@ -22,9 +22,9 @@ var a = n("735250"),
   g = n("701861"),
   A = n("437314"),
   N = n("696577"),
-  O = n("163417"),
-  v = n("492347"),
-  R = n("42575"),
+  R = n("163417"),
+  O = n("492347"),
+  v = n("42575"),
   L = n("617015"),
   P = n("981631"),
   M = n("689938"),
@@ -37,8 +37,8 @@ t.default = function(e) {
     analyticsLocations: l
   } = (0, h.default)(E.default.FRIENDS_LIST), {
     rows: D,
-    section: b
-  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), x = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, p.useIsClearIncomingFriendRequestsEnabled)(), [G, w] = s.useState(() => {
+    section: x
+  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, p.useIsClearIncomingFriendRequestsEnabled)(), [G, w] = s.useState(() => {
     let e = {};
     for (let t of Object.values(P.FriendsSections)) e[t] = "";
     return e
@@ -60,7 +60,7 @@ t.default = function(e) {
       onClick: () => {
         u.default.setSection(P.FriendsSections.ADD_FRIEND)
       }
-    }, b)]
+    }, x)]
   });
   let H = 0 === B.length && "" !== G[t],
     V = B.filter(e => e.type === P.RelationshipTypes.PENDING_INCOMING).length,
@@ -77,7 +77,7 @@ t.default = function(e) {
         size: I.default.Sizes.MEDIUM
       }), t === P.FriendsSections.ONLINE && "" === G[t] && (0, a.jsx)(_.default, {}), (0, a.jsxs)("div", {
         className: y.sectionTitle,
-        children: [(0, a.jsx)(v.default, {
+        children: [(0, a.jsx)(O.default, {
           id: n,
           title: function(e, t) {
             switch (e) {
@@ -118,8 +118,8 @@ t.default = function(e) {
         className: y.emptyStateContainer,
         children: (0, a.jsx)(A.default, {
           type: A.FriendsSearchStatus.SECTION_NO_RESULTS
-        }, b)
-      }) : (0, a.jsx)(O.default, {
+        }, x)
+      }) : (0, a.jsx)(R.default, {
         relationshipCount: U,
         statusSections: [B],
         renderRow: function(e) {
@@ -127,24 +127,24 @@ t.default = function(e) {
             case P.FriendsSections.BLOCKED:
               return (0, a.jsx)(T.default, {
                 ...e,
-                isFocused: x
+                isFocused: b
               });
             case P.FriendsSections.PENDING:
               return (0, a.jsx)(N.default, {
                 ...e,
-                isFocused: x
+                isFocused: b
               });
             case P.FriendsSections.SUGGESTIONS:
-              return (0, a.jsx)(R.default, {
+              return (0, a.jsx)(v.default, {
                 ...e,
-                isFocused: x
+                isFocused: b
               });
             case P.FriendsSections.ONLINE:
             case P.FriendsSections.ALL:
             default:
               return (0, a.jsx)(g.default, {
                 ...e,
-                isFocused: x
+                isFocused: b
               })
           }
         },

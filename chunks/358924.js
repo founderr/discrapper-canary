@@ -20,16 +20,16 @@ var a, s, l = n("735250"),
   g = n("952561"),
   A = n("513202"),
   N = n("906732"),
-  O = n("812206"),
-  v = n("933557"),
-  R = n("102172"),
+  R = n("812206"),
+  O = n("933557"),
+  v = n("102172"),
   L = n("871118"),
   P = n("849171"),
   M = n("314897"),
   y = n("592125"),
   D = n("594174"),
-  b = n("368874"),
-  x = n("366695"),
+  x = n("368874"),
+  b = n("366695"),
   U = n("366966"),
   j = n("446753"),
   G = n("619271"),
@@ -262,7 +262,7 @@ es.Header = ea, es.Body = e => {
     partySize: u,
     members: d,
     onChannelContextMenu: f
-  } = e, E = i.useRef(null), h = (0, v.default)(s, !0);
+  } = e, E = i.useRef(null), h = (0, O.default)(s, !0);
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
       className: q.voiceSection,
@@ -402,7 +402,7 @@ es.Header = ea, es.Body = e => {
     } = a;
   if (null != f && (0, p.default)(a)) {
     var _;
-    t = (0, l.jsx)(b.default, {
+    t = (0, l.jsx)(x.default, {
       className: q.twitchSectionPreviewWrapper,
       aspectRatio: 16 / 9,
       children: (0, l.jsxs)(c.Clickable, {
@@ -449,7 +449,7 @@ es.Header = ea, es.Body = e => {
     applicationStream: i,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(i.channelId)), [f, E] = (0, R.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
+  } = e, d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(i.channelId)), [f, E] = (0, v.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
     onClick: f ? r : void 0,
     className: q.applicationStreamingPreviewWrapper,
     children: [(0, l.jsx)(L.default, {
@@ -459,7 +459,7 @@ es.Header = ea, es.Body = e => {
       className: q.applicationStreamingHoverWrapper,
       children: (0, l.jsx)("div", {
         className: q.applicationStreamingHoverText,
-        children: (0, R.getStreamCTAString)(E)
+        children: (0, v.getStreamCTAString)(E)
       })
     })]
   }), _ = null !== (n = null === (t = (0, T.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
@@ -497,7 +497,7 @@ es.Header = ea, es.Body = e => {
       analyticsLocations: m
     } = (0, N.default)();
   if (null == f) return null;
-  let S = O.default.getApplication(f);
+  let S = R.default.getApplication(f);
   if (null == S) return null;
   let I = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
@@ -506,9 +506,9 @@ es.Header = ea, es.Body = e => {
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
-      children: [(0, l.jsx)(x.default, {
+      children: [(0, l.jsx)(b.default, {
         game: S,
-        size: x.default.Sizes.XSMALL,
+        size: b.default.Sizes.XSMALL,
         className: q.embeddedActivityIcon
       }), (0, l.jsx)("div", {
         className: q.embeddedActivityName,

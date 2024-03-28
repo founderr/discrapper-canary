@@ -26,16 +26,16 @@ var a = n("735250"),
   g = n("440051"),
   A = n("734934"),
   N = n("158238"),
-  O = n("785717"),
-  v = n("318661"),
-  R = n("747074"),
+  R = n("785717"),
+  O = n("318661"),
+  v = n("747074"),
   L = n("192133"),
   P = n("138394"),
   M = n("131640"),
   y = n("695346"),
   D = n("199902"),
-  b = n("293273"),
-  x = n("158776"),
+  x = n("293273"),
+  b = n("158776"),
   U = n("594174"),
   j = n("881201"),
   G = n("26290"),
@@ -153,18 +153,18 @@ function X(e) {
     onClose: o,
     onSelect: h,
     closePopout: D
-  } = e, b = (0, _.useAnalyticsContext)(), U = (0, v.default)(t.id, l), {
+  } = e, x = (0, _.useAnalyticsContext)(), U = (0, O.default)(t.id, l), {
     UserProfileAnalyticsProvider: k,
     trackUserProfileAction: B
-  } = (0, O.useUserProfileAnalyticsProvider)({
+  } = (0, R.useUserProfileAnalyticsProvider)({
     layout: "ACCOUNT_POPOUT",
     newAnalyticsLocations: [I.default.ACCOUNT_PROFILE_POPOUT],
     userId: t.id,
     guildId: l
-  }), [X, J, $, ee] = (0, c.useStateFromStoresArray)([x.default], () => {
+  }), [X, J, $, ee] = (0, c.useStateFromStoresArray)([b.default], () => {
     var e;
     let n = t.id;
-    return "string" != typeof n ? [void 0, void 0, Y.StatusTypes.UNKNOWN, !1] : [null !== (e = x.default.findActivity(n, e => e.type !== Y.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, x.default.findActivity(t.id, e => e.type === Y.ActivityTypes.CUSTOM_STATUS), x.default.getStatus(n), x.default.isMobileOnline(n)]
+    return "string" != typeof n ? [void 0, void 0, Y.StatusTypes.UNKNOWN, !1] : [null !== (e = b.default.findActivity(n, e => e.type !== Y.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, b.default.findActivity(t.id, e => e.type === Y.ActivityTypes.CUSTOM_STATUS), b.default.getStatus(n), b.default.isMobileOnline(n)]
   }), et = function(e, t) {
     let n = g.ExpiringStatusExperiment.useExperiment({
         location: "account popout"
@@ -250,7 +250,7 @@ function X(e) {
         children: c
       }, "quiet-mode") : null]
     })
-  }($, b), {
+  }($, x), {
     ref: en
   } = (0, C.default)(), ea = (0, m.default)(en);
   s.useEffect(() => {
@@ -262,7 +262,7 @@ function X(e) {
       is_streaming: r,
       application_name: null != X ? X.name : void 0,
       profile_has_nitro_customization: (null == U ? void 0 : U.banner) != null,
-      location: b.location,
+      location: x.location,
       has_profile_effect: (null == U ? void 0 : U.profileEffectId) != null
     })
   }, []);
@@ -280,7 +280,7 @@ function X(e) {
       className: z.popoutContainer,
       children: (0, a.jsx)("div", {
         ref: en,
-        children: (0, a.jsxs)(R.default, {
+        children: (0, a.jsxs)(v.default, {
           user: t,
           profileType: W.UserProfileTypes.POPOUT,
           children: [(0, a.jsx)(M.default, {
@@ -293,7 +293,7 @@ function X(e) {
             disableUserProfileLink: __OVERLAY__,
             isHovering: ea,
             showPremiumBadgeUpsell: !1
-          }), (0, a.jsxs)(R.default.Inner, {
+          }), (0, a.jsxs)(v.default.Inner, {
             children: [(0, a.jsx)(L.default, {
               activity: X,
               customStatusActivity: J,
@@ -399,7 +399,7 @@ function J(e) {
     guildId: l,
     onClose: i,
     onSelect: r
-  } = e, u = (0, c.useStateFromStores)([U.default], () => U.default.getUser(t), [t]), d = (0, c.useStateFromStores)([b.default], () => b.default.getCustomStatusActivity()), [f, E] = s.useState(!1), _ = null != u ? u : n, C = (0, c.useStateFromStores)([D.default], () => null != _ && null != D.default.getAnyStreamForUser(_.id));
+  } = e, u = (0, c.useStateFromStores)([U.default], () => U.default.getUser(t), [t]), d = (0, c.useStateFromStores)([x.default], () => x.default.getCustomStatusActivity()), [f, E] = s.useState(!1), _ = null != u ? u : n, C = (0, c.useStateFromStores)([D.default], () => null != _ && null != D.default.getAnyStreamForUser(_.id));
   return (s.useEffect(() => {
     null == u && e();
     async function e() {

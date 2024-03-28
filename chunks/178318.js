@@ -37,14 +37,14 @@ let T = f.default.requireModule("discord_rpc").RPCWebSocket,
   A = new d.default("RPCServer:WSS"),
   N = [];
 
-function O(e) {
+function R(e) {
   return "function" == typeof e ? e() : e
 }
 
-function v() {
+function O() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
     t = e > 0 ? void 0 : () => {
-      if (!O(s.listening)) return;
+      if (!R(s.listening)) return;
       let e = s.address().port;
       A.info("Starting on ".concat(e)), u.default.dispatch({
         type: "RPC_SERVER_READY",
@@ -54,11 +54,11 @@ function v() {
   s.listen(S.RPC_STARTING_PORT + e % S.RPC_PORT_RANGE, "127.0.0.1", t)
 }
 
-function R(e, t, n) {
+function v(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
     s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-    l = null != O(e.headers).origin ? {
-      "Access-Control-Allow-Origin": O(e.headers).origin,
+    l = null != R(e.headers).origin ? {
+      "Access-Control-Allow-Origin": R(e.headers).origin,
       "Access-Control-Allow-Credentials": "true",
       "Access-Control-Allow-Methods": "POST, GET, PUT, PATCH, DELETE",
       "Access-Control-Allow-Headers": "Content-Type, Authorization"
@@ -71,7 +71,7 @@ function R(e, t, n) {
 
 function L(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-  R(e, t, {
+  v(e, t, {
     code: s,
     message: a
   }, n)
@@ -111,9 +111,9 @@ class M extends _.default {
 }
 class y extends l.EventEmitter {
   handleRequest(e, t) {
-    let [n, a] = O(e.url).split("?"), s = O(e.method);
+    let [n, a] = R(e.url).split("?"), s = R(e.method);
     if ("/rpc" === n && "OPTIONS" === s) {
-      R(e, t, {
+      v(e, t, {
         body: ""
       });
       return
@@ -121,7 +121,7 @@ class y extends l.EventEmitter {
     let l = "POST" === s;
     if ("/rpc" === n && ("GET" === s || l)) {
       let n = new URLSearchParams(a),
-        s = l ? O(e.headers)["content-type"].split("/")[1] : "json",
+        s = l ? R(e.headers)["content-type"].split("/")[1] : "json",
         r = function() {
           var e;
           let {
@@ -130,8 +130,8 @@ class y extends l.EventEmitter {
           } = o.parse(null !== (e = n.get("callback")) && void 0 !== e ? e : "");
           a === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", g), t.writeHead(301), t.end()
         },
-        u = new M(l ? R.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
-      if (l)(0, C.validateSocketClient)(u, O(e.headers).origin, n.get("client_id")).then(() => {
+        u = new M(l ? v.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
+      if (l)(0, C.validateSocketClient)(u, R(e.headers).origin, n.get("client_id")).then(() => {
         let n = "";
         e.on("data", e => n += e), e.on("error", () => L(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(u, n))
       }).catch(e => {
@@ -152,8 +152,8 @@ class y extends l.EventEmitter {
   handleConnection(e) {
     var t, n;
     let a;
-    let s = new URLSearchParams(O(e.upgradeReq).url.split("?")[1]),
-      l = null !== (t = O(e.upgradeReq).headers.origin) && void 0 !== t ? t : "";
+    let s = new URLSearchParams(R(e.upgradeReq).url.split("?")[1]),
+      l = null !== (t = R(e.upgradeReq).headers.origin) && void 0 !== t ? t : "";
     try {
       a = new P(e, Number(s.get("v")), null !== (n = s.get("encoding")) && void 0 !== n ? n : "json")
     } catch (t) {
@@ -188,8 +188,8 @@ class y extends l.EventEmitter {
     super();
     let t = 0;
     (s = T.http.createServer()).on("error", e => {
-      A.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => v(++t), 1e3)
-    }), s.on("request", this.handleRequest.bind(this)), v(t);
+      A.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => O(++t), 1e3)
+    }), s.on("request", this.handleRequest.bind(this)), O(t);
     let n = {
       instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
       server: s

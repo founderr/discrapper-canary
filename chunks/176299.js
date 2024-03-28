@@ -26,16 +26,16 @@ var a = n("735250"),
   g = n("626421"),
   A = n("118379"),
   N = n("652515"),
-  O = n("544978"),
-  v = n("194729"),
-  R = n("668940"),
+  R = n("544978"),
+  O = n("194729"),
+  v = n("668940"),
   L = n("372900"),
   P = n("6039"),
   M = n("637853"),
   y = n("326145"),
   D = n("102267"),
-  b = n("362416"),
-  x = n("416568"),
+  x = n("362416"),
+  b = n("416568"),
   U = n("613609"),
   j = n("160404"),
   G = n("225675"),
@@ -103,19 +103,19 @@ let ep = () => (0, a.jsx)("div", {
     name: "MemberSafetyPage",
     renderLoader: ep
   }),
-  eO = (0, d.makeLazy)({
+  eR = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("75475"), n.e("58227"), n.e("38359"), n.e("35809")]).then(n.bind(n, "603072")),
     webpackId: "603072",
     name: "ChannelsAndRolesPage",
     renderLoader: ep
   }),
-  ev = (0, d.makeLazy)({
+  eO = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("75475"), n.e("19878"), n.e("38359"), n.e("50498")]).then(n.bind(n, "599263")),
     webpackId: "599263",
     name: "GuildOnboardingPage",
     renderLoader: ep
   }),
-  eR = e => {
+  ev = e => {
     let {
       match: t
     } = e, n = (0, f.useStateFromStores)([$.default, en.default], () => {
@@ -130,9 +130,9 @@ let ep = () => (0, a.jsx)("div", {
       let e = j.default.getData(s);
       if ((null == e ? void 0 : e.type) === G.ImpersonateType.SERVER_SHOP) switch (e.initialTab) {
         case "role_subscriptions":
-          return O.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS;
+          return R.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS;
         case "guild_products":
-          return O.GuildShopTab.GUILD_PRODUCTS;
+          return R.GuildShopTab.GUILD_PRODUCTS;
         default:
           return
       }
@@ -141,7 +141,7 @@ let ep = () => (0, a.jsx)("div", {
       case e_.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
         return d ? (0, a.jsx)(eT, {
           guildId: s,
-          initialTab: O.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
+          initialTab: R.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
         }) : (0, a.jsx)(D.default, {
           guildId: s
         });
@@ -160,16 +160,16 @@ let ep = () => (0, a.jsx)("div", {
           guildId: s
         });
       case e_.StaticChannelRoute.CHANNEL_BROWSER:
-        return (0, a.jsx)(eO, {
+        return (0, a.jsx)(eR, {
           guildId: s,
           selectedSection: eC.GuildOnboardingTab.BROWSE
         });
       case e_.StaticChannelRoute.GUILD_ONBOARDING:
-        return (0, a.jsx)(ev, {
+        return (0, a.jsx)(eO, {
           guildId: s
         });
       case e_.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-        return (0, a.jsx)(eO, {
+        return (0, a.jsx)(eR, {
           guildId: s,
           selectedSection: eC.GuildOnboardingTab.CUSTOMIZE
         });
@@ -200,7 +200,7 @@ let ep = () => (0, a.jsx)("div", {
     } = (0, Z.default)(), n = (0, f.useStateFromStores)([en.default], () => null != t ? t : en.default.getChannelId(e));
     return function() {
       return window.location.pathname.startsWith(eh.Routes.GUILD_DISCOVERY)
-    }() ? (0, a.jsx)(R.default, {}) : null != e ? (0, a.jsx)(b.default, {
+    }() ? (0, a.jsx)(v.default, {}) : null != e ? (0, a.jsx)(x.default, {
       selectedChannelId: n,
       guildId: e
     }, e) : (0, a.jsx)(ed.default, {})
@@ -218,12 +218,12 @@ function eP(e) {
     guildId: t
   })
 }
-let eM = e => (0, a.jsx)(eR, {
+let eM = e => (0, a.jsx)(ev, {
     ...e
   }),
   ey = e => {
     let t = null != e && e.length > 0 && e.startsWith("?") ? e.split("?")[1] : null;
-    return (0, a.jsx)(v.default, {
+    return (0, a.jsx)(O.default, {
       searchRoute: t
     })
   },
@@ -236,7 +236,7 @@ let eM = e => (0, a.jsx)(eR, {
       inviteCode: t.params.inviteCode
     }) : null
   },
-  eb = e => {
+  ex = e => {
     let {
       match: t
     } = e;
@@ -245,7 +245,7 @@ let eM = e => (0, a.jsx)(eR, {
       inviteCode: t.params.inviteCode
     }) : null
   },
-  ex = () => (0, a.jsx)(ef.default, {}),
+  eb = () => (0, a.jsx)(ef.default, {}),
   eU = () => (0, a.jsx)(eE.default, {}),
   ej = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -379,7 +379,7 @@ function eY() {
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsxs)("div", {
       className: eI.container,
-      children: [h && !E && (0, a.jsx)(x.default, {
+      children: [h && !E && (0, a.jsx)(b.default, {
         className: eI.guilds,
         themeOverride: n
       }), (0, a.jsx)(L.default.Provider, {
@@ -423,7 +423,7 @@ function eY() {
                   impressionName: u.ImpressionNames.ACTIVITIES
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.APPLICATION_LIBRARY,
-                  render: ex,
+                  render: eb,
                   impressionName: u.ImpressionNames.APPLICATION_LIBRARY,
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
@@ -479,7 +479,7 @@ function eY() {
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"),
-                  render: eb,
+                  render: ex,
                   impressionName: u.ImpressionNames.HUB_EMAIL_SIGNUP,
                   impressionProperties: e => {
                     let {

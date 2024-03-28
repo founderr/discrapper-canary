@@ -22,9 +22,9 @@ var a = n("735250"),
   g = n("240351"),
   A = n("792258"),
   N = n("657825"),
-  O = n("198952"),
-  v = n("329242"),
-  R = n("895328"),
+  R = n("198952"),
+  O = n("329242"),
+  v = n("895328"),
   L = n("292352"),
   P = n("981631"),
   M = n("689938"),
@@ -52,7 +52,7 @@ function D() {
   })
 }
 
-function b(e) {
+function x(e) {
   let {
     displayType: t
   } = e, n = s.useCallback(() => {
@@ -68,8 +68,8 @@ function b(e) {
     I(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i()(E, "No text for action type");
-  let O = E.sectionHeader(u),
-    v = s.useCallback(e => {
+  let R = E.sectionHeader(u),
+    O = s.useCallback(e => {
       let {
         row: t
       } = e, n = r[t];
@@ -81,29 +81,29 @@ function b(e) {
         guildId: n.entity_id
       }, n.event_id) : void 0
     }, [r, E.timestampFormatter]),
-    R = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
+    v = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Text, {
         className: y.sectionHeader,
         variant: "eyebrow",
         color: "header-secondary",
-        children: O
+        children: R
       }), void 0 !== E.sectionDescription ? (0, a.jsx)(o.Text, {
         className: y.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
         children: E.sectionDescription(null != l && l, T)
       }) : null]
-    }), [O, E, l, T]);
+    }), [R, E, l, T]);
   if (0 === r.length) return null;
   let P = r.slice(0, C);
   return (0, a.jsxs)("div", {
     className: y.actionSection,
-    children: [R(), (0, a.jsx)("div", {
+    children: [v(), (0, a.jsx)("div", {
       className: y.actions,
       style: {
         maxHeight: 65 * P.length
       },
-      children: P.map((e, t) => v({
+      children: P.map((e, t) => O({
         row: t
       }))
     }), P.length !== u ? (0, a.jsx)(o.Clickable, {
@@ -123,7 +123,7 @@ function b(e) {
     }) : null]
   })
 }
-let x = () => {
+let b = () => {
     let e = (0, p.default)(),
       t = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       n = (0, C.useAgeSpecificText)(M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
@@ -151,12 +151,12 @@ let x = () => {
     } = e, l = (0, I.useTeenUserForId)(t);
     return void 0 === l ? null : (0, a.jsxs)("div", {
       className: y.accountRow,
-      children: [(0, a.jsx)(O.FamilyCenterAvatar, {
+      children: [(0, a.jsx)(R.FamilyCenterAvatar, {
         user: l,
         avatarSize: s
       }), (0, a.jsxs)("div", {
         className: y.headerText,
-        children: [(0, a.jsx)(v.default, {
+        children: [(0, a.jsx)(O.default, {
           user: l
         }), void 0 !== n ? (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
@@ -214,7 +214,7 @@ t.default = e => {
     className: y.container,
     children: [(0, a.jsxs)("div", {
       className: y.connectedCounter,
-      children: [(0, a.jsx)(x, {}), (0, a.jsx)(D, {})]
+      children: [(0, a.jsx)(b, {}), (0, a.jsx)(D, {})]
     }), (0, a.jsxs)("div", {
       className: y.card,
       children: [(0, a.jsx)("div", {
@@ -237,10 +237,10 @@ t.default = e => {
           className: y.activityOverview,
           children: s ? n.map(e => {
             let [t] = e;
-            return (0, a.jsx)(b, {
+            return (0, a.jsx)(x, {
               displayType: t
             }, "".concat(t, "-list"))
-          }) : (0, a.jsx)(R.default, {
+          }) : (0, a.jsx)(v.default, {
             className: y.emptyActivity,
             text: null != i ? i : ""
           })

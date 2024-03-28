@@ -22,16 +22,16 @@ var a = n("735250"),
   g = n("283595"),
   A = n("417363"),
   N = n("941128"),
-  O = n("451478"),
-  v = n("285952"),
-  R = n("366695"),
+  R = n("451478"),
+  O = n("285952"),
+  v = n("366695"),
   L = n("366966"),
   P = n("151011"),
   M = n("774832"),
   y = n("465670"),
   D = n("786048"),
-  b = n("897353"),
-  x = n("424218"),
+  x = n("897353"),
+  b = n("424218"),
   U = n("780570"),
   j = n("353042"),
   G = n("86826"),
@@ -99,7 +99,7 @@ function W(e, t) {
     case w.DispatchApplicationStages.ALLOCATING_DISK:
       return "".concat(e);
     default:
-      return (0, x.formatSize)(e, {
+      return (0, b.formatSize)(e, {
         useKibibytes: !0
       })
   }
@@ -274,8 +274,8 @@ class Z extends s.PureComponent {
       foregroundGradientColor: s,
       message: l
     } = e;
-    return (0, a.jsxs)(v.default, {
-      direction: v.default.Direction.VERTICAL,
+    return (0, a.jsxs)(O.default, {
+      direction: O.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
@@ -293,8 +293,8 @@ class Z extends s.PureComponent {
       percents: t,
       message: n
     } = e;
-    return (0, a.jsxs)(v.default, {
-      direction: v.default.Direction.VERTICAL,
+    return (0, a.jsxs)(O.default, {
+      direction: O.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.StackedProgress, {
         percents: t,
         size: f.Progress.Sizes.SMALL,
@@ -369,8 +369,8 @@ class Z extends s.PureComponent {
     let s = U.calculateProgressPercentage(n, a),
       l = 0 === n && 1 === a ? k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED_NO_TRANSITION : k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED.format({
         percent: Math.floor(s),
-        progress: (0, x.formatSize)(n),
-        total: (0, x.formatSize)(a)
+        progress: (0, b.formatSize)(n),
+        total: (0, b.formatSize)(a)
       });
     return this.renderBody({
       message: l,
@@ -469,7 +469,7 @@ class Z extends s.PureComponent {
   }
 }
 let X = () => (0, a.jsx)(Y, {
-    icon: b.default,
+    icon: x.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
     onClick: () => _.resume()
   }),
@@ -501,12 +501,12 @@ let X = () => (0, a.jsx)(Y, {
   et = [{
     key: Q.NAME,
     cellClassName: F.nameCell,
-    render: e => (0, a.jsxs)(v.default, {
-      align: v.default.Align.CENTER,
-      children: [(0, a.jsx)(R.default, {
+    render: e => (0, a.jsxs)(O.default, {
+      align: O.default.Align.CENTER,
+      children: [(0, a.jsx)(v.default, {
         game: e.application,
         className: F.__invalid_gameIcon,
-        size: R.default.Sizes.SMALL
+        size: v.default.Sizes.SMALL
       }), (0, a.jsx)("div", {
         className: F.nameCellText,
         children: e.application.name
@@ -539,8 +539,8 @@ let X = () => (0, a.jsx)(Y, {
         item: e
       })) : s = (0, a.jsx)(ee, {
         item: e
-      }), (0, a.jsxs)(v.default, {
-        justify: v.default.Justify.END,
+      }), (0, a.jsxs)(O.default, {
+        justify: O.default.Justify.END,
         children: [n, s]
       })
     }
@@ -649,12 +649,12 @@ function ea(e, t, n, a) {
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([I.default, A.default, N.default, T.default, O.default], () => {
+t.default = (0, S.default)(u.default.connectStores([I.default, A.default, N.default, T.default, R.default], () => {
   let e = ea(N.default.activeItems, !1, I.default, A.default);
   return {
     applications: [...e, ...ea(N.default.finishedItems, !0, I.default, A.default)],
     paused: N.default.paused,
-    isFocused: O.default.isFocused(),
+    isFocused: R.default.isFocused(),
     theme: T.default.theme
   }
 })((0, m.default)(en)))

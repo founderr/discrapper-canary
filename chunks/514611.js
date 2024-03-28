@@ -21,10 +21,10 @@ var a, s = n("735250"),
   g = n("689938"),
   A = n("313618"),
   N = n("129512"),
-  O = n("330065"),
-  v = n("755386");
+  R = n("330065"),
+  O = n("755386");
 
-function R(e, t, n) {
+function v(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -34,12 +34,12 @@ function R(e, t, n) {
 }
 class L extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
-    if (t) return v;
+    if (t) return O;
     switch (e) {
       case T.ThemeTypes.DARK:
         return N;
       case T.ThemeTypes.LIGHT:
-        return O
+        return R
     }
   }
   render() {
@@ -53,10 +53,10 @@ class L extends(a = l.PureComponent) {
       loaded: i,
       hasBeenSeen: d,
       isVisible: N,
-      submitting: O
+      submitting: R
     } = this.state, {
-      name: v,
-      description: R,
+      name: O,
+      description: v,
       presenceCount: L,
       memberCount: P,
       keywords: M
@@ -64,7 +64,7 @@ class L extends(a = l.PureComponent) {
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), b = null != D ? D : this.getDefaultSplashURL(a, y), x = m.default.getGuildIconURL({
+    }), x = null != D ? D : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -102,13 +102,13 @@ class L extends(a = l.PureComponent) {
             [A.loaded]: i,
             [A.loading]: !i
           }),
-          children: [O ? (0, s.jsx)(u.Spinner, {
+          children: [R ? (0, s.jsx)(u.Spinner, {
             type: u.Spinner.Type.PULSING_ELLIPSIS,
             className: A.spinner
           }) : null, (0, s.jsxs)(u.Clickable, {
             onClick: this.handleClickView,
             className: r()(A.card, {
-              [A.submitting]: O,
+              [A.submitting]: R,
               [A.cardWithTags]: U
             }),
             onContextMenu: this.handleContextMenu,
@@ -117,7 +117,7 @@ class L extends(a = l.PureComponent) {
               children: [(0, s.jsx)("div", {
                 className: A.splash,
                 children: (0, s.jsx)("img", {
-                  src: b,
+                  src: x,
                   alt: "",
                   className: r()(A.splashImage, {
                     [A.splashImageHeight]: !y
@@ -144,7 +144,7 @@ class L extends(a = l.PureComponent) {
                       width: 40,
                       height: 40,
                       children: (0, s.jsx)("img", {
-                        src: x,
+                        src: b,
                         alt: "",
                         className: A.avatar
                       })
@@ -163,13 +163,13 @@ class L extends(a = l.PureComponent) {
                 }), (0, s.jsx)(u.Heading, {
                   variant: "heading-md/semibold",
                   className: A.guildName,
-                  children: v
+                  children: O
                 })]
               }), (0, s.jsx)(u.Text, {
                 className: A.description,
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: R
+                children: v
               }), U && null != M && null != l && (0, s.jsx)(E.DiscoveryTags, {
                 tags: M,
                 onTagClick: e => l(e, t.id),
@@ -212,12 +212,12 @@ class L extends(a = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), R(this, "state", {
+    super(...e), v(this, "state", {
       loaded: !1,
       hasBeenSeen: !1,
       isVisible: !1,
       submitting: !1
-    }), R(this, "handleClickView", async e => {
+    }), v(this, "handleClickView", async e => {
       let {
         className: t
       } = e.target;
@@ -236,7 +236,7 @@ class L extends(a = l.PureComponent) {
           submitting: !1
         })
       }
-    }), R(this, "handleVisibilityChange", e => {
+    }), v(this, "handleVisibilityChange", e => {
       let {
         onGuildCardSeen: t,
         guild: n
@@ -244,7 +244,7 @@ class L extends(a = l.PureComponent) {
       null != n && !this.state.hasBeenSeen && e && (this.setState({
         hasBeenSeen: e
       }), null != t && t(n.id))
-    }), R(this, "handleContextMenu", e => {
+    }), v(this, "handleContextMenu", e => {
       (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -254,13 +254,13 @@ class L extends(a = l.PureComponent) {
           guild: this.props.guild
         })
       })
-    }), R(this, "setIsVisible", e => {
+    }), v(this, "setIsVisible", e => {
       this.setState({
         isVisible: e
       })
     })
   }
 }
-R(L, "Placeholder", e => (0, s.jsx)("div", {
+v(L, "Placeholder", e => (0, s.jsx)("div", {
   className: r()(e.className, A.cardPlaceholder)
 })), t.default = L
