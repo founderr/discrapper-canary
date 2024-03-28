@@ -44,8 +44,6 @@ function C(e, t) {
     if (("number" == typeof n.emoji.id ? "".concat(n.emoji.id) : n.emoji.id) === t) return n
 }
 let A = e => (0, s.match)(e).with({
-  isInteractive: !1
-}, () => "normalVote").with({
   isExpired: !0,
   isLeader: !0,
   didSelfVote: !0
@@ -101,7 +99,7 @@ function M(e, t) {
   let I = d.size > 0,
     N = T.some(e => !0 === e.me_vote),
     C = !f && N,
-    A = m && (C || u || _);
+    A = C || u || _;
   return {
     poll: l,
     canTapAnswers: i && (!N || f || A),
@@ -178,7 +176,6 @@ function R(e, t) {
         didSelfVote: m,
         hasVoted: G,
         isExpired: F,
-        isInteractive: k,
         isSelected: _,
         isLeader: T,
         showResults: K
@@ -266,10 +263,12 @@ function R(e, t) {
     enabled: U,
     type: "submit"
   })), X = (0, s.match)({
+    isExpired: F,
     isInteractive: k,
     isEditingVote: B
   }).with({
-    isInteractive: !1
+    isInteractive: !1,
+    isExpired: !1
   }, () => ({
     label: N.default.Messages.POLL_NOT_INTERACTIVE,
     presentation: "text",
