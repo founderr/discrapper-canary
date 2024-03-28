@@ -1,148 +1,172 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return i
-  }
-}), n("70102"), n("222007");
-var i, s = n("595275"),
-  r = n("773364"),
-  a = n("353927");
-
-function o(e) {
-  return null
-}
-
-function l(e) {
-  return null
-}
-i = class extends s.default {
-  destroy() {
-    this.emit(r.MediaEngineEvent.Destroy), this.removeAllListeners()
-  }
-  interact() {}
-  supported() {
-    return __OVERLAY__
-  }
-  supports(e) {
-    if (e === a.Features.AUTO_ENABLE) return __OVERLAY__;
-    return !1
-  }
-  connect(e, t, n) {
-    throw Error("NOT_IMPLEMENTED")
-  }
-  eachConnection() {}
-  enable() {
-    return Promise.resolve()
-  }
-  setInputVolume(e) {}
-  setOutputVolume(e) {}
-  getAudioInputDevices() {
-    return Promise.resolve([])
-  }
-  setAudioInputDevice(e) {}
-  getAudioOutputDevices() {
-    return Promise.resolve([])
-  }
-  setAudioOutputDevice(e) {}
-  getVideoInputDevices() {
-    return Promise.resolve([])
-  }
-  setVideoInputDevice(e) {}
-  getSupportedVideoCodecs(e) {
-    e([])
-  }
-  getCodecCapabilities(e) {
-    e("")
-  }
-  getCodecSurvey() {
-    return Promise.reject(Error("getCodecSurvey is not implemented for MediaEngineDummy"))
-  }
-  getAudioSubsystem() {
-    return a.AudioSubsystems.STANDARD
-  }
-  getAudioLayer() {
-    return ""
-  }
-  setGoLiveSource(e, t) {}
-  setClipsSource(e) {}
-  setClipsQualitySettings(e, t, n) {
-    return !1
-  }
-  setDesktopSource(e) {
-    arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.MediaEngineContextTypes.DEFAULT
-  }
-  setSoundshareSource(e, t, n) {}
-  getDesktopSource() {
-    return Promise.reject(Error("NO_STREAM"))
-  }
-  getDesktopSources() {
-    return Promise.reject(Error("NO_STREAM"))
-  }
-  getScreenPreviews(e, t) {
-    return Promise.reject(Error("UNSUPPORTED"))
-  }
-  getWindowPreviews(e, t) {
-    return Promise.reject(Error("UNSUPPORTED"))
-  }
-  setClipBufferLength(e) {}
-  saveClip(e, t) {
-    return Promise.reject(Error("UNSUPPORTED"))
-  }
-  saveClipForUser(e, t, n) {
-    return Promise.reject(Error("UNSUPPORTED"))
-  }
-  updateClipMetadata(e, t) {
-    return Promise.reject(Error("UNSUPPORTED"))
-  }
-  exportClip(e, t) {
-    return Promise.reject(Error("UNSUPPORTED"))
-  }
-  setAudioSubsystem(e) {}
-  getDebugLogging() {
-    return !1
-  }
-  setDebugLogging(e) {}
-  writeAudioDebugState() {
-    return Promise.reject(Error("Audio debug state is not supported."))
-  }
-  setExperimentalAdm(e) {}
-  setLoopback(e, t) {}
-  getLoopback() {
-    return !1
-  }
-  setH264Enabled(e) {}
-  setAv1Enabled(e) {}
-  setH265Enabled(e) {}
-  setExperimentFlag(e, t) {}
-  startAecDump() {}
-  stopAecDump() {}
-  setAecDump(e) {}
-  createReplayConnection(e, t) {
-    throw Error("Connection replay is not supported.")
-  }
-  setUseDirectVideo(e) {}
-  setMaxSyncDelayOverride(e) {}
-  rankRtcRegions(e) {
-    return Promise.reject(Error("RTC region latency test is not supported."))
-  }
-  applyMediaFilterSettings(e) {
-    return Promise.resolve()
-  }
-  startLocalAudioRecording() {
-    return Promise.reject(Error("startLocalAudioRecording is not supported."))
-  }
-  stopLocalAudioRecording(e) {}
-  speedTester(e, t) {
-    throw Error("NOT_IMPLEMENTED")
-  }
-  setHasFullbandPerformance(e) {}
-  getSupportedSecureFramesProtocolVersion() {
-    return 0
-  }
-  getSupportedBandwidthEstimationExperiments(e) {
-    e([])
-  }
-  constructor(...e) {
-    super(...e), this.Video = o, this.Camera = l
+a.r(t), a("47120"), a("411104");
+var n = a("735250"),
+  r = a("470079"),
+  s = a("452079"),
+  l = a("780384"),
+  o = a("481060"),
+  i = a("410030"),
+  u = a("231338"),
+  c = a("689938"),
+  d = a("855321"),
+  p = a("744481"),
+  S = a("724641"),
+  E = a("811974"),
+  m = a("212545"),
+  A = a("184229"),
+  T = a("504309");
+t.default = function(e) {
+  let t = (0, i.default)(),
+    a = r.useRef(null),
+    [y, P] = r.useState({});
+  switch (r.useLayoutEffect(() => {
+      let {
+        current: e
+      } = a;
+      if (null == e) return;
+      let t = window.getComputedStyle(e),
+        n = window.getComputedStyle(e, "::placeholder"),
+        r = t.getPropertyValue("font-family"),
+        s = t.getPropertyValue("font-weight"),
+        l = t.getPropertyValue("color"),
+        o = t.getPropertyValue("font-size");
+      P({
+        base: {
+          fontFamily: r,
+          fontWeight: s,
+          color: l,
+          fontSize: o,
+          backgroundColor: t.getPropertyValue("background-color"),
+          padding: "12px",
+          "::placeholder": {
+            color: n.getPropertyValue("color")
+          }
+        }
+      })
+    }, [a]), e.type) {
+    case u.PaymentSourceTypes.PRZELEWY24: {
+      let r = (0, l.isThemeDark)(t) ? A : T,
+        {
+          onNameChange: i,
+          onEmailChange: u,
+          onP24BankChange: p,
+          p24BankValue: S,
+          billingAddressInfo: E
+        } = e;
+      return (0, n.jsxs)("div", {
+        className: d.body,
+        children: [(0, n.jsx)(o.FormSection, {
+          title: c.default.Messages.EMAIL,
+          children: (0, n.jsx)(o.TextInput, {
+            inputRef: a,
+            name: c.default.Messages.EMAIL,
+            placeholder: c.default.Messages.EMAIL,
+            onChange: e => u(e),
+            value: E.email
+          })
+        }), (0, n.jsx)(o.FormSection, {
+          className: d.nonTopInputWrapper,
+          title: c.default.Messages.CREDIT_CARD_NAME,
+          children: (0, n.jsx)(o.TextInput, {
+            name: c.default.Messages.CREDIT_CARD_NAME,
+            placeholder: c.default.Messages.CREDIT_CARD_NAME,
+            onChange: e => i(e),
+            value: E.name
+          })
+        }), (0, n.jsxs)(o.FormSection, {
+          className: d.nonTopInputWrapper,
+          title: c.default.Messages.PAYMENT_SOURCE_PRZELEWY24_BANK_LABEL,
+          children: [(0, n.jsx)(s.P24BankElement, {
+            options: {
+              value: S,
+              style: y
+            },
+            onChange: e => p(e.value)
+          }), (0, n.jsx)("div", {
+            className: d.bankSelectionStub,
+            children: (0, n.jsx)("img", {
+              src: r,
+              alt: "Przelewy24"
+            })
+          })]
+        })]
+      })
+    }
+    case u.PaymentSourceTypes.EPS: {
+      let {
+        onAccountHolderNameChange: r,
+        onEPSBankChange: i,
+        epsBankValue: u,
+        billingAddressInfo: E
+      } = e, m = (0, l.isThemeDark)(t) ? p : S;
+      return (0, n.jsxs)("div", {
+        className: d.body,
+        children: [(0, n.jsx)(o.FormSection, {
+          title: c.default.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
+          children: (0, n.jsx)(o.TextInput, {
+            inputRef: a,
+            name: c.default.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
+            placeholder: c.default.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
+            onChange: e => r(e),
+            value: E.name
+          })
+        }), (0, n.jsxs)(o.FormSection, {
+          className: d.nonTopInputWrapper,
+          title: c.default.Messages.PAYMENT_SOURCE_EPS_BANK_LABEL,
+          children: [(0, n.jsx)(s.EpsBankElement, {
+            options: {
+              value: u,
+              style: y
+            },
+            onChange: e => i(e.value)
+          }), (0, n.jsx)("div", {
+            className: d.bankSelectionStub,
+            children: (0, n.jsx)("img", {
+              src: m,
+              alt: "EPS"
+            })
+          })]
+        })]
+      })
+    }
+    case u.PaymentSourceTypes.IDEAL: {
+      let {
+        onAccountHolderNameChange: r,
+        onIdealBankChange: i,
+        idealBankValue: u,
+        billingAddressInfo: p
+      } = e, S = (0, l.isThemeDark)(t) ? E : m;
+      return (0, n.jsxs)("div", {
+        className: d.body,
+        children: [(0, n.jsx)(o.FormSection, {
+          title: c.default.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
+          children: (0, n.jsx)(o.TextInput, {
+            inputRef: a,
+            name: c.default.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
+            placeholder: c.default.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
+            onChange: e => r(e),
+            value: p.name
+          })
+        }), (0, n.jsxs)(o.FormSection, {
+          className: d.nonTopInputWrapper,
+          title: c.default.Messages.PAYMENT_SOURCE_IDEAL_BANK_LABEL,
+          children: [(0, n.jsx)(s.IdealBankElement, {
+            options: {
+              value: u,
+              style: y
+            },
+            onChange: e => i(e.value)
+          }), (0, n.jsx)("div", {
+            className: d.bankSelectionStub,
+            children: (0, n.jsx)("img", {
+              src: S,
+              alt: "iDeal"
+            })
+          })]
+        })]
+      })
+    }
+    default:
+      throw Error("unknown payment source type")
   }
 }

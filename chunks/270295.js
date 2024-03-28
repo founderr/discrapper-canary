@@ -1,37 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return o
   }
-});
-var i = n("37983");
-n("884691");
-var l = n("414456"),
-  a = n.n(l),
-  s = n("77078"),
-  r = n("181114"),
-  o = n("915675"),
-  u = n("430628");
+}), n("47120");
+var a = n("470079"),
+  l = n("442837"),
+  s = n("314897"),
+  i = n("471253"),
+  r = n("590415");
 
-function d(e) {
-  let {
-    children: t,
-    className: n,
-    size: l = s.Button.Sizes.MEDIUM,
-    onlyShineOnHover: d = !1,
-    ...c
-  } = e;
-  return (0, i.jsx)(r.default, {
-    ...c,
-    color: s.Button.Colors.CUSTOM,
-    size: l,
-    className: a(u.button, n),
-    onlyShineOnHover: d,
-    children: (0, i.jsxs)("div", {
-      className: u.buttonContents,
-      children: [(0, i.jsx)(o.default, {
-        className: u.icon
-      }), t]
-    })
-  })
+function o(e) {
+  let t = (0, l.useStateFromStores)([s.default], () => s.default.getId()),
+    n = (0, r.default)(t, e.id),
+    o = n === r.RequestToSpeakStates.REQUESTED_TO_SPEAK || n === r.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+    [u, d] = a.useState(o);
+  return a.useEffect(() => {
+    d(o)
+  }, [o]), [u, function() {
+    n === r.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, i.audienceAckRequestToSpeak)(e, !0) : (0, i.toggleRequestToSpeak)(e, !u), d(!u)
+  }]
 }

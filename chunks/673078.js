@@ -1,37 +1,89 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return i
+    return I
   }
-});
-var s = a("37983");
-a("884691");
-var n = a("469563"),
-  l = a("159190"),
-  r = a("75196"),
-  i = (0, n.replaceIcon)(function(e) {
-    let {
-      width: t = 16,
-      height: a = 16,
-      color: n = "currentColor",
-      foreground: l,
-      ...i
-    } = e;
-    return (0, s.jsxs)("svg", {
-      ...(0, r.default)(i),
-      width: t,
-      height: a,
-      viewBox: "0 0 16 16",
-      children: [(0, s.jsx)("path", {
-        className: l,
-        fill: n,
-        d: "M1.93944 14.6655H6.18191C6.51646 14.6655 6.78797 14.394 6.78797 14.0594C6.78797 13.7249 6.51646 13.4534 6.18191 13.4534H3.40249L7.21646 9.63937C7.45313 9.40271 7.45313 9.01906 7.21646 8.7824C7.09828 8.66391 6.94313 8.60482 6.78797 8.60482C6.63282 8.60482 6.47767 8.66391 6.35948 8.7824L2.54551 12.5964V9.81695C2.54551 9.4824 2.27399 9.21089 1.93944 9.21089C1.60489 9.21089 1.33337 9.4824 1.33337 9.81695V14.0594C1.33337 14.394 1.60489 14.6655 1.93944 14.6655Z"
-      }), (0, s.jsx)("path", {
-        className: l,
-        fill: n,
-        d: "M8.78362 7.21512C9.02029 7.45179 9.40393 7.45179 9.6406 7.21512L13.4546 3.40114V6.18056C13.4546 6.51511 13.7261 6.78663 14.0606 6.78663C14.3952 6.78663 14.6667 6.51511 14.6667 6.18056V1.9381C14.6667 1.60355 14.3952 1.33203 14.0606 1.33203L9.81818 1.33203C9.48363 1.33203 9.21211 1.60355 9.21211 1.9381C9.21211 2.27265 9.48363 2.54416 9.81818 2.54416H12.5976L8.78362 6.35814C8.54695 6.59481 8.54695 6.97845 8.78362 7.21512Z"
-      })]
-    })
-  }, l.MaximizeIcon, void 0, {
-    size: 16
+}), a("47120");
+var l = a("735250"),
+  n = a("470079"),
+  s = a("512722"),
+  d = a.n(s),
+  i = a("399606"),
+  r = a("481060"),
+  u = a("668781"),
+  o = a("430824"),
+  _ = a("682864"),
+  c = a("759231"),
+  E = a("495437"),
+  T = a("240864"),
+  f = a("981631"),
+  D = a("689938"),
+  O = a("317361");
+
+function m(e) {
+  let {
+    guildProductListing: t,
+    guildId: a
+  } = e, n = (0, i.useStateFromStores)([o.default], () => {
+    var e;
+    return o.default.getRole(a, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : f.EMPTY_STRING_SNOWFLAKE_ID)
+  });
+  return null == n ? null : (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsxs)(r.Heading, {
+      className: O.warningSectionHeader,
+      variant: "text-md/medium",
+      color: "text-normal",
+      children: [(0, l.jsx)(c.default, {
+        height: 18,
+        width: 18
+      }), (0, l.jsx)(_.default, {
+        horizontal: !0,
+        size: 8
+      }), D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING_HEADER]
+    }), (0, l.jsx)(r.Text, {
+      variant: "text-md/normal",
+      children: D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING.format({
+        roleName: n.name
+      })
+    })]
   })
+}
+
+function I(e) {
+  let {
+    guildId: t,
+    productId: a,
+    ...s
+  } = e, [i] = n.useState(() => T.default.getGuildProduct(a));
+  d()(null != i, "guildProductListing cannot be null");
+  let [o, _] = n.useState(!1), c = async () => {
+    try {
+      _(!0), await E.deleteGuildProductListing(t, a)
+    } catch (e) {
+      u.default.show({
+        title: D.default.Messages.GUILD_PRODUCTS_DELETE_ERROR_TITLE,
+        body: e.message
+      })
+    } finally {
+      _(!1)
+    }
+  };
+  return (0, l.jsxs)(r.ConfirmModal, {
+    ...s,
+    className: O.modalContainer,
+    header: D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_HEADER,
+    confirmText: D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BUTTON,
+    cancelText: D.default.Messages.CANCEL,
+    loading: o,
+    onConfirm: c,
+    children: [(0, l.jsx)(r.Text, {
+      variant: "text-md/normal",
+      children: D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY.format({
+        productName: i.name
+      })
+    }), (0, l.jsx)(m, {
+      guildProductListing: i,
+      guildId: t
+    })]
+  })
+}

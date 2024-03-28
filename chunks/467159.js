@@ -1,5 +1,5 @@
 "use strict";
-e.exports = {
-  crossfade: "crossfade__73f2e",
-  icon: "icon_f082d3"
+t.exports = function(t) {
+  if (null != t) return t;
+  throw Error("Got unexpected null or undefined")
 }

@@ -1,65 +1,34 @@
-var r, a;
-e = n.nmd(e), r = this, a = function(e) {
-  "use strict";
-  var t = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),
-    n = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_");
-  return e.defineLocale("es-us", {
-    months: "enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre".split("_"),
-    monthsShort: function(e, r) {
-      return e ? /-MMM-/.test(r) ? n[e.month()] : t[e.month()] : t
-    },
-    monthsParseExact: !0,
-    weekdays: "domingo_lunes_martes_mi\xe9rcoles_jueves_viernes_s\xe1bado".split("_"),
-    weekdaysShort: "dom._lun._mar._mi\xe9._jue._vie._s\xe1b.".split("_"),
-    weekdaysMin: "do_lu_ma_mi_ju_vi_s\xe1".split("_"),
-    weekdaysParseExact: !0,
-    longDateFormat: {
-      LT: "h:mm A",
-      LTS: "h:mm:ss A",
-      L: "MM/DD/YYYY",
-      LL: "MMMM [de] D [de] YYYY",
-      LLL: "MMMM [de] D [de] YYYY h:mm A",
-      LLLL: "dddd, MMMM [de] D [de] YYYY h:mm A"
-    },
-    calendar: {
-      sameDay: function() {
-        return "[hoy a la" + (1 !== this.hours() ? "s" : "") + "] LT"
-      },
-      nextDay: function() {
-        return "[ma\xf1ana a la" + (1 !== this.hours() ? "s" : "") + "] LT"
-      },
-      nextWeek: function() {
-        return "dddd [a la" + (1 !== this.hours() ? "s" : "") + "] LT"
-      },
-      lastDay: function() {
-        return "[ayer a la" + (1 !== this.hours() ? "s" : "") + "] LT"
-      },
-      lastWeek: function() {
-        return "[el] dddd [pasado a la" + (1 !== this.hours() ? "s" : "") + "] LT"
-      },
-      sameElse: "L"
-    },
-    relativeTime: {
-      future: "en %s",
-      past: "hace %s",
-      s: "unos segundos",
-      ss: "%d segundos",
-      m: "un minuto",
-      mm: "%d minutos",
-      h: "una hora",
-      hh: "%d horas",
-      d: "un d\xeda",
-      dd: "%d d\xedas",
-      M: "un mes",
-      MM: "%d meses",
-      y: "un a\xf1o",
-      yy: "%d a\xf1os"
-    },
-    dayOfMonthOrdinalParse: /\d{1,2}º/,
-    ordinal: "%d\xba",
-    week: {
-      dow: 0,
-      doy: 6
-    }
+"use strict";
+n.r(t), n.d(t, {
+  ChatSpeakIcon: function() {
+    return s
+  }
+});
+var a = n("735250");
+n("470079");
+var i = n("692547"),
+  l = n("331595");
+let s = e => {
+  let {
+    width: t = 24,
+    height: n = 24,
+    color: s = i.default.colors.INTERACTIVE_NORMAL,
+    colorClass: u = "",
+    ...r
+  } = e;
+  return (0, a.jsx)("svg", {
+    ...(0, l.default)(r),
+    xmlns: "http://www.w3.org/2000/svg",
+    width: t,
+    height: n,
+    fill: "none",
+    viewBox: "0 0 24 24",
+    children: (0, a.jsx)("path", {
+      fill: "string" == typeof s ? s : s.css,
+      fillRule: "evenodd",
+      d: "M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Zm2-5.26c0 .61.56 1.09 1.14.87a6 6 0 0 0 0-11.22c-.58-.22-1.14.26-1.14.87v.1c0 .45.32.83.73 1.03a4 4 0 0 1 0 7.22c-.41.2-.73.58-.73 1.04v.09Zm0-3.32c0 .69.7 1.15 1.18.65a2.99 2.99 0 0 0 0-4.14c-.48-.5-1.18-.04-1.18.65v2.84ZM12 7a1 1 0 0 0-1-1h-.05a1 1 0 0 0-.75.34L7.87 9H6a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h1.87l2.33 2.66a1 1 0 0 0 .75.34H11a1 1 0 0 0 1-1V7Z",
+      clipRule: "evenodd",
+      className: u
+    })
   })
-}, "object" == typeof t && void 0 !== e ? a(n("866227")) : "function" == typeof define && define.amd ? define(["../moment"], a) : a(r.moment)
+}

@@ -1,176 +1,172 @@
 "use strict";
-n.r(t), n.d(t, {
-  useGuildHomeExperiment: function() {
-    return _
+var r, a, o, i, l = n("67867"),
+  u = n("414629"),
+  s = n("42433"),
+  c = n("668530"),
+  d = n("570596"),
+  f = n("691244"),
+  p = n("600385"),
+  h = n("414847"),
+  m = n("187592"),
+  y = n("548828"),
+  v = n("735471"),
+  g = n("982665"),
+  b = n("13780"),
+  _ = n("992416"),
+  k = n("62691").set,
+  C = n("584831"),
+  w = n("502856"),
+  S = n("139545"),
+  N = n("6938"),
+  x = n("29461"),
+  P = n("197859"),
+  A = n("732116"),
+  R = n("653457"),
+  F = "Promise",
+  O = A.CONSTRUCTOR,
+  E = A.REJECTION_EVENT,
+  I = A.SUBCLASSING,
+  M = x.getterFor(F),
+  T = x.set,
+  B = P && P.prototype,
+  D = P,
+  L = B,
+  V = c.TypeError,
+  j = c.document,
+  U = c.process,
+  q = R.f,
+  K = q,
+  H = !!(j && j.createEvent && c.dispatchEvent),
+  z = "unhandledrejection",
+  W = function(e) {
+    var t;
+    return !!(g(e) && v(t = e.then)) && t
   },
-  canSeeGuildHome: function() {
-    return f
+  G = function(e, t) {
+    var n, r, a, o = t.value,
+      i = 1 === t.state,
+      l = i ? e.ok : e.fail,
+      u = e.resolve,
+      s = e.reject,
+      c = e.domain;
+    try {
+      l ? (!i && (2 === t.rejection && J(t), t.rejection = 1), !0 === l ? n = o : (c && c.enter(), n = l(o), c && (c.exit(), a = !0)), n === e.promise ? s(new V("Promise-chain cycle")) : (r = W(n)) ? d(r, n, u, s) : u(n)) : s(o)
+    } catch (e) {
+      c && !a && c.exit(), s(e)
+    }
   },
-  GuildFeedRenderSelectorExperiment: function() {
-    return E
+  $ = function(e, t) {
+    !e.notified && (e.notified = !0, C(function() {
+      for (var n, r = e.reactions; n = r.get();) G(n, e);
+      e.notified = !1, t && !e.rejection && Q(e)
+    }))
   },
-  GuildHomeBadgeExperiment: function() {
-    return h
+  Y = function(e, t, n) {
+    var r, a;
+    H ? ((r = j.createEvent("Event")).promise = t, r.reason = n, r.initEvent(e, !1, !0), c.dispatchEvent(r)) : r = {
+      promise: t,
+      reason: n
+    }, !E && (a = c["on" + e]) ? a(r) : e === z && w("Unhandled promise rejection", n)
   },
-  GuildHomeFeedbackExperiment: function() {
-    return g
+  Q = function(e) {
+    d(k, c, function() {
+      var t, n = e.facade,
+        r = e.value;
+      if (Z(e) && (t = S(function() {
+          s ? U.emit("unhandledRejection", r, n) : Y(z, n, r)
+        }), e.rejection = s || Z(e) ? 2 : 1, t.error)) throw t.value
+    })
   },
-  GuildHomeDeprecationExperiment: function() {
-    return m
-  }
-});
-var i = n("446674"),
-  s = n("203288"),
-  r = n("862205"),
-  a = n("21121"),
-  o = n("934306"),
-  l = n("923959"),
-  u = n("305961"),
-  d = n("49111");
-
-function c(e, t, n) {
-  let i = t.getChannels(e)[l.GUILD_SELECTABLE_CHANNELS_KEY].filter(t => {
-    let {
-      channel: i
-    } = t;
-    return !n.isChannelGated(e, i.id)
+  Z = function(e) {
+    return 1 !== e.rejection && !e.parent
+  },
+  J = function(e) {
+    d(k, c, function() {
+      var t = e.facade;
+      s ? U.emit("rejectionHandled", t) : Y("rejectionhandled", t, e.value)
+    })
+  },
+  X = function(e, t, n) {
+    return function(r) {
+      e(t, r, n)
+    }
+  },
+  ee = function(e, t, n) {
+    !e.done && (e.done = !0, n && (e = n), e.value = t, e.state = 2, $(e, !0))
+  },
+  et = function(e, t, n) {
+    if (!e.done) {
+      e.done = !0, n && (e = n);
+      try {
+        if (e.facade === t) throw new V("Promise can't be resolved itself");
+        var r = W(t);
+        r ? C(function() {
+          var n = {
+            done: !1
+          };
+          try {
+            d(r, t, X(et, n, e), X(ee, n, e))
+          } catch (t) {
+            ee(n, t, e)
+          }
+        }) : (e.value = t, e.state = 1, $(e, !1))
+      } catch (t) {
+        ee({
+          done: !1
+        }, t, e)
+      }
+    }
+  };
+if (O && (L = (D = function(e) {
+    b(this, L), y(e), d(r, this);
+    var t = M(this);
+    try {
+      e(X(et, t), X(ee, t))
+    } catch (e) {
+      ee(t, e)
+    }
+  }).prototype, (r = function(e) {
+    T(this, {
+      type: F,
+      done: !1,
+      notified: !1,
+      parent: !1,
+      reactions: new N,
+      rejection: !1,
+      state: 0,
+      value: void 0
+    })
+  }).prototype = f(L, "then", function(e, t) {
+    var n = M(this),
+      r = q(_(this, D));
+    return n.parent = !0, r.ok = !v(e) || e, r.fail = v(t) && t, r.domain = s ? U.domain : void 0, 0 === n.state ? n.reactions.add(r) : C(function() {
+      G(r, n)
+    }), r.promise
+  }), a = function() {
+    var e = new r,
+      t = M(e);
+    this.promise = e, this.resolve = X(et, t), this.reject = X(ee, t)
+  }, R.f = q = function(e) {
+    return e === D || e === o ? new a(e) : K(e)
+  }, !u && v(P) && B !== Object.prototype)) {
+  i = B.then, !I && f(B, "then", function(e, t) {
+    var n = this;
+    return new D(function(e, t) {
+      d(i, n, e, t)
+    }).then(e, t)
+  }, {
+    unsafe: !0
   });
-  return i.length > 5
+  try {
+    delete B.constructor
+  } catch (e) {}
+  p && p(B, L)
 }
-
-function _(e) {
-  arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  let t = (0, i.useStateFromStores)([l.default, s.default], () => null != e && c(e.id, l.default, s.default));
-  return !__OVERLAY__ && !!t && null != e && e.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
-}
-
-function f(e) {
-  if (__OVERLAY__ || e === d.ME || e === d.FAVORITES || (0, a.isInMainTabsExperiment)() && !(0, o.isOnNewPanels)()) return !1;
-  let t = u.default.getGuild(e);
-  return !!(null != t && c(e, l.default, s.default)) && t.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
-}
-let E = (0, r.createExperiment)({
-    kind: "user",
-    id: "2022-01_home_feed_toggle",
-    label: "Show Guild Feed Sorting Selector",
-    defaultConfig: {
-      showSelector: !1
-    },
-    treatments: [{
-      id: 1,
-      label: "Yes Selector",
-      config: {
-        showSelector: !0
-      }
-    }]
-  }),
-  h = (0, r.createExperiment)({
-    kind: "user",
-    id: "2022-08_home_badge",
-    label: "Show badge on home channel",
-    defaultConfig: {
-      showBadge: !1
-    },
-    treatments: [{
-      id: 1,
-      label: "show badge",
-      config: {
-        showBadge: !0
-      }
-    }]
-  });
-(0, r.createExperiment)({
-  kind: "user",
-  id: "2022-08_home_drawer_autoclose",
-  label: "Auto close home drawer",
-  defaultConfig: {
-    autoCloseDrawer: !1,
-    animation: !1,
-    delay: null
-  },
-  treatments: [{
-    id: 1,
-    label: "normal animation",
-    config: {
-      autoCloseDrawer: !0,
-      animation: !0,
-      delay: null
-    }
-  }, {
-    id: 2,
-    label: "no animate",
-    config: {
-      autoCloseDrawer: !0,
-      animation: !1,
-      delay: null
-    }
-  }, {
-    id: 3,
-    label: "150 delayed animation",
-    config: {
-      autoCloseDrawer: !0,
-      animation: !0,
-      delay: 150
-    }
-  }, {
-    id: 4,
-    label: "250 delayed animation",
-    config: {
-      autoCloseDrawer: !0,
-      animation: !0,
-      delay: 250
-    }
-  }, {
-    id: 5,
-    label: "500 delayed animation",
-    config: {
-      autoCloseDrawer: !0,
-      animation: !0,
-      delay: 500
-    }
-  }]
-}), (0, r.createExperiment)({
-  kind: "user",
-  id: "2022-09_welcome_header",
-  label: "Show welcome header for home",
-  defaultConfig: {
-    showWelcomeHeader: !1
-  },
-  treatments: [{
-    id: 1,
-    label: "show welcome header",
-    config: {
-      showWelcomeHeader: !0
-    }
-  }]
-});
-let g = (0, r.createExperiment)({
-    kind: "user",
-    id: "2022-12_home_feedback_ux",
-    label: "Show post feedback for home",
-    defaultConfig: {
-      showFeedback: !1
-    },
-    treatments: [{
-      id: 100,
-      label: "show feedback",
-      config: {
-        showFeedback: !0
-      }
-    }]
-  }),
-  m = (0, r.createExperiment)({
-    kind: "guild",
-    id: "2023-03_home_deprecation",
-    label: "Home Deprecation",
-    defaultConfig: {
-      showDeprecationNotice: !1
-    },
-    treatments: [{
-      id: 1,
-      label: "Show notice",
-      config: {
-        showDeprecationNotice: !0
-      }
-    }]
-  })
+l({
+  global: !0,
+  constructor: !0,
+  wrap: !0,
+  forced: O
+}, {
+  Promise: D
+}), h(D, F, !1, !0), m(F)

@@ -1,9 +1,3 @@
 "use strict";
-r.r(t), r.d(t, {
-  default: function() {
-    return n
-  }
-});
-var n = function(e, t) {
-  return null != e && t in Object(e)
-}
+var r = n("204384");
+e.exports = /ipad|iphone|ipod/i.test(r) && "undefined" != typeof Pebble

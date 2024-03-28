@@ -1,42 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return u
-  }
-}), n("222007");
-var s = n("884691"),
-  a = n("404118"),
-  l = n("448993"),
-  i = n("242278"),
-  r = n("153587"),
-  o = n("782340");
-
-function u(e, t) {
-  let [n, u] = s.useState(!1), d = s.useCallback(async n => {
-    if (null != e && null != t) {
-      u(!0);
-      try {
-        let {
-          url: s
-        } = await i.requestDownloadUrl({
-          guildId: e,
-          productId: t,
-          attachmentId: n
-        });
-        await r.download(s)
-      } catch (t) {
-        let e = t instanceof l.APIError ? t.getAnyErrorMessage() : void 0;
-        a.default.show({
-          title: o.default.Messages.ERROR_GENERIC_TITLE,
-          body: null != e ? e : o.default.Messages.GENERIC_ERROR_BODY
-        })
-      } finally {
-        u(!1)
-      }
-    }
-  }, [e, t]);
-  return {
-    isLoading: n,
-    downloadAttachment: d
-  }
-}
+n.r(t);
+var u = n("735250");
+n("470079");
+var l = n("481060"),
+  a = n("239091"),
+  i = n("883385"),
+  d = n("108843"),
+  r = n("100527"),
+  s = n("584836"),
+  o = n("896680"),
+  c = n("544642"),
+  f = n("981631"),
+  I = n("689938");
+t.default = (0, d.default)((0, i.default)(function(e) {
+  let {
+    guildId: t,
+    context: n,
+    onSelect: i
+  } = e, d = (0, c.default)(t, n), r = (0, o.default)(t, n), f = (0, s.default)(t, n);
+  return (0, u.jsxs)(l.Menu, {
+    navId: "moderation-raid-context",
+    onClose: a.closeContextMenu,
+    "aria-label": I.default.Messages.USER_ACTIONS_MENU_LABEL,
+    onSelect: i,
+    children: [(0, u.jsx)(l.MenuGroup, {
+      children: r
+    }), (0, u.jsxs)(l.MenuGroup, {
+      children: [f, d]
+    })]
+  })
+}, {
+  object: f.AnalyticsObjects.CONTEXT_MENU
+}), [r.default.CONTEXT_MENU, r.default.GUILD_MODERATION_RAID_MENU])

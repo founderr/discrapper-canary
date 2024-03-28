@@ -1,23 +1,38 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return a
+    return o
   }
 });
-var i = n("347219"),
-  s = n("289382");
-let r = ["#7d8187", "#18191c", "#8fa2df", "#4f545c"];
-var a = class e {
-  checkBounds() {
-    this.x > this.offscreenX ? this.x = -this.size : this.y > this.offscreenY ? this.y = -this.size : this.x < -this.size ? this.x = this.offscreenX : this.y < -this.size && (this.y = this.offscreenY)
-  }
-  update(e, t) {
-    this.checkBounds(), this.y += t * this.positionMultiplier, this.x += e * this.positionMultiplier
-  }
-  render(e, t) {
-    e.beginPath(), e.globalAlpha = t * this.depth / 4, e.arc(this.x, this.y, this.size, 0, s.TWO_PI, !0), e.fillStyle = this.color, e.fill(), e.globalAlpha = 1
-  }
-  constructor() {
-    this.size = (0, i.randomNumber)(2, 3), this.depth = (0, i.randomNumber)(1, 4), this.positionMultiplier = this.depth / 4, this.color = r[4 - this.depth], this.offscreenX = s.MAX_RADIUS + this.size, this.offscreenY = s.MAX_RADIUS + this.size, this.x = (0, i.randomNumber)(-this.size, this.offscreenX), this.y = (0, i.randomNumber)(-this.size, this.offscreenY)
-  }
+var l = s("735250");
+s("470079");
+var n = s("481060"),
+  a = s("131388"),
+  i = s("409813"),
+  r = s("750143"),
+  u = s("569919"),
+  d = s("60314");
+
+function o(e) {
+  let {
+    step: t,
+    onClose: s
+  } = e, o = (0, a.default)(r.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
+  return t === i.Step.BENEFITS || t === i.Step.CONFIRM ? null : (0, l.jsxs)("div", {
+    className: u.headerContainer,
+    children: [!o && (0, l.jsx)("div", {
+      className: u.headerImageContainer,
+      "aria-hidden": "true",
+      "data-accessibility": "desaturate",
+      children: (0, l.jsx)("img", {
+        src: d,
+        alt: "",
+        className: u.headerImage
+      })
+    }), (0, l.jsx)(n.ModalCloseButton, {
+      withCircleBackground: !0,
+      className: u.closeButton,
+      onClick: s
+    })]
+  })
 }

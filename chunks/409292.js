@@ -1,28 +1,75 @@
 "use strict";
-n.r(t), n.d(t, {
-  createDragDropManager: function() {
-    return c
-  }
-});
-var r = n("877385"),
-  i = n("652483"),
-  o = n("357155"),
-  s = n("504729"),
-  a = n("156799");
+n.r(t), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("613828"),
+  i = n("442837"),
+  r = n("493683"),
+  o = n("112724"),
+  u = n("108427"),
+  d = n("184107"),
+  c = n("410575"),
+  f = n("613311"),
+  E = n("601564"),
+  h = n("981631"),
+  _ = n("757473");
 
-function c(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-    c = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    u = function(e) {
-      var t = "undefined" != typeof window && window.__REDUX_DEVTOOLS_EXTENSION__;
-      return (0, i.createStore)(o.reduce, e && t && t({
-        name: "dnd-core",
-        instanceId: "dnd-core"
-      }))
-    }(c),
-    d = new s.DragDropMonitorImpl(u, new a.HandlerRegistryImpl(u)),
-    l = new r.DragDropManagerImpl(u, d),
-    f = e(l, t, n);
-  return l.receiveBackend(f), l
+function C(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+  }) : e[t] = n, e
 }
+class m extends s.Component {
+  componentDidMount() {
+    this.fetchStoreListing(), (0, u.trackAppUIViewed)("channel_store_listing")
+  }
+  render() {
+    return null != this.props.skuId ? (0, a.jsx)(c.default, {
+      page: h.AnalyticsPages.CHANNEL_STORE_LISTING,
+      root: !0,
+      children: (0, a.jsx)("div", {
+        className: _.applicationStore,
+        children: (0, a.jsx)(l.Route, {
+          path: "*",
+          render: this.renderApplicationListing
+        })
+      })
+    }) : null
+  }
+  constructor(...e) {
+    super(...e), C(this, "fetchStoreListing", e => {
+      let {
+        channel: t,
+        inputSkuId: n
+      } = this.props;
+      return null != e ? r.default.fetchChannelStoreListing(t.id, e) : null != n ? r.default.fetchChannelStoreListing(t.id, n) : r.default.fetchChannelStoreListing(t.id)
+    }), C(this, "renderApplicationListing", e => {
+      let {
+        location: t
+      } = e, {
+        channel: n,
+        skuId: s,
+        width: l
+      } = this.props;
+      return (0, a.jsx)(f.default, {
+        channel: n,
+        inputSkuId: s,
+        fetchStoreListing: this.fetchStoreListing,
+        location: t,
+        pageSize: (0, E.getPageSize)(l)
+      })
+    })
+  }
+}
+t.default = (0, o.default)(i.default.connectStores([d.default], e => {
+  let {
+    channel: t,
+    inputSkuId: n
+  } = e;
+  return {
+    skuId: null != n ? n : d.default.getSkuIdForChannel(t.id)
+  }
+})(m))

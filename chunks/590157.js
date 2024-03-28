@@ -1,29 +1,69 @@
 "use strict";
-r.r(e), r.d(e, {
-  makeAuthenticated: function() {
-    return u
+l.r(t), l.d(t, {
+  default: function() {
+    return N
   }
 });
-var n = r("37983");
-r("884691");
-var o = r("271938"),
-  a = r("831588"),
-  l = r("209535"),
-  i = r("49111");
+var n = l("735250"),
+  a = l("470079"),
+  s = l("442837"),
+  i = l("481060"),
+  r = l("366598"),
+  o = l("377617"),
+  d = l("821864"),
+  u = l("905753"),
+  c = l("995390"),
+  f = l("469880"),
+  m = l("665578"),
+  I = l("689938"),
+  T = l("905375");
 
-function u(t, e) {
-  var r, u;
-  let c = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
-    passProps: !0
-  };
+function N(e) {
+  let {
+    application: t,
+    canNavigate: l,
+    guildId: c
+  } = e, m = (0, s.useStateFromStores)([u.default], () => u.default.isUnavailable());
+  return (a.useEffect(() => (d.initIntegrationPermissions(t.id), d.clearIntegrationPermissions), [t.id]), a.useEffect(() => {
+    d.getApplicationCommandPermissions(t.id, c, t.id), d.getApplicationCommands(c, t.id)
+  }, [t.id, c]), m) ? null : (0, n.jsxs)(a.Fragment, {
+    children: [(0, n.jsx)(r.default, {
+      icon: (0, n.jsx)(o.default, {}),
+      title: I.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_PERMISSIONS
+    }), (0, n.jsx)(i.Text, {
+      color: "text-muted",
+      variant: "text-sm/normal",
+      children: I.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_PERMISSIONS_DESCRIPTION
+    }), (0, n.jsx)(E, {
+      guildId: c,
+      applicationId: t.id
+    }), (0, n.jsx)(f.default, {
+      applicationIcon: t.icon,
+      applicationName: t.name,
+      canNavigate: l,
+      guildId: c
+    })]
+  })
+}
 
-  function s(r) {
-    if (!(0, a.isAuthenticated)() && o.default.getLoginStatus() !== i.LoginStates.LOGGING_IN && o.default.allowLogoutRedirect()) return null != e ? (0, n.jsx)(e, {
-      renderRedirect: (0, n.jsx)(l.default, {})
-    }) : (0, n.jsx)(l.default, {});
-    return (0, n.jsx)(t, {
-      ...c.passProps ? r : null
+function E(e) {
+  let {
+    applicationId: t,
+    guildId: l
+  } = e, {
+    originalApplicationPermissions: a,
+    editedTargetPermissions: s,
+    selectedPermissionCount: i
+  } = (0, c.default)(l, t);
+  return (0, n.jsx)("div", {
+    className: T.applicationPermissions,
+    children: (0, n.jsx)(m.default, {
+      applicationId: t,
+      guildId: l,
+      inModal: !1,
+      editedTargetPermissions: s,
+      originalApplicationPermissions: a,
+      selectedPermissionCount: i
     })
-  }
-  return s.displayName = "Authenticated(".concat(null !== (u = null !== (r = t.displayName) && void 0 !== r ? r : t.name) && void 0 !== u ? u : "<Unknown>", ")"), s
+  })
 }

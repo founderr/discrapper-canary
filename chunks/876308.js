@@ -1,232 +1,96 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return I
-  }
-}), n("222007");
-var i = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  s = n.n(a),
-  r = n("446674"),
-  o = n("77078"),
-  u = n("206230"),
-  d = n("806135"),
-  c = n("170113"),
-  f = n("316680"),
-  m = n("830837"),
-  p = n("132755"),
-  h = n("659500"),
-  x = n("718517"),
-  E = n("829536"),
-  y = n("534107"),
-  g = n("49111"),
-  S = n("782340"),
-  C = n("722552");
-let T = l.lazy(() => n.el("403130").then(n.bind(n, "403130")));
-
-function _(e) {
+n.r(t), n("411104");
+var o = n("735250"),
+  a = n("470079"),
+  r = n("817080"),
+  i = n("442837"),
+  u = n("481060"),
+  s = n("668781"),
+  d = n("239091"),
+  l = n("883385"),
+  c = n("108843"),
+  f = n("100527"),
+  O = n("496675"),
+  p = n("358085"),
+  S = n("998502"),
+  D = n("22382"),
+  N = n("51078"),
+  w = n("710111"),
+  _ = n("981631"),
+  b = n("689938");
+t.default = (0, c.default)((0, l.default)(function(e) {
   let {
-    played: t,
-    duration: n,
-    currentTime: l
-  } = e, a = null == n ? "--:--" : t ? (0, c.convertSecondsToClockFormat)(Math.ceil(n - l)) : (0, c.convertSecondsToClockFormat)(Math.ceil(n));
-  return (0, i.jsx)(o.Text, {
-    variant: "text-sm/normal",
-    className: C.duration,
-    tabularNumbers: !0,
-    children: a
-  })
-}
-var I = l.memo(function(e) {
-  var t, n, a, c, I, v;
-  let A, {
-      src: N,
-      volume: R = 1,
-      onVolumeChange: O,
-      onMute: M,
-      waveform: k,
-      durationSecs: L,
-      onVolumeShow: P,
-      onVolumeHide: b,
-      onPlay: j,
-      onPause: U,
-      onError: D
-    } = e,
-    w = l.useRef(null),
-    [F, G] = l.useState(0),
-    [H, B] = l.useState(L),
-    [V, K] = l.useState(!1),
-    [W, Y] = l.useState(!1),
-    [z, Q] = l.useState(!1),
-    [Z, q] = l.useState(!1),
-    [J, X] = l.useState("none"),
-    [$, ee] = l.useState(() => "function" == typeof R ? R() : R),
-    et = l.useRef(void 0),
-    en = l.useCallback(() => {
-      Y(e => !e)
-    }, []),
-    ei = l.useCallback(() => {
-      X("metadata")
-    }, []),
-    el = l.useCallback(e => {
-      let t = e.currentTarget.duration;
-      !isNaN(t) && B(t)
-    }, []),
-    ea = l.useCallback(() => {
-      Y(!1), null == et.current && (et.current = setTimeout(() => {
-        q(!1), et.current = void 0
-      }, 500))
-    }, []),
-    es = l.useCallback(() => {
-      !z && ea()
-    }, [ea, z]),
-    er = l.useCallback(() => {
-      let e = w.current;
-      if (null == e) return;
-      let t = e.error;
-      null == D || D(t)
-    }, [D]),
-    eo = l.useCallback(e => {
-      let t = (0, E.perceptualToAmplitude)(e, 1);
-      K(0 === t), ee(t), null == O || O(t)
-    }, [O]),
-    eu = l.useCallback(() => {
-      K(!V), null == M || M(!V)
-    }, [V, M]),
-    ed = l.useCallback(() => {
-      Q(!0)
-    }, []),
-    ec = l.useCallback(() => {
-      Q(!1), F === H && ea()
-    }, [F, H, ea]),
-    ef = l.useCallback(e => {
-      let t = w.current;
-      if (null == H || null == t) return;
-      let n = e * H;
-      G(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
-    }, [H]);
-  l.useEffect(() => {
-    !Z && W && q(!0)
-  }, [W, Z]);
-  let em = l.useRef(null);
-  l.useEffect(() => {
-    if (Z || W) {
-      if (W) {
-        var e, t;
-        em.current = performance.now(), null == j || j(!1, F, (null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * x.default.Millis.SECOND)
-      } else {
-        let e = performance.now(),
-          t = em.current;
-        null == U || U(F, null != t ? (e - t) / 1e3 : 0), em.current = null
-      }
-    }
-  }, [W]), t = w, n = W, a = G, l.useEffect(() => {
-    let e;
-    return ! function i() {
-      let l = t.current;
-      if (null != l) a(l.currentTime), n && (e = requestAnimationFrame(i))
-    }(), () => {
-      null != e && cancelAnimationFrame(e)
-    }
-  }, [t, n, a]), c = N, I = W, v = Y, l.useEffect(() => {
-    if (I) return h.ComponentDispatch.dispatch(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
-      src: c
-    }), h.ComponentDispatch.subscribe(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
-      h.ComponentDispatch.unsubscribe(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
-    };
-
-    function e(e) {
-      let {
-        src: t
-      } = e;
-      c !== t && v(!1)
-    }
-  }, [c, I, v]);
-  let ep = W ? m.default : p.default,
-    eh = W ? S.default.Messages.PAUSE : S.default.Messages.PLAY;
-  A = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
-    children: (0, i.jsx)(T, {
-      ref: w,
-      className: C.audioElement,
-      src: N,
-      preload: J,
-      playing: W && !z,
-      onEnded: es,
-      onLoadedMetadata: el,
-      onError: er,
-      muted: V,
-      volume: $
-    })
-  }) : (0, i.jsx)(d.default, {
-    ref: w,
-    className: C.audioElement,
-    controls: !1,
-    preload: J,
-    onEnded: es,
-    onLoadedMetadata: el,
-    onError: er,
-    muted: V,
-    volume: $,
-    playing: W && !z,
-    children: (0, i.jsx)("source", {
-      src: N
-    })
-  });
-  let ex = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    {
-      enabled: eE
-    } = (0, o.useRedesignIconContext)();
-  return (0, i.jsxs)("div", {
-    className: s(C.container, {
-      [C.playing]: W
-    }),
-    onMouseEnter: ei,
-    children: [(0, i.jsx)("div", {
-      className: C.rippleContainer,
-      children: (0, i.jsx)("div", {
-        className: s(C.ripple, {
-          [C.reducedMotion]: ex
+    soundGuild: t,
+    sound: l,
+    activeCallGuildId: c,
+    onSelect: f
+  } = e, _ = function(e, t) {
+    let {
+      canManageGuildExpressions: r
+    } = (0, i.useStateFromStoresObject)([O.default], () => null == t ? {
+      canManageGuildExpressions: !1
+    } : O.default.getGuildPermissionProps(t), [t]), s = a.useCallback(() => {
+      if ((null == t ? void 0 : t.id) == null) return null;
+      (0, u.openModalLazy)(async () => {
+        let {
+          default: a
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("56035"), n.e("358")]).then(n.bind(n, "758961"));
+        return n => (0, o.jsx)(a, {
+          ...n,
+          existingSound: e,
+          guildId: t.id
         })
       })
-    }), (0, i.jsx)(o.Clickable, {
-      className: C.playButtonContainer,
-      onClick: en,
-      "aria-label": eh,
-      children: (0, i.jsx)(ep, {
-        className: s(C.playIcon, {
-          [C.oldPlayIconSpacing]: !eE && !W
-        }),
-        width: 18,
-        height: 18
-      })
-    }), (0, i.jsx)(y.default, {
-      className: C.waveform,
-      waveform: k,
-      currentTime: F,
-      duration: null != H ? H : 1,
-      playing: W,
-      played: Z,
-      onDrag: ef,
-      onDragStart: ed,
-      onDragEnd: ec
-    }), (0, i.jsx)(_, {
-      played: Z,
-      currentTime: F,
-      duration: H
-    }), (0, i.jsx)(f.default, {
-      className: C.volumeButton,
-      iconClassName: C.volumeButtonIcon,
-      sliderWrapperClassName: C.volumeSlider,
-      muted: V,
-      value: (0, E.amplitudeToPerceptual)($, 1),
-      minValue: 0,
-      maxValue: 1,
-      currentWindow: window,
-      onValueChange: eo,
-      onToggleMute: eu,
-      onVolumeShow: P,
-      onVolumeHide: b
-    }), A]
+    }, [t, e]);
+    return r ? (0, o.jsx)(u.MenuItem, {
+      id: "edit-soundboard-sound",
+      label: b.default.Messages.SOUNDBOARD_CONTEXT_MENU_EDIT_SOUND,
+      action: s
+    }, "edit-soundboard-sound") : null
+  }(l, t), m = function(e) {
+    let {
+      soundId: t
+    } = e, n = a.useCallback(async () => {
+      try {
+        let e = (0, D.default)(t),
+          n = await fetch(e),
+          o = await n.blob(),
+          a = function(e) {
+            switch (e.type) {
+              case "audio/mpeg":
+              case "audio/mpeg3":
+                return "mp3";
+              case "audio/ogg":
+                return "ogg";
+              default:
+                throw Error("unable to determine file type")
+            }
+          }(o),
+          i = "".concat(t, ".").concat(a);
+        p.isPlatformEmbedded ? await S.default.saveFile(e, i) : (0, r.saveAs)(o, i)
+      } catch (e) {
+        s.default.show({
+          title: b.default.Messages.SOUNDBOARD_DOWNLOAD_SOUND_FAILED_TITLE,
+          body: b.default.Messages.SOUNDBOARD_DOWNLOAD_SOUND_FAILED_BODY,
+          confirmText: b.default.Messages.OKAY
+        })
+      }
+    }, [t]);
+    return e.guildId === w.DEFAULT_SOUND_GUILD_ID ? null : (0, o.jsx)(u.MenuItem, {
+      id: "download-soundboard-sound",
+      label: b.default.Messages.SOUNDBOARD_CONTEXT_MENU_DOWNLOAD_SOUND,
+      action: n
+    }, "download-soundboard-sound")
+  }(l), y = (0, N.default)(l, c);
+  return (0, o.jsx)(u.Menu, {
+    navId: "sound-button-context",
+    onClose: d.closeContextMenu,
+    "aria-label": b.default.Messages.USER_ACTIONS_MENU_LABEL,
+    onSelect: f,
+    children: (0, o.jsxs)(u.MenuGroup, {
+      children: [_, y, m]
+    })
   })
-})
+}, {
+  object: _.AnalyticsObjects.CONTEXT_MENU
+}), [f.default.CONTEXT_MENU, f.default.SOUNDBOARD_BUTTON])

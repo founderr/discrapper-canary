@@ -1,29 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return d
+n.r(e), n.d(e, {
+  MODAL_CAROUSEL_LAYOUT: function() {
+    return i
   }
 });
-var r = n("37983");
-n("884691");
-var s = n("414456"),
-  i = n.n(s),
-  l = n("77078"),
-  a = n("600785"),
-  o = n("782340"),
-  u = n("849693"),
-  c = n("125047");
-
-function d() {
-  return (0, r.jsxs)("div", {
-    className: i(u.paymentModalLockIcon, c.flex, c.alignCenter),
-    children: [(0, r.jsx)(a.default, {
-      className: u.lockIcon,
-      width: 18,
-      height: 18
-    }), (0, r.jsx)(l.Text, {
-      variant: "text-sm/medium",
-      children: o.default.Messages.BILLING_SECURE
-    })]
-  })
+var o = n("817718"),
+  s = n("981631");
+let i = {
+  [s.KeybindActions.MODAL_CAROUSEL_NEXT]: o.MODAL_CAROUSEL_NEXT,
+  [s.KeybindActions.MODAL_CAROUSEL_PREV]: o.MODAL_CAROUSEL_PREV,
+  [s.KeybindActions.CLOSE_MODAL]: o.MODAL_CAROUSEL_CLOSE
 }

@@ -1,31 +1,38 @@
 "use strict";
 n.r(t), n.d(t, {
-  getHeaderTextForInvite: function() {
-    return a
+  default: function() {
+    return h
   }
 });
-var s = n("782340");
+var a = n("735250");
+n("470079");
+var l = n("442837"),
+  s = n("479313"),
+  i = n("765104"),
+  r = n("839523"),
+  o = n("502568"),
+  u = n("626135"),
+  d = n("981631"),
+  c = n("814249"),
+  f = n("689938");
 
-function a(e) {
+function h(e) {
   let {
-    isVoiceChannel: t,
-    isHubGuild: n,
-    isOwnInvite: a,
-    isGuest: l,
-    isStage: i,
-    isStream: r
-  } = e;
-  if (t) {
-    if (a) {
-      if (r) return s.default.Messages.INVITE_BUTTON_TITLE_INVITER_STREAM;
-      if (i) return s.default.Messages.INVITE_BUTTON_TITLE_INVITER_STAGE_CHANNEL;
-      else if (l) return s.default.Messages.GUEST_INVITE_EMBED_TITLE_SENDER;
-      else return s.default.Messages.INVITE_BUTTON_TITLE_INVITER_VOICE_CHANNEL
-    }
-    if (r) return s.default.Messages.INVITE_BUTTON_TITLE_INVITED_STREAM;
-    if (i) return s.default.Messages.INVITE_BUTTON_TITLE_INVITED_STAGE_CHANNEL;
-    else if (l) return s.default.Messages.GUEST_INVITE_EMBED_TITLE_RECEIVER;
-    else return s.default.Messages.INVITE_BUTTON_TITLE_INVITED_VOICE_CHANNEL
-  }
-  return n ? a ? s.default.Messages.INVITE_BUTTON_TITLE_INVITER_HUB : s.default.Messages.INVITE_BUTTON_TITLE_INVITED_HUB : a ? s.default.Messages.INVITE_BUTTON_TITLE_INVITER : s.default.Messages.INVITE_BUTTON_TITLE_INVITED
+    channel: t
+  } = e, n = (0, l.useStateFromStores)([i.default], () => i.default.shouldShowTopicsBar());
+  return (0, a.jsx)(o.default.Icon, {
+    icon: r.default,
+    onClick: () => {
+      u.default.track(d.AnalyticEvents.SUMMARIES_SIDEBAR_TOGGLED, {
+        summaries_sidebar_open: !n,
+        source: c.SummariesSidebarToggledSource.TOOLBAR_BUTTON,
+        guild_id: t.guild_id,
+        channel_id: t.id,
+        channel_type: t.type
+      }), (0, s.toggleTopicsBar)()
+    },
+    tooltip: n ? f.default.Messages.SUMMARIES_SHOWN : f.default.Messages.SUMMARIES_HIDDEN,
+    selected: n,
+    "aria-expanded": n
+  })
 }

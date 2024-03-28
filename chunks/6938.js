@@ -1,7 +1,18 @@
 "use strict";
-var s, a;
-n.r(t), n.d(t, {
-  AutomodNotificationEmbedTypeKeys: function() {
-    return s
+var t = function() {
+  this.head = null, this.tail = null
+};
+t.prototype = {
+  add: function(e) {
+    var t = {
+        item: e,
+        next: null
+      },
+      n = this.tail;
+    n ? n.next = t : this.head = t, this.tail = t
+  },
+  get: function() {
+    var e = this.head;
+    if (e) return null === (this.head = e.next) && (this.tail = null), e.item
   }
-}), (a = s || (s = {})).RAID = "raid", a.MENTION_RAID = "mention_raid", a.ACTIVITY_ALERTS_ENABLED = "activity_alerts_enabled"
+}, e.exports = t

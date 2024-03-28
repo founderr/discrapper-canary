@@ -1,34 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return r
-  }
-});
-var s = n("37983");
-n("884691");
-var a = n("574073"),
-  l = n("304198"),
-  i = n("782340");
-
-function r(e) {
-  let {
-    message: t,
-    otherUsername: r,
-    usernameHook: o,
-    otherUsernameHook: u,
-    compact: d
-  } = e, {
-    nick: c
-  } = (0, a.default)(t), E = o(), f = u(), _ = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD_HOOK.format({
-    username: c,
-    usernameHook: E,
-    otherUsername: r,
-    otherUsernameHook: f
-  });
-  return (0, s.jsx)(l.default, {
-    icon: n("127067"),
-    timestamp: t.timestamp,
-    compact: d,
-    children: _
+n.r(t);
+var a = n("735250");
+n("470079");
+var s = n("524437"),
+  l = n("765585"),
+  i = n("16703"),
+  r = n("300284"),
+  o = n("689938"),
+  u = n("303498");
+t.default = () => {
+  let e = (0, i.default)(),
+    t = (0, r.default)({
+      guild: e
+    });
+  return (0, a.jsx)(l.default, {
+    isPremiumFeature: !0,
+    shouldUseHorizontalButtons: !0,
+    artClassName: u.coachmarkArt,
+    headerClassName: u.coachmarkHeader,
+    onTryFeature: t,
+    tryItText: o.default.Messages.CHECK_IT_OUT,
+    header: o.default.Messages.GUILD_IDENTITY_PFX_COACHMARK_TITLE,
+    body: o.default.Messages.GUILD_IDENTITY_PFX_COACHMARK_BODY,
+    dismissibleContent: s.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK,
+    maxWidth: 320
   })
 }
