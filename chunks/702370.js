@@ -20,9 +20,9 @@ var a = l("735250"),
   A = l("333867"),
   L = l("963249"),
   g = l("197115"),
-  v = l("300284"),
-  x = l("962746"),
-  _ = l("642619"),
+  x = l("300284"),
+  _ = l("962746"),
+  v = l("642619"),
   O = l("318661"),
   N = l("25990"),
   R = l("594174"),
@@ -83,7 +83,7 @@ let el = d.AvatarSizes.SIZE_152,
       returnRef: T
     } = e, {
       analyticsLocations: p
-    } = (0, C.default)(), f = j.default.canUseCollectibles(l), [h, L] = (0, o.useStateFromStoresArray)([D.default], () => [D.default.getPurchase(t.skuId), D.default.isClaiming === t.skuId]), x = (0, v.default)({
+    } = (0, C.default)(), f = j.default.canUseCollectibles(l), [h, L] = (0, o.useStateFromStoresArray)([D.default], () => [D.default.getPurchase(t.skuId), D.default.isClaiming === t.skuId]), _ = (0, x.default)({
       analyticsLocations: p
     }), {
       buttonColors: O,
@@ -221,13 +221,13 @@ let el = d.AvatarSizes.SIZE_152,
               className: ee.button,
               look: d.Button.Looks.FILLED,
               onClick: () => {
-                if (m(), (0, c.popLayer)(), x(), (null == en ? void 0 : en.type) === r.CollectiblesItemType.AVATAR_DECORATION) {
+                if (m(), (0, c.popLayer)(), _(), (null == en ? void 0 : en.type) === r.CollectiblesItemType.AVATAR_DECORATION) {
                   (0, I.openAvatarDecorationModal)({
                     initialSelectedDecoration: en,
                     analyticsLocations: p
                   });
                   return
-                }(null == en ? void 0 : en.type) === r.CollectiblesItemType.PROFILE_EFFECT && (0, _.openProfileEffectModal)({
+                }(null == en ? void 0 : en.type) === r.CollectiblesItemType.PROFILE_EFFECT && (0, v.openProfileEffectModal)({
                   initialSelectedEffectId: en.id,
                   analyticsLocations: p
                 })
@@ -277,7 +277,7 @@ let el = d.AvatarSizes.SIZE_152,
     } = e, s = j.default.canUsePremiumProfileCustomization(l), i = (0, o.useStateFromStoresObject)([N.default], () => N.default.getAllPending()), n = (0, O.default)(l.id), d = !!(null == n ? void 0 : n.getPreviewBio(i.pendingBio).value), [c] = t.items;
     return (0, a.jsxs)("div", {
       className: (null == c ? void 0 : c.type) === r.CollectiblesItemType.AVATAR_DECORATION ? ee.previewsContainerInner : ee.profileEffectPreviewsContainerInner,
-      children: [(0, a.jsx)(x.default, {
+      children: [(0, a.jsx)(_.default, {
         ...i,
         user: l,
         canUsePremiumCustomization: s,
@@ -386,9 +386,8 @@ t.default = e => {
         }), (0, a.jsxs)("div", {
           className: (null == h ? void 0 : h.type) === r.CollectiblesItemType.AVATAR_DECORATION ? ee.collectiblePreviewsContainerWithChat : ee.collectiblePreviewsContainerNoChat,
           children: [(0, a.jsx)(F.default, {
-            assetUrlOverride: null === (t = X.categoryBannerOverrides[u.skuId]) || void 0 === t ? void 0 : t.assetUrlOverride,
-            asset: c.banner,
-            addGradient: null === (l = X.categoryBannerOverrides[u.skuId]) || void 0 === l ? void 0 : l.addGradient,
+            asset: null !== (l = u.pdpBg) && void 0 !== l ? l : c.banner,
+            addGradient: null === (t = X.categoryBannerOverrides[u.skuId]) || void 0 === t ? void 0 : t.addGradient,
             size: (0, Z.getAssetSizeByHeight)(540),
             className: ee.categoryBanner
           }), (0, a.jsx)(en, {
