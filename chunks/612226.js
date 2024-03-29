@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_LAYOUT: function() {
-    return Y
+    return w
   },
   KeybindGroup: function() {
     return i
   },
   getDefaultLayoutContent: function() {
-    return w
+    return W
   },
   getDescriptionForKeybindGroup: function() {
-    return V
+    return F
   },
   getNameForKeybindGroup: function() {
-    return v
+    return V
   }
 }), n("411104");
 var i, o, l = n("186070"),
@@ -28,291 +28,297 @@ var i, o, l = n("186070"),
   A = n("705371"),
   C = n("138976"),
   T = n("296805"),
-  I = n("561716"),
-  S = n("239748"),
+  S = n("561716"),
+  I = n("239748"),
   f = n("337482"),
   N = n("679080"),
   O = n("777019"),
-  R = n("400332"),
-  L = n("510761"),
-  p = n("189509"),
-  D = n("673553"),
-  h = n("280492"),
+  R = n("523147"),
+  L = n("400332"),
+  p = n("510761"),
+  D = n("189509"),
+  h = n("673553"),
+  b = n("280492"),
   g = n("746887"),
-  b = n("861007"),
-  G = n("300644"),
-  m = n("721383"),
-  M = n("207234"),
-  P = n("997292"),
-  U = n("743810"),
-  y = n("620212"),
-  K = n("547420"),
-  H = n("981631"),
-  B = n("689938");
-
-function v(e) {
-  switch (e) {
-    case "NAVIGATION":
-      return B.default.Messages.USER_SETTINGS_KEYBINDS_NAVIGATION_SECTION_TITLE;
-    case "VOICE_AND_VIDEO":
-      return B.default.Messages.USER_SETTINGS_KEYBINDS_VOICE_AND_VIDEO_SECTION_TITLE;
-    case "CHAT":
-      return B.default.Messages.USER_SETTINGS_KEYBINDS_CHAT_SECTION_TITLE;
-    case "MISCELLANEOUS":
-      return B.default.Messages.USER_SETTINGS_KEYBINDS_MISCELLANEOUS_SECTION_TITLE;
-    case "MESSAGE":
-      return B.default.Messages.USER_SETTINGS_KEYBINDS_MESSAGE_SECTION_TITLE;
-    case "DND":
-      return B.default.Messages.USER_SETTINGS_KEYBINDS_DND_SECTION_TITLE
-  }
-}
+  G = n("861007"),
+  m = n("300644"),
+  M = n("721383"),
+  P = n("207234"),
+  U = n("997292"),
+  y = n("743810"),
+  K = n("620212"),
+  H = n("547420"),
+  B = n("981631"),
+  v = n("689938");
 
 function V(e) {
   switch (e) {
+    case "NAVIGATION":
+      return v.default.Messages.USER_SETTINGS_KEYBINDS_NAVIGATION_SECTION_TITLE;
+    case "VOICE_AND_VIDEO":
+      return v.default.Messages.USER_SETTINGS_KEYBINDS_VOICE_AND_VIDEO_SECTION_TITLE;
+    case "CHAT":
+      return v.default.Messages.USER_SETTINGS_KEYBINDS_CHAT_SECTION_TITLE;
+    case "MISCELLANEOUS":
+      return v.default.Messages.USER_SETTINGS_KEYBINDS_MISCELLANEOUS_SECTION_TITLE;
     case "MESSAGE":
-      return B.default.Messages.USER_SETTINGS_KEYBINDS_MESSAGE_DESCRIPTION;
+      return v.default.Messages.USER_SETTINGS_KEYBINDS_MESSAGE_SECTION_TITLE;
     case "DND":
-      return B.default.Messages.USER_SETTINGS_KEYBINDS_DND_DESCRIPTION;
+      return v.default.Messages.USER_SETTINGS_KEYBINDS_DND_SECTION_TITLE
+  }
+}
+
+function F(e) {
+  switch (e) {
+    case "MESSAGE":
+      return v.default.Messages.USER_SETTINGS_KEYBINDS_MESSAGE_DESCRIPTION;
+    case "DND":
+      return v.default.Messages.USER_SETTINGS_KEYBINDS_DND_DESCRIPTION;
     default:
       return null
   }
 }
 
-function F() {
+function Y() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
   return t.map(e => {
-    let t = Y[e];
+    let t = w[e];
     if (null == t) throw Error("getBindsFor(...): No bind for ".concat(t));
     return t.binds[0]
   })
 }(o = i || (i = {})).NAVIGATION = "NAVIGATION", o.CHAT = "CHAT", o.VOICE_AND_VIDEO = "VOICE_AND_VIDEO", o.MISCELLANEOUS = "MISCELLANEOUS", o.MESSAGE = "MESSAGE", o.DND = "DND";
-let Y = {
-  [H.KeybindActions.SERVER_NEXT]: L.SERVER_NEXT,
-  [H.KeybindActions.SERVER_PREV]: L.SERVER_PREV,
-  [H.KeybindActions.CHANNEL_NEXT]: u.CHANNEL_NEXT,
-  [H.KeybindActions.CHANNEL_PREV]: u.CHANNEL_PREV,
-  [H.KeybindActions.NAVIGATE_BACK]: u.NAVIGATE_BACK,
-  [H.KeybindActions.NAVIGATE_FORWARD]: u.NAVIGATE_FORWARD,
-  [H.KeybindActions.UNREAD_NEXT]: U.UNREAD_NEXT,
-  [H.KeybindActions.UNREAD_PREV]: U.UNREAD_PREV,
-  [H.KeybindActions.MENTION_CHANNEL_NEXT]: U.MENTION_NEXT,
-  [H.KeybindActions.MENTION_CHANNEL_PREV]: U.MENTION_PREV,
-  [H.KeybindActions.TOGGLE_PREVIOUS_GUILD]: u.TOGGLE_PREVIOUS_GUILD,
-  [H.KeybindActions.JUMP_TO_GUILD]: c.JUMP_TO_GUILD,
-  [H.KeybindActions.SUBMIT]: p.SUBMIT,
-  [H.KeybindActions.TEXTAREA_FOCUS]: D.TEXTAREA_FOCUS,
-  [H.KeybindActions.MARK_CHANNEL_READ]: _.MARK_CHANNEL_READ,
-  [H.KeybindActions.MARK_SERVER_READ]: A.MARK_SERVER_READ,
-  [H.KeybindActions.TOGGLE_CHANNEL_PINS]: b.TOGGLE_CHANNEL_PINS,
-  [H.KeybindActions.TOGGLE_INBOX_UNREADS_TAB]: M.TOGGLE_INBOX_UNREADS_TAB,
-  [H.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ]: M.MARK_TOP_INBOX_CHANNEL_READ,
-  [H.KeybindActions.TOGGLE_USERS]: P.TOGGLE_USERS,
-  [H.KeybindActions.TOGGLE_HELP]: G.TOGGLE_HELP,
-  [H.KeybindActions.TOGGLE_MUTE]: h.TOGGLE_MUTE,
-  [H.KeybindActions.TOGGLE_DEAFEN]: h.TOGGLE_DEAFEN,
-  [H.KeybindActions.TOGGLE_CATEGORY_COLLAPSED]: g.TOGGLE_CATEGORY_COLLAPSED,
-  [H.KeybindActions.SCROLL_UP]: f.SCROLL_UP,
-  [H.KeybindActions.SCROLL_DOWN]: f.SCROLL_DOWN,
-  [H.KeybindActions.QUICKSWITCHER_SHOW]: I.QUICKSWITCHER_SHOW,
-  [H.KeybindActions.CREATE_DM_GROUP]: a.CREATE_DM_GROUP,
-  [H.KeybindActions.SEARCH_EMOJIS]: N.SEARCH_EMOJIS,
-  [H.KeybindActions.SEARCH_GIFS]: O.SEARCH_GIFS,
-  [H.KeybindActions.SEARCH_STICKERS]: R.SEARCH_STICKERS,
-  [H.KeybindActions.TOGGLE_HOTKEYS]: m.TOGGLE_HOTKEYS,
-  [H.KeybindActions.JUMP_TO_FIRST_UNREAD]: C.JUMP_TO_FIRST_UNREAD,
-  [H.KeybindActions.CREATE_GUILD]: s.CREATE_GUILD,
-  [H.KeybindActions.UPLOAD_FILE]: y.UPLOAD_FILE,
-  [H.KeybindActions.RETURN_TO_AUDIO_CHANNEL]: S.RETURN_TO_AUDIO_CHANNEL,
-  [H.KeybindActions.CALL_ACCEPT]: l.CALL_ACCEPT,
-  [H.KeybindActions.CALL_START]: l.CALL_START,
-  [H.KeybindActions.FOCUS_SEARCH]: r.FOCUS_SEARCH,
-  [H.KeybindActions.JUMP_TO_CURRENT_CALL]: E.JUMP_TO_CURRENT_CALL,
-  [H.KeybindActions.ZOOM_IN]: K.ZOOM_IN,
-  [H.KeybindActions.ZOOM_OUT]: K.ZOOM_OUT,
-  [H.KeybindActions.ZOOM_RESET]: K.ZOOM_RESET,
-  [H.KeybindActions.OPEN_APP_DIRECTORY]: T.OPEN_APP_DIRECTORY,
-  [H.KeybindActions.BROWSER_DEVTOOLS]: d.BROWSER_DEVTOOLS
+let w = {
+  [B.KeybindActions.SERVER_NEXT]: p.SERVER_NEXT,
+  [B.KeybindActions.SERVER_PREV]: p.SERVER_PREV,
+  [B.KeybindActions.CHANNEL_NEXT]: u.CHANNEL_NEXT,
+  [B.KeybindActions.CHANNEL_PREV]: u.CHANNEL_PREV,
+  [B.KeybindActions.NAVIGATE_BACK]: u.NAVIGATE_BACK,
+  [B.KeybindActions.NAVIGATE_FORWARD]: u.NAVIGATE_FORWARD,
+  [B.KeybindActions.UNREAD_NEXT]: y.UNREAD_NEXT,
+  [B.KeybindActions.UNREAD_PREV]: y.UNREAD_PREV,
+  [B.KeybindActions.MENTION_CHANNEL_NEXT]: y.MENTION_NEXT,
+  [B.KeybindActions.MENTION_CHANNEL_PREV]: y.MENTION_PREV,
+  [B.KeybindActions.TOGGLE_PREVIOUS_GUILD]: u.TOGGLE_PREVIOUS_GUILD,
+  [B.KeybindActions.JUMP_TO_GUILD]: c.JUMP_TO_GUILD,
+  [B.KeybindActions.SUBMIT]: D.SUBMIT,
+  [B.KeybindActions.TEXTAREA_FOCUS]: h.TEXTAREA_FOCUS,
+  [B.KeybindActions.MARK_CHANNEL_READ]: _.MARK_CHANNEL_READ,
+  [B.KeybindActions.MARK_SERVER_READ]: A.MARK_SERVER_READ,
+  [B.KeybindActions.TOGGLE_CHANNEL_PINS]: G.TOGGLE_CHANNEL_PINS,
+  [B.KeybindActions.TOGGLE_INBOX_UNREADS_TAB]: P.TOGGLE_INBOX_UNREADS_TAB,
+  [B.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ]: P.MARK_TOP_INBOX_CHANNEL_READ,
+  [B.KeybindActions.TOGGLE_USERS]: U.TOGGLE_USERS,
+  [B.KeybindActions.TOGGLE_HELP]: m.TOGGLE_HELP,
+  [B.KeybindActions.TOGGLE_MUTE]: b.TOGGLE_MUTE,
+  [B.KeybindActions.TOGGLE_DEAFEN]: b.TOGGLE_DEAFEN,
+  [B.KeybindActions.TOGGLE_CATEGORY_COLLAPSED]: g.TOGGLE_CATEGORY_COLLAPSED,
+  [B.KeybindActions.SEARCH_SOUNDBOARD]: R.default,
+  [B.KeybindActions.SCROLL_UP]: f.SCROLL_UP,
+  [B.KeybindActions.SCROLL_DOWN]: f.SCROLL_DOWN,
+  [B.KeybindActions.QUICKSWITCHER_SHOW]: S.QUICKSWITCHER_SHOW,
+  [B.KeybindActions.CREATE_DM_GROUP]: a.CREATE_DM_GROUP,
+  [B.KeybindActions.SEARCH_EMOJIS]: N.SEARCH_EMOJIS,
+  [B.KeybindActions.SEARCH_GIFS]: O.SEARCH_GIFS,
+  [B.KeybindActions.SEARCH_STICKERS]: L.SEARCH_STICKERS,
+  [B.KeybindActions.TOGGLE_HOTKEYS]: M.TOGGLE_HOTKEYS,
+  [B.KeybindActions.JUMP_TO_FIRST_UNREAD]: C.JUMP_TO_FIRST_UNREAD,
+  [B.KeybindActions.CREATE_GUILD]: s.CREATE_GUILD,
+  [B.KeybindActions.UPLOAD_FILE]: K.UPLOAD_FILE,
+  [B.KeybindActions.RETURN_TO_AUDIO_CHANNEL]: I.RETURN_TO_AUDIO_CHANNEL,
+  [B.KeybindActions.CALL_ACCEPT]: l.CALL_ACCEPT,
+  [B.KeybindActions.CALL_START]: l.CALL_START,
+  [B.KeybindActions.FOCUS_SEARCH]: r.FOCUS_SEARCH,
+  [B.KeybindActions.JUMP_TO_CURRENT_CALL]: E.JUMP_TO_CURRENT_CALL,
+  [B.KeybindActions.ZOOM_IN]: H.ZOOM_IN,
+  [B.KeybindActions.ZOOM_OUT]: H.ZOOM_OUT,
+  [B.KeybindActions.ZOOM_RESET]: H.ZOOM_RESET,
+  [B.KeybindActions.OPEN_APP_DIRECTORY]: T.OPEN_APP_DIRECTORY,
+  [B.KeybindActions.BROWSER_DEVTOOLS]: d.BROWSER_DEVTOOLS
 };
 
-function w() {
+function W() {
   return [{
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_SERVERS,
-    binds: F(H.KeybindActions.SERVER_PREV, H.KeybindActions.SERVER_NEXT),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_SERVERS,
+    binds: Y(B.KeybindActions.SERVER_PREV, B.KeybindActions.SERVER_NEXT),
     group: "NAVIGATION"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_CHANNELS,
-    binds: F(H.KeybindActions.CHANNEL_PREV, H.KeybindActions.CHANNEL_NEXT),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_CHANNELS,
+    binds: Y(B.KeybindActions.CHANNEL_PREV, B.KeybindActions.CHANNEL_NEXT),
     group: "NAVIGATION"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_BACK_FORWARD,
-    binds: F(H.KeybindActions.NAVIGATE_BACK, H.KeybindActions.NAVIGATE_FORWARD),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_BACK_FORWARD,
+    binds: Y(B.KeybindActions.NAVIGATE_BACK, B.KeybindActions.NAVIGATE_FORWARD),
     group: "NAVIGATION"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_CHANNELS,
-    binds: F(H.KeybindActions.UNREAD_PREV, H.KeybindActions.UNREAD_NEXT),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_CHANNELS,
+    binds: Y(B.KeybindActions.UNREAD_PREV, B.KeybindActions.UNREAD_NEXT),
     group: "NAVIGATION"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_MENTION_CHANNELS,
-    binds: F(H.KeybindActions.MENTION_CHANNEL_PREV, H.KeybindActions.MENTION_CHANNEL_NEXT),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_MENTION_CHANNELS,
+    binds: Y(B.KeybindActions.MENTION_CHANNEL_PREV, B.KeybindActions.MENTION_CHANNEL_NEXT),
     group: "NAVIGATION"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_TO_CALL,
-    binds: F(H.KeybindActions.JUMP_TO_CURRENT_CALL),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_TO_CALL,
+    binds: Y(B.KeybindActions.JUMP_TO_CURRENT_CALL),
     group: "NAVIGATION"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PREVIOUS_GUILD,
-    binds: F(H.KeybindActions.TOGGLE_PREVIOUS_GUILD),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PREVIOUS_GUILD,
+    binds: Y(B.KeybindActions.TOGGLE_PREVIOUS_GUILD),
     group: "NAVIGATION"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_QUICKSWITCHER,
-    binds: F(H.KeybindActions.QUICKSWITCHER_SHOW),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_QUICKSWITCHER,
+    binds: Y(B.KeybindActions.QUICKSWITCHER_SHOW),
     group: "NAVIGATION"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_GUILD,
-    binds: F(H.KeybindActions.CREATE_GUILD),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_GUILD,
+    binds: Y(B.KeybindActions.CREATE_GUILD),
     group: "NAVIGATION",
     groupEnd: !0
   }, {
-    description: B.default.Messages.DND_OPERATION_LABEL_START,
+    description: v.default.Messages.DND_OPERATION_LABEL_START,
     binds: ["mod+d"],
     group: "DND"
   }, {
-    description: B.default.Messages.DND_OPERATION_LABEL_MOVE,
+    description: v.default.Messages.DND_OPERATION_LABEL_MOVE,
     binds: ["up", "down"],
     group: "DND"
   }, {
-    description: B.default.Messages.DND_OPERATION_LABEL_DROP,
+    description: v.default.Messages.DND_OPERATION_LABEL_DROP,
     binds: ["spacebar", "enter"],
     group: "DND"
   }, {
-    description: B.default.Messages.DND_OPERATION_LABEL_CANCEL,
+    description: v.default.Messages.DND_OPERATION_LABEL_CANCEL,
     binds: ["esc"],
     group: "DND",
     groupEnd: !0
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_SERVER_READ,
-    binds: F(H.KeybindActions.MARK_SERVER_READ),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_SERVER_READ,
+    binds: Y(B.KeybindActions.MARK_SERVER_READ),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_CHANNEL_READ,
-    binds: F(H.KeybindActions.MARK_CHANNEL_READ),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_CHANNEL_READ,
+    binds: Y(B.KeybindActions.MARK_CHANNEL_READ),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_DM_GROUP,
-    binds: F(H.KeybindActions.CREATE_DM_GROUP),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_DM_GROUP,
+    binds: Y(B.KeybindActions.CREATE_DM_GROUP),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PINS,
-    binds: F(H.KeybindActions.TOGGLE_CHANNEL_PINS),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PINS,
+    binds: Y(B.KeybindActions.TOGGLE_CHANNEL_PINS),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_INBOX,
-    binds: F(H.KeybindActions.TOGGLE_INBOX_UNREADS_TAB),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_INBOX,
+    binds: Y(B.KeybindActions.TOGGLE_INBOX_UNREADS_TAB),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_TOP_INBOX_CHANNEL_READ,
-    binds: F(H.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_TOP_INBOX_CHANNEL_READ,
+    binds: Y(B.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_USERS,
-    binds: F(H.KeybindActions.TOGGLE_USERS),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_USERS,
+    binds: Y(B.KeybindActions.TOGGLE_USERS),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_EMOJIS,
-    binds: F(H.KeybindActions.SEARCH_EMOJIS),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_EMOJIS,
+    binds: Y(B.KeybindActions.SEARCH_EMOJIS),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_GIFS,
-    binds: F(H.KeybindActions.SEARCH_GIFS),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_GIFS,
+    binds: Y(B.KeybindActions.SEARCH_GIFS),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_STICKERS,
-    binds: F(H.KeybindActions.SEARCH_STICKERS),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_STICKERS,
+    binds: Y(B.KeybindActions.SEARCH_STICKERS),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_SCROLL_CHAT,
-    binds: F(H.KeybindActions.SCROLL_UP, H.KeybindActions.SCROLL_DOWN),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SCROLL_CHAT,
+    binds: Y(B.KeybindActions.SCROLL_UP, B.KeybindActions.SCROLL_DOWN),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_JUMP_TO_FIRST_UNREAD,
-    binds: F(H.KeybindActions.JUMP_TO_FIRST_UNREAD),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_JUMP_TO_FIRST_UNREAD,
+    binds: Y(B.KeybindActions.JUMP_TO_FIRST_UNREAD),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
-    binds: F(H.KeybindActions.TEXTAREA_FOCUS),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
+    binds: Y(B.KeybindActions.TEXTAREA_FOCUS),
     group: "CHAT"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_UPLOAD_FILE,
-    binds: F(H.KeybindActions.UPLOAD_FILE),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_UPLOAD_FILE,
+    binds: Y(B.KeybindActions.UPLOAD_FILE),
     group: "CHAT",
     groupEnd: !0
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_MUTE,
-    binds: F(H.KeybindActions.TOGGLE_MUTE),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_MUTE,
+    binds: Y(B.KeybindActions.TOGGLE_MUTE),
     group: "VOICE_AND_VIDEO"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_DEAFEN,
-    binds: F(H.KeybindActions.TOGGLE_DEAFEN),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_DEAFEN,
+    binds: Y(B.KeybindActions.TOGGLE_DEAFEN),
     group: "VOICE_AND_VIDEO"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_ACCEPT,
-    binds: F(H.KeybindActions.CALL_ACCEPT),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_ACCEPT,
+    binds: Y(B.KeybindActions.CALL_ACCEPT),
     group: "VOICE_AND_VIDEO"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_DECLINE,
-    binds: F(H.KeybindActions.MARK_CHANNEL_READ),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_DECLINE,
+    binds: Y(B.KeybindActions.MARK_CHANNEL_READ),
     group: "VOICE_AND_VIDEO"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_START,
-    binds: F(H.KeybindActions.CALL_START),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_START,
+    binds: Y(B.KeybindActions.CALL_START),
     group: "VOICE_AND_VIDEO",
     groupEnd: !0
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_HELP,
-    binds: F(H.KeybindActions.TOGGLE_HELP),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_SOUNDBOARD,
+    binds: Y(B.KeybindActions.SEARCH_SOUNDBOARD),
+    group: "VOICE_AND_VIDEO"
+  }, {
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_HELP,
+    binds: Y(B.KeybindActions.TOGGLE_HELP),
     group: "MISCELLANEOUS"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH,
-    binds: F(H.KeybindActions.FOCUS_SEARCH),
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH,
+    binds: Y(B.KeybindActions.FOCUS_SEARCH),
     group: "MISCELLANEOUS"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG,
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG,
     binds: ["h+h+right+n+k"],
     group: "MISCELLANEOUS",
     groupEnd: !0
   }, {
-    description: B.default.Messages.EDIT_MESSAGE,
+    description: v.default.Messages.EDIT_MESSAGE,
     binds: ["e"],
     group: "MESSAGE"
   }, {
-    description: B.default.Messages.DELETE_MESSAGE,
+    description: v.default.Messages.DELETE_MESSAGE,
     binds: ["backspace"],
     group: "MESSAGE"
   }, {
-    description: B.default.Messages.PIN_MESSAGE,
+    description: v.default.Messages.PIN_MESSAGE,
     binds: ["p"],
     group: "MESSAGE"
   }, {
-    description: B.default.Messages.ADD_REACTION,
+    description: v.default.Messages.ADD_REACTION,
     binds: ["plus"],
     group: "MESSAGE"
   }, {
-    description: B.default.Messages.MESSAGE_ACTION_REPLY,
+    description: v.default.Messages.MESSAGE_ACTION_REPLY,
     binds: ["r"],
     group: "MESSAGE"
   }, {
-    description: B.default.Messages.COPY_TEXT,
+    description: v.default.Messages.COPY_TEXT,
     binds: ["mod+c"],
     group: "MESSAGE"
   }, {
-    description: B.default.Messages.MARK_UNREAD,
+    description: v.default.Messages.MARK_UNREAD,
     binds: ["alt+enter"],
     group: "MESSAGE"
   }, {
-    description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
+    description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
     binds: ["escape"],
     group: "MESSAGE",
     groupEnd: !0
   }]
 }
-t.default = Y
+t.default = w
