@@ -312,7 +312,7 @@ function q(e) {
     p = l.useRef(new o.Environment),
     [S, P] = l.useState(null),
     T = (0, y.useFreeBoostUserTenureReward)(),
-    A = (null == T ? void 0 : T.showNotification) === !0,
+    A = (null == T ? void 0 : T.showCard) === !0,
     h = null === (t = (0, M.getPremiumPlanItem)(a)) || void 0 === t ? void 0 : t.planId,
     L = null != h ? M.default.getPremiumType(h) : null;
   c()(null != L, "Should not be cancelling Nitro without premiumType");
