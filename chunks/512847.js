@@ -194,7 +194,7 @@ function U() {
   }), null
 }
 
-function j() {
+function G() {
   return L([T.default, o.default, _.default], () => {
     let e = T.default.getVoiceChannelId(),
       t = _.default.getId(),
@@ -218,7 +218,7 @@ function j() {
   }), null
 }
 
-function G() {
+function j() {
   return L([c.default, T.default], () => ({
     hangStatus: c.default.getCurrentHangStatus(),
     customHangStatus: c.default.getCustomHangStatus(),
@@ -235,6 +235,6 @@ function G() {
 
 function w() {
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(P, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(D, {}), (0, a.jsx)(x, {}), (0, a.jsx)(U, {}), (0, a.jsx)(b, {}), (0, a.jsx)(j, {}), (0, a.jsx)(G, {})]
+    children: [(0, a.jsx)(P, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(D, {}), (0, a.jsx)(x, {}), (0, a.jsx)(U, {}), (0, a.jsx)(b, {}), (0, a.jsx)(G, {}), (0, a.jsx)(j, {})]
   })
 }

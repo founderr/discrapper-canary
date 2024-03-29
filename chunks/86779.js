@@ -17,14 +17,14 @@ var s, a, i = n("735250"),
   S = n("970648"),
   R = n("981631"),
   A = n("691621");
-let N = "mweb_handoff_nonce",
-  T = "mweb_handoff_nonce_expiration",
+let T = "mweb_handoff_nonce",
+  N = "mweb_handoff_nonce_expiration",
   I = 1 * _.default.Millis.MINUTE;
 (a = s || (s = {})).NONCE_MISSING = "nonce_missing", a.NONCE_EXPIRED = "nonce_expired", a.NULL_HANDOFF_TOKEN = "deep_link_failed", a.HANDOFF_EXCHANGE = "handoff_exchange";
 let C = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
   O = new Set(["deep_link_failed"]),
   v = () => {
-    c.Storage.remove(N), c.Storage.remove(T)
+    c.Storage.remove(T), c.Storage.remove(N)
   };
 t.default = () => {
   let e = (0, u.useStateFromStores)([m.default], () => m.default.getFingerprint()),
@@ -47,10 +47,10 @@ t.default = () => {
     }, {
       fingerprint: a
     })
-  }, [L, a]), b = c.Storage.get(N);
+  }, [L, a]), b = c.Storage.get(T);
   if ("null" === n && null === _ && x("deep_link_failed"), null != n && "null" !== n && null == b && null === _ && x("nonce_missing"), r.useEffect(() => {
       if (null != b) {
-        let e = c.Storage.get(T);
+        let e = c.Storage.get(N);
         (null == e || Date.now() >= e) && (x("nonce_expired"), v())
       }
     }, [b, x]), r.useEffect(() => {
@@ -99,7 +99,7 @@ t.default = () => {
       color: f.Button.Colors.BRAND_NEW,
       onClick: () => {
         let e = S.default.generateNonce();
-        c.Storage.set(N, e), c.Storage.set(T, Date.now() + I);
+        c.Storage.set(T, e), c.Storage.set(N, Date.now() + I);
         let t = new URL(R.MOBILE_WEB_HANDOFF_DEEP_LINK),
           n = new URLSearchParams(window.location.search);
         n.delete("fingerprint"), n.delete("handoff_token");

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MARK_CHANNEL_READ: function() {
-    return g
+    return b
   }
 });
 var i = n("374470"),
@@ -18,8 +18,8 @@ var i = n("374470"),
   A = n("268350"),
   C = n("433355"),
   T = n("592125"),
-  I = n("703558"),
-  S = n("323873"),
+  S = n("703558"),
+  I = n("323873"),
   f = n("375954"),
   N = n("306680"),
   O = n("944486"),
@@ -28,7 +28,7 @@ var i = n("374470"),
   p = n("451478"),
   D = n("585483"),
   h = n("981631");
-let g = {
+let b = {
   binds: ["esc", "shift+pagedown"],
   comboKeysBindGlobal: !0,
   action(e) {
@@ -48,7 +48,7 @@ let g = {
       l = T.default.getChannel(n),
       u = C.default.getSection(n, null == l ? void 0 : l.isDM()) === h.ChannelSections.SIDEBAR_CHAT ? C.default.getSidebarState(n) : null,
       d = (null == u ? void 0 : u.type) === c.SidebarType.VIEW_THREAD || (null == u ? void 0 : u.type) === c.SidebarType.VIEW_CHANNEL ? u.channelId : null;
-    if (!1 === b(n) || !1 === b(d)) return !1;
+    if (!1 === g(n) || !1 === g(d)) return !1;
     if (null != n && (null == u ? void 0 : u.type) === c.SidebarType.CREATE_THREAD) return E.default.closeChannelSidebar(n), !1;
     let r = G(n),
       _ = G(d);
@@ -56,11 +56,11 @@ let g = {
   }
 };
 
-function b(e) {
+function g(e) {
   if (null != e) {
-    if (S.default.isEditingAny(e)) return l.default.endEditMessage(e), !1;
+    if (I.default.isEditingAny(e)) return l.default.endEditMessage(e), !1;
     if (null != r.default.getPendingReply(e)) return (0, d.deletePendingReply)(e), !1;
-    if (null != _.default.getStickerPreview(e, I.DraftType.ChannelMessage)) return (0, A.clearStickerPreview)(e, I.DraftType.ChannelMessage), !1
+    if (null != _.default.getStickerPreview(e, S.DraftType.ChannelMessage)) return (0, A.clearStickerPreview)(e, S.DraftType.ChannelMessage), !1
   }
 }
 

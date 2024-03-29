@@ -41,12 +41,12 @@ function L(e) {
     subsection: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == n ? void 0 : n.name
   }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
-  let j = L && (null == n || !(P || M) || x && !b);
+  let G = L && (null == n || !(P || M) || x && !b);
   if (s.useEffect(() => {
       o.fetchSubscriptions()
     }, []), s.useEffect(() => {
-      j && !l.isMobile && (0, c.handleInaccessiblePage)(t, R.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
-    }, [t, j]), l.isMobile && j) {
+      G && !l.isMobile && (0, c.handleInaccessiblePage)(t, R.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
+    }, [t, G]), l.isMobile && G) {
     let e = null == n ? g.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : g.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
     return (0, a.jsx)(g.GuildRoleSubscriptionsOverviewErrorPage, {
       errorType: e

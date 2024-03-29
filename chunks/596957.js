@@ -38,22 +38,22 @@ t.default = function(e) {
   } = (0, h.default)(E.default.FRIENDS_LIST), {
     rows: D,
     section: x
-  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, p.useIsClearIncomingFriendRequestsEnabled)(), [G, w] = s.useState(() => {
+  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), G = (0, p.useIsClearIncomingFriendRequestsEnabled)(), [j, w] = s.useState(() => {
     let e = {};
     for (let t of Object.values(P.FriendsSections)) e[t] = "";
     return e
   }), k = s.useCallback(e => {
     w({
-      ...G,
+      ...j,
       [t]: e
     })
-  }, [G, t]), F = s.useCallback(() => {
+  }, [j, t]), F = s.useCallback(() => {
     w({
-      ...G,
+      ...j,
       [t]: ""
     })
-  }, [G, t]), B = D.filter(t, G[t]);
-  if (0 === B.length && "" === G[t]) return (0, a.jsxs)("div", {
+  }, [j, t]), B = D.filter(t, j[t]);
+  if (0 === B.length && "" === j[t]) return (0, a.jsxs)("div", {
     className: y.emptyStateContainer,
     children: [t === P.FriendsSections.ONLINE && (0, a.jsx)(_.default, {}), (0, a.jsx)(A.default, {
       type: t,
@@ -62,20 +62,20 @@ t.default = function(e) {
       }
     }, x)]
   });
-  let H = 0 === B.length && "" !== G[t],
+  let H = 0 === B.length && "" !== j[t],
     V = B.filter(e => e.type === P.RelationshipTypes.PENDING_INCOMING).length,
-    Y = t === P.FriendsSections.PENDING && V > 0 && j && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
+    Y = t === P.FriendsSections.PENDING && V > 0 && G && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
   return (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: l,
     children: (0, a.jsxs)(c.default, {
       section: P.AnalyticsSections.FRIENDS_LIST,
       children: [(0, a.jsx)(I.default, {
         className: i()(y.searchBar, H ? y.searchEmptyState : null),
-        query: G[t],
+        query: j[t],
         onChange: k,
         onClear: F,
         size: I.default.Sizes.MEDIUM
-      }), t === P.FriendsSections.ONLINE && "" === G[t] && (0, a.jsx)(_.default, {}), (0, a.jsxs)("div", {
+      }), t === P.FriendsSections.ONLINE && "" === j[t] && (0, a.jsx)(_.default, {}), (0, a.jsxs)("div", {
         className: y.sectionTitle,
         children: [(0, a.jsx)(O.default, {
           id: n,
@@ -149,7 +149,7 @@ t.default = function(e) {
           }
         },
         sectionFilter: t,
-        searchQuery: G[t],
+        searchQuery: j[t],
         useReducedMotion: f.default.useReducedMotion
       })]
     })

@@ -41,8 +41,8 @@ var a, s, l = n("735250"),
   x = n("504160"),
   b = n("151864"),
   U = n("835184"),
-  j = n("780294"),
-  G = n("725436"),
+  G = n("780294"),
+  j = n("725436"),
   w = n("497656"),
   k = n("79874"),
   F = n("554747"),
@@ -184,7 +184,7 @@ function X(e) {
   let {
     guildEvent: n,
     noticeType: a
-  } = e, s = (0, B.getLocationFromEvent)(n), r = null != s ? (0, G.guildEventDetailsParser)(s, !0) : null, d = (0, B.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
+  } = e, s = (0, B.getLocationFromEvent)(n), r = null != s ? (0, j.guildEventDetailsParser)(s, !0) : null, d = (0, B.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
     startTime: f,
     endTime: E
   } = (0, k.default)(n.id), {
@@ -275,7 +275,7 @@ function J(e) {
     }),
     heading: K.default.Messages.HAPPENING_NOW,
     topic: t.name,
-    location: (0, G.guildEventDetailsParser)(n, !0),
+    location: (0, j.guildEventDetailsParser)(n, !0),
     locationIcon: (0, l.jsx)(O.default, {
       width: 16,
       height: 16,
@@ -400,7 +400,7 @@ function en(e) {
     showRedesignedLiveChannelNotice: n
   } = (0, d.useChannelNoticeRedesignExperiment)(!0), a = (0, w.useActiveEventOrStageInstanceChannel)(t.id), s = (0, F.useGuildActiveEvent)(t.id), i = (0, F.useGuildUpcomingEventsNotice)(t.id), {
     canSeeUpcomingEventsNotices: o
-  } = j.default.useExperiment({
+  } = G.default.useExperiment({
     guildId: t.id,
     location: "Guild Channel Notice"
   }, {
@@ -437,7 +437,7 @@ function en(e) {
       upcomingEvent: e,
       noticeType: n
     } = i;
-    j.default.trackExposure({
+    G.default.trackExposure({
       guildId: t.id,
       location: "Guild Live Channel Notice"
     }), h = o ? (0, l.jsx)(X, {

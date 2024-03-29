@@ -83,7 +83,7 @@ t.default = s.memo(function(e) {
         page: T.AnalyticsPages.GUILD_CHANNEL
       }
     })
-  }, j = () => {
+  }, G = () => {
     I.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: N.PremiumUpsellTypes.INVITE_SPLASH_UPSELL,
       location: {
@@ -91,7 +91,7 @@ t.default = s.memo(function(e) {
       },
       location_stack: f
     })
-  }, G = (0, i.isThemeDark)(n) ? P : M, [w, k] = (0, c.useSelectedDismissibleContent)(t, g.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, j = (0, i.isThemeDark)(n) ? P : M, [w, k] = (0, c.useSelectedDismissibleContent)(t, g.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, a.jsx)(a.Fragment, {
     children: (() => {
       switch (w) {
@@ -102,7 +102,7 @@ t.default = s.memo(function(e) {
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: G,
+                src: j,
                 className: v.fullWidthImage
               }),
               content: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
@@ -121,7 +121,7 @@ t.default = s.memo(function(e) {
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: G,
+                src: j,
                 className: v.fullWidthImage
               }),
               content: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
@@ -165,7 +165,7 @@ t.default = s.memo(function(e) {
             t = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : R.default.Messages.LEARN_MORE;
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
-              onComponentMount: j,
+              onComponentMount: G,
               header: R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",

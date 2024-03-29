@@ -166,7 +166,7 @@ let b = () => {
       })]
     })
   },
-  j = () => {
+  G = () => {
     let e = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       t = (0, r.useStateFromStores)([E.default], () => E.default.getSelectedTeenId()),
       {
@@ -197,11 +197,11 @@ let b = () => {
       options: l
     })
   },
-  G = e => {
+  j = e => {
     let {
       userId: t
     } = e, n = (0, p.default)(), s = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), l = (0, h.getActivityWindowTimestampFormatter)(!!n), i = (0, T.useActivityWindowTimeStamp)(l);
-    return n && 1 !== s.length ? (0, a.jsx)(j, {}) : (0, a.jsx)(U, {
+    return n && 1 !== s.length ? (0, a.jsx)(G, {}) : (0, a.jsx)(U, {
       userId: t,
       subText: i
     })
@@ -219,7 +219,7 @@ t.default = e => {
       className: y.card,
       children: [(0, a.jsx)("div", {
         className: y.header,
-        children: (0, a.jsx)(G, {
+        children: (0, a.jsx)(j, {
           userId: t.id
         })
       }), (0, a.jsxs)("div", {

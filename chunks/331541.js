@@ -37,8 +37,8 @@ var a = n("735250"),
   x = n("293273"),
   b = n("158776"),
   U = n("594174"),
-  j = n("881201"),
-  G = n("26290"),
+  G = n("881201"),
+  j = n("26290"),
   w = n("626135"),
   k = n("70956"),
   F = n("51144"),
@@ -227,7 +227,7 @@ function X(e) {
             className: z.icon
           }), (0, a.jsxs)("div", {
             className: z.focusModeTitle,
-            children: [K.default.Messages.FOCUS_MODE_TITLE, (0, a.jsx)(G.TextBadge, {
+            children: [K.default.Messages.FOCUS_MODE_TITLE, (0, a.jsx)(j.TextBadge, {
               text: l ? K.default.Messages.FOCUS_MODE_BADGE_ON : o ? K.default.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : K.default.Messages.FOCUS_MODE_BADGE_OFF,
               color: l ? u.default.BRAND_500 : o ? u.default.RED_400 : u.default.PRIMARY_500
             })]
@@ -372,7 +372,7 @@ function X(e) {
                   focusedClassName: z.menuItemFocused,
                   subMenuIconClassName: z.subMenuIcon,
                   label: K.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-                  icon: j.default,
+                  icon: G.default,
                   showIconFirst: !0,
                   action: () => {
                     B({

@@ -119,12 +119,12 @@ function D(e) {
     serverMute: S,
     mute: d,
     localMute: T
-  })) && void 0 !== s ? s : {}, j = null != U ? v.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
+  })) && void 0 !== s ? s : {}, G = null != U ? v.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
     userName: D,
     status: U()
   }) : D;
 
-  function G(e) {
+  function j(e) {
     null != A ? (0, E.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -161,12 +161,12 @@ function D(e) {
       ...e
     }),
     children: e => (0, a.jsx)(f.Tooltip, {
-      text: j,
+      text: G,
       children: t => (0, a.jsx)(f.Clickable, {
         ...t,
         ...e,
         className: L.avatarContainer,
-        onContextMenu: G,
+        onContextMenu: j,
         focusProps: P,
         children: (0, a.jsx)(_.default, {
           shakeLocation: O.ShakeLocation.VOICE_USER,

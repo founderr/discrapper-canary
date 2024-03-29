@@ -33,8 +33,8 @@ var a = n("735250"),
   x = n("158631"),
   b = n("793865"),
   U = n("933557"),
-  j = n("258609"),
-  G = n("446226"),
+  G = n("258609"),
+  j = n("446226"),
   w = n("935261"),
   k = n("74299"),
   F = n("803647"),
@@ -87,8 +87,8 @@ var a = n("735250"),
   ex = n("981631"),
   eb = n("190378"),
   eU = n("689938"),
-  ej = n("815668"),
-  eG = n("794711");
+  eG = n("815668"),
+  ej = n("794711");
 
 function ew(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -120,10 +120,10 @@ function eF() {
   let t = (0, d.useStateFromStores)([e_.default], () => e_.default.getNoiseCancellation());
   return (0, a.jsxs)("div", {
     ref: e,
-    className: ej.noiseCancellationPopout,
+    className: eG.noiseCancellationPopout,
     children: [(0, a.jsx)(_.FormSwitch, {
       hideBorder: !0,
-      className: eG.marginBottom4,
+      className: ej.marginBottom4,
       value: t,
       onChange: () => C.default.setNoiseCancellation(!t, {
         section: ex.AnalyticsSections.NOISE_CANCELLATION_POPOUT
@@ -135,27 +135,27 @@ function eF() {
       notchBackground: I.NotchBackground.BLACK,
       buttonTest: eU.default.Messages.NOISE_CANCELLATION_POPOUT_TEST,
       buttonStop: eU.default.Messages.NOISE_CANCELLATION_POPOUT_STOP,
-      buttonClassName: ej.micTestButton,
+      buttonClassName: eG.micTestButton,
       buttonColor: _.Button.Colors.PRIMARY,
       location: {
         section: ex.AnalyticsSections.NOISE_CANCELLATION_POPOUT
       }
     }), (0, a.jsx)(_.FormTitle, {
       tag: _.FormTitleTags.H5,
-      className: i()(eG.marginBottom8, eG.marginTop20),
+      className: i()(ej.marginBottom8, ej.marginTop20),
       children: eU.default.Messages.NOISE_CANCELLATION_POPOUT_FOOTER
     }), (0, a.jsxs)(eg.default, {
       justify: eg.default.Justify.BETWEEN,
-      className: ej.__invalid_footer,
+      className: eG.__invalid_footer,
       children: [(0, a.jsx)(_.Anchor, {
         href: ex.MarketingURLs.KRISP,
         onClick: e => ek(e),
         children: (0, a.jsx)("div", {
-          className: ej.krispLogo
+          className: eG.krispLogo
         })
       }), (0, a.jsx)(_.Anchor, {
         href: eP.default.getArticleURL(ex.HelpdeskArticles.NOISE_SUPPRESSION),
-        className: ej.krispLink,
+        className: eG.krispLink,
         onClick: e => ek(e),
         children: eU.default.Messages.LEARN_MORE
       })]
@@ -215,8 +215,8 @@ function eH(e) {
         size: "custom",
         width: 20,
         height: 20,
-        className: i()(ej.buttonIcon, {
-          [ej.withText]: !p
+        className: i()(eG.buttonIcon, {
+          [eG.withText]: !p
         }),
         color: "currentColor"
       });
@@ -262,13 +262,13 @@ function eH(e) {
                 u(t), null === (n = e.onContextMenu) || void 0 === n || n.call(e)
               },
               size: _.Button.Sizes.SMALL,
-              className: i()(ej.button, ej.buttonColor, {
-                [ej.buttonActive]: n,
-                [ej.fauxDisabled]: t,
-                [ej.disabled]: r.disabled
+              className: i()(eG.button, eG.buttonColor, {
+                [eG.buttonActive]: n,
+                [eG.fauxDisabled]: t,
+                [eG.disabled]: r.disabled
               }),
-              innerClassName: ej.buttonContents,
-              wrapperClassName: ej.button,
+              innerClassName: eG.buttonContents,
+              wrapperClassName: eG.button,
               fullWidth: !0,
               children: p ? o : (0, a.jsxs)(eg.default, {
                 align: eg.default.Align.CENTER,
@@ -314,19 +314,19 @@ function eV(e) {
         }), null === (n = e.onClick) || void 0 === n || n.call(e)
       },
       disabled: m,
-      className: i()(ej.button, ej.buttonColor, {
-        [ej.buttonActive]: E || null != f,
-        [ej.disabled]: m
+      className: i()(eG.button, eG.buttonColor, {
+        [eG.buttonActive]: E || null != f,
+        [eG.disabled]: m
       }),
-      innerClassName: ej.buttonContents,
-      wrapperClassName: ej.button,
+      innerClassName: eG.buttonContents,
+      wrapperClassName: eG.button,
       children: [C ? (0, a.jsx)(P.FreeActivityIndicatorDot, {
         top: -1,
         right: -1
       }) : null, (0, a.jsx)(S, {
         size: "sm",
         color: "currentColor",
-        className: ej.buttonIcon
+        className: eG.buttonIcon
       })]
     })
   }) : null
@@ -363,8 +363,8 @@ function eY(e) {
   s.useEffect(() => () => L(), [L, R]);
   let P = (0, a.jsx)(O, {
     color: "currentColor",
-    className: i()(ej.buttonIcon, {
-      [ej.withText]: !A
+    className: i()(eG.buttonIcon, {
+      [eG.withText]: !A
     })
   });
   return (0, a.jsx)(_.Popout, {
@@ -399,9 +399,9 @@ function eY(e) {
             T ? n(a) : t(), null === (s = e.onClick) || void 0 === s || s.call(e)
           },
           disabled: !E || o,
-          className: i()(ej.button, ej.buttonColor, {
-            [ej.buttonActive]: null != I,
-            [ej.disabled]: !E || o
+          className: i()(eG.button, eG.buttonColor, {
+            [eG.buttonActive]: null != I,
+            [eG.disabled]: !E || o
           }),
           ...T ? l : null,
           onMouseEnter: () => {
@@ -410,8 +410,8 @@ function eY(e) {
           onMouseLeave: () => {
             v.onMouseLeave()
           },
-          innerClassName: ej.buttonContents,
-          wrapperClassName: ej.button,
+          innerClassName: eG.buttonContents,
+          wrapperClassName: eG.button,
           children: A ? P : (0, a.jsxs)(eg.default, {
             align: eg.default.Align.CENTER,
             children: [P, eU.default.Messages.GO_LIVE_SHARE_SCREEN]
@@ -436,7 +436,7 @@ class eW extends s.PureComponent {
     if (null == t) return null;
     let d = (0, U.computeChannelName)(t, eI.default, eS.default);
     return null != n ? (e = ex.Routes.CHANNEL(n.id, t.id), d = "".concat(d, " / ").concat(n.name)) : e = ex.Routes.CHANNEL(ex.ME, t.id), o && t.isBroadcastChannel() && (d = eU.default.Messages.BROADCASTING), (0, a.jsx)(p.default, {
-      statusTextClassName: ej.statusWithPopout,
+      statusTextClassName: eG.statusWithPopout,
       quality: s,
       state: l,
       lastPing: i,
@@ -447,7 +447,7 @@ class eW extends s.PureComponent {
           onClick: this.handleChannelLinkClick,
           onContextMenu: this.handleChannelLinkContextMenu,
           children: (0, a.jsx)(ev.default, {
-            className: ej.channel,
+            className: eG.channel,
             children: d
           })
         })
@@ -465,7 +465,7 @@ class eW extends s.PureComponent {
     } = this.props;
     return null != s ? null : (null == l ? void 0 : l.isGuildStageVoice()) && !(null != i.find(e => e.user.id === ec.default.getId() && (0, $.getAudienceRequestToSpeakState)(e.voiceState) === $.RequestToSpeakStates.ON_STAGE)) && (0, X.shouldShowStageMusicMuteButton)(l.id) ? (0, a.jsx)(eB, {}) : !n && t ? (0, a.jsx)(_.Tooltip, {
       text: eU.default.Messages.NOISE_CANCELLATION_CPU_OVERUSE,
-      tooltipClassName: ej.noiseCancellationTooltip,
+      tooltipClassName: eG.noiseCancellationTooltip,
       forceOpen: !0,
       children: e => {
         let {
@@ -503,7 +503,7 @@ class eW extends s.PureComponent {
     return null != e && n && 0 !== t.length ? (0, a.jsx)(eD.default, {
       voiceStates: t,
       channel: e,
-      className: ej.voiceUsers
+      className: eG.voiceUsers
     }) : null
   }
   renderChannelButtons() {
@@ -529,7 +529,7 @@ class eW extends s.PureComponent {
       } = (0, en.getChannelVideoLimit)(e),
       f = (0, Q.getStageHasMedia)(e.id);
     return (0, a.jsxs)("div", {
-      className: ej.actionButtons,
+      className: eG.actionButtons,
       children: [(0, a.jsx)(eH, {
         channel: e,
         enableActivities: d,
@@ -544,9 +544,9 @@ class eW extends s.PureComponent {
           channel: e,
           enableActivities: s
         }) : null, (0, W.default)(e) ? (0, a.jsx)(K.default, {
-          className: i()(ej.button, ej.buttonColor),
-          innerClassName: ej.buttonContents,
-          iconClassName: ej.buttonIcon,
+          className: i()(eG.button, eG.buttonColor),
+          innerClassName: eG.buttonContents,
+          iconClassName: eG.buttonIcon,
           channel: e
         }) : null]
       })]
@@ -565,12 +565,12 @@ class eW extends s.PureComponent {
       animation: _.Popout.Animation.TRANSLATE,
       shouldShow: n,
       children: () => (0, a.jsxs)("div", {
-        className: ej.container,
+        className: eG.container,
         children: [(0, a.jsxs)(eg.default, {
-          className: ej.connection,
+          className: eG.connection,
           align: eg.default.Align.CENTER,
           children: [(0, a.jsx)("div", {
-            className: ej.inner,
+            className: eG.inner,
             children: this.renderConnectionStatus()
           }), (0, a.jsxs)(eg.default, {
             grow: 0,
@@ -626,17 +626,17 @@ class eW extends s.PureComponent {
     }), ew(this, "handleCloseVoicePanelIntroduction", () => {
       B.hideHotspot(eb.HotspotLocations.VOICE_PANEL_INTRODUCTION)
     }), ew(this, "renderVoicePanelIntroduction", () => (0, a.jsxs)("div", {
-      className: i()(ej.voicePanelIntroductionWrapper, "theme-light"),
+      className: i()(eG.voicePanelIntroductionWrapper, "theme-light"),
       children: [(0, a.jsx)(_.Heading, {
-        className: ej.voicePanelIntroductionHeader,
+        className: eG.voicePanelIntroductionHeader,
         variant: "heading-md/semibold",
         children: eU.default.Messages.VOICE_PANEL_INTRODUCTION_HEADER
       }), (0, a.jsx)(_.Text, {
-        className: ej.voicePanelIntroductionText,
+        className: eG.voicePanelIntroductionText,
         variant: "text-sm/normal",
         children: eU.default.Messages.VOICE_PANEL_INTRODUCTION_TEXT
       }), (0, a.jsx)(_.Button, {
-        className: ej.voicePanelIntroductionButton,
+        className: eG.voicePanelIntroductionButton,
         color: _.Button.Colors.BRAND,
         onClick: this.handleCloseVoicePanelIntroduction,
         children: eU.default.Messages.VOICE_PANEL_INTRODUCTION_CLOSE
@@ -664,14 +664,14 @@ function eK(e) {
     onMouseLeave: () => {
       o.onMouseLeave()
     },
-    tooltipClassName: ej.noiseCancellationTooltip,
+    tooltipClassName: eG.noiseCancellationTooltip,
     tooltipText: n ? null : eU.default.Messages.NOISE_CANCELLATION_TOOLTIP,
     icon: r
   })
 }
 t.default = (0, T.default)(function(e) {
-  let t = (0, G.default)(),
-    n = (0, d.useStateFromStores)([j.default], () => j.default.getAwaitingRemoteSessionInfo()),
+  let t = (0, j.default)(),
+    n = (0, d.useStateFromStores)([G.default], () => G.default.getAwaitingRemoteSessionInfo()),
     l = (0, d.useStateFromStores)([eI.default], () => eI.default.getCurrentUser()),
     {
       channelId: i,
@@ -729,7 +729,7 @@ t.default = (0, T.default)(function(e) {
   return (0, a.jsx)(D.AnalyticsLocationProvider, {
     value: P,
     children: (0, a.jsxs)("div", {
-      className: ej.wrapper,
+      className: eG.wrapper,
       children: [null != t || null != n ? (0, a.jsx)(w.default, {
         voiceState: t,
         awaitingRemoteSessionInfo: n
@@ -750,13 +750,13 @@ t.default = (0, T.default)(function(e) {
         isPrivateChannelWithEnabledActivities: b,
         isBroadcasting: U
       }), !O && S && null != u ? (0, a.jsxs)("div", {
-        className: ej.viewAsRolesWarning,
+        className: eG.viewAsRolesWarning,
         children: [(0, a.jsx)(_.Text, {
           variant: "text-sm/normal",
-          className: ej.viewAsRolesWarningText,
+          className: eG.viewAsRolesWarningText,
           children: I ? eU.default.Messages.VIEW_AS_ROLES_HIDDEN_VC_WARNING : eU.default.Messages.VIEW_AS_ROLES_VOICE_WARNING
         }), (0, a.jsx)(_.Button, {
-          className: ej.viewAsRolesWarningButton,
+          className: eG.viewAsRolesWarningButton,
           size: _.Button.Sizes.MIN,
           onClick: () => {
             v(!0)

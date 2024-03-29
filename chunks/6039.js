@@ -60,11 +60,11 @@ t.default = e => {
       await E.default.submitVerificationForm(n, e)
     }, U = () => {
       f.default.resetGuildJoinRequest(n)
-    }, j = x(g.default.Messages.LEAVE_SERVER_BODY.format({
+    }, G = x(g.default.Messages.LEAVE_SERVER_BODY.format({
       name: null == P ? void 0 : P.toString()
     }), () => {
       O(Math.max(R, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(n), (0, r.transitionTo)(p.Routes.ME)
-    }), G = (null == v ? void 0 : null === (t = v.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
+    }), j = (null == v ? void 0 : null === (t = v.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
       id: v.guild.id,
       splash: v.guild.splash
     }) : (0, d.getArtForPath)();
@@ -72,7 +72,7 @@ t.default = e => {
     className: A.page,
     children: (0, a.jsxs)(u.default, {
       embedded: !0,
-      splash: G,
+      splash: j,
       waveState: R,
       showLogo: !1,
       updateWaveState: D,
@@ -85,7 +85,7 @@ t.default = e => {
             case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
               return (0, a.jsx)(S.default, {
                 onCancel: x(g.default.Messages.MEMBER_VERIFICATION_CANCEL_PENDING_APPLICATION_MODAL_TITLE, U),
-                onLeave: j,
+                onLeave: G,
                 guild: y
               });
             case _.GuildJoinRequestApplicationStatuses.REJECTED:
@@ -93,7 +93,7 @@ t.default = e => {
                 reapplyText: g.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                 onReapply: U,
                 confirmText: g.default.Messages.LEAVE_SERVER,
-                onConfirm: j,
+                onConfirm: G,
                 rejectionReason: null == L ? void 0 : L.rejectionReason,
                 guild: y
               });

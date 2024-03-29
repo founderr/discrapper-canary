@@ -33,8 +33,8 @@ var a = n("735250"),
   x = n("897353"),
   b = n("424218"),
   U = n("780570"),
-  j = n("353042"),
-  G = n("86826"),
+  G = n("353042"),
+  j = n("86826"),
   w = n("981631"),
   k = n("689938"),
   F = n("600262");
@@ -379,7 +379,7 @@ class Z extends s.PureComponent {
     })
   }
   renderProgressPatching() {
-    return (0, a.jsx)(j.default, {
+    return (0, a.jsx)(G.default, {
       getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
       updateInterval: 5e3,
       children: this.renderProgressPatchingBody
@@ -574,13 +574,13 @@ class en extends s.PureComponent {
       className: F.gameUpdates,
       children: [(0, a.jsxs)("div", {
         className: F.headerRow,
-        children: [(0, a.jsx)(G.default, {
+        children: [(0, a.jsx)(j.default, {
           className: i()(F.headerCell, F.networkProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesDownloaded,
           color: w.Color.GREEN_360,
           animate: s
-        }), (0, a.jsx)(G.default, {
+        }), (0, a.jsx)(j.default, {
           className: i()(F.headerCell, F.diskProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,

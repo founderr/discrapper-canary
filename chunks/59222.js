@@ -81,8 +81,8 @@ t.default = e => {
     placeholder: x,
     onTagClick: b
   } = e, U = i().uniqueId("GuildDiscovery"), {
-    guilds: j,
-    loading: G,
+    guilds: G,
+    loading: j,
     total: w
   } = n, [k, F] = s.useState(!1), {
     tag: B
@@ -167,8 +167,8 @@ t.default = e => {
           return (0, a.jsxs)("section", {
             "aria-labelledby": U,
             children: [(0, a.jsx)(m.default, {
-              guilds: j,
-              loading: G,
+              guilds: G,
+              loading: j,
               loadingPlaceholderCount: T,
               onViewGuild: y,
               loadingGuildId: v,

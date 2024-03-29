@@ -37,8 +37,8 @@ var a = n("735250"),
   x = n("362416"),
   b = n("416568"),
   U = n("613609"),
-  j = n("160404"),
-  G = n("225675"),
+  G = n("160404"),
+  j = n("225675"),
   w = n("745052"),
   k = n("285865"),
   F = n("659971"),
@@ -125,10 +125,10 @@ let ep = () => (0, a.jsx)("div", {
       guildId: s,
       channelId: l,
       messageId: i
-    } = t.params, r = (0, f.useStateFromStores)([et.default], () => et.default.getGuild(s)), o = (0, f.useStateFromStores)([ee.default], () => null == s ? null : ee.default.getSelfMember(s)), u = (0, f.useStateFromStores)([j.default], () => {
+    } = t.params, r = (0, f.useStateFromStores)([et.default], () => et.default.getGuild(s)), o = (0, f.useStateFromStores)([ee.default], () => null == s ? null : ee.default.getSelfMember(s)), u = (0, f.useStateFromStores)([G.default], () => {
       if (null == s) return;
-      let e = j.default.getData(s);
-      if ((null == e ? void 0 : e.type) === G.ImpersonateType.SERVER_SHOP) switch (e.initialTab) {
+      let e = G.default.getData(s);
+      if ((null == e ? void 0 : e.type) === j.ImpersonateType.SERVER_SHOP) switch (e.initialTab) {
         case "role_subscriptions":
           return R.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS;
         case "guild_products":
@@ -247,7 +247,7 @@ let eM = e => (0, a.jsx)(ev, {
   },
   eb = () => (0, a.jsx)(ef.default, {}),
   eU = () => (0, a.jsx)(eE.default, {}),
-  ej = function() {
+  eG = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return function(t) {
       return (0, a.jsx)(A.default, {
@@ -256,7 +256,7 @@ let eM = e => (0, a.jsx)(ev, {
       })
     }
   },
-  eG = e => (0, a.jsx)(S.default, {
+  ej = e => (0, a.jsx)(S.default, {
     ...e
   }),
   ew = () => (0, a.jsx)(m.default, {}),
@@ -407,7 +407,7 @@ function eY() {
                   impressionName: u.ImpressionNames.ACTIVITIES
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.ACTIVITY_DETAILS(":applicationId"),
-                  render: eG,
+                  render: ej,
                   impressionName: u.ImpressionNames.ACTIVITY_DETAILS,
                   impressionProperties: e => {
                     let {
@@ -433,15 +433,15 @@ function eY() {
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.COLLECTIBLES_SHOP_FULLSCREEN,
-                  render: ej(!0),
+                  render: eG(!0),
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.COLLECTIBLES_SHOP,
-                  render: ej(!1),
+                  render: eG(!1),
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
-                  render: ej(!1),
+                  render: eG(!1),
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.MESSAGE_REQUESTS,

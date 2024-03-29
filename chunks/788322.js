@@ -45,8 +45,8 @@ t.default = e => {
     description: x,
     presenceCount: b,
     memberCount: U,
-    keywords: j
-  } = l, [G, w] = s.useState(!1), [k, F] = s.useState(!1), {
+    keywords: G
+  } = l, [j, w] = s.useState(!1), [k, F] = s.useState(!1), {
     analyticsLocations: B
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: P,
@@ -107,7 +107,7 @@ t.default = e => {
         className: A.spinner
       }) : null, (0, a.jsxs)(r.Clickable, {
         className: i()(A.container, {
-          [A.hover]: G,
+          [A.hover]: j,
           [A.submitting]: k
         }),
         onClick: W,
@@ -167,11 +167,11 @@ t.default = e => {
             className: A.description,
             variant: "text-sm/normal",
             children: x
-          }), K && null != j && null != L && (0, a.jsx)(I.DiscoveryTags, {
+          }), K && null != G && null != L && (0, a.jsx)(I.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: I.DiscoveryTagStyle.ALT,
             onTagClick: e => L(e, l.id),
-            tags: j,
+            tags: G,
             section: C.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
             className: A.memberInfo,

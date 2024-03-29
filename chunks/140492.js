@@ -18,12 +18,12 @@ var i = n("718528"),
   A = n("475468"),
   C = n("981631"),
   T = n("176505");
-let I = () => {
+let S = () => {
   let e = u.default.getMessageRequestsCount() > 0 || a.default.getSpamChannelsCount() > 0;
   return [C.Routes.FRIENDS, r.default.hasLibraryApplication() && !d.DisableGamesTab.getSetting() ? C.Routes.APPLICATION_LIBRARY : null, C.Routes.APPLICATION_STORE, e ? C.Routes.MESSAGE_REQUESTS : null, C.Routes.COLLECTIBLES_SHOP, d.FamilyCenterEnabled.getSetting() ? C.Routes.FAMILY_CENTER : null].filter(_.isNotNullish)
 };
 
-function S(e, t) {
+function I(e, t) {
   (0, A.transitionToChannel)(e, t)
 }
 
@@ -36,20 +36,20 @@ function f() {
       channelId: n,
       path: i,
       basePath: o
-    } = s.default.getState(), l = c.default.getPrivateChannelIds(), u = __OVERLAY__ ? l : [...I(), ...l];
-    let a = (null == n ? (t = null != i ? i : o, I().findIndex(e => t.startsWith(e))) : null != n ? u.indexOf(n) : 0) + e;
+    } = s.default.getState(), l = c.default.getPrivateChannelIds(), u = __OVERLAY__ ? l : [...S(), ...l];
+    let a = (null == n ? (t = null != i ? i : o, S().findIndex(e => t.startsWith(e))) : null != n ? u.indexOf(n) : 0) + e;
     a >= u.length ? a = 0 : a < 0 && (a = u.length - 1);
     let d = u[a];
-    I().includes(d) ? ! function(e) {
+    S().includes(d) ? ! function(e) {
       let t = E.default.getCurrentRoute();
       e === C.Routes.APPLICATION_STORE && null != t ? (0, A.transitionToPage)(t) : (0, A.transitionToPage)(e)
-    }(d) : S(C.ME, d)
+    }(d) : I(C.ME, d)
   }(e) : ! function(e, t) {
     var n, u;
     let a = s.default.getState().channelId,
       d = (0, i.default)(t).map(e => e.id);
     ((0, o.canSeeGuildHome)(t) || (0, l.canSeeOnboardingHome)(t)) && d.unshift(T.StaticChannelRoute.GUILD_HOME);
     let r = (n = (null != a ? d.indexOf(a) : -1) + e, u = d.length, n < 0 ? u - 1 : n >= u ? 0 : n);
-    S(t, d[r])
+    I(t, d[r])
   }(e, t)
 }

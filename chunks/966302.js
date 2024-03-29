@@ -37,8 +37,8 @@ var a = n("735250"),
   x = n("793865"),
   b = n("981631"),
   U = n("65154"),
-  j = n("689938"),
-  G = n("78764"),
+  G = n("689938"),
+  j = n("78764"),
   w = n("344534");
 let k = {
     width: 232,
@@ -66,9 +66,9 @@ function H(e) {
       }).catch(b.NOOP)
     }
   }, [i, l]), (0, a.jsxs)("div", {
-    className: G.previewRoot,
+    className: j.previewRoot,
     children: [(0, a.jsx)(u.Spinner, {}), (0, a.jsx)("div", {
-      className: G.preview,
+      className: j.preview,
       children: (0, a.jsx)(n, {
         disabled: !1,
         deviceId: l,
@@ -76,7 +76,7 @@ function H(e) {
         height: B.height
       })
     }), (0, a.jsx)("div", {
-      className: G.previewChannelHeader,
+      className: j.previewChannelHeader,
       children: t
     })]
   })
@@ -92,12 +92,12 @@ function V(e) {
     enabled: r
   } = (0, p.default)(), o = (0, T.default)(n);
   return (0, a.jsxs)("div", {
-    className: G.actions,
+    className: j.actions,
     children: [(0, a.jsx)(A.CenterControlButton, {
       iconComponent: P.default,
       color: "red",
-      className: G.actionButton,
-      label: j.default.Messages.DISMISS,
+      className: j.actionButton,
+      label: G.default.Messages.DISMISS,
       onClick: () => d.default.stopRinging(n.id)
     }), t && (0, a.jsx)(u.Popout, {
       renderPopout: e => {
@@ -126,7 +126,7 @@ function V(e) {
           cameraUnavailable: l,
           channel: n,
           onPopoutClick: s > 1 ? i : null,
-          className: G.actionButton,
+          className: j.actionButton,
           popoutOpen: u,
           onCameraUnavailable: g.default,
           onChange: () => {
@@ -138,7 +138,7 @@ function V(e) {
       channel: n,
       color: "green",
       centerButton: !0,
-      className: i()(G.actionButton, G.last)
+      className: i()(j.actionButton, j.last)
     })]
   })
 }
@@ -167,30 +167,30 @@ function Y(e) {
   let v = A === b.ChannelModes.VIDEO && p && T > 0,
     P = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(M.default, {
-        className: G.icon,
+        className: j.icon,
         ringing: g,
         src: null != S ? S : "",
         ringingType: M.default.RingingType.INCOMING,
         size: C ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
       }), (0, a.jsxs)("div", {
-        className: G.titleGroup,
+        className: j.titleGroup,
         children: [(0, a.jsx)(u.Text, {
-          className: G.title,
+          className: j.title,
           color: "header-primary",
           variant: C ? "text-md/semibold" : "text-lg/semibold",
           children: I
         }), (0, a.jsx)(u.Text, {
           color: "header-secondary",
-          className: G.subtitle,
+          className: j.subtitle,
           variant: C ? "text-sm/normal" : "text-md/normal",
-          children: A === b.ChannelModes.VOICE ? j.default.Messages.INCOMING_CALL_ELLIPSIS : j.default.Messages.INCOMING_VIDEO_CALL_ELLIPSIS
+          children: A === b.ChannelModes.VOICE ? G.default.Messages.INCOMING_CALL_ELLIPSIS : G.default.Messages.INCOMING_VIDEO_CALL_ELLIPSIS
         })]
       })]
     }),
     x = v ? k : F;
   return (0, a.jsx)(E.default, {
-    className: G.wrapper,
-    selector: ".".concat(G.root),
+    className: j.wrapper,
+    selector: ".".concat(j.root),
     initialPosition: {
       left: l,
       top: n
@@ -201,8 +201,8 @@ function Y(e) {
     dragAnywhere: !0,
     children: (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)(r.animated.div, {
-        className: i()(G.root, w.elevationHigh, {
-          [G.previewCamera]: C
+        className: i()(j.root, w.elevationHigh, {
+          [j.previewCamera]: C
         }, C ? (0, y.getThemeClass)("dark") : null),
         style: {
           ...t,
@@ -213,7 +213,7 @@ function Y(e) {
         children: [C ? (0, a.jsx)(H, {
           header: P
         }) : (0, a.jsx)("div", {
-          className: G.mainChannelInfo,
+          className: j.mainChannelInfo,
           children: P
         }), (0, a.jsx)(V, {
           canVideo: v,
@@ -224,9 +224,9 @@ function Y(e) {
           fullWidth: !0,
           look: u.Button.Looks.LINK,
           color: u.Button.Colors.PRIMARY,
-          className: G.previewButton,
+          className: j.previewButton,
           onClick: () => m(!0),
-          children: j.default.Messages.INCOMING_CALL_PREVIEW_CAMERA
+          children: G.default.Messages.INCOMING_CALL_PREVIEW_CAMERA
         }) : null]
       })
     })

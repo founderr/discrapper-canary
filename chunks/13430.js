@@ -73,8 +73,8 @@ let S = a.forwardRef(function(e, t) {
     required: R
   } = e, {
     day: A,
-    setDay: N,
-    month: T,
+    setDay: T,
+    month: N,
     setMonth: I,
     year: C,
     setYear: O
@@ -92,7 +92,7 @@ let S = a.forwardRef(function(e, t) {
       year: u,
       setYear: d
     }
-  }(n), v = a.useMemo(() => null != A && null != T && null != C ? o()("".concat(A, "/").concat(T, "/").concat(C), "DD/MM/YYYY") : null, [A, T, C]);
+  }(n), v = a.useMemo(() => null != A && null != N && null != C ? o()("".concat(A, "/").concat(N, "/").concat(C), "DD/MM/YYYY") : null, [A, N, C]);
   a.useEffect(() => {
     l((null == v ? void 0 : v.isValid()) ? v : null)
   }, [v, l]);
@@ -149,7 +149,7 @@ let S = a.forwardRef(function(e, t) {
           key: "day",
           input: (0, s.jsx)(p, {
             options: g,
-            selectOption: N,
+            selectOption: T,
             children: (0, s.jsx)(d.default, {
               ref: M,
               className: f.__invalid_inputDay,
@@ -165,7 +165,7 @@ let S = a.forwardRef(function(e, t) {
                 let {
                   value: n
                 } = t;
-                N(n), y(e + 1)
+                T(n), y(e + 1)
               },
               maxMenuHeight: 215
             })
@@ -188,7 +188,7 @@ let S = a.forwardRef(function(e, t) {
                 children: c.default.Messages.AGE_GATE_DOB_MONTH
               }),
               options: E,
-              value: T,
+              value: N,
               onChange: t => {
                 let {
                   value: n

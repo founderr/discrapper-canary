@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   MENTION_NEXT: function() {
-    return I
+    return S
   },
   MENTION_PREV: function() {
-    return S
+    return I
   },
   UNREAD_NEXT: function() {
     return A
@@ -57,7 +57,7 @@ let c = (e, t) => {
     }
   },
   T = (e, t) => s.default.getMentionCount(t) > 0,
-  I = {
+  S = {
     binds: ["mod+shift+alt+down"],
     comboKeysBindGlobal: !0,
     action: () => ((0, i.default)(1, {
@@ -65,7 +65,7 @@ let c = (e, t) => {
       withVoiceChannels: !0
     }), !1)
   },
-  S = {
+  I = {
     binds: ["mod+shift+alt+up"],
     comboKeysBindGlobal: !0,
     action: () => ((0, i.default)(-1, {

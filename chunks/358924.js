@@ -31,8 +31,8 @@ var a, s, l = n("735250"),
   x = n("368874"),
   b = n("366695"),
   U = n("366966"),
-  j = n("446753"),
-  G = n("619271"),
+  G = n("446753"),
+  j = n("619271"),
   w = n("395361"),
   k = n("639351"),
   F = n("632184"),
@@ -163,7 +163,7 @@ let en = e => {
     case "MULTIPLE":
       t = (0, l.jsx)("div", {
         className: q.multipleIconWrapper,
-        children: (0, l.jsx)(G.default, {
+        children: (0, l.jsx)(j.default, {
           className: o()(q.headerIcon, q.multipleIcon),
           color: d.default.unsafe_rawColors.PRIMARY_300.css
         })
@@ -225,7 +225,7 @@ let es = e => {
     ...a
   } = e;
   return (0, l.jsx)(c.FocusRing, {
-    children: (0, l.jsx)(j.default, {
+    children: (0, l.jsx)(G.default, {
       className: o()(n, q.wrapper),
       padded: !0,
       ...a,
@@ -237,7 +237,7 @@ es.Header = ea, es.Body = e => {
   let {
     children: t
   } = e;
-  return (0, l.jsx)(j.default, {
+  return (0, l.jsx)(G.default, {
     inset: !0,
     padded: !1,
     className: q.body,

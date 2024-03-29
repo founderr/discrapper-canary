@@ -44,8 +44,8 @@ function b(e, t, n) {
   }) : e[t] = n, e
 }
 let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
-  j = (0, P.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
-  G = Object.freeze({
+  G = (0, P.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
+  j = Object.freeze({
     [y.GameTableListKeys.PLATFORM]: "Platform",
     [y.GameTableListKeys.LAST_PLAYED]: "Last Played",
     [y.GameTableListKeys.NAME]: "Name"
@@ -153,7 +153,7 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
             libraryApplication: e.libraryApplication
           })]
         }), (0, L.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(m.default, {
-          analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(G[a], " ").concat(i === y.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
+          analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(j[a], " ").concat(i === y.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
           analyticsListIndex: n,
           source: y.AnalyticsLocations.APPLICATION_LIBRARY,
           libraryApplication: e.libraryApplication,
@@ -222,7 +222,7 @@ class B extends(a = l.PureComponent) {
     let {
       highlightedApplicationKey: e
     } = this.state;
-    null != e && null != this._rowRefs[e] && (this.props.scrollToRow(this._rowRefs[e], U), new d.Timeout().start(j, () => {
+    null != e && null != this._rowRefs[e] && (this.props.scrollToRow(this._rowRefs[e], U), new d.Timeout().start(G, () => {
       !this._didUnmount && this.setState({
         highlightedApplicationKey: null
       })

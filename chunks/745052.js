@@ -33,8 +33,8 @@ var a = n("735250"),
   x = n("819640"),
   b = n("916187"),
   U = n("151827"),
-  j = n("626135"),
-  G = n("792125"),
+  G = n("626135"),
+  j = n("792125"),
   w = n("647090"),
   k = n("385956"),
   F = n("610697"),
@@ -234,7 +234,7 @@ let er = (0, E.default)(function(e) {
     width: t
   } = e, n = (0, Y.useMessageRequestsCount)();
   s.useEffect(() => {
-    f.setHomeLink(X.Routes.MESSAGE_REQUESTS), (0, L.trackAppUIViewed)("message-requests"), j.default.track(X.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
+    f.setHomeLink(X.Routes.MESSAGE_REQUESTS), (0, L.trackAppUIViewed)("message-requests"), G.default.track(X.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
       num_message_requests: n
     }), A.default.increment({
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
@@ -264,7 +264,7 @@ let er = (0, E.default)(function(e) {
         [et.threadSidebarFloating]: C && d
       }),
       children: [(0, a.jsxs)(g.default, {
-        className: (0, G.getThemeClass)(l),
+        className: (0, j.getThemeClass)(l),
         toolbar: !0,
         children: [(0, a.jsx)(g.default.Icon, {
           icon: b.default,

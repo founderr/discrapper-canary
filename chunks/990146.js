@@ -35,7 +35,7 @@ t.default = function() {
     [M, y] = s.useState(!1),
     [D, x] = s.useState(!1),
     [b, U] = s.useState(!1),
-    [j, G] = s.useState(!1),
+    [G, j] = s.useState(!1),
     [w, k] = s.useState(240),
     F = s.useRef(null),
     B = (null == O ? void 0 : null === (e = O.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
@@ -92,7 +92,7 @@ t.default = function() {
   let ea = l && !W && !Y && null != O && !K && !q,
     es = s.useRef(ea);
   s.useLayoutEffect(() => {
-    ea !== es.current && G(!1), es.current = ea
+    ea !== es.current && j(!1), es.current = ea
   }, [ea]), s.useEffect(() => {
     H.current = B
   }, [B]);
@@ -137,20 +137,20 @@ t.default = function() {
     },
     immediate: R,
     onRest: () => {
-      G(!0)
+      j(!0)
     },
     onStart: () => {
-      G(!1)
+      j(!1)
     }
   });
-  return !l || null == O || !ea && j || z ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
+  return !l || null == O || !ea && G || z ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
     questId: O.id,
     questContent: _.QuestContent.QUEST_BAR,
     overrideVisibility: !v && ea,
     children: () => (0, a.jsxs)(r.animated.div, {
       "aria-hidden": !ea,
       className: i()(N.wrapper, {
-        [N.wrapperVisible]: ea && j
+        [N.wrapperVisible]: ea && G
       }),
       style: {
         color: O.config.colors.secondary,

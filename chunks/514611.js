@@ -79,7 +79,7 @@ class L extends(a = l.PureComponent) {
     }, {
       autoTrackExposure: !1
     }), {
-      canSeeInAppReportingButtons: j
+      canSeeInAppReportingButtons: G
     } = c.DiscoveryInAppReportingExperiment.getCurrentConfig({
       location: "de1ef6_3"
     }, {
@@ -88,7 +88,7 @@ class L extends(a = l.PureComponent) {
     c.DiscoveryInAppReportingExperiment.trackExposure({
       location: "de1ef6_4"
     });
-    let G = C.DeveloperMode.getSetting();
+    let j = C.DeveloperMode.getSetting();
     return (0, s.jsx)(o.VisibilitySensor, {
       active: !N,
       onChange: this.setIsVisible,
@@ -126,7 +126,7 @@ class L extends(a = l.PureComponent) {
                     loaded: !0
                   })
                 })
-              }), G || j ? (0, s.jsx)("div", {
+              }), j || G ? (0, s.jsx)("div", {
                 className: A.actionButtons,
                 children: (0, s.jsx)(h.default, {
                   guild: t

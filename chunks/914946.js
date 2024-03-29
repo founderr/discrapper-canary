@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return z
   },
   transformChannel: function() {
-    return G
+    return j
   },
   transformInternalTextMessage: function() {
     return w
@@ -97,12 +97,12 @@ function U(e) {
   return /^http/.test(e) ? e : "".concat(location.protocol, "//").concat(location.host).concat("/" === e.charAt(0) ? "" : "/").concat(e)
 }
 
-function j(e) {
+function G(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
   return t.indexOf(e) > -1
 }
 
-function G(e, t) {
+function j(e, t) {
   let n = [],
     a = e.getGuildId();
   return ![L.ChannelTypes.GUILD_CATEGORY, ...(0, E.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
@@ -259,10 +259,10 @@ function K(e, t, n) {
     if ("string" == typeof n) {
       if (e.transport === v.TransportTypes.POST_MESSAGE) {
         let e = (0, u.default)(t);
-        if (null == e || !j(n, [e])) throw new R.default({
+        if (null == e || !G(n, [e])) throw new R.default({
           closeCode: L.RPCCloseCodes.INVALID_ORIGIN
         }, "Invalid Origin")
-      } else if (!j(n, s)) throw new R.default({
+      } else if (!G(n, s)) throw new R.default({
         closeCode: L.RPCCloseCodes.INVALID_ORIGIN
       }, "Invalid Origin")
     }

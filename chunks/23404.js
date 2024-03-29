@@ -80,8 +80,8 @@ t.default = function(e) {
   }, [O]), D = (0, p.useHandleClaimQuestsReward)({
     quest: O,
     location: _.QuestContent.ACTIVITY_PANEL
-  }), x = (0, E.useIsQuestExpired)(O), b = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = O.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == O ? void 0 : O.userStatus) == null || (0, C.isDismissed)(O.userStatus, _.QuestContent.ACTIVITY_PANEL) || x || j ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
+  }), x = (0, E.useIsQuestExpired)(O), b = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, G = (null === (l = O.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  return (null == O ? void 0 : O.userStatus) == null || (0, C.isDismissed)(O.userStatus, _.QuestContent.ACTIVITY_PANEL) || x || G ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
     questId: O.id,
     questContent: _.QuestContent.ACTIVITY_PANEL,
     children: e => {

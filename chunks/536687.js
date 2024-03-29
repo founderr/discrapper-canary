@@ -54,8 +54,8 @@ function O(e) {
     x = null != a && Date.now() - a <= 432e5,
     b = !x && !M && P && D,
     U = (0, c.useGuildHasLiveChannelNotice)(n),
-    j = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
-    G = h.default.useShouldShowChannelNotice(n),
+    G = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
+    j = h.default.useShouldShowChannelNotice(n),
     w = (0, _.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {
       enableStudyGroup: k
@@ -90,8 +90,8 @@ function O(e) {
   if (O) return 1;
   if (L) return 2;
   else if (U || V && null != Y) return 3;
-  else if (j) return 4;
-  else if (G) return 5;
+  else if (G) return 4;
+  else if (j) return 5;
   else if (F) return 6;
   else if (B) return 7;
   else if (W) return 8;

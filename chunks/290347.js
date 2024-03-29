@@ -86,7 +86,7 @@ function N(e) {
   } = e, {
     onClose: D,
     transitionState: x
-  } = n, b = (0, h.useUID)(), U = P.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
+  } = n, b = (0, h.useUID)(), U = P.length % 2 == 0, G = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [j, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(j), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
 
   function J() {
     let e = Date.now(),
@@ -96,8 +96,8 @@ function N(e) {
     return Z.current && (F(n += t), !X.current && H(a += t)), w(e), [n, a]
   }
   return s.useEffect(() => {
-    z.current = G, q.current = k, Q.current = B, Z.current = V, X.current = W
-  }, [G, k, B, V, W]), s.useEffect(() => () => {
+    z.current = j, q.current = k, Q.current = B, Z.current = V, X.current = W
+  }, [j, k, B, V, W]), s.useEffect(() => () => {
     let [e, t] = J();
     m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
       change_log_id: M,
@@ -136,7 +136,7 @@ function N(e) {
         children: R
       }), "video" === l.type ? (0, a.jsx)(C.default, {
         className: i()(T.video, _),
-        autoPlay: !j,
+        autoPlay: !G,
         loop: !0,
         muted: !0,
         controls: !0,

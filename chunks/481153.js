@@ -19,8 +19,8 @@ var s = n("735250"),
   S = n("474936"),
   R = n("689938"),
   A = n("362489"),
-  N = n("605094"),
-  T = n("794711");
+  T = n("605094"),
+  N = n("794711");
 t.default = l.default.connectStores([g.default, u.default, h.default, f.default], e => {
   let {
     giftCode: t
@@ -55,7 +55,7 @@ t.default = l.default.connectStores([g.default, u.default, h.default, f.default]
     }) : (0, s.jsx)(m.Avatar, {
       src: null != i ? i.getAvatarURL(void 0, 100) : null,
       size: o.AvatarSizes.DEPRECATED_SIZE_100,
-      className: T.marginBottom20
+      className: N.marginBottom20
     }), null != t ? (0, s.jsxs)(a.Fragment, {
       children: [(0, s.jsx)(m.SubTitle, {
         children: R.default.Messages.INVITE_MODAL_ERROR_TITLE
@@ -66,7 +66,7 @@ t.default = l.default.connectStores([g.default, u.default, h.default, f.default]
       children: [(0, s.jsx)(m.SubTitle, {
         children: h
       }), (0, s.jsxs)(m.Title, {
-        className: r()(T.marginTop8, N.flexCenter),
+        className: r()(N.marginTop8, T.flexCenter),
         children: [l.productLine !== _.SKUProductLines.COLLECTIBLES && (0, s.jsx)(E.default, {
           size: E.default.Sizes.MEDIUM,
           className: A.applicationIcon,

@@ -37,8 +37,8 @@ var a = n("735250"),
   x = n("296386"),
   b = n("150192"),
   U = n("584885"),
-  j = n("59222"),
-  G = n("749436"),
+  G = n("59222"),
+  j = n("749436"),
   w = n("26580"),
   k = n("731455"),
   F = n("981631"),
@@ -183,7 +183,7 @@ class K extends s.PureComponent {
     }) : r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : B.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: u
     }), f = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[r]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
-    return (0, a.jsx)(G.default, {
+    return (0, a.jsx)(j.default, {
       loadId: this.loadId,
       searchResults: f,
       mostRecentQuery: n,
@@ -212,7 +212,7 @@ class K extends s.PureComponent {
     } = this.state, f = u === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : B.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: d
     }), E = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[u]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
-    return (0, a.jsx)(j.default, {
+    return (0, a.jsx)(G.default, {
       loadId: this.loadId,
       availableLanguages: l,
       defaultLanguage: i,
@@ -435,7 +435,7 @@ class K extends s.PureComponent {
         categoryId: a,
         preferredLocale: s.code,
         offset: 0,
-        length: j.MAX_GUILDS_PER_PAGE,
+        length: G.MAX_GUILDS_PER_PAGE,
         tag: !0
       }), M.trackTagSearchStarted(this.loadId, a, n, t), this.scrollToTop()
     })
