@@ -59,8 +59,8 @@ t.default = function() {
       y(!1), !P.current && !V && x(!1)
     }, [V]),
     J = s.useCallback(() => {
-      y(!1), x(!1), P.current = !1
-    }, []),
+      y(!1), !V && x(!1), P.current = !1
+    }, [V]),
     $ = s.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         {
