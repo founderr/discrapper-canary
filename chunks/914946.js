@@ -347,5 +347,6 @@ function X(e) {
 function J(e) {
   if (null == e.id) throw new R.default({
     errorCode: L.RPCErrors.INVALID_COMMAND
-  }, "Invalid application")
+  }, "Invalid application");
+  return e.id
 }
