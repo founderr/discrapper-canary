@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var a = s("735250");
@@ -13,7 +13,7 @@ var l = s("803997"),
   n = s("689938"),
   u = s("353491");
 
-function c(e) {
+function d(e) {
   let {
     className: t,
     ...s
@@ -26,36 +26,36 @@ function c(e) {
   })
 }
 
-function d(e) {
+function c(e) {
   let {
     isCurrentUser: t,
     user: s,
     relationshipType: l,
     onAddFriend: i,
-    onIgnoreFriend: d,
+    onIgnoreFriend: c,
     onSendMessage: f
   } = e;
-  return t || l === r.RelationshipTypes.BLOCKED ? null : l === r.RelationshipTypes.FRIEND || s.bot ? (0, a.jsx)(c, {
+  return t || l === r.RelationshipTypes.BLOCKED ? null : l === r.RelationshipTypes.FRIEND || s.bot ? (0, a.jsx)(d, {
     color: o.Button.Colors.GREEN,
     onClick: f,
     children: n.default.Messages.SEND_MESSAGE
-  }) : l === r.RelationshipTypes.PENDING_OUTGOING ? (0, a.jsx)(c, {
+  }) : l === r.RelationshipTypes.PENDING_OUTGOING ? (0, a.jsx)(d, {
     color: o.Button.Colors.GREEN,
     disabled: !0,
     children: n.default.Messages.ADD_FRIEND_BUTTON_AFTER
   }) : l === r.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)("div", {
     className: u.pendingIncoming,
-    children: [(0, a.jsx)(c, {
+    children: [(0, a.jsx)(d, {
       color: o.Button.Colors.GREEN,
       onClick: i,
       children: n.default.Messages.FRIEND_REQUEST_ACCEPT
-    }), (0, a.jsx)(c, {
+    }), (0, a.jsx)(d, {
       color: o.Button.Colors.PRIMARY,
-      onClick: d,
+      onClick: c,
       className: u.actionRightButton,
       children: n.default.Messages.FRIEND_REQUEST_IGNORE
     })]
-  }) : (0, a.jsx)(c, {
+  }) : (0, a.jsx)(d, {
     color: o.Button.Colors.GREEN,
     onClick: i,
     children: n.default.Messages.ADD_FRIEND_BUTTON

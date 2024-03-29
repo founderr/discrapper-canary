@@ -49,8 +49,8 @@ function m(e) {
     priceOptions: j,
     purchaseError: G,
     purchaseTokenAuthState: H,
-    selectedPlan: Y,
-    selectedSku: F,
+    selectedPlan: F,
+    selectedSku: Y,
     setCurrency: w,
     setPaymentSourceId: W,
     setPurchaseState: V,
@@ -60,11 +60,11 @@ function m(e) {
     setSubscriptionMetadataRequest: X,
     setHasAcceptedTerms: J
   } = (0, c.usePaymentContext)();
-  l()(null != Y, "Expected plan to be selected"), l()(null != x, "Expected application");
+  l()(null != F, "Expected plan to be selected"), l()(null != x, "Expected application");
   let Q = r.useRef(null),
     [q, $] = (0, u.default)(!1, 500),
     [ee, et] = r.useState(null == z ? void 0 : z.guild_id),
-    en = (0, d.isApplicationUserSubscription)(null !== (t = null == F ? void 0 : F.flags) && void 0 !== t ? t : 0);
+    en = (0, d.isApplicationUserSubscription)(null !== (t = null == Y ? void 0 : Y.flags) && void 0 !== t ? t : 0);
   r.useEffect(() => {
     null != G && null != Q.current && Q.current.scrollIntoView({
       behavior: "smooth"
@@ -112,7 +112,7 @@ function m(e) {
           eligibleApplicationSubscriptionGuilds: y
         })]
       }), (0, a.jsx)(o.default, {
-        selectedPlanId: Y.id,
+        selectedPlanId: F.id,
         paymentSources: k,
         onPaymentSourceChange: e => W(null != e ? e.id : null),
         priceOptions: j,

@@ -11,17 +11,17 @@ var a = s("735250"),
   r = s("666520"),
   n = s("726542"),
   u = s("122021"),
-  c = s("201819"),
-  d = s("706454"),
+  d = s("201819"),
+  c = s("706454"),
   f = s("246946"),
   S = s("785717"),
   m = s("621853"),
   E = s("358794"),
   T = s("588822"),
-  N = s("81334"),
-  p = s("335191"),
-  _ = s("347949"),
-  I = s("988246"),
+  I = s("81334"),
+  N = s("335191"),
+  p = s("347949"),
+  _ = s("988246"),
   A = s("689938"),
   v = s("478741");
 
@@ -41,7 +41,7 @@ function x(e) {
     return null !== (t = null === (e = m.default.getUserProfile(s.id)) || void 0 === e ? void 0 : e.connectedAccounts) && void 0 !== t ? t : []
   }), R = (0, i.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), {
     profileTheme: M
-  } = (0, E.default)(s, x), P = (0, i.useStateFromStores)([d.default], () => d.default.locale), g = (0, c.useIsUserRecentGamesFetchEnabled)({
+  } = (0, E.default)(s, x), P = (0, i.useStateFromStores)([c.default], () => c.default.locale), g = (0, d.useIsUserRecentGamesFetchEnabled)({
     userId: s.id,
     location: "28tk0bf_2"
   }), O = l.useMemo(() => j.filter(e => {
@@ -53,7 +53,7 @@ function x(e) {
       var e;
       null == F || null === (e = F.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [h]), R) ? (0, a.jsx)(I.default, {}) : (0, a.jsxs)(o.ScrollerThin, {
+  }, [h]), R) ? (0, a.jsx)(_.default, {}) : (0, a.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: v.infoScroller,
     children: [(0, a.jsxs)("div", {
@@ -67,11 +67,11 @@ function x(e) {
           className: v.userInfoText,
           userBio: null !== (t = null == x ? void 0 : x.bio) && void 0 !== t ? t : ""
         })]
-      }), (0, a.jsx)(N.default, {
+      }), (0, a.jsx)(I.default, {
         userId: s.id,
         headingClassName: v.userInfoSectionHeader,
         textClassName: v.userInfoText
-      }), g && (0, a.jsx)(_.default, {
+      }), g && (0, a.jsx)(p.default, {
         userId: s.id,
         containerClassName: v.userInfoText,
         wrapChildren: e => (0, a.jsxs)(a.Fragment, {
@@ -93,7 +93,7 @@ function x(e) {
           action: "SET_NOTE"
         })
       })]
-    }), (0, a.jsx)(p.ConnectedUserAccounts, {
+    }), (0, a.jsx)(N.ConnectedUserAccounts, {
       ref: F,
       connectedAccounts: O,
       theme: M,

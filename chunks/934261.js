@@ -15,8 +15,8 @@ var a = l("442837"),
   m = l("318661"),
   g = l("706454"),
   C = l("695346"),
-  E = l("265159"),
-  p = l("25990"),
+  p = l("265159"),
+  E = l("25990"),
   v = l("594174");
 l("612418");
 var P = l("74538"),
@@ -29,7 +29,7 @@ let x = e => {
       pendingProfileEffectRecord: n,
       product: u,
       purchase: c
-    } = e, d = (0, a.useStateFromStores)([v.default], () => v.default.getCurrentUser()), f = (0, a.useStateFromStores)([i.default], () => i.default.getProduct(null == n ? void 0 : n.skuId)), h = (0, a.useStateFromStores)([g.default], () => g.default.locale), m = P.default.canUseCollectibles(d), C = (0, o.isPremiumCollectiblesPurchase)(c), E = (0, o.isPremiumCollectiblesProduct)(u), p = A(!m && C, E, m);
+    } = e, d = (0, a.useStateFromStores)([v.default], () => v.default.getCurrentUser()), f = (0, a.useStateFromStores)([i.default], () => i.default.getProduct(null == n ? void 0 : n.skuId)), h = (0, a.useStateFromStores)([g.default], () => g.default.locale), m = P.default.canUseCollectibles(d), C = (0, o.isPremiumCollectiblesPurchase)(c), p = (0, o.isPremiumCollectiblesProduct)(u), E = A(!m && C, p, m);
     return null != n ? (0, s.jsx)("div", {
       className: l ? I.effectDescriptionNoGradient : I.effectDescriptionBorderWithGradient,
       children: (0, s.jsxs)("div", {
@@ -43,7 +43,7 @@ let x = e => {
           color: "text-normal",
           variant: "text-sm/normal",
           className: I.effectDescription,
-          children: null != c ? c.summary : p
+          children: null != c ? c.summary : E
         }), null != c && (0, s.jsxs)(r.Text, {
           variant: "text-xxs/normal",
           color: "text-muted",
@@ -78,14 +78,14 @@ t.default = e => {
     pendingBanner: N,
     pendingAvatar: R,
     pendingAvatarDecoration: b,
-    pendingThemeColors: F,
-    pendingAccentColor: M
-  } = (0, a.useStateFromStoresObject)([c.default, p.default], () => ({
+    pendingThemeColors: M,
+    pendingAccentColor: F
+  } = (0, a.useStateFromStoresObject)([c.default, E.default], () => ({
     pendingNickname: void 0,
     pendingGlobalName: void 0,
     pendingAccentColor: void 0,
-    ...null != v ? c.default.getAllPending() : p.default.getAllPending()
-  })), j = P.default.isPremium(l), O = (0, m.default)(l.id), y = !!(null == O ? void 0 : O.getPreviewBio(T).value), L = C.UseLegacyChatInput.useSetting() && null != T ? d.default.parse(void 0, T).content : T, w = P.default.canUsePremiumProfileCustomization(l), D = (null == O ? void 0 : O.canUsePremiumProfileCustomization) || w, U = {
+    ...null != v ? c.default.getAllPending() : E.default.getAllPending()
+  })), j = P.default.isPremium(l), y = (0, m.default)(l.id), O = !!(null == y ? void 0 : y.getPreviewBio(T).value), L = C.UseLegacyChatInput.useSetting() && null != T ? d.default.parse(void 0, T).content : T, w = P.default.canUsePremiumProfileCustomization(l), D = (null == y ? void 0 : y.canUsePremiumProfileCustomization) || w, U = {
     user: l,
     guild: v,
     pendingGlobalName: S,
@@ -96,12 +96,12 @@ t.default = e => {
     useLargeBanner: !0,
     pendingAvatar: R,
     pendingAvatarDecoration: b,
-    pendingThemeColors: F,
-    pendingAccentColor: M,
+    pendingThemeColors: M,
+    pendingAccentColor: F,
     pendingProfileEffectId: null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : null,
-    hideFakeActivity: y,
+    hideFakeActivity: O,
     canUsePremiumCustomization: w,
-    onUpsellClick: E.default,
+    onUpsellClick: p.default,
     onAvatarChange: null != v ? u.setPendingAvatar : n.setPendingAvatar,
     onBannerChange: h.setPendingBanner
   };

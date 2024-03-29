@@ -36,8 +36,8 @@ function u(e) {
     listScrollerStyle: s
   } = e, {
     hasMessageContent: u,
-    hasGuildPresences: c,
-    hasGuildMembers: d
+    hasGuildPresences: d,
+    hasGuildMembers: c
   } = (0, i.useBotDataAccess)({
     flags: t
   });
@@ -46,10 +46,10 @@ function u(e) {
   return u && f.push((0, a.jsx)(n, {
     heading: o.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
     content: o.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
-  })), c && f.push((0, a.jsx)(n, {
+  })), d && f.push((0, a.jsx)(n, {
     heading: o.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
     content: o.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
-  })), d && f.push((0, a.jsx)(n, {
+  })), c && f.push((0, a.jsx)(n, {
     heading: o.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
     content: o.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
   })), f.length > 0 && f.push((0, a.jsx)("div", {

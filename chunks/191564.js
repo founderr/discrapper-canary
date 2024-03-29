@@ -18,8 +18,8 @@ var s = l("735250"),
   m = l("197115"),
   g = l("150039"),
   C = l("594174"),
-  E = l("626135"),
-  p = l("74538"),
+  p = l("626135"),
+  E = l("74538"),
   v = l("934261"),
   P = l("52268"),
   S = l("981631"),
@@ -38,14 +38,14 @@ function _(e) {
     canUseCollectibles: h,
     selectedProfileEffectId: g,
     selectedProfileEffectItem: C,
-    analyticsLocations: E
+    analyticsLocations: p
   } = e, v = a.useCallback(() => {
     u(), (0, c.openCollectiblesShop)({
-      analyticsLocations: E,
+      analyticsLocations: p,
       analyticsSource: o.default.EDIT_PROFILE_EFFECT_MODAL,
       initialProductSkuId: null != C ? C.skuId : void 0
     })
-  }, [u, E, C]);
+  }, [u, p, C]);
   return (0, s.jsx)(i.ModalFooter, {
     className: A.modalFooter,
     children: (0, s.jsxs)("div", {
@@ -65,7 +65,7 @@ function _(e) {
         children: x.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
       }) : (0, s.jsx)(m.default, {
         subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2,
-        buttonText: p.default.isPremium(t) ? x.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : x.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+        buttonText: E.default.isPremium(t) ? x.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : x.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
       })]
     })
   })
@@ -83,18 +83,18 @@ function T(e) {
     analyticsLocations: h
   } = e, {
     pendingProfileEffectId: m
-  } = (0, g.useGlobalOrGuildIdentityPendingProfileEffect)(l), [C, E] = a.useMemo(() => {
+  } = (0, g.useGlobalOrGuildIdentityPendingProfileEffect)(l), [C, p] = a.useMemo(() => {
     let e = (0, d.groupProfileEffects)(r, n);
     return [e.purchased, e.shopPreviews]
   }, [r, n]), [S, I] = a.useState(() => null != u ? u : void 0 !== m ? m : null == c ? null : null != c ? c : null), [T, N] = a.useMemo(() => {
     var e;
     let t = C.find(e => (null == e ? void 0 : e.id) === S),
       l = null != t || null === S;
-    return [null !== (e = null != t ? t : E.find(e => (null == e ? void 0 : e.id) === S)) && void 0 !== e ? e : null, l]
-  }, [S, C, E]), {
+    return [null !== (e = null != t ? t : p.find(e => (null == e ? void 0 : e.id) === S)) && void 0 !== e ? e : null, l]
+  }, [S, C, p]), {
     product: R,
     purchase: b
-  } = (0, f.default)(null == T ? void 0 : T.skuId), F = a.useRef(null), M = p.default.canUseCollectibles(t), j = S === (void 0 === m ? null != c ? c : null : m), O = a.useCallback(e => {
+  } = (0, f.default)(null == T ? void 0 : T.skuId), M = a.useRef(null), F = E.default.canUseCollectibles(t), j = S === (void 0 === m ? null != c ? c : null : m), y = a.useCallback(e => {
     I(e)
   }, [I]);
   return (0, s.jsxs)(s.Fragment, {
@@ -114,8 +114,8 @@ function T(e) {
         user: t,
         guild: l,
         pendingProfileEffect: S,
-        selectedProfileEffectRef: F,
-        onSelect: O,
+        selectedProfileEffectRef: M,
+        onSelect: y,
         onClose: o
       }), (0, s.jsx)(v.default, {
         user: t,
@@ -133,7 +133,7 @@ function T(e) {
       onClose: o,
       product: R,
       purchase: b,
-      canUseCollectibles: M,
+      canUseCollectibles: F,
       selectedProfileEffectId: S,
       selectedProfileEffectItem: T,
       disableApplyButton: j,
@@ -150,14 +150,14 @@ function N(e) {
     guild: f,
     onClose: m
   } = e, {
-    isFetching: p,
+    isFetching: E,
     categories: v,
     purchases: P
   } = (0, h.default)(), I = (0, n.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
     analyticsLocations: x
   } = (0, u.default)(l, o.default.EDIT_PROFILE_EFFECT_MODAL), _ = (0, g.useGlobalOrGuildIdentityProfileEffect)(I, f);
   return a.useEffect(() => {
-    E.default.track(S.AnalyticEvents.OPEN_MODAL, {
+    p.default.track(S.AnalyticEvents.OPEN_MODAL, {
       type: S.AnalyticsSections.PROFILE_EFFECT_CUSTOMIZATION,
       location_stack: x
     })
@@ -172,7 +172,7 @@ function N(e) {
       transitionState: t,
       size: i.ModalSize.DYNAMIC,
       className: A.modal,
-      children: p ? (0, s.jsx)(i.Spinner, {
+      children: E ? (0, s.jsx)(i.Spinner, {
         className: A.spinner,
         type: i.Spinner.Type.SPINNING_CIRCLE
       }) : (0, s.jsx)(T, {

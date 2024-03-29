@@ -12,9 +12,9 @@ var l = a("735250"),
   f = a("100527"),
   m = a("906732"),
   C = a("1585"),
-  p = a("125988"),
-  g = a("333867"),
-  h = a("197115"),
+  g = a("125988"),
+  h = a("333867"),
+  p = a("197115"),
   E = a("300284"),
   b = a("876917"),
   S = a("642619"),
@@ -88,7 +88,7 @@ t.default = function(e) {
     avatarDecorationSrc: Q,
     eventHandlers: ee,
     avatarPlaceholderSrc: et
-  } = (0, p.default)({
+  } = (0, g.default)({
     user: $,
     avatarDecorationOverride: (null == J ? void 0 : J.type) === o.CollectiblesItemType.AVATAR_DECORATION ? J : void 0,
     size: W,
@@ -132,10 +132,10 @@ t.default = function(e) {
       })
     },
     eC = em(f.default.COLLECTIBLES_SHOP_CARD),
-    ep = em(f.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
-    eg = () => (0, l.jsx)("div", {
+    eg = em(f.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    eh = () => (0, l.jsx)("div", {
       className: w.hoverUpsellContainer,
-      children: (0, l.jsx)(h.default, {
+      children: (0, l.jsx)(p.default, {
         fullWidth: !0,
         className: w.__invalid_premiumSubscribeButton,
         disabled: eu,
@@ -147,7 +147,7 @@ t.default = function(e) {
   s.useEffect(() => {
     null == r || r(Y)
   }, [r]);
-  let eh = () => null != eo ? (0, l.jsx)(u.Text, {
+  let ep = () => null != eo ? (0, l.jsx)(u.Text, {
       color: "always-white",
       variant: "text-md/semibold",
       className: w.priceTag,
@@ -168,7 +168,7 @@ t.default = function(e) {
         color: ea.text.toHslString()
       } : void 0,
       className: w.defaultPreviewButtonColor,
-      onClick: ep
+      onClick: eg
     }) : (0, l.jsx)(P.default, {
       product: t,
       returnRef: Y,
@@ -176,7 +176,7 @@ t.default = function(e) {
       tooltipDelay: 250
     }),
     eb = () => {
-      if (er && !v && !en) return eg();
+      if (er && !v && !en) return eh();
       let e = null != ea ? {
           background: (0, F.getBackgroundGradient)(ea, 90),
           color: ea.text.toHslString()
@@ -192,7 +192,7 @@ t.default = function(e) {
             })
           }
         } : {
-          onClick: () => (0, g.default)({
+          onClick: () => (0, h.default)({
             skuId: t.skuId,
             analyticsLocations: z,
             returnRef: Y
@@ -281,7 +281,7 @@ t.default = function(e) {
               className: w.description,
               variant: "text-md/normal",
               children: t.summary
-            }), eh()]
+            }), ep()]
           }), (0, l.jsx)("div", {
             className: w.innerHover,
             children: eb()

@@ -46,13 +46,13 @@ function p(e) {
     setPurchaseError: x,
     purchaseErrorBlockRef: v,
     paymentAuthenticationState: A
-  }, M = (0, l.usePremiumTrialOffer)(S), b = !g && null != M && null != C && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(C), O = null != _ ? _ : () => {
+  }, M = (0, l.usePremiumTrialOffer)(S), b = !g && null != M && null != C && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(C), R = null != _ ? _ : () => {
     p(Object.values(P).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })
   };
   s()(E, "Step should be set here");
-  let R = (0, a.useStableMemo)(() => Date.now(), [E]);
+  let O = (0, a.useStableMemo)(() => Date.now(), [E]);
   return (0, r.AddPaymentFlow)({
     paymentModalArgs: y,
     initialStep: d.Step.PAYMENT_TYPE,
@@ -61,7 +61,7 @@ function p(e) {
     breadcrumpSteps: i,
     currentBreadcrumpStep: E,
     usePaymentModalStep: !0,
-    onReturn: O,
+    onReturn: R,
     onComplete: e => {
       p(d.Step.REVIEW, {
         trackedFromStep: e
@@ -76,7 +76,7 @@ function p(e) {
         ...t,
         from_step: n,
         to_step: i,
-        step_duration_ms: s - R,
+        step_duration_ms: s - O,
         flow_duration_ms: s - I.startTime
       })
     },

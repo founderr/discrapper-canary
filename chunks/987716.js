@@ -32,13 +32,13 @@ let I = e => {
   } = (0, l.useGiftContext)(), [x, v] = s.useState(!1), A = s.useRef(null), C = (0, a.useRadioGroup)({
     orientation: "horizontal"
   }), g = (0, u.getGiftExperience)(n, t), y = g === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, M = g !== u.GiftExperience.DEFAULT, b = (0, c.useIsSeasonalGiftingActive)(), {
-    enabled: O
+    enabled: R
   } = c.default.useExperiment({
     location: "premiumGiftSelect_GiftAnimationOptions"
   }, {
     autoTrackExposure: b
-  }), R = null;
-  return M && (R = b && O ? p.SeasonalGiftStyles2023 : p.STANDARD_GIFT_OPTIONS), (0, i.jsxs)("div", {
+  }), O = null;
+  return M && (O = b && R ? p.SeasonalGiftStyles2023 : p.STANDARD_GIFT_OPTIONS), (0, i.jsxs)("div", {
     children: [M && (0, i.jsxs)("div", {
       className: _.giftMainAnimation,
       children: [null != I ? (0, i.jsx)(d.default, {
@@ -76,7 +76,7 @@ let I = e => {
       className: _.giftBoxOptionContainer,
       "aria-label": S.default.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
       ...C,
-      children: null != R && R.map((e, t) => (0, i.jsx)(f.GiftStaticOption, {
+      children: null != O && O.map((e, t) => (0, i.jsx)(f.GiftStaticOption, {
         isSelected: I === e,
         giftStyle: e,
         setSelectedGiftStyle: E,

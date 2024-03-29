@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return c
+    return d
   }
 });
 var a = s("735250");
@@ -13,15 +13,15 @@ var l = s("100849"),
   n = s("470900"),
   u = s("228168");
 
-function c(e) {
+function d(e) {
   let {
     displayProfile: t,
     user: s,
-    selectedSection: c,
-    autoFocusNote: d,
+    selectedSection: d,
+    autoFocusNote: c,
     onClose: f
   } = e;
-  switch (c) {
+  switch (d) {
     case u.UserProfileSections.ACTIVITY:
       return (0, a.jsx)(l.default, {
         user: s
@@ -45,9 +45,9 @@ function c(e) {
     default:
       return (0, a.jsx)(o.default, {
         displayProfile: t,
-        autoFocusNote: d,
+        autoFocusNote: c,
         user: s,
-        scrollToConnections: c === u.UserProfileSections.USER_INFO_CONNECTIONS
+        scrollToConnections: d === u.UserProfileSections.USER_INFO_CONNECTIONS
       })
   }
 }

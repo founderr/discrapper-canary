@@ -12,8 +12,8 @@ var l = s("803997"),
   r = s("481060"),
   n = s("129861"),
   u = s("427217"),
-  c = s("158776"),
-  d = s("51144"),
+  d = s("158776"),
+  c = s("51144"),
   f = s("981631"),
   S = s("689938"),
   m = s("968030");
@@ -22,7 +22,7 @@ function E(e) {
   let {
     user: t,
     displayProfile: s
-  } = e, l = (0, o.useStateFromStores)([c.default], () => c.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), E = d.default.getName(t);
+  } = e, l = (0, o.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), E = c.default.getName(t);
   return (0, a.jsxs)("div", {
     className: m.container,
     children: [null == E && (0, a.jsx)(n.default, {
