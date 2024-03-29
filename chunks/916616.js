@@ -1,98 +1,92 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return h
   }
 }), n("627341");
-var i = n("735250"),
-  s = n("470079"),
-  a = n("278074"),
-  l = n("979554"),
-  r = n("399606"),
-  u = n("481060"),
-  o = n("1585"),
-  c = n("125988"),
-  d = n("583434"),
-  m = n("479446"),
-  f = n("981632"),
-  p = n("25251"),
-  S = n("996678"),
-  _ = n("680295"),
-  I = n("998502"),
-  E = n("987209"),
-  P = n("689938"),
-  T = n("506027"),
-  N = n("241822");
-let h = I.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar;
+var i = n("735250");
+n("470079");
+var s = n("278074"),
+  a = n("979554"),
+  l = n("481060"),
+  r = n("1585"),
+  u = n("125988"),
+  o = n("583434"),
+  c = n("479446"),
+  d = n("981632"),
+  m = n("731896"),
+  f = n("680295"),
+  p = n("998502"),
+  S = n("987209"),
+  _ = n("689938"),
+  I = n("506027"),
+  E = n("241822");
+let P = p.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
-function x(e) {
+function T(e) {
   let {
     avatarDecoration: t
   } = e, {
     avatarDecorationSrc: n,
     eventHandlers: s,
     avatarPlaceholderSrc: a
-  } = (0, c.default)({
+  } = (0, u.default)({
     avatarDecorationOverride: t,
-    size: (0, o.getDecorationSizeForAvatarSize)(u.AvatarSizes.SIZE_152)
+    size: (0, r.getDecorationSizeForAvatarSize)(l.AvatarSizes.SIZE_152)
   });
   return (0, i.jsx)("div", {
-    className: T.giftMainAnimationWrapper,
-    children: (0, i.jsx)(h, {
+    className: I.giftMainAnimationWrapper,
+    children: (0, i.jsx)(P, {
       ...s,
       avatarDecoration: n,
       src: a,
-      className: T.avatar,
-      size: u.AvatarSizes.SIZE_152,
-      "aria-label": P.default.Messages.USER_SETTINGS_AVATAR
+      className: I.avatar,
+      size: l.AvatarSizes.SIZE_152,
+      "aria-label": _.default.Messages.USER_SETTINGS_AVATAR
     })
   })
 }
 
-function v(e) {
+function N(e) {
+  var t;
   let {
-    id: t
-  } = e, n = (0, r.useStateFromStores)([p.default], () => {
-    var e;
-    return null === (e = p.default.getProfileEffectById(t)) || void 0 === e ? void 0 : e.config
-  }), a = null != n;
-  return s.useEffect(() => {
-    !a && (0, S.getOrFetchProfileEffects)(!0)
-  }, [a]), (0, i.jsxs)("div", {
-    className: T.profileEffectContainer,
+    id: n
+  } = e, s = null === (t = (0, m.useProfileEffectPreset)(n)) || void 0 === t ? void 0 : t.config;
+  return (0, i.jsxs)("div", {
+    className: I.profileEffectContainer,
     children: [(0, i.jsx)("img", {
-      src: N,
-      alt: null == n ? void 0 : n.accessibilityLabel,
-      className: T.profileEffectBackground
-    }), (0, i.jsx)(_.default, {
-      profileEffectId: t
+      src: E,
+      alt: null == s ? void 0 : s.accessibilityLabel,
+      className: I.profileEffectBackground
+    }), (0, i.jsx)(f.default, {
+      profileEffectId: n
     })]
   })
 }
 
-function A(e) {
+function h(e) {
   let {
     sku: t
   } = e, {
     selectedGiftStyle: n
-  } = (0, E.useGiftContext)(), {
-    product: s
-  } = (0, d.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), r = null == s ? void 0 : s.items[0], u = (0, a.match)(r).with({
-    type: l.CollectiblesItemType.AVATAR_DECORATION
-  }, e => (0, i.jsx)(x, {
+  } = (0, S.useGiftContext)(), {
+    product: l
+  } = (0, o.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), r = null == l ? void 0 : l.items[0], u = (0, s.match)(r).with({
+    type: a.CollectiblesItemType.AVATAR_DECORATION
+  }, e => (0, i.jsx)(T, {
     avatarDecoration: e
   })).with({
-    type: l.CollectiblesItemType.PROFILE_EFFECT
-  }, e => (0, i.jsx)(v, {
+    type: a.CollectiblesItemType.PROFILE_EFFECT
+  }, e => (0, i.jsx)(N, {
     id: e.id
   })).otherwise(() => null);
   return null != n && null == u ? (0, i.jsx)("div", {
-    className: T.giftMainAnimationWrapper,
-    children: (0, i.jsx)(f.default, {
-      defaultAnimationState: m.AnimationState.LOOP,
+    className: I.giftMainAnimationWrapper,
+    children: (0, i.jsx)(d.default, {
+      defaultAnimationState: c.AnimationState.LOOP,
       giftStyle: n,
       shouldAnimate: !0,
-      className: T.__invalid_giftMainAnimation
+      className: I.__invalid_giftMainAnimation
     })
   }) : u
 }

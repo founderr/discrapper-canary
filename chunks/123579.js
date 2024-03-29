@@ -14,7 +14,7 @@ var a = n("735250"),
   m = n("574176"),
   p = n("556084"),
   E = n("422677"),
-  C = n("996678"),
+  C = n("911367"),
   g = n("201819"),
   S = n("199902"),
   _ = n("314897"),
@@ -63,7 +63,7 @@ t.default = e => {
     channel: n,
     showCall: s
   } = e, r = n.recipients[0], [ei, er] = l.useState(!1), eo = l.useRef(0), eu = (0, U.default)();
-  (0, C.default)();
+  (0, C.useFetchProfileEffects)();
   let ed = (0, u.useStateFromStores)([N.default], () => N.default.getUser(r)),
     ec = null == ed ? void 0 : ed.isNonUserBot();
   o()(null != ed, "Profile Panel: user cannot be undefined");
