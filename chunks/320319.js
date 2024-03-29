@@ -13,12 +13,12 @@ var a = s("735250"),
   E = s("706140"),
   T = s("626135"),
   I = s("314684"),
-  R = s("715627"),
-  S = s("176782"),
+  S = s("715627"),
+  R = s("176782"),
   f = s("238108"),
   m = s("32173"),
-  N = s("391110"),
-  A = s("484239"),
+  A = s("391110"),
+  N = s("484239"),
   p = s("658370"),
   C = s("735825"),
   g = s("981631"),
@@ -36,24 +36,24 @@ let h = {
       name: t,
       canReveal: s = !0,
       dismissibleContentType: r,
-      forceShadow: S,
-      cardType: A,
+      forceShadow: R,
+      cardType: N,
       confettiCanvas: p
-    } = e, v = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [D, b] = i.useState(!1), [U, j] = i.useState(!1), y = (0, I.useFreeBoostUserTenureReward)(), B = (0, I.useShouldShowConfettiAndGlow)(), [G, k] = i.useState(!1), [H, F] = i.useState(t === m.PerksDiscoverabilityCardTypes.FREE_BOOST && B && (null == y ? void 0 : y.nitroTenureStatus) === C.NitroRewardStatus.REDEEMABLE);
+    } = e, v = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [D, b] = i.useState(!1), [U, j] = i.useState(!1), y = (0, I.useFreeBoostUserTenureReward)(), G = (0, I.useShouldShowConfettiAndGlow)(), [B, k] = i.useState(!1), [H, F] = i.useState(t === m.PerksDiscoverabilityCardTypes.FREE_BOOST && G && (null == y ? void 0 : y.nitroTenureStatus) === C.NitroRewardStatus.REDEEMABLE);
     i.useEffect(() => {
-      t === m.PerksDiscoverabilityCardTypes.FREE_BOOST && B && (null == y ? void 0 : y.nitroTenureStatus) === C.NitroRewardStatus.REDEEMABLE && F(!0)
-    }, [B, t, y]);
+      t === m.PerksDiscoverabilityCardTypes.FREE_BOOST && G && (null == y ? void 0 : y.nitroTenureStatus) === C.NitroRewardStatus.REDEEMABLE && F(!0)
+    }, [G, t, y]);
     let w = i.useCallback(() => {
         k(!0)
       }, []),
-      W = A === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || A === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || A === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW,
-      K = (0, m.default)(),
+      K = N === A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || N === A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || N === A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW,
+      W = (0, m.default)(),
       [V, Y] = (0, E.useGetDismissibleContent)(null != r && s || r === u.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI ? [r] : []);
     i.useEffect(() => () => {
-      V === u.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI && G && (0, _.markDismissibleContentAsDismissed)(V)
-    }, [V, G]), i.useEffect(() => {
-      V === u.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI && G && (0, _.markDismissibleContentAsDismissed)(V)
-    }, [V, G]);
+      V === u.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI && B && (0, _.markDismissibleContentAsDismissed)(V)
+    }, [V, B]), i.useEffect(() => {
+      V === u.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI && B && (0, _.markDismissibleContentAsDismissed)(V)
+    }, [V, B]);
     let {
       easterEggLevel: z,
       isEasterEggTriggered: X,
@@ -77,7 +77,7 @@ let h = {
       }), null != r && Y(O.ContentDismissActionType.TAKE_ACTION))
     }, [v, D, r, t, Y]), s) ? t === m.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
       className: n()(M.flipCardContainer, {
-        [M.forceShadow]: S
+        [M.forceShadow]: R
       }),
       onMouseEnter: Q,
       onFocus: Q,
@@ -107,15 +107,15 @@ let h = {
     }) : $ ? (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)("div", {
         className: n()({
-          [M.noFlipCardContainer]: !W,
-          [M.noFlipCardContainerCarousel]: W,
-          [M.forceShadow]: S,
+          [M.noFlipCardContainer]: !K,
+          [M.noFlipCardContainerCarousel]: K,
+          [M.forceShadow]: R,
           [M.reducedMotion]: v
         }),
         children: [(0, a.jsx)(x, {
           ...e,
           ref: t === m.PerksDiscoverabilityCardTypes.FREE_BOOST ? q : void 0
-        }), H && (0, a.jsx)(R.default, {
+        }), H && (0, a.jsx)(S.default, {
           speedValues: h,
           numBursts: 3,
           particlesPerBurst: 15,
@@ -131,7 +131,7 @@ let h = {
       })
     }) : (0, a.jsx)("div", {
       className: n()(M.flipCardContainer, {
-        [M.forceShadow]: S
+        [M.forceShadow]: R
       }),
       children: (0, a.jsxs)(d.Clickable, {
         onClick: () => b(!0),
@@ -154,7 +154,7 @@ let h = {
         }), (0, a.jsx)("div", {
           className: M.flipCardFront,
           children: (0, a.jsx)(x, {
-            ...K.upcomingDropUntimed,
+            ...W.upcomingDropUntimed,
             pillText: ""
           })
         }), (0, a.jsx)("div", {
@@ -172,8 +172,8 @@ let h = {
         })]
       })
     }) : (0, a.jsx)(L, {
-      ...K.upcomingDropUntimed,
-      forceShadow: S
+      ...W.upcomingDropUntimed,
+      forceShadow: R
     })
   });
 L.displayName = "PerkDiscoverabilityCard";
@@ -188,7 +188,7 @@ let x = i.forwardRef((e, t) => {
     isPremiumGetCta: _,
     onCtaClick: E,
     onMouseEnter: T,
-    className: R,
+    className: S,
     perkComponent: f,
     cardVariant: m,
     cardType: C,
@@ -196,13 +196,13 @@ let x = i.forwardRef((e, t) => {
     backgroundImage: O,
     pillText: P,
     perkImage: h
-  } = e, L = C === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || C === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || C === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW, x = 0 !== u.length || 0 !== o.length && m === N.CardVariants.REWARD, v = (0, I.useShouldShowConfettiAndGlow)(), [D, b] = i.useState(v);
+  } = e, L = C === A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || C === A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || C === A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW, x = 0 !== u.length || 0 !== o.length && m === A.CardVariants.REWARD, v = (0, I.useShouldShowConfettiAndGlow)(), [D, b] = i.useState(v);
   i.useEffect(() => {
     v && b(!0)
   }, [v]);
-  let U = (0, S.useCardVariantsInfo)(m);
+  let U = (0, R.useCardVariantsInfo)(m);
   return (0, a.jsxs)(d.Clickable, {
-    className: n()(M.card, R, !0 === D ? null === (s = U.cardContainer) || void 0 === s ? void 0 : s.className : void 0, {
+    className: n()(M.card, S, !0 === D ? null === (s = U.cardContainer) || void 0 === s ? void 0 : s.className : void 0, {
       [M.clickable]: null != g,
       [M.hideOverflow]: L
     }),
@@ -217,7 +217,7 @@ let x = i.forwardRef((e, t) => {
       children: P
     }), (0, a.jsx)("div", {
       ref: t
-    }), (0, a.jsx)(A.default, {
+    }), (0, a.jsx)(N.default, {
       title: r,
       titleClassName: l,
       subtitle: o,

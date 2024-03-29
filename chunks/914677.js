@@ -1,70 +1,70 @@
 "use strict";
-s.r(t), s("47120");
-var a = s("735250"),
-  i = s("470079"),
-  r = s("163681");
+r.r(t), r("47120");
+var n = r("735250"),
+  s = r("470079"),
+  i = r("163681");
 t.default = e => {
   let {
     percentage: t = 0,
-    children: s,
-    animationClassName: n,
-    initialPercentage: l = 0,
-    progressCircleStrokeSize: o = 2
-  } = e, u = 43 + o / 2, d = 2 * Math.PI * u, [c, _] = i.useState(l);
-  return i.useEffect(() => {
+    children: r,
+    animationClassName: u,
+    initialPercentage: a = 0,
+    progressCircleStrokeSize: l = 2
+  } = e, o = 43 + l / 2, d = 2 * Math.PI * o, [_, c] = s.useState(a);
+  return s.useEffect(() => {
     let e = setTimeout(() => {
-      _(t)
+      c(t)
     }, 200);
     return () => clearTimeout(e)
-  }, [t]), (0, a.jsxs)("div", {
-    className: r.circleContainer,
-    children: [(0, a.jsxs)("svg", {
+  }, [t]), (0, n.jsxs)("div", {
+    className: i.circleContainer,
+    children: [(0, n.jsxs)("svg", {
       viewBox: "0 0 100 100",
-      className: r.circleSVG,
-      children: [(0, a.jsx)("circle", {
-        className: r.baseProgressCircle,
+      className: i.circleSVG,
+      children: [(0, n.jsx)("circle", {
+        className: i.baseProgressCircle,
         fill: "transparent",
-        strokeWidth: o,
-        r: "".concat(u),
+        strokeWidth: l,
+        r: "".concat(o),
         cx: "50%",
         cy: "50%"
-      }), (0, a.jsx)("circle", {
+      }), (0, n.jsx)("circle", {
         stroke: "url(#gradient)",
-        strokeWidth: o,
+        strokeWidth: l,
         strokeLinecap: "round",
         strokeDasharray: "".concat(d, " ").concat(d),
-        className: n,
+        className: u,
         style: {
-          strokeDashoffset: (1 - c / 100) * d
+          strokeDashoffset: (1 - _ / 100) * d
         },
-        r: "".concat(u),
+        r: "".concat(o),
         cx: "50%",
         cy: "50%"
       })]
-    }), (0, a.jsx)("svg", {
+    }), (0, n.jsx)("svg", {
       width: "0",
       height: "0",
-      children: (0, a.jsxs)("linearGradient", {
+      children: (0, n.jsxs)("linearGradient", {
         id: "gradient",
         x1: "0%",
         y1: "0%",
         x2: "100%",
         y2: "100%",
-        children: [(0, a.jsx)("stop", {
+        children: [(0, n.jsx)("stop", {
           offset: "0%",
           style: {
             stopColor: "#FFBDF2"
           }
-        }), (0, a.jsx)("stop", {
+        }), (0, n.jsx)("stop", {
           offset: "100%",
           style: {
             stopColor: "#E742E1"
           }
         })]
       })
-    }), (0, a.jsx)("div", {
-      className: r.childrenContainer,
-      children: s
+    }), (0, n.jsx)("div", {
+      className: i.childrenContainer,
+      children: r
     })]
   })
 }

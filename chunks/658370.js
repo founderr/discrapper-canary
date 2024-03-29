@@ -14,17 +14,17 @@ var i = s("803997"),
   E = s("409100"),
   T = s("474936"),
   I = s("689938"),
-  R = s("622481");
+  S = s("622481");
 t.default = e => {
   var t;
   let s;
   let {
     title: i,
-    titleClassName: S = "",
+    titleClassName: R = "",
     subtitle: f = "",
     description: m = "",
-    descriptionCta: N = "",
-    isPremiumGetCta: A,
+    descriptionCta: A = "",
+    isPremiumGetCta: N,
     onCtaClick: p,
     cardVariant: C
   } = e, g = (0, d.usePremiumTrialOffer)(), O = null == g ? void 0 : g.subscription_trial, P = (0, u.usePremiumDiscountOffer)(), M = (0, l.formatTrialCtaIntervalDuration)({
@@ -40,21 +40,21 @@ t.default = e => {
     })
   }), L = (0, c.useCardVariantsInfo)(C);
   return (0, a.jsxs)("div", {
-    className: r()(R.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
+    className: r()(S.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
     children: [(0, a.jsx)(_.default, {
       title: i,
       cardVariantStyleInfo: L,
-      titleClassName: S,
+      titleClassName: R,
       subtitle: f,
       description: m
-    }), A && (0, a.jsx)(E.default, {
+    }), N && (0, a.jsx)(E.default, {
       subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
       buttonText: h,
       color: n.Button.Colors.GREEN,
       look: n.Button.Looks.FILLED
-    }), 0 !== N.length && (null == (s = null == L ? void 0 : L.descriptionCta) ? void 0 : s.hideOnHoverComponent) !== !0 && null != p && (0, a.jsx)(n.Button, {
+    }), 0 !== A.length && (null == (s = null == L ? void 0 : L.descriptionCta) ? void 0 : s.hideOnHoverComponent) !== !0 && null != p && (0, a.jsx)(n.Button, {
       onClick: p,
-      children: N
+      children: A
     })]
   })
 }

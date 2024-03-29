@@ -14,12 +14,12 @@ var i = s("803997"),
   E = s("140465"),
   T = s("775412"),
   I = s("846363"),
-  R = s("248042"),
-  S = s("422034"),
+  S = s("248042"),
+  R = s("422034"),
   f = s("206127"),
   m = s("318747"),
-  N = s("409100"),
-  A = s("689938"),
+  A = s("409100"),
+  N = s("689938"),
   p = s("374861");
 let C = e => {
     let {
@@ -29,7 +29,7 @@ let C = e => {
     } = e, r = null;
     !t && (r = (0, a.jsxs)("div", {
       className: p.buttonContainer,
-      children: [(0, a.jsx)(N.default, {
+      children: [(0, a.jsx)(A.default, {
         forceInverted: !0,
         className: p.button,
         subscriptionTier: i
@@ -74,7 +74,7 @@ function O(e) {
     variant: t,
     color: "always-white",
     className: p.description,
-    children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
+    children: N.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
       cheapestMonthlyPrice: s
     })
   })
@@ -86,11 +86,11 @@ t.default = e => {
     subscriptionTier: i,
     hideSparkles: d,
     hideSubscribeAndGiftButton: f
-  } = e, N = (0, I.useMarketingOptimizationExperiment)({
+  } = e, A = (0, I.useMarketingOptimizationExperiment)({
     autoTrackExposure: !1
   }), {
     analyticsLocations: P
-  } = (0, u.default)(o.default.PREMIUM_MARKETING_HERO_CTA), M = (0, T.useHasActiveTrial)(), h = (0, E.useIsInPremiumOfferExperience)(), L = (0, R.useIsEligibleForBogoPromotion)(), {
+  } = (0, u.default)(o.default.PREMIUM_MARKETING_HERO_CTA), M = (0, T.useHasActiveTrial)(), h = (0, E.useIsInPremiumOfferExperience)(), L = (0, S.useIsEligibleForBogoPromotion)(), {
     marketingEnabled: x
   } = c.default.useExperiment({
     location: "HeroHeading"
@@ -105,28 +105,28 @@ t.default = e => {
     value: P,
     children: (0, a.jsxs)("div", {
       className: r()(p.container, s, {
-        [p.settingsContainer]: !t && !N,
-        [p.affinityHeight]: !t && D && !N
+        [p.settingsContainer]: !t && !A,
+        [p.affinityHeight]: !t && D && !A
       }),
       "data-testid": "v2-marketing-page-hero-header",
       children: [(0, a.jsxs)("div", {
         className: t ? p.fullscreenTextContainer : p.settingsTextContainer,
         children: [(0, a.jsx)(l.Heading, {
-          className: N ? p.header : void 0,
+          className: A ? p.header : void 0,
           variant: t ? "display-lg" : "display-md",
-          color: N ? void 0 : "always-white",
-          children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
+          color: A ? void 0 : "always-white",
+          children: N.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
         }), D ? (0, a.jsx)("div", {
           className: r()({
-            [p.affinityDescription]: !N,
-            [p.affinityDescriptionNoMargin]: N
+            [p.affinityDescription]: !A,
+            [p.affinityDescriptionNoMargin]: A
           }),
-          children: (0, a.jsx)(S.default, {
-            className: N ? p.backgroundColor : void 0,
-            textColor: N ? "text-primary" : "always-white",
-            smallerText: !t || N
+          children: (0, a.jsx)(R.default, {
+            className: A ? p.backgroundColor : void 0,
+            textColor: A ? "text-primary" : "always-white",
+            smallerText: !t || A
           })
-        }) : !N && (0, a.jsx)(O, {}), L ? (0, a.jsx)("div", {
+        }) : !A && (0, a.jsx)(O, {}), L ? (0, a.jsx)("div", {
           className: p.buttonContainer,
           children: (0, a.jsx)(m.default, {
             className: p.button,
@@ -136,7 +136,7 @@ t.default = e => {
           subscriptionTier: i,
           inOfferExperience: h,
           inTrial: M
-        }), D && !N && (0, a.jsx)(O, {
+        }), D && !A && (0, a.jsx)(O, {
           variant: "text-md/normal"
         })]
       }), !(h || d) && (0, a.jsx)(g, {

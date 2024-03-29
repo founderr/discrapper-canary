@@ -4,48 +4,48 @@ a.r(t), a.d(t, {
     return r
   }
 });
-var s = a("735250");
+var l = a("735250");
 a("470079");
-var l = a("975792");
+var s = a("975792");
 
 function r() {
-  return (0, s.jsxs)("div", {
-    className: l.__invalid_snowflakes,
-    children: [(0, s.jsx)("div", {
-      className: l.snowflake,
+  return (0, l.jsxs)("div", {
+    className: s.__invalid_snowflakes,
+    children: [(0, l.jsx)("div", {
+      className: s.snowflake,
       children: "❅"
-    }), (0, s.jsx)("div", {
-      className: l.snowflake,
+    }), (0, l.jsx)("div", {
+      className: s.snowflake,
       children: "❅"
-    }), (0, s.jsx)("div", {
-      className: l.snowflake,
+    }), (0, l.jsx)("div", {
+      className: s.snowflake,
       children: "❅"
-    }), (0, s.jsx)("div", {
-      className: l.snowflake,
+    }), (0, l.jsx)("div", {
+      className: s.snowflake,
       children: "❅"
-    }), (0, s.jsx)("div", {
-      className: l.snowflake,
+    }), (0, l.jsx)("div", {
+      className: s.snowflake,
       children: "❅"
-    }), (0, s.jsx)("div", {
-      className: l.snowflake,
+    }), (0, l.jsx)("div", {
+      className: s.snowflake,
       children: "❅"
-    }), (0, s.jsx)("div", {
-      className: l.snowflake,
+    }), (0, l.jsx)("div", {
+      className: s.snowflake,
       children: "❅"
-    }), (0, s.jsx)("div", {
-      className: l.snowflake,
+    }), (0, l.jsx)("div", {
+      className: s.snowflake,
       children: "❅"
-    }), (0, s.jsx)("div", {
-      className: l.snowflake,
+    }), (0, l.jsx)("div", {
+      className: s.snowflake,
       children: "❅"
-    }), (0, s.jsx)("div", {
-      className: l.snowflake,
+    }), (0, l.jsx)("div", {
+      className: s.snowflake,
       children: "❅"
-    }), (0, s.jsx)("div", {
-      className: l.snowflake,
+    }), (0, l.jsx)("div", {
+      className: s.snowflake,
       children: "❅"
-    }), (0, s.jsx)("div", {
-      className: l.snowflake,
+    }), (0, l.jsx)("div", {
+      className: s.snowflake,
       children: "❅"
     })]
   })

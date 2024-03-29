@@ -12,7 +12,7 @@ var a, i, r, n, l, o, u = s("735250"),
   T = s("855775"),
   I = s("689938");
 (a = l || (l = {})).SHORT = "SHORT", a.LONG = "LONG";
-class R extends(o = d.PureComponent) {
+class S extends(o = d.PureComponent) {
   getText(e, t) {
     if (429 === e.status) switch (t) {
       case "SHORT":
@@ -44,11 +44,11 @@ class R extends(o = d.PureComponent) {
 }
 n = {
   messageStyle: "LONG"
-}, (r = "defaultProps") in(i = R) ? Object.defineProperty(i, r, {
+}, (r = "defaultProps") in(i = S) ? Object.defineProperty(i, r, {
   value: n,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : i[r] = n, t.default = c.default.connectStores([T.default], () => ({
   purchaseError: T.default.error
-}))(R)
+}))(S)

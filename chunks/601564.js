@@ -17,12 +17,12 @@ var a = s("735250"),
   E = s("447269"),
   T = s("612226"),
   I = s("714338"),
-  R = s("663993"),
-  S = s("628123"),
+  S = s("663993"),
+  R = s("628123"),
   f = s("703656"),
   m = s("108427"),
-  N = s("911314"),
-  A = s("429899"),
+  A = s("911314"),
+  N = s("429899"),
   p = s("843445"),
   C = s("981631"),
   g = s("689938"),
@@ -36,7 +36,7 @@ function P(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let M = (0, R.makeLazy)({
+let M = (0, S.makeLazy)({
   createPromise: () => Promise.all([s.e("49237"), s.e("73206"), s.e("32886")]).then(s.bind(s, "496691")),
   webpackId: "496691"
 });
@@ -75,7 +75,7 @@ class L extends i.PureComponent {
       location: t,
       render: this.renderContent
     });
-    return (0, a.jsx)(S.default, {
+    return (0, a.jsx)(R.default, {
       renderCustomMessage: this.renderCustomErrorMessage,
       children: s
     })
@@ -97,7 +97,7 @@ class L extends i.PureComponent {
       return (0, a.jsx)(d.default, {
         page: C.AnalyticsPages.STORE_LISTING,
         root: !0,
-        children: (0, a.jsx)(A.default, {
+        children: (0, a.jsx)(N.default, {
           skuId: t,
           applicationId: s,
           slug: i,
@@ -113,7 +113,7 @@ class L extends i.PureComponent {
         render: () => (0, a.jsx)(d.default, {
           page: C.AnalyticsPages.STORE_DIRECTORY_HOME,
           root: !0,
-          children: (0, a.jsx)(N.default, {})
+          children: (0, a.jsx)(A.default, {})
         })
       }), (0, a.jsx)(n.Route, {
         path: C.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),

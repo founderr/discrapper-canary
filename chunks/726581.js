@@ -13,11 +13,11 @@ var a = s("735250"),
   E = s("551428"),
   T = s("912739"),
   I = s("73346"),
-  R = s("733789"),
-  S = s("4962"),
+  S = s("733789"),
+  R = s("4962"),
   f = s("689938"),
   m = s("466534");
-class N extends i.Component {
+class A extends i.Component {
   renderReasons(e, t, s) {
     return 0 === e.length && 0 === t.length ? null : (0, a.jsx)("div", {
       className: m.section,
@@ -25,7 +25,7 @@ class N extends i.Component {
         className: m.sectionContent,
         children: [e.map(e => (0, a.jsx)("div", {
           className: m.unit,
-          children: (0, a.jsx)(R.default, {
+          children: (0, a.jsx)(S.default, {
             reason: e,
             hidePersonalInformation: s
           })
@@ -43,7 +43,7 @@ class N extends i.Component {
       storeListing: e
     } = this.props;
     return null != e.staffNotes ? {
-      type: S.default.Types.STAFF_NOTES,
+      type: R.default.Types.STAFF_NOTES,
       staffNotes: e.staffNotes
     } : null
   }
@@ -62,7 +62,7 @@ class N extends i.Component {
       children: [(0, a.jsx)("div", {
         className: m.header,
         children: f.default.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
-      }), this.renderReasons(e, t, i), null != l ? (0, a.jsx)(S.default, {
+      }), this.renderReasons(e, t, i), null != l ? (0, a.jsx)(R.default, {
         data: l,
         className: m.review
       }) : null]
@@ -78,4 +78,4 @@ t.default = l.default.connectStores([_.default, d.default, E.default, o.default,
     nonSocialReasons: (0, I.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
     hidePersonalInformation: u.default.hidePersonalInformation
   }
-})(N)
+})(A)

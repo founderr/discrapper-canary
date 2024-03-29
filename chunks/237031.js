@@ -7,9 +7,9 @@ a.r(t), a.d(t, {
     return n
   }
 });
-var s = a("735250");
+var l = a("735250");
 a("470079");
-var l = a("481060");
+var s = a("481060");
 let r = "collectibles shop product details modal",
   n = e => {
     let {
@@ -19,11 +19,11 @@ let r = "collectibles shop product details modal",
       analyticsLocations: i,
       returnRef: u
     } = e;
-    (0, l.openModalLazy)(async () => {
+    (0, s.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([a.e("99387"), a.e("65866"), a.e("36848")]).then(a.bind(a, "702370"));
-      return a => (0, s.jsx)(e, {
+      return a => (0, l.jsx)(e, {
         ...a,
         product: t,
         category: n,
@@ -36,5 +36,5 @@ let r = "collectibles shop product details modal",
     })
   },
   o = () => {
-    (0, l.closeModal)(r)
+    (0, s.closeModal)(r)
   }

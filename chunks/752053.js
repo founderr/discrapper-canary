@@ -1,8 +1,8 @@
 "use strict";
 a.r(t);
-var s = a("735250");
+var l = a("735250");
 a("470079");
-var l = a("780384"),
+var s = a("780384"),
   r = a("481060"),
   n = a("410030"),
   o = a("689938"),
@@ -13,20 +13,20 @@ t.default = e => {
   let {
     onRetry: t
   } = e, a = (0, n.default)();
-  return (0, s.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: i.wrapper,
-    children: [(0, s.jsx)("img", {
+    children: [(0, l.jsx)("img", {
       className: i.__invalid_loadIssueImg,
-      src: (0, l.isThemeDark)(a) ? u : c,
+      src: (0, s.isThemeDark)(a) ? u : c,
       alt: ""
-    }), (0, s.jsx)(r.Heading, {
+    }), (0, l.jsx)(r.Heading, {
       className: i.heading1,
       variant: "heading-xl/semibold",
       children: o.default.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
-    }), (0, s.jsx)(r.Text, {
+    }), (0, l.jsx)(r.Text, {
       variant: "text-md/normal",
       children: o.default.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
-    }), (0, s.jsx)(r.Button, {
+    }), (0, l.jsx)(r.Button, {
       className: i.reload,
       size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.BRAND_NEW,

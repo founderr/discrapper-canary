@@ -17,12 +17,12 @@ t.default = e => {
   var t;
   let s, i, {
       title: I,
-      titleClassName: R,
-      perkImage: S,
+      titleClassName: S,
+      perkImage: R,
       isCarousel: f,
       onCtaClick: m,
-      perkComponent: N,
-      subtitle: A = "",
+      perkComponent: A,
+      subtitle: N = "",
       descriptionCta: p = "",
       cardVariant: C,
       subtitleClassName: g
@@ -50,22 +50,22 @@ t.default = e => {
       title: I,
       shouldShowElement: e => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
       cardVariantStyleInfo: O,
-      titleClassName: R,
-      subtitle: A,
+      titleClassName: S,
+      subtitle: N,
       subtitleClassName: g
-    }), null != S && (0, a.jsx)("img", {
-      src: S,
+    }), null != R && (0, a.jsx)("img", {
+      src: R,
       alt: "",
       className: r()({
         [c.cardImage]: !f,
         [c.carouselCardImage]: f
       })
-    }), null != N && (0, a.jsx)(a.Fragment, {
+    }), null != A && (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)("div", {
         className: c.cardIllustrationNoHover,
         children: [(0, a.jsx)("div", {
           className: c.cardComponent,
-          children: N
+          children: A
         }), 0 !== p.length && null != m && (0, a.jsx)(n.Button, {
           disabled: !M,
           fullWidth: !0,

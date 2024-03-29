@@ -4,21 +4,21 @@ a.r(t), a.d(t, {
     return i
   }
 });
-var s = a("470079"),
-  l = a("153832"),
+var l = a("470079"),
+  s = a("153832"),
   r = a("638730"),
   n = a("626135");
-let o = (e, t, a, s) => {
+let o = (e, t, a, l) => {
     let {
-      scrollTop: l = 0,
+      scrollTop: s = 0,
       scrollOffset: r = 0,
       scrollHeight: o = 0,
       scrollWidth: i = 0
-    } = s;
+    } = l;
     if (o > 0) {
-      let s = (l + r) / o;
-      s > 0 && n.default.track(e, {
-        scroll_visible_percent: s,
+      let l = (s + r) / o;
+      l > 0 && n.default.track(e, {
+        scroll_visible_percent: l,
         source: a,
         page_height: Math.round(o),
         page_width: Math.round(i),
@@ -27,19 +27,19 @@ let o = (e, t, a, s) => {
     }
   },
   i = (e, t) => {
-    let a = s.useRef(null),
-      n = s.useRef((0, l.v4)()),
+    let a = l.useRef(null),
+      n = l.useRef((0, s.v4)()),
       i = (0, r.useThrottledFunction)(o, 5e3, [], {
         trailing: !0
       }),
-      u = s.useCallback(() => {
-        var s;
-        let l = null === (s = a.current) || void 0 === s ? void 0 : s.getScrollerNode();
-        null != l && i(e, n.current, t, {
-          scrollTop: l.scrollTop,
-          scrollOffset: l.offsetHeight,
-          scrollHeight: l.scrollHeight,
-          scrollWidth: l.scrollWidth
+      u = l.useCallback(() => {
+        var l;
+        let s = null === (l = a.current) || void 0 === l ? void 0 : l.getScrollerNode();
+        null != s && i(e, n.current, t, {
+          scrollTop: s.scrollTop,
+          scrollOffset: s.offsetHeight,
+          scrollHeight: s.scrollHeight,
+          scrollWidth: s.scrollWidth
         })
       }, [i, e, t]);
     return {

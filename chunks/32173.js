@@ -16,12 +16,12 @@ var n = s("399606"),
   E = s("335131"),
   T = s("410154"),
   I = s("300284"),
-  R = s("131951"),
-  S = s("78839"),
+  S = s("131951"),
+  R = s("78839"),
   f = s("63063"),
   m = s("74538"),
-  N = s("494127"),
-  A = s("687362"),
+  A = s("494127"),
+  N = s("687362"),
   p = s("623068"),
   C = s("391110"),
   g = s("75077"),
@@ -37,14 +37,14 @@ var n = s("399606"),
   U = s("393305"),
   j = s("338879"),
   y = s("203302"),
-  B = s("766491"),
-  G = s("193943"),
+  G = s("766491"),
+  B = s("193943"),
   k = s("707046"),
   H = s("488459"),
   F = s("334347"),
   w = s("132015"),
-  W = s("142416"),
-  K = s("474106"),
+  K = s("142416"),
+  W = s("474106"),
   V = s("567452"),
   Y = s("755590"),
   z = s("529018"),
@@ -60,11 +60,11 @@ let et = new Date("2024-05-07T03:59:00Z");
 t.default = () => {
   let {
     analyticsLocations: e
-  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = h.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([S.default], () => S.default.getPremiumTypeSubscription()), i = null != a ? m.default.getPremiumPlanItem(a) : null, es = (null != i ? m.default.getSkuIdForPlan(i.planId) : null) === O.PremiumSubscriptionSKUs.TIER_2, {
+  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = h.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([R.default], () => R.default.getPremiumTypeSubscription()), i = null != a ? m.default.getPremiumPlanItem(a) : null, es = (null != i ? m.default.getSkuIdForPlan(i.planId) : null) === O.PremiumSubscriptionSKUs.TIER_2, {
     flipped: ea
-  } = (0, N.useWhatsNewAvatarDecoRollout)(), {
+  } = (0, A.useWhatsNewAvatarDecoRollout)(), {
     flipped: ei
-  } = (0, N.useWhatsNewProfileFXRollout)(), er = (0, _.default)(R.default), en = (0, A.default)(), el = (0, I.default)({
+  } = (0, A.useWhatsNewProfileFXRollout)(), er = (0, _.default)(S.default), en = (0, N.default)(), el = (0, I.default)({
     scrollPosition: M.ProfileCustomizationScrollPositions.TRY_IT_OUT,
     analyticsLocations: e
   }), eo = () => {
@@ -128,14 +128,14 @@ t.default = () => {
       } : () => {
         window.open(f.default.getArticleURL(P.HelpdeskArticles.CLIPS), "_blank")
       },
-      perkImage: B
+      perkImage: G
     } : {
       name: "clips",
       title: h.default.Messages.CLIPS,
       subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
       description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
       pillText: h.default.Messages.EARLY_ACCESS,
-      perkImage: B
+      perkImage: G
     },
     earlyAccess: es ? {
       name: "earlyAccess",
@@ -187,13 +187,13 @@ t.default = () => {
       description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
       descriptionCta: h.default.Messages.TAKE_ME_THERE,
       onCtaClick: eo,
-      perkImage: W
+      perkImage: K
     } : {
       name: "entranceSoundsSeeAllVariation",
       title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
       subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
       description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
-      perkImage: W
+      perkImage: K
     },
     profileEffects: es ? {
       name: "profileEffects",
@@ -331,7 +331,7 @@ t.default = () => {
       name: "upcomingDropUntimed",
       title: h.default.Messages.NEW_DROP,
       pillText: h.default.Messages.COMING_SOON,
-      backgroundImage: K
+      backgroundImage: W
     },
     badge: {
       name: "badge",
@@ -344,7 +344,7 @@ t.default = () => {
       name: "customAppIcons",
       title: h.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
       subtitle: h.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-      perkImage: G,
+      perkImage: B,
       description: h.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
       descriptionCta: h.default.Messages.TAKE_ME_THERE,
       onCtaClick: () => {

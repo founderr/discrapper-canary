@@ -13,12 +13,12 @@ var a = s("735250"),
   E = s("906732"),
   T = s("15640"),
   I = s("594174"),
-  R = s("78839"),
-  S = s("74538"),
+  S = s("78839"),
+  R = s("74538"),
   f = s("775412"),
   m = s("846363"),
-  N = s("104494"),
-  A = s("639119"),
+  A = s("104494"),
+  N = s("639119"),
   p = s("230916"),
   C = s("248042"),
   g = s("823188"),
@@ -50,20 +50,20 @@ let j = e => {
       children: L.default.Messages.MOST_POPULAR
     })
   }),
-  B = e => {
+  G = e => {
     let t, {
         premiumType: s
       } = e,
       i = (0, c.default)();
     t = s === h.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(i) ? v : D : (0, o.isThemeDark)(i) ? b : U;
-    let r = (0, S.getPremiumTypeDisplayName)(s);
+    let r = (0, R.getPremiumTypeDisplayName)(s);
     return (0, a.jsx)("img", {
       src: t,
       className: x.logo,
       alt: r
     })
   },
-  G = e => {
+  B = e => {
     let {
       label: t,
       column1: s,
@@ -140,8 +140,8 @@ t.default = e => {
     w = (0, m.useMarketingOptimizationExperiment)({
       autoTrackExposure: !1
     }),
-    W = (0, l.useStateFromStores)([R.default], () => R.default.hasFetchedSubscriptions()),
-    K = (0, T.useSubscriptionPlansLoaded)(),
+    K = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedSubscriptions()),
+    W = (0, T.useSubscriptionPlansLoaded)(),
     V = "PlanComparisonTable";
   (0, d.useTriggerDebuggingAA)({
     location: V + " auto on",
@@ -153,29 +153,29 @@ t.default = e => {
   let Y = (0, c.default)(),
     z = (0, o.isThemeLight)(Y),
     X = (0, l.useStateFromStores)([I.default], () => I.default.getCurrentUser()),
-    Q = (0, S.isPremiumExactly)(X, h.PremiumTypes.TIER_2),
-    Z = (0, A.usePremiumTrialOffer)(),
+    Q = (0, R.isPremiumExactly)(X, h.PremiumTypes.TIER_2),
+    Z = (0, N.usePremiumTrialOffer)(),
     J = null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
     q = (0, f.useCurrentPremiumTrialTier)(),
-    $ = (0, N.usePremiumDiscountOffer)(),
-    ee = null != $ && (0, N.discountOfferHasTier)($, h.PremiumSubscriptionSKUs.TIER_2),
+    $ = (0, A.usePremiumDiscountOffer)(),
+    ee = null != $ && (0, A.discountOfferHasTier)($, h.PremiumSubscriptionSKUs.TIER_2),
     et = (0, p.useDiscountedPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-    es = "".concat(et, "/").concat((0, S.getIntervalStringAsNoun)(h.SubscriptionIntervalTypes.MONTH)),
-    ea = (0, S.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-    ei = (0, S.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+    es = "".concat(et, "/").concat((0, R.getIntervalStringAsNoun)(h.SubscriptionIntervalTypes.MONTH)),
+    ea = (0, R.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+    ei = (0, R.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
     er = (0, O.useGetPlanComparisonTableRows)(ea, ei, ee, es),
     en = (0, C.useIsEligibleForBogoPromotion)();
-  if (!W || !K) return null;
+  if (!K || !W) return null;
   let el = {
     label: (0, a.jsx)(u.Heading, {
       className: x.__invalid_textColor,
       variant: "heading-lg/extrabold",
       children: L.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
     }),
-    column1: (0, a.jsx)(B, {
+    column1: (0, a.jsx)(G, {
       premiumType: h.PremiumTypes.TIER_0
     }),
-    column2: (0, a.jsx)(B, {
+    column2: (0, a.jsx)(G, {
       premiumType: h.PremiumTypes.TIER_2
     })
   };
@@ -260,7 +260,7 @@ t.default = e => {
         }), (0, a.jsxs)("table", {
           className: x.table,
           children: [(0, a.jsx)("thead", {
-            children: (0, a.jsx)(G, {
+            children: (0, a.jsx)(B, {
               ...el
             })
           }), (0, a.jsx)("tbody", {

@@ -13,12 +13,12 @@ var a = s("735250"),
   E = s("41776"),
   T = s("703656"),
   I = s("920440"),
-  R = s("601964"),
-  S = s("430824"),
+  S = s("601964"),
+  R = s("430824"),
   f = s("378720"),
   m = s("285952"),
-  N = s("346656"),
-  A = s("263704"),
+  A = s("346656"),
+  N = s("263704"),
   p = s("843445"),
   C = s("981631"),
   g = s("689938"),
@@ -69,7 +69,7 @@ class M extends i.PureComponent {
       pageSize: o
     } = this.props;
     if (t && s) return null;
-    let d = new R.default(e),
+    let d = new S.default(e),
       c = g.default.Messages.LURKER_MODE_VIEW_GUILD,
       _ = this.handleJoinOrView,
       E = u.Button.Looks.FILLED,
@@ -78,7 +78,7 @@ class M extends i.PureComponent {
       align: m.default.Align.CENTER,
       children: [(0, a.jsx)("div", {
         children: g.default.Messages.JOINED_GUILD
-      }), (0, a.jsx)(A.default, {
+      }), (0, a.jsx)(N.default, {
         className: O.joinedCheckmark
       })]
     })) : i && t && (c = g.default.Messages.JOIN_GUILD) : (c = g.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
@@ -89,10 +89,10 @@ class M extends i.PureComponent {
         className: O.content,
         children: [(0, a.jsxs)("div", {
           className: O.info,
-          children: [(0, a.jsx)(N.default, {
+          children: [(0, a.jsx)(A.default, {
             guild: d,
             active: !0,
-            size: N.default.Sizes.LARGE,
+            size: A.default.Sizes.LARGE,
             className: O.guildIcon
           }), (0, a.jsxs)("div", {
             className: O.infoText,
@@ -139,12 +139,12 @@ class M extends i.PureComponent {
     })
   }
 }
-t.default = (0, _.default)(o.default.connectStores([S.default, E.default], e => {
+t.default = (0, _.default)(o.default.connectStores([R.default, E.default], e => {
   let {
     guild: t
   } = e, s = E.default.isLurking(t.id);
   return {
-    isInGuild: null != S.default.getGuild(t.id) && !s,
+    isInGuild: null != R.default.getGuild(t.id) && !s,
     isLurking: s
   }
 })(M))

@@ -16,7 +16,7 @@ var r = a("803997"),
   g = a("204418"),
   p = a("689938"),
   C = a("847531");
-let v = [{
+let S = [{
     avatarSize: o.AvatarSizes.SIZE_40,
     showStatus: !1
   }, {
@@ -29,7 +29,7 @@ let v = [{
     avatarSize: o.AvatarSizes.SIZE_32,
     showStatus: !0
   }],
-  S = e => {
+  v = e => {
     let {
       purchase: t
     } = e, a = (0, n.useStateFromStores)([f.default], () => f.default.locale), r = (0, u.isPremiumCollectiblesPurchase)(t);
@@ -65,8 +65,8 @@ t.default = e => {
     category: E,
     product: A,
     purchase: x
-  } = (0, c.default)(null == a ? void 0 : a.skuId), I = m.default.canUseCollectibles(t), _ = (0, u.isPremiumCollectiblesPurchase)(x), P = (0, u.isPremiumCollectiblesProduct)(A), b = !I && _;
-  return null != A && (null == x || b) ? (0, s.jsxs)("div", {
+  } = (0, c.default)(null == a ? void 0 : a.skuId), I = m.default.canUseCollectibles(t), _ = (0, u.isPremiumCollectiblesPurchase)(x), P = (0, u.isPremiumCollectiblesProduct)(A), T = !I && _;
+  return null != A && (null == x || T) ? (0, s.jsxs)("div", {
     className: l()(C.modalPreview, C.shopPreviewContainer, r),
     children: [(0, s.jsx)(d.default, {
       asset: null == E ? void 0 : E.banner,
@@ -82,7 +82,7 @@ t.default = e => {
         children: A.name
       }), (0, s.jsx)(o.Text, {
         variant: "text-sm/normal",
-        children: b ? p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([P, I]).with([!0, !0], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+        children: T ? p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([P, I]).with([!0, !0], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
       })]
     })]
   }) : (0, s.jsxs)("div", {
@@ -97,7 +97,7 @@ t.default = e => {
         })
       }), (0, s.jsx)("div", {
         className: C.smallDecorationPreviewsContainer,
-        children: v.map(e => {
+        children: S.map(e => {
           let {
             avatarSize: r,
             showStatus: l
@@ -114,7 +114,7 @@ t.default = e => {
           }, "".concat(r).concat(l))
         })
       })]
-    }), null != x && (0, s.jsx)(S, {
+    }), null != x && (0, s.jsx)(v, {
       purchase: x
     })]
   })

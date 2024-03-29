@@ -129,12 +129,12 @@ function k() {
   }), () => _.stop()), [r, d, n, o, _, f]), (0, l.jsxs)("div", {
     className: U.stats,
     children: [(0, l.jsx)(B, {
-      icon: c.TicketIcon,
+      icon: C.default,
       text: b.default.Messages.PACKAGES_PACKAGES_OPENED,
       count: T,
       fetchState: t
     }), (0, l.jsx)(B, {
-      icon: C.default,
+      icon: c.TicketIcon,
       text: b.default.Messages.PACKAGES_UNIQUE_PACKAGES_OPENED,
       count: b.default.Messages.PACKAGES_OPENED_OUT_OF.format({
         count: Object.keys(a).filter(e => a[e] > 0).length,

@@ -1,7 +1,7 @@
 "use strict";
 a.r(t);
-var s = a("735250"),
-  l = a("470079"),
+var l = a("735250"),
+  s = a("470079"),
   r = a("481060"),
   n = a("727637"),
   o = a("906732"),
@@ -11,8 +11,8 @@ var s = a("735250"),
   d = a("624377"),
   f = a("231338"),
   m = a("689938"),
-  p = a("125006");
-let C = {
+  C = a("125006");
+let p = {
   dark: [{
     box: "#FFF19E",
     ribbon: "#FF484B"
@@ -68,24 +68,24 @@ t.default = e => {
     disableCustomColor: b = !1
   } = e, {
     analyticsLocations: S
-  } = (0, o.default)(), x = l.useRef(null), T = (0, n.default)(x), {
+  } = (0, o.default)(), T = s.useRef(null), x = (0, n.default)(T), {
     buttonColors: v
   } = (0, d.default)(t.styles), L = null == v || b ? void 0 : {
     background: v.secondary.toHslString(),
     color: v.text.toHslString()
   }, I = b || (null == v ? void 0 : v.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
-  return (0, s.jsx)(r.Tooltip, {
+  return (0, l.jsx)(r.Tooltip, {
     text: m.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: h,
-    children: e => (0, s.jsx)(r.Button, {
+    children: e => (0, l.jsx)(r.Button, {
       ...e,
-      buttonRef: x,
+      buttonRef: T,
       style: L,
-      className: p.giftButton,
+      className: C.giftButton,
       color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
       size: r.ButtonSizes.ICON,
-      innerClassName: p.giftButtonInner,
+      innerClassName: C.giftButtonInner,
       "aria-label": m.default.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
         e.stopPropagation(), (0, u.default)({
@@ -98,12 +98,12 @@ t.default = e => {
           } : void 0
         })
       },
-      children: E ? (0, s.jsx)(i.SeasonalGiftIcon, {
-        hovered: T,
+      children: E ? (0, l.jsx)(i.SeasonalGiftIcon, {
+        hovered: x,
         isContentDismissed: !0,
         themeOverride: I,
-        boxColors: C
-      }) : (0, s.jsx)(c.default, {
+        boxColors: p
+      }) : (0, l.jsx)(c.default, {
         width: 24,
         height: 24
       })
