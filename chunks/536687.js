@@ -19,8 +19,8 @@ var a, s, l = n("470079"),
   h = n("929507"),
   _ = n("270144"),
   C = n("400271"),
-  m = n("678513"),
-  S = n("899667"),
+  S = n("678513"),
+  m = n("899667"),
   I = n("496675"),
   p = n("541566"),
   T = n("192513"),
@@ -34,9 +34,9 @@ function O(e) {
   let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : R.EMPTY_STRING_SNOWFLAKE_ID,
     {
       lastFetchedAt: a
-    } = (0, i.useStateFromStoresObject)([S.default], () => ({
-      appliedGuildBoosts: S.default.getAppliedGuildBoostsForGuild(n),
-      lastFetchedAt: S.default.getLastFetchedAtForGuild(n)
+    } = (0, i.useStateFromStoresObject)([m.default], () => ({
+      appliedGuildBoosts: m.default.getAppliedGuildBoostsForGuild(n),
+      lastFetchedAt: m.default.getLastFetchedAtForGuild(n)
     })),
     {
       lastDismissedGracePeriod: s,
@@ -54,8 +54,8 @@ function O(e) {
     x = null != a && Date.now() - a <= 432e5,
     b = !x && !M && P && D,
     U = (0, c.useGuildHasLiveChannelNotice)(n),
-    G = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
-    j = h.default.useShouldShowChannelNotice(n),
+    j = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
+    G = h.default.useShouldShowChannelNotice(n),
     w = (0, _.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {
       enableStudyGroup: k
@@ -67,16 +67,17 @@ function O(e) {
     } = o.ClanExperiment.useExperiment({
       location: "useVisibleConnectedNotice"
     }),
+    V = P && H && !(null == e ? void 0 : e.hasFeature(R.GuildFeatures.CLAN)),
     {
-      canSeeUpcomingEventsNotices: V
+      canSeeUpcomingEventsNotices: Y
     } = d.default.useExperiment({
       guildId: n,
       location: "useVisibleConnectedNotice"
     }, {
       autoTrackExposure: !1
     }),
-    Y = (0, f.useGuildUpcomingEventsNotice)(n),
-    W = (0, i.useStateFromStores)([m.default], () => null != m.default.getActiveGuildSignUp(n));
+    W = (0, f.useGuildUpcomingEventsNotice)(n),
+    K = (0, i.useStateFromStores)([S.default], () => null != S.default.getActiveGuildSignUp(n));
   if (l.useEffect(() => {
       u.default.getGuildEventsForCurrentUser(n)
     }, [n]), l.useEffect(() => {
@@ -89,12 +90,12 @@ function O(e) {
     }, [n, b]), v) return 0;
   if (O) return 1;
   if (L) return 2;
-  else if (U || V && null != Y) return 3;
-  else if (G) return 4;
-  else if (j) return 5;
+  else if (U || Y && null != W) return 3;
+  else if (j) return 4;
+  else if (G) return 5;
   else if (F) return 6;
   else if (B) return 7;
-  else if (W) return 8;
-  else if (P && H) return 9;
+  else if (K) return 8;
+  else if (V) return 9;
   return null
 }(a = s || (s = {}))[a.ENABLE_PUBLIC_GUILD = 0] = "ENABLE_PUBLIC_GUILD", a[a.APPLIED_GUILD_BOOST_GRACE_PERIOD = 1] = "APPLIED_GUILD_BOOST_GRACE_PERIOD", a[a.MAX_MEMBER_COUNT = 2] = "MAX_MEMBER_COUNT", a[a.GUILD_LIVE_CHANNEL = 3] = "GUILD_LIVE_CHANNEL", a[a.GUILD_MFA_WARNING = 4] = "GUILD_MFA_WARNING", a[a.COMMANDS_MIGRATION = 5] = "COMMANDS_MIGRATION", a[a.APPLICATION_SUBSCRIPTION_EXPIRATION = 6] = "APPLICATION_SUBSCRIPTION_EXPIRATION", a[a.HUB_STUDY_ROOM = 7] = "HUB_STUDY_ROOM", a[a.SIGNUP = 8] = "SIGNUP", a[a.CLAN_UPSELL = 9] = "CLAN_UPSELL"

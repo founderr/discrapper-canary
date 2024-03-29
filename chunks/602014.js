@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanSetupIntro: function() {
-    return _
+    return h
   },
   ClanSetupIntroAnimation: function() {
-    return C
+    return _
   }
 });
 var a = n("735250"),
@@ -14,53 +14,54 @@ var a = n("735250"),
   r = n("481060"),
   o = n("425493"),
   u = n("607070"),
-  d = n("430824"),
-  c = n("620929"),
-  f = n("308083"),
-  E = n("689938"),
-  h = n("653196");
-let _ = e => {
+  d = n("620929"),
+  c = n("308083"),
+  f = n("689938"),
+  E = n("653196");
+let h = e => {
     let {
       onClose: t,
       setPage: n
     } = e, s = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion);
     return (0, a.jsxs)("div", {
-      className: h.introContainer,
+      className: E.introContainer,
       children: [(0, a.jsx)(o.default, {
         closeAction: t,
         keybind: "ESC",
-        className: h.closeIconButton,
+        className: E.closeIconButton,
         variant: o.default.Variants.SOLID
+      }), (0, a.jsx)(r.Text, {
+        variant: "text-xs/bold",
+        color: "text-warning",
+        className: E.capitalize,
+        children: f.default.Messages.CLAN_UPSELL_INVITE
       }), (0, a.jsx)(r.Heading, {
         variant: "heading-xxl/semibold",
-        className: h.header,
-        children: E.default.Messages.CLAN_SETUP_INTRO_TITLE
+        className: E.header,
+        children: f.default.Messages.CLAN_SETUP_INTRO_TITLE
       }), (0, a.jsx)(r.Text, {
         variant: "text-md/medium",
         color: "text-muted",
-        className: h.header,
-        children: E.default.Messages.CLAN_SETUP_INTRO_INFO
+        className: E.header,
+        children: f.default.Messages.CLAN_SETUP_INTRO_INFO
       }), (0, a.jsx)(r.Button, {
-        onClick: () => n(s ? f.ClanSetupModalPages.SETUP : f.ClanSetupModalPages.ANIMATE),
-        children: E.default.Messages.CLAN_SETUP_INTRO_CTA
+        onClick: () => n(s ? c.ClanSetupModalPages.SETUP : c.ClanSetupModalPages.ANIMATE),
+        children: f.default.Messages.CLAN_SETUP_INTRO_CTA
       })]
     })
   },
-  C = e => {
+  _ = e => {
     let {
       guildId: t,
       setPage: n
-    } = e, r = s.useRef(null), o = s.useRef(null), u = s.useRef(null), E = s.useRef(null), _ = (0, i.useStateFromStores)([d.default], () => {
-      var e, n;
-      return null !== (n = null === (e = d.default.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : ""
-    });
+    } = e, i = s.useRef(null), r = s.useRef(null), o = s.useRef(null), u = s.useRef(null);
     s.useEffect(() => {
       setTimeout(() => {
-        n(f.ClanSetupModalPages.SETUP)
+        n(c.ClanSetupModalPages.SETUP)
       }, 3e3)
     });
-    let C = (0, l.useSpring)({
-        ref: r,
+    let f = (0, l.useSpring)({
+        ref: i,
         config: l.config.default,
         from: {
           top: "100%"
@@ -69,8 +70,8 @@ let _ = e => {
           top: "0%"
         }
       }),
-      m = (0, l.useSpring)({
-        ref: o,
+      h = (0, l.useSpring)({
+        ref: r,
         config: l.config.default,
         from: {
           height: "20%"
@@ -79,8 +80,8 @@ let _ = e => {
           height: "100%"
         }
       }),
-      S = (0, l.useSpring)({
-        ref: u,
+      _ = (0, l.useSpring)({
+        ref: o,
         config: l.config.default,
         from: {
           opacity: 0
@@ -89,8 +90,8 @@ let _ = e => {
           opacity: 1
         }
       }),
-      I = (0, l.useSpring)({
-        ref: E,
+      C = (0, l.useSpring)({
+        ref: u,
         config: l.config.molasses,
         from: {
           width: "0%"
@@ -99,19 +100,19 @@ let _ = e => {
           width: "100%"
         }
       });
-    return (0, l.useChain)([r, o, u, E], [0, .2, .5, .8], 3e3), (0, a.jsxs)("div", {
-      className: h.animationContainer,
+    return (0, l.useChain)([i, r, o, u], [0, .2, .5, .8], 3e3), (0, a.jsxs)("div", {
+      className: E.animationContainer,
       children: [(0, a.jsx)(l.animated.div, {
-        style: I
+        style: C
       }), (0, a.jsx)(l.animated.div, {
-        className: h.scrollContainer,
+        className: E.scrollContainer,
         style: {
-          ...C,
-          ...m
+          ...f,
+          ...h
         },
-        children: (0, a.jsx)(c.default, {
-          guildName: _,
-          animatedTextStyle: S
+        children: (0, a.jsx)(d.default, {
+          guildId: t,
+          animatedTextStyle: _
         })
       })]
     })
