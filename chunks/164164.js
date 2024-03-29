@@ -152,6 +152,7 @@ let O = s.forwardRef(function(e, t) {
             questContent: C.QuestContent.QUEST_BAR,
             quest: x,
             shouldShowDisclosure: !0,
+            showShareLink: !0,
             children: e => (0, a.jsx)(u.Clickable, {
               ...e,
               className: R.submenuWrapper,

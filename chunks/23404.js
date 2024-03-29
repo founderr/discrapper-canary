@@ -105,6 +105,7 @@ t.default = function(e) {
             quest: O,
             questContent: _.QuestContent.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
+            showShareLink: !0,
             children: e => (0, a.jsx)(o.Clickable, {
               ...e,
               className: N.__invalid_submenuWrapper,
