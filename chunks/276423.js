@@ -10,17 +10,19 @@ t.default = function(e) {
     recipients: t,
     size: n,
     status: r,
-    ...o
-  } = e, u = (0, a.useStateFromStoresArray)([s.default], () => t.slice(0, 2).map(e => {
+    isTyping: o,
+    ...u
+  } = e, d = (0, a.useStateFromStoresArray)([s.default], () => t.slice(0, 2).map(e => {
     let t = s.default.getUser(e);
     if (null != t) return t.getAvatarURL(void 0, n, !1)
   }), [t, n]);
   return (0, l.jsx)(i.default, {
-    "aria-label": o["aria-label"],
-    "aria-hidden": o["aria-hidden"],
-    backSrc: u[0],
-    frontSrc: u[1],
+    "aria-label": u["aria-label"],
+    "aria-hidden": u["aria-hidden"],
+    backSrc: d[0],
+    frontSrc: d[1],
     size: n,
-    status: r
+    status: r,
+    isTyping: null != o && o
   })
 }
