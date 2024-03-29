@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("38618"),
   _ = n("984370"),
   C = n("430824"),
-  m = n("351402"),
-  S = n("730647"),
+  S = n("351402"),
+  m = n("730647"),
   I = n("772021"),
   p = n("396828"),
   T = n("475413"),
@@ -33,7 +33,7 @@ var a = n("735250"),
 function L(e) {
   let {
     guildId: t
-  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), P = (0, f.default)(t), M = (0, I.default)(t), y = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), D = (0, S.useGroupListingsFetchContext)(), {
+  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), P = (0, f.default)(t), M = (0, I.default)(t), y = (0, i.useStateFromStores)([S.default], () => S.default.isSubscriptionFetching), D = (0, m.useGroupListingsFetchContext)(), {
     shouldHideGuildPurchaseEntryPoints: x,
     restrictionsLoading: b
   } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !D || y || b;
@@ -41,12 +41,12 @@ function L(e) {
     subsection: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == n ? void 0 : n.name
   }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
-  let G = L && (null == n || !(P || M) || x && !b);
+  let j = L && (null == n || !(P || M) || x && !b);
   if (s.useEffect(() => {
       o.fetchSubscriptions()
     }, []), s.useEffect(() => {
-      G && !l.isMobile && (0, c.handleInaccessiblePage)(t, R.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
-    }, [t, G]), l.isMobile && G) {
+      j && !l.isMobile && (0, c.handleInaccessiblePage)(t, R.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
+    }, [t, j]), l.isMobile && j) {
     let e = null == n ? g.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : g.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
     return (0, a.jsx)(g.GuildRoleSubscriptionsOverviewErrorPage, {
       errorType: e
@@ -84,7 +84,7 @@ function P(e) {
   let {
     guildId: t
   } = e;
-  return (0, a.jsx)(S.GroupListingsFetchContextProvider, {
+  return (0, a.jsx)(m.GroupListingsFetchContextProvider, {
     guildId: t,
     refetchOnMount: !0,
     children: (0, a.jsx)(L, {

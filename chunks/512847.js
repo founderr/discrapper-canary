@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("199902"),
   _ = n("314897"),
   C = n("592125"),
-  m = n("430824"),
-  S = n("131951"),
+  S = n("430824"),
+  m = n("131951"),
   I = n("292959"),
   p = n("19780"),
   T = n("944486"),
@@ -43,12 +43,12 @@ function L(e, t, n, a) {
 }
 
 function P() {
-  return L([S.default, T.default], () => ({
+  return L([m.default, T.default], () => ({
     inVoiceChannel: null != T.default.getVoiceChannelId(),
-    selfMute: S.default.isSelfMute(),
-    selfDeaf: S.default.isSelfDeaf(),
-    audioPermissionReady: S.default.isNativeAudioPermissionReady(),
-    shouldSkipMuteUnmuteSound: S.default.shouldSkipMuteUnmuteSound()
+    selfMute: m.default.isSelfMute(),
+    selfDeaf: m.default.isSelfDeaf(),
+    audioPermissionReady: m.default.isNativeAudioPermissionReady(),
+    shouldSkipMuteUnmuteSound: m.default.shouldSkipMuteUnmuteSound()
   }), (e, t) => {
     let {
       inVoiceChannel: n,
@@ -61,7 +61,7 @@ function P() {
     if (!!l) {
       if ((n || e.audioPermissionReady) && e.selfMute !== a) {
         if (i) {
-          S.default.notifyMuteUnmuteSoundWasSkipped();
+          m.default.notifyMuteUnmuteSoundWasSkipped();
           return
         }
         return a ? "mute" : "unmute"
@@ -107,17 +107,17 @@ function M() {
 function y() {
   return L([g.default], () => g.default.isCurrentUserSpeaking(), (e, t) => {
     if (e !== t) {
-      let e = S.default.isSelfMute();
-      if (S.default.getMode() === v.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
+      let e = m.default.isSelfMute();
+      if (m.default.getMode() === v.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
     }
   }), null
 }
 
 function D() {
-  return L([S.default], () => S.default.isSelfMutedTemporarily(), (e, t) => {
+  return L([m.default], () => m.default.isSelfMutedTemporarily(), (e, t) => {
     if (e !== t) {
-      let e = S.default.isSelfMute();
-      if (S.default.getMode() === v.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
+      let e = m.default.isSelfMute();
+      if (m.default.getMode() === v.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
     }
   }), null
 }
@@ -178,7 +178,7 @@ function U() {
         if (null == t) return !1;
         let n = t.getGuildId();
         if (null == n) return !1;
-        let a = m.default.getGuild(n);
+        let a = S.default.getGuild(n);
         return null != a && a.afkChannelId === t.id
       }(a) || null != n && E.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(n)) return;
     let u = null != i && e.singleActiveStreamKey === i,
@@ -194,7 +194,7 @@ function U() {
   }), null
 }
 
-function G() {
+function j() {
   return L([T.default, o.default, _.default], () => {
     let e = T.default.getVoiceChannelId(),
       t = _.default.getId(),
@@ -218,7 +218,7 @@ function G() {
   }), null
 }
 
-function j() {
+function G() {
   return L([c.default, T.default], () => ({
     hangStatus: c.default.getCurrentHangStatus(),
     customHangStatus: c.default.getCustomHangStatus(),
@@ -235,6 +235,6 @@ function j() {
 
 function w() {
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(P, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(D, {}), (0, a.jsx)(x, {}), (0, a.jsx)(U, {}), (0, a.jsx)(b, {}), (0, a.jsx)(G, {}), (0, a.jsx)(j, {})]
+    children: [(0, a.jsx)(P, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(D, {}), (0, a.jsx)(x, {}), (0, a.jsx)(U, {}), (0, a.jsx)(b, {}), (0, a.jsx)(j, {}), (0, a.jsx)(G, {})]
   })
 }

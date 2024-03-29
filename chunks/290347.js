@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("153124"),
   _ = n("26290"),
   C = n("810090"),
-  m = n("626135"),
-  S = n("565216"),
+  S = n("626135"),
+  m = n("565216"),
   I = n("981631"),
   p = n("921944"),
   T = n("816277");
@@ -86,7 +86,7 @@ function N(e) {
   } = e, {
     onClose: D,
     transitionState: x
-  } = n, b = (0, h.useUID)(), U = P.length % 2 == 0, G = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [j, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(j), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
+  } = n, b = (0, h.useUID)(), U = P.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
 
   function J() {
     let e = Date.now(),
@@ -96,23 +96,23 @@ function N(e) {
     return Z.current && (F(n += t), !X.current && H(a += t)), w(e), [n, a]
   }
   return s.useEffect(() => {
-    z.current = j, q.current = k, Q.current = B, Z.current = V, X.current = W
-  }, [j, k, B, V, W]), s.useEffect(() => () => {
+    z.current = G, q.current = k, Q.current = B, Z.current = V, X.current = W
+  }, [G, k, B, V, W]), s.useEffect(() => () => {
     let [e, t] = J();
-    m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
+    S.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
       change_log_id: M,
       seconds_played: Math.round(e / 1e3)
-    }), m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_UNMUTE, {
+    }), S.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_UNMUTE, {
       change_log_id: M,
       seconds_unmuted: Math.round(t / 1e3)
     })
   }, [M]), s.useEffect(() => {
     null != g && (0, d.requestMarkDismissibleContentAsShown)(g);
     let e = Date.now();
-    return m.default.track(I.AnalyticEvents.CHANGE_LOG_OPENED, {
+    return S.default.track(I.AnalyticEvents.CHANGE_LOG_OPENED, {
       change_log_id: M
     }), () => {
-      m.default.track(I.AnalyticEvents.CHANGE_LOG_CLOSED, {
+      S.default.track(I.AnalyticEvents.CHANGE_LOG_CLOSED, {
         change_log_id: M,
         seconds_open: Math.round((Date.now() - e) / 1e3)
       }), null != g && (0, d.markDismissibleContentAsDismissed)(g, {
@@ -126,7 +126,7 @@ function N(e) {
     children: [(0, a.jsx)(o.ModalCloseButton, {
       className: T.closeButton,
       onClick: D
-    }), (0, a.jsx)(S.default, {
+    }), (0, a.jsx)(m.default, {
       className: T.splash
     }), null == N ? void 0 : N(), (0, a.jsxs)(o.ModalContent, {
       className: T.content,
@@ -136,7 +136,7 @@ function N(e) {
         children: R
       }), "video" === l.type ? (0, a.jsx)(C.default, {
         className: i()(T.video, _),
-        autoPlay: !G,
+        autoPlay: !j,
         loop: !0,
         muted: !0,
         controls: !0,
@@ -144,7 +144,7 @@ function N(e) {
         src: l.src,
         poster: l.poster,
         onPlay: e => {
-          m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+          S.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
             change_log_id: M
           }), w(Date.now()), Y(!0), K(e.currentTarget.muted)
         },
@@ -171,7 +171,7 @@ function N(e) {
         renderImageComponent: c.renderImageComponent,
         renderLinkComponent: c.renderMaskedLinkComponent,
         onPlay: () => {
-          m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+          S.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
             change_log_id: M
           })
         }

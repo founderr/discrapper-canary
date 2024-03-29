@@ -32,8 +32,8 @@ var a = n("803997"),
   x = n("359110"),
   R = n("155409"),
   O = n("695346"),
-  M = n("592125"),
-  y = n("430824"),
+  y = n("592125"),
+  M = n("430824"),
   D = n("607744"),
   b = n("496675"),
   j = n("306680"),
@@ -75,7 +75,7 @@ class Q extends F.default {
     let {
       channel: e
     } = this.props;
-    return (0, w.isChannelFull)(e, U.default, y.default)
+    return (0, w.isChannelFull)(e, U.default, M.default)
   }
   getModeClass() {
     let {
@@ -160,7 +160,7 @@ class Q extends F.default {
     } = this.props, {
       shouldShowActivities: v,
       shouldShowGuildVerificationPopout: x
-    } = this.state, O = this.getVoiceStatesCount(), M = (0, l.jsxs)("li", {
+    } = this.state, O = this.getVoiceStatesCount(), y = (0, l.jsxs)("li", {
       className: s()(this.getModeClass(), {
         [z.disabled]: this.isDisabled()
       }),
@@ -224,12 +224,12 @@ class Q extends F.default {
         })
       }), this.renderVoiceUsers()]
     });
-    return S && (M = C(M)), E && (M = f(h(M))), _ && (M = (0, l.jsx)(R.default, {
+    return S && (y = C(y)), E && (y = f(h(y))), _ && (y = (0, l.jsx)(R.default, {
       tutorialId: "voice-conversations",
       position: "right",
       offsetX: -20,
-      children: M
-    })), M
+      children: y
+    })), y
   }
   constructor(...e) {
     super(...e), X(this, "state", {
@@ -259,7 +259,7 @@ class Q extends F.default {
     }), X(this, "handleContextMenu", e => {
       let {
         channel: t
-      } = this.props, a = y.default.getGuild(t.getGuildId());
+      } = this.props, a = M.default.getGuild(t.getGuildId());
       null != a && (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -389,8 +389,8 @@ function J(e) {
   } = e, d = (0, i.useStateFromStoresObject)([j.default], () => ({
     unread: j.default.hasUnread(n.id),
     mentionCount: j.default.getMentionCount(n.id)
-  })), c = (0, i.useStateFromStores)([G.default], () => G.default.resolveUnreadSetting(n)), f = (0, i.useStateFromStoresObject)([M.default, D.default, b.default], () => {
-    let e = M.default.getChannel(n.parent_id),
+  })), c = (0, i.useStateFromStores)([G.default], () => G.default.resolveUnreadSetting(n)), f = (0, i.useStateFromStoresObject)([y.default, D.default, b.default], () => {
+    let e = y.default.getChannel(n.parent_id),
       l = D.default.getCheck(n.guild_id);
     return {
       canManageChannel: b.default.can(K.Permissions.MANAGE_CHANNELS, n),
@@ -411,7 +411,7 @@ function J(e) {
     location: "VoiceChannel"
   }, {
     autoTrackExposure: !1
-  }), y = (0, B.default)({
+  }), M = (0, B.default)({
     channel: n,
     isChannelSelected: r,
     isChannelCollapsed: o,
@@ -420,7 +420,7 @@ function J(e) {
     needSubscriptionToAccess: I,
     enableConnectedUserLimit: !0,
     enableActivities: !0
-  }), P = x && null == y;
+  }), P = x && null == M;
   return (0, l.jsx)(q, {
     channelName: m,
     embeddedApps: p,
@@ -435,7 +435,7 @@ function J(e) {
     connected: x,
     isFavoriteSuggestion: s && !L,
     forceShowButtons: P,
-    channelInfo: y,
+    channelInfo: M,
     enableHangStatus: R,
     allowChannelTopic: O,
     resolvedUnreadSetting: c

@@ -10,11 +10,11 @@ var a, s, l, i, r = n("442837"),
   h = n("885110"),
   _ = n("981631");
 let C = "IncomingCallStore",
-  m = {
+  S = {
     width: 232,
     height: 315
   },
-  S = new Set,
+  m = new Set,
   I = [],
   p = new Map,
   T = new Set,
@@ -50,7 +50,7 @@ function O(e) {
   if (null != e) g = +e.x, A = +e.y;
   else {
     let e = n("451478").default.windowSize();
-    g = e.width / 2 - m.width / 2, A = e.height / 2 - m.height / 2
+    g = e.width / 2 - S.width / 2, A = e.height / 2 - S.height / 2
   }
 }();
 
@@ -65,7 +65,7 @@ class L extends(a = r.default.Store) {
     return N ? I : Array.from(p.values())
   }
   getIncomingCallChannelIds() {
-    return N ? S : T
+    return N ? m : T
   }
   getFirstIncomingCallId() {
     return N ? null : T.values().next().value

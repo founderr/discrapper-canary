@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return S
   }
 });
 var a = n("735250"),
@@ -19,20 +19,20 @@ var a = n("735250"),
   _ = n("689938"),
   C = n("65207");
 
-function m(e) {
+function S(e) {
   let {
     active: t,
     user: n,
-    channel: m
-  } = e, S = (0, c.useListHasSingleSpamMessageRequest)(), I = s.useCallback(() => {
+    channel: S
+  } = e, m = (0, c.useListHasSingleSpamMessageRequest)(), I = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(_.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
       name: l.MetricEvents.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
   }, []), p = s.useCallback(() => {
     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), T = s.useCallback(() => {
-    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), S && (0, o.transitionToChannel)(m.id)
-  }, [m.id, S]), {
+    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), m && (0, o.transitionToChannel)(S.id)
+  }, [S.id, m]), {
     acceptMessageRequest: g,
     isAcceptLoading: A,
     isUserProfileLoading: N,
@@ -47,7 +47,7 @@ function m(e) {
     className: C.container,
     children: [(0, a.jsx)(E.default, {
       otherUser: n,
-      channel: m,
+      channel: S,
       active: t
     }), (0, a.jsxs)("div", {
       className: C.actions,
@@ -56,14 +56,14 @@ function m(e) {
         color: i.ButtonColors.PRIMARY,
         size: i.Button.Sizes.SMALL,
         onClick: e => {
-          g(m.id), e.stopPropagation()
+          g(S.id), e.stopPropagation()
         },
         disabled: v,
         submitting: O,
         children: _.default.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
       }), (0, a.jsx)(h.default, {
         className: C.button,
-        channel: m,
+        channel: S,
         buttonSize: i.Button.Sizes.SMALL
       })]
     })]

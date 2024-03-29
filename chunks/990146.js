@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("569984"),
   _ = n("497505"),
   C = n("918701"),
-  m = n("874137"),
-  S = n("78826"),
+  S = n("874137"),
+  m = n("78826"),
   I = n("580168"),
   p = n("789563"),
   T = n("164164"),
@@ -35,7 +35,7 @@ t.default = function() {
     [M, y] = s.useState(!1),
     [D, x] = s.useState(!1),
     [b, U] = s.useState(!1),
-    [G, j] = s.useState(!1),
+    [j, G] = s.useState(!1),
     [w, k] = s.useState(240),
     F = s.useRef(null),
     B = (null == O ? void 0 : null === (e = O.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
@@ -47,7 +47,7 @@ t.default = function() {
     {
       hasError: z,
       isLoading: q
-    } = (0, S.useQuestsAssetsLoadState)(),
+    } = (0, m.useQuestsAssetsLoadState)(),
     Q = s.useCallback(() => {
       var e, t;
       k((null !== (t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), x(!0)
@@ -92,7 +92,7 @@ t.default = function() {
   let ea = l && !W && !Y && null != O && !K && !q,
     es = s.useRef(ea);
   s.useLayoutEffect(() => {
-    ea !== es.current && j(!1), es.current = ea
+    ea !== es.current && G(!1), es.current = ea
   }, [ea]), s.useEffect(() => {
     H.current = B
   }, [B]);
@@ -137,20 +137,20 @@ t.default = function() {
     },
     immediate: R,
     onRest: () => {
-      j(!0)
+      G(!0)
     },
     onStart: () => {
-      j(!1)
+      G(!1)
     }
   });
-  return !l || null == O || !ea && G || z ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
+  return !l || null == O || !ea && j || z ? null : (0, a.jsx)(S.QuestContentImpressionTracker, {
     questId: O.id,
     questContent: _.QuestContent.QUEST_BAR,
     overrideVisibility: !v && ea,
     children: () => (0, a.jsxs)(r.animated.div, {
       "aria-hidden": !ea,
       className: i()(N.wrapper, {
-        [N.wrapperVisible]: ea && G
+        [N.wrapperVisible]: ea && j
       }),
       style: {
         color: O.config.colors.secondary,

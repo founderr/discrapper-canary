@@ -12,8 +12,8 @@ var a, s, l = n("735250"),
   h = n("726542"),
   _ = n("638880"),
   C = n("655922"),
-  m = n("122810"),
-  S = n("833664"),
+  S = n("122810"),
+  m = n("833664"),
   I = n("503438"),
   p = n("420660"),
   T = n("74433"),
@@ -31,8 +31,8 @@ var a, s, l = n("735250"),
   x = n("368874"),
   b = n("366695"),
   U = n("366966"),
-  G = n("446753"),
-  j = n("619271"),
+  j = n("446753"),
+  G = n("619271"),
   w = n("395361"),
   k = n("639351"),
   F = n("632184"),
@@ -91,7 +91,7 @@ class et extends i.Component {
     } = this.props, {
       timestamps: n
     } = t;
-    return null == n || !(0, S.default)(t) || (0, I.default)(t) ? null : J(e = (0, m.default)(t) ? (0, l.jsx)($, {
+    return null == n || !(0, m.default)(t) || (0, I.default)(t) ? null : J(e = (0, S.default)(t) ? (0, l.jsx)($, {
       timestamps: n
     }) : (0, l.jsx)(U.default, {
       start: n.start,
@@ -163,7 +163,7 @@ let en = e => {
     case "MULTIPLE":
       t = (0, l.jsx)("div", {
         className: q.multipleIconWrapper,
-        children: (0, l.jsx)(j.default, {
+        children: (0, l.jsx)(G.default, {
           className: o()(q.headerIcon, q.multipleIcon),
           color: d.default.unsafe_rawColors.PRIMARY_300.css
         })
@@ -225,7 +225,7 @@ let es = e => {
     ...a
   } = e;
   return (0, l.jsx)(c.FocusRing, {
-    children: (0, l.jsx)(G.default, {
+    children: (0, l.jsx)(j.default, {
       className: o()(n, q.wrapper),
       padded: !0,
       ...a,
@@ -237,7 +237,7 @@ es.Header = ea, es.Body = e => {
   let {
     children: t
   } = e;
-  return (0, l.jsx)(G.default, {
+  return (0, l.jsx)(j.default, {
     inset: !0,
     padded: !1,
     className: q.body,
@@ -494,27 +494,27 @@ es.Header = ea, es.Body = e => {
   let h = (0, u.useStateFromStoresArray)([D.default, M.default], () => Array.from(s).map(e => M.default.getId() === e ? null : D.default.getUser(e)).filter(V.isNotNullish)),
     C = (0, E.useAnalyticsContext)(),
     {
-      analyticsLocations: m
+      analyticsLocations: S
     } = (0, N.default)();
   if (null == f) return null;
-  let S = R.default.getApplication(f);
-  if (null == S) return null;
+  let m = R.default.getApplication(f);
+  if (null == m) return null;
   let I = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    p = (0, H.getAssetImage)(S.id, o, 300);
+    p = (0, H.getAssetImage)(m.id, o, 300);
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
       children: [(0, l.jsx)(b.default, {
-        game: S,
+        game: m,
         size: b.default.Sizes.XSMALL,
         className: q.embeddedActivityIcon
       }), (0, l.jsx)("div", {
         className: q.embeddedActivityName,
         children: (0, l.jsx)(c.Text, {
           variant: "text-sm/semibold",
-          children: S.name
+          children: m.name
         })
       }), null != I ? (0, l.jsx)("div", {
         className: q.embeddedActivityTimeElapsed,
@@ -530,7 +530,7 @@ es.Header = ea, es.Body = e => {
       className: q.embeddedActivityPlayerContainer,
       children: [null != p ? (0, l.jsx)("img", {
         src: p,
-        alt: S.name,
+        alt: m.name,
         className: q.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {
         className: q.embeddedActivityImageOverlay,
@@ -549,7 +549,7 @@ es.Header = ea, es.Body = e => {
                 activityChannelId: n.id,
                 locationObject: C.location,
                 embeddedActivitiesManager: A.default,
-                analyticsLocations: m
+                analyticsLocations: S
               })
             },
             children: z.default.Messages.JOIN

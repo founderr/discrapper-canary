@@ -38,7 +38,7 @@ let O = {
   tension: 600
 };
 
-function M(e) {
+function y(e) {
   switch (e) {
     case "height":
     case "opacity":
@@ -53,7 +53,7 @@ function M(e) {
       throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)))
   }
 }
-class y extends(l = s.PureComponent) {
+class M extends(l = s.PureComponent) {
   componentWillEnter(e) {
     let {
       controller: t
@@ -63,7 +63,7 @@ class y extends(l = s.PureComponent) {
       height: 1,
       opacity: 1,
       scale: 1,
-      config: M
+      config: y
     }).start().then(() => this.setState({
       animating: !1
     }))
@@ -77,7 +77,7 @@ class y extends(l = s.PureComponent) {
       scale: 1,
       opacity: 1,
       height: 1,
-      config: M
+      config: y
     }).start().then(e)
   }
   componentWillLeave(e) {
@@ -91,7 +91,7 @@ class y extends(l = s.PureComponent) {
       height: 0,
       opacity: 0,
       scale: 0,
-      config: M
+      config: y
     }).start().then(e))
   }
   componentWillUnmount() {
@@ -183,7 +183,7 @@ class y extends(l = s.PureComponent) {
         scale: 0,
         height: 0,
         opacity: 0,
-        config: M
+        config: y
       })
     }), R(this, "handleContextMenu", e => {
       let {
@@ -211,7 +211,7 @@ class y extends(l = s.PureComponent) {
     })
   }
 }
-R(y, "defaultProps", {
+R(M, "defaultProps", {
   badge: 0,
   audio: !1,
   video: !1,
@@ -227,7 +227,7 @@ R(y, "defaultProps", {
     f = s === n,
     E = !1,
     S = !1;
-  return f && (E = i === v.ChannelModes.VOICE, S = i === v.ChannelModes.VIDEO), (0, a.jsx)(y, {
+  return f && (E = i === v.ChannelModes.VOICE, S = i === v.ChannelModes.VIDEO), (0, a.jsx)(M, {
     ...e,
     ref: t,
     channelName: l,

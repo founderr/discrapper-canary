@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return m
   }
 });
 var a = n("735250");
@@ -19,9 +19,9 @@ var s = n("442837"),
   h = n("791359"),
   _ = n("981631"),
   C = n("689938"),
-  m = n("333130");
+  S = n("333130");
 
-function S() {
+function m() {
   let {
     analyticsLocations: e
   } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([f.default], () => f.default.hasConsented(_.Consents.PERSONALIZATION)) ? [] : [l.DismissibleContent.NOW_PLAYING_CONSENT_CARD], n = (0, E.useUID)();
@@ -30,13 +30,13 @@ function S() {
     children: (0, a.jsx)(r.default, {
       section: _.AnalyticsSections.ACTIVE_NOW_COLUMN,
       children: (0, a.jsx)("aside", {
-        className: m.container,
+        className: S.container,
         "aria-labelledby": n,
         children: (0, a.jsxs)(i.Scroller, {
-          className: m.scroller,
+          className: S.scroller,
           children: [(0, a.jsx)(i.Heading, {
             variant: "heading-lg/semibold",
-            className: m.header,
+            className: S.header,
             id: n,
             children: C.default.Messages.GAME_FEED_CURRENT_HEADER_TITLE
           }), (0, a.jsx)(d.default, {
@@ -47,7 +47,7 @@ function S() {
                 markAsDismissed: n
               } = e;
               if (t === l.DismissibleContent.NOW_PLAYING_CONSENT_CARD) return (0, a.jsx)(c.default, {
-                className: m.__invalid_consentCard,
+                className: S.__invalid_consentCard,
                 markAsDismissed: n
               })
             }

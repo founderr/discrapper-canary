@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("607070"),
   _ = n("100527"),
   C = n("906732"),
-  m = n("821982"),
-  S = n("377171"),
+  S = n("821982"),
+  m = n("377171"),
   I = n("633302"),
   p = n("126900"),
   T = n("26290"),
@@ -36,7 +36,7 @@ let P = e => {
     } = e;
     return (0, a.jsx)(T.TextBadge, {
       className: L.newBadge,
-      color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
+      color: null != t ? t : m.default.STATUS_DANGER_BACKGROUND,
       text: v.default.Messages.NEW
     })
   },
@@ -76,7 +76,7 @@ let P = e => {
     let {
       displayOptions: t,
       assetId: n
-    } = e, s = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), l = null != n ? (0, m.default)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
+    } = e, s = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), l = null != n ? (0, S.default)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
     return (0, a.jsxs)("div", {
       className: L.shopMarketingTooltipContent,
       children: [(0, a.jsx)("div", {
@@ -107,9 +107,9 @@ let P = e => {
       locationState: n,
       onButtonClick: l,
       displayOptions: r
-    } = e, [o, c] = s.useState(0), [f, h] = s.useState(!1), _ = (0, E.default)(), C = r.entrypointDecorationAssets, m = s.useCallback(e => {
+    } = e, [o, c] = s.useState(0), [f, h] = s.useState(!1), _ = (0, E.default)(), C = r.entrypointDecorationAssets, S = s.useCallback(e => {
       c(e => (e + 1) % r.assetIds.length), h(!0), null == e || e()
-    }, [r.assetIds]), S = s.useCallback(e => {
+    }, [r.assetIds]), m = s.useCallback(e => {
       h(!1), null == e || e()
     }, []);
     return (0, a.jsx)(d.Tooltip, {
@@ -128,8 +128,8 @@ let P = e => {
         selected: t,
         locationState: n,
         ...e,
-        onMouseEnter: () => m(e.onMouseEnter),
-        onMouseLeave: () => S(e.onMouseLeave),
+        onMouseEnter: () => S(e.onMouseEnter),
+        onMouseLeave: () => m(e.onMouseLeave),
         onButtonClick: l,
         children: [null != C && (0, a.jsx)("img", {
           src: (0, u.isThemeDark)(_) ? C.srcDark : C.srcLight,

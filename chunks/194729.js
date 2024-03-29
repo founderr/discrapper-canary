@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("570140"),
   _ = n("212093"),
   C = n("827837"),
-  m = n("785570"),
-  S = n("252618"),
+  S = n("785570"),
+  m = n("252618"),
   I = n("440190"),
   p = n("5955"),
   T = n("703656"),
@@ -37,8 +37,8 @@ var a = n("735250"),
   x = n("296386"),
   b = n("150192"),
   U = n("584885"),
-  G = n("59222"),
-  j = n("749436"),
+  j = n("59222"),
+  G = n("749436"),
   w = n("26580"),
   k = n("731455"),
   F = n("981631"),
@@ -69,7 +69,7 @@ class K extends s.PureComponent {
       mostRecentQuery: o
     } = this.props;
     if ((0, C.fetchActivityStatistics)(), (0, x.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, _.createAlgoliaIndex)(), h.default.wait(() => {
-        (0, m.markView)(F.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
+        (0, S.markView)(F.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
       }), !a && 0 === o.length && M.trackDiscoveryViewed({
         loadId: this.loadId,
         gamesYouPlayGuilds: s.guilds,
@@ -183,7 +183,7 @@ class K extends s.PureComponent {
     }) : r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : B.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: u
     }), f = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[r]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
-    return (0, a.jsx)(j.default, {
+    return (0, a.jsx)(G.default, {
       loadId: this.loadId,
       searchResults: f,
       mostRecentQuery: n,
@@ -212,7 +212,7 @@ class K extends s.PureComponent {
     } = this.state, f = u === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : B.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: d
     }), E = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[u]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
-    return (0, a.jsx)(G.default, {
+    return (0, a.jsx)(j.default, {
       loadId: this.loadId,
       availableLanguages: l,
       defaultLanguage: i,
@@ -298,7 +298,7 @@ class K extends s.PureComponent {
     });
     return (0, a.jsxs)("div", {
       className: H.pageWrapper,
-      children: [(0, a.jsx)(S.AppPageTitle, {
+      children: [(0, a.jsx)(m.AppPageTitle, {
         subsection: d ? l : void 0,
         location: _
       }), (0, a.jsx)("div", {
@@ -435,7 +435,7 @@ class K extends s.PureComponent {
         categoryId: a,
         preferredLocale: s.code,
         offset: 0,
-        length: G.MAX_GUILDS_PER_PAGE,
+        length: j.MAX_GUILDS_PER_PAGE,
         tag: !0
       }), M.trackTagSearchStarted(this.loadId, a, n, t), this.scrollToTop()
     })

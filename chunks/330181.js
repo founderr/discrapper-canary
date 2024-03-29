@@ -43,10 +43,10 @@ function h(e) {
     resetRenewalMutation: h,
     submitting: _,
     error: C
-  } = E(r), m = (0, d.useSubscriptionListingsForGroup)(t, {
+  } = E(r), S = (0, d.useSubscriptionListingsForGroup)(t, {
     includeSoftDeleted: !0
   }), {
-    currentListing: S,
+    currentListing: m,
     nextListing: I
   } = s.useMemo(() => {
     if ((null == n ? void 0 : n.renewalMutations) == null) return {
@@ -55,17 +55,17 @@ function h(e) {
     };
     let e = n.items[0].planId,
       t = n.renewalMutations.items[0].planId,
-      a = m.find(t => t.subscription_plans[0].id === e);
+      a = S.find(t => t.subscription_plans[0].id === e);
     return {
       currentListing: a,
-      nextListing: m.find(e => e.subscription_plans[0].id === t)
+      nextListing: S.find(e => e.subscription_plans[0].id === t)
     }
-  }, [n, m]);
-  if (null == n || null == S || null == I) return null;
+  }, [n, S]);
+  if (null == n || null == m || null == I) return null;
   let p = i()(n.currentPeriodEnd).format("MMM DD, YYYY");
   return (0, a.jsx)(c.default, {
     message: f.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_DESCRIPTION.format({
-      currentListing: S.name,
+      currentListing: m.name,
       nextListing: I.name,
       changeDate: p
     }),

@@ -17,8 +17,8 @@ var a, s = n("735250"),
   h = n("239091"),
   _ = n("287259"),
   C = n("404133"),
-  m = n("785547"),
-  S = n("490983"),
+  S = n("785547"),
+  m = n("490983"),
   I = n("799777"),
   p = n("285952"),
   T = n("366695"),
@@ -44,8 +44,8 @@ function b(e, t, n) {
   }) : e[t] = n, e
 }
 let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
-  G = (0, P.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
-  j = Object.freeze({
+  j = (0, P.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
+  G = Object.freeze({
     [y.GameTableListKeys.PLATFORM]: "Platform",
     [y.GameTableListKeys.LAST_PLAYED]: "Last Played",
     [y.GameTableListKeys.NAME]: "Name"
@@ -152,8 +152,8 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
             }),
             libraryApplication: e.libraryApplication
           })]
-        }), (0, L.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(m.default, {
-          analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(j[a], " ").concat(i === y.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
+        }), (0, L.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(S.default, {
+          analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(G[a], " ").concat(i === y.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
           analyticsListIndex: n,
           source: y.AnalyticsLocations.APPLICATION_LIBRARY,
           libraryApplication: e.libraryApplication,
@@ -222,7 +222,7 @@ class B extends(a = l.PureComponent) {
     let {
       highlightedApplicationKey: e
     } = this.state;
-    null != e && null != this._rowRefs[e] && (this.props.scrollToRow(this._rowRefs[e], U), new d.Timeout().start(G, () => {
+    null != e && null != this._rowRefs[e] && (this.props.scrollToRow(this._rowRefs[e], U), new d.Timeout().start(j, () => {
       !this._didUnmount && this.setState({
         highlightedApplicationKey: null
       })
@@ -402,10 +402,10 @@ function H(e) {
       applicationViewItems: a,
       filterQuery: i,
       fetched: r
-    } = (0, u.useStateFromStoresObject)([S.default], () => ({
-      applicationViewItems: S.default.sortedFilteredLibraryApplicationViewItems,
-      filterQuery: S.default.applicationFilterQuery,
-      fetched: S.default.hasFetchedApplications
+    } = (0, u.useStateFromStoresObject)([m.default], () => ({
+      applicationViewItems: m.default.sortedFilteredLibraryApplicationViewItems,
+      filterQuery: m.default.applicationFilterQuery,
+      fetched: m.default.hasFetchedApplications
     })),
     {
       sortKey: d,

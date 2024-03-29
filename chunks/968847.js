@@ -34,12 +34,12 @@ let v = {
   R = {},
   O = {};
 
-function M(e) {
+function y(e) {
   let t = g.default.getChannel(e);
   return !(null == t || null == t.getGuildId() || t.isGuildVocal()) && !(t.isThread() ? m.default.isMuted(t.id) : I.default.isChannelMuted(t.getGuildId(), t.id)) && (0, h.getHasImportantUnread)(t)
 }
 
-function y(e) {
+function M(e) {
   let t = g.default.getChannel(e);
   if (null == t) return !1;
   let n = t.getGuildId();
@@ -71,7 +71,7 @@ function b(e) {
     [m, g, E] = a.getSlicedChannels(s);
   for (let e = 0; e < g.length; e++) {
     let t = g[e];
-    if ((M(t.id) || d().some(t.threadIds, M)) && (f = !1), (y(t.id) || d().some(t.threadIds, y)) && (c = !1), p.includes(t.id) && (h = !0), !f && !c && h) break
+    if ((y(t.id) || d().some(t.threadIds, y)) && (f = !1), (M(t.id) || d().some(t.threadIds, M)) && (c = !1), p.includes(t.id) && (h = !0), !f && !c && h) break
   }
   let _ = 0,
     I = !1,
@@ -80,13 +80,13 @@ function b(e) {
   if (f || c)
     for (let e = m.length - 1; e >= 0; e--) {
       let t = m[e];
-      (M(t.id) || d().some(t.threadIds, M)) && (null == r && (r = t.id), I = !0), (y(t.id) || d().some(t.threadIds, y)) && (null == i && (i = t.id), _ += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
+      (y(t.id) || d().some(t.threadIds, y)) && (null == r && (r = t.id), I = !0), (M(t.id) || d().some(t.threadIds, M)) && (null == i && (i = t.id), _ += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
     }
   if (f || c)
     for (let e = 0; e < E.length; e++) {
       let t = E[e];
       if (!f && !c) break;
-      (M(t.id) || d().some(t.threadIds, M)) && (null == u && (u = t.id), T = !0), (y(t.id) || d().some(t.threadIds, y)) && (null == o && (o = t.id), N += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
+      (y(t.id) || d().some(t.threadIds, y)) && (null == u && (u = t.id), T = !0), (M(t.id) || d().some(t.threadIds, M)) && (null == o && (o = t.id), N += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
     }
   let L = null,
     x = null,

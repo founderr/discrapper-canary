@@ -8,8 +8,8 @@ var i, r, o, u, d = n("392711"),
   h = n("308063"),
   _ = n("388610"),
   C = n("430824"),
-  m = n("496675"),
-  S = n("855674"),
+  S = n("496675"),
+  m = n("855674"),
   I = n("981631");
 let p = [],
   T = null,
@@ -20,7 +20,7 @@ let p = [],
   O = null;
 
 function v() {
-  if (a = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, p = null != s && null != a && m.default.can(I.Permissions.MANAGE_WEBHOOKS, s) ? S.default.getWebhooksForChannel(a.id, s.id) : [], null != T) {
+  if (a = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, p = null != s && null != a && S.default.can(I.Permissions.MANAGE_WEBHOOKS, s) ? m.default.getWebhooksForChannel(a.id, s.id) : [], null != T) {
     let e = P(T.id);
     null != e && (T = e)
   }
@@ -40,7 +40,7 @@ function P(e) {
 }
 class M extends(i = f.default.Store) {
   initialize() {
-    this.waitFor(_.default, C.default, S.default, m.default)
+    this.waitFor(_.default, C.default, m.default, S.default)
   }
   hasChanges() {
     return R

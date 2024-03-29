@@ -42,11 +42,11 @@ let E = (0, u.makeChannelSortable)(function(e) {
     })
   }, [L]);
   if (null == L) return null;
-  let M = (0, h.getChannelItemClassName)(u, I),
-    y = (0, h.isChannelItemDisabled)(L, S, _),
+  let y = (0, h.getChannelItemClassName)(u, I),
+    M = (0, h.isChannelItemDisabled)(L, S, _),
     D = (0, l.jsx)("div", {
-      className: i()(M, {
-        [g.disabled]: y,
+      className: i()(y, {
+        [g.disabled]: M,
         [g.selected]: x
       }),
       "data-dnd-name": L.name,

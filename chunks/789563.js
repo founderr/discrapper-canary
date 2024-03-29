@@ -18,11 +18,11 @@ t.default = function(e) {
     className: h,
     expansionSpring: _,
     isExpanded: C,
-    isExpansionAnimationComplete: m,
-    quest: S
-  } = e, I = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null !== (s = null === (n = S.userStatus) || void 0 === n ? void 0 : n.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
+    isExpansionAnimationComplete: S,
+    quest: m
+  } = e, I = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null !== (s = null === (n = m.userStatus) || void 0 === n ? void 0 : n.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
   return (0, a.jsx)(i.animated.div, {
-    "aria-hidden": C && m,
+    "aria-hidden": C && S,
     className: l()(h, E.contentCollapsed, {
       [E.contentCollapsedAccepted]: I
     }),
@@ -38,13 +38,13 @@ t.default = function(e) {
         id: "QuestsBarContentCollapsed_rewardTile",
         children: e => (0, a.jsx)("img", {
           ref: e,
-          alt: S.config.messages.rewardName,
+          alt: m.config.messages.rewardName,
           className: E.questProgressRewardTile,
-          src: (0, o.getRewardAssetUrl)(S)
+          src: (0, o.getRewardAssetUrl)(m)
         })
       }), p ? (0, a.jsx)(d.default, {
         className: E.questProgressBar,
-        quest: S
+        quest: m
       }) : (0, a.jsx)(r.Text, {
         className: E.questProgressHint,
         color: "always-white",
@@ -56,13 +56,13 @@ t.default = function(e) {
         className: E.brandingWrapper,
         children: [(0, a.jsx)(u.default, {
           className: E.partnerBranding,
-          quest: S
+          quest: m
         }), (0, a.jsx)(r.Heading, {
           color: "always-white",
           variant: "heading-sm/medium",
           className: E.questName,
           children: f.default.Messages.QUEST.format({
-            questName: S.config.messages.questName
+            questName: m.config.messages.questName
           })
         })]
       })

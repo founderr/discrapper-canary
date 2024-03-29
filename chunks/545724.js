@@ -18,11 +18,11 @@ t.default = function(e) {
     channel: h,
     onClick: _,
     isFocused: C,
-    isActive: m,
-    onOtherHover: S,
+    isActive: S,
+    onOtherHover: m,
     className: I
   } = e, [p, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
-    T(!0), C && !m && !g && (null == S || S())
+    T(!0), C && !S && !g && (null == m || m())
   }, R = () => {
     T(!1)
   }, O = (e, t) => {
@@ -49,7 +49,7 @@ t.default = function(e) {
       },
       children: (0, a.jsx)(r.default.div, {
         className: i()(f.messageRequestItem, I, {
-          [f.active]: m || g,
+          [f.active]: S || g,
           [f.firstItem]: 0 === t
         }),
         onContextMenu: e => O(e, E),
@@ -61,7 +61,7 @@ t.default = function(e) {
           opacity: 1
         },
         ...e,
-        children: l(p || m || g)
+        children: l(p || S || g)
       })
     })
   })

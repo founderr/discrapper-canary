@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("569984"),
   _ = n("497505"),
   C = n("918701"),
-  m = n("874137"),
-  S = n("611855"),
+  S = n("874137"),
+  m = n("611855"),
   I = n("670638"),
   p = n("667105"),
   T = n("860151"),
@@ -80,8 +80,8 @@ t.default = function(e) {
   }, [O]), D = (0, p.useHandleClaimQuestsReward)({
     quest: O,
     location: _.QuestContent.ACTIVITY_PANEL
-  }), x = (0, E.useIsQuestExpired)(O), b = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, G = (null === (l = O.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == O ? void 0 : O.userStatus) == null || (0, C.isDismissed)(O.userStatus, _.QuestContent.ACTIVITY_PANEL) || x || G ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
+  }), x = (0, E.useIsQuestExpired)(O), b = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = O.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  return (null == O ? void 0 : O.userStatus) == null || (0, C.isDismissed)(O.userStatus, _.QuestContent.ACTIVITY_PANEL) || x || j ? null : (0, a.jsx)(S.QuestContentImpressionTracker, {
     questId: O.id,
     questContent: _.QuestContent.ACTIVITY_PANEL,
     children: e => {
@@ -99,7 +99,7 @@ t.default = function(e) {
           className: N.utils,
           children: [b ? (0, a.jsx)(R, {
             quest: O
-          }) : (0, a.jsx)(S.default, {
+          }) : (0, a.jsx)(m.default, {
             textOpacity: .5
           }), (0, a.jsx)(I.QuestsEntryContextMenuPopout, {
             quest: O,
@@ -143,7 +143,7 @@ t.default = function(e) {
               children: A.default.Messages.QUESTS_LEARN_MORE_V2
             }), (0, a.jsx)(o.Button, {
               className: N.cta,
-              color: o.Button.Colors.GREEN,
+              color: o.Button.Colors.BRAND,
               fullWidth: !0,
               onClick: P,
               size: o.Button.Sizes.SMALL,

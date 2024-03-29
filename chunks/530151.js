@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("239091"),
   _ = n("51025"),
   C = n("785547"),
-  m = n("730749"),
-  S = n("112724"),
+  S = n("730749"),
+  m = n("112724"),
   I = n("812206"),
   p = n("44315"),
   T = n("210887"),
@@ -33,8 +33,8 @@ var a = n("735250"),
   x = n("897353"),
   b = n("424218"),
   U = n("780570"),
-  G = n("353042"),
-  j = n("86826"),
+  j = n("353042"),
+  G = n("86826"),
   w = n("981631"),
   k = n("689938"),
   F = n("600262");
@@ -379,7 +379,7 @@ class Z extends s.PureComponent {
     })
   }
   renderProgressPatching() {
-    return (0, a.jsx)(G.default, {
+    return (0, a.jsx)(j.default, {
       getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
       updateInterval: 5e3,
       children: this.renderProgressPatchingBody
@@ -574,13 +574,13 @@ class en extends s.PureComponent {
       className: F.gameUpdates,
       children: [(0, a.jsxs)("div", {
         className: F.headerRow,
-        children: [(0, a.jsx)(j.default, {
+        children: [(0, a.jsx)(G.default, {
           className: i()(F.headerCell, F.networkProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesDownloaded,
           color: w.Color.GREEN_360,
           animate: s
-        }), (0, a.jsx)(j.default, {
+        }), (0, a.jsx)(G.default, {
           className: i()(F.headerCell, F.diskProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
@@ -649,7 +649,7 @@ function ea(e, t, n, a) {
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([I.default, A.default, N.default, T.default, R.default], () => {
+t.default = (0, m.default)(u.default.connectStores([I.default, A.default, N.default, T.default, R.default], () => {
   let e = ea(N.default.activeItems, !1, I.default, A.default);
   return {
     applications: [...e, ...ea(N.default.finishedItems, !0, I.default, A.default)],
@@ -657,4 +657,4 @@ t.default = (0, S.default)(u.default.connectStores([I.default, A.default, N.defa
     isFocused: R.default.isFocused(),
     theme: T.default.theme
   }
-})((0, m.default)(en)))
+})((0, S.default)(en)))

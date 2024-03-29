@@ -13,9 +13,9 @@ var a, s = n("392711"),
   h = n("158776"),
   _ = n("699516"),
   C = n("594174"),
-  m = n("981631");
+  S = n("981631");
 
-function S(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -56,7 +56,7 @@ class g extends u.default {
     return [this.type, null !== (s = null !== (a = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== a ? a : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : this.usernameLower]
   }
   constructor(e) {
-    super(), S(this, "key", void 0), S(this, "type", void 0), S(this, "status", void 0), S(this, "isMobile", void 0), S(this, "activities", void 0), S(this, "applicationStream", void 0), S(this, "user", void 0), S(this, "usernameLower", void 0), S(this, "mutualGuildsLength", void 0), S(this, "mutualGuilds", void 0), S(this, "nickname", void 0), this.key = e.key, this.type = e.type, this.status = e.status, this.activities = e.activities, this.applicationStream = e.applicationStream, this.user = e.user, this.isMobile = e.isMobile, this.usernameLower = e.usernameLower, this.mutualGuildsLength = e.mutualGuildsLength, this.mutualGuilds = e.mutualGuilds, this.nickname = e.nickname
+    super(), m(this, "key", void 0), m(this, "type", void 0), m(this, "status", void 0), m(this, "isMobile", void 0), m(this, "activities", void 0), m(this, "applicationStream", void 0), m(this, "user", void 0), m(this, "usernameLower", void 0), m(this, "mutualGuildsLength", void 0), m(this, "mutualGuilds", void 0), m(this, "nickname", void 0), this.key = e.key, this.type = e.type, this.status = e.status, this.activities = e.activities, this.applicationStream = e.applicationStream, this.user = e.user, this.isMobile = e.isMobile, this.usernameLower = e.usernameLower, this.mutualGuildsLength = e.mutualGuildsLength, this.mutualGuilds = e.mutualGuilds, this.nickname = e.nickname
   }
 }
 class A {
@@ -101,52 +101,52 @@ class A {
       return !0
     }).filter(t => {
       switch (e) {
-        case m.FriendsSections.ONLINE:
-          return t.type === m.RelationshipTypes.FRIEND && t.status !== m.StatusTypes.OFFLINE;
-        case m.FriendsSections.PENDING:
-          return t.type === m.RelationshipTypes.PENDING_INCOMING || t.type === m.RelationshipTypes.PENDING_OUTGOING;
-        case m.FriendsSections.SUGGESTIONS:
+        case S.FriendsSections.ONLINE:
+          return t.type === S.RelationshipTypes.FRIEND && t.status !== S.StatusTypes.OFFLINE;
+        case S.FriendsSections.PENDING:
+          return t.type === S.RelationshipTypes.PENDING_INCOMING || t.type === S.RelationshipTypes.PENDING_OUTGOING;
+        case S.FriendsSections.SUGGESTIONS:
           return 99 === t.type;
-        case m.FriendsSections.BLOCKED:
-          return t.type === m.RelationshipTypes.BLOCKED;
-        case m.FriendsSections.ALL:
+        case S.FriendsSections.BLOCKED:
+          return t.type === S.RelationshipTypes.BLOCKED;
+        case S.FriendsSections.ALL:
         default:
-          return t.type === m.RelationshipTypes.FRIEND
+          return t.type === S.RelationshipTypes.FRIEND
       }
     }).sortBy(e => e.comparator).value()
   }
   getRelationshipCounts() {
     let e = {
-      [m.RelationshipTypes.FRIEND]: 0,
-      [m.RelationshipTypes.PENDING_INCOMING]: 0,
-      [m.RelationshipTypes.PENDING_OUTGOING]: 0,
+      [S.RelationshipTypes.FRIEND]: 0,
+      [S.RelationshipTypes.PENDING_INCOMING]: 0,
+      [S.RelationshipTypes.PENDING_OUTGOING]: 0,
       99: 0,
-      [m.RelationshipTypes.BLOCKED]: 0
+      [S.RelationshipTypes.BLOCKED]: 0
     };
     return this._rows.forEach(t => {
       null != t.user && null != e[t.type] && e[t.type]++
     }), e
   }
   constructor(e = []) {
-    S(this, "_rows", void 0), this._rows = e
+    m(this, "_rows", void 0), this._rows = e
   }
 }
 let N = !0,
   R = !1,
-  O = m.FriendsSections.ONLINE,
+  O = S.FriendsSections.ONLINE,
   v = new A,
   L = !0,
   P = !1;
 
 function M() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  N && (e || O !== m.FriendsSections.ONLINE && O !== m.FriendsSections.ADD_FRIEND) && !R && (N = !1, R = !0, o.default.fetchRelationships())
+  N && (e || O !== S.FriendsSections.ONLINE && O !== S.FriendsSections.ADD_FRIEND) && !R && (N = !1, R = !0, o.default.fetchRelationships())
 }
 
 function y() {
   if (N = !0, L ? R = !1 : M(), v = v.reset(), P) return;
   let e = v.getRelationshipCounts();
-  O = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
+  O = 0 === e[S.RelationshipTypes.FRIEND] ? 0 !== e[S.RelationshipTypes.PENDING_INCOMING] ? S.FriendsSections.PENDING : S.FriendsSections.ADD_FRIEND : S.FriendsSections.ONLINE
 }
 
 function D() {
@@ -171,7 +171,7 @@ class b extends(a = i.default.Store) {
     }
   }
 }
-S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
+m(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
   CONNECTION_OPEN: function() {
     y()
   },
@@ -194,7 +194,7 @@ S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     let {
       tab: t
     } = e;
-    return L = t !== m.DrawerTabTypes.FRIENDS, D(), !L
+    return L = t !== S.DrawerTabTypes.FRIENDS, D(), !L
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
     O = e.section, P = !0

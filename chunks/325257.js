@@ -27,8 +27,8 @@ var l = n("735250"),
   x = n("682662"),
   R = n("674552"),
   O = n("981631"),
-  M = n("689938"),
-  y = n("814886");
+  y = n("689938"),
+  M = n("814886");
 let D = {
   analyticsSource: {
     page: O.AnalyticsPages.GUILD_CHANNEL,
@@ -147,7 +147,7 @@ t.default = a.memo(function(e) {
         ec || ed(!1)
       }
     }) : (0, l.jsx)(I.default, {
-      ariaLabel: M.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
+      ariaLabel: y.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
         guildName: B.toString(),
         mentions: W
       }),
@@ -172,10 +172,10 @@ t.default = a.memo(function(e) {
     }) : (0, l.jsx)("div", {
       ref: z ? ea : void 0,
       "data-dnd-name": B.toString(),
-      className: i()(y.blobContainer, {
-        [y.sorting]: X,
-        [y.wobble]: ec,
-        [y.selected]: ec || H
+      className: i()(M.blobContainer, {
+        [M.sorting]: X,
+        [M.wobble]: ec,
+        [M.selected]: ec || H
       }),
       children: (0, l.jsx)(c.BlobMask, {
         selected: ec || H || eo,
@@ -191,7 +191,7 @@ t.default = a.memo(function(e) {
       hovered: !el && eo,
       selected: !el && H,
       unread: !el && k,
-      className: y.pill
+      className: M.pill
     }), (0, l.jsx)(L.default, {
       guild: B,
       disabled: X,

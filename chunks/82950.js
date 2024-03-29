@@ -14,7 +14,7 @@ var a = n("735250"),
   h = n("689938"),
   _ = n("771853");
 let C = i().debounce(o.default.trackWithMetadata, 500),
-  m = e => {
+  S = e => {
     let {
       guild: t,
       title: n,
@@ -22,8 +22,8 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       image: i,
       type: c,
       imageMarginX: f,
-      imageMarginTop: m,
-      trackingSource: S,
+      imageMarginTop: S,
+      trackingSource: m,
       undismissable: I,
       onDismissed: p,
       onClick: T,
@@ -42,7 +42,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       size: r.Button.Sizes.SMALL,
       onClick: () => {
         null != c && d.default.track(E.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-          source: S,
+          source: m,
           guild_id: t.id,
           notice_type: c
         }), null == T || T()
@@ -68,7 +68,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       }), (0, a.jsx)("div", {
         className: _.imageContainer,
         style: {
-          marginTop: "".concat(m, "px"),
+          marginTop: "".concat(S, "px"),
           marginLeft: R,
           marginRight: R
         },
@@ -96,7 +96,7 @@ t.default = function(e) {
   } = (0, c.useChannelNoticeRedesignExperiment)(!0);
   return t ? (0, a.jsx)(f.default, {
     ...e
-  }) : (0, a.jsx)(m, {
+  }) : (0, a.jsx)(S, {
     ...e
   })
 }

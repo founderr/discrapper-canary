@@ -14,7 +14,7 @@ var a = n("735250"),
   h = n("981631"),
   _ = n("689938"),
   C = n("504763");
-let m = (0, c.getThemeClass)(h.ThemeTypes.DARK);
+let S = (0, c.getThemeClass)(h.ThemeTypes.DARK);
 t.default = function(e) {
   let {
     guild: t
@@ -29,7 +29,7 @@ t.default = function(e) {
         guildId: t.id
       })
     })
-  }, [l, t.id]), S = s.useCallback(() => {
+  }, [l, t.id]), m = s.useCallback(() => {
     null != l && (0, f.dismissSignUp)(l.key)
   }, [l]);
   if (null == l) return null;
@@ -37,7 +37,7 @@ t.default = function(e) {
   return (0, a.jsx)(o.ThemeContextProvider, {
     theme: h.ThemeTypes.DARK,
     children: (0, a.jsx)("div", {
-      className: i()(C.container, m),
+      className: i()(C.container, S),
       children: (0, a.jsxs)("div", {
         className: C.card,
         style: {
@@ -69,7 +69,7 @@ t.default = function(e) {
         }), (0, a.jsx)("div", {
           className: C.dismiss,
           children: (0, a.jsx)(o.Clickable, {
-            onClick: S,
+            onClick: m,
             children: (0, a.jsx)(d.default, {
               height: 16,
               width: 16,

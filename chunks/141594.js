@@ -23,12 +23,12 @@ t.default = () => {
       location: C
     }),
     {
-      coachtipEnabled: m
+      coachtipEnabled: S
     } = (0, f.default)({
       location: C
     }),
     {
-      marketingEnabled: S,
+      marketingEnabled: m,
       variant: I
     } = (0, u.default)({
       location: C
@@ -42,8 +42,8 @@ t.default = () => {
       if ((0, o.ageEligibleForPremiumUpsell)(e)) {
         if (t) return [l.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP];
         if (n) return [l.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP];
-        else if (m) return [l.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP];
-        else if (S) switch (I) {
+        else if (S) return [l.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP];
+        else if (m) switch (I) {
           case h.CollectiblesMarketingVariant.TOOLTIP:
             return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP];
           case h.CollectiblesMarketingVariant.COACHTIP:
@@ -51,7 +51,7 @@ t.default = () => {
         } else if (p) return [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]
       }
       return []
-    }, [p, S, I, e, m, n, t]),
+    }, [p, m, I, e, S, n, t]),
     [g, A] = (0, i.useSelectedDismissibleContent)(T, void 0, !0),
     N = null != g ? h.CollectiblesDCToDisplayOptions[g] : null;
   return {

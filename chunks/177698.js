@@ -10,13 +10,13 @@ var s = n("481060"),
   u = n("703912"),
   d = n("981631");
 t.default = (0, u.default)((e, t, n, r, o, u, d, c, f, E, h, _, C) => {
-  let m = "OAuth2Authorize_".concat(e, "_").concat(E, "_").concat(h);
-  return new Promise(S => {
+  let S = "OAuth2Authorize_".concat(e, "_").concat(E, "_").concat(h);
+  return new Promise(m => {
     let I = e => {
       let {
         location: t
       } = e;
-      S(t)
+      m(t)
     };
     (0, s.openModal)(s => (0, a.jsx)(i.OAuth2AuthorizeModal, {
       ...s,
@@ -35,9 +35,9 @@ t.default = (0, u.default)((e, t, n, r, o, u, d, c, f, E, h, _, C) => {
       prompt: _,
       disableGuildSelect: "boolean" == typeof C ? C : "true" === C
     }), {
-      modalKey: m,
+      modalKey: S,
       onCloseRequest: () => {
-        (0, s.closeModal)(m), S(void 0)
+        (0, s.closeModal)(S), m(void 0)
       }
     }, (0, l.default)(t.application, h) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
   })

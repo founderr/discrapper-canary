@@ -32,8 +32,8 @@ var a = n("803997"),
   x = n("473403"),
   R = n("304471"),
   O = n("981631"),
-  M = n("647086"),
-  y = n("294639");
+  y = n("647086"),
+  M = n("294639");
 
 function D(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -55,7 +55,7 @@ class b extends L.default {
       channelInfo: e
     } = this.props;
     return null == e ? null : (0, l.jsx)("div", {
-      className: y.channelInfo,
+      className: M.channelInfo,
       children: e
     })
   }
@@ -83,8 +83,8 @@ class b extends L.default {
       enableActivities: A
     } = this.props, L = A && null != I && I.length > 0, v = (0, C.getChannelSubtitle)(S), R = (0, l.jsx)("li", {
       className: s()(this.getClassName(), {
-        [y.disabled]: this.isDisabled(),
-        [y.selected]: n
+        [M.disabled]: this.isDisabled(),
+        [M.selected]: n
       }),
       "data-dnd-name": e.name,
       onMouseEnter: u || L ? this.handleMouseEnter : void 0,
@@ -96,7 +96,7 @@ class b extends L.default {
         onRequestClose: this.handleClosePopout,
         shouldShow: u && this.state.shouldShowThreadsPopout || L && this.state.shouldShowActivities,
         children: () => (0, l.jsxs)(x.default, {
-          className: y.iconVisibility,
+          className: M.iconVisibility,
           channel: e,
           guild: t,
           selected: !E && n,
@@ -243,12 +243,12 @@ function G(e) {
     let e = E.default.getChannel(t.parent_id);
     return {
       canManageChannel: _.default.can(O.Permissions.MANAGE_CHANNELS, t),
-      canReorderChannel: !0 !== a && (n.id === M.FAVORITES_RAW_GUILD_ID || (null != e ? _.default.can(O.Permissions.MANAGE_CHANNELS, e) : _.default.can(O.Permissions.MANAGE_CHANNELS, n)))
+      canReorderChannel: !0 !== a && (n.id === y.FAVORITES_RAW_GUILD_ID || (null != e ? _.default.can(O.Permissions.MANAGE_CHANNELS, e) : _.default.can(O.Permissions.MANAGE_CHANNELS, n)))
     }
   }), A = (0, i.useStateFromStores)([m.default], () => m.default.shouldIndicateNewChannel(n.id, t.id)), {
     needSubscriptionToAccess: L,
     isSubscriptionGated: x
-  } = (0, p.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), y = (0, i.useStateFromStores)([T.default], () => {
+  } = (0, p.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), M = (0, i.useStateFromStores)([T.default], () => {
     let e = T.default.getCurrentUser();
     return null != e && (!t.isNSFW() || e.nsfwAllowed)
   }, [t]), D = (0, c.useIsActivitiesInTextEnabled)(t.id, "webGuildTextChannel"), b = (0, v.default)({
@@ -272,7 +272,7 @@ function G(e) {
     needSubscriptionToAccess: L,
     isNewChannel: A && e.canBeNewChannel,
     isFavoriteSuggestion: s && !R,
-    canShowThreadPreviewForUser: y,
+    canShowThreadPreviewForUser: M,
     channelInfo: b,
     embeddedApps: G,
     resolvedUnreadSetting: C,

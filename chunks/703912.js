@@ -18,16 +18,16 @@ var a = n("664751"),
   h = n("996106"),
   _ = n("186901"),
   C = n("981631");
-let m = "CachedTokens";
-async function S(e, t, n) {
+let S = "CachedTokens";
+async function m(e, t, n) {
   let a, {
     client_id: i,
     response_type: r = "code",
     redirect_uri: o,
     code_challenge: u,
     code_challenge_method: _,
-    state: m,
-    scope: S,
+    state: S,
+    scope: m,
     permissions: I,
     guild_id: p,
     channel_id: T,
@@ -42,7 +42,7 @@ async function S(e, t, n) {
     errorCode: C.RPCErrors.OAUTH2_ERROR
   }, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
   let R = [];
-  if ("string" == typeof S ? R = S.split(" ").filter(e => e.length > 0) : Array.isArray(S) && (R = S), null == f.default.getCurrentUser()) throw new h.default({
+  if ("string" == typeof m ? R = m.split(" ").filter(e => e.length > 0) : Array.isArray(m) && (R = m), null == f.default.getCurrentUser()) throw new h.default({
     errorCode: C.RPCErrors.OAUTH2_ERROR
   }, "Client is not logged in");
   try {
@@ -53,7 +53,7 @@ async function S(e, t, n) {
       redirectUri: o,
       codeChallenge: u,
       codeChallengeMethod: _,
-      state: m
+      state: S
     })
   } catch (t) {
     let {
@@ -72,7 +72,7 @@ async function S(e, t, n) {
       redirectUri: o,
       codeChallenge: u,
       codeChallengeMethod: _,
-      state: m,
+      state: S,
       integrationType: null == N ? s.ApplicationIntegrationType.GUILD_INSTALL : Number(N)
     })).location
   } catch (t) {
@@ -88,7 +88,7 @@ async function S(e, t, n) {
   try {
     O = l.deserialize(null != I ? I : 0)
   } catch (e) {}
-  return t(i, a, R, O, r, o, u, _, m, p, T, g, A)
+  return t(i, a, R, O, r, o, u, _, S, p, T, g, A)
 }
 
 function I(e, t) {
@@ -152,7 +152,7 @@ function p(e, t) {
             errorCode: C.RPCErrors.INVALID_COMMAND
           }, "No application.");
           let i = C.OAuth2Scopes.IDENTIFY,
-            r = () => S({
+            r = () => m({
               client_id: n,
               scope: i,
               response_type: "token"
@@ -170,25 +170,25 @@ function p(e, t) {
               }
               return ! function(e, t, n, a) {
                 var s;
-                let l = null !== (s = o.Storage.get(m)) && void 0 !== s ? s : {};
+                let l = null !== (s = o.Storage.get(S)) && void 0 !== s ? s : {};
                 l[e] = {
                   accessToken: t,
                   scope: n,
                   expires: Date.now() + a
-                }, o.Storage.set(m, l)
+                }, o.Storage.set(S, l)
               }(n, l.access_token, l.scope, l.expires_in), I(s, l.access_token)
             });
           return null != (l = function(e, t) {
-            let n = o.Storage.get(m);
+            let n = o.Storage.get(S);
             if (null != n && null != n[e]) {
               let a = n[e];
               if (!(a.scope !== t || a.expires <= Date.now())) return a.accessToken;
-              delete n[e], o.Storage.set(m, n)
+              delete n[e], o.Storage.set(S, n)
             }
           }(n, i)) ? I(s, l).catch(() => (! function(e) {
             var t;
-            let n = null !== (t = o.Storage.get(m)) && void 0 !== t ? t : {};
-            delete n[e], o.Storage.set(m, n)
+            let n = null !== (t = o.Storage.get(S)) && void 0 !== t ? t : {};
+            delete n[e], o.Storage.set(S, n)
           }(n), r())) : r()
         }
         if (null == l) throw new h.default({
@@ -221,7 +221,7 @@ function p(e, t) {
             errorCode: C.RPCErrors.INVALID_CLIENTID
           }, "Application does not match the connection's");
           let i = l.scopes || l.scope;
-          return delete l.scopes, S({
+          return delete l.scopes, m({
             ...l,
             scope: i
           }, e, t)

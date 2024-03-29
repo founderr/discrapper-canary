@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("806519"),
   _ = n("768581"),
   C = n("900849"),
-  m = n("556017"),
-  S = n("879484"),
+  S = n("556017"),
+  m = n("879484"),
   I = n("26580"),
   p = n("206887"),
   T = n("981631"),
@@ -45,8 +45,8 @@ t.default = e => {
     description: x,
     presenceCount: b,
     memberCount: U,
-    keywords: G
-  } = l, [j, w] = s.useState(!1), [k, F] = s.useState(!1), {
+    keywords: j
+  } = l, [G, w] = s.useState(!1), [k, F] = s.useState(!1), {
     analyticsLocations: B
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: P,
@@ -89,16 +89,16 @@ t.default = e => {
       }
     }
   };
-  s.useEffect(() => S.DiscoveryTagsExperiment.trackExposure({
+  s.useEffect(() => m.DiscoveryTagsExperiment.trackExposure({
     location: "4302e4_1"
   }));
   let {
     shouldDisplayTags: K
-  } = S.DiscoveryTagsExperiment.useExperiment({
+  } = m.DiscoveryTagsExperiment.useExperiment({
     location: "4302e4_2"
   }, {
     autoTrackExposure: !1
-  }), z = (0, m.useCanSeeDiscoveryContextMenu)();
+  }), z = (0, S.useCanSeeDiscoveryContextMenu)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: A.card,
@@ -107,7 +107,7 @@ t.default = e => {
         className: A.spinner
       }) : null, (0, a.jsxs)(r.Clickable, {
         className: i()(A.container, {
-          [A.hover]: j,
+          [A.hover]: G,
           [A.submitting]: k
         }),
         onClick: W,
@@ -167,11 +167,11 @@ t.default = e => {
             className: A.description,
             variant: "text-sm/normal",
             children: x
-          }), K && null != G && null != L && (0, a.jsx)(I.DiscoveryTags, {
+          }), K && null != j && null != L && (0, a.jsx)(I.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: I.DiscoveryTagStyle.ALT,
             onTagClick: e => L(e, l.id),
-            tags: G,
+            tags: j,
             section: C.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
             className: A.memberInfo,

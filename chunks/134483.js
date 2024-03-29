@@ -164,7 +164,7 @@ t.default = function(e) {
                 children: y.default.Messages.QUESTS_LEARN_MORE_V2
               }), (0, a.jsx)(o.Button, {
                 className: O.cta,
-                color: o.Button.Colors.GREEN,
+                color: o.Button.Colors.BRAND,
                 fullWidth: !0,
                 onClick: H,
                 size: o.Button.Sizes.SMALL,

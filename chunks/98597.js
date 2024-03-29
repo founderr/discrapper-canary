@@ -39,15 +39,15 @@ var l, a, s, i, r = n("735250"),
   x = n("782089"),
   R = n("281029"),
   O = n("981631"),
-  M = n("689938"),
-  y = n("294639");
+  y = n("689938"),
+  M = n("294639");
 
 function D(e, t, n) {
   return null != t && !!t && !(0, R.areTypesInSameSection)(n, e.type)
 }
 
 function b(e, t) {
-  return null == t ? y.containerDefault : e > t ? y.containerDragAfter : y.containerDragBefore
+  return null == t ? M.containerDefault : e > t ? M.containerDragAfter : M.containerDragBefore
 }
 
 function j(e) {
@@ -64,7 +64,7 @@ function j(e) {
     h.default.open(t.id)
   }
   return (0, r.jsx)(f.Tooltip, {
-    text: M.default.Messages.EDIT_CHANNEL,
+    text: y.default.Messages.EDIT_CHANNEL,
     children: e => {
       let {
         onMouseEnter: t,
@@ -73,10 +73,10 @@ function j(e) {
         onBlur: u
       } = e;
       return (0, r.jsx)(f.Clickable, {
-        className: d()(y.iconItem, a ? y.alwaysShown : void 0, s ? y.iconWithChannelInfo : y.iconNoChannelInfo),
+        className: d()(M.iconItem, a ? M.alwaysShown : void 0, s ? M.iconWithChannelInfo : M.iconNoChannelInfo),
         onClick: i,
         tabIndex: l,
-        "aria-label": M.default.Messages.EDIT_CHANNEL,
+        "aria-label": y.default.Messages.EDIT_CHANNEL,
         onMouseEnter: t,
         onMouseLeave: n,
         onFocus: o,
@@ -84,7 +84,7 @@ function j(e) {
         children: (0, r.jsx)(v.default, {
           width: 16,
           height: 16,
-          className: y.actionIcon
+          className: M.actionIcon
         })
       })
     }
@@ -99,7 +99,7 @@ function G(e) {
     tabIndex: s,
     forceShowButtons: i,
     hasChannelInfo: o = !1
-  } = e, u = (0, c.useStateFromStores)([I.default], () => I.default.getGuild(t.getGuildId())), h = (0, c.useStateFromStores)([g.default], () => g.default.getStageInstanceByChannel(t.id), [t.id]), m = (0, c.useStateFromStores)([C.default], () => C.default.getActiveEventByChannel(t.id), [t.id]), S = (0, c.useStateFromStores)([N.default], () => (0, p.canViewInviteModal)(N.default, u, t, h)), T = (0, c.useStateFromStores)([N.default], () => N.default.can(O.Permissions.CREATE_INSTANT_INVITE, t) ? M.default.Messages.CREATE_INSTANT_INVITE : M.default.Messages.INVITE_TO_SERVER);
+  } = e, u = (0, c.useStateFromStores)([I.default], () => I.default.getGuild(t.getGuildId())), h = (0, c.useStateFromStores)([g.default], () => g.default.getStageInstanceByChannel(t.id), [t.id]), m = (0, c.useStateFromStores)([C.default], () => C.default.getActiveEventByChannel(t.id), [t.id]), S = (0, c.useStateFromStores)([N.default], () => (0, p.canViewInviteModal)(N.default, u, t, h)), T = (0, c.useStateFromStores)([N.default], () => N.default.can(O.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
   if (a || !S) return null;
 
   function A() {
@@ -123,7 +123,7 @@ function G(e) {
   let L = (0, r.jsx)(x.default, {
     width: 16,
     height: 16,
-    className: y.actionIcon,
+    className: M.actionIcon,
     "aria-hidden": !0
   });
   return l && (L = (0, r.jsx)(E.default, {
@@ -135,7 +135,7 @@ function G(e) {
   })), (0, r.jsx)(f.Tooltip, {
     text: T,
     children: e => (0, r.jsx)(f.Clickable, {
-      className: d()(y.iconItem, i ? y.alwaysShown : void 0, o ? y.iconWithChannelInfo : y.iconNoChannelInfo),
+      className: d()(M.iconItem, i ? M.alwaysShown : void 0, o ? M.iconWithChannelInfo : M.iconNoChannelInfo),
       ...e,
       onClick: A,
       tabIndex: s,
@@ -152,16 +152,16 @@ function U(e) {
     (0, m.dimissFavoriteSuggestion)(t.guild_id, t.id)
   };
   return (0, r.jsx)(f.Tooltip, {
-    text: M.default.Messages.REMOVE_FAVORITE_SUGGESTION,
+    text: y.default.Messages.REMOVE_FAVORITE_SUGGESTION,
     children: e => (0, r.jsx)(f.Clickable, {
-      className: y.iconItem,
+      className: M.iconItem,
       ...e,
       onClick: n,
-      "aria-label": M.default.Messages.REMOVE_FAVORITE_SUGGESTION,
+      "aria-label": y.default.Messages.REMOVE_FAVORITE_SUGGESTION,
       children: (0, r.jsx)(L.default, {
         width: 16,
         height: 16,
-        className: y.actionIcon
+        className: M.actionIcon
       })
     })
   })
@@ -176,16 +176,16 @@ function P(e) {
     })
   };
   return (0, r.jsx)(f.Tooltip, {
-    text: M.default.Messages.ADD_FAVORITE,
+    text: y.default.Messages.ADD_FAVORITE,
     children: e => (0, r.jsx)(f.Clickable, {
-      className: y.iconItem,
+      className: M.iconItem,
       ...e,
       onClick: n,
-      "aria-label": M.default.Messages.ADD_FAVORITE,
+      "aria-label": y.default.Messages.ADD_FAVORITE,
       children: (0, r.jsx)(A.default, {
         width: 16,
         height: 16,
-        className: y.actionIcon
+        className: M.actionIcon
       })
     })
   })

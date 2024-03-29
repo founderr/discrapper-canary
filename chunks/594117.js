@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return m
   }
 });
 var a = n("735250");
@@ -55,7 +55,7 @@ function C(e) {
   })
 }
 
-function m(e) {
+function S(e) {
   let {
     channel: t
   } = e;
@@ -71,13 +71,13 @@ function m(e) {
   })
 }
 
-function S(e) {
+function m(e) {
   let {
     channel: t
   } = e, n = (0, r.default)();
   return t.isGuildStageVoice() ? (0, a.jsx)(C, {
     channel: t
-  }) : n && t.isBroadcastChannel() ? (0, a.jsx)(_, {}) : (0, a.jsx)(m, {
+  }) : n && t.isBroadcastChannel() ? (0, a.jsx)(_, {}) : (0, a.jsx)(S, {
     channel: t
   })
 }

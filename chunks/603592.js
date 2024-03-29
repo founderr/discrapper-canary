@@ -28,7 +28,7 @@ let h = a.forwardRef(function(e, t) {
     onMouseEnter: A,
     onMouseLeave: L,
     onMouseDown: v
-  } = e, x = (0, r.useTreeItem)(n), [R, O] = a.useState(!1), M = "string" == typeof m && null == N ? m : N;
+  } = e, x = (0, r.useTreeItem)(n), [R, O] = a.useState(!1), y = "string" == typeof m && null == N ? m : N;
   return (0, l.jsxs)(d.ListItem, {
     children: [_ ? (0, l.jsx)("div", {
       className: f.pill,
@@ -58,7 +58,7 @@ let h = a.forwardRef(function(e, t) {
             [f.selected]: p || R
           }),
           onClick: s,
-          "aria-label": M,
+          "aria-label": y,
           onContextMenu: h,
           focusProps: {
             enabled: !1

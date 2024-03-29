@@ -27,8 +27,8 @@ var l = n("735250"),
   x = n("802718"),
   R = n("796974"),
   O = n("271383"),
-  M = n("430824"),
-  y = n("771845"),
+  y = n("430824"),
+  M = n("771845"),
   D = n("594174"),
   b = n("358085"),
   j = n("709054"),
@@ -142,13 +142,13 @@ function eo(e) {
     isOverlay: n = !1,
     className: s,
     themeOverride: r
-  } = e, [o] = (0, h.useStateFromStoresArray)([y.default], () => {
-    let e = y.default.getGuildsTree();
+  } = e, [o] = (0, h.useStateFromStoresArray)([M.default], () => {
+    let e = M.default.getGuildsTree();
     return [e, e.version]
-  }), u = (0, h.useStateFromStores)([L.default], () => L.default.lurkingGuildIds()), f = a.useMemo(() => n ? [] : u, [u, n]), C = (0, h.useStateFromStoresArray)([M.default, O.default], () => j.default.keys(M.default.getGuilds()).filter(e => O.default.isCurrentUserGuest(e))), g = f.concat(C), E = (0, h.useStateFromStores)([D.default], () => {
+  }), u = (0, h.useStateFromStores)([L.default], () => L.default.lurkingGuildIds()), f = a.useMemo(() => n ? [] : u, [u, n]), C = (0, h.useStateFromStoresArray)([y.default, O.default], () => j.default.keys(y.default.getGuilds()).filter(e => O.default.isCurrentUserGuest(e))), g = f.concat(C), E = (0, h.useStateFromStores)([D.default], () => {
     var e;
     return null === (e = D.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()
-  }), en = (0, h.useStateFromStores)([I.default], () => I.default.isFullscreenInContext()), el = (0, h.useStateFromStores)([M.default], () => M.default.getGeoRestrictedGuilds()), [ea, es] = a.useState(!1), ei = a.useCallback(() => es(!0), []), eo = a.useCallback(() => es(!1), []), eu = a.useRef(!1), [ed] = a.useState(() => new p.Timeout), ec = a.useRef(null), ef = a.useRef(null), {
+  }), en = (0, h.useStateFromStores)([I.default], () => I.default.isFullscreenInContext()), el = (0, h.useStateFromStores)([y.default], () => y.default.getGeoRestrictedGuilds()), [ea, es] = a.useState(!1), ei = a.useCallback(() => es(!0), []), eo = a.useCallback(() => es(!1), []), eu = a.useRef(!1), [ed] = a.useState(() => new p.Timeout), ec = a.useRef(null), ef = a.useRef(null), {
     ref: eh,
     ...eC
   } = (0, c.useListContainerProps)(), ep = (0, m.useFocusJumpSection)(), [em, eg] = a.useState(!1), [eE] = a.useState(() => new er(o, eg, () => {

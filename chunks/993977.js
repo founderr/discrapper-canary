@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("804739"),
   _ = n("957657"),
   C = n("34305"),
-  m = n("981631"),
-  S = n("689938"),
+  S = n("981631"),
+  m = n("689938"),
   I = n("315361");
 
 function p(e) {
@@ -40,7 +40,7 @@ function p(e) {
           children: e.libraryApplication.getBranchedName(e.application)
         }), null != t ? (0, a.jsx)("div", {
           className: I.applicationSubText,
-          children: m.DistributorNames[t]
+          children: S.DistributorNames[t]
         }) : null]
       }), (0, a.jsx)(i.Clickable, {
         className: I.restoreButton,
@@ -55,7 +55,7 @@ function p(e) {
     className: I.hiddenLibraryApplications,
     children: [(0, a.jsx)(i.FormTitle, {
       className: I.hiddenLibraryApplicationsTitle,
-      children: S.default.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
+      children: m.default.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
     }), s]
   })
 }
@@ -67,7 +67,7 @@ class T extends s.PureComponent {
     o.InstallShortcutStartMenu.updateSetting(e)
   }
   trackRestoreApplication(e, t) {
-    f.default.track(m.AnalyticEvents.APPLICATION_SETTINGS_UPDATED, {
+    f.default.track(S.AnalyticEvents.APPLICATION_SETTINGS_UPDATED, {
       hidden_enabled: t,
       ...e.getAnalyticsData()
     })
@@ -84,13 +84,13 @@ class T extends s.PureComponent {
         children: [(0, a.jsx)(i.FormSwitch, {
           value: t,
           onChange: this.handleToggleShortcutDesktop,
-          note: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
-          children: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
+          note: m.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
+          children: m.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
         }), (0, a.jsx)(i.FormSwitch, {
           value: n,
           onChange: this.handleToggleShortcutStartMenu,
-          note: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
-          children: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
+          note: m.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
+          children: m.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
         }), (0, a.jsx)(C.default, {})]
       }) : null, (0, a.jsx)(p, {
         restoreApplication: this.handleRestoreHiddenLibraryApplication,
@@ -101,7 +101,7 @@ class T extends s.PureComponent {
   render() {
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(_.default, {
-        currentRoute: m.Routes.APPLICATION_LIBRARY_SETTINGS
+        currentRoute: S.Routes.APPLICATION_LIBRARY_SETTINGS
       }), (0, a.jsx)(i.ScrollerAuto, {
         className: I.scroller,
         children: this.renderBody()
@@ -111,8 +111,8 @@ class T extends s.PureComponent {
   constructor(...e) {
     var t, n, a;
     super(...e), t = this, n = "handleRestoreHiddenLibraryApplication", a = e => {
-      let t = E.toggleFlag(e.getFlags(), m.LibraryApplicationFlags.HIDDEN);
-      r.updateFlags(e.id, e.branchId, t), this.trackRestoreApplication(e, E.hasFlag(t, m.LibraryApplicationFlags.HIDDEN))
+      let t = E.toggleFlag(e.getFlags(), S.LibraryApplicationFlags.HIDDEN);
+      r.updateFlags(e.id, e.branchId, t), this.trackRestoreApplication(e, E.hasFlag(t, S.LibraryApplicationFlags.HIDDEN))
     }, n in t ? Object.defineProperty(t, n, {
       value: a,
       enumerable: !0,

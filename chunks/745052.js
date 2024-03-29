@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("183126"),
   _ = n("607070"),
   C = n("209613"),
-  m = n("325708"),
-  S = n("320149"),
+  S = n("325708"),
+  m = n("320149"),
   I = n("252618"),
   p = n("605236"),
   T = n("243778"),
@@ -33,8 +33,8 @@ var a = n("735250"),
   x = n("819640"),
   b = n("916187"),
   U = n("151827"),
-  G = n("626135"),
-  j = n("792125"),
+  j = n("626135"),
+  G = n("792125"),
   w = n("647090"),
   k = n("385956"),
   F = n("610697"),
@@ -72,10 +72,10 @@ function en() {
     {
       channelId: _
     } = (0, V.useMessageRequestSidebarState)(),
-    m = s.useCallback(() => {
+    S = s.useCallback(() => {
       f(n.map(e => e.channel.id))
     }, [n, f]),
-    S = s.useCallback(e => {
+    m = s.useCallback(e => {
       var t, s;
       let {
         row: r
@@ -103,7 +103,7 @@ function en() {
           tag: "span",
           children: "•"
         }), (0, a.jsx)(c.Button, {
-          onClick: m,
+          onClick: S,
           look: c.ButtonLooks.LINK,
           color: c.ButtonColors.LINK,
           size: c.ButtonSizes.SMALL,
@@ -112,7 +112,7 @@ function en() {
           children: $.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "title"), [t, m, u]);
+    }, "title"), [t, S, u]);
   return (n.length !== t && A.default.increment({
     name: o.MetricEvents.MESSAGE_REQUEST_COUNT_DRIFT
   }), 0 === n.length) ? (0, a.jsx)(z.default, {
@@ -139,7 +139,7 @@ function en() {
           sectionHeight: Z.LIST_SECTION_HEIGHT,
           rowHeight: Z.LIST_ROW_HEIGHT,
           renderSection: I,
-          renderRow: S,
+          renderRow: m,
           sections: [n.length],
           chunkSize: 30,
           fade: !0,
@@ -157,11 +157,11 @@ function ea(e) {
   } = e, s = (0, u.useStateFromStores)([y.default], () => y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(null == s ? void 0 : s.channelId));
   if (null == s || s.type !== v.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
-  return (0, a.jsx)(m.default, {
-    sidebarType: m.ChatSidebarType.MessageRequestSidebar,
+  return (0, a.jsx)(S.default, {
+    sidebarType: S.ChatSidebarType.MessageRequestSidebar,
     maxWidth: i,
     onWidthChange: n,
-    children: (0, a.jsx)(S.default, {
+    children: (0, a.jsx)(m.default, {
       channel: l,
       baseChannelId: y.MESSAGE_REQUESTS_BASE_CHANNEL_ID
     })
@@ -234,7 +234,7 @@ let er = (0, E.default)(function(e) {
     width: t
   } = e, n = (0, Y.useMessageRequestsCount)();
   s.useEffect(() => {
-    f.setHomeLink(X.Routes.MESSAGE_REQUESTS), (0, L.trackAppUIViewed)("message-requests"), G.default.track(X.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
+    f.setHomeLink(X.Routes.MESSAGE_REQUESTS), (0, L.trackAppUIViewed)("message-requests"), j.default.track(X.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
       num_message_requests: n
     }), A.default.increment({
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
@@ -249,11 +249,11 @@ let er = (0, E.default)(function(e) {
     }),
     _ = null == h ? void 0 : h.channelId,
     C = null != h,
-    m = (0, k.useIsEitherTypeOfMessageRequest)(_),
-    S = (0, w.useHasUserRepliedInChannel)(_);
+    S = (0, k.useIsEitherTypeOfMessageRequest)(_),
+    m = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != _ && !m && S && C && ((0, R.transitionToChannel)(_), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
-  }, [_, S, C, m]);
+    null != _ && !S && m && C && ((0, R.transitionToChannel)(_), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+  }, [_, m, C, S]);
   let [p, T] = s.useState(Z.MessageRequestSections.REQUESTS);
   return (0, I.usePageTitle)({
     location: $.default.Messages.MESSAGE_REQUESTS
@@ -264,7 +264,7 @@ let er = (0, E.default)(function(e) {
         [et.threadSidebarFloating]: C && d
       }),
       children: [(0, a.jsxs)(g.default, {
-        className: (0, j.getThemeClass)(l),
+        className: (0, G.getThemeClass)(l),
         toolbar: !0,
         children: [(0, a.jsx)(g.default.Icon, {
           icon: b.default,

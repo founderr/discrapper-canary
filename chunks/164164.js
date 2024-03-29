@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("113434"),
   _ = n("569984"),
   C = n("497505"),
-  m = n("918701"),
-  S = n("340100"),
+  S = n("918701"),
+  m = n("340100"),
   I = n("611855"),
   p = n("644646"),
   T = n("78826"),
@@ -35,7 +35,7 @@ let O = s.forwardRef(function(e, t) {
     onCtxMenuSelect: D,
     quest: x,
     useReducedMotion: b
-  } = e, U = (0, o.useStateFromStores)([_.default], () => _.default.isEnrolling(x.id), [x]), G = (0, h.useQuestFormattedDate)(x.config.expiresAt), j = (0, h.useQuestFormattedDate)(x.config.rewardCodeExpiresAt), w = s.useMemo(() => (0, m.isAssetAnimated)(x.config.assets.questBarHero), [x]), k = s.useCallback(() => {
+  } = e, U = (0, o.useStateFromStores)([_.default], () => _.default.isEnrolling(x.id), [x]), j = (0, h.useQuestFormattedDate)(x.config.expiresAt), G = (0, h.useQuestFormattedDate)(x.config.rewardCodeExpiresAt), w = s.useMemo(() => (0, S.isAssetAnimated)(x.config.assets.questBarHero), [x]), k = s.useCallback(() => {
     (0, E.enrollInQuest)(x.id, {
       questContent: C.QuestContent.QUEST_BAR,
       questContentCTA: f.QuestContentCTA.ACCEPT_QUEST
@@ -43,7 +43,7 @@ let O = s.forwardRef(function(e, t) {
   }, [x]), F = (0, A.useHandleClaimQuestsReward)({
     quest: x,
     location: C.QuestContent.QUEST_BAR
-  }), B = (null === (n = x.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, H = (null === (l = x.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = L && P, Y = (0, m.getQuestBarHeroAssetUrl)(x);
+  }), B = (null === (n = x.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, H = (null === (l = x.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = L && P, Y = (0, S.getQuestBarHeroAssetUrl)(x);
   return (0, a.jsx)(r.animated.div, {
     "aria-hidden": !V,
     className: i()(O, R.contentExpanded, {
@@ -68,21 +68,21 @@ let O = s.forwardRef(function(e, t) {
               ref: e,
               alt: x.config.messages.rewardName,
               className: R.questProgressRewardTile,
-              src: (0, m.getRewardAssetUrl)(x)
+              src: (0, S.getRewardAssetUrl)(x)
             })
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsx)(u.Heading, {
               color: "always-white",
               variant: "heading-sm/semibold",
-              children: (0, m.getContextualEntrypointHeading)(x)
+              children: (0, S.getContextualEntrypointHeading)(x)
             }), (0, a.jsx)(u.Text, {
               className: R.questAcceptedContentCopySubheading,
               color: "always-white",
               variant: "text-xxs/normal",
               children: H ? N.default.Messages.QUESTS_CLAIM_BY.format({
-                expirationDate: j
-              }) : N.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: G
+              }) : N.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
+                expirationDate: j
               })
             })]
           })]
@@ -119,7 +119,7 @@ let O = s.forwardRef(function(e, t) {
           streamingDurationRequirement: x.config.streamDurationRequirementMinutes,
           questReward: x.config.messages.rewardNameWithArticle
         })
-      }), (0, a.jsx)(S.default, {
+      }), (0, a.jsx)(m.default, {
         quest: x
       })]
     }) : (0, a.jsxs)(a.Fragment, {
@@ -196,7 +196,7 @@ let O = s.forwardRef(function(e, t) {
             controls: !1,
             children: (0, a.jsx)("source", {
               src: Y,
-              type: (0, m.getVideoAssetMimeType)(Y)
+              type: (0, S.getVideoAssetMimeType)(Y)
             })
           })
         }) : (0, a.jsx)(T.QuestsAsset, {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   NonChannelCategory: function() {
-    return M
+    return y
   },
   ReadonlyCategoryChannel: function() {
     return b
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return D
   },
   VoiceChannelCategoryButton: function() {
-    return y
+    return M
   }
 });
 var l = n("735250"),
@@ -51,9 +51,9 @@ let O = a.memo(function(e) {
       position: T,
       sortingPosition: A,
       hideIcon: O,
-      children: M
+      children: y
     } = e,
-    y = (0, o.useStateFromStores)([m.default], () => m.default.isChannelMuted(s.getGuildId(), s.id)),
+    M = (0, o.useStateFromStores)([m.default], () => m.default.isChannelMuted(s.getGuildId(), s.id)),
     D = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
     b = (0, o.useStateFromStores)([p.default], () => p.default.can(L.Permissions.MANAGE_CHANNELS, s));
   t = null != A ? T > A ? x.containerDragAfter : x.containerDragBefore : x.containerDefault;
@@ -111,7 +111,7 @@ let O = a.memo(function(e) {
           ref: V,
           className: i()(x.iconVisibility, x.wrapper, {
             [x.collapsed]: D,
-            [x.muted]: y,
+            [x.muted]: M,
             [x.clickable]: !0
           }),
           onContextMenu: G,
@@ -173,12 +173,12 @@ let O = a.memo(function(e) {
             }) : null
           })]
         })
-      }), M]
+      }), y]
     });
   return null != E && null != f ? E(f(H)) : H
 });
 t.default = (0, f.makeChannelSortable)(O);
-let M = a.memo(function(e) {
+let y = a.memo(function(e) {
     let {
       name: t,
       onDismiss: n,
@@ -210,7 +210,7 @@ let M = a.memo(function(e) {
       })
     })
   }),
-  y = a.memo(function(e) {
+  M = a.memo(function(e) {
     let {
       category: t
     } = e, n = (0, o.useStateFromStores)([T.default], () => T.default.isVoiceCategoryCollapsed(t.guild.id)), s = a.useCallback(() => {

@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("493683"),
   _ = n("348600"),
   C = n("257968"),
-  m = n("367907"),
-  S = n("770471"),
+  S = n("367907"),
+  m = n("770471"),
   I = n("158631"),
   p = n("143614"),
   T = n("463119"),
@@ -37,8 +37,8 @@ var a = n("735250"),
   x = n("210887"),
   b = n("695346"),
   U = n("283595"),
-  G = n("699516"),
-  j = n("923834"),
+  j = n("699516"),
+  G = n("923834"),
   w = n("55563"),
   k = n("774343"),
   F = n("517802"),
@@ -59,9 +59,9 @@ let ee = e => {
     let {
       selected: t,
       ...n
-    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([G.default], () => G.default.getPendingCount()), i = (0, p.default)(), {
+    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, p.default)(), {
       canViewBroadcasts: r
-    } = S.default.useExperiment({
+    } = m.default.useExperiment({
       location: "friends_tab_no_track"
     }), u = (0, I.default)();
     return (0, a.jsxs)(q.LinkButton, {
@@ -70,7 +70,7 @@ let ee = e => {
       icon: W.default,
       text: J.default.Messages.FRIENDS,
       onClick: () => {
-        m.default.trackWithMetadata(X.AnalyticEvents.BROADCAST_LIST_VISITED, {
+        S.default.trackWithMetadata(X.AnalyticEvents.BROADCAST_LIST_VISITED, {
           num_active_broadcasts: i.length,
           friends_tab_clicked: !0,
           is_broadcasting: u
@@ -334,7 +334,7 @@ function eu() {
       theme: x.default.theme
     })),
     l = (0, d.useStateFromStores)([U.default], () => U.default.hasLibraryApplication()),
-    i = (0, d.useStateFromStores)([j.default], () => j.default.getCurrentPath());
+    i = (0, d.useStateFromStores)([G.default], () => G.default.getCurrentPath());
   return (0, a.jsx)(eo, {
     theme: s,
     showLibrary: n,

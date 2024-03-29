@@ -14,8 +14,8 @@ var a = n("392711"),
   h = n("934415"),
   _ = n("996106"),
   C = n("914946"),
-  m = n("452426"),
-  S = n("561205"),
+  S = n("452426"),
+  m = n("561205"),
   I = n("186901"),
   p = n("981631");
 t.default = {
@@ -81,7 +81,7 @@ t.default = {
   [p.RPCCommands.GET_CHANNEL_PERMISSIONS]: {
     scope: p.OAuth2Scopes.GUILDS_MEMBERS_READ,
     handler(e) {
-      let t = (0, S.default)();
+      let t = (0, m.default)();
       if (null == t) throw new _.default({
         errorCode: p.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel");
@@ -92,7 +92,7 @@ t.default = {
   },
   [p.RPCCommands.SELECT_VOICE_CHANNEL]: {
     scope: p.OAuth2Scopes.RPC,
-    validation: e => (0, m.default)(e).required().keys({
+    validation: e => (0, S.default)(e).required().keys({
       channel_id: e.string().allow(null),
       timeout: e.number().min(0).max(60),
       force: e.boolean(),
@@ -106,12 +106,12 @@ t.default = {
           channel_id: a,
           timeout: s = 0,
           force: l = !1,
-          navigate: m = !1
+          navigate: S = !1
         }
       } = e;
       if (!a) return i.default.selectVoiceChannel(null), null;
-      let S = f.default.getVoiceChannelId();
-      if (null != S && S !== a && !1 === l) throw new _.default({
+      let m = f.default.getVoiceChannelId();
+      if (null != m && m !== a && !1 === l) throw new _.default({
         errorCode: p.RPCErrors.SELECT_VOICE_FORCE_REQUIRED
       }, "User is already joined to a voice channel.");
       return t.storeWait(n, () => u.default.getChannel(a), s).catch(() => {
@@ -136,7 +136,7 @@ t.default = {
             errorCode: p.RPCErrors.INVALID_PERMISSIONS
           }, "Connect permission required to join channel")
         }
-        return i.default.selectVoiceChannel(t.id), m && (0, r.replaceWith)(p.Routes.CHANNEL(t.guild_id, t.id)), n
+        return i.default.selectVoiceChannel(t.id), S && (0, r.replaceWith)(p.Routes.CHANNEL(t.guild_id, t.id)), n
       })
     }
   },
@@ -153,7 +153,7 @@ t.default = {
   },
   [p.RPCCommands.SELECT_TEXT_CHANNEL]: {
     scope: p.OAuth2Scopes.RPC,
-    validation: e => (0, m.default)(e).required().keys({
+    validation: e => (0, S.default)(e).required().keys({
       channel_id: e.string().allow(null),
       timeout: e.number().min(0).max(60)
     }),

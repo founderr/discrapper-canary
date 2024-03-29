@@ -71,7 +71,7 @@ function L(e) {
         }
       }), e
     }, [x, L], s.statesWillNeverBeEqual),
-    M = (0, s.useStateFromStores)([C.default], () => {
+    y = (0, s.useStateFromStores)([C.default], () => {
       let e = {};
       return x.forEach(t => {
         let n = C.default.findActivity(t.user.id, R(t));
@@ -86,11 +86,11 @@ function L(e) {
         }
       }), Object.values(e)
     }, [x], s.statesWillNeverBeEqual),
-    y = Array.from(O.values()).map(e => ({
+    M = Array.from(O.values()).map(e => ({
       members: x,
       activity: e.presenceActivity
     })),
-    D = [...y, ...M];
+    D = [...M, ...y];
   return 0 === D.length ? null : (0, l.jsxs)(i.Scroller, {
     className: A.container,
     children: [(0, l.jsx)(v, {

@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("131951"),
   _ = n("459273"),
   C = n("242291"),
-  m = n("792165"),
-  S = n("603074"),
+  S = n("792165"),
+  m = n("603074"),
   I = n("981631"),
   p = n("921944"),
   T = n("689938");
@@ -37,10 +37,10 @@ function g(e) {
   } = (0, E.default)(t), L = (0, l.useStateFromStores)([h.default], () => h.default.isDeaf()), P = O || v || L, [M, y] = s.useState(!1), D = t.getGuildId(), x = (0, C.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: P
   }), [b, U] = (0, f.useGetDismissibleContent)(x), {
-    analyticsLocations: G
+    analyticsLocations: j
   } = (0, c.default)(d.default.SOUNDBOARD_BUTTON);
 
-  function j(e) {
+  function G(e) {
     null != D && (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -66,11 +66,11 @@ function g(e) {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(S.default, {
+      return (0, a.jsx)(m.default, {
         guildId: D,
         channel: t,
         onClose: n,
-        gridNotice: b === i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(m.CustomCallSoundUpsell, {
+        gridNotice: b === i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(S.CustomCallSoundUpsell, {
           onClose: n,
           markAsDismissed: U
         }),
@@ -97,7 +97,7 @@ function g(e) {
           var t;
           null === (t = R.onMouseLeave) || void 0 === t || t.call(R, e), B()
         },
-        onContextMenu: j,
+        onContextMenu: G,
         fullWidth: !0,
         size: o.Button.Sizes.SMALL,
         ...R,
@@ -115,7 +115,7 @@ function g(e) {
     event: I.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: V
   }), (0, a.jsx)(c.AnalyticsLocationProvider, {
-    value: G,
+    value: j,
     children: (0, a.jsx)(o.Tooltip, {
       text: function() {
         if (O) return T.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;

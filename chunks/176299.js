@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("711237"),
   _ = n("532835"),
   C = n("290297"),
-  m = n("918854"),
-  S = n("279240"),
+  S = n("918854"),
+  m = n("279240"),
   I = n("765717"),
   p = n("358221"),
   T = n("823748"),
@@ -37,8 +37,8 @@ var a = n("735250"),
   x = n("362416"),
   b = n("416568"),
   U = n("613609"),
-  G = n("160404"),
-  j = n("225675"),
+  j = n("160404"),
+  G = n("225675"),
   w = n("745052"),
   k = n("285865"),
   F = n("659971"),
@@ -72,8 +72,8 @@ var a = n("735250"),
   eh = n("981631"),
   e_ = n("176505"),
   eC = n("290511"),
-  em = n("46140"),
-  eS = n("689938"),
+  eS = n("46140"),
+  em = n("689938"),
   eI = n("268703");
 let ep = () => (0, a.jsx)("div", {
     className: eI.loader,
@@ -125,10 +125,10 @@ let ep = () => (0, a.jsx)("div", {
       guildId: s,
       channelId: l,
       messageId: i
-    } = t.params, r = (0, f.useStateFromStores)([et.default], () => et.default.getGuild(s)), o = (0, f.useStateFromStores)([ee.default], () => null == s ? null : ee.default.getSelfMember(s)), u = (0, f.useStateFromStores)([G.default], () => {
+    } = t.params, r = (0, f.useStateFromStores)([et.default], () => et.default.getGuild(s)), o = (0, f.useStateFromStores)([ee.default], () => null == s ? null : ee.default.getSelfMember(s)), u = (0, f.useStateFromStores)([j.default], () => {
       if (null == s) return;
-      let e = G.default.getData(s);
-      if ((null == e ? void 0 : e.type) === j.ImpersonateType.SERVER_SHOP) switch (e.initialTab) {
+      let e = j.default.getData(s);
+      if ((null == e ? void 0 : e.type) === G.ImpersonateType.SERVER_SHOP) switch (e.initialTab) {
         case "role_subscriptions":
           return R.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS;
         case "guild_products":
@@ -247,7 +247,7 @@ let eM = e => (0, a.jsx)(ev, {
   },
   eb = () => (0, a.jsx)(ef.default, {}),
   eU = () => (0, a.jsx)(eE.default, {}),
-  eG = function() {
+  ej = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return function(t) {
       return (0, a.jsx)(A.default, {
@@ -256,10 +256,10 @@ let eM = e => (0, a.jsx)(ev, {
       })
     }
   },
-  ej = e => (0, a.jsx)(S.default, {
+  eG = e => (0, a.jsx)(m.default, {
     ...e
   }),
-  ew = () => (0, a.jsx)(m.default, {}),
+  ew = () => (0, a.jsx)(S.default, {}),
   ek = () => (0, a.jsx)(z.default, {}),
   eF = () => (0, a.jsx)(w.default, {}),
   eB = () => (0, a.jsx)(K.default, {}),
@@ -326,9 +326,9 @@ function eV(e) {
     }),
     children: [(0, a.jsx)(eL, {}), (0, a.jsxs)("section", {
       className: eI.panels,
-      "aria-label": eS.default.Messages.ACCOUNT_A11Y_LABEL,
+      "aria-label": em.default.Messages.ACCOUNT_A11Y_LABEL,
       children: [(0, a.jsx)(q.QuestsAssetContextProvider, {
-        sentrySource: em.QuestsExperimentLocations.QUESTS_BAR,
+        sentrySource: eS.QuestsExperimentLocations.QUESTS_BAR,
         children: (0, a.jsx)(Q.default, {})
       }), (0, a.jsx)(Y.default, {}), (0, a.jsx)(ec.default, {
         section: eh.AnalyticsSections.ACTIVITY_PANEL,
@@ -374,8 +374,8 @@ function eY() {
     }(),
     h = (0, f.useStateFromStores)([F.default], () => F.default.getIsOpen()),
     _ = (0, o.useRouteMatch)([eh.Routes.CHANNEL(eh.ME, ":channelId"), eh.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")]),
-    m = (null == _ ? void 0 : null === (e = _.params) || void 0 === e ? void 0 : e.channelId) === e_.StaticChannelRoute.GUILD_ONBOARDING,
-    S = s.useCallback(() => k.default.openSidebar(), []);
+    S = (null == _ ? void 0 : null === (e = _.params) || void 0 === e ? void 0 : e.channelId) === e_.StaticChannelRoute.GUILD_ONBOARDING,
+    m = s.useCallback(() => k.default.openSidebar(), []);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsxs)("div", {
       className: eI.container,
@@ -391,9 +391,9 @@ function eY() {
             children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(eV, {
               hasNotice: t,
               sidebarTheme: n,
-              hideSidebar: l || i || d || E || m || !h
+              hideSidebar: l || i || d || E || S || !h
             }), (0, a.jsx)(C.default.Provider, {
-              value: S,
+              value: m,
               children: (0, a.jsxs)(o.Switch, {
                 children: [(0, a.jsx)(I.default, {
                   path: eh.Routes.ACTIVITY,
@@ -407,7 +407,7 @@ function eY() {
                   impressionName: u.ImpressionNames.ACTIVITIES
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.ACTIVITY_DETAILS(":applicationId"),
-                  render: ej,
+                  render: eG,
                   impressionName: u.ImpressionNames.ACTIVITY_DETAILS,
                   impressionProperties: e => {
                     let {
@@ -433,15 +433,15 @@ function eY() {
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.COLLECTIBLES_SHOP_FULLSCREEN,
-                  render: eG(!0),
+                  render: ej(!0),
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.COLLECTIBLES_SHOP,
-                  render: eG(!1),
+                  render: ej(!1),
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
-                  render: eG(!1),
+                  render: ej(!1),
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.MESSAGE_REQUESTS,

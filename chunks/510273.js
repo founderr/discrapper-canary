@@ -76,7 +76,7 @@ function E(e) {
     hideDescriptionUntilUnlock: _,
     onAction: C
   } = t, {
-    color: m
+    color: S
   } = (0, o.getAchievementStyles)(h);
   s.useEffect(() => {
     let e = setTimeout(() => {
@@ -86,12 +86,12 @@ function E(e) {
       clearTimeout(e)
     }
   }, []);
-  let S = null != C && n,
-    I = S ? r.Clickable : "div";
+  let m = null != C && n,
+    I = m ? r.Clickable : "div";
   return (0, a.jsxs)(I, {
-    className: i()(c.container, S && c.actionable),
+    className: i()(c.container, m && c.actionable),
     onClick: () => {
-      S && C()
+      m && C()
     },
     children: [(0, a.jsx)("div", {
       className: c.iconContainer,
@@ -114,7 +114,7 @@ function E(e) {
     }), (0, a.jsx)("div", {
       className: c.flair,
       children: (0, a.jsx)(f, {
-        color: m
+        color: S
       })
     })]
   })

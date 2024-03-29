@@ -33,8 +33,8 @@ var l, a = n("735250"),
   x = n("31022"),
   R = n("10401"),
   O = n("131704"),
-  M = n("592125"),
-  y = n("796974"),
+  y = n("592125"),
+  M = n("796974"),
   D = n("984933"),
   b = n("914010"),
   j = n("153124"),
@@ -94,7 +94,7 @@ class ec extends(l = s.PureComponent) {
       initialized: s
     } = this.state, {
       scrollTop: i
-    } = y.default.getGuildDimensions(l);
+    } = M.default.getGuildDimensions(l);
     null != n ? (this.scrollToChannel(n), c.default.clearChannelListScrollTo(l)) : l !== e.guildId ? null != i && this.scrollTo(i) : a !== e.selectedChannelId ? this.scrollToChannel(a) : !t.initialized && s && (null == i && null != a ? this.scrollToChannel(a, !1, es.SCROLL_TO_SPACER, this.handleListScroll) : this.scrollTo(null != i ? i : 0, this.handleListScroll)), this.testShouldSkipTutorial()
   }
   getSectionRowsFromChannel(e) {
@@ -715,7 +715,7 @@ let ef = e => {
     selectedVoiceChannelId: l
   } = e, i = (0, u.useStateFromStores)([C.default], () => C.default.keyboardModeEnabled), {
     analyticsLocations: r
-  } = (0, m.default)(p.default.GUILD_CHANNEL_LIST), d = (0, u.useStateFromStores)([M.default], () => M.default.getChannel(n)), c = (0, u.useStateFromStores)([M.default], () => M.default.getChannel(l)), f = (0, u.useStateFromStores)([b.default], () => b.default.getGuildId()), g = (0, L.useOptInEnabledForGuild)(t), E = s.useRef(null), S = s.useCallback((e, t) => {
+  } = (0, m.default)(p.default.GUILD_CHANNEL_LIST), d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(n)), c = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(l)), f = (0, u.useStateFromStores)([b.default], () => b.default.getGuildId()), g = (0, L.useOptInEnabledForGuild)(t), E = s.useRef(null), S = s.useCallback((e, t) => {
     let n = E.current;
     if (null != n) {
       if (ei.ID_REGEX.test(t) || (0, er.isStaticChannelRoute)(t)) n.scrollToChannel(t, !1, 2 * es.SCROLL_TO_SPACER, () => {

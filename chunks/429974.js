@@ -15,9 +15,9 @@ var s = n("481060"),
   h = n("981631"),
   _ = n("616922");
 let C = null;
-async function m(e) {
-  var t, l, i, m;
-  let S, I, p, {
+async function S(e) {
+  var t, l, i, S;
+  let m, I, p, {
       userId: T,
       section: g,
       guildId: A = h.ME,
@@ -30,7 +30,7 @@ async function m(e) {
     P = E.default.getUserProfile(T);
   if (null == L) return;
   let M = u.default.getPrimaryActivity(T);
-  null != M && (S = M.party, I = M.assets, p = null != M.application_id ? o.default.getApplication(M.application_id) : null);
+  null != M && (m = M.party, I = M.assets, p = null != M.application_id ? o.default.getApplication(M.application_id) : null);
   let y = u.default.getStatus(T),
     D = u.default.isMobileOnline(T),
     x = y;
@@ -56,10 +56,10 @@ async function m(e) {
     application_name: null == M ? void 0 : M.name,
     sku_id: null !== (i = null == p ? void 0 : p.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(T),
-    has_images: !!(null !== (m = null == I ? void 0 : I.large_image) && void 0 !== m ? m : null == I ? void 0 : I.small_image),
-    party_max: null == S ? void 0 : null === (t = S.size) || void 0 === t ? void 0 : t[1],
-    party_id: null == S ? void 0 : S.id,
-    party_platform: (0, _.isSpotifyParty)(null == S ? void 0 : S.id) ? h.PlatformTypes.SPOTIFY : null,
+    has_images: !!(null !== (S = null == I ? void 0 : I.large_image) && void 0 !== S ? S : null == I ? void 0 : I.small_image),
+    party_max: null == m ? void 0 : null === (t = m.size) || void 0 === t ? void 0 : t[1],
+    party_id: null == m ? void 0 : m.id,
+    party_platform: (0, _.isSpotifyParty)(null == m ? void 0 : m.id) ? h.PlatformTypes.SPOTIFY : null,
     game_platform: (0, r.default)(M),
     profile_user_status: x,
     profile_has_nitro_customization: (null == P ? void 0 : P.banner) != null,
@@ -68,15 +68,15 @@ async function m(e) {
   })
 }
 
-function S() {
+function m() {
   null != C && (0, s.closeModal)(C), C = null
 }
 class I extends i.default {
   _initialize() {
-    l.default.subscribe("USER_PROFILE_MODAL_OPEN", m), l.default.subscribe("USER_PROFILE_MODAL_CLOSE", S)
+    l.default.subscribe("USER_PROFILE_MODAL_OPEN", S), l.default.subscribe("USER_PROFILE_MODAL_CLOSE", m)
   }
   _terminate() {
-    l.default.unsubscribe("USER_PROFILE_MODAL_OPEN", m), l.default.unsubscribe("USER_PROFILE_MODAL_CLOSE", S)
+    l.default.unsubscribe("USER_PROFILE_MODAL_OPEN", S), l.default.unsubscribe("USER_PROFILE_MODAL_CLOSE", m)
   }
 }
 t.default = new I

@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("944163"),
   _ = n("246364"),
   C = n("937111"),
-  m = n("523924"),
-  S = n("390500"),
+  S = n("523924"),
+  m = n("390500"),
   I = n("200305"),
   p = n("981631"),
   T = n("756286"),
@@ -60,11 +60,11 @@ t.default = e => {
       await E.default.submitVerificationForm(n, e)
     }, U = () => {
       f.default.resetGuildJoinRequest(n)
-    }, G = x(g.default.Messages.LEAVE_SERVER_BODY.format({
+    }, j = x(g.default.Messages.LEAVE_SERVER_BODY.format({
       name: null == P ? void 0 : P.toString()
     }), () => {
       O(Math.max(R, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(n), (0, r.transitionTo)(p.Routes.ME)
-    }), j = (null == v ? void 0 : null === (t = v.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
+    }), G = (null == v ? void 0 : null === (t = v.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
       id: v.guild.id,
       splash: v.guild.splash
     }) : (0, d.getArtForPath)();
@@ -72,7 +72,7 @@ t.default = e => {
     className: A.page,
     children: (0, a.jsxs)(u.default, {
       embedded: !0,
-      splash: j,
+      splash: G,
       waveState: R,
       showLogo: !1,
       updateWaveState: D,
@@ -83,17 +83,17 @@ t.default = e => {
         children: (() => {
           switch (null == L ? void 0 : L.applicationStatus) {
             case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
-              return (0, a.jsx)(S.default, {
+              return (0, a.jsx)(m.default, {
                 onCancel: x(g.default.Messages.MEMBER_VERIFICATION_CANCEL_PENDING_APPLICATION_MODAL_TITLE, U),
-                onLeave: G,
+                onLeave: j,
                 guild: y
               });
             case _.GuildJoinRequestApplicationStatuses.REJECTED:
-              return (0, a.jsx)(m.default, {
+              return (0, a.jsx)(S.default, {
                 reapplyText: g.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                 onReapply: U,
                 confirmText: g.default.Messages.LEAVE_SERVER,
-                onConfirm: G,
+                onConfirm: j,
                 rejectionReason: null == L ? void 0 : L.rejectionReason,
                 guild: y
               });

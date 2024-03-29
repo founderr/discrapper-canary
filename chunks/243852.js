@@ -9,15 +9,15 @@ var a, s, l, i, r, o = n("442837"),
   h = n("594190"),
   _ = n("454175"),
   C = n("619914"),
-  m = n("581883"),
-  S = n("70956"),
+  S = n("581883"),
+  m = n("70956"),
   I = n("780570"),
   p = n("77498"),
   T = n("283595"),
   g = n("981631");
 let A = "ActivityTrackingStore",
-  N = 30 * S.default.Millis.MINUTE,
-  R = 5 * S.default.Millis.MINUTE,
+  N = 30 * m.default.Millis.MINUTE,
+  R = 5 * m.default.Millis.MINUTE,
   O = null !== (a = u.Storage.get(A)) && void 0 !== a ? a : {},
   v = {},
   L = !1;
@@ -79,7 +79,7 @@ function D() {
 }
 class x extends(s = o.default.Store) {
   initialize() {
-    this.waitFor(h.default, m.default, T.default), this.syncWith([m.default], y)
+    this.waitFor(h.default, S.default, T.default), this.syncWith([S.default], y)
   }
   getActivities() {
     return O

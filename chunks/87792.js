@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("546791"),
   _ = n("259756"),
   C = n("785681"),
-  m = n("985002"),
-  S = n("858719"),
+  S = n("985002"),
+  m = n("858719"),
   I = n("780985"),
   p = n("880257"),
   T = n("631885"),
@@ -57,10 +57,10 @@ function x(e) {
     displayType: t
   } = e, n = s.useCallback(() => {
     (0, o.showToast)((0, o.createToast)(M.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
-  }, []), l = (0, p.default)(), r = (0, S.useActionsForDisplayType)(t), u = (0, S.useActionTotalsForDisplayType)(t), {
+  }, []), l = (0, p.default)(), r = (0, m.useActionsForDisplayType)(t), u = (0, m.useActionTotalsForDisplayType)(t), {
     loadMore: d,
     isMoreLoading: c
-  } = (0, m.useFamilyCenterActions)({
+  } = (0, S.useFamilyCenterActions)({
     onError: n
   }), E = L.ACTION_TO_TEXT.get(t), [C, I] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), T = (0, _.useIsEligibleForFamilyCenterVCJoin)({
     location: "family_center_activity_section_web"
@@ -166,12 +166,12 @@ let b = () => {
       })]
     })
   },
-  G = () => {
+  j = () => {
     let e = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       t = (0, r.useStateFromStores)([E.default], () => E.default.getSelectedTeenId()),
       {
         selectTeenUser: n
-      } = (0, m.useFamilyCenterActions)({}),
+      } = (0, S.useFamilyCenterActions)({}),
       l = e.map(e => ({
         label: e.id,
         value: e.id
@@ -197,11 +197,11 @@ let b = () => {
       options: l
     })
   },
-  j = e => {
+  G = e => {
     let {
       userId: t
     } = e, n = (0, p.default)(), s = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), l = (0, h.getActivityWindowTimestampFormatter)(!!n), i = (0, T.useActivityWindowTimeStamp)(l);
-    return n && 1 !== s.length ? (0, a.jsx)(G, {}) : (0, a.jsx)(U, {
+    return n && 1 !== s.length ? (0, a.jsx)(j, {}) : (0, a.jsx)(U, {
       userId: t,
       subText: i
     })
@@ -209,7 +209,7 @@ let b = () => {
 t.default = e => {
   let {
     user: t
-  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, S.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, T.useActivityWindowTimeStamp)(l);
+  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, m.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, T.useActivityWindowTimeStamp)(l);
   return (0, a.jsxs)("div", {
     className: y.container,
     children: [(0, a.jsxs)("div", {
@@ -219,7 +219,7 @@ t.default = e => {
       className: y.card,
       children: [(0, a.jsx)("div", {
         className: y.header,
-        children: (0, a.jsx)(j, {
+        children: (0, a.jsx)(G, {
           userId: t.id
         })
       }), (0, a.jsxs)("div", {

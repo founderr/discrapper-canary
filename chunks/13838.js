@@ -14,8 +14,8 @@ var a = n("392711"),
   h = n("594174"),
   _ = n("979651"),
   C = n("996106"),
-  m = n("914946"),
-  S = n("238679"),
+  S = n("914946"),
+  m = n("238679"),
   I = n("452426"),
   p = n("295424"),
   T = n("863141"),
@@ -33,7 +33,7 @@ function R(e) {
     },
     socket: a
   } = e, s = u.default.getChannel(n);
-  if (null == s || !(0, m.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new C.default({
+  if (null == s || !(0, S.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new C.default({
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid channel id: ".concat(n));
   if (s.isNSFW() && (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new C.default({
@@ -122,7 +122,7 @@ let L = {
             userId: t
           } = e;
           return t
-        }).forEach(e => a((0, m.transformVoiceState)(i, l.id, e))), r
+        }).forEach(e => a((0, S.transformVoiceState)(i, l.id, e))), r
       }
     }
   },
@@ -155,7 +155,7 @@ let L = {
             userId: t
           } = e;
           return t
-        }).forEach(e => a((0, m.transformVoiceState)(i, l.id, e))), r
+        }).forEach(e => a((0, S.transformVoiceState)(i, l.id, e))), r
       }
     }
   },
@@ -182,7 +182,7 @@ let L = {
         } = e, l = u.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
-          r = Object.values(_.default.getVoiceStatesForChannel(l.id)).map(e => (0, m.transformVoiceState)(i, l.id, e));
+          r = Object.values(_.default.getVoiceStatesForChannel(l.id)).map(e => (0, S.transformVoiceState)(i, l.id, e));
         return s().differenceWith(r, n, s().isEqual).forEach(e => a(e)), r
       }
     }
@@ -196,7 +196,7 @@ let L = {
         prevState: t,
         dispatch: n
       } = e, a = {
-        state: (0, m.getVoiceConnectionState)(E.default.getState()),
+        state: (0, S.getVoiceConnectionState)(E.default.getState()),
         hostname: E.default.getHostname(),
         pings: E.default.getPings(),
         average_ping: E.default.getAveragePing(),
@@ -290,7 +290,7 @@ let L = {
     },
     handler() {}
   },
-  [A.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: S.activityInstanceConnectedParticipantsUpdateEvent,
+  [A.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: m.activityInstanceConnectedParticipantsUpdateEvent,
   [A.RPCEvents.THERMAL_STATE_UPDATE]: {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_AUTHENTICATED_SCOPE]

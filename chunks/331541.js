@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("232567"),
   _ = n("2052"),
   C = n("393238"),
-  m = n("727637"),
-  S = n("420660"),
+  S = n("727637"),
+  m = n("420660"),
   I = n("100527"),
   p = n("521868"),
   T = n("299206"),
@@ -37,8 +37,8 @@ var a = n("735250"),
   x = n("293273"),
   b = n("158776"),
   U = n("594174"),
-  G = n("881201"),
-  j = n("26290"),
+  j = n("881201"),
+  G = n("26290"),
   w = n("626135"),
   k = n("70956"),
   F = n("51144"),
@@ -227,7 +227,7 @@ function X(e) {
             className: z.icon
           }), (0, a.jsxs)("div", {
             className: z.focusModeTitle,
-            children: [K.default.Messages.FOCUS_MODE_TITLE, (0, a.jsx)(j.TextBadge, {
+            children: [K.default.Messages.FOCUS_MODE_TITLE, (0, a.jsx)(G.TextBadge, {
               text: l ? K.default.Messages.FOCUS_MODE_BADGE_ON : o ? K.default.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : K.default.Messages.FOCUS_MODE_BADGE_OFF,
               color: l ? u.default.BRAND_500 : o ? u.default.RED_400 : u.default.PRIMARY_500
             })]
@@ -252,7 +252,7 @@ function X(e) {
     })
   }($, x), {
     ref: en
-  } = (0, C.default)(), ea = (0, m.default)(en);
+  } = (0, C.default)(), ea = (0, S.default)(en);
   s.useEffect(() => {
     w.default.track(Y.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
@@ -288,7 +288,7 @@ function X(e) {
             displayProfile: U,
             onClose: () => null == D ? void 0 : D(),
             isMobile: ee,
-            isStreaming: (0, S.default)(X),
+            isStreaming: (0, m.default)(X),
             status: $,
             disableUserProfileLink: __OVERLAY__,
             isHovering: ea,
@@ -372,7 +372,7 @@ function X(e) {
                   focusedClassName: z.menuItemFocused,
                   subMenuIconClassName: z.subMenuIcon,
                   label: K.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-                  icon: G.default,
+                  icon: j.default,
                   showIconFirst: !0,
                   action: () => {
                     B({
