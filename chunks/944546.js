@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   FriendRow: function() {
-    return g
+    return C
   },
   default: function() {
-    return S
+    return g
   }
 });
 var a = n("735250"),
@@ -14,24 +14,23 @@ var a = n("735250"),
   r = n("239091"),
   o = n("232567"),
   u = n("129861"),
-  d = n("906732"),
-  c = n("158776"),
-  f = n("785717"),
-  h = n("621853"),
-  m = n("171368"),
-  p = n("981631"),
-  E = n("689938"),
-  C = n("521170");
+  d = n("158776"),
+  c = n("785717"),
+  f = n("621853"),
+  h = n("171368"),
+  m = n("981631"),
+  p = n("689938"),
+  E = n("521170");
 
-function g(e) {
+function C(e) {
   let {
     user: t,
     status: n,
     onSelect: l,
     onContextMenu: r
-  } = e, o = (0, s.useStateFromStores)([c.default], () => c.default.isMobileOnline(t.id));
+  } = e, o = (0, s.useStateFromStores)([d.default], () => d.default.isMobileOnline(t.id));
   return (0, a.jsxs)(i.Clickable, {
-    className: C.listRow,
+    className: E.listRow,
     onClick: () => l(t.id),
     onContextMenu: e => r(e, t),
     children: [(0, a.jsx)(i.Avatar, {
@@ -40,46 +39,44 @@ function g(e) {
       size: i.AvatarSizes.SIZE_40,
       status: n,
       isMobile: o,
-      className: C.listAvatar
+      className: E.listAvatar
     }), (0, a.jsx)(u.default, {
       user: t,
-      className: C.listName,
-      discriminatorClass: C.listDiscriminator
+      className: E.listName,
+      discriminatorClass: E.listDiscriminator
     })]
   })
 }
 
-function S(e) {
+function g(e) {
   let t, {
       user: u,
-      onClose: c
+      onClose: d
     } = e,
-    S = (0, s.useStateFromStores)([h.default], () => h.default.getMutualFriends(u.id)),
+    g = (0, s.useStateFromStores)([f.default], () => f.default.getMutualFriends(u.id)),
     {
-      analyticsLocations: _
-    } = (0, d.default)(),
-    {
-      guildId: T,
-      channelId: I,
-      messageId: A,
-      roleId: v
-    } = (0, f.useUserProfileAnalyticsContext)();
+      analyticsLocations: S,
+      guildId: _,
+      channelId: T,
+      messageId: I,
+      roleId: A
+    } = (0, c.useUserProfileAnalyticsContext)();
 
-  function N(e) {
-    c(), (0, m.openUserProfileModal)({
+  function v(e) {
+    d(), (0, h.openUserProfileModal)({
       userId: e,
-      guildId: null != T ? T : void 0,
-      channelId: null != I ? I : void 0,
-      messageId: null != A ? A : void 0,
-      roleId: null != v ? v : void 0,
-      sourceAnalyticsLocations: _,
+      guildId: null != _ ? _ : void 0,
+      channelId: null != T ? T : void 0,
+      messageId: null != I ? I : void 0,
+      roleId: null != A ? A : void 0,
+      sourceAnalyticsLocations: S,
       analyticsLocation: {
-        section: p.AnalyticsSections.USER_PROFILE_MUTUAL_FRIENDS
+        section: m.AnalyticsSections.USER_PROFILE_MUTUAL_FRIENDS
       }
     })
   }
 
-  function x(e, t) {
+  function N(e, t) {
     (0, r.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -91,25 +88,25 @@ function S(e) {
     })
   }
   return l.useEffect(() => {
-    null == S && (0, o.fetchMutualFriends)(u.id)
-  }, [S, u.id]), t = null == S ? (0, a.jsx)("div", {
-    className: C.empty,
+    null == g && (0, o.fetchMutualFriends)(u.id)
+  }, [g, u.id]), t = null == g ? (0, a.jsx)("div", {
+    className: E.empty,
     children: (0, a.jsx)(i.Spinner, {})
-  }) : 0 === S.length ? (0, a.jsxs)("div", {
-    className: C.empty,
+  }) : 0 === g.length ? (0, a.jsxs)("div", {
+    className: E.empty,
     children: [(0, a.jsx)("div", {
-      className: C.emptyIconFriends
+      className: E.emptyIconFriends
     }), (0, a.jsx)("div", {
-      className: C.emptyText,
-      children: E.default.Messages.NO_MUTUAL_FRIENDS
+      className: E.emptyText,
+      children: p.default.Messages.NO_MUTUAL_FRIENDS
     })]
-  }) : S.map(e => (0, a.jsx)(g, {
+  }) : g.map(e => (0, a.jsx)(C, {
     user: e.user,
     status: e.status,
-    onSelect: N,
-    onContextMenu: x
+    onSelect: v,
+    onContextMenu: N
   }, e.key)), (0, a.jsx)(i.ScrollerThin, {
-    className: C.listScroller,
+    className: E.listScroller,
     fade: !0,
     children: t
   })

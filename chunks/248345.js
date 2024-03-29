@@ -1,55 +1,51 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return d
   }
 });
 var i = n("735250");
 n("470079");
 var r = n("717881"),
-  s = n("906732"),
-  a = n("785717"),
-  o = n("221292"),
-  l = n("659101"),
-  u = n("981631"),
-  d = n("27729");
+  s = n("785717"),
+  a = n("221292"),
+  o = n("659101"),
+  l = n("981631"),
+  u = n("27729");
 
-function _(e) {
+function d(e) {
   let {
     activity: t,
     user: n,
-    guild: _,
-    channelId: c,
-    onClose: E,
-    analyticsParams: I
+    guild: d,
+    channelId: _,
+    onClose: c,
+    analyticsParams: E
   } = e, {
-    analyticsLocations: T
-  } = (0, s.default)(), {
-    trackUserProfileAction: f,
-    ...S
-  } = (0, a.useUserProfileAnalyticsContext)();
-  return (0, i.jsx)(l.default, {
+    trackUserProfileAction: I,
+    ...T
+  } = (0, s.useUserProfileAnalyticsContext)();
+  return (0, i.jsx)(o.default, {
     children: (0, i.jsx)(r.default, {
       type: r.UserActivityTypes.USER_POPOUT_V2,
       activity: t,
-      className: d.activity,
+      className: u.activity,
       user: n,
-      guildId: null == _ ? void 0 : _.id,
-      channelId: c,
-      source: u.AnalyticsLocations.PROFILE_POPOUT,
-      onOpenGameProfile: E,
+      guildId: null == d ? void 0 : d.id,
+      channelId: _,
+      source: l.AnalyticsLocations.PROFILE_POPOUT,
+      onOpenGameProfile: c,
       onAction: () => {
-        f({
+        I({
           action: "JOIN_ACTIVITY"
-        }), (0, o.trackUserProfileActivityJoined)({
+        }), (0, a.trackUserProfileActivityJoined)({
           activityType: null == t ? void 0 : t.type,
           applicationId: null == t ? void 0 : t.application_id,
-          analyticsLocations: T,
-          ...S
-        }), null == E || E()
+          ...T
+        }), null == c || c()
       },
-      actionColor: d.buttonColor,
-      analyticsParams: I
+      actionColor: u.buttonColor,
+      analyticsParams: E
     })
   })
 }
