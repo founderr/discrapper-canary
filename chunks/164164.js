@@ -35,7 +35,7 @@ let O = s.forwardRef(function(e, t) {
     onCtxMenuSelect: D,
     quest: x,
     useReducedMotion: b
-  } = e, U = (0, o.useStateFromStores)([_.default], () => _.default.isEnrolling(x.id), [x]), j = (0, h.useQuestFormattedDate)(x.config.expiresAt), G = (0, h.useQuestFormattedDate)(x.config.rewardCodeExpiresAt), w = s.useMemo(() => (0, m.isAssetAnimated)(x.config.assets.questBarHero), [x]), k = s.useCallback(() => {
+  } = e, U = (0, o.useStateFromStores)([_.default], () => _.default.isEnrolling(x.id), [x]), G = (0, h.useQuestFormattedDate)(x.config.expiresAt), j = (0, h.useQuestFormattedDate)(x.config.rewardCodeExpiresAt), w = s.useMemo(() => (0, m.isAssetAnimated)(x.config.assets.questBarHero), [x]), k = s.useCallback(() => {
     (0, E.enrollInQuest)(x.id, {
       questContent: C.QuestContent.QUEST_BAR,
       questContentCTA: f.QuestContentCTA.ACCEPT_QUEST
@@ -43,26 +43,11 @@ let O = s.forwardRef(function(e, t) {
   }, [x]), F = (0, A.useHandleClaimQuestsReward)({
     quest: x,
     location: C.QuestContent.QUEST_BAR
-  }), {
-    acceptButtonSpring: B
-  } = (0, r.useSpring)({
-    from: {
-      acceptButtonSpring: L ? 0 : 1
-    },
-    to: {
-      acceptButtonSpring: L ? 1 : 0
-    },
-    config: {
-      tension: 750,
-      friction: 24
-    },
-    delay: !b && L ? 300 : 0,
-    immediate: b
-  }), H = (null === (n = x.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, V = (null === (l = x.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, Y = L && P, W = (0, m.getQuestBarHeroAssetUrl)(x);
+  }), B = (null === (n = x.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, H = (null === (l = x.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = L && P, Y = (0, m.getQuestBarHeroAssetUrl)(x);
   return (0, a.jsx)(r.animated.div, {
-    "aria-hidden": !Y,
+    "aria-hidden": !V,
     className: i()(O, R.contentExpanded, {
-      [R.contentInteractable]: Y
+      [R.contentInteractable]: V
     }),
     style: {
       opacity: v.to({
@@ -70,7 +55,7 @@ let O = s.forwardRef(function(e, t) {
         output: [0, 1]
       })
     },
-    children: H ? (0, a.jsxs)("div", {
+    children: B ? (0, a.jsxs)("div", {
       className: R.questAcceptedContent,
       ref: t,
       children: [(0, a.jsxs)("div", {
@@ -94,10 +79,10 @@ let O = s.forwardRef(function(e, t) {
               className: R.questAcceptedContentCopySubheading,
               color: "always-white",
               variant: "text-xxs/normal",
-              children: V ? N.default.Messages.QUESTS_CLAIM_BY.format({
-                expirationDate: G
-              }) : N.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
+              children: H ? N.default.Messages.QUESTS_CLAIM_BY.format({
                 expirationDate: j
+              }) : N.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
+                expirationDate: G
               })
             })]
           })]
@@ -118,7 +103,7 @@ let O = s.forwardRef(function(e, t) {
             })
           })
         })]
-      }), V ? (0, a.jsx)(u.Button, {
+      }), H ? (0, a.jsx)(u.Button, {
         className: i()(R.cta, R.ctaClaimReward),
         color: u.Button.Colors.CUSTOM,
         fullWidth: !0,
@@ -185,24 +170,14 @@ let O = s.forwardRef(function(e, t) {
               questReward: x.config.messages.rewardNameWithArticle
             })
           })]
-        }), (0, a.jsx)(r.animated.div, {
-          className: R.ctaWrapper,
-          style: {
-            opacity: B,
-            transform: B.to({
-              range: [0, 1],
-              output: [24, 0]
-            }).to(e => "translateY(".concat(e, "px)"))
-          },
-          children: (0, a.jsx)(u.Button, {
-            className: R.cta,
-            color: u.Button.Colors.CUSTOM,
-            fullWidth: !0,
-            onClick: k,
-            size: u.Button.Sizes.NONE,
-            submitting: U,
-            children: N.default.Messages.QUESTS_ACCEPT_QUEST
-          })
+        }), (0, a.jsx)(u.Button, {
+          className: R.cta,
+          color: u.Button.Colors.CUSTOM,
+          fullWidth: !0,
+          onClick: V ? k : void 0,
+          size: u.Button.Sizes.NONE,
+          submitting: U,
+          children: N.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, a.jsx)("div", {
         className: R.heroAssetWrapper,
@@ -220,8 +195,8 @@ let O = s.forwardRef(function(e, t) {
             className: R.heroAsset,
             controls: !1,
             children: (0, a.jsx)("source", {
-              src: W,
-              type: (0, m.getVideoAssetMimeType)(W)
+              src: Y,
+              type: (0, m.getVideoAssetMimeType)(Y)
             })
           })
         }) : (0, a.jsx)(T.QuestsAsset, {
@@ -230,7 +205,7 @@ let O = s.forwardRef(function(e, t) {
             ref: e,
             alt: "",
             className: R.heroAsset,
-            src: W
+            src: Y
           })
         })
       })]
