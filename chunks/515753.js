@@ -340,7 +340,7 @@ t.default = e => {
   } = I.default.useExperiment({
     location: "private_channel"
   }, {
-    autoTrackExposure: !1
+    autoTrackExposure: !0
   }), u = null == s ? void 0 : s.id, d = (0, f.useStateFromStoresObject)([v.default, L.default], () => {
     let e;
     if (t.isMultiUserDM()) {
@@ -362,17 +362,12 @@ t.default = e => {
     });
     if (null != s) return R.default.isTyping(t.id, t.getRecipientId());
     return !1
-  }, [t, s, r]), h = d.status, C = t.isMultiUserDM() && (o || c || h === V.StatusTypes.ONLINE);
-  return (I.default.useExperiment({
-    location: "private_channel"
-  }, {
-    disable: !C,
-    autoTrackExposure: C
-  }), t.isMultiUserDM()) ? (0, l.jsx)(X, {
+  }, [t, s, r]);
+  return t.isMultiUserDM() ? (0, l.jsx)(X, {
     channel: t,
     selected: n,
     isTyping: c,
-    status: h === V.StatusTypes.ONLINE ? V.StatusTypes.ONLINE : void 0,
+    status: d.status === V.StatusTypes.ONLINE ? V.StatusTypes.ONLINE : void 0,
     isGDMFacepileEnabled: o,
     ...a
   }) : (0, l.jsx)(X, {
