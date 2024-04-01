@@ -17,10 +17,8 @@ var l = n("803997"),
   E = n("87181");
 
 function f() {
-  return (0, s.jsx)(i.TooltipContainer, {
-    text: d.default.Messages.GIFT_INVENTORY,
+  return (0, s.jsx)("div", {
     className: c.buttonContainer,
-    tooltipContentClassName: c.__invalid_giftInventoryButtonTooltipCopy,
     children: (0, s.jsx)(i.Button, {
       className: c.button,
       color: i.ButtonColors.BRAND_NEW,
