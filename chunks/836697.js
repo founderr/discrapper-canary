@@ -15,15 +15,15 @@ var l = n("735250"),
   c = n("727258"),
   f = n("234383"),
   h = n("179809"),
-  C = n("588275"),
-  p = n("689938"),
+  p = n("588275"),
+  C = n("689938"),
   m = n("303335");
 
 function g() {
   let [e, t] = a.useState(!1), n = (0, s.useStateFromStores)([o.default], () => o.default.getGuildId()), g = (0, s.useStateFromStores)([r.default], () => r.default.hasFetchedRequestToJoinGuilds), E = (0, f.default)(), S = a.useMemo(() => {
     let t = (0, c.createFolderNode)({
       folderId: d.SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
-      folderName: p.default.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
+      folderName: C.default.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
       expanded: e,
       guildIds: []
     });
@@ -51,9 +51,9 @@ function g() {
       })
     }),
     renderChildNode: function(e) {
-      return e.type !== c.GuildsNodeType.GUILD ? null : (0, l.jsx)(C.default, {
+      return e.type !== c.GuildsNodeType.GUILD ? null : (0, l.jsx)(p.default, {
         guildNode: e
-      })
+      }, e.id)
     }
   })
 }

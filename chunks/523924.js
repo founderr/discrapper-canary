@@ -13,7 +13,7 @@ t.default = e => {
     reapplyText: n,
     onReapply: u,
     confirmText: d,
-    onConfirm: c,
+    onWithdrawApplication: c,
     rejectionReason: f = null,
     guild: E = null
   } = e;
@@ -57,7 +57,7 @@ t.default = e => {
         children: n
       }), (0, a.jsx)(s.Button, {
         onClick: c,
-        color: s.Button.Colors.PRIMARY,
+        color: s.Button.Colors.RED,
         className: r.confirmationButton,
         children: d
       })]
