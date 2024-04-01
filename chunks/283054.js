@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return _
+    return b
   }
 }), a("47120");
 var o = a("735250"),
@@ -10,67 +10,68 @@ var o = a("735250"),
   l = a("481060"),
   r = a("607070"),
   i = a("906732"),
-  c = a("1585"),
-  d = a("530618"),
-  u = a("745510"),
-  C = a("153124"),
-  f = a("232700"),
-  x = a("675654"),
-  A = a("689938"),
-  M = a("291095");
-let h = ["#B951FA", "#C749EE", "#4E52FD", "#00DB00", "#FFC900", "#FF7200", "#FF0000"],
-  E = [...x.COMMON_CONFETTI_SPRITES, ...Object.values((0, f.getLootboxes)()).map(e => ({
+  d = a("1585"),
+  c = a("223143"),
+  u = a("530618"),
+  C = a("745510"),
+  f = a("153124"),
+  x = a("232700"),
+  A = a("675654"),
+  M = a("689938"),
+  h = a("291095");
+let E = ["#B951FA", "#C749EE", "#4E52FD", "#00DB00", "#FFC900", "#FF7200", "#FF0000"],
+  _ = [...A.COMMON_CONFETTI_SPRITES, ...Object.values((0, x.getLootboxes)()).map(e => ({
     src: e.image,
     colorize: !1
   }))];
 
-function _(e) {
+function b(e) {
   let {
     transitionState: t,
-    onClose: x
-  } = e, _ = (0, C.useUID)(), {
-    analyticsLocations: b
+    onClose: A
+  } = e, b = (0, f.useUID)(), {
+    analyticsLocations: p
   } = (0, i.default)(), {
-    confettiCanvas: p
-  } = s.useContext(u.ConfettiCannonContext), I = (0, n.useStateFromStores)([r.default], () => r.default.useReducedMotion), g = s.useRef(null);
-  return (0, o.jsxs)(l.ModalRoot, {
+    confettiCanvas: I
+  } = s.useContext(C.ConfettiCannonContext), g = (0, n.useStateFromStores)([r.default], () => r.default.useReducedMotion), m = s.useRef(null);
+  return (0, c.default)(), (0, o.jsxs)(l.ModalRoot, {
     transitionState: t,
-    "aria-labelledby": _,
-    children: [I ? null : (0, o.jsx)(d.default, {
-      confettiTarget: g.current,
-      confettiCanvas: p,
-      sprites: E,
-      colors: h
+    "aria-labelledby": b,
+    children: [g ? null : (0, o.jsx)(u.default, {
+      confettiTarget: m.current,
+      confettiCanvas: I,
+      sprites: _,
+      colors: E
     }), (0, o.jsxs)(l.ModalContent, {
-      className: M.content,
+      className: h.content,
       children: [(0, o.jsx)("img", {
-        ref: g,
+        ref: m,
         src: a("207446"),
-        className: M.image,
+        className: h.image,
         alt: ""
       }), (0, o.jsx)(l.Heading, {
-        className: M.title,
+        className: h.title,
         variant: "heading-xl/extrabold",
-        children: A.default.Messages.PACKAGES_CLAIM_HEADER
+        children: M.default.Messages.PACKAGES_CLAIM_HEADER
       }), (0, o.jsx)(l.Text, {
         variant: "text-md/medium",
         color: "header-secondary",
-        children: A.default.Messages.PACKAGES_CLAIM_BODY
+        children: M.default.Messages.PACKAGES_CLAIM_BODY
       })]
     }), (0, o.jsxs)(l.ModalFooter, {
       children: [(0, o.jsx)(l.Button, {
         onClick: () => {
-          x(), (0, c.openAvatarDecorationModal)({
-            analyticsLocations: b,
-            initialSelectedDecorationId: f.LOOTBOX_PRIZE_ID
+          A(), (0, d.openAvatarDecorationModal)({
+            analyticsLocations: p,
+            initialSelectedDecorationId: x.LOOTBOX_PRIZE_ID
           })
         },
-        children: A.default.Messages.PACKAGES_CLAIM_CONTINUE
+        children: M.default.Messages.PACKAGES_CLAIM_CONTINUE
       }), (0, o.jsx)(l.Button, {
         look: l.Button.Looks.LINK,
         color: l.Button.Colors.PRIMARY,
-        onClick: x,
-        children: A.default.Messages.PACKAGES_CLAIM_CANCEL
+        onClick: A,
+        children: M.default.Messages.PACKAGES_CLAIM_CANCEL
       })]
     })]
   })
