@@ -12,8 +12,8 @@ var s = n("481060"),
   c = n("36246"),
   f = n("305342"),
   E = n("726324"),
-  _ = n("981631"),
-  h = n("689938"),
+  h = n("981631"),
+  _ = n("689938"),
   C = n("685405");
 t.default = e => {
   var t, n;
@@ -23,7 +23,7 @@ t.default = e => {
   (0, o.default)({
     guildId: S.id,
     groupListingId: null == m ? void 0 : m.id,
-    location: _.AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB,
+    location: h.AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB,
     relevantSubscriptionListingIds: null == m ? void 0 : m.subscription_listings_ids
   });
   let {
@@ -33,7 +33,7 @@ t.default = e => {
   } = i.useEditStateIds(null !== (t = null == m ? void 0 : m.id) && void 0 !== t ? t : null, S.id);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(E.default, {
-      title: h.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
+      title: _.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
         serverName: S.toString()
       }),
       description: null != T ? T : null,
@@ -55,7 +55,7 @@ t.default = e => {
             guildId: S.id,
             groupListingId: null !== (t = null == m ? void 0 : m.id) && void 0 !== t ? t : "",
             listingId: e,
-            analyticsLocation: _.AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB
+            analyticsLocation: h.AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB
           }, e)
         })
       })

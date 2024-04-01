@@ -22,14 +22,14 @@ var n = s("803997"),
   _ = s("689938"),
   g = s("901145"),
   h = s("794711");
-let N = !T.isPlatformEmbedded,
-  I = (0, E.uid)();
+let I = !T.isPlatformEmbedded,
+  N = (0, E.uid)();
 
 function p(e) {
   let {
     value: t
   } = e;
-  t === m.InputModes.PUSH_TO_TALK && N && (0, r.openModalLazy)(async () => {
+  t === m.InputModes.PUSH_TO_TALK && I && (0, r.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.resolve().then(s.bind(s, "468026"));
@@ -86,7 +86,7 @@ function A(e) {
         basis: "50%",
         children: (0, a.jsxs)(r.FormItem, {
           children: [(0, a.jsx)(r.FormTitle, {
-            id: I,
+            id: N,
             tag: r.FormTitleTags.H5,
             className: h.marginBottom8,
             children: _.default.Messages.INPUT_MODE_PTT_RELEASE_DELAY
@@ -97,7 +97,7 @@ function A(e) {
             }),
             onValueRender: C,
             maxValue: m.MAX_PTT_RELEASE_DELAY,
-            "aria-labelledby": I
+            "aria-labelledby": N
           })]
         })
       })]
@@ -112,7 +112,7 @@ function O() {
       name: _.default.Messages.INPUT_MODE_VAD
     }, {
       value: m.InputModes.PUSH_TO_TALK,
-      name: N ? _.default.Messages.INPUT_MODE_PTT_LIMITED : _.default.Messages.INPUT_MODE_PTT
+      name: I ? _.default.Messages.INPUT_MODE_PTT_LIMITED : _.default.Messages.INPUT_MODE_PTT
     }];
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(r.FormItem, {

@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("484459"),
   f = n("103575"),
   E = n("285952"),
-  _ = n("409216"),
-  h = n("465670"),
+  h = n("409216"),
+  _ = n("465670"),
   C = n("87888"),
   S = n("63063"),
   m = n("976401"),
@@ -60,7 +60,7 @@ class O extends s.PureComponent {
     return this.isHost() ? null : (0, a.jsx)(m.default, {
       tooltipText: g.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
       onClick: e,
-      icon: h.default
+      icon: _.default
     })
   }
   renderHelpIcon() {
@@ -78,7 +78,7 @@ class O extends s.PureComponent {
       children: [this.renderTitle(), (0, a.jsx)(E.default, {
         justify: E.default.Justify.END,
         className: A.party,
-        children: (0, a.jsx)(_.default, {
+        children: (0, a.jsx)(h.default, {
           users: this.props.party,
           max: this.isHost() ? R.HOST : R.LISTENER,
           renderUser: this.renderPartyMember,

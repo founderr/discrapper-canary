@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("962746"),
   g = s("296810"),
   h = s("935147"),
-  N = s("350327"),
-  I = s("246946"),
+  I = s("350327"),
+  N = s("246946"),
   p = s("25990"),
   C = s("594174"),
   A = s("74538"),
@@ -38,7 +38,7 @@ function M() {
   n.useEffect(() => {
     (0, d.fetchProfile)(e.id)
   }, [e.id]);
-  let t = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation),
+  let t = (0, r.useStateFromStores)([N.default], () => N.default.hidePersonalInformation),
     {
       pendingAvatar: s,
       pendingBanner: l,
@@ -67,7 +67,7 @@ function M() {
       canUsePremiumCustomization: y,
       onUpsellClick: x.default,
       onAvatarChange: u.setPendingAvatar,
-      onBannerChange: N.setPendingBanner,
+      onBannerChange: I.setPendingBanner,
       pendingBanner: l,
       pendingBio: U,
       pendingPronouns: v,

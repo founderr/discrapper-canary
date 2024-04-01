@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PendingMessageRequestRowItem: function() {
-    return _
+    return h
   }
 });
 var a = n("735250"),
@@ -16,18 +16,18 @@ var a = n("735250"),
   f = n("689938"),
   E = n("103898");
 
-function _(e) {
+function h(e) {
   let {
     active: t,
     user: n,
-    channel: _
-  } = e, h = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
+    channel: h
+  } = e, _ = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
     (0, l.showToast)((0, l.createToast)(f.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
   }, []), S = s.useCallback(() => {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), m = s.useCallback(() => {
-    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), h && (0, i.transitionToChannel)(_.id)
-  }, [_.id, h]), {
+    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, i.transitionToChannel)(h.id)
+  }, [h.id, _]), {
     acceptMessageRequest: I,
     rejectMessageRequest: p,
     isAcceptLoading: T,
@@ -44,7 +44,7 @@ function _(e) {
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)(c.default, {
-      channel: _,
+      channel: h,
       otherUser: n,
       active: t
     }), (0, a.jsxs)("div", {
@@ -54,7 +54,7 @@ function _(e) {
         color: l.ButtonColors.PRIMARY,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), p(_.id)
+          e.stopPropagation(), p(h.id)
         },
         disabled: O,
         submitting: g || R,
@@ -64,7 +64,7 @@ function _(e) {
         color: l.ButtonColors.BRAND,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), I(_.id)
+          e.stopPropagation(), I(h.id)
         },
         disabled: O,
         submitting: T || A || N,

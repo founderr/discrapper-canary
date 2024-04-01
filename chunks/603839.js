@@ -13,7 +13,7 @@ t.default = e => {
   let {
     guildId: t,
     onClose: n
-  } = e, f = (0, l.useStateFromStores)([i.default], () => null == i.default.getState(t)), [E, _] = s.useState(f ? d.ClanSetupModalPages.INTRO : d.ClanSetupModalPages.SETUP), [h, C] = s.useState(d.ClanSetupSteps.GAMES);
+  } = e, f = (0, l.useStateFromStores)([i.default], () => null == i.default.getState(t)), [E, h] = s.useState(f ? d.ClanSetupModalPages.INTRO : d.ClanSetupModalPages.SETUP), [_, C] = s.useState(d.ClanSetupSteps.GAMES);
   return (0, a.jsx)("div", {
     className: c.modal,
     children: (0, a.jsx)("div", {
@@ -23,25 +23,25 @@ t.default = e => {
           case d.ClanSetupModalPages.INTRO:
             return (0, a.jsx)(r.ClanSetupIntro, {
               onClose: n,
-              setPage: _
+              setPage: h
             });
           case d.ClanSetupModalPages.ANIMATE:
             return (0, a.jsx)(r.ClanSetupIntroAnimation, {
               guildId: t,
-              setPage: _
+              setPage: h
             });
           case d.ClanSetupModalPages.SETUP:
             return (0, a.jsx)(u.default, {
               guildId: t,
-              setPage: _,
+              setPage: h,
               onClose: n,
-              currentStep: h,
+              currentStep: _,
               setCurrentStep: C
             });
           case d.ClanSetupModalPages.SIGN:
             return (0, a.jsx)(o.default, {
               guildId: t,
-              setPage: _,
+              setPage: h,
               onClose: n
             });
           default:

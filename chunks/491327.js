@@ -11,8 +11,8 @@ var a = n("392711"),
   c = n("496675"),
   f = n("944486"),
   E = n("979651"),
-  _ = n("934415"),
-  h = n("996106"),
+  h = n("934415"),
+  _ = n("996106"),
   C = n("914946"),
   S = n("452426"),
   m = n("561205"),
@@ -30,12 +30,12 @@ t.default = {
         },
         socket: n
       } = e, a = u.default.getChannel(t);
-      if (null == a) throw new h.default({
+      if (null == a) throw new _.default({
         errorCode: p.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel id: ".concat(t));
       if (a.isPrivate()) {
         let e = n.authorization.scopes;
-        if (!e.includes(p.OAuth2Scopes.RPC) && !e.includes(p.OAuth2Scopes.DM_CHANNELS_READ)) throw new h.default({
+        if (!e.includes(p.OAuth2Scopes.RPC) && !e.includes(p.OAuth2Scopes.DM_CHANNELS_READ)) throw new _.default({
           errorCode: p.RPCErrors.INVALID_PERMISSIONS
         }, "Invalid scope")
       }
@@ -52,7 +52,7 @@ t.default = {
       } = e, n = s().values(u.default.loadAllGuildAndPrivateChannelsFromDisk());
       if (t) {
         let e = d.default.getGuild(t);
-        if (null == e) throw new h.default({
+        if (null == e) throw new _.default({
           errorCode: p.RPCErrors.INVALID_GUILD
         }, "Invalid guild id: ".concat(t));
         n = n.filter(t => {
@@ -82,7 +82,7 @@ t.default = {
     scope: p.OAuth2Scopes.GUILDS_MEMBERS_READ,
     handler(e) {
       let t = (0, m.default)();
-      if (null == t) throw new h.default({
+      if (null == t) throw new _.default({
         errorCode: p.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel");
       return {
@@ -111,28 +111,28 @@ t.default = {
       } = e;
       if (!a) return i.default.selectVoiceChannel(null), null;
       let m = f.default.getVoiceChannelId();
-      if (null != m && m !== a && !1 === l) throw new h.default({
+      if (null != m && m !== a && !1 === l) throw new _.default({
         errorCode: p.RPCErrors.SELECT_VOICE_FORCE_REQUIRED
       }, "User is already joined to a voice channel.");
       return t.storeWait(n, () => u.default.getChannel(a), s).catch(() => {
-        throw new h.default({
+        throw new _.default({
           errorCode: p.RPCErrors.SELECT_CHANNEL_TIMED_OUT
         }, "Request to select voice channel timed out.")
       }).then(e => {
-        if (null == e) throw new h.default({
+        if (null == e) throw new _.default({
           errorCode: p.RPCErrors.INVALID_CHANNEL
         }, "Invalid channel id: ".concat(a));
-        if (!(0, o.isVoiceChannel)(e.type)) throw new h.default({
+        if (!(0, o.isVoiceChannel)(e.type)) throw new _.default({
           errorCode: p.RPCErrors.INVALID_CHANNEL
         }, "Channel is not a voice channel");
         return Promise.all([Promise.resolve(e), (0, C.transformChannel)(e, (0, C.hasMessageReadPermission)(e, n.application.id, n.authorization.scopes))])
       }).then(e => {
         let [t, n] = e;
         if (n.guild_id) {
-          if ((0, _.isChannelFull)(t, E.default, d.default)) throw new h.default({
+          if ((0, h.isChannelFull)(t, E.default, d.default)) throw new _.default({
             errorCode: p.RPCErrors.INVALID_CHANNEL
           }, "Channel is full");
-          if (!c.default.can(p.Permissions.CONNECT, t)) throw new h.default({
+          if (!c.default.can(p.Permissions.CONNECT, t)) throw new _.default({
             errorCode: p.RPCErrors.INVALID_PERMISSIONS
           }, "Connect permission required to join channel")
         }
@@ -167,20 +167,20 @@ t.default = {
         }
       } = e;
       return a ? t.storeWait(n, () => u.default.getChannel(a), s).catch(() => {
-        throw new h.default({
+        throw new _.default({
           errorCode: p.RPCErrors.SELECT_CHANNEL_TIMED_OUT
         }, "Request to select text channel timed out.")
       }).then(e => {
-        if (null == e) throw new h.default({
+        if (null == e) throw new _.default({
           errorCode: p.RPCErrors.INVALID_CHANNEL
         }, "Invalid channel id: ".concat(a));
-        if (!(0, o.isTextChannel)(e.type)) throw new h.default({
+        if (!(0, o.isTextChannel)(e.type)) throw new _.default({
           errorCode: p.RPCErrors.INVALID_CHANNEL
         }, "Channel is not a text channel");
         return Promise.all([Promise.resolve(e), (0, C.transformChannel)(e, (0, C.hasMessageReadPermission)(e, n.application.id, n.authorization.scopes))])
       }).then(e => {
         let [t, n] = e;
-        if (n.guild_id && !c.default.can(p.Permissions.VIEW_CHANNEL, t)) throw new h.default({
+        if (n.guild_id && !c.default.can(p.Permissions.VIEW_CHANNEL, t)) throw new _.default({
           errorCode: p.RPCErrors.INVALID_CHANNEL
         }, "No permission to see channel");
         return n.guild_id ? (0, r.replaceWith)(p.Routes.CHANNEL(n.guild_id, t.id)) : i.default.selectPrivateChannel(t.id), n
@@ -197,7 +197,7 @@ t.default = {
         }
       } = e;
       return l.default.createInvite(t, n, "RPC").catch(() => {
-        throw new h.default({
+        throw new _.default({
           errorCode: p.RPCErrors.INVALID_PERMISSIONS
         }, "Unable to generate an invite for ".concat(t, ". Does this user have permissions?"))
       })

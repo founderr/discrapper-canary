@@ -12,8 +12,8 @@ var s = n("524437"),
   c = n("496675"),
   f = n("228392"),
   E = n("981631"),
-  _ = n("921944");
-let h = e => {
+  h = n("921944");
+let _ = e => {
   var t;
   let n = d.default.getGuild(e),
     a = !!(null == n ? void 0 : n.hasFeature(E.GuildFeatures.COMMUNITY)),
@@ -33,10 +33,10 @@ class C extends r.default {
     let {
       guildId: t
     } = e;
-    if (null == t || !h(t)) return;
+    if (null == t || !_(t)) return;
     (0, f.trackForumUpsellModalViewed)(), (0, o.requestMarkDismissibleContentAsShown)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL);
     let i = function() {
-      let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.ContentDismissActionType.DISMISS;
+      let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.ContentDismissActionType.DISMISS;
       (0, o.markDismissibleContentAsDismissed)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL, {
         dismissAction: e
       })
@@ -55,7 +55,7 @@ class C extends r.default {
       })
     }, {
       onCloseCallback: () => (0, o.markDismissibleContentAsDismissed)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL, {
-        dismissAction: _.ContentDismissActionType.DISMISS
+        dismissAction: h.ContentDismissActionType.DISMISS
       }),
       onCloseRequest: E.NOOP_NULL
     })

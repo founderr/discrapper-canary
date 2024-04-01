@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("194359"),
   f = n("703656"),
   E = n("592125"),
-  _ = n("131951"),
-  h = n("974029"),
+  h = n("131951"),
+  _ = n("974029"),
   C = n("621113"),
   S = n("51144"),
   m = n("321488"),
@@ -41,7 +41,7 @@ function v(e) {
     c.default.removeFriend(t.id, {
       location: "Friends"
     })
-  }, l = (0, r.useStateFromStores)([_.default], () => _.default.supports(A.Features.VIDEO));
+  }, l = (0, r.useStateFromStores)([h.default], () => h.default.supports(A.Features.VIDEO));
   return (0, a.jsxs)(o.Menu, {
     navId: "friend-row",
     "aria-label": N.default.Messages.USER_ACTIONS_MENU_LABEL,
@@ -126,7 +126,7 @@ class L extends s.PureComponent {
         }), (0, a.jsxs)("div", {
           className: R.actions,
           children: [(0, a.jsx)(m.default, {
-            icon: h.default,
+            icon: _.default,
             tooltip: N.default.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t

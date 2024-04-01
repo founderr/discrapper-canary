@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 }), n("47120");
 var a = n("735250"),
@@ -32,7 +32,7 @@ let E = e => {
   }
 };
 
-function _(e) {
+function h(e) {
   let {
     groupListingId: t,
     subscription: n,
@@ -40,8 +40,8 @@ function _(e) {
   } = e, {
     analyticsLocations: r
   } = (0, u.default)(o.default.PENDING_PLAN_CHANGE_NOTICE), {
-    resetRenewalMutation: _,
-    submitting: h,
+    resetRenewalMutation: h,
+    submitting: _,
     error: C
   } = E(r), S = (0, d.useSubscriptionListingsForGroup)(t, {
     includeSoftDeleted: !0
@@ -70,8 +70,8 @@ function _(e) {
       changeDate: p
     }),
     error: null == C ? void 0 : C.message,
-    onClick: () => _(n),
-    submitting: h,
+    onClick: () => h(n),
+    submitting: _,
     ctaMessage: f.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_CTA,
     className: l
   })

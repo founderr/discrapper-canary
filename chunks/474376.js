@@ -16,8 +16,8 @@ var s = n("442837"),
   c = n("759231"),
   f = n("626135"),
   E = n("51144"),
-  _ = n("480387"),
-  h = n("726745"),
+  h = n("480387"),
+  _ = n("726745"),
   C = n("251423"),
   S = n("383832"),
   m = n("981631"),
@@ -35,12 +35,12 @@ function T() {
         location: {
           section: m.AnalyticsSections.PROFILE_POPOUT
         }
-      }), _.switchAccount(t))
+      }), h.switchAccount(t))
     },
     g = n.map(n => {
       let s = new r.default(n),
         o = s.id === (null == e ? void 0 : e.id),
-        u = n.tokenStatus === h.MultiAccountTokenStatus.INVALID,
+        u = n.tokenStatus === _.MultiAccountTokenStatus.INVALID,
         f = t ? null : "#".concat(s.discriminator);
       return (0, a.jsx)(l.MenuItem, {
         id: s.id,

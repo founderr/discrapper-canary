@@ -16,12 +16,12 @@ var s = n("780384"),
   c = n("955204"),
   f = n("231338"),
   E = n("546271");
-let _ = {
+let h = {
     trophy: f.Color.PRIMARY_400,
     locked: f.Color.PRIMARY_400,
     unlocked: f.Color.GREEN_330
   },
-  h = {
+  _ = {
     trophy: f.Color.PRIMARY_400,
     locked: f.Color.PRIMARY_400,
     unlocked: f.Color.GREEN_330
@@ -43,7 +43,7 @@ function C(e) {
     {
       color: g
     } = (0, c.getAchievementStyles)(T),
-    A = (0, s.isThemeDark)(S) ? _ : h,
+    A = (0, s.isThemeDark)(S) ? h : _,
     N = (I.size - I.offset - 2 * I.stroke) * .8,
     R = I.size - I.stroke,
     O = {

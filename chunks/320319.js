@@ -13,9 +13,9 @@ var a = s("735250"),
   E = s("706140"),
   T = s("626135"),
   I = s("314684"),
-  f = s("715627"),
+  S = s("715627"),
   R = s("176782"),
-  S = s("238108"),
+  f = s("238108"),
   m = s("32173"),
   A = s("391110"),
   N = s("484239"),
@@ -59,7 +59,7 @@ let h = {
       isEasterEggTriggered: X,
       onHover: Q,
       onUnhover: Z
-    } = (0, S.default)(5), J = (0, l.debounce)(() => {
+    } = (0, f.default)(5), J = (0, l.debounce)(() => {
       T.default.track(g.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
         card_type: (0, l.snakeCase)(t),
         is_tenure_reward: t === m.PerksDiscoverabilityCardTypes.FREE_BOOST,
@@ -115,7 +115,7 @@ let h = {
         children: [(0, a.jsx)(x, {
           ...e,
           ref: t === m.PerksDiscoverabilityCardTypes.FREE_BOOST ? q : void 0
-        }), H && (0, a.jsx)(f.default, {
+        }), H && (0, a.jsx)(S.default, {
           speedValues: h,
           numBursts: 3,
           particlesPerBurst: 15,
@@ -188,8 +188,8 @@ let x = i.forwardRef((e, t) => {
     isPremiumGetCta: _,
     onCtaClick: E,
     onMouseEnter: T,
-    className: f,
-    perkComponent: S,
+    className: S,
+    perkComponent: f,
     cardVariant: m,
     cardType: C,
     onClick: g,
@@ -202,7 +202,7 @@ let x = i.forwardRef((e, t) => {
   }, [v]);
   let U = (0, R.useCardVariantsInfo)(m);
   return (0, a.jsxs)(d.Clickable, {
-    className: n()(M.card, f, !0 === D ? null === (s = U.cardContainer) || void 0 === s ? void 0 : s.className : void 0, {
+    className: n()(M.card, S, !0 === D ? null === (s = U.cardContainer) || void 0 === s ? void 0 : s.className : void 0, {
       [M.clickable]: null != g,
       [M.hideOverflow]: L
     }),
@@ -225,7 +225,7 @@ let x = i.forwardRef((e, t) => {
       isCarousel: L,
       descriptionCta: c,
       onCtaClick: E,
-      perkComponent: S,
+      perkComponent: f,
       subtitleClassName: M.cardSubtitle,
       cardVariant: m
     }), x && (0, a.jsx)(p.default, {
@@ -237,7 +237,7 @@ let x = i.forwardRef((e, t) => {
       isPremiumGetCta: _,
       onCtaClick: E,
       cardVariant: m,
-      perkComponent: S
+      perkComponent: f
     }), (0, a.jsx)("div", {
       className: n()(M.cover, M.above),
       ref: t

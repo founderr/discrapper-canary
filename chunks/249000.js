@@ -43,11 +43,11 @@ function E(e, t, n, a, s) {
   }
 }(i = a || (a = {}))[i.DISABLED = 0] = "DISABLED", i[i.DEFAULT = 1] = "DEFAULT", i[i.OFFSET = 2] = "OFFSET", (r = s || (s = {})).TOP = "TOP", r.BOTTOM = "BOTTOM", r.RIGHT = "RIGHT", r.LEFT = "LEFT";
 
-function _(e) {
+function h(e) {
   return [null == e.bottom ? "TOP" : "BOTTOM", null == e.right ? "LEFT" : "RIGHT"]
 }
 
-function h(e) {
+function _(e) {
   let {
     top: t,
     left: n,
@@ -235,7 +235,7 @@ class m extends(l = u.PureComponent) {
         left: t - this._offsetX
       }, s, l, g, A));
       if (c) {
-        let e = _(R = h(R));
+        let e = h(R = _(R));
         I = e[0], p = e[1]
       } else R = {
         top: R.top,
@@ -284,7 +284,7 @@ class m extends(l = u.PureComponent) {
         clientWidth: c
       } = a, f = E(t, s, l, c, d);
       if (f = C(f), r) {
-        let t = _(e = h(f));
+        let t = h(e = _(f));
         o = t[0], u = t[1]
       } else e = {
         top: f.top,
@@ -301,7 +301,7 @@ class m extends(l = u.PureComponent) {
         atTopEdge: S
       })
     });
-    let [t, n] = _(e.initialPosition);
+    let [t, n] = h(e.initialPosition);
     this.position = function(e) {
       let {
         top: t,

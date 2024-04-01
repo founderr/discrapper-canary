@@ -27,8 +27,8 @@ function h() {
   let n = (0, i.useStateFromStores)([E.default], () => E.default.theme),
     {
       canSetInputDevice: h,
-      canSetOutputDevice: N,
-      inputDeviceId: I,
+      canSetOutputDevice: I,
+      inputDeviceId: N,
       outputDeviceId: p
     } = (0, i.useStateFromStoresObject)([c.default], () => ({
       canSetInputDevice: c.default.supports(f.Features.AUDIO_INPUT_DEVICE),
@@ -44,7 +44,7 @@ function h() {
     children: m.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Input Devices")
     })
-  })), !N && (t = (0, a.jsx)(o.FormText, {
+  })), !I && (t = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
     className: g.marginTop8,
     children: m.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
@@ -90,7 +90,7 @@ function h() {
         className: g.marginBottom8,
         children: m.default.Messages.FORM_LABEL_INPUT_DEVICE
       }), (0, a.jsx)(o.SingleSelect, {
-        value: I,
+        value: N,
         onChange: e => d.default.setInputDevice(e, "Settings"),
         options: l().map(C, e => {
           let {

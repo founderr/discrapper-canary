@@ -13,9 +13,9 @@ var a = s("735250"),
   E = s("794484"),
   T = s("347475"),
   I = s("342414"),
-  f = s("391110"),
+  S = s("391110"),
   R = s("71363"),
-  S = s("781800"),
+  f = s("781800"),
   m = s("981631"),
   A = s("379101"),
   N = s("865215");
@@ -37,7 +37,7 @@ t.default = () => {
           children: [(0, a.jsx)(I.default, {
             className: A.heroHeading
           }), (0, a.jsx)(E.default, {
-            variant: f.PerksDiscoverabilityCardSection.WHATS_NEW,
+            variant: S.PerksDiscoverabilityCardSection.WHATS_NEW,
             className: A.whatsNew,
             noBackground: !0,
             leftAlignHeaders: !0
@@ -45,9 +45,9 @@ t.default = () => {
             className: A.perksDiscoverability,
             noBackground: !0,
             leftAlignHeaders: !0,
-            showAllPerksButton: (0, a.jsx)(S.default, {
+            showAllPerksButton: (0, a.jsx)(f.default, {
               setIsAllPerksVisible: s,
-              previousComponent: f.NitroLandingPages.HOME
+              previousComponent: S.NitroLandingPages.HOME
             })
           }), (0, a.jsx)(T.default, {
             className: A.giftNitro,
@@ -79,7 +79,7 @@ t.default = () => {
     }), (0, a.jsx)(R.default, {
       isAllPerksVisible: t,
       setIsAllPerksVisible: s,
-      previousComponent: f.NitroLandingPages.HOME
+      previousComponent: S.NitroLandingPages.HOME
     })]
   })
 }

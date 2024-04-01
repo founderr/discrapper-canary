@@ -13,8 +13,8 @@ var a = s("735250"),
   I = s("328977"),
   f = s("208257"),
   T = s("853486"),
-  _ = s("689938"),
-  R = s("325370");
+  R = s("689938"),
+  _ = s("325370");
 t.default = function(e) {
   let {
     guildId: t
@@ -26,19 +26,19 @@ t.default = function(e) {
     user: N
   } = null != S ? S : {}, A = l.useMemo(() => null != N ? new o.default(N) : null, [N]), M = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]);
   return (0, r.usePageTitle)({
-    subsection: _.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REQUIREMENTS,
+    subsection: R.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REQUIREMENTS,
     location: null == M ? void 0 : M.name
   }), l.useEffect(() => {
     E.default.fetchVerificationForm(t)
   }, [t]), (0, a.jsxs)(u.AnalyticsLocationProvider, {
     value: s,
     children: [(0, a.jsx)("div", {
-      className: R.content,
+      className: _.content,
       children: (0, a.jsx)(f.default, {
         guildId: t
       })
     }), null != S && null != M && null != A && (0, a.jsx)("section", {
-      className: R.sidebar,
+      className: _.sidebar,
       children: (0, a.jsx)(T.default, {
         guild: M,
         guildJoinRequest: S,

@@ -62,8 +62,8 @@ t.default = a.memo(function(e) {
     selectedChannelId: g,
     disableManageChannels: E
   } = e, {
-    isFavoritesPerk: _
-  } = (0, s.useFavoritesServerExperiment)("ChannelListSection"), I = a.useCallback(() => {
+    isFavoritesPerk: S
+  } = (0, s.useFavoritesServerExperiment)("ChannelListSection"), _ = a.useCallback(() => {
     let e = C.getCategoryFromSection(C.recentsSectionNumber);
     if (null == e) return;
     let t = null,
@@ -86,18 +86,18 @@ t.default = a.memo(function(e) {
       });
     case u.SECTION_INDEX_FAVORITES:
       return (0, l.jsx)(d.NonChannelCategory, {
-        name: _ ? h.default.Messages.PINNED_CHANNELS : h.default.Messages.FAVORITES
+        name: S ? h.default.Messages.PINNED_CHANNELS : h.default.Messages.FAVORITES
       });
     case C.recentsSectionNumber:
       return (0, l.jsx)(d.NonChannelCategory, {
         name: h.default.Messages.RECENTS_CATEGORY_HEADER,
-        onDismiss: I
+        onDismiss: _
       });
     case C.voiceChannelsSectionNumber: {
-      var S;
+      var I;
       let e = C.getCategoryFromSection(C.voiceChannelsSectionNumber);
       if (null == e || e.isEmpty()) return null;
-      let n = null === (S = C.getChannelFromSectionRow(t, 0)) || void 0 === S ? void 0 : S.channel;
+      let n = null === (I = C.getChannelFromSectionRow(t, 0)) || void 0 === I ? void 0 : I.channel;
       return (0, l.jsxs)(a.Fragment, {
         children: [(0, l.jsx)("div", {
           className: p.sectionDivider

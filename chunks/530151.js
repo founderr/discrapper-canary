@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("780384"),
   f = n("481060"),
   E = n("570140"),
-  _ = n("239091"),
-  h = n("51025"),
+  h = n("239091"),
+  _ = n("51025"),
   C = n("785547"),
   S = n("730749"),
   m = n("112724"),
@@ -33,8 +33,8 @@ var a = n("735250"),
   x = n("897353"),
   b = n("424218"),
   U = n("780570"),
-  G = n("353042"),
-  j = n("86826"),
+  j = n("353042"),
+  G = n("86826"),
   w = n("981631"),
   k = n("689938"),
   F = n("600262");
@@ -312,7 +312,7 @@ class Z extends s.PureComponent {
     } = this.props;
     return this.renderBody({
       message: k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({
-        remove: () => h.removeFinished(e.applicationId, e.branchId)
+        remove: () => _.removeFinished(e.applicationId, e.branchId)
       }),
       foregroundColor: (0, c.isThemeLight)(e.theme) ? w.Color.PRIMARY_300 : w.Color.PRIMARY_500,
       percent: 100
@@ -379,7 +379,7 @@ class Z extends s.PureComponent {
     })
   }
   renderProgressPatching() {
-    return (0, a.jsx)(G.default, {
+    return (0, a.jsx)(j.default, {
       getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
       updateInterval: 5e3,
       children: this.renderProgressPatchingBody
@@ -471,12 +471,12 @@ class Z extends s.PureComponent {
 let X = () => (0, a.jsx)(Y, {
     icon: x.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
-    onClick: () => h.resume()
+    onClick: () => _.resume()
   }),
   J = () => (0, a.jsx)(Y, {
     icon: D.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
-    onClick: () => h.pause()
+    onClick: () => _.pause()
   }),
   $ = e => {
     let {
@@ -485,7 +485,7 @@ let X = () => (0, a.jsx)(Y, {
     return (0, a.jsx)(Y, {
       icon: M.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
-      onClick: () => h.moveUp(t.applicationId, t.branchId)
+      onClick: () => _.moveUp(t.applicationId, t.branchId)
     })
   },
   ee = e => {
@@ -495,7 +495,7 @@ let X = () => (0, a.jsx)(Y, {
     return (0, a.jsx)(Y, {
       icon: y.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
-      onClick: () => h.cancel(t.applicationId, t.branchId)
+      onClick: () => _.cancel(t.applicationId, t.branchId)
     })
   },
   et = [{
@@ -558,7 +558,7 @@ class en extends s.PureComponent {
     } = this.props;
     e.forEach(e => {
       e.finished && E.default.wait(() => {
-        h.removeFinished(e.applicationId, e.branchId)
+        _.removeFinished(e.applicationId, e.branchId)
       })
     }), window.removeEventListener("resize", this.throttledUpdateHeight), this.isUnmounted = !0
   }
@@ -574,13 +574,13 @@ class en extends s.PureComponent {
       className: F.gameUpdates,
       children: [(0, a.jsxs)("div", {
         className: F.headerRow,
-        children: [(0, a.jsx)(j.default, {
+        children: [(0, a.jsx)(G.default, {
           className: i()(F.headerCell, F.networkProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesDownloaded,
           color: w.Color.GREEN_360,
           animate: s
-        }), (0, a.jsx)(j.default, {
+        }), (0, a.jsx)(G.default, {
           className: i()(F.headerCell, F.diskProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
@@ -602,7 +602,7 @@ class en extends s.PureComponent {
         rowProps: {
           onContextMenu: (e, t) => {
             var s, l, i;
-            return s = e, l = t, i = r, void _.openContextMenuLazy(s, async () => {
+            return s = e, l = t, i = r, void h.openContextMenuLazy(s, async () => {
               let {
                 default: e
               } = await n.e("98335").then(n.bind(n, "485292"));

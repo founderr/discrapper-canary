@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ACTIVITY_ENCOURAGES_HW_ACCELERATION: function() {
-    return _
+    return h
   },
   default: function() {
-    return h
+    return _
   }
 }), n("47120");
 var a = n("735250"),
@@ -18,17 +18,17 @@ var a = n("735250"),
   c = n("981631"),
   f = n("689938"),
   E = n("381968");
-let _ = "Activity Encourages Hardware Acceleration";
+let h = "Activity Encourages Hardware Acceleration";
 
-function h(e) {
+function _(e) {
   var t;
   let {
     applicationId: n,
-    ...h
+    ..._
   } = e, [C, S] = s.useState(!1), [m] = (0, r.default)([n]), I = null !== (t = null == m ? void 0 : m.name) && void 0 !== t ? t : "This Activity";
   s.useEffect(() => {
     u.default.track(c.AnalyticEvents.OPEN_MODAL, {
-      type: _
+      type: h
     })
   }, []);
   let p = () => {
@@ -36,14 +36,14 @@ function h(e) {
     C && (e = "permanent", i.default.updatedUnsyncedSettings({
       disableActivityHardwareAccelerationPrompt: !0
     })), u.default.track(c.AnalyticEvents.MODAL_DISMISSED, {
-      type: _,
+      type: h,
       dismiss_type: e
-    }), h.onClose()
+    }), _.onClose()
   };
   return (0, a.jsxs)(l.ModalRoot, {
     className: E.root,
     "aria-label": f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE,
-    ...h,
+    ..._,
     children: [(0, a.jsxs)(l.ModalHeader, {
       separator: !1,
       children: [(0, a.jsx)(l.Text, {

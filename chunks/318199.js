@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return C
   },
   extractAnnouncementModalContent: function() {
-    return h
+    return _
   }
 });
 var a = n("735250");
@@ -19,9 +19,9 @@ var s = n("578012"),
   c = n("605236"),
   f = n("960048"),
   E = n("276792"),
-  _ = n("290347");
+  h = n("290347");
 
-function h(e) {
+function _(e) {
   let {
     content: t,
     isPreview: n
@@ -37,16 +37,16 @@ function C(e) {
     location: s
   } = (0, r.useAnalyticsContext)(), {
     analyticsLocations: l
-  } = (0, d.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), c = (0, o.default)(), h = (0, i.isThemeLight)(c);
+  } = (0, d.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), c = (0, o.default)(), _ = (0, i.isThemeLight)(c);
   if ("announcementModalVariant1" === n.properties.oneofKind) {
     let e = (0, E.adaptAnnouncementModalVariant1)({
       content: n.properties.announcementModalVariant1,
       renderModalProps: t,
       analyticsLocations: l,
       analyticsLocation: s,
-      isLightTheme: h
+      isLightTheme: _
     });
-    return (0, a.jsx)(_.default, {
+    return (0, a.jsx)(h.default, {
       ...e
     })
   }

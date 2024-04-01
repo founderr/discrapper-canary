@@ -11,10 +11,10 @@ var a = n("544891"),
   c = n("914946"),
   f = n("452426"),
   E = n("561205"),
-  _ = n("186901"),
-  h = n("981631");
+  h = n("186901"),
+  _ = n("981631");
 t.default = {
-  [h.RPCCommands.SEND_ANALYTICS_EVENT]: {
+  [_.RPCCommands.SEND_ANALYTICS_EVENT]: {
     validation: e => (0, f.default)(e).required().keys({
       event_name: e.string().required(),
       event_properties: e.object().required()
@@ -31,19 +31,19 @@ t.default = {
       (0, c.validatePostMessageTransport)(n.transport), (0, c.validateApplication)(n.application);
       let r = n.application.id,
         f = (0, E.default)(),
-        _ = null == f ? void 0 : f.getGuildId();
+        h = null == f ? void 0 : f.getGuildId();
       if (null == f) throw new d.default({
-        errorCode: h.RPCErrors.INVALID_COMMAND
+        errorCode: _.RPCErrors.INVALID_COMMAND
       }, "Invalid channel");
       let C = i.default.getApplication(r);
-      if (!(0, u.hasFlag)(null !== (t = null == C ? void 0 : C.flags) && void 0 !== t ? t : 0, h.ApplicationFlags.EMBEDDED_FIRST_PARTY)) throw new d.default({
-        errorCode: h.RPCErrors.INVALID_COMMAND
+      if (!(0, u.hasFlag)(null !== (t = null == C ? void 0 : C.flags) && void 0 !== t ? t : 0, _.ApplicationFlags.EMBEDDED_FIRST_PARTY)) throw new d.default({
+        errorCode: _.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
       let S = (0, l.getActiveAnalyticsSessionIDs)(r),
         m = {
           activity_application_id: r,
           activity_channel_type: f.type,
-          activity_guild_id: _,
+          activity_guild_id: h,
           activity_user_session_id: null == S ? void 0 : S.activityUserSessionId
         };
       o.default.track(a, {
@@ -52,17 +52,17 @@ t.default = {
       })
     }
   },
-  [h.RPCCommands.GET_APPLICATION_TICKET]: {
-    scope: _.RPC_LOCAL_SCOPE,
+  [_.RPCCommands.GET_APPLICATION_TICKET]: {
+    scope: h.RPC_LOCAL_SCOPE,
     handler(e) {
       let {
         socket: t
       } = e, n = t.application.id;
       if (null == n) throw new d.default({
-        errorCode: h.RPCErrors.INVALID_COMMAND
+        errorCode: _.RPCErrors.INVALID_COMMAND
       }, "No application.");
       return a.HTTP.post({
-        url: h.Endpoints.APPLICATION_TICKET(n),
+        url: _.Endpoints.APPLICATION_TICKET(n),
         body: {
           test_mode: r.default.inTestModeForApplication(n) || s.default.inDevModeForApplication(n)
         },

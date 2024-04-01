@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return r
+    return a
   }
 });
-var a = s("593473");
+var n = s("593473");
 
-function r(e) {
-  let t = null != e.hash && "" !== e.hash ? (0, a.parse)(e.hash) : null;
+function a(e) {
+  let t = null != e.hash && "" !== e.hash ? (0, n.parse)(e.hash) : null;
   if ((null == t ? void 0 : t.token) != null) return t.token;
-  let s = null != e.search && "" !== e.search ? (0, a.parse)(e.search) : null;
+  let s = null != e.search && "" !== e.search ? (0, n.parse)(e.search) : null;
   return (null == s ? void 0 : s.token) != null ? s.token : null
 }

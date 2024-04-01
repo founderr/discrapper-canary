@@ -16,9 +16,9 @@ var n = s("399606"),
   E = s("335131"),
   T = s("410154"),
   I = s("300284"),
-  f = s("131951"),
+  S = s("131951"),
   R = s("78839"),
-  S = s("63063"),
+  f = s("63063"),
   m = s("74538"),
   A = s("494127"),
   N = s("687362"),
@@ -64,7 +64,7 @@ t.default = () => {
     flipped: ea
   } = (0, A.useWhatsNewAvatarDecoRollout)(), {
     flipped: ei
-  } = (0, A.useWhatsNewProfileFXRollout)(), er = (0, _.default)(f.default), en = (0, N.default)(), el = (0, I.default)({
+  } = (0, A.useWhatsNewProfileFXRollout)(), er = (0, _.default)(S.default), en = (0, N.default)(), el = (0, I.default)({
     scrollPosition: M.ProfileCustomizationScrollPositions.TRY_IT_OUT,
     analyticsLocations: e
   }), eo = () => {
@@ -126,7 +126,7 @@ t.default = () => {
           analyticsLocations: e
         })
       } : () => {
-        window.open(S.default.getArticleURL(P.HelpdeskArticles.CLIPS), "_blank")
+        window.open(f.default.getArticleURL(P.HelpdeskArticles.CLIPS), "_blank")
       },
       perkImage: G
     } : {

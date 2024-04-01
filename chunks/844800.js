@@ -1,7 +1,7 @@
 "use strict";
-n.r(t);
-var s, a, l, i, r = n("442837"),
-  u = n("570140");
+s.r(t);
+var n, a, l, i, r = s("442837"),
+  u = s("570140");
 let o = !1,
   d = null,
   c = null;
@@ -14,12 +14,12 @@ class f extends(i = r.default.Store) {
     }
   }
 }
-l = "HubEmailVerificationStore", (a = "displayName") in(s = f) ? Object.defineProperty(s, a, {
+l = "HubEmailVerificationStore", (a = "displayName") in(n = f) ? Object.defineProperty(n, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new f(u.default, {
+}) : n[a] = l, t.default = new f(u.default, {
   HUB_VERIFY_EMAIL_SUCCESS: function(e) {
     let {
       guildId: t

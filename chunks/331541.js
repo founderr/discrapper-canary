@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("442837"),
   f = n("116061"),
   E = n("481060"),
-  _ = n("232567"),
-  h = n("2052"),
+  h = n("232567"),
+  _ = n("2052"),
   C = n("393238"),
   S = n("727637"),
   m = n("420660"),
@@ -37,8 +37,8 @@ var a = n("735250"),
   x = n("695346"),
   b = n("199902"),
   U = n("293273"),
-  G = n("158776"),
-  j = n("594174"),
+  j = n("158776"),
+  G = n("594174"),
   w = n("881201"),
   k = n("26290"),
   F = n("626135"),
@@ -153,14 +153,14 @@ function $(e) {
     guildId: l,
     isApplicationStreaming: r,
     onClose: o,
-    onSelect: _,
+    onSelect: h,
     closePopout: b
-  } = e, U = (0, h.useAnalyticsContext)(), {
-    analyticsLocations: j
-  } = (0, p.default)(I.default.ACCOUNT_PROFILE_POPOUT), B = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([G.default], () => {
+  } = e, U = (0, _.useAnalyticsContext)(), {
+    analyticsLocations: G
+  } = (0, p.default)(I.default.ACCOUNT_PROFILE_POPOUT), B = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
     var e;
     let n = t.id;
-    return "string" != typeof n ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = G.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, G.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), G.default.getStatus(n), G.default.isMobileOnline(n)]
+    return "string" != typeof n ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = j.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), j.default.getStatus(n), j.default.isMobileOnline(n)]
   }), en = function(e, t) {
     let n = A.ExpiringStatusExperiment.useExperiment({
         location: "account popout"
@@ -272,7 +272,7 @@ function $(e) {
       showIconFirst: !0
     });
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
-    value: j,
+    value: G,
     children: (0, a.jsx)(O.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",
       userId: t.id,
@@ -313,7 +313,7 @@ function $(e) {
                 hideScroller: !0,
                 className: Q.menu,
                 onClose: o,
-                onSelect: _,
+                onSelect: h,
                 children: [(0, a.jsxs)(E.MenuGroup, {
                   children: [(0, a.jsx)(E.MenuItem, {
                     id: "status-picker",
@@ -336,7 +336,7 @@ function $(e) {
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,
                         guildId: l,
-                        analyticsLocations: j
+                        analyticsLocations: G
                       }), (0, E.openModalLazy)(() => new Promise(e => {
                         e(e => (0, a.jsx)(E.ModalRoot, {
                           ...e,
@@ -385,7 +385,7 @@ function $(e) {
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,
                         guildId: l,
-                        analyticsLocations: j
+                        analyticsLocations: G
                       }), (0, W.default)()
                     },
                     children: er
@@ -409,15 +409,15 @@ function ee(e) {
     guildId: l,
     onClose: i,
     onSelect: r
-  } = e, u = (0, c.useStateFromStores)([j.default], () => j.default.getUser(t), [t]), d = (0, c.useStateFromStores)([U.default], () => U.default.getCustomStatusActivity()), [f, E] = s.useState(!1), h = null != u ? u : n, C = (0, c.useStateFromStores)([b.default], () => null != h && null != b.default.getAnyStreamForUser(h.id));
+  } = e, u = (0, c.useStateFromStores)([G.default], () => G.default.getUser(t), [t]), d = (0, c.useStateFromStores)([U.default], () => U.default.getCustomStatusActivity()), [f, E] = s.useState(!1), _ = null != u ? u : n, C = (0, c.useStateFromStores)([b.default], () => null != _ && null != b.default.getAnyStreamForUser(_.id));
   return (s.useEffect(() => {
     null == u && e();
     async function e() {
-      "string" == typeof t && (await (0, _.getUser)(t), E(!0))
+      "string" == typeof t && (await (0, h.getUser)(t), E(!0))
     }
-  }, [u, t]), null == h) ? (f && o()(null != h, "Unexpected missing user"), null) : (0, a.jsx)($, {
+  }, [u, t]), null == _) ? (f && o()(null != _, "Unexpected missing user"), null) : (0, a.jsx)($, {
     closePopout: i,
-    user: h,
+    user: _,
     customStatus: d,
     guildId: l,
     isApplicationStreaming: C,

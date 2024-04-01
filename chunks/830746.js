@@ -12,8 +12,8 @@ var s = n("399606"),
   c = n("780985"),
   f = n("631885"),
   E = n("552045"),
-  _ = n("87792"),
-  h = n("302289"),
+  h = n("87792"),
+  _ = n("302289"),
   C = n("946690"),
   S = n("456771"),
   m = n("292352"),
@@ -48,7 +48,7 @@ t.default = () => {
         header: I.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
         description: A
       })]
-    }), 0 === e.length ? (0, a.jsx)(h.default, {}) : null, void 0 !== t && e.length > 0 ? (0, a.jsx)(_.default, {
+    }), 0 === e.length ? (0, a.jsx)(_.default, {}) : null, void 0 !== t && e.length > 0 ? (0, a.jsx)(h.default, {
       user: t
     }) : null]
   })

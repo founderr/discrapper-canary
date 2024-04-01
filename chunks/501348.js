@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return K
+    return W
   }
 }), s("47120");
 var a = s("735250"),
@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("514361"),
   g = s("605236"),
   h = s("786761"),
-  N = s("3148"),
-  I = s("739566"),
+  I = s("3148"),
+  N = s("739566"),
   p = s("753206"),
   C = s("594174"),
   A = s("285952"),
@@ -59,35 +59,35 @@ let G = {
   Y = e => {
     let t = 0;
     return [(0, h.createMessageRecord)({
-      ...(0, N.default)({
+      ...(0, I.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, h.createMessageRecord)({
-      ...(0, N.default)({
+      ...(0, I.default)({
         channelId: V,
         content: (0, d.isThemeDark)(e) ? U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, h.createMessageRecord)({
-      ...(0, N.default)({
+      ...(0, I.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, h.createMessageRecord)({
-      ...(0, N.default)({
+      ...(0, I.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, h.createMessageRecord)({
-      ...(0, N.default)({
+      ...(0, I.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
       }),
@@ -95,7 +95,7 @@ let G = {
       id: "".concat(t)
     })]
   };
-class W extends n.Component {
+class K extends n.Component {
   renderZoomSlider() {
     return x.isPlatformEmbedded ? (0, a.jsxs)(u.FormItem, {
       className: B.marginTop20,
@@ -185,7 +185,7 @@ class W extends n.Component {
         outline: !0,
         "aria-hidden": !0,
         children: l.map((t, s) => (0, a.jsx)(p.default, {
-          author: (0, I.getMessageAuthor)(t),
+          author: (0, N.getMessageAuthor)(t),
           message: t,
           compact: e,
           isGroupStart: s % 2 == 0,
@@ -327,7 +327,7 @@ class W extends n.Component {
   }
 }
 
-function K() {
+function W() {
   let e = v.MessageDisplayCompact.useSetting(),
     t = v.InlineEmbedMedia.useSetting(),
     s = v.RenderEmbeds.useSetting(),
@@ -359,7 +359,7 @@ function K() {
       gradientPreset: _.default.gradientPreset
     }
   });
-  return (0, a.jsx)(W, {
+  return (0, a.jsx)(K, {
     messageDisplayCompact: e,
     hideSimpleEmbedContent: t && s,
     clientTheme: l,

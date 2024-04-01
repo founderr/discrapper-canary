@@ -18,15 +18,15 @@ t.default = e => {
     giftMessage: i,
     subscriptionTier: E,
     ...T
-  } = e, I = (0, o.default)(), f = (0, n.isThemeDark)(I) || s, R = f ? l.ButtonColors.WHITE : l.ButtonColors.BRAND, S = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
+  } = e, I = (0, o.default)(), S = (0, n.isThemeDark)(I) || s, R = S ? l.ButtonColors.WHITE : l.ButtonColors.BRAND, f = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
   return (0, a.jsx)(u.default, {
     isGift: !0,
     color: R,
     look: l.ButtonLooks.OUTLINED,
     hover: l.ButtonHovers.BRAND,
-    buttonText: S,
+    buttonText: f,
     giftMessage: i,
-    className: r()(t, f ? _.buttonWhite : _.buttonBrand),
+    className: r()(t, S ? _.buttonWhite : _.buttonBrand),
     subscriptionTier: E,
     ...T
   })

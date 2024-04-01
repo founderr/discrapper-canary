@@ -12,8 +12,8 @@ var s = n("45792"),
   c = n("40851"),
   f = n("566620"),
   E = n("596223"),
-  _ = n("838195"),
-  h = n("928518"),
+  h = n("838195"),
+  _ = n("928518"),
   C = n("592125"),
   S = n("293273"),
   m = n("885110"),
@@ -163,7 +163,7 @@ t.default = {
       } = e, {
         channel: s,
         guild: i
-      } = (0, L.validateOpenInviteDialog)(), r = h.default.getWindow(y.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+      } = (0, L.validateOpenInviteDialog)(), r = _.default.getWindow(y.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
       (null == r ? void 0 : r.closed) && (r = null);
       let o = null != r ? y.AppContext.POPOUT : y.AppContext.APP;
       (0, A.exitFullScreen)({}, null == r ? void 0 : r.document), (0, l.openModalLazy)(async () => {
@@ -260,7 +260,7 @@ t.default = {
       if (!g.default.isDiscordCdnUrl(a)) throw new N.default({
         errorCode: y.RPCErrors.INVALID_PAYLOAD
       }, "mediaUrl must be a Discord CDN url");
-      (0, _.openActivityShareMomentModal)({
+      (0, h.openActivityShareMomentModal)({
         applicationId: s,
         channelId: l.id,
         mediaUrl: a

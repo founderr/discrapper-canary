@@ -16,8 +16,8 @@ var a, s, l = n("735250"),
   c = n("403404"),
   f = n("100527"),
   E = n("906732"),
-  _ = n("592125"),
-  h = n("810090"),
+  h = n("592125"),
+  _ = n("810090"),
   C = n("626135"),
   S = n("981631"),
   m = n("921944"),
@@ -74,7 +74,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       })
     }, [A]);
     let x = (0, u.useAppContext)() === S.AppContext.POPOUT,
-      b = (0, r.useStateFromStores)([_.default], () => _.default.getChannel(t), [t]);
+      b = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
     return (0, l.jsx)(E.AnalyticsLocationProvider, {
       value: D,
       children: (0, l.jsx)("div", {
@@ -83,7 +83,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
           className: p.container,
           children: (0, l.jsxs)("div", {
             className: p.content,
-            children: [(0, l.jsx)(h.default, {
+            children: [(0, l.jsx)(_.default, {
               className: p.video,
               src: M,
               poster: P,

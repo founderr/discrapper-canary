@@ -12,8 +12,8 @@ var s = n("481060"),
   c = n("131951"),
   f = n("449224"),
   E = n("358085"),
-  _ = n("452426"),
-  h = n("736045"),
+  h = n("452426"),
+  _ = n("736045"),
   C = n("186901"),
   S = n("981631");
 t.default = {
@@ -23,14 +23,14 @@ t.default = {
     },
     handler() {
       let e = c.default.isVideoEnabled();
-      null != (0, h.default)() && (e ? l.default.setVideoEnabled(!1) : (0, u.default)(() => l.default.setVideoEnabled(!0), S.AppContext.APP))
+      null != (0, _.default)() && (e ? l.default.setVideoEnabled(!1) : (0, u.default)(() => l.default.setVideoEnabled(!0), S.AppContext.APP))
     }
   },
   [S.RPCCommands.TOGGLE_SCREENSHARE]: {
     scope: {
       [C.RPC_SCOPE_CONFIG.ALL]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_SCREENSHARE_WRITE]
     },
-    validation: e => (0, _.default)(e).optional().keys({
+    validation: e => (0, h.default)(e).optional().keys({
       pid: e.number().optional().min(0)
     }),
     handler(e) {
@@ -38,12 +38,12 @@ t.default = {
         args: {
           pid: t
         }
-      } = e, l = d.default.getCurrentUserActiveStream(), u = d.default.getStreamerActiveStreamMetadata(), c = (0, o.default)(r.default, f.default), _ = (0, h.default)();
-      null != _ && (null != t && null != u && u.pid !== t && (0, E.isWindows)() ? (0, i.startStream)(_.guild_id, _.id, {
+      } = e, l = d.default.getCurrentUserActiveStream(), u = d.default.getStreamerActiveStreamMetadata(), c = (0, o.default)(r.default, f.default), h = (0, _.default)();
+      null != h && (null != t && null != u && u.pid !== t && (0, E.isWindows)() ? (0, i.startStream)(h.guild_id, h.id, {
         pid: t
-      }) : null != l ? (0, i.stopOwnStream)(!1) : null != t && (0, E.isWindows)() ? (0, i.startStream)(_.guild_id, _.id, {
+      }) : null != l ? (0, i.stopOwnStream)(!1) : null != t && (0, E.isWindows)() ? (0, i.startStream)(h.guild_id, h.id, {
         pid: t
-      }) : null != c ? (0, i.startStream)(_.guild_id, _.id, {
+      }) : null != c ? (0, i.startStream)(h.guild_id, h.id, {
         pid: c.pid
       }) : (0, s.openModalLazy)(async () => {
         let {
@@ -51,7 +51,7 @@ t.default = {
         } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477")]).then(n.bind(n, "60594"));
         return t => (0, a.jsx)(e, {
           ...t,
-          guildId: _.guild_id,
+          guildId: h.guild_id,
           analyticsLocation: S.AnalyticsLocations.ACTIVITY_RPC
         })
       }))

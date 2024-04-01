@@ -73,7 +73,7 @@ t.default = function(e) {
         onClick: () => (0, s.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([i.e("99387"), i.e("27933")]).then(i.bind(i, "694278"));
+          } = await Promise.all([i.e("99387"), i.e("72458")]).then(i.bind(i, "694278"));
           return i => (0, a.jsx)(e, {
             ...i,
             guild: t

@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("481060"),
   f = n("150063"),
   E = n("112724"),
-  _ = n("183126"),
-  h = n("607070"),
+  h = n("183126"),
+  _ = n("607070"),
   C = n("209613"),
   S = n("325708"),
   m = n("320149"),
@@ -33,8 +33,8 @@ var a = n("735250"),
   x = n("819640"),
   b = n("916187"),
   U = n("151827"),
-  G = n("626135"),
-  j = n("792125"),
+  j = n("626135"),
+  G = n("792125"),
   w = n("647090"),
   k = n("385956"),
   F = n("610697"),
@@ -59,7 +59,7 @@ function en() {
     t = (0, Y.useMessageRequestsCount)(),
     n = (0, W.default)(),
     l = (0, B.useListHasSingleMessageRequest)(),
-    u = (0, _.useIsRejectAllMessageRequestsEnabled)(),
+    u = (0, h.useIsRejectAllMessageRequestsEnabled)(),
     d = s.useCallback(() => {
       (0, c.showToast)((0, c.createToast)($.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE))
     }, []),
@@ -70,7 +70,7 @@ function en() {
     }),
     E = (0, C.default)("message-requests-list"),
     {
-      channelId: h
+      channelId: _
     } = (0, V.useMessageRequestSidebarState)(),
     S = s.useCallback(() => {
       f(n.map(e => e.channel.id))
@@ -83,14 +83,14 @@ function en() {
       return (0, a.jsx)(q.default, {
         index: r,
         className: i()({
-          [ee.selected]: null != h && h === d,
-          [ee.siblingSelected]: null != h && h === u
+          [ee.selected]: null != _ && _ === d,
+          [ee.siblingSelected]: null != _ && _ === u
         }),
         channel: o.channel,
         user: o.user,
         hasSingleMessageRequest: l
       }, d)
-    }, [l, n, h]),
+    }, [l, n, _]),
     I = s.useCallback(() => (0, a.jsxs)(U.default, {
       className: ee.sectionTitle,
       children: [t > 0 ? $.default.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
@@ -185,7 +185,7 @@ let es = function(e) {
   el = e => {
     let t = (0, F.default)(),
       n = () => x.default.hasLayers() || (0, c.hasAnyModalOpen)(),
-      l = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion);
+      l = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion);
     return s.useEffect(() => {
       (0, p.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
     }, []), (0, a.jsx)(T.default, {
@@ -234,7 +234,7 @@ let er = (0, E.default)(function(e) {
     width: t
   } = e, n = (0, Y.useMessageRequestsCount)();
   s.useEffect(() => {
-    f.setHomeLink(X.Routes.MESSAGE_REQUESTS), (0, L.trackAppUIViewed)("message-requests"), G.default.track(X.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
+    f.setHomeLink(X.Routes.MESSAGE_REQUESTS), (0, L.trackAppUIViewed)("message-requests"), j.default.track(X.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
       num_message_requests: n
     }), A.default.increment({
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
@@ -243,17 +243,17 @@ let er = (0, E.default)(function(e) {
   let l = (0, u.useStateFromStores)([M.default], () => M.default.theme),
     r = (0, K.useSpamMessageRequestCount)(),
     [d, E] = s.useState(!1),
-    _ = (0, u.useStateFromStores)([y.default], () => {
+    h = (0, u.useStateFromStores)([y.default], () => {
       let e = y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
       return null != e && e.type === v.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
     }),
-    h = null == _ ? void 0 : _.channelId,
-    C = null != _,
-    S = (0, k.useIsEitherTypeOfMessageRequest)(h),
-    m = (0, w.useHasUserRepliedInChannel)(h);
+    _ = null == h ? void 0 : h.channelId,
+    C = null != h,
+    S = (0, k.useIsEitherTypeOfMessageRequest)(_),
+    m = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != h && !S && m && C && ((0, R.transitionToChannel)(h), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
-  }, [h, m, C, S]);
+    null != _ && !S && m && C && ((0, R.transitionToChannel)(_), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+  }, [_, m, C, S]);
   let [p, T] = s.useState(Z.MessageRequestSections.REQUESTS);
   return (0, I.usePageTitle)({
     location: $.default.Messages.MESSAGE_REQUESTS
@@ -264,7 +264,7 @@ let er = (0, E.default)(function(e) {
         [et.threadSidebarFloating]: C && d
       }),
       children: [(0, a.jsxs)(g.default, {
-        className: (0, j.getThemeClass)(l),
+        className: (0, G.getThemeClass)(l),
         toolbar: !0,
         children: [(0, a.jsx)(g.default.Icon, {
           icon: b.default,

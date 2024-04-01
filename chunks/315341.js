@@ -18,10 +18,10 @@ function E(e, t) {
   }), null == e.userContent.dismissedContents && (e.userContent.dismissedContents = new Uint8Array), !(0, u.hasBit)(e.userContent.dismissedContents, t) && (e.userContent.dismissedContents = (0, u.addBit)(e.userContent.dismissedContents, t), n = !0), n
 }
 
-function _(e, t, n) {
+function h(e, t, n) {
   return !!r.HotspotStore.hasHiddenHotspot(t) && E(e, n)
 }
-let h = [{
+let _ = [{
   version: 2,
   run(e) {
     var t, n, a;
@@ -105,21 +105,21 @@ let h = [{
   cleanup() {}
 }, {
   version: 7,
-  run: e => _(e, r.HotspotLocations.APPLICATION_COMMAND_TOOLTIP, s.DismissibleContent.APPLICATION_COMMAND_TOOLTIP),
+  run: e => h(e, r.HotspotLocations.APPLICATION_COMMAND_TOOLTIP, s.DismissibleContent.APPLICATION_COMMAND_TOOLTIP),
   cleanup() {}
 }, {
   version: 8,
-  run: e => _(e, r.HotspotLocations.CHANNEL_BANNER_MEMBER_LIST_NOTICE, s.DismissibleContent.CHANNELINFO_CHANNELBANNER_NOTICE),
+  run: e => h(e, r.HotspotLocations.CHANNEL_BANNER_MEMBER_LIST_NOTICE, s.DismissibleContent.CHANNELINFO_CHANNELBANNER_NOTICE),
   cleanup() {}
 }, {
   version: 9,
-  run: e => (r.HotspotStore.hasHiddenHotspot(r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP) && i.Storage.set(f.MULTIACCOUNT_TOOLTIP_SEEN_KEY, "true"), _(e, r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, s.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
+  run: e => (r.HotspotStore.hasHiddenHotspot(r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP) && i.Storage.set(f.MULTIACCOUNT_TOOLTIP_SEEN_KEY, "true"), h(e, r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, s.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
   cleanup() {}
 }, {
   version: 10,
   run(e) {
     var t;
-    let n = _(e, r.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, s.DismissibleContent.CHANNEL_NOTICE_HUBLINK),
+    let n = h(e, r.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, s.DismissibleContent.CHANNEL_NOTICE_HUBLINK),
       a = null !== (t = i.Storage.get("channelNotices")) && void 0 !== t ? t : {};
     return !1 === a[c.ChannelNoticeTypes.INVITE] && E(e, s.DismissibleContent.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === a[c.ChannelNoticeTypes.QUICKSWITCHER] && E(e, s.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === a[c.ChannelNoticeTypes.GUILD_BOOSTING] && E(e, s.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n
   },
@@ -130,7 +130,7 @@ let h = [{
   version: 11,
   run(e) {
     let t = !1;
-    return _(e, r.HotspotLocations.GUILD_EVENT_UPSELL, s.DismissibleContent.GUILD_HEADER_EVENT_UPSELL) && (t = !0), _(e, r.HotspotLocations.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS) && (t = !0), _(e, r.HotspotLocations.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_ANIMATED_GUILD_BANNER) && (t = !0), t
+    return h(e, r.HotspotLocations.GUILD_EVENT_UPSELL, s.DismissibleContent.GUILD_HEADER_EVENT_UPSELL) && (t = !0), h(e, r.HotspotLocations.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS) && (t = !0), h(e, r.HotspotLocations.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_ANIMATED_GUILD_BANNER) && (t = !0), t
   },
   cleanup() {}
 }, {
@@ -146,18 +146,18 @@ let h = [{
   version: 13,
   run(e) {
     let t = !1;
-    return i.Storage.get("hidePremiumPromo") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), i.Storage.get("hidePremiumTier2TrialEnding") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), i.Storage.get("hidePremiumReactivateNotice") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), _(e, r.HotspotLocations.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t
+    return i.Storage.get("hidePremiumPromo") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), i.Storage.get("hidePremiumTier2TrialEnding") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), i.Storage.get("hidePremiumReactivateNotice") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), h(e, r.HotspotLocations.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t
   },
   cleanup() {
     i.Storage.remove("hidePremiumPromo"), i.Storage.remove("hidePremiumTier2TrialEnding"), i.Storage.remove("hidePremiumReactivateNotice")
   }
 }, {
   version: 14,
-  run: e => _(e, r.HotspotLocations.ACTIVITY_BEB_TUTORIAL, s.DismissibleContent.ACTIVITIES_TUTORIAL_COACH_MARK),
+  run: e => h(e, r.HotspotLocations.ACTIVITY_BEB_TUTORIAL, s.DismissibleContent.ACTIVITIES_TUTORIAL_COACH_MARK),
   cleanup() {}
 }, {
   version: 15,
-  run: e => _(e, r.HotspotLocations.NOW_PLAYING_CONSENT_CARD, s.DismissibleContent.NOW_PLAYING_CONSENT_CARD),
+  run: e => h(e, r.HotspotLocations.NOW_PLAYING_CONSENT_CARD, s.DismissibleContent.NOW_PLAYING_CONSENT_CARD),
   cleanup() {}
 }, {
   version: 16,
@@ -189,7 +189,7 @@ let h = [{
   version: 18,
   run(e) {
     let t = !1;
-    return _(e, r.HotspotLocations.GUILD_DELETE_FEEDBACK, s.DismissibleContent.GUILD_DELETE_FEEDBACK) && (t = !0), _(e, r.HotspotLocations.GUILD_LEAVE_FEEDBACK, s.DismissibleContent.GUILD_LEAVE_FEEDBACK) && (t = !0), t
+    return h(e, r.HotspotLocations.GUILD_DELETE_FEEDBACK, s.DismissibleContent.GUILD_DELETE_FEEDBACK) && (t = !0), h(e, r.HotspotLocations.GUILD_LEAVE_FEEDBACK, s.DismissibleContent.GUILD_LEAVE_FEEDBACK) && (t = !0), t
   },
   cleanup() {}
 }, {
@@ -203,4 +203,4 @@ let h = [{
     i.Storage.remove("forumHelperCardStorageKey")
   }
 }];
-t.default = h
+t.default = _

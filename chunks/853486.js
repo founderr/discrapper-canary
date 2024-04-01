@@ -13,8 +13,8 @@ var a = s("735250"),
   I = s("395716"),
   f = s("673885"),
   T = s("981631"),
-  _ = s("689938"),
-  R = s("35913");
+  R = s("689938"),
+  _ = s("35913");
 t.default = function(e) {
   let {
     guild: t,
@@ -30,12 +30,12 @@ t.default = function(e) {
       toolbar: (0, a.jsx)(r.default.Icon, {
         icon: n.default,
         onClick: N,
-        tooltip: _.default.Messages.CLOSE
+        tooltip: R.default.Messages.CLOSE
       }),
       children: [(0, a.jsx)(r.default.Icon, {
         icon: u.default,
         disabled: !0,
-        "aria-label": _.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION
+        "aria-label": R.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION
       }), (0, a.jsx)(i.Heading, {
         variant: "heading-md/semibold",
         children: o.default.getName(S)
@@ -46,7 +46,7 @@ t.default = function(e) {
       guild: t
     }), (0, a.jsxs)(i.Scroller, {
       children: [(0, a.jsxs)("div", {
-        className: R.container,
+        className: _.container,
         children: [(0, a.jsx)(f.default, {
           user: S,
           guildId: t.id
@@ -54,7 +54,7 @@ t.default = function(e) {
           joinRequest: s
         })]
       }), (0, a.jsx)("div", {
-        className: R.disabledFormRenderer,
+        className: _.disabledFormRenderer,
         children: (0, a.jsx)(c.default, {
           guildId: t.id,
           formFields: A,

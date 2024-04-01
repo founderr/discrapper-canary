@@ -14,8 +14,8 @@ var a, s = n("735250"),
   c = n("477690"),
   f = n("481060"),
   E = n("570140"),
-  _ = n("239091"),
-  h = n("287259"),
+  h = n("239091"),
+  _ = n("287259"),
   C = n("404133"),
   S = n("785547"),
   m = n("490983"),
@@ -44,8 +44,8 @@ function b(e, t, n) {
   }) : e[t] = n, e
 }
 let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
-  G = (0, P.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
-  j = Object.freeze({
+  j = (0, P.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
+  G = Object.freeze({
     [y.GameTableListKeys.PLATFORM]: "Platform",
     [y.GameTableListKeys.LAST_PLAYED]: "Last Played",
     [y.GameTableListKeys.NAME]: "Name"
@@ -153,7 +153,7 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
             libraryApplication: e.libraryApplication
           })]
         }), (0, L.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(S.default, {
-          analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(j[a], " ").concat(i === y.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
+          analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(G[a], " ").concat(i === y.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
           analyticsListIndex: n,
           source: y.AnalyticsLocations.APPLICATION_LIBRARY,
           libraryApplication: e.libraryApplication,
@@ -215,14 +215,14 @@ class B extends(a = l.PureComponent) {
     let t = this.props.activeRowKey;
     if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
       let e = this._rowRefs[t];
-      null != e && (E.default.wait(_.closeContextMenu), this.props.scrollToRow(e, U))
+      null != e && (E.default.wait(h.closeContextMenu), this.props.scrollToRow(e, U))
     }
   }
   handleHighlightedApplicationKey() {
     let {
       highlightedApplicationKey: e
     } = this.state;
-    null != e && null != this._rowRefs[e] && (this.props.scrollToRow(this._rowRefs[e], U), new d.Timeout().start(G, () => {
+    null != e && null != this._rowRefs[e] && (this.props.scrollToRow(this._rowRefs[e], U), new d.Timeout().start(j, () => {
       !this._didUnmount && this.setState({
         highlightedApplicationKey: null
       })
@@ -278,7 +278,7 @@ class B extends(a = l.PureComponent) {
     })
   }
   handleSort(e, t) {
-    h.sortList(e, t)
+    _.sortList(e, t)
   }
   renderImportHelp() {
     let e;
@@ -368,9 +368,9 @@ class B extends(a = l.PureComponent) {
         overflowMenuRowKey: null
       })
     }), b(this, "handleRowMouseEnter", e => {
-      !this.props.isNavigatingByKeyboard && h.updateActiveRowKey(e.key)
+      !this.props.isNavigatingByKeyboard && _.updateActiveRowKey(e.key)
     }), b(this, "handleRowMouseLeave", () => {
-      !this.props.isNavigatingByKeyboard && h.updateActiveRowKey(null)
+      !this.props.isNavigatingByKeyboard && _.updateActiveRowKey(null)
     }), b(this, "setRowRef", (e, t) => {
       this._rowRefs[t] = e
     }), b(this, "handleApplicationContextMenu", (e, t) => {
@@ -378,7 +378,7 @@ class B extends(a = l.PureComponent) {
       let {
         analyticsContext: a
       } = this.props;
-      (0, _.openContextMenuLazy)(e, async () => {
+      (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.e("98335").then(n.bind(n, "485292"));

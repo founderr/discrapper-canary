@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("735250");
@@ -17,7 +17,7 @@ var s = n("803997"),
   f = n("689938"),
   E = n("149695");
 
-function _(e) {
+function h(e) {
   let {
     className: t,
     markAsDismissed: n

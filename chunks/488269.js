@@ -24,7 +24,7 @@ function f(e) {
     sound: f,
     openedCount: m,
     index: _
-  } = e, g = m > 0, h = n.useRef(null), N = n.useRef(null), [I, p] = n.useState(!1), [C, A] = n.useState({
+  } = e, g = m > 0, h = n.useRef(null), I = n.useRef(null), [N, p] = n.useState(!1), [C, A] = n.useState({
     x: 0,
     y: 0
   }), [O] = n.useState(new r.Interval), [x, R] = (0, l.useSpring)(() => ({
@@ -36,7 +36,7 @@ function f(e) {
     config: T
   }));
   n.useEffect(() => {
-    if (g && I && null != h.current) {
+    if (g && N && null != h.current) {
       let e = h.current.getBoundingClientRect(),
         t = C.x - e.x,
         s = C.y - e.y,
@@ -47,11 +47,11 @@ function f(e) {
         y: -((s - n) / n * 25)
       })
     }
-  }, [I, g, C.x, C.y, R]), n.useEffect(() => {
+  }, [N, g, C.x, C.y, R]), n.useEffect(() => {
     v({
-      value: g && I ? 1.2 : 1
+      value: g && N ? 1.2 : 1
     })
-  }, [I, g, v]);
+  }, [N, g, v]);
   let D = n.useCallback(e => {
       A({
         x: e.clientX,
@@ -71,15 +71,15 @@ function f(e) {
       })
     }, [R]),
     j = n.useCallback(() => {
-      if (null != N.current) {
-        let e = N.current.currentTime / N.current.duration;
+      if (null != I.current) {
+        let e = I.current.currentTime / I.current.duration;
         v({
           value: (0, u.default)(1, 1.2, e)
-        }), e >= 1 && (!I && v({
+        }), e >= 1 && (!N && v({
           value: 1
         }), O.stop())
       }
-    }, [O, I, v]);
+    }, [O, N, v]);
   n.useEffect(() => {
     null != O._ref && O.start(30, j)
   }, [O, j]);
@@ -87,12 +87,12 @@ function f(e) {
     d.default.track(c.AnalyticEvents.EASTER_EGG_INTERACTED, {
       type: "packages_item_click",
       position: _
-    }), null != N.current && (N.current.currentTime = 0, N.current.play(), O.start(30, j))
+    }), null != I.current && (I.current.currentTime = 0, I.current.play(), O.start(30, j))
   }, [O, j, _]);
   return (0, a.jsxs)(o.Clickable, {
     onClick: g ? b : void 0,
     children: [(0, a.jsx)("audio", {
-      ref: N,
+      ref: I,
       preload: "auto",
       children: (0, a.jsx)("source", {
         src: f,

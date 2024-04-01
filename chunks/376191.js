@@ -16,8 +16,8 @@ var s = n("442837"),
   c = n("699516"),
   f = n("51144"),
   E = n("998502"),
-  _ = n("620924"),
-  h = n("81471"),
+  h = n("620924"),
+  _ = n("81471"),
   C = n("689938"),
   S = n("548847");
 let m = E.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
@@ -28,7 +28,7 @@ function I(e) {
     channel: n,
     otherUser: E,
     active: I
-  } = e, p = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), T = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), g = (0, _.useMessageRequestRelativeTimestampText)(n), {
+  } = e, p = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), T = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), g = (0, h.useMessageRequestRelativeTimestampText)(n), {
     avatarDecorationSrc: A
   } = (0, u.default)({
     user: E,
@@ -61,7 +61,7 @@ function I(e) {
         })]
       }), (0, a.jsx)("div", {
         className: S.messagePreview,
-        children: (0, a.jsx)(h.default, {
+        children: (0, a.jsx)(_.default, {
           channel: n
         })
       })]

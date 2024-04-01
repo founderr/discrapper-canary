@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("873546"),
   f = n("442837"),
   E = n("481060"),
-  _ = n("570140"),
-  h = n("212093"),
+  h = n("570140"),
+  _ = n("212093"),
   C = n("827837"),
   S = n("785570"),
   m = n("252618"),
@@ -37,8 +37,8 @@ var a = n("735250"),
   x = n("296386"),
   b = n("150192"),
   U = n("584885"),
-  G = n("59222"),
-  j = n("749436"),
+  j = n("59222"),
+  G = n("749436"),
   w = n("26580"),
   k = n("731455"),
   F = n("981631"),
@@ -68,7 +68,7 @@ class K extends s.PureComponent {
       currentHomepageCategoryId: r,
       mostRecentQuery: o
     } = this.props;
-    if ((0, C.fetchActivityStatistics)(), (0, x.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, h.createAlgoliaIndex)(), _.default.wait(() => {
+    if ((0, C.fetchActivityStatistics)(), (0, x.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, _.createAlgoliaIndex)(), h.default.wait(() => {
         (0, S.markView)(F.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
       }), !a && 0 === o.length && M.trackDiscoveryViewed({
         loadId: this.loadId,
@@ -83,7 +83,7 @@ class K extends s.PureComponent {
         preferredLocale: a,
         categoryId: s
       } = u.parse(i);
-      (0, h.doAlgoliaSearch)(e, {
+      (0, _.doAlgoliaSearch)(e, {
         categoryId: parseInt(s, 10),
         preferredLocale: a,
         offset: parseInt(t, 10),
@@ -92,7 +92,7 @@ class K extends s.PureComponent {
         },
         length: parseInt(n, 10)
       })
-    } else null != r && r !== k.DISCOVERY_ALL_CATEGORIES_ID && _.default.wait(() => (0, h.selectCategory)(r));
+    } else null != r && r !== k.DISCOVERY_ALL_CATEGORIES_ID && h.default.wait(() => (0, _.selectCategory)(r));
     let d = null !== (t = null === (e = (0, T.getHistory)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
     d > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({
       to: d
@@ -120,7 +120,7 @@ class K extends s.PureComponent {
         to: 0
       })
     }
-    e.currentCategoryId !== i && M.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && s.length < 1 && l !== i && (0, h.selectCategory)(l)
+    e.currentCategoryId !== i && M.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && s.length < 1 && l !== i && (0, _.selectCategory)(l)
   }
   componentWillUnmount() {
     let {
@@ -152,7 +152,7 @@ class K extends s.PureComponent {
       analyticsContext: M.AnalyticsContexts.RECOMMENDED,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
-      fetchGuilds: h.fetchGamesYouPlayGuilds,
+      fetchGuilds: _.fetchGamesYouPlayGuilds,
       theme: n
     }) : null
   }
@@ -183,7 +183,7 @@ class K extends s.PureComponent {
     }) : r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : B.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: u
     }), f = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[r]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
-    return (0, a.jsx)(j.default, {
+    return (0, a.jsx)(G.default, {
       loadId: this.loadId,
       searchResults: f,
       mostRecentQuery: n,
@@ -212,7 +212,7 @@ class K extends s.PureComponent {
     } = this.state, f = u === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : B.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: d
     }), E = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[u]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
-    return (0, a.jsx)(G.default, {
+    return (0, a.jsx)(j.default, {
       loadId: this.loadId,
       availableLanguages: l,
       defaultLanguage: i,
@@ -244,7 +244,7 @@ class K extends s.PureComponent {
       analyticsContext: M.AnalyticsContexts.POPULAR,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
-      fetchGuilds: () => (0, h.fetchFeaturedOrPopularGuilds)(0, 30),
+      fetchGuilds: () => (0, _.fetchFeaturedOrPopularGuilds)(0, 30),
       loadingGuildId: n,
       theme: t,
       onTagClick: (e, t) => this.handleTagSearch(e, t, M.AnalyticsContexts.POPULAR)
@@ -266,7 +266,7 @@ class K extends s.PureComponent {
       analyticsContext: M.AnalyticsContexts.POPULAR,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
-      fetchGuilds: () => (0, h.fetchPopularGuildsForCategory)(n),
+      fetchGuilds: () => (0, _.fetchPopularGuildsForCategory)(n),
       currentCategoryId: n,
       theme: t,
       onTagClick: (e, t) => this.handleTagSearch(e, t, M.AnalyticsContexts.POPULAR)
@@ -289,18 +289,18 @@ class K extends s.PureComponent {
       location: "54961b_4"
     }, {
       autoTrackExposure: !1
-    }), _ = r === k.DISCOVERY_ALL_CATEGORIES_ID ? null === (e = u[F.GuildDiscoverySections.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = u[r]) || void 0 === t ? void 0 : t.guilds;
+    }), h = r === k.DISCOVERY_ALL_CATEGORIES_ID ? null === (e = u[F.GuildDiscoverySections.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = u[r]) || void 0 === t ? void 0 : t.guilds;
     if (r === k.DISCORD_HUB_ID) return (0, a.jsx)(p.default, {
       loadId: this.loadId
     });
-    let h = r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_HOME_TITLE : B.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
+    let _ = r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_HOME_TITLE : B.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
       categoryName: n
     });
     return (0, a.jsxs)("div", {
       className: H.pageWrapper,
       children: [(0, a.jsx)(m.AppPageTitle, {
         subsection: d ? l : void 0,
-        location: h
+        location: _
       }), (0, a.jsx)("div", {
         className: i()(H.dragRegion, H.pageHeaderDrag, {
           [H.searchPageDrag]: d
@@ -343,7 +343,7 @@ class K extends s.PureComponent {
                     className: H.headerTagContainer,
                     discoveryTagStyle: w.DiscoveryTagStyle.LIGHT,
                     onTagClick: e => this.handleTagSearch(e, void 0, M.AnalyticsContexts.HEADER),
-                    tags: o().chain(_).flatMap(e => e.keywords).compact().uniq().sampleSize(10).value()
+                    tags: o().chain(h).flatMap(e => e.keywords).compact().uniq().sampleSize(10).value()
                   })]
                 })
               })]
@@ -430,12 +430,12 @@ class K extends s.PureComponent {
       let l = {
         approximate_member_count: M.MINIMUM_MEMBER_COUNT
       };
-      (0, h.getSearchResultsCount)(e, l), (0, h.doAlgoliaSearch)(e, {
+      (0, _.getSearchResultsCount)(e, l), (0, _.doAlgoliaSearch)(e, {
         filters: l,
         categoryId: a,
         preferredLocale: s.code,
         offset: 0,
-        length: G.MAX_GUILDS_PER_PAGE,
+        length: j.MAX_GUILDS_PER_PAGE,
         tag: !0
       }), M.trackTagSearchStarted(this.loadId, a, n, t), this.scrollToTop()
     })

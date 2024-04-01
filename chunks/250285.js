@@ -16,8 +16,8 @@ t.default = e => {
     userId: t,
     children: n,
     isLast: l,
-    className: _
-  } = e, [h, C] = s.useState(!1), {
+    className: h
+  } = e, [_, C] = s.useState(!1), {
     analyticsLocations: S
   } = (0, d.default)(), m = s.useCallback(() => {
     (0, c.openUserProfileModal)({
@@ -43,15 +43,15 @@ t.default = e => {
         style: {
           opacity: 1
         },
-        className: i()(E.rowItem, _, {
+        className: i()(E.rowItem, h, {
           [E.last]: l,
-          [E.active]: h
+          [E.active]: _
         }),
         onMouseEnter: I,
         onMouseLeave: p,
         onClick: m,
         ...e,
-        children: n(h)
+        children: n(_)
       })
     })
   })

@@ -28,7 +28,7 @@ function E(e) {
     isTryItOutFlow: _ = !1,
     forcedDivider: g,
     withHighlight: h = !1
-  } = e, N = h ? r.default : i.Button;
+  } = e, I = h ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
     className: T,
     title: c.default.Messages.USER_SETTINGS_PROFILE_BANNER,
@@ -38,7 +38,7 @@ function E(e) {
     forcedDivider: g,
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,
-      children: [(0, a.jsx)(N, {
+      children: [(0, a.jsx)(I, {
         className: l()({
           [S.buttonHighlighted]: h
         }),

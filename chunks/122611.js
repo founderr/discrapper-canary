@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("360453"),
   f = n("377743"),
   E = n("834743"),
-  _ = n("862099"),
-  h = n("704631"),
+  h = n("862099"),
+  _ = n("704631"),
   C = n("819792"),
   S = n("919285"),
   m = n("118470"),
@@ -36,7 +36,7 @@ function y(e) {
   var t;
   let {
     guild: n
-  } = e, [o, c] = s.useState(null !== (t = r.Storage.get(L.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), _ = e => {
+  } = e, [o, c] = s.useState(null !== (t = r.Storage.get(L.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), h = e => {
     r.Storage.set(L.LAST_HIDDEN_CHANNEL_NOTICE, e), c(e)
   }, C = (0, l.useStateFromStoresArray)(L.CHANNEL_NOTICE_STORES, () => L.CHANNEL_NOTICES.filter(e => {
     let {
@@ -52,11 +52,11 @@ function y(e) {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        _(Date.now()), s(P.ContentDismissActionType.UNKNOWN)
+        h(Date.now()), s(P.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
-            return (0, a.jsx)(h.default, {
+            return (0, a.jsx)(_.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -119,7 +119,7 @@ t.default = e => {
         guild: t
       });
     case v.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
-      return (0, a.jsx)(_.default, {
+      return (0, a.jsx)(h.default, {
         guild: t
       });
     case v.ConnectedChannelNotices.GUILD_MFA_WARNING:

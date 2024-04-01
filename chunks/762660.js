@@ -20,8 +20,8 @@ var a = s("735250"),
   I = s("465670"),
   f = s("808268"),
   T = s("768581"),
-  _ = s("693546"),
-  R = s("246364"),
+  R = s("693546"),
+  _ = s("246364"),
   S = s("689938"),
   N = s("123471");
 
@@ -57,14 +57,14 @@ function M(e) {
     className: M,
     onClick: m
   } = e, [h, p] = l.useState(null), {
-    user: C,
-    createdAt: g
+    user: x,
+    createdAt: C
   } = u;
-  if (null == C) throw Error("Missing user on this guild join request!");
-  let x = l.useMemo(() => new c.default(C), [C]),
-    G = T.default.getUserAvatarURL(x),
-    P = t === R.GuildJoinRequestApplicationStatuses.SUBMITTED,
-    j = l.useCallback(async (e, t) => {
+  if (null == x) throw Error("Missing user on this guild join request!");
+  let g = l.useMemo(() => new c.default(x), [x]),
+    j = T.default.getUserAvatarURL(g),
+    P = t === _.GuildJoinRequestApplicationStatuses.SUBMITTED,
+    G = l.useCallback(async (e, t) => {
       let {
         guildId: s,
         userId: a
@@ -72,47 +72,47 @@ function M(e) {
       if (null == h) {
         p(t);
         try {
-          await _.default.updateGuildJoinRequest(s, a, t)
+          await R.default.updateGuildJoinRequest(s, a, t)
         } catch (e) {
           (0, o.showToast)((0, o.createToast)(S.default.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE)), p(null)
         }
       }
     }, [h]),
     v = async () => {
-      await j(u, R.GuildJoinRequestApplicationStatuses.APPROVED)
+      await G(u, _.GuildJoinRequestApplicationStatuses.APPROVED)
     }, O = async () => {
-      await j(u, R.GuildJoinRequestApplicationStatuses.REJECTED)
+      await G(u, _.GuildJoinRequestApplicationStatuses.REJECTED)
     };
   return (0, a.jsxs)(o.Clickable, {
     className: n()(N.container, M),
     onClick: m,
     children: [(0, a.jsx)(o.Avatar, {
-      src: G,
+      src: j,
       size: o.AvatarSizes.SIZE_40,
-      "aria-label": C.username,
+      "aria-label": x.username,
       className: N.__invalid_spacer
     }), (0, a.jsxs)("div", {
       className: N.userDetails,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: C.username
+        children: x.username
       }), (0, a.jsx)(o.Text, {
         className: N.createdAt,
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: r()(g).format("lll")
+        children: r()(C).format("lll")
       })]
     }), P && (0, a.jsx)(A, {
       icon: E.default,
       onClick: v,
-      submitting: h === R.GuildJoinRequestApplicationStatuses.APPROVED,
-      disabled: null != h && h !== R.GuildJoinRequestApplicationStatuses.APPROVED
+      submitting: h === _.GuildJoinRequestApplicationStatuses.APPROVED,
+      disabled: null != h && h !== _.GuildJoinRequestApplicationStatuses.APPROVED
     }), P && (0, a.jsx)(A, {
       icon: I.default,
       onClick: O,
-      submitting: h === R.GuildJoinRequestApplicationStatuses.REJECTED,
-      disabled: null != h && h !== R.GuildJoinRequestApplicationStatuses.REJECTED
+      submitting: h === _.GuildJoinRequestApplicationStatuses.REJECTED,
+      disabled: null != h && h !== _.GuildJoinRequestApplicationStatuses.REJECTED
     }), (0, a.jsx)(o.Clickable, {
       className: n()(N.overflowMenuContainer, {
         [N.disabled]: null != h
@@ -125,7 +125,7 @@ function M(e) {
           return t => (0, a.jsx)(e, {
             ...t,
             guild: i,
-            user: x
+            user: g
           })
         }, {
           position: "bottom",

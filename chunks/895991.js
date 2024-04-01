@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("827837"),
   f = n("410575"),
   E = n("3570"),
-  _ = n("237919"),
-  h = n("957657"),
+  h = n("237919"),
+  _ = n("957657"),
   C = n("665307"),
   S = n("530151"),
   m = n("981631"),
@@ -36,7 +36,7 @@ class g extends s.PureComponent {
     u.setHomeLink(m.Routes.APPLICATION_LIBRARY), (0, E.deepLinkRouteIfLanded)(I.RPCDeepLinks.LIBRARY), o.default.wait(() => (0, d.fetchBranches)()), (0, c.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
   }
   renderToolbar() {
-    return (0, a.jsx)(_.default, {})
+    return (0, a.jsx)(h.default, {})
   }
   render() {
     let {
@@ -50,7 +50,7 @@ class g extends s.PureComponent {
       })
     });
     return (0, a.jsxs)(s.Fragment, {
-      children: [(0, a.jsx)(h.default, {
+      children: [(0, a.jsx)(_.default, {
         currentRoute: m.Routes.APPLICATION_LIBRARY,
         renderToolbar: this.renderToolbar
       }), e ? null : t, (0, a.jsxs)(r.AdvancedScrollerAuto, {

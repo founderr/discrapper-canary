@@ -13,9 +13,9 @@ var l, a, s, i = n("735250"),
   m = n("367907"),
   g = n("453542"),
   E = n("762914"),
-  _ = n("518311"),
-  I = n("355298"),
-  S = n("869404"),
+  S = n("518311"),
+  _ = n("355298"),
+  I = n("869404"),
   N = n("333984"),
   T = n("210887"),
   A = n("592125"),
@@ -24,8 +24,8 @@ var l, a, s, i = n("735250"),
   x = n("153124"),
   R = n("908773"),
   O = n("151827"),
-  M = n("515753"),
-  y = n("981631"),
+  y = n("515753"),
+  M = n("981631"),
   D = n("689938"),
   b = n("82545");
 
@@ -281,7 +281,7 @@ class U extends(a = r.Component) {
           num_users_visible: i.length,
           num_users_visible_with_mobile_indicator: o.filter(e => null != e && L.default.isMobileOnline(e)).length
         };
-      this.hasReportedAnalytics = !0, m.default.trackWithMetadata(y.AnalyticEvents.DM_LIST_VIEWED, {
+      this.hasReportedAnalytics = !0, m.default.trackWithMetadata(M.AnalyticEvents.DM_LIST_VIEWED, {
         ...u,
         ...(0, g.getNowPlayingAnalytics)()
       })
@@ -293,7 +293,7 @@ class U extends(a = r.Component) {
     }), j(this, "handleScroll", u()(() => {
       if (null != this._list) {
         let e = this._list.getScrollerNode();
-        null != e && p.default.updateChannelListScroll(y.ME, e.scrollTop)
+        null != e && p.default.updateChannelListScroll(M.ME, e.scrollTop)
       }
     }, 100)), j(this, "renderDM", (e, t) => {
       let {
@@ -304,7 +304,7 @@ class U extends(a = r.Component) {
         totalRowCount: s,
         preRenderedChildren: r
       } = this.state, o = l[n[t]];
-      return null == o ? null : (0, i.jsx)(M.default, {
+      return null == o ? null : (0, i.jsx)(y.default, {
         channel: o,
         selected: o.id === a,
         "aria-posinset": r + t + 1,
@@ -338,7 +338,7 @@ class U extends(a = r.Component) {
         children: [(0, i.jsx)("span", {
           className: b.headerText,
           children: D.default.Messages.DIRECT_MESSAGES
-        }), (0, i.jsx)(_.default, {
+        }), (0, i.jsx)(S.default, {
           tooltip: D.default.Messages.CREATE_DM,
           tooltipPosition: "top",
           popoutAlign: "left",
@@ -364,12 +364,12 @@ t.default = e => {
     theme: n,
     children: l,
     showDMHeader: a
-  } = e, s = r.Children.count(l), o = A.default.getMutablePrivateChannels(), u = (0, S.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([v.default, I.default, N.default], () => {
+  } = e, s = r.Children.count(l), o = A.default.getMutablePrivateChannels(), u = (0, I.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([v.default, _.default, N.default], () => {
     let e = v.default.getPrivateChannelIds(),
-      t = (0, S.filterOutMessageRequestsAndSpamById)(e, [I.default, N.default]);
+      t = (0, I.filterOutMessageRequestsAndSpamById)(e, [_.default, N.default]);
     return (0, E.filterBroadcastingGDMs)(t)
   }, []), h = (0, c.useStateFromStoresObject)([C.default, T.default, A.default], () => ({
-    theme: T.default.darkSidebar ? y.ThemeTypes.DARK : n,
+    theme: T.default.darkSidebar ? M.ThemeTypes.DARK : n,
     keyboardModeEnabled: C.default.keyboardModeEnabled,
     version: null != t ? "".concat(t, ":").concat(A.default.getPrivateChannelsVersion()) : A.default.getPrivateChannelsVersion()
   })), p = r.useRef(null), m = r.useCallback(e => {
@@ -392,7 +392,7 @@ t.default = e => {
     t.scrollToTop({
       callback: () => requestAnimationFrame(() => e())
     })
-  }), []), _ = r.useCallback(() => new Promise(e => {
+  }), []), S = r.useCallback(() => new Promise(e => {
     let t = p.current;
     if (null == t) return e();
     t.scrollToBottom({
@@ -404,7 +404,7 @@ t.default = e => {
     id: "private-channels-".concat(L),
     isEnabled: h.keyboardModeEnabled,
     scrollToStart: g,
-    scrollToEnd: _,
+    scrollToEnd: S,
     defaultFocused: (s + (a ? 1 : 0)).toString(),
     setFocus: m
   });

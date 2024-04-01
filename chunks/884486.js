@@ -12,7 +12,7 @@ var s = n("803997"),
   c = n("924801"),
   f = n("308083"),
   E = n("689938"),
-  _ = n("597338");
+  h = n("597338");
 t.default = e => {
   let {
     handleUpdate: t,
@@ -27,44 +27,44 @@ t.default = e => {
     s[e].time = a, t({
       primetime: s
     })
-  }, h = e => {
+  }, _ = e => {
     let a = [...n];
     a.splice(e, 1), t({
       primetime: a
     })
   }, C = (0, c.getDayOptions)();
   return (0, a.jsxs)("div", {
-    className: _.slideContent,
+    className: h.slideContent,
     children: [(0, a.jsx)(o.Heading, {
       variant: "heading-xl/semibold",
-      className: _.title,
+      className: h.title,
       children: E.default.Messages.CLAN_SETUP_PRIMETIME_TITLE
     }), (0, a.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: _.subtitle,
+      className: h.subtitle,
       children: E.default.Messages.CLAN_SETUP_PRIMETIME_SUBTITLE
     }), (0, a.jsxs)("div", {
-      className: _.timeSelection,
+      className: h.timeSelection,
       children: [n.map((e, t) => (0, a.jsxs)("div", {
-        className: _.timeSelectorRow,
+        className: h.timeSelectorRow,
         children: [(0, a.jsx)(o.SearchableSelect, {
           value: e.day,
           options: C,
           placeholder: E.default.Messages.CLAN_PRIMETIME_PLACEHOLDER,
           onChange: e => s(t, e),
-          className: _.daySelector
+          className: h.daySelector
         }), (0, a.jsx)(o.TimeInput, {
           value: e.time,
           onChange: e => i(t, e)
         }), t > 0 && (0, a.jsx)(o.Clickable, {
-          onClick: () => h(t),
+          onClick: () => _(t),
           children: (0, a.jsx)(u.default, {
-            className: l()(_.icon, _.clickable)
+            className: l()(h.icon, h.clickable)
           })
         })]
       }, "time-".concat(t))), n.length < f.MAX_GAME_HOURS && (0, a.jsxs)(o.Clickable, {
-        className: l()(_.timeSelectorRow, _.clickable),
+        className: l()(h.timeSelectorRow, h.clickable),
         onClick: () => {
           if (n.length >= f.MAX_GAME_HOURS) return;
           let e = [...n];
@@ -76,11 +76,11 @@ t.default = e => {
           })
         },
         children: [(0, a.jsx)(d.default, {
-          className: l()(_.icon, _.clickable)
+          className: l()(h.icon, h.clickable)
         }), (0, a.jsx)(o.Text, {
           variant: "text-sm/semibold",
           color: "none",
-          className: _.addText,
+          className: h.addText,
           children: E.default.Messages.ADD
         })]
       })]

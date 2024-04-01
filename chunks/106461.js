@@ -36,7 +36,7 @@ t.default = l.default.connectStores([o.default, m.default, u.default, g.default,
     })
   }
   let y = (0, r.default)(o.default, m.default),
-    O = u.default.getCurrentUserActiveStream(),
+    I = u.default.getCurrentUserActiveStream(),
     T = u.default.getStreamerActiveStreamMetadata();
   return {
     title: v,
@@ -53,7 +53,7 @@ t.default = l.default.connectStores([o.default, m.default, u.default, g.default,
     avatarSizeMode: E.default.getAvatarSizeMode(),
     application: null != y ? s.default.getApplication(null !== (t = null === (e = f.default.getGameByGameData(y)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : "") : null,
     streamApplication: (0, d.default)(y),
-    stream: O,
+    stream: I,
     streamMetadata: T,
     hasStream: !1
   }

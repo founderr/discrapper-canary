@@ -15,19 +15,19 @@ var s = n("803997"),
 t.default = function(e) {
   var t, n, s;
   let {
-    className: _,
-    expansionSpring: h,
+    className: h,
+    expansionSpring: _,
     isExpanded: C,
     isExpansionAnimationComplete: S,
     quest: m
   } = e, I = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null !== (s = null === (n = m.userStatus) || void 0 === n ? void 0 : n.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
   return (0, a.jsx)(i.animated.div, {
     "aria-hidden": C && S,
-    className: l()(_, E.contentCollapsed, {
+    className: l()(h, E.contentCollapsed, {
       [E.contentCollapsedAccepted]: I
     }),
     style: {
-      opacity: h.to({
+      opacity: _.to({
         range: [0, 1],
         output: [1, 0]
       })

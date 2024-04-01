@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("301822"),
   f = n("302221"),
   E = n("311676");
-let _ = [0, .5, 1],
-  h = {
+let h = [0, .5, 1],
+  _ = {
     "layers[1].shapes[1].g.k.k": [0, .522, .278, .776, .5, .522, .278, .776, 1, .522, .278, .776],
     "layers[2].shapes[1].g.k.k": [0, .714, .271, .757, .5, .714, .271, .757, 1, .714, .271, .757]
   },
@@ -33,7 +33,7 @@ async function S(e, t) {
       let i = l.map((e, t) => s[t] === e ? n[t] : e);
       o().set(e, a, i)
     }
-  }(s, h, t), C.set(e, s), s
+  }(s, _, t), C.set(e, s), s
 }
 
 function m(e) {
@@ -43,7 +43,7 @@ function m(e) {
     isExpanded: l,
     isExpansionAnimationComplete: r,
     useReducedMotion: o
-  } = e, h = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), C = s.useRef(null), [m, I] = s.useState(!1), p = s.useMemo(() => {
+  } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), C = s.useRef(null), [m, I] = s.useState(!1), p = s.useMemo(() => {
     if (null == n) return null;
     let e = (0, f.hexToRgb)(n.config.colors.primary),
       t = {
@@ -51,12 +51,12 @@ function m(e) {
         g: e.g / 255,
         b: e.b / 255
       };
-    return _.reduce((e, n) => [...e, n, t.r, t.g, t.b], [])
-  }, [n]), T = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = !o && h;
+    return h.reduce((e, n) => [...e, n, t.r, t.g, t.b], [])
+  }, [n]), T = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = !o && _;
   s.useEffect(() => {
     var e, t, n, a;
-    h ? g && (null === (a = C.current) || void 0 === a || null === (n = a.animation) || void 0 === n || n.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
-  }, [g, h]);
+    _ ? g && (null === (a = C.current) || void 0 === a || null === (n = a.animation) || void 0 === n || n.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
+  }, [g, _]);
   let A = s.useCallback(() => {
     I(!0)
   }, []);

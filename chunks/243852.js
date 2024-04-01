@@ -6,8 +6,8 @@ var a, s, l, i, r, o = n("442837"),
   c = n("570140"),
   f = n("278323"),
   E = n("581567"),
-  _ = n("594190"),
-  h = n("454175"),
+  h = n("594190"),
+  _ = n("454175"),
   C = n("619914"),
   S = n("581883"),
   m = n("70956"),
@@ -47,14 +47,14 @@ function M(e) {
   let l = (0, C.isUserRecentGamesExperimentEnabled)({
     location: "28tk0rv_1"
   });
-  t && s && l && h.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(a / 1e3));
+  t && s && l && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(a / 1e3));
   let i = v[e.applicationId];
   null == i && (i = v[e.applicationId] = new d.Interval).start(N, () => M(e)), !t && (O[e.applicationId] = e, u.Storage.set(A, O))
 }
 
 function y() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-    t = _.default.getVisibleRunningGames(),
+    t = h.default.getVisibleRunningGames(),
     n = new Set;
   for (let {
       name: e,
@@ -79,7 +79,7 @@ function D() {
 }
 class x extends(s = o.default.Store) {
   initialize() {
-    this.waitFor(_.default, S.default, T.default), this.syncWith([S.default], y)
+    this.waitFor(h.default, S.default, T.default), this.syncWith([S.default], y)
   }
   getActivities() {
     return O

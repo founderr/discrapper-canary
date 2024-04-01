@@ -31,8 +31,8 @@ function g(e) {
     pendingBio: u,
     placeholder: g,
     currentBio: h,
-    disabled: N = !1
-  } = e, [I, p] = n.useState(null != u ? u : h), [C, A] = n.useState((0, r.toRichValue)(I)), O = n.useRef(!1);
+    disabled: I = !1
+  } = e, [N, p] = n.useState(null != u ? u : h), [C, A] = n.useState((0, r.toRichValue)(N)), O = n.useRef(!1);
   return n.useEffect(() => {
     if (void 0 === u) {
       let e = (0, r.toRichValue)(h);
@@ -43,18 +43,18 @@ function g(e) {
     titleId: f,
     description: E.default.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
     errors: s,
-    disabled: N,
+    disabled: I,
     children: [(0, a.jsx)(o.default, {
       "aria-describedby": _,
       "aria-labelledby": f,
       innerClassName: T.bioTextArea,
       maxCharacterCount: S.BIO_MAX_LENGTH,
       onChange: function(e, t, s) {
-        t !== I && (p(t), A(s), d(t))
+        t !== N && (p(t), A(s), d(t))
       },
       placeholder: g,
       channel: m,
-      textValue: I,
+      textValue: N,
       richValue: C,
       type: i.ChatInputTypes.PROFILE_BIO_INPUT,
       onBlur: () => {

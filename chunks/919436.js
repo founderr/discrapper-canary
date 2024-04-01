@@ -15,9 +15,9 @@ var l, a = n("735250"),
   m = n("306680"),
   g = n("944486"),
   E = n("594174"),
-  _ = n("451478"),
-  I = n("880080"),
-  S = n("26290"),
+  S = n("451478"),
+  _ = n("880080"),
+  I = n("26290"),
   N = n("15434"),
   T = n("682662"),
   A = n("662146"),
@@ -38,7 +38,7 @@ let O = {
   tension: 600
 };
 
-function M(e) {
+function y(e) {
   switch (e) {
     case "height":
     case "opacity":
@@ -53,17 +53,17 @@ function M(e) {
       throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)))
   }
 }
-class y extends(l = s.PureComponent) {
+class M extends(l = s.PureComponent) {
   componentWillEnter(e) {
     let {
       controller: t
     } = this.state;
     e(), t.update({
-      immediate: !_.default.isFocused(),
+      immediate: !S.default.isFocused(),
       height: 1,
       opacity: 1,
       scale: 1,
-      config: M
+      config: y
     }).start().then(() => this.setState({
       animating: !1
     }))
@@ -77,7 +77,7 @@ class y extends(l = s.PureComponent) {
       scale: 1,
       opacity: 1,
       height: 1,
-      config: M
+      config: y
     }).start().then(e)
   }
   componentWillLeave(e) {
@@ -87,11 +87,11 @@ class y extends(l = s.PureComponent) {
     this.setState({
       animating: !0
     }, () => t.update({
-      immediate: !_.default.isFocused(),
+      immediate: !S.default.isFocused(),
       height: 0,
       opacity: 0,
       scale: 0,
-      config: M
+      config: y
     }).start().then(e))
   }
   componentWillUnmount() {
@@ -135,7 +135,7 @@ class y extends(l = s.PureComponent) {
     return (0, a.jsx)(i.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, a.jsxs)(T.ListItem, {
-        children: [(0, a.jsx)(I.default, {
+        children: [(0, a.jsx)(_.default, {
           hovered: !p && h,
           selected: !p && n,
           unread: !p && f,
@@ -152,7 +152,7 @@ class y extends(l = s.PureComponent) {
               screenshare: d,
               isCurrentUserConnected: c
             }),
-            lowerBadgeWidth: (0, S.getBadgeWidthForValue)(l),
+            lowerBadgeWidth: (0, I.getBadgeWidthForValue)(l),
             children: (0, a.jsx)(r.ListNavigatorItem, {
               id: e.id,
               children: l => (0, a.jsx)(N.default, {
@@ -183,7 +183,7 @@ class y extends(l = s.PureComponent) {
         scale: 0,
         height: 0,
         opacity: 0,
-        config: M
+        config: y
       })
     }), R(this, "handleContextMenu", e => {
       let {
@@ -211,7 +211,7 @@ class y extends(l = s.PureComponent) {
     })
   }
 }
-R(y, "defaultProps", {
+R(M, "defaultProps", {
   badge: 0,
   audio: !1,
   video: !1,
@@ -226,8 +226,8 @@ R(y, "defaultProps", {
     d = (0, o.useStateFromStores)([m.default], () => m.default.getMentionCount(n), [n]),
     f = s === n,
     E = !1,
-    _ = !1;
-  return f && (E = i === v.ChannelModes.VOICE, _ = i === v.ChannelModes.VIDEO), (0, a.jsx)(y, {
+    S = !1;
+  return f && (E = i === v.ChannelModes.VOICE, S = i === v.ChannelModes.VIDEO), (0, a.jsx)(M, {
     ...e,
     ref: t,
     channelName: l,
@@ -235,7 +235,7 @@ R(y, "defaultProps", {
     selected: u === n,
     badge: d,
     audio: E,
-    video: _,
+    video: S,
     stream: r,
     isCurrentUserInThisDMCall: f
   })

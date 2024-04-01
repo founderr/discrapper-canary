@@ -14,14 +14,14 @@ var i = s("803997"),
   E = s("409100"),
   T = s("474936"),
   I = s("689938"),
-  f = s("622481");
+  S = s("622481");
 t.default = e => {
   var t;
   let s;
   let {
     title: i,
     titleClassName: R = "",
-    subtitle: S = "",
+    subtitle: f = "",
     description: m = "",
     descriptionCta: A = "",
     isPremiumGetCta: N,
@@ -40,12 +40,12 @@ t.default = e => {
     })
   }), L = (0, c.useCardVariantsInfo)(C);
   return (0, a.jsxs)("div", {
-    className: r()(f.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
+    className: r()(S.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
     children: [(0, a.jsx)(_.default, {
       title: i,
       cardVariantStyleInfo: L,
       titleClassName: R,
-      subtitle: S,
+      subtitle: f,
       description: m
     }), N && (0, a.jsx)(E.default, {
       subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,

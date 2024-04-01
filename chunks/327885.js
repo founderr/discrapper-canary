@@ -22,9 +22,9 @@ var n = s("512722"),
   _ = s("808506"),
   g = s("237997"),
   h = s("739563"),
-  N = s("626135");
+  I = s("626135");
 s("63063");
-var I = s("13140"),
+var N = s("13140"),
   p = s("981631"),
   C = s("689938"),
   A = s("89209");
@@ -41,8 +41,8 @@ function x(e) {
     notifications_enabled: a,
     notifications_position: a ? s : null,
     text_notifications_mode: g.default.getTextChatNotificationMode(),
-    hotkey: null != n ? (0, I.toString)(n.shortcut) : null,
-    text_activation_hotkey: null != l ? (0, I.toString)(l.shortcut) : null,
+    hotkey: null != n ? (0, N.toString)(n.shortcut) : null,
+    text_activation_hotkey: null != l ? (0, N.toString)(l.shortcut) : null,
     text_opacity_slider: g.default.getTextWidgetOpacity(),
     old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : _.default.enabled
   }
@@ -71,7 +71,7 @@ function M() {
     avatarSizeMode: s,
     displayNameMode: n,
     displayUserMode: i,
-    notificationPositionMode: I,
+    notificationPositionMode: N,
     textChatNotificationMode: M,
     shouldShowKeybindIndicators: v
   } = (0, o.useStateFromStoresObject)([g.default], () => ({
@@ -88,21 +88,21 @@ function M() {
   }), P = (0, E.isHookModuleTooOld)();
 
   function j(e) {
-    c.default.setEnabled(e, t), N.default.track(p.AnalyticEvents.OVERLAY_TOGGLED, {
+    c.default.setEnabled(e, t), I.default.track(p.AnalyticEvents.OVERLAY_TOGGLED, {
       enabled: e,
       setting_type: "overlay toggled - global"
     })
   }
 
   function b(t) {
-    c.default.setEnabled(e, t), N.default.track(p.AnalyticEvents.OVERLAY_TOGGLED, {
+    c.default.setEnabled(e, t), I.default.track(p.AnalyticEvents.OVERLAY_TOGGLED, {
       enabled: t,
       setting_type: "overlay toggled - legacy"
     })
   }
   return ! function() {
     let e = x(O);
-    !r().isEqual(e, O) && (N.default.track(p.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, e), O = e)
+    !r().isEqual(e, O) && (I.default.track(p.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, e), O = e)
   }(), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(d.FormSection, {
       tag: d.FormTitleTags.H1,
@@ -227,14 +227,14 @@ function M() {
         children: (0, a.jsx)("div", {
           className: A.notificationSettings,
           children: (0, a.jsx)(h.default, {
-            position: I,
+            position: N,
             onChange: (e, t) => c.default.setNotificationPositionMode(t)
           })
         })
       }), (0, a.jsx)(R, {
         children: (0, a.jsx)(d.FormSwitch, {
-          value: I !== p.OverlayNotificationPositions.DISABLED && M === p.OverlayNotificationTextChatTypes.ENABLED,
-          disabled: I === p.OverlayNotificationPositions.DISABLED,
+          value: N !== p.OverlayNotificationPositions.DISABLED && M === p.OverlayNotificationTextChatTypes.ENABLED,
+          disabled: N === p.OverlayNotificationPositions.DISABLED,
           onChange: function() {
             let {
               ENABLED: e,

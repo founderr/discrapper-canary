@@ -20,9 +20,9 @@ var l = n("735250"),
   m = n("594174"),
   g = n("768581"),
   E = n("709054"),
-  _ = n("981631"),
-  I = n("124368"),
-  S = n("689938"),
+  S = n("981631"),
+  _ = n("124368"),
+  I = n("689938"),
   N = n("439688");
 
 function T(e) {
@@ -30,7 +30,7 @@ function T(e) {
     channel: t
   } = e, s = (0, r.useStateFromStoresArray)([c.default, C.default, p.default], () => {
     let e = c.default.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
-    return i()(c.default.getActiveJoinedThreadsForParent(t.guild_id, t.id)).values().map(e => e.channel).concat(i().values(c.default.getActiveUnjoinedThreadsForParent(t.guild_id, t.id))).filter(t => !(t.id in e) && p.default.can(_.Permissions.VIEW_CHANNEL, t)).sort((e, t) => {
+    return i()(c.default.getActiveJoinedThreadsForParent(t.guild_id, t.id)).values().map(e => e.channel).concat(i().values(c.default.getActiveUnjoinedThreadsForParent(t.guild_id, t.id))).filter(t => !(t.id in e) && p.default.can(S.Permissions.VIEW_CHANNEL, t)).sort((e, t) => {
       let n = C.default.lastMessageId(e.id),
         l = C.default.lastMessageId(t.id);
       return E.default.compare(n, l)
@@ -44,7 +44,7 @@ function T(e) {
       className: N.title,
       variant: "text-xs/bold",
       color: "header-secondary",
-      children: t.isForumLikeChannel() ? S.default.Messages.ACTIVE_THREADS_POPOUT_HEADER_FORUM : S.default.Messages.ACTIVE_THREADS_POPOUT_HEADER
+      children: t.isForumLikeChannel() ? I.default.Messages.ACTIVE_THREADS_POPOUT_HEADER_FORUM : I.default.Messages.ACTIVE_THREADS_POPOUT_HEADER
     }), s.slice(0, t.isForumLikeChannel() ? s.length : u).map(e => (0, l.jsx)(A, {
       thread: e
     }, e.id)).filter(e => a.isValidElement(e)).slice(0, u), (0, l.jsx)(o.Clickable, {
@@ -63,7 +63,7 @@ function T(e) {
       children: (0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: S.default.Messages.ACTIVE_THREADS_POPOUT_LINK
+        children: I.default.Messages.ACTIVE_THREADS_POPOUT_LINK
       })
     })]
   })
@@ -76,7 +76,7 @@ function A(e) {
   return (0, l.jsxs)(o.Clickable, {
     className: N.row,
     onClick: e => {
-      (0, h.openThreadSidebarForViewing)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, I.OpenThreadAnalyticsLocations.POPOUT)
+      (0, h.openThreadSidebarForViewing)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, _.OpenThreadAnalyticsLocations.POPOUT)
     },
     children: [null == n ? (0, l.jsx)("img", {
       className: N.avatar,

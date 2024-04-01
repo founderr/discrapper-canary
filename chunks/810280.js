@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 });
 var a = n("735250");
@@ -16,7 +16,7 @@ var s = n("990547"),
   c = n("921944"),
   f = n("689938"),
   E = n("698237");
-let _ = (e, t) => ({
+let h = (e, t) => ({
   header: f.default.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
     gameName: e.title
   }),
@@ -25,20 +25,20 @@ let _ = (e, t) => ({
   imgStyle: E.defaultDropImage
 });
 
-function h(e) {
+function _(e) {
   let {
     markAsDismissed: t,
     partnerGame: n
   } = e;
   (0, u.useTrackDropsImpression)(n, s.ImpressionTypes.POPOUT, s.ImpressionNames.DROPS_QUEST_ENROLLMENT);
-  let h = (0, u.useDropsExperiment)(n);
-  if (null == h) return null;
+  let _ = (0, u.useDropsExperiment)(n);
+  if (null == _) return null;
   let {
     header: C,
     body: S,
     imgSrc: m,
     imgStyle: I
-  } = _(h.drop, h.config.streamLengthRequirement), p = () => {
+  } = h(_.drop, _.config.streamLengthRequirement), p = () => {
     t(c.ContentDismissActionType.DISMISS)
   };
   return (0, a.jsxs)("div", {
@@ -64,7 +64,7 @@ function h(e) {
       variant: "text-sm/medium",
       className: E.subTitle,
       children: S
-    }), h.config.autoEnrollment ? (0, a.jsx)(l.Button, {
+    }), _.config.autoEnrollment ? (0, a.jsx)(l.Button, {
       look: l.Button.Looks.INVERTED,
       fullWidth: !0,
       onClick: () => {
@@ -76,7 +76,7 @@ function h(e) {
       look: l.Button.Looks.INVERTED,
       fullWidth: !0,
       onClick: () => {
-        (0, o.enrollDropsUser)(h.drop.dropsQuestId), i.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
+        (0, o.enrollDropsUser)(_.drop.dropsQuestId), i.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
       },
       children: f.default.Messages.DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA
     }), (0, a.jsx)(l.Button, {

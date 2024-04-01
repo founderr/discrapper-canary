@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("278724"),
   f = n("481060"),
   E = n("239091"),
-  _ = n("586902"),
-  h = n("512384"),
+  h = n("586902"),
+  _ = n("512384"),
   C = n("484459"),
   S = n("103575"),
   m = n("314897"),
@@ -93,7 +93,7 @@ function D(e) {
     deaf: c,
     serverMute: m,
     serverDeaf: p
-  } = e, T = (0, r.useStateFromStores)([I.default], () => I.default.isLocalMute(o.id)), g = (0, _.default)({
+  } = e, T = (0, r.useStateFromStores)([I.default], () => I.default.isLocalMute(o.id)), g = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
   }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), D = null != u ? u : R.default.getName(o), {
@@ -119,12 +119,12 @@ function D(e) {
     serverMute: m,
     mute: d,
     localMute: T
-  })) && void 0 !== s ? s : {}, G = null != U ? v.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
+  })) && void 0 !== s ? s : {}, j = null != U ? v.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
     userName: D,
     status: U()
   }) : D;
 
-  function j(e) {
+  function G(e) {
     null != A ? (0, E.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -161,14 +161,14 @@ function D(e) {
       ...e
     }),
     children: e => (0, a.jsx)(f.Tooltip, {
-      text: G,
+      text: j,
       children: t => (0, a.jsx)(f.Clickable, {
         ...t,
         ...e,
         className: L.avatarContainer,
-        onContextMenu: j,
+        onContextMenu: G,
         focusProps: P,
-        children: (0, a.jsx)(h.default, {
+        children: (0, a.jsx)(_.default, {
           shakeLocation: O.ShakeLocation.VOICE_USER,
           isShaking: g,
           children: (0, a.jsx)("div", {
@@ -210,7 +210,7 @@ function x(e) {
       height: 16
     }),
     focusProps: P
-  }), E = (0, r.useStateFromStores)([m.default], () => m.default.getId(), []), [_, h] = function(e, t) {
+  }), E = (0, r.useStateFromStores)([m.default], () => m.default.getId(), []), [h, _] = function(e, t) {
     let n = [];
     for (let a of e) {
       if (a.user.id !== t) {
@@ -221,7 +221,7 @@ function x(e) {
       }
     }
     return [n, !1]
-  }(t, E), C = h && o ? t : _;
+  }(t, E), C = _ && o ? t : h;
   return C.length <= 0 ? null : (0, a.jsx)(f.ScrollerThin, {
     className: i()(L.scroller, l),
     fade: !0,
@@ -245,7 +245,7 @@ function x(e) {
           serverMute: l.mute,
           serverDeaf: l.deaf
         }, t.id) : null
-      }), h ? c : null]
+      }), _ ? c : null]
     })
   })
 }

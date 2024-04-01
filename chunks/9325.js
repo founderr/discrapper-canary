@@ -1,59 +1,59 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return g
   }
 });
-var s = n("735250"),
-  a = n("470079"),
-  l = n("442837"),
-  i = n("481060"),
-  r = n("409059"),
-  u = n("962220"),
-  o = n("306453"),
-  d = n("108427"),
-  c = n("314897"),
-  f = n("819570"),
-  E = n("626135"),
-  _ = n("587444"),
-  I = n("981631"),
-  p = n("58346"),
-  h = n("689938"),
-  T = n("794711");
+var n = s("735250"),
+  a = s("470079"),
+  l = s("442837"),
+  i = s("481060"),
+  r = s("409059"),
+  u = s("962220"),
+  o = s("306453"),
+  d = s("108427"),
+  c = s("314897"),
+  f = s("819570"),
+  E = s("626135"),
+  I = s("587444"),
+  _ = s("981631"),
+  h = s("58346"),
+  p = s("689938"),
+  T = s("794711");
 
-function N(e, t, n) {
-  e.preventDefault(), E.default.track(I.AnalyticEvents.GUILD_TEMPLATE_APP_OPENED, {
+function N(e, t, s) {
+  e.preventDefault(), E.default.track(_.AnalyticEvents.GUILD_TEMPLATE_APP_OPENED, {
     guild_template_code: t,
-    guild_template_name: n.name,
-    guild_template_description: n.description,
-    guild_template_guild_id: n.sourceGuildId
+    guild_template_name: s.name,
+    guild_template_description: s.description,
+    guild_template_guild_id: s.sourceGuildId
   });
-  let s = c.default.getFingerprint(),
-    a = null != s ? s : c.default.getId();
-  u.default.openMobileApp(n.state === p.GuildTemplateStates.RESOLVED ? t : void 0, a)
+  let n = c.default.getFingerprint(),
+    a = null != n ? n : c.default.getId();
+  u.default.openMobileApp(s.state === h.GuildTemplateStates.RESOLVED ? t : void 0, a)
 }
 
 function g(e) {
   let {
     code: t
-  } = e, n = (0, l.useStateFromStores)([r.default], () => r.default.getGuildTemplate(t));
+  } = e, s = (0, l.useStateFromStores)([r.default], () => r.default.getGuildTemplate(t));
   return (a.useEffect(() => {
     (0, d.trackAppUIViewed)("guild_template_mobile")
-  }, []), null == n || n.state === p.GuildTemplateStates.RESOLVING) ? (0, s.jsx)(f.default, {
-    children: (0, s.jsx)(i.Spinner, {})
-  }) : n.state === p.GuildTemplateStates.RESOLVED ? (0, s.jsxs)(f.default, {
-    children: [(0, s.jsx)(o.default, {
-      guildTemplate: n,
+  }, []), null == s || s.state === h.GuildTemplateStates.RESOLVING) ? (0, n.jsx)(f.default, {
+    children: (0, n.jsx)(i.Spinner, {})
+  }) : s.state === h.GuildTemplateStates.RESOLVED ? (0, n.jsxs)(f.default, {
+    children: [(0, n.jsx)(o.default, {
+      guildTemplate: s,
       tall: !0
-    }), (0, s.jsx)(f.Button, {
-      onClick: e => N(e, t, n),
+    }), (0, n.jsx)(f.Button, {
+      onClick: e => N(e, t, s),
       className: T.marginTop20,
-      children: h.default.Messages.GUILD_TEMPLATE_OPEN
+      children: p.default.Messages.GUILD_TEMPLATE_OPEN
     })]
-  }) : (0, s.jsx)(_.default, {
-    text: h.default.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
-    buttonCta: h.default.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
-    onClick: e => N(e, t, n)
+  }) : (0, n.jsx)(I.default, {
+    text: p.default.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
+    buttonCta: p.default.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
+    onClick: e => N(e, t, s)
   })
 }
 l.default.initialize()

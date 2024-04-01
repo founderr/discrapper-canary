@@ -14,9 +14,9 @@ var i = s("613828"),
   E = s("299657"),
   T = s("594174"),
   I = s("285952"),
-  f = s("466111"),
+  S = s("466111"),
   R = s("981631"),
-  S = s("474936"),
+  f = s("474936"),
   m = s("689938"),
   A = s("507954");
 let N = r.default.connectStores([T.default], () => ({
@@ -36,7 +36,7 @@ let N = r.default.connectStores([T.default], () => ({
         isAuthenticated: s,
         className: A.headerBar,
         children: [(0, a.jsx)(_.default.Icon, {
-          icon: f.default,
+          icon: S.default,
           "aria-hidden": !0
         }), (0, a.jsx)(_.default.Title, {
           children: m.default.Messages.PREMIUM
@@ -51,7 +51,7 @@ let N = r.default.connectStores([T.default], () => ({
           className: A.spinner
         })
       }) : (0, a.jsx)(E.default, {
-        entrypoint: S.PremiumMarketingEntrypoints.ApplicationStoreHome
+        entrypoint: f.PremiumMarketingEntrypoints.ApplicationStoreHome
       })
     })]
   }) : (0, a.jsx)(i.Redirect, {

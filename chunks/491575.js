@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("714338"),
   f = n("607070"),
   E = n("317858"),
-  _ = n("635395"),
-  h = n("5560"),
+  h = n("635395"),
+  _ = n("5560"),
   C = n("451478"),
   S = n("585483"),
   m = n("145604"),
@@ -41,6 +41,6 @@ t.default = s.memo(function() {
     children: [(0, a.jsx)(p.default, {
       className: g.layers,
       children: (0, a.jsx)(o.default, {})
-    }), (0, a.jsx)(_.default, {}), (0, a.jsx)(u.default, {}), (0, a.jsx)(m.default, {}), (0, a.jsx)(h.default, {}), (0, a.jsx)(r.DnDKeyboardHelpBar, {}), (0, a.jsx)(I.default, {})]
+    }), (0, a.jsx)(h.default, {}), (0, a.jsx)(u.default, {}), (0, a.jsx)(m.default, {}), (0, a.jsx)(_.default, {}), (0, a.jsx)(r.DnDKeyboardHelpBar, {}), (0, a.jsx)(I.default, {})]
   })
 })

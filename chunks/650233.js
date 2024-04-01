@@ -1,38 +1,38 @@
 "use strict";
-s.r(t), s.d(t, {
+t.r(s), t.d(s, {
   HubEmailConnectionModalView: function() {
-    return m
+    return E
   },
   default: function() {
-    return E
+    return _
   }
 });
-var a = s("735250"),
-  n = s("470079"),
-  l = s("990547"),
-  i = s("481060"),
-  r = s("390885"),
-  o = s("495784"),
-  c = s("950012"),
-  d = s("161836"),
-  u = s("630724"),
-  _ = s("689938"),
-  N = s("825697");
+var a = t("735250"),
+  l = t("470079"),
+  n = t("990547"),
+  i = t("481060"),
+  o = t("390885"),
+  r = t("495784"),
+  d = t("950012"),
+  c = t("161836"),
+  u = t("630724"),
+  N = t("689938"),
+  m = t("825697");
 
-function E(e) {
+function _(e) {
   let {
-    transitionState: t,
-    onClose: s,
-    isNUXFlow: E
+    transitionState: s,
+    onClose: t,
+    isNUXFlow: _
   } = e;
-  return n.useEffect(() => {
-    o.default.hideHubUpsell(), E && r.default.flowStep(u.FlowType.ORGANIC, u.RegistrationSteps.HUB_CONNECTION)
-  }, [E]), (0, a.jsx)(i.ModalRoot, {
-    className: N.modalRoot,
-    transitionState: t,
-    "aria-label": _.default.Messages.HUB_WAITLIST_MODAL_JOIN_HEADER,
+  return l.useEffect(() => {
+    r.default.hideHubUpsell(), _ && o.default.flowStep(u.FlowType.ORGANIC, u.RegistrationSteps.HUB_CONNECTION)
+  }, [_]), (0, a.jsx)(i.ModalRoot, {
+    className: m.modalRoot,
+    transitionState: s,
+    "aria-label": N.default.Messages.HUB_WAITLIST_MODAL_JOIN_HEADER,
     impression: {
-      impressionName: l.ImpressionNames.HUB_EMAIL_SIGNUP
+      impressionName: n.ImpressionNames.HUB_EMAIL_SIGNUP
     },
     children: (0, a.jsx)(i.ModalContent, {
       style: {
@@ -40,39 +40,39 @@ function E(e) {
         paddingRight: "0px"
       },
       paddingFix: !1,
-      className: N.modalContent,
+      className: m.modalContent,
       children: (0, a.jsxs)("div", {
-        className: N.container,
+        className: m.container,
         children: [(0, a.jsx)("div", {
-          className: N.sidebarContainer,
-          children: (0, a.jsx)(d.default, {})
+          className: m.sidebarContainer,
+          children: (0, a.jsx)(c.default, {})
         }), (0, a.jsxs)("div", {
-          className: N.contentContainer,
+          className: m.contentContainer,
           children: [(0, a.jsx)(i.ModalCloseButton, {
-            onClick: s,
-            className: N.closeButton
-          }), (0, a.jsx)(c.default, {
-            isNUXFlow: E,
-            onClose: s
+            onClick: t,
+            className: m.closeButton
+          }), (0, a.jsx)(d.default, {
+            isNUXFlow: _,
+            onClose: t
           })]
         })]
       })
     })
   })
 }
-let m = e => {
+let E = e => {
   let {
-    invite: t
+    invite: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: N.container,
+    className: m.container,
     children: [(0, a.jsx)("div", {
-      className: N.sidebarContainer,
-      children: (0, a.jsx)(d.default, {})
+      className: m.sidebarContainer,
+      children: (0, a.jsx)(c.default, {})
     }), (0, a.jsx)("div", {
-      className: N.contentContainer,
-      children: (0, a.jsx)(c.default, {
-        invite: t
+      className: m.contentContainer,
+      children: (0, a.jsx)(d.default, {
+        invite: s
       })
     })]
   })

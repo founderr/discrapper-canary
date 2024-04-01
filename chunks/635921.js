@@ -14,9 +14,9 @@ var i = s("803997"),
   E = s("140465"),
   T = s("775412"),
   I = s("846363"),
-  f = s("248042"),
+  S = s("248042"),
   R = s("422034"),
-  S = s("206127"),
+  f = s("206127"),
   m = s("318747"),
   A = s("409100"),
   N = s("689938"),
@@ -69,7 +69,7 @@ let C = e => {
 function O(e) {
   let {
     variant: t = "text-lg/normal"
-  } = e, s = (0, S.useCheapestMonthlyPrice)();
+  } = e, s = (0, f.useCheapestMonthlyPrice)();
   return (0, a.jsx)(l.Text, {
     variant: t,
     color: "always-white",
@@ -85,12 +85,12 @@ t.default = e => {
     className: s,
     subscriptionTier: i,
     hideSparkles: d,
-    hideSubscribeAndGiftButton: S
+    hideSubscribeAndGiftButton: f
   } = e, A = (0, I.useMarketingOptimizationExperiment)({
     autoTrackExposure: !1
   }), {
     analyticsLocations: P
-  } = (0, u.default)(o.default.PREMIUM_MARKETING_HERO_CTA), M = (0, T.useHasActiveTrial)(), h = (0, E.useIsInPremiumOfferExperience)(), L = (0, f.useIsEligibleForBogoPromotion)(), {
+  } = (0, u.default)(o.default.PREMIUM_MARKETING_HERO_CTA), M = (0, T.useHasActiveTrial)(), h = (0, E.useIsInPremiumOfferExperience)(), L = (0, S.useIsEligibleForBogoPromotion)(), {
     marketingEnabled: x
   } = c.default.useExperiment({
     location: "HeroHeading"
@@ -132,7 +132,7 @@ t.default = e => {
             className: p.button,
             forceWhite: !0
           })
-        }) : S ? null : (0, a.jsx)(C, {
+        }) : f ? null : (0, a.jsx)(C, {
           subscriptionTier: i,
           inOfferExperience: h,
           inTrial: M

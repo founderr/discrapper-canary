@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("410575"),
   f = n("613311"),
   E = n("601564"),
-  _ = n("981631"),
-  h = n("757473");
+  h = n("981631"),
+  _ = n("757473");
 
 function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -28,10 +28,10 @@ class S extends s.Component {
   }
   render() {
     return null != this.props.skuId ? (0, a.jsx)(c.default, {
-      page: _.AnalyticsPages.CHANNEL_STORE_LISTING,
+      page: h.AnalyticsPages.CHANNEL_STORE_LISTING,
       root: !0,
       children: (0, a.jsx)("div", {
-        className: h.applicationStore,
+        className: _.applicationStore,
         children: (0, a.jsx)(l.Route, {
           path: "*",
           render: this.renderApplicationListing

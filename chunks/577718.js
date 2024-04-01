@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("243778"),
   f = n("26323"),
   E = n("433280"),
-  _ = n("34131"),
-  h = n("434404"),
+  h = n("34131"),
+  _ = n("434404"),
   C = n("567458"),
   S = n("782959"),
   m = n("970731"),
@@ -31,17 +31,17 @@ var a = n("735250"),
   y = n("642301");
 
 function D(e) {
-  null != e && h.default.open(e.id, T.GuildSettingsSections.OVERVIEW, {
+  null != e && _.default.open(e.id, T.GuildSettingsSections.OVERVIEW, {
     section: T.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
   }, T.GuildSettingsSubsections.DISPLAY)
 }
 
 function x(e, t) {
-  t && h.default.open(e.id, T.GuildSettingsSections.DISCOVERY)
+  t && _.default.open(e.id, T.GuildSettingsSections.DISCOVERY)
 }
 
 function b(e, t) {
-  null != t && ((0, p.isTierUnlocked)(t, T.BoostedGuildTiers.TIER_1) ? h.default.open(t.id, T.GuildSettingsSections.OVERVIEW, {
+  null != t && ((0, p.isTierUnlocked)(t, T.BoostedGuildTiers.TIER_1) ? _.default.open(t.id, T.GuildSettingsSections.OVERVIEW, {
     section: T.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH
   }, T.GuildSettingsSubsections.INVITE) : (0, f.default)({
     analyticsLocations: e,
@@ -83,7 +83,7 @@ t.default = s.memo(function(e) {
         page: T.AnalyticsPages.GUILD_CHANNEL
       }
     })
-  }, G = () => {
+  }, j = () => {
     I.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: N.PremiumUpsellTypes.INVITE_SPLASH_UPSELL,
       location: {
@@ -91,7 +91,7 @@ t.default = s.memo(function(e) {
       },
       location_stack: f
     })
-  }, j = (0, i.isThemeDark)(n) ? P : M, [w, k] = (0, c.useSelectedDismissibleContent)(t, g.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, G = (0, i.isThemeDark)(n) ? P : M, [w, k] = (0, c.useSelectedDismissibleContent)(t, g.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, a.jsx)(a.Fragment, {
     children: (() => {
       switch (w) {
@@ -102,7 +102,7 @@ t.default = s.memo(function(e) {
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: j,
+                src: G,
                 className: v.fullWidthImage
               }),
               content: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
@@ -121,7 +121,7 @@ t.default = s.memo(function(e) {
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: j,
+                src: G,
                 className: v.fullWidthImage
               }),
               content: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
@@ -165,7 +165,7 @@ t.default = s.memo(function(e) {
             t = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : R.default.Messages.LEARN_MORE;
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(m.default, {
-              onComponentMount: G,
+              onComponentMount: j,
               header: R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
@@ -213,7 +213,7 @@ t.default = s.memo(function(e) {
                 className: v.fullWidthImage
               }),
               onClick: () => {
-                h.default.open(s.id, T.GuildSettingsSections.ROLES), h.default.selectRole(s.getEveryoneRoleId(), R.default.Messages.USE_SOUNDBOARD)
+                _.default.open(s.id, T.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), R.default.Messages.USE_SOUNDBOARD)
               },
               markAsDismissed: k
             }),
@@ -229,7 +229,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
           return (0, a.jsx)(U, {
-            renderPopout: (0, a.jsx)(_.default, {
+            renderPopout: (0, a.jsx)(h.default, {
               guildId: s.id,
               markAsDismissed: k
             }),

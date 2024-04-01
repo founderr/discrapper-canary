@@ -26,8 +26,8 @@ function _() {
     enabled: _,
     autoToggle: g,
     hideInstantInvites: h,
-    hidePersonalInformation: N,
-    disableSounds: I,
+    hidePersonalInformation: I,
+    disableSounds: N,
     disableNotifications: p,
     enableContentProtection: C
   } = (0, i.useStateFromStoresObject)([c.default], () => ({
@@ -75,7 +75,7 @@ function _() {
       className: l()(m.marginTop40, m.marginBottom8),
       children: T.default.Messages.OPTIONS
     }), (0, a.jsx)(r.FormSwitch, {
-      value: N,
+      value: I,
       onChange: e => A("hidePersonalInformation", e),
       note: T.default.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
       children: T.default.Messages.HIDE_PERSONAL_INFORMATION_LABEL
@@ -85,7 +85,7 @@ function _() {
       note: T.default.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
       children: T.default.Messages.HIDE_INSTANT_INVITES_LABEL
     }), (0, a.jsx)(r.FormSwitch, {
-      value: I,
+      value: N,
       onChange: e => A("disableSounds", e),
       note: T.default.Messages.DISABLE_SOUNDS_DESCRIPTION,
       children: T.default.Messages.DISABLE_SOUNDS_LABEL

@@ -9,12 +9,12 @@ var a, s, l = n("470079"),
   c = n("292959"),
   f = n("19780"),
   E = n("699516"),
-  _ = n("606304"),
-  h = n("358085"),
+  h = n("606304"),
+  _ = n("358085"),
   C = n("998502"),
   S = n("981631");
 (s = a || (a = {})).DEFAULT = "DEFAULT", s.UNREAD = "UNREAD", s.CONNECTED = "CONNECTED", s.SPEAKING = "SPEAKING", s.MUTED = "MUTED", s.DEAFENED = "DEAFENED";
-let m = (0, h.isMac)() ? null : "DEFAULT";
+let m = (0, _.isMac)() ? null : "DEFAULT";
 class I extends l.PureComponent {
   componentDidMount() {
     C.default.setSystemTrayIcon(this.getIcon())
@@ -38,7 +38,7 @@ class I extends l.PureComponent {
         connected: a,
         unread: s
       } = this.props, l = m;
-      return (0, h.isMac)() && !a ? l : (0, h.isLinux)() || !a ? (s && (l = "UNREAD"), l) : l = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED"
+      return (0, _.isMac)() && !a ? l : (0, _.isLinux)() || !a ? (s && (l = "UNREAD"), l) : l = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED"
     }, n in t ? Object.defineProperty(t, n, {
       value: a,
       enumerable: !0,
@@ -48,16 +48,16 @@ class I extends l.PureComponent {
   }
 }
 let p = () => null;
-h.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default.toggleSelfMute()), C.default.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => r.default.toggleSelfDeaf()), C.default.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
+_.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default.toggleSelfMute()), C.default.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => r.default.toggleSelfDeaf()), C.default.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
   o.default.open(S.UserSettingsSections.VOICE)
-}), p = i.default.connectStores([f.default, d.default, _.default, u.default, E.default, c.default], () => {
+}), p = i.default.connectStores([f.default, d.default, h.default, u.default, E.default, c.default], () => {
   let e = u.default.getTotalMentionCount(),
     t = u.default.hasAnyUnread(),
     n = E.default.getPendingCount(),
     a = c.default.getDisableUnreadBadge();
   return {
     connected: f.default.isConnected(),
-    speaking: _.default.isCurrentUserSpeaking(),
+    speaking: h.default.isCurrentUserSpeaking(),
     muted: d.default.isSelfMute() || d.default.isSelfMutedTemporarily(),
     deafened: d.default.isSelfDeaf(),
     unread: !a && !!(t || e + n > 0)

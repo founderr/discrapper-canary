@@ -106,8 +106,8 @@ t.default = function(e) {
     statusCenter: m,
     statusHeightPx: g,
     frontAvatarOffsetPx: E,
-    frontAvatarSizePx: _,
-    backAvatarSizePx: I
+    frontAvatarSizePx: S,
+    backAvatarSizePx: _
   } = null !== (t = u[s]) && void 0 !== t ? t : function(e) {
     let t = e / (r.DIAGONAL_FACEPILE_AVATAR_PROPORTION + r.DIAGONAL_FACEPILE_MASK_OFFSET),
       n = t * r.DIAGONAL_FACEPILE_AVATAR_PROPORTION,
@@ -134,15 +134,15 @@ t.default = function(e) {
       ...p
     },
     children: [(0, l.jsx)(i.default, {
-      height: I,
-      width: I,
+      height: _,
+      width: _,
       mask: i.MaskIDs.DIAGONAL_FACEPILE_BACK_AVATAR_CUTOUT,
       children: (0, l.jsx)("img", {
         className: o.circularImage,
         src: n,
         alt: "",
-        width: I,
-        height: I
+        width: _,
+        height: _
       })
     }), (0, l.jsx)("div", {
       style: {
@@ -152,7 +152,7 @@ t.default = function(e) {
       },
       children: (0, l.jsx)(h, {
         src: a,
-        size: _,
+        size: S,
         isTyping: c,
         status: d
       })

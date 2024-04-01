@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("524444"),
   f = n("529815"),
   E = n("250496"),
-  _ = n("153124"),
-  h = n("26290"),
+  h = n("153124"),
+  _ = n("26290"),
   C = n("810090"),
   S = n("626135"),
   m = n("565216"),
@@ -28,7 +28,7 @@ let g = e => {
       tagText: t,
       className: n
     } = e;
-    return (0, a.jsx)(h.TextBadge, {
+    return (0, a.jsx)(_.TextBadge, {
       className: i()(T.tag, n),
       text: t
     })
@@ -73,7 +73,7 @@ function N(e) {
     className: t,
     renderModalProps: n,
     heroArt: l,
-    heroArtClassName: h,
+    heroArtClassName: _,
     modalDismissibleContent: g,
     modalTopExtra: N,
     header: R,
@@ -86,7 +86,7 @@ function N(e) {
   } = e, {
     onClose: D,
     transitionState: x
-  } = n, b = (0, _.useUID)(), U = P.length % 2 == 0, G = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [j, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(j), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
+  } = n, b = (0, h.useUID)(), U = P.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
 
   function J() {
     let e = Date.now(),
@@ -96,8 +96,8 @@ function N(e) {
     return Z.current && (F(n += t), !X.current && H(a += t)), w(e), [n, a]
   }
   return s.useEffect(() => {
-    z.current = j, q.current = k, Q.current = B, Z.current = V, X.current = W
-  }, [j, k, B, V, W]), s.useEffect(() => () => {
+    z.current = G, q.current = k, Q.current = B, Z.current = V, X.current = W
+  }, [G, k, B, V, W]), s.useEffect(() => () => {
     let [e, t] = J();
     S.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
       change_log_id: M,
@@ -135,8 +135,8 @@ function N(e) {
         className: i()(T.headerText, O),
         children: R
       }), "video" === l.type ? (0, a.jsx)(C.default, {
-        className: i()(T.video, h),
-        autoPlay: !G,
+        className: i()(T.video, _),
+        autoPlay: !j,
         loop: !0,
         muted: !0,
         controls: !0,
@@ -159,7 +159,7 @@ function N(e) {
         },
         disablePictureInPicture: !0
       }) : "embed" === l.type ? (0, a.jsx)(f.EmbedVideo, {
-        className: i()(T.video, h),
+        className: i()(T.video, _),
         allowFullScreen: !1,
         href: l.href,
         thumbnail: l.thumbnail,
@@ -177,7 +177,7 @@ function N(e) {
         }
       }) : "image" === l.type ? (0, a.jsx)("img", {
         alt: "",
-        className: i()(T.video, h),
+        className: i()(T.video, _),
         src: l.src
       }) : null, (0, a.jsx)(o.Heading, {
         variant: "heading-lg/extrabold",

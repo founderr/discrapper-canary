@@ -13,76 +13,76 @@ var a = s("735250"),
   E = s("964309"),
   T = s("38761"),
   I = s("6074"),
-  f = s("39377"),
+  S = s("39377"),
   R = s("417622"),
-  S = s("981631"),
+  f = s("981631"),
   m = s("689938"),
   A = s("866887");
 let N = [{
-    feature: S.SKUFeatureTypes.SINGLE_PLAYER,
+    feature: f.SKUFeatureTypes.SINGLE_PLAYER,
     getText: () => m.default.Messages.APPLICATION_STORE_SINGLE_PLAYER,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_SINGLE_PLAYER_TOOLTIP,
     IconComponent: E.default
   }, {
-    feature: S.SKUFeatureTypes.LOCAL_MULTIPLAYER,
+    feature: f.SKUFeatureTypes.LOCAL_MULTIPLAYER,
     getText: () => m.default.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER_TOOLTIP,
     IconComponent: _.default
   }, {
-    feature: S.SKUFeatureTypes.ONLINE_MULTIPLAYER,
+    feature: f.SKUFeatureTypes.ONLINE_MULTIPLAYER,
     getText: () => m.default.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER_TOOLTIP,
     IconComponent: _.default
   }, {
-    feature: S.SKUFeatureTypes.PVP,
+    feature: f.SKUFeatureTypes.PVP,
     getText: () => m.default.Messages.APPLICATION_STORE_PVP,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_PVP_TOOLTIP,
     IconComponent: c.default
   }, {
-    feature: S.SKUFeatureTypes.LOCAL_COOP,
+    feature: f.SKUFeatureTypes.LOCAL_COOP,
     getText: () => m.default.Messages.APPLICATION_STORE_LOCAL_COOP,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_LOCAL_COOP_TOOLTIP,
     IconComponent: _.default
   }, {
-    feature: S.SKUFeatureTypes.ONLINE_COOP,
+    feature: f.SKUFeatureTypes.ONLINE_COOP,
     getText: () => m.default.Messages.APPLICATION_STORE_ONLINE_COOP,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_ONLINE_COOP_TOOLTIP,
     IconComponent: _.default
   }, {
-    feature: S.SKUFeatureTypes.CROSS_PLATFORM,
+    feature: f.SKUFeatureTypes.CROSS_PLATFORM,
     getText: () => m.default.Messages.APPLICATION_STORE_CROSS_PLATFORM,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_CROSS_PLATFORM_TOOLTIP,
     IconComponent: R.default
   }, {
-    feature: S.SKUFeatureTypes.RICH_PRESENCE,
+    feature: f.SKUFeatureTypes.RICH_PRESENCE,
     getText: () => m.default.Messages.APPLICATION_STORE_RICH_PRESENCE,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_RICH_PRESENCE_TOOLTIP,
     IconComponent: I.default
   }, {
-    feature: S.SKUFeatureTypes.DISCORD_GAME_INVITES,
+    feature: f.SKUFeatureTypes.DISCORD_GAME_INVITES,
     getText: () => m.default.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES_TOOLTIP,
     IconComponent: T.default
   }, {
-    feature: S.SKUFeatureTypes.SPECTATOR_MODE,
+    feature: f.SKUFeatureTypes.SPECTATOR_MODE,
     getText: () => m.default.Messages.APPLICATION_STORE_SPECTATOR_MODE,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_SPECTATOR_MODE_TOOLTIP,
     IconComponent: l.default
   }, {
-    feature: S.SKUFeatureTypes.CONTROLLER_SUPPORT,
+    feature: f.SKUFeatureTypes.CONTROLLER_SUPPORT,
     getText: () => m.default.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT_TOOLTIP,
     IconComponent: d.default
   }, {
-    feature: S.SKUFeatureTypes.CLOUD_SAVES,
+    feature: f.SKUFeatureTypes.CLOUD_SAVES,
     getText: () => m.default.Messages.APPLICATION_STORE_CLOUD_SAVES,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_CLOUD_SAVES_TOOLTIP,
     IconComponent: u.default
   }, {
-    feature: S.SKUFeatureTypes.SECURE_NETWORKING,
+    feature: f.SKUFeatureTypes.SECURE_NETWORKING,
     getText: () => m.default.Messages.APPLICATION_STORE_SECURE_NETWORKING,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_SECURE_NETWORKING_TOOLTIP,
-    IconComponent: f.default
+    IconComponent: S.default
   }],
   p = e => {
     let {

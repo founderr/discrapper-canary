@@ -22,9 +22,9 @@ var l, a = n("149765"),
   m = n("355298"),
   g = n("601992"),
   E = n("703656"),
-  _ = n("359110"),
-  I = n("922482"),
-  S = n("427679"),
+  S = n("359110"),
+  _ = n("922482"),
+  I = n("427679"),
   N = n("488131"),
   T = n("695346"),
   A = n("592125"),
@@ -33,8 +33,8 @@ var l, a = n("149765"),
   x = n("496675"),
   R = n("699516"),
   O = n("944486"),
-  M = n("885110"),
-  y = n("246946"),
+  y = n("885110"),
+  M = n("246946"),
   D = n("594174"),
   b = n("979651"),
   j = n("5192"),
@@ -58,8 +58,8 @@ function k(e, t, n) {
 let Y = "message1",
   K = .4,
   W = "discord_dismissed_notification_shown",
-  z = document.hasFocus(),
-  Z = null,
+  Z = document.hasFocus(),
+  z = null,
   X = ["FR", "GF", "PF", "TF", "RE", "GP", "MQ", "YT", "NC", "PM", "WF"],
   Q = new class {
     track(e, t) {
@@ -79,7 +79,7 @@ let Y = "message1",
   };
 
 function q() {
-  return !!(v.default.getDesktopType() === B.DesktopNotificationTypes.NEVER || M.default.getStatus() === B.StatusTypes.DND || T.FocusMode.getSetting()) || !1
+  return !!(v.default.getDesktopType() === B.DesktopNotificationTypes.NEVER || y.default.getStatus() === B.StatusTypes.DND || T.FocusMode.getSetting()) || !1
 }
 
 function J(e) {
@@ -87,7 +87,7 @@ function J(e) {
 }
 class $ extends(l = s.default.Store) {
   initialize() {
-    this.waitFor(D.default, A.default, v.default, L.default, S.default, R.default, x.default, b.default, m.default)
+    this.waitFor(D.default, A.default, v.default, L.default, I.default, R.default, x.default, b.default, m.default)
   }
 }
 k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
@@ -118,7 +118,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
     return !q() && (U.default.showNotification(t, n, l, a, s), !1)
   },
   WINDOW_FOCUS: function(e) {
-    if (z = e.focused) {
+    if (Z = e.focused) {
       let e = O.default.getChannelId();
       null != e && Q.clearChannel(e)
     }
@@ -134,28 +134,28 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
     let o = A.default.getChannel(a),
       d = D.default.getUser(null === (t = s.author) || void 0 === t ? void 0 : t.id);
     if (null == o || null == d || o.isBroadcastChannel()) return !1;
-    let f = (0, G.shouldNotify)(s, a, !z),
+    let f = (0, G.shouldNotify)(s, a, !Z),
       h = v.default.getNotifyMessagesInSelectedChannel() && (0, G.shouldNotifyForSelectedChannel)(s, a);
     if (!f && !h) return !1;
     let p = !v.default.isSoundDisabled(Y);
-    if (h && (p && w.playSound("message3", .4), !z) || !f) return !1;
+    if (h && (p && w.playSound("message3", .4), !Z) || !f) return !1;
     let C = n("808506").default,
       m = n("237997").default;
-    if (null != C.getFocusedPID() && m.getTextChatNotificationMode() === B.OverlayNotificationTextChatTypes.ENABLED && !y.default.disableNotifications) return !1;
+    if (null != C.getFocusedPID() && m.getTextChatNotificationMode() === B.OverlayNotificationTextChatTypes.ENABLED && !M.default.disableNotifications) return !1;
     let {
       icon: E,
-      title: I,
-      body: S
+      title: _,
+      body: I
     } = (0, G.makeTextChatNotification)(o, s, d);
     if (r.default.dispatch({
         type: "RPC_NOTIFICATION_CREATE",
         channelId: o.id,
         message: s,
         icon: E,
-        title: I,
-        body: S
+        title: _,
+        body: I
       }), (0, g.trackMessageNotificationTimestamps)(s, o.guild_id), v.default.getDesktopType() === B.DesktopNotificationTypes.NEVER) return p && w.playSound(Y, K), !1;
-    let N = U.default.showNotification(E, I, S, {
+    let N = U.default.showNotification(E, _, I, {
       notif_type: "MESSAGE_CREATE",
       notif_user_id: null === (l = s.author) || void 0 === l ? void 0 : l.id,
       message_id: s.id,
@@ -169,7 +169,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
       sound: p ? Y : void 0,
       volume: K,
       onClick() {
-        (0, _.transitionToChannel)(o.id), (o.type === B.ChannelTypes.GUILD_VOICE || o.type === B.ChannelTypes.GUILD_STAGE_VOICE) && u.default.updateChatOpen(o.id, !0), c.default.clickedNotification()
+        (0, S.transitionToChannel)(o.id), (o.type === B.ChannelTypes.GUILD_VOICE || o.type === B.ChannelTypes.GUILD_STAGE_VOICE) && u.default.updateChatOpen(o.id, !0), c.default.clickedNotification()
       }
     });
     null != N && Q.track(o.id, N)
@@ -237,7 +237,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
     if (null == a || null == s || !(!i && null != r)) return;
     let o = L.default.getGuild(s),
       u = A.default.getChannel(a),
-      d = S.default.getStageInstanceByChannel(a);
+      d = I.default.getStageInstanceByChannel(a);
     null != o && null != u && null != d && U.default.showNotification(o.getIconURL(128), u.name, H.default.Messages.STAGE_SPEAK_INVITE_PUSH_NOTIFICATION.format({
       channelName: (0, h.computeChannelName)(u, D.default, R.default),
       channelTopic: null == d ? void 0 : d.topic
@@ -266,7 +266,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
       channel_id: s.id
     }, {
       onClick() {
-        (0, I.connectAndOpen)(s)
+        (0, _.connectAndOpen)(s)
       }
     })
   },
@@ -295,7 +295,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
         channel_id: s.id
       }, {
         onClick() {
-          e.entity_type === V.GuildScheduledEventEntityTypes.STAGE_INSTANCE && (0, I.connectAndOpen)(s), e.entity_type === V.GuildScheduledEventEntityTypes.VOICE && f.default.selectVoiceChannel(s.id)
+          e.entity_type === V.GuildScheduledEventEntityTypes.STAGE_INSTANCE && (0, _.connectAndOpen)(s), e.entity_type === V.GuildScheduledEventEntityTypes.VOICE && f.default.selectVoiceChannel(s.id)
         }
       })
     }(t) : t.entity_type === V.GuildScheduledEventEntityTypes.EXTERNAL && ! function(e) {
@@ -327,7 +327,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
     } = e;
     if (q()) return !1;
     let a = A.default.getChannel(n.parent_id);
-    if (null == a || !B.ChannelTypesSets.GUILD_THREADS_ONLY.has(a.type) || !l || !(0, G.shouldNotifyForForumThreadCreation)(n, a, !z)) return !1;
+    if (null == a || !B.ChannelTypesSets.GUILD_THREADS_ONLY.has(a.type) || !l || !(0, G.shouldNotifyForForumThreadCreation)(n, a, !Z)) return !1;
     let {
       author: s,
       user: i
@@ -376,7 +376,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
       t = (0, P.isLinux)();
     if (!(!i.Storage.get(W, !1) && P.isPlatformEmbedded && (e || t))) return !1;
     let l = !1;
-    return null != Z && (l = X.includes(Z)), !!l && (U.default.showNotification(n("95045"), H.default.Messages.NOTIFICATION_TITLE_DISCORD, H.default.Messages.NOTIFICATION_BODY_DISCORD_HIDDEN, {
+    return null != z && (l = X.includes(z)), !!l && (U.default.showNotification(n("95045"), H.default.Messages.NOTIFICATION_TITLE_DISCORD, H.default.Messages.NOTIFICATION_BODY_DISCORD_HIDDEN, {
       notif_type: "WINDOW_HIDDEN"
     }, {
       overrideStreamerMode: !0,
@@ -395,6 +395,6 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
     let {
       countryCode: t
     } = e;
-    Z = t
+    z = t
   }
 })

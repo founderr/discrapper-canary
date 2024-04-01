@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("410575"),
   f = n("607070"),
   E = n("100527"),
-  _ = n("906732"),
-  h = n("205976"),
+  h = n("906732"),
+  _ = n("205976"),
   C = n("699516"),
   S = n("974042"),
   m = n("451478"),
@@ -35,47 +35,47 @@ t.default = function(e) {
     titleId: n
   } = e, {
     analyticsLocations: l
-  } = (0, _.default)(E.default.FRIENDS_LIST), {
+  } = (0, h.default)(E.default.FRIENDS_LIST), {
     rows: D,
     section: x
-  } = (0, r.useStateFromStoresObject)([S.default], () => S.default.getState()), b = (0, r.useStateFromStores)([m.default], () => m.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), G = (0, p.useIsClearIncomingFriendRequestsEnabled)(), [j, w] = s.useState(() => {
+  } = (0, r.useStateFromStoresObject)([S.default], () => S.default.getState()), b = (0, r.useStateFromStores)([m.default], () => m.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, p.useIsClearIncomingFriendRequestsEnabled)(), [G, w] = s.useState(() => {
     let e = {};
     for (let t of Object.values(P.FriendsSections)) e[t] = "";
     return e
   }), k = s.useCallback(e => {
     w({
-      ...j,
+      ...G,
       [t]: e
     })
-  }, [j, t]), F = s.useCallback(() => {
+  }, [G, t]), F = s.useCallback(() => {
     w({
-      ...j,
+      ...G,
       [t]: ""
     })
-  }, [j, t]), B = D.filter(t, j[t]);
-  if (0 === B.length && "" === j[t]) return (0, a.jsxs)("div", {
+  }, [G, t]), B = D.filter(t, G[t]);
+  if (0 === B.length && "" === G[t]) return (0, a.jsxs)("div", {
     className: y.emptyStateContainer,
-    children: [t === P.FriendsSections.ONLINE && (0, a.jsx)(h.default, {}), (0, a.jsx)(A.default, {
+    children: [t === P.FriendsSections.ONLINE && (0, a.jsx)(_.default, {}), (0, a.jsx)(A.default, {
       type: t,
       onClick: () => {
         u.default.setSection(P.FriendsSections.ADD_FRIEND)
       }
     }, x)]
   });
-  let H = 0 === B.length && "" !== j[t],
+  let H = 0 === B.length && "" !== G[t],
     V = B.filter(e => e.type === P.RelationshipTypes.PENDING_INCOMING).length,
-    Y = t === P.FriendsSections.PENDING && V > 0 && G && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
-  return (0, a.jsx)(_.AnalyticsLocationProvider, {
+    Y = t === P.FriendsSections.PENDING && V > 0 && j && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
+  return (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: l,
     children: (0, a.jsxs)(c.default, {
       section: P.AnalyticsSections.FRIENDS_LIST,
       children: [(0, a.jsx)(I.default, {
         className: i()(y.searchBar, H ? y.searchEmptyState : null),
-        query: j[t],
+        query: G[t],
         onChange: k,
         onClear: F,
         size: I.default.Sizes.MEDIUM
-      }), t === P.FriendsSections.ONLINE && "" === j[t] && (0, a.jsx)(h.default, {}), (0, a.jsxs)("div", {
+      }), t === P.FriendsSections.ONLINE && "" === G[t] && (0, a.jsx)(_.default, {}), (0, a.jsxs)("div", {
         className: y.sectionTitle,
         children: [(0, a.jsx)(O.default, {
           id: n,
@@ -149,7 +149,7 @@ t.default = function(e) {
           }
         },
         sectionFilter: t,
-        searchQuery: j[t],
+        searchQuery: G[t],
         useReducedMotion: f.default.useReducedMotion
       })]
     })

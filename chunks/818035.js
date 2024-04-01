@@ -10,7 +10,7 @@ function c(e) {
     payment: t
   } = e, s = o.default.createFromServer(t), a = d.findIndex(e => e.id === t.id); - 1 === a ? (d.push(s), d.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : d[a] = s, d = [...d]
 }
-class f extends(a = r.default.Store) {
+class E extends(a = r.default.Store) {
   getPayment(e) {
     return d.find(t => t.id === e)
   }
@@ -18,12 +18,12 @@ class f extends(a = r.default.Store) {
     return d
   }
 }
-l = "PaymentStore", (i = "displayName") in(n = f) ? Object.defineProperty(n, i, {
+l = "PaymentStore", (i = "displayName") in(n = E) ? Object.defineProperty(n, i, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[i] = l, t.default = new f(u.default, {
+}) : n[i] = l, t.default = new E(u.default, {
   BILLING_PAYMENTS_FETCH_SUCCESS: function(e) {
     let {
       payments: t

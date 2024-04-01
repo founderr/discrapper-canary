@@ -22,8 +22,8 @@ var n = s("512722"),
   _ = s("610966"),
   g = s("513901"),
   h = s("451392"),
-  N = s("906364"),
-  I = s("676934"),
+  I = s("906364"),
+  N = s("676934"),
   p = s("350327"),
   C = s("621853"),
   A = s("318661"),
@@ -50,7 +50,7 @@ function P() {
       pendingPronouns: w,
       pendingAccentColor: V,
       pendingThemeColors: Y,
-      errors: W
+      errors: K
     } = (0, i.useStateFromStoresObject)([x.default], () => {
       let e = x.default.getAllPending(),
         t = x.default.getErrors();
@@ -59,7 +59,7 @@ function P() {
         errors: t
       }
     }),
-    K = (0, d.useGuildAutomodProfileQuarantineErrors)(),
+    W = (0, d.useGuildAutomodProfileQuarantineErrors)(),
     z = M.default.canUsePremiumProfileCustomization(y),
     Q = (0, u.showRemoveAvatar)(F, y.avatar),
     Z = (0, u.showRemoveBanner)(k, null == B ? void 0 : B.banner),
@@ -73,8 +73,8 @@ function P() {
   });
   let X = (0, A.default)(y.id),
     J = null == X ? void 0 : X.getLegacyUsername(),
-    $ = (null !== (s = null === (e = W.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? W.global_name : null !== (n = null == K ? void 0 : K.nick) && void 0 !== n ? n : [],
-    ee = (null !== (P = null === (t = W.bio) || void 0 === t ? void 0 : t.length) && void 0 !== P ? P : 0) > 0 ? W.bio : null !== (j = null == K ? void 0 : K.bio) && void 0 !== j ? j : [],
+    $ = (null !== (s = null === (e = K.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? K.global_name : null !== (n = null == W ? void 0 : W.nick) && void 0 !== n ? n : [],
+    ee = (null !== (P = null === (t = K.bio) || void 0 === t ? void 0 : t.length) && void 0 !== P ? P : 0) > 0 ? K.bio : null !== (j = null == W ? void 0 : W.bio) && void 0 !== j ? j : [],
     et = (0, O.useUserIsRecentGamesExperimentEnabled)({
       location: "28tk0rv_1",
       autoTrackExposure: !0
@@ -87,16 +87,16 @@ function P() {
       currentGlobalName: y.globalName,
       pendingGlobalName: G,
       onGlobalNameChange: r.setPendingGlobalNameName
-    }), (0, a.jsx)(N.default, {
+    }), (0, a.jsx)(I.default, {
       sectionTitle: D.default.Messages.USER_SETTINGS_PRONOUNS,
-      errors: W.pronouns,
+      errors: K.pronouns,
       onPronounsChange: p.setPendingPronouns,
       pendingPronouns: w,
       currentPronouns: null !== (b = null == B ? void 0 : B.pronouns) && void 0 !== b ? b : ""
     }, "pronouns"), (0, a.jsx)(E.default, {
       onAvatarChange: r.setPendingAvatar,
       showRemoveAvatarButton: Q,
-      errors: W.avatar,
+      errors: K.avatar,
       sectionTitle: D.default.Messages.USER_SETTINGS_AVATAR,
       forcedDivider: !0
     }, "avatar"), (0, a.jsx)(S.default, {
@@ -108,7 +108,7 @@ function P() {
     }, "effect"), z ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(m.default, {
         showRemoveBannerButton: Z,
-        errors: W.banner,
+        errors: K.banner,
         onBannerChange: p.setPendingBanner,
         forcedDivider: !0
       }, "banner"), (0, a.jsx)(h.default, {
@@ -131,7 +131,7 @@ function P() {
       },
       pendingBio: H,
       currentBio: null !== (U = null == B ? void 0 : B.bio) && void 0 !== U ? U : ""
-    }, "bio"), et && (0, a.jsx)(I.default, {}), null != J && (0, a.jsx)(f.default, {
+    }, "bio"), et && (0, a.jsx)(N.default, {}), null != J && (0, a.jsx)(f.default, {
       legacyUsername: J
     }, "legacy_username")]
   })

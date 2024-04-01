@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("230711"),
   g = s("651530"),
   h = s("163268"),
-  N = s("294602"),
-  I = s("688465"),
+  I = s("294602"),
+  N = s("688465"),
   p = s("610697"),
   C = s("880257"),
   A = s("236289"),
@@ -46,8 +46,8 @@ var a = s("735250"),
   w = s("981631"),
   V = s("800530"),
   Y = s("689938"),
-  W = s("274430"),
-  K = s("794711");
+  K = s("274430"),
+  W = s("794711");
 
 function z(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -148,11 +148,11 @@ class q extends n.PureComponent {
     return (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)(E.FormItem, {
         tag: E.FormTitleTags.H3,
-        className: K.marginBottom20,
+        className: W.marginBottom20,
         title: Y.default.Messages.USER_EXPLICIT_CONTENT_FILTER_V2,
         children: [(0, a.jsx)(E.FormText, {
           type: E.FormTextTypes.DESCRIPTION,
-          className: K.marginBottom8,
+          className: W.marginBottom8,
           children: Y.default.Messages.USER_EXPLICIT_CONTENT_FILTER_HELP_V3.format({
             appealLink: y.default.getArticleURL(w.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
           })
@@ -194,22 +194,22 @@ class q extends n.PureComponent {
       children: [(0, a.jsx)(E.FormTitle, {
         tag: E.FormTitleTags.H5,
         faded: !0,
-        className: K.marginBottom8,
+        className: W.marginBottom8,
         children: (0, a.jsxs)("div", {
-          className: i()(W.betaTagContainer),
-          children: [Y.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(I.default, {
-            className: W.betaTagIcon
+          className: i()(K.betaTagContainer),
+          children: [Y.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(N.default, {
+            className: K.betaTagIcon
           })]
         })
       }), (0, a.jsx)(E.FormText, {
         type: E.FormTextTypes.DESCRIPTION,
-        className: K.marginBottom8,
+        className: W.marginBottom8,
         children: Y.default.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({
           learnMoreLink: y.default.getArticleURL(w.HelpdeskArticles.EXPLICIT_MEDIA_REDACTION)
         })
       }), (0, a.jsx)(E.FormItem, {
         tag: E.FormTitleTags.H3,
-        className: K.marginBottom20,
+        className: W.marginBottom20,
         title: Y.default.Messages.OBSCURED_CONTENT_SETTING_FRIENDS,
         children: (0, a.jsx)(E.SingleSelect, {
           options: l,
@@ -220,7 +220,7 @@ class q extends n.PureComponent {
         })
       }), (0, a.jsx)(E.FormItem, {
         tag: E.FormTitleTags.H3,
-        className: K.marginBottom20,
+        className: W.marginBottom20,
         title: Y.default.Messages.OBSCURED_CONTENT_SETTING_NON_FRIENDS,
         children: (0, a.jsx)(E.SingleSelect, {
           options: l,
@@ -231,7 +231,7 @@ class q extends n.PureComponent {
         })
       }), n && (0, a.jsx)(E.FormItem, {
         tag: E.FormTitleTags.H3,
-        className: K.marginBottom20,
+        className: W.marginBottom20,
         title: Y.default.Messages.OBSCURED_CONTENT_SETTING_GUILDS,
         children: (0, a.jsx)(E.SingleSelect, {
           options: r,
@@ -241,7 +241,7 @@ class q extends n.PureComponent {
           })
         })
       }), (0, a.jsx)(E.FormDivider, {
-        className: K.marginBottom20
+        className: W.marginBottom20
       })]
     })
   }
@@ -253,13 +253,13 @@ class q extends n.PureComponent {
     } = this.props;
     return s || !e ? null : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(E.FormDivider, {
-        className: K.marginBottom20
+        className: W.marginBottom20
       }), (0, a.jsxs)(E.FormSection, {
-        className: K.marginBottom20,
+        className: W.marginBottom20,
         children: [(0, a.jsx)(E.FormTitle, {
           tag: E.FormTitleTags.H5,
           faded: !0,
-          className: K.marginBottom8,
+          className: W.marginBottom8,
           children: Y.default.Messages.SAFETY_ALERTS_SETTINGS_HEADER
         }), (0, a.jsx)(E.FormItem, {
           children: (0, a.jsx)(E.FormSwitch, {
@@ -280,14 +280,14 @@ class q extends n.PureComponent {
     return this.props.mediaRedactionIsEnabled ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(E.FormSection, {
         tag: E.FormTitleTags.H3,
-        className: K.marginBottom20,
+        className: W.marginBottom20,
         children: [this.renderSelfModExplicitContentSettings(), (0, a.jsxs)(E.FormItem, {
           tag: E.FormTitleTags.H5,
-          className: K.marginBottom4,
+          className: W.marginBottom4,
           title: Y.default.Messages.USER_DM_SPAM_FILTER,
           children: [(0, a.jsx)(E.FormText, {
             type: E.FormTextTypes.DESCRIPTION,
-            className: K.marginBottom8,
+            className: W.marginBottom8,
             children: Y.default.Messages.USER_DM_SPAM_FILTER_HELP.format({
               appealLink: y.default.getArticleURL(w.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
             })
@@ -306,15 +306,15 @@ class q extends n.PureComponent {
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(E.FormSection, {
         tag: E.FormTitleTags.H5,
-        className: K.marginBottom40,
+        className: W.marginBottom40,
         title: Y.default.Messages.USER_DIRECT_MESSAGE_FILTERS,
         children: [this.renderLegacyExplicitContentFilter(t), (0, a.jsxs)(E.FormItem, {
           tag: E.FormTitleTags.H3,
-          className: K.marginBottom4,
+          className: W.marginBottom4,
           title: Y.default.Messages.USER_DM_SPAM_FILTER,
           children: [(0, a.jsx)(E.FormText, {
             type: E.FormTextTypes.DESCRIPTION,
-            className: K.marginBottom8,
+            className: W.marginBottom8,
             children: Y.default.Messages.USER_DM_SPAM_FILTER_HELP.format({
               appealLink: y.default.getArticleURL(w.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
             })
@@ -343,10 +343,10 @@ class q extends n.PureComponent {
       defaultMessageRequestRestricted: i
     } = this.state, r = !0 === t.nsfwAllowed;
     return (0, a.jsxs)(E.FormSection, {
-      className: K.marginBottom40,
+      className: W.marginBottom40,
       children: [(0, a.jsx)(E.FormTitle, {
         tag: E.FormTitleTags.H5,
-        className: K.marginBottom8,
+        className: W.marginBottom8,
         children: Y.default.Messages.USER_DM_SETTINGS
       }), (0, a.jsx)(E.FormSwitch, {
         value: !l,
@@ -383,10 +383,10 @@ class q extends n.PureComponent {
       dropsOptedOut: s
     } = this.props;
     return (0, a.jsxs)(E.FormSection, {
-      className: K.marginBottom40,
+      className: W.marginBottom40,
       children: [(0, a.jsx)(E.FormTitle, {
         tag: E.FormTitleTags.H5,
-        className: K.marginBottom8,
+        className: W.marginBottom8,
         children: Y.default.Messages.DATA_PRIVACY_CONTROLS
       }), (0, a.jsx)(E.FormSwitch, {
         value: e,
@@ -414,11 +414,11 @@ class q extends n.PureComponent {
         })
       }), (0, a.jsx)(E.FormTitle, {
         tag: E.FormTitleTags.H3,
-        className: i()(K.marginTop20, K.marginBottom8),
+        className: i()(W.marginTop20, W.marginBottom8),
         children: Y.default.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE
       }), (0, a.jsx)(E.FormText, {
         type: E.FormTextTypes.DESCRIPTION,
-        className: K.marginBottom20,
+        className: W.marginBottom20,
         children: Y.default.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_NOTE.format({
           onClick: () => {
             _.default.setSection(w.UserSettingsSections.ACCOUNT)
@@ -454,7 +454,7 @@ class q extends n.PureComponent {
       }
     });
     return i && null != l && (e = (0, a.jsx)(E.Card, {
-      className: W.card,
+      className: K.card,
       children: (0, a.jsx)(E.Text, {
         variant: "text-md/normal",
         children: Y.default.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({
@@ -465,13 +465,13 @@ class q extends n.PureComponent {
       children: r
     })), (0, a.jsxs)(n.Fragment, {
       children: [(0, a.jsx)(E.FormDivider, {
-        className: K.marginBottom20
+        className: W.marginBottom20
       }), (0, a.jsx)(E.FormTitle, {
         tag: E.FormTitleTags.H3,
         children: Y.default.Messages.DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE
       }), (0, a.jsx)(E.FormText, {
         type: E.FormTextTypes.DESCRIPTION,
-        className: K.marginBottom20,
+        className: W.marginBottom20,
         children: Y.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({
           helpdeskArticle: y.default.getArticleURL(w.HelpdeskArticles.GDPR_REQUEST_DATA)
         })
@@ -480,7 +480,7 @@ class q extends n.PureComponent {
   }
   renderPrivacyAndTermsNote() {
     return (0, a.jsx)(E.FormSection, {
-      className: K.marginBottom40,
+      className: W.marginBottom40,
       children: (0, a.jsx)(E.FormNotice, {
         type: E.FormNotice.Types.PRIMARY,
         body: Y.default.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
@@ -497,19 +497,19 @@ class q extends n.PureComponent {
     } = this.props;
     return e.isStaff() ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(E.FormDivider, {
-        className: K.marginBottom20
+        className: W.marginBottom20
       }), (0, a.jsxs)(E.FormSection, {
-        className: K.marginBottom40,
+        className: W.marginBottom40,
         children: [(0, a.jsx)(E.FormTitle, {
           tag: E.FormTitleTags.H5,
-          className: K.marginBottom8,
+          className: W.marginBottom8,
           children: Y.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER
         }), (0, a.jsxs)(E.FormItem, {
           tag: E.FormTitleTags.H5,
-          className: K.marginBottom4,
+          className: W.marginBottom4,
           children: [(0, a.jsx)(E.FormText, {
             type: E.FormTextTypes.DESCRIPTION,
-            className: K.marginBottom8,
+            className: W.marginBottom8,
             children: Y.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_DESC
           }), (0, a.jsx)(E.RadioGroup, {
             options: (0, G.generateNonSpamRetrainingOptInSettingOptions)(),
@@ -548,19 +548,19 @@ class q extends n.PureComponent {
     let n = s === V.SafetyHubView.ACCOUNT_STANDING && null != e;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(E.TabBar, {
-        className: W.settingsTabBar,
+        className: K.settingsTabBar,
         "aria-label": Y.default.Messages.SAFETY_HUB_PAGE_TITLE,
         selectedItem: s,
         type: "top",
         look: "brand",
         onItemSelect: this.handleTabSelect,
         children: [(0, a.jsx)(E.TabBar.Item, {
-          className: W.settingsTabBarItem,
+          className: K.settingsTabBarItem,
           id: V.SafetyHubView.SETTINGS,
           "aria-label": Y.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SETTINGS,
           children: Y.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SETTINGS
         }), (0, a.jsx)(E.TabBar.Item, {
-          className: W.settingsTabBarItem,
+          className: K.settingsTabBarItem,
           id: V.SafetyHubView.ACCOUNT_STANDING,
           "aria-label": Y.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
           children: Y.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2
@@ -568,7 +568,7 @@ class q extends n.PureComponent {
       }), (0, a.jsx)(E.TabBar.Panel, {
         id: s,
         "aria-labelledby": (0, b.uid)(),
-        className: [n ? W.contentPanelNagbar : "", W.contentPanel].join(" "),
+        className: [n ? K.contentPanelNagbar : "", K.contentPanel].join(" "),
         children: (0, a.jsx)("div", {
           children: this.SETTINGS_TABS[s]()
         })
@@ -667,7 +667,7 @@ function X() {
     s = (0, c.useStateFromStores)([A.default], () => A.default.getFetchError()),
     n = (0, c.useStateFromStores)([L.default], () => L.default.getSubsection()),
     l = (0, g.useIsEligibleForExplicitMediaRedaction)(),
-    i = (0, N.useExplicitContentSettingOrDefault)(),
+    i = (0, I.useExplicitContentSettingOrDefault)(),
     r = (0, C.default)(),
     d = (0, x.useIsEligibleForInappropriateConversationWarning)({
       location: "user_settings_web"

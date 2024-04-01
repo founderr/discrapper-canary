@@ -20,9 +20,9 @@ var l = n("735250"),
   m = n("823379"),
   g = n("355363"),
   E = n("737592"),
-  _ = n("561788"),
-  I = n("135724"),
-  S = n("543432"),
+  S = n("561788"),
+  _ = n("135724"),
+  I = n("543432"),
   N = n("981631"),
   T = n("689938"),
   A = n("890108");
@@ -34,8 +34,8 @@ function L(e) {
     guild: h,
     onAction: C,
     voiceStates: g,
-    isChannelSelected: _,
-    shouldShowSettingNudge: I
+    isChannelSelected: S,
+    shouldShowSettingNudge: _
   } = e;
   ! function(e, t) {
     let n = a.useMemo(() => {
@@ -51,9 +51,9 @@ function L(e) {
     }, [e, t]);
     (0, r.useSubscribeGuildMembers)(n)
   }(f, g);
-  let S = (0, o.default)(f),
+  let I = (0, o.default)(f),
     L = new Map;
-  S.forEach(e => {
+  I.forEach(e => {
     L.set(e.application.id, e)
   });
   let x = null !== (t = null == g ? void 0 : g.filter(m.isNotNullish)) && void 0 !== t ? t : [],
@@ -71,7 +71,7 @@ function L(e) {
         }
       }), e
     }, [x, L], s.statesWillNeverBeEqual),
-    M = (0, s.useStateFromStores)([p.default], () => {
+    y = (0, s.useStateFromStores)([p.default], () => {
       let e = {};
       return x.forEach(t => {
         let n = p.default.findActivity(t.user.id, R(t));
@@ -86,16 +86,16 @@ function L(e) {
         }
       }), Object.values(e)
     }, [x], s.statesWillNeverBeEqual),
-    y = Array.from(O.values()).map(e => ({
+    M = Array.from(O.values()).map(e => ({
       members: x,
       activity: e.presenceActivity
     })),
-    D = [...y, ...M];
+    D = [...M, ...y];
   return 0 === D.length ? null : (0, l.jsxs)(i.Scroller, {
     className: A.container,
     children: [(0, l.jsx)(v, {
       channel: f,
-      isChannelSelected: _,
+      isChannelSelected: S,
       voiceStatesCount: null !== (c = null == g ? void 0 : g.length) && void 0 !== c ? c : 0
     }), (0, l.jsx)("div", {
       className: A.headerDivider
@@ -111,7 +111,7 @@ function L(e) {
         members: n,
         onAction: C
       }, t)
-    }), I && (0, l.jsxs)(l.Fragment, {
+    }), _ && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: A.headerDivider
       }), (0, l.jsx)("div", {
@@ -151,13 +151,13 @@ function v(e) {
   }), u = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id));
   return null == (0, c.getChannelIconComponent)(t, u) ? null : (0, l.jsxs)("div", {
     className: A.popoutHeaderContainer,
-    children: [(0, l.jsx)(_.default, {
+    children: [(0, l.jsx)(S.default, {
       channel: t
-    }), o ? (0, l.jsx)(I.default, {
+    }), o ? (0, l.jsx)(_.default, {
       userCount: a,
       video: r,
       channel: t
-    }) : (0, l.jsx)(S.default, {
+    }) : (0, l.jsx)(I.default, {
       userCount: a
     })]
   })

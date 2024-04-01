@@ -20,9 +20,9 @@ var l = n("735250"),
   m = n("826026"),
   g = n("632184"),
   E = n("934415"),
-  _ = n("968847"),
-  I = n("689938"),
-  S = n("308530");
+  S = n("968847"),
+  _ = n("689938"),
+  I = n("308530");
 let N = {
   friction: 30,
   tension: 300
@@ -42,23 +42,23 @@ function T(e) {
     voiceStates: o
   });
   return (0, l.jsxs)(d.Clickable, {
-    className: i()(S.bar),
+    className: i()(I.bar),
     onClick: c,
     children: [(0, l.jsx)(g.default, {
-      className: S.voiceChannelsIcon,
+      className: I.voiceChannelsIcon,
       width: 14,
       height: 14,
       color: u.default.unsafe_rawColors.GREEN_330.css
     }), (0, l.jsx)(d.Text, {
       variant: "text-xs/semibold",
       color: "text-positive",
-      className: S.barText,
-      children: I.default.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
+      className: I.barText,
+      children: _.default.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
         count: C.length
       })
     }), (0, l.jsx)(p.default, {
       guildId: n.id,
-      className: S.voiceChannelsUsers,
+      className: I.voiceChannelsUsers,
       users: C.slice(0, 4),
       renderMoreUsers: () => null,
       max: 4,
@@ -77,59 +77,59 @@ function A(e) {
   } = e, {
     bottomBar: p,
     topBar: g
-  } = (0, o.useStateFromStoresObject)([_.default], () => _.default.getUnreadStateForGuildId(n.id)), E = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), A = (0, o.useStateFromStores)([h.default], () => h.default.isFocused()), {
+  } = (0, o.useStateFromStoresObject)([S.default], () => S.default.getUnreadStateForGuildId(n.id)), E = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), A = (0, o.useStateFromStores)([h.default], () => h.default.isFocused()), {
     mode: L,
     mentionCount: v,
     targetChannelId: x
-  } = "bottom" === t ? p : g, R = L === _.UnreadBarMode.HIDDEN, O = (0, r.useSpring)({
+  } = "bottom" === t ? p : g, R = L === S.UnreadBarMode.HIDDEN, O = (0, r.useSpring)({
     to: {
       transform: R ? "bottom" === t ? "translateY(180%)" : "translateY(-180%)" : "translateY(0%)"
     },
     config: N,
     immediate: E || !A
-  }), M = a.useCallback(e => {
+  }), y = a.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), null != x && f(x)
   }, [f, x]);
   return (0, l.jsx)("div", {
-    className: i()(S.container, {
-      [S.top]: "top" === t,
-      [S.bottom]: "bottom" === t
+    className: i()(I.container, {
+      [I.top]: "top" === t,
+      [I.bottom]: "bottom" === t
     }),
     children: (0, l.jsx)(r.animated.div, {
-      className: S.containerPadding,
+      className: I.containerPadding,
       style: O,
       "aria-hidden": R,
-      children: L === _.UnreadBarMode.HIDDEN ? (0, l.jsx)("div", {
-        className: i()(S.bar, S.emptyBar)
-      }) : L === _.UnreadBarMode.UNREAD ? (0, l.jsxs)(d.Clickable, {
-        className: S.bar,
-        onClick: M,
+      children: L === S.UnreadBarMode.HIDDEN ? (0, l.jsx)("div", {
+        className: i()(I.bar, I.emptyBar)
+      }) : L === S.UnreadBarMode.UNREAD ? (0, l.jsxs)(d.Clickable, {
+        className: I.bar,
+        onClick: y,
         children: ["bottom" === t ? (0, l.jsx)(C.default, {
-          className: S.unreadIcon,
+          className: I.unreadIcon,
           height: 14,
           width: 14
         }) : (0, l.jsx)(m.default, {
-          className: S.unreadIcon,
+          className: I.unreadIcon,
           height: 14,
           width: 14
         }), (0, l.jsx)(d.Text, {
           variant: "text-xs/semibold",
           color: "interactive-normal",
-          className: S.barText,
-          children: I.default.Messages.NEW_UNREADS
+          className: I.barText,
+          children: _.default.Messages.NEW_UNREADS
         })]
-      }) : L === _.UnreadBarMode.MENTIONS ? (0, l.jsx)(d.Clickable, {
-        className: i()(S.bar, S.mentionsBar),
-        onClick: M,
+      }) : L === S.UnreadBarMode.MENTIONS ? (0, l.jsx)(d.Clickable, {
+        className: i()(I.bar, I.mentionsBar),
+        onClick: y,
         children: (0, l.jsx)(d.Text, {
           variant: "text-xs/semibold",
           color: "status-danger-text",
-          className: S.barText,
-          children: I.default.Messages.NEW_MENTIONS_COUNT.format({
+          className: I.barText,
+          children: _.default.Messages.NEW_MENTIONS_COUNT.format({
             count: v
           })
         })
-      }) : L === _.UnreadBarMode.VOICE_CHANNELS ? (0, l.jsx)(T, {
+      }) : L === S.UnreadBarMode.VOICE_CHANNELS ? (0, l.jsx)(T, {
         jumpToVoiceChannels: u,
         guildChannels: n,
         guildChannelsVersion: s

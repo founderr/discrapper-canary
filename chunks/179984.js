@@ -13,9 +13,9 @@ var a = s("735250"),
   E = s("906732"),
   T = s("15640"),
   I = s("594174"),
-  f = s("78839"),
+  S = s("78839"),
   R = s("74538"),
-  S = s("775412"),
+  f = s("775412"),
   m = s("846363"),
   A = s("104494"),
   N = s("639119"),
@@ -140,7 +140,7 @@ t.default = e => {
     w = (0, m.useMarketingOptimizationExperiment)({
       autoTrackExposure: !1
     }),
-    K = (0, l.useStateFromStores)([f.default], () => f.default.hasFetchedSubscriptions()),
+    K = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedSubscriptions()),
     W = (0, T.useSubscriptionPlansLoaded)(),
     V = "PlanComparisonTable";
   (0, d.useTriggerDebuggingAA)({
@@ -156,7 +156,7 @@ t.default = e => {
     Q = (0, R.isPremiumExactly)(X, h.PremiumTypes.TIER_2),
     Z = (0, N.usePremiumTrialOffer)(),
     J = null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-    q = (0, S.useCurrentPremiumTrialTier)(),
+    q = (0, f.useCurrentPremiumTrialTier)(),
     $ = (0, A.usePremiumDiscountOffer)(),
     ee = null != $ && (0, A.discountOfferHasTier)($, h.PremiumSubscriptionSKUs.TIER_2),
     et = (0, p.useDiscountedPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),

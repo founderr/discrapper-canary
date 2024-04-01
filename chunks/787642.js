@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("626135"),
   f = n("768581"),
   E = n("125631"),
-  _ = n("981631"),
-  h = n("689938"),
+  h = n("981631"),
+  _ = n("689938"),
   C = n("374307");
 
 function S(e, t, n) {
@@ -44,9 +44,9 @@ function S(e, t, n) {
 }
 
 function m() {
-  let e = Object.values(u.default.getGuilds()).filter(e => e.hasFeature(_.GuildFeatures.HUB)),
+  let e = Object.values(u.default.getGuilds()).filter(e => e.hasFeature(h.GuildFeatures.HUB)),
     t = e => {
-      c.default.track(_.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
+      c.default.track(h.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
         guild_id: e
       }), (0, o.transitionToGuild)(e)
     };
@@ -56,7 +56,7 @@ function m() {
       children: (0, a.jsx)(l.FormTitle, {
         tag: "h2",
         className: C.title,
-        children: h.default.Messages.ADD_FRIEND_MAKE_FRIENDS
+        children: _.default.Messages.ADD_FRIEND_MAKE_FRIENDS
       })
     }), (0, a.jsxs)("div", {
       className: C.grid,
@@ -66,8 +66,8 @@ function m() {
         size: 240
       }), e.name, () => {
         t(e.id)
-      })), S(d.default, h.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
-        (0, i.clearSearch)(), c.default.track(_.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.transitionTo)(_.Routes.GUILD_DISCOVERY)
+      })), S(d.default, _.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
+        (0, i.clearSearch)(), c.default.track(h.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.transitionTo)(h.Routes.GUILD_DISCOVERY)
       })]
     })]
   })

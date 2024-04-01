@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("785681"),
   f = n("485664"),
   E = n("880257"),
-  _ = n("631885"),
-  h = n("895328"),
+  h = n("631885"),
+  _ = n("895328"),
   C = n("568671"),
   S = n("419821"),
   m = n("367515"),
@@ -99,7 +99,7 @@ function O() {
 }
 
 function v() {
-  let e = (0, _.useHasMaxConnections)();
+  let e = (0, h.useHasMaxConnections)();
   return (0, a.jsxs)("div", {
     className: i()(g.box, g.linkingBanner),
     children: [(0, a.jsxs)("div", {
@@ -144,7 +144,7 @@ function L(e) {
         user: i
       })
     }, i.id)
-  }, [l, t]), _ = s.useCallback(() => (0, a.jsx)(d.default, {
+  }, [l, t]), h = s.useCallback(() => (0, a.jsx)(d.default, {
     className: g.__invalid_sectionTitle,
     children: (0, a.jsx)(o.Text, {
       className: A.marginBottom8,
@@ -174,7 +174,7 @@ function L(e) {
             },
             sectionHeight: p.FAMILY_CENTER_REQUEST_SECTION_HEIGHT,
             rowHeight: p.FAMILY_CENTER_REQUEST_ROW_HEIGHT,
-            renderSection: _,
+            renderSection: h,
             renderRow: E,
             sections: [l.length],
             chunkSize: 30,
@@ -188,7 +188,7 @@ function L(e) {
 }
 let P = () => {
     let e = (0, E.default)(),
-      t = (0, _.useUserForLinkStatus)(p.UserLinkStatus.ACTIVE),
+      t = (0, h.useUserForLinkStatus)(p.UserLinkStatus.ACTIVE),
       n = e ? p.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : p.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
       s = {
         count: t.length,
@@ -209,7 +209,7 @@ let P = () => {
           children: l
         }), (0, a.jsx)("div", {
           className: g.box,
-          children: (0, a.jsx)(h.default, {
+          children: (0, a.jsx)(_.default, {
             text: T.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_EMPTY_DESCRIPTION
           })
         })]
@@ -217,7 +217,7 @@ let P = () => {
     })
   },
   M = () => {
-    let e = (0, _.useHasMaxConnections)(),
+    let e = (0, h.useHasMaxConnections)(),
       t = (0, E.default)() ? p.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : p.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
       n = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
         maxConnections: t
@@ -250,7 +250,7 @@ let P = () => {
     })]
   }) : null,
   D = () => {
-    let e = (0, _.useUserForLinkStatus)(p.UserLinkStatus.PENDING),
+    let e = (0, h.useUserForLinkStatus)(p.UserLinkStatus.PENDING),
       t = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
         count: e.length
       }), T.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({

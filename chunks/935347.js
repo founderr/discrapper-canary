@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("433517"),
   f = n("481060"),
   E = n("205355"),
-  _ = n("607070"),
-  h = n("38618"),
+  h = n("607070"),
+  _ = n("38618"),
   C = n("197344"),
   S = n("474873"),
   m = n("215427"),
@@ -239,12 +239,12 @@ class M extends s.PureComponent {
     }, this._connectedSound.volume = 1
   }
 }
-t.default = d.default.connectStores([h.default, m.default, S.default, _.default], () => ({
-  isTryingToConnect: h.default.isTryingToConnect(),
-  connected: h.default.isConnected(),
+t.default = d.default.connectStores([_.default, m.default, S.default, h.default], () => ({
+  isTryingToConnect: _.default.isTryingToConnect(),
+  connected: _.default.isConnected(),
   incident: m.default.getIncident(),
   soundpack: S.default.getSoundpack(),
-  reducedMotion: _.default.useReducedMotion
+  reducedMotion: h.default.useReducedMotion
 }))(e => {
   let {
     isTryingToConnect: t,

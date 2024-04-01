@@ -5,8 +5,8 @@ var i, r, o, u, d = n("392711"),
   c = n.n(d),
   f = n("442837"),
   E = n("570140"),
-  _ = n("308063"),
-  h = n("388610"),
+  h = n("308063"),
+  _ = n("388610"),
   C = n("430824"),
   S = n("496675"),
   m = n("855674"),
@@ -20,7 +20,7 @@ let p = [],
   O = null;
 
 function v() {
-  if (a = null != (s = h.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, p = null != s && null != a && S.default.can(I.Permissions.MANAGE_WEBHOOKS, s) ? m.default.getWebhooksForChannel(a.id, s.id) : [], null != T) {
+  if (a = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, p = null != s && null != a && S.default.can(I.Permissions.MANAGE_WEBHOOKS, s) ? m.default.getWebhooksForChannel(a.id, s.id) : [], null != T) {
     let e = P(T.id);
     null != e && (T = e)
   }
@@ -40,7 +40,7 @@ function P(e) {
 }
 class M extends(i = f.default.Store) {
   initialize() {
-    this.waitFor(h.default, C.default, m.default, S.default)
+    this.waitFor(_.default, C.default, m.default, S.default)
   }
   hasChanges() {
     return R
@@ -88,9 +88,9 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
     } = e;
     if (t !== I.ChannelSettingsSections.INTEGRATIONS) return !1;
     if (l = I.IntegrationSettingsSections.OVERVIEW, null == a) {
-      let e = h.default.getChannel(),
+      let e = _.default.getChannel(),
         t = null == e ? void 0 : e.getGuildId();
-      null != e && null != t && (_.default.fetchForChannel(t, e.id), g = !0), v()
+      null != e && null != t && (h.default.fetchForChannel(t, e.id), g = !0), v()
     }
   },
   INTEGRATION_SETTINGS_SET_SECTION: function(e) {

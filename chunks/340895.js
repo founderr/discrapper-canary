@@ -7,8 +7,8 @@ var a, s, l, i, r = n("442837"),
   c = n("581883"),
   f = n("314897"),
   E = n("592125"),
-  _ = n("885110"),
-  h = n("981631");
+  h = n("885110"),
+  _ = n("981631");
 let C = "IncomingCallStore",
   S = {
     width: 232,
@@ -55,11 +55,11 @@ function O(e) {
 }();
 
 function v() {
-  N = _.default.getStatus() === h.StatusTypes.DND || d.FocusMode.getSetting()
+  N = h.default.getStatus() === _.StatusTypes.DND || d.FocusMode.getSetting()
 }
 class L extends(a = r.default.Store) {
   initialize() {
-    this.waitFor(E.default, _.default), this.syncWith([_.default], v), this.syncWith([c.default], v)
+    this.waitFor(E.default, h.default), this.syncWith([h.default], v), this.syncWith([c.default], v)
   }
   getIncomingCalls() {
     return N ? I : Array.from(p.values())

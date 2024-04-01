@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("350327"),
   g = s("318661"),
   h = s("996073"),
-  N = s("25990"),
-  I = s("466111"),
+  I = s("25990"),
+  N = s("466111"),
   p = s("626135"),
   C = s("74538"),
   A = s("962746"),
@@ -49,17 +49,17 @@ function B(e) {
     pendingAvatar: w,
     pendingBanner: V,
     pendingThemeColors: Y,
-    pendingPronouns: W,
-    pendingBio: K,
+    pendingPronouns: K,
+    pendingBio: W,
     tryItOutThemeColors: z,
     tryItOutAvatar: Q,
     tryItOutBanner: Z,
     tryItOutAvatarDecoration: q,
     tryItOutProfileEffectId: X
-  } = (0, l.useStateFromStoresObject)([N.default], () => {
-    let e = N.default.getAllPending(),
-      t = N.default.getErrors(),
-      s = N.default.getAllTryItOut();
+  } = (0, l.useStateFromStoresObject)([I.default], () => {
+    let e = I.default.getAllPending(),
+      t = I.default.getErrors(),
+      s = I.default.getAllTryItOut();
     return {
       ...e,
       ...s,
@@ -68,7 +68,7 @@ function B(e) {
   }), J = (0, c.default)(q), $ = (0, S.default)(X), ee = n.useRef(null);
   (0, h.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
   let et = (0, g.default)(G.id),
-    es = null == et ? void 0 : et.getPreviewBio(K),
+    es = null == et ? void 0 : et.getPreviewBio(W),
     {
       analyticsLocations: ea,
       sourceAnalyticsLocations: en
@@ -103,7 +103,7 @@ function B(e) {
       children: [(0, a.jsx)(O.default, {
         layoutClassName: y.tryItOutLayout,
         previewTitle: (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(I.default, {
+          children: [(0, a.jsx)(N.default, {
             className: y.premiumIcon
           }), U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
         }),
@@ -111,8 +111,8 @@ function B(e) {
           user: G,
           onAvatarChange: _.setTryItOutAvatar,
           onBannerChange: _.setTryItOutBanner,
-          pendingPronouns: W,
-          pendingBio: K,
+          pendingPronouns: K,
+          pendingBio: W,
           pendingBanner: null !== (F = null != Z ? Z : V) && void 0 !== F ? F : s("466045"),
           pendingAvatar: null != Q ? Q : w,
           pendingThemeColors: null != z ? z : Y,

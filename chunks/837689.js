@@ -12,8 +12,8 @@ var s = n("481060"),
   c = n("913976"),
   f = n("104494"),
   E = n("29920"),
-  _ = n("786397"),
-  h = n("248042"),
+  h = n("786397"),
+  _ = n("248042"),
   C = n("318199"),
   S = n("474936");
 
@@ -62,18 +62,18 @@ class p extends i.default {
       if (null != t) return {
         userDiscountOffer: t
       };
-      let n = [(0, S.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID), (0, S.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID), (0, S.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID), (0, S.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID), (0, S.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID), (0, S.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID), (0, S.PREMIUM_TIER_2_AUTH3_TRIAL_ID)].map(e => o.default.getUserTrialOffer(e)).filter(e => null != e && !(0, _.hasUserTrialOfferExpired)(e)).shift();
+      let n = [(0, S.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID), (0, S.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID), (0, S.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID), (0, S.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID), (0, S.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID), (0, S.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID), (0, S.PREMIUM_TIER_2_AUTH3_TRIAL_ID)].map(e => o.default.getUserTrialOffer(e)).filter(e => null != e && !(0, h.hasUserTrialOfferExpired)(e)).shift();
       return null != n ? {
         userTrialOffer: n
       } : {}
     }), m(this, "mayShowAnnouncementModal", async () => {
-      if (await (0, h.maybeFetchActiveBogoPromotion)(), !d.ProcessArgs.isDisallowPopupsSet()) {
+      if (await (0, _.maybeFetchActiveBogoPromotion)(), !d.ProcessArgs.isDisallowPopupsSet()) {
         if (!(0, s.hasAnyModalOpen)() && c.default.getCurrentConfig({
             location: "OfferAnnouncementManager"
           }).enabled) {
           for (let e of !(0, u.isPremium)(r.default.getCurrentUser()) && (!o.default.hasFetchedOffer() || o.default.shouldFetchOffer()) ? await (0, E.fetchPremiumMarketingContent)() : await (0, E.fetchPremiumMarketingContentWithUserOffer)(this.getOfferFromStore()))
             if (this.maybeOpenServerDriveAnnouncementModal(e, !1)) break
-        }!(0, s.hasAnyModalOpen)() && await (0, h.isEligibleForBOGOAnnouncementModal)() && (0, s.openModalLazy)(async () => {
+        }!(0, s.hasAnyModalOpen)() && await (0, _.isEligibleForBOGOAnnouncementModal)() && (0, s.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("28614")]).then(n.bind(n, "868508"));

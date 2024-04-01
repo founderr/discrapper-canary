@@ -16,9 +16,9 @@ var l = n("735250"),
   m = n("979651"),
   g = n("938475"),
   E = n("514342"),
-  _ = n("714794"),
-  I = n("135724"),
-  S = n("25601"),
+  S = n("714794"),
+  _ = n("135724"),
+  I = n("25601"),
   N = n("207055"),
   T = n("981631"),
   A = n("124368"),
@@ -53,8 +53,8 @@ t.default = a.memo(function(e) {
     thread: t,
     isSelectedChannel: s,
     isSelectedVoice: R,
-    isLast: M,
-    withGuildIcon: y
+    isLast: y,
+    withGuildIcon: M
   } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([m.default], () => m.default.hasVideo(t.id)), {
     unread: j,
     mentionCount: G
@@ -93,9 +93,9 @@ t.default = a.memo(function(e) {
       [v.selected]: s
     }),
     children: [(0, l.jsx)(O, {
-      withGuildIcon: y
-    }), M ? null : (0, l.jsx)(O, {
-      withGuildIcon: y,
+      withGuildIcon: M
+    }), y ? null : (0, l.jsx)(O, {
+      withGuildIcon: M,
       style: {
         transform: "rotateX(180deg) translateY(-9px)"
       }
@@ -112,7 +112,7 @@ t.default = a.memo(function(e) {
           [x.modeSelected]: s,
           [x.modeMuted]: !s && U,
           [x.modeUnreadImportant]: !U && !s && j,
-          [x.withGuildIcon]: y
+          [x.withGuildIcon]: M
         }),
         onMouseDown: w,
         onContextMenu: F,
@@ -135,11 +135,11 @@ t.default = a.memo(function(e) {
               children: t.name
             }), (0, l.jsxs)("div", {
               className: x.children,
-              children: [B > 0 && t.userLimit > 0 ? (0, l.jsx)(I.default, {
+              children: [B > 0 && t.userLimit > 0 ? (0, l.jsx)(_.default, {
                 userCount: B,
                 video: b,
                 channel: t
-              }) : null, (0, _.default)(G) ? (0, l.jsx)(S.default, {
+              }) : null, (0, S.default)(G) ? (0, l.jsx)(I.default, {
                 mentionsCount: G
               }) : null]
             })]

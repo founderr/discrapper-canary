@@ -12,8 +12,8 @@ var s = n("481060"),
   c = n("78415"),
   f = n("374023"),
   E = n("886162"),
-  _ = n("981631"),
-  h = n("815660"),
+  h = n("981631"),
+  _ = n("815660"),
   C = n("231338");
 let S = "AGREEMENTS_MODAL_KEY";
 t.default = {
@@ -22,10 +22,10 @@ t.default = {
   },
   handleRequiredAction(e) {
     let t = e.requiredAction;
-    !f.ProcessArgs.isDisallowPopupsSet() && null != u.default.getCurrentUser() && (t === _.UserRequiredActions.REQUIRE_CAPTCHA || t === _.UserRequiredActions.REQUIRE_VERIFIED_EMAIL || t === _.UserRequiredActions.REQUIRE_VERIFIED_PHONE || t === _.UserRequiredActions.REQUIRE_REVERIFIED_PHONE || t === _.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === _.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || i.default.isEmailReverification(t) ? (0, d.openFullScreenLayer)(() => (0, a.jsx)(r.default, {}), {
+    !f.ProcessArgs.isDisallowPopupsSet() && null != u.default.getCurrentUser() && (t === h.UserRequiredActions.REQUIRE_CAPTCHA || t === h.UserRequiredActions.REQUIRE_VERIFIED_EMAIL || t === h.UserRequiredActions.REQUIRE_VERIFIED_PHONE || t === h.UserRequiredActions.REQUIRE_REVERIFIED_PHONE || t === h.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === h.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || i.default.isEmailReverification(t) ? (0, d.openFullScreenLayer)(() => (0, a.jsx)(r.default, {}), {
       layerKey: "verification",
       Layer: c.default
-    }) : t === _.UserRequiredActions.AGREEMENTS ? (0, s.openModal)(e => (0, a.jsx)(E.default, {
+    }) : t === h.UserRequiredActions.AGREEMENTS ? (0, s.openModal)(e => (0, a.jsx)(E.default, {
       ...e
     }), {
       modalKey: S,
@@ -33,7 +33,7 @@ t.default = {
     }) : null == t && ((0, d.closeFullScreenLayer)("verification"), (0, s.hasModalOpen)(S) && (0, s.closeModal)(S)))
   },
   handleAuthenticationStoreChanged() {
-    null == o.default.getId() && ((0, d.closeFullScreenLayer)("verification"), (0, s.closeModal)(S), (0, s.closeModal)(r.PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY), (0, s.closeModal)(r.EMAIL_VERIFICATION_MODAL_KEY), (0, s.closeModal)(h.PHONE_VERIFICATION_MODAL_KEY))
+    null == o.default.getId() && ((0, d.closeFullScreenLayer)("verification"), (0, s.closeModal)(S), (0, s.closeModal)(r.PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY), (0, s.closeModal)(r.EMAIL_VERIFICATION_MODAL_KEY), (0, s.closeModal)(_.PHONE_VERIFICATION_MODAL_KEY))
   },
   handleCurrentUserUpdate(e) {
     let {

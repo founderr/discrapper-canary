@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("810090"),
   f = n("617136"),
   E = n("272008"),
-  _ = n("113434"),
-  h = n("569984"),
+  h = n("113434"),
+  _ = n("569984"),
   C = n("497505"),
   S = n("918701"),
   m = n("340100"),
@@ -35,7 +35,7 @@ let O = s.forwardRef(function(e, t) {
     onCtxMenuSelect: D,
     quest: x,
     useReducedMotion: b
-  } = e, U = (0, o.useStateFromStores)([h.default], () => h.default.isEnrolling(x.id), [x]), G = (0, _.useQuestFormattedDate)(x.config.expiresAt), j = (0, _.useQuestFormattedDate)(x.config.rewardCodeExpiresAt), w = s.useMemo(() => (0, S.isAssetAnimated)(x.config.assets.questBarHero), [x]), k = s.useCallback(() => {
+  } = e, U = (0, o.useStateFromStores)([_.default], () => _.default.isEnrolling(x.id), [x]), j = (0, h.useQuestFormattedDate)(x.config.expiresAt), G = (0, h.useQuestFormattedDate)(x.config.rewardCodeExpiresAt), w = s.useMemo(() => (0, S.isAssetAnimated)(x.config.assets.questBarHero), [x]), k = s.useCallback(() => {
     (0, E.enrollInQuest)(x.id, {
       questContent: C.QuestContent.QUEST_BAR,
       questContentCTA: f.QuestContentCTA.ACCEPT_QUEST
@@ -80,9 +80,9 @@ let O = s.forwardRef(function(e, t) {
               color: "always-white",
               variant: "text-xxs/normal",
               children: H ? N.default.Messages.QUESTS_CLAIM_BY.format({
-                expirationDate: j
-              }) : N.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: G
+              }) : N.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
+                expirationDate: j
               })
             })]
           })]

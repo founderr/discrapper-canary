@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("943094"),
   f = n("749210"),
   E = n("287734"),
-  _ = n("401430"),
-  h = n("230711"),
+  h = n("401430"),
+  _ = n("230711"),
   C = n("607070"),
   S = n("627845"),
   m = n("185666"),
@@ -33,8 +33,8 @@ var a = n("735250"),
   x = n("935347"),
   b = n("560067"),
   U = n("823169"),
-  G = n("620360"),
-  j = n("96051"),
+  j = n("620360"),
+  G = n("96051"),
   w = n("750995"),
   k = n("696287"),
   F = n("408026"),
@@ -65,8 +65,8 @@ var a = n("735250"),
   ec = n("837689"),
   ef = n("367207"),
   eE = n("489977"),
-  e_ = n("329557"),
-  eh = n("304445"),
+  eh = n("329557"),
+  e_ = n("304445"),
   eC = n("893607"),
   eS = n("703656"),
   em = n("298969"),
@@ -87,8 +87,8 @@ var a = n("735250"),
   ex = n("282506"),
   eb = n("444961"),
   eU = n("314897"),
-  eG = n("433355"),
-  ej = n("592125"),
+  ej = n("433355"),
+  eG = n("592125"),
   ew = n("896797"),
   ek = n("430824"),
   eF = n("819640"),
@@ -120,7 +120,7 @@ function e2(e, t, n) {
 n("117240"), n("801077"), n("967368"), n("272053"), n("974180"), n("574254"), n("551428"), n("55563"), n("455173"), n("882029"), n("959457"), n("653255"), n("663389"), n("25990"), n("778825"), n("999382"), n("388610"), n("533947"), n("277053"), n("371398"), n("141233"), n("471073"), n("628566");
 let e9 = !1;
 (0, A.initSessionHeartbeatScheduler)(), o.default.initialize(), em.default.loadServer(), eZ.isPlatformEmbedded && (eX.default.on("USER_SETTINGS_OPEN", () => {
-  !eF.default.getLayers().includes(e$.Layers.USER_SETTINGS) && h.default.open(e$.UserSettingsSections.ACCOUNT)
+  !eF.default.getLayers().includes(e$.Layers.USER_SETTINGS) && _.default.open(e$.UserSettingsSections.ACCOUNT)
 }), eX.default.on("LAUNCH_APPLICATION", (e, t) => {
   let n = eB.default.getActiveLibraryApplication(t);
   eJ.playApplication(t, n, {
@@ -158,7 +158,7 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
       });
       if (e) {
         let e = ts(t);
-        return null == e || (e.params.guildId === e$.ME || null != ek.default.getGuild(e.params.guildId)) && null != ej.default.getChannel(e.params.channelId) ? (0, a.jsx)(r.Redirect, {
+        return null == e || (e.params.guildId === e$.ME || null != ek.default.getGuild(e.params.guildId)) && null != eG.default.getChannel(e.params.channelId) ? (0, a.jsx)(r.Redirect, {
           to: t
         }) : (0, a.jsx)(r.Redirect, {
           to: s
@@ -281,7 +281,7 @@ let tn = [{
               break
             }
             case "test-mode":
-              eY.default.whenInitialized(() => _.authorizeAndSetTestModeApplication(n));
+              eY.default.whenInitialized(() => h.authorizeAndSetTestModeApplication(n));
               break;
             case "uninstall": {
               let e = eB.default.getActiveLibraryApplication(n);
@@ -327,7 +327,7 @@ let tn = [{
       let {
         location: t
       } = e, n = (0, eD.default)(t.pathname);
-      return null != n && (0, W.addPostConnectionCallback)(() => h.default.open(n.section, n.subsection, {
+      return null != n && (0, W.addPostConnectionCallback)(() => _.default.open(n.section, n.subsection, {
         openWithoutBackstack: !1,
         impressionSource: n.source
       })), (0, a.jsx)(r.Redirect, {
@@ -361,7 +361,7 @@ let tn = [{
   }, {
     path: [e$.Routes.APPLICATION_LIBRARY_INVENTORY],
     render: function() {
-      return (0, W.addPostConnectionCallback)(() => h.default.open(e$.UserSettingsSections.INVENTORY)), (0, a.jsx)(r.Redirect, {
+      return (0, W.addPostConnectionCallback)(() => _.default.open(e$.UserSettingsSections.INVENTORY)), (0, a.jsx)(r.Redirect, {
         to: ew.default.defaultRoute
       })
     },
@@ -450,11 +450,11 @@ function tl(e) {
   let {
     location: s
   } = (0, eS.getHistory)();
-  s.pathname === a && (null == ej.default.getChannel(t) ? (0, eS.replaceWith)(e$.Routes.CHANNEL(n)) : (0, eS.replaceWith)(a))
+  s.pathname === a && (null == eG.default.getChannel(t) ? (0, eS.replaceWith)(e$.Routes.CHANNEL(n)) : (0, eS.replaceWith)(a))
 }
 class ti extends s.PureComponent {
   componentDidMount() {
-    y.default.initialize(), eX.default.setZoomFactor(C.default.zoom), em.default.init(), P.default.initialize(), ed.default.initialize(), F.default.initialize(), eb.default.initialize(), B.default.initialize(), ef.default.initialize(), ee.default.initialize(), S.default.init(), V.default.init(), H.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), T.default.initialize(), ex.default.initialize(), eu.default.initialize(), p.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), I.default.initialize(), ev.default.init(), eK.default.init(), eW.default.init(), eM.default.init(), eA.default.initialize(), eN.default.initialize(), eP.default.initialize(), ey.default.init(), j.default.initialize(), m.default.initialize(), eI.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), D.default.initialize(), $.default.init({
+    y.default.initialize(), eX.default.setZoomFactor(C.default.zoom), em.default.init(), P.default.initialize(), ed.default.initialize(), F.default.initialize(), eb.default.initialize(), B.default.initialize(), ef.default.initialize(), ee.default.initialize(), S.default.init(), V.default.init(), H.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), T.default.initialize(), ex.default.initialize(), eu.default.initialize(), p.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), I.default.initialize(), ev.default.init(), eK.default.init(), eW.default.init(), eM.default.init(), eA.default.initialize(), eN.default.initialize(), eP.default.initialize(), ey.default.init(), G.default.initialize(), m.default.initialize(), eI.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), D.default.initialize(), $.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -464,10 +464,10 @@ class ti extends s.PureComponent {
           ...t
         })
       })
-    }), G.default.init(), et.default.initialize(), e_.default.initialize(), ec.default.initialize(), U.default.initialize(), this.rewriterUnlisten = eh.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = eh.default.addRouteChangeListener(this.handleHistoryChange)
+    }), j.default.init(), et.default.initialize(), eh.default.initialize(), ec.default.initialize(), U.default.initialize(), this.rewriterUnlisten = e_.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = e_.default.addRouteChangeListener(this.handleHistoryChange)
   }
   componentWillUnmount() {
-    y.default.terminate(), eb.default.terminate(), ef.default.terminate(), ed.default.terminate(), P.default.terminate(), T.default.terminate(), ex.default.terminate(), p.default.terminate(), eE.default.terminate(), eu.default.terminate(), eP.default.terminate(), I.default.terminate(), j.default.terminate(), et.default.terminate(), m.default.terminate(), e_.default.terminate(), eI.default.terminate(), eg.default.terminate(), er.default.terminate(), ei.default.terminate(), eo.default.terminate(), D.default.terminate(), ec.default.terminate(), U.default.terminate(), k.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
+    y.default.terminate(), eb.default.terminate(), ef.default.terminate(), ed.default.terminate(), P.default.terminate(), T.default.terminate(), ex.default.terminate(), p.default.terminate(), eE.default.terminate(), eu.default.terminate(), eP.default.terminate(), I.default.terminate(), G.default.terminate(), et.default.terminate(), m.default.terminate(), eh.default.terminate(), eI.default.terminate(), eg.default.terminate(), er.default.terminate(), ei.default.terminate(), eo.default.terminate(), D.default.terminate(), ec.default.terminate(), U.default.terminate(), k.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
   }
   handleHistoryChange(e) {
     let {
@@ -499,11 +499,11 @@ class ti extends s.PureComponent {
         channelId: s,
         messageId: r,
         threadId: o
-      } = tt(n), u = (0, eC.isValidGuildId)(a), d = (0, eC.isValidChannelId)(s), c = (0, eC.isValidChannelId)(o), _ = eV.default.getGuildId(), h = _ !== a;
-      if (u && h && f.default.selectGuild(a), u && d) {
-        let n = eH.default.getChannelId(_),
+      } = tt(n), u = (0, eC.isValidGuildId)(a), d = (0, eC.isValidChannelId)(s), c = (0, eC.isValidChannelId)(o), h = eV.default.getGuildId(), _ = h !== a;
+      if (u && _ && f.default.selectGuild(a), u && d) {
+        let n = eH.default.getChannelId(h),
           i = n !== s;
-        if (!e9 || h || i || null != r) {
+        if (!e9 || _ || i || null != r) {
           e9 = !0, E.default.selectChannel({
             guildId: a,
             channelId: s,
@@ -515,8 +515,8 @@ class ti extends s.PureComponent {
           null != e && eR.default.setSelectedSummary(s, e)
         }
         if (null != o && c) {
-          let e = eG.default.getCurrentSidebarChannelId(n) !== o,
-            t = null != eG.default.getGuildSidebarState(a);
+          let e = ej.default.getCurrentSidebarChannelId(n) !== o,
+            t = null != ej.default.getGuildSidebarState(a);
           if (null != s && null != o && e) {
             if (t)(0, eS.replaceWith)(e$.Routes.CHANNEL(a, o, r));
             else {
@@ -534,11 +534,11 @@ class ti extends s.PureComponent {
         } else null != s && !i && ep.default.closeChannelSidebar(s);
         let u = ea.default.getIsOpen();
         if (s === e1.StaticChannelRoute.ROLE_SUBSCRIPTIONS) en.default.closeSidebar();
-        else if (h && u) {
-          let t = null == _ && a === e$.ME,
+        else if (_ && u) {
+          let t = null == h && a === e$.ME,
             n = e === e$.Routes.GUILD_DISCOVERY;
           t || n ? en.default.closeSidebar() : en.default.openSidebar()
-        } else(i && u || !h && !i) && en.default.closeSidebar()
+        } else(i && u || !_ && !i) && en.default.closeSidebar()
       } else {
         var C;
         if (C = e, !te.some(e => {
@@ -560,7 +560,7 @@ class ti extends s.PureComponent {
       threadId: l
     } = tt(n), i = (0, eC.isValidGuildId)(a) && a !== e$.ME && a !== e$.FAVORITES;
     if (null != s && (0, eC.isValidChannelId)(s) && !(0, e1.isStaticChannelRoute)(s) && i) {
-      let n = ej.default.getChannel(s);
+      let n = eG.default.getChannel(s);
       if (null == n) eO.default.loadThread(s).then(() => tl({
         channelId: s,
         guildId: a,
@@ -572,7 +572,7 @@ class ti extends s.PureComponent {
       };
       if (null != l) {
         if (!((0, eC.isValidChannelId)(l) && !(0, e1.isStaticChannelRoute)(s))) return null;
-        let n = ej.default.getChannel(l);
+        let n = eG.default.getChannel(l);
         if (null == n) eO.default.loadThread(l).then(() => tl({
           channelId: l,
           guildId: a,

@@ -14,7 +14,7 @@ function o(e) {
   let {
     onError: t,
     onSuccess: n
-  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [_, h] = a.useState(!1), [C, S] = a.useState(!1), [m, I] = a.useState(!1), [p, T] = a.useState(!1), [g, A] = a.useState(!1), N = o || d || f || _ || m || g, R = a.useCallback(async e => {
+  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, S] = a.useState(!1), [m, I] = a.useState(!1), [p, T] = a.useState(!1), [g, A] = a.useState(!1), N = o || d || f || h || m || g, R = a.useCallback(async e => {
     if (!N) {
       u(!0);
       try {
@@ -52,14 +52,14 @@ function o(e) {
     }
   }, [N, t, n]), L = a.useCallback(async e => {
     if (!N) {
-      h(!0);
+      _(!0);
       try {
         await (0, l.removeLinkForUserId)(e.id), null == n || n()
       } catch (n) {
         let e = new s.APIError(n);
         null == t || t(e)
       } finally {
-        h(!1)
+        _(!1)
       }
     }
   }, [N, t, n]), P = a.useCallback(async () => {
@@ -127,7 +127,7 @@ function o(e) {
     isAcceptLoading: o,
     isDeclineLoading: d,
     isDisconnectLoading: f,
-    isCancelLoading: _,
+    isCancelLoading: h,
     isGetLinkCodeLoading: C,
     isSelectTeenUserLoading: p,
     isRequestingLink: m,

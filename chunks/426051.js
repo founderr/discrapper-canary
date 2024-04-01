@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("26373"),
   f = n("486622"),
   E = n("376191"),
-  _ = n("86203"),
-  h = n("689938"),
+  h = n("86203"),
+  _ = n("689938"),
   C = n("65207");
 
 function S(e) {
@@ -25,7 +25,7 @@ function S(e) {
     user: n,
     channel: S
   } = e, m = (0, c.useListHasSingleSpamMessageRequest)(), I = s.useCallback(() => {
-    (0, i.showToast)((0, i.createToast)(h.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
+    (0, i.showToast)((0, i.createToast)(_.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
       name: l.MetricEvents.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
   }, []), p = s.useCallback(() => {
@@ -60,8 +60,8 @@ function S(e) {
         },
         disabled: v,
         submitting: O,
-        children: h.default.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
-      }), (0, a.jsx)(_.default, {
+        children: _.default.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
+      }), (0, a.jsx)(h.default, {
         className: C.button,
         channel: S,
         buttonSize: i.Button.Sizes.SMALL

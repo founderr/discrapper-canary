@@ -10,8 +10,8 @@ var i = n("756647"),
   c = n("457330"),
   f = n("533307"),
   E = n("447543"),
-  _ = n("962220"),
-  h = n("703656"),
+  h = n("962220"),
+  _ = n("703656"),
   C = n("314897"),
   S = n("594174"),
   m = n("626135"),
@@ -49,7 +49,7 @@ function R(e, t) {
         invite: n,
         code: t,
         context: N.AppContext.APP
-      }) : (0, h.replaceWith)(N.Routes.INVITE(t)), {
+      }) : (0, _.replaceWith)(N.Routes.INVITE(t)), {
         invite: n,
         code: t
       }
@@ -66,7 +66,7 @@ function R(e, t) {
       if (null == S.default.getCurrentUser()) return;
       let {
         guildTemplate: a
-      } = await _.default.resolveGuildTemplate(t);
+      } = await h.default.resolveGuildTemplate(t);
       if (null == a) throw new g.default({
         errorCode: N.RPCErrors.INVALID_GUILD_TEMPLATE
       }, "Invalid guild template id: ".concat(t));
@@ -130,28 +130,28 @@ function R(e, t) {
       } = e;
       switch (T.default.focus(), t) {
         case A.RPCDeepLinks.USER_SETTINGS:
-          null != n && ((0, h.replaceWith)(N.Routes.SETTINGS(n.section, n.subsection)), R(n.fingerprint, "settings"));
+          null != n && ((0, _.replaceWith)(N.Routes.SETTINGS(n.section, n.subsection)), R(n.fingerprint, "settings"));
           break;
         case A.RPCDeepLinks.CHANGELOG:
-          null != n && ((0, h.replaceWith)(p.default.formatPathWithQuery(N.Routes.CHANGELOGS(n.date), n.query)), R(n.fingerprint, "changelog"));
+          null != n && ((0, _.replaceWith)(p.default.formatPathWithQuery(N.Routes.CHANGELOGS(n.date), n.query)), R(n.fingerprint, "changelog"));
           break;
         case A.RPCDeepLinks.LIBRARY:
-          (0, h.replaceWith)(N.Routes.APPLICATION_LIBRARY), null != n && R(n.fingerprint, "library");
+          (0, _.replaceWith)(N.Routes.APPLICATION_LIBRARY), null != n && R(n.fingerprint, "library");
           break;
         case A.RPCDeepLinks.STORE_HOME:
-          (0, h.replaceWith)(N.Routes.APPLICATION_STORE), null != n && R(n.fingerprint, "store");
+          (0, _.replaceWith)(N.Routes.APPLICATION_STORE), null != n && R(n.fingerprint, "store");
           break;
         case A.RPCDeepLinks.STORE_LISTING:
-          null != n && ((0, h.replaceWith)(N.Routes.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), R(n.fingerprint, "store"));
+          null != n && ((0, _.replaceWith)(N.Routes.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), R(n.fingerprint, "store"));
           break;
         case A.RPCDeepLinks.PICK_GUILD_SETTINGS:
-          null != n && ((0, h.replaceWith)({
+          null != n && ((0, _.replaceWith)({
             pathname: N.Routes.PICK_GUILD_SETTINGS(n.section, n.subsection),
             search: n.search
           }), R(n.fingerprint, "guild_settings"));
           break;
         case A.RPCDeepLinks.CHANNEL:
-          null != n && ((0, h.replaceWith)({
+          null != n && ((0, _.replaceWith)({
             pathname: N.Routes.CHANNEL(n.guildId, n.channelId, n.messageId),
             search: n.search
           }), R(n.fingerprint, "channel"))

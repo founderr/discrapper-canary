@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("703656"),
   f = n("683301"),
   E = n("671533"),
-  _ = n("900849"),
-  h = n("119317"),
+  h = n("900849"),
+  _ = n("119317"),
   C = n("749436"),
   S = n("650394"),
   m = n("731455"),
@@ -81,8 +81,8 @@ t.default = e => {
     placeholder: x,
     onTagClick: b
   } = e, U = i().uniqueId("GuildDiscovery"), {
-    guilds: G,
-    loading: j,
+    guilds: j,
+    loading: G,
     total: w
   } = n, [k, F] = s.useState(!1), {
     tag: B
@@ -93,7 +93,7 @@ t.default = e => {
       offset: e,
       length: t,
       filters: {
-        approximate_member_count: _.MINIMUM_MEMBER_COUNT
+        approximate_member_count: h.MINIMUM_MEMBER_COUNT
       }
     }), F(!1)
   }, K = () => {
@@ -122,7 +122,7 @@ t.default = e => {
       className: p.searchHeader,
       children: [(0, a.jsx)(u.Clickable, {
         onClick: () => {
-          d.clearSearch(), _.trackSearchClosed(t)
+          d.clearSearch(), h.trackSearchClosed(t)
         },
         className: p.arrow,
         "aria-label": I.default.Messages.BACK,
@@ -153,7 +153,7 @@ t.default = e => {
       }
     }) : (0, a.jsx)("div", {
       className: p.results,
-      children: (0, a.jsx)(h.default, {
+      children: (0, a.jsx)(_.default, {
         pageSize: T,
         totalCount: w,
         resetCurrentPage: k,
@@ -167,13 +167,13 @@ t.default = e => {
           return (0, a.jsxs)("section", {
             "aria-labelledby": U,
             children: [(0, a.jsx)(S.default, {
-              guilds: G,
-              loading: j,
+              guilds: j,
+              loading: G,
               loadingPlaceholderCount: T,
               onViewGuild: y,
               loadingGuildId: v,
               theme: L,
-              analyticsContext: _.AnalyticsContexts.SEARCH,
+              analyticsContext: h.AnalyticsContexts.SEARCH,
               onGuildCardSeen: D,
               onTagClick: b
             }), t]

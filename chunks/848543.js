@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("906732"),
   f = n("706140"),
   E = n("294629"),
-  _ = n("131951"),
-  h = n("459273"),
+  h = n("131951"),
+  _ = n("459273"),
   C = n("242291"),
   S = n("792165"),
   m = n("603074"),
@@ -34,13 +34,13 @@ function g(e) {
   } = e, {
     mute: O,
     suppress: v
-  } = (0, E.default)(t), L = (0, l.useStateFromStores)([_.default], () => _.default.isDeaf()), P = O || v || L, [M, y] = s.useState(!1), D = t.getGuildId(), x = (0, C.useSoundBoardDismissContentTypes)({
+  } = (0, E.default)(t), L = (0, l.useStateFromStores)([h.default], () => h.default.isDeaf()), P = O || v || L, [M, y] = s.useState(!1), D = t.getGuildId(), x = (0, C.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: P
   }), [b, U] = (0, f.useGetDismissibleContent)(x), {
-    analyticsLocations: G
+    analyticsLocations: j
   } = (0, c.default)(d.default.SOUNDBOARD_BUTTON);
 
-  function j(e) {
+  function G(e) {
     null != D && (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -97,7 +97,7 @@ function g(e) {
           var t;
           null === (t = R.onMouseLeave) || void 0 === t || t.call(R, e), B()
         },
-        onContextMenu: j,
+        onContextMenu: G,
         fullWidth: !0,
         size: o.Button.Sizes.SMALL,
         ...R,
@@ -111,11 +111,11 @@ function g(e) {
   }), V = s.useCallback(() => {
     !P && y(!M)
   }, [P, M]);
-  return (0, h.useComponentAction)({
+  return (0, _.useComponentAction)({
     event: I.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: V
   }), (0, a.jsx)(c.AnalyticsLocationProvider, {
-    value: G,
+    value: j,
     children: (0, a.jsx)(o.Tooltip, {
       text: function() {
         if (O) return T.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;

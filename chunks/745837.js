@@ -16,15 +16,15 @@ var s = n("803997"),
   c = n("729017"),
   f = n("63063"),
   E = n("13140"),
-  _ = n("435064"),
-  h = n("39604"),
+  h = n("435064"),
+  _ = n("39604"),
   C = n("356659"),
   S = n("981631"),
   m = n("689938"),
   I = n("783348");
 
 function p(e) {
-  o.default.open(S.UserSettingsSections.CLIPS), (0, h.dismissClipsUserEducation)(e)
+  o.default.open(S.UserSettingsSections.CLIPS), (0, _.dismissClipsUserEducation)(e)
 }
 
 function T() {
@@ -86,9 +86,9 @@ function A() {
   let {
     decoupledClipsEnabled: t,
     clipsError: n
-  } = (0, i.useStateFromStoresObject)([_.default], () => ({
-    decoupledClipsEnabled: _.default.getSettings().decoupledClipsEnabled,
-    clipsError: _.default.getLastClipsError()
+  } = (0, i.useStateFromStoresObject)([h.default], () => ({
+    decoupledClipsEnabled: h.default.getSettings().decoupledClipsEnabled,
+    clipsError: h.default.getLastClipsError()
   }));
   let s = (e = t, null != n ? C.ClipsUserEducationType.Error : e ? C.ClipsUserEducationType.Enabled : C.ClipsUserEducationType.Disabled),
     {
@@ -107,7 +107,7 @@ function A() {
       variant: "text-sm/medium",
       children: l()
     }), (0, a.jsx)(r.Button, {
-      onClick: () => (0, h.dismissClipsUserEducation)(s),
+      onClick: () => (0, _.dismissClipsUserEducation)(s),
       size: r.Button.Sizes.NONE,
       look: r.Button.Looks.BLANK,
       className: I.buttonClose,
