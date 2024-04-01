@@ -1,86 +1,88 @@
 "use strict";
-let a;
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   FetchState: function() {
     return o
   }
 });
-var n, l, i, r, o, d, u = s("442837"),
-  c = s("570140"),
-  S = s("641826"),
-  E = s("232700");
-(n = o || (o = {}))[n.NOT_FETCHED = 0] = "NOT_FETCHED", n[n.FETCHING = 1] = "FETCHING", n[n.FETCHED = 2] = "FETCHED", n[n.ERROR = 3] = "ERROR";
-let T = 0,
-  _ = 0,
+var i, r, s, a, o, l, u = n("442837"),
+  d = n("570140"),
+  _ = n("641826"),
+  c = n("232700");
+(i = o || (o = {}))[i.NOT_FETCHED = 0] = "NOT_FETCHED", i[i.FETCHING = 1] = "FETCHING", i[i.FETCHED = 2] = "FETCHED", i[i.ERROR = 3] = "ERROR";
+let E = !1,
+  I = 0,
+  T = 0,
   f = {},
-  m = !1,
-  g = 0,
+  S = !1,
   h = 0,
-  N = 0,
-  I = 0;
-class p extends(d = u.default.Store) {
+  A = 0,
+  m = 0,
+  N = 0;
+class O extends(l = u.default.Store) {
+  get tempShowLootboxSettings() {
+    return E
+  }
   get openedItems() {
     return f
   }
   get redeemedPrize() {
-    return m
+    return S
   }
   get globalOpenedCount() {
-    return h
+    return A
   }
   get lastGlobalOpenedCount() {
-    return g
+    return h
   }
   get globalOpenedCountFetchTime() {
-    return N
+    return m
   }
   get nextGlobalOpenedCountFetchDelay() {
-    return I
-  }
-  get recentlyOpenedItem() {
-    return a
+    return N
   }
   get userDataFetchState() {
-    return T
+    return I
   }
   get globalOpenedCountFetchState() {
-    return _
+    return T
   }
 }
-r = "LootboxStore", (i = "displayName") in(l = p) ? Object.defineProperty(l, i, {
-  value: r,
+a = "LootboxStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[i] = r, t.default = new p(c.default, {
+}) : r[s] = a, t.default = new O(d.default, {
+  LOOTBOX_SHOW_LOOTBOX_SETTINGS: function() {
+    E = !0
+  },
   USER_LOOTBOX_DATA_FETCH: function() {
-    T = 1
+    I = 1
   },
   USER_LOOTBOX_DATA_FETCH_SUCCESS: function(e) {
     f = {
       ...e.openedItems
-    }, m = e.redeemedPrize, T = 2
+    }, S = e.redeemedPrize, I = 2
   },
   USER_LOOTBOX_DATA_FETCH_FAILURE: function() {
-    T = 3
+    I = 3
   },
-  USER_LOOTBOX_OPEN_ITEM: function(e) {
+  USER_LOOTBOX_REPORT_FINISHED_OPENED_ITEM: function(e) {
     let {
-      userLootboxData: t,
-      openedItem: s
+      userLootboxData: t
     } = e;
     f = {
       ...t.openedItems
-    }, m = t.redeemedPrize, a = s, h++, g++
+    }, S = t.redeemedPrize, A++, h++
   },
   LOOTBOX_COUNT_STAT_FETCHED: function(e) {
     let {
       currentCount: t,
-      previousCount: s
+      previousCount: n
     } = e;
-    h = t, g = s, N = Date.now(), I = (0, S.randomBetween)(E.LOOTBOX_COUNT_STAT_FETCH_DELAY_MIN, E.LOOTBOX_COUNT_STAT_FETCH_DELAY_MAX), _ = 2
+    A = t, h = n, m = Date.now(), N = (0, _.randomBetween)(c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MIN, c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MAX), T = 2
   },
   LOGOUT: function() {
-    f = {}, m = !1, a = void 0, T = 0
+    E = !1, f = {}, S = !1, I = 0
   }
 })

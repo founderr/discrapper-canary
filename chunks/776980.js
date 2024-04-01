@@ -1,97 +1,117 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   fetchCountStat: function() {
-    return d
+    return _
   },
   fetchUserLootboxData: function() {
-    return i
+    return o
   },
   openLootbox: function() {
-    return r
+    return l
   },
   redeemPrize: function() {
-    return o
+    return d
+  },
+  reportFinishedOpeningLootbox: function() {
+    return u
+  },
+  showLootboxSettings: function() {
+    return a
   }
 });
-var a = s("544891"),
-  n = s("570140"),
-  l = s("981631");
-async function i() {
-  n.default.dispatch({
+var i = n("544891"),
+  r = n("570140"),
+  s = n("981631");
+
+function a() {
+  r.default.dispatch({
+    type: "LOOTBOX_SHOW_LOOTBOX_SETTINGS"
+  })
+}
+async function o() {
+  r.default.dispatch({
     type: "USER_LOOTBOX_DATA_FETCH"
   });
   try {
-    let e = await a.HTTP.get({
-      url: l.Endpoints.USER_LOOTBOX_DATA
+    let e = await i.HTTP.get({
+      url: s.Endpoints.USER_LOOTBOX_DATA
     });
     if (e.ok && null != e.body) {
       let {
         user_id: t,
-        opened_items: s,
-        redeemed_prize: a
+        opened_items: n,
+        redeemed_prize: i
       } = e.body;
-      n.default.dispatch({
+      r.default.dispatch({
         type: "USER_LOOTBOX_DATA_FETCH_SUCCESS",
         userId: t,
-        openedItems: s,
-        redeemedPrize: a
+        openedItems: n,
+        redeemedPrize: i
       })
-    } else n.default.dispatch({
+    } else r.default.dispatch({
       type: "USER_LOOTBOX_DATA_FETCH_FAILURE"
     })
   } catch (e) {
-    n.default.dispatch({
+    r.default.dispatch({
       type: "USER_LOOTBOX_DATA_FETCH_FAILURE"
     })
   }
 }
-async function r() {
-  let e = await a.HTTP.post({
-    url: l.Endpoints.USER_LOOTBOX_OPEN_ITEM
+async function l() {
+  let e = await i.HTTP.post({
+    url: s.Endpoints.USER_LOOTBOX_OPEN_ITEM
   });
   if (e.ok && null != e.body) {
     let {
       user_lootbox_data: t,
-      opened_item: s
+      opened_item: n
     } = e.body, {
-      user_id: a,
-      opened_items: l,
-      redeemed_prize: i
+      user_id: i,
+      opened_items: r,
+      redeemed_prize: s
     } = t;
-    n.default.dispatch({
-      type: "USER_LOOTBOX_OPEN_ITEM",
+    return {
       userLootboxData: {
-        userId: a,
-        openedItems: l,
-        redeemedPrize: i
+        userId: i,
+        openedItems: r,
+        redeemedPrize: s
       },
-      openedItem: s
-    })
+      openedItem: n
+    }
   }
+  return null
 }
-async function o() {
-  let e = await a.HTTP.post({
-    url: l.Endpoints.USER_LOOTBOX_REDEEM_PRIZE
+
+function u(e, t) {
+  r.default.dispatch({
+    type: "USER_LOOTBOX_REPORT_FINISHED_OPENED_ITEM",
+    userLootboxData: e,
+    openedItem: t
+  })
+}
+async function d() {
+  let e = await i.HTTP.post({
+    url: s.Endpoints.USER_LOOTBOX_REDEEM_PRIZE
   });
   if (e.ok && null != e.body) {
     let {
       user_id: t,
-      opened_items: s,
-      redeemed_prize: a
+      opened_items: n,
+      redeemed_prize: i
     } = e.body;
-    n.default.dispatch({
+    r.default.dispatch({
       type: "USER_LOOTBOX_DATA_FETCH_SUCCESS",
       userId: t,
-      openedItems: s,
-      redeemedPrize: a
+      openedItems: n,
+      redeemedPrize: i
     })
   }
 }
-async function d() {
-  let e = await a.HTTP.get({
-    url: l.Endpoints.LOOTBOX_COUNT
+async function _() {
+  let e = await i.HTTP.get({
+    url: s.Endpoints.LOOTBOX_COUNT
   });
-  n.default.dispatch({
+  r.default.dispatch({
     type: "LOOTBOX_COUNT_STAT_FETCHED",
     currentCount: e.body.current_count,
     previousCount: e.body.previous_count

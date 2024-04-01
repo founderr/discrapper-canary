@@ -22,8 +22,9 @@ let u = e => {
   let {
     analyticsLocations: t,
     initialSelectedDecoration: a,
-    isTryItOutFlow: l,
-    guild: u
+    initialSelectedDecorationId: l,
+    isTryItOutFlow: u,
+    guild: d
   } = e;
   (0, r.openModalLazy)(async () => {
     (0, s.getHistory)().location.pathname === o.Routes.COLLECTIBLES_SHOP_FULLSCREEN && (0, s.transitionTo)(o.Routes.APP);
@@ -34,8 +35,9 @@ let u = e => {
       ...n,
       analyticsLocations: t,
       initialSelectedDecoration: a,
-      isTryItOutFlow: l,
-      guild: u
+      initialSelectedDecorationId: l,
+      isTryItOutFlow: u,
+      guild: d
     })
   }, {})
 }

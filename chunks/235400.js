@@ -37,31 +37,34 @@ function b(e) {
     analyticsLocations: i,
     onClose: u,
     initialSelectedDecoration: h,
-    isTryItOutFlow: C,
-    guild: S
+    initialSelectedDecorationId: C,
+    isTryItOutFlow: S,
+    guild: I
   } = e, {
-    pendingAvatarDecoration: I,
-    setPendingAvatarDecoration: b,
-    savedAvatarDecoration: N
+    pendingAvatarDecoration: b,
+    setPendingAvatarDecoration: N,
+    savedAvatarDecoration: R
   } = (0, p.default)({
     analyticsLocations: i,
-    isTryItOut: C,
-    guildId: null == S ? void 0 : S.id
-  }), [R, M] = r.useState(() => {
-    var e;
-    return null != h ? h : void 0 !== I ? I : null == N || 0 === a.size ? null : null !== (e = (0, d.getAvatarDecorations)(l, a).find(e => (0, E.isEqualAvatarDecoration)(e, N))) && void 0 !== e ? e : null
+    isTryItOut: S,
+    guildId: null == I ? void 0 : I.id
+  }), [M, w] = r.useState(() => {
+    var e, t;
+    if (null != h) return h;
+    let s = (0, d.getAvatarDecorations)(l, a);
+    return null != C ? null !== (e = s.find(e => e.id === C)) && void 0 !== e ? e : null : void 0 !== b ? b : null == R ? null : null !== (t = s.find(e => (0, E.isEqualAvatarDecoration)(e, R))) && void 0 !== t ? t : null
   }), {
-    product: w,
-    purchase: D
-  } = (0, f.default)(null == R ? void 0 : R.skuId), O = v.default.canUseCollectibles(t), j = r.useRef(null), y = (0, m.default)(i), L = (0, E.isEqualAvatarDecoration)(R, void 0 === I ? N : I), k = () => {
-    b(R), u()
-  }, F = r.useCallback(() => {
+    product: D,
+    purchase: O
+  } = (0, f.default)(null == M ? void 0 : M.skuId), j = v.default.canUseCollectibles(t), y = r.useRef(null), L = (0, m.default)(i), k = (0, E.isEqualAvatarDecoration)(M, void 0 === b ? R : b), F = () => {
+    N(M), u()
+  }, H = r.useCallback(() => {
     u(), (0, c.openCollectiblesShop)({
       analyticsLocations: i,
       analyticsSource: o.default.EDIT_AVATAR_DECORATION_MODAL,
-      initialProductSkuId: null != R ? R.skuId : void 0
+      initialProductSkuId: null != M ? M.skuId : void 0
     })
-  }, [i, u, R]);
+  }, [i, u, M]);
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)(n.ModalHeader, {
       separator: !1,
@@ -78,27 +81,27 @@ function b(e) {
       scrollbarType: "none",
       children: [(0, s.jsx)(x.default, {
         user: t,
-        guild: S,
-        pendingAvatarDecoration: R,
-        selectedAvatarDecorationRef: j,
+        guild: I,
+        pendingAvatarDecoration: M,
+        selectedAvatarDecorationRef: y,
         onSelect: e => {
-          M(e), null != e && y(e)
+          w(e), null != e && L(e)
         },
-        onOpenShop: F
+        onOpenShop: H
       }), (0, s.jsx)(A.default, {
         className: T.modalPreview,
         user: t,
-        avatarDecorationOverride: R
+        avatarDecorationOverride: M
       })]
     }), (0, s.jsxs)(n.ModalFooter, {
       className: T.modalFooter,
-      children: [null != D && (!(0, d.isPremiumCollectiblesPurchase)(D) || O) || null === R ? (0, s.jsx)(n.Button, {
-        onClick: k,
-        disabled: L,
-        children: P.default.Messages.AVATAR_DECORATION_MODAL_APPLY
-      }) : O || !(0, d.isPremiumCollectiblesProduct)(w) ? (0, s.jsx)(n.Button, {
-        className: T.modalFooterShopButton,
+      children: [null != O && (!(0, d.isPremiumCollectiblesPurchase)(O) || j) || null === M ? (0, s.jsx)(n.Button, {
         onClick: F,
+        disabled: k,
+        children: P.default.Messages.AVATAR_DECORATION_MODAL_APPLY
+      }) : j || !(0, d.isPremiumCollectiblesProduct)(D) ? (0, s.jsx)(n.Button, {
+        className: T.modalFooterShopButton,
+        onClick: H,
         children: P.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
       }) : (0, s.jsx)(g.default, {
         subscriptionTier: _.PremiumSubscriptionSKUs.TIER_2,
@@ -119,44 +122,46 @@ function N(e) {
     analyticsLocations: a,
     onClose: d,
     initialSelectedDecoration: f,
-    isTryItOutFlow: m,
-    guild: g
-  } = e, p = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
-    analyticsLocations: v
+    initialSelectedDecorationId: m,
+    isTryItOutFlow: g,
+    guild: p
+  } = e, v = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
+    analyticsLocations: E
   } = (0, u.default)(a, o.default.EDIT_AVATAR_DECORATION_MODAL), {
-    categories: E,
-    purchases: A,
-    isFetchingCategories: x,
-    isFetchingPurchases: _
-  } = (0, h.default)(), P = x || _ && 0 === A.size;
+    categories: A,
+    purchases: x,
+    isFetchingCategories: _,
+    isFetchingPurchases: P
+  } = (0, h.default)(), N = _ || P && 0 === x.size;
   return r.useEffect(() => {
     S.default.track(I.AnalyticEvents.OPEN_MODAL, {
       type: "Edit Avatar Decoration Modal",
-      location_stack: v
+      location_stack: E
     })
-  }, [v]), r.useEffect(() => () => {
+  }, [E]), r.useEffect(() => () => {
     (0, c.setCollectiblesCategoryItemsViewed)({
-      categories: [...E.values()],
+      categories: [...A.values()],
       itemTypes: [l.CollectiblesItemType.AVATAR_DECORATION]
     })
-  }, [E]), null == p ? null : (0, s.jsx)(u.AnalyticsLocationProvider, {
-    value: v,
+  }, [A]), null == v ? null : (0, s.jsx)(u.AnalyticsLocationProvider, {
+    value: E,
     children: (0, s.jsx)(n.ModalRoot, {
       transitionState: t,
       className: T.modal,
-      size: P ? n.ModalSize.DYNAMIC : n.ModalSize.MEDIUM,
-      children: P ? (0, s.jsx)(n.Spinner, {
+      size: N ? n.ModalSize.DYNAMIC : n.ModalSize.MEDIUM,
+      children: N ? (0, s.jsx)(n.Spinner, {
         className: T.spinner,
         type: n.Spinner.Type.SPINNING_CIRCLE
       }) : (0, s.jsx)(b, {
-        user: p,
-        guild: g,
-        categories: E,
-        purchases: A,
-        analyticsLocations: v,
+        user: v,
+        guild: p,
+        categories: A,
+        purchases: x,
+        analyticsLocations: E,
         initialSelectedDecoration: f,
+        initialSelectedDecorationId: m,
         onClose: d,
-        isTryItOutFlow: m
+        isTryItOutFlow: g
       })
     })
   })

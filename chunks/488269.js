@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return f
   }
 }), s("47120");
 var a = s("735250"),
@@ -17,14 +17,14 @@ var a = s("735250"),
   E = s("632222");
 let T = l.config.stiff;
 
-function _(e) {
+function f(e) {
   let {
     image: t,
     name: s,
-    sound: _,
-    openedCount: f,
-    index: m
-  } = e, g = f > 0, h = n.useRef(null), N = n.useRef(null), [I, p] = n.useState(!1), [C, A] = n.useState({
+    sound: f,
+    openedCount: m,
+    index: _
+  } = e, g = m > 0, h = n.useRef(null), I = n.useRef(null), [N, p] = n.useState(!1), [C, A] = n.useState({
     x: 0,
     y: 0
   }), [O] = n.useState(new r.Interval), [x, R] = (0, l.useSpring)(() => ({
@@ -36,7 +36,7 @@ function _(e) {
     config: T
   }));
   n.useEffect(() => {
-    if (g && I && null != h.current) {
+    if (g && N && null != h.current) {
       let e = h.current.getBoundingClientRect(),
         t = C.x - e.x,
         s = C.y - e.y,
@@ -47,11 +47,11 @@ function _(e) {
         y: -((s - n) / n * 25)
       })
     }
-  }, [I, g, C.x, C.y, R]), n.useEffect(() => {
+  }, [N, g, C.x, C.y, R]), n.useEffect(() => {
     v({
-      value: g && I ? 1.2 : 1
+      value: g && N ? 1.2 : 1
     })
-  }, [I, g, v]);
+  }, [N, g, v]);
   let D = n.useCallback(e => {
       A({
         x: e.clientX,
@@ -71,29 +71,33 @@ function _(e) {
       })
     }, [R]),
     j = n.useCallback(() => {
-      if (null != N.current) {
-        let e = N.current.currentTime / N.current.duration;
+      if (null != I.current) {
+        let e = I.current.currentTime / I.current.duration;
         v({
           value: (0, u.default)(1, 1.2, e)
-        }), e >= 1 && (!I && v({
+        }), e >= 1 && (!N && v({
           value: 1
         }), O.stop())
       }
-    }, [O, I, v]);
+    }, [O, N, v]);
   n.useEffect(() => {
     null != O._ref && O.start(30, j)
   }, [O, j]);
   let b = n.useCallback(() => {
     d.default.track(c.AnalyticEvents.EASTER_EGG_INTERACTED, {
       type: "packages_item_click",
-      position: m
-    }), null != N.current && (N.current.currentTime = 0, N.current.play(), O.start(30, j))
-  }, [O, j, m]);
+      position: _
+    }), null != I.current && (I.current.currentTime = 0, I.current.play(), O.start(30, j))
+  }, [O, j, _]);
   return (0, a.jsxs)(o.Clickable, {
     onClick: g ? b : void 0,
     children: [(0, a.jsx)("audio", {
-      src: _,
-      ref: N
+      ref: I,
+      preload: "auto",
+      children: (0, a.jsx)("source", {
+        src: f,
+        type: "audio/ogg"
+      })
     }), (0, a.jsx)(l.animated.div, {
       ref: h,
       className: g ? E.containerOwned : void 0,
@@ -113,7 +117,7 @@ function _(e) {
             variant: "text-xxs/bold",
             className: E.count,
             children: S.default.Messages.USER_SETTINGS_PACKAGE_COUNT.format({
-              count: f
+              count: m
             })
           }), (0, a.jsx)(i.VoiceNormalIcon, {
             className: E.audioIndicator,
