@@ -121,47 +121,50 @@ function N(e) {
     transitionState: t,
     analyticsLocations: a,
     onClose: d,
-    initialSelectedDecoration: f,
-    initialSelectedDecorationId: m,
-    isTryItOutFlow: g,
-    guild: p
-  } = e, v = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
-    analyticsLocations: E
+    onCloseModal: f,
+    initialSelectedDecoration: m,
+    initialSelectedDecorationId: g,
+    isTryItOutFlow: p,
+    guild: v
+  } = e, E = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
+    analyticsLocations: A
   } = (0, u.default)(a, o.default.EDIT_AVATAR_DECORATION_MODAL), {
-    categories: A,
-    purchases: x,
-    isFetchingCategories: _,
-    isFetchingPurchases: P
-  } = (0, h.default)(), N = _ || P && 0 === x.size;
+    categories: x,
+    purchases: _,
+    isFetchingCategories: P,
+    isFetchingPurchases: N
+  } = (0, h.default)(), R = P || N && 0 === _.size;
   return r.useEffect(() => {
     S.default.track(I.AnalyticEvents.OPEN_MODAL, {
       type: "Edit Avatar Decoration Modal",
-      location_stack: E
+      location_stack: A
     })
-  }, [E]), r.useEffect(() => () => {
+  }, [A]), r.useEffect(() => () => {
     (0, c.setCollectiblesCategoryItemsViewed)({
-      categories: [...A.values()],
+      categories: [...x.values()],
       itemTypes: [l.CollectiblesItemType.AVATAR_DECORATION]
     })
-  }, [A]), null == v ? null : (0, s.jsx)(u.AnalyticsLocationProvider, {
-    value: E,
+  }, [x]), null == E ? null : (0, s.jsx)(u.AnalyticsLocationProvider, {
+    value: A,
     children: (0, s.jsx)(n.ModalRoot, {
       transitionState: t,
       className: T.modal,
-      size: N ? n.ModalSize.DYNAMIC : n.ModalSize.MEDIUM,
-      children: N ? (0, s.jsx)(n.Spinner, {
+      size: R ? n.ModalSize.DYNAMIC : n.ModalSize.MEDIUM,
+      children: R ? (0, s.jsx)(n.Spinner, {
         className: T.spinner,
         type: n.Spinner.Type.SPINNING_CIRCLE
       }) : (0, s.jsx)(b, {
-        user: v,
-        guild: p,
-        categories: A,
-        purchases: x,
-        analyticsLocations: E,
-        initialSelectedDecoration: f,
-        initialSelectedDecorationId: m,
-        onClose: d,
-        isTryItOutFlow: g
+        user: E,
+        guild: v,
+        categories: x,
+        purchases: _,
+        analyticsLocations: A,
+        initialSelectedDecoration: m,
+        initialSelectedDecorationId: g,
+        onClose: () => {
+          f(), null == d || d()
+        },
+        isTryItOutFlow: p
       })
     })
   })
