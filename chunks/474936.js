@@ -144,6 +144,9 @@ n.r(t), n.d(t, {
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: function() {
     return eI
   },
+  PREMIUM_TIER_2_REFERRAL_TRIAL_ID: function() {
+    return eA
+  },
   PREMIUM_TYPE_OVERRIDE_OPTIONS: function() {
     return H
   },

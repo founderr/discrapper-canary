@@ -22,12 +22,12 @@ function v(e) {
   let {
     onClose: n,
     transitionState: t
-  } = e, [v, b] = u.useState(!1), [g, S] = u.useState(!1), [E, h] = u.useState(null), k = u.useRef(null), [I, C] = u.useState(!1), [A, N] = u.useState(d.BoxAnimationScenes.ENTRY), T = u.useMemo(() => (0, d.getLootboxes)(), []), B = null != E ? T[E.openedItem] : null, D = u.useRef(null), w = u.useRef(null), L = u.useRef(null), R = u.useRef(null), j = u.useRef(null);
-  (0, o.useFocusLock)(j);
-  let y = (0, s.default)(w.current, 0),
+  } = e, [v, b] = u.useState(!1), [g, S] = u.useState(!1), [E, h] = u.useState(null), k = u.useRef(null), [I, C] = u.useState(!1), [A, N] = u.useState(d.BoxAnimationScenes.ENTRY), T = u.useMemo(() => (0, d.getLootboxes)(), []), B = null != E ? T[E.openedItem] : null, D = u.useRef(null), w = u.useRef(null), y = u.useRef(null), L = u.useRef(null), R = u.useRef(null);
+  (0, o.useFocusLock)(R);
+  let j = (0, s.default)(w.current, 0),
     O = t === o.ModalTransitionState.EXITING || t === o.ModalTransitionState.EXITED,
     P = u.useCallback(() => {
-      let e = A === d.BoxAnimationScenes.IDLE ? D.current : L.current;
+      let e = A === d.BoxAnimationScenes.IDLE ? D.current : y.current;
       if (null == e) return 0;
       let n = A === d.BoxAnimationScenes.IDLE ? .3 : .9,
         t = e.duration * n,
@@ -35,13 +35,17 @@ function v(e) {
       return Math.min(1, Math.max(0, (A === d.BoxAnimationScenes.IDLE ? e.currentTime - t : e.currentTime) / r))
     }, [A]),
     M = u.useCallback(async () => {
-      var e;
       S(!0);
-      let n = await (0, i.openLootbox)(),
-        t = null != n ? T[n.openedItem] : null,
-        r = document.getElementsByClassName("lootbox-animation-item-image")[0],
-        u = null == r ? void 0 : r.children[0];
-      null == u || u.setAttribute("href", null !== (e = null == t ? void 0 : t.image) && void 0 !== e ? e : ""), h(n), k.current = n, N(d.BoxAnimationScenes.OPEN)
+      try {
+        var e;
+        let n = await (0, i.openLootbox)(),
+          t = null != n ? T[n.openedItem] : null,
+          r = document.getElementsByClassName("lootbox-animation-item-image")[0],
+          u = null == r ? void 0 : r.children[0];
+        null == u || u.setAttribute("href", null !== (e = null == t ? void 0 : t.image) && void 0 !== e ? e : ""), h(n), k.current = n, N(d.BoxAnimationScenes.OPEN)
+      } catch (e) {
+        S(!1)
+      }
     }, [T]),
     F = u.useCallback(e => {
       var n, t, r;
@@ -50,18 +54,18 @@ function v(e) {
           null === (n = D.current) || void 0 === n || n.play(), N(d.BoxAnimationScenes.IDLE);
           break;
         case d.BoxAnimationScenes.OPEN:
-          null === (t = L.current) || void 0 === t || t.play(), y(0, {
+          null === (t = y.current) || void 0 === t || t.play(), j(0, {
             getPercent: P
           }), N(d.BoxAnimationScenes.OPENED);
           break;
         case d.BoxAnimationScenes.OPENED:
-          if (null != R.current && !v) {
+          if (null != L.current && !v) {
             let e = (null == E ? void 0 : E.openedItem) != null ? T[E.openedItem] : null;
-            R.current.src = null !== (r = null == e ? void 0 : e.sound) && void 0 !== r ? r : "", R.current.play()
+            L.current.src = null !== (r = null == e ? void 0 : e.sound) && void 0 !== r ? r : "", L.current.play()
           }
           b(!0), S(!1)
       }
-    }, [y, P, v, null == E ? void 0 : E.openedItem, T]),
+    }, [j, P, v, null == E ? void 0 : E.openedItem, T]),
     X = u.useCallback((e, t) => {
       e === d.BoxAnimationScenes.OPENED && t.currentTime >= t.totalTime - 1 && (C(!0), n())
     }, [n]);
@@ -70,14 +74,14 @@ function v(e) {
     return e.start(50, () => {
       if (null == D.current || null == w.current) return;
       let n = D.current.currentTime / D.current.duration;
-      w.current.paused && n >= .3 && (y(1, {
+      w.current.paused && n >= .3 && (j(1, {
         getPercent: P
       }), w.current.play(), e.stop())
     }), () => e.stop()
-  }, [P, y]), u.useEffect(() => () => {
+  }, [P, j]), u.useEffect(() => () => {
     null != k.current && (0, i.reportFinishedOpeningLootbox)(k.current.userLootboxData, k.current.openedItem)
   }, []), (0, r.jsx)("div", {
-    ref: j,
+    ref: R,
     className: O ? m.backdropClosing : m.backdrop,
     children: (0, r.jsxs)("div", {
       className: O ? m.wrapperClosing : m.wrapper,
@@ -110,11 +114,11 @@ function v(e) {
         preload: "auto",
         loop: !0
       }), (0, r.jsx)("audio", {
-        ref: L,
+        ref: y,
         src: x,
         preload: "auto"
       }), (0, r.jsx)("audio", {
-        ref: R
+        ref: L
       })]
     })
   })
