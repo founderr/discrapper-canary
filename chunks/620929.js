@@ -1,5 +1,5 @@
 "use strict";
-n.r(t);
+n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
   l = n("803997"),
@@ -35,7 +35,7 @@ t.default = e => {
   } = (0, d.useStateFromStoresObject)([_.default], () => {
     var e;
     return null !== (e = _.default.getState(n)) && void 0 !== e ? e : {}
-  }), O = null != g && Object.keys(g).length > 0 ? Object.values(g).map(e => e.name).join(", ") : null, v = s.useMemo(() => {
+  }), O = (null == g ? void 0 : g.size) > 0 ? Array.from(g.values()).map(e => e.name).join(", ") : null, v = s.useMemo(() => {
     switch (A) {
       case S.ClanPlaystyles.SOCIAL:
         return m.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;

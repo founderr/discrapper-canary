@@ -2,84 +2,97 @@
 s.r(t), s("47120");
 var a = s("735250"),
   i = s("470079"),
-  r = s("622535"),
-  n = s("481060"),
-  l = s("100527"),
-  o = s("906732"),
-  u = s("332475"),
-  d = s("626135"),
-  c = s("314684"),
-  _ = s("898997"),
-  E = s("794484"),
-  T = s("347475"),
-  I = s("342414"),
-  S = s("391110"),
-  R = s("71363"),
-  f = s("781800"),
-  m = s("981631"),
-  A = s("379101"),
-  N = s("865215");
+  r = s("803997"),
+  n = s.n(r),
+  l = s("622535"),
+  o = s("481060"),
+  u = s("100527"),
+  d = s("906732"),
+  c = s("332475"),
+  _ = s("626135"),
+  E = s("1014"),
+  T = s("314684"),
+  I = s("898997"),
+  R = s("794484"),
+  f = s("347475"),
+  S = s("342414"),
+  m = s("391110"),
+  A = s("71363"),
+  N = s("781800"),
+  p = s("981631"),
+  g = s("379101"),
+  C = s("865215");
 t.default = () => {
   let e = i.useRef(null),
     [t, s] = i.useState(!1),
     {
-      analyticsLocations: p
-    } = (0, o.default)(l.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
-    [C, g] = i.useState(!1);
-  return (0, c.useFetchEntitlementsForTenureReward)(), (0, _.useMaybeFetchReferralsRemaining)("SubscriberNitroHome"), (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(n.AdvancedScrollerAuto, {
-      className: A.mainPageScroller,
+      analyticsLocations: r
+    } = (0, d.default)(u.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
+    [O, P] = i.useState(!1);
+  (0, T.useFetchEntitlementsForTenureReward)(), (0, I.useMaybeFetchReferralsRemaining)("SubscriberNitroHome");
+  let {
+    enabled: M
+  } = E.default.useExperiment({
+    location: "SubscriberNitroHome"
+  }, {
+    autoTrackExposure: !1
+  });
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(o.AdvancedScrollerAuto, {
+      className: g.mainPageScroller,
       ref: e,
       children: (0, a.jsx)("div", {
-        className: A.container,
-        children: (0, a.jsxs)(o.AnalyticsLocationProvider, {
-          value: p,
-          children: [(0, a.jsx)(I.default, {
-            className: A.heroHeading
-          }), (0, a.jsx)(E.default, {
-            variant: S.PerksDiscoverabilityCardSection.WHATS_NEW,
-            className: A.whatsNew,
+        className: g.container,
+        children: (0, a.jsxs)(d.AnalyticsLocationProvider, {
+          value: r,
+          children: [(0, a.jsx)(S.default, {
+            className: g.heroHeading
+          }), (0, a.jsx)(R.default, {
+            variant: m.PerksDiscoverabilityCardSection.WHATS_NEW,
+            className: n()(g.whatsNew, {
+              [g.whatsNewWithOriginalHeroHeading]: !M
+            }),
             noBackground: !0,
             leftAlignHeaders: !0
-          }), (0, a.jsx)(E.default, {
-            className: A.perksDiscoverability,
+          }), (0, a.jsx)(R.default, {
+            className: g.perksDiscoverability,
             noBackground: !0,
             leftAlignHeaders: !0,
-            showAllPerksButton: (0, a.jsx)(f.default, {
+            showAllPerksButton: (0, a.jsx)(N.default, {
               setIsAllPerksVisible: s,
-              previousComponent: S.NitroLandingPages.HOME
+              previousComponent: m.NitroLandingPages.HOME
             })
-          }), (0, a.jsx)(T.default, {
-            className: A.giftNitro,
-            location: l.default.PREMIUM_MARKETING_GIFT_SECTION,
+          }), (0, a.jsx)(f.default, {
+            className: g.giftNitro,
+            location: u.default.PREMIUM_MARKETING_GIFT_SECTION,
             analyticsLocation: {
-              page: m.AnalyticsPages.NITRO_HOME,
-              section: m.AnalyticsSections.GIFT_BANNER
+              page: p.AnalyticsPages.NITRO_HOME,
+              section: p.AnalyticsSections.GIFT_BANNER
             }
           }), (0, a.jsx)("div", {
-            className: A.footerSpacing
-          }), (0, a.jsx)(r.VisibilitySensor, {
+            className: g.footerSpacing
+          }), (0, a.jsx)(l.VisibilitySensor, {
             onChange: e => {
-              e && !C && (d.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                location_stack: p
-              }), g(!0))
+              e && !O && (_.default.track(p.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                location_stack: r
+              }), P(!0))
             },
             children: (0, a.jsx)("div", {
-              className: A.bottomOfPageVisibilitySensor
+              className: g.bottomOfPageVisibilitySensor
             })
-          }), (0, a.jsx)(u.default, {
-            src: N,
-            className: A.bottomIllustration,
+          }), (0, a.jsx)(c.default, {
+            src: C,
+            className: g.bottomIllustration,
             width: 112,
             height: 85,
             zoomable: !1
           })]
         })
       })
-    }), (0, a.jsx)(R.default, {
+    }), (0, a.jsx)(A.default, {
       isAllPerksVisible: t,
       setIsAllPerksVisible: s,
-      previousComponent: S.NitroLandingPages.HOME
+      previousComponent: m.NitroLandingPages.HOME
     })]
   })
 }
