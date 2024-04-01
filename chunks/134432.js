@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   getBestMediaProxySize: function() {
-    return A
+    return h
   },
   getDevicePixelRatio: function() {
     return d.default
   },
   getImageSrc: function() {
-    return h
+    return A
   },
   isImageLoaded: function() {
     return f
@@ -97,12 +97,12 @@ function S(e, t) {
   }
 }
 
-function A(e) {
+function h(e) {
   var t;
   return null !== (t = c.find(t => e <= t)) && void 0 !== t ? t : c[c.length - 1]
 }
 
-function h(e) {
+function A(e) {
   let {
     src: t,
     width: n,

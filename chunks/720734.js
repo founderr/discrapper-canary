@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("410575"),
   A = n("941129"),
   N = n("83200"),
-  R = n("634894"),
-  O = n("586902"),
+  O = n("634894"),
+  R = n("586902"),
   v = n("1585"),
   L = n("304761"),
   P = n("865427"),
@@ -80,8 +80,8 @@ var a = n("735250"),
   eg = n("546591"),
   eA = n("86813"),
   eN = n("826026"),
-  eR = n("937482"),
-  eO = n("87888"),
+  eO = n("937482"),
+  eR = n("87888"),
   ev = n("976401"),
   eL = n("333454"),
   eP = n("864441"),
@@ -614,7 +614,7 @@ function eK() {
       streaming: null != eS.default.findActivity(e => e.type === ew.ActivityTypes.STREAMING),
       status: eS.default.getStatus()
     })),
-    d = (0, O.default)({
+    d = (0, R.default)({
       userId: n
     }),
     c = ej.default.useUserTag(e, {
@@ -667,10 +667,10 @@ function eK() {
     en = (0, ee.useCanSeeSafetyEducationReportingCoachmark)(),
     ea = (0, er.default)(e),
     el = "account";
-  (0, R.useTriggerDebuggingAA)({
+  (0, O.useTriggerDebuggingAA)({
     location: el + " auto on",
     autoTrackExposure: !0
-  }), (0, R.useTriggerDebuggingAA)({
+  }), (0, O.useTriggerDebuggingAA)({
     location: el + " auto off",
     autoTrackExposure: !1
   }), (0, $.useSafetyEducationAATriggerPoint)();
@@ -744,8 +744,8 @@ function ez(e) {
     isEligibleForPomelo: n,
     onClick: s,
     onContextMenu: l
-  } = e, i = (0, S.useRedesignIconContext)().enabled, r = null, o = eR.default, u = (0, C.useSettingsLottie)();
-  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eO.default, {
+  } = e, i = (0, S.useRedesignIconContext)().enabled, r = null, o = eO.default, u = (0, C.useSettingsLottie)();
+  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eR.default, {
     width: 9,
     height: 9,
     className: eB.hasBuildOverride,

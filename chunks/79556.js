@@ -31,8 +31,8 @@ var a = n("803997"),
   v = n("648501"),
   x = n("473403"),
   R = n("304471"),
-  O = n("981631"),
-  y = n("647086"),
+  y = n("981631"),
+  O = n("647086"),
   M = n("294639");
 
 function D(e, t, n) {
@@ -110,7 +110,7 @@ class b extends L.default {
           onContextMenu: this.handleContextMenu,
           connectDragPreview: m ? C : null,
           isFavoriteSuggestion: E,
-          channelTypeOverride: _ ? O.ChannelTypes.GUILD_TEXT : void 0,
+          channelTypeOverride: _ ? y.ChannelTypes.GUILD_TEXT : void 0,
           resolvedUnreadSetting: N,
           withGuildIcon: T,
           "aria-label": (0, h.default)({
@@ -160,7 +160,7 @@ class b extends L.default {
       let {
         channel: e
       } = this.props, t = e.getGuildId();
-      o.default.preload(null != t ? t : O.ME, e.id)
+      o.default.preload(null != t ? t : y.ME, e.id)
     }), D(this, "renderPopout", e => {
       let {
         channel: t,
@@ -180,7 +180,7 @@ class b extends L.default {
       let {
         channel: t
       } = this.props;
-      if (t.type === O.ChannelTypes.GROUP_DM) {
+      if (t.type === y.ChannelTypes.GROUP_DM) {
         (0, u.openContextMenuLazy)(e, async () => {
           let {
             default: e
@@ -193,7 +193,7 @@ class b extends L.default {
         });
         return
       }
-      if (t.type === O.ChannelTypes.DM) {
+      if (t.type === y.ChannelTypes.DM) {
         let a = T.default.getUser(t.getRecipientId());
         null != a && (0, u.openContextMenuLazy)(e, async () => {
           let {
@@ -242,8 +242,8 @@ function G(e) {
   })), p = (0, i.useStateFromStores)([N.default], () => N.default.resolveUnreadSetting(t)), S = (0, i.useStateFromStoresObject)([E.default, _.default], () => {
     let e = E.default.getChannel(t.parent_id);
     return {
-      canManageChannel: _.default.can(O.Permissions.MANAGE_CHANNELS, t),
-      canReorderChannel: !0 !== a && (n.id === y.FAVORITES_RAW_GUILD_ID || (null != e ? _.default.can(O.Permissions.MANAGE_CHANNELS, e) : _.default.can(O.Permissions.MANAGE_CHANNELS, n)))
+      canManageChannel: _.default.can(y.Permissions.MANAGE_CHANNELS, t),
+      canReorderChannel: !0 !== a && (n.id === O.FAVORITES_RAW_GUILD_ID || (null != e ? _.default.can(y.Permissions.MANAGE_CHANNELS, e) : _.default.can(y.Permissions.MANAGE_CHANNELS, n)))
     }
   }), A = (0, i.useStateFromStores)([m.default], () => m.default.shouldIndicateNewChannel(n.id, t.id)), {
     needSubscriptionToAccess: L,

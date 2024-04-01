@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ageEligibleForPremiumUpsell: function() {
-    return A
+    return h
   },
   getName: function() {
     return E
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return f
   },
   isNewUser: function() {
-    return h
+    return A
   },
   useDirectMessageRecipient: function() {
     return O
@@ -102,14 +102,14 @@ function S(e, t) {
   return (null == n || !!(r <= 864e5 * n)) && !!(r >= 864e5 * i) || !1
 }
 
-function A(e) {
+function h(e) {
   return !S(e, {
     minDaysOld: 0,
     maxDaysOld: 30
   })
 }
 
-function h(e) {
+function A(e) {
   return S(e, {
     minDaysOld: 0,
     maxDaysOld: 7

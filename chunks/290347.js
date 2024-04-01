@@ -76,8 +76,8 @@ function N(e) {
     heroArtClassName: _,
     modalDismissibleContent: g,
     modalTopExtra: N,
-    header: R,
-    headerClassName: O,
+    header: O,
+    headerClassName: R,
     subHeader: v,
     subHeaderExtra: L,
     featureCards: P,
@@ -132,8 +132,8 @@ function N(e) {
       className: T.content,
       children: [(0, a.jsx)(o.Heading, {
         variant: "display-md",
-        className: i()(T.headerText, O),
-        children: R
+        className: i()(T.headerText, R),
+        children: O
       }), "video" === l.type ? (0, a.jsx)(C.default, {
         className: i()(T.video, _),
         autoPlay: !j,

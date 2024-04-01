@@ -32,8 +32,8 @@ function _(e) {
     setFocus: T,
     setFocusOnList: f,
     preserveFocusPosition: S = !0,
-    useVirtualFocus: A = !1,
-    wrap: h = !1,
+    useVirtualFocus: h = !1,
+    wrap: A = !1,
     orientation: m = o.Orientations.VERTICAL,
     disableClickOnSpace: N = !1
   } = e, O = i.useRef(n ? (0, l.createListItemId)(t, n) : null), p = i.useRef(!1), R = i.useRef(null), C = i.useRef(u);
@@ -116,9 +116,9 @@ function _(e) {
     }
   }, [u, t, S, D, f, v, M]);
   let G = i.useMemo(() => ({
-      wrap: h,
+      wrap: A,
       get from() {
-        if (!A) return;
+        if (!h) return;
         let t = O.current;
         if (null != t) {
           var e;
@@ -126,7 +126,7 @@ function _(e) {
         }
         return
       }
-    }), [A, h]),
+    }), [h, A]),
     w = i.useCallback(async () => {
       let e = await y.getNextFocusableElement(G),
         t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
@@ -138,7 +138,7 @@ function _(e) {
       null != t ? M(t) : null == e && null != E && E()
     }, [y, G, E, M]),
     k = i.useCallback(e => {
-      if (!C.current || !A && !b.current) return;
+      if (!C.current || !h && !b.current) return;
       let n = m === o.Orientations.HORIZONTAL ? o.Keys.RIGHT : o.Keys.DOWN,
         i = m === o.Orientations.HORIZONTAL ? o.Keys.LEFT : o.Keys.UP;
       switch (e.key) {
@@ -171,12 +171,12 @@ function _(e) {
             var r;
             let n = g((0, l.createSelector)(t)),
               i = null !== (r = null == n ? void 0 : n.ownerDocument) && void 0 !== r ? r : document,
-              s = A || n === i.activeElement;
+              s = h || n === i.activeElement;
             null != n && s && (e.preventDefault(), e.stopPropagation(), null == n || n.click())
           }
         }
       }
-    }, [w, B, t, m, c, _, M, A]),
+    }, [w, B, t, m, c, _, M, h]),
     V = i.useCallback(e => {
       let n = null != e ? (0, l.createListItemId)(t, e) : null;
       O.current = n

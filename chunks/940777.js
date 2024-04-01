@@ -30,15 +30,15 @@ var l = n("735250"),
   v = n("593214"),
   x = n("919755"),
   R = n("110977"),
-  O = n("603274"),
-  y = n("981631"),
+  y = n("603274"),
+  O = n("981631"),
   M = n("689938"),
   D = n("706759");
 let b = {
   analyticsSource: {
-    page: y.AnalyticsPages.GUILD_CHANNEL,
-    section: y.AnalyticsSections.CHANNEL_LIST,
-    object: y.AnalyticsObjects.CHANNEL
+    page: O.AnalyticsPages.GUILD_CHANNEL,
+    section: O.AnalyticsSections.CHANNEL_LIST,
+    object: O.AnalyticsObjects.CHANNEL
   }
 };
 
@@ -56,9 +56,9 @@ function j() {
       favoriteChannels: L.default.getFavoriteChannels(),
       favoriteServerMuted: L.default.favoriteServerMuted
     })),
-    w = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(y.FAVORITES)),
+    w = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(O.FAVORITES)),
     F = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(w)),
-    B = (0, m.default)(e => e.guildId) === y.FAVORITES,
+    B = (0, m.default)(e => e.guildId) === O.FAVORITES,
     {
       badge: V,
       unread: H
@@ -104,7 +104,7 @@ function j() {
       hovered: j,
       unread: H && !U,
       className: D.pill
-    }), (0, l.jsx)(O.default, {
+    }), (0, l.jsx)(y.default, {
       onShow: K,
       children: (0, l.jsx)(R.FavoriteAddedTooltip, {
         children: (0, l.jsx)(u.BlobMask, {
@@ -118,7 +118,7 @@ function j() {
               mentions: V
             }),
             to: {
-              pathname: y.Routes.CHANNEL(y.FAVORITES, w),
+              pathname: O.Routes.CHANNEL(O.FAVORITES, w),
               state: b
             },
             selected: B || j,

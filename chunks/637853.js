@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return M
   },
   isBlockedByOnboarding: function() {
-    return A
+    return h
   },
   isChattableChannel: function() {
     return p
@@ -70,14 +70,14 @@ function S(e) {
   return n && i && r
 }
 
-function A(e, t) {
+function h(e, t) {
   var n;
   if (null == e || !e.hasFeature(E.GuildFeatures.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < T) return !1;
   let i = null !== (n = t.flags) && void 0 !== n ? n : 0;
   return u.hasFlag(i, I.GuildMemberFlags.STARTED_ONBOARDING) && !u.hasFlag(i, I.GuildMemberFlags.COMPLETED_ONBOARDING)
 }
 
-function h(e, t, n) {
+function A(e, t, n) {
   let i = new Set;
   e.forEach(e => {
     e.options.forEach(e => {
@@ -93,7 +93,7 @@ function h(e, t, n) {
 }
 
 function m(e, t, n) {
-  return h(t, n, a.default.getChannels(e)[0, a.GUILD_SELECTABLE_CHANNELS_KEY].map(e => {
+  return A(t, n, a.default.getChannels(e)[0, a.GUILD_SELECTABLE_CHANNELS_KEY].map(e => {
     let {
       channel: t
     } = e;
@@ -102,7 +102,7 @@ function m(e, t, n) {
 }
 
 function N(e, t, n) {
-  return h(t, n, (0, i.useStateFromStores)([a.default], () => a.default.getChannels(e))[0, a.GUILD_SELECTABLE_CHANNELS_KEY].map(e => {
+  return A(t, n, (0, i.useStateFromStores)([a.default], () => a.default.getChannels(e))[0, a.GUILD_SELECTABLE_CHANNELS_KEY].map(e => {
     let {
       channel: t
     } = e;

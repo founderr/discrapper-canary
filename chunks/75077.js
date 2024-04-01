@@ -16,7 +16,7 @@ s.r(t), s.d(t, {
     return _
   },
   getThemedImage: function() {
-    return R
+    return f
   },
   usePerksDiscoverabilityStrings: function() {
     return m
@@ -82,8 +82,8 @@ function I(e, t) {
       return ""
   }
 }
-let R = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
-  f = e => {
+let f = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
+  R = e => {
     let {
       cards: t,
       perksCards: s,
@@ -117,7 +117,7 @@ let R = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
         r = [e.profiles, e.clientThemes, e.serverBoosts];
         break;
       case o.PerksDiscoverabilityCardSection.WHATS_NEW:
-        r = f({
+        r = R({
           cards: r,
           perksCards: e,
           isFullScreen: a,

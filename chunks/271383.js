@@ -16,8 +16,8 @@ var i, r, s, a, o, l, u = n("392711"),
   T = n("69882"),
   f = n("134049"),
   S = n("160404"),
-  A = n("630388"),
-  h = n("823379"),
+  h = n("630388"),
+  A = n("823379"),
   m = n("709054"),
   N = n("314897"),
   O = n("592125"),
@@ -117,8 +117,8 @@ function Y(e) {
   } = e, {
     colorString: T,
     colorRoleId: f,
-    iconRoleId: A,
-    hoistRoleId: h,
+    iconRoleId: h,
+    hoistRoleId: A,
     highestRoleId: O
   } = H(a, o), p = {
     userId: t,
@@ -129,8 +129,8 @@ function Y(e) {
     roles: o,
     colorString: T,
     colorRoleId: f,
-    iconRoleId: A,
-    hoistRoleId: h,
+    iconRoleId: h,
+    hoistRoleId: A,
     highestRoleId: O,
     premiumSince: l,
     isPending: u,
@@ -408,7 +408,7 @@ class ee extends(r = c.default.Store) {
       n = g[e];
     if (null == n || null == n[t]) return !1;
     let i = n[t].flags;
-    return null != i && (0, A.hasFlag)(i, R.GuildMemberFlags.IS_GUEST)
+    return null != i && (0, h.hasFlag)(i, R.GuildMemberFlags.IS_GUEST)
   }
   getMemberIds(e) {
     if (null == e) return [];
@@ -549,14 +549,14 @@ l = "GuildMemberStore", (o = "displayName") in(a = ee) ? Object.defineProperty(a
       guildId: t,
       members: n
     } = e;
-    return K(t, n.map(e => e.member).filter(h.isNotNullish))
+    return K(t, n.map(e => e.member).filter(A.isNotNullish))
   },
   THREAD_MEMBERS_UPDATE: function(e) {
     let {
       guildId: t,
       addedMembers: n
     } = e;
-    return null != n && K(t, n.map(e => e.member).filter(h.isNotNullish))
+    return null != n && K(t, n.map(e => e.member).filter(A.isNotNullish))
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
     let {
@@ -570,7 +570,7 @@ l = "GuildMemberStore", (o = "displayName") in(a = ee) ? Object.defineProperty(a
       guildId: t,
       threads: n
     } = e;
-    return K(t, Object.values(n).map(e => e.owner).filter(h.isNotNullish))
+    return K(t, Object.values(n).map(e => e.owner).filter(A.isNotNullish))
   },
   GUILD_ROLE_UPDATE: Q,
   GUILD_ROLE_DELETE: Q,

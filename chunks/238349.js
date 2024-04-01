@@ -15,8 +15,8 @@ var r, s, a, o, l = n("392711"),
   T = n("314897"),
   f = n("592125"),
   S = n("306680"),
-  A = n("944486"),
-  h = n("823379"),
+  h = n("944486"),
+  A = n("823379"),
   m = n("709054"),
   N = n("882252");
 let O = [],
@@ -53,7 +53,7 @@ function B() {
 
 function k() {
   var e;
-  let t = A.default.getChannelId();
+  let t = h.default.getChannelId();
   if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return B(), !1;
   F({
     refreshThreadIds: !0
@@ -93,7 +93,7 @@ function F(e) {
 }
 class x extends(r = _.default.Store) {
   initialize() {
-    this.waitFor(f.default, E.default, A.default, S.default)
+    this.waitFor(f.default, E.default, h.default, S.default)
   }
   getNewThreadCount() {
     return L
@@ -103,7 +103,7 @@ class x extends(r = _.default.Store) {
   }
   getThreadIds(e, t, n) {
     let i = e !== R,
-      r = !(0, h.areSetsEqual)(n, C),
+      r = !(0, A.areSetsEqual)(n, C),
       s = t !== g;
     return R = e, C = n, g = t, i ? F({
       refreshThreadIds: !0

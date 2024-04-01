@@ -14,8 +14,8 @@ var i = s("803997"),
   E = s("725727"),
   T = s("474936"),
   I = s("981631"),
-  R = s("689938"),
-  f = s("743986");
+  f = s("689938"),
+  R = s("743986");
 t.default = function(e) {
   let {
     isFullscreen: t
@@ -25,18 +25,18 @@ t.default = function(e) {
   if (!(0, c.useIsEligibleForBogoPromotion)()) return null;
   let S = new Date(s.endDate);
   return (0, a.jsx)("div", {
-    className: r()(f.banner, {
-      [f.bannerFullscreen]: t
+    className: r()(R.banner, {
+      [R.bannerFullscreen]: t
     }),
     children: (0, a.jsxs)("div", {
-      className: f.bannerContent,
+      className: R.bannerContent,
       children: [(0, a.jsxs)("div", {
         children: [(0, a.jsx)(l.Heading, {
           variant: "display-sm",
           color: "always-white",
-          children: null == i ? R.default.Messages.BOGO_BUY_HEADLINE : R.default.Messages.BOGO_UPGRADE_HEADLINE
+          children: null == i ? f.default.Messages.BOGO_BUY_HEADLINE : f.default.Messages.BOGO_UPGRADE_HEADLINE
         }), (0, a.jsx)(l.Text, {
-          className: f.countdown,
+          className: R.countdown,
           variant: "text-sm/medium",
           children: (0, a.jsx)(d.default, {
             endDate: S
@@ -44,17 +44,17 @@ t.default = function(e) {
         }), (0, a.jsx)(l.Text, {
           variant: "text-sm/medium",
           color: "always-white",
-          children: null == i ? R.default.Messages.BOGO_PERKS_SUBTITLE_NON_SUB_FORMATTED.format({
+          children: null == i ? f.default.Messages.BOGO_PERKS_SUBTITLE_NON_SUB_FORMATTED.format({
             helpCenterLink: u.default.getArticleURL(I.HelpdeskArticles.SUMMER_2023_BOGO)
-          }) : R.default.Messages.BOGO_PERKS_SUBTITLE_SUB_FORMATTED.format({
+          }) : f.default.Messages.BOGO_PERKS_SUBTITLE_SUB_FORMATTED.format({
             helpCenterLink: u.default.getArticleURL(I.HelpdeskArticles.SUMMER_2023_BOGO)
           })
         })]
       }), (0, a.jsx)(_.default, {
-        buttonText: R.default.Messages.BOGO_CLAIM_OFFER,
-        buttonTextClassName: f.subscribeButtonText,
+        buttonText: f.default.Messages.BOGO_CLAIM_OFFER,
+        buttonTextClassName: R.subscribeButtonText,
         subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
-        className: f.subscribeButton,
+        className: R.subscribeButton,
         forceInverted: !0
       })]
     })

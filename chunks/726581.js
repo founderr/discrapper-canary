@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("551428"),
   T = s("912739"),
   I = s("73346"),
-  R = s("733789"),
-  f = s("4962"),
+  f = s("733789"),
+  R = s("4962"),
   S = s("689938"),
   m = s("466534");
 class A extends i.Component {
@@ -25,7 +25,7 @@ class A extends i.Component {
         className: m.sectionContent,
         children: [e.map(e => (0, a.jsx)("div", {
           className: m.unit,
-          children: (0, a.jsx)(R.default, {
+          children: (0, a.jsx)(f.default, {
             reason: e,
             hidePersonalInformation: s
           })
@@ -43,7 +43,7 @@ class A extends i.Component {
       storeListing: e
     } = this.props;
     return null != e.staffNotes ? {
-      type: f.default.Types.STAFF_NOTES,
+      type: R.default.Types.STAFF_NOTES,
       staffNotes: e.staffNotes
     } : null
   }
@@ -62,7 +62,7 @@ class A extends i.Component {
       children: [(0, a.jsx)("div", {
         className: m.header,
         children: S.default.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
-      }), this.renderReasons(e, t, i), null != l ? (0, a.jsx)(f.default, {
+      }), this.renderReasons(e, t, i), null != l ? (0, a.jsx)(R.default, {
         data: l,
         className: m.review
       }) : null]

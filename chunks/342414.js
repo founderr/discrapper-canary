@@ -14,8 +14,8 @@ var i = s("803997"),
   E = s("689938"),
   T = s("672827"),
   I = s("872905"),
-  R = s("578478");
-let f = e => {
+  f = s("578478");
+let R = e => {
     let {
       className: t,
       inTrial: s
@@ -59,7 +59,7 @@ let f = e => {
     } = e;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("img", {
-        src: R,
+        src: f,
         alt: "",
         className: T.headerArtV2
       }), (0, a.jsx)("div", {
@@ -103,7 +103,7 @@ t.default = e => {
     autoTrackExposure: !0
   }), n = r ? (0, a.jsx)(S, {
     inTrial: i
-  }) : (0, a.jsx)(f, {
+  }) : (0, a.jsx)(R, {
     className: t,
     inTrial: i
   });

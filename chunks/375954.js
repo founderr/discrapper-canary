@@ -11,9 +11,9 @@ var i, r, s, a, o = n("392711"),
   T = n("723352"),
   f = n("160404"),
   S = n("786761"),
-  A = n("418476");
+  h = n("418476");
 n("739566");
-var h = n("995774"),
+var A = n("995774"),
   m = n("706454"),
   N = n("630388"),
   O = n("709054"),
@@ -68,7 +68,7 @@ function H(e) {
     emoji: s,
     reactionType: a
   } = e, o = _.default.get(n);
-  if (null == o || !(0, h.shouldApplyReaction)(e)) return !1;
+  if (null == o || !(0, A.shouldApplyReaction)(e)) return !1;
   let l = p.default.getId() === r;
   o = o.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(s, l, e.colors, a) : n.removeReaction(s, l, a)), _.default.commit(o)
 }
@@ -103,7 +103,7 @@ class j extends(i = u.default.Store) {
   }
   getLastEditableMessage(e) {
     let t = U.default.getCurrentUser();
-    return l()(this.getMessages(e).toArray()).reverse().find(e => (0, A.default)(e, null == t ? void 0 : t.id))
+    return l()(this.getMessages(e).toArray()).reverse().find(e => (0, h.default)(e, null == t ? void 0 : t.id))
   }
   getLastCommandMessage(e) {
     let t = U.default.getCurrentUser();

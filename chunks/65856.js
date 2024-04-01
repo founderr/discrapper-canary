@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return h
   }
 }), n("733860"), n("653041"), n("411104"), n("47120");
 var i = n("512722"),
@@ -27,7 +27,7 @@ function T(e, t, n) {
 }
 let f = "RPC_STORE_WAIT",
   S = [];
-class A {
+class h {
   registerTransport(e) {
     e.on("connect", e => this.handleConnect(e)), e.on("request", (e, t) => this.handleRequest(e, t)), e.on("disconnect", (e, t) => this.handleDisconnect(e, t))
   }

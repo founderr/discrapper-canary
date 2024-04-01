@@ -11,8 +11,8 @@ var i, r, s, a, o = n("512722"),
 let T = new Set,
   f = new Map,
   S = new Set,
-  A = new Set;
-class h extends(i = d.default.Store) {
+  h = new Set;
+class A extends(i = d.default.Store) {
   getRecentGames(e) {
     var t;
     return null === (t = f.get(e)) || void 0 === t ? void 0 : t.recentGames
@@ -25,7 +25,7 @@ class h extends(i = d.default.Store) {
     return S.has(e)
   }
   isError(e) {
-    return A.has(e)
+    return h.has(e)
   }
   getCurrentUserApplicationIds() {
     let e = c.default.getId(),
@@ -38,20 +38,20 @@ class h extends(i = d.default.Store) {
     }))
   }
 }
-a = "UserRecentGamesStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
+a = "UserRecentGamesStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new h(_.default, {
+}) : r[s] = a, t.default = new A(_.default, {
   CONNECTION_OPEN: function() {
-    f = new Map, S = new Set, A = new Set
+    f = new Map, S = new Set, h = new Set
   },
   USER_RECENT_GAMES_FETCH_START: function(e) {
     let {
       userId: t
     } = e;
-    A.delete(t), S.add(t)
+    h.delete(t), S.add(t)
   },
   USER_RECENT_GAMES_FETCH_SUCCESS: function(e) {
     let {
@@ -71,7 +71,7 @@ a = "UserRecentGamesStore", (s = "displayName") in(r = h) ? Object.definePropert
     let {
       userId: t
     } = e;
-    S.delete(t), A.add(t)
+    S.delete(t), h.add(t)
   },
   USER_RECENT_GAMES_UPDATE_LOCAL: function(e) {
     let {

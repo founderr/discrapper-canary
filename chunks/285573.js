@@ -30,7 +30,7 @@ let E = (0, u.makeChannelSortable)(function(e) {
   } = e, L = (0, r.useStateFromStores)([d.default, c.default], () => {
     let e = c.default.getDirectoryChannelIds(t.id);
     return 0 === e.length ? null : d.default.getChannel(e[0])
-  }), v = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), x = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != v ? f.default.can(C.Permissions.MANAGE_CHANNELS, v) : null != t && f.default.can(C.Permissions.MANAGE_CHANNELS, t)), O = a.useCallback(e => {
+  }), v = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), x = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != v ? f.default.can(C.Permissions.MANAGE_CHANNELS, v) : null != t && f.default.can(C.Permissions.MANAGE_CHANNELS, t)), y = a.useCallback(e => {
     null != L && (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -42,10 +42,10 @@ let E = (0, u.makeChannelSortable)(function(e) {
     })
   }, [L]);
   if (null == L) return null;
-  let y = (0, h.getChannelItemClassName)(u, I),
+  let O = (0, h.getChannelItemClassName)(u, I),
     M = (0, h.isChannelItemDisabled)(L, S, _),
     D = (0, l.jsx)("div", {
-      className: i()(y, {
+      className: i()(O, {
         [g.disabled]: M,
         [g.selected]: x
       }),
@@ -55,7 +55,7 @@ let E = (0, u.makeChannelSortable)(function(e) {
         channel: L,
         guild: t,
         selected: x,
-        onContextMenu: O,
+        onContextMenu: y,
         forceInteractable: !0,
         resolvedUnreadSetting: m.UnreadSetting.ONLY_MENTIONS,
         children: [(0, l.jsx)(h.ChannelItemInviteButton, {

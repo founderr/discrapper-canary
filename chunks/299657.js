@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("497321"),
   T = s("100527"),
   I = s("906732"),
-  R = s("211242"),
-  f = s("15640"),
+  f = s("211242"),
+  R = s("15640"),
   S = s("89057"),
   m = s("246946"),
   A = s("594174"),
@@ -36,10 +36,10 @@ var a = s("735250"),
 t.default = function(e) {
   let {
     entrypoint: t = b.PremiumMarketingEntrypoints.UserSettings
-  } = e, s = (0, R.useBlockedPaymentsConfig)(), {
+  } = e, s = (0, f.useBlockedPaymentsConfig)(), {
     sourceAnalyticsLocations: r,
     analyticsLocations: y
-  } = (0, I.default)(T.default.PREMIUM_MARKETING), G = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), B = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), k = (0, L.usePremiumTrialOffer)(), H = (0, h.usePremiumDiscountOffer)(), F = (0, f.useSubscriptionPlansLoaded)(), [w, K] = i.useState(!0), W = i.useRef(0), V = (0, g.isPremiumExactly)(B, b.PremiumTypes.TIER_2), Y = (0, M.useLocalizedPromoQuery)(), z = null == Y ? void 0 : Y.countryCode, X = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
+  } = (0, I.default)(T.default.PREMIUM_MARKETING), G = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), B = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), k = (0, L.usePremiumTrialOffer)(), H = (0, h.usePremiumDiscountOffer)(), F = (0, R.useSubscriptionPlansLoaded)(), [w, K] = i.useState(!0), W = i.useRef(0), V = (0, g.isPremiumExactly)(B, b.PremiumTypes.TIER_2), Y = (0, M.useLocalizedPromoQuery)(), z = null == Y ? void 0 : Y.countryCode, X = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
   return (i.useEffect(() => {
     !X && d.getNitroAffinity()
   }, [X]), i.useEffect(() => {

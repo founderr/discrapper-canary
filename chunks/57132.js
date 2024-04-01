@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return S
   },
   useInMainTabsExperiment: function() {
-    return A
+    return h
   }
 }), n("411104"), n("470079");
 var i, r, s = n("652874"),
@@ -69,7 +69,7 @@ function S() {
   return T()
 }
 
-function A() {
+function h() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = (0, u.useMobileRedesignDisabled)(),
     n = I(e => e.getExperimentEnabled()),

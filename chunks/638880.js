@@ -23,8 +23,8 @@ async function f(e) {
     currentEmbeddedApplication: n,
     activityChannelId: f,
     locationObject: S,
-    embeddedActivitiesManager: A,
-    analyticsLocations: h
+    embeddedActivitiesManager: h,
+    analyticsLocations: A
   } = e, m = r.default.getChannel(f), N = null == m ? void 0 : m.getGuildId(), O = null == N || "" === N, p = a.default.getCurrentUser();
   if (null == m || O && !m.isPrivate() || null == f || null == p) return Promise.resolve(!1);
   if (s.default.getVoiceChannelId() === f && (null == n ? void 0 : n.id) === t) return (0, E.default)(N, f), Promise.resolve(!0);
@@ -33,7 +33,7 @@ async function f(e) {
       application: i.default.getApplication(t),
       channel: m,
       currentEmbeddedApplication: n,
-      embeddedActivitiesManager: A,
+      embeddedActivitiesManager: h,
       user: p
     })) return !1;
   let R = (0, d.default)(m.id),
@@ -44,11 +44,11 @@ async function f(e) {
         bypassChangeModal: null != n
       })) return !1
   } else if (!(0, o.isActivitiesInTextEnabled)(m, "joinEmbeddedActivity") || !C) return !1;
-  return (0, E.default)(N, f), (0, l.startEmbeddedActivity)(f, t, h), (0, c.default)({
+  return (0, E.default)(N, f), (0, l.startEmbeddedActivity)(f, t, A), (0, c.default)({
     type: T.AnalyticsGameOpenTypes.JOIN,
     userId: p.id,
     applicationId: t,
     locationObject: S,
-    analyticsLocations: h
+    analyticsLocations: A
   }), !0
 }

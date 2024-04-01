@@ -22,11 +22,11 @@ function u(e) {
     onTier2TrialPeriod: E,
     onNonTier2Subscriber: T,
     onTier2Subscriber: I,
-    onCustomCriteria: R
-  } = e, f = (0, l.usePremiumTrialOffer)(), S = (0, n.usePremiumDiscountOffer)(), m = (0, a.useStateFromStores)([i.default], () => i.default.getPremiumTypeSubscription()), A = r.default.getPremiumTypeFromSubscription(m);
-  if (null != R) {
-    let e = R();
+    onCustomCriteria: f
+  } = e, R = (0, l.usePremiumTrialOffer)(), S = (0, n.usePremiumDiscountOffer)(), m = (0, a.useStateFromStores)([i.default], () => i.default.getPremiumTypeSubscription()), A = r.default.getPremiumTypeFromSubscription(m);
+  if (null != f) {
+    let e = f();
     if (null != e) return e
   }
-  return null != f && (0, o.SubscriptionTrials)[f.trial_id].skus.includes(o.PremiumSubscriptionSKUs.TIER_0) ? null != d ? d : t : null != f && (0, o.SubscriptionTrials)[f.trial_id].skus.includes(o.PremiumSubscriptionSKUs.TIER_2) ? null != c ? c : t : null != m && null != m.trialId && A === o.PremiumTypes.TIER_0 ? null != _ ? _ : t : null != m && null != m.trialId && A === o.PremiumTypes.TIER_2 ? null != E ? E : t : null != S ? null != s ? s : t : null == A ? null != u ? u : t : A === o.PremiumTypes.TIER_0 || A === o.PremiumTypes.TIER_1 ? null != T ? T : t : A === o.PremiumTypes.TIER_2 ? null != I ? I : t : t
+  return null != R && (0, o.SubscriptionTrials)[R.trial_id].skus.includes(o.PremiumSubscriptionSKUs.TIER_0) ? null != d ? d : t : null != R && (0, o.SubscriptionTrials)[R.trial_id].skus.includes(o.PremiumSubscriptionSKUs.TIER_2) ? null != c ? c : t : null != m && null != m.trialId && A === o.PremiumTypes.TIER_0 ? null != _ ? _ : t : null != m && null != m.trialId && A === o.PremiumTypes.TIER_2 ? null != E ? E : t : null != S ? null != s ? s : t : null == A ? null != u ? u : t : A === o.PremiumTypes.TIER_0 || A === o.PremiumTypes.TIER_1 ? null != T ? T : t : A === o.PremiumTypes.TIER_2 ? null != I ? I : t : t
 }

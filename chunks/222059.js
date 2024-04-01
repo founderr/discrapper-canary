@@ -30,8 +30,8 @@ var l = n("735250"),
   v = n("417363"),
   x = n("941128"),
   R = n("436088"),
-  O = n("880080"),
-  y = n("26290"),
+  y = n("880080"),
+  O = n("26290"),
   M = n("15434"),
   D = n("780570"),
   b = n("557177"),
@@ -93,7 +93,7 @@ function k(e) {
       selected: Q,
       lowerBadge: f > 0 ? (0, P.renderMentionBadge)(f) : null,
       upperBadge: X,
-      lowerBadgeWidth: (0, y.getBadgeWidthForValue)(f),
+      lowerBadgeWidth: (0, O.getBadgeWidthForValue)(f),
       children: (0, l.jsx)(M.default, {
         onMouseEnter: () => N(!0),
         onMouseLeave: () => N(!1),
@@ -154,7 +154,7 @@ function k(e) {
       tutorialId: "friends-list",
       position: "right",
       children: (0, l.jsxs)(G.ListItem, {
-        children: [(0, l.jsx)(O.default, {
+        children: [(0, l.jsx)(y.default, {
           selected: t,
           hovered: I,
           className: V.pill

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return R
   },
   GroupDM: function() {
-    return O
+    return y
   },
   Guild: function() {
     return x
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return b
   },
   User: function() {
-    return y
+    return O
   }
 }), n("47120");
 var l, a = n("735250"),
@@ -303,7 +303,7 @@ class R extends(l = s.Component) {
 L(R, "defaultProps", {
   unread: !1
 });
-class O extends s.Component {
+class y extends s.Component {
   renderIcon() {
     let {
       channel: e
@@ -382,7 +382,7 @@ class O extends s.Component {
     })
   }
 }
-class y extends s.Component {
+class O extends s.Component {
   renderIcon() {
     let {
       user: e

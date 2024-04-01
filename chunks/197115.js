@@ -16,8 +16,8 @@ var r = n("803997"),
   T = n("78839"),
   f = n("451478"),
   S = n("976644"),
-  A = n("559629"),
-  h = n("466111"),
+  h = n("559629"),
+  A = n("466111"),
   m = n("74538"),
   N = n("474936"),
   O = n("981631"),
@@ -143,7 +143,7 @@ t.default = function(e) {
     look: o.Button.Looks.INVERTED,
     onClick: z,
     ...H,
-    children: [w && (0, i.jsx)(h.default, {
+    children: [w && (0, i.jsx)(A.default, {
       className: R.premiumIcon
     }), (0, i.jsx)("span", {
       className: s()(R.buttonText, y),
@@ -157,7 +157,7 @@ t.default = function(e) {
     color: o.Button.Colors.PRIMARY,
     onClick: z,
     ...H,
-    children: [(0, i.jsx)(A.default, {
+    children: [(0, i.jsx)(h.default, {
       className: R.giftIcon
     }), (0, i.jsx)("span", {
       className: s()(R.buttonText, y),
@@ -204,7 +204,7 @@ t.default = function(e) {
       pauseAnimation: !j || B,
       ...H,
       ...e,
-      children: [w && (0, i.jsx)(h.default, {
+      children: [w && (0, i.jsx)(A.default, {
         className: s()(R.premiumIcon, P)
       }), (0, i.jsx)("span", {
         className: s()(R.buttonText, y),

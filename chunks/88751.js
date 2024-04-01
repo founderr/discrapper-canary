@@ -9,8 +9,8 @@ var i, r, s, a, o, l, u = n("392711"),
   T = n("271383"),
   f = n("430824"),
   S = n("594174"),
-  A = n("979651"),
-  h = n("700785"),
+  h = n("979651"),
+  A = n("700785"),
   m = n("146085"),
   N = n("590415");
 (s = i || (i = {})).SPEAKER = "speaker", s.MODERATOR = "moderator";
@@ -32,10 +32,10 @@ function R(e, t) {
     if (null == l || null == a || !a.isGuildStageVoice()) return p;
     return {
       speaker: function(e, t) {
-        let n = A.default.getVoiceStateForChannel(t, e);
+        let n = h.default.getVoiceStateForChannel(t, e);
         return (0, N.getAudienceRequestToSpeakState)(n) === N.RequestToSpeakStates.ON_STAGE
       }(e, t),
-      moderator: s ? (n = e, i = l, r = a, h.can({
+      moderator: s ? (n = e, i = l, r = a, A.can({
         permission: m.MODERATE_STAGE_CHANNEL_PERMISSIONS,
         user: n,
         context: i,
@@ -93,7 +93,7 @@ function D(e) {
 }
 class v extends(r = _.default.Store) {
   initialize() {
-    this.waitFor(T.default, E.default, f.default, S.default, A.default)
+    this.waitFor(T.default, E.default, f.default, S.default, h.default)
   }
   isSpeaker(e, t) {
     return this.getPermissionsForUser(e, t).speaker

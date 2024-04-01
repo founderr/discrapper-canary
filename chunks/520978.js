@@ -20,8 +20,8 @@ var r = n("803997"),
   T = n("151785"),
   f = n("572004"),
   S = n("591759"),
-  A = n("135431"),
-  h = n("981631"),
+  h = n("135431"),
+  A = n("981631"),
   m = n("689938"),
   N = n("681132");
 
@@ -34,9 +34,9 @@ function O(e) {
     appsInGDMEnabled: p,
     availableApplications: R
   } = (0, d.usePrivateChannelIntegrationState)({
-    channelId: null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : h.EMPTY_STRING_SNOWFLAKE_ID
+    channelId: null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : A.EMPTY_STRING_SNOWFLAKE_ID
   });
-  if (null == n || !(0, A.canInstallApplication)({
+  if (null == n || !(0, h.canInstallApplication)({
       customInstallUrl: n.customInstallUrl,
       installParams: n.installParams,
       integrationTypesConfig: n.integrationTypesConfig
@@ -65,10 +65,10 @@ function O(e) {
     onClick: () => {
       C ? (0, u.openOAuth2Modal)({
         clientId: n.id,
-        scopes: [h.OAuth2Scopes.APPLICATIONS_COMMANDS],
+        scopes: [A.OAuth2Scopes.APPLICATIONS_COMMANDS],
         channelId: O.id,
         disableGuildSelect: !0
-      }) : (0, A.installApplication)({
+      }) : (0, h.installApplication)({
         applicationId: n.id,
         customInstallUrl: n.customInstallUrl,
         installParams: n.installParams,

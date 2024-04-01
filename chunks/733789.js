@@ -13,9 +13,9 @@ var a = s("735250"),
   E = s("51144"),
   T = s("981631"),
   I = s("689938"),
-  R = s("699524");
+  f = s("699524");
 
-function f(e, t, s) {
+function R(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -86,7 +86,7 @@ class m extends i.PureComponent {
       }),
       position: "right",
       children: t => (0, a.jsx)("span", {
-        className: R.username,
+        className: f.username,
         ...t,
         children: e.username
       })
@@ -101,9 +101,9 @@ class m extends i.PureComponent {
       userInfo: i
     } = e;
     return 0 === i.length ? null : (0, a.jsxs)("div", {
-      className: n()(R.recommendationActivity, t),
+      className: n()(f.recommendationActivity, t),
       children: [(0, a.jsx)(_.default, {
-        className: R.players,
+        className: f.players,
         users: i.map(e => {
           let {
             user: t
@@ -114,23 +114,23 @@ class m extends i.PureComponent {
         max: 4,
         renderMoreUsers: this.renderPlayerOverflow
       }), (0, a.jsx)("div", {
-        className: R.description,
+        className: f.description,
         children: this.renderDescription(s, i)
       })]
     })
   }
   constructor(...e) {
-    super(...e), f(this, "renderUserTooltip", (e, t, s) => (0, a.jsxs)("div", {
-      className: R.tooltip,
+    super(...e), R(this, "renderUserTooltip", (e, t, s) => (0, a.jsxs)("div", {
+      className: f.tooltip,
       children: [(0, a.jsx)("div", {
         children: E.default.getUserTag(e)
       }), (0, a.jsx)(c.default, {
-        className: R.tooltipTimestamp,
+        className: f.tooltipTimestamp,
         start: t,
         end: s,
         location: c.default.Locations.ACTIVITY_FEED
       })]
-    })), f(this, "renderPlayer", (e, t, s, i) => {
+    })), R(this, "renderPlayer", (e, t, s, i) => {
       if (null == e) return null;
       let r = this.props.reason.userInfo.find(t => t.user === e);
       return null == r ? null : (0, a.jsx)(l.Popout, {
@@ -148,8 +148,8 @@ class m extends i.PureComponent {
             decoration: "never"
           }),
           children: s => (0, a.jsx)(l.Avatar, {
-            className: n()(R.playerAvatar, {
-              [R.avatarMasked]: !i
+            className: n()(f.playerAvatar, {
+              [f.avatarMasked]: !i
             }),
             src: e.getAvatarURL(void 0, 32),
             "aria-label": e.username,
@@ -159,8 +159,8 @@ class m extends i.PureComponent {
           })
         })
       }, e.id)
-    }), f(this, "renderPlayerOverflow", (e, t, s) => (0, a.jsx)("div", {
-      className: R.playerOverflow,
+    }), R(this, "renderPlayerOverflow", (e, t, s) => (0, a.jsx)("div", {
+      className: f.playerOverflow,
       children: e
     }, s))
   }

@@ -48,8 +48,8 @@ t.default = a.memo(function(e) {
     icon: o,
     children: f,
     onClick: S,
-    isActive: A,
-    onMouseEnter: h,
+    isActive: h,
+    onMouseEnter: A,
     onMouseLeave: m,
     onFocus: N,
     onBlur: O,
@@ -89,13 +89,13 @@ t.default = a.memo(function(e) {
     "aria-controls": v,
     disabled: n,
     className: l()(t, {
-      [I.active]: A
+      [I.active]: h
     }),
     innerClassName: l()(I.button, i, {
       [I.pulseButton]: p
     }),
     onClick: S,
-    onMouseEnter: h,
+    onMouseEnter: A,
     onMouseLeave: m,
     onFocus: N,
     onBlur: O,

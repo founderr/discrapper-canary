@@ -25,7 +25,7 @@ let N = e => (0, I.default)(e).required().keys({
   channel_id: e.string().required()
 });
 
-function R(e) {
+function O(e) {
   var t;
   let {
     args: {
@@ -40,7 +40,7 @@ function R(e) {
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid nsfw channel id: ".concat(s.id))
 }
-let O = e => (0, I.default)(e).keys({
+let R = e => (0, I.default)(e).keys({
   lobby_id: e.string().allow(null),
   channel_id: e.string().allow(null)
 });
@@ -208,30 +208,30 @@ let L = {
   [A.RPCEvents.MESSAGE_CREATE]: {
     scope: A.OAuth2Scopes.RPC,
     validation: N,
-    handler: R
+    handler: O
   },
   [A.RPCEvents.MESSAGE_UPDATE]: {
     scope: A.OAuth2Scopes.RPC,
     validation: N,
-    handler: R
+    handler: O
   },
   [A.RPCEvents.MESSAGE_DELETE]: {
     scope: A.OAuth2Scopes.RPC,
     validation: N,
-    handler: R
+    handler: O
   },
   [A.RPCEvents.SPEAKING_START]: {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [A.OAuth2Scopes.RPC, A.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
-    validation: O,
+    validation: R,
     handler: v
   },
   [A.RPCEvents.SPEAKING_STOP]: {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [A.OAuth2Scopes.RPC, A.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
-    validation: O,
+    validation: R,
     handler: v
   },
   [A.RPCEvents.GUILD_CREATE]: {

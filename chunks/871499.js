@@ -34,8 +34,8 @@ function I(e) {
     iconComponent: T,
     themeable: f = !1,
     disabled: S = !1,
-    isActive: A = !1,
-    tooltipPosition: h = "top",
+    isActive: h = !1,
+    tooltipPosition: A = "top",
     shouldShowTooltip: m = !0,
     forceTooltipOpen: N = !1,
     buttonRef: O,
@@ -44,7 +44,7 @@ function I(e) {
   } = e;
   return (0, i.jsx)(d.default, {
     children: (0, i.jsx)(a.Tooltip, {
-      position: h,
+      position: A,
       text: t,
       "aria-label": R,
       shouldShow: m,
@@ -53,7 +53,7 @@ function I(e) {
         let {
           onClick: t,
           onContextMenu: d,
-          onMouseEnter: h,
+          onMouseEnter: A,
           onMouseLeave: m,
           ...N
         } = e;
@@ -67,7 +67,7 @@ function I(e) {
             null == t || t(), null == n || n(e)
           },
           onMouseEnter: e => {
-            null == h || h(), null == o || o(e)
+            null == A || A(), null == o || o(e)
           },
           onMouseLeave: e => {
             null == m || m(), null == l || l(e)
@@ -76,7 +76,7 @@ function I(e) {
             null == d || d(), null == u || u(e)
           },
           onFocus: e => {
-            null == h || h(), null == o || o(e)
+            null == A || A(), null == o || o(e)
           },
           onBlur: e => {
             null == m || m(), null == l || l(e)
@@ -84,7 +84,7 @@ function I(e) {
           disabled: S,
           innerClassName: E.lineHeightReset,
           className: s()({
-            [E.active]: A
+            [E.active]: h
           }, _),
           wrapperClassName: c,
           buttonRef: O,
@@ -94,7 +94,7 @@ function I(e) {
           children: (0, i.jsx)(T, {
             className: s()(E.controlIcon, I, {
               [E.themeable]: f,
-              [E.active]: A
+              [E.active]: h
             }),
             color: "currentColor"
           })
@@ -120,10 +120,10 @@ function f(e) {
     className: r,
     iconClassName: f,
     onPopoutClick: S,
-    popoutOpen: A = !1,
-    ...h
+    popoutOpen: h = !1,
+    ...A
   } = e, m = (0, _.default)(t, n), N = (0, o.default)("(max-width: 456px)"), O = (0, i.jsx)(I, {
-    ...h,
+    ...A,
     grow: !1,
     onContextMenu: S,
     iconClassName: s()(f, E.centerIcon),
@@ -142,11 +142,11 @@ function f(e) {
         onClick: S,
         onContextMenu: S,
         className: s()(E.contextMenuNub, T[m], {
-          [E.active]: A
+          [E.active]: h
         }),
         children: (0, i.jsx)(l.default, {
           className: s()(E.contextMenuCaret, {
-            [E.open]: A
+            [E.open]: h
           })
         })
       })

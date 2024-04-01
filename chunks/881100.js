@@ -17,8 +17,8 @@ var a = s("399606"),
   E = s("323780"),
   T = s("101732"),
   I = s("450598"),
-  R = s("633030"),
-  f = s("97942"),
+  f = s("633030"),
+  R = s("97942"),
   S = s("269987"),
   m = s("548629"),
   A = s("507084"),
@@ -95,7 +95,7 @@ let B = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
             onTryItOutClick: t
           })
         },
-        imageSource: f,
+        imageSource: R,
         imageClassName: t.perGuildProfilesImage
       },
       longerMessages: {
@@ -107,7 +107,7 @@ let B = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
       moreGuilds: {
         title: _.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
         description: _.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-        imageSource: B(i, R, U),
+        imageSource: B(i, f, U),
         imageClassName: t.moreGuildsImage
       },
       moreGuildsAlt: {

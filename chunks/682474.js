@@ -29,12 +29,12 @@ function S(e) {
   return I[e]
 }
 
-function A(e) {
+function h(e) {
   var t;
   return null === (t = I[e]) || void 0 === t ? void 0 : t.message
 }
 
-function h(e) {
+function A(e) {
   let {
     threads: t,
     mostRecentMessages: n
@@ -73,7 +73,7 @@ s = "ForumPostRecentMessageStore", (r = "displayName") in(i = m) ? Object.define
       let n = function(e) {
           return I[e]
         }(e),
-        i = A(e);
+        i = h(e);
       null != n && null != i && (I[e] = {
         ...n,
         message: (0, u.updateMessageRecord)(i, t)
@@ -82,7 +82,7 @@ s = "ForumPostRecentMessageStore", (r = "displayName") in(i = m) ? Object.define
   },
   MESSAGE_DELETE: function(e) {
     return function(e, t) {
-      let n = A(e);
+      let n = h(e);
       return (null == n ? void 0 : n.id) === t && (delete I[e], !0)
     }(e.channelId, e.id)
   },
@@ -92,6 +92,6 @@ s = "ForumPostRecentMessageStore", (r = "displayName") in(i = m) ? Object.define
     } = e;
     for (let e in t) f(e, t[e].most_recent_message)
   },
-  LOAD_ARCHIVED_THREADS_SUCCESS: h,
-  LOAD_THREADS_SUCCESS: h
+  LOAD_ARCHIVED_THREADS_SUCCESS: A,
+  LOAD_THREADS_SUCCESS: A
 })

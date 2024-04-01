@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("410154"),
   T = s("332475"),
   I = s("626135"),
-  R = s("103433"),
-  f = s("166021"),
+  f = s("103433"),
+  R = s("166021"),
   S = s("32173"),
   m = s("391110"),
   A = s("75077"),
@@ -43,7 +43,7 @@ t.default = e => {
       className: g.container,
       children: (0, a.jsxs)(_.AnalyticsLocationProvider, {
         value: M,
-        children: [(0, a.jsx)(R.default, {
+        children: [(0, a.jsx)(f.default, {
           className: g.heroHeading,
           onBackClick: () => {
             s(!1), I.default.track(N.AnalyticEvents.NITRO_HOME_NAVIGATION, {
@@ -59,7 +59,7 @@ t.default = e => {
             color: "header-primary",
             className: g.heading,
             children: p.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE
-          }), (0, a.jsx)(f.default, {
+          }), (0, a.jsx)(R.default, {
             className: g.cardCarousel,
             cards: (0, A.getFilteredPerksDiscoverabilityCards)(P, m.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW, x),
             cardType: m.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW
@@ -68,7 +68,7 @@ t.default = e => {
             color: "header-primary",
             className: g.heading,
             children: p.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD
-          }), (0, a.jsx)(f.default, {
+          }), (0, a.jsx)(R.default, {
             className: g.cardCarousel,
             cards: (0, A.getFilteredPerksDiscoverabilityCards)(P, m.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW, x),
             cardType: m.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW
@@ -77,7 +77,7 @@ t.default = e => {
             color: "header-primary",
             className: g.heading,
             children: p.default.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
-          }), (0, a.jsx)(f.default, {
+          }), (0, a.jsx)(R.default, {
             className: g.cardCarousel,
             cards: (0, A.getFilteredPerksDiscoverabilityCards)(P, m.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW, x),
             cardType: m.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW

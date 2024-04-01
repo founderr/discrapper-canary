@@ -21,8 +21,8 @@ var i, r, s, a, o = n("512722"),
   T = n("873741"),
   f = n("314897"),
   S = n("866960"),
-  A = n("70956"),
-  h = n("403182"),
+  h = n("70956"),
+  A = n("403182"),
   m = n("651655"),
   N = n("861990"),
   O = n("141795"),
@@ -41,7 +41,7 @@ __OVERLAY__ && (C = n("237997").default), (s = i || (i = {})).OVERLAY_UNLOCKED =
 let g = e => 0 === e.type,
   L = e => 1 === e.type,
   D = e => g(e) ? e.message.nonce : L(e) ? e.message.messageId : e.message.data.id,
-  v = [1 * A.default.Millis.MINUTE, 5 * A.default.Millis.MINUTE];
+  v = [1 * h.default.Millis.MINUTE, 5 * h.default.Millis.MINUTE];
 class M extends m.default {
   isFull() {
     return this.queue.length >= this.maxSize
@@ -78,7 +78,7 @@ class M extends m.default {
     return n => {
       if (null != e && (this.requests.delete(e), this.cancelQueueMetricTimers(e)), n.hasErr) return t(null, n);
       null != n.body && (n.body.code === p.AbortCodes.SLOWMODE_RATE_LIMITED || n.body.code === p.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) ? t(null, n) : 429 === n.status ? t({
-        retryAfter: n.body.retry_after * A.default.Millis.SECOND
+        retryAfter: n.body.retry_after * h.default.Millis.SECOND
       }) : t(null, n)
     }
   }
@@ -139,7 +139,7 @@ class M extends m.default {
     }, _);
     else {
       let t = {
-        timeout: 60 * A.default.Millis.SECOND,
+        timeout: 60 * h.default.Millis.SECOND,
         retries: 3,
         backoff: new u.default
       };
@@ -211,7 +211,7 @@ class M extends m.default {
         this.requests.set(o, T), e.on("progress", e => {
           let {
             total: t
-          } = e, n = (0, h.maxFileSize)(r);
+          } = e, n = (0, A.maxFileSize)(r);
           null != t && t > n && (this.cancelRequest(o), null == c || c(n))
         })
       }

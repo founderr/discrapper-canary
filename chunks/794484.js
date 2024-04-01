@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("32173"),
   T = s("391110"),
   I = s("75077"),
-  R = s("320319"),
-  f = s("755655");
+  f = s("320319"),
+  R = s("755655");
 let S = e => {
   let {
     showAllPerksButton: t,
@@ -24,19 +24,19 @@ let S = e => {
   } = e, n = (0, a.jsx)(o.Heading, {
     variant: "heading-xxl/extrabold",
     color: "header-primary",
-    className: null != r ? r : f.heading,
+    className: null != r ? r : R.heading,
     children: i
   });
   return null == t ? n : s ? (0, a.jsxs)("div", {
-    className: f.sectionHeader,
+    className: R.sectionHeader,
     children: [n, null != t && (0, a.jsx)("div", {
-      className: f.showAllPerksButton,
+      className: R.showAllPerksButton,
       children: t
     })]
   }) : (0, a.jsx)("div", {
-    className: f.container,
+    className: R.container,
     children: (0, a.jsx)("div", {
-      className: f.sectionHeaderSeeAll,
+      className: R.sectionHeaderSeeAll,
       children: n
     })
   })
@@ -79,13 +79,13 @@ t.default = e => {
   return (0, a.jsxs)(a.Fragment, {
     children: [(null == v ? void 0 : null === (t = v.freeBoost) || void 0 === t ? void 0 : t.name) === E.PerksDiscoverabilityCardTypes.FREE_BOOST && (0, a.jsx)(l.ConfettiCanvas, {
       ref: y,
-      className: f.confettiCanvas,
+      className: R.confettiCanvas,
       environment: G.current
     }), (0, a.jsxs)("div", {
       ref: C,
-      className: n()(f.section, {
-        [f.centerAlignSection]: !A,
-        [f.leftAlignSection]: A
+      className: n()(R.section, {
+        [R.centerAlignSection]: !A,
+        [R.leftAlignSection]: A
       }, s),
       children: [(0, a.jsx)(S, {
         showAllPerksButton: N,
@@ -95,24 +95,24 @@ t.default = e => {
       }), !M && (0, a.jsx)(o.Text, {
         variant: "text-lg/normal",
         color: "header-primary",
-        className: n()(f.subtitle, {
-          [f.subtitle]: null == N || A,
-          [f.subtitleWithButton]: null != N && !A,
-          [f.fullWidth]: h || A,
-          [f.moreSubtitleMargin]: U,
-          [f.leftAlignSubtitle]: A,
-          [f.centerAlignSubtitle]: !A
+        className: n()(R.subtitle, {
+          [R.subtitle]: null == N || A,
+          [R.subtitleWithButton]: null != N && !A,
+          [R.fullWidth]: h || A,
+          [R.moreSubtitleMargin]: U,
+          [R.leftAlignSubtitle]: A,
+          [R.centerAlignSubtitle]: !A
         }),
         children: x.subtitle
       }), !A && null != N && (0, a.jsx)("div", {
-        className: n()(f.showAllPerksButtonCenter),
+        className: n()(R.showAllPerksButtonCenter),
         children: N
       }), (0, a.jsx)("div", {
         className: n()({
-          [f.cardContainer]: g,
-          [f.cardContainerNarrowWidth]: !g
+          [R.cardContainer]: g,
+          [R.cardContainerNarrowWidth]: !g
         }),
-        children: b.map((e, t) => (0, a.jsx)(R.default, {
+        children: b.map((e, t) => (0, a.jsx)(f.default, {
           confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? j : void 0,
           ...e,
           forceShadow: m

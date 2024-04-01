@@ -15,7 +15,7 @@ var i = n("735250"),
 t.default = () => {
   let [e, t] = (0, s.useStateFromStoresArray)([u.default], () => [u.default.canShowAdminWarning, u.default.getVisibleGame()], []), n = (0, s.useStateFromStores)([_.default], () => _.default.isConnected(), []), T = (0, s.useStateFromStores)([d.default], () => d.default.getMode() === E.InputModes.PUSH_TO_TALK, []), f = null != t && t.elevated && n && T && e, S = r.useRef(null);
 
-  function A() {
+  function h() {
     null !== S.current && ((0, a.closeModal)(S.current), S.current = null)
   }
   return r.useEffect(() => (f ? S.current = (0, a.openModal)(e => (0, i.jsx)(l.default, {
@@ -28,7 +28,7 @@ t.default = () => {
     onConfirm: () => window.open(c.default.getArticleURL(E.HelpdeskArticles.PUSH_TO_TALK_ADMINISTRATOR_MODE), "_blank"),
     confirmText: I.default.Messages.HELP_DESK,
     ...e
-  })) : A(), () => {
-    A()
+  })) : h(), () => {
+    h()
   }), [t, f]), null
 }

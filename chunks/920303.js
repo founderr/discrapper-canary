@@ -15,8 +15,8 @@ var r, s, a, o, l = n("392711"),
   T = n("131704"),
   f = n("592125"),
   S = n("306680"),
-  A = n("823379"),
-  h = n("709054"),
+  h = n("823379"),
+  A = n("709054"),
   m = n("569471");
 let N = 25,
   O = !1,
@@ -47,9 +47,9 @@ function P() {
     if (e || null == n) return !0;
     {
       let e = null == t ? null : y(t, L);
-      return null != e && h.default.compare(e, n) >= 0
+      return null != e && A.default.compare(e, n) >= 0
     }
-  }).sort((e, t) => h.default.compare(y(e, L), y(t, L))).map(e => e.id).reverse().value()
+  }).sort((e, t) => A.default.compare(y(e, L), y(t, L))).map(e => e.id).reverse().value()
 }
 
 function U(e) {
@@ -71,10 +71,10 @@ class G extends(r = _.default.Store) {
     return p
   }
   isLoading(e, t, n) {
-    return g === e && L === t && (0, A.areSetsEqual)(i, n) ? O : (M(), !1)
+    return g === e && L === t && (0, h.areSetsEqual)(i, n) ? O : (M(), !1)
   }
   getThreads(e, t, n) {
-    return g === e && L === t && (0, A.areSetsEqual)(i, n) ? D : b
+    return g === e && L === t && (0, h.areSetsEqual)(i, n) ? D : b
   }
 }
 o = "ArchivedThreadsStore", (a = "displayName") in(s = G) ? Object.defineProperty(s, a, {
@@ -101,10 +101,10 @@ o = "ArchivedThreadsStore", (a = "displayName") in(s = G) ? Object.definePropert
     M()
   },
   LOAD_ARCHIVED_THREADS: function(e) {
-    (e.channelId !== g || e.sortOrder !== L || !(0, A.areSetsEqual)(e.tagFilter, i)) && M(), g = e.channelId, L = e.sortOrder, i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), O = !0, p = !1
+    (e.channelId !== g || e.sortOrder !== L || !(0, h.areSetsEqual)(e.tagFilter, i)) && M(), g = e.channelId, L = e.sortOrder, i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), O = !0, p = !1
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
-    if (e.channelId !== g || e.sortOrder !== L || !(0, A.areSetsEqual)(e.tagFilter, i)) return !1;
+    if (e.channelId !== g || e.sortOrder !== L || !(0, h.areSetsEqual)(e.tagFilter, i)) return !1;
     let t = e.threads.filter(e => T.ALL_CHANNEL_TYPES.has(e.type)).map(e => e.id);
     D = D.concat(t);
     let n = f.default.getChannel(g);
@@ -118,7 +118,7 @@ o = "ArchivedThreadsStore", (a = "displayName") in(s = G) ? Object.definePropert
     }), P(), R = e.hasMore, v = e.offset + N, O = !1, p = !1
   },
   LOAD_ARCHIVED_THREADS_FAIL: function(e) {
-    if (e.channelId !== g || e.sortOrder !== L || !(0, A.areSetsEqual)(e.tagFilter, i)) return !1;
+    if (e.channelId !== g || e.sortOrder !== L || !(0, h.areSetsEqual)(e.tagFilter, i)) return !1;
     O = !1, C = !0, p = !1
   },
   RESORT_THREADS: function(e) {

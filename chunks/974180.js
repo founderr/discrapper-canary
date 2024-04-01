@@ -32,8 +32,8 @@ var l, a = n("149765"),
   v = n("292959"),
   x = n("496675"),
   R = n("699516"),
-  O = n("944486"),
-  y = n("885110"),
+  y = n("944486"),
+  O = n("885110"),
   M = n("246946"),
   D = n("594174"),
   b = n("979651"),
@@ -79,7 +79,7 @@ let Y = "message1",
   };
 
 function q() {
-  return !!(v.default.getDesktopType() === B.DesktopNotificationTypes.NEVER || y.default.getStatus() === B.StatusTypes.DND || T.FocusMode.getSetting()) || !1
+  return !!(v.default.getDesktopType() === B.DesktopNotificationTypes.NEVER || O.default.getStatus() === B.StatusTypes.DND || T.FocusMode.getSetting()) || !1
 }
 
 function J(e) {
@@ -119,7 +119,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
   },
   WINDOW_FOCUS: function(e) {
     if (Z = e.focused) {
-      let e = O.default.getChannelId();
+      let e = y.default.getChannelId();
       null != e && Q.clearChannel(e)
     }
   },

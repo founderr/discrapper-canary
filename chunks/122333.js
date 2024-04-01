@@ -23,8 +23,8 @@ var l = n("481060"),
   g = n("179645"),
   A = n("701476"),
   N = n("785997"),
-  R = n("981631"),
-  O = n("188785"),
+  O = n("981631"),
+  R = n("188785"),
   v = n("630724");
 
 function L() {
@@ -100,29 +100,29 @@ class P extends r.default {
             onSlideChange: t
           })
         }, {
-          onCloseRequest: R.NOOP,
+          onCloseRequest: O.NOOP,
           onCloseCallback: e,
           modalKey: a
         })
       },
-      predicate: () => P() && !O.CONFERENCE_MODE_ENABLED
+      predicate: () => P() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "New User Age Gate",
       open: u.openNewUserAgeGateModal,
-      predicate: () => M && !P() && !O.CONFERENCE_MODE_ENABLED
+      predicate: () => M && !P() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
       open: e => u.openClaimAccountModal(p.isPlatformEmbedded, e),
       predicate: () => {
         var e;
-        return !r && null != m.default.getCurrentUser() && !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
+        return !r && null != m.default.getCurrentUser() && !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
       }
     }, {
       key: "Verification Gate with Claim Account",
       open: e => (0, d.openMemberVerificationModal)(L, null != e ? e : void 0),
       predicate: () => {
         var e;
-        return r && !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED
+        return r && !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED
       }
     }, {
       key: "Guild Welcome Modal",

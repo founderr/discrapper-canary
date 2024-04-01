@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("41776"),
   T = s("703656"),
   I = s("920440"),
-  R = s("601964"),
-  f = s("430824"),
+  f = s("601964"),
+  R = s("430824"),
   S = s("378720"),
   m = s("285952"),
   A = s("346656"),
@@ -69,7 +69,7 @@ class M extends i.PureComponent {
       pageSize: o
     } = this.props;
     if (t && s) return null;
-    let d = new R.default(e),
+    let d = new f.default(e),
       c = C.default.Messages.LURKER_MODE_VIEW_GUILD,
       _ = this.handleJoinOrView,
       E = u.Button.Looks.FILLED,
@@ -139,12 +139,12 @@ class M extends i.PureComponent {
     })
   }
 }
-t.default = (0, _.default)(o.default.connectStores([f.default, E.default], e => {
+t.default = (0, _.default)(o.default.connectStores([R.default, E.default], e => {
   let {
     guild: t
   } = e, s = E.default.isLurking(t.id);
   return {
-    isInGuild: null != f.default.getGuild(t.id) && !s,
+    isInGuild: null != R.default.getGuild(t.id) && !s,
     isLurking: s
   }
 })(M))

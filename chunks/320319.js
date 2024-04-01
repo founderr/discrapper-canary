@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("706140"),
   T = s("626135"),
   I = s("314684"),
-  R = s("715627"),
-  f = s("176782"),
+  f = s("715627"),
+  R = s("176782"),
   S = s("238108"),
   m = s("32173"),
   A = s("391110"),
@@ -36,7 +36,7 @@ let h = {
       name: t,
       canReveal: s = !0,
       dismissibleContentType: r,
-      forceShadow: f,
+      forceShadow: R,
       cardType: N,
       confettiCanvas: p
     } = e, v = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [D, b] = i.useState(!1), [U, j] = i.useState(!1), y = (0, I.useFreeBoostUserTenureReward)(), G = (0, I.useShouldShowConfettiAndGlow)(), [B, k] = i.useState(!1), [H, F] = i.useState(t === m.PerksDiscoverabilityCardTypes.FREE_BOOST && G && (null == y ? void 0 : y.nitroTenureStatus) === g.NitroRewardStatus.REDEEMABLE);
@@ -77,7 +77,7 @@ let h = {
       }), null != r && Y(O.ContentDismissActionType.TAKE_ACTION))
     }, [v, D, r, t, Y]), s) ? t === m.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
       className: n()(M.flipCardContainer, {
-        [M.forceShadow]: f
+        [M.forceShadow]: R
       }),
       onMouseEnter: Q,
       onFocus: Q,
@@ -109,13 +109,13 @@ let h = {
         className: n()({
           [M.noFlipCardContainer]: !K,
           [M.noFlipCardContainerCarousel]: K,
-          [M.forceShadow]: f,
+          [M.forceShadow]: R,
           [M.reducedMotion]: v
         }),
         children: [(0, a.jsx)(x, {
           ...e,
           ref: t === m.PerksDiscoverabilityCardTypes.FREE_BOOST ? q : void 0
-        }), H && (0, a.jsx)(R.default, {
+        }), H && (0, a.jsx)(f.default, {
           speedValues: h,
           numBursts: 3,
           particlesPerBurst: 15,
@@ -131,7 +131,7 @@ let h = {
       })
     }) : (0, a.jsx)("div", {
       className: n()(M.flipCardContainer, {
-        [M.forceShadow]: f
+        [M.forceShadow]: R
       }),
       children: (0, a.jsxs)(d.Clickable, {
         onClick: () => b(!0),
@@ -173,7 +173,7 @@ let h = {
       })
     }) : (0, a.jsx)(L, {
       ...W.upcomingDropUntimed,
-      forceShadow: f
+      forceShadow: R
     })
   });
 L.displayName = "PerkDiscoverabilityCard";
@@ -188,7 +188,7 @@ let x = i.forwardRef((e, t) => {
     isPremiumGetCta: _,
     onCtaClick: E,
     onMouseEnter: T,
-    className: R,
+    className: f,
     perkComponent: S,
     cardVariant: m,
     cardType: g,
@@ -200,9 +200,9 @@ let x = i.forwardRef((e, t) => {
   i.useEffect(() => {
     v && b(!0)
   }, [v]);
-  let U = (0, f.useCardVariantsInfo)(m);
+  let U = (0, R.useCardVariantsInfo)(m);
   return (0, a.jsxs)(d.Clickable, {
-    className: n()(M.card, R, !0 === D ? null === (s = U.cardContainer) || void 0 === s ? void 0 : s.className : void 0, {
+    className: n()(M.card, f, !0 === D ? null === (s = U.cardContainer) || void 0 === s ? void 0 : s.className : void 0, {
       [M.clickable]: null != C,
       [M.hideOverflow]: L
     }),

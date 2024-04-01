@@ -20,7 +20,7 @@ function c(e) {
     className: n,
     collapsibleContent: s,
     isExpanded: c
-  } = e, [E, I] = r.useState(!1), T = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), [f, S] = r.useState(!0), [A, h] = r.useState(!1), m = null != c ? c : E, {
+  } = e, [E, I] = r.useState(!1), T = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), [f, S] = r.useState(!0), [h, A] = r.useState(!1), m = null != c ? c : E, {
     ref: N,
     height: O = 0
   } = (0, u.default)(), {
@@ -30,7 +30,7 @@ function c(e) {
     height: m ? O + R : R,
     immediate: f || T,
     config: o.config.stiff,
-    onRest: () => h(!0)
+    onRest: () => A(!0)
   }), g = r.useCallback(() => {
     I(!E)
   }, [E, I]);
@@ -45,7 +45,7 @@ function c(e) {
     }, n),
     children: (0, i.jsxs)(o.animated.div, {
       className: a()(_.contentExpandContainer, {
-        [_.showOverflow]: m && A
+        [_.showOverflow]: m && h
       }),
       style: C,
       children: [(0, i.jsx)("div", {

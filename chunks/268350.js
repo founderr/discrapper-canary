@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return N
   },
   fetchStickerPack: function() {
-    return h
+    return A
   },
   fetchStickerPacks: function() {
     return m
@@ -49,8 +49,8 @@ var i = n("392711"),
   T = n("926491"),
   f = n("981631"),
   S = n("526761"),
-  A = n("689938");
-let h = async (e, t) => {
+  h = n("689938");
+let A = async (e, t) => {
   let {
     body: n
   } = await (0, I.httpGetWithCountryCodeQuery)(f.Endpoints.STICKER_PACK(e));
@@ -153,8 +153,8 @@ function D(e) {
 
 function v(e) {
   d.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = D(t.stickerIds), r().size(t.stickerIds) >= S.MAX_FAVORITES) ? (o.default.show({
-    title: A.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-    body: A.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
+    title: h.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+    body: h.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
       count: S.MAX_FAVORITES
     })
   }), !1) : !t.stickerIds.includes(e) && void t.stickerIds.push(e), S.UserSettingsDelay.INFREQUENT_USER_ACTION)

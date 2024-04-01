@@ -17,8 +17,8 @@ t.default = e => {
   var t;
   let s, i, {
       title: I,
-      titleClassName: R,
-      perkImage: f,
+      titleClassName: f,
+      perkImage: R,
       isCarousel: S,
       onCtaClick: m,
       perkComponent: A,
@@ -50,11 +50,11 @@ t.default = e => {
       title: I,
       shouldShowElement: e => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
       cardVariantStyleInfo: O,
-      titleClassName: R,
+      titleClassName: f,
       subtitle: N,
       subtitleClassName: C
-    }), null != f && (0, a.jsx)("img", {
-      src: f,
+    }), null != R && (0, a.jsx)("img", {
+      src: R,
       alt: "",
       className: r()({
         [c.cardImage]: !S,

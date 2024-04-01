@@ -16,8 +16,8 @@ var n = s("399606"),
   E = s("335131"),
   T = s("410154"),
   I = s("300284"),
-  R = s("131951"),
-  f = s("78839"),
+  f = s("131951"),
+  R = s("78839"),
   S = s("63063"),
   m = s("74538"),
   A = s("494127"),
@@ -60,11 +60,11 @@ let et = new Date("2024-05-07T03:59:00Z");
 t.default = () => {
   let {
     analyticsLocations: e
-  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = h.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([f.default], () => f.default.getPremiumTypeSubscription()), i = null != a ? m.default.getPremiumPlanItem(a) : null, es = (null != i ? m.default.getSkuIdForPlan(i.planId) : null) === O.PremiumSubscriptionSKUs.TIER_2, {
+  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = h.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([R.default], () => R.default.getPremiumTypeSubscription()), i = null != a ? m.default.getPremiumPlanItem(a) : null, es = (null != i ? m.default.getSkuIdForPlan(i.planId) : null) === O.PremiumSubscriptionSKUs.TIER_2, {
     flipped: ea
   } = (0, A.useWhatsNewAvatarDecoRollout)(), {
     flipped: ei
-  } = (0, A.useWhatsNewProfileFXRollout)(), er = (0, _.default)(R.default), en = (0, N.default)(), el = (0, I.default)({
+  } = (0, A.useWhatsNewProfileFXRollout)(), er = (0, _.default)(f.default), en = (0, N.default)(), el = (0, I.default)({
     scrollPosition: M.ProfileCustomizationScrollPositions.TRY_IT_OUT,
     analyticsLocations: e
   }), eo = () => {

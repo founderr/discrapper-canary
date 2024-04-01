@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   claimPremiumCollectiblesProduct: function() {
-    return A
+    return h
   },
   closeCollectiblesShop: function() {
     return c
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return m
   },
   validateCollectiblesRecipient: function() {
-    return h
+    return A
   }
 });
 var i = n("544891"),
@@ -125,7 +125,7 @@ let _ = e => {
         error: e
       }), new a.APIError(e)
     }
-  }, A = async e => {
+  }, h = async e => {
     r.default.dispatch({
       type: "COLLECTIBLES_CLAIM",
       skuId: e
@@ -150,7 +150,7 @@ let _ = e => {
         error: t
       }), new a.APIError(t)
     }
-  }, h = async (e, t) => {
+  }, A = async (e, t) => {
     try {
       return (await i.HTTP.get({
         url: d.Endpoints.COLLECTIBLES_VALID_GIFT_RECIPIENT,

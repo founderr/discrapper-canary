@@ -11,15 +11,15 @@ var i, r, s, a, o = n("392711"),
 let T = {},
   f = {},
   S = {},
-  A = {},
-  h = !1,
+  h = {},
+  A = !1,
   m = !1,
   N = new Set,
   O = new Set,
   p = {};
 
 function R(e) {
-  T[e.id] = _.default.createFromServer(e), null == S[e.sku_id] && (S[e.sku_id] = new Set), null == A[e.application_id] && (A[e.application_id] = new Set), null != e.subscription_id && (null == p[e.subscription_id] && (p[e.subscription_id] = new Set), p[e.subscription_id].add(e.id)), A[e.application_id].add(e.id), S[e.sku_id].add(e.id)
+  T[e.id] = _.default.createFromServer(e), null == S[e.sku_id] && (S[e.sku_id] = new Set), null == h[e.application_id] && (h[e.application_id] = new Set), null != e.subscription_id && (null == p[e.subscription_id] && (p[e.subscription_id] = new Set), p[e.subscription_id].add(e.id)), h[e.application_id].add(e.id), S[e.sku_id].add(e.id)
 }
 
 function C(e) {
@@ -40,7 +40,7 @@ class L extends(i = u.default.Store) {
     return l().values(f)
   }
   getForApplication(e) {
-    let t = A[e];
+    let t = h[e];
     if (null == t) return null;
     let n = new Set;
     for (let e of t) n.add(T[e]);
@@ -54,7 +54,7 @@ class L extends(i = u.default.Store) {
     return n
   }
   get fetchingAllEntitlements() {
-    return h
+    return A
   }
   get fetchedAllEntitlements() {
     return m
@@ -139,7 +139,7 @@ a = "EntitlementStore", (s = "displayName") in(r = L) ? Object.defineProperty(r,
   ENTITLEMENT_DELETE: function(e) {
     return function(e) {
       delete T[e.id];
-      let t = A[e.application_id];
+      let t = h[e.application_id];
       null != t && t.delete(e.id);
       let n = S[e.sku_id];
       if (null != n && n.delete(e.id), null != e.subscription_id) {
@@ -149,18 +149,18 @@ a = "EntitlementStore", (s = "displayName") in(r = L) ? Object.defineProperty(r,
     }(e.entitlement)
   },
   LOGOUT: function() {
-    T = {}, S = {}, A = {}, h = !1, m = !1, N = new Set, O = new Set
+    T = {}, S = {}, h = {}, A = !1, m = !1, N = new Set, O = new Set
   },
   ENTITLEMENTS_FETCH_FOR_USER_START: function() {
-    h = !0
+    A = !0
   },
   ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: function(e) {
     let {
       entitlements: t
     } = e;
-    for (let e of (m = !0, h = !1, t)) R(e)
+    for (let e of (m = !0, A = !1, t)) R(e)
   },
   ENTITLEMENTS_FETCH_FOR_USER_FAIL: function() {
-    m = !1, h = !1
+    m = !1, A = !1
   }
 })

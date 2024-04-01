@@ -19,8 +19,8 @@ var i = n("392711"),
   T = n("594174"),
   f = n("483360"),
   S = n("892880"),
-  A = n("591759"),
-  h = n("279779"),
+  h = n("591759"),
+  A = n("279779"),
   m = n("620490"),
   N = n("727785"),
   O = n("981631");
@@ -81,7 +81,7 @@ function C(e, t) {
 }
 class g {
   createSearchContext() {
-    null == this.userSearchContext && (this.userSearchContext = h.default.getSearchContext(this.parseUserResults, this._limit))
+    null == this.userSearchContext && (this.userSearchContext = A.default.getSearchContext(this.parseUserResults, this._limit))
   }
   setLimit(e) {
     let {
@@ -222,8 +222,8 @@ class g {
       pathname: r,
       hostname: s = "",
       host: o
-    } = n, l = A.default.isDiscordHostname(s) || window.location.host === o;
-    return null !== r && l && A.default.isAppRoute(r) ? [{
+    } = n, l = h.default.isDiscordHostname(s) || window.location.host === o;
+    return null !== r && l && h.default.isAppRoute(r) ? [{
       type: N.AutocompleterResultTypes.LINK,
       record: d.default.fromPath(r),
       score: 1

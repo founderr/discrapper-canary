@@ -22,8 +22,8 @@ async function S(e) {
       section: g,
       guildId: A = h.ME,
       channelId: N,
-      friendToken: R,
-      autoFocusNote: O,
+      friendToken: O,
+      autoFocusNote: R,
       analyticsLocation: v
     } = e,
     L = c.default.getUser(T),
@@ -41,9 +41,9 @@ async function S(e) {
     return t => (0, a.jsx)(e, {
       ...t,
       user: L,
-      autoFocusNote: O,
+      autoFocusNote: R,
       guildId: A,
-      friendToken: R,
+      friendToken: O,
       initialSection: g,
       channelId: N
     })

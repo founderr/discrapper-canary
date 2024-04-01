@@ -15,13 +15,13 @@ var i = n("392711"),
   T = n("815016"),
   f = n("725380"),
   S = n("340332"),
-  A = n("675478"),
-  h = n("65154");
+  h = n("675478"),
+  A = n("65154");
 let m = e => "AudioContextSettingsMigrated:".concat(e),
-  N = e => e === h.MediaEngineContextTypes.STREAM ? s.AudioSettingsDefaultVolumes.STREAM : s.AudioSettingsDefaultVolumes.USER;
+  N = e => e === A.MediaEngineContextTypes.STREAM ? s.AudioSettingsDefaultVolumes.STREAM : s.AudioSettingsDefaultVolumes.USER;
 
 function O() {
-  (0, T.shouldReadWriteAudioSettings)() && (o.Storage.get(m(c.default.getId())) || A.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
+  (0, T.shouldReadWriteAudioSettings)() && (o.Storage.get(m(c.default.getId())) || h.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
     let t = !1;
     for (let [n, i] of Object.entries(E.default.getState().settingsByContext)) {
       let r = (0, S.coerceAudioContextForProto)(n);
@@ -48,7 +48,7 @@ function O() {
       }
     }
     return o.Storage.set(m(c.default.getId()), !0), t
-  }, A.UserSettingsDelay.AUTOMATED))
+  }, h.UserSettingsDelay.AUTOMATED))
 }
 let p = r().debounce(() => {
     C()
@@ -58,7 +58,7 @@ let p = r().debounce(() => {
   });
 
 function C() {
-  A.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
+  h.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
     let t = !1;
     return (0, f.drainPendingAudioSettings)((n, i, r) => {
       let s = function(e, t, n, i) {
@@ -97,7 +97,7 @@ function C() {
       });
       t = t || s
     }), t
-  }, A.UserSettingsDelay.INFREQUENT_USER_ACTION)
+  }, h.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
 function g(e) {

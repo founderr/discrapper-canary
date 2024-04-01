@@ -44,11 +44,11 @@ t.default = e => {
         let n = e(t);
         s(n), null == a || a(n)
       },
-      A = c ? "pointerup" : "mouseup",
-      h = c ? "pointermove" : "mousemove",
+      h = c ? "pointerup" : "mouseup",
+      A = c ? "pointermove" : "mousemove",
       m = n.current.ownerDocument;
-    return m.addEventListener(A, S), m.addEventListener(h, o), () => {
-      m.removeEventListener(A, S), m.removeEventListener(h, o), t.cancel()
+    return m.addEventListener(h, S), m.addEventListener(A, o), () => {
+      m.removeEventListener(h, S), m.removeEventListener(A, o), t.cancel()
     }
   }, [E, s, r, i, _, n, d, a, c]), o.useCallback(e => {
     let t = 1 === u(_);

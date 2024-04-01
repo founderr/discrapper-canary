@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("496929"),
   T = s("558381"),
   I = s("410575"),
-  R = s("404133"),
-  f = s("224336"),
+  f = s("404133"),
+  R = s("224336"),
   S = s("730749"),
   m = s("666743"),
   A = s("115130"),
@@ -281,7 +281,7 @@ class eE extends i.PureComponent {
         children: ed.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
           name: s.name
         })
-      }), (0, a.jsx)(f.default, {}), (0, a.jsx)(Z.default, {
+      }), (0, a.jsx)(R.default, {}), (0, a.jsx)(Z.default, {
         applicationId: e.id,
         blurb: t.summary,
         description: r,
@@ -536,7 +536,7 @@ class eE extends i.PureComponent {
             className: n()(ec.headerPurchase, {
               [ec.active]: u
             }),
-            children: [null != t ? (0, C.default)(t) : null, null != e && null != t ? (0, a.jsx)(R.default, {
+            children: [null != t ? (0, C.default)(t) : null, null != e && null != t ? (0, a.jsx)(f.default, {
               wrapperClassName: ec.headerActionButton,
               applicationId: e.id,
               skuId: t.id,

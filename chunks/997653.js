@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   makeConnection: function() {
-    return A
+    return h
   }
 });
 var i = n("264344"),
@@ -96,7 +96,7 @@ class S extends o.default {
   }
 }
 
-function A(e, t, n, i) {
+function h(e, t, n, i) {
   let a = "".concat(null != r().name && "" !== r().name ? r().name : "unknown", " ").concat(null != r().version && "" !== r().version ? r().version : "unknown"),
     o = new s.Logger("Connection(".concat(e, ")"));
   return I.BROWSER_SUPPORTS_UNIFIED_PLAN ? (o.info("Using Unified Plan (".concat(a, ")")), new c.default(e, t, n, i)) : (o.info("Using Plan B (".concat(a, ")")), new S(e, t, n, i))

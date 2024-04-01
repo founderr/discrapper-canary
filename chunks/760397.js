@@ -31,14 +31,14 @@ function I(e, t) {
   }
 }
 
-function R(e) {
+function f(e) {
   return I("Thing", e)
 }
 
-function f(e) {
+function R(e) {
   return I("Product", e)
 }
-f.Image = function(e) {
+R.Image = function(e) {
   if (null == e) return null;
   let t = e.filter(e => null != e && "" !== e);
   return 0 === t.length ? null : 1 === t.length ? t[0] : t
@@ -66,13 +66,13 @@ class A extends(l = E.Component) {
     })
   }
 }
-T(A, "Thing", R), T(A, "Brand", R), T(A, "Person", function(e) {
+T(A, "Thing", f), T(A, "Brand", f), T(A, "Person", function(e) {
   return I("Person", e)
 }), T(A, "Organization", function(e) {
   return I("Organization", e)
 }), T(A, "ItemPage", function(e) {
   return I("ItemPage", e)
-}), T(A, "Product", f), T(A, "Offer", S), T(A, "Rating", function(e) {
+}), T(A, "Product", R), T(A, "Offer", S), T(A, "Rating", function(e) {
   return I("Rating", e)
 }), T(A, "AggregateRating", function(e) {
   return I("AggregateRating", e)

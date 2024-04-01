@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("20967"),
   A = n("504762"),
   N = n("807152"),
-  R = n("176505"),
-  O = n("689938"),
+  O = n("176505"),
+  R = n("689938"),
   v = n("966815");
 
 function L(e) {
@@ -38,14 +38,14 @@ function L(e) {
     restrictionsLoading: b
   } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !D || y || b;
   (0, d.usePageTitle)({
-    subsection: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
+    subsection: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == n ? void 0 : n.name
   }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
   let j = L && (null == n || !(P || M) || x && !b);
   if (s.useEffect(() => {
       o.fetchSubscriptions()
     }, []), s.useEffect(() => {
-      j && !l.isMobile && (0, c.handleInaccessiblePage)(t, R.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
+      j && !l.isMobile && (0, c.handleInaccessiblePage)(t, O.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
     }, [t, j]), l.isMobile && j) {
     let e = null == n ? g.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : g.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
     return (0, a.jsx)(g.GuildRoleSubscriptionsOverviewErrorPage, {
@@ -61,7 +61,7 @@ function L(e) {
         icon: p.default,
         "aria-hidden": !0
       }), (0, a.jsx)(_.default.Title, {
-        children: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+        children: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
       })]
     }), (0, a.jsx)("div", {
       id: N.OVERVIEW_NOTICE_ROOT

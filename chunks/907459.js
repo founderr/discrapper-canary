@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("639119"),
   f = n("197115"),
   S = n("587446"),
-  A = n("594174"),
-  h = n("696202"),
+  h = n("594174"),
+  A = n("696202"),
   m = n("626135"),
   N = n("74538"),
   O = n("327943"),
@@ -37,7 +37,7 @@ let v = () => {
   },
   M = () => {
     var e, t, n;
-    let r = (0, o.useStateFromStores)([A.default], () => N.default.isPremium(A.default.getCurrentUser())),
+    let r = (0, o.useStateFromStores)([h.default], () => N.default.isPremium(h.default.getCurrentUser())),
       s = (0, T.usePremiumTrialOffer)(),
       a = (null == s ? void 0 : null === (e = s.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === g.PremiumSubscriptionSKUs.TIER_2;
     return (0, i.jsx)(f.default, {
@@ -60,7 +60,7 @@ let v = () => {
       children: [(0, i.jsx)(l.Clickable, {
         className: D.closeCircleButton,
         onClick: () => n(),
-        children: (0, i.jsx)(h.default, {
+        children: (0, i.jsx)(A.default, {
           className: D.closeCircle
         })
       }), (0, i.jsxs)("div", {
@@ -99,7 +99,7 @@ function U(e) {
     markAsDismissed: n
   } = e, {
     analyticsLocations: s
-  } = (0, I.default)(E.default.APP_ICON_EDITOR), u = (0, o.useStateFromStores)([A.default], () => A.default.getCurrentUser()), {
+  } = (0, I.default)(E.default.APP_ICON_EDITOR), u = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), {
     isUpsellPreview: d,
     isEditorOpen: T,
     shouldEditorAnimate: f

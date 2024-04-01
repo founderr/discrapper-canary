@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("559629"),
   f = n("709586"),
   S = n("74538"),
-  A = n("678558"),
-  h = n("981631"),
+  h = n("678558"),
+  A = n("981631"),
   m = n("474936"),
   N = n("689938"),
   O = n("999150");
@@ -71,16 +71,16 @@ t.default = function(e) {
         threshold: .9,
         children: (0, i.jsx)("div", {
           className: a()(O.guildBoostCta, O.guildBoostCtaBoostWrapper),
-          children: (0, i.jsx)(A.default, {
+          children: (0, i.jsx)(h.default, {
             className: O.guildBoostCtaBoost,
             innerClassName: a()(O.__invalid_guildBoostCtaContent, O.guildBoostCtaBoostContent),
             buttonShineClassName: O.guildBoostCtaBoostShine,
             guild: n,
             analyticsLocation: {
-              page: h.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-              section: h.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-              object: h.AnalyticsObjects.BUTTON_CTA,
-              objectType: h.AnalyticsObjectTypes.BUY
+              page: A.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+              section: A.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+              object: A.AnalyticsObjects.BUTTON_CTA,
+              objectType: A.AnalyticsObjectTypes.BUY
             },
             closeLayer: t,
             color: u.Button.Colors.WHITE,
@@ -100,10 +100,10 @@ t.default = function(e) {
             isGift: !0,
             analyticsLocations: C,
             analyticsObject: {
-              page: h.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-              section: h.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-              object: h.AnalyticsObjects.BUTTON_ICON,
-              objectType: h.AnalyticsObjectTypes.GIFT
+              page: A.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+              section: A.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+              object: A.AnalyticsObjects.BUTTON_ICON,
+              objectType: A.AnalyticsObjectTypes.GIFT
             },
             onClose: e => e && t()
           })
@@ -123,10 +123,10 @@ t.default = function(e) {
             subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
             analyticsLocations: C,
             analyticsObject: {
-              page: h.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-              section: h.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-              object: h.AnalyticsObjects.BUTTON_ICON,
-              objectType: h.AnalyticsObjectTypes.BUY
+              page: A.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+              section: A.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+              object: A.AnalyticsObjects.BUTTON_ICON,
+              objectType: A.AnalyticsObjectTypes.BUY
             },
             onClose: e => e && t()
           })

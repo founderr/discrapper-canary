@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("447269"),
   T = s("612226"),
   I = s("714338"),
-  R = s("663993"),
-  f = s("628123"),
+  f = s("663993"),
+  R = s("628123"),
   S = s("703656"),
   m = s("108427"),
   A = s("911314"),
@@ -36,7 +36,7 @@ function P(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let M = (0, R.makeLazy)({
+let M = (0, f.makeLazy)({
   createPromise: () => Promise.all([s.e("49237"), s.e("73206"), s.e("32886")]).then(s.bind(s, "496691")),
   webpackId: "496691"
 });
@@ -75,7 +75,7 @@ class L extends i.PureComponent {
       location: t,
       render: this.renderContent
     });
-    return (0, a.jsx)(f.default, {
+    return (0, a.jsx)(R.default, {
       renderCustomMessage: this.renderCustomErrorMessage,
       children: s
     })

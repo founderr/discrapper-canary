@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return p
   },
   getGameLogotypeAssetUrl: function() {
-    return A
+    return h
   },
   getGameTileAssetUrl: function() {
     return S
@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return m
   },
   getQuestUrl: function() {
-    return h
+    return A
   },
   getQuestsFromActivities: function() {
     return D
@@ -159,8 +159,8 @@ let I = e => "".concat(l).concat(e.id, "/").concat(e.config.assets.rewardTile),
   T = e => "".concat(l).concat(e.id, "/").concat(e.config.assets.hero),
   f = e => "".concat(l).concat(e.id, "/").concat(e.config.assets.questBarHero),
   S = e => "".concat(l).concat(e.id, "/").concat(e.config.assets.gameTile),
-  A = (e, t) => "".concat(l).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype),
-  h = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
+  h = (e, t) => "".concat(l).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype),
+  A = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
 function m(e, t) {
   for (let [n, i] of e)

@@ -73,8 +73,8 @@ var a, s = n("729594"),
   g = n("70956"),
   A = n("5192"),
   N = n("226951"),
-  R = n("996106"),
-  O = n("863141"),
+  O = n("996106"),
+  R = n("863141"),
   v = n("186901"),
   L = n("981631");
 let P = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
@@ -179,7 +179,7 @@ function k(e, t, n) {
       self_deaf: i,
       suppress: r
     },
-    user: (0, O.default)(u)
+    user: (0, R.default)(u)
   }
 }
 
@@ -187,7 +187,7 @@ function F(e, t, n) {
   let a = p.default.getUser(t);
   return {
     type: e,
-    user: null != a ? (0, O.default)(a) : null,
+    user: null != a ? (0, R.default)(a) : null,
     presence: {
       status: I.default.getStatus(t),
       activity: null != n ? I.default.getApplicationActivity(t, n) : I.default.getPrimaryActivity(t)
@@ -259,10 +259,10 @@ function K(e, t, n) {
     if ("string" == typeof n) {
       if (e.transport === v.TransportTypes.POST_MESSAGE) {
         let e = (0, u.default)(t);
-        if (null == e || !j(n, [e])) throw new R.default({
+        if (null == e || !j(n, [e])) throw new O.default({
           closeCode: L.RPCCloseCodes.INVALID_ORIGIN
         }, "Invalid Origin")
-      } else if (!j(n, s)) throw new R.default({
+      } else if (!j(n, s)) throw new O.default({
         closeCode: L.RPCCloseCodes.INVALID_ORIGIN
       }, "Invalid Origin")
     }
@@ -274,7 +274,7 @@ function K(e, t, n) {
       flags: d
     }
   }, () => {
-    throw new R.default({
+    throw new O.default({
       closeCode: L.RPCCloseCodes.INVALID_CLIENTID
     }, "Invalid Client ID")
   })
@@ -339,13 +339,13 @@ function Z(e, t) {
 }
 
 function X(e) {
-  if (e !== v.TransportTypes.POST_MESSAGE) throw new R.default({
+  if (e !== v.TransportTypes.POST_MESSAGE) throw new O.default({
     errorCode: L.RPCErrors.INVALID_COMMAND
   }, 'command not available from "'.concat(e, " transport"))
 }
 
 function J(e) {
-  if (null == e.id) throw new R.default({
+  if (null == e.id) throw new O.default({
     errorCode: L.RPCErrors.INVALID_COMMAND
   }, "Invalid application");
   return e.id

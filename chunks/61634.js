@@ -30,9 +30,9 @@ var l = n("470079"),
   v = n("510601"),
   x = n("901621"),
   R = n("981631");
-let O = [];
+let y = [];
 
-function y(e, t) {
+function O(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : I.default;
   return null != e && e.type !== i.ChannelTypes.GUILD_STAGE_VOICE && t !== e.id && n.canBasicChannel(R.BasicPermissions.VIEW_CHANNEL, e)
 }
@@ -56,9 +56,9 @@ function M(e) {
         return null == t || t > 1e3
       }),
       c = (0, r.useStateFromStoresObject)([A.default], () => {
-        if (!i || t || d) return O;
+        if (!i || t || d) return y;
         let n = Object.keys(A.default.getVoiceStates(e));
-        return 0 === n.length ? O : n.slice(0, 50)
+        return 0 === n.length ? y : n.slice(0, 50)
       }, [e, t, d, i]);
     l.useEffect(() => {
       ! function(e, t, n, l, a) {
@@ -92,7 +92,7 @@ function M(e) {
         r = (() => {
           if (n) return !1;
           for (let e in i)
-            if (y(E.default.getBasicChannel(i[e].channelId), null != a ? a : void 0, I.default)) return !0;
+            if (O(E.default.getBasicChannel(i[e].channelId), null != a ? a : void 0, I.default)) return !0;
           return !1
         })();
       return {
@@ -100,7 +100,7 @@ function M(e) {
         guildHasVideo: (() => {
           if (n) return !1;
           for (let e of s)
-            if (y(E.default.getBasicChannel(i[e].channelId), null != a ? a : void 0, I.default)) return !0;
+            if (O(E.default.getBasicChannel(i[e].channelId), null != a ? a : void 0, I.default)) return !0;
           return !1
         })(),
         selectedVoiceChannelHasVideo: null != l && A.default.hasVideo(l)
@@ -134,8 +134,8 @@ function M(e) {
       A = o && null !== (s = null === (l = E.default.getChannel(r)) || void 0 === l ? void 0 : l.isGuildStageVoice()) && void 0 !== s && s,
       v = !!o && null != m.default.getActiveStreamForUser(G, e),
       x = m.default.getAllApplicationStreams().some(t => t.guildId === e),
-      O = o && j,
-      y = (() => {
+      y = o && j,
+      O = (() => {
         if (M) return R.length > 0;
         for (let e of R) {
           let t = E.default.getChannel(e.channelId);
@@ -144,7 +144,7 @@ function M(e) {
         return !1
       })(),
       U = c.default.getEmbeddedActivitiesForGuild(e).length > 0;
-    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = O, S = v, _ = U) : (u = D, d = null != a, f = T, g = b, S = x, _ = y), {
+    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = y, S = v, _ = U) : (u = D, d = null != a, f = T, g = b, S = x, _ = O), {
       audio: u,
       video: g,
       screenshare: S,

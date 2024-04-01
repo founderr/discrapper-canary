@@ -33,21 +33,21 @@ function R(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let O = {
+let y = {
   friction: 28,
   tension: 600
 };
 
-function y(e) {
+function O(e) {
   switch (e) {
     case "height":
     case "opacity":
       return {
-        duration: 150, ...O
+        duration: 150, ...y
       };
     case "scale":
       return {
-        ...O
+        ...y
       };
     default:
       throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)))
@@ -63,7 +63,7 @@ class M extends(l = s.PureComponent) {
       height: 1,
       opacity: 1,
       scale: 1,
-      config: y
+      config: O
     }).start().then(() => this.setState({
       animating: !1
     }))
@@ -77,7 +77,7 @@ class M extends(l = s.PureComponent) {
       scale: 1,
       opacity: 1,
       height: 1,
-      config: y
+      config: O
     }).start().then(e)
   }
   componentWillLeave(e) {
@@ -91,7 +91,7 @@ class M extends(l = s.PureComponent) {
       height: 0,
       opacity: 0,
       scale: 0,
-      config: y
+      config: O
     }).start().then(e))
   }
   componentWillUnmount() {
@@ -183,7 +183,7 @@ class M extends(l = s.PureComponent) {
         scale: 0,
         height: 0,
         opacity: 0,
-        config: y
+        config: O
       })
     }), R(this, "handleContextMenu", e => {
       let {

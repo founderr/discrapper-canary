@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   },
   useShouldShowPTONotice: function() {
-    return h
+    return A
   }
 }), n("47120");
 var i, r = n("735250");
@@ -41,14 +41,14 @@ class S extends(i = s.default.PersistedStore) {
   }
 }
 T(S, "displayName", "PTOStore"), T(S, "persistKey", "PTOStore");
-let A = new S(o.default, {}),
-  h = e => (0, s.useStateFromStores)([u.default, _.default, A], () => {
+let h = new S(o.default, {}),
+  A = e => (0, s.useStateFromStores)([u.default, _.default, h], () => {
     let t = _.default.getCurrentUser();
     if (null == t || !t.isStaff() || !e.isDM()) return !1;
     let n = _.default.getUser(e.getRecipientId());
     if (!(null == n ? void 0 : n.isStaff())) return !1;
     let i = u.default.getNicknames(n.id).some(e => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
-    return i ? !A.hasId(n.id) && i : (f.delete(n.id) && A.emitChange(), !1)
+    return i ? !h.hasId(n.id) && i : (f.delete(n.id) && h.emitChange(), !1)
   }),
   m = () => (0, r.jsxs)("div", {
     className: I.bar,
@@ -58,7 +58,7 @@ let A = new S(o.default, {}),
         let e = d.default.getChannelId();
         if (null == e) return;
         let t = l.default.getChannel(e);
-        null != t && t.isPrivate() && !f.has(t.getRecipientId()) && (f.add(t.getRecipientId()), A.emitChange())
+        null != t && t.isPrivate() && !f.has(t.getRecipientId()) && (f.add(t.getRecipientId()), h.emitChange())
       },
       children: (0, r.jsx)(c.default, {
         className: I.closeIcon

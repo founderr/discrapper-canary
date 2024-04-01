@@ -11,8 +11,8 @@ var i, r, s, a, o = n("956067"),
   T = n("93093"),
   f = n("430824"),
   S = n("70956"),
-  A = n("373228"),
-  h = n("378233");
+  h = n("373228"),
+  A = n("378233");
 let m = 2,
   N = new Map,
   O = new Map,
@@ -45,29 +45,29 @@ let m = 2,
     let {
       tags: n
     } = e, i = {
-      type: A.StickerMetadataTypes.STICKER_NAME,
+      type: h.StickerMetadataTypes.STICKER_NAME,
       value: e.name.trim().toLocaleLowerCase()
     };
-    if ((0, h.isStandardSticker)(e)) {
+    if ((0, A.isStandardSticker)(e)) {
       let t = R.find(t => t.id === e.pack_id),
         r = [i, ...(null != n ? n : "").split(",").map(e => ({
-          type: A.StickerMetadataTypes.TAG,
+          type: h.StickerMetadataTypes.TAG,
           value: e.trim().toLocaleLowerCase()
         }))];
       null != t && r.push({
-        type: A.StickerMetadataTypes.PACK_NAME,
+        type: h.StickerMetadataTypes.PACK_NAME,
         value: t.name
       }), p.set(e.id, r)
-    } else if ((0, h.isGuildSticker)(e) && null != n) {
+    } else if ((0, A.isGuildSticker)(e) && null != n) {
       let r = E.default.getByName(n),
         s = [i, {
-          type: A.StickerMetadataTypes.TAG,
+          type: h.StickerMetadataTypes.TAG,
           value: n.trim().toLocaleLowerCase()
         }];
       if (null != t) {
         let e = t.name.trim().toLocaleLowerCase();
         null != e && "" !== e && s.push({
-          type: A.StickerMetadataTypes.GUILD_NAME,
+          type: h.StickerMetadataTypes.GUILD_NAME,
           value: e
         })
       }
@@ -76,10 +76,10 @@ let m = 2,
         return
       }
       s.push({
-        type: A.StickerMetadataTypes.CORRELATED_EMOJI,
+        type: h.StickerMetadataTypes.CORRELATED_EMOJI,
         value: r.surrogates
       }), r.forEachDiversity(e => s.push({
-        type: A.StickerMetadataTypes.CORRELATED_EMOJI,
+        type: h.StickerMetadataTypes.CORRELATED_EMOJI,
         value: e.surrogates
       })), p.set(e.id, s)
     }
@@ -224,7 +224,7 @@ a = "StickersStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s,
     } = e, r = e => {
       let t;
       let n = O.get(e.id);
-      return null != n && (0, h.isGuildSticker)(n) && (t = null != n.user ? n.user : void 0), {
+      return null != n && (0, A.isGuildSticker)(n) && (t = null != n.user ? n.user : void 0), {
         ...e,
         user: t
       }

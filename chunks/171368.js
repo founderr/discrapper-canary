@@ -26,11 +26,11 @@ function u(e) {
     autoFocusNote: I,
     analyticsLocation: T,
     sourceAnalyticsLocations: f
-  } = e, S = s.default.getUser(t), A = u !== l.ME ? u : void 0, h = (0, a.isInProfileMutualsExperiment)().enabled;
+  } = e, S = s.default.getUser(t), h = u !== l.ME ? u : void 0, A = (0, a.isInProfileMutualsExperiment)().enabled;
   if (null == S) return (0, r.fetchProfile)(t, {
     friendToken: E,
-    guildId: A,
-    withMutualFriends: h,
+    guildId: h,
+    withMutualFriends: A,
     withMutualGuilds: !0
   }).then(() => {
     i.default.dispatch({
@@ -50,7 +50,7 @@ function u(e) {
   (0, o.maybeFetchUserProfileForPopout)(S, {
     withMutualGuilds: !0,
     friendToken: E,
-    guildId: A
+    guildId: h
   }), i.default.dispatch({
     type: "USER_PROFILE_MODAL_OPEN",
     userId: t,

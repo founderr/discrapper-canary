@@ -23,8 +23,8 @@ var l, a, s, i = n("735250"),
   v = n("55589"),
   x = n("153124"),
   R = n("908773"),
-  O = n("151827"),
-  y = n("515753"),
+  y = n("151827"),
+  O = n("515753"),
   M = n("981631"),
   D = n("689938"),
   b = n("82545");
@@ -304,7 +304,7 @@ class U extends(a = r.Component) {
         totalRowCount: s,
         preRenderedChildren: r
       } = this.state, o = l[n[t]];
-      return null == o ? null : (0, i.jsx)(y.default, {
+      return null == o ? null : (0, i.jsx)(O.default, {
         channel: o,
         selected: o.id === a,
         "aria-posinset": r + t + 1,
@@ -333,7 +333,7 @@ class U extends(a = r.Component) {
       } = e, {
         showDMHeader: n
       } = this.props;
-      return 0 !== t && n ? (0, i.jsxs)(O.default, {
+      return 0 !== t && n ? (0, i.jsxs)(y.default, {
         className: b.privateChannelsHeaderContainer,
         children: [(0, i.jsx)("span", {
           className: b.headerText,

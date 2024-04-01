@@ -41,7 +41,7 @@ let h = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack(
       n = r.default.isConnected();
     S.push([e, t * (n ? .1 : 1)]), g()
   };
-class R extends s.default {
+class O extends s.default {
   _initialize() {
     f.default.addChangeListener(this.startAudio), a.default.subscribe("RTC_CONNECTION_STATE", this.setVolume), a.default.subscribe("TYPING_STOP", this.stopAudio), a.default.subscribe("TYPING_STOP_LOCAL", this.stopAudio), a.default.subscribe("CHANNEL_SELECT", this.stopAudio), a.default.subscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio)
   }
@@ -78,4 +78,4 @@ class R extends s.default {
     T() && N("poggermode_achievement_unlock")
   }
 }
-t.default = new R
+t.default = new O

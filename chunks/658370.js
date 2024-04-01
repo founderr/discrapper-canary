@@ -14,13 +14,13 @@ var i = s("803997"),
   E = s("409100"),
   T = s("474936"),
   I = s("689938"),
-  R = s("622481");
+  f = s("622481");
 t.default = e => {
   var t;
   let s;
   let {
     title: i,
-    titleClassName: f = "",
+    titleClassName: R = "",
     subtitle: S = "",
     description: m = "",
     descriptionCta: A = "",
@@ -40,11 +40,11 @@ t.default = e => {
     })
   }), L = (0, c.useCardVariantsInfo)(g);
   return (0, a.jsxs)("div", {
-    className: r()(R.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
+    className: r()(f.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
     children: [(0, a.jsx)(_.default, {
       title: i,
       cardVariantStyleInfo: L,
-      titleClassName: f,
+      titleClassName: R,
       subtitle: S,
       description: m
     }), N && (0, a.jsx)(E.default, {

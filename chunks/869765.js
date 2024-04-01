@@ -26,8 +26,8 @@ function f(e, t, n) {
 let S = Object.freeze({
     state: 1
   }),
-  A = new Set;
-class h {
+  h = new Set;
+class A {
   handleCacheDisposed(e, t) {
     this._cachedMessageIds.has(e) && (this._cachedMessageIds = new Set(this._cachedMessageIds), this._cachedMessageIds.delete(e))
   }
@@ -61,7 +61,7 @@ let m = new class e {
   }
   set(e, t, n) {
     let i = this._channelCaches.get(e);
-    null == i && (i = new h, this._channelCaches.set(e, i)), i.set(t, n)
+    null == i && (i = new A, this._channelCaches.set(e, i)), i.set(t, n)
   }
   updateExistingMessageIfCached(e) {
     let t = this._channelCaches.get(e.channel_id);
@@ -173,7 +173,7 @@ class v extends(r = l.default.Store) {
   }
   getReplyIdsForChannel(e) {
     let t;
-    return null != e && (t = m.getCachedMessageIdsForChannel(e)), null != t ? t : A
+    return null != e && (t = m.getCachedMessageIdsForChannel(e)), null != t ? t : h
   }
 }
 f(v, "displayName", "ReferencedMessageStore"), t.default = new v(u.default, {

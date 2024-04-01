@@ -23,8 +23,8 @@ function f(e, t, n) {
   }) : e[t] = n, e
 }
 let S = null,
-  A = null;
-class h extends i.default {
+  h = null;
+class A extends i.default {
   constructor(...e) {
     super(...e), f(this, "actions", {
       GUILD_DELETE: e => this.handleGuildDelete(e),
@@ -38,8 +38,8 @@ class h extends i.default {
         guildId: t,
         channelId: n
       } = e;
-      if (S === t && A === n) return;
-      if (S = null != t ? t : null, A = null != n ? n : null, null == S || null == A) return;
+      if (S === t && h === n) return;
+      if (S = null != t ? t : null, h = null != n ? n : null, null == S || null == h) return;
       let i = a.default.getGuild(t);
       null != i && i.hasFeature(E.GuildFeatures.COMMUNITY) && _.default.shouldFetchPrompts(S, 8 * l.default.Millis.HOUR) && (0, d.loadOnboardingPrompts)(S), this._openOnboardingIfIncomplete(S, n)
     }), f(this, "handleGuildDelete", e => {
@@ -62,4 +62,4 @@ class h extends i.default {
     })
   }
 }
-t.default = new h
+t.default = new A

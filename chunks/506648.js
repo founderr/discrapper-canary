@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("964309"),
   T = s("38761"),
   I = s("6074"),
-  R = s("39377"),
-  f = s("417622"),
+  f = s("39377"),
+  R = s("417622"),
   S = s("981631"),
   m = s("689938"),
   A = s("866887");
@@ -52,7 +52,7 @@ let N = [{
     feature: S.SKUFeatureTypes.CROSS_PLATFORM,
     getText: () => m.default.Messages.APPLICATION_STORE_CROSS_PLATFORM,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_CROSS_PLATFORM_TOOLTIP,
-    IconComponent: f.default
+    IconComponent: R.default
   }, {
     feature: S.SKUFeatureTypes.RICH_PRESENCE,
     getText: () => m.default.Messages.APPLICATION_STORE_RICH_PRESENCE,
@@ -82,7 +82,7 @@ let N = [{
     feature: S.SKUFeatureTypes.SECURE_NETWORKING,
     getText: () => m.default.Messages.APPLICATION_STORE_SECURE_NETWORKING,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_SECURE_NETWORKING_TOOLTIP,
-    IconComponent: R.default
+    IconComponent: f.default
   }],
   p = e => {
     let {

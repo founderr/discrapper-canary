@@ -34,8 +34,8 @@ function I(e) {
     guildId: T,
     reviewWarningMessage: f,
     applicationId: S,
-    showBenefitsFirst: A,
-    eligibleApplicationSubscriptionGuilds: h,
+    showBenefitsFirst: h,
+    eligibleApplicationSubscriptionGuilds: A,
     onComplete: m,
     forcesTransitionToGuild: N
   } = e;
@@ -46,8 +46,8 @@ function I(e) {
       getApplicationPaymentSteps: E
     } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("58625"), n.e("14720"), n.e("63438"), n.e("62511"), n.e("61247"), n.e("58600"), n.e("95900"), n.e("89890")]).then(n.bind(n, "759386")), O = E({
       guildId: T,
-      showBenefitsFirst: A,
-      eligibleApplicationSubscriptionGuilds: h
+      showBenefitsFirst: h,
+      eligibleApplicationSubscriptionGuilds: A
     });
     return n => (0, i.jsx)(e, {
       applicationId: S,

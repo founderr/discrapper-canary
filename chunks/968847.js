@@ -32,9 +32,9 @@ let v = {
     bottomBar: v
   },
   R = {},
-  O = {};
+  y = {};
 
-function y(e) {
+function O(e) {
   let t = g.default.getChannel(e);
   return !(null == t || null == t.getGuildId() || t.isGuildVocal()) && !(t.isThread() ? m.default.isMuted(t.id) : I.default.isChannelMuted(t.getGuildId(), t.id)) && (0, h.getHasImportantUnread)(t)
 }
@@ -57,7 +57,7 @@ function b(e) {
   var t, n, l;
   let {
     guildChannels: a
-  } = A.default.getGuildWithoutChangingCommunityRows(e), s = a.getChannels(null !== (t = O[e]) && void 0 !== t ? t : []);
+  } = A.default.getGuildWithoutChangingCommunityRows(e), s = a.getChannels(null !== (t = y[e]) && void 0 !== t ? t : []);
   if (null == s || 0 === s.length) return !1;
   let i = null,
     r = null,
@@ -71,7 +71,7 @@ function b(e) {
     [m, g, E] = a.getSlicedChannels(s);
   for (let e = 0; e < g.length; e++) {
     let t = g[e];
-    if ((y(t.id) || d().some(t.threadIds, y)) && (f = !1), (M(t.id) || d().some(t.threadIds, M)) && (c = !1), C.includes(t.id) && (h = !0), !f && !c && h) break
+    if ((O(t.id) || d().some(t.threadIds, O)) && (f = !1), (M(t.id) || d().some(t.threadIds, M)) && (c = !1), C.includes(t.id) && (h = !0), !f && !c && h) break
   }
   let _ = 0,
     I = !1,
@@ -80,13 +80,13 @@ function b(e) {
   if (f || c)
     for (let e = m.length - 1; e >= 0; e--) {
       let t = m[e];
-      (y(t.id) || d().some(t.threadIds, y)) && (null == r && (r = t.id), I = !0), (M(t.id) || d().some(t.threadIds, M)) && (null == i && (i = t.id), _ += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
+      (O(t.id) || d().some(t.threadIds, O)) && (null == r && (r = t.id), I = !0), (M(t.id) || d().some(t.threadIds, M)) && (null == i && (i = t.id), _ += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
     }
   if (f || c)
     for (let e = 0; e < E.length; e++) {
       let t = E[e];
       if (!f && !c) break;
-      (y(t.id) || d().some(t.threadIds, y)) && (null == u && (u = t.id), T = !0), (M(t.id) || d().some(t.threadIds, M)) && (null == o && (o = t.id), N += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
+      (O(t.id) || d().some(t.threadIds, O)) && (null == u && (u = t.id), T = !0), (M(t.id) || d().some(t.threadIds, M)) && (null == o && (o = t.id), N += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
     }
   let L = null,
     x = null,
@@ -181,7 +181,7 @@ o = "ChannelListUnreadsStore", (r = "displayName") in(i = B) ? Object.defineProp
       guildId: t,
       channelIds: n
     } = e, l = E.default.getGuild(t);
-    return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && null != n && !d().isEqual(O[t], n) && (O[t] = n, b(t))
+    return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && null != n && !d().isEqual(y[t], n) && (y[t] = n, b(t))
   },
   BULK_ACK: function(e) {
     let {
