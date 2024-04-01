@@ -34,7 +34,7 @@ let A = [p.ClanSetupSteps.GAMES, p.ClanSetupSteps.PLAYSTYLE, p.ClanSetupSteps.IN
       onLastStep: E
     } = e, h = t === A.length, _ = s.useMemo(() => ({
       [p.ClanSetupSteps.GAMES]: {
-        disableNextStep: 0 === Object.keys(l).length
+        disableNextStep: 0 === l.size
       },
       [p.ClanSetupSteps.PLAYSTYLE]: {
         disableNextStep: r === p.ClanPlaystyles.NONE
@@ -51,7 +51,7 @@ let A = [p.ClanSetupSteps.GAMES, p.ClanSetupSteps.PLAYSTYLE, p.ClanSetupSteps.IN
       [p.ClanSetupSteps.CUSTOMIZE]: {
         disableNextStep: 0 === c.length
       }
-    }), [d.length, u.size, r, f, l, c.length]);
+    }), [d.length, u.size, r, f, l.size, c.length]);
     return (0, a.jsxs)("div", {
       className: g.footer,
       children: [(0, a.jsx)("div", {

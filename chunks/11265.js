@@ -17,55 +17,56 @@ t.default = l.memo(function(e) {
     children: i,
     isExpanded: n,
     isStuck: E,
-    onExpand: I
-  } = e, x = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [h, T] = l.useState(!0), [M, F] = l.useState(!1), {
-    ref: _,
-    height: v = 0
+    onExpand: I,
+    disableAnimation: x
+  } = e, h = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [T, M] = l.useState(!0), [F, _] = l.useState(!1), {
+    ref: v,
+    height: R = 0
   } = (0, c.default)(), {
-    ref: R,
-    height: p = 0
-  } = (0, c.default)(), [C, N] = l.useState(n), g = (0, r.useSpring)({
-    height: C ? p + v : v,
-    immediate: h || x,
+    ref: p,
+    height: C = 0
+  } = (0, c.default)(), [N, g] = l.useState(n), j = (0, r.useSpring)({
+    height: N ? C + R : R,
+    immediate: T || h || x,
     config: {
       ...r.config.stiff,
       clamp: !0
     },
     onStart: () => {
-      F(!1)
+      _(!1)
     },
     onRest: () => {
-      F(!0)
+      _(!0)
     }
   });
   l.useLayoutEffect(() => {
-    F(!1), N(n)
+    _(!1), g(n)
   }, [n]);
-  let [j, L] = l.useState(!1), y = () => {
-    L(!1)
+  let [L, y] = l.useState(!1), A = () => {
+    y(!1)
   };
   return l.useLayoutEffect(() => {
     let e = setTimeout(() => {
-      T(!1)
+      M(!1)
     }, 100);
     return () => clearTimeout(e)
   }, []), (0, a.jsx)(d.Clickable, {
     className: s()(m.editCard, {
       [m.toggled]: n,
-      [m.active]: j
+      [m.active]: L
     }),
-    onMouseLeave: y,
+    onMouseLeave: A,
     onMouseDown: () => {
-      L(!0)
+      y(!0)
     },
-    onMouseUp: y,
+    onMouseUp: A,
     children: (0, a.jsxs)(r.animated.div, {
       className: s()(m.contentExpandContainer, {
-        [m.showOverflow]: n && M
+        [m.showOverflow]: n && F
       }),
-      style: g,
+      style: j,
       children: [(0, a.jsx)(d.Clickable, {
-        innerRef: _,
+        innerRef: v,
         onClick: E ? void 0 : I,
         className: s()(m.innerHeader, {
           [m.toggled]: n && E
@@ -73,7 +74,7 @@ t.default = l.memo(function(e) {
         "aria-label": f.default.Messages.EXPAND,
         children: t
       }), (0, a.jsx)("div", {
-        ref: R,
+        ref: p,
         children: i
       })]
     })

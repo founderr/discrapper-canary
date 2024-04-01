@@ -23,7 +23,7 @@ async function o(e, t) {
       description: t.description,
       play_style: t.playstyle,
       search_terms: Array.from(null !== (l = t.interests) && void 0 !== l ? l : new Set),
-      game_application_ids: Object.keys(null !== (o = t.selectedGames) && void 0 !== o ? o : {}),
+      game_application_ids: Array.from((null !== (o = t.selectedGames) && void 0 !== o ? o : new Map).keys()),
       prime_time: d
     }
   })

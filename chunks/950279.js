@@ -15,15 +15,13 @@ t.default = e => {
   let {
     handleUpdate: t,
     selectedGames: n
-  } = e, l = (0, r.useStateFromStores)([u.default], () => u.default.games), h = s.useMemo(() => l.map(e => ({
+  } = e, l = (0, r.useStateFromStores)([u.default], () => u.default.games, []), h = s.useMemo(() => l.map(e => ({
     value: e.id,
     label: e.name
   })), [l]), _ = e => {
-    if (null == n[e]) return;
-    let a = {
-      ...n
-    };
-    delete a[e], t({
+    if (!n.has(e)) return;
+    let a = new Map(n);
+    a.delete(e), t({
       selectedGames: a
     })
   };
@@ -45,30 +43,28 @@ t.default = e => {
         value: "",
         placeholder: f.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
         onChange: e => {
-          if (Object.keys(n).length === c.MAX_NUM_SELECTED_GAMES || null != n[e]) return;
-          let a = u.default.getGameById(e);
-          t({
-            selectedGames: {
-              ...n,
-              [e]: {
-                id: e,
-                name: a.name
-              }
-            }
+          if (n.size === c.MAX_NUM_SELECTED_GAMES || n.has(e)) return;
+          let a = u.default.getGameById(e),
+            s = new Map(n);
+          s.set(e, {
+            id: e,
+            name: a.name
+          }), t({
+            selectedGames: s
           })
         },
-        isDisabled: Object.keys(n).length === c.MAX_NUM_SELECTED_GAMES
+        isDisabled: n.size === c.MAX_NUM_SELECTED_GAMES
       })
     }), (0, a.jsxs)("div", {
       className: E.contentWithMinHeight,
-      children: [Object.keys(n).length > 0 && (0, a.jsx)(o.Text, {
+      children: [n.size > 0 && (0, a.jsx)(o.Text, {
         variant: "text-xs/semibold",
         color: "text-muted",
         className: E.contentLabel,
         children: f.default.Messages.CLAN_SETUP_SELECTED_GAMES
       }), (0, a.jsx)("div", {
         className: E.selectedSection,
-        children: Object.entries(n).map(e => {
+        children: Array.from(n.entries()).map(e => {
           let [t, n] = e;
           return (0, a.jsxs)("div", {
             children: [(0, a.jsx)("div", {

@@ -124,32 +124,34 @@ function _(e) {
 function v(e) {
   var t;
   let {
-    guild: i
-  } = e, [n, o] = l.useState(!1), [I, x] = l.useState(!1), h = l.useRef(!1), T = l.useCallback(() => {
-    h.current = !0
-  }, []), v = (0, m.useSubmittedGuildJoinRequestTotal)({
+    guild: i,
+    isInitiallyExpanded: n = !1,
+    showHeader: o = !0,
+    disableAnimation: I = !1
+  } = e, [x, h] = l.useState(n), T = l.useRef(!1), v = l.useCallback(() => {
+    T.current = !0
+  }, []), R = (0, m.useSubmittedGuildJoinRequestTotal)({
     guildId: i.id
-  }), R = (0, r.useStateFromStores)([u.default], () => u.default.get(i.id)), p = null !== (t = null == R ? void 0 : R.formFields) && void 0 !== t ? t : [];
+  }), p = (0, r.useStateFromStores)([u.default], () => u.default.get(i.id)), C = null !== (t = null == p ? void 0 : p.formFields) && void 0 !== t ? t : [];
   return l.useEffect(() => {
-    c.default.fetchVerificationForm(i.id).then(() => {
-      x(!0)
-    })
+    c.default.fetchVerificationForm(i.id)
   }, [i.id]), (0, a.jsx)(d.default, {
-    renderHeader: (0, a.jsx)(_, {
+    renderHeader: o ? (0, a.jsx)(_, {
       guild: i,
-      isExpanded: n,
-      emptyFormFields: (null == p ? void 0 : p.length) == null || (null == p ? void 0 : p.length) === 0,
-      hasTermsField: null == p ? void 0 : p.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
-    }),
-    isExpanded: n,
-    onExpand: () => o(!n),
+      isExpanded: x,
+      emptyFormFields: (null == C ? void 0 : C.length) == null || (null == C ? void 0 : C.length) === 0,
+      hasTermsField: null == C ? void 0 : C.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
+    }) : null,
+    isExpanded: x,
+    onExpand: () => h(!x),
+    disableAnimation: I,
     children: (0, a.jsx)("div", {
       className: s()(M.itemBodyContainer, F.rulesScreeningItems),
-      children: I && (0, a.jsx)(E.default, {
+      children: null != p && (0, a.jsx)(E.default, {
         guild: i,
-        submittedGuildJoinRequestsCount: v,
-        formFields: p,
-        onFormFieldUpdate: T,
+        submittedGuildJoinRequestsCount: R,
+        formFields: C,
+        onFormFieldUpdate: v,
         hideVerificationLevelField: !0
       })
     })
