@@ -281,7 +281,7 @@ class H extends l.PureComponent {
         guildJoinRequest: t
       } = this.props, n = (null == t ? void 0 : t.applicationStatus) === C.GuildJoinRequestApplicationStatuses.APPROVED;
       if (null == e || null == t || !n || (0, p.isApprovedAndAcked)(t)) return null;
-      let l = () => m.default.ackUserGuildJoinRequest(e.id, t.id);
+      let l = () => m.default.ackUserGuildJoinRequest(e.id, t.joinRequestId);
       return (0, a.jsx)(o.Modal, {
         renderModal: t => (0, a.jsx)(S.default, {
           ...t,

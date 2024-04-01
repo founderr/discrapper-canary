@@ -25,7 +25,7 @@ function c(e) {
         _ = !1;
       if (T !== I.current && (I.current = T, f.current = !1, _ = !0), f.current) return;
       null != c && E(null);
-      let S = function(e, t, s, a) {
+      let R = function(e, t, s, a) {
         let l = s === o.GuildJoinRequestApplicationStatuses.SUBMITTED;
         if (t === o.GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
           if (a) return {
@@ -34,7 +34,7 @@ function c(e) {
           {
             let t = e[e.length - 1];
             return {
-              before: l ? t.id : t.actionedAt
+              before: l ? t.joinRequestId : t.actionedAt
             }
           }
         }
@@ -44,7 +44,7 @@ function c(e) {
         {
           let t = e[e.length - 1];
           return {
-            after: l ? t.id : t.actionedAt
+            after: l ? t.joinRequestId : t.actionedAt
           }
         }
       }(s, e, a, _);
@@ -54,7 +54,7 @@ function c(e) {
           guildId: t,
           status: a,
           limit: d,
-          ...S
+          ...R
         });
         if (null != e) {
           let {

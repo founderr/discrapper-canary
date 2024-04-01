@@ -16,7 +16,7 @@ var a = s("735250"),
 function c(e) {
   let {
     joinRequest: t
-  } = e, [s, c] = l.useState(!1), E = (0, i.useStateFromStores)([r.default], () => r.default.getChannel(t.interview_channel_id)), I = l.useCallback(() => {
+  } = e, [s, c] = l.useState(!1), E = (0, i.useStateFromStores)([r.default], () => r.default.getChannel(t.interviewChannelId)), I = l.useCallback(() => {
     (0, n.showToast)((0, n.createToast)(d.default.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE))
   }, []), f = async () => {
     if (null != E) {
@@ -26,7 +26,7 @@ function c(e) {
     if (!s) {
       c(!0);
       try {
-        await o.default.createOrEnterJoinRequestInterview(t.join_request_id)
+        await o.default.createOrEnterJoinRequestInterview(t.joinRequestId)
       } catch {
         I()
       } finally {

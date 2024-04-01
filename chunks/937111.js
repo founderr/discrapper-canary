@@ -15,8 +15,7 @@ let c = {},
 
 function T(e) {
   return {
-    id: e.id,
-    join_request_id: e.join_request_id,
+    joinRequestId: e.join_request_id,
     guildId: e.guild_id,
     userId: e.user_id,
     user: e.user,
@@ -27,7 +26,7 @@ function T(e) {
     actionedAt: e.actioned_at,
     actionedByUser: e.actioned_by_user,
     lastSeen: e.last_seen,
-    interview_channel_id: e.interview_channel_id
+    interviewChannelId: e.interview_channel_id
   }
 }
 
