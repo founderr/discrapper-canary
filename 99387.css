@@ -20822,11 +20822,6 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     height: 22px
 }
 
-.profileBadge20_f73db2 {
-    width: 20px;
-    height: 20px
-}
-
 .profileBadge18__803fe {
     width: 18px;
     height: 18px
@@ -21027,12 +21022,9 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     padding-top: 2px
 }
 
-.flexRow__6c25f {
+.flex_b548f2 {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 2px
+    flex-direction: row
 }
 
 .biteSizePronouns_d38134 {
@@ -21040,10 +21032,10 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    padding: 3px 4px;
+    padding: 1px 4px;
     border-radius: 4px;
     background-color: var(--bg-mod-faint);
-    margin-right: 2px;
+    margin-left: 4px;
     line-height: 16px
 }
 
@@ -21059,8 +21051,7 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     font-size: 14px;
     font-weight: 500;
     display: block;
-    font-family: var(--font-display);
-    margin-right: 2px
+    font-family: var(--font-display)
 }
 
 .userTagWithNickname_db5086 {
@@ -21111,15 +21102,6 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     margin-bottom: 2px !important;
     display: inline-flex;
     line-height: 15px
-}
-
-.badges_d1124c {
-    justify-content: center;
-    background-color: var(--bg-mod-faint);
-    border-radius: 4px;
-    min-height: auto;
-    padding: 1px 2px;
-    gap: 1px
 }
 
 .paddingBottom__9c272 {
