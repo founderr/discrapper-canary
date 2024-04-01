@@ -180,18 +180,18 @@ function H() {
   let e = (0, P.getLootboxes)(),
     [t, s, l, i, r, S, E] = (0, u.useStateFromStoresArray)([g.default], () => [g.default.userDataFetchState, g.default.globalOpenedCountFetchState, g.default.openedItems, g.default.globalOpenedCount, g.default.lastGlobalOpenedCount, g.default.globalOpenedCountFetchTime, g.default.nextGlobalOpenedCountFetchTime]),
     T = n.useMemo(() => Object.values(l).reduce((e, t) => e + t, 0), [l]),
-    [f] = n.useState(() => new c.Timeout),
-    [m, _] = n.useState(0),
-    p = Math.floor((0, I.default)(r, i, m));
-  return n.useEffect(() => {
-    _(0)
-  }, [i, r]), n.useEffect(() => (f.start((0, h.randomBetween)(G, k), () => {
-    if (m < 1) {
-      let e = E - S,
-        t = Math.max(0, E - Date.now());
-      _(Math.min((e - t) / e, 1))
-    }
-  }), () => f.stop()), [r, i, S, f, m, E]), (0, a.jsxs)("div", {
+    f = n.useCallback(() => {
+      var e;
+      let t = E - S,
+        s = Math.max(0, E - Date.now());
+      return t > 0 ? Math.min((e = (t - s) / t, e), 1) : 0
+    }, [S, E]),
+    [m] = n.useState(() => new c.Timeout),
+    [_, p] = n.useState(f()),
+    C = Math.floor((0, I.default)(r, i, _));
+  return n.useEffect(() => (m.start((0, h.randomBetween)(G, k), () => {
+    _ < 1 && p(f())
+  }), () => m.stop()), [r, i, S, m, _, E, f]), (0, a.jsxs)("div", {
     className: b.stats,
     children: [(0, a.jsx)(F, {
       icon: N.default,
@@ -209,7 +209,7 @@ function H() {
     }), (0, a.jsx)(F, {
       icon: o.GlobeEarthIcon,
       text: j.default.Messages.PACKAGES_GLOBAL_PACKAGES_OPENED,
-      count: p,
+      count: C,
       fetchState: s
     })]
   })
