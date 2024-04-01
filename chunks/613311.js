@@ -13,15 +13,15 @@ var a = s("735250"),
   E = s("496929"),
   T = s("558381"),
   I = s("410575"),
-  S = s("404133"),
-  R = s("224336"),
-  f = s("730749"),
+  R = s("404133"),
+  f = s("224336"),
+  S = s("730749"),
   m = s("666743"),
   A = s("115130"),
   N = s("812206"),
   p = s("252618"),
-  C = s("100159"),
-  g = s("646288"),
+  g = s("100159"),
+  C = s("646288"),
   O = s("984370"),
   P = s("706454"),
   M = s("210887"),
@@ -149,7 +149,7 @@ class eE extends i.PureComponent {
       carousel_video_count: i.videos,
       location: a.location.page,
       source: this._analyticsSource,
-      ...(0, C.default)(e, !0)
+      ...(0, g.default)(e, !0)
     }), this._trackedViewed = !0
   }
   renderHeader(e, t) {
@@ -281,7 +281,7 @@ class eE extends i.PureComponent {
         children: ed.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
           name: s.name
         })
-      }), (0, a.jsx)(R.default, {}), (0, a.jsx)(Z.default, {
+      }), (0, a.jsx)(f.default, {}), (0, a.jsx)(Z.default, {
         applicationId: e.id,
         blurb: t.summary,
         description: r,
@@ -418,7 +418,7 @@ class eE extends i.PureComponent {
         sku: a
       } = this.props;
       null != a && K.default.track(eo.AnalyticEvents.STORE_LISTING_MEDIA_SCROLLED, {
-        ...(0, C.default)(a),
+        ...(0, g.default)(a),
         card_index: s,
         card_type: e.type === eo.CarouselMediaTypes.IMG ? "image" : "video"
       })
@@ -444,7 +444,7 @@ class eE extends i.PureComponent {
       null != e && null != t && (0, d.openModalLazy)(async () => {
         let {
           default: i
-        } = await Promise.all([s.e("49237"), s.e("99387"), s.e("43643"), s.e("7654"), s.e("61939")]).then(s.bind(s, "560114"));
+        } = await Promise.all([s.e("49237"), s.e("99387"), s.e("43643"), s.e("7654"), s.e("92893")]).then(s.bind(s, "560114"));
         return s => (0, a.jsx)(i, {
           ...s,
           guild: t,
@@ -536,7 +536,7 @@ class eE extends i.PureComponent {
             className: n()(ec.headerPurchase, {
               [ec.active]: u
             }),
-            children: [null != t ? (0, g.default)(t) : null, null != e && null != t ? (0, a.jsx)(S.default, {
+            children: [null != t ? (0, C.default)(t) : null, null != e && null != t ? (0, a.jsx)(R.default, {
               wrapperClassName: ec.headerActionButton,
               applicationId: e.id,
               skuId: t.id,
@@ -584,7 +584,7 @@ class eE extends i.PureComponent {
     })
   }
 }
-t.default = (0, f.default)((0, m.default)(l.default.connectStores([v.default, M.default, P.default, y.default, U.default, b.default, j.default, A.default, N.default, x.default, h.default, D.default], e => {
+t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.default, P.default, y.default, U.default, b.default, j.default, A.default, N.default, x.default, h.default, D.default], e => {
   let t, s, a, {
     inputSkuId: i,
     applicationId: r,

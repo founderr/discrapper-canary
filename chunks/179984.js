@@ -13,15 +13,15 @@ var a = s("735250"),
   E = s("906732"),
   T = s("15640"),
   I = s("594174"),
-  S = s("78839"),
-  R = s("74538"),
-  f = s("775412"),
+  R = s("78839"),
+  f = s("74538"),
+  S = s("775412"),
   m = s("846363"),
   A = s("104494"),
   N = s("639119"),
   p = s("230916"),
-  C = s("248042"),
-  g = s("823188"),
+  g = s("248042"),
+  C = s("823188"),
   O = s("21023"),
   P = s("318747"),
   M = s("409100"),
@@ -35,11 +35,11 @@ var a = s("735250"),
 let j = e => {
     let {
       isLightTheme: t
-    } = e, s = (0, C.getBOGOPillCopy)();
-    return (0, a.jsx)(g.PremiumPillWithSparkles, {
+    } = e, s = (0, g.getBOGOPillCopy)();
+    return (0, a.jsx)(C.PremiumPillWithSparkles, {
       text: s,
       className: x.bogoPillWithSparkles,
-      colorOptions: t ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+      colorOptions: t ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
     })
   },
   y = () => (0, a.jsx)("div", {
@@ -56,7 +56,7 @@ let j = e => {
       } = e,
       i = (0, c.default)();
     t = s === h.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(i) ? v : D : (0, o.isThemeDark)(i) ? b : U;
-    let r = (0, R.getPremiumTypeDisplayName)(s);
+    let r = (0, f.getPremiumTypeDisplayName)(s);
     return (0, a.jsx)("img", {
       src: t,
       className: x.logo,
@@ -140,7 +140,7 @@ t.default = e => {
     w = (0, m.useMarketingOptimizationExperiment)({
       autoTrackExposure: !1
     }),
-    K = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedSubscriptions()),
+    K = (0, l.useStateFromStores)([R.default], () => R.default.hasFetchedSubscriptions()),
     W = (0, T.useSubscriptionPlansLoaded)(),
     V = "PlanComparisonTable";
   (0, d.useTriggerDebuggingAA)({
@@ -153,18 +153,18 @@ t.default = e => {
   let Y = (0, c.default)(),
     z = (0, o.isThemeLight)(Y),
     X = (0, l.useStateFromStores)([I.default], () => I.default.getCurrentUser()),
-    Q = (0, R.isPremiumExactly)(X, h.PremiumTypes.TIER_2),
+    Q = (0, f.isPremiumExactly)(X, h.PremiumTypes.TIER_2),
     Z = (0, N.usePremiumTrialOffer)(),
     J = null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-    q = (0, f.useCurrentPremiumTrialTier)(),
+    q = (0, S.useCurrentPremiumTrialTier)(),
     $ = (0, A.usePremiumDiscountOffer)(),
     ee = null != $ && (0, A.discountOfferHasTier)($, h.PremiumSubscriptionSKUs.TIER_2),
     et = (0, p.useDiscountedPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-    es = "".concat(et, "/").concat((0, R.getIntervalStringAsNoun)(h.SubscriptionIntervalTypes.MONTH)),
-    ea = (0, R.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-    ei = (0, R.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+    es = "".concat(et, "/").concat((0, f.getIntervalStringAsNoun)(h.SubscriptionIntervalTypes.MONTH)),
+    ea = (0, f.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+    ei = (0, f.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
     er = (0, O.useGetPlanComparisonTableRows)(ea, ei, ee, es),
-    en = (0, C.useIsEligibleForBogoPromotion)();
+    en = (0, g.useIsEligibleForBogoPromotion)();
   if (!K || !W) return null;
   let el = {
     label: (0, a.jsx)(u.Heading, {
@@ -227,10 +227,10 @@ t.default = e => {
     withBottomBorder: !1,
     withBottomBorderRadius: !0,
     buttonsRow: null == J
-  }), s = b ? null : null != J || null != q ? (0, a.jsx)(g.PremiumPillWithSparkles, {
+  }), s = b ? null : null != J || null != q ? (0, a.jsx)(C.PremiumPillWithSparkles, {
     text: null != J ? L.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : L.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
     className: x.freeTrialPillWithSparkles,
-    colorOptions: J === h.PremiumSubscriptionSKUs.TIER_0 ? z ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : z ? Q ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+    colorOptions: J === h.PremiumSubscriptionSKUs.TIER_0 ? z ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : z ? Q ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
   }) : en ? (0, a.jsx)(j, {
     isLightTheme: z
   }) : (0, a.jsx)(y, {});

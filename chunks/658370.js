@@ -14,20 +14,20 @@ var i = s("803997"),
   E = s("409100"),
   T = s("474936"),
   I = s("689938"),
-  S = s("622481");
+  R = s("622481");
 t.default = e => {
   var t;
   let s;
   let {
     title: i,
-    titleClassName: R = "",
-    subtitle: f = "",
+    titleClassName: f = "",
+    subtitle: S = "",
     description: m = "",
     descriptionCta: A = "",
     isPremiumGetCta: N,
     onCtaClick: p,
-    cardVariant: C
-  } = e, g = (0, d.usePremiumTrialOffer)(), O = null == g ? void 0 : g.subscription_trial, P = (0, u.usePremiumDiscountOffer)(), M = (0, l.formatTrialCtaIntervalDuration)({
+    cardVariant: g
+  } = e, C = (0, d.usePremiumTrialOffer)(), O = null == C ? void 0 : C.subscription_trial, P = (0, u.usePremiumDiscountOffer)(), M = (0, l.formatTrialCtaIntervalDuration)({
     intervalType: null == O ? void 0 : O.interval,
     intervalCount: null == O ? void 0 : O.interval_count
   }), h = (0, o.useResponseOnUserState)({
@@ -38,14 +38,14 @@ t.default = e => {
     onDiscountOffer: I.default.Messages.PREMIUM_DISCOUNT_CTA.format({
       percent: null == P ? void 0 : P.discount.amount
     })
-  }), L = (0, c.useCardVariantsInfo)(C);
+  }), L = (0, c.useCardVariantsInfo)(g);
   return (0, a.jsxs)("div", {
-    className: r()(S.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
+    className: r()(R.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
     children: [(0, a.jsx)(_.default, {
       title: i,
       cardVariantStyleInfo: L,
-      titleClassName: R,
-      subtitle: f,
+      titleClassName: f,
+      subtitle: S,
       description: m
     }), N && (0, a.jsx)(E.default, {
       subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,

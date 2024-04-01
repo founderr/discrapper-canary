@@ -20,16 +20,16 @@ t.default = e => {
     location: T,
     analyticsLocation: I
   } = e, {
-    analyticsLocations: S
-  } = (0, l.default)(T), R = (0, o.useIsSeasonalGiftingActive)(), {
-    enabled: f
+    analyticsLocations: R
+  } = (0, l.default)(T), f = (0, o.useIsSeasonalGiftingActive)(), {
+    enabled: S
   } = o.SeasonalGiftingMarketingExperiment.useExperiment({
     location: "GiftNitro"
   }, {
-    autoTrackExposure: R
-  }), m = f && R;
+    autoTrackExposure: f
+  }), m = S && f;
   return (0, a.jsx)(l.AnalyticsLocationProvider, {
-    value: S,
+    value: R,
     children: (0, a.jsxs)("div", {
       className: r()(c.container, t),
       children: [(0, a.jsxs)("div", {

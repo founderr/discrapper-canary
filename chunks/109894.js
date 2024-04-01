@@ -22,8 +22,8 @@ var s, a = n("735250"),
   S = n("882037"),
   R = n("201207"),
   A = n("481230"),
-  T = n("853268"),
-  N = n("639946"),
+  N = n("853268"),
+  T = n("639946"),
   I = n("616952"),
   C = n("792766"),
   O = n("692483"),
@@ -51,8 +51,8 @@ var s, a = n("735250"),
   q = n("481153"),
   Z = n("588705"),
   Q = n("163671"),
-  X = n("981631"),
-  J = n("355142"),
+  J = n("981631"),
+  X = n("355142"),
   $ = n("188785"),
   ee = n("701476"),
   et = n("801461"),
@@ -103,7 +103,7 @@ class eo extends(s = i.PureComponent) {
       giftCodeSKU: e,
       invite: t
     } = this.props;
-    V.default.track(X.AnalyticEvents.REGISTER_VIEWED, {
+    V.default.track(J.AnalyticEvents.REGISTER_VIEWED, {
       location: null != t ? "Invite Register Page" : "Non-Invite Register Page",
       registration_source: this.registrationSource,
       ...null != e ? (0, v.default)(e, !1, !1) : {}
@@ -144,8 +144,8 @@ class eo extends(s = i.PureComponent) {
         isRateLimited: !1
       })
     }))), s && !e.authenticated && ((0, b.setNewUser)(ee.NewUserTypes.ORGANIC_REGISTERED), this.redirectIfAuthenticated());
-    let o = J.RegistrationSteps.FULL;
-    a || this.hasError("date_of_birth") ? o = J.RegistrationSteps.AGE_GATE : null != i && (null != i.guild || null != i.channel) && (o = J.RegistrationSteps.INVITE), r(o)
+    let o = X.RegistrationSteps.FULL;
+    a || this.hasError("date_of_birth") ? o = X.RegistrationSteps.AGE_GATE : null != i && (null != i.guild || null != i.channel) && (o = X.RegistrationSteps.INVITE), r(o)
   }
   redirectIfAuthenticated() {
     let {
@@ -171,7 +171,7 @@ class eo extends(s = i.PureComponent) {
       usernameSuggestion: d,
       isMobileWebInviteRegistration: c
     } = this.props, f = null != r ? r.code : null, h = null != o ? o.skuId : null, g = S.usePromoEmailConsentStore.getState(), E = (0, z.isNullOrEmpty)(d) ? null : t === d, m = $.CONFERENCE_MODE_ENABLED ? await (0, O.formatUsername)(t) : t, p = $.CONFERENCE_MODE_ENABLED ? await (0, O.formatUsername)(n) : n;
-    Y.ComponentDispatch.dispatch(X.ComponentActions.WAVE_EMPHASIZE);
+    Y.ComponentDispatch.dispatch(J.ComponentActions.WAVE_EMPHASIZE);
     try {
       c || null == r ? await (0, A.registerFull)({
         email: e,
@@ -207,25 +207,25 @@ class eo extends(s = i.PureComponent) {
         hasProminentCopy: s
       }
     } = this.props, i = null, r = null;
-    return t ? r = (0, a.jsx)(T.default, {
+    return t ? r = (0, a.jsx)(N.default, {
       value: e,
       onChange: e => this.setState({
         consent: e
       }),
       subText: en.default.Messages.TERMS_PRIVACY_OPT_IN.format({
-        termsURL: X.MarketingURLs.TERMS,
-        privacyURL: X.MarketingURLs.PRIVACY
+        termsURL: J.MarketingURLs.TERMS,
+        privacyURL: J.MarketingURLs.PRIVACY
       })
     }) : i = (0, a.jsx)(H.SubText, {
       isProminent: !!s,
       className: ea.marginTop8,
       children: n ? en.default.Messages.TERMS_PRIVACY_ON_REGISTER.format({
         buttonText: en.default.Messages.CONTINUE,
-        termsURL: X.MarketingURLs.TERMS,
-        privacyURL: X.MarketingURLs.PRIVACY
+        termsURL: J.MarketingURLs.TERMS,
+        privacyURL: J.MarketingURLs.PRIVACY
       }) : en.default.Messages.TERMS_PRIVACY.format({
-        termsURL: X.MarketingURLs.TERMS,
-        privacyURL: X.MarketingURLs.PRIVACY
+        termsURL: J.MarketingURLs.TERMS,
+        privacyURL: J.MarketingURLs.PRIVACY
       })
     }), {
       subText: i,
@@ -274,8 +274,8 @@ class eo extends(s = i.PureComponent) {
           disabled: !0,
           className: ea.marginTop8,
           children: en.default.Messages.TERMS_PRIVACY.format({
-            termsURL: X.MarketingURLs.TERMS,
-            privacyURL: X.MarketingURLs.PRIVACY
+            termsURL: J.MarketingURLs.TERMS,
+            privacyURL: J.MarketingURLs.PRIVACY
           })
         }), $.CONFERENCE_MODE_ENABLED ? null : (0, a.jsx)(H.Button, {
           look: H.Button.Looks.LINK,
@@ -294,7 +294,7 @@ class eo extends(s = i.PureComponent) {
     return (null == e ? void 0 : e.stage_instance) != null && null != e.guild ? (0, a.jsx)(C.default, {
       stageInstance: e.stage_instance,
       guild: e.guild
-    }) : (null == e ? void 0 : e.guild_scheduled_event) != null ? (0, a.jsx)(N.GuildScheduledEventInviteHeader, {
+    }) : (null == e ? void 0 : e.guild_scheduled_event) != null ? (0, a.jsx)(T.GuildScheduledEventInviteHeader, {
       channel: e.channel,
       guildScheduledEvent: e.guild_scheduled_event
     }) : (0, a.jsx)(Z.default, {
@@ -425,9 +425,9 @@ class eo extends(s = i.PureComponent) {
       uniqueUsernameRegistrationConfig: {
         suggestions: A
       },
-      authBoxClassName: T,
+      authBoxClassName: N,
       apiErrors: {
-        email: N,
+        email: T,
         username: C,
         global_name: O,
         password: v,
@@ -472,7 +472,7 @@ class eo extends(s = i.PureComponent) {
           email: e,
           emailClientError: 0 === e.length ? en.default.Messages.REQUIRED : null
         }),
-        error: null != f ? f : el(N),
+        error: null != f ? f : el(T),
         type: "email",
         setRef: e => {
           this.emailRef = e
@@ -563,7 +563,7 @@ class eo extends(s = i.PureComponent) {
     return t ? (0, a.jsx)(Q.default, {
       onSubmit: this.handleSubmit,
       tag: "form",
-      className: l()(T, es.horizontalAuthBox),
+      className: l()(N, es.horizontalAuthBox),
       children: () => [k, (0, a.jsxs)("div", {
         className: es.flex,
         children: [(0, a.jsx)(H.Title, {
@@ -574,7 +574,7 @@ class eo extends(s = i.PureComponent) {
     }) : (0, a.jsxs)(H.default, {
       onSubmit: this.handleSubmit,
       tag: "form",
-      className: T,
+      className: N,
       children: [x && !R ? (0, a.jsx)(H.Button, {
         onClick: this.handleGotoLogin,
         look: H.Button.Looks.LINK,
@@ -609,10 +609,10 @@ class eo extends(s = i.PureComponent) {
       guildTemplate: i
     }), !0) : null != s ? this.renderFull(() => (0, a.jsx)(q.default, {
       giftCode: s
-    })) : null != n && r && n.state === X.InviteStates.RESOLVED && !t ? this.renderFull(() => (0, a.jsx)(Z.default, {
+    })) : null != n && r && n.state === J.InviteStates.RESOLVED && !t ? this.renderFull(() => (0, a.jsx)(Z.default, {
       invite: n,
       isRegister: !0
-    })) : this.renderFull() : n.state === X.InviteStates.RESOLVING ? this.renderInviteResolving() : this.renderInvite()
+    })) : this.renderFull() : n.state === J.InviteStates.RESOLVING ? this.renderInviteResolving() : this.renderInvite()
   }
   constructor(e) {
     var t;
@@ -635,11 +635,11 @@ class eo extends(s = i.PureComponent) {
         return
       }
       let f = null != r ? (0, o.parse)(r.search) : {};
-      null != i ? t = X.Routes.INVITE_LOGIN(i.code) : null != s ? t = X.Routes.GIFT_CODE_LOGIN(s.code) : null != a ? t = X.Routes.GUILD_TEMPLATE_LOGIN(a.code) : null != u ? (t = X.Routes.LOGIN, f.redirect_to = u) : (t = X.Routes.LOGIN, "" !== n && (f = {
+      null != i ? t = J.Routes.INVITE_LOGIN(i.code) : null != s ? t = J.Routes.GIFT_CODE_LOGIN(s.code) : null != a ? t = J.Routes.GUILD_TEMPLATE_LOGIN(a.code) : null != u ? (t = J.Routes.LOGIN, f.redirect_to = u) : (t = J.Routes.LOGIN, "" !== n && (f = {
         email: n
       })), g.default.loginReset(), d(t, {
         search: (0, o.stringify)(f)
-      }), null == l || l(e), Y.ComponentDispatch.dispatch(X.ComponentActions.WAVE_EMPHASIZE)
+      }), null == l || l(e), Y.ComponentDispatch.dispatch(J.ComponentActions.WAVE_EMPHASIZE)
     }), ei(this, "handleSubmit", e => {
       null == e || e.preventDefault();
       let {
@@ -719,7 +719,7 @@ class eo extends(s = i.PureComponent) {
 function eu(e) {
   let t = (0, c.useStateFromStoresObject)([B.default, k.default, E.default, y.default, x.default], () => ({
       consentRequired: B.default.getAuthenticationConsentRequired(),
-      registering: k.default.getRegisterStatus() === X.RegistrationStates.REGISTERING,
+      registering: k.default.getRegisterStatus() === J.RegistrationStates.REGISTERING,
       apiErrors: k.default.getErrors(),
       authenticated: k.default.isAuthenticated(),
       isUnderage: E.default.isUnderageAnonymous(),
@@ -728,7 +728,7 @@ function eu(e) {
     })),
     n = (0, U.useUURegistrationExperiment)(),
     s = (0, c.useStateFromStores)([D.default], () => D.default.registrationUsernameSuggestion()),
-    [r, l] = i.useState(J.RegistrationSteps.FULL);
+    [r, l] = i.useState(X.RegistrationSteps.FULL);
   return (0, _.default)({
     type: d.ImpressionTypes.VIEW,
     name: d.ImpressionNames.USER_REGISTRATION,

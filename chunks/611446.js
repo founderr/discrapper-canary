@@ -45,7 +45,7 @@ t.default = e => {
       className: d.footerLink,
       children: t
     })
-  }, []), N = n.useCallback(() => {
+  }, []), R = n.useCallback(() => {
     switch (C) {
       case "SAFETY_TIPS":
       case "ABOUT_SAFETY_ALERTS":
@@ -56,7 +56,7 @@ t.default = e => {
       default:
         return null
     }
-  }, [C, f]), R = n.useCallback(() => {
+  }, [C, f]), N = n.useCallback(() => {
     switch (C) {
       case "SAFETY_TIPS":
         return u.default.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE;
@@ -77,7 +77,7 @@ t.default = e => {
       className: d.modalHeader,
       children: (0, T.jsx)(o.Heading, {
         variant: "heading-xl/semibold",
-        children: R()
+        children: N()
       })
     }), (0, T.jsx)(o.Scroller, {
       children: (0, T.jsxs)(o.Slides, {
@@ -112,7 +112,7 @@ t.default = e => {
         onClick: () => {
           t(), L(S.CtaEventTypes.USER_SAFETY_TOOLS_DISMISS)
         }
-      }), N()]
+      }), R()]
     })]
   })
 }

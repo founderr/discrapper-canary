@@ -31,26 +31,26 @@ function I(e, t) {
   }
 }
 
-function S(e) {
+function R(e) {
   return I("Thing", e)
 }
 
-function R(e) {
+function f(e) {
   return I("Product", e)
 }
-R.Image = function(e) {
+f.Image = function(e) {
   if (null == e) return null;
   let t = e.filter(e => null != e && "" !== e);
   return 0 === t.length ? null : 1 === t.length ? t[0] : t
 };
 
-function f(e) {
+function S(e) {
   return I("Offer", e)
 }
 
 function m(e) {
   return I("QuantitativeValue", e)
-}(u = i || (i = {})).DAMAGED = "http://schema.org/DamagedCondition", u.NEW = "http://schema.org/NewCondition", u.REFURBISHED = "http://schema.org/RefurbishedCondition", u.USED = "http://schema.org/UsedCondition", (d = r || (r = {})).DISCONTINUED = "http://schema.org/Discontinued", d.IN_STOCK = "http://schema.org/InStock", d.IN_STORE_ONLY = "http://schema.org/InStoreOnly", d.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", d.ONLINE_ONLY = "http://schema.org/OnlineOnly", d.OUT_OF_STOCK = "http://schema.org/OutOfStock", d.PREORDER = "http://schema.org/PreOrder", d.PRESALE = "http://schema.org/PreSale", d.SOLD_OUT = "http://schema.org/SoldOut", f.ItemConditions = i, f.ItemAvailability = r, (c = n || (n = {})).YEARLY = "ANN", c.MONTHLY = "MON", m.UnitCodes = n;
+}(u = i || (i = {})).DAMAGED = "http://schema.org/DamagedCondition", u.NEW = "http://schema.org/NewCondition", u.REFURBISHED = "http://schema.org/RefurbishedCondition", u.USED = "http://schema.org/UsedCondition", (d = r || (r = {})).DISCONTINUED = "http://schema.org/Discontinued", d.IN_STOCK = "http://schema.org/InStock", d.IN_STORE_ONLY = "http://schema.org/InStoreOnly", d.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", d.ONLINE_ONLY = "http://schema.org/OnlineOnly", d.OUT_OF_STOCK = "http://schema.org/OutOfStock", d.PREORDER = "http://schema.org/PreOrder", d.PRESALE = "http://schema.org/PreSale", d.SOLD_OUT = "http://schema.org/SoldOut", S.ItemConditions = i, S.ItemAvailability = r, (c = n || (n = {})).YEARLY = "ANN", c.MONTHLY = "MON", m.UnitCodes = n;
 class A extends(l = E.Component) {
   render() {
     let {
@@ -66,13 +66,13 @@ class A extends(l = E.Component) {
     })
   }
 }
-T(A, "Thing", S), T(A, "Brand", S), T(A, "Person", function(e) {
+T(A, "Thing", R), T(A, "Brand", R), T(A, "Person", function(e) {
   return I("Person", e)
 }), T(A, "Organization", function(e) {
   return I("Organization", e)
 }), T(A, "ItemPage", function(e) {
   return I("ItemPage", e)
-}), T(A, "Product", R), T(A, "Offer", f), T(A, "Rating", function(e) {
+}), T(A, "Product", f), T(A, "Offer", S), T(A, "Rating", function(e) {
   return I("Rating", e)
 }), T(A, "AggregateRating", function(e) {
   return I("AggregateRating", e)

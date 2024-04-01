@@ -18,9 +18,9 @@ t.default = function(e) {
   var t, s;
   let {
     isVisible: i,
-    isFullscreen: S,
-    subscriptionTier: R
-  } = e, f = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, m = (0, u.usePremiumDiscountOffer)(), A = (0, u.discountOfferHasTier)(m, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = (0, n.useSpring)({
+    isFullscreen: R,
+    subscriptionTier: f
+  } = e, S = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, m = (0, u.usePremiumDiscountOffer)(), A = (0, u.discountOfferHasTier)(m, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = (0, n.useSpring)({
     transform: i ? "translateY(-100%)" : "translateY(0%)",
     opacity: i ? 1 : 0,
     config: {
@@ -28,12 +28,12 @@ t.default = function(e) {
       friction: 12
     },
     immediate: N
-  }), C = {
+  }), g = {
     section: T.AnalyticsSections.MARKETING_FLOATING_CTA
   };
   return (0, a.jsx)(n.animated.div, {
     className: r()(I.wrapper, {
-      [I.fullscreenWrapper]: S,
+      [I.fullscreenWrapper]: R,
       [I.invisible]: !i
     }),
     style: p,
@@ -42,12 +42,12 @@ t.default = function(e) {
       children: [(0, a.jsx)(_.default, {
         className: I.button,
         shinyButtonClassName: I.shinyButton,
-        subscriptionTier: null !== (s = null != R ? R : null == f ? void 0 : f.sku_id) && void 0 !== s ? s : A,
-        premiumModalAnalyticsLocation: C,
+        subscriptionTier: null !== (s = null != f ? f : null == S ? void 0 : S.sku_id) && void 0 !== s ? s : A,
+        premiumModalAnalyticsLocation: g,
         isPersistentCTA: !0
       }), (0, a.jsx)(c.default, {
         className: I.button,
-        premiumModalAnalyticsLocation: C
+        premiumModalAnalyticsLocation: g
       })]
     })
   })

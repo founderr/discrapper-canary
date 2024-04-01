@@ -17,15 +17,15 @@ var a = s("399606"),
   E = s("323780"),
   T = s("101732"),
   I = s("450598"),
-  S = s("633030"),
-  R = s("97942"),
-  f = s("269987"),
+  R = s("633030"),
+  f = s("97942"),
+  S = s("269987"),
   m = s("548629"),
   A = s("507084"),
   N = s("680313"),
   p = s("926433"),
-  C = s("302036"),
-  g = s("994554"),
+  g = s("302036"),
+  C = s("994554"),
   O = s("1549"),
   P = s("13327"),
   M = s("59137"),
@@ -95,7 +95,7 @@ let B = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
             onTryItOutClick: t
           })
         },
-        imageSource: R,
+        imageSource: f,
         imageClassName: t.perGuildProfilesImage
       },
       longerMessages: {
@@ -107,7 +107,7 @@ let B = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
       moreGuilds: {
         title: _.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
         description: _.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-        imageSource: B(i, S, U),
+        imageSource: B(i, R, U),
         imageClassName: t.moreGuildsImage
       },
       moreGuildsAlt: {
@@ -119,32 +119,32 @@ let B = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
       remix: {
         title: _.default.Messages.REMIXING_PERKS_CARD_TITLE,
         description: _.default.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-        imageSource: B(i, f, m),
+        imageSource: B(i, S, m),
         imageClassName: t.remixingImage,
         isEarlyAccess: !0
       },
       soundboard: {
         title: _.default.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
         description: _.default.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-        imageSource: B(i, p, C),
+        imageSource: B(i, p, g),
         imageClassName: t.soundboardImage
       },
       stickers: {
         title: _.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
         description: _.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-        imageSource: B(i, g, j),
+        imageSource: B(i, C, j),
         imageClassName: t.stickersImage
       },
       stickersBurst: {
         title: _.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
         description: _.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-        imageSource: B(i, g, j),
+        imageSource: B(i, C, j),
         imageClassName: t.stickersImage
       },
       stickersPerkDiscoverability: {
         title: _.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
         description: _.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-        imageSource: B(i, g, j),
+        imageSource: B(i, C, j),
         imageClassName: t.stickersImage
       },
       streaming: {

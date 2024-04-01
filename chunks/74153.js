@@ -21,7 +21,7 @@ function I(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class S extends i.PureComponent {
+class R extends i.PureComponent {
   componentDidMount() {
     let {
       sku: e,
@@ -82,4 +82,4 @@ t.default = (0, l.default)(r.default.connectStores([o.default, c.default], e => 
     isFetchingPrimarySku: null != a && c.default.isFetching(a),
     primarySku: null != a ? c.default.get(a) : null
   }
-})(S))
+})(R))

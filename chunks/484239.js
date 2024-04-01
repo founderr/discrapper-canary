@@ -17,17 +17,17 @@ t.default = e => {
   var t;
   let s, i, {
       title: I,
-      titleClassName: S,
-      perkImage: R,
-      isCarousel: f,
+      titleClassName: R,
+      perkImage: f,
+      isCarousel: S,
       onCtaClick: m,
       perkComponent: A,
       subtitle: N = "",
       descriptionCta: p = "",
-      cardVariant: C,
-      subtitleClassName: g
+      cardVariant: g,
+      subtitleClassName: C
     } = e,
-    O = (0, o.useCardVariantsInfo)(C),
+    O = (0, o.useCardVariantsInfo)(g),
     P = (0, l.useFreeBoostUserTenureReward)(),
     M = (null == P ? void 0 : P.nitroTenureStatus) === d.NitroRewardStatus.REDEEMABLE;
   switch (null == P ? void 0 : P.nitroTenureStatus) {
@@ -50,15 +50,15 @@ t.default = e => {
       title: I,
       shouldShowElement: e => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
       cardVariantStyleInfo: O,
-      titleClassName: S,
+      titleClassName: R,
       subtitle: N,
-      subtitleClassName: g
-    }), null != R && (0, a.jsx)("img", {
-      src: R,
+      subtitleClassName: C
+    }), null != f && (0, a.jsx)("img", {
+      src: f,
       alt: "",
       className: r()({
-        [c.cardImage]: !f,
-        [c.carouselCardImage]: f
+        [c.cardImage]: !S,
+        [c.carouselCardImage]: S
       })
     }), null != A && (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)("div", {

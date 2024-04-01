@@ -13,15 +13,15 @@ var a = s("735250"),
   E = s("41776"),
   T = s("703656"),
   I = s("920440"),
-  S = s("601964"),
-  R = s("430824"),
-  f = s("378720"),
+  R = s("601964"),
+  f = s("430824"),
+  S = s("378720"),
   m = s("285952"),
   A = s("346656"),
   N = s("263704"),
   p = s("843445"),
-  C = s("981631"),
-  g = s("689938"),
+  g = s("981631"),
+  C = s("689938"),
   O = s("526549");
 
 function P(e, t, s) {
@@ -45,14 +45,14 @@ class M extends i.PureComponent {
         className: O.dotOnline
       }), (0, a.jsx)("span", {
         className: O.memberText,
-        children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+        children: C.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
           membersOnline: t
         })
       }), (0, a.jsx)("div", {
         className: O.dotOffline
       }), (0, a.jsx)("span", {
         className: O.memberText,
-        children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+        children: C.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
           count: e
         })
       })]
@@ -69,22 +69,22 @@ class M extends i.PureComponent {
       pageSize: o
     } = this.props;
     if (t && s) return null;
-    let d = new S.default(e),
-      c = g.default.Messages.LURKER_MODE_VIEW_GUILD,
+    let d = new R.default(e),
+      c = C.default.Messages.LURKER_MODE_VIEW_GUILD,
       _ = this.handleJoinOrView,
       E = u.Button.Looks.FILLED,
       T = u.Button.Colors.PRIMARY;
     return r ? s ? (E = u.Button.Looks.OUTLINED, T = O.buttonColorInGuild, c = (0, a.jsxs)(m.default, {
       align: m.default.Align.CENTER,
       children: [(0, a.jsx)("div", {
-        children: g.default.Messages.JOINED_GUILD
+        children: C.default.Messages.JOINED_GUILD
       }), (0, a.jsx)(N.default, {
         className: O.joinedCheckmark
       })]
-    })) : i && t && (c = g.default.Messages.JOIN_GUILD) : (c = g.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
+    })) : i && t && (c = C.default.Messages.JOIN_GUILD) : (c = C.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
       className: n()(l, o === p.PageSizes.SMALL ? O.inviteSmall : O.inviteLarge),
-      children: [(0, a.jsx)(f.default, {
-        children: g.default.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
+      children: [(0, a.jsx)(S.default, {
+        children: C.default.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
       }), (0, a.jsxs)("div", {
         className: O.content,
         children: [(0, a.jsxs)("div", {
@@ -126,25 +126,25 @@ class M extends i.PureComponent {
       else try {
         await d.default.joinGuild(e.id, {
           lurker: !0,
-          source: C.JoinGuildSources.APPLICATION_STORE
+          source: g.JoinGuildSources.APPLICATION_STORE
         }), i()
       } catch {}
     }), P(this, "handleLogin", () => {
       let e = {
-        redirect_to: C.Routes.APPLICATION_STORE_LISTING_SKU(this.props.skuId)
+        redirect_to: g.Routes.APPLICATION_STORE_LISTING_SKU(this.props.skuId)
       };
-      (0, T.transitionTo)(C.Routes.LOGIN, {
+      (0, T.transitionTo)(g.Routes.LOGIN, {
         search: (0, l.stringify)(e)
       })
     })
   }
 }
-t.default = (0, _.default)(o.default.connectStores([R.default, E.default], e => {
+t.default = (0, _.default)(o.default.connectStores([f.default, E.default], e => {
   let {
     guild: t
   } = e, s = E.default.isLurking(t.id);
   return {
-    isInGuild: null != R.default.getGuild(t.id) && !s,
+    isInGuild: null != f.default.getGuild(t.id) && !s,
     isLurking: s
   }
 })(M))

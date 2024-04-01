@@ -38,19 +38,19 @@ t.default = e => {
   let {
     forceInverted: s,
     subscriptionTier: c,
-    isEligibleForBogoPromotion: S = !1,
-    isPersistentCTA: R = !1,
-    useShorterCTA: f = !1,
+    isEligibleForBogoPromotion: R = !1,
+    isPersistentCTA: f = !1,
+    useShorterCTA: S = !1,
     ...m
-  } = e, A = (0, n.default)(), N = (0, i.isThemeDark)(A) || s, p = null === (t = (0, u.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, C = (0, l.formatTrialOfferIntervalDuration)({
+  } = e, A = (0, n.default)(), N = (0, i.isThemeDark)(A) || s, p = null === (t = (0, u.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, l.formatTrialOfferIntervalDuration)({
     intervalType: null == p ? void 0 : p.interval,
     intervalCount: null == p ? void 0 : p.interval_count
-  }), g = (0, o.usePremiumDiscountOffer)(), O = null != p && c === p.sku_id, P = S ? _.default.Messages.BOGO_CLAIM_OFFER : null != g ? I(c, f, R, g.discount.amount) : T({
+  }), C = (0, o.usePremiumDiscountOffer)(), O = null != p && c === p.sku_id, P = R ? _.default.Messages.BOGO_CLAIM_OFFER : null != C ? I(c, S, f, C.discount.amount) : T({
     showTrialCTA: O,
     subscriptionTier: c,
     shouldShowUpsells: !1,
-    trialDurationCopy: C,
-    isPersistentCTA: R,
+    trialDurationCopy: g,
+    isPersistentCTA: f,
     subscriptionTrial: p
   });
   return (0, a.jsx)(d.default, {

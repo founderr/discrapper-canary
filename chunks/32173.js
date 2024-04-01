@@ -16,15 +16,15 @@ var n = s("399606"),
   E = s("335131"),
   T = s("410154"),
   I = s("300284"),
-  S = s("131951"),
-  R = s("78839"),
-  f = s("63063"),
+  R = s("131951"),
+  f = s("78839"),
+  S = s("63063"),
   m = s("74538"),
   A = s("494127"),
   N = s("687362"),
   p = s("623068"),
-  C = s("391110"),
-  g = s("75077"),
+  g = s("391110"),
+  C = s("75077"),
   O = s("474936"),
   P = s("981631"),
   M = s("526761"),
@@ -60,11 +60,11 @@ let et = new Date("2024-05-07T03:59:00Z");
 t.default = () => {
   let {
     analyticsLocations: e
-  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = h.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([R.default], () => R.default.getPremiumTypeSubscription()), i = null != a ? m.default.getPremiumPlanItem(a) : null, es = (null != i ? m.default.getSkuIdForPlan(i.planId) : null) === O.PremiumSubscriptionSKUs.TIER_2, {
+  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = h.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([f.default], () => f.default.getPremiumTypeSubscription()), i = null != a ? m.default.getPremiumPlanItem(a) : null, es = (null != i ? m.default.getSkuIdForPlan(i.planId) : null) === O.PremiumSubscriptionSKUs.TIER_2, {
     flipped: ea
   } = (0, A.useWhatsNewAvatarDecoRollout)(), {
     flipped: ei
-  } = (0, A.useWhatsNewProfileFXRollout)(), er = (0, _.default)(S.default), en = (0, N.default)(), el = (0, I.default)({
+  } = (0, A.useWhatsNewProfileFXRollout)(), er = (0, _.default)(R.default), en = (0, N.default)(), el = (0, I.default)({
     scrollPosition: M.ProfileCustomizationScrollPositions.TRY_IT_OUT,
     analyticsLocations: e
   }), eo = () => {
@@ -126,7 +126,7 @@ t.default = () => {
           analyticsLocations: e
         })
       } : () => {
-        window.open(f.default.getArticleURL(P.HelpdeskArticles.CLIPS), "_blank")
+        window.open(S.default.getArticleURL(P.HelpdeskArticles.CLIPS), "_blank")
       },
       perkImage: G
     } : {
@@ -364,14 +364,14 @@ t.default = () => {
       name: "customSoundsEverywhere",
       title: h.default.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
       subtitle: h.default.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-      perkImage: (0, g.getThemedImage)(t, x, v),
+      perkImage: (0, C.getThemedImage)(t, x, v),
       description: h.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
     },
     specialStickerAccess: {
       name: "specialStickerAccess",
       title: h.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
       subtitle: h.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-      perkImage: (0, g.getThemedImage)(t, D, Z),
+      perkImage: (0, C.getThemedImage)(t, D, Z),
       description: h.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO
     },
     largeUploads: {
@@ -411,7 +411,7 @@ t.default = () => {
           analyticsLocations: e
         })
       },
-      cardVariant: C.CardVariants.REWARD,
+      cardVariant: g.CardVariants.REWARD,
       pillText: i,
       dismissibleContentType: l.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI
     }

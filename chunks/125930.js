@@ -13,13 +13,13 @@ var a = s("735250"),
   E = s("843445"),
   T = s("981631"),
   I = s("689938"),
-  S = s("989466");
-let R = {
+  R = s("989466");
+let f = {
   [T.OperatingSystems.WINDOWS]: _.PlatformTypes.WINDOWS,
   [T.OperatingSystems.MACOS]: _.PlatformTypes.OSX,
   [T.OperatingSystems.LINUX]: _.PlatformTypes.LINUX
 };
-class f extends i.PureComponent {
+class S extends i.PureComponent {
   render() {
     let {
       active: e,
@@ -30,12 +30,12 @@ class f extends i.PureComponent {
     return (0, a.jsx)(l.Button, {
       size: r ? l.Button.Sizes.MIN : l.Button.Sizes.LARGE,
       fullWidth: !r,
-      color: e ? S.tabSelectedColor : S.tabNotSelectedColor,
+      color: e ? R.tabSelectedColor : R.tabNotSelectedColor,
       className: n()({
-        [S.tabPageLarge]: r,
-        [S.tabPageSmall]: !r,
-        [S.tabSelected]: e,
-        [S.tabNotSelected]: !e
+        [R.tabPageLarge]: r,
+        [R.tabPageSmall]: !r,
+        [R.tabSelected]: e,
+        [R.tabNotSelected]: !e
       }),
       onClick: i,
       children: t
@@ -92,10 +92,10 @@ class A extends i.PureComponent {
       selectedOperatingSystem: s
     } = this.state, i = Object.keys(t);
     return 1 === i.length ? null : (0, a.jsxs)(u.default, {
-      className: S.tabs,
+      className: R.tabs,
       children: [(0, a.jsx)("div", {
-        className: S.separator
-      }), i.map(t => (0, a.jsx)(f, {
+        className: R.separator
+      }), i.map(t => (0, a.jsx)(S, {
         active: t === s,
         onClick: () => this.handleSelectOperatingSystem(t),
         pageSize: e,
@@ -117,15 +117,15 @@ class A extends i.PureComponent {
     let s = m(e).map((e, t) => {
       let s = null != e.value ? e.value.trim() : null;
       return null == s || 0 === s.length ? null : (0, a.jsxs)("div", {
-        className: S.requirement,
+        className: R.requirement,
         children: [(0, a.jsxs)("span", {
-          className: S.requirementKey,
+          className: R.requirementKey,
           children: [e.key, ":"]
         }), s]
       }, t)
     }).filter(c.isNotNullish);
     return (0, a.jsxs)("div", {
-      className: S.requirements,
+      className: R.requirements,
       children: [(0, a.jsx)(o.default, {
         tag: "h4",
         children: t
@@ -138,7 +138,7 @@ class A extends i.PureComponent {
       recommended: t
     } = this.props.systemRequirements[this.state.selectedOperatingSystem];
     return (0, a.jsxs)("div", {
-      className: S.requirementsContainer,
+      className: R.requirementsContainer,
       children: [this.renderRequirementsSection(e, I.default.Messages.APPLICATION_STORE_SPECS_MINIMUM), this.renderRequirementsSection(t, I.default.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)]
     })
   }
@@ -165,7 +165,7 @@ class A extends i.PureComponent {
     let i = (0, _.getPlatform)(),
       r = Object.keys(e.systemRequirements),
       n = r[0];
-    for (let e of r) R[e] === i && (n = e);
+    for (let e of r) f[e] === i && (n = e);
     this.state = {
       selectedOperatingSystem: n
     }
