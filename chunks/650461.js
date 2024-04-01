@@ -13,7 +13,7 @@ let f = {};
 
 function E() {
   return {
-    selectedGames: new Map,
+    selectedGames: {},
     playstyle: c.ClanPlaystyles.NONE,
     interests: new Set,
     description: "",
