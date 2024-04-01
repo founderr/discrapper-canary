@@ -66,6 +66,7 @@ function _(e) {
       children: (0, l.jsx)(h.default, {
         text: N,
         tooltipClass: S.tooltip,
+        tooltipContentClass: S.tooltipContent,
         children: (0, l.jsx)(r.ThemeContextProvider, {
           theme: T,
           children: (0, l.jsx)(r.BlobMask, {

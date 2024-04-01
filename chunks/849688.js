@@ -30,7 +30,7 @@ t.default = function(e) {
       })
     })
   }, [l, t.id]), m = s.useCallback(() => {
-    null != l && (0, f.dismissSignUp)(l.key)
+    null != l && (0, f.dismissSignUp)(l.key, l.dismissibleContent)
   }, [l]);
   if (null == l) return null;
   let I = "url(".concat(l.backgroundAssetUrl, ") black top / cover no-repeat");

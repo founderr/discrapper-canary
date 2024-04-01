@@ -1,49 +1,49 @@
 "use strict";
 s.r(e), s.d(e, {
   completeSignUp: function() {
-    return r
+    return d
   },
   dismissSignUp: function() {
-    return p
+    return r
   }
 });
-var i = s("524437"),
-  n = s("570140"),
-  a = s("605236"),
-  c = s("626135"),
-  l = s("445507"),
-  o = s("981631"),
-  d = s("921944");
+var i = s("570140"),
+  n = s("605236"),
+  a = s("626135"),
+  c = s("445507"),
+  l = s("981631"),
+  o = s("921944");
 
-function r(t) {
+function d(t) {
   let {
     targetKey: e,
-    data: s,
+    dismissibleContent: s,
+    data: d,
     completed: r
   } = t;
-  null != s.selectedOptionKey && (!(0, a.isDismissibleContentDismissed)(i.DismissibleContent.GAME_ONE_USER_SIGNUPS) && c.default.track(o.AnalyticEvents.SIGNUP_COMPLETED, {
+  null != d.selectedOptionKey && (!(0, n.isDismissibleContentDismissed)(s) && a.default.track(l.AnalyticEvents.SIGNUP_COMPLETED, {
     target_key: e,
-    selected_option_key: s.selectedOptionKey,
-    email: s.email,
-    guild_id: s.guildId,
-    metadata: (0, l.extractMetadata)(s),
+    selected_option_key: d.selectedOptionKey,
+    email: d.email,
+    guild_id: d.guildId,
+    metadata: (0, c.extractMetadata)(d),
     completed: r
-  }), (0, a.markDismissibleContentAsDismissed)(i.DismissibleContent.GAME_ONE_USER_SIGNUPS, {
-    dismissAction: d.ContentDismissActionType.PRIMARY,
+  }), (0, n.markDismissibleContentAsDismissed)(s, {
+    dismissAction: o.ContentDismissActionType.PRIMARY,
     forceTrack: !0
-  }), n.default.dispatch({
+  }), i.default.dispatch({
     type: "COMPLETE_SIGN_UP",
-    email: s.email,
+    email: d.email,
     targetKey: e,
-    selectedOptionKey: s.selectedOptionKey
+    selectedOptionKey: d.selectedOptionKey
   }))
 }
 
-function p(t) {
-  (0, a.markDismissibleContentAsDismissed)(i.DismissibleContent.GAME_ONE_USER_SIGNUPS, {
-    dismissAction: d.ContentDismissActionType.DISMISS,
+function r(t, e) {
+  (0, n.markDismissibleContentAsDismissed)(e, {
+    dismissAction: o.ContentDismissActionType.DISMISS,
     forceTrack: !0
-  }), n.default.dispatch({
+  }), i.default.dispatch({
     type: "DISMISS_SIGN_UP",
     targetKey: t
   })

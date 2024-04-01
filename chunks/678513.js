@@ -5,7 +5,9 @@ var l, a, s, i, r = n("442837"),
   u = n("445507");
 let d = {
     "valorant-user": u.VALORANT_USER_SIGNUP,
-    "valorant-admin": u.VALORANT_GUILD_SIGNUP
+    "valorant-admin": u.VALORANT_GUILD_SIGNUP,
+    "genshin-user": u.GENSHIN_USER_SIGNUP,
+    "genshin-admin": u.GENSHIN_ADMIN_SIGNUP
   },
   c = null,
   f = {},
