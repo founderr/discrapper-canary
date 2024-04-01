@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  a = n("470079"),
-  l = n("287734"),
+  l = n("470079"),
+  a = n("287734"),
   i = n("475468"),
   r = n("358555"),
   o = n("944486"),
@@ -23,7 +23,7 @@ function T(e) {
     guild: n,
     channel: T,
     messageData: I
-  } = e, m = u.default.getGuildId(), N = o.default.getChannelId(m), p = a.useCallback(() => {
+  } = e, m = u.default.getGuildId(), N = o.default.getChannelId(m), p = l.useCallback(() => {
     var e;
     c.default.track(E.AnalyticEvents.CHANNEL_LINK_PREVIEW_JOINED, {
       author_id: null === (e = I.author) || void 0 === e ? void 0 : e.id,
@@ -32,7 +32,7 @@ function T(e) {
       link_channel_type: T.type,
       guild_id: m,
       channel_id: N
-    }), (0, i.transitionToChannel)(n.id, T.id), l.default.selectVoiceChannel(T.id)
+    }), (0, i.transitionToChannel)(n.id, T.id), a.default.selectVoiceChannel(T.id)
   }, [null === (t = I.author) || void 0 === t ? void 0 : t.id, n.id, T.id, T.type, m, N]), S = (0, s.jsx)(d.default.Channel, {
     channel: T
   });

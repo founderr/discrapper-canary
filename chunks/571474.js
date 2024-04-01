@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var s, a, l, i, r = n("442837"),
+var s, l, a, i, r = n("442837"),
   o = n("570140"),
   u = n("70956"),
   d = n("709054"),
@@ -16,12 +16,12 @@ class T extends(i = r.default.Store) {
     return _
   }
 }
-l = "PremiumPromoStore", (a = "displayName") in(s = T) ? Object.defineProperty(s, a, {
-  value: l,
+a = "PremiumPromoStore", (l = "displayName") in(s = T) ? Object.defineProperty(s, l, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new T(o.default, {
+}) : s[l] = a, t.default = new T(o.default, {
   CONNECTION_OPEN: function() {
     return _ !== (_ = E.default.getFriendIDs().length >= 10 && d.default.extractTimestamp(c.default.getId()) < Date.now() - f)
   }

@@ -25,8 +25,8 @@ var i = n("735250"),
   T = n("323588"),
   f = n("753194"),
   S = n("598077"),
-  h = n("671533"),
-  A = n("880008"),
+  A = n("671533"),
+  h = n("880008"),
   m = n("49012"),
   N = n("981631"),
   O = n("856651"),
@@ -70,7 +70,7 @@ function C(e) {
   }
   let G = _.default.get((0, E.useLegacyPlatformType)(S.type)),
     w = null == G ? void 0 : null === (t = G.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(G, S);
-  null != M && M ? d = (0, i.jsx)(A.default, {
+  null != M && M ? d = (0, i.jsx)(h.default, {
     className: a()(R.__invalid_connectedAccountOpenIconContainer, R.connectedAccountHideIcon),
     foregroundColor: "currentColor"
   }) : null != w && (d = (0, i.jsx)(u.Anchor, {
@@ -85,9 +85,9 @@ function C(e) {
         trusted: (null == G ? void 0 : G.type) !== N.PlatformTypes.DOMAIN
       }, e)
     },
-    children: (0, i.jsx)(h.default, {
+    children: (0, i.jsx)(A.default, {
       className: R.connectedAccountOpenIcon,
-      direction: h.default.Directions.RIGHT
+      direction: A.default.Directions.RIGHT
     })
   }));
   let B = (0, u.useToken)(o.default.colors.INTERACTIVE_MUTED).hex(),

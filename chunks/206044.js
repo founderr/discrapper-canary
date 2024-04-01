@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("803997"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("803997"),
+  i = n.n(a),
   r = n("442837"),
   o = n("846519"),
   u = n("481060"),
@@ -25,8 +25,8 @@ let g = e => {
   let {
     quest: t,
     location: n
-  } = e, [l, i] = a.useState(!1), r = a.useRef(new o.Timeout);
-  a.useEffect(() => {
+  } = e, [a, i] = l.useState(!1), r = l.useRef(new o.Timeout);
+  l.useEffect(() => {
     let e = r.current;
     return function() {
       e.stop()
@@ -40,8 +40,8 @@ let g = e => {
     }), (0, _.copy)((0, N.getQuestUrl)(t.id)), i(!0), r.current.start(1e3, () => i(!1))
   };
   return (0, s.jsx)(u.Tooltip, {
-    forceOpen: l,
-    shouldShow: l,
+    forceOpen: a,
+    shouldShow: a,
     color: u.Tooltip.Colors.GREEN,
     text: A.default.Messages.COPY_SUCCESS_1,
     children: () => (0, s.jsx)(u.Button, {
@@ -56,22 +56,22 @@ t.default = e => {
   var t;
   let {
     isFocused: n,
-    quest: l,
+    quest: a,
     location: o,
     size: _
-  } = e, T = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), M = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), O = a.useMemo(() => (0, N.isAssetAnimated)(l.config.assets.hero), [l]), R = a.useRef(null), L = (0, I.useIsQuestExpired)(l), v = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, P = (0, I.useQuestFormattedDate)(l.config.expiresAt, {
+  } = e, T = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), M = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), O = l.useMemo(() => (0, N.isAssetAnimated)(a.config.assets.hero), [a]), R = l.useRef(null), v = (0, I.useIsQuestExpired)(a), L = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, P = (0, I.useQuestFormattedDate)(a.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
-  }), D = (0, I.useQuestFormattedDate)(l.config.rewardCodeExpiresAt, {
+  }), D = (0, I.useQuestFormattedDate)(a.config.rewardCodeExpiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
   });
-  a.useEffect(() => {
+  l.useEffect(() => {
     null != R.current && (n ? R.current.play() : (R.current.pause(), R.current.currentTime = 0))
   }, [n]);
-  let x = (0, N.getHeroAssetUrl)(l);
+  let x = (0, N.getHeroAssetUrl)(a);
   return (0, s.jsxs)("div", {
     className: i()(h.outerContainer, {
       [h.outerContainerGiftInventory]: o === m.QuestContent.QUEST_INVENTORY_CARD,
@@ -100,7 +100,7 @@ t.default = e => {
             children: [(0, s.jsx)(p.default, {
               className: h.partnerBranding,
               gameTileSize: p.GameTileSizes.MEDIUM,
-              quest: l,
+              quest: a,
               theme: T
             }), (0, s.jsx)(S.default, {
               color: "always-white"
@@ -110,24 +110,24 @@ t.default = e => {
             children: [(0, s.jsx)(u.Heading, {
               variant: "lg" === _ ? "heading-xxl/bold" : "sm" === _ ? "heading-xl/bold" : "heading-lg/bold",
               children: A.default.Messages.QUEST.format({
-                questName: l.config.messages.questName
+                questName: a.config.messages.questName
               })
             }), (0, s.jsx)(u.Text, {
               variant: "text-xs/normal",
-              children: v ? A.default.Messages.QUESTS_CLAIM_BY.format({
+              children: L ? A.default.Messages.QUESTS_CLAIM_BY.format({
                 expirationDate: D
               }) : A.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: P
               })
             })]
           })]
-        }), !L && o === m.QuestContent.QUEST_INVENTORY_CARD && (0, s.jsx)(g, {
-          quest: l,
+        }), !v && o === m.QuestContent.QUEST_INVENTORY_CARD && (0, s.jsx)(g, {
+          quest: a,
           location: o
         })]
       }), (0, s.jsx)(C.QuestsEntryContextMenuPopout, {
         questContent: o,
-        quest: l,
+        quest: a,
         shouldShowDisclosure: !0,
         hideLearnMore: o === m.QuestContent.QUEST_INVENTORY_CARD,
         showShareLink: o === m.QuestContent.QUESTS_EMBED,

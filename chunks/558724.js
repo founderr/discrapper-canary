@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return A
   }
 }), n("47120"), n("913527");
-var s, a, l, i = n("149765"),
+var s, l, a, i = n("149765"),
   r = n("442837");
 n("433517");
 var o = n("570140"),
@@ -35,7 +35,7 @@ let N = {
   S = {},
   C = null,
   A = 864e5;
-(l = s || (s = {})).IS_OWNER = "is_owner", l.IS_ADMIN = "is_admin", l.IS_COMMUNITY = "is_community", l.GUILD_SIZE = "guild_size", l.IS_HUB = "is_hub", l.IS_VIEWING = "is_viewing", l.GUILD_PERMISSIONS = "guild_permissions", l.GUILD_SIZE_ALL = "guild_size_all";
+(a = s || (s = {})).IS_OWNER = "is_owner", a.IS_ADMIN = "is_admin", a.IS_COMMUNITY = "is_community", a.GUILD_SIZE = "guild_size", a.IS_HUB = "is_hub", a.IS_VIEWING = "is_viewing", a.GUILD_PERMISSIONS = "guild_permissions", a.GUILD_SIZE_ALL = "guild_size_all";
 let h = new Set(Object.values(s));
 
 function g(e) {
@@ -50,13 +50,13 @@ function g(e) {
     if (0 === t.length) return !0;
     for (let e of t)
       if (!h.has(e)) return !1;
-    let a = t.includes("guild_size_all"),
-      l = !0;
+    let l = t.includes("guild_size_all"),
+      a = !0;
     for (let r of Object.values(E.default.getGuilds())) {
-      if (a || t.includes("guild_size")) {
+      if (l || t.includes("guild_size")) {
         let e = c.default.getMemberCount(r.id);
         if (null == e || null != n[0] && e < n[0] || null != n[1] && e > n[1]) {
-          l = !1;
+          a = !1;
           continue
         }
       }
@@ -80,9 +80,9 @@ function g(e) {
       null == (S = null != S ? S : {})[e.key] && (S[e.key] = e);
       let E = _.default.getGuildId(),
         m = null != E && E === r.id;
-      if ((!t.includes("is_viewing") || m) && !a) return !0
+      if ((!t.includes("is_viewing") || m) && !l) return !0
     }
-    return !!a && !!l || !1
+    return !!l && !!a || !1
   }(e)
 }
 
@@ -111,7 +111,7 @@ function O() {
     C = null
   }()
 }
-class R extends(a = r.default.PersistedStore) {
+class R extends(l = r.default.PersistedStore) {
   initialize(e) {
     p = null != e ? e : N, this.syncWith([_.default], O)
   }

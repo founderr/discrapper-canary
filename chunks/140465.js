@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return S
   },
   useFetchChurnUserDiscountOffer: function() {
-    return A
+    return h
   },
   useHasDiscountApplied: function() {
     return f
@@ -65,7 +65,7 @@ let f = () => {
         return
     }
   },
-  h = async () => {
+  A = async () => {
     let e = null;
     try {
       var t;
@@ -75,7 +75,7 @@ let f = () => {
       e = null !== (t = n.body.offer) && void 0 !== t ? t : null
     } catch (e) {}
     return e
-  }, A = e => {
+  }, h = e => {
     let [t, n] = i.useState(!1), [r, s] = i.useState(!1), [a, o] = i.useState(null);
     if (e) return {
       churnUserDiscountOffer: a,
@@ -84,7 +84,7 @@ let f = () => {
     let l = () => {
       n(!0), s(!1)
     };
-    return !r && !t && (s(!0), h().then(e => {
+    return !r && !t && (s(!0), A().then(e => {
       o(e), l()
     }).catch(e => {
       l()

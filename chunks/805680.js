@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("410575"),
   f = n("347469"),
   S = n("40851"),
-  h = n("367907"),
-  A = n("907040"),
+  A = n("367907"),
+  h = n("907040"),
   m = n("455708"),
   N = n("315744"),
   O = n("603074"),
@@ -51,7 +51,7 @@ let k = y.MIN_EXPRESSION_PICKER_WIDTH + U.EmojiSize.MEDIUM,
       "aria-controls": t ? o : void 0,
       ...l,
       onClick: () => {
-        h.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_TAB_CLICKED, {
+        A.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_TAB_CLICKED, {
           tab: r,
           badged: !1
         }), (0, M.setExpressionPickerView)(r)
@@ -165,7 +165,7 @@ t.default = r.memo(function(e) {
   }, [ed, eu]), r.useEffect(() => {
     if (null != ee.current && !Z.current) {
       var e, t, n, i;
-      ei === y.ExpressionPickerViewType.EMOJI ? (null == $ ? void 0 : null === (e = $.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == $ || null === (t = $.current) || void 0 === t || t.onPickerOpen(), Z.current = !0) : ei === y.ExpressionPickerViewType.STICKER ? (null == $ ? void 0 : null === (n = $.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !eo && (null == $ || null === (i = $.current) || void 0 === i || i.onPickerOpen(), Z.current = !0) : (h.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
+      ei === y.ExpressionPickerViewType.EMOJI ? (null == $ ? void 0 : null === (e = $.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == $ || null === (t = $.current) || void 0 === t || t.onPickerOpen(), Z.current = !0) : ei === y.ExpressionPickerViewType.STICKER ? (null == $ ? void 0 : null === (n = $.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !eo && (null == $ || null === (i = $.current) || void 0 === i || i.onPickerOpen(), Z.current = !0) : (A.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
         width: ee.current.offsetWidth,
         tab: ei,
         badged: !1
@@ -265,7 +265,7 @@ t.default = r.memo(function(e) {
                 onSelectGIF: g,
                 hideFavorites: l,
                 persistSearch: !0
-              }) : null, ei === y.ExpressionPickerViewType.EMOJI ? (0, i.jsx)(A.default, {
+              }) : null, ei === y.ExpressionPickerViewType.EMOJI ? (0, i.jsx)(h.default, {
                 hasTabWrapper: !0,
                 persistSearch: !0,
                 channel: j,

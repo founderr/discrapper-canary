@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   canEnableForcedColors: function() {
-    return A
+    return h
   }
 });
 var i = n("735250");
@@ -20,9 +20,9 @@ let c = window.matchMedia("(prefers-reduced-motion: reduce)"),
   T = window.matchMedia("(prefers-color-scheme: dark)"),
   f = window.matchMedia("(prefers-color-scheme: light)"),
   S = window.matchMedia("(forced-colors: active)"),
-  h = 5;
+  A = 5;
 
-function A() {
+function h() {
   return "windows" === (0, l.getOS)()
 }
 t.default = {
@@ -41,10 +41,10 @@ t.default = {
     })
   },
   maybeShowKeyboardNavigationExplainerModal() {
-    h = Math.max(h - 1, 0), ! function() {
+    A = Math.max(A - 1, 0), ! function() {
       let e = a.default.getCurrentUser();
       return null == e || Date.now() - +e.createdAt < 864e5
-    }() && !d.default.keyboardNavigationExplainerModalSeen && 0 === h && (0, r.openModalLazy)(async () => {
+    }() && !d.default.keyboardNavigationExplainerModalSeen && 0 === A && (0, r.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("6380"), n.e("73872")]).then(n.bind(n, "461964"));
@@ -61,7 +61,7 @@ t.default = {
   handleSystemColorPreferencesChanged() {
     let e;
     T.matches ? e = _.ThemeTypes.DARK : f.matches && (e = _.ThemeTypes.LIGHT);
-    let t = (!l.isPlatformEmbedded || A()) && S.matches ? "active" : "none";
+    let t = (!l.isPlatformEmbedded || h()) && S.matches ? "active" : "none";
     s.default.wait(() => {
       u.systemColorPreferencesChanged(e, t)
     })

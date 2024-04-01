@@ -66,18 +66,18 @@ t.default = e => {
     overrideDiscriminator: u,
     forcePomelo: c,
     ...E
-  } = e, f = (0, a.useStateFromStores)([l.default], () => l.default.hidePersonalInformation), S = f || t || n.isNonUserBot(), h = n.toString(), A = _.default.getName(n), m = s ? h : null != r ? r : A, N = n.isPomelo() || c;
-  if (N || m !== h) {
-    let e = m === h && N && s ? _.default.getUserTag(n, {
+  } = e, f = (0, a.useStateFromStores)([l.default], () => l.default.hidePersonalInformation), S = f || t || n.isNonUserBot(), A = n.toString(), h = _.default.getName(n), m = s ? A : null != r ? r : h, N = n.isPomelo() || c;
+  if (N || m !== A) {
+    let e = m === A && N && s ? _.default.getUserTag(n, {
         forcePomelo: c
       }) : m,
-      t = o && e !== "@".concat(h) ? _.default.getUserTag(n) : void 0;
+      t = o && e !== "@".concat(A) ? _.default.getUserTag(n) : void 0;
     return (0, i.jsx)(T, {
       primary: e,
       secondary: t,
       botVerified: n.isVerifiedBot(),
       botType: I(n),
-      showStreamerModeTooltip: f && e !== A,
+      showStreamerModeTooltip: f && e !== h,
       ...E
     })
   }
@@ -85,7 +85,7 @@ t.default = e => {
     name: m,
     botType: I(n),
     botVerified: n.isVerifiedBot(),
-    discriminator: S || m !== h ? null : null != u ? u : n.discriminator,
+    discriminator: S || m !== A ? null : null != u ? u : n.discriminator,
     ...E
   })
 }

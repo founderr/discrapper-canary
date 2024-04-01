@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SPOTIFY_APPLICATION_ID: function() {
-    return l
+    return a
   },
   SpotifyApplication: function() {
     return o
@@ -11,15 +11,15 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("726542"),
-  a = n("973616");
-let l = "spotify",
-  i = s.default.get(l);
-class r extends a.default {
+  l = n("973616");
+let a = "spotify",
+  i = s.default.get(a);
+class r extends l.default {
   getIconURL(e) {
     return i.icon.lightPNG
   }
   constructor() {
-    super({}), this.id = l, this.name = i.name
+    super({}), this.id = a, this.name = i.name
   }
 }
 let o = new r

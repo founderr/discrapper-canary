@@ -9,8 +9,8 @@ var a, o, l, u, d = n("153832"),
   T = n("899742"),
   f = n("598077"),
   S = n("12647"),
-  h = n("358085"),
-  A = n("374023");
+  A = n("358085"),
+  h = n("374023");
 let m = "BrowserHandoffStore",
   N = !1,
   O = new E.Timeout;
@@ -28,10 +28,10 @@ function C() {
 }
 class g extends(u = _.default.Store) {
   initialize() {
-    !1 !== c.Storage.get(m) && (N = h.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
+    !1 !== c.Storage.get(m) && (N = A.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
   }
   isHandoffAvailable() {
-    return !A.ProcessArgs.isDisallowPopupsSet() && N
+    return !h.ProcessArgs.isDisallowPopupsSet() && N
   }
   get user() {
     return s

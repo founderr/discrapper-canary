@@ -1,26 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   getApplicationSubscriptionSystemMessageASTContent: function() {
-    return a
+    return l
   }
 });
 var s = n("689938");
 
-function a(e) {
+function l(e) {
   let {
     application: t,
     username: n,
-    usernameOnClick: a,
-    medium: l
+    usernameOnClick: l,
+    medium: a
   } = e;
   return null != t ? s.default.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_MOBILE.astFormat({
     username: n,
     applicationName: t.name,
-    usernameOnClick: a,
-    medium: l
+    usernameOnClick: l,
+    medium: a
   }) : s.default.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION_MOBILE.astFormat({
     username: n,
-    usernameOnClick: a,
-    medium: l
+    usernameOnClick: l,
+    medium: a
   })
 }

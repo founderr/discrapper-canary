@@ -19,7 +19,7 @@ var i, r = n("392711"),
   f = n("51144"),
   S = n("981631");
 
-function h(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -27,7 +27,7 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = Object.freeze([]),
+let h = Object.freeze([]),
   m = {};
 
 function N(e) {
@@ -132,7 +132,7 @@ class g {
   getVoiceStatesForChannel(e) {
     this.processPending();
     let t = this._voiceStates.values(e);
-    return 0 === t.length ? A : t
+    return 0 === t.length ? h : t
   }
   countVoiceStatesForChannel(e) {
     return this.processPending(), this._voiceStates.size(e)
@@ -147,7 +147,7 @@ class g {
     }
   }
   constructor(e) {
-    h(this, "guildId", void 0), h(this, "_pending", new Set), h(this, "_voiceStates", new o.SecondaryIndexMap(e => {
+    A(this, "guildId", void 0), A(this, "_pending", new Set), A(this, "_voiceStates", new o.SecondaryIndexMap(e => {
       let {
         voiceState: {
           channelId: t
@@ -204,7 +204,7 @@ class v extends(i = a.default.Store) {
     return N(null != e ? e : S.ME).getVersion()
   }
 }
-h(v, "displayName", "SortedVoiceStateStore"), t.default = new v(l.default, {
+A(v, "displayName", "SortedVoiceStateStore"), t.default = new v(l.default, {
   CONNECTION_OPEN: function() {
     m = {}
   },

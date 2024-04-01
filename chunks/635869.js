@@ -1,55 +1,55 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return h
   }
 }), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("392711"),
-  l = n.n(o),
+var a = n("735250"),
+  s = n("470079"),
+  l = n("803997"),
+  i = n.n(l),
+  r = n("392711"),
+  o = n.n(r),
   u = n("718017"),
   d = n("442837"),
-  _ = n("607070"),
-  c = n("320173");
+  c = n("607070"),
+  f = n("320173");
 let E = {
   mass: 10,
   tension: 550,
   friction: 140
 };
 
-function I(e) {
+function h(e) {
   let {
     className: t,
     pageMultiplier: n
-  } = e, s = (0, d.useStateFromStores)([_.default], () => _.default.useReducedMotion), [o, I] = r.useState({
+  } = e, l = (0, d.useStateFromStores)([c.default], () => c.default.useReducedMotion), [r, h] = s.useState({
     x: 0,
     y: 0
-  }), T = r.useMemo(() => l().throttle(e => {
-    if (s) return;
+  }), _ = s.useMemo(() => o().throttle(e => {
+    if (l) return;
     let t = (window.innerWidth - e.pageX * n) / 90;
-    I({
+    h({
       x: t,
       y: (window.innerHeight - e.pageY * n) / 90
     })
-  }, 20), [n, s]);
-  r.useEffect(() => (window.addEventListener("mousemove", T), () => window.removeEventListener("mousemove", T)), [T]);
-  let [f, S] = (0, u.useSpring)(() => ({
+  }, 20), [n, l]);
+  s.useEffect(() => (window.addEventListener("mousemove", _), () => window.removeEventListener("mousemove", _)), [_]);
+  let [C, S] = (0, u.useSpring)(() => ({
     x: 0,
     y: 0,
     config: E
   }));
-  return r.useEffect(() => {
+  return s.useEffect(() => {
     S({
-      x: o.x,
-      y: o.y
+      x: r.x,
+      y: r.y
     })
-  }, [o.x, o.y, S]), (0, i.jsx)(u.animated.div, {
+  }, [r.x, r.y, S]), (0, a.jsx)(u.animated.div, {
     style: {
-      transform: (0, u.to)([f.x, f.y], (e, t) => "translate3d(".concat(e, "px, ").concat(t, "px, 0)"))
+      transform: (0, u.to)([C.x, C.y], (e, t) => "translate3d(".concat(e, "px, ").concat(t, "px, 0)"))
     },
-    className: a()(c.background, t)
+    className: i()(f.background, t)
   })
 }

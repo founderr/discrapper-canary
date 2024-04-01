@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var s, a, l, i, r = n("913527"),
+var s, l, a, i, r = n("913527"),
   o = n.n(r),
   u = n("442837"),
   d = n("846519"),
@@ -29,20 +29,20 @@ let p = null,
       dropsQuestId: t,
       streamKey: n,
       game: s,
-      completed: a,
-      gameTitle: l
+      completed: l,
+      gameTitle: a
     } = M;
-    !(null == t || null == l || a || null == s || null == n || g.isStarted()) && (e ? (0, I.sendHeartbeat)(t, n, s.pid) : g.start(1 * T.default.Millis.MINUTE, () => {
+    !(null == t || null == a || l || null == s || null == n || g.isStarted()) && (e ? (0, I.sendHeartbeat)(t, n, s.pid) : g.start(1 * T.default.Millis.MINUTE, () => {
       (0, I.sendHeartbeat)(t, n, s.pid)
     }))
   },
   R = e => {
     M.retries = 0, M.completed = e.completed, M.initialProgressFetched = !0, M.progress = e.progress, M.lastCheckedAt = o().now(), h = M.completed ? N.TooltipActions.QUEST_COMPLETION : N.TooltipActions.TRACK_PROGRESS
   },
-  L = (e, t, n) => {
+  v = (e, t, n) => {
     (!M.completed || e.dropsQuestId !== M.dropsQuestId) && (M.game = t, M.dropsQuestId = e.dropsQuestId, M.gameTitle = e.title, M.completed = !1, M.interrupted = !1, M.streamKey = n, M.retries = 0, M.lastCheckedAt = o().now(), g.start(5e3, () => O(!0)))
   };
-class v extends(i = u.default.Store) {
+class L extends(i = u.default.Store) {
   initialize() {
     this.waitFor(E.default)
   }
@@ -90,12 +90,12 @@ class v extends(i = u.default.Store) {
     return null == t ? 0 : t.percent
   }
 }
-l = "DropsStore", (a = "displayName") in(s = v) ? Object.defineProperty(s, a, {
-  value: l,
+a = "DropsStore", (l = "displayName") in(s = L) ? Object.defineProperty(s, l, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new v(c.default, {
+}) : s[l] = a, t.default = new L(c.default, {
   DROPS_ELIGIBILITY_FETCH_SUCCESS: e => {
     C[e.dropsQuestId] = e.isEligible
   },
@@ -153,16 +153,16 @@ l = "DropsStore", (a = "displayName") in(s = v) ? Object.defineProperty(s, a, {
     let {
       streamType: n,
       guildId: s,
-      channelId: a,
-      pid: l
+      channelId: l,
+      pid: a
     } = e, i = (0, f.encodeStreamKey)({
       streamType: n,
       guildId: s,
-      channelId: a,
+      channelId: l,
       ownerId: _.default.getId()
     });
-    if (null == l) return;
-    let r = E.default.getGameForPID(l);
+    if (null == a) return;
+    let r = E.default.getGameForPID(a);
     if (null == r) return;
     let o = Object.values(N.DROPS_GAMES).find(e => e.gameSearchTerm.find(e => {
       var t;
@@ -176,9 +176,9 @@ l = "DropsStore", (a = "displayName") in(s = v) ? Object.defineProperty(s, a, {
     });
     if (null == u || !u.dropsEnabled) return;
     let d = u.autoEnrollment;
-    null != A[o.dropsQuestId] && A[o.dropsQuestId].isEnrolled || d ? L(o, r, i) : c.default.wait(async () => {
+    null != A[o.dropsQuestId] && A[o.dropsQuestId].isEnrolled || d ? v(o, r, i) : c.default.wait(async () => {
       var e;
-      await (0, I.fetchEnrolledUser)(o.dropsQuestId), (null === (e = A[o.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && L(o, r, i)
+      await (0, I.fetchEnrolledUser)(o.dropsQuestId), (null === (e = A[o.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && v(o, r, i)
     })
   },
   LOGOUT: function() {

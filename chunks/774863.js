@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var s, a, l, i, r = n("442837"),
+var s, l, a, i, r = n("442837"),
   o = n("570140"),
   u = n("70956"),
   d = n("709054");
@@ -25,12 +25,12 @@ class I extends(s = r.default.Store) {
     return null != t && !t.reportSubmit && d.default.age(t.messageId) < c
   }
 }
-i = "FalsePositiveStore", (l = "displayName") in(a = I) ? Object.defineProperty(a, l, {
+i = "FalsePositiveStore", (a = "displayName") in(l = I) ? Object.defineProperty(l, a, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new I(o.default, {
+}) : l[a] = i, t.default = new I(o.default, {
   LOGOUT: function() {
     (function() {
       f = {}, _ = {}
@@ -46,14 +46,14 @@ i = "FalsePositiveStore", (l = "displayName") in(a = I) ? Object.defineProperty(
     let {
       messageId: n,
       channelId: s,
-      attachments: a
-    } = e, l = {
+      attachments: l
+    } = e, a = {
       messageId: n,
       channelId: s,
-      attachments: a,
+      attachments: l,
       reportSubmit: !1
     }, i = null !== (t = _[s]) && void 0 !== t ? t : E;
-    _[s] = [...i, l], f[n] = l
+    _[s] = [...i, a], f[n] = a
   },
   MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: function(e) {
     let {

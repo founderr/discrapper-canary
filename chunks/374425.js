@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("477690"),
+  l = n("470079"),
+  a = n("477690"),
   i = n("481060"),
   r = n("100527"),
   o = n("367907"),
@@ -17,7 +17,7 @@ var s = n("735250"),
   m = n("981631"),
   N = n("474936"),
   p = n("14949");
-let S = (0, E.cssValueToNumber)(l.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
+let S = (0, E.cssValueToNumber)(a.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
   C = e => {
     null != e && o.default.trackWithMetadata(m.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
       type: N.PremiumUpsellTypes.STICKER_IN_MESSAGE_HOVER,
@@ -31,8 +31,8 @@ t.default = e => {
   let {
     renderableSticker: t,
     channel: n,
-    isInteracting: l
-  } = e, [o, E] = a.useState(!0), [_, m] = a.useState(String(Date.now())), [N] = (0, f.useStickerForRenderableSticker)(t, l), {
+    isInteracting: a
+  } = e, [o, E] = l.useState(!0), [_, m] = l.useState(String(Date.now())), [N] = (0, f.useStickerForRenderableSticker)(t, a), {
     analyticsLocations: A
   } = (0, u.default)(r.default.STICKER_MESSAGE), h = (0, s.jsxs)("span", {
     className: p.stickerName,
@@ -75,7 +75,7 @@ t.default = e => {
             },
             tag: "span",
             children: (0, s.jsx)(T.default, {
-              isInteracting: l,
+              isInteracting: a,
               size: S,
               sticker: null != N ? N : t
             })

@@ -25,7 +25,7 @@ function S(e, t, n) {
   }) : e[t] = n, e
 }
 
-function h(e, t) {
+function A(e, t) {
   let n = 0;
   for (let i = 0; i < t.length; i++) {
     let r = t[i];
@@ -39,7 +39,7 @@ function h(e, t) {
   return null
 }(s = i || (i = {}))[s.ABOVE = 0] = "ABOVE", s[s.BELOW = 1] = "BELOW";
 
-function A(e) {
+function h(e) {
   return {
     value: Math.min(Math.max(e.initialValue, e.minValue), e.maxValue),
     initialValueProp: e.initialValue,
@@ -59,7 +59,7 @@ function A(e) {
         sortedMarkers: a,
         markerPositions: o
       };
-      let l = h(n, a = t.sort((e, t) => e - t)),
+      let l = A(n, a = t.sort((e, t) => e - t)),
         u = a[0],
         d = a[a.length - 1],
         _ = d - u;
@@ -84,7 +84,7 @@ function A(e) {
 class m extends(r = o.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     return e.initialValue !== t.initialValueProp ? {
-      ...A(e),
+      ...h(e),
       active: t.active
     } : null
   }
@@ -112,8 +112,8 @@ class m extends(r = o.PureComponent) {
     } = this.state, {
       disabled: c,
       stickToMarkers: S,
-      className: h,
-      children: A,
+      className: A,
+      children: h,
       barStyles: m,
       fillStyles: N,
       mini: O,
@@ -163,7 +163,7 @@ class m extends(r = o.PureComponent) {
       focusTarget: this.containerRef,
       ringTarget: this.grabberRef,
       children: (0, a.jsxs)("div", {
-        className: u()(f.slider, h, {
+        className: u()(f.slider, A, {
           [f.disabled]: c,
           [f.mini]: O
         }),
@@ -197,7 +197,7 @@ class m extends(r = o.PureComponent) {
               width: k
             }
           })
-        }), A, (0, a.jsx)("div", {
+        }), h, (0, a.jsx)("div", {
           className: f.track,
           children: (0, a.jsx)(I.Tooltip, {
             color: I.Tooltip.Colors.GREY,
@@ -256,7 +256,7 @@ class m extends(r = o.PureComponent) {
     if (e.clientX <= l || e.clientX >= u) return;
     let d = e.clientX - i,
       _ = s[r] + d / (u - l) * 100;
-    null != (t = this.props.equidistant ? h(_, s) : h(this.unscaleValue(_), a)) && (null == o || o(a[t])), this.setState({
+    null != (t = this.props.equidistant ? A(_, s) : A(this.unscaleValue(_), a)) && (null == o || o(a[t])), this.setState({
       newClosestIndex: t
     })
   }
@@ -403,7 +403,7 @@ class m extends(r = o.PureComponent) {
     }), this.state = {
       active: !1,
       focused: !1,
-      ...A(e)
+      ...h(e)
     }
   }
 }

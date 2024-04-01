@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("399606"),
-  l = n("166081"),
+var l = n("399606"),
+  a = n("166081"),
   i = n("54797"),
   r = n("674180"),
   o = n("430824"),
@@ -35,13 +35,13 @@ function p(e) {
     thumbnailHeight: M,
     descriptionTextVariant: O = "text-sm/normal",
     showOpaqueBackground: R = !1
-  } = e, L = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), v = (0, a.useStateFromStores)([o.default], () => {
+  } = e, v = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), L = (0, l.useStateFromStores)([o.default], () => {
     var e;
     return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : N.EMPTY_STRING_SNOWFLAKE_ID)
-  }), P = (0, l.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), x = (0, d.useCanManageGuildProduct)(L), {
+  }), P = (0, a.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), x = (0, d.useCanManageGuildProduct)(v), {
     shouldHideGuildPurchaseEntryPoints: y
   } = (0, r.useShouldHideGuildPurchaseEntryPoints)(n), U = (0, _.usePrice)(t);
-  if (null == L || y) return null;
+  if (null == v || y) return null;
   let j = () => (0, I.openGuildProductInfoModal)({
       guildId: n,
       guildProductListingId: t.id,
@@ -57,7 +57,7 @@ function p(e) {
       showDeleteProduct: !1,
       showReportProduct: !0,
       onEditProduct: x ? () => {
-        E.openModal(L.id, t.id)
+        E.openModal(v.id, t.id)
       } : () => {},
       onUnpublishProduct: () => {},
       onDeleteProduct: () => {},
@@ -76,7 +76,7 @@ function p(e) {
     name: t.name,
     description: t.description,
     formattedPrice: U,
-    role: v,
+    role: L,
     ctaComponent: (0, s.jsx)(m.default, {
       guildId: n,
       guildProductListingId: t.id,

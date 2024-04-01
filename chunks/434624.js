@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("803997"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("803997"),
+  i = n.n(a),
   r = n("866442"),
   o = n("596454"),
   u = n("434650"),
@@ -17,10 +17,10 @@ var s = n("735250"),
   f = n("287151"),
   _ = n("903380"),
   T = n("317363");
-let I = a.memo(function(e) {
+let I = l.memo(function(e) {
     let t, n, {
-        useChatFontScaling: a,
-        hideEmoji: l,
+        useChatFontScaling: l,
+        hideEmoji: a,
         emoji: u,
         className: I,
         count: m,
@@ -35,20 +35,20 @@ let I = a.memo(function(e) {
         type: O
       } = e,
       R = O === E.ReactionTypes.BURST,
-      L = (0, f.isMeReaction)(N, p, O),
-      v = (0, d.useEmojiColorPalette)(R && null != C ? C : []),
-      P = a ? T : _,
+      v = (0, f.isMeReaction)(N, p, O),
+      L = (0, d.useEmojiColorPalette)(R && null != C ? C : []),
+      P = l ? T : _,
       D = R ? S : m,
       x = (0, c.getMinCounterWidth)(D, f.REACTION_MIN_WIDTH_DIGITS),
       y = {};
-    if (R && null != v) {
+    if (R && null != L) {
       var U;
       let {
         accentColor: e,
         backgroundColor: s,
-        opacity: a
-      } = v, l = null !== (U = (0, r.hex2rgb)(null != s ? s : "", a)) && void 0 !== U ? U : "";
-      L && (y.borderColor = s), y.background = l, t = e, n = e
+        opacity: l
+      } = L, a = null !== (U = (0, r.hex2rgb)(null != s ? s : "", l)) && void 0 !== U ? U : "";
+      v && (y.borderColor = s), y.background = a, t = e, n = e
     }
     let j = {
       minWidth: x,
@@ -57,13 +57,13 @@ let I = a.memo(function(e) {
     };
     return (0, s.jsxs)("div", {
       className: i()(P.reaction, P.reactionInner, I, {
-        [P.reactionMe]: L,
+        [P.reactionMe]: v,
         [P.reactionReadOnly]: A && !h && !M && !g
       }),
       style: y,
       children: [(0, s.jsx)(o.default, {
         className: i()({
-          [P.hideEmoji]: l
+          [P.hideEmoji]: a
         }),
         emojiId: u.id,
         emojiName: u.name,
@@ -76,12 +76,12 @@ let I = a.memo(function(e) {
       })]
     })
   }),
-  m = a.memo(function(e) {
+  m = l.memo(function(e) {
     let {
       showImmediate: t,
       reactions: n,
-      ...l
-    } = e, [i, r] = a.useState(!1), [o, d] = a.useTransition(), c = a.useCallback(e => {
+      ...a
+    } = e, [i, r] = l.useState(!1), [o, d] = l.useTransition(), c = l.useCallback(e => {
       e && !i && !o && d(() => {
         r(!0)
       })
@@ -92,7 +92,7 @@ let I = a.memo(function(e) {
       }), n.map(e => {
         var t, n;
         return (0, s.jsx)(T, {
-          ...l,
+          ...a,
           ...e
         }, (t = e, "".concat(t.type === E.ReactionTypes.BURST ? "burst:" : "").concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ":").concat(t.emoji.name)))
       })]

@@ -159,7 +159,7 @@ function H(e) {
       (0, m.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([l.e("99387"), l.e("7654"), l.e("61939")]).then(l.bind(l, "560114"));
+        } = await Promise.all([l.e("99387"), l.e("7654"), l.e("92893")]).then(l.bind(l, "560114"));
         return t => (0, n.jsx)(e, {
           ...t,
           channel: r,

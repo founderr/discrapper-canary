@@ -20,7 +20,7 @@ var i = n("147913"),
   f = n("46140"),
   S = n("70722");
 
-function h(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,7 +28,7 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = 12 * d.default.Millis.HOUR,
+let h = 12 * d.default.Millis.HOUR,
   m = 1 * d.default.Millis.MINUTE,
   N = 1 * d.default.Millis.SECOND,
   O = 5 * d.default.Millis.SECOND,
@@ -99,7 +99,7 @@ class v extends i.default {
     }) && !I.default.isFetchingCurrentQuests && (0, _.fetchCurrentQuests)()
   }
   constructor(...e) {
-    super(...e), h(this, "instantiatedAt", Date.now()), h(this, "streamKeyToHeartbeatState", new Map), h(this, "optimisticProgressUpdateIntervalIds", new Map), h(this, "lastOptimisticallyUpdatedProgressMap", new Map), h(this, "initiateHeartbeat", e => {
+    super(...e), A(this, "instantiatedAt", Date.now()), A(this, "streamKeyToHeartbeatState", new Map), A(this, "optimisticProgressUpdateIntervalIds", new Map), A(this, "lastOptimisticallyUpdatedProgressMap", new Map), A(this, "initiateHeartbeat", e => {
       let {
         questId: t,
         streamKey: n,
@@ -128,14 +128,14 @@ class v extends i.default {
         })
       };
       r()
-    }), h(this, "calculateHeartbeatDurationMs", e => {
+    }), A(this, "calculateHeartbeatDurationMs", e => {
       let t = I.default.quests.get(e);
       if (null == t || null == t.config || null == t.userStatus) return m;
       let {
         streamProgressSeconds: n
       } = t.userStatus, i = (60 * t.config.streamDurationRequirementMinutes - n) * d.default.Millis.SECOND;
       return i <= m ? i + N : m
-    }), h(this, "terminateHeartbeat", e => {
+    }), A(this, "terminateHeartbeat", e => {
       let {
         streamKey: t,
         sendTerminalHeartbeat: n
@@ -153,7 +153,7 @@ class v extends i.default {
           terminal: !0
         })
       }
-    }), h(this, "initiateOptimisticProgressUpdateInterval", e => {
+    }), A(this, "initiateOptimisticProgressUpdateInterval", e => {
       this.terminateOptimisticProgressUpdateInterval(e), this.optimisticProgressUpdateIntervalIds.set(e, window.setInterval(() => {
         var t;
         let n = C(),
@@ -189,9 +189,9 @@ class v extends i.default {
           }
         }
       }, p))
-    }), h(this, "terminateOptimisticProgressUpdateInterval", e => {
+    }), A(this, "terminateOptimisticProgressUpdateInterval", e => {
       window.clearInterval(this.optimisticProgressUpdateIntervalIds.get(e)), this.optimisticProgressUpdateIntervalIds.delete(e), this.lastOptimisticallyUpdatedProgressMap.delete(e)
-    }), h(this, "handleEnrollmentSuccess", e => {
+    }), A(this, "handleEnrollmentSuccess", e => {
       let {
         enrolledQuestUserStatus: {
           questId: t
@@ -217,9 +217,9 @@ class v extends i.default {
         });
         return
       }
-    }), h(this, "handlePostConnectionOpen", () => {
+    }), A(this, "handlePostConnectionOpen", () => {
       if (0 === I.default.lastFetchedCurrentQuests) window.setTimeout(this.maybeFetchCurrentQuests, Math.floor(Math.random() * O))
-    }), h(this, "handleSendHeartbeatSuccess", e => {
+    }), A(this, "handleSendHeartbeatSuccess", e => {
       let {
         streamKey: t,
         userStatus: n
@@ -228,14 +228,14 @@ class v extends i.default {
         streamKey: t,
         sendTerminalHeartbeat: !1
       }), this.terminateOptimisticProgressUpdateInterval(t)) : this.initiateOptimisticProgressUpdateInterval(t)
-    }), h(this, "handleSendHeartbeatFailure", e => {
+    }), A(this, "handleSendHeartbeatFailure", e => {
       let {
         streamKey: t
       } = e;
       this.terminateOptimisticProgressUpdateInterval(t)
-    }), h(this, "handleRunningGamesChange", () => {
-      !(this.instantiatedAt + A > Date.now() || I.default.lastFetchedCurrentQuests + A > Date.now()) && this.maybeFetchCurrentQuests()
-    }), h(this, "handleVoiceStateChange", () => {
+    }), A(this, "handleRunningGamesChange", () => {
+      !(this.instantiatedAt + h > Date.now() || I.default.lastFetchedCurrentQuests + h > Date.now()) && this.maybeFetchCurrentQuests()
+    }), A(this, "handleVoiceStateChange", () => {
       let e = a.default.getCurrentUserActiveStream(),
         t = C();
       null != e && this._handleVoiceStateChange({
@@ -252,7 +252,7 @@ class v extends i.default {
         channelId: i.channelId,
         quest: n
       })
-    }), h(this, "_handleVoiceStateChange", e => {
+    }), A(this, "_handleVoiceStateChange", e => {
       let {
         streamKey: t,
         channelId: n,
@@ -266,7 +266,7 @@ class v extends i.default {
         applicationId: i.config.applicationId,
         questId: i.id
       })
-    }), h(this, "handleEmbeddedActivityUpdate", e => {
+    }), A(this, "handleEmbeddedActivityUpdate", e => {
       let {
         channelId: t
       } = e, {
@@ -281,7 +281,7 @@ class v extends i.default {
         applicationId: n.config.applicationId,
         questId: n.id
       })
-    }), h(this, "handleStreamCreate", e => {
+    }), A(this, "handleStreamCreate", e => {
       let {
         streamKey: t
       } = e, {
@@ -302,7 +302,7 @@ class v extends i.default {
         applicationId: r.config.applicationId,
         questId: r.id
       })
-    }), h(this, "handleStreamStart", e => {
+    }), A(this, "handleStreamStart", e => {
       let {
         streamType: t,
         guildId: n,
@@ -321,7 +321,7 @@ class v extends i.default {
         applicationId: r.config.applicationId,
         questId: r.id
       })
-    }), h(this, "handleStreamClose", e => {
+    }), A(this, "handleStreamClose", e => {
       let {
         streamKey: t
       } = e;
@@ -329,7 +329,7 @@ class v extends i.default {
         streamKey: t,
         sendTerminalHeartbeat: !0
       })
-    }), h(this, "actions", {
+    }), A(this, "actions", {
       QUESTS_ENROLL_SUCCESS: this.handleEnrollmentSuccess,
       QUESTS_SEND_HEARTBEAT_SUCCESS: this.handleSendHeartbeatSuccess,
       QUESTS_SEND_HEARTBEAT_FAILURE: this.handleSendHeartbeatFailure,

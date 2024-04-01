@@ -88,9 +88,9 @@ let d = e => (null == e ? void 0 : e.premiumType) != null,
       return (0, i.uniqBy)(e, "id")
     }
   },
-  h = e => f(e, r.CollectiblesItemType.AVATAR_DECORATION),
-  A = e => S(e, r.CollectiblesItemType.AVATAR_DECORATION),
-  m = (e, t) => (0, i.uniqBy)([...h(e), ...A(t)], "id"),
+  A = e => f(e, r.CollectiblesItemType.AVATAR_DECORATION),
+  h = e => S(e, r.CollectiblesItemType.AVATAR_DECORATION),
+  m = (e, t) => (0, i.uniqBy)([...A(e), ...h(t)], "id"),
   N = (e, t) => {
     var n;
     let {

@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
 var s = n("689938");
 
-function a(e) {
+function l(e) {
   return e > 0 ? s.default.Messages.EMBEDDED_ACTIVITIES_MAX_PARTICIPANTS.format({
     count: e
   }) : s.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS

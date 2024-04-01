@@ -11,10 +11,10 @@ n.r(t), n.d(t, {
   }
 }), n("411104"), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("374470"),
+  l = n("470079"),
+  a = n("374470"),
   i = n("960048");
-let r = a.createContext({
+let r = l.createContext({
   registerAsset: () => {},
   unregisterAsset: () => {},
   hasError: !1,
@@ -22,41 +22,41 @@ let r = a.createContext({
 });
 
 function o(e) {
-  return (0, l.isElement)(e, HTMLImageElement) ? e.complete : !(0, l.isElement)(e, HTMLVideoElement) || e.readyState >= 2
+  return (0, a.isElement)(e, HTMLImageElement) ? e.complete : !(0, a.isElement)(e, HTMLVideoElement) || e.readyState >= 2
 }
 
 function u(e) {
   let {
     children: t,
     sentrySource: n
-  } = e, [u, d] = a.useState(!1), [c, E] = a.useState(new Set), [f, _] = a.useState(!1), T = a.useRef(!1);
-  a.useEffect(() => {
+  } = e, [u, d] = l.useState(!1), [c, E] = l.useState(new Set), [f, _] = l.useState(!1), T = l.useRef(!1);
+  l.useEffect(() => {
     let e = new Set;
     for (let t of c) !o(t) && e.add(t);
     e.size !== c.size && E(e)
   }, [c]);
-  let I = a.useCallback((e, t, s) => {
-      var a, r, o;
-      i.default.captureException(Error("".concat(t, ": ").concat((a = e, (0, l.isElement)(a, HTMLImageElement) ? a.getAttribute("src") : (0, l.isElement)(a, HTMLVideoElement) ? null !== (o = null === (r = a.querySelectorAll("source")[0]) || void 0 === r ? void 0 : r.getAttribute("src")) && void 0 !== o ? o : "video" : a.tagName), ", ").concat(s)), {
+  let I = l.useCallback((e, t, s) => {
+      var l, r, o;
+      i.default.captureException(Error("".concat(t, ": ").concat((l = e, (0, a.isElement)(l, HTMLImageElement) ? l.getAttribute("src") : (0, a.isElement)(l, HTMLVideoElement) ? null !== (o = null === (r = l.querySelectorAll("source")[0]) || void 0 === r ? void 0 : r.getAttribute("src")) && void 0 !== o ? o : "video" : l.tagName), ", ").concat(s)), {
         tags: {
           source: n
         }
       }), d(!0)
     }, [n]),
-    m = a.useCallback(e => {
+    m = l.useCallback(e => {
       E(t => {
         let n = new Set(t);
         return n.delete(e), n
       })
     }, []),
-    N = a.useCallback((e, t) => {
+    N = l.useCallback((e, t) => {
       var n;
       if (_(!0), o(e)) return;
       E(t => {
         let n = new Set(t);
         return n.add(e), n
       });
-      let s = (n = e, (0, l.isElement)(n, HTMLImageElement) ? "load" : (0, l.isElement)(n, HTMLVideoElement) ? "canplaythrough" : "load");
+      let s = (n = e, (0, a.isElement)(n, HTMLImageElement) ? "load" : (0, a.isElement)(n, HTMLVideoElement) ? "canplaythrough" : "load");
       e.addEventListener(s, function t() {
         m(e), e.removeEventListener(s, t)
       });
@@ -64,11 +64,11 @@ function u(e) {
         m(e), I(e, "Error loading asset", t), e.removeEventListener("error", n)
       })
     }, [I, m]),
-    p = a.useMemo(() => c.size > 0 || !f, [f, c]);
-  a.useEffect(() => {
+    p = l.useMemo(() => c.size > 0 || !f, [f, c]);
+  l.useEffect(() => {
     !p && (T.current = !0)
   }, [p]);
-  let S = a.useMemo(() => ({
+  let S = l.useMemo(() => ({
     registerAsset: N,
     unregisterAsset: m,
     hasError: u,
@@ -86,21 +86,21 @@ function d(e) {
     children: n
   } = e, {
     registerAsset: s,
-    unregisterAsset: l
-  } = a.useContext(r), i = a.useRef(null);
-  return a.useEffect(() => {
+    unregisterAsset: a
+  } = l.useContext(r), i = l.useRef(null);
+  return l.useEffect(() => {
     let e = i.current;
     return null != e && s(e, t), () => {
-      null != e && l(e)
+      null != e && a(e)
     }
-  }, [s, l, t]), n(i)
+  }, [s, a, t]), n(i)
 }
 
 function c() {
   let {
     hasError: e,
     isLoading: t
-  } = a.useContext(r);
+  } = l.useContext(r);
   return {
     hasError: e,
     isLoading: t

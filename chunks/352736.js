@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
 var s = n("25209"),
-  a = n("97797"),
-  l = n("35125"),
+  l = n("97797"),
+  a = n("35125"),
   i = n("786761"),
   r = n("739566"),
   o = n("499401"),
@@ -62,8 +62,8 @@ t.default = {
         }));
       case m.MessageTypes.RECIPIENT_REMOVE:
         if (null == M) return;
-        let L = e.author;
-        if (null == L || L.id === M.id) return (0, s.astToString)(N.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF.astFormat({
+        let v = e.author;
+        if (null == v || v.id === M.id) return (0, s.astToString)(N.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF.astFormat({
           username: R,
           usernameOnClick: m.NOOP
         }));
@@ -75,9 +75,9 @@ t.default = {
         }));
       case m.MessageTypes.CALL:
         let {
-          call: v
+          call: L
         } = e;
-        if (null != v && -1 === v.participants.indexOf(c.default.getId())) return (0, s.astToString)(N.default.Messages.SYSTEM_MESSAGE_CALL_STARTED.astFormat({
+        if (null != L && -1 === L.participants.indexOf(c.default.getId())) return (0, s.astToString)(N.default.Messages.SYSTEM_MESSAGE_CALL_STARTED.astFormat({
           username: R,
           usernameOnClick: m.NOOP
         }));
@@ -118,14 +118,14 @@ t.default = {
         });
       case m.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE:
         if (e instanceof d.default) return null;
-        return (0, s.astToString)((0, l.getRoleSubscriptionPurchaseSystemMessageContentMobile)({
+        return (0, s.astToString)((0, a.getRoleSubscriptionPurchaseSystemMessageContentMobile)({
           username: R,
           guildId: t.guild_id,
           roleSubscriptionData: e.role_subscription_data
         }));
       case m.MessageTypes.PURCHASE_NOTIFICATION:
         if (e instanceof d.default || (null === (p = e.purchase_notification) || void 0 === p ? void 0 : null === (I = p.guild_product_purchase) || void 0 === I ? void 0 : I.product_name) == null) return null;
-        return (0, s.astToString)((0, a.getGuildProductPurchaseSystemMessageContentMobile)({
+        return (0, s.astToString)((0, l.getGuildProductPurchaseSystemMessageContentMobile)({
           username: R,
           productName: e.purchase_notification.guild_product_purchase.product_name
         }));
@@ -165,12 +165,12 @@ t.default = {
         return e.content;
       case m.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED:
         return function(e, t, n) {
-          let a = E.default.getChannel(t);
-          if (null == a) return null;
-          let l = f.default.getGuild(a.getGuildId());
-          return null == l ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_NOTIFICATION.astFormat({
+          let l = E.default.getChannel(t);
+          if (null == l) return null;
+          let a = f.default.getGuild(l.getGuildId());
+          return null == a ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_NOTIFICATION.astFormat({
             username: e,
-            guildName: l.name,
+            guildName: a.name,
             time: "" !== n ? new Date(n).toLocaleString(N.default.getLocale(), {
               hour: "numeric",
               minute: "2-digit"
@@ -181,10 +181,10 @@ t.default = {
         return function(e, t) {
           let n = E.default.getChannel(t);
           if (null == n) return null;
-          let a = f.default.getGuild(n.getGuildId());
-          return null == a ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_NOTIFICATION.astFormat({
+          let l = f.default.getGuild(n.getGuildId());
+          return null == l ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_NOTIFICATION.astFormat({
             username: e,
-            guildName: a.name
+            guildName: l.name
           }))
         }(R, O);
       default:

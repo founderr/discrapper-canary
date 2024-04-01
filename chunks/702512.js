@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   DROPS_ELIGIBILITY_SEEN_GAMES_LOOKBACK_SECONDS: function() {
-    return l
+    return a
   },
   DROPS_GAMES: function() {
     return E
   },
   DROPS_PLATFORMS: function() {
-    return a
+    return l
   },
   DropsFaqUrl: function() {
     return i
@@ -29,8 +29,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("689938");
-let a = ["XBOX", "PLAYSTATION", "SWITCH", "PC"],
-  l = 2592e4,
+let l = ["XBOX", "PLAYSTATION", "SWITCH", "PC"],
+  a = 2592e4,
   i = "https://support.discord.com/hc/en-us/articles/9146392276375",
   r = {
     FORTNITE: "FORTNITE"

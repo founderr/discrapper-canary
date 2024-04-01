@@ -8,9 +8,9 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  a = n("470079"),
-  l = n("803997"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("803997"),
+  i = n.n(a),
   r = n("470167"),
   o = n("481060"),
   u = n("572691"),
@@ -27,20 +27,20 @@ let N = e => {
       attachment: t
     } = e, {
       url: n,
-      description: a
+      description: l
     } = t;
     return null == n ? null : (0, s.jsx)(S, {
       url: n,
-      description: a
+      description: l
     })
   },
   p = e => {
-    var t, n, a;
+    var t, n, l;
     let {
-      embed: l
+      embed: a
     } = e;
-    if (!T.SUPPORTED_EMBED_TYPES.has(l.type)) return null;
-    let i = void 0 !== l.video && l.type !== r.MessageEmbedTypes.GIFV ? l.video.url : null !== (a = null === (t = l.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== a ? a : null === (n = l.image) || void 0 === n ? void 0 : n.url;
+    if (!T.SUPPORTED_EMBED_TYPES.has(a.type)) return null;
+    let i = void 0 !== a.video && a.type !== r.MessageEmbedTypes.GIFV ? a.video.url : null !== (l = null === (t = a.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== l ? l : null === (n = a.image) || void 0 === n ? void 0 : n.url;
     return null == i ? null : (0, s.jsx)(S, {
       url: i
     })
@@ -49,10 +49,10 @@ let N = e => {
     let {
       url: t,
       description: n
-    } = e, a = (0, d.isVideoUrl)(t);
+    } = e, l = (0, d.isVideoUrl)(t);
     return (0, s.jsx)("div", {
       className: m.mediaContainer,
-      children: a ? (0, s.jsx)(f.default, {
+      children: l ? (0, s.jsx)(f.default, {
         className: i()(m.video, m.media),
         controls: !0,
         src: t
@@ -75,21 +75,21 @@ function A(e) {
   let {
     channelId: t,
     messageId: n,
-    isReportFalsePositiveLoading: l,
+    isReportFalsePositiveLoading: a,
     analyticsContext: i,
     attachmentPreview: r,
     embedPreview: u,
     onConfirmPress: d,
     transitionState: c,
     onClose: f
-  } = e, T = (0, E.useUID)(), S = a.useCallback(() => {
+  } = e, T = (0, E.useUID)(), S = l.useCallback(() => {
     (0, _.trackMediaRedactionAction)({
       action: _.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
       channelId: t,
       messageId: n,
       context: i
     }), f()
-  }, [t, n, i, f]), C = a.useCallback(() => {
+  }, [t, n, i, f]), C = l.useCallback(() => {
     null == d || d(), (0, _.trackMediaRedactionAction)({
       action: _.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
       channelId: t,
@@ -97,7 +97,7 @@ function A(e) {
       context: i
     })
   }, [t, n, i, d]);
-  return a.useEffect(() => {
+  return l.useEffect(() => {
     (0, _.trackMediaRedactionAction)({
       action: _.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
       channelId: t,
@@ -131,15 +131,15 @@ function A(e) {
     }), (0, s.jsxs)(o.ModalFooter, {
       children: [(0, s.jsx)(o.Button, {
         className: m.button,
-        disabled: l,
-        submitting: l,
+        disabled: a,
+        submitting: a,
         size: o.Button.Sizes.MEDIUM,
         color: o.Button.Colors.BRAND,
         onClick: C,
         children: I.default.Messages.CONFIRM
       }), (0, s.jsx)(o.Button, {
         className: m.button,
-        disabled: l,
+        disabled: a,
         color: o.Button.Colors.TRANSPARENT,
         size: o.Button.Sizes.MEDIUM,
         onClick: S,

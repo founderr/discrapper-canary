@@ -27,8 +27,8 @@ var i, r, s, a, o = n("348327"),
   T = n("709054"),
   f = n("823596"),
   S = n("733026"),
-  h = n("588215"),
-  A = n("496135"),
+  A = n("588215"),
+  h = n("496135"),
   m = n("893966");
 let N = new _.Logger("MemberSafetySearchManager");
 
@@ -183,7 +183,7 @@ async function P(e) {
       } = e, d = {};
       a && (d.unusual_dm_activity_until = {
         range: {
-          gte: Date.now() - h.UNUSUAL_DM_COMPARISON_DELTA
+          gte: Date.now() - A.UNUSUAL_DM_COMPARISON_DELTA
         }
       }), o && (d.communication_disabled_until = {
         range: {
@@ -233,19 +233,19 @@ async function P(e) {
       null != f && (i.join_source_type = {
         or_query: [f]
       });
-      let A = {
+      let h = {
           or_query: r,
           and_query: i
         },
         {
           selectedSort: m
         } = e;
-      return null != m && (A.sort = m), A
+      return null != m && (h.sort = m), h
     }(o), null == (s = p) ? r : {
       ...r,
       ...s
     }),
-    v = null !== (t = o.selectedSort) && void 0 !== t ? t : h.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC;
+    v = null !== (t = o.selectedSort) && void 0 !== t ? t : A.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC;
   if (function(e, t) {
       let n = L(e);
       return l()(n.query, t)
@@ -271,7 +271,7 @@ async function P(e) {
         query: M.query,
         guildId: e
       }), null == M.query) throw Error("Query is null");
-    await (0, A.searchGuildMembers)(e, M.query, {
+    await (0, h.searchGuildMembers)(e, M.query, {
       signal: null !== (i = null === (n = M.abortController) || void 0 === n ? void 0 : n.signal) && void 0 !== i ? i : void 0
     })
   } catch (e) {

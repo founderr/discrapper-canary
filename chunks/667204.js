@@ -22,8 +22,8 @@ var i = n("512722"),
   T = n("603721"),
   f = n("188597"),
   S = n("3148"),
-  h = n("346479"),
-  A = n("706454"),
+  A = n("346479"),
+  h = n("706454"),
   m = n("430824"),
   N = n("117530"),
   O = n("594174"),
@@ -72,7 +72,7 @@ async function V(e) {
     context: v,
     command: C,
     commandOrigin: G
-  }), await h.default.unarchiveThreadIfNecessary(v.channel.id);
+  }), await A.default.unarchiveThreadIfNecessary(v.channel.id);
   let V = [],
     x = [],
     Y = (0, y.getCommandAttachmentDraftType)(G);
@@ -163,13 +163,13 @@ async function V(e) {
         case u.ApplicationCommandOptionType.INTEGER:
           if ("text" === o.type) {
             let t = o.text.trim();
-            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? B(e, t, v, Number) : Number(D.normalizeNumericString(A.default.locale, t))
+            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? B(e, t, v, Number) : Number(D.normalizeNumericString(h.default.locale, t))
           }
           break;
         case u.ApplicationCommandOptionType.NUMBER:
           if ("text" === o.type) {
             let t = o.text.trim();
-            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? B(e, t, v, Number) : Number(D.normalizeNumericString(A.default.locale, t))
+            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? B(e, t, v, Number) : Number(D.normalizeNumericString(h.default.locale, t))
           }
           break;
         default:
@@ -260,7 +260,7 @@ let F = e => {
     } = e, {
       channel: I,
       guild: f
-    } = r, h = I.id, A = null == f ? void 0 : f.id, m = v.getCachedApplicationSection(r.channel, i.type, n);
+    } = r, A = I.id, h = null == f ? void 0 : f.id, m = v.getCachedApplicationSection(r.channel, i.type, n);
     if (null == m) return;
     let N = null === (t = m.application) || void 0 === t ? void 0 : t.bot;
     if (null == N && null != m.botId) try {
@@ -268,7 +268,7 @@ let F = e => {
     } catch {}
     let p = {
       ...(0, S.default)({
-        channelId: h,
+        channelId: A,
         content: "",
         type: i.type === u.ApplicationCommandType.CHAT ? U.MessageTypes.CHAT_INPUT_COMMAND : U.MessageTypes.CONTEXT_MENU_COMMAND,
         author: null != N ? N : {
@@ -289,21 +289,21 @@ let F = e => {
       },
       interaction_data: i
     };
-    a.default.receiveMessage(h, p, !0, {
+    a.default.receiveMessage(A, p, !0, {
       applicationId: n
     });
     let R = (e, t) => {
-        null == t && null != e && a.default.sendClydeError(h, e), s.default.dispatch({
+        null == t && null != e && a.default.sendClydeError(A, e), s.default.dispatch({
           type: "MESSAGE_SEND_FAILED",
           messageId: p.id,
-          channelId: h,
+          channelId: A,
           reason: t
         })
       },
       C = {
         applicationId: n,
-        channelId: h,
-        guildId: A,
+        channelId: A,
+        guildId: h,
         data: i,
         nonce: p.id,
         attachments: o,
@@ -318,9 +318,9 @@ let F = e => {
       onFailure: (e, t) => R(e, t),
       data: {
         interactionType: u.InteractionTypes.APPLICATION_COMMAND,
-        channelId: h
+        channelId: A
       }
-    }), null != o ? W(o, C.nonce, A, d).then(e => {
+    }), null != o ? W(o, C.nonce, h, d).then(e => {
       e && Y(C, _)
     }) : Y(C, _)
   };

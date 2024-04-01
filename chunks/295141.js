@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return m
   },
   getGuildRoleSubscriptionTrials: function() {
-    return h
+    return A
   },
   getGuildRoleSubscriptionsSettings: function() {
     return _
@@ -46,7 +46,7 @@ n.r(t), n.d(t, {
     return c
   },
   updateGuildRoleSubscriptionsTrial: function() {
-    return A
+    return h
   }
 });
 var i = n("544891"),
@@ -170,7 +170,7 @@ let o = async (e, t) => {
   } catch (e) {
     throw new r.APIError(e)
   }
-}, h = async e => {
+}, A = async e => {
   try {
     return (await i.HTTP.get({
       url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIALS(e)
@@ -178,7 +178,7 @@ let o = async (e, t) => {
   } catch (e) {
     throw new r.APIError(e)
   }
-}, A = async (e, t, n) => {
+}, h = async (e, t, n) => {
   try {
     return (await i.HTTP.patch({
       url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL(e, t),

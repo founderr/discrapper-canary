@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return C
   },
   useMultiSelect: function() {
-    return A
+    return h
   },
   useSingleSelect: function() {
     return m
@@ -28,12 +28,12 @@ var i = n("735250"),
   T = n("689938"),
   f = n("309399");
 let S = "data-listbox-item-id",
-  h = Object.freeze({
+  A = Object.freeze({
     STANDARD: f.selected,
     BRAND: f.selectedBrand
   });
 
-function A(e) {
+function h(e) {
   let [t, n] = r.useState(() => new Set(e));
   return [t, r.useCallback(e => {
     n(t => {
@@ -68,8 +68,8 @@ function p(e) {
     onChange: l,
     className: u,
     listClassName: I,
-    "aria-label": h,
-    multiSelect: A = !1,
+    "aria-label": A,
+    multiSelect: h = !1,
     autoFocus: m = !1,
     maxVisibleItems: p = 5,
     itemToString: R = N,
@@ -129,7 +129,7 @@ function p(e) {
         return (0, i.jsxs)("div", {
           ref: n,
           role: "combobox",
-          "aria-label": h,
+          "aria-label": A,
           "aria-expanded": D,
           "aria-controls": D ? y : void 0,
           "aria-owns": y,
@@ -174,7 +174,7 @@ function p(e) {
                 style: {
                   maxHeight: 46 * p
                 },
-                "aria-multiselectable": A,
+                "aria-multiselectable": h,
                 id: y,
                 ref: P,
                 className: a()(f.list, I, {
@@ -206,17 +206,17 @@ function C(e) {
     value: n,
     children: s,
     disabled: l = !1,
-    selectedColor: d = h.STANDARD,
+    selectedColor: d = A.STANDARD,
     ..._
   } = e, {
     activeDescendant: c,
     selected: E,
     setSelected: I,
     itemToString: T
-  } = r.useContext(O), A = T(n), m = c === A, N = null !== (t = null == _ ? void 0 : _.selected) && void 0 !== t ? t : E.has(n), p = (0, o.useListItem)(A);
+  } = r.useContext(O), h = T(n), m = c === h, N = null !== (t = null == _ ? void 0 : _.selected) && void 0 !== t ? t : E.has(n), p = (0, o.useListItem)(h);
   return (0, i.jsx)(u.Clickable, {
     tag: "li",
-    id: A,
+    id: h,
     onClick: () => l ? null : I(n),
     [S]: n,
     className: a()(f.item, {
@@ -234,7 +234,7 @@ function C(e) {
     })
   })
 }
-C.Colors = h, C.Label = function(e) {
+C.Colors = A, C.Label = function(e) {
   let {
     children: t
   } = e;

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Layer: function() {
-    return A
+    return h
   },
   LayerClassName: function() {
     return T
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return m
   },
   getParentLayerContainer: function() {
-    return h
+    return A
   }
 }), n("47120");
 var i = n("735250"),
@@ -77,11 +77,11 @@ let S = e => {
   })
 };
 
-function h(e) {
+function A(e) {
   let t = (0, c.default)(e, E.layerContainer);
   return l()(null != t, "Unexpected missing parent container"), t
 }
-let A = e => {
+let h = e => {
   let {
     layerContext: t,
     children: n
@@ -105,7 +105,7 @@ function m(e) {
         layerContext: t,
         ...e
       }),
-      Layer: e => (0, i.jsx)(A, {
+      Layer: e => (0, i.jsx)(h, {
         layerContext: t,
         ...e
       }),

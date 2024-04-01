@@ -22,8 +22,8 @@ var i = n("735250"),
   T = n("410030"),
   f = n("607070"),
   S = n("238302"),
-  h = n("703656"),
-  A = n("465670"),
+  A = n("703656"),
+  h = n("465670"),
   m = n("483444"),
   N = n("599250"),
   O = n("466111"),
@@ -252,7 +252,7 @@ function x(e) {
         children: [(0, i.jsx)(I.Clickable, {
           className: P.upsellClose,
           onClick: o,
-          children: (0, i.jsx)(A.default, {})
+          children: (0, i.jsx)(h.default, {})
         }), (0, i.jsxs)("div", {
           className: P.contentContainer,
           children: [(0, i.jsx)("img", {
@@ -268,7 +268,7 @@ function x(e) {
             discountOffer: O,
             children: y.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format({
               planName: (0, p.getDisplayNameFromSku)(d),
-              onClick: () => (0, h.transitionTo)(M.Routes.APPLICATION_STORE)
+              onClick: () => (0, A.transitionTo)(M.Routes.APPLICATION_STORE)
             })
           })]
         }), (0, i.jsx)(k, {
@@ -299,7 +299,7 @@ function x(e) {
             discountOffer: O,
             children: y.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format({
               planName: (0, p.getDisplayNameFromSku)(d),
-              onClick: () => (0, h.transitionTo)(M.Routes.APPLICATION_STORE)
+              onClick: () => (0, A.transitionTo)(M.Routes.APPLICATION_STORE)
             })
           })]
         }), (0, i.jsx)(k, {
@@ -332,7 +332,7 @@ function x(e) {
             discountOffer: O,
             children: y.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL_NO_BOLD_V2.format({
               planName: (0, p.getDisplayNameFromSku)(d),
-              onClick: () => (0, h.transitionTo)(M.Routes.APPLICATION_STORE)
+              onClick: () => (0, A.transitionTo)(M.Routes.APPLICATION_STORE)
             })
           })]
         }), (0, i.jsx)(k, {
@@ -357,7 +357,7 @@ function x(e) {
             planName: (0, p.getDisplayNameFromSku)(d),
             premiumMaxSize: d === v.PremiumSubscriptionSKUs.TIER_0 ? y.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED : y.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE,
             onClick: () => {
-              (0, h.transitionTo)(M.Routes.APPLICATION_STORE), null == o || o()
+              (0, A.transitionTo)(M.Routes.APPLICATION_STORE), null == o || o()
             }
           });
           break;
@@ -365,14 +365,14 @@ function x(e) {
           D = y.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format({
             planName: (0, p.getDisplayNameFromSku)(d),
             onClick: () => {
-              (0, h.transitionTo)(M.Routes.APPLICATION_STORE), null == o || o()
+              (0, A.transitionTo)(M.Routes.APPLICATION_STORE), null == o || o()
             }
           });
           break;
         case v.PremiumUpsellTypes.STREAM_QUALITY_UPSELL:
           D = y.default.Messages.STREAM_PREMIUM_UPSELL_WITH_ACTION.format({
             onClick: () => {
-              (0, h.transitionTo)(M.Routes.APPLICATION_STORE), null == o || o(), (0, c.closeAllModals)()
+              (0, A.transitionTo)(M.Routes.APPLICATION_STORE), null == o || o(), (0, c.closeAllModals)()
             }
           });
           break;
@@ -380,7 +380,7 @@ function x(e) {
           D = y.default.Messages.PREMIUM_CHAT_PERKS_MAX_MESSAGE_LENGTH_UPSELL.format({
             premiumMaxMessageLength: M.MAX_MESSAGE_LENGTH_PREMIUM,
             onClick: () => {
-              (0, h.transitionTo)(M.Routes.APPLICATION_STORE), null == o || o()
+              (0, A.transitionTo)(M.Routes.APPLICATION_STORE), null == o || o()
             }
           })
       }
@@ -416,7 +416,7 @@ function x(e) {
           discountOffer: O,
           children: y.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format({
             planName: (0, p.getDisplayNameFromSku)(d),
-            onClick: () => (0, h.transitionTo)(M.Routes.APPLICATION_STORE)
+            onClick: () => (0, A.transitionTo)(M.Routes.APPLICATION_STORE)
           })
         }), (0, i.jsx)(w, {
           className: P.upsellButton,
@@ -433,7 +433,7 @@ function x(e) {
         discountOffer: O,
         children: y.default.Messages.CLIENT_THEMES_EDITOR_UPSELL.format({
           onClick: () => {
-            (0, h.transitionTo)(M.Routes.APPLICATION_STORE), (0, S.closeEditor)()
+            (0, A.transitionTo)(M.Routes.APPLICATION_STORE), (0, S.closeEditor)()
           }
         })
       });
@@ -461,7 +461,7 @@ function x(e) {
           children: y.default.Messages.PREMIUM_CHAT_PERKS_MAX_MESSAGE_LENGTH_UPSELL.format({
             premiumMaxMessageLength: M.MAX_MESSAGE_LENGTH_PREMIUM,
             onClick: () => {
-              (0, h.transitionTo)(M.Routes.APPLICATION_STORE), null == o || o()
+              (0, A.transitionTo)(M.Routes.APPLICATION_STORE), null == o || o()
             }
           })
         }), (0, i.jsx)(w, {

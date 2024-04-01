@@ -1,39 +1,39 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return c
   }
 });
-var n = r("735250");
-r("470079");
-var s = r("803997"),
-  a = r.n(s),
-  i = r("937615"),
-  l = r("474936"),
-  c = r("689938"),
-  u = r("188537");
+var i = n("735250");
+n("470079");
+var s = n("803997"),
+  a = n.n(s),
+  l = n("937615"),
+  r = n("474936"),
+  u = n("689938"),
+  o = n("188537");
 
-function o(e) {
+function c(e) {
   let {
     price: t,
-    currency: r,
+    currency: n,
     intervalType: s,
-    className: o,
+    className: c,
     intervalCount: d = 1,
-    isPrepaidPaymentSource: f = !1
-  } = e, p = (0, i.formatPrice)(t, r), m = null;
-  return s === l.SubscriptionIntervalTypes.YEAR ? m = c.default.Messages.BILLING_PRICE_PER_YEAR_BOLD.format({
-    price: p
-  }) : s === l.SubscriptionIntervalTypes.MONTH && 1 === d ? m = c.default.Messages.BILLING_PRICE_PER_MONTH_BOLD.format({
-    price: p
-  }) : s === l.SubscriptionIntervalTypes.MONTH && d > 1 && (m = c.default.Messages.BILLING_PRICE_PER_MULTI_MONTHS_BOLD.format({
-    price: p,
+    isPrepaidPaymentSource: m = !1
+  } = e, f = (0, l.formatPrice)(t, n), p = null;
+  return s === r.SubscriptionIntervalTypes.YEAR ? p = u.default.Messages.BILLING_PRICE_PER_YEAR_BOLD.format({
+    price: f
+  }) : s === r.SubscriptionIntervalTypes.MONTH && 1 === d ? p = u.default.Messages.BILLING_PRICE_PER_MONTH_BOLD.format({
+    price: f
+  }) : s === r.SubscriptionIntervalTypes.MONTH && d > 1 && (p = u.default.Messages.BILLING_PRICE_PER_MULTI_MONTHS_BOLD.format({
+    price: f,
     intervalCount: d
-  })), (0, n.jsx)("div", {
-    className: a()(u.pricePerInterval, o),
-    "data-testid": "PricePerInterval-".concat(r),
-    children: null == s || f ? (0, n.jsx)("strong", {
-      children: p
-    }) : m
+  })), (0, i.jsx)("div", {
+    className: a()(o.pricePerInterval, c),
+    "data-testid": "PricePerInterval-".concat(n),
+    children: null == s || m ? (0, i.jsx)("strong", {
+      children: f
+    }) : p
   })
 }

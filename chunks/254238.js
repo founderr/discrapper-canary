@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   },
   disconnectRemote: function() {
-    return A
+    return h
   },
   fetchDevices: function() {
     return C
@@ -41,14 +41,14 @@ var i = n("434179"),
   f = n("981631"),
   S = n("689938");
 
-function h(e, t) {
+function A(e, t) {
   var n, i;
   _.default.track(f.AnalyticEvents.REMOTE_COMMAND_SENT, {
     command_type: e,
     remote_platform: null === (i = d.default.getSessionById(t)) || void 0 === i ? void 0 : null === (n = i.clientInfo) || void 0 === n ? void 0 : n.os
   })
 }
-async function A() {
+async function h() {
   let e = I.default.getAwaitingRemoteSessionInfo(),
     t = null == e ? void 0 : e.nonce;
   a.default.dispatch({
@@ -90,7 +90,7 @@ function N(e, t) {
       self_mute: n,
       self_deaf: i
     }
-  }), h("VOICE_STATE_UPDATE", e)
+  }), A("VOICE_STATE_UPDATE", e)
 }
 
 function O(e) {
@@ -100,7 +100,7 @@ function O(e) {
     payload: {
       type: "DISCONNECT"
     }
-  }), h("DISCONNECT", e), A()
+  }), A("DISCONNECT", e), h()
 }
 
 function p(e, t, n, i) {
@@ -114,7 +114,7 @@ function p(e, t, n, i) {
       id: t,
       ...i
     }
-  }), h("AUDIO_SETTINGS_UPDATE", e))
+  }), A("AUDIO_SETTINGS_UPDATE", e))
 }
 async function R() {
   let e;
@@ -226,7 +226,7 @@ async function D(e, t, n) {
   })
 }
 async function v(e, t, n) {
-  await E.default.maybeShowPTTAlert(e), await A();
+  await E.default.maybeShowPTTAlert(e), await h();
   let i = await R();
   await L(e, t, n, i), (0, T.default)(n.id, e)
 }

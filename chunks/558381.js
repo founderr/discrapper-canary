@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return c
   },
   goToApplicationStoreListing: function() {
-    return A
+    return h
   },
   goToSKUStoreListing: function() {
-    return h
+    return A
   },
   joinPublishedStoreListingSkuGuild: function() {
     return S
@@ -101,7 +101,7 @@ function S(e) {
   })
 }
 
-function h(e, t) {
+function A(e, t) {
   let {
     pathname: n,
     ...i
@@ -109,7 +109,7 @@ function h(e, t) {
   (0, a.transitionTo)(n, i)
 }
 
-function A(e, t) {
+function h(e, t) {
   let {
     pathname: n,
     ...i

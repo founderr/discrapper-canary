@@ -15,8 +15,8 @@ var i = n("990547"),
   T = n("430824"),
   f = n("546796"),
   S = n("573261"),
-  h = n("999382"),
-  A = n("981631"),
+  A = n("999382"),
+  h = n("981631"),
   m = n("689938");
 let N = new o.default("GuildSettingsActionCreators"),
   O = {
@@ -31,7 +31,7 @@ let N = new o.default("GuildSettingsActionCreators"),
     },
     async open(e, t, i, r) {
       var s;
-      await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("24267"), n.e("23755"), n.e("61613"), n.e("58153"), n.e("25381"), n.e("79504"), n.e("33053"), n.e("51238"), n.e("56630"), n.e("75475"), n.e("85093"), n.e("16114"), n.e("85552"), n.e("3084"), n.e("74456"), n.e("90508"), n.e("58227"), n.e("43502"), n.e("49398"), n.e("65840"), n.e("43643"), n.e("95003"), n.e("75301"), n.e("65892"), n.e("62856"), n.e("29598")]).then(n.bind(n, "994763")), (null === (s = T.default.getGuild(e)) || void 0 === s ? void 0 : s.hasFeature(A.GuildFeatures.COMMUNITY)) && (t === A.GuildSettingsSections.GUILD_AUTOMOD && (t = A.GuildSettingsSections.SAFETY, r = A.GuildSettingsSubsections.SAFETY_AUTOMOD), t === A.GuildSettingsSections.MEMBER_VERIFICATION && (t = A.GuildSettingsSections.SAFETY, r = A.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), O.init(e, t, i, r), (0, a.pushLayer)(A.Layers.GUILD_SETTINGS)
+      await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("24267"), n.e("23755"), n.e("61613"), n.e("58153"), n.e("25381"), n.e("79504"), n.e("33053"), n.e("51238"), n.e("56630"), n.e("75475"), n.e("85093"), n.e("16114"), n.e("85552"), n.e("3084"), n.e("74456"), n.e("90508"), n.e("58227"), n.e("43502"), n.e("49398"), n.e("65840"), n.e("43643"), n.e("95003"), n.e("75301"), n.e("65892"), n.e("62856"), n.e("29598")]).then(n.bind(n, "994763")), (null === (s = T.default.getGuild(e)) || void 0 === s ? void 0 : s.hasFeature(h.GuildFeatures.COMMUNITY)) && (t === h.GuildSettingsSections.GUILD_AUTOMOD && (t = h.GuildSettingsSections.SAFETY, r = h.GuildSettingsSubsections.SAFETY_AUTOMOD), t === h.GuildSettingsSections.MEMBER_VERIFICATION && (t = h.GuildSettingsSections.SAFETY, r = h.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), O.init(e, t, i, r), (0, a.pushLayer)(h.Layers.GUILD_SETTINGS)
     },
     close() {
       s.default.dispatch({
@@ -46,8 +46,8 @@ let N = new o.default("GuildSettingsActionCreators"),
     },
     setSection(e, t) {
       var n;
-      let i = h.default.getGuildId();
-      null != i && ((null === (n = T.default.getGuild(i)) || void 0 === n ? void 0 : n.hasFeature(A.GuildFeatures.COMMUNITY)) && (e === A.GuildSettingsSections.GUILD_AUTOMOD && (e = A.GuildSettingsSections.SAFETY, t = A.GuildSettingsSubsections.SAFETY_AUTOMOD), e === A.GuildSettingsSections.MEMBER_VERIFICATION && (e = A.GuildSettingsSections.SAFETY, t = A.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), s.default.dispatch({
+      let i = A.default.getGuildId();
+      null != i && ((null === (n = T.default.getGuild(i)) || void 0 === n ? void 0 : n.hasFeature(h.GuildFeatures.COMMUNITY)) && (e === h.GuildSettingsSections.GUILD_AUTOMOD && (e = h.GuildSettingsSections.SAFETY, t = h.GuildSettingsSubsections.SAFETY_AUTOMOD), e === h.GuildSettingsSections.MEMBER_VERIFICATION && (e = h.GuildSettingsSections.SAFETY, t = h.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), s.default.dispatch({
         type: "GUILD_SETTINGS_SET_SECTION",
         section: e,
         subsection: t
@@ -66,7 +66,7 @@ let N = new o.default("GuildSettingsActionCreators"),
     }),
     updateEmbed(e, t, n) {
       r.HTTP.patch({
-        url: A.Endpoints.GUILD_WIDGET(e),
+        url: h.Endpoints.GUILD_WIDGET(e),
         body: {
           enabled: t,
           channel_id: n
@@ -88,7 +88,7 @@ let N = new o.default("GuildSettingsActionCreators"),
         isEnabled: i
       } = e;
       return (0, f.default)(e => r.HTTP.post({
-        url: A.Endpoints.GUILD_MFA(t),
+        url: h.Endpoints.GUILD_MFA(t),
         body: {
           level: n,
           ...e
@@ -107,7 +107,7 @@ let N = new o.default("GuildSettingsActionCreators"),
     },
     updateIcon(e, t) {
       r.HTTP.patch({
-        url: A.Endpoints.GUILD(e),
+        url: h.Endpoints.GUILD(e),
         body: {
           icon: t
         },
@@ -134,7 +134,7 @@ let N = new o.default("GuildSettingsActionCreators"),
         ...n
       } = e, i = {
         ...n
-      }, r = h.default.getGuildId();
+      }, r = A.default.getGuildId();
       if (null != r) {
         var a;
         (null === (a = l.RaidAlertExperiment.getCurrentConfig({
@@ -162,7 +162,7 @@ let N = new o.default("GuildSettingsActionCreators"),
         defaultMessageNotifications: T,
         explicitContentFilter: f,
         features: S,
-        systemChannelFlags: h,
+        systemChannelFlags: A,
         preferredLocale: m,
         rulesChannelId: O,
         safetyAlertsChannelId: p,
@@ -184,7 +184,7 @@ let N = new o.default("GuildSettingsActionCreators"),
         verification_level: I,
         default_message_notifications: T,
         explicit_content_filter: f,
-        system_channel_flags: h,
+        system_channel_flags: A,
         rules_channel_id: O,
         discovery_splash: R,
         public_updates_channel_id: C,
@@ -196,7 +196,7 @@ let N = new o.default("GuildSettingsActionCreators"),
       return s.default.dispatch({
         type: "GUILD_SETTINGS_SUBMIT"
       }), r.HTTP.patch({
-        url: A.Endpoints.GUILD(e),
+        url: h.Endpoints.GUILD(e),
         query: {
           for_discovery: L.isForDiscovery
         },
@@ -217,7 +217,7 @@ let N = new o.default("GuildSettingsActionCreators"),
       })
     },
     updateGuildModeration: (e, t) => r.HTTP.patch({
-      url: A.Endpoints.GUILD(e),
+      url: h.Endpoints.GUILD(e),
       body: {
         verification_level: t.verificationLevel,
         explicit_content_filter: t.explicitContentFilter
@@ -228,7 +228,7 @@ let N = new o.default("GuildSettingsActionCreators"),
       let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
       return (0, f.default)(s => S.default.patch({
-        url: A.Endpoints.GUILD(e),
+        url: h.Endpoints.GUILD(e),
         body: {
           owner_id: t,
           code: r,
@@ -253,7 +253,7 @@ let N = new o.default("GuildSettingsActionCreators"),
     sendTransferOwnershipPincode(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
       return S.default.put({
-        url: A.Endpoints.GUILD_PINCODE(e),
+        url: h.Endpoints.GUILD_PINCODE(e),
         oldFormErrors: !0,
         trackedActionData: {
           event: i.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE,
@@ -265,7 +265,7 @@ let N = new o.default("GuildSettingsActionCreators"),
       })
     },
     deleteGuild: (e, t) => (0, f.default)(t => r.HTTP.post({
-      url: A.Endpoints.GUILD_DELETE(e),
+      url: h.Endpoints.GUILD_DELETE(e),
       body: t,
       oldFormErrors: !0
     }), {
@@ -282,7 +282,7 @@ let N = new o.default("GuildSettingsActionCreators"),
     }),
     async leaveGuild(e) {
       await r.HTTP.del({
-        url: A.Endpoints.GUILD_LEAVE(e),
+        url: h.Endpoints.GUILD_LEAVE(e),
         body: {
           lurking: c.default.isLurking(e) || I.default.isCurrentUserGuest(e)
         },
@@ -295,7 +295,7 @@ let N = new o.default("GuildSettingsActionCreators"),
         return
       }
       await r.HTTP.patch({
-        url: A.Endpoints.GUILD_MEMBER(e, t),
+        url: h.Endpoints.GUILD_MEMBER(e, t),
         body: {
           roles: n
         },
@@ -313,7 +313,7 @@ let N = new o.default("GuildSettingsActionCreators"),
       }))
     },
     bulkAddMemberRoles: (e, t, n) => r.HTTP.patch({
-      url: A.Endpoints.GUILD_ROLE_MEMBERS(e, t),
+      url: h.Endpoints.GUILD_ROLE_MEMBERS(e, t),
       body: {
         member_ids: n
       }
@@ -332,7 +332,7 @@ let N = new o.default("GuildSettingsActionCreators"),
       })
     },
     enableIntegration: (e, t, n) => r.HTTP.post({
-      url: A.Endpoints.GUILD_INTEGRATIONS(e),
+      url: h.Endpoints.GUILD_INTEGRATIONS(e),
       body: {
         type: t,
         id: n
@@ -340,11 +340,11 @@ let N = new o.default("GuildSettingsActionCreators"),
       oldFormErrors: !0
     }),
     disableIntegration: (e, t) => r.HTTP.del({
-      url: A.Endpoints.GUILD_INTEGRATION(e, t),
+      url: h.Endpoints.GUILD_INTEGRATION(e, t),
       oldFormErrors: !0
     }),
     updateIntegration: (e, t, n, i, s) => r.HTTP.patch({
-      url: A.Endpoints.GUILD_INTEGRATION(e, t),
+      url: h.Endpoints.GUILD_INTEGRATION(e, t),
       body: {
         expire_behavior: n,
         expire_grace_period: i,
@@ -354,7 +354,7 @@ let N = new o.default("GuildSettingsActionCreators"),
     }),
     syncIntegration(e, t) {
       r.HTTP.post({
-        url: A.Endpoints.GUILD_INTEGRATION_SYNC(e, t),
+        url: h.Endpoints.GUILD_INTEGRATION_SYNC(e, t),
         oldFormErrors: !0
       })
     }

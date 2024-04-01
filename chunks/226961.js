@@ -54,18 +54,18 @@ let E = O(_.MediaEngineContextTypes.DEFAULT, d.RTCDebugSections.TRANSPORT, 0),
 function S(e, t, n) {
   return "".concat(e, ":").concat(t, ":").concat(n)
 }
-class h {
+class A {
   static empty() {
-    return new h({})
+    return new A({})
   }
   put(e, t, n, i) {
     if ("" === i) {
       let i = {
         ...this.state
       };
-      return delete i[S(e, t, n)], new h(i)
+      return delete i[S(e, t, n)], new A(i)
     }
-    return new h({
+    return new A({
       [S(e, t, n)]: i,
       ...this.state
     })
@@ -78,7 +78,7 @@ class h {
     c(this, "state", void 0), this.state = e
   }
 }
-let A = h.empty(),
+let h = A.empty(),
   m = !1,
   N = null;
 
@@ -117,7 +117,7 @@ class g extends(i = r.default.Store) {
     return Object.values(T[e])
   }
   getVideoStreams() {
-    return A
+    return h
   }
   shouldRecordNextConnection() {
     return m
@@ -201,7 +201,7 @@ c(g, "displayName", "RTCDebugStore"), t.default = new g(a.default, {
     }), a.default.wait(() => o.open()))
   },
   RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: function(e) {
-    A = A.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId)
+    h = h.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId)
   },
   RTC_DEBUG_SET_RECORDING_FLAG: function(e) {
     let {

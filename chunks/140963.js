@@ -23,7 +23,7 @@ function f(e, t, n) {
   }) : e[t] = n, e
 }
 let S = /(\t|\s)/;
-class h extends r.PureComponent {
+class A extends r.PureComponent {
   componentDidMount() {
     !this.props.disableAutoFocus && (Promise.resolve().then(() => {
       var e;
@@ -257,4 +257,4 @@ class h extends r.PureComponent {
     })
   }
 }
-t.default = h
+t.default = A

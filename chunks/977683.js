@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("470079"),
-  a = n("410030"),
-  l = n("695346"),
+  l = n("410030"),
+  a = n("695346"),
   i = n("798628"),
   r = n("275344"),
   o = n("918088"),
@@ -17,8 +17,8 @@ function d(e, t) {
   let d = (0, r.useInteractivePollMessage)(e),
     c = (0, i.useChannelPollInteractions)(d.getChannelId())[d.id],
     E = (0, u.default)(null === (n = d.poll) || void 0 === n ? void 0 : n.expiry),
-    f = l.AnimateEmoji.useSetting(),
-    _ = (0, a.default)(),
+    f = a.AnimateEmoji.useSetting(),
+    _ = (0, l.default)(),
     T = null != t ? t : _;
   return s.useMemo(() => (0, o.default)(d, c, {
     animateEmoji: f,

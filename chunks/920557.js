@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120"), n("627341");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("803997"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("803997"),
+  i = n.n(a),
   r = n("544323"),
   o = n("718017"),
   u = n("278074"),
@@ -28,25 +28,25 @@ function A(e) {
   let {
     percentage: t,
     label: n,
-    canShowVoterDetails: l,
+    canShowVoterDetails: a,
     answerId: i
   } = e, o = (0, _.useUID)(), {
     channelId: u,
     messageId: d
-  } = (0, p.useMessageIds)(), [E, m] = a.useState(""), [N, S] = a.useState(!1), A = "" !== E && N, h = a.useCallback(() => {
+  } = (0, p.useMessageIds)(), [E, m] = l.useState(""), [N, S] = l.useState(!1), A = "" !== E && N, h = l.useCallback(() => {
     m((0, I.getPollAnswerVotesTooltipText)(d, u, i))
-  }, [d, u, i]), g = a.useCallback(() => {
+  }, [d, u, i]), g = l.useCallback(() => {
     h(), S(!0)
-  }, [h]), M = a.useCallback(() => {
+  }, [h]), M = l.useCallback(() => {
     S(!1)
-  }, []), O = a.useCallback(() => {
+  }, []), O = l.useCallback(() => {
     (0, T.handleShowVotesForAnswer)({
       channelId: u,
       messageId: d,
       answerId: i
     })
   }, [u, d, i]);
-  a.useEffect(() => {
+  l.useEffect(() => {
     if (N) return f.default.addReactChangeListener(h), () => {
       f.default.removeReactChangeListener(h)
     }
@@ -60,7 +60,7 @@ function A(e) {
   });
   return (0, s.jsxs)("div", {
     className: C.votesData,
-    children: [l ? (0, s.jsxs)(s.Fragment, {
+    children: [a ? (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(c.Tooltip, {
         text: (0, s.jsx)(c.Text, {
           variant: "text-sm/normal",
@@ -101,7 +101,7 @@ function A(e) {
 function h(e) {
   let {
     percentage: t
-  } = e, n = (0, d.useStateFromStores)([E.default], () => E.default.useReducedMotion), a = (0, o.useSpring)({
+  } = e, n = (0, d.useStateFromStores)([E.default], () => E.default.useReducedMotion), l = (0, o.useSpring)({
     from: {
       width: "0%"
     },
@@ -113,7 +113,7 @@ function h(e) {
   });
   return (0, s.jsx)(o.animated.span, {
     className: C.votePercentageBar,
-    style: a,
+    style: l,
     "aria-hidden": !0
   })
 }
@@ -122,14 +122,14 @@ function g(e) {
   let {
     answersInteraction: t,
     isSelected: n,
-    didSelfVote: a,
-    isVictor: l,
+    didSelfVote: l,
+    isVictor: a,
     isExpired: i,
     className: r
   } = e;
   return (0, u.match)({
     answersInteraction: t,
-    didSelfVote: a
+    didSelfVote: l
   }).with({
     answersInteraction: m.PollChatAnswerInteractionType.RADIO_BUTTONS
   }, () => (0, s.jsx)(N.PollAnswerRadioIcon, {
@@ -146,7 +146,7 @@ function g(e) {
     answersInteraction: m.PollChatAnswerInteractionType.LIST,
     didSelfVote: !0
   }, () => (0, s.jsx)(N.PollAnswerVotedIcon, {
-    isVictor: l,
+    isVictor: a,
     isExpired: i,
     size: 24,
     className: r
@@ -157,17 +157,17 @@ function M(e) {
   let {
     answer: t,
     isExpired: n,
-    answersInteraction: a,
-    canShowVoteCounts: l,
+    answersInteraction: l,
+    canShowVoteCounts: a,
     canShowVoterDetails: o
   } = e, u = !0 === t.isSelected, d = !0 === t.didSelfVote, E = !0 === t.isVictor;
   return (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)("div", {
       className: i()(C.answerInner, {
-        [C.currentlyVoting]: a !== m.PollChatAnswerInteractionType.LIST,
+        [C.currentlyVoting]: l !== m.PollChatAnswerInteractionType.LIST,
         [C.selected]: u
       }),
-      children: [l ? (0, s.jsx)(h, {
+      children: [a ? (0, s.jsx)(h, {
         percentage: t.votesPercentage
       }) : null, null != t.pollMedia.emoji && (0, s.jsx)(N.PollEmojiMediaView, {
         className: C.emoji,
@@ -180,13 +180,13 @@ function M(e) {
         children: t.pollMedia.text
       }), t.didSelfVote && (0, s.jsx)(r.VisuallyHidden, {
         children: S.default.Messages.POLL_ANSWER_VOTED_ARIA
-      }), l && (0, s.jsx)(A, {
+      }), a && (0, s.jsx)(A, {
         percentage: t.votesPercentage,
         label: t.votes,
         canShowVoterDetails: o,
         answerId: t.answerId
       }), (0, s.jsx)(g, {
-        answersInteraction: a,
+        answersInteraction: l,
         isSelected: u,
         didSelfVote: d,
         isVictor: E,
@@ -201,21 +201,21 @@ function O(e) {
   let {
     isExpired: t,
     answersInteraction: n,
-    canShowVoteCounts: a,
-    canTapAnswers: l,
+    canShowVoteCounts: l,
+    canTapAnswers: a,
     ...i
   } = e;
   return (0, s.jsx)(N.PollAnswers, {
     className: C.answersContainer,
     answerClassName: C.answer,
     answersInteraction: n,
-    canTapAnswers: l,
+    canTapAnswers: a,
     renderAnswerContent: e => (0, s.jsx)(M, {
       answer: e,
       isExpired: t,
       answersInteraction: n,
-      canShowVoteCounts: a,
-      canShowVoterDetails: l
+      canShowVoteCounts: l,
+      canShowVoterDetails: a
     }),
     ...i
   })

@@ -20,7 +20,7 @@ var i = n("512722"),
   f = n("987338"),
   S = n("981631");
 
-function h(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,7 +28,7 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = "scientist:triggered",
+let h = "scientist:triggered",
   m = "exerimentOverrides",
   N = "userExperimentOverrides",
   O = "guildExperimentOverrides",
@@ -286,11 +286,11 @@ function ee(e) {
   let {
     isSwitchingAccount: t
   } = e;
-  u.Storage.remove(A), !t && (u.Storage.remove(m), u.Storage.remove(N), u.Storage.remove(O), P = {}, U = {}), v = {}, L = [], C = {}, R = !1
+  u.Storage.remove(h), !t && (u.Storage.remove(m), u.Storage.remove(N), u.Storage.remove(O), P = {}, U = {}), v = {}, L = [], C = {}, R = !1
 }
 
 function et() {
-  R = !1, C = {}, u.Storage.remove(A)
+  R = !1, C = {}, u.Storage.remove(h)
 }
 
 function en() {
@@ -314,7 +314,7 @@ function en() {
 
 function ei(e) {
   try {
-    u.Storage.set(A, {
+    u.Storage.set(h, {
       v: 1,
       e: e
     })
@@ -408,7 +408,7 @@ function eo(e) {
 class el extends E.default {
   initialize() {
     C = function() {
-      let e = u.Storage.get(A);
+      let e = u.Storage.get(h);
       if (null == e || 1 !== e.v) return {};
       let t = e.e,
         n = Date.now(),
@@ -615,7 +615,7 @@ class el extends E.default {
       EXPERIMENT_OVERRIDE_BUCKET: ea,
       GUILD_CREATE: eo,
       GUILD_UPDATE: eo
-    }), h(this, "trackExposure", W)
+    }), A(this, "trackExposure", W)
   }
 }
-h(el, "displayName", "ExperimentStore"), h(el, "LATEST_SNAPSHOT_VERSION", 1), t.default = new el
+A(el, "displayName", "ExperimentStore"), A(el, "LATEST_SNAPSHOT_VERSION", 1), t.default = new el

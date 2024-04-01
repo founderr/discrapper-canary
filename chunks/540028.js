@@ -16,8 +16,8 @@ var r = n("442837"),
   T = n("621113"),
   f = n("981631"),
   S = n("354459"),
-  h = n("689938"),
-  A = n("438249");
+  A = n("689938"),
+  h = n("438249");
 
 function m(e) {
   let {
@@ -28,7 +28,7 @@ function m(e) {
     onSelect: T
   } = e;
   n && t();
-  let A = (0, r.useStateFromStores)([u.default], () => u.default.getSelfEmbeddedActivityForChannel(I)),
+  let h = (0, r.useStateFromStores)([u.default], () => u.default.getSelfEmbeddedActivityForChannel(I)),
     m = (0, r.useStateFromStores)([E.default], () => E.default.pipWindow),
     N = (0, r.useStateFromStores)([_.default], () => _.default.getSelectedParticipant(I)),
     O = (0, r.useStateFromStores)([_.default], () => _.default.getStreamParticipants(I));
@@ -57,14 +57,14 @@ function m(e) {
       let n = e.pipWindow.id,
         r = null === (t = e.participant) || void 0 === t ? void 0 : t.id,
         s = function(e) {
-          if (e.pipWindow.component === f.PictureInPictureComponents.EMBED_IFRAME && null != A) {
+          if (e.pipWindow.component === f.PictureInPictureComponents.EMBED_IFRAME && null != h) {
             var t;
-            let e = null === (t = d.default.getApplication(A.applicationId)) || void 0 === t ? void 0 : t.name;
-            return null == e ? h.default.Messages.SWITCH_PIP_TO_ACTIVITY : h.default.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({
+            let e = null === (t = d.default.getApplication(h.applicationId)) || void 0 === t ? void 0 : t.name;
+            return null == e ? A.default.Messages.SWITCH_PIP_TO_ACTIVITY : A.default.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({
               activityName: e
             })
           }
-          return null == e.participant || e.participant.type !== S.ParticipantTypes.STREAM ? h.default.Messages.SWITCH_PIP_TO_GO_LIVE : h.default.Messages.SWITCH_PIP_TO_USER_STREAM.format({
+          return null == e.participant || e.participant.type !== S.ParticipantTypes.STREAM ? A.default.Messages.SWITCH_PIP_TO_GO_LIVE : A.default.Messages.SWITCH_PIP_TO_USER_STREAM.format({
             username: e.participant.userNick
           })
         }(e),
@@ -98,7 +98,7 @@ t.default = function(e) {
       ...e
     }),
     children: e => (0, i.jsx)(a.Clickable, {
-      className: A.menuIcon,
+      className: h.menuIcon,
       ...e,
       children: (0, i.jsx)(T.default, {
         color: s.default.unsafe_rawColors.WHITE_500.css

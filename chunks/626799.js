@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return D
   }
 }), n("47120"), n("411104");
-var s, a = n("735250"),
-  l = n("470079"),
+var s, l = n("735250"),
+  a = n("470079"),
   i = n("613828"),
   r = n("442837"),
   o = n("481060"),
@@ -35,7 +35,7 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class R extends(s = l.Component) {
+class R extends(s = a.Component) {
   get analyticsLocation() {
     let {
       analyticsContext: {
@@ -58,7 +58,7 @@ class R extends(s = l.Component) {
     (null == e || null == n) && (0, u.fetchStoreListingForSku)(t)
   }
   renderViewInStoreButton() {
-    return (0, a.jsx)(o.Button.Link, {
+    return (0, l.jsx)(o.Button.Link, {
       to: this.getStoreListingLocation(),
       className: M.actionButton,
       color: o.Button.Colors.GREEN,
@@ -72,17 +72,17 @@ class R extends(s = l.Component) {
       storeListing: t,
       width: n,
       fetchFailed: s,
-      renderFallback: l
+      renderFallback: a
     } = this.props, r = n > _.HORIZONTAL_EMBED_BREAKPOINT;
-    if (null == e || null == t) return s ? l() : (0, a.jsx)(_.ResponsiveLoadingEmbedTile, {
+    if (null == e || null == t) return s ? a() : (0, l.jsx)(_.ResponsiveLoadingEmbedTile, {
       isHorizontal: r
     });
-    return e.productLine === h.SKUProductLines.COLLECTIBLES ? (0, a.jsx)(d.default, {
+    return e.productLine === h.SKUProductLines.COLLECTIBLES ? (0, l.jsx)(d.default, {
       section: h.AnalyticsSections.APPLICATION_EMBED,
       children: this.renderApplicationTile(e, t)
-    }) : (0, a.jsx)(d.default, {
+    }) : (0, l.jsx)(d.default, {
       section: h.AnalyticsSections.APPLICATION_EMBED,
-      children: (0, a.jsx)(i.Link, {
+      children: (0, l.jsx)(i.Link, {
         onClick: this.handleLinkClick,
         to: this.getStoreListingLocation(),
         onMouseEnter: this.handleMouseEnter,
@@ -125,14 +125,14 @@ class R extends(s = l.Component) {
       let {
         inLibrary: n,
         width: s,
-        renderCustomTitle: l,
+        renderCustomTitle: a,
         renderCustomTagline: i,
         renderCustomMedia: r
       } = this.props, {
         playing: o,
         muted: u
       } = this.state, d = s > _.HORIZONTAL_EMBED_BREAKPOINT;
-      return (0, a.jsx)(f.default, {
+      return (0, l.jsx)(f.default, {
         sku: e,
         storeListing: t,
         playing: o,
@@ -140,7 +140,7 @@ class R extends(s = l.Component) {
         inLibrary: n,
         onToggleMute: this.handleToggleMute,
         renderCustomActions: () => this.renderActions(e),
-        renderCustomTitle: l,
+        renderCustomTitle: a,
         renderCustomTagline: i,
         renderCustomMedia: r,
         isHorizontal: d,
@@ -151,26 +151,26 @@ class R extends(s = l.Component) {
         inLibrary: t,
         application: n,
         skuId: s,
-        libraryApplication: l,
+        libraryApplication: a,
         renderCustomActions: i
       } = this.props;
-      if (null != i) return (0, a.jsx)("div", {
+      if (null != i) return (0, l.jsx)("div", {
         className: M.tileActions,
         children: i()
       });
       if (null == n) return null;
       let r = null != n && n.primarySkuId === s,
-        u = null != l && l.hasFlag(h.LibraryApplicationFlags.HIDDEN);
-      return (0, a.jsxs)("div", {
+        u = null != a && a.hasFlag(h.LibraryApplicationFlags.HIDDEN);
+      return (0, l.jsxs)("div", {
         className: M.tileActions,
-        children: [!r || u ? this.renderViewInStoreButton() : (0, a.jsx)(c.default, {
+        children: [!r || u ? this.renderViewInStoreButton() : (0, l.jsx)(c.default, {
           application: n,
           customDisabledColor: o.Button.Colors.PRIMARY,
           size: o.Button.Sizes.SMALL,
           className: M.actionButton,
           source: h.AnalyticsLocations.MESSAGE_EMBED,
           onClick: this.handleActionButtonClick
-        }), t && !u || e.premium ? null : (0, a.jsx)(E.default, {
+        }), t && !u || e.premium ? null : (0, l.jsx)(E.default, {
           type: E.default.Types.EMBED,
           sku: e,
           inLibrary: !1
@@ -182,9 +182,9 @@ class R extends(s = l.Component) {
 O(R, "defaultProps", {
   renderFallback: h.NOOP
 });
-let L = [S.default, p.default, N.default, C.default];
+let v = [S.default, p.default, N.default, C.default];
 
-function v(e) {
+function L(e) {
   let {
     skuId: t
   } = e, n = S.default.get(t), s = null != n ? m.default.getApplication(n.applicationId) : null;
@@ -198,5 +198,5 @@ function v(e) {
   }
 }
 let P = (0, I.default)((0, T.default)(R));
-t.default = r.default.connectStores(L, v)(P);
-let D = (0, T.default)(r.default.connectStores(L, v)(R))
+t.default = r.default.connectStores(v, L)(P);
+let D = (0, T.default)(r.default.connectStores(v, L)(R))

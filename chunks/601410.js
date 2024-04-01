@@ -15,10 +15,10 @@ function S(e) {
   }
 }
 
-function h(e) {
+function A(e) {
   null != s && s.guildId === e ? (r = s, s = void 0) : r = S(e)
 }
-class A extends(d = c.default.Store) {
+class h extends(d = c.default.Store) {
   getSavedScrollPosition(e) {
     return f[e]
   }
@@ -29,12 +29,12 @@ class A extends(d = c.default.Store) {
     return null != a && a.guildId === e ? a.source : T.GuildHomeLandingSource.ORGANIC
   }
 }
-u = "GuildHomeStore", (l = "displayName") in(o = A) ? Object.defineProperty(o, l, {
+u = "GuildHomeStore", (l = "displayName") in(o = h) ? Object.defineProperty(o, l, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[l] = u, t.default = new A(E.default, {
+}) : o[l] = u, t.default = new h(E.default, {
   CONNECTION_OPEN: function() {
     f = {}
   },
@@ -62,7 +62,7 @@ u = "GuildHomeStore", (l = "displayName") in(o = A) ? Object.defineProperty(o, l
     }
     let o = (0, I.buildGuildStaticChannelId)(n, t);
     if (i === o || null != r && r.guildId === t) return !1;
-    h(t), i = o, null != a && a.guildId !== t && (a = void 0)
+    A(t), i = o, null != a && a.guildId !== t && (a = void 0)
   },
   CHANNEL_PRELOAD: function(e) {
     let {
@@ -91,7 +91,7 @@ u = "GuildHomeStore", (l = "displayName") in(o = A) ? Object.defineProperty(o, l
       guildId: t
     } = e;
     if (null != r && r.guildId === t) return !1;
-    h(t)
+    A(t)
   },
   LOGOUT: function() {
     r = void 0, s = void 0, a = void 0

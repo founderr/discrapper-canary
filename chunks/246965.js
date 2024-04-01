@@ -2,8 +2,8 @@
 n.r(t), n("411104");
 var s = n("735250");
 n("470079");
-var a = n("774078"),
-  l = n("100527"),
+var l = n("774078"),
+  a = n("100527"),
   i = n("906732"),
   r = n("963249"),
   o = n("466111"),
@@ -23,13 +23,13 @@ t.default = function(e) {
   } = (0, i.default)(function(e) {
     switch (e) {
       case c.PremiumSubscriptionSKUs.TIER_0:
-        return l.default.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
+        return a.default.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
       case c.PremiumSubscriptionSKUs.TIER_2:
-        return l.default.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE;
+        return a.default.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE;
       default:
         throw Error("Unsupported subscription tier: ".concat(e))
     }
-  }(T)), m = (0, d.usePremiumTrialOffer)(), N = (0, a.default)(null != m && null != m.expires_at ? Date.parse(m.expires_at) : 0);
+  }(T)), m = (0, d.usePremiumTrialOffer)(), N = (0, l.default)(null != m && null != m.expires_at ? Date.parse(m.expires_at) : 0);
   return null == m || (null === (t = m.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== T || null == m.expires_at || Object.values(N).every(e => 0 === e) ? null : (0, s.jsxs)(u.default, {
     color: function(e) {
       switch (e) {

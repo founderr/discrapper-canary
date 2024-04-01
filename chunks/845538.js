@@ -36,7 +36,7 @@ function I(e) {
   let T = r.useMemo(() => [() => n.e("36278").then(n.t.bind(n, "268147", 19)), () => n.e("66902").then(n.t.bind(n, "7171", 19)), () => n.e("99694").then(n.t.bind(n, "55562", 19))], []),
     f = I || !(s.isMobile || s.isTablet),
     S = f ? _.default.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : _.default.Messages.SEASONAL_GIFTING_POPUP_HEADER,
-    h = f ? _.default.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : _.default.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
+    A = f ? _.default.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : _.default.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
   return (0, i.jsxs)("div", {
     className: c.container,
     children: [(0, i.jsx)(o.default, {
@@ -66,7 +66,7 @@ function I(e) {
         look: a.Button.Looks.INVERTED,
         color: a.Button.Colors.BRAND,
         onClick: () => d(),
-        children: h
+        children: A
       })]
     }), (0, i.jsx)("div", {
       className: c.pointer

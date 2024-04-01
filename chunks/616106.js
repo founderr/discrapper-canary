@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var s, a, l, i, r = n("913527"),
+var s, l, a, i, r = n("913527"),
   o = n.n(r),
   u = n("442837"),
   d = n("570140"),
@@ -14,12 +14,12 @@ class T extends(i = u.default.Store) {
     return !(0, f.isPremium)(e) && _
   }
 }
-l = "SubscriptionRemindersStore", (a = "displayName") in(s = T) ? Object.defineProperty(s, a, {
-  value: l,
+a = "SubscriptionRemindersStore", (l = "displayName") in(s = T) ? Object.defineProperty(s, l, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new T(d.default, {
+}) : s[l] = a, t.default = new T(d.default, {
   BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function(e) {
     let {
       subscription: t

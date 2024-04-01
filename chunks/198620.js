@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return m
   },
   messageHasExpiredAttachmentUrl: function() {
-    return h
+    return A
   },
   removeSignedUrlParameters: function() {
     return E
@@ -58,10 +58,10 @@ function S(e) {
   return f(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(f)) || f(e.video)
 }
 
-function h(e) {
+function A(e) {
   return e.attachments.some(T) || e.embeds.some(S)
 }
-async function A(e) {
+async function h(e) {
   let t = await r.HTTP.post({
     url: l.Endpoints.ATTACHMENTS_REFRESH_URLS,
     body: {
@@ -76,6 +76,6 @@ async function m(e) {
     }).enabled) return e;
   let t = a.default.toURLSafe(e);
   if (null == t || !I(t)) return e;
-  let n = await A(e);
+  let n = await h(e);
   return null != n ? n : e
 }

@@ -11,8 +11,8 @@ var i, r, s, a, o = n("658722"),
   T = n("812206"),
   f = n("594190"),
   S = n("592745"),
-  h = n("706454"),
-  A = n("757266"),
+  A = n("706454"),
+  h = n("757266"),
   m = n("77498"),
   N = n("283595"),
   O = n("246946"),
@@ -35,7 +35,7 @@ let w = c()().subtract(1, "week"),
   V = !1;
 
 function F(e, t) {
-  return e.application.name.localeCompare(t.application.name, h.default.locale, {
+  return e.application.name.localeCompare(t.application.name, A.default.locale, {
     sensitivity: "base"
   })
 }
@@ -95,7 +95,7 @@ function X() {
           LibraryApplicationStore: N.default,
           LaunchableGameStore: S.default,
           DispatchApplicationStore: C.default,
-          ConnectedAppsStore: A.default,
+          ConnectedAppsStore: h.default,
           applicationId: e.id,
           branchId: e.branchId
         }),
@@ -120,7 +120,7 @@ function X() {
           LibraryApplicationStore: N.default,
           LaunchableGameStore: S.default,
           DispatchApplicationStore: C.default,
-          ConnectedAppsStore: A.default,
+          ConnectedAppsStore: h.default,
           applicationId: e,
           branchId: null
         }),
@@ -134,7 +134,7 @@ function X() {
 }
 class Q extends(i = E.default.Store) {
   initialize() {
-    this.syncWith([T.default, m.default, S.default, f.default, C.default, g.default, N.default, p.default, O.default, A.default], X, 200), this.syncWith([R.default, h.default], () => !0)
+    this.syncWith([T.default, m.default, S.default, f.default, C.default, g.default, N.default, p.default, O.default, h.default], X, 200), this.syncWith([R.default, A.default], () => !0)
   }
   get applicationFilterQuery() {
     return k
@@ -152,7 +152,7 @@ class Q extends(i = E.default.Store) {
     return j(this.libraryApplicationViewItems, k)
   }
   get sortedFilteredLibraryApplicationViewItems() {
-    return W(this.filteredLibraryApplicationViewItems, R.default.sortKey, R.default.sortDirection, h.default.locale)
+    return W(this.filteredLibraryApplicationViewItems, R.default.sortKey, R.default.sortDirection, A.default.locale)
   }
   get hiddenLibraryApplicationViewItems() {
     return K(B)

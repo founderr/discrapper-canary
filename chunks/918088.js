@@ -14,8 +14,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120"), n("627341");
 var s = n("278074"),
-  a = n("263568"),
-  l = n("339085"),
+  l = n("263568"),
+  a = n("339085"),
   i = n("633302"),
   r = n("592125"),
   o = n("375954"),
@@ -76,13 +76,13 @@ function g(e) {
 function M(e, t) {
   var n, s;
   let {
-    formattedExpirationLabel: a
+    formattedExpirationLabel: l
   } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, {
-    poll: l
+    poll: a
   } = e;
-  if (null == l) return;
+  if (null == a) return;
   let i = e.state === p.MessageStates.SENT,
-    r = i ? null != a ? a : (0, N.formatExpirationLabel)(l.expiry) : "",
+    r = i ? null != l ? l : (0, N.formatExpirationLabel)(a.expiry) : "",
     u = null == r && i,
     {
       selectedAnswerIds: d,
@@ -101,7 +101,7 @@ function M(e, t) {
     A = !E && S,
     h = A || u || _;
   return {
-    poll: l,
+    poll: a,
     canTapAnswers: i && (!S || E || h),
     canRemoveVote: A && i && !u,
     canShowVoteCounts: h,
@@ -136,8 +136,8 @@ function O(e, t) {
   if (null == g) return;
   let O = null === (o = r.default.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
     R = (0, I.getAvatarUrl)(g, O),
-    L = C.answers,
-    v = C.layout_type,
+    v = C.answers,
+    L = C.layout_type,
     P = M(e, t, {
       formattedExpirationLabel: p
     });
@@ -160,11 +160,11 @@ function O(e, t) {
     showResults: K
   } = P, W = (0, _.getTotalVotes)(w), z = S.default.Messages.POLL_VOTES_COUNT.format({
     count: String(W)
-  }), Q = Math.max(...L.map(e => {
+  }), Q = Math.max(...v.map(e => {
     var t, n;
     let s = A(w, "".concat(e.answer_id));
     return null !== (n = null == s ? void 0 : null === (t = s.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0
-  })), Z = L.map(e => {
+  })), q = v.map(e => {
     var t, n, r;
     let o = "".concat(e.answer_id),
       u = A(w, o),
@@ -192,8 +192,8 @@ function O(e, t) {
           if (null == e) return;
           let s = e.animated;
           if (null == s && null != e.id) {
-            var a, r;
-            s = null !== (r = null === (a = l.default.getCustomEmojiById(e.id)) || void 0 === a ? void 0 : a.animated) && void 0 !== r && r
+            var l, r;
+            s = null !== (r = null === (l = a.default.getCustomEmojiById(e.id)) || void 0 === l ? void 0 : l.animated) && void 0 !== r && r
           }
           let o = t && null != s && s;
           return {
@@ -219,11 +219,11 @@ function O(e, t) {
       style: m,
       shouldAnimateTransition: V,
       votesPercentage: Math.round(100 * (0 === W ? 0 : E / W)),
-      votes: (0, s.match)(v).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(E), ")")).otherwise(() => S.default.Messages.POLL_VOTES_COUNT.format({
+      votes: (0, s.match)(L).with(l.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(E), ")")).otherwise(() => S.default.Messages.POLL_VOTES_COUNT.format({
         count: String(E)
       }))
     }
-  }), q = (0, s.match)({
+  }), J = (0, s.match)({
     isExpired: k,
     canSubmitVote: U,
     hasVoted: G,
@@ -262,7 +262,7 @@ function O(e, t) {
     presentation: "button",
     enabled: U,
     type: "submit"
-  })), J = (0, s.match)({
+  })), Z = (0, s.match)({
     isExpired: k,
     isInteractive: F,
     isEditingVote: B
@@ -305,7 +305,7 @@ function O(e, t) {
   return {
     question: C.question,
     promptLabel: ee,
-    answers: Z,
+    answers: q,
     answersInteraction: (0, s.match)({
       tapShouldOpenVotersModal: Y,
       canTapAnswers: D,
@@ -332,13 +332,13 @@ function O(e, t) {
       tapShouldOpenVotersModal: !0,
       platform: "web"
     }, () => S.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID).otherwise(() => void 0),
-    layoutType: v,
+    layoutType: L,
     resources: (0, m.default)({
       theme: N,
-      layoutType: v
+      layoutType: L
     }),
     containerStyle: "normal",
-    primaryAction: q,
+    primaryAction: J,
     canTapAnswers: D,
     canSelectMultipleAnswers: $,
     hasSelectedAnswer: b,
@@ -346,7 +346,7 @@ function O(e, t) {
     hasVoted: G,
     isExpired: k,
     myAvatarUrl: R,
-    secondaryAction: J,
+    secondaryAction: Z,
     tertiaryAction: X
   }
 }

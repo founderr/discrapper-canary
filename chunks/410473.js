@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var s, a, l, i, r, o = n("442837"),
+var s, l, a, i, r, o = n("442837"),
   u = n("570140");
 (s = r || (r = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED", s[s.FAILED = 3] = "FAILED";
 let d = {},
@@ -21,12 +21,12 @@ class E extends o.Store {
     return d
   }
 }
-i = "MediaPostEmbedStore", (l = "displayName") in(a = E) ? Object.defineProperty(a, l, {
+i = "MediaPostEmbedStore", (a = "displayName") in(l = E) ? Object.defineProperty(l, a, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new E(u.default, {
+}) : l[a] = i, t.default = new E(u.default, {
   CONNECTION_OPEN: function() {
     d = {}, c = {}
   },

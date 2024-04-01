@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   CardDetails: function() {
-    return m
+    return f
   }
 }), n("47120");
 var i = n("735250"),
   s = n("470079"),
-  a = n("789978"),
-  r = n("727075"),
-  l = n("790472"),
+  l = n("789978"),
+  a = n("727075"),
+  r = n("790472"),
   o = n("349361"),
   c = n("777207"),
   d = n("330711"),
   u = n("960016");
 
-function m(e) {
+function f(e) {
   let {
     benefits: t,
     description: n,
-    imgSrc: m,
-    title: f,
-    onClose: h,
+    imgSrc: f,
+    title: h,
+    onClose: m,
     tag: x
-  } = e, v = s.useRef(null), [p, g] = s.useState(!0), j = null != m ? {
-    "--custom-background-url": "url(".concat(m.toString(), ")")
+  } = e, v = s.useRef(null), [p, g] = s.useState(!0), j = null != f ? {
+    "--custom-background-url": "url(".concat(f.toString(), ")")
   } : void 0, C = () => {
     var e;
     (null === (e = v.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? g(!1) : g(!0)
@@ -39,12 +39,12 @@ function m(e) {
         className: u.headerTop,
         children: [(0, i.jsx)("div", {
           children: x
-        }), (0, i.jsx)(a.FocusRing, {
+        }), (0, i.jsx)(l.FocusRing, {
           children: (0, i.jsx)("button", {
-            onClick: h,
+            onClick: m,
             className: u.closeBtn,
             type: "button",
-            children: (0, i.jsx)(r.CloseSmallIcon, {
+            children: (0, i.jsx)(a.CloseSmallIcon, {
               height: 24,
               width: 24,
               color: "var(--white)"
@@ -53,10 +53,10 @@ function m(e) {
         })]
       }), (0, i.jsx)("div", {
         className: u.headerImage,
-        children: null != m ? (0, i.jsx)("img", {
-          src: m.toString(),
+        children: null != f ? (0, i.jsx)("img", {
+          src: f.toString(),
           alt: ""
-        }) : (0, i.jsx)(l.TicketIcon, {
+        }) : (0, i.jsx)(r.TicketIcon, {
           color: "white",
           height: 96,
           width: 96
@@ -75,7 +75,7 @@ function m(e) {
           color: "header-primary",
           tag: "div",
           variant: "heading-xl/semibold",
-          children: f
+          children: h
         }), (null != n && "" !== n || null != t) && (0, i.jsxs)("div", {
           className: u.details,
           children: [(0, i.jsx)(c.Text, {

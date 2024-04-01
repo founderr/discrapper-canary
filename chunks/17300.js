@@ -28,7 +28,7 @@ function S(e, t) {
   var n;
   return (null === (n = u.default.getChannel(t)) || void 0 === n ? !void 0 : !n.isListenModeCapable()) || s.default.isSpeaker(e, t)
 }
-class h extends i.default {
+class A extends i.default {
   handleVoiceChannelSelect(e) {
     let {
       channelId: t
@@ -67,4 +67,4 @@ class h extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new h
+t.default = new A

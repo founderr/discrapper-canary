@@ -18,8 +18,8 @@ var i, r = n("735250"),
   T = n("278297"),
   f = n("768581"),
   S = n("176354"),
-  h = n("506071"),
-  A = n("149203");
+  A = n("506071"),
+  h = n("149203");
 
 function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ class N extends(i = s.PureComponent) {
       } = this.state;
     if (null != t) return t;
     if (null != n) {
-      let e = A.EMOJI_SIZE_MAP[l];
+      let e = h.EMOJI_SIZE_MAP[l];
       return f.default.getEmojiURL({
         id: n,
         animated: a && !0 === r && (!0 === s || u || !0 === o),
@@ -213,7 +213,7 @@ function p(e) {
       autoplay: null == e.autoplay ? t : e.autoplay,
       allowAnimatedEmoji: t
     },
-    i = __OVERLAY__ ? (0, _.useStateFromStores)([I.default], () => I.default.isInstanceFocused()) : (0, h.useIsWindowFocused)();
+    i = __OVERLAY__ ? (0, _.useStateFromStores)([I.default], () => I.default.isInstanceFocused()) : (0, A.useIsWindowFocused)();
   return (0, r.jsx)(O, {
     ...e,
     ...n,

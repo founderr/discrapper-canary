@@ -25,8 +25,8 @@ function E(e) {
     className: T,
     style: f,
     note: S,
-    children: h
-  } = e, A = r.useRef(null), m = r.useRef(null), N = r.useId(), O = (0, i.jsx)(l.Switch, {
+    children: A
+  } = e, h = r.useRef(null), m = r.useRef(null), N = r.useId(), O = (0, i.jsx)(l.Switch, {
     id: N,
     checked: t,
     onChange: I,
@@ -34,7 +34,7 @@ function E(e) {
     focusProps: {
       enabled: !1
     },
-    innerRef: A
+    innerRef: h
   });
   return (0, i.jsxs)("div", {
     style: f,
@@ -44,7 +44,7 @@ function E(e) {
     children: [(0, i.jsx)(o.FocusRing, {
       within: !0,
       offset: -4,
-      focusTarget: A,
+      focusTarget: h,
       ringTarget: m,
       children: (0, i.jsxs)("div", {
         className: c.labelRow,
@@ -52,7 +52,7 @@ function E(e) {
         children: [(0, i.jsx)("label", {
           htmlFor: N,
           className: c.title,
-          children: h
+          children: A
         }), (0, i.jsx)("div", {
           className: c.control,
           children: null != E ? (0, i.jsx)(u.TooltipContainer, {

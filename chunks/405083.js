@@ -1,35 +1,35 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return c
   }
 });
 var a = n("735250");
 n("470079");
-var r = n("355467"),
-  l = n("106976"),
-  i = n("703656"),
-  s = n("914010"),
+var i = n("355467"),
+  s = n("106976"),
+  r = n("703656"),
+  l = n("914010"),
   u = n("598"),
-  d = n("791785"),
-  c = n("981631");
+  o = n("791785"),
+  d = n("981631");
 
-function o(e) {
+function c(e) {
   let {
     onClose: t,
     onComplete: n,
-    forcesTransitionToGuild: o,
-    ...f
+    forcesTransitionToGuild: c,
+    ...h
   } = e, {
-    subscriptionMetadataRequest: m
+    subscriptionMetadataRequest: f
   } = (0, u.usePaymentContext)();
-  return (0, a.jsx)(d.PaymentModal, {
-    ...f,
+  return (0, a.jsx)(o.PaymentModal, {
+    ...h,
     onComplete: n,
     onClose: e => {
       t(e);
-      let a = null == m ? void 0 : m.guild_id;
-      e && null != a && (r.fetchSubscriptions(), (0, l.fetchEntitlementsForGuild)(a), null == n || n(), null != a && (o || s.default.getGuildId() !== a) && (0, i.transitionTo)(c.Routes.CHANNEL(a)))
+      let a = null == f ? void 0 : f.guild_id;
+      e && null != a && (i.fetchSubscriptions(), (0, s.fetchEntitlementsForGuild)(a), null == n || n(), null != a && (c || l.default.getGuildId() !== a) && (0, r.transitionTo)(d.Routes.CHANNEL(a)))
     },
     forceNewPaymentModal: !0
   })

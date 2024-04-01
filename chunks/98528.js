@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useExpressionGrid: function() {
-    return h
+    return A
   },
   useExpressionPickerGridKeyboardNavigation: function() {
     return S
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return E
   },
   useKeyboardNavigation: function() {
-    return A
+    return h
   },
   useShowUpsellForScrollPosition: function() {
     return T
@@ -201,8 +201,8 @@ let c = (0, l.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       autoFocusElement: !1,
       useVirtualFocus: !0
     }), {
-      gridContainerProps: h,
-      handleGridContainerKeyDown: A
+      gridContainerProps: A,
+      handleGridContainerKeyDown: h
     } = i.useMemo(() => {
       let e = S();
       return {
@@ -219,13 +219,13 @@ let c = (0, l.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       gridDispatch: I,
       getItemProps: T,
       getRowProps: f,
-      gridContainerProps: h,
-      handleGridContainerKeyDown: A,
+      gridContainerProps: A,
+      handleGridContainerKeyDown: h,
       isUsingKeyboardNavigation: u
     }
   };
 
-function h(e) {
+function A(e) {
   let {
     categories: t,
     collapsedCategories: n,
@@ -279,7 +279,7 @@ function h(e) {
   }, [t, n, r, o, a, s])
 }
 
-function A(e) {
+function h(e) {
   let {
     columnCounts: t,
     expressionsGrid: n,

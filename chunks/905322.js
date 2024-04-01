@@ -1,51 +1,51 @@
 "use strict";
 n.r(t), n.d(t, {
   Banner: function() {
-    return l
+    return r
   }
 });
 var i = n("735250"),
   s = n("470079"),
-  a = n("777207"),
-  r = n("764254");
+  l = n("777207"),
+  a = n("764254");
 
-function l(e) {
+function r(e) {
   let {
     title: t,
     subtitle: n,
-    iconSrc: l,
+    iconSrc: r,
     backgroundSrc: o
   } = e, c = s.useMemo(() => {
-    let e = null != o ? o : l;
+    let e = null != o ? o : r;
     if (null != e) return {
       "--custom-background-url": "url(".concat(e.toString(), ")")
     }
-  }, [o, l]);
+  }, [o, r]);
   return (0, i.jsxs)("div", {
-    className: r.wrapper,
+    className: a.wrapper,
     children: [(0, i.jsx)("div", {
-      className: r.background,
+      className: a.background,
       style: c
     }), (0, i.jsxs)("div", {
-      className: r.content,
-      children: [null != l && (0, i.jsx)("div", {
-        className: r.icon,
+      className: a.content,
+      children: [null != r && (0, i.jsx)("div", {
+        className: a.icon,
         children: (0, i.jsx)("img", {
-          src: l.toString(),
+          src: r.toString(),
           alt: ""
         })
       }), (0, i.jsxs)("div", {
-        children: [(0, i.jsx)(a.Text, {
+        children: [(0, i.jsx)(l.Text, {
           variant: "heading-xl/bold",
           tag: "div",
           children: t
-        }), null != n && (0, i.jsxs)(a.Text, {
+        }), null != n && (0, i.jsxs)(l.Text, {
           variant: "text-sm/normal",
           children: ["“", n, "”"]
         })]
       })]
     }), null != o ? (0, i.jsx)("div", {
-      className: r.image,
+      className: a.image,
       style: {
         backgroundImage: "url(".concat(o.toString(), ")")
       }

@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return F
   },
   EasterEggPosition: function() {
-    return a
+    return l
   },
   default: function() {
     return w
   }
 }), n("47120");
-var s, a, l, i, r = n("735250"),
+var s, l, a, i, r = n("735250"),
   o = n("470079"),
   u = n("803997"),
   d = n.n(u),
@@ -31,9 +31,9 @@ var s, a, l, i, r = n("735250"),
   M = n("267642"),
   O = n("981631"),
   R = n("689938"),
-  L = n("152209");
-(l = s || (s = {})).ENTER = "enter", l.CONFETTI = "confetti", l.LEAF_PEEL = "leaf_peel", l.LEAF_FALL = "leaf_fall", l.EXIT = "exit";
-let v = {
+  v = n("152209");
+(a = s || (s = {})).ENTER = "enter", a.CONFETTI = "confetti", a.LEAF_PEEL = "leaf_peel", a.LEAF_FALL = "leaf_fall", a.EXIT = "exit";
+let L = {
   enter: {
     BEG: 0,
     END: 22
@@ -55,7 +55,7 @@ let v = {
     END: 200
   }
 };
-(i = a || (a = {})).TOP_LEFT = "TOP_LEFT", i.TOP_RIGHT = "TOP_RIGHT", i.BOTTOM_LEFT = "BOTTOM_LEFT", i.BOTTOM_RIGHT = "BOTTOM_RIGHT";
+(i = l || (l = {})).TOP_LEFT = "TOP_LEFT", i.TOP_RIGHT = "TOP_RIGHT", i.BOTTOM_LEFT = "BOTTOM_LEFT", i.BOTTOM_RIGHT = "BOTTOM_RIGHT";
 let P = ["TOP_LEFT", "TOP_RIGHT"],
   D = (0, f.cssValueToNumber)(_.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
   x = {
@@ -139,9 +139,9 @@ function F(e) {
     onAnimationComplete: t,
     onClick: n,
     position: s,
-    size: l
+    size: a
   } = e, i = o.useRef(null), [u, f] = o.useState(null), [_] = o.useState(null != s ? s : function() {
-    switch (Math.floor(Math.random() * Object.keys(a).length)) {
+    switch (Math.floor(Math.random() * Object.keys(l).length)) {
       case 0:
         return "TOP_LEFT";
       case 2:
@@ -187,12 +187,12 @@ function F(e) {
           x: 0,
           y: 0
         };
-        let a = y[t].getConfettiPosition(n);
+        let l = y[t].getConfettiPosition(n);
         return {
-          x: s.left + a.x,
-          y: s.top + a.y
+          x: s.left + l.x,
+          y: s.top + l.y
         }
-      }(i.current, _, l);
+      }(i.current, _, a);
       I(t.x, t.y, {
         velocity: {
           type: "static-random",
@@ -207,7 +207,7 @@ function F(e) {
         }
       })
     }
-  }, [I, _, u, l]), o.useEffect(() => {
+  }, [I, _, u, a]), o.useEffect(() => {
     if (g && "leaf_fall" === u) {
       let e = y[_].leafRotationDirection;
       A.createConfetti({
@@ -267,19 +267,19 @@ function F(e) {
       spriteHeight: 45
     }), (0, r.jsx)(T.Clickable, {
       onClick: n,
-      className: d()(L.easterEggAnimationClickTarget, {
-        [L.easterEggAnimationClickTargetTopLeft]: "TOP_LEFT" === _,
-        [L.easterEggAnimationClickTargetTopRight]: "TOP_RIGHT" === _,
-        [L.easterEggAnimationClickTargetBottomLeft]: "BOTTOM_LEFT" === _,
-        [L.easterEggAnimationClickTargetBottomRight]: "BOTTOM_RIGHT" === _
+      className: d()(v.easterEggAnimationClickTarget, {
+        [v.easterEggAnimationClickTargetTopLeft]: "TOP_LEFT" === _,
+        [v.easterEggAnimationClickTargetTopRight]: "TOP_RIGHT" === _,
+        [v.easterEggAnimationClickTargetBottomLeft]: "BOTTOM_LEFT" === _,
+        [v.easterEggAnimationClickTargetBottomRight]: "BOTTOM_RIGHT" === _
       }),
       children: (0, r.jsx)(C.default, {
         animationRef: x,
-        className: d()(L.easterEggAnimation, {
-          [L.easterEggAnimationHideLeaf]: M
+        className: d()(v.easterEggAnimation, {
+          [v.easterEggAnimationHideLeaf]: M
         }),
         nextScene: h,
-        sceneSegments: v,
+        sceneSegments: L,
         onScenePlay: O,
         onSceneComplete: R,
         importData: k,
@@ -293,8 +293,8 @@ function w(e) {
   let t, {
       message: n,
       compact: s,
-      guild: a,
-      usernameHook: l,
+      guild: l,
+      usernameHook: a,
       onClickMessage: i
     } = e,
     u = function(e) {
@@ -316,12 +316,12 @@ function w(e) {
     [f, _] = o.useState(!1),
     C = o.useRef(null),
     {
-      reducedMotion: v
+      reducedMotion: L
     } = o.useContext(T.AccessibilityPreferencesContext),
     P = (0, N.getMessageAuthor)(n),
     D = P.nick,
-    x = l(P);
-  t = null == u || null == a ? d > 1 ? R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
+    x = a(P);
+  t = null == u || null == l ? d > 1 ? R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
     username: D,
     usernameHook: x,
     numSubscriptions: d
@@ -332,23 +332,23 @@ function w(e) {
     username: D,
     usernameHook: x,
     numSubscriptions: d,
-    guildName: a.name,
+    guildName: l.name,
     newTierName: (0, M.getTierName)(u)
   }) : R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
     username: D,
     usernameHook: x,
-    guildName: a.name,
+    guildName: l.name,
     newTierName: (0, M.getTierName)(u)
   });
   let y = o.useCallback(() => {
-      if (!v.enabled) {
+      if (!L.enabled) {
         if (f || 0 !== Math.floor(50 * Math.random())) {
           var e;
           let t = null === (e = C.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
           if (null != t) c(t.left + t.width / 2, t.top + t.height / 2)
         } else _(!0)
       }
-    }, [c, v, f]),
+    }, [c, L, f]),
     j = o.useCallback(() => {
       _(!1)
     }, []),
@@ -362,11 +362,11 @@ function w(e) {
     }, [b]);
   o.useEffect(() => E(G));
   let B = (0, r.jsx)(T.Clickable, {
-    className: L.iconWrapper,
+    className: v.iconWrapper,
     innerRef: C,
     onClick: i,
     children: (0, r.jsx)(A.default, {
-      className: L.icon,
+      className: v.icon,
       onMouseEnter: y
     })
   });
@@ -376,11 +376,11 @@ function w(e) {
     compact: s,
     children: [(0, r.jsx)("div", {
       onClick: i,
-      className: L.message,
+      className: v.message,
       children: t
     }), f ? (0, r.jsx)(h.default, {
       children: (0, r.jsx)("div", {
-        className: L.cannonWrapper,
+        className: v.cannonWrapper,
         children: (0, r.jsx)(F, {
           onAnimationComplete: j,
           onClick: b

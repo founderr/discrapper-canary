@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  a = n("470079"),
-  l = n("481060"),
+  l = n("470079"),
+  a = n("481060"),
   i = n("239091"),
   r = n("739566"),
   o = n("942951"),
@@ -24,16 +24,16 @@ var s = n("735250"),
   m = n("981631");
 
 function N(e, t) {
-  return a.useCallback(a => (r, o) => {
+  return l.useCallback(l => (r, o) => {
     var E;
     let I = f.default.getApplicationIconURL({
-        id: a.id,
-        icon: a.icon,
-        bot: a.bot,
+        id: l.id,
+        icon: l.icon,
+        bot: l.bot,
         botIconFirst: !0
       }),
-      m = c.default.getUser(null === (E = a.bot) || void 0 === E ? void 0 : E.id),
-      N = T.default.getIntegration(e.id, a.id),
+      m = c.default.getUser(null === (E = l.bot) || void 0 === E ? void 0 : E.id),
+      N = T.default.getIntegration(e.id, l.id),
       p = e.isPrivate() && null != N ? t => {
         (0, i.openContextMenuLazy)(t, async () => {
           let {
@@ -48,8 +48,8 @@ function N(e, t) {
       } : null != m ? t => (0, _.openUserContextMenu)(t, m, e) : void 0,
       {
         bot: S
-      } = a;
-    return null == S ? r : (0, s.jsx)(l.Popout, {
+      } = l;
+    return null == S ? r : (0, s.jsx)(a.Popout, {
       position: "right",
       preload: () => (0, u.default)(S.id, I, {
         guildId: e.guild_id,
@@ -63,7 +63,7 @@ function N(e, t) {
         channelId: e.id,
         messageId: t.id
       }),
-      children: e => (0, s.jsx)(l.Anchor, {
+      children: e => (0, s.jsx)(a.Anchor, {
         ...e,
         onContextMenu: p,
         children: r
@@ -75,18 +75,18 @@ function N(e, t) {
 function p(e) {
   let {
     message: t,
-    channel: a,
-    compact: l
+    channel: l,
+    compact: a
   } = e, i = (0, r.default)(t), u = t.application, d = (0, o.useUsernameHook)({
     user: t.author,
-    channelId: a.id,
-    guildId: a.guild_id,
+    channelId: l.id,
+    guildId: l.guild_id,
     messageId: t.id
-  }), c = N(a, t);
+  }), c = N(l, t);
   return (0, s.jsx)(E.default, {
     icon: n("570111"),
     timestamp: t.timestamp,
-    compact: l,
+    compact: a,
     children: (0, I.getPrivateChannelIntegrationAddedSystemMessageContent)({
       application: u,
       username: i.nick,
@@ -99,18 +99,18 @@ function p(e) {
 function S(e) {
   let {
     message: t,
-    channel: a,
-    compact: l
+    channel: l,
+    compact: a
   } = e, i = (0, r.default)(t), u = t.application, d = (0, o.useUsernameHook)({
     user: t.author,
-    channelId: a.id,
-    guildId: a.guild_id,
+    channelId: l.id,
+    guildId: l.guild_id,
     messageId: t.id
-  }), c = N(a, t);
+  }), c = N(l, t);
   return (0, s.jsx)(E.default, {
     icon: n("474019"),
     timestamp: t.timestamp,
-    compact: l,
+    compact: a,
     children: (0, I.getPrivateChannelIntegrationRemovedSystemMessageContent)({
       application: u,
       username: i.nick,

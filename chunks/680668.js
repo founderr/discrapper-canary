@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("789020");
 var s = n("735250");
 n("470079");
-var a = n("533800"),
-  l = n("481060"),
+var l = n("533800"),
+  a = n("481060"),
   i = n("358555"),
   r = n("131704"),
   o = n("197409"),
@@ -31,19 +31,19 @@ function N(e) {
       author: O,
       currentUserId: R
     } = e,
-    L = R === O.id,
+    v = R === O.id,
     {
-      channel: v,
+      channel: L,
       approximate_member_count: P,
       approximate_presence_count: D
     } = M,
     x = M.state === T.InviteStates.ACCEPTING,
-    y = null != v ? (0, r.createChannelRecordFromInvite)(v) : null,
+    y = null != L ? (0, r.createChannelRecordFromInvite)(L) : null,
     U = null != g,
     j = null != y,
     b = null != y && y.isGuildVocal(),
     G = null != y && y.isGuildStageVoice(),
-    B = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, a.GuildInviteFlags.IS_GUEST_INVITE),
+    B = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, l.GuildInviteFlags.IS_GUEST_INVITE),
     k = null !== (N = null == g ? void 0 : g.hasFeature(T.GuildFeatures.HUB)) && void 0 !== N && N;
   if (null == g) {
     if (null == M.guild) return (0, s.jsx)(_.default, {});
@@ -54,7 +54,7 @@ function N(e) {
   let F = U ? A : h,
     w = (0, f.getHeaderTextForInvite)({
       isVoiceChannel: b,
-      isOwnInvite: L,
+      isOwnInvite: v,
       isGuest: B,
       isHubGuild: k,
       isStage: G,
@@ -72,7 +72,7 @@ function N(e) {
         disableBoostClick: !0
       })
     })]
-  }), B && (C = (0, s.jsx)(l.TooltipContainer, {
+  }), B && (C = (0, s.jsx)(a.TooltipContainer, {
     className: m.tooltipContainer,
     text: I.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
     children: (0, s.jsx)(u.default, {
@@ -122,11 +122,11 @@ function N(e) {
     }), g.hasFeature(T.GuildFeatures.HUB) && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {
         className: m.separator
-      }), (0, s.jsx)(l.Text, {
+      }), (0, s.jsx)(a.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         children: I.default.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
-          onClick: () => (0, l.openModalLazy)(async () => {
+          onClick: () => (0, a.openModalLazy)(async () => {
             let {
               default: e
             } = await Promise.all([n.e("49237"), n.e("99387"), n.e("95468"), n.e("75441")]).then(n.bind(n, "650233"));

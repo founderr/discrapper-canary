@@ -19,8 +19,8 @@ var i = n("668781"),
   T = n("917107"),
   f = n("89425"),
   S = n("275920"),
-  h = n("197386"),
-  A = n("451576"),
+  A = n("197386"),
+  h = n("451576"),
   m = n("701488"),
   N = n("981631"),
   O = n("689938");
@@ -34,7 +34,7 @@ async function p(e) {
     embeddedActivitiesManager: g,
     analyticsLocations: L
   } = e, D = a.default.getGuild(C), v = l.default.getCurrentUser();
-  if (null == D && !(0, A.isPrivateChannelWithEnabledActivities)(R) || null == v || null == t || null == t.application) return !1;
+  if (null == D && !(0, h.isPrivateChannelWithEnabledActivities)(R) || null == v || null == t || null == t.application) return !1;
   if (null == R) return u.ComponentDispatch.dispatch(N.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
     applicationId: t.application.id
   }), !1;
@@ -67,7 +67,7 @@ async function p(e) {
         bypassChangeModal: null != n
       })) return !1
   } else if (!(0, d.isActivitiesInTextEnabled)(M, "handleStartEmbeddedActivity") || !U) return !1;
-  return c.startEmbeddedActivity(R, t.application.id, L), (0, h.default)(C, R), (0, S.default)({
+  return c.startEmbeddedActivity(R, t.application.id, L), (0, A.default)(C, R), (0, S.default)({
     type: N.AnalyticsGameOpenTypes.LAUNCH,
     userId: v.id,
     applicationId: t.application.id,

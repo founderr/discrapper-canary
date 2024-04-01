@@ -11,8 +11,8 @@ var i, r, s, a, o = n("442837"),
   T = n("65154");
 let f = new Map,
   S = null,
-  h = null,
-  A = null;
+  A = null,
+  h = null;
 
 function m(e, t) {
   let n = f.get(e);
@@ -42,7 +42,7 @@ function p(e) {
     user: t,
     sessionId: n
   } = e;
-  S = t.id, h = n, A = null
+  S = t.id, A = n, h = null
 }
 class R extends(i = o.default.Store) {
   initialize() {
@@ -142,8 +142,8 @@ a = "SpeakingStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s,
         userId: n,
         channelId: i,
         sessionId: r
-      } = t, s = !1, a = A;
-      return n === S && r === h && (A = null != i ? i : null), a !== A && (s = f.delete(T.MediaEngineContextTypes.DEFAULT) || s), null == i ? s = n === S && r === h ? f.delete(T.MediaEngineContextTypes.DEFAULT) || s : m(T.MediaEngineContextTypes.DEFAULT, n) || s : n === S && r !== h ? s = f.delete(T.MediaEngineContextTypes.DEFAULT) || s : n !== S && i !== c.default.getChannelId() && (s = m(T.MediaEngineContextTypes.DEFAULT, n) || s), s || e
+      } = t, s = !1, a = h;
+      return n === S && r === A && (h = null != i ? i : null), a !== h && (s = f.delete(T.MediaEngineContextTypes.DEFAULT) || s), null == i ? s = n === S && r === A ? f.delete(T.MediaEngineContextTypes.DEFAULT) || s : m(T.MediaEngineContextTypes.DEFAULT, n) || s : n === S && r !== A ? s = f.delete(T.MediaEngineContextTypes.DEFAULT) || s : n !== S && i !== c.default.getChannelId() && (s = m(T.MediaEngineContextTypes.DEFAULT, n) || s), s || e
     }, !1)
   },
   LOBBY_VOICE_STATE_UPDATE: function(e) {}

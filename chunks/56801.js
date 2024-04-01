@@ -25,7 +25,7 @@ function I(e) {
     filteredSectionId: T,
     onSectionClick: f,
     applicationCommandListRef: S
-  } = e, h = r.useRef(null), A = r.useCallback((e, t) => {
+  } = e, A = r.useRef(null), h = r.useCallback((e, t) => {
     var n;
     let i = 8;
     return (null === (n = s[t + 1]) || void 0 === n ? void 0 : n.type) === d.ApplicationCommandSectionType.BUILT_IN && (i += 8), 32 + i
@@ -76,14 +76,14 @@ function I(e) {
   return 0 === s.length ? null : (0, i.jsx)("div", {
     className: a()(t, c.wrapper),
     children: (0, i.jsx)(u.default, {
-      categoryListRef: h,
+      categoryListRef: A,
       expressionsListRef: S,
       store: l.ApplicationCommandDiscoveryPickerStore,
       categories: s,
       className: c.list,
       renderCategoryListItem: N,
       rowCount: s.length,
-      categoryHeight: A,
+      categoryHeight: h,
       listPadding: E,
       getScrollOffsetForIndex: m
     })

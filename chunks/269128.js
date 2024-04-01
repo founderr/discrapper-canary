@@ -1,52 +1,52 @@
 "use strict";
-r.r(t);
-var n = r("735250");
-r("470079");
-var s = r("803997"),
-  a = r.n(s),
-  i = r("153832"),
-  l = r("406658");
-let c = (0, i.v4)();
+n.r(t);
+var i = n("735250");
+n("470079");
+var r = n("803997"),
+  s = n.n(r),
+  a = n("153832"),
+  l = n("406658");
+let o = (0, a.v4)();
 t.default = e => {
   let {
     open: t,
-    className: r,
-    withHighlight: s = !1
+    className: n,
+    withHighlight: r = !1
   } = e;
-  return (0, n.jsxs)("svg", {
+  return (0, i.jsxs)("svg", {
     width: "18",
     height: "18",
-    className: a()(l.button, r, {
+    className: s()(l.button, n, {
       [l.open]: t,
-      [l.withHighlight]: s
+      [l.withHighlight]: r
     }),
-    children: [s && (0, n.jsx)("defs", {
-      children: (0, n.jsxs)("linearGradient", {
-        id: c,
+    children: [r && (0, i.jsx)("defs", {
+      children: (0, i.jsxs)("linearGradient", {
+        id: o,
         x1: "0",
         y1: "0",
         x2: "0",
         y2: "18",
         gradientUnits: "userSpaceOnUse",
-        children: [(0, n.jsx)("stop", {
+        children: [(0, i.jsx)("stop", {
           offset: "0",
           stopColor: "#B473F5"
-        }), (0, n.jsx)("stop", {
+        }), (0, i.jsx)("stop", {
           offset: "1",
           stopColor: "#E292AA"
         })]
       })
-    }), (0, n.jsxs)("g", {
+    }), (0, i.jsxs)("g", {
       fill: "none",
       fillRule: "evenodd",
-      children: [(0, n.jsx)("path", {
+      children: [(0, i.jsx)("path", {
         d: "M0 0h18v18H0"
-      }), (0, n.jsx)("path", {
-        stroke: s ? "url(#".concat(c, ")") : "currentColor",
+      }), (0, i.jsx)("path", {
+        stroke: r ? "url(#".concat(o, ")") : "currentColor",
         d: "M4.5 4.5l9 9",
         strokeLinecap: "round"
-      }), (0, n.jsx)("path", {
-        stroke: s ? "url(#".concat(c, ")") : "currentColor",
+      }), (0, i.jsx)("path", {
+        stroke: r ? "url(#".concat(o, ")") : "currentColor",
         d: "M13.5 4.5l-9 9",
         strokeLinecap: "round"
       })]

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   shouldShowNitroUpsell: function() {
-    return a
+    return l
   }
 });
 let s = (0, n("818083").createExperiment)({
@@ -20,7 +20,7 @@ let s = (0, n("818083").createExperiment)({
   }]
 });
 
-function a(e) {
+function l(e) {
   return s.getCurrentConfig({
     location: e
   }).enabled

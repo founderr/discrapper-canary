@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return x
   }
 }), n("411104"), n("47120");
-var s, a, l, i = n("735250"),
+var s, l, a, i = n("735250"),
   r = n("470079"),
   o = n("442837"),
   u = n("692547"),
@@ -27,15 +27,15 @@ var s, a, l, i = n("735250"),
   O = n("689938"),
   R = n("308743");
 
-function L(e, t, n) {
+function v(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(l = s || (s = {})).PLAY = "play", l.NOW_PLAYING = "now_playing", l.INSTALL = "install", l.UPDATE = "update", l.PAUSED = "paused", l.LOCATE = "locate", l.UNINSTALLING = "uninstalling", l.QUEUED = "queued", l.DOWNLOADING = "downloading", l.UNSUPPORTED_OS = "unsupported_os", l.ADD_TO_LIBRARY = "add_to_library", l.PREORDER_WAIT = "preorder_wait";
-let v = Object.freeze({
+}(a = s || (s = {})).PLAY = "play", a.NOW_PLAYING = "now_playing", a.INSTALL = "install", a.UPDATE = "update", a.PAUSED = "paused", a.LOCATE = "locate", a.UNINSTALLING = "uninstalling", a.QUEUED = "queued", a.DOWNLOADING = "downloading", a.UNSUPPORTED_OS = "unsupported_os", a.ADD_TO_LIBRARY = "add_to_library", a.PREORDER_WAIT = "preorder_wait";
+let L = Object.freeze({
     [M.LibraryApplicationActions.PLAY]: "play",
     [M.LibraryApplicationActions.INSTALL]: "install",
     [M.LibraryApplicationActions.UPDATE]: "update",
@@ -44,7 +44,7 @@ let v = Object.freeze({
     [M.LibraryApplicationActions.RESUME]: "paused"
   }),
   P = () => [O.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, O.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, O.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, O.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, O.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, O.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, O.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, O.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, O.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, O.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
-class D extends(a = r.Component) {
+class D extends(l = r.Component) {
   get analyticsLocation() {
     return {
       ...this.props.analyticsContext.location,
@@ -85,7 +85,7 @@ class D extends(a = r.Component) {
     } = this.props;
     if (e.isHidden()) return "add_to_library";
     if (e.isPreorder()) return "preorder_wait";
-    let s = null != n ? v[n] : null;
+    let s = null != n ? L[n] : null;
     return null != s ? s : null != t && t.type === M.LocalDispatchApplicationStates.UNINSTALLING ? "uninstalling" : (0, C.isWeb)() ? "play" : "unsupported_os"
   }
   renderPlayButton() {
@@ -94,8 +94,8 @@ class D extends(a = r.Component) {
       fullWidth: t,
       size: n,
       color: s,
-      customDisabledColor: a,
-      isPlayShiny: l,
+      customDisabledColor: l,
+      isPlayShiny: a,
       onDropdownOpen: r,
       onDropdownClose: o,
       analyticsListSort: u,
@@ -107,8 +107,8 @@ class D extends(a = r.Component) {
       fullWidth: t,
       size: n,
       color: s,
-      customDisabledColor: a,
-      isShiny: l,
+      customDisabledColor: l,
+      isShiny: a,
       onDropdownOpen: r,
       onDropdownClose: o,
       analyticsListSort: u,
@@ -119,8 +119,8 @@ class D extends(a = r.Component) {
     let {
       className: n,
       fullWidth: s,
-      size: a,
-      customDisabledColor: l,
+      size: l,
+      customDisabledColor: a,
       tooltipPosition: r
     } = this.props;
     return (0, i.jsxs)("div", {
@@ -128,8 +128,8 @@ class D extends(a = r.Component) {
       children: [(0, i.jsxs)(d.Button, {
         className: n,
         fullWidth: s,
-        size: a,
-        color: null != l ? l : R.disabledButtonColor,
+        size: l,
+        color: null != a ? a : R.disabledButtonColor,
         disabled: !0,
         children: [this.getText(e), this.renderProgressBar()]
       }), (0, i.jsx)(d.Tooltip, {
@@ -163,16 +163,16 @@ class D extends(a = r.Component) {
     let {
       className: n,
       fullWidth: s,
-      size: a,
-      color: l,
+      size: l,
+      color: a,
       isCloudSyncing: r
     } = this.props;
     return (0, i.jsxs)(d.Button, {
       className: n,
       fullWidth: s,
-      size: a,
-      color: null != l ? l : d.Button.Colors.GREEN,
-      hover: null != l ? d.Button.Hovers.GREEN : d.Button.Hovers.DEFAULT,
+      size: l,
+      color: null != a ? a : d.Button.Colors.GREEN,
+      hover: null != a ? d.Button.Hovers.GREEN : d.Button.Hovers.DEFAULT,
       submitting: "uninstalling" === e || r,
       onClick: e => this.handleClick(e, t),
       children: [this.getText(e), this.renderProgressBar()]
@@ -198,7 +198,7 @@ class D extends(a = r.Component) {
     return null == s ? this.renderDisabledButton(n) : this.renderActionButton(n, s)
   }
   constructor(...e) {
-    super(...e), L(this, "_uninstallStringIndex", null), L(this, "handleAddToLibrary", async () => {
+    super(...e), v(this, "_uninstallStringIndex", null), v(this, "handleAddToLibrary", async () => {
       try {
         let {
           libraryApplication: e
@@ -207,22 +207,22 @@ class D extends(a = r.Component) {
       } catch (e) {
         new f.default("LibraryApplicationButton").error(e)
       }
-    }), L(this, "handleInstall", () => {
+    }), v(this, "handleInstall", () => {
       let {
         libraryApplication: e,
         source: t
       } = this.props;
       h.installApplication(e.id, e.branchId, t)
-    }), L(this, "handleUpdate", () => {
+    }), v(this, "handleUpdate", () => {
       let {
         libraryApplication: e
       } = this.props;
       h.updateApplication(e.id, e.branchId)
-    }), L(this, "onClickHandlers", {
+    }), v(this, "onClickHandlers", {
       add_to_library: this.handleAddToLibrary,
       install: this.handleInstall,
       update: this.handleUpdate
-    }), L(this, "handleClick", (e, t) => {
+    }), v(this, "handleClick", (e, t) => {
       let {
         onClick: n
       } = this.props;
@@ -234,20 +234,20 @@ class D extends(a = r.Component) {
 function x(e) {
   let {
     libraryApplication: t
-  } = e, n = (0, E.useAnalyticsContext)(), [s, a] = (0, o.useStateFromStoresArray)([N.default, p.default], () => [(0, I.getDefaultLibraryApplicationAction)(t, N.default, p.default), N.default.getState(t.id, t.branchId)], [t]), l = (0, o.useStateFromStores)([m.default], () => m.default.isSyncing(t.id, t.branchId), [t]), r = (0, o.useStateFromStores)([T.default], () => T.default.hasNoBuild(t.id, t.branchId), [t]);
+  } = e, n = (0, E.useAnalyticsContext)(), [s, l] = (0, o.useStateFromStoresArray)([N.default, p.default], () => [(0, I.getDefaultLibraryApplicationAction)(t, N.default, p.default), N.default.getState(t.id, t.branchId)], [t]), a = (0, o.useStateFromStores)([m.default], () => m.default.isSyncing(t.id, t.branchId), [t]), r = (0, o.useStateFromStores)([T.default], () => T.default.hasNoBuild(t.id, t.branchId), [t]);
   return (0, i.jsx)(D, {
     ...e,
     analyticsContext: n,
     actionState: s,
-    dispatchState: a,
-    isCloudSyncing: l,
+    dispatchState: l,
+    isCloudSyncing: a,
     hasNoBuild: r
   })
 }
-L(D, "defaultProps", {
+v(D, "defaultProps", {
   fullWidth: !1,
   size: d.Button.Sizes.LARGE,
   hideProgress: !1,
   isPlayShiny: !1,
   tooltipPosition: "top"
-}), L(D, "ButtonStates", s)
+}), v(D, "ButtonStates", s)

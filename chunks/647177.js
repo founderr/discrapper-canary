@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return I
   },
   getVideoBackgroundOptionFromProto: function() {
-    return A
+    return h
   },
   getVideoBackgroundProtoFromOption: function() {
-    return h
+    return A
   },
   isCustomBackgroundOption: function() {
     return d
@@ -113,7 +113,7 @@ function S(e) {
   })
 }
 
-function h(e) {
+function A(e) {
   if (null == e) return {
     oneofKind: void 0
   };
@@ -136,7 +136,7 @@ function h(e) {
   }
 }
 
-function A(e, t) {
+function h(e, t) {
   if (null == e || void 0 === e.oneofKind) return null;
   switch (e.oneofKind) {
     case "customAsset":

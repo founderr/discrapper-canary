@@ -1,8 +1,8 @@
 "use strict";
 let i, r, s, a, o, l, u, d, _, c, E;
 n.r(t);
-var I, T, f, S, h = n("442837"),
-  A = n("570140"),
+var I, T, f, S, A = n("442837"),
+  h = n("570140"),
   m = n("981631");
 let N = m.FormStates.CLOSED,
   O = {},
@@ -23,7 +23,7 @@ function g() {
 function L() {
   a = void 0, o = void 0, l = void 0, d = void 0, s = void 0
 }
-class D extends(S = h.default.Store) {
+class D extends(S = A.default.Store) {
   getFormState() {
     return N
   }
@@ -90,7 +90,7 @@ f = "GuildIdentitySettingsStore", (T = "displayName") in(I = D) ? Object.defineP
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : I[T] = f, t.default = new D(A.default, {
+}) : I[T] = f, t.default = new D(h.default, {
   GUILD_IDENTITY_SETTINGS_INIT: function(e) {
     _ = e.guild, N = m.FormStates.OPEN, O = {}, c = e.source, E = e.analyticsLocations
   },

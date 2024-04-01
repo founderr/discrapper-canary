@@ -1,22 +1,22 @@
 "use strict";
-r.r(t);
-var n = r("735250");
-r("470079");
-var s = r("882485"),
-  a = r("481060"),
-  i = r("752803");
+n.r(t);
+var i = n("735250");
+n("470079");
+var s = n("882485"),
+  a = n("481060"),
+  l = n("752803");
 t.default = function(e) {
   let {
     message: t
   } = e;
-  return (0, n.jsxs)("div", {
-    className: i.container,
-    children: [(0, n.jsx)(s.CircleInformationIcon, {
-      className: i.icon,
+  return (0, i.jsxs)("div", {
+    className: l.container,
+    children: [(0, i.jsx)(s.CircleInformationIcon, {
+      className: l.icon,
       width: 20,
       height: 20,
       color: a.tokens.colors.TEXT_WARNING
-    }), (0, n.jsx)(a.Text, {
+    }), (0, i.jsx)(a.Text, {
       variant: "text-sm/normal",
       color: "header-muted",
       children: t
