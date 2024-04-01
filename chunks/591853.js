@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   Popout: function() {
-    return g
+    return p
   },
   PopoutAvatar: function() {
-    return A
+    return _
   },
   PopoutHero: function() {
-    return S
+    return E
   },
   PopoutReactor: function() {
-    return T
+    return g
   },
   PopoutTitle: function() {
-    return _
+    return C
   }
 }), n("47120");
 var a = n("735250"),
@@ -21,37 +21,34 @@ var a = n("735250"),
   s = n("481060"),
   i = n("220779"),
   r = n("543241"),
-  o = n("914010"),
-  u = n("626135"),
-  d = n("768581"),
-  c = n("907082"),
-  f = n("206295"),
-  h = n("885712"),
-  m = n("206583"),
-  p = n("981631"),
-  E = n("689938"),
-  C = n("522791");
+  o = n("626135"),
+  u = n("768581"),
+  d = n("206295"),
+  c = n("206583"),
+  f = n("981631"),
+  h = n("689938"),
+  m = n("522791");
 
-function g(e) {
+function p(e) {
   let {
     children: t
   } = e;
   return (0, a.jsx)("div", {
-    className: C.popout,
+    className: m.popout,
     children: t
   })
 }
 
-function S(e) {
+function E(e) {
   let {
     children: t,
     backgroundImgSrc: n
   } = e, {
     primaryColor: l,
     secondaryColor: s
-  } = (0, f.default)(n);
+  } = (0, d.default)(n);
   return (0, a.jsx)("div", {
-    className: C.hero,
+    className: m.hero,
     style: {
       background: "linear-gradient(45deg, ".concat(l, ", ").concat(s, ")")
     },
@@ -59,12 +56,12 @@ function S(e) {
   })
 }
 
-function _(e) {
+function C(e) {
   let {
     children: t
   } = e;
   return (0, a.jsx)(s.Heading, {
-    className: C.popoutTitle,
+    className: m.popoutTitle,
     variant: "heading-md/normal",
     color: "always-white",
     lineClamp: 3,
@@ -72,52 +69,45 @@ function _(e) {
   })
 }
 
-function T(e) {
+function g(e) {
   let {
     channel: t,
     onMessageReact: n,
     user: s
-  } = e, [r, d] = l.useState(null), [f, g] = l.useState(null), S = l.useRef(null), _ = (0, c.useIsEligibleForMemberListShareToChannel)({
-    location: "PopoutReactor"
-  }), T = e => {
-    null != e && null != f && (u.default.track(p.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
-      surface_type: m.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
+  } = e, [r, u] = l.useState(null), d = l.useRef(null), p = e => {
+    null != e && null != r && (o.default.track(f.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
+      surface_type: c.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
       channel_id: t.id,
       guild_id: t.guild_id
-    }), f.insertEmoji(e, !1, !1), f.focus())
+    }), r.insertEmoji(e, !1, !1), r.focus())
   };
   return (0, a.jsxs)("div", {
-    className: C.reactionContainer,
+    className: m.reactionContainer,
     children: [(0, a.jsxs)("div", {
-      className: C.emojiHotrail,
-      children: [(0, a.jsx)(I, {
+      className: m.emojiHotrail,
+      children: [(0, a.jsx)(S, {
         channel: t,
-        onClickSuggestion: T
+        onClickSuggestion: p
       }), (0, a.jsx)(i.ReactionPickerButton, {
-        onSelectEmoji: T
+        onSelectEmoji: p
       })]
     }), (0, a.jsx)(i.ReplyInput, {
-      ref: S,
-      placeholder: E.default.Messages.TEXTAREA_PLACEHOLDER.format({
-        channel: null == r ? "@".concat(s.globalName) : "#".concat(r.name)
+      ref: d,
+      placeholder: h.default.Messages.TEXTAREA_PLACEHOLDER.format({
+        channel: "@".concat(s.globalName)
       }),
       onEnter: n,
-      setEditorRef: e => g(e),
+      setEditorRef: e => u(e),
       autoCompletePosition: (() => {
-        if (null == S || null == S.current) return "top";
-        let e = S.current.getBoundingClientRect(),
+        if (null == d || null == d.current) return "top";
+        let e = d.current.getBoundingClientRect(),
           t = window.innerHeight;
         return e.top < t / 2 ? "bottom" : "top"
-      })(),
-      renderAttachButton: () => _ && null != o.default.getGuildId() ? (0, a.jsx)(h.ShareToChannelDropdownSelect, {
-        user: s,
-        selectedChannel: r,
-        onSelect: d
-      }) : null
+      })()
     })]
   })
 }
-let I = e => {
+let S = e => {
   let {
     channel: t,
     onClickSuggestion: n
@@ -126,7 +116,7 @@ let I = e => {
     url: e.url
   } : {
     emoji: e,
-    url: (0, d.getEmojiURL)({
+    url: (0, u.getEmojiURL)({
       id: e.id,
       animated: e.animated,
       size: 58
@@ -140,18 +130,18 @@ let I = e => {
       } = e;
       return null != l ? (0, a.jsx)(s.Clickable, {
         onClick: () => n(t),
-        className: C.emojiSuggestionButton,
+        className: m.emojiSuggestionButton,
         children: (0, a.jsx)("img", {
           alt: t.name,
           src: l,
-          className: C.emoji
+          className: m.emoji
         })
       }) : null
     })
   })
 };
 
-function A(e) {
+function _(e) {
   let {
     user: t,
     guildId: n

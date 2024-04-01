@@ -70,10 +70,9 @@ let m = (0, I.createChannelRecord)({
       onEnter: s,
       setEditorRef: a,
       showEmojiButton: o = !1,
-      autoCompletePosition: l,
-      renderAttachButton: u
-    } = e, [E, I] = r.useState(""), [T, S] = r.useState((0, _.toRichValue)("")), A = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
-    return o && (A.emojis = {
+      autoCompletePosition: l
+    } = e, [u, E] = r.useState(""), [I, T] = r.useState((0, _.toRichValue)("")), S = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
+    return o && (S.emojis = {
       button: !0
     }), (0, i.jsx)(c.default, {
       ref: t,
@@ -84,11 +83,11 @@ let m = (0, I.createChannelRecord)({
       maxCharacterCount: f.MAX_CHAR_COUNT,
       channel: m,
       onChange: (e, t, n) => {
-        I(t), S(n)
+        E(t), T(n)
       },
-      type: A,
-      textValue: E,
-      richValue: T,
+      type: S,
+      textValue: u,
+      richValue: I,
       onSubmit: e => {
         let {
           value: t
@@ -106,8 +105,7 @@ let m = (0, I.createChannelRecord)({
       disableThemedBackground: !0,
       emojiPickerCloseOnModalOuterClick: !0,
       disabled: !1,
-      autoCompletePosition: l,
-      renderAttachButton: u
+      autoCompletePosition: l
     })
   }),
   p = (e, t) => {
