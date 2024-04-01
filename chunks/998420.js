@@ -14,17 +14,17 @@ var a = s("735250"),
   f = s("208257"),
   T = s("853486"),
   _ = s("689938"),
-  S = s("325370");
+  R = s("325370");
 t.default = function(e) {
   let {
     guildId: t
   } = e, {
     analyticsLocations: s
-  } = (0, u.default)(n.default.GUILD_MEMBER_APPLICATION_REVIEW), R = (0, I.useSelectedGuildJoinRequest)({
+  } = (0, u.default)(n.default.GUILD_MEMBER_APPLICATION_REVIEW), S = (0, I.useSelectedGuildJoinRequest)({
     guildId: t
   }), {
     user: N
-  } = null != R ? R : {}, A = l.useMemo(() => null != N ? new o.default(N) : null, [N]), M = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]);
+  } = null != S ? S : {}, A = l.useMemo(() => null != N ? new o.default(N) : null, [N]), M = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]);
   return (0, r.usePageTitle)({
     subsection: _.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REQUIREMENTS,
     location: null == M ? void 0 : M.name
@@ -33,15 +33,15 @@ t.default = function(e) {
   }, [t]), (0, a.jsxs)(u.AnalyticsLocationProvider, {
     value: s,
     children: [(0, a.jsx)("div", {
-      className: S.content,
+      className: R.content,
       children: (0, a.jsx)(f.default, {
         guildId: t
       })
-    }), null != R && null != M && null != A && (0, a.jsx)("section", {
-      className: S.sidebar,
+    }), null != S && null != M && null != A && (0, a.jsx)("section", {
+      className: R.sidebar,
       children: (0, a.jsx)(T.default, {
         guild: M,
-        guildJoinRequest: R,
+        guildJoinRequest: S,
         guildJoinRequestUser: A,
         onClose: () => c.default.setSelectedGuildJoinRequest(t, null)
       })

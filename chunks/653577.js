@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return _
   }
 });
 var l = n("735250"),
@@ -15,24 +15,24 @@ var l = n("735250"),
   c = n("496675"),
   f = n("514342"),
   h = n("586791"),
-  C = n("626135"),
-  p = n("981631"),
+  p = n("626135"),
+  C = n("981631"),
   m = n("689938"),
   g = n("644092"),
   E = n("931093");
 
-function S(e) {
+function _(e) {
   let {
     channel: t,
     connected: n,
     hovered: s,
-    subtitle: S,
-    onClick: _,
-    enableHangStatus: I,
+    subtitle: _,
+    onClick: I,
+    enableHangStatus: S,
     allowChannelTopic: N
-  } = e, T = (0, r.useStateFromStores)([u.default], () => u.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, r.useStateFromStores)([c.default], () => (!I || !!N) && c.default.can(p.Permissions.SET_VOICE_CHANNEL_STATUS, t)), v = null != S && S.length > 0;
+  } = e, T = (0, r.useStateFromStores)([u.default], () => u.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, r.useStateFromStores)([c.default], () => (!S || !!N) && c.default.can(C.Permissions.SET_VOICE_CHANNEL_STATUS, t)), v = null != _ && _.length > 0;
   a.useEffect(() => {
-    A && C.default.track(p.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
+    A && p.default.track(C.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
       guild_id: t.guild_id,
       channel_id: t.id
     })
@@ -42,7 +42,7 @@ function S(e) {
   let R = i()(g.statusDiv, n && L ? g.hoverable : null);
   if (A) return (0, l.jsx)(o.Clickable, {
     className: R,
-    onClick: L ? _ : void 0,
+    onClick: L ? I : void 0,
     children: (0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: i()(g.statusText, E.markup),
@@ -55,7 +55,7 @@ function S(e) {
   });
   if (n && L && (!v || s)) return (0, l.jsxs)(o.Clickable, {
     className: R,
-    onClick: _,
+    onClick: I,
     children: [(0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: g.statusText,
@@ -67,7 +67,7 @@ function S(e) {
     })]
   });
   if (v) return (0, l.jsx)(f.default, {
-    children: S
+    children: _
   });
   return null
 }

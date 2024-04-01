@@ -12,20 +12,20 @@ var s = n("803997"),
   c = n("981631"),
   f = n("689938"),
   E = n("250728");
-let h = [18, 18, 16, 16, 14, 12, 10];
+let _ = [18, 18, 16, 16, 14, 12, 10];
 t.default = e => {
   let {
     guildId: t
   } = e, n = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(t));
   if (void 0 === n) return null;
   let s = n.hasFeature(c.GuildFeatures.VERIFIED) || n.hasFeature(c.GuildFeatures.PARTNERED),
-    _ = n.toString(),
+    h = n.toString(),
     C = n.getIconURL(40, !0),
     S = null,
-    m = h[h.length - 1];
-  if (null == n.icon && null != _) {
+    m = _[_.length - 1];
+  if (null == n.icon && null != h) {
     var I;
-    m = null !== (I = h[(S = (0, i.getAcronym)(_)).length - 1]) && void 0 !== I ? I : h[h.length - 1]
+    m = null !== (I = _[(S = (0, i.getAcronym)(h)).length - 1]) && void 0 !== I ? I : _[_.length - 1]
   }
   return (0, a.jsxs)("div", {
     className: E.container,

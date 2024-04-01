@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("259580"),
   f = n("981631"),
   h = n("176505"),
-  C = n("689938"),
-  p = n("880031");
+  p = n("689938"),
+  C = n("880031");
 
 function m(e, t) {
   return (0, l.jsx)(i.Text, {
@@ -34,45 +34,45 @@ let g = a.memo(function(e) {
     return n.forEach(t => {
       null != g[t.channelId] && e++
     }), e
-  }, [g, n]), S = null == n ? 0 : n.length;
+  }, [g, n]), _ = null == n ? 0 : n.length;
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(i.Clickable, {
-      className: p.progressBarContainer,
+      className: C.progressBarContainer,
       onClick: function() {
         (0, d.transitionTo)(f.Routes.CHANNEL(t.id, h.StaticChannelRoute.GUILD_HOME))
       },
       children: [(0, l.jsxs)("div", {
-        className: p.progressBarText,
+        className: C.progressBarText,
         children: [(0, l.jsx)(i.Heading, {
           variant: "heading-sm/bold",
-          children: C.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
+          children: p.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
         }), (0, l.jsxs)("div", {
-          className: p.rightContainer,
+          className: C.rightContainer,
           children: [(0, l.jsx)(i.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
-            className: p.rightText,
-            children: C.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
+            className: C.rightText,
+            children: p.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
               numberHook: m,
-              total: S.toString(),
+              total: _.toString(),
               completed: E.toString()
             })
           }), (0, l.jsx)(c.default, {
-            className: p.arrow,
+            className: C.arrow,
             width: 16,
             height: 16,
             direction: c.default.Directions.RIGHT
           })]
         })]
       }), (0, l.jsx)(i.Progress, {
-        className: p.progressBar,
+        className: C.progressBar,
         foregroundGradientColor: [(0, r.getColor)(f.Color.GREEN_300), (0, r.getColor)(f.Color.GREEN_230)],
-        percent: E / S * 100 + 3,
+        percent: E / _ * 100 + 3,
         animate: !0
       })]
     }), (0, l.jsx)("div", {
       role: "separator",
-      className: p.divider
+      className: C.divider
     })]
   })
 })

@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("846027"),
   E = s("131951"),
   T = s("153124"),
-  _ = s("65154"),
-  f = s("689938"),
-  m = s("190103"),
+  f = s("65154"),
+  m = s("689938"),
+  _ = s("190103"),
   g = s("605094"),
   h = s("794711");
 let N = (0, T.uid)();
@@ -33,12 +33,12 @@ function I() {
     isEnabled: O
   } = (0, r.useStateFromStoresObject)([E.default], () => ({
     inputMode: E.default.getMode(),
-    automaticVADSupported: E.default.supports(_.Features.AUTOMATIC_VAD),
+    automaticVADSupported: E.default.supports(f.Features.AUTOMATIC_VAD),
     isEnabled: E.default.isEnabled()
   }));
 
   function x(e, s) {
-    t(e), l((s & _.SpeakingFlags.VOICE) === _.SpeakingFlags.VOICE)
+    t(e), l((s & f.SpeakingFlags.VOICE) === f.SpeakingFlags.VOICE)
   }
 
   function R(e, t) {
@@ -56,7 +56,7 @@ function I() {
     }
   }, []);
   let M = (0, a.jsx)("section", {
-    className: i()(m.inputSensitivityToggle, m.manual),
+    className: i()(_.inputSensitivityToggle, _.manual),
     children: (0, a.jsx)(c.Slider, {
       initialValue: I + 100,
       onValueRender: e => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
@@ -69,9 +69,9 @@ function I() {
       },
       "aria-labelledby": N,
       children: (0, a.jsxs)("div", {
-        className: i()(m.sliderBar, m.microphone, m.inputSensitivityBar),
+        className: i()(_.sliderBar, _.microphone, _.inputSensitivityBar),
         children: [(0, a.jsx)("div", {
-          className: i()(m.fill, m.inputSensitivityBarFill),
+          className: i()(_.fill, _.inputSensitivityBarFill),
           style: {
             width: e + 100 + "%"
           }
@@ -82,26 +82,26 @@ function I() {
     })
   });
   return p && (M = (0, a.jsxs)("section", {
-    className: m.inputSensitivityToggle,
+    className: _.inputSensitivityToggle,
     children: [(0, a.jsx)("div", {
-      className: m.inputSensitivitySlider,
+      className: _.inputSensitivitySlider,
       children: (0, a.jsx)("div", {
-        className: i()(m.inputSensitivityBar, m.sliderBar, {
-          [m.speaking]: s
+        className: i()(_.inputSensitivityBar, _.sliderBar, {
+          [_.speaking]: s
         })
       })
     }), (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
       className: h.marginBottom8,
-      children: f.default.Messages.FORM_HELP_AUTOMATIC_VAD
+      children: m.default.Messages.FORM_HELP_AUTOMATIC_VAD
     })]
   })), (0, a.jsxs)(c.FormItem, {
-    className: m.sensitivity,
+    className: _.sensitivity,
     children: [(0, a.jsx)(c.FormTitle, {
       id: N,
       tag: c.FormTitleTags.H5,
       className: h.marginBottom8,
-      children: f.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
+      children: m.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
     }), (0, a.jsxs)("div", {
       children: [A && (0, a.jsx)(T.UID, {
         children: e => (0, a.jsxs)("div", {
@@ -111,7 +111,7 @@ function I() {
             className: h.marginReset,
             children: (0, a.jsx)("label", {
               htmlFor: e,
-              children: f.default.Messages.FORM_LABEL_AUTOMATIC_VAD
+              children: m.default.Messages.FORM_LABEL_AUTOMATIC_VAD
             })
           }), (0, a.jsx)(c.Switch, {
             id: e,
@@ -122,8 +122,8 @@ function I() {
       }), M]
     }), !O && (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
-      className: i()(m.inputDisabledWarning, h.marginBottom8),
-      children: f.default.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({
+      className: i()(_.inputDisabledWarning, h.marginBottom8),
+      children: m.default.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({
         onEnableClick: S.default.enable
       })
     })]

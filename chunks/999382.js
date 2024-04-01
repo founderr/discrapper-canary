@@ -23,8 +23,8 @@ var _, c, E, I, T = n("392711"),
   b = n("731455"),
   G = n("135899");
 let w = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled"],
-  k = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
-  B = !1,
+  B = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
+  k = !1,
   V = U.FormStates.CLOSED,
   F = {},
   x = !1,
@@ -76,7 +76,7 @@ function ei(e) {
 }
 
 function er() {
-  B = !1, V = U.FormStates.CLOSED, a = o = null, x = !1, H = null, Y = null, j = 0, J = null, ee = null, et = null, i = null, r = null, s = null, W = U.MFALevels.NONE, u = void 0
+  k = !1, V = U.FormStates.CLOSED, a = o = null, x = !1, H = null, Y = null, j = 0, J = null, ee = null, et = null, i = null, r = null, s = null, W = U.MFALevels.NONE, u = void 0
 }
 
 function es(e) {
@@ -165,7 +165,7 @@ class el extends(_ = A.default.Store) {
     return !f().isEqual(o, a) || !f().isEqual(q, Q)
   }
   isOpen() {
-    return B
+    return k
   }
   getSavedRouteState() {
     return u
@@ -237,7 +237,7 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
 }) : c[E] = I, t.default = new el(O.default, __OVERLAY__ ? {} : {
   GUILD_SETTINGS_INIT: ei,
   GUILD_SETTINGS_OPEN: function(e) {
-    B = !0, ei(e)
+    k = !0, ei(e)
   },
   GUILD_SETTINGS_CLOSE: er,
   GUILD_SETTINGS_UPDATE: function(e) {
@@ -361,7 +361,7 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
       let t = a = e,
         n = o.toJS();
       w.forEach(e => {
-        if (!k.has(e)) {
+        if (!B.has(e)) {
           if ("rulesChannelId" !== e && "publicUpdatesChannelId" !== e || n[e] !== G.CREATE_NEW_CHANNEL_VALUE) {
             if ("features" === e) {
               t.set(e, new Set(n[e]));

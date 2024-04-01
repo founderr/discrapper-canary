@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useAcceptedRequestsCount: function() {
-    return h
+    return _
   },
   useActivityWindowTimeStamp: function() {
-    return _
+    return h
   },
   useHasMaxConnections: function() {
     return f
@@ -57,13 +57,13 @@ function E() {
   return null == e ? 0 : Object.values(t).filter(t => null != t && t.link_status === u.UserLinkStatus.PENDING && e.id !== t.requestor_id).length
 }
 
-function h() {
+function _() {
   let e = (0, a.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
     t = (0, a.useStateFromStores)([l.default], () => l.default.getLinkedUsers());
   return null == e ? 0 : Object.values(t).filter(e => null != e && e.link_status === u.UserLinkStatus.ACTIVE).length
 }
 
-function _(e) {
+function h(e) {
   let t = (0, r.useSelectedTeenId)(),
     n = (0, a.useStateFromStores)([l.default], () => null == t ? null : l.default.getRangeStartTimestamp());
   return null == n ? null : (0, i.formatUserActivityTimestamp)(new Date(n).getTime(), () => e, 7)

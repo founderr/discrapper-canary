@@ -14,38 +14,38 @@ t.default = e => {
       children: s,
       icon: f,
       name: h,
-      ariaLabel: C,
-      className: p,
+      ariaLabel: p,
+      className: C,
       style: m,
       to: g,
       onClick: E,
-      selected: S = !1,
-      ..._
+      selected: _ = !1,
+      ...I
     } = e,
-    I = (0, r.useHistory)();
+    S = (0, r.useHistory)();
   if (null == f && null != h) {
     var N;
     n = null !== (N = c[(t = (0, u.getAcronym)(h)).length - 1]) && void 0 !== N ? N : c[c.length - 1]
   }
   let T = a.useCallback(e => {
     if (null == g);
-    else if ("string" == typeof g) I.push(g);
+    else if ("string" == typeof g) S.push(g);
     else {
       let {
         pathname: e = "",
         state: t
       } = g;
-      I.push(e, t)
+      S.push(e, t)
     }
     null != E && E(e)
-  }, [I, g, E]);
+  }, [S, g, E]);
   return (0, l.jsxs)(o.Clickable, {
-    ..._,
+    ...I,
     onClick: T,
-    className: i()(p, d.wrapper, {
-      [d.selected]: S
+    className: i()(C, d.wrapper, {
+      [d.selected]: _
     }),
-    "aria-label": null != C && "" !== C ? C : null != h ? h : "",
+    "aria-label": null != p && "" !== p ? p : null != h ? h : "",
     style: {
       ...m,
       fontSize: n

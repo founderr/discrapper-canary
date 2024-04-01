@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("626135"),
   f = n("321488"),
   E = n("417183"),
-  h = n("170245"),
-  _ = n("981631"),
+  _ = n("170245"),
+  h = n("981631"),
   C = n("689938"),
   S = n("845286");
 
@@ -40,7 +40,7 @@ function m(e) {
     })
   }, A = e => {
     null == e || e.stopPropagation(), r.default.ignore(t.id)
-  }, N = m === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : m;
+  }, N = m === h.StatusTypes.OFFLINE ? h.StatusTypes.UNKNOWN : m;
   return (0, a.jsx)(E.default, {
     isFocused: I,
     user: t,
@@ -67,7 +67,7 @@ function m(e) {
       });
       return (0, a.jsxs)("div", {
         className: S.listItemContents,
-        children: [(0, a.jsx)(h.default, {
+        children: [(0, a.jsx)(_.default, {
           user: t,
           hovered: e,
           status: N,

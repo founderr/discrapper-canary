@@ -12,7 +12,7 @@ function E() {
   if (null == e || e.mfaEnabled === f) return !1;
   f = e.mfaEnabled
 }
-class h extends(i = r.default.Store) {
+class _ extends(i = r.default.Store) {
   initialize() {
     this.waitFor(d.default, u.default), this.syncWith([d.default, u.default], E)
   }
@@ -20,12 +20,12 @@ class h extends(i = r.default.Store) {
     return null != e && e.mfaLevel === c.MFALevels.ELEVATED && !1 === f && u.default.hasElevatedPermissions(e.id)
   }
 }
-l = "GuildMFAWarningStore", (s = "displayName") in(a = h) ? Object.defineProperty(a, s, {
+l = "GuildMFAWarningStore", (s = "displayName") in(a = _) ? Object.defineProperty(a, s, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = l, t.default = new h(o.default, {
+}) : a[s] = l, t.default = new _(o.default, {
   CONNECTION_OPEN: E,
   GUILD_UPDATE: function() {
     return !0

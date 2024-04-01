@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("570140"),
   f = n("265875"),
   E = n("569984"),
-  h = n("918701"),
-  _ = n("800599"),
+  _ = n("918701"),
+  h = n("800599"),
   C = n("594174"),
   S = n("801077"),
   m = n("626135"),
@@ -49,20 +49,20 @@ let M = 15 * I.default.Millis.MINUTE,
       partiedMembers: c,
       applicationStreams: f,
       currentActivities: E,
-      voiceChannels: h
-    } = t, _ = c.length, C = f.length, S = E.length, I = h.length > 0, p = s.useCallback(() => {
+      voiceChannels: _
+    } = t, h = c.length, C = f.length, S = E.length, I = _.length > 0, p = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === v.ApplicationTypes.GAME
       }).map(e => e.game.name);
       m.default.track(O.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
-        num_users: _,
+        num_users: h,
         num_streams: C,
         num_activities: S,
         in_voice_channel: I,
         games_detected: e
       })
-    }, [_, C, S, I, E]), R = o()(p, M);
+    }, [h, C, S, I, E]), R = o()(p, M);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -101,11 +101,11 @@ function x() {
     needsRefresh: n,
     fetching: l,
     currentUser: i
-  } = (0, u.useStateFromStoresObject)([S.default, _.default, C.default], () => ({
+  } = (0, u.useStateFromStoresObject)([S.default, h.default, C.default], () => ({
     nowPlayingCards: S.default.nowPlayingCards,
     loaded: S.default.loaded,
-    needsRefresh: _.default.needsRefresh(),
-    fetching: _.default.getFetching(),
+    needsRefresh: h.default.needsRefresh(),
+    fetching: h.default.getFetching(),
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
   s.useEffect(() => (c.default.wait(() => p.mount()), () => c.default.wait(() => p.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
@@ -119,7 +119,7 @@ function x() {
           game: s
         } = e;
         if (null != s) {
-          let e = (0, h.getQuestByApplicationId)(r, s.id);
+          let e = (0, _.getQuestByApplicationId)(r, s.id);
           null != e && !n.has(e.id) && (t.set(a.party.id, e), n.add(e.id))
         }
       });

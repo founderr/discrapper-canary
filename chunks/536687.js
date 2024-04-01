@@ -16,8 +16,8 @@ var a, s, l = n("470079"),
   c = n("300213"),
   f = n("554747"),
   E = n("499137"),
-  h = n("929507"),
-  _ = n("270144"),
+  _ = n("929507"),
+  h = n("270144"),
   C = n("400271"),
   S = n("678513"),
   m = n("899667"),
@@ -54,9 +54,9 @@ function O(e) {
     x = null != a && Date.now() - a <= 432e5,
     b = !x && !M && P && D,
     U = (0, c.useGuildHasLiveChannelNotice)(n),
-    j = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
-    G = h.default.useShouldShowChannelNotice(n),
-    w = (0, _.useUnseenEndedApplicationSubscriptionEntitlements)(e),
+    G = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
+    j = _.default.useShouldShowChannelNotice(n),
+    w = (0, h.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {
       enableStudyGroup: k
     } = (0, E.useHubStudyGroupExperiment)(e),
@@ -91,8 +91,8 @@ function O(e) {
   if (O) return 1;
   if (L) return 2;
   else if (U || Y && null != W) return 3;
-  else if (j) return 4;
-  else if (G) return 5;
+  else if (G) return 4;
+  else if (j) return 5;
   else if (F) return 6;
   else if (B) return 7;
   else if (K) return 8;

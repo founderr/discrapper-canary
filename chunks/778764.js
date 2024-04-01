@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("360048"),
   E = s("287880"),
   T = s("358085"),
-  _ = s("960048"),
-  f = s("998502"),
-  m = s("365007"),
+  f = s("960048"),
+  m = s("998502"),
+  _ = s("365007"),
   g = s("15980"),
   h = s("755733"),
   N = s("981631"),
@@ -34,11 +34,11 @@ function C(e) {
   } = e, S = (0, u.useUID)(), [E, g] = n.useState(""), [C, A] = n.useState(!0), [O, x] = n.useState(h.WebAuthnScreens.INIT), [R, M] = n.useState(""), [v, D] = n.useState(null), L = async () => {
     let e;
     x(h.WebAuthnScreens.REGISTER);
-    let t = T.isPlatformEmbedded && f.default.supportsFeature(N.NativeFeatures.WEBAUTHN) ? f.default.webAuthnRegister(c) : l.create(JSON.parse(c)).then(e => JSON.stringify(e));
+    let t = T.isPlatformEmbedded && m.default.supportsFeature(N.NativeFeatures.WEBAUTHN) ? m.default.webAuthnRegister(c) : l.create(JSON.parse(c)).then(e => JSON.stringify(e));
     try {
       e = await t
     } catch (e) {
-      _.default.captureException(e), D(I.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(h.WebAuthnScreens.INIT);
+      f.default.captureException(e), D(I.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(h.WebAuthnScreens.INIT);
       return
     }
     M(e), x(h.WebAuthnScreens.NAME)
@@ -113,7 +113,7 @@ function C(e) {
         id: h.WebAuthnScreens.NAME,
         children: (0, a.jsxs)("form", {
           onSubmit: e => {
-            e.preventDefault(), (0, m.finishRegisterWebAuthnCredential)(E, o, R).then(async () => {
+            e.preventDefault(), (0, _.finishRegisterWebAuthnCredential)(E, o, R).then(async () => {
               await (0, d.showMFASuccessModal)(!1)
             }).then(() => i()).catch(() => {
               D(I.default.Messages.ERROR_OCCURRED_TRY_AGAIN), x(h.WebAuthnScreens.INIT)
@@ -191,7 +191,7 @@ function A(e) {
       label: I.default.Messages.TWO_FA_WEBAUTHN_DELETE_CREDENTIAL,
       color: "danger",
       action: () => {
-        (0, m.deleteWebAuthnCredential)(n)
+        (0, _.deleteWebAuthnCredential)(n)
       }
     })]
   })
@@ -206,7 +206,7 @@ function O() {
     credentials: g.default.getCredentials()
   }));
   n.useEffect(() => {
-    !t && (0, m.fetchWebAuthnCredentials)()
+    !t && (0, _.fetchWebAuthnCredentials)()
   }, [t]);
   let [s, l] = n.useState(!1);
   return (0, a.jsxs)(r.FormSection, {
@@ -250,7 +250,7 @@ function O() {
     }), (0, a.jsx)("div", {
       children: (0, a.jsx)(r.Button, {
         onClick: () => {
-          l(!0), (0, m.startRegisterWebAuthnCredential)().then(e => {
+          l(!0), (0, _.startRegisterWebAuthnCredential)().then(e => {
             let {
               ticket: t,
               challenge: s
@@ -261,7 +261,7 @@ function O() {
               challenge: s
             }))
           }).catch(e => {
-            e.message !== I.default.Messages.MFA_V2_CANCELED && _.default.captureException(e)
+            e.message !== I.default.Messages.MFA_V2_CANCELED && f.default.captureException(e)
           }).finally(() => {
             l(!1)
           })

@@ -21,24 +21,24 @@ function f(e) {
       partiedMembers: f
     } = e,
     E = s.useContext(u.AnalyticsContext),
-    h = n.map(e => {
+    _ = n.map(e => {
       let {
         user: t
       } = e;
       return t.id
     }),
-    _ = 1 === f.length && 1 === n.length,
+    h = 1 === f.length && 1 === n.length,
     C = n.length - f.length > 0;
-  return (_ || t) && !C && 0 !== h.length ? (0, a.jsx)(l.MenuItem, {
+  return (h || t) && !C && 0 !== _.length ? (0, a.jsx)(l.MenuItem, {
     id: "message",
     action: function() {
-      i.default.openPrivateChannel(h).then(t => r.default.trackWithMetadata(d.AnalyticEvents.ACTIVITY_FEED_DM_VISITED, {
+      i.default.openPrivateChannel(_).then(t => r.default.trackWithMetadata(d.AnalyticEvents.ACTIVITY_FEED_DM_VISITED, {
         source: {
           ...E.location,
           object: d.AnalyticsObjects.LIST_ITEM
         },
         channel_id: t,
-        recipient_id: "string" == typeof h ? h : h[0],
+        recipient_id: "string" == typeof _ ? _ : _[0],
         af_recently_played: !1,
         ...(0, o.getPartyMetadata)(e)
       }))

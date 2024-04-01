@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("835473"),
   f = n("871118"),
   E = n("543882"),
-  h = n("314897"),
-  _ = n("944486"),
+  _ = n("314897"),
+  h = n("944486"),
   C = n("594174"),
   S = n("366695"),
   m = n("372662"),
@@ -60,7 +60,7 @@ function M(e) {
     applicationId: I,
     channelId: p,
     streamKey: M
-  } = n, [y, D] = s.useState(!1), x = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([I]), U = null !== (t = T.default.getGlobalName(x)) && void 0 !== t ? t : T.default.getUserTag(x), j = (0, N.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, A.default)(), F = (0, g.default)(p);
+  } = n, [y, D] = s.useState(!1), x = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([I]), U = null !== (t = T.default.getGlobalName(x)) && void 0 !== t ? t : T.default.getUserTag(x), G = (0, N.default)(), j = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, i)), w = (0, l.useStateFromStores)([h.default], () => h.default.getVoiceChannelId()), k = (0, A.default)(), F = (0, g.default)(p);
   if (s.useEffect(() => {
       y && w === p && D(!1)
     }, [w, y, p]), null == x || null == U) return null;
@@ -69,7 +69,7 @@ function M(e) {
     buttonCTA: H,
     disabled: V
   } = function(e, t) {
-    let n = h.default.getId(),
+    let n = _.default.getId(),
       a = t.some(e => e.id === n) || e === n,
       s = t.length >= R.MAX_GROUP_DM_BROADCAST_PARTICIPANTS;
     return {
@@ -106,8 +106,8 @@ function M(e) {
               return
             }
             D(!0), (0, u.joinPrivateChannelAndWatchStream)(p, M), d.default.trackWithMetadata(R.AnalyticEvents.BROADCAST_VIEWED, {
-              num_active_broadcasts: j.length,
-              broadcast_position: j.findIndex(e => e.userId === i) + 1,
+              num_active_broadcasts: G.length,
+              broadcast_position: G.findIndex(e => e.userId === i) + 1,
               is_broadcasting: k,
               broadcast_channel_id: p
             })
@@ -123,7 +123,7 @@ function M(e) {
           }), H]
         })]
       })]
-    }), null != G ? (0, a.jsx)(f.default, {
+    }), null != j ? (0, a.jsx)(f.default, {
       className: L.stream,
       stream: {
         streamType: O.StreamTypes.CALL,

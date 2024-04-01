@@ -14,14 +14,14 @@ var l, a = n("735250"),
   c = n("239091"),
   f = n("134616"),
   h = n("714338"),
-  C = n("212819"),
-  p = n("14429"),
+  p = n("212819"),
+  C = n("14429"),
   m = n("592125"),
   g = n("888369"),
   E = n("430824"),
-  S = n("306680"),
-  _ = n("944486"),
-  I = n("938475"),
+  _ = n("306680"),
+  I = n("944486"),
+  S = n("938475"),
   N = n("387204"),
   T = n("107828"),
   A = n("153124"),
@@ -30,8 +30,8 @@ var l, a = n("735250"),
   x = n("51596"),
   R = n("823385"),
   O = n("670512"),
-  y = n("981631"),
-  M = n("689938"),
+  M = n("981631"),
+  y = n("689938"),
   D = n("13199");
 
 function b(e, t, n) {
@@ -49,12 +49,12 @@ let j = {
     className: D.emptyState,
     children: [(0, a.jsx)("div", {
       className: D.emptyStateNote,
-      children: M.default.Messages.QUICKSWITCHER_EMPTY_TEXT
+      children: y.default.Messages.QUICKSWITCHER_EMPTY_TEXT
     }), (0, a.jsx)("div", {
       className: D.emptyStateCTA,
       children: (0, a.jsx)(d.Anchor, {
-        href: v.default.getArticleURL(y.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL),
-        children: M.default.Messages.QUICKSWITCHER_EMPTY_CTA
+        href: v.default.getArticleURL(M.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL),
+        children: y.default.Messages.QUICKSWITCHER_EMPTY_CTA
       })
     })]
   });
@@ -73,23 +73,23 @@ class U extends(l = s.Component) {
 b(U, "defaultProps", {
   unread: !1
 });
-let P = u.default.connectStores([S.default, m.default], e => {
+let P = u.default.connectStores([_.default, m.default], e => {
     let {
       channel: t
     } = e;
     return {
-      unread: S.default.hasUnread(t.id),
-      mentions: S.default.getMentionCount(t.id),
+      unread: _.default.hasUnread(t.id),
+      mentions: _.default.getMentionCount(t.id),
       category: m.default.getChannel(t.parent_id)
     }
   })(U),
-  w = u.default.connectStores([I.default], e => {
+  w = u.default.connectStores([S.default], e => {
     let {
       channel: t
     } = e;
     if (null == t.guild_id) throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
     return {
-      voiceStates: I.default.getVoiceStates(t.guild_id)[t.id]
+      voiceStates: S.default.getVoiceStates(t.guild_id)[t.id]
     }
   })(U),
   F = u.default.connectStores([g.default], e => {
@@ -100,20 +100,20 @@ let P = u.default.connectStores([S.default, m.default], e => {
       unread: g.default.hasUnread(t.id)
     }
   })(T.Guild),
-  B = u.default.connectStores([S.default], e => {
+  B = u.default.connectStores([_.default], e => {
     let {
       channel: t
     } = e;
     return {
-      mentions: S.default.getMentionCount(t.id)
+      mentions: _.default.getMentionCount(t.id)
     }
   })(T.GroupDM),
-  V = u.default.connectStores([m.default, S.default], e => {
+  V = u.default.connectStores([m.default, _.default], e => {
     let {
       user: t
     } = e, n = m.default.getDMFromUserId(t.id);
     return {
-      mentions: null != n ? S.default.getMentionCount(n) : 0
+      mentions: null != n ? _.default.getMentionCount(n) : 0
     }
   })(T.User);
 
@@ -169,7 +169,7 @@ class k extends s.PureComponent {
     return (0, a.jsx)(d.FocusRing, {
       children: (0, a.jsx)("input", {
         className: D.input,
-        "aria-label": M.default.Messages.QUICK_SWITCHER,
+        "aria-label": y.default.Messages.QUICK_SWITCHER,
         ref: this.inputRef,
         type: "text",
         role: "combobox",
@@ -177,7 +177,7 @@ class k extends s.PureComponent {
         "aria-expanded": l,
         "aria-activedescendant": l ? this.getRowId(e) : void 0,
         "aria-autocomplete": "list",
-        placeholder: M.default.Messages.QUICKSWITCHER_PLACEHOLDER,
+        placeholder: y.default.Messages.QUICKSWITCHER_PLACEHOLDER,
         onChange: this.handleInputChange,
         onKeyDown: this.handleKeyDown,
         value: this.state.query,
@@ -198,7 +198,7 @@ class k extends s.PureComponent {
     return 0 === t.length && e.length > 0 ? (0, a.jsx)(G, {}) : 0 === t.length ? null : (0, a.jsx)(d.ListAuto, {
       innerId: this._listId,
       innerRole: "listbox",
-      "aria-label": M.default.Messages.QUICK_SWITCHER_RESULTS_LABEL,
+      "aria-label": y.default.Messages.QUICK_SWITCHER_RESULTS_LABEL,
       ref: this.scrollerRef,
       sectionHeight: 0,
       rowHeight: 34,
@@ -210,7 +210,7 @@ class k extends s.PureComponent {
     })
   }
   focusNode(e) {
-    L.ComponentDispatch.dispatch(y.ComponentActions.QUICKSWITCHER_RESULT_FOCUS, {
+    L.ComponentDispatch.dispatch(M.ComponentActions.QUICKSWITCHER_RESULT_FOCUS, {
       node: e
     })
   }
@@ -223,12 +223,12 @@ class k extends s.PureComponent {
         [D.hasContent]: this.state.query.length > 0
       }),
       type: N.default.Types.INLINE,
-      children: M.default.Messages.QUICKSWITCHER_PROTIP.format({
-        userSymbolHook: (e, t) => H(t, C.AutocompleterQuerySymbols.USER, M.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-        textChannelSymbolHook: (e, t) => H(t, C.AutocompleterQuerySymbols.TEXT_CHANNEL, M.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-        voiceChannelSymbolHook: (e, t) => H(t, C.AutocompleterQuerySymbols.VOICE_CHANNEL, M.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-        guildSymbolHook: (e, t) => H(t, C.AutocompleterQuerySymbols.GUILD, M.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
-        helpdeskArticle: v.default.getArticleURL(y.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL)
+      children: y.default.Messages.QUICKSWITCHER_PROTIP.format({
+        userSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.USER, y.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+        textChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.TEXT_CHANNEL, y.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+        voiceChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.VOICE_CHANNEL, y.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+        guildSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.GUILD, y.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+        helpdeskArticle: v.default.getArticleURL(M.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL)
       })
     })
   }
@@ -245,7 +245,7 @@ class k extends s.PureComponent {
   }
   render() {
     return (0, a.jsx)(d.ModalRoot, {
-      "aria-label": M.default.Messages.QUICK_SWITCHER,
+      "aria-label": y.default.Messages.QUICK_SWITCHER,
       size: d.ModalSize.DYNAMIC,
       transitionState: this.props.transitionState,
       className: r()(D.container, o.isMobile && D.mobileContainer),
@@ -276,11 +276,11 @@ class k extends s.PureComponent {
     }), b(this, "focusResult", e => {
       !this.state.mouseFocusDisabled && (0, x.selectResult)(this.props.results.indexOf(e))
     }), b(this, "selectResult", e => {
-      (0, x.switchToResult)(e, this.props.queryMode === C.AutocompleterResultTypes.TEXT_CHANNEL)
+      (0, x.switchToResult)(e, this.props.queryMode === p.AutocompleterResultTypes.TEXT_CHANNEL)
     }), b(this, "handleContextMenu", e => {
       let t = this.props.results[this.props.selectedIndex];
       switch (t.type) {
-        case C.AutocompleterResultTypes.GUILD:
+        case p.AutocompleterResultTypes.GUILD:
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
@@ -292,16 +292,16 @@ class k extends s.PureComponent {
               hideSettings: !0
             })
           });
-        case C.AutocompleterResultTypes.TEXT_CHANNEL:
-        case C.AutocompleterResultTypes.VOICE_CHANNEL:
+        case p.AutocompleterResultTypes.TEXT_CHANNEL:
+        case p.AutocompleterResultTypes.VOICE_CHANNEL:
           let l = t.record,
             s = E.default.getGuild(l.getGuildId());
           if (null == s) return;
           switch (l.type) {
-            case y.ChannelTypes.GUILD_TEXT:
-            case y.ChannelTypes.GUILD_ANNOUNCEMENT:
-            case y.ChannelTypes.GUILD_FORUM:
-            case y.ChannelTypes.GUILD_MEDIA:
+            case M.ChannelTypes.GUILD_TEXT:
+            case M.ChannelTypes.GUILD_ANNOUNCEMENT:
+            case M.ChannelTypes.GUILD_FORUM:
+            case M.ChannelTypes.GUILD_MEDIA:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -313,8 +313,8 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case y.ChannelTypes.GUILD_VOICE:
-            case y.ChannelTypes.GUILD_STAGE_VOICE:
+            case M.ChannelTypes.GUILD_VOICE:
+            case M.ChannelTypes.GUILD_STAGE_VOICE:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -326,9 +326,9 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case y.ChannelTypes.ANNOUNCEMENT_THREAD:
-            case y.ChannelTypes.PUBLIC_THREAD:
-            case y.ChannelTypes.PRIVATE_THREAD:
+            case M.ChannelTypes.ANNOUNCEMENT_THREAD:
+            case M.ChannelTypes.PUBLIC_THREAD:
+            case M.ChannelTypes.PRIVATE_THREAD:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -339,7 +339,7 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case y.ChannelTypes.GUILD_STORE:
+            case M.ChannelTypes.GUILD_STORE:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -351,7 +351,7 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case y.ChannelTypes.GUILD_DIRECTORY:
+            case M.ChannelTypes.GUILD_DIRECTORY:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -363,7 +363,7 @@ class k extends s.PureComponent {
               })
           }
           break;
-        case C.AutocompleterResultTypes.GROUP_DM:
+        case p.AutocompleterResultTypes.GROUP_DM:
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
@@ -371,11 +371,11 @@ class k extends s.PureComponent {
             return n => (0, a.jsx)(e, {
               ...n,
               channel: t.record,
-              selected: _.default.getChannelId() === t.record.id,
+              selected: I.default.getChannelId() === t.record.id,
               onSelect: x.hide
             })
           });
-        case C.AutocompleterResultTypes.USER:
+        case p.AutocompleterResultTypes.USER:
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
@@ -416,18 +416,18 @@ class k extends s.PureComponent {
           return
         }
         case "arrowup":
-          s = (0, C.findNextSelectedResult)(C.FindResultDirections.UP, s, l);
+          s = (0, p.findNextSelectedResult)(p.FindResultDirections.UP, s, l);
           break;
         case "arrowdown":
-          s = (0, C.findNextSelectedResult)(C.FindResultDirections.DOWN, s, l);
+          s = (0, p.findNextSelectedResult)(p.FindResultDirections.DOWN, s, l);
           break;
         case "n":
           if (!e.ctrlKey) return;
-          s = (0, C.findNextSelectedResult)(C.FindResultDirections.DOWN, s, l);
+          s = (0, p.findNextSelectedResult)(p.FindResultDirections.DOWN, s, l);
           break;
         case "p":
           if (!e.ctrlKey) return;
-          s = (0, C.findNextSelectedResult)(C.FindResultDirections.UP, s, l);
+          s = (0, p.findNextSelectedResult)(p.FindResultDirections.UP, s, l);
           break;
         default:
           return
@@ -440,17 +440,17 @@ class k extends s.PureComponent {
         selectedIndex: l
       } = this.props, {
         showScores: s
-      } = p.default.getCurrentConfig({
+      } = C.default.getCurrentConfig({
         location: "62f4be_1"
       }, {
         autoTrackExposure: !1
       });
       switch (n.type) {
-        case C.AutocompleterResultTypes.HEADER:
+        case p.AutocompleterResultTypes.HEADER:
           return (0, a.jsx)(T.Header, {
             children: n.record.text
           }, "".concat(n.type, "-").concat(n.record.id));
-        case C.AutocompleterResultTypes.TEXT_CHANNEL:
+        case p.AutocompleterResultTypes.TEXT_CHANNEL:
           return (0, a.jsx)(P, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
@@ -461,7 +461,7 @@ class k extends s.PureComponent {
             channel: n.record,
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case C.AutocompleterResultTypes.VOICE_CHANNEL:
+        case p.AutocompleterResultTypes.VOICE_CHANNEL:
           return (0, a.jsx)(w, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
@@ -472,7 +472,7 @@ class k extends s.PureComponent {
             channel: n.record,
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case C.AutocompleterResultTypes.GUILD:
+        case p.AutocompleterResultTypes.GUILD:
           return (0, a.jsx)(F, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
@@ -483,7 +483,7 @@ class k extends s.PureComponent {
             guild: n.record,
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case C.AutocompleterResultTypes.USER:
+        case p.AutocompleterResultTypes.USER:
           return (0, a.jsx)(V, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
@@ -495,7 +495,7 @@ class k extends s.PureComponent {
             comparator: n.comparator,
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case C.AutocompleterResultTypes.GROUP_DM:
+        case p.AutocompleterResultTypes.GROUP_DM:
           return (0, a.jsx)(B, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
@@ -506,7 +506,7 @@ class k extends s.PureComponent {
             channel: n.record,
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case C.AutocompleterResultTypes.APPLICATION:
+        case p.AutocompleterResultTypes.APPLICATION:
           return (0, a.jsx)(T.Application, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
@@ -515,7 +515,7 @@ class k extends s.PureComponent {
             onFocus: this.focusNode,
             application: n.record
           }, "".concat(n.type, "-").concat(n.record.id));
-        case C.AutocompleterResultTypes.LINK:
+        case p.AutocompleterResultTypes.LINK:
           return (0, a.jsx)(T.Link, {
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),

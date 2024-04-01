@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("836157"),
   E = s("706454"),
   T = s("494620"),
-  _ = s("131951"),
-  f = s("556296"),
-  m = s("924557"),
+  f = s("131951"),
+  m = s("556296"),
+  _ = s("924557"),
   g = s("435064"),
   h = s("894694"),
   N = s("779618"),
@@ -34,7 +34,7 @@ var a = s("735250"),
   D = s("794711");
 
 function L() {
-  let e = (0, r.useStateFromStores)([_.default], () => _.default.getHardwareH264()),
+  let e = (0, r.useStateFromStores)([f.default], () => f.default.getHardwareH264()),
     {
       clipsEnabled: t,
       remindersEnabled: s,
@@ -43,7 +43,7 @@ function L() {
       clipsQuality: P
     } = (0, r.useStateFromStoresObject)([g.default], () => g.default.getSettings()),
     j = (0, r.useStateFromStores)([g.default], () => g.default.getHardwareClassification()),
-    b = (0, r.useStateFromStores)([f.default], () => f.default.getKeybindForAction(A.GlobalKeybindActions.SAVE_CLIP, !0)),
+    b = (0, r.useStateFromStores)([m.default], () => m.default.getKeybindForAction(A.GlobalKeybindActions.SAVE_CLIP, !0)),
     {
       enableDecoupledGameClipping: U
     } = S.default.useExperiment({
@@ -51,10 +51,10 @@ function L() {
     }, {
       autoTrackExposure: !1
     }),
-    y = (0, N.default)(_.default),
+    y = (0, N.default)(f.default),
     {
       showClipsHeaderEntrypoint: B
-    } = m.ClipsExperiment.useExperiment({
+    } = _.ClipsExperiment.useExperiment({
       location: "clips_recording_settings"
     }, {
       autoTrackExposure: !1

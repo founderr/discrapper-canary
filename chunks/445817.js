@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("747545"),
   E = s("131951"),
   T = s("594174"),
-  _ = s("981631"),
-  f = s("689938"),
-  m = s("676600");
+  f = s("981631"),
+  m = s("689938"),
+  _ = s("676600");
 let g = {
   width: 387,
   height: 218
@@ -36,12 +36,12 @@ function h(e) {
     onSelectBackgroundOption: e => {
       p.current = !0, C.current = e, I(e), (0, c.applyBackgroundOptionLive)(e, {
         location: A.location
-      }).catch(_.NOOP)
+      }).catch(f.NOOP)
     },
     renderCamera: e => t ? (0, a.jsx)("div", {
-      className: m.cameraWrapper,
+      className: _.cameraWrapper,
       children: (0, a.jsxs)("div", {
-        className: m.camera,
+        className: _.camera,
         children: [(0, a.jsx)(h, {
           deviceId: e,
           width: g.width,
@@ -50,16 +50,16 @@ function h(e) {
         }), (0, a.jsx)(S.FilterLoadingIndicator, {})]
       })
     }) : (0, a.jsxs)("div", {
-      className: m.cameraWrapper,
+      className: _.cameraWrapper,
       children: [(0, a.jsx)("div", {
-        className: m.previewImage
+        className: _.previewImage
       }), (0, a.jsx)(i.Tooltip, {
-        text: O ? null : f.default.Messages.CAMERA_UNAVAILABLE,
+        text: O ? null : m.default.Messages.CAMERA_UNAVAILABLE,
         children: e => (0, a.jsx)(i.Button, {
           ...e,
           onClick: s,
           disabled: !O,
-          children: f.default.Messages.TEST_VIDEO
+          children: m.default.Messages.TEST_VIDEO
         })
       })]
     })

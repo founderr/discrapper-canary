@@ -1,46 +1,46 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
 });
-var n = s("735250"),
-  a = s("470079"),
-  l = s("481060"),
-  i = s("725436"),
-  r = s("11868"),
-  u = s("217804"),
-  o = s("765305"),
-  d = s("177477");
+var l = n("735250"),
+  i = n("470079"),
+  a = n("481060"),
+  r = n("725436"),
+  s = n("11868"),
+  u = n("217804"),
+  d = n("765305"),
+  o = n("177477");
 
 function c(e) {
   let {
     guildScheduledEvent: t,
-    channel: s,
+    channel: n,
     onClose: c
-  } = e, f = t.entity_type === o.GuildScheduledEventEntityTypes.EXTERNAL, E = a.useCallback(e => (0, r.createEventLocationClickHandler)(t, c)(e), [t, c]), I = (0, u.getLocationDataForEvent)(t, s);
-  if (null == I) return null;
+  } = e, f = t.entity_type === d.GuildScheduledEventEntityTypes.EXTERNAL, v = i.useCallback(e => (0, s.createEventLocationClickHandler)(t, c)(e), [t, c]), E = (0, u.getLocationDataForEvent)(t, n);
+  if (null == E) return null;
   let {
-    IconComponent: _,
-    locationName: h
-  } = I, p = (0, n.jsxs)(n.Fragment, {
-    children: [null != _ && (0, n.jsx)(_, {
+    IconComponent: h,
+    locationName: m
+  } = E, g = (0, l.jsxs)(l.Fragment, {
+    children: [null != h && (0, l.jsx)(h, {
       width: 20,
       height: 20,
-      className: d.channelIcon
-    }), (0, n.jsx)(l.Text, {
+      className: o.channelIcon
+    }), (0, l.jsx)(a.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
-      className: d.locationText,
-      children: (0, i.guildEventDetailsParser)(h, !0)
+      className: o.locationText,
+      children: (0, r.guildEventDetailsParser)(m, !0)
     })]
   });
-  return (0, n.jsx)("div", {
-    className: d.row,
-    children: null != E ? (0, n.jsx)(l.Clickable, {
-      className: f ? d.externalLocation : d.channelLocation,
-      onClick: E,
-      children: p
-    }) : p
+  return (0, l.jsx)("div", {
+    className: o.row,
+    children: null != v ? (0, l.jsx)(a.Clickable, {
+      className: f ? o.externalLocation : o.channelLocation,
+      onClick: v,
+      children: g
+    }) : g
   })
 }

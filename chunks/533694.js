@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return I
   }
 });
 var s = n("735250");
@@ -14,8 +14,8 @@ var a = n("399606"),
   u = n("703656"),
   d = n("702346"),
   c = n("331372"),
-  f = n("981631"),
-  E = n("689938"),
+  E = n("981631"),
+  f = n("689938"),
   _ = n("315752");
 
 function T(e) {
@@ -31,7 +31,7 @@ function T(e) {
   return (0, s.jsxs)("div", {
     className: _.thankYouCard,
     role: "img",
-    "aria-label": E.default.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({
+    "aria-label": f.default.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({
       username: r
     }),
     children: [(0, s.jsx)(c.default, {
@@ -41,7 +41,7 @@ function T(e) {
       tag: "p",
       color: "status-positive-text",
       variant: "heading-xl/medium",
-      children: E.default.Messages.GUILD_PRODUCT_PURCHASE_THANK_YOU_CARD_TEXT.format({
+      children: f.default.Messages.GUILD_PRODUCT_PURCHASE_THANK_YOU_CARD_TEXT.format({
         username: r,
         usernameHook: (e, t) => (0, s.jsx)(l.Text, {
           tag: "span",
@@ -55,24 +55,24 @@ function T(e) {
   })
 }
 
-function m(e) {
+function I(e) {
   var t, a, l;
   let {
     channel: i,
     message: c,
     compact: _
-  } = e, m = (0, r.default)(c), I = (0, o.useUsernameHook)({
+  } = e, I = (0, r.default)(c), m = (0, o.useUsernameHook)({
     user: c.author,
     channelId: i.id,
     guildId: i.guild_id,
     messageId: c.id
-  })(m), p = E.default.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
-    username: m.nick,
-    usernameHook: I,
+  })(I), N = f.default.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
+    username: I.nick,
+    usernameHook: m,
     productName: null !== (l = null === (a = c.purchaseNotification) || void 0 === a ? void 0 : null === (t = a.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== l ? l : "",
     handleProductListingClick: () => {
       var e, t, n;
-      (0, u.transitionTo)(f.Routes.GUILD_PRODUCT(i.guild_id, null !== (n = null === (t = c.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ""))
+      (0, u.transitionTo)(E.Routes.GUILD_PRODUCT(i.guild_id, null !== (n = null === (t = c.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ""))
     }
   });
   return (0, s.jsxs)(s.Fragment, {
@@ -80,9 +80,9 @@ function m(e) {
       icon: n("570111"),
       timestamp: c.timestamp,
       compact: _,
-      children: p
+      children: N
     }), (0, s.jsx)(T, {
-      username: m.nick,
+      username: I.nick,
       guildId: i.guild_id,
       user: c.author
     })]

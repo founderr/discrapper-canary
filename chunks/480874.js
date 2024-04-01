@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("209613"),
   f = n("797614"),
   E = n("151827"),
-  h = n("626135"),
-  _ = n("26373"),
+  _ = n("626135"),
+  h = n("26373"),
   C = n("486622"),
   S = n("922409"),
   m = n("727813"),
@@ -32,7 +32,7 @@ function O() {
   let e = s.useRef(null),
     t = (0, m.default)(),
     n = (0, I.useSpamMessageRequestCount)(),
-    l = (0, _.useListHasSingleSpamMessageRequest)(),
+    l = (0, h.useListHasSingleSpamMessageRequest)(),
     O = (0, d.useIsRejectAllMessageRequestsEnabled)(),
     v = (0, c.default)("message-requests-spam-list"),
     {
@@ -50,7 +50,7 @@ function O() {
       M(t.map(e => e.channel.id))
     }, [t, M]);
   s.useEffect(() => {
-    h.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
+    _.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
     }), f.default.increment({
       name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW

@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("26373"),
   f = n("486622"),
   E = n("718538"),
-  h = n("359110"),
-  _ = n("6025"),
+  _ = n("359110"),
+  h = n("6025"),
   C = n("433355"),
   S = n("465670"),
   m = n("502568"),
@@ -31,7 +31,7 @@ function N(e) {
     channel: t,
     baseChannelId: n
   } = e, N = (0, I.default)(t), R = (0, c.useListHasSingleMessageRequest)(), O = (0, c.useListHasSingleSpamMessageRequest)(), v = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), L = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), P = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), M = s.useCallback(() => {
-    _.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), v && R && (0, h.transitionToChannel)(t.id), L && O && (0, h.transitionToChannel)(t.id)
+    h.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), v && R && (0, _.transitionToChannel)(t.id), L && O && (0, _.transitionToChannel)(t.id)
   }, [t.id, L, O, v, R]), y = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(T.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), {
@@ -44,7 +44,7 @@ function N(e) {
   let x = [(0, a.jsx)(m.default.Icon, {
     icon: S.default,
     tooltip: T.default.Messages.CLOSE,
-    onClick: () => _.default.closeChannelSidebar(n)
+    onClick: () => h.default.closeChannelSidebar(n)
   }, "close")];
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(m.default, {

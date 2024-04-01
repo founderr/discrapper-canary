@@ -30,8 +30,8 @@ let v = new I.default("ChannelRTCStore"),
   b = {},
   G = {},
   w = {},
-  k = {},
   B = {},
+  k = {},
   V = {},
   F = {},
   x = {};
@@ -204,7 +204,7 @@ class es extends(i = _.default.Store) {
     return null !== (t = H(e).toArray(g.ChannelRTCParticipantsIndexes.SPEAKING)) && void 0 !== t ? t : M
   }
   getFilteredParticipants(e) {
-    return B[e] ? H(e).toArray(g.ChannelRTCParticipantsIndexes.FILTERED) : H(e).toArray()
+    return k[e] ? H(e).toArray(g.ChannelRTCParticipantsIndexes.FILTERED) : H(e).toArray()
   }
   getVideoParticipants(e) {
     var t;
@@ -227,11 +227,11 @@ class es extends(i = _.default.Store) {
   }
   getParticipantsOpen(e) {
     var t;
-    return null === (t = k[e]) || void 0 === t || t
+    return null === (t = B[e]) || void 0 === t || t
   }
   getVoiceParticipantsHidden(e) {
     var t;
-    return null !== (t = B[e]) && void 0 !== t && t
+    return null !== (t = k[e]) && void 0 !== t && t
   }
   getSelectedParticipantId(e) {
     let [t, n] = W(e);
@@ -359,7 +359,7 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
         e === h.default.getId() && j(e, [t])
       } catch (e) {
         v.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
-      }!Q(i) && (k[t] = !1)
+      }!Q(i) && (B[t] = !1)
     }
   },
   CHANNEL_RTC_UPDATE_LAYOUT: function(e) {
@@ -378,14 +378,14 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       participantsOpen: n
     } = e;
-    k[t] = n
+    B[t] = n
   },
   CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN: function(e) {
     let {
       channelId: t,
       voiceParticipantsHidden: n
     } = e;
-    B[t] = n
+    k[t] = n
   },
   CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE: function(e) {
     let {

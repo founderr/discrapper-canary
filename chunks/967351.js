@@ -11,8 +11,8 @@ var a = n("413135"),
   c = n("852926"),
   f = n("981631");
 let E = o.default.requireModule("discord_rpc").RPCIPC,
-  h = new r.default("RPCServer:IPC"),
-  _ = {
+  _ = new r.default("RPCServer:IPC"),
+  h = {
     HANDSHAKE: 0,
     FRAME: 1,
     CLOSE: 2,
@@ -34,7 +34,7 @@ function m(e) {
       try {
         p(e)
       } catch (t) {
-        e.end(I(_.CLOSE, {
+        e.end(I(h.CLOSE, {
           code: 1003,
           message: t.message
         })), e.destroy()
@@ -54,7 +54,7 @@ function m(e) {
       }, e => {
         throw a(), e
       });
-    return e.write(I(_.PING, i().uniqueId())), s.then(t, n)
+    return e.write(I(h.PING, i().uniqueId())), s.then(t, n)
   })
 }
 
@@ -72,35 +72,35 @@ function p(e) {
   let n = a.Buffer.from(t),
     s = n.readInt32LE(0),
     l = n.readInt32LE(4);
-  if (!Object.values(_).includes(s) || l < 0) throw Error("protocol error");
+  if (!Object.values(h).includes(s) || l < 0) throw Error("protocol error");
   if (null == (t = e.read(l))) throw Error("data size does not match what was received");
   let i = JSON.parse((n = a.Buffer.from(t)).toString());
   switch (s) {
-    case _.PING:
-      e.emit("ping", i), e.write(I(_.PONG, i));
+    case h.PING:
+      e.emit("ping", i), e.write(I(h.PONG, i));
       break;
-    case _.PONG:
+    case h.PONG:
       e.emit("pong", i);
       break;
-    case _.HANDSHAKE:
+    case h.HANDSHAKE:
       if (S(e)) throw Error("already did handshake");
       C(e, !0), e.emit("handshake", i);
       break;
-    case _.FRAME:
+    case h.FRAME:
       if (!S(e)) throw Error("did not handshake");
       e.emit("request", i);
       break;
-    case _.CLOSE:
+    case h.CLOSE:
       e.end(), e.destroy()
   }
   p(e)
 }
 class T extends d.default {
   send(e) {
-    h.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(I(_.FRAME, e))
+    _.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(I(h.FRAME, e))
   }
   close(e, t) {
-    this.socket.end(I(_.CLOSE, {
+    this.socket.end(I(h.CLOSE, {
       code: e,
       message: t
     })), this.socket.destroy()
@@ -121,7 +121,7 @@ class g extends s.EventEmitter {
       try {
         p(e)
       } catch (t) {
-        e.end(I(_.CLOSE, {
+        e.end(I(h.CLOSE, {
           code: f.RPCCloseCodes.CLOSE_UNSUPPORTED,
           message: t.message
         })), e.destroy()
@@ -133,17 +133,17 @@ class g extends s.EventEmitter {
       try {
         n = new T(e, s, "json")
       } catch (t) {
-        e.end(I(_.CLOSE, {
+        e.end(I(h.CLOSE, {
           code: t.code,
           message: t.message
         })), e.destroy();
         return
       }
-      h.info("Socket Opened: ".concat(n.id)), e.on("error", e => h.error("Socket Error: ".concat(e.message))), e.on("close", () => {
-        h.info("Socket Close: ".concat(n.id)), this.emit("disconnect", n)
+      _.info("Socket Opened: ".concat(n.id)), e.on("error", e => _.error("Socket Error: ".concat(e.message))), e.on("close", () => {
+        _.info("Socket Close: ".concat(n.id)), this.emit("disconnect", n)
       }), (0, c.validateSocketClient)(n, null, a).then(() => {
         e.on("request", e => {
-          h.info("Socket Message: ".concat(n.id), (0, u.default)(e)), this.emit("request", n, e)
+          _.info("Socket Message: ".concat(n.id), (0, u.default)(e)), this.emit("request", n, e)
         }), this.emit("connect", n)
       }).catch(e => {
         let {
@@ -157,9 +157,9 @@ class g extends s.EventEmitter {
   constructor() {
     super();
     let e = E.net.createServer(e => this.handleConnection(e));
-    e.on("error", e => h.error("Error: ".concat(e.message))), E.getAvailableSocket(m).then(t => {
+    e.on("error", e => _.error("Error: ".concat(e.message))), E.getAvailableSocket(m).then(t => {
       e.listen(t, () => {
-        ("function" == typeof e.listening ? e.listening() : e.listening) && h.info("Starting on ".concat(e.address()))
+        ("function" == typeof e.listening ? e.listening() : e.listening) && _.info("Starting on ".concat(e.address()))
       })
     })
   }

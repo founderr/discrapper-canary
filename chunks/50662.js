@@ -19,8 +19,8 @@ var l = s("913527"),
   f = s("696202"),
   T = s("497309"),
   _ = s("808268"),
-  S = s("709054"),
-  R = s("246364"),
+  R = s("709054"),
+  S = s("246364"),
   N = s("360328"),
   A = s("981631"),
   M = s("689938"),
@@ -46,19 +46,19 @@ function h(e) {
     height: 24,
     className: m.icon
   });
-  l.applicationStatus === R.GuildJoinRequestApplicationStatuses.APPROVED ? (b = M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED, B = (0, a.jsx)(I.default, {
+  l.applicationStatus === S.GuildJoinRequestApplicationStatuses.APPROVED ? (b = M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED, B = (0, a.jsx)(I.default, {
     width: 24,
     height: 24,
     className: m.iconApproved,
     backgroundColor: u.default.unsafe_rawColors.WHITE_500.css
-  })) : l.applicationStatus === R.GuildJoinRequestApplicationStatuses.REJECTED && (b = M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED, B = (0, a.jsx)(f.default, {
+  })) : l.applicationStatus === S.GuildJoinRequestApplicationStatuses.REJECTED && (b = M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED, B = (0, a.jsx)(f.default, {
     width: 24,
     height: 24,
     className: m.iconRejected,
     backgroundColor: u.default.unsafe_rawColors.WHITE_500.css
   }));
   let J = null != D && null != g ? M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
-    date: i()(S.default.extractTimestamp(g)).format("ll"),
+    date: i()(R.default.extractTimestamp(g)).format("ll"),
     usernameHook: function() {
       var e;
       return (0, a.jsx)(r.Clickable, {
@@ -100,7 +100,7 @@ function h(e) {
         })]
       }), (0, a.jsxs)("div", {
         className: m.inline,
-        children: [l.applicationStatus === R.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsxs)("div", {
+        children: [l.applicationStatus === S.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsxs)("div", {
           className: m.buttons,
           children: [(0, a.jsx)(r.Button, {
             color: r.Button.Colors.GREEN,
@@ -134,7 +134,7 @@ function h(e) {
           })
         })]
       })]
-    }), l.applicationStatus === R.GuildJoinRequestApplicationStatuses.REJECTED && null != l.rejectionReason && (0, a.jsx)("div", {
+    }), l.applicationStatus === S.GuildJoinRequestApplicationStatuses.REJECTED && null != l.rejectionReason && (0, a.jsx)("div", {
       className: m.rejectionReason,
       children: (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",

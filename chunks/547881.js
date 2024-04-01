@@ -21,7 +21,7 @@ let E = p.OverlayWidgetTypes.DEFAULT,
     opacity: S
   }),
   y = r.createContext(void 0),
-  I = e => {
+  O = e => {
     let {
       children: t,
       className: n,
@@ -76,7 +76,7 @@ s = {
   configurable: !0,
   writable: !0
 }) : a[l] = s;
-let N = e => {
+let C = e => {
     let {
       type: t = E,
       width: n,
@@ -102,7 +102,7 @@ let N = e => {
       })
     })
   },
-  O = e => {
+  N = e => {
     let {
       children: t,
       className: n,
@@ -118,13 +118,13 @@ let N = e => {
       })
     })
   };
-N.Background = e => {
+C.Background = e => {
   let {
     children: t,
     opacityOverride: n
   } = e;
   if (null == t) return null;
-  let i = [I, T, O];
+  let i = [O, T, N];
   return (0, o.jsx)(v.Consumer, {
     children: e => {
       let {
@@ -145,7 +145,7 @@ N.Background = e => {
       }
     }
   })
-}, N.Body = T, N.Content = O, N.Icon = e => {
+}, C.Body = T, C.Content = N, C.Icon = e => {
   let {
     icon: t,
     label: n,
@@ -188,4 +188,4 @@ N.Background = e => {
       })
     }
   })
-}, N.Bar = I, t.default = N
+}, C.Bar = O, t.default = C

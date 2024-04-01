@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("77498"),
   f = n("931240"),
   E = n("650461"),
-  h = n("620929"),
-  _ = n("745628"),
+  _ = n("620929"),
+  h = n("745628"),
   C = n("950279"),
   S = n("796918"),
   m = n("741595"),
@@ -33,7 +33,7 @@ let N = [T.ClanSetupSteps.GAMES, T.ClanSetupSteps.PLAYSTYLE, T.ClanSetupSteps.IN
       tag: c,
       primetime: f,
       onLastStep: E
-    } = e, h = t === N.length, _ = s.useMemo(() => ({
+    } = e, _ = t === N.length, h = s.useMemo(() => ({
       [T.ClanSetupSteps.GAMES]: {
         disableNextStep: 0 === l.size
       },
@@ -85,13 +85,13 @@ let N = [T.ClanSetupSteps.GAMES, T.ClanSetupSteps.PLAYSTYLE, T.ClanSetupSteps.IN
           size: o.Button.Sizes.MEDIUM,
           color: o.Button.Colors.PRIMARY,
           onClick: () => {
-            if (h) {
+            if (_) {
               E();
               return
             }
             n(t + 1)
           },
-          disabled: _[t].disableNextStep,
+          disabled: h[t].disableNextStep,
           children: g.default.Messages.PAGINATION_NEXT
         })]
       })]
@@ -114,11 +114,11 @@ t.default = e => {
   } = (0, r.useStateFromStoresObject)([E.default], () => {
     var e;
     return null !== (e = E.default.getState(t)) && void 0 !== e ? e : (0, E.newClanProgress)()
-  }), b = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [U, j] = s.useState(!0);
+  }), b = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [U, G] = s.useState(!0);
   s.useEffect(() => {
     u.default.getDetectableGames()
   }, []);
-  let G = (0, r.useStateFromStoresObject)([c.default], () => {
+  let j = (0, r.useStateFromStoresObject)([c.default], () => {
       let e = {};
       return Array.from(L).forEach(t => {
         let n = c.default.getDetectableGame(t);
@@ -127,7 +127,7 @@ t.default = e => {
     }),
     w = s.useCallback(e => f.updateClanSettings(t, e), [t]),
     k = s.useCallback(() => {
-      j(!1), setTimeout(() => n(T.ClanSetupModalPages.SIGN), 500)
+      G(!1), setTimeout(() => n(T.ClanSetupModalPages.SIGN), 500)
     }, [n]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Button, {
@@ -157,7 +157,7 @@ t.default = e => {
                 return (0, a.jsx)(C.default, {
                   handleUpdate: w,
                   selectedGames: L,
-                  gameDetails: G
+                  gameDetails: j
                 });
               case T.ClanSetupSteps.PLAYSTYLE:
                 return (0, a.jsx)(m.default, {
@@ -170,7 +170,7 @@ t.default = e => {
                   interests: M
                 });
               case T.ClanSetupSteps.DESCRIPTION:
-                return (0, a.jsx)(_.default, {
+                return (0, a.jsx)(h.default, {
                   handleUpdate: w,
                   description: y
                 });
@@ -202,9 +202,9 @@ t.default = e => {
       className: i()(A.overviewSidebar, {
         [A.fadeOut]: b && !U
       }),
-      children: (0, a.jsx)(h.default, {
+      children: (0, a.jsx)(_.default, {
         guildId: t,
-        gameDetails: G
+        gameDetails: j
       })
     })]
   })

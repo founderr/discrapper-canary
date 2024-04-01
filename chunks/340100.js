@@ -9,64 +9,64 @@ var s = n("735250"),
   u = n("481060"),
   d = n("377171"),
   c = n("706454"),
-  f = n("507893"),
-  E = n("930153"),
+  E = n("507893"),
+  f = n("930153"),
   _ = n("358085"),
   T = n("918701"),
-  m = n("689938"),
-  I = n("872861");
+  I = n("689938"),
+  m = n("872861");
 t.default = function(e) {
   var t;
   let {
     className: n,
     color: l = o.default.colors.WHITE,
-    quest: p,
-    isInventory: h
-  } = e, N = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (0, r.useStateFromStores)([c.default], () => c.default.locale), C = a.useMemo(() => (0, T.calculatePercentComplete)(p), [p]), A = 100 * C, g = (0, _.isWeb)() && !N, M = () => (0, s.jsxs)("div", {
-    className: I.desktopTooltip,
+    quest: N,
+    isInventory: p
+  } = e, S = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, C = (0, r.useStateFromStores)([c.default], () => c.default.locale), A = a.useMemo(() => (0, T.calculatePercentComplete)(N), [N]), h = 100 * A, g = (0, _.isWeb)() && !S, M = () => (0, s.jsxs)("div", {
+    className: m.desktopTooltip,
     style: {
-      marginTop: h ? 8 : 0
+      marginTop: p ? 8 : 0
     },
-    children: [(0, s.jsx)(f.default, {
-      className: I.infoIcon,
-      height: h ? 16 : 12,
-      width: h ? 16 : 12,
-      color: h ? d.default.TEXT_MUTED : d.default.WHITE
+    children: [(0, s.jsx)(E.default, {
+      className: m.infoIcon,
+      height: p ? 16 : 12,
+      width: p ? 16 : 12,
+      color: p ? d.default.TEXT_MUTED : d.default.WHITE
     }), (0, s.jsx)(u.Text, {
-      className: I.__invalid_desktopTooltipText,
-      color: h ? "text-muted" : "always-white",
-      variant: h ? "text-xs/normal" : "text-xxs/normal",
-      children: m.default.Messages.QUESTS_PROGRESS_WEB_TIP
+      className: m.__invalid_desktopTooltipText,
+      color: p ? "text-muted" : "always-white",
+      variant: p ? "text-xs/normal" : "text-xxs/normal",
+      children: I.default.Messages.QUESTS_PROGRESS_WEB_TIP
     })]
   });
-  return g && !h ? (0, s.jsx)(M, {}) : (0, s.jsxs)("div", {
-    className: i()(I.wrapper, n),
+  return g && !p ? (0, s.jsx)(M, {}) : (0, s.jsxs)("div", {
+    className: i()(m.wrapper, n),
     style: {
       color: l.css
     },
     children: [(0, s.jsxs)("div", {
-      className: I.percentCompleteWrapper,
+      className: m.percentCompleteWrapper,
       children: [(0, s.jsx)(u.Text, {
         variant: "text-xs/semibold",
-        className: I.percentCompleteLabel,
+        className: m.percentCompleteLabel,
         color: "none",
-        children: (0, E.formatPercent)(S, C, {
+        children: (0, f.formatPercent)(C, A, {
           roundingMode: "floor"
         })
       }), (0, s.jsx)("div", {
-        className: I.percentCompleteLabelOffset,
+        className: m.percentCompleteLabelOffset,
         style: {
-          width: "".concat(100 - A, "%")
+          width: "".concat(100 - h, "%")
         }
       })]
     }), (0, s.jsx)("div", {
-      className: I.progressBar,
+      className: m.progressBar,
       role: "progressbar",
-      "aria-valuenow": A,
+      "aria-valuenow": h,
       children: (0, s.jsx)("div", {
-        className: I.progressBarFill,
+        className: m.progressBarFill,
         style: {
-          width: "".concat(A, "%")
+          width: "".concat(h, "%")
         }
       })
     }), g && (0, s.jsx)(M, {})]

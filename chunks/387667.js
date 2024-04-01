@@ -146,10 +146,10 @@ class I {
     u(this, "key", void 0), u(this, "oldValue", void 0), u(this, "newValue", void 0), u(this, "subtarget", void 0), this.key = e, this.oldValue = t, this.newValue = s
   }
 }
-class r extends a.default {
+class o extends a.default {
   constructor(e) {
     var t, s, E, a, n, i;
     super(), u(this, "id", void 0), u(this, "actionType", void 0), u(this, "action", void 0), u(this, "targetType", void 0), u(this, "targetId", void 0), u(this, "target", void 0), u(this, "userId", void 0), u(this, "changes", void 0), u(this, "timestampStart", void 0), u(this, "timestampEnd", void 0), u(this, "user", void 0), u(this, "options", void 0), this.id = e.id, this.action = e.action, this.actionType = l(this.action), this.targetId = e.targetId, this.timestampStart = null !== (t = e.timestampStart) && void 0 !== t ? t : _()(T.default.extractTimestamp(this.id)), this.timestampEnd = null !== (s = e.timestampEnd) && void 0 !== s ? s : this.timestampStart, this.userId = e.userId, this.changes = null !== (E = e.changes) && void 0 !== E ? E : [], this.targetType = A(this.action), this.options = null !== (a = e.options) && void 0 !== a ? a : {}, this.target = null !== (n = e.target) && void 0 !== n ? n : e.id, this.user = null !== (i = e.user) && void 0 !== i ? i : null
   }
 }
-t.default = r
+t.default = o

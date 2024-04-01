@@ -15,14 +15,14 @@ var l = n("735250"),
   c = n("471445"),
   f = n("430824"),
   h = n("496675"),
-  C = n("158776"),
-  p = n("979651"),
+  p = n("158776"),
+  C = n("979651"),
   m = n("823379"),
   g = n("355363"),
   E = n("737592"),
-  S = n("561788"),
-  _ = n("135724"),
-  I = n("543432"),
+  _ = n("561788"),
+  I = n("135724"),
+  S = n("543432"),
   N = n("981631"),
   T = n("689938"),
   A = n("890108");
@@ -32,10 +32,10 @@ function L(e) {
   let {
     channel: f,
     guild: h,
-    onAction: p,
+    onAction: C,
     voiceStates: g,
-    isChannelSelected: S,
-    shouldShowSettingNudge: _
+    isChannelSelected: _,
+    shouldShowSettingNudge: I
   } = e;
   ! function(e, t) {
     let n = a.useMemo(() => {
@@ -51,17 +51,17 @@ function L(e) {
     }, [e, t]);
     (0, r.useSubscribeGuildMembers)(n)
   }(f, g);
-  let I = (0, o.default)(f),
+  let S = (0, o.default)(f),
     L = new Map;
-  I.forEach(e => {
+  S.forEach(e => {
     L.set(e.application.id, e)
   });
   let x = null !== (t = null == g ? void 0 : g.filter(m.isNotNullish)) && void 0 !== t ? t : [],
     R = e => t => [N.ActivityTypes.PLAYING, N.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId) || t.type === N.ActivityTypes.LISTENING,
-    O = (0, s.useStateFromStores)([C.default], () => {
+    O = (0, s.useStateFromStores)([p.default], () => {
       let e = new Map;
       return x.forEach(t => {
-        let n = C.default.findActivity(t.user.id, R(t));
+        let n = p.default.findActivity(t.user.id, R(t));
         if (null != n && (0, d.default)(n)) {
           let t = null != n.application_id ? L.get(n.application_id) : null;
           null != t && null != n.application_id && e.set(n.application_id, {
@@ -71,10 +71,10 @@ function L(e) {
         }
       }), e
     }, [x, L], s.statesWillNeverBeEqual),
-    y = (0, s.useStateFromStores)([C.default], () => {
+    M = (0, s.useStateFromStores)([p.default], () => {
       let e = {};
       return x.forEach(t => {
-        let n = C.default.findActivity(t.user.id, R(t));
+        let n = p.default.findActivity(t.user.id, R(t));
         if (null != n && !(0, d.default)(n)) {
           var l, a, s, i;
           let r = "".concat(null !== (a = n.application_id) && void 0 !== a ? a : "", ":").concat(null !== (s = null === (l = n.party) || void 0 === l ? void 0 : l.id) && void 0 !== s ? s : t.user.id),
@@ -86,16 +86,16 @@ function L(e) {
         }
       }), Object.values(e)
     }, [x], s.statesWillNeverBeEqual),
-    M = Array.from(O.values()).map(e => ({
+    y = Array.from(O.values()).map(e => ({
       members: x,
       activity: e.presenceActivity
     })),
-    D = [...M, ...y];
+    D = [...y, ...M];
   return 0 === D.length ? null : (0, l.jsxs)(i.Scroller, {
     className: A.container,
     children: [(0, l.jsx)(v, {
       channel: f,
-      isChannelSelected: S,
+      isChannelSelected: _,
       voiceStatesCount: null !== (c = null == g ? void 0 : g.length) && void 0 !== c ? c : 0
     }), (0, l.jsx)("div", {
       className: A.headerDivider
@@ -109,9 +109,9 @@ function L(e) {
         embeddedApp: i,
         channel: f,
         members: n,
-        onAction: p
+        onAction: C
       }, t)
-    }), _ && (0, l.jsxs)(l.Fragment, {
+    }), I && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: A.headerDivider
       }), (0, l.jsx)("div", {
@@ -143,7 +143,7 @@ function v(e) {
     channel: t,
     isChannelSelected: n,
     voiceStatesCount: a
-  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([p.default], () => p.default.hasVideo(t.id)), o = (0, g.default)({
+  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), o = (0, g.default)({
     channel: t,
     locked: i,
     video: r,
@@ -151,13 +151,13 @@ function v(e) {
   }), u = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id));
   return null == (0, c.getChannelIconComponent)(t, u) ? null : (0, l.jsxs)("div", {
     className: A.popoutHeaderContainer,
-    children: [(0, l.jsx)(S.default, {
+    children: [(0, l.jsx)(_.default, {
       channel: t
-    }), o ? (0, l.jsx)(_.default, {
+    }), o ? (0, l.jsx)(I.default, {
       userCount: a,
       video: r,
       channel: t
-    }) : (0, l.jsx)(I.default, {
+    }) : (0, l.jsx)(S.default, {
       userCount: a
     })]
   })

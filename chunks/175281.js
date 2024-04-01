@@ -13,14 +13,14 @@ var l, a, s = n("735250"),
   c = n("392711"),
   f = n.n(c),
   h = n("748780"),
-  C = n("442837"),
-  p = n("215569"),
+  p = n("442837"),
+  C = n("215569"),
   m = n("481060"),
   g = n("612226"),
   E = n("951483"),
-  S = n("714338"),
-  _ = n("607070"),
-  I = n("585483"),
+  _ = n("714338"),
+  I = n("607070"),
+  S = n("585483"),
   N = n("557177"),
   T = n("264549"),
   A = n("981631"),
@@ -43,7 +43,7 @@ let R = {
   },
   O = f()((0, g.getDefaultLayoutContent)()).groupBy(e => e.group).value();
 
-function y(e) {
+function M(e) {
   switch (e.keyCode) {
     case A.KeyboardKeys.ARROW_UP:
       return "UP";
@@ -57,7 +57,7 @@ function y(e) {
       return null
   }
 }
-let M = 1e3 / 60;
+let y = 1e3 / 60;
 
 function D() {
   let e = [g.KeybindGroup.MESSAGE, g.KeybindGroup.NAVIGATION, g.KeybindGroup.VOICE_AND_VIDEO, g.KeybindGroup.CHAT, g.KeybindGroup.MISCELLANEOUS];
@@ -106,14 +106,14 @@ function D() {
 }
 class b extends i.PureComponent {
   componentDidMount() {
-    this.lastInputedKeys = [], I.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), I.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
+    this.lastInputedKeys = [], S.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), S.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
       capture: !0
     }), window.addEventListener("keyup", this.handleKeyUp, {
       capture: !0
     })
   }
   componentWillUnmount() {
-    I.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), I.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener("keydown", this.handleKeyDown, {
+    S.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), S.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener("keydown", this.handleKeyDown, {
       capture: !0
     }), window.removeEventListener("keyup", this.handleKeyUp, {
       capture: !0
@@ -211,53 +211,53 @@ class b extends i.PureComponent {
         animating: !0
       }), this.state.opacity.setValue(1), this.state.scaleX.setValue(.5), this.state.scaleY.setValue(1), h.default.sequence([h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * M
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * M
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * M
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * M
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         delay: 300,
         toValue: .7,
-        duration: 2 * M
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * M
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * M
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * M
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * M
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * M
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * M
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * M
+        duration: 2 * y
       }), h.default.timing(this.state.scaleY, {
         delay: 100,
         toValue: .005,
-        duration: 8 * M,
+        duration: 8 * y,
         easing: h.default.Easing.in(h.default.Easing.ease)
       }), h.default.parallel([h.default.timing(this.state.scaleX, {
         toValue: 1,
-        duration: 10 * M,
+        duration: 10 * y,
         easing: h.default.Easing.out(h.default.Easing.ease)
       }), h.default.timing(this.state.opacity, {
         toValue: 0,
-        duration: 12 * M
+        duration: 12 * y
       })])]).start(e)
     }), x(this, "toggleOpacity", () => {
       1 === this.state.opacity._value ? this.state.opacity.setValue(0) : this.state.opacity.setValue(1)
@@ -279,13 +279,13 @@ class b extends i.PureComponent {
       }]
     })), x(this, "handleKeyDown", e => {
       if (this.lastInputedKeys.push(e.keyCode), this.lastInputedKeys = this.lastInputedKeys.slice(-5), this.lastInputedKeys[0] === A.KeyboardKeys.H && this.lastInputedKeys[1] === A.KeyboardKeys.H && this.lastInputedKeys[2] === A.KeyboardKeys.ARROW_RIGHT && this.lastInputedKeys[3] === A.KeyboardKeys.N && this.lastInputedKeys[4] === A.KeyboardKeys.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled) return;
-      let t = y(e);
+      let t = M(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({
         direction: t
       }))
     }), x(this, "handleKeyUp", e => {
       if (this.props.keyboardModeEnabled) return;
-      let t = y(e);
+      let t = M(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({
         direction: t
       }))
@@ -324,7 +324,7 @@ function G(e) {
   let {
     transitionState: t,
     onClose: n
-  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, C.useStateFromStores)([_.default], () => _.default.keyboardModeEnabled);
+  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([I.default], () => I.default.keyboardModeEnabled);
   return (0, s.jsx)(m.ModalRoot, {
     className: o()(v.noBackground, {
       [v.noShadow]: l
@@ -332,7 +332,7 @@ function G(e) {
     size: m.ModalSize.DYNAMIC,
     "aria-label": L.default.Messages.KEYBINDS,
     transitionState: t,
-    children: (0, s.jsx)(p.TransitionGroup, {
+    children: (0, s.jsx)(C.TransitionGroup, {
       component: "div",
       children: l ? (0, s.jsx)(T.default, {
         onClose: n
@@ -340,7 +340,7 @@ function G(e) {
         content: r,
         keyboardModeEnabled: u,
         activateRagingDemon: function() {
-          S.default.disable(), a(!0)
+          _.default.disable(), a(!0)
         }
       }, "modal")
     })

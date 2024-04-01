@@ -15,36 +15,36 @@ let h = a.forwardRef(function(e, t) {
     id: n,
     onClick: s,
     onContextMenu: h,
-    icon: C,
-    selected: p,
+    icon: p,
+    selected: C,
     tooltip: m,
     upperBadge: g,
     lowerBadge: E,
-    lowerBadgeWidth: S,
-    showPill: _ = !0,
-    className: I,
+    lowerBadgeWidth: _,
+    showPill: I = !0,
+    className: S,
     "aria-label": N,
     children: T,
     onMouseEnter: A,
     onMouseLeave: L,
     onMouseDown: v
-  } = e, x = (0, r.useTreeItem)(n), [R, O] = a.useState(!1), y = "string" == typeof m && null == N ? m : N;
+  } = e, x = (0, r.useTreeItem)(n), [R, O] = a.useState(!1), M = "string" == typeof m && null == N ? m : N;
   return (0, l.jsxs)(d.ListItem, {
-    children: [_ ? (0, l.jsx)("div", {
+    children: [I ? (0, l.jsx)("div", {
       className: f.pill,
       children: (0, l.jsx)(u.default, {
         hovered: R,
-        selected: p
+        selected: C
       })
     }) : null, (0, l.jsx)(c.default, {
       text: m,
-      selected: p,
+      selected: C,
       children: (0, l.jsx)(o.BlobMask, {
         className: f.__invalid_circleButtonMask,
-        selected: p || R,
+        selected: C || R,
         upperBadge: g,
         lowerBadge: E,
-        lowerBadgeWidth: S,
+        lowerBadgeWidth: _,
         children: (0, l.jsx)(o.Clickable, {
           innerRef: t,
           onMouseEnter: () => {
@@ -54,17 +54,17 @@ let h = a.forwardRef(function(e, t) {
             null == L || L(), O(!1)
           },
           onMouseDown: v,
-          className: i()(f.circleIconButton, I, {
-            [f.selected]: p || R
+          className: i()(f.circleIconButton, S, {
+            [f.selected]: C || R
           }),
           onClick: s,
-          "aria-label": y,
+          "aria-label": M,
           onContextMenu: h,
           focusProps: {
             enabled: !1
           },
           ...x,
-          children: null != C && (0, l.jsx)(C, {
+          children: null != p && (0, l.jsx)(p, {
             className: f.circleIcon,
             color: "currentColor"
           })

@@ -15,7 +15,7 @@ var a, s = n("392711"),
   f = n("981631"),
   E = n("65154");
 
-function h(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,8 +23,8 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let _ = {},
-  C = _,
+let h = {},
+  C = h,
   S = !1,
   m = {},
   I = {},
@@ -58,7 +58,7 @@ function R(e, t, n) {
 }
 class O extends(a = i.default.DeviceSettingsStore) {
   initialize(e) {
-    this.waitFor(c.default, u.default), C = null != e ? e : _
+    this.waitFor(c.default, u.default), C = null != e ? e : h
   }
   getUserAgnosticState() {
     return C
@@ -82,7 +82,7 @@ class O extends(a = i.default.DeviceSettingsStore) {
     return g
   }
 }
-h(O, "displayName", "ConnectedDeviceStore"), h(O, "persistKey", "ConnectedDeviceStore"), t.default = new O(r.default, {
+_(O, "displayName", "ConnectedDeviceStore"), _(O, "persistKey", "ConnectedDeviceStore"), t.default = new O(r.default, {
   MEDIA_ENGINE_DEVICES: function(e) {
     let {
       inputDevices: t,

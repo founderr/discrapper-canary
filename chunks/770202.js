@@ -11,15 +11,15 @@ var l = n("735250"),
   c = n("201895"),
   f = n("703656"),
   h = n("592125"),
-  C = n("430824"),
-  p = n("496675"),
+  p = n("430824"),
+  C = n("496675"),
   m = n("98597"),
   g = n("473403"),
   E = n("981631"),
-  S = n("490897"),
-  _ = n("294639");
+  _ = n("490897"),
+  I = n("294639");
 
-function I(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -44,11 +44,11 @@ class T extends m.default {
       canReorderChannel: r
     } = this.props, o = (0, l.jsx)("li", {
       className: i()(this.getClassName(), {
-        [_.disabled]: this.isDisabled()
+        [I.disabled]: this.isDisabled()
       }),
       "data-dnd-name": e.name,
       children: (0, l.jsxs)(g.default, {
-        className: _.iconVisibility,
+        className: I.iconVisibility,
         channel: e,
         selected: t,
         onClick: this.handleClick,
@@ -58,17 +58,17 @@ class T extends m.default {
         "aria-label": (0, c.default)({
           channel: e
         }),
-        resolvedUnreadSetting: S.UnreadSetting.ONLY_MENTIONS,
+        resolvedUnreadSetting: _.UnreadSetting.ONLY_MENTIONS,
         children: [this.renderInviteButton(), this.renderEditButton()]
       })
     });
     return r ? n(a(o)) : o
   }
   constructor(...e) {
-    super(...e), I(this, "handleContextMenu", e => {
+    super(...e), S(this, "handleContextMenu", e => {
       let {
         channel: t
-      } = this.props, a = C.default.getGuild(t.getGuildId());
+      } = this.props, a = p.default.getGuild(t.getGuildId());
       null != a && (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -79,7 +79,7 @@ class T extends m.default {
           guild: a
         })
       })
-    }), I(this, "handleClick", e => {
+    }), S(this, "handleClick", e => {
       ! function(e) {
         let t = e.getGuildId();
         if (null == t) throw Error("TextChannel, transitionTo: Channel does not have a guildId");
@@ -102,11 +102,11 @@ t.default = a.memo(function(e) {
     channel: t,
     guild: n,
     disableSorting: a
-  } = e, s = (0, r.useStateFromStoresObject)([h.default, p.default], () => {
+  } = e, s = (0, r.useStateFromStoresObject)([h.default, C.default], () => {
     let e = h.default.getChannel(t.parent_id);
     return {
-      canManageChannel: p.default.can(E.Permissions.MANAGE_CHANNELS, t),
-      canReorderChannel: !0 !== a && null != e ? p.default.can(E.Permissions.MANAGE_CHANNELS, e) : p.default.can(E.Permissions.MANAGE_CHANNELS, n)
+      canManageChannel: C.default.can(E.Permissions.MANAGE_CHANNELS, t),
+      canReorderChannel: !0 !== a && null != e ? C.default.can(E.Permissions.MANAGE_CHANNELS, e) : C.default.can(E.Permissions.MANAGE_CHANNELS, n)
     }
   });
   return (0, l.jsx)(A, {

@@ -47,11 +47,11 @@ let G = "-:--",
     friction: 14,
     tension: 200
   },
-  k = {
+  B = {
     VIDEO: "VIDEO",
     AUDIO: "AUDIO"
   },
-  B = {
+  k = {
     width: "100%",
     height: "100%",
     backgroundColor: "black"
@@ -177,7 +177,7 @@ class x extends(i = a.Component) {
       type: T
     } = this.props;
     return (0, s.jsxs)(_.default.div, {
-      className: T === k.VIDEO ? P.videoControls : P.audioControls,
+      className: T === B.VIDEO ? P.videoControls : P.audioControls,
       onClick: e => e.stopPropagation(),
       onDoubleClick: e => e.stopPropagation(),
       style: this.getAnimatedStyle(),
@@ -682,12 +682,12 @@ class K extends(r = a.PureComponent) {
         dragging: S
       }
     } = this, m = this.getWidth();
-    return d || n || t === k.AUDIO ? (0, s.jsx)(x, {
+    return d || n || t === B.AUDIO ? (0, s.jsx)(x, {
       buffers: o,
       currentTime: l,
       duration: u,
       volume: (0, h.amplitudeToPerceptual)(f, 1),
-      hide: t === k.VIDEO && _,
+      hide: t === B.VIDEO && _,
       muted: c,
       autoPlay: n,
       onDrag: this.handleDrag,
@@ -704,7 +704,7 @@ class K extends(r = a.PureComponent) {
       ref: this.controlsRef,
       width: T ? window.screen.width : m,
       disabled: !i,
-      children: t === k.VIDEO ? (0, s.jsx)(I.default, {
+      children: t === B.VIDEO ? (0, s.jsx)(I.default, {
         "aria-label": y.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
         className: P.videoButton,
         guestWindow: window,
@@ -725,7 +725,7 @@ class K extends(r = a.PureComponent) {
       playable: r,
       mimeType: a
     } = this.props;
-    return null == e || null == t ? null : i === k.AUDIO ? (0, s.jsx)(H, {
+    return null == e || null == t ? null : i === B.AUDIO ? (0, s.jsx)(H, {
       fileName: e,
       fileSize: t,
       src: n,
@@ -747,7 +747,7 @@ class K extends(r = a.PureComponent) {
     } = this.props, {
       fullscreen: i
     } = this.state, r = this.getWidth();
-    return i ? B : t === k.AUDIO ? {
+    return i ? k : t === B.AUDIO ? {
       width: void 0,
       height: "auto"
     } : e ? void 0 : {
@@ -771,7 +771,7 @@ class K extends(r = a.PureComponent) {
       hideControls: c,
       playing: E
     } = this.state, I = P.wrapperPaused;
-    if (t === k.AUDIO ? I = P.wrapperAudio : c ? I = P.wrapperControlsHidden : E && (I = P.wrapperPlaying), i && t === k.VIDEO) {
+    if (t === B.AUDIO ? I = P.wrapperAudio : c ? I = P.wrapperControlsHidden : E && (I = P.wrapperPlaying), i && t === B.VIDEO) {
       let t = this.getWidth();
       return (0, s.jsxs)("div", {
         className: l()(I, {
@@ -801,7 +801,7 @@ class K extends(r = a.PureComponent) {
       onMouseMove: E ? this.handleMouseMove : void 0,
       onKeyDown: this.handleKeyDown,
       style: this.getMediaStyle(),
-      children: [this.renderMetadata(), t === k.AUDIO ? this.renderAudio() : this.renderVideo(), this.renderControls(), t === k.VIDEO ? this.renderPlayPausePop() : null, null != d ? (0, s.jsx)("div", {
+      children: [this.renderMetadata(), t === B.AUDIO ? this.renderAudio() : this.renderVideo(), this.renderControls(), t === B.VIDEO ? this.renderPlayPausePop() : null, null != d ? (0, s.jsx)("div", {
         className: l()({
           [P.overlayContentHidden]: E || _
         }),
@@ -1011,7 +1011,7 @@ class K extends(r = a.PureComponent) {
     }
   }
 }
-b(K, "Types", k), b(K, "defaultProps", {
+b(K, "Types", B), b(K, "defaultProps", {
   width: 400,
   height: 300,
   forceExternal: !1,

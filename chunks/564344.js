@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("66516"),
   E = s("484459"),
   T = s("216045"),
-  _ = s("25990"),
-  f = s("594174"),
-  m = s("585483"),
+  f = s("25990"),
+  m = s("594174"),
+  _ = s("585483"),
   g = s("16703"),
   h = s("785145"),
   N = s("981631"),
@@ -32,9 +32,9 @@ function A() {
   });
   let e = (0, l.useStateFromStores)([c.default], () => c.default.getGuild()),
     t = (0, g.default)(),
-    s = (0, l.useStateFromStores)([c.default, _.default], () => c.default.showNotice() || _.default.showNotice()),
+    s = (0, l.useStateFromStores)([c.default, f.default], () => c.default.showNotice() || f.default.showNotice()),
     A = null != e ? e : t,
-    O = (0, l.useStateFromStores)([f.default], () => f.default.getCurrentUser()),
+    O = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()),
     {
       subsection: x,
       setSubsection: R
@@ -61,10 +61,10 @@ function A() {
         onItemSelect: function(t) {
           if (x !== t) {
             if (s) {
-              m.ComponentDispatch.dispatch(N.ComponentActions.SHAKE_APP, {
+              _.ComponentDispatch.dispatch(N.ComponentActions.SHAKE_APP, {
                 duration: 300,
                 intensity: r.SHAKE_INTENSITY_DEFAULT
-              }), m.ComponentDispatch.dispatch(N.ComponentActions.EMPHASIZE_NOTICE);
+              }), _.ComponentDispatch.dispatch(N.ComponentActions.EMPHASIZE_NOTICE);
               return
             }
             t === I.ProfileCustomizationSubsection.GUILD && null == e && null != A && (0, u.initGuildIdentitySettings)(A, M), R(t)

@@ -12,9 +12,9 @@ var a = s("735250"),
   S = s("496929"),
   E = s("821849"),
   T = s("230711"),
-  _ = s("497321"),
-  f = s("167354"),
-  m = s("15640"),
+  f = s("497321"),
+  m = s("167354"),
+  _ = s("15640"),
   g = s("406174"),
   h = s("810762"),
   N = s("681833"),
@@ -77,20 +77,20 @@ function H() {
 }
 t.default = function() {
   let e = (0, r.useStateFromStores)([x.default], () => x.default.getPremiumTypeSubscription()),
-    t = (0, f.default)({
+    t = (0, m.default)({
       subscriptionFilter: e => b.VIEWABLE_SUBSCRIPTION_STATUSES.has(e.status)
     }),
     s = t.length > 1,
     l = (0, r.useStateFromStores)([O.default], () => null != e && null != e.paymentSourceId ? O.default.getPaymentSource(e.paymentSourceId) : null, [e]),
     S = (0, r.useStateFromStores)([x.default], () => x.default.hasFetchedSubscriptions()),
     R = (0, r.useStateFromStores)([A.default], () => A.default.isBusy),
-    M = (0, m.useSubscriptionPlansLoaded)(),
+    M = (0, _.useSubscriptionPlansLoaded)(),
     v = (0, r.useStateFromStores)([C.default], () => C.default.getSubsection());
   return (n.useEffect(() => (d.default.wait(() => {
     (0, E.fetchPremiumSubscriptionPlans)(), u.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), u.fetchPaymentSources()
   }), function() {
     T.default.clearSubsection()
-  }), []), p.default.enabled) ? (0, a.jsx)(_.default, {}) : S && M ? v === B.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(h.default, {
+  }), []), p.default.enabled) ? (0, a.jsx)(f.default, {}) : S && M ? v === B.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(h.default, {
     onGoBack: () => T.default.clearSubsection()
   }) : v === B.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(I.default, {
     onGoBack: () => T.default.clearSubsection()

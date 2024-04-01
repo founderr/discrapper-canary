@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("131951"),
   E = s("663389"),
   T = s("153124"),
-  _ = s("63063"),
-  f = s("358085"),
-  m = s("894939"),
+  f = s("63063"),
+  m = s("358085"),
+  _ = s("894939"),
   g = s("321499"),
   h = s("710808"),
   N = s("625205"),
@@ -35,7 +35,7 @@ var a = s("735250"),
   L = s("689938"),
   P = s("794711");
 let j = (0, T.uid)(),
-  b = "".concat(_.default.getArticleURL(v.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm");
+  b = "".concat(f.default.getArticleURL(v.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm");
 
 function U(e, t, s) {
   (0, o.openModal)(n => (0, a.jsx)(o.ConfirmModal, {
@@ -58,7 +58,7 @@ function y() {
     attenuation: s,
     attenuateWhileSpeakingSelf: l,
     attenuateWhileSpeakingOthers: T,
-    audioSubsystem: _,
+    audioSubsystem: f,
     silenceWarning: v,
     debugLoggingEnabled: y,
     legacyAudioSubsystemSupported: B,
@@ -78,7 +78,7 @@ function y() {
     experimentalAudioSubsystemSupported: S.default.supports(D.Features.EXPERIMENTAL_AUDIO_SUBSYSTEM),
     qosSupported: S.default.supports(D.Features.QOS),
     attenuationSupported: S.default.supports(D.Features.ATTENUATION)
-  })), H = (0, r.useStateFromStores)([E.default], () => E.default.getSubsection()), w = n.createRef(), V = f.isPlatformEmbedded && y && null != c.default.fileManager.readLogFiles;
+  })), H = (0, r.useStateFromStores)([E.default], () => E.default.getSubsection()), w = n.createRef(), V = m.isPlatformEmbedded && y && null != c.default.fileManager.readLogFiles;
   return n.useEffect(() => {
     if (H === M.SOUNDBOARD_SUBSECTION) {
       var e;
@@ -102,7 +102,7 @@ function y() {
         scrollMarginTop: "48px"
       },
       ref: w
-    }), (0, a.jsx)(m.default, {}), (0, a.jsx)(A.default, {}), (0, a.jsxs)(o.HeadingLevel, {
+    }), (0, a.jsx)(_.default, {}), (0, a.jsx)(A.default, {}), (0, a.jsxs)(o.HeadingLevel, {
       component: (0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H1,
         className: P.marginBottom20,
@@ -150,7 +150,7 @@ function y() {
         title: L.default.Messages.FORM_LABEL_SUBSYSTEM,
         children: [(0, a.jsx)(o.SingleSelect, {
           className: P.marginBottom20,
-          value: _,
+          value: f,
           options: function(e, t) {
             let s = [{
               value: D.AudioSubsystems.STANDARD,
@@ -170,7 +170,7 @@ function y() {
         }), (0, a.jsx)(o.FormDivider, {
           className: P.marginBottom20
         })]
-      }), f.isPlatformEmbedded && (0, a.jsxs)(a.Fragment, {
+      }), m.isPlatformEmbedded && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(C.default, {}), (0, a.jsx)(o.FormSection, {
           className: P.marginBottom20,
           title: L.default.Messages.FORM_LABEL_VOICE_DIAGNOSTICS,

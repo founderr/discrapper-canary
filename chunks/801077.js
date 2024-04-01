@@ -7,14 +7,14 @@ var l, a, s, i, r = n("392711"),
   c = n("782769"),
   f = n("527805"),
   h = n("841784"),
-  C = n("503438"),
-  p = n("802856"),
+  p = n("503438"),
+  C = n("802856"),
   m = n("420660"),
   g = n("728345"),
   E = n("812206"),
-  S = n("710845"),
-  _ = n("38618"),
-  I = n("656063"),
+  _ = n("710845"),
+  I = n("38618"),
+  S = n("656063"),
   N = n("761282"),
   T = n("789407"),
   A = n("630186"),
@@ -23,8 +23,8 @@ var l, a, s, i, r = n("392711"),
   x = n("592125"),
   R = n("480294"),
   O = n("831506"),
-  y = n("731290"),
-  M = n("430824"),
+  M = n("731290"),
+  y = n("430824"),
   D = n("496675"),
   b = n("158776"),
   j = n("699516"),
@@ -40,9 +40,9 @@ let B = !1,
   Y = {},
   K = {},
   W = new Set,
-  Z = new Set;
+  z = new Set;
 
-function z() {
+function Z() {
   let e = j.default.getFriendIDs();
   return R.default.hasConsented(F.Consents.PERSONALIZATION) ? new Set([...G.default.getUserAffinitiesUserIds(), ...e]) : new Set(e)
 }
@@ -70,13 +70,13 @@ function q(e) {
 }
 
 function J(e) {
-  !Z.has(e) && W.add(e)
+  !z.has(e) && W.add(e)
 }
 
 function $(e) {
-  if ((0, C.default)(e)) return T.SpotifyApplication;
+  if ((0, p.default)(e)) return T.SpotifyApplication;
   let t = null != e.application_id ? E.default.getApplication(e.application_id) : null;
-  return null != t ? t : (0, p.default)(e) ? Q(e.name) : (0, m.default)(e) && null != e.url ? q(e.url) : (null != e.application_id && J(e.application_id), t)
+  return null != t ? t : (0, C.default)(e) ? Q(e.name) : (0, m.default)(e) && null != e.url ? q(e.url) : (null != e.application_id && J(e.application_id), t)
 }
 
 function ee(e) {
@@ -93,11 +93,11 @@ function et(e) {
 function en(e, t, n) {
   var l, a, s, i, r, u;
   let d;
-  let C = U.default.getCurrentUser(),
-    p = null !== (l = null == C ? void 0 : C.nsfwAllowed) && void 0 !== l && l,
+  let p = U.default.getCurrentUser(),
+    C = null !== (l = null == p ? void 0 : p.nsfwAllowed) && void 0 !== l && l,
     m = t.map(e => e.id),
     g = t.filter(t => e.has(t.id)),
-    _ = !1,
+    I = !1,
     R = [],
     j = new Set,
     G = !1,
@@ -105,19 +105,19 @@ function en(e, t, n) {
   for (let e of t) {
     let n = v.default.getAnyStreamForUser(e.id),
       l = x.default.getChannel(null == n ? void 0 : n.channelId);
-    if ((null == l ? void 0 : l.isNSFW()) && (!p || !y.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
+    if ((null == l ? void 0 : l.isNSFW()) && (!C || !M.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
     let r = X(e.id);
     if (null != n && F.push({
         stream: n,
         streamUser: e,
         activity: r
       }), null == r) continue;
-    let u = (0, I.default)(r);
+    let u = (0, S.default)(r);
     if (null == u) continue;
     G = u === T.SPOTIFY_APPLICATION_ID;
     let d = function(e) {
         let t = E.default.getApplication(e);
-        return null != t ? t : "string" != typeof e ? (new S.default("NowPlayingViewStore").error("Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e), {
+        return null != t ? t : "string" != typeof e ? (new _.default("NowPlayingViewStore").error("Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e), {
           tags: {
             source: "ACTIVITIES"
           }
@@ -131,12 +131,12 @@ function en(e, t, n) {
           userId: e.id,
           application: d,
           channelId: null === (s = P.default.getVoiceStateForUser(e.id)) || void 0 === s ? void 0 : s.channelId,
-          currentUser: C,
+          currentUser: p,
           isActivitiesEnabledForCurrentPlatform: t,
           ChannelStore: x.default,
           VoiceStateStore: P.default,
           PermissionStore: D.default,
-          GuildStore: M.default
+          GuildStore: y.default
         }) !== f.EmbeddedActivityJoinability.CAN_JOIN) continue
     } else if (null == m) continue;
     if (!N.shouldShowActivity(r) || null == d || j.has(d.id)) continue;
@@ -150,7 +150,7 @@ function en(e, t, n) {
       let t = X(e.id),
         n = null != t ? $(t) : null;
       return null != n && n.id === d.id
-    }), (b = o().orderBy(b, [et], ["desc"])).length !== t.length && (_ = !0), j.add(d.id), R.push({
+    }), (b = o().orderBy(b, [et], ["desc"])).length !== t.length && (I = !0), j.add(d.id), R.push({
       game: d,
       activity: r,
       activityUser: e,
@@ -166,7 +166,7 @@ function en(e, t, n) {
     let n = ee(e.id),
       l = x.default.getChannel(n),
       a = null != l ? l.getGuildId() : null,
-      s = M.default.getGuild(a);
+      s = y.default.getGuild(a);
     if (k.has(a) && H.has(n) || null == l || null == s || l.id === s.afkChannelId) null == l && (d = null, B = !0);
     else {
       let e = o()(P.default.getVoiceStatesForChannel(l.id)).map(e => {
@@ -191,7 +191,7 @@ function en(e, t, n) {
       status: b.default.getStatus(e.id)
     })),
     partiedMembers: t,
-    showPlayingMembers: _,
+    showPlayingMembers: I,
     guildContext: d,
     currentActivities: (r = R, u = e => {
       var t;
@@ -202,17 +202,17 @@ function en(e, t, n) {
 }
 
 function el() {
-  return B && _.default.isConnected()
+  return B && I.default.isConnected()
 }
 let ea = o().throttle(() => {
   ! function() {
     var e;
     if (!el()) return;
     W.clear(), k = (H = (function(e) {
-      let t = z(),
+      let t = Z(),
         n = en.bind(null, t);
       return o()(e).mapValues(n)
-    })((e = Array.from(z()).reduce((e, t) => {
+    })((e = Array.from(Z()).reduce((e, t) => {
       let n = U.default.getUser(t);
       return null != n && !n.bot && e.push(n), e
     }, []), o()(e).groupBy(e => {
@@ -226,7 +226,7 @@ let ea = o().throttle(() => {
     })), ! function() {
       if (W.size > 0) {
         let e = Array.from(W);
-        g.default.fetchApplications(e), e.forEach(e => Z.add(e)), W.clear()
+        g.default.fetchApplications(e), e.forEach(e => z.add(e)), W.clear()
       }
     }(), V = !0
   }(), er.emitChange()
@@ -237,7 +237,7 @@ function es() {
 }
 class ei extends(l = u.default.Store) {
   initialize() {
-    this.syncWith([U.default, E.default, b.default, O.default, P.default, v.default, j.default, R.default, G.default], es), this.waitFor(_.default, M.default, E.default, U.default, G.default)
+    this.syncWith([U.default, E.default, b.default, O.default, P.default, v.default, j.default, R.default, G.default], es), this.waitFor(I.default, y.default, E.default, U.default, G.default)
   }
   get currentActivityParties() {
     return H

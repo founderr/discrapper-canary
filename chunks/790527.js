@@ -42,8 +42,8 @@ function R(e) {
     bodyClassName: b,
     transitionState: G,
     onClose: w,
-    onSubscribeClick: k,
-    onSecondaryClick: B,
+    onSubscribeClick: B,
+    onSecondaryClick: k,
     secondaryCTA: V,
     subscribeButtonText: F,
     showNewBadge: x = !1,
@@ -141,7 +141,7 @@ function R(e) {
           className: a()(O.secondaryAction, {
             [O.enhancedSecondaryAction]: en
           }),
-          onClick: B,
+          onClick: k,
           size: o.Button.Sizes.SMALL,
           color: en ? o.Button.Colors.CUSTOM : o.Button.Colors.PRIMARY,
           look: o.Button.Looks.LINK,
@@ -175,7 +175,7 @@ function R(e) {
             size: o.Button.Sizes.SMALL,
             color: en ? o.Button.Colors.CUSTOM : o.Button.Colors.GREEN,
             onClick: () => {
-              null == k || k(), w()
+              null == B || B(), w()
             },
             buttonText: null != F ? F : t
           })

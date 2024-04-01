@@ -15,8 +15,8 @@ t.default = function(e) {
     index: t,
     children: l,
     user: E,
-    channel: h,
-    onClick: _,
+    channel: _,
+    onClick: h,
     isFocused: C,
     isActive: S,
     onOtherHover: m,
@@ -41,7 +41,7 @@ t.default = function(e) {
     }))
   };
   return (0, a.jsx)(o.ListNavigatorItem, {
-    id: h.id,
+    id: _.id,
     children: e => (0, a.jsx)(u.FocusRing, {
       offset: {
         left: -8,
@@ -55,7 +55,7 @@ t.default = function(e) {
         onContextMenu: e => O(e, E),
         onMouseEnter: N,
         onMouseLeave: R,
-        onClick: null != _ ? _ : void 0,
+        onClick: null != h ? h : void 0,
         style: {
           LIST_ROW_HEIGHT: c.LIST_ROW_HEIGHT,
           opacity: 1

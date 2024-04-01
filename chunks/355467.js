@@ -43,13 +43,13 @@ n.r(t), n.d(t, {
     return x
   },
   createBraintreePaymentSource: function() {
-    return B
+    return k
   },
   createCardToken: function() {
     return y
   },
   createPaymentRequestPaymentSource: function() {
-    return k
+    return B
   },
   createPaymentSource: function() {
     return v
@@ -613,7 +613,7 @@ async function w(e, t, n, i) {
   })
 }
 
-function k(e, t, n) {
+function B(e, t, n) {
   let {
     token: i,
     billingAddressInfo: r
@@ -623,7 +623,7 @@ function k(e, t, n) {
   })
 }
 
-function B(e, t, n) {
+function k(e, t, n) {
   return v(h.PaymentGateways.BRAINTREE, e, t, {
     analyticsLocation: n
   })

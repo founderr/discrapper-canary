@@ -14,12 +14,12 @@ var a = s("735250"),
   f = s("673885"),
   T = s("981631"),
   _ = s("689938"),
-  S = s("35913");
+  R = s("35913");
 t.default = function(e) {
   let {
     guild: t,
     guildJoinRequest: s,
-    guildJoinRequestUser: R,
+    guildJoinRequestUser: S,
     onClose: N
   } = e, A = l.useMemo(() => {
     var e;
@@ -38,27 +38,27 @@ t.default = function(e) {
         "aria-label": _.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION
       }), (0, a.jsx)(i.Heading, {
         variant: "heading-md/semibold",
-        children: o.default.getName(R)
+        children: o.default.getName(S)
       })]
     }), (0, a.jsx)(E.default, {
       guildJoinRequest: s,
-      guildJoinRequestUser: R,
+      guildJoinRequestUser: S,
       guild: t
     }), (0, a.jsxs)(i.Scroller, {
       children: [(0, a.jsxs)("div", {
-        className: S.container,
+        className: R.container,
         children: [(0, a.jsx)(f.default, {
-          user: R,
+          user: S,
           guildId: t.id
         }), M && (0, a.jsx)(I.default, {
           joinRequest: s
         })]
       }), (0, a.jsx)("div", {
-        className: S.disabledFormRenderer,
+        className: R.disabledFormRenderer,
         children: (0, a.jsx)(c.default, {
           guildId: t.id,
           formFields: A,
-          user: R
+          user: S
         })
       })]
     })]

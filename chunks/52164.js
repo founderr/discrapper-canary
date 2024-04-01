@@ -17,24 +17,24 @@ var n = s("512722"),
   S = s("374649"),
   E = s("474936"),
   T = s("981631"),
-  _ = s("689938"),
-  f = s("856304");
+  f = s("689938"),
+  m = s("856304");
 
-function m(e) {
+function _(e) {
   let {
     subscription: t,
     withOverheadSeparator: s
   } = e, {
     analyticsLocations: n
-  } = (0, o.default)(), [m] = (0, S.useSubscriptionInvoicePreview)({
+  } = (0, o.default)(), [_] = (0, S.useSubscriptionInvoicePreview)({
     subscriptionId: t.id,
     renewal: !0,
     analyticsLocations: n,
     analyticsLocation: r.default.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
   });
-  if (null == m) return null;
-  let g = s ? f.finePrintWithOverheadSeparator : f.finePrint,
-    h = m.invoiceItems.find(e => {
+  if (null == _) return null;
+  let g = s ? m.finePrintWithOverheadSeparator : m.finePrint,
+    h = _.invoiceItems.find(e => {
       let {
         subscriptionPlanId: t
       } = e;
@@ -44,19 +44,19 @@ function m(e) {
   let N = h.subscriptionPlanId,
     I = d.default.get(N);
   l()(null != I, "Missing plan");
-  let p = (0, c.formatPrice)(m.total, m.currency),
+  let p = (0, c.formatPrice)(_.total, _.currency),
     C = "";
-  return I.interval === E.SubscriptionIntervalTypes.YEAR ? C = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+  return I.interval === E.SubscriptionIntervalTypes.YEAR ? C = f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
     price: p,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY
-  }) : I.interval === E.SubscriptionIntervalTypes.MONTH && (C = 1 === I.intervalCount ? _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
+  }) : I.interval === E.SubscriptionIntervalTypes.MONTH && (C = 1 === I.intervalCount ? f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
     price: p,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY
-  }) : _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
+  }) : f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
     price: p,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
@@ -75,7 +75,7 @@ function g(e) {
     subscription: t,
     withOverheadSeparator: s
   } = e;
-  return t.status === T.SubscriptionStatusTypes.CANCELED || t.isPurchasedExternally ? null : (0, a.jsx)(m, {
+  return t.status === T.SubscriptionStatusTypes.CANCELED || t.isPurchasedExternally ? null : (0, a.jsx)(_, {
     subscription: t,
     withOverheadSeparator: s
   })

@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("47120");
 var s, i = n("735250"),
-  a = n("470079"),
-  l = n("846519");
+  l = n("470079"),
+  a = n("846519");
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -12,7 +12,7 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class u extends(s = a.Component) {
+class u extends(s = l.Component) {
   static getDerivedStateFromProps(e) {
     return e.disable ? {
       hovered: !1
@@ -29,12 +29,12 @@ class u extends(s = a.Component) {
     this.stopTimer()
   }
   componentDidUpdate(e, t) {
-    let n, s, i, a, {
-      props: l
+    let n, s, i, l, {
+      props: a
     } = this;
-    let r = (n = l, s = this.state, !n.disable && !(s.hovered && n.pauseOnHover));
-    let u = (i = e, a = t, !i.disable && !(a.hovered && i.pauseOnHover));
-    r && !u || e.interval !== l.interval ? this.startTimer() : !r && u && this.stopTimer()
+    let r = (n = a, s = this.state, !n.disable && !(s.hovered && n.pauseOnHover));
+    let u = (i = e, l = t, !i.disable && !(l.hovered && i.pauseOnHover));
+    r && !u || e.interval !== a.interval ? this.startTimer() : !r && u && this.stopTimer()
   }
   startTimer() {
     let {
@@ -67,7 +67,7 @@ class u extends(s = a.Component) {
     })
   }
   constructor(...e) {
-    super(...e), r(this, "timer", new l.Interval), r(this, "state", {
+    super(...e), r(this, "timer", new a.Interval), r(this, "state", {
       hovered: !1
     }), r(this, "handlePause", () => {
       !this.state.hovered && this.setState({

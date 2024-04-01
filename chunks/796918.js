@@ -14,12 +14,12 @@ t.default = e => {
   let {
     handleUpdate: t,
     interests: n
-  } = e, [l, E] = s.useState(""), h = e => {
+  } = e, [l, E] = s.useState(""), _ = e => {
     let a = new Set(n);
     a.delete(e), t({
       interests: a
     })
-  }, _ = s.useCallback(() => {
+  }, h = s.useCallback(() => {
     if (n.size === d.MAX_NUM_INTERESTS) return;
     let e = l.trim();
     if (0 === e.length) return;
@@ -31,9 +31,9 @@ t.default = e => {
     switch (e.key) {
       case "Enter":
       case "Tab":
-        e.preventDefault(), e.stopPropagation(), _()
+        e.preventDefault(), e.stopPropagation(), h()
     }
-  }, [_]);
+  }, [h]);
   return (0, a.jsxs)("div", {
     className: f.slideContent,
     children: [(0, a.jsx)(r.Heading, {
@@ -57,7 +57,7 @@ t.default = e => {
           maxLength: d.MAX_INTEREST_LENGTH,
           disabled: n.size === d.MAX_NUM_INTERESTS
         }), l.length > 0 && (0, a.jsx)(r.Clickable, {
-          onClick: _,
+          onClick: h,
           className: i()(f.plusIcon, f.clickable),
           children: (0, a.jsx)(u.default, {
             className: f.icon
@@ -83,7 +83,7 @@ t.default = e => {
             children: e
           }), (0, a.jsx)(r.Clickable, {
             className: f.flex,
-            onClick: () => h(e),
+            onClick: () => _(e),
             children: (0, a.jsx)(o.default, {
               className: i()(f.clickable, f.iconSmall)
             })

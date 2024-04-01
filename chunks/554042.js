@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("425493"),
   E = s("607070"),
   T = s("304761"),
-  _ = s("865427"),
-  f = s("358085"),
-  m = s("210887"),
+  f = s("865427"),
+  m = s("358085"),
+  _ = s("210887"),
   g = s("981631"),
   h = s("689938"),
   N = s("861147");
@@ -59,8 +59,8 @@ function C() {
   let [e, t] = n.useState(Math.round(window.outerWidth / window.innerWidth * 100)), {
     platformZoom: s,
     theme: l
-  } = (0, r.useStateFromStoresObject)([m.default, E.default], () => ({
-    theme: m.default.theme,
+  } = (0, r.useStateFromStoresObject)([_.default, E.default], () => ({
+    theme: _.default.theme,
     platformZoom: E.default.zoom
   })), [o, C] = n.useState(""), A = ["normal", "medium", "semibold", "bold", "extrabold"], O = new Map([
     ["normal", 400],
@@ -70,14 +70,14 @@ function C() {
     ["extrabold", 800]
   ]);
   n.useEffect(() => {
-    !f.isPlatformEmbedded && window.addEventListener("resize", () => {
+    !m.isPlatformEmbedded && window.addEventListener("resize", () => {
       t(Math.round(window.outerWidth / window.innerWidth * 100))
     })
   }, []);
-  let x = f.isPlatformEmbedded ? s : e,
+  let x = m.isPlatformEmbedded ? s : e,
     R = (0, r.useStateFromStores)([T.default], () => {
       var e, t;
-      return (0, _.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, f.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     [M, v] = p("playground-overrideText", null),
     [D, L] = p("playground-defaultText", I[0].value),

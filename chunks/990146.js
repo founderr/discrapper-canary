@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("617136"),
   f = n("57655"),
   E = n("113434"),
-  h = n("569984"),
-  _ = n("497505"),
+  _ = n("569984"),
+  h = n("497505"),
   C = n("918701"),
   S = n("874137"),
   m = n("78826"),
@@ -28,21 +28,21 @@ t.default = function() {
       location: g.QuestsExperimentLocations.QUESTS_BAR
     }),
     R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    O = (0, o.useStateFromStores)([h.default], () => (0, C.getQuestForTargetedContent)(h.default.quests, _.QuestContent.QUEST_BAR)),
+    O = (0, o.useStateFromStores)([_.default], () => (0, C.getQuestForTargetedContent)(_.default.quests, h.QuestContent.QUEST_BAR)),
     v = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()),
     L = s.useRef(-1),
     P = s.useRef(!1),
     [M, y] = s.useState(!1),
     [D, x] = s.useState(!1),
     [b, U] = s.useState(!1),
-    [j, G] = s.useState(!1),
+    [G, j] = s.useState(!1),
     [w, k] = s.useState(240),
     F = s.useRef(null),
     B = (null == O ? void 0 : null === (e = O.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
     H = s.useRef(B),
     V = (null == O ? void 0 : null === (t = O.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
     Y = (null == O ? void 0 : null === (n = O.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-    W = (null == O ? void 0 : O.userStatus) != null && (0, C.isDismissed)(null == O ? void 0 : O.userStatus, _.QuestContent.QUEST_BAR),
+    W = (null == O ? void 0 : O.userStatus) != null && (0, C.isDismissed)(null == O ? void 0 : O.userStatus, h.QuestContent.QUEST_BAR),
     K = (0, E.useIsQuestExpired)(O),
     {
       hasError: z,
@@ -92,7 +92,7 @@ t.default = function() {
   let ea = l && !W && !Y && null != O && !K && !q,
     es = s.useRef(ea);
   s.useLayoutEffect(() => {
-    ea !== es.current && G(!1), es.current = ea
+    ea !== es.current && j(!1), es.current = ea
   }, [ea]), s.useEffect(() => {
     H.current = B
   }, [B]);
@@ -137,20 +137,20 @@ t.default = function() {
     },
     immediate: R,
     onRest: () => {
-      G(!0)
+      j(!0)
     },
     onStart: () => {
-      G(!1)
+      j(!1)
     }
   });
-  return !l || null == O || !ea && j || z ? null : (0, a.jsx)(S.QuestContentImpressionTracker, {
+  return !l || null == O || !ea && G || z ? null : (0, a.jsx)(S.QuestContentImpressionTracker, {
     questId: O.id,
-    questContent: _.QuestContent.QUEST_BAR,
+    questContent: h.QuestContent.QUEST_BAR,
     overrideVisibility: !v && ea,
     children: () => (0, a.jsxs)(r.animated.div, {
       "aria-hidden": !ea,
       className: i()(N.wrapper, {
-        [N.wrapperVisible]: ea && j
+        [N.wrapperVisible]: ea && G
       }),
       style: {
         color: O.config.colors.secondary,

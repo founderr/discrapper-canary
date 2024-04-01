@@ -12,15 +12,15 @@ var s = n("481060"),
   c = n("594174"),
   f = n("626135"),
   E = n("621853"),
-  h = n("981631"),
-  _ = n("616922");
+  _ = n("981631"),
+  h = n("616922");
 let C = null;
 async function S(e) {
   var t, l, i, S;
   let m, I, p, {
       userId: T,
       section: g,
-      guildId: A = h.ME,
+      guildId: A = _.ME,
       channelId: N,
       friendToken: R,
       autoFocusNote: O,
@@ -34,7 +34,7 @@ async function S(e) {
   let y = u.default.getStatus(T),
     D = u.default.isMobileOnline(T),
     x = y;
-  y === h.StatusTypes.ONLINE && (x = D ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP), C = await (0, s.openModalLazy)(async () => {
+  y === _.StatusTypes.ONLINE && (x = D ? _.AnalyticsUserStatusTypes.ONLINE_MOBILE : _.AnalyticsUserStatusTypes.ONLINE_DESKTOP), C = await (0, s.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("99387"), n.e("59208")]).then(n.bind(n, "910364"));
@@ -47,9 +47,9 @@ async function S(e) {
       initialSection: g,
       channelId: N
     })
-  }), f.default.track(h.AnalyticEvents.OPEN_MODAL, {
+  }), f.default.track(_.AnalyticEvents.OPEN_MODAL, {
     type: "Profile Modal",
-    guild_id: A !== h.ME ? A : null,
+    guild_id: A !== _.ME ? A : null,
     channel_id: N,
     other_user_id: T,
     application_id: null !== (l = null == M ? void 0 : M.application_id) && void 0 !== l ? l : null,
@@ -59,7 +59,7 @@ async function S(e) {
     has_images: !!(null !== (S = null == I ? void 0 : I.large_image) && void 0 !== S ? S : null == I ? void 0 : I.small_image),
     party_max: null == m ? void 0 : null === (t = m.size) || void 0 === t ? void 0 : t[1],
     party_id: null == m ? void 0 : m.id,
-    party_platform: (0, _.isSpotifyParty)(null == m ? void 0 : m.id) ? h.PlatformTypes.SPOTIFY : null,
+    party_platform: (0, h.isSpotifyParty)(null == m ? void 0 : m.id) ? _.PlatformTypes.SPOTIFY : null,
     game_platform: (0, r.default)(M),
     profile_user_status: x,
     profile_has_nitro_customization: (null == P ? void 0 : P.banner) != null,

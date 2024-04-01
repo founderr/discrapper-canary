@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return C
   }
 }), n("47120");
 var l = n("735250");
@@ -16,25 +16,25 @@ var a = n("442837"),
   c = n("997945"),
   f = n("630117"),
   h = n("441319"),
-  C = n("770799");
+  p = n("770799");
 
-function p() {
-  let [e, t, n] = (0, a.useStateFromStoresArray)([r.default, d.default], () => [d.default.getCurrentDesktopIcon(), d.default.isEditorOpen, u.default.isPremium(r.default.getCurrentUser())]), p = h.ICONS_BY_ID[e], m = e !== c.FreemiumAppIconIds.DEFAULT && (n || t), g = (0, s.useRedesignIconContext)().enabled, E = (0, l.jsx)(o.default, {
+function C() {
+  let [e, t, n] = (0, a.useStateFromStoresArray)([r.default, d.default], () => [d.default.getCurrentDesktopIcon(), d.default.isEditorOpen, u.default.isPremium(r.default.getCurrentUser())]), C = h.ICONS_BY_ID[e], m = e !== c.FreemiumAppIconIds.DEFAULT && (n || t), g = (0, s.useRedesignIconContext)().enabled, E = (0, l.jsx)(o.default, {
     width: 30,
     height: g ? 30 : 22
   }), {
-    enabled: S
+    enabled: _
   } = i.default.useExperiment({
     location: "hi Kevin"
   }, {
     autoTrackExposure: !1
   });
-  return S ? (0, l.jsx)("img", {
-    src: C,
+  return _ ? (0, l.jsx)("img", {
+    src: p,
     width: 30,
     alt: "Hi Kevin!",
     draggable: !1
-  }) : null != p && m ? (0, l.jsx)(f.default, {
+  }) : null != C && m ? (0, l.jsx)(f.default, {
     id: e,
     width: 48
   }) : E

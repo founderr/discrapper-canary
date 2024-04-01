@@ -11,7 +11,7 @@ var l, a = n("735250"),
   f = n("481060"),
   h = n("988290");
 
-function C(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -19,7 +19,7 @@ function C(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let p = {
+let C = {
   friction: 10,
   tension: 300
 };
@@ -55,7 +55,7 @@ class m extends s.Component {
     this._timeout = setTimeout(() => {
       d.default.spring(e, {
         toValue: 0,
-        ...p
+        ...C
       }).start()
     }, 100)
   }
@@ -69,7 +69,7 @@ class m extends s.Component {
     }
     d.default.spring(e, {
       toValue: 1,
-      ...p
+      ...C
     }).start()
   }
   render() {
@@ -106,7 +106,7 @@ class m extends s.Component {
     }
   }
   constructor(e) {
-    super(e), C(this, "_timeout", void 0), this.state = {
+    super(e), p(this, "_timeout", void 0), this.state = {
       translateY: new d.default.Value,
       reduceMotion: !1
     }
@@ -150,10 +150,10 @@ class g extends(l = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), C(this, "state", {
+    super(...e), p(this, "state", {
       unread: null,
       mention: null
-    }), C(this, "calculateState", u()(() => {
+    }), p(this, "calculateState", u()(() => {
       let {
         items: e,
         expandedFolders: t,
@@ -192,7 +192,7 @@ class g extends(l = s.PureComponent) {
         mention: r,
         unread: o
       })
-    }, 200)), C(this, "handleClick", e => {
+    }, 200)), p(this, "handleClick", e => {
       e.preventDefault(), e.stopPropagation();
       let {
         unread: t,
@@ -204,7 +204,7 @@ class g extends(l = s.PureComponent) {
     })
   }
 }
-C(g, "contextType", f.AccessibilityPreferencesContext), C(g, "defaultProps", {
+p(g, "contextType", f.AccessibilityPreferencesContext), p(g, "defaultProps", {
   className: h.container,
   reverse: !1,
   hide: !1,

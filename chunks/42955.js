@@ -15,9 +15,9 @@ var a, n = s("654861"),
   S = s("710845"),
   E = s("131951"),
   T = s("70956"),
-  _ = s("358085"),
-  f = s("399002"),
-  m = s("369541"),
+  f = s("358085"),
+  m = s("399002"),
+  _ = s("369541"),
   g = s("981631"),
   h = s("65154");
 
@@ -55,13 +55,13 @@ class p extends i.EventEmitter {
     }, t)
   }
   startClientToServerSpeedTest(e) {
-    this.state === g.RTCConnectionStates.RTC_CONNECTED && (this._speedTestParams = e, this._speedTestDirection = m.SpeedTestDirections.CLIENT_TO_SERVER, this._setSpeedTestState(m.SpeedTestStates.STARTING_RECEIVER), this._speedTest(m.SpeedTestOpcodes.CLIENT_TO_SERVER_START, {}))
+    this.state === g.RTCConnectionStates.RTC_CONNECTED && (this._speedTestParams = e, this._speedTestDirection = _.SpeedTestDirections.CLIENT_TO_SERVER, this._setSpeedTestState(_.SpeedTestStates.STARTING_RECEIVER), this._speedTest(_.SpeedTestOpcodes.CLIENT_TO_SERVER_START, {}))
   }
   startServerToClientSpeedTest(e) {
     let t = this._connection;
-    this.state === g.RTCConnectionStates.RTC_CONNECTED && null != t && (this._speedTestParams = e, this._speedTestDirection = m.SpeedTestDirections.SERVER_TO_CLIENT, this._setSpeedTestState(m.SpeedTestStates.STARTING_RECEIVER), t.startSpeedTestReceiver(() => {
+    this.state === g.RTCConnectionStates.RTC_CONNECTED && null != t && (this._speedTestParams = e, this._speedTestDirection = _.SpeedTestDirections.SERVER_TO_CLIENT, this._setSpeedTestState(_.SpeedTestStates.STARTING_RECEIVER), t.startSpeedTestReceiver(() => {
       var e, t, s;
-      this._setSpeedTestState(m.SpeedTestStates.SENDING), this._speedTest(m.SpeedTestOpcodes.SERVER_TO_CLIENT_START, {
+      this._setSpeedTestState(_.SpeedTestStates.SENDING), this._speedTest(_.SpeedTestOpcodes.SERVER_TO_CLIENT_START, {
         cluster_size: null === (e = this._speedTestParams) || void 0 === e ? void 0 : e.clusterSize,
         cluster_interval_ms: null === (t = this._speedTestParams) || void 0 === t ? void 0 : t.clusterIntervalMs,
         num_clusters: null === (s = this._speedTestParams) || void 0 === s ? void 0 : s.numClusters
@@ -69,10 +69,10 @@ class p extends i.EventEmitter {
     }, -1))
   }
   stopClientToServerSpeedTest() {
-    this._speedTest(m.SpeedTestOpcodes.CLIENT_TO_SERVER_END, {}), null != this._connection && this._connection.stopSpeedTestSender()
+    this._speedTest(_.SpeedTestOpcodes.CLIENT_TO_SERVER_END, {}), null != this._connection && this._connection.stopSpeedTestSender()
   }
   stopServerToClientSpeedTest() {
-    this._speedTest(m.SpeedTestOpcodes.SERVER_TO_CLIENT_END, {}), null != this._connection && this._connection.stopSpeedTestReceiver(() => {})
+    this._speedTest(_.SpeedTestOpcodes.SERVER_TO_CLIENT_END, {}), null != this._connection && this._connection.stopSpeedTestReceiver(() => {})
   }
   getNetworkOverhead() {
     return this._networkOverhead
@@ -84,7 +84,7 @@ class p extends i.EventEmitter {
     this._speedTestState = e, this.emit("speed-test-state", e)
   }
   _completeSpeedTests(e, t) {
-    this._speedTestState = m.SpeedTestStates.COMPLETED, this.emit("speed-test-completed", e, t)
+    this._speedTestState = _.SpeedTestStates.COMPLETED, this.emit("speed-test-completed", e, t)
   }
   _speedTest(e, t) {
     let s = this._socket;
@@ -160,20 +160,20 @@ class p extends i.EventEmitter {
   _handleSpeedTest(e, t) {
     let s = this._connection;
     if (null != s && null != e) {
-      if (this._speedTestState === m.SpeedTestStates.STARTING_RECEIVER && this._speedTestDirection === m.SpeedTestDirections.CLIENT_TO_SERVER && e === m.SpeedTestOpcodes.CLIENT_TO_SERVER_START) {
+      if (this._speedTestState === _.SpeedTestStates.STARTING_RECEIVER && this._speedTestDirection === _.SpeedTestDirections.CLIENT_TO_SERVER && e === _.SpeedTestOpcodes.CLIENT_TO_SERVER_START) {
         var a;
-        this._setSpeedTestState(m.SpeedTestStates.SENDING), s.startSpeedTestSender((e, t) => {
-          this._speedTest(m.SpeedTestOpcodes.CLIENT_TO_SERVER_END, {}), this._setSpeedTestState(m.SpeedTestStates.AWAITING_RESULTS)
+        this._setSpeedTestState(_.SpeedTestStates.SENDING), s.startSpeedTestSender((e, t) => {
+          this._speedTest(_.SpeedTestOpcodes.CLIENT_TO_SERVER_END, {}), this._setSpeedTestState(_.SpeedTestStates.AWAITING_RESULTS)
         }, this._speedTestParams.clusterSize, this._speedTestParams.clusterIntervalMs, this._speedTestParams.numClusters)
       }
-      if (this._speedTestState === m.SpeedTestStates.AWAITING_RESULTS && this._speedTestDirection === m.SpeedTestDirections.CLIENT_TO_SERVER && e === m.SpeedTestOpcodes.CLIENT_TO_SERVER_END) {
+      if (this._speedTestState === _.SpeedTestStates.AWAITING_RESULTS && this._speedTestDirection === _.SpeedTestDirections.CLIENT_TO_SERVER && e === _.SpeedTestOpcodes.CLIENT_TO_SERVER_END) {
         let e = t.results,
-          s = (0, f.speedTestSummary)(e, this._speedTestParams, null !== (a = this._networkOverhead) && void 0 !== a ? a : 0);
+          s = (0, m.speedTestSummary)(e, this._speedTestParams, null !== (a = this._networkOverhead) && void 0 !== a ? a : 0);
         this._speedTestDirection = null, this._speedTestParams = null, this._completeSpeedTests(e, s)
       }
-      this._speedTestState === m.SpeedTestStates.SENDING && this._speedTestDirection === m.SpeedTestDirections.SERVER_TO_CLIENT && e === m.SpeedTestOpcodes.SERVER_TO_CLIENT_END && (this._setSpeedTestState(m.SpeedTestStates.AWAITING_RESULTS), s.stopSpeedTestReceiver((e, t) => {
+      this._speedTestState === _.SpeedTestStates.SENDING && this._speedTestDirection === _.SpeedTestDirections.SERVER_TO_CLIENT && e === _.SpeedTestOpcodes.SERVER_TO_CLIENT_END && (this._setSpeedTestState(_.SpeedTestStates.AWAITING_RESULTS), s.stopSpeedTestReceiver((e, t) => {
         var s;
-        let a = (0, f.speedTestSummary)(t, this._speedTestParams, null !== (s = this._networkOverhead) && void 0 !== s ? s : 0);
+        let a = (0, m.speedTestSummary)(t, this._speedTestParams, null !== (s = this._networkOverhead) && void 0 !== s ? s : 0);
         this._speedTestDirection = null, this._speedTestParams = null, this._completeSpeedTests(t, a)
       }))
     }
@@ -250,7 +250,7 @@ class p extends i.EventEmitter {
     super(), N(this, "userId", void 0), N(this, "sessionId", void 0), N(this, "rtcServerId", void 0), N(this, "_endpoint", void 0), N(this, "hostname", void 0), N(this, "mediaEnginePort", void 0), N(this, "mediaEngineAddress", void 0), N(this, "token", void 0), N(this, "protocol", void 0), N(this, "state", void 0), N(this, "_socket", void 0), N(this, "_connection", void 0), N(this, "_destroyed", void 0), N(this, "_speedTestState", void 0), N(this, "_speedTestDirection", void 0), N(this, "_speedTestParams", void 0), N(this, "_rtcConnectionId", void 0), N(this, "_backoff", void 0), N(this, "logger", void 0), N(this, "_networkOverhead", void 0), N(this, "reconnect", () => {
       let e = this._socket;
       null != e && (e.close(), e.connect())
-    }), this._rtcConnectionId = (0, o.v4)(), this.logger = new S.default("RTCSpeedTestRTCConnection(".concat(s, ")")), this.userId = e, this.sessionId = t, this.rtcServerId = s, this.mediaEnginePort = null, this.mediaEngineAddress = null, this._speedTestState = null, this._speedTestDirection = null, this._speedTestParams = null, this.state = g.RTCConnectionStates.AWAITING_ENDPOINT, this._socket = null, this.token = n, this._destroyed = !1, this._connection = null, this._backoff = new d.default(1 * T.default.Millis.SECOND, 10 * T.default.Millis.SECOND), a = "".concat(I, "//").concat(a), (0, _.isAndroid)() && (a = (a = a.replace(".gg", ".media")).replace(":80", ":443"));
+    }), this._rtcConnectionId = (0, o.v4)(), this.logger = new S.default("RTCSpeedTestRTCConnection(".concat(s, ")")), this.userId = e, this.sessionId = t, this.rtcServerId = s, this.mediaEnginePort = null, this.mediaEngineAddress = null, this._speedTestState = null, this._speedTestDirection = null, this._speedTestParams = null, this.state = g.RTCConnectionStates.AWAITING_ENDPOINT, this._socket = null, this.token = n, this._destroyed = !1, this._connection = null, this._backoff = new d.default(1 * T.default.Millis.SECOND, 10 * T.default.Millis.SECOND), a = "".concat(I, "//").concat(a), (0, f.isAndroid)() && (a = (a = a.replace(".gg", ".media")).replace(":80", ":443"));
     let {
       hostname: l,
       port: i

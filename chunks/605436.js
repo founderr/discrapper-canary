@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return W
   },
   flipEveryonePermission: function() {
-    return B
+    return k
   },
   getExistingMembersRows: function() {
     return G
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return j
   },
   getRemoveTooltipHint: function() {
-    return k
+    return B
   },
   getRoleRowData: function() {
     return A
@@ -226,7 +226,7 @@ function w(e, t) {
   }
 }
 
-function k(e) {
+function B(e) {
   switch (e) {
     case T.RowType.ROLE:
       return S.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
@@ -242,7 +242,7 @@ function k(e) {
   }
 }
 
-function B(e, t, n) {
+function k(e, t, n) {
   let r = e.permissionOverwrites[e.guild_id];
   null == r && (r = c.makeEveryoneOverwrite(e.guild_id));
   let s = {
@@ -252,7 +252,7 @@ function B(e, t, n) {
 }
 
 function V(e, t, n) {
-  let i = B(e, t, n);
+  let i = k(e, t, n);
   (0, s.updatePermission)(e, i.id, i.allow, i.deny)
 }
 

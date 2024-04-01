@@ -19,7 +19,7 @@ function c(e, t, n) {
 }
 let f = -1 / 0,
   E = new i.default("MessagePreviewStore");
-class h extends a.Store {
+class _ extends a.Store {
   isLatest(e, t) {
     var n;
     let a = this.guilds.get(null != e ? e : null);
@@ -133,4 +133,4 @@ class h extends a.Store {
     }), c(this, "guilds", new Map), c(this, "generation", 0)
   }
 }
-new h
+new _

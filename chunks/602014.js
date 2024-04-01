@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanSetupIntro: function() {
-    return h
+    return _
   },
   ClanSetupIntroAnimation: function() {
-    return _
+    return h
   }
 });
 var a = n("735250"),
@@ -18,7 +18,7 @@ var a = n("735250"),
   c = n("308083"),
   f = n("689938"),
   E = n("653196");
-let h = e => {
+let _ = e => {
     let {
       onClose: t,
       setPage: n
@@ -50,7 +50,7 @@ let h = e => {
       })]
     })
   },
-  _ = e => {
+  h = e => {
     let {
       guildId: t,
       setPage: n
@@ -70,7 +70,7 @@ let h = e => {
           top: "0%"
         }
       }),
-      h = (0, l.useSpring)({
+      _ = (0, l.useSpring)({
         ref: r,
         config: l.config.default,
         from: {
@@ -80,7 +80,7 @@ let h = e => {
           height: "100%"
         }
       }),
-      _ = (0, l.useSpring)({
+      h = (0, l.useSpring)({
         ref: o,
         config: l.config.default,
         from: {
@@ -108,11 +108,11 @@ let h = e => {
         className: E.scrollContainer,
         style: {
           ...f,
-          ...h
+          ..._
         },
         children: (0, a.jsx)(d.default, {
           guildId: t,
-          animatedTextStyle: _
+          animatedTextStyle: h
         })
       })]
     })

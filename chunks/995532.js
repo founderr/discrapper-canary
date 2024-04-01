@@ -10,8 +10,8 @@ let u = {},
   A = {},
   l = {},
   I = !1,
-  r = !1,
-  o = !1;
+  o = !1,
+  r = !1;
 
 function L(e) {
   let {
@@ -32,10 +32,10 @@ class N extends(n = T.default.Store) {
     if (null != e) return A[e]
   }
   isFetching() {
-    return r
+    return o
   }
   hasError() {
-    return o
+    return r
   }
   hasSeen(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -76,10 +76,10 @@ a = "WelcomeScreenStore", (_ = "displayName") in(E = N) ? Object.defineProperty(
     l[t] = !1
   },
   WELCOME_SCREEN_FETCH_START: function() {
-    r = !0, o = !1
+    o = !0, r = !1
   },
   WELCOME_SCREEN_FETCH_SUCCESS: function(e) {
-    r = !1, o = !1;
+    o = !1, r = !1;
     let {
       welcomeScreen: t,
       guildId: s
@@ -87,6 +87,6 @@ a = "WelcomeScreenStore", (_ = "displayName") in(E = N) ? Object.defineProperty(
     A[s] = null != t ? t : u
   },
   WELCOME_SCREEN_FETCH_FAIL: function() {
-    r = !1, o = !0
+    o = !1, r = !0
   }
 })

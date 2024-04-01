@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("106301"),
   f = n("590415"),
   E = n("131704"),
-  h = n("199902"),
-  _ = n("314897"),
+  _ = n("199902"),
+  h = n("314897"),
   C = n("592125"),
   S = n("430824"),
   m = n("131951"),
@@ -140,20 +140,20 @@ function b() {
 }
 
 function U() {
-  return L([T.default, h.default, _.default, A.default, C.default], () => {
+  return L([T.default, _.default, h.default, A.default, C.default], () => {
     let e, t;
     let n = T.default.getVoiceChannelId(),
-      a = _.default.getId();
+      a = h.default.getId();
     let s = [],
       l = null,
       i = 0,
-      r = h.default.getAllActiveStreams();
+      r = _.default.getAllActiveStreams();
     if (null != n) {
       let a = C.default.getChannel(n);
-      null != a && (e = a.type, t = N.default.countVoiceStatesForChannel(a.id) - (A.default.isInChannel(a.id) ? 1 : 0), s = h.default.getAllApplicationStreamsForChannel(a.id).map(e => e.ownerId))
+      null != a && (e = a.type, t = N.default.countVoiceStatesForChannel(a.id) - (A.default.isInChannel(a.id) ? 1 : 0), s = _.default.getAllApplicationStreamsForChannel(a.id).map(e => e.ownerId))
     }
     let o = null;
-    return (null == (o = 1 === r.length ? r[0] : h.default.getCurrentUserActiveStream()) ? void 0 : o.state) === v.ApplicationStreamStates.CONNECTING && (o = null), null != o && (l = (0, d.encodeStreamKey)(o), i = h.default.getViewerIds(l).filter(e => e !== a).length), {
+    return (null == (o = 1 === r.length ? r[0] : _.default.getCurrentUserActiveStream()) ? void 0 : o.state) === v.ApplicationStreamStates.CONNECTING && (o = null), null != o && (l = (0, d.encodeStreamKey)(o), i = _.default.getViewerIds(l).filter(e => e !== a).length), {
       channelType: e,
       voiceChannelId: n,
       voiceChannelUserCount: t,
@@ -194,10 +194,10 @@ function U() {
   }), null
 }
 
-function j() {
-  return L([T.default, o.default, _.default], () => {
+function G() {
+  return L([T.default, o.default, h.default], () => {
     let e = T.default.getVoiceChannelId(),
-      t = _.default.getId(),
+      t = h.default.getId(),
       n = (0, R.isNotNullish)(e) ? o.default.getEmbeddedActivitiesForChannel(e) : o.NO_ACTIVITIES;
     return {
       voiceChannelId: e,
@@ -218,7 +218,7 @@ function j() {
   }), null
 }
 
-function G() {
+function j() {
   return L([c.default, T.default], () => ({
     hangStatus: c.default.getCurrentHangStatus(),
     customHangStatus: c.default.getCustomHangStatus(),
@@ -235,6 +235,6 @@ function G() {
 
 function w() {
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(P, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(D, {}), (0, a.jsx)(x, {}), (0, a.jsx)(U, {}), (0, a.jsx)(b, {}), (0, a.jsx)(j, {}), (0, a.jsx)(G, {})]
+    children: [(0, a.jsx)(P, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(D, {}), (0, a.jsx)(x, {}), (0, a.jsx)(U, {}), (0, a.jsx)(b, {}), (0, a.jsx)(G, {}), (0, a.jsx)(j, {})]
   })
 }

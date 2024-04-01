@@ -34,8 +34,8 @@ var i = n("735250"),
   b = n("813744"),
   G = n("904085"),
   w = n("892254"),
-  k = n("210887"),
-  B = n("819640"),
+  B = n("210887"),
+  k = n("819640"),
   V = n("594174"),
   F = n("451478"),
   x = n("672752"),
@@ -82,13 +82,13 @@ t.default = function(e) {
     skipsSettingDefaultPageTitle: n
   } = e, {
     pathname: s
-  } = (0, u.useLocation)(), E = (0, z.getPlatform)(), A = d.isMobile || d.isTablet, F = (0, _.useStateFromStores)([k.default], () => k.default.darkSidebar ? ee.ThemeTypes.DARK : void 0), Q = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [$, es] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), ea = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
+  } = (0, u.useLocation)(), E = (0, z.getPlatform)(), A = d.isMobile || d.isTablet, F = (0, _.useStateFromStores)([B.default], () => B.default.darkSidebar ? ee.ThemeTypes.DARK : void 0), Q = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [$, es] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), ea = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
     enabled: eo
   } = G.default.useExperiment({
     location: "client_themes_coachmark_reintro"
   }, {
     autoTrackExposure: !0
-  }), el = (0, _.useStateFromStores)([B.default], () => B.default.getLayers().includes(ee.Layers.USER_SETTINGS)), eu = (0, _.useStateFromStores)([V.default], () => X.default.canUseClientThemes(V.default.getCurrentUser())), ed = $ && !el, e_ = [];
+  }), el = (0, _.useStateFromStores)([k.default], () => k.default.getLayers().includes(ee.Layers.USER_SETTINGS)), eu = (0, _.useStateFromStores)([V.default], () => X.default.canUseClientThemes(V.default.getCurrentUser())), ed = $ && !el, e_ = [];
   ed && es && eo && !eu && e_.push(c.DismissibleContent.CLIENT_THEMES_COACHMARK);
   let [ec, eE] = (0, P.useSelectedDismissibleContent)(e_, et.DismissibleContentGroupName.SIDEBAR, !0);
   e_.push(c.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);

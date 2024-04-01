@@ -4,10 +4,10 @@ s.r(t), s.d(t, {
     return n
   },
   NonSpamRetrainingOptInOptionsToValue: function() {
-    return m
+    return _
   },
   computeFlags: function() {
-    return _
+    return f
   },
   generateNonSpamRetrainingOptInSettingOptions: function() {
     return g
@@ -25,7 +25,7 @@ s.r(t), s.d(t, {
     return c
   },
   harvestDisabled: function() {
-    return f
+    return m
   }
 });
 var a, n, l = s("695346"),
@@ -56,7 +56,7 @@ function T() {
   return 0 === i.default.totalUnavailableGuilds && (e = e.filter(e => null != r.default.getGuild(e))), e
 }
 
-function _(e) {
+function f(e) {
   return (e & o.AllFriendSourceFlags) === o.AllFriendSourceFlags ? {
     all: !0,
     mutualFriends: !0,
@@ -68,10 +68,10 @@ function _(e) {
   }
 }
 
-function f(e, t) {
+function m(e, t) {
   return !t.verified || null != e && u > Date.now() - new Date(e.created_at).getTime()
 }(a = n || (n = {}))[a.UNDECIDED = 0] = "UNDECIDED", a[a.OPTIN = 1] = "OPTIN", a[a.OPTOUT = 2] = "OPTOUT";
-let m = {
+let _ = {
   0: void 0,
   1: !0,
   2: !1

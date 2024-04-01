@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   canUserInstall: function() {
-    return E
+    return f
   },
   getReadablePreorderReleaseDate: function() {
     return T
   },
   getSKUIdFromURL: function() {
-    return f
+    return E
   }
 }), n("757143"), n("47120");
 var s = n("913527"),
@@ -24,14 +24,14 @@ let u = {},
     ...o.SKUGenres
   });
 
-function f(e) {
+function E(e) {
   let t = (0, l.matchPath)(e, {
     path: o.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug")
   });
   return null != t ? t.params.skuId : null
 }
 
-function E(e) {
+function f(e) {
   let t = (0, r.nativePlatformTypeToSKUOperatingSystem)((0, i.getPlatform)());
   return e.type === o.SKUTypes.DURABLE_PRIMARY && null != t && e.supportedOperatingSystems.includes(t)
 }

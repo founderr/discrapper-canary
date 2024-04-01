@@ -24,16 +24,16 @@ var i = n("735250"),
   T = n("614223"),
   N = n("246946"),
   h = n("351402"),
-  x = n("509545"),
-  v = n("41542"),
+  v = n("509545"),
+  x = n("41542"),
   A = n("669079"),
   C = n("74538"),
   g = n("937615"),
   y = n("479446"),
   M = n("374649"),
   b = n("104494"),
-  R = n("653798"),
-  O = n("314182"),
+  O = n("653798"),
+  R = n("314182"),
   L = n("981632"),
   j = n("314404"),
   G = n("42818"),
@@ -85,16 +85,16 @@ function W(e) {
     eT = (0, b.usePremiumDiscountOffer)(),
     eN = null == eT ? void 0 : null === (t = eT.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => U.SubscriptionPlanInfo[e].skuId === ef),
     eh = !eI && null != eT && null != ef && eN,
-    ex = (0, u.useStateFromStores)([x.default], () => x.default.get(K));
-  l()(null != ex, "Missing plan");
-  let ev = [{
-      planId: ex.id,
+    ev = (0, u.useStateFromStores)([v.default], () => v.default.get(K));
+  l()(null != ev, "Missing plan");
+  let ex = [{
+      planId: ev.id,
       quantity: 1
     }],
     eA = ea === E.PurchaseState.PURCHASING || ea === E.PurchaseState.COMPLETED,
     eC = eI || eA,
     [eg, ey] = (0, M.useSubscriptionInvoicePreview)({
-      items: ev,
+      items: ex,
       renewal: !1,
       preventFetch: eC,
       applyEntitlements: !0,
@@ -104,7 +104,7 @@ function W(e) {
       metadata: es
     }),
     [eM, eb] = (0, M.useSubscriptionInvoicePreview)({
-      items: ev,
+      items: ex,
       renewal: !0,
       preventFetch: eC,
       trialId: et,
@@ -112,7 +112,7 @@ function W(e) {
       currency: Z.currency,
       metadata: es
     }),
-    [eR, eO] = (0, M.useSubscriptionInvoicePreview)({
+    [eO, eR] = (0, M.useSubscriptionInvoicePreview)({
       items: [{
         planId: U.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
         quantity: 1
@@ -131,13 +131,13 @@ function W(e) {
       preventFetch: !eI || eA
     }),
     eG = eI && (0, A.shouldShowCustomGiftExperience)(eE),
-    eD = null !== (a = null != ey ? ey : eb) && void 0 !== a ? a : eO,
+    eD = null !== (a = null != ey ? ey : eb) && void 0 !== a ? a : eR,
     eF = (0, u.useStateFromStores)([N.default], () => N.default.enabled),
     eU = Z.paymentSourceId,
     {
       hasEntitlements: ew,
       entitlements: eB
-    } = (0, D.useSubscriptionEntitlements)(ex.id, eI),
+    } = (0, D.useSubscriptionEntitlements)(ev.id, eI),
     ek = (0, C.isPrepaidPaymentSource)(Z.paymentSourceId),
     eH = (0, P.checkNoPaymentTrialEnabled)(et, eU, K),
     eW = (0, T.inOneStepSubscriptionCheckout)({
@@ -160,7 +160,7 @@ function W(e) {
       defaultPlanId: ep,
       defaultToMonthlyPlan: !1
     }), [ef, em, eI, ep, eS, eu]),
-    eZ = (0, T.planSwitchLoadingShowSpinner)(eW, eg, ex);
+    eZ = (0, T.planSwitchLoadingShowSpinner)(eW, eg, ev);
   if (null != eD) {
     let e = eD.message;
     return eD.code === S.ErrorCodes.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (e = k.default.Messages.BILLING_ERROR_UNSUPPORTED_CURRENCY), (0, i.jsx)(c.FormErrorBlock, {
@@ -168,7 +168,7 @@ function W(e) {
     })
   }
   if (eI) Y = (0, i.jsx)(G.SubscriptionInvoiceGift, {
-    plan: ex,
+    plan: ev,
     className: H.invoice,
     isPrepaidPaymentSource: ek,
     isCustomGift: eG,
@@ -176,9 +176,9 @@ function W(e) {
     priceOptions: Z
   });
   else if (eu && null != eg) Y = (0, i.jsxs)("div", {
-    children: [(0, i.jsx)(R.PremiumInvoiceTableDivider, {
+    children: [(0, i.jsx)(O.PremiumInvoiceTableDivider, {
       negativeMarginTop: !0
-    }), (0, i.jsxs)(R.PremiumInvoiceTable, {
+    }), (0, i.jsxs)(O.PremiumInvoiceTable, {
       className: H.invoice,
       children: [(0, i.jsxs)("div", {
         className: H.trialPriceLine,
@@ -197,7 +197,7 @@ function W(e) {
         className: H.afterTrialPriceLine,
         children: (0, i.jsx)(G.PremiumTrialInvoiceTableRow, {
           invoice: eg,
-          plan: ex
+          plan: ev
         })
       })]
     })]
@@ -207,13 +207,13 @@ function W(e) {
       className: H.spinnerWrapper,
       children: (0, i.jsx)(c.Spinner, {})
     });
-    eu && eg.subscriptionPeriodEnd !== eM.subscriptionPeriodEnd && (W = eg.subscriptionPeriodEnd), Y = (0, i.jsxs)(R.PremiumInvoiceTable, {
+    eu && eg.subscriptionPeriodEnd !== eM.subscriptionPeriodEnd && (W = eg.subscriptionPeriodEnd), Y = (0, i.jsxs)(O.PremiumInvoiceTable, {
       className: H.invoice,
-      children: [(0, i.jsx)(R.PremiumInvoiceTableHeader, {
+      children: [(0, i.jsx)(O.PremiumInvoiceTableHeader, {
         children: k.default.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS
       }), (0, i.jsx)(G.PremiumSubscriptionChangePlanInvoiceRows, {
         invoice: eg,
-        newPlan: ex,
+        newPlan: ev,
         isPrepaidPaymentSource: ek,
         referralTrialOfferId: er
       }), ek ? null : (0, i.jsx)(G.SubscriptionInvoiceFooter, {
@@ -254,13 +254,13 @@ function W(e) {
       }
     }(null != eu && eu, eM, W),
     eQ = k.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
-      planName: ex.name
+      planName: ev.name
     });
-  return eI && !eG ? eQ = k.default.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT : eI && eG ? eQ = "" : (0, C.isPremiumSubscriptionPlan)(ex.id) && (eQ = C.default.getBillingReviewSubheader(null, ex)), eH ? null : (0, i.jsxs)("div", {
+  return eI && !eG ? eQ = k.default.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT : eI && eG ? eQ = "" : (0, C.isPremiumSubscriptionPlan)(ev.id) && (eQ = C.default.getBillingReviewSubheader(null, ev)), eH ? null : (0, i.jsxs)("div", {
     className: H.stepBody,
     children: [null != ei && (0, i.jsxs)("div", {
       className: H.reviewWarningMessageContainer,
-      children: [(0, i.jsx)(v.default, {
+      children: [(0, i.jsx)(x.default, {
         color: o.default.unsafe_rawColors.YELLOW_300.css,
         width: 20,
         height: 20
@@ -270,7 +270,7 @@ function W(e) {
         children: ei
       })]
     }), eW && (0, i.jsxs)("div", {
-      children: [(0, i.jsx)(R.PremiumInvoiceTableDivider, {
+      children: [(0, i.jsx)(O.PremiumInvoiceTableDivider, {
         negativeMarginTop: !0,
         negativeMarginBottom: !0
       }), (0, i.jsx)(j.PremiumSwitchPlanSelectBody, {
@@ -280,9 +280,9 @@ function W(e) {
         selectedPlanId: K,
         subscriptionPeriodEnd: eY,
         showTotal: !1,
-        discountInvoiceItems: eh ? null == eR ? void 0 : eR.invoiceItems : void 0,
+        discountInvoiceItems: eh ? null == eO ? void 0 : eO.invoiceItems : void 0,
         handleClose: ec
-      }), (0, i.jsx)(R.PremiumInvoiceTableDivider, {})]
+      }), (0, i.jsx)(O.PremiumInvoiceTableDivider, {})]
     }), !eu && (0, i.jsx)(c.FormTitle, {
       tag: c.FormTitleTags.H5,
       children: eQ
@@ -332,7 +332,7 @@ function W(e) {
           onChange: J
         })]
       })]
-    }), (0, i.jsx)(O.default, {
+    }), (0, i.jsx)(R.default, {
       isActive: ee,
       ref: $,
       children: (0, i.jsx)(p.default, {
@@ -343,19 +343,19 @@ function W(e) {
         checkboxLabelClassname: eq,
         finePrint: null != en ? en : (0, i.jsx)(m.default, {
           hide: eu || eo,
-          subscriptionPlan: ex,
+          subscriptionPlan: ev,
           renewalInvoice: eM,
           isGift: eI,
           paymentSourceType: null === (n = V[null != eU ? eU : ""]) || void 0 === n ? void 0 : n.type,
           isEmbeddedIAP: ed,
-          basePrice: (0, C.getPrice)(ex.id, !1, eI, Z)
+          basePrice: (0, C.getPrice)(ev.id, !1, eI, Z)
         }),
-        showPricingLink: ex.currency !== B.CurrencyCodes.USD,
+        showPricingLink: ev.currency !== B.CurrencyCodes.USD,
         showWithdrawalWaiver: ez,
         disabled: eA,
         isTrial: eu && null == en,
         isDiscount: eo,
-        subscriptionPlan: ex,
+        subscriptionPlan: ev,
         isGift: eI
       })
     })]

@@ -10,8 +10,8 @@ var l = n("836560"),
   c = n("857192"),
   f = n("998502"),
   E = n("996106"),
-  h = n("901077"),
-  _ = n("76238"),
+  _ = n("901077"),
+  h = n("76238"),
   C = n("852926"),
   S = n("186901"),
   m = n("981631"),
@@ -76,9 +76,9 @@ function L(e, t, n, a) {
     message: a
   }, n)
 }
-class P extends _.default {
+class P extends h.default {
   send(e) {
-    (c.default.isLoggingOverlayEvents || e.cmd !== m.RPCCommands.OVERLAY && e.evt !== m.RPCEvents.OVERLAY) && A.info("Socket Emit: ".concat(this.id), (0, h.default)(e)), null != a && "etf" === this.encoding ? this._socket.send(a.pack(e), {
+    (c.default.isLoggingOverlayEvents || e.cmd !== m.RPCCommands.OVERLAY && e.evt !== m.RPCEvents.OVERLAY) && A.info("Socket Emit: ".concat(this.id), (0, _.default)(e)), null != a && "etf" === this.encoding ? this._socket.send(a.pack(e), {
       binary: !0
     }) : this._socket.send(JSON.stringify(e))
   }
@@ -95,7 +95,7 @@ class P extends _.default {
     this._socket = e
   }
 }
-class M extends _.default {
+class M extends h.default {
   send(e) {
     (c.default.isLoggingOverlayEvents || e.cmd !== m.RPCCommands.OVERLAY) && A.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
   }
@@ -181,7 +181,7 @@ class y extends l.EventEmitter {
     } catch (t) {
       e.close(m.RPCCloseCodes.CLOSE_UNSUPPORTED, "Payload not ".concat(e.encoding));
       return
-    }(c.default.isLoggingOverlayEvents || n.cmd !== m.RPCCommands.OVERLAY) && A.info("Socket Message: ".concat(e.id), (0, h.default)(n)), this.emit("request", e, n)
+    }(c.default.isLoggingOverlayEvents || n.cmd !== m.RPCCommands.OVERLAY) && A.info("Socket Message: ".concat(e.id), (0, _.default)(n)), this.emit("request", e, n)
   }
   constructor() {
     var e;

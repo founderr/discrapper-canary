@@ -22,8 +22,8 @@ var n = s("990547"),
   _ = s("377171"),
   g = s("621628"),
   h = s("18438"),
-  I = s("778825"),
-  N = s("266983"),
+  N = s("778825"),
+  I = s("266983"),
   p = s("351780"),
   C = s("231765"),
   A = s("813732"),
@@ -47,8 +47,8 @@ var n = s("990547"),
   w = s("498639"),
   V = s("748717"),
   Y = s("419636"),
-  K = s("35426"),
-  W = s("799071"),
+  W = s("35426"),
+  K = s("799071"),
   z = s("601433"),
   Q = s("154022"),
   Z = s("393681"),
@@ -76,8 +76,8 @@ var n = s("990547"),
   e_ = s("400287"),
   eg = s("554042"),
   eh = s("200645"),
-  eI = s("287490"),
-  eN = s("674116"),
+  eN = s("287490"),
+  eI = s("674116"),
   ep = s("981631"),
   eC = s("689938"),
   eA = s("480261");
@@ -110,7 +110,7 @@ function ex(e) {
       text: eC.default.Messages.NEW
     }),
     notice: {
-      stores: [D.default, I.default],
+      stores: [D.default, N.default],
       element: O.default
     },
     onSettingsClose: () => {
@@ -169,7 +169,7 @@ function ex(e) {
     label: eC.default.Messages.PACKAGES,
     ariaLabel: eC.default.Messages.PACKAGES,
     element: eu.default,
-    icon: (0, a.jsx)(N.default, {
+    icon: (0, a.jsx)(I.default, {
       width: 16,
       height: 16,
       color: "currentColor"
@@ -235,7 +235,7 @@ function ex(e) {
   }, {
     section: ep.UserSettingsSections.VOICE,
     label: eC.default.Messages.VOICE_AND_VIDEO,
-    element: eN.default,
+    element: eI.default,
     predicate: () => v.default.isSupported()
   }, {
     section: ep.UserSettingsSections.POGGERMODE,
@@ -281,7 +281,7 @@ function ex(e) {
   }, {
     section: ep.UserSettingsSections.SPEED_TEST,
     label: "Speed Test",
-    element: K.default,
+    element: W.default,
     predicate: () => R.default.isSupported() && G.default.getCurrentConfig({
       location: "9f7d84_2"
     }).showSettings
@@ -335,7 +335,7 @@ function ex(e) {
   }, {
     section: ep.UserSettingsSections.EXPERIMENTS,
     label: "Experiments",
-    element: eI.default,
+    element: eN.default,
     predicate: () => M.default.isDeveloper
   }, {
     section: ep.UserSettingsSections.DEVELOPER_OPTIONS,
@@ -365,7 +365,7 @@ function ex(e) {
   }, {
     section: ep.UserSettingsSections.TEXT_COMPONENT,
     label: "Text Components",
-    element: W.default,
+    element: K.default,
     predicate: () => (0, z.shouldShowTextPlayground)() || M.default.isDeveloper
   }, {
     section: S.SectionTypes.DIVIDER

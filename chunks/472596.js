@@ -7,10 +7,10 @@ s.r(t), s.d(t, {
     return N
   },
   openMemberProfile: function() {
-    return r
+    return o
   },
   useContextMenuModerateRoles: function() {
-    return o
+    return r
   },
   useContextMenuModerateUser: function() {
     return L
@@ -27,7 +27,7 @@ var E, _, a = s("470079"),
   A = s("594174"),
   l = s("91047"),
   I = s("981631");
-let r = (e, t) => {
+let o = (e, t) => {
   let {
     guildId: s,
     userId: E,
@@ -45,7 +45,7 @@ let r = (e, t) => {
   })
 };
 
-function o(e, t, s) {
+function r(e, t, s) {
   let {
     analyticsLocations: E
   } = (0, T.default)();

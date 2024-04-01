@@ -31,11 +31,11 @@ function f() {
         channel: n
       }, n.id)
     }),
-    C = null == n && null != f ? e[f] : null,
-    p = (0, r.useIsBroadcastingGDM)(null == C ? void 0 : C.id);
-  return null != C && !p && h.unshift((0, l.jsx)(c.default, {
-    channel: C
-  }, C.id)), (0, l.jsx)(i.TransitionGroup, {
+    p = null == n && null != f ? e[f] : null,
+    C = (0, r.useIsBroadcastingGDM)(null == p ? void 0 : p.id);
+  return null != p && !C && h.unshift((0, l.jsx)(c.default, {
+    channel: p
+  }, p.id)), (0, l.jsx)(i.TransitionGroup, {
     component: a.Fragment,
     children: h
   })

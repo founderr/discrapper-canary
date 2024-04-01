@@ -16,8 +16,8 @@ var s = n("512722"),
   c = n("761282"),
   f = n("358924"),
   E = n("817915"),
-  h = n("981631"),
-  _ = n("689938");
+  _ = n("981631"),
+  h = n("689938");
 
 function C(e) {
   let {
@@ -40,12 +40,12 @@ function C(e) {
       case 1:
         return l;
       case 2:
-        return _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN_ONLY.format({
+        return h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN_ONLY.format({
           user1: l,
           user2: i
         });
       default:
-        return _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN.format({
+        return h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN.format({
           user1: l,
           user2: i,
           extras: n.length - 2
@@ -83,9 +83,9 @@ function C(e) {
       let t = c.createHeader(T);
       if (null != t) return t;
       switch (T.type) {
-        case h.ActivityTypes.PLAYING:
+        case _.ActivityTypes.PLAYING:
           if ((0, o.default)(T)) return {
-            subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
+            subtitle: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
             icon: (0, a.jsx)(f.default.Header.Icon, {
               src: f.default.Header.Icon.Src.XBOX
             })
@@ -99,13 +99,13 @@ function C(e) {
               src: null != e.getIconURL(E.ICON_SIZE) ? e.getIconURL(E.ICON_SIZE) : n("211827")
             }) : null
           };
-        case h.ActivityTypes.STREAMING:
+        case _.ActivityTypes.STREAMING:
           return {
-            subtitle: _.default.Messages.ACTIVITY_FEED_NOW_STREAMING_TWITCH, icon: null != e && null != e.getIconURL(E.ICON_SIZE) ? (0, a.jsx)(f.default.Header.Icon, {
+            subtitle: h.default.Messages.ACTIVITY_FEED_NOW_STREAMING_TWITCH, icon: null != e && null != e.getIconURL(E.ICON_SIZE) ? (0, a.jsx)(f.default.Header.Icon, {
               src: e.getIconURL(E.ICON_SIZE)
             }) : null
           };
-        case h.ActivityTypes.LISTENING:
+        case _.ActivityTypes.LISTENING:
           let s;
           return s = (0, r.default)(T) ? (0, a.jsx)(f.default.Header.Icon, {
             src: f.default.Header.Icon.Src.SPOTIFY
@@ -114,26 +114,26 @@ function C(e) {
           }) : (0, a.jsx)(f.default.Header.Icon, {
             src: n("211827")
           }), {
-            subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
+            subtitle: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
               name: T.name
             }),
             icon: s
           };
-        case h.ActivityTypes.WATCHING:
+        case _.ActivityTypes.WATCHING:
           return {
-            subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_WATCHING, icon: null != e && null != e.getIconURL(E.ICON_SIZE) ? (0, a.jsx)(f.default.Header.Icon, {
+            subtitle: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_WATCHING, icon: null != e && null != e.getIconURL(E.ICON_SIZE) ? (0, a.jsx)(f.default.Header.Icon, {
               src: e.getIconURL(E.ICON_SIZE)
             }) : null
           };
         default:
           return {
-            subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL, icon: null
+            subtitle: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL, icon: null
           }
       }
     }
     if (0 === S.length) {
       if (C.length > 0) return {
-        subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
+        subtitle: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
         icon: null
       };
       let e = S[0];
@@ -145,8 +145,8 @@ function C(e) {
           let e = c.createHeader(t);
           if (null != e) return e
         }
-        if (null != t && t.type === h.ActivityTypes.LISTENING) return {
-          subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_SPOTIFY,
+        if (null != t && t.type === _.ActivityTypes.LISTENING) return {
+          subtitle: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_SPOTIFY,
           icon: (0, a.jsx)(f.default.Header.Icon, {
             src: f.default.Header.Icon.Src.SPOTIFY
           })
@@ -175,7 +175,7 @@ function C(e) {
       }
     }
     return {
-      subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_MULTIPLE_GAMES,
+      subtitle: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_MULTIPLE_GAMES,
       icon: (0, a.jsx)(f.default.Header.Icon, {
         src: f.default.Header.Icon.Src.MULTIPLE
       })

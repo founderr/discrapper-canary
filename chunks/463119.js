@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("596454"),
   f = n("515753"),
   E = n("410030"),
-  h = n("607070"),
-  _ = n("100527"),
+  _ = n("607070"),
+  h = n("100527"),
   C = n("906732"),
   S = n("821982"),
   m = n("377171"),
@@ -49,7 +49,7 @@ let P = e => {
       onButtonClick: i,
       children: o,
       ...u
-    } = e, d = (0, r.useListItem)("shop"), c = _.default.HOME_PAGE_SHOP_TAB, {
+    } = e, d = (0, r.useListItem)("shop"), c = h.default.HOME_PAGE_SHOP_TAB, {
       analyticsLocations: E
     } = (0, C.default)(c);
     return (0, a.jsx)(f.LinkButton, {
@@ -76,7 +76,7 @@ let P = e => {
     let {
       displayOptions: t,
       assetId: n
-    } = e, s = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), l = null != n ? (0, S.default)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
+    } = e, s = (0, o.useStateFromStores)([_.default], () => _.default.useReducedMotion), l = null != n ? (0, S.default)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
     return (0, a.jsxs)("div", {
       className: L.shopMarketingTooltipContent,
       children: [(0, a.jsx)("div", {
@@ -107,10 +107,10 @@ let P = e => {
       locationState: n,
       onButtonClick: l,
       displayOptions: r
-    } = e, [o, c] = s.useState(0), [f, h] = s.useState(!1), _ = (0, E.default)(), C = r.entrypointDecorationAssets, S = s.useCallback(e => {
-      c(e => (e + 1) % r.assetIds.length), h(!0), null == e || e()
+    } = e, [o, c] = s.useState(0), [f, _] = s.useState(!1), h = (0, E.default)(), C = r.entrypointDecorationAssets, S = s.useCallback(e => {
+      c(e => (e + 1) % r.assetIds.length), _(!0), null == e || e()
     }, [r.assetIds]), m = s.useCallback(e => {
-      h(!1), null == e || e()
+      _(!1), null == e || e()
     }, []);
     return (0, a.jsx)(d.Tooltip, {
       text: (0, a.jsx)(y, {
@@ -132,7 +132,7 @@ let P = e => {
         onMouseLeave: () => m(e.onMouseLeave),
         onButtonClick: l,
         children: [null != C && (0, a.jsx)("img", {
-          src: (0, u.isThemeDark)(_) ? C.srcDark : C.srcLight,
+          src: (0, u.isThemeDark)(h) ? C.srcDark : C.srcLight,
           className: i()(L.marketingButtonImage, {
             [L.marketingButtonImageHovered]: f
           }),

@@ -14,8 +14,8 @@ var a = s("735250"),
   f = s("412222"),
   T = s("223312"),
   _ = s("571728"),
-  S = s("572940"),
-  R = s("80487"),
+  R = s("572940"),
+  S = s("80487"),
   N = s("146463"),
   A = s("689938"),
   M = s("589247");
@@ -67,7 +67,7 @@ function m(e) {
     }, [m, p, G]),
     L = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(t));
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(R.default, {
+    children: [(0, a.jsx)(S.default, {
       currentTab: m,
       onTabItemSelect: O,
       pendingGuildJoinRequestsTotal: g,
@@ -79,7 +79,7 @@ function m(e) {
       }) : null : (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("div", {
           className: M.listControls,
-          children: (0, a.jsx)(S.default, {
+          children: (0, a.jsx)(R.default, {
             className: M.sortSelect,
             sortOrder: p,
             onSortChange: v

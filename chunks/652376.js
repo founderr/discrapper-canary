@@ -19,10 +19,10 @@ function u(e) {
     c = !1,
     f = !1,
     h = !1,
-    C = (0, a.useStateFromStores)([r.default], () => r.default.getChannelId()),
-    p = null === (t = (0, s.default)()) || void 0 === t ? void 0 : t.guild_id,
-    m = null != p && u.includes(p),
-    g = (0, a.useStateFromStores)([o.default], () => null != C && o.default.hasVideo(C), [C]),
+    p = (0, a.useStateFromStores)([r.default], () => r.default.getChannelId()),
+    C = null === (t = (0, s.default)()) || void 0 === t ? void 0 : t.guild_id,
+    m = null != C && u.includes(C),
+    g = (0, a.useStateFromStores)([o.default], () => null != p && o.default.hasVideo(p), [p]),
     E = (0, a.useStateFromStores)([i.default], () => i.default.getCurrentUserActiveStream());
   return d && (c = !g, f = g, h = null != E && null != E.guildId && u.includes(E.guildId)), l.useMemo(() => ({
     audio: c,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   InteractivePIPHeader: function() {
-    return k
+    return B
   },
   PIPOverlay: function() {
     return b
@@ -71,7 +71,7 @@ function b(e) {
     onJumpToChannel: R,
     idle: C,
     selectedParticipant: g
-  } = e, M = (0, u.useAppContext)() === D.AppContext.POPOUT, U = (0, a.useStateFromStores)([O.default], () => O.default.isVideoEnabled()), b = (0, a.useStateFromStores)([O.default], () => Object.values(O.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([s])[0], k = (0, E.default)(r), B = e => {
+  } = e, M = (0, u.useAppContext)() === D.AppContext.POPOUT, U = (0, a.useStateFromStores)([O.default], () => O.default.isVideoEnabled()), b = (0, a.useStateFromStores)([O.default], () => Object.values(O.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([s])[0], B = (0, E.default)(r), k = e => {
     l.default.setVideoEnabled(e)
   };
   return (0, i.jsxs)("div", {
@@ -98,10 +98,10 @@ function b(e) {
           className: y.leftPipIcon,
           enabled: U,
           cameraUnavailable: !G,
-          hasPermission: k,
-          onChange: B,
+          hasPermission: B,
+          onChange: k,
           onCameraUnavailable: () => {
-            G ? B(!0) : (0, I.default)()
+            G ? k(!0) : (0, I.default)()
           }
         }), (0, i.jsx)(T.default, {
           children: (0, i.jsx)(_.default, {
@@ -192,7 +192,7 @@ function w(e) {
   }) : null
 }
 
-function k(e) {
+function B(e) {
   var t;
   let {
     onMouseDown: n,

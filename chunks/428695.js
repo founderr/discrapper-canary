@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("626135"),
   f = n("981631"),
   E = n("689938"),
-  h = n("615273");
-let _ = (0, r.debounce)(u.default.trackWithMetadata, 500);
+  _ = n("615273");
+let h = (0, r.debounce)(u.default.trackWithMetadata, 500);
 t.default = function(e) {
   let {
     guild: t,
@@ -32,14 +32,14 @@ t.default = function(e) {
     centerText: O
   } = e;
   s.useEffect(() => {
-    _(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+    h(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
       notice_type: C,
       guild_id: t.id
     })
   }, [t.id, C]);
   let v = null;
   "function" == typeof N ? v = N() : null != N && (v = (0, a.jsx)(o.Button, {
-    className: h.button,
+    className: _.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
       null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
@@ -56,45 +56,45 @@ t.default = function(e) {
   "function" == typeof n ? L = n() : null != n && (L = (0, a.jsx)(o.Text, {
     variant: "text-md/medium",
     color: "header-primary",
-    className: i()(h.title, {
-      [h.noImageTitle]: null == r
+    className: i()(_.title, {
+      [_.noImageTitle]: null == r
     }, {
-      [h.center]: O
+      [_.center]: O
     }),
     children: n
   }));
   let P = null != m ? "".concat(m, "px") : "16px";
   return (0, a.jsxs)("div", {
-    className: h.container,
+    className: _.container,
     children: [!0 === T ? null : (0, a.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
           notice_type: C
         }), null == g || g()
       },
-      className: h.close,
+      className: _.close,
       "aria-label": E.default.Messages.DISMISS,
       children: (0, a.jsx)(d.default, {
-        className: h.closeIcon
+        className: _.closeIcon
       })
     }), null != r && (0, a.jsx)("div", {
-      className: h.imageContainer,
+      className: _.imageContainer,
       style: {
         marginTop: "".concat(I, "px"),
         marginLeft: P,
         marginRight: P
       },
       children: (0, a.jsx)("img", {
-        className: h.image,
+        className: _.image,
         style: S,
         src: r,
         alt: ""
       })
     }), (0, a.jsxs)("div", {
-      className: h.message,
+      className: _.message,
       children: [L, (0, a.jsx)(o.Text, {
         className: i()({
-          [h.center]: O
+          [_.center]: O
         }),
         variant: "text-sm/normal",
         color: "text-muted",

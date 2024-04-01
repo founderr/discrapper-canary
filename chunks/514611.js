@@ -10,8 +10,8 @@ var a, s = n("735250"),
   c = n("556017"),
   f = n("879484"),
   E = n("26580"),
-  h = n("206887"),
-  _ = n("134432"),
+  _ = n("206887"),
+  h = n("134432"),
   C = n("695346"),
   S = n("768581"),
   m = n("900849"),
@@ -63,7 +63,7 @@ class L extends(a = l.PureComponent) {
     } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), D = S.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
-      size: 300 * (0, _.getDevicePixelRatio)()
+      size: 300 * (0, h.getDevicePixelRatio)()
     }), x = null != D ? D : this.getDefaultSplashURL(a, y), b = S.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
@@ -79,7 +79,7 @@ class L extends(a = l.PureComponent) {
     }, {
       autoTrackExposure: !1
     }), {
-      canSeeInAppReportingButtons: j
+      canSeeInAppReportingButtons: G
     } = c.DiscoveryInAppReportingExperiment.getCurrentConfig({
       location: "de1ef6_3"
     }, {
@@ -88,7 +88,7 @@ class L extends(a = l.PureComponent) {
     c.DiscoveryInAppReportingExperiment.trackExposure({
       location: "de1ef6_4"
     });
-    let G = C.DeveloperMode.getSetting();
+    let j = C.DeveloperMode.getSetting();
     return (0, s.jsx)(o.VisibilitySensor, {
       active: !N,
       onChange: this.setIsVisible,
@@ -126,9 +126,9 @@ class L extends(a = l.PureComponent) {
                     loaded: !0
                   })
                 })
-              }), G || j ? (0, s.jsx)("div", {
+              }), j || G ? (0, s.jsx)("div", {
                 className: A.actionButtons,
-                children: (0, s.jsx)(h.default, {
+                children: (0, s.jsx)(_.default, {
                   guild: t
                 })
               }) : null, (0, s.jsx)("div", {

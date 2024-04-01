@@ -13,9 +13,9 @@ var a = s("735250"),
   E = s("496929"),
   T = s("558381"),
   I = s("410575"),
-  S = s("404133"),
+  f = s("404133"),
   R = s("224336"),
-  f = s("730749"),
+  S = s("730749"),
   m = s("666743"),
   A = s("115130"),
   N = s("812206"),
@@ -444,7 +444,7 @@ class eE extends i.PureComponent {
       null != e && null != t && (0, d.openModalLazy)(async () => {
         let {
           default: i
-        } = await Promise.all([s.e("49237"), s.e("99387"), s.e("43643"), s.e("7654"), s.e("61939")]).then(s.bind(s, "560114"));
+        } = await Promise.all([s.e("49237"), s.e("99387"), s.e("43643"), s.e("7654"), s.e("92893")]).then(s.bind(s, "560114"));
         return s => (0, a.jsx)(i, {
           ...s,
           guild: t,
@@ -536,7 +536,7 @@ class eE extends i.PureComponent {
             className: n()(ec.headerPurchase, {
               [ec.active]: u
             }),
-            children: [null != t ? (0, g.default)(t) : null, null != e && null != t ? (0, a.jsx)(S.default, {
+            children: [null != t ? (0, g.default)(t) : null, null != e && null != t ? (0, a.jsx)(f.default, {
               wrapperClassName: ec.headerActionButton,
               applicationId: e.id,
               skuId: t.id,
@@ -584,7 +584,7 @@ class eE extends i.PureComponent {
     })
   }
 }
-t.default = (0, f.default)((0, m.default)(l.default.connectStores([v.default, M.default, P.default, y.default, U.default, b.default, j.default, A.default, N.default, x.default, h.default, D.default], e => {
+t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.default, P.default, y.default, U.default, b.default, j.default, A.default, N.default, x.default, h.default, D.default], e => {
   let t, s, a, {
     inputSkuId: i,
     applicationId: r,

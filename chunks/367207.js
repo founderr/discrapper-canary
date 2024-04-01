@@ -10,13 +10,13 @@ var a = n("481060"),
   u = n("594174"),
   d = n("295226"),
   c = n("74538"),
-  f = n("281494"),
-  E = n("937579"),
+  E = n("281494"),
+  f = n("937579"),
   _ = n("316941"),
   T = n("520540"),
-  m = n("633361");
+  I = n("633361");
 
-function I(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,7 +24,7 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends i.default {
+class N extends i.default {
   _initialize() {
     __OVERLAY__ ? l.default.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (l.default.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), l.default.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), l.default.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), l.default.subscribe("POST_CONNECTION_OPEN", this._maybeGetReferralEligibleUsers))
   }
@@ -77,17 +77,17 @@ class p extends i.default {
     })
   }
   constructor(...e) {
-    super(...e), I(this, "_premiumPaymentModalCloseResolve", null), I(this, "_premiumPaymentModalCloseReject", null), I(this, "_maybeGetReferralEligibleUsers", () => {
+    super(...e), m(this, "_premiumPaymentModalCloseResolve", null), m(this, "_premiumPaymentModalCloseReject", null), m(this, "_maybeGetReferralEligibleUsers", () => {
       let {
         enabled: e
       } = T.ReferralProgramSender.getCurrentConfig({
         location: "PremiumManager"
       });
-      e && (0, f.fetchReferralEligibleUsers)()
-    }), I(this, "_maybeFetchPremiumOffer", () => {
+      e && (0, E.fetchReferralEligibleUsers)()
+    }), m(this, "_maybeFetchPremiumOffer", () => {
       let e = u.default.getCurrentUser();
-      null != e && e.verified && !(0, c.isPremium)(e) && d.default.shouldFetchOffer() && ((0, m.shouldHitUserOfferEndPoints)("PremiumManager") ? (0, E.fetchUserOffer)() : _.default.fetchUserTrialOffer())
-    }), I(this, "_handlePremiumPaymentModalOpen", e => {
+      null != e && e.verified && !(0, c.isPremium)(e) && d.default.shouldFetchOffer() && ((0, I.shouldHitUserOfferEndPoints)("PremiumManager") ? (0, f.fetchUserOffer)() : _.default.fetchUserTrialOffer())
+    }), m(this, "_handlePremiumPaymentModalOpen", e => {
       (0, o.default)({
         ...e,
         analyticsLocations: [r.default.OVERLAY],
@@ -98,7 +98,7 @@ class p extends i.default {
           })
         }
       })
-    }), I(this, "_handlePremiumPaymentModalClose", e => {
+    }), m(this, "_handlePremiumPaymentModalClose", e => {
       let {
         didSucceed: t
       } = e;
@@ -106,4 +106,4 @@ class p extends i.default {
     })
   }
 }
-t.default = new p
+t.default = new N

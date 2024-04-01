@@ -1,38 +1,38 @@
 "use strict";
-t.r(s);
-var a = t("913527"),
-  l = t.n(a),
-  n = t("524437"),
-  i = t("951716"),
-  o = t("605236"),
-  r = t("972830"),
-  d = t("430824"),
-  c = t("594174"),
-  u = t("374023"),
-  N = t("709054"),
-  m = t("645792"),
-  _ = t("981631"),
-  E = t("921944");
-s.default = {
+s.r(t);
+var a = s("913527"),
+  n = s.n(a),
+  l = s("524437"),
+  i = s("951716"),
+  r = s("605236"),
+  o = s("972830"),
+  c = s("430824"),
+  d = s("594174"),
+  u = s("374023"),
+  _ = s("709054"),
+  N = s("645792"),
+  E = s("981631"),
+  m = s("921944");
+t.default = {
   init(e) {
     let {
-      hasModalOpen: s,
-      openModal: t
+      hasModalOpen: t,
+      openModal: s
     } = e;
-    !u.ProcessArgs.isDisallowPopupsSet() && (0, r.addPostConnectionCallback)(() => {
+    !u.ProcessArgs.isDisallowPopupsSet() && (0, o.addPostConnectionCallback)(() => {
       if ((0, i.default)()) return;
-      let e = c.default.getCurrentUser(),
-        a = null != e && 7 > l()().diff(l()(N.default.extractTimestamp(e.id)), "days"),
-        r = null != Object.values(d.default.getGuilds()).find(e => e.hasFeature(_.GuildFeatures.HUB)),
-        u = !(0, o.isDismissibleContentDismissed)(n.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL);
-      !(a || s() || r || !u) && (0, m.backToSchoolEnabled)() && (m.default.trackExposure({
+      let e = d.default.getCurrentUser(),
+        a = null != e && 7 > n()().diff(n()(_.default.extractTimestamp(e.id)), "days"),
+        o = null != Object.values(c.default.getGuilds()).find(e => e.hasFeature(E.GuildFeatures.HUB)),
+        u = !(0, r.isDismissibleContentDismissed)(l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL);
+      !(a || t() || o || !u) && (0, N.backToSchoolEnabled)() && (N.default.trackExposure({
         location: "8b792a_1"
-      }), t(), (0, o.requestMarkDismissibleContentAsShown)(n.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL))
+      }), s(), (0, r.requestMarkDismissibleContentAsShown)(l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL))
     })
   },
   hideHubUpsell() {
-    (0, o.markDismissibleContentAsDismissed)(n.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL, {
-      dismissAction: E.ContentDismissActionType.AUTO
+    (0, r.markDismissibleContentAsDismissed)(l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL, {
+      dismissAction: m.ContentDismissActionType.AUTO
     })
   }
 }

@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("451603"),
   f = n("885714"),
   E = n("940627"),
-  h = n("806519"),
-  _ = n("768581"),
+  _ = n("806519"),
+  h = n("768581"),
   C = n("900849"),
   S = n("556017"),
   m = n("879484"),
@@ -45,10 +45,10 @@ t.default = e => {
     description: x,
     presenceCount: b,
     memberCount: U,
-    keywords: j
-  } = l, [G, w] = s.useState(!1), [k, F] = s.useState(!1), {
+    keywords: G
+  } = l, [j, w] = s.useState(!1), [k, F] = s.useState(!1), {
     analyticsLocations: B
-  } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
+  } = (0, u.default)(), H = h.default.getGuildDiscoverySplashURL({
     id: P,
     splash: M,
     size: 240 * (0, d.getDevicePixelRatio)()
@@ -59,7 +59,7 @@ t.default = e => {
       case T.ThemeTypes.LIGHT:
         return R
     }
-  }(O), Y = null !== (t = _.default.getGuildIconURL({
+  }(O), Y = null !== (t = h.default.getGuildIconURL({
     id: P,
     icon: y,
     size: 32
@@ -107,7 +107,7 @@ t.default = e => {
         className: A.spinner
       }) : null, (0, a.jsxs)(r.Clickable, {
         className: i()(A.container, {
-          [A.hover]: G,
+          [A.hover]: j,
           [A.submitting]: k
         }),
         onClick: W,
@@ -140,8 +140,8 @@ t.default = e => {
           }),
           children: [(0, a.jsxs)("div", {
             className: A.header,
-            children: [(0, a.jsx)(h.default, {
-              mask: h.default.Masks.SQUIRCLE,
+            children: [(0, a.jsx)(_.default, {
+              mask: _.default.Masks.SQUIRCLE,
               width: 32,
               height: 32,
               children: (0, a.jsx)("img", {
@@ -167,11 +167,11 @@ t.default = e => {
             className: A.description,
             variant: "text-sm/normal",
             children: x
-          }), K && null != j && null != L && (0, a.jsx)(I.DiscoveryTags, {
+          }), K && null != G && null != L && (0, a.jsx)(I.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: I.DiscoveryTagStyle.ALT,
             onTagClick: e => L(e, l.id),
-            tags: j,
+            tags: G,
             section: C.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
             className: A.memberInfo,

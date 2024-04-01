@@ -1,62 +1,62 @@
 "use strict";
-t.r(s), t("47120");
-var a = t("735250"),
-  l = t("470079"),
-  n = t("994640"),
-  i = t("247007"),
-  o = t("999464"),
-  r = t("503406"),
-  d = t("463115"),
-  c = t("888592");
-s.default = e => {
+s.r(t), s("47120");
+var a = s("735250"),
+  n = s("470079"),
+  l = s("994640"),
+  i = s("247007"),
+  r = s("999464"),
+  o = s("503406"),
+  c = s("463115"),
+  d = s("888592");
+t.default = e => {
   let {
-    onClose: s,
-    invite: t,
+    onClose: t,
+    invite: s,
     forceGuildScrollHeight: u = !0,
-    isNUXFlow: N
-  } = e, [m, _] = l.useState([c.HubEmailConnectionSteps.VERIFY_EMAIL]), [E, I] = l.useState(""), [C, x] = l.useState(""), [f, h] = l.useState(void 0), [T, g] = l.useState([]), S = e => {
-    _(m.concat(e).slice(-4))
+    isNUXFlow: _
+  } = e, [N, E] = n.useState([d.HubEmailConnectionSteps.VERIFY_EMAIL]), [m, I] = n.useState(""), [f, C] = n.useState(""), [T, S] = n.useState(void 0), [g, h] = n.useState([]), p = e => {
+    E(N.concat(e).slice(-4))
   };
-  switch (m[m.length - 1]) {
-    case c.HubEmailConnectionSteps.VERIFY_EMAIL:
-      return (0, a.jsx)(n.default, {
-        setGuildsInfo: g,
-        setStep: S,
-        email: E,
+  switch (N[N.length - 1]) {
+    case d.HubEmailConnectionSteps.VERIFY_EMAIL:
+      return (0, a.jsx)(l.default, {
+        setGuildsInfo: h,
+        setStep: p,
+        email: m,
         setEmail: I,
-        setGuildId: h,
-        invite: t,
-        onClose: s,
-        isNUXFlow: N
+        setGuildId: S,
+        invite: s,
+        onClose: t,
+        isNUXFlow: _
       });
-    case c.HubEmailConnectionSteps.SELECT_SCHOOL:
+    case d.HubEmailConnectionSteps.SELECT_SCHOOL:
       return (0, a.jsx)(i.default, {
-        guildsInfo: T,
-        setStep: S,
-        email: E,
-        setGuildId: h,
+        guildsInfo: g,
+        setStep: p,
+        email: m,
+        setGuildId: S,
         forceGuildScrollHeight: u
       });
-    case c.HubEmailConnectionSteps.SUBMIT_SCHOOL:
-      return (0, a.jsx)(o.default, {
-        onBack: () => {
-          m.length > 1 && _(m.slice(0, -1).slice(-4))
-        },
-        setStep: S,
-        email: E,
-        school: C,
-        setSchool: x
-      });
-    case c.HubEmailConnectionSteps.VERIFY_PIN:
+    case d.HubEmailConnectionSteps.SUBMIT_SCHOOL:
       return (0, a.jsx)(r.default, {
-        email: E,
-        onClose: s,
-        guildId: f
+        onBack: () => {
+          N.length > 1 && E(N.slice(0, -1).slice(-4))
+        },
+        setStep: p,
+        email: m,
+        school: f,
+        setSchool: C
       });
-    case c.HubEmailConnectionSteps.EMAIL_WAITLIST:
-      return (0, a.jsx)(d.default, {
-        setStep: S,
-        school: C
+    case d.HubEmailConnectionSteps.VERIFY_PIN:
+      return (0, a.jsx)(o.default, {
+        email: m,
+        onClose: t,
+        guildId: T
+      });
+    case d.HubEmailConnectionSteps.EMAIL_WAITLIST:
+      return (0, a.jsx)(c.default, {
+        setStep: p,
+        school: f
       });
     default:
       return null

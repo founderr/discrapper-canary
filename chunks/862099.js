@@ -19,8 +19,8 @@ var a, s, l = n("735250"),
   c = n("662842"),
   f = n("703656"),
   E = n("922482"),
-  h = n("565799"),
-  _ = n("501655"),
+  _ = n("565799"),
+  h = n("501655"),
   C = n("192079"),
   S = n("427679"),
   m = n("448206"),
@@ -41,8 +41,8 @@ var a, s, l = n("735250"),
   x = n("504160"),
   b = n("151864"),
   U = n("835184"),
-  j = n("780294"),
-  G = n("725436"),
+  G = n("780294"),
+  j = n("725436"),
   w = n("497656"),
   k = n("79874"),
   F = n("554747"),
@@ -184,17 +184,17 @@ function X(e) {
   let {
     guildEvent: n,
     noticeType: a
-  } = e, s = (0, B.getLocationFromEvent)(n), r = null != s ? (0, G.guildEventDetailsParser)(s, !0) : null, d = (0, B.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
+  } = e, s = (0, B.getLocationFromEvent)(n), r = null != s ? (0, j.guildEventDetailsParser)(s, !0) : null, d = (0, B.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
     startTime: f,
     endTime: E
   } = (0, k.default)(n.id), {
-    startDateTimeString: h,
-    upcomingEvent: _,
+    startDateTimeString: _,
+    upcomingEvent: h,
     diffMinutes: C
-  } = (0, H.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), S = _ ? C > 0 ? K.default.Messages.STARTING_IN_MINUTES.format({
+  } = (0, H.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), S = h ? C > 0 ? K.default.Messages.STARTING_IN_MINUTES.format({
     minutes: C
   }) : K.default.Messages.STARTING_SOON : K.default.Messages.STARTING_ON_DATE.format({
-    date: h
+    date: _
   });
   return i.useEffect(() => {
     P.default.track(W.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -275,7 +275,7 @@ function J(e) {
     }),
     heading: K.default.Messages.HAPPENING_NOW,
     topic: t.name,
-    location: (0, G.guildEventDetailsParser)(n, !0),
+    location: (0, j.guildEventDetailsParser)(n, !0),
     locationIcon: (0, l.jsx)(O.default, {
       width: 16,
       height: 16,
@@ -326,7 +326,7 @@ function et(e) {
   let {
     stageInstance: t,
     channel: n
-  } = e, a = (0, r.useStateFromStoresArray)([h.default], () => [...new Set(h.default.getMutableParticipants(n.id, _.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [n.id]), s = (0, r.useStateFromStores)([h.default], () => h.default.getParticipantCount(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE), [n.id]), i = K.default.Messages.LISTENING_COUNT.format({
+  } = e, a = (0, r.useStateFromStoresArray)([_.default], () => [...new Set(_.default.getMutableParticipants(n.id, h.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [n.id]), s = (0, r.useStateFromStores)([_.default], () => _.default.getParticipantCount(n.id, h.StageChannelParticipantNamedIndex.AUDIENCE), [n.id]), i = K.default.Messages.LISTENING_COUNT.format({
     count: "".concat(s)
   });
   return (0, l.jsx)(q, {
@@ -400,7 +400,7 @@ function en(e) {
     showRedesignedLiveChannelNotice: n
   } = (0, d.useChannelNoticeRedesignExperiment)(!0), a = (0, w.useActiveEventOrStageInstanceChannel)(t.id), s = (0, F.useGuildActiveEvent)(t.id), i = (0, F.useGuildUpcomingEventsNotice)(t.id), {
     canSeeUpcomingEventsNotices: o
-  } = j.default.useExperiment({
+  } = G.default.useExperiment({
     guildId: t.id,
     location: "Guild Channel Notice"
   }, {
@@ -415,35 +415,35 @@ function en(e) {
     isEventNoticeHidden: b.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [u, s]), h = null, _ = null != u && null != a && !f;
+  }), [u, s]), _ = null, h = null != u && null != a && !f;
   if (n) return (0, l.jsx)(c.default, {
     guild: t
   });
-  null == s || E ? _ && (h = (0, l.jsx)(et, {
+  null == s || E ? h && (_ = (0, l.jsx)(et, {
     stageInstance: u,
     channel: a
-  })) : s.entity_type === Y.GuildScheduledEventEntityTypes.STAGE_INSTANCE && _ ? h = (0, l.jsx)(et, {
+  })) : s.entity_type === Y.GuildScheduledEventEntityTypes.STAGE_INSTANCE && h ? _ = (0, l.jsx)(et, {
     stageInstance: u,
     channel: a
-  }) : s.entity_type === Y.GuildScheduledEventEntityTypes.EXTERNAL ? h = (0, l.jsx)(J, {
+  }) : s.entity_type === Y.GuildScheduledEventEntityTypes.EXTERNAL ? _ = (0, l.jsx)(J, {
     guildEvent: s
-  }) : s.entity_type === Y.GuildScheduledEventEntityTypes.VOICE && null != a && (h = (0, l.jsx)(Q, {
+  }) : s.entity_type === Y.GuildScheduledEventEntityTypes.VOICE && null != a && (_ = (0, l.jsx)(Q, {
     guildEvent: s,
     channel: a
   }));
   let C = t.hasFeature(W.GuildFeatures.COMMUNITY) || t.hasFeature(W.GuildFeatures.HUB);
-  if (null == h && null != i && !C) {
+  if (null == _ && null != i && !C) {
     let {
       upcomingEvent: e,
       noticeType: n
     } = i;
-    j.default.trackExposure({
+    G.default.trackExposure({
       guildId: t.id,
       location: "Guild Live Channel Notice"
-    }), h = o ? (0, l.jsx)(X, {
+    }), _ = o ? (0, l.jsx)(X, {
       guildEvent: e,
       noticeType: n
     }) : null
   }
-  return h
+  return _
 })

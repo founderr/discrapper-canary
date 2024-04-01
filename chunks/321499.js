@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("285952"),
   E = s("626135"),
   T = s("358085"),
-  _ = s("998502"),
-  f = s("210887"),
-  m = s("996073"),
+  f = s("998502"),
+  m = s("210887"),
+  _ = s("996073"),
   g = s("526761"),
   h = s("981631"),
   N = s("65154"),
@@ -40,7 +40,7 @@ function x() {
   } = (0, r.useStateFromStoresObject)([c.default], () => ({
     experimentalEncoders: c.default.getExperimentalEncoders()
   }));
-  return "stable" !== _.default.releaseChannel && c.default.isExperimentalEncodersSupported() ? (0, a.jsx)(d.FormSwitch, {
+  return "stable" !== f.default.releaseChannel && c.default.isExperimentalEncodersSupported() ? (0, a.jsx)(d.FormSwitch, {
     className: i()(p.marginTop8, p.marginBottom20),
     value: e,
     onChange: e => u.default.setExperimentalEncoders(e),
@@ -50,7 +50,7 @@ function x() {
 }
 
 function R() {
-  let e = (0, r.useStateFromStores)([f.default], () => f.default.theme),
+  let e = (0, r.useStateFromStores)([m.default], () => m.default.theme),
     {
       openH264: t,
       hardwareH264: s,
@@ -62,8 +62,8 @@ function R() {
       supportsOpenH264: c.default.supports(N.Features.OPEN_H264),
       av1Enabled: c.default.getAv1Enabled()
     })),
-    _ = n.useRef(null);
-  return (0, m.default)(_, g.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
+    f = n.useRef(null);
+  return (0, _.default)(f, g.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.FormSection, {
       className: p.marginBottom20,
       title: I.default.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
@@ -94,7 +94,7 @@ function R() {
         style: {
           scrollMarginTop: "48px"
         },
-        ref: _
+        ref: f
       }), (0, a.jsx)(d.FormSwitch, {
         className: i()(p.marginTop8, p.marginBottom20),
         value: s,

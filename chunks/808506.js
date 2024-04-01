@@ -31,9 +31,9 @@ var s, a, o, l, u, d, _ = n("807864"),
   b = n("998502"),
   G = n("145597"),
   w = n("981631"),
-  k = n("987650");
+  B = n("987650");
 (o = s || (s = {})).ATTACHING = "ATTACHING", o.CONNECTING = "CONNECTING", o.CONNECTED = "CONNECTED", o.READY = "READY", o.CRASHED = "CRASHED", o.CONNECT_FAILED = "CONNECT_FAILED", o.HOOK_FAILED = "HOOK_FAILED";
-let B = {},
+let k = {},
   V = new Map,
   F = !1,
   x = new Set,
@@ -143,12 +143,12 @@ async function ea(e) {
     return
   }
   async function n(t) {
-    if (!(t in B)) {
-      Z.error("Unexpected. ".concat(t, " is not a tracked game?"), B, e);
+    if (!(t in k)) {
+      Z.error("Unexpected. ".concat(t, " is not a tracked game?"), k, e);
       return
     }
-    let n = B[t];
-    delete B[t];
+    let n = k[t];
+    delete k[t];
     try {
       await n.deconstructor()
     } catch (e) {
@@ -156,15 +156,15 @@ async function ea(e) {
     }
   }
   if (null == e || !H) {
-    for (let t of (Z.verbose("updateIntendedOverlayPIDs: Removing all.", B, e), Object.keys(B))) await n(Number(t));
+    for (let t of (Z.verbose("updateIntendedOverlayPIDs: Removing all.", k, e), Object.keys(k))) await n(Number(t));
     return
   }
   for (let n of null !== (t = e.added) && void 0 !== t ? t : []) {
     let t = p.default.getGameOverlayStatus(n);
-    if (Z.verbose("updateIntendedOverlayPIDs: newGame", n, t), null != t && t.enabled) switch (n.pid in B && Z.error("Unexpected. ".concat(n.pid, " is being added twice?"), B, e), t.overlayMethod) {
-      case k.OverlayMethod.OutOfProcess:
+    if (Z.verbose("updateIntendedOverlayPIDs: newGame", n, t), null != t && t.enabled) switch (n.pid in k && Z.error("Unexpected. ".concat(n.pid, " is being added twice?"), k, e), t.overlayMethod) {
+      case B.OverlayMethod.OutOfProcess:
         let i = await eE();
-        await i.trackGame(n.pid), B[n.pid] = {
+        await i.trackGame(n.pid), k[n.pid] = {
           method: t.overlayMethod,
           deconstructor: async () => {
             let e = await eE();
@@ -172,15 +172,15 @@ async function ea(e) {
           }
         };
         break;
-      case k.OverlayMethod.Hook:
-        !V.has(n.pid) && await er(n.pid), B[n.pid] = {
+      case B.OverlayMethod.Hook:
+        !V.has(n.pid) && await er(n.pid), k[n.pid] = {
           method: t.overlayMethod,
           deconstructor: async () => {
             await es(n.pid)
           }
         };
         break;
-      case k.OverlayMethod.Disabled:
+      case B.OverlayMethod.Disabled:
         Z.verbose("updateIntendedOverlayPIDs: disabled", n);
         break;
       default:
@@ -201,7 +201,7 @@ function el() {
 let eu = (() => {
   let e = null;
   async function t() {
-    if (!k.OVERLAY_SUPPORTED) throw Z.error("Attempted to load overlay on an unsupported platform."), Error("Overlay is not supported on this platform.");
+    if (!B.OVERLAY_SUPPORTED) throw Z.error("Attempted to load overlay on an unsupported platform."), Error("Overlay is not supported on this platform.");
     try {
       return await b.default.ensureModule("discord_overlay2"),
         function(e) {
@@ -237,7 +237,7 @@ function ec(e) {
 let eE = (() => {
   let e = null;
   async function t() {
-    if (!k.OVERLAY_SUPPORTED || !(0, G.supportsOutOfProcess)()) throw Z.error("Attempted to load out of process overlay on an unsupported platform."), Error("Out of Process Overlay is not supported on this platform.");
+    if (!B.OVERLAY_SUPPORTED || !(0, G.supportsOutOfProcess)()) throw Z.error("Attempted to load out of process overlay on an unsupported platform."), Error("Out of Process Overlay is not supported on this platform.");
     try {
       var e, t;
       let {
@@ -258,7 +258,7 @@ function eI() {
   })
 }
 let eT = et("setOverlayEnabled", async (e, t) => {
-  if (!k.OVERLAY_SUPPORTED || H === e && Y === t) return;
+  if (!B.OVERLAY_SUPPORTED || H === e && Y === t) return;
   H = e, Y = t, R.OverlayStoredSettings.update({
     enabled: e,
     legacyEnabled: t
@@ -273,7 +273,7 @@ let eT = et("setOverlayEnabled", async (e, t) => {
 function ef(e) {
   if (0 === e) {
     var t, n;
-    if ((null !== (n = null === (t = B[null != W ? W : 0]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : k.OverlayMethod.Disabled) === k.OverlayMethod.OutOfProcess) return
+    if ((null !== (n = null === (t = k[null != W ? W : 0]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : B.OverlayMethod.Disabled) === B.OverlayMethod.OutOfProcess) return
   }
   S.default.setFocusedPID(0 === e ? null : e)
 }
@@ -324,7 +324,7 @@ function eN(e) {
   if (e) {
     let t = p.default.getVisibleGame(),
       n = null == t ? null : p.default.getGameOverlayStatus(t);
-    (null == n ? void 0 : n.overlayMethod) === k.OverlayMethod.OutOfProcess ? em(e) : setTimeout(() => em(e), 200)
+    (null == n ? void 0 : n.overlayMethod) === B.OverlayMethod.OutOfProcess ? em(e) : setTimeout(() => em(e), 200)
   } else em(e)
 }
 let eO = null;
@@ -404,13 +404,13 @@ function eD(e) {
 }
 class ev extends(a = c.default.Store) {
   initialize() {
-    !(!k.OVERLAY_SUPPORTED || __OVERLAY__) && (this.waitFor(p.default, L.default), N.setReceiveCommandHandler(eD, eL), L.default.addChangeListener(eA), eT(R.OverlayStoredSettings.enabled, R.OverlayStoredSettings.legacyEnabled), E.default.addInterceptor(eC))
+    !(!B.OVERLAY_SUPPORTED || __OVERLAY__) && (this.waitFor(p.default, L.default), N.setReceiveCommandHandler(eD, eL), L.default.addChangeListener(eA), eT(R.OverlayStoredSettings.enabled, R.OverlayStoredSettings.legacyEnabled), E.default.addInterceptor(eC))
   }
   isInputLocked(e) {
     return !X.has(e)
   }
   isSupported() {
-    return k.OVERLAY_SUPPORTED
+    return B.OVERLAY_SUPPORTED
   }
   get enabled() {
     return H
@@ -514,7 +514,7 @@ let eM = new ev(E.default, __OVERLAY__ ? {
     } = e;
     z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams;
-    n.append("build_id", "678ad4ca95e3d2bd1b49dbf6ac433b5fed8f3b1d"), n.append("rpc", String(t)), n.append("rpc_auth_token", z), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString())
+    n.append("build_id", "8f01afa9c8c02d2d0463686ee0e5011641bc7fbd"), n.append("rpc", String(t)), n.append("rpc_auth_token", z), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString())
   },
   OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
     let {
@@ -568,7 +568,7 @@ let eM = new ev(E.default, __OVERLAY__ ? {
   },
   OVERLAY_SET_ASSOCIATED_GAME: function(e) {
     var t, n;
-    if ((null !== (n = null === (t = B[e.previousAssociatedGamePID]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : k.OverlayMethod.Disabled) !== k.OverlayMethod.OutOfProcess) return;
+    if ((null !== (n = null === (t = k[e.previousAssociatedGamePID]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : B.OverlayMethod.Disabled) !== B.OverlayMethod.OutOfProcess) return;
     let i = V.get(e.previousAssociatedGamePID);
     null != i && (V.delete(e.previousAssociatedGamePID), V.set(e.associatedGamePID, i)), X.delete(e.previousAssociatedGamePID), K = e.associatedGamePID
   },

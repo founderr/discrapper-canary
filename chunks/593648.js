@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("292556"),
   E = s("92114"),
   T = s("419363"),
-  _ = s("818083"),
-  f = s("688465"),
-  m = s("487419"),
+  f = s("818083"),
+  m = s("688465"),
+  _ = s("487419"),
   g = s("378364"),
   h = s("197344"),
   N = s("734934"),
@@ -89,7 +89,7 @@ function Y(e) {
   })
 }
 
-function K(e) {
+function W(e) {
   let {
     disabledSounds: t,
     disableAllSounds: s,
@@ -122,7 +122,7 @@ function K(e) {
     var e;
     null === (e = d.current) || void 0 === e || e.stop()
   });
-  let _ = [{
+  let f = [{
     label: k.default.Messages.SOUND_MESSAGE,
     sound: "message1",
     focusModeDisabled: c
@@ -214,7 +214,7 @@ function K(e) {
       value: s,
       onChange: S.default.toggleDisableAllSounds,
       children: k.default.Messages.SOUND_DISABLE_ALL
-    }), _.map(e => {
+    }), f.map(e => {
       let {
         label: n,
         sound: l,
@@ -233,8 +233,8 @@ function K(e) {
   })
 }
 
-function W() {
-  let e = (0, d.useStateFromStores)([m.default], () => m.default.getGuildAlertSettings()),
+function K() {
+  let e = (0, d.useStateFromStores)([_.default], () => _.default.getGuildAlertSettings()),
     [t, s] = n.useState(null),
     l = j.default.keys(e).map(t => {
       let s = e[t];
@@ -247,7 +247,7 @@ function W() {
     children: [(0, a.jsxs)(u.Heading, {
       variant: "heading-lg/semibold",
       className: i()(H.titleWithBeta, w.marginBottom20),
-      children: [k.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(f.default, {})]
+      children: [k.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(m.default, {})]
     }), (0, a.jsx)(u.FormText, {
       type: u.FormTextTypes.DESCRIPTION,
       className: w.marginBottom20,
@@ -331,7 +331,7 @@ class z extends n.PureComponent {
         disabled: c,
         tooltipNote: c ? k.default.Messages.QUIET_MODE_DISABLED_BY : void 0,
         children: k.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE
-      }), (0, a.jsx)(X, {}), (0, a.jsx)(u.FormSwitch, {
+      }), (0, a.jsx)(Z, {}), (0, a.jsx)(u.FormSwitch, {
         className: S ? w.marginBottom20 : w.marginBottom40,
         value: !s,
         note: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_BODY,
@@ -358,8 +358,8 @@ class z extends n.PureComponent {
         })]
       }), this.renderTTS(), (0, a.jsx)(u.FormDivider, {
         className: i()(w.marginTop40, w.marginBottom40)
-      }), (0, a.jsx)(W, {}), (0, a.jsx)(u.FormItem, {
-        children: (0, a.jsx)(K, {
+      }), (0, a.jsx)(K, {}), (0, a.jsx)(u.FormItem, {
+        children: (0, a.jsx)(W, {
           disabledSounds: l,
           disableAllSounds: r,
           notifyMessagesInSelectedChannel: d
@@ -399,7 +399,7 @@ class z extends n.PureComponent {
     })
   }
 }
-let Q = (0, _.createExperiment)({
+let Q = (0, f.createExperiment)({
   kind: "user",
   id: "2024-01_mention_on_all_messages",
   label: "Mention on all messages",
@@ -415,7 +415,7 @@ let Q = (0, _.createExperiment)({
   }]
 });
 
-function X() {
+function Z() {
   let e = Q.useExperiment({
       location: "settings"
     }, {
@@ -457,7 +457,7 @@ function q() {
       value: s,
       disabled: l || !s,
       note: k.default.Messages.NOTIF_MIGRATION_SETTINGS_SUBTITLE,
-      onChange: () => Z(i),
+      onChange: () => X(i),
       children: k.default.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
     }) : t ? (0, a.jsx)(u.FormSwitch, {
       className: w.marginBottom40,
@@ -472,7 +472,7 @@ function q() {
     }) : null, null]
   }) : null
 }
-async function Z(e) {
+async function X(e) {
   e(!0);
   let t = await (0, I.listSnapshots)();
   0 === t.length ? await (0, C.revertToOldSystem)() : c.default.show({

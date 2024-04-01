@@ -16,7 +16,7 @@ var n = s("481060"),
   E = s("474936"),
   T = s("981631"),
   I = s("689938"),
-  S = s("116511");
+  f = s("116511");
 let R = e => {
     let {
       text: t,
@@ -29,7 +29,7 @@ let R = e => {
       children: [t, " ", s]
     })
   },
-  f = e => {
+  S = e => {
     let {
       text: t,
       variant: s
@@ -46,14 +46,14 @@ let R = e => {
     } = e;
     return t ? (0, r.jsxs)(r.Fragment, {
       children: [(0, r.jsx)(o.default, {
-        className: S.checkmarkIcon,
+        className: f.checkmarkIcon,
         "aria-hidden": !0
       }), (0, r.jsx)(n.HiddenVisually, {
         children: I.default.Messages.INCLUDED
       })]
     }) : (0, r.jsxs)(r.Fragment, {
       children: [(0, r.jsx)(u.default, {
-        className: S.closeIcon,
+        className: f.closeIcon,
         "aria-hidden": !0
       }), (0, r.jsx)(n.HiddenVisually, {
         children: I.default.Messages.NOT_INCLUDED
@@ -72,13 +72,13 @@ let A = (e, t, s, a) => {
           text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE
         }),
         column1: (0, r.jsx)(r.Fragment, {
-          children: (0, r.jsx)(f, {
+          children: (0, r.jsx)(S, {
             variant: i ? "heading-md/semibold" : void 0,
             text: d.default.formatPriceString(e, E.SubscriptionIntervalTypes.MONTH)
           })
         }),
         column2: (0, r.jsx)(r.Fragment, {
-          children: (0, r.jsx)(f, {
+          children: (0, r.jsx)(S, {
             text: s ? a : d.default.formatPriceString(t, E.SubscriptionIntervalTypes.MONTH)
           })
         }),
@@ -132,10 +132,10 @@ let A = (e, t, s, a) => {
         label: (0, r.jsx)(R, {
           text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
         }),
-        column1: (0, r.jsx)(f, {
+        column1: (0, r.jsx)(S, {
           text: (0, d.getMaxFileSizeForPremiumType)(E.PremiumTypes.TIER_0)
         }),
-        column2: (0, r.jsx)(f, {
+        column2: (0, r.jsx)(S, {
           text: (0, d.getMaxFileSizeForPremiumType)(E.PremiumTypes.TIER_2)
         })
       },
@@ -146,7 +146,7 @@ let A = (e, t, s, a) => {
         column1: (0, r.jsx)(m, {
           includes: !1
         }),
-        column2: (0, r.jsx)(f, {
+        column2: (0, r.jsx)(S, {
           text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_STREAMING_DETAILS
         })
       },
@@ -291,7 +291,7 @@ let A = (e, t, s, a) => {
       },
       18: {
         label: (0, r.jsx)(n.Heading, {
-          className: S.__invalid_textColor,
+          className: f.__invalid_textColor,
           variant: "display-sm",
           children: "Make Discord Yours"
         }),
@@ -301,7 +301,7 @@ let A = (e, t, s, a) => {
       },
       19: {
         label: (0, r.jsx)(n.Heading, {
-          className: S.__invalid_textColor,
+          className: f.__invalid_textColor,
           variant: "display-sm",
           children: "Enjoy an Upgraded Discord"
         }),
@@ -311,7 +311,7 @@ let A = (e, t, s, a) => {
       },
       20: {
         label: (0, r.jsx)(n.Heading, {
-          className: S.__invalid_textColor,
+          className: f.__invalid_textColor,
           variant: "display-sm",
           children: "Show Up the Way You Want"
         }),

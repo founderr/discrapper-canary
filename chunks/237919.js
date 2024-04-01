@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("819640"),
   f = n("490983"),
   E = n("799777"),
-  h = n("6048"),
-  _ = n("5967"),
+  _ = n("6048"),
+  h = n("5967"),
   C = n("346329"),
   S = n("981631"),
   m = n("689938"),
@@ -66,7 +66,7 @@ class T extends s.Component {
         [I.libraryFilter]: !0,
         [I.focused]: t
       }),
-      children: (0, a.jsx)(h.default, {
+      children: (0, a.jsx)(_.default, {
         className: I.searchBar,
         ref: this.setRef,
         onChange: d.updateLibraryFilter,
@@ -101,8 +101,8 @@ class T extends s.Component {
         searchBarRef: l
       } = this;
       if (a || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
-      let i = null === (t = (0, _.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-      if (!(i !== l.inputRef.current && (0, _.isInputLikeElement)(i))) switch (e.which) {
+      let i = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+      if (!(i !== l.inputRef.current && (0, h.isInputLikeElement)(i))) switch (e.which) {
         case S.KeyboardKeys.ESCAPE:
           e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
           break;

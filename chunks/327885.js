@@ -17,9 +17,9 @@ var n = s("512722"),
   S = s("825209"),
   E = s("887278"),
   T = s("630699"),
-  _ = s("658785"),
-  f = s("556296"),
-  m = s("808506"),
+  f = s("658785"),
+  m = s("556296"),
+  _ = s("808506"),
   g = s("237997"),
   h = s("739563"),
   N = s("626135");
@@ -34,17 +34,17 @@ function x(e) {
   var t;
   let s = g.default.getNotificationPositionMode(),
     a = s !== p.OverlayNotificationPositions.DISABLED,
-    n = f.default.getOverlayKeybind(),
-    l = f.default.getOverlayChatKeybind();
+    n = m.default.getOverlayKeybind(),
+    l = m.default.getOverlayChatKeybind();
   return {
-    enabled: m.default.enabled,
+    enabled: _.default.enabled,
     notifications_enabled: a,
     notifications_position: a ? s : null,
     text_notifications_mode: g.default.getTextChatNotificationMode(),
     hotkey: null != n ? (0, I.toString)(n.shortcut) : null,
     text_activation_hotkey: null != l ? (0, I.toString)(l.shortcut) : null,
     text_opacity_slider: g.default.getTextWidgetOpacity(),
-    old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : m.default.enabled
+    old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : _.default.enabled
   }
 }
 
@@ -64,9 +64,9 @@ function M() {
   let {
     enabled: e,
     legacyEnabled: t
-  } = (0, o.useStateFromStoresObject)([m.default], () => ({
-    enabled: m.default.enabled,
-    legacyEnabled: m.default.legacyEnabled
+  } = (0, o.useStateFromStoresObject)([_.default], () => ({
+    enabled: _.default.enabled,
+    legacyEnabled: _.default.legacyEnabled
   })), {
     avatarSizeMode: s,
     displayNameMode: n,
@@ -81,9 +81,9 @@ function M() {
     notificationPositionMode: g.default.getNotificationPositionMode(),
     textChatNotificationMode: g.default.getTextChatNotificationMode(),
     shouldShowKeybindIndicators: g.default.showKeybindIndicators
-  })), D = (0, o.useStateFromStores)([f.default], () => f.default.getOverlayKeybind()), {
+  })), D = (0, o.useStateFromStores)([m.default], () => m.default.getOverlayKeybind()), {
     showKeybindIndicators: L
-  } = _.default.useExperiment({
+  } = f.default.useExperiment({
     location: "overlay_user_settings"
   }), P = (0, E.isHookModuleTooOld)();
 

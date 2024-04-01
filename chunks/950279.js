@@ -16,10 +16,10 @@ t.default = e => {
     handleUpdate: t,
     selectedGames: n,
     gameDetails: l
-  } = e, h = (0, r.useStateFromStores)([u.default], () => u.default.games), _ = s.useMemo(() => h.map(e => ({
+  } = e, _ = (0, r.useStateFromStores)([u.default], () => u.default.games), h = s.useMemo(() => _.map(e => ({
     value: e.id,
     label: e.name
-  })), [h]), C = e => {
+  })), [_]), C = e => {
     let a = new Set(n);
     a.delete(e), t({
       selectedGames: a
@@ -39,7 +39,7 @@ t.default = e => {
     }), (0, a.jsx)("div", {
       className: E.inputContainer,
       children: (0, a.jsx)(o.SearchableSelect, {
-        options: _,
+        options: h,
         value: "",
         placeholder: f.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
         onChange: e => {

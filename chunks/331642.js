@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("740727"),
   E = s("74538"),
   T = s("242291"),
-  _ = s("706667"),
-  f = s("792165"),
-  m = s("409673"),
+  f = s("706667"),
+  m = s("792165"),
+  _ = s("409673"),
   g = s("603074"),
   h = s("689938"),
   N = s("468101");
@@ -47,12 +47,12 @@ function I(e) {
           channel: null,
           onClose: t,
           onSelect: S,
-          gridNotice: c ? null : (0, a.jsx)(f.CustomCallSoundUpsell, {}),
+          gridNotice: c ? null : (0, a.jsx)(m.CustomCallSoundUpsell, {}),
           analyticsSource: "call sounds edit setting"
         })
       })
     },
-    children: e => (0, a.jsx)(m.SecondaryActionButton, {
+    children: e => (0, a.jsx)(_.SecondaryActionButton, {
       ...e,
       onClick: () => {
         i(!s)
@@ -70,11 +70,11 @@ function p(e) {
     sound: t
   } = e, {
     previewSound: s
-  } = (0, _.default)(t, null), n = 0 === (0, T.getAmplitudinalSoundboardVolume)() ? h.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : h.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
+  } = (0, f.default)(t, null), n = 0 === (0, T.getAmplitudinalSoundboardVolume)() ? h.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : h.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
     emojiName: t.emojiName,
     soundName: t.name
   });
-  return (0, a.jsx)(m.SecondaryActionButton, {
+  return (0, a.jsx)(_.SecondaryActionButton, {
     onClick: s,
     text: n,
     children: (0, a.jsx)(c.default, {
@@ -119,7 +119,7 @@ function C(e) {
       className: N.container,
       children: [(0, a.jsx)(I, {
         onSelect: n
-      }), l && !s && (0, a.jsx)(m.SecondaryActionButton, {
+      }), l && !s && (0, a.jsx)(_.SecondaryActionButton, {
         onClick: () => n(null),
         text: h.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
         children: (0, a.jsx)(S.default, {

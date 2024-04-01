@@ -17,13 +17,13 @@ var n = s("481060"),
   S = s("97926"),
   E = s("541540"),
   T = s("206339"),
-  _ = s("981631"),
-  f = s("46140"),
-  m = s("709510");
+  f = s("981631"),
+  m = s("46140"),
+  _ = s("709510");
 
 function g() {
   let e = (0, c.useIsEligibleForQuests)({
-      location: f.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
+      location: m.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
     }),
     {
       enabled: t
@@ -35,26 +35,26 @@ function g() {
   return (0, r.useBlockedPaymentsConfig)() ? (0, a.jsx)(o.BlockedPaymentsContentSettings, {}) : (0, a.jsxs)(a.Fragment, {
     children: [t && (0, a.jsx)(u.default, {
       location: i.default.USER_SETTINGS_GIFT_INVENTORY,
-      className: m.giftNitro,
-      imageClassName: m.giftNitroImage,
+      className: _.giftNitro,
+      imageClassName: _.giftNitroImage,
       textContainerOverrideStyles: {
         padding: "32px",
         width: "360px"
       },
       analyticsLocation: {
-        page: _.AnalyticsPages.GIFTING_SETTINGS,
-        section: _.AnalyticsSections.GIFT_BANNER
+        page: f.AnalyticsPages.GIFTING_SETTINGS,
+        section: f.AnalyticsSections.GIFT_BANNER
       }
     }), (0, a.jsx)(l.default, {
-      section: _.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
+      section: f.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
       children: (0, a.jsx)(E.default, {})
     }), e && (0, a.jsx)(l.default, {
-      section: _.AnalyticsSections.QUESTS,
+      section: f.AnalyticsSections.QUESTS,
       children: (0, a.jsx)(S.default, {})
     }), (0, a.jsx)(n.FormDivider, {
-      className: m.divider
+      className: _.divider
     }), (0, a.jsx)(l.default, {
-      section: _.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
+      section: f.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
       children: (0, a.jsx)(T.default, {})
     })]
   })

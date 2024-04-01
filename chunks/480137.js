@@ -10,7 +10,7 @@ s.r(t), s.d(t, {
     return l
   },
   filterByTargetId: function() {
-    return r
+    return o
   },
   filterByUserId: function() {
     return I
@@ -131,7 +131,7 @@ function I(e, t) {
   }), u(t, e)
 }
 
-function r(e, t) {
+function o(e, t) {
   if (!T() && null != t) return _.default.dispatch({
     type: "AUDIT_LOG_FILTER_BY_TARGET",
     targetId: e

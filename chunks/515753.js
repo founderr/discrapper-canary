@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return W
   },
   LinkButton: function() {
-    return z
+    return Z
   }
 }), n("47120");
 var l = n("735250"),
@@ -18,14 +18,14 @@ var l = n("735250"),
   c = n("873546"),
   f = n("442837"),
   h = n("481060"),
-  C = n("493683"),
-  p = n("239091"),
+  p = n("493683"),
+  C = n("239091"),
   m = n("420660"),
   g = n("201895"),
   E = n("43267"),
-  S = n("933557"),
-  _ = n("853856"),
-  I = n("93687"),
+  _ = n("933557"),
+  I = n("853856"),
+  S = n("93687"),
   N = n("276423"),
   T = n("878857"),
   A = n("204197"),
@@ -34,8 +34,8 @@ var l = n("735250"),
   x = n("306680"),
   R = n("111583"),
   O = n("9156"),
-  y = n("594174"),
-  M = n("467679"),
+  M = n("594174"),
+  y = n("467679"),
   D = n("514342"),
   b = n("28718"),
   j = n("733880"),
@@ -71,10 +71,10 @@ let Y = w.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
       className: k.closeIcon
     })
   }),
-  Z = () => (0, l.jsx)(U.default, {
+  z = () => (0, l.jsx)(U.default, {
     className: k.favoriteIcon
   });
-class z extends a.Component {
+class Z extends a.Component {
   render() {
     let {
       route: e,
@@ -86,8 +86,8 @@ class z extends a.Component {
       children: o,
       locationState: d,
       onClick: f,
-      className: C,
-      role: p,
+      className: p,
+      role: C,
       "aria-posinset": m,
       "aria-setsize": g,
       ...E
@@ -95,9 +95,9 @@ class z extends a.Component {
     return (0, l.jsx)(j.default, {
       className: i()(k.channel, {
         [k.fullWidth]: c.isMobile
-      }, C),
+      }, p),
       onClick: f,
-      role: p,
+      role: C,
       focusProps: {
         within: !0,
         ...K
@@ -138,14 +138,14 @@ function X(e) {
     isGDMFacepileEnabled: s,
     selected: r = !1,
     user: c,
-    activities: I,
+    activities: S,
     applicationStream: L,
     isTyping: v,
     status: R,
-    isMobile: y,
+    isMobile: M,
     "aria-posinset": G,
     "aria-setsize": U
-  } = e, [P, w] = a.useState(!1), z = a.useRef(null), X = a.useRef(null), {
+  } = e, [P, w] = a.useState(!1), Z = a.useRef(null), X = a.useRef(null), {
     avatarSrc: Q,
     avatarDecorationSrc: q,
     eventHandlers: J
@@ -153,24 +153,24 @@ function X(e) {
     user: c,
     size: h.AvatarSizes.SIZE_32,
     animateOnHover: !(r || P)
-  }), $ = (0, f.useStateFromStores)([O.default], () => O.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, S.default)(t), en = (0, f.useStateFromStores)([_.default], () => _.default.isFavorite(t.id)), el = () => {
+  }), $ = (0, f.useStateFromStores)([O.default], () => O.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, _.default)(t), en = (0, f.useStateFromStores)([I.default], () => I.default.isFavorite(t.id)), el = () => {
     w(!0)
   }, ea = () => {
     w(!1)
   }, es = function(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    null != e && (e.preventDefault(), e.stopPropagation()), C.default.closePrivateChannel(t.id, r, n)
+    null != e && (e.preventDefault(), e.stopPropagation()), p.default.closePrivateChannel(t.id, r, n)
   }, ei = () => {
-    C.default.preload(V.ME, t.id)
+    p.default.preload(V.ME, t.id)
   }, er = e => {
     e.stopPropagation()
   }, eo = e => {
     if (e.target === e.currentTarget) {
       var t;
-      null === (t = z.current) || void 0 === t || t.click()
+      null === (t = Z.current) || void 0 === t || t.click()
     }
   }, eu = e => {
-    t.isMultiUserDM() ? (0, p.openContextMenuLazy)(e, async () => {
+    t.isMultiUserDM() ? (0, C.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("79695"), n.e("25421")]).then(n.bind(n, "354741"));
@@ -181,7 +181,7 @@ function X(e) {
       })
     }, {
       noBlurEvent: !0
-    }) : (0, p.openContextMenuLazy)(e, async () => {
+    }) : (0, C.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("56826")]).then(n.bind(n, "131404"));
@@ -224,9 +224,9 @@ function X(e) {
       children: H.default.Messages.MEMBERS_HEADER.format({
         members: t.recipients.length + 1
       })
-    }) : null != I ? (0, l.jsx)(F.default, {
+    }) : null != S ? (0, l.jsx)(F.default, {
       ...e,
-      activities: I,
+      activities: S,
       applicationStream: L,
       animate: P,
       hideTooltip: !0,
@@ -250,19 +250,19 @@ function X(e) {
     });
     o()(null != c, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
     let e = null;
-    return !c.isSystemUser() && (e = (0, m.default)(I) ? V.StatusTypes.STREAMING : R), (0, l.jsx)(Y, {
+    return !c.isSystemUser() && (e = (0, m.default)(S) ? V.StatusTypes.STREAMING : R), (0, l.jsx)(Y, {
       ...J,
       size: h.AvatarSizes.SIZE_32,
       src: Q,
       avatarDecoration: q,
       status: e,
-      isMobile: y,
+      isMobile: M,
       isTyping: v,
       className: k.__invalid_avatar,
       "aria-label": c.username,
       statusTooltip: !0
     })
-  }, eh = t.isMultiUserDM(), eC = t.isSystemDM(), ep = (0, T.systemDMRedesignEnabled)();
+  }, eh = t.isMultiUserDM(), ep = t.isSystemDM(), eC = (0, T.systemDMRedesignEnabled)();
   return (0, l.jsx)(d.ListNavigatorItem, {
     id: t.id,
     children: e => {
@@ -275,7 +275,7 @@ function X(e) {
         role: n,
         focusProps: {
           ...K,
-          focusTarget: z,
+          focusTarget: Z,
           ringTarget: X
         },
         ref: X,
@@ -287,7 +287,7 @@ function X(e) {
         "aria-posinset": G,
         children: (0, l.jsxs)(h.Interactive, {
           className: i()(k.interactive, {
-            [k.interactiveSystemDM]: ep && eC,
+            [k.interactiveSystemDM]: eC && ep,
             [k.interactiveSelected]: r
           }),
           as: "div",
@@ -295,7 +295,7 @@ function X(e) {
           muted: $,
           selected: r,
           children: [(0, l.jsx)(u.Link, {
-            innerRef: z,
+            innerRef: Z,
             to: V.Routes.CHANNEL(V.ME, t.id),
             className: k.link,
             "aria-label": (0, g.default)({
@@ -312,13 +312,13 @@ function X(e) {
               name: (0, l.jsx)(D.default, {
                 children: et
               }),
-              decorators: t.isSystemDM() ? (0, l.jsx)(M.default, {
+              decorators: t.isSystemDM() ? (0, l.jsx)(y.default, {
                 className: k.decorator,
-                type: M.default.Types.SYSTEM_DM,
+                type: y.default.Types.SYSTEM_DM,
                 verified: !0
               }) : null
             })
-          }), en ? (0, l.jsx)(Z, {}) : null, !eC && (0, l.jsx)(W, {
+          }), en ? (0, l.jsx)(z, {}) : null, !ep && (0, l.jsx)(W, {
             "aria-label": eh ? H.default.Messages.LEAVE_GROUP_DM : H.default.Messages.CLOSE_DM,
             onClick: eh ? ed : es,
             onMouseDown: er
@@ -333,11 +333,11 @@ t.default = e => {
     channel: t,
     selected: n,
     ...a
-  } = e, s = (0, f.useStateFromStores)([y.default], () => y.default.getUser(t.getRecipientId())), {
+  } = e, s = (0, f.useStateFromStores)([M.default], () => M.default.getUser(t.getRecipientId())), {
     isStatusIndicatorEnabled: i,
     isTypingIndicatorEnabled: r,
     isFacepileEnabled: o
-  } = I.default.useExperiment({
+  } = S.default.useExperiment({
     location: "private_channel"
   }, {
     autoTrackExposure: !0
@@ -355,10 +355,10 @@ t.default = e => {
       applicationStream: null != u ? L.default.getAnyStreamForUser(u) : null,
       isMobile: null != u && v.default.isMobileOnline(u)
     }
-  }, [u, t, i]), c = (0, f.useStateFromStores)([y.default, R.default], () => {
+  }, [u, t, i]), c = (0, f.useStateFromStores)([M.default, R.default], () => {
     if (t.isMultiUserDM()) return !!r && P.default.keys(R.default.getTypingUsers(t.id)).some(e => {
       var t;
-      return e !== (null === (t = y.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
+      return e !== (null === (t = M.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });
     if (null != s) return R.default.isTyping(t.id, t.getRecipientId());
     return !1

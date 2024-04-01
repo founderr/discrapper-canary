@@ -29,13 +29,13 @@ function u(e) {
   let {
     children: t,
     sentrySource: n
-  } = e, [u, d] = a.useState(!1), [c, f] = a.useState(new Set), [E, _] = a.useState(!1), T = a.useRef(!1);
+  } = e, [u, d] = a.useState(!1), [c, E] = a.useState(new Set), [f, _] = a.useState(!1), T = a.useRef(!1);
   a.useEffect(() => {
     let e = new Set;
     for (let t of c) !o(t) && e.add(t);
-    e.size !== c.size && f(e)
+    e.size !== c.size && E(e)
   }, [c]);
-  let m = a.useCallback((e, t, s) => {
+  let I = a.useCallback((e, t, s) => {
       var a, r, o;
       i.default.captureException(Error("".concat(t, ": ").concat((a = e, (0, l.isElement)(a, HTMLImageElement) ? a.getAttribute("src") : (0, l.isElement)(a, HTMLVideoElement) ? null !== (o = null === (r = a.querySelectorAll("source")[0]) || void 0 === r ? void 0 : r.getAttribute("src")) && void 0 !== o ? o : "video" : a.tagName), ", ").concat(s)), {
         tags: {
@@ -43,39 +43,39 @@ function u(e) {
         }
       }), d(!0)
     }, [n]),
-    I = a.useCallback(e => {
-      f(t => {
+    m = a.useCallback(e => {
+      E(t => {
         let n = new Set(t);
         return n.delete(e), n
       })
     }, []),
-    p = a.useCallback((e, t) => {
+    N = a.useCallback((e, t) => {
       var n;
       if (_(!0), o(e)) return;
-      f(t => {
+      E(t => {
         let n = new Set(t);
         return n.add(e), n
       });
       let s = (n = e, (0, l.isElement)(n, HTMLImageElement) ? "load" : (0, l.isElement)(n, HTMLVideoElement) ? "canplaythrough" : "load");
       e.addEventListener(s, function t() {
-        I(e), e.removeEventListener(s, t)
+        m(e), e.removeEventListener(s, t)
       });
       e.addEventListener("error", function n() {
-        I(e), m(e, "Error loading asset", t), e.removeEventListener("error", n)
+        m(e), I(e, "Error loading asset", t), e.removeEventListener("error", n)
       })
-    }, [m, I]),
-    h = a.useMemo(() => c.size > 0 || !E, [E, c]);
+    }, [I, m]),
+    p = a.useMemo(() => c.size > 0 || !f, [f, c]);
   a.useEffect(() => {
-    !h && (T.current = !0)
-  }, [h]);
-  let N = a.useMemo(() => ({
-    registerAsset: p,
-    unregisterAsset: I,
+    !p && (T.current = !0)
+  }, [p]);
+  let S = a.useMemo(() => ({
+    registerAsset: N,
+    unregisterAsset: m,
     hasError: u,
-    isLoading: h && !T.current
-  }), [p, I, u, h]);
+    isLoading: p && !T.current
+  }), [N, m, u, p]);
   return (0, s.jsx)(r.Provider, {
-    value: N,
+    value: S,
     children: t
   })
 }

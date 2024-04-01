@@ -9,22 +9,22 @@ var a = s("735250"),
   o = s("481060"),
   d = s("410030"),
   c = s("63063"),
-  E = s("74538"),
-  f = s("937615"),
-  _ = s("230916"),
-  p = s("798769"),
-  m = s("474936"),
+  f = s("74538"),
+  E = s("937615"),
+  m = s("230916"),
+  _ = s("798769"),
+  p = s("474936"),
   I = s("981631"),
   N = s("689938"),
   S = s("248928"),
   P = s("982404"),
-  T = s("299156");
+  C = s("299156");
 t.default = function(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
     onClose: i,
-    onConfirm: C,
+    onConfirm: T,
     userDiscountOffer: R
   } = e, [A, M] = n.useState(!1), [h, L] = n.useState(!1), g = async e => {
     try {
@@ -33,14 +33,14 @@ t.default = function(e) {
         body: {
           user_discount_offer_id: e
         }
-      }), C()
+      }), T()
     } catch (e) {
       M(!0)
     }
     L(!1)
-  }, y = (0, d.default)(), x = (0, u.isThemeDark)(y) ? P : T, D = (0, _.useChurnDiscountedPrice)(t, m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, R), U = (0, E.getPrice)(m.SubscriptionPlans.PREMIUM_MONTH_TIER_2), O = (0, f.formatPrice)(U.amount, U.currency);
+  }, y = (0, d.default)(), x = (0, u.isThemeDark)(y) ? P : C, D = (0, m.useChurnDiscountedPrice)(t, p.SubscriptionPlans.PREMIUM_MONTH_TIER_2, R), U = (0, f.getPrice)(p.SubscriptionPlans.PREMIUM_MONTH_TIER_2), O = (0, E.formatPrice)(U.amount, U.currency);
   return null == R ? null : (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(p.default, {
+    children: [(0, a.jsx)(_.default, {
       premiumType: s,
       onClose: i
     }), (0, a.jsx)(o.ModalContent, {
@@ -73,7 +73,7 @@ t.default = function(e) {
             className: S.confirmDiscountLegaleseText,
             children: N.default.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
               discountedPrice: D,
-              billingPeriod: (0, E.getDiscountIntervalString)(R.discount.user_usage_limit_interval),
+              billingPeriod: (0, f.getDiscountIntervalString)(R.discount.user_usage_limit_interval),
               numMonths: R.discount.user_usage_limit,
               fullPrice: O,
               helpdeskArticle: c.default.getArticleURL(I.HelpdeskArticles.PAID_TERMS)

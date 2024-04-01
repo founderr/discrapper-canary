@@ -11,10 +11,10 @@ function C() {
   u.clear()
 }
 
-function f(e) {
+function g(e) {
   u.delete(e.guild.id)
 }
-class g extends(i = d.default.Store) {
+class f extends(i = d.default.Store) {
   getChannelStatus(e) {
     var t;
     if (null != e && null != e.guild_id) {
@@ -22,14 +22,14 @@ class g extends(i = d.default.Store) {
     }
   }
 }
-a = "ChannelStatusStore", (l = "displayName") in(s = g) ? Object.defineProperty(s, l, {
+a = "ChannelStatusStore", (l = "displayName") in(s = f) ? Object.defineProperty(s, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = a, t.default = new g(o.default, {
-  GUILD_CREATE: f,
-  GUILD_DELETE: f,
+}) : s[l] = a, t.default = new f(o.default, {
+  GUILD_CREATE: g,
+  GUILD_DELETE: g,
   CONNECTION_RESUMED: C,
   CONNECTION_OPEN: C,
   VOICE_CHANNEL_STATUS_UPDATE: function(e) {

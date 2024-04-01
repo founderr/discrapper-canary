@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("37234"),
   f = n("960412"),
   E = n("151662"),
-  h = n("695346"),
-  _ = n("877453"),
+  _ = n("695346"),
+  h = n("877453"),
   C = n("26290"),
   S = n("981631"),
   m = n("930441"),
@@ -20,7 +20,7 @@ var a = n("735250"),
   p = n("663041"),
   T = n("794711");
 t.default = () => {
-  let e = h.FamilyCenterEnabled.useSetting(),
+  let e = _.FamilyCenterEnabled.useSetting(),
     {
       categories: t,
       initialized: n
@@ -38,7 +38,7 @@ t.default = () => {
       value: e,
       note: I.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
-      onChange: h.FamilyCenterEnabled.updateSetting,
+      onChange: _.FamilyCenterEnabled.updateSetting,
       children: I.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
     }), e ? (0, a.jsx)(d.Card, {
       className: p.enableCard,
@@ -64,7 +64,7 @@ t.default = () => {
             children: I.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
           })
         }), (0, a.jsx)(C.IconBadge, {
-          icon: _.default,
+          icon: h.default,
           className: p.arrow,
           disableColor: !0
         })]

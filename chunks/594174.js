@@ -208,14 +208,14 @@ function w(e) {
   })), !1
 }
 
-function k(e) {
+function B(e) {
   let {
     data: t
   } = e;
   (0, s.getMessagesFromGuildFeedFetch)(t).forEach(e => C(e, !0))
 }
 
-function B(e) {
+function k(e) {
   let {
     firstMessages: t,
     owners: n
@@ -693,9 +693,9 @@ class eg extends E.default {
       LOBBY_MEMBER_UPDATE: ec,
       GIFT_CODE_RESOLVE_SUCCESS: eE,
       GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: eI,
-      GUILD_FEED_FETCH_SUCCESS: k,
-      LOAD_THREADS_SUCCESS: B,
-      LOAD_ARCHIVED_THREADS_SUCCESS: B,
+      GUILD_FEED_FETCH_SUCCESS: B,
+      LOAD_THREADS_SUCCESS: k,
+      LOAD_ARCHIVED_THREADS_SUCCESS: k,
       LOAD_FORUM_POSTS: V,
       GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: x,
       LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: H,

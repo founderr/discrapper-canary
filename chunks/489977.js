@@ -24,15 +24,15 @@ class E extends r.default {
       file: l,
       uploadType: r,
       guildId: E,
-      isTryItOutFlow: h
-    } = e, _ = null != E ? o.setPendingAvatar : i.setPendingAvatar, C = null != E ? o.setPendingBanner : u.setPendingBanner, S = d.default.getCurrentUser();
+      isTryItOutFlow: _
+    } = e, h = null != E ? o.setPendingAvatar : i.setPendingAvatar, C = null != E ? o.setPendingBanner : u.setPendingBanner, S = d.default.getCurrentUser();
     if (r === f.UploadTypes.AVATAR) {
-      if (h) {
+      if (_) {
         (0, u.setTryItOutAvatar)(t);
         return
       }
       if (c.default.canUseAnimatedAvatar(S) || "image/gif" !== l.type) {
-        _(t);
+        h(t);
         return
       }(0, s.openModalLazy)(async () => {
         let {
@@ -40,12 +40,12 @@ class E extends r.default {
         } = await Promise.all([n.e("99387"), n.e("12736")]).then(n.bind(n, "844594"));
         return n => (0, a.jsx)(e, {
           avatarSrc: t,
-          onSubscribe: () => _(t),
+          onSubscribe: () => h(t),
           ...n
         })
       })
     } else if (r === f.UploadTypes.BANNER) {
-      if (h) {
+      if (_) {
         (0, u.setTryItOutBanner)(t);
         return
       }

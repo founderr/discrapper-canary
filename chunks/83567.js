@@ -11,10 +11,10 @@ var a = n("570140"),
   c = n("452426"),
   f = n("186901"),
   E = n("981631"),
-  h = n("231338");
-let _ = new Set(["1214629548377768066"]);
+  _ = n("231338");
+let h = new Set(["1214629548377768066"]);
 t.default = {
-  [h.RPCCommands.GET_PROVIDER_ACCESS_TOKEN]: {
+  [_.RPCCommands.GET_PROVIDER_ACCESS_TOKEN]: {
     scope: {
       [f.RPC_SCOPE_CONFIG.ANY]: [f.RPC_AUTHENTICATED_SCOPE]
     },
@@ -32,14 +32,14 @@ t.default = {
       let c = (0, d.validateApplication)(t.application),
         f = l.default.get(n);
       if (null == f) throw new u.default({
-        errorCode: h.RPCErrors.INVALID_PROVIDER
+        errorCode: _.RPCErrors.INVALID_PROVIDER
       }, 'Platform not found for provider "'.concat(n, '"'));
       if (n === E.PlatformTypes.AMAZON) {
-        if (!_.has(c)) throw new u.default({
-          errorCode: h.RPCErrors.UNAUTHORIZED_FOR_APPLICATION
+        if (!h.has(c)) throw new u.default({
+          errorCode: _.RPCErrors.UNAUTHORIZED_FOR_APPLICATION
         }, "Command not available for this application")
       } else throw new u.default({
-        errorCode: h.RPCErrors.UNAUTHORIZED_FOR_APPLICATION
+        errorCode: _.RPCErrors.UNAUTHORIZED_FOR_APPLICATION
       }, "Command not available for this application");
       return new Promise(async (e, t) => {
         let l = r.default.getAccount(null, n);
@@ -50,16 +50,16 @@ t.default = {
             let a = (null !== (n = t.accounts) && void 0 !== n ? n : []).find(e => e.type === f.type);
             null != a && (e({
               access_token: a.access_token
-            }), _())
+            }), h())
           }
 
           function c() {
             t(new u.default({
-              errorCode: h.RPCErrors.OAUTH2_ERROR
-            }, 'OAuth2 setup for "'.concat(n, '" failed'))), _()
+              errorCode: _.RPCErrors.OAUTH2_ERROR
+            }, 'OAuth2 setup for "'.concat(n, '" failed'))), h()
           }
 
-          function _() {
+          function h() {
             a.default.unsubscribe("USER_CONNECTIONS_UPDATE", d), o.ComponentDispatch.unsubscribe(E.ComponentActions.CONNECTIONS_CALLBACK_ERROR, c)
           }
           a.default.subscribe("USER_CONNECTIONS_UPDATE", d), o.ComponentDispatch.subscribe(E.ComponentActions.CONNECTIONS_CALLBACK_ERROR, c), (0, i.default)({
@@ -69,7 +69,7 @@ t.default = {
         } else try {
           let t = await s.default.refreshAccessToken(f.type, l.id);
           if (null == t) throw new u.default({
-            errorCode: h.RPCErrors.OAUTH2_ERROR
+            errorCode: _.RPCErrors.OAUTH2_ERROR
           }, "Refreshing access token did not return a new access token");
           e({
             access_token: t

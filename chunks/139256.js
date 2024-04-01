@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return H
   },
   PollAnswers: function() {
-    return j
+    return b
   },
   PollEmojiMediaView: function() {
-    return F
+    return k
   },
   PollMediaView: function() {
     return w
@@ -26,25 +26,25 @@ var s, a, l = n("735250"),
   u = n("278074"),
   d = n("399606"),
   c = n("481060"),
-  f = n("596454"),
-  E = n("44315"),
+  E = n("596454"),
+  f = n("44315"),
   _ = n("377171"),
   T = n("339085"),
-  m = n("695346"),
-  I = n("261922"),
-  p = n("263704"),
-  h = n("441674"),
-  N = n("186523"),
-  S = n("553826"),
-  C = n("506071"),
-  A = n("203143"),
+  I = n("695346"),
+  m = n("261922"),
+  N = n("263704"),
+  p = n("441674"),
+  S = n("186523"),
+  C = n("553826"),
+  A = n("506071"),
+  h = n("203143"),
   g = n("79390"),
   M = n("839963"),
-  R = n("294608"),
-  O = n("65145"),
-  v = n("981631"),
-  L = n("689938"),
-  x = n("700363");
+  O = n("294608"),
+  R = n("65145"),
+  L = n("981631"),
+  v = n("689938"),
+  P = n("700363");
 
 function D(e) {
   let {
@@ -52,19 +52,19 @@ function D(e) {
     children: n
   } = e;
   return (0, l.jsx)("ul", {
-    "aria-label": L.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": v.default.Messages.POLL_OPTIONS_ARIA,
     className: t,
     children: n
   })
 }
 
-function P(e) {
+function x(e) {
   let {
     className: t,
     children: n
   } = e;
   return (0, l.jsx)("div", {
-    "aria-label": L.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": v.default.Messages.POLL_OPTIONS_ARIA,
     role: "group",
     className: t,
     children: n
@@ -79,7 +79,7 @@ function y(e) {
     orientation: "vertical"
   });
   return (0, l.jsx)("div", {
-    "aria-label": L.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": v.default.Messages.POLL_OPTIONS_ARIA,
     ...s,
     className: t,
     children: n
@@ -95,10 +95,10 @@ function U(e) {
     children: i
   } = e, {
     pollAnswerRef: r
-  } = (0, O.usePollFocusManager)();
+  } = (0, R.usePollFocusManager)();
   return (0, l.jsx)(c.Clickable, {
     role: "checkbox",
-    className: o()(t, x.enabled),
+    className: o()(t, P.enabled),
     onClick: n,
     "aria-checked": s,
     ref: a ? r : void 0,
@@ -106,7 +106,7 @@ function U(e) {
   })
 }
 
-function b(e) {
+function j(e) {
   let t, {
     className: n,
     children: s,
@@ -118,10 +118,10 @@ function b(e) {
   t = r ? i ? 0 : -1 : u ? 0 : -1;
   let {
     pollAnswerRef: d
-  } = (0, O.usePollFocusManager)();
+  } = (0, R.usePollFocusManager)();
   return (0, l.jsx)(c.Clickable, {
     role: "radio",
-    className: o()(n, x.enabled),
+    className: o()(n, P.enabled),
     onClick: a,
     "aria-checked": i,
     tabIndex: t,
@@ -130,7 +130,7 @@ function b(e) {
   })
 }
 
-function j(e) {
+function b(e) {
   let {
     answers: t,
     answersInteraction: n,
@@ -141,8 +141,8 @@ function j(e) {
     answerClassName: d,
     renderAnswerContent: c
   } = e, {
-    ContainerComponent: f,
-    answerElementType: E
+    ContainerComponent: E,
+    answerElementType: f
   } = (0, u.match)({
     canTapAnswers: a,
     answersInteraction: n
@@ -154,7 +154,7 @@ function j(e) {
   })).with({
     answersInteraction: M.PollChatAnswerInteractionType.CHECKBOXES
   }, () => ({
-    ContainerComponent: P,
+    ContainerComponent: x,
     answerElementType: 2
   })).with({
     canTapAnswers: !0,
@@ -166,13 +166,13 @@ function j(e) {
     ContainerComponent: D,
     answerElementType: 0
   }));
-  return (0, l.jsx)(f, {
+  return (0, l.jsx)(E, {
     className: r,
     children: t.map((e, t) => (0, l.jsx)(G, {
-      className: o()(x.__invalid_answer, d),
+      className: o()(P.__invalid_answer, d),
       answer: e,
       isFirstAnswer: 0 === t,
-      elementType: E,
+      elementType: f,
       answerTapAccessibilityLabel: s,
       hasSelectedAnyAnswer: i,
       children: c(e)
@@ -191,8 +191,8 @@ function G(e) {
   } = e, {
     channelId: d,
     messageId: c
-  } = (0, R.useMessageIds)(), f = (0, R.useStyleClass)(n.style), E = !0 === n.isSelected, _ = i.useCallback(() => {
-    A.default.handlePollAnswerTapped({
+  } = (0, O.useMessageIds)(), E = (0, O.useStyleClass)(n.style), f = !0 === n.isSelected, _ = i.useCallback(() => {
+    h.default.handlePollAnswerTapped({
       channelId: d,
       messageId: c,
       answerId: n.answerId
@@ -202,23 +202,23 @@ function G(e) {
     case 0:
     case 3:
       return (0, l.jsx)("li", {
-        className: o()(t, f),
+        className: o()(t, E),
         children: s
       });
     case 1:
-      return (0, l.jsx)(b, {
-        className: o()(t, f),
+      return (0, l.jsx)(j, {
+        className: o()(t, E),
         onClick: _,
-        isSelected: E,
+        isSelected: f,
         hasSelectedAnyAnswer: a,
         isFirstAnswer: r,
         children: s
       });
     case 2:
       return (0, l.jsx)(U, {
-        className: o()(t, f),
+        className: o()(t, E),
         onClick: _,
-        isSelected: E,
+        isSelected: f,
         isFirstAnswer: r,
         children: s
       })
@@ -230,10 +230,10 @@ function B(e) {
   let {
     attachment: n,
     className: s
-  } = e, a = (0, C.useIsWindowFocused)(), i = m.GifAutoPlay.useSetting();
-  return (0, l.jsx)(I.default, {
+  } = e, a = (0, A.useIsWindowFocused)(), i = I.GifAutoPlay.useSetting();
+  return (0, l.jsx)(m.default, {
     className: s,
-    imageClassName: x.attachmentImage,
+    imageClassName: P.attachmentImage,
     src: null != n.proxy_url && "" !== n.proxy_url ? n.proxy_url : n.url,
     alt: null !== (t = n.description) && void 0 !== t ? t : (0, g.filterOutUUID)(n.filename),
     responsive: !0,
@@ -245,7 +245,7 @@ function B(e) {
   })
 }
 
-function F(e) {
+function k(e) {
   var t;
   let {
     className: n,
@@ -254,7 +254,7 @@ function F(e) {
     var e;
     return T.default.getCustomEmojiById(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : "")
   }, [s.id]), i = (null == s ? void 0 : s.name) !== "" ? s.name : null == a ? void 0 : a.name;
-  return (0, l.jsx)(f.default, {
+  return (0, l.jsx)(E.default, {
     className: n,
     emojiId: null == s ? void 0 : s.id,
     emojiName: null == s ? void 0 : s.name,
@@ -263,7 +263,7 @@ function F(e) {
   })
 }
 
-function k(e, t) {
+function F(e, t) {
   return null != e ? (0, l.jsx)("div", {
     className: e,
     children: t
@@ -281,18 +281,18 @@ function w(e) {
     fallback: i
   } = e, {
     message: r
-  } = (0, R.usePollContext)();
+  } = (0, O.usePollContext)();
   if (null != t.attachmentIds && t.attachmentIds.length > 0) {
     let e = r.attachments.find(e => {
       var n;
       return e.id === (null === (n = t.attachmentIds) || void 0 === n ? void 0 : n[0])
     });
-    if (null != e) return k(n, (0, l.jsx)(B, {
+    if (null != e) return F(n, (0, l.jsx)(B, {
       className: s,
       attachment: e
     }))
   }
-  return null != t.emoji ? k(n, (0, l.jsx)(F, {
+  return null != t.emoji ? F(n, (0, l.jsx)(k, {
     className: a,
     emoji: t.emoji
   })) : void 0 !== i ? (0, l.jsx)(l.Fragment, {
@@ -317,7 +317,7 @@ function H(e) {
     isVictor: !0
   }, () => ({
     color: _.default.BUTTON_POSITIVE_BACKGROUND,
-    backgroundColor: (0, E.getColor)(v.Color.WHITE_500)
+    backgroundColor: (0, f.getColor)(L.Color.WHITE_500)
   })).with({
     isExpired: !0,
     isVictor: !1
@@ -325,10 +325,10 @@ function H(e) {
     color: _.default.ICON_PRIMARY,
     backgroundColor: _.default.BG_MOD_FAINT
   })).otherwise(() => ({
-    color: (0, E.getColor)(v.Color.BRAND_500),
-    backgroundColor: (0, E.getColor)(v.Color.WHITE_500)
+    color: (0, f.getColor)(L.Color.BRAND_500),
+    backgroundColor: (0, f.getColor)(L.Color.WHITE_500)
   }));
-  return (0, l.jsx)(h.default, {
+  return (0, l.jsx)(p.default, {
     width: s,
     height: s,
     className: a,
@@ -346,14 +346,14 @@ function V(e) {
   } = e, a = {
     width: n,
     height: n,
-    background: x.radioBackground,
+    background: P.radioBackground,
     "aria-hidden": !0
   };
-  return t ? (0, l.jsx)(S.default, {
+  return t ? (0, l.jsx)(C.default, {
     ...a,
-    foreground: x.radioForeground,
+    foreground: P.radioForeground,
     className: s
-  }) : (0, l.jsx)(N.default, {
+  }) : (0, l.jsx)(S.default, {
     ...a,
     className: s
   })
@@ -366,18 +366,18 @@ function Y(e) {
     className: s
   } = e, a = .85 * n;
   return (0, l.jsx)("div", {
-    className: o()(x.checkbox, {
-      [x.checkboxSelected]: t
+    className: o()(P.checkbox, {
+      [P.checkboxSelected]: t
     }, s),
     style: {
       width: n,
       height: n
     },
     "aria-hidden": !0,
-    children: t && (0, l.jsx)(p.default, {
+    children: t && (0, l.jsx)(N.default, {
       width: a,
       height: a,
-      color: (0, E.getColor)(v.Color.WHITE_500)
+      color: (0, f.getColor)(L.Color.WHITE_500)
     })
   })
 }(a = s || (s = {}))[a.LIST_ITEM = 0] = "LIST_ITEM", a[a.RADIO = 1] = "RADIO", a[a.CHECKBOX = 2] = "CHECKBOX", a[a.LIST_ITEM_BUTTON = 3] = "LIST_ITEM_BUTTON"

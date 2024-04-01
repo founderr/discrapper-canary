@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return W
+    return K
   }
 }), s("47120");
 var a = s("735250"),
@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("230711"),
   E = s("714338"),
   T = s("857595"),
-  _ = s("607070"),
-  f = s("627845"),
-  m = s("514361"),
+  f = s("607070"),
+  m = s("627845"),
+  _ = s("514361"),
   g = s("605236"),
   h = s("786761"),
   N = s("3148"),
@@ -95,7 +95,7 @@ let G = {
       id: "".concat(t)
     })]
   };
-class K extends n.Component {
+class W extends n.Component {
   renderZoomSlider() {
     return x.isPlatformEmbedded ? (0, a.jsxs)(u.FormItem, {
       className: B.marginTop20,
@@ -214,7 +214,7 @@ class K extends n.Component {
       children: (0, a.jsx)(u.FormText, {
         type: u.FormText.Types.DEFAULT,
         className: y.forcedColorsWarning,
-        children: (0, f.canEnableForcedColors)() ? U.default.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
+        children: (0, m.canEnableForcedColors)() ? U.default.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
           onClick: () => {
             S.default.open(P.UserSettingsSections.ACCESSIBILITY)
           }
@@ -327,7 +327,7 @@ class K extends n.Component {
   }
 }
 
-function W() {
+function K() {
   let e = v.MessageDisplayCompact.useSetting(),
     t = v.InlineEmbedMedia.useSetting(),
     s = v.RenderEmbeds.useSetting(),
@@ -344,22 +344,22 @@ function W() {
       forceTrack: !0
     })
   }, []);
-  let i = (0, r.useStateFromStoresObject)([R.default, M.default, _.default, C.default, m.default], () => {
+  let i = (0, r.useStateFromStoresObject)([R.default, M.default, f.default, C.default, _.default], () => {
     var e, t;
     return {
       theme: R.default.theme,
-      useForcedColors: _.default.useForcedColors,
+      useForcedColors: f.default.useForcedColors,
       useSystemTheme: M.default.useSystemTheme,
       darkSidebar: R.default.darkSidebar,
-      fontSize: _.default.fontSize,
-      zoom: _.default.zoom,
-      messageGroupSpacing: _.default.messageGroupSpacing,
+      fontSize: f.default.fontSize,
+      zoom: f.default.zoom,
+      messageGroupSpacing: f.default.messageGroupSpacing,
       displayCompactAvatars: M.default.displayCompactAvatars,
       isStaff: null !== (t = null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
-      gradientPreset: m.default.gradientPreset
+      gradientPreset: _.default.gradientPreset
     }
   });
-  return (0, a.jsx)(K, {
+  return (0, a.jsx)(W, {
     messageDisplayCompact: e,
     hideSimpleEmbedContent: t && s,
     clientTheme: l,

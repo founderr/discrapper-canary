@@ -16,9 +16,9 @@ function u(e) {
   let {
     code: t,
     messageData: n
-  } = e, [u, d] = t.split("/"), c = a.default.getChannel(d), f = l.default.getGuild(u);
-  return null != c && c.isGuildVocal() && null != f && i.default.can(o.Permissions.VIEW_CHANNEL, c) && i.default.can(o.Permissions.CONNECT, c) ? (0, s.jsx)(r.default, {
-    guild: f,
+  } = e, [u, d] = t.split("/"), c = a.default.getChannel(d), E = l.default.getGuild(u);
+  return null != c && c.isGuildVocal() && null != E && i.default.can(o.Permissions.VIEW_CHANNEL, c) && i.default.can(o.Permissions.CONNECT, c) ? (0, s.jsx)(r.default, {
+    guild: E,
     channel: c,
     messageData: n
   }) : null

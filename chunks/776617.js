@@ -6,8 +6,8 @@ var E, _, a, n, T = s("392711"),
   A = s("442837"),
   l = s("570140"),
   I = s("387667"),
-  r = s("131704"),
-  o = s("271383"),
+  o = s("131704"),
+  r = s("271383"),
   L = s("430824"),
   d = s("981631");
 let N = [d.Permissions.KICK_MEMBERS, d.Permissions.BAN_MEMBERS, d.Permissions.ADMINISTRATOR, d.Permissions.MANAGE_CHANNELS, d.Permissions.MANAGE_GUILD, d.Permissions.MANAGE_MESSAGES, d.Permissions.MANAGE_NICKNAMES, d.Permissions.MANAGE_ROLES, d.Permissions.MANAGE_WEBHOOKS, d.Permissions.MANAGE_GUILD_EXPRESSIONS, d.Permissions.MOVE_MEMBERS, d.Permissions.MUTE_MEMBERS, d.Permissions.DEAFEN_MEMBERS],
@@ -59,21 +59,21 @@ function B(e) {
         changes: n,
         options: e.options
       }),
-      o = t[0];
+      r = t[0];
     if (function(e, t, s) {
         let E = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 30,
           _ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 50;
         return null != e && e.action === t.action && e.targetId === t.targetId && e.userId === t.userId && i().isEqual(e.options, t.options) && t.timestampStart.diff(e.timestampStart, "minutes") < E && s < _ && t.targetType !== d.AuditLogTargetTypes.INVITE && t.action !== d.AuditLogActions.MESSAGE_DELETE && t.action !== d.AuditLogActions.MESSAGE_BULK_DELETE && t.action !== d.AuditLogActions.MESSAGE_PIN && t.action !== d.AuditLogActions.MESSAGE_UNPIN && t.action !== d.AuditLogActions.MEMBER_MOVE && t.action !== d.AuditLogActions.MEMBER_DISCONNECT && t.action !== d.AuditLogActions.BOT_ADD && t.action !== d.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE && t.action !== d.AuditLogActions.MEMBER_PRUNE
-      }(o, l, s)) {
-      t[0] = o.merge({
-        changes: [...o.changes, ...l.changes],
+      }(r, l, s)) {
+      t[0] = r.merge({
+        changes: [...r.changes, ...l.changes],
         timestampEnd: l.timestampStart
       }), s++;
       return
     }
     if (l.actionType === d.AuditLogActionTypes.DELETE && (null != T || null != u)) {
       let e = null !== (a = null == T ? void 0 : T.oldValue) && void 0 !== a ? a : null == u ? void 0 : u.oldValue;
-      (l.targetType === d.AuditLogTargetTypes.CHANNEL || l.targetType === d.AuditLogTargetTypes.CHANNEL_OVERWRITE) && null !== A && (0, r.isGuildSelectableChannelType)(A.oldValue) && (e = "#".concat(e)), null == H[l.targetType] ? H[l.targetType] = {
+      (l.targetType === d.AuditLogTargetTypes.CHANNEL || l.targetType === d.AuditLogTargetTypes.CHANNEL_OVERWRITE) && null !== A && (0, o.isGuildSelectableChannelType)(A.oldValue) && (e = "#".concat(e)), null == H[l.targetType] ? H[l.targetType] = {
         [l.targetId]: e
       } : H[l.targetType][l.targetId] = e
     }
@@ -86,7 +86,7 @@ function F(e) {
     section: t
   } = e;
   if (t !== d.GuildSettingsSections.AUDIT_LOG) return !1;
-  let s = o.default.getMembers(S),
+  let s = r.default.getMembers(S),
     E = L.default.getGuild(S),
     _ = null != S ? L.default.getRoles(S) : void 0;
   c = i()(s).filter(e => e.roles.some(t => {

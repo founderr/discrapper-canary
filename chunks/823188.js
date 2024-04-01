@@ -52,8 +52,8 @@ var c = n("803997"),
   b = n("599250"),
   G = n("466111"),
   w = n("761374"),
-  k = n("363138"),
-  B = n("325767"),
+  B = n("363138"),
+  k = n("325767"),
   V = n("930153"),
   F = n("74538"),
   x = n("326151"),
@@ -167,7 +167,7 @@ function ea(e) {
     ...i
   } = e;
   return (0, _.jsxs)("svg", {
-    ...(0, B.default)({
+    ...(0, k.default)({
       ...i
     }),
     width: t,
@@ -325,7 +325,7 @@ function eu(e) {
 function ed() {
   return (0, _.jsxs)(_.Fragment, {
     children: [(0, _.jsx)(eo, {
-      Icon: k.default,
+      Icon: B.default,
       text: ee.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
         maxUploadPremium: (0, F.getMaxFileSizeForPremiumType)(Z.PremiumTypes.TIER_0, {
           useSpace: !1
@@ -480,7 +480,7 @@ function ec(e) {
         percentageOff: (0, V.formatPercent)(r, Z.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
       })
     }), (0, _.jsx)(eo, {
-      Icon: k.default,
+      Icon: B.default,
       text: ee.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
         maxUploadPremium: (0, F.getMaxFileSizeForPremiumType)(Z.PremiumTypes.TIER_2, {
           useSpace: !1
@@ -499,7 +499,7 @@ function ec(e) {
   });
   return (0, _.jsxs)(_.Fragment, {
     children: [(0, _.jsx)(eo, {
-      Icon: k.default,
+      Icon: B.default,
       text: ee.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
         maxUploadPremium: (0, F.getMaxFileSizeForPremiumType)(Z.PremiumTypes.TIER_2, {
           useSpace: !1
@@ -552,7 +552,7 @@ function eE(e) {
     b = !l && R,
     G = (0, z.getBOGOPillCopy)(),
     w = (0, h.isThemeLight)((0, m.default)()),
-    k = w ? 5 : 2;
+    B = w ? 5 : 2;
   return !b || y || w ? b && y && !w && (n = et.rimGlowTier2Stacked) : n = et.rimGlowTier2, (0, _.jsxs)("div", {
     className: E()(et.card, o, {
       [et.withTier2Rim]: b && !y,
@@ -567,7 +567,7 @@ function eE(e) {
           percent: C.discount.amount
         }),
         className: et.topRimPill,
-        colorOptions: k
+        colorOptions: B
       }), (0, _.jsx)("div", {
         className: n
       })]
@@ -575,7 +575,7 @@ function eE(e) {
       children: [(0, _.jsx)(es, {
         text: ee.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
         className: et.topRimPill,
-        colorOptions: k
+        colorOptions: B
       }), (0, _.jsx)("div", {
         className: n
       })]
@@ -583,7 +583,7 @@ function eE(e) {
       children: [(0, _.jsx)(es, {
         text: ee.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
         className: et.topRimPill,
-        colorOptions: k
+        colorOptions: B
       }), (0, _.jsx)("div", {
         className: n
       })]
@@ -591,7 +591,7 @@ function eE(e) {
       children: [(0, _.jsx)(es, {
         text: ee.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
         className: et.topRimPill,
-        colorOptions: k
+        colorOptions: B
       }), (0, _.jsx)("div", {
         className: n
       })]

@@ -1,30 +1,30 @@
 "use strict";
-i.r(t), i.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return o
+    return i
   }
 });
-var l = i("735250");
-i("470079");
-var a = i("180781"),
-  s = i("321867"),
-  n = i("486324");
+var n = a("735250");
+a("470079");
+var s = a("180781"),
+  l = a("321867"),
+  r = a("486324");
 
-function o(e) {
+function i(e) {
   let {
     type: t,
-    analyticsPage: i,
-    analyticsSection: o,
-    isGIF: r,
-    banner: u
+    analyticsPage: a,
+    analyticsSection: i,
+    isGIF: u,
+    banner: o
   } = e;
-  return [n.UploadTypes.BANNER, n.UploadTypes.AVATAR].includes(t) && r ? (0, l.jsx)(s.default, {
-    analyticsSection: o,
+  return [r.UploadTypes.BANNER, r.UploadTypes.AVATAR].includes(t) && u ? (0, n.jsx)(l.default, {
+    analyticsSection: i,
     type: t
-  }) : t === n.UploadTypes.GUILD_BANNER ? (0, l.jsx)(a.default, {
-    analyticsSection: o,
-    analyticsPage: i,
-    isGIF: r,
-    banner: u
+  }) : t === r.UploadTypes.GUILD_BANNER ? (0, n.jsx)(s.default, {
+    analyticsSection: i,
+    analyticsPage: a,
+    isGIF: u,
+    banner: o
   }) : null
 }

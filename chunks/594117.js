@@ -17,7 +17,7 @@ var s = n("685072"),
   f = n("976401"),
   E = n("689938");
 
-function h(e) {
+function _(e) {
   let {
     tooltipText: t,
     onClick: n
@@ -30,8 +30,8 @@ function h(e) {
   })
 }
 
-function _() {
-  return (0, a.jsx)(h, {
+function h() {
+  return (0, a.jsx)(_, {
     tooltipText: E.default.Messages.DISCONNECT_SELF,
     onClick: () => {
       (0, i.stopBroadcast)(), l.default.disconnect()
@@ -43,7 +43,7 @@ function C(e) {
   let {
     channel: t
   } = e;
-  return (0, a.jsx)(h, {
+  return (0, a.jsx)(_, {
     tooltipText: E.default.Messages.AUDIENCE_DISCONNECT,
     onClick: () => {
       if ((0, c.default)(t)) {
@@ -59,7 +59,7 @@ function S(e) {
   let {
     channel: t
   } = e;
-  return (0, a.jsx)(h, {
+  return (0, a.jsx)(_, {
     tooltipText: E.default.Messages.DISCONNECT_SELF,
     onClick: () => {
       if ((0, u.default)(t)) {
@@ -77,7 +77,7 @@ function m(e) {
   } = e, n = (0, r.default)();
   return t.isGuildStageVoice() ? (0, a.jsx)(C, {
     channel: t
-  }) : n && t.isBroadcastChannel() ? (0, a.jsx)(_, {}) : (0, a.jsx)(S, {
+  }) : n && t.isBroadcastChannel() ? (0, a.jsx)(h, {}) : (0, a.jsx)(S, {
     channel: t
   })
 }

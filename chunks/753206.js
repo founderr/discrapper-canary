@@ -16,8 +16,8 @@ t.default = _.memo(function(e) {
     message: s,
     channel: _,
     compact: a,
-    className: r,
-    isGroupStart: o,
+    className: o,
+    isGroupStart: r,
     hideSimpleEmbedContent: L = !0,
     disableInteraction: d
   } = e, N = (0, T.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()), {
@@ -31,10 +31,10 @@ t.default = _.memo(function(e) {
   });
   return (0, E.jsx)(i.default, {
     compact: a,
-    className: n()(r, {
+    className: n()(o, {
       [I.message]: !0,
       [I.cozyMessage]: !a,
-      [I.groupStart]: o
+      [I.groupStart]: r
     }),
     childrenHeader: (0, l.default)({
       ...e,

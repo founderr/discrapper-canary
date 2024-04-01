@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return _
   }
 }), s("724458");
 var a = s("735250"),
@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("930441"),
   E = s("689938"),
   T = s("423026"),
-  _ = s("794711");
+  f = s("794711");
 
-function f(e) {
+function m(e) {
   let {
     label: t,
     onChange: s,
@@ -33,7 +33,7 @@ function f(e) {
   })
 }
 
-function m() {
+function _() {
   let e = (0, r.useStateFromStores)([d.default], () => d.default.getSubsection()),
     t = n.createRef(),
     {
@@ -47,12 +47,12 @@ function m() {
       null == t || null === (s = t.current) || void 0 === s || s.scrollIntoView(!0)
     }
   }, [l, t, e]);
-  let m = S.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1);
+  let _ = S.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1);
   return l ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       ref: t
     }), (0, a.jsxs)(o.FormSection, {
-      className: i()(_.marginTop40),
+      className: i()(f.marginTop40),
       tag: o.FormTitleTags.H1,
       title: E.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
       children: [S.EmailCategoriesList.map(e => {
@@ -61,7 +61,7 @@ function m() {
           label: n,
           subLabel: l
         } = e;
-        return (0, a.jsx)(f, {
+        return (0, a.jsx)(m, {
           label: n(),
           subLabel: l(),
           enabled: s[t],
@@ -72,7 +72,7 @@ function m() {
         }, n())
       }), (0, a.jsx)(o.Button, {
         className: T.marketingUnsubscribeButton,
-        disabled: !m,
+        disabled: !_,
         look: o.ButtonLooks.LINK,
         color: o.ButtonColors.LINK,
         onClick: u.updateMarketingEmailSettings,
@@ -81,7 +81,7 @@ function m() {
         type: o.FormTextTypes.DESCRIPTION,
         children: E.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING_DESCRIPTION
       }), (0, a.jsx)(o.FormDivider, {
-        className: i()(_.marginTop40, _.marginBottom40)
+        className: i()(f.marginTop40, f.marginBottom40)
       })]
     })]
   }) : null

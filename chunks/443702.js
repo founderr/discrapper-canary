@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("497321"),
   E = s("231428"),
   T = s("390954"),
-  _ = s("89057"),
-  f = s("246946"),
-  m = s("594174"),
+  f = s("89057"),
+  m = s("246946"),
+  _ = s("594174"),
   g = s("351402"),
   h = s("853872"),
   N = s("78839"),
@@ -65,7 +65,7 @@ class O extends n.PureComponent {
             tag: "h1",
             children: C.default.Messages.BILLING_PAYMENT_HISTORY
           }),
-          children: [(0, a.jsx)(_.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
+          children: [(0, a.jsx)(f.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
             locale: l
           })]
         })
@@ -81,12 +81,12 @@ class O extends n.PureComponent {
 }
 
 function x() {
-  let e = (0, r.useStateFromStoresObject)([I.default, g.default, h.default, m.default, f.default, N.default], () => {
+  let e = (0, r.useStateFromStoresObject)([I.default, g.default, h.default, _.default, m.default, N.default], () => {
     let e = N.default.getPremiumTypeSubscription(),
-      t = m.default.getCurrentUser();
+      t = _.default.getCurrentUser();
     return i()(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
       locale: I.default.locale,
-      hide: f.default.enabled,
+      hide: m.default.enabled,
       isClaimed: t.isClaimed(),
       isVerified: t.verified,
       premiumSubscription: e,

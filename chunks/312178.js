@@ -18,7 +18,7 @@ var i = n("735250"),
   S = n("906037"),
   v = n("430036"),
   y = n("839434"),
-  I = n("981631");
+  O = n("981631");
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -28,8 +28,8 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = {
-  [I.OverlayWidgets.TEXT](e) {
+let C = {
+  [O.OverlayWidgets.TEXT](e) {
     let {
       dragging: t,
       locked: n,
@@ -43,7 +43,7 @@ let N = {
       dragging: t
     })
   },
-  [I.OverlayWidgets.GUILDS](e) {
+  [O.OverlayWidgets.GUILDS](e) {
     let {
       locked: t,
       dragStart: n
@@ -53,7 +53,7 @@ let N = {
       locked: t
     })
   },
-  [I.OverlayWidgets.VOICE](e) {
+  [O.OverlayWidgets.VOICE](e) {
     let {
       id: t,
       anchor: n,
@@ -66,11 +66,11 @@ let N = {
       id: t,
       locked: l,
       pinned: s,
-      widget: I.OverlayWidgets.VOICE,
+      widget: O.OverlayWidgets.VOICE,
       isPreviewingInGame: a
     })
   },
-  [I.OverlayWidgets.GUILDS_TEXT](e) {
+  [O.OverlayWidgets.GUILDS_TEXT](e) {
     let {
       dragging: t,
       locked: n,
@@ -83,7 +83,7 @@ let N = {
       pinned: !1
     })
   },
-  [I.OverlayWidgets.LOBBY_VOICE](e) {
+  [O.OverlayWidgets.LOBBY_VOICE](e) {
     let {
       id: t,
       anchor: n,
@@ -96,14 +96,14 @@ let N = {
       id: t,
       locked: l,
       pinned: s,
-      widget: I.OverlayWidgets.LOBBY_VOICE,
+      widget: O.OverlayWidgets.LOBBY_VOICE,
       isPreviewingInGame: a
     })
   }
 };
-class O extends a.PureComponent {
+class N extends a.PureComponent {
   componentDidUpdate(e) {
-    this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (o.default.track(I.AnalyticEvents.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({
+    this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (o.default.track(O.AnalyticEvents.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({
       lastLayoutUpdate: null
     }))
   }
@@ -116,7 +116,7 @@ class O extends a.PureComponent {
       state: {
         dragging: l
       }
-    } = this, s = N[e.type];
+    } = this, s = C[e.type];
     if (null == s) throw Error("OverlayLayout: Widget does not exist in WidgetMap");
     return o => s({
       id: e.id,
@@ -150,7 +150,7 @@ class O extends a.PureComponent {
       resizeX: E,
       resizeY: v,
       dragAnywhere: y
-    } = t, I = (0, S.isWidgetContainerVisible)({
+    } = t, O = (0, S.isWidgetContainerVisible)({
       locked: a,
       isPreviewingInGame: l,
       pinned: r
@@ -166,7 +166,7 @@ class O extends a.PureComponent {
       anchor: g,
       container: T,
       minSize: m,
-      hidden: !I,
+      hidden: !O,
       resizeX: E,
       resizeY: v,
       style: {
@@ -235,7 +235,7 @@ class O extends a.PureComponent {
     })
   }
 }
-let _ = l.default.connectStores([d.default, u.default], e => {
+let I = l.default.connectStores([d.default, u.default], e => {
   let {
     widgetId: t
   } = e, n = d.default.getWidget(t), i = u.default.getActiveRegions();
@@ -244,12 +244,12 @@ let _ = l.default.connectStores([d.default, u.default], e => {
     widgetConfig: null != n ? d.default.getWidgetConfig(n.type) : null,
     locked: u.default.isInstanceUILocked(),
     isPreviewingInGame: u.default.isPreviewingInGame(),
-    isActiveRegion: null != n && n.type === I.OverlayWidgets.TEXT && i.has(I.OverlayActiveRegions.TEXT_WIDGET)
+    isActiveRegion: null != n && n.type === O.OverlayWidgets.TEXT && i.has(O.OverlayActiveRegions.TEXT_WIDGET)
   }
-})(O);
+})(N);
 
-function C(e, t) {
-  return (0, i.jsx)(_, {
+function _(e, t) {
+  return (0, i.jsx)(I, {
     widgetId: e,
     layoutSize: t
   }, e)
@@ -257,5 +257,5 @@ function C(e, t) {
 t.default = l.default.connectStores([d.default, c.default], () => ({
   layout: d.default.getLayout(p.OVERLAY_LAYOUT_ID),
   layoutSize: c.default.windowSize(),
-  renderWidget: C
+  renderWidget: _
 }))(r.default)

@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("465670"),
   f = n("26290"),
   E = n("626135"),
-  h = n("321488"),
-  _ = n("417183"),
+  _ = n("321488"),
+  h = n("417183"),
   C = n("170245"),
   S = n("981631"),
   m = n("689938"),
@@ -42,7 +42,7 @@ function p(e) {
       }
     })
   }, O = p === S.StatusTypes.OFFLINE ? S.StatusTypes.UNKNOWN : p, v = n === S.RelationshipTypes.PENDING_INCOMING ? m.default.Messages.INCOMING_FRIEND_REQUEST : m.default.Messages.OUTGOING_FRIEND_REQUEST;
-  return (0, a.jsx)(_.default, {
+  return (0, a.jsx)(h.default, {
     isFocused: T,
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
@@ -59,22 +59,22 @@ function p(e) {
             color: l.default.unsafe_rawColors.BRAND_500.css,
             text: m.default.Messages.STAFF_BADGE_TOOLTIP
           })
-        }), (0, a.jsx)(h.default, {
+        }), (0, a.jsx)(_.default, {
           icon: d.default,
-          actionType: h.default.ActionTypes.ACCEPT,
+          actionType: _.default.ActionTypes.ACCEPT,
           tooltip: m.default.Messages.FRIEND_REQUEST_ACCEPT,
           onClick: R,
           shouldHighlight: e
-        }), (0, a.jsx)(h.default, {
+        }), (0, a.jsx)(_.default, {
           icon: c.default,
-          actionType: h.default.ActionTypes.DENY,
+          actionType: _.default.ActionTypes.DENY,
           tooltip: m.default.Messages.FRIEND_REQUEST_IGNORE,
           onClick: N,
           shouldHighlight: e
         })]
-      }) : (0, a.jsx)(h.default, {
+      }) : (0, a.jsx)(_.default, {
         icon: c.default,
-        actionType: h.default.ActionTypes.DENY,
+        actionType: _.default.ActionTypes.DENY,
         tooltip: m.default.Messages.FRIEND_REQUEST_CANCEL,
         onClick: N,
         shouldHighlight: e

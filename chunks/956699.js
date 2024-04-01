@@ -12,9 +12,9 @@ var a = s("735250"),
   S = s("481060"),
   E = s("570140"),
   T = s("661111"),
-  _ = s("179658"),
-  f = s("491428"),
-  m = s("225433"),
+  f = s("179658"),
+  m = s("491428"),
+  _ = s("225433"),
   g = s("484614"),
   h = s("386506"),
   N = s("865427"),
@@ -57,10 +57,10 @@ let V = ["discord_web", "discord_marketing", "discord_developers", "discord_ios"
     label: "Build ID"
   }];
 
-function K(e) {
+function W(e) {
   return "discord_ios" in e || "discord_android" in e
 }
-class W extends n.Component {
+class K extends n.Component {
   render() {
     let {
       project: e,
@@ -72,7 +72,7 @@ class W extends n.Component {
     return (0, a.jsxs)(L.default, {
       direction: L.default.Direction.VERTICAL,
       className: i()(F.buildOverrideGroup, k.marginBottom20, G.card, F.row),
-      children: [(0, a.jsx)(m.default, {
+      children: [(0, a.jsx)(_.default, {
         className: i()(F.removeBuildOverride, {
           [F.removeBuildOverrideDisabled]: n
         }),
@@ -187,7 +187,7 @@ class z extends n.Component {
       saving: t,
       errors: s
     } = this.state;
-    return null == e ? null : o().map(e, (e, n) => (0, a.jsx)(W, {
+    return null == e ? null : o().map(e, (e, n) => (0, a.jsx)(K, {
       project: n,
       overrideType: e.type,
       overrideId: e.id,
@@ -240,7 +240,7 @@ class z extends n.Component {
       children: [(0, a.jsx)(L.default.Child, {
         grow: 0,
         children: (0, a.jsx)(S.Button, {
-          disabled: K(null != t ? t : {}),
+          disabled: W(null != t ? t : {}),
           onClick: this.handleSaveChanges,
           submitting: e,
           color: S.Button.Colors.GREEN,
@@ -268,7 +268,7 @@ class z extends n.Component {
       className: k.marginTop20
     }) : null != n && 0 === Object.keys(n).length ? this.renderEmpty() : this.renderItems();
     let l = !s && !t && this.getAvailableProjects().length > 0,
-      i = K(null != n ? n : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsx)(S.Text, {
+      i = W(null != n ? n : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsx)(S.Text, {
         color: "text-danger",
         variant: "text-md/normal",
         children: "Mobile build overrides must be generated using the desktop/web stable client for now!"
@@ -426,7 +426,7 @@ class z extends n.Component {
 class Q extends n.Component {
   isMobile() {
     var e;
-    return K(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {})
+    return W(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {})
   }
   renderSettingsForm() {
     let {
@@ -750,7 +750,7 @@ class Q extends n.Component {
   }
 }
 
-function X() {
+function Z() {
   throw Error("Send help")
 }
 
@@ -833,14 +833,14 @@ function q() {
           onClick: () => t(!0),
           children: "React Crash"
         }), (0, a.jsx)(S.Button, {
-          onClick: X,
+          onClick: Z,
           children: "onClick Throw"
         })]
       })
     })]
   })
 }
-let Z = u.default.connectStores([x.default], () => ({
+let X = u.default.connectStores([x.default], () => ({
   isTracingRequests: x.default.isTracingRequests,
   isForcedCanary: x.default.isForcedCanary,
   isLoggingGatewayEvents: x.default.isLoggingGatewayEvents,
@@ -870,63 +870,63 @@ let Z = u.default.connectStores([x.default], () => ({
     children: [(0, a.jsx)(S.FormSwitch, {
       value: t,
       note: "Force trace all client requests with APM",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         trace: e
       }),
       children: "Enable Tracing Requests"
     }), (0, a.jsx)(S.FormSwitch, {
       value: s,
       note: "Force all API requests to canary instances",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         canary: e
       }),
       children: "Enable Forced Canary"
     }), (0, a.jsx)(S.FormSwitch, {
       value: n,
       note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         logGatewayEvents: e
       }),
       children: "Enable Logging of Gateway Events to Console"
     }), (0, a.jsx)(S.FormSwitch, {
       value: l,
       note: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         logOverlayEvents: e
       }),
       children: "Enable Logging of Overlay RPC Events & Commands"
     }), (0, a.jsx)(S.FormSwitch, {
       value: i,
       note: "Logs all analytics events to the developer console",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         logAnalyticsEvents: e
       }),
       children: "Enable Logging of Analytics Events"
     }), (0, a.jsx)(S.FormSwitch, {
       value: o,
       note: "Only enable on devices you trust.",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         sourceMapsEnabled: e
       }),
       children: "Enable source maps to be loaded on this client"
     }), (0, a.jsx)(S.FormSwitch, {
       value: d,
       note: "Displays a floating debugger with viewed impressions",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         analyticsDebuggerEnabled: e
       }),
       children: "Enable standard analytics debugger view"
     }), (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
       value: c,
       note: "Displays a floating idle status indicator",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         idleStatusIndicatorEnabled: e
       }),
       children: "Enable idle status indicator"
     }) : null, null, (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
       value: E,
       note: "In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         appDirectoryIncludesInactiveCollections: e
       }),
       children: "Preview Unpublished Collections on App Directory Homepage"
@@ -953,7 +953,7 @@ function J() {
     }), (0, a.jsxs)("form", {
       className: F.surveyOverride,
       onSubmit: e => {
-        e.preventDefault(), t.length > 0 ? f.overrideSurvey(t) : f.overrideSurvey(null)
+        e.preventDefault(), t.length > 0 ? m.overrideSurvey(t) : m.overrideSurvey(null)
       },
       children: [(0, a.jsx)(S.TextInput, {
         className: F.surveyOverrideInput,
@@ -996,7 +996,7 @@ function $() {
 class ee extends n.PureComponent {
   render() {
     return (0, a.jsxs)(n.Fragment, {
-      children: [(0, a.jsx)(Z, {}), (0, a.jsx)(q, {}), (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(z, {})]
+      children: [(0, a.jsx)(X, {}), (0, a.jsx)(q, {}), (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(z, {})]
     })
   }
 }

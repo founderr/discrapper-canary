@@ -15,8 +15,8 @@ var l = s("803997"),
   f = s("693546"),
   T = s("826581"),
   _ = s("246364"),
-  S = s("328977"),
-  R = s("571728"),
+  R = s("328977"),
+  S = s("571728"),
   N = s("762660"),
   A = s("689938"),
   M = s("123471");
@@ -65,9 +65,9 @@ t.default = function(e) {
     guildId: l,
     onScroll: c,
     listRef: E
-  } = e, I = (0, u.useStateFromStores)([d.default], () => d.default.getGuild(l), [l]), p = (0, u.useStateFromStores)([T.default], () => T.default.isFetching()), C = p ? [s.length + 25] : [s.length], g = (0, S.useSelectedGuildJoinRequest)({
+  } = e, I = (0, u.useStateFromStores)([d.default], () => d.default.getGuild(l), [l]), p = (0, u.useStateFromStores)([T.default], () => T.default.isFetching()), C = p ? [s.length + 25] : [s.length], g = (0, R.useSelectedGuildJoinRequest)({
     guildId: l
-  }), x = (0, R.useSubmittedGuildJoinRequestTotal)({
+  }), x = (0, S.useSubmittedGuildJoinRequestTotal)({
     guildId: l
   }), G = (0, o.default)("guild-join-requests"), P = e => {
     let {

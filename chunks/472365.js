@@ -15,14 +15,14 @@ var l = n("735250"),
   c = n("906732"),
   f = n("792766"),
   h = n("451603"),
-  C = n("885714"),
-  p = n("973616"),
+  p = n("885714"),
+  C = n("973616"),
   m = n("594174"),
   g = n("285952"),
   E = n("672752"),
-  S = n("153124"),
-  _ = n("819570"),
-  I = n("757698"),
+  _ = n("153124"),
+  I = n("819570"),
+  S = n("757698"),
   N = n("466111"),
   T = n("855981"),
   A = n("55543"),
@@ -31,8 +31,8 @@ var l = n("735250"),
   x = n("358085"),
   R = n("998502"),
   O = n("379164"),
-  y = n("590965"),
-  M = n("981631"),
+  M = n("590965"),
+  y = n("981631"),
   D = n("474936"),
   b = n("689938"),
   j = n("761167"),
@@ -44,21 +44,21 @@ function U() {
     sourceAnalyticsLocations: t
   } = (0, c.default)(d.default.PREMIUM_UPSELL_TOOLTIP);
   return a.useEffect(() => {
-    L.default.track(M.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    L.default.track(y.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: D.PremiumUpsellTypes.GUILD_CAP_INLINE_INVITE_MODAL,
       location: {
-        page: M.AnalyticsPages.NATIVE_INVITE_MODAL
+        page: y.AnalyticsPages.NATIVE_INVITE_MODAL
       },
       location_stack: t
     })
   }, [t]), (0, l.jsxs)(o.Clickable, {
-    onClick: () => (0, C.default)({
+    onClick: () => (0, p.default)({
       analyticsSource: {
-        page: M.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL
+        page: y.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL
       },
       analyticsLocation: {
-        page: M.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL,
-        section: M.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+        page: y.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL,
+        section: y.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
       },
       analyticsLocations: e
     }),
@@ -87,7 +87,7 @@ function P(e) {
     className: i()(j.iconContainer, t),
     children: [(0, l.jsx)(T.default, {
       className: j.iconSparklePlus
-    }), (0, l.jsx)(I.default, {
+    }), (0, l.jsx)(S.default, {
       className: j.iconLink,
       width: 40,
       height: 40
@@ -100,7 +100,7 @@ function P(e) {
 function w(e) {
   let {
     transitionState: t
-  } = e, n = (0, S.useUID)(), {
+  } = e, n = (0, _.useUID)(), {
     analyticsLocations: a
   } = (0, c.default)(d.default.INVITE_MODAL);
   return (0, l.jsx)(c.AnalyticsLocationProvider, {
@@ -121,10 +121,10 @@ function w(e) {
         }), (0, l.jsx)("div", {
           className: j.errorBody,
           children: b.default.Messages.INVITE_MODAL_ERROR_INVALID_BODY
-        }), (0, l.jsx)(_.Button, {
-          size: _.Button.Sizes.LARGE,
+        }), (0, l.jsx)(I.Button, {
+          size: I.Button.Sizes.LARGE,
           onClick: () => O.default.close(),
-          color: _.Button.Colors.BRAND,
+          color: I.Button.Colors.BRAND,
           children: b.default.Messages.INVITE_MODAL_ERROR_BUTTON_TEXT
         })]
       })
@@ -141,33 +141,33 @@ function F(e) {
     return null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
   });
   let {
-    invite: C,
+    invite: p,
     error: E,
-    submitting: I
-  } = (0, r.useStateFromStoresObject)([y.default], () => y.default.getProps());
+    submitting: S
+  } = (0, r.useStateFromStoresObject)([M.default], () => M.default.getProps());
   a.useEffect(() => {
     !__OVERLAY__ && x.isPlatformEmbedded && ((0, x.isWindows)() ? R.default.minimize() : R.default.restore(), R.default.focus())
   }, []);
-  let N = (0, S.useUID)(),
+  let N = (0, _.useUID)(),
     {
       analyticsLocations: T
     } = (0, c.default)(d.default.INVITE_MODAL);
-  if (null == C) return null;
-  if (C.state === M.InviteStates.EXPIRED || C.state === M.InviteStates.BANNED || C.state === M.InviteStates.ERROR) return (0, l.jsx)(w, {
+  if (null == p) return null;
+  if (p.state === y.InviteStates.EXPIRED || p.state === y.InviteStates.BANNED || p.state === y.InviteStates.ERROR) return (0, l.jsx)(w, {
     transitionState: s
   });
-  if (null == C.channel) return null;
+  if (null == p.channel) return null;
 
   function A() {
-    null != C && O.default.acceptInvite(C)
+    null != p && O.default.acceptInvite(p)
   }
   let {
     guild: L,
     channel: D,
     inviter: P,
     target_application: F
-  } = C, B = null != C.stage_instance, V = null == C.guild && null == C.channel && null != C.inviter;
-  if (null != F) t = null == L ? void 0 : L.name, n = p.default.createFromServer(F).getCoverImageURL(1024);
+  } = p, B = null != p.stage_instance, V = null == p.guild && null == p.channel && null != p.inviter;
+  if (null != F) t = null == L ? void 0 : L.name, n = C.default.createFromServer(F).getCoverImageURL(1024);
   else if (null != L) t = L.name, n = v.default.getGuildSplashURL({
     id: L.id,
     splash: L.splash
@@ -196,7 +196,7 @@ function F(e) {
               id: N,
               className: G.marginBottom20,
               children: (0, l.jsx)(u.default, {
-                invite: C,
+                invite: p,
                 disableUser: null != L,
                 error: E
               })
@@ -204,7 +204,7 @@ function F(e) {
               className: i()(G.marginBottom20, j.stage),
               children: (0, l.jsx)(f.default, {
                 isCard: !0,
-                stageInstance: C.stage_instance,
+                stageInstance: p.stage_instance,
                 guild: L
               })
             }) : null, (0, l.jsxs)("div", {
@@ -216,12 +216,12 @@ function F(e) {
                     onMouseEnter: t,
                     onMouseLeave: n
                   } = e;
-                  return (0, l.jsx)(_.Button, {
-                    size: _.Button.Sizes.LARGE,
+                  return (0, l.jsx)(I.Button, {
+                    size: I.Button.Sizes.LARGE,
                     onClick: A,
-                    submitting: I,
+                    submitting: S,
                     disabled: H,
-                    color: B ? _.Button.Colors.GREEN : _.Button.Colors.BRAND,
+                    color: B ? I.Button.Colors.GREEN : I.Button.Colors.BRAND,
                     onMouseEnter: t,
                     onMouseLeave: n,
                     children: H ? b.default.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : k
@@ -229,28 +229,28 @@ function F(e) {
                 }
               }) : (0, l.jsxs)("div", {
                 className: j.buttonGroup,
-                children: [(0, l.jsx)(_.Button, {
-                  size: _.Button.Sizes.LARGE,
+                children: [(0, l.jsx)(I.Button, {
+                  size: I.Button.Sizes.LARGE,
                   onClick: A,
-                  submitting: I,
+                  submitting: S,
                   children: b.default.Messages.PLAY
-                }), (0, l.jsx)(_.Button, {
-                  color: _.Button.Colors.PRIMARY,
-                  size: _.Button.Sizes.LARGE,
+                }), (0, l.jsx)(I.Button, {
+                  color: I.Button.Colors.PRIMARY,
+                  size: I.Button.Sizes.LARGE,
                   onClick: A,
-                  submitting: I,
+                  submitting: S,
                   children: b.default.Messages.SPECTATE
                 })]
               }), (0, l.jsx)(g.default, {
                 justify: g.default.Justify.CENTER,
                 className: G.marginTop8,
-                children: (0, l.jsx)(_.Button, {
-                  look: _.Button.Looks.LINK,
+                children: (0, l.jsx)(I.Button, {
+                  look: I.Button.Looks.LINK,
                   className: j.noThanksButton,
                   onClick: function() {
                     O.default.close()
                   },
-                  color: _.Button.Colors.TRANSPARENT,
+                  color: I.Button.Colors.TRANSPARENT,
                   children: b.default.Messages.INIVTE_MODAL_NO_THANKS
                 })
               })]

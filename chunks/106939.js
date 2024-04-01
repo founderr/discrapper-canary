@@ -18,8 +18,8 @@ var a = n("735250"),
   c = n("481060"),
   f = n("150063"),
   E = n("758119"),
-  h = n("100527"),
-  _ = n("906732"),
+  _ = n("100527"),
+  h = n("906732"),
   C = n("252618"),
   S = n("605236"),
   m = n("984370"),
@@ -40,8 +40,8 @@ var a = n("735250"),
   x = n("880257"),
   b = n("631885"),
   U = n("830746"),
-  j = n("731934"),
-  G = n("521450"),
+  G = n("731934"),
+  j = n("521450"),
   w = n("292352"),
   k = n("981631"),
   F = n("723359"),
@@ -49,12 +49,12 @@ var a = n("735250"),
   H = n("689938"),
   V = n("767998");
 let Y = {
-    [w.FamilyCenterSubPages.REQUESTS]: () => (0, a.jsx)(j.default, {}),
+    [w.FamilyCenterSubPages.REQUESTS]: () => (0, a.jsx)(G.default, {}),
     [w.FamilyCenterSubPages.ACTIVITY]: () => (0, a.jsx)(U.default, {}),
-    [w.FamilyCenterSubPages.SETTINGS]: () => (0, a.jsx)(G.default, {})
+    [w.FamilyCenterSubPages.SETTINGS]: () => (0, a.jsx)(j.default, {})
   },
   W = {
-    [w.FamilyCenterSubPages.REQUESTS]: () => (0, a.jsx)(j.default, {}),
+    [w.FamilyCenterSubPages.REQUESTS]: () => (0, a.jsx)(G.default, {}),
     [w.FamilyCenterSubPages.ACTIVITY]: () => (0, a.jsx)(U.default, {})
   };
 
@@ -139,9 +139,9 @@ function q() {
     r = (0, D.useSelectedTeenId)(),
     {
       selectedTab: f,
-      handleTabChange: h
+      handleTabChange: _
     } = (0, y.default)(),
-    _ = (0, N.useUID)(),
+    h = (0, N.useUID)(),
     m = A.default.getCurrentUser(),
     T = null != e,
     g = l && null != m && !T;
@@ -168,11 +168,11 @@ function q() {
     }), (0, a.jsx)(K, {
       section: f,
       handleItemSelect: e => {
-        h(e)
+        _(e)
       }
     }), (0, a.jsx)(c.TabBar.Panel, {
       id: f,
-      "aria-labelledby": _,
+      "aria-labelledby": h,
       className: V.contentPanel,
       children: (0, a.jsx)("div", {
         children: Y[f]()
@@ -184,17 +184,17 @@ function q() {
 function Q() {
   let {
     analyticsLocations: e
-  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, x.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, S.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()), m = (0, D.useSelectedTeenId)(), R = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
+  } = (0, h.default)(_.default.FAMILY_CENTER), t = (0, x.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, S.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()), m = (0, D.useSelectedTeenId)(), R = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
     selectedTab: O,
     handleTabChange: L
-  } = (0, y.default)(), U = (0, N.useUID)(), j = A.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
+  } = (0, y.default)(), U = (0, N.useUID)(), G = A.default.getCurrentUser(), j = null != t, Y = r && null != G && !j;
   if (s.useEffect(() => {
       f.setHomeLink(k.Routes.FAMILY_CENTER), (0, p.trackAppUIViewed)("family-center"), !M.default.isLoading() && M.default.canRefetch() && P.default.initialPageLoad(), !l && (0, S.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
         dismissAction: B.ContentDismissActionType.AUTO,
         forceTrack: !0
       })
     }, []), s.useEffect(() => {
-      r && G && (v.default.track(k.AnalyticEvents.FAMILY_CENTER_VIEWED, {
+      r && j && (v.default.track(k.AnalyticEvents.FAMILY_CENTER_VIEWED, {
         is_considered_adult: t,
         num_of_accepted_links: n,
         selected_teen_id: m,
@@ -203,13 +203,13 @@ function Q() {
       }), I.default.increment({
         name: o.MetricEvents.FAMILY_CENTER_VIEW
       }))
-    }, [r, G]), s.useEffect(() => {
+    }, [r, j]), s.useEffect(() => {
       let e = g.FamilyCenterEnabled.getSetting();
       r && t && void 0 === e && g.FamilyCenterEnabled.updateSetting(!0)
     }, [r, t]), Y) return (0, E.openAgeGateModal)(F.AgeGateSource.FAMILY_CENTER), null;
   let K = O !== w.FamilyCenterSubPages.SETTINGS ? O : w.FamilyCenterSubPages.ACTIVITY,
     q = W[K];
-  return (0, a.jsx)(_.AnalyticsLocationProvider, {
+  return (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: e,
     children: (0, a.jsxs)("main", {
       className: i()(V.container, V.containerSidenav),

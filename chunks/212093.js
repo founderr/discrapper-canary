@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return function e(t, n) {
       let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         {
-          categoryId: a = C.DISCOVERY_ALL_CATEGORIES_ID,
+          categoryId: a = p.DISCOVERY_ALL_CATEGORIES_ID,
           preferredLocale: s,
           offset: c,
-          length: p,
+          length: C,
           tag: m
         } = n,
         E = d.default.getSearchIndex();
@@ -41,7 +41,7 @@ n.r(t), n.d(t, {
         query: t,
         preferredLocale: s,
         offset: c,
-        limit: p,
+        limit: C,
         categoryId: a,
         tag: m
       }), o.default.dispatch({
@@ -50,15 +50,15 @@ n.r(t), n.d(t, {
         query: t,
         categoryId: a
       });
-      let S = Object.assign({}, g, n.filters),
-        _ = Object.keys(S).map(e => "".concat(e).concat(S[e]));
-      a !== C.DISCOVERY_ALL_CATEGORIES_ID && _.push("(primary_category_id=".concat(a, " OR categories.id=").concat(a, ")"));
-      let I = _.join(" AND ");
+      let _ = Object.assign({}, g, n.filters),
+        I = Object.keys(_).map(e => "".concat(e).concat(_[e]));
+      a !== p.DISCOVERY_ALL_CATEGORIES_ID && I.push("(primary_category_id=".concat(a, " OR categories.id=").concat(a, ")"));
+      let S = I.join(" AND ");
       try {
         let i = E.search(t, {
-            filters: I,
+            filters: S,
             optionalFilters: ["preferred_locale: ".concat(s)],
-            length: p,
+            length: C,
             offset: c,
             restrictSearchableAttributes: ["name", "description", "keywords", "categories.name", "categories.name_localizations.".concat(s), "primary_category.name", "primary_category.name_localizations.".concat(s), "vanity_url_code"]
           }),
@@ -88,8 +88,8 @@ n.r(t), n.d(t, {
               id: e.objectID
             }))] : [],
             offset: c,
-            limit: p,
-            total: s ? Math.min(l, C.MAX_ALGOLIA_PAGINATOR_RESULTS) : 0
+            limit: C,
+            total: s ? Math.min(l, p.MAX_ALGOLIA_PAGINATOR_RESULTS) : 0
           })
         }).catch(s => {
           s.body.retry_after > 0 && E === d.default.getSearchIndex() ? setTimeout(() => {
@@ -112,16 +112,16 @@ n.r(t), n.d(t, {
     }
   },
   fetchFeaturedOrPopularGuilds: function() {
-    return I
+    return S
   },
   fetchGamesYouPlayGuilds: function() {
     return N
   },
   fetchPopularGuildsForCategory: function() {
-    return _
+    return I
   },
   getSearchResultsCount: function() {
-    return S
+    return _
   },
   selectCategory: function() {
     return A
@@ -138,8 +138,8 @@ var l = n("807034"),
   c = n("230307"),
   f = n("70956"),
   h = n("981631"),
-  C = n("731455");
-let p = window.GLOBAL_ENV.ALGOLIA_KEY,
+  p = n("731455");
+let C = window.GLOBAL_ENV.ALGOLIA_KEY,
   m = "production" === window.GLOBAL_ENV.PROJECT_ENV ? "prod_discoverable_guilds" : "staging" === window.GLOBAL_ENV.PROJECT_ENV ? "stg_discoverable_guilds" : "dev_discoverable_guilds",
   g = {
     "auto_removed:": !1,
@@ -148,8 +148,8 @@ let p = window.GLOBAL_ENV.ALGOLIA_KEY,
   };
 
 function E() {
-  if (null == p) return;
-  let e = s()("NKTZZ4AIZU", p, {
+  if (null == C) return;
+  let e = s()("NKTZZ4AIZU", C, {
     responsesCache: (0, l.createNullCache)()
   }).initIndex(m);
   o.default.wait(() => o.default.dispatch({
@@ -158,7 +158,7 @@ function E() {
   }))
 }
 
-function S(e, t) {
+function _(e, t) {
   let n = d.default.getSearchIndex();
   if (null == n) return;
   let l = Object.assign({}, g, t),
@@ -198,7 +198,7 @@ function S(e, t) {
     })
   }
 }
-async function _(e) {
+async function I(e) {
   o.default.dispatch({
     type: "GUILD_DISCOVERY_POPULAR_FETCH_START",
     categoryId: e
@@ -225,7 +225,7 @@ async function _(e) {
     })
   }
 }
-async function I(e, t) {
+async function S(e, t) {
   o.default.dispatch({
     type: "GUILD_DISCOVERY_FETCH_START",
     section: h.GuildDiscoverySections.FEATURED

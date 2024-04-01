@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("465670"),
   f = n("626135"),
   E = n("630388"),
-  h = n("804739"),
-  _ = n("957657"),
+  _ = n("804739"),
+  h = n("957657"),
   C = n("34305"),
   S = n("981631"),
   m = n("689938"),
@@ -80,7 +80,7 @@ class T extends s.PureComponent {
     } = this.props;
     return (0, a.jsxs)("div", {
       className: I.body,
-      children: [(0, h.isSupportedPlatform)() ? (0, a.jsxs)(s.Fragment, {
+      children: [(0, _.isSupportedPlatform)() ? (0, a.jsxs)(s.Fragment, {
         children: [(0, a.jsx)(i.FormSwitch, {
           value: t,
           onChange: this.handleToggleShortcutDesktop,
@@ -100,7 +100,7 @@ class T extends s.PureComponent {
   }
   render() {
     return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(_.default, {
+      children: [(0, a.jsx)(h.default, {
         currentRoute: S.Routes.APPLICATION_LIBRARY_SETTINGS
       }), (0, a.jsx)(i.ScrollerAuto, {
         className: I.scroller,

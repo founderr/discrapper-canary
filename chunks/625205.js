@@ -17,9 +17,9 @@ var n = s("392711"),
   S = s("285952"),
   E = s("210887"),
   T = s("962100"),
-  _ = s("65154"),
-  f = s("689938"),
-  m = s("564129"),
+  f = s("65154"),
+  m = s("689938"),
+  _ = s("564129"),
   g = s("794711");
 
 function h() {
@@ -31,8 +31,8 @@ function h() {
       inputDeviceId: I,
       outputDeviceId: p
     } = (0, i.useStateFromStoresObject)([c.default], () => ({
-      canSetInputDevice: c.default.supports(_.Features.AUDIO_INPUT_DEVICE),
-      canSetOutputDevice: c.default.supports(_.Features.AUDIO_OUTPUT_DEVICE),
+      canSetInputDevice: c.default.supports(f.Features.AUDIO_INPUT_DEVICE),
+      canSetOutputDevice: c.default.supports(f.Features.AUDIO_OUTPUT_DEVICE),
       inputDeviceId: c.default.getInputDeviceId(),
       outputDeviceId: c.default.getOutputDeviceId()
     })),
@@ -41,13 +41,13 @@ function h() {
   !h && (e = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
     className: g.marginTop8,
-    children: f.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
+    children: m.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Input Devices")
     })
   })), !N && (t = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
     className: g.marginTop8,
-    children: f.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
+    children: m.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Output Devices")
     })
   }));
@@ -66,13 +66,13 @@ function h() {
       t = (0, a.jsx)("img", {
         src: e,
         alt: "Certified",
-        className: m.deviceOptionCertified
+        className: _.deviceOptionCertified
       })
     }
     return (0, a.jsxs)("span", {
-      className: m.deviceOption,
+      className: _.deviceOption,
       children: [(0, a.jsx)("span", {
-        className: m.deviceOptionLabel,
+        className: _.deviceOptionLabel,
         children: u.default.getCertifiedDeviceName(i, l)
       }), t]
     }, i)
@@ -88,7 +88,7 @@ function h() {
       children: [(0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
         className: g.marginBottom8,
-        children: f.default.Messages.FORM_LABEL_INPUT_DEVICE
+        children: m.default.Messages.FORM_LABEL_INPUT_DEVICE
       }), (0, a.jsx)(o.SingleSelect, {
         value: I,
         onChange: e => d.default.setInputDevice(e, "Settings"),
@@ -111,7 +111,7 @@ function h() {
       children: [(0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
         className: g.marginBottom8,
-        children: f.default.Messages.FORM_LABEL_OUTPUT_DEVICE
+        children: m.default.Messages.FORM_LABEL_OUTPUT_DEVICE
       }), (0, a.jsx)(o.SingleSelect, {
         value: p,
         onChange: e => d.default.setOutputDevice(e, "Settings"),

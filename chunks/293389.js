@@ -12,9 +12,9 @@ var a = s("735250"),
   S = s("594190"),
   E = s("320724"),
   T = s("77498"),
-  _ = s("283595"),
-  f = s("186095"),
-  m = s("797717"),
+  f = s("283595"),
+  m = s("186095"),
+  _ = s("797717"),
   g = s("546591"),
   h = s("794358"),
   N = s("880008"),
@@ -35,7 +35,7 @@ var a = s("735250"),
   U = s("794711");
 let y = r.default.connectStores([M.default], () => ({
     theme: M.default.theme
-  }))(f.default),
+  }))(m.default),
   B = (0, R.isWindows)();
 
 function F(e) {
@@ -82,19 +82,19 @@ function G(e) {
     rawGame: s,
     nowPlaying: l = !1,
     isOverride: E
-  } = e, f = (0, r.useStateFromStoresObject)([T.default, S.default, _.default], () => (0, S.transformForGameSettings)(s)), [x, R] = n.useState(!1), [M, P] = n.useState(null !== (t = f.name) && void 0 !== t ? t : "???"), U = i()(j.flexCenter, {
+  } = e, m = (0, r.useStateFromStoresObject)([T.default, S.default, f.default], () => (0, S.transformForGameSettings)(s)), [x, R] = n.useState(!1), [M, P] = n.useState(null !== (t = m.name) && void 0 !== t ? t : "???"), U = i()(j.flexCenter, {
     [L.game]: !l,
     [L.activeGame]: l,
     [b.card]: !l,
-    [L.nowPlaying]: null != f && l
+    [L.nowPlaying]: null != m && l
   });
 
   function y() {
-    u.default.deleteEntry(f)
+    u.default.deleteEntry(m)
   }
 
   function F() {
-    f.name !== M && u.default.editName(f, M)
+    m.name !== M && u.default.editName(m, M)
   }
 
   function G(e) {
@@ -102,31 +102,31 @@ function G(e) {
   }
 
   function k() {
-    u.default.toggleDetection(f)
+    u.default.toggleDetection(m)
   }
 
   function H() {
     if (x) return;
-    let e = null != f.id ? T.default.getDetectableGame(f.id) : null;
+    let e = null != m.id ? T.default.getDetectableGame(m.id) : null;
     O.default.track(v.AnalyticEvents.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
       application_id: null == e ? void 0 : e.id,
-      game_name: f.name
+      game_name: m.name
     }), (0, d.showToast)((0, d.createToast)(D.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({
-      gameName: f.name
+      gameName: m.name
     }), d.ToastType.SUCCESS)), R(!0)
   }
   return (0, a.jsxs)("div", {
     className: U,
     children: [(0, a.jsxs)("div", {
       className: i()(L.gameNameLastPlayed, j.vertical),
-      children: [f.verified && !E ? (0, a.jsxs)("div", {
+      children: [m.verified && !E ? (0, a.jsxs)("div", {
         className: L.detectedApplication,
         children: [(0, a.jsx)("div", {
           className: L.gameName,
-          children: f.name
+          children: m.name
         }), (0, a.jsx)(d.Tooltip, {
           text: D.default.Messages.SETTINGS_GAMES_VERIFIED_ICON,
-          children: e => (0, a.jsx)(m.default, {
+          children: e => (0, a.jsx)(_.default, {
             className: L.gameVerifiedIcon,
             size: 18,
             color: o.default.unsafe_rawColors.BRAND_500.css,
@@ -151,7 +151,7 @@ function G(e) {
         let {
           played: t,
           exePath: s
-        } = f;
+        } = m;
         return l ? e = D.default.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE : null != t && "" !== t && (e = D.default.Messages.SETTINGS_GAMES_LAST_PLAYED.format({
           when: t
         })), (0, a.jsx)("div", {
@@ -189,7 +189,7 @@ function G(e) {
     }), function() {
       let {
         detectable: e
-      } = f, t = e ? (0, a.jsx)(h.default, {
+      } = m, t = e ? (0, a.jsx)(h.default, {
         className: L.toggleIconOn,
         foreground: L.fill,
         width: 24,
@@ -226,7 +226,7 @@ function G(e) {
       let {
         overlay: e,
         overlayWarn: t
-      } = f, s = e ? (0, a.jsx)(p.default, {
+      } = m, s = e ? (0, a.jsx)(p.default, {
         className: L.toggleIconOn,
         foreground: L.fill
       }) : (0, a.jsx)(C.default, {
@@ -253,7 +253,7 @@ function G(e) {
               className: L.toggleIcon,
               onClick: () => {
                 var t;
-                return t = !e, void u.default.toggleOverlay(f, t)
+                return t = !e, void u.default.toggleOverlay(m, t)
               },
               onMouseEnter: n,
               onMouseLeave: l,
@@ -291,7 +291,7 @@ function H(e) {
   } = e;
   return (0, a.jsxs)(y, {
     className: U.marginTop40,
-    children: [(0, a.jsx)(f.EmptyStateImage, {
+    children: [(0, a.jsx)(m.EmptyStateImage, {
       darkSrc: s("879601"),
       lightSrc: s("889000"),
       width: 430,
@@ -343,7 +343,7 @@ t.default = function() {
         })
       })]
     }), 0 === e.length ? (0, a.jsx)(H, {
-      children: (0, a.jsx)(f.EmptyStateText, {
+      children: (0, a.jsx)(m.EmptyStateText, {
         children: D.default.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
       })
     }) : (0, a.jsxs)(d.FormSection, {

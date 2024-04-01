@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   getFilteredPerksDiscoverabilityCards: function() {
-    return f
+    return S
   },
   getRewardingTenureCtaDescription: function() {
     return I
@@ -16,7 +16,7 @@ s.r(t), s.d(t, {
     return _
   },
   getThemedImage: function() {
-    return S
+    return f
   },
   usePerksDiscoverabilityStrings: function() {
     return m
@@ -82,7 +82,7 @@ function I(e, t) {
       return ""
   }
 }
-let S = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
+let f = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
   R = e => {
     let {
       cards: t,
@@ -110,7 +110,7 @@ let S = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
       card: s.unlimitedSuperReactions
     }), t
   },
-  f = (e, t, s, a, i) => {
+  S = (e, t, s, a, i) => {
     let r = [];
     switch (t) {
       case o.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY:

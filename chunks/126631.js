@@ -16,12 +16,12 @@ var a = s("735250"),
   S = s("981631"),
   E = s("689938"),
   T = s("920187");
-let _ = (0, u.uid)(),
-  f = (0, d.createChannelRecord)({
+let f = (0, u.uid)(),
+  m = (0, d.createChannelRecord)({
     id: "1",
     type: S.ChannelTypes.DM
   }),
-  m = (0, u.uid)();
+  _ = (0, u.uid)();
 
 function g(e) {
   let {
@@ -40,20 +40,20 @@ function g(e) {
     }
   }, [u, h]), (0, a.jsxs)(c.default, {
     title: t,
-    titleId: _,
+    titleId: f,
     description: E.default.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
     errors: s,
     disabled: N,
     children: [(0, a.jsx)(o.default, {
-      "aria-describedby": m,
-      "aria-labelledby": _,
+      "aria-describedby": _,
+      "aria-labelledby": f,
       innerClassName: T.bioTextArea,
       maxCharacterCount: S.BIO_MAX_LENGTH,
       onChange: function(e, t, s) {
         t !== I && (p(t), A(s), d(t))
       },
       placeholder: g,
-      channel: f,
+      channel: m,
       textValue: I,
       richValue: C,
       type: i.ChatInputTypes.PROFILE_BIO_INPUT,
@@ -73,7 +73,7 @@ function g(e) {
         })
       }
     }), (0, a.jsx)(l.HiddenVisually, {
-      id: m,
+      id: _,
       children: E.default.Messages.MAXIMUM_LENGTH.format({
         maxLength: S.BIO_MAX_LENGTH
       })

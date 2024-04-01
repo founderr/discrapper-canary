@@ -12,14 +12,14 @@ var a = n("803997"),
   c = n("952164"),
   f = n("131704"),
   h = n("314897"),
-  C = n("594174"),
-  p = n("409216"),
+  p = n("594174"),
+  C = n("409216"),
   m = n("768581"),
   g = n("51144"),
   E = n("754231"),
-  S = n("299505");
+  _ = n("299505");
 
-function _(e) {
+function I(e) {
   let {
     guildId: t,
     member: n,
@@ -33,7 +33,7 @@ function _(e) {
       return (0, l.jsx)(r.Avatar, {
         src: null != i ? i : n.user.getAvatarURL(t, 16),
         size: r.AvatarSizes.SIZE_16,
-        className: s()(a, S.partyAvatar),
+        className: s()(a, _.partyAvatar),
         "aria-label": null !== (o = n.nick) && void 0 !== o ? o : g.default.getName(n.user),
         ...e
       })
@@ -41,23 +41,23 @@ function _(e) {
   })
 }
 
-function I(e) {
+function S(e) {
   let {
     members: t,
     guildId: n
   } = e;
-  return (0, l.jsx)(p.default, {
-    className: S.partyMembers,
+  return (0, l.jsx)(C.default, {
+    className: _.partyMembers,
     guildId: n,
     users: t,
     max: 6,
-    renderUser: (e, t, a) => (0, l.jsx)(_, {
+    renderUser: (e, t, a) => (0, l.jsx)(I, {
       guildId: n,
       member: e,
       className: t
     }, a),
     renderMoreUsers: (e, t, n) => (0, l.jsx)("div", {
-      className: s()(S.morePartyMembers, t),
+      className: s()(_.morePartyMembers, t),
       children: e
     }, n)
   })
@@ -69,21 +69,21 @@ t.default = e => {
     members: a,
     embeddedApp: s,
     onAction: r
-  } = e, p = null != s, m = p ? Array.from(s.embeddedActivity.userIds) : [], g = (0, i.useStateFromStores)([C.default, h.default], () => {
+  } = e, C = null != s, m = C ? Array.from(s.embeddedActivity.userIds) : [], g = (0, i.useStateFromStores)([p.default, h.default], () => {
     if (null != a) {
       var e, t, l, s;
-      return a.length <= 0 ? null : p ? null !== (t = null === (e = a.find(e => e.voiceState.sessionId === (null == n ? void 0 : n.session_id))) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : C.default.getUser(m[0]) : null !== (s = null === (l = a.find(e => e.user.id !== h.default.getId())) || void 0 === l ? void 0 : l.user) && void 0 !== s ? s : a[0].user
+      return a.length <= 0 ? null : C ? null !== (t = null === (e = a.find(e => e.voiceState.sessionId === (null == n ? void 0 : n.session_id))) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : p.default.getUser(m[0]) : null !== (s = null === (l = a.find(e => e.user.id !== h.default.getId())) || void 0 === l ? void 0 : l.user) && void 0 !== s ? s : a[0].user
     }
-    if (p) return C.default.getUser(m[0])
+    if (C) return p.default.getUser(m[0])
   });
   if (null == g) return null;
-  let _ = p || (0, u.default)(n),
+  let I = C || (0, u.default)(n),
     N = (0, f.isVoiceChannel)(t.type);
   return (0, l.jsxs)("div", {
-    className: S.activity,
+    className: _.activity,
     children: [(0, l.jsx)("div", {
-      className: S.channelActivityContainer,
-      children: _ ? (0, l.jsx)(E.default, {
+      className: _.channelActivityContainer,
+      children: I ? (0, l.jsx)(E.default, {
         activity: n,
         embeddedApp: s,
         user: g,
@@ -98,23 +98,23 @@ t.default = e => {
         user: g,
         guildId: t.getGuildId(),
         channelId: t.id,
-        renderHeaderAccessory: null != a ? () => (0, l.jsx)(I, {
+        renderHeaderAccessory: null != a ? () => (0, l.jsx)(S, {
           guildId: t.guild_id,
           members: a
         }) : void 0,
-        isEmbedded: p
+        isEmbedded: C
       })
     }), (0, l.jsx)("div", {
-      className: S.activityActionsContainer,
+      className: _.activityActionsContainer,
       children: (0, l.jsx)(d.default, {
         type: o.UserActivityTypes.VOICE_CHANNEL,
         activity: n,
         user: g,
         guildId: t.getGuildId(),
         channelId: t.id,
-        color: S.button,
+        color: _.button,
         onAction: r,
-        isEmbedded: p
+        isEmbedded: C
       })
     })]
   })

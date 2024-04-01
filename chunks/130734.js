@@ -16,7 +16,7 @@ function E(e) {
     [t]: !1
   }
 }
-class h extends(i = r.default.Store) {
+class _ extends(i = r.default.Store) {
   shouldShowGuildTemplateDirtyTooltip(e) {
     var t;
     return null !== (t = c[e]) && void 0 !== t && t
@@ -25,12 +25,12 @@ class h extends(i = r.default.Store) {
     return !f
   }
 }
-l = "GuildTemplateTooltipStore", (s = "displayName") in(a = h) ? Object.defineProperty(a, s, {
+l = "GuildTemplateTooltipStore", (s = "displayName") in(a = _) ? Object.defineProperty(a, s, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = l, t.default = new h(u.default, {
+}) : a[s] = l, t.default = new _(u.default, {
   GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH: function(e) {
     let {
       guildTemplate: t

@@ -15,14 +15,14 @@ var l = n("735250"),
   c = n("607070"),
   f = n("492162"),
   h = n("451478"),
-  C = n("409216"),
-  p = n("86813"),
+  p = n("409216"),
+  C = n("86813"),
   m = n("826026"),
   g = n("632184"),
   E = n("934415"),
-  S = n("968847"),
-  _ = n("689938"),
-  I = n("308530");
+  _ = n("968847"),
+  I = n("689938"),
+  S = n("308530");
 let N = {
   friction: 30,
   tension: 300
@@ -35,31 +35,31 @@ function T(e) {
     jumpToVoiceChannels: s
   } = e, r = n.getCategoryFromSection(n.voiceChannelsSectionNumber), o = (0, f.default)(n.id), c = a.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), s()
-  }, [s]), h = null !== (t = null == r ? void 0 : r.getChannelRecords()) && void 0 !== t ? t : [], p = (0, E.computeSummarizedVoiceUsers)({
+  }, [s]), h = null !== (t = null == r ? void 0 : r.getChannelRecords()) && void 0 !== t ? t : [], C = (0, E.computeSummarizedVoiceUsers)({
     channels: h,
     selectedChannelId: null,
     selectedVoiceChannelId: null,
     voiceStates: o
   });
   return (0, l.jsxs)(d.Clickable, {
-    className: i()(I.bar),
+    className: i()(S.bar),
     onClick: c,
     children: [(0, l.jsx)(g.default, {
-      className: I.voiceChannelsIcon,
+      className: S.voiceChannelsIcon,
       width: 14,
       height: 14,
       color: u.default.unsafe_rawColors.GREEN_330.css
     }), (0, l.jsx)(d.Text, {
       variant: "text-xs/semibold",
       color: "text-positive",
-      className: I.barText,
-      children: _.default.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
-        count: p.length
+      className: S.barText,
+      children: I.default.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
+        count: C.length
       })
-    }), (0, l.jsx)(C.default, {
+    }), (0, l.jsx)(p.default, {
       guildId: n.id,
-      className: I.voiceChannelsUsers,
-      users: p.slice(0, 4),
+      className: S.voiceChannelsUsers,
+      users: C.slice(0, 4),
       renderMoreUsers: () => null,
       max: 4,
       size: d.AvatarSizes.SIZE_16
@@ -75,61 +75,61 @@ function A(e) {
     jumpToVoiceChannels: u,
     jumpToChannel: f
   } = e, {
-    bottomBar: C,
+    bottomBar: p,
     topBar: g
-  } = (0, o.useStateFromStoresObject)([S.default], () => S.default.getUnreadStateForGuildId(n.id)), E = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), A = (0, o.useStateFromStores)([h.default], () => h.default.isFocused()), {
+  } = (0, o.useStateFromStoresObject)([_.default], () => _.default.getUnreadStateForGuildId(n.id)), E = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), A = (0, o.useStateFromStores)([h.default], () => h.default.isFocused()), {
     mode: L,
     mentionCount: v,
     targetChannelId: x
-  } = "bottom" === t ? C : g, R = L === S.UnreadBarMode.HIDDEN, O = (0, r.useSpring)({
+  } = "bottom" === t ? p : g, R = L === _.UnreadBarMode.HIDDEN, O = (0, r.useSpring)({
     to: {
       transform: R ? "bottom" === t ? "translateY(180%)" : "translateY(-180%)" : "translateY(0%)"
     },
     config: N,
     immediate: E || !A
-  }), y = a.useCallback(e => {
+  }), M = a.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), null != x && f(x)
   }, [f, x]);
   return (0, l.jsx)("div", {
-    className: i()(I.container, {
-      [I.top]: "top" === t,
-      [I.bottom]: "bottom" === t
+    className: i()(S.container, {
+      [S.top]: "top" === t,
+      [S.bottom]: "bottom" === t
     }),
     children: (0, l.jsx)(r.animated.div, {
-      className: I.containerPadding,
+      className: S.containerPadding,
       style: O,
       "aria-hidden": R,
-      children: L === S.UnreadBarMode.HIDDEN ? (0, l.jsx)("div", {
-        className: i()(I.bar, I.emptyBar)
-      }) : L === S.UnreadBarMode.UNREAD ? (0, l.jsxs)(d.Clickable, {
-        className: I.bar,
-        onClick: y,
-        children: ["bottom" === t ? (0, l.jsx)(p.default, {
-          className: I.unreadIcon,
+      children: L === _.UnreadBarMode.HIDDEN ? (0, l.jsx)("div", {
+        className: i()(S.bar, S.emptyBar)
+      }) : L === _.UnreadBarMode.UNREAD ? (0, l.jsxs)(d.Clickable, {
+        className: S.bar,
+        onClick: M,
+        children: ["bottom" === t ? (0, l.jsx)(C.default, {
+          className: S.unreadIcon,
           height: 14,
           width: 14
         }) : (0, l.jsx)(m.default, {
-          className: I.unreadIcon,
+          className: S.unreadIcon,
           height: 14,
           width: 14
         }), (0, l.jsx)(d.Text, {
           variant: "text-xs/semibold",
           color: "interactive-normal",
-          className: I.barText,
-          children: _.default.Messages.NEW_UNREADS
+          className: S.barText,
+          children: I.default.Messages.NEW_UNREADS
         })]
-      }) : L === S.UnreadBarMode.MENTIONS ? (0, l.jsx)(d.Clickable, {
-        className: i()(I.bar, I.mentionsBar),
-        onClick: y,
+      }) : L === _.UnreadBarMode.MENTIONS ? (0, l.jsx)(d.Clickable, {
+        className: i()(S.bar, S.mentionsBar),
+        onClick: M,
         children: (0, l.jsx)(d.Text, {
           variant: "text-xs/semibold",
           color: "status-danger-text",
-          className: I.barText,
-          children: _.default.Messages.NEW_MENTIONS_COUNT.format({
+          className: S.barText,
+          children: I.default.Messages.NEW_MENTIONS_COUNT.format({
             count: v
           })
         })
-      }) : L === S.UnreadBarMode.VOICE_CHANNELS ? (0, l.jsx)(T, {
+      }) : L === _.UnreadBarMode.VOICE_CHANNELS ? (0, l.jsx)(T, {
         jumpToVoiceChannels: u,
         guildChannels: n,
         guildChannelsVersion: s

@@ -12,9 +12,9 @@ var a = s("735250"),
   S = s("230711"),
   E = s("497321"),
   T = s("468026"),
-  _ = s("566620"),
-  f = s("317381"),
-  m = s("713938"),
+  f = s("566620"),
+  m = s("317381"),
+  _ = s("713938"),
   g = s("881998"),
   h = s("246946"),
   N = s("186095"),
@@ -126,7 +126,7 @@ let U = e => {
         })
       })(), (() => {
         let e = [];
-        for (let s of t) e.push((0, m.getScopeName)(s, t)), s === v.OAuth2Scopes.APPLICATIONS_COMMANDS && e.push(D.default.Messages.SCOPE_DM_YOU);
+        for (let s of t) e.push((0, _.getScopeName)(s, t)), s === v.OAuth2Scopes.APPLICATIONS_COMMANDS && e.push(D.default.Messages.SCOPE_DM_YOU);
         if (e.length > 0) return (0, a.jsx)(u.FormItem, {
           faded: !0,
           title: D.default.Messages.PERMISSIONS,
@@ -151,7 +151,7 @@ let U = e => {
 t.default = () => {
   let e = (0, d.useStateFromStores)([h.default], () => h.default.hidePersonalInformation),
     t = (0, d.useStateFromStores)([g.default], () => g.default.getApps()),
-    l = (0, d.useStateFromStores)([f.default], () => f.default.getSelfEmbeddedActivities());
+    l = (0, d.useStateFromStores)([m.default], () => m.default.getSelfEmbeddedActivities());
   n.useEffect(() => {
     c.default.fetch()
   }, []);
@@ -162,7 +162,7 @@ t.default = () => {
       } = e;
       c.default.delete(t);
       let a = l.get(s.id);
-      null != a && (0, _.stopEmbeddedActivity)({
+      null != a && (0, f.stopEmbeddedActivity)({
         channelId: a.channelId,
         applicationId: s.id
       })
@@ -171,7 +171,7 @@ t.default = () => {
     T = e => {
       S(e)
     },
-    m = () => {
+    _ = () => {
       S("")
     },
     I = () => (0, a.jsx)("div", {
@@ -180,7 +180,7 @@ t.default = () => {
         size: p.default.Sizes.MEDIUM,
         query: r,
         onChange: T,
-        onClear: m,
+        onClear: _,
         placeholder: D.default.Messages.INTEGRATIONS_SEARCH,
         "aria-label": D.default.Messages.INTEGRATIONS_SEARCH
       })

@@ -14,8 +14,8 @@ var a, s = n("735250"),
   c = n("481060"),
   f = n("37234"),
   E = n("134616"),
-  h = n("714338"),
-  _ = n("663993"),
+  _ = n("714338"),
+  h = n("663993"),
   C = n("210887"),
   S = n("819640"),
   m = n("725568"),
@@ -32,22 +32,22 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = (0, _.makeLazy)({
-    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("24267"), n.e("8895"), n.e("15972"), n.e("58625"), n.e("6416"), n.e("14720"), n.e("63438"), n.e("33053"), n.e("51238"), n.e("17938"), n.e("76540"), n.e("65866"), n.e("5528"), n.e("77030"), n.e("18824"), n.e("74753"), n.e("79618")]).then(n.bind(n, "989804")),
+let N = (0, h.makeLazy)({
+    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("24267"), n.e("8895"), n.e("15972"), n.e("58625"), n.e("6416"), n.e("14720"), n.e("63438"), n.e("33053"), n.e("51238"), n.e("17938"), n.e("76540"), n.e("65866"), n.e("5528"), n.e("51932"), n.e("18824"), n.e("74753"), n.e("79618")]).then(n.bind(n, "989804")),
     webpackId: "989804",
     name: "UserSettings"
   }),
-  R = (0, _.makeLazy)({
+  R = (0, h.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("33053"), n.e("85093"), n.e("78587")]).then(n.bind(n, "869779")),
     webpackId: "869779",
     name: "ChannelSettings"
   }),
-  O = (0, _.makeLazy)({
+  O = (0, h.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("18249")]).then(n.bind(n, "838819")),
     webpackId: "838819",
     name: "CollectiblesShop"
   }),
-  v = (0, _.makeLazy)({
+  v = (0, h.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("24267"), n.e("33053"), n.e("51238"), n.e("75475"), n.e("85093"), n.e("16114"), n.e("85552"), n.e("58227"), n.e("43502")]).then(n.bind(n, "994763")),
     webpackId: "994763",
     name: "GuildSettings"
@@ -66,7 +66,7 @@ let N = (0, _.makeLazy)({
   };
 
 function D() {
-  return l.useEffect(() => (h.default.enable(), h.default.enableTemp(E.SETTINGS_LAYERS_LAYOUT), () => h.default.disableTemp()), []), null
+  return l.useEffect(() => (_.default.enable(), _.default.enableTemp(E.SETTINGS_LAYERS_LAYOUT), () => _.default.disableTemp()), []), null
 }
 class x extends(a = l.PureComponent) {
   static getDerivedStateFromProps(e, t) {

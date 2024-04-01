@@ -38,8 +38,8 @@ var i = n("735250"),
   b = n("579729"),
   G = n("302316"),
   w = n("186395"),
-  k = n("584045"),
-  B = n("58307"),
+  B = n("584045"),
+  k = n("58307"),
   V = n("981631"),
   F = n("700481"),
   x = n("27729");
@@ -63,7 +63,7 @@ function H(e) {
   } = e, et = (0, o.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), en = (0, o.useStateFromStores)([h.default], () => {
     var e;
     return null === (e = h.default.getUserProfile(j.id)) || void 0 === e ? void 0 : e.application
-  }), ei = (0, o.useStateFromStores)([_.default], () => null != _.default.getAnyStreamForUser(j.id)), er = (0, B.useGetVoiceChannelInfoForVoiceActivitySection)(j.id, null == K ? void 0 : K.id), es = (null == H ? void 0 : H.type) === V.ActivityTypes.HANG_STATUS, ea = !ei && null != er && !es, {
+  }), ei = (0, o.useStateFromStores)([_.default], () => null != _.default.getAnyStreamForUser(j.id)), er = (0, k.useGetVoiceChannelInfoForVoiceActivitySection)(j.id, null == K ? void 0 : K.id), es = (null == H ? void 0 : H.type) === V.ActivityTypes.HANG_STATUS, ea = !ei && null != er && !es, {
     showVoiceActivityInProfile: eo
   } = A.VoiceActivityProfileExperiment.useExperiment({
     location: "user popout"
@@ -101,7 +101,7 @@ function H(e) {
       location: "28tk0bf_3"
     });
   if (j.isSystemUser()) return null;
-  if (j.isNonUserBot()) return (0, i.jsx)(k.default, {
+  if (j.isNonUserBot()) return (0, i.jsx)(B.default, {
     user: j,
     nickname: null,
     pronouns: null,
@@ -116,7 +116,7 @@ function H(e) {
       }
     };
   return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(k.default, {
+    children: [(0, i.jsx)(B.default, {
       className: F.usernameSection,
       user: j,
       nickname: eA,
@@ -156,7 +156,7 @@ function H(e) {
           guildMember: z
         }), eh && (0, i.jsx)(O.UserProfileRecentGamesSection, {
           userId: j.id
-        }), eo && ea && (0, i.jsx)(B.default, {
+        }), eo && ea && (0, i.jsx)(k.default, {
           voiceChannel: er.voiceChannel,
           voiceGuild: er.voiceGuild,
           color: x.buttonColor

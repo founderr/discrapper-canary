@@ -34,8 +34,8 @@ var i = n("735250"),
   b = n("540780"),
   G = n("543241"),
   w = n("883661"),
-  k = n("880949"),
-  B = n("784222"),
+  B = n("880949"),
+  k = n("784222"),
   V = n("566083"),
   F = n("172800"),
   x = n("149203"),
@@ -100,7 +100,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       let {
         columnIndex: t,
         visibleRowIndex: n
-      } = e, i = e.type === B.EmojiGridItemTypes.EMOJI ? e.emoji.allNamesString : e.name;
+      } = e, i = e.type === k.EmojiGridItemTypes.EMOJI ? e.emoji.allNamesString : e.name;
       j.current !== H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(j.current), j.current = window.requestAnimationFrame(() => {
         A.EmojiPickerStore.setInspectedExpressionPosition(t, n, N.InspectedExpressionChangeSource.MOUSE_EVENT), A.EmojiPickerStore.setSearchPlaceholder(i), j.current = H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
       })
@@ -142,7 +142,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           sectionId: l
         } = n;
         if (o === x.EmojiCategoryTypes.SEARCH_RESULTS) return;
-        let u = o === x.EmojiCategoryTypes.GUILD ? null != r ? (0, i.jsx)(k.default, {
+        let u = o === x.EmojiCategoryTypes.GUILD ? null != r ? (0, i.jsx)(B.default, {
             guild: r,
             height: 16,
             width: 16
@@ -229,8 +229,8 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       isUsingKeyboardNavigation: U,
       channelGuildId: G,
       messageId: w,
-      isBurstReaction: k,
-      listHeaderClassName: B
+      isBurstReaction: B,
+      listHeaderClassName: k
     } = e, V = r.useRef(!1), F = A.EmojiPickerStore.useStore(e => e.activeCategoryIndex), x = (0, m.useExpressionPickerStore)(e => e.searchQuery), Y = L.AnimateEmoji.useSetting(), z = (0, _.useStateFromStores)([D.default], () => D.default.getCurrentUser()), X = (0, P.isPremium)(z), {
       location: Q
     } = (0, f.useAnalyticsContext)(), {
@@ -274,8 +274,8 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       allowAnimatedEmoji: Y,
       channelGuildId: G,
       messageId: w,
-      isBurstReaction: k,
-      listHeaderClassName: B,
+      isBurstReaction: B,
+      listHeaderClassName: k,
       activeSectionIndex: J,
       upsellGlowOpacity: et,
       enableNitroUpsell: el

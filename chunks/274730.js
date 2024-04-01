@@ -95,8 +95,8 @@ var E = s("654861"),
   A = s("866442"),
   l = s("911969"),
   I = s("933557"),
-  r = s("710845"),
-  o = s("339085"),
+  o = s("710845"),
+  r = s("339085"),
   L = s("236413"),
   d = s("45966"),
   N = s("563534"),
@@ -118,7 +118,7 @@ var E = s("654861"),
   y = s("273504"),
   v = s("765305"),
   H = s("689938");
-let V = new r.default("AuditLogUtils"),
+let V = new o.default("AuditLogUtils"),
   B = -1,
   F = () => ({
     [m.AuditLogChangeKeys.REASON]: H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
@@ -1047,7 +1047,7 @@ function el(e, t) {
           case m.AuditLogTargetTypes.WEBHOOK:
             return eL(e, m.AuditLogChangeKeys.NAME, e => S.default.webhooks.find(t => t.id === e), e => e.name);
           case m.AuditLogTargetTypes.EMOJI:
-            return eL(e, m.AuditLogChangeKeys.NAME, e => o.default.getGuildEmoji(t.id).find(t => t.id === e), e => e.name);
+            return eL(e, m.AuditLogChangeKeys.NAME, e => r.default.getGuildEmoji(t.id).find(t => t.id === e), e => e.name);
           case m.AuditLogTargetTypes.STICKER:
             return eL(e, m.AuditLogChangeKeys.NAME, e => D.default.getStickerById(e), e => e.name);
           case m.AuditLogTargetTypes.STAGE_INSTANCE:
@@ -1125,23 +1125,23 @@ function el(e, t) {
             }
             switch (e.key) {
               case m.AuditLogChangeKeys.OWNER_ID:
-                return eo(e, e => C.default.getUser(e));
+                return er(e, e => C.default.getUser(e));
               case m.AuditLogChangeKeys.CHANNEL_ID:
               case m.AuditLogChangeKeys.AFK_CHANNEL_ID:
               case m.AuditLogChangeKeys.SYSTEM_CHANNEL_ID:
               case m.AuditLogChangeKeys.RULES_CHANNEL_ID:
               case m.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID:
-                return eo(e, e => G.default.getChannel(e), e => (0, I.computeChannelName)(e, C.default, U.default, !0));
+                return er(e, e => G.default.getChannel(e), e => (0, I.computeChannelName)(e, C.default, U.default, !0));
               case m.AuditLogChangeKeys.AFK_TIMEOUT:
-                return eo(e, e => e / 60);
+                return er(e, e => e / 60);
               case m.AuditLogChangeKeys.BITRATE:
-                return eo(e, e => e / 1e3);
+                return er(e, e => e / 1e3);
               case m.AuditLogChangeKeys.COLOR:
-                return eo(e, e => (0, A.int2hex)(e).toUpperCase());
+                return er(e, e => (0, A.int2hex)(e).toUpperCase());
               case m.AuditLogChangeKeys.THEME_COLORS:
-                return eo(e, e => "".concat((0, A.int2hex)(e[0]).toUpperCase(), ", ").concat((0, A.int2hex)(e[1]).toUpperCase()));
+                return er(e, e => "".concat((0, A.int2hex)(e[0]).toUpperCase(), ", ").concat((0, A.int2hex)(e[1]).toUpperCase()));
               case m.AuditLogChangeKeys.MAX_AGE:
-                return eo(e, e => {
+                return er(e, e => {
                   let t = h.default.getMaxAgeOptions.find(t => {
                     let {
                       value: s
@@ -1215,12 +1215,12 @@ function el(e, t) {
                 return t
               }
               case m.AuditLogChangeKeys.PREFERRED_LOCALE:
-                return eo(e, e => {
+                return er(e, e => {
                   let t = H.default.getAvailableLocales().find(t => t.value === e);
                   return null != t ? t.name : null
                 });
               case m.AuditLogChangeKeys.VIDEO_QUALITY_MODE:
-                return eo(e, e => e === m.VideoQualityMode.FULL ? H.default.Messages.VIDEO_QUALITY_MODE_FULL : H.default.Messages.VIDEO_QUALITY_MODE_AUTO);
+                return er(e, e => e === m.VideoQualityMode.FULL ? H.default.Messages.VIDEO_QUALITY_MODE_FULL : H.default.Messages.VIDEO_QUALITY_MODE_AUTO);
               case m.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAGS:
                 return function(e) {
                   let t = {
@@ -1239,16 +1239,16 @@ function el(e, t) {
                   }), s
                 }(e);
               case m.AuditLogChangeKeys.AUTO_MODERATION_ACTIONS:
-                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eo(e, e => e.map(e => e.type), e => e.map(L.actionTypeToName).join(", "));
+                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return er(e, e => e.map(e => e.type), e => e.map(L.actionTypeToName).join(", "));
                 break;
               case m.AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE:
-                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eo(e, L.eventTypeToName);
+                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return er(e, L.eventTypeToName);
                 break;
               case m.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_TYPE:
-                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eo(e, L.triggerTypeToName);
+                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return er(e, L.triggerTypeToName);
                 break;
               case m.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_METADATA:
-                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eo(e, e => {
+                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return er(e, e => {
                   if (null != e && "object" == typeof e) return null != e.keyword_filter && Array.isArray(e.keyword_filter) ? H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_METADATA_KEYWORDS_UPDATE.plainFormat({
                     newValue: e.keyword_filter.map(e => "'".concat(e, "'")).join(", ")
                   }) : JSON.stringify(e);
@@ -1261,13 +1261,13 @@ function el(e, t) {
               case m.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_REGEX_PATTERNS:
               case m.AuditLogChangeKeys.AUTO_MODERATION_ADD_ALLOW_LIST:
               case m.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_ALLOW_LIST:
-                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eo(e, e => null != e && Array.isArray(e) ? e.map(e => "'".concat(e, "'")).join(", ") : JSON.stringify(e));
+                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return er(e, e => null != e && Array.isArray(e) ? e.map(e => "'".concat(e, "'")).join(", ") : JSON.stringify(e));
                 break;
               case m.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_CHANNELS:
-                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eo(e, e => e.map(G.default.getChannel).filter(e => null != e).map(e => (0, I.computeChannelName)(e, C.default, U.default, !0)), e => null != e && e.length > 0 ? e.join(", ") : H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE);
+                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return er(e, e => e.map(G.default.getChannel).filter(e => null != e).map(e => (0, I.computeChannelName)(e, C.default, U.default, !0)), e => null != e && e.length > 0 ? e.join(", ") : H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE);
                 break;
               case m.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES:
-                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eo(e, e => e.map(e => O.default.getRole(s.id, e)).filter(e => null != e).map(e => e.name), e => null != e && e.length > 0 ? e.join(", ") : H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE);
+                if (t.targetType === m.AuditLogTargetTypes.AUTO_MODERATION_RULE) return er(e, e => e.map(e => O.default.getRole(s.id, e)).filter(e => null != e).map(e => e.name), e => null != e && e.length > 0 ? e.join(", ") : H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE);
                 break;
               case m.AuditLogChangeKeys.AVAILABLE_TAGS:
                 return function(e) {
@@ -1284,22 +1284,22 @@ function el(e, t) {
                       n[e.id] = e
                     }), E.length < _.length) {
                     for (let e in n)
-                      if (null == a[e]) return new c.AuditLogChange(m.AuditLogChangeKeys.AVAILABLE_TAG_ADD, null, er(n[e]))
+                      if (null == a[e]) return new c.AuditLogChange(m.AuditLogChangeKeys.AVAILABLE_TAG_ADD, null, eo(n[e]))
                   }
                   if (E.length > _.length) {
                     for (let e in a)
-                      if (null == n[e]) return new c.AuditLogChange(m.AuditLogChangeKeys.AVAILABLE_TAG_DELETE, null, er(a[e]))
+                      if (null == n[e]) return new c.AuditLogChange(m.AuditLogChangeKeys.AVAILABLE_TAG_DELETE, null, eo(a[e]))
                   }
                   for (let e in a) {
                     let t = a[e],
                       s = n[e];
-                    if ((null == s ? void 0 : s.name) !== t.name || (null == s ? void 0 : s.emoji_id) !== t.emoji_id || (null == s ? void 0 : s.emoji_name) !== t.emoji_name) return new c.AuditLogChange(m.AuditLogChangeKeys.AVAILABLE_TAG_EDIT, er(t), er(s))
+                    if ((null == s ? void 0 : s.name) !== t.name || (null == s ? void 0 : s.emoji_id) !== t.emoji_id || (null == s ? void 0 : s.emoji_name) !== t.emoji_name) return new c.AuditLogChange(m.AuditLogChangeKeys.AVAILABLE_TAG_EDIT, eo(t), eo(s))
                   }
                   return e
                 }(e);
               case m.AuditLogChangeKeys.SCHEDULED_START_TIME:
               case m.AuditLogChangeKeys.SCHEDULED_END_TIME:
-                return eo(e, e => (0, M.dateFormat)(n()(new Date(e)), "LLLL"))
+                return er(e, e => (0, M.dateFormat)(n()(new Date(e)), "LLLL"))
             }
             return e
           }(E, e, t);
@@ -1328,7 +1328,7 @@ function eI(e, t) {
   }
 }
 
-function er(e) {
+function eo(e) {
   return null == e ? null : {
     id: e.id,
     name: e.name,
@@ -1338,7 +1338,7 @@ function er(e) {
   }
 }
 
-function eo(e, t, s) {
+function er(e, t, s) {
   let E = e.newValue,
     _ = e.oldValue;
   return null != e.newValue && (E = t(e.newValue), null != s && null != E && (E = s(E))), null != e.oldValue && (_ = t(e.oldValue), null != s && null != _ && (_ = s(_))), new c.AuditLogChange(e.key, _ || e.oldValue, E || e.newValue)

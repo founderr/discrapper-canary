@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("427217"),
   f = n("246133"),
   E = n("383832"),
-  h = n("474376"),
-  _ = n("695346"),
+  _ = n("474376"),
+  h = n("695346"),
   C = n("293273"),
   S = n("696202"),
   m = n("881201"),
@@ -49,7 +49,7 @@ function R(e) {
   let {
     customStatus: t
   } = e, n = e => {
-    e.stopPropagation(), _.CustomStatusSetting.updateSetting(void 0)
+    e.stopPropagation(), h.CustomStatusSetting.updateSetting(void 0)
   };
   return null != t ? (0, a.jsx)("div", {
     "aria-label": g.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
@@ -111,7 +111,7 @@ let v = e => {
     onClose: l,
     analyticsContext: i,
     onSelect: r
-  } = e, o = (0, h.useMultiAccountMenuItems)();
+  } = e, o = (0, _.useMultiAccountMenuItems)();
   s.useEffect(() => {
     I.default.track(T.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
@@ -218,7 +218,7 @@ let v = e => {
 };
 t.default = (0, d.default)(e => {
   let t = (0, r.useStateFromStores)([C.default], () => C.default.getCustomStatusActivity()),
-    n = _.StatusSetting.useSetting();
+    n = h.StatusSetting.useSetting();
   return (0, a.jsx)(v, {
     ...e,
     customStatus: t,

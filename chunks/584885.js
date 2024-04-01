@@ -11,13 +11,13 @@ var a = n("735250"),
   c = n("127541"),
   f = n("981631"),
   E = n("912625");
-let h = [
+let _ = [
     [1696, 20],
     [1432, 16],
     [1168, 12],
     [0, 8]
   ],
-  _ = [
+  h = [
     [1696, 30],
     [1432, 24],
     [1168, 18],
@@ -41,7 +41,7 @@ t.default = e => {
   s.useEffect(() => {
     i.default.wait(() => T())
   }, [A]);
-  let v = (0, c.default)(O ? _ : h),
+  let v = (0, c.default)(O ? h : _),
     {
       analyticsLocations: L
     } = (0, r.default)();

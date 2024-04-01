@@ -14,8 +14,8 @@ var a, s = n("735250"),
   c = n("481060"),
   f = n("212093"),
   E = n("683301"),
-  h = n("408814"),
-  _ = n("626135"),
+  _ = n("408814"),
+  h = n("626135"),
   C = n("585483"),
   S = n("900849"),
   m = n("878727"),
@@ -173,7 +173,7 @@ class L extends(a = l.PureComponent) {
         }),
         children: [(0, s.jsx)("div", {
           className: N.search,
-          children: (0, s.jsx)(h.default, {
+          children: (0, s.jsx)(_.default, {
             ref: this._searchRef,
             searchTerm: e,
             className: a ? void 0 : N.searchBox,
@@ -292,4 +292,4 @@ function P(e) {
     countsByCategory: n
   })
 }
-R(L, "contextType", void 0), L.contextType = _.AnalyticsContext
+R(L, "contextType", void 0), L.contextType = h.AnalyticsContext

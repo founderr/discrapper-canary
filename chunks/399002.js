@@ -62,26 +62,26 @@ function c(e, t, s) {
     S = 0,
     E = null,
     T = null,
-    _ = null,
     f = null,
-    m = null;
+    m = null,
+    _ = null;
   for (let e = 0; e < i.byteLength / r; e++) {
     let t = i.getUint32(4 * (4 * e + 0)),
       a = i.getUint32(4 * (4 * e + 1)),
       n = i.getUint32(4 * (4 * e + 2)),
       l = i.getUint32(4 * (4 * e + 3));
-    u++, c += a, S += a + s, null == T && (T = l), _ = l, null == E && (E = n), null == f && (f = t);
+    u++, c += a, S += a + s, null == T && (T = l), f = l, null == E && (E = n), null == m && (m = t);
     let r = l - (n - E);
-    null == m && (m = r), r < m && (m = r)
+    null == _ && (_ = r), r < _ && (_ = r)
   }
   let g = new n.Histogram,
     h = null;
   for (let e = 0; e < i.byteLength / r; e++) {
     let t = i.getUint32(4 * (4 * e + 2)),
-      s = (i.getUint32(4 * (4 * e + 3)) - (t - E) - m) / 1e3;
+      s = (i.getUint32(4 * (4 * e + 3)) - (t - E) - _) / 1e3;
     g.addSample(s), null == h && (h = s), s > h && (h = s)
   }
-  let N = null != T && null != _ ? (_ - T) / 1e3 : 0,
+  let N = null != T && null != f ? (f - T) / 1e3 : 0,
     I = 1 - u / d,
     p = 8 * c / N,
     C = 8 * S / N,

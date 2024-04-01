@@ -15,14 +15,14 @@ var l = n("735250"),
   c = n("451603"),
   f = n("885714"),
   h = n("155409"),
-  C = n("430824"),
-  p = n("594174"),
+  p = n("430824"),
+  C = n("594174"),
   m = n("729285"),
   g = n("40153"),
   E = n("603592"),
-  S = n("981631"),
-  _ = n("675999"),
-  I = n("689938"),
+  _ = n("981631"),
+  I = n("675999"),
+  S = n("689938"),
   N = n("196581");
 let T = {
   origin: {
@@ -52,19 +52,19 @@ function L(e) {
   let {
     disableTooltip: t,
     lastTargetNode: n
-  } = e, o = (0, s.useStateFromStores)([C.default], () => C.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, _.CREATE_GUILD_MODAL_KEY)), {
+  } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, I.CREATE_GUILD_MODAL_KEY)), {
     analyticsLocations: O
-  } = (0, u.default)(), y = (0, r.useRedesignIconContext)().enabled, M = (0, l.jsx)(E.default, {
+  } = (0, u.default)(), M = (0, r.useRedesignIconContext)().enabled, y = (0, l.jsx)(E.default, {
     showPill: !1,
     id: "create-join-button",
     onClick: () => {
       (0, c.isAtGuildCapAndNonPremium)() ? (0, f.default)({
         analyticsSource: {
-          page: S.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL
+          page: _.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL
         },
         analyticsLocation: {
-          page: S.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL,
-          section: S.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+          page: _.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL,
+          section: _.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
         },
         analyticsLocations: O
       }) : d.default.openCreateGuildModal({
@@ -73,17 +73,17 @@ function L(e) {
     },
     selected: R,
     onContextMenu: A,
-    tooltip: I.default.Messages.ADD_A_SERVER,
-    icon: y ? i.PlusMediumIcon : m.default
+    tooltip: S.default.Messages.ADD_A_SERVER,
+    icon: M ? i.PlusMediumIcon : m.default
   });
-  return t ? M : (0, l.jsx)("div", {
+  return t ? y : (0, l.jsx)("div", {
     className: N.tutorialContainer,
     children: (0, l.jsxs)(h.default, {
       tutorialId: x ? "create-more-servers" : "create-first-server",
       inlineSpecs: T,
       position: "right",
-      children: [M, null != n && (0, l.jsx)(g.default, {
-        name: I.default.Messages.DND_END_OF_LIST,
+      children: [y, null != n && (0, l.jsx)(g.default, {
+        name: S.default.Messages.DND_END_OF_LIST,
         targetNode: n,
         below: !0,
         noCombine: !0

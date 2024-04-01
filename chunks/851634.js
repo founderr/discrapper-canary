@@ -6,28 +6,28 @@ var s, i, r, o, u = n("392711"),
   c = n("442837"),
   f = n("570140"),
   h = n("189786");
-let C = Object.freeze({}),
-  p = {};
+let p = Object.freeze({}),
+  C = {};
 
 function m(e) {
   let {
     lobbyId: t
   } = e;
-  delete p[t]
+  delete C[t]
 }
 class g extends(o = c.default.Store) {
   getAllVoiceStates() {
-    return p
+    return C
   }
   getVoiceStates(e) {
     var t;
-    return null !== (t = p[e]) && void 0 !== t ? t : C
+    return null !== (t = C[e]) && void 0 !== t ? t : p
   }
   getVoiceState(e, t) {
     return this.getVoiceStates(e)[t]
   }
   getLobbyIdsForUser(e) {
-    return Object.keys(p).filter(t => null != p[t][e])
+    return Object.keys(C).filter(t => null != C[t][e])
   }
 }
 r = "LobbyVoiceStateStore", (i = "displayName") in(s = g) ? Object.defineProperty(s, i, {
@@ -41,7 +41,7 @@ r = "LobbyVoiceStateStore", (i = "displayName") in(s = g) ? Object.definePropert
       user: t,
       sessionId: n
     } = e;
-    p = {}, l = t.id, a = n
+    C = {}, l = t.id, a = n
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
@@ -49,9 +49,9 @@ r = "LobbyVoiceStateStore", (i = "displayName") in(s = g) ? Object.definePropert
       user: n,
       sessionId: s
     } = e;
-    p = {}, d().each(t, (e, t) => {
-      p[t] = {}, d().each(e, (e, n) => {
-        p[t][n] = new h.default(e)
+    C = {}, d().each(t, (e, t) => {
+      C[t] = {}, d().each(e, (e, n) => {
+        C[t][n] = new h.default(e)
       })
     }), l = n.id, a = s
   },
@@ -67,10 +67,10 @@ r = "LobbyVoiceStateStore", (i = "displayName") in(s = g) ? Object.definePropert
         selfMute: c,
         selfDeaf: f
       } = e,
-      C = i === l && s !== a,
-      m = null !== (t = p[r]) && void 0 !== t ? t : {},
+      p = i === l && s !== a,
+      m = null !== (t = C[r]) && void 0 !== t ? t : {},
       g = m[i];
-    if (null != o && !C && (n = null == g ? new h.default({
+    if (null != o && !p && (n = null == g ? new h.default({
         userId: i,
         sessionId: s,
         channelId: o,
@@ -92,7 +92,7 @@ r = "LobbyVoiceStateStore", (i = "displayName") in(s = g) ? Object.definePropert
     }, delete m[i]) : m = {
       ...m,
       [i]: n
-    }, p[r] = m
+    }, C[r] = m
   },
   LOBBY_DELETE: m,
   LOBBY_DISCONNECT: m

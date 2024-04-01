@@ -37,7 +37,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       })
     })
   },
-  h = e => {
+  _ = e => {
     let {
       tags: t,
       onTagClick: n,
@@ -64,13 +64,13 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       })
     })
   },
-  _ = e => {
+  h = e => {
     let {
       className: t,
       count: n
     } = e;
     return (0, a.jsx)(r.Popout, {
-      renderPopout: () => (0, a.jsx)(h, {
+      renderPopout: () => (0, a.jsx)(_, {
         ...e
       }),
       position: "right",
@@ -96,7 +96,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       discoveryTagStyle: r = C.DEFAULT,
       hideOverflow: u = !1,
       guildId: d,
-      section: h
+      section: _
     } = e, {
       ref: S,
       width: m
@@ -121,13 +121,13 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
         onClick: () => n(e),
         hide: null != I && t >= I,
         text: e
-      }, e)), !u && null != I && I < T.length && (0, a.jsx)(_, {
+      }, e)), !u && null != I && I < T.length && (0, a.jsx)(h, {
         className: r,
         onTagClick: n,
         tags: T.slice(I),
         count: T.length - I,
         guildId: d,
-        section: h
+        section: _
       })]
     })
   }

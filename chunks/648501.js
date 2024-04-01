@@ -16,14 +16,14 @@ var a = n("442837"),
   c = n("601070"),
   f = n("430824"),
   h = n("496675"),
-  C = n("306680"),
-  p = n("979651"),
+  p = n("306680"),
+  C = n("979651"),
   m = n("26290"),
   g = n("968358"),
   E = n("790901"),
-  S = n("714794"),
-  _ = n("355363"),
-  I = n("687352"),
+  _ = n("714794"),
+  I = n("355363"),
+  S = n("687352"),
   N = n("135724"),
   T = n("25601"),
   A = n("981631"),
@@ -37,15 +37,15 @@ function R(e) {
     channel: n,
     isChannelSelected: R,
     isChannelCollapsed: O,
-    voiceStates: y,
-    enableConnectedUserLimit: M,
+    voiceStates: M,
+    enableConnectedUserLimit: y,
     enableActivities: D,
     isSubscriptionGated: b,
     needSubscriptionToAccess: j,
     isNewChannel: G,
     muted: U,
     resolvedUnreadSetting: P
-  } = e, w = (0, a.useStateFromStores)([C.default], () => C.default.getMentionCount(n.id)), F = (0, r.default)(n), B = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([p.default], () => p.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, _.default)({
+  } = e, w = (0, a.useStateFromStores)([p.default], () => p.default.getMentionCount(n.id)), F = (0, r.default)(n), B = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([C.default], () => C.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, I.default)({
     channel: n,
     locked: B,
     video: V || H,
@@ -54,7 +54,7 @@ function R(e) {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(A.GuildFeatures.COMMUNITY)) && void 0 !== t && t
   });
-  if ((0, S.default)(w)) return (0, l.jsx)(T.default, {
+  if ((0, _.default)(w)) return (0, l.jsx)(T.default, {
     mentionsCount: w
   });
   if ((0, u.showPremiumChannelIconButton)(b)) return (0, l.jsx)(u.default, {
@@ -77,15 +77,15 @@ function R(e) {
     color: "text-muted",
     children: (0, m.getBadgeCountString)(K)
   });
-  let Z = null !== (t = null == y ? void 0 : y.length) && void 0 !== t ? t : 0;
-  return null != M && M && k ? (0, l.jsx)(N.default, {
-    userCount: Z,
+  let z = null !== (t = null == M ? void 0 : M.length) && void 0 !== t ? t : 0;
+  return null != y && y && k ? (0, l.jsx)(N.default, {
+    userCount: z,
     video: V || H,
     channel: n
-  }) : O && (0, g.hasStream)(y) && W ? (0, l.jsx)(m.TextBadge, {
+  }) : O && (0, g.hasStream)(M) && W ? (0, l.jsx)(m.TextBadge, {
     text: v.default.Messages.LIVE,
     color: s.default.unsafe_rawColors.RED_400.css
-  }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(F) ? (0, l.jsx)(I.default, {
+  }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(F) ? (0, l.jsx)(S.default, {
     embeddedApps: F,
     muted: U
   }) : null

@@ -16,8 +16,8 @@ var s = n("924826"),
   c = n("74538"),
   f = n("104494"),
   E = n("639119"),
-  h = n("655525"),
-  _ = n("314684"),
+  _ = n("655525"),
+  h = n("314684"),
   C = n("52188"),
   S = n("248042"),
   m = n("924540"),
@@ -40,8 +40,8 @@ let A = e => {
     D = (0, l.useStateFromStores)([o.default], () => o.default.isLocalizedPromoEnabled) && null == M,
     x = (0, S.useIsEligibleForBogoPromotion)(),
     b = (0, I.default)(),
-    U = (0, _.useTenureRewardBadgeDescription)();
-  return A || null != M || null != y || x || b || null != U || null != v && Date.now() - v.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(v, L) ? (x ? n = (0, a.jsx)(h.default, {
+    U = (0, h.useTenureRewardBadgeDescription)();
+  return A || null != M || null != y || x || b || null != U || null != v && Date.now() - v.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(v, L) ? (x ? n = (0, a.jsx)(_.default, {
     isNitroTab: !0
   }) : null != U ? n = (0, a.jsx)(p.default, {
     copy: U

@@ -77,8 +77,8 @@ var E = s("654861"),
   A = s("710845"),
   l = s("339085"),
   I = s("776617"),
-  r = s("427679"),
-  o = s("926491"),
+  o = s("427679"),
+  r = s("926491"),
   L = s("387667"),
   d = s("592125"),
   N = s("430824"),
@@ -873,11 +873,11 @@ function q(e, t) {
           case G.AuditLogTargetTypes.EMOJI:
             return et(e, G.AuditLogChangeKeys.NAME, e => l.default.getGuildEmoji(t.id).find(t => t.id === e), e => e.name);
           case G.AuditLogTargetTypes.STICKER:
-            return et(e, G.AuditLogChangeKeys.NAME, e => o.default.getStickerById(e), e => e.name);
+            return et(e, G.AuditLogChangeKeys.NAME, e => r.default.getStickerById(e), e => e.name);
           case G.AuditLogTargetTypes.STAGE_INSTANCE:
             return et(e, G.AuditLogChangeKeys.TOPIC, e => {
               var s;
-              return null === (s = Object.values(r.default.getStageInstancesByGuild(t.id))) || void 0 === s ? void 0 : s.find(t => t.id === e)
+              return null === (s = Object.values(o.default.getStageInstancesByGuild(t.id))) || void 0 === s ? void 0 : s.find(t => t.id === e)
             }, e => e.topic);
           case G.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
             return et(e, G.AuditLogChangeKeys.NAME, e => I.default.guildScheduledEvents.find(t => t.id === e), e => e.name);

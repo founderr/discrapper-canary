@@ -6,8 +6,8 @@ var l, i, r, o, u = n("392711"),
   c = n("442837"),
   f = n("433517"),
   E = n("570140"),
-  h = n("700785"),
-  _ = n("388610"),
+  _ = n("700785"),
+  h = n("388610"),
   C = n("592125"),
   S = n("981631"),
   m = n("71080");
@@ -27,17 +27,17 @@ function P(e) {
     n = {
       ...e.permissionOverwrites
     };
-  return null != t && null == n[t] && (n[t] = h.makeEveryoneOverwrite(t)), n
+  return null != t && null == n[t] && (n[t] = _.makeEveryoneOverwrite(t)), n
 }
 
 function M() {
-  if (N = _.default.getChannel(), R = _.default.getCategory(), null == N) return !1;
+  if (N = h.default.getChannel(), R = h.default.getCategory(), null == N) return !1;
   let e = N.getGuildId();
-  A = g = P(N), null == g[O] && (O = e), s = null != R, a = h.areChannelsLocked(N, R), v = null, T = !1, p = S.FormStates.CLOSED, I.clear()
+  A = g = P(N), null == g[O] && (O = e), s = null != R, a = _.areChannelsLocked(N, R), v = null, T = !1, p = S.FormStates.CLOSED, I.clear()
 }
 class y extends(l = c.default.Store) {
   initialize() {
-    this.waitFor(_.default, C.default)
+    this.waitFor(h.default, C.default)
   }
   hasChanges() {
     return T
@@ -104,7 +104,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
     }, g = {
       ...g,
       [t]: l
-    }, I.add(t), p = S.FormStates.OPEN, T = !d().isEqual(g, A), a = h.areChannelsLocked(N, R)
+    }, I.add(t), p = S.FormStates.OPEN, T = !d().isEqual(g, A), a = _.areChannelsLocked(N, R)
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {
     let {
@@ -127,17 +127,17 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
     let n = !1;
     for (let e of t) !1 !== function(e) {
       if (null == N || N.id !== e || null == (N = C.default.getChannel(e))) return !1;
-      R = _.default.getCategory();
+      R = h.default.getCategory();
       let t = N.getGuildId();
       if (null == t) return !1;
       A = P(N);
       let n = {};
       return I.forEach(e => {
         null != g && (n[e] = g[e])
-      }), null == n[t] && null == N.permissionOverwrites[t] && (n[t] = h.makeEveryoneOverwrite(t)), null == (g = {
+      }), null == n[t] && null == N.permissionOverwrites[t] && (n[t] = _.makeEveryoneOverwrite(t)), null == (g = {
         ...N.permissionOverwrites,
         ...n
-      })[O] ? O = t : null != v && null != g[v] && (O = v, v = null), a = h.areChannelsLocked(N, R), !0
+      })[O] ? O = t : null != v && null != g[v] && (O = v, v = null), a = _.areChannelsLocked(N, R), !0
     }(e.id) && (n = !0);
     return n
   },

@@ -80,7 +80,7 @@ function R(e) {
       e.stopPropagation(), null != t && (0, r.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("54668"), n.e("79504"), n.e("92223"), n.e("58153"), n.e("2047"), n.e("25381"), n.e("97455")]).then(n.bind(n, "215269"));
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("54668"), n.e("58153"), n.e("25381"), n.e("79504"), n.e("92223"), n.e("2047"), n.e("97455")]).then(n.bind(n, "215269"));
         return n => (0, l.jsx)(e, {
           guildEventId: G,
           recurrenceId: A,
@@ -124,7 +124,7 @@ function R(e) {
         }(0, a.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("43643"), n.e("7654"), n.e("96626")]).then(n.bind(n, "560114"));
+          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("43643"), n.e("7654"), n.e("91007")]).then(n.bind(n, "560114"));
           return n => (0, l.jsx)(e, {
             ...n,
             guild: t,

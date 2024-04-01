@@ -12,8 +12,8 @@ var l = n("481060"),
   c = n("341298"),
   f = n("390885"),
   E = n("524329"),
-  h = n("995532"),
-  _ = n("486472"),
+  _ = n("995532"),
+  h = n("486472"),
   C = n("430824"),
   S = n("914010"),
   m = n("594174"),
@@ -57,7 +57,7 @@ class P extends r.default {
       let e = C.default.getGuild(L);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
-    let P = () => 0 === _.default.totalGuilds && !p.isPlatformEmbedded,
+    let P = () => 0 === h.default.totalGuilds && !p.isPlatformEmbedded,
       M = o.userNeedsAgeGate();
     e = [{
       key: "Unified NUF Modal",
@@ -129,7 +129,7 @@ class P extends r.default {
       open: e => (0, l.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("90542")]).then(n.bind(n, "184782"));
+        } = await Promise.all([n.e("99387"), n.e("77578")]).then(n.bind(n, "184782"));
         return t => (0, s.jsx)(e, {
           ...t,
           guildId: L
@@ -137,7 +137,7 @@ class P extends r.default {
       }, {
         onCloseCallback: e
       }),
-      predicate: () => null != L && null != h.default.get(L) && h.default.get(L) !== h.NO_WELCOME_SCREEN
+      predicate: () => null != L && null != _.default.get(L) && _.default.get(L) !== _.NO_WELCOME_SCREEN
     }], t = () => {
       T.setNewUserFlowCompleted(), f.default.flowStep(v.FlowType.ANY, v.RegistrationSteps.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {

@@ -20,8 +20,8 @@ var E = s("735250"),
   A = s.n(u),
   l = s("481060"),
   I = s("596454"),
-  r = s("479099"),
-  o = s("592125"),
+  o = s("479099"),
+  r = s("592125"),
   L = s("430824"),
   d = s("594174"),
   N = s("274730"),
@@ -58,14 +58,14 @@ function M(e) {
       null == e && null != t[N.DEFAULT_FOR_STRINGS_KEY] ? t = t[N.DEFAULT_FOR_STRINGS_KEY] : null != e && (t = e)
     }
     if (null != t && null != t.format) {
-      var A, o;
+      var A, r;
       u = t.format({
         user: a.user,
         target: a.target,
         oldValue: n,
         newValue: T,
         count: Array.isArray(T) ? T.length : null,
-        subtarget: null !== (o = null !== (A = a.options.subtarget) && void 0 !== A ? A : i.subtarget) && void 0 !== o ? o : null,
+        subtarget: null !== (r = null !== (A = a.options.subtarget) && void 0 !== A ? A : i.subtarget) && void 0 !== r ? r : null,
         newColorHook: (e, t) => (0, E.jsx)("div", {
           className: O.colorHook,
           style: {
@@ -78,13 +78,13 @@ function M(e) {
             backgroundColor: i.oldValue
           }
         }, t),
-        oldTagHook: (e, t) => (0, E.jsx)(r.default, {
+        oldTagHook: (e, t) => (0, E.jsx)(o.default, {
           tag: n,
-          size: r.default.Sizes.SMALL
+          size: o.default.Sizes.SMALL
         }, t),
-        newTagHook: (e, t) => (0, E.jsx)(r.default, {
+        newTagHook: (e, t) => (0, E.jsx)(o.default, {
           tag: T,
-          size: r.default.Sizes.SMALL
+          size: o.default.Sizes.SMALL
         }, t),
         oldEmojiHook: (e, t) => (0, E.jsx)(I.default, {
           emojiId: n
@@ -228,14 +228,14 @@ function f(e) {
             return null == E ? null : "@".concat(E)
           }, T = e => {
             var t;
-            let s = null === (t = o.default.getChannel(e)) || void 0 === t ? void 0 : t.name;
+            let s = null === (t = r.default.getChannel(e)) || void 0 === t ? void 0 : t.name;
             return null == s ? null : "#".concat(s)
           }, u = (e, s) => {
             let {
               title: _,
               id: a
-            } = s, u = e.role_ids.map(n).filter(g.isNotNullish), A = e.channel_ids.map(T).filter(g.isNotNullish), I = s.role_ids.map(n).filter(g.isNotNullish), r = s.channel_ids.map(T).filter(g.isNotNullish), o = i().difference(I, u), L = i().difference(u, I), d = i().difference(r, A), N = i().difference(A, r), S = [];
-            return (!i().isEqual(e.title, s.title) && S.push("title"), !i().isEqual(e.description, s.description) && S.push("description"), 0 === o.length && 0 === L.length && 0 === d.length && 0 === N.length && 0 === S.length) ? null : (0, E.jsxs)("li", {
+            } = s, u = e.role_ids.map(n).filter(g.isNotNullish), A = e.channel_ids.map(T).filter(g.isNotNullish), I = s.role_ids.map(n).filter(g.isNotNullish), o = s.channel_ids.map(T).filter(g.isNotNullish), r = i().difference(I, u), L = i().difference(u, I), d = i().difference(o, A), N = i().difference(A, o), S = [];
+            return (!i().isEqual(e.title, s.title) && S.push("title"), !i().isEqual(e.description, s.description) && S.push("description"), 0 === r.length && 0 === L.length && 0 === d.length && 0 === N.length && 0 === S.length) ? null : (0, E.jsxs)("li", {
               children: [(0, E.jsxs)("div", {
                 className: O.onboardingChangeLogItemTitle,
                 children: [(0, E.jsx)(R, {
@@ -250,10 +250,10 @@ function f(e) {
                 })]
               }), (0, E.jsxs)("div", {
                 className: O.onboardingChangeLogItemChanges,
-                children: [o.length > 0 && (0, E.jsx)(l.Text, {
+                children: [r.length > 0 && (0, E.jsx)(l.Text, {
                   variant: "text-md/normal",
                   children: G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_ROLES.format({
-                    roles: o.join(", ")
+                    roles: r.join(", ")
                   })
                 }), L.length > 0 && (0, E.jsx)(l.Text, {
                   variant: "text-md/normal",
@@ -280,10 +280,10 @@ function f(e) {
                 }, _))]
               })]
             }, a)
-          }, A = i().keyBy(null != a ? a : [], "id"), I = i().keyBy(null != _ ? _ : [], "id"), r = i().difference(Object.keys(I), Object.keys(A)).map(e => I[e]), d = i().difference(Object.keys(A), Object.keys(I)).map(e => A[e]), N = i().intersection(Object.keys(I), Object.keys(A));
+          }, A = i().keyBy(null != a ? a : [], "id"), I = i().keyBy(null != _ ? _ : [], "id"), o = i().difference(Object.keys(I), Object.keys(A)).map(e => I[e]), d = i().difference(Object.keys(A), Object.keys(I)).map(e => A[e]), N = i().intersection(Object.keys(I), Object.keys(A));
           return (0, E.jsxs)("ul", {
             className: O.onboardingChangeLogContainer,
-            children: [r.map(e => {
+            children: [o.map(e => {
               let {
                 role_ids: s,
                 channel_ids: _,

@@ -11,8 +11,8 @@ var a = n("470079"),
   c = n("410154"),
   f = n("727470"),
   E = n("888507"),
-  h = n("302800"),
-  _ = n("921944");
+  _ = n("302800"),
+  h = n("921944");
 let C = "useCollectiblesShopTabNewBadge";
 t.default = () => {
   let e = (0, s.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
@@ -44,20 +44,20 @@ t.default = () => {
         if (n) return [l.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP];
         else if (S) return [l.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP];
         else if (m) switch (I) {
-          case h.CollectiblesMarketingVariant.TOOLTIP:
+          case _.CollectiblesMarketingVariant.TOOLTIP:
             return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP];
-          case h.CollectiblesMarketingVariant.COACHTIP:
+          case _.CollectiblesMarketingVariant.COACHTIP:
             return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]
         } else if (p) return [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]
       }
       return []
     }, [p, m, I, e, S, n, t]),
     [g, A] = (0, i.useSelectedDismissibleContent)(T, void 0, !0),
-    N = null != g ? h.CollectiblesDCToDisplayOptions[g] : null;
+    N = null != g ? _.CollectiblesDCToDisplayOptions[g] : null;
   return {
     collectiblesShopTabNewBadgeDisplayOptions: N,
     dismissCollectiblesShopTabNewBadge: () => {
-      null != N && A(_.ContentDismissActionType.AUTO)
+      null != N && A(h.ContentDismissActionType.AUTO)
     }
   }
 }

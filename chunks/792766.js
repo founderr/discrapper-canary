@@ -1,95 +1,95 @@
 "use strict";
 l.r(t), l.d(t, {
   StageInviteFooter: function() {
-    return I
+    return R
   }
 });
-var n = l("735250"),
-  a = l("470079"),
+var a = l("735250"),
+  n = l("470079"),
   i = l("803997"),
   s = l.n(i),
   r = l("481060"),
   d = l("601964"),
-  o = l("598077"),
-  u = l("346656"),
+  u = l("598077"),
+  o = l("346656"),
   c = l("242315"),
-  _ = l("357727"),
-  E = l("170039"),
+  E = l("357727"),
+  _ = l("170039"),
   f = l("727218"),
   C = l("154921"),
   S = l("806519"),
-  m = l("689938"),
-  h = l("425621");
-let p = e => {
+  h = l("689938"),
+  m = l("425621");
+let I = e => {
     var t;
     let {
       speaker: l,
-      guildId: a,
+      guildId: n,
       isEmbed: i
-    } = e, s = new o.default(l.user);
-    return (0, n.jsxs)("div", {
-      className: h.speaker,
-      children: [(0, n.jsx)(r.Avatar, {
-        src: s.getAvatarURL(a, i ? 16 : 24),
+    } = e, s = new u.default(l.user);
+    return (0, a.jsxs)("div", {
+      className: m.speaker,
+      children: [(0, a.jsx)(r.Avatar, {
+        src: s.getAvatarURL(n, i ? 16 : 24),
         size: i ? r.AvatarSizes.SIZE_16 : r.AvatarSizes.SIZE_24,
         "aria-label": "".concat(l.nick, "-avatar"),
-        className: i ? null : h.avatar
-      }), (0, n.jsx)(C.default, {
+        className: i ? null : m.avatar
+      }), (0, a.jsx)(C.default, {
         size: i ? C.default.Sizes.SIZE_12 : C.default.Sizes.SIZE_14,
         color: C.default.Colors.HEADER_SECONDARY,
-        className: h.username,
+        className: m.username,
         children: null !== (t = l.nick) && void 0 !== t ? t : s.username
       })]
     })
   },
-  I = e => {
+  R = e => {
     let {
       guild: t,
       onlineCount: l
     } = e;
     if (null == t) return null;
-    let a = new d.default(t),
+    let n = new d.default(t),
       {
         name: i,
         description: s
-      } = a;
-    return (0, n.jsxs)("div", {
-      children: [(0, n.jsx)(f.default, {
+      } = n;
+    return (0, a.jsxs)("div", {
+      children: [(0, a.jsx)(f.default, {
         muted: !0,
         uppercase: !0,
-        className: h.alignStart,
-        children: m.default.Messages.STAGE_INVITE_GUILD_HEADER
-      }), (0, n.jsxs)("div", {
-        className: h.guild,
-        children: [(0, n.jsx)(S.default, {
+        className: m.alignStart,
+        children: h.default.Messages.STAGE_INVITE_GUILD_HEADER
+      }), (0, a.jsxs)("div", {
+        className: m.guild,
+        children: [(0, a.jsx)(S.default, {
           mask: S.default.Masks.SQUIRCLE,
           width: 40,
           height: 40,
-          children: (0, n.jsx)(u.default, {
-            guild: a,
-            size: u.default.Sizes.MEDIUM,
+          children: (0, a.jsx)(o.default, {
+            guild: n,
+            size: o.default.Sizes.MEDIUM,
             active: !0
           })
-        }), (0, n.jsxs)("div", {
-          className: h.guildInfo,
-          children: [(0, n.jsx)(r.Heading, {
+        }), (0, a.jsxs)("div", {
+          className: m.guildInfo,
+          children: [(0, a.jsx)(r.Heading, {
             variant: "heading-sm/semibold",
             children: i
-          }), (0, n.jsxs)("div", {
-            className: h.speaker,
-            children: [(0, n.jsx)("div", {
-              className: h.dot
-            }), null != l && l > 0 ? (0, n.jsx)(r.Text, {
+          }), (0, a.jsxs)("div", {
+            className: m.speaker,
+            children: [(0, a.jsx)("div", {
+              className: m.dot
+            }), null != l && l > 0 ? (0, a.jsx)(r.Text, {
               variant: "text-sm/normal",
-              children: m.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+              children: h.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                 membersOnline: l
               })
             }) : null]
           })]
         })]
-      }), null != s && "" !== s && (0, n.jsx)(r.Text, {
+      }), null != s && "" !== s && (0, a.jsx)(r.Text, {
         color: "header-secondary",
-        className: h.alignStart,
+        className: m.alignStart,
         variant: "text-sm/normal",
         children: s
       })]
@@ -100,100 +100,100 @@ t.default = e => {
   let {
     stageInstance: l,
     guild: i,
-    isCard: o = !1,
-    isEmbed: I = !1,
-    onClick: T
-  } = e, R = a.useMemo(() => null == i ? null : i instanceof d.default ? i : new d.default(i), [i]);
-  if (null == l || null == R) return null;
+    isCard: u = !1,
+    isEmbed: R = !1,
+    onClick: p
+  } = e, T = n.useMemo(() => null == i ? null : i instanceof d.default ? i : new d.default(i), [i]);
+  if (null == l || null == T) return null;
   let {
     topic: A,
-    speaker_count: g,
-    participant_count: v
-  } = l, O = null !== (t = l.members) && void 0 !== t ? t : [], N = I ? O.slice(0, 3) : O, y = g - N.length;
-  return I && (y += O.length - N.length), (0, n.jsxs)("div", {
-    children: [(0, n.jsxs)("div", {
-      className: h.flex,
-      children: [(0, n.jsxs)("div", {
-        className: h.flex,
-        children: [(0, n.jsx)(E.default, {
+    speaker_count: O,
+    participant_count: g
+  } = l, v = null !== (t = l.members) && void 0 !== t ? t : [], N = R ? v.slice(0, 3) : v, L = O - N.length;
+  return R && (L += v.length - N.length), (0, a.jsxs)("div", {
+    children: [(0, a.jsxs)("div", {
+      className: m.flex,
+      children: [(0, a.jsxs)("div", {
+        className: m.flex,
+        children: [(0, a.jsx)(_.default, {
           height: 24,
           width: 24,
-          className: h.live
-        }), (0, n.jsx)(r.Heading, {
+          className: m.live
+        }), (0, a.jsx)(r.Heading, {
           variant: "eyebrow",
-          className: s()(h.__invalid_label, h.live),
-          children: m.default.Messages.STAGE_CHANNEL_LIVE_NOW
+          className: s()(m.__invalid_label, m.live),
+          children: h.default.Messages.STAGE_CHANNEL_LIVE_NOW
         })]
-      }), (0, n.jsxs)("div", {
-        className: h.background,
-        children: [(0, n.jsx)(c.default, {
+      }), (0, a.jsxs)("div", {
+        className: m.background,
+        children: [(0, a.jsx)(c.default, {
           height: 16,
           width: 16,
-          className: h.listeners
-        }), (0, n.jsx)(r.Heading, {
-          className: s()(h.__invalid_label, h.listeners),
+          className: m.listeners
+        }), (0, a.jsx)(r.Heading, {
+          className: s()(m.__invalid_label, m.listeners),
           variant: "heading-sm/semibold",
-          children: v
+          children: g
         })]
       })]
-    }), I && (0, n.jsxs)("div", {
-      className: s()(h.guild, {
-        [h.embed]: I
+    }), R && (0, a.jsxs)("div", {
+      className: s()(m.guild, {
+        [m.embed]: R
       }),
-      children: [(0, n.jsx)(S.default, {
+      children: [(0, a.jsx)(S.default, {
         mask: S.default.Masks.SQUIRCLE,
         width: 20,
         height: 20,
-        children: (0, n.jsx)(u.default, {
-          guild: R,
-          size: u.default.Sizes.MINI,
+        children: (0, a.jsx)(o.default, {
+          guild: T,
+          size: o.default.Sizes.MINI,
           active: !0
         })
-      }), (0, n.jsx)(r.Text, {
+      }), (0, a.jsx)(r.Text, {
         color: "header-secondary",
-        className: h.__invalid_label,
+        className: m.__invalid_label,
         variant: "text-sm/normal",
-        children: R.name
+        children: T.name
       })]
-    }), (0, n.jsx)(f.default, {
-      size: o || I ? f.default.Sizes.SIZE_16 : f.default.Sizes.SIZE_20,
-      className: s()(h.header, {
-        [h.embed]: I
+    }), (0, a.jsx)(f.default, {
+      size: u || R ? f.default.Sizes.SIZE_16 : f.default.Sizes.SIZE_20,
+      className: s()(m.header, {
+        [m.embed]: R
       }),
       children: A
-    }), (0, n.jsxs)("div", {
-      className: s()(h.members, {
-        [h.embed]: I
+    }), (0, a.jsxs)("div", {
+      className: s()(m.members, {
+        [m.embed]: R
       }),
-      children: [N.length > 0 && (0, n.jsxs)("div", {
-        className: h.speakers,
-        children: [N.map(e => (0, n.jsx)(p, {
+      children: [N.length > 0 && (0, a.jsxs)("div", {
+        className: m.speakers,
+        children: [N.map(e => (0, a.jsx)(I, {
           speaker: e,
-          guildId: R.id,
-          isEmbed: I
-        }, e.user.id)), y > 0 ? (0, n.jsxs)("div", {
-          className: h.speaker,
-          children: [(0, n.jsx)("div", {
-            className: s()(h.icon, {
-              [h.embed]: I
+          guildId: T.id,
+          isEmbed: R
+        }, e.user.id)), L > 0 ? (0, a.jsxs)("div", {
+          className: m.speaker,
+          children: [(0, a.jsx)("div", {
+            className: s()(m.icon, {
+              [m.embed]: R
             }),
-            children: (0, n.jsx)(_.default, {
-              height: I ? 12 : 14,
-              className: h.listeners
+            children: (0, a.jsx)(E.default, {
+              height: R ? 12 : 14,
+              className: m.listeners
             })
-          }), (0, n.jsxs)(C.default, {
-            size: I ? C.default.Sizes.SIZE_12 : C.default.Sizes.SIZE_14,
+          }), (0, a.jsxs)(C.default, {
+            size: R ? C.default.Sizes.SIZE_12 : C.default.Sizes.SIZE_14,
             color: C.default.Colors.HEADER_SECONDARY,
-            children: ["+", m.default.Messages.STAGE_INVITE_SPEAKER_COUNT.format({
-              count: y
+            children: ["+", h.default.Messages.STAGE_INVITE_SPEAKER_COUNT.format({
+              count: L
             })]
           })]
         }) : null]
-      }), I && (0, n.jsx)(r.Button, {
+      }), R && (0, a.jsx)(r.Button, {
         color: r.Button.Colors.GREEN,
-        onClick: T,
-        className: h.joinButton,
-        children: m.default.Messages.STAGE_CHANNEL_JOIN_BUTTON
+        onClick: p,
+        className: m.joinButton,
+        children: h.default.Messages.STAGE_CHANNEL_JOIN_BUTTON
       })]
     })]
   })

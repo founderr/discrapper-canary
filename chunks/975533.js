@@ -11,8 +11,8 @@ var a = n("570140"),
   c = n("39604"),
   f = n("569545"),
   E = n("722835"),
-  h = n("703656"),
-  _ = n("641015"),
+  _ = n("703656"),
+  h = n("641015"),
   C = n("183584"),
   S = n("199902"),
   m = n("131951"),
@@ -142,7 +142,7 @@ let O = {
     }
   },
   [N.GlobalKeybindActions.NAVIGATE_BACK]: {
-    onTrigger: () => (0, h.back)(),
+    onTrigger: () => (0, _.back)(),
     keyEvents: {
       keyup: !0,
       keydown: !1,
@@ -151,7 +151,7 @@ let O = {
     }
   },
   [N.GlobalKeybindActions.NAVIGATE_FORWARD]: {
-    onTrigger: () => (0, h.forward)(),
+    onTrigger: () => (0, _.forward)(),
     keyEvents: {
       keyup: !0,
       keydown: !1,
@@ -161,7 +161,7 @@ let O = {
   },
   [N.GlobalKeybindActions.SOUNDBOARD]: {
     onTrigger: () => {
-      if (!(0, _.canSelectedVoiceChannelUseSoundboard)()) return;
+      if (!(0, h.canSelectedVoiceChannelUseSoundboard)()) return;
       let e = (0, A.default)();
       null != e && (T.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
     },
@@ -172,7 +172,7 @@ let O = {
   },
   [N.GlobalKeybindActions.SOUNDBOARD_HOLD]: {
     onTrigger: e => {
-      if (!(0, _.canSelectedVoiceChannelUseSoundboard)()) return;
+      if (!(0, h.canSelectedVoiceChannelUseSoundboard)()) return;
       let t = (0, A.default)();
       if (null != t) {
         e ? (0, C.openSoundboardInOverlay)(!1, t) : (0, C.closeSoundboardInOverlay)(t);

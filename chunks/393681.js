@@ -12,9 +12,9 @@ var a = s("735250"),
   S = s("816814"),
   E = s("809206"),
   T = s("497321"),
-  _ = s("279837"),
-  f = s("952306"),
-  m = s("346585"),
+  f = s("279837"),
+  m = s("952306"),
+  _ = s("346585"),
   g = s("347649"),
   h = s("332473"),
   N = s("303172"),
@@ -62,7 +62,7 @@ class w extends n.PureComponent {
           look: c.ButtonLooks.INVERTED,
           size: c.ButtonSizes.SMALL,
           color: c.Button.Colors.RED,
-          onClick: () => f.default.openClaimAccountModal(),
+          onClick: () => m.default.openClaimAccountModal(),
           children: G.default.Messages.CLAIM_ACCOUNT_LONG
         })]
       });
@@ -107,7 +107,7 @@ class w extends n.PureComponent {
       className: k.accountWarningBodyText,
       messageType: R.HelpMessageTypes.WARNING,
       children: [this.props.forceMigrationExperiment ? G.default.Messages.POMELO_ACTION_NEEDED_FORCE.format({
-        date: (0, m.getLocalizedForcedUUDate)(this.props.locale)
+        date: (0, _.getLocalizedForcedUUDate)(this.props.locale)
       }) : G.default.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, a.jsx)(M.default, {
         className: k.noticeTextButton,
         onClick: () => (0, N.default)(F.PomeloEntrypoints.USER_SETTINGS),
@@ -274,7 +274,7 @@ class w extends n.PureComponent {
       });
       return
     }
-    t.isClaimed() ? (0, c.openModal)(t => (0, a.jsx)(_.default, {
+    t.isClaimed() ? (0, c.openModal)(t => (0, a.jsx)(f.default, {
       ...t,
       handleSubmit: t => this.handleSubmitDisableAccount(t, e),
       title: e ? G.default.Messages.DELETE_ACCOUNT : G.default.Messages.DISABLE_ACCOUNT,

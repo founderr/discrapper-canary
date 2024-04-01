@@ -1,10 +1,10 @@
 "use strict";
-t.r(s), t.d(s, {
+s.r(t), s.d(t, {
   backToSchoolEnabled: function() {
-    return l
+    return n
   }
 });
-let a = (0, t("818083").createExperiment)({
+let a = (0, s("818083").createExperiment)({
   kind: "user",
   id: "2022-08_back_to_school",
   label: "Back to School Event",
@@ -20,11 +20,11 @@ let a = (0, t("818083").createExperiment)({
   }]
 });
 
-function l() {
+function n() {
   return a.getCurrentConfig({
     location: "68acbb_1"
   }, {
     autoTrackExposure: !1
   }).enabled
 }
-s.default = a
+t.default = a

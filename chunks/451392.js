@@ -17,9 +17,9 @@ var n = s("803997"),
   S = s("84244"),
   E = s("74538"),
   T = s("193528"),
-  _ = s("993413"),
-  f = s("689938"),
-  m = s("857834");
+  f = s("993413"),
+  m = s("689938"),
+  _ = s("857834");
 
 function g(e) {
   let {
@@ -41,51 +41,51 @@ function g(e) {
   let L = e => {
     i(r()(e, null == A ? void 0 : A.themeColors) ? void 0 : e)
   };
-  return (0, a.jsx)(_.default, {
-    title: f.default.Messages.USER_SETTINGS_PROFILE_THEME,
+  return (0, a.jsx)(f.default, {
+    title: m.default.Messages.USER_SETTINGS_PROFILE_THEME,
     disabled: !R && !g,
-    className: l()(m.__invalid_profileThemesSection, N),
+    className: l()(_.__invalid_profileThemesSection, N),
     showPremiumIcon: I,
     forcedDivider: C,
     children: (0, a.jsxs)("div", {
-      className: m.sectionContainer,
+      className: _.sectionContainer,
       children: [(0, a.jsx)("div", {
-        className: m.sparkleContainer,
+        className: _.sparkleContainer,
         children: (0, a.jsx)(T.default, {
           onChange: e => L([e, x]),
           color: O,
           suggestedColors: D,
           showEyeDropper: !0,
           label: (0, a.jsx)(d.Text, {
-            className: m.colorSwatchLabel,
+            className: _.colorSwatchLabel,
             color: "header-secondary",
             variant: "text-xs/normal",
             "aria-hidden": !0,
-            children: f.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
+            children: m.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
           })
         })
       }), (0, a.jsx)("div", {
-        className: m.sparkleContainer,
+        className: _.sparkleContainer,
         children: (0, a.jsx)(T.default, {
           onChange: e => L([O, e]),
           color: x,
           suggestedColors: D,
           showEyeDropper: !0,
           label: (0, a.jsx)(d.Text, {
-            className: m.colorSwatchLabel,
+            className: _.colorSwatchLabel,
             color: "header-secondary",
             variant: "text-xs/normal",
             "aria-hidden": !0,
-            children: f.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
+            children: m.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
           })
         })
       }), p && null != h && (0, a.jsx)(d.Button, {
-        className: m.resetButton,
+        className: _.resetButton,
         color: d.Button.Colors.PRIMARY,
         look: d.Button.Looks.LINK,
         size: d.Button.Sizes.SMALL,
         onClick: () => L([null, null]),
-        children: f.default.Messages.USER_SETTINGS_RESET_PROFILE_THEME
+        children: m.default.Messages.USER_SETTINGS_RESET_PROFILE_THEME
       })]
     })
   })

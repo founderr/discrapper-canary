@@ -15,8 +15,8 @@ var a = n("433517"),
   c = n("848479"),
   f = n("960048"),
   E = n("844889"),
-  h = n("981631");
-let _ = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
+  _ = n("981631");
+let h = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
   C = null,
   S = null,
   m = null,
@@ -26,7 +26,7 @@ async function p() {
   I = !0, (0, E.setSessionExtendingEnabled)(!0), f.default.addBreadcrumb({
     message: "Start Analytics Heartbeat"
   });
-  let e = await a.Storage.getAfterRefresh(_).then(E.timestampOrZero);
+  let e = await a.Storage.getAfterRefresh(h).then(E.timestampOrZero);
   if (!I) return;
   let t = Date.now(),
     n = 15 * d.default.Millis.MINUTE + e - t;
@@ -77,13 +77,13 @@ async function g() {
     let e = r.default.getCurrentGameForAnalytics();
     null != e && (s.client_heartbeat_current_game_id = e.id, s.client_heartbeat_current_game_name = e.name, s.client_heartbeat_current_game_executable = (0, i.removeExecutablePathPrefix)(e.exePath), s.client_heartbeat_current_game_distributor = e.distributor)
   }
-  u.default.track(h.AnalyticEvents.CLIENT_HEARTBEAT, s), a.Storage.set(_, Date.now().toString()), (0, l.drainClickstream)()
+  u.default.track(_.AnalyticEvents.CLIENT_HEARTBEAT, s), a.Storage.set(h, Date.now().toString()), (0, l.drainClickstream)()
 }
 let A = null,
   N = !0;
 
 function R() {
-  if (N || null != A && A !== h.RTCConnectionStates.DISCONNECTED && A !== h.RTCConnectionStates.RTC_DISCONNECTED) try {
+  if (N || null != A && A !== _.RTCConnectionStates.DISCONNECTED && A !== _.RTCConnectionStates.RTC_DISCONNECTED) try {
     p()
   } catch (e) {
     f.default.captureException(e)
@@ -118,5 +118,5 @@ function M(e) {
   let {
     state: t
   } = e;
-  N = t === h.AppStates.ACTIVE, R()
+  N = t === _.AppStates.ACTIVE, R()
 }

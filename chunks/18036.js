@@ -34,7 +34,7 @@ function C() {
   }
   if ((null == u[n] || !u[n].has(e)) && c[e] > 50) return h[n].add(e), !0
 }
-class f extends(i = s.default.PersistedStore) {
+class g extends(i = s.default.PersistedStore) {
   initialize(e) {
     var t, n;
     if (this.syncWith([r.default], C), null == e) return;
@@ -60,7 +60,7 @@ class f extends(i = s.default.PersistedStore) {
     }
   }
 }
-o(f, "displayName", "FavoritesSuggestionStore"), o(f, "persistKey", "FavoritesSuggestionStore"), t.default = new f(l.default, {
+o(g, "displayName", "FavoritesSuggestionStore"), o(g, "persistKey", "FavoritesSuggestionStore"), t.default = new g(l.default, {
   DISMISS_FAVORITE_SUGGESTION: function(e) {
     let {
       guildId: t,

@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("617136"),
   f = n("272008"),
   E = n("113434"),
-  h = n("569984"),
-  _ = n("497505"),
+  _ = n("569984"),
+  h = n("497505"),
   C = n("918701"),
   S = n("874137"),
   m = n("611855"),
@@ -58,32 +58,32 @@ t.default = function(e) {
   var t, n, l;
   let {
     quest: O
-  } = e, v = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(O.id), [O]), L = s.useCallback(e => {
+  } = e, v = (0, r.useStateFromStores)([_.default], () => _.default.isEnrolling(O.id), [O]), L = s.useCallback(e => {
     e.stopPropagation()
   }, []), P = s.useCallback(() => {
     (0, f.enrollInQuest)(O.id, {
-      questContent: _.QuestContent.ACTIVITY_PANEL,
+      questContent: h.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.ACCEPT_QUEST
     })
   }, [O]), M = s.useCallback(() => {
     null != O && ((0, c.trackQuestContentClicked)({
       questId: O.id,
-      questContent: _.QuestContent.ACTIVITY_PANEL,
+      questContent: h.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.TRACK_PROGRESS
     }), u.default.open(g.UserSettingsSections.INVENTORY))
   }, [O]), y = s.useCallback(() => {
     (0, c.trackQuestContentClicked)({
       questId: O.id,
-      questContent: _.QuestContent.ACTIVITY_PANEL,
+      questContent: h.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.LEARN_MORE
     }), u.default.open(g.UserSettingsSections.INVENTORY)
   }, [O]), D = (0, p.useHandleClaimQuestsReward)({
     quest: O,
-    location: _.QuestContent.ACTIVITY_PANEL
-  }), x = (0, E.useIsQuestExpired)(O), b = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = O.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == O ? void 0 : O.userStatus) == null || (0, C.isDismissed)(O.userStatus, _.QuestContent.ACTIVITY_PANEL) || x || j ? null : (0, a.jsx)(S.QuestContentImpressionTracker, {
+    location: h.QuestContent.ACTIVITY_PANEL
+  }), x = (0, E.useIsQuestExpired)(O), b = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, G = (null === (l = O.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  return (null == O ? void 0 : O.userStatus) == null || (0, C.isDismissed)(O.userStatus, h.QuestContent.ACTIVITY_PANEL) || x || G ? null : (0, a.jsx)(S.QuestContentImpressionTracker, {
     questId: O.id,
-    questContent: _.QuestContent.ACTIVITY_PANEL,
+    questContent: h.QuestContent.ACTIVITY_PANEL,
     children: e => {
       var t;
       return (0, a.jsxs)("div", {
@@ -103,7 +103,7 @@ t.default = function(e) {
             textOpacity: .5
           }), (0, a.jsx)(I.QuestsEntryContextMenuPopout, {
             quest: O,
-            questContent: _.QuestContent.ACTIVITY_PANEL,
+            questContent: h.QuestContent.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
             showShareLink: !0,
             children: e => (0, a.jsx)(o.Clickable, {

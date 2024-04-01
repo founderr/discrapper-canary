@@ -11,16 +11,16 @@ var a = n("570140"),
   c = n("351780"),
   f = n("843693"),
   E = n("981631");
-let h = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack()),
-  _ = !1,
+let _ = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack()),
+  h = !1,
   C = !1,
   S = [],
   m = null,
   I = () => {
-    !_ && (h.loop(), _ = !0)
+    !h && (_.loop(), h = !0)
   },
   p = () => {
-    h.stop(), _ = !1
+    _.stop(), h = !1
   },
   T = () => {
     let e = c.default.isEnabled(),
@@ -52,7 +52,7 @@ class R extends s.default {
     let {
       state: t
     } = e;
-    t === E.RTCConnectionStates.RTC_CONNECTED ? h.volume = .1 : h.volume = 1
+    t === E.RTCConnectionStates.RTC_CONNECTED ? _.volume = .1 : _.volume = 1
   }
   handleTypingStop(e) {
     let {

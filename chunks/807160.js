@@ -10,17 +10,17 @@ var a, n, i, l = s("735250"),
   o = s.n(u),
   d = s("512722"),
   c = s.n(d),
-  E = s("913527"),
-  f = s.n(E),
-  _ = s("924826"),
-  p = s("314877"),
-  m = s("442837"),
+  f = s("913527"),
+  E = s.n(f),
+  m = s("924826"),
+  _ = s("314877"),
+  p = s("442837"),
   I = s("481060"),
   N = s("37234"),
   S = s("782568"),
   P = s("812206"),
-  T = s("593061"),
-  C = s("267101"),
+  C = s("593061"),
+  T = s("267101"),
   R = s("240864"),
   A = s("942833"),
   M = s("400916"),
@@ -37,11 +37,11 @@ var a, n, i, l = s("735250"),
   B = s("230307"),
   j = s("285952"),
   G = s("366695"),
-  F = s("499150"),
-  k = s("912454"),
+  k = s("499150"),
+  F = s("912454"),
   w = s("259580"),
-  H = s("263704"),
-  Y = s("465670"),
+  Y = s("263704"),
+  H = s("465670"),
   W = s("126900"),
   V = s("559629"),
   K = s("466111"),
@@ -90,7 +90,7 @@ let eo = [et.PaymentStatusTypes.FAILED, et.PaymentStatusTypes.REVERSED, et.Payme
     })
   };
 
-function eE(e) {
+function ef(e) {
   let {
     value: t,
     copyText: s,
@@ -124,7 +124,7 @@ function eE(e) {
     }
   })
 }
-let ef = e => {
+let eE = e => {
   let {
     description: t,
     detail: s
@@ -142,22 +142,22 @@ let ef = e => {
   })
 };
 
-function e_(e) {
+function em(e) {
   let {
     guildId: t,
     guildProductListingId: s
-  } = e, a = (0, C.useFetchGuildProductListing)(t, s, {
+  } = e, a = (0, T.useFetchGuildProductListing)(t, s, {
     requireCurrentGuild: !1
-  }), n = (0, A.useProductType)(a), i = (0, m.useStateFromStores)([O.default], () => O.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? en.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = r.useCallback(async () => {
+  }), n = (0, A.useProductType)(a), i = (0, p.useStateFromStores)([O.default], () => O.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? en.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = r.useCallback(async () => {
     (null == i ? void 0 : i.hasFeature(et.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, g.default)(et.Routes.GUILD_PRODUCT(t, s)) : await (0, g.default)(et.Routes.CHANNEL(t)), (0, N.popLayer)()
   }, [i, t, s]);
   return (0, l.jsxs)(l.Fragment, {
-    children: [null != u && (0, l.jsx)(ef, {
+    children: [null != u && (0, l.jsx)(eE, {
       description: en.default.Messages.GUILD_PRODUCT_BILLING_PRODUCT_TYPE,
       detail: u
-    }), null != i && (0, l.jsx)(ef, {
+    }), null != i && (0, l.jsx)(eE, {
       description: en.default.Messages.GUILD_PRODUCT_BILLING_SERVER_NAME,
-      detail: (0, l.jsx)(F.default, {
+      detail: (0, l.jsx)(k.default, {
         onClick: o,
         children: i.name
       })
@@ -165,14 +165,14 @@ function e_(e) {
   })
 }
 
-function ep(e) {
+function e_(e) {
   var t, s;
   let {
     guildId: a,
     guildProductListingId: n
-  } = e, i = (0, C.useFetchGuildProductListing)(a, n, {
+  } = e, i = (0, T.useFetchGuildProductListing)(a, n, {
     requireCurrentGuild: !1
-  }), r = (0, m.useStateFromStores)([R.default], () => R.default.getGuildProductFetchState(n) === R.FetchState.FETCHING), u = null == i ? void 0 : i.role_id, o = (0, m.useStateFromStores)([O.default], () => null != u ? O.default.getRole(a, u) : void 0, [a, u]), d = (null !== (s = null == i ? void 0 : null === (t = i.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0, c = null != o;
+  }), r = (0, p.useStateFromStores)([R.default], () => R.default.getGuildProductFetchState(n) === R.FetchState.FETCHING), u = null == i ? void 0 : i.role_id, o = (0, p.useStateFromStores)([O.default], () => null != u ? O.default.getRole(a, u) : void 0, [a, u]), d = (null !== (s = null == i ? void 0 : null === (t = i.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0, c = null != o;
   return r ? (0, l.jsx)("div", {
     className: ei.guildProductBenefits,
     children: (0, l.jsx)(I.Spinner, {})
@@ -202,18 +202,18 @@ function ep(e) {
     })]
   }) : null
 }
-class em extends(n = r.PureComponent) {
+class ep extends(n = r.PureComponent) {
   get timePlayed() {
     let {
       applicationStatistics: e
     } = this.props;
-    return null != e && null != e.total_discord_sku_duration ? f().duration(e.total_discord_sku_duration, "seconds") : null
+    return null != e && null != e.total_discord_sku_duration ? E().duration(e.total_discord_sku_duration, "seconds") : null
   }
   get daysSincePurchase() {
     let {
       payment: e
     } = this.props, t = null != e.sku ? e.sku.releaseDate : null, s = null != t && t.isAfter(e.createdAt) ? t : e.createdAt;
-    return f()().diff(s, "days")
+    return E()().diff(s, "days")
   }
   get isSkuPreorder() {
     let {
@@ -233,7 +233,7 @@ class em extends(n = r.PureComponent) {
         paymentSource: e
       }
     } = this.props;
-    return e instanceof U.PaypalSourceRecord ? k.default.Types.PAYPAL : e instanceof U.CreditCardSourceRecord ? k.default.getType(e.brand) : k.default.Types.UNKNOWN
+    return e instanceof U.PaypalSourceRecord ? F.default.Types.PAYPAL : e instanceof U.CreditCardSourceRecord ? F.default.getType(e.brand) : F.default.Types.UNKNOWN
   }
   validateRefundRules() {
     return this.refundRules.filter(e => {
@@ -305,7 +305,7 @@ class em extends(n = r.PureComponent) {
         className: ei.paymentInfo,
         children: [(0, l.jsx)("div", {
           children: en.default.Messages.BILLING_PAYMENT_ID
-        }), (0, l.jsx)(eE, {
+        }), (0, l.jsx)(ef, {
           value: e.id,
           copyText: en.default.Messages.BILLING_PAYMENT_ID_COPY,
           copyFeedbackText: en.default.Messages.BILLING_PAYMENT_ID_COPIED
@@ -347,7 +347,7 @@ class em extends(n = r.PureComponent) {
         }) : null, (0, l.jsx)(ec, {
           description: en.default.Messages.BILLING_PAYMENT_BREAKDOWN_TOTAL,
           cost: (0, J.formatPrice)(i, d)
-        }), e.isGuildProductPurchase && null != c && null != e.sku && (0, l.jsx)(e_, {
+        }), e.isGuildProductPurchase && null != c && null != e.sku && (0, l.jsx)(em, {
           guildId: c,
           guildProductListingId: e.sku.id
         }), u > 0 && (0, l.jsxs)(l.Fragment, {
@@ -366,7 +366,7 @@ class em extends(n = r.PureComponent) {
     let {
       payment: e
     } = this.props;
-    return (0, l.jsx)(T.default, {
+    return (0, l.jsx)(C.default, {
       payment: e
     })
   }
@@ -442,8 +442,8 @@ class em extends(n = r.PureComponent) {
     } = this.props;
     if (this.isSkuPreorder || e.includes("SKU_TYPE")) return null;
     let u = (null === (t = r.sku) || void 0 === t ? void 0 : t.productLine) === et.SKUProductLines.COLLECTIBLES,
-      o = e.includes("PURCHASE_DATE") ? Y.default : H.default,
-      d = e.includes("TIME_PLAYED") || (null === (a = r.premiumRefundDisqualificationReasons) || void 0 === a ? void 0 : a.includes(ee.PremiumRefundDisqualificationReason.PAST_REFUNDABLE_DATE)) ? Y.default : H.default;
+      o = e.includes("PURCHASE_DATE") ? H.default : Y.default,
+      d = e.includes("TIME_PLAYED") || (null === (a = r.premiumRefundDisqualificationReasons) || void 0 === a ? void 0 : a.includes(ee.PremiumRefundDisqualificationReason.PAST_REFUNDABLE_DATE)) ? H.default : Y.default;
     if (!this.isPremium || !(0, $.userInRefundExperiment)()) return (0, l.jsxs)("div", {
       className: ei.refundActions,
       children: [(0, l.jsxs)("div", {
@@ -457,11 +457,11 @@ class em extends(n = r.PureComponent) {
       })]
     });
     let c = (null !== (n = r.premiumRefundDisqualificationReasons) && void 0 !== n ? n : [ee.PremiumRefundDisqualificationReason.OTHER])[0],
-      E = null != c || 0 !== e.length || r.isPurchasedExternally;
+      f = null != c || 0 !== e.length || r.isPurchasedExternally;
     return (0, l.jsxs)("div", {
       className: ei.refundActions,
       children: [(0, l.jsx)(I.Tooltip, {
-        shouldShow: E,
+        shouldShow: f,
         text: function(e) {
           switch (e) {
             case ee.PremiumRefundDisqualificationReason.ALREADY_REFUNDED_PREMIUM:
@@ -477,7 +477,7 @@ class em extends(n = r.PureComponent) {
         children: e => (0, l.jsx)(I.Button, {
           ...e,
           color: I.Button.Colors.PRIMARY,
-          disabled: E,
+          disabled: f,
           onClick: () => (0, I.openModalLazy)(async () => {
             let {
               default: e
@@ -506,26 +506,26 @@ class em extends(n = r.PureComponent) {
       stickerPack: u
     } = this.props, {
       expanded: o
-    } = this.state, d = a.sku, E = a.subscription, _ = null != a.paymentSource && et.PREPAID_PAYMENT_SOURCES.has(a.paymentSource.type);
-    if (null != E && 0 !== E.items.length) {
+    } = this.state, d = a.sku, f = a.subscription, m = null != a.paymentSource && et.PREPAID_PAYMENT_SOURCES.has(a.paymentSource.type);
+    if (null != f && 0 !== f.items.length) {
       let s = [],
         a = null;
-      if (E.type === et.SubscriptionTypes.PREMIUM) E.items.forEach(e => {
+      if (f.type === et.SubscriptionTypes.PREMIUM) f.items.forEach(e => {
         let {
           planId: t,
           quantity: n
         } = e;
-        (0, q.isPremiumBaseSubscriptionPlan)(t) ? (s.push(q.default.getDisplayName(t, !1, _)), a = (0, q.castPremiumSubscriptionAsSkuId)(es.SubscriptionPlanInfo[t].skuId)) : (s.push("".concat(n > 1 ? "".concat(n, "x ") : "").concat(q.default.getDisplayName(t, !1, _))), null == a && (a = (0, q.castPremiumSubscriptionAsSkuId)(es.SubscriptionPlanInfo[t].skuId)))
+        (0, q.isPremiumBaseSubscriptionPlan)(t) ? (s.push(q.default.getDisplayName(t, !1, m)), a = (0, q.castPremiumSubscriptionAsSkuId)(es.SubscriptionPlanInfo[t].skuId)) : (s.push("".concat(n > 1 ? "".concat(n, "x ") : "").concat(q.default.getDisplayName(t, !1, m))), null == a && (a = (0, q.castPremiumSubscriptionAsSkuId)(es.SubscriptionPlanInfo[t].skuId)))
       });
-      else if (E.type === et.SubscriptionTypes.GUILD) {
-        let e = b.default.get(E.items[0].planId);
+      else if (f.type === et.SubscriptionTypes.GUILD) {
+        let e = b.default.get(f.items[0].planId);
         c()(null != e, "Guild subscription plan should already have been loaded");
         let t = e.interval === es.SubscriptionIntervalTypes.YEAR ? en.default.Messages.YEARLY_GUILD_SUBSCRIPTION : en.default.Messages.MONTHLY_GUILD_SUBSCRIPTION;
         s.push(t.format({
           planName: e.name
         })), a = e.skuId
-      } else if (E.type === et.SubscriptionTypes.APPLICATION) {
-        let e = b.default.get(E.items[0].planId);
+      } else if (f.type === et.SubscriptionTypes.APPLICATION) {
+        let e = b.default.get(f.items[0].planId);
         c()(null != e, "Application subscription plan should already have been loaded"), null != n ? s.push(en.default.Messages.MONTHLY_APPLICATION_SUBSCRIPTION_V2.format({
           tier: null == d ? void 0 : d.name
         })) : s.push(en.default.Messages.APPLICATION_SUBSCRIPTION_FROM_DELETED_APPLICATION), a = e.skuId
@@ -539,7 +539,7 @@ class em extends(n = r.PureComponent) {
         skuId: a
       })
     } else if (null != d) {
-      var p;
+      var _;
       if (t = a.isPreorder ? en.default.Messages.PREORDER_SKU_NAME.format({
           name: d.name
         }) : a.isGuildProductPurchase && a.isSoftDeletedProduct ? en.default.Messages.GUILD_PRODUCT_BILLING_DELISTED_PRODUCT : d.name, null != u) {
@@ -551,7 +551,7 @@ class em extends(n = r.PureComponent) {
           className: ei.descriptionIcon,
           size: 24
         })
-      } else e = (null === (p = a.sku) || void 0 === p ? void 0 : p.productLine) === et.SKUProductLines.COLLECTIBLES ? (0, l.jsx)(W.default, {
+      } else e = (null === (_ = a.sku) || void 0 === _ ? void 0 : _.productLine) === et.SKUProductLines.COLLECTIBLES ? (0, l.jsx)(W.default, {
         className: ei.shopIcon
       }) : (0, l.jsx)(G.default, {
         className: ei.descriptionIcon,
@@ -564,9 +564,9 @@ class em extends(n = r.PureComponent) {
     } else e = (0, l.jsx)(K.default, {
       className: ei.descriptionIcon
     }), t = a.description;
-    let m = (0, l.jsx)("div", {
+    let p = (0, l.jsx)("div", {
         className: ei.date,
-        children: (0, Z.dateFormat)(f()(a.createdAt), "MM/DD/YYYY")
+        children: (0, Z.dateFormat)(E()(a.createdAt), "MM/DD/YYYY")
       }),
       N = a.isGift ? (0, l.jsx)(I.Tooltip, {
         text: en.default.Messages.BILLING_GIFT_PURCHASE_TOOLTIP,
@@ -578,10 +578,10 @@ class em extends(n = r.PureComponent) {
     return s ? (0, l.jsxs)("div", {
       className: ei.description,
       children: [e, (0, l.jsxs)("div", {
-        children: [t, m]
+        children: [t, p]
       }), N]
     }) : (0, l.jsxs)(r.Fragment, {
-      children: [m, (0, l.jsxs)("div", {
+      children: [p, (0, l.jsxs)("div", {
         className: ei.description,
         children: [e, (0, l.jsx)("div", {
           children: t
@@ -604,7 +604,7 @@ class em extends(n = r.PureComponent) {
         notice: en.default.Messages.GUILD_PRODUCT_BILLING_PRODUCT_UNAVAILABLE,
         ctaLabel: en.default.Messages.GUILD_PRODUCT_BILLING_CONTACT_SUPPORT,
         onClick: () => (0, S.default)(er(s))
-      }) : null != a && null != e.sku && (0, l.jsx)(ep, {
+      }) : null != a && null != e.sku && (0, l.jsx)(e_, {
         guildId: a,
         guildProductListingId: e.sku.id
       })]
@@ -630,7 +630,7 @@ class em extends(n = r.PureComponent) {
     } = this.props, {
       expanded: a
     } = this.state;
-    return (0, l.jsx)(_.ListNavigatorItem, {
+    return (0, l.jsx)(m.ListNavigatorItem, {
       id: e.id,
       children: e => (0, l.jsxs)(I.Clickable, {
         onClick: this.handleExpandInfo,
@@ -663,7 +663,7 @@ class em extends(n = r.PureComponent) {
       canRefund: () => {
         if (this.isSkuPreorder) return !0;
         let e = this.timePlayed;
-        return null == e || e.asMilliseconds() < f().duration(2, "hours").asMilliseconds()
+        return null == e || e.asMilliseconds() < E().duration(2, "hours").asMilliseconds()
       }
     }, {
       rule: "PURCHASE_DATE",
@@ -730,7 +730,7 @@ class em extends(n = r.PureComponent) {
         let {
           payment: e
         } = this.props;
-        return null == e.sku || !(0, X.hasFlag)(e.sku.flags, p.SKUFlags.GUILD_PRODUCT)
+        return null == e.sku || !(0, X.hasFlag)(e.sku.flags, _.SKUFlags.GUILD_PRODUCT)
       }
     }]), el(this, "handleExpandInfo", () => {
       this.setState({
@@ -747,34 +747,34 @@ function eI(e) {
     locale: n,
     compactMode: i,
     className: u
-  } = e, o = null != a.sku && eu.includes(a.sku.type), d = null != a.sku && o ? a.sku.applicationId : null, c = null === (t = a.sku) || void 0 === t ? void 0 : t.applicationId, E = (null === (s = a.subscription) || void 0 === s ? void 0 : s.type) === et.SubscriptionTypes.APPLICATION, {
-    applicationStatistics: f,
-    gameApplication: _,
-    paymentSources: p
-  } = (0, m.useStateFromStoresObject)([v.default, B.default, P.default], () => {
+  } = e, o = null != a.sku && eu.includes(a.sku.type), d = null != a.sku && o ? a.sku.applicationId : null, c = null === (t = a.sku) || void 0 === t ? void 0 : t.applicationId, f = (null === (s = a.subscription) || void 0 === s ? void 0 : s.type) === et.SubscriptionTypes.APPLICATION, {
+    applicationStatistics: E,
+    gameApplication: m,
+    paymentSources: _
+  } = (0, p.useStateFromStoresObject)([v.default, B.default, P.default], () => {
     var e, t;
     return {
       applicationStatistics: null != d ? B.default.getCurrentUserStatisticsForApplication(d) : null,
       gameApplication: null !== (t = P.default.getApplication(null != d ? d : "")) && void 0 !== t ? t : null === (e = a.sku) || void 0 === e ? void 0 : e.application,
       paymentSources: v.default.paymentSources
     }
-  }), I = (0, m.useStateFromStores)([P.default], () => null != c ? P.default.getApplication(c) : null);
+  }), I = (0, p.useStateFromStores)([P.default], () => null != c ? P.default.getApplication(c) : null);
   r.useEffect(() => {
-    E && null != c && (0, y.fetchApplication)(c)
-  }, [c, E]);
-  let N = (0, m.useStateFromStores)([O.default], () => O.default.getGuild(null == _ ? void 0 : _.guildId));
-  return (0, l.jsx)(em, {
-    applicationStatistics: f,
-    application: E ? I : o ? _ : void 0,
+    f && null != c && (0, y.fetchApplication)(c)
+  }, [c, f]);
+  let N = (0, p.useStateFromStores)([O.default], () => O.default.getGuild(null == m ? void 0 : m.guildId));
+  return (0, l.jsx)(ep, {
+    applicationStatistics: E,
+    application: f ? I : o ? m : void 0,
     guild: N,
     stickerPack: null,
-    paymentSources: p,
+    paymentSources: _,
     locale: n,
     compactMode: i,
     className: u,
     payment: a
   })
 }
-el(em, "defaultProps", {
+el(ep, "defaultProps", {
   compactMode: !1
 })

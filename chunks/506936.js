@@ -14,8 +14,8 @@ var i = n("442837"),
   c = n("607744"),
   f = n("594174"),
   h = n("153124"),
-  C = n("981631"),
-  p = n("815660"),
+  p = n("981631"),
+  C = n("815660"),
   m = n("689938"),
   g = n("73958");
 (l = a || (a = {}))[l.VOICE = 0] = "VOICE";
@@ -25,16 +25,16 @@ t.default = e => {
     guildId: l,
     closePopout: a
   } = e, E = (0, h.useUID)(), {
-    notClaimed: S,
-    notEmailVerified: _,
-    notPhoneVerified: I,
+    notClaimed: _,
+    notEmailVerified: I,
+    notPhoneVerified: S,
     newAccount: N,
     newMember: T
   } = (0, i.useStateFromStores)([c.default], () => c.default.getCheck(l), [l]), A = 0 === t ? m.default.Messages.GUILD_VERIFICATION_VOICE_HEADER : null, L = null, v = null;
-  return (0 === t && (S ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED, v = m.default.Messages.CLAIM_ACCOUNT) : I ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED, v = m.default.Messages.VERIFY_PHONE) : _ ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED, v = m.default.Messages.RESEND_VERIFICATION_EMAIL) : T ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({
-    min: C.VerificationCriteria.MEMBER_AGE
+  return (0 === t && (_ ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED, v = m.default.Messages.CLAIM_ACCOUNT) : S ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED, v = m.default.Messages.VERIFY_PHONE) : I ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED, v = m.default.Messages.RESEND_VERIFICATION_EMAIL) : T ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({
+    min: p.VerificationCriteria.MEMBER_AGE
   }), v = m.default.Messages.OKAY) : N && (L = m.default.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({
-    min: C.VerificationCriteria.ACCOUNT_AGE
+    min: p.VerificationCriteria.ACCOUNT_AGE
   }), v = m.default.Messages.OKAY)), null == A || null == L) ? null : (0, s.jsxs)(r.Dialog, {
     className: g.container,
     "aria-labelledby": E,
@@ -56,7 +56,7 @@ t.default = e => {
         className: g.buttonContainer,
         children: [null != v ? (0, s.jsx)(r.Button, {
           onClick: () => {
-            S ? u.openClaimAccountModal() : I ? (0, r.openModalLazy)(async () => {
+            _ ? u.openClaimAccountModal() : S ? (0, r.openModalLazy)(async () => {
               let {
                 default: e
               } = await Promise.all([n.e("49237"), n.e("99387"), n.e("76540"), n.e("7954")]).then(n.bind(n, "607018"));
@@ -65,8 +65,8 @@ t.default = e => {
                 ...t
               })
             }, {
-              modalKey: p.PHONE_VERIFICATION_MODAL_KEY
-            }) : _ && (o.default.verifyResend(), (0, r.openModal)(e => {
+              modalKey: C.PHONE_VERIFICATION_MODAL_KEY
+            }) : I && (o.default.verifyResend(), (0, r.openModal)(e => {
               var t;
               return (0, s.jsx)(r.ConfirmModal, {
                 header: m.default.Messages.VERIFICATION_EMAIL_TITLE,
@@ -84,7 +84,7 @@ t.default = e => {
           },
           className: g.primaryButton,
           children: v
-        }) : null, S || I || _ ? (0, s.jsx)(r.Button, {
+        }) : null, _ || S || I ? (0, s.jsx)(r.Button, {
           onClick: a,
           look: r.Button.Looks.BLANK,
           className: g.cancel,

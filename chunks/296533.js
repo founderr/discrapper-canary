@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("430824"),
   E = s("621113"),
   T = s("267642"),
-  _ = s("709054"),
-  f = s("357956"),
-  m = s("275909"),
+  f = s("709054"),
+  m = s("357956"),
+  _ = s("275909"),
   g = s("300037"),
   h = s("981631"),
   N = s("474936"),
@@ -36,7 +36,7 @@ function C(e) {
     if (o) return I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format({
       date: d.currentPeriodEnd
     });
-    let e = null != s.premiumGuildSubscription ? _.default.extractTimestamp(s.premiumGuildSubscription.id) : 0;
+    let e = null != s.premiumGuildSubscription ? f.default.extractTimestamp(s.premiumGuildSubscription.id) : 0;
     return I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_DURATION_SHORTENED.format({
       date: new Date(e)
     })
@@ -100,18 +100,18 @@ function A(e) {
     hasCancelableGuildBoostSlot: d,
     showAltText: c,
     isLastGuildBoostSlot: S
-  } = e, _ = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), g = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), h = n.useMemo(() => null != g && g > new Date, [g]), N = (0, T.isGuildBoostSlotCanceled)(s);
+  } = e, f = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), g = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), h = n.useMemo(() => null != g && g > new Date, [g]), N = (0, T.isGuildBoostSlotCanceled)(s);
   return (0, a.jsxs)("div", {
     className: p.boostContainer,
     children: [(0, a.jsxs)("div", {
       className: p.boostInnerContainer,
-      children: [(0, a.jsx)(m.default, {
+      children: [(0, a.jsx)(_.default, {
         isCanceled: N,
         hasCooldown: h,
-        useReducedMotion: _
+        useReducedMotion: f
       }), (0, a.jsx)("div", {
         className: p.boostDescriptionContainer,
-        children: null != g && h && !N ? (0, a.jsx)(f.default, {
+        children: null != g && h && !N ? (0, a.jsx)(m.default, {
           className: p.boostDescriptionInnerContainer,
           cooldown: g.getTime()
         }) : (0, a.jsx)(C, {
@@ -208,7 +208,7 @@ function x(e) {
     className: p.wrapper,
     children: [(0, a.jsx)("div", {
       className: p.container,
-      children: _.default.keys(o).map(e => (0, a.jsx)(O, {
+      children: f.default.keys(o).map(e => (0, a.jsx)(O, {
         guildId: e,
         guildBoostSlotRecords: o[e],
         premiumSubscription: s,

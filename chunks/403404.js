@@ -18,8 +18,8 @@ function o(e) {
     locationObject: u,
     openInPopout: d,
     initialSelectedApplicationId: c,
-    initialSlide: f = i.ActivityShelfSlides.DIRECTORY,
-    enableSelectedTextChannelInvite: E = !1,
+    initialSlide: E = i.ActivityShelfSlides.DIRECTORY,
+    enableSelectedTextChannelInvite: f = !1,
     analyticsLocations: _
   } = e;
   d && (0, l.default)(r.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
@@ -33,9 +33,9 @@ function o(e) {
       channel: t,
       guildId: o,
       locationObject: u,
-      initialSlide: f,
+      initialSlide: E,
       initialSelectedApplicationId: c,
-      enableSelectedTextChannelInvite: E,
+      enableSelectedTextChannelInvite: f,
       analyticsLocations: _
     })
   }, {

@@ -17,9 +17,9 @@ var a = s("735250"),
   E = s("447269"),
   T = s("612226"),
   I = s("714338"),
-  S = s("663993"),
+  f = s("663993"),
   R = s("628123"),
-  f = s("703656"),
+  S = s("703656"),
   m = s("108427"),
   A = s("911314"),
   N = s("429899"),
@@ -36,7 +36,7 @@ function P(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let M = (0, S.makeLazy)({
+let M = (0, f.makeLazy)({
   createPromise: () => Promise.all([s.e("49237"), s.e("73206"), s.e("32886")]).then(s.bind(s, "496691")),
   webpackId: "496691"
 });
@@ -47,7 +47,7 @@ function h(e) {
 l.default.initialize();
 class L extends i.PureComponent {
   componentDidMount() {
-    (0, o.updateLocation)(this.props.location), this.stopListeningToHistory = (0, f.getHistory)().listen(e => {
+    (0, o.updateLocation)(this.props.location), this.stopListeningToHistory = (0, S.getHistory)().listen(e => {
       e.pathname.startsWith(C.Routes.APPLICATION_STORE) && (0, o.updateLocation)(e)
     }), this.props.isAuthenticated && (0, u.fetchPaymentSources)(), I.default.disable(), I.default.setLayout(E.APPLICATION_STORE_LAYOUT), I.default.enable(), (0, m.trackAppUIViewed)("application_store")
   }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return k
   }
 }), n("653041"), n("47120"), n("390547");
 var s = n("735250"),
@@ -13,31 +13,31 @@ var s = n("735250"),
   u = n("442837"),
   d = n("477690"),
   c = n("481060"),
-  f = n("447543"),
-  E = n("317381"),
+  E = n("447543"),
+  f = n("317381"),
   _ = n("778569"),
   T = n("182906"),
-  m = n("100527"),
-  I = n("906732"),
-  p = n("835473"),
-  h = n("471445"),
-  N = n("601964"),
-  S = n("592125"),
-  C = n("430824"),
-  A = n("496675"),
+  I = n("100527"),
+  m = n("906732"),
+  N = n("835473"),
+  p = n("471445"),
+  S = n("601964"),
+  C = n("592125"),
+  A = n("430824"),
+  h = n("496675"),
   g = n("594174"),
   M = n("197409"),
-  R = n("514342"),
-  O = n("602623"),
-  v = n("624138"),
-  L = n("358595"),
-  x = n("981631"),
+  O = n("514342"),
+  R = n("602623"),
+  L = n("624138"),
+  v = n("358595"),
+  P = n("981631"),
   D = n("245335"),
-  P = n("689938"),
+  x = n("689938"),
   y = n("648332");
-let U = (0, v.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-  b = (0, v.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-  j = (0, v.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+let U = (0, L.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+  j = (0, L.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+  b = (0, L.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 
 function G(e) {
   let {
@@ -53,7 +53,7 @@ function G(e) {
     }), (0, s.jsx)(c.Text, {
       variant: "text-xs/normal",
       className: y.count,
-      children: P.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+      children: x.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
         membersOnline: n
       })
     })]
@@ -64,7 +64,7 @@ function G(e) {
     }), (0, s.jsx)(c.Text, {
       variant: "text-xs/normal",
       className: y.count,
-      children: P.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+      children: x.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
         count: t
       })
     })]
@@ -85,7 +85,7 @@ function B(e) {
     hasEnded: l
   } = e;
   if (null != t && null != n) {
-    let e = (0, h.getChannelIconComponent)(t, n);
+    let e = (0, p.getChannelIconComponent)(t, n);
     return (0, s.jsxs)("div", {
       className: i()(y.channel, {
         [y.stacked]: a,
@@ -95,10 +95,10 @@ function B(e) {
         className: y.channelIcon,
         width: 16,
         height: 16
-      }) : null, (0, s.jsx)(R.default, {
+      }) : null, (0, s.jsx)(O.default, {
         children: (0, s.jsx)(c.Text, {
           variant: "text-xs/normal",
-          children: P.default.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
+          children: x.default.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
             channelName: t.name,
             serverName: n.name
           })
@@ -111,10 +111,10 @@ function B(e) {
       [y.stacked]: a,
       [y.ended]: l
     }),
-    children: (0, s.jsx)(R.default, {
+    children: (0, s.jsx)(O.default, {
       children: (0, s.jsx)(c.Text, {
         variant: "text-xs/normal",
-        children: P.default.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
+        children: x.default.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
           guildName: n.name
         })
       })
@@ -122,19 +122,19 @@ function B(e) {
   }) : null
 }
 
-function F(e) {
+function k(e) {
   var t, n;
   let l, r, {
       invite: d,
-      getAcceptInviteContext: h
+      getAcceptInviteContext: p
     } = e,
     {
-      approximate_member_count: R,
-      approximate_presence_count: v,
-      target_type: F,
-      target_application: k
+      approximate_member_count: O,
+      approximate_presence_count: L,
+      target_type: k,
+      target_application: F
     } = d;
-  o()(F === D.InviteTargetTypes.EMBEDDED_APPLICATION && null != k, "invalid application invite");
+  o()(k === D.InviteTargetTypes.EMBEDDED_APPLICATION && null != F, "invalid application invite");
   let w = a.useRef(null),
     [H, V] = a.useState(!1),
     [Y, K] = a.useState(!1);
@@ -142,54 +142,54 @@ function F(e) {
     let e = new ResizeObserver(() => (function() {
         var e;
         let t = null === (e = w.current) || void 0 === e ? void 0 : e.offsetWidth;
-        null != t && (V(t < j + b), K(t <= 2 * U))
+        null != t && (V(t < b + j), K(t <= 2 * U))
       })()),
       t = w.current;
     return null != t && e.observe(t), () => {
       e.disconnect()
     }
   }, [w, V, K]);
-  let W = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
-    z = (0, p.default)([k.id])[0],
-    Q = (0, u.useStateFromStores)([E.default], () => {
+  let W = (0, u.useStateFromStores)([A.default], () => null != d.guild ? A.default.getGuild(d.guild.id) : null, [d]),
+    z = (0, N.default)([F.id])[0],
+    Q = (0, u.useStateFromStores)([f.default], () => {
       var e;
-      return (null == d ? void 0 : d.channel) != null && (null === (e = E.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === k.id
+      return (null == d ? void 0 : d.channel) != null && (null === (e = f.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === F.id
     }),
-    q = (0, u.useStateFromStores)([E.default], () => {
+    Z = (0, u.useStateFromStores)([f.default], () => {
       var e;
-      return ((null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? E.default.getEmbeddedActivitiesForChannel(d.channel.id) : []).some(e => {
+      return ((null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? f.default.getEmbeddedActivitiesForChannel(d.channel.id) : []).some(e => {
         let {
           applicationId: t
         } = e;
-        return k.id === t
+        return F.id === t
       })
     }),
-    J = S.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-    X = (0, u.useStateFromStores)([A.default], () => null != J && A.default.can(x.Permissions.USE_EMBEDDED_ACTIVITIES, J), [J]),
+    q = C.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
+    J = (0, u.useStateFromStores)([h.default], () => null != q && h.default.can(P.Permissions.USE_EMBEDDED_ACTIVITIES, q), [q]),
     {
-      analyticsLocations: Z
-    } = (0, I.default)(m.default.INVITE_EMBED),
+      analyticsLocations: X
+    } = (0, m.default)(I.default.INVITE_EMBED),
     $ = (0, _.default)({
-      applicationId: k.id,
+      applicationId: F.id,
       size: U
     }),
-    ee = (0, u.useStateFromStoresArray)([E.default], () => null != J ? E.default.getEmbeddedActivitiesForChannel(J.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [J, k.id]),
+    ee = (0, u.useStateFromStoresArray)([f.default], () => null != q ? f.default.getEmbeddedActivitiesForChannel(q.id).filter(e => e.applicationId === F.id).flatMap(e => Array.from(e.userIds)) : [], [q, F.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
-    en = d.state === x.InviteStates.ACCEPTING,
+    en = d.state === P.InviteStates.ACCEPTING,
     es = null != W;
   if (null == W) {
-    if (null == d.guild) return (0, s.jsx)(L.default, {});
-    W = new N.default(d.guild)
+    if (null == d.guild) return (0, s.jsx)(v.default, {});
+    W = new S.default(d.guild)
   }
-  let ea = es && !X || es && Q,
+  let ea = es && !J || es && Q,
     el = () => {
-      f.default.acceptInviteAndTransitionToInviteChannel({
+      E.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: d.code,
-        context: h("Invite Button Embed"),
-        analyticsLocations: Z
+        context: p("Invite Button Embed"),
+        analyticsLocations: X
       })
     };
-  return (es && Q && (l = P.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (l = P.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? P.default.Messages.INVITE_EMBED_JOINED : q || !es ? P.default.Messages.JOIN : P.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
+  return (es && Q && (l = x.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !J && (l = x.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? x.default.Messages.INVITE_EMBED_JOINED : Z || !es ? x.default.Messages.JOIN : x.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
     className: y.container,
     ref: w,
     children: [(0, s.jsx)("div", {
@@ -217,43 +217,43 @@ function F(e) {
       children: [(0, s.jsxs)("div", {
         className: y.info,
         children: [(0, s.jsx)(c.FormTitle, {
-          children: es ? P.default.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN : P.default.Messages.INVITE_BUTTON_TITLE_INVITED
+          children: es ? x.default.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN : x.default.Messages.INVITE_BUTTON_TITLE_INVITED
         }), (0, s.jsx)(c.Heading, {
           className: y.heading,
           variant: "heading-xl/semibold",
           children: null == z ? void 0 : z.name
         }), (0, s.jsx)(B, {
-          channel: J,
+          channel: q,
           guild: W,
           isStacked: Y,
-          hasEnded: !q
+          hasEnded: !Z
         })]
       }), (0, s.jsxs)("div", {
         className: i()(y.currentState, {
           [y.large]: H,
-          [y.split]: !q && Y
+          [y.split]: !Z && Y
         }),
-        children: [!q && es ? (0, s.jsxs)("div", {
+        children: [!Z && es ? (0, s.jsxs)("div", {
           className: i()(y.endedNote, {
             [y.large]: H
           }),
           children: [(0, s.jsx)(c.Text, {
             variant: "text-xs/medium",
-            children: P.default.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED
+            children: x.default.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED
           }), (0, s.jsx)(c.Text, {
             variant: "text-xs/medium",
-            children: P.default.Messages.EMBEDDED_ACTIVITIES_EMBED_START
+            children: x.default.Messages.EMBEDDED_ACTIVITIES_EMBED_START
           })]
         }) : null, es ? null : (0, s.jsx)(G, {
-          members: R,
-          membersOnline: v,
+          members: O,
+          membersOnline: L,
           isLarge: H,
           isStacked: Y
         }), (0, s.jsxs)("div", {
           className: y.cta,
-          children: [null != W && q ? (0, s.jsx)("div", {
+          children: [null != W && Z ? (0, s.jsx)("div", {
             className: y.avatars,
-            children: (0, s.jsx)(O.default, {
+            children: (0, s.jsx)(R.default, {
               guildId: W.id,
               users: et,
               max: 4

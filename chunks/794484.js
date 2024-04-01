@@ -13,9 +13,9 @@ var a = s("735250"),
   E = s("32173"),
   T = s("391110"),
   I = s("75077"),
-  S = s("320319"),
+  f = s("320319"),
   R = s("755655");
-let f = e => {
+let S = e => {
   let {
     showAllPerksButton: t,
     leftAlignHeaders: s,
@@ -87,7 +87,7 @@ t.default = e => {
         [R.centerAlignSection]: !A,
         [R.leftAlignSection]: A
       }, s),
-      children: [(0, a.jsx)(f, {
+      children: [(0, a.jsx)(S, {
         showAllPerksButton: N,
         leftAlignHeaders: A,
         title: x.title,
@@ -112,7 +112,7 @@ t.default = e => {
           [R.cardContainer]: C,
           [R.cardContainerNarrowWidth]: !C
         }),
-        children: b.map((e, t) => (0, a.jsx)(S.default, {
+        children: b.map((e, t) => (0, a.jsx)(f.default, {
           confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? j : void 0,
           ...e,
           forceShadow: m

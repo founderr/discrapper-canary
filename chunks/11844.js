@@ -43,7 +43,7 @@ t.default = function() {
       }
     })
   }
-  let _ = (0, d.generateBlockGuildSubscriptionPurchasesNode)();
+  let f = (0, d.generateBlockGuildSubscriptionPurchasesNode)();
   return (0, a.jsxs)("div", {
     className: S.wrapper,
     children: [(0, a.jsx)(o.default, {
@@ -56,7 +56,7 @@ t.default = function() {
       variant: "text-sm/medium",
       children: c.default.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_GUILD_CTA.format({
         boostAnyGuildHook: (e, t) => {
-          let s = null != _,
+          let s = null != f,
             n = (0, a.jsx)(l.Button, {
               className: S.cta,
               disabled: s,
@@ -66,7 +66,7 @@ t.default = function() {
               children: e
             }, t);
           return s ? (0, a.jsx)(l.Tooltip, {
-            text: _,
+            text: f,
             children: e => (0, a.jsx)("span", {
               ...e,
               children: n

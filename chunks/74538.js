@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return eT
   },
   getDefaultPrice: function() {
-    return k
+    return B
   },
   getDiscountIntervalString: function() {
     return F
@@ -106,7 +106,7 @@ n.r(t), n.d(t, {
     return X
   },
   getPrice: function() {
-    return B
+    return k
   },
   getTierDisplayName: function() {
     return K
@@ -195,18 +195,18 @@ function w(e) {
   return e.items.find(e => v.PREMIUM_PLANS.has(e.planId))
 }
 
-function k(e) {
+function B(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     r = null !== (t = S.default.defaultPaymentSourceId) && void 0 !== t ? t : void 0,
     s = A.default.getPremiumTypeSubscription();
-  return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), B(e, n, i, {
+  return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), k(e, n, i, {
     paymentSourceId: r
   })
 }
 
-function B(e) {
+function k(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
@@ -680,7 +680,7 @@ function q(e) {
           } = e;
           return t === n.id
         }),
-        r = null == i ? B(n.id, !1, !1, {
+        r = null == i ? k(n.id, !1, !1, {
           paymentSourceId: t.paymentSourceId,
           currency: t.currency
         }).amount : i.amount;
@@ -911,7 +911,7 @@ function eu(e) {
 
 function ed(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    r = null != t ? B(e.id, !1, i, t) : k(e.id, !1, i),
+    r = null != t ? k(e.id, !1, i, t) : B(e.id, !1, i),
     s = (0, g.formatPrice)(r.amount, r.currency);
   return e.currency !== M.CurrencyCodes.USD && !0 === n && (s = s.concat("*")), s
 }
@@ -959,7 +959,7 @@ function eI(e, t, n, i) {
       }
     }), t
   }
-  return B(a.id, (0, R.isPremium)(i), !1, r)
+  return k(a.id, (0, R.isPremium)(i), !1, r)
 }
 
 function eT(e, t, n) {
@@ -1227,8 +1227,8 @@ t.default = Object.freeze({
   isPremiumAtLeast: R.isPremiumAtLeast,
   isPremium: R.isPremium,
   isPremiumExactly: R.isPremiumExactly,
-  getPrice: B,
-  getDefaultPrice: k,
+  getPrice: k,
+  getDefaultPrice: B,
   getInterval: function(e) {
     let t = v.SubscriptionPlanInfo[e];
     if (null != t) return {

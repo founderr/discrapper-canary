@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("175756"),
   E = s("104494"),
   T = s("639119"),
-  _ = s("165583"),
-  f = s("197115"),
-  m = s("350327"),
+  f = s("165583"),
+  m = s("197115"),
+  _ = s("350327"),
   g = s("318661"),
   h = s("996073"),
   N = s("25990"),
@@ -49,13 +49,13 @@ function B(e) {
     pendingAvatar: w,
     pendingBanner: V,
     pendingThemeColors: Y,
-    pendingPronouns: K,
-    pendingBio: W,
+    pendingPronouns: W,
+    pendingBio: K,
     tryItOutThemeColors: z,
     tryItOutAvatar: Q,
-    tryItOutBanner: X,
+    tryItOutBanner: Z,
     tryItOutAvatarDecoration: q,
-    tryItOutProfileEffectId: Z
+    tryItOutProfileEffectId: X
   } = (0, l.useStateFromStoresObject)([N.default], () => {
     let e = N.default.getAllPending(),
       t = N.default.getErrors(),
@@ -65,10 +65,10 @@ function B(e) {
       ...s,
       errors: t
     }
-  }), J = (0, c.default)(q), $ = (0, S.default)(Z), ee = n.useRef(null);
+  }), J = (0, c.default)(q), $ = (0, S.default)(X), ee = n.useRef(null);
   (0, h.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
   let et = (0, g.default)(G.id),
-    es = null == et ? void 0 : et.getPreviewBio(W),
+    es = null == et ? void 0 : et.getPreviewBio(K),
     {
       analyticsLocations: ea,
       sourceAnalyticsLocations: en
@@ -109,11 +109,11 @@ function B(e) {
         }),
         profilePreview: (0, a.jsx)(A.default, {
           user: G,
-          onAvatarChange: m.setTryItOutAvatar,
-          onBannerChange: m.setTryItOutBanner,
-          pendingPronouns: K,
-          pendingBio: W,
-          pendingBanner: null !== (F = null != X ? X : V) && void 0 !== F ? F : s("466045"),
+          onAvatarChange: _.setTryItOutAvatar,
+          onBannerChange: _.setTryItOutBanner,
+          pendingPronouns: W,
+          pendingBio: K,
+          pendingBanner: null !== (F = null != Z ? Z : V) && void 0 !== F ? F : s("466045"),
           pendingAvatar: null != Q ? Q : w,
           pendingThemeColors: null != z ? z : Y,
           pendingAvatarDecoration: J,
@@ -140,19 +140,19 @@ function B(e) {
             user: G,
             pendingAvatar: null != Q ? Q : w,
             pendingColors: null != z ? z : Y,
-            onThemeColorsChange: m.setTryItOutThemeColors,
+            onThemeColorsChange: _.setTryItOutThemeColors,
             showPremiumIcon: !1,
             preventDisabled: !0
           }), (0, a.jsx)(v.default, {
             className: y.customizationSection,
             isTryItOutFlow: !0,
-            showRemoveBannerButton: null != X,
-            onBannerChange: m.setTryItOutBanner,
+            showRemoveBannerButton: null != Z,
+            onBannerChange: _.setTryItOutBanner,
             showPremiumIcon: !1
           }), (0, a.jsx)(R.default, {
             className: y.customizationSection,
             isTryItOutFlow: !0,
-            onAvatarChange: m.setTryItOutAvatar,
+            onAvatarChange: _.setTryItOutAvatar,
             showRemoveAvatarButton: !1,
             changeAvatarButtonText: U.default.Messages.USER_SETTINGS_ADD_ANIMATED_AVATAR,
             sectionTitle: U.default.Messages.PREMIUM_TIER_0_FEATURE_AVATAR
@@ -172,9 +172,9 @@ function B(e) {
               variant: "text-sm/normal",
               className: y.premiumPerksListTitle,
               children: U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
-            }), (0, a.jsx)(f.default, {
+            }), (0, a.jsx)(m.default, {
               onSubscribeModalClose: e => {
-                e && ((0, r.setPendingAvatar)(Q), (0, m.setPendingBanner)(X), (0, m.setPendingThemeColors)(z))
+                e && ((0, r.setPendingAvatar)(Q), (0, _.setPendingBanner)(Z), (0, _.setPendingThemeColors)(z))
               },
               subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2,
               className: y.premiumSubscribeButton,
@@ -188,7 +188,7 @@ function B(e) {
       }), el && (0, a.jsxs)("div", {
         children: [(0, a.jsx)("div", {
           className: y.premiumTier2Divider
-        }), (0, a.jsx)(_.default, {
+        }), (0, a.jsx)(f.default, {
           type: j.PremiumUpsellTypes.CUSTOM_PROFILE_TRY_OUT_UPSELL,
           subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2
         })]

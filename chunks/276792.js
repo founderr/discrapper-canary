@@ -16,8 +16,8 @@ var s = n("740111"),
   c = n("474936"),
   f = n("981631"),
   E = n("689938"),
-  h = n("464765"),
-  _ = n("74316");
+  _ = n("464765"),
+  h = n("74316");
 
 function C(e) {
   var t, n;
@@ -43,11 +43,11 @@ function C(e) {
       e && g()
     }
   }), O = "" !== C.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
-    className: h.termsApplyAnchor,
+    className: _.termsApplyAnchor,
     href: d.default.getArticleURL(C.helpArticleId),
     children: (0, a.jsx)(l.Heading, {
       variant: "heading-md/normal",
-      className: h.termsApplyBodyText,
+      className: _.termsApplyBodyText,
       children: E.default.Messages.BOGO_TERMS_APPLY
     })
   }) : void 0, v = {
@@ -73,8 +73,8 @@ function C(e) {
     button: () => {
       let e = Date.now();
       return (0, a.jsxs)(o.default, {
-        className: h.buttonWide,
-        innerClassName: h.innerButton,
+        className: _.buttonWide,
+        innerClassName: _.innerButton,
         color: l.Button.Colors.GREEN,
         size: l.Button.Sizes.SMALL,
         onClick: () => {
@@ -87,8 +87,8 @@ function C(e) {
         },
         children: [(0, a.jsx)("img", {
           alt: "",
-          className: h.nitroIconSubHeader,
-          src: _
+          className: _.nitroIconSubHeader,
+          src: h
         }), A]
       })
     },

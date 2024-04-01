@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("660216"),
   E = s("225433"),
   T = s("825209"),
-  _ = s("721383"),
-  f = s("612226"),
-  m = s("714338"),
+  f = s("721383"),
+  m = s("612226"),
+  _ = s("714338"),
   g = s("924557"),
   h = s("74299"),
   N = s("131951"),
@@ -52,9 +52,9 @@ function F(e) {
   let {
     children: t
   } = e;
-  return t([f.KeybindGroup.MESSAGE, f.KeybindGroup.NAVIGATION, f.KeybindGroup.DND, f.KeybindGroup.CHAT, f.KeybindGroup.VOICE_AND_VIDEO, f.KeybindGroup.MISCELLANEOUS])
+  return t([m.KeybindGroup.MESSAGE, m.KeybindGroup.NAVIGATION, m.KeybindGroup.DND, m.KeybindGroup.CHAT, m.KeybindGroup.VOICE_AND_VIDEO, m.KeybindGroup.MISCELLANEOUS])
 }
-let G = o()((0, f.getDefaultLayoutContent)()).filter(e => e.description !== j.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
+let G = o()((0, m.getDefaultLayoutContent)()).filter(e => e.description !== j.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
   k = d.default.connectStores([v.default], () => ({
     theme: v.default.theme
   }))(C.default);
@@ -63,7 +63,7 @@ class H extends n.PureComponent {
     let {
       keybind: e
     } = this.props, t = M.toString(e.shortcut);
-    return m.default.hasBind(t) ? (0, a.jsx)(c.FormText, {
+    return _.default.hasBind(t) ? (0, a.jsx)(c.FormText, {
       className: b.keybindMessage,
       type: c.FormTextTypes.DESCRIPTION,
       style: {
@@ -336,15 +336,15 @@ class w extends n.PureComponent {
           }), (0, a.jsx)("div", {
             className: b.defaultKeybindShortcutGroup,
             children: (0, a.jsx)(c.KeyCombo, {
-              shortcut: _.TOGGLE_HOTKEYS.binds["0"],
+              shortcut: f.TOGGLE_HOTKEYS.binds["0"],
               className: b.__invalid_defaultKeybindShortcut
             })
           })]
         }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsx)(F, {
           children: e => (0, a.jsx)(a.Fragment, {
             children: e.map((e, t) => {
-              let s = (0, f.getNameForKeybindGroup)(e),
-                l = (0, f.getDescriptionForKeybindGroup)(e),
+              let s = (0, m.getNameForKeybindGroup)(e),
+                l = (0, m.getDescriptionForKeybindGroup)(e),
                 r = G[e];
               return (0, a.jsxs)("div", {
                 className: b.defaultKeybindGroup,

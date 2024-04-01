@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("695346"),
   f = n("496675"),
   E = n("699516"),
-  h = n("68588"),
-  _ = n("512665"),
+  _ = n("68588"),
+  h = n("512665"),
   C = n("868807"),
   S = n("981631"),
   m = n("768760"),
@@ -51,7 +51,7 @@ let g = s.memo(function(e) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, _.renderSingleLineMessage)(g, O, A, i()(p.messageContent, T.inlineFormat, T.__invalid_smallFontSize), {
+      } = (0, h.renderSingleLineMessage)(g, O, A, i()(p.messageContent, T.inlineFormat, T.__invalid_smallFontSize), {
         iconClass: p.messageContentIcon,
         iconSize: m.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
@@ -74,7 +74,7 @@ let g = s.memo(function(e) {
       children: I.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
   } else v = null;
-  return (0, a.jsx)(h.ObscuredDisplayContext.Provider, {
+  return (0, a.jsx)(_.ObscuredDisplayContext.Provider, {
     value: (0, u.default)(R, N),
     children: (0, a.jsx)(o.FocusBlock, {
       className: p.messageFocusBlock,

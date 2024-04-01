@@ -7,8 +7,8 @@ var s, l, i, r, o = n("392711"),
   c = n("570140"),
   f = n("861687"),
   E = n("437263"),
-  h = n("314897"),
-  _ = n("157305"),
+  _ = n("314897"),
+  h = n("157305"),
   C = n("131951"),
   S = n("981631");
 let m = {};
@@ -95,15 +95,15 @@ r = "RTCConnectionStore", (i = "displayName") in(l = A) ? Object.defineProperty(
     return u().some(m, t => t === e.connection)
   },
   LOBBY_VOICE_STATE_UPDATE: function(e) {
-    if (h.default.getId() !== e.userId || e.sessionId !== a) return !1;
+    if (_.default.getId() !== e.userId || e.sessionId !== a) return !1;
     let t = m[e.lobbyId];
     null != t && null == e.channelId ? (t.destroy(), delete m[e.lobbyId]) : null != t ? t.channelId = e.channelId : null != e.channelId && (t = function(e, t) {
       if (null == a) throw Error("Creating RTCConnection without session.");
-      let n = _.default.getLobby(e);
+      let n = h.default.getLobby(e);
       if (null == n) throw Error("Creating RTCConnection without lobby.");
       let s = n.application_id,
         l = new f.default({
-          userId: h.default.getId(),
+          userId: _.default.getId(),
           sessionId: a,
           guildId: e,
           channelId: t,

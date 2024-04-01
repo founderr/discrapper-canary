@@ -11,8 +11,8 @@ var s = n("570140"),
   c = n("819640"),
   f = n("131951"),
   E = n("366050"),
-  h = n("19780"),
-  _ = n("944486"),
+  _ = n("19780"),
+  h = n("944486"),
   C = n("914010"),
   S = n("979651"),
   m = n("981631"),
@@ -22,15 +22,15 @@ function p() {
   var e;
   let t = a;
   if (null == t || !E.default.isOpen(t)) return !1;
-  s.default.wait(() => l.close(t)), null === (e = h.default.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), a = null
+  s.default.wait(() => l.close(t)), null === (e = _.default.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), a = null
 }
 
 function T() {
-  let e = h.default.getChannelId(),
+  let e = _.default.getChannelId(),
     t = a === e;
   return function() {
-    let e = h.default.getChannelId(),
-      t = _.default.getChannelId();
+    let e = _.default.getChannelId(),
+      t = h.default.getChannelId();
     if (!f.default.supports(I.Features.VIDEO) || o.default.getWindowOpen(m.PopoutWindowKeys.CHANNEL_CALL_POPOUT)) return !0;
     let n = u.default.getAllActiveStreams().length > 0,
       a = null != e && Object.values(S.default.getVideoVoiceStatesForChannel(e)).some(e => {
@@ -48,15 +48,15 @@ function T() {
     if (null == n || E.default.isOpen(e)) return !1;
     s.default.wait(() => l.open(n.id, m.PictureInPictureComponents.VIDEO, {
       channel: n
-    })), null === (t = h.default.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), a = e
+    })), null === (t = _.default.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), a = e
   }(e))
 }
 class g extends i.default {
   _initialize() {
-    _.default.addChangeListener(T), C.default.addChangeListener(T), h.default.addChangeListener(T), S.default.addChangeListener(T), c.default.addChangeListener(T), u.default.addChangeListener(T), o.default.addChangeListener(T), f.default.addChangeListener(T), r.default.addChangeListener(T)
+    h.default.addChangeListener(T), C.default.addChangeListener(T), _.default.addChangeListener(T), S.default.addChangeListener(T), c.default.addChangeListener(T), u.default.addChangeListener(T), o.default.addChangeListener(T), f.default.addChangeListener(T), r.default.addChangeListener(T)
   }
   _terminate() {
-    _.default.removeChangeListener(T), C.default.removeChangeListener(T), h.default.removeChangeListener(T), S.default.removeChangeListener(T), c.default.removeChangeListener(T), u.default.removeChangeListener(T), o.default.removeChangeListener(T), f.default.removeChangeListener(T), r.default.removeChangeListener(T)
+    h.default.removeChangeListener(T), C.default.removeChangeListener(T), _.default.removeChangeListener(T), S.default.removeChangeListener(T), c.default.removeChangeListener(T), u.default.removeChangeListener(T), o.default.removeChangeListener(T), f.default.removeChangeListener(T), r.default.removeChangeListener(T)
   }
 }
 t.default = new g

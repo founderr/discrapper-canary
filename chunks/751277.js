@@ -22,16 +22,16 @@ function h(e) {
     isOnHubVerificationRoute: n
   } = e, h = (0, a.matchPath)(null !== (t = window.location.pathname) && void 0 !== t ? t : "", {
     path: c.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode")
-  }), C = (0, s.useStateFromStores)([r.default], () => {
+  }), p = (0, s.useStateFromStores)([r.default], () => {
     if (null == h) return null;
     let {
       inviteCode: e
     } = h.params;
     return null != e ? r.default.getInvite(e) : null
-  }), p = (null == C ? void 0 : C.guild) != null ? new i.default(null == C ? void 0 : C.guild) : null;
-  return n ? null != p && null != C ? (0, l.jsx)(u.default, {
-    guild: p,
-    invite: C
+  }), C = (null == p ? void 0 : p.guild) != null ? new i.default(null == p ? void 0 : p.guild) : null;
+  return n ? null != C && null != p ? (0, l.jsx)(u.default, {
+    guild: C,
+    invite: p
   }) : (0, l.jsx)(d.default, {
     tooltip: f.default.Messages.HUB_DISCORD_HUBS,
     id: "guild-hub-button",

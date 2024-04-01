@@ -21,8 +21,8 @@ var a = s("735250"),
   f = s("808268"),
   T = s("768581"),
   _ = s("693546"),
-  S = s("246364"),
-  R = s("689938"),
+  R = s("246364"),
+  S = s("689938"),
   N = s("123471");
 
 function A(e) {
@@ -63,7 +63,7 @@ function M(e) {
   if (null == C) throw Error("Missing user on this guild join request!");
   let x = l.useMemo(() => new c.default(C), [C]),
     G = T.default.getUserAvatarURL(x),
-    P = t === S.GuildJoinRequestApplicationStatuses.SUBMITTED,
+    P = t === R.GuildJoinRequestApplicationStatuses.SUBMITTED,
     j = l.useCallback(async (e, t) => {
       let {
         guildId: s,
@@ -74,14 +74,14 @@ function M(e) {
         try {
           await _.default.updateGuildJoinRequest(s, a, t)
         } catch (e) {
-          (0, o.showToast)((0, o.createToast)(R.default.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE)), p(null)
+          (0, o.showToast)((0, o.createToast)(S.default.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE)), p(null)
         }
       }
     }, [h]),
     v = async () => {
-      await j(u, S.GuildJoinRequestApplicationStatuses.APPROVED)
+      await j(u, R.GuildJoinRequestApplicationStatuses.APPROVED)
     }, O = async () => {
-      await j(u, S.GuildJoinRequestApplicationStatuses.REJECTED)
+      await j(u, R.GuildJoinRequestApplicationStatuses.REJECTED)
     };
   return (0, a.jsxs)(o.Clickable, {
     className: n()(N.container, M),
@@ -106,13 +106,13 @@ function M(e) {
     }), P && (0, a.jsx)(A, {
       icon: E.default,
       onClick: v,
-      submitting: h === S.GuildJoinRequestApplicationStatuses.APPROVED,
-      disabled: null != h && h !== S.GuildJoinRequestApplicationStatuses.APPROVED
+      submitting: h === R.GuildJoinRequestApplicationStatuses.APPROVED,
+      disabled: null != h && h !== R.GuildJoinRequestApplicationStatuses.APPROVED
     }), P && (0, a.jsx)(A, {
       icon: I.default,
       onClick: O,
-      submitting: h === S.GuildJoinRequestApplicationStatuses.REJECTED,
-      disabled: null != h && h !== S.GuildJoinRequestApplicationStatuses.REJECTED
+      submitting: h === R.GuildJoinRequestApplicationStatuses.REJECTED,
+      disabled: null != h && h !== R.GuildJoinRequestApplicationStatuses.REJECTED
     }), (0, a.jsx)(o.Clickable, {
       className: n()(N.overflowMenuContainer, {
         [N.disabled]: null != h

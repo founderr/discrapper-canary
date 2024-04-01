@@ -16,16 +16,16 @@ var s = n("803997"),
   c = n("565473"),
   f = n("927923"),
   E = n("689938"),
-  h = n("695503");
+  _ = n("695503");
 
-function _(e) {
+function h(e) {
   let {
     platform: t
   } = e;
   return t === f.GameConsoleTypes.XBOX ? (0, a.jsx)(d.default, {
-    className: h.icon
+    className: _.icon
   }) : t === f.GameConsoleTypes.PLAYSTATION ? (0, a.jsx)(u.default, {
-    className: h.icon
+    className: _.icon
   }) : null
 }
 
@@ -41,8 +41,8 @@ function C(e) {
   let C = null != n,
     S = C ? d === f.GameConsoleTypes.XBOX ? E.default.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.default.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === f.GameConsoleTypes.XBOX ? E.default.Messages.XBOX_REMOTE_CONNECTED.format() : E.default.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
   return (0, a.jsxs)("div", {
-    className: l()(h.root, C ? h.connecting : h.connected),
-    children: [(0, a.jsx)(_, {
+    className: l()(_.root, C ? _.connecting : _.connected),
+    children: [(0, a.jsx)(h, {
       platform: d
     }), (0, a.jsx)(r.Text, {
       color: C ? "header-primary" : "always-white",

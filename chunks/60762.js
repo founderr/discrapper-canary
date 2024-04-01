@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 });
 var a = n("735250");
@@ -21,19 +21,19 @@ let E = (e, t) => ({
   imgStyle: f.defaultDropImage
 });
 
-function h(e) {
+function _(e) {
   let {
     markAsDismissed: t,
     partnerGame: n
   } = e;
   (0, o.useTrackDropsImpression)(n, s.ImpressionTypes.POPOUT, s.ImpressionNames.DROPS_QUEST_COMPLETION);
-  let h = (0, o.useDropsExperiment)(n);
-  if (null == h) return null;
+  let _ = (0, o.useDropsExperiment)(n);
+  if (null == _) return null;
   let {
-    body: _,
+    body: h,
     imgSrc: C,
     imgStyle: S
-  } = E(h.drop, h.config.streamLengthRequirement), m = () => {
+  } = E(_.drop, _.config.streamLengthRequirement), m = () => {
     t(d.ContentDismissActionType.DISMISS)
   };
   return (0, a.jsxs)("div", {
@@ -58,7 +58,7 @@ function h(e) {
     }), (0, a.jsx)(l.Text, {
       variant: "text-sm/medium",
       className: f.subTitle,
-      children: _
+      children: h
     }), (0, a.jsx)(l.Button, {
       look: l.Button.Looks.INVERTED,
       fullWidth: !0,

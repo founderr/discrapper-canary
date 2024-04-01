@@ -76,7 +76,7 @@ n.r(t), n.d(t, {
     return y
   },
   canUserUse: function() {
-    return k
+    return B
   }
 });
 var i = n("710845"),
@@ -140,6 +140,6 @@ let P = new d("increasedGuildLimit"),
     [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [_, c, E, I, T, f, S, h, A, m, p, R, C, g, L, D, v, M, y, P, U, b, G, O, N])
   });
 
-function k(e, t) {
+function B(e, t) {
   return e.getFeatureValue(t)
 }

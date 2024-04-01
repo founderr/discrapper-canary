@@ -7,8 +7,8 @@ var a, s, l, i, r = n("392711"),
   c = n("407570"),
   f = n("598077"),
   E = n("594174"),
-  h = n("388380");
-let _ = {},
+  _ = n("388380");
+let h = {},
   C = 0,
   S = !1,
   m = !1,
@@ -26,7 +26,7 @@ function T(e, t) {
     contactNames: a,
     isUnseen: !t && !e.is_viewed
   }
-}(0, r.debounce)(e => h.default.viewSuggestions(e), 15e3);
+}(0, r.debounce)(e => _.default.viewSuggestions(e), 15e3);
 class g extends(a = u.default.Store) {
   initialize() {
     this.waitFor(E.default)
@@ -35,13 +35,13 @@ class g extends(a = u.default.Store) {
     return C
   }
   getSuggestions() {
-    return Object.entries(_).map(e => {
+    return Object.entries(h).map(e => {
       let [t, n] = e;
       return n
     })
   }
   getSuggestion(e) {
-    return _[e]
+    return h[e]
   }
 }
 i = "FriendSuggestionStore", (l = "displayName") in(s = g) ? Object.defineProperty(s, l, {
@@ -51,28 +51,28 @@ i = "FriendSuggestionStore", (l = "displayName") in(s = g) ? Object.defineProper
   writable: !0
 }) : s[l] = i, t.default = new g(d.default, {
   CONNECTION_OPEN: function(e) {
-    _ = {}, (C = e.friendSuggestionCount) > 0 && (m = !0, S || !m || (S = !0, m = !1, h.default.fetch()))
+    h = {}, (C = e.friendSuggestionCount) > 0 && (m = !0, S || !m || (S = !0, m = !1, _.default.fetch()))
   },
   FRIEND_SUGGESTION_CREATE: function(e) {
     let t = T(e.suggestion);
-    if (null != _[t.key]) return !1;
-    C++, _ = {
-      ..._,
+    if (null != h[t.key]) return !1;
+    C++, h = {
+      ...h,
       [t.key]: t
     }
   },
   FRIEND_SUGGESTION_DELETE: function(e) {
-    C = Math.max(0, --C), delete _[e.suggestedUserId]
+    C = Math.max(0, --C), delete h[e.suggestedUserId]
   },
   LOAD_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
-    S = !1, _ = function(e) {
+    S = !1, h = function(e) {
       let t = e.reduce((e, t) => e + (t.is_viewed ? 0 : 1), 0) === e.length,
         n = !(0, c.isInFriendSuggestionSeenStateExperiment)() || t;
       return o().chain(e).map(e => T(e, n)).keyBy(e => e.key).value()
-    }(e.suggestions), C = o().keys(_).length
+    }(e.suggestions), C = o().keys(h).length
   },
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function() {
-    S = !1, _ = {}
+    S = !1, h = {}
   },
   VIEWED_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
     e.userIds.forEach(e => {

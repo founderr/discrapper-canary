@@ -36,8 +36,8 @@ function b(e) {
   let {
     channel: t,
     isLoading: n
-  } = e, [s, g] = r.useState(!1), b = (0, o.useStateFromStores)([O.default], () => O.default.getSelfEmbeddedActivityForChannel(t.id)), G = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelMode()), w = null == b ? void 0 : b.instanceId, k = (0, o.useStateFromStores)([A.default], () => A.default.getChannelId() === t.id), {
-    dockedRect: B,
+  } = e, [s, g] = r.useState(!1), b = (0, o.useStateFromStores)([O.default], () => O.default.getSelfEmbeddedActivityForChannel(t.id)), G = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelMode()), w = null == b ? void 0 : b.instanceId, B = (0, o.useStateFromStores)([A.default], () => A.default.getChannelId() === t.id), {
+    dockedRect: k,
     isHidden: V
   } = (0, o.useStateFromStoresObject)([h.default], () => {
     let e = h.default.pipWindow;
@@ -53,7 +53,7 @@ function b(e) {
     activityParticipant: null != b ? E.default.getParticipant(t.id, b.applicationId) : null,
     selectedParticipant: E.default.getSelectedParticipant(t.id),
     participantsOpen: E.default.getParticipantsOpen(t.id)
-  })), j = k || null != F, W = (0, p.default)(t.id), K = W && (null == H ? void 0 : H.type) !== M.ParticipantTypes.ACTIVITY, z = !W && G === D.ActivityPanelModes.PIP, X = (!j || j && (K || z) && null == B) && !V, Q = X && null != h.default.pipVideoWindow && null != h.default.pipActivityWindow;
+  })), j = B || null != F, W = (0, p.default)(t.id), K = W && (null == H ? void 0 : H.type) !== M.ParticipantTypes.ACTIVITY, z = !W && G === D.ActivityPanelModes.PIP, X = (!j || j && (K || z) && null == k) && !V, Q = X && null != h.default.pipVideoWindow && null != h.default.pipActivityWindow;
 
   function q() {
     var e;
@@ -158,7 +158,7 @@ function b(e) {
             [y.pipModeTall]: X && s,
             [y.pipNonInteractive]: X && !(null === (o = b.config) || void 0 === o ? void 0 : o.useInteractivePIP)
           }),
-          shouldRefocus: !X && k
+          shouldRefocus: !X && B
         }), !X && (0, i.jsx)(C.TileOverlay, {
           participantsOpen: Y,
           showToggleParticipants: !1,

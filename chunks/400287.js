@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return f
   }
 });
 var a = s("735250");
@@ -18,14 +18,14 @@ var n = s("803997"),
   E = s("689938"),
   T = s("794711");
 
-function _() {
+function f() {
   let e = c.ExpressionSuggestionsEnabled.useSetting(),
     t = c.IncludeStickersInAutocomplete.useSetting(),
     s = c.UseRichChatInput.useSetting(),
     n = c.RenderSpoilers.useSetting(),
-    _ = c.UseThreadSidebar.useSetting(),
-    f = c.ViewImageDescriptions.useSetting(),
-    m = c.ConvertEmoticons.useSetting(),
+    f = c.UseThreadSidebar.useSetting(),
+    m = c.ViewImageDescriptions.useSetting(),
+    _ = c.ConvertEmoticons.useSetting(),
     g = c.InlineAttachmentMedia.useSetting(),
     h = c.InlineEmbedMedia.useSetting(),
     N = c.RenderEmbeds.useSetting(),
@@ -54,7 +54,7 @@ function _() {
       children: E.default.Messages.INLINE_ATTACHMENT_MEDIA
     }), (0, a.jsx)(i.FormSwitch, {
       className: l()(T.marginTop8, T.marginBottom20),
-      value: f,
+      value: m,
       note: E.default.Messages.IMAGE_DESCRIPTION_HELP,
       onChange: c.ViewImageDescriptions.updateSetting,
       children: E.default.Messages.USER_SETTINGS_WITH_IMAGE_DESCRIPTIONS
@@ -76,7 +76,7 @@ function _() {
       children: E.default.Messages.RENDER_REACTIONS
     }), (0, a.jsx)(i.FormSwitch, {
       className: T.marginBottom40,
-      value: m,
+      value: _,
       note: d.default.parse(E.default.Messages.CONVERT_EMOTICONS_HELP),
       onChange: c.ConvertEmoticons.updateSetting,
       children: E.default.Messages.CONVERT_EMOTICONS
@@ -139,7 +139,7 @@ function _() {
         children: E.default.Messages.THREADS
       }), (0, a.jsx)(i.FormSwitch, {
         className: T.marginTop8,
-        value: _,
+        value: f,
         onChange: c.UseThreadSidebar.updateSetting,
         children: E.default.Messages.USE_THREADS_SIDEBAR_DESCRIPTION
       })]

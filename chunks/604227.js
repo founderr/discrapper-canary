@@ -17,11 +17,11 @@ var n = s("525654"),
 function c() {
   var e, t, s, n, c;
   let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    E = "280153",
-    T = (e = "678ad4ca95e3d2bd1b49dbf6ac433b5fed8f3b1d", e.substring(0, 7)),
-    _ = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
-    f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
-    m = null === r.default || void 0 === r.default ? void 0 : null === (n = (c = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(c),
+    E = "280308",
+    T = (e = "8f01afa9c8c02d2d0463686ee0e5011641bc7fbd", e.substring(0, 7)),
+    f = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
+    m = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
+    _ = null === r.default || void 0 === r.default ? void 0 : null === (n = (c = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(c),
     g = function() {
       var e;
       let t = null === l() || void 0 === l() ? void 0 : null === (e = l().os) || void 0 === e ? void 0 : e.toString();
@@ -31,7 +31,7 @@ function c() {
       return t.includes("Windows 10") && void 0 !== i && i >= 22e3 && (t = t.replace("Windows 10", "Windows 11")), t.includes("OS X 10.15.7") && void 0 !== a && a >= 20 && (t = "macOS ".concat(a - 9)), "".concat(t, " (").concat(s, ")")
     }(),
     h = [S, E, "(".concat(T, ")")];
-  return null != _ && (h.push("Host ".concat(_)), null != m && h.push(m.toLowerCase()), null != f && h.push("(".concat(f, ")"))), null != g && h.push(g), (0, a.jsx)(o.CopiableField, {
+  return null != f && (h.push("Host ".concat(f)), null != _ && h.push(_.toLowerCase()), null != m && h.push("(".concat(m, ")"))), null != g && h.push(g), (0, a.jsx)(o.CopiableField, {
     copyValue: h.join(" "),
     disableCopy: !1,
     copyTooltip: d.default.Messages.COPY_VERSION,
@@ -47,17 +47,17 @@ function c() {
           className: u.versionHash,
           children: ["(", T, ")"]
         })]
-      }), " ", null != _ ? (0, a.jsxs)(a.Fragment, {
+      }), " ", null != f ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(i.Text, {
           tag: "span",
           className: u.line,
           variant: "text-xs/normal",
           color: "text-muted",
-          children: ["Host ", _, " ", null != m ? (0, a.jsxs)("span", {
+          children: ["Host ", f, " ", null != _ ? (0, a.jsxs)("span", {
             className: u.appArch,
-            children: [m.toLowerCase(), " "]
-          }) : null, null != f ? (0, a.jsxs)("span", {
-            children: ["(", f, ")"]
+            children: [_.toLowerCase(), " "]
+          }) : null, null != m ? (0, a.jsxs)("span", {
+            children: ["(", m, ")"]
           }) : null]
         }), " "]
       }) : null, null != g ? (0, a.jsx)(i.Text, {

@@ -13,9 +13,9 @@ var a = s("735250"),
   E = s("41776"),
   T = s("703656"),
   I = s("920440"),
-  S = s("601964"),
+  f = s("601964"),
   R = s("430824"),
-  f = s("378720"),
+  S = s("378720"),
   m = s("285952"),
   A = s("346656"),
   N = s("263704"),
@@ -69,7 +69,7 @@ class M extends i.PureComponent {
       pageSize: o
     } = this.props;
     if (t && s) return null;
-    let d = new S.default(e),
+    let d = new f.default(e),
       c = g.default.Messages.LURKER_MODE_VIEW_GUILD,
       _ = this.handleJoinOrView,
       E = u.Button.Looks.FILLED,
@@ -83,7 +83,7 @@ class M extends i.PureComponent {
       })]
     })) : i && t && (c = g.default.Messages.JOIN_GUILD) : (c = g.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
       className: n()(l, o === p.PageSizes.SMALL ? O.inviteSmall : O.inviteLarge),
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(S.default, {
         children: g.default.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
       }), (0, a.jsxs)("div", {
         className: O.content,

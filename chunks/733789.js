@@ -13,7 +13,7 @@ var a = s("735250"),
   E = s("51144"),
   T = s("981631"),
   I = s("689938"),
-  S = s("699524");
+  f = s("699524");
 
 function R(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function R(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let f = {
+let S = {
   [T.StoreRecommendationTypes.NOW_PLAYING]: {
     single: (e, t) => I.default.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
       user1: e.username,
@@ -72,7 +72,7 @@ let f = {
 };
 class m extends i.PureComponent {
   renderDescription(e, t) {
-    let s = f[e];
+    let s = S[e];
     return 1 === t.length ? s.single(t[0].user, e => this.renderActivityDiscordTag(e)) : 2 === t.length ? s.double(t[0].user, t[1].user, e => this.renderActivityDiscordTag(e)) : s.other(t.length)
   }
   renderActivityDiscordTag(e) {
@@ -86,7 +86,7 @@ class m extends i.PureComponent {
       }),
       position: "right",
       children: t => (0, a.jsx)("span", {
-        className: S.username,
+        className: f.username,
         ...t,
         children: e.username
       })
@@ -101,9 +101,9 @@ class m extends i.PureComponent {
       userInfo: i
     } = e;
     return 0 === i.length ? null : (0, a.jsxs)("div", {
-      className: n()(S.recommendationActivity, t),
+      className: n()(f.recommendationActivity, t),
       children: [(0, a.jsx)(_.default, {
-        className: S.players,
+        className: f.players,
         users: i.map(e => {
           let {
             user: t
@@ -114,18 +114,18 @@ class m extends i.PureComponent {
         max: 4,
         renderMoreUsers: this.renderPlayerOverflow
       }), (0, a.jsx)("div", {
-        className: S.description,
+        className: f.description,
         children: this.renderDescription(s, i)
       })]
     })
   }
   constructor(...e) {
     super(...e), R(this, "renderUserTooltip", (e, t, s) => (0, a.jsxs)("div", {
-      className: S.tooltip,
+      className: f.tooltip,
       children: [(0, a.jsx)("div", {
         children: E.default.getUserTag(e)
       }), (0, a.jsx)(c.default, {
-        className: S.tooltipTimestamp,
+        className: f.tooltipTimestamp,
         start: t,
         end: s,
         location: c.default.Locations.ACTIVITY_FEED
@@ -148,8 +148,8 @@ class m extends i.PureComponent {
             decoration: "never"
           }),
           children: s => (0, a.jsx)(l.Avatar, {
-            className: n()(S.playerAvatar, {
-              [S.avatarMasked]: !i
+            className: n()(f.playerAvatar, {
+              [f.avatarMasked]: !i
             }),
             src: e.getAvatarURL(void 0, 32),
             "aria-label": e.username,
@@ -160,7 +160,7 @@ class m extends i.PureComponent {
         })
       }, e.id)
     }), R(this, "renderPlayerOverflow", (e, t, s) => (0, a.jsx)("div", {
-      className: S.playerOverflow,
+      className: f.playerOverflow,
       children: e
     }, s))
   }

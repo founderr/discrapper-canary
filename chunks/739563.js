@@ -12,7 +12,7 @@ var a = s("735250"),
   S = s("794711");
 let E = 0,
   T = () => "notification-position-selector-".concat(E++),
-  _ = e => {
+  f = e => {
     switch (e) {
       case d.OverlayNotificationPositions.TOP_LEFT:
         return u.default.Messages.OVERLAY_NOTIFICATIONS_TOP_LEFT;
@@ -26,14 +26,14 @@ let E = 0,
         return u.default.Messages.OVERLAY_NOTIFICATIONS_DISABLED
     }
   },
-  f = [d.OverlayNotificationPositions.DISABLED, d.OverlayNotificationPositions.TOP_LEFT, d.OverlayNotificationPositions.TOP_RIGHT, d.OverlayNotificationPositions.BOTTOM_LEFT, d.OverlayNotificationPositions.BOTTOM_RIGHT];
+  m = [d.OverlayNotificationPositions.DISABLED, d.OverlayNotificationPositions.TOP_LEFT, d.OverlayNotificationPositions.TOP_RIGHT, d.OverlayNotificationPositions.BOTTOM_LEFT, d.OverlayNotificationPositions.BOTTOM_RIGHT];
 
-function m(e) {
+function _(e) {
   let {
     position: t,
     onChange: s
   } = e, [l] = n.useState(() => T()), E = t === d.OverlayNotificationPositions.DISABLED ? u.default.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : u.default.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({
-    position: _(t)
+    position: f(t)
   });
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(r.FocusRing, {
@@ -43,7 +43,7 @@ function m(e) {
         className: i()(c.wrapper, {
           [c.disabledSelected]: t === d.OverlayNotificationPositions.DISABLED
         }),
-        children: f.map(e => (0, a.jsxs)("label", {
+        children: m.map(e => (0, a.jsxs)("label", {
           className: i()({
             [c.selected]: e === t,
             [c.disabled]: e === d.OverlayNotificationPositions.DISABLED,
@@ -52,7 +52,7 @@ function m(e) {
             [c.bottomRight]: e === d.OverlayNotificationPositions.BOTTOM_RIGHT,
             [c.bottomLeft]: e === d.OverlayNotificationPositions.BOTTOM_LEFT
           }),
-          children: [_(e), e === d.OverlayNotificationPositions.DISABLED ? (0, a.jsx)(o.default, {
+          children: [f(e), e === d.OverlayNotificationPositions.DISABLED ? (0, a.jsx)(o.default, {
             className: c.disabledIcon
           }) : null, (0, a.jsx)("input", {
             type: "radio",
@@ -70,4 +70,4 @@ function m(e) {
     })]
   })
 }
-m.Positions = d.OverlayNotificationPositions, t.default = m
+_.Positions = d.OverlayNotificationPositions, t.default = _

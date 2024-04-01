@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return R
   }
 }), n("627341");
 var s = n("735250"),
@@ -13,29 +13,29 @@ var s = n("735250"),
   u = n("481060"),
   d = n("377171"),
   c = n("507893"),
-  f = n("63063"),
-  E = n("203143"),
+  E = n("63063"),
+  f = n("203143"),
   _ = n("365206"),
   T = n("294608"),
-  m = n("65145"),
-  I = n("920557"),
-  p = n("981631"),
-  h = n("689938"),
-  N = n("749422");
+  I = n("65145"),
+  m = n("920557"),
+  N = n("981631"),
+  p = n("689938"),
+  S = n("749422");
 
-function S(e) {
+function C(e) {
   let {
     media: t
   } = e;
   return (0, s.jsx)(u.Heading, {
     variant: "text-md/medium",
-    className: N.question,
+    className: S.question,
     scaleFontToUserSetting: !0,
     children: t.text
   })
 }
 
-function C(e) {
+function A(e) {
   let {
     className: t
   } = e;
@@ -44,15 +44,15 @@ function C(e) {
       variant: "text-sm/medium",
       color: "text-normal",
       scaleFontToUserSetting: !0,
-      children: h.default.Messages.POLLS_EXPERIMENT_INFO_TEXT
+      children: p.default.Messages.POLLS_EXPERIMENT_INFO_TEXT
     }),
-    "aria-label": h.default.Messages.POLLS_EXPERIMENT_INFO_TEXT,
+    "aria-label": p.default.Messages.POLLS_EXPERIMENT_INFO_TEXT,
     children: e => (0, s.jsx)(u.Clickable, {
       ...e,
       className: t,
       tag: "a",
       role: "link",
-      href: f.default.getArticleURL(p.HelpdeskArticles.POLLS_FAQ),
+      href: E.default.getArticleURL(N.HelpdeskArticles.POLLS_FAQ),
       target: "_blank",
       children: (0, s.jsx)(c.default, {
         width: 24,
@@ -64,7 +64,7 @@ function C(e) {
   })
 }
 
-function A(e) {
+function h(e) {
   let {
     children: t,
     onClick: n,
@@ -75,7 +75,7 @@ function A(e) {
   } = e;
   return (0, s.jsx)(u.Button, {
     onClick: n,
-    className: i()(N.__invalid_textButton, r),
+    className: i()(S.__invalid_textButton, r),
     look: u.Button.Looks.BLANK,
     size: u.Button.Sizes.NONE,
     buttonRef: o,
@@ -96,12 +96,12 @@ function g(e) {
     className: l
   } = e;
   return (0, s.jsxs)("div", {
-    className: i()(N.detailsText, l),
-    children: [(0, s.jsx)(A, {
+    className: i()(S.detailsText, l),
+    children: [(0, s.jsx)(h, {
       onClick: a,
       variant: "text-sm/normal",
       color: "none",
-      className: N.detailsTextButton,
+      className: S.detailsTextButton,
       children: t
     }), null != n && (0, s.jsx)(u.Text, {
       variant: "text-sm/normal",
@@ -121,8 +121,8 @@ function M(e) {
   } = e, {
     actionButtonRef: o,
     manageFocusOnAction: d
-  } = (0, m.usePollFocusManager)(), c = a.useCallback(async () => {
-    (null == t ? void 0 : t.type) != null && (await E.default.handlePollActionTapped({
+  } = (0, I.usePollFocusManager)(), c = a.useCallback(async () => {
+    (null == t ? void 0 : t.type) != null && (await f.default.handlePollActionTapped({
       channelId: n,
       messageId: l,
       type: t.type
@@ -134,14 +134,14 @@ function M(e) {
     disabled: !t.enabled,
     color: "secondaryButton" === t.presentation ? u.Button.Colors.CUSTOM : u.Button.Colors.BRAND,
     size: u.Button.Sizes.SMALL,
-    className: i()(r, N.buttonPresentation, "secondaryButton" === t.presentation && N.secondaryButtonPresentation),
+    className: i()(r, S.buttonPresentation, "secondaryButton" === t.presentation && S.secondaryButtonPresentation),
     children: (0, s.jsx)(u.Text, {
       variant: "text-sm/medium",
       color: "none",
       scaleFontToUserSetting: !0,
       children: t.label
     })
-  }, t.presentation) : "textButton" === t.presentation ? (0, s.jsx)(A, {
+  }, t.presentation) : "textButton" === t.presentation ? (0, s.jsx)(h, {
     buttonRef: o,
     onClick: c,
     className: r,
@@ -154,7 +154,7 @@ function M(e) {
   })
 }
 
-function R(e) {
+function O(e) {
   let {
     message: t,
     poll: n,
@@ -170,40 +170,40 @@ function R(e) {
       myAvatarUrl: t.myAvatarUrl,
       canShowVoteCounts: t.canShowVoteCounts
     };
-    return (0, r.match)(t.layoutType).with(o.PollLayoutTypes.DEFAULT, () => (0, s.jsx)(I.TextAndImageAnswers, {
+    return (0, r.match)(t.layoutType).with(o.PollLayoutTypes.DEFAULT, () => (0, s.jsx)(m.TextAndImageAnswers, {
       ...n
     })).with(o.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => (0, s.jsx)(_.default, {
       ...n
     })).otherwise(() => null)
   }(0, n);
   return null == d ? null : (0, s.jsx)("div", {
-    className: i()(N.container, l, a),
+    className: i()(S.container, l, a),
     children: (0, s.jsxs)(u.HeadingLevel, {
       children: [(0, s.jsxs)("div", {
-        className: N.header,
-        children: [(0, s.jsx)(C, {
-          className: N.infoButton
-        }), (0, s.jsx)(S, {
+        className: S.header,
+        children: [(0, s.jsx)(A, {
+          className: S.infoButton
+        }), (0, s.jsx)(C, {
           media: n.question
         }), null != n.promptLabel && (0, s.jsx)(u.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          className: N.prompt,
+          className: S.prompt,
           scaleFontToUserSetting: !0,
           children: n.promptLabel
         })]
       }), d, (0, s.jsxs)("div", {
-        className: N.bottomBar,
+        className: S.bottomBar,
         children: [(0, s.jsx)(M, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.secondaryAction,
-          className: N.secondaryAction
+          className: S.secondaryAction
         }), (0, s.jsx)(M, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.tertiaryAction,
-          className: N.tertiaryAction
+          className: S.tertiaryAction
         }), (0, s.jsx)(M, {
           channelId: t.getChannelId(),
           messageId: t.id,
@@ -214,7 +214,7 @@ function R(e) {
   })
 }
 
-function O(e) {
+function R(e) {
   let {
     message: t,
     poll: n,
@@ -223,8 +223,8 @@ function O(e) {
   return (0, s.jsx)(T.PollContextProvider, {
     message: t,
     poll: n,
-    children: (0, s.jsx)(m.PollFocusManager, {
-      children: (0, s.jsx)(R, {
+    children: (0, s.jsx)(I.PollFocusManager, {
+      children: (0, s.jsx)(O, {
         message: t,
         poll: n,
         className: a

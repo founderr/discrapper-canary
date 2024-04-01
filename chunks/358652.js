@@ -7,12 +7,12 @@ var l, a, s, i, r = n("442837"),
   c = n("592125"),
   f = n("306680"),
   h = n("944486"),
-  C = n("55589");
-let p = [];
+  p = n("55589");
+let C = [];
 
 function m() {
-  let e = C.default.getPrivateChannelIds().filter(e => f.default.getMentionCount(e) > 0);
-  return e.length > 20 && (e.length = 20), !(0, d.areArraysShallowlyEqual)(e, p) && (p = e, !0)
+  let e = p.default.getPrivateChannelIds().filter(e => f.default.getMentionCount(e) > 0);
+  return e.length > 20 && (e.length = 20), !(0, d.areArraysShallowlyEqual)(e, C) && (C = e, !0)
 }
 
 function g() {
@@ -25,20 +25,20 @@ function E(e) {
   } = e, n = c.default.getChannel(t);
   return !!(null != n && (0, u.isPrivate)(n.type)) && m()
 }
-class S extends(l = r.default.Store) {
+class _ extends(l = r.default.Store) {
   initialize() {
-    this.waitFor(C.default, c.default, h.default, f.default)
+    this.waitFor(p.default, c.default, h.default, f.default)
   }
   getUnreadPrivateChannelIds() {
-    return p
+    return C
   }
 }
-i = "PrivateChannelReadStateStore", (s = "displayName") in(a = S) ? Object.defineProperty(a, s, {
+i = "PrivateChannelReadStateStore", (s = "displayName") in(a = _) ? Object.defineProperty(a, s, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = i, t.default = new S(o.default, {
+}) : a[s] = i, t.default = new _(o.default, {
   CONNECTION_OPEN: g,
   OVERLAY_INITIALIZE: g,
   MESSAGE_CREATE: E,

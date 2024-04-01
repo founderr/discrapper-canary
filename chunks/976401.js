@@ -21,14 +21,14 @@ function d(e) {
     disabled: c,
     icon: f,
     iconForeground: h,
-    innerClassName: C,
-    tooltipClassName: p,
+    innerClassName: p,
+    tooltipClassName: C,
     onMouseEnter: m,
     onMouseLeave: g,
     "aria-label": E,
-    "aria-checked": S,
-    role: _,
-    tooltipColor: I,
+    "aria-checked": _,
+    role: I,
+    tooltipColor: S,
     tooltipForceOpen: N
   } = e, T = a.isValidElement(f) ? f : (0, l.jsx)(f, {
     width: 20,
@@ -37,10 +37,10 @@ function d(e) {
     foreground: h
   });
   return (0, l.jsx)(r.Tooltip, {
-    tooltipClassName: p,
+    tooltipClassName: C,
     text: t,
     "aria-label": E,
-    color: I,
+    color: S,
     forceOpen: N,
     children: e => {
       let {
@@ -54,7 +54,7 @@ function d(e) {
         look: r.Button.Looks.BLANK,
         size: r.Button.Sizes.NONE,
         disabled: c,
-        innerClassName: C,
+        innerClassName: p,
         wrapperClassName: u.button,
         className: i()(u.button, {
           [u.disabled]: c,
@@ -70,8 +70,8 @@ function d(e) {
           null == f || f(), null == g || g()
         },
         onContextMenu: s,
-        role: _,
-        "aria-checked": S,
+        role: I,
+        "aria-checked": _,
         children: [null != n ? (0, l.jsx)(o.default, {
           width: 20,
           height: 20,

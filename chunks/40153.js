@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   FolderEndDropTarget: function() {
-    return I
+    return S
   },
   PlaceholderDropTarget: function() {
     return N
@@ -18,8 +18,8 @@ var l = n("735250"),
   c = n("626135"),
   f = n("727258"),
   h = n("662146"),
-  C = n("981631"),
-  p = n("689938"),
+  p = n("981631"),
+  C = n("689938"),
   m = n("35703");
 
 function g(e) {
@@ -45,7 +45,7 @@ function E(e, t) {
       let {
         nodeId: a
       } = e;
-      l && t.type !== f.GuildsNodeType.FOLDER && c.default.track(C.AnalyticEvents.GUILD_FOLDER_CREATED), d.default.moveById(a, t.id, n, l)
+      l && t.type !== f.GuildsNodeType.FOLDER && c.default.track(p.AnalyticEvents.GUILD_FOLDER_CREATED), d.default.moveById(a, t.id, n, l)
     },
     collect: e => ({
       canDrop: e.canDrop(),
@@ -54,7 +54,7 @@ function E(e, t) {
   }
 }
 
-function S(e) {
+function _(e) {
   let {
     name: t,
     targetNode: n,
@@ -63,22 +63,22 @@ function S(e) {
   } = e, o = a.useMemo(() => E([f.GuildsNodeType.GUILD, f.GuildsNodeType.FOLDER], n, r, s), [n, r, s]), [{
     canDrop: d,
     isOver: c
-  }, h] = (0, u.useDrop)(o), C = g([
+  }, h] = (0, u.useDrop)(o), p = g([
     [d, m.autoPointerEvents],
     [c, m.dragOver]
   ]);
   return (0, l.jsx)("div", {
     ref: e => {
-      C.current = e, h(e)
+      p.current = e, h(e)
     },
-    "data-dnd-name": p.default.Messages.DND_DROP_ABOVE.format({
+    "data-dnd-name": C.default.Messages.DND_DROP_ABOVE.format({
       itemName: t
     }),
     className: i()(m.target)
   })
 }
 
-function _(e) {
+function I(e) {
   let {
     name: t,
     targetNode: n,
@@ -104,7 +104,7 @@ function _(e) {
       ref: e => {
         c.current = e, d(e)
       },
-      "data-dnd-name": p.default.Messages.DND_DROP_COMBINE.format({
+      "data-dnd-name": C.default.Messages.DND_DROP_COMBINE.format({
         itemName: t
       }),
       className: i()(m.centerTarget, {})
@@ -112,7 +112,7 @@ function _(e) {
   })
 }
 
-function I(e) {
+function S(e) {
   let {
     name: t,
     targetNode: n
@@ -164,11 +164,11 @@ t.default = a.memo(function(e) {
   return (0, l.jsxs)("div", {
     className: m.wrapper,
     "aria-hidden": !0,
-    children: [(0, l.jsx)(S, {
+    children: [(0, l.jsx)(_, {
       name: t,
       targetNode: n,
       below: s
-    }), r ? (0, l.jsx)(_, {
+    }), r ? (0, l.jsx)(I, {
       name: t,
       targetNode: n,
       onDragOverChanged: i

@@ -13,9 +13,9 @@ var a = s("735250"),
   E = s("410154"),
   T = s("332475"),
   I = s("626135"),
-  S = s("103433"),
+  f = s("103433"),
   R = s("166021"),
-  f = s("32173"),
+  S = s("32173"),
   m = s("391110"),
   A = s("75077"),
   N = s("981631"),
@@ -27,7 +27,7 @@ t.default = e => {
     isAllPerksVisible: t,
     setIsAllPerksVisible: s,
     previousComponent: r
-  } = e, O = i.useRef(null), P = Object.entries((0, f.default)()).reduce((e, t) => {
+  } = e, O = i.useRef(null), P = Object.entries((0, S.default)()).reduce((e, t) => {
     let [s, a] = t;
     return !1 !== a.canReveal && "upcomingDropUntimed" !== a.name && (e[s] = a), e
   }, {}), {
@@ -43,7 +43,7 @@ t.default = e => {
       className: C.container,
       children: (0, a.jsxs)(_.AnalyticsLocationProvider, {
         value: M,
-        children: [(0, a.jsx)(S.default, {
+        children: [(0, a.jsx)(f.default, {
           className: C.heroHeading,
           onBackClick: () => {
             s(!1), I.default.track(N.AnalyticEvents.NITRO_HOME_NAVIGATION, {

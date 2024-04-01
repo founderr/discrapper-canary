@@ -7,15 +7,15 @@ var a, s, i, r, o = n("442837"),
   c = n("703656"),
   f = n("131704"),
   h = n("601964"),
-  C = n("592125"),
-  p = n("430824"),
+  p = n("592125"),
+  C = n("430824"),
   m = n("701190"),
   g = n("496675"),
   E = n("594174"),
-  S = n("998502"),
-  _ = n("981631"),
-  I = n("176505");
-let N = _.AppContext.APP,
+  _ = n("998502"),
+  I = n("981631"),
+  S = n("176505");
+let N = I.AppContext.APP,
   T = !1,
   A = !1,
   L = [];
@@ -25,10 +25,10 @@ function v() {
 }
 class x extends(a = o.default.Store) {
   initialize() {
-    this.waitFor(p.default, m.default, E.default)
+    this.waitFor(C.default, m.default, E.default)
   }
   isOpen() {
-    let e = __OVERLAY__ ? _.AppContext.OVERLAY : _.AppContext.APP;
+    let e = __OVERLAY__ ? I.AppContext.OVERLAY : I.AppContext.APP;
     return !!(T && L.length > 0 && N === e)
   }
   getProps() {
@@ -53,29 +53,29 @@ r = "InviteModalStore", (i = "displayName") in(s = x) ? Object.defineProperty(s,
   INVITE_MODAL_OPEN: function(e) {
     let t = e.invite;
     if (null == t) return !1;
-    if (!(t.state === _.InviteStates.EXPIRED || t.state === _.InviteStates.BANNED || t.state === _.InviteStates.ERROR)) {
+    if (!(t.state === I.InviteStates.EXPIRED || t.state === I.InviteStates.BANNED || t.state === I.InviteStates.ERROR)) {
       let {
         channel: e,
         guild: n
       } = t;
       if (null == e) return !1;
       if ((0, f.isMultiUserDM)(e.type)) {
-        if (null != C.default.getChannel(e.id)) return (0, c.transitionToGuild)(_.ME, e.id), S.default.focus(), !1
+        if (null != p.default.getChannel(e.id)) return (0, c.transitionToGuild)(I.ME, e.id), _.default.focus(), !1
       } else {
         if (null == n) return !1;
-        if (null != p.default.getGuild(n.id) && !(0, d.isStreamInvite)(t)) {
+        if (null != C.default.getGuild(n.id) && !(0, d.isStreamInvite)(t)) {
           let e = function(e) {
-            if ((0, d.isRoleSubscriptionInvite)(e)) return I.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
+            if ((0, d.isRoleSubscriptionInvite)(e)) return S.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
             let {
               channel: t
             } = e;
             if (null != t) {
-              let e = C.default.getChannel(t.id);
-              if (g.default.can(_.Permissions.VIEW_CHANNEL, e)) return t.id
+              let e = p.default.getChannel(t.id);
+              if (g.default.can(I.Permissions.VIEW_CHANNEL, e)) return t.id
             }
             return null
           }(t);
-          return (0, c.transitionToGuild)(n.id, e), S.default.focus(), !1
+          return (0, c.transitionToGuild)(n.id, e), _.default.focus(), !1
         }
       }
     }

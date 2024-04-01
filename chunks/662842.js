@@ -13,8 +13,8 @@ var a, s, l = n("735250"),
   c = n("481060"),
   f = n("232567"),
   E = n("100527"),
-  h = n("471445"),
-  _ = n("15274"),
+  _ = n("471445"),
+  h = n("15274"),
   C = n("924301"),
   S = n("504160"),
   m = n("151864"),
@@ -35,8 +35,8 @@ var a, s, l = n("735250"),
   x = n("594174"),
   b = n("465670"),
   U = n("242315"),
-  j = n("662868"),
-  G = n("393112"),
+  G = n("662868"),
+  j = n("393112"),
   w = n("170039"),
   k = n("898140"),
   F = n("981631"),
@@ -86,9 +86,9 @@ function Y(e) {
       isEventNoticeHidden: d,
       isStageNoticeHidden: f,
       isStudyRoomNotice: E
-    } = e, _ = null != n && null != a && !f, m = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
+    } = e, h = null != n && null != a && !f, m = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
     if (E && null != a) {
-      let e = (0, h.getChannelIconComponent)(a);
+      let e = (0, _.getChannelIconComponent)(a);
       return {
         noticeType: 3,
         title: "\uD83D\uDCDA☕ ".concat(a.name),
@@ -105,7 +105,7 @@ function Y(e) {
       }
     }
     if (null == t || d) {
-      if (_) {
+      if (h) {
         let e = H.default.Messages.STAGE_CHANNEL_JOIN_BUTTON;
         return (null == i ? void 0 : i.speaker) ? e = H.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != i && (e = H.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
           noticeType: 0,
@@ -138,7 +138,7 @@ function Y(e) {
         }
       }
     } else {
-      if (t.entity_type === B.GuildScheduledEventEntityTypes.STAGE_INSTANCE && _) {
+      if (t.entity_type === B.GuildScheduledEventEntityTypes.STAGE_INSTANCE && h) {
         let e = H.default.Messages.STAGE_CHANNEL_JOIN_BUTTON;
         return (null == i ? void 0 : i.speaker) ? e = H.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != i && (e = H.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
           noticeType: 0,
@@ -180,7 +180,7 @@ function Y(e) {
           noticeType: 1,
           title: t.name,
           location: (0, I.guildEventDetailsParser)(e, !0),
-          locationIcon: (0, l.jsx)(G.default, {
+          locationIcon: (0, l.jsx)(j.default, {
             width: 16,
             height: 16,
             className: V.locationIcon
@@ -206,7 +206,7 @@ function Y(e) {
           })
         }
       } else if (t.entity_type === B.GuildScheduledEventEntityTypes.VOICE && null != a) {
-        let e = (0, h.getChannelIconComponent)(a),
+        let e = (0, _.getChannelIconComponent)(a),
           n = C.default.getUserCount(t.id, m);
         return {
           noticeType: 2,
@@ -266,7 +266,7 @@ function Y(e) {
       })
     }) : null, (0, l.jsxs)("div", {
       className: V.header,
-      children: [(0, l.jsx)(j.default, {
+      children: [(0, l.jsx)(G.default, {
         color: d.default.unsafe_rawColors.GREEN_230.css,
         width: 16,
         height: 16
@@ -316,7 +316,7 @@ function Y(e) {
         if (ea) null != a && null != a.getGuildId() && ((0, R.connectAndOpen)(a), (0, N.transitionToGuild)(a.getGuildId(), a.id));
         else {
           if (null == s) return;
-          (0, _.openGuildEventDetails)({
+          (0, h.openGuildEventDetails)({
             eventId: s.id
           })
         }

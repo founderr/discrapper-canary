@@ -10,14 +10,14 @@ var l, a = n("735250"),
   c = n("358221"),
   f = n("43267"),
   h = n("933557"),
-  C = n("199902"),
-  p = n("19780"),
+  p = n("199902"),
+  C = n("19780"),
   m = n("306680"),
   g = n("944486"),
   E = n("594174"),
-  S = n("451478"),
-  _ = n("880080"),
-  I = n("26290"),
+  _ = n("451478"),
+  I = n("880080"),
+  S = n("26290"),
   N = n("15434"),
   T = n("682662"),
   A = n("662146"),
@@ -38,7 +38,7 @@ let O = {
   tension: 600
 };
 
-function y(e) {
+function M(e) {
   switch (e) {
     case "height":
     case "opacity":
@@ -53,17 +53,17 @@ function y(e) {
       throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)))
   }
 }
-class M extends(l = s.PureComponent) {
+class y extends(l = s.PureComponent) {
   componentWillEnter(e) {
     let {
       controller: t
     } = this.state;
     e(), t.update({
-      immediate: !S.default.isFocused(),
+      immediate: !_.default.isFocused(),
       height: 1,
       opacity: 1,
       scale: 1,
-      config: y
+      config: M
     }).start().then(() => this.setState({
       animating: !1
     }))
@@ -77,7 +77,7 @@ class M extends(l = s.PureComponent) {
       scale: 1,
       opacity: 1,
       height: 1,
-      config: y
+      config: M
     }).start().then(e)
   }
   componentWillLeave(e) {
@@ -87,11 +87,11 @@ class M extends(l = s.PureComponent) {
     this.setState({
       animating: !0
     }, () => t.update({
-      immediate: !S.default.isFocused(),
+      immediate: !_.default.isFocused(),
       height: 0,
       opacity: 0,
       scale: 0,
-      config: y
+      config: M
     }).start().then(e))
   }
   componentWillUnmount() {
@@ -130,15 +130,15 @@ class M extends(l = s.PureComponent) {
       unread: f
     } = this.props, {
       hovered: h,
-      animating: C
+      animating: p
     } = this.state;
     return (0, a.jsx)(i.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, a.jsxs)(T.ListItem, {
-        children: [(0, a.jsx)(_.default, {
-          hovered: !C && h,
-          selected: !C && n,
-          unread: !C && f,
+        children: [(0, a.jsx)(I.default, {
+          hovered: !p && h,
+          selected: !p && n,
+          unread: !p && f,
           className: x.pill
         }), (0, a.jsx)(A.default, {
           text: null != t ? t : "",
@@ -152,7 +152,7 @@ class M extends(l = s.PureComponent) {
               screenshare: d,
               isCurrentUserConnected: c
             }),
-            lowerBadgeWidth: (0, I.getBadgeWidthForValue)(l),
+            lowerBadgeWidth: (0, S.getBadgeWidthForValue)(l),
             children: (0, a.jsx)(r.ListNavigatorItem, {
               id: e.id,
               children: l => (0, a.jsx)(N.default, {
@@ -183,7 +183,7 @@ class M extends(l = s.PureComponent) {
         scale: 0,
         height: 0,
         opacity: 0,
-        config: y
+        config: M
       })
     }), R(this, "handleContextMenu", e => {
       let {
@@ -211,7 +211,7 @@ class M extends(l = s.PureComponent) {
     })
   }
 }
-R(M, "defaultProps", {
+R(y, "defaultProps", {
   badge: 0,
   audio: !1,
   video: !1,
@@ -219,15 +219,15 @@ R(M, "defaultProps", {
 }), t.default = s.forwardRef(function(e, t) {
   let n = e.channel.id,
     l = (0, h.default)(e.channel),
-    s = (0, o.useStateFromStores)([p.default], () => p.default.getChannelId(), []),
+    s = (0, o.useStateFromStores)([C.default], () => C.default.getChannelId(), []),
     i = (0, o.useStateFromStores)([c.default], () => null != s ? c.default.getMode(s) : v.ChannelModes.VOICE, [s]),
-    r = (0, o.useStateFromStores)([C.default], () => C.default.getAllApplicationStreamsForChannel(n).length > 0),
+    r = (0, o.useStateFromStores)([p.default], () => p.default.getAllApplicationStreamsForChannel(n).length > 0),
     u = (0, o.useStateFromStores)([g.default], () => g.default.getChannelId(), []),
     d = (0, o.useStateFromStores)([m.default], () => m.default.getMentionCount(n), [n]),
     f = s === n,
     E = !1,
-    S = !1;
-  return f && (E = i === v.ChannelModes.VOICE, S = i === v.ChannelModes.VIDEO), (0, a.jsx)(M, {
+    _ = !1;
+  return f && (E = i === v.ChannelModes.VOICE, _ = i === v.ChannelModes.VIDEO), (0, a.jsx)(y, {
     ...e,
     ref: t,
     channelName: l,
@@ -235,7 +235,7 @@ R(M, "defaultProps", {
     selected: u === n,
     badge: d,
     audio: E,
-    video: S,
+    video: _,
     stream: r,
     isCurrentUserInThisDMCall: f
   })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return o
+    return r
   }
 });
 var E = s("735250");
@@ -16,7 +16,7 @@ var _ = s("481060"),
   l = s("689938"),
   I = s("965677");
 
-function r(e) {
+function o(e) {
   let {
     channelId: t
   } = e, s = (0, u.useChannelWithTemplateFallback)(t);
@@ -39,10 +39,10 @@ function r(e) {
   })
 }
 
-function o(e) {
+function r(e) {
   switch (e.ref_type) {
     case A.GuildRoleSubscriptionBenefitTypes.CHANNEL:
-      return (0, E.jsx)(r, {
+      return (0, E.jsx)(o, {
         channelId: e.ref_id
       });
     case A.GuildRoleSubscriptionBenefitTypes.INTANGIBLE:

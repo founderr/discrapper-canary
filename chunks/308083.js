@@ -14,7 +14,7 @@ n.r(t), n.d(t, {
     return l
   },
   MAX_GAME_HOURS: function() {
-    return h
+    return _
   },
   MAX_INTEREST_LENGTH: function() {
     return E
@@ -34,5 +34,5 @@ let u = 5,
   c = 20,
   f = 50,
   E = 50,
-  h = 7;
+  _ = 7;
 (i = a || (a = {}))[i.NONE = 0] = "NONE", i[i.SOCIAL = 1] = "SOCIAL", i[i.CASUAL = 2] = "CASUAL", i[i.COMPETITIVE = 3] = "COMPETITIVE", i[i.CREATIVE = 4] = "CREATIVE", i[i.VERY_HARDCORE = 5] = "VERY_HARDCORE", (r = s || (s = {}))[r.INTRO = 0] = "INTRO", r[r.ANIMATE = 1] = "ANIMATE", r[r.SETUP = 2] = "SETUP", r[r.SIGN = 3] = "SIGN", (o = l || (l = {}))[o.GAMES = 1] = "GAMES", o[o.PLAYSTYLE = 2] = "PLAYSTYLE", o[o.INTERESTS = 3] = "INTERESTS", o[o.DESCRIPTION = 4] = "DESCRIPTION", o[o.PRIMETIME = 5] = "PRIMETIME", o[o.CUSTOMIZE = 6] = "CUSTOMIZE"

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   QuickSelectPopout: function() {
-    return o
+    return r
   }
 }), s("47120");
 var E = s("735250"),
@@ -40,7 +40,7 @@ class I extends _.PureComponent {
     })
   }
 }
-class r extends _.PureComponent {
+class o extends _.PureComponent {
   render() {
     let {
       selected: e,
@@ -80,7 +80,7 @@ class r extends _.PureComponent {
   }
 }
 
-function o(e) {
+function r(e) {
   let {
     options: t,
     value: s,
@@ -88,12 +88,12 @@ function o(e) {
     renderOption: a,
     onChange: u,
     className: I
-  } = e, o = n()(l.quickSelectPopout, I, {
+  } = e, r = n()(l.quickSelectPopout, I, {
     [l.quickSelectPopoutScroll]: _
   }), L = t.map(e => {
     let t = null != s && e.value === s.value,
       _ = t ? void 0 : u;
-    return (0, E.jsx)(r, {
+    return (0, E.jsx)(o, {
       className: l.quickSelectPopoutOption,
       renderOption: a,
       option: e,
@@ -114,7 +114,7 @@ function o(e) {
     navigator: N,
     children: (0, E.jsx)("div", {
       ref: S,
-      className: o,
+      className: r,
       ...g,
       role: "listbox",
       children: _ ? (0, E.jsx)(i.Scroller, {

@@ -17,18 +17,18 @@ var l = n("735250"),
 function f(e) {
   let {
     guildId: t
-  } = e, n = a.useMemo(() => (0, u.createGuildNode)(t), [t]), f = (0, s.useStateFromStores)([r.default], () => r.default.getGuild(t)), h = (0, s.useStateFromStores)([o.default], () => o.default.isFocused()), C = t === (0, i.default)(e => {
+  } = e, n = a.useMemo(() => (0, u.createGuildNode)(t), [t]), f = (0, s.useStateFromStores)([r.default], () => r.default.getGuild(t)), h = (0, s.useStateFromStores)([o.default], () => o.default.isFocused()), p = t === (0, i.default)(e => {
     let {
       guildId: t
     } = e;
     return t
-  }), p = (0, d.default)(t);
+  }), C = (0, d.default)(t);
   return null == f ? null : (0, l.jsx)(c.default, {
     guildNode: n,
     guild: f,
     animatable: h,
-    selected: C,
+    selected: p,
     draggable: !1,
-    mediaState: p
+    mediaState: C
   })
 }

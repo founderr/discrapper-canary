@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return K
+    return W
   }
 }), s("47120"), s("724458");
 var a = s("735250"),
@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("776980"),
   g = s("386346"),
   h = s("641826"),
-  I = s("875667"),
-  N = s("266983"),
+  N = s("875667"),
+  I = s("266983"),
   p = s("601469"),
   C = s("488269"),
   A = s("837060"),
@@ -132,7 +132,7 @@ function B() {
         },
         size: E.ButtonSizes.SMALL,
         color: E.ButtonColors.CUSTOM,
-        children: [(0, a.jsx)(N.default, {
+        children: [(0, a.jsx)(I.default, {
           className: b.buttonIcon,
           color: E.tokens.colors.WHITE
         }), j.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA]
@@ -182,7 +182,7 @@ function H() {
     T = n.useMemo(() => Object.values(l).reduce((e, t) => e + t, 0), [l]),
     [f] = n.useState(() => new c.Timeout),
     [m, _] = n.useState(0),
-    p = Math.floor((0, I.default)(r, i, m));
+    p = Math.floor((0, N.default)(r, i, m));
   return n.useEffect(() => {
     _(0)
   }, [i, r]), n.useEffect(() => (f.start((0, h.randomBetween)(G, k), () => {
@@ -190,7 +190,7 @@ function H() {
   }), () => f.stop()), [r, E, i, S, f, m]), (0, a.jsxs)("div", {
     className: b.stats,
     children: [(0, a.jsx)(F, {
-      icon: N.default,
+      icon: I.default,
       text: j.default.Messages.PACKAGES_PACKAGES_OPENED,
       count: T,
       fetchState: t
@@ -290,7 +290,7 @@ function Y() {
   })
 }
 
-function K() {
+function W() {
   let {
     analyticsLocations: e
   } = (0, m.default)(f.default.PACKAGES), t = (0, u.useStateFromStores)([g.default], () => g.default.nextGlobalOpenedCountFetchDelay), [s] = n.useState(() => new c.Timeout);

@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("226961"),
   E = s("594174"),
   T = s("285952"),
-  _ = s("12647"),
-  f = s("998502"),
-  m = s("981631"),
+  f = s("12647"),
+  m = s("998502"),
+  _ = s("981631"),
   g = s("65154"),
   h = s("689938"),
   N = s("794711");
@@ -57,15 +57,15 @@ function C() {
   })), O = (0, l.useStateFromStores)([S.default], () => S.default.shouldRecordNextConnection()), x = (0, l.useStateFromStores)([E.default], () => {
     var e, t;
     return null !== (t = null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t
-  }), R = ("canary" === f.default.releaseChannel || "development" === f.default.releaseChannel) && x && A;
+  }), R = ("canary" === m.default.releaseChannel || "development" === m.default.releaseChannel) && x && A;
   async function M() {
     t(!0);
     try {
-      await c.default.getMediaEngine().writeAudioDebugState(), await _.default.submitLiveCrashReport({
+      await c.default.getMediaEngine().writeAudioDebugState(), await f.default.submitLiveCrashReport({
         message: {
           message: "User Live Dump"
         }
-      }), await (0, u.uploadDebugLogFiles)(m.DebugLogCategory.RTC), ! function() {
+      }), await (0, u.uploadDebugLogFiles)(_.DebugLogCategory.RTC), ! function() {
         let e = h.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
           t = h.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
         (0, i.openModal)(s => (0, a.jsx)(i.ConfirmModal, {

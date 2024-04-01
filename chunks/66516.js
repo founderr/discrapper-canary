@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("100527"),
   E = s("367907"),
   T = s("906732"),
-  _ = s("414666"),
-  f = s("962746"),
-  m = s("296810"),
+  f = s("414666"),
+  m = s("962746"),
+  _ = s("296810"),
   g = s("621853"),
   h = s("246946"),
   N = s("594174"),
@@ -101,7 +101,7 @@ function j(e) {
       pendingPronouns: G,
       pendingNickname: y,
       activityName: D.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
-      activityCharacter: _.FakeActivityCharacter.PHIBI,
+      activityCharacter: f.FakeActivityCharacter.PHIBI,
       openPremiumSettings: L
     };
   return (0, a.jsxs)(T.AnalyticsLocationProvider, {
@@ -117,11 +117,11 @@ function j(e) {
         onChange: e => {
           null != e && (0, A.setCurrentGuild)(e)
         }
-      }), (0, a.jsx)(m.default, {
+      }), (0, a.jsx)(_.default, {
         previewTitle: D.default.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
           guildName: null == t ? void 0 : t.name
         }),
-        profilePreview: (0, a.jsx)(f.default, {
+        profilePreview: (0, a.jsx)(m.default, {
           ...V,
           pendingThemeColors: k
         }),

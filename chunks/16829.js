@@ -10,8 +10,8 @@ var E = s("735250"),
   A = s("700582"),
   l = s("484459"),
   I = s("271383"),
-  r = s("246946"),
-  o = s("594174"),
+  o = s("246946"),
+  r = s("594174"),
   L = s("104259"),
   d = s("206017"),
   N = s("757698"),
@@ -118,17 +118,17 @@ function h(e) {
     inviterUser: a,
     joinSourceType: u,
     className: l,
-    onClickInviter: r
-  } = e, o = (0, T.useStateFromStores)([I.default], () => null == a ? null : I.default.getMember(s, a.id), [a, s]), L = _.useCallback(e => {
-    e.stopPropagation(), e.preventDefault(), null != a && (null == r || r(a))
-  }, [a, r]);
+    onClickInviter: o
+  } = e, r = (0, T.useStateFromStores)([I.default], () => null == a ? null : I.default.getMember(s, a.id), [a, s]), L = _.useCallback(e => {
+    e.stopPropagation(), e.preventDefault(), null != a && (null == o || o(a))
+  }, [a, o]);
   return null == a ? null : (0, E.jsxs)("div", {
     className: n()(C.inviterTooltipContainer, l),
     children: [(0, E.jsx)(i.Text, {
       variant: "text-xs/medium",
       children: u !== O.JoinSourceType.BOT ? U.default.Messages.MEMBER_SAFETY_INVITER_TOOLTIP : U.default.Messages.MEMBER_SAFETY_INVITER_BOT_TOOLTIP
     }), (0, E.jsxs)(i.Clickable, {
-      className: n()(C.inviterUserContainer, null != r && C.clickable),
+      className: n()(C.inviterUserContainer, null != o && C.clickable),
       onClick: L,
       children: [(0, E.jsx)(A.default, {
         user: a,
@@ -137,7 +137,7 @@ function h(e) {
         variant: "text-xs/medium",
         children: (0, E.jsx)(i.NameWithRole, {
           name: D.default.getName(s, null, a),
-          color: null !== (t = null == o ? void 0 : o.colorString) && void 0 !== t ? t : void 0
+          color: null !== (t = null == r ? void 0 : r.colorString) && void 0 !== t ? t : void 0
         })
       })]
     })]
@@ -192,7 +192,7 @@ function P(e) {
     inviterUser: A,
     onClickInviter: l,
     ...I
-  } = e, r = null != s ? f[s] : null, o = s === O.JoinSourceType.INTEGRATION && null != a, L = _.useCallback(e => {
+  } = e, o = null != s ? f[s] : null, r = s === O.JoinSourceType.INTEGRATION && null != a, L = _.useCallback(e => {
     switch (e.stopPropagation(), e.preventDefault(), !0) {
       case null == t && null == s:
       case null == s:
@@ -213,13 +213,13 @@ function P(e) {
     }
   }, [u, s, t]);
   switch (!0) {
-    case null == r:
+    case null == o:
     case null == s:
     case s === O.JoinSourceType.UNSPECIFIED:
       return (0, E.jsx)(M, {
         ...I
       });
-    case null != a && o:
+    case null != a && r:
       return (0, E.jsxs)(i.Clickable, {
         className: C.inviteContainer,
         ...I,
@@ -234,19 +234,19 @@ function P(e) {
           children: (0, O.getIntegrationLabel)(a)
         })]
       });
-    case null != r:
+    case null != o:
       return (0, E.jsxs)("div", {
         className: n()(T && C.footerAlignment),
         children: [(0, E.jsxs)(i.Clickable, {
           className: C.inviteContainer,
           ...I,
-          "aria-label": null == r ? void 0 : r.getJoinTypeLabel(null != t ? t : void 0),
+          "aria-label": null == o ? void 0 : o.getJoinTypeLabel(null != t ? t : void 0),
           role: "button",
           tabIndex: 0,
           onClick: L,
-          children: [null == r ? void 0 : r.icon, (0, E.jsx)(i.Text, {
+          children: [null == o ? void 0 : o.icon, (0, E.jsx)(i.Text, {
             variant: "text-sm/medium",
-            children: null == r ? void 0 : r.getJoinTypeLabel(null != t ? t : void 0)
+            children: null == o ? void 0 : o.getJoinTypeLabel(null != t ? t : void 0)
           })]
         }), T && (0, E.jsx)(h, {
           guildId: u,
@@ -269,13 +269,13 @@ t.default = _.memo(function(e) {
     guildId: n,
     showInviterAsFooter: i,
     onClickInviter: A
-  } = e, I = (0, T.useStateFromStores)([c.default], () => c.default.getEnhancedMember(n, a), [n, a]), L = null !== (t = null == I ? void 0 : I.inviterId) && void 0 !== t ? t : null, d = (0, T.useStateFromStores)([o.default], () => o.default.getUser(L), [L]);
+  } = e, I = (0, T.useStateFromStores)([c.default], () => c.default.getEnhancedMember(n, a), [n, a]), L = null !== (t = null == I ? void 0 : I.inviterId) && void 0 !== t ? t : null, d = (0, T.useStateFromStores)([r.default], () => r.default.getUser(L), [L]);
   _.useEffect(() => {
     null != L && (u.default.requestMembersById(n, [L]), (0, l.default)(L, void 0, {
       guildId: n
     }))
   }, [n, L]);
-  let N = (0, T.useStateFromStores)([r.default], () => r.default.hideInstantInvites, []);
+  let N = (0, T.useStateFromStores)([o.default], () => o.default.hideInstantInvites, []);
   if (null == I) return (0, E.jsx)(M, {});
   let {
     sourceInviteCode: S,

@@ -25,8 +25,8 @@ function A(e) {
       unread: A = !1,
       mentionCount: l = 0,
       userCount: I,
-      embeddedActivitiesCount: r,
-      isSubscriptionGated: o,
+      embeddedActivitiesCount: o,
+      isSubscriptionGated: r,
       needSubscriptionToAccess: L
     } = e,
     d = (0, n.computeChannelName)(s, a.default, _.default);
@@ -61,11 +61,11 @@ function A(e) {
           userCount: I
         }))
       }
-      null != r && r > 0 && N.push(i.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_ACTIVITIES.format({
-        activitiesCount: r
+      null != o && o > 0 && N.push(i.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_ACTIVITIES.format({
+        activitiesCount: o
       }));
       let S = u({
-        isSubscriptionGated: o,
+        isSubscriptionGated: r,
         needSubscriptionToAccess: L
       });
       return null != S && N.push(S), N.join(", ");
@@ -80,7 +80,7 @@ function A(e) {
       mentionCount: l
     })],
     D = u({
-      isSubscriptionGated: o,
+      isSubscriptionGated: r,
       needSubscriptionToAccess: L
     });
   return null != D && g.push(D), g.join(", ")

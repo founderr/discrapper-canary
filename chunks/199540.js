@@ -15,14 +15,14 @@ var l = n("735250"),
   c = n("481060"),
   f = n("430824"),
   h = n("346656"),
-  C = n("286908"),
-  p = n("26290"),
+  p = n("286908"),
+  C = n("26290"),
   m = n("624138"),
   g = n("674552"),
   E = n("981631"),
-  S = n("689938"),
-  _ = n("515330");
-let I = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
+  _ = n("689938"),
+  I = n("515330");
+let S = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
   N = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_SIZE);
 
 function T(e) {
@@ -31,13 +31,13 @@ function T(e) {
     animate: n
   } = e, a = (0, u.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
   return null == a ? (0, l.jsx)("div", {
-    className: _.guildIconUnavailable,
+    className: I.guildIconUnavailable,
     children: "!"
   }) : (0, l.jsx)(h.default, {
     guild: a,
     animate: n,
     size: h.default.Sizes.SMOL,
-    className: _.guildIcon,
+    className: I.guildIcon,
     tabIndex: -1
   })
 }
@@ -54,33 +54,33 @@ function A(e) {
     } = s,
     f = null != d ? d : E.DEFAULT_FOLDER_COLOR,
     h = c.map(e => e.id),
-    [p, m] = a.useState(!1),
-    [g, S] = a.useState(u),
+    [C, m] = a.useState(!1),
+    [g, _] = a.useState(u),
     A = u ? 0 : -N,
     L = (0, r.useSpring)({
       transform: "translate3d(0, ".concat(A, "px, 0)"),
       config: {
-        duration: I
+        duration: S
       },
       onStart() {
-        m(!0), S(u)
+        m(!0), _(u)
       },
       onRest() {
-        m(!1), S(u)
+        m(!1), _(u)
       }
     }),
-    v = p ? L : void 0;
-  return (p || g) && (t = (0, l.jsx)(r.animated.div, {
+    v = C ? L : void 0;
+  return (C || g) && (t = (0, l.jsx)(r.animated.div, {
     style: v,
-    className: _.expandedFolderIconWrapper,
-    children: (0, l.jsx)(C.default, {
+    className: I.expandedFolderIconWrapper,
+    children: (0, l.jsx)(p.default, {
       style: {
         color: (0, o.int2hex)(f)
       }
     })
-  })), (p || !g) && (n = (0, l.jsx)(r.animated.div, {
+  })), (C || !g) && (n = (0, l.jsx)(r.animated.div, {
     style: v,
-    className: _.closedFolderIconWrapper,
+    className: I.closedFolderIconWrapper,
     children: h.slice(0, 4).map(e => (0, l.jsx)(T, {
       guildId: e,
       animate: i
@@ -90,7 +90,7 @@ function A(e) {
     style: u ? void 0 : {
       backgroundColor: (0, o.int2rgba)(f, .4)
     },
-    className: _.folderIconWrapper,
+    className: I.folderIconWrapper,
     children: [t, n]
   })
 }
@@ -106,10 +106,10 @@ function L(e) {
     tooltipName: d,
     folderGroupId: f,
     folderIconContent: h,
-    onClick: C,
+    onClick: p,
     onContextMenu: m,
     onHoverChange: E,
-    onKeyDown: I,
+    onKeyDown: S,
     treeItemProps: {
       onFocus: N,
       ...T
@@ -118,23 +118,23 @@ function L(e) {
     r || v(!0), null == E || E(!0)
   }, [r, E]), R = a.useCallback(() => {
     r || v(!1), null == E || E(!1)
-  }, [r, E]), O = s || null == o ? null : (0, g.renderMediaBadge)(o), y = !s && u > 0 ? (0, g.renderMentionBadge)(u) : null;
+  }, [r, E]), O = s || null == o ? null : (0, g.renderMediaBadge)(o), M = !s && u > 0 ? (0, g.renderMentionBadge)(u) : null;
   return (0, l.jsx)(c.BlobMask, {
     selected: !n,
     upperBadge: O,
-    lowerBadge: y,
-    lowerBadgeWidth: (0, p.getBadgeWidthForValue)(u),
+    lowerBadge: M,
+    lowerBadgeWidth: (0, C.getBadgeWidthForValue)(u),
     children: (0, l.jsx)(c.Clickable, {
-      className: i()(_.folder, {
-        [_.hover]: L
+      className: i()(I.folder, {
+        [I.hover]: L
       }),
-      onClick: C,
+      onClick: p,
       onContextMenu: m,
       onMouseEnter: x,
       onMouseLeave: R,
-      onKeyDown: I,
+      onKeyDown: S,
       onFocus: N,
-      "aria-label": S.default.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({
+      "aria-label": _.default.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({
         folderName: d,
         mentions: u
       }),
@@ -146,7 +146,7 @@ function L(e) {
       ...T,
       role: "treeitem",
       children: null != h ? (0, l.jsx)("div", {
-        className: _.expandedFolderIconWrapper,
+        className: I.expandedFolderIconWrapper,
         children: h
       }) : (0, l.jsx)(A, {
         folderNode: t,

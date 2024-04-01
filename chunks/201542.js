@@ -47,9 +47,9 @@ t.default = r.memo(function(e) {
       onVolumeHide: b,
       onPlay: G,
       onPause: w,
-      onError: k
+      onError: B
     } = e,
-    B = r.useRef(null),
+    k = r.useRef(null),
     [V, F] = r.useState(0),
     [x, H] = r.useState(P),
     [Y, j] = r.useState(!1),
@@ -78,11 +78,11 @@ t.default = r.memo(function(e) {
       !z && es()
     }, [es, z]),
     eo = r.useCallback(() => {
-      let e = B.current;
+      let e = k.current;
       if (null == e) return;
       let t = e.error;
-      null == k || k(t)
-    }, [k]),
+      null == B || B(t)
+    }, [B]),
     el = r.useCallback(e => {
       let t = (0, S.perceptualToAmplitude)(e, 1);
       j(0 === t), ee(t), null == v || v(t)
@@ -97,7 +97,7 @@ t.default = r.memo(function(e) {
       X(!1), V === x && es()
     }, [V, x, es]),
     ec = r.useCallback(e => {
-      let t = B.current;
+      let t = k.current;
       if (null == x || null == t) return;
       let n = e * x;
       F(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
@@ -110,14 +110,14 @@ t.default = r.memo(function(e) {
     if (Q || W) {
       if (W) {
         var e, t;
-        eE.current = performance.now(), null == G || G(!1, V, (null !== (t = null === (e = B.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
+        eE.current = performance.now(), null == G || G(!1, V, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
       } else {
         let e = performance.now(),
           t = eE.current;
         null == w || w(V, null != t ? (e - t) / 1e3 : 0), eE.current = null
       }
     }
-  }, [W]), t = B, n = W, s = F, r.useEffect(() => {
+  }, [W]), t = k, n = W, s = F, r.useEffect(() => {
     let e;
     return ! function i() {
       let r = t.current;
@@ -143,7 +143,7 @@ t.default = r.memo(function(e) {
     eT = W ? m.default.Messages.PAUSE : m.default.Messages.PLAY;
   g = "Safari" === platform.name ? (0, i.jsx)(r.Suspense, {
     children: (0, i.jsx)(O, {
-      ref: B,
+      ref: k,
       className: N.audioElement,
       src: L,
       preload: J,
@@ -155,7 +155,7 @@ t.default = r.memo(function(e) {
       volume: $
     })
   }) : (0, i.jsx)(d.default, {
-    ref: B,
+    ref: k,
     className: N.audioElement,
     controls: !1,
     preload: J,

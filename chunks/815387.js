@@ -9,35 +9,35 @@ var s = n("735250"),
   u = n("287734"),
   d = n("872810"),
   c = n("911969"),
-  f = n("376484"),
-  E = n("362604"),
+  E = n("376484"),
+  f = n("362604"),
   _ = n("710845"),
   T = n("825829"),
-  m = n("623624"),
-  I = n("533694"),
-  p = n("182180"),
-  h = n("924301"),
-  N = n("225890"),
-  S = n("434404"),
-  C = n("504733"),
-  A = n("563959"),
+  I = n("623624"),
+  m = n("533694"),
+  N = n("182180"),
+  p = n("924301"),
+  S = n("225890"),
+  C = n("434404"),
+  A = n("504733"),
+  h = n("563959"),
   g = n("703656"),
   M = n("471253"),
-  R = n("565799"),
-  O = n("590415"),
-  v = n("911560"),
-  L = n("488131"),
-  x = n("814820"),
+  O = n("565799"),
+  R = n("590415"),
+  L = n("911560"),
+  v = n("488131"),
+  P = n("814820"),
   D = n("314897"),
-  P = n("523746"),
+  x = n("523746"),
   y = n("592125"),
   U = n("430824"),
-  b = n("496675"),
-  j = n("158776"),
+  j = n("496675"),
+  b = n("158776"),
   G = n("944486"),
   B = n("594174"),
-  F = n("979651"),
-  k = n("372662"),
+  k = n("979651"),
+  F = n("372662"),
   w = n("113039"),
   H = n("755090"),
   V = n("136036"),
@@ -46,10 +46,10 @@ var s = n("735250"),
   W = n("900316"),
   z = n("493829"),
   Q = n("65667"),
-  q = n("36664"),
-  J = n("645092"),
-  X = n("464139"),
-  Z = n("497481"),
+  Z = n("36664"),
+  q = n("645092"),
+  J = n("464139"),
+  X = n("497481"),
   $ = n("705116"),
   ee = n("808641"),
   et = n("318175"),
@@ -63,19 +63,19 @@ var s = n("735250"),
   eu = n("774200"),
   ed = n("690249"),
   ec = n("658975"),
-  ef = n("147507"),
-  eE = n("585483"),
+  eE = n("147507"),
+  ef = n("585483"),
   e_ = n("5192"),
   eT = n("960048"),
-  em = n("709054"),
-  eI = n("937889"),
-  ep = n("942951"),
-  eh = n("981631"),
-  eN = n("70722"),
-  eS = n("689938"),
-  eC = n("611818");
+  eI = n("709054"),
+  em = n("937889"),
+  eN = n("942951"),
+  ep = n("981631"),
+  eS = n("70722"),
+  eC = n("689938"),
+  eA = n("611818");
 
-function eA(e) {
+function eh(e) {
   let {
     message: t,
     channel: n,
@@ -85,25 +85,25 @@ function eA(e) {
   } = t, {
     guild_id: o
   } = n, u = t.getChannelId(), d = (0, l.useStateFromStores)([U.default], () => U.default.getGuild(o), [o]), c = a.useCallback(() => {
-    null != d && (0, m.openGuildBoostingMarketingModal)({
+    null != d && (0, I.openGuildBoostingMarketingModal)({
       guildId: d.id,
       location: {
-        section: eh.AnalyticsSections.CHANNEL_TEXT_AREA,
-        object: eh.AnalyticsObjects.BOOST_ANNOUNCEMENT_UPSELL
+        section: ep.AnalyticsSections.CHANNEL_TEXT_AREA,
+        object: ep.AnalyticsObjects.BOOST_ANNOUNCEMENT_UPSELL
       }
     })
-  }, [d]), f = (0, ep.useUsernameHook)({
+  }, [d]), E = (0, eN.useUsernameHook)({
     user: r,
     channelId: u,
     guildId: n.guild_id,
     messageId: t.id,
     stopPropagation: !0
   });
-  return (0, s.jsx)(ef.default, {
+  return (0, s.jsx)(eE.default, {
     message: t,
     compact: i,
     guild: d,
-    usernameHook: f,
+    usernameHook: E,
     onClickMessage: c
   })
 }
@@ -113,7 +113,7 @@ function eg(e) {
     message: t,
     compact: n,
     channel: a
-  } = e, l = (0, ep.useUsernameHook)({
+  } = e, l = (0, eN.useUsernameHook)({
     user: t.author,
     channelId: a.id,
     guildId: a.guild_id,
@@ -126,23 +126,23 @@ function eg(e) {
   })
 }
 let eM = Object.freeze({
-  [eh.MessageTypes.DEFAULT]: void 0,
-  [eh.MessageTypes.REPLY]: void 0,
-  [eh.MessageTypes.CHAT_INPUT_COMMAND]: void 0,
-  [eh.MessageTypes.CONTEXT_MENU_COMMAND]: void 0,
-  [eh.MessageTypes.RECIPIENT_ADD]: function(e) {
+  [ep.MessageTypes.DEFAULT]: void 0,
+  [ep.MessageTypes.REPLY]: void 0,
+  [ep.MessageTypes.CHAT_INPUT_COMMAND]: void 0,
+  [ep.MessageTypes.CONTEXT_MENU_COMMAND]: void 0,
+  [ep.MessageTypes.RECIPIENT_ADD]: function(e) {
     let {
       message: t,
       channel: n,
       compact: a
     } = e, {
       author: i
-    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([B.default], () => B.default.getUser(t.mentions[0]), [t]), u = e_.default.getName(null, r, o), d = (0, ep.useUsernameHook)({
+    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([B.default], () => B.default.getUser(t.mentions[0]), [t]), u = e_.default.getName(null, r, o), d = (0, eN.useUsernameHook)({
       user: i,
       channelId: r,
       guildId: n.guild_id,
       messageId: t.id
-    }), c = (0, ep.useUsernameHook)({
+    }), c = (0, eN.useUsernameHook)({
       user: o,
       channelId: r,
       guildId: n.guild_id,
@@ -163,19 +163,19 @@ let eM = Object.freeze({
       otherUsernameHook: c
     })
   },
-  [eh.MessageTypes.RECIPIENT_REMOVE]: function(e) {
+  [ep.MessageTypes.RECIPIENT_REMOVE]: function(e) {
     let {
       message: t,
       channel: n,
       compact: a
     } = e, {
       author: i
-    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([B.default], () => B.default.getUser(t.mentions[0]), [t]), u = (0, ep.useUsernameHook)({
+    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([B.default], () => B.default.getUser(t.mentions[0]), [t]), u = (0, eN.useUsernameHook)({
       user: i,
       channelId: r,
       guildId: n.guild_id,
       messageId: t.id
-    }), d = (0, ep.useUsernameHook)({
+    }), d = (0, eN.useUsernameHook)({
       user: o,
       channelId: r,
       guildId: n.guild_id,
@@ -201,7 +201,7 @@ let eM = Object.freeze({
       usernameHook: u
     })
   },
-  [eh.MessageTypes.CALL]: function(e) {
+  [ep.MessageTypes.CALL]: function(e) {
     let {
       message: t,
       compact: n,
@@ -209,7 +209,7 @@ let eM = Object.freeze({
     } = e, {
       id: r,
       author: o
-    } = t, d = D.default.getId(), c = t.getChannelId(), f = (0, l.useStateFromStores)([P.default], () => P.default.isCallActive(c, r), [c, r]), E = (0, l.useStateFromStores)([F.default], () => F.default.getVoiceState(eh.ME, d)), _ = !f && null != t.call && !t.call.participants.includes(d), T = f && (null == E || E.channelId !== c), m = a.useCallback(() => u.default.selectVoiceChannel(c), [c]), I = (0, ep.useUsernameHook)({
+    } = t, d = D.default.getId(), c = t.getChannelId(), E = (0, l.useStateFromStores)([x.default], () => x.default.isCallActive(c, r), [c, r]), f = (0, l.useStateFromStores)([k.default], () => k.default.getVoiceState(ep.ME, d)), _ = !E && null != t.call && !t.call.participants.includes(d), T = E && (null == f || f.channelId !== c), I = a.useCallback(() => u.default.selectVoiceChannel(c), [c]), m = (0, eN.useUsernameHook)({
       user: o,
       channelId: c,
       guildId: i.guild_id,
@@ -220,18 +220,18 @@ let eM = Object.freeze({
       message: t,
       missed: _,
       joinable: T,
-      usernameHook: I,
-      onClickJoinCall: m
+      usernameHook: m,
+      onClickJoinCall: I
     })
   },
-  [eh.MessageTypes.CHANNEL_NAME_CHANGE]: function(e) {
+  [ep.MessageTypes.CHANNEL_NAME_CHANGE]: function(e) {
     let {
       message: t,
       compact: n,
       channel: a
     } = e, {
       author: l
-    } = t, i = t.getChannelId(), r = (0, ep.useUsernameHook)({
+    } = t, i = t.getChannelId(), r = (0, eN.useUsernameHook)({
       user: l,
       channelId: i,
       guildId: a.guild_id,
@@ -244,14 +244,14 @@ let eM = Object.freeze({
       isForumPost: a.isForumPost()
     })
   },
-  [eh.MessageTypes.CHANNEL_ICON_CHANGE]: function(e) {
+  [ep.MessageTypes.CHANNEL_ICON_CHANGE]: function(e) {
     let {
       message: t,
       compact: n,
       channel: a
     } = e, {
       author: l
-    } = t, i = t.getChannelId(), r = (0, ep.useUsernameHook)({
+    } = t, i = t.getChannelId(), r = (0, eN.useUsernameHook)({
       user: l,
       channelId: i,
       guildId: a.guild_id,
@@ -263,7 +263,7 @@ let eM = Object.freeze({
       usernameHook: r
     })
   },
-  [eh.MessageTypes.CHANNEL_PINNED_MESSAGE]: function(e) {
+  [ep.MessageTypes.CHANNEL_PINNED_MESSAGE]: function(e) {
     let {
       message: t,
       compact: n,
@@ -275,8 +275,8 @@ let eM = Object.freeze({
         let e = y.default.getChannel(r);
         null != e && (0, g.transitionToGuild)(e.guild_id, e.id)
       }
-      setTimeout(() => eE.ComponentDispatch.dispatch(eh.ComponentActions.TOGGLE_CHANNEL_PINS), 0)
-    }, [r]), u = (0, ep.useUsernameHook)({
+      setTimeout(() => ef.ComponentDispatch.dispatch(ep.ComponentActions.TOGGLE_CHANNEL_PINS), 0)
+    }, [r]), u = (0, eN.useUsernameHook)({
       user: i,
       channelId: r,
       guildId: l.guild_id,
@@ -289,14 +289,14 @@ let eM = Object.freeze({
       onClickPins: __OVERLAY__ ? null : o
     })
   },
-  [eh.MessageTypes.USER_JOIN]: function(e) {
+  [ep.MessageTypes.USER_JOIN]: function(e) {
     let {
       message: t,
       compact: n,
       channel: a
     } = e, {
       author: l
-    } = t, i = t.getChannelId(), r = (0, ep.useUsernameHook)({
+    } = t, i = t.getChannelId(), r = (0, eN.useUsernameHook)({
       user: l,
       channelId: i,
       guildId: a.guild_id,
@@ -307,24 +307,24 @@ let eM = Object.freeze({
         message: t,
         compact: n,
         usernameHook: r
-      }), (0, s.jsx)(x.WelcomeCTAContainer, {
+      }), (0, s.jsx)(P.WelcomeCTAContainer, {
         channel: a,
         message: t
       })]
     })
   },
-  [eh.MessageTypes.GUILD_BOOST]: eA,
-  [eh.MessageTypes.GUILD_BOOST_TIER_1]: eA,
-  [eh.MessageTypes.GUILD_BOOST_TIER_2]: eA,
-  [eh.MessageTypes.GUILD_BOOST_TIER_3]: eA,
-  [eh.MessageTypes.CHANNEL_FOLLOW_ADD]: function(e) {
+  [ep.MessageTypes.GUILD_BOOST]: eh,
+  [ep.MessageTypes.GUILD_BOOST_TIER_1]: eh,
+  [ep.MessageTypes.GUILD_BOOST_TIER_2]: eh,
+  [ep.MessageTypes.GUILD_BOOST_TIER_3]: eh,
+  [ep.MessageTypes.CHANNEL_FOLLOW_ADD]: function(e) {
     let {
       message: t,
       compact: n,
       channel: a
     } = e, {
       author: l
-    } = t, i = t.getChannelId(), r = (0, ep.useUsernameHook)({
+    } = t, i = t.getChannelId(), r = (0, eN.useUsernameHook)({
       user: l,
       channelId: i,
       guildId: a.guild_id,
@@ -336,7 +336,7 @@ let eM = Object.freeze({
       usernameHook: r
     })
   },
-  [eh.MessageTypes.GUILD_STREAM]: function(e) {
+  [ep.MessageTypes.GUILD_STREAM]: function(e) {
     let {
       message: t,
       compact: n,
@@ -347,50 +347,50 @@ let eM = Object.freeze({
         id: o
       },
       messageReference: u
-    } = t, c = t.getChannelId(), f = (0, l.useStateFromStores)([j.default], () => j.default.findActivity(o, e => e.type === eh.ActivityTypes.PLAYING), [o]), E = (0, l.useStateFromStores)([y.default], () => null != u ? y.default.getChannel(u.channel_id) : null, [u]), _ = null == u ? void 0 : u.guild_id, T = (0, ep.useUsernameHook)({
+    } = t, c = t.getChannelId(), E = (0, l.useStateFromStores)([b.default], () => b.default.findActivity(o, e => e.type === ep.ActivityTypes.PLAYING), [o]), f = (0, l.useStateFromStores)([y.default], () => null != u ? y.default.getChannel(u.channel_id) : null, [u]), _ = null == u ? void 0 : u.guild_id, T = (0, eN.useUsernameHook)({
       user: r,
       channelId: c,
       guildId: i.guild_id,
       messageId: t.id
-    }), m = a.useCallback(() => {
-      null != E && null != _ && (0, d.watchStreamAndTransitionToStream)({
-        streamType: eN.StreamTypes.GUILD,
+    }), I = a.useCallback(() => {
+      null != f && null != _ && (0, d.watchStreamAndTransitionToStream)({
+        streamType: eS.StreamTypes.GUILD,
         ownerId: o,
-        channelId: E.id,
+        channelId: f.id,
         guildId: _
       })
-    }, [o, E, _]);
-    return null != u && null != E && null != u.guild_id ? (0, s.jsx)(Z.default, {
+    }, [o, f, _]);
+    return null != u && null != f && null != u.guild_id ? (0, s.jsx)(X.default, {
       message: t,
       compact: n,
-      channel: E,
-      playingActivity: f,
-      onJoinStream: m,
+      channel: f,
+      playingActivity: E,
+      onJoinStream: I,
       usernameHook: T
     }) : null
   },
-  [eh.MessageTypes.GUILD_DISCOVERY_DISQUALIFIED]: function(e) {
+  [ep.MessageTypes.GUILD_DISCOVERY_DISQUALIFIED]: function(e) {
     let {
       message: t,
       compact: n
     } = e, a = t.getChannelId(), i = (0, l.useStateFromStores)([y.default], () => y.default.getChannel(a), [a]), r = null != i ? i.getGuildId() : null;
-    return (0, s.jsx)(q.UIKitGuildDiscoveryDisqualified, {
+    return (0, s.jsx)(Z.UIKitGuildDiscoveryDisqualified, {
       message: t,
       compact: n,
       onClick: () => {
-        null != r && S.default.open(r, eh.GuildSettingsSections.DISCOVERY)
+        null != r && C.default.open(r, ep.GuildSettingsSections.DISCOVERY)
       }
     })
   },
-  [eh.MessageTypes.GUILD_DISCOVERY_REQUALIFIED]: q.UIKitGuildDiscoveryRequalified,
-  [eh.MessageTypes.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: q.UIKitGuildDiscoveryGracePeriodInitialWarning,
-  [eh.MessageTypes.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: q.UIKitGuildDiscoveryGracePeriodFinalWarning,
-  [eh.MessageTypes.THREAD_CREATED]: function(e) {
+  [ep.MessageTypes.GUILD_DISCOVERY_REQUALIFIED]: Z.UIKitGuildDiscoveryRequalified,
+  [ep.MessageTypes.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: Z.UIKitGuildDiscoveryGracePeriodInitialWarning,
+  [ep.MessageTypes.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: Z.UIKitGuildDiscoveryGracePeriodFinalWarning,
+  [ep.MessageTypes.THREAD_CREATED]: function(e) {
     let {
       message: t,
       channel: l,
       compact: o
-    } = e, u = (0, ep.useUsernameHook)({
+    } = e, u = (0, eN.useUsernameHook)({
       user: t.author,
       channelId: t.channel_id,
       guildId: l.guild_id,
@@ -399,9 +399,9 @@ let eM = Object.freeze({
       var n;
       let s = null === (n = t.messageReference) || void 0 === n ? void 0 : n.channel_id;
       if (null != s) {
-        await v.default.loadThread(s);
+        await L.default.loadThread(s);
         let t = y.default.getChannel(s);
-        null != t && (0, L.openThreadSidebarForViewing)(t, e.shiftKey)
+        null != t && (0, v.openThreadSidebarForViewing)(t, e.shiftKey)
       }
     }, [t]), c = a.useCallback(() => {
       (0, i.openModalLazy)(async () => {
@@ -413,7 +413,7 @@ let eM = Object.freeze({
           ...t
         })
       })
-    }, [l]), f = a.useCallback(e => {
+    }, [l]), E = a.useCallback(e => {
       var a;
       let l = y.default.getChannel(null === (a = t.messageReference) || void 0 === a ? void 0 : a.channel_id);
       null != l && (0, r.openContextMenuLazy)(e, async () => {
@@ -432,11 +432,11 @@ let eM = Object.freeze({
       usernameHook: u,
       onClickThread: d,
       onClickViewThreads: c,
-      onContextMenuThread: f
+      onContextMenuThread: E
     })
   },
-  [eh.MessageTypes.THREAD_STARTER_MESSAGE]: ed.default,
-  [eh.MessageTypes.GUILD_INVITE_REMINDER]: function(e) {
+  [ep.MessageTypes.THREAD_STARTER_MESSAGE]: ed.default,
+  [ep.MessageTypes.GUILD_INVITE_REMINDER]: function(e) {
     let {
       message: t,
       channel: n,
@@ -452,7 +452,7 @@ let eM = Object.freeze({
       channel: n
     })
   },
-  [eh.MessageTypes.AUTO_MODERATION_ACTION]: function(e) {
+  [ep.MessageTypes.AUTO_MODERATION_ACTION]: function(e) {
     let {
       message: t,
       compact: n,
@@ -464,32 +464,14 @@ let eM = Object.freeze({
       channel: a
     }) : null
   },
-  [eh.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED]: eg,
-  [eh.MessageTypes.GUILD_INCIDENT_ALERT_MODE_DISABLED]: eg,
-  [eh.MessageTypes.GUILD_INCIDENT_REPORT_RAID]: function(e) {
+  [ep.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED]: eg,
+  [ep.MessageTypes.GUILD_INCIDENT_ALERT_MODE_DISABLED]: eg,
+  [ep.MessageTypes.GUILD_INCIDENT_REPORT_RAID]: function(e) {
     let {
       message: t,
       compact: n,
       channel: a
-    } = e, l = (0, ep.useUsernameHook)({
-      user: t.author,
-      channelId: a.id,
-      guildId: a.guild_id,
-      messageId: t.id
-    });
-    return (0, s.jsx)(X.default, {
-      message: t,
-      compact: n,
-      channel: a,
-      usernameHook: l
-    })
-  },
-  [eh.MessageTypes.GUILD_INCIDENT_REPORT_FALSE_ALARM]: function(e) {
-    let {
-      message: t,
-      compact: n,
-      channel: a
-    } = e, l = (0, ep.useUsernameHook)({
+    } = e, l = (0, eN.useUsernameHook)({
       user: t.author,
       channelId: a.id,
       guildId: a.guild_id,
@@ -502,48 +484,66 @@ let eM = Object.freeze({
       usernameHook: l
     })
   },
-  [eh.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE]: p.default,
-  [eh.MessageTypes.PURCHASE_NOTIFICATION]: function(e) {
+  [ep.MessageTypes.GUILD_INCIDENT_REPORT_FALSE_ALARM]: function(e) {
+    let {
+      message: t,
+      compact: n,
+      channel: a
+    } = e, l = (0, eN.useUsernameHook)({
+      user: t.author,
+      channelId: a.id,
+      guildId: a.guild_id,
+      messageId: t.id
+    });
+    return (0, s.jsx)(q.default, {
+      message: t,
+      compact: n,
+      channel: a,
+      usernameHook: l
+    })
+  },
+  [ep.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE]: N.default,
+  [ep.MessageTypes.PURCHASE_NOTIFICATION]: function(e) {
     var t;
     let {
       message: n,
       channel: a,
       compact: l
     } = e;
-    return (null === (t = n.purchaseNotification) || void 0 === t ? void 0 : t.type) === c.PurchaseNotificationType.GUILD_PRODUCT ? (0, s.jsx)(I.default, {
+    return (null === (t = n.purchaseNotification) || void 0 === t ? void 0 : t.type) === c.PurchaseNotificationType.GUILD_PRODUCT ? (0, s.jsx)(m.default, {
       message: n,
       channel: a,
       compact: l
     }) : null
   },
-  [eh.MessageTypes.INTERACTION_PREMIUM_UPSELL]: void 0,
-  [eh.MessageTypes.STAGE_START]: function(e) {
+  [ep.MessageTypes.INTERACTION_PREMIUM_UPSELL]: void 0,
+  [ep.MessageTypes.STAGE_START]: function(e) {
     let {
       message: t,
       channel: n,
       compact: a
-    } = e, i = (0, ep.useUsernameHook)({
+    } = e, i = (0, eN.useUsernameHook)({
       user: t.author,
       channelId: n.id,
       guildId: n.guild_id,
       messageId: t.id
-    }), r = (0, l.useStateFromStores)([h.default], () => h.default.getActiveEventByChannel(n.id), [n.id]);
+    }), r = (0, l.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(n.id), [n.id]);
     return (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(el.default, {
         message: t,
         compact: a,
         usernameHook: i
-      }), null != r && r.name === t.content ? (0, s.jsx)(N.default, {
+      }), null != r && r.name === t.content ? (0, s.jsx)(S.default, {
         code: "".concat(n.guild_id, "-").concat(r.id)
       }) : null]
     })
   },
-  [eh.MessageTypes.STAGE_END]: function(e) {
+  [ep.MessageTypes.STAGE_END]: function(e) {
     let {
       message: t,
       channel: n,
       compact: a
-    } = e, l = (0, ep.useUsernameHook)({
+    } = e, l = (0, eN.useUsernameHook)({
       user: t.author,
       channelId: n.id,
       guildId: n.guild_id,
@@ -555,12 +555,12 @@ let eM = Object.freeze({
       usernameHook: l
     })
   },
-  [eh.MessageTypes.STAGE_SPEAKER]: function(e) {
+  [ep.MessageTypes.STAGE_SPEAKER]: function(e) {
     let {
       message: t,
       channel: n,
       compact: a
-    } = e, l = (0, ep.useUsernameHook)({
+    } = e, l = (0, eN.useUsernameHook)({
       user: t.author,
       channelId: n.id,
       guildId: n.guild_id,
@@ -572,44 +572,44 @@ let eM = Object.freeze({
       usernameHook: l
     })
   },
-  [eh.MessageTypes.STAGE_RAISE_HAND]: function(e) {
+  [ep.MessageTypes.STAGE_RAISE_HAND]: function(e) {
     var t, n;
     let {
       message: a,
       channel: r,
       compact: u
-    } = e, d = (0, ep.useUsernameHook)({
+    } = e, d = (0, eN.useUsernameHook)({
       user: a.author,
       channelId: r.id,
       guildId: r.guild_id,
       messageId: a.id
-    }), c = (0, l.useStateFromStores)([b.default], () => b.default.can(eh.Permissions.MUTE_MEMBERS, r)), f = (0, l.useStateFromStores)([R.default], () => R.default.getParticipant(r.id, a.author.id)), E = new Date(em.default.extractTimestamp(a.id)).toISOString() === new Date(null !== (n = null == f ? void 0 : null === (t = f.voiceState) || void 0 === t ? void 0 : t.requestToSpeakTimestamp) && void 0 !== n ? n : 0).toISOString(), _ = c && (null == f ? void 0 : f.rtsState) === O.RequestToSpeakStates.REQUESTED_TO_SPEAK && E;
+    }), c = (0, l.useStateFromStores)([j.default], () => j.default.can(ep.Permissions.MUTE_MEMBERS, r)), E = (0, l.useStateFromStores)([O.default], () => O.default.getParticipant(r.id, a.author.id)), f = new Date(eI.default.extractTimestamp(a.id)).toISOString() === new Date(null !== (n = null == E ? void 0 : null === (t = E.voiceState) || void 0 === t ? void 0 : t.requestToSpeakTimestamp) && void 0 !== n ? n : 0).toISOString(), _ = c && (null == E ? void 0 : E.rtsState) === R.RequestToSpeakStates.REQUESTED_TO_SPEAK && f;
     return (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(es.default, {
         message: a,
         compact: u,
         usernameHook: d
       }), _ ? (0, s.jsxs)(i.Button, {
-        wrapperClassName: eC.inviteToSpeakButtonWrapper,
-        innerClassName: eC.inviteToSpeakButtonInner,
+        wrapperClassName: eA.inviteToSpeakButtonWrapper,
+        innerClassName: eA.inviteToSpeakButtonInner,
         look: i.Button.Looks.FILLED,
         color: i.Button.Colors.PRIMARY,
         onClick: () => {
           (0, M.setUserSuppress)(r, a.author.id, !1), o.default.deleteMessage(r.id, a.id, !0)
         },
-        children: [(0, s.jsx)(k.default, {
+        children: [(0, s.jsx)(F.default, {
           height: 20,
           width: 20
-        }), eS.default.Messages.REQUEST_TO_SPEAK_ACCEPT]
+        }), eC.default.Messages.REQUEST_TO_SPEAK_ACCEPT]
       }) : null]
     })
   },
-  [eh.MessageTypes.STAGE_TOPIC]: function(e) {
+  [ep.MessageTypes.STAGE_TOPIC]: function(e) {
     let {
       message: t,
       channel: n,
       compact: a
-    } = e, l = (0, ep.useUsernameHook)({
+    } = e, l = (0, eN.useUsernameHook)({
       user: t.author,
       channelId: n.id,
       guildId: n.guild_id,
@@ -621,24 +621,11 @@ let eM = Object.freeze({
       usernameHook: l
     })
   },
-  [eh.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: C.default,
-  [eh.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED]: A.PrivateChannelIntegrationAddedSystemMessage,
-  [eh.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: A.PrivateChannelIntegrationRemovedSystemMessage,
-  [eh.MessageTypes.PREMIUM_REFERRAL]: void 0,
-  [eh.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT]: function(e) {
-    let {
-      message: t,
-      channel: n,
-      compact: a
-    } = e;
-    return (0, s.jsx)(E.default, {
-      message: t,
-      channel: n,
-      compact: a
-    })
-  },
-  [eh.MessageTypes.CUSTOM_GIFT]: void 0,
-  [eh.MessageTypes.GUILD_GAMING_STATS_PROMPT]: function(e) {
+  [ep.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: A.default,
+  [ep.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED]: h.PrivateChannelIntegrationAddedSystemMessage,
+  [ep.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: h.PrivateChannelIntegrationRemovedSystemMessage,
+  [ep.MessageTypes.PREMIUM_REFERRAL]: void 0,
+  [ep.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT]: function(e) {
     let {
       message: t,
       channel: n,
@@ -650,7 +637,20 @@ let eM = Object.freeze({
       compact: a
     })
   },
-  [eh.MessageTypes.VOICE_HANGOUT_INVITE]: void 0
+  [ep.MessageTypes.CUSTOM_GIFT]: void 0,
+  [ep.MessageTypes.GUILD_GAMING_STATS_PROMPT]: function(e) {
+    let {
+      message: t,
+      channel: n,
+      compact: a
+    } = e;
+    return (0, s.jsx)(E.default, {
+      message: t,
+      channel: n,
+      compact: a
+    })
+  },
+  [ep.MessageTypes.VOICE_HANGOUT_INVITE]: void 0
 });
 t.default = a.memo(function(e) {
   let {
@@ -666,7 +666,7 @@ t.default = a.memo(function(e) {
   }
   return (0, s.jsx)(w.default, {
     message: t,
-    content: (0, eI.default)(t).content,
+    content: (0, em.default)(t).content,
     children: (0, s.jsx)(i, {
       message: t,
       channel: n,

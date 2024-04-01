@@ -11,12 +11,12 @@ var a = n("735250"),
   c = n("620929"),
   f = n("308083"),
   E = n("689938"),
-  h = n("653196");
+  _ = n("653196");
 t.default = e => {
   let {
     guildId: t,
     setPage: n,
-    onClose: _
+    onClose: h
   } = e, C = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
     selectedGames: S,
     playstyle: m,
@@ -62,9 +62,9 @@ t.default = e => {
     }
   });
   return (0, l.useChain)([A, N, R], [0, 0, 1]), (0, a.jsxs)("div", {
-    className: h.animationContainer,
+    className: _.animationContainer,
     children: [(0, a.jsxs)(l.animated.div, {
-      className: h.signTextLeft,
+      className: _.signTextLeft,
       style: {
         ...L,
         ...M
@@ -78,20 +78,20 @@ t.default = e => {
         children: E.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
       })]
     }), (0, a.jsx)("div", {
-      className: h.scrollContainer,
+      className: _.scrollContainer,
       children: (0, a.jsx)(c.default, {
         guildId: t,
         signed: O,
         setSigned: v
       })
     }), (0, a.jsxs)(l.animated.div, {
-      className: h.signTextRight,
+      className: _.signTextRight,
       style: {
         ...P,
         ...M
       },
       children: [(0, a.jsx)(r.Button, {
-        className: h.signButton,
+        className: _.signButton,
         size: r.Button.Sizes.SMALL,
         onClick: () => v(!0),
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
@@ -132,7 +132,7 @@ t.default = e => {
             description: p,
             tag: T,
             primetime: g
-          }), _()
+          }), h()
         },
         children: E.default.Messages.FINISH
       })

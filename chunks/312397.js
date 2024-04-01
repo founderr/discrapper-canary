@@ -813,7 +813,7 @@ class eC extends l.PureComponent {
       (0, I.openModalLazy)(async () => {
         let {
           default: l
-        } = await Promise.all([s.e("99387"), s.e("60618")]).then(s.bind(s, "850085"));
+        } = await Promise.all([s.e("99387"), s.e("75409")]).then(s.bind(s, "850085"));
         return s => (0, a.jsx)(l, {
           onCrop: this.handleIconChange,
           imgURI: e,
@@ -841,7 +841,7 @@ class eC extends l.PureComponent {
       }(0, I.openModalLazy)(async () => {
         let {
           default: l
-        } = await Promise.all([s.e("99387"), s.e("60618")]).then(s.bind(s, "850085"));
+        } = await Promise.all([s.e("99387"), s.e("75409")]).then(s.bind(s, "850085"));
         return s => (0, a.jsx)(l, {
           imgURI: e,
           file: t,

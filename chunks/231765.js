@@ -12,9 +12,9 @@ var a, n, l, i, r = s("735250"),
   S = s("481060"),
   E = s("37234"),
   T = s("607070"),
-  _ = s("301822"),
-  f = s("206895"),
-  m = s("692437"),
+  f = s("301822"),
+  m = s("206895"),
+  _ = s("692437"),
   g = s("783539"),
   h = s("585483"),
   N = s("557177"),
@@ -341,7 +341,7 @@ function Y(e) {
   })
 }
 
-function K(e) {
+function W(e) {
   let {
     onChangePage: t
   } = e;
@@ -365,7 +365,7 @@ function K(e) {
           color: "header-secondary",
           children: v.default.Messages.POGGERMODE_ACHIEVEMENT_DESCRIPTION
         })]
-      }), (0, r.jsx)(m.default, {
+      }), (0, r.jsx)(_.default, {
         width: 16,
         className: D.rightCaretIcon
       })]
@@ -374,7 +374,7 @@ function K(e) {
     })]
   })
 }
-let W = () => s.e("20467").then(s.t.bind(s, "205663", 19)).then(e => {
+let K = () => s.e("20467").then(s.t.bind(s, "205663", 19)).then(e => {
   let {
     default: t
   } = e;
@@ -431,7 +431,7 @@ function z(e) {
     }), (0, r.jsx)(k, {
       settings: a,
       updateSettings: E
-    }), (0, r.jsx)(K, {
+    }), (0, r.jsx)(W, {
       onChangePage: t
     }), (0, r.jsx)(w, {
       settings: a,
@@ -465,28 +465,28 @@ let Q = (e, t, s) => {
         return null
     }
   },
-  X = e => 0 === e ? f.SlideDirection.LEFT : f.SlideDirection.RIGHT;
+  Z = e => 0 === e ? m.SlideDirection.LEFT : m.SlideDirection.RIGHT;
 
 function q() {
-  let [e, t] = o.useState(0), [s, a] = o.useState(X(e)), [n, l] = o.useState(!1), i = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), d = n && !i;
+  let [e, t] = o.useState(0), [s, a] = o.useState(Z(e)), [n, l] = o.useState(!1), i = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), d = n && !i;
   return o.useEffect(() => {
     let t = setTimeout(() => {
-      a(X(e))
+      a(Z(e))
     }, 500);
     return () => clearTimeout(t)
   }, [e]), o.useEffect(() => {
     Math.random() > .99 && (0, I.unlockAchievement)(p.PoggermodeAchievementId.VISITOR_100)
   }, []), (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(f.default, {
+    children: [(0, r.jsx)(m.default, {
       className: D.slideAnimator,
       step: e,
       direction: s,
       children: Q(e, t, l)
     }), (0, r.jsx)("div", {
       className: d ? D.enableAnimationOverlayVisible : D.enableAnimationOverlayHidden,
-      children: (0, r.jsx)(_.default, {
+      children: (0, r.jsx)(f.default, {
         className: D.enableAnimation,
-        importData: W,
+        importData: K,
         shouldAnimate: d,
         autoplay: !1,
         resetOnPlay: !0,

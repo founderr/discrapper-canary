@@ -21,9 +21,9 @@ function c(e) {
     giftMessage: S,
     onClose: E,
     onComplete: T,
-    analyticsLocations: _,
-    analyticsObject: f
-  } = e, m = !1, g = (0, n.v4)();
+    analyticsLocations: f,
+    analyticsObject: m
+  } = e, _ = !1, g = (0, n.v4)();
   (0, l.openModalLazy)(async () => {
     let {
       default: e
@@ -40,25 +40,25 @@ function c(e) {
         skuId: t,
         isGift: c,
         giftMessage: S,
-        analyticsLocations: _,
+        analyticsLocations: f,
         onClose: e => {
           n(), null == E || E(e)
         },
         onComplete: () => {
-          m = !0, null == T || T()
+          _ = !0, null == T || T()
         },
         returnRef: l
       })
     }
   }, {
     onCloseCallback: () => {
-      !m && d.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+      !_ && d.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
         load_id: g,
         payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
-        location: f,
+        location: m,
         is_gift: c,
-        location_stack: _
-      }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == E || E(m), m && (0, o.fetchCollectiblesPurchases)()
+        location_stack: f
+      }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == E || E(_), _ && (0, o.fetchCollectiblesPurchases)()
     },
     onCloseRequest: u.NOOP
   })

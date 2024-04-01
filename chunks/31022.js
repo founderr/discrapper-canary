@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return p
   }
 }), n("47120"), n("724458");
 var l = n("442837"),
@@ -29,7 +29,7 @@ function h(e) {
   }
 }
 
-function C(e) {
+function p(e) {
   let [t] = (0, l.useStateFromStores)([d.default, s.default, a.default], () => {
     let t;
     let n = (t = e === f.FAVORITES ? u.default.keys(a.default.getFavoriteChannels()).map(e => s.default.getChannel(e)).filter(r.isNotNullish).filter(e => e.isGuildStageVoice()) : d.default.getChannels(e)).reduce((e, t) => {

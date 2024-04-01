@@ -21,8 +21,8 @@ var a = n("735250"),
   c = n("809206"),
   f = n("110924"),
   E = n("714338"),
-  h = n("213609"),
-  _ = n("144114"),
+  _ = n("213609"),
+  h = n("144114"),
   C = n("210887"),
   S = n("23434"),
   m = n("610001"),
@@ -42,7 +42,7 @@ function O() {
     action: S.default.getAction(),
     theme: C.default.theme
   })), O = p.default.getVerificationTypes(e), [v, L] = s.useState(0), P = (0, f.default)(O);
-  (0, h.default)({
+  (0, _.default)({
     type: l.ImpressionTypes.MODAL,
     name: l.ImpressionNames.USER_ACTION_REQUIRED,
     properties: {
@@ -69,7 +69,7 @@ function O() {
           default: e
         } = await Promise.all([n.e("49237"), n.e("99387"), n.e("76540")]).then(n.bind(n, "607018"));
         return t => (0, a.jsx)(e, {
-          reason: _.ChangePhoneReason.USER_ACTION_REQUIRED,
+          reason: h.ChangePhoneReason.USER_ACTION_REQUIRED,
           ...t
         })
       }, {

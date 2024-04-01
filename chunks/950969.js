@@ -12,12 +12,12 @@ var l = n("735250"),
   f = n("451478"),
   h = n("816779");
 
-function C(e) {
+function p(e) {
   let t = u.default.getChannel(e);
   return null != t && null != t.getGuildId() && !(t.isThread() ? o.default.isMuted(t.id) : c.default.isChannelMuted(t.getGuildId(), t.id)) && (0, r.getHasImportantUnread)(t)
 }
 
-function p(e) {
+function C(e) {
   let t = u.default.getChannel(e);
   if (null == t) return !1;
   let n = t.getGuildId();
@@ -38,8 +38,8 @@ t.default = a.forwardRef(function(e, t) {
   return (0, l.jsx)(h.default, {
     ref: t,
     ...o,
-    isUnread: C,
-    isMentioned: p,
+    isUnread: p,
+    isMentioned: C,
     items: u,
     animate: d
   })

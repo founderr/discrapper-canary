@@ -14,8 +14,8 @@ var E = s("735250"),
   A = s("3148"),
   l = s("753206"),
   I = s("594174"),
-  r = s("5192"),
-  o = s("792125"),
+  o = s("5192"),
+  r = s("792125"),
   L = s("981631"),
   d = s("689938"),
   N = s("857179");
@@ -28,7 +28,7 @@ function S(e) {
     theme: S,
     content: g = d.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
     className: D
-  } = e, c = (0, T.useStateFromStores)([I.default], () => I.default.getCurrentUser()), G = r.default.useName(s, null, c), O = (0, i.getRoleIconProps)(a), U = _.useMemo(() => (0, u.createMessageRecord)({
+  } = e, c = (0, T.useStateFromStores)([I.default], () => I.default.getCurrentUser()), G = o.default.useName(s, null, c), O = (0, i.getRoleIconProps)(a), U = _.useMemo(() => (0, u.createMessageRecord)({
     ...(0, A.default)({
       channelId: "0",
       content: g,
@@ -45,7 +45,7 @@ function S(e) {
     colorString: null !== (t = a.colorString) && void 0 !== t ? t : void 0
   };
   return (0, E.jsx)("div", {
-    className: n()((0, o.getThemeClass)(S), N.container, D),
+    className: n()((0, r.getThemeClass)(S), N.container, D),
     children: (0, E.jsx)(l.default, {
       hideTimestamp: !0,
       author: C,

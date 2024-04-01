@@ -21,11 +21,11 @@ function l(e) {
     emojiId: _,
     emojiName: l,
     className: I
-  } = e, r = (0, i.default)(s, _);
-  return null != r || null != l ? (0, E.jsx)(n.default, {
-    emojiId: null == r ? void 0 : r.id,
-    emojiName: null != l ? l : null == r ? void 0 : r.name,
-    animated: null !== (t = null == r ? void 0 : r.animated) && void 0 !== t && t,
+  } = e, o = (0, i.default)(s, _);
+  return null != o || null != l ? (0, E.jsx)(n.default, {
+    emojiId: null == o ? void 0 : o.id,
+    emojiName: null != l ? l : null == o ? void 0 : o.name,
+    animated: null !== (t = null == o ? void 0 : o.animated) && void 0 !== t && t,
     className: a()(A.emojiIcon, I)
   }) : (0, E.jsx)(u.default, {
     className: a()(A.emojiIcon, I),

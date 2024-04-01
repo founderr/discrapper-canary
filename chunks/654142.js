@@ -11,8 +11,8 @@ var l = n("735250"),
   c = n("430824"),
   f = n("823379"),
   h = n("179809"),
-  C = n("652376"),
-  p = n("981631");
+  p = n("652376"),
+  C = n("981631");
 t.default = a.memo(function(e) {
   let {
     folderNode: t,
@@ -20,24 +20,24 @@ t.default = a.memo(function(e) {
   } = e, {
     id: g,
     name: E,
-    color: S,
-    children: _
-  } = t, I = _.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(g)), A = function(e) {
+    color: _,
+    children: I
+  } = t, S = I.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(g)), A = function(e) {
     let t = e.children.map(e => {
         let t = e.id,
           n = c.default.getGuild(t);
         return null != n ? n.name : null
       }).filter(f.isNotNullish),
-      n = 2 * p.MAX_GUILD_FOLDER_NAME_LENGTH,
+      n = 2 * C.MAX_GUILD_FOLDER_NAME_LENGTH,
       l = [];
     for (let e of t)(e.length < n || 0 === l.length) && (l.push(e), n -= e.length);
     return "".concat(l.join(", ")).concat(l.length < t.length ? ", ..." : "")
-  }(t), L = (0, C.default)(t), {
+  }(t), L = (0, p.default)(t), {
     mentionCount: v,
     unread: x
   } = (0, s.useStateFromStoresObject)([d.default], () => ({
-    mentionCount: I.map(e => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
-    unread: I.some(e => d.default.hasUnread(e))
+    mentionCount: S.map(e => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
+    unread: S.some(e => d.default.hasUnread(e))
   })), R = a.useCallback(() => {
     r.default.toggleGuildFolderExpand(g)
   }, [g]), O = a.useCallback(e => {
@@ -49,16 +49,16 @@ t.default = a.memo(function(e) {
         ...t,
         folderId: g,
         folderName: E,
-        folderColor: S,
+        folderColor: _,
         unread: x || v > 0
       })
     })
-  }, [g, E, S, x, v]);
+  }, [g, E, _, x, v]);
   return (0, l.jsx)(h.default, {
     ...m,
     folderNode: t,
     expanded: T,
-    selected: null != N && I.includes(N),
+    selected: null != N && S.includes(N),
     mentionCount: v,
     unread: x,
     mediaState: L,

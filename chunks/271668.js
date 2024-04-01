@@ -41,7 +41,7 @@ t.default = r.forwardRef(function(e, t) {
   let {
     channel: n,
     canOnlyUseTextCommands: s
-  } = e, o = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), k = r.useRef(null), [B, V] = r.useState(!1), F = E.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
+  } = e, o = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), B = r.useRef(null), [k, V] = r.useState(!1), F = E.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
   r.useEffect(() => {
     (0, _.trackWithMetadata)(D.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
   }, []);
@@ -65,7 +65,7 @@ t.default = r.forwardRef(function(e, t) {
   }), Q = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
     activeCategoryIndex: F,
     isScrolling: o,
-    listRef: k,
+    listRef: B,
     onActiveCategoryIndexChange: e => {
       let t = H[e];
       if (null != t) {
@@ -86,17 +86,17 @@ t.default = r.forwardRef(function(e, t) {
   let J = r.useCallback(e => e !== H.length - 1 || j ? 16 : 0, [H.length, j]),
     Z = Y.map(e => e.data.length);
   r.useEffect(() => {
-    null != k.current && B && null != G && k.current.scrollRowIntoView(G)
-  }, [B, G]), r.useLayoutEffect(() => {
+    null != B.current && k && null != G && B.current.scrollRowIntoView(G)
+  }, [k, G]), r.useLayoutEffect(() => {
     if (null != K) {
       var e;
-      null === (e = k.current) || void 0 === e || e.scrollToSectionTop(0)
+      null === (e = B.current) || void 0 === e || e.scrollToSectionTop(0)
     }
   }, [W, K]);
   let $ = r.useCallback(e => {
       if (e.id === K || e.id === L.BuiltInSectionId.FRECENCY) {
         var t;
-        X(null), null === (t = k.current) || void 0 === t || t.scrollToSectionTop(0)
+        X(null), null === (t = B.current) || void 0 === t || t.scrollToSectionTop(0)
       } else X(e.id)
     }, [X, K]),
     ee = r.useCallback((e, t, i) => {
@@ -204,7 +204,7 @@ t.default = r.forwardRef(function(e, t) {
       filteredSectionId: K,
       activeCategoryIndex: F,
       onSectionClick: $,
-      applicationCommandListRef: k
+      applicationCommandListRef: B
     }), (0, i.jsx)(S.default, {
       role: "listbox",
       className: M.list,
@@ -218,7 +218,7 @@ t.default = r.forwardRef(function(e, t) {
       rowHeight: 56,
       sectionHeaderHeight: 32,
       sectionMarginBottom: J,
-      ref: k,
+      ref: B,
       stickyHeaders: !0
     })]
   })

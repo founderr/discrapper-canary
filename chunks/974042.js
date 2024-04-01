@@ -10,8 +10,8 @@ var a, s = n("392711"),
   c = n("199902"),
   f = n("271383"),
   E = n("430824"),
-  h = n("158776"),
-  _ = n("699516"),
+  _ = n("158776"),
+  h = n("699516"),
   C = n("594174"),
   S = n("981631");
 
@@ -34,9 +34,9 @@ function I(e) {
 
 function p(e) {
   return {
-    status: h.default.getStatus(e),
-    isMobile: h.default.isMobileOnline(e),
-    activities: h.default.getActivities(e),
+    status: _.default.getStatus(e),
+    isMobile: _.default.isMobileOnline(e),
+    activities: _.default.getActivities(e),
     applicationStream: c.default.getAnyStreamForUser(e)
   }
 }
@@ -61,10 +61,10 @@ class g extends u.default {
 }
 class A {
   reset() {
-    let e = l().map(_.default.getRelationships(), (e, t) => new g({
+    let e = l().map(h.default.getRelationships(), (e, t) => new g({
         key: t,
         type: e,
-        nickname: _.default.getNickname(t),
+        nickname: h.default.getNickname(t),
         ...I(t),
         ...p(t),
         ...T(t)
@@ -160,13 +160,13 @@ function x(e) {
 }
 class b extends(a = i.default.Store) {
   initialize() {
-    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], D), this.syncWith([d.default], D), this.syncWith([C.default], x(I)), this.syncWith([h.default, c.default], x(p)), y()
+    this.waitFor(h.default, _.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([h.default], D), this.syncWith([d.default], D), this.syncWith([C.default], x(I)), this.syncWith([_.default, c.default], x(p)), y()
   }
   getState() {
     return {
       fetching: R,
       section: O,
-      pendingCount: _.default.getPendingCount(),
+      pendingCount: h.default.getPendingCount(),
       rows: v
     }
   }

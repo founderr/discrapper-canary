@@ -34,8 +34,8 @@ var i = n("735250"),
   b = n("913663"),
   G = n("268350"),
   w = n("378233"),
-  k = n("665906"),
-  B = n("695346"),
+  B = n("665906"),
+  k = n("695346"),
   V = n("271383"),
   F = n("496675"),
   x = n("944486"),
@@ -79,8 +79,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     renderAttachButton: eb,
     renderAppLauncherButton: eG,
     renderApplicationCommandIcon: ew,
-    pendingReply: ek,
-    onChange: eB,
+    pendingReply: eB,
+    onChange: ek,
     onResize: eV,
     onBlur: eF,
     onFocus: ex,
@@ -144,7 +144,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           d = (!(null === (r = t.permissions) || void 0 === r ? void 0 : r.requireCreateTherads) || u) && (!(null === (s = t.permissions) || void 0 === s ? void 0 : s.requireSendMessages) || c.has(l, es.Permissions.SEND_MESSAGES)),
           _ = d && c.has(l, es.Permissions.ATTACH_FILES),
           E = null != n,
-          I = (0, k.computeIsReadOnlyThread)(e);
+          I = (0, B.computeIsReadOnlyThread)(e);
         return {
           disabled: i || a || !o && !d || I,
           canAttachFiles: !0 === t.attachments && (o || a || _ || E),
@@ -157,7 +157,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       isPendingMember: a,
       ...o
     }
-  }(ey, eP, tn, eD), td = eP.toolbarType === Q.SlateToolbarTypes.STATIC, t_ = !B.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tc = !t_ || !(null === (s = eP.commands) || void 0 === s ? void 0 : s.enabled) || !eU || eN !== ea.COMMAND_SENTINEL, tE = (0, P.default)(), {
+  }(ey, eP, tn, eD), td = eP.toolbarType === Q.SlateToolbarTypes.STATIC, t_ = !k.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tc = !t_ || !(null === (s = eP.commands) || void 0 === s ? void 0 : s.enabled) || !eU || eN !== ea.COMMAND_SENTINEL, tE = (0, P.default)(), {
     isSubmitButtonEnabled: tI,
     fontSize: tT
   } = (0, E.useStateFromStoresObject)([f.default], () => ({
@@ -361,8 +361,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     {
       expressionPickerView: tG,
       shouldHideExpressionPicker: tw,
-      handleAutocompleteVisibilityChange: tk,
-      handleOuterClick: tB
+      handleAutocompleteVisibilityChange: tB,
+      handleOuterClick: tk
     } = function(e, t, n) {
       let [i, s] = (0, L.useExpressionPickerStore)(e => [e.activeView, e.activeViewType], d.default);
       r.useEffect(() => () => {
@@ -390,7 +390,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     }).enabled,
     tF = (0, E.useStateFromStores)([m.default], () => m.default.shouldShowPopup(), []);
   (0, X.useHereMentionCallback)(tS, ey.guild_id, ey.id);
-  let tx = null != ek,
+  let tx = null != eB,
     tH = ta && !((tr || ts) && tu) || tA && (null === (l = eP.submit) || void 0 === l ? void 0 : l.useDisabledStylesOnSubmit),
     tY = null,
     tj = null;
@@ -399,13 +399,13 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     tK = t_ && !__OVERLAY__ && null != eO && null == tn,
     tz = function(e, t, n, i) {
       var r, s;
-      let a = B.ExpressionSuggestionsEnabled.useSetting(),
+      let a = k.ExpressionSuggestionsEnabled.useSetting(),
         o = (0, E.useStateFromStores)([b.default], () => b.default.getStickerPreview(e.id, t.drafts.type)),
         l = null != o && o.length > 0;
       return a && (null === (r = t.stickers) || void 0 === r ? void 0 : r.autoSuggest) && !l && (null === (s = i.current) || void 0 === s ? void 0 : s.isVisible()) !== !0 && !__OVERLAY__ && null != n
     }(ey, eP, eO, tO),
     tX = (0, R.useShouldShowPTONotice)(ey),
-    tQ = null != tn || null != ek || tX,
+    tQ = null != tn || null != eB || tX,
     tq = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
   return (0, i.jsx)(g.EventEmitterProvider, {
     value: tS,
@@ -428,12 +428,12 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           [el.highlighted]: eW,
           [el.textAreaMobileThemed]: _.isMobile
         }),
-        onMouseDown: tB,
+        onMouseDown: tk,
         children: [(0, i.jsx)($.default, {
           type: eP,
           channel: ey,
           activeCommand: tn,
-          pendingReply: ek
+          pendingReply: eB
         }), (0, i.jsxs)("div", {
           ref: te,
           onScroll: tv,
@@ -479,7 +479,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
                 maxCharacterCount: null != eX ? eX : tE,
                 allowNewLines: eq,
                 "aria-describedby": eZ,
-                onChange: eB,
+                onChange: ek,
                 onResize: ty,
                 onBlur: eF,
                 onFocus: ex,
@@ -528,9 +528,9 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           editorRef: e9,
           onSendMessage: tm,
           onSendSticker: tL,
-          onVisibilityChange: tk,
+          onVisibilityChange: tB,
           editorHeight: tM,
-          setValue: (e, t) => null == eB ? void 0 : eB(null, e, t),
+          setValue: (e, t) => null == ek ? void 0 : ek(null, e, t),
           position: e1
         }), (0, i.jsx)(U.default, {
           textValue: eN,

@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("763296"),
   E = s("242291"),
   T = s("893663"),
-  _ = s("331642"),
-  f = s("474333"),
-  m = s("466111"),
+  f = s("331642"),
+  m = s("474333"),
+  _ = s("466111"),
   g = s("632184"),
   h = s("63063"),
   N = s("581883"),
@@ -90,20 +90,20 @@ function M() {
     }), (0, a.jsxs)(u.default, {
       className: x.marginTop20,
       title: A.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND.format({
-        nitroWheelHook: () => (0, a.jsx)(m.default, {
+        nitroWheelHook: () => (0, a.jsx)(_.default, {
           className: O.nitroWheel
         })
       }),
       forcedDivider: !0,
-      children: [(0, a.jsx)(_.default, {
+      children: [(0, a.jsx)(f.default, {
         sound: g,
         isGlobal: M,
         onSelect: s => {
           null == s ? (0, E.removeCustomJoinSound)(t, e) : (0, E.updateCustomJoinSound)(t, s, e)
         }
-      }), D && (0, a.jsx)(f.default, {
+      }), D && (0, a.jsx)(m.default, {
         className: O.notice,
-        messageType: f.HelpMessageTypes.WARNING,
+        messageType: m.HelpMessageTypes.WARNING,
         children: A.default.Messages.CALL_SOUNDS_SETTINGS_SOUND_REMOVED
       })]
     })]
