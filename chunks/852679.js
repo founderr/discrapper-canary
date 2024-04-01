@@ -23,8 +23,8 @@ async function E(e) {
     guildId: T,
     closeLayer: f,
     onCloseModal: S,
-    totalNumberOfSlotsToAssign: h = 1,
-    disablePremiumUpsell: A,
+    totalNumberOfSlotsToAssign: A = 1,
+    disablePremiumUpsell: h,
     onSubscriptionConfirmation: m,
     inPopout: N,
     applicationId: O
@@ -45,7 +45,7 @@ async function E(e) {
   let C = await (0, r.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("58625"), n.e("14720"), n.e("63438"), n.e("62511"), n.e("61247"), n.e("58600"), n.e("8016"), n.e("22646"), n.e("847"), n.e("97656")]).then(n.bind(n, "343649"));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("58625"), n.e("14720"), n.e("63438"), n.e("62511"), n.e("61247"), n.e("58600"), n.e("8016"), n.e("22646"), n.e("20533"), n.e("35027")]).then(n.bind(n, "343649"));
     return n => {
       let {
         transitionState: r,
@@ -60,9 +60,9 @@ async function E(e) {
         analyticsLocation: E,
         analyticsSourceLocation: null != I ? I : E,
         guildId: T,
-        totalNumberOfSlotsToAssign: h,
+        totalNumberOfSlotsToAssign: A,
         closeGuildPerksModal: f,
-        disablePremiumUpsell: A,
+        disablePremiumUpsell: h,
         onSubscriptionConfirmation: m,
         applicationId: O
       })
