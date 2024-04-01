@@ -128,7 +128,7 @@ class p extends l.PureComponent {
       }
     } = e;
     if (null != l && null != n) return (0, a.jsx)(u.Popout, {
-      preload: () => (0, I.default)(n, l.getAvatarURL(t, 80), {
+      preload: () => (0, I.maybeFetchUserProfileForPopout)(n, l.getAvatarURL(t, 80), {
         guildId: t
       }),
       renderPopout: e => (0, a.jsx)(T.default, {

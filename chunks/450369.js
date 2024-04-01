@@ -50,7 +50,7 @@ let y = 16 / 9,
       id: p
     } = t;
     return (0, a.jsx)(o.Popout, {
-      preload: null == n ? void 0 : () => (0, C.default)(n.user.id, n.user.getAvatarURL(s.guild_id, 80), {
+      preload: null == n ? void 0 : () => (0, C.maybeFetchUserProfileForPopout)(n.user, {
         guildId: s.guild_id,
         channelId: s.id
       }),

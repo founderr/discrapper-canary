@@ -77,7 +77,7 @@ class m extends i.PureComponent {
   }
   renderActivityDiscordTag(e) {
     return (0, a.jsx)(l.Popout, {
-      preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
+      preload: () => (0, u.maybeFetchUserProfileForPopout)(e),
       renderPopout: t => (0, a.jsx)(d.default, {
         ...t,
         location: "ApplicationRecommendationActivity",
@@ -134,7 +134,7 @@ class m extends i.PureComponent {
       if (null == e) return null;
       let r = this.props.reason.userInfo.find(t => t.user === e);
       return null == r ? null : (0, a.jsx)(l.Popout, {
-        preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
+        preload: () => (0, u.maybeFetchUserProfileForPopout)(e),
         renderPopout: t => (0, a.jsx)(d.default, {
           ...t,
           location: "ApplicationRecommendationActivity",

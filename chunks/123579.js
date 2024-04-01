@@ -157,7 +157,7 @@ t.default = e => {
   l.useEffect(() => {
     ed.current = Date.now()
   }, []), l.useEffect(() => {
-    (0, b.default)(eh.id, eh.getAvatarURL(void 0, 80), {
+    (0, b.maybeFetchUserProfileForPopout)(eh, {
       withMutualGuilds: !eh.bot,
       withMutualFriendsCount: !eh.bot
     })

@@ -47,29 +47,29 @@ function D(e) {
   } = e, d = (0, i.useStateFromStores)([A.default], () => {
     var e, s;
     return (null === (s = A.default.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null
-  }), [f, S] = (0, U.useMutualFriends)(t), m = (0, i.useStateFromStores)([A.default], () => A.default.getMutualGuilds(t.id)), E = t.bot || s, {
-    enabled: T
+  }), f = (0, U.useMutualFriends)(t), S = (0, i.useStateFromStores)([A.default], () => A.default.getMutualGuilds(t.id)), m = t.bot || s, {
+    enabled: E
   } = (0, N.useProfileMutualsExperiment)({
     autoTrackExposure: !0,
     location: c.default.PROFILE_MODAL,
-    disable: E
-  }), I = l.useMemo(() => {
-    if (T) {
+    disable: m
+  }), T = l.useMemo(() => {
+    if (E) {
       var e;
       return O.default.Messages.MUTUAL_FRIENDS_WITH_END_COUNT.format({
-        count: "".concat(null !== (e = null == S ? void 0 : S.length) && void 0 !== e ? e : 0)
+        count: "".concat(null !== (e = null == f ? void 0 : f.length) && void 0 !== e ? e : 0)
       })
     }
     return O.default.Messages.MUTUAL_FRIENDS
-  }, [T, S]), p = l.useMemo(() => {
-    if (T) {
+  }, [E, f]), I = l.useMemo(() => {
+    if (E) {
       var e;
       return O.default.Messages.MUTUAL_GUILDS_WITH_END_COUNT.format({
-        count: "".concat(null !== (e = null == m ? void 0 : m.length) && void 0 !== e ? e : 0)
+        count: "".concat(null !== (e = null == S ? void 0 : S.length) && void 0 !== e ? e : 0)
       })
     }
     return O.default.Messages.MUTUAL_GUILDS
-  }, [T, m]);
+  }, [E, S]);
   return (0, a.jsx)("div", {
     className: F.tabBarContainer,
     children: (0, a.jsxs)(o.TabBar, {
@@ -88,11 +88,11 @@ function D(e) {
       }) : null, t.bot || s ? null : (0, a.jsx)(o.TabBar.Item, {
         className: F.tabBarItem,
         id: P.UserProfileSections.MUTUAL_FRIENDS,
-        children: I
+        children: T
       }), s || t.isClyde() ? null : (0, a.jsx)(o.TabBar.Item, {
         className: F.tabBarItem,
         id: P.UserProfileSections.MUTUAL_GUILDS,
-        children: p
+        children: I
       }), t.bot && d ? (0, a.jsx)(o.TabBar.Item, {
         className: F.tabBarItem,
         id: P.UserProfileSections.BOT_DATA_ACCESS,

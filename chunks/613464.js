@@ -52,7 +52,7 @@ function v(e) {
     [n]: [t]
   }), l.useEffect(() => {
     (async function e() {
-      let e = [u.default.requestMembersById(n, [t]), (0, m.getMemberSupplemental)(n, [t]), (0, p.default)(t, void 0, {
+      let e = [u.default.requestMembersById(n, [t]), (0, m.getMemberSupplemental)(n, [t]), (0, p.maybeFetchUserProfileForPopout)(t, void 0, {
         guildId: n,
         dispatchWait: !0
       })];

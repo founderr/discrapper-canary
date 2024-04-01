@@ -36,7 +36,7 @@ class O extends l.PureComponent {
       guildId: l
     } = this.props;
     return (0, a.jsx)(u.Popout, {
-      preload: () => (0, _.default)(e.id, e.getAvatarURL(l, 80), {
+      preload: () => (0, _.maybeFetchUserProfileForPopout)(e.id, e.getAvatarURL(l, 80), {
         guildId: l
       }),
       renderPopout: t => (0, a.jsx)(I.default, {

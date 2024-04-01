@@ -60,7 +60,7 @@ function b(e) {
     })
   };
   return (0, a.jsx)(r.Popout, {
-    preload: () => (0, h.default)(t.id, t.getAvatarURL(void 0, 80)),
+    preload: () => (0, h.maybeFetchUserProfileForPopout)(t),
     renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
       location: "PrivateChannelRecipients",
@@ -120,7 +120,7 @@ function U(e) {
     botIconFirst: !0
   });
   return null != c ? (0, a.jsx)(r.Popout, {
-    preload: () => (0, h.default)(c.id, f),
+    preload: () => (0, h.maybeFetchUserProfileForPopout)(c.id, f),
     renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
       location: "PrivateChannelRecipients",
@@ -176,7 +176,7 @@ function F(e) {
   });
   l.useEffect(() => {
     if (o)
-      for (let e of m)(0, h.default)(e.id, e.getAvatarURL(void 0, 80), {
+      for (let e of m)(0, h.maybeFetchUserProfileForPopout)(e, {
         dispatchWait: !0
       })
   }, [o, m]), l.useEffect(() => {

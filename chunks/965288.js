@@ -125,7 +125,7 @@ t.default = l.memo(function(e) {
       userId: r.id
     }), [s.id, C, r.id]);
   return (0, a.jsx)(c.Popout, {
-    preload: () => (0, m.default)(r.id, r.getAvatarURL(s.guild_id, 80), {
+    preload: () => (0, m.maybeFetchUserProfileForPopout)(r, {
       guildId: s.guild_id,
       channelId: s.id
     }),

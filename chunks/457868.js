@@ -92,7 +92,7 @@ let z = H.default.getEnableHardwareAcceleration(),
     if (null == C) return null;
     let Z = null == p ? void 0 : p.premiumSince;
     return (0, a.jsx)(f.Popout, {
-      preload: () => (0, I.default)(C.id, C.getAvatarURL(t.guild_id, 80), {
+      preload: () => (0, I.maybeFetchUserProfileForPopout)(C, {
         guildId: t.guild_id,
         channelId: t.id
       }),

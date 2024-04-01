@@ -56,7 +56,7 @@ function I(e) {
   }) : (0, a.jsx)(d.AnalyticsLocationProvider, {
     value: g,
     children: (0, a.jsx)(r.Popout, {
-      preload: () => (0, f.default)(S.id, S.getAvatarURL(E.guild_id, 80), {
+      preload: () => (0, f.maybeFetchUserProfileForPopout)(S, {
         guildId: E.guild_id,
         channelId: E.id
       }),

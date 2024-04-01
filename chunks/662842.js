@@ -278,7 +278,7 @@ function Y(e) {
     }), (el.length > 0 || null != ei) && (0, l.jsxs)("div", {
       className: V.participants,
       children: [el.map(e => (0, l.jsx)(c.Popout, {
-        preload: () => (0, M.default)(e.id, e.getAvatarURL(t.id, 80), {
+        preload: () => (0, M.maybeFetchUserProfileForPopout)(e, {
           guildId: t.id
         }),
         renderPopout: t => (0, l.jsx)(y.default, {
