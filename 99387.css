@@ -4919,8 +4919,8 @@ html .invoiceCancelRow_aa7946 {
 }
 
 .planInfo_c12dc8 {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     margin-top: 8px
 }
 
@@ -62642,7 +62642,8 @@ html .progress__00e29 {
     flex: 0 0 auto;
     height: 32px;
     margin-right: 8px;
-    width: 32px
+    width: 32px;
+    border-radius: 4px
 }
 
 .headingCopy__15782 {
