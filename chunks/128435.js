@@ -117,40 +117,40 @@ function M(e) {
     action: t,
     channelId: n,
     messageId: l,
-    className: i
+    className: r
   } = e, {
-    actionButtonRef: r,
-    manageFocusOnAction: o
-  } = (0, m.usePollFocusManager)(), d = a.useCallback(async () => {
+    actionButtonRef: o,
+    manageFocusOnAction: d
+  } = (0, m.usePollFocusManager)(), c = a.useCallback(async () => {
     (null == t ? void 0 : t.type) != null && (await E.default.handlePollActionTapped({
       channelId: n,
       messageId: l,
       type: t.type
-    }), o(t.type))
-  }, [null == t ? void 0 : t.type, n, l, o]);
+    }), d(t.type))
+  }, [null == t ? void 0 : t.type, n, l, d]);
   return null == t ? null : "button" === t.presentation || "secondaryButton" === t.presentation ? (0, s.jsx)(u.Button, {
-    buttonRef: r,
-    onClick: d,
+    buttonRef: o,
+    onClick: c,
     disabled: !t.enabled,
-    color: "secondaryButton" === t.presentation ? u.Button.Colors.PRIMARY : u.Button.Colors.BRAND,
+    color: "secondaryButton" === t.presentation ? u.Button.Colors.CUSTOM : u.Button.Colors.BRAND,
     size: u.Button.Sizes.SMALL,
-    className: i,
+    className: i()(r, N.buttonPresentation, "secondaryButton" === t.presentation && N.secondaryButtonPresentation),
     children: (0, s.jsx)(u.Text, {
       variant: "text-sm/medium",
-      color: "interactive-active",
+      color: "none",
       scaleFontToUserSetting: !0,
       children: t.label
     })
   }, t.presentation) : "textButton" === t.presentation ? (0, s.jsx)(A, {
-    buttonRef: r,
-    onClick: d,
-    className: i,
+    buttonRef: o,
+    onClick: c,
+    className: r,
     children: t.label
   }) : (0, s.jsx)(g, {
     buttonLabel: t.label,
     secondaryLabel: t.secondaryLabel,
-    handleClick: d,
-    className: i
+    handleClick: c,
+    className: r
   })
 }
 
