@@ -189,7 +189,7 @@ function H() {
     if (m < 1) {
       let e = E - S,
         t = Math.max(0, E - Date.now());
-      _(Math.min(t / e, 1))
+      _(Math.min((e - t) / e, 1))
     }
   }), () => f.stop()), [r, i, S, f, m, E]), (0, a.jsxs)("div", {
     className: b.stats,
