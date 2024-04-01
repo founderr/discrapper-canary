@@ -13,7 +13,7 @@ let f = {};
 
 function E() {
   return {
-    selectedGames: new Set,
+    selectedGames: {},
     playstyle: c.ClanPlaystyles.NONE,
     interests: new Set,
     description: "",
@@ -24,17 +24,17 @@ function E() {
     }]
   }
 }
-class _ extends(a = u.default.Store) {
+class h extends(a = u.default.Store) {
   getState(e) {
     return f[e]
   }
 }
-i = "ClanSetupStore", (l = "displayName") in(s = _) ? Object.defineProperty(s, l, {
+i = "ClanSetupStore", (l = "displayName") in(s = h) ? Object.defineProperty(s, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new _(d.default, {
+}) : s[l] = i, t.default = new h(d.default, {
   CLAN_SETUP_UPDATE: function(e) {
     let {
       guildId: t,

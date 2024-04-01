@@ -14,14 +14,16 @@ var a = n("735250"),
 t.default = e => {
   let {
     handleUpdate: t,
-    selectedGames: n,
-    gameDetails: l
-  } = e, _ = (0, r.useStateFromStores)([u.default], () => u.default.games), h = s.useMemo(() => _.map(e => ({
+    selectedGames: n
+  } = e, l = (0, r.useStateFromStores)([u.default], () => u.default.games), h = s.useMemo(() => l.map(e => ({
     value: e.id,
     label: e.name
-  })), [_]), C = e => {
-    let a = new Set(n);
-    a.delete(e), t({
+  })), [l]), _ = e => {
+    if (null == n[e]) return;
+    let a = {
+      ...n
+    };
+    delete a[e], t({
       selectedGames: a
     })
   };
@@ -43,31 +45,37 @@ t.default = e => {
         value: "",
         placeholder: f.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
         onChange: e => {
-          if (n.size === c.MAX_NUM_SELECTED_GAMES) return;
-          let a = new Set(n);
-          a.add(e), t({
-            selectedGames: a
+          if (Object.keys(n).length === c.MAX_NUM_SELECTED_GAMES || null != n[e]) return;
+          let a = u.default.getGameById(e);
+          t({
+            selectedGames: {
+              ...n,
+              [e]: {
+                id: e,
+                name: a.name
+              }
+            }
           })
         },
-        isDisabled: n.size === c.MAX_NUM_SELECTED_GAMES
+        isDisabled: Object.keys(n).length === c.MAX_NUM_SELECTED_GAMES
       })
     }), (0, a.jsxs)("div", {
       className: E.contentWithMinHeight,
-      children: [n.size > 0 && (0, a.jsx)(o.Text, {
+      children: [Object.keys(n).length > 0 && (0, a.jsx)(o.Text, {
         variant: "text-xs/semibold",
         color: "text-muted",
         className: E.contentLabel,
         children: f.default.Messages.CLAN_SETUP_SELECTED_GAMES
       }), (0, a.jsx)("div", {
         className: E.selectedSection,
-        children: Array.from(n).map(e => {
-          var t;
+        children: Object.entries(n).map(e => {
+          let [t, n] = e;
           return (0, a.jsxs)("div", {
             children: [(0, a.jsx)("div", {
               className: E.gameImagePlaceholder,
               children: (0, a.jsx)(o.Clickable, {
                 className: E.removeGame,
-                onClick: () => C(e),
+                onClick: () => _(t),
                 children: (0, a.jsx)(d.default, {
                   className: i()(E.icon, E.clickable)
                 })
@@ -75,9 +83,9 @@ t.default = e => {
             }), (0, a.jsx)(o.Text, {
               variant: "text-xs/medium",
               color: "header-primary",
-              children: null === (t = l[e]) || void 0 === t ? void 0 : t.name
+              children: n.name
             })]
-          }, e)
+          }, t)
         })
       })]
     })]
