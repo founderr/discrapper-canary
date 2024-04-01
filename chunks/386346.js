@@ -14,8 +14,8 @@ let E = !1,
   T = 0,
   f = {},
   S = !1,
-  h = 0,
   A = 0,
+  h = 0,
   m = 0,
   N = 0;
 class O extends(l = u.default.Store) {
@@ -29,15 +29,15 @@ class O extends(l = u.default.Store) {
     return S
   }
   get globalOpenedCount() {
-    return A
+    return h
   }
   get lastGlobalOpenedCount() {
-    return h
+    return A
   }
   get globalOpenedCountFetchTime() {
     return m
   }
-  get nextGlobalOpenedCountFetchDelay() {
+  get nextGlobalOpenedCountFetchTime() {
     return N
   }
   get userDataFetchState() {
@@ -73,14 +73,14 @@ a = "LootboxStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, 
     } = e;
     f = {
       ...t.openedItems
-    }, S = t.redeemedPrize, A++, h++
+    }, S = t.redeemedPrize, h++, A++
   },
   LOOTBOX_COUNT_STAT_FETCHED: function(e) {
     let {
       currentCount: t,
       previousCount: n
     } = e;
-    A = t, h = n, m = Date.now(), N = (0, _.randomBetween)(c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MIN, c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MAX), T = 2
+    h = t, A = n, N = (m = Date.now()) + (0, _.randomBetween)(c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MIN, c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MAX), T = 2
   },
   LOGOUT: function() {
     E = !1, f = {}, S = !1, I = 0
