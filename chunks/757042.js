@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return v
   }
 }), n("47120");
 var a = n("735250"),
@@ -15,82 +15,88 @@ var a = n("735250"),
   c = n("692547"),
   f = n("481060"),
   E = n("230711"),
-  h = n("605236"),
-  _ = n("903958"),
-  C = n("153850"),
-  S = n("641826"),
-  m = n("635869"),
-  I = n("232700"),
-  p = n("981631"),
-  T = n("921944"),
-  g = n("689938"),
-  A = n("127906");
-let N = "https://www.youtube.com/embed/".concat(I.LOOTBOX_VIDEO_ID, "?autoplay=1&mute=1&controls=0&loop=1&playlist=").concat(I.LOOTBOX_VIDEO_ID, "&origin=https://").concat(p.PRIMARY_DOMAIN);
+  h = n("100527"),
+  _ = n("906732"),
+  C = n("605236"),
+  S = n("903958"),
+  m = n("153850"),
+  I = n("641826"),
+  p = n("635869"),
+  T = n("232700"),
+  g = n("981631"),
+  A = n("921944"),
+  N = n("689938"),
+  O = n("127906");
+let R = "https://www.youtube.com/embed/".concat(T.LOOTBOX_VIDEO_ID, "?autoplay=1&mute=1&controls=0&loop=1&playlist=").concat(T.LOOTBOX_VIDEO_ID, "&origin=https://").concat(g.PRIMARY_DOMAIN);
 
-function R() {
-  let [e, t] = s.useState(!1), n = (0, S.useShouldShowMainLootboxEntrypoint)("lootbox_entrypoint"), l = !(0, h.useIsDismissibleContentDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT), R = e => {
-    (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT, {
+function v() {
+  let [e, t] = s.useState(!1), n = (0, I.useShouldShowMainLootboxEntrypoint)("lootbox_entrypoint"), l = !(0, C.useIsDismissibleContentDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT), {
+    analyticsLocations: v
+  } = (0, _.default)(h.default.LOOTBOXES_UPSELL), L = e => {
+    (0, C.markDismissibleContentAsDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT, {
       dismissAction: e
     })
   };
-  return n && l ? (0, a.jsx)(C.default, {
+  return n && l ? (0, a.jsx)(m.default, {
     children: (0, a.jsxs)("div", {
-      className: i()(A.wrapper, e ? A.wrapperHovered : null),
+      className: i()(O.wrapper, e ? O.wrapperHovered : null),
       onMouseLeave: () => t(!1),
       children: [(0, a.jsxs)(f.Clickable, {
-        className: A.closeButton,
-        onClick: () => R(T.ContentDismissActionType.DISMISS),
+        className: O.closeButton,
+        onClick: () => L(A.ContentDismissActionType.DISMISS),
         children: [(0, a.jsx)(o.CloseSmallIcon, {
-          className: A.closeIcon,
+          className: O.closeIcon,
           color: c.default.colors.WHITE
         }), (0, a.jsx)(u.Text, {
           variant: "text-xs/bold",
           color: "always-white",
-          children: g.default.Messages.PACKAGES_ENTRYPOINT_CLOSE
+          children: N.default.Messages.PACKAGES_ENTRYPOINT_CLOSE
         })]
       }), (0, a.jsxs)("div", {
-        className: A.contentWrapper,
+        className: O.contentWrapper,
         children: [(0, a.jsx)("div", {
-          className: A.videoWrapper,
+          className: O.videoWrapper,
           children: (0, a.jsx)("iframe", {
-            className: A.video,
-            src: N,
+            className: O.video,
+            src: R,
             sandbox: "allow-same-origin allow-scripts allow-popups"
           })
         }), (0, a.jsxs)(f.Clickable, {
-          className: A.entrypoint,
+          className: O.entrypoint,
           onClick: () => {
-            R(T.ContentDismissActionType.PRIMARY), E.default.open(p.UserSettingsSections.LOOTBOXES)
+            L(A.ContentDismissActionType.PRIMARY), E.default.open(g.UserSettingsSections.LOOTBOXES, null, {
+              analyticsLocations: v
+            })
           },
           onMouseEnter: () => t(!0),
           children: [(0, a.jsx)("div", {
-            className: A.backgroundWrapper,
-            children: (0, a.jsx)(m.default, {
-              className: A.backgroundImage,
+            className: O.backgroundWrapper,
+            children: (0, a.jsx)(p.default, {
+              className: O.backgroundImage,
               pageMultiplier: 5
             })
-          }), (0, a.jsx)(_.default, {
-            className: A.animation,
-            importData: S.importLootboxAnimationData,
-            nextScene: I.BoxAnimationScenes.IDLE,
-            sceneSegments: I.BoxAnimationSceneSegments
+          }), (0, a.jsx)(S.default, {
+            className: O.animation,
+            importData: I.importLootboxAnimationData,
+            nextScene: T.BoxAnimationScenes.IDLE,
+            sceneSegments: T.BoxAnimationSceneSegments
           }), (0, a.jsxs)("div", {
-            className: A.body,
+            className: O.body,
             children: [(0, a.jsx)(u.Text, {
               variant: "text-md/bold",
               color: "always-white",
-              children: g.default.Messages.PACKAGES_ENTRYPOINT_TITLE
+              children: N.default.Messages.PACKAGES_ENTRYPOINT_TITLE
             }), (0, a.jsx)(u.Text, {
               variant: "text-sm/medium",
               color: "always-white",
-              children: g.default.Messages.PACKAGES_ENTRYPOINT_DESCRIPTION
+              children: N.default.Messages.PACKAGES_ENTRYPOINT_DESCRIPTION
             })]
           }), (0, a.jsx)("div", {
-            className: A.buttonWrapper,
+            className: O.buttonWrapper,
             children: (0, a.jsx)("div", {
-              className: A.iconButton,
+              className: O.iconButton,
               children: (0, a.jsx)(r.ArrowLargeRightIcon, {
-                className: A.buttonIcon,
+                className: O.buttonIcon,
                 color: c.default.colors.WHITE
               })
             })
