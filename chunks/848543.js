@@ -89,13 +89,13 @@ function g(e) {
           var t, n;
           null == n || n(), null != b && b !== i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(p.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), y(!M), k()
         },
-        onMouseEnter: e => {
-          var t;
-          null === (t = R.onMouseEnter) || void 0 === t || t.call(R, e), F()
+        onMouseEnter: t => {
+          var n, a;
+          null === (n = R.onMouseEnter) || void 0 === n || n.call(R, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), F()
         },
-        onMouseLeave: e => {
-          var t;
-          null === (t = R.onMouseLeave) || void 0 === t || t.call(R, e), B()
+        onMouseLeave: t => {
+          var n, a;
+          null === (n = R.onMouseLeave) || void 0 === n || n.call(R, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), B()
         },
         onContextMenu: G,
         fullWidth: !0,

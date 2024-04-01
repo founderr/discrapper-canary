@@ -313,6 +313,14 @@ function eV(e) {
           analyticsLocations: l
         }), null === (n = e.onClick) || void 0 === n || n.call(e)
       },
+      onMouseEnter: () => {
+        var t;
+        return null == e ? void 0 : null === (t = e.onMouseEnter) || void 0 === t ? void 0 : t.call(e)
+      },
+      onMouseLeave: () => {
+        var t;
+        return null == e ? void 0 : null === (t = e.onMouseLeave) || void 0 === t ? void 0 : t.call(e)
+      },
       disabled: S,
       className: i()(ej.button, ej.buttonColor, {
         [ej.buttonActive]: E || null != f,
@@ -405,10 +413,12 @@ function eY(e) {
           }),
           ...T ? l : null,
           onMouseEnter: () => {
-            null == s || s(), v.onMouseEnter()
+            var t;
+            null == s || s(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), v.onMouseEnter()
           },
           onMouseLeave: () => {
-            v.onMouseLeave()
+            var t;
+            null === (t = e.onMouseLeave) || void 0 === t || t.call(e), v.onMouseLeave()
           },
           innerClassName: ej.buttonContents,
           wrapperClassName: ej.button,
