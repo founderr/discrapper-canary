@@ -22,57 +22,65 @@ function v(e) {
   let {
     onClose: n,
     transitionState: t
-  } = e, [v, b] = u.useState(!1), [g, S] = u.useState(!1), [E, h] = u.useState(null), k = u.useRef(null), [I, C] = u.useState(!1), [A, N] = u.useState(d.BoxAnimationScenes.ENTRY), T = u.useMemo(() => (0, d.getLootboxes)(), []), B = null != E ? T[E.openedItem] : null, D = u.useRef(null), w = u.useRef(null), j = u.useRef(null), y = u.useRef(null), L = (0, s.default)(w.current, 0), R = t === o.ModalTransitionState.EXITING || t === o.ModalTransitionState.EXITED, O = u.useCallback(() => {
-    let e = A === d.BoxAnimationScenes.IDLE ? D.current : j.current;
-    if (null == e) return 0;
-    let n = A === d.BoxAnimationScenes.IDLE ? .3 : .9,
-      t = e.duration * n,
-      r = e.duration - t;
-    return Math.min(1, Math.max(0, (A === d.BoxAnimationScenes.IDLE ? e.currentTime - t : e.currentTime) / r))
-  }, [A]), P = u.useCallback(async () => {
-    var e;
-    S(!0);
-    let n = await (0, i.openLootbox)(),
-      t = null != n ? T[n.openedItem] : null,
-      r = document.getElementsByClassName("lootbox-animation-item-image")[0],
-      u = null == r ? void 0 : r.children[0];
-    null == u || u.setAttribute("href", null !== (e = null == t ? void 0 : t.image) && void 0 !== e ? e : ""), h(n), k.current = n, N(d.BoxAnimationScenes.OPEN)
-  }, [T]), M = u.useCallback(e => {
-    var n, t, r;
-    switch (e) {
-      case d.BoxAnimationScenes.ENTRY:
-        null === (n = D.current) || void 0 === n || n.play(), N(d.BoxAnimationScenes.IDLE);
-        break;
-      case d.BoxAnimationScenes.OPEN:
-        null === (t = j.current) || void 0 === t || t.play(), L(0, {
-          getPercent: O
-        }), N(d.BoxAnimationScenes.OPENED);
-        break;
-      case d.BoxAnimationScenes.OPENED:
-        if (null != y.current && !v) {
-          let e = (null == E ? void 0 : E.openedItem) != null ? T[E.openedItem] : null;
-          y.current.src = null !== (r = null == e ? void 0 : e.sound) && void 0 !== r ? r : "", y.current.play()
-        }
-        b(!0), S(!1)
-    }
-  }, [L, O, v, null == E ? void 0 : E.openedItem, T]), F = u.useCallback((e, t) => {
-    e === d.BoxAnimationScenes.OPENED && t.currentTime >= t.totalTime - 1 && (C(!0), n())
-  }, [n]);
+  } = e, [v, b] = u.useState(!1), [g, S] = u.useState(!1), [E, h] = u.useState(null), k = u.useRef(null), [I, C] = u.useState(!1), [A, N] = u.useState(d.BoxAnimationScenes.ENTRY), T = u.useMemo(() => (0, d.getLootboxes)(), []), B = null != E ? T[E.openedItem] : null, D = u.useRef(null), w = u.useRef(null), L = u.useRef(null), R = u.useRef(null), j = u.useRef(null);
+  (0, o.useFocusLock)(j);
+  let y = (0, s.default)(w.current, 0),
+    O = t === o.ModalTransitionState.EXITING || t === o.ModalTransitionState.EXITED,
+    P = u.useCallback(() => {
+      let e = A === d.BoxAnimationScenes.IDLE ? D.current : L.current;
+      if (null == e) return 0;
+      let n = A === d.BoxAnimationScenes.IDLE ? .3 : .9,
+        t = e.duration * n,
+        r = e.duration - t;
+      return Math.min(1, Math.max(0, (A === d.BoxAnimationScenes.IDLE ? e.currentTime - t : e.currentTime) / r))
+    }, [A]),
+    M = u.useCallback(async () => {
+      var e;
+      S(!0);
+      let n = await (0, i.openLootbox)(),
+        t = null != n ? T[n.openedItem] : null,
+        r = document.getElementsByClassName("lootbox-animation-item-image")[0],
+        u = null == r ? void 0 : r.children[0];
+      null == u || u.setAttribute("href", null !== (e = null == t ? void 0 : t.image) && void 0 !== e ? e : ""), h(n), k.current = n, N(d.BoxAnimationScenes.OPEN)
+    }, [T]),
+    F = u.useCallback(e => {
+      var n, t, r;
+      switch (e) {
+        case d.BoxAnimationScenes.ENTRY:
+          null === (n = D.current) || void 0 === n || n.play(), N(d.BoxAnimationScenes.IDLE);
+          break;
+        case d.BoxAnimationScenes.OPEN:
+          null === (t = L.current) || void 0 === t || t.play(), y(0, {
+            getPercent: P
+          }), N(d.BoxAnimationScenes.OPENED);
+          break;
+        case d.BoxAnimationScenes.OPENED:
+          if (null != R.current && !v) {
+            let e = (null == E ? void 0 : E.openedItem) != null ? T[E.openedItem] : null;
+            R.current.src = null !== (r = null == e ? void 0 : e.sound) && void 0 !== r ? r : "", R.current.play()
+          }
+          b(!0), S(!1)
+      }
+    }, [y, P, v, null == E ? void 0 : E.openedItem, T]),
+    X = u.useCallback((e, t) => {
+      e === d.BoxAnimationScenes.OPENED && t.currentTime >= t.totalTime - 1 && (C(!0), n())
+    }, [n]);
   return u.useEffect(() => {
     let e = new l.Interval;
     return e.start(50, () => {
       if (null == D.current || null == w.current) return;
       let n = D.current.currentTime / D.current.duration;
-      w.current.paused && n >= .3 && (L(1, {
-        getPercent: O
+      w.current.paused && n >= .3 && (y(1, {
+        getPercent: P
       }), w.current.play(), e.stop())
     }), () => e.stop()
-  }, [O, L]), u.useEffect(() => () => {
+  }, [P, y]), u.useEffect(() => () => {
     null != k.current && (0, i.reportFinishedOpeningLootbox)(k.current.userLootboxData, k.current.openedItem)
   }, []), (0, r.jsx)("div", {
-    className: R ? m.backdropClosing : m.backdrop,
+    ref: j,
+    className: O ? m.backdropClosing : m.backdrop,
     children: (0, r.jsxs)("div", {
-      className: R ? m.wrapperClosing : m.wrapper,
+      className: O ? m.wrapperClosing : m.wrapper,
       children: [(0, r.jsx)(o.Heading, {
         className: v ? m.openedItemTextOpened : m.openedItemTextUnopened,
         variant: "heading-lg/normal",
@@ -82,14 +90,14 @@ function v(e) {
         })
       }), (0, r.jsx)(o.Clickable, {
         className: g || v ? m.animationClickableOpening : m.animationClickableWaiting,
-        onClick: g || v ? void 0 : P,
+        onClick: g || v ? void 0 : M,
         children: (0, r.jsx)(a.default, {
           className: m.animation,
           importData: c.importLootboxAnimationData,
           nextScene: A,
           sceneSegments: d.BoxAnimationSceneSegments,
-          onScenePlay: M,
-          onEnterFrame: F,
+          onScenePlay: F,
+          onEnterFrame: X,
           pause: I
         })
       }), (0, r.jsx)("audio", {
@@ -102,11 +110,11 @@ function v(e) {
         preload: "auto",
         loop: !0
       }), (0, r.jsx)("audio", {
-        ref: j,
+        ref: L,
         src: x,
         preload: "auto"
       }), (0, r.jsx)("audio", {
-        ref: y
+        ref: R
       })]
     })
   })
