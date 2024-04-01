@@ -74,10 +74,6 @@ class f extends(i = r.default.PersistedStore) {
   hasAnyUnexpiredOffer() {
     return Object.values(c.userTrialOffers).some(e => null == e.expires_at || Date.parse(e.expires_at) > Date.now())
   }
-  getReferrer(e) {
-    var t;
-    return null == e ? null : null === (t = c.userTrialOffers[e]) || void 0 === t ? void 0 : t.referrer
-  }
   getState() {
     return c
   }

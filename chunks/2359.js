@@ -16,7 +16,6 @@ t.default = e => {
   return i.useEffect(() => {
     (null != s || null != _) && ((0, u.shouldHitUserOfferEndPoints)("PremiumMarketing") ? (0, r.acknowledgeUserOffer)(s, _) : null != s && n.default.acknowledgeUserTrialOffer(s))
   }, [s, _]), (0, a.jsx)(d.default, {
-    isFullscreen: E,
-    entrypoint: t
+    isFullscreen: E
   })
 }
