@@ -163,7 +163,7 @@ let j = l.memo(function(e) {
           }), (0, a.jsx)(s.Text, {
             variant: "text-md/normal",
             color: h ? "text-muted" : "text-normal",
-            children: u.default.parse(j)
+            children: "string" != typeof j ? j : u.default.parse(j)
           }), (null === (t = i.message) || void 0 === t ? void 0 : t.content) != null ? (0, a.jsx)(b, {
             item: i
           }) : null, null != i.callout ? (0, a.jsx)(O, {

@@ -43,8 +43,9 @@ function f(e) {
       let y = e.guild_scheduled_event_id,
         j = null != y ? a.default.getGuildScheduledEvent(y) : null,
         D = null == j ? void 0 : j.name,
-        F = null === (T = l.default.getGuild(null == j ? void 0 : j.guild_id)) || void 0 === T ? void 0 : T.name;
-      return (0, r.isNullOrEmpty)(F) || (0, r.isNullOrEmpty)(D) ? null !== (C = e.body) && void 0 !== C ? C : "" : c.default.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
+        F = null === (T = l.default.getGuild(null == j ? void 0 : j.guild_id)) || void 0 === T ? void 0 : T.name,
+        P = (0, a.isGuildEventEnded)(null != j ? j : void 0);
+      return (0, r.isNullOrEmpty)(F) || (0, r.isNullOrEmpty)(D) || !P ? null !== (C = e.body) && void 0 !== C ? C : "" : c.default.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
         event_name: D,
         guild_name: F
       });
