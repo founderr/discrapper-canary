@@ -24,7 +24,7 @@ t.default = function(e) {
   } = e, A = l.useMemo(() => {
     var e;
     return null !== (e = s.formResponses) && void 0 !== e ? e : []
-  }, [s.formResponses]), M = t.hasFeature(T.GuildFeatures.CLAN) && s.applicationStatus === d.GuildJoinRequestApplicationStatuses.SUBMITTED;
+  }, [s.formResponses]), m = t.hasFeature(T.GuildFeatures.CLAN) && s.applicationStatus === d.GuildJoinRequestApplicationStatuses.SUBMITTED;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(r.default, {
       toolbar: (0, a.jsx)(r.default.Icon, {
@@ -50,7 +50,7 @@ t.default = function(e) {
         children: [(0, a.jsx)(f.default, {
           user: S,
           guildId: t.id
-        }), M && (0, a.jsx)(I.default, {
+        }), m && (0, a.jsx)(I.default, {
           joinRequest: s
         })]
       }), (0, a.jsx)("div", {

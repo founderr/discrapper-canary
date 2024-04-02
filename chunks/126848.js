@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return b
   }
 });
 var i = n("735250");
@@ -19,38 +19,38 @@ var s = n("803997"),
   p = n("170671"),
   f = n("556973");
 
-function S(e) {
+function b(e) {
   let t, {
       decoration: n,
       label: s,
-      isSelected: S
+      isSelected: b
     } = e,
-    b = (0, a.usePremiumTrialOffer)(),
+    S = (0, a.usePremiumTrialOffer)(),
     g = (0, o.usePremiumDiscountOffer)(),
     v = (0, d.useIsEligibleForBogoPromotion)(),
-    x = (0, r.useStateFromStores)([m.default], () => m.default.isLocalizedPromoEnabled) && null == b && null == n;
+    x = (0, r.useStateFromStores)([m.default], () => m.default.isLocalizedPromoEnabled) && null == S && null == n;
   return t = v ? (0, i.jsx)(c.default, {}) : null != g ? (0, i.jsx)(h.PremiumDiscountOfferTabBadge, {
-    isTabSelected: S,
+    isTabSelected: b,
     userDiscount: g,
     includesAmountOff: !1
-  }) : null != b ? (0, i.jsx)(h.PremiumTrialOfferTabBadge, {
-    isTabSelected: S,
-    trialOffer: b
+  }) : null != S ? (0, i.jsx)(h.PremiumTrialOfferTabBadge, {
+    isTabSelected: b,
+    trialOffer: S
   }) : null != n ? n : x ? (0, i.jsx)(u.LocalizedPricingBadgeIcon, {
     entryPoint: u.BadgeEntryPoint.SettingsMenu
   }) : (0, i.jsx)(p.default, {
-    isSelected: S
+    isSelected: b
   }), (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)("div", {
       className: l()(f.premiumLabel, {
-        [f.selected]: (S || x) && !v
+        [f.selected]: (b || x) && !v
       }),
       children: [s, t]
     }), (0, i.jsx)("div", {
       className: l()(f.background, {
-        [f.auPromo]: x && !S,
-        [f.auPromoSelected]: x && S,
-        [f.selectedBackground]: !x && !v && S
+        [f.auPromo]: x && !b,
+        [f.auPromoSelected]: x && b,
+        [f.selectedBackground]: !x && !v && b
       })
     })]
   })

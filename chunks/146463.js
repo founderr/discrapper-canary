@@ -19,8 +19,8 @@ var l = s("803997"),
   S = s("571728"),
   N = s("762660"),
   A = s("689938"),
-  M = s("123471");
-let m = () => null;
+  m = s("123471");
+let M = () => null;
 
 function h(e) {
   let {
@@ -37,22 +37,22 @@ function h(e) {
       s = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE, l = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY
   }
   return (0, a.jsxs)("div", {
-    className: M.emptyContainer,
+    className: m.emptyContainer,
     children: [(0, a.jsxs)("div", {
-      className: M.emptyIcon,
+      className: m.emptyIcon,
       children: [(0, a.jsx)(I.default, {
-        className: M.star
+        className: m.star
       }), (0, a.jsx)(c.default, {
-        className: M.checkmark
+        className: m.checkmark
       }), (0, a.jsx)(E.default, {
-        className: M.plus
+        className: m.plus
       })]
     }), (0, a.jsx)(r.Heading, {
       variant: "heading-xl/semibold",
       children: s
     }), (0, a.jsx)(r.Text, {
       color: "header-secondary",
-      className: M.emptyBody,
+      className: m.emptyBody,
       variant: "text-sm/normal",
       children: l
     })]
@@ -75,8 +75,8 @@ t.default = function(e) {
     } = e, u = s[n];
     return null == u ? (0, a.jsx)(N.MemberApplicationsListRowPlaceholder, {}, n) : (0, a.jsx)(N.MemberApplicationsListRow, {
       className: i()({
-        [M.selected]: C === u,
-        [M.siblingSelected]: C === s[n - 1]
+        [m.selected]: C === u,
+        [m.siblingSelected]: C === s[n - 1]
       }),
       guild: I,
       guildJoinRequest: u,
@@ -86,7 +86,7 @@ t.default = function(e) {
   };
   return p || 0 !== s.length ? (0, a.jsxs)(a.Fragment, {
     children: [0 !== g && t === R.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsx)(r.Text, {
-      className: M.title,
+      className: m.title,
       variant: "text-xs/semibold",
       color: "header-secondary",
       children: (function(e, t) {
@@ -128,7 +128,7 @@ t.default = function(e) {
             paddingBottom: 16,
             sectionHeight: 0,
             rowHeight: 64,
-            renderSection: m,
+            renderSection: M,
             renderRow: P,
             sections: x,
             onScroll: c,

@@ -254,8 +254,6 @@ t.default = e => {
                 user: eh,
                 setNote: !1
               })]
-            }), e1 && (0, a.jsx)(B.UserProfileRecentGamesThemedSection, {
-              userId: r
             }), eH && ek ? (0, a.jsx)(k.default.Inner, {
               children: (0, a.jsx)(Q.default, {
                 voiceGuild: ew.voiceGuild,
@@ -274,7 +272,9 @@ t.default = e => {
                   }
                 }
               })
-            }) : null, (eB || eG) && (0, a.jsxs)(k.default.Inner, {
+            }) : null, e1 && (0, a.jsx)(B.UserProfileRecentGamesThemedSection, {
+              userId: r
+            }), (eB || eG) && (0, a.jsxs)(k.default.Inner, {
               className: er.profilePanelConnections,
               children: [eB ? (0, a.jsx)(ee.default, {
                 className: er.mutualGuildsList,

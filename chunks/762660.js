@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   MemberApplicationsListRow: function() {
-    return M
+    return m
   },
   MemberApplicationsListRowPlaceholder: function() {
-    return m
+    return M
   }
 }), s("47120"), s("411104");
 var a = s("735250"),
@@ -49,13 +49,13 @@ function A(e) {
   })
 }
 
-function M(e) {
+function m(e) {
   let {
     applicationStatus: t,
     guild: i,
     guildJoinRequest: u,
-    className: M,
-    onClick: m
+    className: m,
+    onClick: M
   } = e, [h, p] = l.useState(null), {
     user: x,
     createdAt: C
@@ -84,8 +84,8 @@ function M(e) {
       await G(u, _.GuildJoinRequestApplicationStatuses.REJECTED)
     };
   return (0, a.jsxs)(o.Clickable, {
-    className: n()(N.container, M),
-    onClick: m,
+    className: n()(N.container, m),
+    onClick: M,
     children: [(0, a.jsx)(o.Avatar, {
       src: j,
       size: o.AvatarSizes.SIZE_40,
@@ -140,7 +140,7 @@ function M(e) {
   })
 }
 
-function m() {
+function M() {
   return (0, a.jsxs)("div", {
     className: N.placeholder,
     children: [(0, a.jsx)("div", {

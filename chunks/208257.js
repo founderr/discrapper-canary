@@ -18,8 +18,8 @@ var a = s("735250"),
   S = s("572940"),
   N = s("80487"),
   A = s("146463"),
-  M = s("981631"),
-  m = s("689938"),
+  m = s("981631"),
+  M = s("689938"),
   h = s("589247");
 
 function p(e) {
@@ -31,7 +31,7 @@ function p(e) {
     children: [(0, a.jsx)(n.Text, {
       variant: "text-lg/medium",
       color: "header-primary",
-      children: m.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION
+      children: M.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION
     }), (0, a.jsx)(n.Clickable, {
       onClick: () => {
         (0, n.openModalLazy)(async () => {
@@ -46,7 +46,7 @@ function p(e) {
         })
       },
       children: (0, a.jsx)(n.Tooltip, {
-        text: m.default.Messages.PREVIEW,
+        text: M.default.Messages.PREVIEW,
         children: e => (0, a.jsx)(o.default, {
           height: 24,
           width: 24,
@@ -105,7 +105,7 @@ function x(e) {
       if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && await v(g, x)
     }, [x, g, v]),
     J = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(s)),
-    V = null !== (t = null == J ? void 0 : J.hasFeature(M.GuildFeatures.CLAN)) && void 0 !== t && t;
+    V = null !== (t = null == J ? void 0 : J.hasFeature(m.GuildFeatures.CLAN)) && void 0 !== t && t;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(N.default, {
       currentTab: x,
@@ -135,7 +135,7 @@ function x(e) {
           className: h.description,
           variant: "text-xs/normal",
           color: "header-secondary",
-          children: m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_LIST_DESCRIPTION
+          children: M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_LIST_DESCRIPTION
         }), (0, a.jsx)(A.default, {
           applicationStatus: x,
           guildJoinRequests: G,

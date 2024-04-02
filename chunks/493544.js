@@ -20,8 +20,8 @@ var i, s, l, r, o, a, c = n("735250"),
   m = n("718017"),
   p = n("608863"),
   f = n("873546"),
-  S = n("215569"),
-  b = n("481060"),
+  b = n("215569"),
+  S = n("481060"),
   g = n("110924"),
   v = n("864293"),
   x = n("358085"),
@@ -42,7 +42,7 @@ class I extends(o = u.PureComponent) {
     } = this.props;
     return (0, c.jsx)("div", {
       className: j.customContainer,
-      children: (0, c.jsx)(b.ListAuto, {
+      children: (0, c.jsx)(S.ListAuto, {
         ...t,
         className: h()(j.customScroller, j.contentRegionScroller),
         ref: e
@@ -65,7 +65,7 @@ function P(e) {
     className: j.customColumn,
     children: (0, c.jsx)("div", {
       className: j.customContainer,
-      children: (0, c.jsx)(b.ScrollerAuto, {
+      children: (0, c.jsx)(S.ScrollerAuto, {
         className: h()(j.customScroller, j.contentRegionScroller),
         children: t
       })
@@ -102,7 +102,7 @@ function R(e) {
       [j.isMobileAndroid]: !n && !0 === (0, x.isAndroidWeb)()
     }),
     ref: s,
-    children: (0, c.jsx)(b.FocusRingScope, {
+    children: (0, c.jsx)(S.FocusRingScope, {
       containerRef: s,
       children: (0, c.jsx)("div", {
         className: j.tools,
@@ -171,7 +171,7 @@ t.default = function(e) {
           [j.flexFullWidth]: f.isMobile,
           [j.hidden]: f.isMobile && !1 === d
         }),
-        children: (0, c.jsx)(b.AdvancedScrollerThin, {
+        children: (0, c.jsx)(S.AdvancedScrollerThin, {
           className: j.sidebarRegionScroller,
           fade: !0,
           children: (0, c.jsxs)("nav", {
@@ -194,25 +194,25 @@ t.default = function(e) {
               onClick: x
             }), M]
           });
-        if ("custom" === o) return (0, c.jsxs)(S.TransitionGroup, {
+        if ("custom" === o) return (0, c.jsxs)(b.TransitionGroup, {
           component: "div",
           className: j.contentRegion,
           children: [t, n, !f.isMobile && M, _()]
         });
         let i = y[null != o ? o : "default"];
-        return (0, c.jsxs)(S.TransitionGroup, {
+        return (0, c.jsxs)(b.TransitionGroup, {
           component: "div",
           className: h()(j.contentRegion, {
             [j.hidden]: f.isMobile && !0 === d
           }),
           children: [(0, c.jsxs)("div", {
             className: j.contentTransitionWrap,
-            children: [t, (0, c.jsxs)(b.AdvancedScrollerAuto, {
+            children: [t, (0, c.jsxs)(S.AdvancedScrollerAuto, {
               className: h()(j.contentRegionScroller, T ? j.contentRegionHiddenSidebar : j.contentRegionShownSidebar),
               ref: O,
               children: [(0, c.jsx)(E.Provider, {
                 value: C.current,
-                children: (0, c.jsx)(b.TabBar.Panel, {
+                children: (0, c.jsx)(S.TabBar.Panel, {
                   id: s,
                   className: h()(j.contentColumn, j[i], {
                     [j.mobileContent]: f.isMobile
@@ -221,7 +221,7 @@ t.default = function(e) {
                   style: f.isMobile ? {
                     maxWidth: window.innerWidth
                   } : void 0,
-                  children: T ? n : (0, c.jsx)(b.FocusRingScope, {
+                  children: T ? n : (0, c.jsx)(S.FocusRingScope, {
                     containerRef: I,
                     children: n
                   })

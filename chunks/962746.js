@@ -373,12 +373,12 @@ function er(e) {
             hidePersonalInformation: ae,
             lastSection: ej,
             lineClamp: eb ? 3 : void 0
+          }), ao && (0, l.jsx)(N.UserProfileRecentGamesSection, {
+            userId: er.id
           }), !eM && (0, l.jsx)(k.default, {
             userId: er.id,
             guild: es,
             guildMember: eV
-          }), ao && (0, l.jsx)(N.UserProfileRecentGamesSection, {
-            userId: er.id
           }), !ej && (0, l.jsx)(K.default, {
             activityName: eE,
             activityCharacter: eP,
