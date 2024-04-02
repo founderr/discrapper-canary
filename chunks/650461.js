@@ -21,7 +21,8 @@ function E() {
     primetime: [{
       day: void 0,
       time: o()().startOf("day")
-    }]
+    }],
+    currentStep: c.ClanSetupSteps.GAMES
   }
 }
 class h extends(a = u.default.Store) {

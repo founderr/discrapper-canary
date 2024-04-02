@@ -99,26 +99,28 @@ t.default = e => {
   let {
     guildId: t,
     setPage: n,
-    currentStep: l,
-    setCurrentStep: v,
-    onClose: R
+    onClose: l
   } = e, {
-    selectedGames: O,
-    playstyle: L,
-    interests: P,
-    description: M,
-    tag: y,
-    primetime: D
+    selectedGames: v,
+    playstyle: R,
+    interests: O,
+    description: L,
+    tag: P,
+    primetime: M,
+    currentStep: y
   } = (0, r.useStateFromStoresObject)([f.default], () => {
     var e;
     return null !== (e = f.default.getState(t)) && void 0 !== e ? e : (0, f.newClanProgress)()
-  }), x = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [b, U] = s.useState(!0);
+  }), D = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [x, b] = s.useState(!0);
   s.useEffect(() => {
     u.default.getDetectableGames()
   }, []);
-  let j = s.useCallback(e => c.updateClanSettings(t, e), [t]),
+  let U = s.useCallback(e => c.updateClanSettings(t, {
+      currentStep: e
+    }), [t]),
+    j = s.useCallback(e => c.updateClanSettings(t, e), [t]),
     G = s.useCallback(() => {
-      U(!1), setTimeout(() => n(p.ClanSetupModalPages.SIGN), 199)
+      b(!1), setTimeout(() => n(p.ClanSetupModalPages.SIGN), 199)
     }, [n]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Button, {
@@ -126,14 +128,14 @@ t.default = e => {
       look: o.Button.Looks.OUTLINED,
       size: o.Button.Sizes.SMALL,
       color: o.Button.Colors.PRIMARY,
-      onClick: R,
+      onClick: l,
       children: T.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, a.jsxs)("div", {
       className: i()(g.mainContent, g.fadeIn, {
-        [g.fadeOut]: !b
+        [g.fadeOut]: !x
       }),
       children: [(0, a.jsx)(o.Sequencer, {
-        step: l,
+        step: y,
         steps: A,
         sideMargin: 24,
         verticalMargin: 24,
@@ -144,54 +146,54 @@ t.default = e => {
           className: g.scroller,
           fade: !0,
           children: (() => {
-            switch (l) {
+            switch (y) {
               case p.ClanSetupSteps.GAMES:
                 return (0, a.jsx)(_.default, {
                   handleUpdate: j,
-                  selectedGames: O
+                  selectedGames: v
                 });
               case p.ClanSetupSteps.PLAYSTYLE:
                 return (0, a.jsx)(S.default, {
                   handleUpdate: j,
-                  playstyle: L
+                  playstyle: R
                 });
               case p.ClanSetupSteps.INTERESTS:
                 return (0, a.jsx)(C.default, {
                   handleUpdate: j,
-                  interests: P
+                  interests: O
                 });
               case p.ClanSetupSteps.DESCRIPTION:
                 return (0, a.jsx)(h.default, {
                   handleUpdate: j,
-                  description: M
+                  description: L
                 });
               case p.ClanSetupSteps.PRIMETIME:
                 return (0, a.jsx)(m.default, {
                   handleUpdate: j,
-                  selectedTimes: D
+                  selectedTimes: M
                 });
               case p.ClanSetupSteps.CUSTOMIZE:
                 return (0, a.jsx)(I.default, {
                   handleUpdate: j,
-                  tag: y
+                  tag: P
                 })
             }
           })()
         })
       }), (0, a.jsx)(N, {
-        currentStep: l,
-        setCurrentStep: v,
-        selectedGames: O,
-        playstyle: L,
-        interests: P,
-        description: M,
-        primetime: D,
-        tag: y,
+        currentStep: y,
+        setCurrentStep: U,
+        selectedGames: v,
+        playstyle: R,
+        interests: O,
+        description: L,
+        primetime: M,
+        tag: P,
         onLastStep: G
       })]
     }), (0, a.jsx)("div", {
       className: i()(g.overviewSidebar, {
-        [g.fadeOut]: x && !b
+        [g.fadeOut]: D && !x
       }),
       children: (0, a.jsx)(E.default, {
         guildId: t
