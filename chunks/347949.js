@@ -13,7 +13,7 @@ var i = n("735250"),
   a = n.n(s),
   o = n("442837"),
   l = n("692547"),
-  u = n("882485"),
+  u = n("952216"),
   d = n("420166"),
   _ = n("481060"),
   c = n("812206"),
@@ -71,9 +71,9 @@ function N(e) {
           children: e => (0, i.jsx)("div", {
             className: m.sharedGameIcon,
             ...e,
-            children: (0, i.jsx)(u.CircleInformationIcon, {
-              height: 12,
-              width: 12,
+            children: (0, i.jsx)(u.DoubleCheckmarkLargeIcon, {
+              height: 14,
+              width: 14,
               color: l.default.colors.INTERACTIVE_MUTED
             })
           })
@@ -89,7 +89,7 @@ function N(e) {
           width: 12,
           color: l.default.colors.STATUS_POSITIVE
         }), (0, i.jsx)(_.Text, {
-          variant: "text-sm/normal",
+          variant: "text-xs/normal",
           color: "status-positive",
           children: A.default.Messages.NEW_TO_THIS_GAME
         })]
