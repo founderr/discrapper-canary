@@ -32,8 +32,8 @@ var i = n("735250"),
   y = n("479446"),
   M = n("374649"),
   b = n("104494"),
-  O = n("653798"),
-  R = n("314182"),
+  R = n("653798"),
+  O = n("314182"),
   L = n("981632"),
   j = n("314404"),
   G = n("42818"),
@@ -112,7 +112,7 @@ function W(e) {
       currency: Z.currency,
       metadata: es
     }),
-    [eO, eR] = (0, M.useSubscriptionInvoicePreview)({
+    [eR, eO] = (0, M.useSubscriptionInvoicePreview)({
       items: [{
         planId: U.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
         quantity: 1
@@ -131,7 +131,7 @@ function W(e) {
       preventFetch: !eI || eA
     }),
     eG = eI && (0, A.shouldShowCustomGiftExperience)(eE),
-    eD = null !== (a = null != ey ? ey : eb) && void 0 !== a ? a : eR,
+    eD = null !== (a = null != ey ? ey : eb) && void 0 !== a ? a : eO,
     eF = (0, u.useStateFromStores)([N.default], () => N.default.enabled),
     eU = Z.paymentSourceId,
     {
@@ -167,18 +167,17 @@ function W(e) {
       children: e
     })
   }
-  if (eI) Y = (0, i.jsx)(G.SubscriptionInvoiceGift, {
+  if (eI && null != eL) Y = (0, i.jsx)(G.SubscriptionInvoiceGift, {
     plan: ev,
     className: H.invoice,
     isPrepaidPaymentSource: ek,
     isCustomGift: eG,
-    invoicePreview: eL,
-    priceOptions: Z
+    invoicePreview: eL
   });
   else if (eu && null != eg) Y = (0, i.jsxs)("div", {
-    children: [(0, i.jsx)(O.PremiumInvoiceTableDivider, {
+    children: [(0, i.jsx)(R.PremiumInvoiceTableDivider, {
       negativeMarginTop: !0
-    }), (0, i.jsxs)(O.PremiumInvoiceTable, {
+    }), (0, i.jsxs)(R.PremiumInvoiceTable, {
       className: H.invoice,
       children: [(0, i.jsxs)("div", {
         className: H.trialPriceLine,
@@ -207,9 +206,9 @@ function W(e) {
       className: H.spinnerWrapper,
       children: (0, i.jsx)(c.Spinner, {})
     });
-    eu && eg.subscriptionPeriodEnd !== eM.subscriptionPeriodEnd && (W = eg.subscriptionPeriodEnd), Y = (0, i.jsxs)(O.PremiumInvoiceTable, {
+    eu && eg.subscriptionPeriodEnd !== eM.subscriptionPeriodEnd && (W = eg.subscriptionPeriodEnd), Y = (0, i.jsxs)(R.PremiumInvoiceTable, {
       className: H.invoice,
-      children: [(0, i.jsx)(O.PremiumInvoiceTableHeader, {
+      children: [(0, i.jsx)(R.PremiumInvoiceTableHeader, {
         children: k.default.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS
       }), (0, i.jsx)(G.PremiumSubscriptionChangePlanInvoiceRows, {
         invoice: eg,
@@ -270,7 +269,7 @@ function W(e) {
         children: ei
       })]
     }), eW && (0, i.jsxs)("div", {
-      children: [(0, i.jsx)(O.PremiumInvoiceTableDivider, {
+      children: [(0, i.jsx)(R.PremiumInvoiceTableDivider, {
         negativeMarginTop: !0,
         negativeMarginBottom: !0
       }), (0, i.jsx)(j.PremiumSwitchPlanSelectBody, {
@@ -280,9 +279,9 @@ function W(e) {
         selectedPlanId: K,
         subscriptionPeriodEnd: eY,
         showTotal: !1,
-        discountInvoiceItems: eh ? null == eO ? void 0 : eO.invoiceItems : void 0,
+        discountInvoiceItems: eh ? null == eR ? void 0 : eR.invoiceItems : void 0,
         handleClose: ec
-      }), (0, i.jsx)(O.PremiumInvoiceTableDivider, {})]
+      }), (0, i.jsx)(R.PremiumInvoiceTableDivider, {})]
     }), !eu && (0, i.jsx)(c.FormTitle, {
       tag: c.FormTitleTags.H5,
       children: eQ
@@ -332,7 +331,7 @@ function W(e) {
           onChange: J
         })]
       })]
-    }), (0, i.jsx)(R.default, {
+    }), (0, i.jsx)(O.default, {
       isActive: ee,
       ref: $,
       children: (0, i.jsx)(p.default, {
