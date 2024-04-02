@@ -32,6 +32,12 @@ a = "ContentInventoryStore", (s = "displayName") in(r = _) ? Object.defineProper
     } = e;
     u.set(t, n)
   },
+  CONTENT_INVENTORY_CLEAR_FEED: function(e) {
+    let {
+      feedId: t
+    } = e;
+    u.delete(t)
+  },
   CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: function() {
     d = !d
   }
