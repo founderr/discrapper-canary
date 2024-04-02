@@ -6,8 +6,8 @@ var l = n("803997"),
   a = n.n(l),
   i = n("442837"),
   r = n("481060"),
-  o = n("607070"),
-  u = n("703656"),
+  o = n("230711"),
+  u = n("607070"),
   d = n("976644"),
   c = n("617136"),
   E = n("272008"),
@@ -78,7 +78,7 @@ t.default = e => {
     quest: O,
     location: R,
     size: v
-  } = e, L = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, P = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, D = (null === (l = O.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, x = P && !D && R !== T.QuestContent.QUESTS_EMBED, y = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), U = C(L, P, D), j = A(L, P), b = h(O, R), G = P && !L, B = (0, f.useQuestFormattedDate)(null === (E = O.userStatus) || void 0 === E ? void 0 : E.completedAt, {
+  } = e, L = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, P = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, D = (null === (l = O.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, x = P && !D && R !== T.QuestContent.QUESTS_EMBED, y = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion), U = C(L, P, D), j = A(L, P), b = h(O, R), G = P && !L, B = (0, f.useQuestFormattedDate)(null === (E = O.userStatus) || void 0 === E ? void 0 : E.completedAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -123,7 +123,7 @@ t.default = e => {
         isQuestAccepted: P,
         containerSize: v,
         onClick: () => {
-          (0, u.transitionTo)(N.Routes.SETTINGS("inventory")), (0, c.trackQuestContentClicked)({
+          o.default.open(N.UserSettingsSections.INVENTORY), (0, c.trackQuestContentClicked)({
             questId: O.id,
             questContent: R,
             questContentCTA: c.QuestContentCTA.LEARN_MORE
