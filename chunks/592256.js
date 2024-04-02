@@ -20,8 +20,8 @@ var r = l("374470"),
   d = l("118139"),
   u = l("926836"),
   c = l("52824"),
-  m = l("626135"),
-  h = l("591759"),
+  h = l("626135"),
+  m = l("591759"),
   p = l("981631"),
   g = l("640092");
 
@@ -56,7 +56,7 @@ function b(e) {
         var r, i;
         let o = null !== (r = e.width) && void 0 !== r ? r : 0,
           d = null !== (i = e.height) && void 0 !== i ? i : 0,
-          m = (0, c.getBestEffortSrcUrl)({
+          h = (0, c.getBestEffortSrcUrl)({
             proxyURL: e.proxy_url,
             url: e.url
           });
@@ -68,7 +68,7 @@ function b(e) {
             renderLinkComponent: e => (0, n.jsx)(s.default, {
               ...e
             }),
-            src: m,
+            src: h,
             shouldHideMediaOptions: t,
             obscure: (0, a.isMediaObscured)({
               type: a.ObscuredMediaTypes.Attachment,
@@ -77,7 +77,7 @@ function b(e) {
           }),
           width: o,
           height: d,
-          src: m
+          src: h
         }
       }
       return null
@@ -90,11 +90,11 @@ function b(e) {
       var r, i;
       let o = null !== (r = e.width) && void 0 !== r ? r : 0,
         d = null !== (i = e.height) && void 0 !== i ? i : 0,
-        m = (0, c.getBestEffortSrcUrl)({
+        h = (0, c.getBestEffortSrcUrl)({
           proxyURL: e.proxy_url,
           url: e.url
         }),
-        p = h.default.toURLSafe(e.proxy_url);
+        p = m.default.toURLSafe(e.proxy_url);
       return null == p ? null : (p.searchParams.append("format", "jpeg"), {
         component: (0, n.jsx)(u.VideoModal, {
           width: o,
@@ -105,7 +105,7 @@ function b(e) {
           renderLinkComponent: e => (0, n.jsx)(s.default, {
             ...e
           }),
-          src: m,
+          src: h,
           fileSize: e.size,
           fileName: e.filename,
           shouldHideMediaOptions: t,
@@ -116,7 +116,7 @@ function b(e) {
         }),
         width: o,
         height: d,
-        src: m
+        src: h
       })
     }
     return null
@@ -127,7 +127,7 @@ function b(e) {
 function x(e, t) {
   let s = {};
   for (let [a, d] of e.entries()) s[d.src] = s => (function(e, t, s, a) {
-    e.preventDefault(), (0, r.isElement)(e.currentTarget) && e.currentTarget.blur(), null != a && (m.default.track(p.AnalyticEvents.OPEN_MODAL, {
+    e.preventDefault(), (0, r.isElement)(e.currentTarget) && e.currentTarget.blur(), null != a && (h.default.track(p.AnalyticEvents.OPEN_MODAL, {
       type: p.AnalyticsSections.MEDIA_VIEWER,
       ...a
     }, {

@@ -49,8 +49,8 @@ function b(e) {
   } = (0, d.default)(), [w, k] = l.useState(3), [H, B] = l.useState(!n), [G, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(t), [t]), {
     firstMessage: Y
   } = (0, R.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
-    disableReactionUpdates: Z,
-    disableReactionCreates: K,
+    disableReactionUpdates: K,
+    disableReactionCreates: Z,
     isLurking: X,
     isGuest: q,
     isPendingMember: Q
@@ -99,7 +99,7 @@ function b(e) {
         className: i()(P.reactButtons, {
           [P.loading]: ea
         }),
-        children: [!es && !K && null != ee && (0, a.jsx)("div", {
+        children: [!es && !Z && null != ee && (0, a.jsx)("div", {
           className: D.reactions,
           children: (0, a.jsx)(S.Reaction, {
             message: Y,
@@ -119,8 +119,8 @@ function b(e) {
         }), (0, a.jsx)(g.default, {
           message: Y,
           channel: W,
-          disableReactionCreates: !J || K,
-          disableReactionUpdates: Z,
+          disableReactionCreates: !J || Z,
+          disableReactionUpdates: K,
           isLurking: X,
           isGuest: q,
           isPendingMember: Q,
@@ -129,7 +129,7 @@ function b(e) {
           useChatFontScaling: !1,
           isForumToolbar: !0,
           forceHideReactionCreates: !0
-        }), !K && (0, a.jsx)(E.ButtonAddReaction, {
+        }), !Z && (0, a.jsx)(E.ButtonAddReaction, {
           type: m.ReactionTypes.NORMAL,
           message: Y,
           channel: W,

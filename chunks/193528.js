@@ -27,8 +27,8 @@ function h(e) {
     onClose: s,
     color: l,
     suggestedColors: h,
-    disabled: I,
-    label: N,
+    disabled: N,
+    label: I,
     colorPickerMiddle: p,
     colorPickerFooter: C,
     showEyeDropper: A
@@ -55,12 +55,12 @@ function h(e) {
       return (0, a.jsxs)("div", {
         ref: O,
         className: i()(g.colorSwatch, {
-          [g.disabled]: I
+          [g.disabled]: N
         }),
         children: [(0, a.jsx)(u.Clickable, {
           ...s,
-          tabIndex: I ? -1 : 0,
-          onClick: I ? m.NOOP : t,
+          tabIndex: N ? -1 : 0,
+          onClick: N ? m.NOOP : t,
           style: {
             backgroundColor: v,
             borderColor: D
@@ -76,7 +76,7 @@ function h(e) {
             height: 14,
             color: L
           })
-        }), N]
+        }), I]
       })
     }
   })

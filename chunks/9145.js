@@ -50,29 +50,29 @@ function P(e) {
     u.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
-  }, []), Z = l.useRef(null), [K, X] = l.useState({
+  }, []), K = l.useRef(null), [Z, X] = l.useState({
     width: 0,
     height: 0
   });
   l.useLayoutEffect(() => {
-    if (null == Z.current) return;
+    if (null == K.current) return;
     let e = new ResizeObserver(() => {
       var e, t, n, a;
       X({
-        width: null !== (n = null === (e = Z.current) || void 0 === e ? void 0 : e.clientWidth) && void 0 !== n ? n : 0,
-        height: null !== (a = null === (t = Z.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== a ? a : 0
+        width: null !== (n = null === (e = K.current) || void 0 === e ? void 0 : e.clientWidth) && void 0 !== n ? n : 0,
+        height: null !== (a = null === (t = K.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== a ? a : 0
       })
     });
-    return e.observe(Z.current), () => e.disconnect()
+    return e.observe(K.current), () => e.disconnect()
   }, []);
-  let q = K.width / Math.max(K.height, 1) < R.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
+  let q = Z.width / Math.max(Z.height, 1) < R.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
     Q = 0,
     J = 0,
     $ = (0, c.default)("activity_panel_iframe_fills_container");
   if (!$) {
-    let e = K.width,
-      t = K.height;
-    q ? ((t = K.width / R.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > K.height && (e = (t = K.height) * R.LANDSCAPE_ACTIVITY_ASPECT_RATIO), J = (K.height - t) / 2) : ((e = Math.min(K.height * R.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > K.width && (t = (e = K.width) / R.LANDSCAPE_ACTIVITY_ASPECT_RATIO), Q = (K.width - e) / 2)
+    let e = Z.width,
+      t = Z.height;
+    q ? ((t = Z.width / R.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > Z.height && (e = (t = Z.height) * R.LANDSCAPE_ACTIVITY_ASPECT_RATIO), J = (Z.height - t) / 2) : ((e = Math.min(Z.height * R.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > Z.width && (t = (e = Z.width) / R.LANDSCAPE_ACTIVITY_ASPECT_RATIO), Q = (Z.width - e) / 2)
   }
   let ee = (0, r.useStateFromStores)([p.default], () => p.default.getChannelId());
   if (null == U) return null;
@@ -106,7 +106,7 @@ function P(e) {
           paddingTop: J,
           paddingBottom: J
         },
-        ref: Z,
+        ref: K,
         children: (0, a.jsx)(N.default, {
           className: O.iframe,
           embedId: (0, x.default)(D, U.id)

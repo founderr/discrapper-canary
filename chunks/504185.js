@@ -48,8 +48,8 @@ var a = n("735250"),
   W = n("302270"),
   Y = n("308177"),
   z = n("700483"),
-  Z = n("686468"),
-  K = n("801405"),
+  K = n("686468"),
+  Z = n("801405"),
   X = n("903108"),
   q = n("981631"),
   Q = n("354459"),
@@ -78,7 +78,7 @@ function el(e) {
   } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([P.default], () => P.default.getMostRecentSelectedTextChannelId(d), [d]), f = L.default.getId(), h = !(0, o.useStateFromStores)([E.default], () => E.default.isFullscreenInContext(n)) && (!D.isPlatformEmbedded || D.isPlatformEmbedded && U.default.supportsFeature(q.NativeFeatures.POPOUT_WINDOWS)), m = null != u && u.type !== Q.ParticipantTypes.ACTIVITY && u.user.id !== f, p = l.useMemo(() => {
     var e;
     return null !== (e = null == i ? void 0 : i.window) && void 0 !== e ? e : window
-  }, [i]), g = (0, K.default)({
+  }, [i]), g = (0, Z.default)({
     channel: t,
     appContext: n,
     popoutOpen: s,
@@ -139,7 +139,7 @@ function ei(e) {
   (0, B.useUpdateIsOnStartStageScreenEffect)(n);
   let R = (0, o.useStateFromStores)([y.default], () => y.default.getToastsEnabled(n.id)),
     L = (0, X.default)(n) ? null != T ? "84px" : "124px" : null != T ? "0px" : "48px";
-  return t = M ? (0, a.jsx)(Z.default, {
+  return t = M ? (0, a.jsx)(K.default, {
     channel: n,
     onContinueClick: () => {
       (0, B.setIsOnStartStageScreen)(!1), !C && (0, F.connectToStage)(n)

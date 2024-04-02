@@ -29,8 +29,8 @@ function g(e) {
     onThemeColorsChange: i,
     preventDisabled: g,
     guildId: h,
-    className: I,
-    showPremiumIcon: N = !0,
+    className: N,
+    showPremiumIcon: I = !0,
     showResetThemeButton: p = !1,
     forcedDivider: C
   } = e, A = (0, c.default)(t.id, h), [O, x] = (0, S.default)(t, A, {
@@ -44,8 +44,8 @@ function g(e) {
   return (0, a.jsx)(f.default, {
     title: m.default.Messages.USER_SETTINGS_PROFILE_THEME,
     disabled: !R && !g,
-    className: l()(_.__invalid_profileThemesSection, I),
-    showPremiumIcon: N,
+    className: l()(_.__invalid_profileThemesSection, N),
+    showPremiumIcon: I,
     forcedDivider: C,
     children: (0, a.jsxs)("div", {
       className: _.sectionContainer,

@@ -31,10 +31,10 @@ function d(e) {
   if ("open.spotify.com" !== r || null == d) return null;
   let u = d.split("/"),
     c = null != u[1] ? u[1].toLowerCase() : null,
-    m = null != u[3] ? u[3].toLowerCase() : null,
-    h = u[4];
-  if (!["track", "playlist", "album", "artist", "user", "show", "episode"].includes(null != c ? c : "") || "user" === c && "playlist" !== m) return null;
-  "user" === c && "playlist" === m && null != h && (d = "/playlist/".concat(h));
+    h = null != u[3] ? u[3].toLowerCase() : null,
+    m = u[4];
+  if (!["track", "playlist", "album", "artist", "user", "show", "episode"].includes(null != c ? c : "") || "user" === c && "playlist" !== h) return null;
+  "user" === c && "playlist" === h && null != m && (d = "/playlist/".concat(m));
   let p = 352;
   return "track" === c ? p = 80 : ("episode" === c || "show" === c) && (p = 232), (0, n.jsx)("iframe", {
     className: i()(o.embedSpotify, t),

@@ -26,12 +26,12 @@ function f() {
     [_] = (0, r.useGetDismissibleContent)(m ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
     g = (0, a.useStateFromStores)([o.default], () => o.default.tempShowLootboxSettings),
     h = (0, d.useShouldShowMainLootboxEntrypoint)("user_settings"),
-    I = "useGenerateUserSettingsSections";
+    N = "useGenerateUserSettingsSections";
   return (0, l.useTriggerDebuggingAA)({
-    location: I + " auto on",
+    location: N + " auto on",
     autoTrackExposure: !0
   }), (0, l.useTriggerDebuggingAA)({
-    location: I + " auto off",
+    location: N + " auto off",
     autoTrackExposure: !1
   }), (0, T.default)({
     unseenGiftCount: e,

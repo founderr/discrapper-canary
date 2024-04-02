@@ -48,8 +48,8 @@ var a = n("735250"),
   W = n("169278"),
   Y = n("808268"),
   z = n("374129"),
-  Z = n("639351"),
-  K = n("632184"),
+  K = n("639351"),
+  Z = n("632184"),
   X = n("82965"),
   q = n("584729"),
   Q = n("849171"),
@@ -81,8 +81,8 @@ let eu = l.memo(e => {
     onVideoResize: W,
     inCall: Y = !1,
     selected: z = !1,
-    noBorder: Z = !1,
-    noVideoRender: K = !1,
+    noBorder: K = !1,
+    noVideoRender: Z = !1,
     focused: X = !1,
     blocked: et = !1,
     fit: eu = F.VideoStreamFit.CONTAIN,
@@ -192,7 +192,7 @@ let eu = l.memo(e => {
         selected: z,
         width: G,
         blocked: et,
-        noVideoRender: K || eI,
+        noVideoRender: Z || eI,
         pulseSpeakingIndicator: ef
       }), eV = er.default.Messages.CALL_TILE_A11Y_LABEL_USER.format({
         username: d.user.username
@@ -235,11 +235,11 @@ let eu = l.memo(e => {
         children: [(0, a.jsx)(J.default, {
           ref: eW,
           className: i()(eo.tile, {
-            [eo.noBorder]: Z,
+            [eo.noBorder]: K,
             [eo.noInteraction]: null == I,
             [eo.idle]: eh
           }),
-          noBorder: Z,
+          noBorder: K,
           style: H,
           participantUserId: eC,
           children: (0, a.jsxs)(h.ClickableContainer, {
@@ -268,7 +268,7 @@ let eu = l.memo(e => {
                   height: null !== (u = null == eW ? void 0 : null === (s = eW.current) || void 0 === s ? void 0 : s.clientHeight) && void 0 !== u ? u : 0
                 }
               })
-            }) : null, eB, Z ? null : (0, a.jsx)("div", {
+            }) : null, eB, K ? null : (0, a.jsx)("div", {
               className: eo.indicators,
               children: eG
             }), z ? (0, a.jsx)("div", {
@@ -299,7 +299,7 @@ let eu = l.memo(e => {
             }) : null, d.type === el.ParticipantTypes.USER && eS ? (0, a.jsx)(N.default, {
               userId: d.id,
               channelId: B.id
-            }) : null, Y && !Z ? (0, a.jsx)("div", {
+            }) : null, Y && !K ? (0, a.jsx)("div", {
               className: i()(eo.border, {
                 [eo.voiceChannelEffect]: !X && null != eR,
                 [eo.speaking]: eA && !X
@@ -321,7 +321,7 @@ function ed(e) {
     platform: n,
     className: l
   } = e;
-  if (t === el.ParticipantTypes.STREAM) return n === el.VoicePlatforms.XBOX ? (0, a.jsx)(Z.default, {
+  if (t === el.ParticipantTypes.STREAM) return n === el.VoicePlatforms.XBOX ? (0, a.jsx)(K.default, {
     className: l
   }) : (0, a.jsx)(W.default, {
     className: l
@@ -332,7 +332,7 @@ function ed(e) {
         className: l
       });
     case el.VoicePlatforms.XBOX:
-      return (0, a.jsx)(Z.default, {
+      return (0, a.jsx)(K.default, {
         className: l
       });
     case el.VoicePlatforms.PLAYSTATION:
@@ -369,7 +369,7 @@ let ec = l.memo(e => {
     hangStatusActivity: D,
     application: b,
     speaking: F
-  } = e, V = null, W = null, z = null, Z = null, q = (0, et.isVideoCompact)(C), Q = (0, et.isNamesCompact)(C), J = (0, r.useStateFromStores)([P.default], () => null != L && P.default.isLocalVideoAutoDisabled(L, (0, g.default)(R)), [L, R]), $ = (0, h.useRedesignIconContext)().enabled;
+  } = e, V = null, W = null, z = null, K = null, q = (0, et.isVideoCompact)(C), Q = (0, et.isNamesCompact)(C), J = (0, r.useStateFromStores)([P.default], () => null != L && P.default.isLocalVideoAutoDisabled(L, (0, g.default)(R)), [L, R]), $ = (0, h.useRedesignIconContext)().enabled;
   if (!M) {
     if (l && R === el.ParticipantTypes.STREAM && S && !N) V = (0, a.jsx)(h.Tooltip, {
       text: er.default.Messages.UNMUTE,
@@ -415,7 +415,7 @@ let ec = l.memo(e => {
             e.stopPropagation(), null == t || t(), O()
           },
           className: i()(eo.interactive, eo.toggleMute),
-          children: (0, a.jsx)(K.default, {})
+          children: (0, a.jsx)(Z.default, {})
         })
       }
     })
@@ -438,7 +438,7 @@ let ec = l.memo(e => {
         children: (0, a.jsx)(Y.default, {})
       })
     }
-  })), R === el.ParticipantTypes.USER && null != D ? Z = (0, a.jsx)(h.Tooltip, {
+  })), R === el.ParticipantTypes.USER && null != D ? K = (0, a.jsx)(h.Tooltip, {
     text: (0, I.getHangStatusText)(D),
     children: e => (0, a.jsx)("div", {
       ...e,
@@ -451,7 +451,7 @@ let ec = l.memo(e => {
         animate: F
       })
     })
-  }) : R === el.ParticipantTypes.USER && null != b && (Z = (0, a.jsx)(h.Tooltip, {
+  }) : R === el.ParticipantTypes.USER && null != b && (K = (0, a.jsx)(h.Tooltip, {
     text: er.default.Messages.UNFORMATTED_PLAYING_GAME.format({
       game: b.name
     }),
@@ -518,7 +518,7 @@ let ec = l.memo(e => {
         }), null != V && (0, a.jsx)("div", {
           className: eo.status,
           children: V
-        }), z, Z]
+        }), z, K]
       })]
     })]
   })

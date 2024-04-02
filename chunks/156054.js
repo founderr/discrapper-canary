@@ -40,13 +40,13 @@ function u(e) {
   let {
     width: u,
     height: c
-  } = r, m = u, h = c;
-  return (u > 500 || c > 400) && (u > c ? (m = 500, h = 500 * c / u) : (m = 400 * u / c, h = 400)), (0, n.jsx)("iframe", {
+  } = r, h = u, m = c;
+  return (u > 500 || c > 400) && (u > c ? (h = 500, m = 500 * c / u) : (h = 400 * u / c, m = 400)), (0, n.jsx)("iframe", {
     className: i()(a.embedAmazonMusic, t),
     src: o,
     style: {
-      width: m,
-      height: h
+      width: h,
+      height: m
     },
     frameBorder: 0,
     sandbox: "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"

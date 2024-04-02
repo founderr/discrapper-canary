@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i = n("735250"),
-  s = n("470079"),
-  l = n("789978"),
-  a = n("727075"),
-  r = n("790472"),
+  l = n("470079"),
+  r = n("789978"),
+  s = n("727075"),
+  a = n("790472"),
   o = n("349361"),
   c = n("777207"),
   d = n("330711"),
@@ -19,10 +19,10 @@ function f(e) {
     benefits: t,
     description: n,
     imgSrc: f,
-    title: h,
-    onClose: m,
+    title: m,
+    onClose: h,
     tag: x
-  } = e, v = s.useRef(null), [p, g] = s.useState(!0), j = null != f ? {
+  } = e, v = l.useRef(null), [p, g] = l.useState(!0), j = null != f ? {
     "--custom-background-url": "url(".concat(f.toString(), ")")
   } : void 0, C = () => {
     var e;
@@ -39,12 +39,12 @@ function f(e) {
         className: u.headerTop,
         children: [(0, i.jsx)("div", {
           children: x
-        }), (0, i.jsx)(l.FocusRing, {
+        }), (0, i.jsx)(r.FocusRing, {
           children: (0, i.jsx)("button", {
-            onClick: m,
+            onClick: h,
             className: u.closeBtn,
             type: "button",
-            children: (0, i.jsx)(a.CloseSmallIcon, {
+            children: (0, i.jsx)(s.CloseSmallIcon, {
               height: 24,
               width: 24,
               color: "var(--white)"
@@ -56,7 +56,7 @@ function f(e) {
         children: null != f ? (0, i.jsx)("img", {
           src: f.toString(),
           alt: ""
-        }) : (0, i.jsx)(r.TicketIcon, {
+        }) : (0, i.jsx)(a.TicketIcon, {
           color: "white",
           height: 96,
           width: 96
@@ -75,7 +75,7 @@ function f(e) {
           color: "header-primary",
           tag: "div",
           variant: "heading-xl/semibold",
-          children: h
+          children: m
         }), (null != n && "" !== n || null != t) && (0, i.jsxs)("div", {
           className: u.details,
           children: [(0, i.jsx)(c.Text, {

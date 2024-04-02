@@ -81,15 +81,15 @@ function c(e, t, s) {
       s = (i.getUint32(4 * (4 * e + 3)) - (t - E) - _) / 1e3;
     g.addSample(s), null == h && (h = s), s > h && (h = s)
   }
-  let I = null != T && null != f ? (f - T) / 1e3 : 0,
-    N = 1 - u / d,
-    p = 8 * c / I,
-    C = 8 * S / I,
+  let N = null != T && null != f ? (f - T) / 1e3 : 0,
+    I = 1 - u / d,
+    p = 8 * c / N,
+    C = 8 * S / N,
     A = g.getReport([50, 95, 99]);
   return {
     payloadBandwidth: p,
     networkBandwidth: C,
-    loss: N,
+    loss: I,
     iatP50: A.percentiles[50],
     iatP95: A.percentiles[95],
     iatP99: A.percentiles[99],

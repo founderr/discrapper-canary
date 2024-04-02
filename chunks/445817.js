@@ -28,13 +28,13 @@ function h(e) {
   let {
     previewEnabled: t,
     onEnablePreview: s
-  } = e, h = E.default.getCameraComponent(), [I, N] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), p = n.useRef(!1), C = n.useRef(I), A = (0, o.useAnalyticsContext)(), O = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
+  } = e, h = E.default.getCameraComponent(), [N, I] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), p = n.useRef(!1), C = n.useRef(N), A = (0, o.useAnalyticsContext)(), O = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
   return n.useEffect(() => () => {
     p.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(C.current))
   }, []), (0, a.jsx)(S.default, {
-    selectedBackgroundOption: I,
+    selectedBackgroundOption: N,
     onSelectBackgroundOption: e => {
-      p.current = !0, C.current = e, N(e), (0, c.applyBackgroundOptionLive)(e, {
+      p.current = !0, C.current = e, I(e), (0, c.applyBackgroundOptionLive)(e, {
         location: A.location
       }).catch(f.NOOP)
     },

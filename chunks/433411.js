@@ -27,8 +27,8 @@ function g(e) {
     className: l,
     sectionTitle: E,
     forcedDivider: g = !1,
-    withTutorial: I = !1,
-    isTryItOutFlow: N = !1
+    withTutorial: N = !1,
+    isTryItOutFlow: I = !1
   } = e, {
     analyticsLocations: p
   } = (0, o.default)(), C = null != s, {
@@ -38,9 +38,9 @@ function g(e) {
     pendingErrors: R
   } = (0, T.useGuildMemberAndUserPendingAvatarDecoration)(t, s), M = (0, c.default)("enable_avatar_decoration_uploads"), v = n.useCallback(() => (0, u.openAvatarDecorationModal)({
     analyticsLocations: p,
-    isTryItOutFlow: N,
+    isTryItOutFlow: I,
     guild: s
-  }), [p, N, s]), D = N || void 0 !== x ? null != x : (C ? O : A) != null, L = I ? S.default : r.Button;
+  }), [p, I, s]), D = I || void 0 !== x ? null != x : (C ? O : A) != null, L = N ? S.default : r.Button;
   return (0, a.jsxs)(f.default, {
     className: l,
     forcedDivider: g,
@@ -53,7 +53,7 @@ function g(e) {
         size: r.Button.Sizes.SMALL,
         onClick: v,
         className: i()({
-          [_.buttonHighlighted]: I
+          [_.buttonHighlighted]: N
         }),
         children: m.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), D && (0, a.jsx)(r.Button, {

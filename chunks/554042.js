@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("210887"),
   g = s("981631"),
   h = s("689938"),
-  I = s("861147");
-let N = [{
+  N = s("861147");
+let I = [{
   label: "Latin alphabet",
   value: "aBcDeFgHiJkLmNoPqRsTuVwXyZ"
 }, {
@@ -80,25 +80,25 @@ function C() {
       return (0, f.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     [M, v] = p("playground-overrideText", null),
-    [D, L] = p("playground-defaultText", N[0].value),
+    [D, L] = p("playground-defaultText", I[0].value),
     P = n.useCallback(e => {
-      let t = N.find(t => {
+      let t = I.find(t => {
         let {
           value: s
         } = t;
         return s === e
       });
-      "" === e || null == e ? (L(N[0].value), v(null)) : null != t ? L(t.value) : (L("custom"), v(e))
+      "" === e || null == e ? (L(I[0].value), v(null)) : null != t ? L(t.value) : (L("custom"), v(e))
     }, [v, L]);
   return (0, a.jsx)("div", {
-    className: I.fullscreen,
+    className: N.fullscreen,
     style: "" !== o ? {
       "--playground-font-family": o
     } : {},
     children: (0, a.jsxs)(d.FormSection, {
       tag: d.FormTitleTags.H1,
       children: [(0, a.jsxs)("div", {
-        className: I.toolbar,
+        className: N.toolbar,
         children: [(0, a.jsxs)("div", {
           children: [(0, a.jsxs)(d.Text, {
             tag: "div",
@@ -119,14 +119,14 @@ function C() {
           }) : null]
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.SingleSelect, {
-            className: I.select,
-            options: N,
+            className: N.select,
+            options: I,
             onChange: e => P(e),
             value: D
           })
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)("div", {
-            className: I.input,
+            className: N.input,
             children: (0, a.jsx)(d.TextInput, {
               placeholder: "Enter custom input...",
               value: null != M ? M : "",
@@ -135,7 +135,7 @@ function C() {
           })
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)("div", {
-            className: I.input,
+            className: N.input,
             children: (0, a.jsx)(d.TextInput, {
               placeholder: "Font family...",
               value: o,
@@ -145,7 +145,7 @@ function C() {
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.RadioGroup, {
             withTransparentBackground: !0,
-            className: I.theme,
+            className: N.theme,
             orientation: "horizontal",
             options: [{
               name: h.default.Messages.THEME_DARK,
@@ -166,16 +166,16 @@ function C() {
           keybind: "ESC"
         })]
       }), (0, a.jsxs)("div", {
-        className: I.textGrid,
+        className: N.textGrid,
         children: [(0, a.jsx)("div", {}), A.map(e => (0, a.jsx)("div", {
-          className: I.columnHeading,
+          className: N.columnHeading,
           children: (0, a.jsx)(d.Heading, {
             variant: "eyebrow",
             children: e
           })
         }, e)), [10, 12, 14, 15, 16, 18, 20, 24].map(e => (0, a.jsxs)(n.Fragment, {
           children: [(0, a.jsxs)("div", {
-            className: I.fontSize,
+            className: N.fontSize,
             children: [(0, a.jsxs)(d.Heading, {
               variant: "eyebrow",
               children: [e, "px"]
@@ -190,8 +190,8 @@ function C() {
             return (0, a.jsx)("div", {
               children: (0, a.jsxs)("div", {
                 title: "".concat(e, "px at ").concat(t),
-                className: i()(I.text, {
-                  [I.breakAnywhere]: !n.includes(" ")
+                className: i()(N.text, {
+                  [N.breakAnywhere]: !n.includes(" ")
                 }),
                 style: {
                   fontSize: e,

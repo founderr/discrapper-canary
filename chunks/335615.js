@@ -56,8 +56,8 @@ function z(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let Z = G.default.getEnableHardwareAcceleration(),
-  K = 44 + C.AVATAR_DECORATION_PADDING,
+let K = G.default.getEnableHardwareAcceleration(),
+  Z = 44 + C.AVATAR_DECORATION_PADDING,
   X = {
     origin: {
       x: 38,
@@ -105,7 +105,7 @@ class q extends l.Component {
         return (0, a.jsx)(C.default, {
           className: Y.member,
           onContextMenu: this.renderUserContextMenu,
-          shouldAnimateStatus: Z,
+          shouldAnimateStatus: K,
           user: s,
           currentUser: i,
           nick: l,
@@ -274,10 +274,10 @@ class ee extends l.Component {
     let {
       offsetHeight: t,
       scrollTop: n
-    } = e.getScrollerState(), a = Math.floor(t / K);
+    } = e.getScrollerState(), a = Math.floor(t / Z);
     return this.getContentFeedAdjustedDimensions({
       height: t,
-      rowHeight: K,
+      rowHeight: Z,
       rowsVisible: a,
       y: n
     })
@@ -446,10 +446,10 @@ class ee extends l.Component {
             let e = t[n + 1 + a];
             return (0, N.getContentRowHeight)(e)
           }
-          return K
+          return Z
         }
       }
-      return K
+      return Z
     }), z(this, "getContentFeedHeight", () => {
       let e = this.getContentFeedGroup();
       return null != e ? e.feedHeight + 40 : 0
@@ -514,7 +514,7 @@ function et(e) {
     if (null == n) return;
     let a = parseInt(t, 10),
       [l, s] = n.getSectionRowFromIndex(a),
-      i = 0 === l && 0 === s ? K : 0;
+      i = 0 === l && 0 === s ? Z : 0;
     n.scrollToIndex({
       section: l,
       row: s,

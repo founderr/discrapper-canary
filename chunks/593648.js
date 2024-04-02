@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("487419"),
   g = s("378364"),
   h = s("197344"),
-  I = s("734934"),
-  N = s("223683"),
+  N = s("734934"),
+  I = s("223683"),
   p = s("312400"),
   C = s("115345"),
   A = s("392888"),
@@ -107,7 +107,7 @@ function K(e) {
     })
   }, []);
   let d = n.useRef(),
-    c = (0, I.useFocusModeEnabled)(),
+    c = (0, N.useFocusModeEnabled)(),
     E = n.useCallback((e, t) => {
       t.stopPropagation(), t.preventDefault(), null != d.current && d.current.stop(), d.current = b.playSound(e)
     }, []),
@@ -474,7 +474,7 @@ function q() {
 }
 async function X(e) {
   e(!0);
-  let t = await (0, N.listSnapshots)();
+  let t = await (0, I.listSnapshots)();
   0 === t.length ? await (0, C.revertToOldSystem)() : c.default.show({
     title: k.default.Messages.CONFIRM,
     body: k.default.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({
@@ -487,7 +487,7 @@ async function X(e) {
 }
 
 function J(e) {
-  let t = (0, I.useFocusModeEnabled)();
+  let t = (0, N.useFocusModeEnabled)();
   return (0, a.jsx)(z, {
     ...e,
     focusMode: t

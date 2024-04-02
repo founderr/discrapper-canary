@@ -33,8 +33,8 @@ var r = n("803997"),
   v = n("981631"),
   O = n("176505"),
   A = n("302463"),
-  L = n("293810"),
-  M = n("689938"),
+  M = n("293810"),
+  L = n("689938"),
   b = n("935983");
 
 function P(e) {
@@ -60,7 +60,7 @@ function x(e) {
   } = e;
   return (0, i.jsx)(P, {
     onClick: t,
-    children: M.default.Messages.DISABLE
+    children: L.default.Messages.DISABLE
   })
 }
 
@@ -82,16 +82,16 @@ function G() {
   let G = function(e) {
       switch (e) {
         case v.GuildSettingsSections.INTEGRATIONS:
-          return M.default.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
+          return L.default.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
         case v.GuildSettingsSections.ROLE_SUBSCRIPTIONS:
-          return M.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
+          return L.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
         case v.GuildSettingsSections.ONBOARDING:
-          return M.default.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
+          return L.default.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
         default:
-          return M.default.Messages.VIEWING_AS_ROLES_BACK
+          return L.default.Messages.VIEWING_AS_ROLES_BACK
       }
     }(r),
-    D = r === v.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? M.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : M.default.Messages.VIEWING_AS_ROLES_SELECT,
+    D = r === v.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? L.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : L.default.Messages.VIEWING_AS_ROLES_SELECT,
     F = t === O.StaticChannelRoute.GUILD_ONBOARDING,
     w = t => {
       let {
@@ -117,15 +117,15 @@ function G() {
       className: b.noticeContents,
       children: (0, i.jsx)("div", {
         className: b.noticeText,
-        children: M.default.Messages.VIEW_AS_MEMBER_DESCRIPTION
+        children: L.default.Messages.VIEW_AS_MEMBER_DESCRIPTION
       })
     }) : (0, i.jsxs)("div", {
       className: b.noticeContents,
       children: [(0, i.jsx)("div", {
         className: b.noticeText,
-        children: l ? M.default.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({
+        children: l ? L.default.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({
           numRoles: Object.keys(n).length
-        }) : M.default.Messages.VIEWING_AS_ROLES.format({
+        }) : L.default.Messages.VIEWING_AS_ROLES.format({
           numRoles: Object.keys(n).length
         })
       }), (0, i.jsx)(o.Popout, {
@@ -149,7 +149,7 @@ function G() {
         }
       }), l && (0, i.jsx)(o.TooltipContainer, {
         className: b.previewWarning,
-        text: M.default.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
+        text: L.default.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
         children: (0, i.jsx)(C.default, {
           width: 16,
           height: 16,
@@ -157,8 +157,8 @@ function G() {
         })
       }), T && (0, i.jsx)(o.TooltipContainer, {
         className: b.previewWarning,
-        text: M.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
-          maxTiers: L.MAX_SUBSCRIPTION_TIERS,
+        text: L.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
+          maxTiers: M.MAX_SUBSCRIPTION_TIERS,
           maxProducts: A.MAX_PUBLISHED_GUILD_PRODUCT_LISTINGS
         }),
         children: (0, i.jsx)(C.default, {

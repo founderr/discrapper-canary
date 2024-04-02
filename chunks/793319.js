@@ -49,8 +49,8 @@ var a, l, s = n("735250"),
   W = n("390322"),
   Y = n("791592"),
   z = n("136995"),
-  Z = n("402113"),
-  K = n("197016"),
+  K = n("402113"),
+  Z = n("197016"),
   X = n("386000"),
   q = n("698877"),
   Q = n("25827"),
@@ -227,7 +227,7 @@ let eI = i.memo(function(e) {
       switch (A) {
         case "ACTIVITY":
           if (null == r || null == n) return;
-          return (0, s.jsx)(Z.default, {
+          return (0, s.jsx)(K.default, {
             ...i,
             applicationId: r.id,
             color: "red",
@@ -245,7 +245,7 @@ let eI = i.memo(function(e) {
             isSelfStream: !1
           });
         case "CALL":
-          return (0, s.jsx)(K.default, {
+          return (0, s.jsx)(Z.default, {
             ...i,
             color: "red",
             onClick: () => null == a ? void 0 : a(),

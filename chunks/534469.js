@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ThreadStarterChatMessage: function() {
-    return K
+    return Z
   },
   getElementFromMessage: function() {
-    return Z
+    return K
   }
 }), n("789020");
 var a = n("735250"),
@@ -52,11 +52,11 @@ var a = n("735250"),
   Y = n("689938"),
   z = n("264558");
 
-function Z(e, t, n) {
+function K(e, t, n) {
   return e.getElementById((0, N.getMessageDOMId)(t, n))
 }
 
-function K(e) {
+function Z(e) {
   var t;
   let {
     id: n,
@@ -126,14 +126,14 @@ function X(e) {
     handleFocus: F,
     handleBlur: H
   } = (0, y.useFocusInside)(R), {
-    popouts: Z,
-    selected: K,
+    popouts: K,
+    selected: Z,
     setPopout: X
   } = (0, j.default)(r.id, V.DEFAULT_POPOUTS), q = S.InlineEmbedMedia.useSetting(), Q = S.RenderEmbeds.useSetting(), J = (0, d.useStateFromStores)([C.default], () => C.default.getMessageByReference(N)), $ = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()), {
     handleMouseEnter: ee,
     handleMouseLeave: et,
     isHovered: en
-  } = (0, y.useHoveredMessage)(v, r.author.id, K), ea = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), el = K || ea && U, es = el || en, {
+  } = (0, y.useHoveredMessage)(v, r.author.id, Z), ea = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), el = Z || ea && U, es = el || en, {
     content: ei,
     hasSpoilerEmbeds: er
   } = (0, P.default)(r, {
@@ -172,11 +172,11 @@ function X(e) {
       onKeyDown: eo,
       onFocus: F,
       onBlur: H,
-      childrenRepliedMessage: (0, B.default)(e, X, Z, N, J),
+      childrenRepliedMessage: (0, B.default)(e, X, K, N, J),
       childrenHeader: (0, w.default)({
         messageProps: e,
         setPopout: X,
-        messagePopouts: Z,
+        messagePopouts: K,
         replyReference: N,
         author: eu,
         repliedMessage: J,
@@ -209,9 +209,9 @@ t.default = l.memo(function(e) {
     message: {
       id: N
     },
-    channel: Z,
+    channel: K,
     channel: {
-      id: K
+      id: Z
     },
     compact: X = !1,
     className: q,
@@ -233,8 +233,8 @@ t.default = l.memo(function(e) {
       selected: er,
       setPopout: eo
     } = (0, j.default)(g.id, V.DEFAULT_POPOUTS),
-    eu = (0, y.useContextMenuMessage)(g, Z, eo),
-    ed = (0, y.useClickMessage)(g, Z),
+    eu = (0, y.useContextMenuMessage)(g, K, eo),
+    ed = (0, y.useClickMessage)(g, K),
     {
       handleMouseEnter: ec,
       handleMouseLeave: ef,
@@ -247,12 +247,12 @@ t.default = l.memo(function(e) {
       handleFocus: eC,
       handleBlur: eg
     } = (0, y.useFocusInside)(et),
-    eS = (0, d.useStateFromStores)([T.default], () => T.default.isEditing(K, N), [K, N]),
+    eS = (0, d.useStateFromStores)([T.default], () => T.default.isEditing(Z, N), [Z, N]),
     e_ = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled),
     eT = er || eS || e_ && ep,
     eI = eT || em,
     eA = (0, d.useStateFromStores)([_.default], () => g.hasFlag(W.MessageFlags.HAS_THREAD) && _.default.getChannel(v.default.castMessageIdAsChannelId(g.id))),
-    ev = g.isFirstMessageInForumPost(Z),
+    ev = g.isFirstMessageInForumPost(K),
     eN = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = g.editedTimestamp) && void 0 !== n ? n : g.timestamp).valueOf()),
     {
       content: ex,
@@ -266,15 +266,15 @@ t.default = l.memo(function(e) {
       allowLinks: !0,
       previewLinkTarget: !0
     }),
-    eR = (0, O.default)(N, K, e_),
+    eR = (0, O.default)(N, Z, e_),
     eL = (0, M.default)(g),
-    ey = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(K)),
+    ey = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(Z)),
     eO = function(e) {
       let t = l.useRef(e);
       return l.useEffect(() => void(t.current = null != e ? e : t.current)), null != e ? e : t.current
     }(Q),
     ej = (0, m.useRoleIcon)({
-      guildId: Z.guild_id,
+      guildId: K.guild_id,
       roleId: eL.iconRoleId
     }),
     eP = (0, L.getMessageAriaLabelledBy)(g, J),
@@ -282,7 +282,7 @@ t.default = l.memo(function(e) {
     eb = (0, d.useStateFromStores)([h.default], () => h.default.getMessage(N), [N]),
     eU = (0, D.default)({
       message: g,
-      channel: Z
+      channel: K
     }),
     eF = null != eb;
   s = g.type === W.MessageTypes.CUSTOM_GIFT ? "" : !eS && eF ? (0, U.default)(e, ex) : (0, k.default)(e, ex, eS);

@@ -30,7 +30,7 @@ function I(e) {
     transitionState: E,
     onClose: R
   } = e, G = (0, a.default)(), N = "".concat(T.default.Messages.PRIVACY_SETTINGS, "—").concat(null != g ? g.toString() : "??"), f = g.hasFeature(c.GuildFeatures.HUB), C = (0, n.useUserIsRecentGamesExperimentEnabled)({
-    location: "28tk0rv_2",
+    location: "28tk0bf_5",
     autoTrackExposure: !0
   });
   return (0, s.jsxs)(d.ModalRoot, {

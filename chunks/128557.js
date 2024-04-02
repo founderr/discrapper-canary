@@ -102,7 +102,7 @@ function P(e) {
         }), null != e && (0, c.openModalLazy)(async () => {
           let {
             default: t
-          } = await Promise.all([n.e("99387"), n.e("7654"), n.e("92893")]).then(n.bind(n, "560114"));
+          } = await Promise.all([n.e("99387"), n.e("7654"), n.e("61939")]).then(n.bind(n, "560114"));
           return n => (0, a.jsx)(t, {
             ...n,
             guild: e,
@@ -207,16 +207,16 @@ function P(e) {
       } : {},
       opacities: a
     }
-  }(W), Z = (0, u.useStateFromStores)([m.default], () => m.default.getGuildApplicationIds(null == s ? void 0 : s.id)).length > 0;
+  }(W), K = (0, u.useStateFromStores)([m.default], () => m.default.getGuildApplicationIds(null == s ? void 0 : s.id)).length > 0;
   if (l.useEffect(() => {
       var e;
       (0, C.fetchGuildIntegrationsApplications)(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : R.EMPTY_STRING_SNOWFLAKE_ID)
     }, [s]), null == s) return null;
-  let K = [];
-  !f && (I && K.push((0, a.jsx)(o.default.div, {
+  let Z = [];
+  !f && (I && Z.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[K.length]
+      opacity: z[Z.length]
     } : {},
     children: (0, a.jsx)(j, {
       iconUrl: n("538548"),
@@ -224,10 +224,10 @@ function P(e) {
       completed: U,
       onClick: k
     })
-  }, "invite")), P && K.push((0, a.jsx)(o.default.div, {
+  }, "invite")), P && Z.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[K.length]
+      opacity: z[Z.length]
     } : {},
     children: (0, a.jsx)(j, {
       iconUrl: n("753033"),
@@ -235,10 +235,10 @@ function P(e) {
       completed: w,
       onClick: B
     })
-  }, "customize")), D && K.push((0, a.jsx)(o.default.div, {
+  }, "customize")), D && Z.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[K.length]
+      opacity: z[Z.length]
     } : {},
     children: (0, a.jsx)(j, {
       iconUrl: n("15717"),
@@ -246,10 +246,10 @@ function P(e) {
       completed: F,
       onClick: H
     })
-  }, "message")), (0, N.isWeb)() && K.push((0, a.jsx)(o.default.div, {
+  }, "message")), (0, N.isWeb)() && Z.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[K.length]
+      opacity: z[Z.length]
     } : {},
     children: (0, a.jsx)(j, {
       iconUrl: n("435921"),
@@ -257,15 +257,15 @@ function P(e) {
       completed: b,
       onClick: G
     })
-  }, "download")), K.push((0, a.jsx)(o.default.div, {
+  }, "download")), Z.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[K.length]
+      opacity: z[Z.length]
     } : {},
     children: (0, a.jsx)(j, {
       iconUrl: n("881454"),
       header: y.default.Messages.WELCOME_CTA_APPS_RECOMMENDATION_TITLE,
-      completed: Z,
+      completed: K,
       onClick: V
     })
   }, "addapp")));
@@ -290,14 +290,14 @@ function P(e) {
             color: "header-secondary",
             className: i()({
               [O.subtitle]: !0,
-              [O.noChildren]: 0 === K.length
+              [O.noChildren]: 0 === Z.length
             }),
             variant: "text-sm/normal",
-            children: [X, " ", K.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
+            children: [X, " ", Z.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
               guideURL: q
             }) : null]
           })]
-        }), K]
+        }), Z]
       })
     })
   })

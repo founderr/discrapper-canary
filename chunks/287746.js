@@ -44,8 +44,8 @@ var a = n("735250"),
   W = n("957730"),
   Y = n("400023"),
   z = n("64078"),
-  Z = n("351780"),
-  K = n("843693"),
+  K = n("351780"),
+  Z = n("843693"),
   X = n("217871"),
   q = n("139577"),
   Q = n("247944"),
@@ -287,7 +287,7 @@ class ej extends l.PureComponent {
       if (!this.props.poggermodeEnabled) return;
       let a = this.props.channel.id,
         l = en.default.getId(),
-        s = K.default.getUserCombo(l, a),
+        s = Z.default.getUserCombo(l, a),
         i = (null !== (n = null == s ? void 0 : s.value) && void 0 !== n ? n : 0) + 1;
       (0, z.updateCombo)({
         channelId: a,
@@ -669,7 +669,7 @@ t.default = l.memo(function(e) {
   } = (0, eT.default)(t), o = (0, Q.useShouldBlockDMInputForQuarantinedUser)(ec.default.getCurrentUser(), t), [c] = (0, k.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, U.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, u.useStateFromStores)([ec.default], () => ec.default.getCurrentUser()), m = (0, u.useStateFromStores)([ei.default], () => {
     var e, t, a;
     return null != h && null !== (a = null === (e = ei.default.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eN.EMPTY_STRING_SNOWFLAKE_ID, null == h ? void 0 : h.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== a && a
-  }), p = (0, u.useStateFromStores)([Z.default], () => Z.default.isEnabled()), E = (0, q.default)(t.id), C = (0, B.default)(t.id);
+  }), p = (0, u.useStateFromStores)([K.default], () => K.default.isEnabled()), E = (0, q.default)(t.id), C = (0, B.default)(t.id);
   return (0, a.jsx)(eP, {
     channel: t,
     isEditing: null != (0, u.useStateFromStores)([es.default], () => es.default.getEditingMessageId(t.id)),

@@ -17,8 +17,8 @@ var a, n, l, i, r = s("735250"),
   _ = s("692437"),
   g = s("783539"),
   h = s("585483"),
-  I = s("557177"),
-  N = s("57562"),
+  N = s("557177"),
+  I = s("57562"),
   p = s("955204"),
   C = s("64078"),
   A = s("351780"),
@@ -117,7 +117,7 @@ function k(e) {
     value: t,
     note: v.default.Messages.POGGERMODE_ENABLE_DESCRIPTION,
     onChange: e => {
-      !e && (0, N.unlockAchievement)(p.PoggermodeAchievementId.DISABLE_POGGERMODE), e && (!s || n) ? (0, S.openModal)(e => (0, r.jsx)(S.ConfirmModal, {
+      !e && (0, I.unlockAchievement)(p.PoggermodeAchievementId.DISABLE_POGGERMODE), e && (!s || n) ? (0, S.openModal)(e => (0, r.jsx)(S.ConfirmModal, {
         header: n ? v.default.Messages.POGGERMODE_WARNING_TITLE_REDUCED_MOTION : v.default.Messages.POGGERMODE_WARNING_TITLE,
         confirmText: v.default.Messages.ENABLE,
         cancelText: v.default.Messages.CANCEL,
@@ -270,7 +270,7 @@ function V(e) {
     },
     updateSettings: l
   } = e, i = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), o = !t || !s || i, d = (e, t) => {
-    null != e.shakeIntensity && e.shakeIntensity > a && (0, N.unlockAchievement)(p.PoggermodeAchievementId.MORE), l(e, t)
+    null != e.shakeIntensity && e.shakeIntensity > a && (0, I.unlockAchievement)(p.PoggermodeAchievementId.MORE), l(e, t)
   };
   return (0, r.jsxs)(S.FormSection, {
     tag: S.FormTitleTags.H1,
@@ -396,7 +396,7 @@ function z(e) {
   let c = e => {
       if (e.enabled && !1 === a.enabled) {
         var t;
-        s(!0), (0, I.playSound)("poggermode_enabled"), h.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
+        s(!0), (0, N.playSound)("poggermode_enabled"), h.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
           duration: 2e3,
           intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : a.shakeIntensity
         })
@@ -475,7 +475,7 @@ function q() {
     }, 500);
     return () => clearTimeout(t)
   }, [e]), o.useEffect(() => {
-    Math.random() > .99 && (0, N.unlockAchievement)(p.PoggermodeAchievementId.VISITOR_100)
+    Math.random() > .99 && (0, I.unlockAchievement)(p.PoggermodeAchievementId.VISITOR_100)
   }, []), (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)(m.default, {
       className: D.slideAnimator,

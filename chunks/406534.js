@@ -48,13 +48,13 @@ var a = n("735250"),
   W = n("921235"),
   Y = n("97352"),
   z = n("226027"),
-  Z = n("959517"),
-  K = n("981631"),
+  K = n("959517"),
+  Z = n("981631"),
   X = n("134612"),
   q = n("689938");
 
 function Q(e) {
-  return null != e && e.type === K.ChannelStreamTypes.MESSAGE && e.content.id === e.groupId
+  return null != e && e.type === Z.ChannelStreamTypes.MESSAGE && e.content.id === e.groupId
 }
 let J = l.memo(function(e) {
   let {
@@ -69,7 +69,7 @@ let J = l.memo(function(e) {
     message: new v.default({
       id: t.id,
       key: "pending-upload-".concat(t.id),
-      type: K.MessageTypes.DEFAULT,
+      type: Z.MessageTypes.DEFAULT,
       author: l,
       channel_id: n.id,
       customRenderedContent: {
@@ -129,7 +129,7 @@ function $(e) {
   let e_ = null,
     eT = [],
     eI = en.map((e, t) => {
-      if (e.type === K.ChannelStreamTypes.DIVIDER) {
+      if (e.type === Z.ChannelStreamTypes.DIVIDER) {
         var n, l;
         let s = null != e.unreadId;
         return null != ei ? null : e.isSummaryDivider ? (0, a.jsx)(A.default, {
@@ -140,20 +140,20 @@ function $(e) {
         }) : (0, a.jsx)(B.default, {
           isUnread: s,
           isBeforeGroup: null == e.content && Q(en[t + 1]),
-          id: s ? Z.NEW_MESSAGE_BAR_ID : void 0,
+          id: s ? K.NEW_MESSAGE_BAR_ID : void 0,
           children: e.content
         }, "divider-".concat(null !== (l = null !== (n = e.contentKey) && void 0 !== n ? n : e.unreadId) && void 0 !== l ? l : t))
       }
-      if (e.type === K.ChannelStreamTypes.FORUM_POST_ACTION_BAR) return (0, a.jsx)(f.default, {
+      if (e.type === Z.ChannelStreamTypes.FORUM_POST_ACTION_BAR) return (0, a.jsx)(f.default, {
         parentChannelId: L.parent_id,
         postId: L.id,
         isLastItem: t + 1 === en.length,
         isFirstMessage: !0
       }, "forum-post-action-bar-".concat(L.id));
-      if (e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED || e.type === K.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER) {
+      if (e.type === Z.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED || e.type === Z.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER) {
         let t;
-        return t = e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? q.default.Messages.BLOCKED_MESSAGE_COUNT : q.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, a.jsx)(H.default, {
-          unreadId: Z.NEW_MESSAGE_BAR_ID,
+        return t = e.type === Z.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? q.default.Messages.BLOCKED_MESSAGE_COUNT : q.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, a.jsx)(H.default, {
+          unreadId: K.NEW_MESSAGE_BAR_ID,
           messages: e,
           channel: L,
           compact: et,
@@ -161,11 +161,11 @@ function $(e) {
         }, e.key)
       }
       if (null != ei && ei > e.content.timestamp.getTime() * O.default.Millis.SECOND) return;
-      let s = N.default.can(K.Permissions.CREATE_INSTANT_INVITE, L);
+      let s = N.default.can(Z.Permissions.CREATE_INSTANT_INVITE, L);
       if ((0, D.default)(e.content, s)) return;
-      e.type === K.ChannelStreamTypes.MESSAGE && null == e_ && (e_ = e);
+      e.type === Z.ChannelStreamTypes.MESSAGE && null == e_ && (e_ = e);
       let i = e.groupId === (null == e_ ? void 0 : e_.groupId) ? e_.content.id : e.groupId,
-        r = e.type === K.ChannelStreamTypes.THREAD_STARTER_MESSAGE ? k.ThreadStarterChatMessage : k.default;
+        r = e.type === Z.ChannelStreamTypes.THREAD_STARTER_MESSAGE ? k.ThreadStarterChatMessage : k.default;
       return (0, a.jsx)(r, {
         compact: et,
         channel: L,
@@ -181,7 +181,7 @@ function $(e) {
   let eA = en[en.length - 1];
   if (null != eo && ea.forEach((e, t) => {
       let n = 0 === t && (0, b.isNewGroupItem)(L, eA, new v.default({
-        type: K.MessageTypes.DEFAULT,
+        type: Z.MessageTypes.DEFAULT,
         author: eo
       }));
       eT.push((0, a.jsx)(J, {
@@ -193,7 +193,7 @@ function $(e) {
     }), w.hasMoreBefore && null == ei) {
     w.length > 0 && eT.unshift((0, a.jsx)("div", {
       style: {
-        height: Z.PLACEHOLDER_BUFFER,
+        height: K.PLACEHOLDER_BUFFER,
         flex: "0 0 auto"
       }
     }, "buffer"));
@@ -221,7 +221,7 @@ function $(e) {
     if (x.default.isEstimated(L.id) ? (e = i ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = i ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), ef && (0, o.channelEligibleForSummaries)(L) && eE.includes(z.ChatOverlays.SUMMARIES)) {
       let n = x.default.ackMessageId(L.id),
         i = (0, I.getUnreadTopicsCount)(L.id, x.default.getOldestUnreadMessageId(L.id));
-      if ((0, d.trackWithMetadata)(K.AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED, {
+      if ((0, d.trackWithMetadata)(Z.AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED, {
           num_unread_summaries: i,
           num_unread_messages: $,
           last_ack_message_id: n,
@@ -317,7 +317,7 @@ function $(e) {
       var e;
       return e = L.id, void i.default.fetchMessages({
         channelId: e,
-        limit: K.MAX_MESSAGES_PER_CHANNEL,
+        limit: Z.MAX_MESSAGES_PER_CHANNEL,
         truncate: !0
       })
     }
@@ -338,7 +338,7 @@ function $(e) {
       }
     }) : (0, a.jsx)(G.JumpToPresentBar, {
       onClick: () => (function(e) {
-        i.default.jumpToPresent(e.id, K.MAX_MESSAGES_PER_CHANNEL);
+        i.default.jumpToPresent(e.id, Z.MAX_MESSAGES_PER_CHANNEL);
         let t = M.default.getChannelId();
         e.id === t && (0, p.transitionToChannel)(e.id)
       })(L)

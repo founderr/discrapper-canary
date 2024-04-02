@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("776980"),
   g = s("386346"),
   h = s("641826"),
-  I = s("875667"),
-  N = s("266983"),
+  N = s("875667"),
+  I = s("266983"),
   p = s("601469"),
   C = s("488269"),
   A = s("837060"),
@@ -132,7 +132,7 @@ function B() {
         },
         size: E.ButtonSizes.SMALL,
         color: E.ButtonColors.CUSTOM,
-        children: [(0, a.jsx)(N.default, {
+        children: [(0, a.jsx)(I.default, {
           className: b.buttonIcon,
           color: E.tokens.colors.WHITE
         }), j.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA]
@@ -188,13 +188,13 @@ function H() {
     }, [S, E]),
     [m] = n.useState(() => new c.Timeout),
     [_, p] = n.useState(f()),
-    C = Math.floor((0, I.default)(r, i, _));
+    C = Math.floor((0, N.default)(r, i, _));
   return n.useEffect(() => (m.start((0, h.randomBetween)(G, k), () => {
     _ < 1 && p(f())
   }), () => m.stop()), [r, i, S, m, _, E, f]), (0, a.jsxs)("div", {
     className: b.stats,
     children: [(0, a.jsx)(F, {
-      icon: N.default,
+      icon: I.default,
       text: j.default.Messages.PACKAGES_PACKAGES_OPENED,
       count: T,
       fetchState: t

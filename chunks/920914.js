@@ -17,8 +17,8 @@ var a = s("735250"),
   _ = s("410030"),
   g = s("726542"),
   h = s("122021"),
-  I = s("275759"),
-  N = s("231757"),
+  N = s("275759"),
+  I = s("231757"),
   p = s("323588"),
   C = s("605236"),
   A = s("553795"),
@@ -126,7 +126,7 @@ function Z(e) {
   }, [T]);
 
   function et() {
-    (0, N.default)({
+    (0, I.default)({
       platformType: T.type,
       location: "User Settings"
     })
@@ -159,7 +159,7 @@ function Z(e) {
       verified: t
     } = T, s = e ? 1 : 0;
     if (e && !t) {
-      B(s), (0, N.default)({
+      B(s), (0, I.default)({
         platformType: T.type,
         location: "User Settings"
       });
@@ -173,7 +173,7 @@ function Z(e) {
       verified: t
     } = T, s = e ? 1 : 0;
     if (e && !t) {
-      z(s), (0, N.default)({
+      z(s), (0, I.default)({
         platformType: T.type,
         location: "User Settings"
       });
@@ -255,7 +255,7 @@ function Z(e) {
       var t;
       let s = null !== (t = e.metadata) && void 0 !== t ? t : {},
         n = null,
-        l = (0, I.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], _);
+        l = (0, N.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], _);
       switch (e.type) {
         case w.PlatformTypes.REDDIT:
           n = (0, p.generateRedditMetadataItems)(s, W.metadataItem);
@@ -415,7 +415,7 @@ function q() {
 function X() {
   function e(e) {
     let t = g.default.get(e);
-    (0, N.default)({
+    (0, I.default)({
       platformType: t.type
     }), U.default.track(w.AnalyticEvents.ACCOUNT_LINK_STEP, {
       previous_step: "desktop connections",

@@ -20,8 +20,8 @@ function d(e) {
     naturalWidth: d,
     naturalHeight: u,
     play: c = !0,
-    className: m,
-    alt: h,
+    className: h,
+    alt: m,
     responsive: p
   } = e, g = r.useRef(null);
   return (r.useEffect(() => {
@@ -31,7 +31,7 @@ function d(e) {
     null != e && (c ? e.play() : e.pause())
   }, [c]), d <= a.MAX_VIDEO_WIDTH && u <= a.MAX_VIDEO_HEIGHT || d <= a.MAX_VIDEO_HEIGHT && u <= a.MAX_VIDEO_WIDTH) ? (0, n.jsx)(s.default, {
     ref: g,
-    className: m,
+    className: h,
     poster: t,
     src: l,
     width: i,
@@ -41,7 +41,7 @@ function d(e) {
     loop: !0,
     autoPlay: c,
     preload: "none",
-    "aria-label": h
+    "aria-label": m
   }) : (0, n.jsx)("img", {
     alt: "",
     src: t,
@@ -59,22 +59,22 @@ function u(e) {
     responsive: a,
     autoPlay: u,
     className: c,
-    playable: m = !0,
-    renderImageComponent: h,
+    playable: h = !0,
+    renderImageComponent: m,
     alt: p = o.default.Messages.GIF,
     ...g
   } = e;
   return (0, n.jsx)(i.GIFAccessoryContext.Consumer, {
-    children: e => h({
+    children: e => m({
       ...g,
       alt: p,
       src: l,
       containerClassName: c,
       autoPlay: u,
-      animated: m,
+      animated: h,
       responsive: a,
       renderAccessory: e,
-      tabIndex: m ? 0 : -1,
+      tabIndex: h ? 0 : -1,
       children(e) {
         let {
           src: l,
@@ -92,7 +92,7 @@ function u(e) {
           naturalWidth: r,
           naturalHeight: s,
           responsive: a,
-          play: m && o
+          play: h && o
         })
       }
     })

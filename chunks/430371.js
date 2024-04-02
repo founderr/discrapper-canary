@@ -51,17 +51,17 @@ function A(e) {
     [G, V] = l.useState(!0),
     [W, Y] = l.useState(!1),
     z = L.type === g.ParticipantTypes.ACTIVITY,
-    Z = !z && null != L.streamId,
-    K = Z && null != H && H.width > 0 && H.height > 0 ? H.width / H.height : T,
+    K = !z && null != L.streamId,
+    Z = K && null != H && H.width > 0 && H.height > 0 ? H.width / H.height : T,
     X = D <= 2 * I + 144,
     q = y && !X,
     Q = (0, o.default)(q),
     J = 0;
   (z || q) && (J += 72), z && !q && (J += 48), q && (J += .5 * I + 8);
   let $ = D - 2 * J,
-    ee = $ * K,
-    et = Math.floor(Math.min(P, ee) / K),
-    en = D > P / K + 72 + I + 8;
+    ee = $ * Z,
+    et = Math.floor(Math.min(P, ee) / Z),
+    en = D > P / Z + 72 + I + 8;
   t = q || z ? q ? -16 : -8 : 40 + Math.max(0, 72 - (D - et) / 2), l.useEffect(() => {
     let e = setTimeout(() => {
       V(!1)
@@ -135,7 +135,7 @@ function A(e) {
     children: [(0, a.jsxs)("div", {
       className: _.tileWrapper,
       style: {
-        opacity: Z && G ? 0 : 1
+        opacity: K && G ? 0 : 1
       },
       children: [(0, a.jsxs)(r.animated.div, {
         className: _.videoFrame,
@@ -150,7 +150,7 @@ function A(e) {
           children: (0, a.jsx)("div", {
             className: i()(S.videoSizer),
             style: {
-              aspectRatio: K
+              aspectRatio: Z
             },
             children: er((e, t, l) => {
               let {

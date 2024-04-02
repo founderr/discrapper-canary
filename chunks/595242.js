@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return N
   }
 });
 var a = s("735250"),
@@ -22,7 +22,7 @@ var a = s("735250"),
   g = s("981631"),
   h = s("998849");
 
-function I() {
+function N() {
   n.useEffect(() => {
     d.default.wait(() => {
       u.fetchSubscriptions(), u.fetchPaymentSources(), (0, c.fetchGuildBoostSlots)(), (0, S.fetchPremiumSubscriptionPlans)(null, null, g.RevenueSurfaces.DISCOVERY)

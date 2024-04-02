@@ -89,7 +89,7 @@ let F = l.memo(function(e) {
       newMessagesBar: W,
       jumpToPresentBar: Y,
       forumPostActionBar: z,
-      safetyWarningBanner: Z
+      safetyWarningBanner: K
     } = (0, P.default)({
       channel: m,
       messages: E,
@@ -141,7 +141,7 @@ let F = l.memo(function(e) {
       handler: a
     })
   }(H.ref);
-  let K = (0, u.useFocusJumpSection)(),
+  let Z = (0, u.useFocusJumpSection)(),
     {
       ref: X,
       ...q
@@ -154,7 +154,7 @@ let F = l.memo(function(e) {
     navigator: B,
     children: (0, a.jsxs)("div", {
       className: i()(U.messagesWrapper, s, "group-spacing-".concat(c)),
-      children: [null != Z ? Z : W, (0, a.jsxs)(u.PinToBottomScrollerAuto, {
+      children: [null != K ? K : W, (0, a.jsxs)(u.PinToBottomScrollerAuto, {
         ref: Q,
         customTheme: !0,
         className: i()(h, U.scroller),
@@ -163,7 +163,7 @@ let F = l.memo(function(e) {
         onScroll: H.handleScroll,
         onMouseDown: H.handleMouseDown,
         onMouseUp: H.handleMouseUp,
-        ...K,
+        ...Z,
         tabIndex: -1,
         role: "group",
         children: [z, (0, a.jsxs)("ol", {

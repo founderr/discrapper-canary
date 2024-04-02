@@ -17,8 +17,8 @@ var a = s("735250"),
   _ = s("230711"),
   g = s("497321"),
   h = s("634894"),
-  I = s("410030"),
-  N = s("100527"),
+  N = s("410030"),
+  I = s("100527"),
   p = s("906732"),
   C = s("211242"),
   A = s("15640"),
@@ -51,7 +51,7 @@ function Q() {
   let s = (0, d.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()),
     n = (0, j.useHasDiscountApplied)(),
     l = (0, j.useActiveDiscountInfo)(),
-    r = (0, I.default)();
+    r = (0, N.default)();
   if (null == s || null == s.planIdFromItems) return null;
   let u = null != s.trialId,
     E = n || u,
@@ -191,7 +191,7 @@ t.default = function() {
   let e = (0, C.useBlockedPaymentsConfig)(),
     {
       analyticsLocations: t
-    } = (0, p.default)(N.default.PREMIUM_SETTINGS),
+    } = (0, p.default)(I.default.PREMIUM_SETTINGS),
     s = (0, d.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()),
     l = (0, d.useStateFromStores)([M.default], () => M.default.hasFetchedSubscriptions()),
     i = (0, A.useSubscriptionPlansLoaded)(),
@@ -199,12 +199,12 @@ t.default = function() {
     c = (0, U.useLocalizedPromoQuery)(),
     f = null == c ? void 0 : c.countryCode,
     _ = (0, d.useStateFromStores)([R.default], () => R.default.enabled),
-    I = "PremiumManagementSettings";
+    N = "PremiumManagementSettings";
   (0, h.useTriggerDebuggingAA)({
-    location: I + " auto on",
+    location: N + " auto on",
     autoTrackExposure: !0
   }), (0, h.useTriggerDebuggingAA)({
-    location: I + " auto off",
+    location: N + " auto off",
     autoTrackExposure: !1
   }), (0, y.useMaybeFetchReferralsRemaining)("PremiumManagementSettings"), n.useEffect(() => {
     E.default.wait(async () => {

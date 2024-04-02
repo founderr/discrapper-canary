@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return K
+    return Z
   }
 }), n("47120");
 var a = n("735250"),
@@ -48,9 +48,9 @@ var a = n("735250"),
   W = n("689938"),
   Y = n("562798"),
   z = n("773065");
-let Z = E.ChatInputTypes.THREAD_CREATION;
+let K = E.ChatInputTypes.THREAD_CREATION;
 
-function K(e) {
+function Z(e) {
   let {
     parentChannelId: t,
     parentMessageId: n,
@@ -163,7 +163,7 @@ function X(e) {
       messageError: d,
       submit: l.useCallback(async (e, l, s) => {
         var r, o, d;
-        null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = I.default.getStickerPreview(t.id, Z.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = L.default.getUploads(t.id, x.DraftType.FirstThreadMessage));
+        null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = I.default.getStickerPreview(t.id, K.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = L.default.getUploads(t.id, x.DraftType.FirstThreadMessage));
         let h = null !== (o = a.name) && void 0 !== o ? o : "",
           m = null == n && 0 === h.length,
           p = "" === e && (null == l || 0 === l.length) && 0 === s.length;
@@ -178,7 +178,7 @@ function X(e) {
             content: e,
             stickers: l,
             uploads: s,
-            type: Z,
+            type: K,
             channel: t
           });
           if (!n) return {
@@ -194,7 +194,7 @@ function X(e) {
             shouldRefocus: !0
           }
         }
-        return (0, A.clearStickerPreview)(t.id, Z.drafts.type), {
+        return (0, A.clearStickerPreview)(t.id, K.drafts.type), {
           shouldClear: !0,
           shouldRefocus: !1
         }
@@ -375,7 +375,7 @@ function J(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(S.default, {
       channelId: t.id,
-      type: Z,
+      type: K,
       canAttachFiles: T
     }), (0, a.jsx)("div", {
       className: Y.starterMessageError,
@@ -383,7 +383,7 @@ function J(e) {
         error: I
       })
     }), (0, a.jsx)(g.default, {
-      type: Z,
+      type: K,
       channel: t,
       placeholder: W.default.Messages.FORM_THREAD_STARTER_MESSAGE_PLACEHOLDER,
       textValue: n.textValue,

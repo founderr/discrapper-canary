@@ -44,8 +44,8 @@ var a = n("735250"),
   W = n("138394"),
   Y = n("248345"),
   z = n("19836"),
-  Z = n("538564"),
-  K = n("319300"),
+  K = n("538564"),
+  Z = n("319300"),
   X = n("591600"),
   q = n("584045"),
   Q = n("58307"),
@@ -180,11 +180,11 @@ t.default = e => {
       connection: e,
       channelId: n.id
     }, e.key)),
-    eZ = eE.map(e => (0, a.jsx)($.default, {
+    eK = eE.map(e => (0, a.jsx)($.default, {
       channel: n,
       integration: e
     }, e.application.id)),
-    eK = l.useCallback(() => {
+    eZ = l.useCallback(() => {
       !eh.bot && !eF && null == ez && (0, c.fetchMutualFriends)(eh.id)
     }, [eF, ez, eh.id, eh.bot]),
     eX = l.useCallback(() => eu(!0), []),
@@ -235,7 +235,7 @@ t.default = e => {
                 user: eh,
                 nickname: eO,
                 pronouns: null == ep ? void 0 : ep.pronouns
-              }), (0, a.jsx)(Z.default, {
+              }), (0, a.jsx)(K.default, {
                 customStatusActivity: ev,
                 animate: eo
               }), (0, a.jsx)(W.default, {}), (0, a.jsx)(z.default, {
@@ -247,7 +247,7 @@ t.default = e => {
                 className: er.profileMutuals,
                 user: eh
               }), !eh.isSystemUser() && (0, a.jsxs)(a.Fragment, {
-                children: [(0, a.jsx)(K.default, {
+                children: [(0, a.jsx)(Z.default, {
                   userId: r
                 }), (0, a.jsx)(W.default, {})]
               }), (0, a.jsx)(X.default, {
@@ -303,8 +303,8 @@ t.default = e => {
                 isLoadingHeader: eU,
                 isLoadingContents: eF,
                 loadingContentsCount: eP,
-                onFocus: eK,
-                onHover: eK,
+                onFocus: eZ,
+                onHover: eZ,
                 itemType: ee.ListType.MutualFriendsList,
                 onExpand: () => {
                   (0, j.trackUserProfileAction)({
@@ -321,13 +321,13 @@ t.default = e => {
             }), eg && (0, a.jsx)(k.default.Inner, {
               className: i()(er.profilePanelConnections, er.appListThemedContainer),
               children: (0, a.jsxs)(ee.default, {
-                header: eZ.length > 0 ? ei.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
-                  count: eZ.length
+                header: eK.length > 0 ? ei.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
+                  count: eK.length
                 }) : ei.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
                 isLoadingContents: !eC,
                 isLoadingHeader: !1,
                 itemType: ee.ListType.AppsList,
-                children: [eZ, eS.length > 0 && (0, a.jsxs)("div", {
+                children: [eK, eS.length > 0 && (0, a.jsxs)("div", {
                   className: er.appButtonContainer,
                   children: [0 === eE.length && (0, a.jsx)(d.Text, {
                     variant: "text-xs/normal",

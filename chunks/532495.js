@@ -22,8 +22,8 @@ var n = s("512722"),
   _ = s("610966"),
   g = s("513901"),
   h = s("451392"),
-  I = s("906364"),
-  N = s("676934"),
+  N = s("906364"),
+  I = s("676934"),
   p = s("350327"),
   C = s("621853"),
   A = s("318661"),
@@ -76,7 +76,7 @@ function P() {
     $ = (null !== (s = null === (e = K.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? K.global_name : null !== (n = null == W ? void 0 : W.nick) && void 0 !== n ? n : [],
     ee = (null !== (P = null === (t = K.bio) || void 0 === t ? void 0 : t.length) && void 0 !== P ? P : 0) > 0 ? K.bio : null !== (j = null == W ? void 0 : W.bio) && void 0 !== j ? j : [],
     et = (0, O.useUserIsRecentGamesExperimentEnabled)({
-      location: "28tk0rv_1",
+      location: "28tk0bf_7",
       autoTrackExposure: !0
     });
   return (0, a.jsxs)("div", {
@@ -87,7 +87,7 @@ function P() {
       currentGlobalName: y.globalName,
       pendingGlobalName: G,
       onGlobalNameChange: r.setPendingGlobalNameName
-    }), (0, a.jsx)(I.default, {
+    }), (0, a.jsx)(N.default, {
       sectionTitle: D.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: K.pronouns,
       onPronounsChange: p.setPendingPronouns,
@@ -131,7 +131,7 @@ function P() {
       },
       pendingBio: H,
       currentBio: null !== (U = null == B ? void 0 : B.bio) && void 0 !== U ? U : ""
-    }, "bio"), et && (0, a.jsx)(N.default, {}), null != J && (0, a.jsx)(f.default, {
+    }, "bio"), et && (0, a.jsx)(I.default, {}), null != J && (0, a.jsx)(f.default, {
       legacyUsername: J
     }, "legacy_username")]
   })

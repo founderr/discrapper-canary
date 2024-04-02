@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("894939"),
   g = s("321499"),
   h = s("710808"),
-  I = s("625205"),
-  N = s("325808"),
+  N = s("625205"),
+  I = s("325808"),
   p = s("823087"),
   C = s("546997"),
   A = s("167540"),
@@ -87,7 +87,7 @@ function y() {
   }, [w, H]), (0, a.jsxs)(o.FormSection, {
     tag: o.FormTitleTags.H1,
     title: L.default.Messages.VOICE_SETTINGS,
-    children: [(0, a.jsx)(I.default, {}), (0, a.jsx)(R.default, {}), (0, a.jsx)(p.default, {}), (0, a.jsx)(o.FormText, {
+    children: [(0, a.jsx)(N.default, {}), (0, a.jsx)(R.default, {}), (0, a.jsx)(p.default, {}), (0, a.jsx)(o.FormText, {
       className: P.marginBottom20,
       type: o.FormText.Types.DESCRIPTION,
       children: L.default.Messages.FORM_HELP_VOICE_VIDEO_TROUBLESHOOTING_GUIDE.format({
@@ -95,7 +95,7 @@ function y() {
       })
     }), (0, a.jsx)(o.FormDivider, {
       className: i()(P.marginBottom20)
-    }), (0, a.jsx)(N.default, {}), e === D.InputModes.VOICE_ACTIVITY && (0, a.jsx)(x.default, {}), (0, a.jsx)(o.FormDivider, {
+    }), (0, a.jsx)(I.default, {}), e === D.InputModes.VOICE_ACTIVITY && (0, a.jsx)(x.default, {}), (0, a.jsx)(o.FormDivider, {
       className: P.marginBottom40
     }), (0, a.jsx)("div", {
       style: {

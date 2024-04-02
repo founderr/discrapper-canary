@@ -57,7 +57,7 @@ function k(e) {
   })).slice(0, y.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT), Y = (null !== (t = A.default.recentlyUsedEmojis) && void 0 !== t ? t : []).filter(e => !W.slice(0, y.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT - 1).some(t => t.name === e.name));
   Y.length > 0 && W.splice(W.length - 1, 1, Y[0]);
   let z = (0, v.sampleAnimationId)(B),
-    Z = e => {
+    K = e => {
       u.default.dispatch({
         type: "VOICE_CHANNEL_EFFECT_RECENT_EMOJI",
         emoji: e
@@ -70,7 +70,7 @@ function k(e) {
         isPremium: H
       })
     },
-    K = () => {
+    Z = () => {
       (0, x.openEffectsUpsellModal)({
         analytics: {
           type: j.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED,
@@ -129,8 +129,8 @@ function k(e) {
           title: D.default.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
           channel: n,
           closePopout: p,
-          onSelectEmoji: Z,
-          onSelectDisabledEmoji: K,
+          onSelectEmoji: K,
+          onSelectDisabledEmoji: Z,
           onFocus: S,
           onExpandedToggle: X,
           analyticsOverride: F,

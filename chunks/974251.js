@@ -45,8 +45,8 @@ var a = n("735250"),
 t.default = l.memo(function(e) {
   var t, s, Y;
   let z, {
-      className: Z,
-      channel: K,
+      className: K,
+      channel: Z,
       draftType: X,
       editorTextContent: q,
       setValue: Q,
@@ -58,7 +58,7 @@ t.default = l.memo(function(e) {
     en = (0, r.useStateFromStores)([g.default], () => g.default.getSettings().clipsEnabled),
     ea = (0, r.useStateFromStores)([g.default], () => g.default.getLastClipsSession()),
     el = (0, r.useStateFromStoresArray)([g.default], () => g.default.getNewClipIds()),
-    es = (0, r.useStateFromStores)([x.default], () => null == x.default.getCurrentSidebarChannelId(K.id)),
+    es = (0, r.useStateFromStores)([x.default], () => null == x.default.getCurrentSidebarChannelId(Z.id)),
     {
       showClipsHeaderEntrypoint: ei
     } = C.ClipsExperiment.useExperiment({
@@ -72,12 +72,12 @@ t.default = l.memo(function(e) {
     ed = (0, r.useStateFromStores)([g.default], () => g.default.hasClips()),
     [ec, ef] = l.useState(null),
     eh = (0, C.useEnableClips)() && (en || ed),
-    em = K.isPrivate(),
-    ep = (0, r.useStateFromStores)([L.default], () => em || L.default.can(H.Permissions.ATTACH_FILES, K) && L.default.can(H.Permissions.SEND_MESSAGES, K)),
+    em = Z.isPrivate(),
+    ep = (0, r.useStateFromStores)([L.default], () => em || L.default.can(H.Permissions.ATTACH_FILES, Z) && L.default.can(H.Permissions.SEND_MESSAGES, Z)),
     eE = (0, f.default)(ea);
   (null == eE ? void 0 : eE.newClipIds.length) !== (null == ea ? void 0 : ea.newClipIds.length) && (null !== (t = null == ea ? void 0 : ea.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && er && es && !eo && !ei && !eu && ef("recentClips");
   let eC = (e, t, n) => {
-      null != t && "ETOOLARGE" === t.code ? (0, U.showUploadFileSizeExceededError)(K, []) : (0, U.promptToUpload)(e, K, X, {
+      null != t && "ETOOLARGE" === t.code ? (0, U.showUploadFileSizeExceededError)(Z, []) : (0, U.promptToUpload)(e, Z, X, {
         requireConfirm: !0,
         showLargeMessageDialog: n
       }), D.ComponentDispatch.dispatchToLastSubscribed(H.ComponentActions.TEXTAREA_FOCUS)
@@ -91,7 +91,7 @@ t.default = l.memo(function(e) {
       } = await Promise.all([n.e("99387"), n.e("2668")]).then(n.bind(n, "542055"));
       return t => (0, a.jsx)(e, {
         ...t,
-        channelId: K.id
+        channelId: Z.id
       })
     }, {
       modalKey: B.CLIPS_GALLERY_MODAL_KEY
@@ -106,13 +106,13 @@ t.default = l.memo(function(e) {
       D.ComponentDispatch.unsubscribe(H.ComponentActions.UPLOAD_FILE, e)
     }
   });
-  let e_ = (0, v.useCanStartPublicThread)(K),
-    eT = (0, v.useCanStartPrivateThread)(K),
+  let e_ = (0, v.useCanStartPublicThread)(Z),
+    eT = (0, v.useCanStartPrivateThread)(Z),
     eI = !N.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
-    eA = (0, r.useStateFromStores)([L.default, A.default], () => (0, E.canUseApplicationCommands)(L.default, A.default, J, K)),
-    ev = (0, I.useCanPostPollsInChannel)(null != K ? K : void 0),
+    eA = (0, r.useStateFromStores)([L.default, A.default], () => (0, E.canUseApplicationCommands)(L.default, A.default, J, Z)),
+    ev = (0, I.useCanPostPollsInChannel)(null != Z ? Z : void 0),
     eN = (0, d.useRedesignIconContext)().enabled,
-    ex = (0, m.useActivitiesInTextButtonVisibility)(K.id, "ChannelAttachButton"),
+    ex = (0, m.useActivitiesInTextButtonVisibility)(Z.id, "ChannelAttachButton"),
     eM = null !== (s = null == el ? void 0 : el.length) && void 0 !== s ? s : 0,
     eR = (0, k.default)({
       canAttachFiles: ep,
@@ -120,7 +120,7 @@ t.default = l.memo(function(e) {
       useSlate: eI,
       hasClips: eh,
       canUseApplicationCommands: eA,
-      channel: K,
+      channel: Z,
       activities: et,
       newClipsCount: eM,
       canPostPolls: ev,
@@ -180,7 +180,7 @@ t.default = l.memo(function(e) {
             ...e,
             onClose: () => ef(null),
             options: eR,
-            channel: K,
+            channel: Z,
             onFileUpload: () => {
               var e;
               return null === (e = ee.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
@@ -197,7 +197,7 @@ t.default = l.memo(function(e) {
     children: e => (0, a.jsx)(d.Button, {
       look: d.Button.Looks.BLANK,
       size: d.Button.Sizes.NONE,
-      className: i()(W.attachButton, Z),
+      className: i()(W.attachButton, K),
       innerClassName: W.attachButtonInner,
       "aria-label": V.default.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
       onDoubleClick: ep ? () => {
@@ -216,14 +216,14 @@ t.default = l.memo(function(e) {
         onChange: e => {
           eC(e.currentTarget.files, e.currentTarget.err), e.currentTarget.value = ""
         },
-        multiple: K.rateLimitPerUser <= 0,
+        multiple: Z.rateLimitPerUser <= 0,
         tabIndex: -1,
         "aria-hidden": !0
       })
     }), (0, a.jsx)("div", {
       className: W.attachWrapper,
       children: (0, a.jsx)(F.default, {
-        channel: K,
+        channel: Z,
         isOmniMenuOpen: "attachMenu" === ec,
         openOmniMenu: () => ef("attachMenu"),
         children: eO

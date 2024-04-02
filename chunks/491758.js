@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("924557"),
   g = s("435064"),
   h = s("894694"),
-  I = s("779618"),
-  N = s("39604"),
+  N = s("779618"),
+  I = s("39604"),
   p = s("442334"),
   C = s("356659"),
   A = s("981631"),
@@ -51,7 +51,7 @@ function L() {
     }, {
       autoTrackExposure: !1
     }),
-    y = (0, I.default)(f.default),
+    y = (0, N.default)(f.default),
     {
       showClipsHeaderEntrypoint: B
     } = _.ClipsExperiment.useExperiment({
@@ -144,7 +144,7 @@ function L() {
         className: v.formItem,
         value: t,
         note: R.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
-        onChange: e => N.updateClipsEnabled({
+        onChange: e => I.updateClipsEnabled({
           clipsEnabled: e,
           trackAnalytics: !0
         }),
@@ -163,7 +163,7 @@ function L() {
           className: v.formItem,
           value: l,
           note: R.default.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
-          onChange: e => N.updateDecoupledClipsEnabled({
+          onChange: e => I.updateDecoupledClipsEnabled({
             enabled: e,
             trackAnalytics: !0
           }),
@@ -178,7 +178,7 @@ function L() {
           className: v.formItem,
           value: s,
           note: R.default.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
-          onChange: e => N.updateRemindersEnabled(e),
+          onChange: e => I.updateRemindersEnabled(e),
           children: R.default.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
         })
       })]
@@ -186,14 +186,14 @@ function L() {
       className: D.marginTop20,
       children: [(0, a.jsx)(p.SelectItem, {
         className: v.formItem,
-        select: N.updateClipsLength,
+        select: I.updateClipsLength,
         title: R.default.Messages.CLIPS_SETTINGS_LENGTH,
         note: R.default.Messages.CLIPS_SETTINGS_LENGTH_HELP,
         value: L,
         options: G
       }), (0, a.jsx)(p.SelectItem, {
         className: v.formItem,
-        select: e => N.updateClipsQuality({
+        select: e => I.updateClipsQuality({
           resolution: e,
           frameRate: P.frameRate
         }),
@@ -203,7 +203,7 @@ function L() {
         options: k
       }), (0, a.jsx)(p.SelectItem, {
         className: v.formItem,
-        select: e => N.updateClipsQuality({
+        select: e => I.updateClipsQuality({
           resolution: P.resolution,
           frameRate: e
         }),

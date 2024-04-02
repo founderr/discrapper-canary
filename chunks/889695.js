@@ -44,12 +44,12 @@ function N(e) {
   } = (0, d.useStateFromStoresObject)([p.default], () => ({
     impersonateType: p.default.getImpersonateType(t),
     viewingRoles: p.default.getViewingRoles(t)
-  })), O = N === C.ImpersonateType.SERVER_SHOP, A = (0, d.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [L, M] = (0, c.useMultiSelect)(null == v ? [] : g.default.keys(v)), b = r.useRef(l);
+  })), O = N === C.ImpersonateType.SERVER_SHOP, A = (0, d.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [M, L] = (0, c.useMultiSelect)(null == v ? [] : g.default.keys(v)), b = r.useRef(l);
   r.useEffect(() => {
     let e = {},
       t = b.current;
     if (null != t && null != N) {
-      for (let t of L) {
+      for (let t of M) {
         let n = u[t];
         null != n && (e[t] = n)
       }(0, h.updateImpersonating)(t.id, {
@@ -57,7 +57,7 @@ function N(e) {
         roles: e
       })
     }
-  }, [L, N, u]);
+  }, [M, N, u]);
   let P = null != l && null != n && null != A ? o()(u).filter(e => -1 !== A.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
     x = r.useMemo(() => null != l && null != n ? Object.values(u).filter(e => e.id !== l.id).filter(e => {
       var t;
@@ -75,8 +75,8 @@ function N(e) {
     className: m.container,
     children: (0, i.jsx)(c.Combobox, {
       placeholder: T.default.Messages.SEARCH_ROLES,
-      value: L,
-      onChange: M,
+      value: M,
+      onChange: L,
       autoFocus: !0,
       children: e => {
         let t = x.reduce((t, n) => (s()(e.toLowerCase(), n.name.toLowerCase()) && t.push((0, i.jsxs)(c.ComboboxItem, {

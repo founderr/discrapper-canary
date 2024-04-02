@@ -81,10 +81,10 @@ function V(e) {
   } = e, G = I.default.getVideoComponent(), V = (0, r.useStateFromStores)([_.default], () => _.default.getId()), W = (0, h.default)(), {
     stream: Y,
     user: z,
-    streamId: Z
-  } = t, K = (0, r.useStateFromStores)([T.default], () => T.default.getChannel(Y.channelId)), X = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), q = (0, r.useStateFromStores)([S.default], () => S.default.getAllActiveStreams().length > 0), Q = (0, r.useStateFromStores)([A.default], () => A.default.isFocused()), J = (null == X ? void 0 : X.ownerId) === V, $ = J && !Q && !x, ee = null != X ? (0, m.default)(X, z, z.id === V, $) : null, et = D < 195;
+    streamId: K
+  } = t, Z = (0, r.useStateFromStores)([T.default], () => T.default.getChannel(Y.channelId)), X = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), q = (0, r.useStateFromStores)([S.default], () => S.default.getAllActiveStreams().length > 0), Q = (0, r.useStateFromStores)([A.default], () => A.default.isFocused()), J = (null == X ? void 0 : X.ownerId) === V, $ = J && !Q && !x, ee = null != X ? (0, m.default)(X, z, z.id === V, $) : null, et = D < 195;
   if (l.useEffect(() => {
-      !q && (null == K ? void 0 : K.isGuildStageVoice()) && !J && ((0, d.watchStream)(Y), u.default.updateStageStreamSize(Y.channelId, !1))
+      !q && (null == Z ? void 0 : Z.isGuildStageVoice()) && !J && ((0, d.watchStream)(Y), u.default.updateStageStreamSize(Y.channelId, !1))
     }, []), l.useEffect(() => {
       B.info("Stream Tile State - activeStream: ".concat(null != X, " | selected: ").concat(n, " | Video: ").concat(null != G, " | MediaEngine: ").concat(I.default.supports(w.Features.VIDEO)))
     }, [G, X, n]), W) return (0, a.jsx)(P.default, {
@@ -109,10 +109,10 @@ function V(e) {
     width: D
   });
   else if (null != X && !n && null != G && I.default.supports(w.Features.VIDEO)) return (0, a.jsxs)(a.Fragment, {
-    children: [null != K ? (0, a.jsx)(C.default, {
+    children: [null != Z ? (0, a.jsx)(C.default, {
       focused: b,
-      channelId: K.id,
-      guildId: K.guild_id,
+      channelId: Z.id,
+      guildId: Z.guild_id,
       streamerId: z.id,
       hasScreenMessage: null != ee,
       stream: Y
@@ -120,13 +120,13 @@ function V(e) {
       onResize: s,
       wrapperClassName: H.videoWrapper,
       className: H.content,
-      streamId: Z,
+      streamId: K,
       videoComponent: G,
       fit: E,
       paused: f || $,
       videoSpinnerContext: J ? c.VideoSpinnerContext.SELF_STREAM : c.VideoSpinnerContext.REMOTE_STREAM,
       userId: z.id
-    }, Z), null != ee ? (0, a.jsx)(g.default, {
+    }, K), null != ee ? (0, a.jsx)(g.default, {
       size: (0, R.getSizeForWidth)(D),
       ...ee
     }) : null, (0, a.jsx)(L.default, {

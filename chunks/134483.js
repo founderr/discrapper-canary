@@ -81,10 +81,10 @@ t.default = function(e) {
   if (null == b) return null;
   let Y = (null === (t = b.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
     z = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-    Z = null != b.userStatus && (0, T.isDismissed)(b.userStatus, _.QuestContent.QUEST_LIVE_STREAM),
-    K = null != b.userStatus && (0, T.isDismissed)(b.userStatus, _.QuestContent.QUEST_BAR),
-    X = (0, T.isTargetedForContent)(b, _.QuestContent.QUEST_BAR) && !K;
-  return Z || W || X || !F ? null : (0, a.jsx)(I.QuestContentImpressionTracker, {
+    K = null != b.userStatus && (0, T.isDismissed)(b.userStatus, _.QuestContent.QUEST_LIVE_STREAM),
+    Z = null != b.userStatus && (0, T.isDismissed)(b.userStatus, _.QuestContent.QUEST_BAR),
+    X = (0, T.isTargetedForContent)(b, _.QuestContent.QUEST_BAR) && !Z;
+  return K || W || X || !F ? null : (0, a.jsx)(I.QuestContentImpressionTracker, {
     questId: b.id,
     overrideVisibility: !j,
     questContent: _.QuestContent.QUEST_LIVE_STREAM,

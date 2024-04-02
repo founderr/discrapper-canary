@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("883904"),
   g = s("68985"),
   h = s("211644"),
-  I = s("330676"),
-  N = s("794711");
+  N = s("330676"),
+  I = s("794711");
 
 function p(e) {
   let {
@@ -38,7 +38,7 @@ function p(e) {
       },
       children: (0, a.jsx)(u.FormText, {
         size: f.default.Sizes.SIZE_16,
-        className: N.marginTop4,
+        className: I.marginTop4,
         children: "".concat(s.toLowerCase(), " (").concat(o.DismissibleContent[s], ")")
       })
     })
@@ -99,10 +99,10 @@ function A() {
     children: [(0, a.jsxs)(u.FormSection, {
       title: "Dismissible Content Fatigue",
       tag: u.FormTitleTags.H1,
-      className: N.marginBottom60,
+      className: I.marginBottom60,
       children: [(0, a.jsx)(u.FormItem, {
         children: (0, a.jsxs)(u.FormText, {
-          className: N.marginBottom4,
+          className: I.marginBottom4,
           children: ["Daily Cap Reached: ", s ? "Yes" : "No"]
         })
       }), (0, a.jsx)(u.FormSwitch, {
@@ -114,7 +114,7 @@ function A() {
           onClick: () => (0, _.resetDismissibleContentFrameworkStore)(),
           children: "Reset DismissibleContentFrameworkStore"
         }), (0, a.jsx)(u.FormText, {
-          className: N.marginTop4,
+          className: I.marginTop4,
           children: "This will reset the daily cap and content seen during session"
         })]
       })]
@@ -122,13 +122,13 @@ function A() {
       title: "Dismissible Contents",
       tag: u.FormTitleTags.H1,
       children: [(0, a.jsx)(T.default, {
-        className: N.marginBottom20,
+        className: I.marginBottom20,
         size: T.default.Sizes.LARGE,
         query: f,
         onChange: m,
         onClear: () => m("")
       }), (0, a.jsxs)(u.FormItem, {
-        className: I.buttonsContainer,
+        className: N.buttonsContainer,
         children: [(0, a.jsx)(u.Button, {
           onClick: c.clearDismissedContents,
           children: "Clear All Dismissed Contents"
@@ -137,9 +137,9 @@ function A() {
           children: "Check All Dismissed Contents"
         })]
       }), t.length > 0 ? (0, a.jsxs)("div", {
-        className: N.marginBottom20,
+        className: I.marginBottom20,
         children: [(0, a.jsx)("div", {
-          className: N.marginBottom20,
+          className: I.marginBottom20,
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recently Shown"
           })
@@ -150,7 +150,7 @@ function A() {
         })]
       }) : null, M.length > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("div", {
-          className: N.marginBottom20,
+          className: I.marginBottom20,
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recent Overrides"
           })
@@ -160,7 +160,7 @@ function A() {
           handleChange: x
         })]
       }) : null, (0, a.jsx)(E.default, {
-        className: i()(N.marginBottom20, N.marginTop20),
+        className: i()(I.marginBottom20, I.marginTop20),
         children: (0, a.jsx)(u.FormTitle, {
           children: "Available Dismissible Contents"
         })

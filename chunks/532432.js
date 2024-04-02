@@ -31,20 +31,20 @@ function T(e) {
     className: _,
     disabled: g = !1,
     isTryItOutFlow: h = !1,
-    forcedDivider: I,
-    withHighlight: N = !1
-  } = e, p = N ? r.default : i.Button;
+    forcedDivider: N,
+    withHighlight: I = !1
+  } = e, p = I ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
     className: _,
     title: T,
     errors: s,
     disabled: g,
-    forcedDivider: I,
+    forcedDivider: N,
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,
       children: [(0, a.jsx)(p, {
         className: l()({
-          [S.buttonHighlighted]: N
+          [S.buttonHighlighted]: I
         }),
         size: i.Button.Sizes.SMALL,
         onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, m, h, h ? E : void 0),

@@ -44,8 +44,8 @@ var a = n("735250"),
   W = n("404975"),
   Y = n("626135"),
   z = n("572004"),
-  Z = n("970257"),
-  K = n("418476"),
+  K = n("970257"),
+  Z = n("418476"),
   X = n("151007"),
   q = n("432376"),
   Q = n("996861"),
@@ -181,9 +181,9 @@ function er(e) {
       canManageMessages: R.default.can(et.Permissions.MANAGE_MESSAGES, t)
     }), [t, v]), O = (0, _.useCanReplyToMessage)(t, n), j = (0, T.useCanStartPublicThread)(t, n), P = (0, T.useCanViewThreadForMessage)(n), D = (0, u.useStateFromStores)([m.default], () => null != t.guild_id && m.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), U = o.id === f, F = (L || n.canDeleteOwnMessage(f)) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
     n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && L);
-    let w = (0, Z.canReportMessage)(n),
+    let w = (0, K.canReportMessage)(n),
       k = (0, X.default)(n, t, L),
-      H = !t.isSystemDM() && (0, K.default)(n, f) && h && !C,
+      H = !t.isSystemDM() && (0, Z.default)(n, f) && h && !C,
       {
         disableReactionCreates: B
       } = (0, q.default)({

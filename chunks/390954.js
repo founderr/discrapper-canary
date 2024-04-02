@@ -17,7 +17,7 @@ var a, n = s("735250"),
   g = s("689938"),
   h = s("551165");
 
-function I(e, t, s) {
+function N(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -25,7 +25,7 @@ function I(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class N extends(a = l.PureComponent) {
+class I extends(a = l.PureComponent) {
   render() {
     let {
       paymentSource: e,
@@ -75,12 +75,12 @@ class N extends(a = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), I(this, "handleEditClick", () => {
+    super(...e), N(this, "handleEditClick", () => {
       this.props.onEditClick(this.props.paymentSource.id)
     })
   }
 }
-I(N, "defaultProps", {
+N(I, "defaultProps", {
   isEditing: !1,
   hideDivider: !1,
   onEditClick: () => {}
@@ -115,7 +115,7 @@ class p extends l.PureComponent {
       removing: a,
       submitting: l,
       premiumSubscriptionPaymentSourceId: i
-    } = this.props, d = r().values(t).sort((t, s) => t.id === e ? -1 : s.id === e ? 1 : T.default.compare(t.id, s.id)), u = this.state.editingPayment, E = d.findIndex(e => e.id === u), f = d.map((t, r) => (0, n.jsx)(N, {
+    } = this.props, d = r().values(t).sort((t, s) => t.id === e ? -1 : s.id === e ? 1 : T.default.compare(t.id, s.id)), u = this.state.editingPayment, E = d.findIndex(e => e.id === u), f = d.map((t, r) => (0, n.jsx)(I, {
       locale: s,
       paymentSource: t,
       isDefault: e === t.id,
@@ -150,31 +150,31 @@ class p extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), I(this, "state", {
+    super(...e), N(this, "state", {
       editingPayment: null
-    }), I(this, "handleEditClick", e => {
+    }), N(this, "handleEditClick", e => {
       this.setState({
         editingPayment: e
       })
-    }), I(this, "handleCancel", () => {
+    }), N(this, "handleCancel", () => {
       this.setState({
         editingPayment: null
       })
-    }), I(this, "handleDelete", async e => {
+    }), N(this, "handleDelete", async e => {
       try {
         await d.deletePaymentSource(e), this.setState({
           editingPayment: null
         })
       } catch (e) {}
-    }), I(this, "handleSubmit", async (e, t) => {
+    }), N(this, "handleSubmit", async (e, t) => {
       if (null != e) try {
         await d.updatePaymentSource(e, t), this.setState({
           editingPayment: null
         })
       } catch (e) {}
-    }), I(this, "handlePaymentSourceAdded", async e => {
+    }), N(this, "handlePaymentSourceAdded", async e => {
       await (0, E.fetchSubscriptionPlansOnNewPaymentSource)(e.id)
-    }), I(this, "handleAddPaymentMethod", () => {
+    }), N(this, "handleAddPaymentMethod", () => {
       (0, o.openModalLazy)(async () => {
         let {
           default: e

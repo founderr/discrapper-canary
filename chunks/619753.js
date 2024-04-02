@@ -188,10 +188,10 @@ function D(e) {
     embeds: []
   }, {
     postProcessor: o
-  }), z = l.useRef(null), [Z, K] = l.useState(!1);
+  }), z = l.useRef(null), [K, Z] = l.useState(!1);
   l.useEffect(() => {
     let e = z.current;
-    null != e && null != e.offsetWidth && null != e.scrollWidth && K(e.offsetWidth < e.scrollWidth)
+    null != e && null != e.offsetWidth && null != e.scrollWidth && Z(e.offsetWidth < e.scrollWidth)
   }, []);
   let X = [w, B, k].filter(e => null != e).join(", ");
   return (0, a.jsx)(x.ObscuredDisplayContext.Provider, {
@@ -210,7 +210,7 @@ function D(e) {
             height: 16
           }), (0, a.jsx)(i.Tooltip, {
             text: w,
-            shouldShow: Z,
+            shouldShow: K,
             children: e => (0, a.jsxs)("span", {
               ...e,
               ref: z,

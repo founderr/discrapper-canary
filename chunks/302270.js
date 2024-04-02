@@ -135,7 +135,7 @@ function Y(e) {
       listener_count: S + _
     })
   }, [F]);
-  let Z = (0, a.jsxs)(L.default, {
+  let K = (0, a.jsxs)(L.default, {
     toolbar: (0, a.jsx)(W, {
       inPopout: s,
       toggleRequestToSpeakSidebar: f,
@@ -182,7 +182,7 @@ function Y(e) {
     })]
   });
   return F ? (0, a.jsxs)("div", {
-    children: [Z, (0, a.jsxs)("div", {
+    children: [K, (0, a.jsxs)("div", {
       className: V.boostUpsell,
       children: [(0, a.jsx)(z, {}), (0, a.jsxs)("div", {
         className: V.text,
@@ -231,7 +231,7 @@ function Y(e) {
         })
       })]
     })]
-  }) : Z
+  }) : K
 }
 
 function z() {

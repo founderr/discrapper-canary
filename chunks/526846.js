@@ -68,7 +68,7 @@ let j = "vc-activities-".concat((0, o.v4)()),
       } = (0, p.default)([...V, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
       Y = G === M.AppContext.POPOUT,
       z = (0, c.useAnalyticsContext)(),
-      Z = function(e) {
+      K = function(e) {
         return (0, A.default)({
           guildId: e
         }).slice(0, 5)
@@ -77,7 +77,7 @@ let j = "vc-activities-".concat((0, o.v4)()),
       let e = setTimeout(() => I.dismissNewActivityIndicator(), 1e3);
       return () => clearTimeout(e)
     }, []);
-    let K = l.useCallback(() => {
+    let Z = l.useCallback(() => {
         var e;
         (0, x.default)({
           channel: n,
@@ -135,7 +135,7 @@ let j = "vc-activities-".concat((0, o.v4)()),
                 })]
               }), (0, a.jsxs)(d.Clickable, {
                 className: L.titleRight,
-                onClick: K,
+                onClick: Z,
                 children: [(0, a.jsx)(d.Text, {
                   variant: "eyebrow",
                   children: R.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
@@ -151,7 +151,7 @@ let j = "vc-activities-".concat((0, o.v4)()),
               children: q
             }), (0, a.jsxs)("div", {
               className: L.activityContainer,
-              children: [Z.map(e => (0, a.jsx)(v.ActivitySuggestion, {
+              children: [K.map(e => (0, a.jsx)(v.ActivitySuggestion, {
                 channel: n,
                 activityItem: e,
                 onClick: () => {

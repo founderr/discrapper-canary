@@ -45,7 +45,7 @@ function M(e) {
     exePath: e.exePath
   }), e.updatedAt = n;
   let l = (0, C.isUserRecentGamesExperimentEnabled)({
-    location: "28tk0rv_1"
+    location: "28tk0bf_6"
   });
   t && s && l && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(a / 1e3));
   let i = O[e.applicationId];

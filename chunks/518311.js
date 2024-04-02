@@ -47,8 +47,8 @@ var a, l = n("735250"),
   W = n("502568"),
   Y = n("626135"),
   z = n("572004"),
-  Z = n("585483"),
-  K = n("823379"),
+  K = n("585483"),
+  Z = n("823379"),
   X = n("709054"),
   q = n("51144"),
   Q = n("73752"),
@@ -135,7 +135,7 @@ let eo = e => {
         children: ee.default.Messages.GROUP_DM_INVITE_SELECT_EXISTING
       }), (0, l.jsx)(m.Scroller, {
         className: et.confirmInviteScroller,
-        children: s.filter(K.isNotNullish).sort((e, t) => {
+        children: s.filter(Z.isNotNullish).sort((e, t) => {
           var n, a;
           let l = null !== (n = e.lastMessageId) && void 0 !== n ? n : e.id,
             s = null !== (a = t.lastMessageId) && void 0 !== a ? a : t.id;
@@ -167,10 +167,10 @@ class ed extends(a = s.PureComponent) {
       ...t,
       type: "New Group DM",
       source: "Friends List"
-    }), Z.ComponentDispatch.subscribe($.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), Z.ComponentDispatch.subscribe($.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown)
+    }), K.ComponentDispatch.subscribe($.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), K.ComponentDispatch.subscribe($.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown)
   }
   componentWillUnmount() {
-    Z.ComponentDispatch.unsubscribe($.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), Z.ComponentDispatch.unsubscribe($.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), p.default.wait(() => _.default.close())
+    K.ComponentDispatch.unsubscribe($.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), K.ComponentDispatch.unsubscribe($.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), p.default.wait(() => _.default.close())
   }
   isNotFriends() {
     let {
@@ -673,8 +673,8 @@ function ef(e) {
     popoutAlign: u = "right",
     subscribeToGlobalHotkey: d = !1
   } = e, [c, f] = s.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), h = (0, x.useIsBroadcastingGDM)(null == t ? void 0 : t.id), p = s.useCallback(() => f(e => !e), []);
-  return (s.useEffect(() => (d && Z.ComponentDispatch.subscribe($.ComponentActions.TOGGLE_DM_CREATE, p), () => {
-    Z.ComponentDispatch.unsubscribe($.ComponentActions.TOGGLE_DM_CREATE, p)
+  return (s.useEffect(() => (d && K.ComponentDispatch.subscribe($.ComponentActions.TOGGLE_DM_CREATE, p), () => {
+    K.ComponentDispatch.unsubscribe($.ComponentActions.TOGGLE_DM_CREATE, p)
   }), [d, p]), h) ? null : (0, l.jsx)(m.Popout, {
     renderPopout: e => (0, l.jsx)(ec, {
       ...e,

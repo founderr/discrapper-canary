@@ -4,7 +4,7 @@ l.r(t), l.d(t, {
     return r
   },
   default: function() {
-    return m
+    return h
   }
 });
 var n, r, i = l("735250"),
@@ -63,7 +63,7 @@ let c = s.forwardRef(function(e, t) {
   })
 });
 
-function m(e) {
+function h(e) {
   switch (e.provider) {
     case "YouTube":
       return (0, i.jsx)(u, {

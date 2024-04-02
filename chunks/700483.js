@@ -44,8 +44,8 @@ var a = n("735250"),
   W = n("881824"),
   Y = n("471253"),
   z = n("922482"),
-  Z = n("200498"),
-  K = n("146085"),
+  K = n("200498"),
+  Z = n("146085"),
   X = n("88751"),
   q = n("427679"),
   Q = n("71275"),
@@ -137,7 +137,7 @@ function ef(e) {
     canManageGuildEvent: s
   } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([q.default], () => q.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([C.default], () => C.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), {
     suppress: h
-  } = (0, v.default)(t), m = O.default.getId(), [p] = (0, el.default)(t), E = X.default.isModerator(m, t.id), g = (0, Z.useCanModerateRequestToSpeak)(t.id), S = s(c);
+  } = (0, v.default)(t), m = O.default.getId(), [p] = (0, el.default)(t), E = X.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), S = s(c);
   return f ? (E || S) && null != u ? (0, a.jsx)(o.Popout, {
     renderPopout: e => {
       let {
@@ -300,7 +300,7 @@ let ep = l.memo(function(e) {
     suppress: n,
     selfMute: l,
     mute: s
-  } = (0, v.default)(t), u = (0, Z.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([p.default], () => null != p.default.getAwaitingRemoteSessionInfo()), {
+  } = (0, v.default)(t), u = (0, K.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([p.default], () => null != p.default.getAwaitingRemoteSessionInfo()), {
     cameraUnavailable: C,
     enabled: g
   } = (0, T.default)(), S = (0, A.default)(t), {
@@ -420,7 +420,7 @@ t.default = l.memo(function(e) {
   let {
     channel: t,
     isOnStartStageScreen: n
-  } = e, l = (0, en.default)(t.id), s = (0, Z.useCanModerateRequestToSpeak)(t.id), i = (0, r.useStateFromStores)([P.default], () => P.default.can(K.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), o = (0, ea.default)(t.id), u = (0, r.useStateFromStores)([c.default], () => null != t ? c.default.getSelectedParticipant(t.id) : null), d = !o && null == u;
+  } = e, l = (0, en.default)(t.id), s = (0, K.useCanModerateRequestToSpeak)(t.id), i = (0, r.useStateFromStores)([P.default], () => P.default.can(Z.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), o = (0, ea.default)(t.id), u = (0, r.useStateFromStores)([c.default], () => null != t ? c.default.getSelectedParticipant(t.id) : null), d = !o && null == u;
   return n ? (0, a.jsx)(eE, {
     channel: t
   }) : l || s ? (0, a.jsxs)("div", {

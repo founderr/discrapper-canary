@@ -48,8 +48,8 @@ var a = n("735250"),
   W = n("434417"),
   Y = n("652985");
 let z = H.default.getEnableHardwareAcceleration(),
-  Z = 44 + B.AVATAR_DECORATION_PADDING,
-  K = l.memo(function(e) {
+  K = 44 + B.AVATAR_DECORATION_PADDING,
+  Z = l.memo(function(e) {
     let {
       channel: t,
       sectionId: s,
@@ -90,7 +90,7 @@ let z = H.default.getEnableHardwareAcceleration(),
       })
     }, [t.guild_id]);
     if (null == C) return null;
-    let Z = null == p ? void 0 : p.premiumSince;
+    let K = null == p ? void 0 : p.premiumSince;
     return (0, a.jsx)(f.Popout, {
       preload: () => (0, I.maybeFetchUserProfileForPopout)(C, {
         guildId: t.guild_id,
@@ -132,7 +132,7 @@ let z = H.default.getEnableHardwareAcceleration(),
           isMobile: j,
           selected: l,
           applicationStream: D,
-          premiumSince: null == Z ? null : new Date(Z),
+          premiumSince: null == K ? null : new Date(K),
           onClickPremiumGuildIcon: Y,
           itemProps: b,
           lostPermissionTooltipText: U ? void 0 : V.default.Messages.THREAD_MEMBER_WITHOUT_ACCESS,
@@ -255,7 +255,7 @@ function Q(e) {
       }),
       listRef: a
     }
-  }(s, Z), S = 0 === d.length || d.every(e => 0 === e.userIds.length);
+  }(s, K), S = 0 === d.length || d.every(e => 0 === e.userIds.length);
   if (l.useEffect(() => {
       U.default.track(G.AnalyticEvents.MEMBER_LIST_VIEWED, {
         channel_id: t.id,
@@ -290,7 +290,7 @@ function Q(e) {
                 guildId: n.id
               }, l.id)
             },
-            rowHeight: Z,
+            rowHeight: K,
             renderRow: e => {
               let {
                 section: n,
@@ -299,7 +299,7 @@ function Q(e) {
                 userIds: s,
                 id: i
               } = d[n];
-              return (0, a.jsx)(K, {
+              return (0, a.jsx)(Z, {
                 channel: t,
                 sectionId: i,
                 userId: s[l],

@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("594174"),
   g = s("351402"),
   h = s("853872"),
-  I = s("78839"),
-  N = s("706454"),
+  N = s("78839"),
+  I = s("706454"),
   p = s("981631"),
   C = s("689938"),
   A = s("757947");
@@ -81,11 +81,11 @@ class O extends n.PureComponent {
 }
 
 function x() {
-  let e = (0, r.useStateFromStoresObject)([N.default, g.default, h.default, _.default, m.default, I.default], () => {
-    let e = I.default.getPremiumTypeSubscription(),
+  let e = (0, r.useStateFromStoresObject)([I.default, g.default, h.default, _.default, m.default, N.default], () => {
+    let e = N.default.getPremiumTypeSubscription(),
       t = _.default.getCurrentUser();
     return i()(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
-      locale: N.default.locale,
+      locale: I.default.locale,
       hide: m.default.enabled,
       isClaimed: t.isClaimed(),
       isVerified: t.verified,

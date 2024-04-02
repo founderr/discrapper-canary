@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("514361"),
   g = s("605236"),
   h = s("786761"),
-  I = s("3148"),
-  N = s("739566"),
+  N = s("3148"),
+  I = s("739566"),
   p = s("753206"),
   C = s("594174"),
   A = s("285952"),
@@ -59,35 +59,35 @@ let G = {
   Y = e => {
     let t = 0;
     return [(0, h.createMessageRecord)({
-      ...(0, I.default)({
+      ...(0, N.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+      ...(0, N.default)({
         channelId: V,
         content: (0, d.isThemeDark)(e) ? U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+      ...(0, N.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+      ...(0, N.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+      ...(0, N.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
       }),
@@ -185,7 +185,7 @@ class K extends n.Component {
         outline: !0,
         "aria-hidden": !0,
         children: l.map((t, s) => (0, a.jsx)(p.default, {
-          author: (0, N.getMessageAuthor)(t),
+          author: (0, I.getMessageAuthor)(t),
           message: t,
           compact: e,
           isGroupStart: s % 2 == 0,

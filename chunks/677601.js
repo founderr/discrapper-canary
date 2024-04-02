@@ -44,8 +44,8 @@ var a = n("735250"),
   W = n("493754"),
   Y = n("937995"),
   z = n("618158"),
-  Z = n("880831"),
-  K = n("73563"),
+  K = n("880831"),
+  Z = n("73563"),
   X = n("751843"),
   q = n("616286"),
   Q = n("268353"),
@@ -222,7 +222,7 @@ class ek extends l.PureComponent {
       forceShowControls: m,
       awaitingRemoteSessionInfo: p
     } = this.props, E = h === eP.ChannelLayouts.MINIMUM, C = E || h === eP.ChannelLayouts.NORMAL, g = n && s === eP.ChannelModes.VIDEO;
-    return this._lastIdleProps = e, (0, a.jsx)(K.default, {
+    return this._lastIdleProps = e, (0, a.jsx)(Z.default, {
       renderHeader: this.renderHeader,
       renderBottomLeft: this.renderBottomLeft,
       renderBottomCenter: this.renderBottomCenter,
@@ -606,7 +606,7 @@ class ek extends l.PureComponent {
         inCall: l
       } = this.props;
       return !e || t || this.popoutOpen && !this.inPopout && l ? null : (0, a.jsx)(eN.default, {
-        children: (0, a.jsx)(Z.default, {
+        children: (0, a.jsx)(K.default, {
           className: eb.chatToasts,
           channelId: n.id
         })
@@ -697,7 +697,7 @@ t.default = function(e) {
     selectedStream: W
   } = (0, u.useStateFromStoresObject)([ea.default], () => ({
     selectedStream: null != G ? ea.default.getActiveStreamForStreamKey(G.id) : null
-  }), [G]), Y = (0, u.useStateFromStores)([er.default], () => er.default.getGuild(n.getGuildId())), z = (0, u.useStateFromStores)([ei.default], () => ei.default.getCall(n.id), [n.id]), Z = (0, u.useStateFromStores)([eu.default], () => eu.default.getMentionCount(n.id), [n.id]), K = (0, u.useStateFromStores)([el.default], () => el.default.getId()), {
+  }), [G]), Y = (0, u.useStateFromStores)([er.default], () => er.default.getGuild(n.getGuildId())), z = (0, u.useStateFromStores)([ei.default], () => ei.default.getCall(n.id), [n.id]), K = (0, u.useStateFromStores)([eu.default], () => eu.default.getMentionCount(n.id), [n.id]), Z = (0, u.useStateFromStores)([el.default], () => el.default.getId()), {
     popoutWindow: X,
     popoutWindowAlwaysOnTop: q
   } = (0, u.useStateFromStoresObject)([k.default], () => ({
@@ -744,7 +744,7 @@ t.default = function(e) {
             call: z,
             popoutWindow: X,
             popoutWindowAlwaysOnTop: q,
-            mentionCount: Z,
+            mentionCount: K,
             selectedStream: W,
             mode: U,
             inCall: S,
@@ -755,7 +755,7 @@ t.default = function(e) {
             chatOpen: H,
             maxSidebarWidth: r - 550,
             shouldUseVoiceEffectsActionBar: ep,
-            currentUserId: K,
+            currentUserId: Z,
             selectedParticipant: G,
             allActiveStreams: V,
             useNewInviteButton: ec,

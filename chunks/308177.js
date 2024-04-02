@@ -57,7 +57,7 @@ t.default = (0, o.default)(e => {
   }, F = (0, h.useThrottleDurationForChannel)(a.id), [w, k] = (0, h.useStageChannelParticipantsListThrottled)(a.id, U, F), H = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]], {
     speakerTileWidth: B,
     speakerTileHeight: G
-  } = I(l, b), V = x ? l - 32 : Math.min(l - 64, 3 * B + 8), W = e => e === w.length - 1 || 0 === L && 1 === e, [Y, z] = i.useState(!1), [Z, K] = i.useState(!1);
+  } = I(l, b), V = x ? l - 32 : Math.min(l - 64, 3 * B + 8), W = e => e === w.length - 1 || 0 === L && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
   return (0, s.jsx)(p.default, {
     sections: H,
     renderSection: e => {
@@ -78,8 +78,8 @@ t.default = (0, o.default)(e => {
         participantCount: L,
         label: S.default.Messages.AUDIENCE_LABEL,
         className: _.header,
-        onClick: () => K(!Z),
-        collapsed: Z,
+        onClick: () => Z(!K),
+        collapsed: K,
         channel: a
       }, "audience-header-".concat(t));
       return null
@@ -113,7 +113,7 @@ t.default = (0, o.default)(e => {
             })
           }, "speakers-".concat(t, "-").concat(n));
         case 2:
-          if (Z) return null;
+          if (K) return null;
           return (0, s.jsx)(m.default, {
             channel: a,
             participants: l,
@@ -123,7 +123,7 @@ t.default = (0, o.default)(e => {
           return null
       }
     },
-    rowHeight: e => null == k[e][0] ? 0 : 0 === e ? V / g.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? Y ? 0 : G : Z ? 0 : 98,
+    rowHeight: e => null == k[e][0] ? 0 : 0 === e ? V / g.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? Y ? 0 : G : K ? 0 : 98,
     renderFooter: e => {
       let {
         section: t

@@ -22,8 +22,8 @@ var n = s("512722"),
   _ = s("621853"),
   g = s("271383"),
   h = s("594174"),
-  I = s("466111"),
-  N = s("74538"),
+  N = s("466111"),
+  I = s("74538"),
   p = s("51144"),
   C = s("18438"),
   A = s("778825"),
@@ -74,7 +74,7 @@ function L(e) {
   let V = (0, o.useGuildAutomodProfileQuarantineErrors)(w.id),
     Y = (0, i.useStateFromStores)([g.default], () => null == w.id ? null : g.default.getMember(w.id, j.id)),
     K = (0, i.useStateFromStores)([_.default], () => _.default.getGuildMemberProfile(j.id, w.id)),
-    W = N.default.canUsePremiumProfileCustomization(j),
+    W = I.default.canUsePremiumProfileCustomization(j),
     z = (0, d.showRemoveAvatar)(b, null == Y ? void 0 : Y.avatar),
     Q = (0, d.showRemoveBanner)(y, null == K ? void 0 : K.banner),
     Z = (0, O.canResetThemeColors)(G, null == K ? void 0 : K.themeColors),
@@ -106,7 +106,7 @@ function L(e) {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [v.default.Messages.USER_SETTINGS_AVATAR, (0, a.jsx)(r.Tooltip, {
             text: v.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-            children: e => (0, a.jsx)(I.default, {
+            children: e => (0, a.jsx)(N.default, {
               ...e,
               className: D.nitroWheel
             })
@@ -121,7 +121,7 @@ function L(e) {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [v.default.Messages.USER_SETTINGS_AVATAR_DECORATION, (0, a.jsx)(r.Tooltip, {
             text: v.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-            children: e => (0, a.jsx)(I.default, {
+            children: e => (0, a.jsx)(N.default, {
               ...e,
               className: D.nitroWheel
             })
@@ -133,7 +133,7 @@ function L(e) {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [v.default.Messages.USER_SETTINGS_PROFILE_EFFECT, (0, a.jsx)(r.Tooltip, {
             text: v.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-            children: e => (0, a.jsx)(I.default, {
+            children: e => (0, a.jsx)(N.default, {
               ...e,
               className: D.nitroWheel
             })
@@ -161,7 +161,7 @@ function L(e) {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [v.default.Messages.USER_PROFILE_ABOUT_ME, (0, a.jsx)(r.Tooltip, {
             text: v.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-            children: e => (0, a.jsx)(I.default, {
+            children: e => (0, a.jsx)(N.default, {
               ...e,
               className: D.nitroWheel
             })

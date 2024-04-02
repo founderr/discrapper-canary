@@ -52,7 +52,7 @@ let D = l.memo(e => {
   null != W && L.default.trackExposure({
     location: "voice_users"
   });
-  let [Y, z] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(x, i.getGuildId()), E.default.getActiveStreamForUser(x, i.getGuildId())], [i, x]), Z = (0, r.useStateFromStores)([A.default], () => A.default.getSessionById(o)), K = R.default.useName(s), X = (0, r.useStateFromStores)([N.default], () => N.default.getVoicePlatformForChannel(i.id, x), [i.id, x]), {
+  let [Y, z] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(x, i.getGuildId()), E.default.getActiveStreamForUser(x, i.getGuildId())], [i, x]), K = (0, r.useStateFromStores)([A.default], () => A.default.getSessionById(o)), Z = R.default.useName(s), X = (0, r.useStateFromStores)([N.default], () => N.default.getVoicePlatformForChannel(i.id, x), [i.id, x]), {
     enableHangStatus: q
   } = h.HangStatusExperiment.useExperiment({
     guildId: i.guild_id,
@@ -67,9 +67,9 @@ let D = l.memo(e => {
     isShaking: w,
     children: (0, a.jsx)(y.default, {
       ...e,
-      nick: null != _ ? _ : K,
+      nick: null != _ ? _ : Z,
       canDrag: e.canDrag && !k,
-      otherClientSessionType: null == Z ? void 0 : null === (t = Z.clientInfo) || void 0 === t ? void 0 : t.os,
+      otherClientSessionType: null == K ? void 0 : null === (t = K.clientInfo) || void 0 === t ? void 0 : t.os,
       voicePlatform: X,
       localMute: D && !P,
       localVideoDisabled: U,

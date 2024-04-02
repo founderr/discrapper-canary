@@ -48,14 +48,14 @@ function L(e) {
     user: w,
     streamId: k,
     speaking: H
-  } = t, B = w.id === F, G = (0, I.default)(t), V = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != w.id && C.default.isLocalVideoDisabled(w.id, (0, f.default)(t.type)), [w.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, w.id)), Z = T.default.getName(n.getGuildId(), n.id, w) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), K = H && (W || V), X = o < 124 ? R : M, {
+  } = t, B = w.id === F, G = (0, I.default)(t), V = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != w.id && C.default.isLocalVideoDisabled(w.id, (0, f.default)(t.type)), [w.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, w.id)), K = T.default.getName(n.getGuildId(), n.id, w) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = H && (W || V), X = o < 124 ? R : M, {
     avatarSrc: q,
     avatarDecorationSrc: Q
   } = (0, m.default)({
     user: w,
     guildId: n.guild_id,
     size: X,
-    animateOnHover: !K
+    animateOnHover: !Z
   }), J = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
   return (l.useEffect(() => {
     n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === w.id && u.default.selectParticipant(n.id, null)
@@ -75,7 +75,7 @@ function L(e) {
       [x.blockedAvatar]: P
     }),
     children: (0, a.jsx)(S.default, {
-      "aria-label": Z,
+      "aria-label": K,
       src: q,
       avatarDecoration: Q,
       backgroundSrc: w.getAvatarURL(n.guild_id, 80),
