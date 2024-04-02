@@ -22,7 +22,7 @@ function f(e) {
     children: h
   } = e, m = (0, s.useStateFromStores)([d.default], () => d.default.hasCurrentUserSentMessageSinceAppStart()), p = (0, c.useActivitiesInTextOnboardingVisibility)(t, "ChannelOmniButtonNux"), E = (0, o.useCanPostPollsInChannel)(t), C = (0, o.useCanShowPollsChatInputCoachmarkInGuild)(null == t ? void 0 : t.guild_id), g = l.useMemo(() => {
     let e = [];
-    return m && (null == p ? void 0 : p.desktopThrobberEnabled) && e.push(i.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX), E && C && e.push(i.DismissibleContent.POLLS_CHAT_INPUT_COACHMARK), e
+    return m && (null == p ? void 0 : p.desktopThrobberEnabled) && e.push(i.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2), E && C && e.push(i.DismissibleContent.POLLS_CHAT_INPUT_COACHMARK), e
   }, [m, null == p ? void 0 : p.desktopThrobberEnabled, E, C]);
   return (0, a.jsx)(r.default, {
     contentTypes: g,
@@ -32,7 +32,7 @@ function f(e) {
         markAsDismissed: l
       } = e;
       switch (t) {
-        case i.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX:
+        case i.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2:
           return (0, a.jsx)(c.OmniButtonNuxAnimation, {
             children: h
           });

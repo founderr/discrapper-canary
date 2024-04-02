@@ -112,7 +112,7 @@ t.default = l.memo(function(e) {
     eA = (0, r.useStateFromStores)([L.default, A.default], () => (0, E.canUseApplicationCommands)(L.default, A.default, J, Z)),
     ev = (0, I.useCanPostPollsInChannel)(null != Z ? Z : void 0),
     eN = (0, d.useRedesignIconContext)().enabled,
-    ex = (0, m.useActivitiesInTextButtonVisibility)(Z.id, "ChannelAttachButton"),
+    ex = (0, m.useActivitiesInTextExperimentConfig)(Z.id, "ChannelAttachButton"),
     eM = null !== (s = null == el ? void 0 : el.length) && void 0 !== s ? s : 0,
     eR = (0, k.default)({
       canAttachFiles: ep,
@@ -158,12 +158,12 @@ t.default = l.memo(function(e) {
     position: "top",
     positionKey: null != ec ? ec : "null",
     onRequestOpen: () => {
-      eg && (0, _.markDismissibleContentAsDismissed)(o.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX, {
+      eg && (0, _.markDismissibleContentAsDismissed)(o.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
         dismissAction: G.ContentDismissActionType.TAKE_ACTION
       }), ef("attachMenu")
     },
     onRequestClose: () => {
-      !(0, d.hasAnyModalOpen)() && (eg && (0, _.markDismissibleContentAsDismissed)(o.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE, {
+      !(0, d.hasAnyModalOpen)() && (eg && (0, _.markDismissibleContentAsDismissed)(o.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
         dismissAction: G.ContentDismissActionType.TAKE_ACTION
       }), ef(null))
     },

@@ -58,10 +58,10 @@ function U(e) {
   let {
     channelId: t
   } = e, n = (0, i.useStateFromStores)([S.default], () => S.default.getChannel(t)), o = (0, i.useStateFromStores)([_.default], () => _.default.hasCurrentUserSentMessageSinceAppStart()), u = (0, M.useActivitiesInTextOnboardingVisibility)(n, "ChannelAttachMenu"), d = [];
-  o && (null == u ? void 0 : u.desktopThrobberEnabled) && d.push(r.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE);
+  o && (null == u ? void 0 : u.desktopThrobberEnabled) && d.push(r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE);
   let [c] = (0, m.useGetDismissibleContent)(d);
   return l.useEffect(() => () => {
-    c === r.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE && (0, h.markDismissibleContentAsDismissed)(r.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE, {
+    c === r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.markDismissibleContentAsDismissed)(r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
       dismissAction: y.ContentDismissActionType.TAKE_ACTION
     })
   }, [c]), (0, a.jsx)(p.default, {
@@ -70,7 +70,7 @@ function U(e) {
       let {
         visibleContent: t
       } = e;
-      return t === r.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE ? (0, a.jsx)(T.TextBadge, {
+      return t === r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE ? (0, a.jsx)(T.TextBadge, {
         text: j.default.Messages.NEW,
         color: s.default.BUTTON_DANGER_BACKGROUND
       }) : null

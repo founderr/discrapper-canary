@@ -56,7 +56,7 @@ let T = e => {
     children: t
   } = e;
   return i.useEffect(() => {
-    setTimeout(() => (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX, {
+    setTimeout(() => (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
       dismissAction: E.ContentDismissActionType.AUTO_DISMISS
     }), 1e4)
   }, []), (0, s.jsxs)("div", {
