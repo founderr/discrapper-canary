@@ -581,7 +581,7 @@ function eT(e) {
                 color: C.Button.Colors.BRAND,
                 onClick: e8,
                 disabled: !eV,
-                children: ef.default.Messages.APP_DIRECTORY_PROFILE_ADD_BUTTON
+                children: ef.default.Messages.APPLICATION_ADD_BUTTON
               }), (0, i.jsx)(C.Popout, {
                 renderPopout: e => {
                   let {

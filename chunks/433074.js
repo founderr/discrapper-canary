@@ -140,7 +140,7 @@ function g(e) {
           })
         },
         color: f.default.Button.Colors.GREEN,
-        children: A.default.Messages.APP_DIRECTORY_PROFILE_EMBED_BUTTON
+        children: A.default.Messages.APPLICATION_ADD_BUTTON
       })]
     })]
   })
