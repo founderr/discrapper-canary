@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   ShyBanner: function() {
-    return E
+    return p
   }
 });
 var l = a("735250");
@@ -18,10 +18,9 @@ var s = a("803997"),
   m = a("26213"),
   C = a("249174"),
   g = a("767247"),
-  h = a("621881"),
-  p = a("586755");
+  h = a("621881");
 
-function E(e) {
+function p(e) {
   let {
     category: t
   } = e, a = (0, n.useStateFromStores)([i.default], () => i.default.useReducedMotion);
@@ -57,12 +56,12 @@ function E(e) {
         src: h,
         alt: "",
         "aria-hidden": !0
-      }), (0, l.jsx)("img", {
-        src: p,
-        alt: "",
-        "aria-hidden": !0
+      }), (0, l.jsx)(o.Text, {
+        variant: "heading-sm/extrabold",
+        tag: "div",
+        children: "|"
       }), (0, l.jsx)(u.default, {
-        height: 16,
+        height: 22,
         "aria-hidden": !0
       })]
     }), (0, l.jsx)(o.Text, {
