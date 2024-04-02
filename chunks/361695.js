@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return m
   }
 }), s("47120");
 var a = s("442837"),
@@ -9,36 +9,45 @@ var a = s("442837"),
   l = s("634894"),
   i = s("924557"),
   r = s("706140"),
-  o = s("386346"),
-  d = s("641826"),
-  u = s("631885"),
-  c = s("160913"),
-  S = s("725727"),
-  E = s("663389"),
-  T = s("202022");
+  o = s("246208"),
+  d = s("386346"),
+  u = s("641826"),
+  c = s("631885"),
+  S = s("160913"),
+  E = s("725727"),
+  T = s("663389"),
+  f = s("202022");
 
-function f() {
-  let e = (0, S.useUnseenOutboundPromotions)().length,
-    t = (0, c.useIsPrepaidPaymentPastDue)(),
-    s = (0, a.useStateFromStores)([E.default], () => E.default.getProps().impressionSource),
-    f = (0, u.usePendingRequestCount)(),
-    m = (0, i.useEnableClips)(),
-    [_] = (0, r.useGetDismissibleContent)(m ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
-    g = (0, a.useStateFromStores)([o.default], () => o.default.tempShowLootboxSettings),
-    h = (0, d.useShouldShowMainLootboxEntrypoint)("user_settings"),
-    N = "useGenerateUserSettingsSections";
+function m() {
+  let e = (0, E.useUnseenOutboundPromotions)().length,
+    t = (0, S.useIsPrepaidPaymentPastDue)(),
+    s = (0, a.useStateFromStores)([T.default], () => T.default.getProps().impressionSource),
+    m = (0, c.usePendingRequestCount)(),
+    _ = (0, i.useEnableClips)(),
+    [g] = (0, r.useGetDismissibleContent)(_ ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
+    h = (0, a.useStateFromStores)([d.default], () => d.default.tempShowLootboxSettings),
+    N = (0, u.useShouldShowMainLootboxEntrypoint)("user_settings"),
+    {
+      allowOpeningLootboxes: I
+    } = o.default.useExperiment({
+      location: "user_settings"
+    }, {
+      autoTrackExposure: !1
+    }),
+    p = "useGenerateUserSettingsSections";
   return (0, l.useTriggerDebuggingAA)({
-    location: N + " auto on",
+    location: p + " auto on",
     autoTrackExposure: !0
   }), (0, l.useTriggerDebuggingAA)({
-    location: N + " auto off",
+    location: p + " auto off",
     autoTrackExposure: !1
-  }), (0, T.default)({
+  }), (0, f.default)({
     unseenGiftCount: e,
     showPrepaidPaymentPastDueWarning: t,
     impressionSource: s,
-    numOfPendingFamilyRequests: f,
-    isClipsBetaTagShowing: _ === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
-    isLootboxesShowing: g || h
+    numOfPendingFamilyRequests: m,
+    isClipsBetaTagShowing: g === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
+    isLootboxesTabShowing: h || N,
+    isLootboxesEnabled: I
   })
 }

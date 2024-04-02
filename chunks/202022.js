@@ -90,7 +90,8 @@ function ex(e) {
     impressionSource: eR,
     numOfPendingFamilyRequests: eM,
     isClipsBetaTagShowing: ev = !1,
-    isLootboxesShowing: eD
+    isLootboxesTabShowing: eD,
+    isLootboxesEnabled: eL
   } = e;
   return [{
     section: S.SectionTypes.HEADER,
@@ -174,7 +175,8 @@ function ex(e) {
       height: 16,
       color: "currentColor"
     }),
-    predicate: () => eD
+    predicate: () => eL,
+    tabPredicate: () => eD
   }, {
     section: ep.UserSettingsSections.FRIEND_REQUESTS,
     label: eC.default.Messages.FRIEND_REQUESTS,

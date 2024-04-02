@@ -23,8 +23,8 @@ var i = n("735250"),
   m = n("759231"),
   p = n("26290"),
   f = n("585483"),
-  S = n("960048"),
-  b = n("410575"),
+  b = n("960048"),
+  S = n("410575"),
   g = n("493544"),
   v = n("981631"),
   x = n("689938"),
@@ -61,7 +61,7 @@ function P(e) {
   });
   let c = null !== (t = null == s ? void 0 : s.element) && void 0 !== t ? t : v.NOOP_NULL,
     u = null !== (n = null == s ? void 0 : s.elementProps) && void 0 !== n ? n : {};
-  return (0, i.jsx)(b.default, {
+  return (0, i.jsx)(S.default, {
     section: s.section,
     children: (0, i.jsx)(c, {
       ...u,
@@ -129,6 +129,7 @@ class y extends s.PureComponent {
           orientation: "vertical",
           "aria-label": n,
           children: e.map((e, t) => {
+            if (null != e.tabPredicate && !e.tabPredicate()) return null;
             switch (e.section) {
               case g.SectionTypes.HEADER:
                 return (0, i.jsx)(o.TabBar.Header, {
@@ -226,7 +227,7 @@ class y extends s.PureComponent {
           sidebarOpen: !1
         })
       };
-      this.validNavigation() && !i && (l(), S.default.addBreadcrumb({
+      this.validNavigation() && !i && (l(), b.default.addBreadcrumb({
         category: "settings",
         message: "Set section: ".concat(e)
       })), i && null != s && s(l)
@@ -247,8 +248,8 @@ class y extends s.PureComponent {
         onClick: c,
         color: u,
         icon: f,
-        className: S,
-        newIndicator: b,
+        className: b,
+        newIndicator: S,
         newIndicatorDismissibleContentTypes: g,
         badgeCount: T
       } = e, j = null;
@@ -260,7 +261,7 @@ class y extends s.PureComponent {
         variant: "text-md/normal",
         color: "text-muted",
         children: e.decoration
-      }) : null != n && (null == g ? void 0 : g.includes(n)) && !t ? j = null != b ? b : (0, i.jsx)(p.TextBadge, {
+      }) : null != n && (null == g ? void 0 : g.includes(n)) && !t ? j = null != S ? S : (0, i.jsx)(p.TextBadge, {
         text: x.default.Messages.NEW
       }) : null != f ? j = f : null != T && T > 0 && (j = (0, i.jsx)(p.NumberBadge, {
         count: T
@@ -277,7 +278,7 @@ class y extends s.PureComponent {
         color: u,
         id: s,
         onClick: c,
-        className: S,
+        className: b,
         "aria-label": a,
         children: C
       }, s)
