@@ -59658,7 +59658,8 @@ html .progress__00e29 {
     transition: opacity.2s ease, transform.2s ease;
     border-radius: 8px 8px 0 0;
     height: 100%;
-    width: 100%
+    width: 100%;
+    overflow: hidden
 }
 
 .entrypoint__13ed3 {
