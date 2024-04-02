@@ -62,7 +62,7 @@ class S extends(i = s.PureComponent) {
           userId: i,
           onUpdate: r
         } = this.props;
-      n !== t && (null == r || r(), d.default.updateNote(i, t))
+      (null != n ? n : "") !== t && (null == r || r(), d.default.updateNote(i, t))
     }), f(this, "handleKeyPress", e => {
       if (13 === e.which) {
         if (e.shiftKey) {
