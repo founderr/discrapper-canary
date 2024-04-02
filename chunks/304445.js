@@ -74,7 +74,7 @@
               voiceChannelId: a,
               voiceMessageId: d
             } = t.params;
-            (0, u.isOldVoiceUIEnabled)() && (0, l.navigateToChannel)({
+            !(0, u.isVoicePanelEnabled)() && (0, l.navigateToChannel)({
               channelId: a,
               guildId: e,
               messageId: d,
