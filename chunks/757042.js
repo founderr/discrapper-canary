@@ -64,7 +64,8 @@ function L() {
             ref: P,
             className: R.video,
             src: O,
-            muted: !0
+            muted: !0,
+            loop: !0
           })
         }), (0, a.jsxs)(f.Clickable, {
           className: R.entrypoint,
