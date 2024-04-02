@@ -22996,8 +22996,8 @@ html.disable-forced-colors * {
 
 .title_bdbe69 {
     font-weight: 700;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     text-transform: uppercase
 }
 
@@ -23103,8 +23103,8 @@ html.disable-forced-colors * {
     display: flex;
     align-items: center;
     border-radius: 5px;
-    font-size: 1rem;
-    line-height: 1.125rem;
+    font-size: 16px;
+    line-height: 18px;
     padding: 16px
 }
 
