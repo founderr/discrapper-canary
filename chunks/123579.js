@@ -16,7 +16,7 @@ var a = n("735250"),
   E = n("556084"),
   C = n("422677"),
   g = n("911367"),
-  S = n("201819"),
+  S = n("761174"),
   _ = n("199902"),
   T = n("314897"),
   I = n("592125"),
@@ -199,9 +199,9 @@ t.default = e => {
       location: h.default.PROFILE,
       disable: e$
     }),
-    e1 = (0, S.useIsUserRecentGamesFetchEnabled)({
+    e1 = (0, S.useIsUserRecentGamesEnabled)({
       userId: eh.id,
-      location: "28tk0bf_5"
+      location: "28tk0bf_2"
     });
   return e_ ? (0, a.jsx)(m.AnalyticsLocationProvider, {
     value: ef,

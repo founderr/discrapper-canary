@@ -11,7 +11,7 @@ var i = n("735250"),
   o = n("442837"),
   l = n("481060"),
   u = n("100527"),
-  d = n("201819"),
+  d = n("761174"),
   _ = n("199902"),
   c = n("314897"),
   E = n("592125"),
@@ -96,9 +96,9 @@ function H(e) {
       location: u.default.PROFILE_POPOUT,
       disable: ef
     }),
-    eh = (0, d.useIsUserRecentGamesFetchEnabled)({
+    eh = (0, d.useIsUserRecentGamesEnabled)({
       userId: j.id,
-      location: "28tk0bf_3"
+      location: "28tk0bf_1"
     });
   if (j.isSystemUser()) return null;
   if (j.isNonUserBot()) return (0, i.jsx)(B.default, {

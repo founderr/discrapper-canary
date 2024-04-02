@@ -5,31 +5,44 @@ var a = s("735250"),
   l = s("481060"),
   i = s("230711"),
   r = s("454175"),
-  o = s("695346"),
-  d = s("314897"),
-  u = s("981631"),
-  c = s("231338"),
-  S = s("689938");
+  o = s("761174"),
+  d = s("695346"),
+  u = s("314897"),
+  c = s("981631"),
+  S = s("231338"),
+  E = s("689938"),
+  T = s("630883");
 
-function E(e) {
-  o.RecentGamesEnabled.updateSetting(e), e && r.default.fetchUserRecentGames(d.default.getId())
+function f(e) {
+  d.RecentGamesEnabled.updateSetting(e), e && r.default.fetchUserRecentGames(u.default.getId())
 }
 t.default = n.memo(function() {
-  let e = o.RecentGamesEnabled.useSetting(),
-    t = o.ShowCurrentGame.useSetting(),
-    s = n.useMemo(() => e || t ? S.default.Messages.RECENT_GAMES_SETTING_SUBLABEL.format({
-      onClick: c.NOOP
-    }) : S.default.Messages.RECENT_GAMES_SETTING_ACTIVITY_STATUS_DISABLED_SUBLABEL.format({
-      onHelpArticleClick: c.NOOP,
-      onSettingClick: () => {
-        i.default.setSection(u.AnalyticsSections.SETTINGS_ACTIVITY_PRIVACY)
-      }
-    }), [e, t]);
+  let e = d.ShowCurrentGame.useSetting(),
+    t = (0, o.useIsSelfRecentGamesEnabled)({
+      location: "28tk0bf_8"
+    });
   return (0, a.jsx)(l.FormSwitch, {
-    disabled: !e && !t,
-    value: e,
-    note: s,
-    onChange: E,
-    children: S.default.Messages.USER_RECENT_GAMES_ON_PROFILE
+    disabled: !e,
+    value: t,
+    note: (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(l.Text, {
+        variant: "text-sm/normal",
+        color: "text-normal",
+        children: E.default.Messages.RECENT_GAMES_SETTING_NOTE.format({
+          onHelpArticleClick: S.NOOP
+        })
+      }), (0, a.jsx)(l.Text, {
+        className: T.requirement,
+        variant: "text-sm/normal",
+        color: "text-normal",
+        children: E.default.Messages.RECENT_GAMES_SETTING_REQUIREMENT.format({
+          onSettingClick: () => {
+            i.default.setSection(c.AnalyticsSections.SETTINGS_ACTIVITY_PRIVACY)
+          }
+        })
+      })]
+    }),
+    onChange: f,
+    children: E.default.Messages.USER_RECENT_GAMES_ON_PROFILE
   })
 })

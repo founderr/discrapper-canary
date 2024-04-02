@@ -11,7 +11,7 @@ var a = s("735250"),
   r = s("666520"),
   n = s("726542"),
   u = s("122021"),
-  d = s("201819"),
+  d = s("761174"),
   c = s("706454"),
   f = s("246946"),
   S = s("785717"),
@@ -41,9 +41,9 @@ function x(e) {
     return null !== (t = null === (e = m.default.getUserProfile(s.id)) || void 0 === e ? void 0 : e.connectedAccounts) && void 0 !== t ? t : []
   }), R = (0, i.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), {
     profileTheme: M
-  } = (0, E.default)(s, x), P = (0, i.useStateFromStores)([c.default], () => c.default.locale), g = (0, d.useIsUserRecentGamesFetchEnabled)({
+  } = (0, E.default)(s, x), P = (0, i.useStateFromStores)([c.default], () => c.default.locale), g = (0, d.useIsUserRecentGamesEnabled)({
     userId: s.id,
-    location: "28tk0bf_2"
+    location: "28tk0bf_3"
   }), O = l.useMemo(() => j.filter(e => {
     let t = n.default.get(e.type);
     return null != t && y(t)

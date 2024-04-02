@@ -8,10 +8,10 @@ var i = n("470079"),
   r = n("442837"),
   s = n("454175"),
   a = n("385845"),
-  o = n("201819");
+  o = n("761174");
 
 function l(e) {
-  let t = (0, o.useIsUserRecentGamesFetchEnabled)({
+  let t = (0, o.useIsUserRecentGamesEnabled)({
       userId: e,
       location: "28tk0bf_4"
     }),
