@@ -15,8 +15,8 @@ var l = i("735250"),
   m = i("514342"),
   g = i("709586"),
   j = i("176278"),
-  w = i("626135"),
-  p = i("524444"),
+  p = i("626135"),
+  w = i("524444"),
   v = i("981631"),
   C = i("176505"),
   N = i("689938"),
@@ -29,15 +29,15 @@ e.default = t => {
     name: T
   } = e;
   r.useEffect(() => {
-    w.default.track(v.AnalyticEvents.OPEN_POPOUT, {
+    p.default.track(v.AnalyticEvents.OPEN_POPOUT, {
       type: "Role Icon Popout",
       guild_id: i.id,
       ...(0, s.collectChannelAnalyticsMetadata)(u.default.getChannel(x.default.getChannelId(i.id)))
     })
   }, []);
-  let I = (0, a.useStateFromStores)([f.default], () => null != e.roleId ? f.default.getRole(i.id, e.roleId) : void 0),
-    _ = (0, c.isSubscriptionRole)(I),
-    E = _ ? N.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({
+  let _ = (0, a.useStateFromStores)([f.default], () => null != e.roleId ? f.default.getRole(i.id, e.roleId) : void 0),
+    I = (0, c.isSubscriptionRole)(_),
+    E = I ? N.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({
       name: T
     }) : N.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({
       name: T
@@ -48,7 +48,7 @@ e.default = t => {
       size: 40
     };
   return (0, l.jsx)(n.Dialog, {
-    children: (0, l.jsx)(p.MessagePopoutContent, {
+    children: (0, l.jsx)(w.MessagePopoutContent, {
       children: (0, l.jsxs)("div", {
         className: y.popoutContainer,
         children: [(0, l.jsxs)("div", {
@@ -80,7 +80,7 @@ e.default = t => {
           className: y.ctaButton,
           innerClassName: y.ctaButtonContent,
           fullWidth: !0,
-          onClick: _ ? () => {
+          onClick: I ? () => {
             (0, h.transitionTo)(v.Routes.CHANNEL(i.id, C.StaticChannelRoute.ROLE_SUBSCRIPTIONS))
           } : () => {
             (0, d.openGuildBoostingMarketingModal)({

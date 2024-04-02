@@ -19,15 +19,15 @@ var l = i("735250"),
   m = i("410030"),
   g = i("726542"),
   j = i("367907"),
-  w = i("906732"),
-  p = i("171368"),
+  p = i("906732"),
+  w = i("171368"),
   v = i("598077"),
   C = i("271383"),
   N = i("467679"),
   y = i("263704"),
   T = i("626135"),
-  I = i("275759"),
-  _ = i("107484"),
+  _ = i("275759"),
+  I = i("107484"),
   E = i("977392"),
   O = i("134433"),
   M = i("753194"),
@@ -61,7 +61,7 @@ function B(t) {
       break;
     default:
       e = s
-  } else e = (0, I.getConnectionsCheckText)({
+  } else e = (0, _.getConnectionsCheckText)({
     connectionType: i,
     connectionMetadataField: r,
     operator: a,
@@ -92,14 +92,14 @@ function D(t) {
         f = d.find(t => null != t.application),
         m = g.default.get(t),
         j = null == f ? void 0 : f.application,
-        w = (null == j ? void 0 : j.bot) != null ? new v.default(j.bot) : null;
-      return I.officialApplicationIds.includes(null !== (e = null == j ? void 0 : j.id) && void 0 !== e ? e : "") ? o = (0, l.jsx)(M.default, {
+        p = (null == j ? void 0 : j.bot) != null ? new v.default(j.bot) : null;
+      return _.officialApplicationIds.includes(null !== (e = null == j ? void 0 : j.id) && void 0 !== e ? e : "") ? o = (0, l.jsx)(M.default, {
         className: L.botTag,
         color: r,
         size: 16
-      }) : null != w && (o = (0, l.jsx)(N.default, {
+      }) : null != p && (o = (0, l.jsx)(N.default, {
         className: L.botTag,
-        verified: w.isVerifiedBot()
+        verified: p.isVerifiedBot()
       })), (0, l.jsxs)("div", {
         className: L.popoutChecksGroup,
         children: [(0, l.jsxs)("div", {
@@ -108,8 +108,8 @@ function D(t) {
             src: (0, h.isThemeDark)(i) ? m.icon.darkSVG : m.icon.lightSVG,
             alt: "",
             className: L.popoutCheckGroupPlatformIcon
-          }) : null, null != w ? (0, l.jsx)(x.default, {
-            user: w,
+          }) : null, null != p ? (0, l.jsx)(x.default, {
+            user: p,
             size: u.AvatarSizes.SIZE_20,
             className: L.popoutCheckGroupPlatformIcon
           }) : null, (0, l.jsx)(u.Text, {
@@ -199,7 +199,7 @@ function k(t) {
     channel: s
   } = t, {
     analyticsLocations: o
-  } = (0, w.default)(), c = (0, E.default)(a, e, s.id, !0), h = (0, d.useStateFromStores)([_.default], () => _.default.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)), [x, m] = r.useState(null == h);
+  } = (0, p.default)(), c = (0, E.default)(a, e, s.id, !0), h = (0, d.useStateFromStores)([I.default], () => I.default.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)), [x, m] = r.useState(null == h);
   if (null == c) return null;
   async function g() {
     n()(null != c, "visibleConnectionsRole is null"), x && null == h && (await f.default.fetchGuildRoleConnectionsEligibility(a.id, c.id), m(!1))
@@ -221,7 +221,7 @@ function k(t) {
             (0, S.openGuildRoleConnectionsModal)(a.id)
           },
           onOpenProfile: () => {
-            (0, p.openUserProfileModal)({
+            (0, w.openUserProfileModal)({
               userId: e,
               messageId: i,
               guildId: a.id,

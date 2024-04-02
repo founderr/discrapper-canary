@@ -21,18 +21,18 @@ e.default = function(t) {
     childrenMessageContent: m,
     childrenAccessories: g,
     messageRef: j,
-    focusProps: w = {
+    focusProps: p = {
       offset: {
         left: 4,
         right: 4
       }
     },
-    hasThread: p,
+    hasThread: w,
     isSystemMessage: v,
     hasReply: C,
     ...N
   } = t, y = (0, l.jsx)(n.FocusRing, {
-    ...w,
+    ...p,
     children: (0, l.jsxs)("div", {
       className: a()(e, {
         [s.wrapper]: !0,
@@ -40,7 +40,7 @@ e.default = function(t) {
         [s.compact]: i,
         [s.cozy]: !i,
         [s.zalgo]: o,
-        [s.hasThread]: p,
+        [s.hasThread]: w,
         [s.isSystemMessage]: v,
         [s.hasReply]: C
       }),
