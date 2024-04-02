@@ -18,8 +18,8 @@ var i = s("613828"),
   R = s("981631"),
   S = s("474936"),
   m = s("689938"),
-  A = s("507954");
-let N = r.default.connectStores([T.default], () => ({
+  N = s("507954");
+let A = r.default.connectStores([T.default], () => ({
   user: T.default.getCurrentUser()
 }))((0, u.default)((0, o.default)(e => {
   let {
@@ -29,12 +29,12 @@ let N = r.default.connectStores([T.default], () => ({
     user: r
   } = e;
   return s ? (0, a.jsxs)("div", {
-    className: A.homeWrapperNormal,
+    className: N.homeWrapperNormal,
     children: [(0, a.jsx)(l.default, {
       section: R.AnalyticsSections.NAVIGATION,
       children: (0, a.jsxs)(_.default, {
         isAuthenticated: s,
-        className: A.headerBar,
+        className: N.headerBar,
         children: [(0, a.jsx)(_.default.Icon, {
           icon: f.default,
           "aria-hidden": !0
@@ -48,7 +48,7 @@ let N = r.default.connectStores([T.default], () => ({
         align: I.default.Align.CENTER,
         justify: I.default.Justify.CENTER,
         children: (0, a.jsx)(n.Spinner, {
-          className: A.spinner
+          className: N.spinner
         })
       }) : (0, a.jsx)(E.default, {
         entrypoint: S.PremiumMarketingEntrypoints.ApplicationStoreHome
@@ -58,4 +58,4 @@ let N = r.default.connectStores([T.default], () => ({
     to: R.Routes.LOGIN
   })
 })));
-t.default = N
+t.default = A
