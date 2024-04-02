@@ -10,89 +10,97 @@ var a = s("735250"),
   d = s("906732"),
   c = s("332475"),
   _ = s("626135"),
-  E = s("1014"),
-  T = s("314684"),
-  I = s("898997"),
-  f = s("794484"),
-  R = s("347475"),
-  S = s("342414"),
-  m = s("391110"),
-  A = s("71363"),
-  N = s("781800"),
-  p = s("981631"),
-  g = s("379101"),
-  C = s("865215");
+  E = s("281494"),
+  T = s("1014"),
+  I = s("520540"),
+  f = s("314684"),
+  R = s("898997"),
+  S = s("794484"),
+  m = s("347475"),
+  N = s("342414"),
+  A = s("391110"),
+  p = s("71363"),
+  g = s("781800"),
+  C = s("981631"),
+  O = s("379101"),
+  P = s("865215");
 t.default = () => {
   let e = i.useRef(null),
     [t, s] = i.useState(!1),
     {
       analyticsLocations: r
     } = (0, d.default)(u.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
-    [O, P] = i.useState(!1);
-  (0, T.useFetchEntitlementsForTenureReward)(), (0, I.useMaybeFetchReferralsRemaining)("SubscriberNitroHome");
+    [M, h] = i.useState(!1);
+  (0, f.useFetchEntitlementsForTenureReward)(), (0, R.useMaybeFetchReferralsRemaining)("SubscriberNitroHome");
   let {
-    enabled: M
-  } = E.default.useExperiment({
+    enabled: L
+  } = I.ReferralProgramSender.useExperiment({
+    location: "SubscriberNitroHome"
+  }), {
+    enabled: x
+  } = T.default.useExperiment({
     location: "SubscriberNitroHome"
   }, {
     autoTrackExposure: !1
   });
-  return (0, a.jsxs)(a.Fragment, {
+  return i.useEffect(() => {
+    L && (0, E.fetchReferralEligibleUsers)()
+  }, [L]), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.AdvancedScrollerAuto, {
-      className: g.mainPageScroller,
+      className: O.mainPageScroller,
       ref: e,
       children: (0, a.jsx)("div", {
-        className: g.container,
+        className: O.container,
         children: (0, a.jsxs)(d.AnalyticsLocationProvider, {
           value: r,
-          children: [(0, a.jsx)(S.default, {
-            className: g.heroHeading
-          }), (0, a.jsx)(f.default, {
-            variant: m.PerksDiscoverabilityCardSection.WHATS_NEW,
-            className: n()(g.whatsNew, {
-              [g.whatsNewWithOriginalHeroHeading]: !M
+          children: [(0, a.jsx)(N.default, {
+            className: O.heroHeading
+          }), (0, a.jsx)(S.default, {
+            variant: A.PerksDiscoverabilityCardSection.WHATS_NEW,
+            className: n()(O.whatsNew, {
+              [O.whatsNewWithOriginalHeroHeading]: !x
             }),
             noBackground: !0,
             leftAlignHeaders: !0
-          }), (0, a.jsx)(f.default, {
-            className: g.perksDiscoverability,
+          }), (0, a.jsx)(S.default, {
+            className: O.perksDiscoverability,
             noBackground: !0,
             leftAlignHeaders: !0,
-            showAllPerksButton: (0, a.jsx)(N.default, {
+            showAllPerksButton: (0, a.jsx)(g.default, {
               setIsAllPerksVisible: s,
-              previousComponent: m.NitroLandingPages.HOME
+              previousComponent: A.NitroLandingPages.HOME
             })
-          }), (0, a.jsx)(R.default, {
-            className: g.giftNitro,
+          }), (0, a.jsx)(m.default, {
+            className: O.giftNitro,
             location: u.default.PREMIUM_MARKETING_GIFT_SECTION,
             analyticsLocation: {
-              page: p.AnalyticsPages.NITRO_HOME,
-              section: p.AnalyticsSections.GIFT_BANNER
+              page: C.AnalyticsPages.NITRO_HOME,
+              section: C.AnalyticsSections.GIFT_BANNER
             }
           }), (0, a.jsx)("div", {
-            className: g.footerSpacing
+            className: O.footerSpacing
           }), (0, a.jsx)(l.VisibilitySensor, {
             onChange: e => {
-              e && !O && (_.default.track(p.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+              e && !M && (_.default.track(C.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                 location_stack: r
-              }), P(!0))
+              }), h(!0))
             },
             children: (0, a.jsx)("div", {
-              className: g.bottomOfPageVisibilitySensor
+              className: O.bottomOfPageVisibilitySensor
             })
           }), (0, a.jsx)(c.default, {
-            src: C,
-            className: g.bottomIllustration,
+            src: P,
+            className: O.bottomIllustration,
             width: 112,
             height: 85,
             zoomable: !1
           })]
         })
       })
-    }), (0, a.jsx)(A.default, {
+    }), (0, a.jsx)(p.default, {
       isAllPerksVisible: t,
       setIsAllPerksVisible: s,
-      previousComponent: m.NitroLandingPages.HOME
+      previousComponent: A.NitroLandingPages.HOME
     })]
   })
 }
