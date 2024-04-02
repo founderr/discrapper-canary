@@ -12,6 +12,12 @@ n.r(t), n.d(t, {
   formatEntryTimestamp: function() {
     return f
   },
+  getAggregateRange: function() {
+    return C
+  },
+  getEntryDuration: function() {
+    return E
+  },
   isEntryActive: function() {
     return h
   },
@@ -105,4 +111,14 @@ function m(e) {
 
 function p(e) {
   return null != e.expires_at && new Date(e.expires_at) < new Date
+}
+
+function E(e) {
+  let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.DURATION_SECONDS);
+  return null == t ? void 0 : t.duration_seconds
+}
+
+function C(e) {
+  let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.AGGREGATE_RANGE);
+  return null == t ? void 0 : t.range
 }

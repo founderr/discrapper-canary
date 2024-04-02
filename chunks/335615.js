@@ -412,11 +412,14 @@ class ee extends l.Component {
             index: l
           }, "member-".concat(i.user.id))
         }
-        if (i.type === j.MemberListRowTypes.CONTENT_INVENTORY) return (0, a.jsx)(N.default, {
-          ...i,
-          channel: this.props.channel,
-          index: l
-        }, "content-inventory-".concat(i.entry.id));
+        if (i.type === j.MemberListRowTypes.CONTENT_INVENTORY) {
+          let e = "content-inventory-".concat(i.entry.id);
+          return null != i.entry.original_id && (e += "-".concat(i.entry.original_id)), (0, a.jsx)(N.default, {
+            ...i,
+            channel: this.props.channel,
+            index: l
+          }, e)
+        }
         if (i.type === j.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(v.default, {}, "content-inventory-hidden-entry")
       }
       return (0, a.jsx)($, {
