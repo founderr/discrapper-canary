@@ -121,7 +121,14 @@ function B() {
         innerClassName: b.innerButton,
         pauseAnimation: !e || t,
         onClick: e => {
-          (0, E.openModalLazy)(async () => {
+          t ? (0, E.openModalLazy)(async () => {
+            let {
+              default: e
+            } = await Promise.all([s.e("99387"), s.e("79047")]).then(s.bind(s, "227627"));
+            return t => (0, a.jsx)(e, {
+              ...t
+            })
+          }) : (0, E.openModalLazy)(async () => {
             let {
               default: e
             } = await Promise.all([s.e("99387"), s.e("58955")]).then(s.bind(s, "31088"));
