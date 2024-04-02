@@ -108,12 +108,13 @@ C(E, "defaultProps", {
 t.default = e => {
   let {
     componentRef: t,
-    ...n
-  } = e, s = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), r = (0, u.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+    ignoreReducedMotion: n = !1,
+    ...s
+  } = e, r = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), i = (0, u.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   return (0, a.jsx)(E, {
-    ...n,
-    isWindowFocused: s,
-    useReducedMotion: r,
+    ...s,
+    isWindowFocused: r,
+    useReducedMotion: i && !n,
     ref: t
   })
 }

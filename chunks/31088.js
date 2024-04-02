@@ -22,12 +22,12 @@ function v(e) {
   let {
     onClose: n,
     transitionState: t
-  } = e, [v, b] = u.useState(!1), [g, S] = u.useState(!1), [E, h] = u.useState(null), k = u.useRef(null), [I, C] = u.useState(!1), [A, N] = u.useState(d.BoxAnimationScenes.ENTRY), T = u.useMemo(() => (0, d.getLootboxes)(), []), B = null != E ? T[E.openedItem] : null, D = u.useRef(null), w = u.useRef(null), y = u.useRef(null), L = u.useRef(null), R = u.useRef(null);
-  (0, o.useFocusLock)(R);
-  let j = (0, s.default)(w.current, 0),
+  } = e, [v, b] = u.useState(!1), [g, S] = u.useState(!1), [E, h] = u.useState(null), k = u.useRef(null), [I, C] = u.useState(!1), [A, N] = u.useState(d.BoxAnimationScenes.ENTRY), T = u.useMemo(() => (0, d.getLootboxes)(), []), B = null != E ? T[E.openedItem] : null, D = u.useRef(null), R = u.useRef(null), w = u.useRef(null), y = u.useRef(null), L = u.useRef(null);
+  (0, o.useFocusLock)(L);
+  let j = (0, s.default)(R.current, 0),
     O = t === o.ModalTransitionState.EXITING || t === o.ModalTransitionState.EXITED,
     P = u.useCallback(() => {
-      let e = A === d.BoxAnimationScenes.IDLE ? D.current : y.current;
+      let e = A === d.BoxAnimationScenes.IDLE ? D.current : w.current;
       if (null == e) return 0;
       let n = A === d.BoxAnimationScenes.IDLE ? .3 : .9,
         t = e.duration * n,
@@ -54,14 +54,14 @@ function v(e) {
           null === (n = D.current) || void 0 === n || n.play(), N(d.BoxAnimationScenes.IDLE);
           break;
         case d.BoxAnimationScenes.OPEN:
-          null === (t = y.current) || void 0 === t || t.play(), j(0, {
+          null === (t = w.current) || void 0 === t || t.play(), j(0, {
             getPercent: P
           }), N(d.BoxAnimationScenes.OPENED);
           break;
         case d.BoxAnimationScenes.OPENED:
-          if (null != L.current && !v) {
+          if (null != y.current && !v) {
             let e = (null == E ? void 0 : E.openedItem) != null ? T[E.openedItem] : null;
-            L.current.src = null !== (r = null == e ? void 0 : e.sound) && void 0 !== r ? r : "", L.current.play()
+            y.current.src = null !== (r = null == e ? void 0 : e.sound) && void 0 !== r ? r : "", y.current.play()
           }
           b(!0), S(!1)
       }
@@ -72,16 +72,16 @@ function v(e) {
   return u.useEffect(() => {
     let e = new l.Interval;
     return e.start(50, () => {
-      if (null == D.current || null == w.current) return;
+      if (null == D.current || null == R.current) return;
       let n = D.current.currentTime / D.current.duration;
-      w.current.paused && n >= .3 && (j(1, {
+      R.current.paused && n >= .3 && (j(1, {
         getPercent: P
-      }), w.current.play(), e.stop())
+      }), R.current.play(), e.stop())
     }), () => e.stop()
   }, [P, j]), u.useEffect(() => () => {
     null != k.current && (0, i.reportFinishedOpeningLootbox)(k.current.userLootboxData, k.current.openedItem)
   }, []), (0, r.jsx)("div", {
-    ref: R,
+    ref: L,
     className: O ? m.backdropClosing : m.backdrop,
     children: (0, r.jsxs)("div", {
       className: O ? m.wrapperClosing : m.wrapper,
@@ -98,6 +98,7 @@ function v(e) {
         children: (0, r.jsx)(a.default, {
           className: m.animation,
           importData: c.importLootboxAnimationData,
+          ignoreReducedMotion: !0,
           nextScene: A,
           sceneSegments: d.BoxAnimationSceneSegments,
           onScenePlay: F,
@@ -109,16 +110,16 @@ function v(e) {
         src: p,
         preload: "auto"
       }), (0, r.jsx)("audio", {
-        ref: w,
+        ref: R,
         src: f,
         preload: "auto",
         loop: !0
       }), (0, r.jsx)("audio", {
-        ref: y,
+        ref: w,
         src: x,
         preload: "auto"
       }), (0, r.jsx)("audio", {
-        ref: L
+        ref: y
       })]
     })
   })
