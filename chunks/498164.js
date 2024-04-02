@@ -15,15 +15,14 @@ var i = n("756647"),
   C = n("314897"),
   S = n("594174"),
   m = n("626135"),
-  I = n("585483"),
-  p = n("591759"),
-  T = n("998502"),
-  g = n("996106"),
-  A = n("186901"),
-  N = n("981631");
+  I = n("591759"),
+  p = n("998502"),
+  T = n("996106"),
+  g = n("186901"),
+  A = n("981631");
 
-function R(e, t) {
-  null != e && m.default.track(N.AnalyticEvents.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
+function N(e, t) {
+  null != e && m.default.track(A.AnalyticEvents.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
     invite_code: null,
     has_auth_token: null,
     is_backgrounded: null,
@@ -31,8 +30,8 @@ function R(e, t) {
     link_type: t
   })
 }(a = s || (s = {})).SETTINGS = "settings", a.CHANGELOG = "changelog", a.LIBRARY = "library", a.STORE = "store", a.INVITE = "invite", a.CHANNEL = "channel", a.GUILD_SETTINGS = "guild_settings", t.default = {
-  [N.RPCCommands.INVITE_BROWSER]: {
-    scope: A.RPC_PRIVATE_SCOPE,
+  [A.RPCCommands.INVITE_BROWSER]: {
+    scope: g.RPC_PRIVATE_SCOPE,
     async handler(e) {
       let {
         args: {
@@ -41,22 +40,22 @@ function R(e, t) {
       } = e, {
         invite: n
       } = await E.default.resolveInvite(t, "Desktop Modal");
-      if (null == n) throw new g.default({
-        errorCode: N.RPCErrors.INVALID_INVITE
+      if (null == n) throw new T.default({
+        errorCode: A.RPCErrors.INVALID_INVITE
       }, "Invalid invite id: ".concat(t));
       return C.default.isAuthenticated() ? o.default.dispatch({
         type: "INVITE_MODAL_OPEN",
         invite: n,
         code: t,
-        context: N.AppContext.APP
-      }) : (0, _.replaceWith)(N.Routes.INVITE(t)), {
+        context: A.AppContext.APP
+      }) : (0, _.replaceWith)(A.Routes.INVITE(t)), {
         invite: n,
         code: t
       }
     }
   },
-  [N.RPCCommands.GUILD_TEMPLATE_BROWSER]: {
-    scope: A.RPC_PRIVATE_SCOPE,
+  [A.RPCCommands.GUILD_TEMPLATE_BROWSER]: {
+    scope: g.RPC_PRIVATE_SCOPE,
     async handler(e) {
       let {
         args: {
@@ -67,10 +66,10 @@ function R(e, t) {
       let {
         guildTemplate: a
       } = await h.default.resolveGuildTemplate(t);
-      if (null == a) throw new g.default({
-        errorCode: N.RPCErrors.INVALID_GUILD_TEMPLATE
+      if (null == a) throw new T.default({
+        errorCode: A.RPCErrors.INVALID_GUILD_TEMPLATE
       }, "Invalid guild template id: ".concat(t));
-      return T.default.focus(), (0, r.openModalLazy)(async () => {
+      return p.default.focus(), (0, r.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("10778"), n.e("90424")]).then(n.bind(n, "766775"));
@@ -84,8 +83,8 @@ function R(e, t) {
       }
     }
   },
-  [N.RPCCommands.GIFT_CODE_BROWSER]: {
-    scope: A.RPC_PRIVATE_SCOPE,
+  [A.RPCCommands.GIFT_CODE_BROWSER]: {
+    scope: g.RPC_PRIVATE_SCOPE,
     handler(e) {
       let {
         args: {
@@ -98,9 +97,9 @@ function R(e, t) {
             let {
               giftCode: s
             } = a;
-            T.default.focus(), m.default.track(N.AnalyticEvents.OPEN_MODAL, {
+            p.default.focus(), m.default.track(A.AnalyticEvents.OPEN_MODAL, {
               type: "gift_accept",
-              location: N.DIRECT_ANALYTICS_LOCATION
+              location: A.DIRECT_ANALYTICS_LOCATION
             }), (0, r.openModalLazy)(async () => {
               let {
                 default: e
@@ -112,15 +111,15 @@ function R(e, t) {
             }), e({
               giftCode: s
             })
-          }).catch(() => a(new g.default({
-            errorCode: N.RPCErrors.INVALID_GIFT_CODE
+          }).catch(() => a(new T.default({
+            errorCode: A.RPCErrors.INVALID_GIFT_CODE
           }, "Invalid gift code: ".concat(t))))
         })
       })
     }
   },
-  [N.RPCCommands.DEEP_LINK]: {
-    scope: A.RPC_PRIVATE_SCOPE,
+  [A.RPCCommands.DEEP_LINK]: {
+    scope: g.RPC_PRIVATE_SCOPE,
     handler(e) {
       let {
         args: {
@@ -128,38 +127,38 @@ function R(e, t) {
           params: n
         }
       } = e;
-      switch (T.default.focus(), t) {
-        case A.RPCDeepLinks.USER_SETTINGS:
-          null != n && ((0, _.replaceWith)(N.Routes.SETTINGS(n.section, n.subsection)), R(n.fingerprint, "settings"));
+      switch (p.default.focus(), t) {
+        case g.RPCDeepLinks.USER_SETTINGS:
+          null != n && ((0, _.replaceWith)(A.Routes.SETTINGS(n.section, n.subsection)), N(n.fingerprint, "settings"));
           break;
-        case A.RPCDeepLinks.CHANGELOG:
-          null != n && ((0, _.replaceWith)(p.default.formatPathWithQuery(N.Routes.CHANGELOGS(n.date), n.query)), R(n.fingerprint, "changelog"));
+        case g.RPCDeepLinks.CHANGELOG:
+          null != n && ((0, _.replaceWith)(I.default.formatPathWithQuery(A.Routes.CHANGELOGS(n.date), n.query)), N(n.fingerprint, "changelog"));
           break;
-        case A.RPCDeepLinks.LIBRARY:
-          (0, _.replaceWith)(N.Routes.APPLICATION_LIBRARY), null != n && R(n.fingerprint, "library");
+        case g.RPCDeepLinks.LIBRARY:
+          (0, _.replaceWith)(A.Routes.APPLICATION_LIBRARY), null != n && N(n.fingerprint, "library");
           break;
-        case A.RPCDeepLinks.STORE_HOME:
-          (0, _.replaceWith)(N.Routes.APPLICATION_STORE), null != n && R(n.fingerprint, "store");
+        case g.RPCDeepLinks.STORE_HOME:
+          (0, _.replaceWith)(A.Routes.APPLICATION_STORE), null != n && N(n.fingerprint, "store");
           break;
-        case A.RPCDeepLinks.STORE_LISTING:
-          null != n && ((0, _.replaceWith)(N.Routes.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), R(n.fingerprint, "store"));
+        case g.RPCDeepLinks.STORE_LISTING:
+          null != n && ((0, _.replaceWith)(A.Routes.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), N(n.fingerprint, "store"));
           break;
-        case A.RPCDeepLinks.PICK_GUILD_SETTINGS:
+        case g.RPCDeepLinks.PICK_GUILD_SETTINGS:
           null != n && ((0, _.replaceWith)({
-            pathname: N.Routes.PICK_GUILD_SETTINGS(n.section, n.subsection),
+            pathname: A.Routes.PICK_GUILD_SETTINGS(n.section, n.subsection),
             search: n.search
-          }), R(n.fingerprint, "guild_settings"));
+          }), N(n.fingerprint, "guild_settings"));
           break;
-        case A.RPCDeepLinks.CHANNEL:
+        case g.RPCDeepLinks.CHANNEL:
           null != n && ((0, _.replaceWith)({
-            pathname: N.Routes.CHANNEL(n.guildId, n.channelId, n.messageId),
+            pathname: A.Routes.CHANNEL(n.guildId, n.channelId, n.messageId),
             search: n.search
-          }), R(n.fingerprint, "channel"))
+          }), N(n.fingerprint, "channel"))
       }
     }
   },
-  [N.RPCCommands.BROWSER_HANDOFF]: {
-    scope: A.RPC_PRIVATE_LIMITED_SCOPE,
+  [A.RPCCommands.BROWSER_HANDOFF]: {
+    scope: g.RPC_PRIVATE_LIMITED_SCOPE,
     handler(e) {
       let {
         args: {
@@ -167,12 +166,12 @@ function R(e, t) {
           fingerprint: n
         }
       } = e;
-      T.default.focus(null, !0), (0, d.handoffEnd)(t, n)
+      p.default.focus(null, !0), (0, d.handoffEnd)(t, n)
     }
   },
-  [N.RPCCommands.CONNECTIONS_CALLBACK]: {
-    scope: A.RPC_PRIVATE_SCOPE,
-    handler: async e => {
+  [A.RPCCommands.CONNECTIONS_CALLBACK]: {
+    scope: g.RPC_PRIVATE_SCOPE,
+    handler(e) {
       let {
         args: {
           providerType: t,
@@ -181,19 +180,15 @@ function R(e, t) {
           state: s
         }
       } = e;
-      try {
-        return await c.default.callback(t, {
-          code: n,
-          openid_params: a,
-          state: s
-        })
-      } catch (e) {
-        throw I.ComponentDispatch.dispatch(N.ComponentActions.CONNECTIONS_CALLBACK_ERROR), e
-      }
+      return c.default.callback(t, {
+        code: n,
+        openid_params: a,
+        state: s
+      })
     }
   },
-  [N.RPCCommands.BRAINTREE_POPUP_BRIDGE_CALLBACK]: {
-    scope: A.RPC_PRIVATE_SCOPE,
+  [A.RPCCommands.BRAINTREE_POPUP_BRIDGE_CALLBACK]: {
+    scope: g.RPC_PRIVATE_SCOPE,
     handler(e) {
       let {
         args: {
@@ -203,15 +198,15 @@ function R(e, t) {
         }
       } = e;
       return (0, u.popupBridgeCallback)({
-        paymentSourceType: N.PaymentSourceTypes.PAYPAL,
+        paymentSourceType: A.PaymentSourceTypes.PAYPAL,
         state: t,
         path: n,
         query: a
       })
     }
   },
-  [N.RPCCommands.BILLING_POPUP_BRIDGE_CALLBACK]: {
-    scope: A.RPC_PRIVATE_SCOPE,
+  [A.RPCCommands.BILLING_POPUP_BRIDGE_CALLBACK]: {
+    scope: g.RPC_PRIVATE_SCOPE,
     handler(e) {
       let {
         args: {
