@@ -668,5 +668,8 @@ let a = {
     },
     "you-bar-bg": {
       name: "bg-surface-overlay"
+    },
+    "thread-channel-spine": {
+      name: "interactive-muted"
     }
   }

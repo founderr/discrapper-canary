@@ -1,15 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
-  isRedesignToggleIgnored: function() {
-    return a
-  },
-  useRedesignToggleIgnored: function() {
-    return s
-  }
-});
+n.r(t);
 var i = n("818083");
-n("781157");
-let r = (0, i.createExperiment)({
+n("781157"), (0, i.createExperiment)({
   kind: "user",
   id: "2023-09_mobile_redesign_override_toggles",
   label: "Tabs V2 - redesign opt-out/in for all",
@@ -39,8 +31,7 @@ let r = (0, i.createExperiment)({
       ignore: !0
     }
   }]
-});
-(0, i.createExperiment)({
+}), (0, i.createExperiment)({
   kind: "user",
   id: "2023-09_mobile_redesign_override_toggles_t2",
   label: "Tabs V2 - redesign opt-out for T2",
@@ -60,14 +51,4 @@ let r = (0, i.createExperiment)({
       hide: !0
     }
   }]
-});
-let s = () => r.useExperiment({
-    location: "x"
-  }, {
-    autoTrackExposure: !1
-  }).ignore,
-  a = () => r.getCurrentConfig({
-    location: "x"
-  }, {
-    autoTrackExposure: !1
-  }).ignore
+})
