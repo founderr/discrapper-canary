@@ -22,8 +22,8 @@ var a = n("735250"),
   g = n("70956"),
   A = n("358085"),
   N = n("557177"),
-  O = n("998502"),
-  R = n("981631"),
+  R = n("998502"),
+  O = n("981631"),
   v = n("689938"),
   L = n("82863");
 
@@ -59,7 +59,7 @@ class M extends s.PureComponent {
     if (e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== i || d) {
       if (i && null != this.videoRef) {
         let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * g.default.Millis.SECOND), 600);
-        clearTimeout(this._noProblemsTimeout), c.Storage.get(R.DISCODO_STORAGE_KEY) && this._connectedSound.play(), o ? this.setState({
+        clearTimeout(this._noProblemsTimeout), c.Storage.get(O.DISCODO_STORAGE_KEY) && this._connectedSound.play(), o ? this.setState({
           problems: !1,
           hide: i
         }) : this._noProblemsTimeout = setTimeout(() => {
@@ -129,14 +129,14 @@ class M extends s.PureComponent {
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsxs)(f.Anchor, {
               className: L.twitterLink,
-              href: R.Links.TWITTER_SUPPORT,
+              href: O.Links.TWITTER_SUPPORT,
               target: "_blank",
               children: [(0, a.jsx)(p.default, {
                 className: L.icon
               }), v.default.Messages.TWEET_US]
             }), (0, a.jsxs)(f.Anchor, {
               className: L.statusLink,
-              href: R.Links.STATUS,
+              href: O.Links.STATUS,
               target: "_blank",
               children: [(0, a.jsx)(I.default, {
                 className: L.icon
@@ -217,7 +217,7 @@ class M extends s.PureComponent {
     }()), P(this, "handleReady", () => {
       this.setState({
         ready: !0
-      }), (0, A.isDesktop)() && (O.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), O.default.send("UPDATE_OPEN_ON_STARTUP"))
+      }), (0, A.isDesktop)() && (R.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), R.default.send("UPDATE_OPEN_ON_STARTUP"))
     }), P(this, "setVideoRef", e => {
       this.videoRef = e
     }), P(this, "setProblemsTimeout", () => {

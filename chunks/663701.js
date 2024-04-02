@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("377171"),
   A = n("243778"),
   N = n("922409"),
-  O = n("899740"),
-  R = n("28476"),
+  R = n("899740"),
+  O = n("28476"),
   v = n("880257"),
   L = n("631885"),
   P = n("457396"),
@@ -141,10 +141,10 @@ let ee = e => {
   ea = e => {
     let {
       selected: t
-    } = e, n = (0, O.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
+    } = e, n = (0, R.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
       channelId: l
     } = (0, N.useMessageRequestSidebarState)();
-    if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
+    if (!(0, O.useShouldShowMessageRequestsRow)()) return null;
     let i = null == l ? void 0 : () => h.default.preload(X.ME, l);
     return (0, a.jsx)(q.LinkButton, {
       selected: t,

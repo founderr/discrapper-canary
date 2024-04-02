@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("299206"),
   A = n("440051"),
   N = n("734934"),
-  O = n("158238"),
-  R = n("785717"),
+  R = n("158238"),
+  O = n("785717"),
   v = n("221292"),
   L = n("318661"),
   P = n("747074"),
@@ -167,7 +167,7 @@ function $(e) {
       }).expiringStatus,
       s = x.StatusExpiresAtSetting.useSetting(),
       l = (0, N.useFocusModeEnabled)(),
-      i = O.QuietModeExperiment.useExperiment({
+      i = R.QuietModeExperiment.useExperiment({
         location: "account popout"
       }).allowQuietMode || l,
       r = x.FocusModeExpiresAtSetting.useSetting(),
@@ -273,7 +273,7 @@ function $(e) {
     });
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: G,
-    children: (0, a.jsx)(R.UserProfileAnalyticsProvider, {
+    children: (0, a.jsx)(O.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",
       userId: t.id,
       guildId: l,

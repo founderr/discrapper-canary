@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("606304"),
   A = n("979651"),
   N = n("938475"),
-  O = n("823379"),
-  R = n("557177"),
+  R = n("823379"),
+  O = n("557177"),
   v = n("981631");
 
 function L(e, t, n, a) {
@@ -36,7 +36,7 @@ function L(e, t, n, a) {
       l = new r.BatchedStoreListener(e, () => {
         let e = t(),
           l = n(s, e);
-        null != l && !I.default.isSoundDisabled(l) && (0, R.playSound)(l, null != a ? a : .4), s = e
+        null != l && !I.default.isSoundDisabled(l) && (0, O.playSound)(l, null != a ? a : .4), s = e
       });
     return l.attach("useSound"), () => l.detach()
   })
@@ -198,7 +198,7 @@ function j() {
   return L([T.default, o.default, _.default], () => {
     let e = T.default.getVoiceChannelId(),
       t = _.default.getId(),
-      n = (0, O.isNotNullish)(e) ? o.default.getEmbeddedActivitiesForChannel(e) : o.NO_ACTIVITIES;
+      n = (0, R.isNotNullish)(e) ? o.default.getEmbeddedActivitiesForChannel(e) : o.NO_ACTIVITIES;
     return {
       voiceChannelId: e,
       currentUserId: t,
@@ -214,7 +214,7 @@ function j() {
     e.channelActivities.length < l.length && (n = "activity_launch");
     let i = e.channelActivities.find(e => e.userIds.has(s)),
       r = l.find(e => e.userIds.has(s));
-    return void 0 === r && (0, O.isNotNullish)(i) && (n = "activity_end"), void 0 === i && (0, O.isNotNullish)(r) && r.userIds.size > 1 && (n = "activity_user_join"), (0, O.isNotNullish)(r) && (0, O.isNotNullish)(i) && (r.userIds.size > i.userIds.size && (n = "activity_user_join"), r.userIds.size < i.userIds.size && (n = "activity_user_left")), n
+    return void 0 === r && (0, R.isNotNullish)(i) && (n = "activity_end"), void 0 === i && (0, R.isNotNullish)(r) && r.userIds.size > 1 && (n = "activity_user_join"), (0, R.isNotNullish)(r) && (0, R.isNotNullish)(i) && (r.userIds.size > i.userIds.size && (n = "activity_user_join"), r.userIds.size < i.userIds.size && (n = "activity_user_left")), n
   }), null
 }
 

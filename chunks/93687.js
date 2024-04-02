@@ -2,7 +2,7 @@
 n.r(t);
 let l = (0, n("818083").createExperiment)({
   kind: "user",
-  id: "2024-03_gdm_presence",
+  id: "2024-04_gdm_presence",
   label: "Group DM Presence",
   defaultConfig: {
     isFacepileEnabled: !1,

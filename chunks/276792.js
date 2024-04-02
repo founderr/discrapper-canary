@@ -29,7 +29,7 @@ function C(e) {
     isLightTheme: p
   } = e, T = "AnnouncementModalVariant1", {
     onClose: g
-  } = S, A = null != C.button && "" !== C.button.copy ? C.button.copy : E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, N = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = S, A = null != C.button && "" !== C.button.copy ? C.button.copy : E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, N = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, r.transitionTo)(f.Routes.APPLICATION_STORE), g()
   } : () => (0, i.default)({
     subscriptionTier: c.PremiumSubscriptionSKUs.TIER_2,
@@ -42,7 +42,7 @@ function C(e) {
     onClose: e => {
       e && g()
     }
-  }), R = "" !== C.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
+  }), O = "" !== C.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
     className: h.termsApplyAnchor,
     href: d.default.getArticleURL(C.helpArticleId),
     children: (0, a.jsx)(l.Heading, {
@@ -61,7 +61,7 @@ function C(e) {
     renderModalProps: S,
     header: C.header,
     subHeader: C.subheader,
-    subHeaderExtra: R,
+    subHeaderExtra: O,
     heroArt: v,
     featureCards: C.featureCards.map(e => ({
       header: e.header,
@@ -83,7 +83,7 @@ function C(e) {
             cta_type: N,
             seconds_open: Math.round((Date.now() - e) / 1e3),
             target: T
-          }), O()
+          }), R()
         },
         children: [(0, a.jsx)("img", {
           alt: "",

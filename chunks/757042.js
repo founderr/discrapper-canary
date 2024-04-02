@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("981631"),
   A = n("921944"),
   N = n("689938"),
-  O = n("127906");
-let R = "https://www.youtube.com/embed/".concat(T.LOOTBOX_VIDEO_ID, "?autoplay=1&mute=1&controls=0&loop=1&playlist=").concat(T.LOOTBOX_VIDEO_ID, "&origin=https://").concat(g.PRIMARY_DOMAIN);
+  R = n("127906");
+let O = "https://www.youtube.com/embed/".concat(T.LOOTBOX_VIDEO_ID, "?autoplay=1&mute=1&controls=0&loop=1&playlist=").concat(T.LOOTBOX_VIDEO_ID, "&origin=https://").concat(g.PRIMARY_DOMAIN);
 
 function v() {
   let [e, t] = s.useState(!1), n = (0, I.useShouldShowMainLootboxEntrypoint)("lootbox_entrypoint"), l = !(0, C.useIsDismissibleContentDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT), {
@@ -39,13 +39,13 @@ function v() {
   };
   return n && l ? (0, a.jsx)(m.default, {
     children: (0, a.jsxs)("div", {
-      className: i()(O.wrapper, e ? O.wrapperHovered : null),
+      className: i()(R.wrapper, e ? R.wrapperHovered : null),
       onMouseLeave: () => t(!1),
       children: [(0, a.jsxs)(f.Clickable, {
-        className: O.closeButton,
+        className: R.closeButton,
         onClick: () => L(A.ContentDismissActionType.DISMISS),
         children: [(0, a.jsx)(o.CloseSmallIcon, {
-          className: O.closeIcon,
+          className: R.closeIcon,
           color: c.default.colors.WHITE
         }), (0, a.jsx)(u.Text, {
           variant: "text-xs/bold",
@@ -53,16 +53,16 @@ function v() {
           children: N.default.Messages.PACKAGES_ENTRYPOINT_CLOSE
         })]
       }), (0, a.jsxs)("div", {
-        className: O.contentWrapper,
+        className: R.contentWrapper,
         children: [(0, a.jsx)("div", {
-          className: O.videoWrapper,
+          className: R.videoWrapper,
           children: (0, a.jsx)("iframe", {
-            className: O.video,
-            src: R,
+            className: R.video,
+            src: O,
             sandbox: "allow-same-origin allow-scripts allow-popups"
           })
         }), (0, a.jsxs)(f.Clickable, {
-          className: O.entrypoint,
+          className: R.entrypoint,
           onClick: () => {
             L(A.ContentDismissActionType.PRIMARY), E.default.open(g.UserSettingsSections.LOOTBOXES, null, {
               analyticsLocations: v
@@ -70,18 +70,18 @@ function v() {
           },
           onMouseEnter: () => t(!0),
           children: [(0, a.jsx)("div", {
-            className: O.backgroundWrapper,
+            className: R.backgroundWrapper,
             children: (0, a.jsx)(p.default, {
-              className: O.backgroundImage,
+              className: R.backgroundImage,
               pageMultiplier: 5
             })
           }), (0, a.jsx)(S.default, {
-            className: O.animation,
+            className: R.animation,
             importData: I.importLootboxAnimationData,
             nextScene: T.BoxAnimationScenes.IDLE,
             sceneSegments: T.BoxAnimationSceneSegments
           }), (0, a.jsxs)("div", {
-            className: O.body,
+            className: R.body,
             children: [(0, a.jsx)(u.Text, {
               variant: "text-md/bold",
               color: "always-white",
@@ -92,11 +92,11 @@ function v() {
               children: N.default.Messages.PACKAGES_ENTRYPOINT_DESCRIPTION
             })]
           }), (0, a.jsx)("div", {
-            className: O.buttonWrapper,
+            className: R.buttonWrapper,
             children: (0, a.jsx)("div", {
-              className: O.iconButton,
+              className: R.iconButton,
               children: (0, a.jsx)(r.ArrowLargeRightIcon, {
-                className: O.buttonIcon,
+                className: R.buttonIcon,
                 color: c.default.colors.WHITE
               })
             })

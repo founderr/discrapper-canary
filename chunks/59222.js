@@ -70,8 +70,8 @@ t.default = e => {
     mostRecentQuery: l,
     defaultLanguage: r,
     availableLanguages: c,
-    isFetchingSearch: O,
-    scroller: R,
+    isFetchingSearch: R,
+    scroller: O,
     loadingGuildId: v,
     theme: L,
     currentCategoryId: P,
@@ -97,7 +97,7 @@ t.default = e => {
       }
     }), F(!1)
   }, K = () => {
-    null == R || R.scrollTo({
+    null == O || O.scrollTo({
       to: 0
     })
   };
@@ -138,7 +138,7 @@ t.default = e => {
       loadId: t,
       searchResults: n,
       mostRecentQuery: l,
-      isFetchingSearch: O,
+      isFetchingSearch: R,
       defaultLanguage: r,
       placeholder: x,
       availableLanguages: c,

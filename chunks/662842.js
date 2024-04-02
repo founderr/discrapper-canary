@@ -24,8 +24,8 @@ var a, s, l = n("735250"),
   g = n("230900"),
   A = n("854698"),
   N = n("703656"),
-  O = n("922482"),
-  R = n("565799"),
+  R = n("922482"),
+  O = n("565799"),
   v = n("501655"),
   L = n("427679"),
   P = n("448206"),
@@ -59,7 +59,7 @@ function Y(e) {
     isEventNoticeHidden: m.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, v.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, v.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([D.default], () => D.default.can(F.Permissions.CONNECT, a)), Z = (0, P.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([x.default], () => x.default.getUser(X), [X]);
+  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([O.default], () => [...new Set(O.default.getMutableParticipants(K, v.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([O.default], () => null != K ? O.default.getParticipantCount(K, v.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([D.default], () => D.default.can(F.Permissions.CONNECT, a)), Z = (0, P.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([x.default], () => x.default.getUser(X), [X]);
   i.useEffect(() => {
     null != X && (0, f.getUser)(X)
   }, [X]);
@@ -313,7 +313,7 @@ function Y(e) {
       size: c.Button.Sizes.SMALL,
       color: c.Button.Colors.GREEN,
       onClick: () => {
-        if (ea) null != a && null != a.getGuildId() && ((0, O.connectAndOpen)(a), (0, N.transitionToGuild)(a.getGuildId(), a.id));
+        if (ea) null != a && null != a.getGuildId() && ((0, R.connectAndOpen)(a), (0, N.transitionToGuild)(a.getGuildId(), a.id));
         else {
           if (null == s) return;
           (0, _.openGuildEventDetails)({

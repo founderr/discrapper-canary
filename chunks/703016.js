@@ -22,8 +22,8 @@ var a = n("913527"),
   g = n("594174"),
   A = n("51144"),
   N = n("196051"),
-  O = n("441729"),
-  R = n("653477"),
+  R = n("441729"),
+  O = n("653477"),
   v = n("981631"),
   L = n("689938");
 let P = [],
@@ -118,10 +118,10 @@ function B(e) {
   if (null == C) return !1;
   let g = p.default.getChannelId(),
     N = E.default.getCurrentSidebarChannelId(g),
-    O = o === g || o === N,
-    L = c.EnableTTSCommand.getSetting() && u.tts && O,
+    R = o === g || o === N,
+    L = c.EnableTTSCommand.getSetting() && u.tts && R,
     M = m.default.getTTSType(),
-    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (M === v.TTSNotificationTypes.ALL_CHANNELS || M === v.TTSNotificationTypes.SELECTED_CHANNEL && O);
+    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (M === v.TTSNotificationTypes.ALL_CHANNELS || M === v.TTSNotificationTypes.SELECTED_CHANNEL && R);
   if ((L || y) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !I.default.isBlocked(u.author.id))) {
     if (P.indexOf(u.id) >= 0) return !1;
     P.unshift(u.id) > 10 && P.pop();
@@ -130,7 +130,7 @@ function B(e) {
     let t = null !== (i = null !== (l = _.default.getNick(e, null === (a = u.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : A.default.getName(u.author)) && void 0 !== i ? i : "",
       n = u.type === v.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
       d = null != n ? null !== (r = _.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : A.default.getName(n) : null;
-    G(b(u.content, t, e, d), !1, C.id, u.id, R.MAX_TTS_LENGTH)
+    G(b(u.content, t, e, d), !1, C.id, u.id, O.MAX_TTS_LENGTH)
   }
   return !1
 }
@@ -139,7 +139,7 @@ function H(e) {
   let {
     id: t,
     channelId: n
-  } = e, a = O.default.currentMessage;
+  } = e, a = R.default.currentMessage;
   return null != a && t === a.messageId && n === a.channelId && ((0, N.stopSpeaking)(), !0)
 }
 

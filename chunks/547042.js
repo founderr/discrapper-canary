@@ -35,8 +35,8 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       analyticsLocation: s,
       analyticsType: A,
       ctaText: N,
-      dismissText: O,
-      description: R,
+      dismissText: R,
+      description: O,
       learnMore: v,
       title: L,
       videoPosterUrl: P,
@@ -104,7 +104,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               className: p.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
-              children: [R, v ? (0, l.jsxs)(l.Fragment, {
+              children: [O, v ? (0, l.jsxs)(l.Fragment, {
                 children: [" ", (0, l.jsx)(o.Anchor, {
                   className: p.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",
@@ -118,7 +118,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 onClick: () => {
                   n(m.ContentDismissActionType.UNKNOWN)
                 },
-                children: O
+                children: R
               }), (0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,

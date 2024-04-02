@@ -22,8 +22,8 @@ var a = n("735250"),
   g = n("687751"),
   A = n("912471"),
   N = n("100527"),
-  O = n("74438"),
-  R = n("753450"),
+  R = n("74438"),
+  O = n("753450"),
   v = n("675869"),
   L = n("77987"),
   P = n("679891"),
@@ -76,8 +76,8 @@ var a = n("735250"),
   eg = n("377368"),
   eA = n("262702"),
   eN = n("639033"),
-  eO = n("479313"),
-  eR = n("911560"),
+  eR = n("479313"),
+  eO = n("911560"),
   ev = n("703016"),
   eL = n("171368"),
   eP = n("429974"),
@@ -171,7 +171,7 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
     passProps: !1
   }),
   e5 = (0, L.makeAuthenticated)(function() {
-    return (0, a.jsx)(O.default, {})
+    return (0, a.jsx)(R.default, {})
   }),
   e8 = (0, L.makeAuthenticated)(function(e) {
     let {
@@ -180,7 +180,7 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
       applicationId: n,
       section: s
     } = t.params, l = (0, Z.default)(e0.ApplicationDirectoryProfileSections, s);
-    return (0, a.jsx)(R.default, {
+    return (0, a.jsx)(O.default, {
       applicationId: n,
       initialSection: l
     })
@@ -512,7 +512,7 @@ class ti extends s.PureComponent {
           let {
             summaryId: e
           } = (0, l.parse)(t);
-          null != e && eO.default.setSelectedSummary(s, e)
+          null != e && eR.default.setSelectedSummary(s, e)
         }
         if (null != o && c) {
           let e = ej.default.getCurrentSidebarChannelId(n) !== o,
@@ -561,7 +561,7 @@ class ti extends s.PureComponent {
     } = tt(n), i = (0, eC.isValidGuildId)(a) && a !== e$.ME && a !== e$.FAVORITES;
     if (null != s && (0, eC.isValidChannelId)(s) && !(0, e1.isStaticChannelRoute)(s) && i) {
       let n = eG.default.getChannel(s);
-      if (null == n) eR.default.loadThread(s).then(() => tl({
+      if (null == n) eO.default.loadThread(s).then(() => tl({
         channelId: s,
         guildId: a,
         pathname: t
@@ -573,7 +573,7 @@ class ti extends s.PureComponent {
       if (null != l) {
         if (!((0, eC.isValidChannelId)(l) && !(0, e1.isStaticChannelRoute)(s))) return null;
         let n = eG.default.getChannel(l);
-        if (null == n) eR.default.loadThread(l).then(() => tl({
+        if (null == n) eO.default.loadThread(l).then(() => tl({
           channelId: l,
           guildId: a,
           pathname: t
