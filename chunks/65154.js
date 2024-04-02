@@ -136,7 +136,7 @@ let k = 100,
     videoBudget: {
       width: 1280,
       height: 720,
-      framerate: 30
+      framerate: q
     },
     videoCapture: {
       width: 1280,
