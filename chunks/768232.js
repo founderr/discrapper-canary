@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250");
 n("470079");
-var r = n("803997"),
-  i = n.n(r),
+var i = n("803997"),
+  r = n.n(i),
   s = n("304497"),
   l = n("481060"),
   o = n("26290"),
@@ -19,7 +19,7 @@ function d(e) {
     className: t
   } = e;
   return (0, a.jsx)(o.TextBadge, {
-    className: i()(t, c.badge),
+    className: r()(t, c.badge),
     disableColor: !0,
     text: (0, a.jsxs)("div", {
       className: c.innerBadge,

@@ -35,8 +35,8 @@ var i = n("735250"),
   y = n("639119"),
   M = n("55610"),
   b = n("653798"),
-  O = n("553797"),
-  R = n("927699"),
+  R = n("553797"),
+  O = n("927699"),
   L = n("987716"),
   j = n("311821"),
   G = n("459965"),
@@ -113,7 +113,7 @@ function W(e) {
     ey = (0, h.isPrepaidPaymentSource)(eE.paymentSourceId),
     eM = (null == ef ? void 0 : ef.interval) === U.SubscriptionIntervalTypes.DAY ? k.default.Messages.BILLING_TRIAL_2_WEEK_PERIOD : k.default.Messages.BILLING_TRIAL_30_DAY_PERIOD,
     eb = !en && (eT || null != ef && eP && null != Z),
-    eO = null == J ? void 0 : null === (S = J.find(e => e.subscriptionPlanId === U.SubscriptionPlans.PREMIUM_MONTH_TIER_2)) || void 0 === S ? void 0 : null === (a = S.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === c.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount;
+    eR = null == J ? void 0 : null === (S = J.find(e => e.subscriptionPlanId === U.SubscriptionPlans.PREMIUM_MONTH_TIER_2)) || void 0 === S ? void 0 : null === (a = S.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === c.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount;
   return (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)("div", {
       className: eu ? H.stepBodyCustomGift : H.stepBody,
@@ -128,7 +128,7 @@ function W(e) {
         children: [(0, i.jsx)(F.SendGiftToUser, {
           giftRecipient: ei
         }), (() => {
-          if (er === P.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != el) return (0, i.jsx)(R.default, {
+          if (er === P.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != el) return (0, i.jsx)(O.default, {
             sectionTitle: k.default.Messages.GIFT_OPTIONAL_MESSAGE,
             onTextChange: e => el(e),
             pendingText: ea,
@@ -197,13 +197,13 @@ function W(e) {
           }), (0, i.jsx)("hr", {
             className: H.planSelectSeparator
           })]
-        }) : E && null != eO && null != eN ? (0, i.jsxs)("div", {
+        }) : E && null != eR && null != eN ? (0, i.jsxs)("div", {
           children: [(0, i.jsx)(u.Text, {
             variant: "text-sm/normal",
             className: H.trialPlanSelectHeader,
             children: k.default.Messages.BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC.format({
               numMonths: null == ep ? void 0 : ep.discount.user_usage_limit,
-              discountedPrice: (0, v.formatPrice)(eN.amount - eO, eN.currency),
+              discountedPrice: (0, v.formatPrice)(eN.amount - eR, eN.currency),
               regularPrice: (0, v.formatPrice)(eN.amount, eN.currency)
             })
           }), (0, i.jsx)("hr", {
@@ -222,7 +222,7 @@ function W(e) {
             priceOptions: eE,
             shouldShowUpdatedPaymentModal: eb,
             isEligibleForDiscount: eT,
-            discountAmountOff: eO
+            discountAmountOff: eR
           }, e))
         }), (0, i.jsx)("div", {
           children: ev && null != e_ && null != eA ? (0, i.jsxs)("div", {
@@ -230,7 +230,7 @@ function W(e) {
               className: H.selectPlanDivider
             }), (0, i.jsx)(b.PremiumInvoiceTableTotalRow, {
               label: k.default.Messages.BILLING_PAYMENT_BREAKDOWN_TOTAL,
-              value: (0, i.jsx)(O.default, {
+              value: (0, i.jsx)(R.default, {
                 price: eA.amount,
                 currency: eA.currency,
                 intervalType: en ? null : e_.interval,

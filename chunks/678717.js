@@ -39,8 +39,8 @@ var k = t("392750"),
   O = t("771751"),
   M = t("596768"),
   I = t("621060"),
-  B = t("689938"),
-  D = t("284439"),
+  D = t("689938"),
+  B = t("284439"),
   G = t("779869");
 
 function H(e) {
@@ -57,7 +57,7 @@ function H(e) {
   });
   return (0, a.jsx)("div", {
     onMouseDown: i,
-    className: D.resizeHandle
+    className: B.resizeHandle
   })
 }
 
@@ -159,7 +159,7 @@ function F() {
       className: G.headerBar,
       toolbar: (0, a.jsx)(f.default.Icon, {
         icon: m.default,
-        tooltip: B.default.Messages.CLOSE,
+        tooltip: D.default.Messages.CLOSE,
         onClick: b.toggleDisplayDevTools
       }),
       children: [(0, a.jsx)(f.default.Icon, {
@@ -169,7 +169,7 @@ function F() {
         children: "DevTools"
       })]
     }), (0, a.jsx)(t, {}), i(), (0, a.jsx)(N.DevToolsLayerContainer, {
-      className: D.layerContainer
+      className: B.layerContainer
     })]
   })
 }
@@ -185,7 +185,7 @@ function U() {
     null === t && null !== r && i(r)
   }, [r, t]), null === t) ? null : (0, a.jsxs)("div", {
     ref: e,
-    className: o()(D.container),
+    className: o()(B.container),
     style: {
       minWidth: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
       width: t
@@ -195,7 +195,7 @@ function U() {
       onResize: i,
       onResizeEnd: l
     }), (0, a.jsx)("div", {
-      className: D.sidebarContent,
+      className: B.sidebarContent,
       children: (0, a.jsx)(F, {})
     })]
   })
@@ -204,17 +204,17 @@ function U() {
 function z() {
   let e = (0, s.useStateFromStores)([y.default], () => y.default.displayTools);
   return e ? (0, a.jsx)("div", {
-    className: o()(D.container, D.mobileContainerExpanded),
+    className: o()(B.container, B.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
-      className: D.sidebarContent,
+      className: B.sidebarContent,
       children: (0, a.jsx)(F, {})
     })
   }) : (0, a.jsx)("div", {
-    className: D.container,
+    className: B.container,
     children: (0, a.jsx)(c.Clickable, {
       onClick: b.toggleDisplayDevTools,
       children: (0, a.jsxs)(f.default, {
-        className: o()(G.headerBar, D.mobileHeaderCollapsed),
+        className: o()(G.headerBar, B.mobileHeaderCollapsed),
         toolbar: (0, a.jsx)(p.default, {
           direction: p.default.Directions.UP
         }),

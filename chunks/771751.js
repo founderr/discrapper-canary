@@ -110,7 +110,7 @@ function L(e) {
       value: r
     } = e;
     return r === R
-  })) || void 0 === r ? void 0 : r.label) && void 0 !== t ? t : "Unknown", I = null != A, B = null != A && new Date(A).getTime() < Date.now(), D = (null == O ? void 0 : O.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, G = async () => {
+  })) || void 0 === r ? void 0 : r.label) && void 0 !== t ? t : "Unknown", I = null != A, D = null != A && new Date(A).getTime() < Date.now(), B = (null == O ? void 0 : O.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, G = async () => {
     N(!0), I ? await w(_, "trial") : await (0, d.acknowledgeUserOffer)(s), h(), N(!1)
   };
   n.useEffect(() => {
@@ -132,8 +132,8 @@ function L(e) {
     }
   }, [y, v]);
   let H = "Active";
-  return I && (H = "Acknowledged"), B && (H = "Expired"), (0, a.jsxs)("div", {
-    className: o()(C.card, D ? C.gradientWrapperTier0 : C.gradientWrapperTier2),
+  return I && (H = "Acknowledged"), D && (H = "Expired"), (0, a.jsxs)("div", {
+    className: o()(C.card, B ? C.gradientWrapperTier0 : C.gradientWrapperTier2),
     children: [(0, a.jsxs)("div", {
       className: o()(C.row, C.nameRow),
       children: [(0, a.jsx)(c.Heading, {
@@ -192,7 +192,7 @@ function L(e) {
         onClick: G,
         className: o()(C.badge, C.clickable, {
           [C.acked]: I,
-          [C.expired]: B
+          [C.expired]: D
         }),
         children: (0, a.jsx)(c.Text, {
           variant: "eyebrow",

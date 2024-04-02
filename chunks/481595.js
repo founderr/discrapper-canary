@@ -33,9 +33,9 @@ var s = n("512722"),
   y = n("916616"),
   M = n("981631"),
   b = n("689938"),
-  O = n("812011");
+  R = n("812011");
 
-function R(e) {
+function O(e) {
   let {
     sku: t,
     skuPricePreview: n
@@ -43,26 +43,26 @@ function R(e) {
   a()(null != n.amount, "SKU must have a price set.");
   let s = n.amount - n.tax;
   return !n.tax_inclusive && n.tax > 0 ? (0, i.jsxs)(p.PremiumInvoiceTable, {
-    className: O.invoice,
+    className: R.invoice,
     children: [(0, i.jsx)(p.PremiumInvoiceTableRow, {
       label: t.name,
       value: (0, x.formatPrice)(s, n.currency),
-      className: O.subscriptionCostRow
+      className: R.subscriptionCostRow
     }), (0, i.jsx)(p.PremiumInvoiceTableRow, {
       label: b.default.Messages.PURCHASE_REVIEW_TAX_LABEL,
       value: (0, x.formatPrice)(n.tax, n.currency),
-      className: O.subscriptionCostRow
+      className: R.subscriptionCostRow
     }), (0, i.jsx)(p.PremiumInvoiceTableDivider, {}), (0, i.jsx)(p.PremiumInvoiceTableTotalRow, {
       label: b.default.Messages.BILLING_INVOICE_TOTAL.format(),
       value: (0, x.formatPrice)(n.amount, n.currency),
-      className: O.subscriptionCostRow
+      className: R.subscriptionCostRow
     })]
   }) : (0, i.jsx)(p.PremiumInvoiceTable, {
-    className: O.invoice,
+    className: R.invoice,
     children: (0, i.jsx)(p.PremiumInvoiceTableRow, {
       label: t.name,
       value: (0, x.formatPrice)(n.amount, n.currency),
-      className: O.subscriptionCostRow
+      className: R.subscriptionCostRow
     })
   })
 }
@@ -74,12 +74,12 @@ function L(e) {
     isEmbeddedIAP: s
   } = e;
   return !0 !== s ? null : (0, i.jsxs)("div", {
-    className: O.skuHeading,
+    className: R.skuHeading,
     children: [(0, i.jsx)(N.default, {
       game: t
     }), (0, i.jsx)(u.Heading, {
       variant: "heading-lg/bold",
-      className: O.skuHeadingText,
+      className: R.skuHeadingText,
       children: n.name
     })]
   })
@@ -118,12 +118,12 @@ function j(e) {
     Q = x === g.PurchaseState.PURCHASING || x === g.PurchaseState.COMPLETED,
     $ = null != G ? j[G].type : null;
   return (0, i.jsxs)("div", {
-    className: O.stepBody,
+    className: R.stepBody,
     children: [J && (0, i.jsx)(c.default, {
       icon: h.default,
       iconSize: c.default.Sizes.SMALL,
       color: c.default.Colors.WARNING,
-      className: O.errorBlock,
+      className: R.errorBlock,
       children: b.default.Messages.APPLICATION_STORE_PURCHASE_TEST_MODE
     }, "TEST_MODE"), (0, i.jsx)(L, {
       application: N,
@@ -138,12 +138,12 @@ function j(e) {
       children: H ? b.default.Messages.PREMIUM_GIFTING_BUTTON : b.default.Messages.ONE_TIME_PURCHASE_REVIEW_STEP_PURCHASE_DETAILS_LABEL
     }), null == z ? (0, i.jsx)(u.Spinner, {
       type: u.Spinner.Type.WANDERING_CUBES,
-      className: O.invoiceSpinner
-    }) : (0, i.jsx)(R, {
+      className: R.invoiceSpinner
+    }) : (0, i.jsx)(O, {
       sku: K,
       skuPricePreview: z
     }), (0, i.jsxs)("div", {
-      className: O.paymentSourceWrapper,
+      className: R.paymentSourceWrapper,
       children: [(0, i.jsx)(u.FormTitle, {
         tag: u.FormTitleTags.H5,
         children: b.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
@@ -163,7 +163,7 @@ function j(e) {
         showWithdrawalWaiver: q,
         disabled: Q,
         subscriptionPlan: null,
-        finePrintClassname: O.fineprint,
+        finePrintClassname: R.fineprint,
         purchaseType: k,
         isGift: H,
         checkboxLabel: K.productLine === M.SKUProductLines.COLLECTIBLES ? b.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_SIMPLE.format({

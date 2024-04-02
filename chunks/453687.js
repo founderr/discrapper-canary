@@ -26,8 +26,8 @@ n.r(t), n.d(t, {
   }
 });
 var a = n("446108"),
-  r = n("901461"),
-  i = n("981631");
+  i = n("901461"),
+  r = n("981631");
 
 function s(e) {
   return "message-content-".concat(e.id)
@@ -55,16 +55,16 @@ function d(e) {
 }
 
 function m(e, t, n) {
-  let c = e.type === i.MessageTypes.REPLY && null != e.messageReference,
+  let c = e.type === r.MessageTypes.REPLY && null != e.messageReference,
     m = e.embeds.length > 0,
     f = e.attachments.length > 0,
     g = e.stickerItems.length > 0,
     p = e.codedLinks.length > 0,
-    E = e.hasFlag(i.MessageFlags.HAS_THREAD),
-    S = m || f || g || p || E || e.type === i.MessageTypes.THREAD_CREATED,
-    A = m && e.content === e.embeds[0].url && e.embeds[0].type === i.MessageEmbedTypes.GIFV,
-    h = e.type !== i.MessageTypes.DEFAULT || !A && "" !== e.content,
-    I = (0, r.default)(e),
+    E = e.hasFlag(r.MessageFlags.HAS_THREAD),
+    S = m || f || g || p || E || e.type === r.MessageTypes.THREAD_CREATED,
+    A = m && e.content === e.embeds[0].url && e.embeds[0].type === r.MessageEmbedTypes.GIFV,
+    h = e.type !== r.MessageTypes.DEFAULT || !A && "" !== e.content,
+    I = (0, i.default)(e),
     T = !I && (null == n ? void 0 : n.hasTimestamp) !== !1,
     y = o(e, t),
     M = l(e),

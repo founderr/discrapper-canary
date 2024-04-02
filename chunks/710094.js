@@ -36,8 +36,8 @@ function y(e) {
       handleStepChange: y,
       trialId: M,
       trialFooterMessageOverride: b,
-      reviewWarningMessage: O,
-      planGroup: R,
+      reviewWarningMessage: R,
+      planGroup: O,
       openInvoiceId: L,
       analyticsData: j,
       analyticsLocation: G,
@@ -114,15 +114,15 @@ function y(e) {
       selectedSkuId: X,
       startedPaymentFlowWithPaymentSources: er.current
     }),
-    eO = eu && ea === C.PurchaseTypes.ONE_TIME,
-    eR = eO || (eb ? eM && ei : ei),
+    eR = eu && ea === C.PurchaseTypes.ONE_TIME,
+    eO = eR || (eb ? eM && ei : ei),
     eL = s.useCallback(() => {
       if (eb) {
         y(I.Step.SKU_SELECT);
         return
       }
-      return eO ? y(I.Step.GIFT_CUSTOMIZATION) : y(I.Step.PLAN_SELECT)
-    }, [y, eb, eO]);
+      return eR ? y(I.Step.GIFT_CUSTOMIZATION) : y(I.Step.PLAN_SELECT)
+    }, [y, eb, eR]);
   return ea === C.PurchaseTypes.ONE_TIME ? a = (0, i.jsx)(N.default, {
     hasLegalTermsFlash: em,
     legalTermsNodeRef: eh,
@@ -141,7 +141,7 @@ function y(e) {
     hasLegalTermsFlash: em,
     trialId: eS,
     trialFooterMessageOverride: b,
-    reviewWarningMessage: O,
+    reviewWarningMessage: R,
     purchaseState: en,
     referralTrialOfferId: D,
     isTrial: eA || null != M && null != b,
@@ -162,7 +162,7 @@ function y(e) {
     legalTermsNodeRef: eh,
     hasLegalTermsFlash: em,
     onInvoiceError: e => ex(e),
-    planGroup: R,
+    planGroup: O,
     currencies: W,
     onCurrencyChange: e => q(e),
     hasOpenInvoice: null != L,
@@ -190,10 +190,10 @@ function y(e) {
         baseAnalyticsData: j,
         flowStartTime: H.startTime,
         trialId: eS,
-        planGroup: R,
+        planGroup: O,
         purchaseTokenAuthState: z,
         openInvoiceId: L,
-        backButtonEligible: eR,
+        backButtonEligible: eO,
         metadata: eE,
         isTrial: eA,
         disablePurchase: null != eT && ea === C.PurchaseTypes.SUBSCRIPTION && eA && !eT.canRedeemTrial()

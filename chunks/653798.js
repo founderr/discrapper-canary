@@ -7,7 +7,7 @@ i.r(n), i.d(n, {
     return c
   },
   PremiumInvoiceTableDivider: function() {
-    return P
+    return T
   },
   PremiumInvoiceTableFinePrint: function() {
     return _
@@ -19,14 +19,14 @@ i.r(n), i.d(n, {
     return d
   },
   PremiumInvoiceTableTotalRow: function() {
-    return T
+    return P
   }
 });
 var t = i("735250");
 i("470079");
-var l = i("803997"),
-  r = i.n(l),
-  a = i("911969"),
+var r = i("803997"),
+  a = i.n(r),
+  l = i("911969"),
   s = i("937615"),
   u = i("689938"),
   o = i("429939");
@@ -37,7 +37,7 @@ function c(e) {
     className: i
   } = e;
   return (0, t.jsx)("div", {
-    className: r()(o.table, i),
+    className: a()(o.table, i),
     children: n
   })
 }
@@ -56,10 +56,10 @@ function d(e) {
   let {
     label: n,
     value: i,
-    className: l
+    className: r
   } = e;
   return (0, t.jsxs)("div", {
-    className: r()(o.row, l),
+    className: a()(o.row, r),
     children: [(0, t.jsx)("div", {
       className: o.rowLabel,
       children: n
@@ -74,13 +74,13 @@ function m(e) {
   let {
     label: n,
     value: i,
-    discounts: l,
-    originalAmount: r,
+    discounts: r,
+    originalAmount: a,
     interval: c,
     currency: I,
     className: m,
-    intervalCount: P
-  } = e, T = e => null != l ? l.find(n => n.type === e) : null, _ = T(a.InvoiceDiscountTypes.SUBSCRIPTION_PLAN), v = T(a.InvoiceDiscountTypes.ENTITLEMENT), M = null != _ ? Math.floor(_.amount / r * 100) : null, R = (0, s.formatPrice)(r, I);
+    intervalCount: T
+  } = e, P = e => null != r ? r.find(n => n.type === e) : null, _ = P(l.InvoiceDiscountTypes.SUBSCRIPTION_PLAN), v = P(l.InvoiceDiscountTypes.ENTITLEMENT), M = null != _ ? Math.floor(_.amount / a * 100) : null, R = (0, s.formatPrice)(a, I);
   return (0, t.jsxs)(t.Fragment, {
     children: [(0, t.jsx)(d, {
       label: n,
@@ -93,7 +93,7 @@ function m(e) {
       className: m
     }), null != M ? (0, t.jsxs)("div", {
       className: o.rowDiscountOriginalPrice,
-      children: ["(", null != c && null != P ? (0, s.formatRate)(R, c, P) : R, ")"]
+      children: ["(", null != c && null != T ? (0, s.formatRate)(R, c, T) : R, ")"]
     }) : null, null != v ? (0, t.jsx)("div", {
       className: o.entitlementDiscountRow,
       children: u.default.Messages.BILLING_INVOICE_SUBSCRIPTION_CREDIT_APPLIED
@@ -101,29 +101,29 @@ function m(e) {
   })
 }
 
-function P(e) {
+function T(e) {
   let {
     extended: n = !1,
     negativeMarginTop: i = !1,
-    negativeMarginBottom: l = !1
+    negativeMarginBottom: r = !1
   } = e;
   return (0, t.jsx)("div", {
-    className: r()(o.divider, {
+    className: a()(o.divider, {
       [o.dividerExtended]: n,
       [o.negativeMarginTop]: i,
-      [o.negativeMarginBottom]: l
+      [o.negativeMarginBottom]: r
     })
   })
 }
 
-function T(e) {
+function P(e) {
   let {
     label: n,
     value: i,
-    className: l
+    className: r
   } = e;
   return (0, t.jsxs)("div", {
-    className: r()(o.totalRow, l),
+    className: a()(o.totalRow, r),
     children: [(0, t.jsx)("div", {
       className: o.totalLabel,
       children: n
@@ -140,7 +140,7 @@ function _(e) {
     className: i
   } = e;
   return (0, t.jsx)("div", {
-    className: r()(o.finePrint, i),
+    className: a()(o.finePrint, i),
     children: n
   })
 }

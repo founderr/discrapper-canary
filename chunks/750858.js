@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   UsernameDecorationTypes: function() {
-    return r
+    return i
   },
   default: function() {
     return M
   }
 });
-var a, r, i = n("735250"),
+var a, i, r = n("735250"),
   s = n("470079"),
   l = n("803997"),
   o = n.n(l),
@@ -29,7 +29,7 @@ function y(e) {
   let {
     compact: t
   } = e;
-  return (0, i.jsx)(h.default, {
+  return (0, r.jsx)(h.default, {
     className: t ? T.botTagCompact : T.botTagCozy,
     type: h.default.Types.REMIX,
     useRemSizes: !0
@@ -40,7 +40,7 @@ function M(e) {
   let t, {
       author: n,
       message: a,
-      userOverride: r,
+      userOverride: i,
       compact: l = !1,
       withMentionPrefix: h = !1,
       showPopout: M = !1,
@@ -58,24 +58,24 @@ function M(e) {
     } = (0, g.default)(f.default.USERNAME),
     {
       nick: D,
-      colorString: j,
-      colorRoleName: w
+      colorString: w,
+      colorRoleName: j
     } = n,
     F = null != a.messageReference && null != a.webhookId,
     P = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
     B = (0, S.useCanSeeRemixBadge)(),
     G = {
       className: T.username,
-      style: "username" === P && null != j ? {
-        color: j
+      style: "username" === P && null != w ? {
+        color: w
       } : void 0,
       onClick: x,
       onContextMenu: _,
       children: (h ? "@" : "") + D
     };
-  t = null != N && null != M ? (0, i.jsx)(d.Popout, {
+  t = null != N && null != M ? (0, r.jsx)(d.Popout, {
     preload: F ? void 0 : function() {
-      let e = null != r ? r : a.author;
+      let e = null != i ? i : a.author;
       return (0, A.default)(e.id, null != n.guildMemberAvatar && null != C ? (0, I.getGuildMemberAvatarURLSimple)({
         guildId: C,
         userId: e.id,
@@ -95,29 +95,29 @@ function M(e) {
         onClick: t,
         ...n
       } = e;
-      return (0, i.jsx)(d.Clickable, {
+      return (0, r.jsx)(d.Clickable, {
         tag: "span",
         ...n,
         ...G,
         className: o()(G.className, T.clickable, v)
       })
     }
-  }) : (0, i.jsx)(d.Clickable, {
+  }) : (0, r.jsx)(d.Clickable, {
     ...G,
     className: o()(G.className, v)
   });
   let U = null != R ? R[0] : null,
     O = null != R ? R[1] : null;
-  return (0, i.jsxs)(g.AnalyticsLocationProvider, {
+  return (0, r.jsxs)(g.AnalyticsLocationProvider, {
     value: k,
-    children: [null != U && l ? (0, i.jsxs)(i.Fragment, {
+    children: [null != U && l ? (0, r.jsxs)(r.Fragment, {
       children: [" ", U, " "]
-    }) : null, "dot" === P ? (0, i.jsx)(d.RoleDot, {
-      color: j,
-      name: w,
+    }) : null, "dot" === P ? (0, r.jsx)(d.RoleDot, {
+      color: w,
+      name: j,
       className: T.roleDot
-    }) : null, t, null != O ? (0, i.jsx)(i.Fragment, {
+    }) : null, t, null != O ? (0, r.jsx)(r.Fragment, {
       children: O
-    }) : null, null == U || l ? null : U, null != a && (0, E.default)(a) && B && L ? (0, i.jsx)(y, {}) : null]
+    }) : null, null == U || l ? null : U, null != a && (0, E.default)(a) && B && L ? (0, r.jsx)(y, {}) : null]
   })
-}(a = r || (r = {}))[a.SYSTEM_TAG = 0] = "SYSTEM_TAG", a[a.BADGES = 1] = "BADGES"
+}(a = i || (i = {}))[a.SYSTEM_TAG = 0] = "SYSTEM_TAG", a[a.BADGES = 1] = "BADGES"

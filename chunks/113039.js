@@ -8,9 +8,9 @@ n.r(t), n.d(t, {
   }
 });
 var a = n("735250"),
-  r = n("470079"),
-  i = n("803997"),
-  s = n.n(i),
+  i = n("470079"),
+  r = n("803997"),
+  s = n.n(r),
   l = n("653603"),
   o = n.n(l),
   u = n("902704"),
@@ -28,36 +28,36 @@ function E(e, t) {
 function S(e, t) {
   var n, a;
   let {
-    message: r
-  } = t, {
     message: i
+  } = t, {
+    message: r
   } = e;
-  return (0, u.default)(e, t, ["message"]) && r.content === i.content && r.state === i.state && (null === (n = r.editedTimestamp) || void 0 === n ? void 0 : n.toString()) === (null === (a = i.editedTimestamp) || void 0 === a ? void 0 : a.toString())
+  return (0, u.default)(e, t, ["message"]) && i.content === r.content && i.state === r.state && (null === (n = i.editedTimestamp) || void 0 === n ? void 0 : n.toString()) === (null === (a = r.editedTimestamp) || void 0 === a ? void 0 : a.toString())
 }
-t.default = r.memo(function(e) {
+t.default = i.memo(function(e) {
   var t;
   let {
     className: n,
-    message: i,
+    message: r,
     children: l,
     content: u,
     onUpdate: S,
     contentRef: A
-  } = e, h = i.isEdited(), I = i.state === m.MessageStates.SEND_FAILED, T = i.state === m.MessageStates.SENDING, y = i.isCommandType(), M = null === (t = i.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = r.useRef(!1);
-  return r.useLayoutEffect(() => {
+  } = e, h = r.isEdited(), I = r.state === m.MessageStates.SEND_FAILED, T = r.state === m.MessageStates.SENDING, y = r.isCommandType(), M = null === (t = r.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = i.useRef(!1);
+  return i.useLayoutEffect(() => {
     v.current ? null != S && S() : v.current = !0
-  }, [S, i.content, u, M, l]), (0, a.jsxs)("div", {
-    id: (0, c.getMessageContentId)(i),
+  }, [S, r.content, u, M, l]), (0, a.jsxs)("div", {
+    id: (0, c.getMessageContentId)(r),
     ref: A,
     className: s()(n, g.markup, {
       [p.messageContent]: !0,
       [p.isSending]: T && !y,
-      [p.markupRtl]: "rtl" === o()(i.content),
+      [p.markupRtl]: "rtl" === o()(r.content),
       [p.isFailed]: I
     }),
-    children: [null != l ? l : E(i, u), h && null != i.editedTimestamp && (0, a.jsxs)(a.Fragment, {
+    children: [null != l ? l : E(r, u), h && null != r.editedTimestamp && (0, a.jsxs)(a.Fragment, {
       children: [" ", (0, a.jsx)(d.default, {
-        timestamp: i.editedTimestamp,
+        timestamp: r.editedTimestamp,
         isEdited: !0,
         isInline: !1,
         children: (0, a.jsxs)("span", {

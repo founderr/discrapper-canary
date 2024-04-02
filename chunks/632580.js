@@ -37,8 +37,8 @@ async function I(e) {
     priceOptions: y,
     paymentSource: M,
     isPrepaidPaymentPastDue: b,
-    openInvoiceId: O,
-    premiumSubscription: R,
+    openInvoiceId: R,
+    premiumSubscription: O,
     onNext: L,
     metadata: j,
     sku: G,
@@ -87,17 +87,17 @@ async function I(e) {
         loadId: w,
         giftInfoOptions: B
       })
-    } else if (b && null != O && null != M && null != R) e = S.PREPAID_PAYMENT_SOURCES.has(M.type) ? await (0, l.payInvoiceManually)(R, O, M, y.currency) : await (0, l.updateSubscription)(R, {
+    } else if (b && null != R && null != M && null != O) e = S.PREPAID_PAYMENT_SOURCES.has(M.type) ? await (0, l.payInvoiceManually)(O, R, M, y.currency) : await (0, l.updateSubscription)(O, {
       paymentSource: M,
       currency: y.currency
     }, v, h, w);
-    else if (null != R) {
-      let t = (0, f.getItemsWithUpsertedPlanIdForGroup)(R, A.id, 1, new Set(C)),
+    else if (null != O) {
+      let t = (0, f.getItemsWithUpsertedPlanIdForGroup)(O, A.id, 1, new Set(C)),
         n = {
           paymentSource: M,
           currency: y.currency
         };
-      R.status === S.SubscriptionStatusTypes.PAUSED ? n.status = S.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, l.updateSubscription)(R, n, v, h, w)
+      O.status === S.SubscriptionStatusTypes.PAUSED ? n.status = S.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, l.updateSubscription)(O, n, v, h, w)
     } else e = await (0, u.subscribe)({
       planId: A.id,
       currency: y.currency,
