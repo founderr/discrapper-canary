@@ -48,7 +48,7 @@ let u = (e, t) => ({
     }, 4, !0), e.setColor("rgba(255, 255, 255, 0.5)");
     e.setFont({
       size: 12,
-      family: '"gg sans", sans-serif',
+      family: ["gg sans", "sans-serif"],
       weight: 500,
       truncate: l.TextTruncationMethod.None
     }), e.drawText(o.default.Messages.BETA, {
@@ -73,8 +73,6 @@ let u = (e, t) => ({
       fillMode: l.FillMode.Cover
     }), e.setColor("white"), e.setFont({
       size: 16,
-      family: '"gg sans", sans-serif',
-      weight: 500,
       truncate: l.TextTruncationMethod.Wrap
     }), e.drawText(u, {
       x: r.descriptionIndent,
@@ -83,8 +81,6 @@ let u = (e, t) => ({
       w: r.descriptionMaxWidth
     }, !0), e.setFont({
       size: 12,
-      family: '"gg sans", sans-serif',
-      weight: 500,
       truncate: l.TextTruncationMethod.None
     }), e.drawText(n, {
       x: r.descriptionIndent + r.attributionSpacing,

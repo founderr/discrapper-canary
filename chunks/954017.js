@@ -146,7 +146,7 @@ let T = async e => {
   let l = _.activitySize + _.padding + _.imagePadding;
   e.setColor("dark" === o ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 16,
-    family: '"gg sans", sans-serif',
+    family: ["gg sans", "sans-serif"],
     weight: 700
   }), e.drawText("".concat(t.name), {
     x: l,
@@ -189,7 +189,7 @@ let T = async e => {
   let o = _.activitySize + _.padding + _.imagePadding;
   e.setColor("dark" === a ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 14,
-    family: '"gg sans", sans-serif',
+    family: ["gg sans", "sans-serif"],
     weight: 700
   }), e.drawText("".concat(t.details), {
     x: o,
@@ -232,7 +232,7 @@ let T = async e => {
   let l = _.activitySize + _.padding + _.imagePadding;
   e.setColor("dark" === o ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 14,
-    family: '"gg sans", sans-serif',
+    family: ["gg sans", "sans-serif"],
     weight: 700
   }), e.drawText(I.default.Messages.STATUS_LEAD_IN_JUST, {
     x: l,
@@ -280,7 +280,7 @@ let T = async e => {
   let o = _.activitySize + _.padding + _.imagePadding;
   e.setColor("dark" === s ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 14,
-    family: '"gg sans", sans-serif',
+    family: ["gg sans", "sans-serif"],
     weight: 700
   }), e.drawText("".concat(t.details), {
     x: o,
@@ -329,7 +329,7 @@ let T = async e => {
   let l = _.activitySize + _.padding + _.imagePadding;
   e.setColor("dark" === o ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 16,
-    family: '"gg sans", sans-serif',
+    family: ["gg sans", "sans-serif"],
     weight: 700
   }), e.drawText("Streaming ".concat(t.name), {
     x: l,

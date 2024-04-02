@@ -38,7 +38,7 @@ t.default = class e {
       style: "normal",
       weight: 300,
       size: s.DEFAULT_FONT_SIZE,
-      family: "serif",
+      family: ["serif"],
       truncate: a.TextTruncationMethod.None
     }), o(this, "assetMap", void 0), o(this, "canvas", void 0), this.canvas = e, this.assetMap = t
   }

@@ -55,7 +55,7 @@ let o = (e, t, n) => ({
           h: i.betaTagHeight
         }, 4, !0), e.setColor("rgba(255, 255, 255, 0.5)"), e.setFont({
           size: 12,
-          family: '"gg sans", sans-serif',
+          family: ["gg sans", "sans-serif"],
           weight: 500,
           truncate: l.TextTruncationMethod.None
         }), e.drawText(r.default.Messages.BETA, {
@@ -88,8 +88,6 @@ let o = (e, t, n) => ({
           h: i.avatarImageSize
         }, 50), e.setFont({
           size: 16,
-          family: '"gg sans", sans-serif',
-          weight: 500,
           truncate: l.TextTruncationMethod.Wrap
         }), e.drawText(d, {
           x: i.descriptionIndent,
@@ -98,8 +96,6 @@ let o = (e, t, n) => ({
           w: i.descriptionMaxWidth
         }, !0), e.setFont({
           size: 12,
-          family: '"gg sans", sans-serif',
-          weight: 500,
           truncate: l.TextTruncationMethod.None
         }), e.drawText(c, {
           x: i.descriptionIndent + i.attributionSpacing,
