@@ -26,9 +26,9 @@ var a = n("735250"),
   g = n("299206"),
   A = n("440051"),
   N = n("734934"),
-  R = n("158238"),
-  O = n("785717"),
-  v = n("221292"),
+  v = n("158238"),
+  R = n("785717"),
+  O = n("221292"),
   L = n("318661"),
   P = n("747074"),
   M = n("192133"),
@@ -167,7 +167,7 @@ function $(e) {
       }).expiringStatus,
       s = x.StatusExpiresAtSetting.useSetting(),
       l = (0, N.useFocusModeEnabled)(),
-      i = R.QuietModeExperiment.useExperiment({
+      i = v.QuietModeExperiment.useExperiment({
         location: "account popout"
       }).allowQuietMode || l,
       r = x.FocusModeExpiresAtSetting.useSetting(),
@@ -273,7 +273,7 @@ function $(e) {
     });
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: G,
-    children: (0, a.jsx)(O.UserProfileAnalyticsProvider, {
+    children: (0, a.jsx)(R.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",
       userId: t.id,
       guildId: l,
@@ -331,7 +331,7 @@ function $(e) {
                     focusedClassName: Q.menuItemFocused,
                     subMenuIconClassName: Q.subMenuIcon,
                     action: d.isMobile ? function() {
-                      (0, v.trackUserProfileAction)({
+                      (0, O.trackUserProfileAction)({
                         action: "PRESS_SET_STATUS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,
@@ -380,7 +380,7 @@ function $(e) {
                     icon: w.default,
                     showIconFirst: !0,
                     action: () => {
-                      (0, v.trackUserProfileAction)({
+                      (0, O.trackUserProfileAction)({
                         action: "PRESS_SWITCH_ACCOUNTS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,

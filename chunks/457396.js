@@ -29,10 +29,10 @@ let A = e => {
   let t, n, {
       selected: A,
       route: N,
-      locationState: R,
-      ...O
+      locationState: v,
+      ...R
     } = e,
-    v = (0, l.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
+    O = (0, l.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
     L = (0, l.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()),
     P = (0, s.useListItem)("nitro"),
     M = (0, E.usePremiumTrialOffer)(),
@@ -41,7 +41,7 @@ let A = e => {
     x = (0, S.useIsEligibleForBogoPromotion)(),
     b = (0, I.default)(),
     U = (0, _.useTenureRewardBadgeDescription)();
-  return A || null != M || null != y || x || b || null != U || null != v && Date.now() - v.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(v, L) ? (x ? n = (0, a.jsx)(h.default, {
+  return A || null != M || null != y || x || b || null != U || null != O && Date.now() - O.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(O, L) ? (x ? n = (0, a.jsx)(h.default, {
     isNitroTab: !0
   }) : null != U ? n = (0, a.jsx)(p.default, {
     copy: U
@@ -59,8 +59,8 @@ let A = e => {
     route: N,
     icon: d.default,
     text: T.default.Messages.PREMIUM,
-    locationState: R,
-    ...O,
+    locationState: v,
+    ...R,
     ...P,
     className: t,
     children: n

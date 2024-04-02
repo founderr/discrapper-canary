@@ -27,7 +27,7 @@ t.default = e => {
   } = (0, i.useStateFromStoresObject)([d.default], () => {
     var e;
     return null !== (e = d.default.getState(t)) && void 0 !== e ? e : {}
-  }), A = s.useRef(null), N = s.useRef(null), R = s.useRef(null), [O, v] = s.useState(!1), L = (0, l.useSpring)({
+  }), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), [R, O] = s.useState(!1), L = (0, l.useSpring)({
     ref: A,
     config: l.config.molasses,
     from: {
@@ -52,7 +52,7 @@ t.default = e => {
       marginLeft: -32
     }
   }), M = (0, l.useSpring)({
-    ref: R,
+    ref: v,
     config: l.config.default,
     from: {
       opacity: 0
@@ -61,7 +61,7 @@ t.default = e => {
       opacity: 1
     }
   });
-  return (0, l.useChain)([A, N, R], [0, 0, 1]), (0, a.jsxs)("div", {
+  return (0, l.useChain)([A, N, v], [0, 0, 1]), (0, a.jsxs)("div", {
     className: h.animationContainer,
     children: [(0, a.jsxs)(l.animated.div, {
       className: h.signTextLeft,
@@ -81,8 +81,8 @@ t.default = e => {
       className: h.scrollContainer,
       children: (0, a.jsx)(c.default, {
         guildId: t,
-        signed: O,
-        setSigned: v
+        signed: R,
+        setSigned: O
       })
     }), (0, a.jsxs)(l.animated.div, {
       className: h.signTextRight,
@@ -93,7 +93,7 @@ t.default = e => {
       children: [(0, a.jsx)(r.Button, {
         className: h.signButton,
         size: r.Button.Sizes.SMALL,
-        onClick: () => v(!0),
+        onClick: () => O(!0),
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, a.jsx)(r.Text, {
         variant: "text-xs/medium",
@@ -123,7 +123,7 @@ t.default = e => {
         look: r.Button.Looks.FILLED,
         size: r.Button.Sizes.MEDIUM,
         color: r.Button.Colors.BRAND,
-        disabled: !O,
+        disabled: !R,
         onClick: () => {
           u.convertGuildToClan(t, {
             selectedGames: S,

@@ -26,9 +26,9 @@ var a = n("735250"),
   g = n("410575"),
   A = n("941129"),
   N = n("83200"),
-  R = n("634894"),
-  O = n("586902"),
-  v = n("1585"),
+  v = n("634894"),
+  R = n("586902"),
+  O = n("1585"),
   L = n("304761"),
   P = n("865427"),
   M = n("571250"),
@@ -80,9 +80,9 @@ var a = n("735250"),
   eg = n("546591"),
   eA = n("86813"),
   eN = n("826026"),
-  eR = n("937482"),
-  eO = n("87888"),
-  ev = n("976401"),
+  ev = n("937482"),
+  eR = n("87888"),
+  eO = n("976401"),
   eL = n("333454"),
   eP = n("864441"),
   eM = n("26290"),
@@ -230,7 +230,7 @@ class eW extends s.PureComponent {
     if (null == n) return null;
     let o = (0, eD.getAvatarDecorationURL)({
       avatarDecoration: n.avatarDecoration,
-      size: (0, v.getDecorationSizeForAvatarSize)(S.AvatarSizes.SIZE_32)
+      size: (0, O.getDecorationSizeForAvatarSize)(S.AvatarSizes.SIZE_32)
     });
     return (0, a.jsx)(g.default, {
       object: ew.AnalyticsObjects.AVATAR,
@@ -261,7 +261,7 @@ class eW extends s.PureComponent {
             className: i()(eB.nameTag, {
               [eB.canCopy]: ex.SUPPORTS_COPY
             }),
-            children: r ? (0, a.jsx)(ev.default, {
+            children: r ? (0, a.jsx)(eO.default, {
               tooltipText: null,
               icon: d.isShown ? eA.default : eN.default,
               role: "switch",
@@ -616,7 +616,7 @@ function eK() {
       streaming: null != eS.default.findActivity(e => e.type === ew.ActivityTypes.STREAMING),
       status: eS.default.getStatus()
     })),
-    d = (0, O.default)({
+    d = (0, R.default)({
       userId: n
     }),
     c = ej.default.useUserTag(e, {
@@ -641,7 +641,7 @@ function eK() {
       return (0, P.probablyHasBuildOverride)() ? null === (e = L.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     g = (0, r.useStateFromStores)([ep.default], () => ep.default.getPremiumTypeSubscription()),
-    v = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
+    O = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
     M = (0, r.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
     y = (0, S.useModalsStore)(S.hasAnyModalOpenSelector) || M || eU.ProcessArgs.isDisallowPopupsSet(),
     D = (0, Q.useIsEligibleForPomelo)();
@@ -669,10 +669,10 @@ function eK() {
     en = (0, ee.useCanSeeSafetyEducationReportingCoachmark)(),
     ea = (0, er.default)(e),
     el = "account";
-  (0, R.useTriggerDebuggingAA)({
+  (0, v.useTriggerDebuggingAA)({
     location: el + " auto on",
     autoTrackExposure: !0
-  }), (0, R.useTriggerDebuggingAA)({
+  }), (0, v.useTriggerDebuggingAA)({
     location: el + " auto off",
     autoTrackExposure: !1
   }), (0, $.useSafetyEducationAATriggerPoint)();
@@ -730,7 +730,7 @@ function eK() {
     showTagAsButton: j,
     showTaglessAccountPanel: w,
     speaking: d,
-    speakingWhileMuted: v,
+    speakingWhileMuted: O,
     status: u,
     streaming: i,
     suppress: C,
@@ -746,8 +746,8 @@ function ez(e) {
     isEligibleForPomelo: n,
     onClick: s,
     onContextMenu: l
-  } = e, i = (0, S.useRedesignIconContext)().enabled, r = null, o = eR.default, u = (0, C.useSettingsLottie)();
-  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eO.default, {
+  } = e, i = (0, S.useRedesignIconContext)().enabled, r = null, o = ev.default, u = (0, C.useSettingsLottie)();
+  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eR.default, {
     width: 9,
     height: 9,
     className: eB.hasBuildOverride,
@@ -756,7 +756,7 @@ function ez(e) {
     color: b.default.STATUS_DANGER,
     className: eB.hasBuildOverride,
     "aria-hidden": !0
-  })), (0, a.jsx)(ev.default, {
+  })), (0, a.jsx)(eO.default, {
     tooltipText: null != t ? eF.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
       webBuildOverride: t.id
     }) : eF.default.Messages.USER_SETTINGS,
@@ -787,7 +787,7 @@ function eq(e) {
     play: I,
     events: p
   } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), T = n || l ? c.MicrophoneDenyIcon : m;
-  return s.useEffect(() => () => I(), [C, I]), (0, a.jsx)(ev.default, {
+  return s.useEffect(() => () => I(), [C, I]), (0, a.jsx)(eO.default, {
     tooltipText: r,
     tooltipColor: o,
     tooltipForceOpen: u,
@@ -828,7 +828,7 @@ function eQ(e) {
       onMouseLeave: _
     }
   } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = n ? d.HeadphonesDenyIcon : c;
-  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(ev.default, {
+  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eO.default, {
     tooltipText: (0, M.default)(t, n, l),
     onMouseEnter: E,
     onMouseLeave: _,

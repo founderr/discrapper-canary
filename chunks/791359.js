@@ -26,13 +26,13 @@ var a = n("735250"),
   g = n("203028"),
   A = n("358924"),
   N = n("292140"),
-  R = n("525296"),
-  O = n("981631"),
-  v = n("674563"),
+  v = n("525296"),
+  R = n("981631"),
+  O = n("674563"),
   L = n("689938"),
   P = n("103877");
 let M = 15 * I.default.Millis.MINUTE,
-  y = (0, R.default)(function(e) {
+  y = (0, v.default)(function(e) {
     let {
       party: t,
       onUserContextMenu: n,
@@ -53,16 +53,16 @@ let M = 15 * I.default.Millis.MINUTE,
     } = t, _ = c.length, C = f.length, S = E.length, I = h.length > 0, p = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
-        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === v.ApplicationTypes.GAME
+        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === O.ApplicationTypes.GAME
       }).map(e => e.game.name);
-      m.default.track(O.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
+      m.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
         num_users: _,
         num_streams: C,
         num_activities: S,
         in_voice_channel: I,
         games_detected: e
       })
-    }, [_, C, S, I, E]), R = o()(p, M);
+    }, [_, C, S, I, E]), v = o()(p, M);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -81,7 +81,7 @@ let M = 15 * I.default.Millis.MINUTE,
         } = t;
         return (0, a.jsx)(A.default, {
           ...e,
-          onMouseEnter: R,
+          onMouseEnter: v,
           "aria-haspopup": "menu",
           className: P.itemCard,
           active: n,

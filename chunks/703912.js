@@ -41,14 +41,14 @@ async function m(e, t, n) {
   if (null != o) throw new h.default({
     errorCode: C.RPCErrors.OAUTH2_ERROR
   }, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
-  let R = [];
-  if ("string" == typeof m ? R = m.split(" ").filter(e => e.length > 0) : Array.isArray(m) && (R = m), null == f.default.getCurrentUser()) throw new h.default({
+  let v = [];
+  if ("string" == typeof m ? v = m.split(" ").filter(e => e.length > 0) : Array.isArray(m) && (v = m), null == f.default.getCurrentUser()) throw new h.default({
     errorCode: C.RPCErrors.OAUTH2_ERROR
   }, "Client is not logged in");
   try {
     a = await (0, d.fetchAuthorization)({
       clientId: i,
-      scopes: R,
+      scopes: v,
       responseType: r,
       redirectUri: o,
       codeChallenge: u,
@@ -67,7 +67,7 @@ async function m(e, t, n) {
     return (await (0, d.authorize)({
       authorize: !0,
       clientId: i,
-      scopes: R,
+      scopes: v,
       responseType: r,
       redirectUri: o,
       codeChallenge: u,
@@ -84,11 +84,11 @@ async function m(e, t, n) {
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
   null == n || n(a.application, T);
-  let O = E.NONE;
+  let R = E.NONE;
   try {
-    O = l.deserialize(null != I ? I : 0)
+    R = l.deserialize(null != I ? I : 0)
   } catch (e) {}
-  return t(i, a, R, O, r, o, u, _, S, p, T, g, A)
+  return t(i, a, v, R, r, o, u, _, S, p, T, g, A)
 }
 
 function I(e, t) {

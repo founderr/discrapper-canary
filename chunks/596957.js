@@ -22,9 +22,9 @@ var a = n("735250"),
   g = n("701861"),
   A = n("437314"),
   N = n("696577"),
-  R = n("163417"),
-  O = n("492347"),
-  v = n("42575"),
+  v = n("163417"),
+  R = n("492347"),
+  O = n("42575"),
   L = n("617015"),
   P = n("981631"),
   M = n("689938"),
@@ -77,7 +77,7 @@ t.default = function(e) {
         size: I.default.Sizes.MEDIUM
       }), t === P.FriendsSections.ONLINE && "" === G[t] && (0, a.jsx)(_.default, {}), (0, a.jsxs)("div", {
         className: y.sectionTitle,
-        children: [(0, a.jsx)(O.default, {
+        children: [(0, a.jsx)(R.default, {
           id: n,
           title: function(e, t) {
             switch (e) {
@@ -119,7 +119,7 @@ t.default = function(e) {
         children: (0, a.jsx)(A.default, {
           type: A.FriendsSearchStatus.SECTION_NO_RESULTS
         }, x)
-      }) : (0, a.jsx)(R.default, {
+      }) : (0, a.jsx)(v.default, {
         relationshipCount: U,
         statusSections: [B],
         renderRow: function(e) {
@@ -135,7 +135,7 @@ t.default = function(e) {
                 isFocused: b
               });
             case P.FriendsSections.SUGGESTIONS:
-              return (0, a.jsx)(v.default, {
+              return (0, a.jsx)(O.default, {
                 ...e,
                 isFocused: b
               });

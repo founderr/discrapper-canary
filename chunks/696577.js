@@ -34,14 +34,14 @@ function p(e) {
     e.stopPropagation(), i.default.cancelFriendRequest(t.id, {
       location: "Friends"
     })
-  }, R = e => {
+  }, v = e => {
     e.stopPropagation(), i.default.addRelationship({
       userId: t.id,
       context: {
         location: "Friends"
       }
     })
-  }, O = p === S.StatusTypes.OFFLINE ? S.StatusTypes.UNKNOWN : p, v = n === S.RelationshipTypes.PENDING_INCOMING ? m.default.Messages.INCOMING_FRIEND_REQUEST : m.default.Messages.OUTGOING_FRIEND_REQUEST;
+  }, R = p === S.StatusTypes.OFFLINE ? S.StatusTypes.UNKNOWN : p, O = n === S.RelationshipTypes.PENDING_INCOMING ? m.default.Messages.INCOMING_FRIEND_REQUEST : m.default.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, a.jsx)(_.default, {
     isFocused: T,
     user: t,
@@ -63,7 +63,7 @@ function p(e) {
           icon: d.default,
           actionType: h.default.ActionTypes.ACCEPT,
           tooltip: m.default.Messages.FRIEND_REQUEST_ACCEPT,
-          onClick: R,
+          onClick: v,
           shouldHighlight: e
         }), (0, a.jsx)(h.default, {
           icon: c.default,
@@ -85,8 +85,8 @@ function p(e) {
           user: t,
           hovered: e,
           showAccountIdentifier: !0,
-          status: O,
-          subText: v,
+          status: R,
+          subText: O,
           className: I.userInfo
         }), (0, a.jsx)("div", {
           className: I.actions,

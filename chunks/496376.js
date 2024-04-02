@@ -101,10 +101,10 @@ t.default = e => {
     guildId: t,
     setPage: n,
     currentStep: l,
-    setCurrentStep: R,
-    onClose: O
+    setCurrentStep: v,
+    onClose: R
   } = e, {
-    selectedGames: v,
+    selectedGames: O,
     playstyle: L,
     interests: P,
     description: M,
@@ -127,7 +127,7 @@ t.default = e => {
       look: o.Button.Looks.OUTLINED,
       size: o.Button.Sizes.SMALL,
       color: o.Button.Colors.PRIMARY,
-      onClick: O,
+      onClick: R,
       children: T.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, a.jsxs)("div", {
       className: i()(g.mainContent, g.fadeIn, {
@@ -148,7 +148,7 @@ t.default = e => {
               case p.ClanSetupSteps.GAMES:
                 return (0, a.jsx)(_.default, {
                   handleUpdate: j,
-                  selectedGames: v
+                  selectedGames: O
                 });
               case p.ClanSetupSteps.PLAYSTYLE:
                 return (0, a.jsx)(S.default, {
@@ -180,8 +180,8 @@ t.default = e => {
         })
       }), (0, a.jsx)(N, {
         currentStep: l,
-        setCurrentStep: R,
-        selectedGames: v,
+        setCurrentStep: v,
+        selectedGames: O,
         playstyle: L,
         interests: P,
         description: M,

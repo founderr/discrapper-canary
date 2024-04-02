@@ -22,9 +22,9 @@ var a = n("735250"),
   g = n("687751"),
   A = n("912471"),
   N = n("100527"),
-  R = n("74438"),
-  O = n("753450"),
-  v = n("675869"),
+  v = n("74438"),
+  R = n("753450"),
+  O = n("675869"),
   L = n("77987"),
   P = n("679891"),
   M = n("491575"),
@@ -76,9 +76,9 @@ var a = n("735250"),
   eg = n("377368"),
   eA = n("262702"),
   eN = n("639033"),
-  eR = n("479313"),
-  eO = n("911560"),
-  ev = n("703016"),
+  ev = n("479313"),
+  eR = n("911560"),
+  eO = n("703016"),
   eL = n("171368"),
   eP = n("429974"),
   eM = n("332754"),
@@ -171,7 +171,7 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
     passProps: !1
   }),
   e5 = (0, L.makeAuthenticated)(function() {
-    return (0, a.jsx)(R.default, {})
+    return (0, a.jsx)(v.default, {})
   }),
   e8 = (0, L.makeAuthenticated)(function(e) {
     let {
@@ -180,13 +180,13 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
       applicationId: n,
       section: s
     } = t.params, l = (0, Z.default)(e0.ApplicationDirectoryProfileSections, s);
-    return (0, a.jsx)(O.default, {
+    return (0, a.jsx)(R.default, {
       applicationId: n,
       initialSection: l
     })
   }),
   e6 = (0, L.makeAuthenticated)(function() {
-    return (0, a.jsx)(v.default, {})
+    return (0, a.jsx)(O.default, {})
   }),
   te = [e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(e1.StaticChannelRoutes).map(e => e$.Routes.CHANNEL(":guildId", e))];
 
@@ -454,7 +454,7 @@ function tl(e) {
 }
 class ti extends s.PureComponent {
   componentDidMount() {
-    y.default.initialize(), eX.default.setZoomFactor(C.default.zoom), em.default.init(), P.default.initialize(), ed.default.initialize(), F.default.initialize(), eb.default.initialize(), B.default.initialize(), ef.default.initialize(), ee.default.initialize(), S.default.init(), V.default.init(), H.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), T.default.initialize(), ex.default.initialize(), eu.default.initialize(), p.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), I.default.initialize(), ev.default.init(), eK.default.init(), eW.default.init(), eM.default.init(), eA.default.initialize(), eN.default.initialize(), eP.default.initialize(), ey.default.init(), G.default.initialize(), m.default.initialize(), eI.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), D.default.initialize(), $.default.init({
+    y.default.initialize(), eX.default.setZoomFactor(C.default.zoom), em.default.init(), P.default.initialize(), ed.default.initialize(), F.default.initialize(), eb.default.initialize(), B.default.initialize(), ef.default.initialize(), ee.default.initialize(), S.default.init(), V.default.init(), H.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), T.default.initialize(), ex.default.initialize(), eu.default.initialize(), p.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), I.default.initialize(), eO.default.init(), eK.default.init(), eW.default.init(), eM.default.init(), eA.default.initialize(), eN.default.initialize(), eP.default.initialize(), ey.default.init(), G.default.initialize(), m.default.initialize(), eI.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), D.default.initialize(), $.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -512,7 +512,7 @@ class ti extends s.PureComponent {
           let {
             summaryId: e
           } = (0, l.parse)(t);
-          null != e && eR.default.setSelectedSummary(s, e)
+          null != e && ev.default.setSelectedSummary(s, e)
         }
         if (null != o && c) {
           let e = ej.default.getCurrentSidebarChannelId(n) !== o,
@@ -561,7 +561,7 @@ class ti extends s.PureComponent {
     } = tt(n), i = (0, eC.isValidGuildId)(a) && a !== e$.ME && a !== e$.FAVORITES;
     if (null != s && (0, eC.isValidChannelId)(s) && !(0, e1.isStaticChannelRoute)(s) && i) {
       let n = eG.default.getChannel(s);
-      if (null == n) eO.default.loadThread(s).then(() => tl({
+      if (null == n) eR.default.loadThread(s).then(() => tl({
         channelId: s,
         guildId: a,
         pathname: t
@@ -573,7 +573,7 @@ class ti extends s.PureComponent {
       if (null != l) {
         if (!((0, eC.isValidChannelId)(l) && !(0, e1.isStaticChannelRoute)(s))) return null;
         let n = eG.default.getChannel(l);
-        if (null == n) eO.default.loadThread(l).then(() => tl({
+        if (null == n) eR.default.loadThread(l).then(() => tl({
           channelId: l,
           guildId: a,
           pathname: t

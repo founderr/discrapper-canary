@@ -22,12 +22,12 @@ let C = "IncomingCallStore",
   A = 0,
   N = !1;
 
-function R(e) {
+function v(e) {
   if (null == e || null == p.get(e)) return !1;
   p.delete(e), (T = new Set(T)).delete(e)
 }
 
-function O(e) {
+function R(e) {
   let {
     channelId: t,
     ringing: n
@@ -43,7 +43,7 @@ function O(e) {
     }), (T = new Set(T)).add(t)
   } else {
     if (!T.has(t) || a) return !1;
-    R(t)
+    v(t)
   }
 }! function() {
   let e = o.Storage.get(C);
@@ -54,12 +54,12 @@ function O(e) {
   }
 }();
 
-function v() {
+function O() {
   N = h.default.getStatus() === _.StatusTypes.DND || d.FocusMode.getSetting()
 }
 class L extends(a = r.default.Store) {
   initialize() {
-    this.waitFor(E.default, h.default), this.syncWith([h.default], v), this.syncWith([c.default], v)
+    this.waitFor(E.default, h.default), this.syncWith([h.default], O), this.syncWith([c.default], O)
   }
   getIncomingCalls() {
     return N ? I : Array.from(p.values())
@@ -80,19 +80,19 @@ i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s
   configurable: !0,
   writable: !0
 }) : s[l] = i, t.default = new L(u.default, {
-  CALL_CREATE: O,
-  CALL_UPDATE: O,
+  CALL_CREATE: R,
+  CALL_UPDATE: R,
   CALL_DELETE: function(e) {
     let {
       channelId: t
     } = e;
-    return R(t)
+    return v(t)
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return R(t)
+    return v(t)
   },
   INCOMING_CALL_MOVE: function(e) {
     let {
@@ -108,6 +108,6 @@ i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s
     let {
       channel: t
     } = e;
-    return R(t.id)
+    return v(t.id)
   }
 })

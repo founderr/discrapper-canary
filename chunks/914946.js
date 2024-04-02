@@ -74,8 +74,8 @@ var a, s = n("729594"),
   A = n("5192"),
   N = n("226951"),
   v = n("996106"),
-  O = n("863141"),
-  R = n("186901"),
+  R = n("863141"),
+  O = n("186901"),
   L = n("981631");
 let P = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
   M = function() {
@@ -179,7 +179,7 @@ function k(e, t, n) {
       self_deaf: i,
       suppress: r
     },
-    user: (0, O.default)(u)
+    user: (0, R.default)(u)
   }
 }
 
@@ -187,7 +187,7 @@ function F(e, t, n) {
   let a = p.default.getUser(t);
   return {
     type: e,
-    user: null != a ? (0, O.default)(a) : null,
+    user: null != a ? (0, R.default)(a) : null,
     presence: {
       status: I.default.getStatus(t),
       activity: null != n ? I.default.getApplicationActivity(t, n) : I.default.getPrimaryActivity(t)
@@ -257,7 +257,7 @@ function K(e, t, n) {
       }
     } = a;
     if ("string" == typeof n) {
-      if (e.transport === R.TransportTypes.POST_MESSAGE) {
+      if (e.transport === O.TransportTypes.POST_MESSAGE) {
         let e = (0, u.default)(t);
         if (null == e || !j(n, [e])) throw new v.default({
           closeCode: L.RPCCloseCodes.INVALID_ORIGIN
@@ -285,7 +285,7 @@ async function z(e, t) {
 }
 
 function q(e, t) {
-  null == t && (e.authorization.scopes = [R.RPC_LOCAL_SCOPE])
+  null == t && (e.authorization.scopes = [O.RPC_LOCAL_SCOPE])
 }
 
 function Q(e) {
@@ -339,7 +339,7 @@ function Z(e, t) {
 }
 
 function X(e) {
-  if (e !== R.TransportTypes.POST_MESSAGE) throw new v.default({
+  if (e !== O.TransportTypes.POST_MESSAGE) throw new v.default({
     errorCode: L.RPCErrors.INVALID_COMMAND
   }, 'command not available from "'.concat(e, " transport"))
 }

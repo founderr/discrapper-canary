@@ -22,9 +22,9 @@ var a = n("735250"),
   g = n("921944"),
   A = n("30513"),
   N = n("474936"),
-  R = n("689938"),
-  O = n("54449"),
-  v = n("1006"),
+  v = n("689938"),
+  R = n("54449"),
+  O = n("1006"),
   L = n("741160"),
   P = n("829972"),
   M = n("31932"),
@@ -99,15 +99,15 @@ t.default = s.memo(function(e) {
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(m.default, {
               onComponentMount: A,
-              header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
+              header: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: G,
-                className: v.fullWidthImage
+                className: O.fullWidthImage
               }),
-              content: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
-              buttonCTA: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
-              secondaryButtonCTA: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
+              content: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
+              buttonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
+              secondaryButtonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
               onSecondaryClick: () => D(),
               onClick: () => D(s),
               markAsDismissed: k
@@ -118,15 +118,15 @@ t.default = s.memo(function(e) {
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(m.default, {
               onComponentMount: A,
-              header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
+              header: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: G,
-                className: v.fullWidthImage
+                className: O.fullWidthImage
               }),
-              content: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
-              buttonCTA: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
-              secondaryButtonCTA: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
+              content: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
+              buttonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
+              secondaryButtonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
               onSecondaryClick: () => D(),
               onClick: () => D(s),
               markAsDismissed: k
@@ -159,22 +159,22 @@ t.default = s.memo(function(e) {
             renderGuildHeaderDropdownButton: r
           });
         case l.DismissibleContent.GUILD_HEADER_INVITE_SPLASH:
-          let e = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
+          let e = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
               boostCount: (0, p.getNumberOfAppliedBoostsNeededForTier)(s, T.BoostedGuildTiers.TIER_1)
             }),
-            t = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : R.default.Messages.LEARN_MORE;
+            t = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : v.default.Messages.LEARN_MORE;
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(m.default, {
               onComponentMount: j,
-              header: R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
+              header: v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: L,
-                className: v.fullWidthImage
+                className: O.fullWidthImage
               }),
               content: e,
               buttonCTA: t,
-              secondaryButtonCTA: R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
+              secondaryButtonCTA: v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
               onSecondaryClick: () => b(f),
               onClick: () => b(f, s),
               markAsDismissed: k
@@ -191,10 +191,10 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(m.default, {
-              className: O.tooltipOverrideColor,
-              header: R.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
-              content: R.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
-              buttonCTA: R.default.Messages.GOT_IT,
+              className: R.tooltipOverrideColor,
+              header: v.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
+              content: v.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
+              buttonCTA: v.default.Messages.GOT_IT,
               onClick: () => k(g.ContentDismissActionType.UNKNOWN),
               markAsDismissed: k
             }),
@@ -203,17 +203,17 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_SOUNDBOARD_PERMISSION:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(m.default, {
-              header: R.default.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
-              content: R.default.Messages.SOUNDBOARD_TOOLTIP_BODY,
-              buttonCTA: R.default.Messages.CHECK_IT_OUT,
-              secondaryButtonCTA: R.default.Messages.NO_THANKS,
+              header: v.default.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
+              content: v.default.Messages.SOUNDBOARD_TOOLTIP_BODY,
+              buttonCTA: v.default.Messages.CHECK_IT_OUT,
+              secondaryButtonCTA: v.default.Messages.NO_THANKS,
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: y,
-                className: v.fullWidthImage
+                className: O.fullWidthImage
               }),
               onClick: () => {
-                _.default.open(s.id, T.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), R.default.Messages.USE_SOUNDBOARD)
+                _.default.open(s.id, T.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), v.default.Messages.USE_SOUNDBOARD)
               },
               markAsDismissed: k
             }),

@@ -47,7 +47,7 @@ function N(e) {
   return e.name
 }
 
-function R(e, t, n) {
+function v(e, t, n) {
   return null == e || e.displayName !== t ? {
     displayName: t,
     type: n
@@ -56,7 +56,7 @@ function R(e, t, n) {
     type: f.ConnectedDeviceType.INPUT_AND_OUTPUT
   } : e
 }
-class O extends(a = i.default.DeviceSettingsStore) {
+class R extends(a = i.default.DeviceSettingsStore) {
   initialize(e) {
     this.waitFor(c.default, u.default), C = null != e ? e : _
   }
@@ -82,7 +82,7 @@ class O extends(a = i.default.DeviceSettingsStore) {
     return g
   }
 }
-h(O, "displayName", "ConnectedDeviceStore"), h(O, "persistKey", "ConnectedDeviceStore"), t.default = new O(r.default, {
+h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDeviceStore"), t.default = new R(r.default, {
   MEDIA_ENGINE_DEVICES: function(e) {
     let {
       inputDevices: t,
@@ -113,9 +113,9 @@ h(O, "displayName", "ConnectedDeviceStore"), h(O, "persistKey", "ConnectedDevice
       d = l().difference(i, r),
       c = l().difference(o, u);
     return d.length > 0 || c.length > 0 ? p = {} : (l().difference(r, i).forEach(e => {
-      p[e] = R(p[e], e, f.ConnectedDeviceType.INPUT)
+      p[e] = v(p[e], e, f.ConnectedDeviceType.INPUT)
     }), l().difference(u, o).forEach(e => {
-      p[e] = R(p[e], e, f.ConnectedDeviceType.OUTPUT)
+      p[e] = v(p[e], e, f.ConnectedDeviceType.OUTPUT)
     })), !(l().isEqual(i, r) && l().isEqual(o, u)) && (m = a, I = s, !0)
   },
   CONNECTED_DEVICE_SET: function(e) {

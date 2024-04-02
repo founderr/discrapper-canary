@@ -51,7 +51,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       color: A,
       children: g
     }));
-    let R = null != f ? "".concat(f, "px") : "16px";
+    let v = null != f ? "".concat(f, "px") : "16px";
     return (0, a.jsxs)("div", {
       className: _.channelNotice,
       children: [!0 === I ? null : (0, a.jsx)(r.Clickable, {
@@ -69,8 +69,8 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
         className: _.imageContainer,
         style: {
           marginTop: "".concat(S, "px"),
-          marginLeft: R,
-          marginRight: R
+          marginLeft: v,
+          marginRight: v
         },
         children: (0, a.jsx)("img", {
           className: _.image,

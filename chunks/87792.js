@@ -22,9 +22,9 @@ var a = n("735250"),
   g = n("240351"),
   A = n("792258"),
   N = n("657825"),
-  R = n("198952"),
-  O = n("329242"),
-  v = n("895328"),
+  v = n("198952"),
+  R = n("329242"),
+  O = n("895328"),
   L = n("292352"),
   P = n("981631"),
   M = n("689938"),
@@ -68,8 +68,8 @@ function x(e) {
     I(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i()(E, "No text for action type");
-  let R = E.sectionHeader(u),
-    O = s.useCallback(e => {
+  let v = E.sectionHeader(u),
+    R = s.useCallback(e => {
       let {
         row: t
       } = e, n = r[t];
@@ -81,29 +81,29 @@ function x(e) {
         guildId: n.entity_id
       }, n.event_id) : void 0
     }, [r, E.timestampFormatter]),
-    v = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
+    O = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Text, {
         className: y.sectionHeader,
         variant: "eyebrow",
         color: "header-secondary",
-        children: R
+        children: v
       }), void 0 !== E.sectionDescription ? (0, a.jsx)(o.Text, {
         className: y.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
         children: E.sectionDescription(null != l && l, T)
       }) : null]
-    }), [R, E, l, T]);
+    }), [v, E, l, T]);
   if (0 === r.length) return null;
   let P = r.slice(0, C);
   return (0, a.jsxs)("div", {
     className: y.actionSection,
-    children: [v(), (0, a.jsx)("div", {
+    children: [O(), (0, a.jsx)("div", {
       className: y.actions,
       style: {
         maxHeight: 65 * P.length
       },
-      children: P.map((e, t) => O({
+      children: P.map((e, t) => R({
         row: t
       }))
     }), P.length !== u ? (0, a.jsx)(o.Clickable, {
@@ -151,12 +151,12 @@ let b = () => {
     } = e, l = (0, I.useTeenUserForId)(t);
     return void 0 === l ? null : (0, a.jsxs)("div", {
       className: y.accountRow,
-      children: [(0, a.jsx)(R.FamilyCenterAvatar, {
+      children: [(0, a.jsx)(v.FamilyCenterAvatar, {
         user: l,
         avatarSize: s
       }), (0, a.jsxs)("div", {
         className: y.headerText,
-        children: [(0, a.jsx)(O.default, {
+        children: [(0, a.jsx)(R.default, {
           user: l
         }), void 0 !== n ? (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
@@ -240,7 +240,7 @@ t.default = e => {
             return (0, a.jsx)(x, {
               displayType: t
             }, "".concat(t, "-list"))
-          }) : (0, a.jsx)(v.default, {
+          }) : (0, a.jsx)(O.default, {
             className: y.emptyActivity,
             text: null != i ? i : ""
           })

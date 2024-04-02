@@ -31,11 +31,11 @@ t.default = e => {
     selectedGames: g,
     playstyle: A,
     interests: N,
-    primetime: R
+    primetime: v
   } = (0, d.useStateFromStoresObject)([_.default], () => {
     var e;
     return null !== (e = _.default.getState(n)) && void 0 !== e ? e : {}
-  }), O = (null == g ? void 0 : g.size) > 0 ? Array.from(g.values()).map(e => e.name).join(", ") : null, v = s.useMemo(() => {
+  }), R = (null == g ? void 0 : g.size) > 0 ? Array.from(g.values()).map(e => e.name).join(", ") : null, O = s.useMemo(() => {
     switch (A) {
       case S.ClanPlaystyles.SOCIAL:
         return m.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;
@@ -48,7 +48,7 @@ t.default = e => {
       default:
         return null
     }
-  }, [A]), L = (null == N ? void 0 : N.size) > 0 ? Array.from(N).join(", ") : null, P = (null == R ? void 0 : R.length) > 0 ? R.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [], M = (null == P ? void 0 : P.length) > 0 ? P.join(", ") : null;
+  }, [A]), L = (null == N ? void 0 : N.size) > 0 ? Array.from(N).join(", ") : null, P = (null == v ? void 0 : v.length) > 0 ? v.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [], M = (null == P ? void 0 : P.length) > 0 ? P.join(", ") : null;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: I.scrollBg,
@@ -74,20 +74,20 @@ t.default = e => {
         children: m.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
           date: o()().format("MMMM YYYY")
         })
-      }), null != O ? null != v ? (0, a.jsx)(c.Text, {
+      }), null != R ? null != O ? (0, a.jsx)(c.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         className: I.overviewText,
         children: m.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
-          playstyle: v,
-          games: O
+          playstyle: O,
+          games: R
         })
       }) : (0, a.jsx)(c.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         className: I.overviewText,
         children: m.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({
-          games: O
+          games: R
         })
       }) : (0, a.jsx)(c.Text, {
         variant: "text-sm/normal",

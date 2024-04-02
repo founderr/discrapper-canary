@@ -22,9 +22,9 @@ var a = n("735250"),
   g = n("661599"),
   A = n("923608"),
   N = n("617899"),
-  R = n("8521"),
-  O = n("760326"),
-  v = n("536687"),
+  v = n("8521"),
+  R = n("760326"),
+  O = n("536687"),
   L = n("652785"),
   P = n("921944");
 
@@ -71,7 +71,7 @@ function y(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER:
-            return (0, a.jsx)(O.default, {
+            return (0, a.jsx)(R.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -105,44 +105,44 @@ t.default = e => {
   let {
     guild: t
   } = e;
-  switch ((0, v.default)(t)) {
-    case v.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
+  switch ((0, O.default)(t)) {
+    case O.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
       return (0, a.jsx)(I.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
+    case O.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
       return (0, a.jsx)(c.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.MAX_MEMBER_COUNT:
-      return (0, a.jsx)(R.default, {
+    case O.ConnectedChannelNotices.MAX_MEMBER_COUNT:
+      return (0, a.jsx)(v.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
+    case O.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
       return (0, a.jsx)(h.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.GUILD_MFA_WARNING:
+    case O.ConnectedChannelNotices.GUILD_MFA_WARNING:
       return (0, a.jsx)(g.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.COMMANDS_MIGRATION:
+    case O.ConnectedChannelNotices.COMMANDS_MIGRATION:
       return (0, a.jsx)(S.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
+    case O.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
       return (0, a.jsx)(m.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.HUB_STUDY_ROOM:
+    case O.ConnectedChannelNotices.HUB_STUDY_ROOM:
       return (0, a.jsx)(C.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.SIGNUP:
+    case O.ConnectedChannelNotices.SIGNUP:
       return (0, a.jsx)(p.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.CLAN_UPSELL:
+    case O.ConnectedChannelNotices.CLAN_UPSELL:
       return (0, a.jsx)(o.default, {
         guildId: t.id
       })

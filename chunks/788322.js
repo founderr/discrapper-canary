@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoverSearchResultPlaceholder: function() {
-    return O
+    return R
   }
 }), n("47120");
 var a = n("735250"),
@@ -26,16 +26,16 @@ var a = n("735250"),
   g = n("689938"),
   A = n("208596"),
   N = n("129512"),
-  R = n("330065");
-let O = () => (0, a.jsx)("div", {
+  v = n("330065");
+let R = () => (0, a.jsx)("div", {
   className: A.placeholder
 });
 t.default = e => {
   var t;
   let {
     guild: l,
-    theme: O,
-    onView: v,
+    theme: R,
+    onView: O,
     onTagClick: L
   } = e, {
     id: P,
@@ -57,9 +57,9 @@ t.default = e => {
       case T.ThemeTypes.DARK:
         return N;
       case T.ThemeTypes.LIGHT:
-        return R
+        return v
     }
-  }(O), Y = null !== (t = _.default.getGuildIconURL({
+  }(R), Y = null !== (t = _.default.getGuildIconURL({
     id: P,
     icon: y,
     size: 32
@@ -83,7 +83,7 @@ t.default = e => {
       }
       F(!0);
       try {
-        null != v && await v(l.id)
+        null != O && await O(l.id)
       } finally {
         F(!1)
       }

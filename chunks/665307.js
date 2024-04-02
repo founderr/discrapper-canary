@@ -25,9 +25,9 @@ var a, s = n("735250"),
   g = n("366966"),
   A = n("151011"),
   N = n("880008"),
-  R = n("466111"),
-  O = n("931003"),
-  v = n("626135"),
+  v = n("466111"),
+  R = n("931003"),
+  O = n("626135"),
   L = n("780570"),
   P = n("624138"),
   M = n("645818"),
@@ -86,7 +86,7 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
           children: e.libraryApplication.getBranchedName(e.application)
         }), e.libraryApplication.hasFlag(y.LibraryApplicationFlags.PREMIUM) ? (0, s.jsx)(f.Tooltip, {
           text: D.default.Messages.PREMIUM_GAME,
-          children: e => (0, s.jsx)(R.default, {
+          children: e => (0, s.jsx)(v.default, {
             className: x.nitroIcon,
             ...e
           })
@@ -144,7 +144,7 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
           }), (0, s.jsx)(w, {
             flag: y.LibraryApplicationFlags.OVERLAY_DISABLED,
             item: e,
-            icon: O.default,
+            icon: R.default,
             tooltip: D.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
           }), (0, s.jsx)(M.default, {
             className: r()(x.settingIcon, {
@@ -272,7 +272,7 @@ class B extends(a = l.PureComponent) {
       }
       e.num_applications_total++
     }
-    v.default.track(y.AnalyticEvents.LIBRARY_VIEWED, {
+    O.default.track(y.AnalyticEvents.LIBRARY_VIEWED, {
       ...e,
       load_id: t.loadId
     })
@@ -396,7 +396,7 @@ class B extends(a = l.PureComponent) {
 }
 
 function H(e) {
-  let t = l.useContext(v.AnalyticsContext),
+  let t = l.useContext(O.AnalyticsContext),
     n = (0, o.useLocation)(),
     {
       applicationViewItems: a,

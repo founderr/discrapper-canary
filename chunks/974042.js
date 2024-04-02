@@ -132,30 +132,30 @@ class A {
   }
 }
 let N = !0,
-  R = !1,
-  O = S.FriendsSections.ONLINE,
-  v = new A,
+  v = !1,
+  R = S.FriendsSections.ONLINE,
+  O = new A,
   L = !0,
   P = !1;
 
 function M() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  N && (e || O !== S.FriendsSections.ONLINE && O !== S.FriendsSections.ADD_FRIEND) && !R && (N = !1, R = !0, o.default.fetchRelationships())
+  N && (e || R !== S.FriendsSections.ONLINE && R !== S.FriendsSections.ADD_FRIEND) && !v && (N = !1, v = !0, o.default.fetchRelationships())
 }
 
 function y() {
-  if (N = !0, L ? R = !1 : M(), v = v.reset(), P) return;
-  let e = v.getRelationshipCounts();
-  O = 0 === e[S.RelationshipTypes.FRIEND] ? 0 !== e[S.RelationshipTypes.PENDING_INCOMING] ? S.FriendsSections.PENDING : S.FriendsSections.ADD_FRIEND : S.FriendsSections.ONLINE
+  if (N = !0, L ? v = !1 : M(), O = O.reset(), P) return;
+  let e = O.getRelationshipCounts();
+  R = 0 === e[S.RelationshipTypes.FRIEND] ? 0 !== e[S.RelationshipTypes.PENDING_INCOMING] ? S.FriendsSections.PENDING : S.FriendsSections.ADD_FRIEND : S.FriendsSections.ONLINE
 }
 
 function D() {
-  v = L ? new A : v.reset()
+  O = L ? new A : O.reset()
 }
 
 function x(e) {
   return function() {
-    return !L && !!v.update(e) && (v = v.clone(), !0)
+    return !L && !!O.update(e) && (O = O.clone(), !0)
   }
 }
 class b extends(a = i.default.Store) {
@@ -164,10 +164,10 @@ class b extends(a = i.default.Store) {
   }
   getState() {
     return {
-      fetching: R,
-      section: O,
+      fetching: v,
+      section: R,
       pendingCount: _.default.getPendingCount(),
-      rows: v
+      rows: O
     }
   }
 }
@@ -176,7 +176,7 @@ m(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     y()
   },
   FRIENDS_SET_SECTION: function(e) {
-    O = e.section, M()
+    R = e.section, M()
   },
   CHANNEL_SELECT: function(e) {
     let {
@@ -185,10 +185,10 @@ m(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     return L = null != t, D(), !L
   },
   LOAD_RELATIONSHIPS_SUCCESS: function() {
-    R = !1
+    v = !1
   },
   LOAD_RELATIONSHIPS_FAILURE: function() {
-    N = !0, R = !0
+    N = !0, v = !0
   },
   DRAWER_SELECT_TAB: function(e) {
     let {
@@ -197,6 +197,6 @@ m(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     return L = t !== S.DrawerTabTypes.FRIENDS, D(), !L
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
-    O = e.section, P = !0
+    R = e.section, P = !0
   }
 })

@@ -45,7 +45,7 @@ function N(e) {
   })
 }
 
-function R(e) {
+function v(e) {
   let {
     customStatus: t
   } = e, n = e => {
@@ -87,7 +87,7 @@ function R(e) {
   })
 }
 
-function O(e) {
+function R(e) {
   let {
     focused: t
   } = e;
@@ -105,7 +105,7 @@ function O(e) {
     })]
   })
 }
-let v = e => {
+let O = e => {
   let {
     customStatus: t,
     onClose: l,
@@ -187,7 +187,7 @@ let v = e => {
     }), (0, a.jsx)(u.MenuSeparator, {}), (0, a.jsx)(u.MenuItem, {
       id: "custom-status",
       keepItemStyles: !0,
-      render: () => (0, a.jsx)(R, {
+      render: () => (0, a.jsx)(v, {
         customStatus: t
       }),
       action: () => {
@@ -208,7 +208,7 @@ let v = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(O, {
+        return (0, a.jsx)(R, {
           focused: t
         })
       },
@@ -219,7 +219,7 @@ let v = e => {
 t.default = (0, d.default)(e => {
   let t = (0, r.useStateFromStores)([C.default], () => C.default.getCustomStatusActivity()),
     n = _.StatusSetting.useSetting();
-  return (0, a.jsx)(v, {
+  return (0, a.jsx)(O, {
     ...e,
     customStatus: t,
     status: n

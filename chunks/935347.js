@@ -22,9 +22,9 @@ var a = n("735250"),
   g = n("70956"),
   A = n("358085"),
   N = n("557177"),
-  R = n("998502"),
-  O = n("981631"),
-  v = n("689938"),
+  v = n("998502"),
+  R = n("981631"),
+  O = n("689938"),
   L = n("82863");
 
 function P(e, t, n) {
@@ -59,7 +59,7 @@ class M extends s.PureComponent {
     if (e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== i || d) {
       if (i && null != this.videoRef) {
         let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * g.default.Millis.SECOND), 600);
-        clearTimeout(this._noProblemsTimeout), c.Storage.get(O.DISCODO_STORAGE_KEY) && this._connectedSound.play(), o ? this.setState({
+        clearTimeout(this._noProblemsTimeout), c.Storage.get(R.DISCODO_STORAGE_KEY) && this._connectedSound.play(), o ? this.setState({
           problems: !1,
           hide: i
         }) : this._noProblemsTimeout = setTimeout(() => {
@@ -110,7 +110,7 @@ class M extends s.PureComponent {
             className: L.text,
             children: [null != t ? null : (0, a.jsx)("div", {
               className: L.tipTitle,
-              children: v.default.Messages.LOADING_DID_YOU_KNOW
+              children: O.default.Messages.LOADING_DID_YOU_KNOW
             }), (0, a.jsx)("div", {
               className: null != t ? L.title : L.tip,
               children: n
@@ -125,22 +125,22 @@ class M extends s.PureComponent {
           }),
           children: [(0, a.jsx)("div", {
             className: L.problemsText,
-            children: v.default.Messages.CONNECTING_PROBLEMS_CTA
+            children: O.default.Messages.CONNECTING_PROBLEMS_CTA
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsxs)(f.Anchor, {
               className: L.twitterLink,
-              href: O.Links.TWITTER_SUPPORT,
+              href: R.Links.TWITTER_SUPPORT,
               target: "_blank",
               children: [(0, a.jsx)(p.default, {
                 className: L.icon
-              }), v.default.Messages.TWEET_US]
+              }), O.default.Messages.TWEET_US]
             }), (0, a.jsxs)(f.Anchor, {
               className: L.statusLink,
-              href: O.Links.STATUS,
+              href: R.Links.STATUS,
               target: "_blank",
               children: [(0, a.jsx)(I.default, {
                 className: L.icon
-              }), v.default.Messages.SERVER_STATUS]
+              }), O.default.Messages.SERVER_STATUS]
             })]
           })]
         })]
@@ -149,12 +149,12 @@ class M extends s.PureComponent {
   }
   constructor(e) {
     super(e), P(this, "videoRef", null), P(this, "_noProblemsTimeout", null), P(this, "_problemsTimeout", null), P(this, "_connectedSound", this.createSound()), P(this, "_loadingText", function() {
-      let e = [v.default.Messages.ACCESSIBILITY_LOADING_TIP_1, v.default.Messages.ACCESSIBILITY_LOADING_TIP_2, v.default.Messages.ACCESSIBILITY_LOADING_TIP_3, v.default.Messages.ACCESSIBILITY_LOADING_TIP_4, v.default.Messages.ACCESSIBILITY_LOADING_TIP_5, v.default.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
+      let e = [O.default.Messages.ACCESSIBILITY_LOADING_TIP_1, O.default.Messages.ACCESSIBILITY_LOADING_TIP_2, O.default.Messages.ACCESSIBILITY_LOADING_TIP_3, O.default.Messages.ACCESSIBILITY_LOADING_TIP_4, O.default.Messages.ACCESSIBILITY_LOADING_TIP_5, O.default.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
         tabHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "tab",
           className: L.keybind
         }, t)
-      }), v.default.Messages.ACCESSIBILITY_LOADING_TIP_7, v.default.Messages.ACCESSIBILITY_LOADING_TIP_8, v.default.Messages.ACCESSIBILITY_LOADING_TIP_9, v.default.Messages.ACCESSIBILITY_LOADING_TIP_10.format({
+      }), O.default.Messages.ACCESSIBILITY_LOADING_TIP_7, O.default.Messages.ACCESSIBILITY_LOADING_TIP_8, O.default.Messages.ACCESSIBILITY_LOADING_TIP_9, O.default.Messages.ACCESSIBILITY_LOADING_TIP_10.format({
         F6Hook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "f6",
           className: L.keybind
@@ -163,24 +163,24 @@ class M extends s.PureComponent {
           shortcut: "tab",
           className: L.keybind
         }, t)
-      }), v.default.Messages.LOADING_LINE_1, v.default.Messages.LOADING_LINE_2, v.default.Messages.LOADING_LINE_4, v.default.Messages.LOADING_LINE_5, v.default.Messages.LOADING_LINE_6, v.default.Messages.LOADING_LINE_7, v.default.Messages.LOADING_LINE_8, v.default.Messages.LOADING_LINE_9, v.default.Messages.LOADING_LINE_10, v.default.Messages.LOADING_LINE_11, v.default.Messages.LOADING_LINE_12, v.default.Messages.LOADING_LINE_13, v.default.Messages.LOADING_LINE_14, v.default.Messages.LOADING_LINE_15, v.default.Messages.LOADING_TIP_1, v.default.Messages.LOADING_TIP_2, v.default.Messages.LOADING_TIP_3, v.default.Messages.LOADING_TIP_4, v.default.Messages.LOADING_TIP_5, v.default.Messages.LOADING_TIP_6, v.default.Messages.LOADING_TIP_7, v.default.Messages.LOADING_TIP_8, v.default.Messages.LOADING_TIP_9, v.default.Messages.LOADING_TIP_10, v.default.Messages.LOADING_TIP_11, v.default.Messages.LOADING_TIP_12, v.default.Messages.LOADING_TIP_13, v.default.Messages.LOADING_TIP_14, v.default.Messages.LOADING_TIP_15, v.default.Messages.LOADING_TIP_16, v.default.Messages.LOADING_TIP_17, v.default.Messages.LOADING_TIP_18, v.default.Messages.LOADING_TIP_19, v.default.Messages.LOADING_TIP_20, v.default.Messages.LOADING_TIP_21, v.default.Messages.LOADING_TIP_22, v.default.Messages.LOADING_TIP_23, v.default.Messages.LOADING_TIP_24, v.default.Messages.LOADING_TIP_25, v.default.Messages.LOADING_TIP_26, v.default.Messages.LOADING_TIP_27.format({
+      }), O.default.Messages.LOADING_LINE_1, O.default.Messages.LOADING_LINE_2, O.default.Messages.LOADING_LINE_4, O.default.Messages.LOADING_LINE_5, O.default.Messages.LOADING_LINE_6, O.default.Messages.LOADING_LINE_7, O.default.Messages.LOADING_LINE_8, O.default.Messages.LOADING_LINE_9, O.default.Messages.LOADING_LINE_10, O.default.Messages.LOADING_LINE_11, O.default.Messages.LOADING_LINE_12, O.default.Messages.LOADING_LINE_13, O.default.Messages.LOADING_LINE_14, O.default.Messages.LOADING_LINE_15, O.default.Messages.LOADING_TIP_1, O.default.Messages.LOADING_TIP_2, O.default.Messages.LOADING_TIP_3, O.default.Messages.LOADING_TIP_4, O.default.Messages.LOADING_TIP_5, O.default.Messages.LOADING_TIP_6, O.default.Messages.LOADING_TIP_7, O.default.Messages.LOADING_TIP_8, O.default.Messages.LOADING_TIP_9, O.default.Messages.LOADING_TIP_10, O.default.Messages.LOADING_TIP_11, O.default.Messages.LOADING_TIP_12, O.default.Messages.LOADING_TIP_13, O.default.Messages.LOADING_TIP_14, O.default.Messages.LOADING_TIP_15, O.default.Messages.LOADING_TIP_16, O.default.Messages.LOADING_TIP_17, O.default.Messages.LOADING_TIP_18, O.default.Messages.LOADING_TIP_19, O.default.Messages.LOADING_TIP_20, O.default.Messages.LOADING_TIP_21, O.default.Messages.LOADING_TIP_22, O.default.Messages.LOADING_TIP_23, O.default.Messages.LOADING_TIP_24, O.default.Messages.LOADING_TIP_25, O.default.Messages.LOADING_TIP_26, O.default.Messages.LOADING_TIP_27.format({
         asterisks: "**"
-      }), v.default.Messages.LOADING_KEYBIND_TIP_1.format({
+      }), O.default.Messages.LOADING_KEYBIND_TIP_1.format({
         quickSwitcherHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "mod+k",
           className: L.keybind
         }, t)
-      }), v.default.Messages.LOADING_KEYBIND_TIP_2.format({
+      }), O.default.Messages.LOADING_KEYBIND_TIP_2.format({
         markUnreadHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "alt+click",
           className: L.keybind
         }, t)
-      }), v.default.Messages.LOADING_KEYBIND_TIP_3.format({
+      }), O.default.Messages.LOADING_KEYBIND_TIP_3.format({
         markServerUnreadHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "shift+esc",
           className: L.keybind
         }, t)
-      }), v.default.Messages.LOADING_KEYBIND_TIP_4.format({
+      }), O.default.Messages.LOADING_KEYBIND_TIP_4.format({
         navigateUnreadHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "shift+alt+up",
           className: L.keybind
@@ -189,22 +189,22 @@ class M extends s.PureComponent {
           shortcut: "down",
           className: L.keybind
         }, t)
-      }), v.default.Messages.LOADING_KEYBIND_TIP_5.format({
+      }), O.default.Messages.LOADING_KEYBIND_TIP_5.format({
         keyboardShortcutsHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "mod+/",
           className: L.keybind
         }, t)
-      }), v.default.Messages.LOADING_KEYBIND_TIP_6.format({
+      }), O.default.Messages.LOADING_KEYBIND_TIP_6.format({
         messageNewlineHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "shift+return",
           className: L.keybind
         }, t)
-      }), v.default.Messages.LOADING_KEYBIND_TIP_7.format({
+      }), O.default.Messages.LOADING_KEYBIND_TIP_7.format({
         shiftHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "shift",
           className: L.keybind
         }, t)
-      }), v.default.Messages.LOADING_KEYBIND_TIP_8.format({
+      }), O.default.Messages.LOADING_KEYBIND_TIP_8.format({
         upHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "up",
           className: L.keybind
@@ -217,7 +217,7 @@ class M extends s.PureComponent {
     }()), P(this, "handleReady", () => {
       this.setState({
         ready: !0
-      }), (0, A.isDesktop)() && (R.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), R.default.send("UPDATE_OPEN_ON_STARTUP"))
+      }), (0, A.isDesktop)() && (v.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), v.default.send("UPDATE_OPEN_ON_STARTUP"))
     }), P(this, "setVideoRef", e => {
       this.videoRef = e
     }), P(this, "setProblemsTimeout", () => {
