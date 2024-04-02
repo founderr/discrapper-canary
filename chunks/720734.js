@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("410575"),
   A = n("941129"),
   N = n("83200"),
-  O = n("634894"),
-  R = n("586902"),
+  R = n("634894"),
+  O = n("586902"),
   v = n("1585"),
   L = n("304761"),
   P = n("865427"),
@@ -80,8 +80,8 @@ var a = n("735250"),
   eg = n("546591"),
   eA = n("86813"),
   eN = n("826026"),
-  eO = n("937482"),
-  eR = n("87888"),
+  eR = n("937482"),
+  eO = n("87888"),
   ev = n("976401"),
   eL = n("333454"),
   eP = n("864441"),
@@ -305,130 +305,132 @@ class eW extends s.PureComponent {
     } = this.props, {
       shouldShowSpeakingWhileMutedTooltip: d
     } = this.state;
-    return null == e ? null : (0, a.jsxs)("div", {
-      className: eB.container,
-      onMouseEnter: this.handleMouseEnter,
-      onMouseLeave: this.handleMouseLeave,
-      children: [this.renderNameZone(), (0, a.jsxs)(eT.default, {
-        grow: 0,
-        children: [(0, a.jsx)(eq, {
-          selfMute: n,
-          serverMute: l,
-          suppress: r,
-          awaitingRemote: s,
-          tooltipText: d ? eF.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, y.default)(n, l, r, s),
-          tooltipColor: d ? S.TooltipColors.GREEN : void 0,
-          tooltipForceOpen: d || void 0,
-          onMouseEnter: this.handleMouseEnterMute,
-          onMouseLeave: this.handleMouseLeaveMute,
-          onClick: this.handleToggleSelfMute,
-          onContextMenu: this.handleInputAudioContextMenu
-        }), (0, a.jsx)(eQ, {
-          selfDeaf: t,
-          serverDeaf: i,
-          onClick: this.handleToggleSelfDeaf,
-          onContextMenu: this.handleOutputAudioContextMenu,
-          awaitingRemote: s
-        }), (0, a.jsx)(w.default, {
-          contentTypes: u.settings,
-          children: e => {
-            let {
-              visibleContent: t,
-              markAsDismissed: n
-            } = e;
-            switch (t) {
-              case o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2:
-                return (0, a.jsx)(S.Popout, {
-                  position: "top",
-                  align: "center",
-                  shouldShow: !0,
-                  renderPopout: () => (0, a.jsx)(J.default, {}),
-                  children: this.renderSettingsGear
-                });
-              case o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP:
-                return (0, a.jsx)(S.Popout, {
-                  position: "top",
-                  align: "center",
-                  shouldShow: !0,
-                  renderPopout: () => (0, a.jsx)(H.default, {
-                    markAsDismissed: n,
-                    partnerGame: ek.PartnerGame.FORTNITE
-                  }),
-                  children: this.renderSettingsGear
-                });
-              case o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP:
-                return (0, a.jsx)(S.Popout, {
-                  position: "top",
-                  align: "center",
-                  shouldShow: !0,
-                  renderPopout: () => (0, a.jsx)(V.default, {
-                    markAsDismissed: n,
-                    partnerGame: ek.PartnerGame.FORTNITE
-                  }),
-                  children: this.renderSettingsGear
-                });
-              case o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING:
-                return (0, a.jsx)(S.Popout, {
-                  position: "top",
-                  align: "center",
-                  shouldShow: !0,
-                  renderPopout: () => (0, a.jsx)(eu.default, {
-                    markAsDismissed: n
-                  }),
-                  children: this.renderSettingsGear
-                });
-              case o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK:
-                return (0, a.jsx)(S.Popout, {
-                  position: "top",
-                  align: "center",
-                  shouldShow: !0,
-                  renderPopout: () => (0, a.jsx)(et.default, {
-                    markAsDismissed: n
-                  }),
-                  children: this.renderSettingsGear
-                });
-              case o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE:
-                return (0, a.jsx)(S.Popout, {
-                  position: "top",
-                  align: "center",
-                  shouldShow: !0,
-                  renderPopout: () => (0, a.jsx)(en.default, {
-                    markAsDismissed: n
-                  }),
-                  children: this.renderSettingsGear
-                });
-              case o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION:
-                return (0, a.jsx)(S.Popout, {
-                  position: "top",
-                  align: "center",
-                  shouldShow: !0,
-                  renderPopout: () => (0, a.jsx)(el.default, {
-                    markAsDismissed: n
-                  }),
-                  children: this.renderSettingsGear
-                });
-              case o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING:
-                return (0, a.jsx)(S.Popout, {
-                  position: "top",
-                  align: "center",
-                  shouldShow: !0,
-                  renderPopout: () => (0, a.jsx)(ea.UserSafetyEducationReportingCoachmark, {
-                    markAsDismissed: n
-                  }),
-                  children: this.renderSettingsGear
-                });
-              case o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK:
-                return (0, a.jsx)(S.Popout, {
-                  position: "top",
-                  align: "center",
-                  shouldShow: !0,
-                  renderPopout: () => (0, a.jsx)(eo.default, {}),
-                  children: this.renderSettingsGear
-                });
-              default:
-                return this.renderSettingsGear()
+    return null == e ? null : (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsxs)("div", {
+        className: eB.container,
+        onMouseEnter: this.handleMouseEnter,
+        onMouseLeave: this.handleMouseLeave,
+        children: [this.renderNameZone(), (0, a.jsxs)(eT.default, {
+          grow: 0,
+          children: [(0, a.jsx)(eq, {
+            selfMute: n,
+            serverMute: l,
+            suppress: r,
+            awaitingRemote: s,
+            tooltipText: d ? eF.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, y.default)(n, l, r, s),
+            tooltipColor: d ? S.TooltipColors.GREEN : void 0,
+            tooltipForceOpen: d || void 0,
+            onMouseEnter: this.handleMouseEnterMute,
+            onMouseLeave: this.handleMouseLeaveMute,
+            onClick: this.handleToggleSelfMute,
+            onContextMenu: this.handleInputAudioContextMenu
+          }), (0, a.jsx)(eQ, {
+            selfDeaf: t,
+            serverDeaf: i,
+            onClick: this.handleToggleSelfDeaf,
+            onContextMenu: this.handleOutputAudioContextMenu,
+            awaitingRemote: s
+          }), (0, a.jsx)(w.default, {
+            contentTypes: u.settings,
+            children: e => {
+              let {
+                visibleContent: t,
+                markAsDismissed: n
+              } = e;
+              switch (t) {
+                case o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2:
+                  return (0, a.jsx)(S.Popout, {
+                    position: "top",
+                    align: "center",
+                    shouldShow: !0,
+                    renderPopout: () => (0, a.jsx)(J.default, {}),
+                    children: this.renderSettingsGear
+                  });
+                case o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP:
+                  return (0, a.jsx)(S.Popout, {
+                    position: "top",
+                    align: "center",
+                    shouldShow: !0,
+                    renderPopout: () => (0, a.jsx)(H.default, {
+                      markAsDismissed: n,
+                      partnerGame: ek.PartnerGame.FORTNITE
+                    }),
+                    children: this.renderSettingsGear
+                  });
+                case o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP:
+                  return (0, a.jsx)(S.Popout, {
+                    position: "top",
+                    align: "center",
+                    shouldShow: !0,
+                    renderPopout: () => (0, a.jsx)(V.default, {
+                      markAsDismissed: n,
+                      partnerGame: ek.PartnerGame.FORTNITE
+                    }),
+                    children: this.renderSettingsGear
+                  });
+                case o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING:
+                  return (0, a.jsx)(S.Popout, {
+                    position: "top",
+                    align: "center",
+                    shouldShow: !0,
+                    renderPopout: () => (0, a.jsx)(eu.default, {
+                      markAsDismissed: n
+                    }),
+                    children: this.renderSettingsGear
+                  });
+                case o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK:
+                  return (0, a.jsx)(S.Popout, {
+                    position: "top",
+                    align: "center",
+                    shouldShow: !0,
+                    renderPopout: () => (0, a.jsx)(et.default, {
+                      markAsDismissed: n
+                    }),
+                    children: this.renderSettingsGear
+                  });
+                case o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE:
+                  return (0, a.jsx)(S.Popout, {
+                    position: "top",
+                    align: "center",
+                    shouldShow: !0,
+                    renderPopout: () => (0, a.jsx)(en.default, {
+                      markAsDismissed: n
+                    }),
+                    children: this.renderSettingsGear
+                  });
+                case o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION:
+                  return (0, a.jsx)(S.Popout, {
+                    position: "top",
+                    align: "center",
+                    shouldShow: !0,
+                    renderPopout: () => (0, a.jsx)(el.default, {
+                      markAsDismissed: n
+                    }),
+                    children: this.renderSettingsGear
+                  });
+                case o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING:
+                  return (0, a.jsx)(S.Popout, {
+                    position: "top",
+                    align: "center",
+                    shouldShow: !0,
+                    renderPopout: () => (0, a.jsx)(ea.UserSafetyEducationReportingCoachmark, {
+                      markAsDismissed: n
+                    }),
+                    children: this.renderSettingsGear
+                  });
+                case o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK:
+                  return (0, a.jsx)(S.Popout, {
+                    position: "top",
+                    align: "center",
+                    shouldShow: !0,
+                    renderPopout: () => (0, a.jsx)(eo.default, {}),
+                    children: this.renderSettingsGear
+                  });
+                default:
+                  return this.renderSettingsGear()
+              }
             }
-          }
+          })]
         })]
       }), (0, a.jsx)(K.default, {})]
     })
@@ -614,7 +616,7 @@ function eK() {
       streaming: null != eS.default.findActivity(e => e.type === ew.ActivityTypes.STREAMING),
       status: eS.default.getStatus()
     })),
-    d = (0, R.default)({
+    d = (0, O.default)({
       userId: n
     }),
     c = ej.default.useUserTag(e, {
@@ -667,10 +669,10 @@ function eK() {
     en = (0, ee.useCanSeeSafetyEducationReportingCoachmark)(),
     ea = (0, er.default)(e),
     el = "account";
-  (0, O.useTriggerDebuggingAA)({
+  (0, R.useTriggerDebuggingAA)({
     location: el + " auto on",
     autoTrackExposure: !0
-  }), (0, O.useTriggerDebuggingAA)({
+  }), (0, R.useTriggerDebuggingAA)({
     location: el + " auto off",
     autoTrackExposure: !1
   }), (0, $.useSafetyEducationAATriggerPoint)();
@@ -744,8 +746,8 @@ function ez(e) {
     isEligibleForPomelo: n,
     onClick: s,
     onContextMenu: l
-  } = e, i = (0, S.useRedesignIconContext)().enabled, r = null, o = eO.default, u = (0, C.useSettingsLottie)();
-  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eR.default, {
+  } = e, i = (0, S.useRedesignIconContext)().enabled, r = null, o = eR.default, u = (0, C.useSettingsLottie)();
+  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eO.default, {
     width: 9,
     height: 9,
     className: eB.hasBuildOverride,
