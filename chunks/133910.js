@@ -34,17 +34,20 @@ class d extends r.Component {
       renderLinkComponent: p,
       onClick: R,
       onPlay: C,
-      onEnded: g,
-      onVolumeChange: L,
-      onMute: D,
-      alt: v = u.default.Messages.VIDEO,
-      ...M
+      onPause: g,
+      onEnded: L,
+      onControlsShow: D,
+      onControlsHide: v,
+      onVolumeChange: M,
+      onMute: y,
+      alt: P = u.default.Messages.VIDEO,
+      ...U
     } = this.props;
     return (0, i.jsx)(a.default, {
-      alt: v,
+      alt: P,
       className: n,
       src: d,
-      ...M,
+      ...U,
       minWidth: o.default.minWidth,
       minHeight: o.default.minHeight,
       shouldLink: !1,
@@ -58,10 +61,10 @@ class d extends r.Component {
             width: u,
             height: d
           }
-        } = n, v = !(c <= l.MAX_VIDEO_WIDTH && E <= l.MAX_VIDEO_HEIGHT || c <= l.MAX_VIDEO_HEIGHT && E <= l.MAX_VIDEO_WIDTH);
+        } = n, P = !(c <= l.MAX_VIDEO_WIDTH && E <= l.MAX_VIDEO_HEIGHT || c <= l.MAX_VIDEO_HEIGHT && E <= l.MAX_VIDEO_WIDTH);
         return (0, i.jsx)(o.default, {
           className: r,
-          forceExternal: v,
+          forceExternal: P,
           src: e,
           poster: a,
           width: u,
@@ -80,9 +83,12 @@ class d extends r.Component {
           renderOverlayContent: O,
           onClick: R,
           onPlay: C,
-          onEnded: g,
-          onVolumeChange: L,
-          onMute: D,
+          onPause: g,
+          onEnded: L,
+          onVolumeChange: M,
+          onMute: y,
+          onControlsShow: D,
+          onControlsHide: v,
           mimeType: N,
           downloadable: T
         })

@@ -17,7 +17,7 @@ e.exports = {
   messageAttachmentNoJustify: "messageAttachmentNoJustify__9df5b",
   messageAttachmentWithFooter: "messageAttachmentWithFooter__05fa9",
   nonMediaAttachment: "nonMediaAttachment_ef83c1",
-  obscureVideo: "obscureVideo__7133c",
+  obscureVideoSpacing: "obscureVideoSpacing__59d03",
   obscured: "obscured_d8e1c5",
   removeAttachmentButton: "removeAttachmentButton__692b5",
   removeAttachmentHoverButton: "removeAttachmentHoverButton__161a2",

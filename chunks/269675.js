@@ -109,53 +109,55 @@ let L = e => {
       imgContainerClassName: w,
       imgClassName: b,
       focusable: P,
-      hiddenSpoilers: G,
-      mediaLayoutType: V,
+      hiddenSpoilers: V,
+      mediaLayoutType: G,
       maxWidth: k,
       maxHeight: H,
       hasFooter: B,
       useFullWidth: R,
-      isAttachmentMediaType: K
+      isAttachmentMediaType: K,
+      onVideoControlsShow: W,
+      onVideoControlsHide: X
     } = e, {
-      width: W,
-      height: X,
-      description: U,
-      spoiler: z
-    } = a, Y = D(a, i), [q, J] = l.useState(!1), Q = (0, c.default)(t.getChannelId()), $ = l.useMemo(() => null != a.content_type && -1 !== a.content_type.indexOf("/") ? a.content_type.split("/") : ["unknown", "unknown"], [a.content_type]), Z = l.useCallback(() => {
+      width: U,
+      height: z,
+      description: Y,
+      spoiler: q
+    } = a, J = D(a, i), [Q, $] = l.useState(!1), Z = (0, c.default)(t.getChannelId()), ee = l.useMemo(() => null != a.content_type && -1 !== a.content_type.indexOf("/") ? a.content_type.split("/") : ["unknown", "unknown"], [a.content_type]), et = l.useCallback(() => {
       u(a)
-    }, [a, u]), ee = l.useCallback((e, n, l) => {
+    }, [a, u]), ea = l.useCallback((e, n, l) => {
       if (t.hasFlag(T.MessageFlags.IS_VOICE_MESSAGE)) {
         var i;
         (0, A.logVoiceMessagePlaybackStarted)(t.id, null !== (i = a.duration_secs) && void 0 !== i ? i : null, n, t.author.id)
       } else null == g || g(e, n, l)
-    }, [t, a.duration_secs, g]), et = l.useCallback((e, n) => {
+    }, [t, a.duration_secs, g]), en = l.useCallback((e, n) => {
       var l;
       t.hasFlag(T.MessageFlags.IS_VOICE_MESSAGE) && (0, A.logVoiceMessagePlaybackEnded)(t.id, null !== (l = a.duration_secs) && void 0 !== l ? l : null, e, t.author.id, n)
-    }, [t, a.duration_secs]), ea = l.useCallback(e => {
+    }, [t, a.duration_secs]), el = l.useCallback(e => {
       var a;
       t.hasFlag(T.MessageFlags.IS_VOICE_MESSAGE) && (0, A.logVoiceMessagePlaybackFailed)(t.id, null !== (a = null == e ? void 0 : e.message) && void 0 !== a ? a : null)
-    }, [t]), en = l.useCallback(() => {
-      if (V === y.MediaLayoutType.MOSAIC) {
-        let e = !Q && "VIDEO" === Y || !Q && "AUDIO" === Y || "OTHER" === Y;
+    }, [t]), ei = l.useCallback(() => {
+      if (G === y.MediaLayoutType.MOSAIC) {
+        let e = !Z && "VIDEO" === J || !Z && "AUDIO" === J || "OTHER" === J;
         if (K) {
-          if (null == W || null == X) return null;
+          if (null == U || null == z) return null;
           let e = (0, x.getRatio)({
-            width: W,
-            height: X,
+            width: U,
+            height: z,
             maxWidth: y.MEDIA_MOSAIC_MAX_WIDTH,
             maxHeight: y.MEDIA_MOSAIC_MAX_HEIGHT
           });
-          if (!R && (e * W < y.MINIMUM_MEDIA_MOSAIC_DIM || e * X < y.MINIMUM_MEDIA_MOSAIC_DIM)) return null
+          if (!R && (e * U < y.MINIMUM_MEDIA_MOSAIC_DIM || e * z < y.MINIMUM_MEDIA_MOSAIC_DIM)) return null
         }
-        return !q && (0, n.jsx)(L, {
+        return !Q && (0, n.jsx)(L, {
           downloadURL: e ? a.url : void 0,
-          downloadMimeType: e ? $ : void 0,
-          onRemoveAttachment: d ? Z : void 0,
+          downloadMimeType: e ? ee : void 0,
+          onRemoveAttachment: d ? et : void 0,
           isAttachmentMediaType: K
         })
       }
       return d && (0, n.jsx)(r.Clickable, {
-        className: z ? N.spoilerRemoveAttachmentButton : N.removeAttachmentButton,
+        className: q ? N.spoilerRemoveAttachmentButton : N.removeAttachmentButton,
         focusProps: {
           offset: {
             bottom: 4
@@ -168,7 +170,7 @@ let L = e => {
           height: 16
         })
       })
-    }, [V, d, z, Y, K, q, a, $, Z, W, X, R, u, Q]), el = l.useCallback(() => {
+    }, [G, d, q, J, K, Q, a, ee, et, U, z, R, u, Z]), es = l.useCallback(() => {
       var e;
       return (0, C.hasFlag)(null !== (e = a.flags) && void 0 !== e ? e : 0, T.MessageAttachmentFlags.IS_CLIP) ? (0, n.jsxs)(r.TooltipContainer, {
         text: S.default.Messages.CLIPS_BETA_TAG_HOVER,
@@ -180,65 +182,66 @@ let L = e => {
         })]
       }) : null
     }, [a]);
-    switch (Y) {
+    switch (J) {
       case "IMAGE":
         return (0, n.jsx)(M.GIFAccessoryContext.Consumer, {
           children: e => I({
-            alt: U,
+            alt: Y,
             src: null != a.proxy_url && "" !== a.proxy_url ? a.proxy_url : a.url,
             original: a.url,
             placeholder: a.placeholder,
             placeholderVersion: a.placeholder_version,
-            width: W,
-            height: X,
-            autoPlay: o && !G,
+            width: U,
+            height: z,
+            autoPlay: o && !V,
             onClick: h,
             onContextMenu: m,
-            shouldHideMediaOptions: Q,
+            shouldHideMediaOptions: Z,
             renderAccessory: e,
-            renderAdjacentContent: en,
+            renderAdjacentContent: ei,
             containerClassName: F,
             className: w,
             imageClassName: b,
             shouldLink: P,
-            hiddenSpoilers: G,
+            hiddenSpoilers: V,
             responsive: !0,
-            mediaLayoutType: V,
+            mediaLayoutType: G,
             maxWidth: k,
             maxHeight: H,
             useFullWidth: R
           })
         });
       case "VIDEO":
-        let ei = v.default.toURLSafe(a.proxy_url);
-        if (null == ei) return null;
-        return ei.searchParams.append("format", "jpeg"), f({
-          poster: ei.toString(),
+        let er = v.default.toURLSafe(a.proxy_url);
+        if (null == er) return null;
+        return er.searchParams.append("format", "jpeg"), f({
+          poster: er.toString(),
           fileSize: a.size,
           fileName: a.filename,
           src: a.url,
           placeholder: a.placeholder,
           placeholderVersion: a.placeholder_version,
-          width: W,
-          height: X,
+          width: U,
+          height: z,
           onClick: h,
           onContextMenu: m,
-          renderOverlayContent: el,
-          renderAdjacentContent: en,
-          naturalWidth: W,
-          naturalHeight: X,
+          renderOverlayContent: es,
+          renderAdjacentContent: ei,
+          naturalWidth: U,
+          naturalHeight: z,
           className: s()(F, {
             [N.hasFooter]: B
           }),
           playable: P,
           responsive: !0,
-          mediaLayoutType: V,
+          mediaLayoutType: G,
           maxWidth: k,
           maxHeight: H,
           useFullWidth: R,
-          mimeType: $,
-          onPlay: g,
-          downloadable: !Q,
+          mimeType: ee,
+          onControlsShow: W,
+          onControlsHide: X,
+          downloadable: !Z,
           mediaPlayerClassName: B ? N.hasFooter : void 0
         });
       case "AUDIO":
@@ -248,15 +251,15 @@ let L = e => {
           src: a.url,
           className: F,
           playable: P,
-          mimeType: $,
+          mimeType: ee,
           durationSecs: a.duration_secs,
           waveform: a.waveform,
-          renderAdjacentContent: en,
-          onVolumeShow: () => J(!0),
-          onVolumeHide: () => J(!1),
-          onPlay: ee,
-          onPause: et,
-          onError: ea
+          renderAdjacentContent: ei,
+          onVolumeShow: () => $(!0),
+          onVolumeHide: () => $(!1),
+          onPlay: ea,
+          onPause: en,
+          onError: el
         });
       case "PLAINTEXT_PREVIEW":
         return j({
@@ -264,7 +267,7 @@ let L = e => {
           className: F,
           onClick: h,
           onContextMenu: m,
-          renderAdjacentContent: en
+          renderAdjacentContent: ei
         });
       case "OTHER":
         return (0, n.jsx)(_.default, {
@@ -274,7 +277,7 @@ let L = e => {
           onClick: h,
           onContextMenu: m,
           className: F,
-          renderAdjacentContent: en
+          renderAdjacentContent: ei
         });
       case "INVALID":
         return null
@@ -300,7 +303,14 @@ t.default = e => {
   let w = "IMAGE" === (t = L) || "VIDEO" === t,
     b = j(D(i, c)),
     P = _ && null != C && (0, o.isExplicitMediaBelowConstraints)(p, E),
-    G = function() {
+    [V, G] = l.useState(!1),
+    k = () => {
+      G(!0)
+    },
+    H = () => {
+      G(!1)
+    },
+    B = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
       return (0, n.jsx)(F, {
         ...M,
@@ -320,7 +330,9 @@ t.default = e => {
         mediaLayoutType: m,
         hasFooter: null != g,
         useFullWidth: !!P || u,
-        isAttachmentMediaType: b
+        isAttachmentMediaType: b,
+        onVideoControlsShow: k,
+        onVideoControlsHide: H
       })
     };
   return (0, n.jsx)(n.Fragment, {
@@ -362,11 +374,11 @@ t.default = e => {
           }
         }(i, w, m),
         obscurityControlClassName: s()({
-          [N.obscureVideo]: "VIDEO" === L && _ && !v
+          [N.obscureVideoSpacing]: "VIDEO" === L && _ && !v && V
         }),
         onToggleObscurity: () => T(e => !e),
-        children: e => G(e)
-      }) : G(), g]
+        children: e => B(e)
+      }) : B(), g]
     })
   })
 }
