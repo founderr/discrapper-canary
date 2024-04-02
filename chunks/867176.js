@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
   isActivityInTextSupportedForChannelType: function() {
     return u
   },
-  useActivitiesInTextButtonVisibility: function() {
+  useActivitiesInTextExperimentConfig: function() {
     return c
   },
   useIsActivitiesInTextEnabled: function() {
@@ -26,7 +26,8 @@ let l = (0, a.createExperiment)({
     entryPointEnabled: !1,
     desktopThrobberEnabled: !1,
     activitiesInTextEnabled: !1,
-    showInOmniButtonMenu: !1
+    showInOmniButtonMenu: !1,
+    showNewMobileLeaveUI: !1
   },
   treatments: [{
     id: 1,
@@ -35,7 +36,18 @@ let l = (0, a.createExperiment)({
       entryPointEnabled: !0,
       activitiesInTextEnabled: !0,
       desktopThrobberEnabled: !1,
-      showInOmniButtonMenu: !0
+      showInOmniButtonMenu: !0,
+      showNewMobileLeaveUI: !1
+    }
+  }, {
+    id: 2,
+    label: "Enable Activities in Text, DM, and GDM channels with new mobile leave UI",
+    config: {
+      entryPointEnabled: !0,
+      activitiesInTextEnabled: !0,
+      desktopThrobberEnabled: !1,
+      showInOmniButtonMenu: !0,
+      showNewMobileLeaveUI: !0
     }
   }]
 });

@@ -9,7 +9,8 @@ t.default = (0, i.createExperiment)({
     entryPointEnabled: !1,
     activitiesInTextEnabled: !1,
     desktopThrobberEnabled: !1,
-    showInOmniButtonMenu: !1
+    showInOmniButtonMenu: !1,
+    showNewMobileLeaveUI: !1
   },
   treatments: [{
     id: 1,
@@ -18,7 +19,8 @@ t.default = (0, i.createExperiment)({
       entryPointEnabled: !0,
       activitiesInTextEnabled: !1,
       desktopThrobberEnabled: !1,
-      showInOmniButtonMenu: !1
+      showInOmniButtonMenu: !1,
+      showNewMobileLeaveUI: !1
     }
   }, {
     id: 2,
@@ -27,7 +29,8 @@ t.default = (0, i.createExperiment)({
       entryPointEnabled: !0,
       activitiesInTextEnabled: !0,
       desktopThrobberEnabled: !1,
-      showInOmniButtonMenu: !0
+      showInOmniButtonMenu: !0,
+      showNewMobileLeaveUI: !1
     }
   }, {
     id: 3,
@@ -36,7 +39,8 @@ t.default = (0, i.createExperiment)({
       entryPointEnabled: !0,
       activitiesInTextEnabled: !0,
       desktopThrobberEnabled: !0,
-      showInOmniButtonMenu: !0
+      showInOmniButtonMenu: !0,
+      showNewMobileLeaveUI: !1
     }
   }]
 })
