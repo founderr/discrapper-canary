@@ -35,9 +35,15 @@ function u(e) {
     for (let t of c) !o(t) && e.add(t);
     e.size !== c.size && E(e)
   }, [c]);
-  let I = l.useCallback((e, t, s) => {
-      var l, r, o;
-      i.default.captureException(Error("".concat(t, ": ").concat((l = e, (0, a.isElement)(l, HTMLImageElement) ? l.getAttribute("src") : (0, a.isElement)(l, HTMLVideoElement) ? null !== (o = null === (r = l.querySelectorAll("source")[0]) || void 0 === r ? void 0 : r.getAttribute("src")) && void 0 !== o ? o : "video" : l.tagName), ", ").concat(s)), {
+  let I = l.useCallback(e => {
+      var t, s, l;
+      let {
+        assetNode: r,
+        nodeId: o,
+        errorPrefix: u,
+        errorMessage: c
+      } = e;
+      i.default.captureException(Error("".concat(u, ": ").concat(null != c ? "".concat(c, ", ") : "").concat((t = r, (0, a.isElement)(t, HTMLImageElement) ? t.getAttribute("src") : (0, a.isElement)(t, HTMLVideoElement) ? null !== (l = null === (s = t.querySelectorAll("source")[0]) || void 0 === s ? void 0 : s.getAttribute("src")) && void 0 !== l ? l : "video" : t.tagName), ", ").concat(o)), {
         tags: {
           source: n
         }
@@ -60,8 +66,13 @@ function u(e) {
       e.addEventListener(s, function t() {
         m(e), e.removeEventListener(s, t)
       });
-      e.addEventListener("error", function n() {
-        m(e), I(e, "Error loading asset", t), e.removeEventListener("error", n)
+      e.addEventListener("error", function n(s) {
+        m(e), I({
+          assetNode: e,
+          nodeId: t,
+          errorPrefix: "Error loading asset",
+          errorMessage: "message" in s ? s.message : null
+        }), e.removeEventListener("error", n)
       })
     }, [I, m]),
     p = l.useMemo(() => c.size > 0 || !f, [f, c]);
