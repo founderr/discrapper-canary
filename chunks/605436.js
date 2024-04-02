@@ -267,13 +267,13 @@ function F(e, t) {
       allow: i.add(c.NONE, t),
       deny: c.NONE
     };
-    return (0, s.savePermissionUpdates)(e.id, [r], !0)
-  } {
+    (0, s.savePermissionUpdates)(e.id, [r], !0)
+  } else {
     let {
       allow: n,
       deny: a
     } = r;
-    return n = i.add(n, t), (0, s.updatePermission)(e, r.id, n, a)
+    n = i.add(n, t), (0, s.updatePermission)(e, r.id, n, a)
   }
 }
 

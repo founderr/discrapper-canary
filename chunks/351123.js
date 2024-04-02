@@ -260,8 +260,8 @@ function Y(e) {
       label: E.title,
       onChange: function() {
         let e = a.accessPermissions,
-          t = x.default.getCurrentUser();
-        F.toggleChannelEveryonePermission(a, e, n), !n && null != t && !c && F.grantUserChannelAccess(a, e)
+          s = x.default.getCurrentUser();
+        F.toggleChannelEveryonePermission(a, e, n), !n && null != s && !(null == t ? void 0 : t.isOwner(s)) && !c && F.grantUserChannelAccess(a, e)
       },
       value: n
     }), (0, l.jsxs)("div", {
