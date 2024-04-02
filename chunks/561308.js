@@ -3,17 +3,23 @@ n.r(t), n.d(t, {
   calculateActiveTimestampDurations: function() {
     return u
   },
-  formatEntryTimestamp: function() {
+  formatActiveTimestamp: function() {
+    return d
+  },
+  formatEndedTimestamp: function() {
     return c
   },
-  isEntryActive: function() {
+  formatEntryTimestamp: function() {
     return f
   },
+  isEntryActive: function() {
+    return h
+  },
   isEntryExpired: function() {
-    return m
+    return p
   },
   isEntryNew: function() {
-    return h
+    return m
   }
 });
 var a = n("913527"),
@@ -38,62 +44,65 @@ let u = (e, t) => {
     let {
       seconds: n,
       minutes: a,
-      hours: l,
-      days: s
-    } = u(e, t);
-    if (s > 0) return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS.format({
-      days: s
-    });
-    if (l > 0) return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
       hours: l
-    });
+    } = u(e, t);
+
+    function s(e) {
+      return String(e).padStart(2, "0")
+    }
     return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE.format({
-      minutes: a,
-      seconds: String(n).padStart(2, "0")
+      hours: l,
+      minutes: l > 0 ? s(a) : a,
+      seconds: s(n)
     })
   },
   c = (e, t) => {
-    if (f(e)) return d(e, t);
     let n = l()(r.default.extractTimestamp(e.id)),
-      a = l()().diff(n, "s");
-    if (a > 7 * i.default.Seconds.DAY) {
-      let e = Math.round(a / (7 * i.default.Seconds.DAY));
-      return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({
+      a = n.isSame(l()(), "day"),
+      s = l()().diff(n, "s");
+    if (s < i.default.Seconds.MINUTE) return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO.format({
+      count: s
+    });
+    if (s < i.default.Seconds.HOUR) {
+      let e = Math.round(s / i.default.Seconds.MINUTE);
+      o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO.format({
         count: e
       })
-    }
-    if (a > i.default.Seconds.DAY) {
-      let e = Math.round(a / i.default.Seconds.DAY);
-      return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO.format({
-        count: e
-      })
-    }
-    if (a > i.default.Seconds.HOUR) {
-      let e = Math.round(a / i.default.Seconds.HOUR);
+    } else if (s < 6 * i.default.Seconds.HOUR) {
+      let e = Math.round(s / i.default.Seconds.HOUR);
       return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO.format({
         count: e
       })
-    } else {
-      if (!(a > i.default.Seconds.MINUTE)) return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO.format({
-        count: a
-      });
-      let e = Math.round(a / i.default.Seconds.MINUTE);
-      return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO.format({
-        count: e
-      })
+    } else if (s < i.default.Seconds.WEEK && a) return n.toDate().toLocaleTimeString(t, {
+      hour: "numeric"
+    });
+    else if (s < i.default.Seconds.WEEK && !a) {
+      let e = n.toDate(),
+        a = e.toLocaleDateString(t, {
+          weekday: "short"
+        }),
+        l = e.toLocaleTimeString(t, {
+          hour: "numeric"
+        });
+      return "".concat(a, " \xb7 ").concat(l)
     }
-  };
+    let u = Math.round(s / (7 * i.default.Seconds.DAY));
+    return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({
+      count: u
+    })
+  },
+  f = (e, t) => h(e) ? d(e, Date.now()) : c(e, t);
 
-function f(e) {
+function h(e) {
   let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.IS_LIVE);
   return null != t && t.is_live
 }
 
-function h(e) {
+function m(e) {
   let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.FIRST_TIME);
   return null != t && t.first_time
 }
 
-function m(e) {
+function p(e) {
   return null != e.expires_at && new Date(e.expires_at) < new Date
 }
