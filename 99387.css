@@ -86420,12 +86420,14 @@ html .tabBadge_ff691d {
 
 .attributionLogos__35ea7 {
     display: flex;
-    height: 16px;
-    gap: 4px;
+    align-items: center;
+    gap: 12px;
     color: var(--white)
 }
 
 .attributionLogos__35ea7 img {
+    height: 16px;
+    margin: 0 4px;
     -o-object-fit: contain;
     object-fit: contain
 }
