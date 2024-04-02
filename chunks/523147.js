@@ -5,5 +5,5 @@ var i = n("585483"),
 t.default = {
   binds: ["mod+shift+b"],
   comboKeysBindGlobal: !0,
-  action: () => (i.ComponentDispatch.dispatchToLastSubscribed(o.ComponentActions.TOGGLE_SOUNDBOARD), !1)
+  action: () => (i.ComponentDispatch.dispatch(o.ComponentActions.TOGGLE_SOUNDBOARD), !1)
 }
