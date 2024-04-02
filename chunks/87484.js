@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var l = n("153832"),
-  r = n("481060"),
-  s = n("976255"),
-  a = n("667"),
+var r = n("153832"),
+  s = n("481060"),
+  a = n("976255"),
+  l = n("667"),
   o = n("626135"),
   c = n("981631");
 
@@ -19,45 +19,45 @@ function d(e) {
     skuId: d,
     onClose: u,
     onComplete: f,
-    analyticsLocations: m,
-    analyticsLocationObject: h,
-    contextKey: x
-  } = e, v = !1, p = (0, l.v4)();
-  (0, r.openModalLazy)(async () => {
+    analyticsLocations: h,
+    analyticsLocationObject: m,
+    contextKey: p
+  } = e, S = !1, x = (0, r.v4)();
+  (0, s.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("58625"), n.e("6416"), n.e("14720"), n.e("63438"), n.e("62511"), n.e("61247"), n.e("58600"), n.e("32776"), n.e("95900"), n.e("47242")]).then(n.bind(n, "409600"));
     return n => {
       let {
-        onClose: l,
-        ...r
+        onClose: r,
+        ...s
       } = n;
       return (0, i.jsx)(e, {
-        ...r,
-        loadId: p,
+        ...s,
+        loadId: x,
         applicationId: t,
         skuId: d,
-        analyticsLocations: m,
-        analyticsLocationObject: h,
+        analyticsLocations: h,
+        analyticsLocationObject: m,
         onClose: e => {
-          l(), null == u || u(e)
+          r(), null == u || u(e)
         },
         onComplete: e => {
-          v = !0, null == f || f(e)
+          S = !0, null == f || f(e)
         }
       })
     }
   }, {
-    contextKey: x,
+    contextKey: p,
     onCloseCallback: () => {
-      !v && o.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-        load_id: p,
+      !S && o.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+        load_id: x,
         payment_type: c.PurchaseTypeToAnalyticsPaymentType[c.PurchaseTypes.ONE_TIME],
-        location: h,
+        location: m,
         is_gift: !1,
         application_id: t,
-        location_stack: m
-      }), (0, s.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == u || u(v)
+        location_stack: h
+      }), (0, a.clearError)(), (0, l.clearPurchaseTokenAuthState)(), null == u || u(S)
     },
     onCloseRequest: c.NOOP
   })

@@ -3,17 +3,17 @@
   var t = {}.hasOwnProperty;
 
   function n() {
-    for (var e = "", l = 0; l < arguments.length; l++) {
-      var r = arguments[l];
-      r && (e = i(e, function(e) {
+    for (var e = "", r = 0; r < arguments.length; r++) {
+      var s = arguments[r];
+      s && (e = i(e, function(e) {
         if ("string" == typeof e || "number" == typeof e) return e;
         if ("object" != typeof e) return "";
         if (Array.isArray(e)) return n.apply(null, e);
         if (e.toString !== Object.prototype.toString && !e.toString.toString().includes("[native code]")) return e.toString();
-        var l = "";
-        for (var r in e) t.call(e, r) && e[r] && (l = i(l, r));
-        return l
-      }(r)))
+        var r = "";
+        for (var s in e) t.call(e, s) && e[s] && (r = i(r, s));
+        return r
+      }(s)))
     }
     return e
   }

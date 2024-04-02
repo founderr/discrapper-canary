@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   computeFavoritesState: function() {
-    return g
+    return b
   },
   useFavoritesServerChannelList: function() {
-    return b
+    return g
   }
 }), n("47120"), n("653041");
 var i = n("470079"),
@@ -32,15 +32,15 @@ var i = n("470079"),
   D = n("231338");
 let h = [a.default, s.default, r.default, E.default, c.default, A.default, C.default, S.default, I.default, f.default, N.default, O.default];
 
-function b() {
-  let [e, t] = i.useState(() => g());
+function g() {
+  let [e, t] = i.useState(() => b());
   return i.useEffect(() => {
-    let e = l().throttle(() => t(g()), 100);
+    let e = l().throttle(() => t(b()), 100);
     return h.forEach(t => t.addChangeListener(e)), () => h.forEach(t => t.removeChangeListener(e))
   }, []), e
 }
 
-function g() {
+function b() {
   let e = s.default.getFavoriteChannels(),
     t = O.default.isGuildCollapsed(p.FAVORITES_RAW_GUILD_ID),
     n = N.default.getChannelId(),
@@ -106,7 +106,7 @@ function g() {
         return null == S && (S = c(a, this)), S
       }
     },
-    b = l()(e).values().filter(e => e.type === u.FavoriteChannelType.CATEGORY).sortBy(e => e.order).map(e => {
+    g = l()(e).values().filter(e => e.type === u.FavoriteChannelType.CATEGORY).sortBy(e => e.order).map(e => {
       var t;
       let {
         id: n,
@@ -127,7 +127,7 @@ function g() {
         }
       }
     }).value(),
-    g = {
+    b = {
       isEmpty: () => !0,
       getRows: () => [],
       getRow: () => null
@@ -138,10 +138,10 @@ function g() {
     favoritesSectionNumber: 1,
     recentsSectionNumber: 2,
     voiceChannelsSectionNumber: -999,
-    getSections: () => [0, 0, 0, h.channelList.length, ...b.map(e => Math.max(1, e.channelList.length))],
-    isPlaceholderRow: (e, t) => !(e < L.SECTION_INDEX_FIRST_NAMED_CATEGORY) && 0 === t && 0 === b[e - L.SECTION_INDEX_FIRST_NAMED_CATEGORY].channelList.length,
-    getCategoryFromSection: e => e === L.SECTION_INDEX_UNCATEGORIZED_CHANNELS ? h : b[e - L.SECTION_INDEX_FIRST_NAMED_CATEGORY],
-    getNamedCategoryFromSection: e => b[e - L.SECTION_INDEX_FIRST_NAMED_CATEGORY],
+    getSections: () => [0, 0, 0, h.channelList.length, ...g.map(e => Math.max(1, e.channelList.length))],
+    isPlaceholderRow: (e, t) => !(e < L.SECTION_INDEX_FIRST_NAMED_CATEGORY) && 0 === t && 0 === g[e - L.SECTION_INDEX_FIRST_NAMED_CATEGORY].channelList.length,
+    getCategoryFromSection: e => e === L.SECTION_INDEX_UNCATEGORIZED_CHANNELS ? h : g[e - L.SECTION_INDEX_FIRST_NAMED_CATEGORY],
+    getNamedCategoryFromSection: e => g[e - L.SECTION_INDEX_FIRST_NAMED_CATEGORY],
     getChannelFromSectionRow(e, t) {
       let n = this.getCategoryFromSection(e);
       return null == n || null == n.channelList[t] ? null : {
@@ -149,10 +149,10 @@ function g() {
         channel: n.channelList[t]
       }
     },
-    getCommunitySection: () => g,
+    getCommunitySection: () => b,
     getFirstVoiceChannel: () => null,
     getSectionRowsFromChannel(e) {
-      let t = [h, ...b];
+      let t = [h, ...g];
       for (let n = 0; n < t.length; n++)
         for (let i = 0; i < t[n].channelList.length; i++)
           if (t[n].channelList[i].id === e) return [{
@@ -162,7 +162,7 @@ function g() {
       return []
     },
     forEachShownChannel(e) {
-      for (let t of [h, ...b])
+      for (let t of [h, ...g])
         for (let n of t.channelList)
           for (let t of (e(n.record), n.threadIds)) {
             let n = C.default.getChannel(t);
@@ -170,7 +170,7 @@ function g() {
           }
     },
     forEachChannel(e) {
-      for (let t of [h, ...b])
+      for (let t of [h, ...g])
         for (let n of t.getChannelRecords()) e(n)
     },
     getSlicedChannels: e => [

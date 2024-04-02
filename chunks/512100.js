@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i = n("735250"),
-  l = n("470079"),
-  r = n("789978"),
-  s = n("727075"),
-  a = n("790472"),
+  r = n("470079"),
+  s = n("789978"),
+  a = n("727075"),
+  l = n("790472"),
   o = n("349361"),
   c = n("777207"),
   d = n("330711"),
@@ -19,14 +19,14 @@ function f(e) {
     benefits: t,
     description: n,
     imgSrc: f,
-    title: m,
-    onClose: h,
-    tag: x
-  } = e, v = l.useRef(null), [p, g] = l.useState(!0), j = null != f ? {
+    title: h,
+    onClose: m,
+    tag: p
+  } = e, S = r.useRef(null), [x, g] = r.useState(!0), v = null != f ? {
     "--custom-background-url": "url(".concat(f.toString(), ")")
-  } : void 0, C = () => {
+  } : void 0, T = () => {
     var e;
-    (null === (e = v.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? g(!1) : g(!0)
+    (null === (e = S.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? g(!1) : g(!0)
   };
   return (0, i.jsxs)("div", {
     className: u.container,
@@ -34,17 +34,17 @@ function f(e) {
       className: u.header,
       children: [(0, i.jsx)("div", {
         className: u.headerBackground,
-        style: j
+        style: v
       }), (0, i.jsxs)("div", {
         className: u.headerTop,
         children: [(0, i.jsx)("div", {
-          children: x
-        }), (0, i.jsx)(r.FocusRing, {
+          children: p
+        }), (0, i.jsx)(s.FocusRing, {
           children: (0, i.jsx)("button", {
-            onClick: h,
+            onClick: m,
             className: u.closeBtn,
             type: "button",
-            children: (0, i.jsx)(s.CloseSmallIcon, {
+            children: (0, i.jsx)(a.CloseSmallIcon, {
               height: 24,
               width: 24,
               color: "var(--white)"
@@ -56,7 +56,7 @@ function f(e) {
         children: null != f ? (0, i.jsx)("img", {
           src: f.toString(),
           alt: ""
-        }) : (0, i.jsx)(a.TicketIcon, {
+        }) : (0, i.jsx)(l.TicketIcon, {
           color: "white",
           height: 96,
           width: 96
@@ -66,16 +66,16 @@ function f(e) {
       className: u.scroll,
       fade: !0,
       ref: e => {
-        null != e && (v.current = e, C())
+        null != e && (S.current = e, T())
       },
-      onScroll: C,
+      onScroll: T,
       children: [(0, i.jsx)("br", {}), (0, i.jsxs)("div", {
         className: u.scrollContent,
         children: [(0, i.jsx)(c.Text, {
           color: "header-primary",
           tag: "div",
           variant: "heading-xl/semibold",
-          children: m
+          children: h
         }), (null != n && "" !== n || null != t) && (0, i.jsxs)("div", {
           className: u.details,
           children: [(0, i.jsx)(c.Text, {
@@ -99,7 +99,7 @@ function f(e) {
       })]
     }), (0, i.jsx)("div", {
       className: u.containerScrollGradient,
-      "data-shown": p
+      "data-shown": x
     })]
   })
 }
