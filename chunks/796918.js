@@ -37,7 +37,7 @@ t.default = e => {
   return (0, a.jsxs)("div", {
     className: f.slideContent,
     children: [(0, a.jsx)(r.Heading, {
-      variant: "heading-xl/semibold",
+      variant: "heading-xxl/medium",
       className: f.title,
       children: c.default.Messages.CLAN_SETUP_INTERESTS_TITLE
     }), (0, a.jsx)(r.Text, {
@@ -69,7 +69,7 @@ t.default = e => {
           children: c.default.Messages.CLAN_SETUP_INTERESTS_HELP
         })]
       }), n.size > 0 && (0, a.jsx)(r.Text, {
-        variant: "text-xs/semibold",
+        variant: "text-xs/medium",
         color: "text-muted",
         className: f.contentLabel,
         children: c.default.Messages.CLAN_SETUP_SELECTED_GAMES
@@ -78,7 +78,7 @@ t.default = e => {
         children: Array.from(n).map(e => (0, a.jsxs)("div", {
           className: f.selectedInterest,
           children: [(0, a.jsx)(r.Text, {
-            variant: "text-md/medium",
+            variant: "text-md/normal",
             color: "header-primary",
             children: e
           }), (0, a.jsx)(r.Clickable, {

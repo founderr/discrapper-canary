@@ -14,7 +14,7 @@ t.default = e => {
   return (0, a.jsxs)("div", {
     className: r.slideContent,
     children: [(0, a.jsx)(s.Heading, {
-      variant: "heading-xl/semibold",
+      variant: "heading-xxl/medium",
       className: r.title,
       children: i.default.Messages.CLAN_SETUP_CUSTOMIZE_TITLE
     }), (0, a.jsx)(s.Text, {

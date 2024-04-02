@@ -58,7 +58,7 @@ let h = e => {
     s.useEffect(() => {
       setTimeout(() => {
         n(c.ClanSetupModalPages.SETUP)
-      }, 3e3)
+      }, 2e3)
     });
     let f = (0, l.useSpring)({
         ref: i,
@@ -92,15 +92,15 @@ let h = e => {
       }),
       C = (0, l.useSpring)({
         ref: u,
-        config: l.config.molasses,
+        config: l.config.default,
         from: {
-          width: "0%"
+          flex: 0
         },
         to: {
-          width: "100%"
+          flex: 1
         }
       });
-    return (0, l.useChain)([i, r, o, u], [0, .2, .5, .8], 3e3), (0, a.jsxs)("div", {
+    return (0, l.useChain)([i, r, o, u], [0, 0, .7, 1], 1200), (0, a.jsxs)("div", {
       className: E.animationContainer,
       children: [(0, a.jsx)(l.animated.div, {
         style: C

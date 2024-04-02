@@ -36,7 +36,7 @@ t.default = e => {
   return (0, a.jsxs)("div", {
     className: h.slideContent,
     children: [(0, a.jsx)(o.Heading, {
-      variant: "heading-xl/semibold",
+      variant: "heading-xxl/medium",
       className: h.title,
       children: E.default.Messages.CLAN_SETUP_PRIMETIME_TITLE
     }), (0, a.jsx)(o.Text, {
@@ -78,10 +78,10 @@ t.default = e => {
         children: [(0, a.jsx)(d.default, {
           className: l()(h.icon, h.clickable)
         }), (0, a.jsx)(o.Text, {
-          variant: "text-sm/semibold",
+          variant: "text-sm/medium",
           color: "none",
           className: h.addText,
-          children: E.default.Messages.ADD
+          children: E.default.Messages.CLAN_SETUP_PRIMETIME_ADD
         })]
       })]
     })]

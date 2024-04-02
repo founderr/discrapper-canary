@@ -5,65 +5,69 @@ var a = n("735250"),
   l = n("803997"),
   i = n.n(l),
   r = n("481060"),
-  o = n("308083"),
-  u = n("689938"),
-  d = n("597338");
+  o = n("441674"),
+  u = n("308083"),
+  d = n("689938"),
+  c = n("597338");
 t.default = e => {
   let {
     handleUpdate: t,
     playstyle: n
-  } = e, l = s.useMemo(() => [{
-    type: o.ClanPlaystyles.SOCIAL,
+  } = e, l = (0, r.useToken)(r.tokens.colors.WHITE), f = s.useMemo(() => [{
+    type: u.ClanPlaystyles.SOCIAL,
     emoji: "\uD83D\uDC4B",
-    title: u.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE,
-    subtitle: u.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_SUBTITLE
+    title: d.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE,
+    subtitle: d.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_SUBTITLE
   }, {
-    type: o.ClanPlaystyles.CASUAL,
+    type: u.ClanPlaystyles.CASUAL,
     emoji: "\uD83C\uDFAE",
-    title: u.default.Messages.CLAN_SETUP_PLAYSTYLE_CASUAL_TITLE,
-    subtitle: u.default.Messages.CLAN_SETUP_PLAYSTYLE_CASUAL_SUBTITLE
+    title: d.default.Messages.CLAN_SETUP_PLAYSTYLE_CASUAL_TITLE,
+    subtitle: d.default.Messages.CLAN_SETUP_PLAYSTYLE_CASUAL_SUBTITLE
   }, {
-    type: o.ClanPlaystyles.COMPETITIVE,
+    type: u.ClanPlaystyles.COMPETITIVE,
     emoji: "⚔️",
-    title: u.default.Messages.CLAN_SETUP_PLAYSTYLE_COMPETITIVE_TITLE,
-    subtitle: u.default.Messages.CLAN_SETUP_PLAYSTYLE_COMPETITIVE_SUBTITLE
+    title: d.default.Messages.CLAN_SETUP_PLAYSTYLE_COMPETITIVE_TITLE,
+    subtitle: d.default.Messages.CLAN_SETUP_PLAYSTYLE_COMPETITIVE_SUBTITLE
   }, {
-    type: o.ClanPlaystyles.VERY_HARDCORE,
+    type: u.ClanPlaystyles.VERY_HARDCORE,
     emoji: "\uD83D\uDC80",
-    title: u.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_TITLE,
-    subtitle: u.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_SUBTITLE
+    title: d.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_TITLE,
+    subtitle: d.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_SUBTITLE
   }], []);
   return (0, a.jsxs)("div", {
-    className: d.slideContent,
+    className: c.slideContent,
     children: [(0, a.jsx)(r.Heading, {
-      variant: "heading-xl/semibold",
-      className: d.title,
-      children: u.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE
+      variant: "heading-xxl/medium",
+      className: c.title,
+      children: d.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE
     }), (0, a.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: d.subtitle,
-      children: u.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE
+      className: c.subtitle,
+      children: d.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE
     }), (0, a.jsx)("div", {
-      className: d.playstyleSelect,
-      children: l.map(e => (0, a.jsxs)(r.Clickable, {
-        className: i()(d.playstyleOption, {
-          [d.selectedPlaystyle]: e.type === n
+      className: c.playstyleSelect,
+      children: f.map(e => (0, a.jsxs)(r.Clickable, {
+        className: i()(c.playstyleOption, {
+          [c.selectedPlaystyle]: e.type === n
         }),
         onClick: () => t({
           playstyle: e.type
         }),
         children: [(0, a.jsx)(r.Heading, {
-          variant: "heading-xxl/semibold",
+          variant: "heading-xxl/medium",
           children: e.emoji
         }), (0, a.jsx)(r.Heading, {
-          variant: "heading-md/semibold",
-          className: d.playstyleTitle,
+          variant: "heading-md/medium",
+          className: c.playstyleTitle,
           children: e.title
         }), (0, a.jsx)(r.Text, {
-          variant: "text-xs/medium",
+          variant: "text-xs/normal",
           color: "text-muted",
           children: e.subtitle
+        }), e.type === n && (0, a.jsx)(o.default, {
+          backgroundColor: l.hex(),
+          className: c.checkmark
         })]
       }, e.type))
     })]

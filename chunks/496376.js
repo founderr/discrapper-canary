@@ -82,7 +82,6 @@ let A = [p.ClanSetupSteps.GAMES, p.ClanSetupSteps.PLAYSTYLE, p.ClanSetupSteps.IN
         }), (0, a.jsx)(o.Button, {
           look: o.Button.Looks.FILLED,
           size: o.Button.Sizes.MEDIUM,
-          color: o.Button.Colors.PRIMARY,
           onClick: () => {
             if (h) {
               E();
@@ -119,7 +118,7 @@ t.default = e => {
   }, []);
   let j = s.useCallback(e => c.updateClanSettings(t, e), [t]),
     G = s.useCallback(() => {
-      U(!1), setTimeout(() => n(p.ClanSetupModalPages.SIGN), 500)
+      U(!1), setTimeout(() => n(p.ClanSetupModalPages.SIGN), 199)
     }, [n]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Button, {
@@ -141,8 +140,9 @@ t.default = e => {
         className: g.sequencer,
         innerClassName: g.sequencer,
         animatedNodeClassName: g.sequencer,
-        children: (0, a.jsx)(o.ScrollerAuto, {
+        children: (0, a.jsx)(o.ScrollerThin, {
           className: g.scroller,
+          fade: !0,
           children: (() => {
             switch (l) {
               case p.ClanSetupSteps.GAMES:

@@ -29,7 +29,7 @@ t.default = e => {
     return null !== (e = d.default.getState(t)) && void 0 !== e ? e : {}
   }), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), [R, O] = s.useState(!1), L = (0, l.useSpring)({
     ref: A,
-    config: l.config.molasses,
+    config: l.config.slow,
     from: {
       flex: 1,
       paddingLeft: C ? 120 : 0
@@ -40,7 +40,7 @@ t.default = e => {
     }
   }), P = (0, l.useSpring)({
     ref: N,
-    config: l.config.molasses,
+    config: l.config.slow,
     from: {
       flex: C ? 1 : 0,
       paddingRight: C ? 120 : 0,
@@ -70,10 +70,10 @@ t.default = e => {
         ...M
       },
       children: [(0, a.jsx)(r.Heading, {
-        variant: "heading-xl/semibold",
+        variant: "heading-xxl/medium",
         children: E.default.Messages.CLAN_SETUP_SIGN_TITLE
       }), (0, a.jsx)(r.Text, {
-        variant: "text-md/medium",
+        variant: "text-md/normal",
         color: "text-muted",
         children: E.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
       })]
@@ -96,46 +96,41 @@ t.default = e => {
         onClick: () => O(!0),
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, a.jsx)(r.Text, {
-        variant: "text-xs/medium",
+        variant: "text-xs/normal",
         color: "text-muted",
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
       })]
-    }), (0, a.jsx)("div", {
-      style: {
-        position: "absolute",
-        bottom: "24px",
-        left: "24px"
+    }), (0, a.jsx)(r.Button, {
+      className: h.closeButton,
+      look: r.Button.Looks.OUTLINED,
+      size: r.Button.Sizes.SMALL,
+      color: r.Button.Colors.PRIMARY,
+      onClick: _,
+      children: E.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
+    }), (0, a.jsx)(r.Button, {
+      className: h.previousButton,
+      look: r.Button.Looks.OUTLINED,
+      size: r.Button.Sizes.MEDIUM,
+      color: r.Button.Colors.PRIMARY,
+      onClick: () => n(f.ClanSetupModalPages.SETUP),
+      children: E.default.Messages.PAGINATION_PREVIOUS
+    }), (0, a.jsx)(r.Button, {
+      className: h.finishButton,
+      look: r.Button.Looks.FILLED,
+      size: r.Button.Sizes.MEDIUM,
+      color: r.Button.Colors.BRAND,
+      disabled: !R,
+      onClick: () => {
+        u.convertGuildToClan(t, {
+          selectedGames: S,
+          playstyle: m,
+          interests: I,
+          description: p,
+          tag: T,
+          primetime: g
+        }), _()
       },
-      children: (0, a.jsx)(r.Button, {
-        look: r.Button.Looks.OUTLINED,
-        size: r.Button.Sizes.MEDIUM,
-        color: r.Button.Colors.PRIMARY,
-        onClick: () => n(f.ClanSetupModalPages.SETUP),
-        children: E.default.Messages.PAGINATION_PREVIOUS
-      })
-    }), (0, a.jsx)("div", {
-      style: {
-        position: "absolute",
-        bottom: "24px",
-        right: "24px"
-      },
-      children: (0, a.jsx)(r.Button, {
-        look: r.Button.Looks.FILLED,
-        size: r.Button.Sizes.MEDIUM,
-        color: r.Button.Colors.BRAND,
-        disabled: !R,
-        onClick: () => {
-          u.convertGuildToClan(t, {
-            selectedGames: S,
-            playstyle: m,
-            interests: I,
-            description: p,
-            tag: T,
-            primetime: g
-          }), _()
-        },
-        children: E.default.Messages.FINISH
-      })
+      children: E.default.Messages.FINISH
     })]
   })
 }

@@ -28,7 +28,10 @@ t.default = e => {
         description: e
       }),
       value: n,
-      rows: 5
+      rows: 5,
+      autoFocus: !0,
+      autosize: !0,
+      placeholder: l.default.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
     })]
   })
 }
