@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return y
   },
   LOOTBOX_MAIN_ENTRYPOINT_LAST_SHOWN_TIME: function() {
-    return G
+    return b
   },
   LOOTBOX_PRIZE_ID: function() {
     return v
@@ -21,11 +21,8 @@ n.r(t), n.d(t, {
   LOOTBOX_PRIZE_SKU_ID: function() {
     return M
   },
-  LOOTBOX_VIDEO_ID: function() {
-    return U
-  },
   LOOTBOX_VIDEO_URL: function() {
-    return b
+    return U
   },
   getLootboxes: function() {
     return L
@@ -133,6 +130,5 @@ let D = {
   M = "1216908559548289084",
   y = o.default.Millis.MINUTE,
   P = o.default.Millis.MINUTE + 10 * o.default.Millis.SECOND,
-  U = "cc2-4ci4G84",
-  b = "https://www.youtube.com/watch?v=".concat(U),
-  G = new Date("2024-04-02T02:00:00.000-07:00")
+  U = "https://www.youtube.com/watch?v=".concat("cc2-4ci4G84"),
+  b = new Date("2024-04-02T02:00:00.000-07:00")
