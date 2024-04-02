@@ -62,7 +62,8 @@ a = "UserRecentGamesStore", (s = "displayName") in(r = A) ? Object.definePropert
       recentGames: n.map(e => ({
         applicationId: e.application.id,
         duration: e.duration,
-        lastSessionId: e.last_session_id
+        lastSessionId: e.last_session_id,
+        isNew: e.is_new
       })).sort((e, t) => I.default.compare(t.lastSessionId, e.lastSessionId)),
       lastFetchTimestampMs: Date.now()
     })
@@ -91,7 +92,8 @@ a = "UserRecentGamesStore", (s = "displayName") in(r = A) ? Object.definePropert
       let o = (n = a, i = t, l()(n.applicationId === i.applicationId, "[UserRecentGamesStore] Games must have same application for merge."), {
         applicationId: n.applicationId,
         duration: n.duration + i.duration,
-        lastSessionId: I.default.compare(n.lastSessionId, i.lastSessionId) > 0 ? n.lastSessionId : i.lastSessionId
+        lastSessionId: I.default.compare(n.lastSessionId, i.lastSessionId) > 0 ? n.lastSessionId : i.lastSessionId,
+        isNew: n.isNew || i.isNew
       });
       f.set(e, {
         lastFetchTimestampMs: Date.now(),
@@ -100,7 +102,8 @@ a = "UserRecentGamesStore", (s = "displayName") in(r = A) ? Object.definePropert
     }(c.default.getId(), {
       applicationId: t,
       duration: n,
-      lastSessionId: I.default.fromTimestamp(Date.now())
+      lastSessionId: I.default.fromTimestamp(Date.now()),
+      isNew: !1
     })
   }
 })
