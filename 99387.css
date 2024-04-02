@@ -7896,6 +7896,7 @@ html .invoiceCancelRow_aa7946 {
 }
 
 .sharedGameIcon__45b1e {
+    display: flex;
     max-width: 16px
 }
 
