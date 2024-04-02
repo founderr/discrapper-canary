@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return k
+    return V
   }
 }), n("47120");
 var i = n("735250"),
@@ -31,15 +31,16 @@ var i = n("735250"),
   L = n("943362"),
   D = n("551452"),
   v = n("69626"),
-  M = n("532901"),
-  y = n("981631"),
-  P = n("176505"),
-  U = n("689938"),
-  b = n("633353");
+  M = n("142990"),
+  y = n("532901"),
+  P = n("981631"),
+  U = n("176505"),
+  b = n("689938"),
+  G = n("633353");
 n("519308");
-var G = n("931093");
+var w = n("931093");
 
-function w(e) {
+function B(e) {
   let {
     text: t
   } = e, [n, s] = r.useState(!1);
@@ -60,12 +61,12 @@ function w(e) {
     })
   })
 }
-let B = {
+let k = {
   blockQuote: {
     react: (e, t, n) => (0, i.jsxs)("div", {
-      className: G.blockquoteContainer,
+      className: w.blockquoteContainer,
       children: [(0, i.jsx)("div", {
-        className: G.blockquoteDivider
+        className: w.blockquoteDivider
       }), (0, i.jsx)("blockquote", {
         children: t(e.content, n)
       })]
@@ -96,15 +97,15 @@ let B = {
   codeBlock: {
     react(e, t, r) {
       let s = () => (0, i.jsx)("code", {
-        className: a()(b.scrollbarGhostHairline, "hljs"),
+        className: a()(G.scrollbarGhostHairline, "hljs"),
         children: (0, C.smartOutput)(e, t, r)
       });
       return (0, i.jsx)("pre", {
         children: (0, i.jsxs)("div", {
-          className: G.codeContainer,
+          className: w.codeContainer,
           children: [p.SUPPORTS_COPY ? (0, i.jsx)("div", {
-            className: G.codeActions,
-            children: (0, i.jsx)(w, {
+            className: w.codeActions,
+            children: (0, i.jsx)(B, {
               text: e.content
             })
           }) : null, (0, i.jsx)(d.LazyLibrary, {
@@ -116,7 +117,7 @@ let B = {
               {
                 let n = t.highlight(e.lang, e.content, !0);
                 return null == n ? s() : (0, i.jsx)("code", {
-                  className: a()(b.scrollbarGhostHairline, "hljs", n.language),
+                  className: a()(G.scrollbarGhostHairline, "hljs", n.language),
                   dangerouslySetInnerHTML: {
                     __html: n.value
                   }
@@ -157,12 +158,12 @@ let B = {
       let r = () => {
         ! function(e, t) {
           let n = I.default.getGuild(e);
-          if (null == e || null == n || !n.hasFeature(y.GuildFeatures.COMMUNITY)) return;
+          if (null == e || null == n || !n.hasFeature(P.GuildFeatures.COMMUNITY)) return;
           let i = {
-              home: P.StaticChannelRoute.GUILD_HOME,
-              browse: P.StaticChannelRoute.CHANNEL_BROWSER,
-              customize: P.StaticChannelRoute.CUSTOMIZE_COMMUNITY,
-              guide: P.StaticChannelRoute.GUILD_HOME
+              home: U.StaticChannelRoute.GUILD_HOME,
+              browse: U.StaticChannelRoute.CHANNEL_BROWSER,
+              customize: U.StaticChannelRoute.CUSTOMIZE_COMMUNITY,
+              guide: U.StaticChannelRoute.GUILD_HOME
             } [t],
             r = I.default.getGuild(e);
           if ((null == r ? void 0 : r.joinedAt) == null) {
@@ -170,21 +171,21 @@ let B = {
               channelId: i
             });
             return
-          }(0, E.transitionTo)(y.Routes.CHANNEL(e, i))
+          }(0, E.transitionTo)(P.Routes.CHANNEL(e, i))
         }(e.guildId, e.channelId)
       };
       if (!(0, C.isStaticRouteIconType)(e.channelId)) return null;
       let s = "".concat(e.channelId);
       switch (e.channelId) {
-        case P.StaticChannelId.GUILD_HOME:
-        case P.StaticChannelId.SERVER_GUIDE:
-          s = U.default.Messages.SERVER_GUIDE;
+        case U.StaticChannelId.GUILD_HOME:
+        case U.StaticChannelId.SERVER_GUIDE:
+          s = b.default.Messages.SERVER_GUIDE;
           break;
-        case P.StaticChannelId.CHANNEL_BROWSER:
-          s = U.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
+        case U.StaticChannelId.CHANNEL_BROWSER:
+          s = b.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
           break;
-        case P.StaticChannelId.CUSTOMIZE_COMMUNITY:
-          s = U.default.Messages.CHANNELS_AND_ROLES
+        case U.StaticChannelId.CUSTOMIZE_COMMUNITY:
+          s = b.default.Messages.CHANNELS_AND_ROLES
       }
       return (0, i.jsx)(l.Tooltip, {
         text: s,
@@ -218,7 +219,7 @@ let B = {
         r = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
       return (0, o.reactElement)(i, "".concat(n.key), {
         start: e.start,
-        className: n.formatInline ? G.inlineFormat : null,
+        className: n.formatInline ? w.inlineFormat : null,
         style: {
           "--totalCharacters": r
         },
@@ -240,7 +241,7 @@ let B = {
       });
       return (0, o.reactElement)("h" + e.level, (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
         children: i,
-        className: n.formatInline ? G.inlineFormat : null
+        className: n.formatInline ? w.inlineFormat : null
       })
     }
   },
@@ -264,10 +265,11 @@ let B = {
   }
 };
 
-function k(e) {
+function V(e) {
   return {
-    ...B,
-    link: (0, M.default)(e),
+    ...k,
+    link: (0, y.default)(e),
+    devLink: (0, M.default)(e),
     emoji: function(e) {
       let {
         emojiTooltipPosition: t = "top",

@@ -18,7 +18,8 @@ function s(t, e) {
     allowHeading: c = !1,
     allowList: h = !1,
     allowLinks: u = !1,
-    previewLinkTarget: f = !1
+    allowDevLinks: f = !1,
+    previewLinkTarget: x = !1
   } = e;
   return l.useMemo(() => null != t.customRenderedContent ? t.customRenderedContent : t.isCommandType() && 0 === t.content.length || t.hasFlag(n.MessageFlags.LOADING) ? (0, a.default)(t) : (0, r.default)(t, {
     hideSimpleEmbedContent: i,
@@ -28,6 +29,7 @@ function s(t, e) {
     allowHeading: c,
     allowList: h,
     allowLinks: u,
-    previewLinkTarget: f
-  }), [t.content, t.customRenderedContent, t.embeds, t.interaction, t.state, t.type, i, s, o, d, c, h, u, f])
+    allowDevLinks: f,
+    previewLinkTarget: x
+  }), [t.content, t.customRenderedContent, t.embeds, t.interaction, t.state, t.type, i, s, o, d, c, h, u, x])
 }

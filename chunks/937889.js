@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120"), n("757143"), n("865427");
 var a = n("830121"),
-  r = n("454585"),
-  i = n("408433"),
+  i = n("454585"),
+  r = n("408433"),
   s = n("981631");
 let l = new Set([s.MessageEmbedTypes.IMAGE, s.MessageEmbedTypes.GIFV]),
   o = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
@@ -17,19 +17,20 @@ let l = new Set([s.MessageEmbedTypes.IMAGE, s.MessageEmbedTypes.GIFV]),
 function u(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return function(e, t, n) {
-    var r, s;
+    var i, s;
     let {
       toAST: u = !1,
       hideSimpleEmbedContent: c = !0,
       formatInline: f = !1,
       postProcessor: g
     } = n, p = !1;
-    let E = e(t.content, !0, (r = t, s = n, {
-      allowLinks: null != r.webhookId || !!s.allowLinks,
-      allowEmojiLinks: null != r.webhookId,
-      channelId: r.channel_id,
-      messageId: r.id,
-      mentionChannels: r.mentionChannels,
+    let E = e(t.content, !0, (i = t, s = n, {
+      allowLinks: null != i.webhookId || !!s.allowLinks,
+      allowDevLinks: !!s.allowDevLinks,
+      allowEmojiLinks: null != i.webhookId,
+      channelId: i.channel_id,
+      messageId: i.id,
+      mentionChannels: i.mentionChannels,
       isInteracting: !!s.isInteracting,
       formatInline: !!s.formatInline,
       noStyleAndInteraction: !!s.noStyleAndInteraction,
@@ -43,7 +44,7 @@ function u(e) {
       if (1 !== e.length || 1 !== t.length) return e;
       let n = e[0],
         a = t[0];
-      return ("link" === n.type || "attachmentLink" === n.type) && l.has(a.type) && (0, i.isEmbedInline)(a) ? [] : e
+      return ("link" === n.type || "attachmentLink" === n.type) && l.has(a.type) && (0, r.isEmbedInline)(a) ? [] : e
     }(e, t.embeds)), !f && (e = function(e, t) {
       return t ? d(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = d(e[0].content)), e)
     }(e, n)), p = function(e, t) {
@@ -52,8 +53,8 @@ function u(e) {
       let t = e.some(e => "link" !== e.type || !1);
       return e.filter(e => {
         let n = "link" === e.type,
-          r = (0, a.parseQuestsEmbedCode)(e.target);
-        return !(n && null != r && !t)
+          i = (0, a.parseQuestsEmbedCode)(e.target);
+        return !(n && null != i && !t)
       })
     }(e), n), f && (e = function e(t) {
       return t.forEach(t => {
@@ -64,13 +65,14 @@ function u(e) {
       hasSpoilerEmbeds: p,
       content: E
     }
-  }(t.formatInline ? r.default.parseInlineReply : r.default.parse, e, t)
+  }(t.formatInline ? i.default.parseInlineReply : i.default.parse, e, t)
 }
 
 function c(e, t, n) {
   var a;
-  return a = r.default.parseAutoModerationSystemMessage, a(e, !0, {
+  return a = i.default.parseAutoModerationSystemMessage, a(e, !0, {
     allowLinks: !1,
+    allowDevLinks: !1,
     allowEmojiLinks: !1,
     mentionChannels: [],
     isInteracting: !1,

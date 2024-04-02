@@ -18,6 +18,9 @@ n.r(t), n.d(t, {
   isBuildOverrideLink: function() {
     return S
   },
+  isManualBuildOverrideLink: function() {
+    return A
+  },
   probablyHasBuildOverride: function() {
     return I
   },
