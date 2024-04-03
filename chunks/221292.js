@@ -8,6 +8,9 @@ n.r(t), n.d(t, {
   },
   trackUserProfileBadgePressed: function() {
     return p
+  },
+  trackUserProfileRecentGamesViewed: function() {
+    return R
   }
 }), n("653041");
 var i = n("367907"),
@@ -168,5 +171,31 @@ let f = e => {
       ...m(t),
       location_stack: s,
       badge: o
+    })
+  },
+  R = e => {
+    let {
+      userId: t,
+      guildId: n,
+      channelId: r,
+      analyticsLocations: s,
+      layout: a,
+      applicationIds: o,
+      newApplicationIds: l,
+      sharedApplicationIds: d
+    } = e;
+    u.default.track(I.AnalyticEvents.USER_PROFILE_RECENT_GAMES_VIEWED, {
+      ...(0, i.collectGuildAnalyticsMetadata)(n),
+      ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
+      ...A({
+        layout: a,
+        userId: t,
+        guildId: n
+      }),
+      ...m(t),
+      location_stack: s,
+      profile_application_ids: o,
+      profile_new_applications_ids: l,
+      profile_shared_applications_ids: d
     })
   }

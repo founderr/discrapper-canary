@@ -5,20 +5,21 @@ var a = s("735250"),
   l = s("481060"),
   i = s("230711"),
   r = s("454175"),
-  o = s("761174"),
-  d = s("695346"),
-  u = s("314897"),
-  c = s("981631"),
-  S = s("231338"),
-  E = s("689938"),
-  T = s("630883");
+  o = s("111510"),
+  d = s("761174"),
+  u = s("695346"),
+  c = s("314897"),
+  S = s("981631"),
+  E = s("231338"),
+  T = s("689938"),
+  f = s("630883");
 
-function f(e) {
-  d.RecentGamesEnabled.updateSetting(e), e && r.default.fetchUserRecentGames(u.default.getId())
+function m(e) {
+  u.RecentGamesEnabled.updateSetting(e), e && r.default.fetchUserRecentGames(c.default.getId()), !e && (0, o.trackDisableRecentGamesSetting)()
 }
 t.default = n.memo(function() {
-  let e = d.ShowCurrentGame.useSetting(),
-    t = (0, o.useIsSelfRecentGamesEnabled)({
+  let e = u.ShowCurrentGame.useSetting(),
+    t = (0, d.useIsSelfRecentGamesEnabled)({
       location: "28tk0bf_8"
     });
   return (0, a.jsx)(l.FormSwitch, {
@@ -28,21 +29,21 @@ t.default = n.memo(function() {
       children: [(0, a.jsx)(l.Text, {
         variant: "text-sm/normal",
         color: "text-normal",
-        children: E.default.Messages.RECENT_GAMES_SETTING_NOTE.format({
-          onHelpArticleClick: S.NOOP
+        children: T.default.Messages.RECENT_GAMES_SETTING_NOTE.format({
+          onHelpArticleClick: E.NOOP
         })
       }), (0, a.jsx)(l.Text, {
-        className: T.requirement,
+        className: f.requirement,
         variant: "text-sm/normal",
         color: "text-normal",
-        children: E.default.Messages.RECENT_GAMES_SETTING_REQUIREMENT.format({
+        children: T.default.Messages.RECENT_GAMES_SETTING_REQUIREMENT.format({
           onSettingClick: () => {
-            i.default.setSection(c.AnalyticsSections.SETTINGS_ACTIVITY_PRIVACY)
+            i.default.setSection(S.AnalyticsSections.SETTINGS_ACTIVITY_PRIVACY)
           }
         })
       })]
     }),
-    onChange: f,
-    children: E.default.Messages.USER_RECENT_GAMES_ON_PROFILE
+    onChange: m,
+    children: T.default.Messages.USER_RECENT_GAMES_ON_PROFILE
   })
 })
