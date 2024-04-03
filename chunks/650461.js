@@ -1,47 +1,46 @@
 "use strict";
 n.r(t), n.d(t, {
   newClanProgress: function() {
-    return E
+    return f
   }
 }), n("47120");
-var a, s, l, i, r = n("913527"),
-  o = n.n(r),
-  u = n("442837"),
-  d = n("570140"),
-  c = n("308083");
-let f = {};
+var a, s, l, i, r = n("442837"),
+  o = n("570140"),
+  u = n("227120"),
+  d = n("308083");
+let c = {};
 
-function E() {
+function f() {
   return {
     selectedGames: new Map,
-    playstyle: c.ClanPlaystyles.NONE,
+    playstyle: d.ClanPlaystyles.NONE,
     interests: new Set,
     description: "",
     tag: "",
     primetime: [{
       day: void 0,
-      time: o()().startOf("day")
+      time: u.ExtendedTimeOptions.MORNING
     }],
-    currentStep: c.ClanSetupSteps.GAMES
+    currentStep: d.ClanSetupSteps.GAMES
   }
 }
-class h extends(a = u.default.Store) {
+class E extends(a = r.default.Store) {
   getState(e) {
-    return f[e]
+    return c[e]
   }
 }
-i = "ClanSetupStore", (l = "displayName") in(s = h) ? Object.defineProperty(s, l, {
+i = "ClanSetupStore", (l = "displayName") in(s = E) ? Object.defineProperty(s, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new h(d.default, {
+}) : s[l] = i, t.default = new E(o.default, {
   CLAN_SETUP_UPDATE: function(e) {
     let {
       guildId: t,
       updates: n
-    } = e, a = null != f[t] ? f[t] : E();
-    f[t] = {
+    } = e, a = null != c[t] ? c[t] : f();
+    c[t] = {
       ...a,
       ...n
     }
@@ -50,6 +49,6 @@ i = "ClanSetupStore", (l = "displayName") in(s = h) ? Object.defineProperty(s, l
     let {
       guildId: t
     } = e;
-    delete f[t]
+    delete c[t]
   }
 })
