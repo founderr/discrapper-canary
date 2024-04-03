@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("100527"),
   _ = n("906732"),
   C = n("605236"),
-  m = n("903958"),
-  S = n("153850"),
+  S = n("903958"),
+  m = n("153850"),
   I = n("810090"),
   p = n("641826"),
   T = n("635869"),
@@ -41,7 +41,7 @@ function L() {
   return (s.useEffect(() => {
     var t, n;
     e ? null === (t = M.current) || void 0 === t || t.play() : null === (n = M.current) || void 0 === n || n.pause()
-  }, [e]), n && l) ? (0, a.jsx)(S.default, {
+  }, [e]), n && l) ? (0, a.jsx)(m.default, {
     children: (0, a.jsxs)("div", {
       className: i()(O.wrapper, e ? O.wrapperHovered : null),
       onMouseLeave: () => t(!1),
@@ -81,7 +81,7 @@ function L() {
               className: O.backgroundImage,
               pageMultiplier: 5
             })
-          }), (0, a.jsx)(m.default, {
+          }), (0, a.jsx)(S.default, {
             className: O.animation,
             importData: p.importLootboxAnimationData,
             nextScene: g.BoxAnimationScenes.IDLE,

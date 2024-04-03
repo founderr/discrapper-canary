@@ -14,13 +14,13 @@ var s = n("570140"),
   h = n("979651"),
   _ = n("317381"),
   C = n("917107"),
-  m = n("719296"),
-  S = n("981631");
+  S = n("719296"),
+  m = n("981631");
 
 function I() {
   let e = c.default.getChannelId(),
     t = _.default.getConnectedActivityChannelId(),
-    n = _.default.getSelfEmbeddedActivityForChannel(null != t ? t : S.EMPTY_STRING_SNOWFLAKE_ID),
+    n = _.default.getSelfEmbeddedActivityForChannel(null != t ? t : m.EMPTY_STRING_SNOWFLAKE_ID),
     i = o.default.getChannel(e),
     r = o.default.getChannel(t);
   return null == t || (null == e || null == i) && (0, C.default)(t) || null == t || null == r || null == n ? function() {
@@ -28,15 +28,15 @@ function I() {
     null != e && d.default.isOpen(e) && (s.default.wait(() => l.close(e)), a = null)
   }() : function(e, t) {
     if (d.default.isOpen(t)) return !1;
-    s.default.wait(() => l.open(t, S.PictureInPictureComponents.EMBED_IFRAME, {
+    s.default.wait(() => l.open(t, m.PictureInPictureComponents.EMBED_IFRAME, {
       channel: e
     })), a = t
-  }(r, (0, m.default)(t, n.applicationId))
+  }(r, (0, S.default)(t, n.applicationId))
 }
 
 function p() {
   let e = u.default.hasLayers(),
-    t = r.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+    t = r.default.getWindowOpen(m.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
   return e && !t ? function() {
     let e = a;
     null != e && d.default.isOpen(e) && s.default.wait(() => l.hide(e))

@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("823379"),
   _ = n("650461"),
   C = n("924801"),
-  m = n("308083"),
-  S = n("689938"),
+  S = n("308083"),
+  m = n("689938"),
   I = n("653196");
 t.default = e => {
   var t;
@@ -37,14 +37,14 @@ t.default = e => {
     return null !== (e = _.default.getState(n)) && void 0 !== e ? e : {}
   }), O = (null == g ? void 0 : g.size) > 0 ? Array.from(g.values()).map(e => e.name).join(", ") : null, v = s.useMemo(() => {
     switch (A) {
-      case m.ClanPlaystyles.SOCIAL:
-        return S.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;
-      case m.ClanPlaystyles.CASUAL:
-        return S.default.Messages.CLAN_SETUP_PLAYSTYLE_CASUAL_TITLE;
-      case m.ClanPlaystyles.COMPETITIVE:
-        return S.default.Messages.CLAN_SETUP_PLAYSTYLE_COMPETITIVE_TITLE;
-      case m.ClanPlaystyles.VERY_HARDCORE:
-        return S.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_TITLE;
+      case S.ClanPlaystyles.SOCIAL:
+        return m.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;
+      case S.ClanPlaystyles.CASUAL:
+        return m.default.Messages.CLAN_SETUP_PLAYSTYLE_CASUAL_TITLE;
+      case S.ClanPlaystyles.COMPETITIVE:
+        return m.default.Messages.CLAN_SETUP_PLAYSTYLE_COMPETITIVE_TITLE;
+      case S.ClanPlaystyles.VERY_HARDCORE:
+        return m.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_TITLE;
       default:
         return null
     }
@@ -66,21 +66,21 @@ t.default = e => {
           variant: "heading-xl/semibold",
           color: "text-muted",
           className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TITLE.format({
+          children: m.default.Messages.CLAN_SETUP_OVERVIEW_TITLE.format({
             guildName: T
           })
         }), (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
+          children: m.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
             date: o()().format("MMMM YYYY")
           })
         }), null != O ? null != v ? (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
+          children: m.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
             playstyle: v,
             games: O
           })
@@ -88,33 +88,33 @@ t.default = e => {
           variant: "text-sm/normal",
           color: "text-muted",
           className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({
+          children: m.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({
             games: O
           })
         }) : (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT
+          children: m.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT
         }), null != L ? (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
+          children: m.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
             traits: L
           })
         }) : null, null != P ? (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMETIME.format({
+          children: m.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMETIME.format({
             selectedTimes: P
           })
         }) : null, (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: i()(I.overviewText, I.lastParagraph),
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
+          children: m.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
         }), (0, a.jsxs)(c.Clickable, {
           onClick: () => {
             null == r || r(!0)
@@ -135,7 +135,7 @@ t.default = e => {
             variant: "text-lg/normal",
             color: "none",
             className: I.signatureText,
-            children: S.default.Messages.CLAN_SETUP_OVERVIEW_SIGNATURE
+            children: m.default.Messages.CLAN_SETUP_OVERVIEW_SIGNATURE
           })]
         })]
       })

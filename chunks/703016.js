@@ -14,8 +14,8 @@ var a = n("913527"),
   h = n("592125"),
   _ = n("271383"),
   C = n("430824"),
-  m = n("131951"),
-  S = n("292959"),
+  S = n("131951"),
+  m = n("292959"),
   I = n("699516"),
   p = n("944486"),
   T = n("9156"),
@@ -113,14 +113,14 @@ function B(e) {
     message: u,
     optimistic: d
   } = e;
-  if (d || m.default.isSelfDeaf()) return !1;
+  if (d || S.default.isSelfDeaf()) return !1;
   let C = h.default.getChannel(o);
   if (null == C) return !1;
   let g = p.default.getChannelId(),
     N = E.default.getCurrentSidebarChannelId(g),
     R = o === g || o === N,
     L = c.EnableTTSCommand.getSetting() && u.tts && R,
-    P = S.default.getTTSType(),
+    P = m.default.getTTSType(),
     y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === v.TTSNotificationTypes.ALL_CHANNELS || P === v.TTSNotificationTypes.SELECTED_CHANNEL && R);
   if ((L || y) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !I.default.isBlocked(u.author.id))) {
     if (M.indexOf(u.id) >= 0) return !1;
@@ -144,7 +144,7 @@ function H(e) {
 }
 
 function V() {
-  m.default.isSelfDeaf() && i.cancelAll()
+  S.default.isSelfDeaf() && i.cancelAll()
 }
 t.default = {
   init() {

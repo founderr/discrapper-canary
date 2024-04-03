@@ -15,8 +15,8 @@ var o = n("149765"),
   h = n("17567"),
   _ = n("795513"),
   C = n("685736"),
-  m = n("266750"),
-  S = n("768910"),
+  S = n("266750"),
+  m = n("768910"),
   I = n("632093"),
   p = n("347994"),
   T = n("591526"),
@@ -78,12 +78,12 @@ async function Y(e, t, n) {
     h = R.default.fetchGuildCache.measureAsync(() => K(e, n)),
     _ = R.default.fetchGuildCache.measureAsync(() => z(e, n)),
     C = null != e ? r.default.timeAsync("\uD83D\uDCBE", "cache: private_channels", () => T.default.getAsync(e, null)) : Promise.resolve([]),
-    m = null == e ? Promise.resolve({}) : r.default.timeAsync("\uD83D\uDCBE", "cache: user_settings", () => p.default.getAll(e)),
-    g = null == e ? Promise.resolve([]) : r.default.timeAsync("\uD83D\uDCBE", "cache: read_states", () => S.default.getAll(e)),
+    S = null == e ? Promise.resolve({}) : r.default.timeAsync("\uD83D\uDCBE", "cache: user_settings", () => p.default.getAll(e)),
+    g = null == e ? Promise.resolve([]) : r.default.timeAsync("\uD83D\uDCBE", "cache: read_states", () => m.default.getAll(e)),
     A = null == e ? Promise.resolve([]) : r.default.timeAsync("\uD83D\uDCBE", "cache: user_guild_settings", () => I.default.getAll(e)),
     [
       [O, M], P, y, x, U, j, G
-    ] = await Promise.all([E, h, _, C, m, g, A]),
+    ] = await Promise.all([E, h, _, C, S, g, A]),
     w = performance.now() - f;
   if (b.verbose("cache loaded in ".concat(w, "ms (channel_history ").concat(O, "ms)")), null == M) return (0, D.default)("database:history_cache_null"), b.verbose("finished without dispatching CACHE_LOADED"), [!1, null, 0];
   {
@@ -126,7 +126,7 @@ async function K(e, t) {
       "@me" === t.guildId && (W = !0)
   }
   if (W) return null !== (n = await (0, f.tryLoadAsync)(() => r.default.timeAsync("\uD83D\uDCBE", "cache: guilds", () => h.default.getAsync(e)))) && void 0 !== n ? n : [];
-  let s = null !== (a = (await m.default.getCommittedVersions()).initial_guild_id) && void 0 !== a ? a : t.guildId;
+  let s = null !== (a = (await S.default.getCommittedVersions()).initial_guild_id) && void 0 !== a ? a : t.guildId;
   if (null == s || "@me" === s) return [];
   let l = await (0, f.tryLoadAsync)(() => h.default.getOneAsync(e, s));
   return null != l ? [l] : []
@@ -136,7 +136,7 @@ async function z(e, t) {
     channels: null,
     guildId: null
   });
-  let n = (await m.default.getCommittedVersions()).initial_guild_id;
+  let n = (await S.default.getCommittedVersions()).initial_guild_id;
   if (null == n && "guild-channels" === t.page && (n = t.guildId), null == e || null == n) return b.verbose("skipped loading initial guild (guild: ".concat(n, ", database: ").concat(e, ")")), Promise.resolve({
     channels: null,
     guildId: null
@@ -233,13 +233,13 @@ async function q(e, t, n, a) {
         let [n, a] = t;
         return e + a.length
       }, 0),
-      m = _ - C,
-      S = 0 === i.stale.length ? "" : " \xb7 ".concat(i.stale.join(", "));
-    b.verbose("lazy_cache_summary: (\n        ok: true\n        meta:\n          auth_user_id: ".concat(t, "\n          initial_guild: ").concat(n, "\n          database: ").concat(null != e, "\n            ok: ").concat(s, "\n            name: ").concat(null == e ? void 0 : e.name, "\n        data:\n          database:\n            guilds: ").concat(l.length, "\n            basic_channels:\n              total: ").concat(_, " (").concat(i.channels.length, " guilds)\n              stale: ").concat(m, " (").concat(i.stale.length, " guilds").concat(S, ")\n              unstale: ").concat(C, "\n            full_channels (guilds_with_stale_basic_channels):\n              total: ").concat(E, " (").concat(u.length, " guilds)\n      )")), R.default.setCacheInfo({
+      S = _ - C,
+      m = 0 === i.stale.length ? "" : " \xb7 ".concat(i.stale.join(", "));
+    b.verbose("lazy_cache_summary: (\n        ok: true\n        meta:\n          auth_user_id: ".concat(t, "\n          initial_guild: ").concat(n, "\n          database: ").concat(null != e, "\n            ok: ").concat(s, "\n            name: ").concat(null == e ? void 0 : e.name, "\n        data:\n          database:\n            guilds: ").concat(l.length, "\n            basic_channels:\n              total: ").concat(_, " (").concat(i.channels.length, " guilds)\n              stale: ").concat(S, " (").concat(i.stale.length, " guilds").concat(m, ")\n              unstale: ").concat(C, "\n            full_channels (guilds_with_stale_basic_channels):\n              total: ").concat(E, " (").concat(u.length, " guilds)\n      )")), R.default.setCacheInfo({
       guilds: l.length,
       privateChannels: a,
       basicChannels: _,
-      basicChannelsStale: m,
+      basicChannelsStale: S,
       fullChannels: E,
       fullChannelGuilds: h
     })

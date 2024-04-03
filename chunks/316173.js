@@ -21,11 +21,11 @@ t.default = () => {
     return (0, c.probablyHasBuildOverride)() ? null === (e = d.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
   });
   if (t) return null;
-  let m = () => {
+  let S = () => {
       o.Storage.set(C, !0), n(!0)
     },
-    S = () => (0, a.jsx)(u.Clickable, {
-      onClick: m,
+    m = () => (0, a.jsx)(u.Clickable, {
+      onClick: S,
       className: _.closeButton,
       "aria-label": h.default.Messages.DISMISS,
       children: (0, a.jsx)(f.default, {
@@ -36,13 +36,13 @@ t.default = () => {
     className: i()(_.devBanner, _.buildOverride),
     children: [(0, a.jsx)(E.default, {
       className: _.icon
-    }), h.default.Messages.BUILD_OVERRIDE, (0, a.jsx)(S, {})]
+    }), h.default.Messages.BUILD_OVERRIDE, (0, a.jsx)(m, {})]
   }) : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsxs)("div", {
     className: i()(_.devBanner, _.staging),
     children: [(0, a.jsx)(E.default, {
       className: _.icon
     }), h.default.Messages.DEV_NOTICE_STAGING.format({
-      buildNumber: "281303"
-    }), (0, a.jsx)(S, {})]
+      buildNumber: "281367"
+    }), (0, a.jsx)(m, {})]
   }) : null
 }

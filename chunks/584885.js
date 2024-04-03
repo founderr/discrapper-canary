@@ -27,8 +27,8 @@ t.default = e => {
   let t, {
     title: n,
     subtitle: C,
-    guildsData: m,
-    analyticsContext: S,
+    guildsData: S,
+    analyticsContext: m,
     theme: I,
     onViewGuild: p,
     fetchGuilds: T,
@@ -45,11 +45,11 @@ t.default = e => {
     {
       analyticsLocations: L
     } = (0, r.default)();
-  if (null == m) return null;
+  if (null == S) return null;
   let {
     guilds: M,
     loading: P
-  } = m, y = null == M || 0 === M.length;
+  } = S, y = null == M || 0 === M.length;
   if (!P && y) return null;
   let D = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
@@ -64,7 +64,7 @@ t.default = e => {
     });
     else {
       let t = M.findIndex(t => t.id === e);
-      await p(e, t, S, N)
+      await p(e, t, m, N)
     }
   };
   if (P || null == M) {

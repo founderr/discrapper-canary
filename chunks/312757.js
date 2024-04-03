@@ -21,9 +21,9 @@ function f(e) {
     channel: t,
     transitionState: n,
     onClose: f
-  } = e, N = (0, a.useUID)(), v = (0, c.useActiveEvent)(t.id);
-  if (null == v) return null;
-  let S = () => {
+  } = e, N = (0, a.useUID)(), S = (0, c.useActiveEvent)(t.id);
+  if (null == S) return null;
+  let _ = () => {
     i.default.selectVoiceChannel(null), f()
   };
   return (0, l.jsxs)(u.ModalRoot, {
@@ -57,13 +57,13 @@ function f(e) {
       children: [(0, l.jsx)(u.Button, {
         color: u.Button.Colors.RED,
         onClick: () => {
-          s.default.endEvent(v.id, v.guild_id), S()
+          s.default.endEvent(S.id, S.guild_id), _()
         },
         children: o.default.Messages.GUILD_EVENT_END_PROMPT_CONFIRM
       }), (0, l.jsx)(u.Button, {
         color: u.Button.Colors.PRIMARY,
         className: E.cancelButton,
-        onClick: S,
+        onClick: _,
         children: o.default.Messages.GUILD_EVENT_END_PROMPT_CANCEL
       })]
     })]

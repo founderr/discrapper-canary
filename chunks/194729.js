@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("570140"),
   _ = n("212093"),
   C = n("827837"),
-  m = n("785570"),
-  S = n("252618"),
+  S = n("785570"),
+  m = n("252618"),
   I = n("440190"),
   p = n("5955"),
   T = n("703656"),
@@ -69,7 +69,7 @@ class K extends s.PureComponent {
       mostRecentQuery: o
     } = this.props;
     if ((0, C.fetchActivityStatistics)(), (0, x.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, _.createAlgoliaIndex)(), h.default.wait(() => {
-        (0, m.markView)(F.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
+        (0, S.markView)(F.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
       }), !a && 0 === o.length && P.trackDiscoveryViewed({
         loadId: this.loadId,
         gamesYouPlayGuilds: s.guilds,
@@ -298,7 +298,7 @@ class K extends s.PureComponent {
     });
     return (0, a.jsxs)("div", {
       className: H.pageWrapper,
-      children: [(0, a.jsx)(S.AppPageTitle, {
+      children: [(0, a.jsx)(m.AppPageTitle, {
         subsection: d ? l : void 0,
         location: _
       }), (0, a.jsx)("div", {

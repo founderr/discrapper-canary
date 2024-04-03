@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return v
   },
   default: function() {
-    return m
+    return _
   }
 }), n("47120"), n("757143");
 var l = n("735250"),
@@ -24,12 +24,12 @@ var l = n("735250"),
   N = n("33129");
 let v = "VoiceChannelStatusModal";
 
-function m(e) {
+function _(e) {
   let {
     channel: t,
     transitionState: n,
-    onClose: m
-  } = e, _ = (0, a.useStateFromStores)([s.default], () => s.default.getChannelStatus(t)), T = (0, a.useStateFromStores)([f.default], () => f.default.getMediaSessionId()), [I, g] = u.useState(null != _ ? _ : ""), [p, A] = u.useState(!1), [L, O] = u.useState(null);
+    onClose: _
+  } = e, m = (0, a.useStateFromStores)([s.default], () => s.default.getChannelStatus(t)), T = (0, a.useStateFromStores)([f.default], () => f.default.getMediaSessionId()), [I, g] = u.useState(null != m ? m : ""), [p, A] = u.useState(!1), [L, O] = u.useState(null);
   u.useEffect(() => {
     C.default.track(S.AnalyticEvents.OPEN_MODAL, {
       type: "Voice Channel Topic Modal",
@@ -37,7 +37,7 @@ function m(e) {
     })
   }, [t.guild_id]);
   let V = async e => {
-    I === _ && m(), null == e || e.preventDefault(), O(null), A(!0);
+    I === m && _(), null == e || e.preventDefault(), O(null), A(!0);
     let n = I.length,
       l = I.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length;
     await r.default.updateVoiceChannelStatus(t.id, I).then(e => {
@@ -47,7 +47,7 @@ function m(e) {
         media_session_id: T,
         raw_length: n,
         text_length: l
-      }), m()) : O(e.body.message)
+      }), _()) : O(e.body.message)
     }, e => {
       O(e.body.message)
     }), A(!1)
@@ -65,7 +65,7 @@ function m(e) {
           separator: !1,
           children: [(0, l.jsx)(i.ModalCloseButton, {
             className: N.closeButton,
-            onClick: m
+            onClick: _
           }), (0, l.jsx)("div", {
             className: N.headerImage
           }), (0, l.jsx)(i.FormTitle, {
@@ -114,7 +114,7 @@ function m(e) {
         direction: E.default.Direction.HORIZONTAL,
         children: [(0, l.jsx)(i.Button, {
           color: i.Button.Colors.PRIMARY,
-          onClick: m,
+          onClick: _,
           children: h.default.Messages.CANCEL
         }), (0, l.jsx)(i.Button, {
           onClick: V,

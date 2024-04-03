@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("586902"),
   _ = n("512384"),
   C = n("484459"),
-  m = n("103575"),
-  S = n("314897"),
+  S = n("103575"),
+  m = n("314897"),
   I = n("131951"),
   p = n("836946"),
   T = n("381238"),
@@ -91,7 +91,7 @@ function D(e) {
     nick: u,
     mute: d,
     deaf: c,
-    serverMute: S,
+    serverMute: m,
     serverDeaf: p
   } = e, T = (0, r.useStateFromStores)([I.default], () => I.default.isLocalMute(o.id)), g = (0, h.default)({
     userId: o.id,
@@ -116,7 +116,7 @@ function D(e) {
   }({
     serverDeaf: p,
     deaf: c,
-    serverMute: S,
+    serverMute: m,
     mute: d,
     localMute: T
   })) && void 0 !== s ? s : {}, j = null != U ? v.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
@@ -153,7 +153,7 @@ function D(e) {
       channelId: l.id
     }),
     position: "top",
-    renderPopout: e => (0, a.jsx)(m.default, {
+    renderPopout: e => (0, a.jsx)(S.default, {
       location: "RTCConnectionVoiceUsers",
       userId: o.id,
       guildId: A,
@@ -210,7 +210,7 @@ function x(e) {
       height: 16
     }),
     focusProps: M
-  }), E = (0, r.useStateFromStores)([S.default], () => S.default.getId(), []), [h, _] = function(e, t) {
+  }), E = (0, r.useStateFromStores)([m.default], () => m.default.getId(), []), [h, _] = function(e, t) {
     let n = [];
     for (let a of e) {
       if (a.user.id !== t) {

@@ -17,10 +17,10 @@ t.default = e => {
     selectedGames: n
   } = e, h = (0, l.useStateFromStores)([o.default], () => o.default.getId()), {
     recentGames: _
-  } = (0, r.useUserRecentGames)(h), C = (0, l.useStateFromStores)([u.default], () => u.default.games, []), m = s.useMemo(() => C.map(e => ({
+  } = (0, r.useUserRecentGames)(h), C = (0, l.useStateFromStores)([u.default], () => u.default.games, []), S = s.useMemo(() => C.map(e => ({
     value: e.id,
     label: e.name
-  })), [C]), S = (0, i.useToken)(i.tokens.colors.WHITE), I = (0, l.useStateFromStoresArray)([u.default], () => null != _ ? _.map(e => {
+  })), [C]), m = (0, i.useToken)(i.tokens.colors.WHITE), I = (0, l.useStateFromStoresArray)([u.default], () => null != _ ? _.map(e => {
     let t = u.default.getGameById(e.applicationId);
     return {
       ...e,
@@ -57,7 +57,7 @@ t.default = e => {
     }), (0, a.jsx)("div", {
       className: E.inputContainer,
       children: (0, a.jsx)(i.SearchableSelect, {
-        options: m,
+        options: S,
         value: "",
         placeholder: f.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
         onChange: T,
@@ -81,7 +81,7 @@ t.default = e => {
                 onClick: () => p(t),
                 className: E.gameImagePlaceholder,
                 children: (0, a.jsx)(d.default, {
-                  backgroundColor: S.hex(),
+                  backgroundColor: m.hex(),
                   className: E.selectedGameCheck
                 })
               }), (0, a.jsx)(i.Text, {

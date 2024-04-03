@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   QuestsBarBackgroundAnimation: function() {
-    return S
+    return m
   }
 }), n("47120"), n("724458");
 var a = n("735250"),
@@ -21,7 +21,7 @@ let h = [0, .5, 1],
     "layers[2].shapes[1].g.k.k": [0, .714, .271, .757, .5, .714, .271, .757, 1, .714, .271, .757]
   },
   C = new Map;
-async function m(e, t) {
+async function S(e, t) {
   let a = C.get(e);
   if (null != a) return a;
   let s = (await n.e("30166").then(n.t.bind(n, "235630", 19))).default;
@@ -36,14 +36,14 @@ async function m(e, t) {
   }(s, _, t), C.set(e, s), s
 }
 
-function S(e) {
+function m(e) {
   var t;
   let {
     quest: n,
     isExpanded: l,
     isExpansionAnimationComplete: r,
     useReducedMotion: o
-  } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), C = s.useRef(null), [S, I] = s.useState(!1), p = s.useMemo(() => {
+  } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), C = s.useRef(null), [m, I] = s.useState(!1), p = s.useMemo(() => {
     if (null == n) return null;
     let e = (0, f.hexToRgb)(n.config.colors.primary),
       t = {
@@ -66,8 +66,8 @@ function S(e) {
       children: (0, a.jsx)(c.default, {
         ref: C,
         onComplete: A,
-        importData: () => m(n.id, p),
-        shouldAnimate: !S && g,
+        importData: () => S(n.id, p),
+        shouldAnimate: !m && g,
         className: i()(E.lottieAnimation, E.lottieAnimationBackground),
         loop: 0
       })

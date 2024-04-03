@@ -15,12 +15,12 @@ var s = n("399606"),
   h = n("87792"),
   _ = n("302289"),
   C = n("946690"),
-  m = n("456771"),
-  S = n("292352"),
+  S = n("456771"),
+  m = n("292352"),
   I = n("689938"),
   p = n("166267");
 t.default = () => {
-  let e = (0, f.useUserForLinkStatus)(S.UserLinkStatus.ACTIVE),
+  let e = (0, f.useUserForLinkStatus)(m.UserLinkStatus.ACTIVE),
     t = (0, c.useSelectedTeenUser)(),
     n = (0, s.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
     T = (0, d.useAgeSpecificText)(I.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, I.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
@@ -44,7 +44,7 @@ t.default = () => {
         header: I.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
         description: g
       }), (0, a.jsx)(C.default, {
-        icon: N ? l.QrCodeCameraIcon : m.default,
+        icon: N ? l.QrCodeCameraIcon : S.default,
         header: I.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
         description: A
       })]

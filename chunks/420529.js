@@ -24,8 +24,8 @@ function h(e) {
     h = (0, c.default)(),
     N = (null == h ? void 0 : h.channelId) === e.id,
     v = (0, r.useIsVoiceChannelLocked)(e) && !e.isPrivate(),
-    m = (0, r.default)(e),
-    _ = !(0, u.useStateFromStores)([d.default], () => d.default.isInChannel(e.id)) && m || v,
+    _ = (0, r.default)(e),
+    m = !(0, u.useStateFromStores)([d.default], () => d.default.isInChannel(e.id)) && _ || v,
     T = (0, f.default)();
   if (!N && 0 === T.length) return null;
   let I = t => {
@@ -63,7 +63,7 @@ function h(e) {
         (0, o.handoffRemote)(h)
       },
       icon: (0, E.default)(void 0),
-      disabled: _
+      disabled: m
     }) : T.map(e => (0, l.jsx)(a.MenuItem, {
       id: "transfer-".concat(e.type, "-").concat(e.id),
       label: function(e, t) {
@@ -73,7 +73,7 @@ function h(e) {
       }(e.type, t),
       action: () => I(e),
       icon: (0, E.default)(e.type),
-      disabled: _
+      disabled: m
     }, e.id))
   })
 }

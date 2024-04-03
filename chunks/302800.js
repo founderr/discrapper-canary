@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   CollectiblesDCToDisplayOptions: function() {
-    return m
+    return S
   },
   CollectiblesMarketingVariant: function() {
     return a
   },
   getCountdownDisplayOptions: function() {
-    return S
+    return m
   },
   getCustomConfettiDisplayOptions: function() {
     return p
@@ -26,7 +26,7 @@ var a, s, l = n("278074"),
   _ = n("186077"),
   C = n("376477");
 (s = a || (a = {}))[s.NONE = 0] = "NONE", s[s.TOOLTIP = 1] = "TOOLTIP", s[s.COACHTIP = 2] = "COACHTIP";
-let m = {
+let S = {
     [r.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]: {
       type: 1,
       title: () => o.default.Messages.COLLECTIBLES_LUNAR_NEW_YEAR_TOOLTIP_TEXT,
@@ -71,7 +71,7 @@ let m = {
       entryPointClassName: "shyButton"
     }
   },
-  S = e => (0, l.match)(e).with(i.CollectiblesCategorySkuId.SHY, () => ({
+  m = e => (0, l.match)(e).with(i.CollectiblesCategorySkuId.SHY, () => ({
     label: () => o.default.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
     backgroundColor: "rgba(255, 70, 85, 1)",
     boxShadow: "0 0 12px 0 rgba(255, 70, 85, 0.5)",

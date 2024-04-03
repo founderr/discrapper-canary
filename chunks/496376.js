@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("745628"),
   _ = n("950279"),
   C = n("796918"),
-  m = n("741595"),
-  S = n("884486"),
+  S = n("741595"),
+  m = n("884486"),
   I = n("974842"),
   p = n("308083"),
   T = n("689938"),
@@ -153,7 +153,7 @@ t.default = e => {
                   selectedGames: R
                 });
               case p.ClanSetupSteps.PLAYSTYLE:
-                return (0, a.jsx)(m.default, {
+                return (0, a.jsx)(S.default, {
                   handleUpdate: j,
                   playstyle: O
                 });
@@ -168,7 +168,7 @@ t.default = e => {
                   description: L
                 });
               case p.ClanSetupSteps.PRIMETIME:
-                return (0, a.jsx)(S.default, {
+                return (0, a.jsx)(m.default, {
                   handleUpdate: j,
                   selectedTimes: P
                 });

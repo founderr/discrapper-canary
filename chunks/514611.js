@@ -13,8 +13,8 @@ var a, s = n("735250"),
   h = n("206887"),
   _ = n("134432"),
   C = n("695346"),
-  m = n("768581"),
-  S = n("900849"),
+  S = n("768581"),
+  m = n("900849"),
   I = n("940627"),
   p = n("806519"),
   T = n("981631"),
@@ -60,11 +60,11 @@ class L extends(a = l.PureComponent) {
       presenceCount: L,
       memberCount: M,
       keywords: P
-    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), D = m.default.getGuildDiscoverySplashURL({
+    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), D = S.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), x = null != D ? D : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
+    }), x = null != D ? D : this.getDefaultSplashURL(a, y), b = S.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -174,7 +174,7 @@ class L extends(a = l.PureComponent) {
                 tags: P,
                 onTagClick: e => l(e, t.id),
                 guildId: t.id,
-                section: S.AnalyticsContexts.POPULAR
+                section: m.AnalyticsContexts.POPULAR
               }), (0, s.jsxs)("div", {
                 className: A.memberInfo,
                 children: [null != L && (0, s.jsxs)("div", {

@@ -25,13 +25,13 @@ class E extends r.default {
       uploadType: r,
       guildId: E,
       isTryItOutFlow: h
-    } = e, _ = null != E ? o.setPendingAvatar : i.setPendingAvatar, C = null != E ? o.setPendingBanner : u.setPendingBanner, m = d.default.getCurrentUser();
+    } = e, _ = null != E ? o.setPendingAvatar : i.setPendingAvatar, C = null != E ? o.setPendingBanner : u.setPendingBanner, S = d.default.getCurrentUser();
     if (r === f.UploadTypes.AVATAR) {
       if (h) {
         (0, u.setTryItOutAvatar)(t);
         return
       }
-      if (c.default.canUseAnimatedAvatar(m) || "image/gif" !== l.type) {
+      if (c.default.canUseAnimatedAvatar(S) || "image/gif" !== l.type) {
         _(t);
         return
       }(0, s.openModalLazy)(async () => {
@@ -49,7 +49,7 @@ class E extends r.default {
         (0, u.setTryItOutBanner)(t);
         return
       }
-      if (c.default.canUsePremiumProfileCustomization(m)) {
+      if (c.default.canUsePremiumProfileCustomization(S)) {
         C(t);
         return
       }(0, s.openModalLazy)(async () => {

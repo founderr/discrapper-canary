@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("569984"),
   _ = n("497505"),
   C = n("918701"),
-  m = n("874137"),
-  S = n("78826"),
+  S = n("874137"),
+  m = n("78826"),
   I = n("580168"),
   p = n("789563"),
   T = n("164164"),
@@ -47,7 +47,7 @@ t.default = function() {
     {
       hasError: z,
       isLoading: q
-    } = (0, S.useQuestsAssetsLoadState)(),
+    } = (0, m.useQuestsAssetsLoadState)(),
     Q = s.useCallback(() => {
       var e, t;
       k((null !== (t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), x(!0)
@@ -143,7 +143,7 @@ t.default = function() {
       G(!1)
     }
   });
-  return !l || null == O || !ea && j || z ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
+  return !l || null == O || !ea && j || z ? null : (0, a.jsx)(S.QuestContentImpressionTracker, {
     questId: O.id,
     questContent: _.QuestContent.QUEST_BAR,
     overrideVisibility: !v && ea,

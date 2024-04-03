@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("626135"),
   _ = n("26373"),
   C = n("486622"),
-  m = n("922409"),
-  S = n("727813"),
+  S = n("922409"),
+  m = n("727813"),
   I = n("355350"),
   p = n("307947"),
   T = n("125855"),
@@ -30,14 +30,14 @@ var a = n("735250"),
 
 function O() {
   let e = s.useRef(null),
-    t = (0, S.default)(),
+    t = (0, m.default)(),
     n = (0, I.useSpamMessageRequestCount)(),
     l = (0, _.useListHasSingleSpamMessageRequest)(),
     O = (0, d.useIsRejectAllMessageRequestsEnabled)(),
     v = (0, c.default)("message-requests-spam-list"),
     {
       channelId: L
-    } = (0, m.useMessageRequestSidebarState)(),
+    } = (0, S.useMessageRequestSidebarState)(),
     M = s.useCallback(() => {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),

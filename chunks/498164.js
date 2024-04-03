@@ -13,8 +13,8 @@ var i = n("756647"),
   h = n("962220"),
   _ = n("703656"),
   C = n("314897"),
-  m = n("594174"),
-  S = n("626135"),
+  S = n("594174"),
+  m = n("626135"),
   I = n("591759"),
   p = n("998502"),
   T = n("996106"),
@@ -22,7 +22,7 @@ var i = n("756647"),
   A = n("981631");
 
 function N(e, t) {
-  null != e && S.default.track(A.AnalyticEvents.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
+  null != e && m.default.track(A.AnalyticEvents.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
     invite_code: null,
     has_auth_token: null,
     is_backgrounded: null,
@@ -62,7 +62,7 @@ function N(e, t) {
           code: t
         }
       } = e;
-      if (null == m.default.getCurrentUser()) return;
+      if (null == S.default.getCurrentUser()) return;
       let {
         guildTemplate: a
       } = await h.default.resolveGuildTemplate(t);
@@ -97,7 +97,7 @@ function N(e, t) {
             let {
               giftCode: s
             } = a;
-            p.default.focus(), S.default.track(A.AnalyticEvents.OPEN_MODAL, {
+            p.default.focus(), m.default.track(A.AnalyticEvents.OPEN_MODAL, {
               type: "gift_accept",
               location: A.DIRECT_ANALYTICS_LOCATION
             }), (0, r.openModalLazy)(async () => {

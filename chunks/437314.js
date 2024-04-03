@@ -103,7 +103,7 @@ let _ = Object.freeze({
       })
     })
   };
-class m extends l.PureComponent {
+class S extends l.PureComponent {
   render() {
     let {
       type: e,
@@ -170,4 +170,4 @@ t.default = r.default.connectStores([u.default], () => ({
   theme: u.default.theme
 }), {
   forwardRef: !0
-})(m)
+})(S)

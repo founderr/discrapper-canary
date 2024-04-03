@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("232567"),
   _ = n("2052"),
   C = n("393238"),
-  m = n("727637"),
-  S = n("420660"),
+  S = n("727637"),
+  m = n("420660"),
   I = n("100527"),
   p = n("906732"),
   T = n("521868"),
@@ -248,7 +248,7 @@ function $(e) {
     })
   }(ee, U), {
     ref: ea
-  } = (0, C.default)(), es = (0, m.default)(ea);
+  } = (0, C.default)(), es = (0, S.default)(ea);
   s.useEffect(() => {
     F.default.track(K.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
@@ -289,7 +289,7 @@ function $(e) {
               displayProfile: B,
               onClose: () => null == b ? void 0 : b(),
               isMobile: et,
-              isStreaming: (0, S.default)(V),
+              isStreaming: (0, m.default)(V),
               status: ee,
               disableUserProfileLink: __OVERLAY__,
               isHovering: es,

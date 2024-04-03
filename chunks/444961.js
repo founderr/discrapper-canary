@@ -14,7 +14,7 @@ var a = n("846519"),
   h = n("981631");
 let _ = new a.Timeout,
   C = new a.Timeout;
-class m extends i.default {
+class S extends i.default {
   _initialize() {
     s.default.subscribe("IDLE", this.handleIdleUpdate)
   }
@@ -40,4 +40,4 @@ class m extends i.default {
     })
   }
 }
-t.default = new m
+t.default = new S

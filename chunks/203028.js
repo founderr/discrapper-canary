@@ -25,8 +25,8 @@ function C(e) {
     onUserContextMenu: s
   } = e, {
     priorityMembers: C,
-    guildContext: m
-  } = t, S = C[0], I = function(e) {
+    guildContext: S
+  } = t, m = C[0], I = function(e) {
     let {
       priorityMembers: t,
       partiedMembers: n
@@ -60,8 +60,8 @@ function C(e) {
       priorityMembers: s,
       partiedMembers: d,
       voiceChannels: C,
-      currentActivities: m
-    } = e, S = s.length, I = d.length - S, p = m[0], T = null == p ? void 0 : p.activity, g = null == p ? void 0 : p.startedPlayingTime, A = {
+      currentActivities: S
+    } = e, m = s.length, I = d.length - m, p = S[0], T = null == p ? void 0 : p.activity, g = null == p ? void 0 : p.startedPlayingTime, A = {
       name: null !== (t = null == T ? void 0 : T.name) && void 0 !== t ? t : ""
     };
     if ((0, i.default)(T) && null != T) return {
@@ -72,7 +72,7 @@ function C(e) {
       }),
       icon: null
     };
-    if (S + I === 1 && null != p) {
+    if (m + I === 1 && null != p) {
       let {
         game: e
       } = p;
@@ -131,12 +131,12 @@ function C(e) {
           }
       }
     }
-    if (0 === m.length) {
+    if (0 === S.length) {
       if (C.length > 0) return {
         subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
         icon: null
       };
-      let e = m[0];
+      let e = S[0];
       if (null != e) {
         let {
           activity: t
@@ -152,8 +152,8 @@ function C(e) {
           })
         }
       }
-    } else if (1 === m.length) {
-      let e = m.find(e => null != e.activity);
+    } else if (1 === S.length) {
+      let e = S.find(e => null != e.activity);
       if (null == e) return {
         subtitle: null,
         icon: null
@@ -182,11 +182,11 @@ function C(e) {
     }
   }(t);
   return (0, a.jsx)(f.default.Header, {
-    priorityUser: S,
-    guildId: null == m ? void 0 : m.id,
+    priorityUser: m,
+    guildId: null == S ? void 0 : S.id,
     title: I,
     subtitle: p,
     icon: T,
-    onContextMenu: e => s(e, S.user)
+    onContextMenu: e => s(e, m.user)
   })
 }

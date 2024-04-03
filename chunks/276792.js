@@ -23,17 +23,17 @@ function C(e) {
   var t, n;
   let {
     content: C,
-    renderModalProps: m,
-    analyticsLocations: S,
+    renderModalProps: S,
+    analyticsLocations: m,
     analyticsLocation: I,
     isLightTheme: p
   } = e, T = "AnnouncementModalVariant1", {
     onClose: g
-  } = m, A = null != C.button && "" !== C.button.copy ? C.button.copy : E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, N = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = S, A = null != C.button && "" !== C.button.copy ? C.button.copy : E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, N = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, r.transitionTo)(f.Routes.APPLICATION_STORE), g()
   } : () => (0, i.default)({
     subscriptionTier: c.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: S,
+    analyticsLocations: m,
     analyticsObject: {
       ...I,
       object: f.AnalyticsObjects.BUTTON_CTA,
@@ -58,7 +58,7 @@ function C(e) {
     type: "image",
     src: p ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
   }), {
-    renderModalProps: m,
+    renderModalProps: S,
     header: C.header,
     subHeader: C.subheader,
     subHeaderExtra: O,

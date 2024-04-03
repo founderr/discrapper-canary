@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("112724"),
   _ = n("183126"),
   C = n("607070"),
-  m = n("209613"),
-  S = n("325708"),
+  S = n("209613"),
+  m = n("325708"),
   I = n("320149"),
   p = n("252618"),
   T = n("605236"),
@@ -69,14 +69,14 @@ function ea() {
     } = (0, H.useMessageRequestActions)({
       onError: d
     }),
-    E = (0, m.default)("message-requests-list"),
+    E = (0, S.default)("message-requests-list"),
     {
       channelId: h
     } = (0, V.useMessageRequestSidebarState)(),
     C = s.useCallback(() => {
       f(n.map(e => e.channel.id))
     }, [n, f]),
-    S = s.useCallback(e => {
+    m = s.useCallback(e => {
       var t, s;
       let {
         row: r
@@ -140,7 +140,7 @@ function ea() {
           sectionHeight: Z.LIST_SECTION_HEIGHT,
           rowHeight: Z.LIST_ROW_HEIGHT,
           renderSection: I,
-          renderRow: S,
+          renderRow: m,
           sections: [n.length],
           chunkSize: 30,
           fade: !0,
@@ -158,8 +158,8 @@ function es(e) {
   } = e, s = (0, u.useStateFromStores)([y.default], () => y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(null == s ? void 0 : s.channelId));
   if (null == s || s.type !== v.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
-  return (0, a.jsx)(S.default, {
-    sidebarType: S.ChatSidebarType.MessageRequestSidebar,
+  return (0, a.jsx)(m.default, {
+    sidebarType: m.ChatSidebarType.MessageRequestSidebar,
     maxWidth: i,
     onWidthChange: n,
     children: (0, a.jsx)(I.default, {
@@ -252,11 +252,11 @@ let eo = (0, h.default)(function(e) {
     }),
     _ = null == h ? void 0 : h.channelId,
     C = null != h,
-    m = (0, k.useIsEitherTypeOfMessageRequest)(_),
-    S = (0, w.useHasUserRepliedInChannel)(_);
+    S = (0, k.useIsEitherTypeOfMessageRequest)(_),
+    m = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != _ && !m && S && C && ((0, R.transitionToChannel)(_), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
-  }, [_, S, C, m]);
+    null != _ && !S && m && C && ((0, R.transitionToChannel)(_), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+  }, [_, m, C, S]);
   let [I, T] = s.useState(Z.MessageRequestSections.REQUESTS);
   return (0, p.usePageTitle)({
     location: ee.default.Messages.MESSAGE_REQUESTS

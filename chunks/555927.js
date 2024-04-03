@@ -111,7 +111,7 @@ function f(e) {
       })
     })
   }
-  let m = r.map((e, n) => {
+  let S = r.map((e, n) => {
       let {
         playingMembers: s,
         game: i,
@@ -134,15 +134,15 @@ function f(e) {
         })
       }, n)
     }),
-    S = h.map(e => e.id);
-  return [...m, (0, a.jsx)(l.MenuGroup, {
+    m = h.map(e => e.id);
+  return [...S, (0, a.jsx)(l.MenuGroup, {
     label: "".concat(d.default.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, " - ").concat(h.length),
     children: c({
       priorityMembers: t.filter(e => {
         let {
           user: t
         } = e;
-        return S.includes(t.id)
+        return m.includes(t.id)
       }),
       otherMembers: h.filter(e => !u.has(e.id)),
       totalMembers: h.length,

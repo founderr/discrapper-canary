@@ -13,8 +13,8 @@ var l = n("836560"),
   h = n("901077"),
   _ = n("76238"),
   C = n("852926"),
-  m = n("186901"),
-  S = n("981631"),
+  S = n("186901"),
+  m = n("981631"),
   I = n("413135").Buffer;
 
 function p(e, t, n) {
@@ -51,7 +51,7 @@ function O() {
         port: e
       })
     };
-  s.listen(S.RPC_STARTING_PORT + e % S.RPC_PORT_RANGE, "127.0.0.1", t)
+  s.listen(m.RPC_STARTING_PORT + e % m.RPC_PORT_RANGE, "127.0.0.1", t)
 }
 
 function v(e, t, n) {
@@ -78,7 +78,7 @@ function L(e, t, n, a) {
 }
 class M extends _.default {
   send(e) {
-    (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY && e.evt !== S.RPCEvents.OVERLAY) && A.info("Socket Emit: ".concat(this.id), (0, h.default)(e)), null != a && "etf" === this.encoding ? this._socket.send(a.pack(e), {
+    (c.default.isLoggingOverlayEvents || e.cmd !== m.RPCCommands.OVERLAY && e.evt !== m.RPCEvents.OVERLAY) && A.info("Socket Emit: ".concat(this.id), (0, h.default)(e)), null != a && "etf" === this.encoding ? this._socket.send(a.pack(e), {
       binary: !0
     }) : this._socket.send(JSON.stringify(e))
   }
@@ -87,24 +87,24 @@ class M extends _.default {
   }
   constructor(e, t, n) {
     if (super("ws", t, n), p(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(n)) throw new E.default({
-      closeCode: S.RPCCloseCodes.INVALID_ENCODING
+      closeCode: m.RPCCloseCodes.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(n));
     if ("etf" === n && null == a) throw new E.default({
-      closeCode: S.RPCCloseCodes.INVALID_ENCODING
+      closeCode: m.RPCCloseCodes.INVALID_ENCODING
     }, "Erlpack cannot be used on this client");
     this._socket = e
   }
 }
 class P extends _.default {
   send(e) {
-    (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
+    (c.default.isLoggingOverlayEvents || e.cmd !== m.RPCCommands.OVERLAY) && A.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
   }
   close(e, t) {
     this._closeCallback(t, e)
   }
   constructor(e, t, n, a) {
     if (super("http", n, a), p(this, "_sendCallback", void 0), p(this, "_closeCallback", void 0), "json" !== a) throw new E.default({
-      closeCode: S.RPCCloseCodes.INVALID_ENCODING
+      closeCode: m.RPCCloseCodes.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(a));
     this._sendCallback = e, this._closeCallback = t
   }
@@ -143,7 +143,7 @@ class y extends l.EventEmitter {
       });
       else {
         var i;
-        u.authorization.scopes = [m.RPC_PRIVATE_LIMITED_SCOPE], this.handleMessage(u, decodeURIComponent(null !== (i = n.get("payload")) && void 0 !== i ? i : ""))
+        u.authorization.scopes = [S.RPC_PRIVATE_LIMITED_SCOPE], this.handleMessage(u, decodeURIComponent(null !== (i = n.get("payload")) && void 0 !== i ? i : ""))
       }
       return
     }
@@ -179,9 +179,9 @@ class y extends l.EventEmitter {
       else if ("string" == typeof t) n = JSON.parse(t);
       else throw Error()
     } catch (t) {
-      e.close(S.RPCCloseCodes.CLOSE_UNSUPPORTED, "Payload not ".concat(e.encoding));
+      e.close(m.RPCCloseCodes.CLOSE_UNSUPPORTED, "Payload not ".concat(e.encoding));
       return
-    }(c.default.isLoggingOverlayEvents || n.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Message: ".concat(e.id), (0, h.default)(n)), this.emit("request", e, n)
+    }(c.default.isLoggingOverlayEvents || n.cmd !== m.RPCCommands.OVERLAY) && A.info("Socket Message: ".concat(e.id), (0, h.default)(n)), this.emit("request", e, n)
   }
   constructor() {
     var e;

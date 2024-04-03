@@ -39,7 +39,7 @@ function C(e) {
   }), d = null != s ? s : u;
   if (null == d || !f.GAME_CONSOLE_SESSIONS.has(d)) return null;
   let C = null != n,
-    m = C ? d === f.GameConsoleTypes.XBOX ? E.default.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.default.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === f.GameConsoleTypes.XBOX ? E.default.Messages.XBOX_REMOTE_CONNECTED.format() : E.default.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
+    S = C ? d === f.GameConsoleTypes.XBOX ? E.default.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.default.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === f.GameConsoleTypes.XBOX ? E.default.Messages.XBOX_REMOTE_CONNECTED.format() : E.default.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
   return (0, a.jsxs)("div", {
     className: l()(h.root, C ? h.connecting : h.connected),
     children: [(0, a.jsx)(_, {
@@ -47,7 +47,7 @@ function C(e) {
     }), (0, a.jsx)(r.Text, {
       color: C ? "header-primary" : "always-white",
       variant: "text-xs/medium",
-      children: m
+      children: S
     })]
   })
 }

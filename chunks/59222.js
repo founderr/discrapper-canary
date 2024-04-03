@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("900849"),
   _ = n("119317"),
   C = n("749436"),
-  m = n("650394"),
-  S = n("731455"),
+  S = n("650394"),
+  m = n("731455"),
   I = n("689938"),
   p = n("274845");
 let T = 12,
@@ -32,7 +32,7 @@ let T = 12,
       categoryId: t,
       categoryName: n,
       onClick: s
-    } = e, l = t === S.DISCOVERY_ALL_CATEGORIES_ID, i = l ? I.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : I.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
+    } = e, l = t === m.DISCOVERY_ALL_CATEGORIES_ID, i = l ? I.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : I.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
       categoryName: n
     }), r = l ? I.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : I.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
       onClick: s
@@ -88,7 +88,7 @@ t.default = e => {
     tag: B
   } = g(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
     d.doAlgoliaSearch(l, {
-      categoryId: n ? S.DISCOVERY_ALL_CATEGORIES_ID : M,
+      categoryId: n ? m.DISCOVERY_ALL_CATEGORIES_ID : M,
       preferredLocale: r.code,
       offset: e,
       length: t,
@@ -108,7 +108,7 @@ t.default = e => {
     } = g(), n = null != e ? Math.floor(parseInt(e, 10) / T) + 1 : 1;
     V(!!t), 1 === n && F(!0)
   }, [l]);
-  let z = M === S.DISCOVERY_ALL_CATEGORIES_ID ? I.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
+  let z = M === m.DISCOVERY_ALL_CATEGORIES_ID ? I.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
     query: l
   }) : I.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
@@ -149,7 +149,7 @@ t.default = e => {
       categoryId: M,
       categoryName: P,
       onClick: () => {
-        d.selectCategory(S.DISCOVERY_ALL_CATEGORIES_ID), W(0, T, !0)
+        d.selectCategory(m.DISCOVERY_ALL_CATEGORIES_ID), W(0, T, !0)
       }
     }) : (0, a.jsx)("div", {
       className: p.results,
@@ -166,7 +166,7 @@ t.default = e => {
           } = e;
           return (0, a.jsxs)("section", {
             "aria-labelledby": U,
-            children: [(0, a.jsx)(m.default, {
+            children: [(0, a.jsx)(S.default, {
               guilds: j,
               loading: G,
               loadingPlaceholderCount: T,

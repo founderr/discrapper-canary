@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
 var o, u, d, c, f, E, h = n("512722"),
   _ = n.n(h),
   C = n("442837"),
-  m = n("570140"),
-  S = n("904245"),
+  S = n("570140"),
+  m = n("904245"),
   I = n("911969"),
   p = n("603721"),
   T = n("70956");
@@ -24,7 +24,7 @@ c = "InteractionModalStore", (d = "displayName") in(u = g) ? Object.defineProper
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : u[d] = c, t.default = new g(m.default, {
+}) : u[d] = c, t.default = new g(S.default, {
   LOGOUT: function() {
     return a = null, s = null, l = null, i = null, r = null, !0
   },
@@ -32,13 +32,13 @@ c = "InteractionModalStore", (d = "displayName") in(u = g) ? Object.defineProper
     let {
       nonce: t
     } = e;
-    return t === r && (S.default.deleteMessage(i, l, !0), l = null, i = null, r = null), !1
+    return t === r && (m.default.deleteMessage(i, l, !0), l = null, i = null, r = null), !1
   },
   INTERACTION_IFRAME_MODAL_CREATE: function(e) {
     let {
       nonce: t
     } = e;
-    return t === r && (S.default.deleteMessage(i, l, !0), l = null, i = null, r = null), !1
+    return t === r && (m.default.deleteMessage(i, l, !0), l = null, i = null, r = null), !1
   },
   INTERACTION_QUEUE: function(e) {
     let {

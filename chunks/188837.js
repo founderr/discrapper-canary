@@ -18,8 +18,8 @@ t.default = e => {
     setPage: n,
     onClose: _
   } = e, C = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
-    selectedGames: m,
-    playstyle: S,
+    selectedGames: S,
+    playstyle: m,
     interests: I,
     description: p,
     tag: T,
@@ -122,8 +122,8 @@ t.default = e => {
       disabled: !O,
       onClick: () => {
         u.convertGuildToClan(t, {
-          selectedGames: m,
-          playstyle: S,
+          selectedGames: S,
+          playstyle: m,
           interests: I,
           description: p,
           tag: T,

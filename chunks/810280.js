@@ -35,8 +35,8 @@ function _(e) {
   if (null == _) return null;
   let {
     header: C,
-    body: m,
-    imgSrc: S,
+    body: S,
+    imgSrc: m,
     imgStyle: I
   } = h(_.drop, _.config.streamLengthRequirement), p = () => {
     t(c.ContentDismissActionType.DISMISS)
@@ -44,7 +44,7 @@ function _(e) {
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)("img", {
-      src: S,
+      src: m,
       alt: "",
       className: I
     }), (0, a.jsx)(l.Clickable, {
@@ -63,7 +63,7 @@ function _(e) {
     }), (0, a.jsx)(l.Text, {
       variant: "text-sm/medium",
       className: E.subTitle,
-      children: m
+      children: S
     }), _.config.autoEnrollment ? (0, a.jsx)(l.Button, {
       look: l.Button.Looks.INVERTED,
       fullWidth: !0,

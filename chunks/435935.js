@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Flex: function() {
-    return S
+    return m
   }
 });
 var a, s, l = n("735250"),
@@ -46,7 +46,7 @@ let f = {
     SMALL: d.flexGutterSmall,
     LARGE: d.flexGutterLarge
   };
-class m extends(a = i.PureComponent) {
+class S extends(a = i.PureComponent) {
   render() {
     let {
       children: e,
@@ -80,12 +80,12 @@ class m extends(a = i.PureComponent) {
     })
   }
 }
-c(m, "defaultProps", {
+c(S, "defaultProps", {
   className: d.flexChild,
   style: {},
   wrap: !1
 });
-class S extends(s = i.PureComponent) {
+class m extends(s = i.PureComponent) {
   render() {
     let {
       children: e,
@@ -114,7 +114,7 @@ class S extends(s = i.PureComponent) {
     })
   }
 }
-c(S, "Child", m), c(S, "Direction", f), c(S, "Align", _), c(S, "Justify", E), c(S, "Wrap", h), c(S, "Gutter", C), c(S, "defaultProps", {
+c(m, "Child", S), c(m, "Direction", f), c(m, "Align", _), c(m, "Justify", E), c(m, "Wrap", h), c(m, "Gutter", C), c(m, "defaultProps", {
   direction: f.HORIZONTAL,
   justify: E.START,
   align: _.STRETCH,
