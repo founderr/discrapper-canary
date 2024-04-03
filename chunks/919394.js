@@ -107,10 +107,11 @@ let u = (e, t) => ({
       avatarSrc: a,
       description: i,
       timestamp: r,
-      colors: o
-    } = e, c = n.extra.game_name, f = u(a, t);
+      colors: o,
+      channelId: c
+    } = e, f = n.extra.game_name, h = u(a, t);
     return await (0, s.generateImageFromCanvas)({
-      assetsToLoad: f,
+      assetsToLoad: h,
       drawImage: e => d(e, {
         timestamp: r,
         colors: o,
@@ -118,10 +119,11 @@ let u = (e, t) => ({
         entry: n
       }),
       exportConfigs: {
-        format: l.DiscordCanvasExporterOutputFormats.File,
+        format: l.DiscordCanvasExporterOutputFormats.CloudUpload,
         quality: 1,
-        fileName: "user-reacting-to-".concat(c, ".png").toLowerCase(),
-        fileType: "png"
+        fileName: "user-reacting-to-".concat(f, ".png").toLowerCase(),
+        fileType: "png",
+        channelId: c
       }
     })
   }
