@@ -29,8 +29,8 @@ async function I(e) {
     isGift: T,
     baseAnalyticsData: N,
     analyticsLocation: h,
-    analyticsLocations: v,
-    flowStartTime: x,
+    analyticsLocations: x,
+    flowStartTime: v,
     subscriptionPlan: A,
     planGroup: C,
     trialId: g,
@@ -46,15 +46,14 @@ async function I(e) {
     purchaseType: F,
     referralCode: U,
     loadId: w,
-    giftInfoOptions: B,
-    invoicePreview: k
+    giftInfoOptions: B
   } = e;
   t(p.PurchaseState.PURCHASING), n(!0), i(!0), a.default.wait(r.clearError), I(null);
   try {
     let e, n, i;
     if (d.default.track(S.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
         ...N,
-        duration_ms: Date.now() - x
+        duration_ms: Date.now() - v
       }), E) return;
     if (F === S.PurchaseTypes.ONE_TIME) s()(null != G, "SKU must exist and be fetched."), s()(null != D, "SKUPricePreview must exist."), e = await (0, o.purchaseSKU)(G.applicationId, G.id, {
       expectedAmount: D.amount,
@@ -65,21 +64,20 @@ async function I(e) {
       giftInfoOptions: B
     });
     else if (s()(null != A, "Missing subscriptionPlan"), T) {
-      var H, W;
       let t = (0, f.getPrice)(A.id, !1, !0, y);
       if ("usd" === t.currency && (null == M ? void 0 : M.type) === S.PaymentSourceTypes.GCASH) {
+        var k;
         let e = Error("Invalid USD currency for GCash");
         (0, m.captureBillingException)(e, {
           tags: {
-            paymentSourceId: null !== (H = null == M ? void 0 : M.id) && void 0 !== H ? H : "",
+            paymentSourceId: null !== (k = null == M ? void 0 : M.id) && void 0 !== k ? k : "",
             subscriptionPlanId: A.id,
             priceOptions: JSON.stringify(y)
           }
         })
       }
-      let n = null !== (W = null == k ? void 0 : k.total) && void 0 !== W ? W : t.amount;
       e = await (0, o.purchaseSKU)(_.PREMIUM_SUBSCRIPTION_APPLICATION, A.skuId, {
-        expectedAmount: n,
+        expectedAmount: t.amount,
         expectedCurrency: t.currency,
         paymentSource: M,
         subscriptionPlanId: A.id,
@@ -90,14 +88,14 @@ async function I(e) {
     } else if (b && null != R && null != M && null != O) e = S.PREPAID_PAYMENT_SOURCES.has(M.type) ? await (0, l.payInvoiceManually)(O, R, M, y.currency) : await (0, l.updateSubscription)(O, {
       paymentSource: M,
       currency: y.currency
-    }, v, h, w);
+    }, x, h, w);
     else if (null != O) {
       let t = (0, f.getItemsWithUpsertedPlanIdForGroup)(O, A.id, 1, new Set(C)),
         n = {
           paymentSource: M,
           currency: y.currency
         };
-      O.status === S.SubscriptionStatusTypes.PAUSED ? n.status = S.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, l.updateSubscription)(O, n, v, h, w)
+      O.status === S.SubscriptionStatusTypes.PAUSED ? n.status = S.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, l.updateSubscription)(O, n, x, h, w)
     } else e = await (0, u.subscribe)({
       planId: A.id,
       currency: y.currency,
@@ -118,7 +116,7 @@ async function I(e) {
       payment_error_code: null == e ? void 0 : e.code,
       payment_source_id: null == M ? void 0 : M.id,
       payment_source_type: null == M ? void 0 : M.type,
-      duration_ms: Date.now() - x
+      duration_ms: Date.now() - v
     })
   } finally {
     !E && i(!1)
