@@ -96,24 +96,26 @@ function p(e) {
     }), [t])),
     a = (0, u.useStateFromStoresObject)([_.default], () => _.default.getAllEventDismissals()),
     d = (0, u.useStateFromStoresObject)([_.default], () => _.default.getAllUpcomingNoticeSeenTimes()),
-    i = (0, u.useStateFromStoresObject)([E.default], () => null == l ? {} : l.reduce((e, t) => {
+    o = (0, u.useStateFromStoresObject)([E.default], () => null == l ? {} : l.reduce((e, t) => {
       let n = (0, S.getNextRecurrenceIdInEvent)(t);
       return {
         ...e,
         [t.id]: E.default.isInterestedInEventRecurrence(t.id, n)
       }
-    }, {}), [l]);
-  if (null != l && null != i)
+    }, {}), [l]),
+    c = (0, u.useStateFromStores)([i.default], () => i.default.getGuild(e)),
+    T = null != c && !c.hasFeature(v.GuildFeatures.COMMUNITY) && c.hasFeature(v.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
+  if (null != l && null != o && T)
     for (let e = 0; e < l.length; e++) {
       ;
       let t = l[e],
         u = a[t.id],
         s = d[t.id],
-        r = null !== (n = i[t.id]) && void 0 !== n && n,
-        o = (0, f.getNextShownUpcomingEventNoticeType)(t, u, s, r);
-      if (null != o) return {
+        i = null !== (n = o[t.id]) && void 0 !== n && n,
+        r = (0, f.getNextShownUpcomingEventNoticeType)(t, u, s, i);
+      if (null != r) return {
         upcomingEvent: t,
-        noticeType: o
+        noticeType: r
       }
     }
 }
