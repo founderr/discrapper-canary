@@ -14,8 +14,8 @@ var a = n("392711"),
   h = n("594174"),
   _ = n("979651"),
   C = n("996106"),
-  S = n("914946"),
-  m = n("238679"),
+  m = n("914946"),
+  S = n("238679"),
   I = n("452426"),
   p = n("295424"),
   T = n("863141"),
@@ -25,7 +25,7 @@ let N = e => (0, I.default)(e).required().keys({
   channel_id: e.string().required()
 });
 
-function v(e) {
+function R(e) {
   var t;
   let {
     args: {
@@ -33,19 +33,19 @@ function v(e) {
     },
     socket: a
   } = e, s = u.default.getChannel(n);
-  if (null == s || !(0, S.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new C.default({
+  if (null == s || !(0, m.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new C.default({
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid channel id: ".concat(n));
   if (s.isNSFW() && (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new C.default({
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid nsfw channel id: ".concat(s.id))
 }
-let R = e => (0, I.default)(e).keys({
+let O = e => (0, I.default)(e).keys({
   lobby_id: e.string().allow(null),
   channel_id: e.string().allow(null)
 });
 
-function O(e) {
+function v(e) {
   let {
     args: {
       lobby_id: t,
@@ -122,7 +122,7 @@ let L = {
             userId: t
           } = e;
           return t
-        }).forEach(e => a((0, S.transformVoiceState)(i, l.id, e))), r
+        }).forEach(e => a((0, m.transformVoiceState)(i, l.id, e))), r
       }
     }
   },
@@ -155,7 +155,7 @@ let L = {
             userId: t
           } = e;
           return t
-        }).forEach(e => a((0, S.transformVoiceState)(i, l.id, e))), r
+        }).forEach(e => a((0, m.transformVoiceState)(i, l.id, e))), r
       }
     }
   },
@@ -182,7 +182,7 @@ let L = {
         } = e, l = u.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
-          r = Object.values(_.default.getVoiceStatesForChannel(l.id)).map(e => (0, S.transformVoiceState)(i, l.id, e));
+          r = Object.values(_.default.getVoiceStatesForChannel(l.id)).map(e => (0, m.transformVoiceState)(i, l.id, e));
         return s().differenceWith(r, n, s().isEqual).forEach(e => a(e)), r
       }
     }
@@ -196,7 +196,7 @@ let L = {
         prevState: t,
         dispatch: n
       } = e, a = {
-        state: (0, S.getVoiceConnectionState)(E.default.getState()),
+        state: (0, m.getVoiceConnectionState)(E.default.getState()),
         hostname: E.default.getHostname(),
         pings: E.default.getPings(),
         average_ping: E.default.getAveragePing(),
@@ -208,31 +208,31 @@ let L = {
   [A.RPCEvents.MESSAGE_CREATE]: {
     scope: A.OAuth2Scopes.RPC,
     validation: N,
-    handler: v
+    handler: R
   },
   [A.RPCEvents.MESSAGE_UPDATE]: {
     scope: A.OAuth2Scopes.RPC,
     validation: N,
-    handler: v
+    handler: R
   },
   [A.RPCEvents.MESSAGE_DELETE]: {
     scope: A.OAuth2Scopes.RPC,
     validation: N,
-    handler: v
+    handler: R
   },
   [A.RPCEvents.SPEAKING_START]: {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [A.OAuth2Scopes.RPC, A.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
-    validation: R,
-    handler: O
+    validation: O,
+    handler: v
   },
   [A.RPCEvents.SPEAKING_STOP]: {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [A.OAuth2Scopes.RPC, A.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
-    validation: R,
-    handler: O
+    validation: O,
+    handler: v
   },
   [A.RPCEvents.GUILD_CREATE]: {
     scope: A.OAuth2Scopes.RPC,
@@ -290,7 +290,7 @@ let L = {
     },
     handler() {}
   },
-  [A.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: m.activityInstanceConnectedParticipantsUpdateEvent,
+  [A.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: S.activityInstanceConnectedParticipantsUpdateEvent,
   [A.RPCEvents.THERMAL_STATE_UPDATE]: {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_AUTHENTICATED_SCOPE]

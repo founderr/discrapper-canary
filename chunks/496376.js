@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("745628"),
   _ = n("950279"),
   C = n("796918"),
-  S = n("741595"),
-  m = n("884486"),
+  m = n("741595"),
+  S = n("884486"),
   I = n("974842"),
   p = n("308083"),
   T = n("689938"),
@@ -101,12 +101,12 @@ t.default = e => {
     setPage: n,
     onClose: l
   } = e, {
-    selectedGames: v,
-    playstyle: R,
-    interests: O,
+    selectedGames: R,
+    playstyle: O,
+    interests: v,
     description: L,
-    tag: P,
-    primetime: M,
+    tag: M,
+    primetime: P,
     currentStep: y
   } = (0, r.useStateFromStoresObject)([f.default], () => {
     var e;
@@ -150,17 +150,17 @@ t.default = e => {
               case p.ClanSetupSteps.GAMES:
                 return (0, a.jsx)(_.default, {
                   handleUpdate: j,
-                  selectedGames: v
+                  selectedGames: R
                 });
               case p.ClanSetupSteps.PLAYSTYLE:
-                return (0, a.jsx)(S.default, {
+                return (0, a.jsx)(m.default, {
                   handleUpdate: j,
-                  playstyle: R
+                  playstyle: O
                 });
               case p.ClanSetupSteps.INTERESTS:
                 return (0, a.jsx)(C.default, {
                   handleUpdate: j,
-                  interests: O
+                  interests: v
                 });
               case p.ClanSetupSteps.DESCRIPTION:
                 return (0, a.jsx)(h.default, {
@@ -168,14 +168,14 @@ t.default = e => {
                   description: L
                 });
               case p.ClanSetupSteps.PRIMETIME:
-                return (0, a.jsx)(m.default, {
+                return (0, a.jsx)(S.default, {
                   handleUpdate: j,
-                  selectedTimes: M
+                  selectedTimes: P
                 });
               case p.ClanSetupSteps.CUSTOMIZE:
                 return (0, a.jsx)(I.default, {
                   handleUpdate: j,
-                  tag: P
+                  tag: M
                 })
             }
           })()
@@ -183,12 +183,12 @@ t.default = e => {
       }), (0, a.jsx)(N, {
         currentStep: y,
         setCurrentStep: U,
-        selectedGames: v,
-        playstyle: R,
-        interests: O,
+        selectedGames: R,
+        playstyle: O,
+        interests: v,
         description: L,
-        primetime: M,
-        tag: P,
+        primetime: P,
+        tag: M,
         onLastStep: G
       })]
     }), (0, a.jsx)("div", {

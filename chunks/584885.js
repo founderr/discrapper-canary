@@ -27,30 +27,30 @@ t.default = e => {
   let t, {
     title: n,
     subtitle: C,
-    guildsData: S,
-    analyticsContext: m,
+    guildsData: m,
+    analyticsContext: S,
     theme: I,
     onViewGuild: p,
     fetchGuilds: T,
     onGuildCardSeen: g,
     currentCategoryId: A,
     loadId: N,
-    onTagClick: v,
-    showMoreCards: R = !1
+    onTagClick: R,
+    showMoreCards: O = !1
   } = e;
   s.useEffect(() => {
     i.default.wait(() => T())
   }, [A]);
-  let O = (0, c.default)(R ? _ : h),
+  let v = (0, c.default)(O ? _ : h),
     {
       analyticsLocations: L
     } = (0, r.default)();
-  if (null == S) return null;
+  if (null == m) return null;
   let {
-    guilds: P,
-    loading: M
-  } = S, y = null == P || 0 === P.length;
-  if (!M && y) return null;
+    guilds: M,
+    loading: P
+  } = m, y = null == M || 0 === M.length;
+  if (!P && y) return null;
   let D = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
@@ -63,21 +63,21 @@ t.default = e => {
       analyticsLocations: L
     });
     else {
-      let t = P.findIndex(t => t.id === e);
-      await p(e, t, m, N)
+      let t = M.findIndex(t => t.id === e);
+      await p(e, t, S, N)
     }
   };
-  if (M || null == P) {
+  if (P || null == M) {
     let e = [];
-    for (let t = 0; t < O; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
+    for (let t = 0; t < v; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = P.slice(0, O).map(e => (0, a.jsx)(d.default, {
+  } else t = M.slice(0, v).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
     onView: D,
     theme: I,
     onGuildCardSeen: g,
-    onTagClick: v
+    onTagClick: R
   }, e.id));
   return (0, a.jsx)("section", {
     className: E.guildListSection,

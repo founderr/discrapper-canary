@@ -8,29 +8,29 @@ var i, r, o, u, d = n("392711"),
   h = n("308063"),
   _ = n("388610"),
   C = n("430824"),
-  S = n("496675"),
-  m = n("855674"),
+  m = n("496675"),
+  S = n("855674"),
   I = n("981631");
 let p = [],
   T = null,
   g = !1,
   A = I.FormStates.CLOSED,
   N = {},
-  v = !1,
-  R = null;
+  R = !1,
+  O = null;
 
-function O() {
-  if (a = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, p = null != s && null != a && S.default.can(I.Permissions.MANAGE_WEBHOOKS, s) ? m.default.getWebhooksForChannel(a.id, s.id) : [], null != T) {
-    let e = P(T.id);
+function v() {
+  if (a = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, p = null != s && null != a && m.default.can(I.Permissions.MANAGE_WEBHOOKS, s) ? S.default.getWebhooksForChannel(a.id, s.id) : [], null != T) {
+    let e = M(T.id);
     null != e && (T = e)
   }
-  A = I.FormStates.OPEN, N = {}, v = !1
+  A = I.FormStates.OPEN, N = {}, R = !1
 }
 let L = c().debounce(() => {
-  v && ((null == T || c().isEqual(T, P(T.id))) && (v = !1), !v && y.emitChange())
+  R && ((null == T || c().isEqual(T, M(T.id))) && (R = !1), !R && y.emitChange())
 }, 500);
 
-function P(e) {
+function M(e) {
   return p.find(t => {
     let {
       id: n
@@ -38,12 +38,12 @@ function P(e) {
     return n === e
   })
 }
-class M extends(i = f.default.Store) {
+class P extends(i = f.default.Store) {
   initialize() {
-    this.waitFor(_.default, C.default, m.default, S.default)
+    this.waitFor(_.default, C.default, S.default, m.default)
   }
   hasChanges() {
-    return v
+    return R
   }
   get webhooks() {
     return p
@@ -55,7 +55,7 @@ class M extends(i = f.default.Store) {
     return A
   }
   getWebhook(e) {
-    return P(e)
+    return M(e)
   }
   showNotice() {
     return this.hasChanges()
@@ -66,22 +66,22 @@ class M extends(i = f.default.Store) {
       webhooks: p,
       editedWebhook: T,
       section: l,
-      sectionId: R,
+      sectionId: O,
       hasChanges: this.hasChanges(),
       isFetching: g,
       errors: N
     }
   }
 }
-u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = M) ? Object.defineProperty(r, o, {
+u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = P) ? Object.defineProperty(r, o, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[o] = u;
-let y = new M(E.default, __OVERLAY__ ? {} : {
-  INTEGRATION_SETTINGS_INIT: O,
-  INTEGRATION_SETTINGS_SAVE_SUCCESS: O,
+let y = new P(E.default, __OVERLAY__ ? {} : {
+  INTEGRATION_SETTINGS_INIT: v,
+  INTEGRATION_SETTINGS_SAVE_SUCCESS: v,
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
     let {
       section: t
@@ -90,7 +90,7 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
     if (l = I.IntegrationSettingsSections.OVERVIEW, null == a) {
       let e = _.default.getChannel(),
         t = null == e ? void 0 : e.getGuildId();
-      null != e && null != t && (h.default.fetchForChannel(t, e.id), g = !0), O()
+      null != e && null != t && (h.default.fetchForChannel(t, e.id), g = !0), v()
     }
   },
   INTEGRATION_SETTINGS_SET_SECTION: function(e) {
@@ -98,17 +98,17 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
       section: t,
       sectionId: n
     } = e;
-    l = t, R = n
+    l = t, O = n
   },
   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
     let {
       webhookId: t
-    } = e, n = P(t);
+    } = e, n = M(t);
     if (null == n) return !1;
-    T = n, N = {}, v = !1
+    T = n, N = {}, R = !1
   },
   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function() {
-    T = null, N = {}, v = !1
+    T = null, N = {}, R = !1
   },
   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function(e) {
     let {
@@ -117,7 +117,7 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
     if (null == T) return !1;
     T = {
       ...T
-    }, null != t.name && T.name !== t.name && (T.name = t.name, v = !0), void 0 !== t.avatar && T.avatar !== t.avatar && (T.avatar = t.avatar, v = !0), null != t.channelId && T.channel_id !== t.channelId && (T.channel_id = t.channelId, v = !0), v && L()
+    }, null != t.name && T.name !== t.name && (T.name = t.name, R = !0), void 0 !== t.avatar && T.avatar !== t.avatar && (T.avatar = t.avatar, R = !0), null != t.channelId && T.channel_id !== t.channelId && (T.channel_id = t.channelId, R = !0), R && L()
   },
   CHANNEL_SETTINGS_CLOSE: function() {
     s = null, a = null, p = [], T = null, A = I.FormStates.CLOSED
@@ -144,7 +144,7 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
           ...t,
           ...a
         };
-        p[e] = n, !v && (null == T ? void 0 : T.id) === n.id && (T = n)
+        p[e] = n, !R && (null == T ? void 0 : T.id) === n.id && (T = n)
       } else(null == T ? void 0 : T.id) === t.id && (T = null), p.splice(e, 1)
     }
     for (let e of l) null == p.find(t => {

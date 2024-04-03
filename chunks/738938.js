@@ -10,26 +10,26 @@ var s, l, i, r, o = n("392711"),
   h = n("314897"),
   _ = n("157305"),
   C = n("131951"),
-  S = n("981631");
-let m = {};
+  m = n("981631");
+let S = {};
 
 function I() {
-  u().forEach(m, (e, t) => {
-    e.destroy(), delete m[t]
+  u().forEach(S, (e, t) => {
+    e.destroy(), delete S[t]
   })
 }
 
 function p(e, t, n) {
-  let a = m[e];
+  let a = S[e];
   return null != a ? t(a) : n
 }
 
 function T(e) {
   let {
     lobbyId: t
-  } = e, n = m[t];
+  } = e, n = S[t];
   if (null == n) return !1;
-  n.destroy(), delete m[t]
+  n.destroy(), delete S[t]
 }
 
 function g() {
@@ -37,22 +37,22 @@ function g() {
 }
 class A extends(s = d.default.Store) {
   forEach(e) {
-    u().each(m, e)
+    u().each(S, e)
   }
   getState(e) {
-    return p(e, e => e.state, S.RTCConnectionStates.DISCONNECTED)
+    return p(e, e => e.state, m.RTCConnectionStates.DISCONNECTED)
   }
   isConnected(e) {
-    return this.getState(e) === S.RTCConnectionStates.RTC_CONNECTED
+    return this.getState(e) === m.RTCConnectionStates.RTC_CONNECTED
   }
   isDisconnected(e) {
-    return this.getState(e) === S.RTCConnectionStates.DISCONNECTED
+    return this.getState(e) === m.RTCConnectionStates.DISCONNECTED
   }
   getHostname(e) {
     return p(e, e => e.hostname, null)
   }
   getQuality(e) {
-    return p(e, e => e.quality, S.RTCConnectionQuality.UNKNOWN)
+    return p(e, e => e.quality, m.RTCConnectionQuality.UNKNOWN)
   }
   getPings(e) {
     return p(e, e => e.getPings(), [])
@@ -92,12 +92,12 @@ r = "RTCConnectionStore", (i = "displayName") in(l = A) ? Object.defineProperty(
   RTC_CONNECTION_PING: g,
   RTC_CONNECTION_LOSS_RATE: g,
   RTC_CONNECTION_UPDATE_ID: function(e) {
-    return u().some(m, t => t === e.connection)
+    return u().some(S, t => t === e.connection)
   },
   LOBBY_VOICE_STATE_UPDATE: function(e) {
     if (h.default.getId() !== e.userId || e.sessionId !== a) return !1;
-    let t = m[e.lobbyId];
-    null != t && null == e.channelId ? (t.destroy(), delete m[e.lobbyId]) : null != t ? t.channelId = e.channelId : null != e.channelId && (t = function(e, t) {
+    let t = S[e.lobbyId];
+    null != t && null == e.channelId ? (t.destroy(), delete S[e.lobbyId]) : null != t ? t.channelId = e.channelId : null != e.channelId && (t = function(e, t) {
       if (null == a) throw Error("Creating RTCConnection without session.");
       let n = _.default.getLobby(e);
       if (null == n) throw Error("Creating RTCConnection without lobby.");
@@ -131,10 +131,10 @@ r = "RTCConnectionStore", (i = "displayName") in(l = A) ? Object.defineProperty(
           lobbyId: e
         })
       }), l
-    }(e.lobbyId, e.channelId), m[e.lobbyId] = t)
+    }(e.lobbyId, e.channelId), S[e.lobbyId] = t)
   },
   LOBBY_VOICE_SERVER_UPDATE: function(e) {
-    let t = m[e.lobbyId];
+    let t = S[e.lobbyId];
     if (null == t) return !1;
     t.connect(e.endpoint, e.token)
   },

@@ -18,8 +18,8 @@ t.default = e => {
     setPage: n,
     onClose: _
   } = e, C = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
-    selectedGames: S,
-    playstyle: m,
+    selectedGames: m,
+    playstyle: S,
     interests: I,
     description: p,
     tag: T,
@@ -27,7 +27,7 @@ t.default = e => {
   } = (0, i.useStateFromStoresObject)([d.default], () => {
     var e;
     return null !== (e = d.default.getState(t)) && void 0 !== e ? e : {}
-  }), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), [R, O] = s.useState(!1), L = (0, l.useSpring)({
+  }), A = s.useRef(null), N = s.useRef(null), R = s.useRef(null), [O, v] = s.useState(!1), L = (0, l.useSpring)({
     ref: A,
     config: l.config.slow,
     from: {
@@ -38,7 +38,7 @@ t.default = e => {
       flex: 1,
       paddingLeft: 120
     }
-  }), P = (0, l.useSpring)({
+  }), M = (0, l.useSpring)({
     ref: N,
     config: l.config.slow,
     from: {
@@ -51,8 +51,8 @@ t.default = e => {
       paddingRight: 120,
       marginLeft: -32
     }
-  }), M = (0, l.useSpring)({
-    ref: v,
+  }), P = (0, l.useSpring)({
+    ref: R,
     config: l.config.default,
     from: {
       opacity: 0
@@ -61,13 +61,13 @@ t.default = e => {
       opacity: 1
     }
   });
-  return (0, l.useChain)([A, N, v], [0, 0, 1]), (0, a.jsxs)("div", {
+  return (0, l.useChain)([A, N, R], [0, 0, 1]), (0, a.jsxs)("div", {
     className: h.animationContainer,
     children: [(0, a.jsxs)(l.animated.div, {
       className: h.signTextLeft,
       style: {
         ...L,
-        ...M
+        ...P
       },
       children: [(0, a.jsx)(r.Heading, {
         variant: "heading-xxl/medium",
@@ -81,19 +81,19 @@ t.default = e => {
       className: h.scrollContainer,
       children: (0, a.jsx)(c.default, {
         guildId: t,
-        signed: R,
-        setSigned: O
+        signed: O,
+        setSigned: v
       })
     }), (0, a.jsxs)(l.animated.div, {
       className: h.signTextRight,
       style: {
-        ...P,
-        ...M
+        ...M,
+        ...P
       },
       children: [(0, a.jsx)(r.Button, {
         className: h.signButton,
         size: r.Button.Sizes.SMALL,
-        onClick: () => O(!0),
+        onClick: () => v(!0),
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, a.jsx)(r.Text, {
         variant: "text-xs/normal",
@@ -119,11 +119,11 @@ t.default = e => {
       look: r.Button.Looks.FILLED,
       size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.BRAND,
-      disabled: !R,
+      disabled: !O,
       onClick: () => {
         u.convertGuildToClan(t, {
-          selectedGames: S,
-          playstyle: m,
+          selectedGames: m,
+          playstyle: S,
           interests: I,
           description: p,
           tag: T,

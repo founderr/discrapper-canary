@@ -17,20 +17,20 @@ var a, s = n("735250"),
   h = n("239091"),
   _ = n("287259"),
   C = n("404133"),
-  S = n("785547"),
-  m = n("490983"),
+  m = n("785547"),
+  S = n("490983"),
   I = n("799777"),
   p = n("285952"),
   T = n("366695"),
   g = n("366966"),
   A = n("151011"),
   N = n("880008"),
-  v = n("466111"),
-  R = n("931003"),
-  O = n("626135"),
+  R = n("466111"),
+  O = n("931003"),
+  v = n("626135"),
   L = n("780570"),
-  P = n("624138"),
-  M = n("645818"),
+  M = n("624138"),
+  P = n("645818"),
   y = n("981631"),
   D = n("689938"),
   x = n("373438");
@@ -43,8 +43,8 @@ function b(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
-  j = (0, P.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
+  j = (0, M.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
   G = Object.freeze({
     [y.GameTableListKeys.PLATFORM]: "Platform",
     [y.GameTableListKeys.LAST_PLAYED]: "Last Played",
@@ -86,7 +86,7 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
           children: e.libraryApplication.getBranchedName(e.application)
         }), e.libraryApplication.hasFlag(y.LibraryApplicationFlags.PREMIUM) ? (0, s.jsx)(f.Tooltip, {
           text: D.default.Messages.PREMIUM_GAME,
-          children: e => (0, s.jsx)(v.default, {
+          children: e => (0, s.jsx)(R.default, {
             className: x.nitroIcon,
             ...e
           })
@@ -144,15 +144,15 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
           }), (0, s.jsx)(w, {
             flag: y.LibraryApplicationFlags.OVERLAY_DISABLED,
             item: e,
-            icon: R.default,
+            icon: O.default,
             tooltip: D.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
-          }), (0, s.jsx)(M.default, {
+          }), (0, s.jsx)(P.default, {
             className: r()(x.settingIcon, {
               [x.hidden]: !e.supportsCloudSync
             }),
             libraryApplication: e.libraryApplication
           })]
-        }), (0, L.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(S.default, {
+        }), (0, L.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(m.default, {
           analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(G[a], " ").concat(i === y.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
           analyticsListIndex: n,
           source: y.AnalyticsLocations.APPLICATION_LIBRARY,
@@ -272,7 +272,7 @@ class B extends(a = l.PureComponent) {
       }
       e.num_applications_total++
     }
-    O.default.track(y.AnalyticEvents.LIBRARY_VIEWED, {
+    v.default.track(y.AnalyticEvents.LIBRARY_VIEWED, {
       ...e,
       load_id: t.loadId
     })
@@ -396,16 +396,16 @@ class B extends(a = l.PureComponent) {
 }
 
 function H(e) {
-  let t = l.useContext(O.AnalyticsContext),
+  let t = l.useContext(v.AnalyticsContext),
     n = (0, o.useLocation)(),
     {
       applicationViewItems: a,
       filterQuery: i,
       fetched: r
-    } = (0, u.useStateFromStoresObject)([m.default], () => ({
-      applicationViewItems: m.default.sortedFilteredLibraryApplicationViewItems,
-      filterQuery: m.default.applicationFilterQuery,
-      fetched: m.default.hasFetchedApplications
+    } = (0, u.useStateFromStoresObject)([S.default], () => ({
+      applicationViewItems: S.default.sortedFilteredLibraryApplicationViewItems,
+      filterQuery: S.default.applicationFilterQuery,
+      fetched: S.default.hasFetchedApplications
     })),
     {
       sortKey: d,

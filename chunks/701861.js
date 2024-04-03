@@ -14,17 +14,17 @@ var a = n("735250"),
   h = n("131951"),
   _ = n("974029"),
   C = n("621113"),
-  S = n("51144"),
-  m = n("321488"),
+  m = n("51144"),
+  S = n("321488"),
   I = n("417183"),
   p = n("825682"),
   T = n("170245"),
   g = n("981631"),
   A = n("65154"),
   N = n("689938"),
-  v = n("432182");
+  R = n("432182");
 
-function R(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -33,7 +33,7 @@ function R(e, t, n) {
   }) : e[t] = n, e
 }
 
-function O(e) {
+function v(e) {
   let {
     user: t,
     onSelect: n
@@ -65,7 +65,7 @@ function O(e) {
       action: () => {
         (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
           header: N.default.Messages.REMOVE_FRIEND_TITLE.format({
-            name: S.default.getName(t)
+            name: m.default.getName(t)
           }),
           confirmText: N.default.Messages.REMOVE_FRIEND,
           cancelText: N.default.Messages.CANCEL,
@@ -74,7 +74,7 @@ function O(e) {
           children: (0, a.jsx)(o.Text, {
             variant: "text-md/normal",
             children: N.default.Messages.REMOVE_FRIEND_BODY.format({
-              name: S.default.getName(t)
+              name: m.default.getName(t)
             })
           })
         }))
@@ -109,7 +109,7 @@ class L extends s.PureComponent {
       onOtherHover: () => r ? null : (0, d.closeContextMenu)(),
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, a.jsxs)("div", {
-        className: v.listItemContents,
+        className: R.listItemContents,
         children: [(0, a.jsx)(T.default, {
           user: e,
           status: l,
@@ -124,13 +124,13 @@ class L extends s.PureComponent {
           hovered: t,
           showAccountIdentifier: !0
         }), (0, a.jsxs)("div", {
-          className: v.actions,
-          children: [(0, a.jsx)(m.default, {
+          className: R.actions,
+          children: [(0, a.jsx)(S.default, {
             icon: _.default,
             tooltip: N.default.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
-          }), (0, a.jsx)(m.default, {
+          }), (0, a.jsx)(S.default, {
             icon: C.default,
             tooltip: N.default.Messages.MORE,
             onClick: this.handleOpenActionsMenu,
@@ -141,20 +141,20 @@ class L extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), R(this, "peopleListItemRef", s.createRef()), R(this, "state", {
+    super(...e), O(this, "peopleListItemRef", s.createRef()), O(this, "state", {
       isActiveRow: !1
-    }), R(this, "handleOpenPrivateChannel", e => {
+    }), O(this, "handleOpenPrivateChannel", e => {
       let {
         user: t
       } = this.props;
       e.stopPropagation();
       let n = i().find(E.default.getMutablePrivateChannels(), e => e.type === g.ChannelTypes.DM && e.getRecipientId() === t.id);
       null != n ? (0, f.transitionTo)(g.Routes.CHANNEL(g.ME, n.id)) : u.default.openPrivateChannel(t.id)
-    }), R(this, "handleOpenActionsMenu", e => {
+    }), O(this, "handleOpenActionsMenu", e => {
       let {
         user: t
       } = this.props;
-      (0, d.openContextMenu)(e, e => (0, a.jsx)(O, {
+      (0, d.openContextMenu)(e, e => (0, a.jsx)(v, {
         ...e,
         user: t
       }), {

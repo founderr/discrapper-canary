@@ -15,32 +15,32 @@ var s = n("45792"),
   h = n("838195"),
   _ = n("928518"),
   C = n("592125"),
-  S = n("293273"),
-  m = n("885110"),
+  m = n("293273"),
+  S = n("885110"),
   I = n("451478"),
   p = n("630388"),
   T = n("823379"),
   g = n("591759"),
   A = n("228488"),
   N = n("996106"),
-  v = n("914946"),
-  R = n("452426"),
-  O = n("561205"),
+  R = n("914946"),
+  O = n("452426"),
+  v = n("561205"),
   L = n("600027"),
-  P = n("852926"),
-  M = n("186901"),
+  M = n("852926"),
+  P = n("186901"),
   y = n("981631");
 async function D(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-    l = S.default.getApplicationActivity(t);
-  if (null == l || null == l.secrets || !(0, v.validateActivityInvite)(a, l.party, l.secrets)) throw new N.default({
+    l = m.default.getApplicationActivity(t);
+  if (null == l || null == l.secrets || !(0, R.validateActivityInvite)(a, l.party, l.secrets)) throw new N.default({
     errorCode: y.RPCErrors.NO_ELIGIBLE_ACTIVITY
   }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
-  let o = (0, E.default)(l, m.default);
+  let o = (0, E.default)(l, S.default);
   if (o) {
     let {
       lock: t
-    } = (0, P.unlockOverlay)(e);
+    } = (0, M.unlockOverlay)(e);
     return (0, r.openModal)(l, o).then(() => {
       throw t(), new N.default({
         errorCode: y.RPCErrors.NO_ELIGIBLE_ACTIVITY
@@ -58,7 +58,7 @@ async function D(e, t, n, a) {
 t.default = {
   [y.RPCCommands.SEND_ACTIVITY_JOIN_INVITE]: {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
     handler(e) {
       let {
@@ -76,7 +76,7 @@ t.default = {
   },
   [y.RPCCommands.CLOSE_ACTIVITY_JOIN_REQUEST]: {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
     handler(e) {
       let {
@@ -89,9 +89,9 @@ t.default = {
   },
   [y.RPCCommands.ACTIVITY_INVITE_USER]: {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, R.default)(e).required().keys({
+    validation: e => (0, O.default)(e).required().keys({
       user_id: e.string().required(),
       type: e.number().required().valid([y.ActivityActionTypes.JOIN]),
       content: e.string().min(0).max(1024),
@@ -115,9 +115,9 @@ t.default = {
   },
   [y.RPCCommands.ACCEPT_ACTIVITY_INVITE]: {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, R.default)(e).required().keys({
+    validation: e => (0, O.default)(e).required().keys({
       type: e.number().required().valid([y.ActivityActionTypes.JOIN]),
       user_id: e.string().required(),
       session_id: e.string().required(),
@@ -155,7 +155,7 @@ t.default = {
   },
   [y.RPCCommands.OPEN_INVITE_DIALOG]: {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE, M.RPC_AUTHENTICATED_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE, P.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       let {
@@ -185,7 +185,7 @@ t.default = {
   },
   [y.RPCCommands.INITIATE_IMAGE_UPLOAD]: (0, s.createRPCCommand)(y.RPCCommands.INITIATE_IMAGE_UPLOAD, {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE, M.RPC_AUTHENTICATED_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE, P.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       var t;
@@ -195,7 +195,7 @@ t.default = {
       if (null == a) throw new N.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      let s = null === (t = (0, O.default)()) || void 0 === t ? void 0 : t.id;
+      let s = null === (t = (0, v.default)()) || void 0 === t ? void 0 : t.id;
       if (null == s) throw new N.default({
         errorCode: y.RPCErrors.UNKNOWN_ERROR
       }, "Unable to find selected channel");
@@ -235,7 +235,7 @@ t.default = {
   }),
   [y.RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: (0, s.createRPCCommand)(y.RPCCommands.OPEN_SHARE_MOMENT_DIALOG, {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [M.RPC_AUTHENTICATED_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [P.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       var t;
@@ -245,7 +245,7 @@ t.default = {
           mediaUrl: a
         }
       } = e;
-      (0, v.validatePostMessageTransport)(n.transport);
+      (0, R.validatePostMessageTransport)(n.transport);
       let s = n.application.id;
       if (null == s) throw new N.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
@@ -253,7 +253,7 @@ t.default = {
       if (!(0, p.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, y.ApplicationFlags.EMBEDDED)) throw new N.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
-      let l = (0, O.default)();
+      let l = (0, v.default)();
       if (null == l) throw new N.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No channel found");

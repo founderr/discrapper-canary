@@ -13,18 +13,18 @@ var a, s = n("735250"),
   h = n("206887"),
   _ = n("134432"),
   C = n("695346"),
-  S = n("768581"),
-  m = n("900849"),
+  m = n("768581"),
+  S = n("900849"),
   I = n("940627"),
   p = n("806519"),
   T = n("981631"),
   g = n("689938"),
   A = n("313618"),
   N = n("129512"),
-  v = n("330065"),
-  R = n("755386");
+  R = n("330065"),
+  O = n("755386");
 
-function O(e, t, n) {
+function v(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -34,12 +34,12 @@ function O(e, t, n) {
 }
 class L extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
-    if (t) return R;
+    if (t) return O;
     switch (e) {
       case T.ThemeTypes.DARK:
         return N;
       case T.ThemeTypes.LIGHT:
-        return v
+        return R
     }
   }
   render() {
@@ -53,18 +53,18 @@ class L extends(a = l.PureComponent) {
       loaded: i,
       hasBeenSeen: d,
       isVisible: N,
-      submitting: v
+      submitting: R
     } = this.state, {
-      name: R,
-      description: O,
+      name: O,
+      description: v,
       presenceCount: L,
-      memberCount: P,
-      keywords: M
-    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), D = S.default.getGuildDiscoverySplashURL({
+      memberCount: M,
+      keywords: P
+    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), D = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), x = null != D ? D : this.getDefaultSplashURL(a, y), b = S.default.getGuildIconURL({
+    }), x = null != D ? D : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -102,13 +102,13 @@ class L extends(a = l.PureComponent) {
             [A.loaded]: i,
             [A.loading]: !i
           }),
-          children: [v ? (0, s.jsx)(u.Spinner, {
+          children: [R ? (0, s.jsx)(u.Spinner, {
             type: u.Spinner.Type.PULSING_ELLIPSIS,
             className: A.spinner
           }) : null, (0, s.jsxs)(u.Clickable, {
             onClick: this.handleClickView,
             className: r()(A.card, {
-              [A.submitting]: v,
+              [A.submitting]: R,
               [A.cardWithTags]: U
             }),
             onContextMenu: this.handleContextMenu,
@@ -163,18 +163,18 @@ class L extends(a = l.PureComponent) {
                 }), (0, s.jsx)(u.Heading, {
                   variant: "heading-md/semibold",
                   className: A.guildName,
-                  children: R
+                  children: O
                 })]
               }), (0, s.jsx)(u.Text, {
                 className: A.description,
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: O
-              }), U && null != M && null != l && (0, s.jsx)(E.DiscoveryTags, {
-                tags: M,
+                children: v
+              }), U && null != P && null != l && (0, s.jsx)(E.DiscoveryTags, {
+                tags: P,
                 onTagClick: e => l(e, t.id),
                 guildId: t.id,
-                section: m.AnalyticsContexts.POPULAR
+                section: S.AnalyticsContexts.POPULAR
               }), (0, s.jsxs)("div", {
                 className: A.memberInfo,
                 children: [null != L && (0, s.jsxs)("div", {
@@ -188,7 +188,7 @@ class L extends(a = l.PureComponent) {
                       membersOnline: L
                     })
                   })]
-                }), null != P && (0, s.jsxs)("div", {
+                }), null != M && (0, s.jsxs)("div", {
                   className: A.memberCount,
                   children: [(0, s.jsx)("div", {
                     className: A.dotOffline
@@ -196,7 +196,7 @@ class L extends(a = l.PureComponent) {
                     variant: "text-xs/normal",
                     color: "header-secondary",
                     children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-                      count: P
+                      count: M
                     })
                   })]
                 })]
@@ -212,12 +212,12 @@ class L extends(a = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), O(this, "state", {
+    super(...e), v(this, "state", {
       loaded: !1,
       hasBeenSeen: !1,
       isVisible: !1,
       submitting: !1
-    }), O(this, "handleClickView", async e => {
+    }), v(this, "handleClickView", async e => {
       let {
         className: t
       } = e.target;
@@ -236,7 +236,7 @@ class L extends(a = l.PureComponent) {
           submitting: !1
         })
       }
-    }), O(this, "handleVisibilityChange", e => {
+    }), v(this, "handleVisibilityChange", e => {
       let {
         onGuildCardSeen: t,
         guild: n
@@ -244,7 +244,7 @@ class L extends(a = l.PureComponent) {
       null != n && !this.state.hasBeenSeen && e && (this.setState({
         hasBeenSeen: e
       }), null != t && t(n.id))
-    }), O(this, "handleContextMenu", e => {
+    }), v(this, "handleContextMenu", e => {
       (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -254,13 +254,13 @@ class L extends(a = l.PureComponent) {
           guild: this.props.guild
         })
       })
-    }), O(this, "setIsVisible", e => {
+    }), v(this, "setIsVisible", e => {
       this.setState({
         isVisible: e
       })
     })
   }
 }
-O(L, "Placeholder", e => (0, s.jsx)("div", {
+v(L, "Placeholder", e => (0, s.jsx)("div", {
   className: r()(e.className, A.cardPlaceholder)
 })), t.default = L

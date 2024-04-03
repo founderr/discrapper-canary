@@ -14,20 +14,20 @@ var a = n("913527"),
   h = n("592125"),
   _ = n("271383"),
   C = n("430824"),
-  S = n("131951"),
-  m = n("292959"),
+  m = n("131951"),
+  S = n("292959"),
   I = n("699516"),
   p = n("944486"),
   T = n("9156"),
   g = n("594174"),
   A = n("51144"),
   N = n("196051"),
-  v = n("441729"),
-  R = n("653477"),
-  O = n("981631"),
+  R = n("441729"),
+  O = n("653477"),
+  v = n("981631"),
   L = n("689938");
-let P = [],
-  M = null,
+let M = [],
+  P = null,
   y = null,
   D = null,
   x = /\|\|([\s\S]+?)\|\|/g;
@@ -73,7 +73,7 @@ function U() {
 }
 async function j(e, t, n, a, s) {
   let l = i.createUtterance(e, n);
-  null !== l && (null == y && U(), t ? await (0, N.stopSpeaking)() : null == M || M.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), M = l, i.speakUtterance(l, y))
+  null !== l && (null == y && U(), t ? await (0, N.stopSpeaking)() : null == P || P.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, y))
 }
 
 function G(e, t, n, a, s) {
@@ -94,7 +94,7 @@ function w(e) {
 }
 
 function k() {
-  return null !== M && M.removeEventListener("end", N.stopSpeaking), i.cancelAll(), M = null, !0
+  return null !== P && P.removeEventListener("end", N.stopSpeaking), i.cancelAll(), P = null, !0
 }
 
 function F(e) {
@@ -102,7 +102,7 @@ function F(e) {
   let {
     message: s,
     channel: l
-  } = e, i = s.type === O.MessageTypes.REPLY ? u.default.getMessageByReference(s.messageReference) : null, r = (null == i ? void 0 : i.state) === u.ReferencedMessageState.LOADED ? null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.author : null, o = null != r ? null !== (n = _.default.getNick(l.guild_id, null == r ? void 0 : r.id)) && void 0 !== n ? n : A.default.getName(r) : null, d = l.getGuildId(), c = null !== (a = _.default.getNick(d, s.author.id)) && void 0 !== a ? a : A.default.getName(s.author);
+  } = e, i = s.type === v.MessageTypes.REPLY ? u.default.getMessageByReference(s.messageReference) : null, r = (null == i ? void 0 : i.state) === u.ReferencedMessageState.LOADED ? null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.author : null, o = null != r ? null !== (n = _.default.getNick(l.guild_id, null == r ? void 0 : r.id)) && void 0 !== n ? n : A.default.getName(r) : null, d = l.getGuildId(), c = null !== (a = _.default.getNick(d, s.author.id)) && void 0 !== a ? a : A.default.getName(s.author);
   return G(b(s.content, c, d, o), !0, l.id, s.id), !0
 }
 
@@ -113,24 +113,24 @@ function B(e) {
     message: u,
     optimistic: d
   } = e;
-  if (d || S.default.isSelfDeaf()) return !1;
+  if (d || m.default.isSelfDeaf()) return !1;
   let C = h.default.getChannel(o);
   if (null == C) return !1;
   let g = p.default.getChannelId(),
     N = E.default.getCurrentSidebarChannelId(g),
-    v = o === g || o === N,
-    L = c.EnableTTSCommand.getSetting() && u.tts && v,
-    M = m.default.getTTSType(),
-    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (M === O.TTSNotificationTypes.ALL_CHANNELS || M === O.TTSNotificationTypes.SELECTED_CHANNEL && v);
+    R = o === g || o === N,
+    L = c.EnableTTSCommand.getSetting() && u.tts && R,
+    P = S.default.getTTSType(),
+    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === v.TTSNotificationTypes.ALL_CHANNELS || P === v.TTSNotificationTypes.SELECTED_CHANNEL && R);
   if ((L || y) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !I.default.isBlocked(u.author.id))) {
-    if (P.indexOf(u.id) >= 0) return !1;
-    P.unshift(u.id) > 10 && P.pop();
+    if (M.indexOf(u.id) >= 0) return !1;
+    M.unshift(u.id) > 10 && M.pop();
     let e = C.getGuildId();
     if (null != e && T.default.getMutedChannels(e).has(o)) return !1;
     let t = null !== (i = null !== (l = _.default.getNick(e, null === (a = u.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : A.default.getName(u.author)) && void 0 !== i ? i : "",
-      n = u.type === O.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
+      n = u.type === v.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
       d = null != n ? null !== (r = _.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : A.default.getName(n) : null;
-    G(b(u.content, t, e, d), !1, C.id, u.id, R.MAX_TTS_LENGTH)
+    G(b(u.content, t, e, d), !1, C.id, u.id, O.MAX_TTS_LENGTH)
   }
   return !1
 }
@@ -139,12 +139,12 @@ function H(e) {
   let {
     id: t,
     channelId: n
-  } = e, a = v.default.currentMessage;
+  } = e, a = R.default.currentMessage;
   return null != a && t === a.messageId && n === a.channelId && ((0, N.stopSpeaking)(), !0)
 }
 
 function V() {
-  S.default.isSelfDeaf() && i.cancelAll()
+  m.default.isSelfDeaf() && i.cancelAll()
 }
 t.default = {
   init() {

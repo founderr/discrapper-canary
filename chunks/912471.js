@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   initSessionHeartbeatScheduler: function() {
-    return R
+    return O
   }
 }), n("411104");
 var a = n("433517"),
@@ -18,8 +18,8 @@ var a = n("433517"),
   h = n("981631");
 let _ = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
   C = null,
-  S = null,
   m = null,
+  S = null,
   I = !1;
 async function p() {
   if (I) return;
@@ -34,7 +34,7 @@ async function p() {
     message: "Received invalid Date.now() when generating a heartbeat. Date.now() = ".concat(t, ", timeUntilNextHeartbeat = ").concat(n, ", latestHeartbeatEventTimestamp = ").concat(e)
   }), e > t && (n = 0), f.default.addBreadcrumb({
     message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(n / 1e3, " seconds. Scheduling Heartbeat")
-  }), T(!1), S = setTimeout(() => {
+  }), T(!1), m = setTimeout(() => {
     g(), C = setInterval(() => {
       g()
     }, 15 * d.default.Millis.MINUTE)
@@ -43,9 +43,9 @@ async function p() {
 
 function T() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  null != S && (clearTimeout(S), S = null), null != C && (clearInterval(C), C = null), null != m && e && (f.default.addBreadcrumb({
+  null != m && (clearTimeout(m), m = null), null != C && (clearInterval(C), C = null), null != S && e && (f.default.addBreadcrumb({
     message: "Heartbeat correctly scheduled. Clearing 10s check timeout"
-  }), clearTimeout(m), m = null)
+  }), clearTimeout(S), S = null)
 }
 async function g() {
   let e = Date.now(),
@@ -82,7 +82,7 @@ async function g() {
 let A = null,
   N = !0;
 
-function v() {
+function R() {
   if (N || null != A && A !== h.RTCConnectionStates.DISCONNECTED && A !== h.RTCConnectionStates.RTC_DISCONNECTED) try {
     p()
   } catch (e) {
@@ -92,31 +92,31 @@ function v() {
   }), (0, E.setSessionExtendingEnabled)(!1), T(), (0, l.drainClickstream)())
 }
 
-function R() {
+function O() {
   f.default.addBreadcrumb({
     message: "Initializing SessionHeartbeatScheduler"
-  }), o.default.addChangeListener(L), s.default.subscribe("WINDOW_FOCUS", P), s.default.subscribe("APP_STATE_UPDATE", M), s.default.subscribe("LOGIN_SUCCESS", O), v()
+  }), o.default.addChangeListener(L), s.default.subscribe("WINDOW_FOCUS", M), s.default.subscribe("APP_STATE_UPDATE", P), s.default.subscribe("LOGIN_SUCCESS", v), R()
 }
 
-function O() {
+function v() {
   g()
 }
 
 function L() {
   let e = o.default.getState();
-  A !== e && (A = e, v())
-}
-
-function P(e) {
-  let {
-    focused: t
-  } = e;
-  N = t, v()
+  A !== e && (A = e, R())
 }
 
 function M(e) {
   let {
+    focused: t
+  } = e;
+  N = t, R()
+}
+
+function P(e) {
+  let {
     state: t
   } = e;
-  N = t === h.AppStates.ACTIVE, v()
+  N = t === h.AppStates.ACTIVE, R()
 }

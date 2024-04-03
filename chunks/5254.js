@@ -10,8 +10,8 @@ var a, s, l, i, r = n("392711"),
   h = n("388380");
 let _ = {},
   C = 0,
-  S = !1,
   m = !1,
+  S = !1,
   I = new Set,
   p = new Set;
 
@@ -51,7 +51,7 @@ i = "FriendSuggestionStore", (l = "displayName") in(s = g) ? Object.defineProper
   writable: !0
 }) : s[l] = i, t.default = new g(d.default, {
   CONNECTION_OPEN: function(e) {
-    _ = {}, (C = e.friendSuggestionCount) > 0 && (m = !0, S || !m || (S = !0, m = !1, h.default.fetch()))
+    _ = {}, (C = e.friendSuggestionCount) > 0 && (S = !0, m || !S || (m = !0, S = !1, h.default.fetch()))
   },
   FRIEND_SUGGESTION_CREATE: function(e) {
     let t = T(e.suggestion);
@@ -65,14 +65,14 @@ i = "FriendSuggestionStore", (l = "displayName") in(s = g) ? Object.defineProper
     C = Math.max(0, --C), delete _[e.suggestedUserId]
   },
   LOAD_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
-    S = !1, _ = function(e) {
+    m = !1, _ = function(e) {
       let t = e.reduce((e, t) => e + (t.is_viewed ? 0 : 1), 0) === e.length,
         n = !(0, c.isInFriendSuggestionSeenStateExperiment)() || t;
       return o().chain(e).map(e => T(e, n)).keyBy(e => e.key).value()
     }(e.suggestions), C = o().keys(_).length
   },
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function() {
-    S = !1, _ = {}
+    m = !1, _ = {}
   },
   VIEWED_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
     e.userIds.forEach(e => {

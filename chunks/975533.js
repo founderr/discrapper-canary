@@ -14,16 +14,16 @@ var a = n("570140"),
   h = n("703656"),
   _ = n("641015"),
   C = n("183584"),
-  S = n("199902"),
-  m = n("131951"),
+  m = n("199902"),
+  S = n("131951"),
   I = n("246946"),
   p = n("808506"),
   T = n("237997"),
   g = n("626135"),
   A = n("554174"),
   N = n("981631"),
-  v = n("65154");
-let R = {
+  R = n("65154");
+let O = {
   [N.GlobalKeybindActions.TOGGLE_PRIORITY_SPEAKER]: {
     onTrigger() {},
     keyEvents: {}
@@ -34,7 +34,7 @@ let R = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK]: {
     onTrigger(e, t) {
-      m.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, m.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
+      S.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (O[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
     },
     keyEvents: {
       keyup: !0,
@@ -44,7 +44,7 @@ let R = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: {
     onTrigger(e) {
-      m.default.getMode() === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, m.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), v.MediaEngineContextTypes.DEFAULT))
+      S.default.getMode() === N.InputModes.PUSH_TO_TALK && (O[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), R.MediaEngineContextTypes.DEFAULT))
     },
     keyEvents: {
       keyup: !0,
@@ -54,7 +54,7 @@ let R = {
   },
   [N.GlobalKeybindActions.PUSH_TO_MUTE]: {
     onTrigger(e) {
-      if (m.default.getMode() === N.InputModes.VOICE_ACTIVITY) !m.default.isSelfDeaf() && (R[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
+      if (S.default.getMode() === N.InputModes.VOICE_ACTIVITY) !S.default.isSelfDeaf() && (O[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
     },
     keyEvents: {
       keyup: !0,
@@ -82,7 +82,7 @@ let R = {
   },
   [N.GlobalKeybindActions.TOGGLE_VOICE_MODE]: {
     onTrigger() {
-      let e = m.default.getMode() === N.InputModes.PUSH_TO_TALK ? N.InputModes.VOICE_ACTIVITY : N.InputModes.PUSH_TO_TALK;
+      let e = S.default.getMode() === N.InputModes.PUSH_TO_TALK ? N.InputModes.VOICE_ACTIVITY : N.InputModes.PUSH_TO_TALK;
       s.default.setMode(e)
     },
     keyEvents: {
@@ -123,7 +123,7 @@ let R = {
   },
   [N.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING]: {
     onTrigger() {
-      let e = S.default.getCurrentUserActiveStream();
+      let e = m.default.getCurrentUserActiveStream();
       if (null != e) return (0, r.stopStream)((0, f.encodeStreamKey)(e));
       (0, E.default)()
     },
@@ -221,13 +221,13 @@ let R = {
     }
   }
 };
-class O extends u.default {
+class v extends u.default {
   _initialize() {
     a.default.wait(() => a.default.dispatch({
       type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS",
-      keybinds: R
+      keybinds: O
     }))
   }
   _terminate() {}
 }
-t.default = new O
+t.default = new v

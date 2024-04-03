@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return O
   }
 });
 var a = n("735250"),
@@ -18,37 +18,37 @@ var a = n("735250"),
   h = n("626135"),
   _ = n("26373"),
   C = n("486622"),
-  S = n("922409"),
-  m = n("727813"),
+  m = n("922409"),
+  S = n("727813"),
   I = n("355350"),
   p = n("307947"),
   T = n("125855"),
   g = n("687683"),
   A = n("981631"),
   N = n("689938"),
-  v = n("569265");
+  R = n("569265");
 
-function R() {
+function O() {
   let e = s.useRef(null),
-    t = (0, m.default)(),
+    t = (0, S.default)(),
     n = (0, I.useSpamMessageRequestCount)(),
     l = (0, _.useListHasSingleSpamMessageRequest)(),
-    R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
-    O = (0, c.default)("message-requests-spam-list"),
+    O = (0, d.useIsRejectAllMessageRequestsEnabled)(),
+    v = (0, c.default)("message-requests-spam-list"),
     {
       channelId: L
-    } = (0, S.useMessageRequestSidebarState)(),
-    P = s.useCallback(() => {
+    } = (0, m.useMessageRequestSidebarState)(),
+    M = s.useCallback(() => {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: M
+      rejectAll: P
     } = (0, C.useMessageRequestActions)({
-      onError: P
+      onError: M
     }),
     y = s.useCallback(() => {
-      M(t.map(e => e.channel.id))
-    }, [t, M]);
+      P(t.map(e => e.channel.id))
+    }, [t, P]);
   s.useEffect(() => {
     h.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
@@ -64,8 +64,8 @@ function R() {
       return (0, a.jsx)(T.default, {
         index: r,
         className: i()({
-          [v.selected]: null != L && L === d,
-          [v.siblingSelected]: null != L && L === u
+          [R.selected]: null != L && L === d,
+          [R.siblingSelected]: null != L && L === u
         }),
         channel: o.channel,
         user: o.user,
@@ -73,12 +73,12 @@ function R() {
       }, d)
     }, [t, l, L]),
     x = s.useCallback(() => (0, a.jsxs)(E.default, {
-      className: v.sectionTitle,
+      className: R.sectionTitle,
       children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: n
-      }), R && n > 0 ? (0, a.jsxs)(a.Fragment, {
+      }), O && n > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.Text, {
-          className: v.titleDivider,
+          className: R.titleDivider,
           variant: "eyebrow",
           color: "header-secondary",
           tag: "span",
@@ -88,16 +88,16 @@ function R() {
           look: u.ButtonLooks.LINK,
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
-          className: v.clearAllButton,
+          className: R.clearAllButton,
           "aria-label": N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, y, R]);
+    }, "message-requests-spam-title"), [n, y, O]);
   return 0 === t.length ? (0, a.jsx)(p.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
-    navigator: O,
+    navigator: v,
     children: (0, a.jsx)(r.ListNavigatorContainer, {
       children: n => {
         let {
@@ -106,7 +106,7 @@ function R() {
           ...i
         } = n;
         return (0, a.jsx)(u.List, {
-          className: v.list,
+          className: R.list,
           innerRole: l,
           innerAriaLabel: N.default.Messages.MESSAGE_REQUESTS,
           ref: t => {

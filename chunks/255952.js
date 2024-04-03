@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("474376"),
   _ = n("695346"),
   C = n("293273"),
-  S = n("696202"),
-  m = n("881201"),
+  m = n("696202"),
+  S = n("881201"),
   I = n("626135"),
   p = n("51144"),
   T = n("981631"),
@@ -45,7 +45,7 @@ function N(e) {
   })
 }
 
-function v(e) {
+function R(e) {
   let {
     customStatus: t
   } = e, n = e => {
@@ -69,7 +69,7 @@ function v(e) {
           size: u.Button.Sizes.NONE,
           tabIndex: -1,
           "aria-hidden": !0,
-          children: (0, a.jsx)(S.default, {
+          children: (0, a.jsx)(m.default, {
             className: A.clearStatusIcon
           })
         })
@@ -87,14 +87,14 @@ function v(e) {
   })
 }
 
-function R(e) {
+function O(e) {
   let {
     focused: t
   } = e;
   return (0, a.jsxs)("div", {
     className: i()(A.statusItem, A.statusItemNoPadding, A.__invalid_customStatusContentIcon, A.switchAccountsItem),
     "aria-label": g.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-    children: [(0, a.jsx)(m.default, {
+    children: [(0, a.jsx)(S.default, {
       width: 18,
       height: 18,
       className: A.switchAccountsIcon,
@@ -105,7 +105,7 @@ function R(e) {
     })]
   })
 }
-let O = e => {
+let v = e => {
   let {
     customStatus: t,
     onClose: l,
@@ -187,7 +187,7 @@ let O = e => {
     }), (0, a.jsx)(u.MenuSeparator, {}), (0, a.jsx)(u.MenuItem, {
       id: "custom-status",
       keepItemStyles: !0,
-      render: () => (0, a.jsx)(v, {
+      render: () => (0, a.jsx)(R, {
         customStatus: t
       }),
       action: () => {
@@ -208,7 +208,7 @@ let O = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(R, {
+        return (0, a.jsx)(O, {
           focused: t
         })
       },
@@ -219,7 +219,7 @@ let O = e => {
 t.default = (0, d.default)(e => {
   let t = (0, r.useStateFromStores)([C.default], () => C.default.getCustomStatusActivity()),
     n = _.StatusSetting.useSetting();
-  return (0, a.jsx)(O, {
+  return (0, a.jsx)(v, {
     ...e,
     customStatus: t,
     status: n

@@ -15,20 +15,20 @@ var s = n("481060"),
   h = n("452426"),
   _ = n("736045"),
   C = n("186901"),
-  S = n("981631");
+  m = n("981631");
 t.default = {
-  [S.RPCCommands.TOGGLE_VIDEO]: {
+  [m.RPCCommands.TOGGLE_VIDEO]: {
     scope: {
-      [C.RPC_SCOPE_CONFIG.ALL]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_VIDEO_WRITE]
+      [C.RPC_SCOPE_CONFIG.ALL]: [m.OAuth2Scopes.RPC, m.OAuth2Scopes.RPC_VIDEO_WRITE]
     },
     handler() {
       let e = c.default.isVideoEnabled();
-      null != (0, _.default)() && (e ? l.default.setVideoEnabled(!1) : (0, u.default)(() => l.default.setVideoEnabled(!0), S.AppContext.APP))
+      null != (0, _.default)() && (e ? l.default.setVideoEnabled(!1) : (0, u.default)(() => l.default.setVideoEnabled(!0), m.AppContext.APP))
     }
   },
-  [S.RPCCommands.TOGGLE_SCREENSHARE]: {
+  [m.RPCCommands.TOGGLE_SCREENSHARE]: {
     scope: {
-      [C.RPC_SCOPE_CONFIG.ALL]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_SCREENSHARE_WRITE]
+      [C.RPC_SCOPE_CONFIG.ALL]: [m.OAuth2Scopes.RPC, m.OAuth2Scopes.RPC_SCREENSHARE_WRITE]
     },
     validation: e => (0, h.default)(e).optional().keys({
       pid: e.number().optional().min(0)
@@ -52,7 +52,7 @@ t.default = {
         return t => (0, a.jsx)(e, {
           ...t,
           guildId: h.guild_id,
-          analyticsLocation: S.AnalyticsLocations.ACTIVITY_RPC
+          analyticsLocation: m.AnalyticsLocations.ACTIVITY_RPC
         })
       }))
     }

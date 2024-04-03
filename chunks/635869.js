@@ -36,17 +36,17 @@ function h(e) {
     })
   }, 20), [n, l]);
   s.useEffect(() => (window.addEventListener("mousemove", _), () => window.removeEventListener("mousemove", _)), [_]);
-  let [C, S] = (0, u.useSpring)(() => ({
+  let [C, m] = (0, u.useSpring)(() => ({
     x: 0,
     y: 0,
     config: E
   }));
   return s.useEffect(() => {
-    S({
+    m({
       x: r.x,
       y: r.y
     })
-  }, [r.x, r.y, S]), (0, a.jsx)(u.animated.div, {
+  }, [r.x, r.y, m]), (0, a.jsx)(u.animated.div, {
     style: {
       transform: (0, u.to)([C.x, C.y], (e, t) => "translate3d(".concat(e, "px, ").concat(t, "px, 0)"))
     },

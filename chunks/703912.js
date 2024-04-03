@@ -18,16 +18,16 @@ var a = n("664751"),
   h = n("996106"),
   _ = n("186901"),
   C = n("981631");
-let S = "CachedTokens";
-async function m(e, t, n) {
+let m = "CachedTokens";
+async function S(e, t, n) {
   let a, {
     client_id: i,
     response_type: r = "code",
     redirect_uri: o,
     code_challenge: u,
     code_challenge_method: _,
-    state: S,
-    scope: m,
+    state: m,
+    scope: S,
     permissions: I,
     guild_id: p,
     channel_id: T,
@@ -41,19 +41,19 @@ async function m(e, t, n) {
   if (null != o) throw new h.default({
     errorCode: C.RPCErrors.OAUTH2_ERROR
   }, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
-  let v = [];
-  if ("string" == typeof m ? v = m.split(" ").filter(e => e.length > 0) : Array.isArray(m) && (v = m), null == f.default.getCurrentUser()) throw new h.default({
+  let R = [];
+  if ("string" == typeof S ? R = S.split(" ").filter(e => e.length > 0) : Array.isArray(S) && (R = S), null == f.default.getCurrentUser()) throw new h.default({
     errorCode: C.RPCErrors.OAUTH2_ERROR
   }, "Client is not logged in");
   try {
     a = await (0, d.fetchAuthorization)({
       clientId: i,
-      scopes: v,
+      scopes: R,
       responseType: r,
       redirectUri: o,
       codeChallenge: u,
       codeChallengeMethod: _,
-      state: S
+      state: m
     })
   } catch (t) {
     let {
@@ -67,12 +67,12 @@ async function m(e, t, n) {
     return (await (0, d.authorize)({
       authorize: !0,
       clientId: i,
-      scopes: v,
+      scopes: R,
       responseType: r,
       redirectUri: o,
       codeChallenge: u,
       codeChallengeMethod: _,
-      state: S,
+      state: m,
       integrationType: null == N ? s.ApplicationIntegrationType.GUILD_INSTALL : Number(N)
     })).location
   } catch (t) {
@@ -84,11 +84,11 @@ async function m(e, t, n) {
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
   null == n || n(a.application, T);
-  let R = E.NONE;
+  let O = E.NONE;
   try {
-    R = l.deserialize(null != I ? I : 0)
+    O = l.deserialize(null != I ? I : 0)
   } catch (e) {}
-  return t(i, a, v, R, r, o, u, _, S, p, T, g, A)
+  return t(i, a, R, O, r, o, u, _, m, p, T, g, A)
 }
 
 function I(e, t) {
@@ -152,7 +152,7 @@ function p(e, t) {
             errorCode: C.RPCErrors.INVALID_COMMAND
           }, "No application.");
           let i = C.OAuth2Scopes.IDENTIFY,
-            r = () => m({
+            r = () => S({
               client_id: n,
               scope: i,
               response_type: "token"
@@ -170,25 +170,25 @@ function p(e, t) {
               }
               return ! function(e, t, n, a) {
                 var s;
-                let l = null !== (s = o.Storage.get(S)) && void 0 !== s ? s : {};
+                let l = null !== (s = o.Storage.get(m)) && void 0 !== s ? s : {};
                 l[e] = {
                   accessToken: t,
                   scope: n,
                   expires: Date.now() + a
-                }, o.Storage.set(S, l)
+                }, o.Storage.set(m, l)
               }(n, l.access_token, l.scope, l.expires_in), I(s, l.access_token)
             });
           return null != (l = function(e, t) {
-            let n = o.Storage.get(S);
+            let n = o.Storage.get(m);
             if (null != n && null != n[e]) {
               let a = n[e];
               if (!(a.scope !== t || a.expires <= Date.now())) return a.accessToken;
-              delete n[e], o.Storage.set(S, n)
+              delete n[e], o.Storage.set(m, n)
             }
           }(n, i)) ? I(s, l).catch(() => (! function(e) {
             var t;
-            let n = null !== (t = o.Storage.get(S)) && void 0 !== t ? t : {};
-            delete n[e], o.Storage.set(S, n)
+            let n = null !== (t = o.Storage.get(m)) && void 0 !== t ? t : {};
+            delete n[e], o.Storage.set(m, n)
           }(n), r())) : r()
         }
         if (null == l) throw new h.default({
@@ -221,7 +221,7 @@ function p(e, t) {
             errorCode: C.RPCErrors.INVALID_CLIENTID
           }, "Application does not match the connection's");
           let i = l.scopes || l.scope;
-          return delete l.scopes, m({
+          return delete l.scopes, S({
             ...l,
             scope: i
           }, e, t)

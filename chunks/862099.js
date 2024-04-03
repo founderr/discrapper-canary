@@ -22,20 +22,20 @@ var a, s, l = n("735250"),
   h = n("565799"),
   _ = n("501655"),
   C = n("192079"),
-  S = n("427679"),
-  m = n("448206"),
+  m = n("427679"),
+  S = n("448206"),
   I = n("496675"),
   p = n("938475"),
   T = n("808602"),
   g = n("305878"),
   A = n("263704"),
   N = n("465670"),
-  v = n("242315"),
-  R = n("393112"),
-  O = n("170039"),
+  R = n("242315"),
+  O = n("393112"),
+  v = n("170039"),
   L = n("602623"),
-  P = n("626135"),
-  M = n("823379"),
+  M = n("626135"),
+  P = n("823379"),
   y = n("15274"),
   D = n("924301"),
   x = n("504160"),
@@ -159,7 +159,7 @@ function Z(e) {
     className: z.joinButton,
     innerClassName: z.rsvpButton,
     onClick: function() {
-      (0, V.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, x.hideUpcomingEventNotice)(t.id), 1e3)), P.default.track(W.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
+      (0, V.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, x.hideUpcomingEventNotice)(t.id), 1e3)), M.default.track(W.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
         guild_id: t.guild_id,
         notice_type: n
       })
@@ -191,13 +191,13 @@ function X(e) {
     startDateTimeString: h,
     upcomingEvent: _,
     diffMinutes: C
-  } = (0, H.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), S = _ ? C > 0 ? K.default.Messages.STARTING_IN_MINUTES.format({
+  } = (0, H.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), m = _ ? C > 0 ? K.default.Messages.STARTING_IN_MINUTES.format({
     minutes: C
   }) : K.default.Messages.STARTING_SOON : K.default.Messages.STARTING_ON_DATE.format({
     date: h
   });
   return i.useEffect(() => {
-    P.default.track(W.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+    M.default.track(W.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
       notice_type: a,
       guild_id: n.guild_id
     })
@@ -218,7 +218,7 @@ function X(e) {
         })
       }), (0, l.jsx)(o.Clickable, {
         onClick: () => {
-          P.default.track(W.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
+          M.default.track(W.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: a,
             guild_id: n.guild_id
           }), (0, x.hideUpcomingEventNotice)(n.id)
@@ -240,7 +240,7 @@ function X(e) {
         color: "header-secondary",
         variant: "text-xs/normal",
         className: z.startTime,
-        children: S
+        children: m
       })]
     }), (0, l.jsxs)("div", {
       className: z.textBlock,
@@ -248,7 +248,7 @@ function X(e) {
         width: 16,
         height: 16,
         className: z.stageIcon
-      }) : (0, l.jsx)(R.default, {
+      }) : (0, l.jsx)(O.default, {
         width: 16,
         height: 16,
         className: z.stageIcon
@@ -276,7 +276,7 @@ function J(e) {
     heading: K.default.Messages.HAPPENING_NOW,
     topic: t.name,
     location: (0, G.guildEventDetailsParser)(n, !0),
-    locationIcon: (0, l.jsx)(R.default, {
+    locationIcon: (0, l.jsx)(O.default, {
       width: 16,
       height: 16,
       className: z.stageIcon
@@ -336,12 +336,12 @@ function et(e) {
     heading: K.default.Messages.STAGE_CHANNEL_LIVE_NOW,
     location: n.name,
     details: i,
-    detailsIcon: (0, l.jsx)(v.default, {
+    detailsIcon: (0, l.jsx)(R.default, {
       width: 14,
       height: 14,
       className: z.stageIcon
     }),
-    locationIcon: (0, l.jsx)(O.default, {
+    locationIcon: (0, l.jsx)(v.default, {
       width: 16,
       height: 16,
       className: z.stageIcon
@@ -360,7 +360,7 @@ function en(e) {
     channel: t,
     speakers: n,
     voiceType: a
-  } = e, s = t.getGuildId(), u = i.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([I.default], () => I.default.can(W.Permissions.CONNECT, t)), c = (0, m.default)(t.id), f = K.default.Messages.JOIN;
+  } = e, s = t.getGuildId(), u = i.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([I.default], () => I.default.can(W.Permissions.CONNECT, t)), c = (0, S.default)(t.id), f = K.default.Messages.JOIN;
   switch (a) {
     case 1:
       f = K.default.Messages.JOIN;
@@ -372,7 +372,7 @@ function en(e) {
       f = K.default.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
       break;
     default:
-      (0, M.assertNever)(a)
+      (0, P.assertNever)(a)
   }
   return null == s ? null : (0, l.jsxs)(l.Fragment, {
     children: [u.length > 0 ? (0, l.jsxs)("div", {
@@ -405,7 +405,7 @@ function en(e) {
     location: "Guild Channel Notice"
   }, {
     autoTrackExposure: !1
-  }), u = (0, r.useStateFromStores)([S.default], () => S.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
+  }), u = (0, r.useStateFromStores)([m.default], () => m.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: f,
     isEventNoticeHidden: E
   } = (0, r.useStateFromStoresObject)([b.default], () => ({
