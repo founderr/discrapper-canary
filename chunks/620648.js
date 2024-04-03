@@ -73,6 +73,7 @@ function x(e) {
         textClassName: v.userInfoText
       }), g && (0, a.jsx)(p.default, {
         userId: s.id,
+        maxItems: 6,
         containerClassName: v.userInfoText,
         wrapChildren: e => (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(o.Heading, {
