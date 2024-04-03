@@ -87,11 +87,11 @@ function x(e) {
   l.useEffect(() => {
     L.current = !0
   }, [g, x]), l.useEffect(() => {
-    if (L.current && 0 !== G.length) {
+    if (L.current && 0 !== G.length && "REVIEW_APPLICATION" !== x) {
       var e;
       L.current = !1, d.default.setSelectedGuildJoinRequest(s, G[0]), null === (e = o.current) || void 0 === e || e.scrollToTop()
     }
-  }, [s, G, j]);
+  }, [s, G, j, x]);
   let D = l.useCallback(async e => {
       if ("REVIEW_APPLICATION" !== x) g !== e && (d.default.setSelectedSortOrder(s, e), await v(e, x))
     }, [x, g, s, v]),
