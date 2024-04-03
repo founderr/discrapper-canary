@@ -93,15 +93,21 @@ function g(e) {
     buttonLabel: t,
     secondaryLabel: n,
     handleClick: l,
-    className: a
+    isInteractive: a,
+    className: r
   } = e;
   return (0, s.jsxs)("div", {
-    className: i()(S.detailsText, a),
-    children: [(0, s.jsx)(h, {
+    className: i()(S.detailsText, r),
+    children: [a ? (0, s.jsx)(h, {
       onClick: l,
       variant: "text-sm/normal",
       color: "none",
-      className: S.detailsTextButton,
+      className: i()(S.detailsTextButton, S.interactive),
+      children: t
+    }) : (0, s.jsx)(u.Text, {
+      variant: "text-sm/normal",
+      color: "text-muted",
+      scaleFontToUserSetting: !0,
       children: t
     }), null != n && (0, s.jsx)(u.Text, {
       variant: "text-sm/normal",
@@ -117,24 +123,25 @@ function M(e) {
     action: t,
     channelId: n,
     messageId: a,
-    className: r
+    isInteractive: r,
+    className: o
   } = e, {
-    actionButtonRef: o,
-    manageFocusOnAction: d
-  } = (0, I.usePollFocusManager)(), c = l.useCallback(async () => {
+    actionButtonRef: d,
+    manageFocusOnAction: c
+  } = (0, I.usePollFocusManager)(), E = l.useCallback(async () => {
     (null == t ? void 0 : t.type) != null && (await f.default.handlePollActionTapped({
       channelId: n,
       messageId: a,
       type: t.type
-    }), d(t.type))
-  }, [null == t ? void 0 : t.type, n, a, d]);
+    }), c(t.type))
+  }, [null == t ? void 0 : t.type, n, a, c]);
   return null == t ? null : "button" === t.presentation || "secondaryButton" === t.presentation ? (0, s.jsx)(u.Button, {
-    buttonRef: o,
-    onClick: c,
+    buttonRef: d,
+    onClick: E,
     disabled: !t.enabled,
     color: "secondaryButton" === t.presentation ? u.Button.Colors.CUSTOM : u.Button.Colors.BRAND,
     size: u.Button.Sizes.SMALL,
-    className: i()(r, S.buttonPresentation, "secondaryButton" === t.presentation && S.secondaryButtonPresentation),
+    className: i()(o, S.buttonPresentation, "secondaryButton" === t.presentation && S.secondaryButtonPresentation),
     children: (0, s.jsx)(u.Text, {
       variant: "text-sm/medium",
       color: "none",
@@ -142,15 +149,16 @@ function M(e) {
       children: t.label
     })
   }, t.presentation) : "textButton" === t.presentation ? (0, s.jsx)(h, {
-    buttonRef: o,
-    onClick: c,
-    className: r,
+    buttonRef: d,
+    onClick: E,
+    className: o,
     children: t.label
   }) : (0, s.jsx)(g, {
     buttonLabel: t.label,
     secondaryLabel: t.secondaryLabel,
-    handleClick: c,
-    className: r
+    handleClick: E,
+    isInteractive: r,
+    className: o
   })
 }
 
@@ -181,7 +189,7 @@ function O(e) {
     children: (0, s.jsxs)(u.HeadingLevel, {
       children: [(0, s.jsxs)("div", {
         className: S.header,
-        children: [(0, s.jsx)(A, {
+        children: [n.isInteractive && (0, s.jsx)(A, {
           className: S.infoButton
         }), (0, s.jsx)(C, {
           media: n.question
@@ -198,7 +206,8 @@ function O(e) {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.secondaryAction,
-          className: S.secondaryAction
+          className: S.secondaryAction,
+          isInteractive: n.isInteractive
         }), (0, s.jsx)(M, {
           channelId: t.getChannelId(),
           messageId: t.id,

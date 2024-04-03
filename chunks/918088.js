@@ -94,15 +94,16 @@ function M(e, t) {
     I = !0;
   if (!g(e)) {
     let t = o.default.getMessage(e.channel_id, e.id);
-    I = null != t, T = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : T
+    I = !e.isSearchHit && null != t, T = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : T
   }
   let m = d.size > 0,
     S = T.some(e => !0 === e.me_vote),
     A = !E && S,
-    h = A || u || _;
+    h = A || u || _,
+    M = i && I && (!S || E || h);
   return {
     poll: a,
-    canTapAnswers: i && (!S || E || h),
+    canTapAnswers: M,
     canRemoveVote: A && i && !u,
     canShowVoteCounts: h,
     canSubmitVote: !c && m && !A && i,
@@ -339,6 +340,7 @@ function O(e, t) {
     }),
     containerStyle: "normal",
     primaryAction: J,
+    isInteractive: F,
     canTapAnswers: D,
     canSelectMultipleAnswers: $,
     hasSelectedAnswer: b,

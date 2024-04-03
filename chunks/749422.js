@@ -7,6 +7,7 @@ e.exports = {
   detailsTextButton: "detailsTextButton__26fd0",
   header: "header_f34306",
   infoButton: "infoButton__596d1",
+  interactive: "interactive__15e0f",
   prompt: "prompt__75afd",
   question: "question_e811cc",
   secondaryAction: "secondaryAction_ee4c30",
