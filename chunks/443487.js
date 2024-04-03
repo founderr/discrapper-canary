@@ -6,9 +6,6 @@ n.r(t), n.d(t, {
   CardInfoSection: function() {
     return m
   },
-  CardSubtitle: function() {
-    return C
-  },
   CardTitle: function() {
     return E
   },
@@ -84,18 +81,6 @@ function E(e) {
   } = e;
   return (0, a.jsx)(r.Heading, {
     variant: "heading-sm/normal",
-    className: f.contentDescription,
-    lineClamp: 1,
-    children: t
-  })
-}
-
-function C(e) {
-  let {
-    children: t
-  } = e;
-  return (0, a.jsx)(r.Text, {
-    variant: "text-sm/normal",
     className: f.contentDescription,
     lineClamp: 1,
     children: t

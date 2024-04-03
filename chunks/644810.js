@@ -26,12 +26,13 @@ let u = (e, t, n) => ({
       avatarSrc: d,
       description: c,
       timestamp: f,
-      colors: h
-    } = e, m = await a.default.openPrivateChannel(n.author_id, !1, !1), p = n.extra.media_title, E = u(d, t);
+      episodeDescription: h,
+      colors: m
+    } = e, p = await a.default.openPrivateChannel(n.author_id, !1, !1), E = n.extra.media_title, C = u(d, t);
     return await (0, i.generateImageFromCanvas)({
-      assetsToLoad: E,
+      assetsToLoad: C,
       drawImage: e => {
-        let t = h.map((e, t) => ({
+        let t = m.map((e, t) => ({
           color: e,
           stop: t
         }));
@@ -108,14 +109,20 @@ let u = (e, t, n) => ({
         }, !0, 1.1), e.drawPath(r.WATCH_ICON_PATH_BOTTOM, {
           x: r.descriptionIndent,
           y: r.attributionIconPosition + 1
-        }, !0, 1.1)
+        }, !0, 1.1), null != h && (e.drawPath(r.SCROLL_ICON_PATH, {
+          x: r.descriptionIndent + r.attributionSize,
+          y: r.attributionIconPosition
+        }, !0, .6), e.drawText(h, {
+          x: r.descriptionIndent + r.attributionSize + r.attributionSpacing,
+          y: r.attributionTextPosition
+        }, !0))
       },
       exportConfigs: {
         format: s.DiscordCanvasExporterOutputFormats.CloudUpload,
         quality: 1,
-        fileName: "user-reacting-to-".concat(p, ".png").toLowerCase(),
+        fileName: "user-reacting-to-".concat(E, ".png").toLowerCase(),
         fileType: "png",
-        channelId: m
+        channelId: p
       }
     })
   }

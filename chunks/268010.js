@@ -3,40 +3,41 @@ n.r(t), n("627494"), n("757143");
 var a = n("735250");
 n("470079");
 var l = n("442837"),
-  s = n("706454"),
-  i = n("5192"),
-  r = n("561308"),
-  o = n("69259"),
-  u = n("438226"),
-  d = n("644810"),
-  c = n("206295"),
-  f = n("335326"),
-  h = n("43205"),
-  m = n("591853"),
-  p = n("206583"),
-  E = n("689938"),
-  C = n("522791");
-let g = (e, t, n) => {
-    let a = E.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
-      l = i.default.getName(t.guild_id, t.id, n),
+  s = n("481060"),
+  i = n("706454"),
+  r = n("5192"),
+  o = n("561308"),
+  u = n("69259"),
+  d = n("438226"),
+  c = n("644810"),
+  f = n("206295"),
+  h = n("335326"),
+  m = n("43205"),
+  p = n("591853"),
+  E = n("206583"),
+  C = n("689938"),
+  g = n("522791");
+let S = (e, t, n) => {
+    let a = C.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
+      l = r.default.getName(t.guild_id, t.id, n),
       s = e.extra.media_title;
     return a.plainFormat({
       mediaTitle: s,
       userName: l,
-      episodeDescription: e.extra.media_assets_large_text
+      episodeDescription: e.extra.media_subtitle
     }).replaceAll("*", "")
   },
-  S = (e, t, n) => {
-    let a = E.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
-      l = i.default.getName(t.guild_id, t.id, n),
+  _ = (e, t, n) => {
+    let a = C.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
+      l = r.default.getName(t.guild_id, t.id, n),
       s = e.extra.media_title;
     return a.format({
       userName: l,
       mediaTitle: s,
-      episodeDescription: e.extra.media_assets_large_text
+      episodeDescription: e.extra.media_subtitle
     })
   },
-  _ = (e, t) => E.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+  T = (e, t) => C.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
     username: t.username,
     activity: e.extra.media_title
   });
@@ -44,62 +45,70 @@ t.default = e => {
   let {
     closePopout: t,
     channel: n,
-    entry: i,
-    requestId: E
+    entry: r,
+    requestId: C
   } = e, {
-    user: T,
-    mediaImageSrc: I
-  } = (0, f.useWatchContentData)(i), {
-    primaryColor: A,
-    secondaryColor: v
-  } = (0, c.default)(I), N = (0, l.useStateFromStores)([s.default], () => s.default.locale);
-  if (null == T) return null;
-  let x = async e => {
+    user: I,
+    mediaImageSrc: A,
+    episodeDescription: v
+  } = (0, h.useWatchContentData)(r), {
+    primaryColor: N,
+    secondaryColor: x
+  } = (0, f.default)(A), M = (0, l.useStateFromStores)([i.default], () => i.default.locale);
+  if (null == I) return null;
+  let R = async e => {
     try {
-      let t = await (0, d.generateWatchContentImage)({
-        entry: i,
-        mediaImageSrc: I,
-        avatarSrc: T.getAvatarURL(n.guild_id, 128),
-        description: g(i, n, T),
-        timestamp: (0, r.formatEntryTimestamp)(i, N),
-        colors: [A, v]
+      let t = await (0, c.generateWatchContentImage)({
+        entry: r,
+        mediaImageSrc: A,
+        avatarSrc: I.getAvatarURL(n.guild_id, 128),
+        description: S(r, n, I),
+        timestamp: (0, o.formatEntryTimestamp)(r, M),
+        episodeDescription: v,
+        colors: [N, x]
       });
-      await (0, u.sendContentImageReply)({
-        user: T,
-        altText: _(i, T),
+      await (0, d.sendContentImageReply)({
+        user: I,
+        altText: T(r, I),
         file: t,
         reply: e
-      }), (0, o.trackInteraction)(p.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
-        entry: i,
+      }), (0, u.trackInteraction)(E.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
+        entry: r,
         channelId: n.id,
         guildId: n.guild_id,
-        requestId: E
+        requestId: C
       })
     } finally {
       t()
     }
   };
-  return (0, a.jsxs)(m.Popout, {
-    children: [(0, a.jsx)(m.PopoutHero, {
-      backgroundImgSrc: I,
-      children: (0, a.jsxs)("div", {
-        className: C.heroDetails,
+  return (0, a.jsxs)(p.Popout, {
+    children: [(0, a.jsxs)(p.PopoutHero, {
+      backgroundImgSrc: A,
+      children: [(0, a.jsxs)("div", {
+        className: g.heroDetails,
         children: [(0, a.jsxs)("div", {
-          children: [(0, a.jsx)(m.PopoutAvatar, {
-            user: T,
+          children: [(0, a.jsx)(p.PopoutAvatar, {
+            user: I,
             guildId: n.guild_id
-          }), (0, a.jsx)(m.PopoutTitle, {
-            children: S(i, n, T)
+          }), (0, a.jsx)(p.PopoutTitle, {
+            children: _(r, n, I)
           })]
-        }), (0, a.jsx)(h.ContentImage, {
+        }), (0, a.jsx)(m.ContentImage, {
           size: 80,
-          src: I,
-          className: C.contentImage
+          src: A,
+          className: g.contentImage
         })]
-      })
-    }), (0, a.jsx)(m.PopoutReactor, {
-      onMessageReact: x,
-      user: T,
+      }), (0, a.jsx)(h.ContentRowBadges, {
+        className: g.badgeContainer,
+        entry: r,
+        textColor: "always-white",
+        iconColor: s.tokens.colors.WHITE,
+        episodeDescription: v
+      })]
+    }), (0, a.jsx)(p.PopoutReactor, {
+      onMessageReact: R,
+      user: I,
       channel: n
     })]
   })

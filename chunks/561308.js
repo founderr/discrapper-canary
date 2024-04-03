@@ -71,10 +71,11 @@ let u = (e, t) => {
     });
     if (s < i.default.Seconds.HOUR) {
       let e = Math.round(s / i.default.Seconds.MINUTE);
-      o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO.format({
+      return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO.format({
         count: e
       })
-    } else if (s < 6 * i.default.Seconds.HOUR) {
+    }
+    if (s < 6 * i.default.Seconds.HOUR) {
       let e = Math.round(s / i.default.Seconds.HOUR);
       return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO.format({
         count: e
