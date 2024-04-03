@@ -25,8 +25,8 @@ var s = n("512722"),
   T = n("695103"),
   N = n("366695"),
   h = n("4912"),
-  v = n("669079"),
-  x = n("937615"),
+  x = n("669079"),
+  v = n("937615"),
   A = n("987209"),
   C = n("598"),
   g = n("45572"),
@@ -46,22 +46,22 @@ function O(e) {
     className: R.invoice,
     children: [(0, i.jsx)(p.PremiumInvoiceTableRow, {
       label: t.name,
-      value: (0, x.formatPrice)(s, n.currency),
+      value: (0, v.formatPrice)(s, n.currency),
       className: R.subscriptionCostRow
     }), (0, i.jsx)(p.PremiumInvoiceTableRow, {
       label: b.default.Messages.PURCHASE_REVIEW_TAX_LABEL,
-      value: (0, x.formatPrice)(n.tax, n.currency),
+      value: (0, v.formatPrice)(n.tax, n.currency),
       className: R.subscriptionCostRow
     }), (0, i.jsx)(p.PremiumInvoiceTableDivider, {}), (0, i.jsx)(p.PremiumInvoiceTableTotalRow, {
       label: b.default.Messages.BILLING_INVOICE_TOTAL.format(),
-      value: (0, x.formatPrice)(n.amount, n.currency),
+      value: (0, v.formatPrice)(n.amount, n.currency),
       className: R.subscriptionCostRow
     })]
   }) : (0, i.jsx)(p.PremiumInvoiceTable, {
     className: R.invoice,
     children: (0, i.jsx)(p.PremiumInvoiceTableRow, {
       label: t.name,
-      value: (0, x.formatPrice)(n.amount, n.currency),
+      value: (0, v.formatPrice)(n.amount, n.currency),
       className: R.subscriptionCostRow
     })
   })
@@ -93,7 +93,7 @@ function j(e) {
     handlePaymentSourceAdd: p
   } = e, {
     application: N,
-    purchaseState: x,
+    purchaseState: v,
     paymentSources: j,
     paymentSourceId: G,
     setHasAcceptedTerms: D,
@@ -105,7 +105,7 @@ function j(e) {
   } = (0, C.usePaymentContext)(), {
     isGift: H,
     giftRecipient: W
-  } = (0, A.useGiftContext)(), Y = H && (0, v.shouldShowCustomGiftExperience)(W);
+  } = (0, A.useGiftContext)(), Y = H && (0, x.shouldShowCustomGiftExperience)(W);
   a()(null != w, "Expected selectedSkuId");
   let K = F[w],
     V = U[w],
@@ -115,7 +115,7 @@ function j(e) {
   let J = (0, r.useStateFromStores)([f.default, T.default], () => T.default.inTestModeForApplication(N.id) || f.default.inDevModeForApplication(N.id), [N.id]),
     X = (0, r.useStateFromStores)([I.default], () => I.default.enabled),
     q = l.CountryCodesSets.EEA_COUNTRIES.has(E.default.ipCountryCodeWithFallback),
-    Q = x === g.PurchaseState.PURCHASING || x === g.PurchaseState.COMPLETED,
+    Q = v === g.PurchaseState.PURCHASING || v === g.PurchaseState.COMPLETED,
     $ = null != G ? j[G].type : null;
   return (0, i.jsxs)("div", {
     className: R.stepBody,

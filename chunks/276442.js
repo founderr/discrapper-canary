@@ -31,8 +31,8 @@ function p(e) {
     paymentSourceId: T,
     setPaymentSourceId: N,
     purchaseError: h,
-    setPurchaseError: v,
-    purchaseErrorBlockRef: x,
+    setPurchaseError: x,
+    purchaseErrorBlockRef: v,
     paymentAuthenticationState: A,
     selectedSkuId: C
   } = (0, c.usePaymentContext)(), {
@@ -43,8 +43,8 @@ function p(e) {
     paymentSourceId: T,
     setPaymentSourceId: N,
     purchaseError: h,
-    setPurchaseError: v,
-    purchaseErrorBlockRef: x,
+    setPurchaseError: x,
+    purchaseErrorBlockRef: v,
     paymentAuthenticationState: A
   }, M = (0, l.usePremiumTrialOffer)(S), b = !g && null != M && null != C && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(C), R = null != _ ? _ : () => {
     p(Object.values(P).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW, {

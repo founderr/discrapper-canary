@@ -35,13 +35,13 @@ function E(e) {
     innerClassName: T,
     disabled: N = !1,
     disableThemedBackground: h = !1
-  } = e, [v, x] = s.useState(null != m ? m : E), [A, C] = s.useState((0, o.toRichValue)(v)), g = s.useRef(!1);
+  } = e, [x, v] = s.useState(null != m ? m : E), [A, C] = s.useState((0, o.toRichValue)(x)), g = s.useRef(!1);
   return s.useEffect(() => {
     g.current = !0
   }, []), s.useEffect(() => {
     if (void 0 === m) {
       let e = (0, o.toRichValue)(E);
-      x(E), C(e)
+      v(E), C(e)
     }
   }, [m, E]), (0, i.jsx)("div", {
     className: l()(_.body, P),
@@ -54,11 +54,11 @@ function E(e) {
         editorClassName: _.editorTextArea,
         maxCharacterCount: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
         onChange: function(e, t, n) {
-          t !== v && (x(t), C(n), a(t))
+          t !== x && (v(t), C(n), a(t))
         },
         placeholder: p,
         channel: I,
-        textValue: v,
+        textValue: x,
         richValue: A,
         type: u.ChatInputTypes.CUSTOM_GIFT,
         onBlur: () => {

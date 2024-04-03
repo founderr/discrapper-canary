@@ -29,7 +29,7 @@ let I = e => {
     soundEffect: T,
     setEmojiConfetti: N,
     setSoundEffect: h
-  } = (0, l.useGiftContext)(), [v, x] = s.useState(!1), A = s.useRef(null), C = (0, a.useRadioGroup)({
+  } = (0, l.useGiftContext)(), [x, v] = s.useState(!1), A = s.useRef(null), C = (0, a.useRadioGroup)({
     orientation: "horizontal"
   }), g = (0, u.getGiftExperience)(n, t), y = g === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, M = g !== u.GiftExperience.DEFAULT, b = (0, c.useIsSeasonalGiftingActive)(), {
     enabled: R
@@ -68,7 +68,7 @@ let I = e => {
         })]
       })]
     }), (0, i.jsx)("div", {
-      tabIndex: null != I || v ? void 0 : 0,
+      tabIndex: null != I || x ? void 0 : 0,
       onFocus: e => {
         var t;
         e.target === e.currentTarget && (null === (t = A.current) || void 0 === t || t.focus())
@@ -81,8 +81,8 @@ let I = e => {
         giftStyle: e,
         setSelectedGiftStyle: E,
         ref: 0 === t ? A : null,
-        onFocus: () => x(!0),
-        onBlur: () => x(!1)
+        onFocus: () => v(!0),
+        onBlur: () => v(!1)
       }, e))
     }), (0, i.jsx)("div", {
       className: _.__invalid_selectPlanDivider

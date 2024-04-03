@@ -32,8 +32,8 @@ function h(e) {
     planId: s,
     selectPlan: l,
     selected: h,
-    priceOptions: v,
-    shouldShowUpdatedPaymentModal: x,
+    priceOptions: x,
+    shouldShowUpdatedPaymentModal: v,
     isEligibleForDiscount: A,
     discountAmountOff: C
   } = e, g = (0, u.useStateFromStores)([m.default], () => m.default.locale), y = (0, u.useStateFromStores)([f.default], () => f.default.get(s)), {
@@ -44,9 +44,9 @@ function h(e) {
   let O = null != n && n.planId === s,
     L = O || s === P.SubscriptionPlans.PREMIUM_MONTH_TIER_2 && null != n && [P.SubscriptionPlans.PREMIUM_YEAR_TIER_0, P.SubscriptionPlans.PREMIUM_YEAR_TIER_1].includes(n.planId),
     j = P.DISCOUNTS[s],
-    G = (0, _.getPrice)(s, !1, M, v),
-    D = (0, _.isPrepaidPaymentSource)(v.paymentSourceId),
-    F = null != j && !x,
+    G = (0, _.getPrice)(s, !1, M, x),
+    D = (0, _.isPrepaidPaymentSource)(x.paymentSourceId),
+    F = null != j && !v,
     U = (0, E.usePremiumDiscountOffer)(),
     w = y.interval === P.SubscriptionIntervalTypes.YEAR ? T.default.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL : T.default.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL,
     B = () => null != j && (0, i.jsx)(c.Text, {
@@ -97,7 +97,7 @@ function h(e) {
           children: [(0, i.jsxs)("div", {
             className: a()(N.planOptionInterval, {
               [N.optionSelected]: h || R,
-              [N.updatedOptionSelected]: x && (h || R)
+              [N.updatedOptionSelected]: v && (h || R)
             }),
             children: [(0, _.getIntervalString)(y.interval, M, D, y.intervalCount, R, (0, _.getPremiumType)(y.id)), R && k()]
           }), R && (0, i.jsx)("div", {
@@ -110,7 +110,7 @@ function h(e) {
           className: N.planOptionCurrentPlan,
           children: ["(", T.default.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, ")"]
         }), !R && k()]
-      }), x ? (0, i.jsx)("div", {
+      }), v ? (0, i.jsx)("div", {
         className: a()({
           [N.optionPriceSelected]: h
         }),
@@ -128,7 +128,7 @@ function h(e) {
         }),
         children: (0, I.formatPrice)(G.amount, G.currency)
       })]
-    }), x && (0, i.jsx)("div", {
+    }), v && (0, i.jsx)("div", {
       className: N.planOptionSubtextContainer,
       children: (0, i.jsx)(c.Text, {
         variant: "text-md/normal",
