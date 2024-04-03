@@ -73,7 +73,7 @@ class M extends l.PureComponent {
       allowFullScreen: !1,
       href: "https://youtu.be/".concat(t),
       thumbnail: {
-        url: "https://i.ytimg.com/vi/".concat(t, "/maxresdefault.jpg"),
+        url: "https://i.ytimg.com/vi/".concat(t, "/hqdefault.jpg"),
         width: 451,
         height: 254
       },
