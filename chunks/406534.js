@@ -100,35 +100,36 @@ function $(e) {
       scrollManager: el,
       specs: es,
       filterAfterTimestamp: ei,
-      showingQuarantineBanner: er
+      showingQuarantineBanner: er,
+      hideSummaries: eo
     } = e,
-    eo = R.default.getCurrentUser(),
-    eu = () => el.isInitialized() || w.ready,
-    ed = (0, F.useShowConvoStarterInDM)(L),
-    ec = w.length > 0 && (null === (t = w.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(L)),
-    ef = (0, o.useChannelSummariesExperiment)(L),
-    eh = (0, s.useStateFromStores)([T.default], () => T.default.shouldShowTopicsBar()),
-    em = (0, S.useStrangerDangerWarning)(L.id, X.LOCATION_CONTEXT_WEB),
-    ep = (0, C.useInappropriateConversationBannerForChannel)(L.id, X.LOCATION_CONTEXT_WEB),
-    eE = (0, U.default)(),
-    eC = null != em ? em : ep;
-  L.isDM() && null != eC && (n = eC.type === E.SafetyWarningTypes.STRANGER_DANGER ? (0, a.jsx)(_.StrangerDangerWarningBanner, {
+    eu = R.default.getCurrentUser(),
+    ed = () => el.isInitialized() || w.ready,
+    ec = (0, F.useShowConvoStarterInDM)(L),
+    ef = w.length > 0 && (null === (t = w.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(L)),
+    eh = (0, o.useChannelSummariesExperiment)(L),
+    em = (0, s.useStateFromStores)([T.default], () => T.default.shouldShowTopicsBar() && !eo),
+    ep = (0, S.useStrangerDangerWarning)(L.id, X.LOCATION_CONTEXT_WEB),
+    eE = (0, C.useInappropriateConversationBannerForChannel)(L.id, X.LOCATION_CONTEXT_WEB),
+    eC = (0, U.default)(),
+    eg = null != ep ? ep : eE;
+  L.isDM() && null != eg && (n = eg.type === E.SafetyWarningTypes.STRANGER_DANGER ? (0, a.jsx)(_.StrangerDangerWarningBanner, {
     channelId: L.id,
-    warningId: eC.id,
+    warningId: eg.id,
     senderId: L.getRecipientId()
   }) : (0, a.jsx)(g.InappropriateConversationWarningBanner, {
     channelId: L.id,
-    warningId: eC.id,
+    warningId: eg.id,
     senderId: L.getRecipientId()
   }));
-  let eg = L.isForumPost() && !ec ? (0, a.jsx)(f.default, {
+  let eS = L.isForumPost() && !ef ? (0, a.jsx)(f.default, {
       postId: L.id
     }) : null,
-    eS = (0, m.default)(L.id);
+    e_ = (0, m.default)(L.id);
   (0, Y.default)();
-  let e_ = null,
-    eT = [],
-    eI = en.map((e, t) => {
+  let eT = null,
+    eI = [],
+    eA = en.map((e, t) => {
       if (e.type === Z.ChannelStreamTypes.DIVIDER) {
         var n, l;
         let s = null != e.unreadId;
@@ -163,8 +164,8 @@ function $(e) {
       if (null != ei && ei > e.content.timestamp.getTime() * O.default.Millis.SECOND) return;
       let s = N.default.can(Z.Permissions.CREATE_INSTANT_INVITE, L);
       if ((0, D.default)(e.content, s)) return;
-      e.type === Z.ChannelStreamTypes.MESSAGE && null == e_ && (e_ = e);
-      let i = e.groupId === (null == e_ ? void 0 : e_.groupId) ? e_.content.id : e.groupId,
+      e.type === Z.ChannelStreamTypes.MESSAGE && null == eT && (eT = e);
+      let i = e.groupId === (null == eT ? void 0 : eT.groupId) ? eT.content.id : e.groupId,
         r = e.type === Z.ChannelStreamTypes.THREAD_STARTER_MESSAGE ? k.ThreadStarterChatMessage : k.default;
       return (0, a.jsx)(r, {
         compact: et,
@@ -174,24 +175,24 @@ function $(e) {
         flashKey: e.flashKey,
         id: (0, P.getMessageDOMId)(L.id, e.content.id),
         isLastItem: t >= en.length - 1,
-        renderContentOnly: eS
+        renderContentOnly: e_
       }, e.content.id)
     });
-  eT.push(...eI);
-  let eA = en[en.length - 1];
-  if (null != eo && ea.forEach((e, t) => {
-      let n = 0 === t && (0, b.isNewGroupItem)(L, eA, new v.default({
+  eI.push(...eA);
+  let ev = en[en.length - 1];
+  if (null != eu && ea.forEach((e, t) => {
+      let n = 0 === t && (0, b.isNewGroupItem)(L, ev, new v.default({
         type: Z.MessageTypes.DEFAULT,
-        author: eo
+        author: eu
       }));
-      eT.push((0, a.jsx)(J, {
+      eI.push((0, a.jsx)(J, {
         file: e,
         channel: L,
-        user: eo,
+        user: eu,
         isGroupStart: n
       }, "upload-".concat(e.id)))
     }), w.hasMoreBefore && null == ei) {
-    w.length > 0 && eT.unshift((0, a.jsx)("div", {
+    w.length > 0 && eI.unshift((0, a.jsx)("div", {
       style: {
         height: K.PLACEHOLDER_BUFFER,
         flex: "0 0 auto"
@@ -200,41 +201,41 @@ function $(e) {
     let {
       useReducedMotion: e
     } = u.default;
-    (e && eu() || !e) && eT.unshift((0, a.jsx)(V.default, {
+    (e && ed() || !e) && eI.unshift((0, a.jsx)(V.default, {
       compact: et,
       ...es
     }, "has-more"))
   }
-  if ((!w.hasMoreBefore || null != ei) && eT.unshift((0, a.jsx)(c.default, {
+  if ((!w.hasMoreBefore || null != ei) && eI.unshift((0, a.jsx)(c.default, {
       channel: L,
       showingBanner: er
-    }, "empty-message")), w.hasMoreAfter && eT.push((0, a.jsx)(V.default, {
+    }, "empty-message")), w.hasMoreAfter && eI.push((0, a.jsx)(V.default, {
       compact: et,
       ...es
-    }, "has-more-after")), !er && ed && eu() && eT.push((0, a.jsx)(W.default, {
+    }, "has-more-after")), !er && ec && ed() && eI.push((0, a.jsx)(W.default, {
       channel: L
-    })), $ > 0 && ee && eu()) {
+    })), $ > 0 && ee && ed()) {
     let e, t;
     let n = x.default.getOldestUnreadTimestamp(L.id),
       s = 0 !== n ? n : j.default.extractTimestamp(L.id),
       i = (0, y.isSameDay)(new Date, new Date(s));
-    if (x.default.isEstimated(L.id) ? (e = i ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = i ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), ef && (0, o.channelEligibleForSummaries)(L) && eE.includes(z.ChatOverlays.SUMMARIES)) {
+    if (x.default.isEstimated(L.id) ? (e = i ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = i ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), eh && (0, o.channelEligibleForSummaries)(L) && eC.includes(z.ChatOverlays.SUMMARIES)) {
       let n = x.default.ackMessageId(L.id),
         i = (0, I.getUnreadTopicsCount)(L.id, x.default.getOldestUnreadMessageId(L.id));
       if ((0, d.trackWithMetadata)(Z.AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED, {
           num_unread_summaries: i,
           num_unread_messages: $,
           last_ack_message_id: n,
-          summaries_enabled_by_user: eh,
+          summaries_enabled_by_user: em,
           summaries_enabled_for_channel: (0, o.canSeeChannelSummaries)(L)
         }), (0, o.canSeeChannelSummaries)(L)) {
-        let n = eh ? t.format({
+        let n = em ? t.format({
           count: $
         }) : e.format({
           count: $,
           timestamp: s
         });
-        if (eh) {
+        if (em) {
           let e = i > 0 ? (0, a.jsxs)("div", {
             style: {
               display: "flex",
@@ -300,7 +301,7 @@ function $(e) {
           })
         }
       }
-    } else eE.includes(z.ChatOverlays.NEW_MESSAGES) && (l = (0, a.jsx)(G.NewMessagesBar, {
+    } else eC.includes(z.ChatOverlays.NEW_MESSAGES) && (l = (0, a.jsx)(G.NewMessagesBar, {
       content: e.format({
         count: $,
         timestamp: s
@@ -308,7 +309,7 @@ function $(e) {
       channelId: L.id
     }))
   }
-  if (null == l && (0, o.canSeeChannelSummaries)(L) && eh && eE.includes(z.ChatOverlays.SUMMARIES) && (l = (0, a.jsx)(G.TopicsPill, {
+  if (null == l && (0, o.canSeeChannelSummaries)(L) && em && eC.includes(z.ChatOverlays.SUMMARIES) && (l = (0, a.jsx)(G.TopicsPill, {
       channel: L,
       scrollManager: el
     })), w.error) r = (0, a.jsx)(G.ErrorLoadingBar, {
@@ -322,7 +323,7 @@ function $(e) {
       })
     }
   });
-  else if (w.hasMoreAfter && eu()) {
+  else if (w.hasMoreAfter && ed()) {
     let {
       jumpReturnTargetId: e
     } = w;
@@ -345,10 +346,10 @@ function $(e) {
     })
   }
   return {
-    channelStreamMarkup: eT,
+    channelStreamMarkup: eI,
     newMessagesBar: l,
     jumpToPresentBar: r,
-    forumPostActionBar: eg,
+    forumPostActionBar: eS,
     safetyWarningBanner: n
   }
 }

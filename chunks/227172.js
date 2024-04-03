@@ -49,31 +49,32 @@ t.default = e => {
     closePopout: t,
     channel: n,
     entry: o,
-    requestId: g
+    requestId: g,
+    updatePopoutPosition: _
   } = e, {
-    applicationImageSrc: _,
-    user: v
+    applicationImageSrc: v,
+    user: N
   } = (0, m.useGamingContentData)(o), {
-    primaryColor: N,
-    secondaryColor: x
-  } = (0, h.default)(_), M = (0, l.useStateFromStores)([r.default], () => r.default.locale);
-  if (null == v) return null;
-  let R = async e => {
+    primaryColor: x,
+    secondaryColor: M
+  } = (0, h.default)(v), R = (0, l.useStateFromStores)([r.default], () => r.default.locale);
+  if (null == N) return null;
+  let L = async e => {
     try {
       let t = await i.default.openPrivateChannel(o.author_id, !1, !1),
         a = await (0, c.generateGamingContentImage)({
           entry: o,
-          applicationImageSrc: _,
-          avatarSrc: v.getAvatarURL(n.guild_id, 128),
-          description: T(o, n, v),
-          timestamp: (0, u.formatEntryTimestamp)(o, M),
-          colors: [N, x],
+          applicationImageSrc: v,
+          avatarSrc: N.getAvatarURL(n.guild_id, 128),
+          description: T(o, n, N),
+          timestamp: (0, u.formatEntryTimestamp)(o, R),
+          colors: [x, M],
           channelId: t
         });
       await (0, f.sendContentImageReply)({
         file: a,
-        user: v,
-        altText: A(o, v),
+        user: N,
+        altText: A(o, N),
         reply: e
       }), (0, d.trackInteraction)(C.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
         entry: o,
@@ -87,19 +88,19 @@ t.default = e => {
   };
   return (0, a.jsxs)(E.Popout, {
     children: [(0, a.jsxs)(E.PopoutHero, {
-      backgroundImgSrc: _,
+      backgroundImgSrc: v,
       children: [(0, a.jsxs)("div", {
         className: S.heroDetails,
         children: [(0, a.jsxs)("div", {
           children: [(0, a.jsx)(E.PopoutAvatar, {
-            user: v,
+            user: N,
             guildId: n.guild_id
           }), (0, a.jsx)(E.PopoutTitle, {
-            children: I(o, n, v)
+            children: I(o, n, N)
           })]
         }), (0, a.jsx)(p.ContentImage, {
           size: 80,
-          src: _,
+          src: v,
           className: S.contentImage
         })]
       }), (0, a.jsx)(m.ContentRowBadges, {
@@ -109,9 +110,10 @@ t.default = e => {
         iconColor: s.tokens.colors.WHITE
       })]
     }), (0, a.jsx)(E.PopoutReactor, {
-      onMessageReact: R,
-      user: v,
-      channel: n
+      onMessageReact: L,
+      user: N,
+      channel: n,
+      updatePopoutPosition: _
     })]
   })
 }

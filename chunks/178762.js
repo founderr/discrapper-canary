@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
   getContentRowHeight: function() {
     return I
   }
-});
+}), n("47120");
 var a = n("735250"),
   l = n("470079"),
   s = n("392711"),
@@ -91,13 +91,13 @@ t.default = l.memo(e => {
   let {
     index: s,
     ...i
-  } = e, o = (0, r.useListItem)("".concat(s)), c = null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), m = {
+  } = e, [o, c] = l.useState("default"), m = (0, r.useListItem)("".concat(s)), p = null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), E = {
     entry: i.entry,
     channelId: i.channel.id,
     guildId: i.channel.guild_id,
     requestId: i.requestId
-  }, p = l.useCallback(e => {
-    c && (0, d.openContextMenuLazy)(e, async () => {
+  }, C = l.useCallback(e => {
+    p && (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.e("153").then(n.bind(n, "330150"));
@@ -106,7 +106,9 @@ t.default = l.memo(e => {
         requestId: i.requestId
       })
     })
-  }, [i, c]);
+  }, [i, p]), g = l.useCallback(() => {
+    c(String(Date.now()))
+  }, []);
   return (0, a.jsx)(u.Popout, {
     renderPopout: e => {
       let {
@@ -114,11 +116,13 @@ t.default = l.memo(e => {
       } = e;
       return (0, a.jsx)(N, {
         closePopout: t,
+        updatePopoutPosition: g,
         ...i
       })
     },
     position: "left",
-    onRequestOpen: () => (0, h.trackInteraction)(_.ContentInventoryInteractionTypes.CARD_CLICK, m),
+    positionKey: o,
+    onRequestOpen: () => (0, h.trackInteraction)(_.ContentInventoryInteractionTypes.CARD_CLICK, E),
     spacing: 16,
     children: (e, t) => {
       let {
@@ -133,9 +137,9 @@ t.default = l.memo(e => {
         },
         children: (0, a.jsx)("div", {
           ...e,
-          ...o,
-          onMouseEnter: () => A(m),
-          onContextMenu: p,
+          ...m,
+          onMouseEnter: () => A(E),
+          onContextMenu: C,
           children: (0, a.jsx)(v, {
             ...i,
             selected: n
