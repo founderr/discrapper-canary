@@ -51,7 +51,7 @@ function S(e) {
 function m(e) {
   return I("QuantitativeValue", e)
 }(u = i || (i = {})).DAMAGED = "http://schema.org/DamagedCondition", u.NEW = "http://schema.org/NewCondition", u.REFURBISHED = "http://schema.org/RefurbishedCondition", u.USED = "http://schema.org/UsedCondition", (d = r || (r = {})).DISCONTINUED = "http://schema.org/Discontinued", d.IN_STOCK = "http://schema.org/InStock", d.IN_STORE_ONLY = "http://schema.org/InStoreOnly", d.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", d.ONLINE_ONLY = "http://schema.org/OnlineOnly", d.OUT_OF_STOCK = "http://schema.org/OutOfStock", d.PREORDER = "http://schema.org/PreOrder", d.PRESALE = "http://schema.org/PreSale", d.SOLD_OUT = "http://schema.org/SoldOut", S.ItemConditions = i, S.ItemAvailability = r, (c = n || (n = {})).YEARLY = "ANN", c.MONTHLY = "MON", m.UnitCodes = n;
-class N extends(l = E.Component) {
+class A extends(l = E.Component) {
   render() {
     let {
       debug: e,
@@ -66,18 +66,18 @@ class N extends(l = E.Component) {
     })
   }
 }
-T(N, "Thing", f), T(N, "Brand", f), T(N, "Person", function(e) {
+T(A, "Thing", f), T(A, "Brand", f), T(A, "Person", function(e) {
   return I("Person", e)
-}), T(N, "Organization", function(e) {
+}), T(A, "Organization", function(e) {
   return I("Organization", e)
-}), T(N, "ItemPage", function(e) {
+}), T(A, "ItemPage", function(e) {
   return I("ItemPage", e)
-}), T(N, "Product", R), T(N, "Offer", S), T(N, "Rating", function(e) {
+}), T(A, "Product", R), T(A, "Offer", S), T(A, "Rating", function(e) {
   return I("Rating", e)
-}), T(N, "AggregateRating", function(e) {
+}), T(A, "AggregateRating", function(e) {
   return I("AggregateRating", e)
-}), T(N, "AggregateOffer", function(e) {
+}), T(A, "AggregateOffer", function(e) {
   return I("AggregateOffer", e)
-}), T(N, "QuantitativeValue", m), T(N, "UnitPriceSpecification", function(e) {
+}), T(A, "QuantitativeValue", m), T(A, "UnitPriceSpecification", function(e) {
   return I("UnitPriceSpecification", e)
-}), t.default = N
+}), t.default = A

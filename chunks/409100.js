@@ -42,7 +42,7 @@ t.default = e => {
     isPersistentCTA: R = !1,
     useShorterCTA: S = !1,
     ...m
-  } = e, N = (0, n.default)(), A = (0, i.isThemeDark)(N) || s, p = null === (t = (0, u.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, l.formatTrialOfferIntervalDuration)({
+  } = e, A = (0, n.default)(), N = (0, i.isThemeDark)(A) || s, p = null === (t = (0, u.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, l.formatTrialOfferIntervalDuration)({
     intervalType: null == p ? void 0 : p.interval,
     intervalCount: null == p ? void 0 : p.interval_count
   }), C = (0, o.usePremiumDiscountOffer)(), O = null != p && c === p.sku_id, P = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != C ? I(c, S, R, C.discount.amount) : T({
@@ -55,8 +55,8 @@ t.default = e => {
   });
   return (0, a.jsx)(d.default, {
     color: r.ButtonColors.BRAND,
-    look: A ? r.ButtonLooks.INVERTED : void 0,
-    buttonShineClassName: "buttonShineClassName" in m ? m.buttonShineClassName : A ? E.brandShine : void 0,
+    look: N ? r.ButtonLooks.INVERTED : void 0,
+    buttonShineClassName: "buttonShineClassName" in m ? m.buttonShineClassName : N ? E.brandShine : void 0,
     trialId: null == p ? void 0 : p.id,
     buttonText: P,
     buttonTextClassName: O ? E.freeTrialText : void 0,
