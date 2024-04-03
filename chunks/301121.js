@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("230711"),
   g = s("651530"),
   h = s("163268"),
-  N = s("294602"),
-  I = s("688465"),
+  I = s("294602"),
+  N = s("688465"),
   p = s("610697"),
   C = s("880257"),
   A = s("236289"),
@@ -159,7 +159,7 @@ function ee() {
       explicitContentGuilds: s,
       explicitContentFriendDm: n,
       explicitContentNonFriendDm: l
-    } = (0, N.useExplicitContentSettingOrDefault)(),
+    } = (0, I.useExplicitContentSettingOrDefault)(),
     r = (0, H.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS),
     o = [{
       value: S.ExplicitContentRedaction.BLUR,
@@ -185,7 +185,7 @@ function ee() {
         className: Z.marginBottom8,
         children: (0, a.jsxs)("div", {
           className: i()(Q.betaTagContainer),
-          children: [z.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(I.default, {
+          children: [z.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(N.default, {
             className: Q.betaTagIcon
           })]
         })

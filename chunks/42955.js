@@ -21,7 +21,7 @@ var a, n = s("654861"),
   g = s("981631"),
   h = s("65154");
 
-function N(e, t, s) {
+function I(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -29,7 +29,7 @@ function N(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let I = /^https/.test((a = "https:", "https:")) ? "wss:" : "ws:";
+let N = /^https/.test((a = "https:", "https:")) ? "wss:" : "ws:";
 class p extends i.EventEmitter {
   connect() {
     this._backoff.cancel();
@@ -247,14 +247,14 @@ class p extends i.EventEmitter {
     endpoint: a,
     token: n
   }) {
-    super(), N(this, "userId", void 0), N(this, "sessionId", void 0), N(this, "rtcServerId", void 0), N(this, "_endpoint", void 0), N(this, "hostname", void 0), N(this, "mediaEnginePort", void 0), N(this, "mediaEngineAddress", void 0), N(this, "token", void 0), N(this, "protocol", void 0), N(this, "state", void 0), N(this, "_socket", void 0), N(this, "_connection", void 0), N(this, "_destroyed", void 0), N(this, "_speedTestState", void 0), N(this, "_speedTestDirection", void 0), N(this, "_speedTestParams", void 0), N(this, "_rtcConnectionId", void 0), N(this, "_backoff", void 0), N(this, "logger", void 0), N(this, "_networkOverhead", void 0), N(this, "reconnect", () => {
+    super(), I(this, "userId", void 0), I(this, "sessionId", void 0), I(this, "rtcServerId", void 0), I(this, "_endpoint", void 0), I(this, "hostname", void 0), I(this, "mediaEnginePort", void 0), I(this, "mediaEngineAddress", void 0), I(this, "token", void 0), I(this, "protocol", void 0), I(this, "state", void 0), I(this, "_socket", void 0), I(this, "_connection", void 0), I(this, "_destroyed", void 0), I(this, "_speedTestState", void 0), I(this, "_speedTestDirection", void 0), I(this, "_speedTestParams", void 0), I(this, "_rtcConnectionId", void 0), I(this, "_backoff", void 0), I(this, "logger", void 0), I(this, "_networkOverhead", void 0), I(this, "reconnect", () => {
       let e = this._socket;
       null != e && (e.close(), e.connect())
-    }), this._rtcConnectionId = (0, o.v4)(), this.logger = new S.default("RTCSpeedTestRTCConnection(".concat(s, ")")), this.userId = e, this.sessionId = t, this.rtcServerId = s, this.mediaEnginePort = null, this.mediaEngineAddress = null, this._speedTestState = null, this._speedTestDirection = null, this._speedTestParams = null, this.state = g.RTCConnectionStates.AWAITING_ENDPOINT, this._socket = null, this.token = n, this._destroyed = !1, this._connection = null, this._backoff = new d.default(1 * T.default.Millis.SECOND, 10 * T.default.Millis.SECOND), a = "".concat(I, "//").concat(a), (0, f.isAndroid)() && (a = (a = a.replace(".gg", ".media")).replace(":80", ":443"));
+    }), this._rtcConnectionId = (0, o.v4)(), this.logger = new S.default("RTCSpeedTestRTCConnection(".concat(s, ")")), this.userId = e, this.sessionId = t, this.rtcServerId = s, this.mediaEnginePort = null, this.mediaEngineAddress = null, this._speedTestState = null, this._speedTestDirection = null, this._speedTestParams = null, this.state = g.RTCConnectionStates.AWAITING_ENDPOINT, this._socket = null, this.token = n, this._destroyed = !1, this._connection = null, this._backoff = new d.default(1 * T.default.Millis.SECOND, 10 * T.default.Millis.SECOND), a = "".concat(N, "//").concat(a), (0, f.isAndroid)() && (a = (a = a.replace(".gg", ".media")).replace(":80", ":443"));
     let {
       hostname: l,
       port: i
     } = r.parse(a), u = null != i ? parseInt(i) : NaN;
-    null != l && (80 === u || 443 === u) && (a = "".concat(I, "//").concat(l)), this._endpoint = a + "/", this.hostname = l, this._networkOverhead = null
+    null != l && (80 === u || 443 === u) && (a = "".concat(N, "//").concat(l)), this._endpoint = a + "/", this.hostname = l, this._networkOverhead = null
   }
 }

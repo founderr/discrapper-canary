@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("466111"),
   g = s("632184"),
   h = s("63063"),
-  N = s("581883"),
-  I = s("918257"),
+  I = s("581883"),
+  N = s("918257"),
   p = s("981631"),
   C = s("710111"),
   A = s("689938"),
@@ -43,7 +43,7 @@ function R(e) {
 function M() {
   let {
     analyticsLocations: e
-  } = (0, o.default)(), [t, s] = n.useState(C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = R(r), N = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, D = N && null != r && null == g;
+  } = (0, o.default)(), [t, s] = n.useState(C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = R(r), I = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, D = I && null != r && null == g;
   n.useEffect(() => {
     D && (0, E.trackCustomCallSoundExternallyDeleted)({
       location: e
@@ -64,7 +64,7 @@ function M() {
     tag: i.FormTitleTags.H1,
     titleClassName: x.__invalid_marginBottom16,
     title: A.default.Messages.SOUNDBOARD,
-    children: [(0, a.jsx)(I.default, {}), (0, a.jsx)(i.FormDivider, {
+    children: [(0, a.jsx)(N.default, {}), (0, a.jsx)(i.FormDivider, {
       className: O.callSoundsDivider
     }), (0, a.jsx)(i.Heading, {
       variant: "text-md/medium",
@@ -113,9 +113,9 @@ function M() {
 function v(e) {
   let {
     guildId: t
-  } = e, s = (0, l.useStateFromStores)([N.default], () => {
+  } = e, s = (0, l.useStateFromStores)([I.default], () => {
     var e, s, a;
-    return null === (a = N.default.settings.guilds) || void 0 === a ? void 0 : null === (s = a.guilds) || void 0 === s ? void 0 : null === (e = s[t]) || void 0 === e ? void 0 : e.joinSound
+    return null === (a = I.default.settings.guilds) || void 0 === a ? void 0 : null === (s = a.guilds) || void 0 === s ? void 0 : null === (e = s[t]) || void 0 === e ? void 0 : e.joinSound
   }), n = R(s);
   if (null == s || null == n) return null;
   let {

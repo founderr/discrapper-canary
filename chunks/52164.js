@@ -41,17 +41,17 @@ function _(e) {
       return (0, u.isPremiumBaseSubscriptionPlan)(t)
     });
   if (null == h) return null;
-  let N = h.subscriptionPlanId,
-    I = d.default.get(N);
-  l()(null != I, "Missing plan");
+  let I = h.subscriptionPlanId,
+    N = d.default.get(I);
+  l()(null != N, "Missing plan");
   let p = (0, c.formatPrice)(_.total, _.currency),
     C = "";
-  return I.interval === E.SubscriptionIntervalTypes.YEAR ? C = f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+  return N.interval === E.SubscriptionIntervalTypes.YEAR ? C = f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
     price: p,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY
-  }) : I.interval === E.SubscriptionIntervalTypes.MONTH && (C = 1 === I.intervalCount ? f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
+  }) : N.interval === E.SubscriptionIntervalTypes.MONTH && (C = 1 === N.intervalCount ? f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
     price: p,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
@@ -61,7 +61,7 @@ function _(e) {
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY,
-    intervalCount: I.intervalCount
+    intervalCount: N.intervalCount
   })), (0, a.jsx)(i.Text, {
     color: "text-muted",
     className: g,

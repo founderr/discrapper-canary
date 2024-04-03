@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return I
   }
 }), s("47120");
 var a, n, l = s("735250"),
@@ -21,10 +21,10 @@ var a, n, l = s("735250"),
   h = s("297370");
 (n = a || (a = {}))[n.ODDS_FIRST = 0] = "ODDS_FIRST", n[n.ODDS_2 = 1] = "ODDS_2", n[n.ODDS_3 = 2] = "ODDS_3", n[n.ODDS_4 = 3] = "ODDS_4", n[n.ODDS_5 = 4] = "ODDS_5", n[n.ODDS_6 = 5] = "ODDS_6", n[n.ODDS_LAST = 6] = "ODDS_LAST";
 
-function N(e) {
+function I(e) {
   let {
     className: t
-  } = e, s = (0, d.useStateFromStores)([E.default], () => E.default.useReducedMotion), [a, n] = i.useState(!1), [r, N] = i.useState(0), [I, p] = i.useState(""), [C] = i.useState(new u.Timeout), A = function(e) {
+  } = e, s = (0, d.useStateFromStores)([E.default], () => E.default.useReducedMotion), [a, n] = i.useState(!1), [r, I] = i.useState(0), [N, p] = i.useState(""), [C] = i.useState(new u.Timeout), A = function(e) {
     switch (e) {
       case 0:
         return g.default.Messages.PACKAGES_HELP_1;
@@ -43,24 +43,24 @@ function N(e) {
       case 6:
         return g.default.Messages.PACKAGES_HELP_7
     }
-  }(r), O = I.length === A.length, x = () => {
+  }(r), O = N.length === A.length, x = () => {
     T.default.track(_.AnalyticEvents.EASTER_EGG_INTERACTED, {
       type: "packages_help_icon_click",
       position: r
-    }), r < 6 ? N(r + 1) : N(0)
+    }), r < 6 ? I(r + 1) : I(0)
   };
   return i.useEffect(() => {
-    if (I.length === A.length || !a || s) {
+    if (N.length === A.length || !a || s) {
       C.stop();
       return
     }
     C.start((0, f.randomBetween)(20, 100), () => {
-      p(A.substring(0, I.length + 1))
+      p(A.substring(0, N.length + 1))
     })
-  }, [a, r, I.length, C, A, s]), i.useEffect(() => {
+  }, [a, r, N.length, C, A, s]), i.useEffect(() => {
     p(A.substring(0, 1))
   }, [r, A]), i.useEffect(() => () => C.stop(), [C]), (0, l.jsx)(S.Tooltip, {
-    text: s ? A : I,
+    text: s ? A : N,
     "aria-label": A,
     onTooltipShow: () => {
       T.default.track(_.AnalyticEvents.EASTER_EGG_INTERACTED, {

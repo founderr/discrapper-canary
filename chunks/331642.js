@@ -21,9 +21,9 @@ var a = s("735250"),
   _ = s("409673"),
   g = s("603074"),
   h = s("689938"),
-  N = s("468101");
+  I = s("468101");
 
-function I(e) {
+function N(e) {
   let {
     onSelect: t
   } = e, [s, i] = n.useState(!1), o = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), c = E.default.canUseCustomCallSounds(o);
@@ -59,7 +59,7 @@ function I(e) {
       },
       text: h.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
       children: (0, a.jsx)(u.default, {
-        className: N.secondaryIcon
+        className: I.secondaryIcon
       })
     })
   })
@@ -78,7 +78,7 @@ function p(e) {
     onClick: s,
     text: n,
     children: (0, a.jsx)(c.default, {
-      className: N.secondaryIconActive
+      className: I.secondaryIconActive
     })
   })
 }
@@ -95,17 +95,17 @@ function C(e) {
     children: e
   });
   return (0, a.jsxs)("div", {
-    className: N.soundButtonSettingContainer,
+    className: I.soundButtonSettingContainer,
     children: [(0, a.jsxs)("div", {
-      className: N.container,
+      className: I.container,
       children: [E && (0, a.jsx)(o.default, {
         emojiId: d,
         emojiName: u,
-        className: N.emoji
+        className: I.emoji
       }), (0, a.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-primary",
-        className: N.soundText,
+        className: I.soundText,
         children: null == t ? h.default.Messages.NONE : s ? h.default.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
           soundName: t.name,
           subtextHook: T
@@ -113,18 +113,18 @@ function C(e) {
       }), l ? (0, a.jsx)(p, {
         sound: t
       }) : (0, a.jsx)(c.default, {
-        className: N.secondaryIconDisabled
+        className: I.secondaryIconDisabled
       })]
     }), (0, a.jsxs)("div", {
-      className: N.container,
-      children: [(0, a.jsx)(I, {
+      className: I.container,
+      children: [(0, a.jsx)(N, {
         onSelect: n
       }), l && !s && (0, a.jsx)(_.SecondaryActionButton, {
         onClick: () => n(null),
         text: h.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
         children: (0, a.jsx)(S.default, {
           color: i.default.unsafe_rawColors.RED_400.css,
-          className: N.secondaryIcon
+          className: I.secondaryIcon
         })
       })]
     })]

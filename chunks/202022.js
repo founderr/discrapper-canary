@@ -22,8 +22,8 @@ var n = s("990547"),
   _ = s("377171"),
   g = s("621628"),
   h = s("18438"),
-  N = s("778825"),
-  I = s("266983"),
+  I = s("778825"),
+  N = s("266983"),
   p = s("351780"),
   C = s("231765"),
   A = s("813732"),
@@ -76,8 +76,8 @@ var n = s("990547"),
   e_ = s("400287"),
   eg = s("554042"),
   eh = s("200645"),
-  eN = s("287490"),
-  eI = s("674116"),
+  eI = s("287490"),
+  eN = s("674116"),
   ep = s("981631"),
   eC = s("689938"),
   eA = s("480261");
@@ -111,7 +111,7 @@ function ex(e) {
       text: eC.default.Messages.NEW
     }),
     notice: {
-      stores: [D.default, N.default],
+      stores: [D.default, I.default],
       element: O.default
     },
     onSettingsClose: () => {
@@ -170,7 +170,7 @@ function ex(e) {
     label: eC.default.Messages.PACKAGES,
     ariaLabel: eC.default.Messages.PACKAGES,
     element: eu.default,
-    icon: (0, a.jsx)(I.default, {
+    icon: (0, a.jsx)(N.default, {
       width: 16,
       height: 16,
       color: "currentColor"
@@ -237,7 +237,7 @@ function ex(e) {
   }, {
     section: ep.UserSettingsSections.VOICE,
     label: eC.default.Messages.VOICE_AND_VIDEO,
-    element: eI.default,
+    element: eN.default,
     predicate: () => v.default.isSupported()
   }, {
     section: ep.UserSettingsSections.POGGERMODE,
@@ -337,7 +337,7 @@ function ex(e) {
   }, {
     section: ep.UserSettingsSections.EXPERIMENTS,
     label: "Experiments",
-    element: eN.default,
+    element: eI.default,
     predicate: () => M.default.isDeveloper
   }, {
     section: ep.UserSettingsSections.DEVELOPER_OPTIONS,

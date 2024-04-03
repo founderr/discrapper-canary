@@ -22,8 +22,8 @@ var n = s("512722"),
   _ = s("610966"),
   g = s("513901"),
   h = s("451392"),
-  N = s("906364"),
-  I = s("676934"),
+  I = s("906364"),
+  N = s("676934"),
   p = s("350327"),
   C = s("621853"),
   A = s("318661"),
@@ -87,7 +87,7 @@ function P() {
       currentGlobalName: y.globalName,
       pendingGlobalName: G,
       onGlobalNameChange: r.setPendingGlobalNameName
-    }), (0, a.jsx)(N.default, {
+    }), (0, a.jsx)(I.default, {
       sectionTitle: D.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: K.pronouns,
       onPronounsChange: p.setPendingPronouns,
@@ -131,7 +131,7 @@ function P() {
       },
       pendingBio: H,
       currentBio: null !== (U = null == B ? void 0 : B.bio) && void 0 !== U ? U : ""
-    }, "bio"), et && (0, a.jsx)(I.default, {}), null != J && (0, a.jsx)(f.default, {
+    }, "bio"), et && (0, a.jsx)(N.default, {}), null != J && (0, a.jsx)(f.default, {
       legacyUsername: J
     }, "legacy_username")]
   })
