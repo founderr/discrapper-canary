@@ -121,26 +121,27 @@ function j(e) {
   y && (Q = N.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS.format({
     rewardName: o.config.messages.rewardName
   }));
-  let P = null != g ? o.config.messages.rewardRedemptionInstructionsByPlatform[g] : void 0;
-  null != I && null != P && (Q = R.default.parse(P, !1, {
+  let P = null != g ? g : null == I ? void 0 : I.platform,
+    F = null != P ? o.config.messages.rewardRedemptionInstructionsByPlatform[P] : void 0;
+  null != I && null != F && (Q = R.default.parse(F, !1, {
     allowLinks: !0
   }));
-  let F = null != Q ? (0, a.jsx)(h.Text, {
+  let W = null != Q ? (0, a.jsx)(h.Text, {
       variant: "text-sm/normal",
       color: "text-normal",
       className: M.bodyCopy,
       children: Q
     }) : null,
-    W = l.useMemo(() => o.config.rewardCodePlatforms.map(e => ({
+    H = l.useMemo(() => o.config.rewardCodePlatforms.map(e => ({
       label: (0, A.getPlatformString)(e),
       value: e
     })), [o.config.rewardCodePlatforms]),
-    H = null;
-  y && (H = (0, a.jsxs)(h.FormItem, {
+    Z = null;
+  y && (Z = (0, a.jsxs)(h.FormItem, {
     title: N.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL,
     children: [(0, a.jsx)(h.Select, {
       placeholder: N.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER,
-      options: W,
+      options: H,
       select: e => {
         b(!1), T(e)
       },
@@ -182,12 +183,12 @@ function j(e) {
       error: N.default.Messages.QUESTS_REWARD_CODE_ERROR
     }) : null]
   }));
-  let Z = null == I && (j || D),
-    V = Z && !y ? (0, a.jsx)(h.Spinner, {
+  let V = null == I && (j || D),
+    q = V && !y ? (0, a.jsx)(h.Spinner, {
       className: M.__invalid_spinner
     }) : null,
-    q = null;
-  null != I ? q = (0, a.jsx)(h.FormItem, {
+    z = null;
+  null != I ? z = (0, a.jsx)(h.FormItem, {
     title: N.default.Messages.QUESTS_REWARD_CODE_HEADER,
     children: (0, a.jsx)(m.default, {
       value: I.code,
@@ -201,7 +202,7 @@ function j(e) {
         })
       }
     })
-  }) : O && !y && (q = (0, a.jsx)(h.FormItem, {
+  }) : O && !y && (z = (0, a.jsx)(h.FormItem, {
     title: N.default.Messages.QUESTS_REWARD_CODE_HEADER,
     children: (0, a.jsx)(h.TextInput, {
       disabled: !0,
@@ -209,7 +210,7 @@ function j(e) {
       inputClassName: M.errorInput
     })
   }));
-  let z = () => {
+  let G = () => {
       var e;
       y && null != g ? (L(o.id, g, C), (0, x.trackQuestContentClicked)({
         questId: o.id,
@@ -221,15 +222,15 @@ function j(e) {
         questContentCTA: x.QuestContentCTA.GET_REWARD_CODE
       })) : r()
     },
-    G = y && D,
-    Y = !G && (y && null == g || Z),
-    X = N.default.Messages.QUESTS_REWARD_CODE_DONE;
-  y ? X = N.default.Messages.QUESTS_REWARD_CODE_GET_CODE : !y && O && (X = N.default.Messages.QUESTS_REWARD_CODE_TRY_AGAIN);
-  let K = (0, a.jsx)(h.Button, {
-    onClick: () => z(),
-    submitting: G,
-    disabled: Y,
-    children: X
+    Y = y && D,
+    X = !Y && (y && null == g || V),
+    K = N.default.Messages.QUESTS_REWARD_CODE_DONE;
+  y ? K = N.default.Messages.QUESTS_REWARD_CODE_GET_CODE : !y && O && (K = N.default.Messages.QUESTS_REWARD_CODE_TRY_AGAIN);
+  let J = (0, a.jsx)(h.Button, {
+    onClick: () => G(),
+    submitting: Y,
+    disabled: X,
+    children: K
   });
   return (0, a.jsxs)(h.ModalRoot, {
     transitionState: s,
@@ -244,10 +245,10 @@ function j(e) {
         rewardCode: I
       }), (0, a.jsxs)("div", {
         className: M.modalContent,
-        children: [U, F, H, V, q]
+        children: [U, W, Z, q, z]
       })]
     }), (0, a.jsx)(h.ModalFooter, {
-      children: K
+      children: J
     })]
   })
 }
