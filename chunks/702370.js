@@ -292,6 +292,7 @@ let el = d.AvatarSizes.SIZE_152,
         hideFakeActivity: (null == c ? void 0 : c.type) === r.CollectiblesItemType.AVATAR_DECORATION || d,
         hideBioSection: (null == c ? void 0 : c.type) === r.CollectiblesItemType.AVATAR_DECORATION,
         hideMemberStatusSection: (null == c ? void 0 : c.type) === r.CollectiblesItemType.AVATAR_DECORATION,
+        hideRecentGames: (null == c ? void 0 : c.type) === r.CollectiblesItemType.AVATAR_DECORATION,
         useLargeBanner: !0
       }), (null == c ? void 0 : c.type) === r.CollectiblesItemType.AVATAR_DECORATION && (0, a.jsx)(eo, {
         user: l
