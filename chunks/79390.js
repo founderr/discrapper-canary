@@ -89,11 +89,11 @@ function p(e) {
     }),
     {
       enabled: r
-    } = f.CreateGDMPollsExperiment.useExperiment({
+    } = f.CreatePollsUserExperiment.useExperiment({
       location: "useCanPostPollsInChannel"
     }, {
       autoTrackExposure: !0,
-      disable: !t || !(null == e ? void 0 : e.isPrivate())
+      disable: !t
     });
   return i || r
 }
@@ -101,7 +101,7 @@ function p(e) {
 function R(e) {
   let {
     enabled: t
-  } = f.CreatePollsCoachmarkExperiment.useExperiment({
+  } = f.CreatePollsGuildCoachmarkExperiment.useExperiment({
     guildId: e,
     location: "useCanShowPollsChatInputCoachmarkInGuild"
   });
