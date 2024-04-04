@@ -16963,6 +16963,7 @@ e.exports = Object.freeze({
   QUESTS_MOBILE_EMBED_TITLE: "Quests aren’t available on mobile",
   QUESTS_MOBILE_EMBED_BODY: "From your desktop Discord app or browser you can go to \nUser Settings > Gift Inventory and accept the Quest there.",
   QUESTS_GET_THIS_GAME: "Get Game",
+  QUESTS_PLAY_GAME: "Play Game",
   QUESTS_DISCLOSURE_LABEL: "Why am I seeing this?",
   QUESTS_SHARE_LINK: "Copy Share Link",
   QUESTS_HIDE_THIS: "Hide This",
