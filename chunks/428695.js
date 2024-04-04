@@ -20,16 +20,16 @@ t.default = function(e) {
     message: l,
     image: r,
     type: C,
-    imageStyles: S,
-    imageMarginX: m,
+    imageStyles: m,
+    imageMarginX: S,
     imageMarginTop: I,
     trackingSource: p,
     undismissable: T,
     onDismissed: g,
     onClick: A,
     cta: N,
-    ctaColor: R,
-    centerText: O
+    ctaColor: v,
+    centerText: R
   } = e;
   s.useEffect(() => {
     _(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -37,8 +37,8 @@ t.default = function(e) {
       guild_id: t.id
     })
   }, [t.id, C]);
-  let v = null;
-  "function" == typeof N ? v = N() : null != N && (v = (0, a.jsx)(o.Button, {
+  let O = null;
+  "function" == typeof N ? O = N() : null != N && (O = (0, a.jsx)(o.Button, {
     className: h.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
@@ -49,7 +49,7 @@ t.default = function(e) {
       }), null == A || A()
     },
     fullWidth: !0,
-    color: R,
+    color: v,
     children: N
   }));
   let L = null;
@@ -59,11 +59,11 @@ t.default = function(e) {
     className: i()(h.title, {
       [h.noImageTitle]: null == r
     }, {
-      [h.center]: O
+      [h.center]: R
     }),
     children: n
   }));
-  let M = null != m ? "".concat(m, "px") : "16px";
+  let P = null != S ? "".concat(S, "px") : "16px";
   return (0, a.jsxs)("div", {
     className: h.container,
     children: [!0 === T ? null : (0, a.jsx)(o.Clickable, {
@@ -81,12 +81,12 @@ t.default = function(e) {
       className: h.imageContainer,
       style: {
         marginTop: "".concat(I, "px"),
-        marginLeft: M,
-        marginRight: M
+        marginLeft: P,
+        marginRight: P
       },
       children: (0, a.jsx)("img", {
         className: h.image,
-        style: S,
+        style: m,
         src: r,
         alt: ""
       })
@@ -94,12 +94,12 @@ t.default = function(e) {
       className: h.message,
       children: [L, (0, a.jsx)(o.Text, {
         className: i()({
-          [h.center]: O
+          [h.center]: R
         }),
         variant: "text-sm/normal",
         color: "text-muted",
         children: l
-      }), v]
+      }), O]
     })]
   })
 }

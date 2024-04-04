@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("292959"),
   _ = n("944486"),
   C = n("246946"),
-  S = n("340895"),
-  m = n("557177"),
+  m = n("340895"),
+  S = n("557177"),
   I = n("871465");
 let p = {
     transform: "scale(0.7)",
@@ -27,37 +27,37 @@ let p = {
   };
 t.default = () => {
   let e = (0, u.useStateFromStores)([_.default], () => _.default.getChannelId()),
-    t = (0, u.useStateFromStoresArray)([S.default], () => S.default.getIncomingCalls().filter(t => {
+    t = (0, u.useStateFromStoresArray)([m.default], () => m.default.getIncomingCalls().filter(t => {
       let {
         channel: n
       } = t;
       return e !== n.id
     })),
-    n = (0, u.useStateFromStores)([S.default], () => S.default.hasIncomingCalls()),
+    n = (0, u.useStateFromStores)([m.default], () => m.default.hasIncomingCalls()),
     l = (0, u.useStateFromStores)([h.default], () => h.default.isSoundDisabled("call_ringing")),
     g = f.default.useIsRingtoneEligible(),
     A = f.default.useIsRingtoneDisabled(),
     N = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
-    R = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
-    O = s.useRef(!1),
-    v = (0, r.useStableMemo)(() => {
+    v = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
+    R = s.useRef(!1),
+    O = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
-      if (g && !A) return (0, m.createSound)(c.default.ringtone, e);
-      if (R === I.Soundpacks.CLASSIC) {
+      if (g && !A) return (0, S.createSound)(c.default.ringtone, e);
+      if (v === I.Soundpacks.CLASSIC) {
         let t = 500 === i().random(1, 1e3) ? "call_ringing_beat" : "call_ringing";
-        return (0, m.createSound)(t, e)
+        return (0, S.createSound)(t, e)
       }
-      return (0, m.createSoundForPack)("call_ringing", R)
-    }, [R, A, g]);
+      return (0, S.createSoundForPack)("call_ringing", v)
+    }, [v, A, g]);
   return s.useEffect(() => () => {
-    v.stop()
-  }, [v]), s.useEffect(() => {
+    O.stop()
+  }, [O]), s.useEffect(() => {
     if (N || l) {
-      O.current && (v.stop(), O.current = !1);
+      R.current && (O.stop(), R.current = !1);
       return
     }
-    n && !O.current ? (v.loop(), O.current = !0) : !n && O.current && (v.stop(), O.current = !1)
-  }, [l, N, n, v]), (0, o.useTransition)(t, {
+    n && !R.current ? (O.loop(), R.current = !0) : !n && R.current && (O.stop(), R.current = !1)
+  }, [l, N, n, O]), (0, o.useTransition)(t, {
     keys: e => {
       var t;
       return null === (t = e.channel) || void 0 === t ? void 0 : t.id

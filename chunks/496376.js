@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("745628"),
   _ = n("950279"),
   C = n("796918"),
-  S = n("741595"),
-  m = n("884486"),
+  m = n("741595"),
+  S = n("884486"),
   I = n("974842"),
   p = n("308083"),
   T = n("689938"),
@@ -101,17 +101,17 @@ t.default = e => {
     setPage: n,
     onClose: l
   } = e, {
-    selectedGames: R,
-    playstyle: O,
-    interests: v,
+    selectedGames: v,
+    playstyle: R,
+    interests: O,
     description: L,
-    tag: M,
-    primetime: P,
+    tag: P,
+    primetime: M,
     currentStep: y
   } = (0, r.useStateFromStoresObject)([f.default], () => {
     var e;
     return null !== (e = f.default.getState(t)) && void 0 !== e ? e : (0, f.newClanProgress)()
-  }), D = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [x, b] = s.useState(!0);
+  }), x = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [D, b] = s.useState(!0);
   s.useEffect(() => {
     u.default.getDetectableGames()
   }, []);
@@ -132,7 +132,7 @@ t.default = e => {
       children: T.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, a.jsxs)("div", {
       className: i()(g.mainContent, g.fadeIn, {
-        [g.fadeOut]: !x
+        [g.fadeOut]: !D
       }),
       children: [(0, a.jsx)(o.Sequencer, {
         step: y,
@@ -150,17 +150,17 @@ t.default = e => {
               case p.ClanSetupSteps.GAMES:
                 return (0, a.jsx)(_.default, {
                   handleUpdate: j,
-                  selectedGames: R
+                  selectedGames: v
                 });
               case p.ClanSetupSteps.PLAYSTYLE:
-                return (0, a.jsx)(S.default, {
+                return (0, a.jsx)(m.default, {
                   handleUpdate: j,
-                  playstyle: O
+                  playstyle: R
                 });
               case p.ClanSetupSteps.INTERESTS:
                 return (0, a.jsx)(C.default, {
                   handleUpdate: j,
-                  interests: v
+                  interests: O
                 });
               case p.ClanSetupSteps.DESCRIPTION:
                 return (0, a.jsx)(h.default, {
@@ -168,14 +168,14 @@ t.default = e => {
                   description: L
                 });
               case p.ClanSetupSteps.PRIMETIME:
-                return (0, a.jsx)(m.default, {
+                return (0, a.jsx)(S.default, {
                   handleUpdate: j,
-                  selectedTimes: P
+                  selectedTimes: M
                 });
               case p.ClanSetupSteps.CUSTOMIZE:
                 return (0, a.jsx)(I.default, {
                   handleUpdate: j,
-                  tag: M
+                  tag: P
                 })
             }
           })()
@@ -183,17 +183,17 @@ t.default = e => {
       }), (0, a.jsx)(N, {
         currentStep: y,
         setCurrentStep: U,
-        selectedGames: R,
-        playstyle: O,
-        interests: v,
+        selectedGames: v,
+        playstyle: R,
+        interests: O,
         description: L,
-        primetime: P,
-        tag: M,
+        primetime: M,
+        tag: P,
         onLastStep: G
       })]
     }), (0, a.jsx)("div", {
       className: i()(g.overviewSidebar, {
-        [g.fadeOut]: D && !x
+        [g.fadeOut]: x && !D
       }),
       children: (0, a.jsx)(E.default, {
         guildId: t

@@ -19,8 +19,8 @@ var s = n("442837"),
   h = n("620924"),
   _ = n("81471"),
   C = n("689938"),
-  S = n("548847");
-let m = E.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+  m = n("548847");
+let S = E.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
 function I(e) {
   var t;
@@ -36,31 +36,31 @@ function I(e) {
     animateOnHover: !0
   });
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(m, {
-      className: S.avatar,
+    children: [(0, a.jsx)(S, {
+      className: m.avatar,
       src: (0, d.getChannelIconURL)(n, 40, !p && I),
       avatarDecoration: A,
       size: l.AvatarSizes.SIZE_40,
       "aria-label": null !== (t = null == E ? void 0 : E.username) && void 0 !== t ? t : C.default.Messages.UNKNOWN_USER
     }), (0, a.jsxs)("div", {
-      className: S.userPreview,
+      className: m.userPreview,
       children: [(0, a.jsxs)("div", {
-        className: S.userContainerWithPreview,
+        className: m.userContainerWithPreview,
         children: [(0, a.jsx)(i.default, {
           nick: T,
           user: E,
           showAccountIdentifier: !0,
-          className: S.tagContainer,
-          usernameClass: S.username,
-          discriminatorClass: null != f.default.getGlobalName(E) ? S.globalName : S.discriminator
+          className: m.tagContainer,
+          usernameClass: m.username,
+          discriminatorClass: null != f.default.getGlobalName(E) ? m.globalName : m.discriminator
         }), (0, a.jsx)(l.Text, {
-          className: S.timestampWithPreview,
+          className: m.timestampWithPreview,
           color: "text-muted",
           variant: "text-xs/normal",
           children: g
         })]
       }), (0, a.jsx)("div", {
-        className: S.messagePreview,
+        className: m.messagePreview,
         children: (0, a.jsx)(_.default, {
           channel: n
         })

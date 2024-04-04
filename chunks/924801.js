@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   formatTimesForServer: function() {
-    return m
+    return S
   },
   generateTimeOptions: function() {
     return d
@@ -167,7 +167,7 @@ let d = function() {
         return [s()(e, o.LOCALE_TIME_FORMAT), 2]
     }
   },
-  S = e => {
+  m = e => {
     if (null == e.day || null == e.time) return null;
     let t = s()(),
       n = t.clone().add(1, "day"),
@@ -178,17 +178,17 @@ let d = function() {
     return e.day === r.DayOptions.WEEKDAYS ? o = a ? t.isAfter(i) ? l ? i.day(n.weekday()) : i.day(1) : i.day(t.weekday()) : e.time.day(1) : e.day === r.DayOptions.WEEKENDS ? a ? o = i.day(6) : t.isAfter(i) && (o = l ? i.day(6) : i.day(n.weekday())) : o = i.day(f(e.day)), t.isAfter(o) && (o = o.add(1, "week")), o
   };
 
-function m(e) {
+function S(e) {
   let t = [];
   return e.forEach(e => {
     if (null == e.day || null == e.time) return null;
     let [n, a] = C(e.time);
     if (e.day === r.DayOptions.WEEKENDS) {
-      let e = S({
+      let e = m({
           day: r.DayOptions.SATURDAY,
           time: n
         }),
-        s = S({
+        s = m({
           day: r.DayOptions.SUNDAY,
           time: n
         });
@@ -202,7 +202,7 @@ function m(e) {
         days: [(0, l.convertJSDayToRRuleDay)(s.toDate().getUTCDay()).weekday]
       })
     } else if (e.day === r.DayOptions.WEEKDAYS) {
-      let s = S({
+      let s = m({
         day: e.day,
         time: n
       });
@@ -212,7 +212,7 @@ function m(e) {
         days: (0, l.getValidWeekdays)(s)
       })
     } else {
-      let s = S({
+      let s = m({
         day: e.day,
         time: n
       });

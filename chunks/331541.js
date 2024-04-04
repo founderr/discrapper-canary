@@ -18,23 +18,23 @@ var a = n("735250"),
   h = n("232567"),
   _ = n("2052"),
   C = n("393238"),
-  S = n("727637"),
-  m = n("420660"),
+  m = n("727637"),
+  S = n("420660"),
   I = n("100527"),
   p = n("906732"),
   T = n("521868"),
   g = n("299206"),
   A = n("440051"),
   N = n("734934"),
-  R = n("158238"),
-  O = n("785717"),
-  v = n("221292"),
+  v = n("158238"),
+  R = n("785717"),
+  O = n("221292"),
   L = n("318661"),
-  M = n("747074"),
-  P = n("192133"),
+  P = n("747074"),
+  M = n("192133"),
   y = n("138394"),
-  D = n("131640"),
-  x = n("695346"),
+  x = n("131640"),
+  D = n("695346"),
   b = n("199902"),
   U = n("293273"),
   j = n("158776"),
@@ -165,12 +165,12 @@ function $(e) {
     let n = A.ExpiringStatusExperiment.useExperiment({
         location: "account popout"
       }).expiringStatus,
-      s = x.StatusExpiresAtSetting.useSetting(),
+      s = D.StatusExpiresAtSetting.useSetting(),
       l = (0, N.useFocusModeEnabled)(),
-      i = R.QuietModeExperiment.useExperiment({
+      i = v.QuietModeExperiment.useExperiment({
         location: "account popout"
       }).allowQuietMode || l,
-      r = x.FocusModeExpiresAtSetting.useSetting(),
+      r = D.FocusModeExpiresAtSetting.useSetting(),
       o = e === K.StatusTypes.DND,
       d = t => {
         let n = null != s && "0" !== s ? q.default.Messages.STATUS_UNTIL.format({
@@ -248,7 +248,7 @@ function $(e) {
     })
   }(ee, U), {
     ref: ea
-  } = (0, C.default)(), es = (0, S.default)(ea);
+  } = (0, C.default)(), es = (0, m.default)(ea);
   s.useEffect(() => {
     F.default.track(K.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
@@ -273,7 +273,7 @@ function $(e) {
     });
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: G,
-    children: (0, a.jsx)(O.UserProfileAnalyticsProvider, {
+    children: (0, a.jsx)(R.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",
       userId: t.id,
       guildId: l,
@@ -281,21 +281,21 @@ function $(e) {
         className: Q.popoutContainer,
         children: (0, a.jsx)("div", {
           ref: ea,
-          children: (0, a.jsxs)(M.default, {
+          children: (0, a.jsxs)(P.default, {
             user: t,
             profileType: z.UserProfileTypes.POPOUT,
-            children: [(0, a.jsx)(D.default, {
+            children: [(0, a.jsx)(x.default, {
               user: t,
               displayProfile: B,
               onClose: () => null == b ? void 0 : b(),
               isMobile: et,
-              isStreaming: (0, m.default)(V),
+              isStreaming: (0, S.default)(V),
               status: ee,
               disableUserProfileLink: __OVERLAY__,
               isHovering: es,
               showPremiumBadgeUpsell: !1
-            }), (0, a.jsxs)(M.default.Inner, {
-              children: [(0, a.jsx)(P.default, {
+            }), (0, a.jsxs)(P.default.Inner, {
+              children: [(0, a.jsx)(M.default, {
                 activity: V,
                 customStatusActivity: $,
                 displayProfile: B,
@@ -331,7 +331,7 @@ function $(e) {
                     focusedClassName: Q.menuItemFocused,
                     subMenuIconClassName: Q.subMenuIcon,
                     action: d.isMobile ? function() {
-                      (0, v.trackUserProfileAction)({
+                      (0, O.trackUserProfileAction)({
                         action: "PRESS_SET_STATUS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,
@@ -380,7 +380,7 @@ function $(e) {
                     icon: w.default,
                     showIconFirst: !0,
                     action: () => {
-                      (0, v.trackUserProfileAction)({
+                      (0, O.trackUserProfileAction)({
                         action: "PRESS_SWITCH_ACCOUNTS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,

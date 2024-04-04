@@ -24,11 +24,11 @@ function C(e, t) {
   null != e.setHandshakeComplete ? e.setHandshakeComplete(t) : e._didHandshake = t
 }
 
-function S(e) {
+function m(e) {
   return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake
 }
 
-function m(e) {
+function S(e) {
   return new Promise((t, n) => {
     "string" == typeof e && (e = E.net.createConnection(e)), e.pause(), e.on("readable", () => {
       try {
@@ -83,11 +83,11 @@ function p(e) {
       e.emit("pong", i);
       break;
     case _.HANDSHAKE:
-      if (S(e)) throw Error("already did handshake");
+      if (m(e)) throw Error("already did handshake");
       C(e, !0), e.emit("handshake", i);
       break;
     case _.FRAME:
-      if (!S(e)) throw Error("did not handshake");
+      if (!m(e)) throw Error("did not handshake");
       e.emit("request", i);
       break;
     case _.CLOSE:
@@ -157,7 +157,7 @@ class g extends s.EventEmitter {
   constructor() {
     super();
     let e = E.net.createServer(e => this.handleConnection(e));
-    e.on("error", e => h.error("Error: ".concat(e.message))), E.getAvailableSocket(m).then(t => {
+    e.on("error", e => h.error("Error: ".concat(e.message))), E.getAvailableSocket(S).then(t => {
       e.listen(t, () => {
         ("function" == typeof e.listening ? e.listening() : e.listening) && h.info("Starting on ".concat(e.address()))
       })

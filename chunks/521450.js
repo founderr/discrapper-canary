@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("695346"),
   _ = n("877453"),
   C = n("26290"),
-  S = n("981631"),
-  m = n("930441"),
+  m = n("981631"),
+  S = n("930441"),
   I = n("689938"),
   p = n("663041"),
   T = n("794711");
@@ -56,7 +56,7 @@ t.default = () => {
           children: (0, a.jsx)(r.Link, {
             onClick: c.popLayer,
             to: {
-              pathname: S.Routes.FAMILY_CENTER,
+              pathname: m.Routes.FAMILY_CENTER,
               state: {
                 scrollRestoration: !1
               }
@@ -71,11 +71,11 @@ t.default = () => {
       })
     }) : null, (0, a.jsx)(d.FormSwitch, {
       className: i()(T.marginTop20, T.marginBottom20),
-      value: !!t[m.EmailCategories.FAMILY_CENTER_DIGEST],
+      value: !!t[S.EmailCategories.FAMILY_CENTER_DIGEST],
       note: I.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
       onChange: function(e) {
-        (0, f.updateEmailSetting)(m.EmailCategories.FAMILY_CENTER_DIGEST, e)
+        (0, f.updateEmailSetting)(S.EmailCategories.FAMILY_CENTER_DIGEST, e)
       },
       children: I.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
     })]

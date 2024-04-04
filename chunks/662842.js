@@ -16,23 +16,23 @@ var a, s, l = n("735250"),
   h = n("471445"),
   _ = n("15274"),
   C = n("924301"),
-  S = n("504160"),
-  m = n("151864"),
+  m = n("504160"),
+  S = n("151864"),
   I = n("725436"),
   p = n("497656"),
   T = n("554747"),
   g = n("230900"),
   A = n("854698"),
   N = n("703656"),
-  R = n("922482"),
-  O = n("565799"),
-  v = n("501655"),
+  v = n("922482"),
+  R = n("565799"),
+  O = n("501655"),
   L = n("427679"),
-  M = n("448206"),
-  P = n("484459"),
+  P = n("448206"),
+  M = n("484459"),
   y = n("103575"),
-  D = n("496675"),
-  x = n("594174"),
+  x = n("496675"),
+  D = n("594174"),
   b = n("465670"),
   U = n("242315"),
   j = n("662868"),
@@ -52,14 +52,14 @@ function Y(e) {
   } = e, a = (0, p.useActiveEventOrStageInstanceChannel)(t.id), s = (0, T.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: Y,
     isEventNoticeHidden: W
-  } = (0, u.useStateFromStoresObject)([m.default], () => ({
-    isStageNoticeHidden: m.default.isLiveChannelNoticeHidden({
+  } = (0, u.useStateFromStoresObject)([S.default], () => ({
+    isStageNoticeHidden: S.default.isLiveChannelNoticeHidden({
       stageId: null == r ? void 0 : r.id
     }),
-    isEventNoticeHidden: m.default.isLiveChannelNoticeHidden({
+    isEventNoticeHidden: S.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([O.default], () => [...new Set(O.default.getMutableParticipants(K, v.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([O.default], () => null != K ? O.default.getParticipantCount(K, v.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([D.default], () => D.default.can(F.Permissions.CONNECT, a)), Z = (0, M.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([x.default], () => x.default.getUser(X), [X]);
+  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([x.default], () => x.default.can(F.Permissions.CONNECT, a)), Z = (0, P.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
   i.useEffect(() => {
     null != X && (0, f.getUser)(X)
   }, [X]);
@@ -86,7 +86,7 @@ function Y(e) {
       isEventNoticeHidden: d,
       isStageNoticeHidden: f,
       isStudyRoomNotice: E
-    } = e, _ = null != n && null != a && !f, m = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
+    } = e, _ = null != n && null != a && !f, S = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
     if (E && null != a) {
       let e = (0, h.getChannelIconComponent)(a);
       return {
@@ -118,7 +118,7 @@ function Y(e) {
           }),
           canListenIn: s,
           buttonText: e,
-          onClose: () => (0, S.hideLiveChannelNotice)({
+          onClose: () => (0, m.hideLiveChannelNotice)({
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
@@ -151,7 +151,7 @@ function Y(e) {
           }),
           canListenIn: s,
           buttonText: e,
-          onClose: () => (0, S.hideLiveChannelNotice)({
+          onClose: () => (0, m.hideLiveChannelNotice)({
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
@@ -175,7 +175,7 @@ function Y(e) {
         if (null == e) return {
           noticeType: null
         };
-        let n = C.default.getUserCount(t.id, m);
+        let n = C.default.getUserCount(t.id, S);
         return {
           noticeType: 1,
           title: t.name,
@@ -187,7 +187,7 @@ function Y(e) {
           }),
           canListenIn: !1,
           buttonText: H.default.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE,
-          onClose: () => (0, S.hideLiveChannelNotice)({
+          onClose: () => (0, m.hideLiveChannelNotice)({
             eventId: null == t ? void 0 : t.id
           }),
           users: null == r ? [] : [r],
@@ -207,7 +207,7 @@ function Y(e) {
         }
       } else if (t.entity_type === B.GuildScheduledEventEntityTypes.VOICE && null != a) {
         let e = (0, h.getChannelIconComponent)(a),
-          n = C.default.getUserCount(t.id, m);
+          n = C.default.getUserCount(t.id, S);
         return {
           noticeType: 2,
           title: t.name,
@@ -219,7 +219,7 @@ function Y(e) {
           }) : null,
           canListenIn: s,
           buttonText: H.default.Messages.GUILD_EVENT_JOIN,
-          onClose: () => (0, S.hideLiveChannelNotice)({
+          onClose: () => (0, m.hideLiveChannelNotice)({
             eventId: null == t ? void 0 : t.id
           }),
           users: null == r ? [] : [r],
@@ -278,7 +278,7 @@ function Y(e) {
     }), (el.length > 0 || null != ei) && (0, l.jsxs)("div", {
       className: V.participants,
       children: [el.map(e => (0, l.jsx)(c.Popout, {
-        preload: () => (0, P.maybeFetchUserProfileForPopout)(e, {
+        preload: () => (0, M.maybeFetchUserProfileForPopout)(e, {
           guildId: t.id
         }),
         renderPopout: t => (0, l.jsx)(y.default, {
@@ -313,7 +313,7 @@ function Y(e) {
       size: c.Button.Sizes.SMALL,
       color: c.Button.Colors.GREEN,
       onClick: () => {
-        if (ea) null != a && null != a.getGuildId() && ((0, R.connectAndOpen)(a), (0, N.transitionToGuild)(a.getGuildId(), a.id));
+        if (ea) null != a && null != a.getGuildId() && ((0, v.connectAndOpen)(a), (0, N.transitionToGuild)(a.getGuildId(), a.id));
         else {
           if (null == s) return;
           (0, _.openGuildEventDetails)({

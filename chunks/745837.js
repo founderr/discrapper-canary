@@ -19,22 +19,22 @@ var s = n("803997"),
   h = n("435064"),
   _ = n("39604"),
   C = n("356659"),
-  S = n("981631"),
-  m = n("689938"),
+  m = n("981631"),
+  S = n("689938"),
   I = n("783348");
 
 function p(e) {
-  o.default.open(S.UserSettingsSections.CLIPS), (0, _.dismissClipsUserEducation)(e)
+  o.default.open(m.UserSettingsSections.CLIPS), (0, _.dismissClipsUserEducation)(e)
 }
 
 function T() {
-  let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(S.GlobalKeybindActions.SAVE_CLIP));
+  let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(m.GlobalKeybindActions.SAVE_CLIP));
   if (null == e) return (0, a.jsx)(a.Fragment, {
-    children: m.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
+    children: S.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
   });
   let t = E.toString(e.shortcut, !0);
   return (0, a.jsx)(a.Fragment, {
-    children: m.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
+    children: S.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
       keybind: t,
       keybindHook: () => (0, a.jsx)("span", {
         className: I.keyCombo,
@@ -53,11 +53,11 @@ let g = {
     bodyCopy: () => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(c.default, {
         className: I.errorWarningIcon
-      }), m.default.Messages.CLIPS_USER_EDUCATION_ERROR_BODY]
+      }), S.default.Messages.CLIPS_USER_EDUCATION_ERROR_BODY]
     }),
-    buttonCopy: () => m.default.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
+    buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
     ctaOnClick: () => {
-      window.open(f.default.getArticleURL(S.HelpdeskArticles.CLIPS), "_blank")
+      window.open(f.default.getArticleURL(m.HelpdeskArticles.CLIPS), "_blank")
     },
     containerClass: I.container
   },
@@ -65,8 +65,8 @@ let g = {
     textColor: "text-primary",
     buttonLook: r.Button.Looks.FILLED,
     buttonColor: r.Button.Colors.BRAND,
-    bodyCopy: () => m.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
-    buttonCopy: () => m.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
+    bodyCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
+    buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
     ctaOnClick: () => p(C.ClipsUserEducationType.Disabled),
     containerClass: I.container
   },
@@ -75,7 +75,7 @@ let g = {
     buttonLook: r.Button.Looks.INVERTED,
     buttonColor: r.Button.Colors.BRAND,
     bodyCopy: () => (0, a.jsx)(T, {}),
-    buttonCopy: () => m.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
+    buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
     ctaOnClick: () => p(C.ClipsUserEducationType.Enabled),
     containerClass: l()(I.container, I.containerEnabled)
   }
@@ -98,10 +98,10 @@ function A() {
       textColor: c,
       buttonColor: f,
       buttonLook: E,
-      containerClass: S
+      containerClass: m
     } = g[s];
   return (0, a.jsxs)("div", {
-    className: S,
+    className: m,
     children: [(0, a.jsx)(r.Text, {
       color: c,
       variant: "text-sm/medium",

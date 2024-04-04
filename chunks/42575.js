@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return S
   }
 });
 var a = n("735250"),
@@ -18,13 +18,13 @@ var a = n("735250"),
   h = n("170245"),
   _ = n("981631"),
   C = n("689938"),
-  S = n("845286");
+  m = n("845286");
 
-function m(e) {
+function S(e) {
   let {
     user: t,
     nickname: n,
-    status: m,
+    status: S,
     isFocused: I
   } = e, p = s.useContext(c.AnalyticsContext), {
     analyticsLocations: T
@@ -40,7 +40,7 @@ function m(e) {
     })
   }, A = e => {
     null == e || e.stopPropagation(), r.default.ignore(t.id)
-  }, N = m === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : m;
+  }, N = S === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : S;
   return (0, a.jsx)(E.default, {
     isFocused: I,
     user: t,
@@ -66,15 +66,15 @@ function m(e) {
         })]
       });
       return (0, a.jsxs)("div", {
-        className: S.listItemContents,
+        className: m.listItemContents,
         children: [(0, a.jsx)(h.default, {
           user: t,
           hovered: e,
           status: N,
           subText: n,
-          className: S.__invalid_userInfo
+          className: m.__invalid_userInfo
         }), (0, a.jsx)("div", {
-          className: S.actions,
+          className: m.actions,
           children: s
         })]
       })

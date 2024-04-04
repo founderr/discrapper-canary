@@ -14,23 +14,23 @@ var a = n("735250"),
   h = n("112724"),
   _ = n("183126"),
   C = n("607070"),
-  S = n("209613"),
-  m = n("325708"),
+  m = n("209613"),
+  S = n("325708"),
   I = n("320149"),
   p = n("252618"),
   T = n("605236"),
   g = n("243778"),
   A = n("984370"),
   N = n("797614"),
-  R = n("359110"),
-  O = n("6025"),
-  v = n("897473"),
+  v = n("359110"),
+  R = n("6025"),
+  O = n("897473"),
   L = n("108427"),
-  M = n("970731"),
-  P = n("210887"),
+  P = n("970731"),
+  M = n("210887"),
   y = n("433355"),
-  D = n("592125"),
-  x = n("819640"),
+  x = n("592125"),
+  D = n("819640"),
   b = n("916187"),
   U = n("151827"),
   j = n("626135"),
@@ -69,14 +69,14 @@ function ea() {
     } = (0, H.useMessageRequestActions)({
       onError: d
     }),
-    E = (0, S.default)("message-requests-list"),
+    E = (0, m.default)("message-requests-list"),
     {
       channelId: h
     } = (0, V.useMessageRequestSidebarState)(),
     C = s.useCallback(() => {
       f(n.map(e => e.channel.id))
     }, [n, f]),
-    m = s.useCallback(e => {
+    S = s.useCallback(e => {
       var t, s;
       let {
         row: r
@@ -140,7 +140,7 @@ function ea() {
           sectionHeight: Z.LIST_SECTION_HEIGHT,
           rowHeight: Z.LIST_ROW_HEIGHT,
           renderSection: I,
-          renderRow: m,
+          renderRow: S,
           sections: [n.length],
           chunkSize: 30,
           fade: !0,
@@ -155,11 +155,11 @@ function es(e) {
   let {
     pageWidth: t,
     onSidebarResize: n
-  } = e, s = (0, u.useStateFromStores)([y.default], () => y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(null == s ? void 0 : s.channelId));
-  if (null == s || s.type !== v.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+  } = e, s = (0, u.useStateFromStores)([y.default], () => y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(null == s ? void 0 : s.channelId));
+  if (null == s || s.type !== O.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
-  return (0, a.jsx)(m.default, {
-    sidebarType: m.ChatSidebarType.MessageRequestSidebar,
+  return (0, a.jsx)(S.default, {
+    sidebarType: S.ChatSidebarType.MessageRequestSidebar,
     maxWidth: i,
     onWidthChange: n,
     children: (0, a.jsx)(I.default, {
@@ -172,20 +172,20 @@ let el = function(e) {
     let {
       markAsDismissed: t
     } = e;
-    return (0, a.jsx)(M.default, {
+    return (0, a.jsx)(P.default, {
       header: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
       content: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT_TEENS,
       buttonCTA: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
       className: et.messageRequestCoachmark,
       onClick: () => t(J.ContentDismissActionType.UNKNOWN),
       markAsDismissed: t,
-      caretPosition: M.CaretPosition.TOP_CENTER,
+      caretPosition: P.CaretPosition.TOP_CENTER,
       headerClassName: et.__invalid_header
     })
   },
   ei = e => {
     let t = (0, F.default)(),
-      n = () => x.default.hasLayers() || (0, c.hasAnyModalOpen)(),
+      n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       l = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion);
     return s.useEffect(() => {
       (0, T.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
@@ -199,7 +199,7 @@ let el = function(e) {
         if (i === d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK) return (0, a.jsx)(c.Popout, {
           renderPopout: () => t ? (0, a.jsx)(el, {
             markAsDismissed: r
-          }) : (0, a.jsx)(M.default, {
+          }) : (0, a.jsx)(P.default, {
             header: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
             content: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT,
             buttonCTA: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONFIRM,
@@ -211,7 +211,7 @@ let el = function(e) {
               })
             },
             markAsDismissed: r,
-            caretPosition: M.CaretPosition.TOP_CENTER,
+            caretPosition: P.CaretPosition.TOP_CENTER,
             headerClassName: et.__invalid_header
           }),
           position: "bottom",
@@ -243,20 +243,20 @@ let eo = (0, h.default)(function(e) {
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let l = (0, u.useStateFromStores)([P.default], () => P.default.theme),
+  let l = (0, u.useStateFromStores)([M.default], () => M.default.theme),
     r = (0, K.useSpamMessageRequestCount)(),
     [d, E] = s.useState(!1),
     h = (0, u.useStateFromStores)([y.default], () => {
       let e = y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
-      return null != e && e.type === v.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
+      return null != e && e.type === O.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
     }),
     _ = null == h ? void 0 : h.channelId,
     C = null != h,
-    S = (0, k.useIsEitherTypeOfMessageRequest)(_),
-    m = (0, w.useHasUserRepliedInChannel)(_);
+    m = (0, k.useIsEitherTypeOfMessageRequest)(_),
+    S = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != _ && !S && m && C && ((0, R.transitionToChannel)(_), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
-  }, [_, m, C, S]);
+    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+  }, [_, S, C, m]);
   let [I, T] = s.useState(Z.MessageRequestSections.REQUESTS);
   return (0, p.usePageTitle)({
     location: ee.default.Messages.MESSAGE_REQUESTS

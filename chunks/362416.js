@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return em
+    return eS
   }
 }), n("47120"), n("653041");
 var a = n("735250"),
@@ -18,23 +18,23 @@ var a = n("735250"),
   h = n("269128"),
   _ = n("711237"),
   C = n("110924"),
-  S = n("100527"),
-  m = n("906732"),
+  m = n("100527"),
+  S = n("906732"),
   I = n("211242"),
   p = n("536687"),
   T = n("745837"),
   g = n("13228"),
   A = n("1259"),
   N = n("211644"),
-  R = n("605236"),
-  O = n("243778"),
-  v = n("492162"),
+  v = n("605236"),
+  R = n("243778"),
+  O = n("492162"),
   L = n("818634"),
-  M = n("596557"),
-  P = n("817520"),
+  P = n("596557"),
+  M = n("817520"),
   y = n("999309"),
-  D = n("408987"),
-  x = n("130734"),
+  x = n("408987"),
+  D = n("130734"),
   b = n("499137"),
   U = n("258871"),
   j = n("972264"),
@@ -91,7 +91,7 @@ let eh = 64,
       y: 0
     }
   };
-class eS extends s.PureComponent {
+class em extends s.PureComponent {
   static getDerivedStateFromProps(e) {
     let {
       guild: t,
@@ -181,7 +181,7 @@ class eS extends s.PureComponent {
       bannerVisibleHeight: f,
       communityInfoVisible: E
     } = this.state, h = s || l || i;
-    return null == t ? null : (0, a.jsx)(m.AnalyticsLocationProvider, {
+    return null == t ? null : (0, a.jsx)(S.AnalyticsLocationProvider, {
       value: r,
       children: (0, a.jsx)(c.LazyPopout, {
         renderPopout: this.renderMenuPopout,
@@ -286,7 +286,7 @@ class eS extends s.PureComponent {
       selectedChannelId: e,
       shouldRenderClipsEducation: t
     } = this.props;
-    return (0, a.jsx)(O.default, {
+    return (0, a.jsx)(R.default, {
       contentTypes: [],
       children: n => {
         let {
@@ -329,7 +329,7 @@ class eS extends s.PureComponent {
         setHasSubheader: e => this.setState({
           hasGuildSubheader: e
         })
-      }), this.renderChannelList(), (0, a.jsx)(m.AnalyticsLocationProvider, {
+      }), this.renderChannelList(), (0, a.jsx)(S.AnalyticsLocationProvider, {
         value: t,
         children: this.renderFooter()
       })]
@@ -386,9 +386,9 @@ class eS extends s.PureComponent {
       this.handleCloseSubscribeTooltip(), this.handleCloseTemplateDirtyTooltip(), this.handleCloseStudentHubPrivacySettingsTooltip()
     }), eE(this, "handleCloseStudentHubPrivacySettingsTooltip", () => {
       var e;
-      let t = (0, R.isDismissibleContentDismissed)(u.DismissibleContent.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+      let t = (0, v.isDismissibleContentDismissed)(u.DismissibleContent.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
         n = null === (e = this.props.guild) || void 0 === e ? void 0 : e.hasFeature(er.GuildFeatures.HUB);
-      !t && n && (0, R.markDismissibleContentAsDismissed)(u.DismissibleContent.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, {
+      !t && n && (0, v.markDismissibleContentAsDismissed)(u.DismissibleContent.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, {
         dismissAction: eu.ContentDismissActionType.AUTO
       })
     }), eE(this, "handleCloseSubscribeTooltip", () => {
@@ -400,7 +400,7 @@ class eS extends s.PureComponent {
         guild: e,
         showGuildTemplateDirtyTooltip: t
       } = this.props;
-      null != e && t && D.default.hideGuildTemplateDirtyTooltip(e.id)
+      null != e && t && x.default.hideGuildTemplateDirtyTooltip(e.id)
     }), eE(this, "renderMenuPopout", async () => {
       let {
         default: e
@@ -452,7 +452,7 @@ class eS extends s.PureComponent {
   }
 }
 
-function em(e) {
+function eS(e) {
   var t;
   let {
     guildId: n,
@@ -460,10 +460,10 @@ function em(e) {
     selectedChannelId: r
   } = e, d = (0, o.useStateFromStores)([q.default], () => q.default.getGuild(n));
   (0, _.useGlobalTriggerDebugging)(n);
-  let f = (0, v.default)(n),
+  let f = (0, O.default)(n),
     E = (0, o.useStateFromStores)([Y.default], () => Y.default.getGuildDimensions(n).scrollTo),
     h = (0, o.useStateFromStores)([X.default], () => X.default.getChannelId()),
-    [T, O, D] = (0, o.useStateFromStoresArray)([Z.default], () => [Z.default.can(er.Permissions.MANAGE_GUILD, d), Z.default.can(er.Permissions.MANAGE_ROLES, d), Z.default.can(er.Permissions.MANAGE_THREADS, d)]),
+    [T, R, x] = (0, o.useStateFromStoresArray)([Z.default], () => [Z.default.can(er.Permissions.MANAGE_GUILD, d), Z.default.can(er.Permissions.MANAGE_ROLES, d), Z.default.can(er.Permissions.MANAGE_THREADS, d)]),
     U = (0, o.useStateFromStores)([W.default], () => W.default.isUnavailable(n)),
     G = (0, o.useStateFromStores)([J.default], () => J.default.getCurrentUser()),
     k = (0, o.useStateFromStores)([H.default], () => H.default.darkSidebar ? er.ThemeTypes.DARK : H.default.theme),
@@ -475,21 +475,21 @@ function em(e) {
     ea = (0, C.default)(n),
     {
       analyticsLocations: es
-    } = (0, m.default)(S.default.GUILD_HEADER),
+    } = (0, S.default)(m.default.GUILD_HEADER),
     {
       analyticsLocations: el
-    } = (0, m.default)(S.default.GUILD_CHANNEL_LIST_FOOTER);
+    } = (0, S.default)(m.default.GUILD_CHANNEL_LIST_FOOTER);
   s.useEffect(() => {
     n !== ea && en(!K)
   }, [n, ea, K]);
-  let [ei, ed] = (0, N.default)(e => [eo.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eu.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), ec = (0, p.default)(d), ef = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eE = (0, o.useStateFromStores)([Q.default], () => Q.default.hasLayers()), eh = (0, o.useStateFromStores)([F.default], () => F.default.shouldShow(e_)), eC = T && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), em = (0, o.useStateFromStores)([z.default], () => z.default.getMemberCount(n)), eI = T && null != em && em >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), ep = O && null != d && (d.hasFeature(er.GuildFeatures.COMMUNITY) || null != em && em > 50), eT = (0, y.default)(n), eg = (0, A.useLowerMemberCountRequirements)(n), eA = (null == d ? void 0 : d.hasFeature(er.GuildFeatures.HUB)) === !0, eN = T && (null == d ? void 0 : d.hasFeature(er.GuildFeatures.DISCOVERABLE)) === !0, eR = (0, I.useBlockedPaymentsConfig)(), eO = (T || (null == d ? void 0 : d.premiumTier) === er.BoostedGuildTiers.NONE) && !ee.ProcessArgs.isDisallowPopupsSet() && !eR, ev = (0, o.useStateFromStores)([x.default, Q.default], () => null != d && null != G && T && !Q.default.hasLayers() && x.default.shouldShowGuildTemplateDirtyTooltip(n)), eL = (0, o.useStateFromStores)([V.default], () => V.default.getChannel(r)), {
-    isPopoutOpen: eM
-  } = (0, L.useGuildHeaderPopoutStore)(), eP = null !== (t = null == d ? void 0 : d.hasFeature(er.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ey = (0, o.useStateFromStores)([w.default], () => !i().isEmpty(w.default.getThreadsForGuild(n))), eD = $.default.isNewUser(G), ex = et && !eD, eb = (0, g.default)(G);
-  (0, M.default)(d);
-  let eU = (0, R.useIsDismissibleContentDismissed)(u.DismissibleContent.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
+  let [ei, ed] = (0, N.default)(e => [eo.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eu.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), ec = (0, p.default)(d), ef = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eE = (0, o.useStateFromStores)([Q.default], () => Q.default.hasLayers()), eh = (0, o.useStateFromStores)([F.default], () => F.default.shouldShow(e_)), eC = T && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), eS = (0, o.useStateFromStores)([z.default], () => z.default.getMemberCount(n)), eI = T && null != eS && eS >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), ep = R && null != d && (d.hasFeature(er.GuildFeatures.COMMUNITY) || null != eS && eS > 50), eT = (0, y.default)(n), eg = (0, A.useLowerMemberCountRequirements)(n), eA = (null == d ? void 0 : d.hasFeature(er.GuildFeatures.HUB)) === !0, eN = T && (null == d ? void 0 : d.hasFeature(er.GuildFeatures.DISCOVERABLE)) === !0, ev = (0, I.useBlockedPaymentsConfig)(), eR = (T || (null == d ? void 0 : d.premiumTier) === er.BoostedGuildTiers.NONE) && !ee.ProcessArgs.isDisallowPopupsSet() && !ev, eO = (0, o.useStateFromStores)([D.default, Q.default], () => null != d && null != G && T && !Q.default.hasLayers() && D.default.shouldShowGuildTemplateDirtyTooltip(n)), eL = (0, o.useStateFromStores)([V.default], () => V.default.getChannel(r)), {
+    isPopoutOpen: eP
+  } = (0, L.useGuildHeaderPopoutStore)(), eM = null !== (t = null == d ? void 0 : d.hasFeature(er.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ey = (0, o.useStateFromStores)([w.default], () => !i().isEmpty(w.default.getThreadsForGuild(n))), ex = $.default.isNewUser(G), eD = et && !ex, eb = (0, g.default)(G);
+  (0, P.default)(d);
+  let eU = (0, v.useIsDismissibleContentDismissed)(u.DismissibleContent.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
     ej = (0, j.default)(n),
-    eG = (0, P.default)(n);
-  return (0, a.jsx)(eS, {
+    eG = (0, M.default)(n);
+  return (0, a.jsx)(em, {
     guildId: n,
     hideSelectedChannel: l,
     guild: d,
@@ -505,19 +505,19 @@ function em(e) {
     anyLayerOpen: ef || eE,
     showGuildBoostingProgressBarUpsell: eC,
     showGuildBoostingProgressBarSizeUpsell: eI,
-    showInviteSplashUpsell: eO,
+    showInviteSplashUpsell: eR,
     showDiscoveryLandingPageSettingsUpsell: eN,
     showGuildHeaderTutorial: eh,
-    showGuildTemplateDirtyTooltip: ev,
+    showGuildTemplateDirtyTooltip: eO,
     showRoleSubscriptionUpsell: eT,
     showDiscoveryTooltip: eg,
     showHubPrivacySettingsTooltip: eA,
-    showNewUnreadsBar: eP,
-    showActiveThreadsNotice: D && null != em && em >= 200 && ey,
+    showNewUnreadsBar: eM,
+    showActiveThreadsNotice: x && null != eS && eS >= 200 && ey,
     showGuildSoundboardPermissionUpsell: ep,
     showMediaChannelUpsell: ej,
     showTierTemplatesUpsell: eG,
-    isHeaderPopoutOpen: eM,
+    isHeaderPopoutOpen: eP,
     enableStudyGroup: B,
     isGuildHeaderDismissibleTooltipShown: ed,
     canShowCoachMarkAtBottom: et,
@@ -525,6 +525,6 @@ function em(e) {
     footerAnalyticsLocations: el,
     shouldRenderClipsEducation: eb,
     isTutorialHighlightDismissed: eU,
-    shouldRenderBurstCoachmark: ex
+    shouldRenderBurstCoachmark: eD
   })
 }

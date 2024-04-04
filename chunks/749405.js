@@ -23,9 +23,9 @@ function h(e) {
     channel: h
   } = e, _ = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
     (0, l.showToast)((0, l.createToast)(f.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
-  }, []), S = s.useCallback(() => {
-    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), m = s.useCallback(() => {
+    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+  }, []), S = s.useCallback(() => {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, i.transitionToChannel)(h.id)
   }, [h.id, _]), {
     acceptMessageRequest: I,
@@ -34,13 +34,13 @@ function h(e) {
     isRejectLoading: g,
     isUserProfileLoading: A,
     isOptimisticAccepted: N,
-    isOptimisticRejected: R
+    isOptimisticRejected: v
   } = (0, d.useMessageRequestActions)({
     user: n,
-    onAcceptSuccess: m,
-    onRejectSuccess: S,
+    onAcceptSuccess: S,
+    onRejectSuccess: m,
     onError: C
-  }), O = T || g || A || N || R;
+  }), R = T || g || A || N || v;
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)(c.default, {
@@ -56,8 +56,8 @@ function h(e) {
         onClick: e => {
           e.stopPropagation(), p(h.id)
         },
-        disabled: O,
-        submitting: g || R,
+        disabled: R,
+        submitting: g || v,
         children: f.default.Messages.MESSAGE_REQUEST_IGNORE
       }), (0, a.jsx)(l.Button, {
         className: E.button,
@@ -66,7 +66,7 @@ function h(e) {
         onClick: e => {
           e.stopPropagation(), I(h.id)
         },
-        disabled: O,
+        disabled: R,
         submitting: T || A || N,
         children: f.default.Messages.MESSAGE_REQUEST_ACCEPT
       })]

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoverSearchResultPlaceholder: function() {
-    return O
+    return R
   }
 }), n("47120");
 var a = n("735250"),
@@ -18,49 +18,49 @@ var a = n("735250"),
   h = n("806519"),
   _ = n("768581"),
   C = n("900849"),
-  S = n("556017"),
-  m = n("879484"),
+  m = n("556017"),
+  S = n("879484"),
   I = n("26580"),
   p = n("206887"),
   T = n("981631"),
   g = n("689938"),
   A = n("208596"),
   N = n("129512"),
-  R = n("330065");
-let O = () => (0, a.jsx)("div", {
+  v = n("330065");
+let R = () => (0, a.jsx)("div", {
   className: A.placeholder
 });
 t.default = e => {
   var t;
   let {
     guild: l,
-    theme: O,
-    onView: v,
+    theme: R,
+    onView: O,
     onTagClick: L
   } = e, {
-    id: M,
-    discoverySplash: P,
+    id: P,
+    discoverySplash: M,
     icon: y,
-    name: D,
-    description: x,
+    name: x,
+    description: D,
     presenceCount: b,
     memberCount: U,
     keywords: j
   } = l, [G, w] = s.useState(!1), [k, F] = s.useState(!1), {
     analyticsLocations: B
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
-    id: M,
-    splash: P,
+    id: P,
+    splash: M,
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
       case T.ThemeTypes.DARK:
         return N;
       case T.ThemeTypes.LIGHT:
-        return R
+        return v
     }
-  }(O), Y = null !== (t = _.default.getGuildIconURL({
-    id: M,
+  }(R), Y = null !== (t = _.default.getGuildIconURL({
+    id: P,
     icon: y,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
@@ -83,22 +83,22 @@ t.default = e => {
       }
       F(!0);
       try {
-        null != v && await v(l.id)
+        null != O && await O(l.id)
       } finally {
         F(!1)
       }
     }
   };
-  s.useEffect(() => m.DiscoveryTagsExperiment.trackExposure({
+  s.useEffect(() => S.DiscoveryTagsExperiment.trackExposure({
     location: "4302e4_1"
   }));
   let {
     shouldDisplayTags: K
-  } = m.DiscoveryTagsExperiment.useExperiment({
+  } = S.DiscoveryTagsExperiment.useExperiment({
     location: "4302e4_2"
   }, {
     autoTrackExposure: !1
-  }), z = (0, S.useCanSeeDiscoveryContextMenu)();
+  }), z = (0, m.useCanSeeDiscoveryContextMenu)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: A.card,
@@ -160,13 +160,13 @@ t.default = e => {
               }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: A.headerTitle,
-                children: D
+                children: x
               })]
             })]
           }), (0, a.jsx)(r.Text, {
             className: A.description,
             variant: "text-sm/normal",
-            children: x
+            children: D
           }), K && null != j && null != L && (0, a.jsx)(I.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: I.DiscoveryTagStyle.ALT,

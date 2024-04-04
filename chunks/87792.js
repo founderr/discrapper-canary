@@ -14,23 +14,23 @@ var a = n("735250"),
   h = n("546791"),
   _ = n("259756"),
   C = n("785681"),
-  S = n("985002"),
-  m = n("858719"),
+  m = n("985002"),
+  S = n("858719"),
   I = n("780985"),
   p = n("880257"),
   T = n("631885"),
   g = n("240351"),
   A = n("792258"),
   N = n("657825"),
-  R = n("198952"),
-  O = n("329242"),
-  v = n("895328"),
+  v = n("198952"),
+  R = n("329242"),
+  O = n("895328"),
   L = n("292352"),
-  M = n("981631"),
-  P = n("689938"),
+  P = n("981631"),
+  M = n("689938"),
   y = n("128073");
 
-function D() {
+function x() {
   let e = s.useCallback(() => {
     (0, o.openModalLazy)(async () => {
       let {
@@ -52,15 +52,15 @@ function D() {
   })
 }
 
-function x(e) {
+function D(e) {
   let {
     displayType: t
   } = e, n = s.useCallback(() => {
-    (0, o.showToast)((0, o.createToast)(P.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
-  }, []), l = (0, p.default)(), r = (0, m.useActionsForDisplayType)(t), u = (0, m.useActionTotalsForDisplayType)(t), {
+    (0, o.showToast)((0, o.createToast)(M.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
+  }, []), l = (0, p.default)(), r = (0, S.useActionsForDisplayType)(t), u = (0, S.useActionTotalsForDisplayType)(t), {
     loadMore: d,
     isMoreLoading: c
-  } = (0, S.useFamilyCenterActions)({
+  } = (0, m.useFamilyCenterActions)({
     onError: n
   }), E = L.ACTION_TO_TEXT.get(t), [C, I] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), T = (0, _.useIsEligibleForFamilyCenterVCJoin)({
     location: "family_center_activity_section_web"
@@ -68,8 +68,8 @@ function x(e) {
     I(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i()(E, "No text for action type");
-  let R = E.sectionHeader(u),
-    O = s.useCallback(e => {
+  let v = E.sectionHeader(u),
+    R = s.useCallback(e => {
       let {
         row: t
       } = e, n = r[t];
@@ -81,32 +81,32 @@ function x(e) {
         guildId: n.entity_id
       }, n.event_id) : void 0
     }, [r, E.timestampFormatter]),
-    v = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
+    O = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Text, {
         className: y.sectionHeader,
         variant: "eyebrow",
         color: "header-secondary",
-        children: R
+        children: v
       }), void 0 !== E.sectionDescription ? (0, a.jsx)(o.Text, {
         className: y.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
         children: E.sectionDescription(null != l && l, T)
       }) : null]
-    }), [R, E, l, T]);
+    }), [v, E, l, T]);
   if (0 === r.length) return null;
-  let M = r.slice(0, C);
+  let P = r.slice(0, C);
   return (0, a.jsxs)("div", {
     className: y.actionSection,
-    children: [v(), (0, a.jsx)("div", {
+    children: [O(), (0, a.jsx)("div", {
       className: y.actions,
       style: {
-        maxHeight: 65 * M.length
+        maxHeight: 65 * P.length
       },
-      children: M.map((e, t) => O({
+      children: P.map((e, t) => R({
         row: t
       }))
-    }), M.length !== u ? (0, a.jsx)(o.Clickable, {
+    }), P.length !== u ? (0, a.jsx)(o.Clickable, {
       className: y.loadMoreBar,
       onClick: g,
       role: "button",
@@ -116,8 +116,8 @@ function x(e) {
       }) : (0, a.jsx)(o.Text, {
         className: y.loadMore,
         variant: "text-sm/bold",
-        children: P.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-          pageSize: Math.min(u - M.length, L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
+        children: M.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
+          pageSize: Math.min(u - P.length, L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
         })
       })
     }) : null]
@@ -126,9 +126,9 @@ function x(e) {
 let b = () => {
     let e = (0, p.default)(),
       t = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
-      n = (0, C.useAgeSpecificText)(P.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
+      n = (0, C.useAgeSpecificText)(M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
-      }), P.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
+      }), M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
       s = (0, h.getActivityWindowTimestampFormatter)(!!e),
       l = (0, T.useActivityWindowTimeStamp)(s);
     return e && t.length > 1 ? (0, a.jsx)(o.Text, {
@@ -151,12 +151,12 @@ let b = () => {
     } = e, l = (0, I.useTeenUserForId)(t);
     return void 0 === l ? null : (0, a.jsxs)("div", {
       className: y.accountRow,
-      children: [(0, a.jsx)(R.FamilyCenterAvatar, {
+      children: [(0, a.jsx)(v.FamilyCenterAvatar, {
         user: l,
         avatarSize: s
       }), (0, a.jsxs)("div", {
         className: y.headerText,
-        children: [(0, a.jsx)(O.default, {
+        children: [(0, a.jsx)(R.default, {
           user: l
         }), void 0 !== n ? (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
@@ -171,7 +171,7 @@ let b = () => {
       t = (0, r.useStateFromStores)([E.default], () => E.default.getSelectedTeenId()),
       {
         selectTeenUser: n
-      } = (0, S.useFamilyCenterActions)({}),
+      } = (0, m.useFamilyCenterActions)({}),
       l = e.map(e => ({
         label: e.id,
         value: e.id
@@ -189,7 +189,7 @@ let b = () => {
       },
       serialize: e => e,
       select: e => {
-        n(e), c.default.track(M.AnalyticEvents.FAMILY_CENTER_ACTION, {
+        n(e), c.default.track(P.AnalyticEvents.FAMILY_CENTER_ACTION, {
           action: L.FamilyCenterAction.SelectTeen
         })
       },
@@ -209,12 +209,12 @@ let b = () => {
 t.default = e => {
   let {
     user: t
-  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, m.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, T.useActivityWindowTimeStamp)(l);
+  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, S.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, T.useActivityWindowTimeStamp)(l);
   return (0, a.jsxs)("div", {
     className: y.container,
     children: [(0, a.jsxs)("div", {
       className: y.connectedCounter,
-      children: [(0, a.jsx)(b, {}), (0, a.jsx)(D, {})]
+      children: [(0, a.jsx)(b, {}), (0, a.jsx)(x, {})]
     }), (0, a.jsxs)("div", {
       className: y.card,
       children: [(0, a.jsx)("div", {
@@ -237,10 +237,10 @@ t.default = e => {
           className: y.activityOverview,
           children: s ? n.map(e => {
             let [t] = e;
-            return (0, a.jsx)(x, {
+            return (0, a.jsx)(D, {
               displayType: t
             }, "".concat(t, "-list"))
-          }) : (0, a.jsx)(v.default, {
+          }) : (0, a.jsx)(O.default, {
             className: y.emptyActivity,
             text: null != i ? i : ""
           })
