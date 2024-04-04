@@ -17,42 +17,42 @@ t.default = e => {
     guildId: t,
     setPage: n,
     onClose: _
-  } = e, C = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
-    selectedGames: S,
-    playstyle: m,
-    interests: I,
-    description: p,
-    tag: T,
-    primetime: g
+  } = e, C = s.useRef(null), S = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
+    selectedGames: m,
+    playstyle: I,
+    interests: p,
+    description: T,
+    tag: g,
+    primetime: A
   } = (0, i.useStateFromStoresObject)([d.default], () => {
     var e;
     return null !== (e = d.default.getState(t)) && void 0 !== e ? e : {}
-  }), A = s.useRef(null), N = s.useRef(null), R = s.useRef(null), [O, v] = s.useState(!1), L = (0, l.useSpring)({
-    ref: A,
+  }), N = s.useRef(null), R = s.useRef(null), O = s.useRef(null), [v, L] = s.useState(!1), M = (0, l.useSpring)({
+    ref: N,
     config: l.config.slow,
     from: {
       flex: 1,
-      paddingLeft: C ? 120 : 0
+      paddingLeft: S ? 120 : 0
     },
     to: {
       flex: 1,
       paddingLeft: 120
     }
   }), P = (0, l.useSpring)({
-    ref: N,
+    ref: R,
     config: l.config.slow,
     from: {
-      flex: C ? 1 : 0,
-      paddingRight: C ? 120 : 0,
-      marginLeft: C ? -32 : 0
+      flex: S ? 1 : 0,
+      paddingRight: S ? 120 : 0,
+      marginLeft: S ? -32 : 0
     },
     to: {
       flex: 1,
       paddingRight: 120,
       marginLeft: -32
     }
-  }), M = (0, l.useSpring)({
-    ref: R,
+  }), y = (0, l.useSpring)({
+    ref: O,
     config: l.config.default,
     from: {
       opacity: 0
@@ -61,13 +61,13 @@ t.default = e => {
       opacity: 1
     }
   });
-  return (0, l.useChain)([A, N, R], [0, 0, 1]), (0, a.jsxs)("div", {
+  return (0, l.useChain)([N, R, O], [0, 0, 1]), (0, a.jsxs)("div", {
     className: h.animationContainer,
     children: [(0, a.jsxs)(l.animated.div, {
       className: h.signTextLeft,
       style: {
-        ...L,
-        ...M
+        ...M,
+        ...y
       },
       children: [(0, a.jsx)(r.Heading, {
         variant: "heading-xxl/medium",
@@ -81,19 +81,25 @@ t.default = e => {
       className: h.scrollContainer,
       children: (0, a.jsx)(c.default, {
         guildId: t,
-        signed: O,
-        setSigned: v
+        signed: v,
+        setSigned: L,
+        signRef: C
       })
     }), (0, a.jsxs)(l.animated.div, {
       className: h.signTextRight,
       style: {
         ...P,
-        ...M
+        ...y
       },
       children: [(0, a.jsx)(r.Button, {
         className: h.signButton,
         size: r.Button.Sizes.SMALL,
-        onClick: () => v(!0),
+        onClick: () => {
+          var e;
+          null === (e = C.current) || void 0 === e || e.scrollIntoView({
+            behavior: "smooth"
+          }), L(!0)
+        },
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, a.jsx)(r.Text, {
         variant: "text-xs/normal",
@@ -119,15 +125,15 @@ t.default = e => {
       look: r.Button.Looks.FILLED,
       size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.BRAND,
-      disabled: !O,
+      disabled: !v,
       onClick: () => {
         u.convertGuildToClan(t, {
-          selectedGames: S,
-          playstyle: m,
-          interests: I,
-          description: p,
-          tag: T,
-          primetime: g
+          selectedGames: m,
+          playstyle: I,
+          interests: p,
+          description: T,
+          tag: g,
+          primetime: A
         }), _()
       },
       children: E.default.Messages.FINISH
