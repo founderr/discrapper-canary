@@ -372,7 +372,7 @@ let W = new j(a.default, {
     } = e, n = R.get(t);
     R.delete(t), (null == n ? void 0 : n.channelId) === i && (i = void 0)
   },
-  EMBEDDED_ACTIVITY_INBOUND_UPDATE: function(e) {
+  EMBEDDED_ACTIVITY_UPDATE: function(e) {
     let {
       guildId: t,
       channelId: n,
@@ -387,7 +387,7 @@ let W = new j(a.default, {
       userIds: r.map(e => e.user_id)
     })
   },
-  EMBEDDED_ACTIVITY_INBOUND_UPDATE_V2: function(e) {
+  EMBEDDED_ACTIVITY_UPDATE_V2: function(e) {
     let {
       activitySessionId: t,
       applicationId: n,

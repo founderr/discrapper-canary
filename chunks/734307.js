@@ -209,7 +209,7 @@ u = "ChannelListStore", (i = "displayName") in(a = W) ? Object.defineProperty(a,
   },
   DRAWER_CLOSE: F,
   DRAWER_OPEN: F,
-  EMBEDDED_ACTIVITY_INBOUND_UPDATE: function(e) {
+  EMBEDDED_ACTIVITY_UPDATE: function(e) {
     let {
       guildId: t,
       channelId: n
