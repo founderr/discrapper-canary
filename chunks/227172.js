@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n("627494"), n("757143");
+n.r(t);
 var a = n("735250");
 n("470079");
 var l = n("442837"),
@@ -16,71 +16,53 @@ var l = n("442837"),
   p = n("43205"),
   E = n("591853"),
   C = n("206583"),
-  g = n("689938"),
-  S = n("522791");
-let _ = e => {
-    let t = (0, u.isEntryActive)(e);
-    return (0, u.isEntryNew)(e) ? t ? g.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME : g.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME : t ? g.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME : g.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME
-  },
-  T = (e, t, n) => {
-    let a = _(e),
-      l = o.default.getName(t.guild_id, t.id, n),
-      s = e.extra.game_name;
-    return a.plainFormat({
-      gameName: s,
-      userName: l
-    }).replaceAll("*", "")
-  },
-  I = (e, t, n) => {
-    let a = _(e),
-      l = o.default.getName(t.guild_id, t.id, n),
-      s = e.extra.game_name;
-    return a.format({
-      userName: l,
-      gameName: s
-    })
-  },
-  A = (e, t) => g.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
-    username: t.username,
-    activity: e.extra.game_name
-  });
+  g = n("522791");
+let S = (e, t, n) => {
+  let a = (0, f.getDescription)(e),
+    l = o.default.getName(t.guild_id, t.id, n),
+    s = e.extra.game_name;
+  return a.format({
+    userName: l,
+    gameName: s
+  })
+};
 t.default = e => {
   let {
     closePopout: t,
     channel: n,
     entry: o,
-    requestId: g,
-    updatePopoutPosition: _
+    requestId: _,
+    updatePopoutPosition: T
   } = e, {
-    applicationImageSrc: v,
-    user: N
+    applicationImageSrc: I,
+    user: A
   } = (0, m.useGamingContentData)(o), {
-    primaryColor: x,
-    secondaryColor: M
-  } = (0, h.default)(v), R = (0, l.useStateFromStores)([r.default], () => r.default.locale);
-  if (null == N) return null;
-  let L = async e => {
+    primaryColor: v,
+    secondaryColor: N
+  } = (0, h.default)(I), x = (0, l.useStateFromStores)([r.default], () => r.default.locale);
+  if (null == A) return null;
+  let M = async e => {
     try {
       let t = await i.default.openPrivateChannel(o.author_id, !1, !1),
         a = await (0, c.generateGamingContentImage)({
           entry: o,
-          applicationImageSrc: v,
-          avatarSrc: N.getAvatarURL(n.guild_id, 128),
-          description: T(o, n, N),
-          timestamp: (0, u.formatEntryTimestamp)(o, R),
-          colors: [x, M],
+          applicationImageSrc: I,
+          avatarSrc: A.getAvatarURL(n.guild_id, 128),
+          description: (0, f.formatCanvasDescription)(o, n, A),
+          timestamp: (0, u.formatEntryTimestamp)(o, x),
+          colors: [v, N],
           channelId: t
         });
       await (0, f.sendContentImageReply)({
         file: a,
-        user: N,
-        altText: A(o, N),
+        user: A,
+        altText: (0, f.getContentAltText)(o, A),
         reply: e
       }), (0, d.trackInteraction)(C.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
         entry: o,
         channelId: n.id,
         guildId: n.guild_id,
-        requestId: g
+        requestId: _
       })
     } finally {
       t()
@@ -88,32 +70,32 @@ t.default = e => {
   };
   return (0, a.jsxs)(E.Popout, {
     children: [(0, a.jsxs)(E.PopoutHero, {
-      backgroundImgSrc: v,
+      backgroundImgSrc: I,
       children: [(0, a.jsxs)("div", {
-        className: S.heroDetails,
+        className: g.heroDetails,
         children: [(0, a.jsxs)("div", {
           children: [(0, a.jsx)(E.PopoutAvatar, {
-            user: N,
+            user: A,
             guildId: n.guild_id
           }), (0, a.jsx)(E.PopoutTitle, {
-            children: I(o, n, N)
+            children: S(o, n, A)
           })]
         }), (0, a.jsx)(p.ContentImage, {
           size: 80,
-          src: v,
-          className: S.contentImage
+          src: I,
+          className: g.contentImage
         })]
       }), (0, a.jsx)(m.ContentRowBadges, {
-        className: S.badgeContainer,
+        className: g.badgeContainer,
         entry: o,
         textColor: "always-white",
         iconColor: s.tokens.colors.WHITE
       })]
     }), (0, a.jsx)(E.PopoutReactor, {
-      onMessageReact: L,
-      user: N,
+      onMessageReact: M,
+      user: A,
       channel: n,
-      updatePopoutPosition: _
+      updatePopoutPosition: T
     })]
   })
 }
