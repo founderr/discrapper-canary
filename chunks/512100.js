@@ -86,6 +86,7 @@ function f(e) {
           }), (0, i.jsx)(c.Text, {
             color: "text-muted",
             variant: "text-md/normal",
+            className: u.description,
             children: n
           }), null != t && (0, i.jsxs)("div", {
             className: u.benefits,

@@ -120,9 +120,9 @@ function m(e) {
       children: [(0, i.jsx)(o.Text, {
         variant: "text-md/semibold",
         children: n
-      }), (0, i.jsx)(o.Text, {
+      }), null != r && (0, i.jsx)(o.Text, {
         variant: "text-sm/medium",
-        className: u.cardBenefitDesc,
+        color: "text-muted",
         children: r
       })]
     })]
