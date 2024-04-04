@@ -35,13 +35,16 @@ function c(e) {
       location: t + " auto off",
       autoTrackExposure: !1
     });
-    let [a, o, u, c] = (0, r.useStateFromStoresArray)([n.default], () => {
+    let [a, o, u, c, d] = (0, r.useStateFromStoresArray)([n.default], () => {
       var e;
-      return [n.default.isFetching, n.default.error, null !== (e = n.default.lastFetched) && void 0 !== e ? e : 0, n.default.categories]
+      return [n.default.isFetching, n.default.error, null !== (e = n.default.lastFetched) && void 0 !== e ? e : 0, n.default.categories, n.default.fetchedCountryCode]
     });
     return (0, s.useEffect)(() => {
-      !(a || o || Date.now() - u < 6e5) && (0, i.fetchCollectiblesCategories)(e)
-    }, [a, u, o, e]), {
+      if (d !== (null == e ? void 0 : e.countryCode)) {
+        (0, i.fetchCollectiblesCategories)(e);
+        return
+      }!(a || o || Date.now() - u < 6e5) && (0, i.fetchCollectiblesCategories)(e)
+    }, [a, u, o, e, d]), {
       isFetching: a,
       categories: c,
       error: o
