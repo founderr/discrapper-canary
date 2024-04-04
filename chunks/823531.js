@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return o
+    return c
   }
 });
 var i = l("735250");
@@ -11,11 +11,11 @@ var a = l("481060"),
   s = l("299206"),
   r = l("689938");
 
-function o(e) {
+function c(e) {
   let {
     application: t,
     onSelect: l
-  } = e, o = (0, s.default)({
+  } = e, c = (0, s.default)({
     id: t.id,
     label: r.default.Messages.COPY_ID
   });
@@ -25,7 +25,7 @@ function o(e) {
     "aria-label": r.default.Messages.ACTIVITY_SHELF_ITEM_ACTIONS_MENU_LABEL,
     onSelect: l,
     children: (0, i.jsx)(a.MenuGroup, {
-      children: o
+      children: c
     }, "developer-actions")
   })
 }

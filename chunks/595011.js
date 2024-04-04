@@ -19,10 +19,10 @@ t.default = (0, r.default)(function(e) {
     guildId: l,
     analyticsContext: r,
     onSelect: a
-  } = e, h = (0, c.default)(t.id), E = (0, f.default)(t.id, l), R = (0, d.default)({
+  } = e, E = (0, c.default)(t.id), h = (0, f.default)(t.id, l), R = (0, d.default)({
     id: t.id,
     label: O.default.Messages.COPY_ID_USER
-  }), p = (0, s.default)(t.id), v = t.isNonUserBot();
+  }), p = (0, s.default)(t.id), x = t.isNonUserBot();
   return (0, n.jsx)(o.default, {
     context: r,
     object: M.AnalyticsObjects.CONTEXT_MENU,
@@ -32,9 +32,9 @@ t.default = (0, r.default)(function(e) {
       "aria-label": O.default.Messages.USER_ACTIONS_MENU_LABEL,
       onSelect: a,
       children: [(0, n.jsxs)(u.MenuGroup, {
-        children: [!v && h, !v && p]
+        children: [!x && E, !x && p]
       }), (0, n.jsx)(u.MenuGroup, {
-        children: !v && E
+        children: !x && h
       }), (0, n.jsx)(u.MenuGroup, {
         children: R
       })]

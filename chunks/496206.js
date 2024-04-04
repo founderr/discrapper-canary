@@ -8,8 +8,8 @@ var a = s("735250");
 s("470079");
 var l = s("803997"),
   i = s.n(l),
-  o = s("481060"),
-  r = s("981631"),
+  r = s("481060"),
+  o = s("981631"),
   n = s("689938"),
   u = s("353491");
 
@@ -18,10 +18,10 @@ function d(e) {
     className: t,
     ...s
   } = e;
-  return (0, a.jsx)(o.Button, {
+  return (0, a.jsx)(r.Button, {
     ...s,
-    look: o.Button.Looks.FILLED,
-    size: o.Button.Sizes.SMALL,
+    look: r.Button.Looks.FILLED,
+    size: r.Button.Sizes.SMALL,
     className: i()(u.actionButton, t)
   })
 }
@@ -35,28 +35,28 @@ function c(e) {
     onIgnoreFriend: c,
     onSendMessage: f
   } = e;
-  return t || l === r.RelationshipTypes.BLOCKED ? null : l === r.RelationshipTypes.FRIEND || s.bot ? (0, a.jsx)(d, {
-    color: o.Button.Colors.GREEN,
+  return t || l === o.RelationshipTypes.BLOCKED ? null : l === o.RelationshipTypes.FRIEND || s.bot ? (0, a.jsx)(d, {
+    color: r.Button.Colors.GREEN,
     onClick: f,
     children: n.default.Messages.SEND_MESSAGE
-  }) : l === r.RelationshipTypes.PENDING_OUTGOING ? (0, a.jsx)(d, {
-    color: o.Button.Colors.GREEN,
+  }) : l === o.RelationshipTypes.PENDING_OUTGOING ? (0, a.jsx)(d, {
+    color: r.Button.Colors.GREEN,
     disabled: !0,
     children: n.default.Messages.ADD_FRIEND_BUTTON_AFTER
-  }) : l === r.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)("div", {
+  }) : l === o.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)("div", {
     className: u.pendingIncoming,
     children: [(0, a.jsx)(d, {
-      color: o.Button.Colors.GREEN,
+      color: r.Button.Colors.GREEN,
       onClick: i,
       children: n.default.Messages.FRIEND_REQUEST_ACCEPT
     }), (0, a.jsx)(d, {
-      color: o.Button.Colors.PRIMARY,
+      color: r.Button.Colors.PRIMARY,
       onClick: c,
       className: u.actionRightButton,
       children: n.default.Messages.FRIEND_REQUEST_IGNORE
     })]
   }) : (0, a.jsx)(d, {
-    color: o.Button.Colors.GREEN,
+    color: r.Button.Colors.GREEN,
     onClick: i,
     children: n.default.Messages.ADD_FRIEND_BUTTON
   })

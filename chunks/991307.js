@@ -33,7 +33,7 @@ function _(e) {
       muted: S,
       deafened: T = !1,
       localVideoDisabled: N = !1,
-      localVideoAutoDisabled: v = !1
+      localVideoAutoDisabled: x = !1
     } = (0, n.useStateFromStoresObject)([o.default], () => a ? {
       muted: o.default.isSelfMute(t),
       deafened: o.default.isSelfDeaf(t)
@@ -42,11 +42,11 @@ function _(e) {
       localVideoDisabled: o.default.isLocalVideoDisabled(e, t),
       localVideoAutoDisabled: o.default.isLocalVideoAutoDisabled(e, t)
     }, [a, t, e]),
-    x = o.default.supports(g.Features.DISABLE_VIDEO) && !a ? (0, l.jsx)(u.MenuCheckboxItem, {
+    A = o.default.supports(g.Features.DISABLE_VIDEO) && !a ? (0, l.jsx)(u.MenuCheckboxItem, {
       id: "disable-video",
       label: I.default.Messages.DISABLE_VIDEO,
       action: () => {
-        if (v) {
+        if (x) {
           d.default.show({
             title: I.default.Messages.UNSTABLE_CONNECTION,
             body: I.default.Messages.UNSTABLE_CONNECTION_REASON_2,
@@ -60,7 +60,7 @@ function _(e) {
         s.default.setDisableLocalVideo(e, a, t)
       },
       checked: N,
-      subtext: v ? (0, l.jsxs)("div", {
+      subtext: x ? (0, l.jsxs)("div", {
         className: C.videoPaused,
         children: [(0, l.jsx)(M.default, {
           width: 12,
@@ -68,7 +68,7 @@ function _(e) {
         }), I.default.Messages.UNSTABLE_CONNECTION]
       }) : null
     }, "disable-video") : null,
-    A = a ? null : (0, l.jsx)(u.MenuCheckboxItem, {
+    v = a ? null : (0, l.jsx)(u.MenuCheckboxItem, {
       id: "soundboard-sound-mute",
       label: I.default.Messages.MUTE_SOUNDBOARD,
       action: () => {
@@ -97,10 +97,10 @@ function _(e) {
       context: t
     }),
     checked: T
-  }, "self-deafen"), x] : [(0, l.jsx)(u.MenuCheckboxItem, {
+  }, "self-deafen"), A] : [(0, l.jsx)(u.MenuCheckboxItem, {
     id: "mute",
     label: I.default.Messages.SOUND_MUTE,
     action: () => s.default.toggleLocalMute(e, t),
     checked: S
-  }, "self-mute"), A, x]
+  }, "self-mute"), v, A]
 }

@@ -8,8 +8,8 @@ var a = s("735250");
 s("470079");
 var l = s("803997"),
   i = s.n(l),
-  o = s("442837"),
-  r = s("481060"),
+  r = s("442837"),
+  o = s("481060"),
   n = s("129861"),
   u = s("427217"),
   d = s("158776"),
@@ -22,7 +22,7 @@ function E(e) {
   let {
     user: t,
     displayProfile: s
-  } = e, l = (0, o.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), E = c.default.getName(t);
+  } = e, l = (0, r.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), E = c.default.getName(t);
   return (0, a.jsxs)("div", {
     className: m.container,
     children: [null == E && (0, a.jsx)(n.default, {
@@ -31,7 +31,7 @@ function E(e) {
       usernameClass: m.username,
       discriminatorClass: m.discriminator
     }), null != E && (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(r.Text, {
+      children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/semibold",
         style: {
           marginRight: "12px"
@@ -44,9 +44,9 @@ function E(e) {
         discriminatorClass: m.discriminator,
         className: i()(m.nameTag, m.nameTagSmall)
       })]
-    }), (null == s ? void 0 : s.pronouns) != null && (null == s ? void 0 : s.pronouns) !== "" && (0, a.jsx)(r.Tooltip, {
+    }), (null == s ? void 0 : s.pronouns) != null && (null == s ? void 0 : s.pronouns) !== "" && (0, a.jsx)(o.Tooltip, {
       text: S.default.Messages.USER_PROFILE_PRONOUNS,
-      children: e => (0, a.jsx)(r.Text, {
+      children: e => (0, a.jsx)(o.Text, {
         ...e,
         variant: "text-sm/normal",
         className: i()(m.pronouns, m.nameTagSmall),
@@ -54,7 +54,7 @@ function E(e) {
       })
     }), null != l ? (0, a.jsx)("div", {
       className: m.__invalid_customStatusActivity,
-      children: (0, a.jsx)(r.Text, {
+      children: (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         className: m.customStatusText,

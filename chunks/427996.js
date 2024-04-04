@@ -10,34 +10,34 @@ var a = l("399606"),
   n = l("481060"),
   s = l("6048"),
   r = l("337682"),
-  o = l("115130"),
-  c = l("689938"),
-  d = l("757879");
+  c = l("115130"),
+  d = l("689938"),
+  o = l("757879");
 
 function u() {
   let {
     activityUrlOverride: e,
     useActivityUrlOverride: t,
     filter: l
-  } = (0, a.useStateFromStoresObject)([o.default], () => ({
-    activityUrlOverride: o.default.getActivityUrlOverride(),
-    useActivityUrlOverride: o.default.getUseActivityUrlOverride(),
-    filter: o.default.getFilter()
+  } = (0, a.useStateFromStoresObject)([c.default], () => ({
+    activityUrlOverride: c.default.getActivityUrlOverride(),
+    useActivityUrlOverride: c.default.getUseActivityUrlOverride(),
+    filter: c.default.getFilter()
   }), []);
   return (0, i.jsxs)("div", {
-    className: d.container,
+    className: o.container,
     children: [(0, i.jsx)(n.Checkbox, {
       type: n.Checkbox.Types.INVERTED,
-      className: d.__invalid_checkbox,
+      className: o.__invalid_checkbox,
       value: t,
       onClick: r.toggleUseActivityUrlOverride,
       children: (0, i.jsx)(n.Text, {
         variant: "text-md/semibold",
-        children: c.default.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
+        children: d.default.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
       })
     }), (0, i.jsx)(n.FormItem, {
-      className: d.__invalid_urlOverride,
-      title: c.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
+      className: o.__invalid_urlOverride,
+      title: d.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
       children: (0, i.jsx)(n.TextInput, {
         disabled: !t,
         value: null != e ? e : void 0,
@@ -46,7 +46,7 @@ function u() {
       })
     }), (0, i.jsx)("div", {
       children: (0, i.jsx)(s.default, {
-        className: d.searchBar,
+        className: o.searchBar,
         query: l,
         onChange: r.updateFilter,
         onClear: function() {
