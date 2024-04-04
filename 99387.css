@@ -6280,7 +6280,7 @@ html .invoiceCancelRow_aa7946 {
 }
 
 .title__63238 {
-    font-size: 1.0625rem
+    font-size: 17px
 }
 
 .developerResources__8ef1d:hover {
@@ -6311,8 +6311,8 @@ html .invoiceCancelRow_aa7946 {
 }
 
 .backHeader_cff6da {
-    font-size: 1.0625rem;
-    line-height: 1.5rem;
+    font-size: 17px;
+    line-height: 24px;
     color: var(--interactive-normal)
 }
 
@@ -21861,26 +21861,6 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 .editCard__7d03f {
     position: relative;
     background-color: var(--background-secondary);
-    border-radius: 8px;
-    transition: background-color.1s ease
-}
-
-.editCard__7d03f.active_ef2ec5 {
-    background-color: var(--background-accent)
-}
-
-.editCard__7d03f:before {
-    box-shadow: var(--elevation-stroke), var(--elevation-low);
-    opacity: 0;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: opacity.2s ease-in-out;
-    z-index: 0;
-    overflow: visible;
     border-radius: 8px
 }
 
@@ -21898,6 +21878,11 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 
 .editCard__7d03f:not(:last-child) {
     margin-bottom: 8px
+}
+
+.noBackground_bd4a0c {
+    background-color: transparent;
+    background-color: initial
 }
 
 .innerHeader__309a6 {
@@ -21992,6 +21977,10 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 
 .itemBodyContainer__80807 {
     padding: 0 16px 16px
+}
+
+.noPadding__0b167 {
+    padding: 0
 }
 
 .itemBodyInner__14162 {
@@ -32740,7 +32729,8 @@ input[type=checked]:focus-visible+.label__73b15 {
 }
 
 .videoGrid__6c223 {
-    height: 100%
+    height: 100%;
+    min-width: 100px
 }
 
 .hiddenParticipants_eba0ee p {
@@ -41622,7 +41612,8 @@ html .progress__00e29 {
 
 .checkbox__99b08 {
     margin-top: 16px;
-    cursor: pointer
+    cursor: pointer;
+    opacity: 1
 }
 
 .formItemDescription__0d806 {
@@ -90608,7 +90599,6 @@ html .tabBadge_ff691d {
 
 .backgroundContainer__8f24a {
     background-color: var(--background-secondary);
-    border-radius: 4px;
     position: relative;
     flex: 1
 }
@@ -90884,16 +90874,6 @@ html .tabBadge_ff691d {
     background-color: var(--interactive-muted)
 }
 
-.container__34b4f {
-    display: flex;
-    align-items: center
-}
-
-.text_c75ce3 {
-    margin: 24px 16px;
-    white-space: nowrap
-}
-
 .previewAndEnable__1a915 {
     display: flex;
     flex-direction: row;
@@ -90910,13 +90890,15 @@ html .tabBadge_ff691d {
     color: var(--interactive-active)
 }
 
-.rulesScreeningItems_c21410 {
-    padding-bottom: 24px
-}
-
 .rulesScreeningItems_c21410>div {
     border: 1px solid var(--background-modifier-accent);
+    border-radius: 8px;
+    overflow: hidden;
     position: relative
+}
+
+.rulesScreeningItemsNoBorder_a9cb35>div {
+    border: 0
 }
 
 .pillRow_d3a3b3 {
@@ -99542,7 +99524,7 @@ html .invoiceCancelRow__6ff3e {
 .content__40726 {
     display: flex;
     flex-direction: column;
-    padding: 24px;
+    padding: 24px 0 24px 24px;
     padding-bottom: 0;
     position: relative;
     overflow: hidden;
@@ -99583,11 +99565,31 @@ html .invoiceCancelRow__6ff3e {
     color: var(--interactive-active)
 }
 
+.scrollerContent_c4a0ca {
+    max-width: 652px;
+    padding-bottom: 24px
+}
+
+.setupHeader__5d3d9 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
 .previewContainer_e43d4c {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
     gap: 8px;
     margin-bottom: 8px
+}
+
+.previewButton__8c785 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px
 }
 
 .container_ca070b {
