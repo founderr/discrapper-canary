@@ -15,9 +15,10 @@ t.default = function(e) {
     isDropHovered: d,
     onDrop: c,
     onEdit: u,
-    onRemove: f
+    onRemove: f,
+    canRemove: m
   } = e, {
-    label: m
+    label: E
   } = t;
   return (0, a.jsx)(r.default, {
     field: t,
@@ -27,7 +28,8 @@ t.default = function(e) {
     onDrop: c,
     onEdit: u,
     onRemove: f,
-    title: m,
+    title: E,
+    canRemove: m,
     children: (0, a.jsx)(s.MultipleChoiceFieldBody, {
       field: t,
       value: void 0,

@@ -4,6 +4,7 @@ e.exports = {
   contentExpandContainer: "contentExpandContainer__684c6",
   editCard: "editCard__7d03f",
   innerHeader: "innerHeader__309a6",
+  noBackground: "noBackground_bd4a0c",
   showOverflow: "showOverflow__43c66",
   toggled: "toggled__775cb"
 }

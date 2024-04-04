@@ -18,53 +18,45 @@ t.default = l.memo(function(e) {
     isExpanded: n,
     isStuck: E,
     onExpand: I,
-    disableAnimation: x
-  } = e, h = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [T, M] = l.useState(!0), [F, _] = l.useState(!1), {
+    disableAnimation: x,
+    disableBackground: h
+  } = e, T = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [M, F] = l.useState(!0), [_, R] = l.useState(!1), {
     ref: v,
-    height: R = 0
+    height: g = 0
   } = (0, c.default)(), {
     ref: p,
     height: C = 0
-  } = (0, c.default)(), [N, g] = l.useState(n), j = (0, r.useSpring)({
-    height: N ? C + R : R,
-    immediate: T || h || x,
+  } = (0, c.default)(), [N, j] = l.useState(n), L = (0, r.useSpring)({
+    height: N ? C + g : g,
+    immediate: M || T || x,
     config: {
       ...r.config.stiff,
       clamp: !0
     },
     onStart: () => {
-      _(!1)
+      R(!1)
     },
     onRest: () => {
-      _(!0)
+      R(!0)
     }
   });
-  l.useLayoutEffect(() => {
-    _(!1), g(n)
-  }, [n]);
-  let [L, y] = l.useState(!1), A = () => {
-    y(!1)
-  };
   return l.useLayoutEffect(() => {
+    R(!1), j(n)
+  }, [n]), l.useLayoutEffect(() => {
     let e = setTimeout(() => {
-      M(!1)
+      F(!1)
     }, 100);
     return () => clearTimeout(e)
   }, []), (0, a.jsx)(d.Clickable, {
     className: s()(m.editCard, {
       [m.toggled]: n,
-      [m.active]: L
+      [m.noBackground]: h
     }),
-    onMouseLeave: A,
-    onMouseDown: () => {
-      y(!0)
-    },
-    onMouseUp: A,
     children: (0, a.jsxs)(r.animated.div, {
       className: s()(m.contentExpandContainer, {
-        [m.showOverflow]: n && F
+        [m.showOverflow]: n && _
       }),
-      style: j,
+      style: L,
       children: [(0, a.jsx)(d.Clickable, {
         innerRef: v,
         onClick: E ? void 0 : I,

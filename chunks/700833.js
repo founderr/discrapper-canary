@@ -29,12 +29,13 @@ function m(e) {
     submittedGuildJoinRequestsCount: h,
     removeFormField: T,
     updateFormField: M,
-    updateFormFieldOrder: F
-  } = e, _ = async () => {
+    updateFormFieldOrder: F,
+    canRemove: _
+  } = e, R = async () => {
     await T(E)
   }, v = async e => {
     await M(E, e)
-  }, R = async (e, t, i) => {
+  }, g = async (e, t, i) => {
     await F(e, t, i)
   }, p = (0, l.uniqueId)(), C = t === E, N = {
     key: p,
@@ -54,8 +55,9 @@ function m(e) {
         })
       })
     },
-    onRemove: _,
-    onDrop: R
+    onRemove: R,
+    onDrop: g,
+    canRemove: _
   };
   switch (u.field_type) {
     case s.VerificationFormFieldTypes.TERMS:

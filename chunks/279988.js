@@ -21,8 +21,9 @@ t.default = function(e) {
     onDrop: I,
     onEdit: x,
     onRemove: h,
-    title: T
-  } = e, M = i.values, F = M.slice(0, 1), _ = M.length - F.length;
+    canRemove: T,
+    title: M
+  } = e, F = i.values, _ = F.slice(0, 1), R = F.length - _.length;
   return (0, a.jsxs)(c.default, {
     field: i,
     index: l,
@@ -31,20 +32,21 @@ t.default = function(e) {
     onDrop: I,
     onEdit: x,
     onRemove: h,
-    title: T,
+    title: M,
+    canRemove: T,
     children: [(0, a.jsx)(d.TermsFieldBody, {
       className: n()(f.fieldBackground, {
-        [f.withFooter]: 0 !== _
+        [f.withFooter]: 0 !== R
       }),
-      terms: F,
+      terms: _,
       channelId: t
-    }), 0 !== _ && (0, a.jsxs)(r.Clickable, {
+    }), 0 !== R && (0, a.jsxs)(r.Clickable, {
       className: n()(f.fieldFooterContainer, f.clickable),
       onClick: x,
       children: [(0, a.jsx)(r.FormText, {
         className: f.clickable,
         children: u.default.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({
-          count: _
+          count: R
         })
       }), (0, a.jsx)(o.default, {
         className: f.termsFieldCaretIcon,

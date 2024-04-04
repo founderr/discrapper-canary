@@ -1707,6 +1707,8 @@ e.exports = Object.freeze({
   MEMBER_VERIFICATION_VERIFICATION_FIELD_SETTINGS_TOOLTIP: "New members will also be required to pass your verification level requirements.",
   MEMBER_VERIFICATION_MEMBER_APPLICATION: "Member Application",
   MEMBER_VERIFICATION_MEMBER_APPLICATIONS: "Member Applications",
+  MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP: "Application Setup",
+  MEMBER_VERIFICATION_PREVIEW_APPLICATION: "Preview Application",
   GUILD_JOIN_REQUEST_STATUS_TOOLTIP_STARTED: "Membership Incomplete",
   GUILD_JOIN_REQUEST_STATUS_TOOLTIP_PENDING: "Membership In Review",
   GUILD_JOIN_REQUEST_STATUS_TOOLTIP_REJECTED: "Membership Rejected",

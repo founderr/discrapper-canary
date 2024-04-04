@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return v
+    return R
   }
 }), i("47120");
 var a = i("735250"),
@@ -54,7 +54,7 @@ function _(e) {
         })
       })
     }) : E(e)
-  }, v = () => {
+  }, R = () => {
     (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -97,7 +97,7 @@ function _(e) {
           onMouseDown: m,
           onMouseUp: m,
           onClick: e => {
-            m(e), v()
+            m(e), R()
           },
           children: (0, a.jsx)(o.Tooltip, {
             tooltipContentClassName: F.__invalid_tooltip,
@@ -121,37 +121,41 @@ function _(e) {
   })
 }
 
-function v(e) {
+function R(e) {
   var t;
   let {
     guild: i,
     isInitiallyExpanded: n = !1,
     showHeader: o = !0,
     disableAnimation: I = !1
-  } = e, [x, h] = l.useState(n), T = l.useRef(!1), v = l.useCallback(() => {
+  } = e, [x, h] = l.useState(n), T = l.useRef(!1), R = l.useCallback(() => {
     T.current = !0
-  }, []), R = (0, m.useSubmittedGuildJoinRequestTotal)({
+  }, []), v = (0, m.useSubmittedGuildJoinRequestTotal)({
     guildId: i.id
-  }), p = (0, r.useStateFromStores)([u.default], () => u.default.get(i.id)), C = null !== (t = null == p ? void 0 : p.formFields) && void 0 !== t ? t : [];
+  }), g = (0, r.useStateFromStores)([u.default], () => u.default.get(i.id)), p = null !== (t = null == g ? void 0 : g.formFields) && void 0 !== t ? t : [];
   return l.useEffect(() => {
     c.default.fetchVerificationForm(i.id)
   }, [i.id]), (0, a.jsx)(d.default, {
     renderHeader: o ? (0, a.jsx)(_, {
       guild: i,
       isExpanded: x,
-      emptyFormFields: (null == C ? void 0 : C.length) == null || (null == C ? void 0 : C.length) === 0,
-      hasTermsField: null == C ? void 0 : C.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
+      emptyFormFields: (null == p ? void 0 : p.length) == null || (null == p ? void 0 : p.length) === 0,
+      hasTermsField: null == p ? void 0 : p.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
     }) : null,
     isExpanded: x,
     onExpand: () => h(!x),
     disableAnimation: I,
+    disableBackground: !o,
     children: (0, a.jsx)("div", {
-      className: s()(M.itemBodyContainer, F.rulesScreeningItems),
-      children: null != p && (0, a.jsx)(E.default, {
+      className: s()(M.itemBodyContainer, F.rulesScreeningItems, {
+        [M.noPadding]: !o,
+        [F.rulesScreeningItemsNoBorder]: !o
+      }),
+      children: null != g && (0, a.jsx)(E.default, {
         guild: i,
-        submittedGuildJoinRequestsCount: R,
-        formFields: C,
-        onFormFieldUpdate: v,
+        submittedGuildJoinRequestsCount: v,
+        formFields: p,
+        onFormFieldUpdate: R,
         hideVerificationLevelField: !0
       })
     })

@@ -21,7 +21,8 @@ function E(e) {
     title: t,
     children: i,
     onEdit: l,
-    onRemove: n
+    onRemove: n,
+    canRemove: r
   } = e;
   return (0, a.jsxs)("div", {
     className: m.backgroundContainer,
@@ -34,12 +35,18 @@ function E(e) {
       }), i]
     }), (0, a.jsxs)(c.FormSection, {
       className: m.containerFooter,
-      children: [(0, a.jsx)(c.Button, {
-        className: s()(m.removeButton, m.button),
-        size: c.Button.Sizes.SMALL,
-        look: c.Button.Looks.BLANK,
-        onClick: n,
-        children: f.default.Messages.REMOVE
+      children: [(0, a.jsx)(c.Tooltip, {
+        text: f.default.Messages.CLAN_APPLICATION_CANT_REMOVE_FIELD,
+        shouldShow: !r,
+        children: e => (0, a.jsx)(c.Button, {
+          ...e,
+          className: s()(m.removeButton, m.button),
+          size: c.Button.Sizes.SMALL,
+          look: c.Button.Looks.BLANK,
+          onClick: n,
+          disabled: !r,
+          children: f.default.Messages.REMOVE
+        })
       }), (0, a.jsx)(c.Button, {
         className: m.button,
         size: c.Button.Sizes.SMALL,
