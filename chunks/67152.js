@@ -52,7 +52,7 @@ t.default = r.memo(function(e) {
       className: c.seeMoreText,
       children: (0, i.jsx)(s.Text, {
         variant: "text-sm/normal",
-        children: _.default.Messages.BITE_SIZE_PROFILE_BIO_SEE_MORE
+        children: _.default.Messages.USER_PROFILE_BIO_SEE_MORE
       })
     })]
   })
