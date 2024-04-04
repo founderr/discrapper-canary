@@ -412,7 +412,7 @@ class eF extends(s = a.Component) {
     let {
       channel: t
     } = this.props;
-    return t.type !== ev.ChannelTypes.GUILD_ANNOUNCEMENT || (0, ec.hasFlag)(e.flags, ev.MessageFlags.EPHEMERAL) ? null : (0, l.jsx)(p.default, {
+    return t.type !== ev.ChannelTypes.GUILD_ANNOUNCEMENT || (0, ec.hasFlag)(e.flags, ev.MessageFlags.EPHEMERAL) || e.isPoll() ? null : (0, l.jsx)(p.default, {
       channelId: e.channel_id,
       messageId: e.id
     })
