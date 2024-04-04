@@ -27,8 +27,8 @@ var s = n("45792"),
   O = n("452426"),
   v = n("561205"),
   L = n("600027"),
-  M = n("852926"),
-  P = n("186901"),
+  P = n("852926"),
+  M = n("186901"),
   y = n("981631");
 async function D(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
@@ -40,7 +40,7 @@ async function D(e, t, n, a) {
   if (o) {
     let {
       lock: t
-    } = (0, M.unlockOverlay)(e);
+    } = (0, P.unlockOverlay)(e);
     return (0, r.openModal)(l, o).then(() => {
       throw t(), new N.default({
         errorCode: y.RPCErrors.NO_ELIGIBLE_ACTIVITY
@@ -58,7 +58,7 @@ async function D(e, t, n, a) {
 t.default = {
   [y.RPCCommands.SEND_ACTIVITY_JOIN_INVITE]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
     },
     handler(e) {
       let {
@@ -76,7 +76,7 @@ t.default = {
   },
   [y.RPCCommands.CLOSE_ACTIVITY_JOIN_REQUEST]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
     },
     handler(e) {
       let {
@@ -89,7 +89,7 @@ t.default = {
   },
   [y.RPCCommands.ACTIVITY_INVITE_USER]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
     },
     validation: e => (0, O.default)(e).required().keys({
       user_id: e.string().required(),
@@ -115,7 +115,7 @@ t.default = {
   },
   [y.RPCCommands.ACCEPT_ACTIVITY_INVITE]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
     },
     validation: e => (0, O.default)(e).required().keys({
       type: e.number().required().valid([y.ActivityActionTypes.JOIN]),
@@ -155,7 +155,7 @@ t.default = {
   },
   [y.RPCCommands.OPEN_INVITE_DIALOG]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE, P.RPC_AUTHENTICATED_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE, M.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       let {
@@ -185,7 +185,7 @@ t.default = {
   },
   [y.RPCCommands.INITIATE_IMAGE_UPLOAD]: (0, s.createRPCCommand)(y.RPCCommands.INITIATE_IMAGE_UPLOAD, {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE, P.RPC_AUTHENTICATED_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE, M.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       var t;
@@ -235,7 +235,7 @@ t.default = {
   }),
   [y.RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: (0, s.createRPCCommand)(y.RPCCommands.OPEN_SHARE_MOMENT_DIALOG, {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [P.RPC_AUTHENTICATED_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [M.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       var t;

@@ -26,8 +26,8 @@ var a = n("735250"),
   O = n("285952"),
   v = n("366695"),
   L = n("366966"),
-  M = n("151011"),
-  P = n("774832"),
+  P = n("151011"),
+  M = n("774832"),
   y = n("465670"),
   D = n("786048"),
   x = n("897353"),
@@ -483,7 +483,7 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: P.default,
+      icon: M.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
       onClick: () => _.moveUp(t.applicationId, t.branchId)
     })
@@ -587,7 +587,7 @@ class en extends s.PureComponent {
           color: w.Color.BLUE_345,
           animate: s
         })]
-      }), (0, a.jsx)(M.default, {
+      }), (0, a.jsx)(P.default, {
         hasHeader: !1,
         columns: et,
         data: e,

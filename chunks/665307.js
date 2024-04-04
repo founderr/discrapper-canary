@@ -29,8 +29,8 @@ var a, s = n("735250"),
   O = n("931003"),
   v = n("626135"),
   L = n("780570"),
-  M = n("624138"),
-  P = n("645818"),
+  P = n("624138"),
+  M = n("645818"),
   y = n("981631"),
   D = n("689938"),
   x = n("373438");
@@ -43,8 +43,8 @@ function b(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
-  j = (0, M.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
+  j = (0, P.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
   G = Object.freeze({
     [y.GameTableListKeys.PLATFORM]: "Platform",
     [y.GameTableListKeys.LAST_PLAYED]: "Last Played",
@@ -146,7 +146,7 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
             item: e,
             icon: O.default,
             tooltip: D.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
-          }), (0, s.jsx)(P.default, {
+          }), (0, s.jsx)(M.default, {
             className: r()(x.settingIcon, {
               [x.hidden]: !e.supportsCloudSync
             }),

@@ -38,7 +38,7 @@ t.default = e => {
       flex: 1,
       paddingLeft: 120
     }
-  }), M = (0, l.useSpring)({
+  }), P = (0, l.useSpring)({
     ref: N,
     config: l.config.slow,
     from: {
@@ -51,7 +51,7 @@ t.default = e => {
       paddingRight: 120,
       marginLeft: -32
     }
-  }), P = (0, l.useSpring)({
+  }), M = (0, l.useSpring)({
     ref: R,
     config: l.config.default,
     from: {
@@ -67,7 +67,7 @@ t.default = e => {
       className: h.signTextLeft,
       style: {
         ...L,
-        ...P
+        ...M
       },
       children: [(0, a.jsx)(r.Heading, {
         variant: "heading-xxl/medium",
@@ -87,8 +87,8 @@ t.default = e => {
     }), (0, a.jsxs)(l.animated.div, {
       className: h.signTextRight,
       style: {
-        ...M,
-        ...P
+        ...P,
+        ...M
       },
       children: [(0, a.jsx)(r.Button, {
         className: h.signButton,

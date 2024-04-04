@@ -27,7 +27,7 @@ var a = n("735250"),
   v = n("689938"),
   L = n("82863");
 
-function M(e, t, n) {
+function P(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -35,7 +35,7 @@ function M(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class P extends s.PureComponent {
+class M extends s.PureComponent {
   createSound() {
     let {
       soundpack: e
@@ -148,7 +148,7 @@ class P extends s.PureComponent {
     }
   }
   constructor(e) {
-    super(e), M(this, "videoRef", null), M(this, "_noProblemsTimeout", null), M(this, "_problemsTimeout", null), M(this, "_connectedSound", this.createSound()), M(this, "_loadingText", function() {
+    super(e), P(this, "videoRef", null), P(this, "_noProblemsTimeout", null), P(this, "_problemsTimeout", null), P(this, "_connectedSound", this.createSound()), P(this, "_loadingText", function() {
       let e = [v.default.Messages.ACCESSIBILITY_LOADING_TIP_1, v.default.Messages.ACCESSIBILITY_LOADING_TIP_2, v.default.Messages.ACCESSIBILITY_LOADING_TIP_3, v.default.Messages.ACCESSIBILITY_LOADING_TIP_4, v.default.Messages.ACCESSIBILITY_LOADING_TIP_5, v.default.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
         tabHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "tab",
@@ -211,20 +211,20 @@ class P extends s.PureComponent {
         }, t)
       })];
       return e[o().random(e.length - 1)]
-    }()), M(this, "_eventLoadingText", function() {
+    }()), P(this, "_eventLoadingText", function() {
       let e = C.default.getLoadingTips();
       if (null != e && e.length > 0) return e[o().random(e.length - 1)]
-    }()), M(this, "handleReady", () => {
+    }()), P(this, "handleReady", () => {
       this.setState({
         ready: !0
       }), (0, A.isDesktop)() && (R.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), R.default.send("UPDATE_OPEN_ON_STARTUP"))
-    }), M(this, "setVideoRef", e => {
+    }), P(this, "setVideoRef", e => {
       this.videoRef = e
-    }), M(this, "setProblemsTimeout", () => {
+    }), P(this, "setProblemsTimeout", () => {
       null == this._problemsTimeout && (this._problemsTimeout = setTimeout(() => this.setState({
         problems: !0
       }), 1e4))
-    }), M(this, "clearProblemsTimeout", () => {
+    }), P(this, "clearProblemsTimeout", () => {
       clearTimeout(this._problemsTimeout), this._problemsTimeout = null
     });
     let {
@@ -253,7 +253,7 @@ t.default = d.default.connectStores([_.default, m.default, S.default, h.default]
     soundpack: l,
     reducedMotion: i
   } = e;
-  return t ? (0, a.jsx)(P, {
+  return t ? (0, a.jsx)(M, {
     reducedMotion: i,
     soundpack: l,
     connected: n,

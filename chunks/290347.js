@@ -80,13 +80,13 @@ function N(e) {
     headerClassName: O,
     subHeader: v,
     subHeaderExtra: L,
-    featureCards: M,
-    changeLogId: P,
+    featureCards: P,
+    changeLogId: M,
     button: y
   } = e, {
     onClose: D,
     transitionState: x
-  } = n, b = (0, h.useUID)(), U = M.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
+  } = n, b = (0, h.useUID)(), U = P.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
 
   function J() {
     let e = Date.now(),
@@ -100,26 +100,26 @@ function N(e) {
   }, [G, k, B, V, W]), s.useEffect(() => () => {
     let [e, t] = J();
     S.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
-      change_log_id: P,
+      change_log_id: M,
       seconds_played: Math.round(e / 1e3)
     }), S.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_UNMUTE, {
-      change_log_id: P,
+      change_log_id: M,
       seconds_unmuted: Math.round(t / 1e3)
     })
-  }, [P]), s.useEffect(() => {
+  }, [M]), s.useEffect(() => {
     null != g && (0, d.requestMarkDismissibleContentAsShown)(g);
     let e = Date.now();
     return S.default.track(I.AnalyticEvents.CHANGE_LOG_OPENED, {
-      change_log_id: P
+      change_log_id: M
     }), () => {
       S.default.track(I.AnalyticEvents.CHANGE_LOG_CLOSED, {
-        change_log_id: P,
+        change_log_id: M,
         seconds_open: Math.round((Date.now() - e) / 1e3)
       }), null != g && (0, d.markDismissibleContentAsDismissed)(g, {
         dismissAction: p.ContentDismissActionType.DISMISS
       })
     }
-  }, [g, P]), (0, a.jsxs)(o.ModalRoot, {
+  }, [g, M]), (0, a.jsxs)(o.ModalRoot, {
     className: i()(T.root, t),
     transitionState: x,
     "aria-labelledby": b,
@@ -145,7 +145,7 @@ function N(e) {
         poster: l.poster,
         onPlay: e => {
           S.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-            change_log_id: P
+            change_log_id: M
           }), w(Date.now()), Y(!0), K(e.currentTarget.muted)
         },
         onEnded: e => {
@@ -172,7 +172,7 @@ function N(e) {
         renderLinkComponent: c.renderMaskedLinkComponent,
         onPlay: () => {
           S.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-            change_log_id: P
+            change_log_id: M
           })
         }
       }) : "image" === l.type ? (0, a.jsx)("img", {
@@ -187,7 +187,7 @@ function N(e) {
         className: i()(T.featureCardGroup, {
           [T.wideStyle]: U
         }),
-        children: M.map((e, t) => (0, a.jsx)(A, {
+        children: P.map((e, t) => (0, a.jsx)(A, {
           ...e,
           wideStyle: U
         }, "".concat(e.header, "_").concat(t)))

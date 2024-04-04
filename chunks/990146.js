@@ -31,8 +31,8 @@ t.default = function() {
     O = (0, o.useStateFromStores)([h.default], () => (0, C.getQuestForTargetedContent)(h.default.quests, _.QuestContent.QUEST_BAR)),
     v = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()),
     L = s.useRef(-1),
-    M = s.useRef(!1),
-    [P, y] = s.useState(!1),
+    P = s.useRef(!1),
+    [M, y] = s.useState(!1),
     [D, x] = s.useState(!1),
     [b, U] = s.useState(!1),
     [j, G] = s.useState(!1),
@@ -56,10 +56,10 @@ t.default = function() {
       y(!0)
     }, []),
     X = s.useCallback(() => {
-      y(!1), !M.current && !V && x(!1)
+      y(!1), !P.current && !V && x(!1)
     }, [V]),
     J = s.useCallback(() => {
-      y(!1), !V && x(!1), M.current = !1
+      y(!1), !V && x(!1), P.current = !1
     }, [V]),
     $ = s.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -69,25 +69,25 @@ t.default = function() {
       t ? L.current = window.setTimeout(Q, 75) : Q()
     }, [Q]),
     ee = s.useCallback(() => {
-      if (window.clearTimeout(L.current), !V && !P) !M.current && x(!1)
-    }, [P, V]),
+      if (window.clearTimeout(L.current), !V && !M) !P.current && x(!1)
+    }, [M, V]),
     et = s.useCallback(() => {
       null != O && (0, c.trackQuestEvent)({
         questId: O.id,
         event: A.AnalyticEvents.QUEST_HOVER
-      }), M.current = !0, $({
+      }), P.current = !0, $({
         withDelay: !0
       })
     }, [$, O]),
     en = s.useCallback(() => {
-      M.current = !1, ee()
+      P.current = !1, ee()
     }, [ee]);
   s.useLayoutEffect(() => {
     V && Q()
   }, [V, Q]), s.useLayoutEffect(() => {
-    B && !H.current && M.current && Q()
+    B && !H.current && P.current && Q()
   }, [B, Q]), s.useLayoutEffect(() => {
-    !V && B && !H.current && !M.current && x(!1)
+    !V && B && !H.current && !P.current && x(!1)
   }, [B, V]);
   let ea = l && !W && !Y && null != O && !K && !q,
     es = s.useRef(ea);

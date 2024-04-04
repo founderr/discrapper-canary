@@ -33,21 +33,21 @@ let v = n("205281");
 function L() {
   let [e, t] = s.useState(!1), n = (0, p.useShouldShowMainLootboxEntrypoint)("lootbox_entrypoint"), l = !(0, C.useIsDismissibleContentDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT), {
     analyticsLocations: L
-  } = (0, _.default)(h.default.LOOTBOXES_UPSELL), M = s.useRef(null), P = e => {
+  } = (0, _.default)(h.default.LOOTBOXES_UPSELL), P = s.useRef(null), M = e => {
     (0, C.markDismissibleContentAsDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT, {
       dismissAction: e
     })
   };
   return (s.useEffect(() => {
     var t, n;
-    e ? null === (t = M.current) || void 0 === t || t.play() : null === (n = M.current) || void 0 === n || n.pause()
+    e ? null === (t = P.current) || void 0 === t || t.play() : null === (n = P.current) || void 0 === n || n.pause()
   }, [e]), n && l) ? (0, a.jsx)(m.default, {
     children: (0, a.jsxs)("div", {
       className: i()(O.wrapper, e ? O.wrapperHovered : null),
       onMouseLeave: () => t(!1),
       children: [(0, a.jsxs)(f.Clickable, {
         className: O.closeButton,
-        onClick: () => P(N.ContentDismissActionType.DISMISS),
+        onClick: () => M(N.ContentDismissActionType.DISMISS),
         children: [(0, a.jsx)(o.CloseSmallIcon, {
           className: O.closeIcon,
           color: c.default.colors.WHITE
@@ -61,7 +61,7 @@ function L() {
         children: [(0, a.jsx)("div", {
           className: O.videoWrapper,
           children: (0, a.jsx)(I.default, {
-            ref: M,
+            ref: P,
             className: O.video,
             src: v,
             muted: !0,
@@ -70,7 +70,7 @@ function L() {
         }), (0, a.jsxs)(f.Clickable, {
           className: O.entrypoint,
           onClick: () => {
-            P(N.ContentDismissActionType.PRIMARY), E.default.open(A.UserSettingsSections.LOOTBOXES, null, {
+            M(N.ContentDismissActionType.PRIMARY), E.default.open(A.UserSettingsSections.LOOTBOXES, null, {
               analyticsLocations: L
             })
           },

@@ -105,8 +105,8 @@ t.default = e => {
     playstyle: O,
     interests: v,
     description: L,
-    tag: M,
-    primetime: P,
+    tag: P,
+    primetime: M,
     currentStep: y
   } = (0, r.useStateFromStoresObject)([f.default], () => {
     var e;
@@ -170,12 +170,12 @@ t.default = e => {
               case p.ClanSetupSteps.PRIMETIME:
                 return (0, a.jsx)(m.default, {
                   handleUpdate: j,
-                  selectedTimes: P
+                  selectedTimes: M
                 });
               case p.ClanSetupSteps.CUSTOMIZE:
                 return (0, a.jsx)(I.default, {
                   handleUpdate: j,
-                  tag: M
+                  tag: P
                 })
             }
           })()
@@ -187,8 +187,8 @@ t.default = e => {
         playstyle: O,
         interests: v,
         description: L,
-        primetime: P,
-        tag: M,
+        primetime: M,
+        tag: P,
         onLastStep: G
       })]
     }), (0, a.jsx)("div", {

@@ -48,7 +48,7 @@ t.default = e => {
       default:
         return null
     }
-  }, [A]), L = (null == N ? void 0 : N.size) > 0 ? Array.from(N).join(", ") : null, M = (null == R ? void 0 : R.length) > 0 ? R.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [], P = (null == M ? void 0 : M.length) > 0 ? M.join(", ") : null;
+  }, [A]), L = (null == N ? void 0 : N.size) > 0 ? Array.from(N).join(", ") : null, P = (null == R ? void 0 : R.length) > 0 ? R.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [], M = (null == P ? void 0 : P.length) > 0 ? P.join(", ") : null;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: I.scrollBg,
@@ -103,12 +103,12 @@ t.default = e => {
           children: m.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
             traits: L
           })
-        }) : null, null != P ? (0, a.jsx)(c.Text, {
+        }) : null, null != M ? (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: I.overviewText,
           children: m.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMETIME.format({
-            selectedTimes: P
+            selectedTimes: M
           })
         }) : null, (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
