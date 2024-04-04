@@ -42,8 +42,7 @@ function _(e) {
         f({
           action: "JOIN_ACTIVITY"
         }), (0, o.trackUserProfileActivityJoined)({
-          activityType: null == t ? void 0 : t.type,
-          applicationId: null == t ? void 0 : t.application_id,
+          activity: t,
           analyticsLocations: T,
           ...S
         }), null == E || E()

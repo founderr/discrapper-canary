@@ -89,7 +89,6 @@ function p(e) {
         d({
           action: "JOIN_ACTIVITY"
         }), (0, f.trackUserProfileActivityJoined)({
-          activityType: "VOICE",
           voiceChannelId: n.id,
           analyticsLocations: u,
           ...c
