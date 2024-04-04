@@ -3,6 +3,12 @@ n.r(t), n.d(t, {
   MemberRole: function() {
     return F
   },
+  OverflowAddRolesButton: function() {
+    return H
+  },
+  OverflowMoreRolesButton: function() {
+    return x
+  },
   default: function() {
     return W
   }
@@ -208,8 +214,10 @@ function H(e) {
     guild: t,
     user: n,
     handleAddRole: r,
-    roleClassName: s
-  } = e, o = (0, d.useListItem)("overflow-add-roles-".concat(n.id)), l = (0, c.useStateFromStores)([h.default], () => h.default.roleStyle), u = C.default.getHighestRole(t), _ = p.default.getMember(t.id, n.id), E = e => (0, A.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && C.default.isRoleHigher(t, u, e) && (null == _ || -1 === _.roles.indexOf(e.id));
+    roleClassName: s,
+    addButtonClassName: o,
+    addButtonIconClassName: l
+  } = e, u = (0, d.useListItem)("overflow-add-roles-".concat(n.id)), _ = (0, c.useStateFromStores)([h.default], () => h.default.roleStyle), E = C.default.getHighestRole(t), T = p.default.getMember(t.id, n.id), f = e => (0, A.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && C.default.isRoleHigher(t, E, e) && (null == T || -1 === T.roles.indexOf(e.id));
   return (0, i.jsx)(I.Popout, {
     renderPopout: e => {
       let {
@@ -217,8 +225,8 @@ function H(e) {
       } = e;
       return (0, i.jsx)(b.default, {
         guild: t,
-        roleStyle: l,
-        roleFilter: E,
+        roleStyle: _,
+        roleFilter: f,
         onSelect: r,
         onClose: n
       })
@@ -228,12 +236,12 @@ function H(e) {
     children: e => (0, i.jsx)(I.FocusRing, {
       children: (0, i.jsx)("button", {
         ...e,
-        className: a()(B.addButton, s),
+        className: a()(B.addButton, s, o),
         "aria-label": w.default.Messages.GUILD_SETTINGS_MEMBERS_ADD_ROLE,
         type: "button",
-        ...o,
+        ...u,
         children: (0, i.jsx)(y.default, {
-          className: B.addButtonIcon,
+          className: a()(B.addButtonIcon, l),
           "aria-hidden": !0
         })
       })
