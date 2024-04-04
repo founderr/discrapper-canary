@@ -74,8 +74,8 @@ t.default = e => {
     scroller: O,
     loadingGuildId: v,
     theme: L,
-    currentCategoryId: P,
-    currentCategoryName: M,
+    currentCategoryId: M,
+    currentCategoryName: P,
     onViewGuild: y,
     onGuildCardSeen: D,
     placeholder: x,
@@ -88,7 +88,7 @@ t.default = e => {
     tag: B
   } = g(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
     d.doAlgoliaSearch(l, {
-      categoryId: n ? m.DISCOVERY_ALL_CATEGORIES_ID : P,
+      categoryId: n ? m.DISCOVERY_ALL_CATEGORIES_ID : M,
       preferredLocale: r.code,
       offset: e,
       length: t,
@@ -108,13 +108,13 @@ t.default = e => {
     } = g(), n = null != e ? Math.floor(parseInt(e, 10) / T) + 1 : 1;
     V(!!t), 1 === n && F(!0)
   }, [l]);
-  let z = P === m.DISCOVERY_ALL_CATEGORIES_ID ? I.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
+  let z = M === m.DISCOVERY_ALL_CATEGORIES_ID ? I.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
     query: l
   }) : I.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
     query: l,
-    category: M
+    category: P
   });
   return (0, a.jsxs)("div", {
     className: p.container,
@@ -143,11 +143,11 @@ t.default = e => {
       placeholder: x,
       availableLanguages: c,
       isSearchPage: !0,
-      currentCategoryId: P,
+      currentCategoryId: M,
       isTagSearch: H
     }), Y ? (0, a.jsx)(N, {}) : w <= 0 ? (0, a.jsx)(A, {
-      categoryId: P,
-      categoryName: M,
+      categoryId: M,
+      categoryName: P,
       onClick: () => {
         d.selectCategory(m.DISCOVERY_ALL_CATEGORIES_ID), W(0, T, !0)
       }

@@ -30,8 +30,8 @@ var a = n("735250"),
   O = n("194729"),
   v = n("668940"),
   L = n("372900"),
-  P = n("6039"),
-  M = n("637853"),
+  M = n("6039"),
+  P = n("637853"),
   y = n("326145"),
   D = n("102267"),
   x = n("362416"),
@@ -180,7 +180,7 @@ let ep = () => (0, a.jsx)("div", {
       default:
         (0, es.assertNever)(l)
     }
-    if ((0, M.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(y.default, {
+    if ((0, P.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(y.default, {
       guildId: s,
       channelId: l
     });
@@ -206,7 +206,7 @@ let ep = () => (0, a.jsx)("div", {
     }, e) : (0, a.jsx)(ed.default, {})
   });
 
-function eP(e) {
+function eM(e) {
   let t = (0, Z.default)(e => {
     let {
       guildId: t
@@ -218,7 +218,7 @@ function eP(e) {
     guildId: t
   })
 }
-let eM = e => (0, a.jsx)(ev, {
+let eP = e => (0, a.jsx)(ev, {
     ...e
   }),
   ey = e => {
@@ -231,7 +231,7 @@ let eM = e => (0, a.jsx)(ev, {
     let {
       match: t
     } = e;
-    return null != t.params.guildId ? (0, a.jsx)(P.default, {
+    return null != t.params.guildId ? (0, a.jsx)(M.default, {
       guildId: t.params.guildId,
       inviteCode: t.params.inviteCode
     }) : null
@@ -332,7 +332,7 @@ function eV(e) {
         children: (0, a.jsx)(Q.default, {})
       }), (0, a.jsx)(Y.default, {}), (0, a.jsx)(ec.default, {
         section: eh.AnalyticsSections.ACTIVITY_PANEL,
-        children: (0, a.jsx)(eP, {
+        children: (0, a.jsx)(eM, {
           className: eI.activityPanel
         })
       }), (0, a.jsx)(ec.default, {
@@ -459,7 +459,7 @@ function eY() {
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: [eh.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eh.Routes.CHANNEL(eh.ME, ":channelId"), eh.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
-                  render: eM,
+                  render: eP,
                   impressionName: u.ImpressionNames.GUILD_CHANNEL,
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {

@@ -60,12 +60,12 @@ t.default = function(e) {
     quest: O
   } = e, v = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(O.id), [O]), L = s.useCallback(e => {
     e.stopPropagation()
-  }, []), P = s.useCallback(() => {
+  }, []), M = s.useCallback(() => {
     (0, f.enrollInQuest)(O.id, {
       questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.ACCEPT_QUEST
     })
-  }, [O]), M = s.useCallback(() => {
+  }, [O]), P = s.useCallback(() => {
     null != O && ((0, c.trackQuestContentClicked)({
       questId: O.id,
       questContent: _.QuestContent.ACTIVITY_PANEL,
@@ -145,7 +145,7 @@ t.default = function(e) {
               className: N.cta,
               color: o.Button.Colors.BRAND,
               fullWidth: !0,
-              onClick: P,
+              onClick: M,
               size: o.Button.Sizes.SMALL,
               submitting: v,
               children: A.default.Messages.QUESTS_ACCEPT_QUEST
@@ -154,7 +154,7 @@ t.default = function(e) {
             className: N.cta,
             color: o.Button.Colors.BRAND,
             fullWidth: !0,
-            onClick: M,
+            onClick: P,
             size: o.Button.Sizes.SMALL,
             children: A.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
           }), U && (0, a.jsx)(o.Button, {

@@ -26,9 +26,9 @@ var a = n("735250"),
   O = n("760326"),
   v = n("536687"),
   L = n("652785"),
-  P = n("921944");
+  M = n("921944");
 
-function M(e) {
+function P(e) {
   e.stopPropagation()
 }
 
@@ -46,13 +46,13 @@ function y(e) {
   }).map(e => e.dismissibleContentType));
   return (0, a.jsx)(d.default, {
     contentTypes: C,
-    groupName: P.DismissibleContentGroupName.CHANNEL_NOTICES,
+    groupName: M.DismissibleContentGroupName.CHANNEL_NOTICES,
     children: e => {
       let {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        h(Date.now()), s(P.ContentDismissActionType.UNKNOWN)
+        h(Date.now()), s(M.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
@@ -88,14 +88,14 @@ function y(e) {
           case i.DismissibleContent.LINKED_ROLE_ADMIN_GUILD:
             return (0, a.jsx)(u.default, {
               guild: n,
-              markAsDismissed: () => s(P.ContentDismissActionType.UNKNOWN)
+              markAsDismissed: () => s(M.ContentDismissActionType.UNKNOWN)
             });
           default:
             return null
         }
       })();
       return null == r ? null : (0, a.jsx)("div", {
-        onContextMenu: M,
+        onContextMenu: P,
         children: r
       })
     }

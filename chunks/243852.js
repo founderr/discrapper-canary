@@ -22,14 +22,14 @@ let A = "ActivityTrackingStore",
   v = {},
   L = !1;
 
-function P(e) {
+function M(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  t && M(e, !0);
+  t && P(e, !0);
   let n = v[e.applicationId];
   null != n && (n.stop(), delete v[e.applicationId]), delete O[e.applicationId], u.Storage.set(A, O)
 }
 
-function M(e) {
+function P(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = Date.now(),
     a = null != e.updatedAt ? n - e.updatedAt : 0;
@@ -49,7 +49,7 @@ function M(e) {
   });
   t && s && l && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(a / 1e3));
   let i = v[e.applicationId];
-  null == i && (i = v[e.applicationId] = new d.Interval).start(N, () => M(e)), !t && (O[e.applicationId] = e, u.Storage.set(A, O))
+  null == i && (i = v[e.applicationId] = new d.Interval).start(N, () => P(e)), !t && (O[e.applicationId] = e, u.Storage.set(A, O))
 }
 
 function y() {
@@ -63,18 +63,18 @@ function y() {
     }
     of t) {
     let t = p.default.getGameByName(e);
-    if (null != t) n.add(t.id), !(t.id in O) && M({
+    if (null != t) n.add(t.id), !(t.id in O) && P({
       applicationId: t.id,
       updatedAt: Date.now(),
       distributor: a,
       exePath: (0, E.removeExecutablePathPrefix)(null != s ? s : "")
     })
   }
-  for (let t of Object.keys(O)) !n.has(t) && P(O[t], e)
+  for (let t of Object.keys(O)) !n.has(t) && M(O[t], e)
 }
 
 function D() {
-  for (let e of Object.keys(O)) P(O[e]);
+  for (let e of Object.keys(O)) M(O[e]);
   L = !1
 }
 class x extends(s = o.default.Store) {
@@ -94,7 +94,7 @@ r = "ActivityTrackingStore", (i = "displayName") in(l = x) ? Object.defineProper
   RUNNING_GAMES_CHANGE: () => y(),
   CONNECTION_OPEN: function() {
     if (L) return !1;
-    for (let e of Object.keys(O)) M(O[e]);
+    for (let e of Object.keys(O)) P(O[e]);
     y(!1), L = !0
   },
   CONNECTION_CLOSED: function(e) {

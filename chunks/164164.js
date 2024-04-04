@@ -29,8 +29,8 @@ let O = s.forwardRef(function(e, t) {
     className: O,
     expansionSpring: v,
     isExpanded: L,
-    isExpansionAnimationComplete: P,
-    onCtxMenuOpen: M,
+    isExpansionAnimationComplete: M,
+    onCtxMenuOpen: P,
     onCtxMenuClose: y,
     onCtxMenuSelect: D,
     quest: x,
@@ -43,7 +43,7 @@ let O = s.forwardRef(function(e, t) {
   }, [x]), F = (0, A.useHandleClaimQuestsReward)({
     quest: x,
     location: C.QuestContent.QUEST_BAR
-  }), B = (null === (n = x.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, H = (null === (l = x.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = L && P, Y = (0, S.getQuestBarHeroAssetUrl)(x);
+  }), B = (null === (n = x.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, H = (null === (l = x.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = L && M, Y = (0, S.getQuestBarHeroAssetUrl)(x);
   return (0, a.jsx)(r.animated.div, {
     "aria-hidden": !V,
     className: i()(O, R.contentExpanded, {
@@ -87,7 +87,7 @@ let O = s.forwardRef(function(e, t) {
             })]
           })]
         }), (0, a.jsx)(g.QuestsEntryContextMenuPopout, {
-          onOpen: M,
+          onOpen: P,
           onClose: y,
           onSelect: D,
           questContent: C.QuestContent.QUEST_BAR,
@@ -132,7 +132,7 @@ let O = s.forwardRef(function(e, t) {
           children: [(0, a.jsx)(I.default, {
             color: "always-white"
           }), (0, a.jsx)(g.QuestsEntryContextMenuPopout, {
-            onOpen: M,
+            onOpen: P,
             onClose: y,
             onSelect: D,
             questContent: C.QuestContent.QUEST_BAR,

@@ -27,10 +27,10 @@ async function S(e) {
       analyticsLocation: v
     } = e,
     L = c.default.getUser(T),
-    P = E.default.getUserProfile(T);
+    M = E.default.getUserProfile(T);
   if (null == L) return;
-  let M = u.default.getPrimaryActivity(T);
-  null != M && (m = M.party, I = M.assets, p = null != M.application_id ? o.default.getApplication(M.application_id) : null);
+  let P = u.default.getPrimaryActivity(T);
+  null != P && (m = P.party, I = P.assets, p = null != P.application_id ? o.default.getApplication(P.application_id) : null);
   let y = u.default.getStatus(T),
     D = u.default.isMobileOnline(T),
     x = y;
@@ -52,18 +52,18 @@ async function S(e) {
     guild_id: A !== h.ME ? A : null,
     channel_id: N,
     other_user_id: T,
-    application_id: null !== (l = null == M ? void 0 : M.application_id) && void 0 !== l ? l : null,
-    application_name: null == M ? void 0 : M.name,
+    application_id: null !== (l = null == P ? void 0 : P.application_id) && void 0 !== l ? l : null,
+    application_name: null == P ? void 0 : P.name,
     sku_id: null !== (i = null == p ? void 0 : p.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(T),
     has_images: !!(null !== (S = null == I ? void 0 : I.large_image) && void 0 !== S ? S : null == I ? void 0 : I.small_image),
     party_max: null == m ? void 0 : null === (t = m.size) || void 0 === t ? void 0 : t[1],
     party_id: null == m ? void 0 : m.id,
     party_platform: (0, _.isSpotifyParty)(null == m ? void 0 : m.id) ? h.PlatformTypes.SPOTIFY : null,
-    game_platform: (0, r.default)(M),
+    game_platform: (0, r.default)(P),
     profile_user_status: x,
-    profile_has_nitro_customization: (null == P ? void 0 : P.banner) != null,
-    profile_has_profile_effect: (null == P ? void 0 : P.profileEffectId) != null,
+    profile_has_nitro_customization: (null == M ? void 0 : M.banner) != null,
+    profile_has_profile_effect: (null == M ? void 0 : M.profileEffectId) != null,
     ...null == v ? null : (0, f.expandLocation)(v)
   })
 }

@@ -30,8 +30,8 @@ var a = n("735250"),
   O = n("243778"),
   v = n("492162"),
   L = n("818634"),
-  P = n("596557"),
-  M = n("817520"),
+  M = n("596557"),
+  P = n("817520"),
   y = n("999309"),
   D = n("408987"),
   x = n("130734"),
@@ -483,12 +483,12 @@ function em(e) {
     n !== ea && en(!K)
   }, [n, ea, K]);
   let [ei, ed] = (0, N.default)(e => [eo.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eu.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), ec = (0, p.default)(d), ef = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eE = (0, o.useStateFromStores)([Q.default], () => Q.default.hasLayers()), eh = (0, o.useStateFromStores)([F.default], () => F.default.shouldShow(e_)), eC = T && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), em = (0, o.useStateFromStores)([z.default], () => z.default.getMemberCount(n)), eI = T && null != em && em >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), ep = O && null != d && (d.hasFeature(er.GuildFeatures.COMMUNITY) || null != em && em > 50), eT = (0, y.default)(n), eg = (0, A.useLowerMemberCountRequirements)(n), eA = (null == d ? void 0 : d.hasFeature(er.GuildFeatures.HUB)) === !0, eN = T && (null == d ? void 0 : d.hasFeature(er.GuildFeatures.DISCOVERABLE)) === !0, eR = (0, I.useBlockedPaymentsConfig)(), eO = (T || (null == d ? void 0 : d.premiumTier) === er.BoostedGuildTiers.NONE) && !ee.ProcessArgs.isDisallowPopupsSet() && !eR, ev = (0, o.useStateFromStores)([x.default, Q.default], () => null != d && null != G && T && !Q.default.hasLayers() && x.default.shouldShowGuildTemplateDirtyTooltip(n)), eL = (0, o.useStateFromStores)([V.default], () => V.default.getChannel(r)), {
-    isPopoutOpen: eP
-  } = (0, L.useGuildHeaderPopoutStore)(), eM = null !== (t = null == d ? void 0 : d.hasFeature(er.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ey = (0, o.useStateFromStores)([w.default], () => !i().isEmpty(w.default.getThreadsForGuild(n))), eD = $.default.isNewUser(G), ex = et && !eD, eb = (0, g.default)(G);
-  (0, P.default)(d);
+    isPopoutOpen: eM
+  } = (0, L.useGuildHeaderPopoutStore)(), eP = null !== (t = null == d ? void 0 : d.hasFeature(er.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ey = (0, o.useStateFromStores)([w.default], () => !i().isEmpty(w.default.getThreadsForGuild(n))), eD = $.default.isNewUser(G), ex = et && !eD, eb = (0, g.default)(G);
+  (0, M.default)(d);
   let eU = (0, R.useIsDismissibleContentDismissed)(u.DismissibleContent.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
     ej = (0, j.default)(n),
-    eG = (0, M.default)(n);
+    eG = (0, P.default)(n);
   return (0, a.jsx)(eS, {
     guildId: n,
     hideSelectedChannel: l,
@@ -512,12 +512,12 @@ function em(e) {
     showRoleSubscriptionUpsell: eT,
     showDiscoveryTooltip: eg,
     showHubPrivacySettingsTooltip: eA,
-    showNewUnreadsBar: eM,
+    showNewUnreadsBar: eP,
     showActiveThreadsNotice: D && null != em && em >= 200 && ey,
     showGuildSoundboardPermissionUpsell: ep,
     showMediaChannelUpsell: ej,
     showTierTemplatesUpsell: eG,
-    isHeaderPopoutOpen: eP,
+    isHeaderPopoutOpen: eM,
     enableStudyGroup: B,
     isGuildHeaderDismissibleTooltipShown: ed,
     canShowCoachMarkAtBottom: et,

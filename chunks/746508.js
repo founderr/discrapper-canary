@@ -26,8 +26,8 @@ var a = n("735250"),
   O = n("588580"),
   v = n("374065"),
   L = n("451576"),
-  P = n("938655"),
-  M = n("403404"),
+  M = n("938655"),
+  P = n("403404"),
   y = n("100527"),
   D = n("906732"),
   x = n("158631"),
@@ -80,8 +80,8 @@ var a = n("735250"),
   eO = n("976401"),
   ev = n("333454"),
   eL = n("626135"),
-  eP = n("63063"),
-  eM = n("51144"),
+  eM = n("63063"),
+  eP = n("51144"),
   ey = n("594117"),
   eD = n("226323"),
   ex = n("981631"),
@@ -154,7 +154,7 @@ function eF() {
           className: ej.krispLogo
         })
       }), (0, a.jsx)(_.Anchor, {
-        href: eP.default.getArticleURL(ex.HelpdeskArticles.NOISE_SUPPRESSION),
+        href: eM.default.getArticleURL(ex.HelpdeskArticles.NOISE_SUPPRESSION),
         className: ej.krispLink,
         onClick: e => ek(e),
         children: eU.default.Messages.LEARN_MORE
@@ -305,7 +305,7 @@ function eV(e) {
       ...I,
       onClick: () => {
         var n;
-        I.onClick(), (0, M.default)({
+        I.onClick(), (0, P.default)({
           channel: t,
           guildId: t.guild_id,
           locationObject: h.location,
@@ -328,7 +328,7 @@ function eV(e) {
       }),
       innerClassName: ej.buttonContents,
       wrapperClassName: ej.button,
-      children: [C ? (0, a.jsx)(P.FreeActivityIndicatorDot, {
+      children: [C ? (0, a.jsx)(M.FreeActivityIndicatorDot, {
         top: -1,
         right: -1
       }) : null, (0, a.jsx)(m, {
@@ -369,7 +369,7 @@ function eY(e) {
       play: L
     } = (0, f.useScreenshareLottie)(R ? "disable" : "enable");
   s.useEffect(() => () => L(), [L, R]);
-  let P = (0, a.jsx)(O, {
+  let M = (0, a.jsx)(O, {
     color: "currentColor",
     className: i()(ej.buttonIcon, {
       [ej.withText]: !A
@@ -422,9 +422,9 @@ function eY(e) {
           },
           innerClassName: ej.buttonContents,
           wrapperClassName: ej.button,
-          children: A ? P : (0, a.jsxs)(eg.default, {
+          children: A ? M : (0, a.jsxs)(eg.default, {
             align: eg.default.Align.CENTER,
-            children: [P, eU.default.Messages.GO_LIVE_SHARE_SCREEN]
+            children: [M, eU.default.Messages.GO_LIVE_SHARE_SCREEN]
           })
         })
       })
@@ -706,7 +706,7 @@ t.default = (0, T.default)(function(e) {
       noiseCancellationError: e_.default.isNoiseCancellationError(),
       canGoLive: (0, k.default)(e_.default)
     })),
-    E = (0, d.useStateFromStores)([e_.default, H.default], () => H.default.hasHotspot(eb.HotspotLocations.VOICE_PANEL_INTRODUCTION) && (0, eM.isNewUser)(l) && !e_.default.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())),
+    E = (0, d.useStateFromStores)([e_.default, H.default], () => H.default.hasHotspot(eb.HotspotLocations.VOICE_PANEL_INTRODUCTION) && (0, eP.isNewUser)(l) && !e_.default.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())),
     h = (0, d.useStateFromStores)([ep.default], () => null != i && ep.default.hasVideo(i), [i]),
     C = (0, d.useStateFromStores)([ed.default], () => ed.default.getCurrentUserActiveStream()),
     S = (0, d.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
@@ -734,10 +734,10 @@ t.default = (0, T.default)(function(e) {
     (m || I) && v(!1)
   }, [m, I, v]);
   let {
-    analyticsLocations: P
-  } = (0, D.default)(y.default.RTC_PANEL), M = (0, R.default)(null != u ? u : ex.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), b = (0, L.default)(null == o ? void 0 : o.id), U = (0, x.default)();
+    analyticsLocations: M
+  } = (0, D.default)(y.default.RTC_PANEL), P = (0, R.default)(null != u ? u : ex.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), b = (0, L.default)(null == o ? void 0 : o.id), U = (0, x.default)();
   return (0, a.jsx)(D.AnalyticsLocationProvider, {
-    value: P,
+    value: M,
     children: (0, a.jsxs)("div", {
       className: ej.wrapper,
       children: [null != t || null != n ? (0, a.jsx)(w.default, {
@@ -747,7 +747,7 @@ t.default = (0, T.default)(function(e) {
         ...e,
         ...f,
         ...r,
-        enableActivities: M,
+        enableActivities: P,
         remoteVoiceState: t,
         guild: c,
         channel: o,

@@ -30,8 +30,8 @@ var a = n("735250"),
   O = n("785717"),
   v = n("221292"),
   L = n("318661"),
-  P = n("747074"),
-  M = n("192133"),
+  M = n("747074"),
+  P = n("192133"),
   y = n("138394"),
   D = n("131640"),
   x = n("695346"),
@@ -281,7 +281,7 @@ function $(e) {
         className: Q.popoutContainer,
         children: (0, a.jsx)("div", {
           ref: ea,
-          children: (0, a.jsxs)(P.default, {
+          children: (0, a.jsxs)(M.default, {
             user: t,
             profileType: z.UserProfileTypes.POPOUT,
             children: [(0, a.jsx)(D.default, {
@@ -294,8 +294,8 @@ function $(e) {
               disableUserProfileLink: __OVERLAY__,
               isHovering: es,
               showPremiumBadgeUpsell: !1
-            }), (0, a.jsxs)(P.default.Inner, {
-              children: [(0, a.jsx)(M.default, {
+            }), (0, a.jsxs)(M.default.Inner, {
+              children: [(0, a.jsx)(P.default, {
                 activity: V,
                 customStatusActivity: $,
                 displayProfile: B,

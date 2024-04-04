@@ -30,8 +30,8 @@ var a = n("735250"),
   O = n("683301"),
   v = n("430824"),
   L = n("230307"),
-  P = n("502568"),
-  M = n("900849"),
+  M = n("502568"),
+  P = n("900849"),
   y = n("879484"),
   D = n("117496"),
   x = n("296386"),
@@ -70,7 +70,7 @@ class K extends s.PureComponent {
     } = this.props;
     if ((0, C.fetchActivityStatistics)(), (0, x.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, _.createAlgoliaIndex)(), h.default.wait(() => {
         (0, S.markView)(F.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
-      }), !a && 0 === o.length && M.trackDiscoveryViewed({
+      }), !a && 0 === o.length && P.trackDiscoveryViewed({
         loadId: this.loadId,
         gamesYouPlayGuilds: s.guilds,
         allGuilds: l.guilds,
@@ -88,7 +88,7 @@ class K extends s.PureComponent {
         preferredLocale: a,
         offset: parseInt(t, 10),
         filters: {
-          approximate_member_count: M.MINIMUM_MEMBER_COUNT
+          approximate_member_count: P.MINIMUM_MEMBER_COUNT
         },
         length: parseInt(n, 10)
       })
@@ -109,7 +109,7 @@ class K extends s.PureComponent {
       currentHomepageCategoryId: l,
       currentCategoryId: i
     } = this.props;
-    if (e.isFetching && !a && M.trackDiscoveryViewed({
+    if (e.isFetching && !a && P.trackDiscoveryViewed({
         loadId: this.loadId,
         gamesYouPlayGuilds: t.guilds,
         allGuilds: n.guilds,
@@ -120,7 +120,7 @@ class K extends s.PureComponent {
         to: 0
       })
     }
-    e.currentCategoryId !== i && M.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && s.length < 1 && l !== i && (0, _.selectCategory)(l)
+    e.currentCategoryId !== i && P.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && s.length < 1 && l !== i && (0, _.selectCategory)(l)
   }
   componentWillUnmount() {
     let {
@@ -128,7 +128,7 @@ class K extends s.PureComponent {
       recommendationsLoadId: t,
       recommendationsGuilds: n
     } = this.props;
-    e === k.DISCOVERY_ALL_CATEGORIES_ID ? null != n && null != t && M.trackDiscoveryExited(t, this.getOrderedGuildIdsSeen(n.map(e => e.id)), "Game Recommendations") : M.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen))
+    e === k.DISCOVERY_ALL_CATEGORIES_ID ? null != n && null != t && P.trackDiscoveryExited(t, this.getOrderedGuildIdsSeen(n.map(e => e.id)), "Game Recommendations") : P.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen))
   }
   getOrderedGuildIdsSeen(e) {
     return e.filter(e => this._guildIdsSeen.has(e))
@@ -149,7 +149,7 @@ class K extends s.PureComponent {
       title: B.default.Messages.GUILD_DISCOVERY_HEADER_GAMES_YOU_PLAY,
       guildsData: i,
       loadingGuildId: r,
-      analyticsContext: M.AnalyticsContexts.RECOMMENDED,
+      analyticsContext: P.AnalyticsContexts.RECOMMENDED,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
       fetchGuilds: _.fetchGamesYouPlayGuilds,
@@ -227,7 +227,7 @@ class K extends s.PureComponent {
       theme: o,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
-      onTagClick: (e, t) => this.handleTagSearch(e, t, M.AnalyticsContexts.SEARCH)
+      onTagClick: (e, t) => this.handleTagSearch(e, t, P.AnalyticsContexts.SEARCH)
     })
   }
   renderRecommendedGuildsSection() {
@@ -241,13 +241,13 @@ class K extends s.PureComponent {
       loadId: this.loadId,
       title: B.default.Messages.GUILD_DISCOVERY_FEATURED_HEADER,
       guildsData: e.featured,
-      analyticsContext: M.AnalyticsContexts.POPULAR,
+      analyticsContext: P.AnalyticsContexts.POPULAR,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
       fetchGuilds: () => (0, _.fetchFeaturedOrPopularGuilds)(0, 30),
       loadingGuildId: n,
       theme: t,
-      onTagClick: (e, t) => this.handleTagSearch(e, t, M.AnalyticsContexts.POPULAR)
+      onTagClick: (e, t) => this.handleTagSearch(e, t, P.AnalyticsContexts.POPULAR)
     })
   }
   renderPopularGuildsSection() {
@@ -263,13 +263,13 @@ class K extends s.PureComponent {
       title: B.default.Messages.GUILD_DISCOVERY_POPULAR_HEADER,
       guildsData: e[n],
       loadingGuildId: s,
-      analyticsContext: M.AnalyticsContexts.POPULAR,
+      analyticsContext: P.AnalyticsContexts.POPULAR,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
       fetchGuilds: () => (0, _.fetchPopularGuildsForCategory)(n),
       currentCategoryId: n,
       theme: t,
-      onTagClick: (e, t) => this.handleTagSearch(e, t, M.AnalyticsContexts.POPULAR)
+      onTagClick: (e, t) => this.handleTagSearch(e, t, P.AnalyticsContexts.POPULAR)
     })
   }
   render() {
@@ -305,7 +305,7 @@ class K extends s.PureComponent {
         className: i()(H.dragRegion, H.pageHeaderDrag, {
           [H.searchPageDrag]: d
         })
-      }), c.isMobile && (0, a.jsx)(P.default, {
+      }), c.isMobile && (0, a.jsx)(M.default, {
         children: (0, a.jsx)(s.Fragment, {})
       }), (0, a.jsx)(E.AdvancedScrollerAuto, {
         className: H.scroller,
@@ -339,10 +339,10 @@ class K extends s.PureComponent {
                     children: r === k.DISCOVERY_ALL_CATEGORIES_ID && B.default.Messages.GUILD_DISCOVERY_HOME_SUBTITLE
                   }), this.renderSearchBar(), f && (0, a.jsx)(w.DiscoveryTags, {
                     hideOverflow: !0,
-                    section: M.AnalyticsContexts.HEADER,
+                    section: P.AnalyticsContexts.HEADER,
                     className: H.headerTagContainer,
                     discoveryTagStyle: w.DiscoveryTagStyle.LIGHT,
-                    onTagClick: e => this.handleTagSearch(e, void 0, M.AnalyticsContexts.HEADER),
+                    onTagClick: e => this.handleTagSearch(e, void 0, P.AnalyticsContexts.HEADER),
                     tags: o().chain(h).flatMap(e => e.keywords).compact().uniq().sampleSize(10).value()
                   })]
                 })
@@ -407,7 +407,7 @@ class K extends s.PureComponent {
       });
       let d = i !== k.DISCOVERY_ALL_CATEGORIES_ID ? i : null;
       try {
-        await M.viewGuild({
+        await P.viewGuild({
           loadId: null != a ? a : this.loadId,
           guildId: e,
           index: t,
@@ -428,7 +428,7 @@ class K extends s.PureComponent {
       } = this.props;
       if (null == a) return;
       let l = {
-        approximate_member_count: M.MINIMUM_MEMBER_COUNT
+        approximate_member_count: P.MINIMUM_MEMBER_COUNT
       };
       (0, _.getSearchResultsCount)(e, l), (0, _.doAlgoliaSearch)(e, {
         filters: l,
@@ -437,7 +437,7 @@ class K extends s.PureComponent {
         offset: 0,
         length: j.MAX_GUILDS_PER_PAGE,
         tag: !0
-      }), M.trackTagSearchStarted(this.loadId, a, n, t), this.scrollToTop()
+      }), P.trackTagSearchStarted(this.loadId, a, n, t), this.scrollToTop()
     })
   }
 }
