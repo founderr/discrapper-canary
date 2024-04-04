@@ -9,8 +9,8 @@ var a = s("735250"),
   d = s("761174"),
   u = s("695346"),
   c = s("314897"),
-  S = s("981631"),
-  E = s("231338"),
+  S = s("63063"),
+  E = s("981631"),
   T = s("689938"),
   f = s("630883");
 
@@ -28,7 +28,7 @@ t.default = n.memo(function() {
       disabled: !e,
       value: t,
       note: T.default.Messages.RECENT_GAMES_SETTING_NOTE.format({
-        onHelpArticleClick: E.NOOP
+        helpdeskArticle: S.default.getArticleURL(E.HelpdeskArticles.USER_PROFILE_RECENT_GAMES)
       }),
       onChange: m,
       hideBorder: !0,
@@ -38,7 +38,7 @@ t.default = n.memo(function() {
       type: l.FormTextTypes.DESCRIPTION,
       children: T.default.Messages.RECENT_GAMES_SETTING_REQUIREMENT.format({
         onSettingClick: () => {
-          i.default.setSection(S.AnalyticsSections.SETTINGS_ACTIVITY_PRIVACY)
+          i.default.setSection(E.AnalyticsSections.SETTINGS_ACTIVITY_PRIVACY)
         }
       })
     }), (0, a.jsx)(l.FormDivider, {
