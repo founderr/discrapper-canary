@@ -71,9 +71,10 @@ let m = (0, I.createChannelRecord)({
       setEditorRef: a,
       showEmojiButton: o = !1,
       autoCompletePosition: l,
-      renderAttachButton: u
-    } = e, [E, I] = r.useState(""), [T, S] = r.useState((0, _.toRichValue)("")), h = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
-    return o && (h.emojis = {
+      renderAttachButton: u,
+      onFocus: E
+    } = e, [I, T] = r.useState(""), [S, h] = r.useState((0, _.toRichValue)("")), N = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
+    return o && (N.emojis = {
       button: !0
     }), (0, i.jsx)(c.default, {
       ref: t,
@@ -84,11 +85,11 @@ let m = (0, I.createChannelRecord)({
       maxCharacterCount: f.MAX_CHAR_COUNT,
       channel: m,
       onChange: (e, t, n) => {
-        I(t), S(n)
+        T(t), h(n)
       },
-      type: h,
-      textValue: E,
-      richValue: T,
+      type: N,
+      textValue: I,
+      richValue: S,
       onSubmit: e => {
         let {
           value: t
@@ -102,7 +103,8 @@ let m = (0, I.createChannelRecord)({
         }))
       },
       setEditorRef: a,
-      focused: !0,
+      focused: !1,
+      onFocus: E,
       disableThemedBackground: !0,
       emojiPickerCloseOnModalOuterClick: !0,
       disabled: !1,

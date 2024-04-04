@@ -1,16 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   generateWatchContentImage: function() {
-    return d
+    return u
   }
 });
-var a = n("493683"),
-  l = n("55000"),
-  s = n("693824"),
-  i = n("690725"),
-  r = n("169040"),
-  o = n("689938");
-let u = (e, t, n) => ({
+var a = n("55000"),
+  l = n("693824"),
+  s = n("690725"),
+  i = n("169040"),
+  r = n("689938");
+let o = (e, t, n) => ({
     AvatarImage: e,
     ...null != t && {
       MediaImage: t
@@ -19,110 +18,111 @@ let u = (e, t, n) => ({
       ApplicationImage: n
     }
   }),
-  d = async e => {
+  u = async e => {
     let {
       mediaImageSrc: t,
       entry: n,
-      avatarSrc: d,
-      description: c,
-      timestamp: f,
-      episodeDescription: h,
-      colors: m
-    } = e, p = await a.default.openPrivateChannel(n.author_id, !1, !1), E = n.extra.media_title, C = u(d, t);
-    return await (0, i.generateImageFromCanvas)({
-      assetsToLoad: C,
+      avatarSrc: u,
+      description: d,
+      timestamp: c,
+      episodeDescription: f,
+      colors: h,
+      channelId: m
+    } = e, p = n.extra.media_title, E = o(u, t);
+    return await (0, s.generateImageFromCanvas)({
+      assetsToLoad: E,
       drawImage: e => {
-        let t = m.map((e, t) => ({
+        let t = h.map((e, t) => ({
           color: e,
           stop: t
         }));
         e.setSize({
-          w: r.imageWidth,
-          h: r.imageHeight
+          w: i.imageWidth,
+          h: i.imageHeight
         }, 4), e.drawRoundedGradientRect(t, {
           x: 0,
-          y: r.imageHeight
+          y: i.imageHeight
         }, {
-          x: r.imageWidth,
+          x: i.imageWidth,
           y: 0
         }, {
           x: 0,
           y: 0,
-          h: r.imageHeight,
-          w: r.imageWidth
+          h: i.imageHeight,
+          w: i.imageWidth
         }, 8), e.setColor("rgba(108, 111, 124, 0.24)"), e.drawRoundedRect({
-          x: r.imageWidth - r.imagePadding - r.betaTagWidth,
-          y: r.imagePadding,
-          w: r.betaTagWidth,
-          h: r.betaTagHeight
+          x: i.imageWidth - i.imagePadding - i.betaTagWidth,
+          y: i.imagePadding,
+          w: i.betaTagWidth,
+          h: i.betaTagHeight
         }, 4, !0), e.setColor("rgba(255, 255, 255, 0.5)"), e.setFont({
           size: 12,
           family: ["gg sans", "sans-serif"],
           weight: 500,
-          truncate: s.TextTruncationMethod.None
-        }), e.drawText(o.default.Messages.BETA, {
-          x: r.imageWidth - r.imagePadding - 29,
+          truncate: l.TextTruncationMethod.None
+        }), e.drawText(r.default.Messages.BETA, {
+          x: i.imageWidth - i.imagePadding - 29,
           y: 26
         }, !0), e.setColor("white");
         let n = e.drawRoundedImage("MediaImage", {
-          x: r.imagePadding,
-          y: r.imagePadding
+          x: i.imagePadding,
+          y: i.imagePadding
         }, {
-          w: r.applicationImageSize,
-          h: r.applicationImageSize
+          w: i.applicationImageSize,
+          h: i.applicationImageSize
         }, 8, {
-          fillMode: s.FillMode.Contain
+          fillMode: l.FillMode.Contain
         });
-        n === s.DrawResultStatus.Failure && (n = e.drawRoundedImage("ApplicationImage", {
-          x: r.imagePadding,
-          y: r.imagePadding
+        n === l.DrawResultStatus.Failure && (n = e.drawRoundedImage("ApplicationImage", {
+          x: i.imagePadding,
+          y: i.imagePadding
         }, {
-          w: r.applicationImageSize,
-          h: r.applicationImageSize
-        }, 8)), n === s.DrawResultStatus.Failure && e.drawPath(l.ACTIVITY_IMAGE_FALLBACK_PATH, {
-          x: r.imagePadding,
-          y: r.imagePadding
+          w: i.applicationImageSize,
+          h: i.applicationImageSize
+        }, 8)), n === l.DrawResultStatus.Failure && e.drawPath(a.ACTIVITY_IMAGE_FALLBACK_PATH, {
+          x: i.imagePadding,
+          y: i.imagePadding
         }, !0, 2 + 2 / 3), e.drawRoundedImage("AvatarImage", {
-          x: r.descriptionIndent,
-          y: r.imagePadding
+          x: i.descriptionIndent,
+          y: i.imagePadding
         }, {
-          w: r.avatarImageSize,
-          h: r.avatarImageSize
+          w: i.avatarImageSize,
+          h: i.avatarImageSize
         }, 50), e.setFont({
           size: 16,
-          truncate: s.TextTruncationMethod.Wrap
-        }), e.drawText(c, {
-          x: r.descriptionIndent,
+          truncate: l.TextTruncationMethod.Wrap
+        }), e.drawText(d, {
+          x: i.descriptionIndent,
           y: 64,
           h: 32,
-          w: r.descriptionMaxWidth
+          w: i.descriptionMaxWidth
         }, !0), e.setFont({
           size: 12,
-          truncate: s.TextTruncationMethod.None
-        }), e.drawText(f, {
-          x: r.descriptionIndent + r.attributionSpacing,
-          y: r.attributionTextPosition,
-          w: r.descriptionMaxWidth
-        }, !0), e.drawPath(r.WATCH_ICON_PATH_TOP, {
-          x: r.descriptionIndent,
-          y: r.attributionIconPosition + 1
-        }, !0, 1.1), e.drawPath(r.WATCH_ICON_PATH_BOTTOM, {
-          x: r.descriptionIndent,
-          y: r.attributionIconPosition + 1
-        }, !0, 1.1), null != h && (e.drawPath(r.SCROLL_ICON_PATH, {
-          x: r.descriptionIndent + r.attributionSize,
-          y: r.attributionIconPosition
-        }, !0, .6), e.drawText(h, {
-          x: r.descriptionIndent + r.attributionSize + r.attributionSpacing,
-          y: r.attributionTextPosition
+          truncate: l.TextTruncationMethod.None
+        }), e.drawText(c, {
+          x: i.descriptionIndent + i.attributionSpacing,
+          y: i.attributionTextPosition,
+          w: i.descriptionMaxWidth
+        }, !0), e.drawPath(i.WATCH_ICON_PATH_TOP, {
+          x: i.descriptionIndent,
+          y: i.attributionIconPosition + 1
+        }, !0, 1.1), e.drawPath(i.WATCH_ICON_PATH_BOTTOM, {
+          x: i.descriptionIndent,
+          y: i.attributionIconPosition + 1
+        }, !0, 1.1), null != f && (e.drawPath(i.SCROLL_ICON_PATH, {
+          x: i.descriptionIndent + i.attributionSize,
+          y: i.attributionIconPosition
+        }, !0, .6), e.drawText(f, {
+          x: i.descriptionIndent + i.attributionSize + i.attributionSpacing,
+          y: i.attributionTextPosition
         }, !0))
       },
       exportConfigs: {
-        format: s.DiscordCanvasExporterOutputFormats.CloudUpload,
+        format: l.DiscordCanvasExporterOutputFormats.CloudUpload,
         quality: 1,
-        fileName: "user-reacting-to-".concat(E, ".png").toLowerCase(),
+        fileName: "user-reacting-to-".concat(p, ".png").toLowerCase(),
         fileType: "png",
-        channelId: p
+        channelId: m
       }
     })
   }

@@ -1,46 +1,46 @@
 "use strict";
 n.r(t), n("627494"), n("757143");
-var a = n("735250");
-n("470079");
-var l = n("317261"),
-  s = n("481060"),
-  i = n("493683"),
-  r = n("70956"),
-  o = n("5192"),
-  u = n("561308"),
-  d = n("69259"),
-  c = n("919394"),
-  f = n("438226"),
-  h = n("206295"),
-  m = n("555672"),
-  p = n("43205"),
-  E = n("591853"),
-  C = n("206583"),
-  g = n("689938"),
-  S = n("522791");
+var a = n("735250"),
+  l = n("470079"),
+  s = n("317261"),
+  i = n("481060"),
+  r = n("493683"),
+  o = n("70956"),
+  u = n("5192"),
+  d = n("561308"),
+  c = n("69259"),
+  f = n("919394"),
+  h = n("438226"),
+  m = n("206295"),
+  p = n("555672"),
+  E = n("43205"),
+  C = n("591853"),
+  g = n("206583"),
+  S = n("689938"),
+  _ = n("522791");
 
-function _(e) {
-  if (e === l.AggregateRange.WEEK) return g.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT
+function T(e) {
+  if (e === s.AggregateRange.WEEK) return S.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT
 }
-let T = (e, t, n, a) => {
-    let l = _(a),
-      s = o.default.getName(t.guild_id, t.id, n),
+let I = (e, t, n, a) => {
+    let l = T(a),
+      s = u.default.getName(t.guild_id, t.id, n),
       i = e.extra.game_name;
     return l.plainFormat({
       gameName: i,
       userName: s
     }).replaceAll("*", "")
   },
-  I = (e, t, n, a) => {
-    let l = _(a),
-      s = o.default.getName(t.guild_id, t.id, n),
+  A = (e, t, n, a) => {
+    let l = T(a),
+      s = u.default.getName(t.guild_id, t.id, n),
       i = e.extra.game_name;
     return l.format({
       userName: s,
       gameName: i
     })
   },
-  A = (e, t) => g.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+  v = (e, t) => S.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
     username: t.username,
     activity: e.extra.game_name
   });
@@ -48,76 +48,95 @@ t.default = e => {
   let {
     closePopout: t,
     channel: n,
-    entry: l,
-    requestId: o
+    entry: s,
+    requestId: u
   } = e, {
-    applicationImageSrc: _,
-    user: v
-  } = (0, m.useGamingContentData)(l), {
-    primaryColor: N,
-    secondaryColor: x
-  } = (0, h.default)(_);
-  if (null == v) return null;
-  let M = (0, u.getEntryDuration)(l);
-  if (null == M) return null;
-  let R = (0, u.getAggregateRange)(l);
-  if (null == R || !(0, m.isAllowedRange)(R)) return null;
-  let L = async e => {
+    applicationImageSrc: T,
+    user: N
+  } = (0, p.useGamingContentData)(s), {
+    primaryColor: x,
+    secondaryColor: M
+  } = (0, m.default)(T), R = l.useCallback(async () => {
+    if (null == N) return;
+    let e = (0, d.getEntryDuration)(s);
+    if (null == e) return;
+    let t = (0, d.getAggregateRange)(s);
+    if (null == t || !(0, p.isAllowedRange)(t)) return;
+    let a = await r.default.getOrEnsurePrivateChannel(s.author_id);
+    return (0, f.generateGamingContentImage)({
+      entry: s,
+      applicationImageSrc: T,
+      avatarSrc: N.getAvatarURL(n.guild_id, 128),
+      description: I(s, n, N, t),
+      timestamp: S.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
+        hours: Math.round(e / o.default.Seconds.HOUR)
+      }),
+      colors: [x, M],
+      channelId: a
+    })
+  }, [T, n, s, x, M, N]);
+  if (null == N) return null;
+  let L = (0, d.getEntryDuration)(s);
+  if (null == L) return null;
+  let y = (0, d.getAggregateRange)(s);
+  if (null == y || !(0, p.isAllowedRange)(y)) return null;
+  let O = async e => {
     try {
-      let t = await i.default.openPrivateChannel(l.author_id, !1, !1),
-        a = await (0, c.generateGamingContentImage)({
-          entry: l,
-          applicationImageSrc: _,
-          avatarSrc: v.getAvatarURL(n.guild_id, 128),
-          description: T(l, n, v, R),
-          timestamp: g.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
-            hours: Math.round(M / r.default.Seconds.HOUR)
+      let t = await r.default.openPrivateChannel(s.author_id, !1, !1),
+        a = await (0, f.generateGamingContentImage)({
+          entry: s,
+          applicationImageSrc: T,
+          avatarSrc: N.getAvatarURL(n.guild_id, 128),
+          description: I(s, n, N, y),
+          timestamp: S.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
+            hours: Math.round(L / o.default.Seconds.HOUR)
           }),
-          colors: [N, x],
+          colors: [x, M],
           channelId: t
         });
-      await (0, f.sendContentImageReply)({
+      await (0, h.sendContentImageReply)({
         file: a,
-        user: v,
-        altText: A(l, v),
+        user: N,
+        altText: v(s, N),
         reply: e
-      }), (0, d.trackInteraction)(C.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
-        entry: l,
+      }), (0, c.trackInteraction)(g.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
+        entry: s,
         channelId: n.id,
         guildId: n.guild_id,
-        requestId: o
+        requestId: u
       })
     } finally {
       t()
     }
   };
-  return (0, a.jsxs)(E.Popout, {
-    children: [(0, a.jsxs)(E.PopoutHero, {
-      backgroundImgSrc: _,
+  return (0, a.jsxs)(C.Popout, {
+    children: [(0, a.jsxs)(C.PopoutHero, {
+      backgroundImgSrc: T,
       children: [(0, a.jsxs)("div", {
-        className: S.heroDetails,
+        className: _.heroDetails,
         children: [(0, a.jsxs)("div", {
-          children: [(0, a.jsx)(E.PopoutAvatar, {
-            user: v,
+          children: [(0, a.jsx)(C.PopoutAvatar, {
+            user: N,
             guildId: n.guild_id
-          }), (0, a.jsx)(E.PopoutTitle, {
-            children: I(l, n, v, R)
+          }), (0, a.jsx)(C.PopoutTitle, {
+            children: A(s, n, N, y)
           })]
-        }), (0, a.jsx)(p.ContentImage, {
+        }), (0, a.jsx)(E.ContentImage, {
           size: 80,
-          src: _,
-          className: S.contentImage
+          src: T,
+          className: _.contentImage
         })]
-      }), (0, a.jsx)(m.ContentRowBadges, {
-        className: S.badgeContainer,
-        entry: l,
+      }), (0, a.jsx)(p.ContentRowBadges, {
+        className: _.badgeContainer,
+        entry: s,
         textColor: "always-white",
-        iconColor: s.tokens.colors.WHITE
+        iconColor: i.tokens.colors.WHITE
       })]
-    }), (0, a.jsx)(E.PopoutReactor, {
-      onMessageReact: L,
-      user: v,
-      channel: n
+    }), (0, a.jsx)(C.PopoutReactor, {
+      onMessageReact: O,
+      user: N,
+      channel: n,
+      generateReactionImage: R
     })]
   })
 }
