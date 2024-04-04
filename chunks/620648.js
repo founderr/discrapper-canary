@@ -39,12 +39,12 @@ function v(e) {
   }), y = (0, i.useStateFromStores)([m.default], () => {
     var e, t;
     return null !== (t = null === (e = m.default.getUserProfile(s.id)) || void 0 === e ? void 0 : e.connectedAccounts) && void 0 !== t ? t : []
-  }), M = (0, i.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), {
-    profileTheme: P
-  } = (0, E.default)(s, v), R = (0, i.useStateFromStores)([c.default], () => c.default.locale), g = (0, d.useIsUserRecentGamesEnabled)({
+  }), P = (0, i.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), {
+    profileTheme: M
+  } = (0, E.default)(s, v), R = (0, i.useStateFromStores)([c.default], () => c.default.locale), O = (0, d.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
-  }), O = l.useMemo(() => y.filter(e => {
+  }), g = l.useMemo(() => y.filter(e => {
     let t = n.default.get(e.type);
     return null != t && j(t)
   }), [y, j]), D = l.useRef(null);
@@ -53,7 +53,7 @@ function v(e) {
       var e;
       null == D || null === (e = D.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [U]), M) ? (0, a.jsx)(A.default, {}) : (0, a.jsxs)(r.ScrollerThin, {
+  }, [U]), P) ? (0, a.jsx)(A.default, {}) : (0, a.jsxs)(r.ScrollerThin, {
     fade: !0,
     className: p.infoScroller,
     children: [(0, a.jsxs)("div", {
@@ -71,17 +71,10 @@ function v(e) {
         userId: s.id,
         headingClassName: p.userInfoSectionHeader,
         textClassName: p.userInfoText
-      }), g && (0, a.jsx)(x.default, {
+      }), O && (0, a.jsx)(x.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
-        containerClassName: p.userInfoText,
-        wrapChildren: e => (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(r.Heading, {
-            variant: "eyebrow",
-            className: p.userInfoSectionHeader,
-            children: _.default.Messages.RECENT_GAMES
-          }), e]
-        })
+        containerClassName: p.userInfoText
       }), (0, a.jsx)(r.Heading, {
         variant: "eyebrow",
         className: p.userInfoSectionHeader,
@@ -96,8 +89,8 @@ function v(e) {
       })]
     }), (0, a.jsx)(N.ConnectedUserAccounts, {
       ref: D,
-      connectedAccounts: O,
-      theme: P,
+      connectedAccounts: g,
+      theme: M,
       locale: R,
       className: p.userInfoSection,
       userId: s.id

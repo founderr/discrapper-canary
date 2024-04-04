@@ -22,28 +22,27 @@ t.default = n.memo(function() {
     t = (0, d.useIsSelfRecentGamesEnabled)({
       location: "28tk0bf_8"
     });
-  return (0, a.jsx)(l.FormSwitch, {
-    disabled: !e,
-    value: t,
-    note: (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(l.Text, {
-        variant: "text-sm/normal",
-        color: "text-normal",
-        children: T.default.Messages.RECENT_GAMES_SETTING_NOTE.format({
-          onHelpArticleClick: E.NOOP
-        })
-      }), (0, a.jsx)(l.Text, {
-        className: f.requirement,
-        variant: "text-sm/normal",
-        color: "text-normal",
-        children: T.default.Messages.RECENT_GAMES_SETTING_REQUIREMENT.format({
-          onSettingClick: () => {
-            i.default.setSection(S.AnalyticsSections.SETTINGS_ACTIVITY_PRIVACY)
-          }
-        })
-      })]
-    }),
-    onChange: m,
-    children: T.default.Messages.USER_RECENT_GAMES_ON_PROFILE
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(l.FormSwitch, {
+      className: f.recentGamesSwitch,
+      disabled: !e,
+      value: t,
+      note: T.default.Messages.RECENT_GAMES_SETTING_NOTE.format({
+        onHelpArticleClick: E.NOOP
+      }),
+      onChange: m,
+      hideBorder: !0,
+      children: T.default.Messages.USER_RECENT_GAMES_ON_PROFILE
+    }), (0, a.jsx)(l.FormText, {
+      className: f.requirement,
+      type: l.FormTextTypes.DESCRIPTION,
+      children: T.default.Messages.RECENT_GAMES_SETTING_REQUIREMENT.format({
+        onSettingClick: () => {
+          i.default.setSection(S.AnalyticsSections.SETTINGS_ACTIVITY_PRIVACY)
+        }
+      })
+    }), (0, a.jsx)(l.FormDivider, {
+      className: f.dividerDefault
+    })]
   })
 })
