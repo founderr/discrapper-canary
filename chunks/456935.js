@@ -55,7 +55,7 @@ t.default = function(e) {
         }, "hook")
       }
     })
-  }), v = h === f.VerificationLevels.VERY_HIGH ? m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
+  }), R = h === f.VerificationLevels.VERY_HIGH ? m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
   return (0, a.jsx)(u.default, {
     title: _,
     children: (0, a.jsxs)("div", {
@@ -67,7 +67,7 @@ t.default = function(e) {
       }), (0, a.jsx)(s.Text, {
         className: E.guildVerificationText,
         variant: "text-sm/normal",
-        children: v
+        children: R
       }), n && (0, a.jsx)(s.Clickable, {
         className: E.iconInteractiveContainer,
         onClick: () => (0, s.openModalLazy)(async () => {

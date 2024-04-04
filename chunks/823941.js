@@ -19,8 +19,8 @@ var l = a("735250"),
   f = a("594174"),
   m = a("68972"),
   C = a("754347"),
-  g = a("74538"),
-  h = a("884697"),
+  h = a("74538"),
+  g = a("884697"),
   p = a("624377"),
   E = a("141011"),
   b = a("813083"),
@@ -30,14 +30,14 @@ var l = a("735250"),
   v = a("474936"),
   L = a("689938"),
   I = a("380762");
-let _ = (0, h.getLogoSize)(96),
+let _ = (0, g.getLogoSize)(96),
   N = e => {
     let {
       category: t
     } = e, {
       analyticsLocations: a
     } = (0, c.default)(), r = s.useRef(null), n = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser());
-    return g.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
+    return h.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
       children: t.summary
     }) : (0, l.jsx)(l.Fragment, {
       children: L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
@@ -90,7 +90,7 @@ function y(e) {
       })]
     }), (0, l.jsx)("img", {
       className: I.categoryLogo,
-      src: (0, h.getCollectiblesAssetURL)(s.logo, {
+      src: (0, g.getCollectiblesAssetURL)(s.logo, {
         size: _
       }),
       alt: s.name,

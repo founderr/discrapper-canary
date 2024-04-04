@@ -34,7 +34,7 @@ function N(e) {
   } = (0, n.default)(), {
     trackUserProfileAction: j,
     ...y
-  } = (0, c.useUserProfileAnalyticsContext)(), M = {
+  } = (0, c.useUserProfileAnalyticsContext)(), P = {
     location: {
       page: E.AnalyticsPages.USER_PROFILE,
       section: E.AnalyticsSections.PROFILE_MODAL
@@ -56,7 +56,7 @@ function N(e) {
       className: I.userProfileActivity,
       activity: _,
       actionColor: I.actionColor,
-      analyticsParams: M,
+      analyticsParams: P,
       onAction: () => {
         j({
           action: "JOIN_ACTIVITY"
@@ -74,7 +74,7 @@ function N(e) {
       source: "Profile Modal",
       className: I.userProfileActivity,
       actionColor: I.actionColor,
-      analyticsParams: M,
+      analyticsParams: P,
       onAction: () => {
         j({
           action: "JOIN_ACTIVITY"

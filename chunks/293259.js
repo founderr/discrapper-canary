@@ -30,11 +30,11 @@ var a = s("735250"),
   C = s("184325"),
   j = s("496206"),
   y = s("228168"),
-  M = s("981631"),
-  P = s("231338"),
+  P = s("981631"),
+  M = s("231338"),
   R = s("689938"),
-  g = s("950114");
-let O = o.AvatarSizes.SIZE_120,
+  O = s("950114");
+let g = o.AvatarSizes.SIZE_120,
   D = x.default.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
 
 function F(e) {
@@ -47,8 +47,8 @@ function F(e) {
     className: b,
     isStreaming: G,
     hasProfileEffect: k,
-    onClose: w
-  } = e, H = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(x.id)), V = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(x.id)), Y = (0, i.useStateFromStores)([E.default], () => E.default.getStatus(x.id)), z = (0, i.useStateFromStores)([_.default], () => _.default.getUserProfile(x.id)), J = (0, i.useStateFromStores)([m.default], () => m.default.getId() === x.id), {
+    onClose: V
+  } = e, w = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(x.id)), H = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(x.id)), Y = (0, i.useStateFromStores)([E.default], () => E.default.getStatus(x.id)), z = (0, i.useStateFromStores)([_.default], () => _.default.getUserProfile(x.id)), J = (0, i.useStateFromStores)([m.default], () => m.default.getId() === x.id), {
     profileTheme: K
   } = (0, v.default)(x, t), {
     trackUserProfileAction: Q
@@ -58,11 +58,11 @@ function F(e) {
     avatarDecorationSrc: q
   } = (0, p.default)({
     user: x,
-    size: O
+    size: g
   }), X = l.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(x, L), [x, L]);
 
   function $() {
-    w(), (0, d.popLayer)()
+    V(), (0, d.popLayer)()
   }
 
   function ee() {
@@ -88,7 +88,7 @@ function F(e) {
         context: {
           location: "User Profile"
         },
-        type: M.RelationshipTypes.BLOCKED
+        type: P.RelationshipTypes.BLOCKED
       })
     } catch (e) {
       $()
@@ -110,46 +110,46 @@ function F(e) {
       profileType: y.UserProfileTypes.MODAL,
       hasProfileEffect: k
     }), (0, a.jsxs)("div", {
-      className: g.header,
+      className: O.header,
       children: [(0, a.jsx)("div", {
         ...Z,
         children: (0, a.jsx)(D, {
           src: W,
           avatarDecoration: q,
-          size: O,
-          className: g.avatar,
-          status: X ? P.StatusTypes.UNKNOWN : G ? P.StatusTypes.STREAMING : Y,
+          size: g,
+          className: O.avatar,
+          status: X ? M.StatusTypes.UNKNOWN : G ? M.StatusTypes.STREAMING : Y,
           statusBackdropColor: (0, o.getStatusBackdropColor)(K),
-          isMobile: V,
+          isMobile: H,
           statusTooltip: !0,
           "aria-label": x.username
         })
       }), (0, a.jsxs)("div", {
-        className: g.headerTop,
+        className: O.headerTop,
         children: [(null == z ? void 0 : z.profileFetchFailed) && !x.isClyde() ? (0, a.jsx)(o.Tooltip, {
           text: R.default.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
           children: e => (0, a.jsx)(N.default, {
             ...e,
-            className: g.warningCircleIcon,
+            className: O.warningCircleIcon,
             color: r.default.unsafe_rawColors.YELLOW_300.css
           })
         }) : (0, a.jsx)(C.default, {
           user: x,
-          className: g.badgeList,
+          className: O.badgeList,
           guildId: F,
           size: C.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
           shrinkToSize: C.BadgeSizes.SIZE_18
         }), (0, a.jsxs)("div", {
-          className: g.relationshipButtons,
+          className: O.relationshipButtons,
           children: [(0, a.jsx)(U.default, {
-            className: g.applicationInstallButton,
+            className: O.applicationInstallButton,
             application: null == z ? void 0 : z.application
           }), (0, a.jsx)(j.default, {
             user: x,
             isCurrentUser: J,
-            relationshipType: H,
+            relationshipType: w,
             onAddFriend: function() {
               try {
                 Q({
@@ -189,7 +189,7 @@ function F(e) {
                 } = await s.e("29136").then(s.bind(s, "193646"));
                 return t => (0, a.jsx)(e, {
                   ...t,
-                  relationshipType: H,
+                  relationshipType: w,
                   onRemoveFriend: ee,
                   onBlock: es,
                   onReport: ea,
@@ -202,7 +202,7 @@ function F(e) {
               })
             },
             children: (0, a.jsx)(T.default, {
-              className: g.additionalActionsIcon
+              className: O.additionalActionsIcon
             })
           })]
         })]

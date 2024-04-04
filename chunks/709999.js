@@ -12,8 +12,8 @@ var l = a("735250"),
   f = a("481060"),
   m = a("37234"),
   C = a("727637"),
-  g = a("100527"),
-  h = a("906732"),
+  h = a("100527"),
+  g = a("906732"),
   p = a("1585"),
   E = a("125988"),
   b = a("333867"),
@@ -89,7 +89,7 @@ t.default = function(e) {
     isGiftEasterEggEnabled: k
   } = e, {
     analyticsLocations: q
-  } = (0, h.default)(g.default.COLLECTIBLES_SHOP_CARD), $ = s.useRef(null), J = (0, C.default)($), [Q, ee] = s.useState(!1), et = J || Q, ea = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [el] = t.items, {
+  } = (0, g.default)(h.default.COLLECTIBLES_SHOP_CARD), $ = s.useRef(null), J = (0, C.default)($), [Q, ee] = s.useState(!1), et = J || Q, ea = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [el] = t.items, {
     avatarDecorationSrc: es,
     eventHandlers: er,
     avatarPlaceholderSrc: en
@@ -100,8 +100,8 @@ t.default = function(e) {
     animateOnHover: !et
   }), {
     backgroundColors: eo
-  } = (0, D.default)(t.styles), ei = (0, j.getFormattedPriceForCollectiblesProduct)(t, N, !1), eu = (0, j.isPremiumCollectiblesProduct)(t), ec = (0, j.isFreeCollectiblesProduct)(t), [ed, ef, em] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), eC = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), eg = (0, u.useStateFromStores)([P.default], () => P.default.getIsProductNew(el.skuId)), {
-    hoverVariant: eh
+  } = (0, D.default)(t.styles), ei = (0, j.getFormattedPriceForCollectiblesProduct)(t, N, !1), eu = (0, j.isPremiumCollectiblesProduct)(t), ec = (0, j.isFreeCollectiblesProduct)(t), [ed, ef, em] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), eC = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), eh = (0, u.useStateFromStores)([P.default], () => P.default.getIsProductNew(el.skuId)), {
+    hoverVariant: eg
   } = (0, F.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard");
   s.useEffect(() => {
     let {
@@ -138,8 +138,8 @@ t.default = function(e) {
         returnRef: eE
       })
     },
-    eT = eS(g.default.COLLECTIBLES_SHOP_CARD),
-    ex = eS(g.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    eT = eS(h.default.COLLECTIBLES_SHOP_CARD),
+    ex = eS(h.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     ev = () => (0, l.jsx)("div", {
       className: V.hoverUpsellContainer,
       children: (0, l.jsx)(S.default, {
@@ -216,7 +216,7 @@ t.default = function(e) {
   return (0, l.jsx)(f.FocusRing, {
     children: (0, l.jsxs)(f.Clickable, {
       innerRef: $,
-      className: n()(V.shopCard, (0, o.match)(eh).with(F.ShopCardHoverAnimationVariant.CONTROL, () => V.shopCardDefaultAnimation).with(F.ShopCardHoverAnimationVariant.TRANSFORMATION, () => V.shopCardTransformationAnimation).otherwise(() => void 0)),
+      className: n()(V.shopCard, (0, o.match)(eg).with(F.ShopCardHoverAnimationVariant.CONTROL, () => V.shopCardDefaultAnimation).with(F.ShopCardHoverAnimationVariant.TRANSFORMATION, () => V.shopCardTransformationAnimation).otherwise(() => void 0)),
       onBlur: () => ee(!1),
       onClick: eT,
       style: null != eo ? {
@@ -292,7 +292,7 @@ t.default = function(e) {
         category: a,
         className: V.limitedTimeBadge,
         display: "card"
-      }), eg && (0, l.jsx)(O.TextBadge, {
+      }), eh && (0, l.jsx)(O.TextBadge, {
         text: G.default.Messages.NEW,
         disableColor: !0,
         className: V.newBadge

@@ -15,8 +15,8 @@ var s = a("735250"),
   g = a("126900"),
   p = a("466111"),
   C = a("783014"),
-  S = a("242411"),
-  v = a("26290"),
+  v = a("242411"),
+  S = a("26290"),
   E = a("74538"),
   A = a("864106"),
   x = a("439959"),
@@ -67,20 +67,20 @@ let T = () => 80,
         className: P.presetDecorationImg,
         src: M,
         alt: a.label
-      }), i === x.Section.PURCHASE || i === x.Section.PREMIUM_PURCHASE && A ? null : C ? (0, s.jsx)(v.PremiumBadge, {
+      }), i === x.Section.PURCHASE || i === x.Section.PREMIUM_PURCHASE && A ? null : C ? (0, s.jsx)(S.PremiumBadge, {
         className: P.newBadge,
         text: (0, s.jsxs)("div", {
           className: P.newBadgeText,
-          children: [(0, s.jsx)(S.default, {
+          children: [(0, s.jsx)(v.default, {
             width: 12,
             height: 12
           }), _.default.Messages.NEW]
         })
-      }) : (0, s.jsx)(v.IconBadge, {
+      }) : (0, s.jsx)(S.IconBadge, {
         icon: g ? () => (0, s.jsx)(p.default, {
           width: 14,
           height: 14
-        }) : () => (0, s.jsx)(S.default, {
+        }) : () => (0, s.jsx)(v.default, {
           width: 12,
           height: 12
         }),

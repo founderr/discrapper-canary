@@ -5,8 +5,8 @@ s("470079");
 var l = s("803997"),
   i = s.n(l),
   n = s("924826"),
-  u = s("442837"),
-  r = s("481060"),
+  r = s("442837"),
+  u = s("481060"),
   o = s("209613"),
   d = s("430824"),
   c = s("263704"),
@@ -14,45 +14,45 @@ var l = s("803997"),
   I = s("55543"),
   f = s("693546"),
   T = s("826581"),
-  R = s("246364"),
-  _ = s("328977"),
+  _ = s("246364"),
+  R = s("328977"),
   S = s("571728"),
   N = s("762660"),
   A = s("689938"),
-  m = s("123471");
-let M = () => null;
+  M = s("123471");
+let m = () => null;
 
 function h(e) {
   let {
     status: t
   } = e, s = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE, l = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY;
   switch (t) {
-    case R.GuildJoinRequestApplicationStatuses.REJECTED:
+    case _.GuildJoinRequestApplicationStatuses.REJECTED:
       s = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_TITLE, l = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_BODY;
       break;
-    case R.GuildJoinRequestApplicationStatuses.APPROVED:
+    case _.GuildJoinRequestApplicationStatuses.APPROVED:
       s = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_TITLE, l = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_BODY;
       break;
     default:
       s = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE, l = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY
   }
   return (0, a.jsxs)("div", {
-    className: m.emptyContainer,
+    className: M.emptyContainer,
     children: [(0, a.jsxs)("div", {
-      className: m.emptyIcon,
+      className: M.emptyIcon,
       children: [(0, a.jsx)(I.default, {
-        className: m.star
+        className: M.star
       }), (0, a.jsx)(c.default, {
-        className: m.checkmark
+        className: M.checkmark
       }), (0, a.jsx)(E.default, {
-        className: m.plus
+        className: M.plus
       })]
-    }), (0, a.jsx)(r.Heading, {
+    }), (0, a.jsx)(u.Heading, {
       variant: "heading-xl/semibold",
       children: s
-    }), (0, a.jsx)(r.Text, {
+    }), (0, a.jsx)(u.Text, {
       color: "header-secondary",
-      className: m.emptyBody,
+      className: M.emptyBody,
       variant: "text-sm/normal",
       children: l
     })]
@@ -65,42 +65,42 @@ t.default = function(e) {
     guildId: l,
     onScroll: c,
     listRef: E
-  } = e, I = (0, u.useStateFromStores)([d.default], () => d.default.getGuild(l), [l]), p = (0, u.useStateFromStores)([T.default], () => T.default.isFetching()), x = p ? [s.length + 25] : [s.length], C = (0, _.useSelectedGuildJoinRequest)({
+  } = e, I = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(l), [l]), p = (0, r.useStateFromStores)([T.default], () => T.default.isFetching()), C = p ? [s.length + 25] : [s.length], x = (0, R.useSelectedGuildJoinRequest)({
     guildId: l
   }), g = (0, S.useSubmittedGuildJoinRequestTotal)({
     guildId: l
-  }), j = (0, o.default)("guild-join-requests"), P = e => {
+  }), P = (0, o.default)("guild-join-requests"), j = e => {
     let {
       row: n
-    } = e, u = s[n];
-    return null == u ? (0, a.jsx)(N.MemberApplicationsListRowPlaceholder, {}, n) : (0, a.jsx)(N.MemberApplicationsListRow, {
+    } = e, r = s[n];
+    return null == r ? (0, a.jsx)(N.MemberApplicationsListRowPlaceholder, {}, n) : (0, a.jsx)(N.MemberApplicationsListRow, {
       className: i()({
-        [m.selected]: C === u,
-        [m.siblingSelected]: C === s[n - 1]
+        [M.selected]: x === r,
+        [M.siblingSelected]: x === s[n - 1]
       }),
       guild: I,
-      guildJoinRequest: u,
-      onClick: () => f.default.setSelectedGuildJoinRequest(l, u),
+      guildJoinRequest: r,
+      onClick: () => f.default.setSelectedGuildJoinRequest(l, r),
       applicationStatus: t
-    }, "".concat(u.userId, "-").concat(u.applicationStatus, "-").concat(n))
+    }, "".concat(r.userId, "-").concat(r.applicationStatus, "-").concat(n))
   };
   return p || 0 !== s.length ? (0, a.jsxs)(a.Fragment, {
-    children: [0 !== g && t === R.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsx)(r.Text, {
-      className: m.title,
+    children: [0 !== g && t === _.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsx)(u.Text, {
+      className: M.title,
       variant: "text-xs/semibold",
       color: "header-secondary",
       children: (function(e, t) {
         let s = t.toLocaleString();
         switch (e) {
-          case R.GuildJoinRequestApplicationStatuses.SUBMITTED:
+          case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
             return A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING_COUNT_HYPEN.format({
               count: s
             });
-          case R.GuildJoinRequestApplicationStatuses.REJECTED:
+          case _.GuildJoinRequestApplicationStatuses.REJECTED:
             return A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED_COUNT_HYPEN.format({
               count: s
             });
-          case R.GuildJoinRequestApplicationStatuses.APPROVED:
+          case _.GuildJoinRequestApplicationStatuses.APPROVED:
             return A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED_COUNT_HYPEN.format({
               count: s
             });
@@ -109,7 +109,7 @@ t.default = function(e) {
         }
       })(t, g).toUpperCase()
     }), (0, a.jsx)(n.ListNavigatorProvider, {
-      navigator: j,
+      navigator: P,
       children: (0, a.jsx)(n.ListNavigatorContainer, {
         children: e => {
           let {
@@ -117,7 +117,7 @@ t.default = function(e) {
             role: s,
             ...l
           } = e;
-          return (0, a.jsx)(r.List, {
+          return (0, a.jsx)(u.List, {
             innerRole: s,
             innerAriaLabel: A.default.Messages.MEMBERS,
             ref: e => {
@@ -128,9 +128,9 @@ t.default = function(e) {
             paddingBottom: 16,
             sectionHeight: 0,
             rowHeight: 64,
-            renderSection: M,
-            renderRow: P,
-            sections: x,
+            renderSection: m,
+            renderRow: j,
+            sections: C,
             onScroll: c,
             fade: !0,
             ...l

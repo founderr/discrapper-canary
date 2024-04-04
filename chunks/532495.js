@@ -46,8 +46,8 @@ function P() {
       pendingAvatar: F,
       pendingGlobalName: G,
       pendingBanner: k,
-      pendingBio: H,
-      pendingPronouns: w,
+      pendingBio: w,
+      pendingPronouns: H,
       pendingAccentColor: V,
       pendingThemeColors: Y,
       errors: K
@@ -91,7 +91,7 @@ function P() {
       sectionTitle: D.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: K.pronouns,
       onPronounsChange: p.setPendingPronouns,
-      pendingPronouns: w,
+      pendingPronouns: H,
       currentPronouns: null !== (b = null == B ? void 0 : B.pronouns) && void 0 !== b ? b : ""
     }, "pronouns"), (0, a.jsx)(E.default, {
       onAvatarChange: r.setPendingAvatar,
@@ -129,7 +129,7 @@ function P() {
       onBioChange: e => {
         (0, u.setNewPendingUserBio)(e, null == B ? void 0 : B.bio), (0, r.setDisableSubmit)(null != e && e.length > v.BIO_MAX_LENGTH)
       },
-      pendingBio: H,
+      pendingBio: w,
       currentBio: null !== (U = null == B ? void 0 : B.bio) && void 0 !== U ? U : ""
     }, "bio"), et && (0, a.jsx)(N.default, {}), null != J && (0, a.jsx)(f.default, {
       legacyUsername: J

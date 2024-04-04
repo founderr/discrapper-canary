@@ -38,8 +38,8 @@ var a = s("735250"),
   F = s("823188"),
   G = s("504865"),
   k = s("179984"),
-  H = s("474936"),
-  w = s("981631"),
+  w = s("474936"),
+  H = s("981631"),
   V = s("689938"),
   Y = s("846974"),
   K = s("881188"),
@@ -56,7 +56,7 @@ function Q() {
   let u = null != s.trialId,
     E = n || u,
     T = null != s.trialEndsAt ? o()(s.trialEndsAt).diff(o()(), "d") : 0,
-    m = H.SubscriptionPlanInfo[s.planIdFromItems],
+    m = w.SubscriptionPlanInfo[s.planIdFromItems],
     g = P.default.formatPriceString(P.default.getDefaultPrice(m.id), m.interval);
   return (0, a.jsxs)("div", {
     className: i()(Y.tierCard, {
@@ -81,22 +81,22 @@ function Q() {
             remainingTime: T,
             price: g
           }) : V.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
-            percent: null !== (e = null == l ? void 0 : l.percentage) && void 0 !== e ? e : H.DISCOUNT_PERCENTAGE_FALLBACK,
+            percent: null !== (e = null == l ? void 0 : l.percentage) && void 0 !== e ? e : w.DISCOUNT_PERCENTAGE_FALLBACK,
             regularPrice: g,
-            numMonths: null !== (t = null == l ? void 0 : l.duration) && void 0 !== t ? t : H.DISCOUNT_DURATION_FALLBACK
+            numMonths: null !== (t = null == l ? void 0 : l.duration) && void 0 !== t ? t : w.DISCOUNT_DURATION_FALLBACK
           })
         })]
       }) : (0, a.jsx)(G.default, {
-        subscriptionTier: H.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: w.PremiumSubscriptionSKUs.TIER_2,
         interval: m.interval
       }), (0, a.jsx)(F.Tier2FeatureItems, {}), (0, a.jsx)(S.Button, {
         className: Y.tierCardButton,
         color: S.Button.Colors.WHITE,
         onClick: () => {
-          L.default.track(w.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
+          L.default.track(H.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
             cta_type: "to_premium_home_button",
             target: "premium home page"
-          }), (0, f.popLayer)(), (0, x.transitionTo)(w.Routes.APPLICATION_STORE)
+          }), (0, f.popLayer)(), (0, x.transitionTo)(H.Routes.APPLICATION_STORE)
         },
         children: (0, a.jsx)(S.Text, {
           className: Y.tierCardButtonCTA,
@@ -108,10 +108,10 @@ function Q() {
         look: S.Button.Looks.OUTLINED,
         color: S.Button.Colors.WHITE,
         onClick: () => {
-          L.default.track(w.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
+          L.default.track(H.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
             cta_type: "to_subscriptions_button",
             target: "subscriptions settings"
-          }), _.default.open(w.UserSettingsSections.SUBSCRIPTIONS)
+          }), _.default.open(H.UserSettingsSections.SUBSCRIPTIONS)
         },
         children: (0, a.jsx)(S.Text, {
           className: Y.__invalid_managePlanButtonCTA,
@@ -178,7 +178,7 @@ function Z() {
         buttonTextClassName: Y.giftButtonCTA,
         color: S.Button.Colors.CUSTOM,
         onClick: () => {
-          L.default.track(w.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
+          L.default.track(H.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
             cta_type: "gifting_button",
             target: "payment modal"
           })
@@ -208,7 +208,7 @@ t.default = function() {
     autoTrackExposure: !1
   }), (0, y.useMaybeFetchReferralsRemaining)("PremiumManagementSettings"), n.useEffect(() => {
     E.default.wait(async () => {
-      !_ && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, m.fetchPremiumSubscriptionPlans)(f, null, w.RevenueSurfaces.DISCOVERY)]), o(!1)
+      !_ && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, m.fetchPremiumSubscriptionPlans)(f, null, H.RevenueSurfaces.DISCOVERY)]), o(!1)
     })
   }, [f, _, e]);
   let [x, D] = n.useState(!1);
@@ -231,11 +231,11 @@ t.default = function() {
           headingOverride: V.default.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,
           hidePill: !P,
           selectedPlanColumnClassName: Y.tier2PlanComparisonTableBackground,
-          selectedPlanTier: H.PremiumTypes.TIER_2
+          selectedPlanTier: w.PremiumTypes.TIER_2
         })]
       }), (0, a.jsx)(u.VisibilitySensor, {
         onChange: e => {
-          e && !x && (L.default.track(w.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+          e && !x && (L.default.track(H.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
             location_stack: t
           }), D(!0))
         },

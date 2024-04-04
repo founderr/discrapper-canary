@@ -123,7 +123,7 @@ t.default = e => {
     analyticsLocations: k
   } = (0, T.default)();
   if (null == r || null == l || null == h) return null;
-  let H = () => {
+  let w = () => {
       o()(null != N, "Application cannot be null"), (0, c.openModalLazy)(async () => {
         let {
           default: e
@@ -137,7 +137,7 @@ t.default = e => {
         })
       })
     },
-    w = async () => {
+    H = async () => {
       try {
         G(!0);
         let {
@@ -272,9 +272,9 @@ t.default = e => {
         disabled: Y
       }), !J && (0, a.jsx)(F, {
         isCancelled: V,
-        onCancelSubscriptionClick: H,
+        onCancelSubscriptionClick: w,
         isResubscribing: M,
-        onResubscribeClick: w
+        onResubscribeClick: H
       })]
     }) : null]
   })

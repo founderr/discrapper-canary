@@ -42,8 +42,8 @@ var a = s("735250"),
   F = s("709054"),
   G = s("88658"),
   k = s("695346"),
-  H = s("3957"),
-  w = s("279743"),
+  w = s("3957"),
+  H = s("279743"),
   V = s("973005"),
   Y = s("526761"),
   K = s("981631"),
@@ -68,7 +68,7 @@ function X() {
       location: "user_settings_web"
     }),
     n = (0, R.useSafetyAlertsSettingOrDefault)(),
-    l = (0, H.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
+    l = (0, w.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
   return t || !s ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(E.FormDivider, {
       className: Z.marginBottom20
@@ -89,7 +89,7 @@ function X() {
           onChange: M.updateDmSafetyAlertsSetting,
           hideBorder: !0,
           children: z.default.Messages.SAFETY_ALERTS_SETTING_TITLE
-        }), (0, a.jsx)(w.default, {
+        }), (0, a.jsx)(H.default, {
           animationDelay: 1e3,
           scrollPosition: Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS
         })]
@@ -111,7 +111,7 @@ function $() {
   let e = (0, p.default)(),
     t = k.DefaultGuildsRestricted.useSetting(),
     s = k.MessageRequestRestrictedDefault.useSetting(),
-    n = (0, H.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
+    n = (0, w.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
   return e ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: Q.settingsBackgroundFlashElement,
@@ -142,7 +142,7 @@ function $() {
           hideBorder: !0,
           children: z.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_HEADER
         })
-      }), (0, a.jsx)(w.default, {
+      }), (0, a.jsx)(H.default, {
         animationDelay: 700,
         scrollPosition: Y.PrivacyAndSafetyScrollPositions.MESSAGE_REQUESTS
       })]
@@ -160,7 +160,7 @@ function ee() {
       explicitContentFriendDm: n,
       explicitContentNonFriendDm: l
     } = (0, I.useExplicitContentSettingOrDefault)(),
-    r = (0, H.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS),
+    r = (0, w.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS),
     o = [{
       value: S.ExplicitContentRedaction.BLUR,
       label: z.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
@@ -229,7 +229,7 @@ function ee() {
             explicitContentGuilds: e
           })
         })
-      }), (0, a.jsx)(w.default, {
+      }), (0, a.jsx)(H.default, {
         scrollPosition: Y.PrivacyAndSafetyScrollPositions.EXPLICIT_MEDIA_REDACTION
       })]
     }), (0, a.jsx)(E.FormDivider, {

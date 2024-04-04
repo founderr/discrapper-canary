@@ -43,8 +43,8 @@ var n = s("990547"),
   F = s("392735"),
   G = s("61160"),
   k = s("604227"),
-  H = s("38915"),
-  w = s("498639"),
+  w = s("38915"),
+  H = s("498639"),
   V = s("748717"),
   Y = s("419636"),
   K = s("35426"),
@@ -347,7 +347,7 @@ function ex(e) {
   }, {
     section: ep.UserSettingsSections.HOTSPOT_OPTIONS,
     label: "Hotspot Options",
-    element: H.default,
+    element: w.default,
     predicate: () => M.default.isDeveloper
   }, {
     section: ep.UserSettingsSections.DISMISSIBLE_CONTENT_OPTIONS,
@@ -357,7 +357,7 @@ function ex(e) {
   }, {
     section: ep.UserSettingsSections.PAYMENT_FLOW_MODAL_TEST_PAGE,
     label: "Payment Flow Modals",
-    element: w.default,
+    element: H.default,
     predicate: () => M.default.isDeveloper
   }, {
     section: ep.UserSettingsSections.TEXT_PLAYGROUND,

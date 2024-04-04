@@ -43,7 +43,7 @@ var a = s("735250"),
   G = s("557013");
 let k = L.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
-function H(e) {
+function w(e) {
   var t, l;
   let {
     className: r,
@@ -132,7 +132,7 @@ function H(e) {
   })
 }
 
-function w(e) {
+function H(e) {
   var t, s;
   let {
     user: l,
@@ -453,10 +453,10 @@ function Q() {
         children: i
       }) : null, (0, a.jsxs)("div", {
         className: G.fieldList,
-        children: [(0, a.jsx)(w, {
+        children: [(0, a.jsx)(H, {
           className: G.fieldSpacerBottom,
           user: t
-        }), (0, a.jsx)(H, {
+        }), (0, a.jsx)(w, {
           user: t
         }), (0, a.jsx)(Y, {
           className: G.fieldSpacer,

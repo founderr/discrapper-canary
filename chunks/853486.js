@@ -4,8 +4,8 @@ var a = s("735250"),
   l = s("470079"),
   i = s("481060"),
   n = s("465670"),
-  u = s("964309"),
-  r = s("502568"),
+  r = s("964309"),
+  u = s("502568"),
   o = s("51144"),
   d = s("246364"),
   c = s("666233"),
@@ -13,8 +13,8 @@ var a = s("735250"),
   I = s("395716"),
   f = s("673885"),
   T = s("981631"),
-  R = s("689938"),
-  _ = s("35913");
+  _ = s("689938"),
+  R = s("35913");
 t.default = function(e) {
   let {
     guild: t,
@@ -24,18 +24,18 @@ t.default = function(e) {
   } = e, A = l.useMemo(() => {
     var e;
     return null !== (e = s.formResponses) && void 0 !== e ? e : []
-  }, [s.formResponses]), m = t.hasFeature(T.GuildFeatures.CLAN) && s.applicationStatus === d.GuildJoinRequestApplicationStatuses.SUBMITTED;
+  }, [s.formResponses]), M = t.hasFeature(T.GuildFeatures.CLAN) && s.applicationStatus === d.GuildJoinRequestApplicationStatuses.SUBMITTED;
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)(r.default, {
-      toolbar: (0, a.jsx)(r.default.Icon, {
+    children: [(0, a.jsxs)(u.default, {
+      toolbar: (0, a.jsx)(u.default.Icon, {
         icon: n.default,
         onClick: N,
-        tooltip: R.default.Messages.CLOSE
+        tooltip: _.default.Messages.CLOSE
       }),
-      children: [(0, a.jsx)(r.default.Icon, {
-        icon: u.default,
+      children: [(0, a.jsx)(u.default.Icon, {
+        icon: r.default,
         disabled: !0,
-        "aria-label": R.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION
+        "aria-label": _.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION
       }), (0, a.jsx)(i.Heading, {
         variant: "heading-md/semibold",
         children: o.default.getName(S)
@@ -46,15 +46,15 @@ t.default = function(e) {
       guild: t
     }), (0, a.jsxs)(i.Scroller, {
       children: [(0, a.jsxs)("div", {
-        className: _.container,
+        className: R.container,
         children: [(0, a.jsx)(f.default, {
           user: S,
           guildId: t.id
-        }), m && (0, a.jsx)(I.default, {
+        }), M && (0, a.jsx)(I.default, {
           joinRequest: s
         })]
       }), (0, a.jsx)("div", {
-        className: _.disabledFormRenderer,
+        className: R.disabledFormRenderer,
         children: (0, a.jsx)(c.default, {
           guildId: t.id,
           formFields: A,

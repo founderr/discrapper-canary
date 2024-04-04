@@ -4,9 +4,9 @@ a.r(e), a.d(e, {
     return l
   }
 });
-var t = a("735250");
+var C = a("735250");
 a("470079");
-var C = a("613828"),
+var t = a("613828"),
   s = a("481060");
 
 function l(L) {
@@ -14,8 +14,8 @@ function l(L) {
     children: e,
     ...a
   } = L;
-  return (0, t.jsx)(s.Clickable, {
-    tag: C.Link,
+  return (0, C.jsx)(s.Clickable, {
+    tag: t.Link,
     ...a,
     children: e
   })

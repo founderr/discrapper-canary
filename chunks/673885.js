@@ -9,8 +9,8 @@ s("470079");
 var l = s("803997"),
   i = s.n(l),
   n = s("481060"),
-  u = s("906732"),
-  r = s("171368"),
+  r = s("906732"),
+  u = s("171368"),
   o = s("768581"),
   d = s("981631"),
   c = s("689938"),
@@ -25,8 +25,8 @@ function I(e) {
     discriminator: I,
     username: f
   } = t, T = o.default.getUserAvatarURL(t), {
-    analyticsLocations: R
-  } = (0, u.default)();
+    analyticsLocations: _
+  } = (0, r.default)();
   return (0, a.jsxs)("div", {
     className: i()(E.container, l),
     children: [(0, a.jsx)(n.Avatar, {
@@ -46,10 +46,10 @@ function I(e) {
       })]
     }), (0, a.jsx)(n.Anchor, {
       onClick: () => {
-        (0, r.openUserProfileModal)({
+        (0, u.openUserProfileModal)({
           userId: t.id,
           guildId: s,
-          sourceAnalyticsLocations: R,
+          sourceAnalyticsLocations: _,
           analyticsLocation: {
             section: d.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
             object: d.AnalyticsObjects.JOIN_REQUEST
