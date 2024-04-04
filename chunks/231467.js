@@ -27,7 +27,7 @@ t.default = function(e) {
     }), (0, a.jsxs)("div", {
       className: d.cardContent,
       children: [(0, a.jsxs)("div", {
-        className: d.cardHeader,
+        className: d.__invalid_cardHeader,
         children: [(0, a.jsx)(r.Heading, {
           variant: "heading-md/medium",
           color: "header-primary",
@@ -99,16 +99,16 @@ t.default = function(e) {
           })]
         })]
       }), (0, a.jsx)("div", {
-        className: d.cardFooterGames,
+        className: d.__invalid_cardFooterGames,
         children: c.map(e => {
           if (null == e) return null;
           let t = e.getIconURL(24);
           return null == t ? null : (0, a.jsx)("div", {
-            className: d.cardFooterGame,
+            className: d.__invalid_cardFooterGame,
             children: (0, a.jsx)("img", {
               src: t,
               alt: e.name,
-              className: d.cardFooterGameIcon
+              className: d.__invalid_cardFooterGameIcon
             })
           }, e.id)
         })
