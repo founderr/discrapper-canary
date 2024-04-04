@@ -13,7 +13,7 @@ var a = n("735250"),
 let u = 16 / 9;
 
 function d(e, t) {
-  return Math.floor((t - e) / (8 + e)) + 1
+  return Math.max(1, Math.floor((t - e) / (8 + e)) + 1)
 }
 
 function c(e, t, n) {
