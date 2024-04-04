@@ -68,10 +68,10 @@ function S(e) {
   function N(e) {
     c(), (0, m.openUserProfileModal)({
       userId: e,
-      guildId: null != T ? T : void 0,
-      channelId: null != I ? I : void 0,
-      messageId: null != A ? A : void 0,
-      roleId: null != v ? v : void 0,
+      guildId: T,
+      channelId: I,
+      messageId: A,
+      roleId: v,
       sourceAnalyticsLocations: _,
       analyticsLocation: {
         section: p.AnalyticsSections.USER_PROFILE_MUTUAL_FRIENDS

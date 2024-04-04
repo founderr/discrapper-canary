@@ -17,54 +17,60 @@ var s = n("481060"),
 let C = null;
 async function S(e) {
   var t, l, i, S;
-  let m, I, p, {
-      userId: T,
-      section: g,
-      guildId: A = h.ME,
-      channelId: N,
-      friendToken: R,
-      autoFocusNote: O,
-      analyticsLocation: v
-    } = e,
-    L = c.default.getUser(T),
-    M = E.default.getUserProfile(T);
-  if (null == L) return;
-  let P = u.default.getPrimaryActivity(T);
-  null != P && (m = P.party, I = P.assets, p = null != P.application_id ? o.default.getApplication(P.application_id) : null);
-  let y = u.default.getStatus(T),
-    D = u.default.isMobileOnline(T),
-    x = y;
-  y === h.StatusTypes.ONLINE && (x = D ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP), C = await (0, s.openModalLazy)(async () => {
+  let {
+    userId: m,
+    section: I,
+    guildId: p = h.ME,
+    channelId: T,
+    friendToken: g,
+    autoFocusNote: A,
+    analyticsLocation: N
+  } = e, R = c.default.getUser(m);
+  if (null == R) return;
+  let O = E.default.getUserProfile(m),
+    v = u.default.getPrimaryActivity(m),
+    L = u.default.getStatus(m),
+    M = u.default.isMobileOnline(m),
+    {
+      party: P,
+      assets: y,
+      application_id: D
+    } = null != v ? v : {},
+    x = null != D ? o.default.getApplication(D) : null,
+    b = M ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
+    U = L === h.StatusTypes.ONLINE ? b : L;
+  C = await (0, s.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("99387"), n.e("59208")]).then(n.bind(n, "910364"));
+    } = await Promise.all([n.e("99387"), n.e("824")]).then(n.bind(n, "304113"));
     return t => (0, a.jsx)(e, {
       ...t,
-      user: L,
-      autoFocusNote: O,
-      guildId: A,
-      friendToken: R,
-      initialSection: g,
-      channelId: N
+      location: "handleOpenUserProfileModal",
+      user: R,
+      autoFocusNote: A,
+      guildId: p,
+      friendToken: g,
+      initialSection: I,
+      channelId: T
     })
   }), f.default.track(h.AnalyticEvents.OPEN_MODAL, {
     type: "Profile Modal",
-    guild_id: A !== h.ME ? A : null,
-    channel_id: N,
-    other_user_id: T,
-    application_id: null !== (l = null == P ? void 0 : P.application_id) && void 0 !== l ? l : null,
-    application_name: null == P ? void 0 : P.name,
-    sku_id: null !== (i = null == p ? void 0 : p.primarySkuId) && void 0 !== i ? i : null,
-    is_friend: d.default.isFriend(T),
-    has_images: !!(null !== (S = null == I ? void 0 : I.large_image) && void 0 !== S ? S : null == I ? void 0 : I.small_image),
-    party_max: null == m ? void 0 : null === (t = m.size) || void 0 === t ? void 0 : t[1],
-    party_id: null == m ? void 0 : m.id,
-    party_platform: (0, _.isSpotifyParty)(null == m ? void 0 : m.id) ? h.PlatformTypes.SPOTIFY : null,
-    game_platform: (0, r.default)(P),
-    profile_user_status: x,
-    profile_has_nitro_customization: (null == M ? void 0 : M.banner) != null,
-    profile_has_profile_effect: (null == M ? void 0 : M.profileEffectId) != null,
-    ...null == v ? null : (0, f.expandLocation)(v)
+    guild_id: p !== h.ME ? p : null,
+    channel_id: T,
+    other_user_id: m,
+    application_id: null !== (l = null == v ? void 0 : v.application_id) && void 0 !== l ? l : null,
+    application_name: null == v ? void 0 : v.name,
+    sku_id: null !== (i = null == x ? void 0 : x.primarySkuId) && void 0 !== i ? i : null,
+    is_friend: d.default.isFriend(m),
+    has_images: !!(null !== (S = null == y ? void 0 : y.large_image) && void 0 !== S ? S : null == y ? void 0 : y.small_image),
+    party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
+    party_id: null == P ? void 0 : P.id,
+    party_platform: (0, _.isSpotifyParty)(null == P ? void 0 : P.id) ? h.PlatformTypes.SPOTIFY : null,
+    game_platform: (0, r.default)(v),
+    profile_user_status: U,
+    profile_has_nitro_customization: (null == O ? void 0 : O.banner) != null,
+    profile_has_profile_effect: (null == O ? void 0 : O.profileEffectId) != null,
+    ...null == N ? null : (0, f.expandLocation)(N)
   })
 }
 

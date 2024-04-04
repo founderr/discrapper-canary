@@ -84,8 +84,8 @@ function C(e) {
             userId: g,
             channelId: L,
             guildId: null == D ? void 0 : D.id,
-            messageId: null != U ? U : void 0,
-            roleId: null != b ? b : void 0,
+            messageId: U,
+            roleId: b,
             section: m.UserProfileSections.USER_INFO_CONNECTIONS,
             sourceAnalyticsLocations: P,
             analyticsLocation: {

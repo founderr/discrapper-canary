@@ -26,8 +26,8 @@ function c(e, t, a) {
     action: () => {
       (0, i.openUserProfileModal)({
         userId: e,
-        guildId: null != t ? t : void 0,
-        channelId: null != a ? a : void 0,
+        guildId: t,
+        channelId: a,
         sourceAnalyticsLocations: M,
         analyticsLocation: c.location
       }), m.dispatch(r.ComponentActions.POPOUT_CLOSE)
