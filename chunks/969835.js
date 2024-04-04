@@ -61,7 +61,7 @@ function O(e) {
             displayProfile: L,
             guildId: n,
             channelId: s,
-            onClose: () => null == I ? void 0 : I(),
+            onClose: I,
             disableUserProfileLink: p,
             isHovering: D
           }), (0, i.jsx)(S.default.Inner, {
@@ -69,7 +69,8 @@ function O(e) {
               user: t,
               displayProfile: L,
               guild: v,
-              channelId: s
+              channelId: s,
+              onClose: I
             })
           })]
         })

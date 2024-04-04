@@ -21063,6 +21063,29 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     padding-bottom: 12px
 }
 
+.container_a96584 {
+    padding: 12px 12px 0
+}
+
+.seeMoreText_ff3bd6 {
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.seeMoreText_ff3bd6:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    color: var(--interactive-active);
+    cursor: pointer
+}
+
+.descriptionClamp__07797 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden
+}
+
 .container_e6561b {
     padding: 12px 12px 0
 }
