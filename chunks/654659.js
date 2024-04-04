@@ -9,7 +9,6 @@ e.exports = {
   scrollTierBackground: "scrollTierBackground__89f3e",
   scroller: "scroller__27542",
   shelf: "shelf__32747",
-  shelfBigGrid: "shelfBigGrid__4c334",
   spinnerContainer: "spinnerContainer__32b4e",
   tierCtaContainer: "tierCtaContainer__81542",
   tierCtaLeft: "tierCtaLeft__15905"
