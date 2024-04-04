@@ -32,8 +32,8 @@ var i, r, s = n("735250"),
   y = n("981631"),
   O = n("474936"),
   M = n("689938"),
-  B = n("836092");
-let A = {
+  A = n("836092");
+let B = {
   width: 20,
   height: 20,
   color: "white"
@@ -88,9 +88,9 @@ function P(e) {
     groupListingType: (0, C.isApplicationUserSubscription)(r.sku_flags) ? "user" : "guild"
   }, e.id)) : [];
   return (0, s.jsxs)("div", {
-    className: B.wrapper,
+    className: A.wrapper,
     children: [(0, s.jsx)("div", {
-      className: B.banner,
+      className: A.banner,
       children: (0, s.jsx)(l.Banner, {
         title: i.name,
         iconSrc: v,
@@ -100,14 +100,14 @@ function P(e) {
       })
     }), (0, s.jsx)(S.Text, {
       variant: "eyebrow",
-      className: B.tabsText,
+      className: A.tabsText,
       children: M.default.Messages.STOREFRONT_PREMIUM_ITEMS
     }), (0, s.jsx)("div", {
-      className: B.tabs,
+      className: A.tabs,
       children: E ? (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(c.CategoryTab, {
           icon: (0, s.jsx)(m.BadgeIcon, {
-            ...A
+            ...B
           }),
           title: M.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS,
           body: M.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS_BODY.format({
@@ -120,7 +120,7 @@ function P(e) {
           }
         }), (0, s.jsx)(c.CategoryTab, {
           icon: (0, s.jsx)(p.TicketIcon, {
-            ...A
+            ...B
           }),
           title: M.default.Messages.STOREFRONT_APP_PRODUCTS,
           body: M.default.Messages.STOREFRONT_APP_PRODUCTS_BODY.format({
@@ -134,7 +134,7 @@ function P(e) {
         })]
       }) : null
     }), (0, s.jsx)("div", {
-      className: B.productList,
+      className: A.productList,
       style: {
         gridTemplateColumns: 1 === L.length ? "1fr" : void 0
       },
@@ -202,7 +202,7 @@ function U(e) {
         return (0, s.jsxs)(S.ModalRoot, {
           transitionState: n,
           size: S.ModalSize.DYNAMIC,
-          className: B.subDetailsModal,
+          className: A.subDetailsModal,
           children: [(0, s.jsx)(o.CardDetails, {
             benefits: d.map(e => (0, s.jsx)(u.SubscriptionCardBenefit, {
               name: e.title,
@@ -217,9 +217,9 @@ function U(e) {
             }),
             onClose: t
           }), (0, s.jsxs)(S.ModalFooter, {
-            className: B.footer,
+            className: A.footer,
             children: [(0, s.jsx)(S.Button, {
-              className: B.backButton,
+              className: A.backButton,
               onClick: t,
               look: S.ButtonLooks.BLANK,
               children: (0, s.jsx)(S.Text, {
@@ -274,7 +274,7 @@ function F(e) {
         return (0, s.jsxs)(S.ModalRoot, {
           transitionState: n,
           size: S.ModalSize.DYNAMIC,
-          className: B.subDetailsModal,
+          className: A.subDetailsModal,
           children: [(0, s.jsx)(o.CardDetails, {
             title: u,
             description: m,
@@ -284,9 +284,9 @@ function F(e) {
             }) : void 0,
             onClose: t
           }), (0, s.jsxs)(S.ModalFooter, {
-            className: B.footer,
+            className: A.footer,
             children: [(0, s.jsx)(S.Button, {
-              className: B.backButton,
+              className: A.backButton,
               onClick: t,
               look: S.ButtonLooks.BLANK,
               children: (0, s.jsx)(S.Text, {
