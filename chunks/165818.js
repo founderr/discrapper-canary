@@ -19,14 +19,9 @@ function l(e) {
   return null == n || null == l || 0 === l.roles.length ? null : (0, i.jsx)("div", {
     className: o.container,
     children: (0, i.jsx)(a.default, {
-      addButtonClassName: o.addButton,
-      addButtonIconClassName: o.addButtonIcon,
-      roleClassName: o.rolePill,
-      className: o.roles,
       guild: n,
       user: t,
-      userRoles: l.roles,
-      disableBorderColor: !0
+      userRoles: l.roles
     })
   })
 }

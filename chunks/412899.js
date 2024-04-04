@@ -6,9 +6,6 @@ n.r(t), n.d(t, {
   OverflowAddRolesButton: function() {
     return H
   },
-  OverflowMoreRolesButton: function() {
-    return x
-  },
   default: function() {
     return W
   }
