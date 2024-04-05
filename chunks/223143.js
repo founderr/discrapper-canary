@@ -40,7 +40,7 @@ function c(e) {
       return [n.default.isFetching, n.default.error, null !== (e = n.default.lastFetched) && void 0 !== e ? e : 0, n.default.categories, n.default.fetchedCountryCode]
     });
     return (0, s.useEffect)(() => {
-      if (d !== (null == e ? void 0 : e.countryCode)) {
+      if (d !== (null == e ? void 0 : e.countryCode) && !o) {
         (0, i.fetchCollectiblesCategories)(e);
         return
       }!(a || o || Date.now() - u < 6e5) && (0, i.fetchCollectiblesCategories)(e)
