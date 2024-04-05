@@ -1,21 +1,23 @@
 "use strict";
 n.r(t);
-var l = n("735250");
+var a = n("735250");
 n("470079");
-var a = n("438784"),
-  s = n("481060"),
-  i = n("806519"),
-  r = n("525049"),
-  o = n("486101");
-let u = {},
-  d = 1 / 3.5;
+var l = n("803997"),
+  s = n.n(l),
+  i = n("438784"),
+  r = n("481060"),
+  o = n("806519"),
+  u = n("525049"),
+  d = n("486101");
+let c = {},
+  f = 1 / 4;
 
-function c(e) {
+function h(e) {
   let {
     height: t,
     fillColor: n
   } = e;
-  return (0, l.jsx)("div", {
+  return (0, a.jsx)("div", {
     style: {
       display: "flex",
       justifyContent: "center",
@@ -23,40 +25,41 @@ function c(e) {
       borderRadius: t / 2,
       backgroundColor: n,
       height: t,
-      width: t * r.DIAGONAL_FACEPILE_TYPING_WIDTH_TO_HEIGHT_RATIO
+      width: t * u.DIAGONAL_FACEPILE_TYPING_WIDTH_TO_HEIGHT_RATIO
     },
-    children: (0, l.jsx)(a.Dots, {
-      dotRadius: t * d
+    children: (0, a.jsx)(i.Dots, {
+      className: d.dots,
+      dotRadius: t * f
     })
   })
 }
 
-function f(e) {
+function m(e) {
   let {
     isTyping: t,
     statusHeightPx: n,
-    statusCenterOffset: a,
-    status: i
-  } = e, o = (0, s.useStatusFillColor)(s.StatusTypes.ONLINE);
+    statusCenterOffset: l,
+    status: s
+  } = e, i = (0, r.useStatusFillColor)(r.StatusTypes.ONLINE);
   if (t) {
-    let e = n * r.DIAGONAL_FACEPILE_TYPING_WIDTH_TO_HEIGHT_RATIO;
-    return (0, l.jsx)("div", {
+    let e = n * u.DIAGONAL_FACEPILE_TYPING_WIDTH_TO_HEIGHT_RATIO;
+    return (0, a.jsx)("div", {
       style: {
         position: "absolute",
-        top: a - n / 2,
-        left: a - e / 2
+        top: l - n / 2,
+        left: l - e / 2
       },
-      children: (0, l.jsx)(c, {
+      children: (0, a.jsx)(h, {
         height: n,
-        fillColor: o
+        fillColor: i
       })
     })
   }
-  if (null != i) {
-    let e = a - n / 2;
-    return (0, l.jsx)(s.Status, {
+  if (null != s) {
+    let e = l - n / 2;
+    return (0, a.jsx)(r.Status, {
       size: n,
-      status: i,
+      status: s,
       style: {
         position: "absolute",
         top: e,
@@ -67,100 +70,101 @@ function f(e) {
   return null
 }
 
-function h(e) {
+function p(e) {
   let {
     src: t,
     size: n,
-    isTyping: a,
+    isTyping: l,
     status: s
-  } = e, r = (0, l.jsx)("img", {
-    className: o.circularImage,
+  } = e, i = (0, a.jsx)("img", {
+    className: d.circularImage,
     src: t,
     alt: "",
     width: n,
     height: n
   });
-  return a ? (0, l.jsx)(i.default, {
-    mask: i.MaskIDs.DIAGONAL_FACEPILE_TYPING_CUTOUT,
+  return l ? (0, a.jsx)(o.default, {
+    mask: o.MaskIDs.DIAGONAL_FACEPILE_TYPING_CUTOUT,
     height: n,
     width: n,
-    children: r
-  }) : null != s ? (0, l.jsx)(i.default, {
-    mask: i.MaskIDs.DIAGONAL_FACEPILE_STATUS_CUTOUT,
+    children: i
+  }) : null != s ? (0, a.jsx)(o.default, {
+    mask: o.MaskIDs.DIAGONAL_FACEPILE_STATUS_CUTOUT,
     height: n,
     width: n,
-    children: r
-  }) : r
+    children: i
+  }) : i
 }
 t.default = function(e) {
   var t;
   let {
     backSrc: n,
-    frontSrc: a,
-    size: s,
-    status: d,
-    isTyping: c,
-    style: p,
+    frontSrc: l,
+    size: i,
+    status: r,
+    isTyping: f,
+    style: h,
+    className: E,
     ...C
   } = e, {
-    statusCenter: m,
-    statusHeightPx: g,
-    frontAvatarOffsetPx: E,
-    frontAvatarSizePx: S,
-    backAvatarSizePx: _
-  } = null !== (t = u[s]) && void 0 !== t ? t : function(e) {
-    let t = e / (r.DIAGONAL_FACEPILE_AVATAR_PROPORTION + r.DIAGONAL_FACEPILE_MASK_OFFSET),
-      n = t * r.DIAGONAL_FACEPILE_AVATAR_PROPORTION,
-      l = t * r.DIAGONAL_FACEPILE_MASK_OFFSET,
-      a = r.DIAGONAL_FACEPILE_STATUS_TO_AVATAR_RATIO * n,
-      s = l + n / 2,
+    statusCenter: g,
+    statusHeightPx: S,
+    frontAvatarOffsetPx: _,
+    frontAvatarSizePx: T,
+    backAvatarSizePx: I
+  } = null !== (t = c[i]) && void 0 !== t ? t : function(e) {
+    let t = e / (u.DIAGONAL_FACEPILE_AVATAR_PROPORTION + u.DIAGONAL_FACEPILE_MASK_OFFSET),
+      n = t * u.DIAGONAL_FACEPILE_AVATAR_PROPORTION,
+      a = t * u.DIAGONAL_FACEPILE_MASK_OFFSET,
+      l = u.DIAGONAL_FACEPILE_STATUS_TO_AVATAR_RATIO * n,
+      s = a + n / 2,
       i = {
-        statusCenter: s + n * r.DIAGONAL_FACEPILE_MASK_STATUS_OFFSET,
-        statusHeightPx: a,
+        statusCenter: s + n * u.DIAGONAL_FACEPILE_MASK_STATUS_OFFSET,
+        statusHeightPx: l,
         frontAvatarSizePx: n,
         backAvatarSizePx: t,
-        frontAvatarOffsetPx: l,
+        frontAvatarOffsetPx: a,
         frontAvatarCenter: s
       };
-    return u[e] = i, i
-  }(s);
-  return (0, l.jsxs)("div", {
+    return c[e] = i, i
+  }(i);
+  return (0, a.jsxs)("div", {
     "aria-label": C["aria-label"],
     "aria-hidden": C["aria-hidden"],
-    className: o.container,
+    className: s()(d.container, E),
     style: {
-      width: s,
-      height: s,
-      ...p
+      width: i,
+      height: i,
+      ...h
     },
-    children: [(0, l.jsx)(i.default, {
-      height: _,
-      width: _,
-      mask: i.MaskIDs.DIAGONAL_FACEPILE_BACK_AVATAR_CUTOUT,
-      children: (0, l.jsx)("img", {
-        className: o.circularImage,
+    children: [(0, a.jsx)(o.default, {
+      height: I,
+      width: I,
+      mask: o.MaskIDs.DIAGONAL_FACEPILE_BACK_AVATAR_CUTOUT,
+      children: (0, a.jsx)("img", {
+        className: d.circularImage,
         src: n,
         alt: "",
-        width: _,
-        height: _
+        width: I,
+        height: I
       })
-    }), (0, l.jsx)("div", {
+    }), (0, a.jsx)("div", {
       style: {
         position: "absolute",
-        top: E,
-        left: E
+        top: _,
+        left: _
       },
-      children: (0, l.jsx)(h, {
-        src: a,
-        size: S,
-        isTyping: c,
-        status: d
+      children: (0, a.jsx)(p, {
+        src: l,
+        size: T,
+        isTyping: f,
+        status: r
       })
-    }), (0, l.jsx)(f, {
-      status: d,
-      isTyping: c,
-      statusHeightPx: g,
-      statusCenterOffset: m
+    }), (0, a.jsx)(m, {
+      status: r,
+      isTyping: f,
+      statusHeightPx: S,
+      statusCenterOffset: g
     })]
   })
 }
