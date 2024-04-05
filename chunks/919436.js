@@ -174,7 +174,8 @@ class D extends(l = s.PureComponent) {
                     channel: e,
                     size: u.AvatarSizes.SIZE_48,
                     facepileSizeOverride: 36,
-                    experimentLocation: "unread_gdm"
+                    experimentLocation: "unread_gdm",
+                    "aria-hidden": !0
                   }) : void 0,
                   ...s
                 })
