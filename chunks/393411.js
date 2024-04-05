@@ -171,65 +171,78 @@ t.default = function(e) {
     enabled: w
   } = (0, R.default)({
     location: "subscription_header"
-  }), H = (0, A.usePremiumDiscountOffer)(), Y = null == H ? void 0 : null === (t = H.discount) || void 0 === t ? void 0 : t.amount, W = (0, C.useHasDiscountApplied)(), V = (0, C.useActiveDiscountInfo)(), K = () => {
-    (l.status === y.SubscriptionStatusTypes.ACTIVE || l.status === y.SubscriptionStatusTypes.PAST_DUE || l.status === y.SubscriptionStatusTypes.PAUSED) && Z(h.Steps.PAUSE_SELECT)
-  }, z = () => {
-    (l.status === y.SubscriptionStatusTypes.ACTIVE || l.status === y.SubscriptionStatusTypes.PAST_DUE || l.status === y.SubscriptionStatusTypes.PAUSE_PENDING) && Z()
-  }, Z = e => {
-    (0, u.openModalLazy)(async () => {
-      let {
-        default: t
-      } = await Promise.resolve().then(s.bind(s, "833569"));
-      return s => (0, a.jsx)(t, {
-        ...s,
-        premiumSubscription: l,
-        analyticsLocation: F,
-        analyticsLocations: k,
-        initialStep: e
+  });
+  !g.PAUSE_ELIGIBLE_PLANS.has(l.planId) && (w = !1);
+  let H = (0, A.usePremiumDiscountOffer)(),
+    Y = null == H ? void 0 : null === (t = H.discount) || void 0 === t ? void 0 : t.amount,
+    W = (0, C.useHasDiscountApplied)(),
+    V = (0, C.useActiveDiscountInfo)(),
+    K = () => {
+      (l.status === y.SubscriptionStatusTypes.ACTIVE || l.status === y.SubscriptionStatusTypes.PAST_DUE || l.status === y.SubscriptionStatusTypes.PAUSED) && Z(h.Steps.PAUSE_SELECT)
+    },
+    z = () => {
+      (l.status === y.SubscriptionStatusTypes.ACTIVE || l.status === y.SubscriptionStatusTypes.PAST_DUE || l.status === y.SubscriptionStatusTypes.PAUSE_PENDING) && Z()
+    },
+    Z = e => {
+      (0, u.openModalLazy)(async () => {
+        let {
+          default: t
+        } = await Promise.resolve().then(s.bind(s, "833569"));
+        return s => (0, a.jsx)(t, {
+          ...s,
+          premiumSubscription: l,
+          analyticsLocation: F,
+          analyticsLocations: k,
+          initialStep: e
+        })
       })
-    })
-  }, X = () => {
-    if (null != l && null != l.planIdFromItems) {
-      let e = p.default.get(l.planIdFromItems);
-      if (null == e) {
-        U.info("Plan not fetched for plan id: ".concat(l.planIdFromItems));
+    },
+    X = () => {
+      if (null != l && null != l.planIdFromItems) {
+        let e = p.default.get(l.planIdFromItems);
+        if (null == e) {
+          U.info("Plan not fetched for plan id: ".concat(l.planIdFromItems));
+          return
+        }
+        let t = (0, P.getCurrencies)(e, null == L ? void 0 : L.id, !1),
+          s = t.length > 0 ? t[0] : l.currency,
+          a = !1;
+        1 === t.length && (null == L ? void 0 : L.id) === l.paymentSourceId && (0, P.planHasCurrency)(e.id, s, null == L ? void 0 : L.id) && (a = !0), a ? o.resubscribe(l, k) : (0, f.default)({
+          initialPlanId: l.planIdFromItems,
+          analyticsLocations: k,
+          analyticsLocation: F,
+          analyticsObject: O,
+          subscription: l
+        })
+      }
+    },
+    q = () => {
+      if (!b.includes(l.status) || null == l.pauseEndsAt) {
+        (0, N.captureBillingException)(Error("Invalid subscription to resume"), {
+          extra: {
+            subscriptionId: l.id,
+            status: l.status,
+            pauseEndsAt: l.pauseEndsAt
+          }
+        });
         return
       }
-      let t = (0, P.getCurrencies)(e, null == L ? void 0 : L.id, !1),
-        s = t.length > 0 ? t[0] : l.currency,
-        a = !1;
-      1 === t.length && (null == L ? void 0 : L.id) === l.paymentSourceId && (0, P.planHasCurrency)(e.id, s, null == L ? void 0 : L.id) && (a = !0), a ? o.resubscribe(l, k) : (0, f.default)({
+      l.status === y.SubscriptionStatusTypes.PAUSED ? (0, f.default)({
         initialPlanId: l.planIdFromItems,
         analyticsLocations: k,
         analyticsLocation: F,
         analyticsObject: O,
-        subscription: l
-      })
-    }
-  }, q = () => {
-    if (!b.includes(l.status) || null == l.pauseEndsAt) {
-      (0, N.captureBillingException)(Error("Invalid subscription to resume"), {
-        extra: {
-          subscriptionId: l.id,
-          status: l.status,
-          pauseEndsAt: l.pauseEndsAt
-        }
-      });
-      return
-    }
-    l.status === y.SubscriptionStatusTypes.PAUSED ? (0, f.default)({
-      initialPlanId: l.planIdFromItems,
-      analyticsLocations: k,
-      analyticsLocation: F,
-      analyticsObject: O,
-      subscription: l,
-      skipConfirm: !0
-    }) : o.resume(l, k)
-  }, J = () => {
-    l.status === y.SubscriptionStatusTypes.PAUSED && Z(h.Steps.PAUSE_SELECT)
-  }, Q = () => {
-    Z(h.Steps.WHAT_YOU_LOSE)
-  }, $ = S.default.getPlanIdFromInvoice(l, E);
+        subscription: l,
+        skipConfirm: !0
+      }) : o.resume(l, k)
+    },
+    J = () => {
+      l.status === y.SubscriptionStatusTypes.PAUSED && Z(h.Steps.PAUSE_SELECT)
+    },
+    Q = () => {
+      Z(h.Steps.WHAT_YOU_LOSE)
+    },
+    $ = S.default.getPlanIdFromInvoice(l, E);
   if ((0, _.isNoneSubscription)($)) return null;
   let ee = S.default.getStatusFromInvoice(l, E),
     et = S.default.getPremiumType($),
