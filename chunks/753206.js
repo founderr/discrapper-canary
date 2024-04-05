@@ -5,8 +5,8 @@ var E = s("735250"),
   a = s("803997"),
   n = s.n(a),
   T = s("628238"),
-  i = s("998951"),
-  u = s("25015"),
+  u = s("998951"),
+  i = s("25015"),
   A = s("963550"),
   l = s("845080"),
   I = s("264558");
@@ -16,32 +16,32 @@ t.default = _.memo(function(e) {
     message: s,
     channel: _,
     compact: a,
-    className: o,
-    isGroupStart: r,
-    hideSimpleEmbedContent: L = !0,
+    className: L,
+    isGroupStart: o,
+    hideSimpleEmbedContent: r = !0,
     disableInteraction: d
-  } = e, N = (0, T.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()), {
-    content: S
-  } = (0, u.default)(s, {
-    hideSimpleEmbedContent: L,
-    allowList: N,
-    allowHeading: N,
+  } = e, S = (0, T.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()), {
+    content: N
+  } = (0, i.default)(s, {
+    hideSimpleEmbedContent: r,
+    allowList: S,
+    allowHeading: S,
     allowLinks: !0,
     previewLinkTarget: !0
   });
-  return (0, E.jsx)(i.default, {
+  return (0, E.jsx)(u.default, {
     compact: a,
-    className: n()(o, {
+    className: n()(L, {
       [I.message]: !0,
       [I.cozyMessage]: !a,
-      [I.groupStart]: r
+      [I.groupStart]: o
     }),
     childrenHeader: (0, l.default)({
       ...e,
       channel: _,
       guildId: void 0
     }),
-    childrenMessageContent: (0, A.default)(e, S),
+    childrenMessageContent: (0, A.default)(e, N),
     disableInteraction: d
   })
 })

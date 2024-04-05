@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("419922"),
   f = n("430824"),
   S = n("156361"),
-  h = n("466111"),
-  A = n("483360"),
+  A = n("466111"),
+  h = n("483360"),
   m = n("877565"),
   N = n("590921"),
   O = n("665692"),
@@ -43,7 +43,7 @@ let L = {
           locked: o,
           unlocked: l
         }
-      } = A.default.queryEmojiResults({
+      } = h.default.queryEmojiResults({
         query: n,
         channel: e,
         intention: i.emojiIntention,
@@ -59,7 +59,7 @@ let L = {
     let d = [];
     if (i.allowStickers) {
       (0, c.fetchStickerPacks)();
-      let t = A.default.queryStickers([n], !0, [e, (e, t) => t === _.StickerSendability.SENDABLE]),
+      let t = h.default.queryStickers([n], !0, [e, (e, t) => t === _.StickerSendability.SENDABLE]),
         i = Math.max(4, 8 - l.length);
       d = t.slice(0, i), "-" === n[0] && (d = t.filter(e => e.sticker.name === n))
     }
@@ -103,7 +103,7 @@ let L = {
         className: C.premiumSectionDivider
       }), (0, i.jsxs)("div", {
         className: a()(C.premiumHeader),
-        children: [(0, i.jsx)(h.default, {
+        children: [(0, i.jsx)(A.default, {
           className: C.premiumIcon,
           width: 20,
           height: 20

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   OAuth2Modal: function() {
-    return h
+    return A
   },
   OAuth2Page: function() {
     return S
@@ -27,7 +27,7 @@ function S(e) {
     children: t,
     wrapperClassName: n,
     embedded: s
-  } = e, [o, S] = r.useState(I.WaveStates.INITIAL), h = r.useCallback(e => {
+  } = e, [o, S] = r.useState(I.WaveStates.INITIAL), A = r.useCallback(e => {
     S(t => Math.max(t, e))
   }, []);
   return (0, u.usePageTitle)({
@@ -40,7 +40,7 @@ function S(e) {
       splash: (0, _.getArtForPath)(),
       waveState: o,
       showLogo: !0,
-      updateWaveState: h,
+      updateWaveState: A,
       children: (0, i.jsx)("div", {
         className: a()(f.oauth2Wrapper, n),
         children: t
@@ -49,7 +49,7 @@ function S(e) {
   })
 }
 
-function h(e) {
+function A(e) {
   let {
     children: t,
     transitionState: n,

@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("594174"),
   f = n("467679"),
   S = n("681426"),
-  h = n("551388"),
-  A = n("709586"),
+  A = n("551388"),
+  h = n("709586"),
   m = n("360048"),
   N = n("624138"),
   O = n("51144"),
@@ -79,9 +79,9 @@ t.default = function(e) {
     ea(!0)
   }, eS = () => {
     ea(!1)
-  }, eh = e => {
+  }, eA = e => {
     ed(e)
-  }, eA = () => {
+  }, eh = () => {
     let e = null != G ? G.find(e => e.type === R.ActivityTypes.CUSTOM_STATUS) : null,
       t = null != e && null != U && (0, d.default)(e, U, x);
     return (0, i.jsx)(p.default, {
@@ -98,7 +98,7 @@ t.default = function(e) {
     })
   }, em = () => null != N && N && null == M ? (0, i.jsx)(l.Tooltip, {
     text: null != v ? v : L.default.Messages.GUILD_OWNER,
-    children: e => (0, i.jsx)(h.default, {
+    children: e => (0, i.jsx)(A.default, {
       ...e,
       className: D.ownerIcon
     })
@@ -109,7 +109,7 @@ t.default = function(e) {
     children: e => (0, i.jsx)(l.Clickable, {
       onClick: X,
       tabIndex: -1,
-      children: (0, i.jsx)(A.default, {
+      children: (0, i.jsx)(h.default, {
         ...e,
         className: D.premiumIcon
       })
@@ -137,7 +137,7 @@ t.default = function(e) {
         "aria-label": e.username,
         statusTooltip: !0,
         avatarDecoration: e_,
-        typingIndicatorRef: eh
+        typingIndicatorRef: eA
       }), (0, i.jsx)(_.default, {
         confettiSpawnRef: eu,
         shouldFire: y && null != b && e.id !== b.id,
@@ -187,7 +187,7 @@ t.default = function(e) {
         })
       }),
       avatar: eR(U, eg),
-      subText: eA(),
+      subText: eh(),
       decorators: ep(),
       "aria-controls": q,
       "aria-expanded": J,

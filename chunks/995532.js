@@ -1,19 +1,19 @@
 "use strict";
 s.r(t), s.d(t, {
   NO_WELCOME_SCREEN: function() {
-    return u
+    return i
   }
 });
 var E, _, a, n, T = s("442837"),
-  i = s("570140");
-let u = {},
+  u = s("570140");
+let i = {},
   A = {},
   l = {},
   I = !1,
-  o = !1,
-  r = !1;
+  L = !1,
+  o = !1;
 
-function L(e) {
+function r(e) {
   let {
     guild: t
   } = e.invite;
@@ -25,17 +25,17 @@ function d(e) {
     welcomeScreen: t,
     guildId: s
   } = e;
-  A[s] = null != t ? t : u
+  A[s] = null != t ? t : i
 }
-class N extends(n = T.default.Store) {
+class S extends(n = T.default.Store) {
   get(e) {
     if (null != e) return A[e]
   }
   isFetching() {
-    return o
+    return L
   }
   hasError() {
-    return r
+    return o
   }
   hasSeen(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -47,14 +47,14 @@ class N extends(n = T.default.Store) {
     return null == t || 0 === t.welcome_channels.length
   }
 }
-a = "WelcomeScreenStore", (_ = "displayName") in(E = N) ? Object.defineProperty(E, _, {
+a = "WelcomeScreenStore", (_ = "displayName") in(E = S) ? Object.defineProperty(E, _, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : E[_] = a, t.default = new N(i.default, {
-  INVITE_RESOLVE_SUCCESS: L,
-  INVITE_ACCEPT_SUCCESS: L,
+}) : E[_] = a, t.default = new S(u.default, {
+  INVITE_RESOLVE_SUCCESS: r,
+  INVITE_ACCEPT_SUCCESS: r,
   WELCOME_SCREEN_SUBMIT_SUCCESS: d,
   WELCOME_SCREEN_UPDATE: d,
   WELCOME_SCREEN_VIEW: function(e) {
@@ -76,17 +76,17 @@ a = "WelcomeScreenStore", (_ = "displayName") in(E = N) ? Object.defineProperty(
     l[t] = !1
   },
   WELCOME_SCREEN_FETCH_START: function() {
-    o = !0, r = !1
+    L = !0, o = !1
   },
   WELCOME_SCREEN_FETCH_SUCCESS: function(e) {
-    o = !1, r = !1;
+    L = !1, o = !1;
     let {
       welcomeScreen: t,
       guildId: s
     } = e;
-    A[s] = null != t ? t : u
+    A[s] = null != t ? t : i
   },
   WELCOME_SCREEN_FETCH_FAIL: function() {
-    o = !1, r = !0
+    L = !1, o = !0
   }
 })

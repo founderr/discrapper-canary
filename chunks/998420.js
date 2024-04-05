@@ -13,8 +13,8 @@ var a = s("735250"),
   I = s("328977"),
   f = s("208257"),
   T = s("853486"),
-  _ = s("689938"),
-  R = s("325370");
+  R = s("689938"),
+  _ = s("325370");
 t.default = function(e) {
   let {
     guildId: t
@@ -24,28 +24,28 @@ t.default = function(e) {
     guildId: t
   }), {
     user: N
-  } = null != S ? S : {}, A = l.useMemo(() => null != N ? new o.default(N) : null, [N]), M = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]);
+  } = null != S ? S : {}, m = l.useMemo(() => null != N ? new o.default(N) : null, [N]), A = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]);
   return (0, u.usePageTitle)({
-    subsection: _.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REQUIREMENTS,
-    location: null == M ? void 0 : M.name
+    subsection: R.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REQUIREMENTS,
+    location: null == A ? void 0 : A.name
   }), l.useEffect(() => {
     E.default.fetchVerificationForm(t)
   }, [t]), (0, a.jsxs)(r.AnalyticsLocationProvider, {
     value: s,
     children: [(0, a.jsx)("div", {
-      className: R.content,
+      className: _.content,
       children: (0, a.jsx)(f.default, {
         guildId: t
       })
-    }), null != S && null != M && null != A && (0, a.jsxs)(a.Fragment, {
+    }), null != S && null != A && null != m && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
-        className: R.sidebarSeparator
+        className: _.sidebarSeparator
       }), (0, a.jsx)("section", {
-        className: R.sidebar,
+        className: _.sidebar,
         children: (0, a.jsx)(T.default, {
-          guild: M,
+          guild: A,
           guildJoinRequest: S,
-          guildJoinRequestUser: A,
+          guildJoinRequestUser: m,
           onClose: () => c.default.setSelectedGuildJoinRequest(t, null)
         })
       })]

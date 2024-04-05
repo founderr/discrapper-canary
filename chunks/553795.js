@@ -11,15 +11,15 @@ let I = new Set([E.PlatformTypes.CONTACTS]),
   T = !0,
   f = [],
   S = [],
-  h = {},
   A = {},
+  h = {},
   m = {},
   N = e => {
     f = e.filter(e => !I.has(e.type) && d.default.isSupported(e.type)), S = e.filter(e => I.has(e.type)), T = !1
   };
 class O extends(i = o.default.Store) {
   isJoining(e) {
-    return h[e] || !1
+    return A[e] || !1
   }
   joinErrorMessage(e) {
     return m[e]
@@ -40,7 +40,7 @@ class O extends(i = o.default.Store) {
     return S.find(t => t.type === e)
   }
   isSuggestedAccountType(e) {
-    return A[e] || !1
+    return h[e] || !1
   }
 }
 a = "ConnectedAccountsStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
@@ -62,7 +62,7 @@ a = "ConnectedAccountsStore", (s = "displayName") in(r = O) ? Object.definePrope
     }))) : u.default.fetch()
   },
   USER_CONNECTIONS_INTEGRATION_JOINING: function(e) {
-    h[e.integrationId] = e.joining
+    A[e.integrationId] = e.joining
   },
   USER_CONNECTION_UPDATE: function(e) {
     let {

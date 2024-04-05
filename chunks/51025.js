@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
     return D
   },
   destroy: function() {
-    return h
+    return A
   },
   init: function() {
     return S
   },
   installApplication: function() {
-    return A
+    return h
   },
   moveUp: function() {
     return C
@@ -76,11 +76,11 @@ function S(e, t) {
   })
 }
 
-function h() {
+function A() {
   E.default.destroy()
 }
 
-function A(e) {
+function h(e) {
   let {
     application: t,
     branchId: n,

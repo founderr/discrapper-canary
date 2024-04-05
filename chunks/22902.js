@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return i
+    return u
   }
 });
 var E = s("470079"),
@@ -10,7 +10,7 @@ var E = s("470079"),
   n = s("474936"),
   T = s("689938");
 
-function i(e) {
+function u(e) {
   return E.useMemo(() => {
     var t;
     let s = a.TIER_TRIAL_INTERVALS.map(e => ({

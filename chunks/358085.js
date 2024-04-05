@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return i
   },
   getNativePlatform: function() {
-    return A
+    return h
   },
   getOS: function() {
     return m
@@ -14,7 +14,7 @@ n.r(t), n.d(t, {
     return S
   },
   getPlatformName: function() {
-    return h
+    return A
   },
   isAndroid: function() {
     return T
@@ -92,11 +92,11 @@ function S() {
   return l() ? "WINDOWS" : u() ? "OSX" : d() ? "LINUX" : "WEB"
 }
 
-function h() {
+function A() {
   return o
 }
 
-function A() {
+function h() {
   switch (o) {
     case "ios":
     case "android":

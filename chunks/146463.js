@@ -14,45 +14,45 @@ var l = s("803997"),
   I = s("55543"),
   f = s("693546"),
   T = s("826581"),
-  _ = s("246364"),
-  R = s("328977"),
+  R = s("246364"),
+  _ = s("328977"),
   S = s("571728"),
   N = s("762660"),
-  A = s("689938"),
-  M = s("123471");
-let m = () => null;
+  m = s("689938"),
+  A = s("123471");
+let M = () => null;
 
 function h(e) {
   let {
     status: t
-  } = e, s = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE, l = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY;
+  } = e, s = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE, l = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY;
   switch (t) {
-    case _.GuildJoinRequestApplicationStatuses.REJECTED:
-      s = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_TITLE, l = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_BODY;
+    case R.GuildJoinRequestApplicationStatuses.REJECTED:
+      s = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_TITLE, l = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_BODY;
       break;
-    case _.GuildJoinRequestApplicationStatuses.APPROVED:
-      s = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_TITLE, l = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_BODY;
+    case R.GuildJoinRequestApplicationStatuses.APPROVED:
+      s = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_TITLE, l = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_BODY;
       break;
     default:
-      s = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE, l = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY
+      s = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE, l = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY
   }
   return (0, a.jsxs)("div", {
-    className: M.emptyContainer,
+    className: A.emptyContainer,
     children: [(0, a.jsxs)("div", {
-      className: M.emptyIcon,
+      className: A.emptyIcon,
       children: [(0, a.jsx)(I.default, {
-        className: M.star
+        className: A.star
       }), (0, a.jsx)(c.default, {
-        className: M.checkmark
+        className: A.checkmark
       }), (0, a.jsx)(E.default, {
-        className: M.plus
+        className: A.plus
       })]
     }), (0, a.jsx)(u.Heading, {
       variant: "heading-xl/semibold",
       children: s
     }), (0, a.jsx)(u.Text, {
       color: "header-secondary",
-      className: M.emptyBody,
+      className: A.emptyBody,
       variant: "text-sm/normal",
       children: l
     })]
@@ -65,7 +65,7 @@ t.default = function(e) {
     guildId: l,
     onScroll: c,
     listRef: E
-  } = e, I = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(l), [l]), p = (0, r.useStateFromStores)([T.default], () => T.default.isFetching()), C = p ? [s.length + 25] : [s.length], x = (0, R.useSelectedGuildJoinRequest)({
+  } = e, I = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(l), [l]), p = (0, r.useStateFromStores)([T.default], () => T.default.isFetching()), C = p ? [s.length + 25] : [s.length], x = (0, _.useSelectedGuildJoinRequest)({
     guildId: l
   }), g = (0, S.useSubmittedGuildJoinRequestTotal)({
     guildId: l
@@ -75,8 +75,8 @@ t.default = function(e) {
     } = e, r = s[n];
     return null == r ? (0, a.jsx)(N.MemberApplicationsListRowPlaceholder, {}, n) : (0, a.jsx)(N.MemberApplicationsListRow, {
       className: i()({
-        [M.selected]: x === r,
-        [M.siblingSelected]: x === s[n - 1]
+        [A.selected]: x === r,
+        [A.siblingSelected]: x === s[n - 1]
       }),
       guild: I,
       guildJoinRequest: r,
@@ -85,23 +85,23 @@ t.default = function(e) {
     }, "".concat(r.userId, "-").concat(r.applicationStatus, "-").concat(n))
   };
   return p || 0 !== s.length ? (0, a.jsxs)(a.Fragment, {
-    children: [0 !== g && t === _.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsx)(u.Text, {
-      className: M.title,
+    children: [0 !== g && t === R.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsx)(u.Text, {
+      className: A.title,
       variant: "text-xs/semibold",
       color: "header-secondary",
       children: (function(e, t) {
         let s = t.toLocaleString();
         switch (e) {
-          case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
-            return A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING_COUNT_HYPEN.format({
+          case R.GuildJoinRequestApplicationStatuses.SUBMITTED:
+            return m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING_COUNT_HYPEN.format({
               count: s
             });
-          case _.GuildJoinRequestApplicationStatuses.REJECTED:
-            return A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED_COUNT_HYPEN.format({
+          case R.GuildJoinRequestApplicationStatuses.REJECTED:
+            return m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED_COUNT_HYPEN.format({
               count: s
             });
-          case _.GuildJoinRequestApplicationStatuses.APPROVED:
-            return A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED_COUNT_HYPEN.format({
+          case R.GuildJoinRequestApplicationStatuses.APPROVED:
+            return m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED_COUNT_HYPEN.format({
               count: s
             });
           default:
@@ -119,7 +119,7 @@ t.default = function(e) {
           } = e;
           return (0, a.jsx)(u.List, {
             innerRole: s,
-            innerAriaLabel: A.default.Messages.MEMBERS,
+            innerAriaLabel: m.default.Messages.MEMBERS,
             ref: e => {
               var s;
               E.current = e, t.current = null !== (s = null == e ? void 0 : e.getScrollerNode()) && void 0 !== s ? s : null
@@ -128,7 +128,7 @@ t.default = function(e) {
             paddingBottom: 16,
             sectionHeight: 0,
             rowHeight: 64,
-            renderSection: m,
+            renderSection: M,
             renderRow: j,
             sections: C,
             onScroll: c,

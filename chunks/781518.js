@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return E
   },
   fetchIsSpotifyProtocolRegistered: function() {
-    return A
+    return h
   },
   getAccessToken: function() {
     return I
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return T
   },
   pause: function() {
-    return h
+    return A
   },
   play: function() {
     return S
@@ -152,7 +152,7 @@ function S(e, t, n, i) {
   }), e))
 }
 
-function h(e, t) {
+function A(e, t) {
   return E.put(e, t, {
     url: d.SpotifyEndpoints.PLAYER_PAUSE
   }).then(e => (s.default.dispatch({
@@ -160,7 +160,7 @@ function h(e, t) {
   }), e))
 }
 
-function A() {
+function h() {
   !u.default.isProtocolRegistered() && (0, l.isDesktop)() && o.default.isProtocolRegistered(d.SPOTIFY_APP_PROTOCOL).then(e => {
     s.default.dispatch({
       type: "SPOTIFY_SET_PROTOCOL_REGISTERED",

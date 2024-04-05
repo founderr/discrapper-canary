@@ -11,7 +11,7 @@ var i, r, s, a, o = n("512722"),
 let T = new Map,
   f = new Set,
   S = new Set;
-class h extends(i = d.default.Store) {
+class A extends(i = d.default.Store) {
   getRecentGames(e) {
     var t;
     return null === (t = T.get(e)) || void 0 === t ? void 0 : t.recentGames
@@ -37,12 +37,12 @@ class h extends(i = d.default.Store) {
     }))
   }
 }
-a = "UserRecentGamesStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
+a = "UserRecentGamesStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new h(_.default, {
+}) : r[s] = a, t.default = new A(_.default, {
   CONNECTION_OPEN: function() {
     T = new Map, f = new Set, S = new Set
   },

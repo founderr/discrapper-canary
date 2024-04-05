@@ -11,7 +11,7 @@ n.r(t), n.d(t, {
     return O
   },
   init: function() {
-    return A
+    return h
   },
   removeToken: function() {
     return R
@@ -63,11 +63,11 @@ function S(e) {
   }
 }
 
-function h(e) {
+function A(e) {
   return (null == u ? void 0 : u.isEncryptionAvailable()) && !e.startsWith(o) ? "".concat(o).concat(u.encryptString(e)) : e
 }
 
-function A() {
+function h() {
   if (T) return;
   r = s.Storage.get(a.TOKEN_KEY), E = s.Storage.get(a.TOKENS_KEY) || {};
   let {
@@ -87,7 +87,7 @@ function A() {
 }
 
 function m(e) {
-  return (A(), null != e) ? c[e] : i
+  return (h(), null != e) ? c[e] : i
 }
 
 function N(e, t) {
@@ -112,8 +112,8 @@ function R(e) {
 }
 
 function C() {
-  (null == u ? void 0 : u.isEncryptionAvailable()) ? (null != i && (r = h(i)), E = l(Object.entries(c).map(e => {
+  (null == u ? void 0 : u.isEncryptionAvailable()) ? (null != i && (r = A(i)), E = l(Object.entries(c).map(e => {
     let [t, n] = e;
-    return [t, h(n)]
+    return [t, A(n)]
   })), _ = !0) : (r = i, E = c), f()
 }

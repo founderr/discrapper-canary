@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("410575"),
   f = n("2052"),
   S = n("100527"),
-  h = n("906732"),
-  A = n("243778"),
+  A = n("906732"),
+  h = n("243778"),
   m = n("339085"),
   N = n("438332"),
   O = n("664437"),
@@ -106,8 +106,8 @@ let ee = (0, B.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
       gridDispatch: T,
       getItemProps: f,
       getRowProps: S,
-      gridContainerProps: h,
-      handleGridContainerKeyDown: A,
+      gridContainerProps: A,
+      handleGridContainerKeyDown: h,
       isUsingKeyboardNavigation: O
     } = (0, g.useExpressionPickerGridKeyboardNavigation)({
       columnCounts: i,
@@ -132,8 +132,8 @@ let ee = (0, B.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
     }, e => e.inspectedExpressionPosition), [T]), {
       getItemProps: f,
       getRowProps: S,
-      gridContainerProps: h,
-      handleGridContainerKeyDown: A,
+      gridContainerProps: A,
+      handleGridContainerKeyDown: h,
       isUsingKeyboardNavigation: O
     }
   },
@@ -181,8 +181,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       analyticsOverride: eT = eu,
       searchProps: ef = {},
       wrapper: eS,
-      shouldHidePickerActions: eh = !1,
-      messageId: eA,
+      shouldHidePickerActions: eA = !1,
+      messageId: eh,
       renderHeader: em,
       listHeaderClassName: eN
     } = e,
@@ -219,7 +219,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     section: null != ex ? ex : q.AnalyticsSections.EMOJI_PICKER_POPOUT
   }), [eV, ex]), {
     analyticsLocations: eW
-  } = (0, h.default)(S.default.EMOJI_PICKER), {
+  } = (0, A.default)(S.default.EMOJI_PICKER), {
     diversitySurrogate: eK
   } = (0, d.useStateFromStoresObject)([m.default], () => ({
     diversitySurrogate: m.default.diversitySurrogate
@@ -393,7 +393,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           children: [(0, i.jsx)(z.default, {
             channel: u,
             closePopout: I
-          }), (0, i.jsx)(A.default, {
+          }), (0, i.jsx)(h.default, {
             contentTypes: ta,
             children: e => {
               let {
@@ -404,7 +404,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
                 markAsDismissed: () => n(J.ContentDismissActionType.UNKNOWN)
               })
             }
-          }), eh ? null : (0, i.jsx)("div", {
+          }), eA ? null : (0, i.jsx)("div", {
             className: $.emojiPickerListWrapper,
             id: Q.GRID_NAVIGATOR_ID,
             ...te,
@@ -429,7 +429,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
               sectionDescriptors: e0,
               setCollapsedSections: eJ,
               channelGuildId: eb,
-              messageId: eA,
+              messageId: eh,
               isBurstReaction: eG,
               listHeaderClassName: eN
             }) : null
@@ -441,7 +441,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           pickerIntention: l,
           channel: u
         }), o]
-      }), eh ? null : (0, i.jsx)(x.default, {
+      }), eA ? null : (0, i.jsx)(x.default, {
         className: $.categoryList,
         emojiListRef: eP,
         sectionDescriptors: e0,
@@ -450,7 +450,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       })]
     })
   });
-  return (0, i.jsx)(h.AnalyticsLocationProvider, {
+  return (0, i.jsx)(A.AnalyticsLocationProvider, {
     value: eW,
     children: to
   })

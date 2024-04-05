@@ -21,8 +21,8 @@ var a = n("803997"),
   T = n("617136"),
   f = n("497505"),
   S = n("626135"),
-  h = n("785717"),
-  A = n("221292"),
+  A = n("785717"),
+  h = n("221292"),
   m = n("290421"),
   N = n("318661"),
   O = n("228168"),
@@ -48,7 +48,7 @@ function v(e) {
   } = (0, c.default)(_.default.BADGE), {
     trackUserProfileAction: b,
     ...G
-  } = (0, h.useUserProfileAnalyticsContext)(), {
+  } = (0, A.useUserProfileAnalyticsContext)(), {
     allowOpeningLootboxes: w
   } = I.default.useExperiment({
     location: "user_profile"
@@ -91,7 +91,7 @@ function v(e) {
             var i;
             b({
               action: "PRESS_BADGE"
-            }), (0, A.trackUserProfileBadgePressed)({
+            }), (0, h.trackUserProfileBadgePressed)({
               badge: e.id,
               analyticsLocations: U,
               ...G
@@ -105,7 +105,7 @@ function v(e) {
             var n;
             e.id === m.QUEST_COMPLETED_BADGE && (S.default.track(p.AnalyticEvents.QUEST_CONTENT_VIEWED, {
               ...(0, T.getContentProperties)(f.QuestContent.QUEST_BADGE)
-            }), (0, A.trackUserProfileBadgeHovered)({
+            }), (0, h.trackUserProfileBadgeHovered)({
               badge: e.id,
               analyticsLocations: U,
               ...G

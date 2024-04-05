@@ -40,8 +40,8 @@ var i = n("735250"),
   T = n("98650"),
   f = n("86813"),
   S = n("826026"),
-  h = n("441674"),
-  A = n("465670"),
+  A = n("441674"),
+  h = n("465670"),
   m = n("748585"),
   N = n("689938"),
   O = n("60772");
@@ -149,7 +149,7 @@ function y(e) {
     maxVisibleItems: u = 7,
     autoFocus: _ = !1,
     popoutWidth: T,
-    clearable: h = !1,
+    clearable: A = !1,
     look: p = m.SelectLooks.FILLED,
     onClose: R,
     onOpen: C,
@@ -265,12 +265,12 @@ function y(e) {
           children: n
         }), (0, i.jsxs)("div", {
           className: O.icons,
-          children: [h ? (0, i.jsx)(l.Clickable, {
+          children: [A ? (0, i.jsx)(l.Clickable, {
             role: "button",
             "aria-disabled": o,
             onClick: Z,
             "aria-label": N.default.Messages.CLEAR,
-            children: (0, i.jsx)(A.default, {
+            children: (0, i.jsx)(h.default, {
               width: 16,
               height: 16,
               className: O.clear
@@ -297,8 +297,8 @@ function P(e) {
     maxVisibleItems: I,
     renderOptionLabel: f,
     serialize: S,
-    optionClassName: h,
-    buttonHeight: A,
+    optionClassName: A,
+    buttonHeight: h,
     updatePosition: m,
     popoutPosition: N
   } = e, [p, R] = r.useState(0), C = r.useRef(null), g = r.useId(), L = (0, o.default)({
@@ -312,8 +312,8 @@ function P(e) {
     var e;
     null === (e = D.current) || void 0 === e || e.focus()
   }, []), r.useEffect(() => {
-    A > 0 && m()
-  }, [A, m]), (0, T.default)(m), r.useLayoutEffect(() => {
+    h > 0 && m()
+  }, [h, m]), (0, T.default)(m), r.useLayoutEffect(() => {
     var e, t;
     let n = null === (t = C.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
     null != n && R(n)
@@ -330,7 +330,7 @@ function P(e) {
         value: e.value,
         label: f(e),
         onSelect: v,
-        className: h,
+        className: A,
         isDisabled: e.disabled,
         serialize: S
       }, null !== (n = e.key) && void 0 !== n ? n : t)
@@ -393,7 +393,7 @@ function U(e) {
     "aria-selected": u,
     "aria-disabled": d,
     role: "option",
-    children: [r, u && (0, i.jsx)(h.default, {
+    children: [r, u && (0, i.jsx)(A.default, {
       backgroundColor: "white",
       className: O.selectedIcon,
       width: 20,

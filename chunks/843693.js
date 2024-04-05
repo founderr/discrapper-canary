@@ -15,8 +15,8 @@ var i, r, s, a, o = n("442837"),
   T = n("641033"),
   f = n("524484"),
   S = n("981631");
-let h = new Set,
-  A = new l.SecondaryIndexMap(function(e) {
+let A = new Set,
+  h = new l.SecondaryIndexMap(function(e) {
     let {
       userId: t,
       channelId: n
@@ -64,14 +64,14 @@ class p extends(i = o.default.Store) {
     this.waitFor(_.default, c.default)
   }
   getComboScore(e, t) {
-    let n = A.get(N({
+    let n = h.get(N({
       userId: e,
       channelId: t
     }));
     return null == n ? 0 : (0, T.getComboScore)(n)
   }
   getUserCombo(e, t) {
-    return A.get(N({
+    return h.get(N({
       userId: e,
       channelId: t
     }))
@@ -111,7 +111,7 @@ let R = new p(d.default, {
     ! function e(t) {
       var n, i, r, s, a, o;
       let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        d = A.get(N(t)),
+        d = h.get(N(t)),
         _ = {
           ...d,
           ...t,
@@ -119,8 +119,8 @@ let R = new p(d.default, {
           multiplier: Math.min(null !== (s = null !== (r = t.multiplier) && void 0 !== r ? r : null == d ? void 0 : d.multiplier) && void 0 !== s ? s : 1, 7),
           decayInterval: null !== (a = null == d ? void 0 : d.decayInterval) && void 0 !== a ? a : new u.Interval
         };
-      A.set(N(t), _), l && (null === (o = _.decayInterval) || void 0 === o || o.start(1e3, () => {
-        let t = A.get(N(_));
+      h.set(N(t), _), l && (null === (o = _.decayInterval) || void 0 === o || o.start(1e3, () => {
+        let t = h.get(N(_));
         if (null != t) {
           let i = _.multiplier !== t.multiplier && _.value !== t.value;
           if (t.value <= 0 || i) {
@@ -158,8 +158,8 @@ let R = new p(d.default, {
     } = e;
     if (!I.default.isEnabled()) return !1;
     let o = _.default.getId();
-    if (!O(null == s ? void 0 : s.id, o, a, h)) return !1;
-    let l = A.get(N({
+    if (!O(null == s ? void 0 : s.id, o, a, A)) return !1;
+    let l = h.get(N({
       userId: null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "???",
       channelId: i
     }));

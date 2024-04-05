@@ -21,9 +21,9 @@ var i, r = n("873546"),
   T = n("594174"),
   f = n("981631"),
   S = n("176505"),
-  h = n("231338");
+  A = n("231338");
 
-function A(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -65,7 +65,7 @@ function M() {
     let n = C[t];
     if (n.type === o.SidebarType.VIEW_THREAD || n.type === o.SidebarType.VIEW_CHANNEL) {
       let i = d.default.getChannel(n.channelId);
-      (null == i || !_.default.can(h.Permissions.VIEW_CHANNEL, i)) && (delete C[t], e = !0)
+      (null == i || !_.default.can(A.Permissions.VIEW_CHANNEL, i)) && (delete C[t], e = !0)
     }
   }
   return e
@@ -118,7 +118,7 @@ class P extends(i = s.default.PersistedStore) {
     return null == i ? null : i.type === o.SidebarType.VIEW_THREAD || i.type === o.SidebarType.VIEW_CHANNEL ? null === (t = i.details) || void 0 === t ? void 0 : t.initialMessageId : null
   }
 }
-A(P, "displayName", "ChannelSectionStore"), A(P, "persistKey", "ChannelSectionStore2"), t.default = new P(a.default, {
+h(P, "displayName", "ChannelSectionStore"), h(P, "persistKey", "ChannelSectionStore2"), t.default = new P(a.default, {
   CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
     O && (O = v(O)), N = v(N)
   },

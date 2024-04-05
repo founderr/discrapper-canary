@@ -25,7 +25,7 @@ function I(e) {
     discriminator: I,
     username: f
   } = t, T = o.default.getUserAvatarURL(t), {
-    analyticsLocations: _
+    analyticsLocations: R
   } = (0, r.default)();
   return (0, a.jsxs)("div", {
     className: i()(E.container, l),
@@ -49,7 +49,7 @@ function I(e) {
         (0, u.openUserProfileModal)({
           userId: t.id,
           guildId: s,
-          sourceAnalyticsLocations: _,
+          sourceAnalyticsLocations: R,
           analyticsLocation: {
             section: d.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
             object: d.AnalyticsObjects.JOIN_REQUEST

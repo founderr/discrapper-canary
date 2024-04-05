@@ -39,7 +39,7 @@ function f(e, t) {
     {
       computedPermissions: R,
       hasBaseAccessPermissions: C
-    } = A(E);
+    } = h(E);
   return {
     context: E,
     userId: S,
@@ -48,7 +48,7 @@ function f(e, t) {
     commandType: t,
     computedPermissions: R,
     hasBaseAccessPermissions: C,
-    allowNsfw: h(E, m, f)
+    allowNsfw: A(E, m, f)
   }
 }
 
@@ -76,7 +76,7 @@ function S(e, t) {
     let {
       computedPermissions: e,
       hasBaseAccessPermissions: i
-    } = A(n);
+    } = h(n);
     return {
       context: n,
       userId: E,
@@ -85,16 +85,16 @@ function S(e, t) {
       isImpersonating: S,
       computedPermissions: e,
       hasBaseAccessPermissions: i,
-      allowNsfw: h(n, T, a)
+      allowNsfw: A(n, T, a)
     }
   }, [t, n, S, f, E, T, a])
 }
 
-function h(e, t, n) {
+function A(e, t, n) {
   return !!t && (!(e instanceof u.ChannelRecordBase) || (null != e.guild_id ? e.nsfw : n))
 }
 
-function A(e) {
+function h(e) {
   let t;
   if (e instanceof u.ChannelRecordBase && e.isPrivate()) return {
     computedPermissions: r.deserialize(0),

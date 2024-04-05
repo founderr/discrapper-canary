@@ -5,9 +5,9 @@ var E = s("735250"),
   a = s("525654"),
   n = s.n(a),
   T = s("748780"),
-  i = s("424996");
+  u = s("424996");
 
-function u(e, t, s) {
+function i(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -59,11 +59,11 @@ class l extends _.Component {
   }
   render() {
     return (0, E.jsxs)("div", {
-      className: i.searchIndexAnimation,
+      className: u.searchIndexAnimation,
       children: [(0, E.jsx)("div", {
-        className: i.searchIndexBackground
+        className: u.searchIndexBackground
       }), (0, E.jsxs)("svg", {
-        className: i.searchIndexForeground,
+        className: u.searchIndexForeground,
         width: "320",
         height: "280",
         children: [(0, E.jsx)("defs", {
@@ -83,7 +83,7 @@ class l extends _.Component {
               fill: "#fff",
               children: (0, E.jsx)(T.default.use, {
                 style: A(this.state),
-                className: i.mask,
+                className: u.mask,
                 xlinkHref: "#search-index-foreground-mask-a"
               })
             }), (0, E.jsxs)("g", {
@@ -346,7 +346,7 @@ class l extends _.Component {
               })]
             })]
           }), (0, E.jsxs)(T.default.g, {
-            className: i.magnifyingGlass,
+            className: u.magnifyingGlass,
             style: A(this.state),
             children: [(0, E.jsx)("path", {
               fill: "#C9D2F0",
@@ -390,10 +390,10 @@ class l extends _.Component {
     })
   }
   constructor(...e) {
-    super(...e), u(this, "state", {
+    super(...e), i(this, "state", {
       x: new T.default.Value(0),
       y: new T.default.Value(0)
-    }), u(this, "_isMounted", !1), u(this, "shouldLoop", () => this._isMounted)
+    }), i(this, "_isMounted", !1), i(this, "shouldLoop", () => this._isMounted)
   }
 }
 t.default = l

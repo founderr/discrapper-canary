@@ -33,10 +33,10 @@ function c(e) {
     f = s ? () => d() : () => a(!e.enabled, T),
     {
       Component: S,
-      play: h,
-      events: A
+      play: A,
+      events: h
     } = (0, o.useVideoLottie)(I || n ? "disable" : "enable");
-  return r.useEffect(() => () => h(), [n, h]), (0, i.jsx)(i.Fragment, {
+  return r.useEffect(() => () => A(), [n, A]), (0, i.jsx)(i.Fragment, {
     children: c({
       onClick: f,
       active: n,
@@ -44,8 +44,8 @@ function c(e) {
       iconComponent: S,
       label: t,
       unavailable: s,
-      onMouseEnter: I ? void 0 : A.onMouseEnter,
-      onMouseLeave: I ? void 0 : A.onMouseLeave
+      onMouseEnter: I ? void 0 : h.onMouseEnter,
+      onMouseLeave: I ? void 0 : h.onMouseLeave
     })
   })
 }
@@ -64,8 +64,8 @@ function E(e) {
     channelLimit: T,
     centerButton: f = !1,
     onPopoutClick: S,
-    ...h
-  } = e, A = f ? d.CenterControlButton : d.default;
+    ...A
+  } = e, h = f ? d.CenterControlButton : d.default;
   return (0, i.jsx)(c, {
     enabled: t,
     join: n,
@@ -83,16 +83,16 @@ function E(e) {
         onMouseLeave: s,
         ...o
       } = e;
-      return (0, i.jsx)(A, {
+      return (0, i.jsx)(h, {
         ...o,
-        ...h,
+        ...A,
         onMouseEnter: e => {
           var t;
-          null === (t = h.onMouseEnter) || void 0 === t || t.call(h, e), null == r || r()
+          null === (t = A.onMouseEnter) || void 0 === t || t.call(A, e), null == r || r()
         },
         onMouseLeave: e => {
           var t;
-          null === (t = h.onMouseLeave) || void 0 === t || t.call(h, e), null == s || s()
+          null === (t = A.onMouseLeave) || void 0 === t || t.call(A, e), null == s || s()
         },
         isActive: t,
         className: a()(E, {

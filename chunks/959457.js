@@ -10,8 +10,8 @@ var s, a, o, l, u = n("512722"),
   T = n("570140"),
   f = n("594190"),
   S = n("444852"),
-  h = n("569545"),
-  A = n("687516"),
+  A = n("569545"),
+  h = n("687516"),
   m = n("139656"),
   N = n("358085"),
   O = n("199902"),
@@ -163,7 +163,7 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
       appContext: r,
       pid: s,
       sourceId: a
-    } = e, o = (0, h.encodeStreamKey)({
+    } = e, o = (0, A.encodeStreamKey)({
       streamType: t,
       guildId: n,
       channelId: i,
@@ -208,8 +208,8 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
     if (null == o && null != n) {
       var l, u, _;
       null == P[t] && (y[t] = null);
-      let e = (0, h.decodeStreamKey)(t);
-      null == y[t] && null == U[t] && (y[t] = (0, A.getStreamerApplication)(e, g.default));
+      let e = (0, A.decodeStreamKey)(t);
+      null == y[t] && null == U[t] && (y[t] = (0, h.getStreamerApplication)(e, g.default));
       let r = R.default.getChannel(e.channelId),
         c = null != r && r.isBroadcastChannel(),
         E = new S.StreamRTCAnalyticsContext({

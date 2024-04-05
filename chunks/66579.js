@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n("47120");
-var i = n("735250"),
+var a = n("735250"),
   r = n("470079"),
   s = n("803997"),
-  a = n.n(s),
-  l = n("481060"),
-  o = n("285952"),
-  u = n("259580"),
-  c = n("680641");
-class d extends r.PureComponent {
+  l = n.n(s),
+  i = n("481060"),
+  u = n("285952"),
+  o = n("259580"),
+  d = n("680641");
+class c extends r.PureComponent {
   handleClick(e) {
     let {
       onBreadcrumbClick: t
@@ -20,9 +20,9 @@ class d extends r.PureComponent {
       breadcrumbs: e,
       className: t
     } = this.props, n = e.map(this.renderBreadcrumb);
-    return (0, i.jsx)(o.default, {
-      justify: o.default.Justify.START,
-      className: a()(c.breadcrumbs, t),
+    return (0, a.jsx)(u.default, {
+      justify: u.default.Justify.START,
+      className: l()(d.breadcrumbs, t),
       children: n
     })
   }
@@ -33,27 +33,27 @@ class d extends r.PureComponent {
         activeId: n,
         onBreadcrumbClick: r,
         breadcrumbs: s,
-        renderCustomBreadcrumb: o,
-        separatorClassName: d
-      } = this.props, f = e.id === n, p = t === s.length - 1, _ = null != o ? o(e, f) : (0, i.jsx)("span", {
-        className: a()(c.breadcrumb, {
-          [c.activeBreadcrumb]: f,
-          [c.interactiveBreadcrumb]: null != r
+        renderCustomBreadcrumb: u,
+        separatorClassName: c
+      } = this.props, f = e.id === n, _ = t === s.length - 1, I = null != u ? u(e, f) : (0, a.jsx)("span", {
+        className: l()(d.breadcrumb, {
+          [d.activeBreadcrumb]: f,
+          [d.interactiveBreadcrumb]: null != r
         }),
         children: e.label
       });
-      return (0, i.jsxs)("div", {
-        className: a()(c.breadcrumbWrapper, {
-          [c.breadcrumbFinalWrapper]: p
+      return (0, a.jsxs)("div", {
+        className: l()(d.breadcrumbWrapper, {
+          [d.breadcrumbFinalWrapper]: _
         }),
-        children: [null != r ? (0, i.jsx)(l.Clickable, {
+        children: [null != r ? (0, a.jsx)(i.Clickable, {
           tag: "span",
           onClick: () => this.handleClick(e),
-          className: c.breadcrumbClickWrapper,
-          children: _
-        }) : _, p ? null : (0, i.jsx)(u.default, {
-          className: a()(c.breadcrumbArrow, d),
-          direction: u.default.Directions.RIGHT
+          className: d.breadcrumbClickWrapper,
+          children: I
+        }) : I, _ ? null : (0, a.jsx)(o.default, {
+          className: l()(d.breadcrumbArrow, c),
+          direction: o.default.Directions.RIGHT
         })]
       }, e.id)
     }, n in t ? Object.defineProperty(t, n, {
@@ -64,4 +64,4 @@ class d extends r.PureComponent {
     }) : t[n] = r
   }
 }
-t.default = d
+t.default = c

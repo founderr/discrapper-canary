@@ -4,40 +4,40 @@ s.r(t), s.d(t, {
     return h
   },
   CommandPermissionChangeStrings: function() {
-    return x
+    return b
   },
   DEFAULT_FOR_STRINGS_KEY: function() {
     return M
   },
   EmojiChangeStrings: function() {
-    return v
+    return H
   },
   GuildChangeStrings: function() {
     return f
   },
   GuildScheduledEventChangeStrings: function() {
-    return F
+    return K
   },
   IntegrationChangeStrings: function() {
     return V
   },
   InviteChangeStrings: function() {
-    return P
+    return m
   },
   NotRenderedChanges: function() {
-    return b
+    return x
   },
   RoleChangeStrings: function() {
-    return m
+    return P
   },
   StageInstanceChangeStrings: function() {
     return B
   },
   StickerChangeStrings: function() {
-    return H
+    return v
   },
   ThreadChangeStrings: function() {
-    return K
+    return F
   },
   UserChangeStrings: function() {
     return p
@@ -72,17 +72,17 @@ var E = s("654861"),
   a = s("149765"),
   n = s("866442"),
   T = s("144830"),
-  i = s("911969"),
-  u = s("933557"),
+  u = s("911969"),
+  i = s("933557"),
   A = s("710845"),
   l = s("339085"),
   I = s("776617"),
-  o = s("427679"),
-  r = s("926491"),
-  L = s("387667"),
+  L = s("427679"),
+  o = s("926491"),
+  r = s("387667"),
   d = s("592125"),
-  N = s("430824"),
-  S = s("699516"),
+  S = s("430824"),
+  N = s("699516"),
   g = s("594174"),
   D = s("971130"),
   c = s("709054"),
@@ -187,7 +187,7 @@ let C = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
     ...R()
   }),
-  m = () => ({
+  P = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE),
     [G.AuditLogChangeKeys.PERMISSIONS_GRANTED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
     [G.AuditLogChangeKeys.PERMISSIONS_DENIED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
@@ -207,7 +207,7 @@ let C = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.UNICODE_EMOJI]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
     ...R()
   }),
-  P = () => ({
+  m = () => ({
     [G.AuditLogChangeKeys.CODE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
     [G.AuditLogChangeKeys.CHANNEL_ID]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
     [G.AuditLogChangeKeys.MAX_USES]: {
@@ -230,11 +230,11 @@ let C = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.AVATAR_HASH]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
     [G.AuditLogChangeKeys.REASON]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
   }),
-  v = () => ({
+  H = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE),
     ...R()
   }),
-  H = () => ({
+  v = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE),
     [G.AuditLogChangeKeys.TAGS]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE),
     [G.AuditLogChangeKeys.DESCRIPTION]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
@@ -260,7 +260,7 @@ let C = new A.default("AuditLogUtils"),
     },
     ...R()
   }),
-  F = () => ({
+  K = () => ({
     [G.AuditLogChangeKeys.NAME]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
     [G.AuditLogChangeKeys.DESCRIPTION]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DESCRIPTION_CREATE,
     [G.AuditLogChangeKeys.PRIVACY_LEVEL]: {
@@ -284,7 +284,7 @@ let C = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.RECURRENCE_RULE]: e_(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE_CLEAR, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE),
     ...R()
   }),
-  K = () => ({
+  F = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE),
     [G.AuditLogChangeKeys.ARCHIVED]: {
       true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_ARCHIVED,
@@ -302,7 +302,7 @@ let C = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
     ...R()
   }),
-  x = e => {
+  b = e => {
     let t = {
       ...R()
     };
@@ -310,7 +310,7 @@ let C = new A.default("AuditLogUtils"),
       e.newValue ? e.newValue.permission ? t[e.key] = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_GRANTED : t[e.key] = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_DENIED : t[e.key] = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_REMOVED
     }), t
   },
-  b = {
+  x = {
     [G.AuditLogTargetTypes.CHANNEL]: {
       [G.AuditLogChangeKeys.ID]: !0,
       [G.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0
@@ -859,11 +859,11 @@ function q(e, t) {
             return t;
           case G.AuditLogTargetTypes.CHANNEL:
           case G.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-            return et(e, G.AuditLogChangeKeys.NAME, e => d.default.getChannel(e), e => (0, u.computeChannelName)(e, g.default, S.default, !0));
+            return et(e, G.AuditLogChangeKeys.NAME, e => d.default.getChannel(e), e => (0, i.computeChannelName)(e, g.default, N.default, !0));
           case G.AuditLogTargetTypes.USER:
             return et(e, G.AuditLogChangeKeys.NICK, e => g.default.getUser(e), void 0);
           case G.AuditLogTargetTypes.ROLE:
-            return et(e, G.AuditLogChangeKeys.NAME, e => N.default.getRole(t.id, e), e => e.name);
+            return et(e, G.AuditLogChangeKeys.NAME, e => S.default.getRole(t.id, e), e => e.name);
           case G.AuditLogTargetTypes.INVITE:
             return et(e, G.AuditLogChangeKeys.CODE, G.NOOP_NULL);
           case G.AuditLogTargetTypes.INTEGRATION:
@@ -873,11 +873,11 @@ function q(e, t) {
           case G.AuditLogTargetTypes.EMOJI:
             return et(e, G.AuditLogChangeKeys.NAME, e => l.default.getGuildEmoji(t.id).find(t => t.id === e), e => e.name);
           case G.AuditLogTargetTypes.STICKER:
-            return et(e, G.AuditLogChangeKeys.NAME, e => r.default.getStickerById(e), e => e.name);
+            return et(e, G.AuditLogChangeKeys.NAME, e => o.default.getStickerById(e), e => e.name);
           case G.AuditLogTargetTypes.STAGE_INSTANCE:
             return et(e, G.AuditLogChangeKeys.TOPIC, e => {
               var s;
-              return null === (s = Object.values(o.default.getStageInstancesByGuild(t.id))) || void 0 === s ? void 0 : s.find(t => t.id === e)
+              return null === (s = Object.values(L.default.getStageInstancesByGuild(t.id))) || void 0 === s ? void 0 : s.find(t => t.id === e)
             }, e => e.topic);
           case G.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
             return et(e, G.AuditLogChangeKeys.NAME, e => I.default.guildScheduledEvents.find(t => t.id === e), e => e.name);
@@ -891,7 +891,7 @@ function q(e, t) {
             }
             return et(e, G.AuditLogChangeKeys.NAME, e => I.default.applicationCommands.find(t => t.id === e), e => {
               let t = null != e.name_localized && "" !== e.name_localized ? e.name_localized : e.name;
-              return e.type === i.ApplicationCommandType.CHAT ? "/⁠".concat(t) : t
+              return e.type === u.ApplicationCommandType.CHAT ? "/⁠".concat(t) : t
             });
           default:
             return C.warn("Unknown targetType for log", e), null
@@ -923,13 +923,13 @@ function q(e, t) {
               let t = e.newValue || e.oldValue;
               switch (t.type) {
                 case G.ApplicationCommandPermissionTypes.ROLE:
-                  e.subtarget = es(t.id, e => N.default.getRole(s.id, e), e => e.name);
+                  e.subtarget = es(t.id, e => S.default.getRole(s.id, e), e => e.name);
                   break;
                 case G.ApplicationCommandPermissionTypes.USER:
                   e.subtarget = es(t.id, e => g.default.getUser(e), e => e.tag);
                   break;
                 case G.ApplicationCommandPermissionTypes.CHANNEL:
-                  t.id === _()(s.id).subtract(1).toString() ? e.subtarget = U.default.Messages.ALL_CHANNELS : e.subtarget = es(t.id, e => d.default.getChannel(e), e => (0, u.computeChannelName)(e, g.default, S.default, !0))
+                  t.id === _()(s.id).subtract(1).toString() ? e.subtarget = U.default.Messages.ALL_CHANNELS : e.subtarget = es(t.id, e => d.default.getChannel(e), e => (0, i.computeChannelName)(e, g.default, N.default, !0))
               }
               return e
             }
@@ -941,7 +941,7 @@ function q(e, t) {
               case G.AuditLogChangeKeys.SYSTEM_CHANNEL_ID:
               case G.AuditLogChangeKeys.RULES_CHANNEL_ID:
               case G.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID:
-                return ee(e, e => d.default.getChannel(e), e => (0, u.computeChannelName)(e, g.default, S.default, !0));
+                return ee(e, e => d.default.getChannel(e), e => (0, i.computeChannelName)(e, g.default, N.default, !0));
               case G.AuditLogChangeKeys.AFK_TIMEOUT:
                 return ee(e, e => e / 60);
               case G.AuditLogChangeKeys.BITRATE:
@@ -965,11 +965,11 @@ function q(e, t) {
                     removed: E
                   } = $(e.oldValue, e.newValue);
                 if (s.length > 0) {
-                  let e = new L.AuditLogChange(G.AuditLogChangeKeys.PERMISSIONS_GRANTED, null, s);
+                  let e = new r.AuditLogChange(G.AuditLogChangeKeys.PERMISSIONS_GRANTED, null, s);
                   t.push(e)
                 }
                 if (E.length > 0) {
-                  let e = new L.AuditLogChange(G.AuditLogChangeKeys.PERMISSIONS_DENIED, null, E);
+                  let e = new r.AuditLogChange(G.AuditLogChangeKeys.PERMISSIONS_DENIED, null, E);
                   t.push(e)
                 }
                 return t
@@ -982,11 +982,11 @@ function q(e, t) {
                     removed: E
                   } = $(e.oldValue, e.newValue);
                 if (s.length > 0) {
-                  let E = new L.AuditLogChange(e.key, null, s);
+                  let E = new r.AuditLogChange(e.key, null, s);
                   t.push(E)
                 }
                 if (E.length > 0) {
-                  let e = new L.AuditLogChange(G.AuditLogChangeKeys.PERMISSIONS_RESET, E, E);
+                  let e = new r.AuditLogChange(G.AuditLogChangeKeys.PERMISSIONS_RESET, E, E);
                   t.push(e)
                 }
                 return t
@@ -1011,7 +1011,7 @@ function q(e, t) {
                     let _ = (e.oldValue & E) === E,
                       a = (e.newValue & E) === E;
                     if (_ === a) return;
-                    let n = new L.AuditLogChange(t[E], !_, !a);
+                    let n = new r.AuditLogChange(t[E], !_, !a);
                     s.push(n)
                   }), s
                 }(e)
@@ -1032,24 +1032,24 @@ function $(e, t) {
     _ = a.remove(E, s),
     n = a.remove(s, E),
     T = [],
-    i = [],
-    u = {
+    u = [],
+    i = {
       ...G.Permissions
     };
-  for (let e in u) {
-    let t = u[e];
-    a.has(_, t) && T.push(t), a.has(n, t) && i.push(t)
+  for (let e in i) {
+    let t = i[e];
+    a.has(_, t) && T.push(t), a.has(n, t) && u.push(t)
   }
   return {
     added: T,
-    removed: i
+    removed: u
   }
 }
 
 function ee(e, t, s) {
   let E = e.newValue,
     _ = e.oldValue;
-  return null != e.newValue && (E = t(e.newValue), null != s && null != E && (E = s(E))), null != e.oldValue && (_ = t(e.oldValue), null != s && null != _ && (_ = s(_))), new L.AuditLogChange(e.key, _ || e.oldValue, E || e.newValue)
+  return null != e.newValue && (E = t(e.newValue), null != s && null != E && (E = s(E))), null != e.oldValue && (_ = t(e.oldValue), null != s && null != _ && (_ = s(_))), new r.AuditLogChange(e.key, _ || e.oldValue, E || e.newValue)
 }
 
 function et(e, t, s, E, _) {

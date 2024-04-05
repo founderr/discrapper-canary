@@ -15,8 +15,8 @@ var i = n("392711"),
   T = n("369780"),
   f = n("444758"),
   S = n("723454"),
-  h = n("772096"),
-  A = n("800927"),
+  A = n("772096"),
+  h = n("800927"),
   m = n("594199"),
   N = n("97734"),
   O = n("660199"),
@@ -31,7 +31,7 @@ let D = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
   y = /^ *> ?/gm;
 
 function P(e) {
-  let t = (0, h.punycodeLink)(e[1]);
+  let t = (0, A.punycodeLink)(e[1]);
   if (null == t) return {
     type: "text",
     content: e[1]
@@ -93,7 +93,7 @@ let U = e => {
         }
       }
     },
-    link: h.default,
+    link: A.default,
     autolink: {
       ...a().defaultRules.autolink,
       parse: P
@@ -340,7 +340,7 @@ let U = e => {
       })
     },
     heading: S.default,
-    list: A.default
+    list: h.default
   },
   w = (0, p.default)([G, N.default]),
   B = r().omit(w, ["inlineCode", "codeBlock", "br", "blockQuote"]),

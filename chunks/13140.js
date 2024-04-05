@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return f
   },
   keyToCode: function() {
-    return h
+    return A
   },
   toBrowserEvents: function() {
     return p
@@ -58,7 +58,7 @@ function S(e) {
   }
 }
 
-function h(e) {
+function A(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f(),
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.KeyboardDeviceTypes.KEYBOARD_KEY;
   switch (n) {
@@ -84,7 +84,7 @@ function h(e) {
       throw Error("Unrecognized DeviceType ".concat(n, "."))
   }
 }!(0, u.isMac)() && (T["223"] = "`"), Object.freeze(T);
-let A = [
+let h = [
     ["META", "⌘"],
     ["RIGHT META", "RIGHT ⌘"],
     ["SHIFT", "⇧"],
@@ -109,12 +109,12 @@ let A = [
     ["SPACE", "␣"]
   ],
   m = e => {
-    for (let [t, n] of A)
+    for (let [t, n] of h)
       if (t === e.toUpperCase()) return n;
     return e
   },
   N = e => {
-    for (let [t, n] of A)
+    for (let [t, n] of h)
       if (n === e.toUpperCase()) return t.toLowerCase();
     return e
   },
@@ -139,7 +139,7 @@ function p(e) {
     }), e;
     if (O.test(i)) return t[i + "Key"] = !0, e.map(e => (e[i + "Key"] = !0, e));
     {
-      let t = h(i, d.KeyboardEnvs.BROWSER);
+      let t = A(i, d.KeyboardEnvs.BROWSER);
       return null != t && (r.keyCode = t), e.push(r), e
     }
   }, [])
@@ -149,7 +149,7 @@ function R(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f(),
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.KeyboardDeviceTypes.KEYBOARD_KEY;
   return e.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, o.default.modKey).split("+").map(e => e.trim().replace("plus", "+")).reduce((e, i) => {
-    let r = h(N(i), t, n);
+    let r = A(N(i), t, n);
     return null != r && e.push([n, r, t]), e
   }, [])
 }

@@ -11,8 +11,8 @@ let E = null,
   T = [],
   f = new Set,
   S = !1,
-  h = new Set,
   A = new Set,
+  h = new Set,
   m = {},
   N = 0,
   O = null,
@@ -22,7 +22,7 @@ let E = null,
   g = () => !0;
 
 function L(e) {
-  h.add(e)
+  A.add(e)
 }
 
 function D(e) {
@@ -35,9 +35,9 @@ function D(e) {
 function v(e) {
   let t = e.type === o.MessageTypes.PREMIUM_REFERRAL ? e.content : null;
   if (null == t) return !1;
-  if (!A.has(t) && !h.has(t)) {
+  if (!h.has(t) && !A.has(t)) {
     var n;
-    n = t, h.add(n), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
+    n = t, A.add(n), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
   }
 }
 class M extends(i = l.default.Store) {
@@ -66,7 +66,7 @@ class M extends(i = l.default.Store) {
     return m[e]
   }
   isResolving(e) {
-    return h.has(e)
+    return A.has(e)
   }
   getEligibleUsers() {
     return p
@@ -89,9 +89,9 @@ a = "ReferralTrialStore", (s = "displayName") in(r = M) ? Object.defineProperty(
       userTrialOfferId: t,
       recipientId: n
     } = e;
-    if (!S && (0, _.fetchReferralsRemaining)(), !f.has(n) && (0, _.checkRecipientEligibility)(n), !h.has(t)) {
+    if (!S && (0, _.fetchReferralsRemaining)(), !f.has(n) && (0, _.checkRecipientEligibility)(n), !A.has(t)) {
       var i;
-      i = t, h.add(i), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
+      i = t, A.add(i), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
     }
   },
   BILLING_REFERRALS_REMAINING_FETCH_START: function(e) {
@@ -138,13 +138,13 @@ a = "ReferralTrialStore", (s = "displayName") in(r = M) ? Object.defineProperty(
     let {
       userTrialOffer: t
     } = e;
-    null != t && (h.delete(t.id), A.add(t.id), m[t.id] = t)
+    null != t && (A.delete(t.id), h.add(t.id), m[t.id] = t)
   },
   BILLING_REFERRAL_RESOLVE_FAIL: function(e) {
     let {
       userTrialOfferId: t
     } = e;
-    h.delete(t), A.add(t)
+    A.delete(t), h.add(t)
   },
   REFERRALS_FETCH_ELIGIBLE_USER_START: function() {
     R = !0
@@ -168,6 +168,6 @@ a = "ReferralTrialStore", (s = "displayName") in(r = M) ? Object.defineProperty(
   },
   LOAD_MESSAGES_AROUND_SUCCESS: D,
   LOGOUT: function() {
-    E = null, I = {}, T = [], f = new Set, S = !1, h = new Set, A = new Set, m = {}, N = 0, O = null, p = [], R = !1, C = 0
+    E = null, I = {}, T = [], f = new Set, S = !1, A = new Set, h = new Set, m = {}, N = 0, O = null, p = [], R = !1, C = 0
   }
 })

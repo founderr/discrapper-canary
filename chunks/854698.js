@@ -79,8 +79,8 @@ let c = 365,
   T = [a.RRule.MO.weekday, a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday, a.RRule.FR.weekday],
   f = [a.RRule.SU.weekday, a.RRule.MO.weekday, a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday],
   S = [a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday, a.RRule.FR.weekday, a.RRule.SA.weekday],
-  h = [a.RRule.SU.weekday, a.RRule.MO.weekday, a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday, a.RRule.FR.weekday, a.RRule.SA.weekday],
-  A = new Set([0, 6]);
+  A = [a.RRule.SU.weekday, a.RRule.MO.weekday, a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday, a.RRule.FR.weekday, a.RRule.SA.weekday],
+  h = new Set([0, 6]);
 
 function m(e) {
   let t = e.toDate(),
@@ -114,7 +114,7 @@ function m(e) {
         })
       })
     }];
-  return !A.has(t.getDay()) && r.push({
+  return !h.has(t.getDay()) && r.push({
     value: u.RecurrenceOptions.WEEKDAY_ONLY,
     label: _.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS
   }), r
@@ -143,7 +143,7 @@ function R(e, t, n) {
 }
 
 function C(e) {
-  return new a.Weekday(h[e])
+  return new a.Weekday(A[e])
 }
 
 function g(e, t) {

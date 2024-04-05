@@ -18,7 +18,7 @@ var i, r, s = n("735250"),
   f = n("215569"),
   S = n("608675");
 
-function h(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -26,7 +26,7 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = {
+let h = {
     friction: 13,
     tension: 240,
     duration: 150
@@ -78,7 +78,7 @@ class R extends a.Component {
     })
   }
   constructor(...e) {
-    super(...e), h(this, "timeoutId", void 0)
+    super(...e), A(this, "timeoutId", void 0)
   }
 }
 
@@ -160,7 +160,7 @@ class g extends(r = a.Component) {
     t && !e.selected ? null == r || r.update({
       spring: 1,
       immediate: !1,
-      config: A
+      config: h
     }).start() : !t && e.selected && (null == r || r.update({
       spring: 0,
       immediate: !1,
@@ -235,14 +235,14 @@ class g extends(r = a.Component) {
       maskId: _,
       lowerBadgeMask: E,
       upperBadgeMask: T,
-      focused: h,
-      hasRenderedBadge: A,
+      focused: A,
+      hasRenderedBadge: h,
       renderComplex: m
     } = this.state;
     if (!m) return (0, s.jsx)("div", {
       className: l()(t, {
         [S.wrapperSimple]: !0,
-        [S.simpleFocused]: h
+        [S.simpleFocused]: A
       }),
       style: o,
       onFocus: this.handleFocus,
@@ -288,7 +288,7 @@ class g extends(r = a.Component) {
           }), (0, s.jsx)(c.animated.path, {
             d: this.getPathInterpolation(),
             id: p
-          }), A ? (0, s.jsx)(c.animated.rect, {
+          }), h ? (0, s.jsx)(c.animated.rect, {
             id: N,
             x: 28,
             y: -4,
@@ -297,7 +297,7 @@ class g extends(r = a.Component) {
             rx: 12,
             ry: 12,
             transform: this.getBadgePositionInterpolation(T, -1)
-          }) : null, A ? (0, s.jsx)(c.animated.rect, {
+          }) : null, h ? (0, s.jsx)(c.animated.rect, {
             id: O,
             x: 48 - (r + 8) + 4,
             y: 28,
@@ -323,7 +323,7 @@ class g extends(r = a.Component) {
             className: l()({
               [S.isHighlighted]: d
             })
-          }), A ? (0, s.jsxs)(s.Fragment, {
+          }), h ? (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)("use", {
               href: "#".concat(N),
               fill: "black"
@@ -332,7 +332,7 @@ class g extends(r = a.Component) {
               fill: "black"
             })]
           }) : null]
-        }), A ? (0, s.jsxs)("mask", {
+        }), h ? (0, s.jsxs)("mask", {
           id: C,
           children: [(0, s.jsx)("rect", {
             width: "150%",
@@ -347,7 +347,7 @@ class g extends(r = a.Component) {
             href: "#".concat(O),
             fill: "black"
           })]
-        }) : null, h ? (0, s.jsxs)(a.Fragment, {
+        }) : null, A ? (0, s.jsxs)(a.Fragment, {
           children: [(0, s.jsx)("g", {
             className: S.focusStroke,
             mask: "url(#".concat(C, ")"),
@@ -392,27 +392,27 @@ class g extends(r = a.Component) {
     }, "wrapper")
   }
   constructor(...e) {
-    super(...e), h(this, "timeout", new T.Timeout), h(this, "state", {
+    super(...e), A(this, "timeout", new T.Timeout), A(this, "state", {
       renderComplex: !1,
       hasRenderedBadge: !1,
       maskId: (0, E.v4)(),
       focused: !1
-    }), h(this, "handleTimeout", () => {
+    }), A(this, "handleTimeout", () => {
       this.timeout.stop(), this.setState({
         renderComplex: !1
       })
-    }), h(this, "handleFocus", () => {
+    }), A(this, "handleFocus", () => {
       this.setState({
         focused: !0
       })
-    }), h(this, "handleBlur", () => {
+    }), A(this, "handleBlur", () => {
       this.setState({
         focused: !1
       })
     })
   }
 }
-h(g, "defaultProps", {
+A(g, "defaultProps", {
   selected: !1,
   lowerBadgeWidth: 16,
   highlight: !1

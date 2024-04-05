@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("28546"),
   f = n("691251"),
   S = n("98528"),
-  h = n("551058"),
-  A = n("695346"),
+  A = n("551058"),
+  h = n("695346"),
   m = n("430824"),
   N = n("594174"),
   O = n("695464"),
@@ -146,7 +146,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       channel: L,
       currentUser: b
     }), [j, W] = r.useState(!1), K = r.useCallback(e => {
-      A.StickerPickerCollapsedSections.updateSetting(Array.from(e))
+      h.StickerPickerCollapsedSections.updateSetting(Array.from(e))
     }, []), z = r.useCallback(e => {
       let t = f[e];
       return null != t ? (0, i.jsx)(G.default, {
@@ -193,7 +193,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           children: [r ? (0, i.jsx)("div", {
             className: F.divider,
             children: (0, i.jsx)(l.FormDivider, {})
-          }) : null, (0, i.jsx)(h.default, {
+          }) : null, (0, i.jsx)(A.default, {
             className: F.packHeader,
             "aria-label": V.default.Messages.STICKERS_YOU_MIGHT_LIKE_A11Y,
             children: V.default.Messages.STICKERS_YOU_MIGHT_LIKE
@@ -202,7 +202,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       }
       switch (n.type) {
         case M.StickerCategoryTypes.FAVORITE:
-          return (0, i.jsx)(h.default, {
+          return (0, i.jsx)(A.default, {
             className: F.packHeader,
             "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
               categoryName: n.name
@@ -218,7 +218,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             children: n.name
           }, "header-".concat(n.id));
         case M.StickerCategoryTypes.RECENT:
-          return (0, i.jsx)(h.default, {
+          return (0, i.jsx)(A.default, {
             className: F.packHeader,
             "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
               categoryName: n.name
@@ -234,7 +234,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         case M.StickerCategoryTypes.EMPTY_GUILD_UPSELL: {
           let e = m.default.getGuild(n.id);
           if (null == e) return null;
-          return (0, i.jsx)(h.default, {
+          return (0, i.jsx)(A.default, {
             className: F.packHeader,
             "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
               categoryName: e.name
@@ -252,7 +252,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         case M.StickerCategoryTypes.PACK: {
           let e = v.default.getStickerPack(n.id);
           if (null == e) return null;
-          return (0, i.jsx)(h.default, {
+          return (0, i.jsx)(A.default, {
             className: F.packHeader,
             "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
               categoryName: e.name
@@ -309,8 +309,8 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       getStickerItemProps: d,
       getStickerRowProps: E,
       gutterWidth: f,
-      isUsingKeyboardNavigation: h,
-      onSelectSticker: A,
+      isUsingKeyboardNavigation: A,
+      onSelectSticker: h,
       rowCount: m,
       rowCountBySection: N,
       stickersCategories: p,
@@ -331,8 +331,8 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       stickersCategories: p,
       stickersGrid: R,
       isScrolling: g,
-      isUsingKeyboardNavigation: h,
-      onSelectSticker: A,
+      isUsingKeyboardNavigation: A,
+      onSelectSticker: h,
       getStickerItemProps: d,
       getStickerRowProps: E,
       gutterWidth: f,

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return i
+    return u
   }
 });
 var E = s("735250");
@@ -11,14 +11,14 @@ var _ = s("44315"),
   n = s("981631"),
   T = s("689938");
 
-function i(e) {
+function u(e) {
   let {
     className: t,
     color: s = (0, _.getColor)(n.Color.BRAND_500),
-    ...i
+    ...u
   } = e;
   return (0, E.jsx)(a.TextBadge, {
-    ...i,
+    ...u,
     text: T.default.Messages.ALPHA,
     color: s,
     className: t

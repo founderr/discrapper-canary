@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return V
   },
   formatIntervalDuration: function() {
-    return eA
+    return eh
   },
   formatTrialCtaIntervalDuration: function() {
-    return eh
+    return eA
   },
   formatTrialOfferIntervalDuration: function() {
     return eS
@@ -154,8 +154,8 @@ var _ = n("710845"),
   T = n("594174"),
   f = n("351402"),
   S = n("853872"),
-  h = n("509545"),
-  A = n("78839"),
+  A = n("509545"),
+  h = n("78839"),
   m = n("122289"),
   N = n("424218"),
   O = n("358085"),
@@ -200,7 +200,7 @@ function B(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     r = null !== (t = S.default.defaultPaymentSourceId) && void 0 !== t ? t : void 0,
-    s = A.default.getPremiumTypeSubscription();
+    s = h.default.getPremiumTypeSubscription();
   return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), k(e, n, i, {
     paymentSourceId: r
   })
@@ -214,7 +214,7 @@ function k(e) {
       paymentSourceId: r,
       currency: s
     } = i;
-  if (null != h.default.get(e)) {
+  if (null != A.default.get(e)) {
     let i = L.PriceSetAssignmentPurchaseTypes.DEFAULT;
     n ? i = L.PriceSetAssignmentPurchaseTypes.GIFT : t && (i = L.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_1);
     let a = function(e) {
@@ -269,7 +269,7 @@ function V(e) {
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
     purchaseType: L.PriceSetAssignmentPurchaseTypes.DEFAULT
   }, i = function(e, t) {
-    let n = h.default.get(e);
+    let n = A.default.get(e);
     if (null == n) {
       let n = Error("Plan not found");
       throw (0, m.captureBillingException)(n, {
@@ -512,8 +512,8 @@ function Q(e) {
     includePremiumGuilds: I,
     hasDiscountApplied: f,
     activeDiscountInfo: S,
-    renewalInvoicePreview: h
-  } = e, A = C.default.formatPriceString(C.default.getDefaultPrice(v.SubscriptionPlans.PREMIUM_MONTH_TIER_2), v.SubscriptionIntervalTypes.MONTH), m = ec(_) || null == _.paymentSourceId && !_.isPurchasedExternally && !(null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), N = null != E, O = _.status === L.SubscriptionStatusTypes.UNPAID && null !== _.latestInvoice && (null === (n = _.latestInvoice) || void 0 === n ? void 0 : n.status) === L.InvoiceStatusTypes.OPEN, p = m ? L.SubscriptionStatusTypes.CANCELED : O ? L.SubscriptionStatusTypes.UNPAID : _.status, R = null === (s = null !== (r = null == h ? void 0 : h.taxInclusive) && void 0 !== r ? r : null === (i = _.latestInvoice) || void 0 === i ? void 0 : i.taxInclusive) || void 0 === s || s, g = v.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (I ? et(_.additionalPlans) : 0);
+    renewalInvoicePreview: A
+  } = e, h = C.default.formatPriceString(C.default.getDefaultPrice(v.SubscriptionPlans.PREMIUM_MONTH_TIER_2), v.SubscriptionIntervalTypes.MONTH), m = ec(_) || null == _.paymentSourceId && !_.isPurchasedExternally && !(null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), N = null != E, O = _.status === L.SubscriptionStatusTypes.UNPAID && null !== _.latestInvoice && (null === (n = _.latestInvoice) || void 0 === n ? void 0 : n.status) === L.InvoiceStatusTypes.OPEN, p = m ? L.SubscriptionStatusTypes.CANCELED : O ? L.SubscriptionStatusTypes.UNPAID : _.status, R = null === (s = null !== (r = null == A ? void 0 : A.taxInclusive) && void 0 !== r ? r : null === (i = _.latestInvoice) || void 0 === i ? void 0 : i.taxInclusive) || void 0 === s || s, g = v.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (I ? et(_.additionalPlans) : 0);
   switch (c) {
     case v.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
     case v.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
@@ -635,11 +635,11 @@ function Q(e) {
         default:
           return f ? R ? y.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
             percent: null !== (a = null == S ? void 0 : S.percentage) && void 0 !== a ? a : v.DISCOUNT_PERCENTAGE_FALLBACK,
-            regularPrice: A,
+            regularPrice: h,
             numMonths: null !== (o = null == S ? void 0 : S.duration) && void 0 !== o ? o : v.DISCOUNT_DURATION_FALLBACK
           }) : y.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC_TAX_EXCLUSIVE.format({
             percent: null !== (l = null == S ? void 0 : S.percentage) && void 0 !== l ? l : v.DISCOUNT_PERCENTAGE_FALLBACK,
-            regularPrice: A,
+            regularPrice: h,
             numMonths: null !== (u = null == S ? void 0 : S.duration) && void 0 !== u ? u : v.DISCOUNT_DURATION_FALLBACK
           }) : N ? R ? y.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
             price: E,
@@ -664,7 +664,7 @@ function q(e) {
     includePremiumGuilds: r = !1,
     hasDiscountApplied: s = !1,
     activeDiscountInfo: a
-  } = e, o = h.default.get(i);
+  } = e, o = A.default.get(i);
   return l()(null != o, "Missing plan"), Q({
     subscription: n,
     planId: o.id,
@@ -776,7 +776,7 @@ function ee(e) {
 }
 
 function et(e) {
-  let t = h.default.getPlanIdsForSkus([ey(v.PremiumSubscriptionSKUs.GUILD)]);
+  let t = A.default.getPlanIdsForSkus([ey(v.PremiumSubscriptionSKUs.GUILD)]);
   l()(null != t, "Missing guildSubscriptionPlanIds");
   let n = e.find(e => {
     let {
@@ -864,7 +864,7 @@ function eu(e) {
   } = e, {
     planId: u,
     additionalPlans: d
-  } = r, _ = h.default.get(u);
+  } = r, _ = A.default.get(u);
   l()(null != _, "Missing plan");
   let c = et(d),
     E = eI(r.planId, r.paymentSourceId, r.currency, s).amount * c;
@@ -936,7 +936,7 @@ function eI(e, t, n, i) {
       country: f.default.ipCountryCodeWithFallback,
       currency: n
     },
-    s = h.default.get(e);
+    s = A.default.get(e);
   if (null == s) {
     let t = Error("Unsupported plan");
     throw (0, m.captureBillingException)(t, {
@@ -945,7 +945,7 @@ function eI(e, t, n, i) {
       }
     }), t
   }
-  let a = h.default.getForSkuAndInterval(ey(v.PremiumSubscriptionSKUs.GUILD), s.interval, s.intervalCount);
+  let a = A.default.getForSkuAndInterval(ey(v.PremiumSubscriptionSKUs.GUILD), s.interval, s.intervalCount);
   if (null == a) {
     let t = Error("Unsupported plan");
     throw (0, m.captureBillingException)(t, {
@@ -1011,7 +1011,7 @@ function eT(e, t, n) {
 
 function ef(e) {
   let t = e.invoiceItems[0].subscriptionPlanId,
-    n = h.default.get(t);
+    n = A.default.get(t);
   return l()(null != n, "Missing subscriptionPlan"), {
     intervalType: n.interval,
     intervalCount: n.intervalCount
@@ -1053,7 +1053,7 @@ function eS(e) {
   }
 }
 
-function eh(e) {
+function eA(e) {
   let {
     intervalType: t = v.SubscriptionIntervalTypes.MONTH,
     intervalCount: n = 1
@@ -1079,7 +1079,7 @@ function eh(e) {
   }
 }
 
-function eA(e) {
+function eh(e) {
   let {
     intervalType: t = v.SubscriptionIntervalTypes.MONTH,
     intervalCount: n = 1,
@@ -1179,12 +1179,12 @@ function eL(e) {
   var t;
   let n = null !== (t = e.find(e => !("id" in e))) && void 0 !== t ? t : e.find(e => v.PREMIUM_PLANS.has(e.planId));
   if (null != n) {
-    let t = h.default.get(n.planId);
+    let t = A.default.get(n.planId);
     l()(null != t, "Missing plan"), e = e.map(e => {
       if (e === n) return e;
-      let i = h.default.get(e.planId);
+      let i = A.default.get(e.planId);
       l()(null != i, "Missing plan");
-      let r = h.default.getForSkuAndInterval(i.skuId, t.interval, t.intervalCount);
+      let r = A.default.getForSkuAndInterval(i.skuId, t.interval, t.intervalCount);
       return l()(null != r, "Missing planForInterval"), {
         ...e,
         planId: r.id

@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("270144"),
   f = n("171246"),
   S = n("689011"),
-  h = n("714441"),
-  A = n("981631"),
+  A = n("714441"),
+  h = n("981631"),
   m = n("689938");
 t.default = e => {
   var t;
@@ -67,7 +67,7 @@ t.default = e => {
       let e = () => {
         (0, c.openApplicationPaymentModal)({
           activeSubscription: w,
-          analyticsSubscriptionType: A.SubscriptionTypes.APPLICATION,
+          analyticsSubscriptionType: h.SubscriptionTypes.APPLICATION,
           analyticsLocations: G,
           analyticsLocation: p,
           renderHeader: (e, t, n) => (0, i.jsx)(S.PurchaseHeader, {
@@ -85,7 +85,7 @@ t.default = e => {
           forcesTransitionToGuild: g
         })
       };
-      !j && F ? (0, h.confirmNoSharedServerSubscribeWarningModal)({
+      !j && F ? (0, A.confirmNoSharedServerSubscribeWarningModal)({
         applicationName: U.name,
         onConfirm: e,
         onCancel: () => {}

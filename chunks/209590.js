@@ -10,7 +10,7 @@ let I = "hideSuppressWarning",
   T = !1,
   f = !0,
   S = !1;
-class h extends(s = u.default.Store) {
+class A extends(s = u.default.Store) {
   initialize() {
     S = d.Storage.get(I) || S
   }
@@ -25,12 +25,12 @@ class h extends(s = u.default.Store) {
     return !(null === (e = c.default.getChannel(r)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !f
   }
 }
-l = "PermissionSpeakStore", (o = "displayName") in(a = h) ? Object.defineProperty(a, o, {
+l = "PermissionSpeakStore", (o = "displayName") in(a = A) ? Object.defineProperty(a, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new h(_.default, {
+}) : a[o] = l, t.default = new A(_.default, {
   CONNECTION_OPEN: function(e) {
     i = e.sessionId, T = !1
   },

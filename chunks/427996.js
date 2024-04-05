@@ -10,8 +10,8 @@ var a = l("399606"),
   n = l("481060"),
   s = l("6048"),
   r = l("337682"),
-  c = l("115130"),
-  d = l("689938"),
+  d = l("115130"),
+  c = l("689938"),
   o = l("757879");
 
 function u() {
@@ -19,10 +19,10 @@ function u() {
     activityUrlOverride: e,
     useActivityUrlOverride: t,
     filter: l
-  } = (0, a.useStateFromStoresObject)([c.default], () => ({
-    activityUrlOverride: c.default.getActivityUrlOverride(),
-    useActivityUrlOverride: c.default.getUseActivityUrlOverride(),
-    filter: c.default.getFilter()
+  } = (0, a.useStateFromStoresObject)([d.default], () => ({
+    activityUrlOverride: d.default.getActivityUrlOverride(),
+    useActivityUrlOverride: d.default.getUseActivityUrlOverride(),
+    filter: d.default.getFilter()
   }), []);
   return (0, i.jsxs)("div", {
     className: o.container,
@@ -33,11 +33,11 @@ function u() {
       onClick: r.toggleUseActivityUrlOverride,
       children: (0, i.jsx)(n.Text, {
         variant: "text-md/semibold",
-        children: d.default.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
+        children: c.default.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
       })
     }), (0, i.jsx)(n.FormItem, {
       className: o.__invalid_urlOverride,
-      title: d.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
+      title: c.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
       children: (0, i.jsx)(n.TextInput, {
         disabled: !t,
         value: null != e ? e : void 0,

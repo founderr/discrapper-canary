@@ -41,8 +41,8 @@ let S = (() => {
       }
     }
   })(),
-  h = "DeveloperOptionsStore",
-  A = {
+  A = "DeveloperOptionsStore",
+  h = {
     trace: !1,
     canary: !1,
     logGatewayEvents: !1,
@@ -56,21 +56,21 @@ let S = (() => {
     appDirectoryIncludesInactiveCollections: !1
   },
   m = {
-    ...A
+    ...h
   };
 
 function N(e) {
   m = {
-    ...A,
+    ...h,
     ...m,
     ...e
-  }, S.set(m.sourceMapsEnabled), _.Storage.set(h, m)
+  }, S.set(m.sourceMapsEnabled), _.Storage.set(A, m)
 }
 class O extends(i = u.default.Store) {
   initialize() {
-    let e = _.Storage.get(h);
+    let e = _.Storage.get(A);
     null != e && (m = {
-      ...A,
+      ...h,
       ...e
     })
   }
@@ -118,7 +118,7 @@ a = "DeveloperOptionsStore", (s = "displayName") in(r = O) ? Object.defineProper
   writable: !0
 }) : r[s] = a, t.default = new O(c.default, {
   LOGOUT: function(e) {
-    N(A)
+    N(h)
   },
   CONNECTION_OPEN: function(e) {
     var t;

@@ -15,9 +15,9 @@ var i = n("735250"),
   T = n("526761"),
   f = n("689938"),
   S = n("556777");
-let h = a.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
-  A = e => {
-    (0, u.markDismissibleContentAsDismissed)(h, {
+let A = a.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
+  h = e => {
+    (0, u.markDismissibleContentAsDismissed)(A, {
       dismissAction: e,
       forceTrack: !0
     })
@@ -29,8 +29,8 @@ t.default = e => {
   } = e, {
     analyticsLocations: a
   } = (0, l.default)(), u = (0, s.useStateFromStores)([c.default], () => c.default.getIsAccessibilityTooltipViewed());
-  return r.useEffect(() => u ? () => A(I.ContentDismissActionType.AUTO) : () => (0, _.handleProfileAccessibilityTooltipViewed)(), [u]), (0, i.jsx)(d.default, {
-    markAsDismissed: A,
+  return r.useEffect(() => u ? () => h(I.ContentDismissActionType.AUTO) : () => (0, _.handleProfileAccessibilityTooltipViewed)(), [u]), (0, i.jsx)(d.default, {
+    markAsDismissed: h,
     header: f.default.Messages.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP_TITLE,
     headerClassName: S.header,
     content: (0, i.jsx)("div", {

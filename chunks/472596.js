@@ -4,16 +4,16 @@ s.r(t), s.d(t, {
     return _
   },
   getSearchState: function() {
-    return N
+    return S
   },
   openMemberProfile: function() {
-    return o
+    return L
   },
   useContextMenuModerateRoles: function() {
-    return r
+    return o
   },
   useContextMenuModerateUser: function() {
-    return L
+    return r
   },
   useHighestRole: function() {
     return d
@@ -22,18 +22,18 @@ s.r(t), s.d(t, {
 var E, _, a = s("470079"),
   n = s("399606"),
   T = s("906732"),
-  i = s("171368"),
-  u = s("430824"),
+  u = s("171368"),
+  i = s("430824"),
   A = s("594174"),
   l = s("91047"),
   I = s("981631");
-let o = (e, t) => {
+let L = (e, t) => {
   let {
     guildId: s,
     userId: E,
     colorRoleId: _
   } = e;
-  (0, i.openUserProfileModal)({
+  (0, u.openUserProfileModal)({
     userId: E,
     guildId: s,
     sourceAnalyticsLocations: t,
@@ -45,7 +45,7 @@ let o = (e, t) => {
   })
 };
 
-function r(e, t, s) {
+function o(e, t, s) {
   let {
     analyticsLocations: E
   } = (0, T.default)();
@@ -61,7 +61,7 @@ function r(e, t, s) {
   }, [e, E, s, t])
 }
 
-function L(e, t, s) {
+function r(e, t, s) {
   let {
     analyticsLocations: E
   } = (0, T.default)();
@@ -79,14 +79,14 @@ function L(e, t, s) {
 }
 
 function d(e) {
-  return (0, n.useStateFromStores)([u.default], () => {
+  return (0, n.useStateFromStores)([i.default], () => {
     var t;
     if (null == e) return null;
-    let s = u.default.getGuild(e.guildId);
-    return null == s || null == e.highestRoleId ? null : null !== (t = u.default.getRole(s.id, e.highestRoleId)) && void 0 !== t ? t : null
+    let s = i.default.getGuild(e.guildId);
+    return null == s || null == e.highestRoleId ? null : null !== (t = i.default.getRole(s.id, e.highestRoleId)) && void 0 !== t ? t : null
   }, [e])
 }
 
-function N(e, t, s) {
+function S(e, t, s) {
   return t ? 0 : e ? 1 : s <= 0 ? 2 : 3
 }(E = _ || (_ = {}))[E.LOADING = 0] = "LOADING", E[E.SUCCESS_STILL_INDEXING = 1] = "SUCCESS_STILL_INDEXING", E[E.SUCCESS_EMPTY = 2] = "SUCCESS_EMPTY", E[E.SUCCESS_FULL = 3] = "SUCCESS_FULL"

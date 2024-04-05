@@ -16,9 +16,9 @@ let I = 26,
   T = {},
   f = {},
   S = {},
-  h = {};
+  A = {};
 
-function A(e) {
+function h(e) {
   let t = f[e];
   if (null == t) return;
   let n = c.default.fromTimestamp(Date.now() - 9e5),
@@ -34,7 +34,7 @@ function A(e) {
 function m(e, t, n, i) {
   T[e].add(t);
   let r = S[t];
-  (null == r || r + 3e5 > Date.now()) && A(t), null == f[t] && (f[t] = []), f[t].push({
+  (null == r || r + 3e5 > Date.now()) && h(t), null == f[t] && (f[t] = []), f[t].push({
     id: n,
     userId: i
   })
@@ -48,7 +48,7 @@ function N(e) {
 }
 class O extends(i = u.default.Store) {
   getActiveChannelsFetchStatus(e) {
-    return h[e]
+    return A[e]
   }
   getActiveChannelIds(e) {
     return T[e]
@@ -58,7 +58,7 @@ class O extends(i = u.default.Store) {
   }
   shouldFetch(e) {
     var t;
-    return null == T[e] && !(null === (t = h[e]) || void 0 === t ? void 0 : t.loading)
+    return null == T[e] && !(null === (t = A[e]) || void 0 === t ? void 0 : t.loading)
   }
 }
 a = "ActiveChannelsStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
@@ -77,7 +77,7 @@ a = "ActiveChannelsStore", (s = "displayName") in(r = O) ? Object.defineProperty
     if (null == i) return !1;
     i.forEach(e => {
       var t;
-      A(e), (null === (t = f[e]) || void 0 === t ? void 0 : t.length) === 0 && delete f[e]
+      h(e), (null === (t = f[e]) || void 0 === t ? void 0 : t.length) === 0 && delete f[e]
     });
     let r = l().chain(Array.from(i)).filter(e => e in f).sortBy(e => {
       var t, n;
@@ -112,7 +112,7 @@ a = "ActiveChannelsStore", (s = "displayName") in(r = O) ? Object.defineProperty
     let {
       guildId: t
     } = e;
-    h[t] = {
+    A[t] = {
       loading: !0,
       error: null,
       fetchedAt: Date.now()
@@ -123,7 +123,7 @@ a = "ActiveChannelsStore", (s = "displayName") in(r = O) ? Object.defineProperty
       guildId: t,
       channels: n
     } = e;
-    h[t] = {
+    A[t] = {
       loading: !1,
       error: null,
       fetchedAt: Date.now()
@@ -142,7 +142,7 @@ a = "ActiveChannelsStore", (s = "displayName") in(r = O) ? Object.defineProperty
       guildId: t,
       error: n
     } = e;
-    h[t] = {
+    A[t] = {
       loading: !1,
       error: n,
       fetchedAt: null

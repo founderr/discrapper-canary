@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return m
   },
   resetQuestDismissibilityStatus: function() {
-    return A
+    return h
   },
   resetQuestPreviewStatus: function() {
-    return h
+    return A
   },
   sendHeartbeat: function() {
     return _
@@ -227,7 +227,7 @@ async function S(e) {
     })
   }
 }
-async function h(e) {
+async function A(e) {
   try {
     let t = await i.HTTP.del({
       url: u.Endpoints.QUESTS_PREVIEW_STATUS(e),
@@ -245,7 +245,7 @@ async function h(e) {
     })
   }
 }
-async function A(e) {
+async function h(e) {
   try {
     let t = await i.HTTP.del({
       url: u.Endpoints.QUESTS_PREVIEW_DISMISSIBILITY(e),

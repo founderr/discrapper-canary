@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   ActivityActionOverlayButton: function() {
-    return c
+    return d
   }
 });
 var i = l("735250");
@@ -11,19 +11,19 @@ var a = l("481060"),
   s = l("689938"),
   r = l("893018");
 
-function c(e) {
+function d(e) {
   let {
     action: t,
     onClick: l
-  } = e, c = t === n.ActivityAction.JOIN ? s.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY : s.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY, d = t === n.ActivityAction.JOIN ? a.Button.Colors.PRIMARY : a.Button.Colors.RED;
+  } = e, d = t === n.ActivityAction.JOIN ? s.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY : s.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY, c = t === n.ActivityAction.JOIN ? a.Button.Colors.PRIMARY : a.Button.Colors.RED;
   return (0, i.jsx)("div", {
     className: r.activityOverlay,
     children: (0, i.jsx)(a.Button, {
       className: r.actionButton,
       onClick: l,
       size: a.Button.Sizes.MEDIUM,
-      color: d,
-      children: c
+      color: c,
+      children: d
     })
   })
 }

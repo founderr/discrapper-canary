@@ -25,7 +25,7 @@ let f = async e => {
     reaction: t,
     altText: n,
     ...i
-  } = e, r = await A(i);
+  } = e, r = await h(i);
   (0, _.sendReaction)({
     file: r,
     altText: n,
@@ -37,14 +37,14 @@ let f = async e => {
     reply: t,
     altText: n,
     ...i
-  } = e, r = await A(i);
+  } = e, r = await h(i);
   (0, _.sendReply)({
     file: r,
     altText: n,
     user: i.user,
     reply: t
   })
-}, h = e => {
+}, A = e => {
   var t;
   let {
     activity: i,
@@ -55,7 +55,7 @@ let f = async e => {
   } = (0, E.getProfileInfo)(s, "black"), o = "dark" === a, l = (0, E.getActivityPlatform)(i), {
     assets: _,
     application_id: c
-  } = i, T = (0, u.getAssetImage)(c, null == _ ? void 0 : _.large_image, 64), f = null == r ? void 0 : r.getIconURL(64), S = null != l ? o ? l.icon.darkPNG : l.icon.lightPNG : i.type === I.ActivityTypes.PLAYING ? o ? n("414575") : n("807612") : null, h = i.type === I.ActivityTypes.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, d.getEmojiUrl)({
+  } = i, T = (0, u.getAssetImage)(c, null == _ ? void 0 : _.large_image, 64), f = null == r ? void 0 : r.getIconURL(64), S = null != l ? o ? l.icon.darkPNG : l.icon.lightPNG : i.type === I.ActivityTypes.PLAYING ? o ? n("414575") : n("807612") : null, A = i.type === I.ActivityTypes.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, d.getEmojiUrl)({
     id: i.emoji.id,
     name: i.emoji.name,
     animated: !1
@@ -70,17 +70,17 @@ let f = async e => {
     ...null != f && {
       ApplicationImage: f
     },
-    ...null != h && {
-      HangStatus: h
+    ...null != A && {
+      HangStatus: A
     }
   }
-}, A = async e => {
+}, h = async e => {
   let {
     user: t,
     activity: n,
     application: u,
     stream: d
-  } = e, _ = await i.default.openPrivateChannel(t.id, !1, !1), E = h({
+  } = e, _ = await i.default.openPrivateChannel(t.id, !1, !1), E = A({
     activity: n,
     application: u,
     user: t

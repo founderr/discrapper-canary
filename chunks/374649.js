@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return N
   },
   useOneTimePurchaseInvoicePreview: function() {
-    return A
+    return h
   },
   useSubscriptionInvoicePreview: function() {
     return m
@@ -149,7 +149,7 @@ async function S(e) {
   return u.default.createInvoiceFromServer(i.body)
 }
 
-function h(e, t) {
+function A(e, t) {
   let {
     preventFetch: n = !1
   } = e, [r, s] = (0, i.useState)(null), [o, l] = (0, i.useState)(null), u = (0, a.useStateFromStores)([d.default], () => d.default.getSubscriptions());
@@ -170,9 +170,9 @@ function h(e, t) {
   }, [n, t, u]), [r, o]
 }
 
-function A(e) {
+function h(e) {
   let t = (0, i.useCallback)(() => f(e), [JSON.stringify(e)]);
-  return h(e, t)
+  return A(e, t)
 }
 
 function m(e) {
@@ -184,12 +184,12 @@ function m(e) {
     e = n
   }
   let t = (0, i.useCallback)(() => "subscriptionId" in e ? T(e) : "items" in e ? I(e) : null, [JSON.stringify(e)]);
-  return h(e, t)
+  return A(e, t)
 }
 
 function N(e) {
   let t = (0, i.useCallback)(() => S(e), [JSON.stringify(e)]);
-  return h(e, t)
+  return A(e, t)
 }
 
 function O(e) {

@@ -20,8 +20,8 @@ var r = n("990547"),
   T = n("465670"),
   f = n("687476"),
   S = n("761966"),
-  h = n("981631"),
-  A = n("176505"),
+  A = n("981631"),
+  h = n("176505"),
   m = n("689938"),
   N = n("352082");
 let O = () => {
@@ -91,7 +91,7 @@ function p(e) {
         size: 24
       }), (0, i.jsx)(S.default, {
         onClick: () => {
-          (0, c.transitionTo)(h.Routes.CHANNEL(n, A.StaticChannelRoute.ROLE_SUBSCRIPTIONS), void 0, void 0, p)
+          (0, c.transitionTo)(A.Routes.CHANNEL(n, h.StaticChannelRoute.ROLE_SUBSCRIPTIONS), void 0, void 0, p)
         },
         children: L
       })]

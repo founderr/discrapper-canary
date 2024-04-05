@@ -13,8 +13,8 @@ var a = n("493683"),
   T = n("77498"),
   f = n("944486"),
   S = n("885110"),
-  h = n("67212"),
-  A = n("770471"),
+  A = n("67212"),
+  h = n("770471"),
   m = n("757454"),
   N = n("158631"),
   O = n("981631");
@@ -25,11 +25,11 @@ class R extends u.default {
     if (null == e) return;
     let {
       canBroadcast: t
-    } = A.default.getCurrentConfig({
+    } = h.default.getCurrentConfig({
       location: "handle_running_games_change"
     }, {
       autoTrackExposure: !1
-    }), n = S.default.getBroadcast(), i = (0, h.getGameName)(e), r = null != T.default.getGameByName(i), s = (0, N.getIsBroadcastingToAnyone)();
+    }), n = S.default.getBroadcast(), i = (0, A.getGameName)(e), r = null != T.default.getGameByName(i), s = (0, N.getIsBroadcastingToAnyone)();
     if (!t || null != n || !c.BroadcastAutoBroadcast.getSetting() || !r || !s || null != p.find(t => t.pid === e.pid)) return;
     if (p = d.default.getRunningGames(), !(0, m.getCanStartBroadcast)()) return;
     let a = f.default.getVoiceChannelId();
@@ -42,7 +42,7 @@ class R extends u.default {
     let {
       streamKey: t
     } = e;
-    (0, h.startBroadcastForStream)(t, i)
+    (0, A.startBroadcastForStream)(t, i)
   }
   handleStreamStop(e) {
     let {
@@ -56,7 +56,7 @@ class R extends u.default {
     if (null == n || null == a || n !== E.default.getId()) return;
     let o = I.default.getChannel(a),
       l = null != o && o.isBroadcastChannel();
-    null != o && n === o.ownerId && l && (i = null, r = null, s = null, (0, h.stopBroadcast)())
+    null != o && n === o.ownerId && l && (i = null, r = null, s = null, (0, A.stopBroadcast)())
   }
   handleStartBroadcastStream(e) {
     let {
@@ -88,13 +88,13 @@ class R extends u.default {
     if (null == r || !r.isBroadcastChannel()) return;
     a.default.closePrivateChannel(t, i === t, !0);
     let s = S.default.getBroadcast();
-    null != s && r.id === s.channelId && (0, h.stopBroadcast)()
+    null != s && r.id === s.channelId && (0, A.stopBroadcast)()
   }
   handleChannelDelete(e) {
     let {
       channel: t
     } = e, n = S.default.getBroadcast();
-    null != n && t.id === n.channelId && (0, h.stopBroadcast)()
+    null != n && t.id === n.channelId && (0, A.stopBroadcast)()
   }
   handleMessageCreate(e) {
     let {

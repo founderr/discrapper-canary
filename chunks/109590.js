@@ -78,9 +78,9 @@ let S = new class e {
       T(this, "requested", void 0), this.requested = new f(() => new Set)
     }
   },
-  h = null;
+  A = null;
 
-function A(e, t) {
+function h(e, t) {
   if ((0, _.isForumActivityExperimentEnabled)(e)) {
     let {
       loaded: e,
@@ -113,7 +113,7 @@ function O(e, t) {
     loaded: n,
     message: i
   } = (0, s.useStateFromStoresObject)([E.default], () => E.default.getMessageState(t.id));
-  return null != e && A(t.guild_id, t.id) && C(e, t.id), {
+  return null != e && h(t.guild_id, t.id) && C(e, t.id), {
     loaded: n,
     mostRecentMessage: i
   }
@@ -127,8 +127,8 @@ function p(e, t) {
       loaded: s,
       firstMessage: a
     } = c.default.getMessage(t);
-    if (i = s, r = a, !i && null == r || A(e.guild_id, t)) S.request(e.id, t), n = !0
-  }), n && null == h && (h = setTimeout(g, 0))
+    if (i = s, r = a, !i && null == r || h(e.guild_id, t)) S.request(e.id, t), n = !0
+  }), n && null == A && (A = setTimeout(g, 0))
 }
 
 function R(e) {
@@ -146,7 +146,7 @@ async function g() {
   try {
     for (; S.hasNext();) await L(S.next())
   } finally {
-    h = null
+    A = null
   }
 }
 async function L(e) {

@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("451478"),
   f = n("151785"),
   S = n("768581"),
-  h = n("392552"),
-  A = n("543241"),
+  A = n("392552"),
+  h = n("543241"),
   m = n("199257"),
   N = n("880949"),
   O = n("784222"),
@@ -50,7 +50,7 @@ let L = e => {
       } = e,
       {
         enabled: P
-      } = h.default.useExperiment({
+      } = A.default.useExperiment({
         location: "EmojiPicker"
       }, {
         autoTrackExposure: !1
@@ -73,7 +73,7 @@ let L = e => {
       B = (0, s.useStateFromStores)([T.default], () => T.default.isFocused()),
       k = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion, []),
       V = E.AnimateEmoji.useSetting(),
-      F = (0, A.useIsFavoriteEmoji)(v, g(G) ? G : null),
+      F = (0, h.useIsFavoriteEmoji)(v, g(G) ? G : null),
       {
         newlyAddedEmojis: x
       } = (0, m.default)(v, M),
@@ -82,7 +82,7 @@ let L = e => {
     if (r.useEffect(() => {
         let e = Date.now();
         return () => {
-          Date.now() - e >= 250 && g(G) && Y !== p.EmojiSubCategory.NONE && (Y === p.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== G && G.type === l.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(G.guildId, x[0].id), null != U.source && (0, A.trackEmojiFocus)({
+          Date.now() - e >= 250 && g(G) && Y !== p.EmojiSubCategory.NONE && (Y === p.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== G && G.type === l.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(G.guildId, x[0].id), null != U.source && (0, h.trackEmojiFocus)({
             emoji: G,
             subCategory: Y,
             position: b.columnIndex + 1,

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   ActivityDirectoryFooter: function() {
-    return D
+    return y
   },
   default: function() {
     return j
@@ -12,8 +12,8 @@ var i = l("735250"),
   n = l("803997"),
   s = l.n(n),
   r = l("468194"),
-  c = l("442837"),
-  d = l("477690"),
+  d = l("442837"),
+  c = l("477690"),
   o = l("481060"),
   u = l("100527"),
   v = l("906732"),
@@ -28,9 +28,9 @@ var i = l("735250"),
   S = l("701488"),
   p = l("689938"),
   A = l("654659");
-let _ = (0, r.cssValueToNumber)(d.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
-  g = (0, r.cssValueToNumber)(d.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
-  N = (0, r.cssValueToNumber)(d.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
+let _ = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
+  g = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
+  N = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
 
 function j(e) {
   let {
@@ -38,17 +38,17 @@ function j(e) {
     guildId: l,
     locationObject: n,
     onClose: r,
-    onActivityItemVisible: d,
+    onActivityItemVisible: c,
     scrollerRef: S
-  } = e, [j, D] = a.useState(0), y = (0, E.default)({
+  } = e, [j, y] = a.useState(0), D = (0, E.default)({
     guildId: l,
     enableFilter: !0
-  }), M = (0, c.useStateFromStores)([h.default], () => h.default.getCurrentUser()), L = (0, c.useStateFromStores)([f.default], () => f.default.getGuild(l), [l]), {
+  }), M = (0, d.useStateFromStores)([h.default], () => h.default.getCurrentUser()), L = (0, d.useStateFromStores)([f.default], () => f.default.getGuild(l), [l]), {
     analyticsLocations: V
   } = (0, v.default)(u.default.ACTIVITY_DIRECTORY), R = (0, T.default)(null == t ? void 0 : t.id), {
-    isDeveloperActivityShelfEnabled: O,
-    filter: b
-  } = (0, c.useStateFromStoresObject)([I.default], () => ({
+    isDeveloperActivityShelfEnabled: b,
+    filter: O
+  } = (0, d.useStateFromStoresObject)([I.default], () => ({
     filter: I.default.getFilter(),
     isDeveloperActivityShelfEnabled: I.default.getIsEnabled()
   }));
@@ -60,7 +60,7 @@ function j(e) {
 
       function t() {
         var e, t;
-        D(null !== (t = null === (e = S.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
+        y(null !== (t = null === (e = S.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
       }
     }, [S]), a.useEffect(() => {
       (R || null != l) && (0, m.fetchShelf)({
@@ -68,7 +68,7 @@ function j(e) {
         force: !0
       })
     }, [l, R]), (0, C.useFetchDeveloperActivityShelfItems)(), null == L && !R || null == M) return null;
-  let H = y.length > 0;
+  let H = D.length > 0;
   return (0, i.jsx)(v.AnalyticsLocationProvider, {
     value: V,
     children: (0, i.jsxs)("div", {
@@ -84,7 +84,7 @@ function j(e) {
             height: (e => {
               let t = 1 === e.length;
               return _ + Math.ceil(e.length / 2) * (t ? N : g)
-            })(y)
+            })(D)
           }
         })
       }) : null, (0, i.jsx)(o.Scroller, {
@@ -94,24 +94,24 @@ function j(e) {
           className: A.scrollSection,
           children: (0, i.jsx)("div", {
             className: s()(A.shelf),
-            children: y.map(e => (0, i.jsx)(x.default, {
-              large: 1 === y.length,
+            children: D.map(e => (0, i.jsx)(x.default, {
+              large: 1 === D.length,
               activityItem: e,
               channel: t,
               guildId: l,
               locationObject: n,
-              onActivityItemVisible: d,
+              onActivityItemVisible: c,
               onActivityItemSelected: () => {
                 var t;
                 t = e.application.id, r()
               }
             }, "activity-shelf-item-".concat(e.application.id)))
           })
-        }) : O && b.length > 0 ? (0, i.jsx)(o.Text, {
+        }) : b && O.length > 0 ? (0, i.jsx)(o.Text, {
           variant: "text-md/normal",
           className: A.filterError,
           children: p.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({
-            filter: b
+            filter: O
           })
         }) : (0, i.jsx)("div", {
           className: A.spinnerContainer,
@@ -122,7 +122,7 @@ function j(e) {
   })
 }
 
-function D() {
+function y() {
   return (0, i.jsx)(o.Text, {
     variant: "text-sm/normal",
     children: p.default.Messages.EMBEDDED_ACTIVITIES_FEEDBACK_SURVEY.format({

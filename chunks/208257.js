@@ -13,13 +13,13 @@ var a = s("735250"),
   I = s("985159"),
   f = s("328977"),
   T = s("412222"),
-  _ = s("223312"),
-  R = s("571728"),
+  R = s("223312"),
+  _ = s("571728"),
   S = s("572940"),
   N = s("80487"),
-  A = s("146463"),
-  M = s("981631"),
-  m = s("689938"),
+  m = s("146463"),
+  A = s("981631"),
+  M = s("689938"),
   h = s("589247");
 
 function p(e) {
@@ -32,7 +32,7 @@ function p(e) {
       className: h.previewContainer,
       children: [(0, a.jsx)(n.Heading, {
         variant: "heading-lg/bold",
-        children: m.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP
+        children: M.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP
       }), (0, a.jsxs)(n.Button, {
         color: n.Button.Colors.TRANSPARENT,
         onClick: () => {
@@ -48,15 +48,15 @@ function p(e) {
           })
         },
         size: n.ButtonSizes.SMALL,
-        "aria-label": m.default.Messages.MEMBER_VERIFICATION_PREVIEW_APPLICATION,
+        "aria-label": M.default.Messages.MEMBER_VERIFICATION_PREVIEW_APPLICATION,
         innerClassName: h.previewButton,
-        children: [(0, a.jsx)(o.default, {}), m.default.Messages.MEMBER_VERIFICATION_PREVIEW_APPLICATION]
+        children: [(0, a.jsx)(o.default, {}), M.default.Messages.MEMBER_VERIFICATION_PREVIEW_APPLICATION]
       })]
     }), (0, a.jsx)(n.Text, {
       className: h.description,
       variant: "text-sm/medium",
       color: "header-secondary",
-      children: m.default.Messages.CLAN_APPLICATION_SETUP_HEADER.format({
+      children: M.default.Messages.CLAN_APPLICATION_SETUP_HEADER.format({
         guildName: t.name
       })
     })]
@@ -73,11 +73,11 @@ function C(e) {
     guildId: s
   }), P = (0, f.useSelectedGuildJoinRequest)({
     guildId: s
-  }), j = (0, R.useSubmittedGuildJoinRequestTotal)({
+  }), j = (0, _.useSubmittedGuildJoinRequestTotal)({
     guildId: s
   }), {
     guildJoinRequests: v
-  } = (0, _.useSortedMemberApplications)({
+  } = (0, R.useSortedMemberApplications)({
     guildId: s,
     applicationStatus: "REVIEW_APPLICATION" === C ? c.GuildJoinRequestApplicationStatuses.SUBMITTED : C,
     sortOrder: g
@@ -103,14 +103,14 @@ function C(e) {
     b = l.useCallback(async e => {
       if (C !== e) x(e), d.default.setSelectedGuildJoinRequest(s, null), "REVIEW_APPLICATION" !== e && (d.default.setSelectedApplicationTab(s, e), await G(g, e))
     }, [C, g, s, G]),
-    B = l.useCallback(async () => {
+    F = l.useCallback(async () => {
       var e;
       if ("REVIEW_APPLICATION" === C) return;
       let t = null === (e = o.current) || void 0 === e ? void 0 : e.getScrollerState();
       if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && await G(g, C)
     }, [C, g, G]),
-    J = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(s)),
-    V = null !== (t = null == J ? void 0 : J.hasFeature(M.GuildFeatures.CLAN)) && void 0 !== t && t;
+    B = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(s)),
+    V = null !== (t = null == B ? void 0 : B.hasFeature(A.GuildFeatures.CLAN)) && void 0 !== t && t;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(N.default, {
       currentTab: C,
@@ -119,13 +119,13 @@ function C(e) {
       showSetupTab: V
     }), (0, a.jsx)("div", {
       className: h.content,
-      children: "REVIEW_APPLICATION" === C ? null != J ? (0, a.jsx)(n.ScrollerThin, {
+      children: "REVIEW_APPLICATION" === C ? null != B ? (0, a.jsx)(n.ScrollerThin, {
         children: (0, a.jsxs)("div", {
           className: h.scrollerContent,
           children: [(0, a.jsx)(p, {
-            guild: J
+            guild: B
           }), (0, a.jsx)(r.default, {
-            guild: J,
+            guild: B,
             isInitiallyExpanded: !0,
             showHeader: !1,
             disableAnimation: !0
@@ -143,12 +143,12 @@ function C(e) {
           className: h.description,
           variant: "text-xs/normal",
           color: "header-secondary",
-          children: m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_LIST_DESCRIPTION
-        }), (0, a.jsx)(A.default, {
+          children: M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_LIST_DESCRIPTION
+        }), (0, a.jsx)(m.default, {
           applicationStatus: C,
           guildJoinRequests: v,
           guildId: s,
-          onScroll: B,
+          onScroll: F,
           listRef: o
         })]
       })

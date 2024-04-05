@@ -11,19 +11,19 @@ let c = {},
   T = null,
   f = null,
   S = "lastChangeLogId",
-  h = "lastChangeLogDate",
-  A = null,
+  A = "lastChangeLogDate",
+  h = null,
   m = null,
   N = new Set;
 class O extends(i = o.default.Store) {
   initialize() {
     var e;
-    this.waitFor(d.default), this.syncWith([d.default], () => !0), A = null !== (e = l.Storage.get(S)) && void 0 !== e ? e : null;
-    let t = l.Storage.get(h);
+    this.waitFor(d.default), this.syncWith([d.default], () => !0), h = null !== (e = l.Storage.get(S)) && void 0 !== e ? e : null;
+    let t = l.Storage.get(A);
     if (null != t) try {
       m = new Date(t)
     } catch {
-      l.Storage.remove(h)
+      l.Storage.remove(A)
     }
   }
   getChangelog(e, t) {
@@ -47,7 +47,7 @@ class O extends(i = o.default.Store) {
     return T
   }
   lastSeenChangelogId() {
-    return A
+    return h
   }
   lastSeenChangelogDate() {
     return m
@@ -56,7 +56,7 @@ class O extends(i = o.default.Store) {
     return {
       changelogConfig: f,
       loadedChangelogs: E,
-      lastSeenChangelogId: A,
+      lastSeenChangelogId: h,
       lastSeenChangelogDate: m
     }
   }
@@ -124,6 +124,6 @@ a = "ChangelogStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s
       changelogId: t,
       changelogDate: n
     } = e;
-    A = null != t ? t : null, m = new Date(n), l.Storage.set(S, t), l.Storage.set(h, n)
+    h = null != t ? t : null, m = new Date(n), l.Storage.set(S, t), l.Storage.set(A, n)
   }
 })

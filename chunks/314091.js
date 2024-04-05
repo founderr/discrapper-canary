@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getActivityAltText: function() {
-    return h
+    return A
   },
   getActivityPlatform: function() {
     return f
@@ -55,7 +55,7 @@ let c = e => "".concat(e).length < 13 ? 1e3 * e : e,
       theme: d === t ? "dark" : o
     }
   },
-  h = (e, t) => (0, s.default)(t) ? _.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
+  A = (e, t) => (0, s.default)(t) ? _.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
     username: e.username,
     song: t.details,
     artist: t.state

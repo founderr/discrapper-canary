@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("419922"),
   f = n("689938"),
   S = n("261051");
-let h = (0, _.cssValueToNumber)(s.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-  A = (0, _.cssValueToNumber)(s.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+let A = (0, _.cssValueToNumber)(s.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+  h = (0, _.cssValueToNumber)(s.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
   m = e => {
     let t = null,
       n = null;
@@ -32,7 +32,7 @@ let h = (0, _.cssValueToNumber)(s.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION
       null != r && (t = f.default.Messages.STICKER_FROM_SOURCE.format({
         source: r.name
       }), n = (0, i.jsx)(T.default, {
-        size: A,
+        size: h,
         sticker: (0, I.getStickerPackPreviewSticker)(r),
         disableAnimation: !0
       }))
@@ -62,7 +62,7 @@ let h = (0, _.cssValueToNumber)(s.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION
       title: u
     } = m(s), _ = (0, I.isStandardSticker)(s) || (0, I.isGuildSticker)(s) ? (0, i.jsx)(T.default, {
       isInteracting: !0,
-      size: h,
+      size: A,
       sticker: s,
       disableAnimation: !0
     }) : (0, i.jsx)("div", {
