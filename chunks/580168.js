@@ -40,10 +40,8 @@ function S(e) {
   var t;
   let {
     quest: n,
-    isExpanded: l,
-    isExpansionAnimationComplete: r,
-    useReducedMotion: o
-  } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), C = s.useRef(null), [S, I] = s.useState(!1), p = s.useMemo(() => {
+    useReducedMotion: l
+  } = e, r = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), o = s.useRef(null), [_, C] = s.useState(!1), S = s.useMemo(() => {
     if (null == n) return null;
     let e = (0, f.hexToRgb)(n.config.colors.primary),
       t = {
@@ -52,25 +50,31 @@ function S(e) {
         b: e.b / 255
       };
     return h.reduce((e, n) => [...e, n, t.r, t.g, t.b], [])
-  }, [n]), T = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = !o && _;
+  }, [n]), I = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = !l && r;
   s.useEffect(() => {
     var e, t, n, a;
-    _ ? g && (null === (a = C.current) || void 0 === a || null === (n = a.animation) || void 0 === n || n.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
-  }, [g, _]);
-  let A = s.useCallback(() => {
-    I(!0)
+    r ? p && (null === (a = o.current) || void 0 === a || null === (n = a.animation) || void 0 === n || n.play()) : null === (t = o.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
+  }, [p, r]);
+  let T = s.useCallback(() => {
+    C(!0)
   }, []);
-  return (0, a.jsx)(a.Fragment, {
-    children: null != p && !T && (!l || l && !r) && (0, a.jsx)("div", {
-      className: E.lottieAnimationBackgroundWrapper,
-      children: (0, a.jsx)(c.default, {
-        ref: C,
-        onComplete: A,
-        importData: () => m(n.id, p),
-        shouldAnimate: !S && g,
-        className: i()(E.lottieAnimation, E.lottieAnimationBackground),
-        loop: 0
-      })
+  return null == S || I ? (0, a.jsx)("div", {
+    className: E.backgroundFallback,
+    style: {
+      backgroundImage: "linear-gradient(90deg, ".concat(n.config.colors.primary, ", ").concat(n.config.colors.secondary, ")")
+    }
+  }) : (0, a.jsx)("div", {
+    className: E.lottieAnimationBackgroundWrapper,
+    children: (0, a.jsx)(c.default, {
+      ref: o,
+      onComplete: T,
+      importData: () => m(n.id, S),
+      shouldAnimate: !_ && p,
+      className: i()(E.lottieAnimation, E.lottieAnimationBackground),
+      loop: 0,
+      rendererSettings: {
+        preserveAspectRatio: "none"
+      }
     })
   })
 }
