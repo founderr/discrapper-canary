@@ -1,80 +1,85 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return x
   }
 }), s("47120");
 var a = s("735250"),
   l = s("470079"),
-  i = s("481060"),
-  r = s("727637"),
-  o = s("100527"),
-  n = s("906732"),
-  u = s("680295"),
-  d = s("785717"),
-  c = s("318661"),
-  f = s("484404"),
-  S = s("747074"),
-  m = s("293259"),
-  E = s("228168"),
-  I = s("689938"),
-  T = s("420867");
+  i = s("442837"),
+  n = s("481060"),
+  o = s("727637"),
+  r = s("100527"),
+  u = s("906732"),
+  d = s("680295"),
+  c = s("158776"),
+  f = s("785717"),
+  S = s("318661"),
+  E = s("484404"),
+  I = s("747074"),
+  m = s("740021"),
+  T = s("228168"),
+  p = s("981631"),
+  N = s("689938"),
+  A = s("420867");
 
-function N(e) {
+function x(e) {
   let {
     user: t,
     guildId: s,
-    channelId: N,
-    messageId: x,
-    roleId: A,
-    friendToken: _,
-    transitionState: p,
-    sourceAnalyticsLocations: v = [],
-    onClose: h
+    channelId: x,
+    messageId: _,
+    roleId: v,
+    friendToken: C,
+    transitionState: h,
+    sourceAnalyticsLocations: U = [],
+    onClose: R
   } = e, {
-    analyticsLocations: U
-  } = (0, n.default)([...v, o.default.SIMPLIFIED_PROFILE_MODAL]), C = (0, c.default)(t.id, s), j = l.createRef(), y = (0, r.default)(j);
-  return (0, a.jsx)(n.AnalyticsLocationProvider, {
-    value: U,
-    children: (0, a.jsx)(d.UserProfileAnalyticsProvider, {
+    analyticsLocations: j
+  } = (0, u.default)([...U, r.default.SIMPLIFIED_PROFILE_MODAL]), M = (0, S.default)(t.id, s), P = (0, i.useStateFromStores)([c.default], () => c.default.findActivity(t.id, e => {
+    let {
+      type: t
+    } = e;
+    return t !== p.ActivityTypes.CUSTOM_STATUS
+  })), y = l.createRef(), O = (0, o.default)(y);
+  return (0, a.jsx)(u.AnalyticsLocationProvider, {
+    value: j,
+    children: (0, a.jsx)(f.UserProfileAnalyticsProvider, {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: s,
-      channelId: N,
-      messageId: x,
-      roleId: A,
-      children: (0, a.jsxs)(i.ModalRoot, {
-        transitionState: p,
-        className: T.root,
+      channelId: x,
+      messageId: _,
+      roleId: v,
+      children: (0, a.jsxs)(n.ModalRoot, {
+        transitionState: h,
+        className: A.root,
         hideShadow: !0,
-        "aria-label": I.default.Messages.USER_PROFILE_MODAL,
+        "aria-label": N.default.Messages.USER_PROFILE_MODAL,
         children: [(0, a.jsxs)("div", {
-          ref: j,
-          children: [(0, a.jsx)(S.default, {
+          ref: y,
+          children: [(0, a.jsx)(I.default, {
             user: t,
-            profileType: E.UserProfileTypes.MODAL,
+            profileType: T.UserProfileTypes.MODAL,
             children: (0, a.jsx)(m.default, {
-              className: T.header,
-              displayProfile: C,
+              className: A.header,
               user: t,
-              friendToken: _,
-              onClose: h,
-              isStreaming: !1,
-              guildId: s,
-              channelId: N,
-              hasProfileEffect: (null == C ? void 0 : C.profileEffectId) != null
+              displayProfile: M,
+              activity: P,
+              friendToken: C,
+              onClose: R
             })
-          }), (0, a.jsxs)(S.default.Inner, {
-            children: [p === i.ModalTransitionState.ENTERED && (0, a.jsx)(f.default, {
-              onTooltipClose: h
+          }), (0, a.jsxs)(I.default.Inner, {
+            children: [h === n.ModalTransitionState.ENTERED && (0, a.jsx)(E.default, {
+              onTooltipClose: R
             }), (0, a.jsx)("div", {
-              className: T.body
+              className: A.body
             })]
           })]
-        }), (null == C ? void 0 : C.profileEffectId) != null && (0, a.jsx)(u.default, {
-          profileEffectId: null == C ? void 0 : C.profileEffectId,
+        }), (null == M ? void 0 : M.profileEffectId) != null && (0, a.jsx)(d.default, {
+          profileEffectId: null == M ? void 0 : M.profileEffectId,
           bannerAdjustment: 0,
-          isHovering: y
+          isHovering: O
         })]
       })
     })
