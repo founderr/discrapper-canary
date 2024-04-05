@@ -12,6 +12,7 @@ e.exports = {
   cardFooterLanguageIcon: "cardFooterLanguageIcon__33333",
   cardFooterLocation: "cardFooterLocation_f8cc19",
   cardFooterLocationIcon: "cardFooterLocationIcon__2e33a",
+  clickableCard: "clickableCard__1c1e9",
   header: "header__2b527",
   playstyle: "playstyle__9d997",
   primetimeContainer: "primetimeContainer__2c3ce",
