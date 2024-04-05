@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  l = n("470079"),
-  a = n("442837"),
+  a = n("470079"),
+  l = n("442837"),
   i = n("481060"),
   r = n("241559"),
   o = n("527379"),
@@ -29,11 +29,11 @@ function h(e) {
   var t, h;
   let {
     onDismiss: g
-  } = e, M = (0, a.useStateFromStores)([c.default], () => c.default.getGuildId()), O = (0, a.useStateFromStores)([d.default], () => null != M ? d.default.getChannelId(M) : null, [M]), R = null != M ? M : null, v = (0, a.useStateFromStores)([u.default], () => null != R ? u.default.getGuild(R) : null, [R]), {
+  } = e, M = (0, l.useStateFromStores)([c.default], () => c.default.getGuildId()), O = (0, l.useStateFromStores)([d.default], () => null != M ? d.default.getChannelId(M) : null, [M]), R = null != M ? M : null, v = (0, l.useStateFromStores)([u.default], () => null != R ? u.default.getGuild(R) : null, [R]), {
     shouldShowIncidentActions: L,
     incidentData: P,
     isUnderLockdown: D
-  } = (0, I.useGuildIncidentsState)(R), x = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : p.EMPTY_STRING_SNOWFLAKE_ID), y = l.useCallback(() => null != v && (0, o.goToMemberSafetyDashboard)(v.id), [v]);
+  } = (0, I.useGuildIncidentsState)(R), x = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : p.EMPTY_STRING_SNOWFLAKE_ID), y = a.useCallback(() => null != v && (0, o.goToMemberSafetyDashboard)(v.id), [v]);
   if (null == v || null == P || !L) return null;
   let U = e => {
       if (e && x && O !== S.StaticChannelRoute.MEMBER_SAFETY && y()) {

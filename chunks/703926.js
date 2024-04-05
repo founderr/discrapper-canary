@@ -16,12 +16,12 @@ var i = n("735250"),
   m = n("385925"),
   f = n("588921"),
   p = n("718720"),
-  S = n("721513");
-let _ = {
+  _ = n("721513");
+let S = {
     [l.PremiumGiftStyles.STANDARD_BOX]: m,
     [l.PremiumGiftStyles.CAKE]: f,
     [l.PremiumGiftStyles.CHEST]: p,
-    [l.PremiumGiftStyles.COFFEE]: S,
+    [l.PremiumGiftStyles.COFFEE]: _,
     [l.PremiumGiftStyles.SNOWGLOBE]: "",
     [l.PremiumGiftStyles.BOX]: "",
     [l.PremiumGiftStyles.CUP]: "",
@@ -49,7 +49,7 @@ let _ = {
           height: "100%"
         },
         alt: "",
-        src: _[s],
+        src: S[s],
         className: n ? r.customGiftBoxHighlighted : r.customGiftBox
       })
     })

@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120"), n("536091");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("803997"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("803997"),
+  i = n.n(l),
   r = n("442837"),
   o = n("481060"),
   u = n("623292"),
@@ -26,15 +26,15 @@ var s = n("735250"),
 function C(e) {
   let {
     message: t,
-    channel: a,
+    channel: l,
     compact: C
-  } = e, A = (0, r.useStateFromStoresArray)([d.default], () => Array.from(d.default.getAllGuildStickers().values()).flat()).slice(0, 20), [h, g] = l.useState(null);
-  return (l.useEffect(() => {
+  } = e, A = (0, r.useStateFromStoresArray)([d.default], () => Array.from(d.default.getAllGuildStickers().values()).flat()).slice(0, 20), [h, g] = a.useState(null);
+  return (a.useEffect(() => {
     let e = setInterval(() => {
       A.length > 0 && g(A[Math.floor(Math.random() * A.length)])
     }, 500);
     return () => clearInterval(e)
-  }, [A]), null == a.guild_id) ? null : (0, s.jsxs)("div", {
+  }, [A]), null == l.guild_id) ? null : (0, s.jsxs)("div", {
     children: [(0, s.jsx)(_.default, {
       className: i()(S.mainContainer, {
         [S.compact]: C
@@ -61,12 +61,12 @@ function C(e) {
           onClick: () => {
             T.default.track(N.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
               message_id: t.id,
-              channel_id: a.id,
-              guild_id: a.guild_id,
+              channel_id: l.id,
+              guild_id: l.guild_id,
               action_type: "upload_file"
             }), I.ComponentDispatch.dispatch(N.ComponentActions.UPLOAD_FILE), (0, u.createPendingReply)({
               message: t,
-              channel: a,
+              channel: l,
               shouldMention: !0
             })
           },
@@ -79,10 +79,10 @@ function C(e) {
           onClick: () => {
             T.default.track(N.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
               message_id: t.id,
-              channel_id: a.id,
-              guild_id: a.guild_id,
+              channel_id: l.id,
+              guild_id: l.guild_id,
               action_type: "sticker"
-            }), (0, m.sendRandomStickerOrEmoji)(t.id, a)
+            }), (0, m.sendRandomStickerOrEmoji)(t.id, l)
           },
           children: null != h ? (0, s.jsx)(c.default, {
             size: 32,

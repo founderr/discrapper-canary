@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("481060"),
-  a = n("507893"),
+var a = n("481060"),
+  l = n("507893"),
   i = n("689938"),
   r = n("398559");
 
@@ -15,9 +15,9 @@ function o(e) {
   let {
     message: t
   } = e;
-  return (0, s.jsxs)(l.Clickable, {
+  return (0, s.jsxs)(a.Clickable, {
     onClick: () => {
-      (0, l.openModalLazy)(async () => {
+      (0, a.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("14021")]).then(n.bind(n, "910673"));
@@ -29,10 +29,10 @@ function o(e) {
       })
     },
     className: r.accessory,
-    children: [(0, s.jsx)(a.default, {
+    children: [(0, s.jsx)(l.default, {
       width: 16,
       height: 16
-    }), (0, s.jsx)(l.Text, {
+    }), (0, s.jsx)(a.Text, {
       variant: "text-xs/normal",
       className: r.accessoryText,
       children: i.default.Messages.OBSCURED_CONTENT_LEARN_MORE_MESSAGE_LABEL

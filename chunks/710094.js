@@ -16,8 +16,8 @@ var i = n("735250"),
   m = n("664891"),
   f = n("911367"),
   p = n("669079"),
-  S = n("987209"),
-  _ = n("598"),
+  _ = n("987209"),
+  S = n("598"),
   I = n("409813"),
   E = n("809144"),
   P = n("698708"),
@@ -42,8 +42,8 @@ function y(e) {
       analyticsData: j,
       analyticsLocation: G,
       referralTrialOfferId: D,
-      initialPlanId: F,
-      subscriptionTier: U,
+      initialPlanId: U,
+      subscriptionTier: F,
       handleClose: w
     } = e,
     {
@@ -70,18 +70,18 @@ function y(e) {
       setEntitlementsGranted: el,
       startedPaymentFlowWithPaymentSourcesRef: er,
       invoicePreview: eu
-    } = (0, _.usePaymentContext)(),
+    } = (0, S.usePaymentContext)(),
     {
       isGift: eo,
       giftMessage: ec,
       giftRecipient: ed
-    } = (0, S.useGiftContext)();
+    } = (0, _.useGiftContext)();
   l()(null != et, "Step should be set");
   let em = s.useRef(null),
     [ef, ep] = (0, r.default)(!1, 500);
   (0, f.useFetchProfileEffects)();
-  let eS = null !== (n = null != M ? M : D) && void 0 !== n ? n : null,
-    e_ = null != eS && (!ei || (0, A.SubscriptionTrials)[eS].skus.includes(X)) ? eS : null,
+  let e_ = null !== (n = null != M ? M : D) && void 0 !== n ? n : null,
+    eS = null != e_ && (!ei || (0, A.SubscriptionTrials)[e_].skus.includes(X)) ? e_ : null,
     eI = (0, c.usePremiumTrialOffer)(D),
     eE = (0, o.usePremiumDiscountOffer)(),
     eP = {
@@ -108,7 +108,7 @@ function y(e) {
     eg = null == eE ? void 0 : null === (t = eE.discount) || void 0 === t ? void 0 : t.plan_ids,
     ey = !eo && null != eE && null != eg && null != J && eg.includes(J.id),
     eM = eo && (0, p.shouldShowCustomGiftExperience)(ed),
-    eb = null == F && null == U && ea === C.PurchaseTypes.SUBSCRIPTION,
+    eb = null == U && null == F && ea === C.PurchaseTypes.SUBSCRIPTION,
     eR = (0, T.inOneStepSubscriptionCheckout)({
       isTrial: eC,
       isGift: eo,
@@ -141,7 +141,7 @@ function y(e) {
     setHasAcceptedTerms: es,
     legalTermsNodeRef: ex,
     hasLegalTermsFlash: ef,
-    trialId: e_,
+    trialId: eS,
     trialFooterMessageOverride: b,
     reviewWarningMessage: R,
     purchaseState: en,
@@ -191,7 +191,7 @@ function y(e) {
         analyticsLocation: G,
         baseAnalyticsData: j,
         flowStartTime: H.startTime,
-        trialId: e_,
+        trialId: eS,
         planGroup: O,
         purchaseTokenAuthState: z,
         openInvoiceId: L,

@@ -1,47 +1,47 @@
 "use strict";
-s.r(e), s("47120");
-var l = s("735250"),
-  a = s("470079"),
-  i = s("803997"),
-  n = s.n(i),
+s.r(t), s("47120");
+var a = s("735250"),
+  i = s("470079"),
+  l = s("803997"),
+  n = s.n(l),
   r = s("802433"),
   o = s("680295"),
   d = s("250604"),
   u = s("241822");
-e.default = t => {
+t.default = e => {
   let {
-    profileEffectId: e,
+    profileEffectId: t,
     isHovering: s,
-    forCollectedModal: i = !1,
+    forCollectedModal: l = !1,
     isPurchased: c,
     removeSetHeight: f = !1
-  } = t, p = i ? 250 : .1, [h, m] = a.useState(!0);
-  return (a.useEffect(() => {
-    if (!0 !== i) m(!1);
+  } = e, p = l ? 250 : .1, [h, m] = i.useState(!0);
+  return (i.useEffect(() => {
+    if (!0 !== l) m(!1);
     else {
-      let t = setTimeout(() => {
+      let e = setTimeout(() => {
         m(!1)
       }, p);
       return () => {
-        clearTimeout(t)
+        clearTimeout(e)
       }
     }
-  }, [p, i]), null != e) ? (0, l.jsxs)("div", {
+  }, [p, l]), null != t) ? (0, a.jsxs)("div", {
     className: n()(d.previewContainer, {
-      [d.previewContainerAnimation]: i,
+      [d.previewContainerAnimation]: l,
       [d.previewContainerSetHeight]: !f
     }),
-    children: [(0, l.jsx)("img", {
+    children: [(0, a.jsx)("img", {
       src: u,
       alt: " ",
-      className: i ? d.previewForCollected : d.preview,
+      className: l ? d.previewForCollected : d.preview,
       "aria-hidden": !0
-    }), !h && (0, l.jsx)("div", {
+    }), !h && (0, a.jsx)("div", {
       className: c ? d.purchasedEffect : void 0,
-      children: (0, l.jsx)(o.default, {
-        profileEffectId: e,
+      children: (0, a.jsx)(o.default, {
+        profileEffectId: t,
         useThumbnail: !0,
-        autoPlay: i,
+        autoPlay: l,
         restartMethod: r.RestartMethod.FromStart,
         resetOnHover: !0,
         isHovering: s,

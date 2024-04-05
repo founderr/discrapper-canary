@@ -16,8 +16,8 @@ var i = n("735250"),
   m = n("96848"),
   f = n("703926"),
   p = n("474936"),
-  S = n("689938"),
-  _ = n("782874");
+  _ = n("689938"),
+  S = n("782874");
 let I = e => {
   let {
     isShopGift: t
@@ -40,19 +40,19 @@ let I = e => {
   }), O = null;
   return M && (O = b && R ? p.SeasonalGiftStyles2023 : p.STANDARD_GIFT_OPTIONS), (0, i.jsxs)("div", {
     children: [M && (0, i.jsxs)("div", {
-      className: _.giftMainAnimation,
+      className: S.giftMainAnimation,
       children: [null != I ? (0, i.jsx)(d.default, {
         giftStyle: I,
         defaultAnimationState: o.AnimationState.ACTION,
         idleAnimationState: o.AnimationState.LOOP,
         shouldAnimate: !0,
-        className: _.animation
+        className: S.animation
       }) : (0, i.jsx)(a.Spinner, {
-        className: _.spinner
+        className: S.spinner
       }), y && (0, i.jsxs)("div", {
-        className: _.soundEmojiContainer,
+        className: S.soundEmojiContainer,
         children: [(0, i.jsx)("div", {
-          className: _.sound,
+          className: S.sound,
           children: (0, i.jsx)(r.default, {
             sound: T,
             onSelect: e => {
@@ -60,7 +60,7 @@ let I = e => {
             }
           })
         }), (0, i.jsx)("div", {
-          className: _.emoji,
+          className: S.emoji,
           children: (0, i.jsx)(m.default, {
             setEmojiConfetti: N,
             emojiConfetti: null == P ? void 0 : P
@@ -73,8 +73,8 @@ let I = e => {
         var t;
         e.target === e.currentTarget && (null === (t = A.current) || void 0 === t || t.focus())
       },
-      className: _.giftBoxOptionContainer,
-      "aria-label": S.default.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
+      className: S.giftBoxOptionContainer,
+      "aria-label": _.default.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
       ...C,
       children: null != O && O.map((e, t) => (0, i.jsx)(f.GiftStaticOption, {
         isSelected: I === e,
@@ -85,7 +85,7 @@ let I = e => {
         onBlur: () => v(!1)
       }, e))
     }), (0, i.jsx)("div", {
-      className: _.__invalid_selectPlanDivider
+      className: S.__invalid_selectPlanDivider
     })]
   })
 }

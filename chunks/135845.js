@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("512722"),
-  a = n.n(l),
+var a = n("512722"),
+  l = n.n(a),
   i = n("442837"),
   r = n("131704"),
   o = n("601964"),
@@ -21,7 +21,7 @@ var l = n("512722"),
   I = n("558338");
 
 function m(e) {
-  let t, n, l, {
+  let t, n, a, {
       invite: m,
       currentUserId: N,
       guild: p,
@@ -34,12 +34,12 @@ function m(e) {
     M = (0, i.useStateFromStores)([u.default], () => null != m && null != m.target_user ? u.default.getStreamForUser(m.target_user.id, A) : null, [m, A]),
     O = null != m && m.target_type === _.InviteTargetTypes.STREAM && null != m.target_user && null != g,
     R = null != m && null != M && null != m.channel && null != m.guild && M.channelId === m.channel.id && M.guildId === m.guild.id;
-  a()(null != m, "Invite cannot be null");
+  l()(null != m, "Invite cannot be null");
   let {
     target_type: v,
     target_user: L
   } = m;
-  a()(v === _.InviteTargetTypes.STREAM && null != L, "invalid streaming invite");
+  l()(v === _.InviteTargetTypes.STREAM && null != L, "invalid streaming invite");
   let P = N === L.id,
     D = m.state === f.InviteStates.ACCEPTING,
     x = null != p;
@@ -49,9 +49,9 @@ function m(e) {
   }
   let y = null != m.channel ? (0, r.createChannelRecordFromInvite)(m.channel) : null,
     U = O ? S : C;
-  x && !R ? l = P ? T.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : T.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
+  x && !R ? a = P ? T.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : T.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
     name: L.username
-  }) : (t = T.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, O && (t = T.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), l = P ? T.default.Messages.INVITE_BUTTON_STREAMER : T.default.Messages.INVITE_BUTTON_STREAMING.format({
+  }) : (t = T.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, O && (t = T.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), a = P ? T.default.Messages.INVITE_BUTTON_STREAMER : T.default.Messages.INVITE_BUTTON_STREAMING.format({
     name: L.username
   }));
   let j = h === p.id && null != y ? (0, s.jsx)(c.default.Channel, {
@@ -69,7 +69,7 @@ function m(e) {
           guild: p,
           onClick: x && R ? U : void 0
         }), (0, s.jsx)(c.default.Info, {
-          title: l,
+          title: a,
           onClick: x && R ? U : void 0,
           children: j
         })]

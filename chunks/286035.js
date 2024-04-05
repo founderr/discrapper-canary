@@ -1,10 +1,10 @@
     "use strict";
     a.r(t), a.d(t, {
       failMigration: function() {
-        return c
+        return i
       },
       finishMigration: function() {
-        return i
+        return c
       },
       migrate: function() {
         return n
@@ -18,12 +18,12 @@
       }))
     }
 
-    function c() {
+    function i() {
       d.default.dispatch({
         type: "DOMAIN_MIGRATION_FAILURE"
       })
     }
 
-    function i() {
+    function c() {
       window.location.reload()
     }

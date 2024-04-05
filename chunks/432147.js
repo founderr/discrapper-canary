@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("803997"),
-  a = n.n(l),
+var a = n("803997"),
+  l = n.n(a),
   i = n("442837"),
   r = n("481060"),
   o = n("239091"),
@@ -27,9 +27,9 @@ function S(e) {
   let {
     message: t,
     compact: n
-  } = e, l = (0, i.useStateFromStores)([d.default], () => d.default.getChannel(c.default.castMessageIdAsChannelId(t.id)));
-  return null == l ? null : (0, s.jsx)(C, {
-    channel: l,
+  } = e, a = (0, i.useStateFromStores)([d.default], () => d.default.getChannel(c.default.castMessageIdAsChannelId(t.id)));
+  return null == a ? null : (0, s.jsx)(C, {
+    channel: a,
     compact: n,
     isSystemMessage: (0, u.default)(t)
   })
@@ -38,19 +38,19 @@ function S(e) {
 function C(e) {
   let {
     channel: t,
-    compact: l,
+    compact: a,
     isSystemMessage: u
   } = e, d = (0, i.useStateFromStores)([f.default], () => f.default.getCount(t.id)), c = function(e) {
     var t;
     let n = (0, i.useStateFromStores)([f.default], () => f.default.getMostRecentMessage(e.id)),
-      l = (0, i.useStateFromStores)([f.default], () => f.default.getCount(e.id)),
-      a = (0, _.useLastMessageTimestamp)(e);
-    return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) ? N.default.Messages.NO_RECENT_THREAD_MESSAGES : null == l || 0 === l ? N.default.Messages.NO_THREAD_MESSAGES : null == n ? (0, s.jsxs)(s.Fragment, {
+      a = (0, i.useStateFromStores)([f.default], () => f.default.getCount(e.id)),
+      l = (0, _.useLastMessageTimestamp)(e);
+    return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) ? N.default.Messages.NO_RECENT_THREAD_MESSAGES : null == a || 0 === a ? N.default.Messages.NO_THREAD_MESSAGES : null == n ? (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("span", {
         children: N.default.Messages.NO_RECENT_THREAD_MESSAGES
       }), (0, s.jsx)("span", {
         className: p.timestamp,
-        children: (0, _.getTimestampString)(a)
+        children: (0, _.getTimestampString)(l)
       })]
     }) : (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(T.default, {
@@ -58,14 +58,14 @@ function C(e) {
         channel: e
       }), (0, s.jsx)("span", {
         className: p.timestamp,
-        children: (0, _.getTimestampString)(a)
+        children: (0, _.getTimestampString)(l)
       })]
     })
   }(t), S = null != d && d > 0;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)("div", {
-      className: a()(p.spine, {
-        [p.cozy]: !l,
+      className: l()(p.spine, {
+        [p.cozy]: !a,
         [p.systemMessageSpine]: u
       })
     }), (0, s.jsx)(r.Clickable, {
@@ -90,7 +90,7 @@ function C(e) {
         })
       },
       "aria-roledescription": N.default.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
-      className: a()(p.container, {
+      className: l()(p.container, {
         [p.systemMessageContainer]: u
       }),
       children: (0, s.jsxs)(r.BlockInteractions, {
@@ -108,7 +108,7 @@ function C(e) {
           })]
         }), (0, s.jsx)("span", {
           "aria-hidden": !0,
-          className: a()(p.bottomLine),
+          className: l()(p.bottomLine),
           children: c
         })]
       })

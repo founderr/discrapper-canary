@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return i
   },
   openPurchaseConfirmationModal: function() {
-    return a
+    return l
   }
 });
 var s = n("570140"),
-  l = n("981631");
+  a = n("981631");
 
-function a(e, t, n) {
-  let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+function l(e, t, n) {
+  let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
   return new Promise((i, r) => {
     s.default.dispatch({
       type: "PURCHASE_CONFIRMATION_MODAL_OPEN",
       applicationId: e,
       skuId: t,
       entitlements: n,
-      context: null != a.context ? a.context : l.AppContext.APP,
-      analyticsSource: a.analyticsSource,
+      context: null != l.context ? l.context : a.AppContext.APP,
+      analyticsSource: l.analyticsSource,
       resolve: i,
       reject: r
     })

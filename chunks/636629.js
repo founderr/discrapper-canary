@@ -2,8 +2,8 @@
 n.r(t);
 var s = n("735250");
 n("470079");
-var l = n("913527"),
-  a = n.n(l),
+var a = n("913527"),
+  l = n.n(a),
   i = n("644766"),
   r = n("730417"),
   o = n("921944"),
@@ -12,7 +12,7 @@ var l = n("913527"),
 let c = (e, t) => ({
   bodyText: u.default.Messages.DROPS_BANNER_NOTICE.format({
     gameName: e.title,
-    endDate: a()(e.endDate, "YYYY-MM-DD HH:mm").format("MMM Do"),
+    endDate: l()(e.endDate, "YYYY-MM-DD HH:mm").format("MMM Do"),
     streamLengthRequirement: t
   }),
   articleUrl: e.articleUrl
@@ -21,13 +21,13 @@ t.default = e => {
   let {
     noticeType: t,
     markAsDismissed: n,
-    partnerGame: l
-  } = e, a = (0, r.useDropsExperiment)(l);
-  if (null == a) return null;
+    partnerGame: a
+  } = e, l = (0, r.useDropsExperiment)(a);
+  if (null == l) return null;
   let {
     bodyText: E,
     articleUrl: f
-  } = c(a.drop, a.config.streamLengthRequirement);
+  } = c(l.drop, l.config.streamLengthRequirement);
   return (0, s.jsxs)(i.default, {
     className: d.colorGuildBlue,
     children: [E, (0, s.jsx)(i.NoticeButtonAnchor, {

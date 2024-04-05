@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
 var s = n("735250"),
-  l = n("470079"),
-  a = n("442837"),
+  a = n("470079"),
+  l = n("442837"),
   i = n("481060"),
   r = n("528963"),
   o = n("143740"),
@@ -16,11 +16,11 @@ t.default = e => {
   let {
     channelId: t,
     messageId: n
-  } = e, T = (0, a.useStateFromStores)([E.default], () => E.default.shouldShowBump(n), [n]), I = l.useCallback(() => {
+  } = e, T = (0, l.useStateFromStores)([E.default], () => E.default.shouldShowBump(n), [n]), I = a.useCallback(() => {
     r.default.dismissPublishBump(n), (0, o.default)(t, n)
-  }, [t, n]), m = l.useCallback(() => {
+  }, [t, n]), m = a.useCallback(() => {
     r.default.dismissPublishBump(n)
-  }, [n]), N = l.useCallback(() => {
+  }, [n]), N = a.useCallback(() => {
     r.default.permanentlyHidePublishBump(t)
   }, [t]);
   return T ? (0, s.jsxs)("div", {

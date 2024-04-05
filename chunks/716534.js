@@ -16,8 +16,8 @@ var i = n("735250"),
   m = n("224550"),
   f = n("275850"),
   p = n("672971"),
-  S = n("128069"),
-  _ = n("987209"),
+  _ = n("128069"),
+  S = n("987209"),
   I = n("598"),
   E = n("45572"),
   P = n("919778"),
@@ -38,8 +38,8 @@ var i = n("735250"),
   j = n("314404"),
   G = n("42818"),
   D = n("459965"),
-  F = n("251660"),
-  U = n("474936"),
+  U = n("251660"),
+  F = n("474936"),
   w = n("981631"),
   B = n("231338"),
   k = n("689938"),
@@ -74,17 +74,17 @@ function W(e) {
       activeSubscription: em,
       selectedSkuId: ef,
       defaultPlanId: ep,
-      isPremium: eS,
-      startedPaymentFlowWithPaymentSourcesRef: e_,
+      isPremium: e_,
+      startedPaymentFlowWithPaymentSourcesRef: eS,
       setInvoicePreview: eI
     } = (0, I.usePaymentContext)(),
     {
       isGift: eE,
       giftRecipient: eP,
       selectedGiftStyle: eT
-    } = (0, _.useGiftContext)(),
+    } = (0, S.useGiftContext)(),
     eN = (0, b.usePremiumDiscountOffer)(),
-    eh = null == eN ? void 0 : null === (t = eN.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => U.SubscriptionPlanInfo[e].skuId === ef),
+    eh = null == eN ? void 0 : null === (t = eN.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => F.SubscriptionPlanInfo[e].skuId === ef),
     ex = !eE && null != eN && null != ef && eh,
     ev = (0, u.useStateFromStores)([x.default], () => x.default.get(K));
   l()(null != ev, "Missing plan");
@@ -115,7 +115,7 @@ function W(e) {
     }),
     [eO, eL] = (0, M.useSubscriptionInvoicePreview)({
       items: [{
-        planId: U.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
+        planId: F.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
         quantity: 1
       }],
       renewal: !0,
@@ -136,8 +136,8 @@ function W(e) {
     eI(ej)
   }, [eI, ej]);
   let eD = eE && (0, A.shouldShowCustomGiftExperience)(eP),
-    eF = null !== (a = null != eM ? eM : eR) && void 0 !== a ? a : eL,
-    eU = (0, u.useStateFromStores)([N.default], () => N.default.enabled),
+    eU = null !== (a = null != eM ? eM : eR) && void 0 !== a ? a : eL,
+    eF = (0, u.useStateFromStores)([N.default], () => N.default.enabled),
     ew = Z.paymentSourceId,
     {
       hasEntitlements: eB,
@@ -149,7 +149,7 @@ function W(e) {
       isTrial: eu,
       isGift: eE,
       selectedSkuId: ef,
-      startedPaymentFlowWithPaymentSources: e_.current
+      startedPaymentFlowWithPaymentSources: eS.current
     }),
     [eK, eV] = s.useState(null == ey ? void 0 : ey.subscriptionPeriodEnd);
   s.useEffect(() => {
@@ -157,18 +157,18 @@ function W(e) {
   }, [null == ey ? void 0 : ey.subscriptionPeriodEnd, eK]);
   let eZ = s.useMemo(() => (0, C.getPremiumPlanOptions)({
       skuId: ef,
-      isPremium: eS,
+      isPremium: e_,
       multiMonthPlans: [],
       currentSubscription: em,
       isGift: eE,
       isEligibleForTrial: eu,
       defaultPlanId: ep,
       defaultToMonthlyPlan: !1
-    }), [ef, em, eE, ep, eS, eu]),
+    }), [ef, em, eE, ep, e_, eu]),
     ez = (0, T.planSwitchLoadingShowSpinner)(eY, ey, ev);
-  if (null != eF) {
-    let e = eF.message;
-    return eF.code === S.ErrorCodes.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (e = k.default.Messages.BILLING_ERROR_UNSUPPORTED_CURRENCY), (0, i.jsx)(c.FormErrorBlock, {
+  if (null != eU) {
+    let e = eU.message;
+    return eU.code === _.ErrorCodes.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (e = k.default.Messages.BILLING_ERROR_UNSUPPORTED_CURRENCY), (0, i.jsx)(c.FormErrorBlock, {
       children: e
     })
   }
@@ -296,7 +296,7 @@ function W(e) {
         giftStyle: eT,
         shouldAnimate: !0,
         className: H.__invalid_giftMainAnimation
-      }), (0, i.jsx)(F.SendGiftToUser, {
+      }), (0, i.jsx)(U.SendGiftToUser, {
         giftRecipient: eP
       })]
     }), Y, (0, i.jsxs)("div", {
@@ -317,7 +317,7 @@ function W(e) {
         } : null,
         onChange: X,
         onPaymentSourceAdd: q,
-        hidePersonalInformation: eU,
+        hidePersonalInformation: eF,
         isTrial: eu
       }), eB && null == ew ? (0, i.jsx)("div", {
         className: H.paymentSourceOptionalWarning,

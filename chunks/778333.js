@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  l = n("470079"),
-  a = n("442837"),
+  a = n("470079"),
+  l = n("442837"),
   i = n("493683"),
   r = n("447543"),
   o = n("598077"),
@@ -24,12 +24,12 @@ function m(e) {
   let {
     invite: n,
     getAcceptInviteContext: m
-  } = e, N = (0, a.useStateFromStores)([u.default], () => u.default.getId()), p = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === N, S = n.state === _.InviteStates.ACCEPTING, C = (0, a.useStateFromStores)([c.default], () => {
+  } = e, N = (0, l.useStateFromStores)([u.default], () => u.default.getId()), p = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === N, S = n.state === _.InviteStates.ACCEPTING, C = (0, l.useStateFromStores)([c.default], () => {
     var e;
     return null != n.inviter && c.default.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id)
-  }), A = l.useCallback(() => {
+  }), A = a.useCallback(() => {
     null != n.inviter && null != d.default.getDMFromUserId(n.inviter.id) && i.default.openPrivateChannel([n.inviter.id])
-  }, [n.inviter]), h = l.useCallback(() => {
+  }, [n.inviter]), h = a.useCallback(() => {
     let e = m("Invite Button Embed");
     r.default.acceptInviteAndTransitionToInviteChannel({
       inviteKey: n.code,

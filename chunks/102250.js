@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  l = n("470079"),
-  a = n("803997"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("803997"),
+  i = n.n(l),
   r = n("913527"),
   o = n.n(r),
   u = n("722770"),
@@ -55,9 +55,9 @@ function V(e) {
     message: t,
     compact: n
   } = e, {
-    notificationType: l
+    notificationType: a
   } = (0, C.extractAutomodNotificationFields)(t);
-  switch (l) {
+  switch (a) {
     case C.IS_BACKWARDS_COMPAT_RAID_TYPE:
     case d.AutomodNotificationEmbedTypeKeys.RAID:
       return (0, s.jsx)(W, {
@@ -87,7 +87,7 @@ function Y(e) {
   } = e;
   return (0, s.jsx)(Q, {
     compact: t,
-    header: (0, s.jsxs)(l.Fragment, {
+    header: (0, s.jsxs)(a.Fragment, {
       children: [(0, s.jsx)(U.default, {
         width: 16,
         height: 16,
@@ -110,7 +110,7 @@ function K(e) {
   var t;
   let {
     message: n,
-    compact: a
+    compact: l
   } = e, i = P.default.getUser((0, C.getUserIdOfAutomodAction)(n)), r = null === (t = v.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, u = null != r && null != i ? L.default.getMember(r, i.id) : null, {
     avatarSrc: d,
     avatarDecorationSrc: c,
@@ -121,8 +121,8 @@ function K(e) {
     size: 12
   });
   return (0, s.jsx)(Q, {
-    compact: a,
-    header: (0, s.jsxs)(l.Fragment, {
+    compact: l,
+    header: (0, s.jsxs)(a.Fragment, {
       children: [(0, s.jsx)(T.SettingsInfoIcon, {
         width: 16,
         height: 16,
@@ -137,7 +137,7 @@ function K(e) {
       className: w.dotSeparatedRow,
       children: [(0, s.jsx)("div", {
         className: w.alertsEnabledSubHeader,
-        children: null != u && null != i && (0, s.jsxs)(l.Fragment, {
+        children: null != u && null != i && (0, s.jsxs)(a.Fragment, {
           children: [(0, s.jsx)(I.Text, {
             variant: "text-xs/medium",
             color: "text-normal",
@@ -192,7 +192,7 @@ function K(e) {
 function W(e) {
   var t;
   let {
-    message: a,
+    message: l,
     compact: i
   } = e, {
     joinAttempts: r,
@@ -200,16 +200,16 @@ function W(e) {
     dmsSent: T,
     raidType: m,
     resolvedReason: h
-  } = (0, C.extractAutomodNotificationFields)(a), g = (0, E.useStateFromStores)([v.default], () => v.default.getChannel(a.channel_id), [a.channel_id]), O = null !== (t = null == g ? void 0 : g.guild_id) && void 0 !== t ? t : null, {
+  } = (0, C.extractAutomodNotificationFields)(l), g = (0, E.useStateFromStores)([v.default], () => v.default.getChannel(l.channel_id), [l.channel_id]), O = null !== (t = null == g ? void 0 : g.guild_id) && void 0 !== t ? t : null, {
     incidentData: R,
     shouldShowIncidentActions: L
-  } = (0, N.useGuildIncidentsState)(O), P = (0, M.useContextMenuRaidAlert)(a.author.id, a.channel_id), D = l.useCallback(() => {
+  } = (0, N.useGuildIncidentsState)(O), P = (0, M.useContextMenuRaidAlert)(l.author.id, l.channel_id), D = a.useCallback(() => {
     let e = null == g ? void 0 : g.guild_id;
-    null != e && (0, A.openRaidResolveModal)(a.id, e)
-  }, [a.id, g]), j = m === c.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : _.ChatAlertIcon;
+    null != e && (0, A.openRaidResolveModal)(l.id, e)
+  }, [l.id, g]), j = m === c.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : _.ChatAlertIcon;
   return (0, s.jsx)(Q, {
     compact: i,
-    header: (0, s.jsxs)(l.Fragment, {
+    header: (0, s.jsxs)(a.Fragment, {
       children: [(0, s.jsx)(b, {
         width: 16,
         height: 16,
@@ -234,7 +234,7 @@ function W(e) {
         children: F.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_DMS.format({
           dmsSent: T
         })
-      }), null != d && (0, s.jsxs)(l.Fragment, {
+      }), null != d && (0, s.jsxs)(a.Fragment, {
         children: [(0, s.jsx)(H, {}), (0, s.jsx)(I.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
@@ -256,7 +256,7 @@ function W(e) {
           if (null != O && L) {
             let e = {
               source: p.GuildIncidentActionSources.MESSAGE,
-              messageId: a.id,
+              messageId: l.id,
               alertType: (0, S.getIncidentAlertType)(R)
             };
             (0, I.openModalLazy)(async () => {
@@ -324,15 +324,15 @@ function z(e) {
   var t;
   let {
     message: n,
-    compact: a
+    compact: l
   } = e, i = null === (t = v.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, {
     raidDatetime: r,
     decisionId: u,
     suspiciousMentionActivityUntil: d
   } = (0, C.extractAutomodNotificationFields)(n);
   return (0, s.jsx)(Q, {
-    compact: a,
-    header: (0, s.jsxs)(l.Fragment, {
+    compact: l,
+    header: (0, s.jsxs)(a.Fragment, {
       children: [(0, s.jsx)(U.default, {
         width: 16,
         height: 16,
@@ -401,8 +401,8 @@ function Q(e) {
   let {
     compact: t,
     header: n,
-    subheader: l,
-    content: a,
+    subheader: a,
+    content: l,
     footerButtons: r
   } = e;
   return (0, s.jsx)(s.Fragment, {
@@ -417,11 +417,11 @@ function Q(e) {
           children: [(0, s.jsx)("div", {
             className: w.cardHeader,
             children: n
-          }), null != l && (0, s.jsx)("div", {
+          }), null != a && (0, s.jsx)("div", {
             className: w.subheader,
-            children: l
+            children: a
           })]
-        }), a]
+        }), l]
       }), null != r && (0, s.jsx)("div", {
         className: i()(w.centeredRowContainer, w.cardFooter, {
           [w.compact]: t
@@ -436,8 +436,8 @@ function q(e) {
   let {
     id: t,
     compact: n,
-    message: l,
-    channel: a
+    message: a,
+    channel: l
   } = e, {
     avatarSrc: r,
     eventHandlers: {
@@ -446,7 +446,7 @@ function q(e) {
     }
   } = (0, G.useAutomodAvatar)(!0), {
     notificationType: c
-  } = (0, C.extractAutomodNotificationFields)(l), E = null == c || c === d.AutomodNotificationEmbedTypeKeys.RAID;
+  } = (0, C.extractAutomodNotificationFields)(a), E = null == c || c === d.AutomodNotificationEmbedTypeKeys.RAID;
   return (0, s.jsx)("div", {
     onMouseEnter: o,
     onMouseLeave: u,
@@ -464,7 +464,7 @@ function q(e) {
           [w.compact]: n
         }),
         children: [(0, s.jsx)(j.BaseMessageHeader, {
-          message: l,
+          message: a,
           messageClassname: w.spanCorrection,
           className: i()(w.usernameContainer, w.spanCorrection, {
             [w.compact]: n
@@ -493,7 +493,7 @@ function q(e) {
         }), (0, s.jsx)("div", {
           className: w.flexLineBreak
         }), (0, s.jsx)(V, {
-          message: l,
+          message: a,
           compact: n
         })]
       })

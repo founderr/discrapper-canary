@@ -8,10 +8,10 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("570140"),
-  l = n("78839"),
-  a = n("355467");
+  a = n("78839"),
+  l = n("355467");
 async function i(e) {
-  return null == l.default.getPremiumSubscription() && await a.fetchSubscriptions(), new Promise((t, n) => {
+  return null == a.default.getPremiumSubscription() && await l.fetchSubscriptions(), new Promise((t, n) => {
     s.default.dispatch({
       type: "PREMIUM_REQUIRED_MODAL_OPEN",
       context: e,

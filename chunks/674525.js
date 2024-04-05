@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var s, l, a, i, r = n("442837"),
+var s, a, l, i, r = n("442837"),
   o = n("570140");
 let u = [];
 class d extends(i = r.default.Store) {
@@ -8,12 +8,12 @@ class d extends(i = r.default.Store) {
     return u
   }
 }
-a = "CreatorMonetizationMarketingStore", (l = "displayName") in(s = d) ? Object.defineProperty(s, l, {
-  value: a,
+l = "CreatorMonetizationMarketingStore", (a = "displayName") in(s = d) ? Object.defineProperty(s, a, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = a, t.default = new d(o.default, {
+}) : s[a] = l, t.default = new d(o.default, {
   CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: function(e) {
     let {
       eligibleGuilds: t

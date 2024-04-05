@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("442837"),
+  a = n("470079"),
+  l = n("442837"),
   i = n("481060"),
   r = n("2052"),
   o = n("566620"),
@@ -38,22 +38,22 @@ function L(e) {
     activityInstance: L,
     channelId: P,
     guildId: D
-  } = e, [x, y] = l.useState(!1), {
+  } = e, [x, y] = a.useState(!1), {
     analyticsLocations: U
-  } = (0, m.default)(I.default.ACTIVITY_INSTANCE_EMBED), j = (0, r.useAnalyticsContext)(), b = (0, _.default)(), G = (0, a.useStateFromStores)([S.default], () => S.default.getChannel(P)), B = (null == G ? void 0 : null === (t = G.isThread) || void 0 === t ? void 0 : t.call(G)) ? null == G ? void 0 : G.parent_id : P, k = (0, a.useStateFromStores)([p.default], () => p.default.getId()), {
+  } = (0, m.default)(I.default.ACTIVITY_INSTANCE_EMBED), j = (0, r.useAnalyticsContext)(), b = (0, _.default)(), G = (0, l.useStateFromStores)([S.default], () => S.default.getChannel(P)), B = (null == G ? void 0 : null === (t = G.isThread) || void 0 === t ? void 0 : t.call(G)) ? null == G ? void 0 : G.parent_id : P, k = (0, l.useStateFromStores)([p.default], () => p.default.getId()), {
     embeddedActivity: F,
     currentEmbeddedActivity: w
-  } = (0, a.useStateFromStoresObject)([u.default], () => ({
+  } = (0, l.useStateFromStoresObject)([u.default], () => ({
     embeddedActivity: u.default.getEmbeddedActivitiesForChannel(null != B ? B : "").find(e => e.instanceId === L.id),
     currentEmbeddedActivity: u.default.getCurrentEmbeddedActivity()
-  })), H = (0, a.useStateFromStoresArray)([A.default], () => {
+  })), H = (0, l.useStateFromStoresArray)([A.default], () => {
     var e;
     return Array.from(null !== (e = null == F ? void 0 : F.userIds) && void 0 !== e ? e : []).map(e => A.default.getUser(e)).filter(g.isNotNullish)
-  }), V = (0, a.useStateFromStores)([C.default], () => {
+  }), V = (0, l.useStateFromStores)([C.default], () => {
     var e;
     let t = null == F ? void 0 : F.userIds.values().next().value;
     return null == t ? null : null === (e = C.default.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details
-  }), Y = l.useMemo(() => {
+  }), Y = a.useMemo(() => {
     let e = new N.default(n);
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = O.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
   }, [n]), K = (0, f.useEmbeddedActivityJoinability)({
@@ -126,7 +126,7 @@ function L(e) {
               onClick: t,
               ...n
             } = e;
-            return (0, l.createElement)(i.Button, {
+            return (0, a.createElement)(i.Button, {
               ...n,
               key: "".concat(z.isJoinAction),
               onClick: () => {

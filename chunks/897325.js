@@ -8,20 +8,20 @@ n.r(t), n.d(t, {
   }
 }), n("627341");
 var s = n("278074"),
-  l = n("263568"),
-  a = n("866454");
+  a = n("263568"),
+  l = n("866454");
 
 function i(e, t) {
-  let n = (0, s.match)(t).with(l.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => a.normalStylesImageOnlyAnswers).otherwise(() => a.normalStylesDefault);
+  let n = (0, s.match)(t).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => l.normalStylesImageOnlyAnswers).otherwise(() => l.normalStylesDefault);
   return {
     styles: {
       loserSelected: n,
       normal: n,
       notVoted: n,
       selected: n,
-      voted: a.votedStyles,
-      victorSelected: a.victorStyles,
-      victorNotSelected: a.victorStyles,
+      voted: l.votedStyles,
+      victorSelected: l.victorStyles,
+      victorNotSelected: l.victorStyles,
       normalVote: n
     }
   }

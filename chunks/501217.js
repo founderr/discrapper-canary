@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("442837"),
-  a = n("739566"),
+var a = n("442837"),
+  l = n("739566"),
   i = n("592125"),
   r = n("934458"),
   o = n("702346"),
@@ -23,7 +23,7 @@ function c(e) {
     onClickThread: f,
     onClickViewThreads: _,
     onContextMenuThread: T
-  } = e, I = (0, a.default)(n), m = E(I), N = (0, l.useStateFromStores)([i.default], () => {
+  } = e, I = (0, l.default)(n), m = E(I), N = (0, a.useStateFromStores)([i.default], () => {
     var e;
     return i.default.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id)
   }), p = u.default.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({

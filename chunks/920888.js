@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120"), n("653041");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("803997"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("803997"),
+  i = n.n(l),
   r = n("215569"),
   o = n("481060"),
   u = n("566006"),
@@ -25,7 +25,7 @@ let m = (e, t) => null == e && null == t || e === t,
     let n = N(e, t);
     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)]
   };
-class S extends l.PureComponent {
+class S extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let n = e.message.reactions.length;
     return 0 === t.reactionsCount && n > 0 ? {
@@ -40,8 +40,8 @@ class S extends l.PureComponent {
       message: e,
       disableReactionCreates: t,
       disableReactionUpdates: n,
-      isLurking: l,
-      isGuest: a,
+      isLurking: a,
+      isGuest: l,
       isPendingMember: m,
       isForumToolbar: N,
       channel: p,
@@ -73,8 +73,8 @@ class S extends l.PureComponent {
         reactions: O,
         message: e,
         readOnly: n,
-        isLurking: l,
-        isGuest: a,
+        isLurking: a,
+        isGuest: l,
         isPendingMember: m,
         isForumToolbar: N,
         useChatFontScaling: h,
@@ -121,18 +121,18 @@ t.default = e => {
   let {
     message: t,
     maxReactions: n,
-    hoistReaction: a
+    hoistReaction: l
   } = e, {
     combinedReactions: i,
     remainingReactions: r,
     visibleReactionsCount: o
-  } = l.useMemo(() => {
+  } = a.useMemo(() => {
     let e = [],
-      s = p(t.reactions, a),
-      l = null != n && n < s.length ? s.slice(0, n) : s,
-      i = s.length - l.length,
+      s = p(t.reactions, l),
+      a = null != n && n < s.length ? s.slice(0, n) : s,
+      i = s.length - a.length,
       r = s.length;
-    return l.forEach(t => {
+    return a.forEach(t => {
       t.burst_count > 0 && e.push({
         ...t,
         type: u.ReactionTypes.BURST
@@ -145,7 +145,7 @@ t.default = e => {
       visibleReactionsCount: r,
       remainingReactions: i
     }
-  }, [a, n, t.reactions]);
+  }, [l, n, t.reactions]);
   return (0, s.jsx)(S, {
     ...e,
     visibleReactionsCount: o,

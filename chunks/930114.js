@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("481060"),
-  a = n("594174"),
+var a = n("481060"),
+  l = n("594174"),
   i = n("78839"),
   r = n("585483"),
   o = n("74538"),
@@ -21,19 +21,19 @@ function E(e) {
     channelContext: E,
     customGiftMessage: f,
     giftInfo: _
-  } = e, T = !1, I = null, m = a.default.getCurrentUser(), N = (0, o.isPremiumAtLeast)(null == m ? void 0 : m.premiumType, d.PremiumTypes.TIER_0);
-  (0, l.openModalLazy)(async () => {
+  } = e, T = !1, I = null, m = l.default.getCurrentUser(), N = (0, o.isPremiumAtLeast)(null == m ? void 0 : m.premiumType, d.PremiumTypes.TIER_0);
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("99387"), n.e("92446"), n.e("72760")]).then(n.bind(n, "409858"));
     return n => {
-      var l, a;
+      var a, l;
       return (0, s.jsx)(e, {
         code: t,
         channelContext: E,
         customGiftMessage: f,
-        emojiName: null == _ ? void 0 : null === (l = _.emoji) || void 0 === l ? void 0 : l.name,
-        soundId: null == _ ? void 0 : null === (a = _.sound) || void 0 === a ? void 0 : a.id,
+        emojiName: null == _ ? void 0 : null === (a = _.emoji) || void 0 === a ? void 0 : a.name,
+        soundId: null == _ ? void 0 : null === (l = _.sound) || void 0 === l ? void 0 : l.id,
         onComplete: (e, t) => {
           I = e, t && (T = t, e.isSubscription && null == i.default.getPremiumSubscription(!1) && (0, u.setCanPlayWowMoment)(!0))
         },

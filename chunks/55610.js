@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useShouldShowLegacyPricingNotice: function() {
-    return _
+    return S
   }
 });
 var i = n("735250");
@@ -17,9 +17,9 @@ var s = n("803997"),
   m = n("53900"),
   f = n("981631"),
   p = n("689938"),
-  S = n("607137");
+  _ = n("607137");
 
-function _() {
+function S() {
   let e = (0, m.default)(),
     {
       enabled: t
@@ -43,16 +43,16 @@ t.default = e => {
     fromBoostCancelModal: s,
     className: l
   } = e, c = (0, m.default)();
-  if (!_()) return null;
+  if (!S()) return null;
   return r()(null != c, "Subscription billing country should not be null"), (0, i.jsxs)("div", {
-    className: a()(S.noticeRoot, l),
+    className: a()(_.noticeRoot, l),
     children: [(0, i.jsx)("div", {
-      className: S.iconContainer,
+      className: _.iconContainer,
       children: (0, i.jsx)(u.default, {
-        className: S.infoIcon
+        className: _.infoIcon
       })
     }), (0, i.jsx)("div", {
-      className: S.text,
+      className: _.text,
       children: (t = c, n = s, "PL" === t ? n ? p.default.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING : p.default.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING : "TR" === t ? n ? p.default.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING : p.default.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING : n ? p.default.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING : p.default.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({
         helpCenterLink: o.default.getArticleURL(f.HelpdeskArticles.LOCALIZED_PRICING)
       })

@@ -10,11 +10,11 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   n = s("470079"),
   i = s("442837"),
-  a = s("430824"),
-  r = s("594174"),
+  r = s("430824"),
+  a = s("594174"),
   u = s("246364"),
-  d = s("866319"),
-  o = s("118346"),
+  o = s("866319"),
+  d = s("118346"),
   c = s("186078"),
   I = s("73880"),
   m = s("276486"),
@@ -26,16 +26,16 @@ function M(e) {
     guildId: t,
     formFields: s,
     updateFormFields: n
-  } = e, r = (0, i.useStateFromStores)([a.default], () => {
+  } = e, a = (0, i.useStateFromStores)([r.default], () => {
     var e;
-    return null === (e = a.default.getGuild(t)) || void 0 === e ? void 0 : e.rulesChannelId
-  }), d = (e, t) => {
+    return null === (e = r.default.getGuild(t)) || void 0 === e ? void 0 : e.rulesChannelId
+  }), o = (e, t) => {
     let l = s[e];
     n([...s.slice(0, e), {
       ...l,
       response: t
     }, ...s.slice(e + 1)])
-  }, o = (e, t) => {
+  }, d = (e, t) => {
     let l = s[e];
     n([...s.slice(0, e), {
       ...l,
@@ -53,19 +53,19 @@ function M(e) {
     switch (e.field_type) {
       case u.VerificationFormFieldTypes.TERMS:
         return (0, l.jsx)(E.TermsFormField, {
-          channelId: r,
+          channelId: a,
           formField: e,
-          onChange: (e, s) => d(t, s)
+          onChange: (e, s) => o(t, s)
         }, t);
       case u.VerificationFormFieldTypes.TEXT_INPUT:
         return (0, l.jsx)(f.TextInputFormField, {
           formField: e,
-          onChange: e => o(t, e)
+          onChange: e => d(t, e)
         }, t);
       case u.VerificationFormFieldTypes.PARAGRAPH:
         return (0, l.jsx)(I.ParagraphFormField, {
           formField: e,
-          onChange: e => o(t, e)
+          onChange: e => d(t, e)
         }, t);
       case u.VerificationFormFieldTypes.MULTIPLE_CHOICE:
         return (0, l.jsx)(c.MultipleChoiceFormField, {
@@ -84,10 +84,10 @@ function R(e) {
     guildId: t,
     formFields: s,
     updateFormFields: n
-  } = e, a = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()), u = (0, d.useIsPhoneVerificationLevel)({
+  } = e, r = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser()), u = (0, o.useIsPhoneVerificationLevel)({
     guildId: t
-  }) ? m.PreviewPhoneRequirementFormField : o.PreviewEmailRequirementFormField;
-  return null == a ? null : (0, l.jsxs)(l.Fragment, {
+  }) ? m.PreviewPhoneRequirementFormField : d.PreviewEmailRequirementFormField;
+  return null == r ? null : (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(u, {}), (0, l.jsx)(M, {
       guildId: t,
       formFields: s,
@@ -100,20 +100,20 @@ function _(e) {
   let {
     guildId: t,
     formFields: s,
-    updateFormFields: a
-  } = e, u = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()), {
+    updateFormFields: r
+  } = e, u = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser()), {
     isPhoneVerificationLevel: c,
     isCurrentUserVerified: I
-  } = (0, d.useCurrentUserVerificationStatus)({
+  } = (0, o.useCurrentUserVerificationStatus)({
     guildId: t
-  }), E = n.useRef(I), f = c ? m.PhoneRequirementFormField : o.EmailRequirementFormField;
+  }), E = n.useRef(I), f = c ? m.PhoneRequirementFormField : d.EmailRequirementFormField;
   return null == u ? null : (0, l.jsxs)(l.Fragment, {
     children: [!E.current && (0, l.jsx)(f, {
       isUserVerified: I
     }), (0, l.jsx)(M, {
       guildId: t,
       formFields: s,
-      updateFormFields: a
+      updateFormFields: r
     })]
   })
 }

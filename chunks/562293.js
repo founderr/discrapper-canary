@@ -8,22 +8,22 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("913527"),
-  l = n.n(s),
-  a = n("689938");
+  a = n.n(s),
+  l = n("689938");
 
 function i(e) {
-  let t = l()();
+  let t = a()();
   if (e <= t) return;
   let n = e.diff(t, "days");
-  if (n > 1) return a.default.Messages.POLL_EXPIRY_DAYS_REMAINING.format({
+  if (n > 1) return l.default.Messages.POLL_EXPIRY_DAYS_REMAINING.format({
     days: n
   });
   let s = e.diff(t, "hours");
-  if (s > 1) return a.default.Messages.POLL_EXPIRY_HOURS_REMAINING.format({
+  if (s > 1) return l.default.Messages.POLL_EXPIRY_HOURS_REMAINING.format({
     hours: s
   });
   let i = e.diff(t, "minutes");
-  return a.default.Messages.POLL_EXPIRY_MINUTES_REMAINING.format({
+  return l.default.Messages.POLL_EXPIRY_MINUTES_REMAINING.format({
     minutes: i
   })
 }

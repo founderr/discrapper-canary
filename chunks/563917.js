@@ -2,8 +2,8 @@
 n.r(t);
 var s = n("735250");
 n("470079");
-var l = n("792766"),
-  a = n("197409");
+var a = n("792766"),
+  l = n("197409");
 t.default = e => {
   let {
     stageInstance: t,
@@ -12,8 +12,8 @@ t.default = e => {
     onTransitionToInviteChannel: r,
     onAcceptInstantInvite: o
   } = e;
-  return (0, s.jsx)(a.default, {
-    children: (0, s.jsx)(l.default, {
+  return (0, s.jsx)(l.default, {
+    children: (0, s.jsx)(a.default, {
       isEmbed: !0,
       stageInstance: t,
       guild: n,

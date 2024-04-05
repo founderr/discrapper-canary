@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("789020"), n("47120");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("803997"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("803997"),
+  i = n.n(l),
   r = n("954955"),
   o = n.n(r),
   u = n("507274"),
@@ -39,14 +39,14 @@ function L(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class P extends l.Component {
+class P extends a.Component {
   render() {
     let {
       type: e,
       message: t,
       className: n,
-      children: l,
-      useChatFontScaling: a
+      children: a,
+      useChatFontScaling: l
     } = this.props, {
       isReactionPickerActive: r
     } = this.state, o = t.state === h.MessageStates.SENDING, u = e === A.ReactionTypes.BURST;
@@ -57,7 +57,7 @@ class P extends l.Component {
     !_ && u && (T = (0, s.jsx)(E.NitroTooltipLabel, {
       tooltipText: O.default.Messages.ADD_BURST_REACTION
     }));
-    let I = a ? v : R;
+    let I = l ? v : R;
     return (0, s.jsx)(d.Popout, {
       shouldShow: r,
       onRequestClose: this.handleReactionPickerToggle,
@@ -65,7 +65,7 @@ class P extends l.Component {
       position: "right",
       children: (e, t) => {
         let {
-          isShown: a
+          isShown: l
         } = t;
         return (0, s.jsx)(d.TooltipContainer, {
           text: T,
@@ -80,7 +80,7 @@ class P extends l.Component {
             onMouseEnter: () => (0, c.initiateEmojiInteraction)(g.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
             onFocus: () => (0, c.initiateEmojiInteraction)(g.EmojiInteractionPoint.AddReactionPopoutFocused),
             className: i()(I.reactionBtn, {
-              [I.active]: a
+              [I.active]: l
             }, n),
             children: [u ? (0, s.jsx)(s.Fragment, {
               children: (0, s.jsx)(p.default, {
@@ -90,7 +90,7 @@ class P extends l.Component {
               children: (0, s.jsx)(N.default, {
                 className: I.icon
               })
-            }), l]
+            }), a]
           })
         })
       }
@@ -104,9 +104,9 @@ class P extends l.Component {
       let {
         channel: n,
         message: s,
-        isForumToolbar: l
+        isForumToolbar: a
       } = this.props;
-      (0, _.addReaction)(n.id, s.id, (0, T.toReactionEmoji)(e), l ? _.ReactionLocations.FORUM_TOOLBAR : _.ReactionLocations.MESSAGE, {
+      (0, _.addReaction)(n.id, s.id, (0, T.toReactionEmoji)(e), a ? _.ReactionLocations.FORUM_TOOLBAR : _.ReactionLocations.MESSAGE, {
         burst: t
       })
     }), L(this, "handleReactionPickerToggle", () => {
@@ -133,24 +133,24 @@ class P extends l.Component {
         closePopout: t
       } = e, {
         type: n,
-        channel: l,
-        message: a
+        channel: a,
+        message: l
       } = this.props, i = {
         openPopoutType: "message_reaction_emoji_picker",
         ...n === A.ReactionTypes.BURST && {
           openPopoutType: "message_super_reaction_emoji_picker",
-          page: null != l.getGuildId() ? h.AnalyticsPages.GUILD_CHANNEL : h.AnalyticsPages.DM_CHANNEL,
-          section: (0, T.getBurstAnalyticsSection)(l),
+          page: null != a.getGuildId() ? h.AnalyticsPages.GUILD_CHANNEL : h.AnalyticsPages.DM_CHANNEL,
+          section: (0, T.getBurstAnalyticsSection)(a),
           object: h.AnalyticsObjects.REACTION_RAIL
         }
       }, r = (0, s.jsx)(I.ReactionPicker, {
         closePopout: t,
-        channel: l,
+        channel: a,
         onSelectEmoji: (e, n, s) => {
           this.onAddReaction(e, s), n && (s ? o()(t, 150)() : t())
         },
         analyticsOverride: i,
-        messageId: a.id
+        messageId: l.id
       });
       return (0, s.jsx)(u.DialogContext.Consumer, {
         children: e => e ? (0, s.jsx)(d.Dialog, {

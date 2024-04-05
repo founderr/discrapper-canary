@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n("47120");
-var s, l = n("735250"),
-  a = n("470079"),
+var s, a = n("735250"),
+  l = n("470079"),
   i = n("803997"),
   r = n.n(i),
   o = n("481060"),
@@ -25,23 +25,23 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class C extends(s = a.PureComponent) {
+class C extends(s = l.PureComponent) {
   render() {
     let {
       sku: e,
       storeListing: t,
       isHorizontal: n,
       className: s,
-      renderCustomTagline: a,
+      renderCustomTagline: l,
       renderCustomTitle: i,
       renderCustomMedia: r,
       isEmbed: o
     } = this.props, u = o ? I.ResponsiveEmbedTile : m.default;
-    return (0, l.jsx)(u, {
+    return (0, a.jsx)(u, {
       className: s,
       renderMedia: null != r ? r : this.renderMedia,
       renderTitle: null != i ? i : () => e.name,
-      renderTagline: null != a ? a : () => t.tagline,
+      renderTagline: null != l ? l : () => t.tagline,
       renderActions: this.renderActions,
       isHorizontal: n
     })
@@ -53,19 +53,19 @@ class C extends(s = a.PureComponent) {
         sku: t,
         renderCustomActions: n,
         isMouseOver: s,
-        showBuyInline: a
-      } = this.props, i = (a || !t.requiresPayment) && !e, r = i && s;
-      return null != n ? n() : (0, l.jsxs)("div", {
+        showBuyInline: l
+      } = this.props, i = (l || !t.requiresPayment) && !e, r = i && s;
+      return null != n ? n() : (0, a.jsxs)("div", {
         className: p.priceOs,
-        children: [(0, l.jsx)(d.default, {
+        children: [(0, a.jsx)(d.default, {
           type: d.default.Types.DIRECTORY_TILE,
           sku: t,
           inLibrary: e,
           className: r ? p.tilePriceWithVisibleBuyButton : p.tilePrice
-        }), (0, l.jsx)(c.OperatingSystemSection, {
+        }), (0, a.jsx)(c.OperatingSystemSection, {
           systems: [N.OperatingSystems.WINDOWS],
           className: p.platform
-        }), i ? (0, l.jsx)(u.default, {
+        }), i ? (0, a.jsx)(u.default, {
           skuId: t.id,
           applicationId: t.applicationId,
           size: o.Button.Sizes.SMALL,
@@ -85,8 +85,8 @@ class C extends(s = a.PureComponent) {
         isHorizontal: o,
         storeListing: u
       } = this.props;
-      return (0, l.jsxs)(a.Fragment, {
-        children: [(0, l.jsx)(_.default, {
+      return (0, a.jsxs)(l.Fragment, {
+        children: [(0, a.jsx)(_.default, {
           className: r()(p.splashContainer, {
             [p.splashContainerHorizontal]: o
           }),
@@ -99,11 +99,11 @@ class C extends(s = a.PureComponent) {
           onToggleMute: s,
           splashClassName: p.splashVideo,
           splashPlaceholderClassName: p.splashPlaceholder
-        }), i.exclusive ? (0, l.jsx)(E.default, {
+        }), i.exclusive ? (0, a.jsx)(E.default, {
           className: r()(p.exclusiveRegular, {
             [p.exclusivePlaying]: e
           })
-        }) : i.isTheGameAwardsWinner ? (0, l.jsx)(f.default, {
+        }) : i.isTheGameAwardsWinner ? (0, a.jsx)(f.default, {
           className: r()(p.exclusiveRegular, {
             [p.exclusivePlaying]: e
           })

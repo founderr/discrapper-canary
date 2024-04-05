@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
 var s = n("544891"),
-  l = n("570140"),
-  a = n("287734"),
+  a = n("570140"),
+  l = n("287734"),
   i = n("131704"),
   r = n("246364"),
   o = n("937111"),
@@ -12,7 +12,7 @@ let d = async e => {
       url: u.Endpoints.GUILD_JOIN_REQUEST_BY_ID(e)
     }),
     n = (0, o.joinRequestFromServer)(t.body);
-  return l.default.dispatch({
+  return a.default.dispatch({
     type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS",
     joinRequest: n
   }), t
@@ -20,11 +20,11 @@ let d = async e => {
   let {
     guildId: t,
     status: n = r.GuildJoinRequestApplicationStatuses.SUBMITTED,
-    before: a,
+    before: l,
     after: i,
     limit: d = r.MAX_RESULTS_PER_PAGE
   } = e;
-  l.default.dispatch({
+  a.default.dispatch({
     type: "GUILD_JOIN_REQUESTS_FETCH_START"
   });
   try {
@@ -34,13 +34,13 @@ let d = async e => {
         query: {
           status: n,
           limit: d,
-          before: a,
+          before: l,
           after: i
         }
       }),
       r = e.body.total,
       E = (null !== (c = e.body.guild_join_requests) && void 0 !== c ? c : []).map(o.joinRequestFromServer);
-    return l.default.dispatch({
+    return a.default.dispatch({
       type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
       status: n,
       requests: E,
@@ -49,7 +49,7 @@ let d = async e => {
       guildId: t
     }), e
   } catch (e) {
-    throw l.default.dispatch({
+    throw a.default.dispatch({
       type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE"
     }), e
   }
@@ -58,7 +58,7 @@ let d = async e => {
     let t = await s.HTTP.del({
       url: u.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e)
     });
-    return l.default.dispatch({
+    return a.default.dispatch({
       type: "USER_GUILD_JOIN_REQUEST_UPDATE",
       guildId: e,
       request: null
@@ -72,7 +72,7 @@ let d = async e => {
       url: u.Endpoints.GUILD_JOIN_REQUEST_ACK(e, t)
     })
   } catch (e) {} finally {
-    l.default.dispatch({
+    a.default.dispatch({
       type: "ACK_APPROVED_GUILD_JOIN_REQUEST",
       id: t,
       guildId: e
@@ -80,15 +80,15 @@ let d = async e => {
   }
 }, _ = async function(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.GuildJoinRequestApplicationStatuses.APPROVED,
-    a = arguments.length > 3 ? arguments[3] : void 0,
+    l = arguments.length > 3 ? arguments[3] : void 0,
     i = await s.HTTP.patch({
       url: u.Endpoints.GUILD_JOIN_REQUEST(e, t),
       body: {
         action: n,
-        rejection_reason: a
+        rejection_reason: l
       }
     });
-  l.default.dispatch({
+  a.default.dispatch({
     type: "GUILD_JOIN_REQUEST_UPDATE",
     guildId: e,
     status: i.body.application_status,
@@ -101,7 +101,7 @@ let d = async e => {
       action: t
     }
   });
-  return l.default.dispatch({
+  return a.default.dispatch({
     type: "GUILD_JOIN_REQUESTS_BULK_ACTION",
     guildId: e,
     action: t
@@ -113,7 +113,7 @@ let d = async e => {
     } = await s.HTTP.post({
       url: u.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e)
     });
-    return l.default.dispatch({
+    return a.default.dispatch({
       type: "USER_GUILD_JOIN_REQUEST_UPDATE",
       guildId: e,
       request: t
@@ -125,7 +125,7 @@ let d = async e => {
   let e = await s.HTTP.get({
     url: u.Endpoints.USER_JOIN_REQUEST_GUILDS
   });
-  l.default.dispatch({
+  a.default.dispatch({
     type: "USER_JOIN_REQUEST_GUILDS_FETCH",
     guilds: e.body
   })
@@ -135,10 +135,10 @@ let d = async e => {
       url: u.Endpoints.GUILD_JOIN_REQUEST_INTERVIEW(e)
     }),
     r = (0, i.createChannelRecordFromServer)(n.body);
-  return l.default.dispatch({
+  return a.default.dispatch({
     type: "CHANNEL_CREATE",
     channel: r
-  }), t && a.default.selectPrivateChannel(r.id), r.id
+  }), t && l.default.selectPrivateChannel(r.id), r.id
 };
 t.default = {
   fetchGuildJoinRequest: d,
@@ -150,21 +150,21 @@ t.default = {
   resetGuildJoinRequest: I,
   fetchRequestToJoinGuilds: m,
   setSelectedApplicationTab: (e, t) => {
-    l.default.dispatch({
+    a.default.dispatch({
       type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB",
       guildId: e,
       applicationTab: t
     })
   },
   setSelectedSortOrder: (e, t) => {
-    l.default.dispatch({
+    a.default.dispatch({
       type: "GUILD_JOIN_REQUESTS_SET_SORT_ORDER",
       guildId: e,
       sortOrder: t
     })
   },
   setSelectedGuildJoinRequest: (e, t) => {
-    l.default.dispatch({
+    a.default.dispatch({
       type: "GUILD_JOIN_REQUESTS_SET_SELECTED",
       guildId: e,
       request: t

@@ -17,8 +17,8 @@ var s = n("512722"),
   m = n("672971"),
   f = n("115130"),
   p = n("653798"),
-  S = n("314182"),
-  _ = n("251660"),
+  _ = n("314182"),
+  S = n("251660"),
   I = n("246946"),
   E = n("351402"),
   P = n("855775"),
@@ -97,8 +97,8 @@ function j(e) {
     paymentSources: j,
     paymentSourceId: G,
     setHasAcceptedTerms: D,
-    skusById: F,
-    skuPricePreviewsById: U,
+    skusById: U,
+    skuPricePreviewsById: F,
     selectedSkuId: w,
     isEmbeddedIAP: B,
     purchaseType: k
@@ -107,8 +107,8 @@ function j(e) {
     giftRecipient: W
   } = (0, A.useGiftContext)(), Y = H && (0, x.shouldShowCustomGiftExperience)(W);
   a()(null != w, "Expected selectedSkuId");
-  let K = F[w],
-    V = U[w],
+  let K = U[w],
+    V = F[w],
     Z = null != G ? G : P.NO_PAYMENT_SOURCE,
     z = null != V ? V[Z] : null;
   a()(null != K, "SKU must exist and be fetched."), a()(null != N, "Application must exist.");
@@ -131,7 +131,7 @@ function j(e) {
       isEmbeddedIAP: B
     }), Y && (0, i.jsx)(y.default, {
       sku: K
-    }), null != W ? (0, i.jsx)(_.SendGiftToUser, {
+    }), null != W ? (0, i.jsx)(S.SendGiftToUser, {
       giftRecipient: W
     }) : null, (0, i.jsx)(u.FormTitle, {
       tag: u.FormTitleTags.H5,
@@ -154,7 +154,7 @@ function j(e) {
         onPaymentSourceAdd: p,
         hidePersonalInformation: X
       })]
-    }), (0, i.jsx)(S.default, {
+    }), (0, i.jsx)(_.default, {
       isActive: t,
       ref: n,
       children: (0, i.jsx)(m.default, {

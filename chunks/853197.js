@@ -41,8 +41,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("913527"),
-  l = n.n(s),
-  a = n("594190"),
+  a = n.n(s),
+  l = n("594190"),
   i = n("695346"),
   r = n("77498"),
   o = n("70956"),
@@ -74,9 +74,9 @@ function T() {
 }
 
 function I(e, t, n) {
-  var s, l, a, i;
+  var s, a, l, i;
   if (null == A(e)) return !1;
-  let r = (s = t, l = d.PartnerGameNameToSearchTermMapping[e], null !== (a = s.find(e => _(e.name, l))) && void 0 !== a ? a : null);
+  let r = (s = t, a = d.PartnerGameNameToSearchTermMapping[e], null !== (l = s.find(e => _(e.name, a))) && void 0 !== l ? l : null);
   if (null != r) {
     ;
     let e = null !== (i = null == r ? void 0 : r.lastLaunched) && void 0 !== i ? i : 0;
@@ -86,13 +86,13 @@ function I(e, t, n) {
 }
 
 function m(e) {
-  return I(e, a.default.getGamesSeen(!1), T())
+  return I(e, l.default.getGamesSeen(!1), T())
 }
 
 function N(e, t) {
   let {
     endDate: n
-  } = e, s = l()(), a = l()(n, d.noticeBannerDateFormat), i = l()(s.clone().add(e.dropsNoticeBannerDurationDays, "days").format(d.noticeBannerDateFormat)), r = a.isSameOrBefore(i), o = a.isBefore(s, "minute");
+  } = e, s = a()(), l = a()(n, d.noticeBannerDateFormat), i = a()(s.clone().add(e.dropsNoticeBannerDurationDays, "days").format(d.noticeBannerDateFormat)), r = l.isSameOrBefore(i), o = l.isBefore(s, "minute");
   return r && (t && !o || !t && o)
 }
 
@@ -105,8 +105,8 @@ function p(e) {
       autoTrackExposure: !1
     }).dropsEnabled)) return !1;
   let s = i.DropsOptedOut.getSetting(),
-    l = N(n, !0);
-  return !s && l
+    a = N(n, !0);
+  return !s && a
 }
 
 function S(e) {
@@ -117,16 +117,16 @@ function S(e) {
     }, {
       autoTrackExposure: !1
     })) || void 0 === t ? void 0 : t.dropsEnabled)) return !1;
-  let l = i.DropsOptedOut.getSetting(),
-    a = N(s, !1);
-  return C(s) && !l && a
+  let a = i.DropsOptedOut.getSetting(),
+    l = N(s, !1);
+  return C(s) && !a && l
 }
 
 function C(e) {
   let {
     endDate: t
-  } = e, n = l()(t, "YYYY-MM-DD HH:mm");
-  return l()() > n
+  } = e, n = a()(t, "YYYY-MM-DD HH:mm");
+  return a()() > n
 }
 
 function A(e) {

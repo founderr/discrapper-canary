@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("803997"),
-  a = n.n(l),
+var a = n("803997"),
+  l = n.n(a),
   i = n("442837"),
   r = n("481060"),
   o = n("739566"),
@@ -24,7 +24,7 @@ function m(e) {
   var t;
   let {
     message: n,
-    compact: l,
+    compact: a,
     usernameHook: m,
     channel: N
   } = e, p = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(N.guild_id)), S = (0, o.default)(n), C = m(S), {
@@ -38,23 +38,23 @@ function m(e) {
     onMouseEnter: h,
     onMouseLeave: g,
     children: (0, s.jsx)(E.default, {
-      className: a()(I.mainContainer, {
-        [I.compact]: l
+      className: l()(I.mainContainer, {
+        [I.compact]: a
       }),
-      iconNode: l ? null : (0, s.jsx)(f.AutomodAvatar, {
+      iconNode: a ? null : (0, s.jsx)(f.AutomodAvatar, {
         src: A
       }),
       iconContainerClassName: I.iconContainer,
-      compact: l,
+      compact: a,
       children: (0, s.jsxs)("div", {
-        className: a()(I.content, {
-          [I.compact]: l
+        className: l()(I.content, {
+          [I.compact]: a
         }),
         children: [(0, s.jsx)(c.BaseMessageHeader, {
           message: n,
           messageClassname: I.spanCorrection,
-          className: a()(I.usernameContainer, I.spanCorrection, {
-            [I.compact]: l
+          className: l()(I.usernameContainer, I.spanCorrection, {
+            [I.compact]: a
           }),
           username: (0, s.jsxs)("div", {
             className: I.spanCorrection,
@@ -69,11 +69,11 @@ function m(e) {
               className: I.systemTag
             })]
           }),
-          compact: l,
+          compact: a,
           showTimestamp: !0
         }), (0, s.jsx)("div", {
-          className: a()(I.__invalid_messageContent, {
-            [I.compact]: l
+          className: l()(I.__invalid_messageContent, {
+            [I.compact]: a
           }),
           children: T.default.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
             username: S.nick,

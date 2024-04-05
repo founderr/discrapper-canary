@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("653041"), n("47120"), n("390547");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("803997"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("803997"),
+  i = n.n(l),
   r = n("512722"),
   o = n.n(r),
   u = n("442837"),
@@ -43,8 +43,8 @@ function G(e) {
   let {
     members: t,
     membersOnline: n,
-    isLarge: l,
-    isStacked: a
+    isLarge: a,
+    isStacked: l
   } = e, r = [];
   return null != n && n > 0 && r.push((0, s.jsxs)("div", {
     className: y.statusWrapper,
@@ -70,8 +70,8 @@ function G(e) {
     })]
   }, "memberCount")), (0, s.jsx)("div", {
     className: i()(y.statusCounts, {
-      [y.large]: l,
-      [y.stacked]: a
+      [y.large]: a,
+      [y.stacked]: l
     }),
     children: r
   })
@@ -81,15 +81,15 @@ function B(e) {
   let {
     channel: t,
     guild: n,
-    isStacked: l,
-    hasEnded: a
+    isStacked: a,
+    hasEnded: l
   } = e;
   if (null != t && null != n) {
     let e = (0, p.getChannelIconComponent)(t, n);
     return (0, s.jsxs)("div", {
       className: i()(y.channel, {
-        [y.stacked]: l,
-        [y.ended]: a
+        [y.stacked]: a,
+        [y.ended]: l
       }),
       children: [null != e ? (0, s.jsx)(e, {
         className: y.channelIcon,
@@ -108,8 +108,8 @@ function B(e) {
   }
   return null != n ? (0, s.jsx)("div", {
     className: i()(y.channel, {
-      [y.stacked]: l,
-      [y.ended]: a
+      [y.stacked]: a,
+      [y.ended]: l
     }),
     children: (0, s.jsx)(O.default, {
       children: (0, s.jsx)(c.Text, {
@@ -124,7 +124,7 @@ function B(e) {
 
 function k(e) {
   var t, n;
-  let a, r, {
+  let l, r, {
       invite: d,
       getAcceptInviteContext: p
     } = e,
@@ -135,10 +135,10 @@ function k(e) {
       target_application: F
     } = d;
   o()(k === D.InviteTargetTypes.EMBEDDED_APPLICATION && null != F, "invalid application invite");
-  let w = l.useRef(null),
-    [H, V] = l.useState(!1),
-    [Y, K] = l.useState(!1);
-  l.useEffect(() => {
+  let w = a.useRef(null),
+    [H, V] = a.useState(!1),
+    [Y, K] = a.useState(!1);
+  a.useEffect(() => {
     let e = new ResizeObserver(() => (function() {
         var e;
         let t = null === (e = w.current) || void 0 === e ? void 0 : e.offsetWidth;
@@ -181,15 +181,15 @@ function k(e) {
     if (null == d.guild) return (0, s.jsx)(L.default, {});
     W = new S.default(d.guild)
   }
-  let el = es && !Z || es && Q,
-    ea = () => {
+  let ea = es && !Z || es && Q,
+    el = () => {
       E.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: d.code,
         context: p("Invite Button Embed"),
         analyticsLocations: X
       })
     };
-  return (es && Q && (a = x.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !Z && (a = x.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? x.default.Messages.INVITE_EMBED_JOINED : q || !es ? x.default.Messages.JOIN : x.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
+  return (es && Q && (l = x.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !Z && (l = x.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? x.default.Messages.INVITE_EMBED_JOINED : q || !es ? x.default.Messages.JOIN : x.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
     className: y.container,
     ref: w,
     children: [(0, s.jsx)("div", {
@@ -259,7 +259,7 @@ function k(e) {
               max: 4
             })
           }) : null, (0, s.jsx)(c.Tooltip, {
-            text: a,
+            text: l,
             children: e => {
               let {
                 onClick: t,
@@ -268,12 +268,12 @@ function k(e) {
               return (0, s.jsx)(c.Button, {
                 className: y.actionButton,
                 onClick: () => {
-                  ea(), null == t || t()
+                  el(), null == t || t()
                 },
                 wrapperClassName: y.tooltipButtonWrapper,
                 ...n,
                 submitting: en,
-                disabled: el,
+                disabled: ea,
                 color: c.ButtonColors.GREEN,
                 children: r
               })

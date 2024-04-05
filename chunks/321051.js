@@ -21,10 +21,10 @@ function f(e) {
     sound: n
   } = e, [f, p] = s.useState(!1);
 
-  function S(e) {
+  function _(e) {
     p(!1), null == t || t(e)
   }
-  let _ = e => (0, i.jsxs)("div", {
+  let S = e => (0, i.jsxs)("div", {
     className: d.customGiftHeader,
     children: [(0, i.jsxs)("div", {
       className: d.__invalid_customGiftHeaderText,
@@ -56,11 +56,11 @@ function f(e) {
           guildId: null,
           channel: null,
           onClose: t,
-          onSelect: S,
+          onSelect: _,
           analyticsSource: "gift soundboard",
           soundButtonOverlay: u.SoundButtonOverlay.ADD,
           listPadding: m,
-          renderHeader: _,
+          renderHeader: S,
           defaultSoundsOnly: !0
         })
       })

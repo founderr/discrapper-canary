@@ -8,9 +8,9 @@ n.r(t), n.d(t, {
   }
 }), n("653041"), n("47120");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("512722"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("512722"),
+  i = n.n(l),
   r = n("399606"),
   o = n("524437"),
   u = n("367907"),
@@ -28,10 +28,10 @@ var s = n("735250"),
   C = n("333866"),
   A = n("629481"),
   h = n("981631");
-let g = l.createContext(void 0);
+let g = a.createContext(void 0);
 
 function M() {
-  let e = l.useContext(g);
+  let e = a.useContext(g);
   return i()(null != e, "must use useGuildShopDisplayContext within a GuildShopDisplayContextProvider"), e
 }
 
@@ -39,14 +39,14 @@ function O(e) {
   var t;
   let {
     children: n,
-    initialTab: a,
+    initialTab: l,
     guildId: i
   } = e, M = (0, r.useStateFromStores)([I.default], () => I.default.getGuild(i)), O = (0, r.useStateFromStores)([f.default], () => f.default.isViewingServerShop(i)), R = (0, p.useGuildShopPreviewVisible)(M, "guild_shop_page"), v = (0, N.useIsEligibleForSubscriptionsInGuildShop)(i, "guild_shop_page"), L = (null == M ? void 0 : M.hasFeature(h.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0, P = (0, E.useRoleSubscriptionsVisibleInGuild)(null == M ? void 0 : M.id), D = null === (t = (0, c.useSubscriptionsSettings)(i)) || void 0 === t ? void 0 : t.server_shop_tab_order, x = [], y = S.GuildShopTab.GUILD_SHOP_FULL_PREVIEW;
-  O || L && P ? (x.push(D === C.ServerShopTabOrder.PRODUCTS_FIRST ? S.GuildShopTab.GUILD_PRODUCTS : S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), x.push(D === C.ServerShopTabOrder.PRODUCTS_FIRST ? S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS : S.GuildShopTab.GUILD_PRODUCTS), y = x[0]) : L && !P ? (x.push(S.GuildShopTab.GUILD_PRODUCTS), y = S.GuildShopTab.GUILD_PRODUCTS) : !L && P && (x.push(S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), y = S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS, R && x.push(S.GuildShopTab.GUILD_PRODUCTS_PREVIEW)), a = null != a ? a : y;
-  let [U, j] = l.useState(a), b = R && !(P && v) || U === S.GuildShopTab.GUILD_PRODUCTS_PREVIEW;
-  return l.useEffect(() => {
-    j(a)
-  }, [a]), (0, s.jsx)(g.Provider, {
+  O || L && P ? (x.push(D === C.ServerShopTabOrder.PRODUCTS_FIRST ? S.GuildShopTab.GUILD_PRODUCTS : S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), x.push(D === C.ServerShopTabOrder.PRODUCTS_FIRST ? S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS : S.GuildShopTab.GUILD_PRODUCTS), y = x[0]) : L && !P ? (x.push(S.GuildShopTab.GUILD_PRODUCTS), y = S.GuildShopTab.GUILD_PRODUCTS) : !L && P && (x.push(S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), y = S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS, R && x.push(S.GuildShopTab.GUILD_PRODUCTS_PREVIEW)), l = null != l ? l : y;
+  let [U, j] = a.useState(l), b = R && !(P && v) || U === S.GuildShopTab.GUILD_PRODUCTS_PREVIEW;
+  return a.useEffect(() => {
+    j(l)
+  }, [l]), (0, s.jsx)(g.Provider, {
     value: {
       selectedTab: U,
       setSelectedTab: j,
