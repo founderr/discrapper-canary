@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   executeQuery: function() {
-    return A
+    return h
   },
   getCachedApplicationSection: function() {
     return T
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return N
   },
   useDiscovery: function() {
-    return h
+    return A
   }
 }), n("47120"), n("653041"), n("724458");
 var i = n("470079"),
@@ -59,11 +59,12 @@ function I(e, t) {
 }
 
 function T(e, t, n) {
-  var i, r, s, a, o;
-  let u = l.default.getUserState(),
-    d = l.default.getContextState(e),
-    _ = null !== (o = null === (r = u.result) || void 0 === r ? void 0 : null === (i = r.sections) || void 0 === i ? void 0 : i[n]) && void 0 !== o ? o : null === (a = d.result) || void 0 === a ? void 0 : null === (s = a.sections) || void 0 === s ? void 0 : s[n];
-  return null == _ ? void 0 : _.descriptor
+  var i, r, s, a, o, u, d, _;
+  let c = l.default.getUserState(),
+    E = l.default.getContextState(e),
+    I = l.default.getApplicationState(n),
+    T = null !== (_ = null !== (d = null === (r = c.result) || void 0 === r ? void 0 : null === (i = r.sections) || void 0 === i ? void 0 : i[n]) && void 0 !== d ? d : null === (a = E.result) || void 0 === a ? void 0 : null === (s = a.sections) || void 0 === s ? void 0 : s[n]) && void 0 !== _ ? _ : null === (u = I.result) || void 0 === u ? void 0 : null === (o = u.sections) || void 0 === o ? void 0 : o[n];
+  return null == T ? void 0 : T.descriptor
 }
 
 function f(e, t, n) {
@@ -86,7 +87,7 @@ function S(e) {
   return [null == t ? void 0 : t.result, null == n ? void 0 : n.result]
 }
 
-function h(e, t, n) {
+function A(e, t, n) {
   let a = (0, r.useStateFromStores)([s.default], () => s.default.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
     {
       descriptors: u,
@@ -100,7 +101,7 @@ function h(e, t, n) {
     [T, f] = i.useState(null),
     S = i.useRef(!1);
   S.current = I;
-  let h = i.useMemo(() => {
+  let A = i.useMemo(() => {
     let e = [];
     if (null != n.placeholderCount)
       for (let i = 0; i < n.placeholderCount; i++) e.push(p(i, t.commandType));
@@ -114,7 +115,7 @@ function h(e, t, n) {
       commandsByActiveSection: _,
       filteredSectionId: T,
       hasMoreAfter: !1,
-      placeholders: I ? h : [],
+      placeholders: I ? A : [],
       sectionDescriptors: u,
       filterSection: e => {
         f(e)
@@ -129,22 +130,22 @@ function h(e, t, n) {
       let t = _[0];
       if (null != t) e.commandsByActiveSection = [{
         section: t.section,
-        data: [...t.data, ...h]
+        data: [...t.data, ...A]
       }, ..._.slice(1)];
       else {
         let t = o.BUILT_IN_SECTIONS[c.BuiltInSectionId.BUILT_IN];
         e.activeSections = [t], e.commandsByActiveSection = [{
           section: t,
-          data: h
+          data: A
         }]
       }
-      e.commands = [...d, ...h]
+      e.commands = [...d, ...A]
     }
     return e
-  }, [d, u, T, _, I, h])
+  }, [d, u, T, _, I, A])
 }
 
-function A(e, t, n) {
+function h(e, t, n) {
   let {
     descriptors: i,
     commands: r,
