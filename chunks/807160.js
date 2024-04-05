@@ -32,8 +32,8 @@ var a, n, i, l = s("735250"),
   D = s("419922"),
   U = s("46141"),
   O = s("430824"),
-  v = s("853872"),
-  b = s("509545"),
+  b = s("853872"),
+  v = s("509545"),
   B = s("230307"),
   j = s("285952"),
   G = s("366695"),
@@ -518,14 +518,14 @@ class em extends(n = r.PureComponent) {
         (0, q.isPremiumBaseSubscriptionPlan)(t) ? (s.push(q.default.getDisplayName(t, !1, _)), a = (0, q.castPremiumSubscriptionAsSkuId)(es.SubscriptionPlanInfo[t].skuId)) : (s.push("".concat(n > 1 ? "".concat(n, "x ") : "").concat(q.default.getDisplayName(t, !1, _))), null == a && (a = (0, q.castPremiumSubscriptionAsSkuId)(es.SubscriptionPlanInfo[t].skuId)))
       });
       else if (E.type === et.SubscriptionTypes.GUILD) {
-        let e = b.default.get(E.items[0].planId);
+        let e = v.default.get(E.items[0].planId);
         c()(null != e, "Guild subscription plan should already have been loaded");
         let t = e.interval === es.SubscriptionIntervalTypes.YEAR ? en.default.Messages.YEARLY_GUILD_SUBSCRIPTION : en.default.Messages.MONTHLY_GUILD_SUBSCRIPTION;
         s.push(t.format({
           planName: e.name
         })), a = e.skuId
       } else if (E.type === et.SubscriptionTypes.APPLICATION) {
-        let e = b.default.get(E.items[0].planId);
+        let e = v.default.get(E.items[0].planId);
         c()(null != e, "Application subscription plan should already have been loaded"), null != n ? s.push(en.default.Messages.MONTHLY_APPLICATION_SUBSCRIPTION_V2.format({
           tier: null == d ? void 0 : d.name
         })) : s.push(en.default.Messages.APPLICATION_SUBSCRIPTION_FROM_DELETED_APPLICATION), a = e.skuId
@@ -751,12 +751,12 @@ function eI(e) {
     applicationStatistics: f,
     gameApplication: _,
     paymentSources: p
-  } = (0, m.useStateFromStoresObject)([v.default, B.default, P.default], () => {
+  } = (0, m.useStateFromStoresObject)([b.default, B.default, P.default], () => {
     var e, t;
     return {
       applicationStatistics: null != d ? B.default.getCurrentUserStatisticsForApplication(d) : null,
       gameApplication: null !== (t = P.default.getApplication(null != d ? d : "")) && void 0 !== t ? t : null === (e = a.sku) || void 0 === e ? void 0 : e.application,
-      paymentSources: v.default.paymentSources
+      paymentSources: b.default.paymentSources
     }
   }), I = (0, m.useStateFromStores)([P.default], () => null != c ? P.default.getApplication(c) : null);
   r.useEffect(() => {

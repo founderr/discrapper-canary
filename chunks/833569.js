@@ -36,8 +36,8 @@ var a, n, i = s("735250"),
   D = s("625881"),
   U = s("440984"),
   O = s("398775"),
-  v = s("973159"),
-  b = s("311821"),
+  b = s("973159"),
+  v = s("311821"),
   B = s("42818"),
   j = s("798769"),
   G = s("459965"),
@@ -273,7 +273,7 @@ function z(e) {
         children: H.default.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({
           planPremiumType: M.default.getDisplayPremiumType(t.planId)
         })
-      }), (0, i.jsx)(b.default, {
+      }), (0, i.jsx)(v.default, {
         onClick: a
       })]
     })]
@@ -320,8 +320,8 @@ function q(e) {
   l.useEffect(() => {
     C.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STARTED, Z(a))
   }, [a]);
-  let b = L === k.PremiumTypes.TIER_0 || L === k.PremiumTypes.TIER_1 || L === k.PremiumTypes.TIER_2;
-  null == E && (E = b ? 1 : 2);
+  let v = L === k.PremiumTypes.TIER_0 || L === k.PremiumTypes.TIER_1 || L === k.PremiumTypes.TIER_2;
+  null == E && (E = v ? 1 : 2);
   let {
     analyticsLocations: B
   } = (0, N.default)(u, I.default.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL), [j, W, K, q] = function(e, t, s) {
@@ -400,7 +400,7 @@ function q(e) {
       });
       break;
     case 1:
-      s = (0, i.jsx)(v.default, {
+      s = (0, i.jsx)(b.default, {
         premiumType: L,
         titleText: H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
         subtitleText: A ? H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD : H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
@@ -442,7 +442,7 @@ function q(e) {
         premiumType: L,
         setStep: W,
         onClose: () => $(j),
-        whatYouLoseExperienceEnabled: b,
+        whatYouLoseExperienceEnabled: v,
         analyticsLocation: d
       });
       break;

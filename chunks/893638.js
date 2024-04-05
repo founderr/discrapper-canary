@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("392711");
 
 function r(e, t, n, r) {
-  var s, a;
-  let o = e.getCurrentConfig(n, r),
-    l = t.getCurrentConfig(n, r);
-  return s = o, a = l, (0, i.mergeWith)({}, s, a, (e, t) => e || t)
+  var a, l;
+  let u = e.getCurrentConfig(n, r),
+    o = t.getCurrentConfig(n, r);
+  return a = u, l = o, (0, i.mergeWith)({}, a, l, (e, t) => e || t)
 }

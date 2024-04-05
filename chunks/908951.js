@@ -39,9 +39,9 @@ function g(e) {
     analyticsLocation: x,
     currentInvoicePreview: D,
     disabled: U = !1
-  } = e, O = (0, o.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), [v, b] = (0, o.useStateFromStoresArray)([N.default], () => [N.default.paymentSources, N.default.hasFetchedPaymentSources]), B = (0, m.useSubscriptionPlansLoaded)((0, C.getSubscriptionSKUs)(t)), {
+  } = e, O = (0, o.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), [b, v] = (0, o.useStateFromStoresArray)([N.default], () => [N.default.paymentSources, N.default.hasFetchedPaymentSources]), B = (0, m.useSubscriptionPlansLoaded)((0, C.getSubscriptionSKUs)(t)), {
     analyticsLocations: j
-  } = (0, p.default)(), G = n.useMemo(() => Object.values(v).filter(e => !e.invalid), [v]), [F, k] = n.useState(!1), [w, H] = n.useState(t.currency), Y = async (e, s) => {
+  } = (0, p.default)(), G = n.useMemo(() => Object.values(b).filter(e => !e.invalid), [b]), [F, k] = n.useState(!1), [w, H] = n.useState(t.currency), Y = async (e, s) => {
     if (null == t) throw Error("missing subscription and paymentSource");
     null == e ? await E.changeSubscriptionCurrency(t, s, j, x) : await E.changePaymentSource(t, e, s, j, x), k(!1), H(s)
   }, W = async (e, s, a) => {
@@ -102,7 +102,7 @@ function g(e) {
       })
     })
   })(t);
-  if (!b || !B) return (0, a.jsx)(d.Spinner, {});
+  if (!v || !B) return (0, a.jsx)(d.Spinner, {});
   if (!(G.length > 0)) return (0, a.jsx)(d.Button, {
     fullWidth: !0,
     look: d.Button.Looks.FILLED,

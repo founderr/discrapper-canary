@@ -1,43 +1,43 @@
 "use strict";
-r.r(t), r("47120");
-var a = r("735250"),
-  o = r("470079"),
-  n = r("911765"),
-  l = r("675654");
+s.r(t), s("47120");
+var a = s("735250"),
+  n = s("470079"),
+  i = s("911765"),
+  l = s("675654");
 t.default = function(e) {
   let {
     confettiTarget: t,
-    confettiCanvas: r,
-    confettiVelocityMultiplier: s,
-    sprites: i,
-    colors: c
-  } = e, [u, d] = o.useState(null), f = (0, n.useConfettiCannon)(r, u), [C, g] = o.useState(!1);
-  return o.useEffect(() => {
+    confettiCanvas: s,
+    confettiVelocityMultiplier: r,
+    sprites: u,
+    colors: o
+  } = e, [d, c] = n.useState(null), E = (0, i.useConfettiCannon)(s, d), [f, _] = n.useState(!1);
+  return n.useEffect(() => {
     let e = Array(10).fill(0);
-    return null != t && f.isReady && !C && (e = e.map((r, a) => setTimeout(() => {
-      var r, o;
-      a === e.length - 1 && g(!0), f.createMultipleConfetti((r = t.getBoundingClientRect(), o = null != (o = s) ? o : 1, {
+    return null != t && E.isReady && !f && (e = e.map((s, a) => setTimeout(() => {
+      var s, n;
+      a === e.length - 1 && _(!0), E.createMultipleConfetti((s = t.getBoundingClientRect(), n = null != (n = r) ? n : 1, {
         ...l.COMMON_CONFETTI_BASE_CONFIG,
         position: {
           type: "static-random",
           minValue: {
-            x: r.x,
-            y: r.y
+            x: s.x,
+            y: s.y
           },
           maxValue: {
-            x: r.x + r.width,
-            y: r.y + r.height / 2
+            x: s.x + s.width,
+            y: s.y + s.height / 2
           }
         },
         velocity: {
           type: "static-random",
           minValue: {
-            x: -100 * o,
-            y: -50 * o
+            x: -100 * n,
+            y: -50 * n
           },
           maxValue: {
-            x: 100 * o,
-            y: -300 * o
+            x: 100 * n,
+            y: -300 * n
           }
         },
         dragCoefficient: {
@@ -48,10 +48,10 @@ t.default = function(e) {
     }, 100 * a))), () => {
       for (let t of e) clearTimeout(t)
     }
-  }, [f, t, C, s]), (0, a.jsx)(n.SpriteCanvas, {
-    ref: d,
-    sprites: null != i ? i : l.COMMON_CONFETTI_SPRITES,
-    colors: null != c ? c : l.COMMON_CONFETTI_COLORS,
+  }, [E, t, f, r]), (0, a.jsx)(i.SpriteCanvas, {
+    ref: c,
+    sprites: null != u ? u : l.COMMON_CONFETTI_SPRITES,
+    colors: null != o ? o : l.COMMON_CONFETTI_COLORS,
     spriteWidth: l.COMMON_CONFETTI_MAX_SPRITE_SIZE,
     spriteHeight: l.COMMON_CONFETTI_MAX_SPRITE_SIZE
   })

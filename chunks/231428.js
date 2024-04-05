@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return v
+    return b
   }
 }), s("47120");
 var a, n = s("735250"),
@@ -162,7 +162,7 @@ function O(e) {
   return !(null == s || null == a || Object.values(M.PremiumSubscriptionSKUs).includes(s) || (0, R.isPremiumSubscriptionPlan)(a))
 }
 
-function v(e) {
+function b(e) {
   let t = (0, c.useStateFromStores)([N.default], () => N.default.getPayments()),
     s = (0, c.useStateFromStores)([P.default], () => P.default.getPremiumTypeSubscription()),
     a = i.useMemo(() => new Set(t.filter(O).map(e => {
