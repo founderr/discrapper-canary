@@ -65,87 +65,91 @@ t.default = e => {
       })]
     }), (0, a.jsx)("div", {
       className: I.overviewSidebarWrapper,
-      children: (0, a.jsxs)(u.animated.div, {
-        className: I.overviewSidebarContent,
+      children: (0, a.jsx)(u.animated.div, {
+        className: I.flex,
         style: T,
-        children: [(0, a.jsx)(c.Heading, {
-          variant: "heading-xl/normal",
-          color: "text-muted",
-          className: I.overviewHeaderText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TITLE.format({
-            guildName: A
-          })
-        }), (0, a.jsx)(c.Text, {
-          variant: "text-sm/normal",
-          color: "text-muted",
-          className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
-            date: o()().format("MMMM YYYY")
-          })
-        }), null != L ? null != P ? (0, a.jsx)(c.Text, {
-          variant: "text-sm/normal",
-          color: "text-muted",
-          className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
-            playstyle: P,
-            games: L
-          })
-        }) : (0, a.jsx)(c.Text, {
-          variant: "text-sm/normal",
-          color: "text-muted",
-          className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({
-            games: L
-          })
-        }) : (0, a.jsx)(c.Text, {
-          variant: "text-sm/normal",
-          color: "text-muted",
-          className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT
-        }), null != M ? (0, a.jsx)(c.Text, {
-          variant: "text-sm/normal",
-          color: "text-muted",
-          className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
-            traits: M
-          })
-        }) : null, null != y ? (0, a.jsx)(c.Text, {
-          variant: "text-sm/normal",
-          color: "text-muted",
-          className: I.overviewText,
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMETIME.format({
-            selectedTimes: y
-          })
-        }) : null, (0, a.jsx)(c.Text, {
-          variant: "text-sm/normal",
-          color: "text-muted",
-          className: i()(I.overviewText, I.lastParagraph),
-          children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
-        }), (0, a.jsxs)(c.Clickable, {
-          onClick: () => {
-            null == r || r(!0)
-          },
-          className: i()(I.signatureBlock, {
-            [I.clickable]: null != r
-          }),
-          children: [(0, a.jsx)("div", {
-            ref: g
+        children: (0, a.jsxs)(c.ScrollerNone, {
+          fade: !0,
+          className: I.overviewSidebarContent,
+          children: [(0, a.jsx)(c.Heading, {
+            variant: "heading-xl/normal",
+            color: "text-muted",
+            className: I.overviewHeaderText,
+            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TITLE.format({
+              guildName: A
+            })
           }), (0, a.jsx)(c.Text, {
-            variant: "text-md/normal",
-            color: "none",
-            children: "x"
-          }), l ? (0, a.jsx)(c.Text, {
-            variant: "text-lg/normal",
-            color: "header-primary",
-            className: I.signatureText,
-            children: null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.username
+            variant: "text-sm/normal",
+            color: "text-muted",
+            className: I.overviewText,
+            children: S.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
+              date: o()().format("MMMM YYYY")
+            })
+          }), null != L ? null != P ? (0, a.jsx)(c.Text, {
+            variant: "text-sm/normal",
+            color: "text-muted",
+            className: I.overviewText,
+            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
+              playstyle: P,
+              games: L
+            })
           }) : (0, a.jsx)(c.Text, {
-            variant: "text-lg/normal",
-            color: "none",
-            className: I.signatureText,
-            children: S.default.Messages.CLAN_SETUP_OVERVIEW_SIGNATURE
+            variant: "text-sm/normal",
+            color: "text-muted",
+            className: I.overviewText,
+            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({
+              games: L
+            })
+          }) : (0, a.jsx)(c.Text, {
+            variant: "text-sm/normal",
+            color: "text-muted",
+            className: I.overviewText,
+            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT
+          }), null != M ? (0, a.jsx)(c.Text, {
+            variant: "text-sm/normal",
+            color: "text-muted",
+            className: I.overviewText,
+            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
+              traits: M
+            })
+          }) : null, null != y ? (0, a.jsx)(c.Text, {
+            variant: "text-sm/normal",
+            color: "text-muted",
+            className: I.overviewText,
+            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMETIME.format({
+              selectedTimes: y
+            })
+          }) : null, (0, a.jsx)(c.Text, {
+            variant: "text-sm/normal",
+            color: "text-muted",
+            className: i()(I.overviewText, I.lastParagraph),
+            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
+          }), (0, a.jsxs)(c.Clickable, {
+            onClick: () => {
+              null == r || r(!0)
+            },
+            className: i()(I.signatureBlock, {
+              [I.clickable]: null != r
+            }),
+            children: [(0, a.jsx)("div", {
+              ref: g
+            }), (0, a.jsx)(c.Text, {
+              variant: "text-md/normal",
+              color: "none",
+              children: "x"
+            }), l ? (0, a.jsx)(c.Text, {
+              variant: "text-lg/normal",
+              color: "header-primary",
+              className: I.signatureText,
+              children: null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.username
+            }) : (0, a.jsx)(c.Text, {
+              variant: "text-lg/normal",
+              color: "none",
+              className: I.signatureText,
+              children: S.default.Messages.CLAN_SETUP_OVERVIEW_SIGNATURE
+            })]
           })]
-        })]
+        })
       })
     })]
   })
