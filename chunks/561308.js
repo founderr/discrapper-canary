@@ -83,16 +83,10 @@ let u = (e, t) => {
     } else if (s < i.default.Seconds.WEEK && a) return n.toDate().toLocaleTimeString(t, {
       hour: "numeric"
     });
-    else if (s < i.default.Seconds.WEEK && !a) {
-      let e = n.toDate(),
-        a = e.toLocaleDateString(t, {
-          weekday: "short"
-        }),
-        l = e.toLocaleTimeString(t, {
-          hour: "numeric"
-        });
-      return "".concat(a, " \xb7 ").concat(l)
-    }
+    else if (s < i.default.Seconds.WEEK && !a) return n.toDate().toLocaleTimeString(t, {
+      weekday: "short",
+      hour: "numeric"
+    });
     let u = Math.round(s / (7 * i.default.Seconds.DAY));
     return o.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({
       count: u
