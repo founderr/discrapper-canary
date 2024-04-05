@@ -33,7 +33,7 @@ function c(e) {
         c(!1)
       }
     }
-  }, T = null == E ? d.default.Messages.CLAN_START_INTERVIEW : d.default.Messages.CLAN_JOIN_INTERVIEW;
+  }, T = null == t.interviewChannelId ? d.default.Messages.CLAN_START_INTERVIEW : d.default.Messages.CLAN_JOIN_INTERVIEW;
   return (0, a.jsx)(n.Button, {
     color: n.Button.Colors.GREEN,
     submitting: s,

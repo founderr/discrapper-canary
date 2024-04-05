@@ -502,7 +502,8 @@ class e7 extends l.PureComponent {
         channel: e
       } = this.props;
       return (null == e ? void 0 : e.hasFlag(eZ.ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) ? (0, a.jsx)(B.default, {
-        channelId: e.id
+        channelId: e.id,
+        showTrailingDivider: !0
       }) : null
     }), e4(this, "renderClipsEnabledIndicatorToolbarItem", () => {
       let {
