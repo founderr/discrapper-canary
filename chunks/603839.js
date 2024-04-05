@@ -30,7 +30,7 @@ t.default = e => {
       duration: C ? 0 : 200,
       clamp: !0
     }
-  }), [S, I] = s.useState(_ ? E.ClanSetupModalPages.INTRO : E.ClanSetupModalPages.SETUP);
+  }), [S, I] = s.useState(_ && !C ? E.ClanSetupModalPages.INTRO_ANIMATION : E.ClanSetupModalPages.SETUP);
   return (0, a.jsx)(l.animated.div, {
     style: m,
     className: h.modal,
@@ -38,13 +38,8 @@ t.default = e => {
       className: h.modalContents,
       children: (() => {
         switch (S) {
-          case E.ClanSetupModalPages.INTRO:
-            return (0, a.jsx)(d.ClanSetupIntro, {
-              onClose: n,
-              setPage: I
-            });
-          case E.ClanSetupModalPages.ANIMATE:
-            return (0, a.jsx)(d.ClanSetupIntroAnimation, {
+          case E.ClanSetupModalPages.INTRO_ANIMATION:
+            return (0, a.jsx)(d.default, {
               guildId: t,
               setPage: I
             });

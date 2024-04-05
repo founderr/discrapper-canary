@@ -52,8 +52,7 @@ t.default = e => {
           value: e.day,
           options: m,
           placeholder: E.default.Messages.CLAN_PRIMETIME_PLACEHOLDER,
-          onChange: e => s(t, e),
-          className: h.__invalid_daySelector
+          onChange: e => s(t, e)
         }), (0, a.jsx)(c.default, {
           value: e.time,
           onChange: e => _(t, e)

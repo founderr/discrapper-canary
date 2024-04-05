@@ -62,4 +62,4 @@ function p(e) {
     default:
       return null
   }
-}(a = i || (i = {}))[a.NONE = 0] = "NONE", a[a.SOCIAL = 1] = "SOCIAL", a[a.CASUAL = 2] = "CASUAL", a[a.COMPETITIVE = 3] = "COMPETITIVE", a[a.CREATIVE = 4] = "CREATIVE", a[a.VERY_HARDCORE = 5] = "VERY_HARDCORE", (s = r || (r = {}))[s.INTRO = 0] = "INTRO", s[s.ANIMATE = 1] = "ANIMATE", s[s.SETUP = 2] = "SETUP", s[s.SIGN = 3] = "SIGN", (l = o || (o = {}))[l.GAMES = 1] = "GAMES", l[l.PLAYSTYLE = 2] = "PLAYSTYLE", l[l.INTERESTS = 3] = "INTERESTS", l[l.DESCRIPTION = 4] = "DESCRIPTION", l[l.PRIMETIME = 5] = "PRIMETIME", l[l.CUSTOMIZE = 6] = "CUSTOMIZE"
+}(a = i || (i = {}))[a.NONE = 0] = "NONE", a[a.SOCIAL = 1] = "SOCIAL", a[a.CASUAL = 2] = "CASUAL", a[a.COMPETITIVE = 3] = "COMPETITIVE", a[a.CREATIVE = 4] = "CREATIVE", a[a.VERY_HARDCORE = 5] = "VERY_HARDCORE", (s = r || (r = {}))[s.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", s[s.SETUP = 1] = "SETUP", s[s.SIGN = 2] = "SIGN", (l = o || (o = {}))[l.GAMES = 1] = "GAMES", l[l.PLAYSTYLE = 2] = "PLAYSTYLE", l[l.INTERESTS = 3] = "INTERESTS", l[l.DESCRIPTION = 4] = "DESCRIPTION", l[l.PRIMETIME = 5] = "PRIMETIME", l[l.CUSTOMIZE = 6] = "CUSTOMIZE"

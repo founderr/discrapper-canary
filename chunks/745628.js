@@ -22,7 +22,6 @@ t.default = e => {
       className: i.subtitle,
       children: l.default.Messages.CLAN_SETUP_DESCRIPTION_SUBTITLE
     }), (0, a.jsx)(s.TextArea, {
-      className: i.__invalid_input,
       maxLength: 120,
       onChange: e => t({
         description: e
