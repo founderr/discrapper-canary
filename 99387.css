@@ -54272,6 +54272,19 @@ html .progress__00e29 {
     font-weight: 700
 }
 
+.categoryItem__44e02 {
+    color: var(--header-secondary);
+    margin-left: 8px
+}
+
+.categoryItem__44e02.selectedCategoryItem_da1090 {
+    color: var(--white-500)
+}
+
+.categoryItem__44e02.selectedCategoryItem_da1090 .itemInner_b97671 {
+    background-color: var(--brand-experiment)
+}
+
 .formTitle__4d78b {
     margin-bottom: 0
 }
