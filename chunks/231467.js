@@ -6,9 +6,10 @@ var s = n("149020"),
   l = n("781511"),
   i = n("981500"),
   r = n("481060"),
-  o = n("442837"),
-  u = n("812206"),
-  d = n("563560");
+  o = n("835473"),
+  u = n("308083"),
+  d = n("689938"),
+  c = n("563560");
 t.default = function(e) {
   let {
     clan: t
@@ -16,18 +17,25 @@ t.default = function(e) {
     branding: {
       primaryColor: n
     }
-  } = t, c = (0, o.useStateFromStoresArray)([u.default], () => t.games.map(e => u.default.getApplication(e)));
+  } = t, f = (0, o.default)(t.games), E = (0, a.jsx)(r.Text, {
+    variant: "text-xs/medium",
+    tag: "span",
+    className: c.playstyle,
+    color: "none",
+    children: (0, u.getPlaystyleTitle)(t.playstyle)
+  }), h = d.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+    count: t.memberCount
+  });
   return (0, a.jsxs)("div", {
-    className: d.card,
+    className: c.card,
     children: [(0, a.jsx)("div", {
-      className: d.cardBrandingHeader,
+      className: c.cardBrandingHeader,
       style: {
         background: n
       }
     }), (0, a.jsxs)("div", {
-      className: d.cardContent,
+      className: c.cardContent,
       children: [(0, a.jsxs)("div", {
-        className: d.__invalid_cardHeader,
         children: [(0, a.jsx)(r.Heading, {
           variant: "heading-md/medium",
           color: "header-primary",
@@ -35,22 +43,16 @@ t.default = function(e) {
         }), (0, a.jsxs)(r.Text, {
           variant: "text-xs/normal",
           color: "text-secondary",
-          children: [(0, a.jsx)(r.Text, {
-            variant: "text-xs/medium",
-            tag: "span",
-            className: d.playstyle,
-            color: "none",
-            children: t.playstyle
-          }), " ", "\xb7 ", t.memberCount, " members"]
+          children: [E, " \xb7 ".concat(h)]
         })]
       }), (0, a.jsx)(r.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         children: t.description
       }), (0, a.jsxs)("div", {
-        className: d.primetimeContainer,
+        className: c.primetimeContainer,
         children: [(0, a.jsx)(s.GameControllerIcon, {
-          className: d.primetimeIcon,
+          className: c.primetimeIcon,
           color: "currentColor"
         }), (0, a.jsxs)(r.Text, {
           variant: "text-xs/normal",
@@ -63,9 +65,9 @@ t.default = function(e) {
           })]
         })]
       }), (0, a.jsx)("div", {
-        className: d.traitsContainer,
+        className: c.traitsContainer,
         children: t.traits.map(e => (0, a.jsx)("div", {
-          className: d.trait,
+          className: c.trait,
           children: (0, a.jsx)(r.Text, {
             variant: "text-xs/normal",
             color: "text-normal",
@@ -74,13 +76,13 @@ t.default = function(e) {
         }, e))
       })]
     }), (0, a.jsxs)("div", {
-      className: d.cardFooter,
+      className: c.cardFooter,
       children: [(0, a.jsxs)("div", {
-        className: d.cardFooterInfo,
+        className: c.cardFooterInfo,
         children: [(0, a.jsxs)("div", {
-          className: d.cardFooterLocation,
+          className: c.cardFooterLocation,
           children: [(0, a.jsx)(l.GlobeEarthIcon, {
-            className: d.cardFooterLocationIcon,
+            className: c.cardFooterLocationIcon,
             color: "currentColor"
           }), (0, a.jsx)(r.Text, {
             variant: "text-xs/normal",
@@ -88,9 +90,9 @@ t.default = function(e) {
             children: t.location
           })]
         }), (0, a.jsxs)("div", {
-          className: d.cardFooterLanguage,
+          className: c.cardFooterLanguage,
           children: [(0, a.jsx)(i.LanguageIcon, {
-            className: d.cardFooterLanguageIcon,
+            className: c.cardFooterLanguageIcon,
             color: "currentColor"
           }), (0, a.jsx)(r.Text, {
             variant: "text-xs/normal",
@@ -99,22 +101,21 @@ t.default = function(e) {
           })]
         })]
       }), (0, a.jsx)("div", {
-        className: d.__invalid_cardFooterGames,
-        children: c.map(e => {
+        className: c.cardFooterGames,
+        children: f.map(e => {
           if (null == e) return null;
           let t = e.getIconURL(24);
           return null == t ? null : (0, a.jsx)("div", {
-            className: d.__invalid_cardFooterGame,
+            className: c.cardFooterGame,
             children: (0, a.jsx)("img", {
               src: t,
-              alt: e.name,
-              className: d.__invalid_cardFooterGameIcon
+              alt: e.name
             })
           }, e.id)
         })
       })]
     }), (0, a.jsx)("div", {
-      className: d.cardBrandingFooter,
+      className: c.cardBrandingFooter,
       style: {
         background: n
       }

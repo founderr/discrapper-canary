@@ -26,10 +26,10 @@ function l(e) {
     description: e.description,
     memberCount: e.member_count,
     games: e.game_ids,
-    playstyle: "Casual",
-    traits: [],
+    playstyle: e.playstyle,
+    traits: e.search_terms,
     primetime: {
-      start: 0,
+      start: 20,
       end: 24
     },
     branding: {

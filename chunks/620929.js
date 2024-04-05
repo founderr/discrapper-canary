@@ -51,20 +51,7 @@ t.default = e => {
   } = (0, d.useStateFromStoresObject)([_.default], () => {
     var e;
     return null !== (e = _.default.getState(n)) && void 0 !== e ? e : {}
-  }), L = s.useMemo(() => (null == N ? void 0 : N.size) > 0 ? p(Array.from(N.values()).map(e => e.name)) : null, [N]), P = s.useMemo(() => {
-    switch (v) {
-      case m.ClanPlaystyles.SOCIAL:
-        return S.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;
-      case m.ClanPlaystyles.CASUAL:
-        return S.default.Messages.CLAN_SETUP_PLAYSTYLE_CASUAL_TITLE;
-      case m.ClanPlaystyles.COMPETITIVE:
-        return S.default.Messages.CLAN_SETUP_PLAYSTYLE_COMPETITIVE_TITLE;
-      case m.ClanPlaystyles.VERY_HARDCORE:
-        return S.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_TITLE;
-      default:
-        return null
-    }
-  }, [v]), M = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? p(Array.from(R)) : null, [R]), y = s.useMemo(() => {
+  }), L = s.useMemo(() => (null == N ? void 0 : N.size) > 0 ? p(Array.from(N.values()).map(e => e.name)) : null, [N]), P = s.useMemo(() => (0, m.getPlaystyleTitle)(v), [v]), M = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? p(Array.from(R)) : null, [R]), y = s.useMemo(() => {
     let e = (null == O ? void 0 : O.length) > 0 ? O.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [];
     return (null == e ? void 0 : e.length) > 0 ? p(e) : null
   }, [O]);
