@@ -10,21 +10,22 @@ var l, a = n("735250"),
   c = n("358221"),
   f = n("43267"),
   h = n("933557"),
-  p = n("266076"),
-  C = n("199902"),
-  m = n("19780"),
-  g = n("306680"),
-  E = n("944486"),
+  p = n("93687"),
+  C = n("266076"),
+  m = n("199902"),
+  g = n("19780"),
+  E = n("306680"),
+  _ = n("944486"),
   S = n("594174"),
-  _ = n("451478"),
-  I = n("880080"),
-  N = n("26290"),
-  T = n("15434"),
-  A = n("682662"),
-  L = n("662146"),
-  v = n("674552"),
-  x = n("981631"),
-  R = n("538777");
+  I = n("451478"),
+  N = n("880080"),
+  T = n("26290"),
+  A = n("15434"),
+  L = n("682662"),
+  v = n("662146"),
+  x = n("674552"),
+  R = n("981631"),
+  M = n("538777");
 
 function y(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -34,37 +35,37 @@ function y(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let M = {
+let O = {
   friction: 28,
   tension: 600
 };
 
-function O(e) {
+function D(e) {
   switch (e) {
     case "height":
     case "opacity":
       return {
-        duration: 150, ...M
+        duration: 150, ...O
       };
     case "scale":
       return {
-        ...M
+        ...O
       };
     default:
       throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)))
   }
 }
-class D extends(l = s.PureComponent) {
+class b extends(l = s.PureComponent) {
   componentWillEnter(e) {
     let {
       controller: t
     } = this.state;
     e(), t.update({
-      immediate: !_.default.isFocused(),
+      immediate: !I.default.isFocused(),
       height: 1,
       opacity: 1,
       scale: 1,
-      config: O
+      config: D
     }).start().then(() => this.setState({
       animating: !1
     }))
@@ -78,7 +79,7 @@ class D extends(l = s.PureComponent) {
       scale: 1,
       opacity: 1,
       height: 1,
-      config: O
+      config: D
     }).start().then(e)
   }
   componentWillLeave(e) {
@@ -88,11 +89,11 @@ class D extends(l = s.PureComponent) {
     this.setState({
       animating: !0
     }, () => t.update({
-      immediate: !_.default.isFocused(),
+      immediate: !I.default.isFocused(),
       height: 0,
       opacity: 0,
       scale: 0,
-      config: O
+      config: D
     }).start().then(e))
   }
   componentWillUnmount() {
@@ -115,7 +116,7 @@ class D extends(l = s.PureComponent) {
   getChannelIcon() {
     let {
       channel: e
-    } = this.props, t = e.type === x.ChannelTypes.DM ? S.default.getUser(e.getRecipientId()) : null;
+    } = this.props, t = e.type === R.ChannelTypes.DM ? S.default.getUser(e.getRecipientId()) : null;
     return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, f.getChannelIconURL)(e)
   }
   render() {
@@ -128,59 +129,57 @@ class D extends(l = s.PureComponent) {
       video: o,
       stream: d,
       isCurrentUserInThisDMCall: c,
-      unread: f
+      unread: f,
+      isGDMFacepileEnabled: h
     } = this.props, {
-      hovered: h,
-      animating: C
-    } = this.state;
+      hovered: p,
+      animating: m
+    } = this.state, g = e.isMultiUserDM() && null == e.icon && h;
     return (0, a.jsx)(i.animated.div, {
       style: this.getAnimatedStyle(),
-      children: (0, a.jsxs)(A.ListItem, {
-        children: [(0, a.jsx)(I.default, {
-          hovered: !C && h,
-          selected: !C && n,
-          unread: !C && f,
-          className: R.pill
-        }), (0, a.jsx)(L.default, {
+      children: (0, a.jsxs)(L.ListItem, {
+        children: [(0, a.jsx)(N.default, {
+          hovered: !m && p,
+          selected: !m && n,
+          unread: !m && f,
+          className: M.pill
+        }), (0, a.jsx)(v.default, {
           text: null != t ? t : "",
           selected: n,
           children: (0, a.jsx)(u.BlobMask, {
-            selected: n || h,
-            lowerBadge: l > 0 ? (0, v.renderMentionBadge)(l) : null,
-            upperBadge: (0, v.renderMediaBadge)({
+            selected: n || p,
+            lowerBadge: l > 0 ? (0, x.renderMentionBadge)(l) : null,
+            upperBadge: (0, x.renderMediaBadge)({
               audio: s,
               video: o,
               screenshare: d,
               isCurrentUserConnected: c
             }),
-            lowerBadgeWidth: (0, N.getBadgeWidthForValue)(l),
-            children: (() => {
-              let l = e.isMultiUserDM();
-              return (0, a.jsx)(r.ListNavigatorItem, {
-                id: e.id,
-                children: s => (0, a.jsx)(T.default, {
-                  to: x.Routes.CHANNEL(x.ME, e.id),
-                  onMouseEnter: () => this.setState({
-                    hovered: !0
-                  }),
-                  onMouseLeave: () => this.setState({
-                    hovered: !1
-                  }),
-                  selected: n || h,
-                  ariaLabel: null != t ? t : "",
-                  onContextMenu: this.handleContextMenu,
-                  icon: l ? void 0 : this.getChannelIcon(),
-                  children: l ? (0, a.jsx)(p.default, {
-                    channel: e,
-                    size: u.AvatarSizes.SIZE_48,
-                    facepileSizeOverride: 36,
-                    experimentLocation: "unread_gdm",
-                    "aria-hidden": !0
-                  }) : void 0,
-                  ...s
-                })
+            lowerBadgeWidth: (0, T.getBadgeWidthForValue)(l),
+            children: (0, a.jsx)(r.ListNavigatorItem, {
+              id: e.id,
+              children: l => (0, a.jsx)(A.default, {
+                to: R.Routes.CHANNEL(R.ME, e.id),
+                onMouseEnter: () => this.setState({
+                  hovered: !0
+                }),
+                onMouseLeave: () => this.setState({
+                  hovered: !1
+                }),
+                selected: n || p,
+                ariaLabel: null != t ? t : "",
+                onContextMenu: this.handleContextMenu,
+                icon: g ? void 0 : this.getChannelIcon(),
+                children: g ? (0, a.jsx)(C.default, {
+                  channel: e,
+                  size: u.AvatarSizes.SIZE_48,
+                  facepileSizeOverride: 36,
+                  experimentLocation: "unread_gdm",
+                  "aria-hidden": !0
+                }) : void 0,
+                ...l
               })
-            })()
+            })
           })
         })]
       })
@@ -194,12 +193,12 @@ class D extends(l = s.PureComponent) {
         scale: 0,
         height: 0,
         opacity: 0,
-        config: O
+        config: D
       })
     }), y(this, "handleContextMenu", e => {
       let {
         channel: t
-      } = this.props, l = t.type === x.ChannelTypes.DM ? S.default.getUser(t.getRecipientId()) : null;
+      } = this.props, l = t.type === R.ChannelTypes.DM ? S.default.getUser(t.getRecipientId()) : null;
       null != l ? (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -222,7 +221,7 @@ class D extends(l = s.PureComponent) {
     })
   }
 }
-y(D, "defaultProps", {
+y(b, "defaultProps", {
   badge: 0,
   audio: !1,
   video: !1,
@@ -230,24 +229,32 @@ y(D, "defaultProps", {
 }), t.default = s.forwardRef(function(e, t) {
   let n = e.channel.id,
     l = (0, h.default)(e.channel),
-    s = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId(), []),
-    i = (0, o.useStateFromStores)([c.default], () => null != s ? c.default.getMode(s) : x.ChannelModes.VOICE, [s]),
-    r = (0, o.useStateFromStores)([C.default], () => C.default.getAllApplicationStreamsForChannel(n).length > 0),
-    u = (0, o.useStateFromStores)([E.default], () => E.default.getChannelId(), []),
-    d = (0, o.useStateFromStores)([g.default], () => g.default.getMentionCount(n), [n]),
-    f = s === n,
-    p = !1,
-    S = !1;
-  return f && (p = i === x.ChannelModes.VOICE, S = i === x.ChannelModes.VIDEO), (0, a.jsx)(D, {
+    s = (0, o.useStateFromStores)([g.default], () => g.default.getChannelId(), []),
+    i = (0, o.useStateFromStores)([c.default], () => null != s ? c.default.getMode(s) : R.ChannelModes.VOICE, [s]),
+    r = (0, o.useStateFromStores)([m.default], () => m.default.getAllApplicationStreamsForChannel(n).length > 0),
+    u = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(), []),
+    d = (0, o.useStateFromStores)([E.default], () => E.default.getMentionCount(n), [n]),
+    {
+      isFacepileEnabled: f
+    } = p.default.useExperiment({
+      location: "unread_direct_message"
+    }, {
+      autoTrackExposure: !1
+    }),
+    C = s === n,
+    S = !1,
+    I = !1;
+  return C && (S = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
     ...e,
     ref: t,
     channelName: l,
     unread: d > 0,
     selected: u === n,
     badge: d,
-    audio: p,
-    video: S,
+    audio: S,
+    video: I,
     stream: r,
-    isCurrentUserInThisDMCall: f
+    isCurrentUserInThisDMCall: C,
+    isGDMFacepileEnabled: f
   })
 })
