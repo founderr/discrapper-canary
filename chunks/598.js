@@ -130,7 +130,7 @@ function B(e) {
       applicationId: t
     } = e;
     return t === Y
-  })), eJ = (0, d.default)(eq), eZ = (0, l.useStateFromStores)([T.default], () => null != em ? T.default.getForSKU(em) : null, [em]), e$ = ej[null != em ? em : ""];
+  })), eJ = (0, d.default)(eq), eZ = (0, l.useStateFromStores)([T.default], () => null != em ? T.default.getForSKU(em) : null, [em]), e$ = ej[null != em ? em : ""], [e0, e1] = r.useState(null);
   return (0, i.jsx)(b.Provider, {
     value: {
       stripe: W,
@@ -199,7 +199,9 @@ function B(e) {
       activitySessionId: eJ,
       entitlementsGranted: eF,
       setEntitlementsGranted: ex,
-      referralCode: j
+      referralCode: j,
+      invoicePreview: e0,
+      setInvoicePreview: e1
     },
     children: (0, i.jsx)(s.Elements, {
       options: P.StripeElementsOptions,
