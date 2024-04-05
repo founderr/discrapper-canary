@@ -196,7 +196,7 @@ class f extends l.default {
         videoSSRC: s,
         rtxSSRC: a
       } = (0, d.extractSDP)(t);
-    return this.outboundStreams = n, this.codecs = i, this.extensions = (0, d.getExtensions)(t), this.audioSSRC = r, this.videoReady = s > 0 && a > 0, (this.videoStreamParameters[0].ssrc !== s || this.videoStreamParameters[0].rtxSsrc !== a || this.videoReady) && (this.videoStreamParameters[0].ssrc = 0 === s ? this.videoStreamParameters[0].ssrc : s, this.videoStreamParameters[0].rtxSsrc = 0 === a ? this.videoStreamParameters[0].rtxSsrc : a, this.videoStreamParameters[0].active = this.videoReady, this.emit(o.BaseConnectionEvent.Video, this.ids.userId, this.input.getVideoStreamId(), this.audioSSRC, s, a, this.videoStreamParameters)), t
+    return this.outboundStreams = n, this.codecs = i, this.extensions = (0, d.getExtensions)(t), this.audioSSRC = r, this.videoReady = s > 0 && a > 0, (this.videoStreamParameters[0].ssrc !== s || this.videoStreamParameters[0].rtxSsrc !== a || this.videoReady) && (this.videoStreamParameters[0].ssrc = 0 === s ? this.videoStreamParameters[0].ssrc : s, this.videoStreamParameters[0].rtxSsrc = 0 === a ? this.videoStreamParameters[0].rtxSsrc : a, this.videoStreamParameters[0].active = this.videoReady, this.emit(o.BaseConnectionEvent.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, s, a, this.videoStreamParameters)), t
   }
   addTransceivers(e, t, n, i) {
     let r = this.pc,

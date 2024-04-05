@@ -248,13 +248,6 @@ let P = new y(d.default, __OVERLAY__ ? {} : {
       i.setAppBackgrounded(t, n)
     }
     return e.state === A.AppStates.ACTIVE && null != i && i.resetBackoff("App state is active"), !1
-  },
-  RTC_LOG_MARKER: function(e) {
-    if (null == i) {
-      console.warn("handleRtcLogMarker: Unexpected state, no rtcConnection.");
-      return
-    }
-    i.setRtcLogMarker(e.marker)
   }
 });
 Promise.resolve().then(n.bind(n, "626135")).then(e => {
