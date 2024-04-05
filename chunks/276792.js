@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   adaptAnnouncementModalVariant1: function() {
-    return C
+    return m
   }
 });
 var a = n("735250");
@@ -13,85 +13,94 @@ var s = n("740111"),
   o = n("976644"),
   u = n("626135"),
   d = n("63063"),
-  c = n("474936"),
-  f = n("981631"),
-  E = n("689938"),
-  h = n("464765"),
-  _ = n("74316");
+  c = n("823188"),
+  f = n("474936"),
+  E = n("981631"),
+  h = n("689938"),
+  _ = n("464765"),
+  C = n("74316");
 
-function C(e) {
+function m(e) {
   var t, n;
   let {
-    content: C,
-    renderModalProps: m,
-    analyticsLocations: S,
-    analyticsLocation: I,
-    isLightTheme: p
-  } = e, T = "AnnouncementModalVariant1", {
-    onClose: g
-  } = m, A = null != C.button && "" !== C.button.copy ? C.button.copy : E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, N = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", v = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
-    (0, r.transitionTo)(f.Routes.APPLICATION_STORE), g()
+    content: m,
+    renderModalProps: S,
+    analyticsLocations: I,
+    analyticsLocation: p,
+    isLightTheme: T
+  } = e, g = "AnnouncementModalVariant1", {
+    onClose: A
+  } = S, N = null != m.button && "" !== m.button.copy ? m.button.copy : h.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+    (0, r.transitionTo)(E.Routes.APPLICATION_STORE), A()
   } : () => (0, i.default)({
-    subscriptionTier: c.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: S,
+    subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
+    analyticsLocations: I,
     analyticsObject: {
-      ...I,
-      object: f.AnalyticsObjects.BUTTON_CTA,
-      objectType: f.AnalyticsObjectTypes.TIER_2
+      ...p,
+      object: E.AnalyticsObjects.BUTTON_CTA,
+      objectType: E.AnalyticsObjectTypes.TIER_2
     },
     onClose: e => {
-      e && g()
+      e && A()
     }
-  }), R = "" !== C.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
-    className: h.termsApplyAnchor,
-    href: d.default.getArticleURL(C.helpArticleId),
+  }), O = "" !== m.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
+    className: _.termsApplyAnchor,
+    href: d.default.getArticleURL(m.helpArticleId),
     children: (0, a.jsx)(l.Heading, {
       variant: "heading-md/normal",
-      className: h.termsApplyBodyText,
-      children: E.default.Messages.BOGO_TERMS_APPLY
+      className: _.termsApplyBodyText,
+      children: h.default.Messages.BOGO_TERMS_APPLY
     })
-  }) : void 0, O = {
+  }) : void 0, L = {
     type: "video",
-    src: p ? C.heroArtVideoLinkLightTheme : C.videoLink
+    src: T ? m.heroArtVideoLinkLightTheme : m.videoLink
   };
-  return ("" !== C.heroArtImageLinkDarkTheme || "" !== C.heroArtImageLinkLightTheme) && (O = {
+  ("" !== m.heroArtImageLinkDarkTheme || "" !== m.heroArtImageLinkLightTheme) && (L = {
     type: "image",
-    src: p ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
-  }), {
-    renderModalProps: m,
-    header: C.header,
-    subHeader: C.subheader,
-    subHeaderExtra: R,
-    heroArt: O,
-    featureCards: C.featureCards.map(e => ({
+    src: T ? m.heroArtImageLinkLightTheme : m.heroArtImageLinkDarkTheme
+  });
+  let P = T ? c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
+    M = "" !== m.modalTopPill ? () => (0, a.jsx)(c.PremiumPillWithSparkles, {
+      text: m.modalTopPill,
+      className: _.modalTopPill,
+      colorOptions: P
+    }) : void 0;
+  return {
+    renderModalProps: S,
+    header: m.header,
+    modalTopExtra: M,
+    subHeader: m.subheader,
+    subHeaderExtra: O,
+    heroArt: L,
+    featureCards: m.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
-      imageSrc: p ? e.imageLinkLightTheme : e.imageLink,
+      imageSrc: T ? e.imageLinkLightTheme : e.imageLink,
       tagText: "" !== e.pill ? e.pill : void 0
     })),
-    changeLogId: T,
+    changeLogId: g,
     button: () => {
       let e = Date.now();
       return (0, a.jsxs)(o.default, {
-        className: h.buttonWide,
-        innerClassName: h.innerButton,
+        className: _.buttonWide,
+        innerClassName: _.innerButton,
         color: l.Button.Colors.GREEN,
         size: l.Button.Sizes.SMALL,
         onClick: () => {
-          u.default.track(f.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-            change_log_id: T,
-            cta_type: N,
+          u.default.track(E.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+            change_log_id: g,
+            cta_type: v,
             seconds_open: Math.round((Date.now() - e) / 1e3),
-            target: T
-          }), v()
+            target: g
+          }), R()
         },
         children: [(0, a.jsx)("img", {
           alt: "",
-          className: h.nitroIconSubHeader,
-          src: _
-        }), A]
+          className: _.nitroIconSubHeader,
+          src: C
+        }), N]
       })
     },
-    modalDismissibleContent: "" !== C.dismissKey ? Number(C.dismissKey) : void 0
+    modalDismissibleContent: "" !== m.dismissKey ? Number(m.dismissKey) : void 0
   }
 }
