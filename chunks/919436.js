@@ -132,29 +132,7 @@ class D extends(l = s.PureComponent) {
     } = this.props, {
       hovered: h,
       animating: C
-    } = this.state, m = (e, l) => {
-      let s = e.isMultiUserDM();
-      return (0, a.jsx)(T.default, {
-        to: x.Routes.CHANNEL(x.ME, e.id),
-        onMouseEnter: () => this.setState({
-          hovered: !0
-        }),
-        onMouseLeave: () => this.setState({
-          hovered: !1
-        }),
-        selected: n || h,
-        ariaLabel: null != t ? t : "",
-        onContextMenu: this.handleContextMenu,
-        icon: s ? void 0 : this.getChannelIcon(),
-        children: s ? (0, a.jsx)(p.default, {
-          channel: e,
-          size: u.AvatarSizes.SIZE_48,
-          facepileSizeOverride: 36,
-          experimentLocation: "unread_gdm"
-        }) : void 0,
-        ...l
-      })
-    };
+    } = this.state;
     return (0, a.jsx)(i.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, a.jsxs)(A.ListItem, {
@@ -176,10 +154,32 @@ class D extends(l = s.PureComponent) {
               isCurrentUserConnected: c
             }),
             lowerBadgeWidth: (0, N.getBadgeWidthForValue)(l),
-            children: (0, a.jsx)(r.ListNavigatorItem, {
-              id: e.id,
-              children: t => m(e, t)
-            })
+            children: (() => {
+              let l = e.isMultiUserDM();
+              return (0, a.jsx)(r.ListNavigatorItem, {
+                id: e.id,
+                children: s => (0, a.jsx)(T.default, {
+                  to: x.Routes.CHANNEL(x.ME, e.id),
+                  onMouseEnter: () => this.setState({
+                    hovered: !0
+                  }),
+                  onMouseLeave: () => this.setState({
+                    hovered: !1
+                  }),
+                  selected: n || h,
+                  ariaLabel: null != t ? t : "",
+                  onContextMenu: this.handleContextMenu,
+                  icon: l ? void 0 : this.getChannelIcon(),
+                  children: l ? (0, a.jsx)(p.default, {
+                    channel: e,
+                    size: u.AvatarSizes.SIZE_48,
+                    facepileSizeOverride: 36,
+                    experimentLocation: "unread_gdm"
+                  }) : void 0,
+                  ...s
+                })
+              })
+            })()
           })
         })]
       })
