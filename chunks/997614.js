@@ -30,8 +30,8 @@ function T(e) {
   } = e, I = t.getGuildId(), {
     mute: A,
     suppress: v
-  } = (0, f.default)(t), N = (0, s.useStateFromStores)([p.default], () => p.default.isDeaf()), x = A || v || N, M = (0, u.useSoundBoardDismissContentTypes)({
-    isSoundboardButtonDisabled: x
+  } = (0, f.default)(t), x = (0, s.useStateFromStores)([p.default], () => p.default.isDeaf()), N = A || v || x, M = (0, u.useSoundBoardDismissContentTypes)({
+    isSoundboardButtonDisabled: N
   }), [R, L] = (0, o.useGetDismissibleContent)(M);
 
   function y(e) {
@@ -77,10 +77,10 @@ function T(e) {
       label: function() {
         if (A) return _.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
         if (v) return _.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (N) return _.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED
+        if (x) return _.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED
       }(),
       iconComponent: E.default,
-      disabled: x,
+      disabled: N,
       onContextMenu: y,
       ...e
     })

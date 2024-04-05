@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("151827"),
   A = n("626135"),
   v = n("768581"),
-  N = n("585483"),
-  x = n("233870"),
+  x = n("585483"),
+  N = n("233870"),
   M = n("51144"),
   R = n("998502"),
   L = n("276264"),
@@ -74,7 +74,7 @@ function b(e) {
           decoration: "never"
         })),
         n = "<@".concat(t.id, ">");
-      N.ComponentDispatch.dispatchToLastSubscribed(y.ComponentActions.INSERT_TEXT, {
+      x.ComponentDispatch.dispatchToLastSubscribed(y.ComponentActions.INSERT_TEXT, {
         plainText: e,
         rawText: n
       }), u.default.startTyping(l.id)
@@ -165,12 +165,12 @@ function F(e) {
     channel: t
   } = e, s = g.default.getCurrentUser(), o = null == s ? void 0 : s.isStaff(), {
     analyticsLocations: u
-  } = (0, c.default)(d.default.MEMBER_LIST), m = (0, i.useStateFromStoresArray)([g.default], () => (0, x.getRecipients)(t.recipients, g.default), [t.recipients]), {
+  } = (0, c.default)(d.default.MEMBER_LIST), m = (0, i.useStateFromStoresArray)([g.default], () => (0, N.getRecipients)(t.recipients, g.default), [t.recipients]), {
     installedIntegrations: p,
     applicationsShelf: E,
     fetched: C,
     appsInGDMEnabled: v,
-    availableApplications: N
+    availableApplications: x
   } = (0, f.usePrivateChannelIntegrationState)({
     channelId: t.id
   });
@@ -210,7 +210,7 @@ function F(e) {
           }), p.map(e => (0, a.jsx)(U, {
             integration: e,
             channel: t
-          }, e.application.id)), N.length > 0 && (0, a.jsx)(T.default, {
+          }, e.application.id)), x.length > 0 && (0, a.jsx)(T.default, {
             className: j.member,
             onClick: () => {
               (0, r.openModalLazy)(async () => {

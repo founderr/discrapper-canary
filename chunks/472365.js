@@ -31,8 +31,8 @@ var l = n("735250"),
   x = n("358085"),
   R = n("998502"),
   y = n("379164"),
-  O = n("590965"),
-  M = n("981631"),
+  M = n("590965"),
+  O = n("981631"),
   D = n("474936"),
   b = n("689938"),
   j = n("761167"),
@@ -44,21 +44,21 @@ function U() {
     sourceAnalyticsLocations: t
   } = (0, c.default)(d.default.PREMIUM_UPSELL_TOOLTIP);
   return a.useEffect(() => {
-    L.default.track(M.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    L.default.track(O.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: D.PremiumUpsellTypes.GUILD_CAP_INLINE_INVITE_MODAL,
       location: {
-        page: M.AnalyticsPages.NATIVE_INVITE_MODAL
+        page: O.AnalyticsPages.NATIVE_INVITE_MODAL
       },
       location_stack: t
     })
   }, [t]), (0, l.jsxs)(o.Clickable, {
     onClick: () => (0, p.default)({
       analyticsSource: {
-        page: M.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL
+        page: O.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL
       },
       analyticsLocation: {
-        page: M.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL,
-        section: M.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+        page: O.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL,
+        section: O.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
       },
       analyticsLocations: e
     }),
@@ -144,7 +144,7 @@ function F(e) {
     invite: p,
     error: E,
     submitting: I
-  } = (0, r.useStateFromStoresObject)([O.default], () => O.default.getProps());
+  } = (0, r.useStateFromStoresObject)([M.default], () => M.default.getProps());
   a.useEffect(() => {
     !__OVERLAY__ && x.isPlatformEmbedded && ((0, x.isWindows)() ? R.default.minimize() : R.default.restore(), R.default.focus())
   }, []);
@@ -153,7 +153,7 @@ function F(e) {
       analyticsLocations: T
     } = (0, c.default)(d.default.INVITE_MODAL);
   if (null == p) return null;
-  if (p.state === M.InviteStates.EXPIRED || p.state === M.InviteStates.BANNED || p.state === M.InviteStates.ERROR) return (0, l.jsx)(w, {
+  if (p.state === O.InviteStates.EXPIRED || p.state === O.InviteStates.BANNED || p.state === O.InviteStates.ERROR) return (0, l.jsx)(w, {
     transitionState: s
   });
   if (null == p.channel) return null;

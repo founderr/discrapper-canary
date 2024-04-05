@@ -30,13 +30,13 @@ var a = n("735250"),
   M = n("31932"),
   y = n("642301");
 
-function x(e) {
+function D(e) {
   null != e && _.default.open(e.id, T.GuildSettingsSections.OVERVIEW, {
     section: T.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
   }, T.GuildSettingsSubsections.DISPLAY)
 }
 
-function D(e, t) {
+function x(e, t) {
   t && _.default.open(e.id, T.GuildSettingsSections.DISCOVERY)
 }
 
@@ -108,8 +108,8 @@ t.default = s.memo(function(e) {
               content: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
               buttonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
               secondaryButtonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
-              onSecondaryClick: () => x(),
-              onClick: () => x(s),
+              onSecondaryClick: () => D(),
+              onClick: () => D(s),
               markAsDismissed: k
             }),
             renderGuildHeaderDropdownButton: r
@@ -127,8 +127,8 @@ t.default = s.memo(function(e) {
               content: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
               buttonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
               secondaryButtonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
-              onSecondaryClick: () => x(),
-              onClick: () => x(s),
+              onSecondaryClick: () => D(),
+              onClick: () => D(s),
               markAsDismissed: k
             }),
             renderGuildHeaderDropdownButton: r
@@ -144,8 +144,8 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_SERVER_DISCOVERY_TOOLTIP:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(d.default, {
-              onClick: () => D(s, !0),
-              onSecondaryClick: () => D(s),
+              onClick: () => x(s, !0),
+              onSecondaryClick: () => x(s),
               markAsDismissed: k
             }),
             renderGuildHeaderDropdownButton: r

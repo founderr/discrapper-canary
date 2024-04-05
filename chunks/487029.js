@@ -48,7 +48,7 @@ function N(e) {
         };
       return a.forEach(e => s(e, !0)), a.forEach(e => s(e, !1)), l
     }, [t, n, e])
-  }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), y = (0, m.useGuildIdsToFetchSoundsFor)(), O = a.useRef(null), [M, D] = a.useState(void 0), b = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
+  }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), y = (0, m.useGuildIdsToFetchSoundsFor)(), M = a.useRef(null), [O, D] = a.useState(void 0), b = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
     analyticsLocations: j
   } = (0, o.default)(r.default.SOUNDBOARD_WHEEL), G = a.useCallback(e => {
     (0, C.playSound)(e, n.id, j), x()
@@ -58,7 +58,7 @@ function N(e) {
   }, []), a.useEffect(() => {
     0 === R.length && 0 === y.length && x()
   }, [R.length, y, x]), a.useEffect(() => () => {
-    let e = O.current;
+    let e = M.current;
     !A && null != e && G(e)
   }, [A, G]), (0, u.default)({
     type: s.ImpressionTypes.POPOUT,
@@ -72,7 +72,7 @@ function N(e) {
     disableTrack: !L
   });
   let U = a.useCallback(e => {
-      O.current = e, D(null == e ? void 0 : e.soundId)
+      M.current = e, D(null == e ? void 0 : e.soundId)
     }, []),
     P = a.useCallback(e => {
       if (null == e) {
@@ -91,9 +91,9 @@ function N(e) {
       interactive: L,
       className: I.soundButton,
       sound: e,
-      focused: M === e.soundId,
+      focused: O === e.soundId,
       channel: n
-    }, e.soundId)), [M, n, L, R]);
+    }, e.soundId)), [O, n, L, R]);
   return 0 === R.length ? null : (0, l.jsx)(o.AnalyticsLocationProvider, {
     value: j,
     children: (0, l.jsx)(E.default, {
@@ -102,7 +102,7 @@ function N(e) {
       itemWidth: 96,
       itemHeight: 52,
       showDeadZoneIndicator: !A,
-      activeItem: M,
+      activeItem: O,
       onItemSelect: P,
       onItemAction: w,
       interactive: L,

@@ -28,8 +28,8 @@ t.default = e => {
     guildId: v,
     inviteCode: R
   } = e, [O, L] = s.useState(T.WaveStates.INITIAL), P = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), M = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
-    hasFetchedRequestToJoinGuilds: x,
-    guildPreviewDisabled: D
+    hasFetchedRequestToJoinGuilds: D,
+    guildPreviewDisabled: x
   } = (0, l.useStateFromStoresObject)([C.default], () => ({
     hasFetchedRequestToJoinGuilds: C.default.hasFetchedRequestToJoinGuilds,
     guildPreviewDisabled: C.default.getJoinRequestGuild(v)
@@ -37,8 +37,8 @@ t.default = e => {
   s.useEffect(() => {
     null != y && (0, r.transitionTo)(p.Routes.CHANNEL(v))
   }, [y, v]), s.useEffect(() => {
-    !x && f.default.fetchRequestToJoinGuilds()
-  }, [x]);
+    !D && f.default.fetchRequestToJoinGuilds()
+  }, [D]);
   let b = s.useCallback(e => {
       L(t => Math.max(t, e))
     }, []),
@@ -48,7 +48,7 @@ t.default = e => {
       f.default.resetGuildJoinRequest(v)
     };
   let G = (n = g.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
-      name: null == D ? void 0 : D.toString()
+      name: null == x ? void 0 : x.toString()
     }), N = () => {
       L(Math.max(O, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(p.Routes.ME)
     }, () => {
@@ -87,7 +87,7 @@ t.default = e => {
             case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
               return (0, a.jsx)(S.default, {
                 onWithdrawApplication: G,
-                guild: D
+                guild: x
               });
             case _.GuildJoinRequestApplicationStatuses.REJECTED:
               return (0, a.jsx)(m.default, {
@@ -96,7 +96,7 @@ t.default = e => {
                 confirmText: g.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
                 onWithdrawApplication: G,
                 rejectionReason: null == M ? void 0 : M.rejectionReason,
-                guild: D
+                guild: x
               });
             default:
               return (0, a.jsx)(I.default, {

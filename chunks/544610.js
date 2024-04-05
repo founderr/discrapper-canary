@@ -18,12 +18,12 @@ let T = !1,
   I = "",
   A = 0,
   v = [],
-  N = !1,
-  x = new Set,
+  x = !1,
+  N = new Set,
   M = null;
 
 function R() {
-  I = "", A = 0, v = [], x = new Set, T = !1, M = null
+  I = "", A = 0, v = [], N = new Set, T = !1, M = null
 }
 
 function L(e) {
@@ -66,8 +66,8 @@ function y() {
 
 function O() {
   if (!T) return !1;
-  let e = N;
-  return (N = u().some(g.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
+  let e = x;
+  return (x = u().some(g.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
 }
 
 function j(e, t) {
@@ -113,10 +113,10 @@ class w extends(l = d.default.Store) {
     return v
   }
   hasFriends() {
-    return N
+    return x
   }
   getSelectedUsers() {
-    return x
+    return N
   }
   getQuery() {
     return I
@@ -125,9 +125,9 @@ class w extends(l = d.default.Store) {
     return {
       query: I,
       selectedRow: A,
-      selectedUsers: x,
+      selectedUsers: N,
       results: v,
-      hasFriends: N
+      hasFriends: x
     }
   }
 }
@@ -168,13 +168,13 @@ let k = new w(c.default, {
     let {
       userId: t
     } = e;
-    x.add(t), x = new Set(x)
+    N.add(t), N = new Set(N)
   },
   PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER: function(e) {
     let {
       userId: t
     } = e;
-    x.delete(t), x = new Set(x)
+    N.delete(t), N = new Set(N)
   }
 });
 t.default = k

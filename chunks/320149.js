@@ -35,20 +35,20 @@ function N(e) {
   }, [t.id, L, R, O, v]), y = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(T.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), {
-    markAsNotSpam: x
+    markAsNotSpam: D
   } = (0, f.useMessageRequestActions)({
     onAcceptSuccess: M,
     onError: y
   });
   if (null == t || !t.isDM()) return null;
-  let D = [(0, a.jsx)(S.default.Icon, {
+  let x = [(0, a.jsx)(S.default.Icon, {
     icon: m.default,
     tooltip: T.default.Messages.CLOSE,
     onClick: () => _.default.closeChannelSidebar(n)
   }, "close")];
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(S.default, {
-      toolbar: D,
+      toolbar: x,
       "aria-label": T.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
       children: (0, o.renderTitle)({
         channel: t,
@@ -64,7 +64,7 @@ function N(e) {
       }), (0, a.jsx)(i.Button, {
         className: A.hamBannerButton,
         size: i.ButtonSizes.SMALL,
-        onClick: () => x(t, P),
+        onClick: () => D(t, P),
         children: T.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
       })]
     }), (0, a.jsx)("div", {

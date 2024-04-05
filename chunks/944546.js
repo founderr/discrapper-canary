@@ -65,7 +65,7 @@ function S(e) {
       roleId: v
     } = (0, f.useUserProfileAnalyticsContext)();
 
-  function N(e) {
+  function x(e) {
     c(), (0, m.openUserProfileModal)({
       userId: e,
       guildId: T,
@@ -79,7 +79,7 @@ function S(e) {
     })
   }
 
-  function x(e, t) {
+  function N(e, t) {
     (0, r.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -106,8 +106,8 @@ function S(e) {
   }) : S.map(e => (0, a.jsx)(g, {
     user: e.user,
     status: e.status,
-    onSelect: N,
-    onContextMenu: x
+    onSelect: x,
+    onContextMenu: N
   }, e.key)), (0, a.jsx)(i.ScrollerThin, {
     className: C.listScroller,
     fade: !0,

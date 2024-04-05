@@ -22,8 +22,8 @@ var a = n("735250"),
   I = n("496675"),
   A = n("306680"),
   v = n("62817"),
-  N = n("594174"),
-  x = n("68588"),
+  x = n("594174"),
+  N = n("68588"),
   M = n("459273"),
   R = n("255269"),
   L = n("47481"),
@@ -49,8 +49,8 @@ let F = l.memo(function(e) {
     uploads: T,
     hasUnreads: A,
     editingMessageId: v,
-    fontSize: N,
-    keyboardModeEnabled: x,
+    fontSize: x,
+    keyboardModeEnabled: N,
     filterAfterTimestamp: R,
     showingQuarantineBanner: L,
     hideSummaries: F = !1
@@ -59,16 +59,16 @@ let F = l.memo(function(e) {
     messageGroups: 30,
     groupRange: 4,
     attachments: 8,
-    fontSize: N,
+    fontSize: x,
     groupSpacing: c
   }) : (0, y.generateMessageSpecs)({
     compact: !1,
     messageGroups: 26,
     groupRange: 4,
     attachments: 8,
-    fontSize: N,
+    fontSize: x,
     groupSpacing: c
-  }), [S, N, c]), B = (0, j.default)({
+  }), [S, x, c]), B = (0, j.default)({
     messages: E,
     channel: m,
     compact: S,
@@ -81,7 +81,7 @@ let F = l.memo(function(e) {
   }), G = (0, O.default)({
     scrollerRef: B.ref,
     isEditing: null != v,
-    keyboardModeEnabled: x,
+    keyboardModeEnabled: N,
     hasMoreAfter: E.hasMoreAfter
   });
   let V = (n = m, (0, o.useStateFromStores)([p.default], () => I.default.can(D.Permissions.READ_MESSAGE_HISTORY, n) ? null : p.default.getViewingRolesTimestamp(n.getGuildId()))),
@@ -269,7 +269,7 @@ t.default = l.memo(function(e) {
       }, {
         autoTrackExposure: !1
       }),
-      r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(D.UserFlags.SPAMMER)) && void 0 !== n && n,
+      r = null !== (n = null === (t = x.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(D.UserFlags.SPAMMER)) && void 0 !== n && n,
       u = (0, c.useChannelSummariesExperiment)(e),
       d = (0, h.default)("use_topic_dividers_in_chat"),
       f = (0, o.useStateFromStoresArray)([E.default], () => {
@@ -295,7 +295,7 @@ t.default = l.memo(function(e) {
       })
     }
   }(t);
-  return (0, a.jsx)(x.ObscuredDisplayContext.Provider, {
+  return (0, a.jsx)(N.ObscuredDisplayContext.Provider, {
     value: (0, R.default)(P, d),
     children: (0, a.jsx)(F, {
       ...u,

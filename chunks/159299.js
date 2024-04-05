@@ -148,7 +148,7 @@ function v(e) {
   for (let e in _) _[e].guildId === t && (_[e].rebuild(), n = !0);
   return n
 }
-class N extends(a = i.default.Store) {
+class x extends(a = i.default.Store) {
   initialize() {
     this.waitFor(o.default, u.default, d.default, c.default, f.default, h.default), this.syncWith([d.default], () => {
       let e = d.default.getSubscribedThreadIds(),
@@ -176,7 +176,7 @@ class N extends(a = i.default.Store) {
     return null !== (l = null == i ? void 0 : i.canViewChannel) && void 0 !== l && l
   }
 }
-S(N, "displayName", "ThreadMemberListStore"), t.default = new N(r.default, {
+S(x, "displayName", "ThreadMemberListStore"), t.default = new x(r.default, {
   CONNECTION_OPEN: function() {
     _ = {}
   },

@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("594174"),
   A = n("185403"),
   v = n("158010"),
-  N = n("183156"),
-  x = n("52736"),
+  x = n("183156"),
+  N = n("52736"),
   M = n("700785"),
   R = n("51144"),
   L = n("396769"),
@@ -142,7 +142,7 @@ function b(e) {
         var l, s;
         let r = null !== (s = e.colorString) && void 0 !== s ? s : (0, d.int2hex)(j.DEFAULT_ROLE_COLOR),
           o = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== void 0;
-        return B ? (0, a.jsx)(N.default, {
+        return B ? (0, a.jsx)(x.default, {
           className: i()(D.role, {
             [D.last]: n === k.length - 1
           }),
@@ -153,7 +153,7 @@ function b(e) {
           onClick: () => {
             g.default.open(t.guild_id, j.GuildSettingsSections.MEMBERS), g.default.selectRole(e.id)
           }
-        }, e.id) : (0, a.jsx)(x.default, {
+        }, e.id) : (0, a.jsx)(N.default, {
           className: i()(D.role, {
             [D.last]: n === k.length - 1
           }),

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return x
   }
 }), n("653041"), n("47120");
 var a = n("735250"),
@@ -83,7 +83,7 @@ let P = {
     }
   };
 
-function x(e) {
+function D(e) {
   var t, s;
   let {
     channel: l,
@@ -96,8 +96,8 @@ function x(e) {
   } = e, T = (0, r.useStateFromStores)([I.default], () => I.default.isLocalMute(o.id)), g = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
-  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), x = null != u ? u : v.default.getName(o), {
-    icon: D,
+  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), D = null != u ? u : v.default.getName(o), {
+    icon: x,
     colorize: b,
     getStatus: U
   } = null !== (s = function(e) {
@@ -120,9 +120,9 @@ function x(e) {
     mute: d,
     localMute: T
   })) && void 0 !== s ? s : {}, j = null != U ? O.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
-    userName: x,
+    userName: D,
     status: U()
-  }) : x;
+  }) : D;
 
   function G(e) {
     null != A ? (0, E.openContextMenuLazy)(e, async () => {
@@ -178,7 +178,7 @@ function x(e) {
             style: {
               backgroundImage: "url(".concat(N, ")")
             },
-            children: null != D ? (0, a.jsx)(D, {
+            children: null != x ? (0, a.jsx)(x, {
               className: i()(L.avatarIconOverlay, {
                 [L.avatarIconRed]: b
               }),
@@ -194,7 +194,7 @@ function x(e) {
   })
 }
 
-function D(e) {
+function x(e) {
   let {
     voiceStates: t,
     channel: n,
@@ -235,7 +235,7 @@ function D(e) {
           nick: s,
           voiceState: l
         } = e;
-        return t.id !== E ? (0, a.jsx)(x, {
+        return t.id !== E ? (0, a.jsx)(D, {
           channel: n,
           user: t,
           nick: s,

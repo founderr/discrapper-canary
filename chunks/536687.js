@@ -50,8 +50,8 @@ function v(e) {
     P = null != s && Date.now() - s <= N.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     M = null != e ? e.premiumSubscriberCount : 0,
     y = (0, A.getGuildTierFromAppliedBoostCount)(M, n) !== N.BoostedGuildTiers.NONE,
-    x = null != a && Date.now() - a <= 432e5,
-    D = !x && !P && L && y,
+    D = null != a && Date.now() - a <= 432e5,
+    x = !D && !P && L && y,
     b = (0, d.useGuildHasLiveChannelNotice)(n),
     U = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
     j = E.default.useShouldShowChannelNotice(n),
@@ -73,12 +73,12 @@ function v(e) {
       u.default.getGuildEventsForCurrentUser(n)
     }, [n]), l.useEffect(() => {
       let e = -1;
-      return D && (e = window.setTimeout(() => {
+      return x && (e = window.setTimeout(() => {
         null != n && (0, r.fetchAppliedGuildBoostsForGuild)(n)
       }, 30 * Math.random() * g.default.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
-    }, [n, D]), R) return 0;
+    }, [n, x]), R) return 0;
   if (v) return 1;
   if (O) return 2;
   else if (b || null != V) return 3;

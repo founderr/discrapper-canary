@@ -46,8 +46,8 @@ function I(e) {
   } = t, {
     id: u
   } = n, m = t.getGuildId(), E = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(m), [m]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, I = null != E && E.hasFeature(S.GuildFeatures.NEWS), v = g && I, {
-    editingMessage: N,
-    editingTextValue: x,
+    editingMessage: x,
+    editingTextValue: N,
     editingRichValue: M
   } = (0, s.useStateFromStoresObject)([c.default], () => ({
     editingMessage: c.default.getEditingMessage(o),
@@ -56,20 +56,20 @@ function I(e) {
   }), [o]), R = (0, s.useStateFromStores)([d.default], () => d.default.getId()), L = l.useCallback((e, n, a) => {
     let {
       content: l
-    } = a, s = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null;
-    return v && (o === R || s) && null != N && (0, C.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, l) : i.default.editMessage(e, n, {
+    } = a, s = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != x && null != x.author ? x.author.id : null;
+    return v && (o === R || s) && null != x && (0, C.hasFlag)(x.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, l) : i.default.editMessage(e, n, {
       content: l
     }), Promise.resolve()
-  }, [N, v, R, t]), y = l.useCallback(e => (0, l.createElement)(A, {
+  }, [x, v, R, t]), y = l.useCallback(e => (0, l.createElement)(A, {
     ...e,
     className: _.channelTextArea,
     key: u
   }), [u]);
-  return null != x && null != M ? (0, a.jsx)(p.default, {
+  return null != N && null != M ? (0, a.jsx)(p.default, {
     ref: void 0,
     channel: t,
     message: n,
-    textValue: x,
+    textValue: N,
     richValue: M,
     onCancel: i.default.endEditMessage,
     onChange: i.default.updateEditMessage,

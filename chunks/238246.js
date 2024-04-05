@@ -21,8 +21,8 @@ var a, l = n("735250"),
   I = n("597952"),
   A = n("628123"),
   v = n("151851"),
-  N = n("587061"),
-  x = n("392358"),
+  x = n("587061"),
+  N = n("392358"),
   M = n("892254"),
   R = n("706454"),
   L = n("210887"),
@@ -139,7 +139,7 @@ class V extends(a = s.Component) {
       guestWindow: S,
       clientThemesClassName: _,
       contentClassName: T
-    } = this.props, N = (0, D.getPlatform)(), x = r()(p, {
+    } = this.props, x = (0, D.getPlatform)(), N = r()(p, {
       "mouse-mode": o,
       "reduce-motion": c,
       "full-motion": !c,
@@ -155,7 +155,7 @@ class V extends(a = s.Component) {
             children: (0, l.jsx)("div", {
               "data-popout-root": !0,
               ref: this.rootRef,
-              className: r()((0, b.getThemeClass)(e), (0, I.default)(), x, _),
+              className: r()((0, b.getThemeClass)(e), (0, I.default)(), N, _),
               children: (0, l.jsx)(f.FocusRingScope, {
                 containerRef: this.rootRef,
                 children: (0, l.jsx)(E.default, {
@@ -166,9 +166,9 @@ class V extends(a = s.Component) {
                       children: (0, l.jsxs)(j.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
                           className: B.popout,
-                          children: [g && null != N ? (0, l.jsx)(v.default, {
+                          children: [g && null != x ? (0, l.jsx)(v.default, {
                             focused: n,
-                            type: N,
+                            type: x,
                             windowKey: i,
                             macOSFrame: !0
                           }) : null, (0, l.jsx)("div", {
@@ -239,8 +239,8 @@ let W = s.forwardRef(function(e, t) {
       useForcedColors: p.default.useForcedColors
     })),
     v = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
-  (0, N.default)(n, !1);
-  let M = (0, x.default)(n, a),
+  (0, x.default)(n, !1);
+  let M = (0, N.default)(n, a),
     {
       analyticsLocations: y
     } = (0, _.default)(S.default.POPOUT_WINDOW),

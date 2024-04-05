@@ -29,8 +29,8 @@ var a = n("735250"),
   I = n("323873"),
   A = n("998951"),
   v = n("630388"),
-  N = n("709054"),
-  x = n("534091"),
+  x = n("709054"),
+  N = n("534091"),
   M = n("901461"),
   R = n("739566"),
   L = n("233715"),
@@ -54,7 +54,7 @@ var a = n("735250"),
   K = n("264558");
 
 function Z(e, t, n) {
-  return e.getElementById((0, x.getMessageDOMId)(t, n))
+  return e.getElementById((0, N.getMessageDOMId)(t, n))
 }
 
 function X(e) {
@@ -119,18 +119,18 @@ function q(e) {
     compact: _ = !1,
     className: T,
     groupId: I
-  } = e, N = r.type === Y.MessageTypes.REPLY ? r.messageReference : void 0, {
-    onFocus: x,
+  } = e, x = r.type === Y.MessageTypes.REPLY ? r.messageReference : void 0, {
+    onFocus: N,
     ...L
   } = (0, u.useListItem)(null !== (t = e.id) && void 0 !== t ? t : ""), {
     isFocused: b,
     handleFocus: F,
     handleBlur: w
-  } = (0, O.useFocusInside)(x), {
+  } = (0, O.useFocusInside)(N), {
     popouts: B,
     selected: Z,
     setPopout: X
-  } = (0, P.default)(r.id, W.DEFAULT_POPOUTS), q = S.InlineEmbedMedia.useSetting(), Q = S.RenderEmbeds.useSetting(), J = (0, d.useStateFromStores)([C.default], () => C.default.getMessageByReference(N)), $ = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()), {
+  } = (0, P.default)(r.id, W.DEFAULT_POPOUTS), q = S.InlineEmbedMedia.useSetting(), Q = S.RenderEmbeds.useSetting(), J = (0, d.useStateFromStores)([C.default], () => C.default.getMessageByReference(x)), $ = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()), {
     handleMouseEnter: ee,
     handleMouseLeave: et,
     isHovered: en
@@ -173,12 +173,12 @@ function q(e) {
       onKeyDown: eo,
       onFocus: F,
       onBlur: w,
-      childrenRepliedMessage: (0, G.default)(e, X, B, N, J),
+      childrenRepliedMessage: (0, G.default)(e, X, B, x, J),
       childrenHeader: (0, k.default)({
         messageProps: e,
         setPopout: X,
         messagePopouts: B,
-        replyReference: N,
+        replyReference: x,
         author: eu,
         repliedMessage: J,
         roleIcon: em
@@ -208,7 +208,7 @@ t.default = l.memo(function(e) {
     id: r,
     message: g,
     message: {
-      id: x
+      id: N
     },
     channel: Z,
     channel: {
@@ -248,13 +248,13 @@ t.default = l.memo(function(e) {
       handleFocus: eg,
       handleBlur: eS
     } = (0, O.useFocusInside)(en),
-    e_ = (0, d.useStateFromStores)([I.default], () => I.default.isEditing(X, x), [X, x]),
+    e_ = (0, d.useStateFromStores)([I.default], () => I.default.isEditing(X, N), [X, N]),
     eT = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled),
     eI = eo || e_ || eT && eE,
     eA = eI || ep,
-    ev = (0, d.useStateFromStores)([_.default], () => g.hasFlag(Y.MessageFlags.HAS_THREAD) && _.default.getChannel(N.default.castMessageIdAsChannelId(g.id))),
-    eN = g.isFirstMessageInForumPost(Z),
-    ex = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = g.editedTimestamp) && void 0 !== n ? n : g.timestamp).valueOf()),
+    ev = (0, d.useStateFromStores)([_.default], () => g.hasFlag(Y.MessageFlags.HAS_THREAD) && _.default.getChannel(x.default.castMessageIdAsChannelId(g.id))),
+    ex = g.isFirstMessageInForumPost(Z),
+    eN = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = g.editedTimestamp) && void 0 !== n ? n : g.timestamp).valueOf()),
     eM = (0, d.useStateFromStores)([T.default], () => T.default.isDeveloper),
     {
       content: eR,
@@ -263,13 +263,13 @@ t.default = l.memo(function(e) {
       hideSimpleEmbedContent: el && es,
       isInteracting: eA,
       formatInline: !1,
-      allowList: eN || ex,
-      allowHeading: eN || ex,
+      allowList: ex || eN,
+      allowHeading: ex || eN,
       allowLinks: !0,
       allowDevLinks: eM,
       previewLinkTarget: !0
     }),
-    ey = (0, j.default)(x, X, eT),
+    ey = (0, j.default)(N, X, eT),
     eO = (0, R.default)(g),
     ej = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(X)),
     eP = function(e) {
@@ -282,7 +282,7 @@ t.default = l.memo(function(e) {
     }),
     eb = (0, y.getMessageAriaLabelledBy)(g, $),
     eU = (0, y.getMessageAriaDescribedBy)(g),
-    eF = (0, d.useStateFromStores)([h.default], () => h.default.getMessage(x), [x]),
+    eF = (0, d.useStateFromStores)([h.default], () => h.default.getMessage(N), [N]),
     ew = (0, b.default)({
       message: g,
       channel: Z

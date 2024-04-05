@@ -61,7 +61,7 @@ let A = i().throttle(e => {
         return null
     }
   },
-  N = e => {
+  x = e => {
     let {
       entry: t,
       ...n
@@ -114,7 +114,7 @@ t.default = l.memo(e => {
       let {
         closePopout: t
       } = e;
-      return (0, a.jsx)(N, {
+      return (0, a.jsx)(x, {
         closePopout: t,
         updatePopoutPosition: g,
         ...i

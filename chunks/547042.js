@@ -66,17 +66,17 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
           }
       }
     }(a), {
-      analyticsLocations: x
+      analyticsLocations: D
     } = (0, E.default)(s);
     i.useEffect(() => {
       C.default.track(m.AnalyticEvents.TOOLTIP_VIEWED, {
         type: A
       })
     }, [A]);
-    let D = (0, u.useAppContext)() === m.AppContext.POPOUT,
+    let x = (0, u.useAppContext)() === m.AppContext.POPOUT,
       b = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
     return (0, l.jsx)(E.AnalyticsLocationProvider, {
-      value: x,
+      value: D,
       children: (0, l.jsx)("div", {
         className: p.wrapper,
         children: (0, l.jsx)("div", {
@@ -132,8 +132,8 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                       object: m.AnalyticsObjects.ACTIVITIES_COACH_MARK,
                       objectType: m.AnalyticsObjectTypes.ACTIVITY
                     },
-                    openInPopout: D,
-                    analyticsLocations: x
+                    openInPopout: x,
+                    analyticsLocations: D
                   }), (0, d.fetchShelf)({
                     guildId: b.guild_id
                   }))

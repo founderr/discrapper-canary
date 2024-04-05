@@ -31,8 +31,8 @@ function A(e) {
       onContextMenuParticipant: s,
       onFullscreenParticipant: A,
       participants: v,
-      filteredParticipants: N,
-      popoutWindow: x,
+      filteredParticipants: x,
+      popoutWindow: N,
       inCall: M,
       channel: R,
       selectedParticipant: L,
@@ -44,7 +44,7 @@ function A(e) {
       layout: b,
       idle: U
     } = e,
-    F = null != x,
+    F = null != N,
     w = c.default.getVideoComponent(),
     k = d.default.getId(),
     [H, B] = l.useState(null),
@@ -129,7 +129,7 @@ function A(e) {
     {
       visibleParticipants: ed,
       participantTileWidth: ec
-    } = (0, E.useVisibleParticipants)(P, N);
+    } = (0, E.useVisibleParticipants)(P, x);
   return (0, a.jsxs)("div", {
     className: i()(_.root, S.flexCenter, O),
     children: [(0, a.jsxs)("div", {
@@ -208,7 +208,7 @@ function A(e) {
           selectedParticipantId: L.id,
           inCall: M,
           paused: j || W || !y,
-          popoutWindow: x
+          popoutWindow: N
         })
       })]
     }), eu.length > 0 ? (0, a.jsx)(m.default, {

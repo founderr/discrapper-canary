@@ -77,8 +77,8 @@ t.default = e => {
     currentCategoryId: P,
     currentCategoryName: M,
     onViewGuild: y,
-    onGuildCardSeen: x,
-    placeholder: D,
+    onGuildCardSeen: D,
+    placeholder: x,
     onTagClick: b
   } = e, U = i().uniqueId("GuildDiscovery"), {
     guilds: j,
@@ -140,7 +140,7 @@ t.default = e => {
       mostRecentQuery: l,
       isFetchingSearch: v,
       defaultLanguage: r,
-      placeholder: D,
+      placeholder: x,
       availableLanguages: c,
       isSearchPage: !0,
       currentCategoryId: P,
@@ -174,7 +174,7 @@ t.default = e => {
               loadingGuildId: O,
               theme: L,
               analyticsContext: h.AnalyticsContexts.SEARCH,
-              onGuildCardSeen: x,
+              onGuildCardSeen: D,
               onTagClick: b
             }), t]
           })

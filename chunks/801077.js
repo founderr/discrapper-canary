@@ -23,8 +23,8 @@ var l, a, s, i, r = n("392711"),
   x = n("592125"),
   R = n("480294"),
   y = n("831506"),
-  O = n("731290"),
-  M = n("430824"),
+  M = n("731290"),
+  O = n("430824"),
   D = n("496675"),
   b = n("158776"),
   j = n("699516"),
@@ -105,7 +105,7 @@ function en(e, t, n) {
   for (let e of t) {
     let n = v.default.getAnyStreamForUser(e.id),
       l = x.default.getChannel(null == n ? void 0 : n.channelId);
-    if ((null == l ? void 0 : l.isNSFW()) && (!C || !O.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
+    if ((null == l ? void 0 : l.isNSFW()) && (!C || !M.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
     let r = X(e.id);
     if (null != n && F.push({
         stream: n,
@@ -136,7 +136,7 @@ function en(e, t, n) {
           ChannelStore: x.default,
           VoiceStateStore: P.default,
           PermissionStore: D.default,
-          GuildStore: M.default
+          GuildStore: O.default
         }) !== f.EmbeddedActivityJoinability.CAN_JOIN) continue
     } else if (null == m) continue;
     if (!N.shouldShowActivity(r) || null == d || j.has(d.id)) continue;
@@ -166,7 +166,7 @@ function en(e, t, n) {
     let n = ee(e.id),
       l = x.default.getChannel(n),
       a = null != l ? l.getGuildId() : null,
-      s = M.default.getGuild(a);
+      s = O.default.getGuild(a);
     if (k.has(a) && H.has(n) || null == l || null == s || l.id === s.afkChannelId) null == l && (d = null, B = !0);
     else {
       let e = o()(P.default.getVoiceStatesForChannel(l.id)).map(e => {
@@ -237,7 +237,7 @@ function es() {
 }
 class ei extends(l = u.default.Store) {
   initialize() {
-    this.syncWith([U.default, E.default, b.default, y.default, P.default, v.default, j.default, R.default, G.default], es), this.waitFor(_.default, M.default, E.default, U.default, G.default)
+    this.syncWith([U.default, E.default, b.default, y.default, P.default, v.default, j.default, R.default, G.default], es), this.waitFor(_.default, O.default, E.default, U.default, G.default)
   }
   get currentActivityParties() {
     return H

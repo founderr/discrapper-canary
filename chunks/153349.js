@@ -24,8 +24,8 @@ var a, l, s = n("735250"),
   I = n("372662"),
   A = n("740624"),
   v = n("502568"),
-  N = n("471253"),
-  x = n("431328"),
+  x = n("471253"),
+  N = n("431328"),
   M = n("145834"),
   R = n("590415"),
   L = n("614173"),
@@ -75,18 +75,18 @@ let D = i.memo(function(e) {
     } = (0, c.useStateFromStoresObject)([_.default], () => ({
       isMobile: _.default.isMobileOnline(a.user.id),
       status: _.default.getStatus(a.user.id, S)
-    })), x = (0, c.useStateFromStores)([g.default], () => g.default.getMember(S, a.user.id)), L = i.useMemo(() => ({
+    })), N = (0, c.useStateFromStores)([g.default], () => g.default.getMember(S, a.user.id)), L = i.useMemo(() => ({
       [S]: [a.user.id]
     }), [S, a.user.id]);
     (0, p.useSubscribeGuildMembers)(L);
     let y = a.rtsState === R.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 
     function O() {
-      (0, N.setUserSuppress)(t, a.user.id, !1)
+      (0, x.setUserSuppress)(t, a.user.id, !1)
     }
 
     function D() {
-      (0, N.setUserSuppress)(t, a.user.id, !0)
+      (0, x.setUserSuppress)(t, a.user.id, !0)
     }
     let b = e => {
       (0, h.openContextMenuLazy)(e, async () => {
@@ -134,7 +134,7 @@ let D = i.memo(function(e) {
               className: P.participantTextContainer,
               children: [(0, s.jsx)(f.NameWithRole, {
                 name: a.userNick,
-                color: null !== (t = null == x ? void 0 : x.colorString) && void 0 !== t ? t : void 0,
+                color: null !== (t = null == N ? void 0 : N.colorString) && void 0 !== t ? t : void 0,
                 className: P.participantName
               }), (0, s.jsx)(f.Text, {
                 variant: "text-xs/normal",
@@ -207,7 +207,7 @@ function w(e) {
     channel: t,
     toggleRequestToSpeakSidebar: n,
     chatOpen: a
-  } = e, l = (0, x.useSortedRequestToSpeakParticipants)(t.id), i = [(0, c.useStateFromStores)([S.default], () => S.default.can(O.Permissions.MANAGE_CHANNELS, t) || S.default.can(O.Permissions.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, l.length)];
+  } = e, l = (0, N.useSortedRequestToSpeakParticipants)(t.id), i = [(0, c.useStateFromStores)([S.default], () => S.default.can(O.Permissions.MANAGE_CHANNELS, t) || S.default.can(O.Permissions.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, l.length)];
   return (0, s.jsxs)("div", {
     className: o()(P.container, {
       [P.chatOpen]: a

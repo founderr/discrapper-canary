@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("484459"),
   A = n("103575"),
   v = n("199902"),
-  N = n("271383"),
-  x = n("430824"),
+  x = n("271383"),
+  N = n("430824"),
   M = n("158776"),
   R = n("885110"),
   L = n("111583"),
@@ -55,9 +55,9 @@ let z = H.default.getEnableHardwareAcceleration(),
       sectionId: s,
       userId: i,
       guildOwnerId: r
-    } = e, o = (0, c.useStateFromStores)([L.default], () => L.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([N.default], () => N.default.getMember(t.guild_id, i)), E = (0, c.useStateFromStores)([x.default], () => {
+    } = e, o = (0, c.useStateFromStores)([L.default], () => L.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([x.default], () => x.default.getMember(t.guild_id, i)), E = (0, c.useStateFromStores)([N.default], () => {
       var e;
-      return (null == p ? void 0 : p.colorRoleId) != null ? null === (e = x.default.getRole(t.guild_id, p.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
+      return (null == p ? void 0 : p.colorRoleId) != null ? null === (e = N.default.getRole(t.guild_id, p.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
     }, [t.guild_id, p]), C = (0, c.useStateFromStores)([y.default], () => y.default.getUser(i)), S = (0, c.useStateFromStores)([y.default], () => y.default.getCurrentUser()), _ = (null == C ? void 0 : C.id) === (null == S ? void 0 : S.id), O = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getStatus() : M.default.getStatus(i, t.guild_id)), j = (0, c.useStateFromStores)([M.default], () => M.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getActivities() : M.default.getActivities(i, t.guild_id)), D = (0, c.useStateFromStores)([v.default], () => v.default.getAnyStreamForUser(i)), b = (0, u.useListItem)(i), U = (0, c.useStateFromStores)([T.default], () => T.default.canUserViewChannel(t.id, s, i)), w = (null == C ? void 0 : C.id) != null && C.id === r, H = l.useCallback(e => {
       null != C && (0, h.openContextMenuLazy)(e, async () => {
         let {

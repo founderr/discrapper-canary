@@ -30,7 +30,7 @@ var l = n("803997"),
 function v(e) {
   let {
     member: t
-  } = e, n = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(t.guildId), [t.guildId]), l = (0, h.useUserAccountVerified)(t.userId, t.guildId), v = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId), N = (0, h.useUserAccountAgeDate)(t.userId), x = (0, h.useGuildMemberJoinedAtDate)(t.userId, t.guildId);
+  } = e, n = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(t.guildId), [t.guildId]), l = (0, h.useUserAccountVerified)(t.userId, t.guildId), v = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId), x = (0, h.useUserAccountAgeDate)(t.userId), N = (0, h.useGuildMemberJoinedAtDate)(t.userId, t.guildId);
   return null == n ? null : (0, a.jsx)("div", {
     className: s()(A.__invalid_safetySignalsMainContainer),
     children: (0, a.jsx)(f.FormItem, {
@@ -90,7 +90,7 @@ function v(e) {
           description: (0, a.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: N
+            children: x
           })
         }), (0, a.jsx)(_.UserModInfoItem, {
           icon: (0, a.jsx)(C.GuildIcon, {
@@ -107,7 +107,7 @@ function v(e) {
           description: (0, a.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: x
+            children: N
           })
         }), (0, a.jsx)(_.UserModInfoItem, {
           icon: (0, a.jsx)(c.UserPlusIcon, {

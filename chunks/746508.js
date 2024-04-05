@@ -29,8 +29,8 @@ var a = n("735250"),
   P = n("938655"),
   M = n("403404"),
   y = n("100527"),
-  x = n("906732"),
-  D = n("158631"),
+  D = n("906732"),
+  x = n("158631"),
   b = n("793865"),
   U = n("933557"),
   j = n("258609"),
@@ -83,8 +83,8 @@ var a = n("735250"),
   eP = n("63063"),
   eM = n("51144"),
   ey = n("594117"),
-  ex = n("226323"),
-  eD = n("981631"),
+  eD = n("226323"),
+  ex = n("981631"),
   eb = n("190378"),
   eU = n("689938"),
   ej = n("815668"),
@@ -101,11 +101,11 @@ function ew(e, t, n) {
 
 function ek(e) {
   let t = e.currentTarget;
-  eL.default.track(eD.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
+  eL.default.track(ex.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
     text: t.text,
     href: t.href,
     location: {
-      section: eD.AnalyticsSections.NOISE_CANCELLATION_POPOUT
+      section: ex.AnalyticsSections.NOISE_CANCELLATION_POPOUT
     }
   })
 }
@@ -113,8 +113,8 @@ function ek(e) {
 function eF() {
   let e = s.useRef(null);
   (0, _.useFocusLock)(e), s.useEffect(() => {
-    eL.default.track(eD.AnalyticEvents.OPEN_POPOUT, {
-      type: eD.AnalyticsSections.NOISE_CANCELLATION_POPOUT
+    eL.default.track(ex.AnalyticEvents.OPEN_POPOUT, {
+      type: ex.AnalyticsSections.NOISE_CANCELLATION_POPOUT
     })
   }, []);
   let t = (0, d.useStateFromStores)([e_.default], () => e_.default.getNoiseCancellation());
@@ -126,7 +126,7 @@ function eF() {
       className: eG.marginBottom4,
       value: t,
       onChange: () => C.default.setNoiseCancellation(!t, {
-        section: eD.AnalyticsSections.NOISE_CANCELLATION_POPOUT
+        section: ex.AnalyticsSections.NOISE_CANCELLATION_POPOUT
       }),
       note: eU.default.Messages.NOISE_CANCELLATION_POPOUT_DESCRIPTION,
       children: eU.default.Messages.NOISE_CANCELLATION_POPOUT_HEADER
@@ -138,7 +138,7 @@ function eF() {
       buttonClassName: ej.micTestButton,
       buttonColor: _.Button.Colors.PRIMARY,
       location: {
-        section: eD.AnalyticsSections.NOISE_CANCELLATION_POPOUT
+        section: ex.AnalyticsSections.NOISE_CANCELLATION_POPOUT
       }
     }), (0, a.jsx)(_.FormTitle, {
       tag: _.FormTitleTags.H5,
@@ -148,13 +148,13 @@ function eF() {
       justify: eg.default.Justify.BETWEEN,
       className: ej.__invalid_footer,
       children: [(0, a.jsx)(_.Anchor, {
-        href: eD.MarketingURLs.KRISP,
+        href: ex.MarketingURLs.KRISP,
         onClick: e => ek(e),
         children: (0, a.jsx)("div", {
           className: ej.krispLogo
         })
       }), (0, a.jsx)(_.Anchor, {
-        href: eP.default.getArticleURL(eD.HelpdeskArticles.NOISE_SUPPRESSION),
+        href: eP.default.getArticleURL(ex.HelpdeskArticles.NOISE_SUPPRESSION),
         className: ej.krispLink,
         onClick: e => ek(e),
         children: eU.default.Messages.LEARN_MORE
@@ -188,7 +188,7 @@ function eH(e) {
     if (e_.default.isVideoEnabled() === e) return;
     let n = () => {
       var n;
-      C.default.setVideoEnabled(e), e && (0, Y.transitionTo)(eD.Routes.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eD.ME, t.id))
+      C.default.setVideoEnabled(e), e && (0, Y.transitionTo)(ex.Routes.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : ex.ME, t.id))
     };
     e ? (0, eo.default)(n, S) : n()
   }, [t, S]), p = u || n || c, {
@@ -288,7 +288,7 @@ function eV(e) {
     enableActivities: n
   } = e, s = (0, A.useAppContext)(), {
     analyticsLocations: l
-  } = (0, x.default)(), r = s === eD.AppContext.POPOUT, o = (0, O.useEmbeddedActivityLaunchability)(t.id), u = (0, O.getEmbeddedActivityLaunchabilityLabel)(o), [f] = (0, d.useStateFromStores)([N.default], () => null != t.id && "" !== t.id ? N.default.getEmbeddedActivitiesForChannel(t.id) : N.NO_ACTIVITIES), {
+  } = (0, D.default)(), r = s === ex.AppContext.POPOUT, o = (0, O.useEmbeddedActivityLaunchability)(t.id), u = (0, O.getEmbeddedActivityLaunchabilityLabel)(o), [f] = (0, d.useStateFromStores)([N.default], () => null != t.id && "" !== t.id ? N.default.getEmbeddedActivitiesForChannel(t.id) : N.NO_ACTIVITIES), {
     userInActivity: E
   } = (0, d.useStateFromStoresObject)([N.default], () => ({
     userInActivity: null != N.default.getSelfEmbeddedActivityForChannel(t.id)
@@ -354,7 +354,7 @@ function eY(e) {
     C = (0, d.useStateFromStoresObject)([N.default], () => null != N.default.getSelfEmbeddedActivityForChannel(n.id)),
     m = (0, W.default)(n),
     S = s.useCallback(() => {
-      (0, er.default)(h, n.id, eD.AnalyticsSections.ACTIVITY_PANEL)
+      (0, er.default)(h, n.id, ex.AnalyticsSections.ACTIVITY_PANEL)
     }, [h, n.id]),
     I = c.find(e => e.ownerId === (null == u ? void 0 : u.id)),
     p = (0, es.useOtherStreams)(n, u, c);
@@ -445,7 +445,7 @@ class eW extends s.PureComponent {
     } = this.props;
     if (null == t) return null;
     let d = (0, U.computeChannelName)(t, eI.default, eS.default);
-    return null != n ? (e = eD.Routes.CHANNEL(n.id, t.id), d = "".concat(d, " / ").concat(n.name)) : e = eD.Routes.CHANNEL(eD.ME, t.id), o && t.isBroadcastChannel() && (d = eU.default.Messages.BROADCASTING), (0, a.jsx)(p.default, {
+    return null != n ? (e = ex.Routes.CHANNEL(n.id, t.id), d = "".concat(d, " / ").concat(n.name)) : e = ex.Routes.CHANNEL(ex.ME, t.id), o && t.isBroadcastChannel() && (d = eU.default.Messages.BROADCASTING), (0, a.jsx)(p.default, {
       statusTextClassName: ej.statusWithPopout,
       quality: s,
       state: l,
@@ -510,7 +510,7 @@ class eW extends s.PureComponent {
       voiceStates: t,
       showVoiceStates: n
     } = this.props;
-    return null != e && n && 0 !== t.length ? (0, a.jsx)(ex.default, {
+    return null != e && n && 0 !== t.length ? (0, a.jsx)(eD.default, {
       voiceStates: t,
       channel: e,
       className: ej.voiceUsers
@@ -605,21 +605,21 @@ class eW extends s.PureComponent {
         noiseCancellationActive: e
       } = this.props;
       C.default.setNoiseCancellation(!e, {
-        section: eD.AnalyticsSections.NOISE_CANCELLATION_POPOUT
+        section: ex.AnalyticsSections.NOISE_CANCELLATION_POPOUT
       })
     }), ew(this, "handleGoLive", () => {
       let {
         guild: e,
         channel: t
       } = this.props, n = null != t ? t.getGuildId() : null != e ? e.id : null;
-      null != n && (0, er.default)(n, t.id, eD.AnalyticsLocations.VOICE_PANEL)
+      null != n && (0, er.default)(n, t.id, ex.AnalyticsLocations.VOICE_PANEL)
     }), ew(this, "handleChannelLinkClick", e => {
       var t;
       let {
         guild: n,
         channel: a
       } = this.props;
-      o()(null != a, "Channel is null during navigation click"), e.stopPropagation(), S.default.channelListScrollTo(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eD.ME, a.id)
+      o()(null != a, "Channel is null during navigation click"), e.stopPropagation(), S.default.channelListScrollTo(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : ex.ME, a.id)
     }), ew(this, "handleChannelLinkContextMenu", e => {
       let {
         channel: t
@@ -688,8 +688,8 @@ t.default = (0, T.default)(function(e) {
       ...r
     } = (0, d.useStateFromStoresObject)([em.default], () => null != t ? {
       channelId: t.channelId,
-      rtcConnectionQuality: eD.RTCConnectionQuality.FINE,
-      rtcConnectionState: eD.RTCConnectionStates.RTC_CONNECTED,
+      rtcConnectionQuality: ex.RTCConnectionQuality.FINE,
+      rtcConnectionState: ex.RTCConnectionStates.RTC_CONNECTED,
       rtcConnectionLastPing: 0
     } : {
       channelId: em.default.getChannelId(),
@@ -711,7 +711,7 @@ t.default = (0, T.default)(function(e) {
     C = (0, d.useStateFromStores)([ed.default], () => ed.default.getCurrentUserActiveStream()),
     m = (0, d.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
     S = (0, d.useStateFromStores)([V.default], () => V.default.isViewingRoles(u)),
-    I = (0, d.useStateFromStores)([eC.default], () => S && !eC.default.can(eD.Permissions.VIEW_CHANNEL, o), [S, o]),
+    I = (0, d.useStateFromStores)([eC.default], () => S && !eC.default.can(ex.Permissions.VIEW_CHANNEL, o), [S, o]),
     p = ee.RtcPanelShowVoiceStates.useSetting(),
     [T, g, A] = (0, d.useStateFromStoresArray)([eT.default, z.default], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [z.default.getMutableParticipants(o.id, q.StageChannelParticipantNamedIndex.SPEAKER), z.default.getParticipantsVersion(o.id), null] : [null, null, null != o ? eT.default.getVoiceStatesForChannel(o) : null], [o]),
     N = s.useMemo(() => {
@@ -735,8 +735,8 @@ t.default = (0, T.default)(function(e) {
   }, [S, I, O]);
   let {
     analyticsLocations: P
-  } = (0, x.default)(y.default.RTC_PANEL), M = (0, v.default)(null != u ? u : eD.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), b = (0, L.default)(null == o ? void 0 : o.id), U = (0, D.default)();
-  return (0, a.jsx)(x.AnalyticsLocationProvider, {
+  } = (0, D.default)(y.default.RTC_PANEL), M = (0, v.default)(null != u ? u : ex.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), b = (0, L.default)(null == o ? void 0 : o.id), U = (0, x.default)();
+  return (0, a.jsx)(D.AnalyticsLocationProvider, {
     value: P,
     children: (0, a.jsxs)("div", {
       className: ej.wrapper,

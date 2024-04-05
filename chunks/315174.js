@@ -122,8 +122,8 @@ t.default = a.memo(function(e) {
     guild: x,
     guildBanner: R,
     animationOverlayHeight: y,
-    children: O,
-    headerClassName: M,
+    children: M,
+    headerClassName: O,
     communityInfoVisible: D,
     hasSubheader: b
   } = e, j = x.hasFeature(m.GuildFeatures.ANIMATED_BANNER), G = (0, d.default)(x), U = !G && x.hasCommunityInfoSubheader(), P = (0, p.isAnimatedIconHash)(R) && j && !A, [w, F] = a.useState(!1), B = a.useRef(), V = a.useRef(null), H = a.useRef(), k = c.GifAutoPlay.getSetting();
@@ -158,7 +158,7 @@ t.default = a.memo(function(e) {
       onContextMenu: h,
       onClick: f,
       children: [(0, l.jsxs)("header", {
-        className: i()(S.header, M, {
+        className: i()(S.header, O, {
           [S.themedHeaderMobile]: o.isMobile
         }),
         children: [(0, l.jsxs)("div", {
@@ -187,7 +187,7 @@ t.default = a.memo(function(e) {
             })
           }), (0, l.jsx)("div", {
             className: S.headerChildren,
-            children: O
+            children: M
           })]
         }), U && (0, l.jsx)(I, {
           guild: x,

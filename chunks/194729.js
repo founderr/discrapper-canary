@@ -29,8 +29,8 @@ var a = n("735250"),
   P = n("502568"),
   M = n("900849"),
   y = n("2485"),
-  x = n("879484"),
-  D = n("117496"),
+  D = n("879484"),
+  x = n("117496"),
   b = n("296386"),
   U = n("150192"),
   j = n("769727"),
@@ -167,12 +167,12 @@ class q extends s.PureComponent {
       categories: o,
       currentCategoryName: u
     } = this.props;
-    x.DiscoveryTagsExperiment.trackExposure({
+    D.DiscoveryTagsExperiment.trackExposure({
       location: "54961b_1"
     });
     let {
       shouldDisplayRecommendedSearchTags: d
-    } = x.DiscoveryTagsExperiment.getCurrentConfig({
+    } = D.DiscoveryTagsExperiment.getCurrentConfig({
       location: "54961b_2"
     }, {
       autoTrackExposure: !1
@@ -278,12 +278,12 @@ class q extends s.PureComponent {
       currentCategoryId: r,
       guilds: u
     } = this.props, d = l.length > 0;
-    x.DiscoveryTagsExperiment.trackExposure({
+    D.DiscoveryTagsExperiment.trackExposure({
       location: "54961b_3"
     });
     let {
       shouldDisplayRecommendedSearchTags: f
-    } = x.DiscoveryTagsExperiment.getCurrentConfig({
+    } = D.DiscoveryTagsExperiment.getCurrentConfig({
       location: "54961b_4"
     }, {
       autoTrackExposure: !1
@@ -372,7 +372,7 @@ class q extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), z(this, "_scroller", s.createRef()), z(this, "_guildIdsSeen", new Set), z(this, "loadId", (0, D.makeAnalyticsID)()), z(this, "state", {
+    super(...e), z(this, "_scroller", s.createRef()), z(this, "_guildIdsSeen", new Set), z(this, "loadId", (0, x.makeAnalyticsID)()), z(this, "state", {
       animatedValue: new d.default.Value(0),
       loadingGuildId: null
     }), z(this, "scrollToTop", () => {

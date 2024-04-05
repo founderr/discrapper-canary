@@ -77,11 +77,11 @@ t.default = function(e) {
       questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.LEARN_MORE
     }), u.default.open(g.UserSettingsSections.INVENTORY)
-  }, [R]), x = (0, p.useHandleClaimQuestsReward)({
+  }, [R]), D = (0, p.useHandleClaimQuestsReward)({
     quest: R,
     location: _.QuestContent.ACTIVITY_PANEL
-  }), D = (0, E.useIsQuestExpired)(R), b = (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = R.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = R.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == R ? void 0 : R.userStatus) == null || (0, C.isDismissed)(R.userStatus, _.QuestContent.ACTIVITY_PANEL) || D || j ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
+  }), x = (0, E.useIsQuestExpired)(R), b = (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = R.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = R.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  return (null == R ? void 0 : R.userStatus) == null || (0, C.isDismissed)(R.userStatus, _.QuestContent.ACTIVITY_PANEL) || x || j ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
     questId: R.id,
     questContent: _.QuestContent.ACTIVITY_PANEL,
     children: e => {
@@ -161,7 +161,7 @@ t.default = function(e) {
             className: N.cta,
             color: o.Button.Colors.BRAND,
             fullWidth: !0,
-            onClick: x,
+            onClick: D,
             size: o.Button.Sizes.SMALL,
             children: A.default.Messages.QUESTS_CLAIM_REWARD
           })]

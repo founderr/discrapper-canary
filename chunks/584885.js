@@ -51,7 +51,7 @@ t.default = e => {
     loading: M
   } = m, y = null == P || 0 === P.length;
   if (!M && y) return null;
-  let x = async e => {
+  let D = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
         page: f.AnalyticsPages.GUILD_DISCOVERY
@@ -74,7 +74,7 @@ t.default = e => {
   } else t = P.slice(0, O).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
-    onView: x,
+    onView: D,
     theme: I,
     onGuildCardSeen: g,
     onTagClick: v

@@ -30,7 +30,7 @@ var a = n("735250"),
   M = n("689938"),
   y = n("128073");
 
-function x() {
+function D() {
   let e = s.useCallback(() => {
     (0, o.openModalLazy)(async () => {
       let {
@@ -52,7 +52,7 @@ function x() {
   })
 }
 
-function D(e) {
+function x(e) {
   let {
     displayType: t
   } = e, n = s.useCallback(() => {
@@ -214,7 +214,7 @@ t.default = e => {
     className: y.container,
     children: [(0, a.jsxs)("div", {
       className: y.connectedCounter,
-      children: [(0, a.jsx)(b, {}), (0, a.jsx)(x, {})]
+      children: [(0, a.jsx)(b, {}), (0, a.jsx)(D, {})]
     }), (0, a.jsxs)("div", {
       className: y.card,
       children: [(0, a.jsx)("div", {
@@ -237,7 +237,7 @@ t.default = e => {
           className: y.activityOverview,
           children: s ? n.map(e => {
             let [t] = e;
-            return (0, a.jsx)(D, {
+            return (0, a.jsx)(x, {
               displayType: t
             }, "".concat(t, "-list"))
           }) : (0, a.jsx)(O.default, {

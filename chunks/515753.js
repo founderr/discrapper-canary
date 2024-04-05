@@ -34,8 +34,8 @@ var l = n("735250"),
   x = n("306680"),
   R = n("111583"),
   y = n("9156"),
-  O = n("594174"),
-  M = n("467679"),
+  M = n("594174"),
+  O = n("467679"),
   D = n("514342"),
   b = n("28718"),
   j = n("733880"),
@@ -142,7 +142,7 @@ function X(e) {
     applicationStream: L,
     isTyping: v,
     status: R,
-    isMobile: O,
+    isMobile: M,
     "aria-posinset": G,
     "aria-setsize": U
   } = e, [P, w] = a.useState(!1), z = a.useRef(null), X = a.useRef(null), {
@@ -256,7 +256,7 @@ function X(e) {
       src: Q,
       avatarDecoration: q,
       status: e,
-      isMobile: O,
+      isMobile: M,
       isTyping: v,
       className: k.__invalid_avatar,
       "aria-label": c.username,
@@ -312,9 +312,9 @@ function X(e) {
               name: (0, l.jsx)(D.default, {
                 children: et
               }),
-              decorators: t.isSystemDM() ? (0, l.jsx)(M.default, {
+              decorators: t.isSystemDM() ? (0, l.jsx)(O.default, {
                 className: k.decorator,
-                type: M.default.Types.SYSTEM_DM,
+                type: O.default.Types.SYSTEM_DM,
                 verified: !0
               }) : null
             })
@@ -333,7 +333,7 @@ t.default = e => {
     channel: t,
     selected: n,
     ...a
-  } = e, s = (0, f.useStateFromStores)([O.default], () => O.default.getUser(t.getRecipientId())), {
+  } = e, s = (0, f.useStateFromStores)([M.default], () => M.default.getUser(t.getRecipientId())), {
     isStatusIndicatorEnabled: i,
     isTypingIndicatorEnabled: r,
     isFacepileEnabled: o
@@ -355,10 +355,10 @@ t.default = e => {
       applicationStream: null != u ? L.default.getAnyStreamForUser(u) : null,
       isMobile: null != u && v.default.isMobileOnline(u)
     }
-  }, [u, t, i]), c = (0, f.useStateFromStores)([O.default, R.default], () => {
+  }, [u, t, i]), c = (0, f.useStateFromStores)([M.default, R.default], () => {
     if (t.isMultiUserDM()) return !!r && P.default.keys(R.default.getTypingUsers(t.id)).some(e => {
       var t;
-      return e !== (null === (t = O.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
+      return e !== (null === (t = M.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });
     if (null != s) return R.default.isTyping(t.id, t.getRecipientId());
     return !1

@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("696900"),
   A = n("456631"),
   v = n("963838"),
-  N = n("535879"),
-  x = n("310892"),
+  x = n("535879"),
+  N = n("310892"),
   M = n("12168"),
   R = n("353368"),
   L = n("981631"),
@@ -71,7 +71,7 @@ function k(e) {
       })
     },
     Z = () => {
-      (0, x.openEffectsUpsellModal)({
+      (0, N.openEffectsUpsellModal)({
         analytics: {
           type: j.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED,
           object: L.AnalyticsObjects.BUTTON_CTA,
@@ -135,7 +135,7 @@ function k(e) {
           onExpandedToggle: X,
           analyticsOverride: F,
           emojiSearchProps: {
-            accessory: (0, a.jsx)(N.default, {
+            accessory: (0, a.jsx)(x.default, {
               labelText: D.default.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
               value: $,
               onChange: () => {
@@ -147,7 +147,7 @@ function k(e) {
                   type: "VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE"
                 })
               },
-              onShowUpsell: () => (0, x.openEffectsUpsellModal)({
+              onShowUpsell: () => (0, N.openEffectsUpsellModal)({
                 analytics: {
                   type: G.current ? j.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : j.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
                   object: L.AnalyticsObjects.VOICE_CHANNEL_EFFECTS_TOGGLE,

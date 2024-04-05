@@ -33,8 +33,8 @@ var l, a = n("149765"),
   x = n("496675"),
   R = n("699516"),
   y = n("944486"),
-  O = n("885110"),
-  M = n("246946"),
+  M = n("885110"),
+  O = n("246946"),
   D = n("594174"),
   b = n("979651"),
   j = n("5192"),
@@ -79,7 +79,7 @@ let Y = "message1",
   };
 
 function q() {
-  return !!(v.default.getDesktopType() === B.DesktopNotificationTypes.NEVER || O.default.getStatus() === B.StatusTypes.DND || T.FocusMode.getSetting()) || !1
+  return !!(v.default.getDesktopType() === B.DesktopNotificationTypes.NEVER || M.default.getStatus() === B.StatusTypes.DND || T.FocusMode.getSetting()) || !1
 }
 
 function J(e) {
@@ -141,7 +141,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
     if (h && (p && w.playSound("message3", .4), !Z) || !f) return !1;
     let C = n("808506").default,
       m = n("237997").default;
-    if (null != C.getFocusedPID() && m.getTextChatNotificationMode() === B.OverlayNotificationTextChatTypes.ENABLED && !M.default.disableNotifications) return !1;
+    if (null != C.getFocusedPID() && m.getTextChatNotificationMode() === B.OverlayNotificationTextChatTypes.ENABLED && !O.default.disableNotifications) return !1;
     let {
       icon: E,
       title: _,

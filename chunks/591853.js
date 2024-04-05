@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return v
   },
   PopoutReactor: function() {
-    return x
+    return N
   },
   PopoutTitle: function() {
-    return N
+    return x
   }
 }), n("47120");
 var a = n("735250"),
@@ -64,7 +64,7 @@ function v(e) {
   })
 }
 
-function N(e) {
+function x(e) {
   let {
     children: t
   } = e;
@@ -77,7 +77,7 @@ function N(e) {
   })
 }
 
-function x(e) {
+function N(e) {
   return (0, E.useIsEligibleForMemberListShareToChannel)({
     location: "PopoutReactor"
   }) ? (0, a.jsx)(M, {
@@ -94,15 +94,15 @@ function M(e) {
     user: s,
     updatePopoutPosition: r,
     generateReactionImage: d
-  } = e, [m, E] = l.useState(null), [C, A] = l.useState(null), v = l.useRef(null), [N, x] = l.useState(), M = null != N && null != m, R = null == m || m.type === _.ChannelTypes.DM ? "@".concat(s.username) : "#".concat(m.name);
+  } = e, [m, E] = l.useState(null), [C, A] = l.useState(null), v = l.useRef(null), [x, N] = l.useState(), M = null != x && null != m, R = null == m || m.type === _.ChannelTypes.DM ? "@".concat(s.username) : "#".concat(m.name);
   l.useEffect(() => {
-    null == N && e();
+    null == x && e();
     async function e() {
       let e = await (null == d ? void 0 : d()),
         t = null == e ? void 0 : e.item.file;
-      null != t && x(await (0, p.readFileAsBase64)(t))
+      null != t && N(await (0, p.readFileAsBase64)(t))
     }
-  }, [d, N]), l.useEffect(() => {
+  }, [d, x]), l.useEffect(() => {
     let e = c.default.getDMFromUserId(s.id);
     null == c.default.getChannel(e) && o.default.getOrEnsurePrivateChannel(s.id)
   }, [s.id]);
@@ -136,7 +136,7 @@ function M(e) {
       children: [M && (0, a.jsx)("div", {
         className: I.attachmentContainer,
         children: (0, a.jsx)("img", {
-          src: N,
+          src: x,
           alt: "",
           className: I.attachment
         })

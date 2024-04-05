@@ -43,22 +43,22 @@ function y() {
     }, {
       autoTrackExposure: !1
     }),
-    O = (0, c.default)() && null != n,
-    M = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
+    M = (0, c.default)() && null != n,
+    O = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
     D = (0, a.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams());
-  if (!O && !M) return null;
+  if (!M && !O) return null;
   if (d.default.trackExposure({
       location: "broadcast_button_rtc_panel"
     }), !y) return null;
   let b = [];
-  O && b.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
+  M && b.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
   let j = () => {
       o.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
         game_id: null == n ? void 0 : n.id
       })
     },
     G = () => {
-      if (O) {
+      if (M) {
         let l = D.find(e => e.ownerId === t);
         null == l ? (0, p.openBroadcastingPrivacySettingsModal)(R.default.Messages.START_BROADCASTING, R.default.Messages.START_BROADCASTING_CTA, () => {
           (0, r.createBroadcastChannelOrStartStream)({
@@ -69,12 +69,12 @@ function y() {
       } else(0, u.stopBroadcast)()
     },
     U = e => (0, l.jsx)(L.default, {
-      tooltipText: O ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,
+      tooltipText: M ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,
       onClick: () => {
         G(), null == e || e(x.ContentDismissActionType.UNKNOWN)
       },
       onMouseEnter: j,
-      icon: O ? A.default : () => (0, l.jsx)(h.default, {
+      icon: M ? A.default : () => (0, l.jsx)(h.default, {
         width: 20,
         height: 20
       })

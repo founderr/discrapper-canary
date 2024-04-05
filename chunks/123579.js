@@ -22,8 +22,8 @@ var a = n("735250"),
   I = n("592125"),
   A = n("496675"),
   v = n("158776"),
-  N = n("246946"),
-  x = n("594174"),
+  x = n("246946"),
+  N = n("594174"),
   M = n("979651"),
   R = n("5192"),
   L = n("51144"),
@@ -68,7 +68,7 @@ t.default = e => {
     analyticsLocations: ef
   } = (0, m.default)(h.default.PROFILE_PANEL);
   (0, g.useFetchProfileEffects)();
-  let eh = (0, u.useStateFromStores)([x.default], () => x.default.getUser(r)),
+  let eh = (0, u.useStateFromStores)([N.default], () => N.default.getUser(r)),
     em = null == eh ? void 0 : eh.isNonUserBot();
   o()(null != eh, "Profile Panel: user cannot be undefined");
   let ep = (0, U.default)(eh.id),
@@ -96,8 +96,8 @@ t.default = e => {
     {
       activity: eA,
       customStatusActivity: ev,
-      isApplicationStreaming: eN,
-      isMobile: ex,
+      isApplicationStreaming: ex,
+      isMobile: eN,
       status: eM,
       hangStatusActivity: eR,
       isHangStatusPrimaryActivity: eL
@@ -134,12 +134,12 @@ t.default = e => {
         }) : null
       }
     }),
-    ey = null != eA || null != eR || eN,
+    ey = null != eA || null != eR || ex,
     eO = null !== (t = R.default.getNickname(null, n.id, eh)) && void 0 !== t ? t : L.default.getName(eh),
-    ej = (0, u.useStateFromStores)([N.default], () => N.default.hidePersonalInformation),
+    ej = (0, u.useStateFromStores)([x.default], () => x.default.hidePersonalInformation),
     [eP, eD, eb, eU, eF] = (0, u.useStateFromStoresArray)([P.default], () => [P.default.getMutualFriendsCount(eh.id), P.default.getMutualFriends(eh.id), P.default.getMutualGuilds(eh.id), P.default.isFetchingProfile(eh.id), P.default.isFetchingFriends(eh.id)]),
     ew = (0, Q.useGetVoiceChannelInfoForVoiceActivitySection)(eh.id),
-    ek = null != ew && !eN && !eL,
+    ek = null != ew && !ex && !eL,
     {
       showVoiceActivityInProfile: eH
     } = D.VoiceActivityProfileExperiment.useExperiment({
@@ -164,13 +164,13 @@ t.default = e => {
   }, [eh]), l.useEffect(() => {
     null != ep && e_ && (0, F.trackProfilePanelViewed)({
       displayProfile: ep,
-      isMobile: ex,
+      isMobile: eN,
       loadDurationMs: Date.now() - ed.current,
       activity: eA,
       customStatusActivity: ev,
       status: eM
     })
-  }, [ep, ex, eA, ev, eM, e_]);
+  }, [ep, eN, eA, ev, eM, e_]);
   let eY = null == eb ? void 0 : eb.map(e => (0, a.jsx)(en.default, {
       connection: e,
       user: eh,

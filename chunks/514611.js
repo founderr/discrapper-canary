@@ -60,11 +60,11 @@ class L extends(a = l.PureComponent) {
       presenceCount: L,
       memberCount: P,
       keywords: M
-    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
+    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), D = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), D = null != x ? x : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
+    }), x = null != D ? D : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -117,7 +117,7 @@ class L extends(a = l.PureComponent) {
               children: [(0, s.jsx)("div", {
                 className: A.splash,
                 children: (0, s.jsx)("img", {
-                  src: D,
+                  src: x,
                   alt: "",
                   className: r()(A.splashImage, {
                     [A.splashImageHeight]: !y

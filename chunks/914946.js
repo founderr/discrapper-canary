@@ -86,8 +86,8 @@ let P = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
     return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
   }(),
   y = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(M), "|discordapp.com|discord.com)$")),
-  x = 1 * g.default.Millis.MINUTE,
-  D = {};
+  D = 1 * g.default.Millis.MINUTE,
+  x = {};
 
 function b(e) {
   return "customEmoji" === e.type && (e.type = "emoji"), "emoji" === e.type && e.src && (e.src = U(e.src)), Array.isArray(e.content) && (e.content = e.content.map(b)), e
@@ -280,8 +280,8 @@ function K(e, t, n) {
   })
 }
 async function z(e, t) {
-  let n = D[e];
-  null == n && (n = new i.default(t ? 2 : 60, x), D[e] = n), await n.process()
+  let n = x[e];
+  null == n && (n = new i.default(t ? 2 : 60, D), x[e] = n), await n.process()
 }
 
 function q(e, t) {

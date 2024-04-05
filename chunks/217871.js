@@ -122,12 +122,12 @@ t.default = l.memo(function(e) {
   } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getId()), s = (0, o.useStateFromStores)([m.default], () => m.default.isTyping(t, n), [t, n]), i = (0, o.useStateFromStores)([C.default], () => C.default.isEnabled()), u = (0, o.useStateFromStores)([g.default], () => g.default.isComboing(n, t), [t, n]), {
     ref: f,
     width: p = 0
-  } = (0, d.default)(), E = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, T] = l.useState(!1), N = (0, _.default)(t), x = i && u && s;
+  } = (0, d.default)(), E = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, T] = l.useState(!1), x = (0, _.default)(t), N = i && u && s;
   l.useEffect(() => {
-    x && T(!0);
-    let e = setTimeout(() => T(x), 1e3);
+    N && T(!0);
+    let e = setTimeout(() => T(N), 1e3);
     return () => clearTimeout(e)
-  }, [x]);
+  }, [N]);
   let M = (0, r.useSpring)({
       opacity: S ? 1 : 0,
       transform: S ? "translateY(0)" : "translateY(100%)",
@@ -135,10 +135,10 @@ t.default = l.memo(function(e) {
       config: r.config.stiff,
       immediate: E
     }),
-    R = l.useMemo(() => null != N ? N : {
+    R = l.useMemo(() => null != x ? x : {
       value: 0,
       multiplier: 1
-    }, [N]),
+    }, [x]),
     L = l.useRef(R);
   l.useEffect(() => {
     (R.multiplier > 1 || R.value > 0) && (L.current = R)
@@ -147,9 +147,9 @@ t.default = l.memo(function(e) {
     multiplier: y,
     value: O
   } = l.useMemo(() => ({
-    value: x ? R.value : L.current.value,
-    multiplier: x ? R.multiplier : L.current.multiplier
-  }), [x, R, L]);
+    value: N ? R.value : L.current.value,
+    multiplier: N ? R.multiplier : L.current.multiplier
+  }), [N, R, L]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(A, {
       channelId: t,

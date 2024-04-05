@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return I
   },
   ShareToChannelHeader: function() {
-    return N
+    return x
   }
 }), n("47120");
 var a = n("735250"),
@@ -152,7 +152,7 @@ let v = e => {
       })
     })
   },
-  N = e => {
+  x = e => {
     let t, {
         channel: n,
         onClose: i

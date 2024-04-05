@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return x
   }
 }), n("47120");
 var a = n("735250"),
@@ -92,9 +92,9 @@ let M = 15 * I.default.Millis.MINUTE,
       }
     }) : null
   }),
-  x = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
+  D = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
 
-function D() {
+function x() {
   let {
     nowPlayingCards: e,
     loaded: t,
@@ -109,7 +109,7 @@ function D() {
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
   s.useEffect(() => (c.default.wait(() => p.mount()), () => c.default.wait(() => p.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
-    n && !l && x()
+    n && !l && D()
   }, [n, l]);
   let o = s.useMemo(() => {
       let t = new Map,

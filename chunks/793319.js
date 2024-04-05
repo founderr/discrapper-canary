@@ -27,8 +27,8 @@ var a, l, s = n("735250"),
   I = n("906732"),
   A = n("67212"),
   v = n("757454"),
-  N = n("158631"),
-  x = n("709369"),
+  x = n("158631"),
+  N = n("709369"),
   M = n("552740"),
   R = n("358221"),
   L = n("887012"),
@@ -93,7 +93,7 @@ function e_(e) {
   } = e, u = (0, g.useAppContext)(), d = (0, f.useStateFromStoresArray)([J.default], () => J.default.getAllActiveStreams()).find(e => e.ownerId === n.id), c = t.getGuildId(), m = i.useCallback(() => {
     if (null == a || a(), !l) return (0, eh.default)();
     (0, em.default)(c, t.id, eE.AnalyticsPages.GUILD_CHANNEL)
-  }, [c, t.id, l, a]), p = (0, f.useStateFromStores)([b.default, ea.default], () => (0, w.default)(b.default, ea.default)), C = (0, N.default)(), S = (0, v.default)() && null != p, _ = () => {
+  }, [c, t.id, l, a]), p = (0, f.useStateFromStores)([b.default, ea.default], () => (0, w.default)(b.default, ea.default)), C = (0, x.default)(), S = (0, v.default)() && null != p, _ = () => {
     S && (null == d ? (0, E.createBroadcastChannelOrStartStream)({
       channelId: t.id,
       pid: null == p ? void 0 : p.pid
@@ -112,7 +112,7 @@ function e_(e) {
       (0, M.openStopBroadcastConfirmModal)(() => (0, k.default)(d));
       return
     }(0, k.default)(d)
-  }, x = (e, t) => {
+  }, N = (e, t) => {
     let {
       onClick: n,
       ...a
@@ -133,7 +133,7 @@ function e_(e) {
       onClick: null != d ? I : T
     })
   };
-  return C ? x() : (0, s.jsx)(V.default, {
+  return C ? N() : (0, s.jsx)(V.default, {
     children: (0, s.jsx)(h.Popout, {
       renderPopout: e => {
         let {
@@ -160,7 +160,7 @@ function e_(e) {
           isShown: a
         } = t;
         return (0, s.jsx)("div", {
-          children: x(n, a)
+          children: N(n, a)
         })
       }
     })
@@ -191,7 +191,7 @@ let eI = i.memo(function(e) {
       ownerId: t
     } = e;
     return t !== (null == n ? void 0 : n.id)
-  })), _ = (0, H.useActiveEvent)(l.id), T = (0, N.useIsBroadcastingInChannel)(l.id), I = i.useCallback(() => {
+  })), _ = (0, H.useActiveEvent)(l.id), T = (0, x.useIsBroadcastingInChannel)(l.id), I = i.useCallback(() => {
     if ((null == r ? void 0 : r.type) === eC.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
     if (g) return "STREAM";
     if (null != _) return "EVENT";
@@ -266,7 +266,7 @@ let eI = i.memo(function(e) {
       let {
         closePopout: t
       } = e;
-      return T ? (0, s.jsx)(x.default, {
+      return T ? (0, s.jsx)(N.default, {
         onClose: t
       }) : (0, s.jsx)(ec.default, {
         channel: l,
@@ -358,10 +358,10 @@ t.default = function(e) {
     canGoLive: g
   } = (0, f.useStateFromStoresObject)([ee.default], () => ({
     canGoLive: (0, F.default)(ee.default)
-  })), _ = (0, D.default)(), A = (0, f.useStateFromStores)([P.default], () => null != P.default.getAwaitingRemoteSessionInfo()), v = null != _, N = (0, f.useStateFromStores)([et.default], () => {
+  })), _ = (0, D.default)(), A = (0, f.useStateFromStores)([P.default], () => null != P.default.getAwaitingRemoteSessionInfo()), v = null != _, x = (0, f.useStateFromStores)([et.default], () => {
     var e;
     return (null !== (e = null == _ ? void 0 : _.channelId) && void 0 !== e ? e : et.default.getVoiceChannelId()) === t.id
-  }), x = (0, L.default)(t, !0), M = (0, f.useStateFromStores)([S.default], () => {
+  }), N = (0, L.default)(t, !0), M = (0, f.useStateFromStores)([S.default], () => {
     let e = S.default.getSelfEmbeddedActivityForChannel(t.id);
     return null != e ? e.applicationId : null
   }), {
@@ -370,7 +370,7 @@ t.default = function(e) {
   } = (0, ei.default)(t), {
     analyticsLocations: U
   } = (0, I.default)(T.default.VOICE_CONTROL_TRAY);
-  if (!N) return (0, s.jsx)(I.AnalyticsLocationProvider, {
+  if (!x) return (0, s.jsx)(I.AnalyticsLocationProvider, {
     value: U,
     children: (0, s.jsx)(eA, {
       channel: t,
@@ -383,7 +383,7 @@ t.default = function(e) {
     permission: eE.Permissions.ADD_REACTIONS,
     user: i,
     context: t
-  }) && !t.isPrivate() && !x;
+  }) && !t.isPrivate() && !N;
   return (0, s.jsx)(I.AnalyticsLocationProvider, {
     value: U,
     children: (0, s.jsxs)(C.default, {

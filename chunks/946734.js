@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("823379"),
   A = n("981631"),
   v = n("228168"),
-  N = n("689938"),
-  x = n("992514");
+  x = n("689938"),
+  N = n("992514");
 
 function M(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -58,7 +58,7 @@ class R {
         children: n
       });
       return s.length > 0 && (i = (0, a.jsx)(o.TooltipContainer, {
-        className: x.tooltip,
+        className: N.tooltip,
         text: s.join(", "),
         position: "bottom",
         children: i
@@ -83,13 +83,13 @@ class R {
         }).filter(I.isNotNullish)]
       }).value()
     })), M(this, "renderMoreAvatars", () => (0, a.jsx)(o.TooltipContainer, {
-      text: N.default.Messages.AKA_MORE_AVATARS_OVERFLOW,
+      text: x.default.Messages.AKA_MORE_AVATARS_OVERFLOW,
       position: "bottom",
       children: (0, a.jsx)(o.Clickable, {
-        className: x.moreAvatars,
+        className: N.moreAvatars,
         onClick: this.handleClick,
         children: (0, a.jsx)(C.default, {
-          className: x.plusIcon
+          className: N.plusIcon
         })
       })
     }, "more-avatars")), M(this, "handleClick", () => {
@@ -134,13 +134,13 @@ function L(e) {
     channelId: t.id
   });
   return 0 === h.getNicknameGuildPairs().length && 0 === s.length ? (0, a.jsx)("div", {
-    className: x.spacer
+    className: N.spacer
   }) : (0, a.jsxs)(d.AnalyticsLocationProvider, {
     value: f,
     children: [(0, a.jsx)(S.Divider, {}), (0, a.jsx)(g.TextBadge, {
-      text: N.default.Messages.AKA,
+      text: x.default.Messages.AKA,
       disableColor: !0,
-      className: x.akaBadge
+      className: N.akaBadge
     }), s.length > 0 ? (0, a.jsx)(_.default, {
       size: 16,
       users: i,
@@ -154,7 +154,7 @@ function L(e) {
           position: "bottom",
           children: (0, a.jsx)("img", {
             alt: "",
-            className: x.avatar,
+            className: N.avatar,
             onClick: h.handleClick,
             src: i.getAvatarURL(r, 16),
             "aria-hidden": !0
@@ -164,10 +164,10 @@ function L(e) {
       renderMoreUsers: h.renderMoreAvatars,
       guildId: void 0,
       max: 3,
-      className: x.avatars
+      className: N.avatars
     }) : null, h.getNicknameGuildPairs().length > 0 ? (0, a.jsx)(E.default, {
       position: "bottom",
-      className: x.nicknames,
+      className: N.nicknames,
       children: h.renderNicknamePairs()
     }) : null]
   })

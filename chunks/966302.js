@@ -33,8 +33,8 @@ var a = n("735250"),
   P = n("465670"),
   M = n("421600"),
   y = n("792125"),
-  x = n("358221"),
-  D = n("793865"),
+  D = n("358221"),
+  x = n("793865"),
   b = n("981631"),
   U = n("65154"),
   j = n("689938"),
@@ -104,7 +104,7 @@ function V(e) {
         let {
           closePopout: t
         } = e;
-        return (0, a.jsx)(D.default, {
+        return (0, a.jsx)(x.default, {
           onClose: t
         })
       },
@@ -149,7 +149,7 @@ function Y(e) {
     y: n,
     x: l,
     channel: f
-  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), I = (0, _.default)(f), [p, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), I = (0, _.default)(f), [p, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([D.default], () => D.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), v = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -187,7 +187,7 @@ function Y(e) {
         })]
       })]
     }),
-    D = O ? k : F;
+    x = O ? k : F;
   return (0, a.jsx)(E.default, {
     className: G.wrapper,
     selector: ".".concat(G.root),
@@ -206,9 +206,9 @@ function Y(e) {
         }, C ? (0, y.getThemeClass)("dark") : null),
         style: {
           ...t,
-          width: v.value.interpolate([0, 1], [D.width, B.width]),
-          minHeight: v.value.interpolate([0, 1], [D.height, B.height]),
-          translateX: v.value.interpolate([0, 1], [0, -1 * Math.abs(B.width - D.width) / 2])
+          width: v.value.interpolate([0, 1], [x.width, B.width]),
+          minHeight: v.value.interpolate([0, 1], [x.height, B.height]),
+          translateX: v.value.interpolate([0, 1], [0, -1 * Math.abs(B.width - x.width) / 2])
         },
         children: [C ? (0, a.jsx)(H, {
           header: P

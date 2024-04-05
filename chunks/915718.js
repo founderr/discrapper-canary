@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("131951"),
   A = n("699516"),
   v = n("594174"),
-  N = n("979651"),
-  x = n("125015"),
+  x = n("979651"),
+  N = n("125015"),
   M = n("119828"),
   R = n("502568"),
   L = n("810090"),
@@ -95,7 +95,7 @@ class w extends l.PureComponent {
       E = !1;
     s ? (m = h ? b.default.Messages.VOICE_UNAVAILABLE : b.default.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, E = !0) : o ? (m = b.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, E = !0) : m = l ? h ? b.default.Messages.CONNECT : b.default.Messages.JOIN_VOICE_CALL : h ? b.default.Messages.CONNECT : b.default.Messages.START_VOICE_CALL;
     let g = (0, a.jsx)(R.default.Icon, {
-      icon: x.default,
+      icon: N.default,
       onClick: this.handleVoiceClick,
       disabled: E,
       tooltip: m,
@@ -198,7 +198,7 @@ class w extends l.PureComponent {
 function k(e) {
   let {
     channel: t
-  } = e, n = (0, E.default)(), r = (0, s.useStateFromStores)([h.default], () => h.default.getMode(t.id)), o = (0, s.useStateFromStores)([N.default], () => N.default.isInChannel(t.id)), u = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
+  } = e, n = (0, E.default)(), r = (0, s.useStateFromStores)([h.default], () => h.default.getMode(t.id)), o = (0, s.useStateFromStores)([x.default], () => x.default.isInChannel(t.id)), u = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
     callActive: m,
     callUnavailable: p
   } = (0, s.useStateFromStoresObject)([_.default], () => ({
@@ -210,7 +210,7 @@ function k(e) {
   } = (0, s.useStateFromStoresObject)([A.default], () => ({
     notFriend: t.type === j.ChannelTypes.DM && null != C && !A.default.isFriend(C),
     isBlocked: t.type === j.ChannelTypes.DM && null != C && A.default.isBlocked(C)
-  })), I = (0, s.useStateFromStores)([v.default], () => v.default.getUser(C)), x = (0, d.useAppContext)(), M = [], R = (0, f.default)(t.id), L = (0, s.useStateFromStores)([T.default], () => T.default.hasLayers());
+  })), I = (0, s.useStateFromStores)([v.default], () => v.default.getUser(C)), N = (0, d.useAppContext)(), M = [], R = (0, f.default)(t.id), L = (0, s.useStateFromStores)([T.default], () => T.default.hasLayers());
   R && !L && M.push(i.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP);
   let [y, O] = l.useState(!1);
   return (l.useEffect(() => {
@@ -226,7 +226,7 @@ function k(e) {
     callUnavailable: p,
     notFriend: g,
     isBlocked: S,
-    appContext: x,
+    appContext: N,
     canShowTooltip: y,
     canShowActivityGdmTooltip: R,
     dismissibleContentTypes: M,

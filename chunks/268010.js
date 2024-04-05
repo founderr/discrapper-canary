@@ -50,43 +50,43 @@ t.default = e => {
     requestId: S,
     updatePopoutPosition: v
   } = e, {
-    user: N,
-    mediaImageSrc: x,
+    user: x,
+    mediaImageSrc: N,
     episodeDescription: M
   } = (0, p.useWatchContentData)(u), {
     primaryColor: R,
     secondaryColor: L
-  } = (0, m.default)(x), y = (0, s.useStateFromStores)([o.default], () => o.default.locale), O = l.useCallback(async () => {
-    if (null == N || null == x) return;
+  } = (0, m.default)(N), y = (0, s.useStateFromStores)([o.default], () => o.default.locale), O = l.useCallback(async () => {
+    if (null == x || null == N) return;
     let e = await r.default.getOrEnsurePrivateChannel(u.author_id);
     return (0, h.generateWatchContentImage)({
       entry: u,
-      mediaImageSrc: x,
-      avatarSrc: N.getAvatarURL(n.guild_id, 128),
-      description: T(u, n, N),
+      mediaImageSrc: N,
+      avatarSrc: x.getAvatarURL(n.guild_id, 128),
+      description: T(u, n, x),
       timestamp: (0, d.formatEntryTimestamp)(u, y),
       episodeDescription: M,
       colors: [R, L],
       channelId: e
     })
-  }, [n, u, M, y, x, R, L, N]);
-  if (null == N) return null;
+  }, [n, u, M, y, N, R, L, x]);
+  if (null == x) return null;
   let j = async e => {
     try {
       let t = await r.default.getOrEnsurePrivateChannel(u.author_id),
         a = await (0, h.generateWatchContentImage)({
           entry: u,
-          mediaImageSrc: x,
-          avatarSrc: N.getAvatarURL(n.guild_id, 128),
-          description: T(u, n, N),
+          mediaImageSrc: N,
+          avatarSrc: x.getAvatarURL(n.guild_id, 128),
+          description: T(u, n, x),
           timestamp: (0, d.formatEntryTimestamp)(u, y),
           episodeDescription: M,
           colors: [R, L],
           channelId: t
         });
       await (0, f.sendContentImageReply)({
-        user: N,
-        altText: A(u, N),
+        user: x,
+        altText: A(u, x),
         file: a,
         reply: e
       }), (0, c.trackInteraction)(g.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
@@ -101,19 +101,19 @@ t.default = e => {
   };
   return (0, a.jsxs)(C.Popout, {
     children: [(0, a.jsxs)(C.PopoutHero, {
-      backgroundImgSrc: x,
+      backgroundImgSrc: N,
       children: [(0, a.jsxs)("div", {
         className: _.heroDetails,
         children: [(0, a.jsxs)("div", {
           children: [(0, a.jsx)(C.PopoutAvatar, {
-            user: N,
+            user: x,
             guildId: n.guild_id
           }), (0, a.jsx)(C.PopoutTitle, {
-            children: I(u, n, N)
+            children: I(u, n, x)
           })]
         }), (0, a.jsx)(E.ContentImage, {
           size: 80,
-          src: x,
+          src: N,
           className: _.contentImage
         })]
       }), (0, a.jsx)(p.ContentRowBadges, {
@@ -125,7 +125,7 @@ t.default = e => {
       })]
     }), (0, a.jsx)(C.PopoutReactor, {
       onMessageReact: j,
-      user: N,
+      user: x,
       channel: n,
       updatePopoutPosition: v,
       generateReactionImage: O

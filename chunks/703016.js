@@ -29,12 +29,12 @@ var a = n("913527"),
 let P = [],
   M = null,
   y = null,
-  x = null,
-  D = /\|\|([\s\S]+?)\|\|/g;
+  D = null,
+  x = /\|\|([\s\S]+?)\|\|/g;
 
 function b(e, t, n, a) {
   let l = C.default.getGuild(n),
-    i = e.replace(D, L.default.Messages.SPOILER).replace(/<@!?(\d+)>/g, (e, t) => {
+    i = e.replace(x, L.default.Messages.SPOILER).replace(/<@!?(\d+)>/g, (e, t) => {
       var a;
       let s = g.default.getUser(t);
       if (null == s) return e;
@@ -64,11 +64,11 @@ function b(e, t, n, a) {
 function U() {
   if (!i.supported) return !1;
   let e = d.default.locale;
-  if (null == x) {
+  if (null == D) {
     var t;
-    x = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
+    D = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
   }
-  let n = x.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
+  let n = D.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
   y = n.length > 0 ? n[0] : null
 }
 async function j(e, t, n, a, s) {

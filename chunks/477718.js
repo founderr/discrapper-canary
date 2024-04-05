@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("776767"),
   A = n("689938"),
   v = n("197617"),
-  N = n("681532"),
-  x = n("196958");
+  x = n("681532"),
+  N = n("196958");
 
 function M(e) {
   let {
@@ -36,7 +36,7 @@ function M(e) {
     guild: s
   } = e, {
     analyticsLocations: r
-  } = (0, f.default)(), c = h.getSimpleAuditLogTitleFromChange(t), E = h.getSimpleAuditLogTitleContextFromChange(t), S = h.getStringForBanReason(t), _ = h.getSimpleAuditLogChangeDetails(t), I = (0, m.useAuditLogDate)(t.id), x = (0, u.useStateFromStores)([g.default], () => null != t.userId ? g.default.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), M = l.useCallback(e => t => {
+  } = (0, f.default)(), c = h.getSimpleAuditLogTitleFromChange(t), E = h.getSimpleAuditLogTitleContextFromChange(t), S = h.getStringForBanReason(t), _ = h.getSimpleAuditLogChangeDetails(t), I = (0, m.useAuditLogDate)(t.id), N = (0, u.useStateFromStores)([g.default], () => null != t.userId ? g.default.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), M = l.useCallback(e => t => {
     t.preventDefault(), t.stopPropagation(), null != e && (0, p.openMemberProfile)(e, r)
   }, [r]), R = l.useCallback(() => null == t.user ? null : (0, a.jsx)(d.Tooltip, {
     text: A.default.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
@@ -49,7 +49,7 @@ function M(e) {
       return (0, a.jsx)(d.Clickable, {
         tag: "span",
         className: v.username,
-        onClick: M(x),
+        onClick: M(N),
         onMouseEnter: s,
         onMouseLeave: r,
         children: (0, a.jsxs)(d.Text, {
@@ -57,15 +57,15 @@ function M(e) {
           tag: "span",
           children: ["@", (0, a.jsx)(d.NameWithRole, {
             name: T.default.getName(n.guildId, null, t.user),
-            color: null !== (l = null == x ? void 0 : x.colorString) && void 0 !== l ? l : void 0,
+            color: null !== (l = null == N ? void 0 : N.colorString) && void 0 !== l ? l : void 0,
             className: i()(v.__invalid_memberNameText)
           })]
         })
       })
     }
-  }), [M, t.user, n.guildId, x])();
+  }), [M, t.user, n.guildId, N])();
   return (0, a.jsxs)("div", {
-    className: i()(N.modInfoItem, v.auditLogItem),
+    className: i()(x.modInfoItem, v.auditLogItem),
     children: [(0, a.jsxs)("div", {
       className: v.auditLogItemTitleContainer,
       children: [(0, a.jsxs)("div", {
@@ -141,10 +141,10 @@ function R(e) {
       await c.filterByTargetId(t, e)
     })(t.guildId, t.userId)
   }, [t.guildId, t.userId]), null == n || 0 === s.length) ? null : (0, a.jsx)("div", {
-    className: i()(x.__invalid_safetySignalsMainContainer),
+    className: i()(N.__invalid_safetySignalsMainContainer),
     children: (0, a.jsx)(d.FormItem, {
       title: A.default.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
-      titleClassName: x.infoTitle,
+      titleClassName: N.infoTitle,
       children: s.length > 0 ? (0, a.jsx)(I.UserModInfoItemContainer, {
         children: s.map(e => (0, a.jsx)(M, {
           log: e,

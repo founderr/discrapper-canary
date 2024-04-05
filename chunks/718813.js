@@ -65,10 +65,10 @@ let N = (0, _.makeLazy)({
     tension: 100
   };
 
-function x() {
+function D() {
   return l.useEffect(() => (h.default.enable(), h.default.enableTemp(E.SETTINGS_LAYERS_LAYOUT), () => h.default.disableTemp()), []), null
 }
-class D extends(a = l.PureComponent) {
+class x extends(a = l.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     return e.mode !== t.mode ? {
       animating: !0,
@@ -202,9 +202,9 @@ class D extends(a = l.PureComponent) {
     }
   }
 }
-A(D, "defaultProps", {
+A(x, "defaultProps", {
   baseLayer: !1
-}), A(D, "contextType", c.AccessibilityPreferencesContext);
+}), A(x, "contextType", c.AccessibilityPreferencesContext);
 class b extends l.PureComponent {
   componentDidMount() {
     I.ComponentDispatch.subscribe(T.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
@@ -220,7 +220,7 @@ class b extends l.PureComponent {
     } = this.props, {
       length: a
     } = t, l = [];
-    return l.push((0, s.jsx)(D, {
+    return l.push((0, s.jsx)(x, {
       mode: 0 !== a || n ? M : P,
       baseLayer: !0,
       children: e
@@ -228,9 +228,9 @@ class b extends l.PureComponent {
   }
   renderComponent(e, t, n) {
     let a;
-    return a = "string" == typeof e ? L[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(D, {
+    return a = "string" == typeof e ? L[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(x, {
       mode: t === n - 1 ? P : M,
-      children: [(0, s.jsx)(x, {}), a]
+      children: [(0, s.jsx)(D, {}), a]
     }, "layer-".concat(t))
   }
   renderArtisanalHack() {

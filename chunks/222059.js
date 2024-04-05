@@ -31,8 +31,8 @@ var l = n("735250"),
   x = n("941128"),
   R = n("436088"),
   y = n("880080"),
-  O = n("26290"),
-  M = n("15434"),
+  M = n("26290"),
+  O = n("15434"),
   D = n("780570"),
   b = n("557177"),
   j = n("278464"),
@@ -93,8 +93,8 @@ function k(e) {
       selected: Q,
       lowerBadge: f > 0 ? (0, P.renderMentionBadge)(f) : null,
       upperBadge: X,
-      lowerBadgeWidth: (0, O.getBadgeWidthForValue)(f),
-      children: (0, l.jsx)(M.default, {
+      lowerBadgeWidth: (0, M.getBadgeWidthForValue)(f),
+      children: (0, l.jsx)(O.default, {
         onMouseEnter: () => N(!0),
         onMouseLeave: () => N(!1),
         onClick: () => {

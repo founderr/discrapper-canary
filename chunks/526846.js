@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("566620"),
   A = n("127255"),
   v = n("5200"),
-  N = n("558317"),
-  x = n("403404"),
+  x = n("558317"),
+  N = n("403404"),
   M = n("981631"),
   R = n("689938"),
   L = n("987281"),
@@ -79,7 +79,7 @@ let j = "vc-activities-".concat((0, o.v4)()),
     }, []);
     let Z = l.useCallback(() => {
         var e;
-        (0, x.default)({
+        (0, N.default)({
           channel: n,
           guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
           locationObject: z.location,
@@ -165,7 +165,7 @@ let j = "vc-activities-".concat((0, o.v4)()),
                 }),
                 children: (0, a.jsx)("div", {
                   className: L.wumpusRocketInnerContainer,
-                  children: (0, a.jsx)(N.default, {
+                  children: (0, a.jsx)(x.default, {
                     className: L.wumpusRocket
                   })
                 })

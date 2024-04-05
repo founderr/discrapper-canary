@@ -37,7 +37,7 @@ function v(e) {
   } = e, {
     mute: L,
     suppress: P
-  } = (0, _.default)(t), M = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), y = L || P || M, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+  } = (0, _.default)(t), M = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), y = L || P || M, [D, x] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: y
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: w
@@ -62,9 +62,9 @@ function v(e) {
       onMouseLeave: V
     }
   } = (0, u.useSoundboardLottie)(), Y = e => (0, a.jsx)(d.Popout, {
-    shouldShow: x,
+    shouldShow: D,
     position: "top",
-    onRequestClose: () => D(!1),
+    onRequestClose: () => x(!1),
     renderPopout: e => {
       let {
         closePopout: n
@@ -85,7 +85,7 @@ function v(e) {
         ...e,
         ...t,
         className: i()(v, {
-          [N.buttonActive]: x,
+          [N.buttonActive]: D,
           [N.disabled]: y
         }),
         wrapperClassName: v,
@@ -93,7 +93,7 @@ function v(e) {
         disabled: y,
         onClick: () => {
           var t, n;
-          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(g.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!x), B()
+          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(g.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), x(!D), B()
         },
         onMouseEnter: t => {
           var n, a;
@@ -115,8 +115,8 @@ function v(e) {
       })
     })
   }), W = s.useCallback(() => {
-    !y && D(!x)
-  }, [y, x]);
+    !y && x(!D)
+  }, [y, D]);
   return (0, m.useComponentAction)({
     event: T.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W

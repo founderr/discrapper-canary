@@ -22,8 +22,8 @@ var a = n("735250"),
   I = n("829750"),
   A = n("189771"),
   v = n("294629"),
-  N = n("793319"),
-  x = n("560688"),
+  x = n("793319"),
+  N = n("560688"),
   M = n("390322"),
   R = n("871499"),
   L = n("386000"),
@@ -334,15 +334,15 @@ let ep = l.memo(function(e) {
           hasPermission: S,
           enabled: g,
           cameraUnavailable: C,
-          onChange: N.handleToggleVideo,
-          onCameraUnavailable: x.default,
+          onChange: x.handleToggleVideo,
+          onCameraUnavailable: N.default,
           channelLimitReached: R,
           channelLimit: _,
           popoutOpen: l,
           onPopoutClick: n
         })
       }
-    }), (0, a.jsx)(N.GoLiveButton, {
+    }), (0, a.jsx)(x.GoLiveButton, {
       channel: t,
       currentUser: O,
       exitFullScreen: () => null,

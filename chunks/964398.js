@@ -110,10 +110,10 @@ t.default = a.memo(function(e) {
     onItemAction: I,
     interactive: N = !0,
     children: T
-  } = e, A = a.useRef(null), L = a.useRef([]), v = a.useRef(!1), x = a.useRef(null), [R, y] = a.useState(0), [O, M] = a.useState({
+  } = e, A = a.useRef(null), L = a.useRef([]), v = a.useRef(!1), x = a.useRef(null), [R, y] = a.useState(0), [M, O] = a.useState({
     x: 0,
     y: 0
-  }), D = Math.abs(O.x) + Math.abs(O.y) > 0, b = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
+  }), D = Math.abs(M.x) + Math.abs(M.y) > 0, b = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
     null == L.current[R] ? L.current[R] = [] : L.current[R][t] = e
   }, [R]), G = a.useCallback((e, t) => {
     x.current = t, _(h * e + t)
@@ -123,7 +123,7 @@ t.default = a.memo(function(e) {
     U(), v.current = e
   }, [U]), w = a.useCallback((e, t, n) => {
     if (v.current) {
-      M({
+      O({
         x: 0,
         y: 0
       });
@@ -137,7 +137,7 @@ t.default = a.memo(function(e) {
       s = l.y < 0,
       i = C(n, l),
       r = a ? Math.max(l.x, -i.x) : Math.min(l.x, i.x);
-    M({
+    O({
       x: r / 2,
       y: (s ? Math.max(l.y, -i.y) : Math.min(l.y, i.y)) / 2
     })
@@ -253,8 +253,8 @@ t.default = a.memo(function(e) {
             r: 28.8
           }), D && (0, l.jsx)("circle", {
             className: d.chatWheelCenter,
-            cx: 144 + O.x,
-            cy: 144 + O.y,
+            cx: 144 + M.x,
+            cy: 144 + M.y,
             r: 28.8
           })]
         }), E && (0, l.jsx)("circle", {

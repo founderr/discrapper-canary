@@ -101,7 +101,7 @@ let P = e => {
       })]
     })
   }),
-  x = e => {
+  D = e => {
     let {
       selected: t,
       locationState: n,
@@ -144,7 +144,7 @@ let P = e => {
       })
     })
   },
-  D = e => {
+  x = e => {
     let {
       selected: t,
       locationState: n,
@@ -189,14 +189,14 @@ let P = e => {
     } = (0, N.default)();
     if (null != s) switch (s.type) {
       case v.CollectiblesMarketingVariant.TOOLTIP:
-        return (0, a.jsx)(D, {
+        return (0, a.jsx)(x, {
           selected: t,
           locationState: n,
           onButtonClick: l,
           displayOptions: s
         });
       case v.CollectiblesMarketingVariant.COACHTIP:
-        return (0, a.jsx)(x, {
+        return (0, a.jsx)(D, {
           selected: t,
           locationState: n,
           onButtonClick: l,

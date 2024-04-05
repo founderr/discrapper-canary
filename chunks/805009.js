@@ -25,8 +25,8 @@ var a, l = n("735250"),
   I = n("794358"),
   A = n("381238"),
   v = n("255439"),
-  N = n("374129"),
-  x = n("639351"),
+  x = n("374129"),
+  N = n("639351"),
   M = n("944581"),
   R = n("368666"),
   L = n("630388"),
@@ -195,12 +195,12 @@ class k extends(a = s.Component) {
       })
     }, "activity")), C === P.GameConsoleTypes.XBOX || g === j.VoicePlatforms.XBOX ? V.push((0, l.jsx)("div", {
       className: r()(b.iconSpacing),
-      children: (0, l.jsx)(x.default, {
+      children: (0, l.jsx)(N.default, {
         className: r()(b.icon, m)
       })
     }, "xbox")) : (C === P.GameConsoleTypes.PLAYSTATION || g === j.VoicePlatforms.PLAYSTATION) && V.push((0, l.jsx)("div", {
       className: r()(b.iconSpacing),
-      children: (0, l.jsx)(N.default, {
+      children: (0, l.jsx)(x.default, {
         className: r()(b.icon, m)
       })
     }, "playstation")), d ? V.push((0, l.jsx)("div", {

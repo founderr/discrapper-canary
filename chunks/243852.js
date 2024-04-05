@@ -73,11 +73,11 @@ function y() {
   for (let t of Object.keys(R)) !n.has(t) && P(R[t], e)
 }
 
-function x() {
+function D() {
   for (let e of Object.keys(R)) P(R[e]);
   L = !1
 }
-class D extends(s = o.default.Store) {
+class x extends(s = o.default.Store) {
   initialize() {
     this.waitFor(h.default, m.default, T.default), this.syncWith([m.default], y)
   }
@@ -85,12 +85,12 @@ class D extends(s = o.default.Store) {
     return R
   }
 }
-r = "ActivityTrackingStore", (i = "displayName") in(l = D) ? Object.defineProperty(l, i, {
+r = "ActivityTrackingStore", (i = "displayName") in(l = x) ? Object.defineProperty(l, i, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[i] = r, new D(c.default, {
+}) : l[i] = r, new x(c.default, {
   RUNNING_GAMES_CHANGE: () => y(),
   CONNECTION_OPEN: function() {
     if (L) return !1;
@@ -101,9 +101,9 @@ r = "ActivityTrackingStore", (i = "displayName") in(l = D) ? Object.defineProper
     let {
       code: t
     } = e;
-    4004 === t && x()
+    4004 === t && D()
   },
-  LOGOUT: x,
+  LOGOUT: D,
   ACTIVITY_UPDATE_SUCCESS: function(e) {
     let {
       applicationId: t,

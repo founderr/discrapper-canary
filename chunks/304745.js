@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CenterControlTrayActivityButton: function() {
-    return N
+    return x
   }
 }), n("653041");
 var a = n("735250"),
@@ -27,10 +27,10 @@ var a = n("735250"),
   A = n("921944"),
   v = n("984324");
 
-function N(e) {
+function x(e) {
   let {
     channel: t
-  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), N = (0, h.useEmbeddedActivityLaunchability)(t.id), x = (0, h.getEmbeddedActivityLaunchabilityLabel)(N), M = N !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
+  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), x = (0, h.useEmbeddedActivityLaunchability)(t.id), N = (0, h.getEmbeddedActivityLaunchabilityLabel)(x), M = x !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
     isHovered: R,
     setIsHovered: L,
     onMouseEnter: y,
@@ -85,8 +85,8 @@ function N(e) {
         children: () => (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(T.default, {
             disabled: M,
-            "aria-label": x,
-            label: D ? void 0 : x,
+            "aria-label": N,
+            label: D ? void 0 : N,
             isActivityActive: P || R,
             className: v.controlButton,
             onClick: () => {

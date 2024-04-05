@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("36113"),
   A = n("626135"),
   v = n("792125"),
-  N = n("607187"),
-  x = n("981631"),
+  x = n("607187"),
+  N = n("981631"),
   M = n("701488"),
   R = n("689938"),
   L = n("619727"),
@@ -96,7 +96,7 @@ function j(e) {
             onClick: () => {
               null == t || t(), f()
             },
-            children: (0, a.jsx)(N.default, {
+            children: (0, a.jsx)(x.default, {
               className: L.root,
               children: (0, a.jsx)("div", {
                 className: L.iconContainer,
@@ -110,7 +110,7 @@ function j(e) {
         }
       }), (0, a.jsx)(u.Clickable, {
         onClick: l,
-        className: i()((0, v.getThemeClass)(x.ThemeTypes.DARK), L.shelfButtonCloseButton),
+        className: i()((0, v.getThemeClass)(N.ThemeTypes.DARK), L.shelfButtonCloseButton),
         children: (0, a.jsx)(S.default, {
           width: 24,
           height: 24,
@@ -130,7 +130,7 @@ function P(e) {
     width: r
   } = e;
   l.useEffect(() => {
-    A.default.track(x.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+    A.default.track(N.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
       tile_type: "activity invite",
       n_participants: 1
     })
@@ -141,7 +141,7 @@ function P(e) {
     } = (0, p.default)(m.default.VC_TILE_ACTIVITY_INVITE);
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: c,
-    children: (0, a.jsxs)(N.default, {
+    children: (0, a.jsxs)(x.default, {
       className: L.root,
       children: [r > 400 ? (0, a.jsx)("img", {
         src: y,
@@ -167,7 +167,7 @@ function P(e) {
                 ...n,
                 guild: s,
                 channel: t,
-                source: x.InstantInviteSources.ACTIVITY_ENTRY_POINT_TILE
+                source: N.InstantInviteSources.ACTIVITY_ENTRY_POINT_TILE
               })
             }, {
               contextKey: i ? u.POPOUT_MODAL_CONTEXT : u.DEFAULT_MODAL_CONTEXT
@@ -232,7 +232,7 @@ function b(e) {
     userParticipantCount: d
   } = e;
   l.useEffect(() => {
-    A.default.track(x.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+    A.default.track(N.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
       tile_type: "activity suggestion",
       n_participants: d
     })
@@ -246,7 +246,7 @@ function b(e) {
     } = (0, p.default)(m.default.VC_TILE_ACTIVITY_SUGGESTION);
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: h,
-    children: (0, a.jsxs)(N.default, {
+    children: (0, a.jsxs)(x.default, {
       className: L.root,
       children: [o > 480 ? (0, a.jsx)("img", {
         className: L.art,
@@ -269,7 +269,7 @@ function b(e) {
       }), (0, a.jsxs)(u.Clickable, {
         className: L.checkboxContainer,
         onClick: function() {
-          A.default.track(x.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+          A.default.track(N.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
             tile_type: "activity suggestion",
             close_type: "permanent",
             n_participants: d
@@ -282,7 +282,7 @@ function b(e) {
       }), (0, a.jsx)(u.Clickable, {
         className: L.closeButtonContainer,
         onClick: function() {
-          A.default.track(x.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+          A.default.track(N.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
             tile_type: "activity suggestion",
             close_type: "temporary",
             n_participants: d

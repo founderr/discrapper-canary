@@ -149,18 +149,18 @@ function y() {
   R = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
 }
 
-function x() {
+function D() {
   O = L ? new A : O.reset()
 }
 
-function D(e) {
+function x(e) {
   return function() {
     return !L && !!O.update(e) && (O = O.clone(), !0)
   }
 }
 class b extends(a = i.default.Store) {
   initialize() {
-    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], x), this.syncWith([d.default], x), this.syncWith([C.default], D(I)), this.syncWith([h.default, c.default], D(p)), y()
+    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], D), this.syncWith([d.default], D), this.syncWith([C.default], x(I)), this.syncWith([h.default, c.default], x(p)), y()
   }
   getState() {
     return {
@@ -182,7 +182,7 @@ S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     let {
       channelId: t
     } = e;
-    return L = null != t, x(), !L
+    return L = null != t, D(), !L
   },
   LOAD_RELATIONSHIPS_SUCCESS: function() {
     v = !1
@@ -194,7 +194,7 @@ S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     let {
       tab: t
     } = e;
-    return L = t !== m.DrawerTabTypes.FRIENDS, x(), !L
+    return L = t !== m.DrawerTabTypes.FRIENDS, D(), !L
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
     R = e.section, P = !0

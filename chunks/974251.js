@@ -22,8 +22,8 @@ var a = n("735250"),
   I = n("79390"),
   A = n("628566"),
   v = n("665906"),
-  N = n("695346"),
-  x = n("433355"),
+  x = n("695346"),
+  N = n("433355"),
   M = n("819640"),
   R = n("375954"),
   L = n("496675"),
@@ -58,7 +58,7 @@ t.default = l.memo(function(e) {
     en = (0, r.useStateFromStores)([g.default], () => g.default.getSettings().clipsEnabled),
     ea = (0, r.useStateFromStores)([g.default], () => g.default.getLastClipsSession()),
     el = (0, r.useStateFromStoresArray)([g.default], () => g.default.getNewClipIds()),
-    es = (0, r.useStateFromStores)([x.default], () => null == x.default.getCurrentSidebarChannelId(Z.id)),
+    es = (0, r.useStateFromStores)([N.default], () => null == N.default.getCurrentSidebarChannelId(Z.id)),
     {
       showClipsHeaderEntrypoint: ei
     } = C.ClipsExperiment.useExperiment({
@@ -108,11 +108,11 @@ t.default = l.memo(function(e) {
   });
   let e_ = (0, v.useCanStartPublicThread)(Z),
     eT = (0, v.useCanStartPrivateThread)(Z),
-    eI = !N.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
+    eI = !x.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
     eA = (0, r.useStateFromStores)([L.default, A.default], () => (0, E.canUseApplicationCommands)(L.default, A.default, J, Z)),
     ev = (0, I.useCanPostPollsInChannel)(null != Z ? Z : void 0),
-    eN = (0, d.useRedesignIconContext)().enabled,
-    ex = (0, m.useActivitiesInTextExperimentConfig)(Z.id, "ChannelAttachButton"),
+    ex = (0, d.useRedesignIconContext)().enabled,
+    eN = (0, m.useActivitiesInTextExperimentConfig)(Z.id, "ChannelAttachButton"),
     eM = null !== (s = null == el ? void 0 : el.length) && void 0 !== s ? s : 0,
     eR = (0, k.default)({
       canAttachFiles: ep,
@@ -124,13 +124,13 @@ t.default = l.memo(function(e) {
       activities: et,
       newClipsCount: eM,
       canPostPolls: ev,
-      canLaunchActivities: null !== (Y = null == ex ? void 0 : ex.showInOmniButtonMenu) && void 0 !== Y && Y,
+      canLaunchActivities: null !== (Y = null == eN ? void 0 : eN.showInOmniButtonMenu) && void 0 !== Y && Y,
       appContext: $
     });
   if (0 === eR.length) return null;
   let eL = et.some(e => (0, p.default)(e, H.ActivityFlags.SYNC)),
     ey = et.some(e => (0, p.default)(e, H.ActivityFlags.JOIN) && !(0, p.default)(e, H.ActivityFlags.EMBEDDED)) || eL;
-  z = eN ? (0, a.jsx)(u.CirclePlusIcon, {
+  z = ex ? (0, a.jsx)(u.CirclePlusIcon, {
     className: W.__invalid_attachButtonIcon,
     colorClass: W.attachButtonPlus
   }) : ey ? (0, a.jsx)(P.default, {

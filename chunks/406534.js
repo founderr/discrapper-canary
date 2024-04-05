@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("122707"),
   A = n("779836"),
   v = n("23750"),
-  N = n("496675"),
-  x = n("306680"),
+  x = n("496675"),
+  N = n("306680"),
   M = n("944486"),
   R = n("594174"),
   L = n("130208"),
@@ -162,7 +162,7 @@ function $(e) {
         }, e.key)
       }
       if (null != ei && ei > e.content.timestamp.getTime() * O.default.Millis.SECOND) return;
-      let s = N.default.can(Z.Permissions.CREATE_INSTANT_INVITE, L);
+      let s = x.default.can(Z.Permissions.CREATE_INSTANT_INVITE, L);
       if ((0, D.default)(e.content, s)) return;
       e.type === Z.ChannelStreamTypes.MESSAGE && null == eT && (eT = e);
       let i = e.groupId === (null == eT ? void 0 : eT.groupId) ? eT.content.id : e.groupId,
@@ -216,12 +216,12 @@ function $(e) {
       channel: L
     })), $ > 0 && ee && ed()) {
     let e, t;
-    let n = x.default.getOldestUnreadTimestamp(L.id),
+    let n = N.default.getOldestUnreadTimestamp(L.id),
       s = 0 !== n ? n : j.default.extractTimestamp(L.id),
       i = (0, y.isSameDay)(new Date, new Date(s));
-    if (x.default.isEstimated(L.id) ? (e = i ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = i ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), eh && (0, o.channelEligibleForSummaries)(L) && eC.includes(z.ChatOverlays.SUMMARIES)) {
-      let n = x.default.ackMessageId(L.id),
-        i = (0, I.getUnreadTopicsCount)(L.id, x.default.getOldestUnreadMessageId(L.id));
+    if (N.default.isEstimated(L.id) ? (e = i ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = i ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), eh && (0, o.channelEligibleForSummaries)(L) && eC.includes(z.ChatOverlays.SUMMARIES)) {
+      let n = N.default.ackMessageId(L.id),
+        i = (0, I.getUnreadTopicsCount)(L.id, N.default.getOldestUnreadMessageId(L.id));
       if ((0, d.trackWithMetadata)(Z.AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED, {
           num_unread_summaries: i,
           num_unread_messages: $,

@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("768318"),
   A = n("570533"),
   v = n("971792"),
-  N = n("629262"),
-  x = n("761966"),
+  x = n("629262"),
+  N = n("761966"),
   M = n("893729"),
   R = n("838940"),
   L = n("882101"),
@@ -119,7 +119,7 @@ let U = e => {
       listingId: t,
       guildId: n,
       className: l
-    } = e, s = (0, v.default)(n, t), [r] = _.useChannelBenefits(t), u = (0, N.default)(r), [d] = _.useIntangibleBenefits(t), c = _.useRole(t, n), [h] = _.useTierEmojiIds(t, n);
+    } = e, s = (0, v.default)(n, t), [r] = _.useChannelBenefits(t), u = (0, x.default)(r), [d] = _.useIntangibleBenefits(t), c = _.useRole(t, n), [h] = _.useTierEmojiIds(t, n);
     return null == s && 0 === u.length && 0 === d.length && 0 === h.size ? null : (0, a.jsxs)("div", {
       className: i()(b.subscriptionPerks, l),
       children: [null != s && (0, a.jsxs)(o.HeadingLevel, {
@@ -184,7 +184,7 @@ t.default = e => {
     openModal: C,
     canOpenModal: A,
     cannotOpenReason: v,
-    isCheckingTrialEligibility: N
+    isCheckingTrialEligibility: x
   } = (0, O.default)(p, s, h, m), M = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
     activeSubscription: R,
     activeSubscriptionListing: U
@@ -236,11 +236,11 @@ t.default = e => {
           }) : (0, a.jsx)(o.Tooltip, {
             text: A ? null : v,
             "aria-label": null !== (t = A && v) && void 0 !== t && t,
-            children: e => (0, a.jsx)(x.default, {
+            children: e => (0, a.jsx)(N.default, {
               ...e,
               fullWidth: !0,
               disabled: !A || M,
-              submitting: N,
+              submitting: x,
               onClick: C,
               onlyShineOnHover: !0,
               children: D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL

@@ -27,8 +27,8 @@ var l = n("735250"),
   x = n("802718"),
   R = n("796974"),
   y = n("271383"),
-  O = n("430824"),
-  M = n("771845"),
+  M = n("430824"),
+  O = n("771845"),
   D = n("358085"),
   b = n("709054"),
   j = n("792125"),
@@ -141,10 +141,10 @@ function er(e) {
     isOverlay: n = !1,
     className: s,
     themeOverride: r
-  } = e, [o] = (0, h.useStateFromStoresArray)([M.default], () => {
-    let e = M.default.getGuildsTree();
+  } = e, [o] = (0, h.useStateFromStoresArray)([O.default], () => {
+    let e = O.default.getGuildsTree();
     return [e, e.version]
-  }), u = (0, h.useStateFromStores)([L.default], () => L.default.lurkingGuildIds()), f = a.useMemo(() => n ? [] : u, [u, n]), p = (0, h.useStateFromStoresArray)([O.default, y.default], () => b.default.keys(O.default.getGuilds()).filter(e => y.default.isCurrentUserGuest(e))), g = f.concat(p), E = (0, h.useStateFromStores)([I.default], () => I.default.isFullscreenInContext()), et = (0, h.useStateFromStores)([O.default], () => O.default.getGeoRestrictedGuilds()), [en, el] = a.useState(!1), ea = a.useCallback(() => el(!0), []), es = a.useCallback(() => el(!1), []), er = a.useRef(!1), [eo] = a.useState(() => new C.Timeout), eu = a.useRef(null), ed = a.useRef(null), {
+  }), u = (0, h.useStateFromStores)([L.default], () => L.default.lurkingGuildIds()), f = a.useMemo(() => n ? [] : u, [u, n]), p = (0, h.useStateFromStoresArray)([M.default, y.default], () => b.default.keys(M.default.getGuilds()).filter(e => y.default.isCurrentUserGuest(e))), g = f.concat(p), E = (0, h.useStateFromStores)([I.default], () => I.default.isFullscreenInContext()), et = (0, h.useStateFromStores)([M.default], () => M.default.getGeoRestrictedGuilds()), [en, el] = a.useState(!1), ea = a.useCallback(() => el(!0), []), es = a.useCallback(() => el(!1), []), er = a.useRef(!1), [eo] = a.useState(() => new C.Timeout), eu = a.useRef(null), ed = a.useRef(null), {
     ref: ec,
     ...ef
   } = (0, c.useListContainerProps)(), eh = (0, m.useFocusJumpSection)(), [ep, eC] = a.useState(!1), [em] = a.useState(() => new ei(o, eC, () => {

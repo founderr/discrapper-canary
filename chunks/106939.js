@@ -36,8 +36,8 @@ var a = n("735250"),
   P = n("280570"),
   M = n("914788"),
   y = n("841409"),
-  x = n("652262"),
-  D = n("880257"),
+  D = n("652262"),
+  x = n("880257"),
   b = n("631885"),
   U = n("830746"),
   j = n("731934"),
@@ -62,7 +62,7 @@ function K(e) {
   let {
     section: t,
     handleItemSelect: n
-  } = e, s = (0, b.usePendingRequestCount)(), l = (0, D.default)();
+  } = e, s = (0, b.usePendingRequestCount)(), l = (0, x.default)();
   return (0, a.jsxs)(c.TabBar, {
     className: V.settingsTabBar,
     "aria-label": H.default.Messages.FAMILY_CENTER_TITLE,
@@ -132,11 +132,11 @@ function z(e) {
 }
 
 function q() {
-  let e = (0, D.default)(),
+  let e = (0, x.default)(),
     t = (0, b.useAcceptedRequestsCount)(),
     n = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
     l = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()),
-    r = (0, x.useSelectedTeenId)(),
+    r = (0, D.useSelectedTeenId)(),
     {
       selectedTab: f,
       handleTabChange: h
@@ -184,7 +184,7 @@ function q() {
 function Q() {
   let {
     analyticsLocations: e
-  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, D.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()), S = (0, x.useSelectedTeenId)(), v = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
+  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, x.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()), S = (0, D.useSelectedTeenId)(), v = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
     selectedTab: R,
     handleTabChange: L
   } = (0, y.default)(), U = (0, N.useUID)(), j = A.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;

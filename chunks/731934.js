@@ -249,7 +249,7 @@ let P = () => {
       })
     })]
   }) : null,
-  x = () => {
+  D = () => {
     let e = (0, h.useUserForLinkStatus)(p.UserLinkStatus.PENDING),
       t = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
         count: e.length
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, E.default)();
   return (0, a.jsxs)("div", {
     className: g.container,
-    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(O, {}), (0, a.jsx)(P, {}), (0, a.jsx)(x, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {})]
+    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(O, {}), (0, a.jsx)(P, {}), (0, a.jsx)(D, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {})]
   })
 }

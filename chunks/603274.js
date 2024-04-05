@@ -33,7 +33,7 @@ var a = n("803997"),
   R = n("499890"),
   y = n("337341");
 
-function O(e, t) {
+function M(e, t) {
   return 0 === t.length ? null : (0, l.jsxs)("div", {
     className: R.row,
     children: [(0, l.jsx)(e, {
@@ -46,7 +46,7 @@ function O(e, t) {
   })
 }
 
-function M() {
+function O() {
   var e, t;
   let n = (0, o.useStateFromStoresArray)([L.default, p.default], () => A.default.keys(L.default.getFavoriteChannels()).map(e => p.default.getChannel(e)).filter(T.isNotNullish)),
     a = n.map(e => e.id),
@@ -64,7 +64,7 @@ function M() {
       } = e;
       return t
     }))),
-    M = (0, o.useStateFromStores)([c.default], () => {
+    O = (0, o.useStateFromStores)([c.default], () => {
       let e = 0;
       for (let t of i) e += c.default.getParticipantCount(t, f.StageChannelParticipantNamedIndex.AUDIENCE);
       return e
@@ -81,8 +81,8 @@ function M() {
     }, [a]),
     j = (0, o.useStateFromStoresArray)([C.default], () => b.map(e => C.default.getUser(e)), [b]),
     G = (0, o.useStateFromStoresArray)([C.default], () => D.map(e => C.default.getUser(e)), [D]),
-    U = O(S.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
-  let P = (e = y, t = M, 0 === e.length ? null : (0, l.jsxs)("div", {
+    U = M(S.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
+  let P = (e = y, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
       children: [(0, l.jsx)(_.default, {
         className: R.activityIcon
@@ -103,8 +103,8 @@ function M() {
         })]
       })]
     })),
-    w = O(I.default, G.filter(e => null != e && !b.includes(e.id))),
-    F = O(E.default, j);
+    w = M(I.default, G.filter(e => null != e && !b.includes(e.id))),
+    F = M(E.default, j);
   return (0, l.jsxs)(l.Fragment, {
     children: [P, U, w, F]
   })
@@ -118,7 +118,7 @@ function D() {
         className: s()(R.guildNameText, R.guildNameTextLimitedSize),
         children: x.default.Messages.FAVORITES_GUILD_NAME
       })
-    }), (0, l.jsx)(M, {})]
+    }), (0, l.jsx)(O, {})]
   })
 }
 

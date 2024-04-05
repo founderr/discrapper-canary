@@ -32,8 +32,8 @@ function g(e) {
     className: I,
     id: A = "fancybutton-toggle",
     collapseWhenChecked: v = !0,
-    onClick: N,
-    disabled: x
+    onClick: x,
+    disabled: N
   } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, L] = l.useState(!1), y = (0, c.default)(), O = (0, o.isThemeDark)(y) || t ? C : E, {
     width: j = 0,
     ref: P
@@ -47,7 +47,7 @@ function g(e) {
       tooltipText: s
     }),
     position: "top",
-    color: null != T ? T : x ? u.Tooltip.Colors.BLACK : u.Tooltip.Colors.BRAND,
+    color: null != T ? T : N ? u.Tooltip.Colors.BLACK : u.Tooltip.Colors.BRAND,
     "aria-label": s,
     tooltipClassName: p.tooltip,
     className: p.tooltipContainer,
@@ -59,11 +59,11 @@ function g(e) {
           let e = !t;
           L(!0), null == _ || _(e)
         }
-        "function" == typeof N && N()
+        "function" == typeof x && x()
       },
       id: A,
       type: "checkbox",
-      disabled: x
+      disabled: N
     }), (0, a.jsxs)("label", {
       htmlFor: A,
       className: i()(p.label, I, {

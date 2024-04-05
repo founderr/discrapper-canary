@@ -37,11 +37,11 @@ let A = e => {
     P = (0, s.useListItem)("nitro"),
     M = (0, E.usePremiumTrialOffer)(),
     y = (0, f.usePremiumDiscountOffer)(),
-    x = (0, l.useStateFromStores)([o.default], () => o.default.isLocalizedPromoEnabled) && null == M,
-    D = (0, m.useIsEligibleForBogoPromotion)(),
+    D = (0, l.useStateFromStores)([o.default], () => o.default.isLocalizedPromoEnabled) && null == M,
+    x = (0, m.useIsEligibleForBogoPromotion)(),
     b = (0, I.default)(),
     U = (0, _.useTenureRewardBadgeDescription)();
-  return A || null != M || null != y || D || b || null != U || null != O && Date.now() - O.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(O, L) ? (D ? n = (0, a.jsx)(h.default, {
+  return A || null != M || null != y || x || b || null != U || null != O && Date.now() - O.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(O, L) ? (x ? n = (0, a.jsx)(h.default, {
     isNitroTab: !0
   }) : null != U ? n = (0, a.jsx)(p.default, {
     copy: U
@@ -52,7 +52,7 @@ let A = e => {
   }) : null != M ? n = (0, a.jsx)(S.PremiumTrialOfferTabBadge, {
     trialOffer: M,
     isTabSelected: A
-  }) : x && (n = (0, a.jsx)(C.LocalizedPricingBadgeIcon, {
+  }) : D && (n = (0, a.jsx)(C.LocalizedPricingBadgeIcon, {
     entryPoint: C.BadgeEntryPoint.PrivateMessages
   }), !A && (t = g.localizeBadge)), (0, a.jsx)(i.LinkButton, {
     selected: A,

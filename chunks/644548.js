@@ -52,12 +52,12 @@ t.default = e => {
     requestId: u
   } = e, {
     applicationImageSrc: T,
-    user: N
+    user: x
   } = (0, p.useGamingContentData)(s), {
-    primaryColor: x,
+    primaryColor: N,
     secondaryColor: M
   } = (0, m.default)(T), R = l.useCallback(async () => {
-    if (null == N) return;
+    if (null == x) return;
     let e = (0, d.getEntryDuration)(s);
     if (null == e) return;
     let t = (0, d.getAggregateRange)(s);
@@ -66,16 +66,16 @@ t.default = e => {
     return (0, f.generateGamingContentImage)({
       entry: s,
       applicationImageSrc: T,
-      avatarSrc: N.getAvatarURL(n.guild_id, 128),
-      description: I(s, n, N, t),
+      avatarSrc: x.getAvatarURL(n.guild_id, 128),
+      description: I(s, n, x, t),
       timestamp: S.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
         hours: Math.round(e / o.default.Seconds.HOUR)
       }),
-      colors: [x, M],
+      colors: [N, M],
       channelId: a
     })
-  }, [T, n, s, x, M, N]);
-  if (null == N) return null;
+  }, [T, n, s, N, M, x]);
+  if (null == x) return null;
   let L = (0, d.getEntryDuration)(s);
   if (null == L) return null;
   let y = (0, d.getAggregateRange)(s);
@@ -86,18 +86,18 @@ t.default = e => {
         a = await (0, f.generateGamingContentImage)({
           entry: s,
           applicationImageSrc: T,
-          avatarSrc: N.getAvatarURL(n.guild_id, 128),
-          description: I(s, n, N, y),
+          avatarSrc: x.getAvatarURL(n.guild_id, 128),
+          description: I(s, n, x, y),
           timestamp: S.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
             hours: Math.round(L / o.default.Seconds.HOUR)
           }),
-          colors: [x, M],
+          colors: [N, M],
           channelId: t
         });
       await (0, h.sendContentImageReply)({
         file: a,
-        user: N,
-        altText: v(s, N),
+        user: x,
+        altText: v(s, x),
         reply: e
       }), (0, c.trackInteraction)(g.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
         entry: s,
@@ -116,10 +116,10 @@ t.default = e => {
         className: _.heroDetails,
         children: [(0, a.jsxs)("div", {
           children: [(0, a.jsx)(C.PopoutAvatar, {
-            user: N,
+            user: x,
             guildId: n.guild_id
           }), (0, a.jsx)(C.PopoutTitle, {
-            children: A(s, n, N, y)
+            children: A(s, n, x, y)
           })]
         }), (0, a.jsx)(E.ContentImage, {
           size: 80,
@@ -134,7 +134,7 @@ t.default = e => {
       })]
     }), (0, a.jsx)(C.PopoutReactor, {
       onMessageReact: O,
-      user: N,
+      user: x,
       channel: n,
       generateReactionImage: R
     })]

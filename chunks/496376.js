@@ -111,7 +111,7 @@ t.default = e => {
   } = (0, r.useStateFromStoresObject)([f.default], () => {
     var e;
     return null !== (e = f.default.getState(t)) && void 0 !== e ? e : (0, f.newClanProgress)()
-  }), x = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [D, b] = s.useState(!0);
+  }), D = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [x, b] = s.useState(!0);
   s.useEffect(() => {
     u.default.getDetectableGames()
   }, []);
@@ -132,7 +132,7 @@ t.default = e => {
       children: T.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, a.jsxs)("div", {
       className: i()(g.mainContent, g.fadeIn, {
-        [g.fadeOut]: !D
+        [g.fadeOut]: !x
       }),
       children: [(0, a.jsx)(o.Sequencer, {
         step: y,
@@ -193,7 +193,7 @@ t.default = e => {
       })]
     }), (0, a.jsx)("div", {
       className: i()(g.overviewSidebar, {
-        [g.fadeOut]: x && !D
+        [g.fadeOut]: D && !x
       }),
       children: (0, a.jsx)(E.default, {
         guildId: t

@@ -32,8 +32,8 @@ let v = s.forwardRef(function(e, t) {
     onCtxMenuClose: P,
     onCtxMenuSelect: M,
     quest: y,
-    useReducedMotion: x
-  } = e, D = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(y.id), [y]), b = (0, E.useQuestFormattedDate)(y.config.expiresAt), U = (0, E.useQuestFormattedDate)(y.config.rewardCodeExpiresAt), j = s.useMemo(() => (0, C.isAssetAnimated)(y.config.assets.questBarHero), [y]), G = s.useCallback(() => {
+    useReducedMotion: D
+  } = e, x = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(y.id), [y]), b = (0, E.useQuestFormattedDate)(y.config.expiresAt), U = (0, E.useQuestFormattedDate)(y.config.rewardCodeExpiresAt), j = s.useMemo(() => (0, C.isAssetAnimated)(y.config.assets.questBarHero), [y]), G = s.useCallback(() => {
     (0, f.enrollInQuest)(y.id, {
       questContent: _.QuestContent.QUEST_BAR,
       questContentCTA: c.QuestContentCTA.ACCEPT_QUEST
@@ -169,7 +169,7 @@ let v = s.forwardRef(function(e, t) {
           fullWidth: !0,
           onClick: B ? G : void 0,
           size: o.Button.Sizes.NONE,
-          submitting: D,
+          submitting: x,
           children: A.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, a.jsx)("div", {
@@ -181,7 +181,7 @@ let v = s.forwardRef(function(e, t) {
           id: "QuestsBarContentExpanded_heroAnimated",
           children: e => (0, a.jsx)(d.default, {
             ref: e,
-            autoPlay: !x,
+            autoPlay: !D,
             loop: !0,
             muted: !0,
             playsInline: !0,

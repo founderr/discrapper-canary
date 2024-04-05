@@ -56,7 +56,7 @@ function R() {
       name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let x = s.useCallback(e => {
+  let D = s.useCallback(e => {
       var n, s;
       let {
         row: r
@@ -72,7 +72,7 @@ function R() {
         hasSingleMessageRequest: l
       }, d)
     }, [t, l, L]),
-    D = s.useCallback(() => (0, a.jsxs)(E.default, {
+    x = s.useCallback(() => (0, a.jsxs)(E.default, {
       className: v.sectionTitle,
       children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: n
@@ -117,8 +117,8 @@ function R() {
           paddingBottom: 24,
           sectionHeight: g.LIST_SECTION_HEIGHT,
           rowHeight: g.LIST_ROW_HEIGHT,
-          renderSection: D,
-          renderRow: x,
+          renderSection: x,
+          renderRow: D,
           sections: [t.length],
           chunkSize: 30,
           fade: !0,

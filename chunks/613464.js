@@ -32,8 +32,8 @@ function v(e) {
     guildId: n,
     onClose: s,
     className: v,
-    infoPanelClassName: N,
-    style: x
+    infoPanelClassName: x,
+    style: N
   } = e, M = (0, S.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([g.default], () => g.default.getUser(t), [t]), L = (0, r.useStateFromStores)([C.default], () => C.default.getMember(n, t), [n, t]), [y, O] = l.useState(null == R || null == L), j = (0, d.default)(L), P = l.useRef(null), {
     analyticsLocations: D
   } = (0, h.default)(f.default.GUILD_MEMBER_MOD_VIEW);
@@ -60,7 +60,7 @@ function v(e) {
     })()
   }, [n, t]), M) ? y || null == R || null == L ? (0, a.jsx)("div", {
     className: i()(A.sidebarContianer, A.loadingContainer, v),
-    style: x,
+    style: N,
     children: (0, a.jsx)(o.Spinner, {
       animated: !0,
       type: y ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
@@ -69,7 +69,7 @@ function v(e) {
     value: D,
     children: (0, a.jsx)("div", {
       className: i()(A.sidebarContianer, v),
-      style: x,
+      style: N,
       children: (0, a.jsx)(E.default, {
         user: R,
         guildId: n,
@@ -86,7 +86,7 @@ function v(e) {
             userId: t,
             guildId: n,
             onClose: s,
-            className: N
+            className: x
           })]
         })
       })

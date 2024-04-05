@@ -31,7 +31,7 @@ function L(e) {
   let {
     guild: t,
     selected: L
-  } = e, v = (0, c.default)(t), x = (0, u.useIsDismissibleContentDismissed)(i.DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX), R = (0, s.useStateFromStoresArray)([f.default], () => Array.from(f.default.getNewChannelIds(t.id)).filter(e => f.default.shouldIndicateNewChannel(t.id, e))), y = (0, s.useStateFromStores)([p.default], () => p.default.hasUnread(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION)), O = R.length > E.MAX_NEW_CHANNELS_TO_SHOW, M = (0, s.useStateFromStores)([d.default, p.default], () => {
+  } = e, v = (0, c.default)(t), x = (0, u.useIsDismissibleContentDismissed)(i.DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX), R = (0, s.useStateFromStoresArray)([f.default], () => Array.from(f.default.getNewChannelIds(t.id)).filter(e => f.default.shouldIndicateNewChannel(t.id, e))), y = (0, s.useStateFromStores)([p.default], () => p.default.hasUnread(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION)), M = R.length > E.MAX_NEW_CHANNELS_TO_SHOW, O = (0, s.useStateFromStores)([d.default, p.default], () => {
     let e = d.default.lastFetchedAt(t.id),
       n = p.default.lastMessageId(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION);
     if (null == n) return !1;
@@ -50,7 +50,7 @@ function L(e) {
       })
     })
   }, [t]), j = null;
-  return (!x || y || O) && !L && !M && (j = (0, l.jsx)(m.TextBadge, {
+  return (!x || y || M) && !L && !O && (j = (0, l.jsx)(m.TextBadge, {
     color: r.default.unsafe_rawColors.BRAND_260.css,
     text: T.default.Messages.NEW,
     className: A.newChannel

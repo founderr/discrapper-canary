@@ -53,8 +53,8 @@ t.default = a.memo(function(e) {
     thread: t,
     isSelectedChannel: s,
     isSelectedVoice: R,
-    isLast: O,
-    withGuildIcon: M
+    isLast: M,
+    withGuildIcon: O
   } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([m.default], () => m.default.hasVideo(t.id)), {
     unread: j,
     mentionCount: G
@@ -93,9 +93,9 @@ t.default = a.memo(function(e) {
       [v.selected]: s
     }),
     children: [(0, l.jsx)(y, {
-      withGuildIcon: M
-    }), O ? null : (0, l.jsx)(y, {
-      withGuildIcon: M,
+      withGuildIcon: O
+    }), M ? null : (0, l.jsx)(y, {
+      withGuildIcon: O,
       style: {
         transform: "rotateX(180deg) translateY(-9px)"
       }
@@ -112,7 +112,7 @@ t.default = a.memo(function(e) {
           [x.modeSelected]: s,
           [x.modeMuted]: !s && U,
           [x.modeUnreadImportant]: !U && !s && j,
-          [x.withGuildIcon]: M
+          [x.withGuildIcon]: O
         }),
         onMouseDown: w,
         onContextMenu: F,

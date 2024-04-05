@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return O
   }
 });
 var l = n("735250");
@@ -33,12 +33,12 @@ var a = n("803997"),
   R = n("689938"),
   y = n("845051");
 
-function O(e) {
+function M(e) {
   let {
     guildId: t,
     selected: n,
     handleClick: a
-  } = e, d = (0, p.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), C = (0, i.useStateFromStores)([_.default], () => _.default.getGuild(t)), A = (null == C ? void 0 : C.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, v = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
+  } = e, d = (0, p.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), C = (0, i.useStateFromStores)([_.default], () => _.default.getGuild(t)), A = (null == C ? void 0 : C.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, v = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), M = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
   return (0, l.jsx)(u.ClickableContainer, {
     tag: "div",
     onClick: a,
@@ -56,7 +56,7 @@ function O(e) {
         children: R.default.Messages.GUILD_SHOP_CHANNEL_LABEL
       }), (0, l.jsxs)("div", {
         className: y.gifSection,
-        children: [O ? (0, l.jsx)(N.TextBadge, {
+        children: [M ? (0, l.jsx)(N.TextBadge, {
           color: u.tokens.unsafe_rawColors.BRAND_260.css,
           text: R.default.Messages.NEW,
           className: y.newBadge
@@ -86,14 +86,14 @@ function O(e) {
   })
 }
 
-function M(e) {
+function O(e) {
   let {
     guild: t,
     selected: a
   } = e, s = (0, C.useGuildShopPreviewVisible)(t, "guild_shop_channel_row"), i = () => {
     o.Storage.set(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "true"), (0, E.transitionTo)(L.Routes.CHANNEL(t.id, v.StaticChannelRoute.GUILD_SHOP))
   };
-  return s ? (0, l.jsx)(O, {
+  return s ? (0, l.jsx)(M, {
     guildId: t.id,
     selected: a,
     handleClick: i

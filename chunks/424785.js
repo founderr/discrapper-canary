@@ -32,8 +32,8 @@ var a = n("803997"),
   x = n("607744"),
   R = n("496675"),
   y = n("306680"),
-  O = n("9156"),
-  M = n("979651"),
+  M = n("9156"),
+  O = n("979651"),
   D = n("514342"),
   b = n("974029"),
   j = n("934415"),
@@ -67,7 +67,7 @@ class K extends G.default {
     let {
       channel: e
     } = this.props;
-    return (0, j.isChannelFull)(e, M.default, v.default)
+    return (0, j.isChannelFull)(e, O.default, v.default)
   }
   getModeClass() {
     let {
@@ -286,7 +286,7 @@ function Z(e) {
   } = e, u = (0, i.useStateFromStoresObject)([y.default], () => ({
     unread: y.default.hasUnread(n.id),
     mentionCount: y.default.getMentionCount(n.id)
-  })), d = (0, i.useStateFromStores)([O.default], () => O.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
+  })), d = (0, i.useStateFromStores)([M.default], () => M.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
     let e = L.default.getChannel(n.parent_id),
       l = x.default.getCheck(n.guild_id);
     return {
@@ -300,14 +300,14 @@ function Z(e) {
   }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), p = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), m = (0, S.useStageParticipantsCount)(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E
-  } = (0, C.default)(n.id), v = (0, i.useStateFromStores)([O.default], () => O.default.isFavorite(t.id, n.id)), M = (0, N.getStageHasMedia)(n.id), D = (0, U.default)({
+  } = (0, C.default)(n.id), v = (0, i.useStateFromStores)([M.default], () => M.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), D = (0, U.default)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: r,
     voiceStates: o,
     isSubscriptionGated: g,
     needSubscriptionToAccess: E,
-    enableConnectedUserLimit: M || n.userLimit > 0 && n.userLimit < F.MAX_STAGE_VOICE_USER_LIMIT
+    enableConnectedUserLimit: O || n.userLimit > 0 && n.userLimit < F.MAX_STAGE_VOICE_USER_LIMIT
   }), b = e.connected && null == D;
   return (0, l.jsx)(W, {
     categoryCollapsed: f,

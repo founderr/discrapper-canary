@@ -22,8 +22,8 @@ var a = n("735250"),
   I = n("110924"),
   A = n("40851"),
   v = n("115130"),
-  N = n("317381"),
-  x = n("596040"),
+  x = n("317381"),
+  N = n("596040"),
   M = n("296797"),
   R = n("349619"),
   L = n("100527"),
@@ -76,8 +76,8 @@ var a = n("735250"),
   eI = n("358221"),
   eA = n("414910"),
   ev = n("887012"),
-  eN = n("909820"),
-  ex = n("493010"),
+  ex = n("909820"),
+  eN = n("493010"),
   eM = n("742603"),
   eR = n("221888"),
   eL = n("900211"),
@@ -306,7 +306,7 @@ class ek extends l.PureComponent {
         ref: e => {
           this._channelChatRef.current = e, this.props.channelChatRef.current = e
         },
-        children: s && (!d || !this.popoutOpen || this.inPopout) && (0, a.jsx)(ex.default, {
+        children: s && (!d || !this.popoutOpen || this.inPopout) && (0, a.jsx)(eN.default, {
           channel: t,
           guild: n,
           maxWidth: o
@@ -605,7 +605,7 @@ class ek extends l.PureComponent {
         channel: n,
         inCall: l
       } = this.props;
-      return !e || t || this.popoutOpen && !this.inPopout && l ? null : (0, a.jsx)(eN.default, {
+      return !e || t || this.popoutOpen && !this.inPopout && l ? null : (0, a.jsx)(ex.default, {
         children: (0, a.jsx)(K.default, {
           className: eb.chatToasts,
           channelId: n.id
@@ -707,11 +707,11 @@ t.default = function(e) {
     g.default.updatedUnsyncedSettings({
       callHeaderHeight: e
     })
-  }, []), en = null !== (t = null == Y ? void 0 : Y.id) && void 0 !== t ? t : null, ec = (0, x.default)(en, n.id), ef = (0, u.useStateFromStores)([v.default], () => v.default.getFetchState(), []), eh = (0, I.default)(ef);
+  }, []), en = null !== (t = null == Y ? void 0 : Y.id) && void 0 !== t ? t : null, ec = (0, N.default)(en, n.id), ef = (0, u.useStateFromStores)([v.default], () => v.default.getFetchState(), []), eh = (0, I.default)(ef);
   l.useEffect(() => {
     "errored" === ef && "errored" !== eh && (0, f.showToast)((0, f.createToast)(eD.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, f.ToastType.FAILURE))
   }, [ef, eh]);
-  let em = (0, u.useStateFromStores)([N.default], () => null != N.default.getSelfEmbeddedActivityForChannel(n.id), [n]);
+  let em = (0, u.useStateFromStores)([x.default], () => null != x.default.getSelfEmbeddedActivityForChannel(n.id), [n]);
   l.useEffect(() => {
     let e = !1,
       t = null;
@@ -732,7 +732,7 @@ t.default = function(e) {
     value: eC,
     children: (0, a.jsx)(_.default, {
       page: eP.AnalyticsPages.CHANNEL_CALL,
-      children: (0, a.jsx)(eN.ChannelCallChatLayerProvider, {
+      children: (0, a.jsx)(ex.ChannelCallChatLayerProvider, {
         children: (0, a.jsxs)(ey.VoiceChannelEffectsLayerProvider, {
           children: [(0, a.jsx)(ek, {
             channel: n,
@@ -774,7 +774,7 @@ t.default = function(e) {
             maxHeight: i,
             forceShowControls: eE,
             awaitingRemoteSessionInfo: $
-          }), !n.isPrivate() && (0, a.jsx)(ey.VoiceChannelEffectsLayerContainer, {}), (0, a.jsx)(eN.ChannelCallChatLayerContainer, {})]
+          }), !n.isPrivate() && (0, a.jsx)(ey.VoiceChannelEffectsLayerContainer, {}), (0, a.jsx)(ex.ChannelCallChatLayerContainer, {})]
         })
       })
     })

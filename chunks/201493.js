@@ -25,9 +25,9 @@ t.default = e => {
   var t;
   let {
     channel: v,
-    guild: N
+    guild: x
   } = e, {
-    currentCategoryId: x,
+    currentCategoryId: N,
     directoryEntries: M,
     categoryCounts: R,
     allEntriesCount: L,
@@ -51,7 +51,7 @@ t.default = e => {
       (0, o.ack)(v.id, !0, !0, e)
     })
   }, [v.id]);
-  let O = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), x) : null, [M, x]),
+  let O = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), N) : null, [M, N]),
     {
       mostRecentQuery: j,
       searchFetching: P,
@@ -72,7 +72,7 @@ t.default = e => {
     {
       showHubEventsList: w
     } = u.default.useExperiment({
-      guildId: null !== (t = N.id) && void 0 !== t ? t : "",
+      guildId: null !== (t = x.id) && void 0 !== t ? t : "",
       location: "6f7fb0_1"
     }, {
       autoTrackExposure: !1
@@ -82,10 +82,10 @@ t.default = e => {
   }, [v.id]), l.useEffect(() => {
     c.default.track(I.AnalyticEvents.GUILD_DIRECTORY_CHANNEL_VIEWED, {
       directory_channel_id: v.id,
-      directory_guild_id: N.id,
-      primary_category_id: x
+      directory_guild_id: x.id,
+      primary_category_id: N
     })
-  }, [v.id, N.id, x]);
+  }, [v.id, x.id, N]);
   let k = (0, E.useCanCreateOrAddGuildInDirectory)(v) ? () => {
       (0, i.openModalLazy)(async () => {
         let {
@@ -93,17 +93,17 @@ t.default = e => {
         } = await Promise.all([n.e("99387"), n.e("79764")]).then(n.bind(n, "533202"));
         return t => (0, a.jsx)(e, {
           ...t,
-          directoryGuildName: N.name,
-          directoryGuildId: N.id,
+          directoryGuildName: x.name,
+          directoryGuildId: x.id,
           directoryChannelId: v.id,
-          currentCategoryId: x === T.DirectoryEntryCategories.ALL ? null : x
+          currentCategoryId: N === T.DirectoryEntryCategories.ALL ? null : N
         })
       })
     } : void 0,
     H = e => {
       0 !== b.trim().length && e.charCode === I.KeyboardKeys.ENTER && (h.searchDirectoryEntries(v.id, b), c.default.track(I.AnalyticEvents.GUILD_DIRECTORY_SEARCH, {
         directory_channel_id: v.id,
-        directory_guild_id: N.id
+        directory_guild_id: x.id
       }))
     },
     B = () => {
@@ -118,15 +118,15 @@ t.default = e => {
     handleCreateOrAddGuild: k,
     searchResults: D,
     searchFetching: P
-  }) : null == O && null == x ? (0, a.jsx)("div", {
+  }) : null == O && null == N ? (0, a.jsx)("div", {
     className: A.pageContainer,
     children: (0, a.jsx)(i.Spinner, {
       className: A.spinner
     })
-  }) : (null == O ? void 0 : O.length) === 0 && null == x ? (0, a.jsx)("div", {
+  }) : (null == O ? void 0 : O.length) === 0 && null == N ? (0, a.jsx)("div", {
     className: A.pageContainer,
     children: (0, a.jsx)(C.default, {
-      guild: N,
+      guild: x,
       onAddGuild: k
     })
   }) : (0, a.jsx)(g.default, {
@@ -136,7 +136,7 @@ t.default = e => {
     handleSearchKeyPress: H,
     handleClearSearch: B,
     handleCreateOrAddGuild: k,
-    currentCategoryId: x,
+    currentCategoryId: N,
     handleSelectCategory: e => {
       h.selectDirectoryCategory(v.id, e)
     },

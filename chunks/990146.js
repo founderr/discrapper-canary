@@ -32,8 +32,8 @@ t.default = function() {
     O = s.useRef(-1),
     L = s.useRef(!1),
     [P, M] = s.useState(!1),
-    [y, x] = s.useState(!1),
-    [D, b] = s.useState(!1),
+    [y, D] = s.useState(!1),
+    [x, b] = s.useState(!1),
     [U, j] = s.useState(!0),
     [G, w] = s.useState(240),
     k = s.useRef(null),
@@ -49,16 +49,16 @@ t.default = function() {
     } = (0, S.useQuestsAssetsLoadState)(),
     q = s.useCallback(() => {
       var e, t;
-      w((null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), x(!0)
+      w((null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), D(!0)
     }, []),
     Q = s.useCallback(() => {
       M(!0)
     }, []),
     Z = s.useCallback(() => {
-      M(!1), !L.current && !H && x(!1)
+      M(!1), !L.current && !H && D(!1)
     }, [H]),
     X = s.useCallback(() => {
-      M(!1), !H && x(!1), L.current = !1
+      M(!1), !H && D(!1), L.current = !1
     }, [H]),
     J = s.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -68,7 +68,7 @@ t.default = function() {
       t ? O.current = window.setTimeout(q, 75) : q()
     }, [q]),
     $ = s.useCallback(() => {
-      if (window.clearTimeout(O.current), !H && !P) !L.current && x(!1)
+      if (window.clearTimeout(O.current), !H && !P) !L.current && D(!1)
     }, [P, H]),
     ee = s.useCallback(() => {
       null != v && (0, c.trackQuestEvent)({
@@ -86,7 +86,7 @@ t.default = function() {
   }, [H, q]), s.useLayoutEffect(() => {
     F && !B.current && L.current && q()
   }, [F, q]), s.useLayoutEffect(() => {
-    !H && F && !B.current && !L.current && x(!1)
+    !H && F && !B.current && !L.current && D(!1)
   }, [F, H]);
   let en = l && !Y && !V && null != v && !W && !z,
     ea = s.useRef(en);
@@ -183,7 +183,7 @@ t.default = function() {
           className: A.content,
           expansionSpring: es,
           isExpanded: y,
-          isExpansionAnimationComplete: D,
+          isExpansionAnimationComplete: x,
           quest: v,
           useReducedMotion: N
         }), (0, a.jsx)(p.default, {
@@ -192,7 +192,7 @@ t.default = function() {
           onCtxMenuClose: Z,
           onCtxMenuSelect: X,
           isExpanded: y,
-          isExpansionAnimationComplete: D,
+          isExpansionAnimationComplete: x,
           quest: v,
           useReducedMotion: N,
           ref: k

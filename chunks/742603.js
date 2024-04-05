@@ -27,8 +27,8 @@ var l = n("803997"),
   I = n("809244"),
   A = n("618158"),
   v = n("496675"),
-  N = n("366695"),
-  x = n("586791"),
+  x = n("366695"),
+  N = n("586791"),
   M = n("502568"),
   R = n("792125"),
   L = n("358221"),
@@ -95,7 +95,7 @@ function G(e) {
   if ((null == l ? void 0 : l.type) === D.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(M.default.Divider, {
       className: w.divider
-    }), (0, a.jsx)(N.default, {
+    }), (0, a.jsx)(x.default, {
       game: n,
       className: w.activityIcon
     }), (0, a.jsx)(r.Text, {
@@ -147,8 +147,8 @@ function V(e) {
   } = (0, i.useStateFromStoresObject)([L.default], () => ({
     focusedParticipant: L.default.getSelectedParticipant(t.id),
     participantsOpen: L.default.getParticipantsOpen(t.id)
-  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), N = F.default.Messages.VOICE_CHANNEL;
-  t.isDM() ? N = F.default.Messages.DM : t.isGroupDM() && (N = F.default.Messages.GROUP_DM);
+  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), x = F.default.Messages.VOICE_CHANNEL;
+  t.isDM() ? x = F.default.Messages.DM : t.isGroupDM() && (x = F.default.Messages.GROUP_DM);
   let y = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
     j = t.isGuildVoice() && u && null != y && y.length > 0,
     H = (0, i.useStateFromStores)([v.default], () => v.default.can(b.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
@@ -171,7 +171,7 @@ function V(e) {
           children: _.default.parseVoiceChannelStatus(y, !0, {
             channelId: t.id
           })
-        }), H && (0, a.jsx)(x.default, {
+        }), H && (0, a.jsx)(N.default, {
           className: s()(w.pencilIcon, w.hoverable),
           width: 14,
           height: 14
@@ -210,7 +210,7 @@ function V(e) {
       children: [null != I ? (0, a.jsx)(M.default.Icon, {
         icon: I,
         disabled: !0,
-        "aria-label": N
+        "aria-label": x
       }) : null, (0, a.jsx)(M.default.Title, {
         children: C
       }), (0, a.jsx)(S.HeaderGuildBreadcrumb, {

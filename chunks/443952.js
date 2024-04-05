@@ -30,7 +30,7 @@ var s = n("45792"),
   P = n("852926"),
   M = n("186901"),
   y = n("981631");
-async function x(e, t, n, a) {
+async function D(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
     l = m.default.getApplicationActivity(t);
   if (null == l || null == l.secrets || !(0, v.validateActivityInvite)(a, l.party, l.secrets)) throw new N.default({
@@ -71,7 +71,7 @@ t.default = {
       if (null == s) throw new N.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      return x(a, s, n, y.ActivityActionTypes.JOIN)
+      return D(a, s, n, y.ActivityActionTypes.JOIN)
     }
   },
   [y.RPCCommands.CLOSE_ACTIVITY_JOIN_REQUEST]: {
@@ -110,7 +110,7 @@ t.default = {
       if (null == i) throw new N.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      return x(l, i, a, n, s)
+      return D(l, i, a, n, s)
     }
   },
   [y.RPCCommands.ACCEPT_ACTIVITY_INVITE]: {

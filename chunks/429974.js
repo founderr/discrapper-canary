@@ -34,9 +34,9 @@ async function m(e) {
     {
       party: M,
       assets: y,
-      application_id: x
+      application_id: D
     } = null != O ? O : {},
-    D = null != x ? o.default.getApplication(x) : null,
+    x = null != D ? o.default.getApplication(D) : null,
     b = P ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
     U = L === h.StatusTypes.ONLINE ? b : L;
   C = await (0, s.openModalLazy)(async () => {
@@ -60,7 +60,7 @@ async function m(e) {
     other_user_id: S,
     application_id: null !== (l = null == O ? void 0 : O.application_id) && void 0 !== l ? l : null,
     application_name: null == O ? void 0 : O.name,
-    sku_id: null !== (i = null == D ? void 0 : D.primarySkuId) && void 0 !== i ? i : null,
+    sku_id: null !== (i = null == x ? void 0 : x.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(S),
     has_images: !!(null !== (m = null == y ? void 0 : y.large_image) && void 0 !== m ? m : null == y ? void 0 : y.small_image),
     party_max: null == M ? void 0 : null === (t = M.size) || void 0 === t ? void 0 : t[1],

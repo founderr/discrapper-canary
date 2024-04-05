@@ -37,8 +37,8 @@ t.default = e => {
     applicationImageSrc: A,
     user: v
   } = (0, p.useGamingContentData)(u), {
-    primaryColor: N,
-    secondaryColor: x
+    primaryColor: x,
+    secondaryColor: N
   } = (0, m.default)(A), M = (0, s.useStateFromStores)([o.default], () => o.default.locale), R = l.useCallback(async () => {
     if (null == A || null == n || null == v) return;
     let e = await r.default.getOrEnsurePrivateChannel(u.author_id);
@@ -48,10 +48,10 @@ t.default = e => {
       avatarSrc: v.getAvatarURL(n.guild_id, 128),
       description: (0, h.formatCanvasDescription)(u, n, v),
       timestamp: (0, d.formatEntryTimestamp)(u, M),
-      colors: [N, x],
+      colors: [x, N],
       channelId: e
     })
-  }, [A, n, u, M, N, x, v]);
+  }, [A, n, u, M, x, N, v]);
   if (null == v) return null;
   let L = async e => {
     try {
@@ -62,7 +62,7 @@ t.default = e => {
           avatarSrc: v.getAvatarURL(n.guild_id, 128),
           description: (0, h.formatCanvasDescription)(u, n, v),
           timestamp: (0, d.formatEntryTimestamp)(u, M),
-          colors: [N, x],
+          colors: [x, N],
           channelId: t
         });
       await (0, h.sendContentImageReply)({

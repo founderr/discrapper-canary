@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return O
   }
 }), n("47120");
 var l = n("470079"),
@@ -32,12 +32,12 @@ var l = n("470079"),
   R = n("981631");
 let y = [];
 
-function O(e, t) {
+function M(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : I.default;
   return null != e && e.type !== i.ChannelTypes.GUILD_STAGE_VOICE && t !== e.id && n.canBasicChannel(R.BasicPermissions.VIEW_CHANNEL, e)
 }
 
-function M(e) {
+function O(e) {
   var t;
   let n = (0, r.useStateFromStores)([T.default], () => T.default.isMuted(e)),
     a = (0, f.useGuildActiveEvent)(e);
@@ -78,7 +78,7 @@ function M(e) {
   }(e, n);
   let i = (0, x.default)(e),
     R = (0, r.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForGuild(e)),
-    M = (0, d.useIsActivitiesInTextEnabled)(null === (t = R[0]) || void 0 === t ? void 0 : t.channelId, "GuildMediaState"),
+    O = (0, d.useIsActivitiesInTextEnabled)(null === (t = R[0]) || void 0 === t ? void 0 : t.channelId, "GuildMediaState"),
     {
       guildHasVoice: D,
       guildHasVideo: b,
@@ -92,7 +92,7 @@ function M(e) {
         r = (() => {
           if (n) return !1;
           for (let e in i)
-            if (O(E.default.getBasicChannel(i[e].channelId), null != a ? a : void 0, I.default)) return !0;
+            if (M(E.default.getBasicChannel(i[e].channelId), null != a ? a : void 0, I.default)) return !0;
           return !1
         })();
       return {
@@ -100,7 +100,7 @@ function M(e) {
         guildHasVideo: (() => {
           if (n) return !1;
           for (let e of s)
-            if (O(E.default.getBasicChannel(i[e].channelId), null != a ? a : void 0, I.default)) return !0;
+            if (M(E.default.getBasicChannel(i[e].channelId), null != a ? a : void 0, I.default)) return !0;
           return !1
         })(),
         selectedVoiceChannelHasVideo: null != l && A.default.hasVideo(l)
@@ -135,8 +135,8 @@ function M(e) {
       v = !!o && null != m.default.getActiveStreamForUser(G, e),
       x = m.default.getAllApplicationStreams().some(t => t.guildId === e),
       y = o && j,
-      O = (() => {
-        if (M) return R.length > 0;
+      M = (() => {
+        if (O) return R.length > 0;
         for (let e of R) {
           let t = E.default.getChannel(e.channelId);
           if (null != t && (0, C.isVoiceChannel)(t.type)) return !0
@@ -144,7 +144,7 @@ function M(e) {
         return !1
       })(),
       U = c.default.getEmbeddedActivitiesForGuild(e).length > 0;
-    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = y, S = v, _ = U) : (u = D, d = null != a, f = T, g = b, S = x, _ = O), {
+    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = y, S = v, _ = U) : (u = D, d = null != a, f = T, g = b, S = x, _ = M), {
       audio: u,
       video: g,
       screenshare: S,
@@ -154,5 +154,5 @@ function M(e) {
       gaming: i,
       isCurrentUserConnected: o || A
     }
-  }, [G, R, i, a, e, M, n, b, D, j])
+  }, [G, R, i, a, e, O, n, b, D, j])
 }

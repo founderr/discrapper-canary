@@ -87,7 +87,7 @@ function A(e) {
     },
     config: N,
     immediate: E || !A
-  }), O = a.useCallback(e => {
+  }), M = a.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), null != x && f(x)
   }, [f, x]);
   return (0, l.jsx)("div", {
@@ -103,7 +103,7 @@ function A(e) {
         className: i()(I.bar, I.emptyBar)
       }) : L === S.UnreadBarMode.UNREAD ? (0, l.jsxs)(d.Clickable, {
         className: I.bar,
-        onClick: O,
+        onClick: M,
         children: ["bottom" === t ? (0, l.jsx)(C.default, {
           className: I.unreadIcon,
           height: 14,
@@ -120,7 +120,7 @@ function A(e) {
         })]
       }) : L === S.UnreadBarMode.MENTIONS ? (0, l.jsx)(d.Clickable, {
         className: i()(I.bar, I.mentionsBar),
-        onClick: O,
+        onClick: M,
         children: (0, l.jsx)(d.Text, {
           variant: "text-xs/semibold",
           color: "status-danger-text",

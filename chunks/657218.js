@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("913663"),
   A = n("268350"),
   v = n("695346"),
-  N = n("592125"),
-  x = n("703558"),
+  x = n("592125"),
+  N = n("703558"),
   M = n("375954"),
   R = n("496675"),
   L = n("117530"),
@@ -55,7 +55,7 @@ function Z(e) {
     parentChannelId: t,
     parentMessageId: n,
     location: l
-  } = e, s = (0, r.useStateFromStores)([N.default], () => N.default.getChannel(t)), {
+  } = e, s = (0, r.useStateFromStores)([x.default], () => x.default.getChannel(t)), {
     analyticsLocations: i
   } = (0, p.default)(m.default.CREATE_THREAD);
   return null == s ? null : (0, a.jsx)(p.AnalyticsLocationProvider, {
@@ -66,7 +66,7 @@ function Z(e) {
         className: Y.container,
         children: [(0, a.jsx)(f.default, {
           channel: s,
-          draftType: x.DraftType.FirstThreadMessage
+          draftType: N.DraftType.FirstThreadMessage
         }), (0, a.jsxs)(D.default, {
           toolbar: (0, a.jsx)(D.default.Icon, {
             icon: O.default,
@@ -127,11 +127,11 @@ function X(e) {
     return l.useEffect(() => {
       function n(n) {
         var l;
-        let s = x.default.getDraft(e.id, x.DraftType.FirstThreadMessage);
-        (0 === s.length || !0 === n) && a((0, C.createState)(s)), t(null !== (l = x.default.getThreadSettings(e.id)) && void 0 !== l ? l : {})
+        let s = N.default.getDraft(e.id, N.DraftType.FirstThreadMessage);
+        (0 === s.length || !0 === n) && a((0, C.createState)(s)), t(null !== (l = N.default.getThreadSettings(e.id)) && void 0 !== l ? l : {})
       }
-      return n(!0), x.default.addChangeListener(n), () => {
-        x.default.removeChangeListener(n)
+      return n(!0), N.default.addChangeListener(n), () => {
+        N.default.removeChangeListener(n)
       }
     }, [e.id, t]), {
       textAreaState: n,
@@ -139,7 +139,7 @@ function X(e) {
     }
   }(t, p), T = (0, k.usePrivateThreadMode)(t), {
     nameError: v,
-    messageError: N,
+    messageError: x,
     submit: M
   } = function(e) {
     let {
@@ -163,7 +163,7 @@ function X(e) {
       messageError: d,
       submit: l.useCallback(async (e, l, s) => {
         var r, o, d;
-        null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = I.default.getStickerPreview(t.id, K.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = L.default.getUploads(t.id, x.DraftType.FirstThreadMessage));
+        null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = I.default.getStickerPreview(t.id, K.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = L.default.getUploads(t.id, N.DraftType.FirstThreadMessage));
         let h = null !== (o = a.name) && void 0 !== o ? o : "",
           m = null == n && 0 === h.length,
           p = "" === e && (null == l || 0 === l.length) && 0 === s.length;
@@ -255,7 +255,7 @@ function X(e) {
             textAreaState: g,
             setTextAreaState: S,
             submit: M,
-            error: N
+            error: x
           }), (0, a.jsx)(c.default, {
             channel: t,
             isThreadCreation: !0
@@ -349,7 +349,7 @@ function J(e) {
     submit: c,
     error: f
   } = e, [h, m] = l.useState(!0), p = l.useCallback(() => m(!0), []), E = l.useCallback(() => m(!1), []), C = l.useCallback((e, n, a) => {
-    u.default.saveDraft(t.id, n, x.DraftType.FirstThreadMessage), s(e => ("" !== n && e.textValue !== n ? d.default.startTyping(t.id) : "" === n && d.default.stopTyping(t.id), {
+    u.default.saveDraft(t.id, n, N.DraftType.FirstThreadMessage), s(e => ("" !== n && e.textValue !== n ? d.default.startTyping(t.id) : "" === n && d.default.stopTyping(t.id), {
       textValue: n,
       richValue: a
     }))

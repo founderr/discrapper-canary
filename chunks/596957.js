@@ -36,8 +36,8 @@ t.default = function(e) {
   } = e, {
     analyticsLocations: l
   } = (0, h.default)(E.default.FRIENDS_LIST), {
-    rows: x,
-    section: D
+    rows: D,
+    section: x
   } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, p.useIsClearIncomingFriendRequestsEnabled)(), [G, w] = s.useState(() => {
     let e = {};
     for (let t of Object.values(P.FriendsSections)) e[t] = "";
@@ -52,7 +52,7 @@ t.default = function(e) {
       ...G,
       [t]: ""
     })
-  }, [G, t]), B = x.filter(t, G[t]);
+  }, [G, t]), B = D.filter(t, G[t]);
   if (0 === B.length && "" === G[t]) return (0, a.jsxs)("div", {
     className: y.emptyStateContainer,
     children: [t === P.FriendsSections.ONLINE && (0, a.jsx)(_.default, {}), (0, a.jsx)(A.default, {
@@ -60,7 +60,7 @@ t.default = function(e) {
       onClick: () => {
         u.default.setSection(P.FriendsSections.ADD_FRIEND)
       }
-    }, D)]
+    }, x)]
   });
   let H = 0 === B.length && "" !== G[t],
     V = B.filter(e => e.type === P.RelationshipTypes.PENDING_INCOMING).length,
@@ -118,7 +118,7 @@ t.default = function(e) {
         className: y.emptyStateContainer,
         children: (0, a.jsx)(A.default, {
           type: A.FriendsSearchStatus.SECTION_NO_RESULTS
-        }, D)
+        }, x)
       }) : (0, a.jsx)(v.default, {
         relationshipCount: U,
         statusSections: [B],

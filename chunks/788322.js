@@ -41,8 +41,8 @@ t.default = e => {
     id: P,
     discoverySplash: M,
     icon: y,
-    name: x,
-    description: D,
+    name: D,
+    description: x,
     presenceCount: b,
     memberCount: U,
     keywords: j
@@ -160,13 +160,13 @@ t.default = e => {
               }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: A.headerTitle,
-                children: x
+                children: D
               })]
             })]
           }), (0, a.jsx)(r.Text, {
             className: A.description,
             variant: "text-sm/normal",
-            children: D
+            children: x
           }), K && null != j && null != L && (0, a.jsx)(I.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: I.DiscoveryTagStyle.ALT,

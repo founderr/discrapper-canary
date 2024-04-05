@@ -24,8 +24,8 @@ var l, a, s, i = n("735250"),
   x = n("153124"),
   R = n("908773"),
   y = n("151827"),
-  O = n("515753"),
-  M = n("981631"),
+  M = n("515753"),
+  O = n("981631"),
   D = n("689938"),
   b = n("82545");
 
@@ -281,7 +281,7 @@ class U extends(a = r.Component) {
           num_users_visible: i.length,
           num_users_visible_with_mobile_indicator: o.filter(e => null != e && L.default.isMobileOnline(e)).length
         };
-      this.hasReportedAnalytics = !0, m.default.trackWithMetadata(M.AnalyticEvents.DM_LIST_VIEWED, {
+      this.hasReportedAnalytics = !0, m.default.trackWithMetadata(O.AnalyticEvents.DM_LIST_VIEWED, {
         ...u,
         ...(0, g.getNowPlayingAnalytics)()
       })
@@ -293,7 +293,7 @@ class U extends(a = r.Component) {
     }), j(this, "handleScroll", u()(() => {
       if (null != this._list) {
         let e = this._list.getScrollerNode();
-        null != e && p.default.updateChannelListScroll(M.ME, e.scrollTop)
+        null != e && p.default.updateChannelListScroll(O.ME, e.scrollTop)
       }
     }, 100)), j(this, "renderDM", (e, t) => {
       let {
@@ -304,7 +304,7 @@ class U extends(a = r.Component) {
         totalRowCount: s,
         preRenderedChildren: r
       } = this.state, o = l[n[t]];
-      return null == o ? null : (0, i.jsx)(O.default, {
+      return null == o ? null : (0, i.jsx)(M.default, {
         channel: o,
         selected: o.id === a,
         "aria-posinset": r + t + 1,
@@ -369,7 +369,7 @@ t.default = e => {
       t = (0, I.filterOutMessageRequestsAndSpamById)(e, [_.default, N.default]);
     return (0, E.filterBroadcastingGDMs)(t)
   }, []), h = (0, c.useStateFromStoresObject)([C.default, T.default, A.default], () => ({
-    theme: T.default.darkSidebar ? M.ThemeTypes.DARK : n,
+    theme: T.default.darkSidebar ? O.ThemeTypes.DARK : n,
     keyboardModeEnabled: C.default.keyboardModeEnabled,
     version: null != t ? "".concat(t, ":").concat(A.default.getPrivateChannelsVersion()) : A.default.getPrivateChannelsVersion()
   })), p = r.useRef(null), m = r.useCallback(e => {

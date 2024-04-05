@@ -33,8 +33,8 @@ var a = n("735250"),
   P = n("6039"),
   M = n("637853"),
   y = n("326145"),
-  x = n("102267"),
-  D = n("362416"),
+  D = n("102267"),
+  x = n("362416"),
   b = n("416568"),
   U = n("613609"),
   j = n("160404"),
@@ -142,7 +142,7 @@ let ep = () => (0, a.jsx)("div", {
         return d ? (0, a.jsx)(eT, {
           guildId: s,
           initialTab: v.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
-        }) : (0, a.jsx)(x.default, {
+        }) : (0, a.jsx)(D.default, {
           guildId: s
         });
       case e_.StaticChannelRoute.GUILD_SHOP:
@@ -200,7 +200,7 @@ let ep = () => (0, a.jsx)("div", {
     } = (0, Z.default)(), n = (0, f.useStateFromStores)([en.default], () => null != t ? t : en.default.getChannelId(e));
     return function() {
       return window.location.pathname.startsWith(eh.Routes.GUILD_DISCOVERY)
-    }() ? (0, a.jsx)(O.default, {}) : null != e ? (0, a.jsx)(D.default, {
+    }() ? (0, a.jsx)(O.default, {}) : null != e ? (0, a.jsx)(x.default, {
       selectedChannelId: n,
       guildId: e
     }, e) : (0, a.jsx)(ed.default, {})
@@ -227,7 +227,7 @@ let eM = e => (0, a.jsx)(eO, {
       searchRoute: t
     })
   },
-  ex = e => {
+  eD = e => {
     let {
       match: t
     } = e;
@@ -236,7 +236,7 @@ let eM = e => (0, a.jsx)(eO, {
       inviteCode: t.params.inviteCode
     }) : null
   },
-  eD = e => {
+  ex = e => {
     let {
       match: t
     } = e;
@@ -474,12 +474,12 @@ function eY() {
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"),
-                  render: ex,
+                  render: eD,
                   impressionName: u.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"),
-                  render: eD,
+                  render: ex,
                   impressionName: u.ImpressionNames.HUB_EMAIL_SIGNUP,
                   impressionProperties: e => {
                     let {

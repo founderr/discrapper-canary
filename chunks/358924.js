@@ -27,8 +27,8 @@ var a, s, l = n("735250"),
   P = n("849171"),
   M = n("314897"),
   y = n("592125"),
-  x = n("594174"),
-  D = n("368874"),
+  D = n("594174"),
+  x = n("368874"),
   b = n("366695"),
   U = n("366966"),
   j = n("446753"),
@@ -402,7 +402,7 @@ es.Header = ea, es.Body = e => {
     } = a;
   if (null != f && (0, p.default)(a)) {
     var _;
-    t = (0, l.jsx)(D.default, {
+    t = (0, l.jsx)(x.default, {
       className: q.twitchSectionPreviewWrapper,
       aspectRatio: 16 / 9,
       children: (0, l.jsxs)(c.Clickable, {
@@ -491,7 +491,7 @@ es.Header = ea, es.Body = e => {
       return d(t)
     })
   }, [f]);
-  let h = (0, u.useStateFromStoresArray)([x.default, M.default], () => Array.from(s).map(e => M.default.getId() === e ? null : x.default.getUser(e)).filter(V.isNotNullish)),
+  let h = (0, u.useStateFromStoresArray)([D.default, M.default], () => Array.from(s).map(e => M.default.getId() === e ? null : D.default.getUser(e)).filter(V.isNotNullish)),
     C = (0, E.useAnalyticsContext)(),
     {
       analyticsLocations: m

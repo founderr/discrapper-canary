@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-let l = (0, n("818083").createExperiment)({
+let a = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-04_gdm_presence",
   label: "Group DM Presence",
@@ -67,4 +67,4 @@ let l = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = l
+t.default = a

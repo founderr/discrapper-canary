@@ -33,8 +33,8 @@ var a = n("735250"),
   P = n("747074"),
   M = n("192133"),
   y = n("138394"),
-  x = n("131640"),
-  D = n("695346"),
+  D = n("131640"),
+  x = n("695346"),
   b = n("199902"),
   U = n("293273"),
   j = n("158776"),
@@ -165,12 +165,12 @@ function $(e) {
     let n = A.ExpiringStatusExperiment.useExperiment({
         location: "account popout"
       }).expiringStatus,
-      s = D.StatusExpiresAtSetting.useSetting(),
+      s = x.StatusExpiresAtSetting.useSetting(),
       l = (0, N.useFocusModeEnabled)(),
       i = v.QuietModeExperiment.useExperiment({
         location: "account popout"
       }).allowQuietMode || l,
-      r = D.FocusModeExpiresAtSetting.useSetting(),
+      r = x.FocusModeExpiresAtSetting.useSetting(),
       o = e === K.StatusTypes.DND,
       d = t => {
         let n = null != s && "0" !== s ? q.default.Messages.STATUS_UNTIL.format({
@@ -284,7 +284,7 @@ function $(e) {
           children: (0, a.jsxs)(P.default, {
             user: t,
             profileType: z.UserProfileTypes.POPOUT,
-            children: [(0, a.jsx)(x.default, {
+            children: [(0, a.jsx)(D.default, {
               user: t,
               displayProfile: B,
               onClose: () => null == b ? void 0 : b(),

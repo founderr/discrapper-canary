@@ -29,8 +29,8 @@ var a = n("735250"),
   P = n("151011"),
   M = n("774832"),
   y = n("465670"),
-  x = n("786048"),
-  D = n("897353"),
+  D = n("786048"),
+  x = n("897353"),
   b = n("424218"),
   U = n("780570"),
   j = n("353042"),
@@ -469,12 +469,12 @@ class Z extends s.PureComponent {
   }
 }
 let X = () => (0, a.jsx)(Y, {
-    icon: D.default,
+    icon: x.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
     onClick: () => _.resume()
   }),
   J = () => (0, a.jsx)(Y, {
-    icon: x.default,
+    icon: D.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
     onClick: () => _.pause()
   }),

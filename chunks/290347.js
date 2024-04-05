@@ -84,8 +84,8 @@ function N(e) {
     changeLogId: M,
     button: y
   } = e, {
-    onClose: x,
-    transitionState: D
+    onClose: D,
+    transitionState: x
   } = n, b = (0, h.useUID)(), U = P.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
 
   function J() {
@@ -121,11 +121,11 @@ function N(e) {
     }
   }, [g, M]), (0, a.jsxs)(o.ModalRoot, {
     className: i()(T.root, t),
-    transitionState: D,
+    transitionState: x,
     "aria-labelledby": b,
     children: [(0, a.jsx)(o.ModalCloseButton, {
       className: T.closeButton,
-      onClick: x
+      onClick: D
     }), (0, a.jsx)(S.default, {
       className: T.splash
     }), null == N ? void 0 : N(), (0, a.jsxs)(o.ModalContent, {
