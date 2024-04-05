@@ -490,8 +490,8 @@ function Z(e) {
 t.default = function(e) {
   let {
     searchRoute: t
-  } = e;
-  return (0, y.useClanDiscoveryExperimentEnabled)("guild_discovery") ? (0, a.jsx)(j.default, {}) : (0, a.jsx)(Z, {
+  } = e, n = (0, y.useClanDiscoveryExperimentEnabled)("guild_discovery"), s = (0, f.useStateFromStores)([R.default], () => R.default.getCurrentCategoryId()), l = (0, f.useStateFromStores)([R.default], () => R.default.getIsReady());
+  return n && (!l || s === B.CategoryId.Clans) ? (0, a.jsx)(j.default, {}) : (0, a.jsx)(Z, {
     searchRoute: t
   })
 }

@@ -17,15 +17,15 @@ var s = n("442837"),
   C = n("689938");
 let m = e => {
     switch (e) {
-      case 1:
+      case _.CategoryId.Activity:
         return _.CategoryIcons.Activity;
-      case 2:
+      case _.CategoryId.Music:
         return _.CategoryIcons.Music;
-      case 3:
+      case _.CategoryId.Television:
         return _.CategoryIcons.Television;
-      case 5:
+      case _.CategoryId.Science:
         return _.CategoryIcons.Science;
-      case 6:
+      case _.CategoryId.Education:
         return _.CategoryIcons.Education;
       default:
         return _.CategoryIcons.Discover

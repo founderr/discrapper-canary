@@ -48,9 +48,10 @@ let m = {
   L = A.DISCOVERY_ALL_CATEGORIES_ID,
   D = null,
   v = [],
-  M = (0, T.makeAnalyticsID)();
+  M = (0, T.makeAnalyticsID)(),
+  y = !1;
 
-function y(e) {
+function P(e) {
   return {
     id: e.id,
     name: e.name,
@@ -69,7 +70,7 @@ function y(e) {
     keywords: e.keywords
   }
 }
-class P extends(r = E.default.Store) {
+class U extends(r = E.default.Store) {
   initialize() {
     this.waitFor(f.default)
   }
@@ -107,13 +108,16 @@ class P extends(r = E.default.Store) {
   getLoadId() {
     return M
   }
+  getIsReady() {
+    return y
+  }
 }
-l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty(a, o, {
+l = "GuildDiscoveryStore", (o = "displayName") in(a = U) ? Object.defineProperty(a, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new P(I.default, {
+}) : a[o] = l, t.default = new U(I.default, {
   GUILD_DISCOVERY_SEARCH_INIT: function(e) {
     let {
       index: t
@@ -141,7 +145,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
       limit: s
     } = e;
     p = !1, C = Date.now(), M = (0, T.makeAnalyticsID)();
-    let a = c().map(t, y);
+    let a = c().map(t, P);
     N = {
       ...N,
       [n]: {
@@ -185,7 +189,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
       guilds: n
     } = e;
     p = !1, C = Date.now();
-    let i = c().map(n, y);
+    let i = c().map(n, P);
     N = {
       ...N,
       [t]: {
@@ -241,7 +245,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
       categoryId: l
     } = e;
     d()("search" === n, "This action only supports search it seems");
-    let u = i.map(y);
+    let u = i.map(P);
     N = {
       ...N,
       [n]: {
@@ -341,5 +345,11 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
   },
   GUILD_DISCOVERY_CLEAR_SEEN_GUILDS: function() {
     v = []
+  },
+  GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
+    let {
+      forClanDiscovery: t
+    } = e;
+    t && (g = A.CategoryId.Clans, L = A.CategoryId.Clans, y = !0)
   }
 })
