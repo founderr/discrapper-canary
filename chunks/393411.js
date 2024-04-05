@@ -40,9 +40,9 @@ let U = new E.default("SubscriptionHeader.tsx"),
     section: y.AnalyticsSections.SETTINGS_PREMIUM,
     object: y.AnalyticsObjects.CARD
   },
-  v = [y.SubscriptionStatusTypes.PAUSED, y.SubscriptionStatusTypes.PAUSE_PENDING];
+  b = [y.SubscriptionStatusTypes.PAUSED, y.SubscriptionStatusTypes.PAUSE_PENDING, y.SubscriptionStatusTypes.BILLING_RETRY];
 
-function b(e) {
+function v(e) {
   let {
     wordMark: t,
     subscriptionInfo: s,
@@ -95,21 +95,24 @@ function B(e) {
       className: D.bannerBackgroundImage
     }), (0, a.jsx)("div", {
       className: D.detailsContainer,
-      children: (0, a.jsxs)("div", {
+      children: (0, a.jsx)("div", {
         className: D.details,
-        children: [(0, a.jsxs)("div", {
+        children: (0, a.jsxs)("div", {
           className: D.headerLabel,
           children: [(0, a.jsx)("div", {
             className: D.image
-          }), t, r && null != u && (0, a.jsx)(L.PremiumPillWithSparkles, {
-            text: x.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
-              percent: u
-            }),
-            className: D.discountPill,
-            colorOptions: L.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
-            isPillOnBorder: !1
+          }), (0, a.jsxs)("div", {
+            className: D.headerColumnB,
+            children: [t, r && null != u && (0, a.jsx)(L.PremiumPillWithSparkles, {
+              text: x.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
+                percent: u
+              }),
+              className: D.discountPill,
+              colorOptions: L.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
+              isPillOnBorder: !1
+            }), s]
           })]
-        }), s]
+        })
       })
     }), (0, a.jsx)("div", {
       className: D.buttons,
@@ -134,7 +137,7 @@ function G() {
   let {
     analyticsLocations: e
   } = (0, c.default)(d.default.ACCOUNT_CREDIT_BANNER);
-  return (0, a.jsx)(b, {
+  return (0, a.jsx)(v, {
     wordMark: (0, a.jsx)(j, {}),
     subscriptionInfo: (0, a.jsx)("div", {
       className: D.planInfo,
@@ -204,7 +207,7 @@ t.default = function(e) {
       })
     }
   }, q = () => {
-    if (!v.includes(l.status) || null == l.pauseEndsAt) {
+    if (!b.includes(l.status) || null == l.pauseEndsAt) {
       (0, N.captureBillingException)(Error("Invalid subscription to resume"), {
         extra: {
           subscriptionId: l.id,
@@ -261,7 +264,7 @@ t.default = function(e) {
         "aria-label": x.default.Messages.PREMIUM_TITLE
       })
   }
-  let en = l.status === y.SubscriptionStatusTypes.PAUSED ? B : b;
+  let en = b.includes(l.status) ? B : v;
   return (0, a.jsx)(en, {
     wordMark: ea,
     subscriptionInfo: (n = $, r()(null != E, "Expected renewalInvoicePreview"), (0, a.jsx)("div", {
