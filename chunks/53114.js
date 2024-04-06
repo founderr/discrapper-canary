@@ -316,7 +316,12 @@ class f extends a.default {
         cryptorSuccessCount: v,
         cryptorFailureCount: M,
         cryptorDuration: y,
-        cryptorAttempts: P
+        cryptorAttempts: P,
+        qualityDecodeErrors: U,
+        qualityDecoderReboots: b,
+        qualityScoreErrors: G,
+        qualityFrameDrops: w,
+        qualitySizeMismatches: B
       } = e.aggregatedProperties;
     return {
       ...d,
@@ -342,7 +347,12 @@ class f extends a.default {
       cryptor_success_count: v,
       cryptor_failure_count: M,
       cryptor_duration: y,
-      cryptor_attempts: P
+      cryptor_attempts: P,
+      encoder_quality_decode_errors: U,
+      encoder_quality_decoder_reboots: b,
+      encoder_quality_score_errors: G,
+      encoder_quality_frame_drops: w,
+      encoder_quality_size_mismatches: B
     }
   }
   receivedStats(e, t, n) {

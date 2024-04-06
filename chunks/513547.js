@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   Item: function() {
-    return E
+    return R
   },
   hidden: function() {
-    return v
+    return y
   }
 }), a("47120"), a("653041"), a("571269"), a("298267");
 var r = a("735250"),
@@ -98,6 +98,11 @@ let u = {
   pliCount: "PLI",
   preemptiveExpandRate: "Pre-emptive Expand Rate",
   qpSum: "QP Sum",
+  qualityDecodeErrors: "Encoder Quality Decode Errors",
+  qualityDecoderReboots: "Encoder Quality Decoder Reboots",
+  qualityScoreErrors: "Encoder Quality Score Errors",
+  qualityFrameDrops: "Encoder Quality Frame Drops",
+  qualitySizeMismatches: "Encoder Quality Size Mismatches",
   quartzFrames: "Quartz Frames",
   receiverBitrateEstimate: "Receiver Bitrate Estimate (REMB)",
   relativePlayoutDelay: "Relative Playout Delay",
@@ -155,7 +160,7 @@ function S(e) {
   } = e;
   return "".concat(t, " ms")
 }
-let v = {
+let y = {
     audioJitterBuffer: !0,
     audioJitterDelay: !0,
     audioJitterTarget: !0,
@@ -173,7 +178,7 @@ let v = {
     videoJitterTarget: !0,
     voiceActivityDetectorProcessTime: !0
   },
-  y = {
+  v = {
     accelerateRate: h,
     audioDetected: g,
     audioLevel: C,
@@ -235,7 +240,7 @@ let v = {
       return e < t.length ? t[e] : "Unknown"
     }
   },
-  R = e => e,
+  E = e => e,
   D = e => {
     let [t] = n.useState([]);
     return t.push({
@@ -248,13 +253,13 @@ let v = {
     })
   };
 
-function E(e) {
+function R(e) {
   var t, a, n, i;
   let {
     label: l,
     value: c,
     section: m
-  } = e, f = null !== (a = y[l]) && void 0 !== a ? a : R;
+  } = e, f = null !== (a = v[l]) && void 0 !== a ? a : E;
   let p = s.graphs[l] && (Array.isArray(i = c) && i.length > 0 && "number" == typeof i[0].value ? (0, r.jsx)(o.default, {
       dataPoints: i,
       width: 300,
