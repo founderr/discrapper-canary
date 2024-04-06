@@ -1,14 +1,14 @@
 "use strict";
-n.r(t);
-var s = n("735250");
-n("470079");
-var a = n("3570"),
-  l = n("685311"),
-  i = n("186901");
+s.r(t);
+var n = s("735250");
+s("470079");
+var a = s("3570"),
+  l = s("685311"),
+  i = s("186901");
 t.default = function(e) {
   let {
     match: t,
-    location: n
+    location: s
   } = e, r = async (e, t) => {
     await (0, a.deepLinkRouteIfLandedAndNotAuthed)(i.RPCDeepLinks.CHANNEL, {
       guildId: e.params.guildId,
@@ -17,9 +17,9 @@ t.default = function(e) {
       search: t.search
     })
   };
-  return (0, s.jsx)(l.default, {
+  return (0, n.jsx)(l.default, {
     match: t,
-    location: n,
+    location: s,
     attemptDeepLink: r
   })
 }

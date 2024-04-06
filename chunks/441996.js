@@ -69,10 +69,10 @@ class c extends(a = l.PureComponent) {
       if (s.length < 2) return;
       let f = Math.max(Math.min((e - this.dataChangedAt) / l, 1), 0),
         E = a.getContext("2d"),
-        _ = this.maxValue;
+        h = this.maxValue;
       E.strokeStyle = i, E.lineWidth = u;
-      let h = a.height - E.lineWidth,
-        C = E.createLinearGradient(0, 0, 0, h);
+      let _ = a.height - E.lineWidth,
+        C = E.createLinearGradient(0, 0, 0, _);
       if (null != c) C.addColorStop(0, c);
       else {
         let {
@@ -88,13 +88,13 @@ class c extends(a = l.PureComponent) {
       let S = Math.floor(a.width / (m - 3)),
         I = .5 * S;
       E.translate(S - S * f, 0), E.beginPath();
-      let T = -S;
+      let p = -S;
       s.forEach((e, a) => {
         t = {
-          x: T,
-          y: h * e / _
-        }, 0 === a ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + I, n.y, t.x - I, t.y, t.x, t.y), n = t, T += S
-      }), E.stroke(), E.lineTo(T - S, 0), E.lineTo(0, 0), E.fill(), d && f < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
+          x: p,
+          y: _ * e / h
+        }, 0 === a ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + I, n.y, t.x - I, t.y, t.x, t.y), n = t, p += S
+      }), E.stroke(), E.lineTo(p - S, 0), E.lineTo(0, 0), E.fill(), d && f < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
     })
   }
 }

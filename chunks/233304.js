@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   NotchBackground: function() {
-    return h
+    return _
   }
 }), n("47120");
 var a, s = n("735250"),
@@ -22,8 +22,8 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let _ = (0, d.cssValueToNumber)(u.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
-  h = Object.freeze({
+let h = (0, d.cssValueToNumber)(u.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
+  _ = Object.freeze({
     BLACK: f.black,
     GRAY: f.gray
   });
@@ -35,7 +35,7 @@ class C extends(a = l.Component) {
     window.removeEventListener("resize", this.computeBars)
   }
   roundToNearestStep(e) {
-    return Math.round(e / _) * _
+    return Math.round(e / h) * h
   }
   getProgressStyles() {
     let {

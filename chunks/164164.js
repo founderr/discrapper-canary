@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("617136"),
   f = n("272008"),
   E = n("113434"),
-  _ = n("569984"),
-  h = n("497505"),
+  h = n("569984"),
+  _ = n("497505"),
   C = n("918701"),
   m = n("340100"),
   S = n("611855"),
   I = n("644646"),
-  T = n("78826"),
-  p = n("670638"),
+  p = n("78826"),
+  T = n("670638"),
   g = n("667105"),
   A = n("689938"),
   N = n("881521");
@@ -29,18 +29,18 @@ let v = s.forwardRef(function(e, t) {
     isExpanded: R,
     isExpansionAnimationComplete: O,
     onCtxMenuOpen: L,
-    onCtxMenuClose: M,
-    onCtxMenuSelect: P,
+    onCtxMenuClose: P,
+    onCtxMenuSelect: M,
     quest: y,
     useReducedMotion: D
-  } = e, x = (0, r.useStateFromStores)([_.default], () => _.default.isEnrolling(y.id), [y]), b = (0, E.useQuestFormattedDate)(y.config.expiresAt), U = (0, E.useQuestFormattedDate)(y.config.rewardCodeExpiresAt), j = s.useMemo(() => (0, C.isAssetAnimated)(y.config.assets.questBarHero), [y]), G = s.useCallback(() => {
+  } = e, x = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(y.id), [y]), b = (0, E.useQuestFormattedDate)(y.config.expiresAt), U = (0, E.useQuestFormattedDate)(y.config.rewardCodeExpiresAt), j = s.useMemo(() => (0, C.isAssetAnimated)(y.config.assets.questBarHero), [y]), G = s.useCallback(() => {
     (0, f.enrollInQuest)(y.id, {
-      questContent: h.QuestContent.QUEST_BAR,
+      questContent: _.QuestContent.QUEST_BAR,
       questContentCTA: c.QuestContentCTA.ACCEPT_QUEST
     })
   }, [y]), w = (0, g.useHandleClaimQuestsReward)({
     quest: y,
-    location: h.QuestContent.QUEST_BAR
+    location: _.QuestContent.QUEST_BAR
   }), k = (null === (n = y.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = y.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, B = R && O, H = (0, C.getQuestBarHeroAssetUrl)(y);
   return (0, a.jsx)("div", {
     "aria-hidden": !B,
@@ -54,7 +54,7 @@ let v = s.forwardRef(function(e, t) {
         className: N.utils,
         children: [(0, a.jsxs)("div", {
           className: N.questAcceptedContentHeading,
-          children: [(0, a.jsx)(T.QuestsAsset, {
+          children: [(0, a.jsx)(p.QuestsAsset, {
             id: "QuestsBarContentExpanded_rewardTile",
             children: e => (0, a.jsx)("img", {
               ref: e,
@@ -78,11 +78,11 @@ let v = s.forwardRef(function(e, t) {
               })
             })]
           })]
-        }), (0, a.jsx)(p.QuestsEntryContextMenuPopout, {
+        }), (0, a.jsx)(T.QuestsEntryContextMenuPopout, {
           onOpen: L,
-          onClose: M,
-          onSelect: P,
-          questContent: h.QuestContent.QUEST_BAR,
+          onClose: P,
+          onSelect: M,
+          questContent: _.QuestContent.QUEST_BAR,
           quest: y,
           shouldShowDisclosure: !1,
           showShareLink: !0,
@@ -123,11 +123,11 @@ let v = s.forwardRef(function(e, t) {
           className: N.utils,
           children: [(0, a.jsx)(S.default, {
             color: "always-white"
-          }), (0, a.jsx)(p.QuestsEntryContextMenuPopout, {
+          }), (0, a.jsx)(T.QuestsEntryContextMenuPopout, {
             onOpen: L,
-            onClose: M,
-            onSelect: P,
-            questContent: h.QuestContent.QUEST_BAR,
+            onClose: P,
+            onSelect: M,
+            questContent: _.QuestContent.QUEST_BAR,
             quest: y,
             shouldShowDisclosure: !0,
             showShareLink: !0,
@@ -145,7 +145,7 @@ let v = s.forwardRef(function(e, t) {
           children: [(0, a.jsx)(I.default, {
             className: N.rewardTile,
             quest: y,
-            questContent: h.QuestContent.QUEST_BAR
+            questContent: _.QuestContent.QUEST_BAR
           }), (0, a.jsx)(o.Heading, {
             className: N.title,
             color: "always-white",
@@ -177,7 +177,7 @@ let v = s.forwardRef(function(e, t) {
         style: {
           color: y.config.colors.secondary
         },
-        children: j ? (0, a.jsx)(T.QuestsAsset, {
+        children: j ? (0, a.jsx)(p.QuestsAsset, {
           id: "QuestsBarContentExpanded_heroAnimated",
           children: e => (0, a.jsx)(d.default, {
             ref: e,
@@ -192,7 +192,7 @@ let v = s.forwardRef(function(e, t) {
               type: (0, C.getVideoAssetMimeType)(H)
             })
           })
-        }) : (0, a.jsx)(T.QuestsAsset, {
+        }) : (0, a.jsx)(p.QuestsAsset, {
           id: "QuestsBarContentExpanded_heroStatic",
           children: e => (0, a.jsx)("img", {
             ref: e,

@@ -23,13 +23,13 @@ function C() {
     width: 30,
     height: g ? 30 : 22
   }), {
-    enabled: _
+    enabled: S
   } = i.default.useExperiment({
     location: "hi Kevin"
   }, {
     autoTrackExposure: !1
   });
-  return _ ? (0, l.jsx)("img", {
+  return S ? (0, l.jsx)("img", {
     src: p,
     width: 30,
     alt: "Hi Kevin!",

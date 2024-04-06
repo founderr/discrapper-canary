@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("209613"),
   f = n("797614"),
   E = n("151827"),
-  _ = n("626135"),
-  h = n("26373"),
+  h = n("626135"),
+  _ = n("26373"),
   C = n("486622"),
   m = n("922409"),
   S = n("727813"),
   I = n("355350"),
-  T = n("307947"),
-  p = n("125855"),
+  p = n("307947"),
+  T = n("125855"),
   g = n("687683"),
   A = n("981631"),
   N = n("689938"),
@@ -32,25 +32,25 @@ function R() {
   let e = s.useRef(null),
     t = (0, S.default)(),
     n = (0, I.useSpamMessageRequestCount)(),
-    l = (0, h.useListHasSingleSpamMessageRequest)(),
+    l = (0, _.useListHasSingleSpamMessageRequest)(),
     R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
     O = (0, c.default)("message-requests-spam-list"),
     {
       channelId: L
     } = (0, m.useMessageRequestSidebarState)(),
-    M = s.useCallback(() => {
+    P = s.useCallback(() => {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: P
+      rejectAll: M
     } = (0, C.useMessageRequestActions)({
-      onError: M
+      onError: P
     }),
     y = s.useCallback(() => {
-      P(t.map(e => e.channel.id))
-    }, [t, P]);
+      M(t.map(e => e.channel.id))
+    }, [t, M]);
   s.useEffect(() => {
-    _.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
+    h.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
     }), f.default.increment({
       name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW
@@ -61,7 +61,7 @@ function R() {
       let {
         row: r
       } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-      return (0, a.jsx)(p.default, {
+      return (0, a.jsx)(T.default, {
         index: r,
         className: i()({
           [v.selected]: null != L && L === d,
@@ -94,7 +94,7 @@ function R() {
         })]
       }) : null]
     }, "message-requests-spam-title"), [n, y, R]);
-  return 0 === t.length ? (0, a.jsx)(T.default, {
+  return 0 === t.length ? (0, a.jsx)(p.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: O,

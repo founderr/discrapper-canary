@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 });
 var a = n("735250"),
@@ -15,22 +15,22 @@ var a = n("735250"),
   c = n("981631"),
   f = n("921944"),
   E = n("647086"),
-  _ = n("135899");
+  h = n("135899");
 
-function h(e) {
+function _(e) {
   var t;
-  let h = (0, r.useCanCurrentUserViewDisableUnsafeGuildSettingsNotice)(e),
-    C = _.MODERATOR_PERMISSIONS.some(t => (null == e ? void 0 : e.id) !== E.FAVORITES_RAW_GUILD_ID && u.canEveryone(t, e)),
+  let _ = (0, r.useCanCurrentUserViewDisableUnsafeGuildSettingsNotice)(e),
+    C = h.MODERATOR_PERMISSIONS.some(t => (null == e ? void 0 : e.id) !== E.FAVORITES_RAW_GUILD_ID && u.canEveryone(t, e)),
     m = (null == e ? void 0 : e.defaultMessageNotifications) === c.UserNotificationSettings.ALL_MESSAGES,
     S = (0, d.useIsContentDismissed)(l.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : c.EMPTY_STRING_SNOWFLAKE_ID),
-    I = h && (C || m) && !S,
-    T = s.useCallback(() => {
+    I = _ && (C || m) && !S,
+    p = s.useCallback(() => {
       var t;
       (0, d.markContentAsDismissed)(l.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : c.EMPTY_STRING_SNOWFLAKE_ID, !0, f.ContentDismissActionType.DISMISS)
     }, [e]),
-    p = s.useRef(!1);
+    T = s.useRef(!1);
   s.useEffect(() => {
-    if (I && !p.current) {
+    if (I && !T.current) {
       var t;
       (0, i.openModalLazy)(async () => {
         let {
@@ -43,11 +43,11 @@ function h(e) {
           ...n
         })
       }, {
-        onCloseCallback: T
+        onCloseCallback: p
       }), o.default.track(c.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
         type: l.DismissibleGuildContent[l.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
         guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : c.EMPTY_STRING_SNOWFLAKE_ID
-      }), p.current = !0
+      }), T.current = !0
     }
-  }, [C, e, T, m, I])
+  }, [C, e, p, m, I])
 }

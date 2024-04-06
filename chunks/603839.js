@@ -11,12 +11,12 @@ var a = n("735250"),
   c = n("188837"),
   f = n("496376"),
   E = n("308083"),
-  _ = n("653196");
+  h = n("653196");
 t.default = e => {
   let {
     guildId: t,
     onClose: n
-  } = e, h = (0, r.useStateFromStores)([u.default], () => null == u.default.getState(t)), C = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), m = (0, l.useSpring)({
+  } = e, _ = (0, r.useStateFromStores)([u.default], () => null == u.default.getState(t)), C = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), m = (0, l.useSpring)({
     from: {
       opacity: C ? 1 : 0,
       transform: C ? "scale(1)" : "scale(1.2)"
@@ -30,12 +30,12 @@ t.default = e => {
       duration: C ? 0 : 200,
       clamp: !0
     }
-  }), [S, I] = s.useState(h && !C ? E.ClanSetupModalPages.INTRO_ANIMATION : E.ClanSetupModalPages.SETUP);
+  }), [S, I] = s.useState(_ && !C ? E.ClanSetupModalPages.INTRO_ANIMATION : E.ClanSetupModalPages.SETUP);
   return (0, a.jsx)(l.animated.div, {
     style: m,
-    className: _.modal,
+    className: h.modal,
     children: (0, a.jsx)("div", {
-      className: _.modalContents,
+      className: h.modalContents,
       children: (() => {
         switch (S) {
           case E.ClanSetupModalPages.INTRO_ANIMATION:

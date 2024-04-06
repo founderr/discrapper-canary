@@ -19,8 +19,8 @@ t.default = e => {
       style: m,
       to: g,
       onClick: E,
-      selected: _ = !1,
-      ...S
+      selected: S = !1,
+      ..._
     } = e,
     I = (0, r.useHistory)();
   if (null == f && null != h) {
@@ -40,10 +40,10 @@ t.default = e => {
     null != E && E(e)
   }, [I, g, E]);
   return (0, l.jsxs)(o.Clickable, {
-    ...S,
+    ..._,
     onClick: T,
     className: i()(C, d.wrapper, {
-      [d.selected]: _
+      [d.selected]: S
     }),
     "aria-label": null != p && "" !== p ? p : null != h ? h : "",
     style: {

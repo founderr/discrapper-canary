@@ -16,8 +16,8 @@ var l = n("735250"),
   m = n("872810"),
   g = n("438139"),
   E = n("730749"),
-  _ = n("607070"),
-  S = n("566620"),
+  S = n("607070"),
+  _ = n("566620"),
   I = n("317381"),
   N = n("620662"),
   T = n("835473"),
@@ -26,8 +26,8 @@ var l = n("735250"),
   v = n("552740"),
   x = n("933557"),
   R = n("311352"),
-  M = n("730417"),
-  y = n("524347"),
+  y = n("730417"),
+  M = n("524347"),
   O = n("853197"),
   D = n("616360"),
   b = n("858064"),
@@ -44,8 +44,8 @@ var l = n("735250"),
   Y = n("314897"),
   K = n("592125"),
   W = n("984933"),
-  z = n("430824"),
-  Z = n("131951"),
+  Z = n("430824"),
+  z = n("131951"),
   X = n("496675"),
   Q = n("158776"),
   q = n("699516"),
@@ -70,8 +70,8 @@ var l = n("735250"),
   em = n("358085"),
   eg = n("793224"),
   eE = n("978769"),
-  e_ = n("981631"),
-  eS = n("918559"),
+  eS = n("981631"),
+  e_ = n("918559"),
   eI = n("702512"),
   eN = n("689938"),
   eT = n("810618");
@@ -104,7 +104,7 @@ class ev extends a.PureComponent {
       activity: t,
       embeddedActivity: n
     } = this.props;
-    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === e_.ActivityTypes.PLAYING && (0, N.default)(t, e_.ActivityFlags.JOIN))
+    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === eS.ActivityTypes.PLAYING && (0, N.default)(t, eS.ActivityFlags.JOIN))
   }
   renderGoLiveButton() {
     let e, t, n, a;
@@ -321,7 +321,7 @@ class ev extends a.PureComponent {
         start: n.connectedSince
       },
       o = s;
-    null != i ? (e = e_.Routes.CHANNEL(i.id, a.id), o = "".concat(o, " / ").concat(i.name)) : e = e_.Routes.CHANNEL(e_.ME, a.id);
+    null != i ? (e = eS.Routes.CHANNEL(i.id, a.id), o = "".concat(o, " / ").concat(i.name)) : e = eS.Routes.CHANNEL(eS.ME, a.id);
     let u = (0, l.jsx)(el.default, {
       href: e,
       onClick: this.handleApplicationLinkClick,
@@ -398,7 +398,7 @@ class ev extends a.PureComponent {
           ...t,
           selectSource: !1,
           guildId: i,
-          analyticsLocation: e_.AnalyticsLocations.ACTIVITY_PANEL
+          analyticsLocation: eS.AnalyticsLocations.ACTIVITY_PANEL
         })
       }).then(e => {
         null != e && (this.modalKey = e)
@@ -418,7 +418,7 @@ class ev extends a.PureComponent {
         activity: e,
         analyticsContext: t
       } = this.props;
-      o()(null != e, "Received null activity"), eC.default.track(e_.AnalyticEvents.OPEN_MODAL, {
+      o()(null != e, "Received null activity"), eC.default.track(eS.AnalyticEvents.OPEN_MODAL, {
         type: "Send Join Invite",
         application_id: e.application_id,
         location: t.location
@@ -431,7 +431,7 @@ class ev extends a.PureComponent {
       } = this.props;
       if (null == e) return;
       let l = (0, O.getDrop)(e);
-      null != l && (eC.default.track(e_.AnalyticEvents.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
+      null != l && (eC.default.track(eS.AnalyticEvents.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
         user_id: n,
         drops_quest_id: l.dropsQuestId,
         game_id: l.dropsGameId,
@@ -443,7 +443,7 @@ class ev extends a.PureComponent {
         showDropsSparkles: !1
       }))
     }), eA(this, "handleClickLeaveEmbeddedActivityButton", (e, t) => () => {
-      (0, S.stopEmbeddedActivity)({
+      (0, _.stopEmbeddedActivity)({
         channelId: t.id,
         applicationId: e
       })
@@ -458,7 +458,7 @@ class ev extends a.PureComponent {
         channel: t,
         embeddedActivity: n
       } = this.props;
-      o()(null != t, "Channel is null during navigation click"), o()(null != n, "Activity null during navigation click"), (0, H.isVoiceChannel)(t.type) && p.default.selectParticipant(t.id, n.applicationId), C.default.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : e_.ME, t.id), (0, H.isTextChannel)(t.type) && (0, S.updateActivityPanelMode)(eS.ActivityPanelModes.PANEL)
+      o()(null != t, "Channel is null during navigation click"), o()(null != n, "Activity null during navigation click"), (0, H.isVoiceChannel)(t.type) && p.default.selectParticipant(t.id, n.applicationId), C.default.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : eS.ME, t.id), (0, H.isTextChannel)(t.type) && (0, _.updateActivityPanelMode)(e_.ActivityPanelModes.PANEL)
     })
   }
 }
@@ -467,21 +467,21 @@ t.default = (0, E.default)(function(e) {
   let {
     guildId: n,
     ...a
-  } = e, s = (0, u.useStateFromStores)([Y.default], () => Y.default.getId()), i = (0, u.useStateFromStores)([j.default, et.default], () => (0, B.default)(j.default, et.default)), r = (0, u.useStateFromStores)([J.default, K.default], () => K.default.getChannel(J.default.getVoiceChannelId())), o = (0, u.useStateFromStores)([I.default], () => I.default.getConnectedActivityChannelId()), c = (0, u.useStateFromStores)([K.default], () => K.default.getChannel(o)), [f, h] = (0, u.useStateFromStoresArray)([k.default], () => [k.default.getCurrentUserActiveStream(), k.default.getStreamerActiveStreamMetadata()]), p = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), C = (0, u.useStateFromStores)([y.default], () => y.default.getActivityPanelTooltipAction()), {
+  } = e, s = (0, u.useStateFromStores)([Y.default], () => Y.default.getId()), i = (0, u.useStateFromStores)([j.default, et.default], () => (0, B.default)(j.default, et.default)), r = (0, u.useStateFromStores)([J.default, K.default], () => K.default.getChannel(J.default.getVoiceChannelId())), o = (0, u.useStateFromStores)([I.default], () => I.default.getConnectedActivityChannelId()), c = (0, u.useStateFromStores)([K.default], () => K.default.getChannel(o)), [f, h] = (0, u.useStateFromStoresArray)([k.default], () => [k.default.getCurrentUserActiveStream(), k.default.getStreamerActiveStreamMetadata()]), p = (0, u.useStateFromStores)([S.default], () => S.default.useReducedMotion), C = (0, u.useStateFromStores)([M.default], () => M.default.getActivityPanelTooltipAction()), {
     partnerGame: m,
     dropsActivityPanelExperienceBlocked: g,
     showDropsSparkles: E
-  } = (0, M.useActivityPanelDrop)(eI.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), S = (0, u.useStateFromStores)([I.default], () => null != c ? I.default.getSelfEmbeddedActivityForChannel(c.id) : null), N = (0, u.useStateFromStores)([z.default, X.default, W.default], () => null != r ? U.canStreamInChannel(r, z.default, X.default, !1) : null != n && U.getStreamEligibleChannels(W.default.getChannels(n), z.default, X.default).length > 0), [A] = (0, T.default)([null !== (t = function() {
+  } = (0, y.useActivityPanelDrop)(eI.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), _ = (0, u.useStateFromStores)([I.default], () => null != c ? I.default.getSelfEmbeddedActivityForChannel(c.id) : null), N = (0, u.useStateFromStores)([Z.default, X.default, W.default], () => null != r ? U.canStreamInChannel(r, Z.default, X.default, !1) : null != n && U.getStreamEligibleChannels(W.default.getChannels(n), Z.default, X.default).length > 0), [A] = (0, T.default)([null !== (t = function() {
     if (null != h && null != h.id) return h.id;
     if (null != i && null != i.id) return i.id;
-    if (null != S) return S.applicationId
-  }()) && void 0 !== t ? t : ""]), v = (0, u.useStateFromStores)([Z.default], () => (0, P.default)(Z.default) && (0, em.isWindows)()), R = (0, u.useStateFromStores)([Q.default], () => null != s ? Q.default.findActivity(s, e => e.type === e_.ActivityTypes.PLAYING) : null), O = null != f && f.ownerId === s && f.state !== e_.ApplicationStreamStates.ENDED, D = (0, u.useStateFromStores)([$.default], () => $.default.getBroadcast()), b = (0, L.default)() && null != i, G = (0, u.useStateFromStores)([ee.default, q.default], () => null != c ? (0, x.computeChannelName)(c, ee.default, q.default) : void 0), w = (0, u.useStateFromStores)([z.default], () => z.default.getGuild(n));
+    if (null != _) return _.applicationId
+  }()) && void 0 !== t ? t : ""]), v = (0, u.useStateFromStores)([z.default], () => (0, P.default)(z.default) && (0, em.isWindows)()), R = (0, u.useStateFromStores)([Q.default], () => null != s ? Q.default.findActivity(s, e => e.type === eS.ActivityTypes.PLAYING) : null), O = null != f && f.ownerId === s && f.state !== eS.ApplicationStreamStates.ENDED, D = (0, u.useStateFromStores)([$.default], () => $.default.getBroadcast()), b = (0, L.default)() && null != i, G = (0, u.useStateFromStores)([ee.default, q.default], () => null != c ? (0, x.computeChannelName)(c, ee.default, q.default) : void 0), w = (0, u.useStateFromStores)([Z.default], () => Z.default.getGuild(n));
   return (0, l.jsx)(ev, {
     ...a,
     guildId: n,
     canGoLive: v,
     activity: R,
-    embeddedActivity: S,
+    embeddedActivity: _,
     showDropsSparkles: E,
     dropsPartnerGame: m,
     dropsActivityPanelExperienceBlocked: g,

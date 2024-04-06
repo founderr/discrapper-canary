@@ -15,7 +15,7 @@ var a, s = n("392711"),
   f = n("981631"),
   E = n("65154");
 
-function _(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,13 +23,13 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let h = {},
-  C = h,
+let _ = {},
+  C = _,
   m = !1,
   S = {},
   I = {},
-  T = {},
-  p = {
+  p = {},
+  T = {
     id: null,
     justChanged: !1
   },
@@ -58,7 +58,7 @@ function v(e, t, n) {
 }
 class R extends(a = i.default.DeviceSettingsStore) {
   initialize(e) {
-    this.waitFor(c.default, u.default), C = null != e ? e : h
+    this.waitFor(c.default, u.default), C = null != e ? e : _
   }
   getUserAgnosticState() {
     return C
@@ -67,13 +67,13 @@ class R extends(a = i.default.DeviceSettingsStore) {
     return m
   }
   get lastDeviceConnected() {
-    return T
+    return p
   }
   get inputDevices() {
     return S
   }
   get lastInputSystemDevice() {
-    return p
+    return T
   }
   get outputDevices() {
     return I
@@ -82,17 +82,17 @@ class R extends(a = i.default.DeviceSettingsStore) {
     return g
   }
 }
-_(R, "displayName", "ConnectedDeviceStore"), _(R, "persistKey", "ConnectedDeviceStore"), t.default = new R(r.default, {
+h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDeviceStore"), t.default = new R(r.default, {
   MEDIA_ENGINE_DEVICES: function(e) {
     let {
       inputDevices: t,
       outputDevices: n
     } = e, a = {};
-    p.justChanged = !1, t.forEach(e => {
+    T.justChanged = !1, t.forEach(e => {
       if (a[N(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
         var t;
         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-        n !== p.id && (p.justChanged = !0), p.id = n
+        n !== T.id && (T.justChanged = !0), T.id = n
       }
     });
     let s = {};
@@ -112,10 +112,10 @@ _(R, "displayName", "ConnectedDeviceStore"), _(R, "persistKey", "ConnectedDevice
       u = Object.keys(s),
       d = l().difference(i, r),
       c = l().difference(o, u);
-    return d.length > 0 || c.length > 0 ? T = {} : (l().difference(r, i).forEach(e => {
-      T[e] = v(T[e], e, f.ConnectedDeviceType.INPUT)
+    return d.length > 0 || c.length > 0 ? p = {} : (l().difference(r, i).forEach(e => {
+      p[e] = v(p[e], e, f.ConnectedDeviceType.INPUT)
     }), l().difference(u, o).forEach(e => {
-      T[e] = v(T[e], e, f.ConnectedDeviceType.OUTPUT)
+      p[e] = v(p[e], e, f.ConnectedDeviceType.OUTPUT)
     })), !(l().isEqual(i, r) && l().isEqual(o, u)) && (S = a, I = s, !0)
   },
   CONNECTED_DEVICE_SET: function(e) {
@@ -133,16 +133,16 @@ _(R, "displayName", "ConnectedDeviceStore"), _(R, "persistKey", "ConnectedDevice
         let t = I[e];
         r.default.wait(() => o.default.setOutputDevice(t, n))
       }
-    }(t, n, a), delete T[t]
+    }(t, n, a), delete p[t]
   },
   CONNECTED_DEVICE_IGNORE: function(e) {
     let {
       displayName: t
     } = e;
-    delete T[t]
+    delete p[t]
   },
   CONNECTED_DEVICE_NEVER_SHOW_MODAL: function() {
-    T = {}, C = {
+    p = {}, C = {
       neverShowModal: !0
     }
   }

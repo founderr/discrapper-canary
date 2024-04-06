@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n("47120");
-var s = n("735250"),
-  a = n("470079"),
-  l = n("990547"),
-  i = n("442837"),
-  r = n("481060"),
-  u = n("893776"),
-  o = n("232567"),
-  d = n("82554"),
-  c = n("726521"),
-  f = n("185625"),
-  E = n("551549"),
-  _ = n("314897"),
-  I = n("828695"),
-  p = n("819570"),
-  h = n("63063"),
-  T = n("981631"),
-  N = n("689938"),
-  g = n("78019"),
-  m = n("794711");
+s.r(t), s("47120");
+var n = s("735250"),
+  a = s("470079"),
+  l = s("990547"),
+  i = s("442837"),
+  r = s("481060"),
+  u = s("893776"),
+  o = s("232567"),
+  d = s("82554"),
+  c = s("726521"),
+  f = s("185625"),
+  E = s("551549"),
+  I = s("314897"),
+  _ = s("828695"),
+  h = s("819570"),
+  p = s("63063"),
+  T = s("981631"),
+  N = s("689938"),
+  g = s("78019"),
+  m = s("794711");
 i.default.initialize();
 let A = e => {
   let {
@@ -28,8 +28,8 @@ let A = e => {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("93288")]).then(n.bind(n, "396410"));
-      return t => (0, s.jsx)(e, {
+      } = await Promise.all([s.e("99387"), s.e("93288")]).then(s.bind(s, "396410"));
+      return t => (0, n.jsx)(e, {
         ...t,
         onSuccess: u,
         headerText: N.default.Messages.ENTER_EMAIL,
@@ -48,9 +48,9 @@ let A = e => {
     t(), (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("94566")]).then(n.bind(n, "965072"));
-      return n => (0, s.jsx)(e, {
-        ...n,
+      } = await Promise.all([s.e("99387"), s.e("94566")]).then(s.bind(s, "965072"));
+      return s => (0, n.jsx)(e, {
+        ...s,
         onFormSubmit: i,
         onResend: t,
         onSuccess: u,
@@ -61,9 +61,9 @@ let A = e => {
       })
     })
   };
-  return (0, s.jsx)("div", {
+  return (0, n.jsx)("div", {
     className: g.buttonColumn,
-    children: (0, s.jsx)(r.Button, {
+    children: (0, n.jsx)(r.Button, {
       className: m.__invalid_reportButton,
       fullWidth: !0,
       color: r.Button.Colors.BRAND_NEW,
@@ -74,9 +74,9 @@ let A = e => {
   })
 };
 t.default = () => {
-  let e = (0, i.useStateFromStores)([_.default], () => _.default.isAuthenticated()),
-    t = (0, i.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments),
-    n = (0, E.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"),
+  let e = (0, i.useStateFromStores)([I.default], () => I.default.isAuthenticated()),
+    t = (0, i.useStateFromStores)([_.default], () => _.default.hasLoadedExperiments),
+    s = (0, E.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"),
     [l, c] = a.useState(!0);
   return a.useEffect(() => {
     e ? (c(!0), o.fetchCurrentUser({
@@ -84,25 +84,25 @@ t.default = () => {
     }).then(() => c(!1)).catch(() => c(!1))) : c(!1)
   }, [e]), a.useEffect(() => {
     (async () => {
-      !t && !n && (await u.default.getLocationMetadata(), u.default.getExperiments())
+      !t && !s && (await u.default.getLocationMetadata(), u.default.getExperiments())
     })()
-  }, [t, n]), l ? (0, s.jsx)(p.default, {
-    children: (0, s.jsx)(r.Spinner, {})
-  }) : n && (0, s.jsxs)(p.default, {
-    children: [(0, s.jsx)(p.Title, {
+  }, [t, s]), l ? (0, n.jsx)(h.default, {
+    children: (0, n.jsx)(r.Spinner, {})
+  }) : s && (0, n.jsxs)(h.default, {
+    children: [(0, n.jsx)(h.Title, {
       className: m.marginBottom8,
       children: N.default.Messages.URF_LANDING_PAGE_TITLE
-    }), (0, s.jsx)(p.SubTitle, {
+    }), (0, n.jsx)(h.SubTitle, {
       className: m.marginBottom8,
       children: N.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
-        supportURL: h.default.getArticleURL(T.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
+        supportURL: p.default.getArticleURL(T.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
       })
-    }), (0, s.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: g.container,
-      children: [(0, s.jsx)(A, {
+      children: [(0, n.jsx)(A, {
         title: N.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
         menuType: d.UnauthenticatedReportNames.MESSAGE
-      }), (0, s.jsx)(A, {
+      }), (0, n.jsx)(A, {
         title: N.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
         menuType: d.UnauthenticatedReportNames.USER
       })]

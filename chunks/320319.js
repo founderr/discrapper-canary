@@ -17,8 +17,8 @@ var a = s("735250"),
   R = s("176782"),
   S = s("238108"),
   m = s("32173"),
-  N = s("391110"),
-  A = s("484239"),
+  A = s("391110"),
+  N = s("484239"),
   p = s("658370"),
   g = s("735825"),
   C = s("981631"),
@@ -37,7 +37,7 @@ let h = {
       canReveal: s = !0,
       dismissibleContentType: r,
       forceShadow: R,
-      cardType: A,
+      cardType: N,
       confettiCanvas: p
     } = e, v = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [D, b] = i.useState(!1), [U, j] = i.useState(!1), y = (0, I.useFreeBoostUserTenureReward)(), G = (0, I.useShouldShowConfettiAndGlow)(), [B, k] = i.useState(!1), [H, F] = i.useState(t === m.PerksDiscoverabilityCardTypes.FREE_BOOST && G && (null == y ? void 0 : y.nitroTenureStatus) === g.NitroRewardStatus.REDEEMABLE);
     i.useEffect(() => {
@@ -46,7 +46,7 @@ let h = {
     let w = i.useCallback(() => {
         k(!0)
       }, []),
-      K = A === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || A === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || A === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW,
+      K = N === A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || N === A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || N === A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW,
       W = (0, m.default)(),
       [V, Y] = (0, E.useGetDismissibleContent)(null != r && s || r === u.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI ? [r] : []);
     i.useEffect(() => () => {
@@ -196,7 +196,7 @@ let x = i.forwardRef((e, t) => {
     backgroundImage: O,
     pillText: P,
     perkImage: h
-  } = e, L = g === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || g === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || g === N.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW, x = 0 !== u.length || 0 !== o.length && m === N.CardVariants.REWARD, v = (0, I.useShouldShowConfettiAndGlow)(), [D, b] = i.useState(v);
+  } = e, L = g === A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || g === A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || g === A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW, x = 0 !== u.length || 0 !== o.length && m === A.CardVariants.REWARD, v = (0, I.useShouldShowConfettiAndGlow)(), [D, b] = i.useState(v);
   i.useEffect(() => {
     v && b(!0)
   }, [v]);
@@ -217,7 +217,7 @@ let x = i.forwardRef((e, t) => {
       children: P
     }), (0, a.jsx)("div", {
       ref: t
-    }), (0, a.jsx)(A.default, {
+    }), (0, a.jsx)(N.default, {
       title: r,
       titleClassName: l,
       subtitle: o,

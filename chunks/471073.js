@@ -5,14 +5,14 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var o, u, d, c, f, E, _ = n("512722"),
-  h = n.n(_),
+var o, u, d, c, f, E, h = n("512722"),
+  _ = n.n(h),
   C = n("442837"),
   m = n("570140"),
   S = n("904245"),
   I = n("911969"),
-  T = n("603721"),
-  p = n("70956");
+  p = n("603721"),
+  T = n("70956");
 (o = f || (f = {}))[o.IN_FLIGHT = 0] = "IN_FLIGHT", o[o.ERRORED = 1] = "ERRORED", o[o.SUCCEEDED = 2] = "SUCCEEDED";
 class g extends(E = C.default.Store) {
   getModalState(e) {
@@ -50,9 +50,9 @@ c = "InteractionModalStore", (d = "displayName") in(u = g) ? Object.defineProper
       case I.InteractionTypes.APPLICATION_COMMAND:
         return l = t, i = o.channelId, r = n, !1;
       case I.InteractionTypes.MODAL_SUBMIT:
-        return h()(null == a || 1 === s || 2 === s, "cannot submit multiple modals at once"), a = n, s = 0, setTimeout(() => {
-          a === n && 0 === s && (0, T.setFailed)(n)
-        }, 10 * p.default.Millis.SECOND), !0;
+        return _()(null == a || 1 === s || 2 === s, "cannot submit multiple modals at once"), a = n, s = 0, setTimeout(() => {
+          a === n && 0 === s && (0, p.setFailed)(n)
+        }, 10 * T.default.Millis.SECOND), !0;
       default:
         return !1
     }

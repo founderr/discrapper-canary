@@ -14,14 +14,14 @@ var a, s = n("735250"),
   c = n("477690"),
   f = n("481060"),
   E = n("570140"),
-  _ = n("239091"),
-  h = n("287259"),
+  h = n("239091"),
+  _ = n("287259"),
   C = n("404133"),
   m = n("785547"),
   S = n("490983"),
   I = n("799777"),
-  T = n("285952"),
-  p = n("366695"),
+  p = n("285952"),
+  T = n("366695"),
   g = n("366966"),
   A = n("151011"),
   N = n("880008"),
@@ -29,8 +29,8 @@ var a, s = n("735250"),
   R = n("931003"),
   O = n("626135"),
   L = n("780570"),
-  M = n("624138"),
-  P = n("645818"),
+  P = n("624138"),
+  M = n("645818"),
   y = n("981631"),
   D = n("689938"),
   x = n("373438");
@@ -43,8 +43,8 @@ function b(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
-  j = (0, M.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
+  j = (0, P.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
   G = Object.freeze({
     [y.GameTableListKeys.PLATFORM]: "Platform",
     [y.GameTableListKeys.LAST_PLAYED]: "Last Played",
@@ -73,11 +73,11 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     sort: !0,
     cellClassName: x.nameCell,
     bodyCellClassName: x.nameBodyCell,
-    render: e => (0, s.jsxs)(T.default, {
-      align: T.default.Align.CENTER,
-      children: [(0, s.jsx)(p.default, {
+    render: e => (0, s.jsxs)(p.default, {
+      align: p.default.Align.CENTER,
+      children: [(0, s.jsx)(T.default, {
         game: e.application,
-        size: p.default.Sizes.SMALL,
+        size: T.default.Sizes.SMALL,
         className: x.gameIcon
       }), (0, s.jsxs)("div", {
         className: x.nameCellInfo,
@@ -101,8 +101,8 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: x.textCell,
     render(e) {
       let t = e.libraryApplication.getDistributor();
-      return (0, s.jsx)(T.default, {
-        align: T.default.Align.CENTER,
+      return (0, s.jsx)(p.default, {
+        align: p.default.Align.CENTER,
         children: null != t ? y.DistributorNames[t] : D.default.Messages.GAME_LIBRARY_NOT_APPLICABLE
       })
     }
@@ -117,8 +117,8 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
       return t = e.isRunning ? D.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? D.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(g.default, {
         end: e.lastPlayed,
         location: g.default.Locations.GAME_LIBRARY_LAST_PLAYED
-      }) : D.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(T.default, {
-        align: T.default.Align.CENTER,
+      }) : D.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(p.default, {
+        align: p.default.Align.CENTER,
         className: r()({
           [x.lastPlayedCellNew]: e.isNew
         }),
@@ -146,7 +146,7 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
             item: e,
             icon: R.default,
             tooltip: D.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
-          }), (0, s.jsx)(P.default, {
+          }), (0, s.jsx)(M.default, {
             className: r()(x.settingIcon, {
               [x.hidden]: !e.supportsCloudSync
             }),
@@ -215,7 +215,7 @@ class B extends(a = l.PureComponent) {
     let t = this.props.activeRowKey;
     if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
       let e = this._rowRefs[t];
-      null != e && (E.default.wait(_.closeContextMenu), this.props.scrollToRow(e, U))
+      null != e && (E.default.wait(h.closeContextMenu), this.props.scrollToRow(e, U))
     }
   }
   handleHighlightedApplicationKey() {
@@ -278,7 +278,7 @@ class B extends(a = l.PureComponent) {
     })
   }
   handleSort(e, t) {
-    h.sortList(e, t)
+    _.sortList(e, t)
   }
   renderImportHelp() {
     let e;
@@ -292,10 +292,10 @@ class B extends(a = l.PureComponent) {
       className: a ? x.emptyStateSmall : x.emptyStateLarge,
       children: [(0, s.jsx)("div", {
         className: x.emptyWumpus
-      }), (0, s.jsx)(T.default, {
+      }), (0, s.jsx)(p.default, {
         grow: 0,
         shrink: a ? 1 : 0,
-        direction: T.default.Direction.VERTICAL,
+        direction: p.default.Direction.VERTICAL,
         children: (0, s.jsxs)("div", {
           className: x.emptyStateText,
           children: [(0, s.jsx)("div", {
@@ -368,9 +368,9 @@ class B extends(a = l.PureComponent) {
         overflowMenuRowKey: null
       })
     }), b(this, "handleRowMouseEnter", e => {
-      !this.props.isNavigatingByKeyboard && h.updateActiveRowKey(e.key)
+      !this.props.isNavigatingByKeyboard && _.updateActiveRowKey(e.key)
     }), b(this, "handleRowMouseLeave", () => {
-      !this.props.isNavigatingByKeyboard && h.updateActiveRowKey(null)
+      !this.props.isNavigatingByKeyboard && _.updateActiveRowKey(null)
     }), b(this, "setRowRef", (e, t) => {
       this._rowRefs[t] = e
     }), b(this, "handleApplicationContextMenu", (e, t) => {
@@ -378,7 +378,7 @@ class B extends(a = l.PureComponent) {
       let {
         analyticsContext: a
       } = this.props;
-      (0, _.openContextMenuLazy)(e, async () => {
+      (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.e("98335").then(n.bind(n, "485292"));

@@ -19,8 +19,8 @@ var l, a = n("735250"),
   m = n("941128"),
   g = n("366966"),
   E = n("943461"),
-  _ = n("780570"),
-  S = n("353042"),
+  S = n("780570"),
+  _ = n("353042"),
   I = n("981631"),
   N = n("689938"),
   T = n("860240");
@@ -94,7 +94,7 @@ class v extends s.PureComponent {
     } = this.props;
     if (e.type === I.LocalDispatchApplicationStates.UPDATING || e.type === I.LocalDispatchApplicationStates.REPAIRING || e.type === I.LocalDispatchApplicationStates.INSTALLING) {
       if (t) return N.default.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
-      if (e.stage === I.DispatchApplicationStages.PATCHING || e.stage === I.DispatchApplicationStages.REPAIRING) return (0, a.jsx)(S.default, {
+      if (e.stage === I.DispatchApplicationStages.PATCHING || e.stage === I.DispatchApplicationStages.REPAIRING) return (0, a.jsx)(_.default, {
         getHistoricalTotalBytes: C.default.getHistoricalTotalBytesWritten,
         updateInterval: 5e3,
         children: this.renderProgressBody
@@ -223,9 +223,9 @@ t.default = u.default.connectStores([m.default, C.default, h.default], () => {
     {
       total: n,
       progress: l
-    } = _.getCombinedProgress(t);
+    } = S.getCombinedProgress(t);
   return {
-    percent: _.calculateProgressPercentage(l, n),
+    percent: S.calculateProgressPercentage(l, n),
     isPaused: m.default.paused,
     firstApplication: e.length > 0 ? h.default.getApplication(e[0].applicationId) : null,
     firstState: t.length > 0 ? t[0] : null

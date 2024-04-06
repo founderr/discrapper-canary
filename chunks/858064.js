@@ -85,19 +85,19 @@ function E(e) {
     partnerGame: c
   } = e, E = (0, d.useDropsExperiment)(c);
   (0, d.useFetchInitialDropProgress)(c);
-  let _ = (0, a.useStateFromStores)([r.default], () => r.default.getId());
+  let S = (0, a.useStateFromStores)([r.default], () => r.default.getId());
   if (null == E) return null;
   let {
-    streamLengthRequirement: S,
+    streamLengthRequirement: _,
     viewerCountRequirement: I
   } = E.config, N = E.drop, {
     header: T,
     body: A,
     imgSrc: L,
     imgStyle: v
-  } = m(n, N, S), x = () => {
+  } = m(n, N, _), x = () => {
     u.default.track(h.AnalyticEvents.DROPS_ACTIVITY_PANEL_POPOVER_CTA_CLICK, {
-      user_id: _,
+      user_id: S,
       drops_quest_id: N.dropsQuestId,
       game_id: N.dropsGameId,
       game_name: N.title.toLowerCase(),
@@ -128,7 +128,7 @@ function E(e) {
       variant: "heading-md/extrabold",
       children: T
     }), n === f.TooltipActions.TRACK_PROGRESS ? (0, l.jsx)(g, {
-      streamLengthRequirement: S,
+      streamLengthRequirement: _,
       viewerCountRequirement: I
     }) : (0, l.jsx)(s.Text, {
       variant: "text-sm/medium",

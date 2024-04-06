@@ -1,44 +1,44 @@
 "use strict";
-s.r(t);
-var a = s("990547"),
-  n = s("283693"),
-  l = s("570140"),
-  i = s("573261"),
-  r = s("981631");
+n.r(t);
+var l = n("990547"),
+  a = n("283693"),
+  u = n("570140"),
+  r = n("573261"),
+  i = n("981631");
 t.default = {
-  signup: (e, t) => i.default.post({
-    url: r.Endpoints.HUB_WAITLIST_SIGNUP,
+  signup: (e, t) => r.default.post({
+    url: i.Endpoints.HUB_WAITLIST_SIGNUP,
     body: {
       email: e,
       school: t
     },
     trackedActionData: {
-      event: a.NetworkActionNames.HUB_WAITLIST_SIGNUP,
+      event: l.NetworkActionNames.HUB_WAITLIST_SIGNUP,
       properties: e => {
         var t;
-        let s = !1,
-          a = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.email_domain;
-        return null != a && (s = -1 !== a.split(".").indexOf("edu")), (0, n.exact)({
-          is_edu_email: s
+        let n = !1,
+          l = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.email_domain;
+        return null != l && (n = -1 !== l.split(".").indexOf("edu")), (0, a.exact)({
+          is_edu_email: n
         })
       }
     }
   }),
-  sendVerificationEmail: async (e, t, s) => (await i.default.post({
-    url: r.Endpoints.HUB_EMAIL_VERIFY_SEND,
+  sendVerificationEmail: async (e, t, n) => (await r.default.post({
+    url: i.Endpoints.HUB_EMAIL_VERIFY_SEND,
     body: {
       email: e,
-      guild_id: s,
+      guild_id: n,
       allow_multiple_guilds: t,
       use_verification_code: !0
     },
     trackedActionData: {
-      event: a.NetworkActionNames.HUB_EMAIL_VERIFY_SEND,
+      event: l.NetworkActionNames.HUB_EMAIL_VERIFY_SEND,
       properties: e => {
         var t;
-        let s = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.has_matching_guild;
-        return (0, n.exact)({
-          has_matching_guild: s
+        let n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.has_matching_guild;
+        return (0, a.exact)({
+          has_matching_guild: n
         })
       }
     }
@@ -46,48 +46,48 @@ t.default = {
   async verify(e) {
     if (null != e) try {
       var t;
-      let s = await i.default.post({
-          url: r.Endpoints.HUB_EMAIL_VERIFY,
+      let n = await r.default.post({
+          url: i.Endpoints.HUB_EMAIL_VERIFY,
           body: {
             token: e
           },
           trackedActionData: {
-            event: a.NetworkActionNames.HUB_EMAIL_VERIFY
+            event: l.NetworkActionNames.HUB_EMAIL_VERIFY
           }
         }),
-        n = null === (t = s.body.guild) || void 0 === t ? void 0 : t.id;
-      l.default.dispatch({
+        a = null === (t = n.body.guild) || void 0 === t ? void 0 : t.id;
+      u.default.dispatch({
         type: "HUB_VERIFY_EMAIL_SUCCESS",
-        guildId: n
+        guildId: a
       })
     } catch (e) {
-      l.default.dispatch({
+      u.default.dispatch({
         type: "HUB_VERIFY_EMAIL_FAILURE",
         errors: e.body
       })
     }
   },
-  async verifyCode(e, t, s) {
+  async verifyCode(e, t, n) {
     if (null != e) try {
-      var n;
-      let o = await i.default.post({
-          url: r.Endpoints.HUB_EMAIL_VERIFY_CODE,
+      var a;
+      let s = await r.default.post({
+          url: i.Endpoints.HUB_EMAIL_VERIFY_CODE,
           body: {
             code: e,
             guild_id: t,
-            email: s
+            email: n
           },
           trackedActionData: {
-            event: a.NetworkActionNames.HUB_EMAIL_VERIFY
+            event: l.NetworkActionNames.HUB_EMAIL_VERIFY
           }
         }),
-        c = null === (n = o.body.guild) || void 0 === n ? void 0 : n.id;
-      return l.default.dispatch({
+        o = null === (a = s.body.guild) || void 0 === a ? void 0 : a.id;
+      return u.default.dispatch({
         type: "HUB_VERIFY_EMAIL_SUCCESS",
-        guildId: c
-      }), o.body
+        guildId: o
+      }), s.body
     } catch (e) {
-      throw l.default.dispatch({
+      throw u.default.dispatch({
         type: "HUB_VERIFY_EMAIL_FAILURE",
         errors: e.body
       }), e

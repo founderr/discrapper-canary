@@ -72,12 +72,12 @@ function E(e) {
   } = e, {
     name: l,
     description: E,
-    rarity: _,
-    hideDescriptionUntilUnlock: h,
+    rarity: h,
+    hideDescriptionUntilUnlock: _,
     onAction: C
   } = t, {
     color: m
-  } = (0, o.getAchievementStyles)(_);
+  } = (0, o.getAchievementStyles)(h);
   s.useEffect(() => {
     let e = setTimeout(() => {
       u.default.playAchievementUnlockSound()
@@ -109,7 +109,7 @@ function E(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        children: h && !n ? "?????" : E()
+        children: _ && !n ? "?????" : E()
       })]
     }), (0, a.jsx)("div", {
       className: c.flair,

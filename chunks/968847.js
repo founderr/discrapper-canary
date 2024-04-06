@@ -14,8 +14,8 @@ var l, a, s, i, r, o, u = n("392711"),
   m = n("569471"),
   g = n("592125"),
   E = n("430824"),
-  _ = n("306680"),
-  S = n("914010"),
+  S = n("306680"),
+  _ = n("914010"),
   I = n("9156"),
   N = n("938475"),
   T = n("823379"),
@@ -32,9 +32,9 @@ let v = {
     bottomBar: v
   },
   R = {},
-  M = {};
+  y = {};
 
-function y(e) {
+function M(e) {
   let t = g.default.getChannel(e);
   return !(null == t || null == t.getGuildId() || t.isGuildVocal()) && !(t.isThread() ? m.default.isMuted(t.id) : I.default.isChannelMuted(t.getGuildId(), t.id)) && (0, h.getHasImportantUnread)(t)
 }
@@ -46,7 +46,7 @@ function O(e) {
   if (null == n) return !1;
   let l = I.default.isGuildCollapsed(n),
     a = I.default.isChannelMuted(n, t.id);
-  return (!l || !a) && _.default.getMentionCount(e) > 0
+  return (!l || !a) && S.default.getMentionCount(e) > 0
 }
 
 function D(e) {
@@ -57,7 +57,7 @@ function b(e) {
   var t, n, l;
   let {
     guildChannels: a
-  } = A.default.getGuildWithoutChangingCommunityRows(e), s = a.getChannels(null !== (t = M[e]) && void 0 !== t ? t : []);
+  } = A.default.getGuildWithoutChangingCommunityRows(e), s = a.getChannels(null !== (t = y[e]) && void 0 !== t ? t : []);
   if (null == s || 0 === s.length) return !1;
   let i = null,
     r = null,
@@ -71,22 +71,22 @@ function b(e) {
     [m, g, E] = a.getSlicedChannels(s);
   for (let e = 0; e < g.length; e++) {
     let t = g[e];
-    if ((y(t.id) || d().some(t.threadIds, y)) && (f = !1), (O(t.id) || d().some(t.threadIds, O)) && (c = !1), C.includes(t.id) && (h = !0), !f && !c && h) break
+    if ((M(t.id) || d().some(t.threadIds, M)) && (f = !1), (O(t.id) || d().some(t.threadIds, O)) && (c = !1), C.includes(t.id) && (h = !0), !f && !c && h) break
   }
-  let S = 0,
+  let _ = 0,
     I = !1,
     N = 0,
     T = !1;
   if (f || c)
     for (let e = m.length - 1; e >= 0; e--) {
       let t = m[e];
-      (y(t.id) || d().some(t.threadIds, y)) && (null == r && (r = t.id), I = !0), (O(t.id) || d().some(t.threadIds, O)) && (null == i && (i = t.id), S += _.default.getMentionCount(t.id) + d().sumBy(t.threadIds, _.default.getMentionCount))
+      (M(t.id) || d().some(t.threadIds, M)) && (null == r && (r = t.id), I = !0), (O(t.id) || d().some(t.threadIds, O)) && (null == i && (i = t.id), _ += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
     }
   if (f || c)
     for (let e = 0; e < E.length; e++) {
       let t = E[e];
       if (!f && !c) break;
-      (y(t.id) || d().some(t.threadIds, y)) && (null == u && (u = t.id), T = !0), (O(t.id) || d().some(t.threadIds, O)) && (null == o && (o = t.id), N += _.default.getMentionCount(t.id) + d().sumBy(t.threadIds, _.default.getMentionCount))
+      (M(t.id) || d().some(t.threadIds, M)) && (null == u && (u = t.id), T = !0), (O(t.id) || d().some(t.threadIds, O)) && (null == o && (o = t.id), N += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
     }
   let L = null,
     x = null,
@@ -103,9 +103,9 @@ function b(e) {
     mode: "unread",
     mentionCount: 0,
     targetChannelId: u
-  }), c && S > 0 ? x = {
+  }), c && _ > 0 ? x = {
     mode: "mentions",
-    mentionCount: S,
+    mentionCount: _,
     targetChannelId: i
   } : f && I && (x = {
     mode: "unread",
@@ -152,7 +152,7 @@ function w(e) {
   } = e, n = g.default.getChannel(t);
   if (null == n) return !1;
   let l = E.default.getGuild(n.guild_id);
-  return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && S.default.getGuildId() === n.guild_id && j(n.guild_id)
+  return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && _.default.getGuildId() === n.guild_id && j(n.guild_id)
 }
 
 function F(e) {
@@ -163,7 +163,7 @@ function F(e) {
 }
 class B extends(a = c.default.Store) {
   initialize() {
-    this.waitFor(A.default, _.default, I.default, m.default, N.default, S.default, E.default)
+    this.waitFor(A.default, S.default, I.default, m.default, N.default, _.default, E.default)
   }
   getUnreadStateForGuildId(e) {
     var t;
@@ -181,7 +181,7 @@ o = "ChannelListUnreadsStore", (r = "displayName") in(i = B) ? Object.defineProp
       guildId: t,
       channelIds: n
     } = e, l = E.default.getGuild(t);
-    return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && null != n && !d().isEqual(M[t], n) && (M[t] = n, b(t))
+    return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && null != n && !d().isEqual(y[t], n) && (y[t] = n, b(t))
   },
   BULK_ACK: function(e) {
     let {
@@ -222,7 +222,7 @@ o = "ChannelListUnreadsStore", (r = "displayName") in(i = B) ? Object.defineProp
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
-    } = e, n = S.default.getGuildId();
+    } = e, n = _.default.getGuildId();
     if (null == n || !new Set(t.map(e => e.guildId)).has(n)) return !1;
     let l = R[n];
     return null != l && "voice-channels" === l.bottomBar.mode && j(n)

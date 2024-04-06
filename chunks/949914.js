@@ -83,7 +83,7 @@ let G = e => {
       dropdownClassName: F.paymentSourceDropdown
     }) : (0, a.jsx)(d.Spinner, {})
   },
-  H = e => {
+  w = e => {
     let {
       isTrial: t,
       isCancelled: s,
@@ -125,15 +125,15 @@ t.default = e => {
     handleToggleExpanded: g,
     subscriptionInfo: h
   } = (0, v.default)(t), [I, C] = n.useState(!1), R = (0, O.useUID)(), {
-    analyticsLocations: w
+    analyticsLocations: H
   } = (0, f.default)(), {
     shouldHideGuildPurchaseEntryPoints: V
   } = (0, _.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), Y = (null == t ? void 0 : t.paymentGateway) === b.PaymentGateways.APPLE_PARTNER;
   if (null == l || null == s || null == h) return null;
-  let W = () => {
+  let K = () => {
       null != o && ((0, N.transitionTo)(b.Routes.CHANNEL(o.id, U.StaticChannelRoute.ROLE_SUBSCRIPTIONS)), (0, c.popLayer)(), S.default.show(b.NoticeTypes.BACK_TO_PREVIOUS_SCREEN, void 0, B.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => E.default.open(b.UserSettingsSections.SUBSCRIPTIONS, y.ROLE_SUBSCRIPTION_SUBSECTION)))
     },
-    K = () => {
+    W = () => {
       null != o && (0, P.openModal)({
         guildId: o.id,
         groupListing: l,
@@ -143,7 +143,7 @@ t.default = e => {
     },
     z = async () => {
       try {
-        C(!0), await u.resubscribeToSubscription(t, w), (0, j.openModal)()
+        C(!0), await u.resubscribeToSubscription(t, H), (0, j.openModal)()
       } finally {
         C(!1)
       }
@@ -260,13 +260,13 @@ t.default = e => {
         }), (0, a.jsx)(k, {
           subscription: t
         })]
-      }), !et && (0, a.jsx)(H, {
+      }), !et && (0, a.jsx)(w, {
         isTrial: ee,
         isCancelled: Q,
         isResubscribing: I,
         shouldHideRoleSubscriptionEntryPoints: V,
-        onCancelSubscriptionClick: K,
-        onChangePlanClick: W,
+        onCancelSubscriptionClick: W,
+        onChangePlanClick: K,
         onResubscribeClick: z
       })]
     }) : null]

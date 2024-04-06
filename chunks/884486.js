@@ -12,7 +12,7 @@ var s = n("803997"),
   c = n("571245"),
   f = n("308083"),
   E = n("689938"),
-  _ = n("597338");
+  h = n("597338");
 t.default = e => {
   let {
     handleUpdate: t,
@@ -22,7 +22,7 @@ t.default = e => {
     s[e].day = a, t({
       primetime: s
     })
-  }, h = (e, a) => {
+  }, _ = (e, a) => {
     let s = [...n];
     s[e].time = a, t({
       primetime: s
@@ -34,20 +34,20 @@ t.default = e => {
     })
   }, m = (0, d.getDayOptions)();
   return (0, a.jsxs)("div", {
-    className: _.slideContent,
+    className: h.slideContent,
     children: [(0, a.jsx)(i.Heading, {
       variant: "heading-xxl/medium",
-      className: _.title,
+      className: h.title,
       children: E.default.Messages.CLAN_SETUP_PRIMETIME_TITLE
     }), (0, a.jsx)(i.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: _.subtitle,
+      className: h.subtitle,
       children: E.default.Messages.CLAN_SETUP_PRIMETIME_SUBTITLE
     }), (0, a.jsxs)("div", {
-      className: _.timeSelection,
+      className: h.timeSelection,
       children: [n.map((e, t) => (0, a.jsxs)("div", {
-        className: _.timeSelectorRow,
+        className: h.timeSelectorRow,
         children: [(0, a.jsx)(i.SearchableSelect, {
           value: e.day,
           options: m,
@@ -55,15 +55,15 @@ t.default = e => {
           onChange: e => s(t, e)
         }), (0, a.jsx)(c.default, {
           value: e.time,
-          onChange: e => h(t, e)
+          onChange: e => _(t, e)
         }), t > 0 && (0, a.jsx)(i.Clickable, {
           onClick: () => C(t),
           children: (0, a.jsx)(r.default, {
-            className: l()(_.icon, _.clickable)
+            className: l()(h.icon, h.clickable)
           })
         })]
       }, "time-".concat(t))), n.length < f.MAX_GAME_HOURS && (0, a.jsxs)(i.Clickable, {
-        className: l()(_.timeSelectorRow, _.clickable),
+        className: l()(h.timeSelectorRow, h.clickable),
         onClick: () => {
           if (n.length >= f.MAX_GAME_HOURS) return;
           let e = [...n];
@@ -75,11 +75,11 @@ t.default = e => {
           })
         },
         children: [(0, a.jsx)(o.default, {
-          className: l()(_.icon, _.clickable)
+          className: l()(h.icon, h.clickable)
         }), (0, a.jsx)(i.Text, {
           variant: "text-sm/medium",
           color: "none",
-          className: _.addText,
+          className: h.addText,
           children: E.default.Messages.CLAN_SETUP_PRIMETIME_ADD
         })]
       })]

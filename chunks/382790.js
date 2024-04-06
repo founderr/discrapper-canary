@@ -33,7 +33,7 @@ function y(e) {
     onClose: t
   })
 }
-class O extends(i = l.PureComponent) {
+class I extends(i = l.PureComponent) {
   render() {
     let {
       selectedGuildId: e,
@@ -68,8 +68,8 @@ class O extends(i = l.PureComponent) {
     })
   }
 }
-v(O, "defaultProps", {
+v(I, "defaultProps", {
   contained: !1
 }), t.default = r.default.connectStores([u.default], () => ({
   selectedGuildId: u.default.getGuildId()
-}))(O)
+}))(I)

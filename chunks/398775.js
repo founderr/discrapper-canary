@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumSubscriptionPauseModalConfirm: function() {
-    return C
+    return T
   },
   PremiumSubscriptionPauseModalSelect: function() {
     return P
@@ -18,9 +18,9 @@ var a = s("735250"),
   c = s("410030"),
   E = s("906732"),
   f = s("285952"),
-  m = s("296848"),
-  _ = s("798769"),
-  p = s("981631"),
+  _ = s("296848"),
+  p = s("798769"),
+  m = s("981631"),
   I = s("689938"),
   N = s("470510");
 async function S(e) {
@@ -55,9 +55,9 @@ function P(e) {
       value: t
     } = e;
     l(t)
-  }, [l]), E = d.status === p.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE : I.default.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE;
+  }, [l]), E = d.status === m.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE : I.default.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE;
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(_.default, {
+    children: [(0, a.jsx)(p.default, {
       premiumType: t,
       onClose: s
     }), (0, a.jsx)(o.ModalHeader, {
@@ -78,11 +78,11 @@ function P(e) {
       className: N.body,
       children: (0, a.jsx)(o.RadioGroup, {
         options: function(e) {
-          let t = e.status === p.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE : I.default.Messages.PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE,
+          let t = e.status === m.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE : I.default.Messages.PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE,
             {
               durations: s,
               currentDaysPaused: a
-            } = (0, m.getSubscriptionPauseDurations)(e),
+            } = (0, _.getSubscriptionPauseDurations)(e),
             n = [];
           for (let e of s) {
             let s = r.PauseDuration[e];
@@ -111,24 +111,24 @@ function P(e) {
   })
 }
 
-function C(e) {
+function T(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
     onClose: i,
     pauseDuration: r,
     analyticsLocation: d
-  } = e, [m, P] = n.useState(!1), {
-    analyticsLocations: C
-  } = (0, E.default)(), [T, R] = n.useState(!1), A = (0, c.default)(), M = null, h = null, L = [p.SubscriptionStatusTypes.PAST_DUE, p.SubscriptionStatusTypes.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, g = l()(L).add(r, "days").toDate();
+  } = e, [_, P] = n.useState(!1), {
+    analyticsLocations: T
+  } = (0, E.default)(), [C, R] = n.useState(!1), A = (0, c.default)(), M = null, h = null, L = [m.SubscriptionStatusTypes.PAST_DUE, m.SubscriptionStatusTypes.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, g = l()(L).add(r, "days").toDate();
   switch (t.status) {
-    case p.SubscriptionStatusTypes.PAST_DUE:
+    case m.SubscriptionStatusTypes.PAST_DUE:
       h = I.default.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
         pauseDuration: r,
         resumeDate: g
       });
       break;
-    case p.SubscriptionStatusTypes.PAUSED:
+    case m.SubscriptionStatusTypes.PAUSED:
       h = I.default.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({
         resumeDate: g
       });
@@ -144,7 +144,7 @@ function C(e) {
     className: N.body,
     children: h
   }), (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(_.default, {
+    children: [(0, a.jsx)(p.default, {
       premiumType: s,
       onClose: i
     }), (0, a.jsx)(o.ModalHeader, {
@@ -159,7 +159,7 @@ function C(e) {
       })
     }), (0, a.jsxs)(o.ModalContent, {
       className: N.body,
-      children: [m ? (0, a.jsx)(o.FormErrorBlock, {
+      children: [_ ? (0, a.jsx)(o.FormErrorBlock, {
         className: N.errorBlock,
         children: I.default.Messages.BILLING_ERROR_GENERIC
       }) : null, M]
@@ -169,7 +169,7 @@ function C(e) {
         className: N.whatYouLoseButtonContainer,
         children: [(0, a.jsx)(o.Button, {
           color: o.Button.Colors.RED,
-          disabled: T || null == r,
+          disabled: C || null == r,
           onClick: async () => {
             await S({
               premiumSubscription: t,
@@ -177,7 +177,7 @@ function C(e) {
               setIsCancelling: R,
               setHasError: P,
               onClose: i,
-              analyticsLocations: C,
+              analyticsLocations: T,
               analyticsLocation: d
             })
           },

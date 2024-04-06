@@ -12,7 +12,7 @@ var l = a("735250"),
   f = a("231338"),
   m = a("689938"),
   C = a("125006");
-let h = {
+let g = {
   dark: [{
     box: "#FFF19E",
     ribbon: "#FF484B"
@@ -62,7 +62,7 @@ t.default = e => {
   let {
     product: t,
     returnRef: a,
-    onSuccess: g,
+    onSuccess: h,
     tooltipDelay: p,
     isGiftEasterEggEnabled: E,
     disableCustomColor: b = !1
@@ -93,8 +93,8 @@ t.default = e => {
           isGift: !0,
           analyticsLocations: S,
           returnRef: a,
-          onClose: null != g ? e => {
-            e && g()
+          onClose: null != h ? e => {
+            e && h()
           } : void 0
         })
       },
@@ -102,7 +102,7 @@ t.default = e => {
         hovered: x,
         isContentDismissed: !0,
         themeOverride: I,
-        boxColors: h
+        boxColors: g
       }) : (0, l.jsx)(c.default, {
         width: 24,
         height: 24

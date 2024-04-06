@@ -11,13 +11,13 @@ var a = n("735250"),
   c = n("127541"),
   f = n("981631"),
   E = n("912625");
-let _ = [
+let h = [
     [1696, 20],
     [1432, 16],
     [1168, 12],
     [0, 8]
   ],
-  h = [
+  _ = [
     [1696, 30],
     [1432, 24],
     [1168, 18],
@@ -30,8 +30,8 @@ t.default = e => {
     guildsData: m,
     analyticsContext: S,
     theme: I,
-    onViewGuild: T,
-    fetchGuilds: p,
+    onViewGuild: p,
+    fetchGuilds: T,
     onGuildCardSeen: g,
     currentCategoryId: A,
     loadId: N,
@@ -39,18 +39,18 @@ t.default = e => {
     showMoreCards: R = !1
   } = e;
   s.useEffect(() => {
-    i.default.wait(() => p())
+    i.default.wait(() => T())
   }, [A]);
-  let O = (0, c.default)(R ? h : _),
+  let O = (0, c.default)(R ? _ : h),
     {
       analyticsLocations: L
     } = (0, r.default)();
   if (null == m) return null;
   let {
-    guilds: M,
-    loading: P
-  } = m, y = null == M || 0 === M.length;
-  if (!P && y) return null;
+    guilds: P,
+    loading: M
+  } = m, y = null == P || 0 === P.length;
+  if (!M && y) return null;
   let D = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
@@ -63,15 +63,15 @@ t.default = e => {
       analyticsLocations: L
     });
     else {
-      let t = M.findIndex(t => t.id === e);
-      await T(e, t, S, N)
+      let t = P.findIndex(t => t.id === e);
+      await p(e, t, S, N)
     }
   };
-  if (P || null == M) {
+  if (M || null == P) {
     let e = [];
     for (let t = 0; t < O; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = M.slice(0, O).map(e => (0, a.jsx)(d.default, {
+  } else t = P.slice(0, O).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
     onView: D,

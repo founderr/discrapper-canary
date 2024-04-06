@@ -1,40 +1,40 @@
 "use strict";
 n.r(t), n.d(t, {
   EMAILS_SUBSECTION: function() {
-    return i
+    return r
   },
   EmailCategories: function() {
-    return s
+    return a
   },
   EmailCategoriesList: function() {
-    return o
+    return s
   },
   MarketingEmailCategories: function() {
-    return r
+    return i
   }
 });
-var a, s, l = n("689938");
-let i = "emails";
-(a = s || (s = {})).COMMUNICATION = "communication", a.SOCIAL = "social", a.TIPS = "tips", a.RECOMMENDATIONS_AND_EVENTS = "recommendations_and_events", a.UPDATES_AND_ANNOUNCEMENTS = "updates_and_announcements", a.FAMILY_CENTER_DIGEST = "family_center_digest";
-let r = ["tips", "recommendations_and_events", "updates_and_announcements"],
-  o = [{
+var l, a, u = n("689938");
+let r = "emails";
+(l = a || (a = {})).COMMUNICATION = "communication", l.SOCIAL = "social", l.TIPS = "tips", l.RECOMMENDATIONS_AND_EVENTS = "recommendations_and_events", l.UPDATES_AND_ANNOUNCEMENTS = "updates_and_announcements", l.FAMILY_CENTER_DIGEST = "family_center_digest";
+let i = ["tips", "recommendations_and_events", "updates_and_announcements"],
+  s = [{
     category: "communication",
-    label: () => l.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION,
-    subLabel: () => l.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION_SUBLABEL
+    label: () => u.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION,
+    subLabel: () => u.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION_SUBLABEL
   }, {
     category: "social",
-    label: () => l.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL,
-    subLabel: () => l.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL_SUBLABEL
+    label: () => u.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL,
+    subLabel: () => u.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL_SUBLABEL
   }, {
     category: "updates_and_announcements",
-    label: () => l.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS,
-    subLabel: () => l.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS_SUBLABEL
+    label: () => u.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS,
+    subLabel: () => u.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS_SUBLABEL
   }, {
     category: "tips",
-    label: () => l.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS,
-    subLabel: () => l.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS_SUBLABEL
+    label: () => u.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS,
+    subLabel: () => u.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS_SUBLABEL
   }, {
     category: "recommendations_and_events",
-    label: () => l.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS,
-    subLabel: () => l.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS_SUBLABEL
+    label: () => u.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS,
+    subLabel: () => u.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS_SUBLABEL
   }]

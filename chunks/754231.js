@@ -20,8 +20,8 @@ var l = n("735250"),
   m = n("768581"),
   g = n("823379"),
   E = n("51144"),
-  _ = n("847372");
-let S = p.Sizes.SIZE_24;
+  S = n("847372");
+let _ = p.Sizes.SIZE_24;
 
 function I(e) {
   var t, n;
@@ -43,20 +43,20 @@ function I(e) {
       children: () => (0, l.jsx)("img", {
         alt: n,
         src: t,
-        className: _.applicationLargeImage
+        className: S.applicationLargeImage
       })
     })
   }(r) : null;
   let h = null !== (t = c.large_image) && void 0 !== t ? t : c.small_image,
     p = (0, u.default)(s),
-    g = p ? _.spotifyLargeImage : _.applicationLargeImage,
+    g = p ? S.spotifyLargeImage : S.applicationLargeImage,
     E = null != h ? (0, l.jsx)("img", {
       alt: null !== (n = c.large_text) && void 0 !== n ? n : "",
       src: (0, C.getAssetImage)(f, h, [128, 128]),
       className: g
     }) : null;
   return p && null != d ? (E = (0, l.jsx)(o.Clickable, {
-    className: _.clickable,
+    className: S.clickable,
     onClick: () => {
       d(s, i.id)
     },
@@ -84,7 +84,7 @@ function N(e) {
   else {
     if (!(null != t && (0, u.default)(t)) || null == t.sync_id || null == s || null == a) return null;
     i = s, r = (0, l.jsx)(o.Clickable, {
-      className: _.headerLink,
+      className: S.headerLink,
       onClick: () => {
         a(t)
       },
@@ -93,7 +93,7 @@ function N(e) {
   }
   return (0, l.jsx)(h.default, {
     title: i,
-    className: _.header,
+    className: S.header,
     children: r
   })
 }
@@ -106,13 +106,13 @@ function T(e) {
   } = e, s = null == t ? void 0 : t.details, r = null == t ? void 0 : t.state, o = s;
   return (null != t && (0, u.default)(t) && null != r && (o = [(0, l.jsx)(f.default, {
     artists: r,
-    linkClassName: _.bodyLink,
+    linkClassName: S.bodyLink,
     canOpen: null != t.sync_id,
     onOpenSpotifyArtist: e => {
       null == a || a(t, n.id, e)
     }
   }, r)]), null == o || "" === o) ? null : (0, l.jsx)("div", {
-    className: i()(_.ellipsisRow, _.colorHeaderSecondary, _.bodyTextSize),
+    className: i()(S.ellipsisRow, S.colorHeaderSecondary, S.bodyTextSize),
     children: o
   })
 }
@@ -122,7 +122,7 @@ function A(e) {
     activity: t
   } = e, n = null == t ? void 0 : t.state;
   return null == n || "" === n || (0, u.default)(t) ? null : (0, l.jsx)("div", {
-    className: i()(_.ellipsisRow, _.colorHeaderSecondary, _.bodyTextSize, _.__invalid_activity),
+    className: i()(S.ellipsisRow, S.colorHeaderSecondary, S.bodyTextSize, S.__invalid_activity),
     children: n
   })
 }
@@ -143,7 +143,7 @@ function L(e) {
   return (0, l.jsx)(c.default, {
     start: a,
     end: s,
-    className: _.timeBar,
+    className: S.timeBar,
     themed: !0,
     singleLine: !0
   })
@@ -171,16 +171,16 @@ function v(e) {
       }), e
     }, [c, x]);
   return x ? (0, l.jsxs)("div", {
-    className: _.flexColumn,
+    className: S.flexColumn,
     children: [(0, l.jsxs)("div", {
-      className: _.flexRow,
+      className: S.flexRow,
       children: [(0, l.jsx)(I, {
         activity: t,
         user: s,
         embeddedApp: n,
         onOpenSpotifyAlbum: C
       }), (0, l.jsxs)("div", {
-        className: _.detailsAndAvatarsContainer,
+        className: S.detailsAndAvatarsContainer,
         children: [(0, l.jsx)(N, {
           activity: t,
           embeddedApp: n,
@@ -192,10 +192,10 @@ function v(e) {
         }), (0, l.jsx)(A, {
           activity: t
         }), m.length > 0 && (0, l.jsx)(p.default, {
-          className: _.usersSummary,
+          className: S.usersSummary,
           guildId: i.guild_id,
           users: v,
-          size: S,
+          size: _,
           max: 7,
           renderUser: e => {
             var t;
@@ -206,9 +206,9 @@ function v(e) {
               text: a,
               position: "bottom",
               children: (0, l.jsx)("img", {
-                src: e.getAvatarURL(i.guild_id, S),
+                src: e.getAvatarURL(i.guild_id, _),
                 alt: a,
-                className: _.avatar
+                className: S.avatar
               }, e.id)
             }, e.id)
           }

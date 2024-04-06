@@ -21,8 +21,8 @@ var a = n("803997"),
   m = n("22082"),
   g = n("665906"),
   E = n("592125"),
-  _ = n("430824"),
-  S = n("496675"),
+  S = n("430824"),
+  _ = n("496675"),
   I = n("306680"),
   N = n("9156"),
   T = n("594174"),
@@ -31,8 +31,8 @@ var a = n("803997"),
   v = n("648501"),
   x = n("473403"),
   R = n("304471"),
-  M = n("981631"),
-  y = n("647086"),
+  y = n("981631"),
+  M = n("647086"),
   O = n("294639");
 
 function D(e, t, n) {
@@ -75,13 +75,13 @@ class b extends L.default {
       canReorderChannel: m,
       isSubscriptionGated: g,
       isFavoriteSuggestion: E,
-      subtitle: _,
-      forceTopLevelThread: S,
+      subtitle: S,
+      forceTopLevelThread: _,
       embeddedApps: I,
       resolvedUnreadSetting: N,
       withGuildIcon: T,
       enableActivities: A
-    } = this.props, L = A && null != I && I.length > 0, v = (0, p.getChannelSubtitle)(_), R = (0, l.jsx)("li", {
+    } = this.props, L = A && null != I && I.length > 0, v = (0, p.getChannelSubtitle)(S), R = (0, l.jsx)("li", {
       className: s()(this.getClassName(), {
         [O.disabled]: this.isDisabled(),
         [O.selected]: n
@@ -110,7 +110,7 @@ class b extends L.default {
           onContextMenu: this.handleContextMenu,
           connectDragPreview: m ? C : null,
           isFavoriteSuggestion: E,
-          channelTypeOverride: S ? M.ChannelTypes.GUILD_TEXT : void 0,
+          channelTypeOverride: _ ? y.ChannelTypes.GUILD_TEXT : void 0,
           resolvedUnreadSetting: N,
           withGuildIcon: T,
           "aria-label": (0, h.default)({
@@ -160,7 +160,7 @@ class b extends L.default {
       let {
         channel: e
       } = this.props, t = e.getGuildId();
-      o.default.preload(null != t ? t : M.ME, e.id)
+      o.default.preload(null != t ? t : y.ME, e.id)
     }), D(this, "renderPopout", e => {
       let {
         channel: t,
@@ -180,7 +180,7 @@ class b extends L.default {
       let {
         channel: t
       } = this.props;
-      if (t.type === M.ChannelTypes.GROUP_DM) {
+      if (t.type === y.ChannelTypes.GROUP_DM) {
         (0, u.openContextMenuLazy)(e, async () => {
           let {
             default: e
@@ -193,7 +193,7 @@ class b extends L.default {
         });
         return
       }
-      if (t.type === M.ChannelTypes.DM) {
+      if (t.type === y.ChannelTypes.DM) {
         let a = T.default.getUser(t.getRecipientId());
         null != a && (0, u.openContextMenuLazy)(e, async () => {
           let {
@@ -208,7 +208,7 @@ class b extends L.default {
         });
         return
       }
-      let a = _.default.getGuild(t.getGuildId());
+      let a = S.default.getGuild(t.getGuildId());
       null != a && (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -239,11 +239,11 @@ function G(e) {
     unread: I.default.hasUnread(t.id),
     ackMessageId: I.default.ackMessageId(t.id),
     mentionCount: I.default.getMentionCount(t.id)
-  })), p = (0, i.useStateFromStores)([N.default], () => N.default.resolveUnreadSetting(t)), _ = (0, i.useStateFromStoresObject)([E.default, S.default], () => {
+  })), p = (0, i.useStateFromStores)([N.default], () => N.default.resolveUnreadSetting(t)), S = (0, i.useStateFromStoresObject)([E.default, _.default], () => {
     let e = E.default.getChannel(t.parent_id);
     return {
-      canManageChannel: S.default.can(M.Permissions.MANAGE_CHANNELS, t),
-      canReorderChannel: !0 !== a && (n.id === y.FAVORITES_RAW_GUILD_ID || (null != e ? S.default.can(M.Permissions.MANAGE_CHANNELS, e) : S.default.can(M.Permissions.MANAGE_CHANNELS, n)))
+      canManageChannel: _.default.can(y.Permissions.MANAGE_CHANNELS, t),
+      canReorderChannel: !0 !== a && (n.id === M.FAVORITES_RAW_GUILD_ID || (null != e ? _.default.can(y.Permissions.MANAGE_CHANNELS, e) : _.default.can(y.Permissions.MANAGE_CHANNELS, n)))
     }
   }), A = (0, i.useStateFromStores)([m.default], () => m.default.shouldIndicateNewChannel(n.id, t.id)), {
     needSubscriptionToAccess: L,
@@ -264,7 +264,7 @@ function G(e) {
   }), G = (0, f.default)(t);
   return (0, l.jsx)(j, {
     ...h,
-    ..._,
+    ...S,
     ...e,
     hasActiveThreads: u,
     hasMoreActiveThreads: d,

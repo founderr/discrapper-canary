@@ -34,14 +34,14 @@ function E(e) {
   })
 }
 
-function _(e) {
+function h(e) {
   let {
     settingsType: t
   } = e;
   (0, u.UserSettingsActionCreatorsByType)[t].loadIfNecessary()
 }
 
-function h(e) {
+function _(e) {
   let {
     state: t
   } = e;
@@ -51,6 +51,6 @@ function h(e) {
 }
 t.default = {
   init() {
-    o.default[c.UserSettingsTypes.PRELOADED_USER_SETTINGS] = r.default, o.default[c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = i.default, l.default.subscribe("CONNECTION_OPEN", f), l.default.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", E), l.default.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", _), l.default.subscribe("APP_STATE_UPDATE", h)
+    o.default[c.UserSettingsTypes.PRELOADED_USER_SETTINGS] = r.default, o.default[c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = i.default, l.default.subscribe("CONNECTION_OPEN", f), l.default.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", E), l.default.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", h), l.default.subscribe("APP_STATE_UPDATE", _)
   }
 }

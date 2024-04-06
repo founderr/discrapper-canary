@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("922555"),
   f = n("287734"),
   E = n("249000"),
-  _ = n("43267"),
-  h = n("933557"),
+  h = n("43267"),
+  _ = n("933557"),
   C = n("703656"),
   m = n("932724"),
   S = n("672339"),
   I = n("898531"),
-  T = n("923973"),
-  p = n("189771"),
+  p = n("923973"),
+  T = n("189771"),
   g = n("560688"),
   A = n("871499"),
   N = n("136995"),
@@ -30,8 +30,8 @@ var a = n("735250"),
   R = n("131951"),
   O = n("594174"),
   L = n("451478"),
-  M = n("465670"),
-  P = n("421600"),
+  P = n("465670"),
+  M = n("421600"),
   y = n("792125"),
   D = n("358221"),
   x = n("793865"),
@@ -90,11 +90,11 @@ function V(e) {
   } = e, {
     cameraUnavailable: l,
     enabled: r
-  } = (0, T.default)(), o = (0, p.default)(n);
+  } = (0, p.default)(), o = (0, T.default)(n);
   return (0, a.jsxs)("div", {
     className: G.actions,
     children: [(0, a.jsx)(A.CenterControlButton, {
-      iconComponent: M.default,
+      iconComponent: P.default,
       color: "red",
       className: G.actionButton,
       label: j.default.Messages.DISMISS,
@@ -149,7 +149,7 @@ function Y(e) {
     y: n,
     x: l,
     channel: f
-  } = e, [C, m] = s.useState(!1), S = (0, _.getChannelIconURL)(f), I = (0, h.default)(f), [T, p] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([D.default], () => D.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), I = (0, _.default)(f), [p, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([D.default], () => D.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), v = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -164,13 +164,13 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
-  let O = A === b.ChannelModes.VIDEO && T && p > 0,
-    M = (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(P.default, {
+  let O = A === b.ChannelModes.VIDEO && p && T > 0,
+    P = (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(M.default, {
         className: G.icon,
         ringing: g,
         src: null != S ? S : "",
-        ringingType: P.default.RingingType.INCOMING,
+        ringingType: M.default.RingingType.INCOMING,
         size: C ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
       }), (0, a.jsxs)("div", {
         className: G.titleGroup,
@@ -211,14 +211,14 @@ function Y(e) {
           translateX: v.value.interpolate([0, 1], [0, -1 * Math.abs(B.width - x.width) / 2])
         },
         children: [C ? (0, a.jsx)(H, {
-          header: M
+          header: P
         }) : (0, a.jsx)("div", {
           className: G.mainChannelInfo,
-          children: M
+          children: P
         }), (0, a.jsx)(V, {
           canVideo: O,
           channel: f,
-          numVideoDevices: p
+          numVideoDevices: T
         }), O && !C ? (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           fullWidth: !0,

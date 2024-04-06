@@ -18,7 +18,7 @@ var i = n("470079"),
   S = n("237997"),
   v = n("145597"),
   y = n("981631");
-class O extends i.Component {
+class I extends i.Component {
   componentDidUpdate(e) {
     if (this.props.locked) return null;
     let {
@@ -70,4 +70,4 @@ t.default = l.default.connectStores([m.default, g.default, h.default, E.default,
     isMemberPending: u,
     postableChannelCount: d
   }
-})(O)
+})(I)

@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("417183"),
   f = n("170245"),
   E = n("981631"),
-  _ = n("689938"),
-  h = n("704393");
+  h = n("689938"),
+  _ = n("704393");
 
 function C(e) {
   let {
@@ -39,16 +39,16 @@ function C(e) {
     }),
     user: t,
     children: e => (0, a.jsxs)("div", {
-      className: h.listItemContents,
+      className: _.listItemContents,
       children: [(0, a.jsx)(f.default, {
         user: t,
         hovered: e,
         status: E.StatusTypes.UNKNOWN,
-        subText: _.default.Messages.BLOCKED
+        subText: h.default.Messages.BLOCKED
       }), (0, a.jsx)(d.default, {
         icon: o.default,
         actionType: d.default.ActionTypes.DENY,
-        tooltip: _.default.Messages.UNBLOCK,
+        tooltip: h.default.Messages.UNBLOCK,
         onClick: I,
         shouldHighlight: e
       })]

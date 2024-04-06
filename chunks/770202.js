@@ -16,8 +16,8 @@ var l = n("735250"),
   m = n("98597"),
   g = n("473403"),
   E = n("981631"),
-  _ = n("490897"),
-  S = n("294639");
+  S = n("490897"),
+  _ = n("294639");
 
 function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -44,11 +44,11 @@ class T extends m.default {
       canReorderChannel: r
     } = this.props, o = (0, l.jsx)("li", {
       className: i()(this.getClassName(), {
-        [S.disabled]: this.isDisabled()
+        [_.disabled]: this.isDisabled()
       }),
       "data-dnd-name": e.name,
       children: (0, l.jsxs)(g.default, {
-        className: S.iconVisibility,
+        className: _.iconVisibility,
         channel: e,
         selected: t,
         onClick: this.handleClick,
@@ -58,7 +58,7 @@ class T extends m.default {
         "aria-label": (0, c.default)({
           channel: e
         }),
-        resolvedUnreadSetting: _.UnreadSetting.ONLY_MENTIONS,
+        resolvedUnreadSetting: S.UnreadSetting.ONLY_MENTIONS,
         children: [this.renderInviteButton(), this.renderEditButton()]
       })
     });

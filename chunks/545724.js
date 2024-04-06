@@ -15,16 +15,16 @@ t.default = function(e) {
     index: t,
     children: l,
     user: E,
-    channel: _,
-    onClick: h,
+    channel: h,
+    onClick: _,
     isFocused: C,
     isActive: m,
     onOtherHover: S,
     className: I
-  } = e, [T, p] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
-    p(!0), C && !m && !g && (null == S || S())
+  } = e, [p, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
+    T(!0), C && !m && !g && (null == S || S())
   }, v = () => {
-    p(!1)
+    T(!1)
   }, R = (e, t) => {
     null != t && (A(!0), (0, d.openContextMenuLazy)(e, async () => {
       let {
@@ -41,7 +41,7 @@ t.default = function(e) {
     }))
   };
   return (0, a.jsx)(o.ListNavigatorItem, {
-    id: _.id,
+    id: h.id,
     children: e => (0, a.jsx)(u.FocusRing, {
       offset: {
         left: -8,
@@ -55,13 +55,13 @@ t.default = function(e) {
         onContextMenu: e => R(e, E),
         onMouseEnter: N,
         onMouseLeave: v,
-        onClick: null != h ? h : void 0,
+        onClick: null != _ ? _ : void 0,
         style: {
           LIST_ROW_HEIGHT: c.LIST_ROW_HEIGHT,
           opacity: 1
         },
         ...e,
-        children: l(T || m || g)
+        children: l(p || m || g)
       })
     })
   })

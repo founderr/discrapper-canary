@@ -17,8 +17,8 @@ var a = s("735250"),
   R = s("332475"),
   S = s("626135"),
   m = s("74538"),
-  N = s("140465"),
-  A = s("846363"),
+  A = s("140465"),
+  N = s("846363"),
   p = s("91802"),
   g = s("104494"),
   C = s("639119"),
@@ -123,16 +123,16 @@ t.default = e => {
   let {
     isFullscreen: s,
     entrypoint: r
-  } = e, E = (0, A.useMarketingOptimizationExperiment)({
+  } = e, E = (0, N.useMarketingOptimizationExperiment)({
     autoTrackExposure: !0
-  }), x = i.useRef(null), [D, j] = i.useState(!1), [y, G] = i.useState(!1), [K, X] = i.useState(!1), et = !D && !y || E, [es, ea] = i.useState(!1), ei = (0, l.useStateFromStores)([f.default], () => f.default.getPremiumTypeSubscription()), [er, en] = i.useState(E ? W.PremiumTypes.TIER_2 : void 0), el = null != ei ? (0, m.getPremiumPlanItem)(ei) : null, eo = null != el ? m.default.getSkuIdForPlan(el.planId) : null, eu = null !== eo && eo !== W.PremiumSubscriptionSKUs.TIER_2 ? W.PremiumSubscriptionSKUs.TIER_2 : null, ed = (0, p.useLocalizedPromoQuery)(), ec = (0, u.isThemeLight)((0, _.default)()), e_ = null != ed, [eE, eT] = i.useState(!1), eI = (0, g.usePremiumDiscountOffer)(), ef = (0, C.usePremiumTrialOffer)(), eR = null == ef ? void 0 : null === (t = ef.subscription_trial) || void 0 === t ? void 0 : t.sku_id, eS = (0, N.useIsInPremiumOfferExperience)(), em = (0, h.useIsEligibleForBogoPromotion)(), {
-    analyticsLocations: eN
-  } = (0, I.default)(T.default.PREMIUM_MARKETING), eA = "PremiumMarketingHome";
+  }), x = i.useRef(null), [D, j] = i.useState(!1), [y, G] = i.useState(!1), [K, X] = i.useState(!1), et = !D && !y || E, [es, ea] = i.useState(!1), ei = (0, l.useStateFromStores)([f.default], () => f.default.getPremiumTypeSubscription()), [er, en] = i.useState(E ? W.PremiumTypes.TIER_2 : void 0), el = null != ei ? (0, m.getPremiumPlanItem)(ei) : null, eo = null != el ? m.default.getSkuIdForPlan(el.planId) : null, eu = null !== eo && eo !== W.PremiumSubscriptionSKUs.TIER_2 ? W.PremiumSubscriptionSKUs.TIER_2 : null, ed = (0, p.useLocalizedPromoQuery)(), ec = (0, u.isThemeLight)((0, _.default)()), e_ = null != ed, [eE, eT] = i.useState(!1), eI = (0, g.usePremiumDiscountOffer)(), ef = (0, C.usePremiumTrialOffer)(), eR = null == ef ? void 0 : null === (t = ef.subscription_trial) || void 0 === t ? void 0 : t.sku_id, eS = (0, A.useIsInPremiumOfferExperience)(), em = (0, h.useIsEligibleForBogoPromotion)(), {
+    analyticsLocations: eA
+  } = (0, I.default)(T.default.PREMIUM_MARKETING), eN = "PremiumMarketingHome";
   (0, c.useTriggerDebuggingAA)({
-    location: eA + " auto on",
+    location: eN + " auto on",
     autoTrackExposure: !0
   }), (0, c.useTriggerDebuggingAA)({
-    location: eA + " auto off",
+    location: eN + " auto off",
     autoTrackExposure: !1
   }), i.useEffect(() => {
     ea(!0)
@@ -307,7 +307,7 @@ t.default = e => {
       }), (0, a.jsx)(o.VisibilitySensor, {
         onChange: e => {
           e && !K && (S.default.track(V.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-            location_stack: eN
+            location_stack: eA
           }), X(!0))
         },
         children: (0, a.jsx)("div", {

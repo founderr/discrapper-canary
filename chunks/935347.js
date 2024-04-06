@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("433517"),
   f = n("481060"),
   E = n("205355"),
-  _ = n("607070"),
-  h = n("38618"),
+  h = n("607070"),
+  _ = n("38618"),
   C = n("197344"),
   m = n("474873"),
   S = n("215427"),
   I = n("820254"),
-  T = n("985806"),
-  p = n("838949"),
+  p = n("985806"),
+  T = n("838949"),
   g = n("70956"),
   A = n("358085"),
   N = n("557177"),
@@ -27,7 +27,7 @@ var a = n("735250"),
   O = n("689938"),
   L = n("82863");
 
-function M(e, t, n) {
+function P(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -35,7 +35,7 @@ function M(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class P extends s.PureComponent {
+class M extends s.PureComponent {
   createSound() {
     let {
       soundpack: e
@@ -100,7 +100,7 @@ class P extends s.PureComponent {
         },
         children: [(0, a.jsxs)("div", {
           className: L.content,
-          children: [(0, a.jsx)(p.default, {
+          children: [(0, a.jsx)(T.default, {
             autoPlay: !0,
             loop: !e,
             setRef: this.setVideoRef,
@@ -131,7 +131,7 @@ class P extends s.PureComponent {
               className: L.twitterLink,
               href: R.Links.TWITTER_SUPPORT,
               target: "_blank",
-              children: [(0, a.jsx)(T.default, {
+              children: [(0, a.jsx)(p.default, {
                 className: L.icon
               }), O.default.Messages.TWEET_US]
             }), (0, a.jsxs)(f.Anchor, {
@@ -148,7 +148,7 @@ class P extends s.PureComponent {
     }
   }
   constructor(e) {
-    super(e), M(this, "videoRef", null), M(this, "_noProblemsTimeout", null), M(this, "_problemsTimeout", null), M(this, "_connectedSound", this.createSound()), M(this, "_loadingText", function() {
+    super(e), P(this, "videoRef", null), P(this, "_noProblemsTimeout", null), P(this, "_problemsTimeout", null), P(this, "_connectedSound", this.createSound()), P(this, "_loadingText", function() {
       let e = [O.default.Messages.ACCESSIBILITY_LOADING_TIP_1, O.default.Messages.ACCESSIBILITY_LOADING_TIP_2, O.default.Messages.ACCESSIBILITY_LOADING_TIP_3, O.default.Messages.ACCESSIBILITY_LOADING_TIP_4, O.default.Messages.ACCESSIBILITY_LOADING_TIP_5, O.default.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
         tabHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "tab",
@@ -211,20 +211,20 @@ class P extends s.PureComponent {
         }, t)
       })];
       return e[o().random(e.length - 1)]
-    }()), M(this, "_eventLoadingText", function() {
+    }()), P(this, "_eventLoadingText", function() {
       let e = C.default.getLoadingTips();
       if (null != e && e.length > 0) return e[o().random(e.length - 1)]
-    }()), M(this, "handleReady", () => {
+    }()), P(this, "handleReady", () => {
       this.setState({
         ready: !0
       }), (0, A.isDesktop)() && (v.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), v.default.send("UPDATE_OPEN_ON_STARTUP"))
-    }), M(this, "setVideoRef", e => {
+    }), P(this, "setVideoRef", e => {
       this.videoRef = e
-    }), M(this, "setProblemsTimeout", () => {
+    }), P(this, "setProblemsTimeout", () => {
       null == this._problemsTimeout && (this._problemsTimeout = setTimeout(() => this.setState({
         problems: !0
       }), 1e4))
-    }), M(this, "clearProblemsTimeout", () => {
+    }), P(this, "clearProblemsTimeout", () => {
       clearTimeout(this._problemsTimeout), this._problemsTimeout = null
     });
     let {
@@ -239,12 +239,12 @@ class P extends s.PureComponent {
     }, this._connectedSound.volume = 1
   }
 }
-t.default = d.default.connectStores([h.default, S.default, m.default, _.default], () => ({
-  isTryingToConnect: h.default.isTryingToConnect(),
-  connected: h.default.isConnected(),
+t.default = d.default.connectStores([_.default, S.default, m.default, h.default], () => ({
+  isTryingToConnect: _.default.isTryingToConnect(),
+  connected: _.default.isConnected(),
   incident: S.default.getIncident(),
   soundpack: m.default.getSoundpack(),
-  reducedMotion: _.default.useReducedMotion
+  reducedMotion: h.default.useReducedMotion
 }))(e => {
   let {
     isTryingToConnect: t,
@@ -253,7 +253,7 @@ t.default = d.default.connectStores([h.default, S.default, m.default, _.default]
     soundpack: l,
     reducedMotion: i
   } = e;
-  return t ? (0, a.jsx)(P, {
+  return t ? (0, a.jsx)(M, {
     reducedMotion: i,
     soundpack: l,
     connected: n,

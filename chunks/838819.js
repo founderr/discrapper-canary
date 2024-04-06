@@ -12,8 +12,8 @@ var l = a("735250"),
   f = a("481060"),
   m = a("150063"),
   C = a("425493"),
-  h = a("434650"),
-  g = a("410030"),
+  g = a("434650"),
+  h = a("410030"),
   p = a("100527"),
   E = a("906732"),
   b = a("702486"),
@@ -61,7 +61,7 @@ function et(e) {
     isPremiumUser: d,
     initialItemCardRef: m,
     isGiftEasterEggEnabled: C,
-    setIsGiftEasterEggEnabled: g,
+    setIsGiftEasterEggEnabled: h,
     showEasterEggToggle: p,
     isFullScreen: E
   } = e, b = s.useRef(10 + 70 * Math.random()), S = (0, M.usePurchasedProductsSort)(r.products), T = (0, o.groupBy)(S, "type"), x = (0, u.useStateFromStores)([j.default], () => j.default.initialProductSkuId), {
@@ -70,7 +70,7 @@ function et(e) {
     location: "CollectiblesShop"
   }), _ = I ? Y.default : W.default, N = s.useCallback(e => t => {
     e.skuId === x && (m.current = t.current)
-  }, [x, m]), [y, O] = s.useState(!1), k = (0, X.getCountdownDisplayOptions)(r.skuId), A = (0, h.useIsVisible)(e => {
+  }, [x, m]), [y, O] = s.useState(!1), k = (0, X.getCountdownDisplayOptions)(r.skuId), A = (0, g.useIsVisible)(e => {
     O(e && null != k)
   }, E ? .13 : .15), P = (e, t) => 0 === e.length ? null : (0, l.jsxs)("div", {
     children: [(0, l.jsx)(f.Text, {
@@ -98,7 +98,7 @@ function et(e) {
       className: n()(ee.hiddenWumpus, {
         [ee.hiddenWumpusEnabled]: C
       }),
-      onClick: () => g(!0),
+      onClick: () => h(!0),
       style: {
         left: "".concat(b.current, "%")
       },
@@ -126,7 +126,7 @@ t.default = function(e) {
     analyticsLocations: r
   } = (0, u.useStateFromStoresObject)([j.default], () => j.default.getAnalytics()), {
     analyticsLocations: o
-  } = (0, E.default)([...r, p.default.COLLECTIBLES_SHOP]), h = (0, u.useStateFromStores)([_.default], () => _.default.getLayers().includes(Z.Layers.COLLECTIBLES_SHOP)), v = (0, d.useHasAnyModalOpen)(), {
+  } = (0, E.default)([...r, p.default.COLLECTIBLES_SHOP]), g = (0, u.useStateFromStores)([_.default], () => _.default.getLayers().includes(Z.Layers.COLLECTIBLES_SHOP)), v = (0, d.useHasAnyModalOpen)(), {
     onClose: L
   } = (0, V.useCollectiblesShopRouting)(), M = (0, u.useStateFromStores)([N.default], () => N.default.getCurrentUser()), w = A.default.canUseCollectibles(M), U = (0, S.default)("shop_disable_cache"), W = (0, S.default)("shop_include_unpublished"), {
     categories: Y,
@@ -148,7 +148,7 @@ t.default = function(e) {
   (0, H.useProductDetailsDeepLinking)({
     categories: Y,
     isFetchingCategories: X,
-    isLayer: h,
+    isLayer: g,
     initialItemCardRef: er
   });
   let {
@@ -178,19 +178,19 @@ t.default = function(e) {
       itemTypes: [i.CollectiblesItemType.AVATAR_DECORATION, i.CollectiblesItemType.PROFILE_EFFECT]
     })
   }, [Y]), s.useEffect(() => {
-    if (!t || h || v) return;
+    if (!t || g || v) return;
     let e = e => {
       e.key === $.KeyboardEventKey.Escape && L()
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
-  }, [t, h, v, L]);
+  }, [t, g, v, L]);
   let ed = s.useCallback(() => {
       (0, R.fetchCollectiblesCategories)({
         noCache: U,
         includeUnpublished: W
       })
     }, [U, W]),
-    ef = (0, g.default)(),
+    ef = (0, h.default)(),
     {
       containerRef: em,
       returnRef: eC
@@ -222,7 +222,7 @@ t.default = function(e) {
         className: ee.closeWrapper,
         children: (0, l.jsx)(C.default, {
           className: ee.close,
-          closeAction: h ? R.closeCollectiblesShop : L,
+          closeAction: g ? R.closeCollectiblesShop : L,
           keybind: "ESC"
         })
       }), (0, l.jsx)(f.AdvancedScroller, {

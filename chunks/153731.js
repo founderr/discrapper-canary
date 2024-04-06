@@ -20,11 +20,11 @@ var r = a("735250"),
   g = a("226961"),
   C = a("594174"),
   S = a("285952"),
-  v = a("51144"),
-  y = a("189648"),
-  R = a("775194"),
+  y = a("51144"),
+  v = a("189648"),
+  E = a("775194"),
   D = a("499848"),
-  E = a("724392"),
+  R = a("724392"),
   T = a("442580"),
   F = a("770800"),
   x = a("981631"),
@@ -43,7 +43,7 @@ let P = (e, t, a) => (0, r.jsx)(S.default, {
           className: j.avatar
         }), (0, r.jsx)("span", {
           className: j.username,
-          children: null != t ? t : v.default.getName(e)
+          children: null != t ? t : y.default.getName(e)
         })]
       })
     })
@@ -88,7 +88,7 @@ function B(e, t, a, r, n) {
   }), null != u && i.push({
     section: (0, g.keySection)(e, x.RTCDebugSections.OUTBOUND, a),
     label: b.default.Messages.RTC_DEBUG_RTP_OUTBOUND,
-    element: E.default,
+    element: R.default,
     elementProps: {
       context: e,
       index: a
@@ -96,7 +96,7 @@ function B(e, t, a, r, n) {
   }), null != m && i.push({
     section: (0, g.keySection)(e, x.RTCDebugSections.CAMERA, a),
     label: b.default.Messages.RTC_DEBUG_CAMERA,
-    element: y.default,
+    element: v.default,
     elementProps: {
       context: e,
       index: a,
@@ -134,7 +134,7 @@ function A() {
   } = (0, s.useStateFromStores)([g.default], () => ({
     defaultStats: g.default.getAllStats(N.MediaEngineContextTypes.DEFAULT),
     streamStats: g.default.getAllStats(N.MediaEngineContextTypes.STREAM)
-  }), [], s.statesWillNeverBeEqual), l = (0, s.useStateFromStores)([h.default, f.default], () => f.default.getChannel(h.default.getChannelId())), p = null === (e = a.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, C = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, S = (0, s.useStateFromStores)([m.default], () => m.default.theme), v = (0, s.useStateFromStores)([m.default], () => m.default.darkSidebar ? x.ThemeTypes.DARK : void 0), y = (0, s.useStateFromStores)([g.default], () => g.default.getSection()), D = (0, s.useStateFromStores)([g.default], () => g.default.getVideoStreams()), E = function(e) {
+  }), [], s.statesWillNeverBeEqual), l = (0, s.useStateFromStores)([h.default, f.default], () => f.default.getChannel(h.default.getChannelId())), p = null === (e = a.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, C = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, S = (0, s.useStateFromStores)([m.default], () => m.default.theme), y = (0, s.useStateFromStores)([m.default], () => m.default.darkSidebar ? x.ThemeTypes.DARK : void 0), v = (0, s.useStateFromStores)([g.default], () => g.default.getSection()), D = (0, s.useStateFromStores)([g.default], () => g.default.getVideoStreams()), R = function(e) {
     let {
       defaultStats: t,
       streamStats: a,
@@ -156,7 +156,7 @@ function A() {
     })), null != l && (p.push(h), p.push({
       section: x.RTCDebugSections.CLIPS,
       label: b.default.Messages.RTC_DEBUG_CLIPS,
-      element: R.default,
+      element: E.default,
       elementProps: {
         clips: l
       }
@@ -192,9 +192,9 @@ function A() {
     d.close()
   }, []), (0, r.jsx)(u.default, {
     theme: S,
-    sidebarTheme: v,
-    section: y,
+    sidebarTheme: y,
+    section: v,
     onSetSection: d.setSection,
-    sections: E
+    sections: R
   })
 }

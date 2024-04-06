@@ -12,14 +12,14 @@ var s = n("45792"),
   c = n("40851"),
   f = n("566620"),
   E = n("596223"),
-  _ = n("838195"),
-  h = n("928518"),
+  h = n("838195"),
+  _ = n("928518"),
   C = n("592125"),
   m = n("293273"),
   S = n("885110"),
   I = n("451478"),
-  T = n("630388"),
-  p = n("823379"),
+  p = n("630388"),
+  T = n("823379"),
   g = n("591759"),
   A = n("228488"),
   N = n("996106"),
@@ -27,8 +27,8 @@ var s = n("45792"),
   R = n("452426"),
   O = n("561205"),
   L = n("600027"),
-  M = n("852926"),
-  P = n("186901"),
+  P = n("852926"),
+  M = n("186901"),
   y = n("981631");
 async function D(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
@@ -40,7 +40,7 @@ async function D(e, t, n, a) {
   if (o) {
     let {
       lock: t
-    } = (0, M.unlockOverlay)(e);
+    } = (0, P.unlockOverlay)(e);
     return (0, r.openModal)(l, o).then(() => {
       throw t(), new N.default({
         errorCode: y.RPCErrors.NO_ELIGIBLE_ACTIVITY
@@ -58,7 +58,7 @@ async function D(e, t, n, a) {
 t.default = {
   [y.RPCCommands.SEND_ACTIVITY_JOIN_INVITE]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
     },
     handler(e) {
       let {
@@ -76,7 +76,7 @@ t.default = {
   },
   [y.RPCCommands.CLOSE_ACTIVITY_JOIN_REQUEST]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
     },
     handler(e) {
       let {
@@ -89,7 +89,7 @@ t.default = {
   },
   [y.RPCCommands.ACTIVITY_INVITE_USER]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
     },
     validation: e => (0, R.default)(e).required().keys({
       user_id: e.string().required(),
@@ -115,7 +115,7 @@ t.default = {
   },
   [y.RPCCommands.ACCEPT_ACTIVITY_INVITE]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
     },
     validation: e => (0, R.default)(e).required().keys({
       type: e.number().required().valid([y.ActivityActionTypes.JOIN]),
@@ -155,7 +155,7 @@ t.default = {
   },
   [y.RPCCommands.OPEN_INVITE_DIALOG]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE, P.RPC_AUTHENTICATED_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE, M.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       let {
@@ -163,7 +163,7 @@ t.default = {
       } = e, {
         channel: s,
         guild: i
-      } = (0, L.validateOpenInviteDialog)(), r = h.default.getWindow(y.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+      } = (0, L.validateOpenInviteDialog)(), r = _.default.getWindow(y.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
       (null == r ? void 0 : r.closed) && (r = null);
       let o = null != r ? y.AppContext.POPOUT : y.AppContext.APP;
       (0, A.exitFullScreen)({}, null == r ? void 0 : r.document), (0, l.openModalLazy)(async () => {
@@ -185,7 +185,7 @@ t.default = {
   },
   [y.RPCCommands.INITIATE_IMAGE_UPLOAD]: (0, s.createRPCCommand)(y.RPCCommands.INITIATE_IMAGE_UPLOAD, {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE, P.RPC_AUTHENTICATED_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE, M.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       var t;
@@ -215,13 +215,13 @@ t.default = {
             }, 1e3)
           };
           l.addEventListener("change", () => {
-            (0, p.isNotNullish)(l.files) && e(l.files[0]), i()
+            (0, T.isNotNullish)(l.files) && e(l.files[0]), i()
           }), l.addEventListener("cancel", () => {
             i()
           }), s.document.body.addEventListener("focus", i, !0), s.document.body.appendChild(l), l.click()
         }(async n => {
           let l = await (0, f.uploadImageAttachment)(a, s, n);
-          (0, p.isNotNullish)(l) && (0, p.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
+          (0, T.isNotNullish)(l) && (0, T.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
             image_url: l.url
           }): t(l)
         }, () => t(Error("Upload canceled")))
@@ -235,7 +235,7 @@ t.default = {
   }),
   [y.RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: (0, s.createRPCCommand)(y.RPCCommands.OPEN_SHARE_MOMENT_DIALOG, {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [P.RPC_AUTHENTICATED_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [M.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       var t;
@@ -250,7 +250,7 @@ t.default = {
       if (null == s) throw new N.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      if (!(0, T.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, y.ApplicationFlags.EMBEDDED)) throw new N.default({
+      if (!(0, p.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, y.ApplicationFlags.EMBEDDED)) throw new N.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
       let l = (0, O.default)();
@@ -260,7 +260,7 @@ t.default = {
       if (!g.default.isDiscordCdnUrl(a)) throw new N.default({
         errorCode: y.RPCErrors.INVALID_PAYLOAD
       }, "mediaUrl must be a Discord CDN url");
-      (0, _.openActivityShareMomentModal)({
+      (0, h.openActivityShareMomentModal)({
         applicationId: s,
         channelId: l.id,
         mediaUrl: a

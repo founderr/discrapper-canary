@@ -7,8 +7,8 @@ var a, s, l, i, r = n("442837"),
   c = n("581883"),
   f = n("314897"),
   E = n("592125"),
-  _ = n("885110"),
-  h = n("981631");
+  h = n("885110"),
+  _ = n("981631");
 let C = "IncomingCallStore",
   m = {
     width: 232,
@@ -16,15 +16,15 @@ let C = "IncomingCallStore",
   },
   S = new Set,
   I = [],
-  T = new Map,
-  p = new Set,
+  p = new Map,
+  T = new Set,
   g = 0,
   A = 0,
   N = !1;
 
 function v(e) {
-  if (null == e || null == T.get(e)) return !1;
-  T.delete(e), (p = new Set(p)).delete(e)
+  if (null == e || null == p.get(e)) return !1;
+  p.delete(e), (T = new Set(T)).delete(e)
 }
 
 function R(e) {
@@ -32,17 +32,17 @@ function R(e) {
     channelId: t,
     ringing: n
   } = e, a = n.includes(f.default.getId());
-  if (!p.has(t) && a) {
+  if (!T.has(t) && a) {
     let e = E.default.getChannel(t);
     if (null == e) return !1;
-    let n = 10 * p.size;
-    T.set(t, {
+    let n = 10 * T.size;
+    p.set(t, {
       channel: e,
       x: g + n,
       y: A + n
-    }), (p = new Set(p)).add(t)
+    }), (T = new Set(T)).add(t)
   } else {
-    if (!p.has(t) || a) return !1;
+    if (!T.has(t) || a) return !1;
     v(t)
   }
 }! function() {
@@ -55,23 +55,23 @@ function R(e) {
 }();
 
 function O() {
-  N = _.default.getStatus() === h.StatusTypes.DND || d.FocusMode.getSetting()
+  N = h.default.getStatus() === _.StatusTypes.DND || d.FocusMode.getSetting()
 }
 class L extends(a = r.default.Store) {
   initialize() {
-    this.waitFor(E.default, _.default), this.syncWith([_.default], O), this.syncWith([c.default], O)
+    this.waitFor(E.default, h.default), this.syncWith([h.default], O), this.syncWith([c.default], O)
   }
   getIncomingCalls() {
-    return N ? I : Array.from(T.values())
+    return N ? I : Array.from(p.values())
   }
   getIncomingCallChannelIds() {
-    return N ? S : p
+    return N ? S : T
   }
   getFirstIncomingCallId() {
-    return N ? null : p.values().next().value
+    return N ? null : T.values().next().value
   }
   hasIncomingCalls() {
-    return !N && p.size > 0
+    return !N && T.size > 0
   }
 }
 i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s, l, {

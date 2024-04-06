@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("481060"),
   f = n("150063"),
   E = n("230711"),
-  _ = n("112724"),
-  h = n("183126"),
+  h = n("112724"),
+  _ = n("183126"),
   C = n("607070"),
   m = n("209613"),
   S = n("325708"),
   I = n("320149"),
-  T = n("252618"),
-  p = n("605236"),
+  p = n("252618"),
+  T = n("605236"),
   g = n("243778"),
   A = n("984370"),
   N = n("797614"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("6025"),
   O = n("897473"),
   L = n("108427"),
-  M = n("970731"),
-  P = n("210887"),
+  P = n("970731"),
+  M = n("210887"),
   y = n("433355"),
   D = n("592125"),
   x = n("819640"),
@@ -60,7 +60,7 @@ function ea() {
     t = (0, Y.useMessageRequestsCount)(),
     n = (0, W.default)(),
     l = (0, B.useListHasSingleMessageRequest)(),
-    u = (0, h.useIsRejectAllMessageRequestsEnabled)(),
+    u = (0, _.useIsRejectAllMessageRequestsEnabled)(),
     d = s.useCallback(() => {
       (0, c.showToast)((0, c.createToast)(ee.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE))
     }, []),
@@ -71,7 +71,7 @@ function ea() {
     }),
     E = (0, m.default)("message-requests-list"),
     {
-      channelId: _
+      channelId: h
     } = (0, V.useMessageRequestSidebarState)(),
     C = s.useCallback(() => {
       f(n.map(e => e.channel.id))
@@ -84,14 +84,14 @@ function ea() {
       return (0, a.jsx)(q.default, {
         index: r,
         className: i()({
-          [et.selected]: null != _ && _ === d,
-          [et.siblingSelected]: null != _ && _ === u
+          [et.selected]: null != h && h === d,
+          [et.siblingSelected]: null != h && h === u
         }),
         channel: o.channel,
         user: o.user,
         hasSingleMessageRequest: l
       }, d)
-    }, [l, n, _]),
+    }, [l, n, h]),
     I = s.useCallback(() => (0, a.jsxs)(U.default, {
       className: et.sectionTitle,
       children: [t > 0 ? ee.default.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
@@ -172,14 +172,14 @@ let el = function(e) {
     let {
       markAsDismissed: t
     } = e;
-    return (0, a.jsx)(M.default, {
+    return (0, a.jsx)(P.default, {
       header: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
       content: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT_TEENS,
       buttonCTA: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
       className: et.messageRequestCoachmark,
       onClick: () => t(J.ContentDismissActionType.UNKNOWN),
       markAsDismissed: t,
-      caretPosition: M.CaretPosition.TOP_CENTER,
+      caretPosition: P.CaretPosition.TOP_CENTER,
       headerClassName: et.__invalid_header
     })
   },
@@ -188,7 +188,7 @@ let el = function(e) {
       n = () => x.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       l = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion);
     return s.useEffect(() => {
-      (0, p.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+      (0, T.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
     }, []), (0, a.jsx)(g.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
@@ -199,7 +199,7 @@ let el = function(e) {
         if (i === d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK) return (0, a.jsx)(c.Popout, {
           renderPopout: () => t ? (0, a.jsx)(el, {
             markAsDismissed: r
-          }) : (0, a.jsx)(M.default, {
+          }) : (0, a.jsx)(P.default, {
             header: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
             content: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT,
             buttonCTA: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONFIRM,
@@ -211,7 +211,7 @@ let el = function(e) {
               })
             },
             markAsDismissed: r,
-            caretPosition: M.CaretPosition.TOP_CENTER,
+            caretPosition: P.CaretPosition.TOP_CENTER,
             headerClassName: et.__invalid_header
           }),
           position: "bottom",
@@ -232,7 +232,7 @@ function er(e) {
   } = e;
   return t === Z.MessageRequestSections.SPAM ? (0, a.jsx)(Q.default, {}) : (0, a.jsx)(ea, {})
 }
-let eo = (0, _.default)(function(e) {
+let eo = (0, h.default)(function(e) {
   let {
     width: t
   } = e, n = (0, Y.useMessageRequestsCount)();
@@ -243,22 +243,22 @@ let eo = (0, _.default)(function(e) {
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let l = (0, u.useStateFromStores)([P.default], () => P.default.theme),
+  let l = (0, u.useStateFromStores)([M.default], () => M.default.theme),
     r = (0, K.useSpamMessageRequestCount)(),
     [d, E] = s.useState(!1),
-    _ = (0, u.useStateFromStores)([y.default], () => {
+    h = (0, u.useStateFromStores)([y.default], () => {
       let e = y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
       return null != e && e.type === O.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
     }),
-    h = null == _ ? void 0 : _.channelId,
-    C = null != _,
-    m = (0, k.useIsEitherTypeOfMessageRequest)(h),
-    S = (0, w.useHasUserRepliedInChannel)(h);
+    _ = null == h ? void 0 : h.channelId,
+    C = null != h,
+    m = (0, k.useIsEitherTypeOfMessageRequest)(_),
+    S = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != h && !m && S && C && ((0, v.transitionToChannel)(h), R.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
-  }, [h, S, C, m]);
-  let [I, p] = s.useState(Z.MessageRequestSections.REQUESTS);
-  return (0, T.usePageTitle)({
+    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+  }, [_, S, C, m]);
+  let [I, T] = s.useState(Z.MessageRequestSections.REQUESTS);
+  return (0, p.usePageTitle)({
     location: ee.default.Messages.MESSAGE_REQUESTS
   }), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
@@ -281,7 +281,7 @@ let eo = (0, _.default)(function(e) {
           selectedItem: I,
           type: "top-pill",
           onItemSelect: e => {
-            p(e)
+            T(e)
           },
           className: et.__invalid_tabBar,
           children: [(0, a.jsx)(c.TabBar.Item, {

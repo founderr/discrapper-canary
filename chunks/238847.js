@@ -123,7 +123,7 @@ t.default = e => {
     analyticsLocations: k
   } = (0, T.default)();
   if (null == r || null == l || null == h) return null;
-  let H = () => {
+  let w = () => {
       o()(null != I, "Application cannot be null"), (0, c.openModalLazy)(async () => {
         let {
           default: e
@@ -137,7 +137,7 @@ t.default = e => {
         })
       })
     },
-    w = async () => {
+    H = async () => {
       try {
         G(!0);
         let {
@@ -159,14 +159,14 @@ t.default = e => {
     }, {
       isCancelled: V,
       isDeleted: Y,
-      isPastDue: W,
-      subscriptionPlanPrice: K,
+      isPastDue: K,
+      subscriptionPlanPrice: W,
       subscribedSinceDate: z,
       currentPeriodEndDate: Q,
       currentPeriodEndLabel: Z
     } = h, q = (0, D.isApplicationUserSubscription)(l.sku_flags), X = (0, D.isApplicationGuildSubscription)(l.sku_flags), J = l.soft_deleted || null == I || (!X || null == u) && !q, $ = () => V || Y ? (0, a.jsx)(v.TextBadge, {
       text: b.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CANCELED
-    }) : W ? (0, a.jsx)(c.Tooltip, {
+    }) : K ? (0, a.jsx)(c.Tooltip, {
       text: b.default.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
       children: e => (0, a.jsx)("div", {
         ...e,
@@ -258,7 +258,7 @@ t.default = e => {
           })
         }), (0, a.jsx)(y, {
           label: b.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_PRICE,
-          value: K
+          value: W
         }), (0, a.jsx)(y, {
           label: b.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE,
           value: b.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE_DATE.format({
@@ -272,9 +272,9 @@ t.default = e => {
         disabled: Y
       }), !J && (0, a.jsx)(F, {
         isCancelled: V,
-        onCancelSubscriptionClick: H,
+        onCancelSubscriptionClick: w,
         isResubscribing: M,
-        onResubscribeClick: w
+        onResubscribeClick: H
       })]
     }) : null]
   })

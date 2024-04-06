@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PendingMessageRequestRowItem: function() {
-    return _
+    return h
   }
 });
 var a = n("735250"),
@@ -16,21 +16,21 @@ var a = n("735250"),
   f = n("689938"),
   E = n("103898");
 
-function _(e) {
+function h(e) {
   let {
     active: t,
     user: n,
-    channel: _
-  } = e, h = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
+    channel: h
+  } = e, _ = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
     (0, l.showToast)((0, l.createToast)(f.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
   }, []), m = s.useCallback(() => {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), S = s.useCallback(() => {
-    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), h && (0, i.transitionToChannel)(_.id)
-  }, [_.id, h]), {
+    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, i.transitionToChannel)(h.id)
+  }, [h.id, _]), {
     acceptMessageRequest: I,
-    rejectMessageRequest: T,
-    isAcceptLoading: p,
+    rejectMessageRequest: p,
+    isAcceptLoading: T,
     isRejectLoading: g,
     isUserProfileLoading: A,
     isOptimisticAccepted: N,
@@ -40,11 +40,11 @@ function _(e) {
     onAcceptSuccess: S,
     onRejectSuccess: m,
     onError: C
-  }), R = p || g || A || N || v;
+  }), R = T || g || A || N || v;
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)(c.default, {
-      channel: _,
+      channel: h,
       otherUser: n,
       active: t
     }), (0, a.jsxs)("div", {
@@ -54,7 +54,7 @@ function _(e) {
         color: l.ButtonColors.PRIMARY,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), T(_.id)
+          e.stopPropagation(), p(h.id)
         },
         disabled: R,
         submitting: g || v,
@@ -64,10 +64,10 @@ function _(e) {
         color: l.ButtonColors.BRAND,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), I(_.id)
+          e.stopPropagation(), I(h.id)
         },
         disabled: R,
-        submitting: p || A || N,
+        submitting: T || A || N,
         children: f.default.Messages.MESSAGE_REQUEST_ACCEPT
       })]
     })]

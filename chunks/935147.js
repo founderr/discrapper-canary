@@ -45,12 +45,12 @@ function B(e) {
     user: G
   } = e, {
     reducedMotion: k
-  } = n.useContext(i.AccessibilityPreferencesContext), H = C.default.isPremium(G), {
-    pendingAvatar: w,
+  } = n.useContext(i.AccessibilityPreferencesContext), w = C.default.isPremium(G), {
+    pendingAvatar: H,
     pendingBanner: V,
     pendingThemeColors: Y,
-    pendingPronouns: W,
-    pendingBio: K,
+    pendingPronouns: K,
+    pendingBio: W,
     tryItOutThemeColors: z,
     tryItOutAvatar: Q,
     tryItOutBanner: Z,
@@ -68,7 +68,7 @@ function B(e) {
   }), J = (0, c.default)(q), $ = (0, S.default)(X), ee = n.useRef(null);
   (0, h.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
   let et = (0, g.default)(G.id),
-    es = null == et ? void 0 : et.getPreviewBio(K),
+    es = null == et ? void 0 : et.getPreviewBio(W),
     {
       analyticsLocations: ea,
       sourceAnalyticsLocations: en
@@ -111,14 +111,14 @@ function B(e) {
           user: G,
           onAvatarChange: _.setTryItOutAvatar,
           onBannerChange: _.setTryItOutBanner,
-          pendingPronouns: W,
-          pendingBio: K,
+          pendingPronouns: K,
+          pendingBio: W,
           pendingBanner: null !== (F = null != Z ? Z : V) && void 0 !== F ? F : s("466045"),
-          pendingAvatar: null != Q ? Q : w,
+          pendingAvatar: null != Q ? Q : H,
           pendingThemeColors: null != z ? z : Y,
           pendingAvatarDecoration: J,
           pendingProfileEffectId: $,
-          avatarClassName: null != Q || null != w || k.enabled ? void 0 : y.spinningAvatar,
+          avatarClassName: null != Q || null != H || k.enabled ? void 0 : y.spinningAvatar,
           canUsePremiumCustomization: !0,
           isTryItOutFlow: !0,
           hideExampleButton: !0,
@@ -138,7 +138,7 @@ function B(e) {
           }), (0, a.jsx)(L.default, {
             className: y.customizationSection,
             user: G,
-            pendingAvatar: null != Q ? Q : w,
+            pendingAvatar: null != Q ? Q : H,
             pendingColors: null != z ? z : Y,
             onThemeColorsChange: _.setTryItOutThemeColors,
             showPremiumIcon: !1,
@@ -179,7 +179,7 @@ function B(e) {
               subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2,
               className: y.premiumSubscribeButton,
               size: i.Button.Sizes.MEDIUM,
-              buttonText: H ? U.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : er ? U.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+              buttonText: w ? U.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : er ? U.default.Messages.PREMIUM_DISCOUNT_CTA.format({
                 percent: null == ei ? void 0 : ei.discount.amount
               }) : U.default.Messages.PREMIUM_UPSELL_GET_NITRO
             })]

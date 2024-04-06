@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("427217"),
   f = n("246133"),
   E = n("383832"),
-  _ = n("474376"),
-  h = n("695346"),
+  h = n("474376"),
+  _ = n("695346"),
   C = n("293273"),
   m = n("696202"),
   S = n("881201"),
   I = n("626135"),
-  T = n("51144"),
-  p = n("981631"),
+  p = n("51144"),
+  T = n("981631"),
   g = n("689938"),
   A = n("329764");
 
@@ -37,7 +37,7 @@ function N(e) {
       color: s ? "currentColor" : void 0
     }), (0, a.jsx)("div", {
       className: A.status,
-      children: (0, T.humanizeStatus)(t)
+      children: (0, p.humanizeStatus)(t)
     }), null != n && (0, a.jsx)("div", {
       className: A.description,
       children: n
@@ -49,7 +49,7 @@ function v(e) {
   let {
     customStatus: t
   } = e, n = e => {
-    e.stopPropagation(), h.CustomStatusSetting.updateSetting(void 0)
+    e.stopPropagation(), _.CustomStatusSetting.updateSetting(void 0)
   };
   return null != t ? (0, a.jsx)("div", {
     "aria-label": g.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
@@ -111,9 +111,9 @@ let O = e => {
     onClose: l,
     analyticsContext: i,
     onSelect: r
-  } = e, o = (0, _.useMultiAccountMenuItems)();
+  } = e, o = (0, h.useMultiAccountMenuItems)();
   s.useEffect(() => {
-    I.default.track(p.AnalyticEvents.OPEN_POPOUT, {
+    I.default.track(T.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != t,
       location: i.location
@@ -218,7 +218,7 @@ let O = e => {
 };
 t.default = (0, d.default)(e => {
   let t = (0, r.useStateFromStores)([C.default], () => C.default.getCustomStatusActivity()),
-    n = h.StatusSetting.useSetting();
+    n = _.StatusSetting.useSetting();
   return (0, a.jsx)(O, {
     ...e,
     customStatus: t,

@@ -16,11 +16,11 @@ var r = a("735250"),
   g = a("5192"),
   C = a("476221"),
   S = a("481250"),
-  v = a("206314"),
-  y = a("513547"),
-  R = a("65154"),
+  y = a("206314"),
+  v = a("513547"),
+  E = a("65154"),
   D = a("689938"),
-  E = a("299552"),
+  R = a("299552"),
   T = a("794711");
 class F extends n.PureComponent {
   render() {
@@ -38,7 +38,7 @@ class F extends n.PureComponent {
         hostname: n
       },
       s = l().map(i, (e, t) => {
-        if ("receiverReports" !== t && (!a || "localAddress" !== t)) return (0, r.jsx)(y.Item, {
+        if ("receiverReports" !== t && (!a || "localAddress" !== t)) return (0, r.jsx)(v.Item, {
           label: t,
           value: e
         }, t)
@@ -65,7 +65,7 @@ class F extends n.PureComponent {
           }),
           i = p.default.getUser(e.id);
         var l, s = g.default.getNickname(c.default.getGuildId(), void 0, i);
-        return null == s && (s = null != i ? i.username : e.id), (0, r.jsx)(v.default, {
+        return null == s && (s = null != i ? i.username : e.id), (0, r.jsx)(y.default, {
           label: e.id,
           valueRendered: [a, n],
           children: s
@@ -74,7 +74,7 @@ class F extends n.PureComponent {
     return (0, r.jsxs)(o.FormSection, {
       tag: o.FormTitleTags.H2,
       title: D.default.Messages.RTC_DEBUG_TRANSPORT + (null != t ? " - " + t : ""),
-      className: E.allowSelection,
+      className: R.allowSelection,
       children: [(0, S.renderTwoColumns)(s), 0 === d.length ? null : (0, r.jsx)(o.FormDivider, {
         className: T.marginBottom20
       }), (0, S.renderTwoColumns)(d)]
@@ -85,7 +85,7 @@ t.default = s.default.connectStores([u.default, d.default, f.default, m.default]
   let {
     context: t,
     index: a
-  } = e, r = u.default.getAllStats(t)[a], n = t === R.MediaEngineContextTypes.STREAM ? m.default.getHostname(m.default.getActiveStreamKey()) : d.default.getHostname();
+  } = e, r = u.default.getAllStats(t)[a], n = t === E.MediaEngineContextTypes.STREAM ? m.default.getHostname(m.default.getActiveStreamKey()) : d.default.getHostname();
   return {
     hidePersonalInformation: f.default.hidePersonalInformation,
     transport: null != r ? r.transport : null,

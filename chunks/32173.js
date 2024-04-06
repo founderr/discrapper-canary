@@ -20,8 +20,8 @@ var n = s("399606"),
   R = s("78839"),
   S = s("63063"),
   m = s("74538"),
-  N = s("494127"),
-  A = s("687362"),
+  A = s("494127"),
+  N = s("687362"),
   p = s("623068"),
   g = s("391110"),
   C = s("75077"),
@@ -62,9 +62,9 @@ t.default = () => {
     analyticsLocations: e
   } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = h.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([R.default], () => R.default.getPremiumTypeSubscription()), i = null != a ? m.default.getPremiumPlanItem(a) : null, es = (null != i ? m.default.getSkuIdForPlan(i.planId) : null) === O.PremiumSubscriptionSKUs.TIER_2, {
     flipped: ea
-  } = (0, N.useWhatsNewAvatarDecoRollout)(), {
+  } = (0, A.useWhatsNewAvatarDecoRollout)(), {
     flipped: ei
-  } = (0, N.useWhatsNewProfileFXRollout)(), er = (0, _.default)(f.default), en = (0, A.default)(), el = (0, I.default)({
+  } = (0, A.useWhatsNewProfileFXRollout)(), er = (0, _.default)(f.default), en = (0, N.default)(), el = (0, I.default)({
     scrollPosition: M.ProfileCustomizationScrollPositions.TRY_IT_OUT,
     analyticsLocations: e
   }), eo = () => {

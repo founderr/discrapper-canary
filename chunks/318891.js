@@ -11,16 +11,16 @@ var s = n("570140"),
   c = n("19780"),
   f = n("944486"),
   E = n("914010"),
-  _ = n("979651"),
-  h = n("317381"),
+  h = n("979651"),
+  _ = n("317381"),
   C = n("917107"),
   m = n("719296"),
   S = n("981631");
 
 function I() {
   let e = c.default.getChannelId(),
-    t = h.default.getConnectedActivityChannelId(),
-    n = h.default.getSelfEmbeddedActivityForChannel(null != t ? t : S.EMPTY_STRING_SNOWFLAKE_ID),
+    t = _.default.getConnectedActivityChannelId(),
+    n = _.default.getSelfEmbeddedActivityForChannel(null != t ? t : S.EMPTY_STRING_SNOWFLAKE_ID),
     i = o.default.getChannel(e),
     r = o.default.getChannel(t);
   return null == t || (null == e || null == i) && (0, C.default)(t) || null == t || null == r || null == n ? function() {
@@ -34,7 +34,7 @@ function I() {
   }(r, (0, m.default)(t, n.applicationId))
 }
 
-function T() {
+function p() {
   let e = u.default.hasLayers(),
     t = r.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
   return e && !t ? function() {
@@ -45,12 +45,12 @@ function T() {
     null != e && d.default.isOpen(e) && s.default.wait(() => l.show(e))
   }()
 }
-class p extends i.default {
+class T extends i.default {
   _initialize() {
-    f.default.addChangeListener(I), E.default.addChangeListener(I), c.default.addChangeListener(I), _.default.addChangeListener(I), r.default.addChangeListener(I), h.default.addChangeListener(I), u.default.addChangeListener(T)
+    f.default.addChangeListener(I), E.default.addChangeListener(I), c.default.addChangeListener(I), h.default.addChangeListener(I), r.default.addChangeListener(I), _.default.addChangeListener(I), u.default.addChangeListener(p)
   }
   _terminate() {
-    f.default.removeChangeListener(I), E.default.removeChangeListener(I), c.default.removeChangeListener(I), _.default.removeChangeListener(I), r.default.removeChangeListener(I), h.default.removeChangeListener(I), u.default.removeChangeListener(T)
+    f.default.removeChangeListener(I), E.default.removeChangeListener(I), c.default.removeChangeListener(I), h.default.removeChangeListener(I), r.default.removeChangeListener(I), _.default.removeChangeListener(I), u.default.removeChangeListener(p)
   }
 }
-t.default = new p
+t.default = new T

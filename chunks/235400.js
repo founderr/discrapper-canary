@@ -19,8 +19,8 @@ var s = a("735250"),
   g = a("197115"),
   p = a("166625"),
   C = a("594174"),
-  v = a("626135"),
-  S = a("74538"),
+  S = a("626135"),
+  v = a("74538"),
   E = a("864106"),
   A = a("240781"),
   x = a("818611"),
@@ -38,7 +38,7 @@ function b(e) {
     onClose: u,
     initialSelectedDecoration: h,
     initialSelectedDecorationId: C,
-    isTryItOutFlow: v,
+    isTryItOutFlow: S,
     guild: I
   } = e, {
     pendingAvatarDecoration: b,
@@ -46,7 +46,7 @@ function b(e) {
     savedAvatarDecoration: R
   } = (0, p.default)({
     analyticsLocations: i,
-    isTryItOut: v,
+    isTryItOut: S,
     guildId: null == I ? void 0 : I.id
   }), [M, w] = r.useState(() => {
     var e, t;
@@ -56,7 +56,7 @@ function b(e) {
   }), {
     product: D,
     purchase: O
-  } = (0, f.default)(null == M ? void 0 : M.skuId), j = S.default.canUseCollectibles(t), y = r.useRef(null), L = (0, m.default)(i), k = (0, E.isEqualAvatarDecoration)(M, void 0 === b ? R : b), F = () => {
+  } = (0, f.default)(null == M ? void 0 : M.skuId), j = v.default.canUseCollectibles(t), y = r.useRef(null), L = (0, m.default)(i), k = (0, E.isEqualAvatarDecoration)(M, void 0 === b ? R : b), F = () => {
     N(M), u()
   }, H = r.useCallback(() => {
     u(), (0, c.openCollectiblesShop)({
@@ -105,7 +105,7 @@ function b(e) {
         children: P.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
       }) : (0, s.jsx)(g.default, {
         subscriptionTier: _.PremiumSubscriptionSKUs.TIER_2,
-        buttonText: S.default.isPremium(t) ? P.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : P.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+        buttonText: v.default.isPremium(t) ? P.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : P.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
       }), (0, s.jsx)(n.Button, {
         look: n.Button.Looks.LINK,
         color: n.Button.Colors.PRIMARY,
@@ -125,7 +125,7 @@ function N(e) {
     initialSelectedDecoration: m,
     initialSelectedDecorationId: g,
     isTryItOutFlow: p,
-    guild: S
+    guild: v
   } = e, E = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
     analyticsLocations: A
   } = (0, u.default)(a, o.default.EDIT_AVATAR_DECORATION_MODAL), {
@@ -135,7 +135,7 @@ function N(e) {
     isFetchingPurchases: N
   } = (0, h.default)(), R = P || N && 0 === _.size;
   return r.useEffect(() => {
-    v.default.track(I.AnalyticEvents.OPEN_MODAL, {
+    S.default.track(I.AnalyticEvents.OPEN_MODAL, {
       type: "Edit Avatar Decoration Modal",
       location_stack: A
     })
@@ -155,7 +155,7 @@ function N(e) {
         type: n.Spinner.Type.SPINNING_CIRCLE
       }) : (0, s.jsx)(b, {
         user: E,
-        guild: S,
+        guild: v,
         categories: x,
         purchases: _,
         analyticsLocations: A,

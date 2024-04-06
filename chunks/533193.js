@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return W
+    return K
   }
 }), s("47120"), s("724458");
 var a = s("735250"),
@@ -183,7 +183,7 @@ function F(e) {
 let G = D.default.Millis.SECOND,
   k = 2 * D.default.Millis.SECOND;
 
-function H() {
+function w() {
   let e = (0, P.getLootboxes)(),
     [t, s, l, i, r, S, E] = (0, u.useStateFromStoresArray)([g.default], () => [g.default.userDataFetchState, g.default.globalOpenedCountFetchState, g.default.openedItems, g.default.globalOpenedCount, g.default.lastGlobalOpenedCount, g.default.globalOpenedCountFetchTime, g.default.nextGlobalOpenedCountFetchTime]),
     T = n.useMemo(() => Object.values(l).reduce((e, t) => e + t, 0), [l]),
@@ -222,7 +222,7 @@ function H() {
   })
 }
 
-function w() {
+function H() {
   let [e, t] = n.useState(!1), [l, i] = (0, u.useStateFromStoresArray)([g.default], () => [g.default.openedItems, g.default.redeemedPrize]), r = (0, P.getLootboxes)(), o = n.useMemo(() => Object.keys(l).length === Object.keys(r).length && !Object.values(l).some(e => 0 === e), [l, r]), d = async () => {
     t(!0);
     try {
@@ -301,7 +301,7 @@ function Y() {
   })
 }
 
-function W() {
+function K() {
   let {
     analyticsLocations: e
   } = (0, m.default)(f.default.PACKAGES), t = (0, u.useStateFromStores)([g.default], () => g.default.nextGlobalOpenedCountFetchTime), [s] = n.useState(() => new c.Timeout);
@@ -312,6 +312,6 @@ function W() {
     return s.start(e, _.fetchCountStat), () => s.stop()
   }, [t, s]), (0, a.jsxs)(m.AnalyticsLocationProvider, {
     value: e,
-    children: [(0, a.jsx)(B, {}), (0, a.jsx)(H, {}), (0, a.jsx)(w, {}), (0, a.jsx)(V, {}), (0, a.jsx)(Y, {})]
+    children: [(0, a.jsx)(B, {}), (0, a.jsx)(w, {}), (0, a.jsx)(H, {}), (0, a.jsx)(V, {}), (0, a.jsx)(Y, {})]
   })
 }

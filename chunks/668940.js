@@ -12,23 +12,23 @@ var s = n("442837"),
   c = n("150192"),
   f = n("889010"),
   E = n("488905"),
-  _ = n("347137"),
-  h = n("731455"),
+  h = n("347137"),
+  _ = n("731455"),
   C = n("689938");
 let m = e => {
     switch (e) {
-      case h.CategoryId.Activity:
-        return h.CategoryIcons.Activity;
-      case h.CategoryId.Music:
-        return h.CategoryIcons.Music;
-      case h.CategoryId.Television:
-        return h.CategoryIcons.Television;
-      case h.CategoryId.Science:
-        return h.CategoryIcons.Science;
-      case h.CategoryId.Education:
-        return h.CategoryIcons.Education;
+      case _.CategoryId.Activity:
+        return _.CategoryIcons.Activity;
+      case _.CategoryId.Music:
+        return _.CategoryIcons.Music;
+      case _.CategoryId.Television:
+        return _.CategoryIcons.Television;
+      case _.CategoryId.Science:
+        return _.CategoryIcons.Science;
+      case _.CategoryId.Education:
+        return _.CategoryIcons.Education;
       default:
-        return h.CategoryIcons.Discover
+        return _.CategoryIcons.Discover
     }
   },
   S = () => {
@@ -41,7 +41,7 @@ let m = e => {
     })), n = (0, s.useStateFromStores)([c.default], () => c.default.getDiscoveryCategories(), [], c.areDiscoveryCategoriesEqual), d = null == n ? void 0 : n.map(e => ({
       ...e,
       icon: m(e.categoryId)
-    })), _ = e => {
+    })), h = e => {
       (0, i.selectCategory)(e, !0), o.default.closeSidebar(), t && (0, i.clearSearch)()
     };
     return (0, a.jsxs)(l.Scroller, {
@@ -49,16 +49,16 @@ let m = e => {
         text: C.default.Messages.DISCOVER
       }), (0, a.jsx)(f.default, {
         categories: d,
-        handleCategorySelect: _,
+        handleCategorySelect: h,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
       }), (0, a.jsx)(r.default, {
-        handleCategorySelect: _,
+        handleCategorySelect: h,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
       })]
     })
   };
 t.default = function() {
-  return (0, d.useClanDiscoveryExperimentEnabled)("guild_discovery_sidebar") ? (0, a.jsx)(_.default, {}) : (0, a.jsx)(S, {})
+  return (0, d.useClanDiscoveryExperimentEnabled)("guild_discovery_sidebar") ? (0, a.jsx)(h.default, {}) : (0, a.jsx)(S, {})
 }

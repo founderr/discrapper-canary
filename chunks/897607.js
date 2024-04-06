@@ -19,10 +19,10 @@ function E() {
     s = u.default.getOutputDeviceId();
   if (o.default.getState().neverShowModal || l().isEmpty(o.default.lastDeviceConnected)) return;
   let E = (0, o.extractDisplayName)(u.default.getInputDevices()[t]),
-    _ = (0, o.extractDisplayName)(u.default.getOutputDevices()[s]);
-  if (l().some(o.default.lastDeviceConnected, e => c.has(e.displayName) || e.displayName === E || e.displayName === _)) return;
-  let h = l().some(o.default.lastDeviceConnected, e => r.default.isCertified(o.default.inputDevices[e.displayName]) || r.default.isCertified(o.default.outputDevices[e.displayName]));
-  if ((t === d.DEFAULT_DEVICE_ID && o.default.lastInputSystemDevice.justChanged || s === d.DEFAULT_DEVICE_ID && o.default.lastOutputSystemDevice.justChanged) && !h) return;
+    h = (0, o.extractDisplayName)(u.default.getOutputDevices()[s]);
+  if (l().some(o.default.lastDeviceConnected, e => c.has(e.displayName) || e.displayName === E || e.displayName === h)) return;
+  let _ = l().some(o.default.lastDeviceConnected, e => r.default.isCertified(o.default.inputDevices[e.displayName]) || r.default.isCertified(o.default.outputDevices[e.displayName]));
+  if ((t === d.DEFAULT_DEVICE_ID && o.default.lastInputSystemDevice.justChanged || s === d.DEFAULT_DEVICE_ID && o.default.lastOutputSystemDevice.justChanged) && !_) return;
   let C = l().first(Object.keys(o.default.lastDeviceConnected)),
     m = null != C && "" !== C ? o.default.lastDeviceConnected[C] : null;
   null != m && (o.default.initialized && null != C && (r.default.isCertified(o.default.inputDevices[C]) ? e = r.default.getCertifiedDevice(o.default.inputDevices[C]) : r.default.isCertified(o.default.outputDevices[C]) && (e = r.default.getCertifiedDevice(o.default.outputDevices[C]))), f = !0, (0, i.openModalLazy)(async () => {

@@ -11,7 +11,7 @@ var a = n("392711"),
   c = n("452426"),
   f = n("186901"),
   E = n("981631");
-let _ = ["349134787773988865"];
+let h = ["349134787773988865"];
 t.default = {
   [E.RPCCommands.SET_ACTIVITY]: {
     scope: {
@@ -57,7 +57,7 @@ t.default = {
         socket: a,
         args: {
           pid: c,
-          activity: h
+          activity: _
         },
         isSocketConnected: C
       } = e;
@@ -67,27 +67,27 @@ t.default = {
       if (null == c && f.TransportTypes.IPC === a.transport) throw new u.default({
         errorCode: E.RPCErrors.INVALID_COMMAND
       }, "nonzero pid required");
-      if (null == h) return l.default.dispatch({
+      if (null == _) return l.default.dispatch({
         type: "LOCAL_ACTIVITY_UPDATE",
         socketId: a.id,
         pid: c,
-        activity: h
-      }), Promise.resolve(h);
-      h.name = a.application.name, h.application_id = a.application.id;
+        activity: _
+      }), Promise.resolve(_);
+      _.name = a.application.name, _.application_id = a.application.id;
       let m = a.transport === f.TransportTypes.POST_MESSAGE,
-        S = (0, d.computeActivityFlags)(h, m);
-      S > 0 && (h.flags = S), delete h.instance, null === (t = h.party) || void 0 === t || delete t.privacy;
+        S = (0, d.computeActivityFlags)(_, m);
+      S > 0 && (_.flags = S), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
       let {
         assets: I,
-        party: T,
-        secrets: p,
+        party: p,
+        secrets: T,
         timestamps: g,
         buttons: A,
         type: N
-      } = h;
-      if ((null == N || N !== E.ActivityTypes.PLAYING && !m) && (h.type = E.ActivityTypes.PLAYING), null != p) {
-        let e = s().values(p).filter(e => !!e);
-        if (null != T && s().intersection(e, [T.id]).length > 0 && !_.includes(a.application.id)) throw new u.default({
+      } = _;
+      if ((null == N || N !== E.ActivityTypes.PLAYING && !m) && (_.type = E.ActivityTypes.PLAYING), null != T) {
+        let e = s().values(T).filter(e => !!e);
+        if (null != p && s().intersection(e, [p.id]).length > 0 && !h.includes(a.application.id)) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot match the party id");
         if (s().uniq(e).length < e.length) throw new u.default({
@@ -97,9 +97,9 @@ t.default = {
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot currently be sent with buttons")
       }
-      if (null != A && (h.metadata = {
+      if (null != A && (_.metadata = {
           button_urls: A.map(e => e.url)
-        }, h.buttons = A.map(e => e.label)), null != g)
+        }, _.buttons = A.map(e => e.label)), null != g)
         for (let e of Object.keys(g)) Date.now().toString().length - g[e].toString().length > 2 && (g[e] = Math.floor(g[e] * o.default.Millis.SECOND));
       if (null == I) n = Promise.resolve([]);
       else {
@@ -114,19 +114,19 @@ t.default = {
           type: "LOCAL_ACTIVITY_UPDATE",
           socketId: a.id,
           pid: c,
-          activity: h
+          activity: _
         });
         let {
           secrets: o,
           party: u
-        } = h, d = {
+        } = _, d = {
           application_id: a.application.id,
-          type: h.type,
-          name: h.name,
-          details: null !== (t = h.details) && void 0 !== t ? t : "",
-          state: null !== (n = h.state) && void 0 !== n ? n : ""
+          type: _.type,
+          name: _.name,
+          details: null !== (t = _.details) && void 0 !== t ? t : "",
+          state: null !== (n = _.state) && void 0 !== n ? n : ""
         };
-        return null != o && (d.has_match_secret = !!o.match, d.has_join_secret = !!o.join), null != I && (d.has_images = !!(I.large_image || I.small_image)), null != u && (d.party_max = null != u.size ? u.size[1] : void 0, d.party_id = u.id), i.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, d), h
+        return null != o && (d.has_match_secret = !!o.match, d.has_join_secret = !!o.join), null != I && (d.has_images = !!(I.large_image || I.small_image)), null != u && (d.party_max = null != u.size ? u.size[1] : void 0, d.party_id = u.id), i.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, d), _
       })
     }
   }

@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("617136"),
   f = n("272008"),
   E = n("113434"),
-  _ = n("569984"),
-  h = n("497505"),
+  h = n("569984"),
+  _ = n("497505"),
   C = n("918701"),
   m = n("874137"),
   S = n("611855"),
   I = n("670638"),
-  T = n("667105"),
-  p = n("860151"),
+  p = n("667105"),
+  T = n("860151"),
   g = n("981631"),
   A = n("689938"),
   N = n("374145");
@@ -58,32 +58,32 @@ t.default = function(e) {
   var t, n, l;
   let {
     quest: R
-  } = e, O = (0, r.useStateFromStores)([_.default], () => _.default.isEnrolling(R.id), [R]), L = s.useCallback(e => {
+  } = e, O = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(R.id), [R]), L = s.useCallback(e => {
     e.stopPropagation()
-  }, []), M = s.useCallback(() => {
+  }, []), P = s.useCallback(() => {
     (0, f.enrollInQuest)(R.id, {
-      questContent: h.QuestContent.ACTIVITY_PANEL,
+      questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.ACCEPT_QUEST
     })
-  }, [R]), P = s.useCallback(() => {
+  }, [R]), M = s.useCallback(() => {
     null != R && ((0, c.trackQuestContentClicked)({
       questId: R.id,
-      questContent: h.QuestContent.ACTIVITY_PANEL,
+      questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.TRACK_PROGRESS
     }), u.default.open(g.UserSettingsSections.INVENTORY))
   }, [R]), y = s.useCallback(() => {
     (0, c.trackQuestContentClicked)({
       questId: R.id,
-      questContent: h.QuestContent.ACTIVITY_PANEL,
+      questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.LEARN_MORE
     }), u.default.open(g.UserSettingsSections.INVENTORY)
-  }, [R]), D = (0, T.useHandleClaimQuestsReward)({
+  }, [R]), D = (0, p.useHandleClaimQuestsReward)({
     quest: R,
-    location: h.QuestContent.ACTIVITY_PANEL
+    location: _.QuestContent.ACTIVITY_PANEL
   }), x = (0, E.useIsQuestExpired)(R), b = (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = R.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = R.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == R ? void 0 : R.userStatus) == null || (0, C.isDismissed)(R.userStatus, h.QuestContent.ACTIVITY_PANEL) || x || j ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
+  return (null == R ? void 0 : R.userStatus) == null || (0, C.isDismissed)(R.userStatus, _.QuestContent.ACTIVITY_PANEL) || x || j ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
     questId: R.id,
-    questContent: h.QuestContent.ACTIVITY_PANEL,
+    questContent: _.QuestContent.ACTIVITY_PANEL,
     children: e => {
       var t;
       return (0, a.jsxs)("div", {
@@ -103,7 +103,7 @@ t.default = function(e) {
             textOpacity: .5
           }), (0, a.jsx)(I.QuestsEntryContextMenuPopout, {
             quest: R,
-            questContent: h.QuestContent.ACTIVITY_PANEL,
+            questContent: _.QuestContent.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
             showShareLink: !0,
             children: e => (0, a.jsx)(o.Clickable, {
@@ -128,7 +128,7 @@ t.default = function(e) {
               streamingDurationRequirement: R.config.streamDurationRequirementMinutes
             })
           })]
-        }), b && !U && (0, a.jsx)(p.default, {
+        }), b && !U && (0, a.jsx)(T.default, {
           className: N.rewardTileWithInstructions,
           quest: R
         }), (0, a.jsxs)("div", {
@@ -145,7 +145,7 @@ t.default = function(e) {
               className: N.cta,
               color: o.Button.Colors.BRAND,
               fullWidth: !0,
-              onClick: M,
+              onClick: P,
               size: o.Button.Sizes.SMALL,
               submitting: O,
               children: A.default.Messages.QUESTS_ACCEPT_QUEST
@@ -154,7 +154,7 @@ t.default = function(e) {
             className: N.cta,
             color: o.Button.Colors.BRAND,
             fullWidth: !0,
-            onClick: P,
+            onClick: M,
             size: o.Button.Sizes.SMALL,
             children: A.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
           }), U && (0, a.jsx)(o.Button, {

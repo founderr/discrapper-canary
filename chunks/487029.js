@@ -20,8 +20,8 @@ var l = n("735250"),
   m = n("174470"),
   g = n("549771"),
   E = n("964398"),
-  _ = n("409673"),
-  S = n("710111"),
+  S = n("409673"),
+  _ = n("710111"),
   I = n("403891");
 
 function N(e) {
@@ -38,7 +38,7 @@ function N(e) {
     let [t, n] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getSounds(), p.default.getFavorites()]);
     return a.useMemo(() => {
       let l = [],
-        a = [...e, S.DEFAULT_SOUND_GUILD_ID],
+        a = [...e, _.DEFAULT_SOUND_GUILD_ID],
         s = (e, a) => {
           var s, i;
           for (let r of null !== (i = null === (s = t.get(e)) || void 0 === s ? void 0 : s.sort((e, t) => f.default.compare(e.soundId, t.soundId))) && void 0 !== i ? i : []) {
@@ -48,7 +48,7 @@ function N(e) {
         };
       return a.forEach(e => s(e, !0)), a.forEach(e => s(e, !1)), l
     }, [t, n, e])
-  }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), M = (0, m.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [O, D] = a.useState(void 0), b = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
+  }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), y = (0, m.useGuildIdsToFetchSoundsFor)(), M = a.useRef(null), [O, D] = a.useState(void 0), b = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
     analyticsLocations: j
   } = (0, o.default)(r.default.SOUNDBOARD_WHEEL), G = a.useCallback(e => {
     (0, C.playSound)(e, n.id, j), x()
@@ -56,9 +56,9 @@ function N(e) {
   a.useEffect(() => {
     h.maybeFetchSoundboardSounds(), d.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []), a.useEffect(() => {
-    0 === R.length && 0 === M.length && x()
-  }, [R.length, M, x]), a.useEffect(() => () => {
-    let e = y.current;
+    0 === R.length && 0 === y.length && x()
+  }, [R.length, y, x]), a.useEffect(() => () => {
+    let e = M.current;
     !A && null != e && G(e)
   }, [A, G]), (0, u.default)({
     type: s.ImpressionTypes.POPOUT,
@@ -72,7 +72,7 @@ function N(e) {
     disableTrack: !L
   });
   let U = a.useCallback(e => {
-      y.current = e, D(null == e ? void 0 : e.soundId)
+      M.current = e, D(null == e ? void 0 : e.soundId)
     }, []),
     P = a.useCallback(e => {
       if (null == e) {
@@ -87,7 +87,7 @@ function N(e) {
       let t = R[e];
       null != t && G(t)
     }, [R, G]),
-    F = a.useMemo(() => R.map(e => (0, l.jsx)(_.default, {
+    F = a.useMemo(() => R.map(e => (0, l.jsx)(S.default, {
       interactive: L,
       className: I.soundButton,
       sound: e,

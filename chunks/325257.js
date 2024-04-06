@@ -16,8 +16,8 @@ var l = n("735250"),
   m = n("920440"),
   g = n("271383"),
   E = n("771845"),
-  _ = n("880080"),
-  S = n("26290"),
+  S = n("880080"),
+  _ = n("26290"),
   I = n("15434"),
   N = n("727258"),
   T = n("249792"),
@@ -26,14 +26,14 @@ var l = n("735250"),
   v = n("252686"),
   x = n("682662"),
   R = n("674552"),
-  M = n("981631"),
-  y = n("689938"),
+  y = n("981631"),
+  M = n("689938"),
   O = n("814886");
 let D = {
   analyticsSource: {
-    page: M.AnalyticsPages.GUILD_CHANNEL,
-    section: M.AnalyticsSections.CHANNEL_LIST,
-    object: M.AnalyticsObjects.CHANNEL
+    page: y.AnalyticsPages.GUILD_CHANNEL,
+    section: y.AnalyticsSections.CHANNEL_LIST,
+    object: y.AnalyticsObjects.CHANNEL
   }
 };
 
@@ -63,8 +63,8 @@ t.default = a.memo(function(e) {
     mediaState: Y,
     unavailable: K = !1,
     badge: W = 0,
-    contextMenu: z = b,
-    draggable: Z = !1,
+    contextMenu: Z = b,
+    draggable: z = !1,
     sorting: X = !1,
     preloadOnClick: Q = !0,
     guildJoinRequestStatus: q
@@ -75,7 +75,7 @@ t.default = a.memo(function(e) {
   null == et && W > 0 ? et = null !== (s = (0, R.renderMentionBadge)(W)) && void 0 !== s ? s : void 0 : null == et && null != q && (et = null !== (h = (0, R.renderGuildJoinRequestBadge)({
     guildJoinRequestStatus: q
   })) && void 0 !== h ? h : void 0);
-  let en = null !== (j = e.lowerBadgeWidth) && void 0 !== j ? j : (0, S.getBadgeWidthForValue)(W),
+  let en = null !== (j = e.lowerBadgeWidth) && void 0 !== j ? j : (0, _.getBadgeWidthForValue)(W),
     [{
       dragging: el
     }, ea] = (0, r.useDrag)({
@@ -93,7 +93,7 @@ t.default = a.memo(function(e) {
         dragging: e.isDragging()
       })
     }),
-    es = (0, o.useTreeItem)(null != J ? J : M.EMPTY_STRING_SNOWFLAKE_ID),
+    es = (0, o.useTreeItem)(null != J ? J : y.EMPTY_STRING_SNOWFLAKE_ID),
     [ei, er] = a.useState(!1),
     eo = !X && ei,
     [eu, ed] = a.useState(!1),
@@ -117,22 +117,22 @@ t.default = a.memo(function(e) {
     }, [F, B, K, Q]),
     em = (0, u.useStateFromStores)([g.default], () => g.default.isCurrentUserGuest(J)),
     eg = a.useCallback(e => {
-      null != B && !em && z(e, B)
-    }, [B, z, em]),
+      null != B && !em && Z(e, B)
+    }, [B, Z, em]),
     eE = a.useCallback(e => {
       if ("ArrowLeft" === e.key && null != $) {
         var t;
         null === (t = document.querySelector("[aria-owns=folder-items-".concat($, "]"))) || void 0 === t || t.focus()
       }
     }, [$]),
-    e_ = a.useCallback(e => {
+    eS = a.useCallback(e => {
       if (e) {
         eh.delay();
         return
       }
       eh.cancel(), ef(!1)
     }, [eh]),
-    eS = a.useCallback(e => {
+    e_ = a.useCallback(e => {
       null == U || U(J, e)
     }, [J, U]);
   if (null == B) return null;
@@ -147,7 +147,7 @@ t.default = a.memo(function(e) {
         ec || ed(!1)
       }
     }) : (0, l.jsx)(I.default, {
-      ariaLabel: y.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
+      ariaLabel: M.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
         guildName: B.toString(),
         mentions: W
       }),
@@ -170,7 +170,7 @@ t.default = a.memo(function(e) {
     eN = el ? (0, l.jsx)(A.PlaceholderDropTarget, {
       children: (0, l.jsx)(v.default, {})
     }) : (0, l.jsx)("div", {
-      ref: Z ? ea : void 0,
+      ref: z ? ea : void 0,
       "data-dnd-name": B.toString(),
       className: i()(O.blobContainer, {
         [O.sorting]: X,
@@ -186,8 +186,8 @@ t.default = a.memo(function(e) {
       })
     });
   return (0, l.jsxs)(x.ListItem, {
-    ref: eS,
-    children: [(0, l.jsx)(_.default, {
+    ref: e_,
+    children: [(0, l.jsx)(S.default, {
       hovered: !el && eo,
       selected: !el && H,
       unread: !el && k,
@@ -196,10 +196,10 @@ t.default = a.memo(function(e) {
       guild: B,
       disabled: X,
       children: eN
-    }), Z ? (0, l.jsx)(A.default, {
+    }), z ? (0, l.jsx)(A.default, {
       name: B.name,
       targetNode: G,
-      onDragOverChanged: e_
+      onDragOverChanged: eS
     }) : null]
   })
 })

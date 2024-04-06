@@ -11,14 +11,14 @@ var a = n("570140"),
   c = n("39604"),
   f = n("569545"),
   E = n("722835"),
-  _ = n("703656"),
-  h = n("641015"),
+  h = n("703656"),
+  _ = n("641015"),
   C = n("183584"),
   m = n("199902"),
   S = n("131951"),
   I = n("246946"),
-  T = n("808506"),
-  p = n("237997"),
+  p = n("808506"),
+  T = n("237997"),
   g = n("626135"),
   A = n("554174"),
   N = n("981631"),
@@ -92,8 +92,8 @@ let R = {
   },
   [N.GlobalKeybindActions.TOGGLE_OVERLAY]: {
     onTrigger() {
-      let e = T.default.enabled;
-      l.default.setEnabled(!e, T.default.legacyEnabled)
+      let e = p.default.enabled;
+      l.default.setEnabled(!e, p.default.legacyEnabled)
     },
     keyEvents: {
       keyup: !0,
@@ -103,7 +103,7 @@ let R = {
   [N.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK]: {
     onTrigger(e) {
       let t = (0, A.default)();
-      null != t && (e ? l.default.setUILocked(!p.default.isUILocked(t), t) : l.default.setInputLocked(!T.default.isInputLocked(t), t))
+      null != t && (e ? l.default.setUILocked(!T.default.isUILocked(t), t) : l.default.setInputLocked(!p.default.isInputLocked(t), t))
     },
     keyEvents: {
       keyup: !0,
@@ -112,9 +112,9 @@ let R = {
   },
   [N.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
     onTrigger() {
-      let e = T.default.getFocusedPID(),
+      let e = p.default.getFocusedPID(),
         t = null != e;
-      null != e && t && p.default.isPinned(N.OverlayWidgets.TEXT) && T.default.isReady(e) && T.default.isInputLocked(e) && l.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
+      null != e && t && T.default.isPinned(N.OverlayWidgets.TEXT) && p.default.isReady(e) && p.default.isInputLocked(e) && l.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
     },
     keyEvents: {
       keyup: !0,
@@ -142,7 +142,7 @@ let R = {
     }
   },
   [N.GlobalKeybindActions.NAVIGATE_BACK]: {
-    onTrigger: () => (0, _.back)(),
+    onTrigger: () => (0, h.back)(),
     keyEvents: {
       keyup: !0,
       keydown: !1,
@@ -151,7 +151,7 @@ let R = {
     }
   },
   [N.GlobalKeybindActions.NAVIGATE_FORWARD]: {
-    onTrigger: () => (0, _.forward)(),
+    onTrigger: () => (0, h.forward)(),
     keyEvents: {
       keyup: !0,
       keydown: !1,
@@ -161,9 +161,9 @@ let R = {
   },
   [N.GlobalKeybindActions.SOUNDBOARD]: {
     onTrigger: () => {
-      if (!(0, h.canSelectedVoiceChannelUseSoundboard)()) return;
+      if (!(0, _.canSelectedVoiceChannelUseSoundboard)()) return;
       let e = (0, A.default)();
-      null != e && (p.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
+      null != e && (T.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
     },
     keyEvents: {
       keyup: !0,
@@ -172,7 +172,7 @@ let R = {
   },
   [N.GlobalKeybindActions.SOUNDBOARD_HOLD]: {
     onTrigger: e => {
-      if (!(0, h.canSelectedVoiceChannelUseSoundboard)()) return;
+      if (!(0, _.canSelectedVoiceChannelUseSoundboard)()) return;
       let t = (0, A.default)();
       if (null != t) {
         e ? (0, C.openSoundboardInOverlay)(!1, t) : (0, C.closeSoundboardInOverlay)(t);

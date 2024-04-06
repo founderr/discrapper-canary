@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return I
+    return _
   }
 });
-var s = n("735250");
-n("470079");
-var a = n("481060"),
-  l = n("973616"),
-  i = n("131704"),
-  r = n("601964"),
-  u = n("598077"),
-  o = n("230224"),
-  d = n("258356"),
-  c = n("981631"),
-  f = n("689938"),
-  E = n("684866");
-let _ = e => {
+var n = s("735250");
+s("470079");
+var a = s("481060"),
+  l = s("973616"),
+  i = s("131704"),
+  r = s("601964"),
+  u = s("598077"),
+  o = s("230224"),
+  d = s("258356"),
+  c = s("981631"),
+  f = s("689938"),
+  E = s("684866");
+let I = e => {
   let {
     state: t
   } = e;
@@ -29,47 +29,47 @@ let _ = e => {
   }
 };
 
-function I(e) {
+function _(e) {
   let {
     invite: t,
-    onAcceptInvite: n,
-    disableUser: I = !1
+    onAcceptInvite: s,
+    disableUser: _ = !1
   } = e;
   if (null == t) return null;
-  let p = null != t.guild ? new r.default(t.guild) : null,
-    h = null != t.channel ? (0, i.createChannelRecordFromInvite)(t.channel) : null,
+  let h = null != t.guild ? new r.default(t.guild) : null,
+    p = null != t.channel ? (0, i.createChannelRecordFromInvite)(t.channel) : null,
     T = null != t.target_application ? new l.default(t.target_application) : null,
-    N = I || null == t.inviter ? null : new u.default(t.inviter),
-    g = !(null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != p && p.hasFeature(c.GuildFeatures.COMMUNITY)) && null != N && (0, o.isGroupInvite)(t),
-    m = _(t),
+    N = _ || null == t.inviter ? null : new u.default(t.inviter),
+    g = !(null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != h && h.hasFeature(c.GuildFeatures.COMMUNITY)) && null != N && (0, o.isGroupInvite)(t),
+    m = I(t),
     A = {
       invite: t,
       user: N,
-      guild: p,
-      channel: h,
+      guild: h,
+      channel: p,
       application: T
     };
-  return (0, o.isEnhancedCommunityInvite)(t) ? (0, s.jsx)(d.default, {
+  return (0, o.isEnhancedCommunityInvite)(t) ? (0, n.jsx)(d.default, {
     invite: t,
-    channel: h,
+    channel: p,
     isSubmitting: m,
-    onAcceptInvite: n
-  }) : (0, s.jsxs)("div", {
+    onAcceptInvite: s
+  }) : (0, n.jsxs)("div", {
     className: E.container,
-    children: [(0, s.jsx)(o.InviteDestinationIcon, {
+    children: [(0, n.jsx)(o.InviteDestinationIcon, {
       application: T,
-      guild: p,
+      guild: h,
       user: g || (0, o.isDirectInvite)(t) ? N : null
-    }), (0, o.isDirectInvite)(t) ? null : (0, s.jsx)(o.InviteJoinContext, {
+    }), (0, o.isDirectInvite)(t) ? null : (0, n.jsx)(o.InviteJoinContext, {
       ...A,
       showBigUserIcon: g
-    }), (0, s.jsx)(o.InviteHeader, {
+    }), (0, n.jsx)(o.InviteHeader, {
       ...A,
       showBigUserIcon: g
-    }), (0, s.jsx)(o.InviteMemberCounts, {
+    }), (0, n.jsx)(o.InviteMemberCounts, {
       ...A
-    }), (0, s.jsx)(a.Button, {
-      onClick: n,
+    }), (0, n.jsx)(a.Button, {
+      onClick: s,
       submitting: m,
       className: E.acceptButton,
       children: f.default.Messages.INSTANT_INVITE_ACCEPT

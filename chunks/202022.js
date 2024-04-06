@@ -43,12 +43,12 @@ var n = s("990547"),
   F = s("392735"),
   G = s("61160"),
   k = s("604227"),
-  H = s("38915"),
-  w = s("498639"),
+  w = s("38915"),
+  H = s("498639"),
   V = s("748717"),
   Y = s("419636"),
-  W = s("35426"),
-  K = s("799071"),
+  K = s("35426"),
+  W = s("799071"),
   z = s("601433"),
   Q = s("154022"),
   Z = s("393681"),
@@ -283,7 +283,7 @@ function ex(e) {
   }, {
     section: ep.UserSettingsSections.SPEED_TEST,
     label: "Speed Test",
-    element: W.default,
+    element: K.default,
     predicate: () => R.default.isSupported() && G.default.getCurrentConfig({
       location: "9f7d84_2"
     }).showSettings
@@ -347,7 +347,7 @@ function ex(e) {
   }, {
     section: ep.UserSettingsSections.HOTSPOT_OPTIONS,
     label: "Hotspot Options",
-    element: H.default,
+    element: w.default,
     predicate: () => M.default.isDeveloper
   }, {
     section: ep.UserSettingsSections.DISMISSIBLE_CONTENT_OPTIONS,
@@ -357,7 +357,7 @@ function ex(e) {
   }, {
     section: ep.UserSettingsSections.PAYMENT_FLOW_MODAL_TEST_PAGE,
     label: "Payment Flow Modals",
-    element: w.default,
+    element: H.default,
     predicate: () => M.default.isDeveloper
   }, {
     section: ep.UserSettingsSections.TEXT_PLAYGROUND,
@@ -367,7 +367,7 @@ function ex(e) {
   }, {
     section: ep.UserSettingsSections.TEXT_COMPONENT,
     label: "Text Components",
-    element: K.default,
+    element: W.default,
     predicate: () => (0, z.shouldShowTextPlayground)() || M.default.isDeveloper
   }, {
     section: S.SectionTypes.DIVIDER

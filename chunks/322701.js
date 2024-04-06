@@ -16,9 +16,9 @@ t.default = function(e) {
     searchQuery: c,
     sectionFilter: f,
     useReducedMotion: E
-  } = e, _ = (0, l.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), h = (0, s.default)({
+  } = e, h = (0, l.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), _ = (0, s.default)({
     id: "people",
-    isEnabled: _,
+    isEnabled: h,
     async scrollToStart() {},
     async scrollToEnd() {}
   }), C = f !== u.FriendsSections.ONLINE && f !== u.FriendsSections.ALL, m = E || "" !== c || C, S = t.map((e, t) => m ? (0, a.jsx)("div", {
@@ -29,7 +29,7 @@ t.default = function(e) {
     children: e.map(n)
   }, t));
   return (0, a.jsx)(s.ListNavigatorProvider, {
-    navigator: h,
+    navigator: _,
     children: (0, a.jsx)(s.ListNavigatorContainer, {
       children: e => {
         let {

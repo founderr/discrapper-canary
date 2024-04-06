@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("626135"),
   f = n("981631"),
   E = n("689938"),
-  _ = n("615273");
-let h = (0, r.debounce)(u.default.trackWithMetadata, 500);
+  h = n("615273");
+let _ = (0, r.debounce)(u.default.trackWithMetadata, 500);
 t.default = function(e) {
   let {
     guild: t,
@@ -23,8 +23,8 @@ t.default = function(e) {
     imageStyles: m,
     imageMarginX: S,
     imageMarginTop: I,
-    trackingSource: T,
-    undismissable: p,
+    trackingSource: p,
+    undismissable: T,
     onDismissed: g,
     onClick: A,
     cta: N,
@@ -32,18 +32,18 @@ t.default = function(e) {
     centerText: R
   } = e;
   s.useEffect(() => {
-    h(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+    _(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
       notice_type: C,
       guild_id: t.id
     })
   }, [t.id, C]);
   let O = null;
   "function" == typeof N ? O = N() : null != N && (O = (0, a.jsx)(o.Button, {
-    className: _.button,
+    className: h.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
       null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-        source: T,
+        source: p,
         guild_id: t.id,
         notice_type: C
       }), null == A || A()
@@ -56,45 +56,45 @@ t.default = function(e) {
   "function" == typeof n ? L = n() : null != n && (L = (0, a.jsx)(o.Text, {
     variant: "text-md/medium",
     color: "header-primary",
-    className: i()(_.title, {
-      [_.noImageTitle]: null == r
+    className: i()(h.title, {
+      [h.noImageTitle]: null == r
     }, {
-      [_.center]: R
+      [h.center]: R
     }),
     children: n
   }));
-  let M = null != S ? "".concat(S, "px") : "16px";
+  let P = null != S ? "".concat(S, "px") : "16px";
   return (0, a.jsxs)("div", {
-    className: _.container,
-    children: [!0 === p ? null : (0, a.jsx)(o.Clickable, {
+    className: h.container,
+    children: [!0 === T ? null : (0, a.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
           notice_type: C
         }), null == g || g()
       },
-      className: _.close,
+      className: h.close,
       "aria-label": E.default.Messages.DISMISS,
       children: (0, a.jsx)(d.default, {
-        className: _.closeIcon
+        className: h.closeIcon
       })
     }), null != r && (0, a.jsx)("div", {
-      className: _.imageContainer,
+      className: h.imageContainer,
       style: {
         marginTop: "".concat(I, "px"),
-        marginLeft: M,
-        marginRight: M
+        marginLeft: P,
+        marginRight: P
       },
       children: (0, a.jsx)("img", {
-        className: _.image,
+        className: h.image,
         style: m,
         src: r,
         alt: ""
       })
     }), (0, a.jsxs)("div", {
-      className: _.message,
+      className: h.message,
       children: [L, (0, a.jsx)(o.Text, {
         className: i()({
-          [_.center]: R
+          [h.center]: R
         }),
         variant: "text-sm/normal",
         color: "text-muted",

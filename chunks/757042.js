@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("692547"),
   f = n("481060"),
   E = n("230711"),
-  _ = n("100527"),
-  h = n("906732"),
+  h = n("100527"),
+  _ = n("906732"),
   C = n("605236"),
   m = n("903958"),
   S = n("153850"),
   I = n("810090"),
-  T = n("641826"),
-  p = n("635869"),
+  p = n("641826"),
+  T = n("635869"),
   g = n("232700"),
   A = n("981631"),
   N = n("921944"),
@@ -31,23 +31,23 @@ var a = n("735250"),
 let O = n("205281");
 
 function L() {
-  let [e, t] = s.useState(!1), n = (0, T.useShouldShowMainLootboxEntrypoint)("lootbox_entrypoint"), l = !(0, C.useIsDismissibleContentDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT), {
+  let [e, t] = s.useState(!1), n = (0, p.useShouldShowMainLootboxEntrypoint)("lootbox_entrypoint"), l = !(0, C.useIsDismissibleContentDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT), {
     analyticsLocations: L
-  } = (0, h.default)(_.default.LOOTBOXES_UPSELL), M = s.useRef(null), P = e => {
+  } = (0, _.default)(h.default.LOOTBOXES_UPSELL), P = s.useRef(null), M = e => {
     (0, C.markDismissibleContentAsDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT, {
       dismissAction: e
     })
   };
   return (s.useEffect(() => {
     var t, n;
-    e ? null === (t = M.current) || void 0 === t || t.play() : null === (n = M.current) || void 0 === n || n.pause()
+    e ? null === (t = P.current) || void 0 === t || t.play() : null === (n = P.current) || void 0 === n || n.pause()
   }, [e]), n && l) ? (0, a.jsx)(S.default, {
     children: (0, a.jsxs)("div", {
       className: i()(R.wrapper, e ? R.wrapperHovered : null),
       onMouseLeave: () => t(!1),
       children: [(0, a.jsxs)(f.Clickable, {
         className: R.closeButton,
-        onClick: () => P(N.ContentDismissActionType.DISMISS),
+        onClick: () => M(N.ContentDismissActionType.DISMISS),
         children: [(0, a.jsx)(o.CloseSmallIcon, {
           className: R.closeIcon,
           color: c.default.colors.WHITE
@@ -61,7 +61,7 @@ function L() {
         children: [(0, a.jsx)("div", {
           className: R.videoWrapper,
           children: (0, a.jsx)(I.default, {
-            ref: M,
+            ref: P,
             className: R.video,
             src: O,
             muted: !0,
@@ -70,20 +70,20 @@ function L() {
         }), (0, a.jsxs)(f.Clickable, {
           className: R.entrypoint,
           onClick: () => {
-            P(N.ContentDismissActionType.PRIMARY), E.default.open(A.UserSettingsSections.LOOTBOXES, null, {
+            M(N.ContentDismissActionType.PRIMARY), E.default.open(A.UserSettingsSections.LOOTBOXES, null, {
               analyticsLocations: L
             })
           },
           onMouseEnter: () => t(!0),
           children: [(0, a.jsx)("div", {
             className: R.backgroundWrapper,
-            children: (0, a.jsx)(p.default, {
+            children: (0, a.jsx)(T.default, {
               className: R.backgroundImage,
               pageMultiplier: 5
             })
           }), (0, a.jsx)(m.default, {
             className: R.animation,
-            importData: T.importLootboxAnimationData,
+            importData: p.importLootboxAnimationData,
             nextScene: g.BoxAnimationScenes.IDLE,
             sceneSegments: g.BoxAnimationSceneSegments
           }), (0, a.jsxs)("div", {

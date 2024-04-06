@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return W
+    return K
   }
 }), s("47120");
 var a = s("735250"),
@@ -42,8 +42,8 @@ var a = s("735250"),
   F = s("794711"),
   G = s("328756");
 let k = (0, A.uid)(),
-  H = (0, A.uid)(),
   w = (0, A.uid)(),
+  H = (0, A.uid)(),
   V = o().debounce(e => {
     (0, E.setSaturation)(e)
   }, 250),
@@ -51,11 +51,11 @@ let k = (0, A.uid)(),
     (0, I.setSpeechRate)(e)
   }, 250);
 
-function W(e) {
+function K(e) {
   return (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
     title: y.default.Messages.ACCESSIBILITY,
-    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(Z, {}), (0, a.jsx)(q, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
+    children: [(0, a.jsx)(W, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(Z, {}), (0, a.jsx)(q, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
       className: F.marginBottom20
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
@@ -68,7 +68,7 @@ function W(e) {
   })
 }
 
-function K() {
+function W() {
   let e = v.MessageDisplayCompact.useSetting(),
     [t] = n.useState(() => {
       let e = (0, m.createMessageRecord)({
@@ -132,13 +132,13 @@ function z() {
       className: F.marginBottom8,
       children: y.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
     }), (0, a.jsx)(u.FormText, {
-      id: H,
+      id: w,
       type: u.FormText.Types.DESCRIPTION,
       className: F.marginBottom20,
       children: y.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_DESCRIPTION
     }), (0, a.jsx)(u.Slider, {
       "aria-labelledby": k,
-      "aria-describedby": H,
+      "aria-describedby": w,
       markers: j.Accessibility.SATURATION_INCREMENTS,
       equidistant: !0,
       stickToMarkers: !0,
@@ -395,7 +395,7 @@ function et() {
     }), (0, a.jsxs)(u.FormItem, {
       className: F.marginBottom20,
       children: [(0, a.jsx)(u.FormTitle, {
-        id: w,
+        id: H,
         className: F.marginBottom20,
         children: y.default.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_LABEL
       }), (0, a.jsx)("div", {
@@ -439,7 +439,7 @@ function et() {
         }) : 1 === e ? (0, a.jsx)("span", {
           children: "x1.0"
         }) : e % 1 == 0 ? "" : void 0,
-        "aria-labelledby": w
+        "aria-labelledby": H
       })]
     })]
   }) : null

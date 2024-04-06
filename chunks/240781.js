@@ -16,7 +16,7 @@ var r = a("803997"),
   g = a("204418"),
   p = a("689938"),
   C = a("847531");
-let v = [{
+let S = [{
     avatarSize: o.AvatarSizes.SIZE_40,
     showStatus: !1
   }, {
@@ -29,7 +29,7 @@ let v = [{
     avatarSize: o.AvatarSizes.SIZE_32,
     showStatus: !0
   }],
-  S = e => {
+  v = e => {
     let {
       purchase: t
     } = e, a = (0, n.useStateFromStores)([f.default], () => f.default.locale), r = (0, u.isPremiumCollectiblesPurchase)(t);
@@ -97,7 +97,7 @@ t.default = e => {
         })
       }), (0, s.jsx)("div", {
         className: C.smallDecorationPreviewsContainer,
-        children: v.map(e => {
+        children: S.map(e => {
           let {
             avatarSize: r,
             showStatus: l
@@ -114,7 +114,7 @@ t.default = e => {
           }, "".concat(r).concat(l))
         })
       })]
-    }), null != x && (0, s.jsx)(S, {
+    }), null != x && (0, s.jsx)(v, {
       purchase: x
     })]
   })

@@ -21,8 +21,8 @@ var a = n("803997"),
   m = n("718589"),
   g = n("933557"),
   E = n("557135"),
-  _ = n("873696"),
-  S = n("446226"),
+  S = n("873696"),
+  _ = n("446226"),
   I = n("305325"),
   N = n("281956"),
   T = n("66999"),
@@ -31,8 +31,8 @@ var a = n("803997"),
   v = n("574176"),
   x = n("359110"),
   R = n("155409"),
-  M = n("695346"),
-  y = n("592125"),
+  y = n("695346"),
+  M = n("592125"),
   O = n("430824"),
   D = n("607744"),
   b = n("496675"),
@@ -49,8 +49,8 @@ var a = n("803997"),
   Y = n("207055"),
   K = n("981631"),
   W = n("647086"),
-  z = n("689938"),
-  Z = n("294639");
+  Z = n("689938"),
+  z = n("294639");
 
 function X(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -83,9 +83,9 @@ class Q extends F.default {
       sortingPosition: t,
       isUserOver: n
     } = this.props;
-    if (n) return Z.containerUserOver;
-    if (null != t) return e > t ? Z.containerDragAfter : Z.containerDragBefore;
-    return Z.containerDefault
+    if (n) return z.containerUserOver;
+    if (null != t) return e > t ? z.containerDragAfter : z.containerDragBefore;
+    return z.containerDefault
   }
   renderSubtitle() {
     var e;
@@ -94,7 +94,7 @@ class Q extends F.default {
       connected: n,
       enableHangStatus: a,
       allowChannelTopic: s
-    } = this.props, i = null === (e = (0, _.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
+    } = this.props, i = null === (e = (0, S.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
       hovered: r
     } = this.state;
     return (0, l.jsx)(k.default, {
@@ -130,7 +130,7 @@ class Q extends F.default {
       channelInfo: e
     } = this.props;
     return null == e ? null : (0, l.jsx)("div", {
-      className: Z.channelInfo,
+      className: z.channelInfo,
       children: e
     })
   }
@@ -150,8 +150,8 @@ class Q extends F.default {
       connectUserDropTarget: p,
       connectDragPreview: g,
       canReorderChannel: E,
-      canMoveMembers: _,
-      showTutorial: S,
+      canMoveMembers: S,
+      showTutorial: _,
       hasActiveEvent: I,
       embeddedApps: N,
       isSubscriptionGated: T,
@@ -160,9 +160,9 @@ class Q extends F.default {
     } = this.props, {
       shouldShowActivities: v,
       shouldShowGuildVerificationPopout: x
-    } = this.state, M = this.getVoiceStatesCount(), y = (0, l.jsxs)("li", {
+    } = this.state, y = this.getVoiceStatesCount(), M = (0, l.jsxs)("li", {
       className: s()(this.getModeClass(), {
-        [Z.disabled]: this.isDisabled()
+        [z.disabled]: this.isDisabled()
       }),
       "data-dnd-name": e.name,
       children: [(0, l.jsx)("div", {
@@ -183,9 +183,9 @@ class Q extends F.default {
                 ...f
               } = o;
               return (0, l.jsxs)(V.default, {
-                className: Z.iconVisibility,
+                className: z.iconVisibility,
                 iconClassName: s()({
-                  [Z.iconLive]: I
+                  [z.iconLive]: I
                 }),
                 channel: e,
                 selected: !A && t,
@@ -207,7 +207,7 @@ class Q extends F.default {
                   channel: e,
                   unread: a,
                   mentionCount: r,
-                  userCount: M,
+                  userCount: y,
                   embeddedActivitiesCount: N.length,
                   isSubscriptionGated: T
                 }),
@@ -224,12 +224,12 @@ class Q extends F.default {
         })
       }), this.renderVoiceUsers()]
     });
-    return _ && (y = p(y)), E && (y = f(h(y))), S && (y = (0, l.jsx)(R.default, {
+    return S && (M = p(M)), E && (M = f(h(M))), _ && (M = (0, l.jsx)(R.default, {
       tutorialId: "voice-conversations",
       position: "right",
       offsetX: -20,
-      children: y
-    })), y
+      children: M
+    })), M
   }
   constructor(...e) {
     super(...e), X(this, "state", {
@@ -318,7 +318,7 @@ class Q extends F.default {
         shouldShowGuildVerificationPopout: o
       } = this.state;
       if (r && !n && !a && !o) {
-        let n = M.ActivityRestrictedGuilds.getSetting().includes(i.id);
+        let n = y.ActivityRestrictedGuilds.getSetting().includes(i.id);
         return (0, l.jsx)(H.default, {
           onAction: this.closePopout,
           guild: i,
@@ -341,7 +341,7 @@ class Q extends F.default {
         forceShowButtons: n
       } = this.props;
       if (!t) return (0, l.jsx)(o.Tooltip, {
-        text: z.default.Messages.OPEN_CHAT,
+        text: Z.default.Messages.OPEN_CHAT,
         children: t => {
           let {
             onMouseEnter: a,
@@ -350,11 +350,11 @@ class Q extends F.default {
             onBlur: d
           } = t;
           return (0, l.jsx)(o.Clickable, {
-            className: s()(Z.iconItem, n ? Z.alwaysShown : null),
+            className: s()(z.iconItem, n ? z.alwaysShown : null),
             onClick: () => {
               u.default.updateChatOpen(e.id, !0), (0, x.transitionToChannel)(e.id)
             },
-            "aria-label": z.default.Messages.OPEN_CHAT,
+            "aria-label": Z.default.Messages.OPEN_CHAT,
             onMouseEnter: a,
             onMouseLeave: i,
             onFocus: r,
@@ -362,7 +362,7 @@ class Q extends F.default {
             children: (0, l.jsx)(P.default, {
               width: 16,
               height: 16,
-              className: Z.actionIcon
+              className: z.actionIcon
             })
           })
         }
@@ -371,7 +371,7 @@ class Q extends F.default {
       let {
         connected: e
       } = this.props;
-      return this.isFull() && !e ? z.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
+      return this.isFull() && !e ? Z.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
     })
   }
 }
@@ -389,8 +389,8 @@ function J(e) {
   } = e, d = (0, i.useStateFromStoresObject)([j.default], () => ({
     unread: j.default.hasUnread(n.id),
     mentionCount: j.default.getMentionCount(n.id)
-  })), c = (0, i.useStateFromStores)([G.default], () => G.default.resolveUnreadSetting(n)), f = (0, i.useStateFromStoresObject)([y.default, D.default, b.default], () => {
-    let e = y.default.getChannel(n.parent_id),
+  })), c = (0, i.useStateFromStores)([G.default], () => G.default.resolveUnreadSetting(n)), f = (0, i.useStateFromStoresObject)([M.default, D.default, b.default], () => {
+    let e = M.default.getChannel(n.parent_id),
       l = D.default.getCheck(n.guild_id);
     return {
       canManageChannel: b.default.can(K.Permissions.MANAGE_CHANNELS, n),
@@ -401,11 +401,11 @@ function J(e) {
       unverifiedAccount: !l.canChat
     }
   }), p = (0, i.useStateFromStores)([U.default], () => U.default.hasVideo(n.id)), C = (0, h.default)(n), m = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
-    isSubscriptionGated: _,
+    isSubscriptionGated: S,
     needSubscriptionToAccess: I
-  } = (0, T.default)(n.id), N = (0, S.default)(), L = (0, i.useStateFromStores)([G.default], () => G.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
+  } = (0, T.default)(n.id), N = (0, _.default)(), L = (0, i.useStateFromStores)([G.default], () => G.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
     enableHangStatus: R,
-    allowChannelTopic: M
+    allowChannelTopic: y
   } = v.HangStatusExperiment.useExperiment({
     guildId: n.guild_id,
     location: "VoiceChannel"
@@ -416,7 +416,7 @@ function J(e) {
     isChannelSelected: r,
     isChannelCollapsed: o,
     voiceStates: u,
-    isSubscriptionGated: _,
+    isSubscriptionGated: S,
     needSubscriptionToAccess: I,
     enableConnectedUserLimit: !0,
     enableActivities: !0
@@ -427,7 +427,7 @@ function J(e) {
     embeddedActivityType: K.ActivityTypes.PLAYING,
     video: p,
     hasActiveEvent: null != E,
-    isSubscriptionGated: _,
+    isSubscriptionGated: S,
     needSubscriptionToAccess: I,
     ...d,
     ...f,
@@ -437,7 +437,7 @@ function J(e) {
     forceShowButtons: P,
     channelInfo: O,
     enableHangStatus: R,
-    allowChannelTopic: M,
+    allowChannelTopic: y,
     resolvedUnreadSetting: c
   })
 }

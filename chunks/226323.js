@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("278724"),
   f = n("481060"),
   E = n("239091"),
-  _ = n("586902"),
-  h = n("512384"),
+  h = n("586902"),
+  _ = n("512384"),
   C = n("484459"),
   m = n("103575"),
   S = n("314897"),
   I = n("131951"),
-  T = n("836946"),
-  p = n("381238"),
+  p = n("836946"),
+  T = n("381238"),
   g = n("255439"),
   A = n("729285"),
   N = n("150954"),
@@ -30,12 +30,12 @@ var a = n("735250"),
   R = n("524484"),
   O = n("689938"),
   L = n("825292");
-let M = {
+let P = {
     offset: 2
   },
-  P = {
+  M = {
     serverDeaf: {
-      icon: p.default,
+      icon: T.default,
       colorize: !0,
       getStatus: () => O.default.Messages.SERVER_DEAFENED
     },
@@ -45,7 +45,7 @@ let M = {
       getStatus: () => O.default.Messages.SERVER_MUTED
     },
     deaf: {
-      icon: p.default,
+      icon: T.default,
       colorize: !1,
       getStatus: () => O.default.Messages.VOICE_CHANNEL_DEAFENED
     },
@@ -92,8 +92,8 @@ function D(e) {
     mute: d,
     deaf: c,
     serverMute: S,
-    serverDeaf: T
-  } = e, p = (0, r.useStateFromStores)([I.default], () => I.default.isLocalMute(o.id)), g = (0, _.default)({
+    serverDeaf: p
+  } = e, T = (0, r.useStateFromStores)([I.default], () => I.default.isLocalMute(o.id)), g = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
   }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), D = null != u ? u : v.default.getName(o), {
@@ -108,17 +108,17 @@ function D(e) {
       mute: s,
       localMute: l
     } = e, i = (0, f.useRedesignIconContext)().enabled;
-    if (t) return i ? y.serverDeaf : P.serverDeaf;
-    if (n) return i ? y.deaf : P.deaf;
-    if (a) return i ? y.serverMute : P.serverMute;
-    else if (l) return i ? y.localMute : P.mute;
-    else if (s) return i ? y.mute : P.mute
+    if (t) return i ? y.serverDeaf : M.serverDeaf;
+    if (n) return i ? y.deaf : M.deaf;
+    if (a) return i ? y.serverMute : M.serverMute;
+    else if (l) return i ? y.localMute : M.mute;
+    else if (s) return i ? y.mute : M.mute
   }({
-    serverDeaf: T,
+    serverDeaf: p,
     deaf: c,
     serverMute: S,
     mute: d,
-    localMute: p
+    localMute: T
   })) && void 0 !== s ? s : {}, j = null != U ? O.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
     userName: D,
     status: U()
@@ -167,8 +167,8 @@ function D(e) {
         ...e,
         className: L.avatarContainer,
         onContextMenu: G,
-        focusProps: M,
-        children: (0, a.jsx)(h.default, {
+        focusProps: P,
+        children: (0, a.jsx)(_.default, {
           shakeLocation: R.ShakeLocation.VOICE_USER,
           isShaking: g,
           children: (0, a.jsx)("div", {
@@ -199,18 +199,18 @@ function x(e) {
     voiceStates: t,
     channel: n,
     className: l
-  } = e, [o, u] = s.useState(!1), d = o ? N.default : A.default, c = (0, a.jsx)(T.default, {
+  } = e, [o, u] = s.useState(!1), d = o ? N.default : A.default, c = (0, a.jsx)(p.default, {
     className: L.expandButton,
     onClick: () => u(!o),
-    color: T.CircleIconButtonColors.PRIMARY,
-    size: T.CircleIconButtonSizes.SIZE_24,
+    color: p.CircleIconButtonColors.PRIMARY,
+    size: p.CircleIconButtonSizes.SIZE_24,
     tooltip: o ? O.default.Messages.VOICE_PANEL_HIDE_EXTRAS : O.default.Messages.VOICE_PANEL_SHOW_EXTRAS,
     icon: (0, a.jsx)(d, {
       width: 16,
       height: 16
     }),
-    focusProps: M
-  }), E = (0, r.useStateFromStores)([S.default], () => S.default.getId(), []), [_, h] = function(e, t) {
+    focusProps: P
+  }), E = (0, r.useStateFromStores)([S.default], () => S.default.getId(), []), [h, _] = function(e, t) {
     let n = [];
     for (let a of e) {
       if (a.user.id !== t) {
@@ -221,7 +221,7 @@ function x(e) {
       }
     }
     return [n, !1]
-  }(t, E), C = h && o ? t : _;
+  }(t, E), C = _ && o ? t : h;
   return C.length <= 0 ? null : (0, a.jsx)(f.ScrollerThin, {
     className: i()(L.scroller, l),
     fade: !0,
@@ -245,7 +245,7 @@ function x(e) {
           serverMute: l.mute,
           serverDeaf: l.deaf
         }, t.id) : null
-      }), h ? c : null]
+      }), _ ? c : null]
     })
   })
 }

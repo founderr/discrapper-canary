@@ -25,16 +25,16 @@ n.r(t), n.d(t, {
     return C
   },
   MAX_NUM_INTERESTS: function() {
-    return h
+    return _
   },
   MAX_NUM_SELECTED_GAMES: function() {
-    return _
+    return h
   },
   MAX_TAG_LENGTH: function() {
     return f
   },
   getPlaystyleTitle: function() {
-    return T
+    return p
   }
 });
 var a, s, l, i, r, o, u = n("913527"),
@@ -42,14 +42,14 @@ var a, s, l, i, r, o, u = n("913527"),
   c = n("689938");
 let f = 5,
   E = "ClanSetupModal",
-  _ = 20,
-  h = 50,
+  h = 20,
+  _ = 50,
   C = 50,
   m = 7,
   S = d()("2024-01-01T00:00:00"),
   I = "LT";
 
-function T(e) {
+function p(e) {
   switch (e) {
     case 1:
       return c.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;

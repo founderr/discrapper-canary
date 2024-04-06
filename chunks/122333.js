@@ -12,14 +12,14 @@ var l = n("481060"),
   c = n("341298"),
   f = n("390885"),
   E = n("524329"),
-  _ = n("995532"),
-  h = n("486472"),
+  h = n("995532"),
+  _ = n("486472"),
   C = n("430824"),
   m = n("914010"),
   S = n("594174"),
   I = n("823379"),
-  T = n("358085"),
-  p = n("929809"),
+  p = n("358085"),
+  T = n("929809"),
   g = n("179645"),
   A = n("701476"),
   N = n("785997"),
@@ -30,7 +30,7 @@ var l = n("481060"),
 function L() {
   null != a && (0, l.closeModal)(a)
 }
-class M extends r.default {
+class P extends r.default {
   _initialize() {
     i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("LOGOUT", L)
   }
@@ -57,8 +57,8 @@ class M extends r.default {
       let e = C.default.getGuild(L);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
-    let M = () => 0 === h.default.totalGuilds && !T.isPlatformEmbedded,
-      P = o.userNeedsAgeGate();
+    let P = () => 0 === _.default.totalGuilds && !p.isPlatformEmbedded,
+      M = o.userNeedsAgeGate();
     e = [{
       key: "Unified NUF Modal",
       open: async function e(e) {
@@ -105,14 +105,14 @@ class M extends r.default {
           modalKey: a
         })
       },
-      predicate: () => M() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => P() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "New User Age Gate",
       open: u.openNewUserAgeGateModal,
-      predicate: () => P && !M() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => M && !P() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
-      open: e => u.openClaimAccountModal(T.isPlatformEmbedded, e),
+      open: e => u.openClaimAccountModal(p.isPlatformEmbedded, e),
       predicate: () => {
         var e;
         return !r && null != S.default.getCurrentUser() && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
@@ -137,9 +137,9 @@ class M extends r.default {
       }, {
         onCloseCallback: e
       }),
-      predicate: () => null != L && null != _.default.get(L) && _.default.get(L) !== _.NO_WELCOME_SCREEN
+      predicate: () => null != L && null != h.default.get(L) && h.default.get(L) !== h.NO_WELCOME_SCREEN
     }], t = () => {
-      p.setNewUserFlowCompleted(), f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.NUF_COMPLETE, !0)
+      T.setNewUserFlowCompleted(), f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {
       let n = t;
       t = () => {
@@ -148,4 +148,4 @@ class M extends r.default {
     }), t()
   }
 }
-t.default = new M
+t.default = new P

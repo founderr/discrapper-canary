@@ -22,8 +22,8 @@ var l, a = n("735250"),
   m = n("906732"),
   g = n("362658"),
   E = n("583962"),
-  _ = n("915885"),
-  S = n("258871"),
+  S = n("915885"),
+  _ = n("258871"),
   I = n("216306"),
   N = n("398758"),
   T = n("220444"),
@@ -32,8 +32,8 @@ var l, a = n("735250"),
   v = n("131704"),
   x = n("592125"),
   R = n("796974"),
-  M = n("984933"),
-  y = n("914010"),
+  y = n("984933"),
+  M = n("914010"),
   O = n("153124"),
   D = n("540126"),
   b = n("734307"),
@@ -50,8 +50,8 @@ var l, a = n("735250"),
   Y = n("120818"),
   K = n("61642"),
   W = n("848442"),
-  z = n("53425"),
-  Z = n("424785"),
+  Z = n("53425"),
+  z = n("424785"),
   X = n("770202"),
   Q = n("79556"),
   q = n("428127"),
@@ -503,9 +503,9 @@ class eo extends(l = s.PureComponent) {
         if (null == t) return null;
         switch (t) {
           case et.ChannelListCommunityRow.GUILD_HUB_HEADER_OPTIONS:
-            return (0, a.jsx)(S.default, {
+            return (0, a.jsx)(_.default, {
               guild: l,
-              channel: M.default.getDefaultChannel(l.id)
+              channel: y.default.getDefaultChannel(l.id)
             }, et.ChannelListCommunityRow.GUILD_HUB_HEADER_OPTIONS);
           case et.ChannelListCommunityRow.GUILD_PREMIUM_PROGRESS_BAR:
             let s = e.getRows();
@@ -554,7 +554,7 @@ class eo extends(l = s.PureComponent) {
               disableManageChannels: f
             }, et.ChannelListCommunityRow.GUILD_DIRECTORY);
           case et.ChannelListCommunityRow.GUILD_MOD_DASH_MEMBER_SAFETY:
-            return (0, a.jsx)(_.default, {
+            return (0, a.jsx)(S.default, {
               guild: l,
               selected: r === ea.StaticChannelRoute.MEMBER_SAFETY
             }, et.ChannelListCommunityRow.GUILD_MOD_DASH_MEMBER_SAFETY);
@@ -588,7 +588,7 @@ class eo extends(l = s.PureComponent) {
               canBeNewChannel: p && t === d.recentsSectionNumber,
               isFavoriteCategory: N,
               withGuildIcon: C
-            }), I.threadCount > 0 ? (0, a.jsx)(z.default, {
+            }), I.threadCount > 0 ? (0, a.jsx)(Z.default, {
               withGuildIcon: C,
               channel: T,
               sortedThreadIds: I.threadIds,
@@ -598,7 +598,7 @@ class eo extends(l = s.PureComponent) {
           }, A);
         case el.ChannelTypes.GUILD_STAGE_VOICE:
           var L, v;
-          return (0, a.jsx)(Z.default, {
+          return (0, a.jsx)(z.default, {
             channel: T,
             guild: l,
             position: I.position,
@@ -712,7 +712,7 @@ let eu = e => {
     selectedVoiceChannelId: l
   } = e, i = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), {
     analyticsLocations: r
-  } = (0, m.default)(C.default.GUILD_CHANNEL_LIST), d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(n)), c = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(l)), f = (0, u.useStateFromStores)([y.default], () => y.default.getGuildId()), g = (0, N.useOptInEnabledForGuild)(t), E = s.useRef(null), _ = s.useCallback((e, t) => {
+  } = (0, m.default)(C.default.GUILD_CHANNEL_LIST), d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(n)), c = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(l)), f = (0, u.useStateFromStores)([M.default], () => M.default.getGuildId()), g = (0, N.useOptInEnabledForGuild)(t), E = s.useRef(null), S = s.useCallback((e, t) => {
     let n = E.current;
     if (null != n) {
       if (el.ID_REGEX.test(t) || (0, ea.isStaticChannelRoute)(t)) n.scrollToChannel(t, !1, 2 * en.SCROLL_TO_SPACER, () => {
@@ -726,7 +726,7 @@ let eu = e => {
         null === (l = document.querySelector(e)) || void 0 === l || l.focus()
       }
     }
-  }, []), S = s.useCallback(() => new Promise(e => {
+  }, []), _ = s.useCallback(() => new Promise(e => {
     let t = E.current;
     if (null == t) return e();
     t.scrollTo(0, () => requestAnimationFrame(() => e()))
@@ -738,8 +738,8 @@ let eu = e => {
     id: "channels",
     defaultFocused: null != n ? n : void 0,
     isEnabled: i,
-    setFocus: _,
-    scrollToStart: S,
+    setFocus: S,
+    scrollToStart: _,
     scrollToEnd: I
   }), L = T.setFocus;
   s.useEffect(() => {

@@ -18,8 +18,8 @@ var l, a, s = n("735250"),
   m = n("481060"),
   g = n("612226"),
   E = n("951483"),
-  _ = n("714338"),
-  S = n("607070"),
+  S = n("714338"),
+  _ = n("607070"),
   I = n("585483"),
   N = n("557177"),
   T = n("264549"),
@@ -41,9 +41,9 @@ let R = {
     LEFT: f().throttle(() => (0, N.playSound)("ddr-left"), 100),
     RIGHT: f().throttle(() => (0, N.playSound)("ddr-right"), 100)
   },
-  M = f()((0, g.getDefaultLayoutContent)()).groupBy(e => e.group).value();
+  y = f()((0, g.getDefaultLayoutContent)()).groupBy(e => e.group).value();
 
-function y(e) {
+function M(e) {
   switch (e.keyCode) {
     case A.KeyboardKeys.ARROW_UP:
       return "UP";
@@ -65,7 +65,7 @@ function D() {
     className: v.keyboardShortcutList,
     children: e.map((t, n) => {
       let l = n === e.length - 1,
-        a = M[t],
+        a = y[t],
         i = (0, g.getNameForKeybindGroup)(t),
         r = (0, g.getDescriptionForKeybindGroup)(t);
       return (0, s.jsxs)("div", {
@@ -279,13 +279,13 @@ class b extends i.PureComponent {
       }]
     })), x(this, "handleKeyDown", e => {
       if (this.lastInputedKeys.push(e.keyCode), this.lastInputedKeys = this.lastInputedKeys.slice(-5), this.lastInputedKeys[0] === A.KeyboardKeys.H && this.lastInputedKeys[1] === A.KeyboardKeys.H && this.lastInputedKeys[2] === A.KeyboardKeys.ARROW_RIGHT && this.lastInputedKeys[3] === A.KeyboardKeys.N && this.lastInputedKeys[4] === A.KeyboardKeys.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled) return;
-      let t = y(e);
+      let t = M(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({
         direction: t
       }))
     }), x(this, "handleKeyUp", e => {
       if (this.props.keyboardModeEnabled) return;
-      let t = y(e);
+      let t = M(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({
         direction: t
       }))
@@ -324,7 +324,7 @@ function G(e) {
   let {
     transitionState: t,
     onClose: n
-  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled);
+  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([_.default], () => _.default.keyboardModeEnabled);
   return (0, s.jsx)(m.ModalRoot, {
     className: o()(v.noBackground, {
       [v.noShadow]: l
@@ -340,7 +340,7 @@ function G(e) {
         content: r,
         keyboardModeEnabled: u,
         activateRagingDemon: function() {
-          _.default.disable(), a(!0)
+          S.default.disable(), a(!0)
         }
       }, "modal")
     })
